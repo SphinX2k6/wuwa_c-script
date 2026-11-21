@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D98 RID: 23960
+	// Token: 0x02004D7A RID: 19834
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MotorcycleControlHudPanel : BattleVisibleChildView
 	{
-		// Token: 0x0603CCEC RID: 249068 RVA: 0x00E99D8C File Offset: 0x00E97F8C
+		// Token: 0x06031C49 RID: 203849 RVA: 0x00DEA644 File Offset: 0x00DE8844
 		[NullableContext(1)]
 		public UniTask Init(UUIItem parentItem, string resourceId)
 		{
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CCED RID: 249069 RVA: 0x00E99DE0 File Offset: 0x00E97FE0
+		// Token: 0x06031C4A RID: 203850 RVA: 0x00DEA698 File Offset: 0x00DE8898
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603CCEE RID: 249070 RVA: 0x00E99E6C File Offset: 0x00E9806C
+		// Token: 0x06031C4B RID: 203851 RVA: 0x00DEA724 File Offset: 0x00DE8924
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MotorcycleControlHudPanel.<OnBeforeStartAsync>d__33 <OnBeforeStartAsync>d__;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CCEF RID: 249071 RVA: 0x00E99EB0 File Offset: 0x00E980B0
+		// Token: 0x06031C4C RID: 203852 RVA: 0x00DEA768 File Offset: 0x00DE8968
 		protected override void OnStart()
 		{
 			base.InitChildType(EBattleUiChild.MotorcycleControlHud);
@@ -74,24 +74,24 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.SetVisible(1, BattleUiModel.Instance.MotorcycleData.GetHudVisible());
 		}
 
-		// Token: 0x0603CCF0 RID: 249072 RVA: 0x00E99F7E File Offset: 0x00E9817E
+		// Token: 0x06031C4D RID: 203853 RVA: 0x00DEA836 File Offset: 0x00DE8A36
 		public void OnShowBattleChildViewPanel()
 		{
 		}
 
-		// Token: 0x0603CCF1 RID: 249073 RVA: 0x00E99F80 File Offset: 0x00E98180
+		// Token: 0x06031C4E RID: 203854 RVA: 0x00DEA838 File Offset: 0x00DE8A38
 		public void OnHideBattleChildViewPanel()
 		{
 		}
 
-		// Token: 0x0603CCF2 RID: 249074 RVA: 0x00E99F82 File Offset: 0x00E98182
+		// Token: 0x06031C4F RID: 203855 RVA: 0x00DEA83A File Offset: 0x00DE8A3A
 		protected override void OnBeforeShow()
 		{
 			base.OnBeforeShow();
 			this.RefreshMotorcycleSpeed(true);
 		}
 
-		// Token: 0x0603CCF3 RID: 249075 RVA: 0x00E99F91 File Offset: 0x00E98191
+		// Token: 0x06031C50 RID: 203856 RVA: 0x00DEA849 File Offset: 0x00DE8A49
 		protected override void OnAfterHide()
 		{
 			base.OnAfterHide();
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ClearTagTask();
 		}
 
-		// Token: 0x0603CCF4 RID: 249076 RVA: 0x00E99FB0 File Offset: 0x00E981B0
+		// Token: 0x06031C51 RID: 203857 RVA: 0x00DEA868 File Offset: 0x00DE8A68
 		protected override void OnAfterShow()
 		{
 			this.UpdateAlpha(0f, true);
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			levelSequencePlayer.PlayLevelSequenceByName("Start", false, null, false);
 		}
 
-		// Token: 0x0603CCF5 RID: 249077 RVA: 0x00E99FF0 File Offset: 0x00E981F0
+		// Token: 0x06031C52 RID: 203858 RVA: 0x00DEA8A8 File Offset: 0x00DE8AA8
 		protected override UniTask OnBeforeHideAsync()
 		{
 			MotorcycleControlHudPanel.<OnBeforeHideAsync>d__40 <OnBeforeHideAsync>d__;
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeHideAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CCF6 RID: 249078 RVA: 0x00E9A034 File Offset: 0x00E98234
+		// Token: 0x06031C53 RID: 203859 RVA: 0x00DEA8EC File Offset: 0x00DE8AEC
 		protected override void OnBeforeDestroy()
 		{
 			this.Reset();
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SpeedColorObjs.Clear();
 		}
 
-		// Token: 0x0603CCF7 RID: 249079 RVA: 0x00E9A0A8 File Offset: 0x00E982A8
+		// Token: 0x06031C54 RID: 203860 RVA: 0x00DEA960 File Offset: 0x00DE8B60
 		private void AddEvents()
 		{
 			EventSystem.Instance.Add<bool>(EEventName.BattleUiMotorcycleHudVisibleChanged, new Action<bool>(this.OnMotorcycleHudVisibleChanged));
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Add<ERoleSpecialState, bool>(EEventName.BattleUiRoleSpecialStateChanged, new Action<ERoleSpecialState, bool>(this.OnBattleUiRoleSpecialStateChanged));
 		}
 
-		// Token: 0x0603CCF8 RID: 249080 RVA: 0x00E9A10C File Offset: 0x00E9830C
+		// Token: 0x06031C55 RID: 203861 RVA: 0x00DEA9C4 File Offset: 0x00DE8BC4
 		private void RemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.BattleUiMotorcycleHudVisibleChanged, new Action<bool>(this.OnMotorcycleHudVisibleChanged));
@@ -154,13 +154,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Remove(EEventName.BattleUiRoleSpecialStateChanged, new Action<ERoleSpecialState, bool>(this.OnBattleUiRoleSpecialStateChanged));
 		}
 
-		// Token: 0x0603CCF9 RID: 249081 RVA: 0x00E9A16D File Offset: 0x00E9836D
+		// Token: 0x06031C56 RID: 203862 RVA: 0x00DEAA25 File Offset: 0x00DE8C25
 		private void OnMotorcycleHudVisibleChanged(bool visible)
 		{
 			base.SetVisible(1, visible);
 		}
 
-		// Token: 0x0603CCFA RID: 249082 RVA: 0x00E9A178 File Offset: 0x00E98378
+		// Token: 0x06031C57 RID: 203863 RVA: 0x00DEAA30 File Offset: 0x00DE8C30
 		private void OnHudColorStateChanged(EMotorcycleHudColorState state)
 		{
 			if (this.ColorState == EMotorcycleHudColorState.Normal && state != EMotorcycleHudColorState.Normal)
@@ -200,7 +200,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetColorState(state);
 		}
 
-		// Token: 0x0603CCFB RID: 249083 RVA: 0x00E9A248 File Offset: 0x00E98448
+		// Token: 0x06031C58 RID: 203864 RVA: 0x00DEAB00 File Offset: 0x00DE8D00
 		private void OnBattleUiRoleSpecialStateChanged(ERoleSpecialState state, bool enable)
 		{
 			if (state == ERoleSpecialState.MotorcycleFirstPersonDisabled)
@@ -215,7 +215,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CCFC RID: 249084 RVA: 0x00E9A280 File Offset: 0x00E98480
+		// Token: 0x06031C59 RID: 203865 RVA: 0x00DEAB38 File Offset: 0x00DE8D38
 		private unsafe void RefreshMotorcycleSpeed(bool isStart)
 		{
 			this.NextRefreshSpeedTime = 100f;
@@ -314,7 +314,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CCFD RID: 249085 RVA: 0x00E9A670 File Offset: 0x00E98870
+		// Token: 0x06031C5A RID: 203866 RVA: 0x00DEAF28 File Offset: 0x00DE9128
 		private void InitMotorcycleEntity()
 		{
 			BattleUiMotorcycleData motorcycleData = BattleUiModel.Instance.MotorcycleData;
@@ -340,7 +340,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CCFE RID: 249086 RVA: 0x00E9A739 File Offset: 0x00E98939
+		// Token: 0x06031C5B RID: 203867 RVA: 0x00DEAFF1 File Offset: 0x00DE91F1
 		private void ClearTagTask()
 		{
 			if (this.VehicleSoarTagTask != null)
@@ -350,7 +350,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CCFF RID: 249087 RVA: 0x00E9A758 File Offset: 0x00E98958
+		// Token: 0x06031C5C RID: 203868 RVA: 0x00DEB010 File Offset: 0x00DE9210
 		public void Tick(float delta)
 		{
 			if (!base.IsShowOrShowing)
@@ -375,7 +375,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.OnTickRotateHud(delta);
 		}
 
-		// Token: 0x0603CD00 RID: 249088 RVA: 0x00E9A804 File Offset: 0x00E98A04
+		// Token: 0x06031C5D RID: 203869 RVA: 0x00DEB0BC File Offset: 0x00DE92BC
 		private void UpdateAlpha(float delta, bool force = false)
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -398,7 +398,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CD01 RID: 249089 RVA: 0x00E9A898 File Offset: 0x00E98A98
+		// Token: 0x06031C5E RID: 203870 RVA: 0x00DEB150 File Offset: 0x00DE9350
 		private void SetAlphaState(MotorcycleControlHudPanel.EAlphaState state, bool force = false)
 		{
 			if (state == this.AlphaState && !force)
@@ -415,7 +415,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AlphaMachine.Init(num, new float?(this.AlphaChangeDuration));
 		}
 
-		// Token: 0x0603CD02 RID: 249090 RVA: 0x00E9A8F4 File Offset: 0x00E98AF4
+		// Token: 0x06031C5F RID: 203871 RVA: 0x00DEB1AC File Offset: 0x00DE93AC
 		private void InitAlphaParams()
 		{
 			IReadOnlyList<float> floatArrayConfig = ConfigCommonParamById.GetFloatArrayConfig("MotorHudAlphaParams");
@@ -436,7 +436,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CD03 RID: 249091 RVA: 0x00E9A96C File Offset: 0x00E98B6C
+		// Token: 0x06031C60 RID: 203872 RVA: 0x00DEB224 File Offset: 0x00DE9424
 		private void SetColorState(EMotorcycleHudColorState state)
 		{
 			if (this.ColorState == state)
@@ -454,7 +454,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CD04 RID: 249092 RVA: 0x00E9A9E8 File Offset: 0x00E98BE8
+		// Token: 0x06031C61 RID: 203873 RVA: 0x00DEB2A0 File Offset: 0x00DE94A0
 		private void OnMainColorUpdate(in FLinearColor color)
 		{
 			if (this.SpeedColorMPC != null)
@@ -474,7 +474,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			rightSpeedItem.SetMainColor(color);
 		}
 
-		// Token: 0x0603CD05 RID: 249093 RVA: 0x00E9AA44 File Offset: 0x00E98C44
+		// Token: 0x06031C62 RID: 203874 RVA: 0x00DEB2FC File Offset: 0x00DE94FC
 		private void OnColorAUpdate(in FLinearColor color)
 		{
 			if (this.SpeedColorMPC != null)
@@ -483,7 +483,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CD06 RID: 249094 RVA: 0x00E9AA7C File Offset: 0x00E98C7C
+		// Token: 0x06031C63 RID: 203875 RVA: 0x00DEB334 File Offset: 0x00DE9534
 		private void OnColorBUpdate(in FLinearColor color)
 		{
 			if (this.SpeedColorMPC != null)
@@ -492,7 +492,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CD07 RID: 249095 RVA: 0x00E9AAB4 File Offset: 0x00E98CB4
+		// Token: 0x06031C64 RID: 203876 RVA: 0x00DEB36C File Offset: 0x00DE956C
 		private void OnPointerColorUpdate(in FLinearColor color)
 		{
 			MotorcycleHudSpeedItem leftSpeedItem = this.LeftSpeedItem;
@@ -508,7 +508,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			rightSpeedItem.SetPointerColor(color);
 		}
 
-		// Token: 0x0603CD08 RID: 249096 RVA: 0x00E9AAD9 File Offset: 0x00E98CD9
+		// Token: 0x06031C65 RID: 203877 RVA: 0x00DEB391 File Offset: 0x00DE9591
 		private void OnTextColorUpdate(in FLinearColor color)
 		{
 			MotorcycleHudSpeedItem leftSpeedItem = this.LeftSpeedItem;
@@ -519,7 +519,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			leftSpeedItem.SetNumTextColor(color);
 		}
 
-		// Token: 0x0603CD09 RID: 249097 RVA: 0x00E9AAEC File Offset: 0x00E98CEC
+		// Token: 0x06031C66 RID: 203878 RVA: 0x00DEB3A4 File Offset: 0x00DE95A4
 		private void OnTextStrokeColorUpdate(in FLinearColor color)
 		{
 			MotorcycleHudSpeedItem leftSpeedItem = this.LeftSpeedItem;
@@ -530,7 +530,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			leftSpeedItem.SetNumTextStrokeColor(color);
 		}
 
-		// Token: 0x0603CD0A RID: 249098 RVA: 0x00E9AAFF File Offset: 0x00E98CFF
+		// Token: 0x06031C67 RID: 203879 RVA: 0x00DEB3B7 File Offset: 0x00DE95B7
 		private void OnTextGlowColorUpdate(in FLinearColor color)
 		{
 			MotorcycleHudSpeedItem leftSpeedItem = this.LeftSpeedItem;
@@ -541,7 +541,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			leftSpeedItem.SetNumTextGlowColor(color);
 		}
 
-		// Token: 0x0603CD0B RID: 249099 RVA: 0x00E9AB14 File Offset: 0x00E98D14
+		// Token: 0x06031C68 RID: 203880 RVA: 0x00DEB3CC File Offset: 0x00DE95CC
 		private void OnDecoColorUpdate(in FLinearColor color)
 		{
 			if (this.SpeedColorMPC != null)
@@ -550,7 +550,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CD0C RID: 249100 RVA: 0x00E9AB4C File Offset: 0x00E98D4C
+		// Token: 0x06031C69 RID: 203881 RVA: 0x00DEB404 File Offset: 0x00DE9604
 		[NullableContext(0)]
 		private UniTask<bool> LoadSpeedColorMPC()
 		{
@@ -562,7 +562,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <LoadSpeedColorMPC>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CD0D RID: 249101 RVA: 0x00E9AB90 File Offset: 0x00E98D90
+		// Token: 0x06031C6A RID: 203882 RVA: 0x00DEB448 File Offset: 0x00DE9648
 		private void InitSpeedColorObjs()
 		{
 			string[] array = new string[]
@@ -607,7 +607,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CD0E RID: 249102 RVA: 0x00E9ACE4 File Offset: 0x00E98EE4
+		// Token: 0x06031C6B RID: 203883 RVA: 0x00DEB59C File Offset: 0x00DE979C
 		private void OnTickRotateHud(float delta)
 		{
 			bool flag = BattleUiModel.Instance.MotorcycleData.IsInFirstPersonMode() && !this.IsFirstPersonDisabled;
@@ -668,104 +668,104 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			rotateItem.SetUIRelativeRotation(frotator);
 		}
 
-		// Token: 0x0401FAC9 RID: 129737
+		// Token: 0x0401A581 RID: 107905
 		private const float TICK_INTERVAL = 100f;
 
-		// Token: 0x0401FACA RID: 129738
+		// Token: 0x0401A582 RID: 107906
 		[Nullable(1)]
 		private const string SPEED_COLOR_MPC_PATH = "/Game/Aki/UI/Framework/MPC/UiActivity/Activity30/MotoParkour/GamePlay/MPC_MotoHUD_MainColor.MPC_MotoHUD_MainColor";
 
-		// Token: 0x0401FACB RID: 129739
+		// Token: 0x0401A583 RID: 107907
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401FACC RID: 129740
+		// Token: 0x0401A584 RID: 107908
 		private MotorcycleHudSpeedItem LeftSpeedItem;
 
-		// Token: 0x0401FACD RID: 129741
+		// Token: 0x0401A585 RID: 107909
 		private MotorcycleHudSpeedItem RightSpeedItem;
 
-		// Token: 0x0401FACE RID: 129742
+		// Token: 0x0401A586 RID: 107910
 		private EntityHandle MotorcycleEntityHandle;
 
-		// Token: 0x0401FACF RID: 129743
+		// Token: 0x0401A587 RID: 107911
 		private VehicleActorComponent VehicleActorComponent;
 
-		// Token: 0x0401FAD0 RID: 129744
+		// Token: 0x0401A588 RID: 107912
 		private float NextRefreshSpeedTime;
 
-		// Token: 0x0401FAD1 RID: 129745
+		// Token: 0x0401A589 RID: 107913
 		private bool IsPlayingFirstPerson;
 
-		// Token: 0x0401FAD2 RID: 129746
+		// Token: 0x0401A58A RID: 107914
 		private MotorcycleControlHudPanel.EAlphaState AlphaState;
 
-		// Token: 0x0401FAD3 RID: 129747
+		// Token: 0x0401A58B RID: 107915
 		private float AlphaAngleRange;
 
-		// Token: 0x0401FAD4 RID: 129748
+		// Token: 0x0401A58C RID: 107916
 		private float AlphaChangeDuration = 300f;
 
-		// Token: 0x0401FAD5 RID: 129749
+		// Token: 0x0401A58D RID: 107917
 		private float AlphaTargetValue;
 
-		// Token: 0x0401FAD6 RID: 129750
+		// Token: 0x0401A58E RID: 107918
 		private bool IsEnableAlphaUpdate;
 
-		// Token: 0x0401FAD7 RID: 129751
+		// Token: 0x0401A58F RID: 107919
 		[Nullable(1)]
 		private readonly MotorcyclePercentMachine AlphaMachine = new MotorcyclePercentMachine();
 
-		// Token: 0x0401FAD8 RID: 129752
+		// Token: 0x0401A590 RID: 107920
 		private EMotorcycleHudColorState ColorState;
 
-		// Token: 0x0401FAD9 RID: 129753
+		// Token: 0x0401A591 RID: 107921
 		private UMaterialParameterCollection SpeedColorMPC;
 
-		// Token: 0x0401FADA RID: 129754
+		// Token: 0x0401A592 RID: 107922
 		[Nullable(1)]
 		private readonly List<MotorcycleControlHudPanel.SpeedColorObj> SpeedColorObjs = new List<MotorcycleControlHudPanel.SpeedColorObj>();
 
-		// Token: 0x0401FADB RID: 129755
+		// Token: 0x0401A593 RID: 107923
 		private UUIItem RotateItem;
 
-		// Token: 0x0401FADC RID: 129756
+		// Token: 0x0401A594 RID: 107924
 		private float TargetYaw;
 
-		// Token: 0x0401FADD RID: 129757
+		// Token: 0x0401A595 RID: 107925
 		private float CurYaw;
 
-		// Token: 0x0401FADE RID: 129758
+		// Token: 0x0401A596 RID: 107926
 		private float RotateSpeed;
 
-		// Token: 0x0401FADF RID: 129759
+		// Token: 0x0401A597 RID: 107927
 		private float ConfigRotateYaw;
 
-		// Token: 0x0401FAE0 RID: 129760
+		// Token: 0x0401A598 RID: 107928
 		private float ConfigRotateSpeed;
 
-		// Token: 0x0401FAE1 RID: 129761
+		// Token: 0x0401A599 RID: 107929
 		private float ConfigRotateBackSpeed;
 
-		// Token: 0x0401FAE2 RID: 129762
+		// Token: 0x0401A59A RID: 107930
 		private float ConfigRotateOutSpeed;
 
-		// Token: 0x0401FAE3 RID: 129763
+		// Token: 0x0401A59B RID: 107931
 		private float ConfigSoarPitch;
 
-		// Token: 0x0401FAE4 RID: 129764
+		// Token: 0x0401A59C RID: 107932
 		private bool IsFirstPersonDisabled;
 
-		// Token: 0x0401FAE5 RID: 129765
+		// Token: 0x0401A59D RID: 107933
 		private ITagTask VehicleSoarTagTask;
 
-		// Token: 0x0401FAE6 RID: 129766
+		// Token: 0x0401A59E RID: 107934
 		private bool IsVehicleSoar;
 
-		// Token: 0x0200C05B RID: 49243
+		// Token: 0x0200AA61 RID: 43617
 		[NullableContext(0)]
 		private class SpeedColorObj
 		{
-			// Token: 0x06050316 RID: 328470 RVA: 0x015897D0 File Offset: 0x015879D0
+			// Token: 0x06046859 RID: 288857 RVA: 0x01542B68 File Offset: 0x01540D68
 			public void Init()
 			{
 				string color;
@@ -782,7 +782,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 				}
 			}
 
-			// Token: 0x06050317 RID: 328471 RVA: 0x01589820 File Offset: 0x01587A20
+			// Token: 0x0604685A RID: 288858 RVA: 0x01542BB8 File Offset: 0x01540DB8
 			public void Update(float delta)
 			{
 				if (this.ColorMachine.Update((double)delta))
@@ -797,56 +797,56 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 				}
 			}
 
-			// Token: 0x06050318 RID: 328472 RVA: 0x0158985A File Offset: 0x01587A5A
+			// Token: 0x0604685B RID: 288859 RVA: 0x01542BF2 File Offset: 0x01540DF2
 			public void Clear()
 			{
 				this.UpdateFunc = null;
 			}
 
-			// Token: 0x0403A0BA RID: 237754
+			// Token: 0x04034A7D RID: 215677
 			[Nullable(1)]
 			public readonly Dictionary<EMotorcycleHudColorState, string> ColorMap = new Dictionary<EMotorcycleHudColorState, string>();
 
-			// Token: 0x0403A0BB RID: 237755
+			// Token: 0x04034A7E RID: 215678
 			[Nullable(1)]
 			public readonly MotorcycleSpeedColorMachine ColorMachine = new MotorcycleSpeedColorMachine();
 
-			// Token: 0x0403A0BC RID: 237756
+			// Token: 0x04034A7F RID: 215679
 			[Nullable(2)]
 			public MotorcycleControlHudPanel.SpeedColorObj.UpdateFuncDelegate UpdateFunc;
 
-			// Token: 0x0200D18A RID: 53642
-			// (Invoke) Token: 0x06052555 RID: 337237
+			// Token: 0x0200BD68 RID: 48488
+			// (Invoke) Token: 0x06048DF4 RID: 298484
 			public delegate void UpdateFuncDelegate(in FLinearColor color);
 		}
 
-		// Token: 0x0200C05C RID: 49244
+		// Token: 0x0200AA62 RID: 43618
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x0403A0BE RID: 237758
+			// Token: 0x04034A81 RID: 215681
 			LeftItem,
-			// Token: 0x0403A0BF RID: 237759
+			// Token: 0x04034A82 RID: 215682
 			RightItem,
-			// Token: 0x0403A0C0 RID: 237760
+			// Token: 0x04034A83 RID: 215683
 			RotateItem
 		}
 
-		// Token: 0x0200C05D RID: 49245
+		// Token: 0x0200AA63 RID: 43619
 		[NullableContext(0)]
 		private enum EAlphaState
 		{
-			// Token: 0x0403A0C2 RID: 237762
+			// Token: 0x04034A85 RID: 215685
 			Normal,
-			// Token: 0x0403A0C3 RID: 237763
+			// Token: 0x04034A86 RID: 215686
 			Transparent
 		}
 
-		// Token: 0x0200C05E RID: 49246
+		// Token: 0x0200AA64 RID: 43620
 		[NullableContext(0)]
 		private enum EVisibleReason
 		{
-			// Token: 0x0403A0C5 RID: 237765
+			// Token: 0x04034A88 RID: 215688
 			MotorcycleHudVisible = 1
 		}
 	}

@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 {
-	// Token: 0x0200691E RID: 26910
+	// Token: 0x0200586E RID: 22638
 	public class AnniversarySubActivityDangoRunUiItem : AnniversaryActivityEnterItem
 	{
-		// Token: 0x06043195 RID: 274837 RVA: 0x0105A1F7 File Offset: 0x010583F7
+		// Token: 0x06037CED RID: 228589 RVA: 0x00F9B823 File Offset: 0x00F99A23
 		public override void ChildUpdateStateInfo()
 		{
 			if (this.Data == null)
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			this.SetDangoIcon();
 		}
 
-		// Token: 0x06043196 RID: 274838 RVA: 0x0105A208 File Offset: 0x01058408
+		// Token: 0x06037CEE RID: 228590 RVA: 0x00F9B834 File Offset: 0x00F99A34
 		public override void ChildUpdateTips()
 		{
 			this.SetDangoIcon();
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			text.SetText(matchStateDisplayTextForEntranceActivityId, true);
 		}
 
-		// Token: 0x06043197 RID: 274839 RVA: 0x0105A290 File Offset: 0x01058490
+		// Token: 0x06037CEF RID: 228591 RVA: 0x00F9B8BC File Offset: 0x00F99ABC
 		private void SetDangoIcon()
 		{
 			if (this.Data == null)
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			base.TrySetTextureByPath(currentDangoIconStr, base.GetTexture(5), null, null);
 		}
 
-		// Token: 0x04022EED RID: 143085
+		// Token: 0x0401D749 RID: 120649
 		[Nullable(2)]
 		private string CachedDangoIconPath;
 	}

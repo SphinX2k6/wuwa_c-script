@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Util
 {
-	// Token: 0x02003B6D RID: 15213
+	// Token: 0x02003F75 RID: 16245
 	public class IDiffOpT
 	{
-		// Token: 0x17006836 RID: 26678
-		// (get) Token: 0x06014D03 RID: 85251 RVA: 0x00305D71 File Offset: 0x00303F71
-		// (set) Token: 0x06014D04 RID: 85252 RVA: 0x00305D79 File Offset: 0x00303F79
+		// Token: 0x17006DD5 RID: 28117
+		// (get) Token: 0x060161CD RID: 90573 RVA: 0x0032C309 File Offset: 0x0032A509
+		// (set) Token: 0x060161CE RID: 90574 RVA: 0x0032C311 File Offset: 0x0032A511
 		public EDiffOp Type { get; set; }
 
-		// Token: 0x17006837 RID: 26679
-		// (get) Token: 0x06014D05 RID: 85253 RVA: 0x00305D82 File Offset: 0x00303F82
-		// (set) Token: 0x06014D06 RID: 85254 RVA: 0x00305D8A File Offset: 0x00303F8A
+		// Token: 0x17006DD6 RID: 28118
+		// (get) Token: 0x060161CF RID: 90575 RVA: 0x0032C31A File Offset: 0x0032A51A
+		// (set) Token: 0x060161D0 RID: 90576 RVA: 0x0032C322 File Offset: 0x0032A522
 		public int Length { get; set; }
 
-		// Token: 0x17006838 RID: 26680
-		// (get) Token: 0x06014D07 RID: 85255 RVA: 0x00305D93 File Offset: 0x00303F93
-		// (set) Token: 0x06014D08 RID: 85256 RVA: 0x00305D9B File Offset: 0x00303F9B
+		// Token: 0x17006DD7 RID: 28119
+		// (get) Token: 0x060161D1 RID: 90577 RVA: 0x0032C32B File Offset: 0x0032A52B
+		// (set) Token: 0x060161D2 RID: 90578 RVA: 0x0032C333 File Offset: 0x0032A533
 		public IDiffOpT PreOp { get; set; }
 
-		// Token: 0x06014D09 RID: 85257 RVA: 0x00305DA4 File Offset: 0x00303FA4
+		// Token: 0x060161D3 RID: 90579 RVA: 0x0032C33C File Offset: 0x0032A53C
 		public IDiffOpT()
 		{
 			this.Type = EDiffOp.Same;

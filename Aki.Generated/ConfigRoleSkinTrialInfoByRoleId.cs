@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020008CC RID: 2252
+	// Token: 0x020008E8 RID: 2280
 	public class ConfigRoleSkinTrialInfoByRoleId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060034DB RID: 13531 RVA: 0x001841A8 File Offset: 0x001823A8
+		// Token: 0x06003583 RID: 13699 RVA: 0x0018B490 File Offset: 0x00189690
 		static ConfigRoleSkinTrialInfoByRoleId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRoleSkinTrialInfoByRoleId.CreateStaticDefaultValue), new Action(ConfigRoleSkinTrialInfoByRoleId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060034DC RID: 13532 RVA: 0x001841C8 File Offset: 0x001823C8
+		// Token: 0x06003584 RID: 13700 RVA: 0x0018B4B0 File Offset: 0x001896B0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRoleSkinTrialInfoByRoleId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060034DD RID: 13533 RVA: 0x00184247 File Offset: 0x00182447
+		// Token: 0x06003585 RID: 13701 RVA: 0x0018B52F File Offset: 0x0018972F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRoleSkinTrialInfoByRoleId.LogPair = null;
 			ConfigRoleSkinTrialInfoByRoleId.HandleId = 0;
 		}
 
-		// Token: 0x060034DE RID: 13534 RVA: 0x00184255 File Offset: 0x00182455
+		// Token: 0x06003586 RID: 13702 RVA: 0x0018B53D File Offset: 0x0018973D
 		public static void Init()
 		{
 			ConfigRoleSkinTrialInfoByRoleId.HandleId = ConfigCommon.InitDataStatement(ConfigRoleSkinTrialInfoByRoleId.HandleId, "db_roleskintrial.db", "select BinData from `RoleSkinTrialInfo` where RoleId=?");
 		}
 
-		// Token: 0x060034DF RID: 13535 RVA: 0x00184270 File Offset: 0x00182470
+		// Token: 0x06003587 RID: 13703 RVA: 0x0018B558 File Offset: 0x00189758
 		public static RoleSkinTrialInfo? GetConfig(int p0RoleId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRoleSkinTrialInfoByRoleId.HandleId, ConfigRoleSkinTrialInfoByRoleId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RoleSkinTrialInfo?(rootAsRoleSkinTrialInfo);
 		}
 
-		// Token: 0x04003D7A RID: 15738
+		// Token: 0x04003E3E RID: 15934
 		private const string DB = "db_roleskintrial.db";
 
-		// Token: 0x04003D7B RID: 15739
+		// Token: 0x04003E3F RID: 15935
 		private const string FILE = "j.角色皮肤试用活动.xlsx";
 
-		// Token: 0x04003D7C RID: 15740
+		// Token: 0x04003E40 RID: 15936
 		private const string TABLE = "RoleSkinTrialInfo";
 
-		// Token: 0x04003D7D RID: 15741
+		// Token: 0x04003E41 RID: 15937
 		private const string COMMAND = "select BinData from `RoleSkinTrialInfo` where RoleId=?";
 
-		// Token: 0x04003D7E RID: 15742
+		// Token: 0x04003E42 RID: 15938
 		private const string KEY_PREFIX = "RoleSkinTrialInfoByRoleId";
 
-		// Token: 0x04003D7F RID: 15743
+		// Token: 0x04003E43 RID: 15939
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003D80 RID: 15744
+		// Token: 0x04003E44 RID: 15940
 		private static int HandleId;
 	}
 }

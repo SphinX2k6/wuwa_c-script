@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 {
-	// Token: 0x02003BD5 RID: 15317
+	// Token: 0x02003FE0 RID: 16352
 	public class TShowTimelineActionOptionUnion
 	{
-		// Token: 0x17006919 RID: 26905
-		// (get) Token: 0x060150EB RID: 86251 RVA: 0x0030D678 File Offset: 0x0030B878
-		// (set) Token: 0x060150EC RID: 86252 RVA: 0x0030D680 File Offset: 0x0030B880
+		// Token: 0x17006EC1 RID: 28353
+		// (get) Token: 0x060165E1 RID: 91617 RVA: 0x00334200 File Offset: 0x00332400
+		// (set) Token: 0x060165E2 RID: 91618 RVA: 0x00334208 File Offset: 0x00332408
 		public TShowTimelineActionOption Type { get; set; }
 
-		// Token: 0x1700691A RID: 26906
-		// (get) Token: 0x060150ED RID: 86253 RVA: 0x0030D689 File Offset: 0x0030B889
-		// (set) Token: 0x060150EE RID: 86254 RVA: 0x0030D691 File Offset: 0x0030B891
+		// Token: 0x17006EC2 RID: 28354
+		// (get) Token: 0x060165E3 RID: 91619 RVA: 0x00334211 File Offset: 0x00332411
+		// (set) Token: 0x060165E4 RID: 91620 RVA: 0x00334219 File Offset: 0x00332419
 		public object Value { get; set; }
 
-		// Token: 0x060150EF RID: 86255 RVA: 0x0030D69A File Offset: 0x0030B89A
+		// Token: 0x060165E5 RID: 91621 RVA: 0x00334222 File Offset: 0x00332422
 		public TShowTimelineActionOptionUnion()
 		{
 			this.Type = TShowTimelineActionOption.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060150F0 RID: 86256 RVA: 0x0030D6B0 File Offset: 0x0030B8B0
+		// Token: 0x060165E6 RID: 91622 RVA: 0x00334238 File Offset: 0x00332438
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060150F1 RID: 86257 RVA: 0x0030D6C2 File Offset: 0x0030B8C2
+		// Token: 0x060165E7 RID: 91623 RVA: 0x0033424A File Offset: 0x0033244A
 		public IShowTimelineCastSkillT AsIShowTimelineCastSkill()
 		{
 			return this.As<IShowTimelineCastSkillT>();
 		}
 
-		// Token: 0x060150F2 RID: 86258 RVA: 0x0030D6CA File Offset: 0x0030B8CA
+		// Token: 0x060165E8 RID: 91624 RVA: 0x00334252 File Offset: 0x00332452
 		public static TShowTimelineActionOptionUnion FromIShowTimelineCastSkill(IShowTimelineCastSkillT _ishowtimelinecastskill)
 		{
 			return new TShowTimelineActionOptionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 			};
 		}
 
-		// Token: 0x060150F3 RID: 86259 RVA: 0x0030D6DF File Offset: 0x0030B8DF
+		// Token: 0x060165E9 RID: 91625 RVA: 0x00334267 File Offset: 0x00332467
 		public IShowTimelineJumpT AsIShowTimelineJump()
 		{
 			return this.As<IShowTimelineJumpT>();
 		}
 
-		// Token: 0x060150F4 RID: 86260 RVA: 0x0030D6E7 File Offset: 0x0030B8E7
+		// Token: 0x060165EA RID: 91626 RVA: 0x0033426F File Offset: 0x0033246F
 		public static TShowTimelineActionOptionUnion FromIShowTimelineJump(IShowTimelineJumpT _ishowtimelinejump)
 		{
 			return new TShowTimelineActionOptionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 			};
 		}
 
-		// Token: 0x060150F5 RID: 86261 RVA: 0x0030D6FC File Offset: 0x0030B8FC
+		// Token: 0x060165EB RID: 91627 RVA: 0x00334284 File Offset: 0x00332484
 		public IShowTimelineSwitchRoleT AsIShowTimelineSwitchRole()
 		{
 			return this.As<IShowTimelineSwitchRoleT>();
 		}
 
-		// Token: 0x060150F6 RID: 86262 RVA: 0x0030D704 File Offset: 0x0030B904
+		// Token: 0x060165EC RID: 91628 RVA: 0x0033428C File Offset: 0x0033248C
 		public static TShowTimelineActionOptionUnion FromIShowTimelineSwitchRole(IShowTimelineSwitchRoleT _ishowtimelineswitchrole)
 		{
 			return new TShowTimelineActionOptionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 			};
 		}
 
-		// Token: 0x060150F7 RID: 86263 RVA: 0x0030D71C File Offset: 0x0030B91C
+		// Token: 0x060165ED RID: 91629 RVA: 0x003342A4 File Offset: 0x003324A4
 		public static int Pack(FlatBufferBuilder builder, TShowTimelineActionOptionUnion _o)
 		{
 			switch (_o.Type)

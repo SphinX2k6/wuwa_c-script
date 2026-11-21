@@ -1,23 +1,23 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002365 RID: 9061
+// Token: 0x0200184A RID: 6218
 [NullableContext(1)]
 [Nullable(0)]
 public class PreviewPayGiftEntry : IPreviewPayGiftEntry
 {
-	// Token: 0x1700179A RID: 6042
-	// (get) Token: 0x0601210C RID: 73996 RVA: 0x0046F460 File Offset: 0x0046D660
-	// (set) Token: 0x0601210D RID: 73997 RVA: 0x0046F468 File Offset: 0x0046D668
+	// Token: 0x170017D4 RID: 6100
+	// (get) Token: 0x0600F5BC RID: 62908 RVA: 0x0047C588 File Offset: 0x0047A788
+	// (set) Token: 0x0600F5BD RID: 62909 RVA: 0x0047C590 File Offset: 0x0047A790
 	public long EndStampSec { get; set; }
 
-	// Token: 0x1700179B RID: 6043
-	// (get) Token: 0x0601210E RID: 73998 RVA: 0x0046F471 File Offset: 0x0046D671
-	// (set) Token: 0x0601210F RID: 73999 RVA: 0x0046F479 File Offset: 0x0046D679
+	// Token: 0x170017D5 RID: 6101
+	// (get) Token: 0x0600F5BE RID: 62910 RVA: 0x0047C599 File Offset: 0x0047A799
+	// (set) Token: 0x0600F5BF RID: 62911 RVA: 0x0047C5A1 File Offset: 0x0047A7A1
 	public string Title { get; set; }
 
-	// Token: 0x1700179C RID: 6044
-	// (get) Token: 0x06012110 RID: 74000 RVA: 0x0046F482 File Offset: 0x0046D682
-	// (set) Token: 0x06012111 RID: 74001 RVA: 0x0046F48A File Offset: 0x0046D68A
+	// Token: 0x170017D6 RID: 6102
+	// (get) Token: 0x0600F5C0 RID: 62912 RVA: 0x0047C5AA File Offset: 0x0047A7AA
+	// (set) Token: 0x0600F5C1 RID: 62913 RVA: 0x0047C5B2 File Offset: 0x0047A7B2
 	public string RewardListDesc { get; set; }
 }

@@ -5,18 +5,18 @@ using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.NewWorld.Character.Common.Component.Abilities;
 
-// Token: 0x02002EBF RID: 11967
+// Token: 0x02002412 RID: 9234
 [NullableContext(1)]
 [Nullable(0)]
 public class Calculation : IStaticVariableResetter
 {
-	// Token: 0x060198B7 RID: 104631 RVA: 0x0069ACA1 File Offset: 0x00698EA1
+	// Token: 0x060171A0 RID: 94624 RVA: 0x006C0EF5 File Offset: 0x006BF0F5
 	static Calculation()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(Calculation.CreateStaticDefaultValue), new Action(Calculation.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x060198B8 RID: 104632 RVA: 0x0069ACC0 File Offset: 0x00698EC0
+	// Token: 0x060171A1 RID: 94625 RVA: 0x006C0F14 File Offset: 0x006BF114
 	private static double GetAttrFromSnapshots(SnapshotPayload snap, EAttrOwnerType attrOwnerType, EAttributeType attrId)
 	{
 		if (attrId < EAttributeType.Lv || attrId >= EAttributeType.Max)
@@ -35,8 +35,8 @@ public class Calculation : IStaticVariableResetter
 		return (double)currentValue;
 	}
 
-	// Token: 0x17002342 RID: 9026
-	// (get) Token: 0x060198B9 RID: 104633 RVA: 0x0069AD04 File Offset: 0x00698F04
+	// Token: 0x170023E1 RID: 9185
+	// (get) Token: 0x060171A2 RID: 94626 RVA: 0x006C0F58 File Offset: 0x006BF158
 	private static Dictionary<int, Calculation.TFormula> Formulas
 	{
 		get
@@ -45,7 +45,7 @@ public class Calculation : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x060198BA RID: 104634 RVA: 0x0069AD0C File Offset: 0x00698F0C
+	// Token: 0x060171A3 RID: 94627 RVA: 0x006C0F60 File Offset: 0x006BF160
 	public static double CalculateHurt(SnapshotPayload snapshots, EElementType elementType, EAttackType attackType, EAttributeType attrId, double attrRate, bool isCritical, double augment, double amplify, double gameplayRatio, double formula = 0.0)
 	{
 		AttributeSnapshot attackerSnapshot = snapshots.AttackerSnapshot;
@@ -86,7 +86,7 @@ public class Calculation : IStaticVariableResetter
 		return Math.Max(0.0, val);
 	}
 
-	// Token: 0x060198BB RID: 104635 RVA: 0x0069AF40 File Offset: 0x00699140
+	// Token: 0x060171A4 RID: 94628 RVA: 0x006C1194 File Offset: 0x006BF394
 	public static double GetElementResistant(AttributeSnapshot attrSet, EElementType elementType)
 	{
 		float num;
@@ -120,7 +120,7 @@ public class Calculation : IStaticVariableResetter
 		return (double)num;
 	}
 
-	// Token: 0x060198BC RID: 104636 RVA: 0x0069AFF0 File Offset: 0x006991F0
+	// Token: 0x060171A5 RID: 94629 RVA: 0x006C1244 File Offset: 0x006BF444
 	public static double GetElementIgnoreResistance(AttributeSnapshot attrSet, EElementType elementType)
 	{
 		float num;
@@ -154,7 +154,7 @@ public class Calculation : IStaticVariableResetter
 		return (double)num;
 	}
 
-	// Token: 0x060198BD RID: 104637 RVA: 0x0069B0A0 File Offset: 0x006992A0
+	// Token: 0x060171A6 RID: 94630 RVA: 0x006C12F4 File Offset: 0x006BF4F4
 	public static double GetElementDamageReduce(AttributeSnapshot attrSet, EElementType elementType)
 	{
 		float num;
@@ -188,7 +188,7 @@ public class Calculation : IStaticVariableResetter
 		return (double)num;
 	}
 
-	// Token: 0x060198BE RID: 104638 RVA: 0x0069B150 File Offset: 0x00699350
+	// Token: 0x060171A7 RID: 94631 RVA: 0x006C13A4 File Offset: 0x006BF5A4
 	public static double GetElementDamageBonus(AttributeSnapshot attrSet, EElementType elementType)
 	{
 		float num;
@@ -222,7 +222,7 @@ public class Calculation : IStaticVariableResetter
 		return (double)num;
 	}
 
-	// Token: 0x060198BF RID: 104639 RVA: 0x0069B200 File Offset: 0x00699400
+	// Token: 0x060171A8 RID: 94632 RVA: 0x006C1454 File Offset: 0x006BF654
 	public static double GetAttackTypeDamageBonus(AttributeSnapshot attrSet, EAttackType attackType)
 	{
 		float num;
@@ -253,7 +253,7 @@ public class Calculation : IStaticVariableResetter
 		return (double)num;
 	}
 
-	// Token: 0x060198C0 RID: 104640 RVA: 0x0069B29C File Offset: 0x0069949C
+	// Token: 0x060171A9 RID: 94633 RVA: 0x006C14F0 File Offset: 0x006BF6F0
 	private static double CalculateHeal(SnapshotPayload snapshots, float baseValue, EAttributeType attrType, float attrRate)
 	{
 		double attrFromSnapshots = Calculation.GetAttrFromSnapshots(snapshots, EAttrOwnerType.Attacker, attrType);
@@ -264,13 +264,13 @@ public class Calculation : IStaticVariableResetter
 		return Math.Max(0.0, val);
 	}
 
-	// Token: 0x060198C1 RID: 104641 RVA: 0x0069B30C File Offset: 0x0069950C
+	// Token: 0x060171AA RID: 94634 RVA: 0x006C1560 File Offset: 0x006BF760
 	public static float ToughCalculation(AttributeSnapshot attackerAttr, AttributeSnapshot targetAttr, float rate)
 	{
 		return rate * (attackerAttr.GetCurrentValue(EAttributeType.ToughChange) * 0.0001f) * (targetAttr.GetCurrentValue(EAttributeType.ToughReduce) * 0.0001f) * (targetAttr.GetCurrentValue(EAttributeType.SkillToughRatio) * 0.0001f);
 	}
 
-	// Token: 0x060198C2 RID: 104642 RVA: 0x0069B33C File Offset: 0x0069953C
+	// Token: 0x060171AB RID: 94635 RVA: 0x006C1590 File Offset: 0x006BF790
 	public unsafe static double LandingDamageCalculationRole(double lastSpeedZ, double time, double lifeMax)
 	{
 		IReadOnlyList<int> intArrayConfig = ConfigCommonParamById.GetIntArrayConfig("landing_damage_args_role");
@@ -302,7 +302,7 @@ public class Calculation : IStaticVariableResetter
 		return 0.0;
 	}
 
-	// Token: 0x060198C3 RID: 104643 RVA: 0x0069B4EC File Offset: 0x006996EC
+	// Token: 0x060171AC RID: 94636 RVA: 0x006C1740 File Offset: 0x006BF940
 	public static double LandingDamageCalculationMonster(double height, double lifeMax)
 	{
 		IReadOnlyList<int> intArrayConfig = ConfigCommonParamById.GetIntArrayConfig("landing_damage_args_monster");
@@ -314,7 +314,7 @@ public class Calculation : IStaticVariableResetter
 		return Math.Floor(Math.Pow(height, (double)intArrayConfig[1] / 10000.0) * ((double)intArrayConfig[3] / 10000.0) * lifeMax / (double)intArrayConfig[2]);
 	}
 
-	// Token: 0x060198C4 RID: 104644 RVA: 0x0069B558 File Offset: 0x00699758
+	// Token: 0x060171AD RID: 94637 RVA: 0x006C17AC File Offset: 0x006BF9AC
 	public static double ReactionDamageRateCalculation(AttributeSnapshot attackerAttr, AttributeSnapshot targetAttr, double damageRate, int elementType, DamagePayload payload, double reactionEfficiency, bool isCritical)
 	{
 		double num = 2.0 - 3000.0 / (reactionEfficiency * 8.0 + 1830.0);
@@ -364,7 +364,7 @@ public class Calculation : IStaticVariableResetter
 		return Math.Ceiling(damageRate * 9.999999747378752E-05 * (1.0 + num * (double)num6 + (double)(num7 * currentValue) + (double)num10) * num5 * (double)(1f + currentValue2 * num8) * (double)(1f + num3 * num9) * (double)(1f / (1f + currentValue3 / (num11 + currentValue * num12))) * num13);
 	}
 
-	// Token: 0x060198C5 RID: 104645 RVA: 0x0069B770 File Offset: 0x00699970
+	// Token: 0x060171AE RID: 94638 RVA: 0x006C19C4 File Offset: 0x006BFBC4
 	public static double CalculateElementMatchUpRate(EElementType attackElementType, EElementType targetElementType)
 	{
 		double result;
@@ -398,7 +398,7 @@ public class Calculation : IStaticVariableResetter
 		return result;
 	}
 
-	// Token: 0x060198C6 RID: 104646 RVA: 0x0069B864 File Offset: 0x00699A64
+	// Token: 0x060171AF RID: 94639 RVA: 0x006C1AB8 File Offset: 0x006BFCB8
 	public unsafe static double CalculateFormula(TDamageParam inputParam, SnapshotPayload snapshots, bool isCritical, double augment, double amplify, double multiRatio, double gameplayRatio)
 	{
 		Damage damageData = inputParam.DamageData;
@@ -462,7 +462,7 @@ public class Calculation : IStaticVariableResetter
 		return num;
 	}
 
-	// Token: 0x060198C7 RID: 104647 RVA: 0x0069BADC File Offset: 0x00699CDC
+	// Token: 0x060171B0 RID: 94640 RVA: 0x006C1D30 File Offset: 0x006BFF30
 	public static void CreateStaticDefaultValue()
 	{
 		Dictionary<int, Calculation.TFormula> dictionary = new Dictionary<int, Calculation.TFormula>();
@@ -577,13 +577,13 @@ public class Calculation : IStaticVariableResetter
 		Calculation._formulas = dictionary;
 	}
 
-	// Token: 0x060198C8 RID: 104648 RVA: 0x0069BC27 File Offset: 0x00699E27
+	// Token: 0x060171B1 RID: 94641 RVA: 0x006C1E7B File Offset: 0x006C007B
 	public static void ResetStaticDefaultValue()
 	{
 		Calculation._formulas = null;
 	}
 
-	// Token: 0x0400BEF2 RID: 48882
+	// Token: 0x0400C28D RID: 49805
 	[Nullable(new byte[]
 	{
 		2,
@@ -591,8 +591,8 @@ public class Calculation : IStaticVariableResetter
 	})]
 	private static Dictionary<int, Calculation.TFormula> _formulas;
 
-	// Token: 0x020095EB RID: 38379
-	// (Invoke) Token: 0x0604C14C RID: 311628
+	// Token: 0x02008812 RID: 34834
+	// (Invoke) Token: 0x060425E1 RID: 271841
 	[NullableContext(0)]
 	private delegate double TFormula(SnapshotPayload snap, ECalculationType calculateType, TDamageParam damageParam, int level, bool isCritical, double augment, double amplify, double accumulation, double multiRatio, double gameplayRatio, params double[] parameters);
 }

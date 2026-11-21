@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02003220 RID: 12832
+// Token: 0x0200278F RID: 10127
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -10,7 +10,7 @@ using System.Runtime.CompilerServices;
 })]
 public class NpcPerformBaseState : StateBase<EntityHandle, ENpcPerformState>
 {
-	// Token: 0x0601BA9E RID: 113310 RVA: 0x0079A4BD File Offset: 0x007986BD
+	// Token: 0x06019623 RID: 103971 RVA: 0x007C2C59 File Offset: 0x007C0E59
 	[NullableContext(1)]
 	public NpcPerformBaseState(EntityHandle owner, ENpcPerformState state, [Nullable(new byte[]
 	{
@@ -20,8 +20,8 @@ public class NpcPerformBaseState : StateBase<EntityHandle, ENpcPerformState>
 	{
 	}
 
-	// Token: 0x1700263D RID: 9789
-	// (get) Token: 0x0601BA9F RID: 113311 RVA: 0x0079A4DE File Offset: 0x007986DE
+	// Token: 0x1700287E RID: 10366
+	// (get) Token: 0x06019624 RID: 103972 RVA: 0x007C2C7A File Offset: 0x007C0E7A
 	protected PawnTurnActionController TurnActionController
 	{
 		get
@@ -35,7 +35,7 @@ public class NpcPerformBaseState : StateBase<EntityHandle, ENpcPerformState>
 		}
 	}
 
-	// Token: 0x0601BAA0 RID: 113312 RVA: 0x0079A4F4 File Offset: 0x007986F4
+	// Token: 0x06019625 RID: 103973 RVA: 0x007C2C90 File Offset: 0x007C0E90
 	protected override void OnCreate(IEntityArgs config = null)
 	{
 		this.CreatureDataComp = this.Owner.Entity.GetComponent<CreatureDataComponent>();
@@ -45,53 +45,53 @@ public class NpcPerformBaseState : StateBase<EntityHandle, ENpcPerformState>
 		this.AnimComp = this.Owner.Entity.GetComponent<BaseAnimationComponent>();
 	}
 
-	// Token: 0x0601BAA1 RID: 113313 RVA: 0x0079A56A File Offset: 0x0079876A
+	// Token: 0x06019626 RID: 103974 RVA: 0x007C2D06 File Offset: 0x007C0F06
 	public virtual void OnPlayerInteractTurnActionStart()
 	{
 	}
 
-	// Token: 0x0601BAA2 RID: 113314 RVA: 0x0079A56C File Offset: 0x0079876C
+	// Token: 0x06019627 RID: 103975 RVA: 0x007C2D08 File Offset: 0x007C0F08
 	public virtual void OnPlayerInteractTurnActionEnd()
 	{
 	}
 
-	// Token: 0x0601BAA3 RID: 113315 RVA: 0x0079A56E File Offset: 0x0079876E
+	// Token: 0x06019628 RID: 103976 RVA: 0x007C2D0A File Offset: 0x007C0F0A
 	[NullableContext(1)]
 	public void PlayMontage(IPlayMontageParam param)
 	{
 		this.PerformComp.PlayPerformMontage(EPerformMode.Ecology, param, null, null, false);
 	}
 
-	// Token: 0x0601BAA4 RID: 113316 RVA: 0x0079A581 File Offset: 0x00798781
+	// Token: 0x06019629 RID: 103977 RVA: 0x007C2D1D File Offset: 0x007C0F1D
 	[NullableContext(1)]
 	public void StopMontage(IStopMontageParam param)
 	{
 		this.PerformComp.StopPerformMontage(EPerformMode.Ecology, param, null, null);
 	}
 
-	// Token: 0x0400D9B0 RID: 55728
+	// Token: 0x0400DE4F RID: 56911
 	protected CreatureDataComponent CreatureDataComp;
 
-	// Token: 0x0400D9B1 RID: 55729
+	// Token: 0x0400DE50 RID: 56912
 	protected BaseCharacterComponent ActorComp;
 
-	// Token: 0x0400D9B2 RID: 55730
+	// Token: 0x0400DE51 RID: 56913
 	protected BaseAnimationComponent AnimComp;
 
-	// Token: 0x0400D9B3 RID: 55731
+	// Token: 0x0400DE52 RID: 56914
 	protected CommonNpcPerformComponent PerformComp;
 
-	// Token: 0x0400D9B4 RID: 55732
+	// Token: 0x0400DE53 RID: 56915
 	protected int ConfigId;
 
-	// Token: 0x0400D9B5 RID: 55733
+	// Token: 0x0400DE54 RID: 56916
 	protected bool InteractRequestWaiting;
 
-	// Token: 0x0400D9B6 RID: 55734
+	// Token: 0x0400DE55 RID: 56917
 	[Nullable(1)]
 	protected Transform TmpTrans = Transform.Create();
 
-	// Token: 0x0400D9B7 RID: 55735
+	// Token: 0x0400DE56 RID: 56918
 	[Nullable(1)]
 	protected Vector TmpVector = Vector.Create();
 }

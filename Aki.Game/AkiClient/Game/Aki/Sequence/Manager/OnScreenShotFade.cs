@@ -7,17 +7,17 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Sequence.Manager
 {
-	// Token: 0x02003A2E RID: 14894
+	// Token: 0x02003076 RID: 12406
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class OnScreenShotFade : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601F5B6 RID: 128438 RVA: 0x008B64D0 File Offset: 0x008B46D0
+		// Token: 0x0601D940 RID: 121152 RVA: 0x008FBD34 File Offset: 0x008F9F34
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return OnScreenShotFade.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601F5B7 RID: 128439 RVA: 0x008B64DC File Offset: 0x008B46DC
+		// Token: 0x0601D941 RID: 121153 RVA: 0x008FBD40 File Offset: 0x008F9F40
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (BP_KuroMasterSeqEvent_C.__OnScreenShotFade__DelegateSignature_NativeFunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace AkiClient.Game.Aki.Sequence.Manager
 			return BP_KuroMasterSeqEvent_C.__OnScreenShotFade__DelegateSignature_NativeFunctionPtr;
 		}
 
-		// Token: 0x0601F5B8 RID: 128440 RVA: 0x008B64FF File Offset: 0x008B46FF
+		// Token: 0x0601D942 RID: 121154 RVA: 0x008FBD63 File Offset: 0x008F9F63
 		public OnScreenShotFade()
 		{
 		}
 
-		// Token: 0x0601F5B9 RID: 128441 RVA: 0x008B6507 File Offset: 0x008B4707
+		// Token: 0x0601D943 RID: 121155 RVA: 0x008FBD6B File Offset: 0x008F9F6B
 		[NullableContext(2)]
 		public OnScreenShotFade(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F5BA RID: 128442 RVA: 0x008B6511 File Offset: 0x008B4711
+		// Token: 0x0601D944 RID: 121156 RVA: 0x008FBD75 File Offset: 0x008F9F75
 		public OnScreenShotFade(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F5BB RID: 128443 RVA: 0x008B651C File Offset: 0x008B471C
+		// Token: 0x0601D945 RID: 121157 RVA: 0x008FBD80 File Offset: 0x008F9F80
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action) ?? ((Action)Delegate.CreateDelegate(typeof(Action), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601F5BC RID: 128444 RVA: 0x008B654E File Offset: 0x008B474E
+		// Token: 0x0601D946 RID: 121158 RVA: 0x008FBDB2 File Offset: 0x008F9FB2
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action Callback)
 		{
 			if (OnScreenShotFade.RegisterId == 0)
@@ -67,26 +66,23 @@ namespace AkiClient.Game.Aki.Sequence.Manager
 			base.Add(Callback, OnScreenShotFade.RegisterId);
 		}
 
-		// Token: 0x0601F5BD RID: 128445 RVA: 0x008B6588 File Offset: 0x008B4788
+		// Token: 0x0601D947 RID: 121159 RVA: 0x008FBDEC File Offset: 0x008F9FEC
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601F5BE RID: 128446 RVA: 0x008B6591 File Offset: 0x008B4791
+		// Token: 0x0601D948 RID: 121160 RVA: 0x008FBDF5 File Offset: 0x008F9FF5
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Broadcast()
 		{
 			base.BroadcastInternal(null);
 		}
 
-		// Token: 0x0601F5BF RID: 128447 RVA: 0x008B659C File Offset: 0x008B479C
+		// Token: 0x0601D949 RID: 121161 RVA: 0x008FBE00 File Offset: 0x008FA000
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action action = target as Action;
@@ -97,18 +93,18 @@ namespace AkiClient.Game.Aki.Sequence.Manager
 			action();
 		}
 
-		// Token: 0x0400F0E6 RID: 61670
+		// Token: 0x0400F963 RID: 63843
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/Sequence/Manager/BP_KuroMasterSeqEvent.BP_KuroMasterSeqEvent_C:OnScreenShotFade__DelegateSignature";
 
-		// Token: 0x0400F0E7 RID: 61671
+		// Token: 0x0400F964 RID: 63844
 		private static int RegisterId;
 
-		// Token: 0x02009ACF RID: 39631
+		// Token: 0x02008D5E RID: 36190
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04031075 RID: 200821
+			// Token: 0x0402C8E8 RID: 182504
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

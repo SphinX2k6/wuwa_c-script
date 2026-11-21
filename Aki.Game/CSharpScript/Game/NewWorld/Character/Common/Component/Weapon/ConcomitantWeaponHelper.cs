@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Weapon
 {
-	// Token: 0x020070D8 RID: 28888
+	// Token: 0x0200633C RID: 25404
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ConcomitantWeaponHelper
 	{
-		// Token: 0x060467D4 RID: 288724 RVA: 0x011B3B88 File Offset: 0x011B1D88
+		// Token: 0x0603D8DC RID: 252124 RVA: 0x011D2C04 File Offset: 0x011D0E04
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Weapon
 			return array;
 		}
 
-		// Token: 0x060467D5 RID: 288725 RVA: 0x011B3BE8 File Offset: 0x011B1DE8
+		// Token: 0x0603D8DD RID: 252125 RVA: 0x011D2C64 File Offset: 0x011D0E64
 		public static void SyncWeaponToConcomitants(Entity ownerEntity)
 		{
 			CreatureDataComponent component = ownerEntity.GetComponent<CreatureDataComponent>();
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Weapon
 			}
 		}
 
-		// Token: 0x060467D6 RID: 288726 RVA: 0x011B3C54 File Offset: 0x011B1E54
+		// Token: 0x0603D8DE RID: 252126 RVA: 0x011D2CD0 File Offset: 0x011D0ED0
 		private static void SyncWeaponToSingleConcomitant(long concomitantServerId, CharacterWeaponComponent ownerWeaponComp)
 		{
 			EntityHandle entity = CreatureModel.Instance.GetEntity(concomitantServerId);
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Weapon
 			ConcomitantWeaponHelper.SyncWeaponByNames(component, ownerWeaponComp, concomitantWeaponSubMeshNames);
 		}
 
-		// Token: 0x060467D7 RID: 288727 RVA: 0x011B3CB0 File Offset: 0x011B1EB0
+		// Token: 0x0603D8DF RID: 252127 RVA: 0x011D2D2C File Offset: 0x011D0F2C
 		private static void SyncWeaponByNames(CharacterActorComponent concomitantActorComp, CharacterWeaponComponent ownerWeaponComp, string[] weaponNames)
 		{
 			TArray<UActorComponent> tarray = concomitantActorComp.Actor.K2_GetComponentsByClass(USkeletalMeshComponent.StaticClass());
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Weapon
 			}
 		}
 
-		// Token: 0x060467D8 RID: 288728 RVA: 0x011B3DD8 File Offset: 0x011B1FD8
+		// Token: 0x0603D8E0 RID: 252128 RVA: 0x011D2E54 File Offset: 0x011D1054
 		private static void SetWeaponModel(USkeletalMeshComponent targetMesh, int modelId)
 		{
 			SModelConfig modelConfig = ModelUtil.GetModelConfig(modelId);
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Weapon
 			}, 100, "js_undefined");
 		}
 
-		// Token: 0x060467D9 RID: 288729 RVA: 0x011B3E68 File Offset: 0x011B2068
+		// Token: 0x0603D8E1 RID: 252129 RVA: 0x011D2EE4 File Offset: 0x011D10E4
 		private static int[] GetOwnerWeaponModelIds(CharacterWeaponComponent ownerWeaponComp)
 		{
 			CharacterActorComponent actorComp = ownerWeaponComp.ActorComp;

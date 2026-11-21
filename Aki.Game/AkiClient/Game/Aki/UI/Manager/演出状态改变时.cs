@@ -9,17 +9,17 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.UI.Manager
 {
-	// Token: 0x020039FF RID: 14847
+	// Token: 0x02003056 RID: 12374
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class 演出状态改变时 : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601F1A6 RID: 127398 RVA: 0x008AAB11 File Offset: 0x008A8D11
+		// Token: 0x0601D607 RID: 120327 RVA: 0x008F3171 File Offset: 0x008F1371
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return 演出状态改变时.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601F1A7 RID: 127399 RVA: 0x008AAB1D File Offset: 0x008A8D1D
+		// Token: 0x0601D608 RID: 120328 RVA: 0x008F317D File Offset: 0x008F137D
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (BP_EventManager_C.__演出状态改变时__DelegateSignature_NativeFunctionPtr == IntPtr.Zero)
@@ -29,31 +29,30 @@ namespace AkiClient.Game.Aki.UI.Manager
 			return BP_EventManager_C.__演出状态改变时__DelegateSignature_NativeFunctionPtr;
 		}
 
-		// Token: 0x0601F1A8 RID: 127400 RVA: 0x008AAB40 File Offset: 0x008A8D40
+		// Token: 0x0601D609 RID: 120329 RVA: 0x008F31A0 File Offset: 0x008F13A0
 		public 演出状态改变时()
 		{
 		}
 
-		// Token: 0x0601F1A9 RID: 127401 RVA: 0x008AAB48 File Offset: 0x008A8D48
+		// Token: 0x0601D60A RID: 120330 RVA: 0x008F31A8 File Offset: 0x008F13A8
 		[NullableContext(2)]
 		public 演出状态改变时(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F1AA RID: 127402 RVA: 0x008AAB52 File Offset: 0x008A8D52
+		// Token: 0x0601D60B RID: 120331 RVA: 0x008F31B2 File Offset: 0x008F13B2
 		public 演出状态改变时(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F1AB RID: 127403 RVA: 0x008AAB5D File Offset: 0x008A8D5D
+		// Token: 0x0601D60C RID: 120332 RVA: 0x008F31BD File Offset: 0x008F13BD
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<string, TEnumAsByte<EPlotState>>) ?? ((Action<string, TEnumAsByte<EPlotState>>)Delegate.CreateDelegate(typeof(Action<string, TEnumAsByte<EPlotState>>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601F1AC RID: 127404 RVA: 0x008AAB8F File Offset: 0x008A8D8F
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0601D60D RID: 120333 RVA: 0x008F31EF File Offset: 0x008F13EF
 		public void Add([Nullable(new byte[]
 		{
 			1,
@@ -73,8 +72,7 @@ namespace AkiClient.Game.Aki.UI.Manager
 			base.Add(Callback, 演出状态改变时.RegisterId);
 		}
 
-		// Token: 0x0601F1AD RID: 127405 RVA: 0x008AABC9 File Offset: 0x008A8DC9
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0601D60E RID: 120334 RVA: 0x008F3229 File Offset: 0x008F1429
 		public void Remove([Nullable(new byte[]
 		{
 			1,
@@ -85,10 +83,9 @@ namespace AkiClient.Game.Aki.UI.Manager
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601F1AE RID: 127406 RVA: 0x008AABD4 File Offset: 0x008A8DD4
+		// Token: 0x0601D60F RID: 120335 RVA: 0x008F3234 File Offset: 0x008F1434
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(string PlotId, EPlotState State)
 		{
 			演出状态改变时.__演出状态改变时_DelegateParams* ptr = stackalloc 演出状态改变时.__演出状态改变时_DelegateParams[(UIntPtr)39] + 15L / (long)sizeof(演出状态改变时.__演出状态改变时_DelegateParams) & -16L;
@@ -99,10 +96,9 @@ namespace AkiClient.Game.Aki.UI.Manager
 			UnrealReflectionUtils.DestroyStruct(BP_EventManager_C.__演出状态改变时__DelegateSignature_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601F1AF RID: 127407 RVA: 0x008AAC34 File Offset: 0x008A8E34
+		// Token: 0x0601D610 RID: 120336 RVA: 0x008F3294 File Offset: 0x008F1494
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<string, TEnumAsByte<EPlotState>> action = target as Action<string, TEnumAsByte<EPlotState>>;
@@ -114,32 +110,32 @@ namespace AkiClient.Game.Aki.UI.Manager
 			action(arg, ((演出状态改变时.__演出状态改变时_DelegateParams*)__Parameters)->State);
 		}
 
-		// Token: 0x0400EE40 RID: 60992
+		// Token: 0x0400F768 RID: 63336
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/UI/Manager/BP_EventManager.BP_EventManager_C:演出状态改变时__DelegateSignature";
 
-		// Token: 0x0400EE41 RID: 60993
+		// Token: 0x0400F769 RID: 63337
 		private static int RegisterId;
 
-		// Token: 0x02009A09 RID: 39433
+		// Token: 0x02008CBD RID: 36029
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
-		protected ref struct __演出状态改变时_DelegateParams
+		private ref struct __演出状态改变时_DelegateParams
 		{
-			// Token: 0x04030EE8 RID: 200424
+			// Token: 0x0402C7C8 RID: 182216
 			[FieldOffset(0)]
 			public FString PlotId;
 
-			// Token: 0x04030EE9 RID: 200425
+			// Token: 0x0402C7C9 RID: 182217
 			[FieldOffset(16)]
 			public TEnumAsByte<EPlotState> State;
 		}
 
-		// Token: 0x02009A0A RID: 39434
+		// Token: 0x02008CBE RID: 36030
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04030EEA RID: 200426
+			// Token: 0x0402C7CA RID: 182218
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

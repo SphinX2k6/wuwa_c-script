@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001EAD RID: 7853
+// Token: 0x0200136F RID: 4975
 public class HonamiStoryItemTipsHotKey : UiPanelBase
 {
-	// Token: 0x0600F16F RID: 61807 RVA: 0x003A1300 File Offset: 0x0039F500
+	// Token: 0x0600C58E RID: 50574 RVA: 0x003ACE08 File Offset: 0x003AB008
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -17,7 +17,7 @@ public class HonamiStoryItemTipsHotKey : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600F170 RID: 61808 RVA: 0x003A133C File Offset: 0x0039F53C
+	// Token: 0x0600C58F RID: 50575 RVA: 0x003ACE44 File Offset: 0x003AB044
 	[NullableContext(1)]
 	public void SetAutoLocation(UUIItem gridItem)
 	{
@@ -30,12 +30,12 @@ public class HonamiStoryItemTipsHotKey : UiPanelBase
 		this.RootItem.SetUIWorldLocation(fvector);
 	}
 
-	// Token: 0x02008482 RID: 33922
+	// Token: 0x02007607 RID: 30215
 	private enum EDefine
 	{
-		// Token: 0x0402B221 RID: 176673
+		// Token: 0x04026545 RID: 156997
 		PnlKeyList,
-		// Token: 0x0402B222 RID: 176674
+		// Token: 0x04026546 RID: 156998
 		PnlLocalOffsetX
 	}
 }

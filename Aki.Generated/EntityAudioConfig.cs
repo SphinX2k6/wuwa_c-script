@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000C32 RID: 3122
+	// Token: 0x02000D15 RID: 3349
 	public struct EntityAudioConfig : IFlatbufferObject
 	{
-		// Token: 0x17000F11 RID: 3857
-		// (get) Token: 0x06006945 RID: 26949 RVA: 0x0022372D File Offset: 0x0022192D
+		// Token: 0x17000F6A RID: 3946
+		// (get) Token: 0x06006F47 RID: 28487 RVA: 0x00242A91 File Offset: 0x00240C91
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006946 RID: 26950 RVA: 0x0022373A File Offset: 0x0022193A
+		// Token: 0x06006F48 RID: 28488 RVA: 0x00242A9E File Offset: 0x00240C9E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06006947 RID: 26951 RVA: 0x00223744 File Offset: 0x00221944
+		// Token: 0x06006F49 RID: 28489 RVA: 0x00242AA8 File Offset: 0x00240CA8
 		public static EntityAudioConfig GetRootAsEntityAudioConfig(ByteBuffer _bb)
 		{
 			return EntityAudioConfig.GetRootAsEntityAudioConfig(_bb, default(EntityAudioConfig));
 		}
 
-		// Token: 0x06006948 RID: 26952 RVA: 0x00223760 File Offset: 0x00221960
+		// Token: 0x06006F4A RID: 28490 RVA: 0x00242AC4 File Offset: 0x00240CC4
 		public static EntityAudioConfig GetRootAsEntityAudioConfig(ByteBuffer _bb, EntityAudioConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06006949 RID: 26953 RVA: 0x0022377D File Offset: 0x0022197D
+		// Token: 0x06006F4B RID: 28491 RVA: 0x00242AE1 File Offset: 0x00240CE1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600694A RID: 26954 RVA: 0x0022378C File Offset: 0x0022198C
+		// Token: 0x06006F4C RID: 28492 RVA: 0x00242AF0 File Offset: 0x00240CF0
 		public EntityAudioConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000F12 RID: 3858
-		// (get) Token: 0x0600694B RID: 26955 RVA: 0x0022379C File Offset: 0x0022199C
+		// Token: 0x17000F6B RID: 3947
+		// (get) Token: 0x06006F4D RID: 28493 RVA: 0x00242B00 File Offset: 0x00240D00
 		public string Id
 		{
 			get
@@ -65,20 +65,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600694C RID: 26956 RVA: 0x002237D3 File Offset: 0x002219D3
+		// Token: 0x06006F4E RID: 28494 RVA: 0x00242B37 File Offset: 0x00240D37
 		public Span<byte> GetIdBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x0600694D RID: 26957 RVA: 0x002237E2 File Offset: 0x002219E2
+		// Token: 0x06006F4F RID: 28495 RVA: 0x00242B46 File Offset: 0x00240D46
 		public byte[] GetIdArray()
 		{
 			return this.__p.__vector_as_array<byte>(4) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17000F13 RID: 3859
-		// (get) Token: 0x0600694E RID: 26958 RVA: 0x002237FC File Offset: 0x002219FC
+		// Token: 0x17000F6C RID: 3948
+		// (get) Token: 0x06006F50 RID: 28496 RVA: 0x00242B60 File Offset: 0x00240D60
 		public string Name
 		{
 			get
@@ -92,20 +92,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600694F RID: 26959 RVA: 0x00223833 File Offset: 0x00221A33
+		// Token: 0x06006F51 RID: 28497 RVA: 0x00242B97 File Offset: 0x00240D97
 		public Span<byte> GetNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06006950 RID: 26960 RVA: 0x00223842 File Offset: 0x00221A42
+		// Token: 0x06006F52 RID: 28498 RVA: 0x00242BA6 File Offset: 0x00240DA6
 		public byte[] GetNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17000F14 RID: 3860
-		// (get) Token: 0x06006951 RID: 26961 RVA: 0x0022385C File Offset: 0x00221A5C
+		// Token: 0x17000F6D RID: 3949
+		// (get) Token: 0x06006F53 RID: 28499 RVA: 0x00242BC0 File Offset: 0x00240DC0
 		public bool EnableVb
 		{
 			get
@@ -115,8 +115,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000F15 RID: 3861
-		// (get) Token: 0x06006952 RID: 26962 RVA: 0x0022389C File Offset: 0x00221A9C
+		// Token: 0x17000F6E RID: 3950
+		// (get) Token: 0x06006F54 RID: 28500 RVA: 0x00242C00 File Offset: 0x00240E00
 		public string RtpcName
 		{
 			get
@@ -130,20 +130,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006953 RID: 26963 RVA: 0x002238D4 File Offset: 0x00221AD4
+		// Token: 0x06006F55 RID: 28501 RVA: 0x00242C38 File Offset: 0x00240E38
 		public Span<byte> GetRtpcNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x06006954 RID: 26964 RVA: 0x002238E4 File Offset: 0x00221AE4
+		// Token: 0x06006F56 RID: 28502 RVA: 0x00242C48 File Offset: 0x00240E48
 		public byte[] GetRtpcNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17000F16 RID: 3862
-		// (get) Token: 0x06006955 RID: 26965 RVA: 0x002238FC File Offset: 0x00221AFC
+		// Token: 0x17000F6F RID: 3951
+		// (get) Token: 0x06006F57 RID: 28503 RVA: 0x00242C60 File Offset: 0x00240E60
 		public float TriggerDistance
 		{
 			get
@@ -157,7 +157,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006956 RID: 26966 RVA: 0x00223940 File Offset: 0x00221B40
+		// Token: 0x06006F58 RID: 28504 RVA: 0x00242CA4 File Offset: 0x00240EA4
 		public string BoneHiddenSwitch(int j)
 		{
 			int num = this.__p.__offset(14);
@@ -168,8 +168,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000F17 RID: 3863
-		// (get) Token: 0x06006957 RID: 26967 RVA: 0x0022397C File Offset: 0x00221B7C
+		// Token: 0x17000F70 RID: 3952
+		// (get) Token: 0x06006F59 RID: 28505 RVA: 0x00242CE0 File Offset: 0x00240EE0
 		public int BoneHiddenSwitchLength
 		{
 			get
@@ -183,24 +183,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006958 RID: 26968 RVA: 0x002239A8 File Offset: 0x00221BA8
+		// Token: 0x06006F5A RID: 28506 RVA: 0x00242D0C File Offset: 0x00240F0C
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用BoneHiddenSwitchIter()或GetBoneHiddenSwitchBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] BoneHiddenSwitch()
+		public string[] BoneHiddenSwitch()
 		{
 			return this.BoneHiddenSwitchIter().ToArray<string>();
 		}
 
-		// Token: 0x06006959 RID: 26969 RVA: 0x002239B5 File Offset: 0x00221BB5
+		// Token: 0x06006F5B RID: 28507 RVA: 0x00242D19 File Offset: 0x00240F19
 		[NullableContext(1)]
-		public readonly IEnumerable<string> BoneHiddenSwitchIter()
+		public IEnumerable<string> BoneHiddenSwitchIter()
 		{
 			EntityAudioConfig.<BoneHiddenSwitchIter>d__28 <BoneHiddenSwitchIter>d__ = new EntityAudioConfig.<BoneHiddenSwitchIter>d__28(-2);
 			<BoneHiddenSwitchIter>d__.<>3__<>4__this = this;
 			return <BoneHiddenSwitchIter>d__;
 		}
 
-		// Token: 0x04004C72 RID: 19570
+		// Token: 0x04005255 RID: 21077
 		private Table __p;
 	}
 }

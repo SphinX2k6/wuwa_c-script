@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001884 RID: 6276
+// Token: 0x02000D3D RID: 3389
 [NullableContext(1)]
 [Nullable(0)]
 public class DangoAbyssPluginItemSort : CommonSort<DangoAbyssPluginItemSort.EComposeExchangeSortWayType>
 {
-	// Token: 0x0600B7EA RID: 47082 RVA: 0x0029A188 File Offset: 0x00298388
+	// Token: 0x06008BD3 RID: 35795 RVA: 0x002A48A0 File Offset: 0x002A2AA0
 	private int SortCurrentRoleFirst(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -21,7 +21,7 @@ public class DangoAbyssPluginItemSort : CommonSort<DangoAbyssPluginItemSort.ECom
 		return num2 - num3;
 	}
 
-	// Token: 0x0600B7EB RID: 47083 RVA: 0x0029A1E0 File Offset: 0x002983E0
+	// Token: 0x06008BD4 RID: 35796 RVA: 0x002A48F8 File Offset: 0x002A2AF8
 	private int SortOtherRoleLast(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -36,7 +36,7 @@ public class DangoAbyssPluginItemSort : CommonSort<DangoAbyssPluginItemSort.ECom
 		return num2 - num3;
 	}
 
-	// Token: 0x0600B7EC RID: 47084 RVA: 0x0029A238 File Offset: 0x00298438
+	// Token: 0x06008BD5 RID: 35797 RVA: 0x002A4950 File Offset: 0x002A2B50
 	private int SortRoleId(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -53,7 +53,7 @@ public class DangoAbyssPluginItemSort : CommonSort<DangoAbyssPluginItemSort.ECom
 		return num;
 	}
 
-	// Token: 0x0600B7ED RID: 47085 RVA: 0x0029A268 File Offset: 0x00298468
+	// Token: 0x06008BD6 RID: 35798 RVA: 0x002A4980 File Offset: 0x002A2B80
 	private int SortQuality(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -70,7 +70,7 @@ public class DangoAbyssPluginItemSort : CommonSort<DangoAbyssPluginItemSort.ECom
 		return num;
 	}
 
-	// Token: 0x0600B7EE RID: 47086 RVA: 0x0029A298 File Offset: 0x00298498
+	// Token: 0x06008BD7 RID: 35799 RVA: 0x002A49B0 File Offset: 0x002A2BB0
 	private int SortItemId(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -87,7 +87,7 @@ public class DangoAbyssPluginItemSort : CommonSort<DangoAbyssPluginItemSort.ECom
 		return num;
 	}
 
-	// Token: 0x0600B7EF RID: 47087 RVA: 0x0029A2C8 File Offset: 0x002984C8
+	// Token: 0x06008BD8 RID: 35800 RVA: 0x002A49E0 File Offset: 0x002A2BE0
 	private int SortLockLast(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -101,7 +101,7 @@ public class DangoAbyssPluginItemSort : CommonSort<DangoAbyssPluginItemSort.ECom
 		return num - num2;
 	}
 
-	// Token: 0x0600B7F0 RID: 47088 RVA: 0x0029A2FC File Offset: 0x002984FC
+	// Token: 0x06008BD9 RID: 35801 RVA: 0x002A4A14 File Offset: 0x002A2C14
 	private int SortDeprecateFirst(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -115,7 +115,7 @@ public class DangoAbyssPluginItemSort : CommonSort<DangoAbyssPluginItemSort.ECom
 		return num - num2;
 	}
 
-	// Token: 0x0600B7F1 RID: 47089 RVA: 0x0029A330 File Offset: 0x00298530
+	// Token: 0x06008BDA RID: 35802 RVA: 0x002A4A48 File Offset: 0x002A2C48
 	private int SortValidFirst(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -130,7 +130,7 @@ public class DangoAbyssPluginItemSort : CommonSort<DangoAbyssPluginItemSort.ECom
 		return num - num2;
 	}
 
-	// Token: 0x0600B7F2 RID: 47090 RVA: 0x0029A394 File Offset: 0x00298594
+	// Token: 0x06008BDB RID: 35803 RVA: 0x002A4AAC File Offset: 0x002A2CAC
 	private int SortEquipLast(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -142,7 +142,7 @@ public class DangoAbyssPluginItemSort : CommonSort<DangoAbyssPluginItemSort.ECom
 		return abyssPluginItemInfo.GetRoleId() - abyssPluginItemInfo2.GetRoleId();
 	}
 
-	// Token: 0x0600B7F3 RID: 47091 RVA: 0x0029A3BC File Offset: 0x002985BC
+	// Token: 0x06008BDC RID: 35804 RVA: 0x002A4AD4 File Offset: 0x002A2CD4
 	protected override void OnInitSortMap()
 	{
 		this.SortMap.Add(DangoAbyssPluginItemSort.EComposeExchangeSortWayType.CurrentRoleFirst, new TSortResult(this.SortCurrentRoleFirst));
@@ -156,27 +156,27 @@ public class DangoAbyssPluginItemSort : CommonSort<DangoAbyssPluginItemSort.ECom
 		this.SortMap.Add(DangoAbyssPluginItemSort.EComposeExchangeSortWayType.EquipLast, new TSortResult(this.SortEquipLast));
 	}
 
-	// Token: 0x02007E36 RID: 32310
+	// Token: 0x02006FBD RID: 28605
 	[NullableContext(0)]
 	public enum EComposeExchangeSortWayType
 	{
-		// Token: 0x040294E5 RID: 169189
+		// Token: 0x04024812 RID: 149522
 		CurrentRoleFirst = 1,
-		// Token: 0x040294E6 RID: 169190
+		// Token: 0x04024813 RID: 149523
 		OtherRoleLast,
-		// Token: 0x040294E7 RID: 169191
+		// Token: 0x04024814 RID: 149524
 		RoleId,
-		// Token: 0x040294E8 RID: 169192
+		// Token: 0x04024815 RID: 149525
 		Quality,
-		// Token: 0x040294E9 RID: 169193
+		// Token: 0x04024816 RID: 149526
 		ItemId,
-		// Token: 0x040294EA RID: 169194
+		// Token: 0x04024817 RID: 149527
 		LockLast,
-		// Token: 0x040294EB RID: 169195
+		// Token: 0x04024818 RID: 149528
 		DeprecateFirst,
-		// Token: 0x040294EC RID: 169196
+		// Token: 0x04024819 RID: 149529
 		ValidFirst,
-		// Token: 0x040294ED RID: 169197
+		// Token: 0x0402481A RID: 149530
 		EquipLast
 	}
 }

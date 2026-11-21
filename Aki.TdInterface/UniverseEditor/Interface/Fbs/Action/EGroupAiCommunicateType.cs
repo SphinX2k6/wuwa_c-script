@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F7C RID: 24444
+	// Token: 0x020065C2 RID: 26050
 	public enum EGroupAiCommunicateType : byte
 	{
-		// Token: 0x0400FDA7 RID: 64935
+		// Token: 0x04010B2E RID: 68398
 		AddTag,
-		// Token: 0x0400FDA8 RID: 64936
+		// Token: 0x04010B2F RID: 68399
 		RemoveTag
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200093A RID: 2362
+	// Token: 0x020009E7 RID: 2535
 	public static class EEntityMatchTypeExtensions
 	{
-		// Token: 0x06003536 RID: 13622 RVA: 0x0008AE20 File Offset: 0x00089020
+		// Token: 0x060038A2 RID: 14498 RVA: 0x000929A0 File Offset: 0x00090BA0
 		public static string ToEnumString(this EEntityMatchType value)
 		{
 			string result;
@@ -30,7 +30,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003537 RID: 13623 RVA: 0x0008AE74 File Offset: 0x00089074
+		// Token: 0x060038A3 RID: 14499 RVA: 0x000929F4 File Offset: 0x00090BF4
 		public static EEntityMatchType FromString(string name)
 		{
 			EEntityMatchType result;
@@ -41,7 +41,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003538 RID: 13624 RVA: 0x0008AEA0 File Offset: 0x000890A0
+		// Token: 0x060038A4 RID: 14500 RVA: 0x00092A20 File Offset: 0x00090C20
 		public static bool TryFromString(string name, out EEntityMatchType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -73,7 +73,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x06003539 RID: 13625 RVA: 0x0008AF08 File Offset: 0x00089108
+		// Token: 0x060038A5 RID: 14501 RVA: 0x00092A88 File Offset: 0x00090C88
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -85,7 +85,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600353A RID: 13626 RVA: 0x0008AF30 File Offset: 0x00089130
+		// Token: 0x060038A6 RID: 14502 RVA: 0x00092AB0 File Offset: 0x00090CB0
 		public static EEntityMatchType[] GetValues()
 		{
 			return new EEntityMatchType[]
@@ -97,7 +97,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600353B RID: 13627 RVA: 0x0008AF43 File Offset: 0x00089143
+		// Token: 0x060038A7 RID: 14503 RVA: 0x00092AC3 File Offset: 0x00090CC3
 		public static string[] GetNames()
 		{
 			return new string[]

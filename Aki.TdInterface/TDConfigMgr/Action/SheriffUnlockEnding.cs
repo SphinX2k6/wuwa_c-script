@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021FB RID: 8699
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002466 RID: 9318
 	public class SheriffUnlockEnding : ActionParams
 	{
-		// Token: 0x0600BF07 RID: 48903 RVA: 0x001B7650 File Offset: 0x001B5850
+		// Token: 0x0600CAC3 RID: 51907 RVA: 0x001CECDC File Offset: 0x001CCEDC
 		private SheriffUnlockEnding_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BF08 RID: 48904 RVA: 0x001B7688 File Offset: 0x001B5888
+		// Token: 0x0600CAC4 RID: 51908 RVA: 0x001CED14 File Offset: 0x001CCF14
 		public static SheriffUnlockEnding Create([Nullable(2)] SheriffUnlockEnding instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BF09 RID: 48905 RVA: 0x001B769B File Offset: 0x001B589B
+		// Token: 0x0600CAC5 RID: 51909 RVA: 0x001CED27 File Offset: 0x001CCF27
 		public static SheriffUnlockEnding CreateFromSetValue([Nullable(2)] SheriffUnlockEnding_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BF0A RID: 48906 RVA: 0x001B76AE File Offset: 0x001B58AE
+		// Token: 0x0600CAC6 RID: 51910 RVA: 0x001CED3A File Offset: 0x001CCF3A
 		public SheriffUnlockEnding_SetValue ToSetValue()
 		{
 			return new SheriffUnlockEnding_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170039ED RID: 14829
-		// (get) Token: 0x0600BF0B RID: 48907 RVA: 0x001B76C1 File Offset: 0x001B58C1
-		// (set) Token: 0x0600BF0C RID: 48908 RVA: 0x001B76EC File Offset: 0x001B58EC
+		// Token: 0x17003CE2 RID: 15586
+		// (get) Token: 0x0600CAC7 RID: 51911 RVA: 0x001CED4D File Offset: 0x001CCF4D
+		// (set) Token: 0x0600CAC8 RID: 51912 RVA: 0x001CED78 File Offset: 0x001CCF78
 		public virtual int EndingId
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040071E6 RID: 29158
+		// Token: 0x0400782F RID: 30767
 		[Nullable(2)]
 		protected new SheriffUnlockEnding FbInstance;
 
-		// Token: 0x040071E7 RID: 29159
+		// Token: 0x04007830 RID: 30768
 		[Nullable(2)]
 		protected SheriffUnlockEnding_SetValue PocoInterface;
 	}

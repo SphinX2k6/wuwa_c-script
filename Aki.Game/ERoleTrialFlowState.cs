@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x020014CE RID: 5326
+// Token: 0x02000986 RID: 2438
 public enum ERoleTrialFlowState
 {
-	// Token: 0x040042A0 RID: 17056
+	// Token: 0x04004345 RID: 17221
 	ActivityOff,
-	// Token: 0x040042A1 RID: 17057
+	// Token: 0x04004346 RID: 17222
 	ActivityOn,
-	// Token: 0x040042A2 RID: 17058
+	// Token: 0x04004347 RID: 17223
 	RolePreview,
-	// Token: 0x040042A3 RID: 17059
+	// Token: 0x04004348 RID: 17224
 	RoleInstance
 }

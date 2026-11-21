@@ -4,10 +4,10 @@ using CSharpScript.Game.Module.Plot.Flow;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050BE RID: 20670
+	// Token: 0x0200408E RID: 16526
 	public class FlowActionJumpTalk : FlowActionBase
 	{
-		// Token: 0x06034EE5 RID: 216805 RVA: 0x00C898C4 File Offset: 0x00C87AC4
+		// Token: 0x06029DDE RID: 171486 RVA: 0x00BD6BAC File Offset: 0x00BD4DAC
 		protected override void OnExecute()
 		{
 			JumpTalk jumpTalk = this.ActionInfo.Params as JumpTalk;
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			runner.JumpTalk(jumpTalk.TalkId);
 		}
 
-		// Token: 0x06034EE6 RID: 216806 RVA: 0x00C898FB File Offset: 0x00C87AFB
+		// Token: 0x06029DDF RID: 171487 RVA: 0x00BD6BE3 File Offset: 0x00BD4DE3
 		protected override void OnBackgroundExecute()
 		{
 			this.OnExecute();

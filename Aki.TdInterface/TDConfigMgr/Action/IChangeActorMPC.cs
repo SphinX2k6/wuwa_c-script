@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001862 RID: 6242
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020019ED RID: 6637
 	public class IChangeActorMPC : IModifyMaterialConfig
 	{
-		// Token: 0x0600861D RID: 34333 RVA: 0x0013EC98 File Offset: 0x0013CE98
+		// Token: 0x06008D45 RID: 36165 RVA: 0x0014E4CC File Offset: 0x0014C6CC
 		private IChangeActorMPC_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600861E RID: 34334 RVA: 0x0013ECD0 File Offset: 0x0013CED0
+		// Token: 0x06008D46 RID: 36166 RVA: 0x0014E504 File Offset: 0x0014C704
 		public static IChangeActorMPC Create([Nullable(2)] IChangeActorMPC instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600861F RID: 34335 RVA: 0x0013ECE3 File Offset: 0x0013CEE3
+		// Token: 0x06008D47 RID: 36167 RVA: 0x0014E517 File Offset: 0x0014C717
 		public static IChangeActorMPC CreateFromSetValue([Nullable(2)] IChangeActorMPC_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008620 RID: 34336 RVA: 0x0013ECF6 File Offset: 0x0013CEF6
+		// Token: 0x06008D48 RID: 36168 RVA: 0x0014E52A File Offset: 0x0014C72A
 		public new IChangeActorMPC_SetValue ToSetValue()
 		{
 			return new IChangeActorMPC_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002BD0 RID: 11216
-		// (get) Token: 0x06008621 RID: 34337 RVA: 0x0013ED15 File Offset: 0x0013CF15
-		// (set) Token: 0x06008622 RID: 34338 RVA: 0x0013ED40 File Offset: 0x0013CF40
+		// Token: 0x17002DCB RID: 11723
+		// (get) Token: 0x06008D49 RID: 36169 RVA: 0x0014E549 File Offset: 0x0014C749
+		// (set) Token: 0x06008D4A RID: 36170 RVA: 0x0014E574 File Offset: 0x0014C774
 		public override EModifyActorMaterialType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002BD1 RID: 11217
-		// (get) Token: 0x06008623 RID: 34339 RVA: 0x0013ED4E File Offset: 0x0013CF4E
-		// (set) Token: 0x06008624 RID: 34340 RVA: 0x0013ED79 File Offset: 0x0013CF79
+		// Token: 0x17002DCC RID: 11724
+		// (get) Token: 0x06008D4B RID: 36171 RVA: 0x0014E582 File Offset: 0x0014C782
+		// (set) Token: 0x06008D4C RID: 36172 RVA: 0x0014E5AD File Offset: 0x0014C7AD
 		public virtual string MpcData
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040054A7 RID: 21671
+		// Token: 0x040058F4 RID: 22772
 		[Nullable(2)]
 		protected new IChangeActorMPC FbInstance;
 
-		// Token: 0x040054A8 RID: 21672
+		// Token: 0x040058F5 RID: 22773
 		[Nullable(2)]
 		protected new IChangeActorMPC_SetValue PocoInterface;
 	}

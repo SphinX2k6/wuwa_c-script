@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001BB6 RID: 7094
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001D9D RID: 7581
 	public class ILoopRange
 	{
-		// Token: 0x060097E5 RID: 38885 RVA: 0x0015E3F8 File Offset: 0x0015C5F8
+		// Token: 0x0600A0E9 RID: 41193 RVA: 0x00170EB8 File Offset: 0x0016F0B8
 		private ILoopRange_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060097E6 RID: 38886 RVA: 0x0015E430 File Offset: 0x0015C630
+		// Token: 0x0600A0EA RID: 41194 RVA: 0x00170EF0 File Offset: 0x0016F0F0
 		public static ILoopRange Create([Nullable(2)] ILoopRange instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060097E7 RID: 38887 RVA: 0x0015E443 File Offset: 0x0015C643
+		// Token: 0x0600A0EB RID: 41195 RVA: 0x00170F03 File Offset: 0x0016F103
 		public static ILoopRange CreateFromSetValue([Nullable(2)] ILoopRange_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060097E8 RID: 38888 RVA: 0x0015E456 File Offset: 0x0015C656
+		// Token: 0x0600A0EC RID: 41196 RVA: 0x00170F16 File Offset: 0x0016F116
 		public ILoopRange_SetValue ToSetValue()
 		{
 			return new ILoopRange_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002FB8 RID: 12216
-		// (get) Token: 0x060097E9 RID: 38889 RVA: 0x0015E475 File Offset: 0x0015C675
-		// (set) Token: 0x060097EA RID: 38890 RVA: 0x0015E4A0 File Offset: 0x0015C6A0
+		// Token: 0x17003217 RID: 12823
+		// (get) Token: 0x0600A0ED RID: 41197 RVA: 0x00170F35 File Offset: 0x0016F135
+		// (set) Token: 0x0600A0EE RID: 41198 RVA: 0x00170F60 File Offset: 0x0016F160
 		public virtual string LeftMark
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002FB9 RID: 12217
-		// (get) Token: 0x060097EB RID: 38891 RVA: 0x0015E4AE File Offset: 0x0015C6AE
-		// (set) Token: 0x060097EC RID: 38892 RVA: 0x0015E4D9 File Offset: 0x0015C6D9
+		// Token: 0x17003218 RID: 12824
+		// (get) Token: 0x0600A0EF RID: 41199 RVA: 0x00170F6E File Offset: 0x0016F16E
+		// (set) Token: 0x0600A0F0 RID: 41200 RVA: 0x00170F99 File Offset: 0x0016F199
 		public virtual string RightMark
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005CAF RID: 23727
+		// Token: 0x040061C4 RID: 25028
 		[Nullable(2)]
 		protected ILoopRange FbInstance;
 
-		// Token: 0x04005CB0 RID: 23728
+		// Token: 0x040061C5 RID: 25029
 		[Nullable(2)]
 		protected ILoopRange_SetValue PocoInterface;
 	}

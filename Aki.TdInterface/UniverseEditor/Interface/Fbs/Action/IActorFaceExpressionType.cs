@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020060A4 RID: 24740
+	// Token: 0x02006706 RID: 26374
 	public struct IActorFaceExpressionType : IFlatbufferObject
 	{
-		// Token: 0x1700B650 RID: 46672
-		// (get) Token: 0x0602A3B4 RID: 172980 RVA: 0x005D275C File Offset: 0x005D095C
+		// Token: 0x1700BFBB RID: 49083
+		// (get) Token: 0x0602CA95 RID: 182933 RVA: 0x0061C704 File Offset: 0x0061A904
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602A3B5 RID: 172981 RVA: 0x005D2769 File Offset: 0x005D0969
+		// Token: 0x0602CA96 RID: 182934 RVA: 0x0061C711 File Offset: 0x0061A911
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602A3B6 RID: 172982 RVA: 0x005D2770 File Offset: 0x005D0970
+		// Token: 0x0602CA97 RID: 182935 RVA: 0x0061C718 File Offset: 0x0061A918
 		public static IActorFaceExpressionType GetRootAsIActorFaceExpressionType(ByteBuffer _bb)
 		{
 			return IActorFaceExpressionType.GetRootAsIActorFaceExpressionType(_bb, default(IActorFaceExpressionType));
 		}
 
-		// Token: 0x0602A3B7 RID: 172983 RVA: 0x005D278C File Offset: 0x005D098C
+		// Token: 0x0602CA98 RID: 182936 RVA: 0x0061C734 File Offset: 0x0061A934
 		public static IActorFaceExpressionType GetRootAsIActorFaceExpressionType(ByteBuffer _bb, IActorFaceExpressionType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602A3B8 RID: 172984 RVA: 0x005D27A9 File Offset: 0x005D09A9
+		// Token: 0x0602CA99 RID: 182937 RVA: 0x0061C751 File Offset: 0x0061A951
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602A3B9 RID: 172985 RVA: 0x005D27B8 File Offset: 0x005D09B8
+		// Token: 0x0602CA9A RID: 182938 RVA: 0x0061C760 File Offset: 0x0061A960
 		public IActorFaceExpressionType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B651 RID: 46673
-		// (get) Token: 0x0602A3BA RID: 172986 RVA: 0x005D27C8 File Offset: 0x005D09C8
+		// Token: 0x1700BFBC RID: 49084
+		// (get) Token: 0x0602CA9B RID: 182939 RVA: 0x0061C770 File Offset: 0x0061A970
 		public EActorFaceExpressionType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602A3BB RID: 172987 RVA: 0x005D2804 File Offset: 0x005D0A04
+		// Token: 0x0602CA9C RID: 182940 RVA: 0x0061C7AC File Offset: 0x0061A9AC
 		public static Offset<IActorFaceExpressionType> CreateIActorFaceExpressionType(FlatBufferBuilder builder, EActorFaceExpressionType Type = EActorFaceExpressionType.Play)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IActorFaceExpressionType.EndIActorFaceExpressionType(builder);
 		}
 
-		// Token: 0x0602A3BC RID: 172988 RVA: 0x005D281A File Offset: 0x005D0A1A
+		// Token: 0x0602CA9D RID: 182941 RVA: 0x0061C7C2 File Offset: 0x0061A9C2
 		public static void StartIActorFaceExpressionType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602A3BD RID: 172989 RVA: 0x005D2823 File Offset: 0x005D0A23
+		// Token: 0x0602CA9E RID: 182942 RVA: 0x0061C7CB File Offset: 0x0061A9CB
 		public static void AddType(FlatBufferBuilder builder, EActorFaceExpressionType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602A3BE RID: 172990 RVA: 0x005D282E File Offset: 0x005D0A2E
+		// Token: 0x0602CA9F RID: 182943 RVA: 0x0061C7D6 File Offset: 0x0061A9D6
 		public static Offset<IActorFaceExpressionType> EndIActorFaceExpressionType(FlatBufferBuilder builder)
 		{
 			return new Offset<IActorFaceExpressionType>(builder.EndTable());
 		}
 
-		// Token: 0x0602A3BF RID: 172991 RVA: 0x005D283C File Offset: 0x005D0A3C
+		// Token: 0x0602CAA0 RID: 182944 RVA: 0x0061C7E4 File Offset: 0x0061A9E4
 		public IActorFaceExpressionTypeT UnPack()
 		{
 			IActorFaceExpressionTypeT actorFaceExpressionTypeT = new IActorFaceExpressionTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return actorFaceExpressionTypeT;
 		}
 
-		// Token: 0x0602A3C0 RID: 172992 RVA: 0x005D2857 File Offset: 0x005D0A57
+		// Token: 0x0602CAA1 RID: 182945 RVA: 0x0061C7FF File Offset: 0x0061A9FF
 		public void UnPackTo(IActorFaceExpressionTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602A3C1 RID: 172993 RVA: 0x005D2868 File Offset: 0x005D0A68
+		// Token: 0x0602CAA2 RID: 182946 RVA: 0x0061C810 File Offset: 0x0061AA10
 		public static Offset<IActorFaceExpressionType> Pack(FlatBufferBuilder builder, IActorFaceExpressionTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IActorFaceExpressionType.CreateIActorFaceExpressionType(builder, _o.Type);
 		}
 
-		// Token: 0x0401043D RID: 66621
+		// Token: 0x04011241 RID: 70209
 		private Table __p;
 	}
 }

@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020010C2 RID: 4290
+	// Token: 0x020011BD RID: 4541
 	public struct SkillInput : IFlatbufferObject
 	{
-		// Token: 0x170036DD RID: 14045
-		// (get) Token: 0x0600D52A RID: 54570 RVA: 0x00317910 File Offset: 0x00315B10
+		// Token: 0x170037EE RID: 14318
+		// (get) Token: 0x0600DD07 RID: 56583 RVA: 0x00336AB0 File Offset: 0x00334CB0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D52B RID: 54571 RVA: 0x0031791D File Offset: 0x00315B1D
+		// Token: 0x0600DD08 RID: 56584 RVA: 0x00336ABD File Offset: 0x00334CBD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600D52C RID: 54572 RVA: 0x00317924 File Offset: 0x00315B24
+		// Token: 0x0600DD09 RID: 56585 RVA: 0x00336AC4 File Offset: 0x00334CC4
 		public static SkillInput GetRootAsSkillInput(ByteBuffer _bb)
 		{
 			return SkillInput.GetRootAsSkillInput(_bb, default(SkillInput));
 		}
 
-		// Token: 0x0600D52D RID: 54573 RVA: 0x00317940 File Offset: 0x00315B40
+		// Token: 0x0600DD0A RID: 56586 RVA: 0x00336AE0 File Offset: 0x00334CE0
 		public static SkillInput GetRootAsSkillInput(ByteBuffer _bb, SkillInput obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600D52E RID: 54574 RVA: 0x0031795D File Offset: 0x00315B5D
+		// Token: 0x0600DD0B RID: 56587 RVA: 0x00336AFD File Offset: 0x00334CFD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600D52F RID: 54575 RVA: 0x0031796C File Offset: 0x00315B6C
+		// Token: 0x0600DD0C RID: 56588 RVA: 0x00336B0C File Offset: 0x00334D0C
 		public SkillInput __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170036DE RID: 14046
-		// (get) Token: 0x0600D530 RID: 54576 RVA: 0x0031797C File Offset: 0x00315B7C
+		// Token: 0x170037EF RID: 14319
+		// (get) Token: 0x0600DD0D RID: 56589 RVA: 0x00336B1C File Offset: 0x00334D1C
 		public int Id
 		{
 			get
@@ -65,7 +65,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D531 RID: 54577 RVA: 0x003179B8 File Offset: 0x00315BB8
+		// Token: 0x0600DD0E RID: 56590 RVA: 0x00336B58 File Offset: 0x00334D58
 		public string InputArray(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -76,8 +76,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170036DF RID: 14047
-		// (get) Token: 0x0600D532 RID: 54578 RVA: 0x003179F4 File Offset: 0x00315BF4
+		// Token: 0x170037F0 RID: 14320
+		// (get) Token: 0x0600DD0F RID: 56591 RVA: 0x00336B94 File Offset: 0x00334D94
 		public int InputArrayLength
 		{
 			get
@@ -91,7 +91,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D533 RID: 54579 RVA: 0x00317A20 File Offset: 0x00315C20
+		// Token: 0x0600DD10 RID: 56592 RVA: 0x00336BC0 File Offset: 0x00334DC0
 		public int SkillArray(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -102,8 +102,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170036E0 RID: 14048
-		// (get) Token: 0x0600D534 RID: 54580 RVA: 0x00317A60 File Offset: 0x00315C60
+		// Token: 0x170037F1 RID: 14321
+		// (get) Token: 0x0600DD11 RID: 56593 RVA: 0x00336C00 File Offset: 0x00334E00
 		public int SkillArrayLength
 		{
 			get
@@ -117,19 +117,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D535 RID: 54581 RVA: 0x00317A8B File Offset: 0x00315C8B
+		// Token: 0x0600DD12 RID: 56594 RVA: 0x00336C2B File Offset: 0x00334E2B
 		public Span<int> GetSkillArrayBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x0600D536 RID: 54582 RVA: 0x00317A9A File Offset: 0x00315C9A
+		// Token: 0x0600DD13 RID: 56595 RVA: 0x00336C3A File Offset: 0x00334E3A
 		public int[] GetSkillArrayArray()
 		{
 			return this.__p.__vector_as_array<int>(8) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600D537 RID: 54583 RVA: 0x00317AB4 File Offset: 0x00315CB4
+		// Token: 0x0600DD14 RID: 56596 RVA: 0x00336C54 File Offset: 0x00334E54
 		public string ImageArray(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -140,8 +140,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170036E1 RID: 14049
-		// (get) Token: 0x0600D538 RID: 54584 RVA: 0x00317AF0 File Offset: 0x00315CF0
+		// Token: 0x170037F2 RID: 14322
+		// (get) Token: 0x0600DD15 RID: 56597 RVA: 0x00336C90 File Offset: 0x00334E90
 		public int ImageArrayLength
 		{
 			get
@@ -155,8 +155,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170036E2 RID: 14050
-		// (get) Token: 0x0600D539 RID: 54585 RVA: 0x00317B1C File Offset: 0x00315D1C
+		// Token: 0x170037F3 RID: 14323
+		// (get) Token: 0x0600DD16 RID: 56598 RVA: 0x00336CBC File Offset: 0x00334EBC
 		public string Description
 		{
 			get
@@ -170,71 +170,67 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D53A RID: 54586 RVA: 0x00317B54 File Offset: 0x00315D54
+		// Token: 0x0600DD17 RID: 56599 RVA: 0x00336CF4 File Offset: 0x00334EF4
 		public Span<byte> GetDescriptionBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x0600D53B RID: 54587 RVA: 0x00317B64 File Offset: 0x00315D64
+		// Token: 0x0600DD18 RID: 56600 RVA: 0x00336D04 File Offset: 0x00334F04
 		public byte[] GetDescriptionArray()
 		{
 			return this.__p.__vector_as_array<byte>(12) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0600D53C RID: 54588 RVA: 0x00317B7C File Offset: 0x00315D7C
+		// Token: 0x0600DD19 RID: 56601 RVA: 0x00336D1C File Offset: 0x00334F1C
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ImageArrayIter()或GetImageArrayBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] ImageArray()
+		public string[] ImageArray()
 		{
 			return this.ImageArrayIter().ToArray<string>();
 		}
 
-		// Token: 0x0600D53D RID: 54589 RVA: 0x00317B89 File Offset: 0x00315D89
+		// Token: 0x0600DD1A RID: 56602 RVA: 0x00336D29 File Offset: 0x00334F29
 		[NullableContext(1)]
-		public readonly IEnumerable<string> ImageArrayIter()
+		public IEnumerable<string> ImageArrayIter()
 		{
 			SkillInput.<ImageArrayIter>d__26 <ImageArrayIter>d__ = new SkillInput.<ImageArrayIter>d__26(-2);
 			<ImageArrayIter>d__.<>3__<>4__this = this;
 			return <ImageArrayIter>d__;
 		}
 
-		// Token: 0x0600D53E RID: 54590 RVA: 0x00317B9E File Offset: 0x00315D9E
+		// Token: 0x0600DD1B RID: 56603 RVA: 0x00336D3E File Offset: 0x00334F3E
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用InputArrayIter()或GetInputArrayBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] InputArray()
+		public string[] InputArray()
 		{
 			return this.InputArrayIter().ToArray<string>();
 		}
 
-		// Token: 0x0600D53F RID: 54591 RVA: 0x00317BAB File Offset: 0x00315DAB
+		// Token: 0x0600DD1C RID: 56604 RVA: 0x00336D4B File Offset: 0x00334F4B
 		[NullableContext(1)]
-		public readonly IEnumerable<string> InputArrayIter()
+		public IEnumerable<string> InputArrayIter()
 		{
 			SkillInput.<InputArrayIter>d__28 <InputArrayIter>d__ = new SkillInput.<InputArrayIter>d__28(-2);
 			<InputArrayIter>d__.<>3__<>4__this = this;
 			return <InputArrayIter>d__;
 		}
 
-		// Token: 0x0600D540 RID: 54592 RVA: 0x00317BC0 File Offset: 0x00315DC0
+		// Token: 0x0600DD1D RID: 56605 RVA: 0x00336D60 File Offset: 0x00334F60
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用SkillArrayIter()或GetSkillArrayBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] SkillArray()
+		public int[] SkillArray()
 		{
-			SkillInput skillInput = this;
-			return skillInput.GetSkillArrayArray() ?? Array.Empty<int>();
+			return this.GetSkillArrayArray();
 		}
 
-		// Token: 0x0600D541 RID: 54593 RVA: 0x00317BE4 File Offset: 0x00315DE4
+		// Token: 0x0600DD1E RID: 56606 RVA: 0x00336D68 File Offset: 0x00334F68
 		[NullableContext(1)]
-		public readonly IEnumerable<int> SkillArrayIter()
+		public IEnumerable<int> SkillArrayIter()
 		{
 			SkillInput.<SkillArrayIter>d__30 <SkillArrayIter>d__ = new SkillInput.<SkillArrayIter>d__30(-2);
 			<SkillArrayIter>d__.<>3__<>4__this = this;
 			return <SkillArrayIter>d__;
 		}
 
-		// Token: 0x040051EB RID: 20971
+		// Token: 0x040057EA RID: 22506
 		private Table __p;
 	}
 }

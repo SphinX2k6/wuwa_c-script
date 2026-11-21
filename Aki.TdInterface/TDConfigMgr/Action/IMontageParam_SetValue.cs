@@ -1,22 +1,20 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C09 RID: 7177
+	// Token: 0x02001DF8 RID: 7672
 	public class IMontageParam_SetValue
 	{
-		// Token: 0x04005D9F RID: 23967
-		[Nullable(1)]
+		// Token: 0x040062C6 RID: 25286
 		public IMontageId MontageId;
 
-		// Token: 0x04005DA0 RID: 23968
+		// Token: 0x040062C7 RID: 25287
 		public bool? IsLoop;
 
-		// Token: 0x04005DA1 RID: 23969
+		// Token: 0x040062C8 RID: 25288
 		public bool? KeepPose;
 
-		// Token: 0x04005DA2 RID: 23970
+		// Token: 0x040062C9 RID: 25289
 		public float? DelayTime;
 	}
 }

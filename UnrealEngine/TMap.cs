@@ -7,13 +7,13 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000074 RID: 116
+	// Token: 0x02000059 RID: 89
 	[NullableContext(1)]
 	[Nullable(0)]
 	public sealed class TMap<K, [Nullable(2)] V> : UnrealProxyObject, IDictionary<K, V>, ICollection<KeyValuePair<K, V>>, IEnumerable<KeyValuePair<K, V>>, IEnumerable, IReadOnlyDictionary<K, V>, IReadOnlyCollection<KeyValuePair<K, V>>
 	{
-		// Token: 0x170004A6 RID: 1190
-		// (get) Token: 0x06000E21 RID: 3617 RVA: 0x00014CEC File Offset: 0x00012EEC
+		// Token: 0x170000AE RID: 174
+		// (get) Token: 0x060009B2 RID: 2482 RVA: 0x0000F9EC File Offset: 0x0000DBEC
 		public IntPtr NativeMapPtr
 		{
 			get
@@ -22,13 +22,13 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000E22 RID: 3618 RVA: 0x00014CF9 File Offset: 0x00012EF9
+		// Token: 0x060009B3 RID: 2483 RVA: 0x0000F9F9 File Offset: 0x0000DBF9
 		public TMap()
 		{
 			FCScriptMapHelperWrapper.AllocNativeScriptMap(base.NativePtr);
 		}
 
-		// Token: 0x06000E23 RID: 3619 RVA: 0x00014D0C File Offset: 0x00012F0C
+		// Token: 0x060009B4 RID: 2484 RVA: 0x0000FA0C File Offset: 0x0000DC0C
 		[NullableContext(2)]
 		public TMap(IntPtr NativeScriptMapPtr, UnrealObject MemoryOwner)
 		{
@@ -50,12 +50,12 @@ namespace UnrealEngine
 			FCScriptMapHelperWrapper.SetNativeScriptMap(base.NativePtr, NativeScriptMapPtr, base.IsNativePtrAllocated);
 		}
 
-		// Token: 0x06000E24 RID: 3620 RVA: 0x00014D71 File Offset: 0x00012F71
+		// Token: 0x060009B5 RID: 2485 RVA: 0x0000FA71 File Offset: 0x0000DC71
 		public TMap(IntPtr NativeScriptMapPtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativeScriptMapPtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06000E25 RID: 3621 RVA: 0x00014D7C File Offset: 0x00012F7C
+		// Token: 0x060009B6 RID: 2486 RVA: 0x0000FA7C File Offset: 0x0000DC7C
 		protected override IntPtr AllocNativePtr()
 		{
 			NativeArrayProcessorFactory.AddRef(TMap<K, V>.KeyProcessor);
@@ -65,7 +65,7 @@ namespace UnrealEngine
 			return FCScriptMapHelperWrapper.AllocNativeMemory(TMap<K, V>.KeyInnerPropertyTypeCode, keyInnerUStructPtr, TMap<K, V>.KeyProcessor.Size, TMap<K, V>.KeyProcessor.MinAlignment, TMap<K, V>.ValueInnerPropertyTypeCode, valueInnerUStructPtr, TMap<K, V>.ValueProcessor.Size, TMap<K, V>.ValueProcessor.MinAlignment);
 		}
 
-		// Token: 0x06000E26 RID: 3622 RVA: 0x00014E26 File Offset: 0x00013026
+		// Token: 0x060009B7 RID: 2487 RVA: 0x0000FB26 File Offset: 0x0000DD26
 		protected override void DeallocNativePtr()
 		{
 			this.Empty(0);
@@ -74,8 +74,8 @@ namespace UnrealEngine
 			NativeArrayProcessorFactory.DecRef(TMap<K, V>.ValueProcessor);
 		}
 
-		// Token: 0x170004A7 RID: 1191
-		// (get) Token: 0x06000E27 RID: 3623 RVA: 0x00014E4E File Offset: 0x0001304E
+		// Token: 0x170000AF RID: 175
+		// (get) Token: 0x060009B8 RID: 2488 RVA: 0x0000FB4E File Offset: 0x0000DD4E
 		public override bool AllowMoveAssign
 		{
 			get
@@ -84,7 +84,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000E28 RID: 3624 RVA: 0x00014E51 File Offset: 0x00013051
+		// Token: 0x060009B9 RID: 2489 RVA: 0x0000FB51 File Offset: 0x0000DD51
 		public override void MoveAssign(IntPtr Src)
 		{
 			if (Src == 0)
@@ -95,8 +95,8 @@ namespace UnrealEngine
 			FCScriptMapHelperWrapper.MoveAssign(this._NativePtr, Src);
 		}
 
-		// Token: 0x170004A8 RID: 1192
-		// (get) Token: 0x06000E29 RID: 3625 RVA: 0x00014E6A File Offset: 0x0001306A
+		// Token: 0x170000B0 RID: 176
+		// (get) Token: 0x060009BA RID: 2490 RVA: 0x0000FB6A File Offset: 0x0000DD6A
 		public override bool AllowCopyAssign
 		{
 			get
@@ -105,7 +105,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000E2A RID: 3626 RVA: 0x00014E6D File Offset: 0x0001306D
+		// Token: 0x060009BB RID: 2491 RVA: 0x0000FB6D File Offset: 0x0000DD6D
 		public override void CopyAssign(IntPtr Src)
 		{
 			if (Src == 0)
@@ -116,7 +116,7 @@ namespace UnrealEngine
 			FCScriptMapHelperWrapper.CopyAssign(this._NativePtr, Src);
 		}
 
-		// Token: 0x170004A9 RID: 1193
+		// Token: 0x170000B1 RID: 177
 		public V this[K Key]
 		{
 			[return: MaybeNull]
@@ -130,7 +130,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000E2D RID: 3629 RVA: 0x00014E9C File Offset: 0x0001309C
+		// Token: 0x060009BE RID: 2494 RVA: 0x0000FB9C File Offset: 0x0000DD9C
 		public unsafe void Add(K Key, [MaybeNull] V Value)
 		{
 			ArgumentNullException.ThrowIfNull(Key, "Key");
@@ -157,13 +157,13 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000E2E RID: 3630 RVA: 0x00014F16 File Offset: 0x00013116
+		// Token: 0x060009BF RID: 2495 RVA: 0x0000FC16 File Offset: 0x0000DE16
 		public bool ContainsKey(K Key)
 		{
 			return this.Contains(Key);
 		}
 
-		// Token: 0x06000E2F RID: 3631 RVA: 0x00014F20 File Offset: 0x00013120
+		// Token: 0x060009C0 RID: 2496 RVA: 0x0000FC20 File Offset: 0x0000DE20
 		public unsafe bool Remove(K Key)
 		{
 			bool flag = false;
@@ -180,7 +180,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06000E30 RID: 3632 RVA: 0x00014F64 File Offset: 0x00013164
+		// Token: 0x060009C1 RID: 2497 RVA: 0x0000FC64 File Offset: 0x0000DE64
 		[NullableContext(2)]
 		public unsafe K GetKey(int Index)
 		{
@@ -192,7 +192,7 @@ namespace UnrealEngine
 			return TMap<K, V>.KeyProcessor.Get(keyPtr, 0);
 		}
 
-		// Token: 0x06000E31 RID: 3633 RVA: 0x00014F9C File Offset: 0x0001319C
+		// Token: 0x060009C2 RID: 2498 RVA: 0x0000FC9C File Offset: 0x0000DE9C
 		[NullableContext(2)]
 		public unsafe V GetValue(int Index)
 		{
@@ -204,7 +204,7 @@ namespace UnrealEngine
 			return TMap<K, V>.ValueProcessor.Get(valuePtr, 0);
 		}
 
-		// Token: 0x06000E32 RID: 3634 RVA: 0x00014FD4 File Offset: 0x000131D4
+		// Token: 0x060009C3 RID: 2499 RVA: 0x0000FCD4 File Offset: 0x0000DED4
 		[NullableContext(0)]
 		private unsafe void* FindValue([Nullable(1)] K Key)
 		{
@@ -223,7 +223,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06000E33 RID: 3635 RVA: 0x00015028 File Offset: 0x00013228
+		// Token: 0x060009C4 RID: 2500 RVA: 0x0000FD28 File Offset: 0x0000DF28
 		[return: Nullable(2)]
 		public unsafe V Get(K Key)
 		{
@@ -235,7 +235,7 @@ namespace UnrealEngine
 			return TMap<K, V>.ValueProcessor.Get(ptr, 0);
 		}
 
-		// Token: 0x06000E34 RID: 3636 RVA: 0x00015064 File Offset: 0x00013264
+		// Token: 0x060009C5 RID: 2501 RVA: 0x0000FD64 File Offset: 0x0000DF64
 		public unsafe bool TryGetValue(K Key, [MaybeNullWhen(false)] out V Value)
 		{
 			void* ptr = this.FindValue(Key);
@@ -248,7 +248,7 @@ namespace UnrealEngine
 			return true;
 		}
 
-		// Token: 0x06000E35 RID: 3637 RVA: 0x0001509C File Offset: 0x0001329C
+		// Token: 0x060009C6 RID: 2502 RVA: 0x0000FD9C File Offset: 0x0000DF9C
 		[return: Nullable(2)]
 		public V GetValueOrDefault(K Key)
 		{
@@ -260,43 +260,50 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06000E36 RID: 3638 RVA: 0x000150BF File Offset: 0x000132BF
+		// Token: 0x060009C7 RID: 2503 RVA: 0x0000FDBF File Offset: 0x0000DFBF
 		public bool Contains(K Key)
 		{
 			return this.FindValue(Key) != null;
 		}
 
-		// Token: 0x06000E37 RID: 3639 RVA: 0x000150CF File Offset: 0x000132CF
+		// Token: 0x060009C8 RID: 2504 RVA: 0x0000FDCF File Offset: 0x0000DFCF
 		public int Num()
 		{
 			return FCScriptMapHelperWrapper.Num(this._NativePtr);
 		}
 
-		// Token: 0x06000E38 RID: 3640 RVA: 0x000150DC File Offset: 0x000132DC
+		// Token: 0x060009C9 RID: 2505 RVA: 0x0000FDDC File Offset: 0x0000DFDC
 		public int GetMaxIndex()
 		{
 			return FCScriptMapHelperWrapper.GetMaxIndex(this._NativePtr);
 		}
 
-		// Token: 0x06000E39 RID: 3641 RVA: 0x000150E9 File Offset: 0x000132E9
+		// Token: 0x060009CA RID: 2506 RVA: 0x0000FDE9 File Offset: 0x0000DFE9
 		public bool IsValidIndex(int Index)
 		{
 			return FCScriptMapHelperWrapper.IsValidIndex(this._NativePtr, Index);
 		}
 
-		// Token: 0x06000E3A RID: 3642 RVA: 0x000150F7 File Offset: 0x000132F7
+		// Token: 0x060009CB RID: 2507 RVA: 0x0000FDF7 File Offset: 0x0000DFF7
 		public void Empty(int Slack = 0)
 		{
 			FCScriptMapHelperWrapper.Empty(this._NativePtr, Slack);
 		}
 
-		// Token: 0x06000E3B RID: 3643 RVA: 0x00015106 File Offset: 0x00013306
+		// Token: 0x060009CC RID: 2508 RVA: 0x0000FE06 File Offset: 0x0000E006
 		public override void CopyTo(IntPtr DestPtr, UScriptStructStackOnlyPtr NativeUStructPtr = default(UScriptStructStackOnlyPtr))
 		{
 			FCScriptMapHelperWrapper.CopyTo(DestPtr, base.NativePtr);
 		}
 
-		// Token: 0x06000E3C RID: 3644 RVA: 0x00015114 File Offset: 0x00013314
+		// Token: 0x060009CD RID: 2509 RVA: 0x0000FE14 File Offset: 0x0000E014
+		[NullableContext(0)]
+		public TMap<K, V>.Enumerator GetEnumerator()
+		{
+			return new TMap<K, V>.Enumerator(this);
+		}
+
+		// Token: 0x060009CE RID: 2510 RVA: 0x0000FE1C File Offset: 0x0000E01C
 		[return: Nullable(new byte[]
 		{
 			1,
@@ -304,18 +311,18 @@ namespace UnrealEngine
 			1,
 			1
 		})]
-		public IEnumerator<KeyValuePair<K, V>> GetEnumerator()
+		IEnumerator<KeyValuePair<K, V>> IEnumerable<KeyValuePair<!0, !1>>.GetEnumerator()
 		{
 			return new TMap<K, V>.Enumerator(this);
 		}
 
-		// Token: 0x06000E3D RID: 3645 RVA: 0x00015121 File Offset: 0x00013321
+		// Token: 0x060009CF RID: 2511 RVA: 0x0000FE29 File Offset: 0x0000E029
 		IEnumerator IEnumerable.GetEnumerator()
 		{
 			return new TMap<K, V>.Enumerator(this);
 		}
 
-		// Token: 0x06000E3E RID: 3646 RVA: 0x0001512E File Offset: 0x0001332E
+		// Token: 0x060009D0 RID: 2512 RVA: 0x0000FE36 File Offset: 0x0000E036
 		public void Add([Nullable(new byte[]
 		{
 			0,
@@ -326,13 +333,13 @@ namespace UnrealEngine
 			this.Add(Item.Key, Item.Value);
 		}
 
-		// Token: 0x06000E3F RID: 3647 RVA: 0x00015144 File Offset: 0x00013344
+		// Token: 0x060009D1 RID: 2513 RVA: 0x0000FE4C File Offset: 0x0000E04C
 		public void Clear()
 		{
 			this.Empty(0);
 		}
 
-		// Token: 0x06000E40 RID: 3648 RVA: 0x00015150 File Offset: 0x00013350
+		// Token: 0x060009D2 RID: 2514 RVA: 0x0000FE58 File Offset: 0x0000E058
 		public bool Contains([Nullable(new byte[]
 		{
 			0,
@@ -344,7 +351,7 @@ namespace UnrealEngine
 			return this.TryGetValue(Item.Key, out x) && EqualityComparer<V>.Default.Equals(x, Item.Value);
 		}
 
-		// Token: 0x06000E41 RID: 3649 RVA: 0x00015184 File Offset: 0x00013384
+		// Token: 0x060009D3 RID: 2515 RVA: 0x0000FE8C File Offset: 0x0000E08C
 		public unsafe void CopyTo([Nullable(new byte[]
 		{
 			1,
@@ -378,7 +385,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000E42 RID: 3650 RVA: 0x0001527C File Offset: 0x0001347C
+		// Token: 0x060009D4 RID: 2516 RVA: 0x0000FF84 File Offset: 0x0000E184
 		public bool Remove([Nullable(new byte[]
 		{
 			0,
@@ -390,8 +397,8 @@ namespace UnrealEngine
 			return this.TryGetValue(Item.Key, out x) && EqualityComparer<V>.Default.Equals(x, Item.Value) && this.Remove(Item.Key);
 		}
 
-		// Token: 0x170004AA RID: 1194
-		// (get) Token: 0x06000E43 RID: 3651 RVA: 0x000152BD File Offset: 0x000134BD
+		// Token: 0x170000B2 RID: 178
+		// (get) Token: 0x060009D5 RID: 2517 RVA: 0x0000FFC5 File Offset: 0x0000E1C5
 		public int Count
 		{
 			get
@@ -400,8 +407,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170004AB RID: 1195
-		// (get) Token: 0x06000E44 RID: 3652 RVA: 0x000152C5 File Offset: 0x000134C5
+		// Token: 0x170000B3 RID: 179
+		// (get) Token: 0x060009D6 RID: 2518 RVA: 0x0000FFCD File Offset: 0x0000E1CD
 		public bool IsReadOnly
 		{
 			get
@@ -410,8 +417,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170004AC RID: 1196
-		// (get) Token: 0x06000E45 RID: 3653 RVA: 0x000152C8 File Offset: 0x000134C8
+		// Token: 0x170000B4 RID: 180
+		// (get) Token: 0x060009D7 RID: 2519 RVA: 0x0000FFD0 File Offset: 0x0000E1D0
 		[Nullable(0)]
 		public TMap<K, V>.KeyCollection Keys
 		{
@@ -422,8 +429,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170004AD RID: 1197
-		// (get) Token: 0x06000E46 RID: 3654 RVA: 0x000152D0 File Offset: 0x000134D0
+		// Token: 0x170000B5 RID: 181
+		// (get) Token: 0x060009D8 RID: 2520 RVA: 0x0000FFD8 File Offset: 0x0000E1D8
 		ICollection<K> IDictionary<!0, !1>.Keys
 		{
 			get
@@ -432,8 +439,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170004AE RID: 1198
-		// (get) Token: 0x06000E47 RID: 3655 RVA: 0x000152DD File Offset: 0x000134DD
+		// Token: 0x170000B6 RID: 182
+		// (get) Token: 0x060009D9 RID: 2521 RVA: 0x0000FFE5 File Offset: 0x0000E1E5
 		[Nullable(0)]
 		public TMap<K, V>.ValueCollection Values
 		{
@@ -444,8 +451,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170004AF RID: 1199
-		// (get) Token: 0x06000E48 RID: 3656 RVA: 0x000152E5 File Offset: 0x000134E5
+		// Token: 0x170000B7 RID: 183
+		// (get) Token: 0x060009DA RID: 2522 RVA: 0x0000FFED File Offset: 0x0000E1ED
 		ICollection<V> IDictionary<!0, !1>.Values
 		{
 			get
@@ -454,8 +461,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170004B0 RID: 1200
-		// (get) Token: 0x06000E49 RID: 3657 RVA: 0x000152F2 File Offset: 0x000134F2
+		// Token: 0x170000B8 RID: 184
+		// (get) Token: 0x060009DB RID: 2523 RVA: 0x0000FFFA File Offset: 0x0000E1FA
 		IEnumerable<K> IReadOnlyDictionary<!0, !1>.Keys
 		{
 			get
@@ -464,8 +471,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170004B1 RID: 1201
-		// (get) Token: 0x06000E4A RID: 3658 RVA: 0x000152FF File Offset: 0x000134FF
+		// Token: 0x170000B9 RID: 185
+		// (get) Token: 0x060009DC RID: 2524 RVA: 0x00010007 File Offset: 0x0000E207
 		IEnumerable<V> IReadOnlyDictionary<!0, !1>.Values
 		{
 			get
@@ -474,23 +481,23 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x04000189 RID: 393
+		// Token: 0x04000142 RID: 322
 		private static readonly NativeArrayProcessorBase<K> KeyProcessor = NativeArrayProcessorFactory<K>.HashProcessor;
 
-		// Token: 0x0400018A RID: 394
+		// Token: 0x04000143 RID: 323
 		private static readonly UnrealReflectionPropertyTypeCode KeyInnerPropertyTypeCode = UnrealReflectionPropertyType.GetTypeCode(typeof(K));
 
-		// Token: 0x0400018B RID: 395
+		// Token: 0x04000144 RID: 324
 		private static readonly NativeArrayProcessorBase<V> ValueProcessor = NativeArrayProcessorFactory<V>.Processor;
 
-		// Token: 0x0400018C RID: 396
+		// Token: 0x04000145 RID: 325
 		private static readonly UnrealReflectionPropertyTypeCode ValueInnerPropertyTypeCode = UnrealReflectionPropertyType.GetTypeCode(typeof(V));
 
-		// Token: 0x02002B21 RID: 11041
+		// Token: 0x020008CF RID: 2255
 		[Nullable(0)]
 		public struct Enumerator : IEnumerator<KeyValuePair<K, V>>, IEnumerator, IDisposable
 		{
-			// Token: 0x060284FB RID: 165115 RVA: 0x003D5481 File Offset: 0x003D3681
+			// Token: 0x0600BEB6 RID: 48822 RVA: 0x001307DD File Offset: 0x0012E9DD
 			public Enumerator(TMap<K, V> Map)
 			{
 				this.<Map>P = Map;
@@ -499,7 +506,7 @@ namespace UnrealEngine
 				this._MaxIndex = this.<Map>P.GetMaxIndex();
 			}
 
-			// Token: 0x060284FC RID: 165116 RVA: 0x003D54B0 File Offset: 0x003D36B0
+			// Token: 0x0600BEB7 RID: 48823 RVA: 0x0013080C File Offset: 0x0012EA0C
 			public unsafe bool MoveNext()
 			{
 				while (this._Index < this._MaxIndex && !this.<Map>P.IsValidIndex(this._Index))
@@ -519,15 +526,37 @@ namespace UnrealEngine
 				return false;
 			}
 
-			// Token: 0x060284FD RID: 165117 RVA: 0x003D5575 File Offset: 0x003D3775
+			// Token: 0x0600BEB8 RID: 48824 RVA: 0x001308D1 File Offset: 0x0012EAD1
 			public void Reset()
 			{
 				this._Index = 0;
 				this._Current = default(KeyValuePair<K, V>);
 			}
 
-			// Token: 0x170099AE RID: 39342
-			// (get) Token: 0x060284FE RID: 165118 RVA: 0x003D558A File Offset: 0x003D378A
+			// Token: 0x17002339 RID: 9017
+			// (get) Token: 0x0600BEB9 RID: 48825 RVA: 0x001308E6 File Offset: 0x0012EAE6
+			[Nullable(new byte[]
+			{
+				0,
+				1,
+				1
+			})]
+			public KeyValuePair<K, V> Current
+			{
+				[return: Nullable(new byte[]
+				{
+					0,
+					1,
+					1
+				})]
+				get
+				{
+					return this._Current;
+				}
+			}
+
+			// Token: 0x1700233A RID: 9018
+			// (get) Token: 0x0600BEBA RID: 48826 RVA: 0x001308EE File Offset: 0x0012EAEE
 			[Nullable(new byte[]
 			{
 				0,
@@ -548,8 +577,8 @@ namespace UnrealEngine
 				}
 			}
 
-			// Token: 0x170099AF RID: 39343
-			// (get) Token: 0x060284FF RID: 165119 RVA: 0x003D5592 File Offset: 0x003D3792
+			// Token: 0x1700233B RID: 9019
+			// (get) Token: 0x0600BEBB RID: 48827 RVA: 0x001308F6 File Offset: 0x0012EAF6
 			object IEnumerator.Current
 			{
 				get
@@ -558,19 +587,19 @@ namespace UnrealEngine
 				}
 			}
 
-			// Token: 0x06028500 RID: 165120 RVA: 0x003D559F File Offset: 0x003D379F
+			// Token: 0x0600BEBC RID: 48828 RVA: 0x00130903 File Offset: 0x0012EB03
 			public void Dispose()
 			{
 			}
 
-			// Token: 0x0401636E RID: 90990
+			// Token: 0x04005784 RID: 22404
 			[CompilerGenerated]
 			private TMap<K, V> <Map>P;
 
-			// Token: 0x0401636F RID: 90991
+			// Token: 0x04005785 RID: 22405
 			private int _Index;
 
-			// Token: 0x04016370 RID: 90992
+			// Token: 0x04005786 RID: 22406
 			[Nullable(new byte[]
 			{
 				0,
@@ -579,28 +608,28 @@ namespace UnrealEngine
 			})]
 			private KeyValuePair<K, V> _Current;
 
-			// Token: 0x04016371 RID: 90993
+			// Token: 0x04005787 RID: 22407
 			private int _MaxIndex;
 		}
 
-		// Token: 0x02002B22 RID: 11042
+		// Token: 0x020008D0 RID: 2256
 		[Nullable(0)]
-		public struct KeyCollection : ICollection<K>, IEnumerable<K>, IEnumerable, IReadOnlyCollection<K>
+		public struct KeyCollection : ICollection<K>, IEnumerable<!0>, IEnumerable, IReadOnlyCollection<K>
 		{
-			// Token: 0x06028501 RID: 165121 RVA: 0x003D55A1 File Offset: 0x003D37A1
+			// Token: 0x0600BEBD RID: 48829 RVA: 0x00130905 File Offset: 0x0012EB05
 			public KeyCollection(TMap<K, V> Map)
 			{
 				this.<Map>P = Map;
 			}
 
-			// Token: 0x06028502 RID: 165122 RVA: 0x003D55AA File Offset: 0x003D37AA
+			// Token: 0x0600BEBE RID: 48830 RVA: 0x0013090E File Offset: 0x0012EB0E
 			[NullableContext(0)]
 			public TMap<K, V>.KeyCollection.Enumerator GetEnumerator()
 			{
 				return new TMap<K, V>.KeyCollection.Enumerator(this.<Map>P);
 			}
 
-			// Token: 0x06028503 RID: 165123 RVA: 0x003D55B8 File Offset: 0x003D37B8
+			// Token: 0x0600BEBF RID: 48831 RVA: 0x0013091C File Offset: 0x0012EB1C
 			public unsafe void CopyTo(K[] Array, int ArrayIndex)
 			{
 				ArgumentNullException.ThrowIfNull(Array, "Array");
@@ -627,8 +656,8 @@ namespace UnrealEngine
 				}
 			}
 
-			// Token: 0x170099B0 RID: 39344
-			// (get) Token: 0x06028504 RID: 165124 RVA: 0x003D568F File Offset: 0x003D388F
+			// Token: 0x1700233C RID: 9020
+			// (get) Token: 0x0600BEC0 RID: 48832 RVA: 0x001309F3 File Offset: 0x0012EBF3
 			public int Count
 			{
 				get
@@ -637,8 +666,8 @@ namespace UnrealEngine
 				}
 			}
 
-			// Token: 0x170099B1 RID: 39345
-			// (get) Token: 0x06028505 RID: 165125 RVA: 0x003D569C File Offset: 0x003D389C
+			// Token: 0x1700233D RID: 9021
+			// (get) Token: 0x0600BEC1 RID: 48833 RVA: 0x00130A00 File Offset: 0x0012EC00
 			bool ICollection<!0>.IsReadOnly
 			{
 				get
@@ -647,51 +676,51 @@ namespace UnrealEngine
 				}
 			}
 
-			// Token: 0x06028506 RID: 165126 RVA: 0x003D569F File Offset: 0x003D389F
+			// Token: 0x0600BEC2 RID: 48834 RVA: 0x00130A03 File Offset: 0x0012EC03
 			void ICollection<!0>.Add(K item)
 			{
 				throw new NotSupportedException();
 			}
 
-			// Token: 0x06028507 RID: 165127 RVA: 0x003D56A6 File Offset: 0x003D38A6
+			// Token: 0x0600BEC3 RID: 48835 RVA: 0x00130A0A File Offset: 0x0012EC0A
 			void ICollection<!0>.Clear()
 			{
 				throw new NotSupportedException();
 			}
 
-			// Token: 0x06028508 RID: 165128 RVA: 0x003D56AD File Offset: 0x003D38AD
+			// Token: 0x0600BEC4 RID: 48836 RVA: 0x00130A11 File Offset: 0x0012EC11
 			public bool Contains(K item)
 			{
 				return this.<Map>P.ContainsKey(item);
 			}
 
-			// Token: 0x06028509 RID: 165129 RVA: 0x003D56BB File Offset: 0x003D38BB
+			// Token: 0x0600BEC5 RID: 48837 RVA: 0x00130A1F File Offset: 0x0012EC1F
 			bool ICollection<!0>.Remove(K item)
 			{
 				throw new NotSupportedException();
 			}
 
-			// Token: 0x0602850A RID: 165130 RVA: 0x003D56C2 File Offset: 0x003D38C2
+			// Token: 0x0600BEC6 RID: 48838 RVA: 0x00130A26 File Offset: 0x0012EC26
 			IEnumerator<K> IEnumerable<!0>.GetEnumerator()
 			{
 				return this.GetEnumerator();
 			}
 
-			// Token: 0x0602850B RID: 165131 RVA: 0x003D56CF File Offset: 0x003D38CF
+			// Token: 0x0600BEC7 RID: 48839 RVA: 0x00130A33 File Offset: 0x0012EC33
 			IEnumerator IEnumerable.GetEnumerator()
 			{
 				return this.GetEnumerator();
 			}
 
-			// Token: 0x04016372 RID: 90994
+			// Token: 0x04005788 RID: 22408
 			[CompilerGenerated]
 			private TMap<K, V> <Map>P;
 
-			// Token: 0x02003C11 RID: 15377
+			// Token: 0x0200141A RID: 5146
 			[Nullable(0)]
 			public struct Enumerator : IEnumerator<!0>, IEnumerator, IDisposable
 			{
-				// Token: 0x060285E2 RID: 165346 RVA: 0x003D5986 File Offset: 0x003D3B86
+				// Token: 0x0600BF43 RID: 48963 RVA: 0x00130CF2 File Offset: 0x0012EEF2
 				public Enumerator(TMap<K, V> Map)
 				{
 					this.<Map>P = Map;
@@ -700,12 +729,12 @@ namespace UnrealEngine
 					this._MaxIndex = this.<Map>P.GetMaxIndex();
 				}
 
-				// Token: 0x060285E3 RID: 165347 RVA: 0x003D59B3 File Offset: 0x003D3BB3
+				// Token: 0x0600BF44 RID: 48964 RVA: 0x00130D1F File Offset: 0x0012EF1F
 				public void Dispose()
 				{
 				}
 
-				// Token: 0x060285E4 RID: 165348 RVA: 0x003D59B8 File Offset: 0x003D3BB8
+				// Token: 0x0600BF45 RID: 48965 RVA: 0x00130D24 File Offset: 0x0012EF24
 				public unsafe bool MoveNext()
 				{
 					while (this._Index < this._MaxIndex && !this.<Map>P.IsValidIndex(this._Index))
@@ -724,8 +753,8 @@ namespace UnrealEngine
 					return false;
 				}
 
-				// Token: 0x170099B6 RID: 39350
-				// (get) Token: 0x060285E5 RID: 165349 RVA: 0x003D5A48 File Offset: 0x003D3C48
+				// Token: 0x17002343 RID: 9027
+				// (get) Token: 0x0600BF46 RID: 48966 RVA: 0x00130DB4 File Offset: 0x0012EFB4
 				public readonly K Current
 				{
 					get
@@ -734,8 +763,8 @@ namespace UnrealEngine
 					}
 				}
 
-				// Token: 0x170099B7 RID: 39351
-				// (get) Token: 0x060285E6 RID: 165350 RVA: 0x003D5A50 File Offset: 0x003D3C50
+				// Token: 0x17002344 RID: 9028
+				// (get) Token: 0x0600BF47 RID: 48967 RVA: 0x00130DBC File Offset: 0x0012EFBC
 				[Nullable(2)]
 				object IEnumerator.Current
 				{
@@ -746,47 +775,47 @@ namespace UnrealEngine
 					}
 				}
 
-				// Token: 0x060285E7 RID: 165351 RVA: 0x003D5A5D File Offset: 0x003D3C5D
+				// Token: 0x0600BF48 RID: 48968 RVA: 0x00130DC9 File Offset: 0x0012EFC9
 				void IEnumerator.Reset()
 				{
 					this._Index = 0;
 					this._CurrentKey = default(K);
 				}
 
-				// Token: 0x04017E48 RID: 97864
+				// Token: 0x040068C9 RID: 26825
 				[CompilerGenerated]
 				private TMap<K, V> <Map>P;
 
-				// Token: 0x04017E49 RID: 97865
+				// Token: 0x040068CA RID: 26826
 				private int _Index;
 
-				// Token: 0x04017E4A RID: 97866
+				// Token: 0x040068CB RID: 26827
 				[Nullable(2)]
 				private K _CurrentKey;
 
-				// Token: 0x04017E4B RID: 97867
+				// Token: 0x040068CC RID: 26828
 				private readonly int _MaxIndex;
 			}
 		}
 
-		// Token: 0x02002B23 RID: 11043
+		// Token: 0x020008D1 RID: 2257
 		[Nullable(0)]
 		public struct ValueCollection : ICollection<V>, IEnumerable<V>, IEnumerable, IReadOnlyCollection<V>
 		{
-			// Token: 0x0602850C RID: 165132 RVA: 0x003D56DC File Offset: 0x003D38DC
+			// Token: 0x0600BEC8 RID: 48840 RVA: 0x00130A40 File Offset: 0x0012EC40
 			public ValueCollection(TMap<K, V> Map)
 			{
 				this.<Map>P = Map;
 			}
 
-			// Token: 0x0602850D RID: 165133 RVA: 0x003D56E5 File Offset: 0x003D38E5
+			// Token: 0x0600BEC9 RID: 48841 RVA: 0x00130A49 File Offset: 0x0012EC49
 			[NullableContext(0)]
 			public TMap<K, V>.ValueCollection.Enumerator GetEnumerator()
 			{
 				return new TMap<K, V>.ValueCollection.Enumerator(this.<Map>P);
 			}
 
-			// Token: 0x0602850E RID: 165134 RVA: 0x003D56F4 File Offset: 0x003D38F4
+			// Token: 0x0600BECA RID: 48842 RVA: 0x00130A58 File Offset: 0x0012EC58
 			public unsafe void CopyTo(V[] Array, int ArrayIndex)
 			{
 				ArgumentNullException.ThrowIfNull(Array, "Array");
@@ -813,8 +842,8 @@ namespace UnrealEngine
 				}
 			}
 
-			// Token: 0x170099B2 RID: 39346
-			// (get) Token: 0x0602850F RID: 165135 RVA: 0x003D57CB File Offset: 0x003D39CB
+			// Token: 0x1700233E RID: 9022
+			// (get) Token: 0x0600BECB RID: 48843 RVA: 0x00130B2F File Offset: 0x0012ED2F
 			public int Count
 			{
 				get
@@ -823,8 +852,8 @@ namespace UnrealEngine
 				}
 			}
 
-			// Token: 0x170099B3 RID: 39347
-			// (get) Token: 0x06028510 RID: 165136 RVA: 0x003D57D8 File Offset: 0x003D39D8
+			// Token: 0x1700233F RID: 9023
+			// (get) Token: 0x0600BECC RID: 48844 RVA: 0x00130B3C File Offset: 0x0012ED3C
 			bool ICollection<!1>.IsReadOnly
 			{
 				get
@@ -833,51 +862,51 @@ namespace UnrealEngine
 				}
 			}
 
-			// Token: 0x06028511 RID: 165137 RVA: 0x003D57DB File Offset: 0x003D39DB
+			// Token: 0x0600BECD RID: 48845 RVA: 0x00130B3F File Offset: 0x0012ED3F
 			void ICollection<!1>.Add(V item)
 			{
 				throw new NotSupportedException();
 			}
 
-			// Token: 0x06028512 RID: 165138 RVA: 0x003D57E2 File Offset: 0x003D39E2
+			// Token: 0x0600BECE RID: 48846 RVA: 0x00130B46 File Offset: 0x0012ED46
 			void ICollection<!1>.Clear()
 			{
 				throw new NotSupportedException();
 			}
 
-			// Token: 0x06028513 RID: 165139 RVA: 0x003D57E9 File Offset: 0x003D39E9
+			// Token: 0x0600BECF RID: 48847 RVA: 0x00130B4D File Offset: 0x0012ED4D
 			public bool Contains(V item)
 			{
 				throw new NotSupportedException();
 			}
 
-			// Token: 0x06028514 RID: 165140 RVA: 0x003D57F0 File Offset: 0x003D39F0
+			// Token: 0x0600BED0 RID: 48848 RVA: 0x00130B54 File Offset: 0x0012ED54
 			bool ICollection<!1>.Remove(V item)
 			{
 				throw new NotSupportedException();
 			}
 
-			// Token: 0x06028515 RID: 165141 RVA: 0x003D57F7 File Offset: 0x003D39F7
+			// Token: 0x0600BED1 RID: 48849 RVA: 0x00130B5B File Offset: 0x0012ED5B
 			IEnumerator<V> IEnumerable<!1>.GetEnumerator()
 			{
 				return this.GetEnumerator();
 			}
 
-			// Token: 0x06028516 RID: 165142 RVA: 0x003D5804 File Offset: 0x003D3A04
+			// Token: 0x0600BED2 RID: 48850 RVA: 0x00130B68 File Offset: 0x0012ED68
 			IEnumerator IEnumerable.GetEnumerator()
 			{
 				return this.GetEnumerator();
 			}
 
-			// Token: 0x04016373 RID: 90995
+			// Token: 0x04005789 RID: 22409
 			[CompilerGenerated]
 			private TMap<K, V> <Map>P;
 
-			// Token: 0x02003C12 RID: 15378
+			// Token: 0x0200141B RID: 5147
 			[Nullable(0)]
 			public struct Enumerator : IEnumerator<V>, IEnumerator, IDisposable
 			{
-				// Token: 0x060285E8 RID: 165352 RVA: 0x003D5A72 File Offset: 0x003D3C72
+				// Token: 0x0600BF49 RID: 48969 RVA: 0x00130DDE File Offset: 0x0012EFDE
 				public Enumerator(TMap<K, V> Map)
 				{
 					this.<Map>P = Map;
@@ -886,12 +915,12 @@ namespace UnrealEngine
 					this._MaxIndex = this.<Map>P.GetMaxIndex();
 				}
 
-				// Token: 0x060285E9 RID: 165353 RVA: 0x003D5A9F File Offset: 0x003D3C9F
+				// Token: 0x0600BF4A RID: 48970 RVA: 0x00130E0B File Offset: 0x0012F00B
 				public void Dispose()
 				{
 				}
 
-				// Token: 0x060285EA RID: 165354 RVA: 0x003D5AA4 File Offset: 0x003D3CA4
+				// Token: 0x0600BF4B RID: 48971 RVA: 0x00130E10 File Offset: 0x0012F010
 				public unsafe bool MoveNext()
 				{
 					while (this._Index < this._MaxIndex && !this.<Map>P.IsValidIndex(this._Index))
@@ -910,8 +939,8 @@ namespace UnrealEngine
 					return false;
 				}
 
-				// Token: 0x170099B8 RID: 39352
-				// (get) Token: 0x060285EB RID: 165355 RVA: 0x003D5B34 File Offset: 0x003D3D34
+				// Token: 0x17002345 RID: 9029
+				// (get) Token: 0x0600BF4C RID: 48972 RVA: 0x00130EA0 File Offset: 0x0012F0A0
 				public readonly V Current
 				{
 					get
@@ -920,8 +949,8 @@ namespace UnrealEngine
 					}
 				}
 
-				// Token: 0x170099B9 RID: 39353
-				// (get) Token: 0x060285EC RID: 165356 RVA: 0x003D5B3C File Offset: 0x003D3D3C
+				// Token: 0x17002346 RID: 9030
+				// (get) Token: 0x0600BF4D RID: 48973 RVA: 0x00130EA8 File Offset: 0x0012F0A8
 				[Nullable(2)]
 				object IEnumerator.Current
 				{
@@ -932,25 +961,25 @@ namespace UnrealEngine
 					}
 				}
 
-				// Token: 0x060285ED RID: 165357 RVA: 0x003D5B49 File Offset: 0x003D3D49
+				// Token: 0x0600BF4E RID: 48974 RVA: 0x00130EB5 File Offset: 0x0012F0B5
 				void IEnumerator.Reset()
 				{
 					this._Index = 0;
 					this._CurrentValue = default(V);
 				}
 
-				// Token: 0x04017E4C RID: 97868
+				// Token: 0x040068CD RID: 26829
 				[CompilerGenerated]
 				private TMap<K, V> <Map>P;
 
-				// Token: 0x04017E4D RID: 97869
+				// Token: 0x040068CE RID: 26830
 				private int _Index;
 
-				// Token: 0x04017E4E RID: 97870
+				// Token: 0x040068CF RID: 26831
 				[Nullable(2)]
 				private V _CurrentValue;
 
-				// Token: 0x04017E4F RID: 97871
+				// Token: 0x040068D0 RID: 26832
 				private readonly int _MaxIndex;
 			}
 		}

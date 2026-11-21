@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020020D0 RID: 8400
+	// Token: 0x020006C3 RID: 1731
 	public sealed class FLGUITextGmReplaceFontDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601FA55 RID: 129621 RVA: 0x002F0E27 File Offset: 0x002EF027
+		// Token: 0x06009400 RID: 37888 RVA: 0x000DF1BF File Offset: 0x000DD3BF
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FLGUITextGmReplaceFontDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601FA56 RID: 129622 RVA: 0x002F0E33 File Offset: 0x002EF033
+		// Token: 0x06009401 RID: 37889 RVA: 0x000DF1CB File Offset: 0x000DD3CB
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FLGUITextGmReplaceFontDelegate._FunctionPtr == IntPtr.Zero)
@@ -25,31 +25,30 @@ namespace UnrealEngine
 			return FLGUITextGmReplaceFontDelegate._FunctionPtr;
 		}
 
-		// Token: 0x0601FA57 RID: 129623 RVA: 0x002F0E56 File Offset: 0x002EF056
+		// Token: 0x06009402 RID: 37890 RVA: 0x000DF1EE File Offset: 0x000DD3EE
 		public FLGUITextGmReplaceFontDelegate()
 		{
 		}
 
-		// Token: 0x0601FA58 RID: 129624 RVA: 0x002F0E5E File Offset: 0x002EF05E
+		// Token: 0x06009403 RID: 37891 RVA: 0x000DF1F6 File Offset: 0x000DD3F6
 		[NullableContext(2)]
 		public FLGUITextGmReplaceFontDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601FA59 RID: 129625 RVA: 0x002F0E68 File Offset: 0x002EF068
+		// Token: 0x06009404 RID: 37892 RVA: 0x000DF200 File Offset: 0x000DD400
 		public FLGUITextGmReplaceFontDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601FA5A RID: 129626 RVA: 0x002F0E73 File Offset: 0x002EF073
+		// Token: 0x06009405 RID: 37893 RVA: 0x000DF20B File Offset: 0x000DD40B
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<UUIText>) ?? ((Action<UUIText>)Delegate.CreateDelegate(typeof(Action<UUIText>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601FA5B RID: 129627 RVA: 0x002F0EA5 File Offset: 0x002EF0A5
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x06009406 RID: 37894 RVA: 0x000DF23D File Offset: 0x000DD43D
 		public void Bind([Nullable(new byte[]
 		{
 			1,
@@ -68,10 +67,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FLGUITextGmReplaceFontDelegate.RegisterId);
 		}
 
-		// Token: 0x0601FA5C RID: 129628 RVA: 0x002F0EE0 File Offset: 0x002EF0E0
+		// Token: 0x06009407 RID: 37895 RVA: 0x000DF278 File Offset: 0x000DD478
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(UUIText uiText)
 		{
 			FLGUITextGmReplaceFontDelegate.__FLGUITextGmReplaceFontDelegate_DelegateParams* ptr = stackalloc FLGUITextGmReplaceFontDelegate.__FLGUITextGmReplaceFontDelegate_DelegateParams[(UIntPtr)23] + 15L / (long)sizeof(FLGUITextGmReplaceFontDelegate.__FLGUITextGmReplaceFontDelegate_DelegateParams) & -16L;
@@ -80,10 +78,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x0601FA5D RID: 129629 RVA: 0x002F0F2C File Offset: 0x002EF12C
+		// Token: 0x06009408 RID: 37896 RVA: 0x000DF2C4 File Offset: 0x000DD4C4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<UUIText> action = target as Action<UUIText>;
@@ -95,31 +92,31 @@ namespace UnrealEngine
 			action(orCreateUObjectByNativePointer);
 		}
 
-		// Token: 0x0401113B RID: 69947
+		// Token: 0x0400407E RID: 16510
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0401113C RID: 69948
+		// Token: 0x0400407F RID: 16511
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/LGUI.LGUITextGmReplaceFontDelegate__DelegateSignature";
 
-		// Token: 0x0401113D RID: 69949
+		// Token: 0x04004080 RID: 16512
 		private static int RegisterId;
 
-		// Token: 0x020034C4 RID: 13508
+		// Token: 0x02000EF2 RID: 3826
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
-		protected ref struct __FLGUITextGmReplaceFontDelegate_DelegateParams
+		private ref struct __FLGUITextGmReplaceFontDelegate_DelegateParams
 		{
-			// Token: 0x040174CE RID: 95438
+			// Token: 0x040062B5 RID: 25269
 			[FieldOffset(0)]
 			public IntPtr uiText;
 		}
 
-		// Token: 0x020034C5 RID: 13509
+		// Token: 0x02000EF3 RID: 3827
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040174CF RID: 95439
+			// Token: 0x040062B6 RID: 25270
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

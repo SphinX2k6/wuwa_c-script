@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Launcher.BaseConfig;
 using CSharpScript.Launcher.Define;
@@ -8,13 +7,13 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Launcher.Util
 {
-	// Token: 0x02000079 RID: 121
+	// Token: 0x0200007C RID: 124
 	[NullableContext(1)]
 	[Nullable(0)]
 	[StaticVariableRuleIgnore]
 	public class SplashRegionBlockLib
 	{
-		// Token: 0x0600032F RID: 815 RVA: 0x000112B3 File Offset: 0x0000F4B3
+		// Token: 0x0600033F RID: 831 RVA: 0x00012133 File Offset: 0x00010333
 		public static void Initialize()
 		{
 			if (SplashRegionBlockLib.IsInited)
@@ -29,7 +28,7 @@ namespace CSharpScript.Launcher.Util
 			SplashRegionBlockLib.LoadCache();
 		}
 
-		// Token: 0x06000330 RID: 816 RVA: 0x000112D0 File Offset: 0x0000F4D0
+		// Token: 0x06000340 RID: 832 RVA: 0x00012150 File Offset: 0x00010350
 		public static UniTask PrepareAsync()
 		{
 			SplashRegionBlockLib.<PrepareAsync>d__7 <PrepareAsync>d__;
@@ -39,7 +38,7 @@ namespace CSharpScript.Launcher.Util
 			return <PrepareAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000331 RID: 817 RVA: 0x0001130C File Offset: 0x0000F50C
+		// Token: 0x06000341 RID: 833 RVA: 0x0001218C File Offset: 0x0001038C
 		public unsafe static bool ShouldBlockPhaseOne()
 		{
 			if (!SplashRegionBlockLib.IsInited || !SplashRegionBlockLib.IsFeatureEffective())
@@ -56,7 +55,7 @@ namespace CSharpScript.Launcher.Util
 				instance.Warn(message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 				return fallbackBlockOnFailure;
 			}
-			bool flag = SplashRegionBlockConfig.BlockedRegions.Contains(cachedRegion);
+			bool flag = Array.IndexOf<string>(SplashRegionBlockConfig.BlockedRegions, cachedRegion) >= 0;
 			LauncherLog instance2 = LauncherLog.Instance;
 			string message2 = "[SplashRegionBlock]";
 			<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
@@ -66,25 +65,25 @@ namespace CSharpScript.Launcher.Util
 			return flag;
 		}
 
-		// Token: 0x06000332 RID: 818 RVA: 0x000113C6 File Offset: 0x0000F5C6
+		// Token: 0x06000342 RID: 834 RVA: 0x0001224C File Offset: 0x0001044C
 		private static bool IsFeatureEffective()
 		{
 			return SplashRegionBlockConfig.Enabled && (SplashRegionBlockLib.IsTestModeOn() || SplashRegionBlockLib.IsGlobalPackage());
 		}
 
-		// Token: 0x06000333 RID: 819 RVA: 0x000113E4 File Offset: 0x0000F5E4
+		// Token: 0x06000343 RID: 835 RVA: 0x0001226A File Offset: 0x0001046A
 		private static bool IsGlobalPackage()
 		{
 			return BaseConfigController.Instance.GetPublicValue("SdkArea") != "CN";
 		}
 
-		// Token: 0x06000334 RID: 820 RVA: 0x000113FF File Offset: 0x0000F5FF
+		// Token: 0x06000344 RID: 836 RVA: 0x00012285 File Offset: 0x00010485
 		private static bool IsTestModeOn()
 		{
 			return SplashRegionBlockConfig.TestMode;
 		}
 
-		// Token: 0x06000335 RID: 821 RVA: 0x00011408 File Offset: 0x0000F608
+		// Token: 0x06000345 RID: 837 RVA: 0x0001228C File Offset: 0x0001048C
 		private static void LoadCache()
 		{
 			string text = LauncherStorageLib.Instance.GetDeviceSaved<string>(ELauncherStorageDeviceKey.SplashRegionBlockRegion, "") ?? "";
@@ -101,7 +100,7 @@ namespace CSharpScript.Launcher.Util
 			SplashRegionBlockLib.CachedTimestampSecs = deviceSaved;
 		}
 
-		// Token: 0x06000336 RID: 822 RVA: 0x00011458 File Offset: 0x0000F658
+		// Token: 0x06000346 RID: 838 RVA: 0x000122DC File Offset: 0x000104DC
 		private static void SetCache(string region, int timestampSecs)
 		{
 			SplashRegionBlockLib.CachedRegion = region;
@@ -110,7 +109,7 @@ namespace CSharpScript.Launcher.Util
 			LauncherStorageLib.Instance.SetDeviceSaved<int>(ELauncherStorageDeviceKey.SplashRegionBlockTimestampSecs, timestampSecs);
 		}
 
-		// Token: 0x06000337 RID: 823 RVA: 0x00011484 File Offset: 0x0000F684
+		// Token: 0x06000347 RID: 839 RVA: 0x00012308 File Offset: 0x00010508
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -125,7 +124,7 @@ namespace CSharpScript.Launcher.Util
 			return <QueryRegionByIpAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000338 RID: 824 RVA: 0x000114C0 File Offset: 0x0000F6C0
+		// Token: 0x06000348 RID: 840 RVA: 0x00012344 File Offset: 0x00010544
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -141,7 +140,7 @@ namespace CSharpScript.Launcher.Util
 			return <TryOneProviderAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000339 RID: 825 RVA: 0x00011504 File Offset: 0x0000F704
+		// Token: 0x06000349 RID: 841 RVA: 0x00012388 File Offset: 0x00010588
 		private static bool IsValidCountryCode(string code)
 		{
 			if (code.Length != 2)
@@ -158,23 +157,23 @@ namespace CSharpScript.Launcher.Util
 			return true;
 		}
 
-		// Token: 0x0400024B RID: 587
+		// Token: 0x04000277 RID: 631
 		private const int COUNTRY_CODE_LENGTH = 2;
 
-		// Token: 0x0400024C RID: 588
+		// Token: 0x04000278 RID: 632
 		private const int CHAR_CODE_UPPER_A = 65;
 
-		// Token: 0x0400024D RID: 589
+		// Token: 0x04000279 RID: 633
 		private const int CHAR_CODE_UPPER_Z = 90;
 
-		// Token: 0x0400024E RID: 590
+		// Token: 0x0400027A RID: 634
 		private static bool IsInited;
 
-		// Token: 0x0400024F RID: 591
+		// Token: 0x0400027B RID: 635
 		[Nullable(2)]
 		private static string CachedRegion;
 
-		// Token: 0x04000250 RID: 592
+		// Token: 0x0400027C RID: 636
 		private static int CachedTimestampSecs;
 	}
 }

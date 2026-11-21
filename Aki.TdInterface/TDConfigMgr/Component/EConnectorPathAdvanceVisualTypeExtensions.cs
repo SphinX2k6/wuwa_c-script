@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000912 RID: 2322
+	// Token: 0x020009BF RID: 2495
 	public static class EConnectorPathAdvanceVisualTypeExtensions
 	{
-		// Token: 0x06003482 RID: 13442 RVA: 0x00089918 File Offset: 0x00087B18
+		// Token: 0x060037EE RID: 14318 RVA: 0x00091498 File Offset: 0x0008F698
 		public static string ToEnumString(this EConnectorPathAdvanceVisualType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003483 RID: 13443 RVA: 0x00089940 File Offset: 0x00087B40
+		// Token: 0x060037EF RID: 14319 RVA: 0x000914C0 File Offset: 0x0008F6C0
 		public static EConnectorPathAdvanceVisualType FromString(string name)
 		{
 			EConnectorPathAdvanceVisualType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003484 RID: 13444 RVA: 0x00089969 File Offset: 0x00087B69
+		// Token: 0x060037F0 RID: 14320 RVA: 0x000914E9 File Offset: 0x0008F6E9
 		public static bool TryFromString(string name, out EConnectorPathAdvanceVisualType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x06003485 RID: 13445 RVA: 0x0008998E File Offset: 0x00087B8E
+		// Token: 0x060037F1 RID: 14321 RVA: 0x0009150E File Offset: 0x0008F70E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003486 RID: 13446 RVA: 0x0008999E File Offset: 0x00087B9E
+		// Token: 0x060037F2 RID: 14322 RVA: 0x0009151E File Offset: 0x0008F71E
 		public static EConnectorPathAdvanceVisualType[] GetValues()
 		{
 			return new EConnectorPathAdvanceVisualType[1];
 		}
 
-		// Token: 0x06003487 RID: 13447 RVA: 0x000899A6 File Offset: 0x00087BA6
+		// Token: 0x060037F3 RID: 14323 RVA: 0x00091526 File Offset: 0x0008F726
 		public static string[] GetNames()
 		{
 			return new string[]

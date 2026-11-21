@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005099 RID: 20633
+	// Token: 0x020055FE RID: 22014
 	public struct IDollGrabInfiniteScoreReward : IFlatbufferObject
 	{
-		// Token: 0x170095E2 RID: 38370
-		// (get) Token: 0x0602120F RID: 135695 RVA: 0x0049A8A1 File Offset: 0x00498AA1
+		// Token: 0x17009DCF RID: 40399
+		// (get) Token: 0x06023163 RID: 143715 RVA: 0x004D482D File Offset: 0x004D2A2D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021210 RID: 135696 RVA: 0x0049A8AE File Offset: 0x00498AAE
+		// Token: 0x06023164 RID: 143716 RVA: 0x004D483A File Offset: 0x004D2A3A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06021211 RID: 135697 RVA: 0x0049A8B8 File Offset: 0x00498AB8
+		// Token: 0x06023165 RID: 143717 RVA: 0x004D4844 File Offset: 0x004D2A44
 		public static IDollGrabInfiniteScoreReward GetRootAsIDollGrabInfiniteScoreReward(ByteBuffer _bb)
 		{
 			return IDollGrabInfiniteScoreReward.GetRootAsIDollGrabInfiniteScoreReward(_bb, default(IDollGrabInfiniteScoreReward));
 		}
 
-		// Token: 0x06021212 RID: 135698 RVA: 0x0049A8D4 File Offset: 0x00498AD4
+		// Token: 0x06023166 RID: 143718 RVA: 0x004D4860 File Offset: 0x004D2A60
 		public static IDollGrabInfiniteScoreReward GetRootAsIDollGrabInfiniteScoreReward(ByteBuffer _bb, IDollGrabInfiniteScoreReward obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06021213 RID: 135699 RVA: 0x0049A8F1 File Offset: 0x00498AF1
+		// Token: 0x06023167 RID: 143719 RVA: 0x004D487D File Offset: 0x004D2A7D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06021214 RID: 135700 RVA: 0x0049A900 File Offset: 0x00498B00
+		// Token: 0x06023168 RID: 143720 RVA: 0x004D488C File Offset: 0x004D2A8C
 		public IDollGrabInfiniteScoreReward __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170095E3 RID: 38371
-		// (get) Token: 0x06021215 RID: 135701 RVA: 0x0049A910 File Offset: 0x00498B10
+		// Token: 0x17009DD0 RID: 40400
+		// (get) Token: 0x06023169 RID: 143721 RVA: 0x004D489C File Offset: 0x004D2A9C
 		public int TargetScore
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170095E4 RID: 38372
-		// (get) Token: 0x06021216 RID: 135702 RVA: 0x0049A94C File Offset: 0x00498B4C
+		// Token: 0x17009DD1 RID: 40401
+		// (get) Token: 0x0602316A RID: 143722 RVA: 0x004D48D8 File Offset: 0x004D2AD8
 		public int RewardId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021217 RID: 135703 RVA: 0x0049A988 File Offset: 0x00498B88
+		// Token: 0x0602316B RID: 143723 RVA: 0x004D4914 File Offset: 0x004D2B14
 		public static Offset<IDollGrabInfiniteScoreReward> CreateIDollGrabInfiniteScoreReward(FlatBufferBuilder builder, int TargetScore = 0, int RewardId = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IDollGrabInfiniteScoreReward.EndIDollGrabInfiniteScoreReward(builder);
 		}
 
-		// Token: 0x06021218 RID: 135704 RVA: 0x0049A9A5 File Offset: 0x00498BA5
+		// Token: 0x0602316C RID: 143724 RVA: 0x004D4931 File Offset: 0x004D2B31
 		public static void StartIDollGrabInfiniteScoreReward(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06021219 RID: 135705 RVA: 0x0049A9AE File Offset: 0x00498BAE
+		// Token: 0x0602316D RID: 143725 RVA: 0x004D493A File Offset: 0x004D2B3A
 		public static void AddTargetScore(FlatBufferBuilder builder, int targetScore)
 		{
 			builder.AddInt(0, targetScore, 0);
 		}
 
-		// Token: 0x0602121A RID: 135706 RVA: 0x0049A9B9 File Offset: 0x00498BB9
+		// Token: 0x0602316E RID: 143726 RVA: 0x004D4945 File Offset: 0x004D2B45
 		public static void AddRewardId(FlatBufferBuilder builder, int rewardId)
 		{
 			builder.AddInt(1, rewardId, 0);
 		}
 
-		// Token: 0x0602121B RID: 135707 RVA: 0x0049A9C4 File Offset: 0x00498BC4
+		// Token: 0x0602316F RID: 143727 RVA: 0x004D4950 File Offset: 0x004D2B50
 		public static Offset<IDollGrabInfiniteScoreReward> EndIDollGrabInfiniteScoreReward(FlatBufferBuilder builder)
 		{
 			return new Offset<IDollGrabInfiniteScoreReward>(builder.EndTable());
 		}
 
-		// Token: 0x0602121C RID: 135708 RVA: 0x0049A9D4 File Offset: 0x00498BD4
+		// Token: 0x06023170 RID: 143728 RVA: 0x004D4960 File Offset: 0x004D2B60
 		public IDollGrabInfiniteScoreRewardT UnPack()
 		{
 			IDollGrabInfiniteScoreRewardT dollGrabInfiniteScoreRewardT = new IDollGrabInfiniteScoreRewardT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return dollGrabInfiniteScoreRewardT;
 		}
 
-		// Token: 0x0602121D RID: 135709 RVA: 0x0049A9EF File Offset: 0x00498BEF
+		// Token: 0x06023171 RID: 143729 RVA: 0x004D497B File Offset: 0x004D2B7B
 		public void UnPackTo(IDollGrabInfiniteScoreRewardT _o)
 		{
 			_o.TargetScore = this.TargetScore;
 			_o.RewardId = this.RewardId;
 		}
 
-		// Token: 0x0602121E RID: 135710 RVA: 0x0049AA0C File Offset: 0x00498C0C
+		// Token: 0x06023172 RID: 143730 RVA: 0x004D4998 File Offset: 0x004D2B98
 		public static Offset<IDollGrabInfiniteScoreReward> Pack(FlatBufferBuilder builder, IDollGrabInfiniteScoreRewardT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IDollGrabInfiniteScoreReward.CreateIDollGrabInfiniteScoreReward(builder, _o.TargetScore, _o.RewardId);
 		}
 
-		// Token: 0x0400E0B7 RID: 57527
+		// Token: 0x0400ECB4 RID: 60596
 		private Table __p;
 	}
 }

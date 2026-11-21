@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200123B RID: 4667
+// Token: 0x020006EF RID: 1775
 [NullableContext(1)]
 [Nullable(0)]
 public class DangoMonopolyGridInfoPanel : UiPanelBase
 {
-	// Token: 0x06007E2D RID: 32301 RVA: 0x001AB2F0 File Offset: 0x001A94F0
+	// Token: 0x060051C4 RID: 20932 RVA: 0x001B3FB0 File Offset: 0x001B21B0
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -31,7 +31,7 @@ public class DangoMonopolyGridInfoPanel : UiPanelBase
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007E2E RID: 32302 RVA: 0x001AB343 File Offset: 0x001A9543
+	// Token: 0x060051C5 RID: 20933 RVA: 0x001B4003 File Offset: 0x001B2203
 	public void UpdateGridData(DangoMonopolyGridData gridData)
 	{
 		this.GridData = gridData;
@@ -39,12 +39,12 @@ public class DangoMonopolyGridInfoPanel : UiPanelBase
 		this.CheckCompletedStateToEnd();
 	}
 
-	// Token: 0x06007E2F RID: 32303 RVA: 0x001AB358 File Offset: 0x001A9558
+	// Token: 0x060051C6 RID: 20934 RVA: 0x001B4018 File Offset: 0x001B2218
 	protected override void OnBeforeCreate()
 	{
 	}
 
-	// Token: 0x06007E30 RID: 32304 RVA: 0x001AB35C File Offset: 0x001A955C
+	// Token: 0x060051C7 RID: 20935 RVA: 0x001B401C File Offset: 0x001B221C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -60,7 +60,7 @@ public class DangoMonopolyGridInfoPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x06007E31 RID: 32305 RVA: 0x001AB424 File Offset: 0x001A9624
+	// Token: 0x060051C8 RID: 20936 RVA: 0x001B40E4 File Offset: 0x001B22E4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DangoMonopolyGridInfoPanel.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -71,7 +71,7 @@ public class DangoMonopolyGridInfoPanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007E32 RID: 32306 RVA: 0x001AB467 File Offset: 0x001A9667
+	// Token: 0x060051C9 RID: 20937 RVA: 0x001B4127 File Offset: 0x001B2327
 	protected override void OnStart()
 	{
 		this.RootActorRotation = new FRotator?(this.RootActor.K2_GetActorRotation());
@@ -83,25 +83,25 @@ public class DangoMonopolyGridInfoPanel : UiPanelBase
 		text.ShowTextNew("DangoMonopoly_title_19");
 	}
 
-	// Token: 0x06007E33 RID: 32307 RVA: 0x001AB495 File Offset: 0x001A9695
+	// Token: 0x060051CA RID: 20938 RVA: 0x001B4155 File Offset: 0x001B2355
 	protected override void OnBeforeShow()
 	{
 		this.TimerHandle = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.TimerUpdate), 20f, 1f, null, null, true);
 	}
 
-	// Token: 0x06007E34 RID: 32308 RVA: 0x001AB4C0 File Offset: 0x001A96C0
+	// Token: 0x060051CB RID: 20939 RVA: 0x001B4180 File Offset: 0x001B2380
 	protected override void OnBeforeHide()
 	{
 		this.ClearTimerHandle();
 	}
 
-	// Token: 0x06007E35 RID: 32309 RVA: 0x001AB4C8 File Offset: 0x001A96C8
+	// Token: 0x060051CC RID: 20940 RVA: 0x001B4188 File Offset: 0x001B2388
 	protected override void OnBeforeDestroy()
 	{
 		this.ClearTimerHandle();
 	}
 
-	// Token: 0x06007E36 RID: 32310 RVA: 0x001AB4D0 File Offset: 0x001A96D0
+	// Token: 0x060051CD RID: 20941 RVA: 0x001B4190 File Offset: 0x001B2390
 	public void ClearTimerHandle()
 	{
 		if (this.TimerHandle != null)
@@ -111,7 +111,7 @@ public class DangoMonopolyGridInfoPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06007E37 RID: 32311 RVA: 0x001AB4F4 File Offset: 0x001A96F4
+	// Token: 0x060051CE RID: 20942 RVA: 0x001B41B4 File Offset: 0x001B23B4
 	public void UpdateData()
 	{
 		DangoMonopolyGridData gridData = this.GridData;
@@ -128,7 +128,7 @@ public class DangoMonopolyGridInfoPanel : UiPanelBase
 		this.UpdateEmptyInfo();
 	}
 
-	// Token: 0x06007E38 RID: 32312 RVA: 0x001AB52C File Offset: 0x001A972C
+	// Token: 0x060051CF RID: 20943 RVA: 0x001B41EC File Offset: 0x001B23EC
 	public void CheckCompletedStateToEnd()
 	{
 		if (this.GridData.IsFinish())
@@ -147,7 +147,7 @@ public class DangoMonopolyGridInfoPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06007E39 RID: 32313 RVA: 0x001AB57C File Offset: 0x001A977C
+	// Token: 0x060051D0 RID: 20944 RVA: 0x001B423C File Offset: 0x001B243C
 	public void UpdateItemInfo()
 	{
 		DangoMonopolyGridData gridData = this.GridData;
@@ -187,19 +187,19 @@ public class DangoMonopolyGridInfoPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06007E3A RID: 32314 RVA: 0x001AB666 File Offset: 0x001A9866
+	// Token: 0x060051D1 RID: 20945 RVA: 0x001B4326 File Offset: 0x001B2526
 	public void UpdateDangoInfo()
 	{
 		this.SetActive(false);
 	}
 
-	// Token: 0x06007E3B RID: 32315 RVA: 0x001AB66F File Offset: 0x001A986F
+	// Token: 0x060051D2 RID: 20946 RVA: 0x001B432F File Offset: 0x001B252F
 	public void UpdateEmptyInfo()
 	{
 		this.SetActive(false);
 	}
 
-	// Token: 0x06007E3C RID: 32316 RVA: 0x001AB678 File Offset: 0x001A9878
+	// Token: 0x060051D3 RID: 20947 RVA: 0x001B4338 File Offset: 0x001B2538
 	public UniTask EnterStartGridUpdate()
 	{
 		DangoMonopolyGridInfoPanel.<EnterStartGridUpdate>d__22 <EnterStartGridUpdate>d__;
@@ -210,7 +210,7 @@ public class DangoMonopolyGridInfoPanel : UiPanelBase
 		return <EnterStartGridUpdate>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007E3D RID: 32317 RVA: 0x001AB6BC File Offset: 0x001A98BC
+	// Token: 0x060051D4 RID: 20948 RVA: 0x001B437C File Offset: 0x001B257C
 	public UniTask EnterEndGirdUpdate()
 	{
 		DangoMonopolyGridInfoPanel.<EnterEndGirdUpdate>d__23 <EnterEndGirdUpdate>d__;
@@ -221,7 +221,7 @@ public class DangoMonopolyGridInfoPanel : UiPanelBase
 		return <EnterEndGirdUpdate>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007E3E RID: 32318 RVA: 0x001AB700 File Offset: 0x001A9900
+	// Token: 0x060051D5 RID: 20949 RVA: 0x001B43C0 File Offset: 0x001B25C0
 	public UniTask OutBeforeGridUpdate()
 	{
 		DangoMonopolyGridInfoPanel.<OutBeforeGridUpdate>d__24 <OutBeforeGridUpdate>d__;
@@ -232,7 +232,7 @@ public class DangoMonopolyGridInfoPanel : UiPanelBase
 		return <OutBeforeGridUpdate>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007E3F RID: 32319 RVA: 0x001AB744 File Offset: 0x001A9944
+	// Token: 0x060051D6 RID: 20950 RVA: 0x001B4404 File Offset: 0x001B2604
 	public UniTask OutStartGridUpdate()
 	{
 		DangoMonopolyGridInfoPanel.<OutStartGridUpdate>d__25 <OutStartGridUpdate>d__;
@@ -243,7 +243,7 @@ public class DangoMonopolyGridInfoPanel : UiPanelBase
 		return <OutStartGridUpdate>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007E40 RID: 32320 RVA: 0x001AB788 File Offset: 0x001A9988
+	// Token: 0x060051D7 RID: 20951 RVA: 0x001B4448 File Offset: 0x001B2648
 	public UniTask PlaySequence(string name)
 	{
 		DangoMonopolyGridInfoPanel.<PlaySequence>d__26 <PlaySequence>d__;
@@ -255,7 +255,7 @@ public class DangoMonopolyGridInfoPanel : UiPanelBase
 		return <PlaySequence>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007E41 RID: 32321 RVA: 0x001AB7D4 File Offset: 0x001A99D4
+	// Token: 0x060051D8 RID: 20952 RVA: 0x001B4494 File Offset: 0x001B2694
 	public UniTask PlayActiveSequence()
 	{
 		DangoMonopolyGridInfoPanel.<PlayActiveSequence>d__27 <PlayActiveSequence>d__;
@@ -266,7 +266,7 @@ public class DangoMonopolyGridInfoPanel : UiPanelBase
 		return <PlayActiveSequence>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007E42 RID: 32322 RVA: 0x001AB818 File Offset: 0x001A9A18
+	// Token: 0x060051D9 RID: 20953 RVA: 0x001B44D8 File Offset: 0x001B26D8
 	public void UpdateRotation(float yaw, float pitch)
 	{
 		if (this.RootActorRotation == null)
@@ -288,7 +288,7 @@ public class DangoMonopolyGridInfoPanel : UiPanelBase
 		rootItem.SetUIWorldRotation(value2);
 	}
 
-	// Token: 0x06007E43 RID: 32323 RVA: 0x001AB8CC File Offset: 0x001A9ACC
+	// Token: 0x060051DA RID: 20954 RVA: 0x001B458C File Offset: 0x001B278C
 	public void UpdateCameraFace()
 	{
 		Rotator cameraRotator = CameraController.Instance.MainModel.CameraRotator;
@@ -298,13 +298,13 @@ public class DangoMonopolyGridInfoPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06007E44 RID: 32324 RVA: 0x001AB8FE File Offset: 0x001A9AFE
+	// Token: 0x060051DB RID: 20955 RVA: 0x001B45BE File Offset: 0x001B27BE
 	public void TimerUpdate(float _)
 	{
 		this.UpdateCameraFace();
 	}
 
-	// Token: 0x06007E45 RID: 32325 RVA: 0x001AB908 File Offset: 0x001A9B08
+	// Token: 0x060051DC RID: 20956 RVA: 0x001B45C8 File Offset: 0x001B27C8
 	public void UpdateHeight()
 	{
 		int id = this.GridData.Id;
@@ -318,53 +318,53 @@ public class DangoMonopolyGridInfoPanel : UiPanelBase
 		base.GetRootItem().D_K2_SetWorldLocation(newLocation, true, ref fhitResult, false);
 	}
 
-	// Token: 0x06007E46 RID: 32326 RVA: 0x001AB988 File Offset: 0x001A9B88
+	// Token: 0x060051DD RID: 20957 RVA: 0x001B4648 File Offset: 0x001B2848
 	public FVector2D GetCursorPosition()
 	{
 		UUIItem item = base.GetItem(7);
 		return UiModelUtil.Instance.GetActorLguiPos(item.GetOwner(), null);
 	}
 
-	// Token: 0x0400398B RID: 14731
+	// Token: 0x04003A23 RID: 14883
 	public DangoMonopolyGridData GridData;
 
-	// Token: 0x0400398C RID: 14732
+	// Token: 0x04003A24 RID: 14884
 	[Nullable(2)]
 	public CustomPromise<bool> Promise;
 
-	// Token: 0x0400398D RID: 14733
+	// Token: 0x04003A25 RID: 14885
 	protected FRotator? RootActorRotation;
 
-	// Token: 0x0400398E RID: 14734
+	// Token: 0x04003A26 RID: 14886
 	[Nullable(2)]
 	public TimerHandle TimerHandle;
 
-	// Token: 0x0400398F RID: 14735
+	// Token: 0x04003A27 RID: 14887
 	[Nullable(2)]
 	public LevelSequencePlayer Sequence;
 
-	// Token: 0x04003990 RID: 14736
+	// Token: 0x04003A28 RID: 14888
 	public ActivityDangoMonopolyData ActivityData;
 
-	// Token: 0x02007823 RID: 30755
+	// Token: 0x020069AE RID: 27054
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402797C RID: 162172
+		// Token: 0x04022CAD RID: 142509
 		ItemTag,
-		// Token: 0x0402797D RID: 162173
+		// Token: 0x04022CAE RID: 142510
 		TxtTitle,
-		// Token: 0x0402797E RID: 162174
+		// Token: 0x04022CAF RID: 142511
 		ItemCompleted,
-		// Token: 0x0402797F RID: 162175
+		// Token: 0x04022CB0 RID: 142512
 		TextureIcon,
-		// Token: 0x04027980 RID: 162176
+		// Token: 0x04022CB1 RID: 142513
 		ItemEffectNormal,
-		// Token: 0x04027981 RID: 162177
+		// Token: 0x04022CB2 RID: 142514
 		ItemEffectDouble,
-		// Token: 0x04027982 RID: 162178
+		// Token: 0x04022CB3 RID: 142515
 		TxtTag,
-		// Token: 0x04027983 RID: 162179
+		// Token: 0x04022CB4 RID: 142516
 		ItemCursor
 	}
 }

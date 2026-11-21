@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Player.Component
 {
-	// Token: 0x02007057 RID: 28759
+	// Token: 0x020061D8 RID: 25048
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FlashLightConfig
 	{
-		// Token: 0x06045FE7 RID: 286695 RVA: 0x011726F0 File Offset: 0x011708F0
+		// Token: 0x0603C1D5 RID: 246229 RVA: 0x0111C3B0 File Offset: 0x0111A5B0
 		public void Init(BP_FlashLightConfig_C asset)
 		{
 			Transform relativeTrans = this.RelativeTrans;
@@ -41,13 +41,13 @@ namespace CSharpScript.Game.NewWorld.Player.Component
 			this.LerpCurve = asset.LerpCurve;
 		}
 
-		// Token: 0x06045FE8 RID: 286696 RVA: 0x01172828 File Offset: 0x01170A28
+		// Token: 0x0603C1D6 RID: 246230 RVA: 0x0111C4E8 File Offset: 0x0111A6E8
 		public bool IsValid()
 		{
 			return this.Intensity >= 0f && this.AttenuationRadius >= 0f && this.MaxTurnSpeed >= this.MinTurnSpeed && this.MinTurnSpeed > 0f && this.OuterConeAngle >= this.InnerConeAngle && this.InnerConeAngle > 0f && (!this.IsUsePitchLerp || this.LerpCurve != null || this.LerpPow != 0f);
 		}
 
-		// Token: 0x06045FE9 RID: 286697 RVA: 0x011728AC File Offset: 0x01170AAC
+		// Token: 0x0603C1D7 RID: 246231 RVA: 0x0111C56C File Offset: 0x0111A76C
 		public float GetLerpDegAlpha(float inAlpha)
 		{
 			float num = MathUtils.Instance.Clamp(inAlpha, 0f, 1f);
@@ -59,77 +59,77 @@ namespace CSharpScript.Game.NewWorld.Player.Component
 			return (float)Math.Pow((double)num, (double)this.LerpPow);
 		}
 
-		// Token: 0x04024A39 RID: 150073
+		// Token: 0x0401FCEF RID: 130287
 		public Transform RelativeTrans = Transform.Create();
 
-		// Token: 0x04024A3A RID: 150074
+		// Token: 0x0401FCF0 RID: 130288
 		public float Intensity;
 
-		// Token: 0x04024A3B RID: 150075
+		// Token: 0x0401FCF1 RID: 130289
 		public float AttenuationRadius;
 
-		// Token: 0x04024A3C RID: 150076
+		// Token: 0x0401FCF2 RID: 130290
 		public float InnerConeAngle;
 
-		// Token: 0x04024A3D RID: 150077
+		// Token: 0x0401FCF3 RID: 130291
 		public float OuterConeAngle;
 
-		// Token: 0x04024A3E RID: 150078
+		// Token: 0x0401FCF4 RID: 130292
 		public float SpecularScale;
 
-		// Token: 0x04024A3F RID: 150079
+		// Token: 0x0401FCF5 RID: 130293
 		public float LightFalloffExponent;
 
-		// Token: 0x04024A40 RID: 150080
+		// Token: 0x0401FCF6 RID: 130294
 		public float VolumetricScatteringIntensity;
 
-		// Token: 0x04024A41 RID: 150081
+		// Token: 0x0401FCF7 RID: 130295
 		public FLinearColor LightColor = new FLinearColor();
 
-		// Token: 0x04024A42 RID: 150082
+		// Token: 0x0401FCF8 RID: 130296
 		public float ToonPointLightFallOff;
 
-		// Token: 0x04024A43 RID: 150083
+		// Token: 0x0401FCF9 RID: 130297
 		public float ToonDistanceBlendIntensity;
 
-		// Token: 0x04024A44 RID: 150084
+		// Token: 0x0401FCFA RID: 130298
 		public float ToonIntensity;
 
-		// Token: 0x04024A45 RID: 150085
+		// Token: 0x0401FCFB RID: 130299
 		public int ToonLightingPriority;
 
-		// Token: 0x04024A46 RID: 150086
+		// Token: 0x0401FCFC RID: 130300
 		public float ToonShadowColorIntensity;
 
-		// Token: 0x04024A47 RID: 150087
+		// Token: 0x0401FCFD RID: 130301
 		public float ToonRealTimeShadowIntensity;
 
-		// Token: 0x04024A48 RID: 150088
+		// Token: 0x0401FCFE RID: 130302
 		public FLinearColor LightToonColor = new FLinearColor();
 
-		// Token: 0x04024A49 RID: 150089
+		// Token: 0x0401FCFF RID: 130303
 		[Nullable(2)]
 		public UTextureLightProfile IESTexture;
 
-		// Token: 0x04024A4A RID: 150090
+		// Token: 0x0401FD00 RID: 130304
 		public bool IsUseCameraPitch;
 
-		// Token: 0x04024A4B RID: 150091
+		// Token: 0x0401FD01 RID: 130305
 		public bool IsUsePitchLerp;
 
-		// Token: 0x04024A4C RID: 150092
+		// Token: 0x0401FD02 RID: 130306
 		public float MinTurnSpeed;
 
-		// Token: 0x04024A4D RID: 150093
+		// Token: 0x0401FD03 RID: 130307
 		public float MaxTurnSpeed;
 
-		// Token: 0x04024A4E RID: 150094
+		// Token: 0x0401FD04 RID: 130308
 		public float LerpBeginDeg;
 
-		// Token: 0x04024A4F RID: 150095
+		// Token: 0x0401FD05 RID: 130309
 		public float LerpPow;
 
-		// Token: 0x04024A50 RID: 150096
+		// Token: 0x0401FD06 RID: 130310
 		[Nullable(2)]
 		public UCurveFloat LerpCurve;
 	}

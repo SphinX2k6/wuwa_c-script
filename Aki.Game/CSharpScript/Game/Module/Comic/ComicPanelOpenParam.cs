@@ -3,30 +3,30 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Comic
 {
-	// Token: 0x02005B8C RID: 23436
+	// Token: 0x02004B6C RID: 19308
 	[NullableContext(1)]
 	[Nullable(0)]
 	[RequiredMember]
 	public class ComicPanelOpenParam : IComicPanelOpenParam
 	{
-		// Token: 0x17008CD8 RID: 36056
-		// (get) Token: 0x0603B4AE RID: 242862 RVA: 0x00E21797 File Offset: 0x00E1F997
-		// (set) Token: 0x0603B4AF RID: 242863 RVA: 0x00E2179F File Offset: 0x00E1F99F
+		// Token: 0x170060AA RID: 24746
+		// (get) Token: 0x060303FB RID: 197627 RVA: 0x00D71D03 File Offset: 0x00D6FF03
+		// (set) Token: 0x060303FC RID: 197628 RVA: 0x00D71D0B File Offset: 0x00D6FF0B
 		public int ComicConfigId { get; set; }
 
-		// Token: 0x17008CD9 RID: 36057
-		// (get) Token: 0x0603B4B0 RID: 242864 RVA: 0x00E217A8 File Offset: 0x00E1F9A8
-		// (set) Token: 0x0603B4B1 RID: 242865 RVA: 0x00E217B0 File Offset: 0x00E1F9B0
+		// Token: 0x170060AB RID: 24747
+		// (get) Token: 0x060303FD RID: 197629 RVA: 0x00D71D14 File Offset: 0x00D6FF14
+		// (set) Token: 0x060303FE RID: 197630 RVA: 0x00D71D1C File Offset: 0x00D6FF1C
 		[RequiredMember]
 		public Action OnSkip { get; set; }
 
-		// Token: 0x17008CDA RID: 36058
-		// (get) Token: 0x0603B4B2 RID: 242866 RVA: 0x00E217B9 File Offset: 0x00E1F9B9
-		// (set) Token: 0x0603B4B3 RID: 242867 RVA: 0x00E217C1 File Offset: 0x00E1F9C1
+		// Token: 0x170060AC RID: 24748
+		// (get) Token: 0x060303FF RID: 197631 RVA: 0x00D71D25 File Offset: 0x00D6FF25
+		// (set) Token: 0x06030400 RID: 197632 RVA: 0x00D71D2D File Offset: 0x00D6FF2D
 		[RequiredMember]
 		public Action OnComplete { get; set; }
 
-		// Token: 0x0603B4B4 RID: 242868 RVA: 0x00E217CA File Offset: 0x00E1F9CA
+		// Token: 0x06030401 RID: 197633 RVA: 0x00D71D36 File Offset: 0x00D6FF36
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public ComicPanelOpenParam()

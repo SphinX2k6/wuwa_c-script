@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020066DC RID: 26332
+	// Token: 0x02006D5C RID: 27996
 	public class IEntityHandInHandInitiatorT
 	{
-		// Token: 0x1700C39F RID: 50079
-		// (get) Token: 0x0602DC71 RID: 187505 RVA: 0x00642C38 File Offset: 0x00640E38
-		// (set) Token: 0x0602DC72 RID: 187506 RVA: 0x00642C40 File Offset: 0x00640E40
+		// Token: 0x1700CD55 RID: 52565
+		// (get) Token: 0x060304AE RID: 197806 RVA: 0x006901AC File Offset: 0x0068E3AC
+		// (set) Token: 0x060304AF RID: 197807 RVA: 0x006901B4 File Offset: 0x0068E3B4
 		public EHandInHandInitiatorType Type { get; set; }
 
-		// Token: 0x1700C3A0 RID: 50080
-		// (get) Token: 0x0602DC73 RID: 187507 RVA: 0x00642C49 File Offset: 0x00640E49
-		// (set) Token: 0x0602DC74 RID: 187508 RVA: 0x00642C51 File Offset: 0x00640E51
+		// Token: 0x1700CD56 RID: 52566
+		// (get) Token: 0x060304B0 RID: 197808 RVA: 0x006901BD File Offset: 0x0068E3BD
+		// (set) Token: 0x060304B1 RID: 197809 RVA: 0x006901C5 File Offset: 0x0068E3C5
 		public int EntityId { get; set; }
 
-		// Token: 0x0602DC75 RID: 187509 RVA: 0x00642C5A File Offset: 0x00640E5A
+		// Token: 0x060304B2 RID: 197810 RVA: 0x006901CE File Offset: 0x0068E3CE
 		public IEntityHandInHandInitiatorT()
 		{
 			this.Type = EHandInHandInitiatorType.Player;

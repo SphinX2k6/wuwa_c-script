@@ -8,14 +8,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Giant.View
 {
-	// Token: 0x02005985 RID: 22917
+	// Token: 0x0200495E RID: 18782
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GiantNodeScaleItem : UiPanelBase, IGridProxy<IGiantNodeScaleData>
 	{
-		// Token: 0x17008B52 RID: 35666
-		// (get) Token: 0x0603A26D RID: 238189 RVA: 0x00DD34B3 File Offset: 0x00DD16B3
-		// (set) Token: 0x0603A26E RID: 238190 RVA: 0x00DD34BB File Offset: 0x00DD16BB
+		// Token: 0x17005F1F RID: 24351
+		// (get) Token: 0x0602F193 RID: 192915 RVA: 0x00D22943 File Offset: 0x00D20B43
+		// (set) Token: 0x0602F194 RID: 192916 RVA: 0x00D2294B File Offset: 0x00D20B4B
 		[Nullable(new byte[]
 		{
 			2,
@@ -37,17 +37,17 @@ namespace CSharpScript.Game.Module.Giant.View
 			1
 		})] set; }
 
-		// Token: 0x17008B53 RID: 35667
-		// (get) Token: 0x0603A26F RID: 238191 RVA: 0x00DD34C4 File Offset: 0x00DD16C4
-		// (set) Token: 0x0603A270 RID: 238192 RVA: 0x00DD34CC File Offset: 0x00DD16CC
+		// Token: 0x17005F20 RID: 24352
+		// (get) Token: 0x0602F195 RID: 192917 RVA: 0x00D22954 File Offset: 0x00D20B54
+		// (set) Token: 0x0602F196 RID: 192918 RVA: 0x00D2295C File Offset: 0x00D20B5C
 		public int GridIndex { get; set; }
 
-		// Token: 0x17008B54 RID: 35668
-		// (get) Token: 0x0603A271 RID: 238193 RVA: 0x00DD34D5 File Offset: 0x00DD16D5
-		// (set) Token: 0x0603A272 RID: 238194 RVA: 0x00DD34DD File Offset: 0x00DD16DD
+		// Token: 0x17005F21 RID: 24353
+		// (get) Token: 0x0602F197 RID: 192919 RVA: 0x00D22965 File Offset: 0x00D20B65
+		// (set) Token: 0x0602F198 RID: 192920 RVA: 0x00D2296D File Offset: 0x00D20B6D
 		public int DisplayIndex { get; set; }
 
-		// Token: 0x0603A273 RID: 238195 RVA: 0x00DD34E8 File Offset: 0x00DD16E8
+		// Token: 0x0602F199 RID: 192921 RVA: 0x00D22978 File Offset: 0x00D20B78
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.Giant.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603A274 RID: 238196 RVA: 0x00DD363C File Offset: 0x00DD183C
+		// Token: 0x0602F19A RID: 192922 RVA: 0x00D22ACC File Offset: 0x00D20CCC
 		protected override void OnStart()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.Giant.View
 			});
 		}
 
-		// Token: 0x0603A275 RID: 238197 RVA: 0x00DD3698 File Offset: 0x00DD1898
+		// Token: 0x0602F19B RID: 192923 RVA: 0x00D22B28 File Offset: 0x00D20D28
 		public void Refresh(IGiantNodeScaleData data, bool isSelected, int gridIndex)
 		{
 			this.CurrentData = data;
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.Module.Giant.View
 			extendToggle.SetToggleStateForce(isSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0603A276 RID: 238198 RVA: 0x00DD37F0 File Offset: 0x00DD19F0
+		// Token: 0x0602F19C RID: 192924 RVA: 0x00D22C80 File Offset: 0x00D20E80
 		private void OnClick()
 		{
 			IGiantNodeScaleData currentData = this.CurrentData;
@@ -168,12 +168,12 @@ namespace CSharpScript.Game.Module.Giant.View
 			currentData.OnClick(currentData.NodeIndex, currentData.CanClaim, base.GetRootItem());
 		}
 
-		// Token: 0x0603A277 RID: 238199 RVA: 0x00DD3825 File Offset: 0x00DD1A25
+		// Token: 0x0602F19D RID: 192925 RVA: 0x00D22CB5 File Offset: 0x00D20EB5
 		public void Clear()
 		{
 		}
 
-		// Token: 0x0603A278 RID: 238200 RVA: 0x00DD3827 File Offset: 0x00DD1A27
+		// Token: 0x0602F19E RID: 192926 RVA: 0x00D22CB7 File Offset: 0x00D20EB7
 		public void OnSelected(bool fireEvent)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -184,7 +184,7 @@ namespace CSharpScript.Game.Module.Giant.View
 			extendToggle.SetToggleStateForce(EToggleState.ETT_Checked, false, false, false);
 		}
 
-		// Token: 0x0603A279 RID: 238201 RVA: 0x00DD383E File Offset: 0x00DD1A3E
+		// Token: 0x0602F19F RID: 192927 RVA: 0x00D22CCE File Offset: 0x00D20ECE
 		public void OnDeselected(bool fireEvent)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -195,13 +195,13 @@ namespace CSharpScript.Game.Module.Giant.View
 			extendToggle.SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0603A27A RID: 238202 RVA: 0x00DD3855 File Offset: 0x00DD1A55
+		// Token: 0x0602F1A0 RID: 192928 RVA: 0x00D22CE5 File Offset: 0x00D20EE5
 		public object GetKey(IGiantNodeScaleData data, int gridIndex)
 		{
 			return gridIndex;
 		}
 
-		// Token: 0x0401E578 RID: 124280
+		// Token: 0x04019016 RID: 102422
 		[Nullable(2)]
 		private IGiantNodeScaleData CurrentData;
 	}

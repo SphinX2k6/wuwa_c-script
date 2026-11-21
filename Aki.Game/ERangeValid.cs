@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x020034C8 RID: 13512
+// Token: 0x02002A3C RID: 10812
 public enum ERangeValid
 {
-	// Token: 0x0400E7D9 RID: 59353
+	// Token: 0x0400EC8D RID: 60557
 	None,
-	// Token: 0x0400E7DA RID: 59354
+	// Token: 0x0400EC8E RID: 60558
 	Above,
-	// Token: 0x0400E7DB RID: 59355
+	// Token: 0x0400EC8F RID: 60559
 	Below,
-	// Token: 0x0400E7DC RID: 59356
+	// Token: 0x0400EC90 RID: 60560
 	InRange
 }

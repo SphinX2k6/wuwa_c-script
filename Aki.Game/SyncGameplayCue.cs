@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02002F81 RID: 12161
+// Token: 0x020024D5 RID: 9429
 [NullableContext(1)]
 [Nullable(0)]
 public class SyncGameplayCue : BuffEffect
 {
-	// Token: 0x06019D64 RID: 105828 RVA: 0x006BE343 File Offset: 0x006BC543
+	// Token: 0x06017676 RID: 95862 RVA: 0x006E4C3B File Offset: 0x006E2E3B
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
 		return null;
 	}
 
-	// Token: 0x06019D65 RID: 105829 RVA: 0x006BE348 File Offset: 0x006BC548
+	// Token: 0x06017677 RID: 95863 RVA: 0x006E4C40 File Offset: 0x006E2E40
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -30,7 +30,7 @@ public class SyncGameplayCue : BuffEffect
 		}
 	}
 
-	// Token: 0x06019D66 RID: 105830 RVA: 0x006BE398 File Offset: 0x006BC598
+	// Token: 0x06017678 RID: 95864 RVA: 0x006E4C90 File Offset: 0x006E2E90
 	public override void OnCreated()
 	{
 		EntityHandle instigatorEntity = base.InstigatorEntity;
@@ -72,7 +72,7 @@ public class SyncGameplayCue : BuffEffect
 		instance.Error(flag, ownerEntity3, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x06019D67 RID: 105831 RVA: 0x006BE4AD File Offset: 0x006BC6AD
+	// Token: 0x06017679 RID: 95865 RVA: 0x006E4DA5 File Offset: 0x006E2FA5
 	public override void OnRemoved(bool bPremature)
 	{
 		if (this.Instigator == null)
@@ -82,7 +82,7 @@ public class SyncGameplayCue : BuffEffect
 		EventSystem.Instance.RemoveWithTarget<bool, long>(this.Instigator, EEventName.CharGameplayCueChanged, new Action<bool, long>(this.OnCharGameplayCueChanged));
 	}
 
-	// Token: 0x06019D68 RID: 105832 RVA: 0x006BE4D7 File Offset: 0x006BC6D7
+	// Token: 0x0601767A RID: 95866 RVA: 0x006E4DCF File Offset: 0x006E2FCF
 	private void OnCharGameplayCueChanged(bool enable, long cueId)
 	{
 		if (!this.ShouldSyncCue(cueId))
@@ -97,7 +97,7 @@ public class SyncGameplayCue : BuffEffect
 		this.RemoveCue(cueId);
 	}
 
-	// Token: 0x06019D69 RID: 105833 RVA: 0x006BE4F8 File Offset: 0x006BC6F8
+	// Token: 0x0601767B RID: 95867 RVA: 0x006E4DF0 File Offset: 0x006E2FF0
 	private void SyncCueOnCreated(BaseGameplayCueComponent instigatorCueComp)
 	{
 		BaseGameplayCueComponent ownerCueComp = this.OwnerCueComp;
@@ -138,7 +138,7 @@ public class SyncGameplayCue : BuffEffect
 		}
 	}
 
-	// Token: 0x06019D6A RID: 105834 RVA: 0x006BE668 File Offset: 0x006BC868
+	// Token: 0x0601767C RID: 95868 RVA: 0x006E4F60 File Offset: 0x006E3160
 	private void AddCue(long cueId, bool bSyncMagnitude)
 	{
 		BaseGameplayCueComponent ownerCueComp = this.OwnerCueComp;
@@ -152,7 +152,7 @@ public class SyncGameplayCue : BuffEffect
 		}
 	}
 
-	// Token: 0x06019D6B RID: 105835 RVA: 0x006BE69B File Offset: 0x006BC89B
+	// Token: 0x0601767D RID: 95869 RVA: 0x006E4F93 File Offset: 0x006E3193
 	private void RemoveCue(long cueId)
 	{
 		BaseGameplayCueComponent ownerCueComp = this.OwnerCueComp;
@@ -163,7 +163,7 @@ public class SyncGameplayCue : BuffEffect
 		ownerCueComp.RemoveCue(cueId);
 	}
 
-	// Token: 0x06019D6C RID: 105836 RVA: 0x006BE6B0 File Offset: 0x006BC8B0
+	// Token: 0x0601767E RID: 95870 RVA: 0x006E4FA8 File Offset: 0x006E31A8
 	private void SyncMagnitudeIfNeeded(long cueId)
 	{
 		if (this.OwnerCueComp == null || this.InstigatorCueComp == null)
@@ -183,7 +183,7 @@ public class SyncGameplayCue : BuffEffect
 		}
 	}
 
-	// Token: 0x06019D6D RID: 105837 RVA: 0x006BE704 File Offset: 0x006BC904
+	// Token: 0x0601767F RID: 95871 RVA: 0x006E4FFC File Offset: 0x006E31FC
 	private bool ShouldSyncCue(long cueId)
 	{
 		if (this.SyncCueIds.Length == 0)
@@ -200,23 +200,23 @@ public class SyncGameplayCue : BuffEffect
 		return false;
 	}
 
-	// Token: 0x06019D6E RID: 105838 RVA: 0x006BE73D File Offset: 0x006BC93D
+	// Token: 0x06017680 RID: 95872 RVA: 0x006E5035 File Offset: 0x006E3235
 	public SyncGameplayCue(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x0400C31F RID: 49951
+	// Token: 0x0400C6C8 RID: 50888
 	[Nullable(2)]
 	private EntityHandle Instigator;
 
-	// Token: 0x0400C320 RID: 49952
+	// Token: 0x0400C6C9 RID: 50889
 	[Nullable(2)]
 	private BaseGameplayCueComponent OwnerCueComp;
 
-	// Token: 0x0400C321 RID: 49953
+	// Token: 0x0400C6CA RID: 50890
 	[Nullable(2)]
 	private BaseGameplayCueComponent InstigatorCueComp;
 
-	// Token: 0x0400C322 RID: 49954
+	// Token: 0x0400C6CB RID: 50891
 	private long[] SyncCueIds = Array.Empty<long>();
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B9A RID: 7066
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001D47 RID: 7495
 	public class ILinearOverRangeCameraShake : ICameraShakeConfig
 	{
-		// Token: 0x06009743 RID: 38723 RVA: 0x0015CEC4 File Offset: 0x0015B0C4
+		// Token: 0x06009F25 RID: 40741 RVA: 0x0016DA70 File Offset: 0x0016BC70
 		private ILinearOverRangeCameraShake_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009744 RID: 38724 RVA: 0x0015CEFC File Offset: 0x0015B0FC
+		// Token: 0x06009F26 RID: 40742 RVA: 0x0016DAA8 File Offset: 0x0016BCA8
 		public static ILinearOverRangeCameraShake Create([Nullable(2)] ILinearOverRangeCameraShake instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009745 RID: 38725 RVA: 0x0015CF0F File Offset: 0x0015B10F
+		// Token: 0x06009F27 RID: 40743 RVA: 0x0016DABB File Offset: 0x0016BCBB
 		public static ILinearOverRangeCameraShake CreateFromSetValue([Nullable(2)] ILinearOverRangeCameraShake_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009746 RID: 38726 RVA: 0x0015CF22 File Offset: 0x0015B122
+		// Token: 0x06009F28 RID: 40744 RVA: 0x0016DACE File Offset: 0x0016BCCE
 		public new ILinearOverRangeCameraShake_SetValue ToSetValue()
 		{
 			return new ILinearOverRangeCameraShake_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002F91 RID: 12177
-		// (get) Token: 0x06009747 RID: 38727 RVA: 0x0015CF59 File Offset: 0x0015B159
-		// (set) Token: 0x06009748 RID: 38728 RVA: 0x0015CF84 File Offset: 0x0015B184
+		// Token: 0x170031B6 RID: 12726
+		// (get) Token: 0x06009F29 RID: 40745 RVA: 0x0016DB05 File Offset: 0x0016BD05
+		// (set) Token: 0x06009F2A RID: 40746 RVA: 0x0016DB30 File Offset: 0x0016BD30
 		public override ECameraShakeType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F92 RID: 12178
-		// (get) Token: 0x06009749 RID: 38729 RVA: 0x0015CF92 File Offset: 0x0015B192
-		// (set) Token: 0x0600974A RID: 38730 RVA: 0x0015CFBD File Offset: 0x0015B1BD
+		// Token: 0x170031B7 RID: 12727
+		// (get) Token: 0x06009F2B RID: 40747 RVA: 0x0016DB3E File Offset: 0x0016BD3E
+		// (set) Token: 0x06009F2C RID: 40748 RVA: 0x0016DB69 File Offset: 0x0016BD69
 		public virtual int CenterEntityId
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F93 RID: 12179
-		// (get) Token: 0x0600974B RID: 38731 RVA: 0x0015CFCB File Offset: 0x0015B1CB
-		// (set) Token: 0x0600974C RID: 38732 RVA: 0x0015CFF6 File Offset: 0x0015B1F6
+		// Token: 0x170031B8 RID: 12728
+		// (get) Token: 0x06009F2D RID: 40749 RVA: 0x0016DB77 File Offset: 0x0016BD77
+		// (set) Token: 0x06009F2E RID: 40750 RVA: 0x0016DBA2 File Offset: 0x0016BDA2
 		public virtual int MinRange
 		{
 			get
@@ -131,9 +129,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F94 RID: 12180
-		// (get) Token: 0x0600974D RID: 38733 RVA: 0x0015D004 File Offset: 0x0015B204
-		// (set) Token: 0x0600974E RID: 38734 RVA: 0x0015D02F File Offset: 0x0015B22F
+		// Token: 0x170031B9 RID: 12729
+		// (get) Token: 0x06009F2F RID: 40751 RVA: 0x0016DBB0 File Offset: 0x0016BDB0
+		// (set) Token: 0x06009F30 RID: 40752 RVA: 0x0016DBDB File Offset: 0x0016BDDB
 		public virtual int MaxRange
 		{
 			get
@@ -154,11 +152,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005C56 RID: 23638
+		// Token: 0x040060EF RID: 24815
 		[Nullable(2)]
 		protected new ILinearOverRangeCameraShake FbInstance;
 
-		// Token: 0x04005C57 RID: 23639
+		// Token: 0x040060F0 RID: 24816
 		[Nullable(2)]
 		protected new ILinearOverRangeCameraShake_SetValue PocoInterface;
 	}

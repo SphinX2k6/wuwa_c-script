@@ -6,12 +6,9 @@ using Aki.TDConfigMgr.EditorObject.Fb;
 namespace Aki.TDConfigMgr.EditorObject
 {
 	// Token: 0x0200000C RID: 12
-	[NullableContext(2)]
-	[Nullable(0)]
 	public class IEditorObject
 	{
-		// Token: 0x0600000B RID: 11 RVA: 0x00013A8C File Offset: 0x00011C8C
-		[NullableContext(1)]
+		// Token: 0x0600000B RID: 11 RVA: 0x000142F4 File Offset: 0x000124F4
 		private IEditorObject_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +23,7 @@ namespace Aki.TDConfigMgr.EditorObject
 			return result;
 		}
 
-		// Token: 0x0600000C RID: 12 RVA: 0x00013AC4 File Offset: 0x00011CC4
-		[NullableContext(1)]
+		// Token: 0x0600000C RID: 12 RVA: 0x0001432C File Offset: 0x0001252C
 		public static IEditorObject Create([Nullable(2)] IEditorObject instance)
 		{
 			if (instance == null)
@@ -40,8 +36,7 @@ namespace Aki.TDConfigMgr.EditorObject
 			};
 		}
 
-		// Token: 0x0600000D RID: 13 RVA: 0x00013AD7 File Offset: 0x00011CD7
-		[NullableContext(1)]
+		// Token: 0x0600000D RID: 13 RVA: 0x0001433F File Offset: 0x0001253F
 		public static IEditorObject CreateFromSetValue([Nullable(2)] IEditorObject_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +49,7 @@ namespace Aki.TDConfigMgr.EditorObject
 			};
 		}
 
-		// Token: 0x0600000E RID: 14 RVA: 0x00013AEC File Offset: 0x00011CEC
-		[NullableContext(1)]
+		// Token: 0x0600000E RID: 14 RVA: 0x00014354 File Offset: 0x00012554
 		public IEditorObject_SetValue ToSetValue()
 		{
 			return new IEditorObject_SetValue
@@ -72,8 +66,8 @@ namespace Aki.TDConfigMgr.EditorObject
 		}
 
 		// Token: 0x17000001 RID: 1
-		// (get) Token: 0x0600000F RID: 15 RVA: 0x00013B5E File Offset: 0x00011D5E
-		// (set) Token: 0x06000010 RID: 16 RVA: 0x00013B89 File Offset: 0x00011D89
+		// (get) Token: 0x0600000F RID: 15 RVA: 0x000143C6 File Offset: 0x000125C6
+		// (set) Token: 0x06000010 RID: 16 RVA: 0x000143F1 File Offset: 0x000125F1
 		public virtual TEditorObjectType ObjType
 		{
 			get
@@ -95,19 +89,19 @@ namespace Aki.TDConfigMgr.EditorObject
 		}
 
 		// Token: 0x17000002 RID: 2
-		// (get) Token: 0x06000011 RID: 17 RVA: 0x00013B97 File Offset: 0x00011D97
-		// (set) Token: 0x06000012 RID: 18 RVA: 0x00013BBE File Offset: 0x00011DBE
+		// (get) Token: 0x06000011 RID: 17 RVA: 0x000143FF File Offset: 0x000125FF
+		// (set) Token: 0x06000012 RID: 18 RVA: 0x00014426 File Offset: 0x00012626
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<string> Children
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -125,7 +119,7 @@ namespace Aki.TDConfigMgr.EditorObject
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -134,19 +128,19 @@ namespace Aki.TDConfigMgr.EditorObject
 		}
 
 		// Token: 0x17000003 RID: 3
-		// (get) Token: 0x06000013 RID: 19 RVA: 0x00013BCC File Offset: 0x00011DCC
-		// (set) Token: 0x06000014 RID: 20 RVA: 0x00013BF3 File Offset: 0x00011DF3
+		// (get) Token: 0x06000013 RID: 19 RVA: 0x00014434 File Offset: 0x00012634
+		// (set) Token: 0x06000014 RID: 20 RVA: 0x0001445B File Offset: 0x0001265B
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<string> Reference
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -164,7 +158,7 @@ namespace Aki.TDConfigMgr.EditorObject
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -173,19 +167,19 @@ namespace Aki.TDConfigMgr.EditorObject
 		}
 
 		// Token: 0x17000004 RID: 4
-		// (get) Token: 0x06000015 RID: 21 RVA: 0x00013C01 File Offset: 0x00011E01
-		// (set) Token: 0x06000016 RID: 22 RVA: 0x00013C28 File Offset: 0x00011E28
+		// (get) Token: 0x06000015 RID: 21 RVA: 0x00014469 File Offset: 0x00012669
+		// (set) Token: 0x06000016 RID: 22 RVA: 0x00014490 File Offset: 0x00012690
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<string> WeakReference
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -203,7 +197,7 @@ namespace Aki.TDConfigMgr.EditorObject
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -212,10 +206,12 @@ namespace Aki.TDConfigMgr.EditorObject
 		}
 
 		// Token: 0x17000005 RID: 5
-		// (get) Token: 0x06000017 RID: 23 RVA: 0x00013C36 File Offset: 0x00011E36
-		// (set) Token: 0x06000018 RID: 24 RVA: 0x00013C4D File Offset: 0x00011E4D
+		// (get) Token: 0x06000017 RID: 23 RVA: 0x0001449E File Offset: 0x0001269E
+		// (set) Token: 0x06000018 RID: 24 RVA: 0x000144B5 File Offset: 0x000126B5
+		[Nullable(2)]
 		public virtual string EdPlannedBranch
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.PocoInterface != null)
@@ -224,6 +220,7 @@ namespace Aki.TDConfigMgr.EditorObject
 				}
 				return null;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().EdPlannedBranch = value;
@@ -231,19 +228,19 @@ namespace Aki.TDConfigMgr.EditorObject
 		}
 
 		// Token: 0x17000006 RID: 6
-		// (get) Token: 0x06000019 RID: 25 RVA: 0x00013C5B File Offset: 0x00011E5B
-		// (set) Token: 0x0600001A RID: 26 RVA: 0x00013C72 File Offset: 0x00011E72
+		// (get) Token: 0x06000019 RID: 25 RVA: 0x000144C3 File Offset: 0x000126C3
+		// (set) Token: 0x0600001A RID: 26 RVA: 0x000144DA File Offset: 0x000126DA
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<string> EdTextRef
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -256,7 +253,7 @@ namespace Aki.TDConfigMgr.EditorObject
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -265,19 +262,19 @@ namespace Aki.TDConfigMgr.EditorObject
 		}
 
 		// Token: 0x17000007 RID: 7
-		// (get) Token: 0x0600001B RID: 27 RVA: 0x00013C80 File Offset: 0x00011E80
-		// (set) Token: 0x0600001C RID: 28 RVA: 0x00013C97 File Offset: 0x00011E97
+		// (get) Token: 0x0600001B RID: 27 RVA: 0x000144E8 File Offset: 0x000126E8
+		// (set) Token: 0x0600001C RID: 28 RVA: 0x000144FF File Offset: 0x000126FF
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<string> _children
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -290,7 +287,7 @@ namespace Aki.TDConfigMgr.EditorObject
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -299,19 +296,19 @@ namespace Aki.TDConfigMgr.EditorObject
 		}
 
 		// Token: 0x17000008 RID: 8
-		// (get) Token: 0x0600001D RID: 29 RVA: 0x00013CA5 File Offset: 0x00011EA5
-		// (set) Token: 0x0600001E RID: 30 RVA: 0x00013CBC File Offset: 0x00011EBC
+		// (get) Token: 0x0600001D RID: 29 RVA: 0x0001450D File Offset: 0x0001270D
+		// (set) Token: 0x0600001E RID: 30 RVA: 0x00014524 File Offset: 0x00012724
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<string> _reference
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -324,7 +321,7 @@ namespace Aki.TDConfigMgr.EditorObject
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -332,10 +329,12 @@ namespace Aki.TDConfigMgr.EditorObject
 			}
 		}
 
-		// Token: 0x0400001D RID: 29
+		// Token: 0x0400001E RID: 30
+		[Nullable(2)]
 		protected IEditorObject FbInstance;
 
-		// Token: 0x0400001E RID: 30
+		// Token: 0x0400001F RID: 31
+		[Nullable(2)]
 		protected IEditorObject_SetValue PocoInterface;
 	}
 }

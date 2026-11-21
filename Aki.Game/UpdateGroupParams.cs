@@ -2,38 +2,38 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002955 RID: 10581
+// Token: 0x02001ED0 RID: 7888
 [NullableContext(1)]
 [Nullable(0)]
 public class UpdateGroupParams : IUpdateGroupParams
 {
-	// Token: 0x17001D5E RID: 7518
-	// (get) Token: 0x06015DC7 RID: 89543 RVA: 0x00583F54 File Offset: 0x00582154
-	// (set) Token: 0x06015DC8 RID: 89544 RVA: 0x00583F5C File Offset: 0x0058215C
+	// Token: 0x17001DB7 RID: 7607
+	// (get) Token: 0x060137CB RID: 79819 RVA: 0x005AEF54 File Offset: 0x005AD154
+	// (set) Token: 0x060137CC RID: 79820 RVA: 0x005AEF5C File Offset: 0x005AD15C
 	public ETeamGroupType GroupType { get; set; }
 
-	// Token: 0x17001D5F RID: 7519
-	// (get) Token: 0x06015DC9 RID: 89545 RVA: 0x00583F65 File Offset: 0x00582165
-	// (set) Token: 0x06015DCA RID: 89546 RVA: 0x00583F6D File Offset: 0x0058216D
+	// Token: 0x17001DB8 RID: 7608
+	// (get) Token: 0x060137CD RID: 79821 RVA: 0x005AEF65 File Offset: 0x005AD165
+	// (set) Token: 0x060137CE RID: 79822 RVA: 0x005AEF6D File Offset: 0x005AD16D
 	public IList<SceneTeamRole> GroupRoleList { get; set; }
 
-	// Token: 0x17001D60 RID: 7520
-	// (get) Token: 0x06015DCB RID: 89547 RVA: 0x00583F76 File Offset: 0x00582176
-	// (set) Token: 0x06015DCC RID: 89548 RVA: 0x00583F7E File Offset: 0x0058217E
+	// Token: 0x17001DB9 RID: 7609
+	// (get) Token: 0x060137CF RID: 79823 RVA: 0x005AEF76 File Offset: 0x005AD176
+	// (set) Token: 0x060137D0 RID: 79824 RVA: 0x005AEF7E File Offset: 0x005AD17E
 	public int CurrentRoleId { get; set; }
 
-	// Token: 0x17001D61 RID: 7521
-	// (get) Token: 0x06015DCD RID: 89549 RVA: 0x00583F87 File Offset: 0x00582187
-	// (set) Token: 0x06015DCE RID: 89550 RVA: 0x00583F8F File Offset: 0x0058218F
+	// Token: 0x17001DBA RID: 7610
+	// (get) Token: 0x060137D1 RID: 79825 RVA: 0x005AEF87 File Offset: 0x005AD187
+	// (set) Token: 0x060137D2 RID: 79826 RVA: 0x005AEF8F File Offset: 0x005AD18F
 	public ETeamLivingState? LivingState { get; set; }
 
-	// Token: 0x17001D62 RID: 7522
-	// (get) Token: 0x06015DCF RID: 89551 RVA: 0x00583F98 File Offset: 0x00582198
-	// (set) Token: 0x06015DD0 RID: 89552 RVA: 0x00583FA0 File Offset: 0x005821A0
+	// Token: 0x17001DBB RID: 7611
+	// (get) Token: 0x060137D3 RID: 79827 RVA: 0x005AEF98 File Offset: 0x005AD198
+	// (set) Token: 0x060137D4 RID: 79828 RVA: 0x005AEFA0 File Offset: 0x005AD1A0
 	public bool? IsFixedLocation { get; set; }
 
-	// Token: 0x17001D63 RID: 7523
-	// (get) Token: 0x06015DD1 RID: 89553 RVA: 0x00583FA9 File Offset: 0x005821A9
-	// (set) Token: 0x06015DD2 RID: 89554 RVA: 0x00583FB1 File Offset: 0x005821B1
+	// Token: 0x17001DBC RID: 7612
+	// (get) Token: 0x060137D5 RID: 79829 RVA: 0x005AEFA9 File Offset: 0x005AD1A9
+	// (set) Token: 0x060137D6 RID: 79830 RVA: 0x005AEFB1 File Offset: 0x005AD1B1
 	public bool? ReplaceAllRole { get; set; }
 }

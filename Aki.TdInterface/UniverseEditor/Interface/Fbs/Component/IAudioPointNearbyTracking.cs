@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004ED7 RID: 20183
+	// Token: 0x02005406 RID: 21510
 	public struct IAudioPointNearbyTracking : IFlatbufferObject
 	{
-		// Token: 0x170090DD RID: 37085
-		// (get) Token: 0x0601FCED RID: 130285 RVA: 0x0046D3B2 File Offset: 0x0046B5B2
+		// Token: 0x17009850 RID: 38992
+		// (get) Token: 0x06021A31 RID: 137777 RVA: 0x004A3182 File Offset: 0x004A1382
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601FCEE RID: 130286 RVA: 0x0046D3BF File Offset: 0x0046B5BF
+		// Token: 0x06021A32 RID: 137778 RVA: 0x004A318F File Offset: 0x004A138F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601FCEF RID: 130287 RVA: 0x0046D3C8 File Offset: 0x0046B5C8
+		// Token: 0x06021A33 RID: 137779 RVA: 0x004A3198 File Offset: 0x004A1398
 		public static IAudioPointNearbyTracking GetRootAsIAudioPointNearbyTracking(ByteBuffer _bb)
 		{
 			return IAudioPointNearbyTracking.GetRootAsIAudioPointNearbyTracking(_bb, default(IAudioPointNearbyTracking));
 		}
 
-		// Token: 0x0601FCF0 RID: 130288 RVA: 0x0046D3E4 File Offset: 0x0046B5E4
+		// Token: 0x06021A34 RID: 137780 RVA: 0x004A31B4 File Offset: 0x004A13B4
 		public static IAudioPointNearbyTracking GetRootAsIAudioPointNearbyTracking(ByteBuffer _bb, IAudioPointNearbyTracking obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601FCF1 RID: 130289 RVA: 0x0046D401 File Offset: 0x0046B601
+		// Token: 0x06021A35 RID: 137781 RVA: 0x004A31D1 File Offset: 0x004A13D1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601FCF2 RID: 130290 RVA: 0x0046D410 File Offset: 0x0046B610
+		// Token: 0x06021A36 RID: 137782 RVA: 0x004A31E0 File Offset: 0x004A13E0
 		public IAudioPointNearbyTracking __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170090DE RID: 37086
-		// (get) Token: 0x0601FCF3 RID: 130291 RVA: 0x0046D420 File Offset: 0x0046B620
+		// Token: 0x17009851 RID: 38993
+		// (get) Token: 0x06021A37 RID: 137783 RVA: 0x004A31F0 File Offset: 0x004A13F0
 		public ENearbyTrackingType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170090DF RID: 37087
-		// (get) Token: 0x0601FCF4 RID: 130292 RVA: 0x0046D45C File Offset: 0x0046B65C
+		// Token: 0x17009852 RID: 38994
+		// (get) Token: 0x06021A38 RID: 137784 RVA: 0x004A322C File Offset: 0x004A142C
 		public int NearRadius
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170090E0 RID: 37088
-		// (get) Token: 0x0601FCF5 RID: 130293 RVA: 0x0046D498 File Offset: 0x0046B698
+		// Token: 0x17009853 RID: 38995
+		// (get) Token: 0x06021A39 RID: 137785 RVA: 0x004A3268 File Offset: 0x004A1468
 		public int MiddleRadius
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170090E1 RID: 37089
-		// (get) Token: 0x0601FCF6 RID: 130294 RVA: 0x0046D4D4 File Offset: 0x0046B6D4
+		// Token: 0x17009854 RID: 38996
+		// (get) Token: 0x06021A3A RID: 137786 RVA: 0x004A32A4 File Offset: 0x004A14A4
 		public int FarRadius
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601FCF7 RID: 130295 RVA: 0x0046D511 File Offset: 0x0046B711
+		// Token: 0x06021A3B RID: 137787 RVA: 0x004A32E1 File Offset: 0x004A14E1
 		public static Offset<IAudioPointNearbyTracking> CreateIAudioPointNearbyTracking(FlatBufferBuilder builder, ENearbyTrackingType Type = ENearbyTrackingType.Icon, int NearRadius = 0, int MiddleRadius = 0, int FarRadius = 0)
 		{
 			builder.StartTable(4);
@@ -118,43 +118,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IAudioPointNearbyTracking.EndIAudioPointNearbyTracking(builder);
 		}
 
-		// Token: 0x0601FCF8 RID: 130296 RVA: 0x0046D53D File Offset: 0x0046B73D
+		// Token: 0x06021A3C RID: 137788 RVA: 0x004A330D File Offset: 0x004A150D
 		public static void StartIAudioPointNearbyTracking(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0601FCF9 RID: 130297 RVA: 0x0046D546 File Offset: 0x0046B746
+		// Token: 0x06021A3D RID: 137789 RVA: 0x004A3316 File Offset: 0x004A1516
 		public static void AddType(FlatBufferBuilder builder, ENearbyTrackingType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601FCFA RID: 130298 RVA: 0x0046D551 File Offset: 0x0046B751
+		// Token: 0x06021A3E RID: 137790 RVA: 0x004A3321 File Offset: 0x004A1521
 		public static void AddNearRadius(FlatBufferBuilder builder, int nearRadius)
 		{
 			builder.AddInt(1, nearRadius, 0);
 		}
 
-		// Token: 0x0601FCFB RID: 130299 RVA: 0x0046D55C File Offset: 0x0046B75C
+		// Token: 0x06021A3F RID: 137791 RVA: 0x004A332C File Offset: 0x004A152C
 		public static void AddMiddleRadius(FlatBufferBuilder builder, int middleRadius)
 		{
 			builder.AddInt(2, middleRadius, 0);
 		}
 
-		// Token: 0x0601FCFC RID: 130300 RVA: 0x0046D567 File Offset: 0x0046B767
+		// Token: 0x06021A40 RID: 137792 RVA: 0x004A3337 File Offset: 0x004A1537
 		public static void AddFarRadius(FlatBufferBuilder builder, int farRadius)
 		{
 			builder.AddInt(3, farRadius, 0);
 		}
 
-		// Token: 0x0601FCFD RID: 130301 RVA: 0x0046D572 File Offset: 0x0046B772
+		// Token: 0x06021A41 RID: 137793 RVA: 0x004A3342 File Offset: 0x004A1542
 		public static Offset<IAudioPointNearbyTracking> EndIAudioPointNearbyTracking(FlatBufferBuilder builder)
 		{
 			return new Offset<IAudioPointNearbyTracking>(builder.EndTable());
 		}
 
-		// Token: 0x0601FCFE RID: 130302 RVA: 0x0046D580 File Offset: 0x0046B780
+		// Token: 0x06021A42 RID: 137794 RVA: 0x004A3350 File Offset: 0x004A1550
 		public IAudioPointNearbyTrackingT UnPack()
 		{
 			IAudioPointNearbyTrackingT audioPointNearbyTrackingT = new IAudioPointNearbyTrackingT();
@@ -162,7 +162,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return audioPointNearbyTrackingT;
 		}
 
-		// Token: 0x0601FCFF RID: 130303 RVA: 0x0046D59B File Offset: 0x0046B79B
+		// Token: 0x06021A43 RID: 137795 RVA: 0x004A336B File Offset: 0x004A156B
 		public void UnPackTo(IAudioPointNearbyTrackingT _o)
 		{
 			_o.Type = this.Type;
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.FarRadius = this.FarRadius;
 		}
 
-		// Token: 0x0601FD00 RID: 130304 RVA: 0x0046D5D0 File Offset: 0x0046B7D0
+		// Token: 0x06021A44 RID: 137796 RVA: 0x004A33A0 File Offset: 0x004A15A0
 		public static Offset<IAudioPointNearbyTracking> Pack(FlatBufferBuilder builder, IAudioPointNearbyTrackingT _o)
 		{
 			if (_o == null)
@@ -181,7 +181,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IAudioPointNearbyTracking.CreateIAudioPointNearbyTracking(builder, _o.Type, _o.NearRadius, _o.MiddleRadius, _o.FarRadius);
 		}
 
-		// Token: 0x0400DCDE RID: 56542
+		// Token: 0x0400E885 RID: 59525
 		private Table __p;
 	}
 }

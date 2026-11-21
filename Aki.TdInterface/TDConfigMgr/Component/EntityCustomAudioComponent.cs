@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020000FB RID: 251
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000104 RID: 260
 	public class EntityCustomAudioComponent : EntityAudioComponent
 	{
-		// Token: 0x060003F4 RID: 1012 RVA: 0x0001CFC8 File Offset: 0x0001B1C8
+		// Token: 0x060003F8 RID: 1016 RVA: 0x0001D93C File Offset: 0x0001BB3C
 		private EntityCustomAudioComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060003F5 RID: 1013 RVA: 0x0001D000 File Offset: 0x0001B200
+		// Token: 0x060003F9 RID: 1017 RVA: 0x0001D974 File Offset: 0x0001BB74
 		public static EntityCustomAudioComponent Create([Nullable(2)] EntityCustomAudioComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060003F6 RID: 1014 RVA: 0x0001D013 File Offset: 0x0001B213
+		// Token: 0x060003FA RID: 1018 RVA: 0x0001D987 File Offset: 0x0001BB87
 		public static EntityCustomAudioComponent CreateFromSetValue([Nullable(2)] EntityCustomAudioComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060003F7 RID: 1015 RVA: 0x0001D028 File Offset: 0x0001B228
+		// Token: 0x060003FB RID: 1019 RVA: 0x0001D99C File Offset: 0x0001BB9C
 		public new EntityCustomAudioComponent_SetValue ToSetValue()
 		{
 			return new EntityCustomAudioComponent_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000152 RID: 338
-		// (get) Token: 0x060003F8 RID: 1016 RVA: 0x0001D078 File Offset: 0x0001B278
-		// (set) Token: 0x060003F9 RID: 1017 RVA: 0x0001D0B2 File Offset: 0x0001B2B2
+		// Token: 0x17000154 RID: 340
+		// (get) Token: 0x060003FC RID: 1020 RVA: 0x0001D9EC File Offset: 0x0001BBEC
+		// (set) Token: 0x060003FD RID: 1021 RVA: 0x0001DA26 File Offset: 0x0001BC26
 		public override bool? Disabled
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000153 RID: 339
-		// (get) Token: 0x060003FA RID: 1018 RVA: 0x0001D0C0 File Offset: 0x0001B2C0
-		// (set) Token: 0x060003FB RID: 1019 RVA: 0x0001D0E7 File Offset: 0x0001B2E7
+		// Token: 0x17000155 RID: 341
+		// (get) Token: 0x060003FE RID: 1022 RVA: 0x0001DA34 File Offset: 0x0001BC34
+		// (set) Token: 0x060003FF RID: 1023 RVA: 0x0001DA5B File Offset: 0x0001BC5B
 		public override IAkEventTypeConfig AkEventType
 		{
 			get
@@ -111,9 +109,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000154 RID: 340
-		// (get) Token: 0x060003FC RID: 1020 RVA: 0x0001D0F5 File Offset: 0x0001B2F5
-		// (set) Token: 0x060003FD RID: 1021 RVA: 0x0001D120 File Offset: 0x0001B320
+		// Token: 0x17000156 RID: 342
+		// (get) Token: 0x06000400 RID: 1024 RVA: 0x0001DA69 File Offset: 0x0001BC69
+		// (set) Token: 0x06000401 RID: 1025 RVA: 0x0001DA94 File Offset: 0x0001BC94
 		public override EAudioRangeType AudioRangeType
 		{
 			get
@@ -134,9 +132,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000155 RID: 341
-		// (get) Token: 0x060003FE RID: 1022 RVA: 0x0001D130 File Offset: 0x0001B330
-		// (set) Token: 0x060003FF RID: 1023 RVA: 0x0001D15A File Offset: 0x0001B35A
+		// Token: 0x17000157 RID: 343
+		// (get) Token: 0x06000402 RID: 1026 RVA: 0x0001DAA4 File Offset: 0x0001BCA4
+		// (set) Token: 0x06000403 RID: 1027 RVA: 0x0001DACE File Offset: 0x0001BCCE
 		public override bool? EdIsLocked
 		{
 			get
@@ -153,9 +151,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000156 RID: 342
-		// (get) Token: 0x06000400 RID: 1024 RVA: 0x0001D168 File Offset: 0x0001B368
-		// (set) Token: 0x06000401 RID: 1025 RVA: 0x0001D18F File Offset: 0x0001B38F
+		// Token: 0x17000158 RID: 344
+		// (get) Token: 0x06000404 RID: 1028 RVA: 0x0001DADC File Offset: 0x0001BCDC
+		// (set) Token: 0x06000405 RID: 1029 RVA: 0x0001DB03 File Offset: 0x0001BD03
 		public virtual IAudioControlType AudioControlType
 		{
 			get
@@ -177,11 +175,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000540 RID: 1344
+		// Token: 0x0400056A RID: 1386
 		[Nullable(2)]
 		protected new EntityCustomAudioComponent FbInstance;
 
-		// Token: 0x04000541 RID: 1345
+		// Token: 0x0400056B RID: 1387
 		[Nullable(2)]
 		protected new EntityCustomAudioComponent_SetValue PocoInterface;
 	}

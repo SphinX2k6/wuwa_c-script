@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006401 RID: 25601
+	// Token: 0x02006A81 RID: 27265
 	public class IClientTpRelativeEntityPosT
 	{
-		// Token: 0x1700BEA3 RID: 48803
-		// (get) Token: 0x0602C4AA RID: 181418 RVA: 0x00614382 File Offset: 0x00612582
-		// (set) Token: 0x0602C4AB RID: 181419 RVA: 0x0061438A File Offset: 0x0061258A
+		// Token: 0x1700C83D RID: 51261
+		// (get) Token: 0x0602EC80 RID: 191616 RVA: 0x0066020E File Offset: 0x0065E40E
+		// (set) Token: 0x0602EC81 RID: 191617 RVA: 0x00660216 File Offset: 0x0065E416
 		public EClientTeleportType Type { get; set; }
 
-		// Token: 0x1700BEA4 RID: 48804
-		// (get) Token: 0x0602C4AC RID: 181420 RVA: 0x00614393 File Offset: 0x00612593
-		// (set) Token: 0x0602C4AD RID: 181421 RVA: 0x0061439B File Offset: 0x0061259B
+		// Token: 0x1700C83E RID: 51262
+		// (get) Token: 0x0602EC82 RID: 191618 RVA: 0x0066021F File Offset: 0x0065E41F
+		// (set) Token: 0x0602EC83 RID: 191619 RVA: 0x00660227 File Offset: 0x0065E427
 		public int SourcePosEntityId { get; set; }
 
-		// Token: 0x1700BEA5 RID: 48805
-		// (get) Token: 0x0602C4AE RID: 181422 RVA: 0x006143A4 File Offset: 0x006125A4
-		// (set) Token: 0x0602C4AF RID: 181423 RVA: 0x006143AC File Offset: 0x006125AC
+		// Token: 0x1700C83F RID: 51263
+		// (get) Token: 0x0602EC84 RID: 191620 RVA: 0x00660230 File Offset: 0x0065E430
+		// (set) Token: 0x0602EC85 RID: 191621 RVA: 0x00660238 File Offset: 0x0065E438
 		public int TargetPosEntityId { get; set; }
 
-		// Token: 0x0602C4B0 RID: 181424 RVA: 0x006143B5 File Offset: 0x006125B5
+		// Token: 0x0602EC86 RID: 191622 RVA: 0x00660241 File Offset: 0x0065E441
 		public IClientTpRelativeEntityPosT()
 		{
 			this.Type = EClientTeleportType.RelativeEntityPos;

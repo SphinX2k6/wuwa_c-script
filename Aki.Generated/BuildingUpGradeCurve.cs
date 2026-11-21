@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000B59 RID: 2905
+	// Token: 0x02000C39 RID: 3129
 	public struct BuildingUpGradeCurve : IFlatbufferObject
 	{
-		// Token: 0x17000691 RID: 1681
-		// (get) Token: 0x06005153 RID: 20819 RVA: 0x001ECBA9 File Offset: 0x001EADA9
+		// Token: 0x170006D1 RID: 1745
+		// (get) Token: 0x06005715 RID: 22293 RVA: 0x0020C9D5 File Offset: 0x0020ABD5
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005154 RID: 20820 RVA: 0x001ECBB6 File Offset: 0x001EADB6
+		// Token: 0x06005716 RID: 22294 RVA: 0x0020C9E2 File Offset: 0x0020ABE2
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06005155 RID: 20821 RVA: 0x001ECBC0 File Offset: 0x001EADC0
+		// Token: 0x06005717 RID: 22295 RVA: 0x0020C9EC File Offset: 0x0020ABEC
 		public static BuildingUpGradeCurve GetRootAsBuildingUpGradeCurve(ByteBuffer _bb)
 		{
 			return BuildingUpGradeCurve.GetRootAsBuildingUpGradeCurve(_bb, default(BuildingUpGradeCurve));
 		}
 
-		// Token: 0x06005156 RID: 20822 RVA: 0x001ECBDC File Offset: 0x001EADDC
+		// Token: 0x06005718 RID: 22296 RVA: 0x0020CA08 File Offset: 0x0020AC08
 		public static BuildingUpGradeCurve GetRootAsBuildingUpGradeCurve(ByteBuffer _bb, BuildingUpGradeCurve obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06005157 RID: 20823 RVA: 0x001ECBF9 File Offset: 0x001EADF9
+		// Token: 0x06005719 RID: 22297 RVA: 0x0020CA25 File Offset: 0x0020AC25
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06005158 RID: 20824 RVA: 0x001ECC08 File Offset: 0x001EAE08
+		// Token: 0x0600571A RID: 22298 RVA: 0x0020CA34 File Offset: 0x0020AC34
 		public BuildingUpGradeCurve __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000692 RID: 1682
-		// (get) Token: 0x06005159 RID: 20825 RVA: 0x001ECC18 File Offset: 0x001EAE18
+		// Token: 0x170006D2 RID: 1746
+		// (get) Token: 0x0600571B RID: 22299 RVA: 0x0020CA44 File Offset: 0x0020AC44
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000693 RID: 1683
-		// (get) Token: 0x0600515A RID: 20826 RVA: 0x001ECC54 File Offset: 0x001EAE54
+		// Token: 0x170006D3 RID: 1747
+		// (get) Token: 0x0600571C RID: 22300 RVA: 0x0020CA80 File Offset: 0x0020AC80
 		public int GroupId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000694 RID: 1684
-		// (get) Token: 0x0600515B RID: 20827 RVA: 0x001ECC90 File Offset: 0x001EAE90
+		// Token: 0x170006D4 RID: 1748
+		// (get) Token: 0x0600571D RID: 22301 RVA: 0x0020CABC File Offset: 0x0020ACBC
 		public int Level
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000695 RID: 1685
-		// (get) Token: 0x0600515C RID: 20828 RVA: 0x001ECCCC File Offset: 0x001EAECC
+		// Token: 0x170006D5 RID: 1749
+		// (get) Token: 0x0600571E RID: 22302 RVA: 0x0020CAF8 File Offset: 0x0020ACF8
 		public int UpGradePrice
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000696 RID: 1686
-		// (get) Token: 0x0600515D RID: 20829 RVA: 0x001ECD0C File Offset: 0x001EAF0C
+		// Token: 0x170006D6 RID: 1750
+		// (get) Token: 0x0600571F RID: 22303 RVA: 0x0020CB38 File Offset: 0x0020AD38
 		public int HeatAddition
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000697 RID: 1687
-		// (get) Token: 0x0600515E RID: 20830 RVA: 0x001ECD4C File Offset: 0x001EAF4C
+		// Token: 0x170006D7 RID: 1751
+		// (get) Token: 0x06005720 RID: 22304 RVA: 0x0020CB78 File Offset: 0x0020AD78
 		public int GoldAddition
 		{
 			get
@@ -137,8 +137,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000698 RID: 1688
-		// (get) Token: 0x0600515F RID: 20831 RVA: 0x001ECD8C File Offset: 0x001EAF8C
+		// Token: 0x170006D8 RID: 1752
+		// (get) Token: 0x06005721 RID: 22305 RVA: 0x0020CBB8 File Offset: 0x0020ADB8
 		public int GoldAdditionFix
 		{
 			get
@@ -152,8 +152,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000699 RID: 1689
-		// (get) Token: 0x06005160 RID: 20832 RVA: 0x001ECDCC File Offset: 0x001EAFCC
+		// Token: 0x170006D9 RID: 1753
+		// (get) Token: 0x06005722 RID: 22306 RVA: 0x0020CBF8 File Offset: 0x0020ADF8
 		public int WishAddition
 		{
 			get
@@ -167,8 +167,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700069A RID: 1690
-		// (get) Token: 0x06005161 RID: 20833 RVA: 0x001ECE0C File Offset: 0x001EB00C
+		// Token: 0x170006DA RID: 1754
+		// (get) Token: 0x06005723 RID: 22307 RVA: 0x0020CC38 File Offset: 0x0020AE38
 		public int WishAdditionFix
 		{
 			get
@@ -182,8 +182,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700069B RID: 1691
-		// (get) Token: 0x06005162 RID: 20834 RVA: 0x001ECE4C File Offset: 0x001EB04C
+		// Token: 0x170006DB RID: 1755
+		// (get) Token: 0x06005724 RID: 22308 RVA: 0x0020CC78 File Offset: 0x0020AE78
 		public int EnergyAddition
 		{
 			get
@@ -197,8 +197,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700069C RID: 1692
-		// (get) Token: 0x06005163 RID: 20835 RVA: 0x001ECE8C File Offset: 0x001EB08C
+		// Token: 0x170006DC RID: 1756
+		// (get) Token: 0x06005725 RID: 22309 RVA: 0x0020CCB8 File Offset: 0x0020AEB8
 		public int ModelId
 		{
 			get
@@ -212,8 +212,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700069D RID: 1693
-		// (get) Token: 0x06005164 RID: 20836 RVA: 0x001ECECC File Offset: 0x001EB0CC
+		// Token: 0x170006DD RID: 1757
+		// (get) Token: 0x06005726 RID: 22310 RVA: 0x0020CCF8 File Offset: 0x0020AEF8
 		public int IdeaRatioAddition
 		{
 			get
@@ -227,8 +227,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700069E RID: 1694
-		// (get) Token: 0x06005165 RID: 20837 RVA: 0x001ECF0C File Offset: 0x001EB10C
+		// Token: 0x170006DE RID: 1758
+		// (get) Token: 0x06005727 RID: 22311 RVA: 0x0020CD38 File Offset: 0x0020AF38
 		public int SuccessAddition
 		{
 			get
@@ -242,7 +242,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004B56 RID: 19286
+		// Token: 0x04005136 RID: 20790
 		private Table __p;
 	}
 }

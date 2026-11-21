@@ -14,34 +14,28 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02000259 RID: 601
+// Token: 0x0200025D RID: 605
 [NullableContext(2)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/Controller/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Controller/TsCharacterController.TsCharacterController_C")]
 public class TsCharacterController : TsBasePlayerController, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x060024E1 RID: 9441 RVA: 0x000DF8DC File Offset: 0x000DDADC
+	// Token: 0x06002598 RID: 9624 RVA: 0x000E5D1C File Offset: 0x000E3F1C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe override void ReceiveBeginPlay()
+	public override void ReceiveBeginPlay()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveBeginPlay"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsCharacterController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveBeginPlay"), TsCharacterController.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.ReceiveBeginPlay_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x060024E2 RID: 9442 RVA: 0x000DF94C File Offset: 0x000DDB4C
+	// Token: 0x06002599 RID: 9625 RVA: 0x000E5D75 File Offset: 0x000E3F75
 	protected override void ReceiveBeginPlay_Implementation()
 	{
 		base.ReceiveBeginPlay_Implementation();
@@ -50,27 +44,21 @@ public class TsCharacterController : TsBasePlayerController, IUnrealUObject, IUn
 		UKuroInputFunctionLibrary.ApplyInputMode(this);
 	}
 
-	// Token: 0x060024E3 RID: 9443 RVA: 0x000DF974 File Offset: 0x000DDB74
+	// Token: 0x0600259A RID: 9626 RVA: 0x000E5D9C File Offset: 0x000E3F9C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe override void ReceiveDestroyed()
+	public override void ReceiveDestroyed()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveDestroyed"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsCharacterController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveDestroyed"), TsCharacterController.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.ReceiveDestroyed_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x060024E4 RID: 9444 RVA: 0x000DF9E4 File Offset: 0x000DDBE4
+	// Token: 0x0600259B RID: 9627 RVA: 0x000E5DF5 File Offset: 0x000E3FF5
 	protected override void ReceiveDestroyed_Implementation()
 	{
 		base.ReceiveDestroyed_Implementation();
@@ -81,81 +69,69 @@ public class TsCharacterController : TsBasePlayerController, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x060024E5 RID: 9445 RVA: 0x000DFA08 File Offset: 0x000DDC08
+	// Token: 0x0600259C RID: 9628 RVA: 0x000E5E18 File Offset: 0x000E4018
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceivePossess(APawn PossessedPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceivePossess"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		AController.__ReceivePossess_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsCharacterController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceivePossess"), TsCharacterController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((AController.__ReceivePossess_FunctionParams*)ptr + 15L / (long)sizeof(AController.__ReceivePossess_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->PossessedPawn) = ((PossessedPawn != null) ? PossessedPawn.NativePtr : ((IntPtr)0));
+			this.ReceivePossess_Implementation(PossessedPawn);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		AController.__ReceivePossess_FunctionParams* ptr = stackalloc AController.__ReceivePossess_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(AController.__ReceivePossess_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->PossessedPawn) = ((PossessedPawn != null) ? PossessedPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x060024E6 RID: 9446 RVA: 0x000DFA8C File Offset: 0x000DDC8C
+	// Token: 0x0600259D RID: 9629 RVA: 0x000E5EB2 File Offset: 0x000E40B2
 	protected virtual void ReceivePossess_Implementation(APawn PossessedPawn)
 	{
 		CameraController.Instance.OnPossess(PossessedPawn, "MainCamera");
 	}
 
-	// Token: 0x060024E7 RID: 9447 RVA: 0x000DFAA0 File Offset: 0x000DDCA0
+	// Token: 0x0600259E RID: 9630 RVA: 0x000E5EC4 File Offset: 0x000E40C4
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveUnPossess(APawn UnpossessedPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveUnPossess"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		AController.__ReceiveUnPossess_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsCharacterController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveUnPossess"), TsCharacterController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((AController.__ReceiveUnPossess_FunctionParams*)ptr + 15L / (long)sizeof(AController.__ReceiveUnPossess_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->UnpossessedPawn) = ((UnpossessedPawn != null) ? UnpossessedPawn.NativePtr : ((IntPtr)0));
+			this.ReceiveUnPossess_Implementation(UnpossessedPawn);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		AController.__ReceiveUnPossess_FunctionParams* ptr = stackalloc AController.__ReceiveUnPossess_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(AController.__ReceiveUnPossess_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->UnpossessedPawn) = ((UnpossessedPawn != null) ? UnpossessedPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x060024E8 RID: 9448 RVA: 0x000DFB24 File Offset: 0x000DDD24
+	// Token: 0x0600259F RID: 9631 RVA: 0x000E5F5E File Offset: 0x000E415E
 	protected virtual void ReceiveUnPossess_Implementation(APawn UnpossessedPawn)
 	{
 		CameraController.Instance.OnPossess(null, "MainCamera");
 	}
 
-	// Token: 0x060024E9 RID: 9449 RVA: 0x000DFB38 File Offset: 0x000DDD38
+	// Token: 0x060025A0 RID: 9632 RVA: 0x000E5F70 File Offset: 0x000E4170
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	protected unsafe override void OnSetupInputComponent()
+	protected override void OnSetupInputComponent()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("OnSetupInputComponent"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsCharacterController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("OnSetupInputComponent"), TsCharacterController.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.OnSetupInputComponent_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x060024EA RID: 9450 RVA: 0x000DFBA8 File Offset: 0x000DDDA8
+	// Token: 0x060025A1 RID: 9633 RVA: 0x000E5FCC File Offset: 0x000E41CC
 	protected new void OnSetupInputComponent_Implementation()
 	{
 		base.OnSetupInputComponent_Implementation();
@@ -163,7 +139,7 @@ public class TsCharacterController : TsBasePlayerController, IUnrealUObject, IUn
 		this.MoveInputVector = Vector2D.Create(0.0, 0.0);
 	}
 
-	// Token: 0x060024EB RID: 9451 RVA: 0x000DFBF8 File Offset: 0x000DDDF8
+	// Token: 0x060025A2 RID: 9634 RVA: 0x000E601C File Offset: 0x000E421C
 	protected override void BindActionHandle()
 	{
 		base.BindActionHandle();
@@ -178,7 +154,7 @@ public class TsCharacterController : TsBasePlayerController, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x060024EC RID: 9452 RVA: 0x000DFC5C File Offset: 0x000DDE5C
+	// Token: 0x060025A3 RID: 9635 RVA: 0x000E6080 File Offset: 0x000E4280
 	protected override void BindAxisHandle()
 	{
 		base.BindAxisHandle();
@@ -188,7 +164,7 @@ public class TsCharacterController : TsBasePlayerController, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x060024ED RID: 9453 RVA: 0x000DFCBC File Offset: 0x000DDEBC
+	// Token: 0x060025A4 RID: 9636 RVA: 0x000E60E0 File Offset: 0x000E42E0
 	protected override void BindKeyHandle()
 	{
 		base.BindKeyHandle();
@@ -202,17 +178,29 @@ public class TsCharacterController : TsBasePlayerController, IUnrealUObject, IUn
 			this.TsUiKeyHandle.BindKey();
 			return;
 		}
-		FInputChord finputChord = new FInputChord(new FKey(TsCharacterController.LEFT_BARACKET_NAME), false, false, false, false);
+		FInputChord finputChord = new FInputChord
+		{
+			Key = new FKey
+			{
+				KeyName = TsCharacterController.LEFT_BARACKET_NAME
+			}
+		};
 		EInputEvent keyEvent = EInputEvent.IE_Released;
 		FName fname = new FName("OnSetUiRootDeactivate");
 		base.AddKeyBinding(finputChord, keyEvent, this, fname);
-		FInputChord finputChord2 = new FInputChord(new FKey(TsCharacterController.RIGHT_BARACKET_NAME), false, false, false, false);
+		FInputChord finputChord2 = new FInputChord
+		{
+			Key = new FKey
+			{
+				KeyName = TsCharacterController.RIGHT_BARACKET_NAME
+			}
+		};
 		EInputEvent keyEvent2 = EInputEvent.IE_Released;
 		fname = new FName("OnSetUiRootActive");
 		base.AddKeyBinding(finputChord2, keyEvent2, this, fname);
 	}
 
-	// Token: 0x060024EE RID: 9454 RVA: 0x000DFD5C File Offset: 0x000DDF5C
+	// Token: 0x060025A5 RID: 9637 RVA: 0x000E6190 File Offset: 0x000E4390
 	[NullableContext(1)]
 	protected override void OnInputAxis(string axisName, float value, bool alwaysTick = false)
 	{
@@ -235,83 +223,71 @@ public class TsCharacterController : TsBasePlayerController, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x060024EF RID: 9455 RVA: 0x000DFDDC File Offset: 0x000DDFDC
+	// Token: 0x060025A6 RID: 9638 RVA: 0x000E6210 File Offset: 0x000E4410
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceivePreProcessInput(float deltaTime, bool bGamePaused)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceivePreProcessInput"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		ABasePlayerController.__ReceivePreProcessInput_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsCharacterController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceivePreProcessInput"), TsCharacterController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((ABasePlayerController.__ReceivePreProcessInput_FunctionParams*)ptr + 15L / (long)sizeof(ABasePlayerController.__ReceivePreProcessInput_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->DeltaTime = deltaTime;
-			ptr2->bGamePaused = bGamePaused;
+			this.ReceivePreProcessInput_Implementation(deltaTime, bGamePaused);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		ABasePlayerController.__ReceivePreProcessInput_FunctionParams* ptr = stackalloc ABasePlayerController.__ReceivePreProcessInput_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(ABasePlayerController.__ReceivePreProcessInput_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->DeltaTime = deltaTime;
+		ptr->bGamePaused = bGamePaused;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x060024F0 RID: 9456 RVA: 0x000DFE59 File Offset: 0x000DE059
+	// Token: 0x060025A7 RID: 9639 RVA: 0x000E62A4 File Offset: 0x000E44A4
 	protected virtual void ReceivePreProcessInput_Implementation(float deltaTime, bool bGamePaused)
 	{
 		InputController.GetOrCreateInstance().PreProcessInput(deltaTime, bGamePaused);
 	}
 
-	// Token: 0x060024F1 RID: 9457 RVA: 0x000DFE68 File Offset: 0x000DE068
+	// Token: 0x060025A8 RID: 9640 RVA: 0x000E62B4 File Offset: 0x000E44B4
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceivePostProcessInput(float deltaTime, bool bGamePaused)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceivePostProcessInput"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		ABasePlayerController.__ReceivePostProcessInput_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsCharacterController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceivePostProcessInput"), TsCharacterController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((ABasePlayerController.__ReceivePostProcessInput_FunctionParams*)ptr + 15L / (long)sizeof(ABasePlayerController.__ReceivePostProcessInput_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->DeltaTime = deltaTime;
-			ptr2->bGamePaused = bGamePaused;
+			this.ReceivePostProcessInput_Implementation(deltaTime, bGamePaused);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		ABasePlayerController.__ReceivePostProcessInput_FunctionParams* ptr = stackalloc ABasePlayerController.__ReceivePostProcessInput_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(ABasePlayerController.__ReceivePostProcessInput_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->DeltaTime = deltaTime;
+		ptr->bGamePaused = bGamePaused;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x060024F2 RID: 9458 RVA: 0x000DFEE5 File Offset: 0x000DE0E5
+	// Token: 0x060025A9 RID: 9641 RVA: 0x000E6348 File Offset: 0x000E4548
 	protected virtual void ReceivePostProcessInput_Implementation(float deltaTime, bool bGamePaused)
 	{
 		InputController.Instance.PostProcessInput(deltaTime, bGamePaused);
 	}
 
-	// Token: 0x060024F3 RID: 9459 RVA: 0x000DFEF4 File Offset: 0x000DE0F4
+	// Token: 0x060025AA RID: 9642 RVA: 0x000E6358 File Offset: 0x000E4558
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	protected unsafe virtual void OnSetUiRootActive()
+	protected virtual void OnSetUiRootActive()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("OnSetUiRootActive"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsCharacterController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("OnSetUiRootActive"), TsCharacterController.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.OnSetUiRootActive_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x060024F4 RID: 9460 RVA: 0x000DFF64 File Offset: 0x000DE164
+	// Token: 0x060025AB RID: 9643 RVA: 0x000E63B4 File Offset: 0x000E45B4
 	protected void OnSetUiRootActive_Implementation()
 	{
 		if (SundryModel.Instance.CanOpenGmView)
@@ -321,27 +297,21 @@ public class TsCharacterController : TsBasePlayerController, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x060024F5 RID: 9461 RVA: 0x000DFFA4 File Offset: 0x000DE1A4
+	// Token: 0x060025AC RID: 9644 RVA: 0x000E63F4 File Offset: 0x000E45F4
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	protected unsafe virtual void OnSetUiRootDeactivate()
+	protected virtual void OnSetUiRootDeactivate()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("OnSetUiRootDeactivate"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsCharacterController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("OnSetUiRootDeactivate"), TsCharacterController.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.OnSetUiRootDeactivate_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x060024F6 RID: 9462 RVA: 0x000E0014 File Offset: 0x000DE214
+	// Token: 0x060025AD RID: 9645 RVA: 0x000E6450 File Offset: 0x000E4650
 	protected void OnSetUiRootDeactivate_Implementation()
 	{
 		if (SundryModel.Instance.CanOpenGmView)
@@ -351,19 +321,19 @@ public class TsCharacterController : TsBasePlayerController, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x060024F7 RID: 9463 RVA: 0x000E0053 File Offset: 0x000DE253
+	// Token: 0x060025AE RID: 9646 RVA: 0x000E648F File Offset: 0x000E468F
 	public Vector2D GetCursorInputVector()
 	{
 		return this.CursorInputVector;
 	}
 
-	// Token: 0x060024F8 RID: 9464 RVA: 0x000E005B File Offset: 0x000DE25B
+	// Token: 0x060025AF RID: 9647 RVA: 0x000E6497 File Offset: 0x000E4697
 	public Vector2D GetMoveInputVector()
 	{
 		return this.MoveInputVector;
 	}
 
-	// Token: 0x060024F9 RID: 9465 RVA: 0x000E0063 File Offset: 0x000DE263
+	// Token: 0x060025B0 RID: 9648 RVA: 0x000E649F File Offset: 0x000E469F
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsCharacterController._ClassPtr == IntPtr.Zero)
@@ -373,35 +343,35 @@ public class TsCharacterController : TsBasePlayerController, IUnrealUObject, IUn
 		return TsCharacterController._ClassPtr;
 	}
 
-	// Token: 0x060024FA RID: 9466 RVA: 0x000E0088 File Offset: 0x000DE288
+	// Token: 0x060025B1 RID: 9649 RVA: 0x000E64C4 File Offset: 0x000E46C4
 	public TsCharacterController() : this(BuiltinUtils.AllocNativeUObject(TsCharacterController.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x060024FB RID: 9467 RVA: 0x000E00B0 File Offset: 0x000DE2B0
+	// Token: 0x060025B2 RID: 9650 RVA: 0x000E64EC File Offset: 0x000E46EC
 	[NullableContext(1)]
 	public TsCharacterController(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsCharacterController.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x060024FC RID: 9468 RVA: 0x000E00E3 File Offset: 0x000DE2E3
+	// Token: 0x060025B3 RID: 9651 RVA: 0x000E651F File Offset: 0x000E471F
 	protected TsCharacterController(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x060024FD RID: 9469 RVA: 0x000E00EC File Offset: 0x000DE2EC
+	// Token: 0x060025B4 RID: 9652 RVA: 0x000E6528 File Offset: 0x000E4728
 	protected override void __CPPCALL_ReceiveBeginPlay_Implementation()
 	{
 		this.ReceiveBeginPlay_Implementation();
 	}
 
-	// Token: 0x060024FE RID: 9470 RVA: 0x000E00F4 File Offset: 0x000DE2F4
+	// Token: 0x060025B5 RID: 9653 RVA: 0x000E6530 File Offset: 0x000E4730
 	protected override void __CPPCALL_ReceiveDestroyed_Implementation()
 	{
 		this.ReceiveDestroyed_Implementation();
 	}
 
-	// Token: 0x060024FF RID: 9471 RVA: 0x000E00FC File Offset: 0x000DE2FC
+	// Token: 0x060025B6 RID: 9654 RVA: 0x000E6538 File Offset: 0x000E4738
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceivePossess_Implementation(AController.__ReceivePossess_FunctionParams* __Params)
 	{
@@ -409,7 +379,7 @@ public class TsCharacterController : TsBasePlayerController, IUnrealUObject, IUn
 		this.ReceivePossess_Implementation(orCreateUObjectByNativePointer);
 	}
 
-	// Token: 0x06002500 RID: 9472 RVA: 0x000E011C File Offset: 0x000DE31C
+	// Token: 0x060025B7 RID: 9655 RVA: 0x000E6558 File Offset: 0x000E4758
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveUnPossess_Implementation(AController.__ReceiveUnPossess_FunctionParams* __Params)
 	{
@@ -417,60 +387,60 @@ public class TsCharacterController : TsBasePlayerController, IUnrealUObject, IUn
 		this.ReceiveUnPossess_Implementation(orCreateUObjectByNativePointer);
 	}
 
-	// Token: 0x06002501 RID: 9473 RVA: 0x000E013C File Offset: 0x000DE33C
+	// Token: 0x060025B8 RID: 9656 RVA: 0x000E6578 File Offset: 0x000E4778
 	protected override void __CPPCALL_OnSetupInputComponent_Implementation()
 	{
 		this.OnSetupInputComponent_Implementation();
 	}
 
-	// Token: 0x06002502 RID: 9474 RVA: 0x000E0144 File Offset: 0x000DE344
+	// Token: 0x060025B9 RID: 9657 RVA: 0x000E6580 File Offset: 0x000E4780
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceivePreProcessInput_Implementation(ABasePlayerController.__ReceivePreProcessInput_FunctionParams* __Params)
 	{
 		this.ReceivePreProcessInput_Implementation(__Params->DeltaTime, __Params->bGamePaused);
 	}
 
-	// Token: 0x06002503 RID: 9475 RVA: 0x000E0158 File Offset: 0x000DE358
+	// Token: 0x060025BA RID: 9658 RVA: 0x000E6594 File Offset: 0x000E4794
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceivePostProcessInput_Implementation(ABasePlayerController.__ReceivePostProcessInput_FunctionParams* __Params)
 	{
 		this.ReceivePostProcessInput_Implementation(__Params->DeltaTime, __Params->bGamePaused);
 	}
 
-	// Token: 0x06002504 RID: 9476 RVA: 0x000E016C File Offset: 0x000DE36C
+	// Token: 0x060025BB RID: 9659 RVA: 0x000E65A8 File Offset: 0x000E47A8
 	protected virtual void __CPPCALL_OnSetUiRootActive_Implementation()
 	{
 		this.OnSetUiRootActive_Implementation();
 	}
 
-	// Token: 0x06002505 RID: 9477 RVA: 0x000E0174 File Offset: 0x000DE374
+	// Token: 0x060025BC RID: 9660 RVA: 0x000E65B0 File Offset: 0x000E47B0
 	protected virtual void __CPPCALL_OnSetUiRootDeactivate_Implementation()
 	{
 		this.OnSetUiRootDeactivate_Implementation();
 	}
 
-	// Token: 0x040023F5 RID: 9205
+	// Token: 0x04002473 RID: 9331
 	private static readonly FName LEFT_BARACKET_NAME = new FName("LeftBracket");
 
-	// Token: 0x040023F6 RID: 9206
+	// Token: 0x04002474 RID: 9332
 	private static readonly FName RIGHT_BARACKET_NAME = new FName("RightBracket");
 
-	// Token: 0x040023F7 RID: 9207
+	// Token: 0x04002475 RID: 9333
 	private Vector2D CursorInputVector;
 
-	// Token: 0x040023F8 RID: 9208
+	// Token: 0x04002476 RID: 9334
 	private Vector2D MoveInputVector;
 
-	// Token: 0x040023F9 RID: 9209
+	// Token: 0x04002477 RID: 9335
 	private TsPureUiKeyHandle TsUiKeyHandle;
 
-	// Token: 0x040023FA RID: 9210
+	// Token: 0x04002478 RID: 9336
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Controller/TsCharacterController.TsCharacterController_C";
 
-	// Token: 0x040023FB RID: 9211
+	// Token: 0x04002479 RID: 9337
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x040023FC RID: 9212
+	// Token: 0x0400247A RID: 9338
 	private static IntPtr _ClassDefaultObjectPtr;
 }

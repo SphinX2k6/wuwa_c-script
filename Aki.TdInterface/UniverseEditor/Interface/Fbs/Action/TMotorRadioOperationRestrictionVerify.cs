@@ -3,20 +3,30 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007724 RID: 30500
+	// Token: 0x02007F4D RID: 32589
 	public static class TMotorRadioOperationRestrictionVerify
 	{
-		// Token: 0x060376FF RID: 227071 RVA: 0x00781924 File Offset: 0x0077FB24
+		// Token: 0x0603AC3A RID: 240698 RVA: 0x007E6890 File Offset: 0x007E4A90
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;
-			if (typeId != 1)
+			switch (typeId)
 			{
-				result = (typeId != 2 || IEnableAllMotorRadioOperationVerify.Verify(verifier, tablePos));
-			}
-			else
-			{
+			case 1:
 				result = IDisableAllMotorRadioOperationVerify.Verify(verifier, tablePos);
+				break;
+			case 2:
+				result = IDisableInRangeMotorRadioOperationVerify.Verify(verifier, tablePos);
+				break;
+			case 3:
+				result = IEnableAllMotorRadioOperationVerify.Verify(verifier, tablePos);
+				break;
+			case 4:
+				result = IEnableInRangeMotorRadioOperationVerify.Verify(verifier, tablePos);
+				break;
+			default:
+				result = true;
+				break;
 			}
 			return result;
 		}

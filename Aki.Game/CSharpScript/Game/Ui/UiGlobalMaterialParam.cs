@@ -8,12 +8,12 @@ using UnrealEngine.Extension;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046CD RID: 18125
+	// Token: 0x020035FD RID: 13821
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UiGlobalMaterialParam : Singleton
 	{
-		// Token: 0x0602EBD0 RID: 191440 RVA: 0x00AD13F0 File Offset: 0x00ACF5F0
+		// Token: 0x0602330A RID: 144138 RVA: 0x009FF6C8 File Offset: 0x009FD8C8
 		public UniTask InitAsync()
 		{
 			UiGlobalMaterialParam.<InitAsync>d__2 <InitAsync>d__;
@@ -24,25 +24,25 @@ namespace CSharpScript.Game.Ui
 			return <InitAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602EBD1 RID: 191441 RVA: 0x00AD1433 File Offset: 0x00ACF633
+		// Token: 0x0602330B RID: 144139 RVA: 0x009FF70B File Offset: 0x009FD90B
 		public void Refresh()
 		{
 			this.ResetLguiWidth();
 		}
 
-		// Token: 0x0602EBD2 RID: 191442 RVA: 0x00AD143B File Offset: 0x00ACF63B
+		// Token: 0x0602330C RID: 144140 RVA: 0x009FF713 File Offset: 0x009FD913
 		public void Clear()
 		{
 			Application.Instance.RemoveApplicationHandler(EApplicationLifetimeDelegate.ApplicationHasReactivatedDelegate, new Action(this.AppEnterForeground));
 		}
 
-		// Token: 0x0602EBD3 RID: 191443 RVA: 0x00AD1454 File Offset: 0x00ACF654
+		// Token: 0x0602330D RID: 144141 RVA: 0x009FF72C File Offset: 0x009FD92C
 		private void AppEnterForeground()
 		{
 			this.ResetLguiWidth();
 		}
 
-		// Token: 0x0602EBD4 RID: 191444 RVA: 0x00AD145C File Offset: 0x00ACF65C
+		// Token: 0x0602330E RID: 144142 RVA: 0x009FF734 File Offset: 0x009FD934
 		private void ResetLguiWidth()
 		{
 			UMaterialParameterCollection collection = new UMaterialParameterCollection();
@@ -52,8 +52,8 @@ namespace CSharpScript.Game.Ui
 			UKismetMaterialLibrary.SetScalarParameterValue(UiLayer.Instance.UiRoot.GetWorld(), collection, this.LguiRenderOnScreen, 1f);
 		}
 
-		// Token: 0x17007676 RID: 30326
-		// (get) Token: 0x0602EBD5 RID: 191445 RVA: 0x00AD14D0 File Offset: 0x00ACF6D0
+		// Token: 0x17004931 RID: 18737
+		// (get) Token: 0x0602330F RID: 144143 RVA: 0x009FF7A8 File Offset: 0x009FD9A8
 		public static UiGlobalMaterialParam Instance
 		{
 			get
@@ -67,12 +67,12 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EBD6 RID: 191446 RVA: 0x00AD14F3 File Offset: 0x00ACF6F3
+		// Token: 0x06023310 RID: 144144 RVA: 0x009FF7CB File Offset: 0x009FD9CB
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602EBD7 RID: 191447 RVA: 0x00AD14F5 File Offset: 0x00ACF6F5
+		// Token: 0x06023311 RID: 144145 RVA: 0x009FF7CD File Offset: 0x009FD9CD
 		public static void ResetStaticDefaultValue()
 		{
 			UiGlobalMaterialParam instance = UiGlobalMaterialParam._instance;
@@ -83,19 +83,19 @@ namespace CSharpScript.Game.Ui
 			UiGlobalMaterialParam._instance = null;
 		}
 
-		// Token: 0x0602EBD8 RID: 191448 RVA: 0x00AD150E File Offset: 0x00ACF70E
+		// Token: 0x06023312 RID: 144146 RVA: 0x009FF7E6 File Offset: 0x009FD9E6
 		static UiGlobalMaterialParam()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(UiGlobalMaterialParam.CreateStaticDefaultValue), new Action(UiGlobalMaterialParam.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04019716 RID: 104214
+		// Token: 0x04013DB4 RID: 81332
 		public FName LguiWidth = new FName("LGUIWidth");
 
-		// Token: 0x04019717 RID: 104215
+		// Token: 0x04013DB5 RID: 81333
 		public FName LguiRenderOnScreen = new FName("RenderOnScreenWPO");
 
-		// Token: 0x04019718 RID: 104216
+		// Token: 0x04013DB6 RID: 81334
 		[Nullable(2)]
 		private static UiGlobalMaterialParam _instance;
 	}

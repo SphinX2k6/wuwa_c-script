@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029D8 RID: 10712
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002CC5 RID: 11461
 	public class VehicleSprint : ActionParams
 	{
-		// Token: 0x0600ECB3 RID: 60595 RVA: 0x00228E46 File Offset: 0x00227046
+		// Token: 0x0600FB4A RID: 64330 RVA: 0x002467CA File Offset: 0x002449CA
 		public static VehicleSprint Create(IVehicleSprint? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004AC5 RID: 19141
-		// (get) Token: 0x0600ECB4 RID: 60596 RVA: 0x00228E65 File Offset: 0x00227065
+		// Token: 0x17004E6E RID: 20078
+		// (get) Token: 0x0600FB4B RID: 64331 RVA: 0x002467E9 File Offset: 0x002449E9
 		public virtual ITargetVehicle TargetVehicle
 		{
 			get
@@ -38,13 +35,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400825A RID: 33370
+		// Token: 0x0400894B RID: 35147
 		private IVehicleSprint Instance;
 
-		// Token: 0x0400825B RID: 33371
+		// Token: 0x0400894C RID: 35148
 		private ITargetVehicle _TargetVehicleCache;
 
-		// Token: 0x0400825C RID: 33372
+		// Token: 0x0400894D RID: 35149
 		private bool _TargetVehicleInited;
 	}
 }

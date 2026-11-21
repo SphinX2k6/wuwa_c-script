@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CC6 RID: 3270
+	// Token: 0x02000DAA RID: 3498
 	public class IEnterScreenWeight : IExploreSkillSearchTargetCfg
 	{
-		// Token: 0x06004AC1 RID: 19137 RVA: 0x000BB04D File Offset: 0x000B924D
-		[NullableContext(1)]
+		// Token: 0x06004F7C RID: 20348 RVA: 0x000C5C85 File Offset: 0x000C3E85
 		public static IEnterScreenWeight Create(IEnterScreenWeight? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170016F2 RID: 5874
-		// (get) Token: 0x06004AC2 RID: 19138 RVA: 0x000BB06C File Offset: 0x000B926C
+		// Token: 0x17001823 RID: 6179
+		// (get) Token: 0x06004F7D RID: 20349 RVA: 0x000C5CA4 File Offset: 0x000C3EA4
 		public override EExploreSkillSearchTargetCfg Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170016F3 RID: 5875
-		// (get) Token: 0x06004AC3 RID: 19139 RVA: 0x000BB079 File Offset: 0x000B9279
+		// Token: 0x17001824 RID: 6180
+		// (get) Token: 0x06004F7E RID: 20350 RVA: 0x000C5CB1 File Offset: 0x000C3EB1
 		public virtual int Weight
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002ABD RID: 10941
+		// Token: 0x04002D43 RID: 11587
 		private IEnterScreenWeight Instance;
 	}
 }

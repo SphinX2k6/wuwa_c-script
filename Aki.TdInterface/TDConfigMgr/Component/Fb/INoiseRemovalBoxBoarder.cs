@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E49 RID: 3657
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000F45 RID: 3909
 	public class INoiseRemovalBoxBoarder : INoiseRemovalBoarderBase
 	{
-		// Token: 0x06005295 RID: 21141 RVA: 0x000CB39B File Offset: 0x000C959B
+		// Token: 0x060057BC RID: 22460 RVA: 0x000D6C63 File Offset: 0x000D4E63
 		public static INoiseRemovalBoxBoarder Create(INoiseRemovalBoxBoarder? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001BC0 RID: 7104
-		// (get) Token: 0x06005296 RID: 21142 RVA: 0x000CB3BA File Offset: 0x000C95BA
+		// Token: 0x17001D2D RID: 7469
+		// (get) Token: 0x060057BD RID: 22461 RVA: 0x000D6C82 File Offset: 0x000D4E82
 		public override ENoiseRemovalBoarderShape Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001BC1 RID: 7105
-		// (get) Token: 0x06005297 RID: 21143 RVA: 0x000CB3C7 File Offset: 0x000C95C7
+		// Token: 0x17001D2E RID: 7470
+		// (get) Token: 0x060057BE RID: 22462 RVA: 0x000D6C8F File Offset: 0x000D4E8F
 		public virtual VectorInfo BoxExtendPositive
 		{
 			get
@@ -49,8 +47,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001BC2 RID: 7106
-		// (get) Token: 0x06005298 RID: 21144 RVA: 0x000CB3FB File Offset: 0x000C95FB
+		// Token: 0x17001D2F RID: 7471
+		// (get) Token: 0x060057BF RID: 22463 RVA: 0x000D6CC3 File Offset: 0x000D4EC3
 		public virtual VectorInfo BoxExtendNegative
 		{
 			get
@@ -65,21 +63,21 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002F98 RID: 12184
+		// Token: 0x04003260 RID: 12896
 		private INoiseRemovalBoxBoarder Instance;
 
-		// Token: 0x04002F99 RID: 12185
+		// Token: 0x04003261 RID: 12897
 		[Nullable(2)]
 		private VectorInfo _BoxExtendPositiveCache;
 
-		// Token: 0x04002F9A RID: 12186
+		// Token: 0x04003262 RID: 12898
 		private bool _BoxExtendPositiveInited;
 
-		// Token: 0x04002F9B RID: 12187
+		// Token: 0x04003263 RID: 12899
 		[Nullable(2)]
 		private VectorInfo _BoxExtendNegativeCache;
 
-		// Token: 0x04002F9C RID: 12188
+		// Token: 0x04003264 RID: 12900
 		private bool _BoxExtendNegativeInited;
 	}
 }

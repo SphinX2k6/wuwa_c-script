@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
@@ -8,12 +7,12 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.Module.Infrastructure
 {
-	// Token: 0x020058FE RID: 22782
+	// Token: 0x020048D7 RID: 18647
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InfrastructureActivityData : ActivityBaseData
 	{
-		// Token: 0x06039D48 RID: 236872 RVA: 0x00DBC70C File Offset: 0x00DBA90C
+		// Token: 0x0602EC6E RID: 191598 RVA: 0x00D0B6D8 File Offset: 0x00D098D8
 		protected override void OnInit(ActivityData data)
 		{
 			InfrThemeActivityPb infrThemeActivityPb = data.InfrThemeActivityPb;
@@ -25,7 +24,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.UpdateActivityAllTaskData(infrThemeActivityPb.ActivityTaskData);
 		}
 
-		// Token: 0x06039D49 RID: 236873 RVA: 0x00DBC750 File Offset: 0x00DBA950
+		// Token: 0x0602EC6F RID: 191599 RVA: 0x00D0B71C File Offset: 0x00D0991C
 		protected override void PhraseEx(ActivityData data)
 		{
 			InfrThemeActivityPb infrThemeActivityPb = data.InfrThemeActivityPb;
@@ -37,19 +36,19 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.UpdateActivityAllTaskData(infrThemeActivityPb.ActivityTaskData);
 		}
 
-		// Token: 0x06039D4A RID: 236874 RVA: 0x00DBC793 File Offset: 0x00DBA993
+		// Token: 0x0602EC70 RID: 191600 RVA: 0x00D0B75F File Offset: 0x00D0995F
 		public override bool GetExDataRedPointShowState()
 		{
 			return this.CheckRedDot();
 		}
 
-		// Token: 0x06039D4B RID: 236875 RVA: 0x00DBC79B File Offset: 0x00DBA99B
+		// Token: 0x0602EC71 RID: 191601 RVA: 0x00D0B767 File Offset: 0x00D09967
 		public bool CheckRedDot()
 		{
 			return base.IsUnLock() && (this.GetLimitedTaskReadDot() || this.GetShopHasNewRedDot() || InfrastructureModel.Instance.GetArchiveRedDot());
 		}
 
-		// Token: 0x06039D4C RID: 236876 RVA: 0x00DBC7C4 File Offset: 0x00DBA9C4
+		// Token: 0x0602EC72 RID: 191602 RVA: 0x00D0B790 File Offset: 0x00D09990
 		public bool GetLimitedTaskReadDot()
 		{
 			using (Dictionary<int, InfrastructureLimitTaskData>.ValueCollection.Enumerator enumerator = this.ActivityTaskDataMap.Values.GetEnumerator())
@@ -65,7 +64,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return false;
 		}
 
-		// Token: 0x06039D4D RID: 236877 RVA: 0x00DBC824 File Offset: 0x00DBAA24
+		// Token: 0x0602EC73 RID: 191603 RVA: 0x00D0B7F0 File Offset: 0x00D099F0
 		public bool GetShopHasNewRedDot()
 		{
 			InfrastructureModel instance = InfrastructureModel.Instance;
@@ -73,14 +72,14 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return instance.FireLevel > infrRecordObservatoryLevel;
 		}
 
-		// Token: 0x06039D4E RID: 236878 RVA: 0x00DBC848 File Offset: 0x00DBAA48
+		// Token: 0x0602EC74 RID: 191604 RVA: 0x00D0B814 File Offset: 0x00D09A14
 		public bool GetQuestRedDot()
 		{
 			int currentQuestId = InfrastructureModel.Instance.GetCurrentQuestId();
 			return currentQuestId != 0 && QuestNewModel.Instance.CheckQuestRedDotDataState(currentQuestId).GetValueOrDefault();
 		}
 
-		// Token: 0x06039D4F RID: 236879 RVA: 0x00DBC878 File Offset: 0x00DBAA78
+		// Token: 0x0602EC75 RID: 191605 RVA: 0x00D0B844 File Offset: 0x00D09A44
 		public CommonDefine.ICountDown GetActivityCountDownData()
 		{
 			double num = (base.EndOpenTime > 0L) ? ((double)base.EndOpenTime - TimeUtil.Instance.GetServerTime()) : 0.0;
@@ -93,7 +92,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return TimeUtil.Instance.GetCountDownDataFormat2(num, new CommonDefine.ETimeType?(value), new CommonDefine.ETimeType?(value2));
 		}
 
-		// Token: 0x06039D50 RID: 236880 RVA: 0x00DBC91C File Offset: 0x00DBAB1C
+		// Token: 0x0602EC76 RID: 191606 RVA: 0x00D0B8E8 File Offset: 0x00D09AE8
 		[NullableContext(2)]
 		private void UpdateActivityAllTaskData(Aki.Protocol.ActivityTaskData data)
 		{
@@ -107,7 +106,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			EventSystem.Instance.Emit(EEventName.InfrastructureActivityTaskDataUpdate);
 		}
 
-		// Token: 0x06039D51 RID: 236881 RVA: 0x00DBC9B4 File Offset: 0x00DBABB4
+		// Token: 0x0602EC77 RID: 191607 RVA: 0x00D0B980 File Offset: 0x00D09B80
 		public void UpdateActivityTaskData(ActivityTask data)
 		{
 			InfrastructureLimitTaskData infrastructureLimitTaskData;
@@ -118,10 +117,10 @@ namespace CSharpScript.Game.Module.Infrastructure
 			}
 		}
 
-		// Token: 0x06039D52 RID: 236882 RVA: 0x00DBC9F0 File Offset: 0x00DBABF0
+		// Token: 0x0602EC78 RID: 191608 RVA: 0x00D0B9BC File Offset: 0x00D09BBC
 		public List<InfrastructureLimitTaskData> GetActivityTaskDataList()
 		{
-			List<InfrastructureLimitTaskData> list = this.ActivityTaskDataMap.Values.ToList<InfrastructureLimitTaskData>();
+			List<InfrastructureLimitTaskData> list = new List<InfrastructureLimitTaskData>(this.ActivityTaskDataMap.Values);
 			list.Sort(delegate(InfrastructureLimitTaskData a, InfrastructureLimitTaskData b)
 			{
 				if (a.Status != b.Status)
@@ -137,7 +136,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return list;
 		}
 
-		// Token: 0x06039D53 RID: 236883 RVA: 0x00DBCA41 File Offset: 0x00DBAC41
+		// Token: 0x0602EC79 RID: 191609 RVA: 0x00D0BA0D File Offset: 0x00D09C0D
 		private int GetStatusPriority(ActivityTaskState status)
 		{
 			switch (status)
@@ -153,7 +152,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			}
 		}
 
-		// Token: 0x06039D54 RID: 236884 RVA: 0x00DBCA60 File Offset: 0x00DBAC60
+		// Token: 0x0602EC7A RID: 191610 RVA: 0x00D0BA2C File Offset: 0x00D09C2C
 		[NullableContext(2)]
 		public InfrastructureLimitTaskData GetActivityTaskDataById(int taskId)
 		{
@@ -162,15 +161,21 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return result;
 		}
 
-		// Token: 0x06039D55 RID: 236885 RVA: 0x00DBCA80 File Offset: 0x00DBAC80
+		// Token: 0x0602EC7B RID: 191611 RVA: 0x00D0BA4C File Offset: 0x00D09C4C
 		public List<InfrastructureLimitTaskData> GetActivityTaskDataListByStatus(ActivityTaskState status)
 		{
-			return (from taskData in this.ActivityTaskDataMap.Values
-			where taskData.Status == status
-			select taskData).ToList<InfrastructureLimitTaskData>();
+			List<InfrastructureLimitTaskData> list = new List<InfrastructureLimitTaskData>();
+			foreach (InfrastructureLimitTaskData infrastructureLimitTaskData in this.ActivityTaskDataMap.Values)
+			{
+				if (infrastructureLimitTaskData.Status == status)
+				{
+					list.Add(infrastructureLimitTaskData);
+				}
+			}
+			return list;
 		}
 
-		// Token: 0x06039D56 RID: 236886 RVA: 0x00DBCABC File Offset: 0x00DBACBC
+		// Token: 0x0602EC7C RID: 191612 RVA: 0x00D0BAB4 File Offset: 0x00D09CB4
 		protected override bool GetExDataFinishShowState()
 		{
 			using (Dictionary<int, InfrastructureLimitTaskData>.ValueCollection.Enumerator enumerator = this.ActivityTaskDataMap.Values.GetEnumerator())
@@ -207,7 +212,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return (long)instance.GetAllShopCurrencyNum() == instance.MoneyHistorySpent;
 		}
 
-		// Token: 0x0401E2DA RID: 123610
+		// Token: 0x04018D77 RID: 101751
 		private readonly Dictionary<int, InfrastructureLimitTaskData> ActivityTaskDataMap = new Dictionary<int, InfrastructureLimitTaskData>();
 	}
 }

@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003F0B RID: 16139
+	// Token: 0x02004349 RID: 17225
 	public struct IListenToEvent : IFlatbufferObject
 	{
-		// Token: 0x17006FF1 RID: 28657
-		// (get) Token: 0x06016D94 RID: 93588 RVA: 0x0034B632 File Offset: 0x00349832
+		// Token: 0x170075E0 RID: 30176
+		// (get) Token: 0x060183EB RID: 99307 RVA: 0x003747FE File Offset: 0x003729FE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016D95 RID: 93589 RVA: 0x0034B63F File Offset: 0x0034983F
+		// Token: 0x060183EC RID: 99308 RVA: 0x0037480B File Offset: 0x00372A0B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06016D96 RID: 93590 RVA: 0x0034B648 File Offset: 0x00349848
+		// Token: 0x060183ED RID: 99309 RVA: 0x00374814 File Offset: 0x00372A14
 		public static IListenToEvent GetRootAsIListenToEvent(ByteBuffer _bb)
 		{
 			return IListenToEvent.GetRootAsIListenToEvent(_bb, default(IListenToEvent));
 		}
 
-		// Token: 0x06016D97 RID: 93591 RVA: 0x0034B664 File Offset: 0x00349864
+		// Token: 0x060183EE RID: 99310 RVA: 0x00374830 File Offset: 0x00372A30
 		public static IListenToEvent GetRootAsIListenToEvent(ByteBuffer _bb, IListenToEvent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06016D98 RID: 93592 RVA: 0x0034B681 File Offset: 0x00349881
+		// Token: 0x060183EF RID: 99311 RVA: 0x0037484D File Offset: 0x00372A4D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06016D99 RID: 93593 RVA: 0x0034B690 File Offset: 0x00349890
+		// Token: 0x060183F0 RID: 99312 RVA: 0x0037485C File Offset: 0x00372A5C
 		public IListenToEvent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006FF2 RID: 28658
-		// (get) Token: 0x06016D9A RID: 93594 RVA: 0x0034B6A0 File Offset: 0x003498A0
+		// Token: 0x170075E1 RID: 30177
+		// (get) Token: 0x060183F1 RID: 99313 RVA: 0x0037486C File Offset: 0x00372A6C
 		public EChildQuest Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006FF3 RID: 28659
-		// (get) Token: 0x06016D9B RID: 93595 RVA: 0x0034B6DC File Offset: 0x003498DC
+		// Token: 0x170075E2 RID: 30178
+		// (get) Token: 0x060183F2 RID: 99314 RVA: 0x003748A8 File Offset: 0x00372AA8
 		public IConditionGroup? PreConditions
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006FF4 RID: 28660
-		// (get) Token: 0x06016D9C RID: 93596 RVA: 0x0034B73C File Offset: 0x0034993C
+		// Token: 0x170075E3 RID: 30179
+		// (get) Token: 0x060183F3 RID: 99315 RVA: 0x00374908 File Offset: 0x00372B08
 		public TCommonEventType EventTypeType
 		{
 			get
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016D9D RID: 93597 RVA: 0x0034B778 File Offset: 0x00349978
+		// Token: 0x060183F4 RID: 99316 RVA: 0x00374944 File Offset: 0x00372B44
 		public TTable? EventType<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(10);
@@ -104,19 +104,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06016D9E RID: 93598 RVA: 0x0034B7C0 File Offset: 0x003499C0
+		// Token: 0x060183F5 RID: 99317 RVA: 0x0037498C File Offset: 0x00372B8C
 		public ICommonEventEntityStateChange EventTypeAsICommonEventEntityStateChange()
 		{
 			return this.EventType<ICommonEventEntityStateChange>().Value;
 		}
 
-		// Token: 0x06016D9F RID: 93599 RVA: 0x0034B7DC File Offset: 0x003499DC
+		// Token: 0x060183F6 RID: 99318 RVA: 0x003749A8 File Offset: 0x00372BA8
 		public ICommonEventVarValueChange EventTypeAsICommonEventVarValueChange()
 		{
 			return this.EventType<ICommonEventVarValueChange>().Value;
 		}
 
-		// Token: 0x06016DA0 RID: 93600 RVA: 0x0034B7F7 File Offset: 0x003499F7
+		// Token: 0x060183F7 RID: 99319 RVA: 0x003749C3 File Offset: 0x00372BC3
 		public static Offset<IListenToEvent> CreateIListenToEvent(FlatBufferBuilder builder, EChildQuest Type = EChildQuest.DoInteract, Offset<IConditionGroup> PreConditionsOffset = default(Offset<IConditionGroup>), TCommonEventType EventType_type = TCommonEventType.NONE, int EventTypeOffset = 0)
 		{
 			builder.StartTable(4);
@@ -127,43 +127,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IListenToEvent.EndIListenToEvent(builder);
 		}
 
-		// Token: 0x06016DA1 RID: 93601 RVA: 0x0034B823 File Offset: 0x00349A23
+		// Token: 0x060183F8 RID: 99320 RVA: 0x003749EF File Offset: 0x00372BEF
 		public static void StartIListenToEvent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06016DA2 RID: 93602 RVA: 0x0034B82C File Offset: 0x00349A2C
+		// Token: 0x060183F9 RID: 99321 RVA: 0x003749F8 File Offset: 0x00372BF8
 		public static void AddType(FlatBufferBuilder builder, EChildQuest type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06016DA3 RID: 93603 RVA: 0x0034B837 File Offset: 0x00349A37
+		// Token: 0x060183FA RID: 99322 RVA: 0x00374A03 File Offset: 0x00372C03
 		public static void AddPreConditions(FlatBufferBuilder builder, Offset<IConditionGroup> preConditionsOffset)
 		{
 			builder.AddOffset(1, preConditionsOffset.Value, 0);
 		}
 
-		// Token: 0x06016DA4 RID: 93604 RVA: 0x0034B847 File Offset: 0x00349A47
+		// Token: 0x060183FB RID: 99323 RVA: 0x00374A13 File Offset: 0x00372C13
 		public static void AddEventTypeType(FlatBufferBuilder builder, TCommonEventType eventTypeType)
 		{
 			builder.AddByte(2, (byte)eventTypeType, 0);
 		}
 
-		// Token: 0x06016DA5 RID: 93605 RVA: 0x0034B852 File Offset: 0x00349A52
+		// Token: 0x060183FC RID: 99324 RVA: 0x00374A1E File Offset: 0x00372C1E
 		public static void AddEventType(FlatBufferBuilder builder, int eventTypeOffset)
 		{
 			builder.AddOffset(3, eventTypeOffset, 0);
 		}
 
-		// Token: 0x06016DA6 RID: 93606 RVA: 0x0034B85D File Offset: 0x00349A5D
+		// Token: 0x060183FD RID: 99325 RVA: 0x00374A29 File Offset: 0x00372C29
 		public static Offset<IListenToEvent> EndIListenToEvent(FlatBufferBuilder builder)
 		{
 			return new Offset<IListenToEvent>(builder.EndTable());
 		}
 
-		// Token: 0x06016DA7 RID: 93607 RVA: 0x0034B86C File Offset: 0x00349A6C
+		// Token: 0x060183FE RID: 99326 RVA: 0x00374A38 File Offset: 0x00372C38
 		public IListenToEventT UnPack()
 		{
 			IListenToEventT listenToEventT = new IListenToEventT();
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return listenToEventT;
 		}
 
-		// Token: 0x06016DA8 RID: 93608 RVA: 0x0034B888 File Offset: 0x00349A88
+		// Token: 0x060183FF RID: 99327 RVA: 0x00374A54 File Offset: 0x00372C54
 		public void UnPackTo(IListenToEventT _o)
 		{
 			_o.Type = this.Type;
@@ -191,7 +191,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.EventType.Value = ((this.EventType<ICommonEventVarValueChange>() != null) ? this.EventType<ICommonEventVarValueChange>().Value.UnPack() : null);
 		}
 
-		// Token: 0x06016DA9 RID: 93609 RVA: 0x0034B96C File Offset: 0x00349B6C
+		// Token: 0x06018400 RID: 99328 RVA: 0x00374B38 File Offset: 0x00372D38
 		public static Offset<IListenToEvent> Pack(FlatBufferBuilder builder, IListenToEventT _o)
 		{
 			if (_o == null)
@@ -204,7 +204,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IListenToEvent.CreateIListenToEvent(builder, _o.Type, preConditionsOffset, eventType_type, eventTypeOffset);
 		}
 
-		// Token: 0x0400B8E8 RID: 47336
+		// Token: 0x0400C2C5 RID: 49861
 		private Table __p;
 	}
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000375 RID: 885
+	// Token: 0x0200038A RID: 906
 	public class ConfigGachaTextureInfoById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060014C4 RID: 5316 RVA: 0x000CEF90 File Offset: 0x000CD190
+		// Token: 0x06001542 RID: 5442 RVA: 0x000D549C File Offset: 0x000D369C
 		static ConfigGachaTextureInfoById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigGachaTextureInfoById.CreateStaticDefaultValue), new Action(ConfigGachaTextureInfoById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060014C5 RID: 5317 RVA: 0x000CEFB0 File Offset: 0x000CD1B0
+		// Token: 0x06001543 RID: 5443 RVA: 0x000D54BC File Offset: 0x000D36BC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigGachaTextureInfoById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060014C6 RID: 5318 RVA: 0x000CF02F File Offset: 0x000CD22F
+		// Token: 0x06001544 RID: 5444 RVA: 0x000D553B File Offset: 0x000D373B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigGachaTextureInfoById.LogPair = null;
 			ConfigGachaTextureInfoById.HandleId = 0;
 		}
 
-		// Token: 0x060014C7 RID: 5319 RVA: 0x000CF03D File Offset: 0x000CD23D
+		// Token: 0x06001545 RID: 5445 RVA: 0x000D5549 File Offset: 0x000D3749
 		public static void Init()
 		{
 			ConfigGachaTextureInfoById.HandleId = ConfigCommon.InitDataStatement(ConfigGachaTextureInfoById.HandleId, "db_gacha.db", "select BinData from `GachaTextureInfo` where Id=?");
 		}
 
-		// Token: 0x060014C8 RID: 5320 RVA: 0x000CF058 File Offset: 0x000CD258
+		// Token: 0x06001546 RID: 5446 RVA: 0x000D5564 File Offset: 0x000D3764
 		public static GachaTextureInfo? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigGachaTextureInfoById.HandleId, ConfigGachaTextureInfoById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new GachaTextureInfo?(rootAsGachaTextureInfo);
 		}
 
-		// Token: 0x04001817 RID: 6167
+		// Token: 0x040018AA RID: 6314
 		private const string DB = "db_gacha.db";
 
-		// Token: 0x04001818 RID: 6168
+		// Token: 0x040018AB RID: 6315
 		private const string FILE = "c.抽卡.xlsx";
 
-		// Token: 0x04001819 RID: 6169
+		// Token: 0x040018AC RID: 6316
 		private const string TABLE = "GachaTextureInfo";
 
-		// Token: 0x0400181A RID: 6170
+		// Token: 0x040018AD RID: 6317
 		private const string COMMAND = "select BinData from `GachaTextureInfo` where Id=?";
 
-		// Token: 0x0400181B RID: 6171
+		// Token: 0x040018AE RID: 6318
 		private const string KEY_PREFIX = "GachaTextureInfoById";
 
-		// Token: 0x0400181C RID: 6172
+		// Token: 0x040018AF RID: 6319
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400181D RID: 6173
+		// Token: 0x040018B0 RID: 6320
 		private static int HandleId;
 	}
 }

@@ -7,16 +7,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001B5D RID: 7005
+// Token: 0x0200101C RID: 4124
 public class FloroRanchCommonTipsView : UiViewBase
 {
-	// Token: 0x0600CFE5 RID: 53221 RVA: 0x002F60E0 File Offset: 0x002F42E0
+	// Token: 0x0600A3F6 RID: 41974 RVA: 0x003011B8 File Offset: 0x002FF3B8
 	[NullableContext(1)]
 	public FloroRanchCommonTipsView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0600CFE6 RID: 53222 RVA: 0x002F60EC File Offset: 0x002F42EC
+	// Token: 0x0600A3F7 RID: 41975 RVA: 0x003011C4 File Offset: 0x002FF3C4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -37,7 +37,7 @@ public class FloroRanchCommonTipsView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600CFE7 RID: 53223 RVA: 0x002F6194 File Offset: 0x002F4394
+	// Token: 0x0600A3F8 RID: 41976 RVA: 0x0030126C File Offset: 0x002FF46C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FloroRanchCommonTipsView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -48,30 +48,30 @@ public class FloroRanchCommonTipsView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CFE8 RID: 53224 RVA: 0x002F61D8 File Offset: 0x002F43D8
+	// Token: 0x0600A3F9 RID: 41977 RVA: 0x003012B0 File Offset: 0x002FF4B0
 	protected override void OnBeforeShow()
 	{
 		IFloroRanchCommonTipParam param = this.OpenParam as IFloroRanchCommonTipParam;
 		this.CommonTipItem.RefreshInfoTipByParam(param);
 	}
 
-	// Token: 0x0600CFE9 RID: 53225 RVA: 0x002F61FD File Offset: 0x002F43FD
+	// Token: 0x0600A3FA RID: 41978 RVA: 0x003012D5 File Offset: 0x002FF4D5
 	private void OnCloseButtonClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x04005F8A RID: 24458
+	// Token: 0x04006059 RID: 24665
 	[Nullable(1)]
 	private FloroRanchCommonTipItem CommonTipItem;
 
-	// Token: 0x020080B0 RID: 32944
+	// Token: 0x0200723E RID: 29246
 	private class EComponentDefine
 	{
-		// Token: 0x04029F92 RID: 171922
+		// Token: 0x040252C6 RID: 152262
 		public const int CommonTipItem = 0;
 
-		// Token: 0x04029F93 RID: 171923
+		// Token: 0x040252C7 RID: 152263
 		public const int CloseButton = 1;
 	}
 }

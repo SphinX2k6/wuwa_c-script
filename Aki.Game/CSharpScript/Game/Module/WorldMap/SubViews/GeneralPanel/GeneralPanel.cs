@@ -16,18 +16,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.GeneralPanel
 {
-	// Token: 0x0200481E RID: 18462
+	// Token: 0x0200374F RID: 14159
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GeneralPanel : WorldMapSecondaryUiLayoutA
 	{
-		// Token: 0x06030556 RID: 197974 RVA: 0x00B37EFB File Offset: 0x00B360FB
+		// Token: 0x06024D26 RID: 150822 RVA: 0x00A67FBB File Offset: 0x00A661BB
 		public override string GetResourceId()
 		{
 			return "UiItem_GeneralPanel_Prefab";
 		}
 
-		// Token: 0x06030557 RID: 197975 RVA: 0x00B37F04 File Offset: 0x00B36104
+		// Token: 0x06024D27 RID: 150823 RVA: 0x00A67FC4 File Offset: 0x00A661C4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			GeneralPanel.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.GeneralPanel
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030558 RID: 197976 RVA: 0x00B37F47 File Offset: 0x00B36147
+		// Token: 0x06024D28 RID: 150824 RVA: 0x00A68007 File Offset: 0x00A66207
 		protected override void OnStart()
 		{
 			this._difficultyView = new GenericLayout<DifficultyItem, DarkCoastDeliveryLevelData>(base.GetVerticalLayout(16), new Func<DifficultyItem>(this.OnCreateDifficultyItem), null, false, true);
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.GeneralPanel
 			base.OnStart();
 		}
 
-		// Token: 0x06030559 RID: 197977 RVA: 0x00B37F84 File Offset: 0x00B36184
+		// Token: 0x06024D29 RID: 150825 RVA: 0x00A68044 File Offset: 0x00A66244
 		protected override void SetupWorldMapSecondaryUiLayout()
 		{
 			base.SetupWorldMapSecondaryUiLayout();
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.GeneralPanel
 			item2.SetUIActive(false);
 		}
 
-		// Token: 0x0603055A RID: 197978 RVA: 0x00B38024 File Offset: 0x00B36224
+		// Token: 0x06024D2A RID: 150826 RVA: 0x00A680E4 File Offset: 0x00A662E4
 		protected override void OnShowWorldMapSecondaryUi(params object[] param)
 		{
 			if (param.Length != 0)
@@ -114,19 +114,19 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.GeneralPanel
 			}
 		}
 
-		// Token: 0x0603055B RID: 197979 RVA: 0x00B380B3 File Offset: 0x00B362B3
+		// Token: 0x06024D2B RID: 150827 RVA: 0x00A68173 File Offset: 0x00A66373
 		protected DifficultyItem OnCreateDifficultyItem()
 		{
 			return new DifficultyItem();
 		}
 
-		// Token: 0x0603055C RID: 197980 RVA: 0x00B380BA File Offset: 0x00B362BA
+		// Token: 0x06024D2C RID: 150828 RVA: 0x00A6817A File Offset: 0x00A6637A
 		protected override void OnConfirmBtnClick(int index)
 		{
 			this.HandleFastMoveAndTrack();
 		}
 
-		// Token: 0x0603055D RID: 197981 RVA: 0x00B380C4 File Offset: 0x00B362C4
+		// Token: 0x06024D2D RID: 150829 RVA: 0x00A68184 File Offset: 0x00A66384
 		private void UpdateSubTypeView()
 		{
 			MarkItem selectedMarkItem = this._selectedMarkItem;
@@ -135,12 +135,11 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.GeneralPanel
 			int relativeSubType;
 			if (configMarkItem != null)
 			{
-				MapMark? markConfig = configMarkItem.MarkConfig;
-				if (markConfig != null)
+				if (configMarkItem.MarkConfig != null)
 				{
 					relativeType = configMarkItem.MarkConfig.Value.RelativeType;
 					relativeSubType = configMarkItem.MarkConfig.Value.RelativeSubType;
-					goto IL_A2;
+					goto IL_AD;
 				}
 			}
 			else
@@ -150,11 +149,11 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.GeneralPanel
 				{
 					relativeType = dynamicConfigMarkItem.MarkConfig.Value.RelativeType;
 					relativeSubType = dynamicConfigMarkItem.MarkConfig.Value.RelativeSubType;
-					goto IL_A2;
+					goto IL_AD;
 				}
 			}
 			return;
-			IL_A2:
+			IL_AD:
 			if (relativeType == 1 && relativeSubType == 5)
 			{
 				this.SetupToDarkCoastLayoutAndRefresh();
@@ -166,7 +165,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.GeneralPanel
 			}
 		}
 
-		// Token: 0x0603055E RID: 197982 RVA: 0x00B381A8 File Offset: 0x00B363A8
+		// Token: 0x06024D2E RID: 150830 RVA: 0x00A68274 File Offset: 0x00A66474
 		private void SetupToDarkCoastLayoutAndRefresh()
 		{
 			ConfigMarkItem configMarkItem = this._selectedMarkItem as ConfigMarkItem;
@@ -249,7 +248,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.GeneralPanel
 			}
 		}
 
-		// Token: 0x0603055F RID: 197983 RVA: 0x00B383A0 File Offset: 0x00B365A0
+		// Token: 0x06024D2F RID: 150831 RVA: 0x00A6846C File Offset: 0x00A6666C
 		private void SetupToExploreLayoutAndRefresh()
 		{
 			UUIItem item = base.GetItem(14);
@@ -335,7 +334,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.GeneralPanel
 			}
 		}
 
-		// Token: 0x06030560 RID: 197984 RVA: 0x00B3853C File Offset: 0x00B3673C
+		// Token: 0x06024D30 RID: 150832 RVA: 0x00A68608 File Offset: 0x00A66808
 		private void RefreshExploreRewardScrollView()
 		{
 			UUIVerticalLayout verticalLayout = base.GetVerticalLayout(7);
@@ -405,7 +404,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.GeneralPanel
 			}
 		}
 
-		// Token: 0x06030561 RID: 197985 RVA: 0x00B38684 File Offset: 0x00B36884
+		// Token: 0x06024D31 RID: 150833 RVA: 0x00A68750 File Offset: 0x00A66950
 		protected override void OnBeforeDestroy()
 		{
 			GenericLayout<DifficultyItem, DarkCoastDeliveryLevelData> difficultyView = this._difficultyView;
@@ -416,11 +415,11 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.GeneralPanel
 			base.OnBeforeDestroy();
 		}
 
-		// Token: 0x0401A00C RID: 106508
+		// Token: 0x040146C0 RID: 83648
 		[Nullable(2)]
 		private MarkItem _selectedMarkItem;
 
-		// Token: 0x0401A00D RID: 106509
+		// Token: 0x040146C1 RID: 83649
 		[Nullable(new byte[]
 		{
 			2,
@@ -429,19 +428,19 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.GeneralPanel
 		})]
 		private GenericLayout<DifficultyItem, DarkCoastDeliveryLevelData> _difficultyView;
 
-		// Token: 0x0401A00E RID: 106510
+		// Token: 0x040146C2 RID: 83650
 		[Nullable(2)]
 		protected RewardItemBar RewardsView;
 
-		// Token: 0x0401A00F RID: 106511
+		// Token: 0x040146C3 RID: 83651
 		[Nullable(2)]
 		private PopupListItemPanel _popupListItemPanel;
 
-		// Token: 0x0200AAF4 RID: 43764
+		// Token: 0x020094A3 RID: 38051
 		[NullableContext(0)]
 		public static class EComponents
 		{
-			// Token: 0x04033F8C RID: 212876
+			// Token: 0x0402E70C RID: 190220
 			public const int GeneralPanel = 0;
 		}
 	}

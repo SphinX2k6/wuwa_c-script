@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000546 RID: 1350
+	// Token: 0x0200055C RID: 1372
 	public class ConfigMonsterBattleConfByRoleId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001FB1 RID: 8113 RVA: 0x0010C818 File Offset: 0x0010AA18
+		// Token: 0x06002035 RID: 8245 RVA: 0x00112F6C File Offset: 0x0011116C
 		static ConfigMonsterBattleConfByRoleId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMonsterBattleConfByRoleId.CreateStaticDefaultValue), new Action(ConfigMonsterBattleConfByRoleId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001FB2 RID: 8114 RVA: 0x0010C838 File Offset: 0x0010AA38
+		// Token: 0x06002036 RID: 8246 RVA: 0x00112F8C File Offset: 0x0011118C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMonsterBattleConfByRoleId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001FB3 RID: 8115 RVA: 0x0010C8B7 File Offset: 0x0010AAB7
+		// Token: 0x06002037 RID: 8247 RVA: 0x0011300B File Offset: 0x0011120B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMonsterBattleConfByRoleId.LogPair = null;
 			ConfigMonsterBattleConfByRoleId.HandleId = 0;
 		}
 
-		// Token: 0x06001FB4 RID: 8116 RVA: 0x0010C8C5 File Offset: 0x0010AAC5
+		// Token: 0x06002038 RID: 8248 RVA: 0x00113019 File Offset: 0x00111219
 		public static void Init()
 		{
 			ConfigMonsterBattleConfByRoleId.HandleId = ConfigCommon.InitDataStatement(ConfigMonsterBattleConfByRoleId.HandleId, "db_monster_info.db", "select BinData from `MonsterBattleConf` where RoleMappingId=?");
 		}
 
-		// Token: 0x06001FB5 RID: 8117 RVA: 0x0010C8E0 File Offset: 0x0010AAE0
+		// Token: 0x06002039 RID: 8249 RVA: 0x00113034 File Offset: 0x00111234
 		public static MonsterBattleConf? GetConfig(int p0RoleMappingId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigMonsterBattleConfByRoleId.HandleId, ConfigMonsterBattleConfByRoleId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new MonsterBattleConf?(rootAsMonsterBattleConf);
 		}
 
-		// Token: 0x040024CE RID: 9422
+		// Token: 0x04002568 RID: 9576
 		private const string DB = "db_monster_info.db";
 
-		// Token: 0x040024CF RID: 9423
+		// Token: 0x04002569 RID: 9577
 		private const string FILE = "g.怪物战斗配置.xlsx";
 
-		// Token: 0x040024D0 RID: 9424
+		// Token: 0x0400256A RID: 9578
 		private const string TABLE = "MonsterBattleConf";
 
-		// Token: 0x040024D1 RID: 9425
+		// Token: 0x0400256B RID: 9579
 		private const string COMMAND = "select BinData from `MonsterBattleConf` where RoleMappingId=?";
 
-		// Token: 0x040024D2 RID: 9426
+		// Token: 0x0400256C RID: 9580
 		private const string KEY_PREFIX = "MonsterBattleConfByRoleId";
 
-		// Token: 0x040024D3 RID: 9427
+		// Token: 0x0400256D RID: 9581
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040024D4 RID: 9428
+		// Token: 0x0400256E RID: 9582
 		private static int HandleId;
 	}
 }

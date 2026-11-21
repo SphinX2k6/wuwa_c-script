@@ -3,26 +3,26 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Item
 {
-	// Token: 0x02005828 RID: 22568
+	// Token: 0x020047FF RID: 18431
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ItemConvertTipsParam
 	{
-		// Token: 0x0401DFC8 RID: 122824
+		// Token: 0x04018A60 RID: 100960
 		public TItem? BeforeItemData;
 
-		// Token: 0x0401DFC9 RID: 122825
+		// Token: 0x04018A61 RID: 100961
 		public TItem? AfterItemData;
 
-		// Token: 0x0401DFCA RID: 122826
+		// Token: 0x04018A62 RID: 100962
 		public string ShowText = "";
 
-		// Token: 0x0401DFCB RID: 122827
+		// Token: 0x04018A63 RID: 100963
 		public Action OnCancelCallBack = delegate()
 		{
 		};
 
-		// Token: 0x0401DFCC RID: 122828
+		// Token: 0x04018A64 RID: 100964
 		public Action OnConfirmCallBack = delegate()
 		{
 		};

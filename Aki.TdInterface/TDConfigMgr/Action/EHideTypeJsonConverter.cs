@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002354 RID: 9044
+	// Token: 0x020025C9 RID: 9673
 	public class EHideTypeJsonConverter : JsonConverter<EHideType>
 	{
-		// Token: 0x0600C57A RID: 50554 RVA: 0x001CD2A8 File Offset: 0x001CB4A8
+		// Token: 0x0600D164 RID: 53604 RVA: 0x001E5588 File Offset: 0x001E3788
 		public override EHideType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EHideTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C57B RID: 50555 RVA: 0x001CD2CC File Offset: 0x001CB4CC
+		// Token: 0x0600D165 RID: 53605 RVA: 0x001E55AC File Offset: 0x001E37AC
 		public override void Write(Utf8JsonWriter writer, EHideType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

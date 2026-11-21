@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002993 RID: 10643
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002C7A RID: 11386
 	public class EnableFollowShooterAbility : ActionParams
 	{
-		// Token: 0x0600EB9F RID: 60319 RVA: 0x002274BE File Offset: 0x002256BE
+		// Token: 0x0600FA1D RID: 64029 RVA: 0x00244C4A File Offset: 0x00242E4A
 		public static EnableFollowShooterAbility Create(IEnableFollowShooterAbility? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004A3B RID: 19003
-		// (get) Token: 0x0600EBA0 RID: 60320 RVA: 0x002274DD File Offset: 0x002256DD
+		// Token: 0x17004DD7 RID: 19927
+		// (get) Token: 0x0600FA1E RID: 64030 RVA: 0x00244C69 File Offset: 0x00242E69
 		public virtual bool Enable
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004A3C RID: 19004
-		// (get) Token: 0x0600EBA1 RID: 60321 RVA: 0x002274EA File Offset: 0x002256EA
+		// Token: 0x17004DD8 RID: 19928
+		// (get) Token: 0x0600FA1F RID: 64031 RVA: 0x00244C76 File Offset: 0x00242E76
 		public virtual int Id
 		{
 			get
@@ -43,8 +41,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004A3D RID: 19005
-		// (get) Token: 0x0600EBA2 RID: 60322 RVA: 0x002274F7 File Offset: 0x002256F7
+		// Token: 0x17004DD9 RID: 19929
+		// (get) Token: 0x0600FA20 RID: 64032 RVA: 0x00244C83 File Offset: 0x00242E83
 		public virtual IFollowShooterJellyFishAbility AbilityType
 		{
 			get
@@ -59,14 +57,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040081C3 RID: 33219
+		// Token: 0x040088A8 RID: 34984
 		private IEnableFollowShooterAbility Instance;
 
-		// Token: 0x040081C4 RID: 33220
+		// Token: 0x040088A9 RID: 34985
 		[Nullable(2)]
 		private IFollowShooterJellyFishAbility _AbilityTypeCache;
 
-		// Token: 0x040081C5 RID: 33221
+		// Token: 0x040088AA RID: 34986
 		private bool _AbilityTypeInited;
 	}
 }

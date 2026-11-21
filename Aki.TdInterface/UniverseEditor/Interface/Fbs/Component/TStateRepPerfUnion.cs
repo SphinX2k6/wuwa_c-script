@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005CAF RID: 23727
+	// Token: 0x020062E0 RID: 25312
 	public class TStateRepPerfUnion
 	{
-		// Token: 0x1700B252 RID: 45650
-		// (get) Token: 0x060289FF RID: 166399 RVA: 0x005953A7 File Offset: 0x005935A7
-		// (set) Token: 0x06028A00 RID: 166400 RVA: 0x005953AF File Offset: 0x005935AF
+		// Token: 0x1700BBAC RID: 48044
+		// (get) Token: 0x0602B047 RID: 176199 RVA: 0x005DDB1B File Offset: 0x005DBD1B
+		// (set) Token: 0x0602B048 RID: 176200 RVA: 0x005DDB23 File Offset: 0x005DBD23
 		public TStateRepPerf Type { get; set; }
 
-		// Token: 0x1700B253 RID: 45651
-		// (get) Token: 0x06028A01 RID: 166401 RVA: 0x005953B8 File Offset: 0x005935B8
-		// (set) Token: 0x06028A02 RID: 166402 RVA: 0x005953C0 File Offset: 0x005935C0
+		// Token: 0x1700BBAD RID: 48045
+		// (get) Token: 0x0602B049 RID: 176201 RVA: 0x005DDB2C File Offset: 0x005DBD2C
+		// (set) Token: 0x0602B04A RID: 176202 RVA: 0x005DDB34 File Offset: 0x005DBD34
 		public object Value { get; set; }
 
-		// Token: 0x06028A03 RID: 166403 RVA: 0x005953C9 File Offset: 0x005935C9
+		// Token: 0x0602B04B RID: 176203 RVA: 0x005DDB3D File Offset: 0x005DBD3D
 		public TStateRepPerfUnion()
 		{
 			this.Type = TStateRepPerf.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06028A04 RID: 166404 RVA: 0x005953DF File Offset: 0x005935DF
+		// Token: 0x0602B04C RID: 176204 RVA: 0x005DDB53 File Offset: 0x005DBD53
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06028A05 RID: 166405 RVA: 0x005953F1 File Offset: 0x005935F1
+		// Token: 0x0602B04D RID: 176205 RVA: 0x005DDB65 File Offset: 0x005DBD65
 		public IStateRepPerfEffectsT AsIStateRepPerfEffects()
 		{
 			return this.As<IStateRepPerfEffectsT>();
 		}
 
-		// Token: 0x06028A06 RID: 166406 RVA: 0x005953F9 File Offset: 0x005935F9
+		// Token: 0x0602B04E RID: 176206 RVA: 0x005DDB6D File Offset: 0x005DBD6D
 		public static TStateRepPerfUnion FromIStateRepPerfEffects(IStateRepPerfEffectsT _istaterepperfeffects)
 		{
 			return new TStateRepPerfUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028A07 RID: 166407 RVA: 0x0059540E File Offset: 0x0059360E
+		// Token: 0x0602B04F RID: 176207 RVA: 0x005DDB82 File Offset: 0x005DBD82
 		public IStateRepPerfMontagePathT AsIStateRepPerfMontagePath()
 		{
 			return this.As<IStateRepPerfMontagePathT>();
 		}
 
-		// Token: 0x06028A08 RID: 166408 RVA: 0x00595416 File Offset: 0x00593616
+		// Token: 0x0602B050 RID: 176208 RVA: 0x005DDB8A File Offset: 0x005DBD8A
 		public static TStateRepPerfUnion FromIStateRepPerfMontagePath(IStateRepPerfMontagePathT _istaterepperfmontagepath)
 		{
 			return new TStateRepPerfUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028A09 RID: 166409 RVA: 0x0059542B File Offset: 0x0059362B
+		// Token: 0x0602B051 RID: 176209 RVA: 0x005DDB9F File Offset: 0x005DBD9F
 		public IStateRepPerfSkillIdT AsIStateRepPerfSkillId()
 		{
 			return this.As<IStateRepPerfSkillIdT>();
 		}
 
-		// Token: 0x06028A0A RID: 166410 RVA: 0x00595433 File Offset: 0x00593633
+		// Token: 0x0602B052 RID: 176210 RVA: 0x005DDBA7 File Offset: 0x005DBDA7
 		public static TStateRepPerfUnion FromIStateRepPerfSkillId(IStateRepPerfSkillIdT _istaterepperfskillid)
 		{
 			return new TStateRepPerfUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028A0B RID: 166411 RVA: 0x00595448 File Offset: 0x00593648
+		// Token: 0x0602B053 RID: 176211 RVA: 0x005DDBBC File Offset: 0x005DBDBC
 		public static int Pack(FlatBufferBuilder builder, TStateRepPerfUnion _o)
 		{
 			switch (_o.Type)

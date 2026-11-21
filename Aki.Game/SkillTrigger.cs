@@ -5,18 +5,18 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow;
 using CSharpScript.Utils;
 
-// Token: 0x02002FE8 RID: 12264
+// Token: 0x0200253D RID: 9533
 [NullableContext(1)]
 [Nullable(0)]
 public class SkillTrigger : Trigger
 {
-	// Token: 0x06019FEB RID: 106475 RVA: 0x006CDBD6 File Offset: 0x006CBDD6
+	// Token: 0x0601791F RID: 96543 RVA: 0x006F5AA2 File Offset: 0x006F3CA2
 	[NullableContext(2)]
 	public SkillTrigger(ITriggerConfig c, int h, CharacterTriggerComponent o, [Nullable(1)] Dictionary<string, Func<TFormulaValue[], TFormulaValue>> f, TTriggerCallback cb, TTriggerChecker ck) : base(c, h, o, f, cb, ck)
 	{
 	}
 
-	// Token: 0x06019FEC RID: 106476 RVA: 0x006CDBFC File Offset: 0x006CBDFC
+	// Token: 0x06017920 RID: 96544 RVA: 0x006F5AC8 File Offset: 0x006F3CC8
 	public override void OnInitParams(string[] triggerParams)
 	{
 		this.TargetType = (ETriggerTargetType)Convert.ToInt32((triggerParams.Length != 0) ? triggerParams[0] : "0");
@@ -38,7 +38,7 @@ public class SkillTrigger : Trigger
 		this.CheckEnd = (Convert.ToInt32((triggerParams.Length > 2) ? triggerParams[2] : "0") != 0);
 	}
 
-	// Token: 0x06019FED RID: 106477 RVA: 0x006CDC9C File Offset: 0x006CBE9C
+	// Token: 0x06017921 RID: 96545 RVA: 0x006F5B68 File Offset: 0x006F3D68
 	protected override void OnActive()
 	{
 		CharacterTriggerComponent ownerTriggerComp = base.OwnerTriggerComp;
@@ -68,7 +68,7 @@ public class SkillTrigger : Trigger
 		}
 	}
 
-	// Token: 0x06019FEE RID: 106478 RVA: 0x006CDD60 File Offset: 0x006CBF60
+	// Token: 0x06017922 RID: 96546 RVA: 0x006F5C2C File Offset: 0x006F3E2C
 	protected override void OnInactive()
 	{
 		CharacterTriggerComponent ownerTriggerComp = base.OwnerTriggerComp;
@@ -98,7 +98,7 @@ public class SkillTrigger : Trigger
 		}
 	}
 
-	// Token: 0x06019FEF RID: 106479 RVA: 0x006CDE24 File Offset: 0x006CC024
+	// Token: 0x06017923 RID: 96547 RVA: 0x006F5CF0 File Offset: 0x006F3EF0
 	protected void OnSelfEvent(int entityId, int skillId)
 	{
 		if (base.Checker != null && !base.Checker())
@@ -161,27 +161,27 @@ public class SkillTrigger : Trigger
 		base.EvaluateAndExecute(dictionary);
 	}
 
-	// Token: 0x06019FF0 RID: 106480 RVA: 0x006CDF61 File Offset: 0x006CC161
+	// Token: 0x06017924 RID: 96548 RVA: 0x006F5E2D File Offset: 0x006F402D
 	protected void OnSelfEventWithProxy(int entityId, int skillId, bool isAutonomousProxy)
 	{
 		this.OnSelfEvent(entityId, skillId);
 	}
 
-	// Token: 0x06019FF1 RID: 106481 RVA: 0x006CDF6B File Offset: 0x006CC16B
+	// Token: 0x06017925 RID: 96549 RVA: 0x006F5E37 File Offset: 0x006F4037
 	public override string GetDebugTriggerType()
 	{
 		return string.Empty;
 	}
 
-	// Token: 0x0400C4C3 RID: 50371
+	// Token: 0x0400C88B RID: 51339
 	protected ETriggerTargetType TargetType;
 
-	// Token: 0x0400C4C4 RID: 50372
+	// Token: 0x0400C88C RID: 51340
 	protected readonly List<int> SkillIds = new List<int>();
 
-	// Token: 0x0400C4C5 RID: 50373
+	// Token: 0x0400C88D RID: 51341
 	protected bool AllSkill = true;
 
-	// Token: 0x0400C4C6 RID: 50374
+	// Token: 0x0400C88E RID: 51342
 	protected bool CheckEnd;
 }

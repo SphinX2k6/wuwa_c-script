@@ -3,30 +3,30 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020058A4 RID: 22692
+	// Token: 0x02005EB1 RID: 24241
 	public class ISceneBulletComponentT
 	{
-		// Token: 0x1700A9E4 RID: 43492
-		// (get) Token: 0x06026480 RID: 156800 RVA: 0x00546F5F File Offset: 0x0054515F
-		// (set) Token: 0x06026481 RID: 156801 RVA: 0x00546F67 File Offset: 0x00545167
+		// Token: 0x1700B314 RID: 45844
+		// (get) Token: 0x060289E2 RID: 166370 RVA: 0x0058DAAB File Offset: 0x0058BCAB
+		// (set) Token: 0x060289E3 RID: 166371 RVA: 0x0058DAB3 File Offset: 0x0058BCB3
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700A9E5 RID: 43493
-		// (get) Token: 0x06026482 RID: 156802 RVA: 0x00546F70 File Offset: 0x00545170
-		// (set) Token: 0x06026483 RID: 156803 RVA: 0x00546F78 File Offset: 0x00545178
+		// Token: 0x1700B315 RID: 45845
+		// (get) Token: 0x060289E4 RID: 166372 RVA: 0x0058DABC File Offset: 0x0058BCBC
+		// (set) Token: 0x060289E5 RID: 166373 RVA: 0x0058DAC4 File Offset: 0x0058BCC4
 		public bool DisableGenerateByRange { get; set; }
 
-		// Token: 0x1700A9E6 RID: 43494
-		// (get) Token: 0x06026484 RID: 156804 RVA: 0x00546F81 File Offset: 0x00545181
-		// (set) Token: 0x06026485 RID: 156805 RVA: 0x00546F89 File Offset: 0x00545189
+		// Token: 0x1700B316 RID: 45846
+		// (get) Token: 0x060289E6 RID: 166374 RVA: 0x0058DACD File Offset: 0x0058BCCD
+		// (set) Token: 0x060289E7 RID: 166375 RVA: 0x0058DAD5 File Offset: 0x0058BCD5
 		public List<ISceneBulletGroupT> BulletGroups { get; set; }
 
-		// Token: 0x1700A9E7 RID: 43495
-		// (get) Token: 0x06026486 RID: 156806 RVA: 0x00546F92 File Offset: 0x00545192
-		// (set) Token: 0x06026487 RID: 156807 RVA: 0x00546F9A File Offset: 0x0054519A
+		// Token: 0x1700B317 RID: 45847
+		// (get) Token: 0x060289E8 RID: 166376 RVA: 0x0058DADE File Offset: 0x0058BCDE
+		// (set) Token: 0x060289E9 RID: 166377 RVA: 0x0058DAE6 File Offset: 0x0058BCE6
 		public byte NullMask { get; set; }
 
-		// Token: 0x06026488 RID: 156808 RVA: 0x00546FA3 File Offset: 0x005451A3
+		// Token: 0x060289EA RID: 166378 RVA: 0x0058DAEF File Offset: 0x0058BCEF
 		public ISceneBulletComponentT()
 		{
 			this.Disabled = false;

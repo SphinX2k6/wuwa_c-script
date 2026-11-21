@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006EA9 RID: 28329
+	// Token: 0x0200762D RID: 30253
 	public enum IResetPosType_Union : byte
 	{
-		// Token: 0x0401189B RID: 71835
+		// Token: 0x04012820 RID: 75808
 		NONE,
-		// Token: 0x0401189C RID: 71836
+		// Token: 0x04012821 RID: 75809
 		IResetPosType,
-		// Token: 0x0401189D RID: 71837
+		// Token: 0x04012822 RID: 75810
 		IResetPosByPosEntity,
-		// Token: 0x0401189E RID: 71838
+		// Token: 0x04012823 RID: 75811
 		IResetPosByResetPoint
 	}
 }

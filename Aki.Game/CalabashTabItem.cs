@@ -2,10 +2,10 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02001754 RID: 5972
+// Token: 0x02000C0D RID: 3085
 public class CalabashTabItem : CommonTabItem, ITabViewRegister
 {
-	// Token: 0x0600ACD0 RID: 44240 RVA: 0x0026D87D File Offset: 0x0026BA7D
+	// Token: 0x060080B7 RID: 32951 RVA: 0x00277CF9 File Offset: 0x00275EF9
 	[NullableContext(1)]
 	public void RegisterViewModule(UiTabViewBase tabView)
 	{

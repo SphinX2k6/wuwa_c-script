@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02003126 RID: 12582
+// Token: 0x02002681 RID: 9857
 [NullableContext(1)]
 [Nullable(0)]
 public class PerformMachine
 {
-	// Token: 0x0601B087 RID: 110727 RVA: 0x007564EC File Offset: 0x007546EC
+	// Token: 0x06018AE2 RID: 101090 RVA: 0x0077C558 File Offset: 0x0077A758
 	public PerformMachine(BasePerformComponent performComp, EPerformGroup group = EPerformGroup.DefaultGroup)
 	{
 		this.PerformComp = performComp;
 		this.Group = group;
 	}
 
-	// Token: 0x0601B088 RID: 110728 RVA: 0x00756538 File Offset: 0x00754738
+	// Token: 0x06018AE3 RID: 101091 RVA: 0x0077C5A4 File Offset: 0x0077A7A4
 	public void Init()
 	{
 		this.Modes[EPerformMode.Plot] = new PlotMode(EPerformMode.Plot, this.PerformComp, this);
@@ -25,7 +25,7 @@ public class PerformMachine
 		EventSystem.Instance.AddWithTarget(this.PerformComp.Entity, EEventName.AnimCompActiveStateChange, new Action<bool>(this.OnAnimCompActiveStateChange));
 	}
 
-	// Token: 0x0601B089 RID: 110729 RVA: 0x007565D8 File Offset: 0x007547D8
+	// Token: 0x06018AE4 RID: 101092 RVA: 0x0077C644 File Offset: 0x0077A844
 	public void Clear()
 	{
 		foreach (PerformModeBase performModeBase in this.Modes.Values)
@@ -46,7 +46,7 @@ public class PerformMachine
 		EventSystem.Instance.RemoveWithTarget(this.PerformComp.Entity, EEventName.AnimCompActiveStateChange, new Action<bool>(this.OnAnimCompActiveStateChange));
 	}
 
-	// Token: 0x0601B08A RID: 110730 RVA: 0x007566A0 File Offset: 0x007548A0
+	// Token: 0x06018AE5 RID: 101093 RVA: 0x0077C70C File Offset: 0x0077A90C
 	public void CleanAction()
 	{
 		if (this.CurrentAction != null)
@@ -60,13 +60,13 @@ public class PerformMachine
 		}
 	}
 
-	// Token: 0x0601B08B RID: 110731 RVA: 0x00756710 File Offset: 0x00754910
+	// Token: 0x06018AE6 RID: 101094 RVA: 0x0077C77C File Offset: 0x0077A97C
 	public EPerformMode GetCurrentMode()
 	{
 		return this.CurrentMode;
 	}
 
-	// Token: 0x0601B08C RID: 110732 RVA: 0x00756718 File Offset: 0x00754918
+	// Token: 0x06018AE7 RID: 101095 RVA: 0x0077C784 File Offset: 0x0077A984
 	[NullableContext(2)]
 	public int DoAction(EPerformMode mode, EPerformAction actionType, [Nullable(1)] IActionParamMap param, Action<int> onBeforeExecute = null, Action<int> onAfterExecute = null, bool bPersistent = false)
 	{
@@ -82,7 +82,7 @@ public class PerformMachine
 		return instanceId;
 	}
 
-	// Token: 0x0601B08D RID: 110733 RVA: 0x0075679C File Offset: 0x0075499C
+	// Token: 0x06018AE8 RID: 101096 RVA: 0x0077C808 File Offset: 0x0077AA08
 	public bool EnableAction(int id, bool bEnable)
 	{
 		if (!this.PendingActionCache.ContainsKey(id))
@@ -93,7 +93,7 @@ public class PerformMachine
 		return true;
 	}
 
-	// Token: 0x0601B08E RID: 110734 RVA: 0x007567C1 File Offset: 0x007549C1
+	// Token: 0x06018AE9 RID: 101097 RVA: 0x0077C82D File Offset: 0x0077AA2D
 	public void Update()
 	{
 		if (this.PendingActionCache.Count > 0)
@@ -102,7 +102,7 @@ public class PerformMachine
 		}
 	}
 
-	// Token: 0x0601B08F RID: 110735 RVA: 0x007567D8 File Offset: 0x007549D8
+	// Token: 0x06018AEA RID: 101098 RVA: 0x0077C844 File Offset: 0x0077AA44
 	private void Refresh()
 	{
 		IPerformActionBase currentAction = this.CurrentAction;
@@ -152,7 +152,7 @@ public class PerformMachine
 		this.Refresh();
 	}
 
-	// Token: 0x0601B090 RID: 110736 RVA: 0x00756923 File Offset: 0x00754B23
+	// Token: 0x06018AEB RID: 101099 RVA: 0x0077C98F File Offset: 0x0077AB8F
 	private bool CheckModeEnter(EPerformMode mode)
 	{
 		if (this.Modes[mode].CheckEnter())
@@ -163,14 +163,14 @@ public class PerformMachine
 		return false;
 	}
 
-	// Token: 0x0601B091 RID: 110737 RVA: 0x00756942 File Offset: 0x00754B42
+	// Token: 0x06018AEC RID: 101100 RVA: 0x0077C9AE File Offset: 0x0077ABAE
 	private void ExecuteAction(IPerformActionBase actionInfo)
 	{
 		this.CurrentAction = actionInfo;
 		actionInfo.Execute();
 	}
 
-	// Token: 0x0601B092 RID: 110738 RVA: 0x00756951 File Offset: 0x00754B51
+	// Token: 0x06018AED RID: 101101 RVA: 0x0077C9BD File Offset: 0x0077ABBD
 	private void OnActionFinish()
 	{
 		PerformActionPool.ReturnAction(this.CurrentAction);
@@ -178,7 +178,7 @@ public class PerformMachine
 		this.Refresh();
 	}
 
-	// Token: 0x0601B093 RID: 110739 RVA: 0x0075696B File Offset: 0x00754B6B
+	// Token: 0x06018AEE RID: 101102 RVA: 0x0077C9D7 File Offset: 0x0077ABD7
 	private void OnAnimCompActiveStateChange(bool enable)
 	{
 		if (enable)
@@ -187,38 +187,38 @@ public class PerformMachine
 		}
 	}
 
-	// Token: 0x0400D239 RID: 53817
+	// Token: 0x0400D65B RID: 54875
 	private readonly BasePerformComponent PerformComp;
 
-	// Token: 0x0400D23A RID: 53818
+	// Token: 0x0400D65C RID: 54876
 	public readonly EPerformGroup Group;
 
-	// Token: 0x0400D23B RID: 53819
+	// Token: 0x0400D65D RID: 54877
 	private int InstanceId;
 
-	// Token: 0x0400D23C RID: 53820
+	// Token: 0x0400D65E RID: 54878
 	public Dictionary<EPerformMode, PerformModeBase> Modes = new Dictionary<EPerformMode, PerformModeBase>();
 
-	// Token: 0x0400D23D RID: 53821
+	// Token: 0x0400D65F RID: 54879
 	private EPerformMode CurrentMode;
 
-	// Token: 0x0400D23E RID: 53822
+	// Token: 0x0400D660 RID: 54880
 	private readonly Dictionary<int, IPerformActionBase> PendingActionCache = new Dictionary<int, IPerformActionBase>();
 
-	// Token: 0x0400D23F RID: 53823
+	// Token: 0x0400D661 RID: 54881
 	[Nullable(2)]
 	public IPerformActionBase CurrentAction;
 
-	// Token: 0x0400D240 RID: 53824
+	// Token: 0x0400D662 RID: 54882
 	[Nullable(2)]
 	public EntityHandle EntityHandle;
 
-	// Token: 0x0400D241 RID: 53825
+	// Token: 0x0400D663 RID: 54883
 	public int CurrentVolatileLoadId = -1;
 
-	// Token: 0x0400D242 RID: 53826
+	// Token: 0x0400D664 RID: 54884
 	public int CurrentVolatileActionId = -1;
 
-	// Token: 0x0400D243 RID: 53827
+	// Token: 0x0400D665 RID: 54885
 	public int CurrentVolatileMontageId = -1;
 }

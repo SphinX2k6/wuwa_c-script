@@ -6,17 +6,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001CDE RID: 7390
+// Token: 0x020011A0 RID: 4512
 [NullableContext(1)]
 [Nullable(0)]
 public class MotorcycleArrowCollectionSelectView : UiViewBase
 {
-	// Token: 0x0600DFE5 RID: 57317 RVA: 0x003472C6 File Offset: 0x003454C6
+	// Token: 0x0600B402 RID: 46082 RVA: 0x00352CEE File Offset: 0x00350EEE
 	public MotorcycleArrowCollectionSelectView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600DFE6 RID: 57318 RVA: 0x003472E8 File Offset: 0x003454E8
+	// Token: 0x0600B403 RID: 46083 RVA: 0x00352D10 File Offset: 0x00350F10
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,7 +31,7 @@ public class MotorcycleArrowCollectionSelectView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600DFE7 RID: 57319 RVA: 0x0034739C File Offset: 0x0034559C
+	// Token: 0x0600B404 RID: 46084 RVA: 0x00352DC4 File Offset: 0x00350FC4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		MotorcycleArrowCollectionSelectView.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -42,20 +42,20 @@ public class MotorcycleArrowCollectionSelectView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DFE8 RID: 57320 RVA: 0x003473E0 File Offset: 0x003455E0
+	// Token: 0x0600B405 RID: 46085 RVA: 0x00352E08 File Offset: 0x00351008
 	protected override void OnBeforeShow()
 	{
 		this.SequencePlayer.PlaySequencePurely("Start", false, false, null, null, false);
 		this.UpdateData(false);
 	}
 
-	// Token: 0x0600DFE9 RID: 57321 RVA: 0x00347411 File Offset: 0x00345611
+	// Token: 0x0600B406 RID: 46086 RVA: 0x00352E39 File Offset: 0x00351039
 	protected override void OnAfterDestroy()
 	{
 		this.ViewModel.OnViewClose();
 	}
 
-	// Token: 0x0600DFEA RID: 57322 RVA: 0x00347420 File Offset: 0x00345620
+	// Token: 0x0600B407 RID: 46087 RVA: 0x00352E48 File Offset: 0x00351048
 	private void InitScrollViewData()
 	{
 		List<int> sortedMotorFightItemTypeList = this.ViewModel.GetSortedMotorFightItemTypeList();
@@ -80,7 +80,7 @@ public class MotorcycleArrowCollectionSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600DFEB RID: 57323 RVA: 0x003474E7 File Offset: 0x003456E7
+	// Token: 0x0600B408 RID: 46088 RVA: 0x00352F0F File Offset: 0x0035110F
 	public void OnBtnClose()
 	{
 		if (this.ViewModel.CollectionList.Count <= 0)
@@ -89,7 +89,7 @@ public class MotorcycleArrowCollectionSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600DFEC RID: 57324 RVA: 0x00347504 File Offset: 0x00345704
+	// Token: 0x0600B409 RID: 46089 RVA: 0x00352F2C File Offset: 0x0035112C
 	private UniTask CreateCollectionSelectPanel()
 	{
 		MotorcycleArrowCollectionSelectView.<CreateCollectionSelectPanel>d__19 <CreateCollectionSelectPanel>d__;
@@ -100,20 +100,20 @@ public class MotorcycleArrowCollectionSelectView : UiViewBase
 		return <CreateCollectionSelectPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DFED RID: 57325 RVA: 0x00347547 File Offset: 0x00345747
+	// Token: 0x0600B40A RID: 46090 RVA: 0x00352F6F File Offset: 0x0035116F
 	private void OnItemClick(MotorcycleArrowCollectionItemData data, CollectionGridItem item)
 	{
 		item.SetToggleState(false);
 		UiManager.Instance.OpenView(EUiViewName.MotorcycleArrowCollectionTipsView, data, null);
 	}
 
-	// Token: 0x0600DFEE RID: 57326 RVA: 0x00347561 File Offset: 0x00345761
+	// Token: 0x0600B40B RID: 46091 RVA: 0x00352F89 File Offset: 0x00351189
 	public void OnClickRefreshBuff()
 	{
 		this.RequestUpdateCollectionListAsync().Forget();
 	}
 
-	// Token: 0x0600DFEF RID: 57327 RVA: 0x00347570 File Offset: 0x00345770
+	// Token: 0x0600B40C RID: 46092 RVA: 0x00352F98 File Offset: 0x00351198
 	private UniTask RequestUpdateCollectionListAsync()
 	{
 		MotorcycleArrowCollectionSelectView.<RequestUpdateCollectionListAsync>d__22 <RequestUpdateCollectionListAsync>d__;
@@ -124,7 +124,7 @@ public class MotorcycleArrowCollectionSelectView : UiViewBase
 		return <RequestUpdateCollectionListAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DFF0 RID: 57328 RVA: 0x003475B3 File Offset: 0x003457B3
+	// Token: 0x0600B40D RID: 46093 RVA: 0x00352FDB File Offset: 0x003511DB
 	public void OnClickBtnSure()
 	{
 		if (this.ViewModel.CollectionList.Count <= 0)
@@ -135,7 +135,7 @@ public class MotorcycleArrowCollectionSelectView : UiViewBase
 		this.SureBuffSelect().Forget();
 	}
 
-	// Token: 0x0600DFF1 RID: 57329 RVA: 0x003475DC File Offset: 0x003457DC
+	// Token: 0x0600B40E RID: 46094 RVA: 0x00353004 File Offset: 0x00351204
 	public UniTask SureBuffSelect()
 	{
 		MotorcycleArrowCollectionSelectView.<SureBuffSelect>d__24 <SureBuffSelect>d__;
@@ -146,7 +146,7 @@ public class MotorcycleArrowCollectionSelectView : UiViewBase
 		return <SureBuffSelect>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DFF2 RID: 57330 RVA: 0x00347620 File Offset: 0x00345820
+	// Token: 0x0600B40F RID: 46095 RVA: 0x00353048 File Offset: 0x00351248
 	public void UpdateData(bool bRefresh)
 	{
 		List<MotorcycleArrowCollectionItemData> collectionList = this.ViewModel.CollectionList;
@@ -166,7 +166,7 @@ public class MotorcycleArrowCollectionSelectView : UiViewBase
 		this.UpdateRefreshBtn();
 	}
 
-	// Token: 0x0600DFF3 RID: 57331 RVA: 0x003476A4 File Offset: 0x003458A4
+	// Token: 0x0600B410 RID: 46096 RVA: 0x003530CC File Offset: 0x003512CC
 	public void UpdateSureBtnEnable()
 	{
 		bool enableClick = this.ViewModel.CurSelectCollectionItem != null || this.ViewModel.CollectionList.Count <= 0;
@@ -178,7 +178,7 @@ public class MotorcycleArrowCollectionSelectView : UiViewBase
 		confirmButton.SetEnableClick(enableClick);
 	}
 
-	// Token: 0x0600DFF4 RID: 57332 RVA: 0x003476EC File Offset: 0x003458EC
+	// Token: 0x0600B411 RID: 46097 RVA: 0x00353114 File Offset: 0x00351314
 	public void UpdateRefreshBtn()
 	{
 		bool enableClick = this.ViewModel.RemainRefreshCount > 0;
@@ -199,7 +199,7 @@ public class MotorcycleArrowCollectionSelectView : UiViewBase
 		refreshButton2.SetEnableClick(enableClick);
 	}
 
-	// Token: 0x0600DFF5 RID: 57333 RVA: 0x0034775C File Offset: 0x0034595C
+	// Token: 0x0600B412 RID: 46098 RVA: 0x00353184 File Offset: 0x00351384
 	public void UpdateCollectionPanelSelectState()
 	{
 		MotorcycleArrowCollectionItemData curSelectCollectionItem = this.ViewModel.CurSelectCollectionItem;
@@ -210,7 +210,7 @@ public class MotorcycleArrowCollectionSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600DFF6 RID: 57334 RVA: 0x003477A7 File Offset: 0x003459A7
+	// Token: 0x0600B413 RID: 46099 RVA: 0x003531CF File Offset: 0x003513CF
 	public void OnSelectCollection(MotorcycleArrowCollectionItemData data)
 	{
 		this.ViewModel.SetSelectCollectionItem(data);
@@ -218,13 +218,13 @@ public class MotorcycleArrowCollectionSelectView : UiViewBase
 		this.UpdateSureBtnEnable();
 	}
 
-	// Token: 0x0600DFF7 RID: 57335 RVA: 0x003477C1 File Offset: 0x003459C1
+	// Token: 0x0600B414 RID: 46100 RVA: 0x003531E9 File Offset: 0x003513E9
 	public void UpdateCollectionEmptyState()
 	{
 		this.CollectionEmpty.SetUIActive(this.ViewModel.IsMotorFightItemEmpty());
 	}
 
-	// Token: 0x0600DFF8 RID: 57336 RVA: 0x003477D9 File Offset: 0x003459D9
+	// Token: 0x0600B415 RID: 46101 RVA: 0x00353201 File Offset: 0x00351401
 	public void CloseMeWithCallBack()
 	{
 		base.CloseMe(delegate(bool success)
@@ -236,64 +236,64 @@ public class MotorcycleArrowCollectionSelectView : UiViewBase
 		});
 	}
 
-	// Token: 0x0400670E RID: 26382
+	// Token: 0x040067ED RID: 26605
 	public MotorcycleArrowCollectionSelectViewModel ViewModel;
 
-	// Token: 0x0400670F RID: 26383
+	// Token: 0x040067EE RID: 26606
 	public PopupCaptionItem PopupCaption;
 
-	// Token: 0x04006710 RID: 26384
+	// Token: 0x040067EF RID: 26607
 	public UUIItem CollectionListParent;
 
-	// Token: 0x04006711 RID: 26385
+	// Token: 0x040067F0 RID: 26608
 	public List<MotorcycleArrowCollectionItem> CollectionItemList = new List<MotorcycleArrowCollectionItem>();
 
-	// Token: 0x04006712 RID: 26386
+	// Token: 0x040067F1 RID: 26609
 	public UUIItem CollectionItem;
 
-	// Token: 0x04006713 RID: 26387
+	// Token: 0x040067F2 RID: 26610
 	public ButtonItem RefreshButton;
 
-	// Token: 0x04006714 RID: 26388
+	// Token: 0x040067F3 RID: 26611
 	public ButtonItem ConfirmButton;
 
-	// Token: 0x04006715 RID: 26389
+	// Token: 0x040067F4 RID: 26612
 	[Nullable(2)]
 	private MultiTemplateScrollView ItemMultiTemplateScrollView;
 
-	// Token: 0x04006716 RID: 26390
+	// Token: 0x040067F5 RID: 26613
 	public UUIItem CollectionEmpty;
 
-	// Token: 0x04006717 RID: 26391
+	// Token: 0x040067F6 RID: 26614
 	[Nullable(2)]
 	private LevelSequencePlayer SequencePlayer;
 
-	// Token: 0x04006718 RID: 26392
+	// Token: 0x040067F7 RID: 26615
 	private readonly List<IMultiTemplateGridData> ScrollDataList = new List<IMultiTemplateGridData>();
 
-	// Token: 0x020082E5 RID: 33509
+	// Token: 0x0200746E RID: 29806
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x0402AB35 RID: 174901
+		// Token: 0x04025E5D RID: 155229
 		public const int CaptionItem = 0;
 
-		// Token: 0x0402AB36 RID: 174902
+		// Token: 0x04025E5E RID: 155230
 		public const int CollectionSelectList = 1;
 
-		// Token: 0x0402AB37 RID: 174903
+		// Token: 0x04025E5F RID: 155231
 		public const int CollectionItem = 2;
 
-		// Token: 0x0402AB38 RID: 174904
+		// Token: 0x04025E60 RID: 155232
 		public const int RefreshItem = 3;
 
-		// Token: 0x0402AB39 RID: 174905
+		// Token: 0x04025E61 RID: 155233
 		public const int SelectItem = 4;
 
-		// Token: 0x0402AB3A RID: 174906
+		// Token: 0x04025E62 RID: 155234
 		public const int CollectionBagList = 5;
 
-		// Token: 0x0402AB3B RID: 174907
+		// Token: 0x04025E63 RID: 155235
 		public const int CollectionEmpty = 6;
 	}
 }

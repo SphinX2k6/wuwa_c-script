@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028C6 RID: 10438
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B9B RID: 11163
 	public class IEnterRandomMovieCamera : IEnterMovieCameraType
 	{
-		// Token: 0x0600E7E6 RID: 59366 RVA: 0x00220B5F File Offset: 0x0021ED5F
+		// Token: 0x0600F615 RID: 62997 RVA: 0x0023DADF File Offset: 0x0023BCDF
 		public static IEnterRandomMovieCamera Create(IEnterRandomMovieCamera? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700481C RID: 18460
-		// (get) Token: 0x0600E7E7 RID: 59367 RVA: 0x00220B7E File Offset: 0x0021ED7E
+		// Token: 0x17004B8D RID: 19341
+		// (get) Token: 0x0600F616 RID: 62998 RVA: 0x0023DAFE File Offset: 0x0023BCFE
 		public override EMovieCameraType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700481D RID: 18461
-		// (get) Token: 0x0600E7E8 RID: 59368 RVA: 0x00220B8C File Offset: 0x0021ED8C
+		// Token: 0x17004B8E RID: 19342
+		// (get) Token: 0x0600F617 RID: 62999 RVA: 0x0023DB0C File Offset: 0x0023BD0C
 		public virtual List<string> RowNames
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008030 RID: 32816
+		// Token: 0x040086EF RID: 34543
 		private IEnterRandomMovieCamera Instance;
 
-		// Token: 0x04008031 RID: 32817
+		// Token: 0x040086F0 RID: 34544
 		private List<string> _RowNamesCache;
 
-		// Token: 0x04008032 RID: 32818
+		// Token: 0x040086F1 RID: 34545
 		private bool _RowNamesInited;
 	}
 }

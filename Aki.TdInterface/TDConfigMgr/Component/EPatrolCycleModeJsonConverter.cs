@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009C9 RID: 2505
+	// Token: 0x02000A8A RID: 2698
 	public class EPatrolCycleModeJsonConverter : JsonConverter<EPatrolCycleMode>
 	{
-		// Token: 0x060037BB RID: 14267 RVA: 0x00090CBC File Offset: 0x0008EEBC
+		// Token: 0x06003B81 RID: 15233 RVA: 0x0009938C File Offset: 0x0009758C
 		public override EPatrolCycleMode Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return EPatrolCycleModeExtensions.FromString(@string);
 		}
 
-		// Token: 0x060037BC RID: 14268 RVA: 0x00090CE0 File Offset: 0x0008EEE0
+		// Token: 0x06003B82 RID: 15234 RVA: 0x000993B0 File Offset: 0x000975B0
 		public override void Write(Utf8JsonWriter writer, EPatrolCycleMode value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

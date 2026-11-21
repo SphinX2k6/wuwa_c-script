@@ -2,13 +2,13 @@
 
 namespace CSharpScript.Game.Module.Plot.PlotView.PlotComponent
 {
-	// Token: 0x0200508A RID: 20618
+	// Token: 0x0200405A RID: 16474
 	public class PlotTextAudioComponent_Const
 	{
-		// Token: 0x0401C23B RID: 115259
+		// Token: 0x04016C66 RID: 93286
 		public const float MAX_LOAD_AUDIO_TIME = 3000f;
 
-		// Token: 0x0401C23C RID: 115260
+		// Token: 0x04016C67 RID: 93287
 		public const float BREAK_TIME = 1000f;
 	}
 }

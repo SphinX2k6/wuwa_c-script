@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x02001ECA RID: 7882
+// Token: 0x0200138C RID: 5004
 public enum EPnlTeamComponent
 {
-	// Token: 0x04007047 RID: 28743
+	// Token: 0x04007128 RID: 28968
 	BtnTeam,
-	// Token: 0x04007048 RID: 28744
+	// Token: 0x04007129 RID: 28969
 	TxtAssembleNum,
-	// Token: 0x04007049 RID: 28745
+	// Token: 0x0400712A RID: 28970
 	SprArrow,
-	// Token: 0x0400704A RID: 28746
+	// Token: 0x0400712B RID: 28971
 	PnlHLayout,
-	// Token: 0x0400704B RID: 28747
+	// Token: 0x0400712C RID: 28972
 	ItemRoleBox,
-	// Token: 0x0400704C RID: 28748
+	// Token: 0x0400712D RID: 28973
 	PnlUpTog
 }

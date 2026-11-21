@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027F2 RID: 10226
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002AC5 RID: 10949
 	public class ISwing : ILeisureInteractType
 	{
-		// Token: 0x0600E31C RID: 58140 RVA: 0x00218017 File Offset: 0x00216217
+		// Token: 0x0600F141 RID: 61761 RVA: 0x00234E7A File Offset: 0x0023307A
 		public static ISwing Create(ISwing? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170044FA RID: 17658
-		// (get) Token: 0x0600E31D RID: 58141 RVA: 0x00218036 File Offset: 0x00216236
+		// Token: 0x17004865 RID: 18533
+		// (get) Token: 0x0600F142 RID: 61762 RVA: 0x00234E99 File Offset: 0x00233099
 		public override ELeisureInteract Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170044FB RID: 17659
-		// (get) Token: 0x0600E31E RID: 58142 RVA: 0x00218043 File Offset: 0x00216243
+		// Token: 0x17004866 RID: 18534
+		// (get) Token: 0x0600F143 RID: 61763 RVA: 0x00234EA6 File Offset: 0x002330A6
 		public virtual string SwingDa
 		{
 			get
@@ -42,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170044FC RID: 17660
-		// (get) Token: 0x0600E31F RID: 58143 RVA: 0x00218050 File Offset: 0x00216250
+		// Token: 0x17004867 RID: 18535
+		// (get) Token: 0x0600F144 RID: 61764 RVA: 0x00234EB3 File Offset: 0x002330B3
 		public virtual int EntityId
 		{
 			get
@@ -52,7 +49,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007DD6 RID: 32214
+		// Token: 0x04008493 RID: 33939
 		private ISwing Instance;
 	}
 }

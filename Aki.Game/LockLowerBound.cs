@@ -2,17 +2,17 @@
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02002F43 RID: 12099
+// Token: 0x02002496 RID: 9366
 [NullableContext(1)]
 [Nullable(0)]
 public class LockLowerBound : BuffEffect
 {
-	// Token: 0x06019C22 RID: 105506 RVA: 0x006B697C File Offset: 0x006B4B7C
+	// Token: 0x0601752D RID: 95533 RVA: 0x006DCCA0 File Offset: 0x006DAEA0
 	public LockLowerBound(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019C23 RID: 105507 RVA: 0x006B698C File Offset: 0x006B4B8C
+	// Token: 0x0601752E RID: 95534 RVA: 0x006DCCB0 File Offset: 0x006DAEB0
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -32,7 +32,7 @@ public class LockLowerBound : BuffEffect
 		}
 	}
 
-	// Token: 0x06019C24 RID: 105508 RVA: 0x006B6A04 File Offset: 0x006B4C04
+	// Token: 0x0601752F RID: 95535 RVA: 0x006DCD28 File Offset: 0x006DAF28
 	public override void OnCreated()
 	{
 		Entity ownerEntity = base.OwnerEntity;
@@ -48,14 +48,14 @@ public class LockLowerBound : BuffEffect
 		baseAttributeComponent.AddIntervalLock(EAttributeIntervalLockType.LowerBoundLock, this.ActiveHandleId, this.AttributeId, this.Percent, this.Offset);
 	}
 
-	// Token: 0x06019C25 RID: 105509 RVA: 0x006B6A39 File Offset: 0x006B4C39
+	// Token: 0x06017530 RID: 95536 RVA: 0x006DCD5D File Offset: 0x006DAF5D
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
 		return null;
 	}
 
-	// Token: 0x06019C26 RID: 105510 RVA: 0x006B6A3C File Offset: 0x006B4C3C
+	// Token: 0x06017531 RID: 95537 RVA: 0x006DCD60 File Offset: 0x006DAF60
 	public override void OnRemoved(bool bPremature)
 	{
 		Entity ownerEntity = base.OwnerEntity;
@@ -71,7 +71,7 @@ public class LockLowerBound : BuffEffect
 		baseAttributeComponent.RemoveIntervalLock(EAttributeIntervalLockType.LowerBoundLock, this.ActiveHandleId, this.AttributeId);
 	}
 
-	// Token: 0x06019C27 RID: 105511 RVA: 0x006B6A68 File Offset: 0x006B4C68
+	// Token: 0x06017532 RID: 95538 RVA: 0x006DCD8C File Offset: 0x006DAF8C
 	public override string GetDebugEffectString()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(12, 3);
@@ -84,12 +84,12 @@ public class LockLowerBound : BuffEffect
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0400C22D RID: 49709
+	// Token: 0x0400C5CF RID: 50639
 	protected EAttributeType AttributeId;
 
-	// Token: 0x0400C22E RID: 49710
+	// Token: 0x0400C5D0 RID: 50640
 	protected float Offset;
 
-	// Token: 0x0400C22F RID: 49711
+	// Token: 0x0400C5D1 RID: 50641
 	protected float Percent;
 }

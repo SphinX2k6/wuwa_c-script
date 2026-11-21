@@ -12,17 +12,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001615 RID: 5653
+// Token: 0x02000ACD RID: 2765
 [NullableContext(1)]
 [Nullable(0)]
 public class WheelTowerEnhanceRoleView : UiViewBase
 {
-	// Token: 0x06009F11 RID: 40721 RVA: 0x0022D009 File Offset: 0x0022B209
+	// Token: 0x060072EF RID: 29423 RVA: 0x00236E39 File Offset: 0x00235039
 	public WheelTowerEnhanceRoleView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06009F12 RID: 40722 RVA: 0x0022D020 File Offset: 0x0022B220
+	// Token: 0x060072F0 RID: 29424 RVA: 0x00236E50 File Offset: 0x00235050
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -52,7 +52,7 @@ public class WheelTowerEnhanceRoleView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009F13 RID: 40723 RVA: 0x0022D194 File Offset: 0x0022B394
+	// Token: 0x060072F1 RID: 29425 RVA: 0x00236FC4 File Offset: 0x002351C4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WheelTowerEnhanceRoleView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -63,7 +63,7 @@ public class WheelTowerEnhanceRoleView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009F14 RID: 40724 RVA: 0x0022D1D8 File Offset: 0x0022B3D8
+	// Token: 0x060072F2 RID: 29426 RVA: 0x00237008 File Offset: 0x00235208
 	private void RefreshRightPanel()
 	{
 		Aki.Config.RoleInfo? roleConfig = RoleConfig.Instance.GetRoleConfig(this.SelectedRoleId);
@@ -115,7 +115,7 @@ public class WheelTowerEnhanceRoleView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(9), "NewTower_Addenergy", new <>z__ReadOnlySingleElementList<object>(specialUpRoleAddEnergy));
 	}
 
-	// Token: 0x06009F15 RID: 40725 RVA: 0x0022D34C File Offset: 0x0022B54C
+	// Token: 0x060072F3 RID: 29427 RVA: 0x0023717C File Offset: 0x0023537C
 	private void OnRoleItemClick(int roleId)
 	{
 		this.SelectedRoleId = roleId;
@@ -129,7 +129,7 @@ public class WheelTowerEnhanceRoleView : UiViewBase
 		this.RefreshRightPanel();
 	}
 
-	// Token: 0x06009F16 RID: 40726 RVA: 0x0022D3B8 File Offset: 0x0022B5B8
+	// Token: 0x060072F4 RID: 29428 RVA: 0x002371E8 File Offset: 0x002353E8
 	private WheelTowerEnhanceRoleGridItem CreateRoleItem()
 	{
 		WheelTowerEnhanceRoleGridItem wheelTowerEnhanceRoleGridItem = new WheelTowerEnhanceRoleGridItem();
@@ -137,26 +137,26 @@ public class WheelTowerEnhanceRoleView : UiViewBase
 		return wheelTowerEnhanceRoleGridItem;
 	}
 
-	// Token: 0x06009F17 RID: 40727 RVA: 0x0022D3D1 File Offset: 0x0022B5D1
+	// Token: 0x060072F5 RID: 29429 RVA: 0x00237201 File Offset: 0x00235401
 	private void OnCloseBtnClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0400477C RID: 18300
+	// Token: 0x04004822 RID: 18466
 	private const string TEXT_SPECIAL_UP_ROLE_TIPS = "NewTower_Addenergy";
 
-	// Token: 0x0400477D RID: 18301
+	// Token: 0x04004823 RID: 18467
 	private int SelectedRoleId;
 
-	// Token: 0x0400477E RID: 18302
+	// Token: 0x04004824 RID: 18468
 	private List<int> RoleIdList = new List<int>();
 
-	// Token: 0x0400477F RID: 18303
+	// Token: 0x04004825 RID: 18469
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04004780 RID: 18304
+	// Token: 0x04004826 RID: 18470
 	[Nullable(new byte[]
 	{
 		2,
@@ -164,7 +164,7 @@ public class WheelTowerEnhanceRoleView : UiViewBase
 	})]
 	private LoopScrollView<WheelTowerEnhanceRoleGridItem, int> RoleLoopScrollView;
 
-	// Token: 0x04004781 RID: 18305
+	// Token: 0x04004827 RID: 18471
 	[Nullable(new byte[]
 	{
 		2,
@@ -172,7 +172,7 @@ public class WheelTowerEnhanceRoleView : UiViewBase
 	})]
 	private GenericLayout<RoleTagMediumIconItem, int> TagLayout;
 
-	// Token: 0x04004782 RID: 18306
+	// Token: 0x04004828 RID: 18472
 	[Nullable(new byte[]
 	{
 		2,

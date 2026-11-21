@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002564 RID: 9572
+	// Token: 0x0200280D RID: 10253
 	public class AvgShakeUi : ActionParams
 	{
-		// Token: 0x0600D6E9 RID: 55017 RVA: 0x00200817 File Offset: 0x001FEA17
-		[NullableContext(1)]
+		// Token: 0x0600E453 RID: 58451 RVA: 0x0021C413 File Offset: 0x0021A613
 		public static AvgShakeUi Create(IAvgShakeUi? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003DE3 RID: 15843
-		// (get) Token: 0x0600D6EA RID: 55018 RVA: 0x00200836 File Offset: 0x001FEA36
+		// Token: 0x170040E7 RID: 16615
+		// (get) Token: 0x0600E454 RID: 58452 RVA: 0x0021C432 File Offset: 0x0021A632
 		public virtual EAvgShakeUiIntensity Intensity
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003DE4 RID: 15844
-		// (get) Token: 0x0600D6EB RID: 55019 RVA: 0x00200843 File Offset: 0x001FEA43
+		// Token: 0x170040E8 RID: 16616
+		// (get) Token: 0x0600E455 RID: 58453 RVA: 0x0021C43F File Offset: 0x0021A63F
 		public virtual int RepeatCount
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007706 RID: 30470
+		// Token: 0x04007D63 RID: 32099
 		private IAvgShakeUi Instance;
 	}
 }

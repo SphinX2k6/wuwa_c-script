@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02001B35 RID: 6965
+// Token: 0x02000FF4 RID: 4084
 public enum EFloroRanchActivityDataType
 {
-	// Token: 0x04005EFA RID: 24314
+	// Token: 0x04005FC9 RID: 24521
 	Normal,
-	// Token: 0x04005EFB RID: 24315
+	// Token: 0x04005FCA RID: 24522
 	Weekly
 }

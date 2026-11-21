@@ -3,37 +3,37 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.RoleDev;
 
-// Token: 0x020027E3 RID: 10211
+// Token: 0x02001D5E RID: 7518
 [NullableContext(1)]
 public interface IRoleDevDetailItemData
 {
-	// Token: 0x17001B6A RID: 7018
-	// (get) Token: 0x06014F73 RID: 85875
-	// (set) Token: 0x06014F74 RID: 85876
+	// Token: 0x17001BC2 RID: 7106
+	// (get) Token: 0x06012973 RID: 76147
+	// (set) Token: 0x06012974 RID: 76148
 	int RoleId { get; set; }
 
-	// Token: 0x17001B6B RID: 7019
-	// (get) Token: 0x06014F75 RID: 85877
-	// (set) Token: 0x06014F76 RID: 85878
+	// Token: 0x17001BC3 RID: 7107
+	// (get) Token: 0x06012975 RID: 76149
+	// (set) Token: 0x06012976 RID: 76150
 	ERoleDevMainPage MainPage { get; set; }
 
-	// Token: 0x17001B6C RID: 7020
-	// (get) Token: 0x06014F77 RID: 85879
-	// (set) Token: 0x06014F78 RID: 85880
+	// Token: 0x17001BC4 RID: 7108
+	// (get) Token: 0x06012977 RID: 76151
+	// (set) Token: 0x06012978 RID: 76152
 	ERoleDevSubPageButton ButtonType { get; set; }
 
-	// Token: 0x17001B6D RID: 7021
-	// (get) Token: 0x06014F79 RID: 85881
-	// (set) Token: 0x06014F7A RID: 85882
+	// Token: 0x17001BC5 RID: 7109
+	// (get) Token: 0x06012979 RID: 76153
+	// (set) Token: 0x0601297A RID: 76154
 	string Title { get; set; }
 
-	// Token: 0x17001B6E RID: 7022
-	// (get) Token: 0x06014F7B RID: 85883
-	// (set) Token: 0x06014F7C RID: 85884
+	// Token: 0x17001BC6 RID: 7110
+	// (get) Token: 0x0601297B RID: 76155
+	// (set) Token: 0x0601297C RID: 76156
 	int ItemGroupId { get; set; }
 
-	// Token: 0x17001B6F RID: 7023
-	// (get) Token: 0x06014F7D RID: 85885
-	// (set) Token: 0x06014F7E RID: 85886
+	// Token: 0x17001BC7 RID: 7111
+	// (get) Token: 0x0601297D RID: 76157
+	// (set) Token: 0x0601297E RID: 76158
 	List<global::IItemMaterial> ItemGroup { get; set; }
 }

@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020004EF RID: 1263
+	// Token: 0x020004D9 RID: 1241
 	public sealed class ExpireConvertItemInfo : IMessage<ExpireConvertItemInfo>, IMessage, IEquatable<ExpireConvertItemInfo>, IDeepCloneable<ExpireConvertItemInfo>, IBufferMessage
 	{
-		// Token: 0x06007767 RID: 30567 RVA: 0x001234ED File Offset: 0x001216ED
+		// Token: 0x060075EB RID: 30187 RVA: 0x00120661 File Offset: 0x0011E861
 		[NullableContext(1)]
 		public static ExpireConvertItemInfo Create()
 		{
 			return new ExpireConvertItemInfo();
 		}
 
-		// Token: 0x17001725 RID: 5925
-		// (get) Token: 0x06007768 RID: 30568 RVA: 0x001234F4 File Offset: 0x001216F4
+		// Token: 0x170016D4 RID: 5844
+		// (get) Token: 0x060075EC RID: 30188 RVA: 0x00120668 File Offset: 0x0011E868
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<ExpireConvertItemInfo> Parser
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001726 RID: 5926
-		// (get) Token: 0x06007769 RID: 30569 RVA: 0x001234FB File Offset: 0x001216FB
+		// Token: 0x170016D5 RID: 5845
+		// (get) Token: 0x060075ED RID: 30189 RVA: 0x0012066F File Offset: 0x0011E86F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -42,8 +42,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001727 RID: 5927
-		// (get) Token: 0x0600776A RID: 30570 RVA: 0x001234FE File Offset: 0x001216FE
+		// Token: 0x170016D6 RID: 5846
+		// (get) Token: 0x060075EE RID: 30190 RVA: 0x00120672 File Offset: 0x0011E872
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -54,14 +54,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600776B RID: 30571 RVA: 0x00123505 File Offset: 0x00121705
+		// Token: 0x060075EF RID: 30191 RVA: 0x00120679 File Offset: 0x0011E879
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ExpireConvertItemInfo()
 		{
 		}
 
-		// Token: 0x0600776C RID: 30572 RVA: 0x00123518 File Offset: 0x00121718
+		// Token: 0x060075F0 RID: 30192 RVA: 0x0012068C File Offset: 0x0011E88C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ExpireConvertItemInfo(ExpireConvertItemInfo other) : this()
@@ -72,7 +72,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600776D RID: 30573 RVA: 0x00123565 File Offset: 0x00121765
+		// Token: 0x060075F1 RID: 30193 RVA: 0x001206D9 File Offset: 0x0011E8D9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ExpireConvertItemInfo Clone()
@@ -80,9 +80,9 @@ namespace Aki.Protocol
 			return new ExpireConvertItemInfo(this);
 		}
 
-		// Token: 0x17001728 RID: 5928
-		// (get) Token: 0x0600776E RID: 30574 RVA: 0x0012356D File Offset: 0x0012176D
-		// (set) Token: 0x0600776F RID: 30575 RVA: 0x00123575 File Offset: 0x00121775
+		// Token: 0x170016D7 RID: 5847
+		// (get) Token: 0x060075F2 RID: 30194 RVA: 0x001206E1 File Offset: 0x0011E8E1
+		// (set) Token: 0x060075F3 RID: 30195 RVA: 0x001206E9 File Offset: 0x0011E8E9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ItemId
@@ -97,9 +97,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001729 RID: 5929
-		// (get) Token: 0x06007770 RID: 30576 RVA: 0x0012357E File Offset: 0x0012177E
-		// (set) Token: 0x06007771 RID: 30577 RVA: 0x00123586 File Offset: 0x00121786
+		// Token: 0x170016D8 RID: 5848
+		// (get) Token: 0x060075F4 RID: 30196 RVA: 0x001206F2 File Offset: 0x0011E8F2
+		// (set) Token: 0x060075F5 RID: 30197 RVA: 0x001206FA File Offset: 0x0011E8FA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ItemCount
@@ -114,8 +114,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700172A RID: 5930
-		// (get) Token: 0x06007772 RID: 30578 RVA: 0x0012358F File Offset: 0x0012178F
+		// Token: 0x170016D9 RID: 5849
+		// (get) Token: 0x060075F6 RID: 30198 RVA: 0x00120703 File Offset: 0x0011E903
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<ExpireConvertTargetItemInfo> ExpireConvertTargetItemInfos
@@ -126,7 +126,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06007773 RID: 30579 RVA: 0x00123597 File Offset: 0x00121797
+		// Token: 0x060075F7 RID: 30199 RVA: 0x0012070B File Offset: 0x0011E90B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -134,7 +134,7 @@ namespace Aki.Protocol
 			return this.Equals(other as ExpireConvertItemInfo);
 		}
 
-		// Token: 0x06007774 RID: 30580 RVA: 0x001235A8 File Offset: 0x001217A8
+		// Token: 0x060075F8 RID: 30200 RVA: 0x0012071C File Offset: 0x0011E91C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(ExpireConvertItemInfo other)
@@ -142,7 +142,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ItemId == other.ItemId && this.ItemCount == other.ItemCount && this.expireConvertTargetItemInfos_.Equals(other.expireConvertTargetItemInfos_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06007775 RID: 30581 RVA: 0x00123608 File Offset: 0x00121808
+		// Token: 0x060075F9 RID: 30201 RVA: 0x0012077C File Offset: 0x0011E97C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06007776 RID: 30582 RVA: 0x0012366E File Offset: 0x0012186E
+		// Token: 0x060075FA RID: 30202 RVA: 0x001207E2 File Offset: 0x0011E9E2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -172,7 +172,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06007777 RID: 30583 RVA: 0x0012367B File Offset: 0x0012187B
+		// Token: 0x060075FB RID: 30203 RVA: 0x001207EF File Offset: 0x0011E9EF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -180,7 +180,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06007778 RID: 30584 RVA: 0x00123684 File Offset: 0x00121884
+		// Token: 0x060075FC RID: 30204 RVA: 0x001207F8 File Offset: 0x0011E9F8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -202,7 +202,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06007779 RID: 30585 RVA: 0x001236F0 File Offset: 0x001218F0
+		// Token: 0x060075FD RID: 30205 RVA: 0x00120864 File Offset: 0x0011EA64
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -224,7 +224,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600777A RID: 30586 RVA: 0x0012375C File Offset: 0x0012195C
+		// Token: 0x060075FE RID: 30206 RVA: 0x001208D0 File Offset: 0x0011EAD0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(ExpireConvertItemInfo other)
@@ -245,7 +245,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600777B RID: 30587 RVA: 0x001237BD File Offset: 0x001219BD
+		// Token: 0x060075FF RID: 30207 RVA: 0x00120931 File Offset: 0x0011EB31
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -253,7 +253,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600777C RID: 30588 RVA: 0x001237C8 File Offset: 0x001219C8
+		// Token: 0x06007600 RID: 30208 RVA: 0x0012093C File Offset: 0x0011EB3C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -290,31 +290,31 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04003E28 RID: 15912
+		// Token: 0x04003E19 RID: 15897
 		private static readonly MessageParser<ExpireConvertItemInfo> _parser = new MessageParser<ExpireConvertItemInfo>(() => new ExpireConvertItemInfo());
 
-		// Token: 0x04003E29 RID: 15913
+		// Token: 0x04003E1A RID: 15898
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04003E2A RID: 15914
+		// Token: 0x04003E1B RID: 15899
 		public const int ItemIdFieldNumber = 1;
 
-		// Token: 0x04003E2B RID: 15915
+		// Token: 0x04003E1C RID: 15900
 		private int itemId_;
 
-		// Token: 0x04003E2C RID: 15916
+		// Token: 0x04003E1D RID: 15901
 		public const int ItemCountFieldNumber = 2;
 
-		// Token: 0x04003E2D RID: 15917
+		// Token: 0x04003E1E RID: 15902
 		private int itemCount_;
 
-		// Token: 0x04003E2E RID: 15918
+		// Token: 0x04003E1F RID: 15903
 		public const int ExpireConvertTargetItemInfosFieldNumber = 3;
 
-		// Token: 0x04003E2F RID: 15919
+		// Token: 0x04003E20 RID: 15904
 		private static readonly FieldCodec<ExpireConvertTargetItemInfo> _repeated_expireConvertTargetItemInfos_codec = FieldCodec.ForMessage<ExpireConvertTargetItemInfo>(26U, ExpireConvertTargetItemInfo.Parser);
 
-		// Token: 0x04003E30 RID: 15920
+		// Token: 0x04003E21 RID: 15905
 		private readonly RepeatedField<ExpireConvertTargetItemInfo> expireConvertTargetItemInfos_ = new RepeatedField<ExpireConvertTargetItemInfo>();
 	}
 }

@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005BAA RID: 23466
+	// Token: 0x020061C0 RID: 25024
 	public struct IWuWaGoGear : IFlatbufferObject
 	{
-		// Token: 0x1700B14E RID: 45390
-		// (get) Token: 0x060282E9 RID: 164585 RVA: 0x005859C8 File Offset: 0x00583BC8
+		// Token: 0x1700BA96 RID: 47766
+		// (get) Token: 0x0602A8AD RID: 174253 RVA: 0x005CD458 File Offset: 0x005CB658
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060282EA RID: 164586 RVA: 0x005859D5 File Offset: 0x00583BD5
+		// Token: 0x0602A8AE RID: 174254 RVA: 0x005CD465 File Offset: 0x005CB665
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060282EB RID: 164587 RVA: 0x005859DC File Offset: 0x00583BDC
+		// Token: 0x0602A8AF RID: 174255 RVA: 0x005CD46C File Offset: 0x005CB66C
 		public static IWuWaGoGear GetRootAsIWuWaGoGear(ByteBuffer _bb)
 		{
 			return IWuWaGoGear.GetRootAsIWuWaGoGear(_bb, default(IWuWaGoGear));
 		}
 
-		// Token: 0x060282EC RID: 164588 RVA: 0x005859F8 File Offset: 0x00583BF8
+		// Token: 0x0602A8B0 RID: 174256 RVA: 0x005CD488 File Offset: 0x005CB688
 		public static IWuWaGoGear GetRootAsIWuWaGoGear(ByteBuffer _bb, IWuWaGoGear obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060282ED RID: 164589 RVA: 0x00585A15 File Offset: 0x00583C15
+		// Token: 0x0602A8B1 RID: 174257 RVA: 0x005CD4A5 File Offset: 0x005CB6A5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060282EE RID: 164590 RVA: 0x00585A24 File Offset: 0x00583C24
+		// Token: 0x0602A8B2 RID: 174258 RVA: 0x005CD4B4 File Offset: 0x005CB6B4
 		public IWuWaGoGear __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B14F RID: 45391
-		// (get) Token: 0x060282EF RID: 164591 RVA: 0x00585A34 File Offset: 0x00583C34
+		// Token: 0x1700BA97 RID: 47767
+		// (get) Token: 0x0602A8B3 RID: 174259 RVA: 0x005CD4C4 File Offset: 0x005CB6C4
 		public EWuWaGoEntityType Type
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060282F0 RID: 164592 RVA: 0x00585A70 File Offset: 0x00583C70
+		// Token: 0x0602A8B4 RID: 174260 RVA: 0x005CD500 File Offset: 0x005CB700
 		public int GridEntityIds(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700B150 RID: 45392
-		// (get) Token: 0x060282F1 RID: 164593 RVA: 0x00585AB0 File Offset: 0x00583CB0
+		// Token: 0x1700BA98 RID: 47768
+		// (get) Token: 0x0602A8B5 RID: 174261 RVA: 0x005CD540 File Offset: 0x005CB740
 		public int GridEntityIdsLength
 		{
 			get
@@ -89,19 +89,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060282F2 RID: 164594 RVA: 0x00585ADB File Offset: 0x00583CDB
+		// Token: 0x0602A8B6 RID: 174262 RVA: 0x005CD56B File Offset: 0x005CB76B
 		public Span<int> GetGridEntityIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x060282F3 RID: 164595 RVA: 0x00585AEA File Offset: 0x00583CEA
+		// Token: 0x0602A8B7 RID: 174263 RVA: 0x005CD57A File Offset: 0x005CB77A
 		public int[] GetGridEntityIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(6);
 		}
 
-		// Token: 0x060282F4 RID: 164596 RVA: 0x00585AF8 File Offset: 0x00583CF8
+		// Token: 0x0602A8B8 RID: 174264 RVA: 0x005CD588 File Offset: 0x005CB788
 		public static Offset<IWuWaGoGear> CreateIWuWaGoGear(FlatBufferBuilder builder, EWuWaGoEntityType Type = EWuWaGoEntityType.LevelCenter, VectorOffset GridEntityIdsOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -110,25 +110,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IWuWaGoGear.EndIWuWaGoGear(builder);
 		}
 
-		// Token: 0x060282F5 RID: 164597 RVA: 0x00585B15 File Offset: 0x00583D15
+		// Token: 0x0602A8B9 RID: 174265 RVA: 0x005CD5A5 File Offset: 0x005CB7A5
 		public static void StartIWuWaGoGear(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060282F6 RID: 164598 RVA: 0x00585B1E File Offset: 0x00583D1E
+		// Token: 0x0602A8BA RID: 174266 RVA: 0x005CD5AE File Offset: 0x005CB7AE
 		public static void AddType(FlatBufferBuilder builder, EWuWaGoEntityType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060282F7 RID: 164599 RVA: 0x00585B29 File Offset: 0x00583D29
+		// Token: 0x0602A8BB RID: 174267 RVA: 0x005CD5B9 File Offset: 0x005CB7B9
 		public static void AddGridEntityIds(FlatBufferBuilder builder, VectorOffset gridEntityIdsOffset)
 		{
 			builder.AddOffset(1, gridEntityIdsOffset.Value, 0);
 		}
 
-		// Token: 0x060282F8 RID: 164600 RVA: 0x00585B3C File Offset: 0x00583D3C
+		// Token: 0x0602A8BC RID: 174268 RVA: 0x005CD5CC File Offset: 0x005CB7CC
 		public static VectorOffset CreateGridEntityIdsVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -139,7 +139,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060282F9 RID: 164601 RVA: 0x00585B73 File Offset: 0x00583D73
+		// Token: 0x0602A8BD RID: 174269 RVA: 0x005CD603 File Offset: 0x005CB803
 		public static VectorOffset CreateGridEntityIdsVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -147,7 +147,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060282FA RID: 164602 RVA: 0x00585B8D File Offset: 0x00583D8D
+		// Token: 0x0602A8BE RID: 174270 RVA: 0x005CD61D File Offset: 0x005CB81D
 		public static VectorOffset CreateGridEntityIdsVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -155,7 +155,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060282FB RID: 164603 RVA: 0x00585BAB File Offset: 0x00583DAB
+		// Token: 0x0602A8BF RID: 174271 RVA: 0x005CD63B File Offset: 0x005CB83B
 		public static VectorOffset CreateGridEntityIdsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -163,19 +163,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060282FC RID: 164604 RVA: 0x00585BC4 File Offset: 0x00583DC4
+		// Token: 0x0602A8C0 RID: 174272 RVA: 0x005CD654 File Offset: 0x005CB854
 		public static void StartGridEntityIdsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x060282FD RID: 164605 RVA: 0x00585BCF File Offset: 0x00583DCF
+		// Token: 0x0602A8C1 RID: 174273 RVA: 0x005CD65F File Offset: 0x005CB85F
 		public static Offset<IWuWaGoGear> EndIWuWaGoGear(FlatBufferBuilder builder)
 		{
 			return new Offset<IWuWaGoGear>(builder.EndTable());
 		}
 
-		// Token: 0x060282FE RID: 164606 RVA: 0x00585BDC File Offset: 0x00583DDC
+		// Token: 0x0602A8C2 RID: 174274 RVA: 0x005CD66C File Offset: 0x005CB86C
 		public IWuWaGoGearT UnPack()
 		{
 			IWuWaGoGearT wuWaGoGearT = new IWuWaGoGearT();
@@ -183,7 +183,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return wuWaGoGearT;
 		}
 
-		// Token: 0x060282FF RID: 164607 RVA: 0x00585BF8 File Offset: 0x00583DF8
+		// Token: 0x0602A8C3 RID: 174275 RVA: 0x005CD688 File Offset: 0x005CB888
 		public void UnPackTo(IWuWaGoGearT _o)
 		{
 			_o.Type = this.Type;
@@ -194,7 +194,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06028300 RID: 164608 RVA: 0x00585C40 File Offset: 0x00583E40
+		// Token: 0x0602A8C4 RID: 174276 RVA: 0x005CD6D0 File Offset: 0x005CB8D0
 		public static Offset<IWuWaGoGear> Pack(FlatBufferBuilder builder, IWuWaGoGearT _o)
 		{
 			if (_o == null)
@@ -210,7 +210,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IWuWaGoGear.CreateIWuWaGoGear(builder, _o.Type, gridEntityIdsOffset);
 		}
 
-		// Token: 0x0400F31C RID: 62236
+		// Token: 0x04010022 RID: 65570
 		private Table __p;
 	}
 }

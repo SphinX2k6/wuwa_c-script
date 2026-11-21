@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000898 RID: 2200
+	// Token: 0x020008B4 RID: 2228
 	public class ConfigRoleDevLevelLimitAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060033A2 RID: 13218 RVA: 0x0017D3E0 File Offset: 0x0017B5E0
+		// Token: 0x0600344A RID: 13386 RVA: 0x001846C8 File Offset: 0x001828C8
 		static ConfigRoleDevLevelLimitAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRoleDevLevelLimitAll.CreateStaticDefaultValue), new Action(ConfigRoleDevLevelLimitAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060033A3 RID: 13219 RVA: 0x0017D400 File Offset: 0x0017B600
+		// Token: 0x0600344B RID: 13387 RVA: 0x001846E8 File Offset: 0x001828E8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRoleDevLevelLimitAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060033A4 RID: 13220 RVA: 0x0017D47F File Offset: 0x0017B67F
+		// Token: 0x0600344C RID: 13388 RVA: 0x00184767 File Offset: 0x00182967
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRoleDevLevelLimitAll.LogPair = null;
 			ConfigRoleDevLevelLimitAll.HandleId = 0;
 		}
 
-		// Token: 0x060033A5 RID: 13221 RVA: 0x0017D48D File Offset: 0x0017B68D
+		// Token: 0x0600344D RID: 13389 RVA: 0x00184775 File Offset: 0x00182975
 		public static void Init()
 		{
 			ConfigRoleDevLevelLimitAll.HandleId = ConfigCommon.InitDataStatement(ConfigRoleDevLevelLimitAll.HandleId, "db_roledev.db", "select BinData from `RoleDevLevelLimit`");
 		}
 
-		// Token: 0x060033A6 RID: 13222 RVA: 0x0017D4A8 File Offset: 0x0017B6A8
+		// Token: 0x0600344E RID: 13390 RVA: 0x00184790 File Offset: 0x00182990
 		[NullableContext(2)]
 		public static IReadOnlyList<RoleDevLevelLimit> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04003C0E RID: 15374
+		// Token: 0x04003CD2 RID: 15570
 		private const string DB = "db_roledev.db";
 
-		// Token: 0x04003C0F RID: 15375
+		// Token: 0x04003CD3 RID: 15571
 		private const string FILE = "g.共鸣者培养计划.xlsx";
 
-		// Token: 0x04003C10 RID: 15376
+		// Token: 0x04003CD4 RID: 15572
 		private const string TABLE = "RoleDevLevelLimit";
 
-		// Token: 0x04003C11 RID: 15377
+		// Token: 0x04003CD5 RID: 15573
 		private const string COMMAND = "select BinData from `RoleDevLevelLimit`";
 
-		// Token: 0x04003C12 RID: 15378
+		// Token: 0x04003CD6 RID: 15574
 		private const string KEY_PREFIX = "RoleDevLevelLimitAll";
 
-		// Token: 0x04003C13 RID: 15379
+		// Token: 0x04003CD7 RID: 15575
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003C14 RID: 15380
+		// Token: 0x04003CD8 RID: 15576
 		private static int HandleId;
 	}
 }

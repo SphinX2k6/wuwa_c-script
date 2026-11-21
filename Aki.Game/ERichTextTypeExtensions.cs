@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x02003557 RID: 13655
+// Token: 0x02002ACC RID: 10956
 public static class ERichTextTypeExtensions
 {
-	// Token: 0x0601DFAE RID: 122798 RVA: 0x0086CC84 File Offset: 0x0086AE84
+	// Token: 0x0601BCD6 RID: 113878 RVA: 0x008948E4 File Offset: 0x00892AE4
 	public static string ToEnumString(this ERichTextType value)
 	{
 		string result;
@@ -34,7 +34,7 @@ public static class ERichTextTypeExtensions
 		return result;
 	}
 
-	// Token: 0x0601DFAF RID: 122799 RVA: 0x0086CCF0 File Offset: 0x0086AEF0
+	// Token: 0x0601BCD7 RID: 113879 RVA: 0x00894950 File Offset: 0x00892B50
 	public static ERichTextType FromString(string name)
 	{
 		ERichTextType result;
@@ -45,7 +45,7 @@ public static class ERichTextTypeExtensions
 		return result;
 	}
 
-	// Token: 0x0601DFB0 RID: 122800 RVA: 0x0086CD1C File Offset: 0x0086AF1C
+	// Token: 0x0601BCD8 RID: 113880 RVA: 0x0089497C File Offset: 0x00892B7C
 	public static bool TryFromString(string name, out ERichTextType value)
 	{
 		if (string.IsNullOrEmpty(name))
@@ -87,7 +87,7 @@ public static class ERichTextTypeExtensions
 		return true;
 	}
 
-	// Token: 0x0601DFB1 RID: 122801 RVA: 0x0086CDA8 File Offset: 0x0086AFA8
+	// Token: 0x0601BCD9 RID: 113881 RVA: 0x00894A08 File Offset: 0x00892C08
 	public static string[] GetStringValues()
 	{
 		return new string[]
@@ -101,7 +101,7 @@ public static class ERichTextTypeExtensions
 		};
 	}
 
-	// Token: 0x0601DFB2 RID: 122802 RVA: 0x0086CDE0 File Offset: 0x0086AFE0
+	// Token: 0x0601BCDA RID: 113882 RVA: 0x00894A40 File Offset: 0x00892C40
 	public static ERichTextType[] GetValues()
 	{
 		return new ERichTextType[]
@@ -115,7 +115,7 @@ public static class ERichTextTypeExtensions
 		};
 	}
 
-	// Token: 0x0601DFB3 RID: 122803 RVA: 0x0086CDF3 File Offset: 0x0086AFF3
+	// Token: 0x0601BCDB RID: 113883 RVA: 0x00894A53 File Offset: 0x00892C53
 	public static string[] GetNames()
 	{
 		return new string[]

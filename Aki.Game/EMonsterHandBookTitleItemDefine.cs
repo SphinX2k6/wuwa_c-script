@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x02001E31 RID: 7729
+// Token: 0x020012F3 RID: 4851
 internal class EMonsterHandBookTitleItemDefine
 {
-	// Token: 0x04006D05 RID: 27909
+	// Token: 0x04006DE6 RID: 28134
 	public const int TitleText = 0;
 }

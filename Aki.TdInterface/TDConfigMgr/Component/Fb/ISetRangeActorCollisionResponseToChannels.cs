@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000ACD RID: 2765
+	// Token: 0x02000B97 RID: 2967
 	public class ISetRangeActorCollisionResponseToChannels
 	{
-		// Token: 0x06003FAF RID: 16303 RVA: 0x000A2CF3 File Offset: 0x000A0EF3
-		[NullableContext(1)]
+		// Token: 0x060043D9 RID: 17369 RVA: 0x000AC2E7 File Offset: 0x000AA4E7
 		public static ISetRangeActorCollisionResponseToChannels Create(ISetRangeActorCollisionResponseToChannels? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000FD2 RID: 4050
-		// (get) Token: 0x06003FB0 RID: 16304 RVA: 0x000A2D12 File Offset: 0x000A0F12
+		// Token: 0x170010A6 RID: 4262
+		// (get) Token: 0x060043DA RID: 17370 RVA: 0x000AC306 File Offset: 0x000AA506
 		public virtual ECollisionChannelType CollisionChannelType
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FD3 RID: 4051
-		// (get) Token: 0x06003FB1 RID: 16305 RVA: 0x000A2D1F File Offset: 0x000A0F1F
+		// Token: 0x170010A7 RID: 4263
+		// (get) Token: 0x060043DB RID: 17371 RVA: 0x000AC313 File Offset: 0x000AA513
 		public virtual ECollisionResponseType CollisionResponseType
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002370 RID: 9072
+		// Token: 0x0400258C RID: 9612
 		private ISetRangeActorCollisionResponseToChannels Instance;
 	}
 }

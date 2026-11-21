@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D7D RID: 3453
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E79 RID: 3705
 	public class IQteCallback
 	{
-		// Token: 0x06004E90 RID: 20112 RVA: 0x000C2E36 File Offset: 0x000C1036
+		// Token: 0x060053B5 RID: 21429 RVA: 0x000CE686 File Offset: 0x000CC886
 		public static IQteCallback Create(IQteCallback? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001953 RID: 6483
-		// (get) Token: 0x06004E91 RID: 20113 RVA: 0x000C2E58 File Offset: 0x000C1058
+		// Token: 0x17001ABE RID: 6846
+		// (get) Token: 0x060053B6 RID: 21430 RVA: 0x000CE6A8 File Offset: 0x000CC8A8
 		public virtual List<ActionInfo> Actions
 		{
 			get
@@ -45,8 +43,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001954 RID: 6484
-		// (get) Token: 0x06004E92 RID: 20114 RVA: 0x000C2EC1 File Offset: 0x000C10C1
+		// Token: 0x17001ABF RID: 6847
+		// (get) Token: 0x060053B7 RID: 21431 RVA: 0x000CE711 File Offset: 0x000CC911
 		[Nullable(2)]
 		public virtual string SendSelfEvent
 		{
@@ -57,13 +55,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002D18 RID: 11544
+		// Token: 0x04002FDE RID: 12254
 		private IQteCallback Instance;
 
-		// Token: 0x04002D19 RID: 11545
+		// Token: 0x04002FDF RID: 12255
 		private List<ActionInfo> _ActionsCache;
 
-		// Token: 0x04002D1A RID: 11546
+		// Token: 0x04002FE0 RID: 12256
 		private bool _ActionsInited;
 	}
 }

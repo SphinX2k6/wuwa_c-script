@@ -2,46 +2,46 @@
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 {
-	// Token: 0x02006EDB RID: 28379
+	// Token: 0x0200605B RID: 24667
 	internal enum EDollGrabMachineViewComponent
 	{
-		// Token: 0x04023FF4 RID: 147444
+		// Token: 0x0401F2A7 RID: 127655
 		PnlCaption,
-		// Token: 0x04023FF5 RID: 147445
+		// Token: 0x0401F2A8 RID: 127656
 		BtnClaw,
-		// Token: 0x04023FF6 RID: 147446
+		// Token: 0x0401F2A9 RID: 127657
 		TxtClaw,
-		// Token: 0x04023FF7 RID: 147447
+		// Token: 0x0401F2AA RID: 127658
 		CostNor,
-		// Token: 0x04023FF8 RID: 147448
+		// Token: 0x0401F2AB RID: 127659
 		TxtCost,
-		// Token: 0x04023FF9 RID: 147449
+		// Token: 0x0401F2AC RID: 127660
 		Mission,
-		// Token: 0x04023FFA RID: 147450
+		// Token: 0x0401F2AD RID: 127661
 		PnlJoystick,
-		// Token: 0x04023FFB RID: 147451
+		// Token: 0x0401F2AE RID: 127662
 		SldBar,
-		// Token: 0x04023FFC RID: 147452
+		// Token: 0x0401F2AF RID: 127663
 		SldBarAdd,
-		// Token: 0x04023FFD RID: 147453
+		// Token: 0x0401F2B0 RID: 127664
 		PnlScore,
-		// Token: 0x04023FFE RID: 147454
+		// Token: 0x0401F2B1 RID: 127665
 		ArtTxtScore,
-		// Token: 0x04023FFF RID: 147455
+		// Token: 0x0401F2B2 RID: 127666
 		ArtTxtScoreAdd,
-		// Token: 0x04024000 RID: 147456
+		// Token: 0x0401F2B3 RID: 127667
 		PnlAddTimeTxt,
-		// Token: 0x04024001 RID: 147457
+		// Token: 0x0401F2B4 RID: 127668
 		ArtTextTimeAdd,
-		// Token: 0x04024002 RID: 147458
+		// Token: 0x0401F2B5 RID: 127669
 		PnlBar,
-		// Token: 0x04024003 RID: 147459
+		// Token: 0x0401F2B6 RID: 127670
 		PnlContent,
-		// Token: 0x04024004 RID: 147460
+		// Token: 0x0401F2B7 RID: 127671
 		SprFill,
-		// Token: 0x04024005 RID: 147461
+		// Token: 0x0401F2B8 RID: 127672
 		SprPoint,
-		// Token: 0x04024006 RID: 147462
+		// Token: 0x0401F2B9 RID: 127673
 		TexIcon
 	}
 }

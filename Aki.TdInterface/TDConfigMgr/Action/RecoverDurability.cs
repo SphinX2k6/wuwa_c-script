@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002135 RID: 8501
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002396 RID: 9110
 	public class RecoverDurability : ActionParams
 	{
-		// Token: 0x0600BB3C RID: 47932 RVA: 0x001B07C0 File Offset: 0x001AE9C0
+		// Token: 0x0600C6CA RID: 50890 RVA: 0x001C7974 File Offset: 0x001C5B74
 		private RecoverDurability_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BB3D RID: 47933 RVA: 0x001B07F8 File Offset: 0x001AE9F8
+		// Token: 0x0600C6CB RID: 50891 RVA: 0x001C79AC File Offset: 0x001C5BAC
 		public static RecoverDurability Create([Nullable(2)] RecoverDurability instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BB3E RID: 47934 RVA: 0x001B080B File Offset: 0x001AEA0B
+		// Token: 0x0600C6CC RID: 50892 RVA: 0x001C79BF File Offset: 0x001C5BBF
 		public static RecoverDurability CreateFromSetValue([Nullable(2)] RecoverDurability_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BB3F RID: 47935 RVA: 0x001B081E File Offset: 0x001AEA1E
+		// Token: 0x0600C6CD RID: 50893 RVA: 0x001C79D2 File Offset: 0x001C5BD2
 		public RecoverDurability_SetValue ToSetValue()
 		{
 			return new RecoverDurability_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700392B RID: 14635
-		// (get) Token: 0x0600BB40 RID: 47936 RVA: 0x001B0831 File Offset: 0x001AEA31
-		// (set) Token: 0x0600BB41 RID: 47937 RVA: 0x001B085C File Offset: 0x001AEA5C
+		// Token: 0x17003C18 RID: 15384
+		// (get) Token: 0x0600C6CE RID: 50894 RVA: 0x001C79E5 File Offset: 0x001C5BE5
+		// (set) Token: 0x0600C6CF RID: 50895 RVA: 0x001C7A10 File Offset: 0x001C5C10
 		public virtual int EntityId
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04007002 RID: 28674
+		// Token: 0x04007637 RID: 30263
 		[Nullable(2)]
 		protected new RecoverDurability FbInstance;
 
-		// Token: 0x04007003 RID: 28675
+		// Token: 0x04007638 RID: 30264
 		[Nullable(2)]
 		protected RecoverDurability_SetValue PocoInterface;
 	}

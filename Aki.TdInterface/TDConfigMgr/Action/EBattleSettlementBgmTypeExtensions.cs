@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022B7 RID: 8887
+	// Token: 0x02002526 RID: 9510
 	public static class EBattleSettlementBgmTypeExtensions
 	{
-		// Token: 0x0600C2B6 RID: 49846 RVA: 0x001C73A4 File Offset: 0x001C55A4
+		// Token: 0x0600CE85 RID: 52869 RVA: 0x001DF1AC File Offset: 0x001DD3AC
 		public static string ToEnumString(this EBattleSettlementBgmType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C2B7 RID: 49847 RVA: 0x001C73CC File Offset: 0x001C55CC
+		// Token: 0x0600CE86 RID: 52870 RVA: 0x001DF1D4 File Offset: 0x001DD3D4
 		public static EBattleSettlementBgmType FromString(string name)
 		{
 			EBattleSettlementBgmType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C2B8 RID: 49848 RVA: 0x001C73F5 File Offset: 0x001C55F5
+		// Token: 0x0600CE87 RID: 52871 RVA: 0x001DF1FD File Offset: 0x001DD3FD
 		public static bool TryFromString(string name, out EBattleSettlementBgmType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C2B9 RID: 49849 RVA: 0x001C741A File Offset: 0x001C561A
+		// Token: 0x0600CE88 RID: 52872 RVA: 0x001DF222 File Offset: 0x001DD422
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C2BA RID: 49850 RVA: 0x001C742A File Offset: 0x001C562A
+		// Token: 0x0600CE89 RID: 52873 RVA: 0x001DF232 File Offset: 0x001DD432
 		public static EBattleSettlementBgmType[] GetValues()
 		{
 			return new EBattleSettlementBgmType[1];
 		}
 
-		// Token: 0x0600C2BB RID: 49851 RVA: 0x001C7432 File Offset: 0x001C5632
+		// Token: 0x0600CE8A RID: 52874 RVA: 0x001DF23A File Offset: 0x001DD43A
 		public static string[] GetNames()
 		{
 			return new string[]

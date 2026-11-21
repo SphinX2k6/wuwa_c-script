@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200675D RID: 26461
+	// Token: 0x02006DDD RID: 28125
 	public class IFadeBackgroundFadeInEffectT
 	{
-		// Token: 0x1700C46E RID: 50286
-		// (get) Token: 0x0602E085 RID: 188549 RVA: 0x0064A5B5 File Offset: 0x006487B5
-		// (set) Token: 0x0602E086 RID: 188550 RVA: 0x0064A5BD File Offset: 0x006487BD
+		// Token: 0x1700CE24 RID: 52772
+		// (get) Token: 0x060308CB RID: 198859 RVA: 0x00697CF9 File Offset: 0x00695EF9
+		// (set) Token: 0x060308CC RID: 198860 RVA: 0x00697D01 File Offset: 0x00695F01
 		public TFadeBackgroundFadeInEffectUnion FadeInEffect { get; set; }
 
-		// Token: 0x0602E087 RID: 188551 RVA: 0x0064A5C6 File Offset: 0x006487C6
+		// Token: 0x060308CD RID: 198861 RVA: 0x00697D0A File Offset: 0x00695F0A
 		public IFadeBackgroundFadeInEffectT()
 		{
 			this.FadeInEffect = null;

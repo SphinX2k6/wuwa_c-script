@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001765 RID: 5989
+// Token: 0x02000C1E RID: 3102
 [NullableContext(2)]
 [Nullable(0)]
 public class VisionRefineAttributePanel : UiPanelBase
 {
-	// Token: 0x0600AD88 RID: 44424 RVA: 0x00270F60 File Offset: 0x0026F160
+	// Token: 0x0600816F RID: 33135 RVA: 0x0027B420 File Offset: 0x00279620
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,7 +28,7 @@ public class VisionRefineAttributePanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600AD89 RID: 44425 RVA: 0x0027100C File Offset: 0x0026F20C
+	// Token: 0x06008170 RID: 33136 RVA: 0x0027B4CC File Offset: 0x002796CC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		VisionRefineAttributePanel.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -39,7 +39,7 @@ public class VisionRefineAttributePanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600AD8A RID: 44426 RVA: 0x00271050 File Offset: 0x0026F250
+	// Token: 0x06008171 RID: 33137 RVA: 0x0027B510 File Offset: 0x00279710
 	[NullableContext(1)]
 	public void RefreshItemNow(AttrListScrollData[] dataList)
 	{
@@ -55,20 +55,20 @@ public class VisionRefineAttributePanel : UiPanelBase
 		this.ItemSubNew.RefreshUi(attributeData2);
 	}
 
-	// Token: 0x0600AD8B RID: 44427 RVA: 0x002710AF File Offset: 0x0026F2AF
+	// Token: 0x06008172 RID: 33138 RVA: 0x0027B56F File Offset: 0x0027976F
 	public void RefreshItemSwitch(IRefineAttrItemData data)
 	{
 		this.ItemMainNew.RefreshUi(data);
 	}
 
-	// Token: 0x0600AD8C RID: 44428 RVA: 0x002710BD File Offset: 0x0026F2BD
+	// Token: 0x06008173 RID: 33139 RVA: 0x0027B57D File Offset: 0x0027977D
 	[NullableContext(1)]
 	public void BindClickCallBack(Action callback)
 	{
 		this.OnClickCallBack = callback;
 	}
 
-	// Token: 0x0600AD8D RID: 44429 RVA: 0x002710C6 File Offset: 0x0026F2C6
+	// Token: 0x06008174 RID: 33140 RVA: 0x0027B586 File Offset: 0x00279786
 	private void OnClickMainNew()
 	{
 		if (this.OnClickCallBack != null)
@@ -77,34 +77,34 @@ public class VisionRefineAttributePanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x04004EE1 RID: 20193
+	// Token: 0x04004F8B RID: 20363
 	private PhantomTipsAttributeItem ItemMainNow;
 
-	// Token: 0x04004EE2 RID: 20194
+	// Token: 0x04004F8C RID: 20364
 	private PhantomTipsAttributeItem ItemSubNow;
 
-	// Token: 0x04004EE3 RID: 20195
+	// Token: 0x04004F8D RID: 20365
 	private PhantomTipsAttributeItem ItemSubNew;
 
-	// Token: 0x04004EE4 RID: 20196
+	// Token: 0x04004F8E RID: 20366
 	private AttributeSelectItem ItemMainNew;
 
-	// Token: 0x04004EE5 RID: 20197
+	// Token: 0x04004F8F RID: 20367
 	private Action OnClickCallBack;
 
-	// Token: 0x02007D56 RID: 32086
+	// Token: 0x02006EDC RID: 28380
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x040290AE RID: 168110
+		// Token: 0x040243D9 RID: 148441
 		TextTips,
-		// Token: 0x040290AF RID: 168111
+		// Token: 0x040243DA RID: 148442
 		ItemMainNow,
-		// Token: 0x040290B0 RID: 168112
+		// Token: 0x040243DB RID: 148443
 		ItemMainNew,
-		// Token: 0x040290B1 RID: 168113
+		// Token: 0x040243DC RID: 148444
 		ItemSubNow,
-		// Token: 0x040290B2 RID: 168114
+		// Token: 0x040243DD RID: 148445
 		ItemSubNew
 	}
 }

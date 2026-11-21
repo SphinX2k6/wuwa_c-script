@@ -9,7 +9,7 @@ using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001C3C RID: 7228
+// Token: 0x020010FB RID: 4347
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -18,7 +18,7 @@ using UnrealEngine;
 })]
 public class FriendMultipleApplyItem : GridProxyAbstract<FriendApplyData>
 {
-	// Token: 0x0600D9BC RID: 55740 RVA: 0x00327F90 File Offset: 0x00326190
+	// Token: 0x0600ADD2 RID: 44498 RVA: 0x00333390 File Offset: 0x00331590
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -49,13 +49,13 @@ public class FriendMultipleApplyItem : GridProxyAbstract<FriendApplyData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D9BD RID: 55741 RVA: 0x003280DD File Offset: 0x003262DD
+	// Token: 0x0600ADD3 RID: 44499 RVA: 0x003334DD File Offset: 0x003316DD
 	protected override void OnStart()
 	{
 		this.CountDownBar = base.GetSprite(3);
 	}
 
-	// Token: 0x0600D9BE RID: 55742 RVA: 0x003280EC File Offset: 0x003262EC
+	// Token: 0x0600ADD4 RID: 44500 RVA: 0x003334EC File Offset: 0x003316EC
 	[NullableContext(1)]
 	public override void Refresh(FriendApplyData data, bool isSelected, int gridIndex)
 	{
@@ -71,7 +71,7 @@ public class FriendMultipleApplyItem : GridProxyAbstract<FriendApplyData>
 		base.GetText(2).SetText(applyPlayerData.PlayerLevel.ToString(), true);
 	}
 
-	// Token: 0x0600D9BF RID: 55743 RVA: 0x00328184 File Offset: 0x00326384
+	// Token: 0x0600ADD5 RID: 44501 RVA: 0x00333584 File Offset: 0x00331784
 	public void UpdateCountDownProgressBar()
 	{
 		if (this.ApplyData == null)
@@ -85,7 +85,7 @@ public class FriendMultipleApplyItem : GridProxyAbstract<FriendApplyData>
 		}
 	}
 
-	// Token: 0x0600D9C0 RID: 55744 RVA: 0x003281F4 File Offset: 0x003263F4
+	// Token: 0x0600ADD6 RID: 44502 RVA: 0x003335F4 File Offset: 0x003317F4
 	private void OnClickAgreeBtn()
 	{
 		FriendController.Instance.RequestFriendApplyHandle(new List<int>
@@ -99,7 +99,7 @@ public class FriendMultipleApplyItem : GridProxyAbstract<FriendApplyData>
 		EventSystem.Instance.Emit<int>(EEventName.FriendOnMultiItemAction, this.ApplyData.ApplyPlayerData.PlayerId);
 	}
 
-	// Token: 0x0600D9C1 RID: 55745 RVA: 0x00328250 File Offset: 0x00326450
+	// Token: 0x0600ADD7 RID: 44503 RVA: 0x00333650 File Offset: 0x00331850
 	private void OnClickRefuseBtn()
 	{
 		FriendController.Instance.RequestFriendApplyHandle(new List<int>
@@ -113,32 +113,32 @@ public class FriendMultipleApplyItem : GridProxyAbstract<FriendApplyData>
 		EventSystem.Instance.Emit<int>(EEventName.FriendOnMultiItemAction, this.ApplyData.ApplyPlayerData.PlayerId);
 	}
 
-	// Token: 0x04006332 RID: 25394
+	// Token: 0x04006404 RID: 25604
 	private FriendApplyData ApplyData;
 
-	// Token: 0x04006333 RID: 25395
+	// Token: 0x04006405 RID: 25605
 	private UUISprite CountDownBar;
 
-	// Token: 0x02008200 RID: 33280
+	// Token: 0x02007389 RID: 29577
 	[NullableContext(0)]
 	private class EFriendMultipleApplyItem
 	{
-		// Token: 0x0402A6CB RID: 173771
+		// Token: 0x040259F2 RID: 154098
 		public const int PlayerName = 0;
 
-		// Token: 0x0402A6CC RID: 173772
+		// Token: 0x040259F3 RID: 154099
 		public const int RoleHead = 1;
 
-		// Token: 0x0402A6CD RID: 173773
+		// Token: 0x040259F4 RID: 154100
 		public const int Level = 2;
 
-		// Token: 0x0402A6CE RID: 173774
+		// Token: 0x040259F5 RID: 154101
 		public const int CountDownProgressBar = 3;
 
-		// Token: 0x0402A6CF RID: 173775
+		// Token: 0x040259F6 RID: 154102
 		public const int AgreeBtn = 4;
 
-		// Token: 0x0402A6D0 RID: 173776
+		// Token: 0x040259F7 RID: 154103
 		public const int RefuseBtn = 5;
 	}
 }

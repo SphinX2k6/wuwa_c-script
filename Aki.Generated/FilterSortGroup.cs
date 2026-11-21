@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000C72 RID: 3186
+	// Token: 0x02000D56 RID: 3414
 	public struct FilterSortGroup : IFlatbufferObject
 	{
-		// Token: 0x1700110E RID: 4366
-		// (get) Token: 0x06006E87 RID: 28295 RVA: 0x0022F331 File Offset: 0x0022D531
+		// Token: 0x1700116B RID: 4459
+		// (get) Token: 0x06007492 RID: 29842 RVA: 0x0024E519 File Offset: 0x0024C719
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006E88 RID: 28296 RVA: 0x0022F33E File Offset: 0x0022D53E
+		// Token: 0x06007493 RID: 29843 RVA: 0x0024E526 File Offset: 0x0024C726
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06006E89 RID: 28297 RVA: 0x0022F348 File Offset: 0x0022D548
+		// Token: 0x06007494 RID: 29844 RVA: 0x0024E530 File Offset: 0x0024C730
 		public static FilterSortGroup GetRootAsFilterSortGroup(ByteBuffer _bb)
 		{
 			return FilterSortGroup.GetRootAsFilterSortGroup(_bb, default(FilterSortGroup));
 		}
 
-		// Token: 0x06006E8A RID: 28298 RVA: 0x0022F364 File Offset: 0x0022D564
+		// Token: 0x06007495 RID: 29845 RVA: 0x0024E54C File Offset: 0x0024C74C
 		public static FilterSortGroup GetRootAsFilterSortGroup(ByteBuffer _bb, FilterSortGroup obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06006E8B RID: 28299 RVA: 0x0022F381 File Offset: 0x0022D581
+		// Token: 0x06007496 RID: 29846 RVA: 0x0024E569 File Offset: 0x0024C769
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06006E8C RID: 28300 RVA: 0x0022F390 File Offset: 0x0022D590
+		// Token: 0x06007497 RID: 29847 RVA: 0x0024E578 File Offset: 0x0024C778
 		public FilterSortGroup __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700110F RID: 4367
-		// (get) Token: 0x06006E8D RID: 28301 RVA: 0x0022F3A0 File Offset: 0x0022D5A0
+		// Token: 0x1700116C RID: 4460
+		// (get) Token: 0x06007498 RID: 29848 RVA: 0x0024E588 File Offset: 0x0024C788
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001110 RID: 4368
-		// (get) Token: 0x06006E8E RID: 28302 RVA: 0x0022F3DC File Offset: 0x0022D5DC
+		// Token: 0x1700116D RID: 4461
+		// (get) Token: 0x06007499 RID: 29849 RVA: 0x0024E5C4 File Offset: 0x0024C7C4
 		public int SortId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001111 RID: 4369
-		// (get) Token: 0x06006E8F RID: 28303 RVA: 0x0022F418 File Offset: 0x0022D618
+		// Token: 0x1700116E RID: 4462
+		// (get) Token: 0x0600749A RID: 29850 RVA: 0x0024E600 File Offset: 0x0024C800
 		public int FilterId
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004CBD RID: 19645
+		// Token: 0x040052A1 RID: 21153
 		private Table __p;
 	}
 }

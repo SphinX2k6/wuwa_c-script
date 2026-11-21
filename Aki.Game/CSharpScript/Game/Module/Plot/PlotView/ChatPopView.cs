@@ -12,17 +12,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.PlotView
 {
-	// Token: 0x02005041 RID: 20545
+	// Token: 0x02004010 RID: 16400
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ChatPopView : UiViewBase
 	{
-		// Token: 0x0603493C RID: 215356 RVA: 0x00C6A517 File Offset: 0x00C68717
+		// Token: 0x06029818 RID: 170008 RVA: 0x00BB75B7 File Offset: 0x00BB57B7
 		public ChatPopView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603493D RID: 215357 RVA: 0x00C6A538 File Offset: 0x00C68738
+		// Token: 0x06029819 RID: 170009 RVA: 0x00BB75D8 File Offset: 0x00BB57D8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603493E RID: 215358 RVA: 0x00C6A5C4 File Offset: 0x00C687C4
+		// Token: 0x0602981A RID: 170010 RVA: 0x00BB7664 File Offset: 0x00BB5864
 		protected override void OnStart()
 		{
 			this.ChatLayout = new GenericLayout<ChatItemGrid, ChatItemData>(base.GetVerticalLayout(2), new Func<ChatItemGrid>(this.CreateChatItem), null, false, true);
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.StartPlay();
 		}
 
-		// Token: 0x0603493F RID: 215359 RVA: 0x00C6A674 File Offset: 0x00C68874
+		// Token: 0x0602981B RID: 170011 RVA: 0x00BB7714 File Offset: 0x00BB5914
 		private void RegisterCondition()
 		{
 			this.IsWaitingCondition = true;
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x06034940 RID: 215360 RVA: 0x00C6A6CC File Offset: 0x00C688CC
+		// Token: 0x0602981C RID: 170012 RVA: 0x00BB776C File Offset: 0x00BB596C
 		private void OnConditionPass([Nullable(new byte[]
 		{
 			2,
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.StartPlay();
 		}
 
-		// Token: 0x06034941 RID: 215361 RVA: 0x00C6A6E3 File Offset: 0x00C688E3
+		// Token: 0x0602981D RID: 170013 RVA: 0x00BB7783 File Offset: 0x00BB5983
 		private void UnRegisterCondition()
 		{
 			if (!this.IsWaitingCondition)
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x06034942 RID: 215362 RVA: 0x00C6A71A File Offset: 0x00C6891A
+		// Token: 0x0602981E RID: 170014 RVA: 0x00BB77BA File Offset: 0x00BB59BA
 		private void StartPlay()
 		{
 			if (this.IsPlaying)
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.ShowNextTalk();
 		}
 
-		// Token: 0x06034943 RID: 215363 RVA: 0x00C6A734 File Offset: 0x00C68934
+		// Token: 0x0602981F RID: 170015 RVA: 0x00BB77D4 File Offset: 0x00BB59D4
 		public void LoadFlowData(List<string> flowId)
 		{
 			this.AllTalkItems.Clear();
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x06034944 RID: 215364 RVA: 0x00C6A978 File Offset: 0x00C68B78
+		// Token: 0x06029820 RID: 170016 RVA: 0x00BB7A18 File Offset: 0x00BB5C18
 		public bool ShowNextTalk()
 		{
 			if (this.CurrentTalkIndex >= this.AllTalkItems.Count)
@@ -185,7 +185,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return true;
 		}
 
-		// Token: 0x06034945 RID: 215365 RVA: 0x00C6AA64 File Offset: 0x00C68C64
+		// Token: 0x06029821 RID: 170017 RVA: 0x00BB7B04 File Offset: 0x00BB5D04
 		private void UpdateDisplayedItemModes()
 		{
 			int num = this.DisplayedItems.Count - 1;
@@ -211,7 +211,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x06034946 RID: 215366 RVA: 0x00C6AAEC File Offset: 0x00C68CEC
+		// Token: 0x06029822 RID: 170018 RVA: 0x00BB7B8C File Offset: 0x00BB5D8C
 		private unsafe void PlayVoiceForItem(ChatItemData item)
 		{
 			ChatPopView.<>c__DisplayClass29_0 CS$<>8__locals1 = new ChatPopView.<>c__DisplayClass29_0();
@@ -289,7 +289,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.StartVoiceCallbackTimeout(CS$<>8__locals1.currentVersion);
 		}
 
-		// Token: 0x06034947 RID: 215367 RVA: 0x00C6AC08 File Offset: 0x00C68E08
+		// Token: 0x06029823 RID: 170019 RVA: 0x00BB7CA8 File Offset: 0x00BB5EA8
 		private void OnVoiceFinished()
 		{
 			if (!this.IsPlaying)
@@ -302,7 +302,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x06034948 RID: 215368 RVA: 0x00C6AC21 File Offset: 0x00C68E21
+		// Token: 0x06029824 RID: 170020 RVA: 0x00BB7CC1 File Offset: 0x00BB5EC1
 		private void DelayOnAllTalkFinished()
 		{
 			this.ClearOnAllTalkFinishedTimer();
@@ -313,7 +313,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}, 2000f, null, null, true, 1f);
 		}
 
-		// Token: 0x06034949 RID: 215369 RVA: 0x00C6AC52 File Offset: 0x00C68E52
+		// Token: 0x06029825 RID: 170021 RVA: 0x00BB7CF2 File Offset: 0x00BB5EF2
 		private void OnAllTalkFinished()
 		{
 			this.IsPlaying = false;
@@ -325,19 +325,19 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603494A RID: 215370 RVA: 0x00C6AC73 File Offset: 0x00C68E73
+		// Token: 0x06029826 RID: 170022 RVA: 0x00BB7D13 File Offset: 0x00BB5F13
 		public bool HasMoreTalks()
 		{
 			return this.CurrentTalkIndex < this.AllTalkItems.Count;
 		}
 
-		// Token: 0x0603494B RID: 215371 RVA: 0x00C6AC88 File Offset: 0x00C68E88
+		// Token: 0x06029827 RID: 170023 RVA: 0x00BB7D28 File Offset: 0x00BB5F28
 		public int GetRemainingTalkCount()
 		{
 			return this.AllTalkItems.Count - this.CurrentTalkIndex;
 		}
 
-		// Token: 0x0603494C RID: 215372 RVA: 0x00C6AC9C File Offset: 0x00C68E9C
+		// Token: 0x06029828 RID: 170024 RVA: 0x00BB7D3C File Offset: 0x00BB5F3C
 		private void StopCurrentAudio()
 		{
 			this.DialogVersion++;
@@ -349,7 +349,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.PlotPlayEventResult = 0;
 		}
 
-		// Token: 0x0603494D RID: 215373 RVA: 0x00C6ACF0 File Offset: 0x00C68EF0
+		// Token: 0x06029829 RID: 170025 RVA: 0x00BB7D90 File Offset: 0x00BB5F90
 		protected override void OnBeforeDestroy()
 		{
 			base.OnBeforeDestroy();
@@ -359,7 +359,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.ClearVoiceCallbackTimeoutTimer();
 		}
 
-		// Token: 0x0603494E RID: 215374 RVA: 0x00C6AD10 File Offset: 0x00C68F10
+		// Token: 0x0602982A RID: 170026 RVA: 0x00BB7DB0 File Offset: 0x00BB5FB0
 		private void ClearOnAllTalkFinishedTimer()
 		{
 			if (this.OnAllTalkFinishedTimer != null)
@@ -369,7 +369,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x0603494F RID: 215375 RVA: 0x00C6AD34 File Offset: 0x00C68F34
+		// Token: 0x0602982B RID: 170027 RVA: 0x00BB7DD4 File Offset: 0x00BB5FD4
 		private void StartVoiceCallbackTimeout(int currentVersion)
 		{
 			this.ClearVoiceCallbackTimeoutTimer();
@@ -391,7 +391,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}, 10000f, null, null, true, 1f);
 		}
 
-		// Token: 0x06034950 RID: 215376 RVA: 0x00C6AD84 File Offset: 0x00C68F84
+		// Token: 0x0602982C RID: 170028 RVA: 0x00BB7E24 File Offset: 0x00BB6024
 		private void ClearVoiceCallbackTimeoutTimer()
 		{
 			if (this.VoiceCallbackTimeoutTimer != null)
@@ -401,7 +401,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x06034951 RID: 215377 RVA: 0x00C6ADA8 File Offset: 0x00C68FA8
+		// Token: 0x0602982D RID: 170029 RVA: 0x00BB7E48 File Offset: 0x00BB6048
 		private void ScrollToBottom()
 		{
 			UUIScrollViewWithScrollbarComponent scrollViewWithScrollbar = base.GetScrollViewWithScrollbar(0);
@@ -425,28 +425,28 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			scrollViewWithScrollbar.ScrollToBottomLater(attachUIChild, false);
 		}
 
-		// Token: 0x06034952 RID: 215378 RVA: 0x00C6AE12 File Offset: 0x00C69012
+		// Token: 0x0602982E RID: 170030 RVA: 0x00BB7EB2 File Offset: 0x00BB60B2
 		private ChatItemGrid CreateChatItem()
 		{
 			return new ChatItemGrid();
 		}
 
-		// Token: 0x0401C04E RID: 114766
+		// Token: 0x04016A71 RID: 92785
 		private const int MAX_CHAT_ITEM_COUNT = 2;
 
-		// Token: 0x0401C04F RID: 114767
+		// Token: 0x04016A72 RID: 92786
 		private const int ON_ALL_TALK_FINISHED_DELAY_MS = 2000;
 
-		// Token: 0x0401C050 RID: 114768
+		// Token: 0x04016A73 RID: 92787
 		private const int VOICE_CALLBACK_TIMEOUT_MS = 10000;
 
-		// Token: 0x0401C051 RID: 114769
+		// Token: 0x04016A74 RID: 92788
 		private const string PROTAGONIST_ICON_FEMALE = "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead256/T_IconRoleHead256_5_a_UI.T_IconRoleHead256_5_a_UI";
 
-		// Token: 0x0401C052 RID: 114770
+		// Token: 0x04016A75 RID: 92789
 		private const string PROTAGONIST_ICON_MALE = "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead256/T_IconRoleHead256_4_a_UI.T_IconRoleHead256_4_a_UI";
 
-		// Token: 0x0401C053 RID: 114771
+		// Token: 0x04016A76 RID: 92790
 		[Nullable(new byte[]
 		{
 			2,
@@ -455,57 +455,57 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 		})]
 		private GenericLayout<ChatItemGrid, ChatItemData> ChatLayout;
 
-		// Token: 0x0401C054 RID: 114772
+		// Token: 0x04016A77 RID: 92791
 		private readonly List<ChatItemData> AllTalkItems = new List<ChatItemData>();
 
-		// Token: 0x0401C055 RID: 114773
+		// Token: 0x04016A78 RID: 92792
 		private readonly List<ChatItemData> DisplayedItems = new List<ChatItemData>();
 
-		// Token: 0x0401C056 RID: 114774
+		// Token: 0x04016A79 RID: 92793
 		private int CurrentTalkIndex;
 
-		// Token: 0x0401C057 RID: 114775
+		// Token: 0x04016A7A RID: 92794
 		private bool IsPlaying;
 
-		// Token: 0x0401C058 RID: 114776
+		// Token: 0x04016A7B RID: 92795
 		private bool IsWaitingCondition;
 
-		// Token: 0x0401C059 RID: 114777
+		// Token: 0x04016A7C RID: 92796
 		[Nullable(2)]
 		private Action OnAllShownCallback;
 
-		// Token: 0x0401C05A RID: 114778
+		// Token: 0x04016A7D RID: 92797
 		private int ConditionId;
 
-		// Token: 0x0401C05B RID: 114779
+		// Token: 0x04016A7E RID: 92798
 		[Nullable(2)]
 		private ConditionPassCallback ConditionCallback;
 
-		// Token: 0x0401C05C RID: 114780
+		// Token: 0x04016A7F RID: 92799
 		private int PlotPlayEventResult;
 
-		// Token: 0x0401C05D RID: 114781
+		// Token: 0x04016A80 RID: 92800
 		private int DialogVersion;
 
-		// Token: 0x0401C05E RID: 114782
+		// Token: 0x04016A81 RID: 92801
 		[Nullable(2)]
 		private TimerHandle OnAllTalkFinishedTimer;
 
-		// Token: 0x0401C05F RID: 114783
+		// Token: 0x04016A82 RID: 92802
 		[Nullable(2)]
 		private TimerHandle VoiceCallbackTimeoutTimer;
 
-		// Token: 0x0200B191 RID: 45457
+		// Token: 0x02009BCB RID: 39883
 		[NullableContext(0)]
 		private static class EComponents
 		{
-			// Token: 0x04035DB3 RID: 220595
+			// Token: 0x04030808 RID: 198664
 			public const int ScrollPanel = 0;
 
-			// Token: 0x04035DB4 RID: 220596
+			// Token: 0x04030809 RID: 198665
 			public const int ChatItem = 1;
 
-			// Token: 0x04035DB5 RID: 220597
+			// Token: 0x0403080A RID: 198666
 			public const int Content = 2;
 		}
 	}

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009F2 RID: 2546
+	// Token: 0x02000AB7 RID: 2743
 	public static class ERenderFlagTypeExtensions
 	{
-		// Token: 0x06003872 RID: 14450 RVA: 0x0009227C File Offset: 0x0009047C
+		// Token: 0x06003C4A RID: 15434 RVA: 0x0009AB3C File Offset: 0x00098D3C
 		public static string ToEnumString(this ERenderFlagType value)
 		{
 			string result;
@@ -36,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003873 RID: 14451 RVA: 0x000922E8 File Offset: 0x000904E8
+		// Token: 0x06003C4B RID: 15435 RVA: 0x0009ABA8 File Offset: 0x00098DA8
 		public static ERenderFlagType FromString(string name)
 		{
 			ERenderFlagType result;
@@ -47,7 +47,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003874 RID: 14452 RVA: 0x00092314 File Offset: 0x00090514
+		// Token: 0x06003C4C RID: 15436 RVA: 0x0009ABD4 File Offset: 0x00098DD4
 		public static bool TryFromString(string name, out ERenderFlagType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -89,7 +89,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x06003875 RID: 14453 RVA: 0x000923A0 File Offset: 0x000905A0
+		// Token: 0x06003C4D RID: 15437 RVA: 0x0009AC60 File Offset: 0x00098E60
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -103,7 +103,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003876 RID: 14454 RVA: 0x000923D8 File Offset: 0x000905D8
+		// Token: 0x06003C4E RID: 15438 RVA: 0x0009AC98 File Offset: 0x00098E98
 		public static ERenderFlagType[] GetValues()
 		{
 			return new ERenderFlagType[]
@@ -117,7 +117,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003877 RID: 14455 RVA: 0x000923EB File Offset: 0x000905EB
+		// Token: 0x06003C4F RID: 15439 RVA: 0x0009ACAB File Offset: 0x00098EAB
 		public static string[] GetNames()
 		{
 			return new string[]

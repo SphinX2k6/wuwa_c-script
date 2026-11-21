@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016F6 RID: 5878
+	// Token: 0x02001872 RID: 6258
 	[EnumExtensions]
 	public enum EVillageInfrBuildType
 	{
-		// Token: 0x04004F92 RID: 20370
+		// Token: 0x040053BF RID: 21439
 		Village,
-		// Token: 0x04004F93 RID: 20371
+		// Token: 0x040053C0 RID: 21440
 		Tree
 	}
 }

@@ -6,22 +6,22 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200210D RID: 8461
+	// Token: 0x020006DE RID: 1758
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/LGUI.SpriteTransitionInfo")]
 	[UnrealStructLayout(192, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 192)]
 	public class FSpriteTransitionInfo : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0601FD59 RID: 130393 RVA: 0x002F58CC File Offset: 0x002F3ACC
+		// Token: 0x0600955D RID: 38237 RVA: 0x000E185A File Offset: 0x000DFA5A
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FSpriteTransitionInfo._ScriptStructPtr != 0) ? FSpriteTransitionInfo._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/LGUI.SpriteTransitionInfo", ref FSpriteTransitionInfo._ScriptStructPtr);
 		}
 
-		// Token: 0x17007D34 RID: 32052
-		// (get) Token: 0x0601FD5A RID: 130394 RVA: 0x002F58F0 File Offset: 0x002F3AF0
-		// (set) Token: 0x0601FD5B RID: 130395 RVA: 0x002F5933 File Offset: 0x002F3B33
+		// Token: 0x17001BB2 RID: 7090
+		// (get) Token: 0x0600955E RID: 38238 RVA: 0x000E1880 File Offset: 0x000DFA80
+		// (set) Token: 0x0600955F RID: 38239 RVA: 0x000E18C3 File Offset: 0x000DFAC3
 		public FSpriteTransitionOfState NormalTransition
 		{
 			get
@@ -40,9 +40,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007D35 RID: 32053
-		// (get) Token: 0x0601FD5C RID: 130396 RVA: 0x002F5954 File Offset: 0x002F3B54
-		// (set) Token: 0x0601FD5D RID: 130397 RVA: 0x002F5997 File Offset: 0x002F3B97
+		// Token: 0x17001BB3 RID: 7091
+		// (get) Token: 0x06009560 RID: 38240 RVA: 0x000E18E4 File Offset: 0x000DFAE4
+		// (set) Token: 0x06009561 RID: 38241 RVA: 0x000E1927 File Offset: 0x000DFB27
 		public FSpriteTransitionOfState HighlightedTransition
 		{
 			get
@@ -61,9 +61,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007D36 RID: 32054
-		// (get) Token: 0x0601FD5E RID: 130398 RVA: 0x002F59B8 File Offset: 0x002F3BB8
-		// (set) Token: 0x0601FD5F RID: 130399 RVA: 0x002F59FB File Offset: 0x002F3BFB
+		// Token: 0x17001BB4 RID: 7092
+		// (get) Token: 0x06009562 RID: 38242 RVA: 0x000E1948 File Offset: 0x000DFB48
+		// (set) Token: 0x06009563 RID: 38243 RVA: 0x000E198B File Offset: 0x000DFB8B
 		public FSpriteTransitionOfState PressedTransition
 		{
 			get
@@ -82,9 +82,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007D37 RID: 32055
-		// (get) Token: 0x0601FD60 RID: 130400 RVA: 0x002F5A1C File Offset: 0x002F3C1C
-		// (set) Token: 0x0601FD61 RID: 130401 RVA: 0x002F5A5F File Offset: 0x002F3C5F
+		// Token: 0x17001BB5 RID: 7093
+		// (get) Token: 0x06009564 RID: 38244 RVA: 0x000E19AC File Offset: 0x000DFBAC
+		// (set) Token: 0x06009565 RID: 38245 RVA: 0x000E19EF File Offset: 0x000DFBEF
 		public FSpriteTransitionOfState DisabledTransition
 		{
 			get
@@ -103,80 +103,71 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601FD62 RID: 130402 RVA: 0x002F5A80 File Offset: 0x002F3C80
+		// Token: 0x06009566 RID: 38246 RVA: 0x000E1A10 File Offset: 0x000DFC10
 		public FSpriteTransitionInfo()
 		{
 		}
 
-		// Token: 0x0601FD63 RID: 130403 RVA: 0x002F5A88 File Offset: 0x002F3C88
-		public FSpriteTransitionInfo(FSpriteTransitionOfState NormalTransition, FSpriteTransitionOfState HighlightedTransition, FSpriteTransitionOfState PressedTransition, FSpriteTransitionOfState DisabledTransition)
-		{
-			this.NormalTransition = NormalTransition;
-			this.HighlightedTransition = HighlightedTransition;
-			this.PressedTransition = PressedTransition;
-			this.DisabledTransition = DisabledTransition;
-		}
-
-		// Token: 0x0601FD64 RID: 130404 RVA: 0x002F5AAD File Offset: 0x002F3CAD
+		// Token: 0x06009567 RID: 38247 RVA: 0x000E1A18 File Offset: 0x000DFC18
 		protected override IntPtr GetUStructPtr()
 		{
 			return FSpriteTransitionInfo.StaticStruct();
 		}
 
-		// Token: 0x0601FD65 RID: 130405 RVA: 0x002F5AB9 File Offset: 0x002F3CB9
+		// Token: 0x06009568 RID: 38248 RVA: 0x000E1A24 File Offset: 0x000DFC24
 		[NullableContext(2)]
 		public FSpriteTransitionInfo(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601FD66 RID: 130406 RVA: 0x002F5AC3 File Offset: 0x002F3CC3
+		// Token: 0x06009569 RID: 38249 RVA: 0x000E1A2E File Offset: 0x000DFC2E
 		public FSpriteTransitionInfo(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601FD67 RID: 130407 RVA: 0x002F5ACE File Offset: 0x002F3CCE
+		// Token: 0x0600956A RID: 38250 RVA: 0x000E1A39 File Offset: 0x000DFC39
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FSpriteTransitionInfo(Pointer, false, true);
 		}
 
-		// Token: 0x0601FD68 RID: 130408 RVA: 0x002F5AD8 File Offset: 0x002F3CD8
+		// Token: 0x0600956B RID: 38251 RVA: 0x000E1A43 File Offset: 0x000DFC43
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FSpriteTransitionInfo(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04011279 RID: 70265
+		// Token: 0x040040F6 RID: 16630
 		public const string __ObjectPath = "/Script/LGUI.SpriteTransitionInfo";
 
-		// Token: 0x0401127A RID: 70266
+		// Token: 0x040040F7 RID: 16631
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0401127B RID: 70267
+		// Token: 0x040040F8 RID: 16632
 		internal static int __PropertyOffset_NormalTransition;
 
-		// Token: 0x0401127C RID: 70268
+		// Token: 0x040040F9 RID: 16633
 		[Nullable(2)]
 		private FSpriteTransitionOfState _NormalTransition;
 
-		// Token: 0x0401127D RID: 70269
+		// Token: 0x040040FA RID: 16634
 		internal static int __PropertyOffset_HighlightedTransition;
 
-		// Token: 0x0401127E RID: 70270
+		// Token: 0x040040FB RID: 16635
 		[Nullable(2)]
 		private FSpriteTransitionOfState _HighlightedTransition;
 
-		// Token: 0x0401127F RID: 70271
+		// Token: 0x040040FC RID: 16636
 		internal static int __PropertyOffset_PressedTransition;
 
-		// Token: 0x04011280 RID: 70272
+		// Token: 0x040040FD RID: 16637
 		[Nullable(2)]
 		private FSpriteTransitionOfState _PressedTransition;
 
-		// Token: 0x04011281 RID: 70273
+		// Token: 0x040040FE RID: 16638
 		internal static int __PropertyOffset_DisabledTransition;
 
-		// Token: 0x04011282 RID: 70274
+		// Token: 0x040040FF RID: 16639
 		[Nullable(2)]
 		private FSpriteTransitionOfState _DisabledTransition;
 	}

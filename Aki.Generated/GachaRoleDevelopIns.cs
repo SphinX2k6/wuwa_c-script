@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000CE1 RID: 3297
+	// Token: 0x02000DC5 RID: 3525
 	public struct GachaRoleDevelopIns : IFlatbufferObject
 	{
-		// Token: 0x170014AC RID: 5292
-		// (get) Token: 0x06007826 RID: 30758 RVA: 0x00245F29 File Offset: 0x00244129
+		// Token: 0x17001509 RID: 5385
+		// (get) Token: 0x06007E31 RID: 32305 RVA: 0x00264AA5 File Offset: 0x00262CA5
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007827 RID: 30759 RVA: 0x00245F36 File Offset: 0x00244136
+		// Token: 0x06007E32 RID: 32306 RVA: 0x00264AB2 File Offset: 0x00262CB2
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06007828 RID: 30760 RVA: 0x00245F40 File Offset: 0x00244140
+		// Token: 0x06007E33 RID: 32307 RVA: 0x00264ABC File Offset: 0x00262CBC
 		public static GachaRoleDevelopIns GetRootAsGachaRoleDevelopIns(ByteBuffer _bb)
 		{
 			return GachaRoleDevelopIns.GetRootAsGachaRoleDevelopIns(_bb, default(GachaRoleDevelopIns));
 		}
 
-		// Token: 0x06007829 RID: 30761 RVA: 0x00245F5C File Offset: 0x0024415C
+		// Token: 0x06007E34 RID: 32308 RVA: 0x00264AD8 File Offset: 0x00262CD8
 		public static GachaRoleDevelopIns GetRootAsGachaRoleDevelopIns(ByteBuffer _bb, GachaRoleDevelopIns obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600782A RID: 30762 RVA: 0x00245F79 File Offset: 0x00244179
+		// Token: 0x06007E35 RID: 32309 RVA: 0x00264AF5 File Offset: 0x00262CF5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600782B RID: 30763 RVA: 0x00245F88 File Offset: 0x00244188
+		// Token: 0x06007E36 RID: 32310 RVA: 0x00264B04 File Offset: 0x00262D04
 		public GachaRoleDevelopIns __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170014AD RID: 5293
-		// (get) Token: 0x0600782C RID: 30764 RVA: 0x00245F98 File Offset: 0x00244198
+		// Token: 0x1700150A RID: 5386
+		// (get) Token: 0x06007E37 RID: 32311 RVA: 0x00264B14 File Offset: 0x00262D14
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170014AE RID: 5294
-		// (get) Token: 0x0600782D RID: 30765 RVA: 0x00245FD4 File Offset: 0x002441D4
+		// Token: 0x1700150B RID: 5387
+		// (get) Token: 0x06007E38 RID: 32312 RVA: 0x00264B50 File Offset: 0x00262D50
 		public int RoleId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170014AF RID: 5295
-		// (get) Token: 0x0600782E RID: 30766 RVA: 0x00246010 File Offset: 0x00244210
+		// Token: 0x1700150C RID: 5388
+		// (get) Token: 0x06007E39 RID: 32313 RVA: 0x00264B8C File Offset: 0x00262D8C
 		public int AdventureGuide
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170014B0 RID: 5296
-		// (get) Token: 0x0600782F RID: 30767 RVA: 0x0024604C File Offset: 0x0024424C
+		// Token: 0x1700150D RID: 5389
+		// (get) Token: 0x06007E3A RID: 32314 RVA: 0x00264BC8 File Offset: 0x00262DC8
 		public int DungeonDetection
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170014B1 RID: 5297
-		// (get) Token: 0x06007830 RID: 30768 RVA: 0x0024608C File Offset: 0x0024428C
+		// Token: 0x1700150E RID: 5390
+		// (get) Token: 0x06007E3B RID: 32315 RVA: 0x00264C08 File Offset: 0x00262E08
 		public int Type
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170014B2 RID: 5298
-		// (get) Token: 0x06007831 RID: 30769 RVA: 0x002460CC File Offset: 0x002442CC
+		// Token: 0x1700150F RID: 5391
+		// (get) Token: 0x06007E3C RID: 32316 RVA: 0x00264C48 File Offset: 0x00262E48
 		public int DungeonEntranceId
 		{
 			get
@@ -137,8 +137,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170014B3 RID: 5299
-		// (get) Token: 0x06007832 RID: 30770 RVA: 0x0024610C File Offset: 0x0024430C
+		// Token: 0x17001510 RID: 5392
+		// (get) Token: 0x06007E3D RID: 32317 RVA: 0x00264C88 File Offset: 0x00262E88
 		public int LevelPlayParam
 		{
 			get
@@ -152,7 +152,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004D52 RID: 19794
+		// Token: 0x04005336 RID: 21302
 		private Table __p;
 	}
 }

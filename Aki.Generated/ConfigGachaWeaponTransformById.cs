@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000379 RID: 889
+	// Token: 0x0200038E RID: 910
 	public class ConfigGachaWeaponTransformById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060014DC RID: 5340 RVA: 0x000CF8B0 File Offset: 0x000CDAB0
+		// Token: 0x0600155A RID: 5466 RVA: 0x000D5DBC File Offset: 0x000D3FBC
 		static ConfigGachaWeaponTransformById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigGachaWeaponTransformById.CreateStaticDefaultValue), new Action(ConfigGachaWeaponTransformById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060014DD RID: 5341 RVA: 0x000CF8D0 File Offset: 0x000CDAD0
+		// Token: 0x0600155B RID: 5467 RVA: 0x000D5DDC File Offset: 0x000D3FDC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigGachaWeaponTransformById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060014DE RID: 5342 RVA: 0x000CF94F File Offset: 0x000CDB4F
+		// Token: 0x0600155C RID: 5468 RVA: 0x000D5E5B File Offset: 0x000D405B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigGachaWeaponTransformById.LogPair = null;
 			ConfigGachaWeaponTransformById.HandleId = 0;
 		}
 
-		// Token: 0x060014DF RID: 5343 RVA: 0x000CF95D File Offset: 0x000CDB5D
+		// Token: 0x0600155D RID: 5469 RVA: 0x000D5E69 File Offset: 0x000D4069
 		public static void Init()
 		{
 			ConfigGachaWeaponTransformById.HandleId = ConfigCommon.InitDataStatement(ConfigGachaWeaponTransformById.HandleId, "db_gacha.db", "select BinData from `GachaWeaponTransform` where Id=?");
 		}
 
-		// Token: 0x060014E0 RID: 5344 RVA: 0x000CF978 File Offset: 0x000CDB78
+		// Token: 0x0600155E RID: 5470 RVA: 0x000D5E84 File Offset: 0x000D4084
 		public static GachaWeaponTransform? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigGachaWeaponTransformById.HandleId, ConfigGachaWeaponTransformById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new GachaWeaponTransform?(rootAsGachaWeaponTransform);
 		}
 
-		// Token: 0x04001833 RID: 6195
+		// Token: 0x040018C6 RID: 6342
 		private const string DB = "db_gacha.db";
 
-		// Token: 0x04001834 RID: 6196
+		// Token: 0x040018C7 RID: 6343
 		private const string FILE = "c.抽卡.xlsx";
 
-		// Token: 0x04001835 RID: 6197
+		// Token: 0x040018C8 RID: 6344
 		private const string TABLE = "GachaWeaponTransform";
 
-		// Token: 0x04001836 RID: 6198
+		// Token: 0x040018C9 RID: 6345
 		private const string COMMAND = "select BinData from `GachaWeaponTransform` where Id=?";
 
-		// Token: 0x04001837 RID: 6199
+		// Token: 0x040018CA RID: 6346
 		private const string KEY_PREFIX = "GachaWeaponTransformById";
 
-		// Token: 0x04001838 RID: 6200
+		// Token: 0x040018CB RID: 6347
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001839 RID: 6201
+		// Token: 0x040018CC RID: 6348
 		private static int HandleId;
 	}
 }

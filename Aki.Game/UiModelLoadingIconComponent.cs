@@ -6,12 +6,12 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02002C8C RID: 11404
+// Token: 0x020021E5 RID: 8677
 [NullableContext(2)]
 [Nullable(0)]
 public class UiModelLoadingIconComponent : UiModelComponentBase
 {
-	// Token: 0x06017D47 RID: 97607 RVA: 0x006102E0 File Offset: 0x0060E4E0
+	// Token: 0x060155BB RID: 87483 RVA: 0x00635E80 File Offset: 0x00634080
 	protected override void OnInit()
 	{
 		this.LoadingItem = new RoleModelLoadingItem();
@@ -20,20 +20,20 @@ public class UiModelLoadingIconComponent : UiModelComponentBase
 		this.UiModelDataComponent = base.Owner.CheckGetComponent<UiModelDataComponent>();
 	}
 
-	// Token: 0x06017D48 RID: 97608 RVA: 0x0061033C File Offset: 0x0060E53C
+	// Token: 0x060155BC RID: 87484 RVA: 0x00635EDC File Offset: 0x006340DC
 	protected override void OnStart()
 	{
 		EventSystem.Instance.AddWithTarget(base.Owner, EEventName.BeforeUiModelLoadStart, new Action(this.BeforeModelLoadStart));
 		EventSystem.Instance.AddWithTarget(base.Owner, EEventName.OnUiModelLoadComplete, new Action(this.OnModelLoadComplete));
 	}
 
-	// Token: 0x06017D49 RID: 97609 RVA: 0x0061038D File Offset: 0x0060E58D
+	// Token: 0x060155BD RID: 87485 RVA: 0x00635F2D File Offset: 0x0063412D
 	protected override void OnTick(float deltaTime)
 	{
 		this.RefreshIconPosition();
 	}
 
-	// Token: 0x06017D4A RID: 97610 RVA: 0x00610398 File Offset: 0x0060E598
+	// Token: 0x060155BE RID: 87486 RVA: 0x00635F38 File Offset: 0x00634138
 	protected override void OnEnd()
 	{
 		EventSystem.Instance.RemoveWithTarget(base.Owner, EEventName.BeforeUiModelLoadStart, new Action(this.BeforeModelLoadStart));
@@ -41,7 +41,7 @@ public class UiModelLoadingIconComponent : UiModelComponentBase
 		this.LoadingItem.Destroy(null);
 	}
 
-	// Token: 0x06017D4B RID: 97611 RVA: 0x006103F5 File Offset: 0x0060E5F5
+	// Token: 0x060155BF RID: 87487 RVA: 0x00635F95 File Offset: 0x00634195
 	private void BeforeModelLoadStart()
 	{
 		this.NeedTick = true;
@@ -49,26 +49,26 @@ public class UiModelLoadingIconComponent : UiModelComponentBase
 		this.LoadingItem.SetLoadingActive(true);
 	}
 
-	// Token: 0x06017D4C RID: 97612 RVA: 0x00610410 File Offset: 0x0060E610
+	// Token: 0x060155C0 RID: 87488 RVA: 0x00635FB0 File Offset: 0x006341B0
 	private void OnModelLoadComplete()
 	{
 		this.NeedTick = false;
 		this.LoadingItem.SetLoadingActive(false);
 	}
 
-	// Token: 0x06017D4D RID: 97613 RVA: 0x00610425 File Offset: 0x0060E625
+	// Token: 0x060155C1 RID: 87489 RVA: 0x00635FC5 File Offset: 0x006341C5
 	public void SetLoadingOpen(bool isOpen)
 	{
 		this.LoadingItem.SetLoadingOpen(isOpen);
 	}
 
-	// Token: 0x06017D4E RID: 97614 RVA: 0x00610433 File Offset: 0x0060E633
+	// Token: 0x060155C2 RID: 87490 RVA: 0x00635FD3 File Offset: 0x006341D3
 	public void SetLoadingActive(bool state)
 	{
 		this.LoadingItem.SetLoadingActive(state);
 	}
 
-	// Token: 0x06017D4F RID: 97615 RVA: 0x00610441 File Offset: 0x0060E641
+	// Token: 0x060155C3 RID: 87491 RVA: 0x00635FE1 File Offset: 0x006341E1
 	public void SetFollowUiItem(UUIItem item)
 	{
 		this.FollowUiItem = item;
@@ -78,7 +78,7 @@ public class UiModelLoadingIconComponent : UiModelComponentBase
 		}
 	}
 
-	// Token: 0x06017D50 RID: 97616 RVA: 0x00610458 File Offset: 0x0060E658
+	// Token: 0x060155C4 RID: 87492 RVA: 0x00635FF8 File Offset: 0x006341F8
 	private void RefreshIconPosition()
 	{
 		UUIItem followUiItem = this.FollowUiItem;
@@ -110,15 +110,15 @@ public class UiModelLoadingIconComponent : UiModelComponentBase
 		}
 	}
 
-	// Token: 0x0400B1B9 RID: 45497
+	// Token: 0x0400B524 RID: 46372
 	protected UiModelActorComponent UiModelActorComponent;
 
-	// Token: 0x0400B1BA RID: 45498
+	// Token: 0x0400B525 RID: 46373
 	protected UiModelDataComponent UiModelDataComponent;
 
-	// Token: 0x0400B1BB RID: 45499
+	// Token: 0x0400B526 RID: 46374
 	protected RoleModelLoadingItem LoadingItem;
 
-	// Token: 0x0400B1BC RID: 45500
+	// Token: 0x0400B527 RID: 46375
 	private UUIItem FollowUiItem;
 }

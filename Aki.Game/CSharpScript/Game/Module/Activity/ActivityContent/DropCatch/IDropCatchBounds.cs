@@ -2,19 +2,19 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 {
-	// Token: 0x020066A6 RID: 26278
+	// Token: 0x020055F6 RID: 22006
 	public class IDropCatchBounds
 	{
-		// Token: 0x040223DF RID: 140255
+		// Token: 0x0401CC38 RID: 117816
 		public double Left;
 
-		// Token: 0x040223E0 RID: 140256
+		// Token: 0x0401CC39 RID: 117817
 		public double Right;
 
-		// Token: 0x040223E1 RID: 140257
+		// Token: 0x0401CC3A RID: 117818
 		public double Top;
 
-		// Token: 0x040223E2 RID: 140258
+		// Token: 0x0401CC3B RID: 117819
 		public double Bottom;
 	}
 }

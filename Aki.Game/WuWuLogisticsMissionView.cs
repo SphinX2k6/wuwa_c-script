@@ -9,17 +9,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001669 RID: 5737
+// Token: 0x02000B21 RID: 2849
 [NullableContext(1)]
 [Nullable(0)]
 public class WuWuLogisticsMissionView : UiViewBase
 {
-	// Token: 0x0600A1AB RID: 41387 RVA: 0x0023AD46 File Offset: 0x00238F46
+	// Token: 0x06007589 RID: 30089 RVA: 0x00244BE2 File Offset: 0x00242DE2
 	public WuWuLogisticsMissionView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600A1AC RID: 41388 RVA: 0x0023AD58 File Offset: 0x00238F58
+	// Token: 0x0600758A RID: 30090 RVA: 0x00244BF4 File Offset: 0x00242DF4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -40,7 +40,7 @@ public class WuWuLogisticsMissionView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600A1AD RID: 41389 RVA: 0x0023AE94 File Offset: 0x00239094
+	// Token: 0x0600758B RID: 30091 RVA: 0x00244D30 File Offset: 0x00242F30
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WuWuLogisticsMissionView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -51,7 +51,7 @@ public class WuWuLogisticsMissionView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A1AE RID: 41390 RVA: 0x0023AED8 File Offset: 0x002390D8
+	// Token: 0x0600758C RID: 30092 RVA: 0x00244D74 File Offset: 0x00242F74
 	protected override void OnStart()
 	{
 		this.InitCaption();
@@ -67,7 +67,7 @@ public class WuWuLogisticsMissionView : UiViewBase
 		rootActor.OnSequencePlayEvent.Bind(new Action<string, string>(this.OnPlaySequenceEvent));
 	}
 
-	// Token: 0x0600A1AF RID: 41391 RVA: 0x0023AF98 File Offset: 0x00239198
+	// Token: 0x0600758D RID: 30093 RVA: 0x00244E34 File Offset: 0x00243034
 	protected override void OnBeforeShow()
 	{
 		this.Data = WuWuLogisticsActivityController.Instance.GetActivityData();
@@ -88,25 +88,25 @@ public class WuWuLogisticsMissionView : UiViewBase
 		data3.SetFirstUnlockPack();
 	}
 
-	// Token: 0x0600A1B0 RID: 41392 RVA: 0x0023B006 File Offset: 0x00239206
+	// Token: 0x0600758E RID: 30094 RVA: 0x00244EA2 File Offset: 0x002430A2
 	protected override void OnBeforeDestroy()
 	{
 		this.StopUnlockTimeTimer();
 	}
 
-	// Token: 0x0600A1B1 RID: 41393 RVA: 0x0023B00E File Offset: 0x0023920E
+	// Token: 0x0600758F RID: 30095 RVA: 0x00244EAA File Offset: 0x002430AA
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.WuWuLogisticsTaskUpdate, new Action(this.UpdateCurSelectedContent));
 	}
 
-	// Token: 0x0600A1B2 RID: 41394 RVA: 0x0023B02C File Offset: 0x0023922C
+	// Token: 0x06007590 RID: 30096 RVA: 0x00244EC8 File Offset: 0x002430C8
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.WuWuLogisticsTaskUpdate, new Action(this.UpdateCurSelectedContent));
 	}
 
-	// Token: 0x0600A1B3 RID: 41395 RVA: 0x0023B04A File Offset: 0x0023924A
+	// Token: 0x06007591 RID: 30097 RVA: 0x00244EE6 File Offset: 0x002430E6
 	private void OnPlaySequenceEvent(string sequenceName, string eventName)
 	{
 		if (eventName == "Sequence_Switch")
@@ -118,7 +118,7 @@ public class WuWuLogisticsMissionView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A1B4 RID: 41396 RVA: 0x0023B074 File Offset: 0x00239274
+	// Token: 0x06007592 RID: 30098 RVA: 0x00244F10 File Offset: 0x00243110
 	private void InitCaption()
 	{
 		UUIItem item = base.GetItem(0);
@@ -141,7 +141,7 @@ public class WuWuLogisticsMissionView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A1B5 RID: 41397 RVA: 0x0023B0D2 File Offset: 0x002392D2
+	// Token: 0x06007593 RID: 30099 RVA: 0x00244F6E File Offset: 0x0024316E
 	private WuWuLogisticsPackItem InitPackItem()
 	{
 		WuWuLogisticsPackItem wuWuLogisticsPackItem = new WuWuLogisticsPackItem();
@@ -149,7 +149,7 @@ public class WuWuLogisticsMissionView : UiViewBase
 		return wuWuLogisticsPackItem;
 	}
 
-	// Token: 0x0600A1B6 RID: 41398 RVA: 0x0023B0EB File Offset: 0x002392EB
+	// Token: 0x06007594 RID: 30100 RVA: 0x00244F87 File Offset: 0x00243187
 	private WuWuLogisticsMissionItem InitMissionItem()
 	{
 		WuWuLogisticsMissionItem wuWuLogisticsMissionItem = new WuWuLogisticsMissionItem();
@@ -157,13 +157,13 @@ public class WuWuLogisticsMissionView : UiViewBase
 		return wuWuLogisticsMissionItem;
 	}
 
-	// Token: 0x0600A1B7 RID: 41399 RVA: 0x0023B104 File Offset: 0x00239304
+	// Token: 0x06007595 RID: 30101 RVA: 0x00244FA0 File Offset: 0x002431A0
 	private WuWuLogisticsInfoItem InitInfoItem()
 	{
 		return new WuWuLogisticsInfoItem();
 	}
 
-	// Token: 0x0600A1B8 RID: 41400 RVA: 0x0023B10C File Offset: 0x0023930C
+	// Token: 0x06007596 RID: 30102 RVA: 0x00244FA8 File Offset: 0x002431A8
 	private void OnClickPackItem(int cfgId)
 	{
 		if (cfgId == this.CurSelectedPackCfgId)
@@ -185,7 +185,7 @@ public class WuWuLogisticsMissionView : UiViewBase
 		animationController.Play("Start", -1, false);
 	}
 
-	// Token: 0x0600A1B9 RID: 41401 RVA: 0x0023B168 File Offset: 0x00239368
+	// Token: 0x06007597 RID: 30103 RVA: 0x00245004 File Offset: 0x00243204
 	private void SetOtherPackTogglesInteractive(int clickedCfgId, bool interactive)
 	{
 		GenericLayout<WuWuLogisticsPackItem, int> packLayout = this.PackLayout;
@@ -204,7 +204,7 @@ public class WuWuLogisticsMissionView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A1BA RID: 41402 RVA: 0x0023B1B8 File Offset: 0x002393B8
+	// Token: 0x06007598 RID: 30104 RVA: 0x00245054 File Offset: 0x00243254
 	private void SetAllPackTogglesInteractive(bool interactive)
 	{
 		GenericLayout<WuWuLogisticsPackItem, int> packLayout = this.PackLayout;
@@ -219,7 +219,7 @@ public class WuWuLogisticsMissionView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A1BB RID: 41403 RVA: 0x0023B21C File Offset: 0x0023941C
+	// Token: 0x06007599 RID: 30105 RVA: 0x002450B8 File Offset: 0x002432B8
 	private void OnClickMissionItem(int taskId)
 	{
 		WuWuLogisticsActivityData data = this.Data;
@@ -230,7 +230,7 @@ public class WuWuLogisticsMissionView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A1BC RID: 41404 RVA: 0x0023B259 File Offset: 0x00239459
+	// Token: 0x0600759A RID: 30106 RVA: 0x002450F5 File Offset: 0x002432F5
 	private void UpdateCurSelectedContent()
 	{
 		this.UpdatePackLayout();
@@ -240,7 +240,7 @@ public class WuWuLogisticsMissionView : UiViewBase
 		this.SetCurIndexIcon();
 	}
 
-	// Token: 0x0600A1BD RID: 41405 RVA: 0x0023B27C File Offset: 0x0023947C
+	// Token: 0x0600759B RID: 30107 RVA: 0x00245118 File Offset: 0x00243318
 	private void UpdateInfoScroll()
 	{
 		WuWuLogisticsMissionView.<>c__DisplayClass27_0 CS$<>8__locals1 = new WuWuLogisticsMissionView.<>c__DisplayClass27_0();
@@ -335,7 +335,7 @@ public class WuWuLogisticsMissionView : UiViewBase
 		}, false);
 	}
 
-	// Token: 0x0600A1BE RID: 41406 RVA: 0x0023B470 File Offset: 0x00239670
+	// Token: 0x0600759C RID: 30108 RVA: 0x0024530C File Offset: 0x0024350C
 	private void UpdatePackLayout()
 	{
 		IReadOnlyList<WuWuTaskPackage> allTaskPackage = WuWuLogisticsConfig.Instance.GetAllTaskPackage();
@@ -370,7 +370,7 @@ public class WuWuLogisticsMissionView : UiViewBase
 		}, false);
 	}
 
-	// Token: 0x0600A1BF RID: 41407 RVA: 0x0023B504 File Offset: 0x00239704
+	// Token: 0x0600759D RID: 30109 RVA: 0x002453A0 File Offset: 0x002435A0
 	private void UpdateMissionInfo()
 	{
 		if (this.Data == null || this.CurSelectedPackCfgId == 0)
@@ -415,7 +415,7 @@ public class WuWuLogisticsMissionView : UiViewBase
 		missionScrollView.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x0600A1C0 RID: 41408 RVA: 0x0023B650 File Offset: 0x00239850
+	// Token: 0x0600759E RID: 30110 RVA: 0x002454EC File Offset: 0x002436EC
 	private void UpdateCurProgressTitle(int finishCount, int allMission)
 	{
 		string multiTextByKey = TextConfig.Instance.GetMultiTextByKey("Express_Delivery_Task_Progress");
@@ -439,7 +439,7 @@ public class WuWuLogisticsMissionView : UiViewBase
 		text.SetText(newText, true);
 	}
 
-	// Token: 0x0600A1C1 RID: 41409 RVA: 0x0023B6DA File Offset: 0x002398DA
+	// Token: 0x0600759F RID: 30111 RVA: 0x00245576 File Offset: 0x00243776
 	private void UpdatePackRewardPanel()
 	{
 		WuWuLogisticsRewardPreviewPanel packRewardPanel = this.PackRewardPanel;
@@ -455,7 +455,7 @@ public class WuWuLogisticsMissionView : UiViewBase
 		packRewardPanel2.RefreshConfirmButtonRedPoint();
 	}
 
-	// Token: 0x0600A1C2 RID: 41410 RVA: 0x0023B70C File Offset: 0x0023990C
+	// Token: 0x060075A0 RID: 30112 RVA: 0x002455A8 File Offset: 0x002437A8
 	private void SetLockTips()
 	{
 		this.StopUnlockTimeTimer();
@@ -486,7 +486,7 @@ public class WuWuLogisticsMissionView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A1C3 RID: 41411 RVA: 0x0023B780 File Offset: 0x00239980
+	// Token: 0x060075A1 RID: 30113 RVA: 0x0024561C File Offset: 0x0024381C
 	private void RefreshUnlockTimeText(long unlockTime)
 	{
 		double serverTime = TimeUtil.Instance.GetServerTime();
@@ -510,7 +510,7 @@ public class WuWuLogisticsMissionView : UiViewBase
 		text.SetText(remainTimeText, true);
 	}
 
-	// Token: 0x0600A1C4 RID: 41412 RVA: 0x0023B7F0 File Offset: 0x002399F0
+	// Token: 0x060075A2 RID: 30114 RVA: 0x0024568C File Offset: 0x0024388C
 	private void StartUnlockTimeTimer(long unlockTime)
 	{
 		this.RefreshUnlockTimeText(unlockTime);
@@ -520,7 +520,7 @@ public class WuWuLogisticsMissionView : UiViewBase
 		}, 1000f, 1f, null, null, true);
 	}
 
-	// Token: 0x0600A1C5 RID: 41413 RVA: 0x0023B846 File Offset: 0x00239A46
+	// Token: 0x060075A3 RID: 30115 RVA: 0x002456E2 File Offset: 0x002438E2
 	private void StopUnlockTimeTimer()
 	{
 		if (this.TickHandle != null)
@@ -530,7 +530,7 @@ public class WuWuLogisticsMissionView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600A1C6 RID: 41414 RVA: 0x0023B868 File Offset: 0x00239A68
+	// Token: 0x060075A4 RID: 30116 RVA: 0x00245704 File Offset: 0x00243904
 	private void SetCurIndexIcon()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(8, 1);
@@ -541,15 +541,15 @@ public class WuWuLogisticsMissionView : UiViewBase
 		this.SetSpriteByPath(resourcePath, base.GetSprite(11), false, null, null);
 	}
 
-	// Token: 0x0400499B RID: 18843
+	// Token: 0x04004A41 RID: 19009
 	[Nullable(2)]
 	protected WuWuLogisticsActivityData Data;
 
-	// Token: 0x0400499C RID: 18844
+	// Token: 0x04004A42 RID: 19010
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x0400499D RID: 18845
+	// Token: 0x04004A43 RID: 19011
 	[Nullable(new byte[]
 	{
 		2,
@@ -557,7 +557,7 @@ public class WuWuLogisticsMissionView : UiViewBase
 	})]
 	private GenericLayout<WuWuLogisticsPackItem, int> PackLayout;
 
-	// Token: 0x0400499E RID: 18846
+	// Token: 0x04004A44 RID: 19012
 	[Nullable(new byte[]
 	{
 		2,
@@ -565,7 +565,7 @@ public class WuWuLogisticsMissionView : UiViewBase
 	})]
 	private GenericScrollViewNew<WuWuLogisticsMissionItem, int> MissionScrollView;
 
-	// Token: 0x0400499F RID: 18847
+	// Token: 0x04004A45 RID: 19013
 	[Nullable(new byte[]
 	{
 		2,
@@ -574,18 +574,18 @@ public class WuWuLogisticsMissionView : UiViewBase
 	})]
 	private GenericScrollViewNew<WuWuLogisticsInfoItem, IWuWuLogisticsInfoItemData> LogisiticsInfoScrollView;
 
-	// Token: 0x040049A0 RID: 18848
+	// Token: 0x04004A46 RID: 19014
 	[Nullable(2)]
 	private WuWuLogisticsRewardPreviewPanel PackRewardPanel;
 
-	// Token: 0x040049A1 RID: 18849
+	// Token: 0x04004A47 RID: 19015
 	private int CurSelectedPackCfgId = 1;
 
-	// Token: 0x040049A2 RID: 18850
+	// Token: 0x04004A48 RID: 19016
 	[Nullable(2)]
 	protected TimerHandle TickHandle;
 
-	// Token: 0x040049A3 RID: 18851
+	// Token: 0x04004A49 RID: 19017
 	[Nullable(2)]
 	private UUIInturnAnimController AnimationController;
 }

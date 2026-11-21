@@ -4,12 +4,12 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.BattleUi
 {
-	// Token: 0x02005CA5 RID: 23717
+	// Token: 0x02004C87 RID: 19591
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class TowerMergeHeadStateMonsterInfo
 	{
-		// Token: 0x0603BEB7 RID: 245431 RVA: 0x00E51634 File Offset: 0x00E4F834
+		// Token: 0x06030E0A RID: 200202 RVA: 0x00DA1CDC File Offset: 0x00D9FEDC
 		public bool AddListener()
 		{
 			if (this.AttributeComponent != null)
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			return true;
 		}
 
-		// Token: 0x0603BEB8 RID: 245432 RVA: 0x00E51710 File Offset: 0x00E4F910
+		// Token: 0x06030E0B RID: 200203 RVA: 0x00DA1DB8 File Offset: 0x00D9FFB8
 		public void RemoveListener()
 		{
 			if (this.AttributeComponent != null)
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BEB9 RID: 245433 RVA: 0x00E5175E File Offset: 0x00E4F95E
+		// Token: 0x06030E0C RID: 200204 RVA: 0x00DA1E06 File Offset: 0x00DA0006
 		private void OnHealthChanged(EAttributeType attributeId, float newValue, float oldValue)
 		{
 			if (this.Hp == newValue)
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			BattleUiModel.Instance.TowerMergeHeadStateData.OnMonsterHpChanged(this.MonsterInfoId);
 		}
 
-		// Token: 0x0603BEBA RID: 245434 RVA: 0x00E51786 File Offset: 0x00E4F986
+		// Token: 0x06030E0D RID: 200205 RVA: 0x00DA1E2E File Offset: 0x00DA002E
 		private void OnHealthMaxChanged(EAttributeType attributeId, float newValue, float oldValue)
 		{
 			if (this.HpMax == newValue)
@@ -71,22 +71,22 @@ namespace CSharpScript.Game.Module.BattleUi
 			BattleUiModel.Instance.TowerMergeHeadStateData.OnMonsterHpChanged(this.MonsterInfoId);
 		}
 
-		// Token: 0x0401F44A RID: 128074
+		// Token: 0x04019F03 RID: 106243
 		public int MonsterInfoId;
 
-		// Token: 0x0401F44B RID: 128075
+		// Token: 0x04019F04 RID: 106244
 		public long CreatureDataId;
 
-		// Token: 0x0401F44C RID: 128076
+		// Token: 0x04019F05 RID: 106245
 		public EntityHandle EntityHandle;
 
-		// Token: 0x0401F44D RID: 128077
+		// Token: 0x04019F06 RID: 106246
 		public BaseAttributeComponent AttributeComponent;
 
-		// Token: 0x0401F44E RID: 128078
+		// Token: 0x04019F07 RID: 106247
 		public float Hp;
 
-		// Token: 0x0401F44F RID: 128079
+		// Token: 0x04019F08 RID: 106248
 		public float HpMax;
 	}
 }

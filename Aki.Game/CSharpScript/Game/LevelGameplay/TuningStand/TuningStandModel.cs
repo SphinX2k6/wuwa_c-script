@@ -7,13 +7,13 @@ using CSharpScript.Game.LevelGamePlay.TuningStand.Bubble;
 
 namespace CSharpScript.Game.LevelGamePlay.TuningStand
 {
-	// Token: 0x020069CB RID: 27083
+	// Token: 0x02005B27 RID: 23335
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class TuningStandModel : ModelBase
 	{
-		// Token: 0x0604360F RID: 275983 RVA: 0x010764A8 File Offset: 0x010746A8
+		// Token: 0x0603964B RID: 235083 RVA: 0x0101A93C File Offset: 0x01018B3C
 		public void LoadData(ITuningStand config)
 		{
 			this.Config = config;
@@ -23,25 +23,25 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand
 			global::Log.Instance.Info(ELogModule.LevelPlay, ELogAuthor.WHJ, "调律台资源开始加载", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x06043610 RID: 275984 RVA: 0x010764EB File Offset: 0x010746EB
+		// Token: 0x0603964C RID: 235084 RVA: 0x0101A97F File Offset: 0x01018B7F
 		public bool GetIsPressing()
 		{
 			return this.IsPressing;
 		}
 
-		// Token: 0x06043611 RID: 275985 RVA: 0x010764F3 File Offset: 0x010746F3
+		// Token: 0x0603964D RID: 235085 RVA: 0x0101A987 File Offset: 0x01018B87
 		public int? GetCurIndex()
 		{
 			return this.CurIndex;
 		}
 
-		// Token: 0x06043612 RID: 275986 RVA: 0x010764FB File Offset: 0x010746FB
+		// Token: 0x0603964E RID: 235086 RVA: 0x0101A98F File Offset: 0x01018B8F
 		public List<TuningGridData> GetGridList()
 		{
 			return this.GridData;
 		}
 
-		// Token: 0x06043613 RID: 275987 RVA: 0x01076504 File Offset: 0x01074704
+		// Token: 0x0603964F RID: 235087 RVA: 0x0101A998 File Offset: 0x01018B98
 		protected EGridCheckState CheckOpValidState(TuningGridData from, TuningGridData to)
 		{
 			ITuningStateData curGridState = from.GetCurGridState();
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand
 			return EGridCheckState.Valid;
 		}
 
-		// Token: 0x06043614 RID: 275988 RVA: 0x010765AC File Offset: 0x010747AC
+		// Token: 0x06039650 RID: 235088 RVA: 0x0101AA40 File Offset: 0x01018C40
 		protected bool CheckEndValid(TuningGridData from, TuningGridData to)
 		{
 			ITuningStateData curGridState = from.GetCurGridState();
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand
 			return curGridState.State == EGridBelongType.Type2;
 		}
 
-		// Token: 0x06043615 RID: 275989 RVA: 0x010765DC File Offset: 0x010747DC
+		// Token: 0x06039651 RID: 235089 RVA: 0x0101AA70 File Offset: 0x01018C70
 		protected void InitGridData()
 		{
 			this.GridData.Clear();
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand
 			}
 		}
 
-		// Token: 0x06043616 RID: 275990 RVA: 0x010766C0 File Offset: 0x010748C0
+		// Token: 0x06039652 RID: 235090 RVA: 0x0101AB54 File Offset: 0x01018D54
 		public void ResetGrid()
 		{
 			if (Time.Instance.Now - 3.0 < this.PrevResetTime)
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand
 			this.InitGridData();
 		}
 
-		// Token: 0x06043617 RID: 275991 RVA: 0x01076728 File Offset: 0x01074928
+		// Token: 0x06039653 RID: 235091 RVA: 0x0101ABBC File Offset: 0x01018DBC
 		public void UnloadData()
 		{
 			this.Config = null;
@@ -150,14 +150,14 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand
 			this.EventList.Clear();
 		}
 
-		// Token: 0x06043618 RID: 275992 RVA: 0x01076781 File Offset: 0x01074981
+		// Token: 0x06039654 RID: 235092 RVA: 0x0101AC15 File Offset: 0x01018E15
 		public void InitData(bool isPress)
 		{
 			this.IsPressing = isPress;
 			this.CurIndex = null;
 		}
 
-		// Token: 0x06043619 RID: 275993 RVA: 0x01076798 File Offset: 0x01074998
+		// Token: 0x06039655 RID: 235093 RVA: 0x0101AC2C File Offset: 0x01018E2C
 		public void OnPress(TuningGridData data)
 		{
 			EGridMainType gridMainType = data.GridMainType;
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand
 			this.PlayStartEvent();
 		}
 
-		// Token: 0x0604361A RID: 275994 RVA: 0x0107680C File Offset: 0x01074A0C
+		// Token: 0x06039656 RID: 235094 RVA: 0x0101ACA0 File Offset: 0x01018EA0
 		public void OnRelease(TuningGridData data)
 		{
 			bool flag = this.Config.VisualType == ETuningStandVisualType.Tuning;
@@ -219,7 +219,7 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand
 			}
 		}
 
-		// Token: 0x0604361B RID: 275995 RVA: 0x010768F0 File Offset: 0x01074AF0
+		// Token: 0x06039657 RID: 235095 RVA: 0x0101AD84 File Offset: 0x01018F84
 		public EGridCheckReturnState OnHover(TuningGridData data)
 		{
 			if (!this.IsPressing)
@@ -266,7 +266,7 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand
 			return EGridCheckReturnState.Valid;
 		}
 
-		// Token: 0x0604361C RID: 275996 RVA: 0x01076A2C File Offset: 0x01074C2C
+		// Token: 0x06039658 RID: 235096 RVA: 0x0101AEC0 File Offset: 0x010190C0
 		protected bool ClearAllNextPathStatic(int head)
 		{
 			TuningGridData tuningGridData = this.GridData[head];
@@ -292,7 +292,7 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand
 			return true;
 		}
 
-		// Token: 0x0604361D RID: 275997 RVA: 0x01076B30 File Offset: 0x01074D30
+		// Token: 0x06039659 RID: 235097 RVA: 0x0101AFC4 File Offset: 0x010191C4
 		protected bool ClearAllNextPathDynamic(int head)
 		{
 			bool flag = false;
@@ -354,7 +354,7 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand
 			return flag;
 		}
 
-		// Token: 0x0604361E RID: 275998 RVA: 0x01076D3C File Offset: 0x01074F3C
+		// Token: 0x0603965A RID: 235098 RVA: 0x0101B1D0 File Offset: 0x010193D0
 		protected void SaveDynamicGrid()
 		{
 			foreach (TuningGridData tuningGridData in this.GridData)
@@ -380,7 +380,7 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand
 			}
 		}
 
-		// Token: 0x0604361F RID: 275999 RVA: 0x01076EA4 File Offset: 0x010750A4
+		// Token: 0x0603965B RID: 235099 RVA: 0x0101B338 File Offset: 0x01019538
 		protected bool CheckAllClear()
 		{
 			foreach (TuningGridData tuningGridData in this.GridData)
@@ -393,7 +393,7 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand
 			return true;
 		}
 
-		// Token: 0x06043620 RID: 276000 RVA: 0x01076F0C File Offset: 0x0107510C
+		// Token: 0x0603965C RID: 235100 RVA: 0x0101B3A0 File Offset: 0x010195A0
 		protected int[] CheckEndCount()
 		{
 			int[] array = new int[2];
@@ -411,7 +411,7 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand
 			return array;
 		}
 
-		// Token: 0x06043621 RID: 276001 RVA: 0x01076F90 File Offset: 0x01075190
+		// Token: 0x0603965D RID: 235101 RVA: 0x0101B424 File Offset: 0x01019624
 		protected int CheckRecoverLead(List<int> recoverList)
 		{
 			int count = recoverList.Count;
@@ -469,7 +469,7 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand
 			return -1;
 		}
 
-		// Token: 0x06043622 RID: 276002 RVA: 0x01077170 File Offset: 0x01075370
+		// Token: 0x0603965E RID: 235102 RVA: 0x0101B604 File Offset: 0x01019804
 		protected void RecoverGrid(int head)
 		{
 			TuningGridData tuningGridData = this.GridData[head];
@@ -490,7 +490,7 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand
 			}
 		}
 
-		// Token: 0x06043623 RID: 276003 RVA: 0x01077230 File Offset: 0x01075430
+		// Token: 0x0603965F RID: 235103 RVA: 0x0101B6C4 File Offset: 0x010198C4
 		private void StartRevolving()
 		{
 			List<int> list = new List<int>();
@@ -504,7 +504,7 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand
 			EventSystem.Instance.Emit<IReadOnlyList<int>>(EEventName.TuningStandSuccessShowStart, list);
 		}
 
-		// Token: 0x06043624 RID: 276004 RVA: 0x010772A8 File Offset: 0x010754A8
+		// Token: 0x06039660 RID: 235104 RVA: 0x0101B73C File Offset: 0x0101993C
 		protected void CreateEventList()
 		{
 			this.EventList.Clear();
@@ -520,7 +520,7 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand
 			}
 		}
 
-		// Token: 0x06043625 RID: 276005 RVA: 0x01077318 File Offset: 0x01075518
+		// Token: 0x06039661 RID: 235105 RVA: 0x0101B7AC File Offset: 0x010199AC
 		protected void PlayStartEvent()
 		{
 			if (this.CurAkTime + 0.05000000074505806 > Time.Instance.Now)
@@ -535,7 +535,7 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand
 			this.CurAkTime = Time.Instance.Now;
 		}
 
-		// Token: 0x06043626 RID: 276006 RVA: 0x01077388 File Offset: 0x01075588
+		// Token: 0x06039662 RID: 235106 RVA: 0x0101B81C File Offset: 0x01019A1C
 		protected void PlayAkEvent(bool isForward)
 		{
 			if (this.EventList.Count == 0)
@@ -566,7 +566,7 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand
 			this.CurAkTime = Time.Instance.Now;
 		}
 
-		// Token: 0x06043627 RID: 276007 RVA: 0x01077443 File Offset: 0x01075643
+		// Token: 0x06039663 RID: 235107 RVA: 0x0101B8D7 File Offset: 0x01019AD7
 		protected void InitTalkBubble()
 		{
 			if (this.Config.VisualType == ETuningStandVisualType.Challenge || this.Config.BubbleConfig == null)
@@ -577,19 +577,19 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand
 			this.BubbleProxy = new TuningStandBubbleProxy(this.Config.BubbleConfig);
 		}
 
-		// Token: 0x06043628 RID: 276008 RVA: 0x0107747E File Offset: 0x0107567E
+		// Token: 0x06039664 RID: 235108 RVA: 0x0101B912 File Offset: 0x01019B12
 		public bool TryStartBubbleFlow(ETuningStandBubbleTriggerType type)
 		{
 			return this.BubbleProxy != null && this.BubbleProxy.TryStartBubbleFlow(type);
 		}
 
-		// Token: 0x06043629 RID: 276009 RVA: 0x01077496 File Offset: 0x01075696
+		// Token: 0x06039665 RID: 235109 RVA: 0x0101B92A File Offset: 0x01019B2A
 		public void ProcessTooLong()
 		{
 			this.TryStartBubbleFlow(ETuningStandBubbleTriggerType.TooLong);
 		}
 
-		// Token: 0x0604362A RID: 276010 RVA: 0x010774A0 File Offset: 0x010756A0
+		// Token: 0x06039666 RID: 235110 RVA: 0x0101B934 File Offset: 0x01019B34
 		protected void DestroyBubble()
 		{
 			TuningStandBubbleProxy bubbleProxy = this.BubbleProxy;
@@ -600,8 +600,8 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand
 			this.BubbleProxy = null;
 		}
 
-		// Token: 0x17009876 RID: 39030
-		// (get) Token: 0x0604362B RID: 276011 RVA: 0x010774BA File Offset: 0x010756BA
+		// Token: 0x17006D56 RID: 27990
+		// (get) Token: 0x06039667 RID: 235111 RVA: 0x0101B94E File Offset: 0x01019B4E
 		public static TuningStandModel Instance
 		{
 			get
@@ -610,7 +610,7 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand
 			}
 		}
 
-		// Token: 0x0604362C RID: 276012 RVA: 0x010774C1 File Offset: 0x010756C1
+		// Token: 0x06039668 RID: 235112 RVA: 0x0101B955 File Offset: 0x01019B55
 		public static TuningStandModel GetOrCreateInstance()
 		{
 			if (TuningStandModel._Instance == null)
@@ -620,7 +620,7 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand
 			return TuningStandModel._Instance;
 		}
 
-		// Token: 0x0604362D RID: 276013 RVA: 0x010774D5 File Offset: 0x010756D5
+		// Token: 0x06039669 RID: 235113 RVA: 0x0101B969 File Offset: 0x01019B69
 		public static bool CreateInstance()
 		{
 			if (TuningStandModel._Instance != null)
@@ -631,56 +631,56 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand
 			return true;
 		}
 
-		// Token: 0x0604362E RID: 276014 RVA: 0x010774EB File Offset: 0x010756EB
+		// Token: 0x0603966A RID: 235114 RVA: 0x0101B97F File Offset: 0x01019B7F
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0604362F RID: 276015 RVA: 0x010774ED File Offset: 0x010756ED
+		// Token: 0x0603966B RID: 235115 RVA: 0x0101B981 File Offset: 0x01019B81
 		public static void ResetStaticDefaultValue()
 		{
 			TuningStandModel._Instance = null;
 		}
 
-		// Token: 0x06043630 RID: 276016 RVA: 0x010774F5 File Offset: 0x010756F5
+		// Token: 0x0603966C RID: 235116 RVA: 0x0101B989 File Offset: 0x01019B89
 		static TuningStandModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(TuningStandModel.CreateStaticDefaultValue), new Action(TuningStandModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0402327C RID: 143996
+		// Token: 0x0401E46C RID: 124012
 		[Nullable(2)]
 		protected ITuningStand Config;
 
-		// Token: 0x0402327D RID: 143997
+		// Token: 0x0401E46D RID: 124013
 		protected List<TuningGridData> GridData = new List<TuningGridData>();
 
-		// Token: 0x0402327E RID: 143998
+		// Token: 0x0401E46E RID: 124014
 		protected int? CurIndex;
 
-		// Token: 0x0402327F RID: 143999
+		// Token: 0x0401E46F RID: 124015
 		protected int CurNodeIndex;
 
-		// Token: 0x04023280 RID: 144000
+		// Token: 0x0401E470 RID: 124016
 		protected bool IsPressing;
 
-		// Token: 0x04023281 RID: 144001
+		// Token: 0x0401E471 RID: 124017
 		[Nullable(2)]
 		protected TuningStandBubbleProxy BubbleProxy;
 
-		// Token: 0x04023282 RID: 144002
+		// Token: 0x0401E472 RID: 124018
 		protected double PrevResetTime;
 
-		// Token: 0x04023283 RID: 144003
+		// Token: 0x0401E473 RID: 124019
 		protected int ResetTimes;
 
-		// Token: 0x04023284 RID: 144004
+		// Token: 0x0401E474 RID: 124020
 		protected List<string> EventList = new List<string>();
 
-		// Token: 0x04023285 RID: 144005
+		// Token: 0x0401E475 RID: 124021
 		protected double CurAkTime;
 
-		// Token: 0x04023286 RID: 144006
+		// Token: 0x0401E476 RID: 124022
 		[Nullable(2)]
 		private static TuningStandModel _Instance;
 	}

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200677A RID: 26490
+	// Token: 0x02006DFA RID: 28154
 	public struct IFadeBackgroundImage : IFlatbufferObject
 	{
-		// Token: 0x1700C49C RID: 50332
-		// (get) Token: 0x0602E153 RID: 188755 RVA: 0x0064BAA0 File Offset: 0x00649CA0
+		// Token: 0x1700CE52 RID: 52818
+		// (get) Token: 0x06030999 RID: 199065 RVA: 0x006991E4 File Offset: 0x006973E4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E154 RID: 188756 RVA: 0x0064BAAD File Offset: 0x00649CAD
+		// Token: 0x0603099A RID: 199066 RVA: 0x006991F1 File Offset: 0x006973F1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602E155 RID: 188757 RVA: 0x0064BAB4 File Offset: 0x00649CB4
+		// Token: 0x0603099B RID: 199067 RVA: 0x006991F8 File Offset: 0x006973F8
 		public static IFadeBackgroundImage GetRootAsIFadeBackgroundImage(ByteBuffer _bb)
 		{
 			return IFadeBackgroundImage.GetRootAsIFadeBackgroundImage(_bb, default(IFadeBackgroundImage));
 		}
 
-		// Token: 0x0602E156 RID: 188758 RVA: 0x0064BAD0 File Offset: 0x00649CD0
+		// Token: 0x0603099C RID: 199068 RVA: 0x00699214 File Offset: 0x00697414
 		public static IFadeBackgroundImage GetRootAsIFadeBackgroundImage(ByteBuffer _bb, IFadeBackgroundImage obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602E157 RID: 188759 RVA: 0x0064BAED File Offset: 0x00649CED
+		// Token: 0x0603099D RID: 199069 RVA: 0x00699231 File Offset: 0x00697431
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602E158 RID: 188760 RVA: 0x0064BAFC File Offset: 0x00649CFC
+		// Token: 0x0603099E RID: 199070 RVA: 0x00699240 File Offset: 0x00697440
 		public IFadeBackgroundImage __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C49D RID: 50333
-		// (get) Token: 0x0602E159 RID: 188761 RVA: 0x0064BB0C File Offset: 0x00649D0C
+		// Token: 0x1700CE53 RID: 52819
+		// (get) Token: 0x0603099F RID: 199071 RVA: 0x00699250 File Offset: 0x00697450
 		public EFadeBackgroundType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C49E RID: 50334
-		// (get) Token: 0x0602E15A RID: 188762 RVA: 0x0064BB48 File Offset: 0x00649D48
+		// Token: 0x1700CE54 RID: 52820
+		// (get) Token: 0x060309A0 RID: 199072 RVA: 0x0069928C File Offset: 0x0069748C
 		public string BackgroundImage
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E15B RID: 188763 RVA: 0x0064BB7F File Offset: 0x00649D7F
+		// Token: 0x060309A1 RID: 199073 RVA: 0x006992C3 File Offset: 0x006974C3
 		public Span<byte> GetBackgroundImageBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0602E15C RID: 188764 RVA: 0x0064BB8E File Offset: 0x00649D8E
+		// Token: 0x060309A2 RID: 199074 RVA: 0x006992D2 File Offset: 0x006974D2
 		public byte[] GetBackgroundImageArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x1700C49F RID: 50335
-		// (get) Token: 0x0602E15D RID: 188765 RVA: 0x0064BB9C File Offset: 0x00649D9C
+		// Token: 0x1700CE55 RID: 52821
+		// (get) Token: 0x060309A3 RID: 199075 RVA: 0x006992E0 File Offset: 0x006974E0
 		public IFadeBackgroundFadeInEffect? FadeInEffect
 		{
 			get
@@ -104,8 +104,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C4A0 RID: 50336
-		// (get) Token: 0x0602E15E RID: 188766 RVA: 0x0064BBFC File Offset: 0x00649DFC
+		// Token: 0x1700CE56 RID: 52822
+		// (get) Token: 0x060309A4 RID: 199076 RVA: 0x00699340 File Offset: 0x00697540
 		public IFadeBackgroundFadeOutEffect? FadeOutEffect
 		{
 			get
@@ -119,7 +119,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E15F RID: 188767 RVA: 0x0064BC5A File Offset: 0x00649E5A
+		// Token: 0x060309A5 RID: 199077 RVA: 0x0069939E File Offset: 0x0069759E
 		public static Offset<IFadeBackgroundImage> CreateIFadeBackgroundImage(FlatBufferBuilder builder, EFadeBackgroundType Type = EFadeBackgroundType.Spine, StringOffset BackgroundImageOffset = default(StringOffset), Offset<IFadeBackgroundFadeInEffect> FadeInEffectOffset = default(Offset<IFadeBackgroundFadeInEffect>), Offset<IFadeBackgroundFadeOutEffect> FadeOutEffectOffset = default(Offset<IFadeBackgroundFadeOutEffect>))
 		{
 			builder.StartTable(4);
@@ -130,43 +130,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFadeBackgroundImage.EndIFadeBackgroundImage(builder);
 		}
 
-		// Token: 0x0602E160 RID: 188768 RVA: 0x0064BC86 File Offset: 0x00649E86
+		// Token: 0x060309A6 RID: 199078 RVA: 0x006993CA File Offset: 0x006975CA
 		public static void StartIFadeBackgroundImage(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0602E161 RID: 188769 RVA: 0x0064BC8F File Offset: 0x00649E8F
+		// Token: 0x060309A7 RID: 199079 RVA: 0x006993D3 File Offset: 0x006975D3
 		public static void AddType(FlatBufferBuilder builder, EFadeBackgroundType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602E162 RID: 188770 RVA: 0x0064BC9A File Offset: 0x00649E9A
+		// Token: 0x060309A8 RID: 199080 RVA: 0x006993DE File Offset: 0x006975DE
 		public static void AddBackgroundImage(FlatBufferBuilder builder, StringOffset backgroundImageOffset)
 		{
 			builder.AddOffset(1, backgroundImageOffset.Value, 0);
 		}
 
-		// Token: 0x0602E163 RID: 188771 RVA: 0x0064BCAA File Offset: 0x00649EAA
+		// Token: 0x060309A9 RID: 199081 RVA: 0x006993EE File Offset: 0x006975EE
 		public static void AddFadeInEffect(FlatBufferBuilder builder, Offset<IFadeBackgroundFadeInEffect> fadeInEffectOffset)
 		{
 			builder.AddOffset(2, fadeInEffectOffset.Value, 0);
 		}
 
-		// Token: 0x0602E164 RID: 188772 RVA: 0x0064BCBA File Offset: 0x00649EBA
+		// Token: 0x060309AA RID: 199082 RVA: 0x006993FE File Offset: 0x006975FE
 		public static void AddFadeOutEffect(FlatBufferBuilder builder, Offset<IFadeBackgroundFadeOutEffect> fadeOutEffectOffset)
 		{
 			builder.AddOffset(3, fadeOutEffectOffset.Value, 0);
 		}
 
-		// Token: 0x0602E165 RID: 188773 RVA: 0x0064BCCA File Offset: 0x00649ECA
+		// Token: 0x060309AB RID: 199083 RVA: 0x0069940E File Offset: 0x0069760E
 		public static Offset<IFadeBackgroundImage> EndIFadeBackgroundImage(FlatBufferBuilder builder)
 		{
 			return new Offset<IFadeBackgroundImage>(builder.EndTable());
 		}
 
-		// Token: 0x0602E166 RID: 188774 RVA: 0x0064BCD8 File Offset: 0x00649ED8
+		// Token: 0x060309AC RID: 199084 RVA: 0x0069941C File Offset: 0x0069761C
 		public IFadeBackgroundImageT UnPack()
 		{
 			IFadeBackgroundImageT fadeBackgroundImageT = new IFadeBackgroundImageT();
@@ -174,7 +174,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return fadeBackgroundImageT;
 		}
 
-		// Token: 0x0602E167 RID: 188775 RVA: 0x0064BCF4 File Offset: 0x00649EF4
+		// Token: 0x060309AD RID: 199085 RVA: 0x00699438 File Offset: 0x00697638
 		public void UnPackTo(IFadeBackgroundImageT _o)
 		{
 			_o.Type = this.Type;
@@ -183,7 +183,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.FadeOutEffect = ((this.FadeOutEffect != null) ? this.FadeOutEffect.Value.UnPack() : null);
 		}
 
-		// Token: 0x0602E168 RID: 188776 RVA: 0x0064BD78 File Offset: 0x00649F78
+		// Token: 0x060309AE RID: 199086 RVA: 0x006994BC File Offset: 0x006976BC
 		public static Offset<IFadeBackgroundImage> Pack(FlatBufferBuilder builder, IFadeBackgroundImageT _o)
 		{
 			if (_o == null)
@@ -196,7 +196,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFadeBackgroundImage.CreateIFadeBackgroundImage(builder, _o.Type, backgroundImageOffset, fadeInEffectOffset, fadeOutEffectOffset);
 		}
 
-		// Token: 0x04010E76 RID: 69238
+		// Token: 0x04011CA8 RID: 72872
 		private Table __p;
 	}
 }

@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000F03 RID: 3843
+	// Token: 0x02000FE8 RID: 4072
 	public struct PhonographMusic : IFlatbufferObject
 	{
-		// Token: 0x1700279C RID: 10140
-		// (get) Token: 0x0600AB07 RID: 43783 RVA: 0x002B8AF4 File Offset: 0x002B6CF4
+		// Token: 0x17002802 RID: 10242
+		// (get) Token: 0x0600B128 RID: 45352 RVA: 0x002D5874 File Offset: 0x002D3A74
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600AB08 RID: 43784 RVA: 0x002B8B01 File Offset: 0x002B6D01
+		// Token: 0x0600B129 RID: 45353 RVA: 0x002D5881 File Offset: 0x002D3A81
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600AB09 RID: 43785 RVA: 0x002B8B08 File Offset: 0x002B6D08
+		// Token: 0x0600B12A RID: 45354 RVA: 0x002D5888 File Offset: 0x002D3A88
 		public static PhonographMusic GetRootAsPhonographMusic(ByteBuffer _bb)
 		{
 			return PhonographMusic.GetRootAsPhonographMusic(_bb, default(PhonographMusic));
 		}
 
-		// Token: 0x0600AB0A RID: 43786 RVA: 0x002B8B24 File Offset: 0x002B6D24
+		// Token: 0x0600B12B RID: 45355 RVA: 0x002D58A4 File Offset: 0x002D3AA4
 		public static PhonographMusic GetRootAsPhonographMusic(ByteBuffer _bb, PhonographMusic obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600AB0B RID: 43787 RVA: 0x002B8B41 File Offset: 0x002B6D41
+		// Token: 0x0600B12C RID: 45356 RVA: 0x002D58C1 File Offset: 0x002D3AC1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600AB0C RID: 43788 RVA: 0x002B8B50 File Offset: 0x002B6D50
+		// Token: 0x0600B12D RID: 45357 RVA: 0x002D58D0 File Offset: 0x002D3AD0
 		public PhonographMusic __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700279D RID: 10141
-		// (get) Token: 0x0600AB0D RID: 43789 RVA: 0x002B8B60 File Offset: 0x002B6D60
+		// Token: 0x17002803 RID: 10243
+		// (get) Token: 0x0600B12E RID: 45358 RVA: 0x002D58E0 File Offset: 0x002D3AE0
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700279E RID: 10142
-		// (get) Token: 0x0600AB0E RID: 43790 RVA: 0x002B8B9C File Offset: 0x002B6D9C
+		// Token: 0x17002804 RID: 10244
+		// (get) Token: 0x0600B12F RID: 45359 RVA: 0x002D591C File Offset: 0x002D3B1C
 		public int ItemId
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700279F RID: 10143
-		// (get) Token: 0x0600AB0F RID: 43791 RVA: 0x002B8BD8 File Offset: 0x002B6DD8
+		// Token: 0x17002805 RID: 10245
+		// (get) Token: 0x0600B130 RID: 45360 RVA: 0x002D5958 File Offset: 0x002D3B58
 		public string MusicEvent
 		{
 			get
@@ -94,19 +94,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600AB10 RID: 43792 RVA: 0x002B8C0F File Offset: 0x002B6E0F
+		// Token: 0x0600B131 RID: 45361 RVA: 0x002D598F File Offset: 0x002D3B8F
 		public Span<byte> GetMusicEventBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0600AB11 RID: 43793 RVA: 0x002B8C1E File Offset: 0x002B6E1E
+		// Token: 0x0600B132 RID: 45362 RVA: 0x002D599E File Offset: 0x002D3B9E
 		public byte[] GetMusicEventArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0600AB12 RID: 43794 RVA: 0x002B8C38 File Offset: 0x002B6E38
+		// Token: 0x0600B133 RID: 45363 RVA: 0x002D59B8 File Offset: 0x002D3BB8
 		public int Album(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -117,8 +117,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170027A0 RID: 10144
-		// (get) Token: 0x0600AB13 RID: 43795 RVA: 0x002B8C78 File Offset: 0x002B6E78
+		// Token: 0x17002806 RID: 10246
+		// (get) Token: 0x0600B134 RID: 45364 RVA: 0x002D59F8 File Offset: 0x002D3BF8
 		public int AlbumLength
 		{
 			get
@@ -132,20 +132,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600AB14 RID: 43796 RVA: 0x002B8CA4 File Offset: 0x002B6EA4
+		// Token: 0x0600B135 RID: 45365 RVA: 0x002D5A24 File Offset: 0x002D3C24
 		public Span<int> GetAlbumBytes()
 		{
 			return this.__p.__vector_as_span<int>(10, 4);
 		}
 
-		// Token: 0x0600AB15 RID: 43797 RVA: 0x002B8CB4 File Offset: 0x002B6EB4
+		// Token: 0x0600B136 RID: 45366 RVA: 0x002D5A34 File Offset: 0x002D3C34
 		public int[] GetAlbumArray()
 		{
 			return this.__p.__vector_as_array<int>(10) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x170027A1 RID: 10145
-		// (get) Token: 0x0600AB16 RID: 43798 RVA: 0x002B8CCC File Offset: 0x002B6ECC
+		// Token: 0x17002807 RID: 10247
+		// (get) Token: 0x0600B137 RID: 45367 RVA: 0x002D5A4C File Offset: 0x002D3C4C
 		public bool Lock
 		{
 			get
@@ -155,8 +155,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170027A2 RID: 10146
-		// (get) Token: 0x0600AB17 RID: 43799 RVA: 0x002B8D0C File Offset: 0x002B6F0C
+		// Token: 0x17002808 RID: 10248
+		// (get) Token: 0x0600B138 RID: 45368 RVA: 0x002D5A8C File Offset: 0x002D3C8C
 		public string Title
 		{
 			get
@@ -170,20 +170,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600AB18 RID: 43800 RVA: 0x002B8D44 File Offset: 0x002B6F44
+		// Token: 0x0600B139 RID: 45369 RVA: 0x002D5AC4 File Offset: 0x002D3CC4
 		public Span<byte> GetTitleBytes()
 		{
 			return this.__p.__vector_as_span<byte>(14, 1);
 		}
 
-		// Token: 0x0600AB19 RID: 43801 RVA: 0x002B8D54 File Offset: 0x002B6F54
+		// Token: 0x0600B13A RID: 45370 RVA: 0x002D5AD4 File Offset: 0x002D3CD4
 		public byte[] GetTitleArray()
 		{
 			return this.__p.__vector_as_array<byte>(14) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170027A3 RID: 10147
-		// (get) Token: 0x0600AB1A RID: 43802 RVA: 0x002B8D6C File Offset: 0x002B6F6C
+		// Token: 0x17002809 RID: 10249
+		// (get) Token: 0x0600B13B RID: 45371 RVA: 0x002D5AEC File Offset: 0x002D3CEC
 		public string Desc
 		{
 			get
@@ -197,20 +197,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600AB1B RID: 43803 RVA: 0x002B8DA4 File Offset: 0x002B6FA4
+		// Token: 0x0600B13C RID: 45372 RVA: 0x002D5B24 File Offset: 0x002D3D24
 		public Span<byte> GetDescBytes()
 		{
 			return this.__p.__vector_as_span<byte>(16, 1);
 		}
 
-		// Token: 0x0600AB1C RID: 43804 RVA: 0x002B8DB4 File Offset: 0x002B6FB4
+		// Token: 0x0600B13D RID: 45373 RVA: 0x002D5B34 File Offset: 0x002D3D34
 		public byte[] GetDescArray()
 		{
 			return this.__p.__vector_as_array<byte>(16) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170027A4 RID: 10148
-		// (get) Token: 0x0600AB1D RID: 43805 RVA: 0x002B8DCC File Offset: 0x002B6FCC
+		// Token: 0x1700280A RID: 10250
+		// (get) Token: 0x0600B13E RID: 45374 RVA: 0x002D5B4C File Offset: 0x002D3D4C
 		public string UnlockConditionText
 		{
 			get
@@ -224,37 +224,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600AB1E RID: 43806 RVA: 0x002B8E04 File Offset: 0x002B7004
+		// Token: 0x0600B13F RID: 45375 RVA: 0x002D5B84 File Offset: 0x002D3D84
 		public Span<byte> GetUnlockConditionTextBytes()
 		{
 			return this.__p.__vector_as_span<byte>(18, 1);
 		}
 
-		// Token: 0x0600AB1F RID: 43807 RVA: 0x002B8E14 File Offset: 0x002B7014
+		// Token: 0x0600B140 RID: 45376 RVA: 0x002D5B94 File Offset: 0x002D3D94
 		public byte[] GetUnlockConditionTextArray()
 		{
 			return this.__p.__vector_as_array<byte>(18) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0600AB20 RID: 43808 RVA: 0x002B8E2C File Offset: 0x002B702C
+		// Token: 0x0600B141 RID: 45377 RVA: 0x002D5BAC File Offset: 0x002D3DAC
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用AlbumIter()或GetAlbumBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] Album()
+		public int[] Album()
 		{
-			PhonographMusic phonographMusic = this;
-			return phonographMusic.GetAlbumArray() ?? Array.Empty<int>();
+			return this.GetAlbumArray();
 		}
 
-		// Token: 0x0600AB21 RID: 43809 RVA: 0x002B8E50 File Offset: 0x002B7050
+		// Token: 0x0600B142 RID: 45378 RVA: 0x002D5BB4 File Offset: 0x002D3DB4
 		[NullableContext(1)]
-		public readonly IEnumerable<int> AlbumIter()
+		public IEnumerable<int> AlbumIter()
 		{
 			PhonographMusic.<AlbumIter>d__36 <AlbumIter>d__ = new PhonographMusic.<AlbumIter>d__36(-2);
 			<AlbumIter>d__.<>3__<>4__this = this;
 			return <AlbumIter>d__;
 		}
 
-		// Token: 0x04004FCB RID: 20427
+		// Token: 0x040055B0 RID: 21936
 		private Table __p;
 	}
 }

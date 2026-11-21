@@ -3,15 +3,15 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Level
 {
-	// Token: 0x02004410 RID: 17424
+	// Token: 0x02004878 RID: 18552
 	public class ILevelsConfigT
 	{
-		// Token: 0x17007AF0 RID: 31472
-		// (get) Token: 0x06019F2E RID: 106286 RVA: 0x003B6121 File Offset: 0x003B4321
-		// (set) Token: 0x06019F2F RID: 106287 RVA: 0x003B6129 File Offset: 0x003B4329
+		// Token: 0x1700812F RID: 33071
+		// (get) Token: 0x0601B6FF RID: 112383 RVA: 0x003E232D File Offset: 0x003E052D
+		// (set) Token: 0x0601B700 RID: 112384 RVA: 0x003E2335 File Offset: 0x003E0535
 		public List<ILevelConfigT> Levels { get; set; }
 
-		// Token: 0x06019F30 RID: 106288 RVA: 0x003B6132 File Offset: 0x003B4332
+		// Token: 0x0601B701 RID: 112385 RVA: 0x003E233E File Offset: 0x003E053E
 		public ILevelsConfigT()
 		{
 			this.Levels = null;

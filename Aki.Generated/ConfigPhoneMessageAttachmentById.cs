@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020006BF RID: 1727
+	// Token: 0x020006D7 RID: 1751
 	public class ConfigPhoneMessageAttachmentById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600288A RID: 10378 RVA: 0x0013EC34 File Offset: 0x0013CE34
+		// Token: 0x0600291A RID: 10522 RVA: 0x001456B0 File Offset: 0x001438B0
 		static ConfigPhoneMessageAttachmentById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPhoneMessageAttachmentById.CreateStaticDefaultValue), new Action(ConfigPhoneMessageAttachmentById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600288B RID: 10379 RVA: 0x0013EC54 File Offset: 0x0013CE54
+		// Token: 0x0600291B RID: 10523 RVA: 0x001456D0 File Offset: 0x001438D0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPhoneMessageAttachmentById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600288C RID: 10380 RVA: 0x0013ECD3 File Offset: 0x0013CED3
+		// Token: 0x0600291C RID: 10524 RVA: 0x0014574F File Offset: 0x0014394F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPhoneMessageAttachmentById.LogPair = null;
 			ConfigPhoneMessageAttachmentById.HandleId = 0;
 		}
 
-		// Token: 0x0600288D RID: 10381 RVA: 0x0013ECE1 File Offset: 0x0013CEE1
+		// Token: 0x0600291D RID: 10525 RVA: 0x0014575D File Offset: 0x0014395D
 		public static void Init()
 		{
 			ConfigPhoneMessageAttachmentById.HandleId = ConfigCommon.InitDataStatement(ConfigPhoneMessageAttachmentById.HandleId, "db_phonemessageattachment.db", "select BinData from `PhoneMessageAttachment` where Id=?");
 		}
 
-		// Token: 0x0600288E RID: 10382 RVA: 0x0013ECFC File Offset: 0x0013CEFC
+		// Token: 0x0600291E RID: 10526 RVA: 0x00145778 File Offset: 0x00143978
 		public static PhoneMessageAttachment? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPhoneMessageAttachmentById.HandleId, ConfigPhoneMessageAttachmentById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PhoneMessageAttachment?(rootAsPhoneMessageAttachment);
 		}
 
-		// Token: 0x04002F1F RID: 12063
+		// Token: 0x04002FC7 RID: 12231
 		private const string DB = "db_phonemessageattachment.db";
 
-		// Token: 0x04002F20 RID: 12064
+		// Token: 0x04002FC8 RID: 12232
 		private const string FILE = "k.可视化编辑/c.Csv/s.手机短信附件/*.csv*";
 
-		// Token: 0x04002F21 RID: 12065
+		// Token: 0x04002FC9 RID: 12233
 		private const string TABLE = "PhoneMessageAttachment";
 
-		// Token: 0x04002F22 RID: 12066
+		// Token: 0x04002FCA RID: 12234
 		private const string COMMAND = "select BinData from `PhoneMessageAttachment` where Id=?";
 
-		// Token: 0x04002F23 RID: 12067
+		// Token: 0x04002FCB RID: 12235
 		private const string KEY_PREFIX = "PhoneMessageAttachmentById";
 
-		// Token: 0x04002F24 RID: 12068
+		// Token: 0x04002FCC RID: 12236
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002F25 RID: 12069
+		// Token: 0x04002FCD RID: 12237
 		private static int HandleId;
 	}
 }

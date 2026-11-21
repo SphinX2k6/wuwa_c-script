@@ -1,64 +1,64 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001082 RID: 4226
+// Token: 0x02000536 RID: 1334
 [NullableContext(2)]
 [Nullable(0)]
 internal class FreeCameraState : IFreeCameraState
 {
-	// Token: 0x17000915 RID: 2325
-	// (get) Token: 0x06006D8B RID: 28043 RVA: 0x001615A5 File Offset: 0x0015F7A5
-	// (set) Token: 0x06006D8C RID: 28044 RVA: 0x001615AD File Offset: 0x0015F7AD
+	// Token: 0x17000935 RID: 2357
+	// (get) Token: 0x06004120 RID: 16672 RVA: 0x00169ED9 File Offset: 0x001680D9
+	// (set) Token: 0x06004121 RID: 16673 RVA: 0x00169EE1 File Offset: 0x001680E1
 	[Nullable(1)]
 	public IFreeCameraConfig Config { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-	// Token: 0x17000916 RID: 2326
-	// (get) Token: 0x06006D8D RID: 28045 RVA: 0x001615B6 File Offset: 0x0015F7B6
-	// (set) Token: 0x06006D8E RID: 28046 RVA: 0x001615BE File Offset: 0x0015F7BE
+	// Token: 0x17000936 RID: 2358
+	// (get) Token: 0x06004122 RID: 16674 RVA: 0x00169EEA File Offset: 0x001680EA
+	// (set) Token: 0x06004123 RID: 16675 RVA: 0x00169EF2 File Offset: 0x001680F2
 	public float Timer { get; set; }
 
-	// Token: 0x17000917 RID: 2327
-	// (get) Token: 0x06006D8F RID: 28047 RVA: 0x001615C7 File Offset: 0x0015F7C7
-	// (set) Token: 0x06006D90 RID: 28048 RVA: 0x001615CF File Offset: 0x0015F7CF
+	// Token: 0x17000937 RID: 2359
+	// (get) Token: 0x06004124 RID: 16676 RVA: 0x00169EFB File Offset: 0x001680FB
+	// (set) Token: 0x06004125 RID: 16677 RVA: 0x00169F03 File Offset: 0x00168103
 	public int LastDirection { get; set; }
 
-	// Token: 0x17000918 RID: 2328
-	// (get) Token: 0x06006D91 RID: 28049 RVA: 0x001615D8 File Offset: 0x0015F7D8
-	// (set) Token: 0x06006D92 RID: 28050 RVA: 0x001615E0 File Offset: 0x0015F7E0
+	// Token: 0x17000938 RID: 2360
+	// (get) Token: 0x06004126 RID: 16678 RVA: 0x00169F0C File Offset: 0x0016810C
+	// (set) Token: 0x06004127 RID: 16679 RVA: 0x00169F14 File Offset: 0x00168114
 	public bool IsInterpolating { get; set; }
 
-	// Token: 0x17000919 RID: 2329
-	// (get) Token: 0x06006D93 RID: 28051 RVA: 0x001615E9 File Offset: 0x0015F7E9
-	// (set) Token: 0x06006D94 RID: 28052 RVA: 0x001615F1 File Offset: 0x0015F7F1
+	// Token: 0x17000939 RID: 2361
+	// (get) Token: 0x06004128 RID: 16680 RVA: 0x00169F1D File Offset: 0x0016811D
+	// (set) Token: 0x06004129 RID: 16681 RVA: 0x00169F25 File Offset: 0x00168125
 	public float InterpolationElapsedTime { get; set; }
 
-	// Token: 0x1700091A RID: 2330
-	// (get) Token: 0x06006D95 RID: 28053 RVA: 0x001615FA File Offset: 0x0015F7FA
-	// (set) Token: 0x06006D96 RID: 28054 RVA: 0x00161602 File Offset: 0x0015F802
+	// Token: 0x1700093A RID: 2362
+	// (get) Token: 0x0600412A RID: 16682 RVA: 0x00169F2E File Offset: 0x0016812E
+	// (set) Token: 0x0600412B RID: 16683 RVA: 0x00169F36 File Offset: 0x00168136
 	public int StartDirection { get; set; }
 
-	// Token: 0x1700091B RID: 2331
-	// (get) Token: 0x06006D97 RID: 28055 RVA: 0x0016160B File Offset: 0x0015F80B
-	// (set) Token: 0x06006D98 RID: 28056 RVA: 0x00161613 File Offset: 0x0015F813
+	// Token: 0x1700093B RID: 2363
+	// (get) Token: 0x0600412C RID: 16684 RVA: 0x00169F3F File Offset: 0x0016813F
+	// (set) Token: 0x0600412D RID: 16685 RVA: 0x00169F47 File Offset: 0x00168147
 	public int TargetDirection { get; set; }
 
-	// Token: 0x1700091C RID: 2332
-	// (get) Token: 0x06006D99 RID: 28057 RVA: 0x0016161C File Offset: 0x0015F81C
-	// (set) Token: 0x06006D9A RID: 28058 RVA: 0x00161624 File Offset: 0x0015F824
+	// Token: 0x1700093C RID: 2364
+	// (get) Token: 0x0600412E RID: 16686 RVA: 0x00169F50 File Offset: 0x00168150
+	// (set) Token: 0x0600412F RID: 16687 RVA: 0x00169F58 File Offset: 0x00168158
 	public bool? IsExiting { get; set; }
 
-	// Token: 0x1700091D RID: 2333
-	// (get) Token: 0x06006D9B RID: 28059 RVA: 0x0016162D File Offset: 0x0015F82D
-	// (set) Token: 0x06006D9C RID: 28060 RVA: 0x00161635 File Offset: 0x0015F835
+	// Token: 0x1700093D RID: 2365
+	// (get) Token: 0x06004130 RID: 16688 RVA: 0x00169F61 File Offset: 0x00168161
+	// (set) Token: 0x06004131 RID: 16689 RVA: 0x00169F69 File Offset: 0x00168169
 	public Vector ExitRelativePos { get; set; }
 
-	// Token: 0x1700091E RID: 2334
-	// (get) Token: 0x06006D9D RID: 28061 RVA: 0x0016163E File Offset: 0x0015F83E
-	// (set) Token: 0x06006D9E RID: 28062 RVA: 0x00161646 File Offset: 0x0015F846
+	// Token: 0x1700093E RID: 2366
+	// (get) Token: 0x06004132 RID: 16690 RVA: 0x00169F72 File Offset: 0x00168172
+	// (set) Token: 0x06004133 RID: 16691 RVA: 0x00169F7A File Offset: 0x0016817A
 	public Rotator ExitRelativeRot { get; set; }
 
-	// Token: 0x1700091F RID: 2335
-	// (get) Token: 0x06006D9F RID: 28063 RVA: 0x0016164F File Offset: 0x0015F84F
-	// (set) Token: 0x06006DA0 RID: 28064 RVA: 0x00161657 File Offset: 0x0015F857
+	// Token: 0x1700093F RID: 2367
+	// (get) Token: 0x06004134 RID: 16692 RVA: 0x00169F83 File Offset: 0x00168183
+	// (set) Token: 0x06004135 RID: 16693 RVA: 0x00169F8B File Offset: 0x0016818B
 	public int? ExitFollowConfigIndex { get; set; }
 }

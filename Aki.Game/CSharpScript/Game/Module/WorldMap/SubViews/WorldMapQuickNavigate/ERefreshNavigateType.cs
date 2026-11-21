@@ -2,18 +2,18 @@
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 {
-	// Token: 0x020047CF RID: 18383
+	// Token: 0x02003700 RID: 14080
 	public enum ERefreshNavigateType
 	{
-		// Token: 0x04019F11 RID: 106257
+		// Token: 0x040145C5 RID: 83397
 		None,
-		// Token: 0x04019F12 RID: 106258
+		// Token: 0x040145C6 RID: 83398
 		AreaOnly,
-		// Token: 0x04019F13 RID: 106259
+		// Token: 0x040145C7 RID: 83399
 		StateAndAreaBoth,
-		// Token: 0x04019F14 RID: 106260
+		// Token: 0x040145C8 RID: 83400
 		StateOnly,
-		// Token: 0x04019F15 RID: 106261
+		// Token: 0x040145C9 RID: 83401
 		All
 	}
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200076D RID: 1901
+	// Token: 0x02000787 RID: 1927
 	public class ConfigQualityIconTagById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002C9F RID: 11423 RVA: 0x0015568D File Offset: 0x0015388D
+		// Token: 0x06002D3B RID: 11579 RVA: 0x0015C599 File Offset: 0x0015A799
 		static ConfigQualityIconTagById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigQualityIconTagById.CreateStaticDefaultValue), new Action(ConfigQualityIconTagById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002CA0 RID: 11424 RVA: 0x001556AC File Offset: 0x001538AC
+		// Token: 0x06002D3C RID: 11580 RVA: 0x0015C5B8 File Offset: 0x0015A7B8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigQualityIconTagById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002CA1 RID: 11425 RVA: 0x0015572B File Offset: 0x0015392B
+		// Token: 0x06002D3D RID: 11581 RVA: 0x0015C637 File Offset: 0x0015A837
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigQualityIconTagById.LogPair = null;
 			ConfigQualityIconTagById.HandleId = 0;
 		}
 
-		// Token: 0x06002CA2 RID: 11426 RVA: 0x00155739 File Offset: 0x00153939
+		// Token: 0x06002D3E RID: 11582 RVA: 0x0015C645 File Offset: 0x0015A845
 		public static void Init()
 		{
 			ConfigQualityIconTagById.HandleId = ConfigCommon.InitDataStatement(ConfigQualityIconTagById.HandleId, "db_component_config.db", "select BinData from `QualityIconTag` where Id=?");
 		}
 
-		// Token: 0x06002CA3 RID: 11427 RVA: 0x00155754 File Offset: 0x00153954
+		// Token: 0x06002D3F RID: 11583 RVA: 0x0015C660 File Offset: 0x0015A860
 		public static QualityIconTag? GetConfig(string p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigQualityIconTagById.HandleId, ConfigQualityIconTagById.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new QualityIconTag?(rootAsQualityIconTag);
 		}
 
-		// Token: 0x040033E1 RID: 13281
+		// Token: 0x04003497 RID: 13463
 		private const string DB = "db_component_config.db";
 
-		// Token: 0x040033E2 RID: 13282
+		// Token: 0x04003498 RID: 13464
 		private const string FILE = "t.通用组件配置.xlsx";
 
-		// Token: 0x040033E3 RID: 13283
+		// Token: 0x04003499 RID: 13465
 		private const string TABLE = "QualityIconTag";
 
-		// Token: 0x040033E4 RID: 13284
+		// Token: 0x0400349A RID: 13466
 		private const string COMMAND = "select BinData from `QualityIconTag` where Id=?";
 
-		// Token: 0x040033E5 RID: 13285
+		// Token: 0x0400349B RID: 13467
 		private const string KEY_PREFIX = "QualityIconTagById";
 
-		// Token: 0x040033E6 RID: 13286
+		// Token: 0x0400349C RID: 13468
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040033E7 RID: 13287
+		// Token: 0x0400349D RID: 13469
 		private static int HandleId;
 	}
 }

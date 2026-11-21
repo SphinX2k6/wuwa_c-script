@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006D0D RID: 27917
+	// Token: 0x02005E8A RID: 24202
 	public class LevelConditionOnDangoAbyssPluginRoleSelect : LevelConditionBase
 	{
-		// Token: 0x060446BE RID: 280254 RVA: 0x010E0824 File Offset: 0x010DEA24
+		// Token: 0x0603A81E RID: 239646 RVA: 0x0108A9B0 File Offset: 0x01088BB0
 		[NullableContext(1)]
 		public override bool Check(Condition inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{

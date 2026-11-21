@@ -5,12 +5,12 @@ using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Module.Reward;
 
-// Token: 0x020014C8 RID: 5320
+// Token: 0x0200097C RID: 2428
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleSkinTrailContentData
 {
-	// Token: 0x060096F8 RID: 38648 RVA: 0x00209B7C File Offset: 0x00207D7C
+	// Token: 0x06006A8D RID: 27277 RVA: 0x00212AE8 File Offset: 0x00210CE8
 	public IItemGridData[] GetRewardData()
 	{
 		RoleSkinTrialInfo? roleSkinTrialInfoByRoleId = RoleSkinTrialConfig.Instance.GetRoleSkinTrialInfoByRoleId(this.RoleId);
@@ -31,31 +31,31 @@ public class RoleSkinTrailContentData
 		return list.ToArray();
 	}
 
-	// Token: 0x060096F9 RID: 38649 RVA: 0x00209C3C File Offset: 0x00207E3C
+	// Token: 0x06006A8E RID: 27278 RVA: 0x00212BA8 File Offset: 0x00210DA8
 	public RoleSkinTrialInfo GetRoleSkinTrialInfo()
 	{
 		return RoleSkinTrialConfig.Instance.GetRoleSkinTrialInfoByRoleId(this.RoleId).Value;
 	}
 
-	// Token: 0x060096FA RID: 38650 RVA: 0x00209C64 File Offset: 0x00207E64
+	// Token: 0x06006A8F RID: 27279 RVA: 0x00212BD0 File Offset: 0x00210DD0
 	public int GetInstanceDungeonId()
 	{
 		return this.GetRoleSkinTrialInfo().InstanceId;
 	}
 
-	// Token: 0x060096FB RID: 38651 RVA: 0x00209C80 File Offset: 0x00207E80
+	// Token: 0x06006A90 RID: 27280 RVA: 0x00212BEC File Offset: 0x00210DEC
 	public int GetAccessId()
 	{
 		return this.GetRoleSkinTrialInfo().AccessId;
 	}
 
-	// Token: 0x060096FC RID: 38652 RVA: 0x00209C9C File Offset: 0x00207E9C
+	// Token: 0x06006A91 RID: 27281 RVA: 0x00212C08 File Offset: 0x00210E08
 	public RoleSkinTrialUiConfig GetRoleSkinTrialUiConfig()
 	{
 		return RoleSkinTrialConfig.Instance.GetRoleSkinTrialUiConfigById(this.GetRoleSkinTrialInfo().UiConfigId).Value;
 	}
 
-	// Token: 0x060096FD RID: 38653 RVA: 0x00209CCC File Offset: 0x00207ECC
+	// Token: 0x06006A92 RID: 27282 RVA: 0x00212C38 File Offset: 0x00210E38
 	public void Phrase(RoleSkinTrialTask data)
 	{
 		this.Id = data.RoleSkinTrialInfoId;
@@ -63,12 +63,12 @@ public class RoleSkinTrailContentData
 		this.ChallengeState = data.ChallengeState;
 	}
 
-	// Token: 0x04004288 RID: 17032
+	// Token: 0x04004320 RID: 17184
 	public int RoleId;
 
-	// Token: 0x04004289 RID: 17033
+	// Token: 0x04004321 RID: 17185
 	public int Id;
 
-	// Token: 0x0400428A RID: 17034
+	// Token: 0x04004322 RID: 17186
 	public ChallengeState ChallengeState;
 }

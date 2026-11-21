@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020003E2 RID: 994
+	// Token: 0x020003F8 RID: 1016
 	public class ConfigHonamiStoryDangerLevelById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001753 RID: 5971 RVA: 0x000DD6F4 File Offset: 0x000DB8F4
+		// Token: 0x060017D7 RID: 6103 RVA: 0x000E3E48 File Offset: 0x000E2048
 		static ConfigHonamiStoryDangerLevelById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigHonamiStoryDangerLevelById.CreateStaticDefaultValue), new Action(ConfigHonamiStoryDangerLevelById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001754 RID: 5972 RVA: 0x000DD714 File Offset: 0x000DB914
+		// Token: 0x060017D8 RID: 6104 RVA: 0x000E3E68 File Offset: 0x000E2068
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigHonamiStoryDangerLevelById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001755 RID: 5973 RVA: 0x000DD793 File Offset: 0x000DB993
+		// Token: 0x060017D9 RID: 6105 RVA: 0x000E3EE7 File Offset: 0x000E20E7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigHonamiStoryDangerLevelById.LogPair = null;
 			ConfigHonamiStoryDangerLevelById.HandleId = 0;
 		}
 
-		// Token: 0x06001756 RID: 5974 RVA: 0x000DD7A1 File Offset: 0x000DB9A1
+		// Token: 0x060017DA RID: 6106 RVA: 0x000E3EF5 File Offset: 0x000E20F5
 		public static void Init()
 		{
 			ConfigHonamiStoryDangerLevelById.HandleId = ConfigCommon.InitDataStatement(ConfigHonamiStoryDangerLevelById.HandleId, "db_honamistory.db", "select BinData from `HonamiStoryDangerLevel` where Id=?");
 		}
 
-		// Token: 0x06001757 RID: 5975 RVA: 0x000DD7BC File Offset: 0x000DB9BC
+		// Token: 0x060017DB RID: 6107 RVA: 0x000E3F10 File Offset: 0x000E2110
 		public static HonamiStoryDangerLevel? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigHonamiStoryDangerLevelById.HandleId, ConfigHonamiStoryDangerLevelById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new HonamiStoryDangerLevel?(rootAsHonamiStoryDangerLevel);
 		}
 
-		// Token: 0x04001B12 RID: 6930
+		// Token: 0x04001BAC RID: 7084
 		private const string DB = "db_honamistory.db";
 
-		// Token: 0x04001B13 RID: 6931
+		// Token: 0x04001BAD RID: 7085
 		private const string FILE = "s.穗波奇妙物语局内.xlsx";
 
-		// Token: 0x04001B14 RID: 6932
+		// Token: 0x04001BAE RID: 7086
 		private const string TABLE = "HonamiStoryDangerLevel";
 
-		// Token: 0x04001B15 RID: 6933
+		// Token: 0x04001BAF RID: 7087
 		private const string COMMAND = "select BinData from `HonamiStoryDangerLevel` where Id=?";
 
-		// Token: 0x04001B16 RID: 6934
+		// Token: 0x04001BB0 RID: 7088
 		private const string KEY_PREFIX = "HonamiStoryDangerLevelById";
 
-		// Token: 0x04001B17 RID: 6935
+		// Token: 0x04001BB1 RID: 7089
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001B18 RID: 6936
+		// Token: 0x04001BB2 RID: 7090
 		private static int HandleId;
 	}
 }

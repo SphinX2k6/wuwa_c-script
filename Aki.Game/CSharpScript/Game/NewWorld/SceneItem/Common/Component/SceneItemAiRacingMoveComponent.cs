@@ -7,25 +7,25 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 {
-	// Token: 0x02007215 RID: 29205
+	// Token: 0x020062CA RID: 25290
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemAiRacingMoveComponent : EntityComponent
 	{
-		// Token: 0x060477EB RID: 292843 RVA: 0x01237D36 File Offset: 0x01235F36
+		// Token: 0x0603D10B RID: 250123 RVA: 0x01191589 File Offset: 0x0118F789
 		protected override bool OnStart()
 		{
 			this.MoveComp = base.Entity.GetComponent<SceneItemMoveComponent>();
 			return true;
 		}
 
-		// Token: 0x060477EC RID: 292844 RVA: 0x01237D4A File Offset: 0x01235F4A
+		// Token: 0x0603D10C RID: 250124 RVA: 0x0119159D File Offset: 0x0118F79D
 		protected override void OnActivate()
 		{
 			this.ToggleTick(this.EnableAiRace, "OnActivate时检查EnableAiRace并开关Tick");
 		}
 
-		// Token: 0x060477ED RID: 292845 RVA: 0x01237D60 File Offset: 0x01235F60
+		// Token: 0x0603D10D RID: 250125 RVA: 0x011915B0 File Offset: 0x0118F7B0
 		protected override void OnTick(float delta)
 		{
 			if (!this.EnableAiRace)
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.AiPerceptionData = null;
 		}
 
-		// Token: 0x060477EE RID: 292846 RVA: 0x01237DD0 File Offset: 0x01235FD0
+		// Token: 0x0603D10E RID: 250126 RVA: 0x01191620 File Offset: 0x0118F820
 		private void UpdateAiPerceptionData(float delta)
 		{
 			if (this.AiPerceptionData == null)
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			SundryModel.Instance.GetModuleDebugLevel("AI_RACING_DEBUG");
 		}
 
-		// Token: 0x060477EF RID: 292847 RVA: 0x012380E0 File Offset: 0x012362E0
+		// Token: 0x0603D10F RID: 250127 RVA: 0x01191930 File Offset: 0x0118FB30
 		private void CalcTargetMoveData()
 		{
 			if (this.SplineComp == null || this.AiInfo == null)
@@ -248,7 +248,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.TargetEditableParam.CurrentSpeed = null;
 		}
 
-		// Token: 0x060477F0 RID: 292848 RVA: 0x0123847C File Offset: 0x0123667C
+		// Token: 0x0603D110 RID: 250128 RVA: 0x01191CCC File Offset: 0x0118FECC
 		private void ApplyTargetMoveData(bool force = false)
 		{
 			if (this.MoveComp == null || this.TargetStartMoveParam == null)
@@ -266,7 +266,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x060477F1 RID: 292849 RVA: 0x01238500 File Offset: 0x01236700
+		// Token: 0x0603D111 RID: 250129 RVA: 0x01191D50 File Offset: 0x0118FF50
 		[NullableContext(1)]
 		private float? CalcAiRaceStrategyOneParamFunction(SAiRaceStrategyOneParamFunction func, float param)
 		{
@@ -316,7 +316,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return result;
 		}
 
-		// Token: 0x060477F2 RID: 292850 RVA: 0x012386C4 File Offset: 0x012368C4
+		// Token: 0x0603D112 RID: 250130 RVA: 0x01191F14 File Offset: 0x01190114
 		[NullableContext(1)]
 		private float? CalcAiRaceStrategyMultiParamFunction(SAiRaceStrategyMultiParamFunction func, IList<float> parameters)
 		{
@@ -383,7 +383,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return num;
 		}
 
-		// Token: 0x060477F3 RID: 292851 RVA: 0x012388D0 File Offset: 0x01236AD0
+		// Token: 0x0603D113 RID: 250131 RVA: 0x01192120 File Offset: 0x01190320
 		public void RegisterAiInfo(BP_AIRaceStrategy_C config, int splineId)
 		{
 			this.AiInfo = config;
@@ -406,7 +406,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x060477F4 RID: 292852 RVA: 0x0123896C File Offset: 0x01236B6C
+		// Token: 0x0603D114 RID: 250132 RVA: 0x011921BC File Offset: 0x011903BC
 		public void RefreshAiEnable(bool enable)
 		{
 			if (this.AiInfo == null)
@@ -421,7 +421,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.ToggleTick(enable, "RefreshAiEnable");
 		}
 
-		// Token: 0x060477F5 RID: 292853 RVA: 0x01238994 File Offset: 0x01236B94
+		// Token: 0x0603D115 RID: 250133 RVA: 0x011921E4 File Offset: 0x011903E4
 		[NullableContext(1)]
 		public void ToggleTick(bool enable, string reason)
 		{
@@ -438,7 +438,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x060477F6 RID: 292854 RVA: 0x012389FC File Offset: 0x01236BFC
+		// Token: 0x0603D116 RID: 250134 RVA: 0x0119224C File Offset: 0x0119044C
 		[NullableContext(1)]
 		public string GetDebugString()
 		{
@@ -496,7 +496,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return text;
 		}
 
-		// Token: 0x060477F7 RID: 292855 RVA: 0x01238C58 File Offset: 0x01236E58
+		// Token: 0x0603D117 RID: 250135 RVA: 0x011924A8 File Offset: 0x011906A8
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -505,137 +505,137 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 				return false;
 			}
 			SceneItemAiRacingMoveComponent sceneItemAiRacingMoveComponent = (SceneItemAiRacingMoveComponent)componentTemplate;
-			if (base.CanResetComponentProperty("AiInfo"))
+			if (sceneItemAiRacingMoveComponent.AiInfo == null)
 			{
-				if (sceneItemAiRacingMoveComponent.AiInfo == null)
-				{
-					this.AiInfo = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BP_AIRaceStrategy_C>(this.AiInfo), "AiInfo"))
-				{
-					return false;
-				}
+				this.AiInfo = null;
 			}
-			if (base.CanResetComponentProperty("SplineComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AiInfo), "AiInfo"))
 			{
-				if (sceneItemAiRacingMoveComponent.SplineComp == null)
-				{
-					this.SplineComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<USplineComponent>(this.SplineComp), "SplineComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("SplineActor"))
+			if (sceneItemAiRacingMoveComponent.SplineComp == null)
 			{
-				if (sceneItemAiRacingMoveComponent.SplineActor == null)
-				{
-					this.SplineActor = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TsGameSplineActor>(this.SplineActor), "SplineActor"))
-				{
-					return false;
-				}
+				this.SplineComp = null;
 			}
-			if (base.CanResetComponentProperty("EnableAiRace"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SplineComp), "SplineComp"))
 			{
-				this.EnableAiRace = sceneItemAiRacingMoveComponent.EnableAiRace;
+				return false;
 			}
-			if (base.CanResetComponentProperty("DisableHandle"))
+			if (sceneItemAiRacingMoveComponent.SplineActor == null)
 			{
-				this.DisableHandle = sceneItemAiRacingMoveComponent.DisableHandle;
+				this.SplineActor = null;
 			}
-			if (base.CanResetComponentProperty("MoveComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SplineActor), "SplineActor"))
 			{
-				if (sceneItemAiRacingMoveComponent.MoveComp == null)
-				{
-					this.MoveComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemMoveComponent>(this.MoveComp), "MoveComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("AiPerceptionData"))
+			this.EnableAiRace = sceneItemAiRacingMoveComponent.EnableAiRace;
+			this.DisableHandle = sceneItemAiRacingMoveComponent.DisableHandle;
+			if (sceneItemAiRacingMoveComponent.MoveComp == null)
 			{
-				if (sceneItemAiRacingMoveComponent.AiPerceptionData == null)
-				{
-					this.AiPerceptionData = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AiRacingPerceptionData>(this.AiPerceptionData), "AiPerceptionData"))
-				{
-					return false;
-				}
+				this.MoveComp = null;
 			}
-			if (base.CanResetComponentProperty("TargetStartMoveParam"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
 			{
-				if (sceneItemAiRacingMoveComponent.TargetStartMoveParam == null)
-				{
-					this.TargetStartMoveParam = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemMoveComponent.SceneItemSplineMoveAtDynamicSpeedParam>(this.TargetStartMoveParam), "TargetStartMoveParam"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("LastEditableParam"))
+			if (sceneItemAiRacingMoveComponent.AiPerceptionData == null)
 			{
-				if (sceneItemAiRacingMoveComponent.LastEditableParam == null)
-				{
-					this.LastEditableParam = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemMoveComponent.SceneItemSplineMoveAtDynamicSpeedEditableParam>(this.LastEditableParam), "LastEditableParam"))
-				{
-					return false;
-				}
+				this.AiPerceptionData = null;
 			}
-			if (base.CanResetComponentProperty("TargetEditableParam"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AiPerceptionData), "AiPerceptionData"))
 			{
-				if (sceneItemAiRacingMoveComponent.TargetEditableParam == null)
-				{
-					this.TargetEditableParam = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemMoveComponent.SceneItemSplineMoveAtDynamicSpeedEditableParam>(this.TargetEditableParam), "TargetEditableParam"))
-				{
-					return false;
-				}
+				return false;
+			}
+			if (sceneItemAiRacingMoveComponent.TargetStartMoveParam == null)
+			{
+				this.TargetStartMoveParam = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TargetStartMoveParam), "TargetStartMoveParam"))
+			{
+				return false;
+			}
+			if (sceneItemAiRacingMoveComponent.LastEditableParam == null)
+			{
+				this.LastEditableParam = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastEditableParam), "LastEditableParam"))
+			{
+				return false;
+			}
+			if (sceneItemAiRacingMoveComponent.TargetEditableParam == null)
+			{
+				this.TargetEditableParam = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TargetEditableParam), "TargetEditableParam"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x040259D5 RID: 154069
+		// Token: 0x1700739A RID: 29594
+		// (get) Token: 0x0603D118 RID: 250136 RVA: 0x01192638 File Offset: 0x01190838
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700739B RID: 29595
+		// (get) Token: 0x0603D119 RID: 250137 RVA: 0x0119263B File Offset: 0x0119083B
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700739C RID: 29596
+		// (get) Token: 0x0603D11A RID: 250138 RVA: 0x0119263E File Offset: 0x0119083E
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020644 RID: 132676
 		[Nullable(1)]
 		private const string AI_RACING_DEBUG_KEY = "AI_RACING_DEBUG";
 
-		// Token: 0x040259D6 RID: 154070
+		// Token: 0x04020645 RID: 132677
 		private BP_AIRaceStrategy_C AiInfo;
 
-		// Token: 0x040259D7 RID: 154071
+		// Token: 0x04020646 RID: 132678
 		private USplineComponent SplineComp;
 
-		// Token: 0x040259D8 RID: 154072
+		// Token: 0x04020647 RID: 132679
 		private TsGameSplineActor SplineActor;
 
-		// Token: 0x040259D9 RID: 154073
+		// Token: 0x04020648 RID: 132680
 		private bool EnableAiRace;
 
-		// Token: 0x040259DA RID: 154074
+		// Token: 0x04020649 RID: 132681
 		private int? DisableHandle;
 
-		// Token: 0x040259DB RID: 154075
+		// Token: 0x0402064A RID: 132682
 		private SceneItemMoveComponent MoveComp;
 
-		// Token: 0x040259DC RID: 154076
+		// Token: 0x0402064B RID: 132683
 		private AiRacingPerceptionData AiPerceptionData;
 
-		// Token: 0x040259DD RID: 154077
+		// Token: 0x0402064C RID: 132684
 		private SceneItemMoveComponent.SceneItemSplineMoveAtDynamicSpeedParam TargetStartMoveParam;
 
-		// Token: 0x040259DE RID: 154078
+		// Token: 0x0402064D RID: 132685
 		private SceneItemMoveComponent.SceneItemSplineMoveAtDynamicSpeedEditableParam LastEditableParam;
 
-		// Token: 0x040259DF RID: 154079
+		// Token: 0x0402064E RID: 132686
 		private SceneItemMoveComponent.SceneItemSplineMoveAtDynamicSpeedEditableParam TargetEditableParam;
 	}
 }

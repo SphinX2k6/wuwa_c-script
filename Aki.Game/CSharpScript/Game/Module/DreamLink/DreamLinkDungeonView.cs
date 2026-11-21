@@ -16,18 +16,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.DreamLink
 {
-	// Token: 0x02005AA6 RID: 23206
+	// Token: 0x02004A82 RID: 19074
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class DreamLinkDungeonView : UiTickViewBase
 	{
-		// Token: 0x0603AC67 RID: 240743 RVA: 0x00DFFEBD File Offset: 0x00DFE0BD
+		// Token: 0x0602FBB3 RID: 195507 RVA: 0x00D50471 File Offset: 0x00D4E671
 		[NullableContext(1)]
 		public DreamLinkDungeonView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603AC68 RID: 240744 RVA: 0x00DFFEE4 File Offset: 0x00DFE0E4
+		// Token: 0x0602FBB4 RID: 195508 RVA: 0x00D50498 File Offset: 0x00D4E698
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 20;
@@ -92,19 +92,19 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603AC69 RID: 240745 RVA: 0x00E00275 File Offset: 0x00DFE475
+		// Token: 0x0602FBB5 RID: 195509 RVA: 0x00D50829 File Offset: 0x00D4EA29
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnSelectRoleDreamDungeon, new Action<int>(this.OnSelectRoleDungeon));
 		}
 
-		// Token: 0x0603AC6A RID: 240746 RVA: 0x00E00293 File Offset: 0x00DFE493
+		// Token: 0x0602FBB6 RID: 195510 RVA: 0x00D50847 File Offset: 0x00D4EA47
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnSelectRoleDreamDungeon, new Action<int>(this.OnSelectRoleDungeon));
 		}
 
-		// Token: 0x0603AC6B RID: 240747 RVA: 0x00E002B4 File Offset: 0x00DFE4B4
+		// Token: 0x0602FBB7 RID: 195511 RVA: 0x00D50868 File Offset: 0x00D4EA68
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DreamLinkDungeonView.<OnBeforeStartAsync>d__45 <OnBeforeStartAsync>d__;
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603AC6C RID: 240748 RVA: 0x00E002F8 File Offset: 0x00DFE4F8
+		// Token: 0x0602FBB8 RID: 195512 RVA: 0x00D508AC File Offset: 0x00D4EAAC
 		protected override UniTask OnBeforeShowAsyncImplementImplement()
 		{
 			DreamLinkDungeonView.<OnBeforeShowAsyncImplementImplement>d__46 <OnBeforeShowAsyncImplementImplement>d__;
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			return <OnBeforeShowAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603AC6D RID: 240749 RVA: 0x00E0033C File Offset: 0x00DFE53C
+		// Token: 0x0602FBB9 RID: 195513 RVA: 0x00D508F0 File Offset: 0x00D4EAF0
 		protected override void OnBeforeShow()
 		{
 			this.ShakeSequenceActor.bOverrideInstanceData = true;
@@ -202,13 +202,13 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.FirstIn = false;
 		}
 
-		// Token: 0x0603AC6E RID: 240750 RVA: 0x00E0050D File Offset: 0x00DFE70D
+		// Token: 0x0602FBBA RID: 195514 RVA: 0x00D50AC1 File Offset: 0x00D4ECC1
 		protected override void OnAfterShow()
 		{
 			this.InitProgressAnim();
 		}
 
-		// Token: 0x0603AC6F RID: 240751 RVA: 0x00E00518 File Offset: 0x00DFE718
+		// Token: 0x0602FBBB RID: 195515 RVA: 0x00D50ACC File Offset: 0x00D4ECCC
 		protected override void OnAfterHide()
 		{
 			if (this.ShowSequencePlayer != null && this.ShowSequencePlayer.IsValid())
@@ -244,7 +244,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			CameraController.Instance.SetViewTarget(this.OriginCameraActor, "DreamLinkDungeonView.OnBeforeDestroy", 0f, EViewTargetBlendFunction.VTBlend_Linear, 0f, null, null, "MainCamera", null, null);
 		}
 
-		// Token: 0x0603AC70 RID: 240752 RVA: 0x00E00660 File Offset: 0x00DFE860
+		// Token: 0x0602FBBC RID: 195516 RVA: 0x00D50C14 File Offset: 0x00D4EE14
 		protected override void OnBeforeDestroy()
 		{
 			SkeletalObserverHandle roleHandle = this.RoleHandle;
@@ -281,7 +281,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			UKuroSequencePerformanceManager.CloseKuroPerformanceMode();
 		}
 
-		// Token: 0x0603AC71 RID: 240753 RVA: 0x00E00768 File Offset: 0x00DFE968
+		// Token: 0x0602FBBD RID: 195517 RVA: 0x00D50D1C File Offset: 0x00D4EF1C
 		[NullableContext(1)]
 		protected void LoadModel(int roleId, string animationPath, int dungeonId)
 		{
@@ -367,7 +367,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			}, 100, this.MemoryTag);
 		}
 
-		// Token: 0x0603AC72 RID: 240754 RVA: 0x00E0081E File Offset: 0x00DFEA1E
+		// Token: 0x0602FBBE RID: 195518 RVA: 0x00D50DD2 File Offset: 0x00D4EFD2
 		protected void RefreshView()
 		{
 			this.RefreshPreNextButton();
@@ -376,7 +376,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.RefreshReward();
 		}
 
-		// Token: 0x0603AC73 RID: 240755 RVA: 0x00E00838 File Offset: 0x00DFEA38
+		// Token: 0x0602FBBF RID: 195519 RVA: 0x00D50DEC File Offset: 0x00D4EFEC
 		protected void RefreshReward()
 		{
 			DreamLinkData currentActivityData = DreamLinkController.Instance.GetCurrentActivityData();
@@ -410,7 +410,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			}, false);
 		}
 
-		// Token: 0x0603AC74 RID: 240756 RVA: 0x00E008E0 File Offset: 0x00DFEAE0
+		// Token: 0x0602FBC0 RID: 195520 RVA: 0x00D50E94 File Offset: 0x00D4F094
 		protected void RefreshEnterButton()
 		{
 			DreamLinkData currentActivityData = DreamLinkController.Instance.GetCurrentActivityData();
@@ -474,7 +474,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			base.GetItem(19).SetUIActive(currentActivityData.CheckDungeonRedDotStateByPage(this.CurrentPageIndex + 1, 3));
 		}
 
-		// Token: 0x0603AC75 RID: 240757 RVA: 0x00E00AAC File Offset: 0x00DFECAC
+		// Token: 0x0602FBC1 RID: 195521 RVA: 0x00D51060 File Offset: 0x00D4F260
 		protected void RefreshEnvironment(bool isForce = false)
 		{
 			DreamLinkDungeonView.<>c__DisplayClass55_0 CS$<>8__locals1 = new DreamLinkDungeonView.<>c__DisplayClass55_0();
@@ -501,7 +501,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			CS$<>8__locals1.<RefreshEnvironment>g__playEnvironmentSequence|0();
 		}
 
-		// Token: 0x0603AC76 RID: 240758 RVA: 0x00E00B4C File Offset: 0x00DFED4C
+		// Token: 0x0602FBC2 RID: 195522 RVA: 0x00D51100 File Offset: 0x00D4F300
 		protected void RefreshPreNextButton()
 		{
 			UUIButtonComponent button = base.GetButton(4);
@@ -534,7 +534,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			}
 		}
 
-		// Token: 0x0603AC77 RID: 240759 RVA: 0x00E00C0C File Offset: 0x00DFEE0C
+		// Token: 0x0602FBC3 RID: 195523 RVA: 0x00D511C0 File Offset: 0x00D4F3C0
 		protected void RefreshRoleList(bool isInit = true)
 		{
 			if (this.CurrentEnvironmentState.GetValueOrDefault() == DreamLinkDungeonView.EEnvironmentState.Door)
@@ -580,7 +580,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			}
 		}
 
-		// Token: 0x0603AC78 RID: 240760 RVA: 0x00E00CAC File Offset: 0x00DFEEAC
+		// Token: 0x0602FBC4 RID: 195524 RVA: 0x00D51260 File Offset: 0x00D4F460
 		protected void RefreshDoorState()
 		{
 			if (this.CurrentPageIndex < 2)
@@ -602,7 +602,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.PlayDoorSequence();
 		}
 
-		// Token: 0x0603AC79 RID: 240761 RVA: 0x00E00D08 File Offset: 0x00DFEF08
+		// Token: 0x0602FBC5 RID: 195525 RVA: 0x00D512BC File Offset: 0x00D4F4BC
 		protected void InitDefaultSelectIndex()
 		{
 			DreamLinkData currentActivityData = DreamLinkController.Instance.GetCurrentActivityData();
@@ -630,7 +630,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.CurrentEnvironmentState = new DreamLinkDungeonView.EEnvironmentState?(DreamLinkDungeonView.EEnvironmentState.DreamLinkDungeon);
 		}
 
-		// Token: 0x0603AC7A RID: 240762 RVA: 0x00E00DA0 File Offset: 0x00DFEFA0
+		// Token: 0x0602FBC6 RID: 195526 RVA: 0x00D51354 File Offset: 0x00D4F554
 		protected void InitProgressAnim()
 		{
 			DreamLinkData currentActivityData = DreamLinkController.Instance.GetCurrentActivityData();
@@ -683,7 +683,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			});
 		}
 
-		// Token: 0x0603AC7B RID: 240763 RVA: 0x00E00EC8 File Offset: 0x00DFF0C8
+		// Token: 0x0602FBC7 RID: 195527 RVA: 0x00D5147C File Offset: 0x00D4F67C
 		protected void LoadItemModel(int dungeonId)
 		{
 			DreamLinkRoleDungeon? roleConfig = DreamLinkConfig.Instance.GetDreamLinkRoleDungeonConfig(dungeonId);
@@ -791,7 +791,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			}
 		}
 
-		// Token: 0x0603AC7C RID: 240764 RVA: 0x00E00FF8 File Offset: 0x00DFF1F8
+		// Token: 0x0602FBC8 RID: 195528 RVA: 0x00D515AC File Offset: 0x00D4F7AC
 		protected void OnSelectRoleDungeon(int dungeonId)
 		{
 			if (this.CurrentEnvironmentState.GetValueOrDefault() == DreamLinkDungeonView.EEnvironmentState.Door)
@@ -860,7 +860,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			}
 		}
 
-		// Token: 0x0603AC7D RID: 240765 RVA: 0x00E01100 File Offset: 0x00DFF300
+		// Token: 0x0602FBC9 RID: 195529 RVA: 0x00D516B4 File Offset: 0x00D4F8B4
 		protected UniTask PlayDoorSequence()
 		{
 			DreamLinkDungeonView.<PlayDoorSequence>d__63 <PlayDoorSequence>d__;
@@ -871,7 +871,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			return <PlayDoorSequence>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603AC7E RID: 240766 RVA: 0x00E01144 File Offset: 0x00DFF344
+		// Token: 0x0602FBCA RID: 195530 RVA: 0x00D516F8 File Offset: 0x00D4F8F8
 		[NullableContext(1)]
 		protected UniTask PlayBlackScreen(Action callback, string reason)
 		{
@@ -884,7 +884,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			return <PlayBlackScreen>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603AC7F RID: 240767 RVA: 0x00E01190 File Offset: 0x00DFF390
+		// Token: 0x0602FBCB RID: 195531 RVA: 0x00D51744 File Offset: 0x00D4F944
 		[NullableContext(1)]
 		protected void PlaySceneLevelSequence(string levelSequencePath, bool isPauseOnEnd = false, bool isRestoreState = false, bool isOffset = true)
 		{
@@ -935,7 +935,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			}, 100, this.MemoryTag);
 		}
 
-		// Token: 0x0603AC80 RID: 240768 RVA: 0x00E011FC File Offset: 0x00DFF3FC
+		// Token: 0x0602FBCC RID: 195532 RVA: 0x00D517B0 File Offset: 0x00D4F9B0
 		public void PlaySelectWaveEffect()
 		{
 			FVector2D? screenPositionByIndex = this.DreamLinkDungeonRolePanel.GetScreenPositionByIndex(this.SelectInstIndex % 3);
@@ -967,7 +967,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			postProcessMaterialDynamicInstance3.SetScalarParameterValue(FNameUtil.GetDynamicFName("CommonStrength").Value, 0.05f);
 		}
 
-		// Token: 0x0603AC81 RID: 240769 RVA: 0x00E012D8 File Offset: 0x00DFF4D8
+		// Token: 0x0602FBCD RID: 195533 RVA: 0x00D5188C File Offset: 0x00D4FA8C
 		public void ClearWaveEffect()
 		{
 			UMaterialInstanceDynamic postProcessMaterialDynamicInstance = this.PostProcessMaterialDynamicInstance;
@@ -983,7 +983,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			postProcessMaterialDynamicInstance2.SetScalarParameterValue(FNameUtil.GetDynamicFName("ClickStrength").Value, 0f);
 		}
 
-		// Token: 0x0603AC82 RID: 240770 RVA: 0x00E01334 File Offset: 0x00DFF534
+		// Token: 0x0602FBCE RID: 195534 RVA: 0x00D518E8 File Offset: 0x00D4FAE8
 		private void OnBtnMask()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(7);
@@ -994,7 +994,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			extendToggle.SetToggleState(EToggleState.ETT_UnChecked, true, false, false);
 		}
 
-		// Token: 0x0603AC83 RID: 240771 RVA: 0x00E0134C File Offset: 0x00DFF54C
+		// Token: 0x0602FBCF RID: 195535 RVA: 0x00D51900 File Offset: 0x00D4FB00
 		private void OnBtnReward(EToggleState _)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(7);
@@ -1016,7 +1016,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			button.RootUIComp.Get().SetUIActive(flag);
 		}
 
-		// Token: 0x0603AC84 RID: 240772 RVA: 0x00E013AD File Offset: 0x00DFF5AD
+		// Token: 0x0602FBD0 RID: 195536 RVA: 0x00D51961 File Offset: 0x00D4FB61
 		private void OnBtnPre()
 		{
 			this.CurrentPageIndex--;
@@ -1026,7 +1026,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.RefreshEnvironment(false);
 		}
 
-		// Token: 0x0603AC85 RID: 240773 RVA: 0x00E013EA File Offset: 0x00DFF5EA
+		// Token: 0x0602FBD1 RID: 195537 RVA: 0x00D5199E File Offset: 0x00D4FB9E
 		private void OnBtnNext()
 		{
 			this.CurrentPageIndex++;
@@ -1036,7 +1036,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.RefreshEnvironment(false);
 		}
 
-		// Token: 0x0603AC86 RID: 240774 RVA: 0x00E01428 File Offset: 0x00DFF628
+		// Token: 0x0602FBD2 RID: 195538 RVA: 0x00D519DC File Offset: 0x00D4FBDC
 		private void OnBtnEnter()
 		{
 			DreamLinkData currentActivityData = DreamLinkController.Instance.GetCurrentActivityData();
@@ -1079,109 +1079,109 @@ namespace CSharpScript.Game.Module.DreamLink
 			}
 		}
 
-		// Token: 0x0401EAC1 RID: 125633
+		// Token: 0x04019568 RID: 103784
 		private const int PER_PAGE_COUNT = 3;
 
-		// Token: 0x0401EAC2 RID: 125634
+		// Token: 0x04019569 RID: 103785
 		private const int MAX_PAGE_COUNT = 2;
 
-		// Token: 0x0401EAC3 RID: 125635
+		// Token: 0x0401956A RID: 103786
 		[Nullable(1)]
 		private const string DOOR_OPEN_SEQUENCE_PATH = "/Game/Aki/Map/UISceneLevel/UI_Scene/LevelSequence/Ani_Door.Ani_Door";
 
-		// Token: 0x0401EAC4 RID: 125636
+		// Token: 0x0401956B RID: 103787
 		[Nullable(1)]
 		private const string DOOR_CLOSE_SEQUENCE_PATH = "/Game/Aki/Map/UISceneLevel/UI_Scene/LevelSequence/Ani_Door_close.Ani_Door_close";
 
-		// Token: 0x0401EAC5 RID: 125637
+		// Token: 0x0401956C RID: 103788
 		[Nullable(1)]
 		private const string RED_WEATHER_SEQUENCE_PATH = "/Game/Aki/Map/UISceneLevel/UI_Scene/LevelSequence/Ani_UIMap_Roguelike_rad.Ani_UIMap_Roguelike_rad";
 
-		// Token: 0x0401EAC6 RID: 125638
+		// Token: 0x0401956D RID: 103789
 		[Nullable(1)]
 		private const string BLUE_WEATHER_SEQUENCE_PATH = "/Game/Aki/Map/UISceneLevel/UI_Scene/LevelSequence/Ani_UIMap_Roguelike.Ani_UIMap_Roguelike";
 
-		// Token: 0x0401EAC7 RID: 125639
+		// Token: 0x0401956E RID: 103790
 		[Nullable(1)]
 		private const string SELECT_WAVE_EFFECT_PATH = "/Game/Aki/Render/Shaders/PostProcess/WaterWave/M_WaterWave.M_WaterWave";
 
-		// Token: 0x0401EAC8 RID: 125640
+		// Token: 0x0401956F RID: 103791
 		[Nullable(1)]
 		private const string SHAKE_CAMERA_SEQUENCE = "/Game/Aki/Map/UISceneLevel/UI_Scene/LevelSequence/Ani_UIMap_Roguelike_loop.Ani_UIMap_Roguelike_loop";
 
-		// Token: 0x0401EAC9 RID: 125641
+		// Token: 0x04019570 RID: 103792
 		[Nullable(1)]
 		private const string SWITCH_SEQUENCE = "/Game/Aki/Map/UISceneLevel/UI_Scene/LevelSequence/Ani_UIMap_Roguelike_l.Ani_UIMap_Roguelike_l";
 
-		// Token: 0x0401EACA RID: 125642
+		// Token: 0x04019571 RID: 103793
 		[Nullable(1)]
 		private const string UNLICK_SEQUNECE = "/Game/Aki/Map/UISceneLevel/UI_Scene/LevelSequence/Ani_UIMap_Roguelike_CamA.Ani_UIMap_Roguelike_CamA";
 
-		// Token: 0x0401EACB RID: 125643
+		// Token: 0x04019572 RID: 103794
 		private const int DREAMLINK_DUNGEON_HELP_ID = 135;
 
-		// Token: 0x0401EACC RID: 125644
+		// Token: 0x04019573 RID: 103795
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401EACD RID: 125645
+		// Token: 0x04019574 RID: 103796
 		private SkeletalObserverHandle RoleHandle;
 
-		// Token: 0x0401EACE RID: 125646
+		// Token: 0x04019575 RID: 103797
 		private DreamLinkRoleInstancePanel DreamLinkDungeonRolePanel;
 
-		// Token: 0x0401EACF RID: 125647
+		// Token: 0x04019576 RID: 103798
 		private ULevelSequencePlayer ShowSequencePlayer;
 
-		// Token: 0x0401EAD0 RID: 125648
+		// Token: 0x04019577 RID: 103799
 		private ALevelSequenceActor ShowSequenceActor;
 
-		// Token: 0x0401EAD1 RID: 125649
+		// Token: 0x04019578 RID: 103800
 		private ALevelSequenceActor ShakeSequenceActor;
 
-		// Token: 0x0401EAD2 RID: 125650
+		// Token: 0x04019579 RID: 103801
 		private ALevelSequenceActor LockSequenceActor;
 
-		// Token: 0x0401EAD3 RID: 125651
+		// Token: 0x0401957A RID: 103802
 		private ALevelSequenceActor UnlockSequenceActor;
 
-		// Token: 0x0401EAD4 RID: 125652
+		// Token: 0x0401957B RID: 103803
 		private int SelectInstIndex;
 
-		// Token: 0x0401EAD5 RID: 125653
+		// Token: 0x0401957C RID: 103804
 		private int CurrentPageIndex;
 
-		// Token: 0x0401EAD6 RID: 125654
+		// Token: 0x0401957D RID: 103805
 		private AActor OriginCameraActor;
 
-		// Token: 0x0401EAD7 RID: 125655
+		// Token: 0x0401957E RID: 103806
 		private AActor DoorCameraActor;
 
-		// Token: 0x0401EAD8 RID: 125656
+		// Token: 0x0401957F RID: 103807
 		private UMaterialInstanceDynamic PostProcessMaterialDynamicInstance;
 
-		// Token: 0x0401EAD9 RID: 125657
+		// Token: 0x04019580 RID: 103808
 		private int PostProcessHandleId;
 
-		// Token: 0x0401EADA RID: 125658
+		// Token: 0x04019581 RID: 103809
 		private DreamLinkDungeonView.EEnvironmentState? CurrentEnvironmentState;
 
-		// Token: 0x0401EADB RID: 125659
+		// Token: 0x04019582 RID: 103810
 		[Nullable(1)]
 		private SkeletalObserverHandle[] ItemModelHandleList = new SkeletalObserverHandle[0];
 
-		// Token: 0x0401EADC RID: 125660
+		// Token: 0x04019583 RID: 103811
 		private AActor SequenceCameraActor;
 
-		// Token: 0x0401EADD RID: 125661
+		// Token: 0x04019584 RID: 103812
 		private DreamLinkScoreRewardItem RewardItem;
 
-		// Token: 0x0401EADE RID: 125662
+		// Token: 0x04019585 RID: 103813
 		private DreamLinkCatProgressItem CatProgressItem;
 
-		// Token: 0x0401EADF RID: 125663
+		// Token: 0x04019586 RID: 103814
 		private LevelSequencePlayer EnterButtonLevelSequencePlayer;
 
-		// Token: 0x0401EAE0 RID: 125664
+		// Token: 0x04019587 RID: 103815
 		[Nullable(new byte[]
 		{
 			2,
@@ -1189,107 +1189,107 @@ namespace CSharpScript.Game.Module.DreamLink
 		})]
 		private GenericLayout<CommonItemSmallItemGrid, TItem> RewardLayout;
 
-		// Token: 0x0401EAE1 RID: 125665
+		// Token: 0x04019588 RID: 103816
 		private bool FirstIn = true;
 
-		// Token: 0x0401EAE2 RID: 125666
+		// Token: 0x04019589 RID: 103817
 		private FVectorDouble? EffectStartPosition;
 
-		// Token: 0x0401EAE3 RID: 125667
+		// Token: 0x0401958A RID: 103818
 		private FVectorDouble? EffectEndPosition;
 
-		// Token: 0x0401EAE4 RID: 125668
+		// Token: 0x0401958B RID: 103819
 		private ULTweener MoveTweener;
 
-		// Token: 0x0401EAE5 RID: 125669
+		// Token: 0x0401958C RID: 103820
 		private DreamLinkDungeonView.EDreamLinkEnterButtonState? CurrentEnterButtonState;
 
-		// Token: 0x0401EAE6 RID: 125670
+		// Token: 0x0401958D RID: 103821
 		[Nullable(1)]
 		private readonly FFrameTime LoopStartFrame = new FFrameTime();
 
-		// Token: 0x0200BCD6 RID: 48342
+		// Token: 0x0200A6DF RID: 42719
 		[NullableContext(0)]
 		private class EDreamLinkDungeonViewDefine
 		{
-			// Token: 0x04038F54 RID: 233300
+			// Token: 0x0403391F RID: 211231
 			public const int CaptionItem = 0;
 
-			// Token: 0x04038F55 RID: 233301
+			// Token: 0x04033920 RID: 211232
 			public const int SpriteProgress = 1;
 
-			// Token: 0x04038F56 RID: 233302
+			// Token: 0x04033921 RID: 211233
 			public const int PanelLayout = 2;
 
-			// Token: 0x04038F57 RID: 233303
+			// Token: 0x04033922 RID: 211234
 			public const int PanelRole = 3;
 
-			// Token: 0x04038F58 RID: 233304
+			// Token: 0x04033923 RID: 211235
 			public const int BtnPre = 4;
 
-			// Token: 0x04038F59 RID: 233305
+			// Token: 0x04033924 RID: 211236
 			public const int BtnNext = 5;
 
-			// Token: 0x04038F5A RID: 233306
+			// Token: 0x04033925 RID: 211237
 			public const int BtnEnter = 6;
 
-			// Token: 0x04038F5B RID: 233307
+			// Token: 0x04033926 RID: 211238
 			public const int BtnReward = 7;
 
-			// Token: 0x04038F5C RID: 233308
+			// Token: 0x04033927 RID: 211239
 			public const int CatProgress = 8;
 
-			// Token: 0x04038F5D RID: 233309
+			// Token: 0x04033928 RID: 211240
 			public const int PermanentReward = 9;
 
-			// Token: 0x04038F5E RID: 233310
+			// Token: 0x04033929 RID: 211241
 			public const int RewardLayout = 10;
 
-			// Token: 0x04038F5F RID: 233311
+			// Token: 0x0403392A RID: 211242
 			public const int RewardLayoutItem = 11;
 
-			// Token: 0x04038F60 RID: 233312
+			// Token: 0x0403392B RID: 211243
 			public const int BtnMask = 12;
 
-			// Token: 0x04038F61 RID: 233313
+			// Token: 0x0403392C RID: 211244
 			public const int TrailEffect = 13;
 
-			// Token: 0x04038F62 RID: 233314
+			// Token: 0x0403392D RID: 211245
 			public const int BurstEffect = 14;
 
-			// Token: 0x04038F63 RID: 233315
+			// Token: 0x0403392E RID: 211246
 			public const int TxtDungeonName = 15;
 
-			// Token: 0x04038F64 RID: 233316
+			// Token: 0x0403392F RID: 211247
 			public const int DungeonDonePanel = 16;
 
-			// Token: 0x04038F65 RID: 233317
+			// Token: 0x04033930 RID: 211248
 			public const int CausticPanel = 17;
 
-			// Token: 0x04038F66 RID: 233318
+			// Token: 0x04033931 RID: 211249
 			public const int LeftBtnRedDot = 18;
 
-			// Token: 0x04038F67 RID: 233319
+			// Token: 0x04033932 RID: 211250
 			public const int RightBtnRedDot = 19;
 		}
 
-		// Token: 0x0200BCD7 RID: 48343
+		// Token: 0x0200A6E0 RID: 42720
 		[NullableContext(0)]
 		private enum EEnvironmentState
 		{
-			// Token: 0x04038F69 RID: 233321
+			// Token: 0x04033934 RID: 211252
 			DreamLinkDungeon,
-			// Token: 0x04038F6A RID: 233322
+			// Token: 0x04033935 RID: 211253
 			Door
 		}
 
-		// Token: 0x0200BCD8 RID: 48344
+		// Token: 0x0200A6E1 RID: 42721
 		[NullableContext(0)]
 		private enum EDreamLinkEnterButtonState
 		{
-			// Token: 0x04038F6C RID: 233324
+			// Token: 0x04033937 RID: 211255
 			Blue,
-			// Token: 0x04038F6D RID: 233325
+			// Token: 0x04033938 RID: 211256
 			Red
 		}
 	}

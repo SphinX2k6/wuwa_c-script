@@ -8,18 +8,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020019E0 RID: 6624
+// Token: 0x02000E9F RID: 3743
 [NullableContext(2)]
 [Nullable(0)]
 public class FloroRanchConfirmBoxView : UiViewBase
 {
-	// Token: 0x0600C18D RID: 49549 RVA: 0x002BB0AA File Offset: 0x002B92AA
+	// Token: 0x0600959A RID: 38298 RVA: 0x002C6082 File Offset: 0x002C4282
 	[NullableContext(1)]
 	public FloroRanchConfirmBoxView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0600C18E RID: 49550 RVA: 0x002BB0B4 File Offset: 0x002B92B4
+	// Token: 0x0600959B RID: 38299 RVA: 0x002C608C File Offset: 0x002C428C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -48,7 +48,7 @@ public class FloroRanchConfirmBoxView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600C18F RID: 49551 RVA: 0x002BB1E0 File Offset: 0x002B93E0
+	// Token: 0x0600959C RID: 38300 RVA: 0x002C61B8 File Offset: 0x002C43B8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FloroRanchConfirmBoxView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -59,7 +59,7 @@ public class FloroRanchConfirmBoxView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C190 RID: 49552 RVA: 0x002BB224 File Offset: 0x002B9424
+	// Token: 0x0600959D RID: 38301 RVA: 0x002C61FC File Offset: 0x002C43FC
 	protected override void OnStart()
 	{
 		UiViewBase attachView = (this.OpenParam as ConfirmBoxDataNew).AttachView;
@@ -70,7 +70,7 @@ public class FloroRanchConfirmBoxView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600C191 RID: 49553 RVA: 0x002BB278 File Offset: 0x002B9478
+	// Token: 0x0600959E RID: 38302 RVA: 0x002C6250 File Offset: 0x002C4450
 	protected override void OnBeforeShow()
 	{
 		IUiPopFrameInterface childPopView = this.ChildPopView;
@@ -91,7 +91,7 @@ public class FloroRanchConfirmBoxView : UiViewBase
 		childPopView3.PopItem.OverrideBackBtnCallBack(new Action(this.ContentPanel.OnClose));
 	}
 
-	// Token: 0x0600C192 RID: 49554 RVA: 0x002BB2F8 File Offset: 0x002B94F8
+	// Token: 0x0600959F RID: 38303 RVA: 0x002C62D0 File Offset: 0x002C44D0
 	protected override void OnAfterShow()
 	{
 		Action afterShowFunction = this.ConfirmBoxData.GetAfterShowFunction();
@@ -102,7 +102,7 @@ public class FloroRanchConfirmBoxView : UiViewBase
 		afterShowFunction();
 	}
 
-	// Token: 0x0600C193 RID: 49555 RVA: 0x002BB30F File Offset: 0x002B950F
+	// Token: 0x060095A0 RID: 38304 RVA: 0x002C62E7 File Offset: 0x002C44E7
 	protected override void OnBeforeHide()
 	{
 		if (this.LastHide)
@@ -121,51 +121,51 @@ public class FloroRanchConfirmBoxView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600C194 RID: 49556 RVA: 0x002BB334 File Offset: 0x002B9534
+	// Token: 0x060095A1 RID: 38305 RVA: 0x002C630C File Offset: 0x002C450C
 	protected override float OnGetTimeDilation()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = this.OpenParam as ConfirmBoxDataNew;
 		return (float)ConfirmBoxConfig.Instance.GetConfirmBoxConfig((int)confirmBoxDataNew.ConfigId).Value.TimeDilation;
 	}
 
-	// Token: 0x0600C195 RID: 49557 RVA: 0x002BB36E File Offset: 0x002B956E
+	// Token: 0x060095A2 RID: 38306 RVA: 0x002C6346 File Offset: 0x002C4546
 	private void OnBtnCloseClicked()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600C196 RID: 49558 RVA: 0x002BB377 File Offset: 0x002B9577
+	// Token: 0x060095A3 RID: 38307 RVA: 0x002C634F File Offset: 0x002C454F
 	private void CloseFunc(Action<bool> callback = null)
 	{
 		base.CloseMe(callback);
 	}
 
-	// Token: 0x04005932 RID: 22834
+	// Token: 0x04005A01 RID: 23041
 	private ConfirmBoxDataNew ConfirmBoxData;
 
-	// Token: 0x04005933 RID: 22835
+	// Token: 0x04005A02 RID: 23042
 	private ConfirmBox? Config;
 
-	// Token: 0x04005934 RID: 22836
+	// Token: 0x04005A03 RID: 23043
 	private FloroRanchConfirmBoxContentPanel ContentPanel;
 
-	// Token: 0x02007F0F RID: 32527
+	// Token: 0x0200709E RID: 28830
 	[NullableContext(0)]
 	private class EConfirmBoxViewDefine
 	{
-		// Token: 0x0402981E RID: 170014
+		// Token: 0x04024B5B RID: 150363
 		public const int BtnMask = 0;
 
-		// Token: 0x0402981F RID: 170015
+		// Token: 0x04024B5C RID: 150364
 		public const int ItemContentRoot = 1;
 
-		// Token: 0x04029820 RID: 170016
+		// Token: 0x04024B5D RID: 150365
 		public const int BtnClose = 2;
 
-		// Token: 0x04029821 RID: 170017
+		// Token: 0x04024B5E RID: 150366
 		public const int ItemCost = 3;
 
-		// Token: 0x04029822 RID: 170018
+		// Token: 0x04024B5F RID: 150367
 		public const int TextTitle = 4;
 	}
 }

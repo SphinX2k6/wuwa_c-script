@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -11,12 +10,12 @@ using CSharpScript.Game.Module.PayShop;
 using CSharpScript.Game.Ui;
 using Google.Protobuf;
 
-// Token: 0x020013E7 RID: 5095
+// Token: 0x0200089B RID: 2203
 [NullableContext(1)]
 [Nullable(0)]
 public class PinballShopExchangePopViewProxy : AbstractGameplayShopExchangePopViewProxy
 {
-	// Token: 0x06008FD1 RID: 36817 RVA: 0x001F1A60 File Offset: 0x001EFC60
+	// Token: 0x06006366 RID: 25446 RVA: 0x001FA59C File Offset: 0x001F879C
 	public void UpdateShopItemData()
 	{
 		if (this.GoodsData == null)
@@ -28,13 +27,13 @@ public class PinballShopExchangePopViewProxy : AbstractGameplayShopExchangePopVi
 		base.ShopItemProxy = pinballExchangeShopItemProxy;
 	}
 
-	// Token: 0x06008FD2 RID: 36818 RVA: 0x001F1A8F File Offset: 0x001EFC8F
+	// Token: 0x06006367 RID: 25447 RVA: 0x001FA5CB File Offset: 0x001F87CB
 	public void UpdateShopItemResource()
 	{
 		base.ShopItemResource = "UiItem_CatapultStoryShopItem";
 	}
 
-	// Token: 0x06008FD3 RID: 36819 RVA: 0x001F1A9C File Offset: 0x001EFC9C
+	// Token: 0x06006368 RID: 25448 RVA: 0x001FA5D8 File Offset: 0x001F87D8
 	public void UpdateTipTitleItem()
 	{
 		if (this.GoodsData == null)
@@ -49,7 +48,7 @@ public class PinballShopExchangePopViewProxy : AbstractGameplayShopExchangePopVi
 		}
 	}
 
-	// Token: 0x06008FD4 RID: 36820 RVA: 0x001F1AEC File Offset: 0x001EFCEC
+	// Token: 0x06006369 RID: 25449 RVA: 0x001FA628 File Offset: 0x001F8828
 	public void UpdateCurrency()
 	{
 		if (this.GoodsData == null)
@@ -65,7 +64,7 @@ public class PinballShopExchangePopViewProxy : AbstractGameplayShopExchangePopVi
 		base.CurrencyItemResourceId = "UiItem_CostBtn";
 	}
 
-	// Token: 0x06008FD5 RID: 36821 RVA: 0x001F1B38 File Offset: 0x001EFD38
+	// Token: 0x0600636A RID: 25450 RVA: 0x001FA674 File Offset: 0x001F8874
 	public void UpdatePrice()
 	{
 		if (this.GoodsData == null)
@@ -76,7 +75,7 @@ public class PinballShopExchangePopViewProxy : AbstractGameplayShopExchangePopVi
 		base.Price = nowPrice;
 	}
 
-	// Token: 0x06008FD6 RID: 36822 RVA: 0x001F1B68 File Offset: 0x001EFD68
+	// Token: 0x0600636B RID: 25451 RVA: 0x001FA6A4 File Offset: 0x001F88A4
 	public void UpdateDescribeText()
 	{
 		if (this.GoodsData == null)
@@ -87,14 +86,14 @@ public class PinballShopExchangePopViewProxy : AbstractGameplayShopExchangePopVi
 		base.DescribeTextData.SetData(new TableTextArgNew(attributesDescription, Array.Empty<object>()));
 	}
 
-	// Token: 0x06008FD7 RID: 36823 RVA: 0x001F1BB4 File Offset: 0x001EFDB4
+	// Token: 0x0600636C RID: 25452 RVA: 0x001FA6F0 File Offset: 0x001F88F0
 	public void UpdateLeftTime()
 	{
 		base.LeftTimeItemVisible = false;
 		base.LeftTimeTextVisible = false;
 	}
 
-	// Token: 0x06008FD8 RID: 36824 RVA: 0x001F1BC4 File Offset: 0x001EFDC4
+	// Token: 0x0600636D RID: 25453 RVA: 0x001FA700 File Offset: 0x001F8900
 	public void UpdateLockData()
 	{
 		if (this.GoodsData == null)
@@ -145,7 +144,7 @@ public class PinballShopExchangePopViewProxy : AbstractGameplayShopExchangePopVi
 		}
 	}
 
-	// Token: 0x06008FD9 RID: 36825 RVA: 0x001F1CCC File Offset: 0x001EFECC
+	// Token: 0x0600636E RID: 25454 RVA: 0x001FA808 File Offset: 0x001F8A08
 	private string GetCurrencyName()
 	{
 		if (this.GoodsData == null)
@@ -156,7 +155,7 @@ public class PinballShopExchangePopViewProxy : AbstractGameplayShopExchangePopVi
 		return ConfigMultiTextLang.GetLocalTextNew(InventoryConfig.Instance.GetItemConfigData(currencyId).Name, null) ?? "";
 	}
 
-	// Token: 0x06008FDA RID: 36826 RVA: 0x001F1D18 File Offset: 0x001EFF18
+	// Token: 0x0600636F RID: 25455 RVA: 0x001FA854 File Offset: 0x001F8A54
 	public void UpdateLimitTextData()
 	{
 		if (this.GoodsData == null)
@@ -171,7 +170,7 @@ public class PinballShopExchangePopViewProxy : AbstractGameplayShopExchangePopVi
 		}
 	}
 
-	// Token: 0x06008FDB RID: 36827 RVA: 0x001F1D60 File Offset: 0x001EFF60
+	// Token: 0x06006370 RID: 25456 RVA: 0x001FA89C File Offset: 0x001F8A9C
 	public void UpdateFromPayShopGoods(PayShopGoods payShopGoods)
 	{
 		this.GoodsData = payShopGoods;
@@ -188,7 +187,7 @@ public class PinballShopExchangePopViewProxy : AbstractGameplayShopExchangePopVi
 		this.UpdateExchangeTableTextId();
 	}
 
-	// Token: 0x06008FDC RID: 36828 RVA: 0x001F1DB8 File Offset: 0x001EFFB8
+	// Token: 0x06006371 RID: 25457 RVA: 0x001FA8F4 File Offset: 0x001F8AF4
 	public override void OnConfirmButtonClick(int viewId)
 	{
 		if (this.GoodsData == null)
@@ -218,7 +217,7 @@ public class PinballShopExchangePopViewProxy : AbstractGameplayShopExchangePopVi
 		});
 	}
 
-	// Token: 0x06008FDD RID: 36829 RVA: 0x001F1E40 File Offset: 0x001F0040
+	// Token: 0x06006372 RID: 25458 RVA: 0x001FA97C File Offset: 0x001F8B7C
 	protected void SendBuyRequest([Nullable(new byte[]
 	{
 		2,
@@ -271,7 +270,7 @@ public class PinballShopExchangePopViewProxy : AbstractGameplayShopExchangePopVi
 			}
 			else
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(payShopBuyResponse.ErrorCode, 25381, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(payShopBuyResponse.ErrorCode, 19539, null, true, true);
 				Action<bool, List<ActivityBuyItem>> callBack4 = callBack;
 				if (callBack4 == null)
 				{
@@ -283,7 +282,7 @@ public class PinballShopExchangePopViewProxy : AbstractGameplayShopExchangePopVi
 		}, 0);
 	}
 
-	// Token: 0x06008FDE RID: 36830 RVA: 0x001F1EC4 File Offset: 0x001F00C4
+	// Token: 0x06006373 RID: 25459 RVA: 0x001FAA00 File Offset: 0x001F8C00
 	public override bool CheckConfirmButtonCanInteract()
 	{
 		if (this.GoodsData == null)
@@ -297,14 +296,14 @@ public class PinballShopExchangePopViewProxy : AbstractGameplayShopExchangePopVi
 		return flag && enough && !flag2 && !flag3;
 	}
 
-	// Token: 0x06008FDF RID: 36831 RVA: 0x001F1F1C File Offset: 0x001F011C
+	// Token: 0x06006374 RID: 25460 RVA: 0x001FAA58 File Offset: 0x001F8C58
 	public override UiPanelBase ShopItemCreate()
 	{
 		this.ShopItem = new PinballShopItem();
 		return this.ShopItem;
 	}
 
-	// Token: 0x06008FE0 RID: 36832 RVA: 0x001F1F30 File Offset: 0x001F0130
+	// Token: 0x06006375 RID: 25461 RVA: 0x001FAA6C File Offset: 0x001F8C6C
 	public override void ShopItemRefresh()
 	{
 		PinballShopItem pinballShopItem = this.ShopItem as PinballShopItem;
@@ -318,7 +317,7 @@ public class PinballShopExchangePopViewProxy : AbstractGameplayShopExchangePopVi
 		pinballShopItem.SetItemFrameVisible(false);
 	}
 
-	// Token: 0x06008FE1 RID: 36833 RVA: 0x001F1F70 File Offset: 0x001F0170
+	// Token: 0x06006376 RID: 25462 RVA: 0x001FAAAC File Offset: 0x001F8CAC
 	public override bool CheckMoneyEnough()
 	{
 		if (this.GoodsData == null)
@@ -330,14 +329,14 @@ public class PinballShopExchangePopViewProxy : AbstractGameplayShopExchangePopVi
 		return InventoryModel.Instance.GetItemCountByConfigId(id, 0) >= goodsData.GetNowPrice() * base.BuyCount;
 	}
 
-	// Token: 0x06008FE2 RID: 36834 RVA: 0x001F1FBD File Offset: 0x001F01BD
+	// Token: 0x06006377 RID: 25463 RVA: 0x001FAAF9 File Offset: 0x001F8CF9
 	public override void OnResellTimeRefresh()
 	{
 		this.UpdateLeftTime();
 		this.UpdateLockData();
 	}
 
-	// Token: 0x06008FE3 RID: 36835 RVA: 0x001F1FCC File Offset: 0x001F01CC
+	// Token: 0x06006378 RID: 25464 RVA: 0x001FAB08 File Offset: 0x001F8D08
 	public void UpdateMaxBuyCount()
 	{
 		if (this.GoodsData == null)
@@ -368,11 +367,11 @@ public class PinballShopExchangePopViewProxy : AbstractGameplayShopExchangePopVi
 		}
 		ItemConfig itemConfigData = InventoryConfig.Instance.GetItemConfigData(goodsData.ItemId);
 		InventoryDefine.EItemDataType itemDataTypeByConfigId = InventoryConfig.Instance.GetItemDataTypeByConfigId(new int?(goodsData.ItemId));
-		if (itemConfigData != null && itemDataTypeByConfigId == InventoryDefine.EItemDataType.RoleItem && itemConfigData.ShowTypes.Contains(30))
+		if (itemConfigData != null && itemDataTypeByConfigId == InventoryDefine.EItemDataType.RoleItem && Array.IndexOf<int>(itemConfigData.ShowTypes, 30) >= 0)
 		{
 			num2 = 1;
 		}
-		if (itemConfigData.ShowTypes.Contains(30))
+		if (Array.IndexOf<int>(itemConfigData.ShowTypes, 30) >= 0)
 		{
 			int[] resonantItemRoleId = RoleModel.Instance.GetResonantItemRoleId(goodsData.ItemId);
 			int num3 = RoleModel.Instance.GetRoleLeftResonantCountWithInventoryItem(resonantItemRoleId[0]);
@@ -382,17 +381,17 @@ public class PinballShopExchangePopViewProxy : AbstractGameplayShopExchangePopVi
 		base.MaxBuyCount = num2;
 	}
 
-	// Token: 0x06008FE4 RID: 36836 RVA: 0x001F20EE File Offset: 0x001F02EE
+	// Token: 0x06006379 RID: 25465 RVA: 0x001FAC2C File Offset: 0x001F8E2C
 	public void UpdateExchangeTableTextId()
 	{
 		base.ExchangeTableTextId = "";
 	}
 
-	// Token: 0x04003F97 RID: 16279
+	// Token: 0x0400402F RID: 16431
 	[Nullable(2)]
 	protected PayShopGoods GoodsData;
 
-	// Token: 0x04003F98 RID: 16280
+	// Token: 0x04004030 RID: 16432
 	[Nullable(2)]
 	public UiPanelBase ShopItem;
 }

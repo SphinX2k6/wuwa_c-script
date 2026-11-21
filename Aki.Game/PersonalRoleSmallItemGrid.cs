@@ -5,7 +5,7 @@ using CSharpScript.Game.Module.Personal;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020023EC RID: 9196
+// Token: 0x020018D1 RID: 6353
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class PersonalRoleSmallItemGrid : GridProxyAbstract<PlayerHeadData>
 {
-	// Token: 0x060125EE RID: 75246 RVA: 0x00487388 File Offset: 0x00485588
+	// Token: 0x0600FAA0 RID: 64160 RVA: 0x00494894 File Offset: 0x00492A94
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,7 +30,7 @@ public class PersonalRoleSmallItemGrid : GridProxyAbstract<PlayerHeadData>
 		};
 	}
 
-	// Token: 0x060125EF RID: 75247 RVA: 0x0048741C File Offset: 0x0048561C
+	// Token: 0x0600FAA1 RID: 64161 RVA: 0x00494928 File Offset: 0x00492B28
 	public override void Refresh(PlayerHeadData playerHeadData, bool isSelected, int gridIndex)
 	{
 		this.PlayerHeadData = playerHeadData;
@@ -50,7 +50,7 @@ public class PersonalRoleSmallItemGrid : GridProxyAbstract<PlayerHeadData>
 		base.GetExtendToggle(1).SetToggleState(state, false, false, false);
 	}
 
-	// Token: 0x060125F0 RID: 75248 RVA: 0x004874CC File Offset: 0x004856CC
+	// Token: 0x0600FAA2 RID: 64162 RVA: 0x004949D8 File Offset: 0x00492BD8
 	public void RefreshEquipHeadIconItem()
 	{
 		int? numberPropById = PlayerInfoModel.Instance.GetNumberPropById(EPlayerInfoNumber.HeadPhoto);
@@ -60,7 +60,7 @@ public class PersonalRoleSmallItemGrid : GridProxyAbstract<PlayerHeadData>
 		item.SetUIActive(id == num.GetValueOrDefault() & num != null);
 	}
 
-	// Token: 0x060125F1 RID: 75249 RVA: 0x0048750F File Offset: 0x0048570F
+	// Token: 0x0600FAA3 RID: 64163 RVA: 0x00494A1B File Offset: 0x00492C1B
 	private void OnSelectToggleClick(EToggleState state)
 	{
 		if (state != EToggleState.ETT_Checked)
@@ -73,28 +73,28 @@ public class PersonalRoleSmallItemGrid : GridProxyAbstract<PlayerHeadData>
 		}
 	}
 
-	// Token: 0x060125F2 RID: 75250 RVA: 0x00487531 File Offset: 0x00485731
+	// Token: 0x0600FAA4 RID: 64164 RVA: 0x00494A3D File Offset: 0x00492C3D
 	public void BindToggleClickCallBack(Action<PlayerHeadData> toggleClickClickBack)
 	{
 		this.ToggleClickCallBack = toggleClickClickBack;
 	}
 
-	// Token: 0x060125F3 RID: 75251 RVA: 0x0048753A File Offset: 0x0048573A
+	// Token: 0x0600FAA5 RID: 64165 RVA: 0x00494A46 File Offset: 0x00492C46
 	public override void OnSelected(bool fireEvent)
 	{
 		base.GetExtendToggle(1).SetToggleState(EToggleState.ETT_Checked, false, false, false);
 	}
 
-	// Token: 0x060125F4 RID: 75252 RVA: 0x0048754D File Offset: 0x0048574D
+	// Token: 0x0600FAA6 RID: 64166 RVA: 0x00494A59 File Offset: 0x00492C59
 	public override void OnDeselected(bool fireEvent)
 	{
 		base.GetExtendToggle(1).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x04008B0E RID: 35598
+	// Token: 0x04008C55 RID: 35925
 	private PlayerHeadData PlayerHeadData;
 
-	// Token: 0x04008B0F RID: 35599
+	// Token: 0x04008C56 RID: 35926
 	[Nullable(new byte[]
 	{
 		2,

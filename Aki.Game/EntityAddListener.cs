@@ -4,12 +4,12 @@ using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x020030DC RID: 12508
+// Token: 0x02002634 RID: 9780
 [NullableContext(1)]
 [Nullable(0)]
 public class EntityAddListener
 {
-	// Token: 0x0601ACA2 RID: 109730 RVA: 0x0073A3DA File Offset: 0x007385DA
+	// Token: 0x060186BE RID: 100030 RVA: 0x0075FE16 File Offset: 0x0075E016
 	public void Init(TCbEntityAddCallback callback, TCbEntityAddFilter filter = null)
 	{
 		if (this.Inited)
@@ -22,7 +22,7 @@ public class EntityAddListener
 		EventSystem.Instance.Add<EAddEntityType, EntityHandle, AActor>(EEventName.AddEntity, new Action<EAddEntityType, EntityHandle, AActor>(this.OnCreateEntity));
 	}
 
-	// Token: 0x0601ACA3 RID: 109731 RVA: 0x0073A416 File Offset: 0x00738616
+	// Token: 0x060186BF RID: 100031 RVA: 0x0075FE52 File Offset: 0x0075E052
 	private void OnCreateEntity(EAddEntityType addType, EntityHandle handle, [Nullable(2)] AActor actor)
 	{
 		if (handle == null || !handle.Valid || this.CbEntityAdd == null)
@@ -36,7 +36,7 @@ public class EntityAddListener
 		this.CbEntityAdd(handle);
 	}
 
-	// Token: 0x0601ACA4 RID: 109732 RVA: 0x0073A44F File Offset: 0x0073864F
+	// Token: 0x060186C0 RID: 100032 RVA: 0x0075FE8B File Offset: 0x0075E08B
 	public void Clear()
 	{
 		EventSystem.Instance.Remove(EEventName.AddEntity, new Action<EAddEntityType, EntityHandle, AActor>(this.OnCreateEntity));
@@ -45,7 +45,7 @@ public class EntityAddListener
 		this.Inited = false;
 	}
 
-	// Token: 0x0601ACA5 RID: 109733 RVA: 0x0073A484 File Offset: 0x00738684
+	// Token: 0x060186C1 RID: 100033 RVA: 0x0075FEC0 File Offset: 0x0075E0C0
 	public static TCbDispose ListenMonsterAddOnce(TCbEntityAddCallback callback, int excludeId = 0)
 	{
 		EntityAddListener listener = new EntityAddListener();
@@ -81,12 +81,12 @@ public class EntityAddListener
 		};
 	}
 
-	// Token: 0x0400CEE1 RID: 52961
+	// Token: 0x0400D2D1 RID: 53969
 	private TCbEntityAddCallback CbEntityAdd;
 
-	// Token: 0x0400CEE2 RID: 52962
+	// Token: 0x0400D2D2 RID: 53970
 	private TCbEntityAddFilter CbFilter;
 
-	// Token: 0x0400CEE3 RID: 52963
+	// Token: 0x0400D2D3 RID: 53971
 	private bool Inited;
 }

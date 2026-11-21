@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000C4D RID: 3149
+	// Token: 0x02000D30 RID: 3376
 	public struct ExploreProgress : IFlatbufferObject
 	{
-		// Token: 0x17000FBF RID: 4031
-		// (get) Token: 0x06006B3C RID: 27452 RVA: 0x00227B35 File Offset: 0x00225D35
+		// Token: 0x17001018 RID: 4120
+		// (get) Token: 0x0600713E RID: 28990 RVA: 0x00246DE1 File Offset: 0x00244FE1
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,39 +20,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006B3D RID: 27453 RVA: 0x00227B42 File Offset: 0x00225D42
+		// Token: 0x0600713F RID: 28991 RVA: 0x00246DEE File Offset: 0x00244FEE
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06006B3E RID: 27454 RVA: 0x00227B4C File Offset: 0x00225D4C
+		// Token: 0x06007140 RID: 28992 RVA: 0x00246DF8 File Offset: 0x00244FF8
 		public static ExploreProgress GetRootAsExploreProgress(ByteBuffer _bb)
 		{
 			return ExploreProgress.GetRootAsExploreProgress(_bb, default(ExploreProgress));
 		}
 
-		// Token: 0x06006B3F RID: 27455 RVA: 0x00227B68 File Offset: 0x00225D68
+		// Token: 0x06007141 RID: 28993 RVA: 0x00246E14 File Offset: 0x00245014
 		public static ExploreProgress GetRootAsExploreProgress(ByteBuffer _bb, ExploreProgress obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06006B40 RID: 27456 RVA: 0x00227B85 File Offset: 0x00225D85
+		// Token: 0x06007142 RID: 28994 RVA: 0x00246E31 File Offset: 0x00245031
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06006B41 RID: 27457 RVA: 0x00227B94 File Offset: 0x00225D94
+		// Token: 0x06007143 RID: 28995 RVA: 0x00246E40 File Offset: 0x00245040
 		public ExploreProgress __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000FC0 RID: 4032
-		// (get) Token: 0x06006B42 RID: 27458 RVA: 0x00227BA4 File Offset: 0x00225DA4
+		// Token: 0x17001019 RID: 4121
+		// (get) Token: 0x06007144 RID: 28996 RVA: 0x00246E50 File Offset: 0x00245050
 		public int Id
 		{
 			get
@@ -66,8 +66,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000FC1 RID: 4033
-		// (get) Token: 0x06006B43 RID: 27459 RVA: 0x00227BE0 File Offset: 0x00225DE0
+		// Token: 0x1700101A RID: 4122
+		// (get) Token: 0x06007145 RID: 28997 RVA: 0x00246E8C File Offset: 0x0024508C
 		public int Area
 		{
 			get
@@ -81,8 +81,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000FC2 RID: 4034
-		// (get) Token: 0x06006B44 RID: 27460 RVA: 0x00227C1C File Offset: 0x00225E1C
+		// Token: 0x1700101B RID: 4123
+		// (get) Token: 0x06007146 RID: 28998 RVA: 0x00246EC8 File Offset: 0x002450C8
 		public int ExploreType
 		{
 			get
@@ -96,7 +96,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006B45 RID: 27461 RVA: 0x00227C58 File Offset: 0x00225E58
+		// Token: 0x06007147 RID: 28999 RVA: 0x00246F04 File Offset: 0x00245104
 		public DicIntInt? SubTypeScore(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -107,8 +107,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17000FC3 RID: 4035
-		// (get) Token: 0x06006B46 RID: 27462 RVA: 0x00227CBC File Offset: 0x00225EBC
+		// Token: 0x1700101C RID: 4124
+		// (get) Token: 0x06007148 RID: 29000 RVA: 0x00246F68 File Offset: 0x00245168
 		public int SubTypeScoreLength
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000FC4 RID: 4036
-		// (get) Token: 0x06006B47 RID: 27463 RVA: 0x00227CE8 File Offset: 0x00225EE8
+		// Token: 0x1700101D RID: 4125
+		// (get) Token: 0x06007149 RID: 29001 RVA: 0x00246F94 File Offset: 0x00245194
 		public int PhantomSkillId
 		{
 			get
@@ -137,8 +137,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000FC5 RID: 4037
-		// (get) Token: 0x06006B48 RID: 27464 RVA: 0x00227D28 File Offset: 0x00225F28
+		// Token: 0x1700101E RID: 4126
+		// (get) Token: 0x0600714A RID: 29002 RVA: 0x00246FD4 File Offset: 0x002451D4
 		public string UnlockTextId
 		{
 			get
@@ -152,20 +152,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006B49 RID: 27465 RVA: 0x00227D60 File Offset: 0x00225F60
+		// Token: 0x0600714B RID: 29003 RVA: 0x0024700C File Offset: 0x0024520C
 		public Span<byte> GetUnlockTextIdBytes()
 		{
 			return this.__p.__vector_as_span<byte>(14, 1);
 		}
 
-		// Token: 0x06006B4A RID: 27466 RVA: 0x00227D70 File Offset: 0x00225F70
+		// Token: 0x0600714C RID: 29004 RVA: 0x0024701C File Offset: 0x0024521C
 		public byte[] GetUnlockTextIdArray()
 		{
 			return this.__p.__vector_as_array<byte>(14) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17000FC6 RID: 4038
-		// (get) Token: 0x06006B4B RID: 27467 RVA: 0x00227D88 File Offset: 0x00225F88
+		// Token: 0x1700101F RID: 4127
+		// (get) Token: 0x0600714D RID: 29005 RVA: 0x00247034 File Offset: 0x00245234
 		public string LockTextId
 		{
 			get
@@ -179,20 +179,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006B4C RID: 27468 RVA: 0x00227DC0 File Offset: 0x00225FC0
+		// Token: 0x0600714E RID: 29006 RVA: 0x0024706C File Offset: 0x0024526C
 		public Span<byte> GetLockTextIdBytes()
 		{
 			return this.__p.__vector_as_span<byte>(16, 1);
 		}
 
-		// Token: 0x06006B4D RID: 27469 RVA: 0x00227DD0 File Offset: 0x00225FD0
+		// Token: 0x0600714F RID: 29007 RVA: 0x0024707C File Offset: 0x0024527C
 		public byte[] GetLockTextIdArray()
 		{
 			return this.__p.__vector_as_array<byte>(16) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17000FC7 RID: 4039
-		// (get) Token: 0x06006B4E RID: 27470 RVA: 0x00227DE8 File Offset: 0x00225FE8
+		// Token: 0x17001020 RID: 4128
+		// (get) Token: 0x06007150 RID: 29008 RVA: 0x00247094 File Offset: 0x00245294
 		public int UnlockCondition
 		{
 			get
@@ -206,7 +206,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006B4F RID: 27471 RVA: 0x00227E28 File Offset: 0x00226028
+		// Token: 0x06007151 RID: 29009 RVA: 0x002470D4 File Offset: 0x002452D4
 		public DicIntInt? SpecialPlayerMap(int j)
 		{
 			int num = this.__p.__offset(20);
@@ -217,8 +217,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17000FC8 RID: 4040
-		// (get) Token: 0x06006B50 RID: 27472 RVA: 0x00227E8C File Offset: 0x0022608C
+		// Token: 0x17001021 RID: 4129
+		// (get) Token: 0x06007152 RID: 29010 RVA: 0x00247138 File Offset: 0x00245338
 		public int SpecialPlayerMapLength
 		{
 			get
@@ -232,8 +232,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000FC9 RID: 4041
-		// (get) Token: 0x06006B51 RID: 27473 RVA: 0x00227EB8 File Offset: 0x002260B8
+		// Token: 0x17001022 RID: 4130
+		// (get) Token: 0x06007153 RID: 29011 RVA: 0x00247164 File Offset: 0x00245364
 		public bool IsRecommend
 		{
 			get
@@ -243,8 +243,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000FCA RID: 4042
-		// (get) Token: 0x06006B52 RID: 27474 RVA: 0x00227EF8 File Offset: 0x002260F8
+		// Token: 0x17001023 RID: 4131
+		// (get) Token: 0x06007154 RID: 29012 RVA: 0x002471A4 File Offset: 0x002453A4
 		public bool IsShowProgress
 		{
 			get
@@ -254,8 +254,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000FCB RID: 4043
-		// (get) Token: 0x06006B53 RID: 27475 RVA: 0x00227F38 File Offset: 0x00226138
+		// Token: 0x17001024 RID: 4132
+		// (get) Token: 0x06007155 RID: 29013 RVA: 0x002471E4 File Offset: 0x002453E4
 		public bool IsShowTrack
 		{
 			get
@@ -265,8 +265,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000FCC RID: 4044
-		// (get) Token: 0x06006B54 RID: 27476 RVA: 0x00227F78 File Offset: 0x00226178
+		// Token: 0x17001025 RID: 4133
+		// (get) Token: 0x06007156 RID: 29014 RVA: 0x00247224 File Offset: 0x00245424
 		public string SpecialPlayerDesc
 		{
 			get
@@ -280,20 +280,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006B55 RID: 27477 RVA: 0x00227FB0 File Offset: 0x002261B0
+		// Token: 0x06007157 RID: 29015 RVA: 0x0024725C File Offset: 0x0024545C
 		public Span<byte> GetSpecialPlayerDescBytes()
 		{
 			return this.__p.__vector_as_span<byte>(28, 1);
 		}
 
-		// Token: 0x06006B56 RID: 27478 RVA: 0x00227FC0 File Offset: 0x002261C0
+		// Token: 0x06007158 RID: 29016 RVA: 0x0024726C File Offset: 0x0024546C
 		public byte[] GetSpecialPlayerDescArray()
 		{
 			return this.__p.__vector_as_array<byte>(28) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17000FCD RID: 4045
-		// (get) Token: 0x06006B57 RID: 27479 RVA: 0x00227FD8 File Offset: 0x002261D8
+		// Token: 0x17001026 RID: 4134
+		// (get) Token: 0x06007159 RID: 29017 RVA: 0x00247284 File Offset: 0x00245484
 		public int UnlockTrackType
 		{
 			get
@@ -307,8 +307,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000FCE RID: 4046
-		// (get) Token: 0x06006B58 RID: 27480 RVA: 0x00228018 File Offset: 0x00226218
+		// Token: 0x17001027 RID: 4135
+		// (get) Token: 0x0600715A RID: 29018 RVA: 0x002472C4 File Offset: 0x002454C4
 		public int LockTrackType
 		{
 			get
@@ -322,8 +322,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000FCF RID: 4047
-		// (get) Token: 0x06006B59 RID: 27481 RVA: 0x00228058 File Offset: 0x00226258
+		// Token: 0x17001028 RID: 4136
+		// (get) Token: 0x0600715B RID: 29019 RVA: 0x00247304 File Offset: 0x00245504
 		public int AccessPathId
 		{
 			get
@@ -337,8 +337,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000FD0 RID: 4048
-		// (get) Token: 0x06006B5A RID: 27482 RVA: 0x00228098 File Offset: 0x00226298
+		// Token: 0x17001029 RID: 4137
+		// (get) Token: 0x0600715C RID: 29020 RVA: 0x00247344 File Offset: 0x00245544
 		public int TagType
 		{
 			get
@@ -352,41 +352,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006B5B RID: 27483 RVA: 0x002280D8 File Offset: 0x002262D8
+		// Token: 0x0600715D RID: 29021 RVA: 0x00247384 File Offset: 0x00245584
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用SpecialPlayerMapFrozenDict()缓存字典，遍历请使用SpecialPlayerMapIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> SpecialPlayerMap()
+		public Dictionary<int, int> SpecialPlayerMap()
 		{
 			return this.SpecialPlayerMapIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x06006B5C RID: 27484 RVA: 0x0022812E File Offset: 0x0022632E
+		// Token: 0x0600715E RID: 29022 RVA: 0x002473DA File Offset: 0x002455DA
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> SpecialPlayerMapIter()
+		public IEnumerable<DicIntInt> SpecialPlayerMapIter()
 		{
 			ExploreProgress.<SpecialPlayerMapIter>d__51 <SpecialPlayerMapIter>d__ = new ExploreProgress.<SpecialPlayerMapIter>d__51(-2);
 			<SpecialPlayerMapIter>d__.<>3__<>4__this = this;
 			return <SpecialPlayerMapIter>d__;
 		}
 
-		// Token: 0x06006B5D RID: 27485 RVA: 0x00228144 File Offset: 0x00226344
+		// Token: 0x0600715F RID: 29023 RVA: 0x002473F0 File Offset: 0x002455F0
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用SubTypeScoreFrozenDict()缓存字典，遍历请使用SubTypeScoreIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> SubTypeScore()
+		public Dictionary<int, int> SubTypeScore()
 		{
 			return this.SubTypeScoreIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x06006B5E RID: 27486 RVA: 0x0022819A File Offset: 0x0022639A
+		// Token: 0x06007160 RID: 29024 RVA: 0x00247446 File Offset: 0x00245646
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> SubTypeScoreIter()
+		public IEnumerable<DicIntInt> SubTypeScoreIter()
 		{
 			ExploreProgress.<SubTypeScoreIter>d__53 <SubTypeScoreIter>d__ = new ExploreProgress.<SubTypeScoreIter>d__53(-2);
 			<SubTypeScoreIter>d__.<>3__<>4__this = this;
 			return <SubTypeScoreIter>d__;
 		}
 
-		// Token: 0x06006B5F RID: 27487 RVA: 0x002281B0 File Offset: 0x002263B0
+		// Token: 0x06007161 RID: 29025 RVA: 0x0024745C File Offset: 0x0024565C
 		public int? GetSpecialPlayerMap(int key)
 		{
 			this.EnsureSpecialPlayerMapCacheIfNeeded();
@@ -398,7 +396,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x06006B60 RID: 27488 RVA: 0x002281E4 File Offset: 0x002263E4
+		// Token: 0x06007162 RID: 29026 RVA: 0x00247490 File Offset: 0x00245690
 		public int? GetSubTypeScore(int key)
 		{
 			this.EnsureSubTypeScoreCacheIfNeeded();
@@ -410,7 +408,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x06006B61 RID: 27489 RVA: 0x00228218 File Offset: 0x00226418
+		// Token: 0x06007163 RID: 29027 RVA: 0x002474C4 File Offset: 0x002456C4
 		private void EnsureSpecialPlayerMapCacheIfNeeded()
 		{
 			if (this.SpecialPlayerMapCache != null)
@@ -420,7 +418,7 @@ namespace Aki.Config
 			this.SpecialPlayerMapCache = this.SpecialPlayerMapIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x06006B62 RID: 27490 RVA: 0x00228280 File Offset: 0x00226480
+		// Token: 0x06007164 RID: 29028 RVA: 0x0024752C File Offset: 0x0024572C
 		private void EnsureSubTypeScoreCacheIfNeeded()
 		{
 			if (this.SubTypeScoreCache != null)
@@ -430,30 +428,30 @@ namespace Aki.Config
 			this.SubTypeScoreCache = this.SubTypeScoreIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x06006B63 RID: 27491 RVA: 0x002282E6 File Offset: 0x002264E6
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetSpecialPlayerMapFrozenDict(int key)
+		// Token: 0x06007165 RID: 29029 RVA: 0x00247592 File Offset: 0x00245792
+		[NullableContext(1)]
+		public FrozenDictionary<int, int> GetSpecialPlayerMapFrozenDict()
 		{
 			this.EnsureSpecialPlayerMapCacheIfNeeded();
 			return this.SpecialPlayerMapCache;
 		}
 
-		// Token: 0x06006B64 RID: 27492 RVA: 0x002282F4 File Offset: 0x002264F4
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetSubTypeScoreFrozenDict(int key)
+		// Token: 0x06007166 RID: 29030 RVA: 0x002475A0 File Offset: 0x002457A0
+		[NullableContext(1)]
+		public FrozenDictionary<int, int> GetSubTypeScoreFrozenDict()
 		{
 			this.EnsureSubTypeScoreCacheIfNeeded();
 			return this.SubTypeScoreCache;
 		}
 
-		// Token: 0x04004C92 RID: 19602
+		// Token: 0x04005275 RID: 21109
 		private Table __p;
 
-		// Token: 0x04004C93 RID: 19603
+		// Token: 0x04005276 RID: 21110
 		[Nullable(2)]
 		private FrozenDictionary<int, int> SpecialPlayerMapCache;
 
-		// Token: 0x04004C94 RID: 19604
+		// Token: 0x04005277 RID: 21111
 		[Nullable(2)]
 		private FrozenDictionary<int, int> SubTypeScoreCache;
 	}

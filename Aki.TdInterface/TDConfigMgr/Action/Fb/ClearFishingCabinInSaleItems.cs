@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002682 RID: 9858
+	// Token: 0x02002945 RID: 10565
 	public class ClearFishingCabinInSaleItems : ActionParams
 	{
-		// Token: 0x0600DCD2 RID: 56530 RVA: 0x0020D5C0 File Offset: 0x0020B7C0
-		[NullableContext(1)]
+		// Token: 0x0600EAA9 RID: 60073 RVA: 0x00229D5E File Offset: 0x00227F5E
 		public static ClearFishingCabinInSaleItems Create(IClearFishingCabinInSaleItems? instance)
 		{
 			if (instance == null)
@@ -21,7 +19,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x04007AB4 RID: 31412
+		// Token: 0x04008151 RID: 33105
 		private IClearFishingCabinInSaleItems Instance;
 	}
 }

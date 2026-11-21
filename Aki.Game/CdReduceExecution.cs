@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002F8B RID: 12171
+// Token: 0x020024DF RID: 9439
 [NullableContext(1)]
 [Nullable(0)]
 public class CdReduceExecution : PeriodExecution
 {
-	// Token: 0x06019D91 RID: 105873 RVA: 0x006BF190 File Offset: 0x006BD390
+	// Token: 0x060176A3 RID: 95907 RVA: 0x006E5A70 File Offset: 0x006E3C70
 	public CdReduceExecution(RequireAndLimits requireAndLimits) : base(requireAndLimits)
 	{
 	}
 
-	// Token: 0x06019D92 RID: 105874 RVA: 0x006BF19C File Offset: 0x006BD39C
+	// Token: 0x060176A4 RID: 95908 RVA: 0x006E5A7C File Offset: 0x006E3C7C
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -43,7 +43,7 @@ public class CdReduceExecution : PeriodExecution
 		this.DecreaseMagnitude = parameters.ExtraEffectGrowParameters2;
 	}
 
-	// Token: 0x06019D93 RID: 105875 RVA: 0x006BF278 File Offset: 0x006BD478
+	// Token: 0x060176A5 RID: 95909 RVA: 0x006E5B58 File Offset: 0x006E3D58
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] args)
 	{
@@ -72,18 +72,18 @@ public class CdReduceExecution : PeriodExecution
 		return null;
 	}
 
-	// Token: 0x0400C334 RID: 49972
+	// Token: 0x0400C6DD RID: 50909
 	[Nullable(2)]
 	private long[] SkillIds;
 
-	// Token: 0x0400C335 RID: 49973
+	// Token: 0x0400C6DE RID: 50910
 	private ESkillCdReduceType CdResetType;
 
-	// Token: 0x0400C336 RID: 49974
+	// Token: 0x0400C6DF RID: 50911
 	[Nullable(2)]
 	private float[] DecreaseRatio;
 
-	// Token: 0x0400C337 RID: 49975
+	// Token: 0x0400C6E0 RID: 50912
 	[Nullable(2)]
 	private float[] DecreaseMagnitude;
 }

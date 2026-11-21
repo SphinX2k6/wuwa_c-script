@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005821 RID: 22561
+	// Token: 0x02005E28 RID: 24104
 	public class IRefreshContentT
 	{
-		// Token: 0x1700A884 RID: 43140
-		// (get) Token: 0x06025EFC RID: 155388 RVA: 0x0053B0D6 File Offset: 0x005392D6
-		// (set) Token: 0x06025EFD RID: 155389 RVA: 0x0053B0DE File Offset: 0x005392DE
+		// Token: 0x1700B1A8 RID: 45480
+		// (get) Token: 0x0602841C RID: 164892 RVA: 0x00581262 File Offset: 0x0057F462
+		// (set) Token: 0x0602841D RID: 164893 RVA: 0x0058126A File Offset: 0x0057F46A
 		public ERefreshContent Type { get; set; }
 
-		// Token: 0x06025EFE RID: 155390 RVA: 0x0053B0E7 File Offset: 0x005392E7
+		// Token: 0x0602841E RID: 164894 RVA: 0x00581273 File Offset: 0x0057F473
 		public IRefreshContentT()
 		{
 			this.Type = ERefreshContent.All;

@@ -4,6 +4,7 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 using Aki.TDConfigMgr.Action;
+using Aki.TDConfigMgr.Component;
 using AkiClient.Game.Aki.Data.Interaction.Struct;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.LevelGamePlay;
@@ -16,28 +17,29 @@ using CSharpScript.Game.Ui;
 using CSharpScript.Module.InstanceDungeon;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
+using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Interaction
 {
-	// Token: 0x02005852 RID: 22610
+	// Token: 0x0200482A RID: 18474
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TsInteractionUtils : IStaticVariableResetter
 	{
-		// Token: 0x0603978D RID: 235405 RVA: 0x00DA4948 File Offset: 0x00DA2B48
+		// Token: 0x0602E6A9 RID: 190121 RVA: 0x00CF3608 File Offset: 0x00CF1808
 		static TsInteractionUtils()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(TsInteractionUtils.CreateStaticDefaultValue), new Action(TsInteractionUtils.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0603978E RID: 235406 RVA: 0x00DA4967 File Offset: 0x00DA2B67
+		// Token: 0x0602E6AA RID: 190122 RVA: 0x00CF3627 File Offset: 0x00CF1827
 		[return: Nullable(2)]
 		public static SInteractionConfig GetInteractionConfig(string inRow)
 		{
 			return DataTableUtil.GetDataTableRowFromName<SInteractionConfig>(EDataTable.InteractionConfigs, inRow);
 		}
 
-		// Token: 0x0603978F RID: 235407 RVA: 0x00DA4974 File Offset: 0x00DA2B74
+		// Token: 0x0602E6AB RID: 190123 RVA: 0x00CF3634 File Offset: 0x00CF1834
 		public static void HandleInteractionOptionFromVision(CommonInteractOption option, PawnInteractController controller, int visionId)
 		{
 			if (option.OptionType != EOptionType.Normal)
@@ -71,7 +73,7 @@ namespace CSharpScript.Game.Module.Interaction
 			}, new long?(component.GetCreatureDataId()));
 		}
 
-		// Token: 0x06039790 RID: 235408 RVA: 0x00DA4A34 File Offset: 0x00DA2C34
+		// Token: 0x0602E6AC RID: 190124 RVA: 0x00CF36F4 File Offset: 0x00CF18F4
 		public static void HandleInteractionOptionNew(CommonInteractOption option, PawnInteractController controller)
 		{
 			if (TsInteractionUtils.LockInteractionRequest)
@@ -207,14 +209,14 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x06039791 RID: 235409 RVA: 0x00DA4D4B File Offset: 0x00DA2F4B
+		// Token: 0x0602E6AD RID: 190125 RVA: 0x00CF3A0B File Offset: 0x00CF1C0B
 		public static bool IsInteractHintViewOpened()
 		{
 			return TsInteractionUtils.IsOpenedInteractionHintView;
 		}
 
-		// Token: 0x17008A4C RID: 35404
-		// (get) Token: 0x06039792 RID: 235410 RVA: 0x00DA4D52 File Offset: 0x00DA2F52
+		// Token: 0x17005E18 RID: 24088
+		// (get) Token: 0x0602E6AE RID: 190126 RVA: 0x00CF3A12 File Offset: 0x00CF1C12
 		public static bool IsInteractWaitOpenViewName
 		{
 			get
@@ -223,7 +225,7 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x06039793 RID: 235411 RVA: 0x00DA4D60 File Offset: 0x00DA2F60
+		// Token: 0x0602E6AF RID: 190127 RVA: 0x00CF3A20 File Offset: 0x00CF1C20
 		[NullableContext(0)]
 		public static UniTask<bool> OpenInteractHintView()
 		{
@@ -234,7 +236,7 @@ namespace CSharpScript.Game.Module.Interaction
 			return <OpenInteractHintView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039794 RID: 235412 RVA: 0x00DA4D9C File Offset: 0x00DA2F9C
+		// Token: 0x0602E6B0 RID: 190128 RVA: 0x00CF3A5C File Offset: 0x00CF1C5C
 		public static void CloseInteractHintView(string reason = "Unknown")
 		{
 			if (!TsInteractionUtils.IsInteractHintViewOpened())
@@ -260,7 +262,7 @@ namespace CSharpScript.Game.Module.Interaction
 			}).Forget();
 		}
 
-		// Token: 0x06039795 RID: 235413 RVA: 0x00DA4E34 File Offset: 0x00DA3034
+		// Token: 0x0602E6B1 RID: 190129 RVA: 0x00CF3AF4 File Offset: 0x00CF1CF4
 		public static void RegisterWaitOpenViewName(EUiViewName waitOpenViewName)
 		{
 			if (TsInteractionUtils.WaitOpenViewName == waitOpenViewName)
@@ -294,7 +296,7 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x06039796 RID: 235414 RVA: 0x00DA4F0C File Offset: 0x00DA310C
+		// Token: 0x0602E6B2 RID: 190130 RVA: 0x00CF3BCC File Offset: 0x00CF1DCC
 		[NullableContext(2)]
 		private static void OnOpenWaitViewDone(EUiViewName viewName, UiViewBase view)
 		{
@@ -305,7 +307,7 @@ namespace CSharpScript.Game.Module.Interaction
 			TsInteractionUtils.ClearWaitView();
 		}
 
-		// Token: 0x06039797 RID: 235415 RVA: 0x00DA4F42 File Offset: 0x00DA3142
+		// Token: 0x0602E6B3 RID: 190131 RVA: 0x00CF3C02 File Offset: 0x00CF1E02
 		public static void Init()
 		{
 			EventSystem instance = EventSystem.Instance;
@@ -319,7 +321,7 @@ namespace CSharpScript.Game.Module.Interaction
 			TsInteractionUtils.LockInteractionRequest = false;
 		}
 
-		// Token: 0x06039798 RID: 235416 RVA: 0x00DA4F75 File Offset: 0x00DA3175
+		// Token: 0x0602E6B4 RID: 190132 RVA: 0x00CF3C35 File Offset: 0x00CF1E35
 		public static void Clear()
 		{
 			EventSystem instance = EventSystem.Instance;
@@ -333,7 +335,7 @@ namespace CSharpScript.Game.Module.Interaction
 			TsInteractionUtils.ClearCurrentOpenViewName();
 		}
 
-		// Token: 0x06039799 RID: 235417 RVA: 0x00DA4FA8 File Offset: 0x00DA31A8
+		// Token: 0x0602E6B5 RID: 190133 RVA: 0x00CF3C68 File Offset: 0x00CF1E68
 		public static void RegisterOpenViewName(EUiViewName viewName)
 		{
 			if (TsInteractionUtils.CurrentOpenViewName == null)
@@ -350,7 +352,7 @@ namespace CSharpScript.Game.Module.Interaction
 			TsInteractionUtils.CurrentOpenViewName = new EUiViewName?(viewName);
 		}
 
-		// Token: 0x0603979A RID: 235418 RVA: 0x00DA4FF4 File Offset: 0x00DA31F4
+		// Token: 0x0602E6B6 RID: 190134 RVA: 0x00CF3CB4 File Offset: 0x00CF1EB4
 		public static void ClearCurrentOpenViewName()
 		{
 			if (TsInteractionUtils.CurrentOpenViewName != null)
@@ -367,13 +369,13 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x0603979B RID: 235419 RVA: 0x00DA5040 File Offset: 0x00DA3240
+		// Token: 0x0602E6B7 RID: 190135 RVA: 0x00CF3D00 File Offset: 0x00CF1F00
 		public static EUiViewName? GetCurrentOpenViewName()
 		{
 			return TsInteractionUtils.CurrentOpenViewName;
 		}
 
-		// Token: 0x0603979C RID: 235420 RVA: 0x00DA5048 File Offset: 0x00DA3248
+		// Token: 0x0602E6B8 RID: 190136 RVA: 0x00CF3D08 File Offset: 0x00CF1F08
 		private static void OnCloseView(EUiViewName viewName, int viewId)
 		{
 			if (viewName != TsInteractionUtils.CurrentOpenViewName)
@@ -392,7 +394,7 @@ namespace CSharpScript.Game.Module.Interaction
 			instance.Remove(name, handle);
 		}
 
-		// Token: 0x0603979D RID: 235421 RVA: 0x00DA50B6 File Offset: 0x00DA32B6
+		// Token: 0x0602E6B9 RID: 190137 RVA: 0x00CF3D76 File Offset: 0x00CF1F76
 		private static void OnOpenLoading()
 		{
 			if (TsInteractionUtils.WaitOpenViewName != null)
@@ -405,13 +407,13 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x0603979E RID: 235422 RVA: 0x00DA50F0 File Offset: 0x00DA32F0
+		// Token: 0x0602E6BA RID: 190138 RVA: 0x00CF3DB0 File Offset: 0x00CF1FB0
 		public static bool IsInteractionOpenView()
 		{
 			return TsInteractionUtils.CurrentOpenViewName != null;
 		}
 
-		// Token: 0x0603979F RID: 235423 RVA: 0x00DA50FC File Offset: 0x00DA32FC
+		// Token: 0x0602E6BB RID: 190139 RVA: 0x00CF3DBC File Offset: 0x00CF1FBC
 		private static void ClearWaitView()
 		{
 			TsInteractionUtils.WaitOpenViewName = null;
@@ -427,7 +429,7 @@ namespace CSharpScript.Game.Module.Interaction
 			instance.Remove(name, handle);
 		}
 
-		// Token: 0x060397A0 RID: 235424 RVA: 0x00DA5148 File Offset: 0x00DA3348
+		// Token: 0x0602E6BC RID: 190140 RVA: 0x00CF3E08 File Offset: 0x00CF2008
 		public static void UpdateInteractHintView()
 		{
 			if (!TsInteractionUtils.LockInteractionRequest)
@@ -436,7 +438,7 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x060397A1 RID: 235425 RVA: 0x00DA5164 File Offset: 0x00DA3364
+		// Token: 0x0602E6BD RID: 190141 RVA: 0x00CF3E24 File Offset: 0x00CF2024
 		public static void HandleEntityInteractByServerNotify(ActionNotify notify, long creatureDataId, int optionIndex)
 		{
 			WaitEntityTask.Create("TsInteractionUtils.HandleEntityInteractByServerNotify", creatureDataId, delegate(bool? result)
@@ -501,7 +503,7 @@ namespace CSharpScript.Game.Module.Interaction
 			}, 90000, true, true);
 		}
 
-		// Token: 0x060397A2 RID: 235426 RVA: 0x00DA51B0 File Offset: 0x00DA33B0
+		// Token: 0x0602E6BE RID: 190142 RVA: 0x00CF3E70 File Offset: 0x00CF2070
 		public static void HandleEntityDynamicInteractByServerNotify(ActionNotify notify, string guid)
 		{
 			GeneralContext generalContext = LevelGeneralContextUtil.CreateByServerContext((notify != null) ? notify.GameCtx : null);
@@ -532,7 +534,7 @@ namespace CSharpScript.Game.Module.Interaction
 			LevelGeneralController.Instance.ExecuteActionsByServerNotify((dynamicConfig.Type as IInteractActions).Actions, generalContext, notify.PlayerId, notify.IncId, notify.StartIndex, notify.EndIndex, notify.NeedFinishReq, null);
 		}
 
-		// Token: 0x060397A3 RID: 235427 RVA: 0x00DA52C4 File Offset: 0x00DA34C4
+		// Token: 0x0602E6BF RID: 190143 RVA: 0x00CF3F84 File Offset: 0x00CF2184
 		public static int HandleInteractionSecondConfirm([Nullable(2)] CommonInteractOption option, PawnInteractController controller, Action<int, bool, CommonInteractOption> confirmCallback)
 		{
 			if (option == null)
@@ -562,7 +564,7 @@ namespace CSharpScript.Game.Module.Interaction
 			return num;
 		}
 
-		// Token: 0x060397A4 RID: 235428 RVA: 0x00DA5348 File Offset: 0x00DA3548
+		// Token: 0x0602E6C0 RID: 190144 RVA: 0x00CF4008 File Offset: 0x00CF2208
 		public unsafe static bool CheckTeleportInterceptByOption(int optionInstanceId, PawnInteractController controller)
 		{
 			InteractEntity interactEntity = controller.InteractEntity;
@@ -589,13 +591,11 @@ namespace CSharpScript.Game.Module.Interaction
 					bool item2 = valueTuple.Item2;
 					if (!item)
 					{
-						ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.SubPackageTeleportToUnFinishAreaConfirm);
-						confirmBoxDataNew.FunctionMap[1] = delegate()
+						int mapBlockFromPosition = ResourceManagerController.Instance.GetMapBlockFromPosition(teleportIntercept.TargetMapConfigId, position);
+						SubPackageDownLoadModel.Instance.OpenSubPackageDownLoadConfirm("SubPackageDownLoad_CommonLock_Confirm", new List<int>
 						{
-							ConfirmBoxController.Instance.CloseConfirmBoxView();
-							ReConnectController.Instance.Logout(ELogoutReason.InvalidTeleportPosition);
-						};
-						ConfirmBoxController.Instance.ShowNetWorkConfirmBoxView(confirmBoxDataNew, null);
+							mapBlockFromPosition
+						}, null, new double?(0.0));
 						return true;
 					}
 					if (item2)
@@ -608,7 +608,7 @@ namespace CSharpScript.Game.Module.Interaction
 			return false;
 		}
 
-		// Token: 0x060397A5 RID: 235429 RVA: 0x00DA54C4 File Offset: 0x00DA36C4
+		// Token: 0x0602E6C1 RID: 190145 RVA: 0x00CF4188 File Offset: 0x00CF2388
 		public static bool CheckOptionLockType(int optionInstanceId, PawnInteractController controller, BaseTagComponent playerTagComponent)
 		{
 			CommonInteractOption commonInteractOption;
@@ -646,12 +646,26 @@ namespace CSharpScript.Game.Module.Interaction
 			return false;
 		}
 
-		// Token: 0x060397A6 RID: 235430 RVA: 0x00DA559C File Offset: 0x00DA379C
+		// Token: 0x0602E6C2 RID: 190146 RVA: 0x00CF4260 File Offset: 0x00CF2460
+		public static bool IsScreenPositionInDetectShape(FVector2D screenPosition, int sizeX, int sizeY, IInteractScreenDetectShapeBase config)
+		{
+			IInteractScreenDetectShapeCircle interactScreenDetectShapeCircle = config as IInteractScreenDetectShapeCircle;
+			if (interactScreenDetectShapeCircle != null && config.Type == EInteractScreenDetectShape.Circle)
+			{
+				float num = (float)Math.Min(sizeX, sizeY) / 2f * interactScreenDetectShapeCircle.RadiusRatio;
+				float num2 = screenPosition.X - (float)sizeX / 2f;
+				float num3 = screenPosition.Y - (float)sizeY / 2f;
+				return num2 * num2 + num3 * num3 <= num * num;
+			}
+			return true;
+		}
+
+		// Token: 0x0602E6C3 RID: 190147 RVA: 0x00CF42C4 File Offset: 0x00CF24C4
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060397A7 RID: 235431 RVA: 0x00DA559E File Offset: 0x00DA379E
+		// Token: 0x0602E6C4 RID: 190148 RVA: 0x00CF42C6 File Offset: 0x00CF24C6
 		public static void ResetStaticDefaultValue()
 		{
 			TsInteractionUtils.CurrentOpenViewName = null;
@@ -661,26 +675,26 @@ namespace CSharpScript.Game.Module.Interaction
 			TsInteractionUtils.IsWaitForInteractOpenViewDone = false;
 		}
 
-		// Token: 0x0401E0DE RID: 123102
+		// Token: 0x04018B7B RID: 101243
 		private static EUiViewName? CurrentOpenViewName;
 
-		// Token: 0x0401E0DF RID: 123103
+		// Token: 0x04018B7C RID: 101244
 		private static bool LockInteractionRequest;
 
-		// Token: 0x0401E0E0 RID: 123104
+		// Token: 0x04018B7D RID: 101245
 		private static bool IsOpenedInteractionHintView;
 
-		// Token: 0x0401E0E1 RID: 123105
+		// Token: 0x04018B7E RID: 101246
 		public static EUiViewName? WaitOpenViewName;
 
-		// Token: 0x0401E0E2 RID: 123106
+		// Token: 0x04018B7F RID: 101247
 		public static bool IsWaitForInteractOpenViewDone;
 
-		// Token: 0x0200BA70 RID: 47728
+		// Token: 0x0200A487 RID: 42119
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040385C9 RID: 230857
+			// Token: 0x04032FC1 RID: 208833
 			[Nullable(new byte[]
 			{
 				0,
@@ -688,11 +702,11 @@ namespace CSharpScript.Game.Module.Interaction
 			})]
 			public static Action<EUiViewName, UiViewBase> <0>__OnOpenWaitViewDone;
 
-			// Token: 0x040385CA RID: 230858
+			// Token: 0x04032FC2 RID: 208834
 			[Nullable(0)]
 			public static Action <1>__OnOpenLoading;
 
-			// Token: 0x040385CB RID: 230859
+			// Token: 0x04032FC3 RID: 208835
 			[Nullable(0)]
 			public static Action<EUiViewName, int> <2>__OnCloseView;
 		}

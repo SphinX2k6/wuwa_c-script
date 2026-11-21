@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020073A9 RID: 29609
+	// Token: 0x02007B90 RID: 31632
 	public struct ITeleportTransitionWithCenterText : IFlatbufferObject
 	{
-		// Token: 0x1700E0C4 RID: 57540
-		// (get) Token: 0x06035C05 RID: 220165 RVA: 0x007510EA File Offset: 0x0074F2EA
+		// Token: 0x1700ECD4 RID: 60628
+		// (get) Token: 0x06038FA0 RID: 233376 RVA: 0x007B362A File Offset: 0x007B182A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06035C06 RID: 220166 RVA: 0x007510F7 File Offset: 0x0074F2F7
+		// Token: 0x06038FA1 RID: 233377 RVA: 0x007B3637 File Offset: 0x007B1837
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06035C07 RID: 220167 RVA: 0x00751100 File Offset: 0x0074F300
+		// Token: 0x06038FA2 RID: 233378 RVA: 0x007B3640 File Offset: 0x007B1840
 		public static ITeleportTransitionWithCenterText GetRootAsITeleportTransitionWithCenterText(ByteBuffer _bb)
 		{
 			return ITeleportTransitionWithCenterText.GetRootAsITeleportTransitionWithCenterText(_bb, default(ITeleportTransitionWithCenterText));
 		}
 
-		// Token: 0x06035C08 RID: 220168 RVA: 0x0075111C File Offset: 0x0074F31C
+		// Token: 0x06038FA3 RID: 233379 RVA: 0x007B365C File Offset: 0x007B185C
 		public static ITeleportTransitionWithCenterText GetRootAsITeleportTransitionWithCenterText(ByteBuffer _bb, ITeleportTransitionWithCenterText obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06035C09 RID: 220169 RVA: 0x00751139 File Offset: 0x0074F339
+		// Token: 0x06038FA4 RID: 233380 RVA: 0x007B3679 File Offset: 0x007B1879
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06035C0A RID: 220170 RVA: 0x00751148 File Offset: 0x0074F348
+		// Token: 0x06038FA5 RID: 233381 RVA: 0x007B3688 File Offset: 0x007B1888
 		public ITeleportTransitionWithCenterText __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E0C5 RID: 57541
-		// (get) Token: 0x06035C0B RID: 220171 RVA: 0x00751158 File Offset: 0x0074F358
+		// Token: 0x1700ECD5 RID: 60629
+		// (get) Token: 0x06038FA6 RID: 233382 RVA: 0x007B3698 File Offset: 0x007B1898
 		public ETeleportTransitionType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E0C6 RID: 57542
-		// (get) Token: 0x06035C0C RID: 220172 RVA: 0x00751194 File Offset: 0x0074F394
+		// Token: 0x1700ECD6 RID: 60630
+		// (get) Token: 0x06038FA7 RID: 233383 RVA: 0x007B36D4 File Offset: 0x007B18D4
 		public IPlayFlow? CenterTextFlow
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06035C0D RID: 220173 RVA: 0x007511F1 File Offset: 0x0074F3F1
+		// Token: 0x06038FA8 RID: 233384 RVA: 0x007B3731 File Offset: 0x007B1931
 		public static Offset<ITeleportTransitionWithCenterText> CreateITeleportTransitionWithCenterText(FlatBufferBuilder builder, ETeleportTransitionType Type = ETeleportTransitionType.PlayMp4, Offset<IPlayFlow> CenterTextFlowOffset = default(Offset<IPlayFlow>))
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITeleportTransitionWithCenterText.EndITeleportTransitionWithCenterText(builder);
 		}
 
-		// Token: 0x06035C0E RID: 220174 RVA: 0x0075120E File Offset: 0x0074F40E
+		// Token: 0x06038FA9 RID: 233385 RVA: 0x007B374E File Offset: 0x007B194E
 		public static void StartITeleportTransitionWithCenterText(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06035C0F RID: 220175 RVA: 0x00751217 File Offset: 0x0074F417
+		// Token: 0x06038FAA RID: 233386 RVA: 0x007B3757 File Offset: 0x007B1957
 		public static void AddType(FlatBufferBuilder builder, ETeleportTransitionType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06035C10 RID: 220176 RVA: 0x00751222 File Offset: 0x0074F422
+		// Token: 0x06038FAB RID: 233387 RVA: 0x007B3762 File Offset: 0x007B1962
 		public static void AddCenterTextFlow(FlatBufferBuilder builder, Offset<IPlayFlow> centerTextFlowOffset)
 		{
 			builder.AddOffset(1, centerTextFlowOffset.Value, 0);
 		}
 
-		// Token: 0x06035C11 RID: 220177 RVA: 0x00751232 File Offset: 0x0074F432
+		// Token: 0x06038FAC RID: 233388 RVA: 0x007B3772 File Offset: 0x007B1972
 		public static Offset<ITeleportTransitionWithCenterText> EndITeleportTransitionWithCenterText(FlatBufferBuilder builder)
 		{
 			return new Offset<ITeleportTransitionWithCenterText>(builder.EndTable());
 		}
 
-		// Token: 0x06035C12 RID: 220178 RVA: 0x00751240 File Offset: 0x0074F440
+		// Token: 0x06038FAD RID: 233389 RVA: 0x007B3780 File Offset: 0x007B1980
 		public ITeleportTransitionWithCenterTextT UnPack()
 		{
 			ITeleportTransitionWithCenterTextT teleportTransitionWithCenterTextT = new ITeleportTransitionWithCenterTextT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return teleportTransitionWithCenterTextT;
 		}
 
-		// Token: 0x06035C13 RID: 220179 RVA: 0x0075125C File Offset: 0x0074F45C
+		// Token: 0x06038FAE RID: 233390 RVA: 0x007B379C File Offset: 0x007B199C
 		public void UnPackTo(ITeleportTransitionWithCenterTextT _o)
 		{
 			_o.Type = this.Type;
 			_o.CenterTextFlow = ((this.CenterTextFlow != null) ? this.CenterTextFlow.Value.UnPack() : null);
 		}
 
-		// Token: 0x06035C14 RID: 220180 RVA: 0x007512A4 File Offset: 0x0074F4A4
+		// Token: 0x06038FAF RID: 233391 RVA: 0x007B37E4 File Offset: 0x007B19E4
 		public static Offset<ITeleportTransitionWithCenterText> Pack(FlatBufferBuilder builder, ITeleportTransitionWithCenterTextT _o)
 		{
 			if (_o == null)
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITeleportTransitionWithCenterText.CreateITeleportTransitionWithCenterText(builder, _o.Type, centerTextFlowOffset);
 		}
 
-		// Token: 0x040121DD RID: 74205
+		// Token: 0x040131F6 RID: 78326
 		private Table __p;
 	}
 }

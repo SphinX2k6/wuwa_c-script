@@ -8,15 +8,15 @@ using CSharpScript.Game.NewWorld.SceneItem.Jigsaw;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B41 RID: 27457
+	// Token: 0x02005CB9 RID: 23737
 	public class LevelEventMoveJigsawItem : LevelEventBase
 	{
-		// Token: 0x0604415F RID: 278879 RVA: 0x010BEAEB File Offset: 0x010BCCEB
+		// Token: 0x0603A2B1 RID: 238257 RVA: 0x01068567 File Offset: 0x01066767
 		public LevelEventMoveJigsawItem(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044160 RID: 278880 RVA: 0x010BEAF4 File Offset: 0x010BCCF4
+		// Token: 0x0603A2B2 RID: 238258 RVA: 0x01068570 File Offset: 0x01066770
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			});
 		}
 
-		// Token: 0x06044161 RID: 278881 RVA: 0x010BEB50 File Offset: 0x010BCD50
+		// Token: 0x0603A2B3 RID: 238259 RVA: 0x010685CC File Offset: 0x010667CC
 		protected override void ExecuteWhenEntitiesReady()
 		{
 			EntityHandle entityByPbDataId = CreatureModel.Instance.GetEntityByPbDataId(this.Config.ItemEntityId);
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x04023914 RID: 145684
+		// Token: 0x0401EBB6 RID: 125878
 		[Nullable(2)]
 		private IMoveJigsawItem Config;
 	}

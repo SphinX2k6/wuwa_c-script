@@ -5,22 +5,22 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001697 RID: 5783
+	// Token: 0x02000311 RID: 785
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroAudio.KuroAudioEnvironmentInfo")]
 	[UnrealStructLayout(24, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 24)]
 	public class FKuroAudioEnvironmentInfo : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06014F83 RID: 85891 RVA: 0x001ED2C6 File Offset: 0x001EB4C6
+		// Token: 0x06005365 RID: 21349 RVA: 0x000749EE File Offset: 0x00072BEE
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FKuroAudioEnvironmentInfo._ScriptStructPtr != 0) ? FKuroAudioEnvironmentInfo._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroAudio.KuroAudioEnvironmentInfo", ref FKuroAudioEnvironmentInfo._ScriptStructPtr);
 		}
 
-		// Token: 0x1700530D RID: 21261
-		// (get) Token: 0x06014F84 RID: 85892 RVA: 0x001ED2EA File Offset: 0x001EB4EA
-		// (set) Token: 0x06014F85 RID: 85893 RVA: 0x001ED2FE File Offset: 0x001EB4FE
+		// Token: 0x1700108F RID: 4239
+		// (get) Token: 0x06005366 RID: 21350 RVA: 0x00074A12 File Offset: 0x00072C12
+		// (set) Token: 0x06005367 RID: 21351 RVA: 0x00074A26 File Offset: 0x00072C26
 		public unsafe string StateEvent
 		{
 			get
@@ -33,9 +33,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700530E RID: 21262
-		// (get) Token: 0x06014F86 RID: 85894 RVA: 0x001ED313 File Offset: 0x001EB513
-		// (set) Token: 0x06014F87 RID: 85895 RVA: 0x001ED323 File Offset: 0x001EB523
+		// Token: 0x17001090 RID: 4240
+		// (get) Token: 0x06005368 RID: 21352 RVA: 0x00074A3B File Offset: 0x00072C3B
+		// (set) Token: 0x06005369 RID: 21353 RVA: 0x00074A4B File Offset: 0x00072C4B
 		public unsafe bool bEnableDynamicReverb
 		{
 			get
@@ -48,57 +48,50 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06014F88 RID: 85896 RVA: 0x001ED334 File Offset: 0x001EB534
+		// Token: 0x0600536A RID: 21354 RVA: 0x00074A5C File Offset: 0x00072C5C
 		public FKuroAudioEnvironmentInfo()
 		{
 		}
 
-		// Token: 0x06014F89 RID: 85897 RVA: 0x001ED33C File Offset: 0x001EB53C
-		public FKuroAudioEnvironmentInfo(string StateEvent, bool bEnableDynamicReverb)
-		{
-			this.StateEvent = StateEvent;
-			this.bEnableDynamicReverb = bEnableDynamicReverb;
-		}
-
-		// Token: 0x06014F8A RID: 85898 RVA: 0x001ED352 File Offset: 0x001EB552
+		// Token: 0x0600536B RID: 21355 RVA: 0x00074A64 File Offset: 0x00072C64
 		protected override IntPtr GetUStructPtr()
 		{
 			return FKuroAudioEnvironmentInfo.StaticStruct();
 		}
 
-		// Token: 0x06014F8B RID: 85899 RVA: 0x001ED35E File Offset: 0x001EB55E
+		// Token: 0x0600536C RID: 21356 RVA: 0x00074A70 File Offset: 0x00072C70
 		[NullableContext(2)]
 		public FKuroAudioEnvironmentInfo(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06014F8C RID: 85900 RVA: 0x001ED368 File Offset: 0x001EB568
+		// Token: 0x0600536D RID: 21357 RVA: 0x00074A7A File Offset: 0x00072C7A
 		public FKuroAudioEnvironmentInfo(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06014F8D RID: 85901 RVA: 0x001ED373 File Offset: 0x001EB573
+		// Token: 0x0600536E RID: 21358 RVA: 0x00074A85 File Offset: 0x00072C85
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FKuroAudioEnvironmentInfo(Pointer, false, true);
 		}
 
-		// Token: 0x06014F8E RID: 85902 RVA: 0x001ED37D File Offset: 0x001EB57D
+		// Token: 0x0600536F RID: 21359 RVA: 0x00074A8F File Offset: 0x00072C8F
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FKuroAudioEnvironmentInfo(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0400B6CD RID: 46797
+		// Token: 0x0400221F RID: 8735
 		public const string __ObjectPath = "/Script/KuroAudio.KuroAudioEnvironmentInfo";
 
-		// Token: 0x0400B6CE RID: 46798
+		// Token: 0x04002220 RID: 8736
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0400B6CF RID: 46799
+		// Token: 0x04002221 RID: 8737
 		internal static int __PropertyOffset_StateEvent;
 
-		// Token: 0x0400B6D0 RID: 46800
+		// Token: 0x04002222 RID: 8738
 		internal static int __PropertyOffset_bEnableDynamicReverb;
 	}
 }

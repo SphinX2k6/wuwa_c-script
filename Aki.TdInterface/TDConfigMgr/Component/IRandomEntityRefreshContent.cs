@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200064E RID: 1614
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020006EB RID: 1771
 	public class IRandomEntityRefreshContent : IRefreshContent
 	{
-		// Token: 0x06002288 RID: 8840 RVA: 0x0005EF9C File Offset: 0x0005D19C
+		// Token: 0x0600258E RID: 9614 RVA: 0x00065CB0 File Offset: 0x00063EB0
 		private IRandomEntityRefreshContent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002289 RID: 8841 RVA: 0x0005EFD4 File Offset: 0x0005D1D4
+		// Token: 0x0600258F RID: 9615 RVA: 0x00065CE8 File Offset: 0x00063EE8
 		public static IRandomEntityRefreshContent Create([Nullable(2)] IRandomEntityRefreshContent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600228A RID: 8842 RVA: 0x0005EFE7 File Offset: 0x0005D1E7
+		// Token: 0x06002590 RID: 9616 RVA: 0x00065CFB File Offset: 0x00063EFB
 		public static IRandomEntityRefreshContent CreateFromSetValue([Nullable(2)] IRandomEntityRefreshContent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600228B RID: 8843 RVA: 0x0005EFFA File Offset: 0x0005D1FA
+		// Token: 0x06002591 RID: 9617 RVA: 0x00065D0E File Offset: 0x00063F0E
 		public new IRandomEntityRefreshContent_SetValue ToSetValue()
 		{
 			return new IRandomEntityRefreshContent_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700092E RID: 2350
-		// (get) Token: 0x0600228C RID: 8844 RVA: 0x0005F025 File Offset: 0x0005D225
-		// (set) Token: 0x0600228D RID: 8845 RVA: 0x0005F050 File Offset: 0x0005D250
+		// Token: 0x170009E5 RID: 2533
+		// (get) Token: 0x06002592 RID: 9618 RVA: 0x00065D39 File Offset: 0x00063F39
+		// (set) Token: 0x06002593 RID: 9619 RVA: 0x00065D64 File Offset: 0x00063F64
 		public override ERefreshContent Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700092F RID: 2351
-		// (get) Token: 0x0600228E RID: 8846 RVA: 0x0005F05E File Offset: 0x0005D25E
-		// (set) Token: 0x0600228F RID: 8847 RVA: 0x0005F085 File Offset: 0x0005D285
+		// Token: 0x170009E6 RID: 2534
+		// (get) Token: 0x06002594 RID: 9620 RVA: 0x00065D72 File Offset: 0x00063F72
+		// (set) Token: 0x06002595 RID: 9621 RVA: 0x00065D99 File Offset: 0x00063F99
 		public virtual List<int> EntityIds
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000930 RID: 2352
-		// (get) Token: 0x06002290 RID: 8848 RVA: 0x0005F094 File Offset: 0x0005D294
-		// (set) Token: 0x06002291 RID: 8849 RVA: 0x0005F0BE File Offset: 0x0005D2BE
+		// Token: 0x170009E7 RID: 2535
+		// (get) Token: 0x06002596 RID: 9622 RVA: 0x00065DA8 File Offset: 0x00063FA8
+		// (set) Token: 0x06002597 RID: 9623 RVA: 0x00065DD2 File Offset: 0x00063FD2
 		public virtual bool? EdEnableSyncCamp
 		{
 			get
@@ -128,11 +126,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001800 RID: 6144
+		// Token: 0x040019F2 RID: 6642
 		[Nullable(2)]
 		protected new IRandomEntityRefreshContent FbInstance;
 
-		// Token: 0x04001801 RID: 6145
+		// Token: 0x040019F3 RID: 6643
 		[Nullable(2)]
 		protected new IRandomEntityRefreshContent_SetValue PocoInterface;
 	}

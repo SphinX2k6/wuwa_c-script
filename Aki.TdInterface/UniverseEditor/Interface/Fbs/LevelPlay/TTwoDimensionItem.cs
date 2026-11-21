@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x02004620 RID: 17952
+	// Token: 0x02004A88 RID: 19080
 	public enum TTwoDimensionItem : byte
 	{
-		// Token: 0x0400C74D RID: 51021
+		// Token: 0x0400D17C RID: 53628
 		NONE,
-		// Token: 0x0400C74E RID: 51022
+		// Token: 0x0400D17D RID: 53629
 		IDangoBrawlBag,
-		// Token: 0x0400C74F RID: 51023
+		// Token: 0x0400D17E RID: 53630
 		IDangoBrawlItem,
-		// Token: 0x0400C750 RID: 51024
+		// Token: 0x0400D17F RID: 53631
 		IMarbleCommonItem,
-		// Token: 0x0400C751 RID: 51025
+		// Token: 0x0400D180 RID: 53632
 		IMarbleSpawnPoint
 	}
 }

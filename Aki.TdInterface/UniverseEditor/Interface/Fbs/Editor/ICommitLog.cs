@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x02004838 RID: 18488
+	// Token: 0x02004CA0 RID: 19616
 	public struct ICommitLog : IFlatbufferObject
 	{
-		// Token: 0x170084AA RID: 33962
-		// (get) Token: 0x0601C93D RID: 117053 RVA: 0x0040A5AA File Offset: 0x004087AA
+		// Token: 0x17008AF5 RID: 35573
+		// (get) Token: 0x0601E13A RID: 123194 RVA: 0x00436EFA File Offset: 0x004350FA
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601C93E RID: 117054 RVA: 0x0040A5B7 File Offset: 0x004087B7
+		// Token: 0x0601E13B RID: 123195 RVA: 0x00436F07 File Offset: 0x00435107
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601C93F RID: 117055 RVA: 0x0040A5C0 File Offset: 0x004087C0
+		// Token: 0x0601E13C RID: 123196 RVA: 0x00436F10 File Offset: 0x00435110
 		public static ICommitLog GetRootAsICommitLog(ByteBuffer _bb)
 		{
 			return ICommitLog.GetRootAsICommitLog(_bb, default(ICommitLog));
 		}
 
-		// Token: 0x0601C940 RID: 117056 RVA: 0x0040A5DC File Offset: 0x004087DC
+		// Token: 0x0601E13D RID: 123197 RVA: 0x00436F2C File Offset: 0x0043512C
 		public static ICommitLog GetRootAsICommitLog(ByteBuffer _bb, ICommitLog obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601C941 RID: 117057 RVA: 0x0040A5F9 File Offset: 0x004087F9
+		// Token: 0x0601E13E RID: 123198 RVA: 0x00436F49 File Offset: 0x00435149
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601C942 RID: 117058 RVA: 0x0040A608 File Offset: 0x00408808
+		// Token: 0x0601E13F RID: 123199 RVA: 0x00436F58 File Offset: 0x00435158
 		public ICommitLog __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170084AB RID: 33963
-		// (get) Token: 0x0601C943 RID: 117059 RVA: 0x0040A618 File Offset: 0x00408818
+		// Token: 0x17008AF6 RID: 35574
+		// (get) Token: 0x0601E140 RID: 123200 RVA: 0x00436F68 File Offset: 0x00435168
 		public string Date
 		{
 			get
@@ -62,20 +62,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601C944 RID: 117060 RVA: 0x0040A64F File Offset: 0x0040884F
+		// Token: 0x0601E141 RID: 123201 RVA: 0x00436F9F File Offset: 0x0043519F
 		public Span<byte> GetDateBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x0601C945 RID: 117061 RVA: 0x0040A65E File Offset: 0x0040885E
+		// Token: 0x0601E142 RID: 123202 RVA: 0x00436FAE File Offset: 0x004351AE
 		public byte[] GetDateArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x170084AC RID: 33964
-		// (get) Token: 0x0601C946 RID: 117062 RVA: 0x0040A66C File Offset: 0x0040886C
+		// Token: 0x17008AF7 RID: 35575
+		// (get) Token: 0x0601E143 RID: 123203 RVA: 0x00436FBC File Offset: 0x004351BC
 		public string Log
 		{
 			get
@@ -89,19 +89,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601C947 RID: 117063 RVA: 0x0040A6A3 File Offset: 0x004088A3
+		// Token: 0x0601E144 RID: 123204 RVA: 0x00436FF3 File Offset: 0x004351F3
 		public Span<byte> GetLogBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0601C948 RID: 117064 RVA: 0x0040A6B2 File Offset: 0x004088B2
+		// Token: 0x0601E145 RID: 123205 RVA: 0x00437002 File Offset: 0x00435202
 		public byte[] GetLogArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x0601C949 RID: 117065 RVA: 0x0040A6C0 File Offset: 0x004088C0
+		// Token: 0x0601E146 RID: 123206 RVA: 0x00437010 File Offset: 0x00435210
 		public static Offset<ICommitLog> CreateICommitLog(FlatBufferBuilder builder, StringOffset DateOffset = default(StringOffset), StringOffset LogOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -110,31 +110,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return ICommitLog.EndICommitLog(builder);
 		}
 
-		// Token: 0x0601C94A RID: 117066 RVA: 0x0040A6DD File Offset: 0x004088DD
+		// Token: 0x0601E147 RID: 123207 RVA: 0x0043702D File Offset: 0x0043522D
 		public static void StartICommitLog(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601C94B RID: 117067 RVA: 0x0040A6E6 File Offset: 0x004088E6
+		// Token: 0x0601E148 RID: 123208 RVA: 0x00437036 File Offset: 0x00435236
 		public static void AddDate(FlatBufferBuilder builder, StringOffset dateOffset)
 		{
 			builder.AddOffset(0, dateOffset.Value, 0);
 		}
 
-		// Token: 0x0601C94C RID: 117068 RVA: 0x0040A6F6 File Offset: 0x004088F6
+		// Token: 0x0601E149 RID: 123209 RVA: 0x00437046 File Offset: 0x00435246
 		public static void AddLog(FlatBufferBuilder builder, StringOffset logOffset)
 		{
 			builder.AddOffset(1, logOffset.Value, 0);
 		}
 
-		// Token: 0x0601C94D RID: 117069 RVA: 0x0040A706 File Offset: 0x00408906
+		// Token: 0x0601E14A RID: 123210 RVA: 0x00437056 File Offset: 0x00435256
 		public static Offset<ICommitLog> EndICommitLog(FlatBufferBuilder builder)
 		{
 			return new Offset<ICommitLog>(builder.EndTable());
 		}
 
-		// Token: 0x0601C94E RID: 117070 RVA: 0x0040A714 File Offset: 0x00408914
+		// Token: 0x0601E14B RID: 123211 RVA: 0x00437064 File Offset: 0x00435264
 		public ICommitLogT UnPack()
 		{
 			ICommitLogT commitLogT = new ICommitLogT();
@@ -142,14 +142,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return commitLogT;
 		}
 
-		// Token: 0x0601C94F RID: 117071 RVA: 0x0040A72F File Offset: 0x0040892F
+		// Token: 0x0601E14C RID: 123212 RVA: 0x0043707F File Offset: 0x0043527F
 		public void UnPackTo(ICommitLogT _o)
 		{
 			_o.Date = this.Date;
 			_o.Log = this.Log;
 		}
 
-		// Token: 0x0601C950 RID: 117072 RVA: 0x0040A74C File Offset: 0x0040894C
+		// Token: 0x0601E14D RID: 123213 RVA: 0x0043709C File Offset: 0x0043529C
 		public static Offset<ICommitLog> Pack(FlatBufferBuilder builder, ICommitLogT _o)
 		{
 			if (_o == null)
@@ -161,7 +161,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return ICommitLog.CreateICommitLog(builder, dateOffset, logOffset);
 		}
 
-		// Token: 0x0400CD63 RID: 52579
+		// Token: 0x0400D79E RID: 55198
 		private Table __p;
 	}
 }

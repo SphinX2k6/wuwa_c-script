@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200008C RID: 140
+	// Token: 0x02000094 RID: 148
 	public class ConfigAiStateMachineConfigById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000348 RID: 840 RVA: 0x0006C1DC File Offset: 0x0006A3DC
+		// Token: 0x06000378 RID: 888 RVA: 0x00070A90 File Offset: 0x0006EC90
 		static ConfigAiStateMachineConfigById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAiStateMachineConfigById.CreateStaticDefaultValue), new Action(ConfigAiStateMachineConfigById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000349 RID: 841 RVA: 0x0006C1FC File Offset: 0x0006A3FC
+		// Token: 0x06000379 RID: 889 RVA: 0x00070AB0 File Offset: 0x0006ECB0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAiStateMachineConfigById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600034A RID: 842 RVA: 0x0006C27B File Offset: 0x0006A47B
+		// Token: 0x0600037A RID: 890 RVA: 0x00070B2F File Offset: 0x0006ED2F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAiStateMachineConfigById.LogPair = null;
 			ConfigAiStateMachineConfigById.HandleId = 0;
 		}
 
-		// Token: 0x0600034B RID: 843 RVA: 0x0006C289 File Offset: 0x0006A489
+		// Token: 0x0600037B RID: 891 RVA: 0x00070B3D File Offset: 0x0006ED3D
 		public static void Init()
 		{
 			ConfigAiStateMachineConfigById.HandleId = ConfigCommon.InitDataStatement(ConfigAiStateMachineConfigById.HandleId, "db_aistatemachineconfig.db", "select BinData from `AiStateMachineConfig` where Id=?");
 		}
 
-		// Token: 0x0600034C RID: 844 RVA: 0x0006C2A4 File Offset: 0x0006A4A4
+		// Token: 0x0600037C RID: 892 RVA: 0x00070B58 File Offset: 0x0006ED58
 		public static AiStateMachineConfig? GetConfig(string p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigAiStateMachineConfigById.HandleId, ConfigAiStateMachineConfigById.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new AiStateMachineConfig?(rootAsAiStateMachineConfig);
 		}
 
-		// Token: 0x040003B8 RID: 952
+		// Token: 0x040003F0 RID: 1008
 		private const string DB = "db_aistatemachineconfig.db";
 
-		// Token: 0x040003B9 RID: 953
+		// Token: 0x040003F1 RID: 1009
 		private const string FILE = "z.战斗/a.AI/a.AI状态机.csv";
 
-		// Token: 0x040003BA RID: 954
+		// Token: 0x040003F2 RID: 1010
 		private const string TABLE = "AiStateMachineConfig";
 
-		// Token: 0x040003BB RID: 955
+		// Token: 0x040003F3 RID: 1011
 		private const string COMMAND = "select BinData from `AiStateMachineConfig` where Id=?";
 
-		// Token: 0x040003BC RID: 956
+		// Token: 0x040003F4 RID: 1012
 		private const string KEY_PREFIX = "AiStateMachineConfigById";
 
-		// Token: 0x040003BD RID: 957
+		// Token: 0x040003F5 RID: 1013
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040003BE RID: 958
+		// Token: 0x040003F6 RID: 1014
 		private static int HandleId;
 	}
 }

@@ -2,30 +2,36 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Match
 {
-	// Token: 0x020043EC RID: 17388
+	// Token: 0x02004851 RID: 18513
 	public enum EMechanismType : byte
 	{
-		// Token: 0x0400C2EA RID: 49898
+		// Token: 0x0400CD0F RID: 52495
 		Portal,
-		// Token: 0x0400C2EB RID: 49899
+		// Token: 0x0400CD10 RID: 52496
 		PortalCreater,
-		// Token: 0x0400C2EC RID: 49900
+		// Token: 0x0400CD11 RID: 52497
 		SeptimontPatrolDoll,
-		// Token: 0x0400C2ED RID: 49901
+		// Token: 0x0400CD12 RID: 52498
 		Electricity,
-		// Token: 0x0400C2EE RID: 49902
+		// Token: 0x0400CD13 RID: 52499
+		ElectricityStation,
+		// Token: 0x0400CD14 RID: 52500
 		DeadeyeTarget,
-		// Token: 0x0400C2EF RID: 49903
+		// Token: 0x0400CD15 RID: 52501
 		SpaceStationQuantumDoor,
-		// Token: 0x0400C2F0 RID: 49904
+		// Token: 0x0400CD16 RID: 52502
 		LightPlate,
-		// Token: 0x0400C2F1 RID: 49905
+		// Token: 0x0400CD17 RID: 52503
 		PointLight,
-		// Token: 0x0400C2F2 RID: 49906
+		// Token: 0x0400CD18 RID: 52504
 		DaemonHack,
-		// Token: 0x0400C2F3 RID: 49907
+		// Token: 0x0400CD19 RID: 52505
 		RecognizableMeteorite,
-		// Token: 0x0400C2F4 RID: 49908
-		CanBeInteractedByFox
+		// Token: 0x0400CD1A RID: 52506
+		CanBeInteractedByFox,
+		// Token: 0x0400CD1B RID: 52507
+		CliffJumpTakeoffArea,
+		// Token: 0x0400CD1C RID: 52508
+		CliffJumpLandingArea
 	}
 }

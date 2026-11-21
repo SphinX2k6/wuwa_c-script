@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002585 RID: 9605
+	// Token: 0x02002833 RID: 10291
 	public class IVisualNovelDate
 	{
-		// Token: 0x0600D795 RID: 55189 RVA: 0x00201B2A File Offset: 0x001FFD2A
-		[NullableContext(1)]
+		// Token: 0x0600E50F RID: 58639 RVA: 0x0021D85E File Offset: 0x0021BA5E
 		public static IVisualNovelDate Create(IVisualNovelDate? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003E4D RID: 15949
-		// (get) Token: 0x0600D796 RID: 55190 RVA: 0x00201B49 File Offset: 0x001FFD49
+		// Token: 0x17004157 RID: 16727
+		// (get) Token: 0x0600E510 RID: 58640 RVA: 0x0021D87D File Offset: 0x0021BA7D
 		public virtual int Month
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003E4E RID: 15950
-		// (get) Token: 0x0600D797 RID: 55191 RVA: 0x00201B56 File Offset: 0x001FFD56
+		// Token: 0x17004158 RID: 16728
+		// (get) Token: 0x0600E511 RID: 58641 RVA: 0x0021D88A File Offset: 0x0021BA8A
 		public virtual int Day
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007749 RID: 30537
+		// Token: 0x04007DAF RID: 32175
 		private IVisualNovelDate Instance;
 	}
 }

@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x0200235A RID: 9050
+// Token: 0x0200183F RID: 6207
 [NullableContext(1)]
 [Nullable(0)]
 public class PayShopInfoData
 {
-	// Token: 0x060120AC RID: 73900 RVA: 0x0046D1F4 File Offset: 0x0046B3F4
+	// Token: 0x0600F55C RID: 62812 RVA: 0x0047A2B4 File Offset: 0x004784B4
 	public void Phrase(PayShopInfo info)
 	{
 		this.Id = info.Id;
@@ -18,39 +17,39 @@ public class PayShopInfoData
 		this.ShopTabViewType = info.ShopTabViewType;
 		this.DynamicTabId = info.DynamicTabId;
 		this.Sort = info.Sort;
-		this.Money = info.Money.ToList<int>();
+		this.Money = new List<int>(info.Money);
 		this.SortRule = info.SortRule;
 		this.TabContentPath = info.PayShopTabTogContent;
 		this.EnableServerRedDot = info.EnableServerRedDot;
 	}
 
-	// Token: 0x0400885F RID: 34911
+	// Token: 0x040089A4 RID: 35236
 	public int Id;
 
-	// Token: 0x04008860 RID: 34912
+	// Token: 0x040089A5 RID: 35237
 	public long UpdateTime;
 
-	// Token: 0x04008861 RID: 34913
+	// Token: 0x040089A6 RID: 35238
 	public long LastUpdateTime;
 
-	// Token: 0x04008862 RID: 34914
+	// Token: 0x040089A7 RID: 35239
 	public int ShopTabViewType;
 
-	// Token: 0x04008863 RID: 34915
+	// Token: 0x040089A8 RID: 35240
 	public int DynamicTabId;
 
-	// Token: 0x04008864 RID: 34916
+	// Token: 0x040089A9 RID: 35241
 	public int Sort;
 
-	// Token: 0x04008865 RID: 34917
+	// Token: 0x040089AA RID: 35242
 	public List<int> Money = new List<int>();
 
-	// Token: 0x04008866 RID: 34918
+	// Token: 0x040089AB RID: 35243
 	public int SortRule;
 
-	// Token: 0x04008867 RID: 34919
+	// Token: 0x040089AC RID: 35244
 	public string TabContentPath = "";
 
-	// Token: 0x04008868 RID: 34920
+	// Token: 0x040089AD RID: 35245
 	public bool EnableServerRedDot;
 }

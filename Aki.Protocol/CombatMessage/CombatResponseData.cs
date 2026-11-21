@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol.CombatMessage
 {
-	// Token: 0x0200168C RID: 5772
+	// Token: 0x02001708 RID: 5896
 	public sealed class CombatResponseData : IMessage<CombatResponseData>, IMessage, IEquatable<CombatResponseData>, IDeepCloneable<CombatResponseData>, IBufferMessage
 	{
-		// Token: 0x0601CE27 RID: 118311 RVA: 0x00436413 File Offset: 0x00434613
+		// Token: 0x0601D8F2 RID: 121074 RVA: 0x00451FBF File Offset: 0x004501BF
 		[NullableContext(1)]
 		public static CombatResponseData Create()
 		{
 			return new CombatResponseData();
 		}
 
-		// Token: 0x170061CE RID: 25038
-		// (get) Token: 0x0601CE28 RID: 118312 RVA: 0x0043641A File Offset: 0x0043461A
+		// Token: 0x17006471 RID: 25713
+		// (get) Token: 0x0601D8F3 RID: 121075 RVA: 0x00451FC6 File Offset: 0x004501C6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061CF RID: 25039
-		// (get) Token: 0x0601CE29 RID: 118313 RVA: 0x0043641D File Offset: 0x0043461D
+		// Token: 0x17006472 RID: 25714
+		// (get) Token: 0x0601D8F4 RID: 121076 RVA: 0x00451FC9 File Offset: 0x004501C9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x0601CE2A RID: 118314 RVA: 0x00436424 File Offset: 0x00434624
+		// Token: 0x0601D8F5 RID: 121077 RVA: 0x00451FD0 File Offset: 0x004501D0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CombatResponseData()
 		{
 		}
 
-		// Token: 0x0601CE2B RID: 118315 RVA: 0x0043642C File Offset: 0x0043462C
+		// Token: 0x0601D8F6 RID: 121078 RVA: 0x00451FD8 File Offset: 0x004501D8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CombatResponseData(CombatResponseData other) : this()
@@ -263,7 +263,7 @@ namespace Aki.Protocol.CombatMessage
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601CE2C RID: 118316 RVA: 0x00436BBF File Offset: 0x00434DBF
+		// Token: 0x0601D8F7 RID: 121079 RVA: 0x0045276B File Offset: 0x0045096B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CombatResponseData Clone()
@@ -271,9 +271,9 @@ namespace Aki.Protocol.CombatMessage
 			return new CombatResponseData(this);
 		}
 
-		// Token: 0x170061D0 RID: 25040
-		// (get) Token: 0x0601CE2D RID: 118317 RVA: 0x00436BC7 File Offset: 0x00434DC7
-		// (set) Token: 0x0601CE2E RID: 118318 RVA: 0x00436BCF File Offset: 0x00434DCF
+		// Token: 0x17006473 RID: 25715
+		// (get) Token: 0x0601D8F8 RID: 121080 RVA: 0x00452773 File Offset: 0x00450973
+		// (set) Token: 0x0601D8F9 RID: 121081 RVA: 0x0045277B File Offset: 0x0045097B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CombatCommon CombatCommon
@@ -288,9 +288,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061D1 RID: 25041
-		// (get) Token: 0x0601CE2F RID: 118319 RVA: 0x00436BD8 File Offset: 0x00434DD8
-		// (set) Token: 0x0601CE30 RID: 118320 RVA: 0x00436BE0 File Offset: 0x00434DE0
+		// Token: 0x17006474 RID: 25716
+		// (get) Token: 0x0601D8FA RID: 121082 RVA: 0x00452784 File Offset: 0x00450984
+		// (set) Token: 0x0601D8FB RID: 121083 RVA: 0x0045278C File Offset: 0x0045098C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RequestId
@@ -305,9 +305,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061D2 RID: 25042
-		// (get) Token: 0x0601CE31 RID: 118321 RVA: 0x00436BE9 File Offset: 0x00434DE9
-		// (set) Token: 0x0601CE32 RID: 118322 RVA: 0x00436C01 File Offset: 0x00434E01
+		// Token: 0x17006475 RID: 25717
+		// (get) Token: 0x0601D8FC RID: 121084 RVA: 0x00452795 File Offset: 0x00450995
+		// (set) Token: 0x0601D8FD RID: 121085 RVA: 0x004527AD File Offset: 0x004509AD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CreateBulletResponse CreateBulletResponse
@@ -327,9 +327,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061D3 RID: 25043
-		// (get) Token: 0x0601CE33 RID: 118323 RVA: 0x00436C17 File Offset: 0x00434E17
-		// (set) Token: 0x0601CE34 RID: 118324 RVA: 0x00436C2F File Offset: 0x00434E2F
+		// Token: 0x17006476 RID: 25718
+		// (get) Token: 0x0601D8FE RID: 121086 RVA: 0x004527C3 File Offset: 0x004509C3
+		// (set) Token: 0x0601D8FF RID: 121087 RVA: 0x004527DB File Offset: 0x004509DB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DestroyBulletResponse DestroyBulletResponse
@@ -349,9 +349,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061D4 RID: 25044
-		// (get) Token: 0x0601CE35 RID: 118325 RVA: 0x00436C45 File Offset: 0x00434E45
-		// (set) Token: 0x0601CE36 RID: 118326 RVA: 0x00436C5D File Offset: 0x00434E5D
+		// Token: 0x17006477 RID: 25719
+		// (get) Token: 0x0601D900 RID: 121088 RVA: 0x004527F1 File Offset: 0x004509F1
+		// (set) Token: 0x0601D901 RID: 121089 RVA: 0x00452809 File Offset: 0x00450A09
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DamageExecuteResponse DamageExecuteResponse
@@ -371,9 +371,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061D5 RID: 25045
-		// (get) Token: 0x0601CE37 RID: 118327 RVA: 0x00436C73 File Offset: 0x00434E73
-		// (set) Token: 0x0601CE38 RID: 118328 RVA: 0x00436C8B File Offset: 0x00434E8B
+		// Token: 0x17006478 RID: 25720
+		// (get) Token: 0x0601D902 RID: 121090 RVA: 0x0045281F File Offset: 0x00450A1F
+		// (set) Token: 0x0601D903 RID: 121091 RVA: 0x00452837 File Offset: 0x00450A37
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ApplyGameplayEffectResponse ApplyGameplayEffectResponse
@@ -393,9 +393,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061D6 RID: 25046
-		// (get) Token: 0x0601CE39 RID: 118329 RVA: 0x00436CA1 File Offset: 0x00434EA1
-		// (set) Token: 0x0601CE3A RID: 118330 RVA: 0x00436CB9 File Offset: 0x00434EB9
+		// Token: 0x17006479 RID: 25721
+		// (get) Token: 0x0601D904 RID: 121092 RVA: 0x0045284D File Offset: 0x00450A4D
+		// (set) Token: 0x0601D905 RID: 121093 RVA: 0x00452865 File Offset: 0x00450A65
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RemoveGameplayEffectResponse RemoveGameplayEffectResponse
@@ -415,9 +415,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061D7 RID: 25047
-		// (get) Token: 0x0601CE3B RID: 118331 RVA: 0x00436CCF File Offset: 0x00434ECF
-		// (set) Token: 0x0601CE3C RID: 118332 RVA: 0x00436CE7 File Offset: 0x00434EE7
+		// Token: 0x1700647A RID: 25722
+		// (get) Token: 0x0601D906 RID: 121094 RVA: 0x0045287B File Offset: 0x00450A7B
+		// (set) Token: 0x0601D907 RID: 121095 RVA: 0x00452893 File Offset: 0x00450A93
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public HitResponse HitResponse
@@ -437,9 +437,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061D8 RID: 25048
-		// (get) Token: 0x0601CE3D RID: 118333 RVA: 0x00436CFD File Offset: 0x00434EFD
-		// (set) Token: 0x0601CE3E RID: 118334 RVA: 0x00436D16 File Offset: 0x00434F16
+		// Token: 0x1700647B RID: 25723
+		// (get) Token: 0x0601D908 RID: 121096 RVA: 0x004528A9 File Offset: 0x00450AA9
+		// (set) Token: 0x0601D909 RID: 121097 RVA: 0x004528C2 File Offset: 0x00450AC2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public HitEndResponse HitEndResponse
@@ -459,9 +459,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061D9 RID: 25049
-		// (get) Token: 0x0601CE3F RID: 118335 RVA: 0x00436D2D File Offset: 0x00434F2D
-		// (set) Token: 0x0601CE40 RID: 118336 RVA: 0x00436D46 File Offset: 0x00434F46
+		// Token: 0x1700647C RID: 25724
+		// (get) Token: 0x0601D90A RID: 121098 RVA: 0x004528D9 File Offset: 0x00450AD9
+		// (set) Token: 0x0601D90B RID: 121099 RVA: 0x004528F2 File Offset: 0x00450AF2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SkillResponse SkillResponse
@@ -481,9 +481,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061DA RID: 25050
-		// (get) Token: 0x0601CE41 RID: 118337 RVA: 0x00436D5D File Offset: 0x00434F5D
-		// (set) Token: 0x0601CE42 RID: 118338 RVA: 0x00436D76 File Offset: 0x00434F76
+		// Token: 0x1700647D RID: 25725
+		// (get) Token: 0x0601D90C RID: 121100 RVA: 0x00452909 File Offset: 0x00450B09
+		// (set) Token: 0x0601D90D RID: 121101 RVA: 0x00452922 File Offset: 0x00450B22
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public UseSkillResponse UseSkillResponse
@@ -503,9 +503,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061DB RID: 25051
-		// (get) Token: 0x0601CE43 RID: 118339 RVA: 0x00436D8D File Offset: 0x00434F8D
-		// (set) Token: 0x0601CE44 RID: 118340 RVA: 0x00436DA6 File Offset: 0x00434FA6
+		// Token: 0x1700647E RID: 25726
+		// (get) Token: 0x0601D90E RID: 121102 RVA: 0x00452939 File Offset: 0x00450B39
+		// (set) Token: 0x0601D90F RID: 121103 RVA: 0x00452952 File Offset: 0x00450B52
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EndSkillResponse EndSkillResponse
@@ -525,9 +525,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061DC RID: 25052
-		// (get) Token: 0x0601CE45 RID: 118341 RVA: 0x00436DBD File Offset: 0x00434FBD
-		// (set) Token: 0x0601CE46 RID: 118342 RVA: 0x00436DD6 File Offset: 0x00434FD6
+		// Token: 0x1700647F RID: 25727
+		// (get) Token: 0x0601D910 RID: 121104 RVA: 0x00452969 File Offset: 0x00450B69
+		// (set) Token: 0x0601D911 RID: 121105 RVA: 0x00452982 File Offset: 0x00450B82
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PartUpdateResponse PartUpdateResponse
@@ -547,9 +547,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061DD RID: 25053
-		// (get) Token: 0x0601CE47 RID: 118343 RVA: 0x00436DED File Offset: 0x00434FED
-		// (set) Token: 0x0601CE48 RID: 118344 RVA: 0x00436E06 File Offset: 0x00435006
+		// Token: 0x17006480 RID: 25728
+		// (get) Token: 0x0601D912 RID: 121106 RVA: 0x00452999 File Offset: 0x00450B99
+		// (set) Token: 0x0601D913 RID: 121107 RVA: 0x004529B2 File Offset: 0x00450BB2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MaterialResponse MaterialResponse
@@ -569,9 +569,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061DE RID: 25054
-		// (get) Token: 0x0601CE49 RID: 118345 RVA: 0x00436E1D File Offset: 0x0043501D
-		// (set) Token: 0x0601CE4A RID: 118346 RVA: 0x00436E36 File Offset: 0x00435036
+		// Token: 0x17006481 RID: 25729
+		// (get) Token: 0x0601D914 RID: 121108 RVA: 0x004529C9 File Offset: 0x00450BC9
+		// (set) Token: 0x0601D915 RID: 121109 RVA: 0x004529E2 File Offset: 0x00450BE2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GameplayCueResponse GameplayCueResponse
@@ -591,9 +591,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061DF RID: 25055
-		// (get) Token: 0x0601CE4B RID: 118347 RVA: 0x00436E4D File Offset: 0x0043504D
-		// (set) Token: 0x0601CE4C RID: 118348 RVA: 0x00436E66 File Offset: 0x00435066
+		// Token: 0x17006482 RID: 25730
+		// (get) Token: 0x0601D916 RID: 121110 RVA: 0x004529F9 File Offset: 0x00450BF9
+		// (set) Token: 0x0601D917 RID: 121111 RVA: 0x00452A12 File Offset: 0x00450C12
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EntityIsVisibleResponse EntityIsVisibleResponse
@@ -613,9 +613,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061E0 RID: 25056
-		// (get) Token: 0x0601CE4D RID: 118349 RVA: 0x00436E7D File Offset: 0x0043507D
-		// (set) Token: 0x0601CE4E RID: 118350 RVA: 0x00436E96 File Offset: 0x00435096
+		// Token: 0x17006483 RID: 25731
+		// (get) Token: 0x0601D918 RID: 121112 RVA: 0x00452A29 File Offset: 0x00450C29
+		// (set) Token: 0x0601D919 RID: 121113 RVA: 0x00452A42 File Offset: 0x00450C42
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SwitchCharacterStateResponse SwitchCharacterStateResponse
@@ -635,9 +635,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061E1 RID: 25057
-		// (get) Token: 0x0601CE4F RID: 118351 RVA: 0x00436EAD File Offset: 0x004350AD
-		// (set) Token: 0x0601CE50 RID: 118352 RVA: 0x00436EC6 File Offset: 0x004350C6
+		// Token: 0x17006484 RID: 25732
+		// (get) Token: 0x0601D91A RID: 121114 RVA: 0x00452A59 File Offset: 0x00450C59
+		// (set) Token: 0x0601D91B RID: 121115 RVA: 0x00452A72 File Offset: 0x00450C72
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LogicStateInitResponse LogicStateInitResponse
@@ -657,9 +657,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061E2 RID: 25058
-		// (get) Token: 0x0601CE51 RID: 118353 RVA: 0x00436EDD File Offset: 0x004350DD
-		// (set) Token: 0x0601CE52 RID: 118354 RVA: 0x00436EF6 File Offset: 0x004350F6
+		// Token: 0x17006485 RID: 25733
+		// (get) Token: 0x0601D91C RID: 121116 RVA: 0x00452A89 File Offset: 0x00450C89
+		// (set) Token: 0x0601D91D RID: 121117 RVA: 0x00452AA2 File Offset: 0x00450CA2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SwitchLogicStateResponse SwitchLogicStateResponse
@@ -679,9 +679,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061E3 RID: 25059
-		// (get) Token: 0x0601CE53 RID: 118355 RVA: 0x00436F0D File Offset: 0x0043510D
-		// (set) Token: 0x0601CE54 RID: 118356 RVA: 0x00436F26 File Offset: 0x00435126
+		// Token: 0x17006486 RID: 25734
+		// (get) Token: 0x0601D91E RID: 121118 RVA: 0x00452AB9 File Offset: 0x00450CB9
+		// (set) Token: 0x0601D91F RID: 121119 RVA: 0x00452AD2 File Offset: 0x00450CD2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AnimationStateChangedResponse AnimationStateChangedResponse
@@ -701,9 +701,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061E4 RID: 25060
-		// (get) Token: 0x0601CE55 RID: 118357 RVA: 0x00436F3D File Offset: 0x0043513D
-		// (set) Token: 0x0601CE56 RID: 118358 RVA: 0x00436F56 File Offset: 0x00435156
+		// Token: 0x17006487 RID: 25735
+		// (get) Token: 0x0601D920 RID: 121120 RVA: 0x00452AE9 File Offset: 0x00450CE9
+		// (set) Token: 0x0601D921 RID: 121121 RVA: 0x00452B02 File Offset: 0x00450D02
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AnimationStateInitResponse AnimationStateInitResponse
@@ -723,9 +723,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061E5 RID: 25061
-		// (get) Token: 0x0601CE57 RID: 118359 RVA: 0x00436F6D File Offset: 0x0043516D
-		// (set) Token: 0x0601CE58 RID: 118360 RVA: 0x00436F86 File Offset: 0x00435186
+		// Token: 0x17006488 RID: 25736
+		// (get) Token: 0x0601D922 RID: 121122 RVA: 0x00452B19 File Offset: 0x00450D19
+		// (set) Token: 0x0601D923 RID: 121123 RVA: 0x00452B32 File Offset: 0x00450D32
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ModifyBulletParamsResponse ModifyBulletParamsResponse
@@ -745,9 +745,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061E6 RID: 25062
-		// (get) Token: 0x0601CE59 RID: 118361 RVA: 0x00436F9D File Offset: 0x0043519D
-		// (set) Token: 0x0601CE5A RID: 118362 RVA: 0x00436FB6 File Offset: 0x004351B6
+		// Token: 0x17006489 RID: 25737
+		// (get) Token: 0x0601D924 RID: 121124 RVA: 0x00452B49 File Offset: 0x00450D49
+		// (set) Token: 0x0601D925 RID: 121125 RVA: 0x00452B62 File Offset: 0x00450D62
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DrownResponse DrownResponse
@@ -767,9 +767,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061E7 RID: 25063
-		// (get) Token: 0x0601CE5B RID: 118363 RVA: 0x00436FCD File Offset: 0x004351CD
-		// (set) Token: 0x0601CE5C RID: 118364 RVA: 0x00436FE6 File Offset: 0x004351E6
+		// Token: 0x1700648A RID: 25738
+		// (get) Token: 0x0601D926 RID: 121126 RVA: 0x00452B79 File Offset: 0x00450D79
+		// (set) Token: 0x0601D927 RID: 121127 RVA: 0x00452B92 File Offset: 0x00450D92
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public OrderApplyBuffResponse OrderApplyBuffResponse
@@ -789,9 +789,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061E8 RID: 25064
-		// (get) Token: 0x0601CE5D RID: 118365 RVA: 0x00436FFD File Offset: 0x004351FD
-		// (set) Token: 0x0601CE5E RID: 118366 RVA: 0x00437016 File Offset: 0x00435216
+		// Token: 0x1700648B RID: 25739
+		// (get) Token: 0x0601D928 RID: 121128 RVA: 0x00452BA9 File Offset: 0x00450DA9
+		// (set) Token: 0x0601D929 RID: 121129 RVA: 0x00452BC2 File Offset: 0x00450DC2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public OrderRemoveBuffResponse OrderRemoveBuffResponse
@@ -811,9 +811,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061E9 RID: 25065
-		// (get) Token: 0x0601CE5F RID: 118367 RVA: 0x0043702D File Offset: 0x0043522D
-		// (set) Token: 0x0601CE60 RID: 118368 RVA: 0x00437046 File Offset: 0x00435246
+		// Token: 0x1700648C RID: 25740
+		// (get) Token: 0x0601D92A RID: 121130 RVA: 0x00452BD9 File Offset: 0x00450DD9
+		// (set) Token: 0x0601D92B RID: 121131 RVA: 0x00452BF2 File Offset: 0x00450DF2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ActivateBuffResponse ActivateBuffResponse
@@ -833,9 +833,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061EA RID: 25066
-		// (get) Token: 0x0601CE61 RID: 118369 RVA: 0x0043705D File Offset: 0x0043525D
-		// (set) Token: 0x0601CE62 RID: 118370 RVA: 0x00437076 File Offset: 0x00435276
+		// Token: 0x1700648D RID: 25741
+		// (get) Token: 0x0601D92C RID: 121132 RVA: 0x00452C09 File Offset: 0x00450E09
+		// (set) Token: 0x0601D92D RID: 121133 RVA: 0x00452C22 File Offset: 0x00450E22
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public OrderRemoveBuffByTagsResponse OrderRemoveBuffByTagsResponse
@@ -855,9 +855,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061EB RID: 25067
-		// (get) Token: 0x0601CE63 RID: 118371 RVA: 0x0043708D File Offset: 0x0043528D
-		// (set) Token: 0x0601CE64 RID: 118372 RVA: 0x004370A6 File Offset: 0x004352A6
+		// Token: 0x1700648E RID: 25742
+		// (get) Token: 0x0601D92E RID: 121134 RVA: 0x00452C39 File Offset: 0x00450E39
+		// (set) Token: 0x0601D92F RID: 121135 RVA: 0x00452C52 File Offset: 0x00450E52
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AiInformationResponse AiInformationResponse
@@ -877,9 +877,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061EC RID: 25068
-		// (get) Token: 0x0601CE65 RID: 118373 RVA: 0x004370BD File Offset: 0x004352BD
-		// (set) Token: 0x0601CE66 RID: 118374 RVA: 0x004370D6 File Offset: 0x004352D6
+		// Token: 0x1700648F RID: 25743
+		// (get) Token: 0x0601D930 RID: 121136 RVA: 0x00452C69 File Offset: 0x00450E69
+		// (set) Token: 0x0601D931 RID: 121137 RVA: 0x00452C82 File Offset: 0x00450E82
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ToughCalcExtraRatioChangeResponse ToughCalcExtraRatioChangeResponse
@@ -899,9 +899,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061ED RID: 25069
-		// (get) Token: 0x0601CE67 RID: 118375 RVA: 0x004370ED File Offset: 0x004352ED
-		// (set) Token: 0x0601CE68 RID: 118376 RVA: 0x00437106 File Offset: 0x00435306
+		// Token: 0x17006490 RID: 25744
+		// (get) Token: 0x0601D932 RID: 121138 RVA: 0x00452C99 File Offset: 0x00450E99
+		// (set) Token: 0x0601D933 RID: 121139 RVA: 0x00452CB2 File Offset: 0x00450EB2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BattleStateChangeResponse BattleStateChangeResponse
@@ -921,9 +921,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061EE RID: 25070
-		// (get) Token: 0x0601CE69 RID: 118377 RVA: 0x0043711D File Offset: 0x0043531D
-		// (set) Token: 0x0601CE6A RID: 118378 RVA: 0x00437136 File Offset: 0x00435336
+		// Token: 0x17006491 RID: 25745
+		// (get) Token: 0x0601D934 RID: 121140 RVA: 0x00452CC9 File Offset: 0x00450EC9
+		// (set) Token: 0x0601D935 RID: 121141 RVA: 0x00452CE2 File Offset: 0x00450EE2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AnimationGameplayTagResponse AnimationGameplayTagResponse
@@ -943,9 +943,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061EF RID: 25071
-		// (get) Token: 0x0601CE6B RID: 118379 RVA: 0x0043714D File Offset: 0x0043534D
-		// (set) Token: 0x0601CE6C RID: 118380 RVA: 0x00437166 File Offset: 0x00435366
+		// Token: 0x17006492 RID: 25746
+		// (get) Token: 0x0601D936 RID: 121142 RVA: 0x00452CF9 File Offset: 0x00450EF9
+		// (set) Token: 0x0601D937 RID: 121143 RVA: 0x00452D12 File Offset: 0x00450F12
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BoneVisibleChangeResponse BoneVisibleChangeResponse
@@ -965,9 +965,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061F0 RID: 25072
-		// (get) Token: 0x0601CE6D RID: 118381 RVA: 0x0043717D File Offset: 0x0043537D
-		// (set) Token: 0x0601CE6E RID: 118382 RVA: 0x00437196 File Offset: 0x00435396
+		// Token: 0x17006493 RID: 25747
+		// (get) Token: 0x0601D938 RID: 121144 RVA: 0x00452D29 File Offset: 0x00450F29
+		// (set) Token: 0x0601D939 RID: 121145 RVA: 0x00452D42 File Offset: 0x00450F42
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AiBlackboardsResponse AiBlackboardsResponse
@@ -987,9 +987,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061F1 RID: 25073
-		// (get) Token: 0x0601CE6F RID: 118383 RVA: 0x004371AD File Offset: 0x004353AD
-		// (set) Token: 0x0601CE70 RID: 118384 RVA: 0x004371C6 File Offset: 0x004353C6
+		// Token: 0x17006494 RID: 25748
+		// (get) Token: 0x0601D93A RID: 121146 RVA: 0x00452D59 File Offset: 0x00450F59
+		// (set) Token: 0x0601D93B RID: 121147 RVA: 0x00452D72 File Offset: 0x00450F72
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AiBlackboardCdResponse AiBlackboardCdResponse
@@ -1009,9 +1009,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061F2 RID: 25074
-		// (get) Token: 0x0601CE71 RID: 118385 RVA: 0x004371DD File Offset: 0x004353DD
-		// (set) Token: 0x0601CE72 RID: 118386 RVA: 0x004371F6 File Offset: 0x004353F6
+		// Token: 0x17006495 RID: 25749
+		// (get) Token: 0x0601D93C RID: 121148 RVA: 0x00452D89 File Offset: 0x00450F89
+		// (set) Token: 0x0601D93D RID: 121149 RVA: 0x00452DA2 File Offset: 0x00450FA2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AiHateResponse AiHateResponse
@@ -1031,9 +1031,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061F3 RID: 25075
-		// (get) Token: 0x0601CE73 RID: 118387 RVA: 0x0043720D File Offset: 0x0043540D
-		// (set) Token: 0x0601CE74 RID: 118388 RVA: 0x00437226 File Offset: 0x00435426
+		// Token: 0x17006496 RID: 25750
+		// (get) Token: 0x0601D93E RID: 121150 RVA: 0x00452DB9 File Offset: 0x00450FB9
+		// (set) Token: 0x0601D93F RID: 121151 RVA: 0x00452DD2 File Offset: 0x00450FD2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MonsterBoomResponse MonsterBoomResponse
@@ -1053,9 +1053,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061F4 RID: 25076
-		// (get) Token: 0x0601CE75 RID: 118389 RVA: 0x0043723D File Offset: 0x0043543D
-		// (set) Token: 0x0601CE76 RID: 118390 RVA: 0x00437256 File Offset: 0x00435456
+		// Token: 0x17006497 RID: 25751
+		// (get) Token: 0x0601D940 RID: 121152 RVA: 0x00452DE9 File Offset: 0x00450FE9
+		// (set) Token: 0x0601D941 RID: 121153 RVA: 0x00452E02 File Offset: 0x00451002
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CaughtResponse CaughtResponse
@@ -1075,9 +1075,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061F5 RID: 25077
-		// (get) Token: 0x0601CE77 RID: 118391 RVA: 0x0043726D File Offset: 0x0043546D
-		// (set) Token: 0x0601CE78 RID: 118392 RVA: 0x00437286 File Offset: 0x00435486
+		// Token: 0x17006498 RID: 25752
+		// (get) Token: 0x0601D942 RID: 121154 RVA: 0x00452E19 File Offset: 0x00451019
+		// (set) Token: 0x0601D943 RID: 121155 RVA: 0x00452E32 File Offset: 0x00451032
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EntityStaticHookMoveResponse EntityStaticHookMoveResponse
@@ -1097,9 +1097,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061F6 RID: 25078
-		// (get) Token: 0x0601CE79 RID: 118393 RVA: 0x0043729D File Offset: 0x0043549D
-		// (set) Token: 0x0601CE7A RID: 118394 RVA: 0x004372B6 File Offset: 0x004354B6
+		// Token: 0x17006499 RID: 25753
+		// (get) Token: 0x0601D944 RID: 121156 RVA: 0x00452E49 File Offset: 0x00451049
+		// (set) Token: 0x0601D945 RID: 121157 RVA: 0x00452E62 File Offset: 0x00451062
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ChangeStateResponse ChangeStateResponse
@@ -1119,9 +1119,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061F7 RID: 25079
-		// (get) Token: 0x0601CE7B RID: 118395 RVA: 0x004372CD File Offset: 0x004354CD
-		// (set) Token: 0x0601CE7C RID: 118396 RVA: 0x004372E6 File Offset: 0x004354E6
+		// Token: 0x1700649A RID: 25754
+		// (get) Token: 0x0601D946 RID: 121158 RVA: 0x00452E79 File Offset: 0x00451079
+		// (set) Token: 0x0601D947 RID: 121159 RVA: 0x00452E92 File Offset: 0x00451092
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ChangeStateConfirmResponse ChangeStateConfirmResponse
@@ -1141,9 +1141,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061F8 RID: 25080
-		// (get) Token: 0x0601CE7D RID: 118397 RVA: 0x004372FD File Offset: 0x004354FD
-		// (set) Token: 0x0601CE7E RID: 118398 RVA: 0x00437316 File Offset: 0x00435516
+		// Token: 0x1700649B RID: 25755
+		// (get) Token: 0x0601D948 RID: 121160 RVA: 0x00452EA9 File Offset: 0x004510A9
+		// (set) Token: 0x0601D949 RID: 121161 RVA: 0x00452EC2 File Offset: 0x004510C2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FsmConditionPassResponse FsmConditionPassResponse
@@ -1163,9 +1163,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061F9 RID: 25081
-		// (get) Token: 0x0601CE7F RID: 118399 RVA: 0x0043732D File Offset: 0x0043552D
-		// (set) Token: 0x0601CE80 RID: 118400 RVA: 0x00437346 File Offset: 0x00435546
+		// Token: 0x1700649C RID: 25756
+		// (get) Token: 0x0601D94A RID: 121162 RVA: 0x00452ED9 File Offset: 0x004510D9
+		// (set) Token: 0x0601D94B RID: 121163 RVA: 0x00452EF2 File Offset: 0x004510F2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BuffStackCountResponse BuffStackCountResponse
@@ -1185,9 +1185,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061FA RID: 25082
-		// (get) Token: 0x0601CE81 RID: 118401 RVA: 0x0043735D File Offset: 0x0043555D
-		// (set) Token: 0x0601CE82 RID: 118402 RVA: 0x00437376 File Offset: 0x00435576
+		// Token: 0x1700649D RID: 25757
+		// (get) Token: 0x0601D94C RID: 121164 RVA: 0x00452F09 File Offset: 0x00451109
+		// (set) Token: 0x0601D94D RID: 121165 RVA: 0x00452F22 File Offset: 0x00451122
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ANStartResponse ANStartResponse
@@ -1207,9 +1207,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061FB RID: 25083
-		// (get) Token: 0x0601CE83 RID: 118403 RVA: 0x0043738D File Offset: 0x0043558D
-		// (set) Token: 0x0601CE84 RID: 118404 RVA: 0x004373A6 File Offset: 0x004355A6
+		// Token: 0x1700649E RID: 25758
+		// (get) Token: 0x0601D94E RID: 121166 RVA: 0x00452F39 File Offset: 0x00451139
+		// (set) Token: 0x0601D94F RID: 121167 RVA: 0x00452F52 File Offset: 0x00451152
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public UseSkillFailResponse UseSkillFailResponse
@@ -1229,9 +1229,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061FC RID: 25084
-		// (get) Token: 0x0601CE85 RID: 118405 RVA: 0x004373BD File Offset: 0x004355BD
-		// (set) Token: 0x0601CE86 RID: 118406 RVA: 0x004373D6 File Offset: 0x004355D6
+		// Token: 0x1700649F RID: 25759
+		// (get) Token: 0x0601D950 RID: 121168 RVA: 0x00452F69 File Offset: 0x00451169
+		// (set) Token: 0x0601D951 RID: 121169 RVA: 0x00452F82 File Offset: 0x00451182
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EnterViewDirectionResponse EnterViewDirectionResponse
@@ -1251,9 +1251,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061FD RID: 25085
-		// (get) Token: 0x0601CE87 RID: 118407 RVA: 0x004373ED File Offset: 0x004355ED
-		// (set) Token: 0x0601CE88 RID: 118408 RVA: 0x00437406 File Offset: 0x00435606
+		// Token: 0x170064A0 RID: 25760
+		// (get) Token: 0x0601D952 RID: 121170 RVA: 0x00452F99 File Offset: 0x00451199
+		// (set) Token: 0x0601D953 RID: 121171 RVA: 0x00452FB2 File Offset: 0x004511B2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ExitViewDirectionResponse ExitViewDirectionResponse
@@ -1273,9 +1273,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061FE RID: 25086
-		// (get) Token: 0x0601CE89 RID: 118409 RVA: 0x0043741D File Offset: 0x0043561D
-		// (set) Token: 0x0601CE8A RID: 118410 RVA: 0x00437436 File Offset: 0x00435636
+		// Token: 0x170064A1 RID: 25761
+		// (get) Token: 0x0601D954 RID: 121172 RVA: 0x00452FC9 File Offset: 0x004511C9
+		// (set) Token: 0x0601D955 RID: 121173 RVA: 0x00452FE2 File Offset: 0x004511E2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PassiveSkillAddResponse PassiveSkillAddResponse
@@ -1295,9 +1295,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x170061FF RID: 25087
-		// (get) Token: 0x0601CE8B RID: 118411 RVA: 0x0043744D File Offset: 0x0043564D
-		// (set) Token: 0x0601CE8C RID: 118412 RVA: 0x00437466 File Offset: 0x00435666
+		// Token: 0x170064A2 RID: 25762
+		// (get) Token: 0x0601D956 RID: 121174 RVA: 0x00452FF9 File Offset: 0x004511F9
+		// (set) Token: 0x0601D957 RID: 121175 RVA: 0x00453012 File Offset: 0x00451212
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public InterruptSkillInDelayResponse InterruptSkillInDelayResponse
@@ -1317,9 +1317,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006200 RID: 25088
-		// (get) Token: 0x0601CE8D RID: 118413 RVA: 0x0043747D File Offset: 0x0043567D
-		// (set) Token: 0x0601CE8E RID: 118414 RVA: 0x00437496 File Offset: 0x00435696
+		// Token: 0x170064A3 RID: 25763
+		// (get) Token: 0x0601D958 RID: 121176 RVA: 0x00453029 File Offset: 0x00451229
+		// (set) Token: 0x0601D959 RID: 121177 RVA: 0x00453042 File Offset: 0x00451242
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TriggerExitSkillResponse TriggerExitSkillResponse
@@ -1339,9 +1339,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006201 RID: 25089
-		// (get) Token: 0x0601CE8F RID: 118415 RVA: 0x004374AD File Offset: 0x004356AD
-		// (set) Token: 0x0601CE90 RID: 118416 RVA: 0x004374C6 File Offset: 0x004356C6
+		// Token: 0x170064A4 RID: 25764
+		// (get) Token: 0x0601D95A RID: 121178 RVA: 0x00453059 File Offset: 0x00451259
+		// (set) Token: 0x0601D95B RID: 121179 RVA: 0x00453072 File Offset: 0x00451272
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ActorVisibleResponse ActorVisibleResponse
@@ -1361,9 +1361,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006202 RID: 25090
-		// (get) Token: 0x0601CE91 RID: 118417 RVA: 0x004374DD File Offset: 0x004356DD
-		// (set) Token: 0x0601CE92 RID: 118418 RVA: 0x004374F6 File Offset: 0x004356F6
+		// Token: 0x170064A5 RID: 25765
+		// (get) Token: 0x0601D95C RID: 121180 RVA: 0x00453089 File Offset: 0x00451289
+		// (set) Token: 0x0601D95D RID: 121181 RVA: 0x004530A2 File Offset: 0x004512A2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BuffEffectResponse BuffEffectResponse
@@ -1383,9 +1383,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006203 RID: 25091
-		// (get) Token: 0x0601CE93 RID: 118419 RVA: 0x0043750D File Offset: 0x0043570D
-		// (set) Token: 0x0601CE94 RID: 118420 RVA: 0x00437526 File Offset: 0x00435726
+		// Token: 0x170064A6 RID: 25766
+		// (get) Token: 0x0601D95E RID: 121182 RVA: 0x004530B9 File Offset: 0x004512B9
+		// (set) Token: 0x0601D95F RID: 121183 RVA: 0x004530D2 File Offset: 0x004512D2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FragileChangeResponse FragileChangeResponse
@@ -1405,9 +1405,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006204 RID: 25092
-		// (get) Token: 0x0601CE95 RID: 118421 RVA: 0x0043753D File Offset: 0x0043573D
-		// (set) Token: 0x0601CE96 RID: 118422 RVA: 0x00437556 File Offset: 0x00435756
+		// Token: 0x170064A7 RID: 25767
+		// (get) Token: 0x0601D960 RID: 121184 RVA: 0x004530E9 File Offset: 0x004512E9
+		// (set) Token: 0x0601D961 RID: 121185 RVA: 0x00453102 File Offset: 0x00451302
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RTimeStopResponse RTimeStopResponse
@@ -1427,9 +1427,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006205 RID: 25093
-		// (get) Token: 0x0601CE97 RID: 118423 RVA: 0x0043756D File Offset: 0x0043576D
-		// (set) Token: 0x0601CE98 RID: 118424 RVA: 0x00437586 File Offset: 0x00435786
+		// Token: 0x170064A8 RID: 25768
+		// (get) Token: 0x0601D962 RID: 121186 RVA: 0x00453119 File Offset: 0x00451319
+		// (set) Token: 0x0601D963 RID: 121187 RVA: 0x00453132 File Offset: 0x00451332
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DrownEndTeleportResponse DrownEndTeleportResponse
@@ -1449,9 +1449,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006206 RID: 25094
-		// (get) Token: 0x0601CE99 RID: 118425 RVA: 0x0043759D File Offset: 0x0043579D
-		// (set) Token: 0x0601CE9A RID: 118426 RVA: 0x004375B6 File Offset: 0x004357B6
+		// Token: 0x170064A9 RID: 25769
+		// (get) Token: 0x0601D964 RID: 121188 RVA: 0x00453149 File Offset: 0x00451349
+		// (set) Token: 0x0601D965 RID: 121189 RVA: 0x00453162 File Offset: 0x00451362
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MonsterDrownResponse MonsterDrownResponse
@@ -1471,9 +1471,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006207 RID: 25095
-		// (get) Token: 0x0601CE9B RID: 118427 RVA: 0x004375CD File Offset: 0x004357CD
-		// (set) Token: 0x0601CE9C RID: 118428 RVA: 0x004375E6 File Offset: 0x004357E6
+		// Token: 0x170064AA RID: 25770
+		// (get) Token: 0x0601D966 RID: 121190 RVA: 0x00453179 File Offset: 0x00451379
+		// (set) Token: 0x0601D967 RID: 121191 RVA: 0x00453192 File Offset: 0x00451392
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PassiveSkillRemoveResponse PassiveSkillRemoveResponse
@@ -1493,9 +1493,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006208 RID: 25096
-		// (get) Token: 0x0601CE9D RID: 118429 RVA: 0x004375FD File Offset: 0x004357FD
-		// (set) Token: 0x0601CE9E RID: 118430 RVA: 0x00437616 File Offset: 0x00435816
+		// Token: 0x170064AB RID: 25771
+		// (get) Token: 0x0601D968 RID: 121192 RVA: 0x004531A9 File Offset: 0x004513A9
+		// (set) Token: 0x0601D969 RID: 121193 RVA: 0x004531C2 File Offset: 0x004513C2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RTimeStopInstResponse RTimeStopInstResponse
@@ -1515,9 +1515,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006209 RID: 25097
-		// (get) Token: 0x0601CE9F RID: 118431 RVA: 0x0043762D File Offset: 0x0043582D
-		// (set) Token: 0x0601CEA0 RID: 118432 RVA: 0x00437646 File Offset: 0x00435846
+		// Token: 0x170064AC RID: 25772
+		// (get) Token: 0x0601D96A RID: 121194 RVA: 0x004531D9 File Offset: 0x004513D9
+		// (set) Token: 0x0601D96B RID: 121195 RVA: 0x004531F2 File Offset: 0x004513F2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FsmStateBehaviorResponse FsmStateBehaviorResponse
@@ -1537,9 +1537,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700620A RID: 25098
-		// (get) Token: 0x0601CEA1 RID: 118433 RVA: 0x0043765D File Offset: 0x0043585D
-		// (set) Token: 0x0601CEA2 RID: 118434 RVA: 0x00437676 File Offset: 0x00435876
+		// Token: 0x170064AD RID: 25773
+		// (get) Token: 0x0601D96C RID: 121196 RVA: 0x00453209 File Offset: 0x00451409
+		// (set) Token: 0x0601D96D RID: 121197 RVA: 0x00453222 File Offset: 0x00451422
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FsmPlayMontageResponse FsmPlayMontageResponse
@@ -1559,9 +1559,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700620B RID: 25099
-		// (get) Token: 0x0601CEA3 RID: 118435 RVA: 0x0043768D File Offset: 0x0043588D
-		// (set) Token: 0x0601CEA4 RID: 118436 RVA: 0x004376A6 File Offset: 0x004358A6
+		// Token: 0x170064AE RID: 25774
+		// (get) Token: 0x0601D96E RID: 121198 RVA: 0x00453239 File Offset: 0x00451439
+		// (set) Token: 0x0601D96F RID: 121199 RVA: 0x00453252 File Offset: 0x00451452
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RTimeStopAnimResponse RTimeStopAnimResponse
@@ -1581,9 +1581,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700620C RID: 25100
-		// (get) Token: 0x0601CEA5 RID: 118437 RVA: 0x004376BD File Offset: 0x004358BD
-		// (set) Token: 0x0601CEA6 RID: 118438 RVA: 0x004376D6 File Offset: 0x004358D6
+		// Token: 0x170064AF RID: 25775
+		// (get) Token: 0x0601D970 RID: 121200 RVA: 0x00453269 File Offset: 0x00451469
+		// (set) Token: 0x0601D971 RID: 121201 RVA: 0x00453282 File Offset: 0x00451482
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SwitchRoleResponse SwitchRoleResponse
@@ -1603,9 +1603,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700620D RID: 25101
-		// (get) Token: 0x0601CEA7 RID: 118439 RVA: 0x004376ED File Offset: 0x004358ED
-		// (set) Token: 0x0601CEA8 RID: 118440 RVA: 0x00437706 File Offset: 0x00435906
+		// Token: 0x170064B0 RID: 25776
+		// (get) Token: 0x0601D972 RID: 121202 RVA: 0x00453299 File Offset: 0x00451499
+		// (set) Token: 0x0601D973 RID: 121203 RVA: 0x004532B2 File Offset: 0x004514B2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GameplayTagResponse GameplayTagResponse
@@ -1625,9 +1625,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700620E RID: 25102
-		// (get) Token: 0x0601CEA9 RID: 118441 RVA: 0x0043771D File Offset: 0x0043591D
-		// (set) Token: 0x0601CEAA RID: 118442 RVA: 0x00437736 File Offset: 0x00435936
+		// Token: 0x170064B1 RID: 25777
+		// (get) Token: 0x0601D974 RID: 121204 RVA: 0x004532C9 File Offset: 0x004514C9
+		// (set) Token: 0x0601D975 RID: 121205 RVA: 0x004532E2 File Offset: 0x004514E2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ExecuteQteResponse ExecuteQteResponse
@@ -1647,9 +1647,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700620F RID: 25103
-		// (get) Token: 0x0601CEAB RID: 118443 RVA: 0x0043774D File Offset: 0x0043594D
-		// (set) Token: 0x0601CEAC RID: 118444 RVA: 0x00437766 File Offset: 0x00435966
+		// Token: 0x170064B2 RID: 25778
+		// (get) Token: 0x0601D976 RID: 121206 RVA: 0x004532F9 File Offset: 0x004514F9
+		// (set) Token: 0x0601D977 RID: 121207 RVA: 0x00453312 File Offset: 0x00451512
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CombineEntitiesResponse CombineEntitiesResponse
@@ -1669,9 +1669,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006210 RID: 25104
-		// (get) Token: 0x0601CEAD RID: 118445 RVA: 0x0043777D File Offset: 0x0043597D
-		// (set) Token: 0x0601CEAE RID: 118446 RVA: 0x00437796 File Offset: 0x00435996
+		// Token: 0x170064B3 RID: 25779
+		// (get) Token: 0x0601D978 RID: 121208 RVA: 0x00453329 File Offset: 0x00451529
+		// (set) Token: 0x0601D979 RID: 121209 RVA: 0x00453342 File Offset: 0x00451542
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DissolveCombineRelationResponse DissolveCombineRelationResponse
@@ -1691,9 +1691,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006211 RID: 25105
-		// (get) Token: 0x0601CEAF RID: 118447 RVA: 0x004377AD File Offset: 0x004359AD
-		// (set) Token: 0x0601CEB0 RID: 118448 RVA: 0x004377C6 File Offset: 0x004359C6
+		// Token: 0x170064B4 RID: 25780
+		// (get) Token: 0x0601D97A RID: 121210 RVA: 0x00453359 File Offset: 0x00451559
+		// (set) Token: 0x0601D97B RID: 121211 RVA: 0x00453372 File Offset: 0x00451572
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ClientCurrentRoleReportResponse ClientCurrentRoleReportResponse
@@ -1713,9 +1713,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006212 RID: 25106
-		// (get) Token: 0x0601CEB1 RID: 118449 RVA: 0x004377DD File Offset: 0x004359DD
-		// (set) Token: 0x0601CEB2 RID: 118450 RVA: 0x004377F6 File Offset: 0x004359F6
+		// Token: 0x170064B5 RID: 25781
+		// (get) Token: 0x0601D97C RID: 121212 RVA: 0x00453389 File Offset: 0x00451589
+		// (set) Token: 0x0601D97D RID: 121213 RVA: 0x004533A2 File Offset: 0x004515A2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GaSwitchCommonEnemyProCampResponse GaSwitchCommonEnemyProCampResponse
@@ -1735,9 +1735,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006213 RID: 25107
-		// (get) Token: 0x0601CEB3 RID: 118451 RVA: 0x0043780D File Offset: 0x00435A0D
-		// (set) Token: 0x0601CEB4 RID: 118452 RVA: 0x00437826 File Offset: 0x00435A26
+		// Token: 0x170064B6 RID: 25782
+		// (get) Token: 0x0601D97E RID: 121214 RVA: 0x004533B9 File Offset: 0x004515B9
+		// (set) Token: 0x0601D97F RID: 121215 RVA: 0x004533D2 File Offset: 0x004515D2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ChangeSummonEntityStateResponse ChangeSummonEntityStateResponse
@@ -1757,9 +1757,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006214 RID: 25108
-		// (get) Token: 0x0601CEB5 RID: 118453 RVA: 0x0043783D File Offset: 0x00435A3D
-		// (set) Token: 0x0601CEB6 RID: 118454 RVA: 0x00437856 File Offset: 0x00435A56
+		// Token: 0x170064B7 RID: 25783
+		// (get) Token: 0x0601D980 RID: 121216 RVA: 0x004533E9 File Offset: 0x004515E9
+		// (set) Token: 0x0601D981 RID: 121217 RVA: 0x00453402 File Offset: 0x00451602
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CombatDataMaxResponse CombatDataMaxResponse
@@ -1779,8 +1779,8 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006215 RID: 25109
-		// (get) Token: 0x0601CEB7 RID: 118455 RVA: 0x0043786D File Offset: 0x00435A6D
+		// Token: 0x170064B8 RID: 25784
+		// (get) Token: 0x0601D982 RID: 121218 RVA: 0x00453419 File Offset: 0x00451619
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CombatResponseData.MessageOneofCase MessageCase
@@ -1791,7 +1791,7 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x0601CEB8 RID: 118456 RVA: 0x00437875 File Offset: 0x00435A75
+		// Token: 0x0601D983 RID: 121219 RVA: 0x00453421 File Offset: 0x00451621
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearMessage()
@@ -1800,7 +1800,7 @@ namespace Aki.Protocol.CombatMessage
 			this.message_ = null;
 		}
 
-		// Token: 0x0601CEB9 RID: 118457 RVA: 0x00437885 File Offset: 0x00435A85
+		// Token: 0x0601D984 RID: 121220 RVA: 0x00453431 File Offset: 0x00451631
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -1808,7 +1808,7 @@ namespace Aki.Protocol.CombatMessage
 			return this.Equals(other as CombatResponseData);
 		}
 
-		// Token: 0x0601CEBA RID: 118458 RVA: 0x00437894 File Offset: 0x00435A94
+		// Token: 0x0601D985 RID: 121221 RVA: 0x00453440 File Offset: 0x00451640
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(CombatResponseData other)
@@ -1816,7 +1816,7 @@ namespace Aki.Protocol.CombatMessage
 			return other != null && (other == this || (object.Equals(this.CombatCommon, other.CombatCommon) && this.RequestId == other.RequestId && object.Equals(this.CreateBulletResponse, other.CreateBulletResponse) && object.Equals(this.DestroyBulletResponse, other.DestroyBulletResponse) && object.Equals(this.DamageExecuteResponse, other.DamageExecuteResponse) && object.Equals(this.ApplyGameplayEffectResponse, other.ApplyGameplayEffectResponse) && object.Equals(this.RemoveGameplayEffectResponse, other.RemoveGameplayEffectResponse) && object.Equals(this.HitResponse, other.HitResponse) && object.Equals(this.HitEndResponse, other.HitEndResponse) && object.Equals(this.SkillResponse, other.SkillResponse) && object.Equals(this.UseSkillResponse, other.UseSkillResponse) && object.Equals(this.EndSkillResponse, other.EndSkillResponse) && object.Equals(this.PartUpdateResponse, other.PartUpdateResponse) && object.Equals(this.MaterialResponse, other.MaterialResponse) && object.Equals(this.GameplayCueResponse, other.GameplayCueResponse) && object.Equals(this.EntityIsVisibleResponse, other.EntityIsVisibleResponse) && object.Equals(this.SwitchCharacterStateResponse, other.SwitchCharacterStateResponse) && object.Equals(this.LogicStateInitResponse, other.LogicStateInitResponse) && object.Equals(this.SwitchLogicStateResponse, other.SwitchLogicStateResponse) && object.Equals(this.AnimationStateChangedResponse, other.AnimationStateChangedResponse) && object.Equals(this.AnimationStateInitResponse, other.AnimationStateInitResponse) && object.Equals(this.ModifyBulletParamsResponse, other.ModifyBulletParamsResponse) && object.Equals(this.DrownResponse, other.DrownResponse) && object.Equals(this.OrderApplyBuffResponse, other.OrderApplyBuffResponse) && object.Equals(this.OrderRemoveBuffResponse, other.OrderRemoveBuffResponse) && object.Equals(this.ActivateBuffResponse, other.ActivateBuffResponse) && object.Equals(this.OrderRemoveBuffByTagsResponse, other.OrderRemoveBuffByTagsResponse) && object.Equals(this.AiInformationResponse, other.AiInformationResponse) && object.Equals(this.ToughCalcExtraRatioChangeResponse, other.ToughCalcExtraRatioChangeResponse) && object.Equals(this.BattleStateChangeResponse, other.BattleStateChangeResponse) && object.Equals(this.AnimationGameplayTagResponse, other.AnimationGameplayTagResponse) && object.Equals(this.BoneVisibleChangeResponse, other.BoneVisibleChangeResponse) && object.Equals(this.AiBlackboardsResponse, other.AiBlackboardsResponse) && object.Equals(this.AiBlackboardCdResponse, other.AiBlackboardCdResponse) && object.Equals(this.AiHateResponse, other.AiHateResponse) && object.Equals(this.MonsterBoomResponse, other.MonsterBoomResponse) && object.Equals(this.CaughtResponse, other.CaughtResponse) && object.Equals(this.EntityStaticHookMoveResponse, other.EntityStaticHookMoveResponse) && object.Equals(this.ChangeStateResponse, other.ChangeStateResponse) && object.Equals(this.ChangeStateConfirmResponse, other.ChangeStateConfirmResponse) && object.Equals(this.FsmConditionPassResponse, other.FsmConditionPassResponse) && object.Equals(this.BuffStackCountResponse, other.BuffStackCountResponse) && object.Equals(this.ANStartResponse, other.ANStartResponse) && object.Equals(this.UseSkillFailResponse, other.UseSkillFailResponse) && object.Equals(this.EnterViewDirectionResponse, other.EnterViewDirectionResponse) && object.Equals(this.ExitViewDirectionResponse, other.ExitViewDirectionResponse) && object.Equals(this.PassiveSkillAddResponse, other.PassiveSkillAddResponse) && object.Equals(this.InterruptSkillInDelayResponse, other.InterruptSkillInDelayResponse) && object.Equals(this.TriggerExitSkillResponse, other.TriggerExitSkillResponse) && object.Equals(this.ActorVisibleResponse, other.ActorVisibleResponse) && object.Equals(this.BuffEffectResponse, other.BuffEffectResponse) && object.Equals(this.FragileChangeResponse, other.FragileChangeResponse) && object.Equals(this.RTimeStopResponse, other.RTimeStopResponse) && object.Equals(this.DrownEndTeleportResponse, other.DrownEndTeleportResponse) && object.Equals(this.MonsterDrownResponse, other.MonsterDrownResponse) && object.Equals(this.PassiveSkillRemoveResponse, other.PassiveSkillRemoveResponse) && object.Equals(this.RTimeStopInstResponse, other.RTimeStopInstResponse) && object.Equals(this.FsmStateBehaviorResponse, other.FsmStateBehaviorResponse) && object.Equals(this.FsmPlayMontageResponse, other.FsmPlayMontageResponse) && object.Equals(this.RTimeStopAnimResponse, other.RTimeStopAnimResponse) && object.Equals(this.SwitchRoleResponse, other.SwitchRoleResponse) && object.Equals(this.GameplayTagResponse, other.GameplayTagResponse) && object.Equals(this.ExecuteQteResponse, other.ExecuteQteResponse) && object.Equals(this.CombineEntitiesResponse, other.CombineEntitiesResponse) && object.Equals(this.DissolveCombineRelationResponse, other.DissolveCombineRelationResponse) && object.Equals(this.ClientCurrentRoleReportResponse, other.ClientCurrentRoleReportResponse) && object.Equals(this.GaSwitchCommonEnemyProCampResponse, other.GaSwitchCommonEnemyProCampResponse) && object.Equals(this.ChangeSummonEntityStateResponse, other.ChangeSummonEntityStateResponse) && object.Equals(this.CombatDataMaxResponse, other.CombatDataMaxResponse) && this.MessageCase == other.MessageCase && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601CEBB RID: 118459 RVA: 0x00437E74 File Offset: 0x00436074
+		// Token: 0x0601D986 RID: 121222 RVA: 0x00453A20 File Offset: 0x00451C20
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -2106,7 +2106,7 @@ namespace Aki.Protocol.CombatMessage
 			return num;
 		}
 
-		// Token: 0x0601CEBC RID: 118460 RVA: 0x00438514 File Offset: 0x00436714
+		// Token: 0x0601D987 RID: 121223 RVA: 0x004540C0 File Offset: 0x004522C0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -2114,7 +2114,7 @@ namespace Aki.Protocol.CombatMessage
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601CEBD RID: 118461 RVA: 0x00438521 File Offset: 0x00436721
+		// Token: 0x0601D988 RID: 121224 RVA: 0x004540CD File Offset: 0x004522CD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -2122,7 +2122,7 @@ namespace Aki.Protocol.CombatMessage
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601CEBE RID: 118462 RVA: 0x0043852C File Offset: 0x0043672C
+		// Token: 0x0601D989 RID: 121225 RVA: 0x004540D8 File Offset: 0x004522D8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -2478,7 +2478,7 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x0601CEBF RID: 118463 RVA: 0x00438E34 File Offset: 0x00437034
+		// Token: 0x0601D98A RID: 121226 RVA: 0x004549E0 File Offset: 0x00452BE0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -2767,7 +2767,7 @@ namespace Aki.Protocol.CombatMessage
 			return num;
 		}
 
-		// Token: 0x0601CEC0 RID: 118464 RVA: 0x00439554 File Offset: 0x00437754
+		// Token: 0x0601D98B RID: 121227 RVA: 0x00455100 File Offset: 0x00453300
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CombatResponseData other)
@@ -3263,7 +3263,7 @@ namespace Aki.Protocol.CombatMessage
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601CEC1 RID: 118465 RVA: 0x0043A205 File Offset: 0x00438405
+		// Token: 0x0601D98C RID: 121228 RVA: 0x00455DB1 File Offset: 0x00453FB1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -3271,7 +3271,7 @@ namespace Aki.Protocol.CombatMessage
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601CEC2 RID: 118466 RVA: 0x0043A210 File Offset: 0x00438410
+		// Token: 0x0601D98D RID: 121229 RVA: 0x00455DBC File Offset: 0x00453FBC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -4179,366 +4179,366 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x0400C306 RID: 49926
+		// Token: 0x0400C831 RID: 51249
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400C307 RID: 49927
+		// Token: 0x0400C832 RID: 51250
 		public const int CombatCommonFieldNumber = 1;
 
-		// Token: 0x0400C308 RID: 49928
+		// Token: 0x0400C833 RID: 51251
 		private CombatCommon combatCommon_;
 
-		// Token: 0x0400C309 RID: 49929
+		// Token: 0x0400C834 RID: 51252
 		public const int RequestIdFieldNumber = 2;
 
-		// Token: 0x0400C30A RID: 49930
+		// Token: 0x0400C835 RID: 51253
 		private int requestId_;
 
-		// Token: 0x0400C30B RID: 49931
+		// Token: 0x0400C836 RID: 51254
 		public const int CreateBulletResponseFieldNumber = 3;
 
-		// Token: 0x0400C30C RID: 49932
+		// Token: 0x0400C837 RID: 51255
 		public const int DestroyBulletResponseFieldNumber = 4;
 
-		// Token: 0x0400C30D RID: 49933
+		// Token: 0x0400C838 RID: 51256
 		public const int DamageExecuteResponseFieldNumber = 5;
 
-		// Token: 0x0400C30E RID: 49934
+		// Token: 0x0400C839 RID: 51257
 		public const int ApplyGameplayEffectResponseFieldNumber = 6;
 
-		// Token: 0x0400C30F RID: 49935
+		// Token: 0x0400C83A RID: 51258
 		public const int RemoveGameplayEffectResponseFieldNumber = 7;
 
-		// Token: 0x0400C310 RID: 49936
+		// Token: 0x0400C83B RID: 51259
 		public const int HitResponseFieldNumber = 8;
 
-		// Token: 0x0400C311 RID: 49937
+		// Token: 0x0400C83C RID: 51260
 		public const int HitEndResponseFieldNumber = 9;
 
-		// Token: 0x0400C312 RID: 49938
+		// Token: 0x0400C83D RID: 51261
 		public const int SkillResponseFieldNumber = 10;
 
-		// Token: 0x0400C313 RID: 49939
+		// Token: 0x0400C83E RID: 51262
 		public const int UseSkillResponseFieldNumber = 11;
 
-		// Token: 0x0400C314 RID: 49940
+		// Token: 0x0400C83F RID: 51263
 		public const int EndSkillResponseFieldNumber = 12;
 
-		// Token: 0x0400C315 RID: 49941
+		// Token: 0x0400C840 RID: 51264
 		public const int PartUpdateResponseFieldNumber = 13;
 
-		// Token: 0x0400C316 RID: 49942
+		// Token: 0x0400C841 RID: 51265
 		public const int MaterialResponseFieldNumber = 14;
 
-		// Token: 0x0400C317 RID: 49943
+		// Token: 0x0400C842 RID: 51266
 		public const int GameplayCueResponseFieldNumber = 15;
 
-		// Token: 0x0400C318 RID: 49944
+		// Token: 0x0400C843 RID: 51267
 		public const int EntityIsVisibleResponseFieldNumber = 16;
 
-		// Token: 0x0400C319 RID: 49945
+		// Token: 0x0400C844 RID: 51268
 		public const int SwitchCharacterStateResponseFieldNumber = 17;
 
-		// Token: 0x0400C31A RID: 49946
+		// Token: 0x0400C845 RID: 51269
 		public const int LogicStateInitResponseFieldNumber = 18;
 
-		// Token: 0x0400C31B RID: 49947
+		// Token: 0x0400C846 RID: 51270
 		public const int SwitchLogicStateResponseFieldNumber = 19;
 
-		// Token: 0x0400C31C RID: 49948
+		// Token: 0x0400C847 RID: 51271
 		public const int AnimationStateChangedResponseFieldNumber = 20;
 
-		// Token: 0x0400C31D RID: 49949
+		// Token: 0x0400C848 RID: 51272
 		public const int AnimationStateInitResponseFieldNumber = 21;
 
-		// Token: 0x0400C31E RID: 49950
+		// Token: 0x0400C849 RID: 51273
 		public const int ModifyBulletParamsResponseFieldNumber = 22;
 
-		// Token: 0x0400C31F RID: 49951
+		// Token: 0x0400C84A RID: 51274
 		public const int DrownResponseFieldNumber = 23;
 
-		// Token: 0x0400C320 RID: 49952
+		// Token: 0x0400C84B RID: 51275
 		public const int OrderApplyBuffResponseFieldNumber = 24;
 
-		// Token: 0x0400C321 RID: 49953
+		// Token: 0x0400C84C RID: 51276
 		public const int OrderRemoveBuffResponseFieldNumber = 25;
 
-		// Token: 0x0400C322 RID: 49954
+		// Token: 0x0400C84D RID: 51277
 		public const int ActivateBuffResponseFieldNumber = 26;
 
-		// Token: 0x0400C323 RID: 49955
+		// Token: 0x0400C84E RID: 51278
 		public const int OrderRemoveBuffByTagsResponseFieldNumber = 27;
 
-		// Token: 0x0400C324 RID: 49956
+		// Token: 0x0400C84F RID: 51279
 		public const int AiInformationResponseFieldNumber = 28;
 
-		// Token: 0x0400C325 RID: 49957
+		// Token: 0x0400C850 RID: 51280
 		public const int ToughCalcExtraRatioChangeResponseFieldNumber = 29;
 
-		// Token: 0x0400C326 RID: 49958
+		// Token: 0x0400C851 RID: 51281
 		public const int BattleStateChangeResponseFieldNumber = 30;
 
-		// Token: 0x0400C327 RID: 49959
+		// Token: 0x0400C852 RID: 51282
 		public const int AnimationGameplayTagResponseFieldNumber = 31;
 
-		// Token: 0x0400C328 RID: 49960
+		// Token: 0x0400C853 RID: 51283
 		public const int BoneVisibleChangeResponseFieldNumber = 32;
 
-		// Token: 0x0400C329 RID: 49961
+		// Token: 0x0400C854 RID: 51284
 		public const int AiBlackboardsResponseFieldNumber = 33;
 
-		// Token: 0x0400C32A RID: 49962
+		// Token: 0x0400C855 RID: 51285
 		public const int AiBlackboardCdResponseFieldNumber = 34;
 
-		// Token: 0x0400C32B RID: 49963
+		// Token: 0x0400C856 RID: 51286
 		public const int AiHateResponseFieldNumber = 35;
 
-		// Token: 0x0400C32C RID: 49964
+		// Token: 0x0400C857 RID: 51287
 		public const int MonsterBoomResponseFieldNumber = 36;
 
-		// Token: 0x0400C32D RID: 49965
+		// Token: 0x0400C858 RID: 51288
 		public const int CaughtResponseFieldNumber = 37;
 
-		// Token: 0x0400C32E RID: 49966
+		// Token: 0x0400C859 RID: 51289
 		public const int EntityStaticHookMoveResponseFieldNumber = 38;
 
-		// Token: 0x0400C32F RID: 49967
+		// Token: 0x0400C85A RID: 51290
 		public const int ChangeStateResponseFieldNumber = 39;
 
-		// Token: 0x0400C330 RID: 49968
+		// Token: 0x0400C85B RID: 51291
 		public const int ChangeStateConfirmResponseFieldNumber = 40;
 
-		// Token: 0x0400C331 RID: 49969
+		// Token: 0x0400C85C RID: 51292
 		public const int FsmConditionPassResponseFieldNumber = 41;
 
-		// Token: 0x0400C332 RID: 49970
+		// Token: 0x0400C85D RID: 51293
 		public const int BuffStackCountResponseFieldNumber = 42;
 
-		// Token: 0x0400C333 RID: 49971
+		// Token: 0x0400C85E RID: 51294
 		public const int ANStartResponseFieldNumber = 43;
 
-		// Token: 0x0400C334 RID: 49972
+		// Token: 0x0400C85F RID: 51295
 		public const int UseSkillFailResponseFieldNumber = 44;
 
-		// Token: 0x0400C335 RID: 49973
+		// Token: 0x0400C860 RID: 51296
 		public const int EnterViewDirectionResponseFieldNumber = 45;
 
-		// Token: 0x0400C336 RID: 49974
+		// Token: 0x0400C861 RID: 51297
 		public const int ExitViewDirectionResponseFieldNumber = 46;
 
-		// Token: 0x0400C337 RID: 49975
+		// Token: 0x0400C862 RID: 51298
 		public const int PassiveSkillAddResponseFieldNumber = 47;
 
-		// Token: 0x0400C338 RID: 49976
+		// Token: 0x0400C863 RID: 51299
 		public const int InterruptSkillInDelayResponseFieldNumber = 49;
 
-		// Token: 0x0400C339 RID: 49977
+		// Token: 0x0400C864 RID: 51300
 		public const int TriggerExitSkillResponseFieldNumber = 50;
 
-		// Token: 0x0400C33A RID: 49978
+		// Token: 0x0400C865 RID: 51301
 		public const int ActorVisibleResponseFieldNumber = 55;
 
-		// Token: 0x0400C33B RID: 49979
+		// Token: 0x0400C866 RID: 51302
 		public const int BuffEffectResponseFieldNumber = 56;
 
-		// Token: 0x0400C33C RID: 49980
+		// Token: 0x0400C867 RID: 51303
 		public const int FragileChangeResponseFieldNumber = 57;
 
-		// Token: 0x0400C33D RID: 49981
+		// Token: 0x0400C868 RID: 51304
 		public const int RTimeStopResponseFieldNumber = 58;
 
-		// Token: 0x0400C33E RID: 49982
+		// Token: 0x0400C869 RID: 51305
 		public const int DrownEndTeleportResponseFieldNumber = 59;
 
-		// Token: 0x0400C33F RID: 49983
+		// Token: 0x0400C86A RID: 51306
 		public const int MonsterDrownResponseFieldNumber = 60;
 
-		// Token: 0x0400C340 RID: 49984
+		// Token: 0x0400C86B RID: 51307
 		public const int PassiveSkillRemoveResponseFieldNumber = 61;
 
-		// Token: 0x0400C341 RID: 49985
+		// Token: 0x0400C86C RID: 51308
 		public const int RTimeStopInstResponseFieldNumber = 62;
 
-		// Token: 0x0400C342 RID: 49986
+		// Token: 0x0400C86D RID: 51309
 		public const int FsmStateBehaviorResponseFieldNumber = 63;
 
-		// Token: 0x0400C343 RID: 49987
+		// Token: 0x0400C86E RID: 51310
 		public const int FsmPlayMontageResponseFieldNumber = 64;
 
-		// Token: 0x0400C344 RID: 49988
+		// Token: 0x0400C86F RID: 51311
 		public const int RTimeStopAnimResponseFieldNumber = 65;
 
-		// Token: 0x0400C345 RID: 49989
+		// Token: 0x0400C870 RID: 51312
 		public const int SwitchRoleResponseFieldNumber = 66;
 
-		// Token: 0x0400C346 RID: 49990
+		// Token: 0x0400C871 RID: 51313
 		public const int GameplayTagResponseFieldNumber = 67;
 
-		// Token: 0x0400C347 RID: 49991
+		// Token: 0x0400C872 RID: 51314
 		public const int ExecuteQteResponseFieldNumber = 68;
 
-		// Token: 0x0400C348 RID: 49992
+		// Token: 0x0400C873 RID: 51315
 		public const int CombineEntitiesResponseFieldNumber = 69;
 
-		// Token: 0x0400C349 RID: 49993
+		// Token: 0x0400C874 RID: 51316
 		public const int DissolveCombineRelationResponseFieldNumber = 70;
 
-		// Token: 0x0400C34A RID: 49994
+		// Token: 0x0400C875 RID: 51317
 		public const int ClientCurrentRoleReportResponseFieldNumber = 71;
 
-		// Token: 0x0400C34B RID: 49995
+		// Token: 0x0400C876 RID: 51318
 		public const int GaSwitchCommonEnemyProCampResponseFieldNumber = 72;
 
-		// Token: 0x0400C34C RID: 49996
+		// Token: 0x0400C877 RID: 51319
 		public const int ChangeSummonEntityStateResponseFieldNumber = 73;
 
-		// Token: 0x0400C34D RID: 49997
+		// Token: 0x0400C878 RID: 51320
 		public const int CombatDataMaxResponseFieldNumber = 100;
 
-		// Token: 0x0400C34E RID: 49998
+		// Token: 0x0400C879 RID: 51321
 		private object message_;
 
-		// Token: 0x0400C34F RID: 49999
+		// Token: 0x0400C87A RID: 51322
 		private CombatResponseData.MessageOneofCase messageCase_;
 
-		// Token: 0x02001A02 RID: 6658
+		// Token: 0x02001AA4 RID: 6820
 		public enum MessageOneofCase
 		{
-			// Token: 0x0400CBD0 RID: 52176
+			// Token: 0x0400D13A RID: 53562
 			None,
-			// Token: 0x0400CBD1 RID: 52177
+			// Token: 0x0400D13B RID: 53563
 			CreateBulletResponse = 3,
-			// Token: 0x0400CBD2 RID: 52178
+			// Token: 0x0400D13C RID: 53564
 			DestroyBulletResponse,
-			// Token: 0x0400CBD3 RID: 52179
+			// Token: 0x0400D13D RID: 53565
 			DamageExecuteResponse,
-			// Token: 0x0400CBD4 RID: 52180
+			// Token: 0x0400D13E RID: 53566
 			ApplyGameplayEffectResponse,
-			// Token: 0x0400CBD5 RID: 52181
+			// Token: 0x0400D13F RID: 53567
 			RemoveGameplayEffectResponse,
-			// Token: 0x0400CBD6 RID: 52182
+			// Token: 0x0400D140 RID: 53568
 			HitResponse,
-			// Token: 0x0400CBD7 RID: 52183
+			// Token: 0x0400D141 RID: 53569
 			HitEndResponse,
-			// Token: 0x0400CBD8 RID: 52184
+			// Token: 0x0400D142 RID: 53570
 			SkillResponse,
-			// Token: 0x0400CBD9 RID: 52185
+			// Token: 0x0400D143 RID: 53571
 			UseSkillResponse,
-			// Token: 0x0400CBDA RID: 52186
+			// Token: 0x0400D144 RID: 53572
 			EndSkillResponse,
-			// Token: 0x0400CBDB RID: 52187
+			// Token: 0x0400D145 RID: 53573
 			PartUpdateResponse,
-			// Token: 0x0400CBDC RID: 52188
+			// Token: 0x0400D146 RID: 53574
 			MaterialResponse,
-			// Token: 0x0400CBDD RID: 52189
+			// Token: 0x0400D147 RID: 53575
 			GameplayCueResponse,
-			// Token: 0x0400CBDE RID: 52190
+			// Token: 0x0400D148 RID: 53576
 			EntityIsVisibleResponse,
-			// Token: 0x0400CBDF RID: 52191
+			// Token: 0x0400D149 RID: 53577
 			SwitchCharacterStateResponse,
-			// Token: 0x0400CBE0 RID: 52192
+			// Token: 0x0400D14A RID: 53578
 			LogicStateInitResponse,
-			// Token: 0x0400CBE1 RID: 52193
+			// Token: 0x0400D14B RID: 53579
 			SwitchLogicStateResponse,
-			// Token: 0x0400CBE2 RID: 52194
+			// Token: 0x0400D14C RID: 53580
 			AnimationStateChangedResponse,
-			// Token: 0x0400CBE3 RID: 52195
+			// Token: 0x0400D14D RID: 53581
 			AnimationStateInitResponse,
-			// Token: 0x0400CBE4 RID: 52196
+			// Token: 0x0400D14E RID: 53582
 			ModifyBulletParamsResponse,
-			// Token: 0x0400CBE5 RID: 52197
+			// Token: 0x0400D14F RID: 53583
 			DrownResponse,
-			// Token: 0x0400CBE6 RID: 52198
+			// Token: 0x0400D150 RID: 53584
 			OrderApplyBuffResponse,
-			// Token: 0x0400CBE7 RID: 52199
+			// Token: 0x0400D151 RID: 53585
 			OrderRemoveBuffResponse,
-			// Token: 0x0400CBE8 RID: 52200
+			// Token: 0x0400D152 RID: 53586
 			ActivateBuffResponse,
-			// Token: 0x0400CBE9 RID: 52201
+			// Token: 0x0400D153 RID: 53587
 			OrderRemoveBuffByTagsResponse,
-			// Token: 0x0400CBEA RID: 52202
+			// Token: 0x0400D154 RID: 53588
 			AiInformationResponse,
-			// Token: 0x0400CBEB RID: 52203
+			// Token: 0x0400D155 RID: 53589
 			ToughCalcExtraRatioChangeResponse,
-			// Token: 0x0400CBEC RID: 52204
+			// Token: 0x0400D156 RID: 53590
 			BattleStateChangeResponse,
-			// Token: 0x0400CBED RID: 52205
+			// Token: 0x0400D157 RID: 53591
 			AnimationGameplayTagResponse,
-			// Token: 0x0400CBEE RID: 52206
+			// Token: 0x0400D158 RID: 53592
 			BoneVisibleChangeResponse,
-			// Token: 0x0400CBEF RID: 52207
+			// Token: 0x0400D159 RID: 53593
 			AiBlackboardsResponse,
-			// Token: 0x0400CBF0 RID: 52208
+			// Token: 0x0400D15A RID: 53594
 			AiBlackboardCdResponse,
-			// Token: 0x0400CBF1 RID: 52209
+			// Token: 0x0400D15B RID: 53595
 			AiHateResponse,
-			// Token: 0x0400CBF2 RID: 52210
+			// Token: 0x0400D15C RID: 53596
 			MonsterBoomResponse,
-			// Token: 0x0400CBF3 RID: 52211
+			// Token: 0x0400D15D RID: 53597
 			CaughtResponse,
-			// Token: 0x0400CBF4 RID: 52212
+			// Token: 0x0400D15E RID: 53598
 			EntityStaticHookMoveResponse,
-			// Token: 0x0400CBF5 RID: 52213
+			// Token: 0x0400D15F RID: 53599
 			ChangeStateResponse,
-			// Token: 0x0400CBF6 RID: 52214
+			// Token: 0x0400D160 RID: 53600
 			ChangeStateConfirmResponse,
-			// Token: 0x0400CBF7 RID: 52215
+			// Token: 0x0400D161 RID: 53601
 			FsmConditionPassResponse,
-			// Token: 0x0400CBF8 RID: 52216
+			// Token: 0x0400D162 RID: 53602
 			BuffStackCountResponse,
-			// Token: 0x0400CBF9 RID: 52217
+			// Token: 0x0400D163 RID: 53603
 			ANStartResponse,
-			// Token: 0x0400CBFA RID: 52218
+			// Token: 0x0400D164 RID: 53604
 			UseSkillFailResponse,
-			// Token: 0x0400CBFB RID: 52219
+			// Token: 0x0400D165 RID: 53605
 			EnterViewDirectionResponse,
-			// Token: 0x0400CBFC RID: 52220
+			// Token: 0x0400D166 RID: 53606
 			ExitViewDirectionResponse,
-			// Token: 0x0400CBFD RID: 52221
+			// Token: 0x0400D167 RID: 53607
 			PassiveSkillAddResponse,
-			// Token: 0x0400CBFE RID: 52222
+			// Token: 0x0400D168 RID: 53608
 			InterruptSkillInDelayResponse = 49,
-			// Token: 0x0400CBFF RID: 52223
+			// Token: 0x0400D169 RID: 53609
 			TriggerExitSkillResponse,
-			// Token: 0x0400CC00 RID: 52224
+			// Token: 0x0400D16A RID: 53610
 			ActorVisibleResponse = 55,
-			// Token: 0x0400CC01 RID: 52225
+			// Token: 0x0400D16B RID: 53611
 			BuffEffectResponse,
-			// Token: 0x0400CC02 RID: 52226
+			// Token: 0x0400D16C RID: 53612
 			FragileChangeResponse,
-			// Token: 0x0400CC03 RID: 52227
+			// Token: 0x0400D16D RID: 53613
 			RTimeStopResponse,
-			// Token: 0x0400CC04 RID: 52228
+			// Token: 0x0400D16E RID: 53614
 			DrownEndTeleportResponse,
-			// Token: 0x0400CC05 RID: 52229
+			// Token: 0x0400D16F RID: 53615
 			MonsterDrownResponse,
-			// Token: 0x0400CC06 RID: 52230
+			// Token: 0x0400D170 RID: 53616
 			PassiveSkillRemoveResponse,
-			// Token: 0x0400CC07 RID: 52231
+			// Token: 0x0400D171 RID: 53617
 			RTimeStopInstResponse,
-			// Token: 0x0400CC08 RID: 52232
+			// Token: 0x0400D172 RID: 53618
 			FsmStateBehaviorResponse,
-			// Token: 0x0400CC09 RID: 52233
+			// Token: 0x0400D173 RID: 53619
 			FsmPlayMontageResponse,
-			// Token: 0x0400CC0A RID: 52234
+			// Token: 0x0400D174 RID: 53620
 			RTimeStopAnimResponse,
-			// Token: 0x0400CC0B RID: 52235
+			// Token: 0x0400D175 RID: 53621
 			SwitchRoleResponse,
-			// Token: 0x0400CC0C RID: 52236
+			// Token: 0x0400D176 RID: 53622
 			GameplayTagResponse,
-			// Token: 0x0400CC0D RID: 52237
+			// Token: 0x0400D177 RID: 53623
 			ExecuteQteResponse,
-			// Token: 0x0400CC0E RID: 52238
+			// Token: 0x0400D178 RID: 53624
 			CombineEntitiesResponse,
-			// Token: 0x0400CC0F RID: 52239
+			// Token: 0x0400D179 RID: 53625
 			DissolveCombineRelationResponse,
-			// Token: 0x0400CC10 RID: 52240
+			// Token: 0x0400D17A RID: 53626
 			ClientCurrentRoleReportResponse,
-			// Token: 0x0400CC11 RID: 52241
+			// Token: 0x0400D17B RID: 53627
 			GaSwitchCommonEnemyProCampResponse,
-			// Token: 0x0400CC12 RID: 52242
+			// Token: 0x0400D17C RID: 53628
 			ChangeSummonEntityStateResponse,
-			// Token: 0x0400CC13 RID: 52243
+			// Token: 0x0400D17D RID: 53629
 			CombatDataMaxResponse = 100
 		}
 	}

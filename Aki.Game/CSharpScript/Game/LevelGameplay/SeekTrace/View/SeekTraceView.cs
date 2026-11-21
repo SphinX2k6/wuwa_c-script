@@ -10,18 +10,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 {
-	// Token: 0x02006A68 RID: 27240
+	// Token: 0x02005BC5 RID: 23493
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SeekTraceView : UiTickViewBase
 	{
-		// Token: 0x06043B98 RID: 277400 RVA: 0x01093D83 File Offset: 0x01091F83
+		// Token: 0x06039BE6 RID: 236518 RVA: 0x010385B7 File Offset: 0x010367B7
 		[NullableContext(1)]
 		public SeekTraceView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06043B99 RID: 277401 RVA: 0x01093D8C File Offset: 0x01091F8C
+		// Token: 0x06039BE7 RID: 236519 RVA: 0x010385C0 File Offset: 0x010367C0
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			};
 		}
 
-		// Token: 0x06043B9A RID: 277402 RVA: 0x01093E38 File Offset: 0x01092038
+		// Token: 0x06039BE8 RID: 236520 RVA: 0x0103866C File Offset: 0x0103686C
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnCloseRewardView, new Action(this.OnCloseRewardView));
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			EventSystem.Instance.Add(EEventName.SeekTraceResetItemInput, new Action(this.ResetItemInput));
 		}
 
-		// Token: 0x06043B9B RID: 277403 RVA: 0x01093EF0 File Offset: 0x010920F0
+		// Token: 0x06039BE9 RID: 236521 RVA: 0x01038724 File Offset: 0x01036924
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnCloseRewardView, new Action(this.OnCloseRewardView));
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			EventSystem.Instance.Remove(EEventName.SeekTraceResetItemInput, new Action(this.ResetItemInput));
 		}
 
-		// Token: 0x06043B9C RID: 277404 RVA: 0x01093FA5 File Offset: 0x010921A5
+		// Token: 0x06039BEA RID: 236522 RVA: 0x010387D9 File Offset: 0x010369D9
 		private void OnCloseRewardView()
 		{
 			if (this.WaitRewardViewClose)
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			}
 		}
 
-		// Token: 0x06043B9D RID: 277405 RVA: 0x01093FB6 File Offset: 0x010921B6
+		// Token: 0x06039BEB RID: 236523 RVA: 0x010387EA File Offset: 0x010369EA
 		private void OnInputControllerChange(EInputControllerType last, EInputControllerType now)
 		{
 			SeekTraceContentPanel contentPanel = this.ContentPanel;
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			contentPanel.OnInputControllerChange();
 		}
 
-		// Token: 0x06043B9E RID: 277406 RVA: 0x01093FC8 File Offset: 0x010921C8
+		// Token: 0x06039BEC RID: 236524 RVA: 0x010387FC File Offset: 0x010369FC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SeekTraceView.<OnBeforeStartAsync>d__15 <OnBeforeStartAsync>d__;
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06043B9F RID: 277407 RVA: 0x0109400C File Offset: 0x0109220C
+		// Token: 0x06039BED RID: 236525 RVA: 0x01038840 File Offset: 0x01036A40
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new UiSequencePlayer(this.RootItem);
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			joystickInput.RegisterMovePress(new Action<ESeekTraceMoveDirection>(this.OnMovePress));
 		}
 
-		// Token: 0x06043BA0 RID: 277408 RVA: 0x0109406E File Offset: 0x0109226E
+		// Token: 0x06039BEE RID: 236526 RVA: 0x010388A2 File Offset: 0x01036AA2
 		protected override void OnBeforeDestroy()
 		{
 			UiSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			LineCrossModel.Instance.CurrentChallengeFinishState = false;
 		}
 
-		// Token: 0x06043BA1 RID: 277409 RVA: 0x0109409C File Offset: 0x0109229C
+		// Token: 0x06039BEF RID: 236527 RVA: 0x010388D0 File Offset: 0x01036AD0
 		[NullableContext(1)]
 		private void OnSequenceEnd(string sequenceName)
 		{
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			}
 		}
 
-		// Token: 0x06043BA2 RID: 277410 RVA: 0x0109417B File Offset: 0x0109237B
+		// Token: 0x06039BF0 RID: 236528 RVA: 0x010389AF File Offset: 0x01036BAF
 		protected override void OnTick(float delta)
 		{
 			SeekTraceJoystickInput joystickInput = this.JoystickInput;
@@ -173,7 +173,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			contentPanel.UpdateKeyBoardSelectFrame();
 		}
 
-		// Token: 0x06043BA3 RID: 277411 RVA: 0x010941A0 File Offset: 0x010923A0
+		// Token: 0x06039BF1 RID: 236529 RVA: 0x010389D4 File Offset: 0x01036BD4
 		private void OnResetClick()
 		{
 			if (!SeekTraceModel.Instance.IsGameFinish)
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			}
 		}
 
-		// Token: 0x06043BA4 RID: 277412 RVA: 0x010941BC File Offset: 0x010923BC
+		// Token: 0x06039BF2 RID: 236530 RVA: 0x010389F0 File Offset: 0x01036BF0
 		private void OnCloseClick()
 		{
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.SeekTraceExit);
@@ -194,14 +194,14 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x06043BA5 RID: 277413 RVA: 0x010941F8 File Offset: 0x010923F8
+		// Token: 0x06039BF3 RID: 236531 RVA: 0x01038A2C File Offset: 0x01036C2C
 		private void OnSelectedItem()
 		{
 			base.GetItem(0).SetUIActive(false);
 			base.GetButton(3).RootUIComp.Get().SetUIActive(false);
 		}
 
-		// Token: 0x06043BA6 RID: 277414 RVA: 0x0109422C File Offset: 0x0109242C
+		// Token: 0x06039BF4 RID: 236532 RVA: 0x01038A60 File Offset: 0x01036C60
 		private void OnPlacedItem()
 		{
 			base.GetItem(0).SetUIActive(true);
@@ -221,7 +221,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			this.ContentPanel.OnSeekTraceSucceed();
 		}
 
-		// Token: 0x06043BA7 RID: 277415 RVA: 0x010942A8 File Offset: 0x010924A8
+		// Token: 0x06039BF5 RID: 236533 RVA: 0x01038ADC File Offset: 0x01036CDC
 		[NullableContext(1)]
 		private void ResetSeekTrace(string tipsId)
 		{
@@ -259,13 +259,13 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			});
 		}
 
-		// Token: 0x06043BA8 RID: 277416 RVA: 0x010942FA File Offset: 0x010924FA
+		// Token: 0x06039BF6 RID: 236534 RVA: 0x01038B2E File Offset: 0x01036D2E
 		private void PlayRefreshStepText(int value)
 		{
 			base.GetText(2).SetText(value.ToString(), true);
 		}
 
-		// Token: 0x06043BA9 RID: 277417 RVA: 0x01094310 File Offset: 0x01092510
+		// Token: 0x06039BF7 RID: 236535 RVA: 0x01038B44 File Offset: 0x01036D44
 		private void PlayRefreshStepTextComplete()
 		{
 			if (this.Tweener != null)
@@ -277,13 +277,13 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			DelegateUtils.ReleaseManualReleaseDelegate(new Action<int>(this.PlayRefreshStepText));
 		}
 
-		// Token: 0x06043BAA RID: 277418 RVA: 0x0109434E File Offset: 0x0109254E
+		// Token: 0x06039BF8 RID: 236536 RVA: 0x01038B82 File Offset: 0x01036D82
 		private void RefreshStepText()
 		{
 			base.GetText(2).SetText(SeekTraceModel.Instance.StepLimit.ToString(), true);
 		}
 
-		// Token: 0x06043BAB RID: 277419 RVA: 0x0109436C File Offset: 0x0109256C
+		// Token: 0x06039BF9 RID: 236537 RVA: 0x01038BA0 File Offset: 0x01036DA0
 		private void MoveAxisInput(ESeekTraceMoveDirection direction, float value)
 		{
 			SeekTraceJoystickInput joystickInput = this.JoystickInput;
@@ -294,7 +294,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			joystickInput.MoveAxisInput(direction, (double)value);
 		}
 
-		// Token: 0x06043BAC RID: 277420 RVA: 0x01094381 File Offset: 0x01092581
+		// Token: 0x06039BFA RID: 236538 RVA: 0x01038BB5 File Offset: 0x01036DB5
 		private void MoveActionInput(ESeekTraceMoveDirection direction, bool isPress)
 		{
 			SeekTraceJoystickInput joystickInput = this.JoystickInput;
@@ -305,7 +305,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			joystickInput.MoveActionInput(direction, isPress);
 		}
 
-		// Token: 0x06043BAD RID: 277421 RVA: 0x01094395 File Offset: 0x01092595
+		// Token: 0x06039BFB RID: 236539 RVA: 0x01038BC9 File Offset: 0x01036DC9
 		private void SelectItemInput()
 		{
 			SeekTraceContentPanel contentPanel = this.ContentPanel;
@@ -316,7 +316,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			contentPanel.GamePadSelectItem();
 		}
 
-		// Token: 0x06043BAE RID: 277422 RVA: 0x010943A7 File Offset: 0x010925A7
+		// Token: 0x06039BFC RID: 236540 RVA: 0x01038BDB File Offset: 0x01036DDB
 		private void ResetItemInput()
 		{
 			SeekTraceContentPanel contentPanel = this.ContentPanel;
@@ -327,7 +327,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			contentPanel.GamePadResetItem();
 		}
 
-		// Token: 0x06043BAF RID: 277423 RVA: 0x010943BC File Offset: 0x010925BC
+		// Token: 0x06039BFD RID: 236541 RVA: 0x01038BF0 File Offset: 0x01036DF0
 		private void OnMovePress(ESeekTraceMoveDirection direction)
 		{
 			int offsetX = 0;
@@ -355,31 +355,31 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace.View
 			contentPanel.GamePadMovePosition(offsetX, offsetY);
 		}
 
-		// Token: 0x04023621 RID: 144929
+		// Token: 0x0401E813 RID: 124947
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04023622 RID: 144930
+		// Token: 0x0401E814 RID: 124948
 		private SeekTraceContentPanel ContentPanel;
 
-		// Token: 0x04023623 RID: 144931
+		// Token: 0x0401E815 RID: 124949
 		private SeekTraceClawItem ClawItem;
 
-		// Token: 0x04023624 RID: 144932
+		// Token: 0x0401E816 RID: 124950
 		private bool IsReseting;
 
-		// Token: 0x04023625 RID: 144933
+		// Token: 0x0401E817 RID: 124951
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x04023626 RID: 144934
+		// Token: 0x0401E818 RID: 124952
 		private ULTweener Tweener;
 
-		// Token: 0x04023627 RID: 144935
+		// Token: 0x0401E819 RID: 124953
 		private UCurveFloat ResetCurve;
 
-		// Token: 0x04023628 RID: 144936
+		// Token: 0x0401E81A RID: 124954
 		private SeekTraceJoystickInput JoystickInput;
 
-		// Token: 0x04023629 RID: 144937
+		// Token: 0x0401E81B RID: 124955
 		private bool WaitRewardViewClose;
 	}
 }

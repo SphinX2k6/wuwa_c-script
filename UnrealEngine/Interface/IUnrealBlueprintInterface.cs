@@ -2,10 +2,10 @@
 
 namespace UnrealEngine.Interface
 {
-	// Token: 0x02002B14 RID: 11028
+	// Token: 0x020008C4 RID: 2244
 	public interface IUnrealBlueprintInterface : IUnrealInterface, IUnrealObject
 	{
-		// Token: 0x060284D6 RID: 165078 RVA: 0x003D52CD File Offset: 0x003D34CD
+		// Token: 0x0600BE90 RID: 48784 RVA: 0x00130629 File Offset: 0x0012E829
 		int InterfaceOffset()
 		{
 			return 0;

@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020012FF RID: 4863
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200144F RID: 5199
 	public class IConditionReturnPos
 	{
-		// Token: 0x06006F0B RID: 28427 RVA: 0x0010C371 File Offset: 0x0010A571
+		// Token: 0x060075AB RID: 30123 RVA: 0x0011A8DD File Offset: 0x00118ADD
 		public static IConditionReturnPos Create(IConditionReturnPos? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170022E0 RID: 8928
-		// (get) Token: 0x06006F0C RID: 28428 RVA: 0x0010C390 File Offset: 0x0010A590
+		// Token: 0x170024AF RID: 9391
+		// (get) Token: 0x060075AC RID: 30124 RVA: 0x0011A8FC File Offset: 0x00118AFC
 		public virtual IConditionGroup Condition
 		{
 			get
@@ -39,8 +37,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022E1 RID: 8929
-		// (get) Token: 0x06006F0D RID: 28429 RVA: 0x0010C3C4 File Offset: 0x0010A5C4
+		// Token: 0x170024B0 RID: 9392
+		// (get) Token: 0x060075AD RID: 30125 RVA: 0x0011A930 File Offset: 0x00118B30
 		public virtual IFastReturnPosBase Pos
 		{
 			get
@@ -55,20 +53,20 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04003FB9 RID: 16313
+		// Token: 0x04004335 RID: 17205
 		private IConditionReturnPos Instance;
 
-		// Token: 0x04003FBA RID: 16314
+		// Token: 0x04004336 RID: 17206
 		[Nullable(2)]
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x04003FBB RID: 16315
+		// Token: 0x04004337 RID: 17207
 		private bool _ConditionInited;
 
-		// Token: 0x04003FBC RID: 16316
+		// Token: 0x04004338 RID: 17208
 		private IFastReturnPosBase _PosCache;
 
-		// Token: 0x04003FBD RID: 16317
+		// Token: 0x04004339 RID: 17209
 		private bool _PosInited;
 	}
 }

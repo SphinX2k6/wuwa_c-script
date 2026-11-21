@@ -8,7 +8,7 @@ using CSharpScript.Game.Module.Util;
 using FilterDefine;
 using UnrealEngine;
 
-// Token: 0x02001FD7 RID: 8151
+// Token: 0x020014AA RID: 5290
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -17,7 +17,7 @@ using UnrealEngine;
 })]
 public class SelectGroup : GridProxyAbstract<InventoryDefine.ISelectGroupData>
 {
-	// Token: 0x0600FF72 RID: 65394 RVA: 0x003E34BC File Offset: 0x003E16BC
+	// Token: 0x0600D3DA RID: 54234 RVA: 0x003EFAC0 File Offset: 0x003EDCC0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -44,13 +44,13 @@ public class SelectGroup : GridProxyAbstract<InventoryDefine.ISelectGroupData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600FF73 RID: 65395 RVA: 0x003E35C5 File Offset: 0x003E17C5
+	// Token: 0x0600D3DB RID: 54235 RVA: 0x003EFBC9 File Offset: 0x003EDDC9
 	protected override void OnStart()
 	{
 		this.Layout = new GenericLayout<SelectItem, InventoryDefine.ISelectItemData>(base.GetLayoutBase(3), new Func<SelectItem>(this.InitSelectItem), base.GetItem(4).GetOwner() as AUIBaseActor, false, true);
 	}
 
-	// Token: 0x0600FF74 RID: 65396 RVA: 0x003E35F8 File Offset: 0x003E17F8
+	// Token: 0x0600D3DC RID: 54236 RVA: 0x003EFBFC File Offset: 0x003EDDFC
 	private SelectItem InitSelectItem()
 	{
 		return new SelectItem
@@ -60,7 +60,7 @@ public class SelectGroup : GridProxyAbstract<InventoryDefine.ISelectGroupData>
 		};
 	}
 
-	// Token: 0x0600FF75 RID: 65397 RVA: 0x003E3624 File Offset: 0x003E1824
+	// Token: 0x0600D3DD RID: 54237 RVA: 0x003EFC28 File Offset: 0x003EDE28
 	public override void Refresh(InventoryDefine.ISelectGroupData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -74,7 +74,7 @@ public class SelectGroup : GridProxyAbstract<InventoryDefine.ISelectGroupData>
 		this.Layout.RefreshByData(this.ItemDataList, null, false);
 	}
 
-	// Token: 0x0600FF76 RID: 65398 RVA: 0x003E36B8 File Offset: 0x003E18B8
+	// Token: 0x0600D3DE RID: 54238 RVA: 0x003EFCBC File Offset: 0x003EDEBC
 	private void InitAllData()
 	{
 		List<InventoryDefine.ISelectItemData> list = new List<InventoryDefine.ISelectItemData>();
@@ -109,7 +109,7 @@ public class SelectGroup : GridProxyAbstract<InventoryDefine.ISelectGroupData>
 		this.ItemDataList = list;
 	}
 
-	// Token: 0x0600FF77 RID: 65399 RVA: 0x003E3808 File Offset: 0x003E1A08
+	// Token: 0x0600D3DF RID: 54239 RVA: 0x003EFE0C File Offset: 0x003EE00C
 	public void RefreshToggleAll()
 	{
 		int filterId = this.Data.FilterId;
@@ -121,7 +121,7 @@ public class SelectGroup : GridProxyAbstract<InventoryDefine.ISelectGroupData>
 		base.GetExtendToggle(2).SetToggleState(state, false, false, false);
 	}
 
-	// Token: 0x0600FF78 RID: 65400 RVA: 0x003E3870 File Offset: 0x003E1A70
+	// Token: 0x0600D3E0 RID: 54240 RVA: 0x003EFE74 File Offset: 0x003EE074
 	public void RefreshGroupItem()
 	{
 		foreach (KeyValuePair<object, SelectItem> keyValuePair in this.Layout.GetLayoutItemMap())
@@ -130,7 +130,7 @@ public class SelectGroup : GridProxyAbstract<InventoryDefine.ISelectGroupData>
 		}
 	}
 
-	// Token: 0x0600FF79 RID: 65401 RVA: 0x003E38D0 File Offset: 0x003E1AD0
+	// Token: 0x0600D3E1 RID: 54241 RVA: 0x003EFED4 File Offset: 0x003EE0D4
 	public void ResetSelect()
 	{
 		this.SelectValueMap.Clear();
@@ -141,13 +141,13 @@ public class SelectGroup : GridProxyAbstract<InventoryDefine.ISelectGroupData>
 		this.RefreshToggleAll();
 	}
 
-	// Token: 0x0600FF7A RID: 65402 RVA: 0x003E3940 File Offset: 0x003E1B40
+	// Token: 0x0600D3E2 RID: 54242 RVA: 0x003EFF44 File Offset: 0x003EE144
 	public bool GetSelectState(int value)
 	{
 		return this.SelectValueMap.ContainsKey(value);
 	}
 
-	// Token: 0x0600FF7B RID: 65403 RVA: 0x003E3950 File Offset: 0x003E1B50
+	// Token: 0x0600D3E3 RID: 54243 RVA: 0x003EFF54 File Offset: 0x003EE154
 	public int[] GetSelectValueList()
 	{
 		int[] array = new int[this.SelectValueMap.Count];
@@ -159,7 +159,7 @@ public class SelectGroup : GridProxyAbstract<InventoryDefine.ISelectGroupData>
 		return array;
 	}
 
-	// Token: 0x0600FF7C RID: 65404 RVA: 0x003E39C0 File Offset: 0x003E1BC0
+	// Token: 0x0600D3E4 RID: 54244 RVA: 0x003EFFC4 File Offset: 0x003EE1C4
 	private void OnClickedAll(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -186,7 +186,7 @@ public class SelectGroup : GridProxyAbstract<InventoryDefine.ISelectGroupData>
 		this.RefreshGroupItem();
 	}
 
-	// Token: 0x0600FF7D RID: 65405 RVA: 0x003E3A4C File Offset: 0x003E1C4C
+	// Token: 0x0600D3E5 RID: 54245 RVA: 0x003F0050 File Offset: 0x003EE250
 	private void OnClickedItem(EToggleState state, int value)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -203,23 +203,23 @@ public class SelectGroup : GridProxyAbstract<InventoryDefine.ISelectGroupData>
 		this.RefreshToggleAll();
 	}
 
-	// Token: 0x0600FF7E RID: 65406 RVA: 0x003E3A82 File Offset: 0x003E1C82
+	// Token: 0x0600D3E6 RID: 54246 RVA: 0x003F0086 File Offset: 0x003EE286
 	public override object GetKey(InventoryDefine.ISelectGroupData data, int displayIndex)
 	{
 		return this.Data.FilterRuleId;
 	}
 
-	// Token: 0x0600FF7F RID: 65407 RVA: 0x003E3A94 File Offset: 0x003E1C94
+	// Token: 0x0600D3E7 RID: 54247 RVA: 0x003F0098 File Offset: 0x003EE298
 	public int GetRuleId()
 	{
 		return this.Data.FilterRuleId;
 	}
 
-	// Token: 0x04007638 RID: 30264
+	// Token: 0x04007721 RID: 30497
 	[Nullable(2)]
 	private InventoryDefine.ISelectGroupData Data;
 
-	// Token: 0x04007639 RID: 30265
+	// Token: 0x04007722 RID: 30498
 	[Nullable(new byte[]
 	{
 		2,
@@ -228,25 +228,25 @@ public class SelectGroup : GridProxyAbstract<InventoryDefine.ISelectGroupData>
 	})]
 	private GenericLayout<SelectItem, InventoryDefine.ISelectItemData> Layout;
 
-	// Token: 0x0400763A RID: 30266
+	// Token: 0x04007723 RID: 30499
 	private readonly Dictionary<int, int> SelectValueMap = new Dictionary<int, int>();
 
-	// Token: 0x0400763B RID: 30267
+	// Token: 0x04007724 RID: 30500
 	private List<InventoryDefine.ISelectItemData> ItemDataList = new List<InventoryDefine.ISelectItemData>();
 
-	// Token: 0x020085EE RID: 34286
+	// Token: 0x02007775 RID: 30581
 	[NullableContext(0)]
 	private enum ECompDefine
 	{
-		// Token: 0x0402B97B RID: 178555
+		// Token: 0x04026C8A RID: 158858
 		Title,
-		// Token: 0x0402B97C RID: 178556
+		// Token: 0x04026C8B RID: 158859
 		SelectAllToggleRootItem,
-		// Token: 0x0402B97D RID: 178557
+		// Token: 0x04026C8C RID: 158860
 		SelectAllToggle,
-		// Token: 0x0402B97E RID: 178558
+		// Token: 0x04026C8D RID: 158861
 		Layout,
-		// Token: 0x0402B97F RID: 178559
+		// Token: 0x04026C8E RID: 158862
 		FilterItem
 	}
 }

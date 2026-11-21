@@ -4,12 +4,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.Common.GameplayAction.ActionImplement
 {
-	// Token: 0x02006F30 RID: 28464
+	// Token: 0x020060B1 RID: 24753
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class NpcPlayMontageAction : GameplayAction
 	{
-		// Token: 0x06045403 RID: 283651 RVA: 0x0112272D File Offset: 0x0112092D
+		// Token: 0x0603B5B1 RID: 243121 RVA: 0x010CC6D9 File Offset: 0x010CA8D9
 		[NullableContext(1)]
 		public void Init(EntityHandle entityHandle, UAnimMontage montage, bool isLoop, bool needInterrupt = true)
 		{
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.LevelGamePlay.Common.GameplayAction.ActionImplement
 			this.NeedInterrupt = needInterrupt;
 		}
 
-		// Token: 0x06045404 RID: 283652 RVA: 0x0112274C File Offset: 0x0112094C
+		// Token: 0x0603B5B2 RID: 243122 RVA: 0x010CC6F8 File Offset: 0x010CA8F8
 		protected override void OnExecuteAction()
 		{
 			UAnimMontage montage = this.Montage;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.LevelGamePlay.Common.GameplayAction.ActionImplement
 			}), false);
 		}
 
-		// Token: 0x06045405 RID: 283653 RVA: 0x011227DC File Offset: 0x011209DC
+		// Token: 0x0603B5B3 RID: 243123 RVA: 0x010CC788 File Offset: 0x010CA988
 		protected override void OnInterruptAction()
 		{
 			if (!this.NeedInterrupt)
@@ -84,13 +84,13 @@ namespace CSharpScript.Game.LevelGamePlay.Common.GameplayAction.ActionImplement
 			}, null, null);
 		}
 
-		// Token: 0x040241AF RID: 147887
+		// Token: 0x0401F464 RID: 128100
 		private EntityHandle EntityHandle;
 
-		// Token: 0x040241B0 RID: 147888
+		// Token: 0x0401F465 RID: 128101
 		private UAnimMontage Montage;
 
-		// Token: 0x040241B1 RID: 147889
+		// Token: 0x0401F466 RID: 128102
 		private bool NeedInterrupt = true;
 	}
 }

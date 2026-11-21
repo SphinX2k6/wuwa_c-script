@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C56 RID: 3158
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D2F RID: 3375
 	public class ITimePatrolSpline : ISplineType
 	{
-		// Token: 0x0600485F RID: 18527 RVA: 0x000B5E96 File Offset: 0x000B4096
+		// Token: 0x06004CE4 RID: 19684 RVA: 0x000C048A File Offset: 0x000BE68A
 		public static ITimePatrolSpline Create(ITimePatrolSpline? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001570 RID: 5488
-		// (get) Token: 0x06004860 RID: 18528 RVA: 0x000B5EB5 File Offset: 0x000B40B5
+		// Token: 0x17001681 RID: 5761
+		// (get) Token: 0x06004CE5 RID: 19685 RVA: 0x000C04A9 File Offset: 0x000BE6A9
 		public override ESplineType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001571 RID: 5489
-		// (get) Token: 0x06004861 RID: 18529 RVA: 0x000B5EC4 File Offset: 0x000B40C4
+		// Token: 0x17001682 RID: 5762
+		// (get) Token: 0x06004CE6 RID: 19686 RVA: 0x000C04B8 File Offset: 0x000BE6B8
 		public virtual List<ITimePatrolSplinePoint> Points
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400293D RID: 10557
+		// Token: 0x04002B9E RID: 11166
 		private ITimePatrolSpline Instance;
 
-		// Token: 0x0400293E RID: 10558
+		// Token: 0x04002B9F RID: 11167
 		private List<ITimePatrolSplinePoint> _PointsCache;
 
-		// Token: 0x0400293F RID: 10559
+		// Token: 0x04002BA0 RID: 11168
 		private bool _PointsInited;
 	}
 }

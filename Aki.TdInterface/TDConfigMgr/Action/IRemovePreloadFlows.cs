@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D96 RID: 7574
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001FAB RID: 8107
 	public class IRemovePreloadFlows : IRemovePreloadResourceCharacterType
 	{
-		// Token: 0x0600A257 RID: 41559 RVA: 0x00171470 File Offset: 0x0016F670
+		// Token: 0x0600AC57 RID: 44119 RVA: 0x00185A98 File Offset: 0x00183C98
 		private IRemovePreloadFlows_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A258 RID: 41560 RVA: 0x001714A8 File Offset: 0x0016F6A8
+		// Token: 0x0600AC58 RID: 44120 RVA: 0x00185AD0 File Offset: 0x00183CD0
 		public static IRemovePreloadFlows Create([Nullable(2)] IRemovePreloadFlows instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A259 RID: 41561 RVA: 0x001714BB File Offset: 0x0016F6BB
+		// Token: 0x0600AC59 RID: 44121 RVA: 0x00185AE3 File Offset: 0x00183CE3
 		public static IRemovePreloadFlows CreateFromSetValue([Nullable(2)] IRemovePreloadFlows_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A25A RID: 41562 RVA: 0x001714CE File Offset: 0x0016F6CE
+		// Token: 0x0600AC5A RID: 44122 RVA: 0x00185AF6 File Offset: 0x00183CF6
 		public new IRemovePreloadFlows_SetValue ToSetValue()
 		{
 			return new IRemovePreloadFlows_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003221 RID: 12833
-		// (get) Token: 0x0600A25B RID: 41563 RVA: 0x001714ED File Offset: 0x0016F6ED
-		// (set) Token: 0x0600A25C RID: 41564 RVA: 0x00171518 File Offset: 0x0016F718
+		// Token: 0x170034B9 RID: 13497
+		// (get) Token: 0x0600AC5B RID: 44123 RVA: 0x00185B15 File Offset: 0x00183D15
+		// (set) Token: 0x0600AC5C RID: 44124 RVA: 0x00185B40 File Offset: 0x00183D40
 		public override ERemovePreloadResourceObjectType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003222 RID: 12834
-		// (get) Token: 0x0600A25D RID: 41565 RVA: 0x00171528 File Offset: 0x0016F728
-		// (set) Token: 0x0600A25E RID: 41566 RVA: 0x00171589 File Offset: 0x0016F789
+		// Token: 0x170034BA RID: 13498
+		// (get) Token: 0x0600AC5D RID: 44125 RVA: 0x00185B50 File Offset: 0x00183D50
+		// (set) Token: 0x0600AC5E RID: 44126 RVA: 0x00185BB1 File Offset: 0x00183DB1
 		public virtual PlayFlow FlowId
 		{
 			get
@@ -113,18 +111,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006184 RID: 24964
+		// Token: 0x04006708 RID: 26376
 		[Nullable(2)]
 		protected new IRemovePreloadFlows FbInstance;
 
-		// Token: 0x04006185 RID: 24965
+		// Token: 0x04006709 RID: 26377
 		[Nullable(2)]
 		protected new IRemovePreloadFlows_SetValue PocoInterface;
 
-		// Token: 0x04006186 RID: 24966
+		// Token: 0x0400670A RID: 26378
 		private PlayFlow _FlowIdCache;
 
-		// Token: 0x04006187 RID: 24967
+		// Token: 0x0400670B RID: 26379
 		private bool _FlowIdInited;
 	}
 }

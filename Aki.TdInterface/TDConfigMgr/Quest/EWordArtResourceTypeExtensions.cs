@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020012BE RID: 4798
+	// Token: 0x02001404 RID: 5124
 	public static class EWordArtResourceTypeExtensions
 	{
-		// Token: 0x06006BFE RID: 27646 RVA: 0x00103E44 File Offset: 0x00102044
+		// Token: 0x0600726C RID: 29292 RVA: 0x00111E0C File Offset: 0x0011000C
 		public static string ToEnumString(this EWordArtResourceType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006BFF RID: 27647 RVA: 0x00103E6C File Offset: 0x0010206C
+		// Token: 0x0600726D RID: 29293 RVA: 0x00111E34 File Offset: 0x00110034
 		public static EWordArtResourceType FromString(string name)
 		{
 			EWordArtResourceType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006C00 RID: 27648 RVA: 0x00103E95 File Offset: 0x00102095
+		// Token: 0x0600726E RID: 29294 RVA: 0x00111E5D File Offset: 0x0011005D
 		public static bool TryFromString(string name, out EWordArtResourceType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			return false;
 		}
 
-		// Token: 0x06006C01 RID: 27649 RVA: 0x00103EBA File Offset: 0x001020BA
+		// Token: 0x0600726F RID: 29295 RVA: 0x00111E82 File Offset: 0x00110082
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006C02 RID: 27650 RVA: 0x00103ECA File Offset: 0x001020CA
+		// Token: 0x06007270 RID: 29296 RVA: 0x00111E92 File Offset: 0x00110092
 		public static EWordArtResourceType[] GetValues()
 		{
 			return new EWordArtResourceType[1];
 		}
 
-		// Token: 0x06006C03 RID: 27651 RVA: 0x00103ED2 File Offset: 0x001020D2
+		// Token: 0x06007271 RID: 29297 RVA: 0x00111E9A File Offset: 0x0011009A
 		public static string[] GetNames()
 		{
 			return new string[]

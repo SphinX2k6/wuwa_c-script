@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020011F0 RID: 4592
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200132C RID: 4908
 	public class IUseVar : IProgressBarLeftType
 	{
-		// Token: 0x06006846 RID: 26694 RVA: 0x000F9200 File Offset: 0x000F7400
+		// Token: 0x06006E87 RID: 28295 RVA: 0x00106B0C File Offset: 0x00104D0C
 		private IUseVar_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006847 RID: 26695 RVA: 0x000F9238 File Offset: 0x000F7438
+		// Token: 0x06006E88 RID: 28296 RVA: 0x00106B44 File Offset: 0x00104D44
 		public static IUseVar Create([Nullable(2)] IUseVar instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006848 RID: 26696 RVA: 0x000F924B File Offset: 0x000F744B
+		// Token: 0x06006E89 RID: 28297 RVA: 0x00106B57 File Offset: 0x00104D57
 		public static IUseVar CreateFromSetValue([Nullable(2)] IUseVar_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006849 RID: 26697 RVA: 0x000F925E File Offset: 0x000F745E
+		// Token: 0x06006E8A RID: 28298 RVA: 0x00106B6A File Offset: 0x00104D6A
 		public new IUseVar_SetValue ToSetValue()
 		{
 			return new IUseVar_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x170021C0 RID: 8640
-		// (get) Token: 0x0600684A RID: 26698 RVA: 0x000F927D File Offset: 0x000F747D
-		// (set) Token: 0x0600684B RID: 26699 RVA: 0x000F92A8 File Offset: 0x000F74A8
+		// Token: 0x17002381 RID: 9089
+		// (get) Token: 0x06006E8B RID: 28299 RVA: 0x00106B89 File Offset: 0x00104D89
+		// (set) Token: 0x06006E8C RID: 28300 RVA: 0x00106BB4 File Offset: 0x00104DB4
 		public override EProgressBarLeftType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170021C1 RID: 8641
-		// (get) Token: 0x0600684C RID: 26700 RVA: 0x000F92B6 File Offset: 0x000F74B6
-		// (set) Token: 0x0600684D RID: 26701 RVA: 0x000F92DD File Offset: 0x000F74DD
+		// Token: 0x17002382 RID: 9090
+		// (get) Token: 0x06006E8D RID: 28301 RVA: 0x00106BC2 File Offset: 0x00104DC2
+		// (set) Token: 0x06006E8E RID: 28302 RVA: 0x00106BE9 File Offset: 0x00104DE9
 		public virtual VarRef Var
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003E77 RID: 15991
+		// Token: 0x040041E5 RID: 16869
 		[Nullable(2)]
 		protected new IUseVar FbInstance;
 
-		// Token: 0x04003E78 RID: 15992
+		// Token: 0x040041E6 RID: 16870
 		[Nullable(2)]
 		protected new IUseVar_SetValue PocoInterface;
 	}

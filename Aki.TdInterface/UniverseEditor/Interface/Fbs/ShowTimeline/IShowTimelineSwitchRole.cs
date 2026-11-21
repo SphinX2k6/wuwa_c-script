@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 {
-	// Token: 0x02003BCB RID: 15307
+	// Token: 0x02003FD6 RID: 16342
 	public struct IShowTimelineSwitchRole : IFlatbufferObject
 	{
-		// Token: 0x1700690F RID: 26895
-		// (get) Token: 0x060150AB RID: 86187 RVA: 0x0030CF8D File Offset: 0x0030B18D
+		// Token: 0x17006EB7 RID: 28343
+		// (get) Token: 0x060165A1 RID: 91553 RVA: 0x00333B15 File Offset: 0x00331D15
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 			}
 		}
 
-		// Token: 0x060150AC RID: 86188 RVA: 0x0030CF9A File Offset: 0x0030B19A
+		// Token: 0x060165A2 RID: 91554 RVA: 0x00333B22 File Offset: 0x00331D22
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060150AD RID: 86189 RVA: 0x0030CFA4 File Offset: 0x0030B1A4
+		// Token: 0x060165A3 RID: 91555 RVA: 0x00333B2C File Offset: 0x00331D2C
 		public static IShowTimelineSwitchRole GetRootAsIShowTimelineSwitchRole(ByteBuffer _bb)
 		{
 			return IShowTimelineSwitchRole.GetRootAsIShowTimelineSwitchRole(_bb, default(IShowTimelineSwitchRole));
 		}
 
-		// Token: 0x060150AE RID: 86190 RVA: 0x0030CFC0 File Offset: 0x0030B1C0
+		// Token: 0x060165A4 RID: 91556 RVA: 0x00333B48 File Offset: 0x00331D48
 		public static IShowTimelineSwitchRole GetRootAsIShowTimelineSwitchRole(ByteBuffer _bb, IShowTimelineSwitchRole obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060150AF RID: 86191 RVA: 0x0030CFDD File Offset: 0x0030B1DD
+		// Token: 0x060165A5 RID: 91557 RVA: 0x00333B65 File Offset: 0x00331D65
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060150B0 RID: 86192 RVA: 0x0030CFEC File Offset: 0x0030B1EC
+		// Token: 0x060165A6 RID: 91558 RVA: 0x00333B74 File Offset: 0x00331D74
 		public IShowTimelineSwitchRole __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006910 RID: 26896
-		// (get) Token: 0x060150B1 RID: 86193 RVA: 0x0030CFFC File Offset: 0x0030B1FC
+		// Token: 0x17006EB8 RID: 28344
+		// (get) Token: 0x060165A7 RID: 91559 RVA: 0x00333B84 File Offset: 0x00331D84
 		public EShowTimelineActionType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 			}
 		}
 
-		// Token: 0x17006911 RID: 26897
-		// (get) Token: 0x060150B2 RID: 86194 RVA: 0x0030D038 File Offset: 0x0030B238
+		// Token: 0x17006EB9 RID: 28345
+		// (get) Token: 0x060165A8 RID: 91560 RVA: 0x00333BC0 File Offset: 0x00331DC0
 		public int RoleId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 			}
 		}
 
-		// Token: 0x060150B3 RID: 86195 RVA: 0x0030D074 File Offset: 0x0030B274
+		// Token: 0x060165A9 RID: 91561 RVA: 0x00333BFC File Offset: 0x00331DFC
 		public static Offset<IShowTimelineSwitchRole> CreateIShowTimelineSwitchRole(FlatBufferBuilder builder, EShowTimelineActionType Type = EShowTimelineActionType.Skill, int RoleId = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 			return IShowTimelineSwitchRole.EndIShowTimelineSwitchRole(builder);
 		}
 
-		// Token: 0x060150B4 RID: 86196 RVA: 0x0030D091 File Offset: 0x0030B291
+		// Token: 0x060165AA RID: 91562 RVA: 0x00333C19 File Offset: 0x00331E19
 		public static void StartIShowTimelineSwitchRole(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060150B5 RID: 86197 RVA: 0x0030D09A File Offset: 0x0030B29A
+		// Token: 0x060165AB RID: 91563 RVA: 0x00333C22 File Offset: 0x00331E22
 		public static void AddType(FlatBufferBuilder builder, EShowTimelineActionType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060150B6 RID: 86198 RVA: 0x0030D0A5 File Offset: 0x0030B2A5
+		// Token: 0x060165AC RID: 91564 RVA: 0x00333C2D File Offset: 0x00331E2D
 		public static void AddRoleId(FlatBufferBuilder builder, int roleId)
 		{
 			builder.AddInt(1, roleId, 0);
 		}
 
-		// Token: 0x060150B7 RID: 86199 RVA: 0x0030D0B0 File Offset: 0x0030B2B0
+		// Token: 0x060165AD RID: 91565 RVA: 0x00333C38 File Offset: 0x00331E38
 		public static Offset<IShowTimelineSwitchRole> EndIShowTimelineSwitchRole(FlatBufferBuilder builder)
 		{
 			return new Offset<IShowTimelineSwitchRole>(builder.EndTable());
 		}
 
-		// Token: 0x060150B8 RID: 86200 RVA: 0x0030D0C0 File Offset: 0x0030B2C0
+		// Token: 0x060165AE RID: 91566 RVA: 0x00333C48 File Offset: 0x00331E48
 		public IShowTimelineSwitchRoleT UnPack()
 		{
 			IShowTimelineSwitchRoleT showTimelineSwitchRoleT = new IShowTimelineSwitchRoleT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 			return showTimelineSwitchRoleT;
 		}
 
-		// Token: 0x060150B9 RID: 86201 RVA: 0x0030D0DB File Offset: 0x0030B2DB
+		// Token: 0x060165AF RID: 91567 RVA: 0x00333C63 File Offset: 0x00331E63
 		public void UnPackTo(IShowTimelineSwitchRoleT _o)
 		{
 			_o.Type = this.Type;
 			_o.RoleId = this.RoleId;
 		}
 
-		// Token: 0x060150BA RID: 86202 RVA: 0x0030D0F8 File Offset: 0x0030B2F8
+		// Token: 0x060165B0 RID: 91568 RVA: 0x00333C80 File Offset: 0x00331E80
 		public static Offset<IShowTimelineSwitchRole> Pack(FlatBufferBuilder builder, IShowTimelineSwitchRoleT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 			return IShowTimelineSwitchRole.CreateIShowTimelineSwitchRole(builder, _o.Type, _o.RoleId);
 		}
 
-		// Token: 0x0400B15C RID: 45404
+		// Token: 0x0400BADE RID: 47838
 		private Table __p;
 	}
 }

@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009E1 RID: 2529
+	// Token: 0x02000AA6 RID: 2726
 	public class EProceduralVisualTypeJsonConverter : JsonConverter<EProceduralVisualType>
 	{
-		// Token: 0x06003827 RID: 14375 RVA: 0x00091998 File Offset: 0x0008FB98
+		// Token: 0x06003BFF RID: 15359 RVA: 0x0009A258 File Offset: 0x00098458
 		public override EProceduralVisualType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return EProceduralVisualTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x06003828 RID: 14376 RVA: 0x000919BC File Offset: 0x0008FBBC
+		// Token: 0x06003C00 RID: 15360 RVA: 0x0009A27C File Offset: 0x0009847C
 		public override void Write(Utf8JsonWriter writer, EProceduralVisualType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

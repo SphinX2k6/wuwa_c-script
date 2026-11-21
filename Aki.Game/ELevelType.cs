@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02001CE2 RID: 7394
+// Token: 0x020011A4 RID: 4516
 public enum ELevelType
 {
-	// Token: 0x04006727 RID: 26407
+	// Token: 0x04006806 RID: 26630
 	Normal = 1,
-	// Token: 0x04006728 RID: 26408
+	// Token: 0x04006807 RID: 26631
 	Forever
 }

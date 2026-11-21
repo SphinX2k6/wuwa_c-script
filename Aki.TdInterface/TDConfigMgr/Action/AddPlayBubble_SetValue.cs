@@ -4,40 +4,38 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001496 RID: 5270
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020015EF RID: 5615
 	public class AddPlayBubble_SetValue
 	{
-		// Token: 0x040045B5 RID: 17845
+		// Token: 0x04004950 RID: 18768
 		public List<int> EntityIds;
 
-		// Token: 0x040045B6 RID: 17846
+		// Token: 0x04004951 RID: 18769
 		public float? EnterRadius;
 
-		// Token: 0x040045B7 RID: 17847
+		// Token: 0x04004952 RID: 18770
 		public float? LeaveRadius;
 
-		// Token: 0x040045B8 RID: 17848
+		// Token: 0x04004953 RID: 18771
 		public bool? IsRangeFollowEntity;
 
-		// Token: 0x040045B9 RID: 17849
+		// Token: 0x04004954 RID: 18772
 		public IBubbleIndex Flow;
 
-		// Token: 0x040045BA RID: 17850
+		// Token: 0x04004955 RID: 18773
 		public int? WaitTime;
 
-		// Token: 0x040045BB RID: 17851
+		// Token: 0x04004956 RID: 18774
 		public bool? RedDot;
 
-		// Token: 0x040045BC RID: 17852
+		// Token: 0x04004957 RID: 18775
 		public bool? IsAudioOccludedByScene;
 
-		// Token: 0x040045BD RID: 17853
+		// Token: 0x04004958 RID: 18776
 		[Nullable(2)]
 		public IBubbleRangeCylinderConfig TriggerCylinderConfig;
 
-		// Token: 0x040045BE RID: 17854
+		// Token: 0x04004959 RID: 18777
 		public bool? IsPlayMouthAnim;
 	}
 }

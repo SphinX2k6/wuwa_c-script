@@ -4,78 +4,78 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000AFD RID: 2813
+	// Token: 0x020001F0 RID: 496
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/Engine.EObjectTypeQuery")]
 	public enum EObjectTypeQuery
 	{
-		// Token: 0x04004D08 RID: 19720
+		// Token: 0x04000C3F RID: 3135
 		ObjectTypeQuery1,
-		// Token: 0x04004D09 RID: 19721
+		// Token: 0x04000C40 RID: 3136
 		ObjectTypeQuery2,
-		// Token: 0x04004D0A RID: 19722
+		// Token: 0x04000C41 RID: 3137
 		ObjectTypeQuery3,
-		// Token: 0x04004D0B RID: 19723
+		// Token: 0x04000C42 RID: 3138
 		ObjectTypeQuery4,
-		// Token: 0x04004D0C RID: 19724
+		// Token: 0x04000C43 RID: 3139
 		ObjectTypeQuery5,
-		// Token: 0x04004D0D RID: 19725
+		// Token: 0x04000C44 RID: 3140
 		ObjectTypeQuery6,
-		// Token: 0x04004D0E RID: 19726
+		// Token: 0x04000C45 RID: 3141
 		ObjectTypeQuery7,
-		// Token: 0x04004D0F RID: 19727
+		// Token: 0x04000C46 RID: 3142
 		ObjectTypeQuery8,
-		// Token: 0x04004D10 RID: 19728
+		// Token: 0x04000C47 RID: 3143
 		ObjectTypeQuery9,
-		// Token: 0x04004D11 RID: 19729
+		// Token: 0x04000C48 RID: 3144
 		ObjectTypeQuery10,
-		// Token: 0x04004D12 RID: 19730
+		// Token: 0x04000C49 RID: 3145
 		ObjectTypeQuery11,
-		// Token: 0x04004D13 RID: 19731
+		// Token: 0x04000C4A RID: 3146
 		ObjectTypeQuery12,
-		// Token: 0x04004D14 RID: 19732
+		// Token: 0x04000C4B RID: 3147
 		ObjectTypeQuery13,
-		// Token: 0x04004D15 RID: 19733
+		// Token: 0x04000C4C RID: 3148
 		ObjectTypeQuery14,
-		// Token: 0x04004D16 RID: 19734
+		// Token: 0x04000C4D RID: 3149
 		ObjectTypeQuery15,
-		// Token: 0x04004D17 RID: 19735
+		// Token: 0x04000C4E RID: 3150
 		ObjectTypeQuery16,
-		// Token: 0x04004D18 RID: 19736
+		// Token: 0x04000C4F RID: 3151
 		ObjectTypeQuery17,
-		// Token: 0x04004D19 RID: 19737
+		// Token: 0x04000C50 RID: 3152
 		ObjectTypeQuery18,
-		// Token: 0x04004D1A RID: 19738
+		// Token: 0x04000C51 RID: 3153
 		ObjectTypeQuery19,
-		// Token: 0x04004D1B RID: 19739
+		// Token: 0x04000C52 RID: 3154
 		ObjectTypeQuery20,
-		// Token: 0x04004D1C RID: 19740
+		// Token: 0x04000C53 RID: 3155
 		ObjectTypeQuery21,
-		// Token: 0x04004D1D RID: 19741
+		// Token: 0x04000C54 RID: 3156
 		ObjectTypeQuery22,
-		// Token: 0x04004D1E RID: 19742
+		// Token: 0x04000C55 RID: 3157
 		ObjectTypeQuery23,
-		// Token: 0x04004D1F RID: 19743
+		// Token: 0x04000C56 RID: 3158
 		ObjectTypeQuery24,
-		// Token: 0x04004D20 RID: 19744
+		// Token: 0x04000C57 RID: 3159
 		ObjectTypeQuery25,
-		// Token: 0x04004D21 RID: 19745
+		// Token: 0x04000C58 RID: 3160
 		ObjectTypeQuery26,
-		// Token: 0x04004D22 RID: 19746
+		// Token: 0x04000C59 RID: 3161
 		ObjectTypeQuery27,
-		// Token: 0x04004D23 RID: 19747
+		// Token: 0x04000C5A RID: 3162
 		ObjectTypeQuery28,
-		// Token: 0x04004D24 RID: 19748
+		// Token: 0x04000C5B RID: 3163
 		ObjectTypeQuery29,
-		// Token: 0x04004D25 RID: 19749
+		// Token: 0x04000C5C RID: 3164
 		ObjectTypeQuery30,
-		// Token: 0x04004D26 RID: 19750
+		// Token: 0x04000C5D RID: 3165
 		ObjectTypeQuery31,
-		// Token: 0x04004D27 RID: 19751
+		// Token: 0x04000C5E RID: 3166
 		ObjectTypeQuery32,
-		// Token: 0x04004D28 RID: 19752
+		// Token: 0x04000C5F RID: 3167
 		ObjectTypeQuery_MAX,
-		// Token: 0x04004D29 RID: 19753
+		// Token: 0x04000C60 RID: 3168
 		EObjectTypeQuery_MAX
 	}
 }

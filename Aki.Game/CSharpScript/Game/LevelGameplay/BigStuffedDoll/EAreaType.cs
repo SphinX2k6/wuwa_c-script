@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 {
-	// Token: 0x02006F45 RID: 28485
+	// Token: 0x020060C6 RID: 24774
 	public enum EAreaType
 	{
-		// Token: 0x04024244 RID: 148036
+		// Token: 0x0401F4F9 RID: 128249
 		BlankArea,
-		// Token: 0x04024245 RID: 148037
+		// Token: 0x0401F4FA RID: 128250
 		GoodArea,
-		// Token: 0x04024246 RID: 148038
+		// Token: 0x0401F4FB RID: 128251
 		PerfectArea,
-		// Token: 0x04024247 RID: 148039
+		// Token: 0x0401F4FC RID: 128252
 		BonusArea
 	}
 }

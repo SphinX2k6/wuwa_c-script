@@ -3,17 +3,17 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Item.ItemComponent
 {
-	// Token: 0x02006355 RID: 25429
+	// Token: 0x020052D3 RID: 21203
 	public class PinballItemGridLockComponent : PinballItemGridComponentBase
 	{
-		// Token: 0x0603FFE8 RID: 262120 RVA: 0x00F7B565 File Offset: 0x00F79765
+		// Token: 0x06034CA9 RID: 216233 RVA: 0x00EC24C5 File Offset: 0x00EC06C5
 		[NullableContext(2)]
 		protected override string OnGetResourceId()
 		{
 			return "UiItem_ItemBaseLocked";
 		}
 
-		// Token: 0x0603FFE9 RID: 262121 RVA: 0x00F7B56C File Offset: 0x00F7976C
+		// Token: 0x06034CAA RID: 216234 RVA: 0x00EC24CC File Offset: 0x00EC06CC
 		[NullableContext(1)]
 		protected override void OnRefresh(params object[] args)
 		{

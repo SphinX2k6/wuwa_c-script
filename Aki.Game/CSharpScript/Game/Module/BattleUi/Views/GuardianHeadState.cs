@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D45 RID: 23877
+	// Token: 0x02004D27 RID: 19751
 	public class GuardianHeadState : HeadStateViewBase
 	{
-		// Token: 0x0603C960 RID: 248160 RVA: 0x00E8A0F8 File Offset: 0x00E882F8
+		// Token: 0x060318B9 RID: 202937 RVA: 0x00DDA8A8 File Offset: 0x00DD8AA8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C961 RID: 248161 RVA: 0x00E8A182 File Offset: 0x00E88382
+		// Token: 0x060318BA RID: 202938 RVA: 0x00DDA932 File Offset: 0x00DD8B32
 		[NullableContext(1)]
 		protected override void ActiveBattleHeadState(HeadStateData headStateData)
 		{
@@ -34,26 +34,26 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshHpColor();
 		}
 
-		// Token: 0x0603C962 RID: 248162 RVA: 0x00E8A198 File Offset: 0x00E88398
+		// Token: 0x060318BB RID: 202939 RVA: 0x00DDA948 File Offset: 0x00DD8B48
 		protected override void OnStart()
 		{
 			this.HpParentWidth = base.GetSprite(2).GetParentAsUIItem().GetWidth();
 		}
 
-		// Token: 0x0603C963 RID: 248163 RVA: 0x00E8A1B1 File Offset: 0x00E883B1
+		// Token: 0x060318BC RID: 202940 RVA: 0x00DDA961 File Offset: 0x00DD8B61
 		[NullableContext(1)]
 		protected override string GetResourceId()
 		{
 			return "UiItem_GuardianState_Prefab";
 		}
 
-		// Token: 0x0603C964 RID: 248164 RVA: 0x00E8A1B8 File Offset: 0x00E883B8
+		// Token: 0x060318BD RID: 202941 RVA: 0x00DDA968 File Offset: 0x00DD8B68
 		protected override void OnHealthChanged()
 		{
 			this.RefreshHp(true);
 		}
 
-		// Token: 0x0603C965 RID: 248165 RVA: 0x00E8A1C4 File Offset: 0x00E883C4
+		// Token: 0x060318BE RID: 202942 RVA: 0x00DDA974 File Offset: 0x00DD8B74
 		public void RefreshHp(bool bPlayBarAnimation = false)
 		{
 			ValueTuple<float, float> hpAndMaxHp = base.GetHpAndMaxHp();
@@ -69,32 +69,32 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.StopBarLerpAnimation();
 		}
 
-		// Token: 0x0603C966 RID: 248166 RVA: 0x00E8A200 File Offset: 0x00E88400
+		// Token: 0x060318BF RID: 202943 RVA: 0x00DDA9B0 File Offset: 0x00DD8BB0
 		private void SetHpBarPercent(float percent)
 		{
 			base.GetSprite(0).SetFillAmount(percent);
 		}
 
-		// Token: 0x0603C967 RID: 248167 RVA: 0x00E8A20F File Offset: 0x00E8840F
+		// Token: 0x060318C0 RID: 202944 RVA: 0x00DDA9BF File Offset: 0x00DD8BBF
 		protected override void OnBeginBarAnimation(float hpPercent)
 		{
 			this.SetBarBufferPercent(hpPercent);
 		}
 
-		// Token: 0x0603C968 RID: 248168 RVA: 0x00E8A218 File Offset: 0x00E88418
+		// Token: 0x060318C1 RID: 202945 RVA: 0x00DDA9C8 File Offset: 0x00DD8BC8
 		protected override void StopBarLerpAnimation()
 		{
 			base.StopBarLerpAnimation();
 			base.GetSprite(1).SetUIActive(false);
 		}
 
-		// Token: 0x0603C969 RID: 248169 RVA: 0x00E8A22D File Offset: 0x00E8842D
+		// Token: 0x060318C2 RID: 202946 RVA: 0x00DDA9DD File Offset: 0x00DD8BDD
 		protected override void OnLerpBarBufferPercent(float percent)
 		{
 			this.SetBarBufferPercent(percent);
 		}
 
-		// Token: 0x0603C96A RID: 248170 RVA: 0x00E8A238 File Offset: 0x00E88438
+		// Token: 0x060318C3 RID: 202947 RVA: 0x00DDA9E8 File Offset: 0x00DD8BE8
 		private void SetBarBufferPercent(float percent)
 		{
 			UUISprite sprite = base.GetSprite(1);
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			sprite2.SetStretchRight(this.HpParentWidth * (1f - percent) - 2f);
 		}
 
-		// Token: 0x0603C96B RID: 248171 RVA: 0x00E8A29C File Offset: 0x00E8849C
+		// Token: 0x060318C4 RID: 202948 RVA: 0x00DDAA4C File Offset: 0x00DD8C4C
 		private void RefreshHpColor()
 		{
 			string hpColor = base.GetHpColor();
@@ -125,23 +125,23 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			sprite.SetColor(color);
 		}
 
-		// Token: 0x0603C96C RID: 248172 RVA: 0x00E8A2D2 File Offset: 0x00E884D2
+		// Token: 0x060318C5 RID: 202949 RVA: 0x00DDAA82 File Offset: 0x00DD8C82
 		protected override void RefreshOnCampChanged()
 		{
 			this.RefreshHpColor();
 		}
 
-		// Token: 0x0401F8DC RID: 129244
+		// Token: 0x0401A395 RID: 107413
 		private float HpParentWidth;
 
-		// Token: 0x0200BFE8 RID: 49128
+		// Token: 0x0200A9EE RID: 43502
 		private enum EChildComponentType
 		{
-			// Token: 0x04039E78 RID: 237176
+			// Token: 0x0403483A RID: 215098
 			HpBarSprite,
-			// Token: 0x04039E79 RID: 237177
+			// Token: 0x0403483B RID: 215099
 			BarBufferSprite,
-			// Token: 0x04039E7A RID: 237178
+			// Token: 0x0403483C RID: 215100
 			HpLight
 		}
 	}

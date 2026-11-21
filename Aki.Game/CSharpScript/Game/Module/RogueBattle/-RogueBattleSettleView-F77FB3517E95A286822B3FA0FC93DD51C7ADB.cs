@@ -2,36 +2,36 @@
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004F00 RID: 20224
+	// Token: 0x02003EC9 RID: 16073
 	internal enum <RogueBattleSettleView>F77FB3517E95A286822B3FA0FC93DD51C7ADB15CFC09607E9F7DE3E0A492A3CF5__ERogueBattleSettleViewDefine
 	{
-		// Token: 0x0401B906 RID: 112902
+		// Token: 0x040162D9 RID: 90841
 		BtnLeft,
-		// Token: 0x0401B907 RID: 112903
+		// Token: 0x040162DA RID: 90842
 		BtnRight,
-		// Token: 0x0401B908 RID: 112904
+		// Token: 0x040162DB RID: 90843
 		TxtTitle,
-		// Token: 0x0401B909 RID: 112905
+		// Token: 0x040162DC RID: 90844
 		BtnClose,
-		// Token: 0x0401B90A RID: 112906
+		// Token: 0x040162DD RID: 90845
 		ChallengeInfoItem,
-		// Token: 0x0401B90B RID: 112907
+		// Token: 0x040162DE RID: 90846
 		DetailItem,
-		// Token: 0x0401B90C RID: 112908
+		// Token: 0x040162DF RID: 90847
 		SelfInfoItem,
-		// Token: 0x0401B90D RID: 112909
+		// Token: 0x040162E0 RID: 90848
 		BtnMask,
-		// Token: 0x0401B90E RID: 112910
+		// Token: 0x040162E1 RID: 90849
 		TxtTeamLevel,
-		// Token: 0x0401B90F RID: 112911
+		// Token: 0x040162E2 RID: 90850
 		TxtRoleNumber,
-		// Token: 0x0401B910 RID: 112912
+		// Token: 0x040162E3 RID: 90851
 		TxtRoleStarNumber,
-		// Token: 0x0401B911 RID: 112913
+		// Token: 0x040162E4 RID: 90852
 		TxtFetterNumber,
-		// Token: 0x0401B912 RID: 112914
+		// Token: 0x040162E5 RID: 90853
 		NewRecordItem,
-		// Token: 0x0401B913 RID: 112915
+		// Token: 0x040162E6 RID: 90854
 		SpriteRank
 	}
 }

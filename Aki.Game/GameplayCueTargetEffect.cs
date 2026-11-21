@@ -3,17 +3,17 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Effect;
 using UnrealEngine;
 
-// Token: 0x02002FD5 RID: 12245
+// Token: 0x02002529 RID: 9513
 public class GameplayCueTargetEffect : GameplayCueEffect
 {
-	// Token: 0x06019F58 RID: 106328 RVA: 0x006CAE19 File Offset: 0x006C9019
+	// Token: 0x0601786A RID: 96362 RVA: 0x006F170D File Offset: 0x006EF90D
 	protected override void OnTick(float delta)
 	{
 		base.OnTick(delta);
 		this.CheckTargetChanged();
 	}
 
-	// Token: 0x06019F59 RID: 106329 RVA: 0x006CAE28 File Offset: 0x006C9028
+	// Token: 0x0601786B RID: 96363 RVA: 0x006F171C File Offset: 0x006EF91C
 	protected override void SetTargetMeshAndSocket()
 	{
 		ValueTuple<EntityHandle, string> targetAndSocket = this.GetTargetAndSocket();
@@ -50,7 +50,7 @@ public class GameplayCueTargetEffect : GameplayCueEffect
 		}
 	}
 
-	// Token: 0x06019F5A RID: 106330 RVA: 0x006CAF60 File Offset: 0x006C9160
+	// Token: 0x0601786C RID: 96364 RVA: 0x006F1854 File Offset: 0x006EFA54
 	protected override void AttachEffect(bool onChangeRole = false)
 	{
 		if (!EffectSystem.Instance.IsValid(this.EffectViewHandle))
@@ -82,7 +82,7 @@ public class GameplayCueTargetEffect : GameplayCueEffect
 		effectActor.K2_AttachToComponent(this.TargetMesh, new FName?(this.TargetSocket), (EAttachmentRule)this.CueConfig.LocRule, (EAttachmentRule)this.CueConfig.RotaRule, (EAttachmentRule)this.CueConfig.SclRule, false);
 	}
 
-	// Token: 0x06019F5B RID: 106331 RVA: 0x006CB01D File Offset: 0x006C921D
+	// Token: 0x0601786D RID: 96365 RVA: 0x006F1911 File Offset: 0x006EFB11
 	[return: TupleElementNames(new string[]
 	{
 		"Target",
@@ -103,7 +103,7 @@ public class GameplayCueTargetEffect : GameplayCueEffect
 		return this.GetLockOnTargetAndSocket();
 	}
 
-	// Token: 0x06019F5C RID: 106332 RVA: 0x006CB03C File Offset: 0x006C923C
+	// Token: 0x0601786E RID: 96366 RVA: 0x006F1930 File Offset: 0x006EFB30
 	[return: TupleElementNames(new string[]
 	{
 		"Target",
@@ -141,7 +141,7 @@ public class GameplayCueTargetEffect : GameplayCueEffect
 		return new ValueTuple<EntityHandle, string>(item, item2);
 	}
 
-	// Token: 0x06019F5D RID: 106333 RVA: 0x006CB0D4 File Offset: 0x006C92D4
+	// Token: 0x0601786F RID: 96367 RVA: 0x006F19C8 File Offset: 0x006EFBC8
 	[return: TupleElementNames(new string[]
 	{
 		"Target",
@@ -167,7 +167,7 @@ public class GameplayCueTargetEffect : GameplayCueEffect
 		return new ValueTuple<EntityHandle, string>(item, item2);
 	}
 
-	// Token: 0x06019F5E RID: 106334 RVA: 0x006CB11C File Offset: 0x006C931C
+	// Token: 0x06017870 RID: 96368 RVA: 0x006F1A10 File Offset: 0x006EFC10
 	private void CheckTargetChanged()
 	{
 		ValueTuple<EntityHandle, string> targetAndSocket = this.GetTargetAndSocket();
@@ -180,11 +180,11 @@ public class GameplayCueTargetEffect : GameplayCueEffect
 		this.RefreshEffectStatus(false);
 	}
 
-	// Token: 0x0400C481 RID: 50305
+	// Token: 0x0400C82A RID: 51242
 	[Nullable(2)]
 	private EntityHandle CurrentTarget;
 
-	// Token: 0x0400C482 RID: 50306
+	// Token: 0x0400C82B RID: 51243
 	[Nullable(1)]
 	private string CurrentTargetSocket = string.Empty;
 }

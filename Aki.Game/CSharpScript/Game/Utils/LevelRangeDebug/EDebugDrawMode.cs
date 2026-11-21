@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Utils.LevelRangeDebug
 {
-	// Token: 0x02004564 RID: 17764
+	// Token: 0x0200348C RID: 13452
 	public enum EDebugDrawMode
 	{
-		// Token: 0x04018819 RID: 100377
+		// Token: 0x04012E53 RID: 77395
 		None,
-		// Token: 0x0401881A RID: 100378
+		// Token: 0x04012E54 RID: 77396
 		CurrentQuest,
-		// Token: 0x0401881B RID: 100379
+		// Token: 0x04012E55 RID: 77397
 		All
 	}
 }

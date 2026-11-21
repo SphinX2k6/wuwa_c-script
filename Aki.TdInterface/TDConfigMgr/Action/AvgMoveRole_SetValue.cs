@@ -1,25 +1,23 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014A4 RID: 5284
+	// Token: 0x020015FD RID: 5629
 	public class AvgMoveRole_SetValue
 	{
-		// Token: 0x040045EE RID: 17902
+		// Token: 0x04004989 RID: 18825
 		public int RoleId;
 
-		// Token: 0x040045EF RID: 17903
+		// Token: 0x0400498A RID: 18826
 		public EAvgRoleAnimationType AnimationType;
 
-		// Token: 0x040045F0 RID: 17904
+		// Token: 0x0400498B RID: 18827
 		public bool? IsAnimationLoop;
 
-		// Token: 0x040045F1 RID: 17905
+		// Token: 0x0400498C RID: 18828
 		public EAvgRolePosition TargetPosition;
 
-		// Token: 0x040045F2 RID: 17906
-		[Nullable(1)]
+		// Token: 0x0400498D RID: 18829
 		public IEaseData EaseCurve;
 	}
 }

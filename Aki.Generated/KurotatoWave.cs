@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000DB6 RID: 3510
+	// Token: 0x02000E9B RID: 3739
 	public struct KurotatoWave : IFlatbufferObject
 	{
-		// Token: 0x17001C3D RID: 7229
-		// (get) Token: 0x06008BE8 RID: 35816 RVA: 0x002730A4 File Offset: 0x002712A4
+		// Token: 0x17001CA1 RID: 7329
+		// (get) Token: 0x06009204 RID: 37380 RVA: 0x00291988 File Offset: 0x0028FB88
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008BE9 RID: 35817 RVA: 0x002730B1 File Offset: 0x002712B1
+		// Token: 0x06009205 RID: 37381 RVA: 0x00291995 File Offset: 0x0028FB95
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06008BEA RID: 35818 RVA: 0x002730B8 File Offset: 0x002712B8
+		// Token: 0x06009206 RID: 37382 RVA: 0x0029199C File Offset: 0x0028FB9C
 		public static KurotatoWave GetRootAsKurotatoWave(ByteBuffer _bb)
 		{
 			return KurotatoWave.GetRootAsKurotatoWave(_bb, default(KurotatoWave));
 		}
 
-		// Token: 0x06008BEB RID: 35819 RVA: 0x002730D4 File Offset: 0x002712D4
+		// Token: 0x06009207 RID: 37383 RVA: 0x002919B8 File Offset: 0x0028FBB8
 		public static KurotatoWave GetRootAsKurotatoWave(ByteBuffer _bb, KurotatoWave obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06008BEC RID: 35820 RVA: 0x002730F1 File Offset: 0x002712F1
+		// Token: 0x06009208 RID: 37384 RVA: 0x002919D5 File Offset: 0x0028FBD5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06008BED RID: 35821 RVA: 0x00273100 File Offset: 0x00271300
+		// Token: 0x06009209 RID: 37385 RVA: 0x002919E4 File Offset: 0x0028FBE4
 		public KurotatoWave __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001C3E RID: 7230
-		// (get) Token: 0x06008BEE RID: 35822 RVA: 0x00273110 File Offset: 0x00271310
+		// Token: 0x17001CA2 RID: 7330
+		// (get) Token: 0x0600920A RID: 37386 RVA: 0x002919F4 File Offset: 0x0028FBF4
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001C3F RID: 7231
-		// (get) Token: 0x06008BEF RID: 35823 RVA: 0x0027314C File Offset: 0x0027134C
+		// Token: 0x17001CA3 RID: 7331
+		// (get) Token: 0x0600920B RID: 37387 RVA: 0x00291A30 File Offset: 0x0028FC30
 		public int Level
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001C40 RID: 7232
-		// (get) Token: 0x06008BF0 RID: 35824 RVA: 0x00273188 File Offset: 0x00271388
+		// Token: 0x17001CA4 RID: 7332
+		// (get) Token: 0x0600920C RID: 37388 RVA: 0x00291A6C File Offset: 0x0028FC6C
 		public int Wave
 		{
 			get
@@ -94,8 +94,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001C41 RID: 7233
-		// (get) Token: 0x06008BF1 RID: 35825 RVA: 0x002731C4 File Offset: 0x002713C4
+		// Token: 0x17001CA5 RID: 7333
+		// (get) Token: 0x0600920D RID: 37389 RVA: 0x00291AA8 File Offset: 0x0028FCA8
 		public int WaveType
 		{
 			get
@@ -109,7 +109,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008BF2 RID: 35826 RVA: 0x00273204 File Offset: 0x00271404
+		// Token: 0x0600920E RID: 37390 RVA: 0x00291AE8 File Offset: 0x0028FCE8
 		public int WaveConditions(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -120,8 +120,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001C42 RID: 7234
-		// (get) Token: 0x06008BF3 RID: 35827 RVA: 0x00273244 File Offset: 0x00271444
+		// Token: 0x17001CA6 RID: 7334
+		// (get) Token: 0x0600920F RID: 37391 RVA: 0x00291B28 File Offset: 0x0028FD28
 		public int WaveConditionsLength
 		{
 			get
@@ -135,20 +135,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008BF4 RID: 35828 RVA: 0x00273270 File Offset: 0x00271470
+		// Token: 0x06009210 RID: 37392 RVA: 0x00291B54 File Offset: 0x0028FD54
 		public Span<int> GetWaveConditionsBytes()
 		{
 			return this.__p.__vector_as_span<int>(12, 4);
 		}
 
-		// Token: 0x06008BF5 RID: 35829 RVA: 0x00273280 File Offset: 0x00271480
+		// Token: 0x06009211 RID: 37393 RVA: 0x00291B64 File Offset: 0x0028FD64
 		public int[] GetWaveConditionsArray()
 		{
 			return this.__p.__vector_as_array<int>(12) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17001C43 RID: 7235
-		// (get) Token: 0x06008BF6 RID: 35830 RVA: 0x00273298 File Offset: 0x00271498
+		// Token: 0x17001CA7 RID: 7335
+		// (get) Token: 0x06009212 RID: 37394 RVA: 0x00291B7C File Offset: 0x0028FD7C
 		public int WaveTime
 		{
 			get
@@ -162,7 +162,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008BF7 RID: 35831 RVA: 0x002732D8 File Offset: 0x002714D8
+		// Token: 0x06009213 RID: 37395 RVA: 0x00291BBC File Offset: 0x0028FDBC
 		public int ConditionSpawnIds(int j)
 		{
 			int num = this.__p.__offset(16);
@@ -173,8 +173,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001C44 RID: 7236
-		// (get) Token: 0x06008BF8 RID: 35832 RVA: 0x00273318 File Offset: 0x00271518
+		// Token: 0x17001CA8 RID: 7336
+		// (get) Token: 0x06009214 RID: 37396 RVA: 0x00291BFC File Offset: 0x0028FDFC
 		public int ConditionSpawnIdsLength
 		{
 			get
@@ -188,20 +188,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008BF9 RID: 35833 RVA: 0x00273344 File Offset: 0x00271544
+		// Token: 0x06009215 RID: 37397 RVA: 0x00291C28 File Offset: 0x0028FE28
 		public Span<int> GetConditionSpawnIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(16, 4);
 		}
 
-		// Token: 0x06008BFA RID: 35834 RVA: 0x00273354 File Offset: 0x00271554
+		// Token: 0x06009216 RID: 37398 RVA: 0x00291C38 File Offset: 0x0028FE38
 		public int[] GetConditionSpawnIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(16) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17001C45 RID: 7237
-		// (get) Token: 0x06008BFB RID: 35835 RVA: 0x0027336C File Offset: 0x0027156C
+		// Token: 0x17001CA9 RID: 7337
+		// (get) Token: 0x06009217 RID: 37399 RVA: 0x00291C50 File Offset: 0x0028FE50
 		public bool HasEndlessModeSelection
 		{
 			get
@@ -211,8 +211,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001C46 RID: 7238
-		// (get) Token: 0x06008BFC RID: 35836 RVA: 0x002733AC File Offset: 0x002715AC
+		// Token: 0x17001CAA RID: 7338
+		// (get) Token: 0x06009218 RID: 37400 RVA: 0x00291C90 File Offset: 0x0028FE90
 		public bool IsPowerWave
 		{
 			get
@@ -222,7 +222,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008BFD RID: 35837 RVA: 0x002733EC File Offset: 0x002715EC
+		// Token: 0x06009219 RID: 37401 RVA: 0x00291CD0 File Offset: 0x0028FED0
 		public int MonsterSpawnGroup(int j)
 		{
 			int num = this.__p.__offset(22);
@@ -233,8 +233,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001C47 RID: 7239
-		// (get) Token: 0x06008BFE RID: 35838 RVA: 0x0027342C File Offset: 0x0027162C
+		// Token: 0x17001CAB RID: 7339
+		// (get) Token: 0x0600921A RID: 37402 RVA: 0x00291D10 File Offset: 0x0028FF10
 		public int MonsterSpawnGroupLength
 		{
 			get
@@ -248,73 +248,67 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008BFF RID: 35839 RVA: 0x00273458 File Offset: 0x00271658
+		// Token: 0x0600921B RID: 37403 RVA: 0x00291D3C File Offset: 0x0028FF3C
 		public Span<int> GetMonsterSpawnGroupBytes()
 		{
 			return this.__p.__vector_as_span<int>(22, 4);
 		}
 
-		// Token: 0x06008C00 RID: 35840 RVA: 0x00273468 File Offset: 0x00271668
+		// Token: 0x0600921C RID: 37404 RVA: 0x00291D4C File Offset: 0x0028FF4C
 		public int[] GetMonsterSpawnGroupArray()
 		{
 			return this.__p.__vector_as_array<int>(22) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06008C01 RID: 35841 RVA: 0x00273480 File Offset: 0x00271680
+		// Token: 0x0600921D RID: 37405 RVA: 0x00291D64 File Offset: 0x0028FF64
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ConditionSpawnIdsIter()或GetConditionSpawnIdsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] ConditionSpawnIds()
+		public int[] ConditionSpawnIds()
 		{
-			KurotatoWave kurotatoWave = this;
-			return kurotatoWave.GetConditionSpawnIdsArray() ?? Array.Empty<int>();
+			return this.GetConditionSpawnIdsArray();
 		}
 
-		// Token: 0x06008C02 RID: 35842 RVA: 0x002734A4 File Offset: 0x002716A4
+		// Token: 0x0600921E RID: 37406 RVA: 0x00291D6C File Offset: 0x0028FF6C
 		[NullableContext(1)]
-		public readonly IEnumerable<int> ConditionSpawnIdsIter()
+		public IEnumerable<int> ConditionSpawnIdsIter()
 		{
 			KurotatoWave.<ConditionSpawnIdsIter>d__38 <ConditionSpawnIdsIter>d__ = new KurotatoWave.<ConditionSpawnIdsIter>d__38(-2);
 			<ConditionSpawnIdsIter>d__.<>3__<>4__this = this;
 			return <ConditionSpawnIdsIter>d__;
 		}
 
-		// Token: 0x06008C03 RID: 35843 RVA: 0x002734BC File Offset: 0x002716BC
+		// Token: 0x0600921F RID: 37407 RVA: 0x00291D81 File Offset: 0x0028FF81
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用MonsterSpawnGroupIter()或GetMonsterSpawnGroupBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] MonsterSpawnGroup()
+		public int[] MonsterSpawnGroup()
 		{
-			KurotatoWave kurotatoWave = this;
-			return kurotatoWave.GetMonsterSpawnGroupArray() ?? Array.Empty<int>();
+			return this.GetMonsterSpawnGroupArray();
 		}
 
-		// Token: 0x06008C04 RID: 35844 RVA: 0x002734E0 File Offset: 0x002716E0
+		// Token: 0x06009220 RID: 37408 RVA: 0x00291D89 File Offset: 0x0028FF89
 		[NullableContext(1)]
-		public readonly IEnumerable<int> MonsterSpawnGroupIter()
+		public IEnumerable<int> MonsterSpawnGroupIter()
 		{
 			KurotatoWave.<MonsterSpawnGroupIter>d__40 <MonsterSpawnGroupIter>d__ = new KurotatoWave.<MonsterSpawnGroupIter>d__40(-2);
 			<MonsterSpawnGroupIter>d__.<>3__<>4__this = this;
 			return <MonsterSpawnGroupIter>d__;
 		}
 
-		// Token: 0x06008C05 RID: 35845 RVA: 0x002734F8 File Offset: 0x002716F8
+		// Token: 0x06009221 RID: 37409 RVA: 0x00291D9E File Offset: 0x0028FF9E
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用WaveConditionsIter()或GetWaveConditionsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] WaveConditions()
+		public int[] WaveConditions()
 		{
-			KurotatoWave kurotatoWave = this;
-			return kurotatoWave.GetWaveConditionsArray() ?? Array.Empty<int>();
+			return this.GetWaveConditionsArray();
 		}
 
-		// Token: 0x06008C06 RID: 35846 RVA: 0x0027351C File Offset: 0x0027171C
+		// Token: 0x06009222 RID: 37410 RVA: 0x00291DA6 File Offset: 0x0028FFA6
 		[NullableContext(1)]
-		public readonly IEnumerable<int> WaveConditionsIter()
+		public IEnumerable<int> WaveConditionsIter()
 		{
 			KurotatoWave.<WaveConditionsIter>d__42 <WaveConditionsIter>d__ = new KurotatoWave.<WaveConditionsIter>d__42(-2);
 			<WaveConditionsIter>d__.<>3__<>4__this = this;
 			return <WaveConditionsIter>d__;
 		}
 
-		// Token: 0x04004E4A RID: 20042
+		// Token: 0x0400542F RID: 21551
 		private Table __p;
 	}
 }

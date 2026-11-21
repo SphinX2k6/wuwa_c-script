@@ -3,16 +3,16 @@ using System.Runtime.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Utils;
 
-// Token: 0x020039CD RID: 14797
+// Token: 0x02002F48 RID: 12104
 public class __WorldFunctionLibrary_SubClassMissingExportProxy : __WorldFunctionLibrary_InheritProxy
 {
-	// Token: 0x0601EF19 RID: 126745 RVA: 0x008A3638 File Offset: 0x008A1838
+	// Token: 0x0601CAFB RID: 117499 RVA: 0x008C1210 File Offset: 0x008BF410
 	[NullableContext(1)]
 	protected __WorldFunctionLibrary_SubClassMissingExportProxy(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(WorldFunctionLibrary.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601EF1A RID: 126746 RVA: 0x008A366B File Offset: 0x008A186B
+	// Token: 0x0601CAFC RID: 117500 RVA: 0x008C1243 File Offset: 0x008BF443
 	protected __WorldFunctionLibrary_SubClassMissingExportProxy(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}

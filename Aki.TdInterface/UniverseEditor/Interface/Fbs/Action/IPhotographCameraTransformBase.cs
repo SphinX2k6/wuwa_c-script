@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006CBA RID: 27834
+	// Token: 0x02007430 RID: 29744
 	public struct IPhotographCameraTransformBase : IFlatbufferObject
 	{
-		// Token: 0x1700CF3A RID: 53050
-		// (get) Token: 0x060310D3 RID: 200915 RVA: 0x006A84B2 File Offset: 0x006A66B2
+		// Token: 0x1700DA77 RID: 55927
+		// (get) Token: 0x060340AA RID: 213162 RVA: 0x007036E6 File Offset: 0x007018E6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060310D4 RID: 200916 RVA: 0x006A84BF File Offset: 0x006A66BF
+		// Token: 0x060340AB RID: 213163 RVA: 0x007036F3 File Offset: 0x007018F3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060310D5 RID: 200917 RVA: 0x006A84C8 File Offset: 0x006A66C8
+		// Token: 0x060340AC RID: 213164 RVA: 0x007036FC File Offset: 0x007018FC
 		public static IPhotographCameraTransformBase GetRootAsIPhotographCameraTransformBase(ByteBuffer _bb)
 		{
 			return IPhotographCameraTransformBase.GetRootAsIPhotographCameraTransformBase(_bb, default(IPhotographCameraTransformBase));
 		}
 
-		// Token: 0x060310D6 RID: 200918 RVA: 0x006A84E4 File Offset: 0x006A66E4
+		// Token: 0x060340AD RID: 213165 RVA: 0x00703718 File Offset: 0x00701918
 		public static IPhotographCameraTransformBase GetRootAsIPhotographCameraTransformBase(ByteBuffer _bb, IPhotographCameraTransformBase obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060310D7 RID: 200919 RVA: 0x006A8501 File Offset: 0x006A6701
+		// Token: 0x060340AE RID: 213166 RVA: 0x00703735 File Offset: 0x00701935
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060310D8 RID: 200920 RVA: 0x006A8510 File Offset: 0x006A6710
+		// Token: 0x060340AF RID: 213167 RVA: 0x00703744 File Offset: 0x00701944
 		public IPhotographCameraTransformBase __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CF3B RID: 53051
-		// (get) Token: 0x060310D9 RID: 200921 RVA: 0x006A8520 File Offset: 0x006A6720
+		// Token: 0x1700DA78 RID: 55928
+		// (get) Token: 0x060340B0 RID: 213168 RVA: 0x00703754 File Offset: 0x00701954
 		public EPhotographCameraTransform Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060310DA RID: 200922 RVA: 0x006A855C File Offset: 0x006A675C
+		// Token: 0x060340B1 RID: 213169 RVA: 0x00703790 File Offset: 0x00701990
 		public static Offset<IPhotographCameraTransformBase> CreateIPhotographCameraTransformBase(FlatBufferBuilder builder, EPhotographCameraTransform Type = EPhotographCameraTransform.Absolute)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPhotographCameraTransformBase.EndIPhotographCameraTransformBase(builder);
 		}
 
-		// Token: 0x060310DB RID: 200923 RVA: 0x006A8572 File Offset: 0x006A6772
+		// Token: 0x060340B2 RID: 213170 RVA: 0x007037A6 File Offset: 0x007019A6
 		public static void StartIPhotographCameraTransformBase(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060310DC RID: 200924 RVA: 0x006A857B File Offset: 0x006A677B
+		// Token: 0x060340B3 RID: 213171 RVA: 0x007037AF File Offset: 0x007019AF
 		public static void AddType(FlatBufferBuilder builder, EPhotographCameraTransform type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060310DD RID: 200925 RVA: 0x006A8586 File Offset: 0x006A6786
+		// Token: 0x060340B4 RID: 213172 RVA: 0x007037BA File Offset: 0x007019BA
 		public static Offset<IPhotographCameraTransformBase> EndIPhotographCameraTransformBase(FlatBufferBuilder builder)
 		{
 			return new Offset<IPhotographCameraTransformBase>(builder.EndTable());
 		}
 
-		// Token: 0x060310DE RID: 200926 RVA: 0x006A8594 File Offset: 0x006A6794
+		// Token: 0x060340B5 RID: 213173 RVA: 0x007037C8 File Offset: 0x007019C8
 		public IPhotographCameraTransformBaseT UnPack()
 		{
 			IPhotographCameraTransformBaseT photographCameraTransformBaseT = new IPhotographCameraTransformBaseT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return photographCameraTransformBaseT;
 		}
 
-		// Token: 0x060310DF RID: 200927 RVA: 0x006A85AF File Offset: 0x006A67AF
+		// Token: 0x060340B6 RID: 213174 RVA: 0x007037E3 File Offset: 0x007019E3
 		public void UnPackTo(IPhotographCameraTransformBaseT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060310E0 RID: 200928 RVA: 0x006A85C0 File Offset: 0x006A67C0
+		// Token: 0x060340B7 RID: 213175 RVA: 0x007037F4 File Offset: 0x007019F4
 		public static Offset<IPhotographCameraTransformBase> Pack(FlatBufferBuilder builder, IPhotographCameraTransformBaseT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPhotographCameraTransformBase.CreateIPhotographCameraTransformBase(builder, _o.Type);
 		}
 
-		// Token: 0x0401161A RID: 71194
+		// Token: 0x0401258A RID: 75146
 		private Table __p;
 	}
 }

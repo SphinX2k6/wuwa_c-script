@@ -9,18 +9,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.PlotView
 {
-	// Token: 0x0200506D RID: 20589
+	// Token: 0x0200403D RID: 16445
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PlotWordArtCaptionView : UiViewBase
 	{
-		// Token: 0x06034C0A RID: 216074 RVA: 0x00C7B66D File Offset: 0x00C7986D
+		// Token: 0x06029AFF RID: 170751 RVA: 0x00BC8A45 File Offset: 0x00BC6C45
 		[NullableContext(1)]
 		public PlotWordArtCaptionView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06034C0B RID: 216075 RVA: 0x00C7B678 File Offset: 0x00C79878
+		// Token: 0x06029B00 RID: 170752 RVA: 0x00BC8A50 File Offset: 0x00BC6C50
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06034C0C RID: 216076 RVA: 0x00C7B704 File Offset: 0x00C79904
+		// Token: 0x06029B01 RID: 170753 RVA: 0x00BC8ADC File Offset: 0x00BC6CDC
 		protected override void OnStart()
 		{
 			PlotWordArtCaptionViewParams plotWordArtCaptionViewParams = this.OpenParam as PlotWordArtCaptionViewParams;
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x06034C0D RID: 216077 RVA: 0x00C7B7FD File Offset: 0x00C799FD
+		// Token: 0x06029B02 RID: 170754 RVA: 0x00BC8BD5 File Offset: 0x00BC6DD5
 		protected override void OnAfterShow()
 		{
 			ULGUIPlayTweenComponent tweenStartComp = this.TweenStartComp;
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			tweenStartComp.Play();
 		}
 
-		// Token: 0x06034C0E RID: 216078 RVA: 0x00C7B810 File Offset: 0x00C79A10
+		// Token: 0x06029B03 RID: 170755 RVA: 0x00BC8BE8 File Offset: 0x00BC6DE8
 		protected override UniTask OnBeforeHideAsync()
 		{
 			PlotWordArtCaptionView.<OnBeforeHideAsync>d__10 <OnBeforeHideAsync>d__;
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return <OnBeforeHideAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034C0F RID: 216079 RVA: 0x00C7B854 File Offset: 0x00C79A54
+		// Token: 0x06029B04 RID: 170756 RVA: 0x00BC8C2C File Offset: 0x00BC6E2C
 		protected override void OnBeforeDestroy()
 		{
 			if (this.TweenCloseEndDelegate != null)
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x06034C10 RID: 216080 RVA: 0x00C7B8AC File Offset: 0x00C79AAC
+		// Token: 0x06029B05 RID: 170757 RVA: 0x00BC8C84 File Offset: 0x00BC6E84
 		private void OnTweenCloseEnd()
 		{
 			CustomPromise<bool> tweenClosePromise = this.TweenClosePromise;
@@ -119,30 +119,30 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.TweenClosePromise = null;
 		}
 
-		// Token: 0x0401C1C7 RID: 115143
+		// Token: 0x04016BF2 RID: 93170
 		private ULGUIPlayTweenComponent TweenStartComp;
 
-		// Token: 0x0401C1C8 RID: 115144
+		// Token: 0x04016BF3 RID: 93171
 		private ULGUIPlayTweenComponent TweenCloseComp;
 
-		// Token: 0x0401C1C9 RID: 115145
+		// Token: 0x04016BF4 RID: 93172
 		private FLGUIPlayTweenCompleteDynamicDelegate TweenCloseEndDelegate;
 
-		// Token: 0x0401C1CA RID: 115146
+		// Token: 0x04016BF5 RID: 93173
 		private FLGUIDelegateHandleWrapper TweenCloseEndDelegateWrapper;
 
-		// Token: 0x0401C1CB RID: 115147
+		// Token: 0x04016BF6 RID: 93174
 		private CustomPromise<bool> TweenClosePromise;
 
-		// Token: 0x0200B209 RID: 45577
+		// Token: 0x02009C42 RID: 40002
 		[NullableContext(0)]
 		private enum EComponentDefine
 		{
-			// Token: 0x04035FBF RID: 221119
+			// Token: 0x04030A13 RID: 199187
 			Text,
-			// Token: 0x04035FC0 RID: 221120
+			// Token: 0x04030A14 RID: 199188
 			TweenClose,
-			// Token: 0x04035FC1 RID: 221121
+			// Token: 0x04030A15 RID: 199189
 			TweenStart
 		}
 	}

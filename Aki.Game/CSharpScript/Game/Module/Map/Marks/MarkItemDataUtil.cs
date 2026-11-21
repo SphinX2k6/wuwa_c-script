@@ -11,18 +11,18 @@ using CSharpScript.Game.Module.VillageInfr;
 
 namespace CSharpScript.Game.Module.Map.Marks
 {
-	// Token: 0x020054D1 RID: 21713
+	// Token: 0x020044A5 RID: 17573
 	[NullableContext(2)]
 	[Nullable(0)]
 	public static class MarkItemDataUtil
 	{
-		// Token: 0x06037702 RID: 227074 RVA: 0x00D2A748 File Offset: 0x00D28948
+		// Token: 0x0602C5B1 RID: 181681 RVA: 0x00C78498 File Offset: 0x00C76698
 		public static EMarkType TransformMarkTypeToClient(int markType)
 		{
 			return MarkItemDataUtil.TransformMarkTypeMap.GetValueOrDefault((PbMapMarkType.Types.ENUMS)markType, EMarkType.None);
 		}
 
-		// Token: 0x06037703 RID: 227075 RVA: 0x00D2A764 File Offset: 0x00D28964
+		// Token: 0x0602C5B2 RID: 181682 RVA: 0x00C784B4 File Offset: 0x00C766B4
 		public static string GetMarkIcon(int markConfigId)
 		{
 			MapMark? configMark = MapConfig.Instance.GetConfigMark(markConfigId);
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.Map.Marks
 			}
 		}
 
-		// Token: 0x06037704 RID: 227076 RVA: 0x00D2A82C File Offset: 0x00D28A2C
+		// Token: 0x0602C5B3 RID: 181683 RVA: 0x00C7857C File Offset: 0x00C7677C
 		public static string GetMarkTopRightIconPath(int markId, EMarkType markType, bool isDisable, bool isGameplayFinish)
 		{
 			if (isDisable)
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.Map.Marks
 			return null;
 		}
 
-		// Token: 0x06037705 RID: 227077 RVA: 0x00D2AA18 File Offset: 0x00D28C18
+		// Token: 0x0602C5B4 RID: 181684 RVA: 0x00C78768 File Offset: 0x00C76968
 		public static bool IsCommonGamePlayMarkComplete(int markId)
 		{
 			MapMark? configMark = MapConfig.Instance.GetConfigMark(markId);
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.Map.Marks
 			return false;
 		}
 
-		// Token: 0x06037706 RID: 227078 RVA: 0x00D2AAEC File Offset: 0x00D28CEC
+		// Token: 0x0602C5B5 RID: 181685 RVA: 0x00C7883C File Offset: 0x00C76A3C
 		// Note: this type is marked as 'beforefieldinit'.
 		static MarkItemDataUtil()
 		{
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.Module.Map.Marks
 			MarkItemDataUtil.TransformMarkTypeMap = dictionary;
 		}
 
-		// Token: 0x0401D384 RID: 119684
+		// Token: 0x04017E02 RID: 97794
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<PbMapMarkType.Types.ENUMS, EMarkType> TransformMarkTypeMap;

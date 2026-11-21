@@ -8,13 +8,13 @@ using UnrealEngine;
 [Nullable(0)]
 public class UiTextTranslationUtils : IStaticVariableResetter
 {
-	// Token: 0x060009EF RID: 2543 RVA: 0x00032963 File Offset: 0x00030B63
+	// Token: 0x06000A40 RID: 2624 RVA: 0x000332BF File Offset: 0x000314BF
 	static UiTextTranslationUtils()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(UiTextTranslationUtils.CreateStaticDefaultValue), new Action(UiTextTranslationUtils.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x060009F0 RID: 2544 RVA: 0x00032982 File Offset: 0x00030B82
+	// Token: 0x06000A41 RID: 2625 RVA: 0x000332DE File Offset: 0x000314DE
 	private static void FixBestFit(UUIText uiText)
 	{
 		if (uiText.overflowType == UITextOverflowType.VerticalOverflow)
@@ -23,7 +23,7 @@ public class UiTextTranslationUtils : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x060009F1 RID: 2545 RVA: 0x0003299C File Offset: 0x00030B9C
+	// Token: 0x06000A42 RID: 2626 RVA: 0x000332F8 File Offset: 0x000314F8
 	public static void TranslateText(UUIText uiText)
 	{
 		if (uiText.TranslateId == 0U)
@@ -39,14 +39,14 @@ public class UiTextTranslationUtils : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x060009F2 RID: 2546 RVA: 0x000329EF File Offset: 0x00030BEF
+	// Token: 0x06000A43 RID: 2627 RVA: 0x0003334B File Offset: 0x0003154B
 	private static void HandleTextComponentRichText(string textKey, UUIText uiText)
 	{
 		uiText.SetGameRichText(true);
 		uiText.SetRichText(true);
 	}
 
-	// Token: 0x060009F3 RID: 2547 RVA: 0x00032A00 File Offset: 0x00030C00
+	// Token: 0x06000A44 RID: 2628 RVA: 0x0003335C File Offset: 0x0003155C
 	[return: Nullable(2)]
 	private unsafe static string GetLocalTextNew(string textKey, UUIText uiText, bool isMainText)
 	{
@@ -87,7 +87,7 @@ public class UiTextTranslationUtils : IStaticVariableResetter
 		return text;
 	}
 
-	// Token: 0x060009F4 RID: 2548 RVA: 0x00032AE8 File Offset: 0x00030CE8
+	// Token: 0x06000A45 RID: 2629 RVA: 0x00033444 File Offset: 0x00031644
 	public static void GmReplaceText(UUIText uiText)
 	{
 		if (UiTextTranslationUtils.AkiFontData != null)
@@ -96,7 +96,7 @@ public class UiTextTranslationUtils : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x060009F5 RID: 2549 RVA: 0x00032AFC File Offset: 0x00030CFC
+	// Token: 0x06000A46 RID: 2630 RVA: 0x00033458 File Offset: 0x00031658
 	public static void Initialize()
 	{
 		Action<UUIText> callback;
@@ -115,7 +115,7 @@ public class UiTextTranslationUtils : IStaticVariableResetter
 		UUIText.SetLocalTextNewDelegate(flocalTextNewDelegate);
 	}
 
-	// Token: 0x060009F6 RID: 2550 RVA: 0x00032B5C File Offset: 0x00030D5C
+	// Token: 0x06000A47 RID: 2631 RVA: 0x000334B8 File Offset: 0x000316B8
 	public static void Destroy()
 	{
 		FLGUITextTranslateDelegate flguitextTranslateDelegate = null;
@@ -138,30 +138,30 @@ public class UiTextTranslationUtils : IStaticVariableResetter
 		DelegateUtils.ReleaseManualReleaseDelegate(callBack2);
 	}
 
-	// Token: 0x060009F7 RID: 2551 RVA: 0x00032BC4 File Offset: 0x00030DC4
+	// Token: 0x06000A48 RID: 2632 RVA: 0x00033520 File Offset: 0x00031720
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060009F8 RID: 2552 RVA: 0x00032BC6 File Offset: 0x00030DC6
+	// Token: 0x06000A49 RID: 2633 RVA: 0x00033522 File Offset: 0x00031722
 	public static void ResetStaticDefaultValue()
 	{
 		UiTextTranslationUtils.AkiFontData = null;
 		UiTextTranslationUtils.TextShowTranslateId = false;
 	}
 
-	// Token: 0x0400069B RID: 1691
+	// Token: 0x040006A6 RID: 1702
 	[Nullable(2)]
 	public static ULGUIFontData_BaseObject AkiFontData;
 
-	// Token: 0x0400069C RID: 1692
+	// Token: 0x040006A7 RID: 1703
 	public static bool TextShowTranslateId;
 
-	// Token: 0x020001D4 RID: 468
+	// Token: 0x020001D9 RID: 473
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x0400088A RID: 2186
+		// Token: 0x040008AC RID: 2220
 		[Nullable(new byte[]
 		{
 			0,
@@ -169,7 +169,7 @@ public class UiTextTranslationUtils : IStaticVariableResetter
 		})]
 		public static Action<UUIText> <0>__TranslateText;
 
-		// Token: 0x0400088B RID: 2187
+		// Token: 0x040008AD RID: 2221
 		[Nullable(new byte[]
 		{
 			0,
@@ -179,7 +179,7 @@ public class UiTextTranslationUtils : IStaticVariableResetter
 		})]
 		public static Func<string, UUIText, bool, string> <1>__GetLocalTextNew;
 
-		// Token: 0x0400088C RID: 2188
+		// Token: 0x040008AE RID: 2222
 		[Nullable(new byte[]
 		{
 			0,

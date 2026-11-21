@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200264E RID: 9806
+	// Token: 0x02002912 RID: 10514
 	public class IPhotographPlayerPerform
 	{
-		// Token: 0x0600DBEA RID: 56298 RVA: 0x0020BBAE File Offset: 0x00209DAE
-		[NullableContext(1)]
+		// Token: 0x0600E9C6 RID: 59846 RVA: 0x00228486 File Offset: 0x00226686
 		public static IPhotographPlayerPerform Create(IPhotographPlayerPerform? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004110 RID: 16656
-		// (get) Token: 0x0600DBEB RID: 56299 RVA: 0x0020BBD0 File Offset: 0x00209DD0
+		// Token: 0x17004450 RID: 17488
+		// (get) Token: 0x0600E9C7 RID: 59847 RVA: 0x002284A8 File Offset: 0x002266A8
 		public virtual int? MontageId
 		{
 			get
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004111 RID: 16657
-		// (get) Token: 0x0600DBEC RID: 56300 RVA: 0x0020BC08 File Offset: 0x00209E08
+		// Token: 0x17004451 RID: 17489
+		// (get) Token: 0x0600E9C8 RID: 59848 RVA: 0x002284E0 File Offset: 0x002266E0
 		public virtual int? FaceId
 		{
 			get
@@ -49,7 +47,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007A3E RID: 31294
+		// Token: 0x040080E0 RID: 32992
 		private IPhotographPlayerPerform Instance;
 	}
 }

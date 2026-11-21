@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020003B4 RID: 948
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020003FF RID: 1023
 	public class IFollowTrackToSplineDestination : IFollowTrackEndType
 	{
-		// Token: 0x060012E9 RID: 4841 RVA: 0x0003DE8C File Offset: 0x0003C08C
+		// Token: 0x0600143F RID: 5183 RVA: 0x0004142C File Offset: 0x0003F62C
 		private IFollowTrackToSplineDestination_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060012EA RID: 4842 RVA: 0x0003DEC4 File Offset: 0x0003C0C4
+		// Token: 0x06001440 RID: 5184 RVA: 0x00041464 File Offset: 0x0003F664
 		public static IFollowTrackToSplineDestination Create([Nullable(2)] IFollowTrackToSplineDestination instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060012EB RID: 4843 RVA: 0x0003DED7 File Offset: 0x0003C0D7
+		// Token: 0x06001441 RID: 5185 RVA: 0x00041477 File Offset: 0x0003F677
 		public static IFollowTrackToSplineDestination CreateFromSetValue([Nullable(2)] IFollowTrackToSplineDestination_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060012EC RID: 4844 RVA: 0x0003DEEA File Offset: 0x0003C0EA
+		// Token: 0x06001442 RID: 5186 RVA: 0x0004148A File Offset: 0x0003F68A
 		public new IFollowTrackToSplineDestination_SetValue ToSetValue()
 		{
 			return new IFollowTrackToSplineDestination_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000544 RID: 1348
-		// (get) Token: 0x060012ED RID: 4845 RVA: 0x0003DF09 File Offset: 0x0003C109
-		// (set) Token: 0x060012EE RID: 4846 RVA: 0x0003DF34 File Offset: 0x0003C134
+		// Token: 0x1700059E RID: 1438
+		// (get) Token: 0x06001443 RID: 5187 RVA: 0x000414A9 File Offset: 0x0003F6A9
+		// (set) Token: 0x06001444 RID: 5188 RVA: 0x000414D4 File Offset: 0x0003F6D4
 		public override EFollowTrackEndType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000545 RID: 1349
-		// (get) Token: 0x060012EF RID: 4847 RVA: 0x0003DF42 File Offset: 0x0003C142
-		// (set) Token: 0x060012F0 RID: 4848 RVA: 0x0003DF6D File Offset: 0x0003C16D
+		// Token: 0x1700059F RID: 1439
+		// (get) Token: 0x06001445 RID: 5189 RVA: 0x000414E2 File Offset: 0x0003F6E2
+		// (set) Token: 0x06001446 RID: 5190 RVA: 0x0004150D File Offset: 0x0003F70D
 		public virtual string ChangeSelfState
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000F21 RID: 3873
+		// Token: 0x04001022 RID: 4130
 		[Nullable(2)]
 		protected new IFollowTrackToSplineDestination FbInstance;
 
-		// Token: 0x04000F22 RID: 3874
+		// Token: 0x04001023 RID: 4131
 		[Nullable(2)]
 		protected new IFollowTrackToSplineDestination_SetValue PocoInterface;
 	}

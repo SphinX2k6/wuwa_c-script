@@ -2,13 +2,13 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02002559 RID: 9561
+// Token: 0x02001A44 RID: 6724
 [NullableContext(1)]
 [Nullable(0)]
 public class PhotoMontageItemData
 {
-	// Token: 0x170018E3 RID: 6371
-	// (get) Token: 0x0601348F RID: 78991 RVA: 0x004CC1FA File Offset: 0x004CA3FA
+	// Token: 0x1700191C RID: 6428
+	// (get) Token: 0x0601096F RID: 67951 RVA: 0x004DAD36 File Offset: 0x004D8F36
 	public bool IsDefault
 	{
 		get
@@ -17,8 +17,8 @@ public class PhotoMontageItemData
 		}
 	}
 
-	// Token: 0x170018E4 RID: 6372
-	// (get) Token: 0x06013490 RID: 78992 RVA: 0x004CC20C File Offset: 0x004CA40C
+	// Token: 0x1700191D RID: 6429
+	// (get) Token: 0x06010970 RID: 67952 RVA: 0x004DAD48 File Offset: 0x004D8F48
 	public string Name
 	{
 		get
@@ -27,7 +27,7 @@ public class PhotoMontageItemData
 		}
 	}
 
-	// Token: 0x06013491 RID: 78993 RVA: 0x004CC241 File Offset: 0x004CA441
+	// Token: 0x06010971 RID: 67953 RVA: 0x004DAD7D File Offset: 0x004D8F7D
 	public static PhotoMontageItemData FromConfig(PhotoMontage cfg)
 	{
 		return new PhotoMontageItemData
@@ -37,7 +37,7 @@ public class PhotoMontageItemData
 		};
 	}
 
-	// Token: 0x06013492 RID: 78994 RVA: 0x004CC261 File Offset: 0x004CA461
+	// Token: 0x06010972 RID: 67954 RVA: 0x004DAD9D File Offset: 0x004D8F9D
 	public static PhotoMontageItemData CreateDefault()
 	{
 		return new PhotoMontageItemData
@@ -46,9 +46,9 @@ public class PhotoMontageItemData
 		};
 	}
 
-	// Token: 0x04009183 RID: 37251
+	// Token: 0x040092DC RID: 37596
 	public int Id;
 
-	// Token: 0x04009184 RID: 37252
+	// Token: 0x040092DD RID: 37597
 	public PhotoMontage? MontageConfig;
 }

@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 {
-	// Token: 0x02006E8E RID: 28302
+	// Token: 0x0200600F RID: 24591
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class WoodenBoxProliferateHelper
 	{
-		// Token: 0x06044F90 RID: 282512 RVA: 0x0110B8C8 File Offset: 0x01109AC8
+		// Token: 0x0603B144 RID: 241988 RVA: 0x010B5D24 File Offset: 0x010B3F24
 		[return: Nullable(2)]
 		public static ILevelPrefabParamsConfig GetParamsConfig(Entity entity)
 		{
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return levelPrefabParamsConfig;
 		}
 
-		// Token: 0x06044F91 RID: 282513 RVA: 0x0110B920 File Offset: 0x01109B20
+		// Token: 0x0603B145 RID: 241989 RVA: 0x010B5D7C File Offset: 0x010B3F7C
 		[NullableContext(2)]
 		public static BP_PlantLauncher_C ResolvePlantLauncher(AActor refActor)
 		{
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return (BP_PlantLauncher_C)refActor;
 		}
 
-		// Token: 0x06044F92 RID: 282514 RVA: 0x0110B960 File Offset: 0x01109B60
+		// Token: 0x0603B146 RID: 241990 RVA: 0x010B5DBC File Offset: 0x010B3FBC
 		public static string GetActorClassName([Nullable(2)] AActor refActor)
 		{
 			if (refActor == null || !refActor.IsValid())
@@ -54,21 +54,21 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return refActor.GetClass().GetName();
 		}
 
-		// Token: 0x06044F93 RID: 282515 RVA: 0x0110B98C File Offset: 0x01109B8C
+		// Token: 0x0603B147 RID: 241991 RVA: 0x010B5DE8 File Offset: 0x010B3FE8
 		public static void Launch(BP_PlantLauncher_C actor, IWoodenBoxProliferateParams parameters)
 		{
 			WoodenBoxProliferateHelper.ProliferateArgs proliferateArgs = WoodenBoxProliferateHelper.ResolveArgs(parameters);
 			actor.RequestLaunch(proliferateArgs.PlantType, proliferateArgs.Radius, proliferateArgs.Count, proliferateArgs.Positions, proliferateArgs.Duration);
 		}
 
-		// Token: 0x06044F94 RID: 282516 RVA: 0x0110B9C8 File Offset: 0x01109BC8
+		// Token: 0x0603B148 RID: 241992 RVA: 0x010B5E24 File Offset: 0x010B4024
 		public static void Restore(BP_PlantLauncher_C actor, IWoodenBoxProliferateParams parameters)
 		{
 			WoodenBoxProliferateHelper.ProliferateArgs proliferateArgs = WoodenBoxProliferateHelper.ResolveArgs(parameters);
 			actor.RestorePlants(proliferateArgs.PlantType, proliferateArgs.Radius, proliferateArgs.Count, proliferateArgs.Positions);
 		}
 
-		// Token: 0x06044F95 RID: 282517 RVA: 0x0110B9FC File Offset: 0x01109BFC
+		// Token: 0x0603B149 RID: 241993 RVA: 0x010B5E58 File Offset: 0x010B4058
 		private static WoodenBoxProliferateHelper.ProliferateArgs ResolveArgs(IWoodenBoxProliferateParams parameters)
 		{
 			EPlantType plantType;
@@ -106,10 +106,10 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			};
 		}
 
-		// Token: 0x04023EAB RID: 147115
+		// Token: 0x0401F163 RID: 127331
 		private const string PLANT_LAUNCHER_CLASS_NAME = "BP_PlantLauncher_C";
 
-		// Token: 0x04023EAC RID: 147116
+		// Token: 0x0401F164 RID: 127332
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<EWoodenBoxProliferateVisualType, EPlantType> PlantTypeMap = new Dictionary<EWoodenBoxProliferateVisualType, EPlantType>
 		{
@@ -139,27 +139,27 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		};
 
-		// Token: 0x04023EAD RID: 147117
+		// Token: 0x0401F165 RID: 127333
 		private const float DEFAULT_PROLIFERATE_DURATION = 1f;
 
-		// Token: 0x0200CD2D RID: 52525
+		// Token: 0x0200B91D RID: 47389
 		[NullableContext(0)]
 		private struct ProliferateArgs
 		{
-			// Token: 0x0403DDB3 RID: 253363
+			// Token: 0x040391D5 RID: 233941
 			public EPlantType PlantType;
 
-			// Token: 0x0403DDB4 RID: 253364
+			// Token: 0x040391D6 RID: 233942
 			public float Radius;
 
-			// Token: 0x0403DDB5 RID: 253365
+			// Token: 0x040391D7 RID: 233943
 			public int Count;
 
-			// Token: 0x0403DDB6 RID: 253366
+			// Token: 0x040391D8 RID: 233944
 			[Nullable(1)]
 			public TArray<FVector> Positions;
 
-			// Token: 0x0403DDB7 RID: 253367
+			// Token: 0x040391D9 RID: 233945
 			public float Duration;
 		}
 	}

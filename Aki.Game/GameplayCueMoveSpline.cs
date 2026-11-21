@@ -4,10 +4,10 @@ using AkiClient.Game.Aki.AI.AIMoveSplineCount;
 using CSharpScript.Game.Effect;
 using UnrealEngine;
 
-// Token: 0x02002FCE RID: 12238
+// Token: 0x02002522 RID: 9506
 public class GameplayCueMoveSpline : GameplayCueEffect
 {
-	// Token: 0x06019F1E RID: 106270 RVA: 0x006C996C File Offset: 0x006C7B6C
+	// Token: 0x06017830 RID: 96304 RVA: 0x006F0240 File Offset: 0x006EE440
 	protected override void OnTick(float delta)
 	{
 		base.OnTick(delta);
@@ -22,14 +22,14 @@ public class GameplayCueMoveSpline : GameplayCueEffect
 		}
 	}
 
-	// Token: 0x06019F1F RID: 106271 RVA: 0x006C99EE File Offset: 0x006C7BEE
+	// Token: 0x06017831 RID: 96305 RVA: 0x006F02C2 File Offset: 0x006EE4C2
 	protected override void OnDestroy()
 	{
 		ActorSystem.Instance.Put("GameplayCueMoveSpline.OnDestroy", this.KuroMoveSplineInternal.GetOwner(), null);
 		base.OnDestroy();
 	}
 
-	// Token: 0x06019F20 RID: 106272 RVA: 0x006C9A14 File Offset: 0x006C7C14
+	// Token: 0x06017832 RID: 96306 RVA: 0x006F02E8 File Offset: 0x006EE4E8
 	protected unsafe override void AttachEffect(bool _ = false)
 	{
 		<>y__InlineArray4<FVector> <>y__InlineArray = default(<>y__InlineArray4<FVector>);
@@ -50,13 +50,21 @@ public class GameplayCueMoveSpline : GameplayCueEffect
 		TArray<FSplinePoint> tarray = new TArray<FSplinePoint>();
 		for (int i = 0; i < span.Length; i++)
 		{
-			FSplinePoint value = new FSplinePoint((float)i, *span[i], *span2[i], *span2[i], Rotator.ZeroRotator, Vector.OneVector, ESplinePointType.CurveCustomTangent);
+			FSplinePoint value = new FSplinePoint
+			{
+				InputKey = (float)i,
+				Position = *span[i],
+				ArriveTangent = *span2[i],
+				LeaveTangent = *span2[i],
+				Scale = Vector.OneVector,
+				Type = ESplinePointType.CurveCustomTangent
+			};
 			tarray.Add(value);
 		}
 		this.KuroMoveSplineInternal.AddPoints(tarray, true);
 	}
 
-	// Token: 0x06019F21 RID: 106273 RVA: 0x006C9BE8 File Offset: 0x006C7DE8
+	// Token: 0x06017833 RID: 96307 RVA: 0x006F04DC File Offset: 0x006EE6DC
 	[NullableContext(1)]
 	private UKuroMoveSplineComponent SpawnKuroMoveSpline()
 	{
@@ -67,31 +75,31 @@ public class GameplayCueMoveSpline : GameplayCueEffect
 		return aactor.D_AddComponentByClass(@class, bManualAttachment, ftransformDouble, false, default(FName)) as UKuroMoveSplineComponent;
 	}
 
-	// Token: 0x0400C45A RID: 50266
+	// Token: 0x0400C803 RID: 51203
 	private const float WIDTH = 70f;
 
-	// Token: 0x0400C45B RID: 50267
+	// Token: 0x0400C804 RID: 51204
 	private const float LENGTH = 100f;
 
-	// Token: 0x0400C45C RID: 50268
+	// Token: 0x0400C805 RID: 51205
 	private const float TANGENT = 130f;
 
-	// Token: 0x0400C45D RID: 50269
+	// Token: 0x0400C806 RID: 51206
 	private const float SPLINE_MOVE_SPEED = 520f;
 
-	// Token: 0x0400C45E RID: 50270
+	// Token: 0x0400C807 RID: 51207
 	private const float SPLINE_ROTATION_SPEED = 20f;
 
-	// Token: 0x0400C45F RID: 50271
+	// Token: 0x0400C808 RID: 51208
 	[Nullable(2)]
 	private UKuroMoveSplineComponent KuroMoveSplineInternal;
 
-	// Token: 0x0400C460 RID: 50272
+	// Token: 0x0400C809 RID: 51209
 	private float SplinePosition;
 
-	// Token: 0x0400C461 RID: 50273
+	// Token: 0x0400C80A RID: 51210
 	private float SplineRotationSpeedAccumulation;
 
-	// Token: 0x0400C462 RID: 50274
+	// Token: 0x0400C80B RID: 51211
 	private bool IsBackward;
 }

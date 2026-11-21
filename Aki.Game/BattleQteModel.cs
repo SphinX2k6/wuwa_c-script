@@ -5,13 +5,13 @@ using AkiClient.Game.Aki.Data.Qte;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x02002601 RID: 9729
+// Token: 0x02001AEC RID: 6892
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class BattleQteModel : ModelBase
 {
-	// Token: 0x06013CCD RID: 81101 RVA: 0x004F7679 File Offset: 0x004F5879
+	// Token: 0x060111AF RID: 70063 RVA: 0x00506455 File Offset: 0x00504655
 	protected override bool OnInit()
 	{
 		if (!EventSystem.Instance.Has<int?>(EEventName.CommonQteEnd, new Action<int?>(this.OnCommonQteEnd)))
@@ -21,7 +21,7 @@ public class BattleQteModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06013CCE RID: 81102 RVA: 0x004F76B5 File Offset: 0x004F58B5
+	// Token: 0x060111B0 RID: 70064 RVA: 0x00506491 File Offset: 0x00504691
 	protected override bool OnClear()
 	{
 		if (EventSystem.Instance.Has<int?>(EEventName.CommonQteEnd, new Action<int?>(this.OnCommonQteEnd)))
@@ -31,7 +31,7 @@ public class BattleQteModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06013CCF RID: 81103 RVA: 0x004F76F4 File Offset: 0x004F58F4
+	// Token: 0x060111B1 RID: 70065 RVA: 0x005064D0 File Offset: 0x005046D0
 	private void OnCommonQteEnd(int? commonQteHandleId)
 	{
 		BattleQteContext battleQteContext = this.GetBattleQteContext(this.GetBattleQteHandleId());
@@ -51,7 +51,7 @@ public class BattleQteModel : ModelBase
 		}
 	}
 
-	// Token: 0x06013CD0 RID: 81104 RVA: 0x004F774C File Offset: 0x004F594C
+	// Token: 0x060111B2 RID: 70066 RVA: 0x00506528 File Offset: 0x00504728
 	protected override bool OnLeaveLevel()
 	{
 		Dictionary<int, BattleQteContext> battleContexts = this.BattleContexts;
@@ -63,7 +63,7 @@ public class BattleQteModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06013CD1 RID: 81105 RVA: 0x004F7768 File Offset: 0x004F5968
+	// Token: 0x060111B3 RID: 70067 RVA: 0x00506544 File Offset: 0x00504744
 	[return: Nullable(2)]
 	public BattleQteContext CreateBattleQteContext(int battleQteId, long messageId, EntityHandle entityHandle, EBattleQteSource source)
 	{
@@ -84,7 +84,7 @@ public class BattleQteModel : ModelBase
 		return battleQteContext;
 	}
 
-	// Token: 0x06013CD2 RID: 81106 RVA: 0x004F77D8 File Offset: 0x004F59D8
+	// Token: 0x060111B4 RID: 70068 RVA: 0x005065B4 File Offset: 0x005047B4
 	[NullableContext(2)]
 	public SBattleQte GetBattleQteConfig(int battleQteId)
 	{
@@ -105,7 +105,7 @@ public class BattleQteModel : ModelBase
 		return dataTableRow;
 	}
 
-	// Token: 0x06013CD3 RID: 81107 RVA: 0x004F784C File Offset: 0x004F5A4C
+	// Token: 0x060111B5 RID: 70069 RVA: 0x00506628 File Offset: 0x00504828
 	public void SetCurrentBattleQte(BattleQteContext context)
 	{
 		this.BattleHandleId = context.BattleQteHandleId;
@@ -116,19 +116,19 @@ public class BattleQteModel : ModelBase
 		this.BattleContexts[context.BattleQteHandleId] = context;
 	}
 
-	// Token: 0x06013CD4 RID: 81108 RVA: 0x004F787F File Offset: 0x004F5A7F
+	// Token: 0x060111B6 RID: 70070 RVA: 0x0050665B File Offset: 0x0050485B
 	public int GetBattleQteHandleId()
 	{
 		return this.BattleHandleId;
 	}
 
-	// Token: 0x06013CD5 RID: 81109 RVA: 0x004F7887 File Offset: 0x004F5A87
+	// Token: 0x060111B7 RID: 70071 RVA: 0x00506663 File Offset: 0x00504863
 	public void ClearBattleQteHandleId()
 	{
 		this.BattleHandleId = -1;
 	}
 
-	// Token: 0x06013CD6 RID: 81110 RVA: 0x004F7890 File Offset: 0x004F5A90
+	// Token: 0x060111B8 RID: 70072 RVA: 0x0050666C File Offset: 0x0050486C
 	[NullableContext(2)]
 	public BattleQteContext GetBattleQteContext(int qteHandleId)
 	{
@@ -140,8 +140,8 @@ public class BattleQteModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x1700195C RID: 6492
-	// (get) Token: 0x06013CD7 RID: 81111 RVA: 0x004F78B8 File Offset: 0x004F5AB8
+	// Token: 0x17001994 RID: 6548
+	// (get) Token: 0x060111B9 RID: 70073 RVA: 0x00506694 File Offset: 0x00504894
 	public static BattleQteModel Instance
 	{
 		get
@@ -150,7 +150,7 @@ public class BattleQteModel : ModelBase
 		}
 	}
 
-	// Token: 0x06013CD8 RID: 81112 RVA: 0x004F78BF File Offset: 0x004F5ABF
+	// Token: 0x060111BA RID: 70074 RVA: 0x0050669B File Offset: 0x0050489B
 	public static BattleQteModel GetOrCreateInstance()
 	{
 		if (BattleQteModel._Instance == null)
@@ -160,7 +160,7 @@ public class BattleQteModel : ModelBase
 		return BattleQteModel._Instance;
 	}
 
-	// Token: 0x06013CD9 RID: 81113 RVA: 0x004F78D3 File Offset: 0x004F5AD3
+	// Token: 0x060111BB RID: 70075 RVA: 0x005066AF File Offset: 0x005048AF
 	public static bool CreateInstance()
 	{
 		if (BattleQteModel._Instance != null)
@@ -171,37 +171,37 @@ public class BattleQteModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06013CDA RID: 81114 RVA: 0x004F78E9 File Offset: 0x004F5AE9
+	// Token: 0x060111BC RID: 70076 RVA: 0x005066C5 File Offset: 0x005048C5
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06013CDB RID: 81115 RVA: 0x004F78EB File Offset: 0x004F5AEB
+	// Token: 0x060111BD RID: 70077 RVA: 0x005066C7 File Offset: 0x005048C7
 	public static void ResetStaticDefaultValue()
 	{
 		BattleQteModel._Instance = null;
 	}
 
-	// Token: 0x06013CDC RID: 81116 RVA: 0x004F78F3 File Offset: 0x004F5AF3
+	// Token: 0x060111BE RID: 70078 RVA: 0x005066CF File Offset: 0x005048CF
 	static BattleQteModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BattleQteModel.CreateStaticDefaultValue), new Action(BattleQteModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04009530 RID: 38192
+	// Token: 0x04009687 RID: 38535
 	private const string DT_BATTLE_QTE_PATH = "/Game/Aki/Data/Qte/DT_BattleQte.DT_BattleQte";
 
-	// Token: 0x04009531 RID: 38193
+	// Token: 0x04009688 RID: 38536
 	private int BattleHandleIdCounter;
 
-	// Token: 0x04009532 RID: 38194
+	// Token: 0x04009689 RID: 38537
 	private int BattleHandleId;
 
-	// Token: 0x04009533 RID: 38195
+	// Token: 0x0400968A RID: 38538
 	[Nullable(2)]
 	private UDataTable BattleQteDt;
 
-	// Token: 0x04009534 RID: 38196
+	// Token: 0x0400968B RID: 38539
 	[Nullable(new byte[]
 	{
 		2,
@@ -209,7 +209,7 @@ public class BattleQteModel : ModelBase
 	})]
 	private Dictionary<int, BattleQteContext> BattleContexts;
 
-	// Token: 0x04009535 RID: 38197
+	// Token: 0x0400968C RID: 38540
 	[Nullable(2)]
 	private static BattleQteModel _Instance;
 }

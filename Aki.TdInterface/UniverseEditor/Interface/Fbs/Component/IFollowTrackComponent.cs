@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020052A9 RID: 21161
+	// Token: 0x02005814 RID: 22548
 	public struct IFollowTrackComponent : IFlatbufferObject
 	{
-		// Token: 0x17009B2B RID: 39723
-		// (get) Token: 0x060227EE RID: 141294 RVA: 0x004C82F0 File Offset: 0x004C64F0
+		// Token: 0x1700A334 RID: 41780
+		// (get) Token: 0x060247B2 RID: 149426 RVA: 0x005033E9 File Offset: 0x005015E9
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060227EF RID: 141295 RVA: 0x004C82FD File Offset: 0x004C64FD
+		// Token: 0x060247B3 RID: 149427 RVA: 0x005033F6 File Offset: 0x005015F6
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060227F0 RID: 141296 RVA: 0x004C8304 File Offset: 0x004C6504
+		// Token: 0x060247B4 RID: 149428 RVA: 0x00503400 File Offset: 0x00501600
 		public static IFollowTrackComponent GetRootAsIFollowTrackComponent(ByteBuffer _bb)
 		{
 			return IFollowTrackComponent.GetRootAsIFollowTrackComponent(_bb, default(IFollowTrackComponent));
 		}
 
-		// Token: 0x060227F1 RID: 141297 RVA: 0x004C8320 File Offset: 0x004C6520
+		// Token: 0x060247B5 RID: 149429 RVA: 0x0050341C File Offset: 0x0050161C
 		public static IFollowTrackComponent GetRootAsIFollowTrackComponent(ByteBuffer _bb, IFollowTrackComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060227F2 RID: 141298 RVA: 0x004C833D File Offset: 0x004C653D
+		// Token: 0x060247B6 RID: 149430 RVA: 0x00503439 File Offset: 0x00501639
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060227F3 RID: 141299 RVA: 0x004C834C File Offset: 0x004C654C
+		// Token: 0x060247B7 RID: 149431 RVA: 0x00503448 File Offset: 0x00501648
 		public IFollowTrackComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009B2C RID: 39724
-		// (get) Token: 0x060227F4 RID: 141300 RVA: 0x004C835C File Offset: 0x004C655C
+		// Token: 0x1700A335 RID: 41781
+		// (get) Token: 0x060247B8 RID: 149432 RVA: 0x00503458 File Offset: 0x00501658
 		public bool Disabled
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009B2D RID: 39725
-		// (get) Token: 0x060227F5 RID: 141301 RVA: 0x004C839C File Offset: 0x004C659C
+		// Token: 0x1700A336 RID: 41782
+		// (get) Token: 0x060247B9 RID: 149433 RVA: 0x00503498 File Offset: 0x00501698
 		public float Range
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009B2E RID: 39726
-		// (get) Token: 0x060227F6 RID: 141302 RVA: 0x004C83DC File Offset: 0x004C65DC
+		// Token: 0x1700A337 RID: 41783
+		// (get) Token: 0x060247BA RID: 149434 RVA: 0x005034D8 File Offset: 0x005016D8
 		public int SplineEntityId
 		{
 			get
@@ -88,8 +88,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009B2F RID: 39727
-		// (get) Token: 0x060227F7 RID: 141303 RVA: 0x004C8418 File Offset: 0x004C6618
+		// Token: 0x1700A338 RID: 41784
+		// (get) Token: 0x060247BB RID: 149435 RVA: 0x00503514 File Offset: 0x00501714
 		public TFollowTrackEndOption EndTypeType
 		{
 			get
@@ -103,7 +103,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060227F8 RID: 141304 RVA: 0x004C8458 File Offset: 0x004C6658
+		// Token: 0x060247BC RID: 149436 RVA: 0x00503554 File Offset: 0x00501754
 		public TTable? EndType<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(12);
@@ -114,26 +114,26 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x060227F9 RID: 141305 RVA: 0x004C84A0 File Offset: 0x004C66A0
+		// Token: 0x060247BD RID: 149437 RVA: 0x0050359C File Offset: 0x0050179C
 		public IFollowTrackToFoundation EndTypeAsIFollowTrackToFoundation()
 		{
 			return this.EndType<IFollowTrackToFoundation>().Value;
 		}
 
-		// Token: 0x060227FA RID: 141306 RVA: 0x004C84BC File Offset: 0x004C66BC
+		// Token: 0x060247BE RID: 149438 RVA: 0x005035B8 File Offset: 0x005017B8
 		public IFollowTrackToSplineDestination EndTypeAsIFollowTrackToSplineDestination()
 		{
 			return this.EndType<IFollowTrackToSplineDestination>().Value;
 		}
 
-		// Token: 0x060227FB RID: 141307 RVA: 0x004C84D8 File Offset: 0x004C66D8
+		// Token: 0x060247BF RID: 149439 RVA: 0x005035D4 File Offset: 0x005017D4
 		public IFollowTrackToStart EndTypeAsIFollowTrackToStart()
 		{
 			return this.EndType<IFollowTrackToStart>().Value;
 		}
 
-		// Token: 0x17009B30 RID: 39728
-		// (get) Token: 0x060227FC RID: 141308 RVA: 0x004C84F4 File Offset: 0x004C66F4
+		// Token: 0x1700A339 RID: 41785
+		// (get) Token: 0x060247C0 RID: 149440 RVA: 0x005035F0 File Offset: 0x005017F0
 		public byte NullMask
 		{
 			get
@@ -147,7 +147,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060227FD RID: 141309 RVA: 0x004C8531 File Offset: 0x004C6731
+		// Token: 0x060247C1 RID: 149441 RVA: 0x0050362D File Offset: 0x0050182D
 		public static Offset<IFollowTrackComponent> CreateIFollowTrackComponent(FlatBufferBuilder builder, bool Disabled = false, float Range = 0f, int SplineEntityId = 0, TFollowTrackEndOption EndType_type = TFollowTrackEndOption.NONE, int EndTypeOffset = 0, byte NullMask = 0)
 		{
 			builder.StartTable(6);
@@ -160,55 +160,55 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFollowTrackComponent.EndIFollowTrackComponent(builder);
 		}
 
-		// Token: 0x060227FE RID: 141310 RVA: 0x004C856D File Offset: 0x004C676D
+		// Token: 0x060247C2 RID: 149442 RVA: 0x00503669 File Offset: 0x00501869
 		public static void StartIFollowTrackComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x060227FF RID: 141311 RVA: 0x004C8576 File Offset: 0x004C6776
+		// Token: 0x060247C3 RID: 149443 RVA: 0x00503672 File Offset: 0x00501872
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x06022800 RID: 141312 RVA: 0x004C8581 File Offset: 0x004C6781
+		// Token: 0x060247C4 RID: 149444 RVA: 0x0050367D File Offset: 0x0050187D
 		public static void AddRange(FlatBufferBuilder builder, float range)
 		{
 			builder.AddFloat(1, range, 0.0);
 		}
 
-		// Token: 0x06022801 RID: 141313 RVA: 0x004C8594 File Offset: 0x004C6794
+		// Token: 0x060247C5 RID: 149445 RVA: 0x00503690 File Offset: 0x00501890
 		public static void AddSplineEntityId(FlatBufferBuilder builder, int splineEntityId)
 		{
 			builder.AddInt(2, splineEntityId, 0);
 		}
 
-		// Token: 0x06022802 RID: 141314 RVA: 0x004C859F File Offset: 0x004C679F
+		// Token: 0x060247C6 RID: 149446 RVA: 0x0050369B File Offset: 0x0050189B
 		public static void AddEndTypeType(FlatBufferBuilder builder, TFollowTrackEndOption endTypeType)
 		{
 			builder.AddByte(3, (byte)endTypeType, 0);
 		}
 
-		// Token: 0x06022803 RID: 141315 RVA: 0x004C85AA File Offset: 0x004C67AA
+		// Token: 0x060247C7 RID: 149447 RVA: 0x005036A6 File Offset: 0x005018A6
 		public static void AddEndType(FlatBufferBuilder builder, int endTypeOffset)
 		{
 			builder.AddOffset(4, endTypeOffset, 0);
 		}
 
-		// Token: 0x06022804 RID: 141316 RVA: 0x004C85B5 File Offset: 0x004C67B5
+		// Token: 0x060247C8 RID: 149448 RVA: 0x005036B1 File Offset: 0x005018B1
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(5, nullMask, 0);
 		}
 
-		// Token: 0x06022805 RID: 141317 RVA: 0x004C85C0 File Offset: 0x004C67C0
+		// Token: 0x060247C9 RID: 149449 RVA: 0x005036BC File Offset: 0x005018BC
 		public static Offset<IFollowTrackComponent> EndIFollowTrackComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<IFollowTrackComponent>(builder.EndTable());
 		}
 
-		// Token: 0x06022806 RID: 141318 RVA: 0x004C85D0 File Offset: 0x004C67D0
+		// Token: 0x060247CA RID: 149450 RVA: 0x005036CC File Offset: 0x005018CC
 		public IFollowTrackComponentT UnPack()
 		{
 			IFollowTrackComponentT followTrackComponentT = new IFollowTrackComponentT();
@@ -216,7 +216,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return followTrackComponentT;
 		}
 
-		// Token: 0x06022807 RID: 141319 RVA: 0x004C85EC File Offset: 0x004C67EC
+		// Token: 0x060247CB RID: 149451 RVA: 0x005036E8 File Offset: 0x005018E8
 		public void UnPackTo(IFollowTrackComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -239,7 +239,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06022808 RID: 141320 RVA: 0x004C870C File Offset: 0x004C690C
+		// Token: 0x060247CC RID: 149452 RVA: 0x00503808 File Offset: 0x00501A08
 		public static Offset<IFollowTrackComponent> Pack(FlatBufferBuilder builder, IFollowTrackComponentT _o)
 		{
 			if (_o == null)
@@ -251,7 +251,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFollowTrackComponent.CreateIFollowTrackComponent(builder, _o.Disabled, _o.Range, _o.SplineEntityId, endType_type, endTypeOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400E422 RID: 58402
+		// Token: 0x0400F02F RID: 61487
 		private Table __p;
 	}
 }

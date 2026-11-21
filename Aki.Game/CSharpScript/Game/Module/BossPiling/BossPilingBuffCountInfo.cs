@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.Module.BossPiling
 {
-	// Token: 0x02005C06 RID: 23558
+	// Token: 0x02004BE6 RID: 19430
 	public class BossPilingBuffCountInfo : IBossPilingBuffCountInfo
 	{
-		// Token: 0x17008D9B RID: 36251
-		// (get) Token: 0x0603B897 RID: 243863 RVA: 0x00E32200 File Offset: 0x00E30400
-		// (set) Token: 0x0603B898 RID: 243864 RVA: 0x00E32208 File Offset: 0x00E30408
+		// Token: 0x1700616D RID: 24941
+		// (get) Token: 0x060307E2 RID: 198626 RVA: 0x00D82540 File Offset: 0x00D80740
+		// (set) Token: 0x060307E3 RID: 198627 RVA: 0x00D82548 File Offset: 0x00D80748
 		public int BuffId { get; set; }
 
-		// Token: 0x17008D9C RID: 36252
-		// (get) Token: 0x0603B899 RID: 243865 RVA: 0x00E32211 File Offset: 0x00E30411
-		// (set) Token: 0x0603B89A RID: 243866 RVA: 0x00E32219 File Offset: 0x00E30419
+		// Token: 0x1700616E RID: 24942
+		// (get) Token: 0x060307E4 RID: 198628 RVA: 0x00D82551 File Offset: 0x00D80751
+		// (set) Token: 0x060307E5 RID: 198629 RVA: 0x00D82559 File Offset: 0x00D80759
 		public int Count { get; set; }
 	}
 }

@@ -6,10 +6,10 @@ using Aki.Protocol;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001BA2 RID: 7074
+// Token: 0x02001061 RID: 4193
 public class FloroRanchTechDetailPanel : UiPanelBase
 {
-	// Token: 0x0600D2A0 RID: 53920 RVA: 0x003066A4 File Offset: 0x003048A4
+	// Token: 0x0600A6B1 RID: 42673 RVA: 0x00311784 File Offset: 0x0030F984
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -39,7 +39,7 @@ public class FloroRanchTechDetailPanel : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600D2A1 RID: 53921 RVA: 0x00306818 File Offset: 0x00304A18
+	// Token: 0x0600A6B2 RID: 42674 RVA: 0x003118F8 File Offset: 0x0030FAF8
 	protected override void OnStart()
 	{
 		TermExplanationRegistryParam param = new TermExplanationRegistryParam
@@ -56,13 +56,13 @@ public class FloroRanchTechDetailPanel : UiPanelBase
 		this.UnlockBtn.SetFunction(new Action<int>(this.OnClickBtnUnlock));
 	}
 
-	// Token: 0x0600D2A2 RID: 53922 RVA: 0x0030689F File Offset: 0x00304A9F
+	// Token: 0x0600A6B3 RID: 42675 RVA: 0x0031197F File Offset: 0x0030FB7F
 	protected override void OnBeforeDestroy()
 	{
 		TermExplanationController.Instance.UnRegisterTextHyperlink(base.GetText(2));
 	}
 
-	// Token: 0x0600D2A3 RID: 53923 RVA: 0x003068B4 File Offset: 0x00304AB4
+	// Token: 0x0600A6B4 RID: 42676 RVA: 0x00311994 File Offset: 0x0030FB94
 	[NullableContext(1)]
 	public void Refresh(FloroRanchTechnologyData data)
 	{
@@ -110,7 +110,7 @@ public class FloroRanchTechDetailPanel : UiPanelBase
 		sprite3.SetUIActive(!data.IsUnLock);
 	}
 
-	// Token: 0x0600D2A4 RID: 53924 RVA: 0x00306A4C File Offset: 0x00304C4C
+	// Token: 0x0600A6B5 RID: 42677 RVA: 0x00311B2C File Offset: 0x0030FD2C
 	private void OnClickBtnUnlock(int _)
 	{
 		if (FloroRanchModel.Instance.GetActivityData(EFloroRanchActivityDataType.Normal, true).GetTechnologyCoinNum() < this.Data.Cost)
@@ -130,51 +130,51 @@ public class FloroRanchTechDetailPanel : UiPanelBase
 		});
 	}
 
-	// Token: 0x0400608D RID: 24717
+	// Token: 0x0400615C RID: 24924
 	[Nullable(2)]
 	public FloroRanchTechnologyData Data;
 
-	// Token: 0x0400608E RID: 24718
+	// Token: 0x0400615D RID: 24925
 	[Nullable(2)]
 	private ButtonItem UnlockBtn;
 
-	// Token: 0x0400608F RID: 24719
+	// Token: 0x0400615E RID: 24926
 	[Nullable(1)]
 	public Action<string> UnlockSuccessCallback = delegate(string textId)
 	{
 	};
 
-	// Token: 0x0200813E RID: 33086
+	// Token: 0x020072CC RID: 29388
 	private class EComponents
 	{
-		// Token: 0x0402A2FA RID: 172794
+		// Token: 0x0402562E RID: 153134
 		public const int TxtName = 0;
 
-		// Token: 0x0402A2FB RID: 172795
+		// Token: 0x0402562F RID: 153135
 		public const int SpriteIcon = 1;
 
-		// Token: 0x0402A2FC RID: 172796
+		// Token: 0x04025630 RID: 153136
 		public const int TxtDesc = 2;
 
-		// Token: 0x0402A2FD RID: 172797
+		// Token: 0x04025631 RID: 153137
 		public const int TxtCost = 3;
 
-		// Token: 0x0402A2FE RID: 172798
+		// Token: 0x04025632 RID: 153138
 		public const int ItemUnlockBtn = 4;
 
-		// Token: 0x0402A2FF RID: 172799
+		// Token: 0x04025633 RID: 153139
 		public const int ItemUnlockPanel = 5;
 
-		// Token: 0x0402A300 RID: 172800
+		// Token: 0x04025634 RID: 153140
 		public const int ItemLockPanel = 6;
 
-		// Token: 0x0402A301 RID: 172801
+		// Token: 0x04025635 RID: 153141
 		public const int PanelCost = 7;
 
-		// Token: 0x0402A302 RID: 172802
+		// Token: 0x04025636 RID: 153142
 		public const int SpriteIconBg = 8;
 
-		// Token: 0x0402A303 RID: 172803
+		// Token: 0x04025637 RID: 153143
 		public const int SpriteIconBgLock = 9;
 	}
 }

@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02000F67 RID: 3943
+// Token: 0x0200041C RID: 1052
 [Nullable(new byte[]
 {
 	0,
@@ -12,7 +12,7 @@ using UnrealEngine;
 })]
 public class DrinksQTESectionFlaovr : GridProxyAbstract<IQTEFlavorInfo>
 {
-	// Token: 0x060064E5 RID: 25829 RVA: 0x001402C7 File Offset: 0x0013E4C7
+	// Token: 0x0600387D RID: 14461 RVA: 0x00148B63 File Offset: 0x00146D63
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -22,7 +22,7 @@ public class DrinksQTESectionFlaovr : GridProxyAbstract<IQTEFlavorInfo>
 		};
 	}
 
-	// Token: 0x060064E6 RID: 25830 RVA: 0x00140300 File Offset: 0x0013E500
+	// Token: 0x0600387E RID: 14462 RVA: 0x00148B9C File Offset: 0x00146D9C
 	[NullableContext(1)]
 	public override void Refresh(IQTEFlavorInfo data, bool isSelected, int gridIndex)
 	{
@@ -35,13 +35,13 @@ public class DrinksQTESectionFlaovr : GridProxyAbstract<IQTEFlavorInfo>
 		text.SetText(data.Value.ToString(), true);
 	}
 
-	// Token: 0x020075B2 RID: 30130
+	// Token: 0x02006746 RID: 26438
 	private static class EFlavor
 	{
-		// Token: 0x04026E65 RID: 159333
+		// Token: 0x040221B0 RID: 139696
 		public const int TexIcon = 0;
 
-		// Token: 0x04026E66 RID: 159334
+		// Token: 0x040221B1 RID: 139697
 		public const int Txt = 1;
 	}
 }

@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E25 RID: 20005
+	// Token: 0x02003DEE RID: 15854
 	public class RoguelikeSettleCurrencyItem : UiPanelBase
 	{
-		// Token: 0x06033976 RID: 211318 RVA: 0x00C117D8 File Offset: 0x00C0F9D8
+		// Token: 0x060287E1 RID: 165857 RVA: 0x00B5AD0C File Offset: 0x00B58F0C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06033977 RID: 211319 RVA: 0x00C118E8 File Offset: 0x00C0FAE8
+		// Token: 0x060287E2 RID: 165858 RVA: 0x00B5AE1C File Offset: 0x00B5901C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoguelikeSettleCurrencyItem.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033978 RID: 211320 RVA: 0x00C1192B File Offset: 0x00C0FB2B
+		// Token: 0x060287E3 RID: 165859 RVA: 0x00B5AE5F File Offset: 0x00B5905F
 		protected override void OnBeforeDestroy()
 		{
 			if (this.ScrollingNumberTool != null)
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x06033979 RID: 211321 RVA: 0x00C11948 File Offset: 0x00C0FB48
+		// Token: 0x060287E4 RID: 165860 RVA: 0x00B5AE7C File Offset: 0x00B5907C
 		public void Refresh(int currencyId, int count, int rate)
 		{
 			this.CurrencyId = currencyId;
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			rootItem.SetUIActive(count > 0);
 		}
 
-		// Token: 0x0603397A RID: 211322 RVA: 0x00C11A34 File Offset: 0x00C0FC34
+		// Token: 0x060287E5 RID: 165861 RVA: 0x00B5AF68 File Offset: 0x00B59168
 		public UniTask StartAnim()
 		{
 			RoguelikeSettleCurrencyItem.<StartAnim>d__10 <StartAnim>d__;
@@ -88,45 +88,45 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <StartAnim>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401B5DA RID: 112090
+		// Token: 0x04015FAD RID: 90029
 		public int CurrencyId;
 
-		// Token: 0x0401B5DB RID: 112091
+		// Token: 0x04015FAE RID: 90030
 		public int InitCount;
 
-		// Token: 0x0401B5DC RID: 112092
+		// Token: 0x04015FAF RID: 90031
 		public int Count;
 
-		// Token: 0x0401B5DD RID: 112093
+		// Token: 0x04015FB0 RID: 90032
 		[Nullable(2)]
 		private ScrollingNumberTool ScrollingNumberTool;
 
-		// Token: 0x0401B5DE RID: 112094
+		// Token: 0x04015FB1 RID: 90033
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200AFCC RID: 45004
+		// Token: 0x020099FE RID: 39422
 		public static class ERoguelikeSettleCurrencyItemDefine
 		{
-			// Token: 0x040355EA RID: 218602
+			// Token: 0x0403001A RID: 196634
 			public const int TexIcon = 0;
 
-			// Token: 0x040355EB RID: 218603
+			// Token: 0x0403001B RID: 196635
 			public const int TxtTitle = 1;
 
-			// Token: 0x040355EC RID: 218604
+			// Token: 0x0403001C RID: 196636
 			public const int TxtNum = 2;
 
-			// Token: 0x040355ED RID: 218605
+			// Token: 0x0403001D RID: 196637
 			public const int RateItem = 3;
 
-			// Token: 0x040355EE RID: 218606
+			// Token: 0x0403001E RID: 196638
 			public const int RateSpriteBg = 4;
 
-			// Token: 0x040355EF RID: 218607
+			// Token: 0x0403001F RID: 196639
 			public const int RateText = 5;
 
-			// Token: 0x040355F0 RID: 218608
+			// Token: 0x04030020 RID: 196640
 			public const int TxtAddNum = 6;
 		}
 	}

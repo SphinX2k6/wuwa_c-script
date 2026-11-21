@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002649 RID: 9801
+	// Token: 0x02002909 RID: 10505
 	public class AcceptCurrentQuest : ActionParams
 	{
-		// Token: 0x0600DBD8 RID: 56280 RVA: 0x0020B7ED File Offset: 0x002099ED
-		[NullableContext(1)]
+		// Token: 0x0600E9A6 RID: 59814 RVA: 0x00227FB9 File Offset: 0x002261B9
 		public static AcceptCurrentQuest Create(IAcceptCurrentQuest? instance)
 		{
 			if (instance == null)
@@ -21,7 +19,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x04007A2D RID: 31277
+		// Token: 0x040080C9 RID: 32969
 		private IAcceptCurrentQuest Instance;
 	}
 }

@@ -3,36 +3,36 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Model
 {
-	// Token: 0x020071DA RID: 29146
+	// Token: 0x0200628F RID: 25231
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	internal class ShootTargetModel : ModelBase
 	{
-		// Token: 0x06047557 RID: 292183 RVA: 0x012237C4 File Offset: 0x012219C4
+		// Token: 0x0603CE59 RID: 249433 RVA: 0x0117D5F8 File Offset: 0x0117B7F8
 		protected override bool OnInit()
 		{
 			return true;
 		}
 
-		// Token: 0x06047558 RID: 292184 RVA: 0x012237C7 File Offset: 0x012219C7
+		// Token: 0x0603CE5A RID: 249434 RVA: 0x0117D5FB File Offset: 0x0117B7FB
 		public void AddTarget(int entityId, int groupId)
 		{
 		}
 
-		// Token: 0x06047559 RID: 292185 RVA: 0x012237C9 File Offset: 0x012219C9
+		// Token: 0x0603CE5B RID: 249435 RVA: 0x0117D5FD File Offset: 0x0117B7FD
 		public void RemoveTarget(int entityId)
 		{
 		}
 
-		// Token: 0x0604755A RID: 292186 RVA: 0x012237CB File Offset: 0x012219CB
+		// Token: 0x0603CE5C RID: 249436 RVA: 0x0117D5FF File Offset: 0x0117B7FF
 		protected override bool OnClear()
 		{
 			return true;
 		}
 
-		// Token: 0x17009DF4 RID: 40436
-		// (get) Token: 0x0604755B RID: 292187 RVA: 0x012237CE File Offset: 0x012219CE
+		// Token: 0x1700734B RID: 29515
+		// (get) Token: 0x0603CE5D RID: 249437 RVA: 0x0117D602 File Offset: 0x0117B802
 		public static ShootTargetModel Instance
 		{
 			get
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Model
 			}
 		}
 
-		// Token: 0x0604755C RID: 292188 RVA: 0x012237D5 File Offset: 0x012219D5
+		// Token: 0x0603CE5E RID: 249438 RVA: 0x0117D609 File Offset: 0x0117B809
 		public static ShootTargetModel GetOrCreateInstance()
 		{
 			if (ShootTargetModel._Instance == null)
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Model
 			return ShootTargetModel._Instance;
 		}
 
-		// Token: 0x0604755D RID: 292189 RVA: 0x012237E9 File Offset: 0x012219E9
+		// Token: 0x0603CE5F RID: 249439 RVA: 0x0117D61D File Offset: 0x0117B81D
 		public static bool CreateInstance()
 		{
 			if (ShootTargetModel._Instance != null)
@@ -62,24 +62,24 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Model
 			return true;
 		}
 
-		// Token: 0x0604755E RID: 292190 RVA: 0x012237FF File Offset: 0x012219FF
+		// Token: 0x0603CE60 RID: 249440 RVA: 0x0117D633 File Offset: 0x0117B833
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0604755F RID: 292191 RVA: 0x01223801 File Offset: 0x01221A01
+		// Token: 0x0603CE61 RID: 249441 RVA: 0x0117D635 File Offset: 0x0117B835
 		public static void ResetStaticDefaultValue()
 		{
 			ShootTargetModel._Instance = null;
 		}
 
-		// Token: 0x06047560 RID: 292192 RVA: 0x01223809 File Offset: 0x01221A09
+		// Token: 0x0603CE62 RID: 249442 RVA: 0x0117D63D File Offset: 0x0117B83D
 		static ShootTargetModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ShootTargetModel.CreateStaticDefaultValue), new Action(ShootTargetModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04025814 RID: 153620
+		// Token: 0x04020483 RID: 132227
 		[Nullable(2)]
 		private static ShootTargetModel _Instance;
 	}

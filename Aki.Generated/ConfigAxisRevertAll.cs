@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020000C8 RID: 200
+	// Token: 0x020000D7 RID: 215
 	public class ConfigAxisRevertAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060004B1 RID: 1201 RVA: 0x0007442B File Offset: 0x0007262B
+		// Token: 0x0600050B RID: 1291 RVA: 0x00079D8F File Offset: 0x00077F8F
 		static ConfigAxisRevertAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAxisRevertAll.CreateStaticDefaultValue), new Action(ConfigAxisRevertAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060004B2 RID: 1202 RVA: 0x0007444C File Offset: 0x0007264C
+		// Token: 0x0600050C RID: 1292 RVA: 0x00079DB0 File Offset: 0x00077FB0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAxisRevertAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060004B3 RID: 1203 RVA: 0x000744CB File Offset: 0x000726CB
+		// Token: 0x0600050D RID: 1293 RVA: 0x00079E2F File Offset: 0x0007802F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAxisRevertAll.LogPair = null;
 			ConfigAxisRevertAll.HandleId = 0;
 		}
 
-		// Token: 0x060004B4 RID: 1204 RVA: 0x000744D9 File Offset: 0x000726D9
+		// Token: 0x0600050E RID: 1294 RVA: 0x00079E3D File Offset: 0x0007803D
 		public static void Init()
 		{
 			ConfigAxisRevertAll.HandleId = ConfigCommon.InitDataStatement(ConfigAxisRevertAll.HandleId, "db_menu.db", "select BinData from `AxisRevert`");
 		}
 
-		// Token: 0x060004B5 RID: 1205 RVA: 0x000744F4 File Offset: 0x000726F4
+		// Token: 0x0600050F RID: 1295 RVA: 0x00079E58 File Offset: 0x00078058
 		[NullableContext(2)]
 		public static IReadOnlyList<AxisRevert> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x0400055C RID: 1372
+		// Token: 0x040005C5 RID: 1477
 		private const string DB = "db_menu.db";
 
-		// Token: 0x0400055D RID: 1373
+		// Token: 0x040005C6 RID: 1478
 		private const string FILE = "s.设置系统.xlsx";
 
-		// Token: 0x0400055E RID: 1374
+		// Token: 0x040005C7 RID: 1479
 		private const string TABLE = "AxisRevert";
 
-		// Token: 0x0400055F RID: 1375
+		// Token: 0x040005C8 RID: 1480
 		private const string COMMAND = "select BinData from `AxisRevert`";
 
-		// Token: 0x04000560 RID: 1376
+		// Token: 0x040005C9 RID: 1481
 		private const string KEY_PREFIX = "AxisRevertAll";
 
-		// Token: 0x04000561 RID: 1377
+		// Token: 0x040005CA RID: 1482
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000562 RID: 1378
+		// Token: 0x040005CB RID: 1483
 		private static int HandleId;
 	}
 }

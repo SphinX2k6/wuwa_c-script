@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CB0 RID: 23728
+	// Token: 0x02004C92 RID: 19602
 	public class AlterTime : UiPanelBase
 	{
-		// Token: 0x0603BF31 RID: 245553 RVA: 0x00E540B0 File Offset: 0x00E522B0
+		// Token: 0x06030E84 RID: 200324 RVA: 0x00DA4758 File Offset: 0x00DA2958
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -23,20 +23,20 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603BF32 RID: 245554 RVA: 0x00E540F8 File Offset: 0x00E522F8
+		// Token: 0x06030E85 RID: 200325 RVA: 0x00DA47A0 File Offset: 0x00DA29A0
 		protected override void OnBeforeDestroy()
 		{
 			this.TimeText = null;
 		}
 
-		// Token: 0x0603BF33 RID: 245555 RVA: 0x00E54101 File Offset: 0x00E52301
+		// Token: 0x06030E86 RID: 200326 RVA: 0x00DA47A9 File Offset: 0x00DA29A9
 		protected override void OnStart()
 		{
 			this.TimeText = base.GetText(0);
 			base.SetUiActive(false);
 		}
 
-		// Token: 0x0603BF34 RID: 245556 RVA: 0x00E54118 File Offset: 0x00E52318
+		// Token: 0x06030E87 RID: 200327 RVA: 0x00DA47C0 File Offset: 0x00DA29C0
 		public void SetCountdownText(double time)
 		{
 			int value = (int)Math.Floor(time / (double)TimeUtil.Instance.InverseMillisecond);
@@ -49,14 +49,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			timeText.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x0401F492 RID: 128146
+		// Token: 0x04019F4B RID: 106315
 		[Nullable(2)]
 		private UUIText TimeText;
 
-		// Token: 0x0200BE8A RID: 48778
+		// Token: 0x0200A890 RID: 43152
 		private enum EComponents
 		{
-			// Token: 0x0403975F RID: 235359
+			// Token: 0x04034120 RID: 213280
 			UITimeText
 		}
 	}

@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 {
-	// Token: 0x02004D1B RID: 19739
+	// Token: 0x02003CD2 RID: 15570
 	public enum EPhantomSuitItemType
 	{
-		// Token: 0x0401B202 RID: 111106
+		// Token: 0x04015B99 RID: 88985
 		Phantom,
-		// Token: 0x0401B203 RID: 111107
+		// Token: 0x04015B9A RID: 88986
 		Dungeon
 	}
 }

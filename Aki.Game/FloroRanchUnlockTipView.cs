@@ -2,16 +2,16 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02001B7B RID: 7035
+// Token: 0x0200103A RID: 4154
 public class FloroRanchUnlockTipView : UiViewBase
 {
-	// Token: 0x0600D155 RID: 53589 RVA: 0x002FF415 File Offset: 0x002FD615
+	// Token: 0x0600A566 RID: 42342 RVA: 0x0030A4ED File Offset: 0x003086ED
 	[NullableContext(1)]
 	public FloroRanchUnlockTipView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0600D156 RID: 53590 RVA: 0x002FF41E File Offset: 0x002FD61E
+	// Token: 0x0600A567 RID: 42343 RVA: 0x0030A4F6 File Offset: 0x003086F6
 	protected override void OnAfterShow()
 	{
 		base.CloseMe(null);

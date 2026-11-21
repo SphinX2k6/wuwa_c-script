@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014B0 RID: 5296
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001609 RID: 5641
 	public class BvbPlayDialog : ActionParams
 	{
-		// Token: 0x06007894 RID: 30868 RVA: 0x001210E0 File Offset: 0x0011F2E0
+		// Token: 0x06007F61 RID: 32609 RVA: 0x0012FD2C File Offset: 0x0012DF2C
 		private BvbPlayDialog_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007895 RID: 30869 RVA: 0x00121118 File Offset: 0x0011F318
+		// Token: 0x06007F62 RID: 32610 RVA: 0x0012FD64 File Offset: 0x0012DF64
 		public static BvbPlayDialog Create([Nullable(2)] BvbPlayDialog instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007896 RID: 30870 RVA: 0x0012112B File Offset: 0x0011F32B
+		// Token: 0x06007F63 RID: 32611 RVA: 0x0012FD77 File Offset: 0x0012DF77
 		public static BvbPlayDialog CreateFromSetValue([Nullable(2)] BvbPlayDialog_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007897 RID: 30871 RVA: 0x0012113E File Offset: 0x0011F33E
+		// Token: 0x06007F64 RID: 32612 RVA: 0x0012FD8A File Offset: 0x0012DF8A
 		public BvbPlayDialog_SetValue ToSetValue()
 		{
 			return new BvbPlayDialog_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002878 RID: 10360
-		// (get) Token: 0x06007898 RID: 30872 RVA: 0x00121151 File Offset: 0x0011F351
-		// (set) Token: 0x06007899 RID: 30873 RVA: 0x0012117C File Offset: 0x0011F37C
+		// Token: 0x17002A62 RID: 10850
+		// (get) Token: 0x06007F65 RID: 32613 RVA: 0x0012FD9D File Offset: 0x0012DF9D
+		// (set) Token: 0x06007F66 RID: 32614 RVA: 0x0012FDC8 File Offset: 0x0012DFC8
 		public virtual EBvbPlayDialogType DialogType
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004611 RID: 17937
+		// Token: 0x040049AC RID: 18860
 		[Nullable(2)]
 		protected new BvbPlayDialog FbInstance;
 
-		// Token: 0x04004612 RID: 17938
+		// Token: 0x040049AD RID: 18861
 		[Nullable(2)]
 		protected BvbPlayDialog_SetValue PocoInterface;
 	}

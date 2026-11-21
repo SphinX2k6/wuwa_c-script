@@ -1,19 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.RoleUi;
 
 namespace CSharpScript.Game.Module.TrainingDegree
 {
-	// Token: 0x02004AF8 RID: 19192
+	// Token: 0x02003AA0 RID: 15008
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class TrainingDegreeModel : ModelBase
 	{
-		// Token: 0x06031B4E RID: 203598 RVA: 0x00B8AC9C File Offset: 0x00B88E9C
+		// Token: 0x060268DE RID: 157918 RVA: 0x00ACECD0 File Offset: 0x00ACCED0
 		protected override bool OnInit()
 		{
 			this.NormalProcess = ConfigCommonParamById.GetFloatConfig("RoleTrainingDegreeNormal").GetValueOrDefault();
@@ -25,7 +24,7 @@ namespace CSharpScript.Game.Module.TrainingDegree
 			return true;
 		}
 
-		// Token: 0x06031B4F RID: 203599 RVA: 0x00B8AD24 File Offset: 0x00B88F24
+		// Token: 0x060268DF RID: 157919 RVA: 0x00ACED58 File Offset: 0x00ACCF58
 		protected override bool OnClear()
 		{
 			this.TrainingSkillTypes = null;
@@ -33,7 +32,7 @@ namespace CSharpScript.Game.Module.TrainingDegree
 			return true;
 		}
 
-		// Token: 0x06031B50 RID: 203600 RVA: 0x00B8AD3C File Offset: 0x00B88F3C
+		// Token: 0x060268E0 RID: 157920 RVA: 0x00ACED70 File Offset: 0x00ACCF70
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -84,7 +83,16 @@ namespace CSharpScript.Game.Module.TrainingDegree
 				RoleSkillData skillData = roleDataBase.GetSkillData();
 				foreach (Aki.Config.Skill skill in skillData.GetSkillList())
 				{
-					if (this.TrainingSkillTypes.Contains(skill.SkillType))
+					bool flag2 = false;
+					for (int j = 0; j < this.TrainingSkillTypes.Count; j++)
+					{
+						if (this.TrainingSkillTypes[j] == skill.SkillType)
+						{
+							flag2 = true;
+							break;
+						}
+					}
+					if (flag2)
 					{
 						num3 += (float)skillData.GetSkillLevel(skill.Id);
 					}
@@ -167,7 +175,7 @@ namespace CSharpScript.Game.Module.TrainingDegree
 			return list6;
 		}
 
-		// Token: 0x06031B51 RID: 203601 RVA: 0x00B8B2A4 File Offset: 0x00B894A4
+		// Token: 0x060268E1 RID: 157921 RVA: 0x00ACF300 File Offset: 0x00ACD500
 		private int GetTrainingLevel()
 		{
 			int curWorldLevel = WorldLevelModel.Instance.CurWorldLevel;
@@ -193,8 +201,8 @@ namespace CSharpScript.Game.Module.TrainingDegree
 			return worldLevelConfig.Value.TrainingLevel;
 		}
 
-		// Token: 0x17007AF5 RID: 31477
-		// (get) Token: 0x06031B52 RID: 203602 RVA: 0x00B8B338 File Offset: 0x00B89538
+		// Token: 0x17004EA2 RID: 20130
+		// (get) Token: 0x060268E2 RID: 157922 RVA: 0x00ACF394 File Offset: 0x00ACD594
 		public static TrainingDegreeModel Instance
 		{
 			get
@@ -203,7 +211,7 @@ namespace CSharpScript.Game.Module.TrainingDegree
 			}
 		}
 
-		// Token: 0x06031B53 RID: 203603 RVA: 0x00B8B33F File Offset: 0x00B8953F
+		// Token: 0x060268E3 RID: 157923 RVA: 0x00ACF39B File Offset: 0x00ACD59B
 		public static TrainingDegreeModel GetOrCreateInstance()
 		{
 			if (TrainingDegreeModel._Instance == null)
@@ -213,7 +221,7 @@ namespace CSharpScript.Game.Module.TrainingDegree
 			return TrainingDegreeModel._Instance;
 		}
 
-		// Token: 0x06031B54 RID: 203604 RVA: 0x00B8B353 File Offset: 0x00B89553
+		// Token: 0x060268E4 RID: 157924 RVA: 0x00ACF3AF File Offset: 0x00ACD5AF
 		public static bool CreateInstance()
 		{
 			if (TrainingDegreeModel._Instance != null)
@@ -224,40 +232,40 @@ namespace CSharpScript.Game.Module.TrainingDegree
 			return true;
 		}
 
-		// Token: 0x06031B55 RID: 203605 RVA: 0x00B8B369 File Offset: 0x00B89569
+		// Token: 0x060268E5 RID: 157925 RVA: 0x00ACF3C5 File Offset: 0x00ACD5C5
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06031B56 RID: 203606 RVA: 0x00B8B36B File Offset: 0x00B8956B
+		// Token: 0x060268E6 RID: 157926 RVA: 0x00ACF3C7 File Offset: 0x00ACD5C7
 		public static void ResetStaticDefaultValue()
 		{
 			TrainingDegreeModel._Instance = null;
 		}
 
-		// Token: 0x06031B57 RID: 203607 RVA: 0x00B8B373 File Offset: 0x00B89573
+		// Token: 0x060268E7 RID: 157927 RVA: 0x00ACF3CF File Offset: 0x00ACD5CF
 		static TrainingDegreeModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(TrainingDegreeModel.CreateStaticDefaultValue), new Action(TrainingDegreeModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401A8AF RID: 108719
+		// Token: 0x04015201 RID: 86529
 		public const int MAX_ROLE_SIZE = 3;
 
-		// Token: 0x0401A8B0 RID: 108720
+		// Token: 0x04015202 RID: 86530
 		public const float MIN_PROCESS = 0.2f;
 
-		// Token: 0x0401A8B1 RID: 108721
+		// Token: 0x04015203 RID: 86531
 		private float NormalProcess;
 
-		// Token: 0x0401A8B2 RID: 108722
+		// Token: 0x04015204 RID: 86532
 		[Nullable(2)]
 		private IReadOnlyList<int> TrainingSkillTypes;
 
-		// Token: 0x0401A8B3 RID: 108723
+		// Token: 0x04015205 RID: 86533
 		private readonly Dictionary<int, int> TrainingWeightMap = new Dictionary<int, int>();
 
-		// Token: 0x0401A8B4 RID: 108724
+		// Token: 0x04015206 RID: 86534
 		[Nullable(2)]
 		private static TrainingDegreeModel _Instance;
 	}

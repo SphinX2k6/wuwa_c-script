@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002507 RID: 9479
+	// Token: 0x020027AD RID: 10157
 	public class IHeadStyleMonsterDisplay : IHeadStyle
 	{
-		// Token: 0x0600D381 RID: 54145 RVA: 0x001F5926 File Offset: 0x001F3B26
-		[NullableContext(1)]
+		// Token: 0x0600E0DD RID: 57565 RVA: 0x0021131E File Offset: 0x0020F51E
 		public static IHeadStyleMonsterDisplay Create(IHeadStyleMonsterDisplay? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003B35 RID: 15157
-		// (get) Token: 0x0600D382 RID: 54146 RVA: 0x001F5945 File Offset: 0x001F3B45
+		// Token: 0x17003E31 RID: 15921
+		// (get) Token: 0x0600E0DE RID: 57566 RVA: 0x0021133D File Offset: 0x0020F53D
 		public override EHeadStyle Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B36 RID: 15158
-		// (get) Token: 0x0600D383 RID: 54147 RVA: 0x001F5952 File Offset: 0x001F3B52
+		// Token: 0x17003E32 RID: 15922
+		// (get) Token: 0x0600E0DF RID: 57567 RVA: 0x0021134A File Offset: 0x0020F54A
 		public virtual int MonsterDisplayId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040073F1 RID: 29681
+		// Token: 0x04007A43 RID: 31299
 		private IHeadStyleMonsterDisplay Instance;
 	}
 }

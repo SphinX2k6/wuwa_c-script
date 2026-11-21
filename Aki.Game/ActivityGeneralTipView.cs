@@ -2,16 +2,16 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02001682 RID: 5762
+// Token: 0x02000B3A RID: 2874
 public class ActivityGeneralTipView : UiViewBase
 {
-	// Token: 0x0600A307 RID: 41735 RVA: 0x002404F4 File Offset: 0x0023E6F4
+	// Token: 0x060076E5 RID: 30437 RVA: 0x0024A480 File Offset: 0x00248680
 	protected override void OnAfterShow()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600A308 RID: 41736 RVA: 0x002404FD File Offset: 0x0023E6FD
+	// Token: 0x060076E6 RID: 30438 RVA: 0x0024A489 File Offset: 0x00248689
 	[NullableContext(1)]
 	public ActivityGeneralTipView(UiViewInfo info) : base(info)
 	{

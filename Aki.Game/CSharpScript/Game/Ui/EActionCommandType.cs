@@ -2,18 +2,18 @@
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004617 RID: 17943
+	// Token: 0x02003540 RID: 13632
 	internal enum EActionCommandType
 	{
-		// Token: 0x04018D2E RID: 101678
+		// Token: 0x0401336D RID: 78701
 		Default,
-		// Token: 0x04018D2F RID: 101679
+		// Token: 0x0401336E RID: 78702
 		Start,
-		// Token: 0x04018D30 RID: 101680
+		// Token: 0x0401336F RID: 78703
 		Show,
-		// Token: 0x04018D31 RID: 101681
+		// Token: 0x04013370 RID: 78704
 		Hide,
-		// Token: 0x04018D32 RID: 101682
+		// Token: 0x04013371 RID: 78705
 		Destroy
 	}
 }

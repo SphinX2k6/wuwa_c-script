@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200013C RID: 316
+	// Token: 0x0200013F RID: 319
 	public sealed class BabelActivityBuffInfo : IMessage<BabelActivityBuffInfo>, IMessage, IEquatable<BabelActivityBuffInfo>, IDeepCloneable<BabelActivityBuffInfo>, IBufferMessage
 	{
-		// Token: 0x06002927 RID: 10535 RVA: 0x0006C199 File Offset: 0x0006A399
+		// Token: 0x0600299E RID: 10654 RVA: 0x0006D5CD File Offset: 0x0006B7CD
 		[NullableContext(1)]
 		public static BabelActivityBuffInfo Create()
 		{
 			return new BabelActivityBuffInfo();
 		}
 
-		// Token: 0x170005F6 RID: 1526
-		// (get) Token: 0x06002928 RID: 10536 RVA: 0x0006C1A0 File Offset: 0x0006A3A0
+		// Token: 0x1700060A RID: 1546
+		// (get) Token: 0x0600299F RID: 10655 RVA: 0x0006D5D4 File Offset: 0x0006B7D4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<BabelActivityBuffInfo> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170005F7 RID: 1527
-		// (get) Token: 0x06002929 RID: 10537 RVA: 0x0006C1A7 File Offset: 0x0006A3A7
+		// Token: 0x1700060B RID: 1547
+		// (get) Token: 0x060029A0 RID: 10656 RVA: 0x0006D5DB File Offset: 0x0006B7DB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170005F8 RID: 1528
-		// (get) Token: 0x0600292A RID: 10538 RVA: 0x0006C1AA File Offset: 0x0006A3AA
+		// Token: 0x1700060C RID: 1548
+		// (get) Token: 0x060029A1 RID: 10657 RVA: 0x0006D5DE File Offset: 0x0006B7DE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600292B RID: 10539 RVA: 0x0006C1B1 File Offset: 0x0006A3B1
+		// Token: 0x060029A2 RID: 10658 RVA: 0x0006D5E5 File Offset: 0x0006B7E5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BabelActivityBuffInfo()
 		{
 		}
 
-		// Token: 0x0600292C RID: 10540 RVA: 0x0006C1B9 File Offset: 0x0006A3B9
+		// Token: 0x060029A3 RID: 10659 RVA: 0x0006D5ED File Offset: 0x0006B7ED
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BabelActivityBuffInfo(BabelActivityBuffInfo other) : this()
@@ -70,7 +70,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600292D RID: 10541 RVA: 0x0006C1EA File Offset: 0x0006A3EA
+		// Token: 0x060029A4 RID: 10660 RVA: 0x0006D61E File Offset: 0x0006B81E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BabelActivityBuffInfo Clone()
@@ -78,9 +78,9 @@ namespace Aki.Protocol
 			return new BabelActivityBuffInfo(this);
 		}
 
-		// Token: 0x170005F9 RID: 1529
-		// (get) Token: 0x0600292E RID: 10542 RVA: 0x0006C1F2 File Offset: 0x0006A3F2
-		// (set) Token: 0x0600292F RID: 10543 RVA: 0x0006C1FA File Offset: 0x0006A3FA
+		// Token: 0x1700060D RID: 1549
+		// (get) Token: 0x060029A5 RID: 10661 RVA: 0x0006D626 File Offset: 0x0006B826
+		// (set) Token: 0x060029A6 RID: 10662 RVA: 0x0006D62E File Offset: 0x0006B82E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int BabelBuffId
@@ -95,9 +95,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170005FA RID: 1530
-		// (get) Token: 0x06002930 RID: 10544 RVA: 0x0006C203 File Offset: 0x0006A403
-		// (set) Token: 0x06002931 RID: 10545 RVA: 0x0006C20B File Offset: 0x0006A40B
+		// Token: 0x1700060E RID: 1550
+		// (get) Token: 0x060029A7 RID: 10663 RVA: 0x0006D637 File Offset: 0x0006B837
+		// (set) Token: 0x060029A8 RID: 10664 RVA: 0x0006D63F File Offset: 0x0006B83F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool DifficultUnlock
@@ -112,7 +112,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06002932 RID: 10546 RVA: 0x0006C214 File Offset: 0x0006A414
+		// Token: 0x060029A9 RID: 10665 RVA: 0x0006D648 File Offset: 0x0006B848
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -120,7 +120,7 @@ namespace Aki.Protocol
 			return this.Equals(other as BabelActivityBuffInfo);
 		}
 
-		// Token: 0x06002933 RID: 10547 RVA: 0x0006C222 File Offset: 0x0006A422
+		// Token: 0x060029AA RID: 10666 RVA: 0x0006D656 File Offset: 0x0006B856
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(BabelActivityBuffInfo other)
@@ -128,7 +128,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.BabelBuffId == other.BabelBuffId && this.DifficultUnlock == other.DifficultUnlock && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06002934 RID: 10548 RVA: 0x0006C260 File Offset: 0x0006A460
+		// Token: 0x060029AB RID: 10667 RVA: 0x0006D694 File Offset: 0x0006B894
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -149,7 +149,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06002935 RID: 10549 RVA: 0x0006C2B8 File Offset: 0x0006A4B8
+		// Token: 0x060029AC RID: 10668 RVA: 0x0006D6EC File Offset: 0x0006B8EC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -157,7 +157,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06002936 RID: 10550 RVA: 0x0006C2C5 File Offset: 0x0006A4C5
+		// Token: 0x060029AD RID: 10669 RVA: 0x0006D6F9 File Offset: 0x0006B8F9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -165,7 +165,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06002937 RID: 10551 RVA: 0x0006C2D0 File Offset: 0x0006A4D0
+		// Token: 0x060029AE RID: 10670 RVA: 0x0006D704 File Offset: 0x0006B904
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -186,7 +186,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06002938 RID: 10552 RVA: 0x0006C328 File Offset: 0x0006A528
+		// Token: 0x060029AF RID: 10671 RVA: 0x0006D75C File Offset: 0x0006B95C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -207,7 +207,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06002939 RID: 10553 RVA: 0x0006C374 File Offset: 0x0006A574
+		// Token: 0x060029B0 RID: 10672 RVA: 0x0006D7A8 File Offset: 0x0006B9A8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(BabelActivityBuffInfo other)
@@ -227,7 +227,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600293A RID: 10554 RVA: 0x0006C3C4 File Offset: 0x0006A5C4
+		// Token: 0x060029B1 RID: 10673 RVA: 0x0006D7F8 File Offset: 0x0006B9F8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -235,7 +235,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600293B RID: 10555 RVA: 0x0006C3D0 File Offset: 0x0006A5D0
+		// Token: 0x060029B2 RID: 10674 RVA: 0x0006D804 File Offset: 0x0006BA04
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -265,22 +265,22 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040026DC RID: 9948
+		// Token: 0x04002750 RID: 10064
 		private static readonly MessageParser<BabelActivityBuffInfo> _parser = new MessageParser<BabelActivityBuffInfo>(() => new BabelActivityBuffInfo());
 
-		// Token: 0x040026DD RID: 9949
+		// Token: 0x04002751 RID: 10065
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040026DE RID: 9950
+		// Token: 0x04002752 RID: 10066
 		public const int BabelBuffIdFieldNumber = 1;
 
-		// Token: 0x040026DF RID: 9951
+		// Token: 0x04002753 RID: 10067
 		private int babelBuffId_;
 
-		// Token: 0x040026E0 RID: 9952
+		// Token: 0x04002754 RID: 10068
 		public const int DifficultUnlockFieldNumber = 2;
 
-		// Token: 0x040026E1 RID: 9953
+		// Token: 0x04002755 RID: 10069
 		private bool difficultUnlock_;
 	}
 }

@@ -3,33 +3,33 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Skin.Skip
 {
-	// Token: 0x02004BF2 RID: 19442
+	// Token: 0x02003BA3 RID: 15267
 	[NullableContext(1)]
 	public interface ISkinSkipData
 	{
-		// Token: 0x17007C6C RID: 31852
-		// (get) Token: 0x06032458 RID: 205912
-		// (set) Token: 0x06032459 RID: 205913
+		// Token: 0x17005016 RID: 20502
+		// (get) Token: 0x060271FC RID: 160252
+		// (set) Token: 0x060271FD RID: 160253
 		int Id { get; set; }
 
-		// Token: 0x17007C6D RID: 31853
-		// (get) Token: 0x0603245A RID: 205914
-		// (set) Token: 0x0603245B RID: 205915
+		// Token: 0x17005017 RID: 20503
+		// (get) Token: 0x060271FE RID: 160254
+		// (set) Token: 0x060271FF RID: 160255
 		int ConfigId { get; set; }
 
-		// Token: 0x17007C6E RID: 31854
-		// (get) Token: 0x0603245C RID: 205916
-		// (set) Token: 0x0603245D RID: 205917
+		// Token: 0x17005018 RID: 20504
+		// (get) Token: 0x06027200 RID: 160256
+		// (set) Token: 0x06027201 RID: 160257
 		ESkinSkipType Type { get; set; }
 
-		// Token: 0x17007C6F RID: 31855
-		// (get) Token: 0x0603245E RID: 205918
-		// (set) Token: 0x0603245F RID: 205919
+		// Token: 0x17005019 RID: 20505
+		// (get) Token: 0x06027202 RID: 160258
+		// (set) Token: 0x06027203 RID: 160259
 		string Text { get; set; }
 
-		// Token: 0x17007C70 RID: 31856
-		// (get) Token: 0x06032460 RID: 205920
-		// (set) Token: 0x06032461 RID: 205921
+		// Token: 0x1700501A RID: 20506
+		// (get) Token: 0x06027204 RID: 160260
+		// (set) Token: 0x06027205 RID: 160261
 		int SortIndex { get; set; }
 	}
 }

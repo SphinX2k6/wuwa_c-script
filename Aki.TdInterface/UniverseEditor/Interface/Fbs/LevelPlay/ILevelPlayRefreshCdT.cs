@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x02004510 RID: 17680
+	// Token: 0x02004978 RID: 18808
 	public class ILevelPlayRefreshCdT
 	{
-		// Token: 0x17007D5B RID: 32091
-		// (get) Token: 0x0601A917 RID: 108823 RVA: 0x003CB518 File Offset: 0x003C9718
-		// (set) Token: 0x0601A918 RID: 108824 RVA: 0x003CB520 File Offset: 0x003C9720
+		// Token: 0x1700839C RID: 33692
+		// (get) Token: 0x0601C0EC RID: 114924 RVA: 0x003F77B4 File Offset: 0x003F59B4
+		// (set) Token: 0x0601C0ED RID: 114925 RVA: 0x003F77BC File Offset: 0x003F59BC
 		public int MinRefreshCd { get; set; }
 
-		// Token: 0x17007D5C RID: 32092
-		// (get) Token: 0x0601A919 RID: 108825 RVA: 0x003CB529 File Offset: 0x003C9729
-		// (set) Token: 0x0601A91A RID: 108826 RVA: 0x003CB531 File Offset: 0x003C9731
+		// Token: 0x1700839D RID: 33693
+		// (get) Token: 0x0601C0EE RID: 114926 RVA: 0x003F77C5 File Offset: 0x003F59C5
+		// (set) Token: 0x0601C0EF RID: 114927 RVA: 0x003F77CD File Offset: 0x003F59CD
 		public int MaxRefreshCd { get; set; }
 
-		// Token: 0x0601A91B RID: 108827 RVA: 0x003CB53A File Offset: 0x003C973A
+		// Token: 0x0601C0F0 RID: 114928 RVA: 0x003F77D6 File Offset: 0x003F59D6
 		public ILevelPlayRefreshCdT()
 		{
 			this.MinRefreshCd = 0;

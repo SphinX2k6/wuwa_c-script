@@ -5,7 +5,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 {
-	// Token: 0x0200624A RID: 25162
+	// Token: 0x020051C8 RID: 20936
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -14,7 +14,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 	})]
 	public class RhythmShipSetItemSlider : SyncGridProxyAbstract<RhythmShipSetData>
 	{
-		// Token: 0x0603F647 RID: 259655 RVA: 0x00F53424 File Offset: 0x00F51624
+		// Token: 0x06034308 RID: 213768 RVA: 0x00E9A380 File Offset: 0x00E98580
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			};
 		}
 
-		// Token: 0x0603F648 RID: 259656 RVA: 0x00F53480 File Offset: 0x00F51680
+		// Token: 0x06034309 RID: 213769 RVA: 0x00E9A3DC File Offset: 0x00E985DC
 		protected override void OnStart()
 		{
 			UUISliderComponent slider = base.GetSlider(1);
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			base.GetText(2).SetText(RhythmShipModel.Instance.LocalCalibrationValue.ToString(), true);
 		}
 
-		// Token: 0x0603F649 RID: 259657 RVA: 0x00F534F4 File Offset: 0x00F516F4
+		// Token: 0x0603430A RID: 213770 RVA: 0x00E9A450 File Offset: 0x00E98650
 		private void OnSliderValueChange(float value)
 		{
 			int obj = (int)Math.Floor((double)value);
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			base.GetText(2).SetText(obj.ToString(), true);
 		}
 
-		// Token: 0x0603F64A RID: 259658 RVA: 0x00F53530 File Offset: 0x00F51730
+		// Token: 0x0603430B RID: 213771 RVA: 0x00E9A48C File Offset: 0x00E9868C
 		public override void Refresh(RhythmShipSetData data)
 		{
 			base.GetSlider(1).SetValue((float)RhythmShipModel.Instance.LocalCalibrationValue, true);
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), data.Text, Array.Empty<object>());
 		}
 
-		// Token: 0x040211B6 RID: 135606
+		// Token: 0x0401BAE5 RID: 113381
 		[Nullable(2)]
 		public Action<int> OnSliderValueChangeCallBack;
 	}

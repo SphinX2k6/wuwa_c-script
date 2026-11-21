@@ -6,64 +6,64 @@ using CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckDetail
 {
-	// Token: 0x02005180 RID: 20864
+	// Token: 0x02004150 RID: 16720
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaDeckDetailViewData : IPhantomArenaDeckDetailViewData
 	{
-		// Token: 0x1700812E RID: 33070
-		// (get) Token: 0x060355CA RID: 218570 RVA: 0x00CA417F File Offset: 0x00CA237F
-		// (set) Token: 0x060355CB RID: 218571 RVA: 0x00CA4187 File Offset: 0x00CA2387
+		// Token: 0x170054EE RID: 21742
+		// (get) Token: 0x0602A4C5 RID: 173253 RVA: 0x00BF1737 File Offset: 0x00BEF937
+		// (set) Token: 0x0602A4C6 RID: 173254 RVA: 0x00BF173F File Offset: 0x00BEF93F
 		public DeckInfo DeckInfo { get; set; }
 
-		// Token: 0x1700812F RID: 33071
-		// (get) Token: 0x060355CC RID: 218572 RVA: 0x00CA4190 File Offset: 0x00CA2390
-		// (set) Token: 0x060355CD RID: 218573 RVA: 0x00CA4198 File Offset: 0x00CA2398
+		// Token: 0x170054EF RID: 21743
+		// (get) Token: 0x0602A4C7 RID: 173255 RVA: 0x00BF1748 File Offset: 0x00BEF948
+		// (set) Token: 0x0602A4C8 RID: 173256 RVA: 0x00BF1750 File Offset: 0x00BEF950
 		public bool ShowLocked { get; set; }
 
-		// Token: 0x17008130 RID: 33072
-		// (get) Token: 0x060355CE RID: 218574 RVA: 0x00CA41A1 File Offset: 0x00CA23A1
-		// (set) Token: 0x060355CF RID: 218575 RVA: 0x00CA41A9 File Offset: 0x00CA23A9
+		// Token: 0x170054F0 RID: 21744
+		// (get) Token: 0x0602A4C9 RID: 173257 RVA: 0x00BF1759 File Offset: 0x00BEF959
+		// (set) Token: 0x0602A4CA RID: 173258 RVA: 0x00BF1761 File Offset: 0x00BEF961
 		public int ActivityId { get; set; }
 
-		// Token: 0x17008131 RID: 33073
-		// (get) Token: 0x060355D0 RID: 218576 RVA: 0x00CA41B2 File Offset: 0x00CA23B2
-		// (set) Token: 0x060355D1 RID: 218577 RVA: 0x00CA41BA File Offset: 0x00CA23BA
+		// Token: 0x170054F1 RID: 21745
+		// (get) Token: 0x0602A4CB RID: 173259 RVA: 0x00BF176A File Offset: 0x00BEF96A
+		// (set) Token: 0x0602A4CC RID: 173260 RVA: 0x00BF1772 File Offset: 0x00BEF972
 		public int? CurrencyId { get; set; }
 
-		// Token: 0x17008132 RID: 33074
-		// (get) Token: 0x060355D2 RID: 218578 RVA: 0x00CA41C3 File Offset: 0x00CA23C3
-		// (set) Token: 0x060355D3 RID: 218579 RVA: 0x00CA41CB File Offset: 0x00CA23CB
+		// Token: 0x170054F2 RID: 21746
+		// (get) Token: 0x0602A4CD RID: 173261 RVA: 0x00BF177B File Offset: 0x00BEF97B
+		// (set) Token: 0x0602A4CE RID: 173262 RVA: 0x00BF1783 File Offset: 0x00BEF983
 		public int? CurCardId { get; set; }
 
-		// Token: 0x17008133 RID: 33075
-		// (get) Token: 0x060355D4 RID: 218580 RVA: 0x00CA41D4 File Offset: 0x00CA23D4
-		// (set) Token: 0x060355D5 RID: 218581 RVA: 0x00CA41DC File Offset: 0x00CA23DC
+		// Token: 0x170054F3 RID: 21747
+		// (get) Token: 0x0602A4CF RID: 173263 RVA: 0x00BF178C File Offset: 0x00BEF98C
+		// (set) Token: 0x0602A4D0 RID: 173264 RVA: 0x00BF1794 File Offset: 0x00BEF994
 		public DetailViewCardItemData CardItemData { get; set; }
 
-		// Token: 0x17008134 RID: 33076
-		// (get) Token: 0x060355D6 RID: 218582 RVA: 0x00CA41E5 File Offset: 0x00CA23E5
-		// (set) Token: 0x060355D7 RID: 218583 RVA: 0x00CA41ED File Offset: 0x00CA23ED
+		// Token: 0x170054F4 RID: 21748
+		// (get) Token: 0x0602A4D1 RID: 173265 RVA: 0x00BF179D File Offset: 0x00BEF99D
+		// (set) Token: 0x0602A4D2 RID: 173266 RVA: 0x00BF17A5 File Offset: 0x00BEF9A5
 		public CardDetailItemData DetailItemData { get; set; }
 
-		// Token: 0x17008135 RID: 33077
-		// (get) Token: 0x060355D8 RID: 218584 RVA: 0x00CA41F6 File Offset: 0x00CA23F6
-		// (set) Token: 0x060355D9 RID: 218585 RVA: 0x00CA41FE File Offset: 0x00CA23FE
+		// Token: 0x170054F5 RID: 21749
+		// (get) Token: 0x0602A4D3 RID: 173267 RVA: 0x00BF17AE File Offset: 0x00BEF9AE
+		// (set) Token: 0x0602A4D4 RID: 173268 RVA: 0x00BF17B6 File Offset: 0x00BEF9B6
 		public List<int> EntryList { get; set; }
 
-		// Token: 0x17008136 RID: 33078
-		// (get) Token: 0x060355DA RID: 218586 RVA: 0x00CA4207 File Offset: 0x00CA2407
-		// (set) Token: 0x060355DB RID: 218587 RVA: 0x00CA420F File Offset: 0x00CA240F
+		// Token: 0x170054F6 RID: 21750
+		// (get) Token: 0x0602A4D5 RID: 173269 RVA: 0x00BF17BF File Offset: 0x00BEF9BF
+		// (set) Token: 0x0602A4D6 RID: 173270 RVA: 0x00BF17C7 File Offset: 0x00BEF9C7
 		public bool? IsUnlock { get; set; }
 
-		// Token: 0x17008137 RID: 33079
-		// (get) Token: 0x060355DC RID: 218588 RVA: 0x00CA4218 File Offset: 0x00CA2418
-		// (set) Token: 0x060355DD RID: 218589 RVA: 0x00CA4220 File Offset: 0x00CA2420
+		// Token: 0x170054F7 RID: 21751
+		// (get) Token: 0x0602A4D7 RID: 173271 RVA: 0x00BF17D0 File Offset: 0x00BEF9D0
+		// (set) Token: 0x0602A4D8 RID: 173272 RVA: 0x00BF17D8 File Offset: 0x00BEF9D8
 		public bool? IsRecommend { get; set; }
 
-		// Token: 0x17008138 RID: 33080
-		// (get) Token: 0x060355DE RID: 218590 RVA: 0x00CA4229 File Offset: 0x00CA2429
-		// (set) Token: 0x060355DF RID: 218591 RVA: 0x00CA4231 File Offset: 0x00CA2431
+		// Token: 0x170054F8 RID: 21752
+		// (get) Token: 0x0602A4D9 RID: 173273 RVA: 0x00BF17E1 File Offset: 0x00BEF9E1
+		// (set) Token: 0x0602A4DA RID: 173274 RVA: 0x00BF17E9 File Offset: 0x00BEF9E9
 		public Action<DeckInfo> SaveRecommendDeckCallback { get; set; }
 	}
 }

@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002634 RID: 9780
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020028F4 RID: 10484
 	public class SetActorVar : ActionParams
 	{
-		// Token: 0x0600DB7A RID: 56186 RVA: 0x0020ACA6 File Offset: 0x00208EA6
+		// Token: 0x0600E948 RID: 59720 RVA: 0x00227472 File Offset: 0x00225672
 		public static SetActorVar Create(ISetActorVar? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170040D4 RID: 16596
-		// (get) Token: 0x0600DB7B RID: 56187 RVA: 0x0020ACC5 File Offset: 0x00208EC5
+		// Token: 0x1700440E RID: 17422
+		// (get) Token: 0x0600E949 RID: 59721 RVA: 0x00227491 File Offset: 0x00225691
 		public virtual IActorRef ActorRef
 		{
 			get
@@ -40,8 +38,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170040D5 RID: 16597
-		// (get) Token: 0x0600DB7C RID: 56188 RVA: 0x0020ACF9 File Offset: 0x00208EF9
+		// Token: 0x1700440F RID: 17423
+		// (get) Token: 0x0600E94A RID: 59722 RVA: 0x002274C5 File Offset: 0x002256C5
 		public virtual string VarLeft
 		{
 			get
@@ -50,8 +48,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170040D6 RID: 16598
-		// (get) Token: 0x0600DB7D RID: 56189 RVA: 0x0020AD06 File Offset: 0x00208F06
+		// Token: 0x17004410 RID: 17424
+		// (get) Token: 0x0600E94B RID: 59723 RVA: 0x002274D2 File Offset: 0x002256D2
 		public virtual VarRef VarRight
 		{
 			get
@@ -66,20 +64,20 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040079EA RID: 31210
+		// Token: 0x04008086 RID: 32902
 		private ISetActorVar Instance;
 
-		// Token: 0x040079EB RID: 31211
+		// Token: 0x04008087 RID: 32903
 		[Nullable(2)]
 		private IActorRef _ActorRefCache;
 
-		// Token: 0x040079EC RID: 31212
+		// Token: 0x04008088 RID: 32904
 		private bool _ActorRefInited;
 
-		// Token: 0x040079ED RID: 31213
+		// Token: 0x04008089 RID: 32905
 		private VarRef _VarRightCache;
 
-		// Token: 0x040079EE RID: 31214
+		// Token: 0x0400808A RID: 32906
 		private bool _VarRightInited;
 	}
 }

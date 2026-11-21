@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006C6F RID: 27759
+	// Token: 0x02005DE9 RID: 24041
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelConditionCheckDollGrabShowcaseItemComboAchieved : LevelConditionBase
 	{
-		// Token: 0x06044567 RID: 279911 RVA: 0x010D8D08 File Offset: 0x010D6F08
+		// Token: 0x0603A6C1 RID: 239297 RVA: 0x01082CAC File Offset: 0x01080EAC
 		public override bool Check(Condition inConditionInfo, AActor inTrigger, params object[] eventArgs)
 		{
 			if (inConditionInfo.LimitParamsLength == 0 || inConditionInfo.LimitParamsOpeLength == 0)
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return limitParamsOpe == "<=" && currentCollectCount <= num;
 		}
 
-		// Token: 0x06044568 RID: 279912 RVA: 0x010D8E4C File Offset: 0x010D704C
+		// Token: 0x0603A6C2 RID: 239298 RVA: 0x01082DF0 File Offset: 0x01080FF0
 		public override bool CheckNew(ICondition2 inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{
 			ICheckDollGrabShowcaseItemComboAchieved checkDollGrabShowcaseItemComboAchieved = inConditionInfo as ICheckDollGrabShowcaseItemComboAchieved;

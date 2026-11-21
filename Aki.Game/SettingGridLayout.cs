@@ -9,17 +9,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001FBC RID: 8124
+// Token: 0x0200147E RID: 5246
 public class SettingGridLayout : UiPanelBase
 {
-	// Token: 0x0600FE00 RID: 65024 RVA: 0x003D9CC1 File Offset: 0x003D7EC1
+	// Token: 0x0600D226 RID: 53798 RVA: 0x003E569D File Offset: 0x003E389D
 	public SettingGridLayout(int ruleId, InventoryDefine.ESettingGridType gridType)
 	{
 		this.RuleId = ruleId;
 		this.GridType = new InventoryDefine.ESettingGridType?(gridType);
 	}
 
-	// Token: 0x0600FE01 RID: 65025 RVA: 0x003D9CDC File Offset: 0x003D7EDC
+	// Token: 0x0600D227 RID: 53799 RVA: 0x003E56B8 File Offset: 0x003E38B8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -33,7 +33,7 @@ public class SettingGridLayout : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600FE02 RID: 65026 RVA: 0x003D9D48 File Offset: 0x003D7F48
+	// Token: 0x0600D228 RID: 53800 RVA: 0x003E5724 File Offset: 0x003E3924
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SettingGridLayout.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -44,7 +44,7 @@ public class SettingGridLayout : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600FE03 RID: 65027 RVA: 0x003D9D8C File Offset: 0x003D7F8C
+	// Token: 0x0600D229 RID: 53801 RVA: 0x003E5768 File Offset: 0x003E3968
 	[NullableContext(1)]
 	public UniTask RefreshAsync(InventoryDefine.IManageConfigSettingGridData[] data)
 	{
@@ -57,7 +57,7 @@ public class SettingGridLayout : UiPanelBase
 		return <RefreshAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600FE04 RID: 65028 RVA: 0x003D9DD8 File Offset: 0x003D7FD8
+	// Token: 0x0600D22A RID: 53802 RVA: 0x003E57B4 File Offset: 0x003E39B4
 	[NullableContext(1)]
 	private SettingGridBase OnCreateGrid()
 	{
@@ -70,13 +70,13 @@ public class SettingGridLayout : UiPanelBase
 		return settingGridBase;
 	}
 
-	// Token: 0x0400759E RID: 30110
+	// Token: 0x04007680 RID: 30336
 	private readonly int RuleId;
 
-	// Token: 0x0400759F RID: 30111
+	// Token: 0x04007681 RID: 30337
 	private readonly InventoryDefine.ESettingGridType? GridType;
 
-	// Token: 0x040075A0 RID: 30112
+	// Token: 0x04007682 RID: 30338
 	[Nullable(new byte[]
 	{
 		2,
@@ -85,7 +85,7 @@ public class SettingGridLayout : UiPanelBase
 	})]
 	private GenericLayout<SettingGridBase, InventoryDefine.IManageConfigSettingGridData> GridLayout;
 
-	// Token: 0x040075A1 RID: 30113
+	// Token: 0x04007683 RID: 30339
 	[Nullable(new byte[]
 	{
 		2,
@@ -93,12 +93,12 @@ public class SettingGridLayout : UiPanelBase
 	})]
 	public Action<InventoryDefine.IManageConfigSettingGridData, bool> CallbackOnClicked;
 
-	// Token: 0x020085C3 RID: 34243
+	// Token: 0x02007745 RID: 30533
 	private enum EComponentLayout
 	{
-		// Token: 0x0402B8BC RID: 178364
+		// Token: 0x04026BC4 RID: 158660
 		LayoutRoot,
-		// Token: 0x0402B8BD RID: 178365
+		// Token: 0x04026BC5 RID: 158661
 		PanelItem
 	}
 }

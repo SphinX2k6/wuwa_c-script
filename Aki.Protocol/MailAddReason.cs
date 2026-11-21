@@ -3,350 +3,359 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020015F6 RID: 5622
+	// Token: 0x02001669 RID: 5737
 	public enum MailAddReason
 	{
-		// Token: 0x0400BEAE RID: 48814
+		// Token: 0x0400C3A5 RID: 50085
 		[OriginalName("Gm")]
 		Gm,
-		// Token: 0x0400BEAF RID: 48815
+		// Token: 0x0400C3A6 RID: 50086
 		[OriginalName("BagFull")]
 		BagFull,
-		// Token: 0x0400BEB0 RID: 48816
+		// Token: 0x0400C3A7 RID: 50087
 		[OriginalName("Public")]
 		Public,
-		// Token: 0x0400BEB1 RID: 48817
+		// Token: 0x0400C3A8 RID: 50088
 		[OriginalName("OfflineEventAdd")]
 		OfflineEventAdd,
-		// Token: 0x0400BEB2 RID: 48818
+		// Token: 0x0400C3A9 RID: 50089
 		[OriginalName("QuestNpcAction")]
 		QuestNpcAction,
-		// Token: 0x0400BEB3 RID: 48819
+		// Token: 0x0400C3AA RID: 50090
 		[OriginalName("DailyQuestReward")]
 		DailyQuestReward,
-		// Token: 0x0400BEB4 RID: 48820
+		// Token: 0x0400C3AB RID: 50091
 		[OriginalName("ReportPlayer")]
 		ReportPlayer,
-		// Token: 0x0400BEB5 RID: 48821
+		// Token: 0x0400C3AC RID: 50092
 		[OriginalName("MonthCardRemind")]
 		MonthCardRemind,
-		// Token: 0x0400BEB6 RID: 48822
+		// Token: 0x0400C3AD RID: 50093
 		[OriginalName("BattlePassSettle")]
 		BattlePassSettle,
-		// Token: 0x0400BEB7 RID: 48823
+		// Token: 0x0400C3AE RID: 50094
 		[OriginalName("PayRebate")]
 		PayRebate,
-		// Token: 0x0400BEB8 RID: 48824
+		// Token: 0x0400C3AF RID: 50095
 		[OriginalName("RemoveTemporaryTeleportBySceneDataLayerChange")]
 		RemoveTemporaryTeleportBySceneDataLayerChange,
-		// Token: 0x0400BEB9 RID: 48825
+		// Token: 0x0400C3B0 RID: 50096
 		[OriginalName("CdKey")]
 		CdKey,
-		// Token: 0x0400BEBA RID: 48826
+		// Token: 0x0400C3B1 RID: 50097
 		[OriginalName("PayRefund")]
 		PayRefund,
-		// Token: 0x0400BEBB RID: 48827
+		// Token: 0x0400C3B2 RID: 50098
 		[OriginalName("Replenishment")]
 		Replenishment,
-		// Token: 0x0400BEBC RID: 48828
+		// Token: 0x0400C3B3 RID: 50099
 		[OriginalName("GatherActivitySettle")]
 		GatherActivitySettle,
-		// Token: 0x0400BEBD RID: 48829
+		// Token: 0x0400C3B4 RID: 50100
 		[OriginalName("HarvestActivitySettle")]
 		HarvestActivitySettle,
-		// Token: 0x0400BEBE RID: 48830
+		// Token: 0x0400C3B5 RID: 50101
 		[OriginalName("RoleTrialActivitySettle")]
 		RoleTrialActivitySettle,
-		// Token: 0x0400BEBF RID: 48831
+		// Token: 0x0400C3B6 RID: 50102
 		[OriginalName("KuroBbsFirstBind")]
 		KuroBbsFirstBind,
-		// Token: 0x0400BEC0 RID: 48832
+		// Token: 0x0400C3B7 RID: 50103
 		[OriginalName("ParkourActivitySettle")]
 		ParkourActivitySettle,
-		// Token: 0x0400BEC1 RID: 48833
+		// Token: 0x0400C3B8 RID: 50104
 		[OriginalName("DailyAdventureActivitySettle")]
 		DailyAdventureActivitySettle,
-		// Token: 0x0400BEC2 RID: 48834
+		// Token: 0x0400C3B9 RID: 50105
 		[OriginalName("LongShanActivitySettle")]
 		LongShanActivitySettle,
-		// Token: 0x0400BEC3 RID: 48835
+		// Token: 0x0400C3BA RID: 50106
 		[OriginalName("SignActivitySettle")]
 		SignActivitySettle,
-		// Token: 0x0400BEC4 RID: 48836
+		// Token: 0x0400C3BB RID: 50107
 		[OriginalName("BossRushActivitySettle")]
 		BossRushActivitySettle,
-		// Token: 0x0400BEC5 RID: 48837
+		// Token: 0x0400C3BC RID: 50108
 		[OriginalName("PromotionActivity")]
 		PromotionActivity,
-		// Token: 0x0400BEC6 RID: 48838
+		// Token: 0x0400C3BD RID: 50109
 		[OriginalName("RogueActivitySettle")]
 		RogueActivitySettle,
-		// Token: 0x0400BEC7 RID: 48839
+		// Token: 0x0400C3BE RID: 50110
 		[OriginalName("TowerDefenceActivitySettle")]
 		TowerDefenceActivitySettle,
-		// Token: 0x0400BEC8 RID: 48840
+		// Token: 0x0400C3BF RID: 50111
 		[OriginalName("ExploreToolUnlock")]
 		ExploreToolUnlock,
-		// Token: 0x0400BEC9 RID: 48841
+		// Token: 0x0400C3C0 RID: 50112
 		[OriginalName("CalabashFixLevelExp")]
 		CalabashFixLevelExp,
-		// Token: 0x0400BECA RID: 48842
+		// Token: 0x0400C3C1 RID: 50113
 		[OriginalName("ActivityNotice")]
 		ActivityNotice,
-		// Token: 0x0400BECB RID: 48843
+		// Token: 0x0400C3C2 RID: 50114
 		[OriginalName("TrackMoonPhaseSettle")]
 		TrackMoonPhaseSettle,
-		// Token: 0x0400BECC RID: 48844
+		// Token: 0x0400C3C3 RID: 50115
 		[OriginalName("TrackMoonSettle")]
 		TrackMoonSettle,
-		// Token: 0x0400BECD RID: 48845
+		// Token: 0x0400C3C4 RID: 50116
 		[OriginalName("CircumFluenceSettle")]
 		CircumFluenceSettle,
-		// Token: 0x0400BECE RID: 48846
+		// Token: 0x0400C3C5 RID: 50117
 		[OriginalName("CorniceMeetingActivitySettle")]
 		CorniceMeetingActivitySettle,
-		// Token: 0x0400BECF RID: 48847
+		// Token: 0x0400C3C6 RID: 50118
 		[OriginalName("RiskHarvestSettle")]
 		RiskHarvestSettle,
-		// Token: 0x0400BED0 RID: 48848
+		// Token: 0x0400C3C7 RID: 50119
 		[OriginalName("BlackCoastThemeSettle")]
 		BlackCoastThemeSettle,
-		// Token: 0x0400BED1 RID: 48849
+		// Token: 0x0400C3C8 RID: 50120
 		[OriginalName("PreheatSignSettle")]
 		PreheatSignSettle,
-		// Token: 0x0400BED2 RID: 48850
+		// Token: 0x0400C3C9 RID: 50121
 		[OriginalName("MowTower")]
 		MowTower,
-		// Token: 0x0400BED3 RID: 48851
+		// Token: 0x0400C3CA RID: 50122
 		[OriginalName("RogueWhiteCatLimitRewardReissue")]
 		RogueWhiteCatLimitRewardReissue,
-		// Token: 0x0400BED4 RID: 48852
+		// Token: 0x0400C3CB RID: 50123
 		[OriginalName("SpecialItemUnlock")]
 		SpecialItemUnlock,
-		// Token: 0x0400BED5 RID: 48853
+		// Token: 0x0400C3CC RID: 50124
 		[OriginalName("SpringSignSettle")]
 		SpringSignSettle,
-		// Token: 0x0400BED6 RID: 48854
+		// Token: 0x0400C3CD RID: 50125
 		[OriginalName("RoleSkinTrialActivitySettle")]
 		RoleSkinTrialActivitySettle,
-		// Token: 0x0400BED7 RID: 48855
+		// Token: 0x0400C3CE RID: 50126
 		[OriginalName("FishingActivityLimitSettleReward")]
 		FishingActivityLimitSettleReward,
-		// Token: 0x0400BED8 RID: 48856
+		// Token: 0x0400C3CF RID: 50127
 		[OriginalName("TeamParkOurSettleReward")]
 		TeamParkOurSettleReward,
-		// Token: 0x0400BED9 RID: 48857
+		// Token: 0x0400C3D0 RID: 50128
 		[OriginalName("RogueWeeklyCycleAward")]
 		RogueWeeklyCycleAward,
-		// Token: 0x0400BEDA RID: 48858
+		// Token: 0x0400C3D1 RID: 50129
 		[OriginalName("BabelTowerDailyTaskResetReward")]
 		BabelTowerDailyTaskResetReward,
-		// Token: 0x0400BEDB RID: 48859
+		// Token: 0x0400C3D2 RID: 50130
 		[OriginalName("BabelTowerCloseReward")]
 		BabelTowerCloseReward,
-		// Token: 0x0400BEDC RID: 48860
+		// Token: 0x0400C3D3 RID: 50131
 		[OriginalName("ExploreActivitySettle")]
 		ExploreActivitySettle,
-		// Token: 0x0400BEDD RID: 48861
+		// Token: 0x0400C3D4 RID: 50132
 		[OriginalName("AvignonMailSettle")]
 		AvignonMailSettle,
-		// Token: 0x0400BEDE RID: 48862
+		// Token: 0x0400C3D5 RID: 50133
 		[OriginalName("CircumFluenceCloseNotice")]
 		CircumFluenceCloseNotice,
-		// Token: 0x0400BEDF RID: 48863
+		// Token: 0x0400C3D6 RID: 50134
 		[OriginalName("RogueResTaskAwardRecoup")]
 		RogueResTaskAwardRecoup,
-		// Token: 0x0400BEE0 RID: 48864
+		// Token: 0x0400C3D7 RID: 50135
 		[OriginalName("CiacconaActivitySettle")]
 		CiacconaActivitySettle,
-		// Token: 0x0400BEE1 RID: 48865
+		// Token: 0x0400C3D8 RID: 50136
 		[OriginalName("DangoMonopolyGridReward")]
 		DangoMonopolyGridReward,
-		// Token: 0x0400BEE2 RID: 48866
+		// Token: 0x0400C3D9 RID: 50137
 		[OriginalName("DangoMonopolyBoardReward")]
 		DangoMonopolyBoardReward,
-		// Token: 0x0400BEE3 RID: 48867
+		// Token: 0x0400C3DA RID: 50138
 		[OriginalName("AbyssActivityRewardSettle")]
 		AbyssActivityRewardSettle,
-		// Token: 0x0400BEE4 RID: 48868
+		// Token: 0x0400C3DB RID: 50139
 		[OriginalName("RacingBetsActivitySettle")]
 		RacingBetsActivitySettle,
-		// Token: 0x0400BEE5 RID: 48869
+		// Token: 0x0400C3DC RID: 50140
 		[OriginalName("ConsumptiveActivitySettle")]
 		ConsumptiveActivitySettle,
-		// Token: 0x0400BEE6 RID: 48870
+		// Token: 0x0400C3DD RID: 50141
 		[OriginalName("ConsumptiveShopSettle")]
 		ConsumptiveShopSettle,
-		// Token: 0x0400BEE7 RID: 48871
+		// Token: 0x0400C3DE RID: 50142
 		[OriginalName("SlashAndTowerSettle")]
 		SlashAndTowerSettle,
-		// Token: 0x0400BEE8 RID: 48872
+		// Token: 0x0400C3DF RID: 50143
 		[OriginalName("TowerMailSettle")]
 		TowerMailSettle,
-		// Token: 0x0400BEE9 RID: 48873
+		// Token: 0x0400C3E0 RID: 50144
 		[OriginalName("BirthDaySettle")]
 		BirthDaySettle,
-		// Token: 0x0400BEEA RID: 48874
+		// Token: 0x0400C3E1 RID: 50145
 		[OriginalName("RacingBetsActivityEnd")]
 		RacingBetsActivityEnd,
-		// Token: 0x0400BEEB RID: 48875
+		// Token: 0x0400C3E2 RID: 50146
 		[OriginalName("NewbieCarnivalReissueAward")]
 		NewbieCarnivalReissueAward,
-		// Token: 0x0400BEEC RID: 48876
+		// Token: 0x0400C3E3 RID: 50147
 		[OriginalName("PhantomBattleLimitSettleReward")]
 		PhantomBattleLimitSettleReward,
-		// Token: 0x0400BEED RID: 48877
+		// Token: 0x0400C3E4 RID: 50148
 		[OriginalName("FloroMailSettle")]
 		FloroMailSettle,
-		// Token: 0x0400BEEE RID: 48878
+		// Token: 0x0400C3E5 RID: 50149
 		[OriginalName("FixQuestTreasureBox")]
 		FixQuestTreasureBox,
-		// Token: 0x0400BEEF RID: 48879
+		// Token: 0x0400C3E6 RID: 50150
 		[OriginalName("TrapDefenseActivitySettle")]
 		TrapDefenseActivitySettle,
-		// Token: 0x0400BEF0 RID: 48880
+		// Token: 0x0400C3E7 RID: 50151
 		[OriginalName("FunPlayActivityClose")]
 		FunPlayActivityClose,
-		// Token: 0x0400BEF1 RID: 48881
+		// Token: 0x0400C3E8 RID: 50152
 		[OriginalName("JinZhouFlySend")]
 		JinZhouFlySend,
-		// Token: 0x0400BEF2 RID: 48882
+		// Token: 0x0400C3E9 RID: 50153
 		[OriginalName("PhotoFightActivityClose")]
 		PhotoFightActivityClose,
-		// Token: 0x0400BEF3 RID: 48883
+		// Token: 0x0400C3EA RID: 50154
 		[OriginalName("SurvivorsTaskReward")]
 		SurvivorsTaskReward,
-		// Token: 0x0400BEF4 RID: 48884
+		// Token: 0x0400C3EB RID: 50155
 		[OriginalName("SurvivorsScoreReward")]
 		SurvivorsScoreReward,
-		// Token: 0x0400BEF5 RID: 48885
+		// Token: 0x0400C3EC RID: 50156
 		[OriginalName("HonamiStoryLimitSettleReward")]
 		HonamiStoryLimitSettleReward,
-		// Token: 0x0400BEF6 RID: 48886
+		// Token: 0x0400C3ED RID: 50157
 		[OriginalName("RegressActivityDelayOpen")]
 		RegressActivityDelayOpen,
-		// Token: 0x0400BEF7 RID: 48887
+		// Token: 0x0400C3EE RID: 50158
 		[OriginalName("ArtemisActivityReward")]
 		ArtemisActivityReward,
-		// Token: 0x0400BEF8 RID: 48888
+		// Token: 0x0400C3EF RID: 50159
 		[OriginalName("MotorcycleIpLink")]
 		MotorcycleIpLink,
-		// Token: 0x0400BEF9 RID: 48889
+		// Token: 0x0400C3F0 RID: 50160
 		[OriginalName("InfrThemeActivityClose")]
 		InfrThemeActivityClose,
-		// Token: 0x0400BEFA RID: 48890
+		// Token: 0x0400C3F1 RID: 50161
 		[OriginalName("NewTowerScoreReward")]
 		NewTowerScoreReward,
-		// Token: 0x0400BEFB RID: 48891
+		// Token: 0x0400C3F2 RID: 50162
 		[OriginalName("MotorLimitSettleReward")]
 		MotorLimitSettleReward,
-		// Token: 0x0400BEFC RID: 48892
+		// Token: 0x0400C3F3 RID: 50163
 		[OriginalName("NewPlayerSupportActTaskRewardReissue")]
 		NewPlayerSupportActTaskRewardReissue,
-		// Token: 0x0400BEFD RID: 48893
+		// Token: 0x0400C3F4 RID: 50164
 		[OriginalName("MotorParkourActivityReward")]
 		MotorParkourActivityReward,
-		// Token: 0x0400BEFE RID: 48894
+		// Token: 0x0400C3F5 RID: 50165
 		[OriginalName("TotalTopUpSettleReward")]
 		TotalTopUpSettleReward,
-		// Token: 0x0400BEFF RID: 48895
+		// Token: 0x0400C3F6 RID: 50166
 		[OriginalName("MotorFightActivityClose")]
 		MotorFightActivityClose,
-		// Token: 0x0400BF00 RID: 48896
+		// Token: 0x0400C3F7 RID: 50167
 		[OriginalName("WeekCardRewardSettle")]
 		WeekCardRewardSettle,
-		// Token: 0x0400BF01 RID: 48897
+		// Token: 0x0400C3F8 RID: 50168
 		[OriginalName("FarmGoldActivityRewardReissue")]
 		FarmGoldActivityRewardReissue,
-		// Token: 0x0400BF02 RID: 48898
+		// Token: 0x0400C3F9 RID: 50169
 		[OriginalName("SpringFestival31MailSettle")]
 		SpringFestival31MailSettle,
-		// Token: 0x0400BF03 RID: 48899
+		// Token: 0x0400C3FA RID: 50170
 		[OriginalName("MotorDevelopActivitySettle")]
 		MotorDevelopActivitySettle,
-		// Token: 0x0400BF04 RID: 48900
+		// Token: 0x0400C3FB RID: 50171
 		[OriginalName("PhantomVicePolishNotice")]
 		PhantomVicePolishNotice,
-		// Token: 0x0400BF05 RID: 48901
+		// Token: 0x0400C3FC RID: 50172
 		[OriginalName("FlagChallengeTaskRewardSettle")]
 		FlagChallengeTaskRewardSettle,
-		// Token: 0x0400BF06 RID: 48902
+		// Token: 0x0400C3FD RID: 50173
 		[OriginalName("TotalTopUpReplenishment")]
 		TotalTopUpReplenishment,
-		// Token: 0x0400BF07 RID: 48903
+		// Token: 0x0400C3FE RID: 50174
 		[OriginalName("FeiXuePreheatRewardSettle")]
 		FeiXuePreheatRewardSettle,
-		// Token: 0x0400BF08 RID: 48904
+		// Token: 0x0400C3FF RID: 50175
 		[OriginalName("RhythmLimitTaskReissue")]
 		RhythmLimitTaskReissue,
-		// Token: 0x0400BF09 RID: 48905
+		// Token: 0x0400C400 RID: 50176
 		[OriginalName("DropCatchActivityReward")]
 		DropCatchActivityReward,
-		// Token: 0x0400BF0A RID: 48906
+		// Token: 0x0400C401 RID: 50177
 		[OriginalName("NewTowerSeasonAward")]
 		NewTowerSeasonAward,
-		// Token: 0x0400BF0B RID: 48907
+		// Token: 0x0400C402 RID: 50178
 		[OriginalName("NewTowerSeasonScoreAward")]
 		NewTowerSeasonScoreAward,
-		// Token: 0x0400BF0C RID: 48908
+		// Token: 0x0400C403 RID: 50179
 		[OriginalName("BossPilingTaskRewardSettle")]
 		BossPilingTaskRewardSettle,
-		// Token: 0x0400BF0D RID: 48909
+		// Token: 0x0400C404 RID: 50180
 		[OriginalName("ThemeCelebration")]
 		ThemeCelebration,
-		// Token: 0x0400BF0E RID: 48910
+		// Token: 0x0400C405 RID: 50181
 		[OriginalName("ThemeCelebrationWuWu")]
 		ThemeCelebrationWuWu,
-		// Token: 0x0400BF0F RID: 48911
+		// Token: 0x0400C406 RID: 50182
 		[OriginalName("TotalTopUpCloseReplenishment")]
 		TotalTopUpCloseReplenishment,
-		// Token: 0x0400BF10 RID: 48912
+		// Token: 0x0400C407 RID: 50183
 		[OriginalName("MotorDecalActivity")]
 		MotorDecalActivity,
-		// Token: 0x0400BF11 RID: 48913
+		// Token: 0x0400C408 RID: 50184
 		[OriginalName("PinballMailSettle")]
 		PinballMailSettle,
-		// Token: 0x0400BF12 RID: 48914
+		// Token: 0x0400C409 RID: 50185
 		[OriginalName("LinkageCheckInSettle")]
 		LinkageCheckInSettle,
-		// Token: 0x0400BF13 RID: 48915
+		// Token: 0x0400C40A RID: 50186
 		[OriginalName("RoleGiftSettle")]
 		RoleGiftSettle,
-		// Token: 0x0400BF14 RID: 48916
+		// Token: 0x0400C40B RID: 50187
 		[OriginalName("KurotatoLimitRewardReissue")]
 		KurotatoLimitRewardReissue,
-		// Token: 0x0400BF15 RID: 48917
+		// Token: 0x0400C40C RID: 50188
 		[OriginalName("KurotatoScoreRewardReissue")]
 		KurotatoScoreRewardReissue,
-		// Token: 0x0400BF16 RID: 48918
+		// Token: 0x0400C40D RID: 50189
 		[OriginalName("KurotatoResRewardReissue")]
 		KurotatoResRewardReissue,
-		// Token: 0x0400BF17 RID: 48919
+		// Token: 0x0400C40E RID: 50190
 		[OriginalName("GachaAccumulateRewardSettle")]
 		GachaAccumulateRewardSettle,
-		// Token: 0x0400BF18 RID: 48920
+		// Token: 0x0400C40F RID: 50191
 		[OriginalName("OnlineMotorSettle")]
 		OnlineMotorSettle,
-		// Token: 0x0400BF19 RID: 48921
+		// Token: 0x0400C410 RID: 50192
 		[OriginalName("EdgeRunnerActivityMailSettle")]
 		EdgeRunnerActivityMailSettle,
-		// Token: 0x0400BF1A RID: 48922
+		// Token: 0x0400C411 RID: 50193
 		[OriginalName("WeeklyFrameScoreRewardReissue")]
 		WeeklyFrameScoreRewardReissue,
-		// Token: 0x0400BF1B RID: 48923
+		// Token: 0x0400C412 RID: 50194
 		[OriginalName("XboxGift")]
 		XboxGift,
-		// Token: 0x0400BF1C RID: 48924
+		// Token: 0x0400C413 RID: 50195
 		[OriginalName("DangoBrawlActivityMailSettle")]
 		DangoBrawlActivityMailSettle,
-		// Token: 0x0400BF1D RID: 48925
+		// Token: 0x0400C414 RID: 50196
 		[OriginalName("RoverRogueTaskRewardSettle")]
 		RoverRogueTaskRewardSettle,
-		// Token: 0x0400BF1E RID: 48926
+		// Token: 0x0400C415 RID: 50197
 		[OriginalName("QingXiaoActivityMailSettle")]
 		QingXiaoActivityMailSettle,
-		// Token: 0x0400BF1F RID: 48927
+		// Token: 0x0400C416 RID: 50198
 		[OriginalName("TimePointRewardActivityMailSettle")]
-		TimePointRewardActivityMailSettle
+		TimePointRewardActivityMailSettle,
+		// Token: 0x0400C417 RID: 50199
+		[OriginalName("SolarSchoolLimitTaskReissue")]
+		SolarSchoolLimitTaskReissue,
+		// Token: 0x0400C418 RID: 50200
+		[OriginalName("RoleTowerLimitRewardReissue")]
+		RoleTowerLimitRewardReissue = 116,
+		// Token: 0x0400C419 RID: 50201
+		[OriginalName("RoleTowerScoreRewardReissue")]
+		RoleTowerScoreRewardReissue
 	}
 }

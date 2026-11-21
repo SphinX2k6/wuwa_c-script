@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.PlotView
 {
-	// Token: 0x02005044 RID: 20548
+	// Token: 0x02004013 RID: 16403
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FloatingSubtitle2dCloseGuard
 	{
-		// Token: 0x0603496E RID: 215406 RVA: 0x00C6B820 File Offset: 0x00C69A20
+		// Token: 0x0602984A RID: 170058 RVA: 0x00BB88C0 File Offset: 0x00BB6AC0
 		public void Start(SimpleLevelSequenceActor sequenceActor, ULevelSequence sequence, PlayLevelSequence config)
 		{
 			this.Stop();
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			player.OnPause.Add(new Action(this.OnPause));
 		}
 
-		// Token: 0x0603496F RID: 215407 RVA: 0x00C6B96F File Offset: 0x00C69B6F
+		// Token: 0x0602984B RID: 170059 RVA: 0x00BB8A0F File Offset: 0x00BB6C0F
 		public void Stop()
 		{
 			UMovieSceneSequencePlayer player = this.Player;
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.Player = null;
 		}
 
-		// Token: 0x06034970 RID: 215408 RVA: 0x00C6B9A8 File Offset: 0x00C69BA8
+		// Token: 0x0602984C RID: 170060 RVA: 0x00BB8A48 File Offset: 0x00BB6C48
 		private void OnPause()
 		{
 			UMovieSceneSequencePlayer player = this.Player;
@@ -96,17 +96,17 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}, null, null);
 		}
 
-		// Token: 0x06034971 RID: 215409 RVA: 0x00C6BA88 File Offset: 0x00C69C88
+		// Token: 0x0602984D RID: 170061 RVA: 0x00BB8B28 File Offset: 0x00BB6D28
 		private bool IsSubtitleSequence(string path)
 		{
 			return path == "/Game/Aki/Sequence/Level/3_7/Huoxia/DiTianJian/3_7_2Dzimu_1.3_7_2Dzimu_1" || path == "/Game/Aki/Sequence/Level/3_7/Huoxia/DiTianJian/3_7_2Dzimu_2.3_7_2Dzimu_2" || path == "/Game/Aki/Sequence/Level/3_7/Huoxia/DiTianJian/3_7_2Dzimu_3.3_7_2Dzimu_3" || path == "/Game/Aki/Sequence/Level/3_7/Huoxia/DiTianJian/3_7_2Dzimu_2_kill.3_7_2Dzimu_2_kill" || path == "/Game/Aki/Sequence/Level/3_7/Huoxia/DiTianJian/3_7_2Dzimu_kill.3_7_2Dzimu_kill";
 		}
 
-		// Token: 0x0401C06C RID: 114796
+		// Token: 0x04016A8F RID: 92815
 		[Nullable(2)]
 		private UMovieSceneSequencePlayer Player;
 
-		// Token: 0x0401C06D RID: 114797
+		// Token: 0x04016A90 RID: 92816
 		private double LastMarkSeconds;
 	}
 }

@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001EE8 RID: 7912
+	// Token: 0x020005F5 RID: 1525
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FOnPerceptionEventTrigger : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601E130 RID: 123184 RVA: 0x002CA556 File Offset: 0x002C8756
+		// Token: 0x0600877B RID: 34683 RVA: 0x000CB55A File Offset: 0x000C975A
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnPerceptionEventTrigger.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601E131 RID: 123185 RVA: 0x002CA562 File Offset: 0x002C8762
+		// Token: 0x0600877C RID: 34684 RVA: 0x000CB566 File Offset: 0x000C9766
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnPerceptionEventTrigger._FunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace UnrealEngine
 			return FOnPerceptionEventTrigger._FunctionPtr;
 		}
 
-		// Token: 0x0601E132 RID: 123186 RVA: 0x002CA585 File Offset: 0x002C8785
+		// Token: 0x0600877D RID: 34685 RVA: 0x000CB589 File Offset: 0x000C9789
 		public FOnPerceptionEventTrigger()
 		{
 		}
 
-		// Token: 0x0601E133 RID: 123187 RVA: 0x002CA58D File Offset: 0x002C878D
+		// Token: 0x0600877E RID: 34686 RVA: 0x000CB591 File Offset: 0x000C9791
 		[NullableContext(2)]
 		public FOnPerceptionEventTrigger(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601E134 RID: 123188 RVA: 0x002CA597 File Offset: 0x002C8797
+		// Token: 0x0600877F RID: 34687 RVA: 0x000CB59B File Offset: 0x000C979B
 		public FOnPerceptionEventTrigger(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601E135 RID: 123189 RVA: 0x002CA5A2 File Offset: 0x002C87A2
+		// Token: 0x06008780 RID: 34688 RVA: 0x000CB5A6 File Offset: 0x000C97A6
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as FOnPerceptionEventTrigger.FOnPerceptionEventTrigger_ScriptDelegate) ?? ((FOnPerceptionEventTrigger.FOnPerceptionEventTrigger_ScriptDelegate)Delegate.CreateDelegate(typeof(FOnPerceptionEventTrigger.FOnPerceptionEventTrigger_ScriptDelegate), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601E136 RID: 123190 RVA: 0x002CA5D4 File Offset: 0x002C87D4
+		// Token: 0x06008781 RID: 34689 RVA: 0x000CB5D8 File Offset: 0x000C97D8
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(FOnPerceptionEventTrigger.FOnPerceptionEventTrigger_ScriptDelegate Callback)
 		{
 			if (FOnPerceptionEventTrigger.RegisterId == 0)
@@ -67,18 +66,16 @@ namespace UnrealEngine
 			base.Add(Callback, FOnPerceptionEventTrigger.RegisterId);
 		}
 
-		// Token: 0x0601E137 RID: 123191 RVA: 0x002CA60E File Offset: 0x002C880E
+		// Token: 0x06008782 RID: 34690 RVA: 0x000CB612 File Offset: 0x000C9812
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(FOnPerceptionEventTrigger.FOnPerceptionEventTrigger_ScriptDelegate Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601E138 RID: 123192 RVA: 0x002CA618 File Offset: 0x002C8818
+		// Token: 0x06008783 RID: 34691 RVA: 0x000CB61C File Offset: 0x000C981C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast([Nullable(new byte[]
 		{
 			2,
@@ -126,10 +123,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FOnPerceptionEventTrigger._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601E139 RID: 123193 RVA: 0x002CA6E0 File Offset: 0x002C88E0
+		// Token: 0x06008784 RID: 34692 RVA: 0x000CB6E4 File Offset: 0x000C98E4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			FOnPerceptionEventTrigger.FOnPerceptionEventTrigger_ScriptDelegate fonPerceptionEventTrigger_ScriptDelegate = target as FOnPerceptionEventTrigger.FOnPerceptionEventTrigger_ScriptDelegate;
@@ -155,18 +151,18 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x04010412 RID: 66578
+		// Token: 0x04003AEA RID: 15082
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04010413 RID: 66579
+		// Token: 0x04003AEB RID: 15083
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroUtility.OnPerceptionEventTrigger__DelegateSignature";
 
-		// Token: 0x04010414 RID: 66580
+		// Token: 0x04003AEC RID: 15084
 		private static int RegisterId;
 
-		// Token: 0x020033B8 RID: 13240
-		// (Invoke) Token: 0x060285AA RID: 165290
+		// Token: 0x02000E05 RID: 3589
+		// (Invoke) Token: 0x0600BF13 RID: 48915
 		public delegate void FOnPerceptionEventTrigger_ScriptDelegate([Nullable(new byte[]
 		{
 			2,
@@ -177,33 +173,33 @@ namespace UnrealEngine
 			1
 		})] in TArray<AActor> RemoveActor, in TArray<int> RemoveActorIds, int Num);
 
-		// Token: 0x020033B9 RID: 13241
+		// Token: 0x02000E06 RID: 3590
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 56)]
-		protected ref struct __FOnPerceptionEventTrigger_DelegateParams
+		private ref struct __FOnPerceptionEventTrigger_DelegateParams
 		{
-			// Token: 0x0401736C RID: 95084
+			// Token: 0x04006199 RID: 24985
 			[FieldOffset(0)]
 			public byte AddActor;
 
-			// Token: 0x0401736D RID: 95085
+			// Token: 0x0400619A RID: 24986
 			[FieldOffset(16)]
 			public byte RemoveActor;
 
-			// Token: 0x0401736E RID: 95086
+			// Token: 0x0400619B RID: 24987
 			[FieldOffset(32)]
 			public byte RemoveActorIds;
 
-			// Token: 0x0401736F RID: 95087
+			// Token: 0x0400619C RID: 24988
 			[FieldOffset(48)]
 			public int Num;
 		}
 
-		// Token: 0x020033BA RID: 13242
+		// Token: 0x02000E07 RID: 3591
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017370 RID: 95088
+			// Token: 0x0400619D RID: 24989
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

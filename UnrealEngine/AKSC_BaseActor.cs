@@ -6,31 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001CFC RID: 7420
+	// Token: 0x02000560 RID: 1376
 	[UnrealObjectPath("/Script/KuroSimpleCombat.KSC_BaseActor")]
 	[UnrealStructLayout(1048, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1048)]
 	public class AKSC_BaseActor : AActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601C8E0 RID: 116960 RVA: 0x002A36BA File Offset: 0x002A18BA
+		// Token: 0x06007DA1 RID: 32161 RVA: 0x000BA4A2 File Offset: 0x000B86A2
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return AKSC_BaseActor._ClassPtr;
 		}
 
-		// Token: 0x0601C8E1 RID: 116961 RVA: 0x002A36C8 File Offset: 0x002A18C8
+		// Token: 0x06007DA2 RID: 32162 RVA: 0x000BA4B0 File Offset: 0x000B86B0
 		public AKSC_BaseActor() : this(BuiltinUtils.AllocNativeUObject(AKSC_BaseActor.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601C8E2 RID: 116962 RVA: 0x002A36F0 File Offset: 0x002A18F0
+		// Token: 0x06007DA3 RID: 32163 RVA: 0x000BA4D8 File Offset: 0x000B86D8
 		[NullableContext(1)]
 		public AKSC_BaseActor(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(AKSC_BaseActor.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700730C RID: 29452
-		// (get) Token: 0x0601C8E3 RID: 116963 RVA: 0x002A3723 File Offset: 0x002A1923
-		// (set) Token: 0x0601C8E4 RID: 116964 RVA: 0x002A3737 File Offset: 0x002A1937
+		// Token: 0x17001836 RID: 6198
+		// (get) Token: 0x06007DA4 RID: 32164 RVA: 0x000BA50B File Offset: 0x000B870B
+		// (set) Token: 0x06007DA5 RID: 32165 RVA: 0x000BA51F File Offset: 0x000B871F
 		[Nullable(2)]
 		public unsafe UKSC_World KscWorld
 		{
@@ -46,28 +46,28 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601C8E5 RID: 116965 RVA: 0x002A374C File Offset: 0x002A194C
+		// Token: 0x06007DA6 RID: 32166 RVA: 0x000BA534 File Offset: 0x000B8734
 		static AKSC_BaseActor()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroSimpleCombat.KSC_BaseActor");
 		}
 
-		// Token: 0x0601C8E6 RID: 116966 RVA: 0x002A375A File Offset: 0x002A195A
+		// Token: 0x06007DA7 RID: 32167 RVA: 0x000BA542 File Offset: 0x000B8742
 		protected AKSC_BaseActor(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400F7A7 RID: 63399
+		// Token: 0x040036BD RID: 14013
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroSimpleCombat.KSC_BaseActor";
 
-		// Token: 0x0400F7A8 RID: 63400
+		// Token: 0x040036BE RID: 14014
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400F7A9 RID: 63401
+		// Token: 0x040036BF RID: 14015
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400F7AA RID: 63402
+		// Token: 0x040036C0 RID: 14016
 		internal static int __PropertyOffset_KscWorld;
 	}
 }

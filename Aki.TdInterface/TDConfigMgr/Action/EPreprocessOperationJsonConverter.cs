@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023E0 RID: 9184
+	// Token: 0x02002677 RID: 9847
 	public class EPreprocessOperationJsonConverter : JsonConverter<EPreprocessOperation>
 	{
-		// Token: 0x0600C7F0 RID: 51184 RVA: 0x001D44AC File Offset: 0x001D26AC
+		// Token: 0x0600D473 RID: 54387 RVA: 0x001EDC58 File Offset: 0x001EBE58
 		public override EPreprocessOperation Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EPreprocessOperationExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C7F1 RID: 51185 RVA: 0x001D44D0 File Offset: 0x001D26D0
+		// Token: 0x0600D474 RID: 54388 RVA: 0x001EDC7C File Offset: 0x001EBE7C
 		public override void Write(Utf8JsonWriter writer, EPreprocessOperation value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

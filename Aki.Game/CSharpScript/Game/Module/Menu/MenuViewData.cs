@@ -3,19 +3,19 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.Menu
 {
-	// Token: 0x02005407 RID: 21511
+	// Token: 0x020043EA RID: 17386
 	public class MenuViewData
 	{
-		// Token: 0x06036F63 RID: 225123 RVA: 0x00D050EC File Offset: 0x00D032EC
+		// Token: 0x0602BEAB RID: 179883 RVA: 0x00C54530 File Offset: 0x00C52730
 		public MenuViewData()
 		{
 			this.MenuViewDataCurMainType = 0;
 			this.MenuViewDataLastSubType = 0;
 		}
 
-		// Token: 0x1700842C RID: 33836
-		// (get) Token: 0x06036F65 RID: 225125 RVA: 0x00D0512E File Offset: 0x00D0332E
-		// (set) Token: 0x06036F64 RID: 225124 RVA: 0x00D05115 File Offset: 0x00D03315
+		// Token: 0x170057F8 RID: 22520
+		// (get) Token: 0x0602BEAD RID: 179885 RVA: 0x00C54572 File Offset: 0x00C52772
+		// (set) Token: 0x0602BEAC RID: 179884 RVA: 0x00C54559 File Offset: 0x00C52759
 		public int MenuViewDataCurMainType
 		{
 			get
@@ -29,9 +29,9 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x1700842D RID: 33837
-		// (get) Token: 0x06036F67 RID: 225127 RVA: 0x00D0513F File Offset: 0x00D0333F
-		// (set) Token: 0x06036F66 RID: 225126 RVA: 0x00D05136 File Offset: 0x00D03336
+		// Token: 0x170057F9 RID: 22521
+		// (get) Token: 0x0602BEAF RID: 179887 RVA: 0x00C54583 File Offset: 0x00C52783
+		// (set) Token: 0x0602BEAE RID: 179886 RVA: 0x00C5457A File Offset: 0x00C5277A
 		public int MenuViewDataLastSubType
 		{
 			get
@@ -44,8 +44,8 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x1700842E RID: 33838
-		// (get) Token: 0x06036F68 RID: 225128 RVA: 0x00D05147 File Offset: 0x00D03347
+		// Token: 0x170057FA RID: 22522
+		// (get) Token: 0x0602BEB0 RID: 179888 RVA: 0x00C5458B File Offset: 0x00C5278B
 		public int MenuViewDataMainInterval
 		{
 			get
@@ -54,8 +54,8 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x1700842F RID: 33839
-		// (get) Token: 0x06036F69 RID: 225129 RVA: 0x00D0514F File Offset: 0x00D0334F
+		// Token: 0x170057FB RID: 22523
+		// (get) Token: 0x0602BEB1 RID: 179889 RVA: 0x00C54593 File Offset: 0x00C52793
 		public int MenuViewDataSubInterval
 		{
 			get
@@ -64,16 +64,16 @@ namespace CSharpScript.Game.Module.Menu
 			}
 		}
 
-		// Token: 0x0401D00D RID: 118797
+		// Token: 0x04017AA6 RID: 96934
 		private readonly int MainInterval = 200;
 
-		// Token: 0x0401D00E RID: 118798
+		// Token: 0x04017AA7 RID: 96935
 		private readonly int SubInterval = 100;
 
-		// Token: 0x0401D00F RID: 118799
+		// Token: 0x04017AA8 RID: 96936
 		private int CurMainType;
 
-		// Token: 0x0401D010 RID: 118800
+		// Token: 0x04017AA9 RID: 96937
 		private int LastSubType;
 	}
 }

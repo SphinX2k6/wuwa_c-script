@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using CSharpScript.Game.Common;
 
-// Token: 0x020023B5 RID: 9141
+// Token: 0x0200189A RID: 6298
 public class PersonalPlayerTitleData
 {
-	// Token: 0x060124A3 RID: 74915 RVA: 0x00481318 File Offset: 0x0047F518
+	// Token: 0x0600F955 RID: 63829 RVA: 0x0048E800 File Offset: 0x0048CA00
 	public PersonalPlayerTitleData(int playerTitleId, bool isUnLock)
 	{
 		this.PlayerTitleId = playerTitleId;
@@ -27,33 +27,33 @@ public class PersonalPlayerTitleData
 		}
 	}
 
-	// Token: 0x060124A4 RID: 74916 RVA: 0x00481388 File Offset: 0x0047F588
+	// Token: 0x0600F956 RID: 63830 RVA: 0x0048E870 File Offset: 0x0048CA70
 	public void SetUnLockProgress(int curProgress, int targetProgress)
 	{
 		this.CurProgress = new int?(curProgress);
 		this.TargetProgress = new int?(targetProgress);
 	}
 
-	// Token: 0x060124A5 RID: 74917 RVA: 0x004813A2 File Offset: 0x0047F5A2
+	// Token: 0x0600F957 RID: 63831 RVA: 0x0048E88A File Offset: 0x0048CA8A
 	public void UnLock(double unlockTime)
 	{
 		this.IsUnLock = true;
 		this.UnlockTime = new double?(unlockTime);
 	}
 
-	// Token: 0x060124A6 RID: 74918 RVA: 0x004813B7 File Offset: 0x0047F5B7
+	// Token: 0x0600F958 RID: 63832 RVA: 0x0048E89F File Offset: 0x0048CA9F
 	public void SetStarLevel(int starLevel)
 	{
 		this.StarLevel = new int?(starLevel);
 	}
 
-	// Token: 0x060124A7 RID: 74919 RVA: 0x004813C5 File Offset: 0x0047F5C5
+	// Token: 0x0600F959 RID: 63833 RVA: 0x0048E8AD File Offset: 0x0048CAAD
 	public void SetUnlockTime(double unlockTime)
 	{
 		this.UnlockTime = new double?(unlockTime);
 	}
 
-	// Token: 0x060124A8 RID: 74920 RVA: 0x004813D4 File Offset: 0x0047F5D4
+	// Token: 0x0600F95A RID: 63834 RVA: 0x0048E8BC File Offset: 0x0048CABC
 	public bool GetIsShowRedDot()
 	{
 		if (!this.IsUnLock)
@@ -68,25 +68,25 @@ public class PersonalPlayerTitleData
 		return dictionary.ContainsKey(this.PlayerTitleId) && dictionary[this.PlayerTitleId];
 	}
 
-	// Token: 0x060124A9 RID: 74921 RVA: 0x00481423 File Offset: 0x0047F623
+	// Token: 0x0600F95B RID: 63835 RVA: 0x0048E90B File Offset: 0x0048CB0B
 	public bool IsTimeLimitTitle()
 	{
 		return this.StartTime != null && this.EndTime != null;
 	}
 
-	// Token: 0x060124AA RID: 74922 RVA: 0x0048143F File Offset: 0x0047F63F
+	// Token: 0x0600F95C RID: 63836 RVA: 0x0048E927 File Offset: 0x0048CB27
 	public bool IsExpired()
 	{
 		return this.IsTimeLimitTitle() && TimeUtil.Instance.GetServerTime() > this.EndTime.Value;
 	}
 
-	// Token: 0x060124AB RID: 74923 RVA: 0x00481462 File Offset: 0x0047F662
+	// Token: 0x0600F95D RID: 63837 RVA: 0x0048E94A File Offset: 0x0048CB4A
 	public bool IsEffective()
 	{
 		return this.IsUnLock && !this.IsExpired();
 	}
 
-	// Token: 0x060124AC RID: 74924 RVA: 0x00481478 File Offset: 0x0047F678
+	// Token: 0x0600F95E RID: 63838 RVA: 0x0048E960 File Offset: 0x0048CB60
 	public int GetRemainingDays()
 	{
 		if (!this.IsTimeLimitTitle())
@@ -102,34 +102,34 @@ public class PersonalPlayerTitleData
 		return (int)Math.Ceiling(num / (double)TimeUtil.Instance.OneDaySeconds);
 	}
 
-	// Token: 0x060124AD RID: 74925 RVA: 0x004814CA File Offset: 0x0047F6CA
+	// Token: 0x0600F95F RID: 63839 RVA: 0x0048E9B2 File Offset: 0x0048CBB2
 	public void SetTimeLimit(double startTime, double endTime)
 	{
 		this.StartTime = new double?(startTime);
 		this.EndTime = new double?(endTime);
 	}
 
-	// Token: 0x040089FE RID: 35326
+	// Token: 0x04008B45 RID: 35653
 	public int PlayerTitleId;
 
-	// Token: 0x040089FF RID: 35327
+	// Token: 0x04008B46 RID: 35654
 	public int? StarLevel;
 
-	// Token: 0x04008A00 RID: 35328
+	// Token: 0x04008B47 RID: 35655
 	public bool IsUnLock;
 
-	// Token: 0x04008A01 RID: 35329
+	// Token: 0x04008B48 RID: 35656
 	public double? UnlockTime;
 
-	// Token: 0x04008A02 RID: 35330
+	// Token: 0x04008B49 RID: 35657
 	public int? CurProgress;
 
-	// Token: 0x04008A03 RID: 35331
+	// Token: 0x04008B4A RID: 35658
 	public int? TargetProgress;
 
-	// Token: 0x04008A04 RID: 35332
+	// Token: 0x04008B4B RID: 35659
 	public double? StartTime;
 
-	// Token: 0x04008A05 RID: 35333
+	// Token: 0x04008B4C RID: 35660
 	public double? EndTime;
 }

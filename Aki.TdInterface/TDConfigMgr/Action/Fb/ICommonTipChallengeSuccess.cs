@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002742 RID: 10050
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A0E RID: 10766
 	public class ICommonTipChallengeSuccess : ICommonTipType
 	{
-		// Token: 0x0600DFF5 RID: 57333 RVA: 0x0021296D File Offset: 0x00210B6D
+		// Token: 0x0600EDF5 RID: 60917 RVA: 0x0022F4A5 File Offset: 0x0022D6A5
 		public static ICommonTipChallengeSuccess Create(ICommonTipChallengeSuccess? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004333 RID: 17203
-		// (get) Token: 0x0600DFF6 RID: 57334 RVA: 0x0021298C File Offset: 0x00210B8C
+		// Token: 0x17004687 RID: 18055
+		// (get) Token: 0x0600EDF6 RID: 60918 RVA: 0x0022F4C4 File Offset: 0x0022D6C4
 		public override ECommonTipType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004334 RID: 17204
-		// (get) Token: 0x0600DFF7 RID: 57335 RVA: 0x00212999 File Offset: 0x00210B99
+		// Token: 0x17004688 RID: 18056
+		// (get) Token: 0x0600EDF7 RID: 60919 RVA: 0x0022F4D1 File Offset: 0x0022D6D1
 		public virtual string TidMainText
 		{
 			get
@@ -42,8 +40,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004335 RID: 17205
-		// (get) Token: 0x0600DFF8 RID: 57336 RVA: 0x002129A6 File Offset: 0x00210BA6
+		// Token: 0x17004689 RID: 18057
+		// (get) Token: 0x0600EDF8 RID: 60920 RVA: 0x0022F4DE File Offset: 0x0022D6DE
 		[Nullable(2)]
 		public virtual string EdTidMainText
 		{
@@ -54,7 +52,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C40 RID: 31808
+		// Token: 0x040082EE RID: 33518
 		private ICommonTipChallengeSuccess Instance;
 	}
 }

@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027AF RID: 10159
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A82 RID: 10882
 	public class IActiveRange : ActionParams
 	{
-		// Token: 0x0600E200 RID: 57856 RVA: 0x002161A6 File Offset: 0x002143A6
+		// Token: 0x0600F022 RID: 61474 RVA: 0x00232F7A File Offset: 0x0023117A
 		public static IActiveRange Create(IActiveRange? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004464 RID: 17508
-		// (get) Token: 0x0600E201 RID: 57857 RVA: 0x002161C5 File Offset: 0x002143C5
+		// Token: 0x170047CC RID: 18380
+		// (get) Token: 0x0600F023 RID: 61475 RVA: 0x00232F99 File Offset: 0x00231199
 		public virtual VectorInfo CheckPoint
 		{
 			get
@@ -39,8 +37,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004465 RID: 17509
-		// (get) Token: 0x0600E202 RID: 57858 RVA: 0x002161F9 File Offset: 0x002143F9
+		// Token: 0x170047CD RID: 18381
+		// (get) Token: 0x0600F024 RID: 61476 RVA: 0x00232FCD File Offset: 0x002311CD
 		public virtual int CheckEnterRange
 		{
 			get
@@ -49,8 +47,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004466 RID: 17510
-		// (get) Token: 0x0600E203 RID: 57859 RVA: 0x00216206 File Offset: 0x00214406
+		// Token: 0x170047CE RID: 18382
+		// (get) Token: 0x0600F025 RID: 61477 RVA: 0x00232FDA File Offset: 0x002311DA
 		public virtual int CheckLeaveRange
 		{
 			get
@@ -59,8 +57,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004467 RID: 17511
-		// (get) Token: 0x0600E204 RID: 57860 RVA: 0x00216214 File Offset: 0x00214414
+		// Token: 0x170047CF RID: 18383
+		// (get) Token: 0x0600F026 RID: 61478 RVA: 0x00232FE8 File Offset: 0x002311E8
 		public virtual bool? AllowRangeExceed
 		{
 			get
@@ -73,14 +71,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007D53 RID: 32083
+		// Token: 0x0400840A RID: 33802
 		private IActiveRange Instance;
 
-		// Token: 0x04007D54 RID: 32084
+		// Token: 0x0400840B RID: 33803
 		[Nullable(2)]
 		private VectorInfo _CheckPointCache;
 
-		// Token: 0x04007D55 RID: 32085
+		// Token: 0x0400840C RID: 33804
 		private bool _CheckPointInited;
 	}
 }

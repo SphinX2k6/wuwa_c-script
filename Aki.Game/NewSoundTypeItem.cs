@@ -9,7 +9,7 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x020016AF RID: 5807
+// Token: 0x02000B67 RID: 2919
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -18,7 +18,7 @@ using UnrealEngine;
 })]
 public class NewSoundTypeItem : SyncGridProxyAbstract<INewSoundTypeItemData>
 {
-	// Token: 0x0600A59A RID: 42394 RVA: 0x0025045C File Offset: 0x0024E65C
+	// Token: 0x0600797A RID: 31098 RVA: 0x0025A870 File Offset: 0x00258A70
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -51,7 +51,7 @@ public class NewSoundTypeItem : SyncGridProxyAbstract<INewSoundTypeItemData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600A59B RID: 42395 RVA: 0x002505C8 File Offset: 0x0024E7C8
+	// Token: 0x0600797B RID: 31099 RVA: 0x0025A9DC File Offset: 0x00258BDC
 	protected override void OnStart()
 	{
 		this.Toggle = base.GetExtendToggle(3);
@@ -68,7 +68,7 @@ public class NewSoundTypeItem : SyncGridProxyAbstract<INewSoundTypeItemData>
 		}
 	}
 
-	// Token: 0x0600A59C RID: 42396 RVA: 0x00250634 File Offset: 0x0024E834
+	// Token: 0x0600797C RID: 31100 RVA: 0x0025AA48 File Offset: 0x00258C48
 	[NullableContext(1)]
 	public void BindOnToggleFunc(Action<int, UUIExtendToggle> toggleFunc)
 	{
@@ -95,20 +95,20 @@ public class NewSoundTypeItem : SyncGridProxyAbstract<INewSoundTypeItemData>
 		};
 	}
 
-	// Token: 0x0600A59D RID: 42397 RVA: 0x00250667 File Offset: 0x0024E867
+	// Token: 0x0600797D RID: 31101 RVA: 0x0025AA7B File Offset: 0x00258C7B
 	[NullableContext(1)]
 	public void BindCanToggleExecuteChange(Func<int, bool> toggle)
 	{
 		this.OnCanToggleClicked = toggle;
 	}
 
-	// Token: 0x0600A59E RID: 42398 RVA: 0x00250670 File Offset: 0x0024E870
+	// Token: 0x0600797E RID: 31102 RVA: 0x0025AA84 File Offset: 0x00258C84
 	private bool CanToggleExecuteChange()
 	{
 		return this.OnCanToggleClicked == null || this.OnCanToggleClicked((int)this.TypeId);
 	}
 
-	// Token: 0x0600A59F RID: 42399 RVA: 0x00250690 File Offset: 0x0024E890
+	// Token: 0x0600797F RID: 31103 RVA: 0x0025AAA4 File Offset: 0x00258CA4
 	[NullableContext(1)]
 	public override void Refresh(INewSoundTypeItemData data)
 	{
@@ -126,13 +126,13 @@ public class NewSoundTypeItem : SyncGridProxyAbstract<INewSoundTypeItemData>
 		this.RefreshRedDotState();
 	}
 
-	// Token: 0x0600A5A0 RID: 42400 RVA: 0x00250768 File Offset: 0x0024E968
+	// Token: 0x06007980 RID: 31104 RVA: 0x0025AB7C File Offset: 0x00258D7C
 	public void RefreshDoubleIcon()
 	{
 		this.RefreshAllTagState();
 	}
 
-	// Token: 0x0600A5A1 RID: 42401 RVA: 0x00250770 File Offset: 0x0024E970
+	// Token: 0x06007981 RID: 31105 RVA: 0x0025AB84 File Offset: 0x00258D84
 	public void RefreshRedDotState()
 	{
 		bool flag = AdventureGuideModel.Instance.CheckRedDotSecondary(this.TypeId);
@@ -141,13 +141,13 @@ public class NewSoundTypeItem : SyncGridProxyAbstract<INewSoundTypeItemData>
 		this.RefreshAllTagState();
 	}
 
-	// Token: 0x0600A5A2 RID: 42402 RVA: 0x002507AE File Offset: 0x0024E9AE
+	// Token: 0x06007982 RID: 31106 RVA: 0x0025ABC2 File Offset: 0x00258DC2
 	public bool GetRedDotState()
 	{
 		return this.RedDotState;
 	}
 
-	// Token: 0x0600A5A3 RID: 42403 RVA: 0x002507B8 File Offset: 0x0024E9B8
+	// Token: 0x06007983 RID: 31107 RVA: 0x0025ABCC File Offset: 0x00258DCC
 	private void RefreshAllTagState()
 	{
 		bool flag = ActivityDoubleRewardController.Instance.GetAdventureUpActivity(this.TypeId) != null || ActivityRegressModel.Instance.IsHasDoubleDrop(this.TypeId);
@@ -185,7 +185,7 @@ public class NewSoundTypeItem : SyncGridProxyAbstract<INewSoundTypeItemData>
 		}
 	}
 
-	// Token: 0x0600A5A4 RID: 42404 RVA: 0x00250890 File Offset: 0x0024EA90
+	// Token: 0x06007984 RID: 31108 RVA: 0x0025ACA4 File Offset: 0x00258EA4
 	private bool CheckIsActivityTag()
 	{
 		if (this.TypeId != EDungeonType.NoSoundArea)
@@ -196,7 +196,7 @@ public class NewSoundTypeItem : SyncGridProxyAbstract<INewSoundTypeItemData>
 		return playerType.Contains(EAdventurePreOpenPlayType.Regress) || playerType.Contains(EAdventurePreOpenPlayType.Beginner);
 	}
 
-	// Token: 0x0600A5A5 RID: 42405 RVA: 0x002508C6 File Offset: 0x0024EAC6
+	// Token: 0x06007985 RID: 31109 RVA: 0x0025ACDA File Offset: 0x00258EDA
 	private void OnToggleClick(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -205,7 +205,7 @@ public class NewSoundTypeItem : SyncGridProxyAbstract<INewSoundTypeItemData>
 		}
 	}
 
-	// Token: 0x0600A5A6 RID: 42406 RVA: 0x002508E3 File Offset: 0x0024EAE3
+	// Token: 0x06007986 RID: 31110 RVA: 0x0025ACF7 File Offset: 0x00258EF7
 	public void OnSelected(bool bFireEvent)
 	{
 		if (bFireEvent)
@@ -214,20 +214,20 @@ public class NewSoundTypeItem : SyncGridProxyAbstract<INewSoundTypeItemData>
 		}
 	}
 
-	// Token: 0x0600A5A7 RID: 42407 RVA: 0x002508EF File Offset: 0x0024EAEF
+	// Token: 0x06007987 RID: 31111 RVA: 0x0025AD03 File Offset: 0x00258F03
 	public void SetSelectToggle(EToggleState state = EToggleState.ETT_Checked)
 	{
 		base.GetExtendToggle(3).SetToggleStateForce(state, false, false, true);
 		this.ToggleFunc((int)this.TypeId, this.Toggle);
 	}
 
-	// Token: 0x0600A5A8 RID: 42408 RVA: 0x00250918 File Offset: 0x0024EB18
+	// Token: 0x06007988 RID: 31112 RVA: 0x0025AD2C File Offset: 0x00258F2C
 	public UUIExtendToggle GetSelfToggle()
 	{
 		return base.GetExtendToggle(3);
 	}
 
-	// Token: 0x0600A5A9 RID: 42409 RVA: 0x00250924 File Offset: 0x0024EB24
+	// Token: 0x06007989 RID: 31113 RVA: 0x0025AD38 File Offset: 0x00258F38
 	public UUIItem GetButtonItem()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(3);
@@ -238,13 +238,13 @@ public class NewSoundTypeItem : SyncGridProxyAbstract<INewSoundTypeItemData>
 		return extendToggle.RootUIComp.Get();
 	}
 
-	// Token: 0x04004ADC RID: 19164
+	// Token: 0x04004B83 RID: 19331
 	private EDungeonType TypeId = EDungeonType.Mat;
 
-	// Token: 0x04004ADD RID: 19165
+	// Token: 0x04004B84 RID: 19332
 	private EUiTabViewName? FromTabViewName;
 
-	// Token: 0x04004ADE RID: 19166
+	// Token: 0x04004B85 RID: 19333
 	[Nullable(new byte[]
 	{
 		2,
@@ -252,37 +252,37 @@ public class NewSoundTypeItem : SyncGridProxyAbstract<INewSoundTypeItemData>
 	})]
 	private Action<int, UUIExtendToggle> ToggleFunc;
 
-	// Token: 0x04004ADF RID: 19167
+	// Token: 0x04004B86 RID: 19334
 	private Func<int, bool> OnCanToggleClicked;
 
-	// Token: 0x04004AE0 RID: 19168
+	// Token: 0x04004B87 RID: 19335
 	private UUIExtendToggle Toggle;
 
-	// Token: 0x04004AE1 RID: 19169
+	// Token: 0x04004B88 RID: 19336
 	private bool RedDotState;
 
-	// Token: 0x04004AE2 RID: 19170
+	// Token: 0x04004B89 RID: 19337
 	private NewSoundTypeTagItem Tag;
 
-	// Token: 0x02007C84 RID: 31876
+	// Token: 0x02006E09 RID: 28169
 	[NullableContext(0)]
 	private enum ENodeDefine
 	{
-		// Token: 0x04028DA1 RID: 167329
+		// Token: 0x040240CA RID: 147658
 		Icon,
-		// Token: 0x04028DA2 RID: 167330
+		// Token: 0x040240CB RID: 147659
 		TypeText,
-		// Token: 0x04028DA3 RID: 167331
+		// Token: 0x040240CC RID: 147660
 		SubText,
-		// Token: 0x04028DA4 RID: 167332
+		// Token: 0x040240CD RID: 147661
 		Toggle,
-		// Token: 0x04028DA5 RID: 167333
+		// Token: 0x040240CE RID: 147662
 		DoubleTip,
-		// Token: 0x04028DA6 RID: 167334
+		// Token: 0x040240CF RID: 147663
 		RedDotItem,
-		// Token: 0x04028DA7 RID: 167335
+		// Token: 0x040240D0 RID: 147664
 		SprIconR,
-		// Token: 0x04028DA8 RID: 167336
+		// Token: 0x040240D1 RID: 147665
 		TagItem
 	}
 }

@@ -1,22 +1,22 @@
 ﻿using System;
 
-// Token: 0x02002931 RID: 10545
+// Token: 0x02001EAC RID: 7852
 public enum EAngleArea
 {
-	// Token: 0x0400A212 RID: 41490
+	// Token: 0x0400A5FD RID: 42493
 	TopLeft = 4,
-	// Token: 0x0400A213 RID: 41491
+	// Token: 0x0400A5FE RID: 42494
 	TopRight,
-	// Token: 0x0400A214 RID: 41492
+	// Token: 0x0400A5FF RID: 42495
 	LeftUp = 3,
-	// Token: 0x0400A215 RID: 41493
+	// Token: 0x0400A600 RID: 42496
 	LeftDown = 2,
-	// Token: 0x0400A216 RID: 41494
+	// Token: 0x0400A601 RID: 42497
 	RightUp = 6,
-	// Token: 0x0400A217 RID: 41495
+	// Token: 0x0400A602 RID: 42498
 	RightDown,
-	// Token: 0x0400A218 RID: 41496
+	// Token: 0x0400A603 RID: 42499
 	BottomLeft = 1,
-	// Token: 0x0400A219 RID: 41497
+	// Token: 0x0400A604 RID: 42500
 	BottomRight = 8
 }

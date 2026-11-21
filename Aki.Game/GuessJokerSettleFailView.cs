@@ -5,29 +5,29 @@ using Aki.Config;
 using AkiClient.Game.Aki.Character.BaseCharacter;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02001068 RID: 4200
+// Token: 0x0200051C RID: 1308
 [NullableContext(1)]
 [Nullable(0)]
 public class GuessJokerSettleFailView : GuessJokerSettleViewBase
 {
-	// Token: 0x06006C47 RID: 27719 RVA: 0x0015DBD7 File Offset: 0x0015BDD7
+	// Token: 0x06003FDC RID: 16348 RVA: 0x0016650F File Offset: 0x0016470F
 	public GuessJokerSettleFailView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06006C48 RID: 27720 RVA: 0x0015DBE0 File Offset: 0x0015BDE0
+	// Token: 0x06003FDD RID: 16349 RVA: 0x00166518 File Offset: 0x00164718
 	protected override string GetWinnerName()
 	{
 		return GuessJokerGamePlayModel.Instance.GetPlayerNameByType(EGuessJokerPlayerType.Ai);
 	}
 
-	// Token: 0x06006C49 RID: 27721 RVA: 0x0015DBED File Offset: 0x0015BDED
+	// Token: 0x06003FDE RID: 16350 RVA: 0x00166525 File Offset: 0x00164725
 	protected override EPokerStateType GetNpcPokerState()
 	{
 		return EPokerStateType.Win;
 	}
 
-	// Token: 0x06006C4A RID: 27722 RVA: 0x0015DBF4 File Offset: 0x0015BDF4
+	// Token: 0x06003FDF RID: 16351 RVA: 0x0016652C File Offset: 0x0016472C
 	protected override string GetEmojiTexturePath()
 	{
 		int levelId = GuessJokerGamePlayModel.Instance.GetLevelId();
@@ -45,7 +45,7 @@ public class GuessJokerSettleFailView : GuessJokerSettleViewBase
 		return text;
 	}
 
-	// Token: 0x06006C4B RID: 27723 RVA: 0x0015DC54 File Offset: 0x0015BE54
+	// Token: 0x06003FE0 RID: 16352 RVA: 0x0016658C File Offset: 0x0016478C
 	protected override string GetDescText()
 	{
 		int levelId = GuessJokerGamePlayModel.Instance.GetLevelId();
@@ -77,7 +77,7 @@ public class GuessJokerSettleFailView : GuessJokerSettleViewBase
 		return result;
 	}
 
-	// Token: 0x06006C4C RID: 27724 RVA: 0x0015DD30 File Offset: 0x0015BF30
+	// Token: 0x06003FE1 RID: 16353 RVA: 0x00166668 File Offset: 0x00164868
 	protected override EUiViewName GetViewName()
 	{
 		return EUiViewName.GuessJokerSettleFailView;

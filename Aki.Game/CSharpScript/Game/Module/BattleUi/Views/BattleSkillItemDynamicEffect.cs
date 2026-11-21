@@ -5,17 +5,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CEB RID: 23787
+	// Token: 0x02004CCD RID: 19661
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class BattleSkillItemDynamicEffect
 	{
-		// Token: 0x0603C3C6 RID: 246726 RVA: 0x00E6B67D File Offset: 0x00E6987D
+		// Token: 0x0603131C RID: 201500 RVA: 0x00DBBC31 File Offset: 0x00DB9E31
 		public BattleSkillItemDynamicEffect(UUINiagara UiEffect)
 		{
 		}
 
-		// Token: 0x0603C3C7 RID: 246727 RVA: 0x00E6B6A3 File Offset: 0x00E698A3
+		// Token: 0x0603131D RID: 201501 RVA: 0x00DBBC57 File Offset: 0x00DB9E57
 		public void CancelLoadDynamicEffectNiagara()
 		{
 			if (this.LoadDynamicEffectNiagaraHandleId == null)
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.LoadDynamicEffectPath = null;
 		}
 
-		// Token: 0x0603C3C8 RID: 246728 RVA: 0x00E6B6DC File Offset: 0x00E698DC
+		// Token: 0x0603131E RID: 201502 RVA: 0x00DBBC90 File Offset: 0x00DB9E90
 		public void RefreshDynamicEffect(SkillButtonEffect? effectConfig)
 		{
 			this.EffectConfig = effectConfig;
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}, 100, "js_undefined"));
 		}
 
-		// Token: 0x0603C3C9 RID: 246729 RVA: 0x00E6B78C File Offset: 0x00E6998C
+		// Token: 0x0603131F RID: 201503 RVA: 0x00DBBD40 File Offset: 0x00DB9F40
 		private void RefreshDynamicEffectColor(SkillButtonEffect? optEffectConfig, bool bReset = false)
 		{
 			if (optEffectConfig == null)
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C3CA RID: 246730 RVA: 0x00E6B8A8 File Offset: 0x00E69AA8
+		// Token: 0x06031320 RID: 201504 RVA: 0x00DBBE5C File Offset: 0x00DBA05C
 		protected void RefreshDynamicEffectScale(SkillButtonEffect? effectConfig)
 		{
 			float num = (effectConfig != null) ? effectConfig.GetValueOrDefault().Scale : 1f;
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			uuiniagara.SetUIItemScale(new FVector(num));
 		}
 
-		// Token: 0x0603C3CB RID: 246731 RVA: 0x00E6B8FC File Offset: 0x00E69AFC
+		// Token: 0x06031321 RID: 201505 RVA: 0x00DBBEB0 File Offset: 0x00DBA0B0
 		public void SetDynamicEffectVisible(bool visible)
 		{
 			UUINiagara uuiniagara = this.<UiEffect>P;
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			uuiniagara.ActivateSystem(true);
 		}
 
-		// Token: 0x0603C3CC RID: 246732 RVA: 0x00E6B948 File Offset: 0x00E69B48
+		// Token: 0x06031322 RID: 201506 RVA: 0x00DBBEFC File Offset: 0x00DBA0FC
 		protected string GetDynamicEffectPath(in SkillButtonEffect effectConfig)
 		{
 			SkillButtonEffect skillButtonEffect = effectConfig;
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return niagaraPath;
 		}
 
-		// Token: 0x0603C3CD RID: 246733 RVA: 0x00E6B96F File Offset: 0x00E69B6F
+		// Token: 0x06031323 RID: 201507 RVA: 0x00DBBF23 File Offset: 0x00DBA123
 		public void Reset()
 		{
 			this.CancelLoadDynamicEffectNiagara();
@@ -184,29 +184,29 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401F640 RID: 128576
+		// Token: 0x0401A0F9 RID: 106745
 		[CompilerGenerated]
 		private UUINiagara <UiEffect>P = UiEffect;
 
-		// Token: 0x0401F641 RID: 128577
+		// Token: 0x0401A0FA RID: 106746
 		private int? LoadDynamicEffectNiagaraHandleId = new int?(0);
 
-		// Token: 0x0401F642 RID: 128578
+		// Token: 0x0401A0FB RID: 106747
 		private string CurrentDynamicEffectPath;
 
-		// Token: 0x0401F643 RID: 128579
+		// Token: 0x0401A0FC RID: 106748
 		private int DynamicEffectElementId;
 
-		// Token: 0x0401F644 RID: 128580
+		// Token: 0x0401A0FD RID: 106749
 		private string DynamicEffectColor;
 
-		// Token: 0x0401F645 RID: 128581
+		// Token: 0x0401A0FE RID: 106750
 		private string LoadDynamicEffectPath;
 
-		// Token: 0x0401F646 RID: 128582
+		// Token: 0x0401A0FF RID: 106751
 		private float DynamicEffectScale = 1f;
 
-		// Token: 0x0401F647 RID: 128583
+		// Token: 0x0401A100 RID: 106752
 		private SkillButtonEffect? EffectConfig;
 	}
 }

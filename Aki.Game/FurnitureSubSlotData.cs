@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000F78 RID: 3960
+// Token: 0x0200042D RID: 1069
 [NullableContext(1)]
 [Nullable(0)]
 public class FurnitureSubSlotData : FurnitureSlotDataBase
 {
-	// Token: 0x06006564 RID: 25956 RVA: 0x0014297E File Offset: 0x00140B7E
+	// Token: 0x060038FC RID: 14588 RVA: 0x0014B21A File Offset: 0x0014941A
 	public override EFurnitureSlotType GetSlotType()
 	{
 		return EFurnitureSlotType.SubSlot;
 	}
 
-	// Token: 0x06006565 RID: 25957 RVA: 0x00142981 File Offset: 0x00140B81
+	// Token: 0x060038FD RID: 14589 RVA: 0x0014B21D File Offset: 0x0014941D
 	public void DeepCopy(FurnitureSubSlotData other)
 	{
 		base.DeepCopy(other);
@@ -22,13 +22,13 @@ public class FurnitureSubSlotData : FurnitureSlotDataBase
 		this.SlotIndex = other.SlotIndex;
 	}
 
-	// Token: 0x06006566 RID: 25958 RVA: 0x001429AE File Offset: 0x00140BAE
+	// Token: 0x060038FE RID: 14590 RVA: 0x0014B24A File Offset: 0x0014944A
 	public bool Compare(FurnitureSubSlotData other)
 	{
 		return base.Compare(other) && this.RootFurnitureEntityId == other.RootFurnitureEntityId && this.RootFurnitureConfigId == other.RootFurnitureConfigId && this.SlotIndex == other.SlotIndex;
 	}
 
-	// Token: 0x06006567 RID: 25959 RVA: 0x001429EC File Offset: 0x00140BEC
+	// Token: 0x060038FF RID: 14591 RVA: 0x0014B288 File Offset: 0x00149488
 	public void SetSlotData(int rootFurnitureEntityId, int rootFurnitureConfigId, int slotIndex, int slotTagId, List<int> excludedFurnitureIds)
 	{
 		this.RootFurnitureEntityId = rootFurnitureEntityId;
@@ -38,42 +38,42 @@ public class FurnitureSubSlotData : FurnitureSlotDataBase
 		this.ExcludedFurnitureIds = excludedFurnitureIds;
 	}
 
-	// Token: 0x06006568 RID: 25960 RVA: 0x00142A13 File Offset: 0x00140C13
+	// Token: 0x06003900 RID: 14592 RVA: 0x0014B2AF File Offset: 0x001494AF
 	public override void PlaceFurniture(int furnitureConfigId)
 	{
 		this.PlacedFurnitureConfigId = furnitureConfigId;
 	}
 
-	// Token: 0x06006569 RID: 25961 RVA: 0x00142A1C File Offset: 0x00140C1C
+	// Token: 0x06003901 RID: 14593 RVA: 0x0014B2B8 File Offset: 0x001494B8
 	public override void UnPlaceFurniture()
 	{
 		this.PlacedFurnitureConfigId = 0;
 	}
 
-	// Token: 0x0600656A RID: 25962 RVA: 0x00142A25 File Offset: 0x00140C25
+	// Token: 0x06003902 RID: 14594 RVA: 0x0014B2C1 File Offset: 0x001494C1
 	public int GetRootFurnitureEntityId()
 	{
 		return this.RootFurnitureEntityId;
 	}
 
-	// Token: 0x0600656B RID: 25963 RVA: 0x00142A2D File Offset: 0x00140C2D
+	// Token: 0x06003903 RID: 14595 RVA: 0x0014B2C9 File Offset: 0x001494C9
 	public int GetRootFurnitureConfigId()
 	{
 		return this.RootFurnitureConfigId;
 	}
 
-	// Token: 0x0600656C RID: 25964 RVA: 0x00142A35 File Offset: 0x00140C35
+	// Token: 0x06003904 RID: 14596 RVA: 0x0014B2D1 File Offset: 0x001494D1
 	public int GetSlotIndex()
 	{
 		return this.SlotIndex;
 	}
 
-	// Token: 0x04002E0D RID: 11789
+	// Token: 0x04002EA6 RID: 11942
 	protected int RootFurnitureEntityId;
 
-	// Token: 0x04002E0E RID: 11790
+	// Token: 0x04002EA7 RID: 11943
 	protected int RootFurnitureConfigId;
 
-	// Token: 0x04002E0F RID: 11791
+	// Token: 0x04002EA8 RID: 11944
 	protected int SlotIndex;
 }

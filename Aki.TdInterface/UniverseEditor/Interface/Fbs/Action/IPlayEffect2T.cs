@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006CE8 RID: 27880
+	// Token: 0x0200745D RID: 29789
 	public class IPlayEffect2T
 	{
-		// Token: 0x1700CFAD RID: 53165
-		// (get) Token: 0x060312A1 RID: 201377 RVA: 0x006ABC73 File Offset: 0x006A9E73
-		// (set) Token: 0x060312A2 RID: 201378 RVA: 0x006ABC7B File Offset: 0x006A9E7B
+		// Token: 0x1700DAEC RID: 56044
+		// (get) Token: 0x06034275 RID: 213621 RVA: 0x00706EE3 File Offset: 0x007050E3
+		// (set) Token: 0x06034276 RID: 213622 RVA: 0x00706EEB File Offset: 0x007050EB
 		public EEffectType Type { get; set; }
 
-		// Token: 0x1700CFAE RID: 53166
-		// (get) Token: 0x060312A3 RID: 201379 RVA: 0x006ABC84 File Offset: 0x006A9E84
-		// (set) Token: 0x060312A4 RID: 201380 RVA: 0x006ABC8C File Offset: 0x006A9E8C
+		// Token: 0x1700DAED RID: 56045
+		// (get) Token: 0x06034277 RID: 213623 RVA: 0x00706EF4 File Offset: 0x007050F4
+		// (set) Token: 0x06034278 RID: 213624 RVA: 0x00706EFC File Offset: 0x007050FC
 		public string Path { get; set; }
 
-		// Token: 0x060312A5 RID: 201381 RVA: 0x006ABC95 File Offset: 0x006A9E95
+		// Token: 0x06034279 RID: 213625 RVA: 0x00706F05 File Offset: 0x00705105
 		public IPlayEffect2T()
 		{
 			this.Type = EEffectType.Effect;

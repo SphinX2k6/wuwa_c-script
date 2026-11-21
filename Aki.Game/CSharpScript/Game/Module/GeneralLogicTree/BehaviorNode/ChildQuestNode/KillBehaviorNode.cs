@@ -8,18 +8,18 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 {
-	// Token: 0x020059D6 RID: 22998
+	// Token: 0x020049AF RID: 18863
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class KillBehaviorNode : ChildQuestNodeBase
 	{
-		// Token: 0x0603A4BD RID: 238781 RVA: 0x00DDCF48 File Offset: 0x00DDB148
+		// Token: 0x0602F3E4 RID: 193508 RVA: 0x00D2C728 File Offset: 0x00D2A928
 		public KillBehaviorNode(int nodeId) : base(nodeId)
 		{
 		}
 
-		// Token: 0x17008B9E RID: 35742
-		// (get) Token: 0x0603A4BE RID: 238782 RVA: 0x00DDCF5C File Offset: 0x00DDB15C
+		// Token: 0x17005F6B RID: 24427
+		// (get) Token: 0x0602F3E5 RID: 193509 RVA: 0x00D2C73C File Offset: 0x00D2A93C
 		protected override List<int> CorrelativeEntities
 		{
 			get
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x0603A4BF RID: 238783 RVA: 0x00DDCF64 File Offset: 0x00DDB164
+		// Token: 0x0602F3E6 RID: 193510 RVA: 0x00D2C744 File Offset: 0x00D2A944
 		protected override bool OnCreate(IBtNode config)
 		{
 			IChildQuestBtNode childQuestBtNode = config as IChildQuestBtNode;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return true;
 		}
 
-		// Token: 0x0603A4C0 RID: 238784 RVA: 0x00DDCFFD File Offset: 0x00DDB1FD
+		// Token: 0x0602F3E7 RID: 193511 RVA: 0x00D2C7DD File Offset: 0x00D2A9DD
 		protected override bool OnUpdateProgress(ChildQuestNodeProgress progress)
 		{
 			if (progress.Kill == null)
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return true;
 		}
 
-		// Token: 0x0603A4C1 RID: 238785 RVA: 0x00DDD038 File Offset: 0x00DDB238
+		// Token: 0x0602F3E8 RID: 193512 RVA: 0x00D2C818 File Offset: 0x00D2AA18
 		public override string GetProgress()
 		{
 			if (base.IsSuccess)
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return text ?? "0";
 		}
 
-		// Token: 0x0603A4C2 RID: 238786 RVA: 0x00DDD084 File Offset: 0x00DDB284
+		// Token: 0x0602F3E9 RID: 193513 RVA: 0x00D2C864 File Offset: 0x00D2AA64
 		public override string GetProgressMax()
 		{
 			if (this.Progress == null)
@@ -97,14 +97,25 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return this.Progress.TotalNum.ToString();
 		}
 
-		// Token: 0x0401E642 RID: 124482
+		// Token: 0x0602F3EA RID: 193514 RVA: 0x00D2C898 File Offset: 0x00D2AA98
+		public string GetRoleTowerKillCount()
+		{
+			if (this.Progress == null)
+			{
+				return "0";
+			}
+			int num = this.Progress.TotalNum - this.Progress.CurrNum;
+			return ((num > 0) ? num : 0).ToString();
+		}
+
+		// Token: 0x040190E1 RID: 102625
 		[Nullable(2)]
 		private KillProgress Progress;
 
-		// Token: 0x0401E643 RID: 124483
+		// Token: 0x040190E2 RID: 102626
 		private readonly List<int> InnerCorrelativeEntities = new List<int>();
 
-		// Token: 0x0401E644 RID: 124484
+		// Token: 0x040190E3 RID: 102627
 		private int MaxCount;
 	}
 }

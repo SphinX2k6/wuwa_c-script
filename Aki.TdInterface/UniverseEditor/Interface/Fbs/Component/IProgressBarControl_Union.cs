@@ -2,22 +2,22 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020057A2 RID: 22434
+	// Token: 0x02005DA9 RID: 23977
 	public enum IProgressBarControl_Union : byte
 	{
-		// Token: 0x0400EC68 RID: 60520
+		// Token: 0x0400F953 RID: 63827
 		NONE,
-		// Token: 0x0400EC69 RID: 60521
+		// Token: 0x0400F954 RID: 63828
 		IProgressBarControl,
-		// Token: 0x0400EC6A RID: 60522
+		// Token: 0x0400F955 RID: 63829
 		ICaptureStrategicPoint,
-		// Token: 0x0400EC6B RID: 60523
+		// Token: 0x0400F956 RID: 63830
 		ICaptureStrategicPoint2,
-		// Token: 0x0400EC6C RID: 60524
+		// Token: 0x0400F957 RID: 63831
 		IChargingDevice,
-		// Token: 0x0400EC6D RID: 60525
+		// Token: 0x0400F958 RID: 63832
 		ITimedStrikeDevice,
-		// Token: 0x0400EC6E RID: 60526
+		// Token: 0x0400F959 RID: 63833
 		IMatchTargetChargingDevice
 	}
 }

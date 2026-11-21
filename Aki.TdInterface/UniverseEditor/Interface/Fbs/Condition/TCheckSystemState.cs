@@ -2,44 +2,46 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004D39 RID: 19769
+	// Token: 0x02005235 RID: 21045
 	public enum TCheckSystemState : byte
 	{
-		// Token: 0x0400D748 RID: 55112
+		// Token: 0x0400E276 RID: 57974
 		NONE,
-		// Token: 0x0400D749 RID: 55113
+		// Token: 0x0400E277 RID: 57975
 		ICheckCollectionShopState,
-		// Token: 0x0400D74A RID: 55114
+		// Token: 0x0400E278 RID: 57976
 		ICheckCoopRoleCoopLevel,
-		// Token: 0x0400D74B RID: 55115
+		// Token: 0x0400E279 RID: 57977
 		ICheckDangoBrawlChallengeComplete,
-		// Token: 0x0400D74C RID: 55116
+		// Token: 0x0400E27A RID: 57978
 		ICheckDropCatchGameplayCompleteLevel,
-		// Token: 0x0400D74D RID: 55117
+		// Token: 0x0400E27B RID: 57979
 		ICheckEncircleLevelComplete,
-		// Token: 0x0400D74E RID: 55118
+		// Token: 0x0400E27C RID: 57980
+		ICheckHandBookPageComplete,
+		// Token: 0x0400E27D RID: 57981
 		ICheckInfrActivityExp,
-		// Token: 0x0400D74F RID: 55119
+		// Token: 0x0400E27E RID: 57982
 		ICheckInfrastructureStage,
-		// Token: 0x0400D750 RID: 55120
+		// Token: 0x0400E27F RID: 57983
 		ICheckMoonBuildingState,
-		// Token: 0x0400D751 RID: 55121
+		// Token: 0x0400E280 RID: 57984
 		ICheckRhythmSpaceshipReachLevelRank,
-		// Token: 0x0400D752 RID: 55122
+		// Token: 0x0400E281 RID: 57985
 		ICheckRoadBuildState,
-		// Token: 0x0400D753 RID: 55123
+		// Token: 0x0400E282 RID: 57986
 		ICheckRogueState,
-		// Token: 0x0400D754 RID: 55124
+		// Token: 0x0400E283 RID: 57987
 		ICheckSpringFestivalAtmosphereLevel,
-		// Token: 0x0400D755 RID: 55125
+		// Token: 0x0400E284 RID: 57988
 		ICheckSpringFestivalGuessJokerFirstComplete,
-		// Token: 0x0400D756 RID: 55126
+		// Token: 0x0400E285 RID: 57989
 		ICheckSunSpiritDeliveryLevel,
-		// Token: 0x0400D757 RID: 55127
+		// Token: 0x0400E286 RID: 57990
 		ICheckTrackMoonPopularity,
-		// Token: 0x0400D758 RID: 55128
+		// Token: 0x0400E287 RID: 57991
 		ICheckVillageInfrLevel,
-		// Token: 0x0400D759 RID: 55129
+		// Token: 0x0400E288 RID: 57992
 		ICheckVillageInfrTreeBuildState
 	}
 }

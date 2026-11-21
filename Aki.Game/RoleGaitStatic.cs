@@ -1,16 +1,16 @@
 ﻿using System;
 using Aki.Config;
 
-// Token: 0x02003231 RID: 12849
+// Token: 0x020027A0 RID: 10144
 public class RoleGaitStatic : IStaticVariableResetter
 {
-	// Token: 0x0601BB5F RID: 113503 RVA: 0x007A0B56 File Offset: 0x0079ED56
+	// Token: 0x060196E4 RID: 104164 RVA: 0x007C9462 File Offset: 0x007C7662
 	static RoleGaitStatic()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(RoleGaitStatic.CreateStaticDefaultValue), new Action(RoleGaitStatic.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601BB60 RID: 113504 RVA: 0x007A0B78 File Offset: 0x0079ED78
+	// Token: 0x060196E5 RID: 104165 RVA: 0x007C9484 File Offset: 0x007C7684
 	public static void Init()
 	{
 		if (!RoleGaitStatic.IsInit)
@@ -21,19 +21,19 @@ public class RoleGaitStatic : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601BB61 RID: 113505 RVA: 0x007A0BB9 File Offset: 0x0079EDB9
+	// Token: 0x060196E6 RID: 104166 RVA: 0x007C94C5 File Offset: 0x007C76C5
 	public static void SetWalkOrRunRateForRocker(float newValue)
 	{
 		RoleGaitStatic._walkOrRunRate = Math.Min(newValue, 0.99f);
 	}
 
-	// Token: 0x0601BB62 RID: 113506 RVA: 0x007A0BCB File Offset: 0x0079EDCB
+	// Token: 0x060196E7 RID: 104167 RVA: 0x007C94D7 File Offset: 0x007C76D7
 	public static float GetWalkOrRunRate()
 	{
 		return RoleGaitStatic._walkOrRunRate;
 	}
 
-	// Token: 0x0601BB63 RID: 113507 RVA: 0x007A0BD2 File Offset: 0x0079EDD2
+	// Token: 0x060196E8 RID: 104168 RVA: 0x007C94DE File Offset: 0x007C76DE
 	public static void CreateStaticDefaultValue()
 	{
 		RoleGaitStatic.MovementStatusGapValue = 0f;
@@ -42,7 +42,7 @@ public class RoleGaitStatic : IStaticVariableResetter
 		RoleGaitStatic._walkOrRunRate = 0.3f;
 	}
 
-	// Token: 0x0601BB64 RID: 113508 RVA: 0x007A0BF8 File Offset: 0x0079EDF8
+	// Token: 0x060196E9 RID: 104169 RVA: 0x007C9504 File Offset: 0x007C7704
 	public static void ResetStaticDefaultValue()
 	{
 		RoleGaitStatic.MovementStatusGapValue = 0f;
@@ -51,18 +51,18 @@ public class RoleGaitStatic : IStaticVariableResetter
 		RoleGaitStatic._walkOrRunRate = 0.3f;
 	}
 
-	// Token: 0x0400DA46 RID: 55878
+	// Token: 0x0400DEE5 RID: 57061
 	private const float WALK_TO_RUN_RATE = 0.3f;
 
-	// Token: 0x0400DA47 RID: 55879
+	// Token: 0x0400DEE6 RID: 57062
 	public static float MovementStatusGapValue;
 
-	// Token: 0x0400DA48 RID: 55880
+	// Token: 0x0400DEE7 RID: 57063
 	public static float MovementStatusGapValueSquare;
 
-	// Token: 0x0400DA49 RID: 55881
+	// Token: 0x0400DEE8 RID: 57064
 	public static bool IsInit;
 
-	// Token: 0x0400DA4A RID: 55882
+	// Token: 0x0400DEE9 RID: 57065
 	private static float _walkOrRunRate;
 }

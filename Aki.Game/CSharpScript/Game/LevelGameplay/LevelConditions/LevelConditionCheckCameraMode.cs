@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006C56 RID: 27734
+	// Token: 0x02005DD0 RID: 24016
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelConditionCheckCameraMode : LevelConditionBase
 	{
-		// Token: 0x06044518 RID: 279832 RVA: 0x010D6E04 File Offset: 0x010D5004
+		// Token: 0x0603A672 RID: 239218 RVA: 0x01080D9C File Offset: 0x0107EF9C
 		private List<int> ParseModes([Nullable(2)] string raw)
 		{
 			if (string.IsNullOrEmpty(raw))
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return list;
 		}
 
-		// Token: 0x06044519 RID: 279833 RVA: 0x010D6E5C File Offset: 0x010D505C
+		// Token: 0x0603A673 RID: 239219 RVA: 0x01080DF4 File Offset: 0x0107EFF4
 		private List<int> GetModes(Condition inConditionInfo)
 		{
 			List<int> list;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return list;
 		}
 
-		// Token: 0x0604451A RID: 279834 RVA: 0x010D6EA8 File Offset: 0x010D50A8
+		// Token: 0x0603A674 RID: 239220 RVA: 0x01080E40 File Offset: 0x0107F040
 		public override bool Check(Condition inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{
 			List<int> modes = this.GetModes(inConditionInfo);
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return result;
 		}
 
-		// Token: 0x040239A9 RID: 145833
+		// Token: 0x0401EC4B RID: 126027
 		private readonly Dictionary<int, List<int>> ModeCache = new Dictionary<int, List<int>>();
 	}
 }

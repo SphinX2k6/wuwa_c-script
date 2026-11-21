@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001BAA RID: 7082
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001D91 RID: 7569
 	public class ILongPressInteractStyleSwordRider : ILongPressInteractStyleConfig
 	{
-		// Token: 0x060097A9 RID: 38825 RVA: 0x0015DC48 File Offset: 0x0015BE48
+		// Token: 0x0600A0AD RID: 41133 RVA: 0x00170708 File Offset: 0x0016E908
 		private ILongPressInteractStyleSwordRider_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060097AA RID: 38826 RVA: 0x0015DC80 File Offset: 0x0015BE80
+		// Token: 0x0600A0AE RID: 41134 RVA: 0x00170740 File Offset: 0x0016E940
 		public static ILongPressInteractStyleSwordRider Create([Nullable(2)] ILongPressInteractStyleSwordRider instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060097AB RID: 38827 RVA: 0x0015DC93 File Offset: 0x0015BE93
+		// Token: 0x0600A0AF RID: 41135 RVA: 0x00170753 File Offset: 0x0016E953
 		public static ILongPressInteractStyleSwordRider CreateFromSetValue([Nullable(2)] ILongPressInteractStyleSwordRider_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060097AC RID: 38828 RVA: 0x0015DCA6 File Offset: 0x0015BEA6
+		// Token: 0x0600A0B0 RID: 41136 RVA: 0x00170766 File Offset: 0x0016E966
 		public new ILongPressInteractStyleSwordRider_SetValue ToSetValue()
 		{
 			return new ILongPressInteractStyleSwordRider_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002FAC RID: 12204
-		// (get) Token: 0x060097AD RID: 38829 RVA: 0x0015DCB9 File Offset: 0x0015BEB9
-		// (set) Token: 0x060097AE RID: 38830 RVA: 0x0015DCE4 File Offset: 0x0015BEE4
+		// Token: 0x1700320B RID: 12811
+		// (get) Token: 0x0600A0B1 RID: 41137 RVA: 0x00170779 File Offset: 0x0016E979
+		// (set) Token: 0x0600A0B2 RID: 41138 RVA: 0x001707A4 File Offset: 0x0016E9A4
 		public override ELongPressInteractStyle Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005C8F RID: 23695
+		// Token: 0x040061A4 RID: 24996
 		[Nullable(2)]
 		protected new ILongPressInteractStyleSwordRider FbInstance;
 
-		// Token: 0x04005C90 RID: 23696
+		// Token: 0x040061A5 RID: 24997
 		[Nullable(2)]
 		protected new ILongPressInteractStyleSwordRider_SetValue PocoInterface;
 	}

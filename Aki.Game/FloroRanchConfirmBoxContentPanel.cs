@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020019DF RID: 6623
+// Token: 0x02000E9E RID: 3742
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchConfirmBoxContentPanel : UiPanelBase
 {
-	// Token: 0x0600C17E RID: 49534 RVA: 0x002BAAF1 File Offset: 0x002B8CF1
+	// Token: 0x0600958B RID: 38283 RVA: 0x002C5AC9 File Offset: 0x002C3CC9
 	public FloroRanchConfirmBoxContentPanel(ConfirmBoxDataNew confirmBoxData, [Nullable(new byte[]
 	{
 		1,
@@ -24,7 +24,7 @@ public class FloroRanchConfirmBoxContentPanel : UiPanelBase
 		this.CloseFunc = closeFunc;
 	}
 
-	// Token: 0x0600C17F RID: 49535 RVA: 0x002BAB24 File Offset: 0x002B8D24
+	// Token: 0x0600958C RID: 38284 RVA: 0x002C5AFC File Offset: 0x002C3CFC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -53,7 +53,7 @@ public class FloroRanchConfirmBoxContentPanel : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600C180 RID: 49536 RVA: 0x002BAC50 File Offset: 0x002B8E50
+	// Token: 0x0600958D RID: 38285 RVA: 0x002C5C28 File Offset: 0x002C3E28
 	[NullableContext(2)]
 	public EUiBehaviourPopType? GetExtraPopFrameType(object param = null)
 	{
@@ -64,14 +64,14 @@ public class FloroRanchConfirmBoxContentPanel : UiPanelBase
 		return (param as ConfirmBoxDataNew).CustomPopType;
 	}
 
-	// Token: 0x0600C181 RID: 49537 RVA: 0x002BAC75 File Offset: 0x002B8E75
+	// Token: 0x0600958E RID: 38286 RVA: 0x002C5C4D File Offset: 0x002C3E4D
 	public void OnClose()
 	{
 		this.SelectedIndex = -1;
 		this.ConfirmBoxButtonClick();
 	}
 
-	// Token: 0x0600C182 RID: 49538 RVA: 0x002BAC84 File Offset: 0x002B8E84
+	// Token: 0x0600958F RID: 38287 RVA: 0x002C5C5C File Offset: 0x002C3E5C
 	protected void ConfirmBoxButtonClick()
 	{
 		ConfirmBoxDataNew confirmBoxData = this.ConfirmBoxData;
@@ -108,7 +108,7 @@ public class FloroRanchConfirmBoxContentPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600C183 RID: 49539 RVA: 0x002BAD00 File Offset: 0x002B8F00
+	// Token: 0x06009590 RID: 38288 RVA: 0x002C5CD8 File Offset: 0x002C3ED8
 	private void HandleSelectedIndexWhenClose()
 	{
 		if (this.SelectedIndex != -1)
@@ -123,7 +123,7 @@ public class FloroRanchConfirmBoxContentPanel : UiPanelBase
 		this.SelectedIndex = 0;
 	}
 
-	// Token: 0x0600C184 RID: 49540 RVA: 0x002BAD4C File Offset: 0x002B8F4C
+	// Token: 0x06009591 RID: 38289 RVA: 0x002C5D24 File Offset: 0x002C3F24
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FloroRanchConfirmBoxContentPanel.<OnBeforeStartAsync>d__15 <OnBeforeStartAsync>d__;
@@ -134,7 +134,7 @@ public class FloroRanchConfirmBoxContentPanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C185 RID: 49541 RVA: 0x002BAD90 File Offset: 0x002B8F90
+	// Token: 0x06009592 RID: 38290 RVA: 0x002C5D68 File Offset: 0x002C3F68
 	public void InitPowerItem(IUiPopFrameInterface childPopView)
 	{
 		if (this.ConfirmBoxData.ShowPowerItem)
@@ -190,7 +190,7 @@ public class FloroRanchConfirmBoxContentPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600C186 RID: 49542 RVA: 0x002BAE54 File Offset: 0x002B9054
+	// Token: 0x06009593 RID: 38291 RVA: 0x002C5E2C File Offset: 0x002C402C
 	protected UniTask InitButton()
 	{
 		FloroRanchConfirmBoxContentPanel.<InitButton>d__17 <InitButton>d__;
@@ -201,7 +201,7 @@ public class FloroRanchConfirmBoxContentPanel : UiPanelBase
 		return <InitButton>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C187 RID: 49543 RVA: 0x002BAE98 File Offset: 0x002B9098
+	// Token: 0x06009594 RID: 38292 RVA: 0x002C5E70 File Offset: 0x002C4070
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -220,7 +220,7 @@ public class FloroRanchConfirmBoxContentPanel : UiPanelBase
 		return <CreateButton>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C188 RID: 49544 RVA: 0x002BAEF4 File Offset: 0x002B90F4
+	// Token: 0x06009595 RID: 38293 RVA: 0x002C5ECC File Offset: 0x002C40CC
 	private void ResetButtonList()
 	{
 		int i = 0;
@@ -233,7 +233,7 @@ public class FloroRanchConfirmBoxContentPanel : UiPanelBase
 		this.ButtonList = new List<ConfirmBoxButton>();
 	}
 
-	// Token: 0x0600C189 RID: 49545 RVA: 0x002BAF36 File Offset: 0x002B9136
+	// Token: 0x06009596 RID: 38294 RVA: 0x002C5F0E File Offset: 0x002C410E
 	private void ToggleClick(EToggleState state)
 	{
 		if (this.ToggleFunction != null)
@@ -242,7 +242,7 @@ public class FloroRanchConfirmBoxContentPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600C18A RID: 49546 RVA: 0x002BAF50 File Offset: 0x002B9150
+	// Token: 0x06009597 RID: 38295 RVA: 0x002C5F28 File Offset: 0x002C4128
 	private void InitToggle()
 	{
 		ConfirmBoxDataNew confirmBoxData = this.ConfirmBoxData;
@@ -272,7 +272,7 @@ public class FloroRanchConfirmBoxContentPanel : UiPanelBase
 		this.ToggleFunction = confirmBoxData.GetToggleFunction();
 	}
 
-	// Token: 0x0600C18B RID: 49547 RVA: 0x002BB004 File Offset: 0x002B9204
+	// Token: 0x06009598 RID: 38296 RVA: 0x002C5FDC File Offset: 0x002C41DC
 	protected override void OnBeforeDestroy()
 	{
 		this.ResetButtonList();
@@ -305,30 +305,30 @@ public class FloroRanchConfirmBoxContentPanel : UiPanelBase
 		overPowerCurrencyItem.Destroy(null);
 	}
 
-	// Token: 0x04005929 RID: 22825
+	// Token: 0x040059F8 RID: 23032
 	protected List<ConfirmBoxButton> ButtonList = new List<ConfirmBoxButton>();
 
-	// Token: 0x0400592A RID: 22826
+	// Token: 0x040059F9 RID: 23033
 	protected ConfirmBox? Config;
 
-	// Token: 0x0400592B RID: 22827
+	// Token: 0x040059FA RID: 23034
 	protected int SelectedIndex = -1;
 
-	// Token: 0x0400592C RID: 22828
+	// Token: 0x040059FB RID: 23035
 	protected List<UUIButtonComponent> ButtonComponentList = new List<UUIButtonComponent>();
 
-	// Token: 0x0400592D RID: 22829
+	// Token: 0x040059FC RID: 23036
 	[Nullable(2)]
 	private PowerCurrencyItem PowerCurrencyItem;
 
-	// Token: 0x0400592E RID: 22830
+	// Token: 0x040059FD RID: 23037
 	[Nullable(2)]
 	private PowerCurrencyItem OverPowerCurrencyItem;
 
-	// Token: 0x0400592F RID: 22831
+	// Token: 0x040059FE RID: 23038
 	private readonly ConfirmBoxDataNew ConfirmBoxData;
 
-	// Token: 0x04005930 RID: 22832
+	// Token: 0x040059FF RID: 23039
 	[Nullable(new byte[]
 	{
 		1,
@@ -336,30 +336,30 @@ public class FloroRanchConfirmBoxContentPanel : UiPanelBase
 	})]
 	private readonly Action<Action<bool>> CloseFunc;
 
-	// Token: 0x04005931 RID: 22833
+	// Token: 0x04005A00 RID: 23040
 	[Nullable(2)]
 	protected Action<bool> ToggleFunction;
 
-	// Token: 0x02007F09 RID: 32521
+	// Token: 0x02007098 RID: 28824
 	[NullableContext(0)]
 	private class EFloroRanchConfirmBoxContentDefine
 	{
-		// Token: 0x04029803 RID: 169987
+		// Token: 0x04024B40 RID: 150336
 		public const int ContentText = 0;
 
-		// Token: 0x04029804 RID: 169988
+		// Token: 0x04024B41 RID: 150337
 		public const int Toggle = 1;
 
-		// Token: 0x04029805 RID: 169989
+		// Token: 0x04024B42 RID: 150338
 		public const int ToggleText = 2;
 
-		// Token: 0x04029806 RID: 169990
+		// Token: 0x04024B43 RID: 150339
 		public const int ButtonRootItem = 3;
 
-		// Token: 0x04029807 RID: 169991
+		// Token: 0x04024B44 RID: 150340
 		public const int ButtonCancel = 4;
 
-		// Token: 0x04029808 RID: 169992
+		// Token: 0x04024B45 RID: 150341
 		public const int ButtonConfirm = 5;
 	}
 }

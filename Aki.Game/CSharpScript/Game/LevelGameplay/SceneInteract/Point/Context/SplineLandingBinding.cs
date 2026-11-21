@@ -5,19 +5,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point.Context
 {
-	// Token: 0x02006A8F RID: 27279
+	// Token: 0x02005BEC RID: 23532
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SplineLandingBinding
 	{
-		// Token: 0x06043C7A RID: 277626 RVA: 0x01097151 File Offset: 0x01095351
+		// Token: 0x06039CC8 RID: 236744 RVA: 0x0103B9A5 File Offset: 0x01039BA5
 		public SplineLandingBinding(int SplineEntityId, int BorrowerPbDataId)
 		{
 			this.SplineEntityId = SplineEntityId;
 			this.BorrowerPbDataId = BorrowerPbDataId;
 		}
 
-		// Token: 0x06043C7B RID: 277627 RVA: 0x01097168 File Offset: 0x01095368
+		// Token: 0x06039CC9 RID: 236745 RVA: 0x0103B9BC File Offset: 0x01039BBC
 		public USplineComponent TryGetSplineComponent()
 		{
 			if (this.Disposed)
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point.Context
 			}
 		}
 
-		// Token: 0x06043C7C RID: 277628 RVA: 0x010971F0 File Offset: 0x010953F0
+		// Token: 0x06039CCA RID: 236746 RVA: 0x0103BA44 File Offset: 0x01039C44
 		public void Dispose()
 		{
 			if (this.Disposed)
@@ -70,19 +70,19 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point.Context
 			this.SplineLoaded = false;
 		}
 
-		// Token: 0x0402369F RID: 145055
+		// Token: 0x0401E891 RID: 125073
 		private USplineComponent SplineComp;
 
-		// Token: 0x040236A0 RID: 145056
+		// Token: 0x0401E892 RID: 125074
 		private bool SplineLoaded;
 
-		// Token: 0x040236A1 RID: 145057
+		// Token: 0x0401E893 RID: 125075
 		private bool Disposed;
 
-		// Token: 0x040236A2 RID: 145058
+		// Token: 0x0401E894 RID: 125076
 		public readonly int SplineEntityId;
 
-		// Token: 0x040236A3 RID: 145059
+		// Token: 0x0401E895 RID: 125077
 		private readonly int BorrowerPbDataId;
 	}
 }

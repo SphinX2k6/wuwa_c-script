@@ -8,9 +8,8 @@ using AkiClient.Game.Aki.Render.RuntimeBP.Character.MaterialController;
 using CSharpScript.Core.Common;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
-using CSharpScript.Game.Module.Common.UiCamera;
 using CSharpScript.Game.Module.Skin;
-using CSharpScript.Game.Module.UiCameraAnimation.UiCameraContext;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using CSharpScript.Game.Utils;
@@ -18,12 +17,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002A53 RID: 10835
+// Token: 0x02001FCE RID: 8142
 [NullableContext(1)]
 [Nullable(0)]
 public class FlySkinTabView : UiTabViewBase
 {
-	// Token: 0x0601691F RID: 92447 RVA: 0x005B8380 File Offset: 0x005B6580
+	// Token: 0x06014340 RID: 82752 RVA: 0x005E44D8 File Offset: 0x005E26D8
 	protected unsafe override void OnRegisterComponent()
 	{
 		this.RootViewModel = (this.ExtraParams as SkinRootViewModel);
@@ -73,7 +72,7 @@ public class FlySkinTabView : UiTabViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06016920 RID: 92448 RVA: 0x005B8610 File Offset: 0x005B6810
+	// Token: 0x06014341 RID: 82753 RVA: 0x005E4768 File Offset: 0x005E2968
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FlySkinTabView.<OnBeforeStartAsync>d__15 <OnBeforeStartAsync>d__;
@@ -84,7 +83,7 @@ public class FlySkinTabView : UiTabViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016921 RID: 92449 RVA: 0x005B8654 File Offset: 0x005B6854
+	// Token: 0x06014342 RID: 82754 RVA: 0x005E47AC File Offset: 0x005E29AC
 	protected override void OnStart()
 	{
 		this.ParaglidingTabItem.SetItemToggleState(EToggleState.ETT_UnChecked, new bool?(false));
@@ -102,14 +101,14 @@ public class FlySkinTabView : UiTabViewBase
 		this.FlySkinTabViewModel.Bind(new Action<EFlySkinViewData>(this.OnViewModelUpdate));
 	}
 
-	// Token: 0x06016922 RID: 92450 RVA: 0x005B87A7 File Offset: 0x005B69A7
+	// Token: 0x06014343 RID: 82755 RVA: 0x005E48FF File Offset: 0x005E2AFF
 	protected override void OnBeforeDestroy()
 	{
 		this.FlySkinTabViewModel.UnBind(new Action<EFlySkinViewData>(this.OnViewModelUpdate));
 		this.DestroyGliderObserver();
 	}
 
-	// Token: 0x06016923 RID: 92451 RVA: 0x005B87C8 File Offset: 0x005B69C8
+	// Token: 0x06014344 RID: 82756 RVA: 0x005E4920 File Offset: 0x005E2B20
 	protected override void OnBeforeShow()
 	{
 		this.InitGliderObserver();
@@ -129,15 +128,15 @@ public class FlySkinTabView : UiTabViewBase
 		this.UpdateView(context);
 	}
 
-	// Token: 0x06016924 RID: 92452 RVA: 0x005B8865 File Offset: 0x005B6A65
+	// Token: 0x06014345 RID: 82757 RVA: 0x005E49BD File Offset: 0x005E2BBD
 	protected override void OnAfterShow()
 	{
 		this.CanPushCamera = true;
 		this.TryPushCamera();
-		this.TryStartCameraInputComponent();
+		this.TryBindCameraInput();
 	}
 
-	// Token: 0x06016925 RID: 92453 RVA: 0x005B887C File Offset: 0x005B6A7C
+	// Token: 0x06014346 RID: 82758 RVA: 0x005E49D4 File Offset: 0x005E2BD4
 	private void HideModelWithEffect()
 	{
 		SkeletalObserverHandle gliderObserver = this.GliderObserver;
@@ -156,29 +155,29 @@ public class FlySkinTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x06016926 RID: 92454 RVA: 0x005B88EE File Offset: 0x005B6AEE
+	// Token: 0x06014347 RID: 82759 RVA: 0x005E4A46 File Offset: 0x005E2C46
 	protected override void OnBeforeHide()
 	{
 		this.ResetAll();
 	}
 
-	// Token: 0x06016927 RID: 92455 RVA: 0x005B88F6 File Offset: 0x005B6AF6
+	// Token: 0x06014348 RID: 82760 RVA: 0x005E4A4E File Offset: 0x005E2C4E
 	private void OnSkinRootViewDestroy()
 	{
 		this.ResetAll();
 	}
 
-	// Token: 0x06016928 RID: 92456 RVA: 0x005B88FE File Offset: 0x005B6AFE
+	// Token: 0x06014349 RID: 82761 RVA: 0x005E4A56 File Offset: 0x005E2C56
 	private void ResetAll()
 	{
 		this.WaitCameraId = null;
 		this.CanLoadModel = false;
 		this.CanPushCamera = false;
 		this.HideModelWithEffect();
-		this.RootViewModel.EndCameraInput();
+		this.RootViewModel.UnbindCameraInput();
 	}
 
-	// Token: 0x06016929 RID: 92457 RVA: 0x005B8928 File Offset: 0x005B6B28
+	// Token: 0x0601434A RID: 82762 RVA: 0x005E4A80 File Offset: 0x005E2C80
 	protected override void AddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnRoleFlySkinChange, new Action<int, EFlySkinType, int, int>(this.OnRoleFlySkinChange));
@@ -190,7 +189,7 @@ public class FlySkinTabView : UiTabViewBase
 		EventSystem.Instance.Add(EEventName.OnSkinRootViewDestroy, new Action(this.OnSkinRootViewDestroy));
 	}
 
-	// Token: 0x0601692A RID: 92458 RVA: 0x005B89FC File Offset: 0x005B6BFC
+	// Token: 0x0601434B RID: 82763 RVA: 0x005E4B54 File Offset: 0x005E2D54
 	protected override void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnRoleFlySkinChange, new Action<int, EFlySkinType, int, int>(this.OnRoleFlySkinChange));
@@ -202,7 +201,7 @@ public class FlySkinTabView : UiTabViewBase
 		EventSystem.Instance.Remove(EEventName.OnSkinRootViewDestroy, new Action(this.OnSkinRootViewDestroy));
 	}
 
-	// Token: 0x0601692B RID: 92459 RVA: 0x005B8AD0 File Offset: 0x005B6CD0
+	// Token: 0x0601434C RID: 82764 RVA: 0x005E4C28 File Offset: 0x005E2E28
 	private void InitGliderObserver()
 	{
 		UiSceneManager.Instance.InitGliderSkeletalHandle();
@@ -211,14 +210,14 @@ public class FlySkinTabView : UiTabViewBase
 		this.GliderObserver = gliderSkeletalHandle;
 	}
 
-	// Token: 0x0601692C RID: 92460 RVA: 0x005B8B0E File Offset: 0x005B6D0E
+	// Token: 0x0601434D RID: 82765 RVA: 0x005E4C66 File Offset: 0x005E2E66
 	private void DestroyGliderObserver()
 	{
 		UiSceneManager.Instance.DestroyGliderSkeletalHandle();
 		this.GliderObserver = null;
 	}
 
-	// Token: 0x0601692D RID: 92461 RVA: 0x005B8B21 File Offset: 0x005B6D21
+	// Token: 0x0601434E RID: 82766 RVA: 0x005E4C79 File Offset: 0x005E2E79
 	public void UpdateView(UpdateViewContext context)
 	{
 		this.UpdateIsApplyToAll(context.IsApplyToAll);
@@ -226,7 +225,7 @@ public class FlySkinTabView : UiTabViewBase
 		this.SelectTab(context.Tab, context.SelectedSkinId);
 	}
 
-	// Token: 0x0601692E RID: 92462 RVA: 0x005B8B50 File Offset: 0x005B6D50
+	// Token: 0x0601434F RID: 82767 RVA: 0x005E4CA8 File Offset: 0x005E2EA8
 	public void SelectTab(EFlySkinTab tab, int skinId)
 	{
 		FlySkinTabViewModel flySkinTabViewModel = this.FlySkinTabViewModel;
@@ -234,7 +233,7 @@ public class FlySkinTabView : UiTabViewBase
 		flySkinTabViewModel.SelectGridByIndex(this.FlySkinTabViewModel.GetGridIndexBySkinId(skinId).GetValueOrDefault());
 	}
 
-	// Token: 0x0601692F RID: 92463 RVA: 0x005B8B83 File Offset: 0x005B6D83
+	// Token: 0x06014350 RID: 82768 RVA: 0x005E4CDB File Offset: 0x005E2EDB
 	public void SelectGridByIndex(int gridIndex)
 	{
 		this.FlySkinTabViewModel.SelectGridByIndex(gridIndex);
@@ -242,7 +241,7 @@ public class FlySkinTabView : UiTabViewBase
 		this.OnGridSelected();
 	}
 
-	// Token: 0x06016930 RID: 92464 RVA: 0x005B8BA4 File Offset: 0x005B6DA4
+	// Token: 0x06014351 RID: 82769 RVA: 0x005E4CFC File Offset: 0x005E2EFC
 	public void OnGridSelected()
 	{
 		FlySkinTabViewModel flySkinTabViewModel = this.FlySkinTabViewModel;
@@ -260,7 +259,7 @@ public class FlySkinTabView : UiTabViewBase
 		this.TryLoadModel();
 	}
 
-	// Token: 0x06016931 RID: 92465 RVA: 0x005B8C50 File Offset: 0x005B6E50
+	// Token: 0x06014352 RID: 82770 RVA: 0x005E4DA8 File Offset: 0x005E2FA8
 	public void TryLoadModel()
 	{
 		FlySkinTabViewModel flySkinTabViewModel = this.FlySkinTabViewModel;
@@ -319,7 +318,7 @@ public class FlySkinTabView : UiTabViewBase
 		loadComponent.LoadModelByModelId(selectedGridData.GetModelId(), true, loadFinishCallBack, extraResourceList);
 	}
 
-	// Token: 0x06016932 RID: 92466 RVA: 0x005B8D60 File Offset: 0x005B6F60
+	// Token: 0x06014353 RID: 82771 RVA: 0x005E4EB8 File Offset: 0x005E30B8
 	public void UpdateUiShowState(bool state, bool resetCamera)
 	{
 		this.FlySkinTabViewModel.SetUiShowState(state);
@@ -332,14 +331,21 @@ public class FlySkinTabView : UiTabViewBase
 		}
 		this.RootViewModel.SetCaptionItemActive(state);
 		this.RootViewModel.NotifyGamePadKeyTipRefresh();
-		this.RootViewModel.SetCameraInputCanInput(!state);
+		if (state)
+		{
+			this.RootViewModel.UnbindCameraInput();
+		}
+		else
+		{
+			this.RootViewModel.BindCameraInput();
+		}
 		if (state && resetCamera)
 		{
 			this.TryPushCamera();
 		}
 	}
 
-	// Token: 0x06016933 RID: 92467 RVA: 0x005B8DD8 File Offset: 0x005B6FD8
+	// Token: 0x06014354 RID: 82772 RVA: 0x005E4F3C File Offset: 0x005E313C
 	public void UpdateIsApplyToAll(bool isApplyToAll)
 	{
 		this.FlySkinTabViewModel.SetIsApplyToAll(isApplyToAll);
@@ -352,7 +358,7 @@ public class FlySkinTabView : UiTabViewBase
 		extendToggle.SetToggleState(state, false, false, false);
 	}
 
-	// Token: 0x06016934 RID: 92468 RVA: 0x005B8E10 File Offset: 0x005B7010
+	// Token: 0x06014355 RID: 82773 RVA: 0x005E4F74 File Offset: 0x005E3174
 	public void RefreshConfirmBtnState()
 	{
 		FlySkinTabViewModel flySkinTabViewModel = this.FlySkinTabViewModel;
@@ -376,7 +382,7 @@ public class FlySkinTabView : UiTabViewBase
 		this.ConfirmBtnItem.SetLocalTextNew(flySkinEquipBtnTextId, Array.Empty<object>());
 	}
 
-	// Token: 0x06016935 RID: 92469 RVA: 0x005B8EB4 File Offset: 0x005B70B4
+	// Token: 0x06014356 RID: 82774 RVA: 0x005E5018 File Offset: 0x005E3218
 	private void TryPushCamera()
 	{
 		if (!this.CanPushCamera)
@@ -385,29 +391,30 @@ public class FlySkinTabView : UiTabViewBase
 		}
 		string flySkinModelCameraId = SkinConfig.Instance.GetFlySkinModelCameraId(this.FlySkinTabViewModel.SelectedFlySkinType);
 		this.WaitCameraId = flySkinModelCameraId;
-		UiCameraAnimationManager.Instance.PushCameraHandleByHandleName(flySkinModelCameraId, true, true, "10010", false, null, null);
+		UiCameraModel.Instance.PushCameraHandleByHandleName(flySkinModelCameraId, true, true, "10010", false, null);
 	}
 
-	// Token: 0x06016936 RID: 92470 RVA: 0x005B8F08 File Offset: 0x005B7108
-	private void TryStartCameraInputComponent()
+	// Token: 0x06014357 RID: 82775 RVA: 0x005E5060 File Offset: 0x005E3260
+	private void TryBindCameraInput()
 	{
 		SkeletalObserverHandle gliderObserver = this.GliderObserver;
 		if (((gliderObserver != null) ? gliderObserver.Model : null) == null)
 		{
 			return;
 		}
-		IUiCameraInputComponentData flySkinTabCameraInputData = this.FlySkinTabViewModel.GetFlySkinTabCameraInputData(this.RootViewModel.GetDragItem());
-		this.RootViewModel.StartCameraInput(flySkinTabCameraInputData, null, false);
+		UiCameraInputBindingData flySkinTabCameraInputData = this.FlySkinTabViewModel.GetFlySkinTabCameraInputData(this.RootViewModel.GetDragItem());
+		this.RootViewModel.ConfigureCameraInput(flySkinTabCameraInputData);
+		this.RootViewModel.BindCameraInput();
 	}
 
-	// Token: 0x06016937 RID: 92471 RVA: 0x005B8F58 File Offset: 0x005B7158
+	// Token: 0x06014358 RID: 82776 RVA: 0x005E50B0 File Offset: 0x005E32B0
 	public void ChangeSelectedTab(EFlySkinTab tab)
 	{
 		int roleEquipFlySkinId = FlySkinModel.Instance.GetRoleEquipFlySkinId(this.FlySkinTabViewModel.RoleDataId, FlySkinDefine.flySkinTabToType[tab]);
 		this.SelectTab(tab, roleEquipFlySkinId);
 	}
 
-	// Token: 0x06016938 RID: 92472 RVA: 0x005B8F90 File Offset: 0x005B7190
+	// Token: 0x06014359 RID: 82777 RVA: 0x005E50E8 File Offset: 0x005E32E8
 	protected bool CanTabToggleChange()
 	{
 		if (Info.Instance.IsInGamepad())
@@ -428,7 +435,7 @@ public class FlySkinTabView : UiTabViewBase
 		return true;
 	}
 
-	// Token: 0x06016939 RID: 92473 RVA: 0x005B9015 File Offset: 0x005B7215
+	// Token: 0x0601435A RID: 82778 RVA: 0x005E516D File Offset: 0x005E336D
 	private void OnParaglidingTabToggleStateChange(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -438,7 +445,7 @@ public class FlySkinTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0601693A RID: 92474 RVA: 0x005B9032 File Offset: 0x005B7232
+	// Token: 0x0601435B RID: 82779 RVA: 0x005E518A File Offset: 0x005E338A
 	private void OnSoarWingTabToggleStateChange(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -448,7 +455,7 @@ public class FlySkinTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0601693B RID: 92475 RVA: 0x005B904F File Offset: 0x005B724F
+	// Token: 0x0601435C RID: 82780 RVA: 0x005E51A7 File Offset: 0x005E33A7
 	public FlySkinChildTabItem GetTabItem(EFlySkinTab type)
 	{
 		if (type == EFlySkinTab.ParaglidingTab)
@@ -462,20 +469,20 @@ public class FlySkinTabView : UiTabViewBase
 		return this.SoarWingTabItem;
 	}
 
-	// Token: 0x0601693C RID: 92476 RVA: 0x005B9069 File Offset: 0x005B7269
+	// Token: 0x0601435D RID: 82781 RVA: 0x005E51C1 File Offset: 0x005E33C1
 	private void OnSwitchShowToggleStateChange(EToggleState state)
 	{
 		this.UpdateUiShowState(state == EToggleState.ETT_Checked, true);
 	}
 
-	// Token: 0x0601693D RID: 92477 RVA: 0x005B9076 File Offset: 0x005B7276
+	// Token: 0x0601435E RID: 82782 RVA: 0x005E51CE File Offset: 0x005E33CE
 	private void OnApplyToAllToggleStateChange(EToggleState state)
 	{
 		this.UpdateIsApplyToAll(state == EToggleState.ETT_Checked);
 		this.RefreshConfirmBtnState();
 	}
 
-	// Token: 0x0601693E RID: 92478 RVA: 0x005B9088 File Offset: 0x005B7288
+	// Token: 0x0601435F RID: 82783 RVA: 0x005E51E0 File Offset: 0x005E33E0
 	private FlySkinGridItem InitGridItem()
 	{
 		FlySkinGridItem flySkinGridItem = new FlySkinGridItem();
@@ -484,7 +491,7 @@ public class FlySkinTabView : UiTabViewBase
 		return flySkinGridItem;
 	}
 
-	// Token: 0x0601693F RID: 92479 RVA: 0x005B90B4 File Offset: 0x005B72B4
+	// Token: 0x06014360 RID: 82784 RVA: 0x005E520C File Offset: 0x005E340C
 	private void GridItemClick(MediumItemGridExtendCallback parameters)
 	{
 		int skinId = (parameters.Data as FlySkinGridData).SkinId;
@@ -495,27 +502,27 @@ public class FlySkinTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x06016940 RID: 92480 RVA: 0x005B90F8 File Offset: 0x005B72F8
+	// Token: 0x06014361 RID: 82785 RVA: 0x005E5250 File Offset: 0x005E3450
 	private bool GridItemCanExecuteChange(object parameters, bool result, EToggleState state)
 	{
 		int skinId = (parameters as FlySkinGridData).SkinId;
 		return this.FlySkinTabViewModel.SelectedFlySkinId != skinId;
 	}
 
-	// Token: 0x06016941 RID: 92481 RVA: 0x005B9122 File Offset: 0x005B7322
+	// Token: 0x06014362 RID: 82786 RVA: 0x005E527A File Offset: 0x005E347A
 	private FlySkinObtainItem InitObtainItem()
 	{
 		return new FlySkinObtainItem();
 	}
 
-	// Token: 0x06016942 RID: 92482 RVA: 0x005B912C File Offset: 0x005B732C
+	// Token: 0x06014363 RID: 82787 RVA: 0x005E5284 File Offset: 0x005E3484
 	private void OnApplyToAllHelpBtnClick()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.FlySkinApplyHelp);
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x06016943 RID: 92483 RVA: 0x005B9150 File Offset: 0x005B7350
+	// Token: 0x06014364 RID: 82788 RVA: 0x005E52A8 File Offset: 0x005E34A8
 	private void OnConfirmBtnClick(int state)
 	{
 		FlySkinTabViewModel flySkinTabViewModel = this.FlySkinTabViewModel;
@@ -551,7 +558,7 @@ public class FlySkinTabView : UiTabViewBase
 		FlySkinController.Instance.FlySkinWearRequest(roleDataId, skinId);
 	}
 
-	// Token: 0x06016944 RID: 92484 RVA: 0x005B9208 File Offset: 0x005B7408
+	// Token: 0x06014365 RID: 82789 RVA: 0x005E5360 File Offset: 0x005E3560
 	private void OnRoleFlySkinChange(int roleDataId, EFlySkinType skinType, int oldSkinId, int newSkinId)
 	{
 		FlySkinTabViewModel flySkinTabViewModel = this.FlySkinTabViewModel;
@@ -580,7 +587,7 @@ public class FlySkinTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x06016945 RID: 92485 RVA: 0x005B928B File Offset: 0x005B748B
+	// Token: 0x06014366 RID: 82790 RVA: 0x005E53E3 File Offset: 0x005E35E3
 	private void OnEquipSuccess()
 	{
 		ScrollingTipsController.Instance.ShowTipsByTextId("FlySkinReplaceTip", Array.Empty<object>());
@@ -588,34 +595,34 @@ public class FlySkinTabView : UiTabViewBase
 		this.RefreshConfirmBtnState();
 	}
 
-	// Token: 0x06016946 RID: 92486 RVA: 0x005B92AE File Offset: 0x005B74AE
+	// Token: 0x06014367 RID: 82791 RVA: 0x005E5406 File Offset: 0x005E3606
 	private void OnFlySkinEquipResponse(int roleDataId, int skinId)
 	{
 		this.OnEquipSuccess();
 	}
 
-	// Token: 0x06016947 RID: 92487 RVA: 0x005B92B6 File Offset: 0x005B74B6
+	// Token: 0x06014368 RID: 82792 RVA: 0x005E540E File Offset: 0x005E360E
 	private void OnFlySkinUnLoadResponse(int roleDataId, int skinId)
 	{
 		this.OnEquipSuccess();
 	}
 
-	// Token: 0x06016948 RID: 92488 RVA: 0x005B92BE File Offset: 0x005B74BE
+	// Token: 0x06014369 RID: 82793 RVA: 0x005E5416 File Offset: 0x005E3616
 	private void OnFlySkinEquipToAllRoleResponse(IReadOnlyList<RoleFlySkinChange> skinChanges)
 	{
 		this.OnEquipSuccess();
 	}
 
-	// Token: 0x06016949 RID: 92489 RVA: 0x005B92C6 File Offset: 0x005B74C6
+	// Token: 0x0601436A RID: 82794 RVA: 0x005E541E File Offset: 0x005E361E
 	private void OnFlySkinAllUnLoadResponse(EFlySkinType skinType)
 	{
 		this.OnEquipSuccess();
 	}
 
-	// Token: 0x0601694A RID: 92490 RVA: 0x005B92CE File Offset: 0x005B74CE
+	// Token: 0x0601436B RID: 82795 RVA: 0x005E5426 File Offset: 0x005E3626
 	private void OnActivateUiCameraAnimationHandle(UiCameraHandleData handleData)
 	{
-		if (handleData.HandleName == this.WaitCameraId)
+		if (handleData.GetHandleName() == this.WaitCameraId)
 		{
 			this.WaitCameraId = null;
 			if (!this.CanLoadModel)
@@ -626,18 +633,19 @@ public class FlySkinTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0601694B RID: 92491 RVA: 0x005B9300 File Offset: 0x005B7500
+	// Token: 0x0601436C RID: 82796 RVA: 0x005E5458 File Offset: 0x005E3658
 	private void OnViewModelUpdate(EFlySkinViewData data)
 	{
 		if (data == EFlySkinViewData.SelectedGridIndex)
 		{
 			FlySkinTabViewModel flySkinTabViewModel = this.FlySkinTabViewModel;
-			this.TryPushCamera();
 			this.GridLayout.RefreshByData(flySkinTabViewModel.GetGridDataList(), delegate
 			{
 				this.GridLayout.SelectGridProxy(flySkinTabViewModel.GetSelectedGridIndex(), false);
 			}, false);
 			this.OnGridSelected();
+			this.TryPushCamera();
+			this.TryBindCameraInput();
 			return;
 		}
 		if (data == EFlySkinViewData.SelectedTab)
@@ -653,78 +661,78 @@ public class FlySkinTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0400A782 RID: 42882
+	// Token: 0x0400AB86 RID: 43910
 	private SkinRootViewModel RootViewModel;
 
-	// Token: 0x0400A783 RID: 42883
+	// Token: 0x0400AB87 RID: 43911
 	private FlySkinTabViewModel FlySkinTabViewModel;
 
-	// Token: 0x0400A784 RID: 42884
+	// Token: 0x0400AB88 RID: 43912
 	protected GenericLayout<FlySkinGridItem, FlySkinGridData> GridLayout;
 
-	// Token: 0x0400A785 RID: 42885
+	// Token: 0x0400AB89 RID: 43913
 	protected GenericLayout<FlySkinObtainItem, IFlySkinGetWayData> ObtainLayout;
 
-	// Token: 0x0400A786 RID: 42886
+	// Token: 0x0400AB8A RID: 43914
 	private ButtonItem ConfirmBtnItem;
 
-	// Token: 0x0400A787 RID: 42887
+	// Token: 0x0400AB8B RID: 43915
 	private FlySkinChildTabItem ParaglidingTabItem;
 
-	// Token: 0x0400A788 RID: 42888
+	// Token: 0x0400AB8C RID: 43916
 	private FlySkinChildTabItem SoarWingTabItem;
 
-	// Token: 0x0400A789 RID: 42889
+	// Token: 0x0400AB8D RID: 43917
 	private FlySkinChildTabItem SelectedTabItem;
 
-	// Token: 0x0400A78A RID: 42890
+	// Token: 0x0400AB8E RID: 43918
 	private double LastClickTimeStamp;
 
-	// Token: 0x0400A78B RID: 42891
+	// Token: 0x0400AB8F RID: 43919
 	private bool CanPushCamera;
 
-	// Token: 0x0400A78C RID: 42892
+	// Token: 0x0400AB90 RID: 43920
 	private string WaitCameraId;
 
-	// Token: 0x0400A78D RID: 42893
+	// Token: 0x0400AB91 RID: 43921
 	private bool CanLoadModel;
 
-	// Token: 0x0400A78E RID: 42894
+	// Token: 0x0400AB92 RID: 43922
 	public SkeletalObserverHandle GliderObserver;
 
-	// Token: 0x02009096 RID: 37014
+	// Token: 0x020082DD RID: 33501
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402ED99 RID: 191897
+		// Token: 0x0402A493 RID: 173203
 		TopAndRightItem,
-		// Token: 0x0402ED9A RID: 191898
+		// Token: 0x0402A494 RID: 173204
 		GridLayout,
-		// Token: 0x0402ED9B RID: 191899
+		// Token: 0x0402A495 RID: 173205
 		GridItem,
-		// Token: 0x0402ED9C RID: 191900
+		// Token: 0x0402A496 RID: 173206
 		SwitchShowToggle,
-		// Token: 0x0402ED9D RID: 191901
+		// Token: 0x0402A497 RID: 173207
 		ConfirmBtnItem,
-		// Token: 0x0402ED9E RID: 191902
+		// Token: 0x0402A498 RID: 173208
 		ObtainLayout,
-		// Token: 0x0402ED9F RID: 191903
+		// Token: 0x0402A499 RID: 173209
 		ObtainItem,
-		// Token: 0x0402EDA0 RID: 191904
+		// Token: 0x0402A49A RID: 173210
 		TitleText,
-		// Token: 0x0402EDA1 RID: 191905
+		// Token: 0x0402A49B RID: 173211
 		SubTitleText,
-		// Token: 0x0402EDA2 RID: 191906
+		// Token: 0x0402A49C RID: 173212
 		DescText,
-		// Token: 0x0402EDA3 RID: 191907
+		// Token: 0x0402A49D RID: 173213
 		ApplyToAllToggle,
-		// Token: 0x0402EDA4 RID: 191908
+		// Token: 0x0402A49E RID: 173214
 		ApplyToAllHelpBtn,
-		// Token: 0x0402EDA5 RID: 191909
+		// Token: 0x0402A49F RID: 173215
 		ParaglidingTabItem,
-		// Token: 0x0402EDA6 RID: 191910
+		// Token: 0x0402A4A0 RID: 173216
 		SoarWingTabItem,
-		// Token: 0x0402EDA7 RID: 191911
+		// Token: 0x0402A4A1 RID: 173217
 		ConfirmBtnAndApplyItem
 	}
 }

@@ -1,24 +1,24 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020031E7 RID: 12775
+// Token: 0x02002756 RID: 10070
 [NullableContext(1)]
 [Nullable(0)]
 public class SplineStateInfo
 {
-	// Token: 0x0601B908 RID: 112904 RVA: 0x00790944 File Offset: 0x0078EB44
+	// Token: 0x0601948B RID: 103563 RVA: 0x007B9087 File Offset: 0x007B7287
 	public SplineStateInfo(int id, Vector loc)
 	{
 		this.PbDataId = id;
 		this.Location = loc;
 	}
 
-	// Token: 0x0400D8A6 RID: 55462
+	// Token: 0x0400DD44 RID: 56644
 	public int PbDataId;
 
-	// Token: 0x0400D8A7 RID: 55463
+	// Token: 0x0400DD45 RID: 56645
 	public Vector Location = Vector.Create();
 
-	// Token: 0x0400D8A8 RID: 55464
+	// Token: 0x0400DD46 RID: 56646
 	public bool InRange;
 }

@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028F2 RID: 10482
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002BCA RID: 11210
 	public class ISkiConfig : ISportConfig
 	{
-		// Token: 0x0600E8DA RID: 59610 RVA: 0x002229C2 File Offset: 0x00220BC2
+		// Token: 0x0600F71B RID: 63259 RVA: 0x0023FB7A File Offset: 0x0023DD7A
 		public static ISkiConfig Create(ISkiConfig? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170048B8 RID: 18616
-		// (get) Token: 0x0600E8DB RID: 59611 RVA: 0x002229E1 File Offset: 0x00220BE1
+		// Token: 0x17004C35 RID: 19509
+		// (get) Token: 0x0600F71C RID: 63260 RVA: 0x0023FB99 File Offset: 0x0023DD99
 		public override ESportStateType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170048B9 RID: 18617
-		// (get) Token: 0x0600E8DC RID: 59612 RVA: 0x002229EE File Offset: 0x00220BEE
+		// Token: 0x17004C36 RID: 19510
+		// (get) Token: 0x0600F71D RID: 63261 RVA: 0x0023FBA6 File Offset: 0x0023DDA6
 		public virtual ISkiConfigType Config
 		{
 			get
@@ -48,13 +45,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400808C RID: 32908
+		// Token: 0x04008750 RID: 34640
 		private ISkiConfig Instance;
 
-		// Token: 0x0400808D RID: 32909
+		// Token: 0x04008751 RID: 34641
 		private ISkiConfigType _ConfigCache;
 
-		// Token: 0x0400808E RID: 32910
+		// Token: 0x04008752 RID: 34642
 		private bool _ConfigInited;
 	}
 }

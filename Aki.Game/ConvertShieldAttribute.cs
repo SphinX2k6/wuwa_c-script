@@ -4,17 +4,17 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02002F68 RID: 12136
+// Token: 0x020024BC RID: 9404
 [NullableContext(1)]
 [Nullable(0)]
 public class ConvertShieldAttribute : BuffEffect
 {
-	// Token: 0x06019CF1 RID: 105713 RVA: 0x006BB126 File Offset: 0x006B9326
+	// Token: 0x06017603 RID: 95747 RVA: 0x006E1A12 File Offset: 0x006DFC12
 	public ConvertShieldAttribute(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019CF2 RID: 105714 RVA: 0x006BB14C File Offset: 0x006B934C
+	// Token: 0x06017604 RID: 95748 RVA: 0x006E1A38 File Offset: 0x006DFC38
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -32,14 +32,14 @@ public class ConvertShieldAttribute : BuffEffect
 		this.ConvertRatio = AbilityUtils.GetLevelValue<float>(parameters.ExtraEffectGrowParameters2, this.Level, 0f);
 	}
 
-	// Token: 0x06019CF3 RID: 105715 RVA: 0x006BB235 File Offset: 0x006B9435
+	// Token: 0x06017605 RID: 95749 RVA: 0x006E1B21 File Offset: 0x006DFD21
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
 		return null;
 	}
 
-	// Token: 0x06019CF4 RID: 105716 RVA: 0x006BB238 File Offset: 0x006B9438
+	// Token: 0x06017606 RID: 95750 RVA: 0x006E1B24 File Offset: 0x006DFD24
 	public override void OnCreated()
 	{
 		BaseBuffComponent baseBuffComponent = base.ExactOwnerEntity.CheckGetComponent<BaseBuffComponent>();
@@ -53,7 +53,7 @@ public class ConvertShieldAttribute : BuffEffect
 		}
 	}
 
-	// Token: 0x06019CF5 RID: 105717 RVA: 0x006BB2E0 File Offset: 0x006B94E0
+	// Token: 0x06017607 RID: 95751 RVA: 0x006E1BCC File Offset: 0x006DFDCC
 	private void AddShieldListenerForEntity(Entity entity)
 	{
 		Action<float> action = delegate(float shield)
@@ -65,14 +65,14 @@ public class ConvertShieldAttribute : BuffEffect
 		this.AddShieldAttributeModifier(entity);
 	}
 
-	// Token: 0x06019CF6 RID: 105718 RVA: 0x006BB340 File Offset: 0x006B9540
+	// Token: 0x06017608 RID: 95752 RVA: 0x006E1C2C File Offset: 0x006DFE2C
 	private void OnShieldChanged(Entity entity, float shield)
 	{
 		this.RemoveShieldAttributeModifier(entity);
 		this.AddShieldAttributeModifier(entity);
 	}
 
-	// Token: 0x06019CF7 RID: 105719 RVA: 0x006BB350 File Offset: 0x006B9550
+	// Token: 0x06017609 RID: 95753 RVA: 0x006E1C3C File Offset: 0x006DFE3C
 	private void AddShieldAttributeModifier(Entity inEntity)
 	{
 		int? buffHolderType = this.BuffHolderType;
@@ -121,7 +121,7 @@ public class ConvertShieldAttribute : BuffEffect
 		}
 	}
 
-	// Token: 0x06019CF8 RID: 105720 RVA: 0x006BB4A8 File Offset: 0x006B96A8
+	// Token: 0x0601760A RID: 95754 RVA: 0x006E1D94 File Offset: 0x006DFF94
 	private void RemoveShieldAttributeModifier(Entity inEntity)
 	{
 		int num;
@@ -137,7 +137,7 @@ public class ConvertShieldAttribute : BuffEffect
 		this.EntityModifierMap.Remove(inEntity);
 	}
 
-	// Token: 0x06019CF9 RID: 105721 RVA: 0x006BB4F0 File Offset: 0x006B96F0
+	// Token: 0x0601760B RID: 95755 RVA: 0x006E1DDC File Offset: 0x006DFFDC
 	public override void OnRemoved(bool bPremature)
 	{
 		BaseBuffComponent baseBuffComponent = base.ExactOwnerEntity.CheckGetComponent<BaseBuffComponent>();
@@ -168,7 +168,7 @@ public class ConvertShieldAttribute : BuffEffect
 		}
 	}
 
-	// Token: 0x06019CFA RID: 105722 RVA: 0x006BB664 File Offset: 0x006B9864
+	// Token: 0x0601760C RID: 95756 RVA: 0x006E1F50 File Offset: 0x006E0150
 	private void OnChangeTeam()
 	{
 		List<int> list = new List<int>();
@@ -222,33 +222,33 @@ public class ConvertShieldAttribute : BuffEffect
 		}
 	}
 
-	// Token: 0x0400C2B0 RID: 49840
+	// Token: 0x0400C659 RID: 50777
 	private int? BuffHolderType;
 
-	// Token: 0x0400C2B1 RID: 49841
+	// Token: 0x0400C65A RID: 50778
 	private int ShieldId;
 
-	// Token: 0x0400C2B2 RID: 49842
+	// Token: 0x0400C65B RID: 50779
 	private EAttributeType AttributeId;
 
-	// Token: 0x0400C2B3 RID: 49843
+	// Token: 0x0400C65C RID: 50780
 	private float CompareFactor;
 
-	// Token: 0x0400C2B4 RID: 49844
+	// Token: 0x0400C65D RID: 50781
 	private float ConvertThreshold;
 
-	// Token: 0x0400C2B5 RID: 49845
+	// Token: 0x0400C65E RID: 50782
 	private float ConvertLimit;
 
-	// Token: 0x0400C2B6 RID: 49846
+	// Token: 0x0400C65F RID: 50783
 	private float ConvertMagnitude;
 
-	// Token: 0x0400C2B7 RID: 49847
+	// Token: 0x0400C660 RID: 50784
 	private float ConvertRatio;
 
-	// Token: 0x0400C2B8 RID: 49848
+	// Token: 0x0400C661 RID: 50785
 	private readonly Dictionary<Entity, int> EntityModifierMap = new Dictionary<Entity, int>();
 
-	// Token: 0x0400C2B9 RID: 49849
+	// Token: 0x0400C662 RID: 50786
 	private readonly Dictionary<Entity, Action<float>> EntityShieldListenerMap = new Dictionary<Entity, Action<float>>();
 }

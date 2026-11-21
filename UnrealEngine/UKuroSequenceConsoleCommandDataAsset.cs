@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001FAD RID: 8109
+	// Token: 0x0200063F RID: 1599
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/LevelSequence.KuroSequenceConsoleCommandDataAsset")]
 	[UnrealStructLayout(136, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 136)]
 	public class UKuroSequenceConsoleCommandDataAsset : UDataAsset, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601EC3C RID: 126012 RVA: 0x002DBBAD File Offset: 0x002D9DAD
+		// Token: 0x06008C9D RID: 35997 RVA: 0x000D3A51 File Offset: 0x000D1C51
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroSequenceConsoleCommandDataAsset._ClassPtr;
 		}
 
-		// Token: 0x0601EC3D RID: 126013 RVA: 0x002DBBBC File Offset: 0x002D9DBC
+		// Token: 0x06008C9E RID: 35998 RVA: 0x000D3A60 File Offset: 0x000D1C60
 		public UKuroSequenceConsoleCommandDataAsset() : this(BuiltinUtils.AllocNativeUObject(UKuroSequenceConsoleCommandDataAsset.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601EC3E RID: 126014 RVA: 0x002DBBE4 File Offset: 0x002D9DE4
+		// Token: 0x06008C9F RID: 35999 RVA: 0x000D3A88 File Offset: 0x000D1C88
 		public UKuroSequenceConsoleCommandDataAsset(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroSequenceConsoleCommandDataAsset.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17007A8C RID: 31372
-		// (get) Token: 0x0601EC3F RID: 126015 RVA: 0x002DBC18 File Offset: 0x002D9E18
-		// (set) Token: 0x0601EC40 RID: 126016 RVA: 0x002DBC51 File Offset: 0x002D9E51
+		// Token: 0x17001AA4 RID: 6820
+		// (get) Token: 0x06008CA0 RID: 36000 RVA: 0x000D3ABC File Offset: 0x000D1CBC
+		// (set) Token: 0x06008CA1 RID: 36001 RVA: 0x000D3AF5 File Offset: 0x000D1CF5
 		public TArray<string> ConsoleCommands
 		{
 			get
@@ -50,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007A8D RID: 31373
-		// (get) Token: 0x0601EC41 RID: 126017 RVA: 0x002DBC60 File Offset: 0x002D9E60
-		// (set) Token: 0x0601EC42 RID: 126018 RVA: 0x002DBC99 File Offset: 0x002D9E99
+		// Token: 0x17001AA5 RID: 6821
+		// (get) Token: 0x06008CA2 RID: 36002 RVA: 0x000D3B04 File Offset: 0x000D1D04
+		// (set) Token: 0x06008CA3 RID: 36003 RVA: 0x000D3B3D File Offset: 0x000D1D3D
 		public TArray<string> GlobalConsoleCommands
 		{
 			get
@@ -71,9 +71,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007A8E RID: 31374
-		// (get) Token: 0x0601EC43 RID: 126019 RVA: 0x002DBCA8 File Offset: 0x002D9EA8
-		// (set) Token: 0x0601EC44 RID: 126020 RVA: 0x002DBCE1 File Offset: 0x002D9EE1
+		// Token: 0x17001AA6 RID: 6822
+		// (get) Token: 0x06008CA4 RID: 36004 RVA: 0x000D3B4C File Offset: 0x000D1D4C
+		// (set) Token: 0x06008CA5 RID: 36005 RVA: 0x000D3B85 File Offset: 0x000D1D85
 		public TArray<string> MobileConsoleCommands
 		{
 			get
@@ -92,9 +92,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007A8F RID: 31375
-		// (get) Token: 0x0601EC45 RID: 126021 RVA: 0x002DBCF0 File Offset: 0x002D9EF0
-		// (set) Token: 0x0601EC46 RID: 126022 RVA: 0x002DBD29 File Offset: 0x002D9F29
+		// Token: 0x17001AA7 RID: 6823
+		// (get) Token: 0x06008CA6 RID: 36006 RVA: 0x000D3B94 File Offset: 0x000D1D94
+		// (set) Token: 0x06008CA7 RID: 36007 RVA: 0x000D3BCD File Offset: 0x000D1DCD
 		public TArray<string> GlobalMobileConsoleCommands
 		{
 			get
@@ -113,9 +113,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007A90 RID: 31376
-		// (get) Token: 0x0601EC47 RID: 126023 RVA: 0x002DBD37 File Offset: 0x002D9F37
-		// (set) Token: 0x0601EC48 RID: 126024 RVA: 0x002DBD47 File Offset: 0x002D9F47
+		// Token: 0x17001AA8 RID: 6824
+		// (get) Token: 0x06008CA8 RID: 36008 RVA: 0x000D3BDB File Offset: 0x000D1DDB
+		// (set) Token: 0x06008CA9 RID: 36009 RVA: 0x000D3BEB File Offset: 0x000D1DEB
 		public unsafe bool bMobileLowStreaming
 		{
 			get
@@ -128,9 +128,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007A91 RID: 31377
-		// (get) Token: 0x0601EC49 RID: 126025 RVA: 0x002DBD58 File Offset: 0x002D9F58
-		// (set) Token: 0x0601EC4A RID: 126026 RVA: 0x002DBD68 File Offset: 0x002D9F68
+		// Token: 0x17001AA9 RID: 6825
+		// (get) Token: 0x06008CAA RID: 36010 RVA: 0x000D3BFC File Offset: 0x000D1DFC
+		// (set) Token: 0x06008CAB RID: 36011 RVA: 0x000D3C0C File Offset: 0x000D1E0C
 		public unsafe float MobileLowStreamingScale
 		{
 			get
@@ -143,30 +143,30 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601EC4B RID: 126027 RVA: 0x002DBD79 File Offset: 0x002D9F79
+		// Token: 0x06008CAC RID: 36012 RVA: 0x000D3C1D File Offset: 0x000D1E1D
 		static UKuroSequenceConsoleCommandDataAsset()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LevelSequence.KuroSequenceConsoleCommandDataAsset");
 		}
 
-		// Token: 0x0601EC4C RID: 126028 RVA: 0x002DBD87 File Offset: 0x002D9F87
+		// Token: 0x06008CAD RID: 36013 RVA: 0x000D3C2B File Offset: 0x000D1E2B
 		protected UKuroSequenceConsoleCommandDataAsset(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04010A21 RID: 68129
+		// Token: 0x04003D42 RID: 15682
 		public new const string __ObjectPath = "/Script/LevelSequence.KuroSequenceConsoleCommandDataAsset";
 
-		// Token: 0x04010A22 RID: 68130
+		// Token: 0x04003D43 RID: 15683
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04010A23 RID: 68131
+		// Token: 0x04003D44 RID: 15684
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04010A24 RID: 68132
+		// Token: 0x04003D45 RID: 15685
 		internal static int __PropertyOffset_ConsoleCommands;
 
-		// Token: 0x04010A25 RID: 68133
+		// Token: 0x04003D46 RID: 15686
 		[Nullable(new byte[]
 		{
 			2,
@@ -174,10 +174,10 @@ namespace UnrealEngine
 		})]
 		private TArray<string> _ConsoleCommands;
 
-		// Token: 0x04010A26 RID: 68134
+		// Token: 0x04003D47 RID: 15687
 		internal static int __PropertyOffset_GlobalConsoleCommands;
 
-		// Token: 0x04010A27 RID: 68135
+		// Token: 0x04003D48 RID: 15688
 		[Nullable(new byte[]
 		{
 			2,
@@ -185,10 +185,10 @@ namespace UnrealEngine
 		})]
 		private TArray<string> _GlobalConsoleCommands;
 
-		// Token: 0x04010A28 RID: 68136
+		// Token: 0x04003D49 RID: 15689
 		internal static int __PropertyOffset_MobileConsoleCommands;
 
-		// Token: 0x04010A29 RID: 68137
+		// Token: 0x04003D4A RID: 15690
 		[Nullable(new byte[]
 		{
 			2,
@@ -196,10 +196,10 @@ namespace UnrealEngine
 		})]
 		private TArray<string> _MobileConsoleCommands;
 
-		// Token: 0x04010A2A RID: 68138
+		// Token: 0x04003D4B RID: 15691
 		internal static int __PropertyOffset_GlobalMobileConsoleCommands;
 
-		// Token: 0x04010A2B RID: 68139
+		// Token: 0x04003D4C RID: 15692
 		[Nullable(new byte[]
 		{
 			2,
@@ -207,10 +207,10 @@ namespace UnrealEngine
 		})]
 		private TArray<string> _GlobalMobileConsoleCommands;
 
-		// Token: 0x04010A2C RID: 68140
+		// Token: 0x04003D4D RID: 15693
 		internal static int __PropertyOffset_bMobileLowStreaming;
 
-		// Token: 0x04010A2D RID: 68141
+		// Token: 0x04003D4E RID: 15694
 		internal static int __PropertyOffset_MobileLowStreamingScale;
 	}
 }

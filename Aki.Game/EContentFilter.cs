@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002506 RID: 9478
+// Token: 0x020019ED RID: 6637
 public enum EContentFilter
 {
-	// Token: 0x04008F9C RID: 36764
+	// Token: 0x040090E6 RID: 37094
 	Task = 3001,
-	// Token: 0x04008F9D RID: 36765
+	// Token: 0x040090E7 RID: 37095
 	Reward,
-	// Token: 0x04008F9E RID: 36766
+	// Token: 0x040090E8 RID: 37096
 	Other
 }

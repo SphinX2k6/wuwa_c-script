@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B6E RID: 7022
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001D1B RID: 7451
 	public class ILandSlideEndInteract : ILeisureInteractType
 	{
-		// Token: 0x06009665 RID: 38501 RVA: 0x0015B6F4 File Offset: 0x001598F4
+		// Token: 0x06009E47 RID: 40519 RVA: 0x0016C2A0 File Offset: 0x0016A4A0
 		private ILandSlideEndInteract_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009666 RID: 38502 RVA: 0x0015B72C File Offset: 0x0015992C
+		// Token: 0x06009E48 RID: 40520 RVA: 0x0016C2D8 File Offset: 0x0016A4D8
 		public static ILandSlideEndInteract Create([Nullable(2)] ILandSlideEndInteract instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009667 RID: 38503 RVA: 0x0015B73F File Offset: 0x0015993F
+		// Token: 0x06009E49 RID: 40521 RVA: 0x0016C2EB File Offset: 0x0016A4EB
 		public static ILandSlideEndInteract CreateFromSetValue([Nullable(2)] ILandSlideEndInteract_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009668 RID: 38504 RVA: 0x0015B752 File Offset: 0x00159952
+		// Token: 0x06009E4A RID: 40522 RVA: 0x0016C2FE File Offset: 0x0016A4FE
 		public new ILandSlideEndInteract_SetValue ToSetValue()
 		{
 			return new ILandSlideEndInteract_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002F64 RID: 12132
-		// (get) Token: 0x06009669 RID: 38505 RVA: 0x0015B765 File Offset: 0x00159965
-		// (set) Token: 0x0600966A RID: 38506 RVA: 0x0015B790 File Offset: 0x00159990
+		// Token: 0x17003189 RID: 12681
+		// (get) Token: 0x06009E4B RID: 40523 RVA: 0x0016C311 File Offset: 0x0016A511
+		// (set) Token: 0x06009E4C RID: 40524 RVA: 0x0016C33C File Offset: 0x0016A53C
 		public override ELeisureInteract Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005BF7 RID: 23543
+		// Token: 0x04006090 RID: 24720
 		[Nullable(2)]
 		protected new ILandSlideEndInteract FbInstance;
 
-		// Token: 0x04005BF8 RID: 23544
+		// Token: 0x04006091 RID: 24721
 		[Nullable(2)]
 		protected new ILandSlideEndInteract_SetValue PocoInterface;
 	}

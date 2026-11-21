@@ -1,22 +1,20 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002005 RID: 8197
+	// Token: 0x0200224C RID: 8780
 	public class ITriggerVoiceDialogues_SetValue
 	{
-		// Token: 0x04006CA4 RID: 27812
+		// Token: 0x040072A7 RID: 29351
 		public EInteractEffectType Type;
 
-		// Token: 0x04006CA5 RID: 27813
+		// Token: 0x040072A8 RID: 29352
 		public float? DelayTime;
 
-		// Token: 0x04006CA6 RID: 27814
-		[Nullable(1)]
+		// Token: 0x040072A9 RID: 29353
 		public PlayFlow Flow;
 
-		// Token: 0x04006CA7 RID: 27815
+		// Token: 0x040072AA RID: 29354
 		public bool? ShowTalker;
 	}
 }

@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020012CB RID: 4811
+	// Token: 0x020002B9 RID: 697
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Foliage.FoliageType_InstancedStaticMesh")]
 	[UnrealStructLayout(2504, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 2504)]
 	public class UFoliageType_InstancedStaticMesh : UFoliageType, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06011A79 RID: 72313 RVA: 0x0019E9AA File Offset: 0x0019CBAA
+		// Token: 0x06004C4E RID: 19534 RVA: 0x0006B059 File Offset: 0x00069259
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UFoliageType_InstancedStaticMesh._ClassPtr;
 		}
 
-		// Token: 0x06011A7A RID: 72314 RVA: 0x0019E9B8 File Offset: 0x0019CBB8
+		// Token: 0x06004C4F RID: 19535 RVA: 0x0006B068 File Offset: 0x00069268
 		public UFoliageType_InstancedStaticMesh() : this(BuiltinUtils.AllocNativeUObject(UFoliageType_InstancedStaticMesh.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06011A7B RID: 72315 RVA: 0x0019E9E0 File Offset: 0x0019CBE0
+		// Token: 0x06004C50 RID: 19536 RVA: 0x0006B090 File Offset: 0x00069290
 		public UFoliageType_InstancedStaticMesh(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UFoliageType_InstancedStaticMesh.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17004519 RID: 17689
-		// (get) Token: 0x06011A7C RID: 72316 RVA: 0x0019EA13 File Offset: 0x0019CC13
-		// (set) Token: 0x06011A7D RID: 72317 RVA: 0x0019EA27 File Offset: 0x0019CC27
+		// Token: 0x17000EAE RID: 3758
+		// (get) Token: 0x06004C51 RID: 19537 RVA: 0x0006B0C3 File Offset: 0x000692C3
+		// (set) Token: 0x06004C52 RID: 19538 RVA: 0x0006B0D7 File Offset: 0x000692D7
 		[Nullable(2)]
 		public unsafe UStaticMesh Mesh
 		{
@@ -47,9 +47,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700451A RID: 17690
-		// (get) Token: 0x06011A7E RID: 72318 RVA: 0x0019EA3C File Offset: 0x0019CC3C
-		// (set) Token: 0x06011A7F RID: 72319 RVA: 0x0019EA75 File Offset: 0x0019CC75
+		// Token: 0x17000EAF RID: 3759
+		// (get) Token: 0x06004C53 RID: 19539 RVA: 0x0006B0EC File Offset: 0x000692EC
+		// (set) Token: 0x06004C54 RID: 19540 RVA: 0x0006B125 File Offset: 0x00069325
 		public TArray<UMaterialInterface> OverrideMaterials
 		{
 			get
@@ -68,71 +68,38 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700451B RID: 17691
-		// (get) Token: 0x06011A80 RID: 72320 RVA: 0x0019EA83 File Offset: 0x0019CC83
-		// (set) Token: 0x06011A81 RID: 72321 RVA: 0x0019EA97 File Offset: 0x0019CC97
-		[Nullable(new byte[]
-		{
-			0,
-			1
-		})]
-		public unsafe TSubclassOf<UFoliageInstancedStaticMeshComponent> ComponentClass
-		{
-			[return: Nullable(new byte[]
-			{
-				0,
-				1
-			})]
-			get
-			{
-				return *(base.NativePtr + (IntPtr)UFoliageType_InstancedStaticMesh.__PropertyOffset_ComponentClass);
-			}
-			[param: Nullable(new byte[]
-			{
-				0,
-				1
-			})]
-			set
-			{
-				*(base.NativePtr + (IntPtr)UFoliageType_InstancedStaticMesh.__PropertyOffset_ComponentClass) = value;
-			}
-		}
-
-		// Token: 0x06011A82 RID: 72322 RVA: 0x0019EAAC File Offset: 0x0019CCAC
+		// Token: 0x06004C55 RID: 19541 RVA: 0x0006B133 File Offset: 0x00069333
 		static UFoliageType_InstancedStaticMesh()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Foliage.FoliageType_InstancedStaticMesh");
 		}
 
-		// Token: 0x06011A83 RID: 72323 RVA: 0x0019EABA File Offset: 0x0019CCBA
+		// Token: 0x06004C56 RID: 19542 RVA: 0x0006B141 File Offset: 0x00069341
 		protected UFoliageType_InstancedStaticMesh(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04009783 RID: 38787
+		// Token: 0x04001E83 RID: 7811
 		public new const string __ObjectPath = "/Script/Foliage.FoliageType_InstancedStaticMesh";
 
-		// Token: 0x04009784 RID: 38788
+		// Token: 0x04001E84 RID: 7812
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04009785 RID: 38789
+		// Token: 0x04001E85 RID: 7813
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04009786 RID: 38790
+		// Token: 0x04001E86 RID: 7814
 		internal static int __PropertyOffset_Mesh;
 
-		// Token: 0x04009787 RID: 38791
+		// Token: 0x04001E87 RID: 7815
 		internal static int __PropertyOffset_OverrideMaterials;
 
-		// Token: 0x04009788 RID: 38792
+		// Token: 0x04001E88 RID: 7816
 		[Nullable(new byte[]
 		{
 			2,
 			1
 		})]
 		private TArray<UMaterialInterface> _OverrideMaterials;
-
-		// Token: 0x04009789 RID: 38793
-		internal static int __PropertyOffset_ComponentClass;
 	}
 }

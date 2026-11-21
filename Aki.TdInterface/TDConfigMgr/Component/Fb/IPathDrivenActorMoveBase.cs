@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E18 RID: 3608
+	// Token: 0x02000F14 RID: 3860
 	public class IPathDrivenActorMoveBase
 	{
-		// Token: 0x060051AA RID: 20906 RVA: 0x000C9675 File Offset: 0x000C7875
-		[NullableContext(1)]
+		// Token: 0x060056D1 RID: 22225 RVA: 0x000D4F3D File Offset: 0x000D313D
 		public static IPathDrivenActorMoveBase Create(IPathDrivenActorMoveBase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001B37 RID: 6967
-		// (get) Token: 0x060051AB RID: 20907 RVA: 0x000C9694 File Offset: 0x000C7894
+		// Token: 0x17001CA4 RID: 7332
+		// (get) Token: 0x060056D2 RID: 22226 RVA: 0x000D4F5C File Offset: 0x000D315C
 		public virtual EPathDrivenActorMoveType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002F0B RID: 12043
+		// Token: 0x040031D3 RID: 12755
 		private IPathDrivenActorMoveBase Instance;
 	}
 }

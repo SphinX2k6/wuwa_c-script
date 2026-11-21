@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
-using AkiClient.Game.Aki.Render.RuntimeBP.Effect.Debug;
-using CSharpScript.Core.Common;
 using CSharpScript.Game.Effect;
 using CSharpScript.Launcher.Platform;
 using CSharpScript.Typing;
@@ -10,18 +8,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render.Effect.DebugTools
 {
-	// Token: 0x020045F5 RID: 17909
+	// Token: 0x0200351E RID: 13598
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class AutoStatEffectDataMgr : IStaticVariableResetter
 	{
-		// Token: 0x0602E303 RID: 189187 RVA: 0x00AAD9C9 File Offset: 0x00AABBC9
+		// Token: 0x060229F8 RID: 141816 RVA: 0x009DA165 File Offset: 0x009D8365
 		static AutoStatEffectDataMgr()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(AutoStatEffectDataMgr.CreateStaticDefaultValue), new Action(AutoStatEffectDataMgr.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0602E304 RID: 189188 RVA: 0x00AADA04 File Offset: 0x00AABC04
+		// Token: 0x060229F9 RID: 141817 RVA: 0x009DA1A0 File Offset: 0x009D83A0
 		[NullableContext(1)]
 		public static AutoStatEffectDataMgr Get()
 		{
@@ -34,7 +32,7 @@ namespace CSharpScript.Game.Render.Effect.DebugTools
 			return AutoStatEffectDataMgr._Instance;
 		}
 
-		// Token: 0x0602E305 RID: 189189 RVA: 0x00AADA59 File Offset: 0x00AABC59
+		// Token: 0x060229FA RID: 141818 RVA: 0x009DA1F5 File Offset: 0x009D83F5
 		public static double GetMicrosecond()
 		{
 			if (Platform.Instance.IsWindowsPlatform())
@@ -44,13 +42,13 @@ namespace CSharpScript.Game.Render.Effect.DebugTools
 			return KuroTime.GetCycles64();
 		}
 
-		// Token: 0x0602E306 RID: 189190 RVA: 0x00AADA7C File Offset: 0x00AABC7C
+		// Token: 0x060229FB RID: 141819 RVA: 0x009DA218 File Offset: 0x009D8418
 		private AutoStatEffectDataMgr()
 		{
 			this.TickId = -1;
 		}
 
-		// Token: 0x0602E307 RID: 189191 RVA: 0x00AADA8C File Offset: 0x00AABC8C
+		// Token: 0x060229FC RID: 141820 RVA: 0x009DA228 File Offset: 0x009D8428
 		private void Reset()
 		{
 			if (this.TickId != -1)
@@ -73,60 +71,25 @@ namespace CSharpScript.Game.Render.Effect.DebugTools
 			EffectGlobal.Instance.AllowEffectOutPool = false;
 		}
 
-		// Token: 0x0602E308 RID: 189192 RVA: 0x00AADB3C File Offset: 0x00AABD3C
+		// Token: 0x060229FD RID: 141821 RVA: 0x009DA2D8 File Offset: 0x009D84D8
 		public void Play(int inStartIndex = 0, int inEndIndex = -1)
 		{
-			if (!Info.Instance.IsBuildDevelopmentOrDebug)
-			{
-				Log.Instance.Error(ELogModule.RenderEffect, ELogAuthor.ZJF, "shipping 包或test 包", default(ReadOnlySpan<ValueTuple<string, object>>));
-				return;
-			}
-			this.Reset();
-			ResourceSystem.Instance.LoadAsync<PDA_EffectPaths_C>("/Game/Aki/Render/RuntimeBP/Effect/Debug/DA_EffectPaths.DA_EffectPaths", delegate([Nullable(2)] PDA_EffectPaths_C result, string _)
-			{
-				TArray<string> basePaths = result.BasePaths;
-				int num = 0;
-				if (inStartIndex > 0 && inStartIndex < basePaths.Num() - 1)
-				{
-					num = inStartIndex;
-				}
-				int num2 = basePaths.Num() - 1;
-				if (inEndIndex != -1 && inEndIndex < basePaths.Num())
-				{
-					num2 = inEndIndex;
-				}
-				this.BasePaths = new List<string>();
-				for (int i = num; i <= num2; i++)
-				{
-					this.BasePaths.Add(basePaths.Get(i));
-				}
-				this.TickId = TickSystem.Instance.Add(new Action<float>(this.Tick), "PlayEffectOneByOne", ETickingGroup.TG_PrePhysics, false, 0, false).Id;
-			}, 100, "js_undefined");
+			Log.Instance.Error(ELogModule.RenderEffect, ELogAuthor.ZJF, "shipping 包或test 包", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x0602E309 RID: 189193 RVA: 0x00AADBB8 File Offset: 0x00AABDB8
+		// Token: 0x060229FE RID: 141822 RVA: 0x009DA31C File Offset: 0x009D851C
 		public void PlayWithTrace()
 		{
-			if (!Info.Instance.IsBuildDevelopmentOrDebug)
-			{
-				Log.Instance.Error(ELogModule.RenderEffect, ELogAuthor.ZJF, "shipping 包或test 包", default(ReadOnlySpan<ValueTuple<string, object>>));
-				return;
-			}
-			this.Reset();
-			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "Stat NamedEvents", null);
-			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "Trace.Start", null);
-			this.IsOpenStatTrace = true;
-			this.BasePaths = new List<string>();
-			this.TickId = TickSystem.Instance.Add(new Action<float>(this.Tick), "PlayEffectOneByOne", ETickingGroup.TG_PrePhysics, false, 0, false).Id;
+			Log.Instance.Error(ELogModule.RenderEffect, ELogAuthor.ZJF, "shipping 包或test 包", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x0602E30A RID: 189194 RVA: 0x00AADC50 File Offset: 0x00AABE50
+		// Token: 0x060229FF RID: 141823 RVA: 0x009DA345 File Offset: 0x009D8545
 		private void Tick(float delayTime)
 		{
 			this.UpdateState(delayTime);
 		}
 
-		// Token: 0x0602E30B RID: 189195 RVA: 0x00AADC5C File Offset: 0x00AABE5C
+		// Token: 0x06022A00 RID: 141824 RVA: 0x009DA350 File Offset: 0x009D8550
 		private void UpdateState(float deltaMillionSeconds)
 		{
 			this.StateTime += deltaMillionSeconds;
@@ -158,14 +121,14 @@ namespace CSharpScript.Game.Render.Effect.DebugTools
 			}
 		}
 
-		// Token: 0x0602E30C RID: 189196 RVA: 0x00AADCDE File Offset: 0x00AABEDE
+		// Token: 0x06022A01 RID: 141825 RVA: 0x009DA3D2 File Offset: 0x009D85D2
 		private void ChangeState(EPlayEffectState state)
 		{
 			this.State = state;
 			this.StateTime = 0f;
 		}
 
-		// Token: 0x0602E30D RID: 189197 RVA: 0x00AADCF4 File Offset: 0x00AABEF4
+		// Token: 0x06022A02 RID: 141826 RVA: 0x009DA3E8 File Offset: 0x009D85E8
 		private void TickCurrent(double deltaMillionSeconds)
 		{
 			if (!EffectSystem.Instance.IsValid(this.EffectHandle))
@@ -176,7 +139,7 @@ namespace CSharpScript.Game.Render.Effect.DebugTools
 			this.EffectStats[this.EffectStats.Count - 1].UpdateTimeArray.Add(num * 1000.0);
 		}
 
-		// Token: 0x0602E30E RID: 189198 RVA: 0x00AADD54 File Offset: 0x00AABF54
+		// Token: 0x06022A03 RID: 141827 RVA: 0x009DA448 File Offset: 0x009D8648
 		private void StopCurrent()
 		{
 			if (EffectSystem.Instance.IsValid(this.EffectHandle))
@@ -187,7 +150,7 @@ namespace CSharpScript.Game.Render.Effect.DebugTools
 			this.EffectStats[this.EffectStats.Count - 1].OnStop((double)this.StateTime);
 		}
 
-		// Token: 0x0602E30F RID: 189199 RVA: 0x00AADDC0 File Offset: 0x00AABFC0
+		// Token: 0x06022A04 RID: 141828 RVA: 0x009DA4B4 File Offset: 0x009D86B4
 		private void PlayNext()
 		{
 			if (this.BasePaths.Count == 0)
@@ -255,7 +218,7 @@ namespace CSharpScript.Game.Render.Effect.DebugTools
 			this.EffectStats.Add(new EffectStatData(this.CurrentEffectPath, microsecond2 - microsecond));
 		}
 
-		// Token: 0x0602E310 RID: 189200 RVA: 0x00AAE034 File Offset: 0x00AAC234
+		// Token: 0x06022A05 RID: 141829 RVA: 0x009DA728 File Offset: 0x009D8928
 		public static void CreateStaticDefaultValue()
 		{
 			AutoStatEffectDataMgr.SpawnEffectStat = null;
@@ -263,7 +226,7 @@ namespace CSharpScript.Game.Render.Effect.DebugTools
 			AutoStatEffectDataMgr._Instance = null;
 		}
 
-		// Token: 0x0602E311 RID: 189201 RVA: 0x00AAE048 File Offset: 0x00AAC248
+		// Token: 0x06022A06 RID: 141830 RVA: 0x009DA73C File Offset: 0x009D893C
 		public static void ResetStaticDefaultValue()
 		{
 			AutoStatEffectDataMgr.SpawnEffectStat = null;
@@ -271,10 +234,10 @@ namespace CSharpScript.Game.Render.Effect.DebugTools
 			AutoStatEffectDataMgr._Instance = null;
 		}
 
-		// Token: 0x04018C8E RID: 101518
+		// Token: 0x040132CD RID: 78541
 		public int TickId;
 
-		// Token: 0x04018C8F RID: 101519
+		// Token: 0x040132CE RID: 78542
 		[Nullable(new byte[]
 		{
 			2,
@@ -282,16 +245,16 @@ namespace CSharpScript.Game.Render.Effect.DebugTools
 		})]
 		public List<string> BasePaths;
 
-		// Token: 0x04018C90 RID: 101520
+		// Token: 0x040132CF RID: 78543
 		private int EffectHandle;
 
-		// Token: 0x04018C91 RID: 101521
+		// Token: 0x040132D0 RID: 78544
 		private float StateTime;
 
-		// Token: 0x04018C92 RID: 101522
+		// Token: 0x040132D1 RID: 78545
 		private EPlayEffectState State;
 
-		// Token: 0x04018C93 RID: 101523
+		// Token: 0x040132D2 RID: 78546
 		[Nullable(new byte[]
 		{
 			2,
@@ -299,34 +262,34 @@ namespace CSharpScript.Game.Render.Effect.DebugTools
 		})]
 		private List<EffectStatData> EffectStats;
 
-		// Token: 0x04018C94 RID: 101524
+		// Token: 0x040132D3 RID: 78547
 		private int EffectPlayTime;
 
-		// Token: 0x04018C95 RID: 101525
+		// Token: 0x040132D4 RID: 78548
 		private string CurrentEffectPath;
 
-		// Token: 0x04018C96 RID: 101526
+		// Token: 0x040132D5 RID: 78549
 		private bool IsOpenStatTrace;
 
-		// Token: 0x04018C97 RID: 101527
+		// Token: 0x040132D6 RID: 78550
 		private static readonly int EffectMaxPlayTime = 1;
 
-		// Token: 0x04018C98 RID: 101528
+		// Token: 0x040132D7 RID: 78551
 		private static readonly float EffectMaxLoopTime = 5000f;
 
-		// Token: 0x04018C99 RID: 101529
+		// Token: 0x040132D8 RID: 78552
 		private static readonly float EffectWaitingTime = 1000f;
 
-		// Token: 0x04018C9A RID: 101530
+		// Token: 0x040132D9 RID: 78553
 		private static Stat SpawnEffectStat;
 
-		// Token: 0x04018C9B RID: 101531
+		// Token: 0x040132DA RID: 78554
 		private static Stat UpdateEffectStat;
 
-		// Token: 0x04018C9C RID: 101532
+		// Token: 0x040132DB RID: 78555
 		private static AutoStatEffectDataMgr _Instance;
 
-		// Token: 0x04018C9D RID: 101533
+		// Token: 0x040132DC RID: 78556
 		[Nullable(1)]
 		private const string EFFECT_PATHS_DA_PATH = "/Game/Aki/Render/RuntimeBP/Effect/Debug/DA_EffectPaths.DA_EffectPaths";
 	}

@@ -15,8 +15,8 @@ using UnrealEngine.Utils;
 public class TsDecoratorCheckDayWeather : UBTDecorator_BlueprintBase, IUnrealUObject, IUnrealObject
 {
 	// Token: 0x17000050 RID: 80
-	// (get) Token: 0x060001EB RID: 491 RVA: 0x0000985F File Offset: 0x00007A5F
-	// (set) Token: 0x060001EC RID: 492 RVA: 0x0000986F File Offset: 0x00007A6F
+	// (get) Token: 0x060001EB RID: 491 RVA: 0x00009BCB File Offset: 0x00007DCB
+	// (set) Token: 0x060001EC RID: 492 RVA: 0x00009BDB File Offset: 0x00007DDB
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe EDayState CheckDayState
 	{
@@ -31,8 +31,8 @@ public class TsDecoratorCheckDayWeather : UBTDecorator_BlueprintBase, IUnrealUOb
 	}
 
 	// Token: 0x17000051 RID: 81
-	// (get) Token: 0x060001ED RID: 493 RVA: 0x00009880 File Offset: 0x00007A80
-	// (set) Token: 0x060001EE RID: 494 RVA: 0x00009890 File Offset: 0x00007A90
+	// (get) Token: 0x060001ED RID: 493 RVA: 0x00009BEC File Offset: 0x00007DEC
+	// (set) Token: 0x060001EE RID: 494 RVA: 0x00009BFC File Offset: 0x00007DFC
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe EWeatherState CheckWeatherState
 	{
@@ -47,8 +47,8 @@ public class TsDecoratorCheckDayWeather : UBTDecorator_BlueprintBase, IUnrealUOb
 	}
 
 	// Token: 0x17000052 RID: 82
-	// (get) Token: 0x060001EF RID: 495 RVA: 0x000098A1 File Offset: 0x00007AA1
-	// (set) Token: 0x060001F0 RID: 496 RVA: 0x000098B1 File Offset: 0x00007AB1
+	// (get) Token: 0x060001EF RID: 495 RVA: 0x00009C0D File Offset: 0x00007E0D
+	// (set) Token: 0x060001F0 RID: 496 RVA: 0x00009C1D File Offset: 0x00007E1D
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe SConditionGroupType ConditionType
 	{
@@ -62,32 +62,28 @@ public class TsDecoratorCheckDayWeather : UBTDecorator_BlueprintBase, IUnrealUOb
 		}
 	}
 
-	// Token: 0x060001F1 RID: 497 RVA: 0x000098C4 File Offset: 0x00007AC4
+	// Token: 0x060001F1 RID: 497 RVA: 0x00009C30 File Offset: 0x00007E30
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool PerformConditionCheckAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("PerformConditionCheckAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsDecoratorCheckDayWeather) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("PerformConditionCheckAI"), TsDecoratorCheckDayWeather.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			return this.PerformConditionCheckAI_Implementation(ownerController, controlledPawn);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams* ptr = stackalloc UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x060001F2 RID: 498 RVA: 0x00009964 File Offset: 0x00007B64
+	// Token: 0x060001F2 RID: 498 RVA: 0x00009CE8 File Offset: 0x00007EE8
 	[NullableContext(2)]
 	protected virtual bool PerformConditionCheckAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -127,7 +123,7 @@ public class TsDecoratorCheckDayWeather : UBTDecorator_BlueprintBase, IUnrealUOb
 		return flag && flag2;
 	}
 
-	// Token: 0x060001F3 RID: 499 RVA: 0x00009A21 File Offset: 0x00007C21
+	// Token: 0x060001F3 RID: 499 RVA: 0x00009DA5 File Offset: 0x00007FA5
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsDecoratorCheckDayWeather._ClassPtr == IntPtr.Zero)
@@ -137,23 +133,23 @@ public class TsDecoratorCheckDayWeather : UBTDecorator_BlueprintBase, IUnrealUOb
 		return TsDecoratorCheckDayWeather._ClassPtr;
 	}
 
-	// Token: 0x060001F4 RID: 500 RVA: 0x00009A48 File Offset: 0x00007C48
+	// Token: 0x060001F4 RID: 500 RVA: 0x00009DCC File Offset: 0x00007FCC
 	public TsDecoratorCheckDayWeather() : this(BuiltinUtils.AllocNativeUObject(TsDecoratorCheckDayWeather.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x060001F5 RID: 501 RVA: 0x00009A70 File Offset: 0x00007C70
+	// Token: 0x060001F5 RID: 501 RVA: 0x00009DF4 File Offset: 0x00007FF4
 	[NullableContext(1)]
 	public TsDecoratorCheckDayWeather(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsDecoratorCheckDayWeather.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x060001F6 RID: 502 RVA: 0x00009AA3 File Offset: 0x00007CA3
+	// Token: 0x060001F6 RID: 502 RVA: 0x00009E27 File Offset: 0x00008027
 	protected TsDecoratorCheckDayWeather(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x060001F7 RID: 503 RVA: 0x00009AAC File Offset: 0x00007CAC
+	// Token: 0x060001F7 RID: 503 RVA: 0x00009E30 File Offset: 0x00008030
 	protected unsafe virtual void __CPPCALL_PerformConditionCheckAI_Implementation(UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);

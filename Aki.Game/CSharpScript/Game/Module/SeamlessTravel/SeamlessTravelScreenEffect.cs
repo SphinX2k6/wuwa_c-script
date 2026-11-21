@@ -8,13 +8,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.SeamlessTravel
 {
-	// Token: 0x02004C8F RID: 19599
+	// Token: 0x02003C40 RID: 15424
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SeamlessTravelScreenEffect
 	{
-		// Token: 0x17007D00 RID: 32000
-		// (get) Token: 0x06032A7F RID: 207487 RVA: 0x00BD0739 File Offset: 0x00BCE939
+		// Token: 0x170050AA RID: 20650
+		// (get) Token: 0x06027832 RID: 161842 RVA: 0x00B1539D File Offset: 0x00B1359D
 		public bool IsInit
 		{
 			get
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			}
 		}
 
-		// Token: 0x06032A80 RID: 207488 RVA: 0x00BD0744 File Offset: 0x00BCE944
+		// Token: 0x06027833 RID: 161843 RVA: 0x00B153A8 File Offset: 0x00B135A8
 		public void Init(SeamlessTravelContext config, Action<bool> callback)
 		{
 			this.Context = config;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			});
 		}
 
-		// Token: 0x06032A81 RID: 207489 RVA: 0x00BD07A4 File Offset: 0x00BCE9A4
+		// Token: 0x06027834 RID: 161844 RVA: 0x00B15408 File Offset: 0x00B13608
 		private unsafe void LoadEffectAsset(Action<bool> callback)
 		{
 			string effectPath = this.EffectPath;
@@ -86,12 +86,12 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			}, ResourceSystem.EResourceLoadPriority.Ui, "SeamlessTravel.ScreenEffect");
 		}
 
-		// Token: 0x06032A82 RID: 207490 RVA: 0x00BD0831 File Offset: 0x00BCEA31
+		// Token: 0x06027835 RID: 161845 RVA: 0x00B15495 File Offset: 0x00B13695
 		public void Tick(float delta)
 		{
 		}
 
-		// Token: 0x06032A83 RID: 207491 RVA: 0x00BD0834 File Offset: 0x00BCEA34
+		// Token: 0x06027836 RID: 161846 RVA: 0x00B15498 File Offset: 0x00B13698
 		public void Destroy()
 		{
 			SeamlessTravelContext context = this.Context;
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			this.EffectData = null;
 		}
 
-		// Token: 0x06032A84 RID: 207492 RVA: 0x00BD08C0 File Offset: 0x00BCEAC0
+		// Token: 0x06027837 RID: 161847 RVA: 0x00B15524 File Offset: 0x00B13724
 		public void AppearEffect(Action<bool> callback)
 		{
 			if (!this.IsInit)
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			callback(false);
 		}
 
-		// Token: 0x06032A85 RID: 207493 RVA: 0x00BD098C File Offset: 0x00BCEB8C
+		// Token: 0x06027838 RID: 161848 RVA: 0x00B155F0 File Offset: 0x00B137F0
 		public void DisappearEffect(Action<bool> callback)
 		{
 			if (!this.IsInit)
@@ -230,7 +230,7 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			callback(false);
 		}
 
-		// Token: 0x06032A86 RID: 207494 RVA: 0x00BD0AB0 File Offset: 0x00BCECB0
+		// Token: 0x06027839 RID: 161849 RVA: 0x00B15714 File Offset: 0x00B13914
 		public List<AActor> GetSeamlessTravelActors(ref List<AActor> arr)
 		{
 			BP_ScreenEffectSystem_C effectSystemInst = this.EffectSystemInst;
@@ -252,41 +252,41 @@ namespace CSharpScript.Game.Module.SeamlessTravel
 			return arr;
 		}
 
-		// Token: 0x06032A87 RID: 207495 RVA: 0x00BD0B07 File Offset: 0x00BCED07
+		// Token: 0x0602783A RID: 161850 RVA: 0x00B1576B File Offset: 0x00B1396B
 		public static void SetNeedRenderKuroToonDepth()
 		{
 			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.kuro.NeedRenderKuroToonDepth 1", null);
 		}
 
-		// Token: 0x06032A88 RID: 207496 RVA: 0x00BD0B19 File Offset: 0x00BCED19
+		// Token: 0x0602783B RID: 161851 RVA: 0x00B1577D File Offset: 0x00B1397D
 		public static void UnsetNeedRenderKuroToonDepth()
 		{
 			UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.kuro.NeedRenderKuroToonDepth 0", null);
 		}
 
-		// Token: 0x0401AF60 RID: 110432
+		// Token: 0x040158BD RID: 88253
 		[Nullable(2)]
 		private SeamlessTravelContext Context;
 
-		// Token: 0x0401AF61 RID: 110433
+		// Token: 0x040158BE RID: 88254
 		[Nullable(2)]
 		private string EffectPath;
 
-		// Token: 0x0401AF62 RID: 110434
+		// Token: 0x040158BF RID: 88255
 		[Nullable(2)]
 		private EffectScreenPlayData_C EffectData;
 
-		// Token: 0x0401AF63 RID: 110435
+		// Token: 0x040158C0 RID: 88256
 		[Nullable(2)]
 		private BP_ScreenEffectSystem_C EffectSystemInst;
 
-		// Token: 0x0401AF64 RID: 110436
+		// Token: 0x040158C1 RID: 88257
 		private bool IsInitInternal;
 
-		// Token: 0x0401AF65 RID: 110437
+		// Token: 0x040158C2 RID: 88258
 		private float EffectStartTimeMs;
 
-		// Token: 0x0401AF66 RID: 110438
+		// Token: 0x040158C3 RID: 88259
 		private float EffectEndTimeMs;
 	}
 }

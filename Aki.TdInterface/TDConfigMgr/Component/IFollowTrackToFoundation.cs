@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020003B2 RID: 946
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020003FD RID: 1021
 	public class IFollowTrackToFoundation : IFollowTrackEndType
 	{
-		// Token: 0x060012DD RID: 4829 RVA: 0x0003DD08 File Offset: 0x0003BF08
+		// Token: 0x06001433 RID: 5171 RVA: 0x000412A8 File Offset: 0x0003F4A8
 		private IFollowTrackToFoundation_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060012DE RID: 4830 RVA: 0x0003DD40 File Offset: 0x0003BF40
+		// Token: 0x06001434 RID: 5172 RVA: 0x000412E0 File Offset: 0x0003F4E0
 		public static IFollowTrackToFoundation Create([Nullable(2)] IFollowTrackToFoundation instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060012DF RID: 4831 RVA: 0x0003DD53 File Offset: 0x0003BF53
+		// Token: 0x06001435 RID: 5173 RVA: 0x000412F3 File Offset: 0x0003F4F3
 		public static IFollowTrackToFoundation CreateFromSetValue([Nullable(2)] IFollowTrackToFoundation_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060012E0 RID: 4832 RVA: 0x0003DD66 File Offset: 0x0003BF66
+		// Token: 0x06001436 RID: 5174 RVA: 0x00041306 File Offset: 0x0003F506
 		public new IFollowTrackToFoundation_SetValue ToSetValue()
 		{
 			return new IFollowTrackToFoundation_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000541 RID: 1345
-		// (get) Token: 0x060012E1 RID: 4833 RVA: 0x0003DD91 File Offset: 0x0003BF91
-		// (set) Token: 0x060012E2 RID: 4834 RVA: 0x0003DDBC File Offset: 0x0003BFBC
+		// Token: 0x1700059B RID: 1435
+		// (get) Token: 0x06001437 RID: 5175 RVA: 0x00041331 File Offset: 0x0003F531
+		// (set) Token: 0x06001438 RID: 5176 RVA: 0x0004135C File Offset: 0x0003F55C
 		public override EFollowTrackEndType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000542 RID: 1346
-		// (get) Token: 0x060012E3 RID: 4835 RVA: 0x0003DDCA File Offset: 0x0003BFCA
-		// (set) Token: 0x060012E4 RID: 4836 RVA: 0x0003DDF5 File Offset: 0x0003BFF5
+		// Token: 0x1700059C RID: 1436
+		// (get) Token: 0x06001439 RID: 5177 RVA: 0x0004136A File Offset: 0x0003F56A
+		// (set) Token: 0x0600143A RID: 5178 RVA: 0x00041395 File Offset: 0x0003F595
 		public virtual int FoundationId
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000543 RID: 1347
-		// (get) Token: 0x060012E5 RID: 4837 RVA: 0x0003DE04 File Offset: 0x0003C004
-		// (set) Token: 0x060012E6 RID: 4838 RVA: 0x0003DE65 File Offset: 0x0003C065
+		// Token: 0x1700059D RID: 1437
+		// (get) Token: 0x0600143B RID: 5179 RVA: 0x000413A4 File Offset: 0x0003F5A4
+		// (set) Token: 0x0600143C RID: 5180 RVA: 0x00041405 File Offset: 0x0003F605
 		[Nullable(2)]
 		public virtual VectorInfo FinalOffset
 		{
@@ -141,18 +139,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000F1A RID: 3866
+		// Token: 0x0400101B RID: 4123
 		[Nullable(2)]
 		protected new IFollowTrackToFoundation FbInstance;
 
-		// Token: 0x04000F1B RID: 3867
+		// Token: 0x0400101C RID: 4124
 		[Nullable(2)]
 		protected new IFollowTrackToFoundation_SetValue PocoInterface;
 
-		// Token: 0x04000F1C RID: 3868
+		// Token: 0x0400101D RID: 4125
 		private VectorInfo _FinalOffsetCache;
 
-		// Token: 0x04000F1D RID: 3869
+		// Token: 0x0400101E RID: 4126
 		private bool _FinalOffsetInited;
 	}
 }

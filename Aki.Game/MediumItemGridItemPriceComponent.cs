@@ -4,17 +4,17 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnrealEngine;
 
-// Token: 0x0200191A RID: 6426
+// Token: 0x02000DD3 RID: 3539
 public class MediumItemGridItemPriceComponent : MediumItemGridComponent
 {
-	// Token: 0x0600BC39 RID: 48185 RVA: 0x002AA349 File Offset: 0x002A8549
+	// Token: 0x06009023 RID: 36899 RVA: 0x002B4AA5 File Offset: 0x002B2CA5
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_ItemDiscount";
 	}
 
-	// Token: 0x0600BC3A RID: 48186 RVA: 0x002AA350 File Offset: 0x002A8550
+	// Token: 0x06009024 RID: 36900 RVA: 0x002B4AAC File Offset: 0x002B2CAC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -28,7 +28,7 @@ public class MediumItemGridItemPriceComponent : MediumItemGridComponent
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BC3B RID: 48187 RVA: 0x002AA3BC File Offset: 0x002A85BC
+	// Token: 0x06009025 RID: 36901 RVA: 0x002B4B18 File Offset: 0x002B2D18
 	[NullableContext(2)]
 	protected override void OnRefresh(object data)
 	{
@@ -43,7 +43,7 @@ public class MediumItemGridItemPriceComponent : MediumItemGridComponent
 		this.SetActive(true);
 	}
 
-	// Token: 0x0600BC3C RID: 48188 RVA: 0x002AA408 File Offset: 0x002A8608
+	// Token: 0x06009026 RID: 36902 RVA: 0x002B4B64 File Offset: 0x002B2D64
 	public void SetPrice(int curPrice, int? originalPrice, bool? notEnough = null)
 	{
 		if (originalPrice != null)
@@ -64,7 +64,7 @@ public class MediumItemGridItemPriceComponent : MediumItemGridComponent
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), textStringId2, new <>z__ReadOnlySingleElementList<object>(curPrice));
 	}
 
-	// Token: 0x0600BC3D RID: 48189 RVA: 0x002AA4B0 File Offset: 0x002A86B0
+	// Token: 0x06009027 RID: 36903 RVA: 0x002B4C0C File Offset: 0x002B2E0C
 	[NullableContext(2)]
 	public void SetTexture(string path)
 	{
@@ -79,13 +79,13 @@ public class MediumItemGridItemPriceComponent : MediumItemGridComponent
 		}
 	}
 
-	// Token: 0x02007E8A RID: 32394
+	// Token: 0x02007011 RID: 28689
 	private class EComponents
 	{
-		// Token: 0x04029657 RID: 169559
+		// Token: 0x04024983 RID: 149891
 		public const int TexIcon = 0;
 
-		// Token: 0x04029658 RID: 169560
+		// Token: 0x04024984 RID: 149892
 		public const int TxtPrice = 1;
 	}
 }

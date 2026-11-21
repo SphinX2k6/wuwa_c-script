@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000A17 RID: 2583
+	// Token: 0x02000ADC RID: 2780
 	public class ESpecialAnimalTypeJsonConverter : JsonConverter<ESpecialAnimalType>
 	{
-		// Token: 0x0600391A RID: 14618 RVA: 0x00093784 File Offset: 0x00091984
+		// Token: 0x06003CF2 RID: 15602 RVA: 0x0009C074 File Offset: 0x0009A274
 		public override ESpecialAnimalType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return ESpecialAnimalTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600391B RID: 14619 RVA: 0x000937A8 File Offset: 0x000919A8
+		// Token: 0x06003CF3 RID: 15603 RVA: 0x0009C098 File Offset: 0x0009A298
 		public override void Write(Utf8JsonWriter writer, ESpecialAnimalType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

@@ -9,7 +9,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001EB6 RID: 7862
+// Token: 0x02001378 RID: 4984
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -18,7 +18,7 @@ using UnrealEngine;
 })]
 public class HonamiStoryTipsTextItem : GridProxyAbstract<IHonamiStoryTipsBuffInfo>
 {
-	// Token: 0x0600F1C8 RID: 61896 RVA: 0x003A32A0 File Offset: 0x003A14A0
+	// Token: 0x0600C5E7 RID: 50663 RVA: 0x003AEDA0 File Offset: 0x003ACFA0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,7 +32,7 @@ public class HonamiStoryTipsTextItem : GridProxyAbstract<IHonamiStoryTipsBuffInf
 		};
 	}
 
-	// Token: 0x0600F1C9 RID: 61897 RVA: 0x003A333C File Offset: 0x003A153C
+	// Token: 0x0600C5E8 RID: 50664 RVA: 0x003AEE3C File Offset: 0x003AD03C
 	protected override void OnStart()
 	{
 		TermExplanationRegistryParam param = new TermExplanationRegistryParam
@@ -44,7 +44,7 @@ public class HonamiStoryTipsTextItem : GridProxyAbstract<IHonamiStoryTipsBuffInf
 		TermExplanationController.Instance.RegisterTextHyperlinkByParam(param);
 	}
 
-	// Token: 0x0600F1CA RID: 61898 RVA: 0x003A3378 File Offset: 0x003A1578
+	// Token: 0x0600C5E9 RID: 50665 RVA: 0x003AEE78 File Offset: 0x003AD078
 	protected override UniTask OnBeforeStartAsync()
 	{
 		HonamiStoryTipsTextItem.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -55,7 +55,7 @@ public class HonamiStoryTipsTextItem : GridProxyAbstract<IHonamiStoryTipsBuffInf
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F1CB RID: 61899 RVA: 0x003A33BC File Offset: 0x003A15BC
+	// Token: 0x0600C5EA RID: 50666 RVA: 0x003AEEBC File Offset: 0x003AD0BC
 	[NullableContext(1)]
 	public override void Refresh(IHonamiStoryTipsBuffInfo info, bool isSelected, int gridIndex)
 	{
@@ -133,27 +133,27 @@ public class HonamiStoryTipsTextItem : GridProxyAbstract<IHonamiStoryTipsBuffInf
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), textStringId, Array.Empty<object>());
 	}
 
-	// Token: 0x04006FC2 RID: 28610
+	// Token: 0x040070A3 RID: 28835
 	private HonamiStoryWeaponTagItem TagItem;
 
-	// Token: 0x04006FC3 RID: 28611
+	// Token: 0x040070A4 RID: 28836
 	private HonamiStoryTipsRoleItem RoleItem;
 
-	// Token: 0x02008492 RID: 33938
+	// Token: 0x02007617 RID: 30231
 	[NullableContext(0)]
 	private enum ETxt
 	{
-		// Token: 0x0402B275 RID: 176757
+		// Token: 0x04026599 RID: 157081
 		TitleText,
-		// Token: 0x0402B276 RID: 176758
+		// Token: 0x0402659A RID: 157082
 		DescText,
-		// Token: 0x0402B277 RID: 176759
+		// Token: 0x0402659B RID: 157083
 		TabItem,
-		// Token: 0x0402B278 RID: 176760
+		// Token: 0x0402659C RID: 157084
 		TxtRole,
-		// Token: 0x0402B279 RID: 176761
+		// Token: 0x0402659D RID: 157085
 		PanelTitle,
-		// Token: 0x0402B27A RID: 176762
+		// Token: 0x0402659E RID: 157086
 		RoleItem
 	}
 }

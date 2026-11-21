@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003A49 RID: 14921
+	// Token: 0x02003E24 RID: 15908
 	public class IBvbCurRoundT
 	{
-		// Token: 0x1700664A RID: 26186
-		// (get) Token: 0x06014358 RID: 82776 RVA: 0x002F4262 File Offset: 0x002F2462
-		// (set) Token: 0x06014359 RID: 82777 RVA: 0x002F426A File Offset: 0x002F246A
+		// Token: 0x17006B7A RID: 27514
+		// (get) Token: 0x06015674 RID: 87668 RVA: 0x0031744E File Offset: 0x0031564E
+		// (set) Token: 0x06015675 RID: 87669 RVA: 0x00317456 File Offset: 0x00315656
 		public ESystemVarName Type { get; set; }
 
-		// Token: 0x0601435A RID: 82778 RVA: 0x002F4273 File Offset: 0x002F2473
+		// Token: 0x06015676 RID: 87670 RVA: 0x0031745F File Offset: 0x0031565F
 		public IBvbCurRoundT()
 		{
 			this.Type = ESystemVarName.CommonHotFixVar;

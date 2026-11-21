@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CA0 RID: 3232
+	// Token: 0x02000D82 RID: 3458
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class AiAlertNotifyComponent : IComponentBase
 	{
-		// Token: 0x060049E5 RID: 18917 RVA: 0x000B937A File Offset: 0x000B757A
-		[NullableContext(1)]
+		// Token: 0x06004E93 RID: 20115 RVA: 0x000C3D8A File Offset: 0x000C1F8A
+		[NullableContext(0)]
 		public static AiAlertNotifyComponent Create(IAiAlertNotifyComponent? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001662 RID: 5730
-		// (get) Token: 0x060049E6 RID: 18918 RVA: 0x000B939C File Offset: 0x000B759C
+		// Token: 0x1700178A RID: 6026
+		// (get) Token: 0x06004E94 RID: 20116 RVA: 0x000C3DAC File Offset: 0x000C1FAC
 		public override bool? Disabled
 		{
 			get
@@ -38,8 +38,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001663 RID: 5731
-		// (get) Token: 0x060049E7 RID: 18919 RVA: 0x000B93D4 File Offset: 0x000B75D4
+		// Token: 0x1700178B RID: 6027
+		// (get) Token: 0x06004E95 RID: 20117 RVA: 0x000C3DE4 File Offset: 0x000C1FE4
 		public override bool? EdIsLocked
 		{
 			get
@@ -48,12 +48,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001664 RID: 5732
-		// (get) Token: 0x060049E8 RID: 18920 RVA: 0x000B93EA File Offset: 0x000B75EA
-		[Nullable(1)]
+		// Token: 0x1700178C RID: 6028
+		// (get) Token: 0x06004E96 RID: 20118 RVA: 0x000C3DFA File Offset: 0x000C1FFA
+		[Nullable(0)]
 		public virtual IExtraAiAlert ExtraAiAlert
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._ExtraAiAlertInited)
@@ -66,8 +66,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001665 RID: 5733
-		// (get) Token: 0x060049E9 RID: 18921 RVA: 0x000B9420 File Offset: 0x000B7620
+		// Token: 0x1700178D RID: 6029
+		// (get) Token: 0x06004E97 RID: 20119 RVA: 0x000C3E30 File Offset: 0x000C2030
 		public virtual List<int> ExcludeEntities
 		{
 			get
@@ -91,8 +91,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001666 RID: 5734
-		// (get) Token: 0x060049EA RID: 18922 RVA: 0x000B9495 File Offset: 0x000B7695
+		// Token: 0x1700178E RID: 6030
+		// (get) Token: 0x06004E98 RID: 20120 RVA: 0x000C3EA5 File Offset: 0x000C20A5
 		public virtual string AlertSound
 		{
 			get
@@ -101,19 +101,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002A35 RID: 10805
+		// Token: 0x04002CAF RID: 11439
 		private IAiAlertNotifyComponent Instance;
 
-		// Token: 0x04002A36 RID: 10806
+		// Token: 0x04002CB0 RID: 11440
 		private IExtraAiAlert _ExtraAiAlertCache;
 
-		// Token: 0x04002A37 RID: 10807
+		// Token: 0x04002CB1 RID: 11441
 		private bool _ExtraAiAlertInited;
 
-		// Token: 0x04002A38 RID: 10808
+		// Token: 0x04002CB2 RID: 11442
 		private List<int> _ExcludeEntitiesCache;
 
-		// Token: 0x04002A39 RID: 10809
+		// Token: 0x04002CB3 RID: 11443
 		private bool _ExcludeEntitiesInited;
 	}
 }

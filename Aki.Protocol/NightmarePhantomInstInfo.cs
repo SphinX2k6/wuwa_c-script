@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000B58 RID: 2904
+	// Token: 0x02000B47 RID: 2887
 	public sealed class NightmarePhantomInstInfo : IMessage<NightmarePhantomInstInfo>, IMessage, IEquatable<NightmarePhantomInstInfo>, IDeepCloneable<NightmarePhantomInstInfo>, IBufferMessage
 	{
-		// Token: 0x0600FBB6 RID: 64438 RVA: 0x0024AB83 File Offset: 0x00248D83
+		// Token: 0x0600FA9C RID: 64156 RVA: 0x0024896F File Offset: 0x00246B6F
 		[NullableContext(1)]
 		public static NightmarePhantomInstInfo Create()
 		{
 			return new NightmarePhantomInstInfo();
 		}
 
-		// Token: 0x17003350 RID: 13136
-		// (get) Token: 0x0600FBB7 RID: 64439 RVA: 0x0024AB8A File Offset: 0x00248D8A
+		// Token: 0x17003312 RID: 13074
+		// (get) Token: 0x0600FA9D RID: 64157 RVA: 0x00248976 File Offset: 0x00246B76
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<NightmarePhantomInstInfo> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003351 RID: 13137
-		// (get) Token: 0x0600FBB8 RID: 64440 RVA: 0x0024AB91 File Offset: 0x00248D91
+		// Token: 0x17003313 RID: 13075
+		// (get) Token: 0x0600FA9E RID: 64158 RVA: 0x0024897D File Offset: 0x00246B7D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003352 RID: 13138
-		// (get) Token: 0x0600FBB9 RID: 64441 RVA: 0x0024AB94 File Offset: 0x00248D94
+		// Token: 0x17003314 RID: 13076
+		// (get) Token: 0x0600FA9F RID: 64159 RVA: 0x00248980 File Offset: 0x00246B80
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600FBBA RID: 64442 RVA: 0x0024AB9B File Offset: 0x00248D9B
+		// Token: 0x0600FAA0 RID: 64160 RVA: 0x00248987 File Offset: 0x00246B87
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NightmarePhantomInstInfo()
 		{
 		}
 
-		// Token: 0x0600FBBB RID: 64443 RVA: 0x0024ABA3 File Offset: 0x00248DA3
+		// Token: 0x0600FAA1 RID: 64161 RVA: 0x0024898F File Offset: 0x00246B8F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NightmarePhantomInstInfo(NightmarePhantomInstInfo other) : this()
@@ -70,7 +70,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600FBBC RID: 64444 RVA: 0x0024ABD4 File Offset: 0x00248DD4
+		// Token: 0x0600FAA2 RID: 64162 RVA: 0x002489C0 File Offset: 0x00246BC0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NightmarePhantomInstInfo Clone()
@@ -78,9 +78,9 @@ namespace Aki.Protocol
 			return new NightmarePhantomInstInfo(this);
 		}
 
-		// Token: 0x17003353 RID: 13139
-		// (get) Token: 0x0600FBBD RID: 64445 RVA: 0x0024ABDC File Offset: 0x00248DDC
-		// (set) Token: 0x0600FBBE RID: 64446 RVA: 0x0024ABE4 File Offset: 0x00248DE4
+		// Token: 0x17003315 RID: 13077
+		// (get) Token: 0x0600FAA3 RID: 64163 RVA: 0x002489C8 File Offset: 0x00246BC8
+		// (set) Token: 0x0600FAA4 RID: 64164 RVA: 0x002489D0 File Offset: 0x00246BD0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int InsId
@@ -95,9 +95,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003354 RID: 13140
-		// (get) Token: 0x0600FBBF RID: 64447 RVA: 0x0024ABED File Offset: 0x00248DED
-		// (set) Token: 0x0600FBC0 RID: 64448 RVA: 0x0024ABF5 File Offset: 0x00248DF5
+		// Token: 0x17003316 RID: 13078
+		// (get) Token: 0x0600FAA5 RID: 64165 RVA: 0x002489D9 File Offset: 0x00246BD9
+		// (set) Token: 0x0600FAA6 RID: 64166 RVA: 0x002489E1 File Offset: 0x00246BE1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long KillNum
@@ -112,7 +112,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600FBC1 RID: 64449 RVA: 0x0024ABFE File Offset: 0x00248DFE
+		// Token: 0x0600FAA7 RID: 64167 RVA: 0x002489EA File Offset: 0x00246BEA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -120,7 +120,7 @@ namespace Aki.Protocol
 			return this.Equals(other as NightmarePhantomInstInfo);
 		}
 
-		// Token: 0x0600FBC2 RID: 64450 RVA: 0x0024AC0C File Offset: 0x00248E0C
+		// Token: 0x0600FAA8 RID: 64168 RVA: 0x002489F8 File Offset: 0x00246BF8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(NightmarePhantomInstInfo other)
@@ -128,7 +128,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.InsId == other.InsId && this.KillNum == other.KillNum && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600FBC3 RID: 64451 RVA: 0x0024AC4C File Offset: 0x00248E4C
+		// Token: 0x0600FAA9 RID: 64169 RVA: 0x00248A38 File Offset: 0x00246C38
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -149,7 +149,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600FBC4 RID: 64452 RVA: 0x0024ACA4 File Offset: 0x00248EA4
+		// Token: 0x0600FAAA RID: 64170 RVA: 0x00248A90 File Offset: 0x00246C90
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -157,7 +157,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600FBC5 RID: 64453 RVA: 0x0024ACB1 File Offset: 0x00248EB1
+		// Token: 0x0600FAAB RID: 64171 RVA: 0x00248A9D File Offset: 0x00246C9D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -165,7 +165,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600FBC6 RID: 64454 RVA: 0x0024ACBC File Offset: 0x00248EBC
+		// Token: 0x0600FAAC RID: 64172 RVA: 0x00248AA8 File Offset: 0x00246CA8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -186,7 +186,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600FBC7 RID: 64455 RVA: 0x0024AD14 File Offset: 0x00248F14
+		// Token: 0x0600FAAD RID: 64173 RVA: 0x00248B00 File Offset: 0x00246D00
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -207,7 +207,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600FBC8 RID: 64456 RVA: 0x0024AD6C File Offset: 0x00248F6C
+		// Token: 0x0600FAAE RID: 64174 RVA: 0x00248B58 File Offset: 0x00246D58
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(NightmarePhantomInstInfo other)
@@ -227,7 +227,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600FBC9 RID: 64457 RVA: 0x0024ADBC File Offset: 0x00248FBC
+		// Token: 0x0600FAAF RID: 64175 RVA: 0x00248BA8 File Offset: 0x00246DA8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -235,7 +235,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600FBCA RID: 64458 RVA: 0x0024ADC8 File Offset: 0x00248FC8
+		// Token: 0x0600FAB0 RID: 64176 RVA: 0x00248BB4 File Offset: 0x00246DB4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -265,22 +265,22 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04006495 RID: 25749
+		// Token: 0x0400649E RID: 25758
 		private static readonly MessageParser<NightmarePhantomInstInfo> _parser = new MessageParser<NightmarePhantomInstInfo>(() => new NightmarePhantomInstInfo());
 
-		// Token: 0x04006496 RID: 25750
+		// Token: 0x0400649F RID: 25759
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04006497 RID: 25751
+		// Token: 0x040064A0 RID: 25760
 		public const int InsIdFieldNumber = 1;
 
-		// Token: 0x04006498 RID: 25752
+		// Token: 0x040064A1 RID: 25761
 		private int insId_;
 
-		// Token: 0x04006499 RID: 25753
+		// Token: 0x040064A2 RID: 25762
 		public const int KillNumFieldNumber = 2;
 
-		// Token: 0x0400649A RID: 25754
+		// Token: 0x040064A3 RID: 25763
 		private long killNum_;
 	}
 }

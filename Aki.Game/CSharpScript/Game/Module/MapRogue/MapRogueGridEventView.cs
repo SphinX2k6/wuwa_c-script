@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055FD RID: 22013
+	// Token: 0x020045D3 RID: 17875
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MapRogueGridEventView : UiViewBase
 	{
-		// Token: 0x06038088 RID: 229512 RVA: 0x00D45176 File Offset: 0x00D43376
+		// Token: 0x0602CF86 RID: 184198 RVA: 0x00C92EBE File Offset: 0x00C910BE
 		public MapRogueGridEventView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06038089 RID: 229513 RVA: 0x00D45194 File Offset: 0x00D43394
+		// Token: 0x0602CF87 RID: 184199 RVA: 0x00C92EDC File Offset: 0x00C910DC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x0603808A RID: 229514 RVA: 0x00D4533C File Offset: 0x00D4353C
+		// Token: 0x0602CF88 RID: 184200 RVA: 0x00C93084 File Offset: 0x00C91284
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MapRogueGridEventView.<OnBeforeStartAsync>d__15 <OnBeforeStartAsync>d__;
@@ -60,14 +60,14 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603808B RID: 229515 RVA: 0x00D4537F File Offset: 0x00D4357F
+		// Token: 0x0602CF89 RID: 184201 RVA: 0x00C930C7 File Offset: 0x00C912C7
 		protected override void OnBeforeShow()
 		{
 			this.RefreshLv(false);
 			this.RefreshMood(false);
 		}
 
-		// Token: 0x0603808C RID: 229516 RVA: 0x00D45390 File Offset: 0x00D43590
+		// Token: 0x0602CF8A RID: 184202 RVA: 0x00C930D8 File Offset: 0x00C912D8
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<string>(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			EventSystem.Instance.Add<int, int, int>(EEventName.RogueResMoodChange, new Action<int, int, int>(this.OnRogueResMoodChange));
 		}
 
-		// Token: 0x0603808D RID: 229517 RVA: 0x00D453F4 File Offset: 0x00D435F4
+		// Token: 0x0602CF8B RID: 184203 RVA: 0x00C9313C File Offset: 0x00C9133C
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			EventSystem.Instance.Remove(EEventName.RogueResMoodChange, new Action<int, int, int>(this.OnRogueResMoodChange));
 		}
 
-		// Token: 0x0603808E RID: 229518 RVA: 0x00D45455 File Offset: 0x00D43655
+		// Token: 0x0602CF8C RID: 184204 RVA: 0x00C9319D File Offset: 0x00C9139D
 		protected override void OnBeforeDestroy()
 		{
 			if (this.OpData != null)
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.StepItemList.Clear();
 		}
 
-		// Token: 0x0603808F RID: 229519 RVA: 0x00D45480 File Offset: 0x00D43680
+		// Token: 0x0602CF8D RID: 184205 RVA: 0x00C931C8 File Offset: 0x00C913C8
 		private UniTask InitCaption()
 		{
 			MapRogueGridEventView.<InitCaption>d__20 <InitCaption>d__;
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <InitCaption>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038090 RID: 229520 RVA: 0x00D454C3 File Offset: 0x00D436C3
+		// Token: 0x0602CF8E RID: 184206 RVA: 0x00C9320B File Offset: 0x00C9140B
 		private void SetVisible()
 		{
 			this.VisibleState = !this.VisibleState;
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			base.GetItem(1).SetUIActive(this.VisibleState);
 		}
 
-		// Token: 0x06038091 RID: 229521 RVA: 0x00D454F8 File Offset: 0x00D436F8
+		// Token: 0x0602CF8F RID: 184207 RVA: 0x00C93240 File Offset: 0x00C91440
 		private void SetAuto()
 		{
 			IEventStepItem currentStepItem = this.GetCurrentStepItem();
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x06038092 RID: 229522 RVA: 0x00D45545 File Offset: 0x00D43745
+		// Token: 0x0602CF90 RID: 184208 RVA: 0x00C9328D File Offset: 0x00C9148D
 		private void OnBackBtnClick()
 		{
 			if (this.ViewState == EViewState.Forbidden)
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			MapRogueController.Instance.OpenExploreEnd(false);
 		}
 
-		// Token: 0x06038093 RID: 229523 RVA: 0x00D4555C File Offset: 0x00D4375C
+		// Token: 0x0602CF91 RID: 184209 RVA: 0x00C932A4 File Offset: 0x00C914A4
 		private void UpdateBg(int newBgId, bool needAnim)
 		{
 			if (newBgId == 0)
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.RefreshBg();
 		}
 
-		// Token: 0x06038094 RID: 229524 RVA: 0x00D455BC File Offset: 0x00D437BC
+		// Token: 0x0602CF92 RID: 184210 RVA: 0x00C93304 File Offset: 0x00C91504
 		private void RefreshLv(bool needAnim)
 		{
 			MapRogueGameInfo gameInfo = MapRogueModel.Instance.GameInfo;
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x06038095 RID: 229525 RVA: 0x00D455EC File Offset: 0x00D437EC
+		// Token: 0x0602CF93 RID: 184211 RVA: 0x00C93334 File Offset: 0x00C91534
 		private void RefreshMood(bool needAnim)
 		{
 			MapRogueGameInfo gameInfo = MapRogueModel.Instance.GameInfo;
@@ -199,7 +199,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.TempMood = gameInfo.Mood;
 		}
 
-		// Token: 0x06038096 RID: 229526 RVA: 0x00D4566C File Offset: 0x00D4386C
+		// Token: 0x0602CF94 RID: 184212 RVA: 0x00C933B4 File Offset: 0x00C915B4
 		private void OnActivitySequenceEmitEvent(string eventName)
 		{
 			if (eventName != "Change")
@@ -209,19 +209,19 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.RefreshBg();
 		}
 
-		// Token: 0x06038097 RID: 229527 RVA: 0x00D45682 File Offset: 0x00D43882
+		// Token: 0x0602CF95 RID: 184213 RVA: 0x00C933CA File Offset: 0x00C915CA
 		private void OnRogueResTeamLvChange(int lv)
 		{
 			this.RefreshLv(true);
 		}
 
-		// Token: 0x06038098 RID: 229528 RVA: 0x00D4568B File Offset: 0x00D4388B
+		// Token: 0x0602CF96 RID: 184214 RVA: 0x00C933D3 File Offset: 0x00C915D3
 		private void OnRogueResMoodChange(int curMood, int minMood, int maxMood)
 		{
 			this.RefreshMood(true);
 		}
 
-		// Token: 0x06038099 RID: 229529 RVA: 0x00D45694 File Offset: 0x00D43894
+		// Token: 0x0602CF97 RID: 184215 RVA: 0x00C933DC File Offset: 0x00C915DC
 		private void RefreshBg()
 		{
 			RogueResEventBg? eventBgById = MapRogueConfig.Instance.GetEventBgById(this.CurrentBgId);
@@ -253,7 +253,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			item.SetUIActive(!flag);
 		}
 
-		// Token: 0x0603809A RID: 229530 RVA: 0x00D457F0 File Offset: 0x00D439F0
+		// Token: 0x0602CF98 RID: 184216 RVA: 0x00C93538 File Offset: 0x00C91738
 		private void UpdateBgm(int newBgmId)
 		{
 			if (newBgmId == 0)
@@ -274,9 +274,9 @@ namespace CSharpScript.Game.Module.MapRogue
 			AudioSystem.Instance.PostEvent(bgmPath);
 		}
 
-		// Token: 0x17008718 RID: 34584
-		// (get) Token: 0x0603809C RID: 229532 RVA: 0x00D45857 File Offset: 0x00D43A57
-		// (set) Token: 0x0603809B RID: 229531 RVA: 0x00D45844 File Offset: 0x00D43A44
+		// Token: 0x17005ADF RID: 23263
+		// (get) Token: 0x0602CF9A RID: 184218 RVA: 0x00C9359F File Offset: 0x00C9179F
+		// (set) Token: 0x0602CF99 RID: 184217 RVA: 0x00C9358C File Offset: 0x00C9178C
 		protected EViewState ViewState
 		{
 			get
@@ -293,7 +293,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x0603809D RID: 229533 RVA: 0x00D4585F File Offset: 0x00D43A5F
+		// Token: 0x0602CF9B RID: 184219 RVA: 0x00C935A7 File Offset: 0x00C917A7
 		[NullableContext(2)]
 		private bool OnPointerBeginDragCallBack(ULGUIPointerEventData eventData)
 		{
@@ -301,7 +301,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return true;
 		}
 
-		// Token: 0x0603809E RID: 229534 RVA: 0x00D45869 File Offset: 0x00D43A69
+		// Token: 0x0602CF9C RID: 184220 RVA: 0x00C935B1 File Offset: 0x00C917B1
 		[NullableContext(2)]
 		private bool OnPointerEndDragCallBack(ULGUIPointerEventData eventData)
 		{
@@ -309,7 +309,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return true;
 		}
 
-		// Token: 0x0603809F RID: 229535 RVA: 0x00D45874 File Offset: 0x00D43A74
+		// Token: 0x0602CF9D RID: 184221 RVA: 0x00C935BC File Offset: 0x00C917BC
 		private void OnMaskBtnClick()
 		{
 			if (this.IsDragging)
@@ -353,13 +353,13 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x060380A0 RID: 229536 RVA: 0x00D45940 File Offset: 0x00D43B40
+		// Token: 0x0602CF9E RID: 184222 RVA: 0x00C93688 File Offset: 0x00C91888
 		private UUIItem GetParentItem()
 		{
 			return base.GetVerticalLayout(3).RootUIComp.Get();
 		}
 
-		// Token: 0x060380A1 RID: 229537 RVA: 0x00D45964 File Offset: 0x00D43B64
+		// Token: 0x0602CF9F RID: 184223 RVA: 0x00C936AC File Offset: 0x00C918AC
 		[NullableContext(2)]
 		private IEventStepItem GetCurrentStepItem()
 		{
@@ -371,7 +371,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return null;
 		}
 
-		// Token: 0x060380A2 RID: 229538 RVA: 0x00D45994 File Offset: 0x00D43B94
+		// Token: 0x0602CFA0 RID: 184224 RVA: 0x00C936DC File Offset: 0x00C918DC
 		private void ScrollToBottom(UUIItem item)
 		{
 			MapRogueGridEventView.<>c__DisplayClass41_0 CS$<>8__locals1 = new MapRogueGridEventView.<>c__DisplayClass41_0();
@@ -386,7 +386,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			}, 100f, null, null, true, 1f);
 		}
 
-		// Token: 0x060380A3 RID: 229539 RVA: 0x00D45A08 File Offset: 0x00D43C08
+		// Token: 0x0602CFA1 RID: 184225 RVA: 0x00C93750 File Offset: 0x00C91950
 		protected UniTask CreateComponentChoice(int stepId, IList<EventOption> options)
 		{
 			MapRogueGridEventView.<CreateComponentChoice>d__42 <CreateComponentChoice>d__;
@@ -399,7 +399,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <CreateComponentChoice>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060380A4 RID: 229540 RVA: 0x00D45A5C File Offset: 0x00D43C5C
+		// Token: 0x0602CFA2 RID: 184226 RVA: 0x00C937A4 File Offset: 0x00C919A4
 		protected UniTask CreateComponentDesc(int stepId)
 		{
 			MapRogueGridEventView.<CreateComponentDesc>d__43 <CreateComponentDesc>d__;
@@ -411,7 +411,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <CreateComponentDesc>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060380A5 RID: 229541 RVA: 0x00D45AA8 File Offset: 0x00D43CA8
+		// Token: 0x0602CFA3 RID: 184227 RVA: 0x00C937F0 File Offset: 0x00C919F0
 		protected UniTask CreateComponentEnding(int stepId)
 		{
 			MapRogueGridEventView.<CreateComponentEnding>d__44 <CreateComponentEnding>d__;
@@ -423,7 +423,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <CreateComponentEnding>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060380A6 RID: 229542 RVA: 0x00D45AF4 File Offset: 0x00D43CF4
+		// Token: 0x0602CFA4 RID: 184228 RVA: 0x00C9383C File Offset: 0x00C91A3C
 		private void CanInteractCallback(int stepId, EStepType type)
 		{
 			switch (type)
@@ -442,7 +442,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.ViewState = EViewState.CanInteract;
 		}
 
-		// Token: 0x060380A7 RID: 229543 RVA: 0x00D45B74 File Offset: 0x00D43D74
+		// Token: 0x0602CFA5 RID: 184229 RVA: 0x00C938BC File Offset: 0x00C91ABC
 		private void ExecuteStep(int stepId, int optionId)
 		{
 			MapRogueOpGridEvent opData = this.OpData;
@@ -453,7 +453,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			opData.ExecuteStep(stepId, optionId);
 		}
 
-		// Token: 0x060380A8 RID: 229544 RVA: 0x00D45B88 File Offset: 0x00D43D88
+		// Token: 0x0602CFA6 RID: 184230 RVA: 0x00C938D0 File Offset: 0x00C91AD0
 		private void OnGridEventStepUpdate(int stepId)
 		{
 			this.UpdateBg(this.OpData.CurrentPlotBgId, true);
@@ -461,7 +461,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.StepStart(stepId);
 		}
 
-		// Token: 0x060380A9 RID: 229545 RVA: 0x00D45BB8 File Offset: 0x00D43DB8
+		// Token: 0x0602CFA7 RID: 184231 RVA: 0x00C93900 File Offset: 0x00C91B00
 		private UniTask StepStart(int stepId)
 		{
 			MapRogueGridEventView.<StepStart>d__48 <StepStart>d__;
@@ -473,50 +473,50 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <StepStart>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401D72E RID: 120622
+		// Token: 0x040181B9 RID: 98745
 		private const string SPINE_DEFAULT_ANIM_NAME = "idle";
 
-		// Token: 0x0401D72F RID: 120623
+		// Token: 0x040181BA RID: 98746
 		private int TempMood;
 
-		// Token: 0x0401D730 RID: 120624
+		// Token: 0x040181BB RID: 98747
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401D731 RID: 120625
+		// Token: 0x040181BC RID: 98748
 		[Nullable(2)]
 		private MapRoguePanelLv PanelLv;
 
-		// Token: 0x0401D732 RID: 120626
+		// Token: 0x040181BD RID: 98749
 		[Nullable(2)]
 		private MapRogueMoodBar MoodBar;
 
-		// Token: 0x0401D733 RID: 120627
+		// Token: 0x040181BE RID: 98750
 		private readonly List<IEventStepItem> StepItemList = new List<IEventStepItem>();
 
-		// Token: 0x0401D734 RID: 120628
+		// Token: 0x040181BF RID: 98751
 		private EViewState ViewStateInternal;
 
-		// Token: 0x0401D735 RID: 120629
+		// Token: 0x040181C0 RID: 98752
 		private bool VisibleState = true;
 
-		// Token: 0x0401D736 RID: 120630
+		// Token: 0x040181C1 RID: 98753
 		protected bool AutoState;
 
-		// Token: 0x0401D737 RID: 120631
+		// Token: 0x040181C2 RID: 98754
 		private int OpIncId;
 
-		// Token: 0x0401D738 RID: 120632
+		// Token: 0x040181C3 RID: 98755
 		[Nullable(2)]
 		protected MapRogueOpGridEvent OpData;
 
-		// Token: 0x0401D739 RID: 120633
+		// Token: 0x040181C4 RID: 98756
 		protected int CurrentBgId;
 
-		// Token: 0x0401D73A RID: 120634
+		// Token: 0x040181C5 RID: 98757
 		protected int CurrentBgmId;
 
-		// Token: 0x0401D73B RID: 120635
+		// Token: 0x040181C6 RID: 98758
 		private bool IsDragging;
 	}
 }

@@ -5,12 +5,12 @@ using CSharpScript.Game.NewWorld.Pawn.Component;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 {
-	// Token: 0x02006E86 RID: 28294
+	// Token: 0x02006007 RID: 24583
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ElementalFieldTimeStopReaction : IElementalFieldReaction
 	{
-		// Token: 0x06044F3C RID: 282428 RVA: 0x01109A9C File Offset: 0x01107C9C
+		// Token: 0x0603B0EC RID: 241900 RVA: 0x010B4024 File Offset: 0x010B2224
 		public void ExecuteEnter(EntityHandle detector, EntityHandle target)
 		{
 			int id = target.Id;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044F3D RID: 282429 RVA: 0x01109B20 File Offset: 0x01107D20
+		// Token: 0x0603B0ED RID: 241901 RVA: 0x010B40A8 File Offset: 0x010B22A8
 		public void ExecuteLeave(EntityHandle detector, EntityHandle target)
 		{
 			int id = target.Id;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.TimeScaleHandleMap.Remove(id);
 		}
 
-		// Token: 0x04023E6A RID: 147050
+		// Token: 0x0401F122 RID: 127266
 		private readonly Dictionary<int, int> TimeScaleHandleMap = new Dictionary<int, int>();
 	}
 }

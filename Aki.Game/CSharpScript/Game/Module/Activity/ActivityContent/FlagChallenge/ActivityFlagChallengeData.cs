@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.FlagChallenge;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.FlagChallenge
 {
-	// Token: 0x02006577 RID: 25975
+	// Token: 0x020054F5 RID: 21749
 	public class ActivityFlagChallengeData : ActivityBaseData
 	{
-		// Token: 0x060411A3 RID: 266659 RVA: 0x00FC72F0 File Offset: 0x00FC54F0
+		// Token: 0x06035E68 RID: 220776 RVA: 0x00F0E2D4 File Offset: 0x00F0C4D4
 		[NullableContext(1)]
 		protected unsafe override void PhraseEx(ActivityData data)
 		{
@@ -31,13 +31,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FlagChallenge
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x060411A4 RID: 266660 RVA: 0x00FC738C File Offset: 0x00FC558C
+		// Token: 0x06035E69 RID: 220777 RVA: 0x00F0E370 File Offset: 0x00F0C570
 		public override bool GetExDataRedPointShowState()
 		{
 			return FlagChallengeModel.Instance.CheckActivityTabRedoDotState(base.Id);
 		}
 
-		// Token: 0x060411A5 RID: 266661 RVA: 0x00FC73A0 File Offset: 0x00FC55A0
+		// Token: 0x06035E6A RID: 220778 RVA: 0x00F0E384 File Offset: 0x00F0C584
 		protected override bool GetExDataFinishShowState()
 		{
 			if (!base.IsUnLock())

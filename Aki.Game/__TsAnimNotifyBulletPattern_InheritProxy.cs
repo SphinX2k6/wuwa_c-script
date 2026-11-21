@@ -3,21 +3,21 @@ using System.Runtime.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Utils;
 
-// Token: 0x020037EA RID: 14314
+// Token: 0x02002D63 RID: 11619
 public class __TsAnimNotifyBulletPattern_InheritProxy : TsAnimNotifyBulletPattern
 {
-	// Token: 0x0601E7EE RID: 124910 RVA: 0x008902D0 File Offset: 0x0088E4D0
+	// Token: 0x0601C4E7 RID: 115943 RVA: 0x008B66CC File Offset: 0x008B48CC
 	[NullableContext(1)]
 	public __TsAnimNotifyBulletPattern_InheritProxy(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyBulletPattern.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601E7EF RID: 124911 RVA: 0x00890303 File Offset: 0x0088E503
+	// Token: 0x0601C4E8 RID: 115944 RVA: 0x008B66FF File Offset: 0x008B48FF
 	protected __TsAnimNotifyBulletPattern_InheritProxy(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0601E7F0 RID: 124912 RVA: 0x0089030C File Offset: 0x0088E50C
+	// Token: 0x0601C4E9 RID: 115945 RVA: 0x008B6708 File Offset: 0x008B4908
 	protected unsafe override void __CPPCALL_K2_Notify_Implementation(UKuroAnimNotify.__K2_Notify_FunctionParams* __Params)
 	{
 		USkeletalMeshComponent orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(__Params->MeshComp);
@@ -25,7 +25,7 @@ public class __TsAnimNotifyBulletPattern_InheritProxy : TsAnimNotifyBulletPatter
 		__Params->__Result = base.K2_Notify_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x0601E7F1 RID: 124913 RVA: 0x0089033F File Offset: 0x0088E53F
+	// Token: 0x0601C4EA RID: 115946 RVA: 0x008B673B File Offset: 0x008B493B
 	protected unsafe override void __CPPCALL_GetNotifyName_Implementation(UAnimNotify.__GetNotifyName_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), base.GetNotifyName_Implementation());

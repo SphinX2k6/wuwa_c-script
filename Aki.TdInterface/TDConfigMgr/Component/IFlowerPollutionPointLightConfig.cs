@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200039E RID: 926
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020003E7 RID: 999
 	public class IFlowerPollutionPointLightConfig
 	{
-		// Token: 0x06001271 RID: 4721 RVA: 0x0003CDFC File Offset: 0x0003AFFC
+		// Token: 0x060013B7 RID: 5047 RVA: 0x00040134 File Offset: 0x0003E334
 		private IFlowerPollutionPointLightConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001272 RID: 4722 RVA: 0x0003CE34 File Offset: 0x0003B034
+		// Token: 0x060013B8 RID: 5048 RVA: 0x0004016C File Offset: 0x0003E36C
 		public static IFlowerPollutionPointLightConfig Create([Nullable(2)] IFlowerPollutionPointLightConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001273 RID: 4723 RVA: 0x0003CE47 File Offset: 0x0003B047
+		// Token: 0x060013B9 RID: 5049 RVA: 0x0004017F File Offset: 0x0003E37F
 		public static IFlowerPollutionPointLightConfig CreateFromSetValue([Nullable(2)] IFlowerPollutionPointLightConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001274 RID: 4724 RVA: 0x0003CE5A File Offset: 0x0003B05A
+		// Token: 0x060013BA RID: 5050 RVA: 0x00040192 File Offset: 0x0003E392
 		public IFlowerPollutionPointLightConfig_SetValue ToSetValue()
 		{
 			return new IFlowerPollutionPointLightConfig_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000529 RID: 1321
-		// (get) Token: 0x06001275 RID: 4725 RVA: 0x0003CE79 File Offset: 0x0003B079
-		// (set) Token: 0x06001276 RID: 4726 RVA: 0x0003CEA0 File Offset: 0x0003B0A0
+		// Token: 0x1700057E RID: 1406
+		// (get) Token: 0x060013BB RID: 5051 RVA: 0x000401B1 File Offset: 0x0003E3B1
+		// (set) Token: 0x060013BC RID: 5052 RVA: 0x000401D8 File Offset: 0x0003E3D8
 		public virtual List<int> PointLightEntityIds
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700052A RID: 1322
-		// (get) Token: 0x06001277 RID: 4727 RVA: 0x0003CEB0 File Offset: 0x0003B0B0
-		// (set) Token: 0x06001278 RID: 4728 RVA: 0x0003CF43 File Offset: 0x0003B143
+		// Token: 0x1700057F RID: 1407
+		// (get) Token: 0x060013BD RID: 5053 RVA: 0x000401E8 File Offset: 0x0003E3E8
+		// (set) Token: 0x060013BE RID: 5054 RVA: 0x0004027B File Offset: 0x0003E47B
 		public virtual List<IPointLightOperations> PointLightConfig
 		{
 			get
@@ -123,18 +121,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000EDA RID: 3802
+		// Token: 0x04000FD2 RID: 4050
 		[Nullable(2)]
 		protected IFlowerPollutionPointLightConfig FbInstance;
 
-		// Token: 0x04000EDB RID: 3803
+		// Token: 0x04000FD3 RID: 4051
 		[Nullable(2)]
 		protected IFlowerPollutionPointLightConfig_SetValue PocoInterface;
 
-		// Token: 0x04000EDC RID: 3804
+		// Token: 0x04000FD4 RID: 4052
 		private List<IPointLightOperations> _PointLightConfigCache;
 
-		// Token: 0x04000EDD RID: 3805
+		// Token: 0x04000FD5 RID: 4053
 		private bool _PointLightConfigInited;
 	}
 }

@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200777E RID: 30590
+	// Token: 0x02007FB6 RID: 32694
 	public class TSetAreaTimeTypeUnion
 	{
-		// Token: 0x1700E697 RID: 59031
-		// (get) Token: 0x060378B2 RID: 227506 RVA: 0x007841CA File Offset: 0x007823CA
-		// (set) Token: 0x060378B3 RID: 227507 RVA: 0x007841D2 File Offset: 0x007823D2
+		// Token: 0x1700F2F1 RID: 62193
+		// (get) Token: 0x0603AE2B RID: 241195 RVA: 0x007E968A File Offset: 0x007E788A
+		// (set) Token: 0x0603AE2C RID: 241196 RVA: 0x007E9692 File Offset: 0x007E7892
 		public TSetAreaTimeType Type { get; set; }
 
-		// Token: 0x1700E698 RID: 59032
-		// (get) Token: 0x060378B4 RID: 227508 RVA: 0x007841DB File Offset: 0x007823DB
-		// (set) Token: 0x060378B5 RID: 227509 RVA: 0x007841E3 File Offset: 0x007823E3
+		// Token: 0x1700F2F2 RID: 62194
+		// (get) Token: 0x0603AE2D RID: 241197 RVA: 0x007E969B File Offset: 0x007E789B
+		// (set) Token: 0x0603AE2E RID: 241198 RVA: 0x007E96A3 File Offset: 0x007E78A3
 		public object Value { get; set; }
 
-		// Token: 0x060378B6 RID: 227510 RVA: 0x007841EC File Offset: 0x007823EC
+		// Token: 0x0603AE2F RID: 241199 RVA: 0x007E96AC File Offset: 0x007E78AC
 		public TSetAreaTimeTypeUnion()
 		{
 			this.Type = TSetAreaTimeType.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060378B7 RID: 227511 RVA: 0x00784202 File Offset: 0x00782402
+		// Token: 0x0603AE30 RID: 241200 RVA: 0x007E96C2 File Offset: 0x007E78C2
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060378B8 RID: 227512 RVA: 0x00784214 File Offset: 0x00782414
+		// Token: 0x0603AE31 RID: 241201 RVA: 0x007E96D4 File Offset: 0x007E78D4
 		public ISetAreaTimeLockT AsISetAreaTimeLock()
 		{
 			return this.As<ISetAreaTimeLockT>();
 		}
 
-		// Token: 0x060378B9 RID: 227513 RVA: 0x0078421C File Offset: 0x0078241C
+		// Token: 0x0603AE32 RID: 241202 RVA: 0x007E96DC File Offset: 0x007E78DC
 		public static TSetAreaTimeTypeUnion FromISetAreaTimeLock(ISetAreaTimeLockT _isetareatimelock)
 		{
 			return new TSetAreaTimeTypeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060378BA RID: 227514 RVA: 0x00784231 File Offset: 0x00782431
+		// Token: 0x0603AE33 RID: 241203 RVA: 0x007E96F1 File Offset: 0x007E78F1
 		public ISetAreaTimeUnLockT AsISetAreaTimeUnLock()
 		{
 			return this.As<ISetAreaTimeUnLockT>();
 		}
 
-		// Token: 0x060378BB RID: 227515 RVA: 0x00784239 File Offset: 0x00782439
+		// Token: 0x0603AE34 RID: 241204 RVA: 0x007E96F9 File Offset: 0x007E78F9
 		public static TSetAreaTimeTypeUnion FromISetAreaTimeUnLock(ISetAreaTimeUnLockT _isetareatimeunlock)
 		{
 			return new TSetAreaTimeTypeUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060378BC RID: 227516 RVA: 0x00784250 File Offset: 0x00782450
+		// Token: 0x0603AE35 RID: 241205 RVA: 0x007E9710 File Offset: 0x007E7910
 		public static int Pack(FlatBufferBuilder builder, TSetAreaTimeTypeUnion _o)
 		{
 			TSetAreaTimeType type = _o.Type;

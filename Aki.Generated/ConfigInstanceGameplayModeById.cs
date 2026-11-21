@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000449 RID: 1097
+	// Token: 0x0200045F RID: 1119
 	public class ConfigInstanceGameplayModeById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060019C0 RID: 6592 RVA: 0x000EB148 File Offset: 0x000E9348
+		// Token: 0x06001A44 RID: 6724 RVA: 0x000F189C File Offset: 0x000EFA9C
 		static ConfigInstanceGameplayModeById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigInstanceGameplayModeById.CreateStaticDefaultValue), new Action(ConfigInstanceGameplayModeById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060019C1 RID: 6593 RVA: 0x000EB168 File Offset: 0x000E9368
+		// Token: 0x06001A45 RID: 6725 RVA: 0x000F18BC File Offset: 0x000EFABC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigInstanceGameplayModeById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060019C2 RID: 6594 RVA: 0x000EB1E7 File Offset: 0x000E93E7
+		// Token: 0x06001A46 RID: 6726 RVA: 0x000F193B File Offset: 0x000EFB3B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigInstanceGameplayModeById.LogPair = null;
 			ConfigInstanceGameplayModeById.HandleId = 0;
 		}
 
-		// Token: 0x060019C3 RID: 6595 RVA: 0x000EB1F5 File Offset: 0x000E93F5
+		// Token: 0x06001A47 RID: 6727 RVA: 0x000F1949 File Offset: 0x000EFB49
 		public static void Init()
 		{
 			ConfigInstanceGameplayModeById.HandleId = ConfigCommon.InitDataStatement(ConfigInstanceGameplayModeById.HandleId, "db_instance_dungeon.db", "select BinData from `InstanceGameplayMode` where Id=?");
 		}
 
-		// Token: 0x060019C4 RID: 6596 RVA: 0x000EB210 File Offset: 0x000E9410
+		// Token: 0x06001A48 RID: 6728 RVA: 0x000F1964 File Offset: 0x000EFB64
 		public static InstanceGameplayMode? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigInstanceGameplayModeById.HandleId, ConfigInstanceGameplayModeById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new InstanceGameplayMode?(rootAsInstanceGameplayMode);
 		}
 
-		// Token: 0x04001DE3 RID: 7651
+		// Token: 0x04001E7D RID: 7805
 		private const string DB = "db_instance_dungeon.db";
 
-		// Token: 0x04001DE4 RID: 7652
+		// Token: 0x04001E7E RID: 7806
 		private const string FILE = "f.副本.xlsx";
 
-		// Token: 0x04001DE5 RID: 7653
+		// Token: 0x04001E7F RID: 7807
 		private const string TABLE = "InstanceGameplayMode";
 
-		// Token: 0x04001DE6 RID: 7654
+		// Token: 0x04001E80 RID: 7808
 		private const string COMMAND = "select BinData from `InstanceGameplayMode` where Id=?";
 
-		// Token: 0x04001DE7 RID: 7655
+		// Token: 0x04001E81 RID: 7809
 		private const string KEY_PREFIX = "InstanceGameplayModeById";
 
-		// Token: 0x04001DE8 RID: 7656
+		// Token: 0x04001E82 RID: 7810
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001DE9 RID: 7657
+		// Token: 0x04001E83 RID: 7811
 		private static int HandleId;
 	}
 }

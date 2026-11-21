@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055C9 RID: 21961
+	// Token: 0x0200459F RID: 17823
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class Grids
 	{
-		// Token: 0x06037F91 RID: 229265 RVA: 0x00D42594 File Offset: 0x00D40794
+		// Token: 0x0602CE8F RID: 183951 RVA: 0x00C902DC File Offset: 0x00C8E4DC
 		public Grids(IGridsConstructor gridsData)
 		{
 			this.Width = gridsData.Width;
@@ -40,13 +40,13 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x06037F92 RID: 229266 RVA: 0x00D42671 File Offset: 0x00D40871
+		// Token: 0x0602CE90 RID: 183952 RVA: 0x00C903B9 File Offset: 0x00C8E5B9
 		public Node GetNodeAt(IPos position)
 		{
 			return this.GridNodes[position.Y][position.X];
 		}
 
-		// Token: 0x06037F93 RID: 229267 RVA: 0x00D42690 File Offset: 0x00D40890
+		// Token: 0x0602CE91 RID: 183953 RVA: 0x00C903D8 File Offset: 0x00C8E5D8
 		public Node GetNodeByIndex(int index)
 		{
 			int width = this.Width;
@@ -55,19 +55,19 @@ namespace CSharpScript.Game.Module.MapRogue
 			return this.GridNodes[index3][index2];
 		}
 
-		// Token: 0x06037F94 RID: 229268 RVA: 0x00D426C6 File Offset: 0x00D408C6
+		// Token: 0x0602CE92 RID: 183954 RVA: 0x00C9040E File Offset: 0x00C8E60E
 		public bool IsWalkableAt(IPos position)
 		{
 			return this.GridNodes[position.Y][position.X].IsWalkable;
 		}
 
-		// Token: 0x06037F95 RID: 229269 RVA: 0x00D426E9 File Offset: 0x00D408E9
+		// Token: 0x0602CE93 RID: 183955 RVA: 0x00C90431 File Offset: 0x00C8E631
 		private bool IsOnTheGrid(IPos position)
 		{
 			return position.X >= 0 && position.X < this.Width && position.Y >= 0 && position.Y < this.Height;
 		}
 
-		// Token: 0x06037F96 RID: 229270 RVA: 0x00D4271C File Offset: 0x00D4091C
+		// Token: 0x0602CE94 RID: 183956 RVA: 0x00C90464 File Offset: 0x00C8E664
 		public List<Node> GetSurroundingNodes(IPos currentPosition)
 		{
 			List<Node> list = new List<Node>();
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return list;
 		}
 
-		// Token: 0x06037F97 RID: 229271 RVA: 0x00D42808 File Offset: 0x00D40A08
+		// Token: 0x0602CE95 RID: 183957 RVA: 0x00C90550 File Offset: 0x00C8E750
 		public void ResetGrids()
 		{
 			foreach (List<Node> list in this.GridNodes)
@@ -122,13 +122,13 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x0401D664 RID: 120420
+		// Token: 0x040180EF RID: 98543
 		public int Width;
 
-		// Token: 0x0401D665 RID: 120421
+		// Token: 0x040180F0 RID: 98544
 		public int Height;
 
-		// Token: 0x0401D666 RID: 120422
+		// Token: 0x040180F1 RID: 98545
 		public List<List<Node>> GridNodes = new List<List<Node>>();
 	}
 }

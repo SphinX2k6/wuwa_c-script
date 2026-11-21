@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020AF RID: 8367
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002304 RID: 8964
 	public class IVisualNovelTransitionTime : IVisualNovelTransitionConfigBase
 	{
-		// Token: 0x0600B802 RID: 47106 RVA: 0x001AA17C File Offset: 0x001A837C
+		// Token: 0x0600C35A RID: 50010 RVA: 0x001C0DC4 File Offset: 0x001BEFC4
 		private IVisualNovelTransitionTime_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B803 RID: 47107 RVA: 0x001AA1B4 File Offset: 0x001A83B4
+		// Token: 0x0600C35B RID: 50011 RVA: 0x001C0DFC File Offset: 0x001BEFFC
 		public static IVisualNovelTransitionTime Create([Nullable(2)] IVisualNovelTransitionTime instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B804 RID: 47108 RVA: 0x001AA1C7 File Offset: 0x001A83C7
+		// Token: 0x0600C35C RID: 50012 RVA: 0x001C0E0F File Offset: 0x001BF00F
 		public static IVisualNovelTransitionTime CreateFromSetValue([Nullable(2)] IVisualNovelTransitionTime_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B805 RID: 47109 RVA: 0x001AA1DA File Offset: 0x001A83DA
+		// Token: 0x0600C35D RID: 50013 RVA: 0x001C0E22 File Offset: 0x001BF022
 		public new IVisualNovelTransitionTime_SetValue ToSetValue()
 		{
 			return new IVisualNovelTransitionTime_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003853 RID: 14419
-		// (get) Token: 0x0600B806 RID: 47110 RVA: 0x001AA211 File Offset: 0x001A8411
-		// (set) Token: 0x0600B807 RID: 47111 RVA: 0x001AA23C File Offset: 0x001A843C
+		// Token: 0x17003B37 RID: 15159
+		// (get) Token: 0x0600C35E RID: 50014 RVA: 0x001C0E59 File Offset: 0x001BF059
+		// (set) Token: 0x0600C35F RID: 50015 RVA: 0x001C0E84 File Offset: 0x001BF084
 		public override EVisualNovelTransitionType Type
 		{
 			get
@@ -85,11 +83,13 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003854 RID: 14420
-		// (get) Token: 0x0600B808 RID: 47112 RVA: 0x001AA24C File Offset: 0x001A844C
-		// (set) Token: 0x0600B809 RID: 47113 RVA: 0x001AA2AD File Offset: 0x001A84AD
+		// Token: 0x17003B38 RID: 15160
+		// (get) Token: 0x0600C360 RID: 50016 RVA: 0x001C0E94 File Offset: 0x001BF094
+		// (set) Token: 0x0600C361 RID: 50017 RVA: 0x001C0EF5 File Offset: 0x001BF0F5
+		[Nullable(2)]
 		public virtual IVisualNovelDate EndDate
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this._EndDateInited)
@@ -108,6 +108,7 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return this._EndDateCache;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().EndDate = value;
@@ -115,9 +116,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003855 RID: 14421
-		// (get) Token: 0x0600B80A RID: 47114 RVA: 0x001AA2C2 File Offset: 0x001A84C2
-		// (set) Token: 0x0600B80B RID: 47115 RVA: 0x001AA2ED File Offset: 0x001A84ED
+		// Token: 0x17003B39 RID: 15161
+		// (get) Token: 0x0600C362 RID: 50018 RVA: 0x001C0F0A File Offset: 0x001BF10A
+		// (set) Token: 0x0600C363 RID: 50019 RVA: 0x001C0F35 File Offset: 0x001BF135
 		public virtual int EndPeriodId
 		{
 			get
@@ -138,9 +139,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003856 RID: 14422
-		// (get) Token: 0x0600B80C RID: 47116 RVA: 0x001AA2FC File Offset: 0x001A84FC
-		// (set) Token: 0x0600B80D RID: 47117 RVA: 0x001AA336 File Offset: 0x001A8536
+		// Token: 0x17003B3A RID: 15162
+		// (get) Token: 0x0600C364 RID: 50020 RVA: 0x001C0F44 File Offset: 0x001BF144
+		// (set) Token: 0x0600C365 RID: 50021 RVA: 0x001C0F7E File Offset: 0x001BF17E
 		public virtual bool? IsFullScreen
 		{
 			get
@@ -162,18 +163,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006E5E RID: 28254
+		// Token: 0x0400747C RID: 29820
 		[Nullable(2)]
 		protected new IVisualNovelTransitionTime FbInstance;
 
-		// Token: 0x04006E5F RID: 28255
+		// Token: 0x0400747D RID: 29821
 		[Nullable(2)]
 		protected new IVisualNovelTransitionTime_SetValue PocoInterface;
 
-		// Token: 0x04006E60 RID: 28256
+		// Token: 0x0400747E RID: 29822
 		private IVisualNovelDate _EndDateCache;
 
-		// Token: 0x04006E61 RID: 28257
+		// Token: 0x0400747F RID: 29823
 		private bool _EndDateInited;
 	}
 }

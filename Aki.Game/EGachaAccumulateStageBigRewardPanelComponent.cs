@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02001C6E RID: 7278
+// Token: 0x0200112D RID: 4397
 internal enum EGachaAccumulateStageBigRewardPanelComponent
 {
-	// Token: 0x04006487 RID: 25735
+	// Token: 0x04006559 RID: 25945
 	ToggleStageReward,
-	// Token: 0x04006488 RID: 25736
+	// Token: 0x0400655A RID: 25946
 	ItemBaseB,
-	// Token: 0x04006489 RID: 25737
+	// Token: 0x0400655B RID: 25947
 	TextValue
 }

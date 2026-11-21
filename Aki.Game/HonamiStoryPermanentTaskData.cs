@@ -3,24 +3,24 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 
-// Token: 0x02001E71 RID: 7793
+// Token: 0x02001333 RID: 4915
 [NullableContext(1)]
 [Nullable(0)]
 public class HonamiStoryPermanentTaskData
 {
-	// Token: 0x0600ED71 RID: 60785 RVA: 0x00388C4F File Offset: 0x00386E4F
+	// Token: 0x0600C190 RID: 49552 RVA: 0x0039485B File Offset: 0x00392A5B
 	public HonamiStoryPermanentTaskData(int configId)
 	{
 		this.ConfigId = configId;
 	}
 
-	// Token: 0x0600ED72 RID: 60786 RVA: 0x00388C6C File Offset: 0x00386E6C
+	// Token: 0x0600C191 RID: 49553 RVA: 0x00394878 File Offset: 0x00392A78
 	private HonamiStoryResidentTask? GetConfig()
 	{
 		return HonamiStoryConfig.Instance.GetHonamiStoryPermanentTaskConfig(this.ConfigId);
 	}
 
-	// Token: 0x0600ED73 RID: 60787 RVA: 0x00388C7E File Offset: 0x00386E7E
+	// Token: 0x0600C192 RID: 49554 RVA: 0x0039488A File Offset: 0x00392A8A
 	public void UpdateData(ConditionTask data)
 	{
 		this.StatusInternal = TaskStateResolver.TaskState[(ActivityTaskState)data.Status];
@@ -28,14 +28,14 @@ public class HonamiStoryPermanentTaskData
 		this.Target = data.Target;
 	}
 
-	// Token: 0x0600ED74 RID: 60788 RVA: 0x00388CAE File Offset: 0x00386EAE
+	// Token: 0x0600C193 RID: 49555 RVA: 0x003948BA File Offset: 0x00392ABA
 	public void UpdateState(EActivityTaskState state)
 	{
 		this.StatusInternal = state;
 	}
 
-	// Token: 0x170012B8 RID: 4792
-	// (get) Token: 0x0600ED75 RID: 60789 RVA: 0x00388CB8 File Offset: 0x00386EB8
+	// Token: 0x170012E2 RID: 4834
+	// (get) Token: 0x0600C194 RID: 49556 RVA: 0x003948C4 File Offset: 0x00392AC4
 	public int Id
 	{
 		get
@@ -44,8 +44,8 @@ public class HonamiStoryPermanentTaskData
 		}
 	}
 
-	// Token: 0x170012B9 RID: 4793
-	// (get) Token: 0x0600ED76 RID: 60790 RVA: 0x00388CDC File Offset: 0x00386EDC
+	// Token: 0x170012E3 RID: 4835
+	// (get) Token: 0x0600C195 RID: 49557 RVA: 0x003948E8 File Offset: 0x00392AE8
 	public int DropId
 	{
 		get
@@ -54,8 +54,8 @@ public class HonamiStoryPermanentTaskData
 		}
 	}
 
-	// Token: 0x170012BA RID: 4794
-	// (get) Token: 0x0600ED77 RID: 60791 RVA: 0x00388D00 File Offset: 0x00386F00
+	// Token: 0x170012E4 RID: 4836
+	// (get) Token: 0x0600C196 RID: 49558 RVA: 0x0039490C File Offset: 0x00392B0C
 	public int JumpId
 	{
 		get
@@ -64,8 +64,8 @@ public class HonamiStoryPermanentTaskData
 		}
 	}
 
-	// Token: 0x170012BB RID: 4795
-	// (get) Token: 0x0600ED78 RID: 60792 RVA: 0x00388D23 File Offset: 0x00386F23
+	// Token: 0x170012E5 RID: 4837
+	// (get) Token: 0x0600C197 RID: 49559 RVA: 0x0039492F File Offset: 0x00392B2F
 	public EActivityTaskState Status
 	{
 		get
@@ -74,8 +74,8 @@ public class HonamiStoryPermanentTaskData
 		}
 	}
 
-	// Token: 0x170012BC RID: 4796
-	// (get) Token: 0x0600ED79 RID: 60793 RVA: 0x00388D2C File Offset: 0x00386F2C
+	// Token: 0x170012E6 RID: 4838
+	// (get) Token: 0x0600C198 RID: 49560 RVA: 0x00394938 File Offset: 0x00392B38
 	public string TaskName
 	{
 		get
@@ -84,15 +84,15 @@ public class HonamiStoryPermanentTaskData
 		}
 	}
 
-	// Token: 0x04006E37 RID: 28215
+	// Token: 0x04006F18 RID: 28440
 	public int ConfigId;
 
-	// Token: 0x04006E38 RID: 28216
+	// Token: 0x04006F19 RID: 28441
 	private EActivityTaskState StatusInternal = EActivityTaskState.Active;
 
-	// Token: 0x04006E39 RID: 28217
+	// Token: 0x04006F1A RID: 28442
 	public int Current;
 
-	// Token: 0x04006E3A RID: 28218
+	// Token: 0x04006F1B RID: 28443
 	public int Target = 1;
 }

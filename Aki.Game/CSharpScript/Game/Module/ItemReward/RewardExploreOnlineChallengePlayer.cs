@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Common.Event;
@@ -11,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x02005801 RID: 22529
+	// Token: 0x020047D8 RID: 18392
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RewardExploreOnlineChallengePlayer : UiPanelBase
 	{
-		// Token: 0x06039467 RID: 234599 RVA: 0x00D95270 File Offset: 0x00D93470
+		// Token: 0x0602E37B RID: 189307 RVA: 0x00CE40BC File Offset: 0x00CE22BC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -34,7 +33,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06039468 RID: 234600 RVA: 0x00D9531C File Offset: 0x00D9351C
+		// Token: 0x0602E37C RID: 189308 RVA: 0x00CE4168 File Offset: 0x00CE2368
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RewardExploreOnlineChallengePlayer.<OnBeforeStartAsync>d__15 <OnBeforeStartAsync>d__;
@@ -45,19 +44,19 @@ namespace CSharpScript.Game.Module.ItemReward
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039469 RID: 234601 RVA: 0x00D9535F File Offset: 0x00D9355F
+		// Token: 0x0602E37D RID: 189309 RVA: 0x00CE41AB File Offset: 0x00CE23AB
 		protected override void OnStart()
 		{
 			EventSystem.Instance.Add(EEventName.OnRefreshOnlineChallengePlayer, new Action(this.OnRefreshOnlineChallengePlayer));
 		}
 
-		// Token: 0x0603946A RID: 234602 RVA: 0x00D9537D File Offset: 0x00D9357D
+		// Token: 0x0602E37E RID: 189310 RVA: 0x00CE41C9 File Offset: 0x00CE23C9
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove(EEventName.OnRefreshOnlineChallengePlayer, new Action(this.OnRefreshOnlineChallengePlayer));
 		}
 
-		// Token: 0x0603946B RID: 234603 RVA: 0x00D9539C File Offset: 0x00D9359C
+		// Token: 0x0602E37F RID: 189311 RVA: 0x00CE41E8 File Offset: 0x00CE23E8
 		private UniTask InitOnlineChallengePlayerList()
 		{
 			RewardExploreOnlineChallengePlayer.<InitOnlineChallengePlayerList>d__18 <InitOnlineChallengePlayerList>d__;
@@ -68,14 +67,14 @@ namespace CSharpScript.Game.Module.ItemReward
 			return <InitOnlineChallengePlayerList>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603946C RID: 234604 RVA: 0x00D953DF File Offset: 0x00D935DF
+		// Token: 0x0602E380 RID: 189312 RVA: 0x00CE422B File Offset: 0x00CE242B
 		public void FullRefresh()
 		{
 			this.RefreshData();
 			this.RefreshView();
 		}
 
-		// Token: 0x0603946D RID: 234605 RVA: 0x00D953F0 File Offset: 0x00D935F0
+		// Token: 0x0602E381 RID: 189313 RVA: 0x00CE423C File Offset: 0x00CE243C
 		private UniTask InitView()
 		{
 			RewardExploreOnlineChallengePlayer.<InitView>d__20 <InitView>d__;
@@ -86,36 +85,36 @@ namespace CSharpScript.Game.Module.ItemReward
 			return <InitView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603946E RID: 234606 RVA: 0x00D95434 File Offset: 0x00D93634
+		// Token: 0x0602E382 RID: 189314 RVA: 0x00CE4280 File Offset: 0x00CE2480
 		private void RefreshData()
 		{
 			List<ScenePlayerData> allScenePlayers = CreatureModel.Instance.GetAllScenePlayers();
 			this.LastPlayerIdList = this.PlayerIdList;
-			this.PlayerIdList = Array.Empty<int>();
+			this.PlayerIdList = new List<int>();
 			foreach (ScenePlayerData scenePlayerData in allScenePlayers)
 			{
 				EContinuingChallenge? continuingChallengeConfirmState = OnlineModel.Instance.GetContinuingChallengeConfirmState(scenePlayerData.GetPlayerId());
 				EContinuingChallenge econtinuingChallenge = EContinuingChallenge.Accept;
 				if (continuingChallengeConfirmState.GetValueOrDefault() == econtinuingChallenge & continuingChallengeConfirmState != null)
 				{
-					this.PlayerIdList.Append(scenePlayerData.GetPlayerId());
+					this.PlayerIdList.Add(scenePlayerData.GetPlayerId());
 				}
 			}
 		}
 
-		// Token: 0x0603946F RID: 234607 RVA: 0x00D954D4 File Offset: 0x00D936D4
+		// Token: 0x0602E383 RID: 189315 RVA: 0x00CE4320 File Offset: 0x00CE2520
 		private void RefreshView()
 		{
-			if (this.PlayerIdList.Length == 0)
+			if (this.PlayerIdList.Count == 0)
 			{
 				base.SetUiActive(false);
 				return;
 			}
 			base.SetUiActive(true);
-			int[] array = this.playerItemIndicesUsedBySeq[this.PlayerIdList.Length - 1];
+			int[] array = this.playerItemIndicesUsedBySeq[this.PlayerIdList.Count - 1];
 			for (int i = 0; i < 3; i++)
 			{
-				if (i < this.PlayerIdList.Length)
+				if (i < this.PlayerIdList.Count)
 				{
 					this.PlayerItems[array[i]].SetUiActive(true);
 					this.PlayerItems[array[i]].Refresh(this.PlayerIdList[i]);
@@ -127,17 +126,17 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x06039470 RID: 234608 RVA: 0x00D9555C File Offset: 0x00D9375C
+		// Token: 0x0602E384 RID: 189316 RVA: 0x00CE43B8 File Offset: 0x00CE25B8
 		private void ProcessSequence()
 		{
-			if (this.PlayerIdList.Length <= this.LastPlayerIdList.Length)
+			if (this.PlayerIdList.Count <= this.LastPlayerIdList.Count)
 			{
 				return;
 			}
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
 			if (levelSequencePlayer != null)
 			{
-				levelSequencePlayer.PlayLevelSequenceByName(this.playerItemSeqNames[this.PlayerIdList.Length - 1], false, null, false);
+				levelSequencePlayer.PlayLevelSequenceByName(this.playerItemSeqNames[this.PlayerIdList.Count - 1], false, null, false);
 			}
 			if (!this.HasTextSeqEverPlayed)
 			{
@@ -155,13 +154,13 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x06039471 RID: 234609 RVA: 0x00D955EC File Offset: 0x00D937EC
+		// Token: 0x0602E385 RID: 189317 RVA: 0x00CE4451 File Offset: 0x00CE2651
 		private void OnRefreshOnlineChallengePlayer()
 		{
 			this.FullRefresh();
 		}
 
-		// Token: 0x06039472 RID: 234610 RVA: 0x00D955F4 File Offset: 0x00D937F4
+		// Token: 0x0602E386 RID: 189318 RVA: 0x00CE445C File Offset: 0x00CE265C
 		public RewardExploreOnlineChallengePlayer()
 		{
 			int[][] array = new int[3][];
@@ -196,65 +195,65 @@ namespace CSharpScript.Game.Module.ItemReward
 				"Start03"
 			};
 			this.PlayerItems = Array.Empty<RewardExploreOnlineChallengePlayerItem>();
-			this.LastPlayerIdList = Array.Empty<int>();
-			this.PlayerIdList = Array.Empty<int>();
+			this.LastPlayerIdList = new List<int>();
+			this.PlayerIdList = new List<int>();
 			base..ctor();
 		}
 
-		// Token: 0x0401DF40 RID: 122688
+		// Token: 0x040189D7 RID: 100823
 		private const int MAX_PLAYER_COUNT = 3;
 
-		// Token: 0x0401DF41 RID: 122689
+		// Token: 0x040189D8 RID: 100824
 		private readonly int[][] playerItemIndicesUsedBySeq;
 
-		// Token: 0x0401DF42 RID: 122690
+		// Token: 0x040189D9 RID: 100825
 		private const string SEQ_NAME_PLAYER_01 = "Start01";
 
-		// Token: 0x0401DF43 RID: 122691
+		// Token: 0x040189DA RID: 100826
 		private const string SEQ_NAME_PLAYER_02 = "Start02";
 
-		// Token: 0x0401DF44 RID: 122692
+		// Token: 0x040189DB RID: 100827
 		private const string SEQ_NAME_PLAYER_03 = "Start03";
 
-		// Token: 0x0401DF45 RID: 122693
+		// Token: 0x040189DC RID: 100828
 		private const string SEQ_NAME_TEX = "Start_T";
 
-		// Token: 0x0401DF46 RID: 122694
+		// Token: 0x040189DD RID: 100829
 		private readonly int[] playerItemChildTypes;
 
-		// Token: 0x0401DF47 RID: 122695
+		// Token: 0x040189DE RID: 100830
 		private readonly string[] playerItemSeqNames;
 
-		// Token: 0x0401DF48 RID: 122696
+		// Token: 0x040189DF RID: 100831
 		private bool HasTextSeqEverPlayed;
 
-		// Token: 0x0401DF49 RID: 122697
+		// Token: 0x040189E0 RID: 100832
 		private RewardExploreOnlineChallengePlayerItem[] PlayerItems;
 
-		// Token: 0x0401DF4A RID: 122698
-		private int[] LastPlayerIdList;
+		// Token: 0x040189E1 RID: 100833
+		private List<int> LastPlayerIdList;
 
-		// Token: 0x0401DF4B RID: 122699
-		private int[] PlayerIdList;
+		// Token: 0x040189E2 RID: 100834
+		private List<int> PlayerIdList;
 
-		// Token: 0x0401DF4C RID: 122700
+		// Token: 0x040189E3 RID: 100835
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200B9F8 RID: 47608
+		// Token: 0x0200A40E RID: 41998
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x04038386 RID: 230278
+			// Token: 0x04032D73 RID: 208243
 			public const int TextTips = 0;
 
-			// Token: 0x04038387 RID: 230279
+			// Token: 0x04032D74 RID: 208244
 			public const int PlayerItemMiddle = 1;
 
-			// Token: 0x04038388 RID: 230280
+			// Token: 0x04032D75 RID: 208245
 			public const int PlayerItemLeft = 2;
 
-			// Token: 0x04038389 RID: 230281
+			// Token: 0x04032D76 RID: 208246
 			public const int PlayerItemRight = 3;
 		}
 	}

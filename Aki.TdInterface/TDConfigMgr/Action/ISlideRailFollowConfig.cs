@@ -4,13 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E89 RID: 7817
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x020020BE RID: 8382
 	public class ISlideRailFollowConfig
 	{
-		// Token: 0x0600A73E RID: 42814 RVA: 0x0017A158 File Offset: 0x00178358
-		[NullableContext(1)]
+		// Token: 0x0600B1F6 RID: 45558 RVA: 0x0018FE58 File Offset: 0x0018E058
 		private ISlideRailFollowConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A73F RID: 42815 RVA: 0x0017A190 File Offset: 0x00178390
-		[NullableContext(1)]
+		// Token: 0x0600B1F7 RID: 45559 RVA: 0x0018FE90 File Offset: 0x0018E090
 		public static ISlideRailFollowConfig Create([Nullable(2)] ISlideRailFollowConfig instance)
 		{
 			if (instance == null)
@@ -39,8 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A740 RID: 42816 RVA: 0x0017A1A3 File Offset: 0x001783A3
-		[NullableContext(1)]
+		// Token: 0x0600B1F8 RID: 45560 RVA: 0x0018FEA3 File Offset: 0x0018E0A3
 		public static ISlideRailFollowConfig CreateFromSetValue([Nullable(2)] ISlideRailFollowConfig_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A741 RID: 42817 RVA: 0x0017A1B6 File Offset: 0x001783B6
-		[NullableContext(1)]
+		// Token: 0x0600B1F9 RID: 45561 RVA: 0x0018FEB6 File Offset: 0x0018E0B6
 		public ISlideRailFollowConfig_SetValue ToSetValue()
 		{
 			return new ISlideRailFollowConfig_SetValue
@@ -64,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003329 RID: 13097
-		// (get) Token: 0x0600A742 RID: 42818 RVA: 0x0017A1D5 File Offset: 0x001783D5
-		// (set) Token: 0x0600A743 RID: 42819 RVA: 0x0017A200 File Offset: 0x00178400
+		// Token: 0x170035ED RID: 13805
+		// (get) Token: 0x0600B1FA RID: 45562 RVA: 0x0018FED5 File Offset: 0x0018E0D5
+		// (set) Token: 0x0600B1FB RID: 45563 RVA: 0x0018FF00 File Offset: 0x0018E100
 		public virtual int EntityId
 		{
 			get
@@ -87,11 +81,13 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700332A RID: 13098
-		// (get) Token: 0x0600A744 RID: 42820 RVA: 0x0017A20E File Offset: 0x0017840E
-		// (set) Token: 0x0600A745 RID: 42821 RVA: 0x0017A235 File Offset: 0x00178435
+		// Token: 0x170035EE RID: 13806
+		// (get) Token: 0x0600B1FC RID: 45564 RVA: 0x0018FF0E File Offset: 0x0018E10E
+		// (set) Token: 0x0600B1FD RID: 45565 RVA: 0x0018FF35 File Offset: 0x0018E135
+		[Nullable(2)]
 		public virtual string FollowDaPath
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -105,16 +101,19 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return pocoInterface.FollowDaPath;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().FollowDaPath = value;
 			}
 		}
 
-		// Token: 0x040063CA RID: 25546
+		// Token: 0x040069AE RID: 27054
+		[Nullable(2)]
 		protected ISlideRailFollowConfig FbInstance;
 
-		// Token: 0x040063CB RID: 25547
+		// Token: 0x040069AF RID: 27055
+		[Nullable(2)]
 		protected ISlideRailFollowConfig_SetValue PocoInterface;
 	}
 }

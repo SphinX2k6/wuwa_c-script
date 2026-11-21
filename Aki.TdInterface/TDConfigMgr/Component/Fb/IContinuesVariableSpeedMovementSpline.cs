@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C54 RID: 3156
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D2D RID: 3373
 	public class IContinuesVariableSpeedMovementSpline : ISplineType
 	{
-		// Token: 0x0600484E RID: 18510 RVA: 0x000B5BFF File Offset: 0x000B3DFF
+		// Token: 0x06004CD3 RID: 19667 RVA: 0x000C01F3 File Offset: 0x000BE3F3
 		public static IContinuesVariableSpeedMovementSpline Create(IContinuesVariableSpeedMovementSpline? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001563 RID: 5475
-		// (get) Token: 0x0600484F RID: 18511 RVA: 0x000B5C1E File Offset: 0x000B3E1E
+		// Token: 0x17001674 RID: 5748
+		// (get) Token: 0x06004CD4 RID: 19668 RVA: 0x000C0212 File Offset: 0x000BE412
 		public override ESplineType Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001564 RID: 5476
-		// (get) Token: 0x06004850 RID: 18512 RVA: 0x000B5C2C File Offset: 0x000B3E2C
+		// Token: 0x17001675 RID: 5749
+		// (get) Token: 0x06004CD5 RID: 19669 RVA: 0x000C0220 File Offset: 0x000BE420
 		public virtual int? TransitionSpeed
 		{
 			get
@@ -47,8 +45,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001565 RID: 5477
-		// (get) Token: 0x06004851 RID: 18513 RVA: 0x000B5C62 File Offset: 0x000B3E62
+		// Token: 0x17001676 RID: 5750
+		// (get) Token: 0x06004CD6 RID: 19670 RVA: 0x000C0256 File Offset: 0x000BE456
 		[Nullable(2)]
 		public virtual ITimePathConfig EntireTimePathConfig
 		{
@@ -65,8 +63,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001566 RID: 5478
-		// (get) Token: 0x06004852 RID: 18514 RVA: 0x000B5C98 File Offset: 0x000B3E98
+		// Token: 0x17001677 RID: 5751
+		// (get) Token: 0x06004CD7 RID: 19671 RVA: 0x000C028C File Offset: 0x000BE48C
 		public virtual EMoveCircleMode? CircleMode
 		{
 			get
@@ -79,8 +77,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001567 RID: 5479
-		// (get) Token: 0x06004853 RID: 18515 RVA: 0x000B5CD0 File Offset: 0x000B3ED0
+		// Token: 0x17001678 RID: 5752
+		// (get) Token: 0x06004CD8 RID: 19672 RVA: 0x000C02C4 File Offset: 0x000BE4C4
 		public virtual List<IContinuesVariableSpeedSplinePoint> Points
 		{
 			get
@@ -100,20 +98,20 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400292F RID: 10543
+		// Token: 0x04002B90 RID: 11152
 		private IContinuesVariableSpeedMovementSpline Instance;
 
-		// Token: 0x04002930 RID: 10544
+		// Token: 0x04002B91 RID: 11153
 		[Nullable(2)]
 		private ITimePathConfig _EntireTimePathConfigCache;
 
-		// Token: 0x04002931 RID: 10545
+		// Token: 0x04002B92 RID: 11154
 		private bool _EntireTimePathConfigInited;
 
-		// Token: 0x04002932 RID: 10546
+		// Token: 0x04002B93 RID: 11155
 		private List<IContinuesVariableSpeedSplinePoint> _PointsCache;
 
-		// Token: 0x04002933 RID: 10547
+		// Token: 0x04002B94 RID: 11156
 		private bool _PointsInited;
 	}
 }

@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BD5 RID: 23509
+	// Token: 0x02004BB5 RID: 19381
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CiacconaGalStepChoiceList : UiPanelBase
 	{
-		// Token: 0x0603B6EF RID: 243439 RVA: 0x00E2C0F8 File Offset: 0x00E2A2F8
+		// Token: 0x0603063A RID: 198202 RVA: 0x00D7C400 File Offset: 0x00D7A600
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -28,20 +28,20 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603B6F0 RID: 243440 RVA: 0x00E2C161 File Offset: 0x00E2A361
+		// Token: 0x0603063B RID: 198203 RVA: 0x00D7C469 File Offset: 0x00D7A669
 		protected override void OnStart()
 		{
 			this.LayoutList = new GenericLayout<GridProxyAbstract<CiacconaGalChoiceData>, CiacconaGalChoiceData>(base.GetVerticalLayout(0), new Func<GridProxyAbstract<CiacconaGalChoiceData>>(this.GetChoiceItem), null, false, true);
 			EventSystem.Instance.Add(EEventName.OnCiacconaChapterDataUpdate, new Action(this.OnDataUpdate));
 		}
 
-		// Token: 0x0603B6F1 RID: 243441 RVA: 0x00E2C1A0 File Offset: 0x00E2A3A0
+		// Token: 0x0603063C RID: 198204 RVA: 0x00D7C4A8 File Offset: 0x00D7A6A8
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove(EEventName.OnCiacconaChapterDataUpdate, new Action(this.OnDataUpdate));
 		}
 
-		// Token: 0x0603B6F2 RID: 243442 RVA: 0x00E2C1C0 File Offset: 0x00E2A3C0
+		// Token: 0x0603063D RID: 198205 RVA: 0x00D7C4C8 File Offset: 0x00D7A6C8
 		public void Refresh(CiacconaGalStepData stepData)
 		{
 			this.StepData = stepData;
@@ -63,13 +63,13 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.LayoutList.RefreshByData(this.ChoicesDataList, null, false);
 		}
 
-		// Token: 0x0603B6F3 RID: 243443 RVA: 0x00E2C246 File Offset: 0x00E2A446
+		// Token: 0x0603063E RID: 198206 RVA: 0x00D7C54E File Offset: 0x00D7A74E
 		private CiacconaGalStepChoiceItem GetChoiceItem()
 		{
 			return new CiacconaGalStepChoiceItem();
 		}
 
-		// Token: 0x0603B6F4 RID: 243444 RVA: 0x00E2C24D File Offset: 0x00E2A44D
+		// Token: 0x0603063F RID: 198207 RVA: 0x00D7C555 File Offset: 0x00D7A755
 		private void OnDataUpdate()
 		{
 			if (this.StepData != null)
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0603B6F5 RID: 243445 RVA: 0x00E2C264 File Offset: 0x00E2A464
+		// Token: 0x06030640 RID: 198208 RVA: 0x00D7C56C File Offset: 0x00D7A76C
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -106,14 +106,14 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return null;
 		}
 
-		// Token: 0x0401EF81 RID: 126849
+		// Token: 0x04019A32 RID: 105010
 		private List<CiacconaGalChoiceData> ChoicesDataList = new List<CiacconaGalChoiceData>();
 
-		// Token: 0x0401EF82 RID: 126850
+		// Token: 0x04019A33 RID: 105011
 		[Nullable(2)]
 		private CiacconaGalStepData StepData;
 
-		// Token: 0x0401EF83 RID: 126851
+		// Token: 0x04019A34 RID: 105012
 		[Nullable(new byte[]
 		{
 			2,
@@ -123,14 +123,14 @@ namespace CSharpScript.Game.Module.CiacconaGal
 		})]
 		private GenericLayout<GridProxyAbstract<CiacconaGalChoiceData>, CiacconaGalChoiceData> LayoutList;
 
-		// Token: 0x0200BDAF RID: 48559
+		// Token: 0x0200A7B8 RID: 42936
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x0403934A RID: 234314
+			// Token: 0x04033D0F RID: 212239
 			public const int LayoutList = 0;
 
-			// Token: 0x0403934B RID: 234315
+			// Token: 0x04033D10 RID: 212240
 			public const int ItemChoice = 1;
 		}
 	}

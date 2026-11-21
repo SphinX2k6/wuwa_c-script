@@ -6,22 +6,21 @@ using Aki.Protocol;
 using AkiClient.Game.Aki.Data.UiCameraAnimation.Struct;
 using CSharpScript.Game.Camera;
 using CSharpScript.Game.Common.Event;
-using CSharpScript.Game.Module.UiCameraAnimation;
-using CSharpScript.Game.Module.UiCameraAnimation.UiCameraContext;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002BB3 RID: 11187
+// Token: 0x0200212F RID: 8495
 [NullableContext(1)]
 [Nullable(0)]
 public class TimeOfDayView : UiTickViewBase
 {
-	// Token: 0x06017300 RID: 94976 RVA: 0x005E0338 File Offset: 0x005DE538
+	// Token: 0x06014D31 RID: 85297 RVA: 0x0060CF0C File Offset: 0x0060B10C
 	public TimeOfDayView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06017301 RID: 94977 RVA: 0x005E03B4 File Offset: 0x005DE5B4
+	// Token: 0x06014D32 RID: 85298 RVA: 0x0060CF88 File Offset: 0x0060B188
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -60,7 +59,7 @@ public class TimeOfDayView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x06017302 RID: 94978 RVA: 0x005E0658 File Offset: 0x005DE858
+	// Token: 0x06014D33 RID: 85299 RVA: 0x0060D22C File Offset: 0x0060B42C
 	protected override void OnStart()
 	{
 		this.DayStateUiItemMap[ETodDayState.One] = new TimeOfDayView.UiItemSwitcher(base.GetItem(6), base.GetItem(7));
@@ -75,7 +74,7 @@ public class TimeOfDayView : UiTickViewBase
 		this.UpdateTime();
 	}
 
-	// Token: 0x06017303 RID: 94979 RVA: 0x005E076A File Offset: 0x005DE96A
+	// Token: 0x06014D34 RID: 85300 RVA: 0x0060D33E File Offset: 0x0060B53E
 	protected override void OnBeforeDestroy()
 	{
 		this.TimeAdjustingClock.Reset();
@@ -83,7 +82,7 @@ public class TimeOfDayView : UiTickViewBase
 		this.ClearStartAnimationTimer();
 	}
 
-	// Token: 0x06017304 RID: 94980 RVA: 0x005E0788 File Offset: 0x005DE988
+	// Token: 0x06014D35 RID: 85301 RVA: 0x0060D35C File Offset: 0x0060B55C
 	protected override void OnTick(float deltaTime)
 	{
 		TodTimeAdjustingAnimation timeAdjustingAnimation = this.TimeAdjustingAnimation;
@@ -94,7 +93,7 @@ public class TimeOfDayView : UiTickViewBase
 		timeAdjustingAnimation.Tick((double)deltaTime);
 	}
 
-	// Token: 0x06017305 RID: 94981 RVA: 0x005E079C File Offset: 0x005DE99C
+	// Token: 0x06014D36 RID: 85302 RVA: 0x0060D370 File Offset: 0x0060B570
 	protected override void OnAddEventListener()
 	{
 		UUIDraggableComponent draggable = base.GetDraggable(14);
@@ -114,7 +113,7 @@ public class TimeOfDayView : UiTickViewBase
 		EventSystem.Instance.Add(EEventName.TodTimeChange, new Action(this.UpdateTime));
 	}
 
-	// Token: 0x06017306 RID: 94982 RVA: 0x005E0828 File Offset: 0x005DEA28
+	// Token: 0x06014D37 RID: 85303 RVA: 0x0060D3FC File Offset: 0x0060B5FC
 	protected override void OnRemoveEventListener()
 	{
 		UUIDraggableComponent draggable = base.GetDraggable(14);
@@ -125,7 +124,7 @@ public class TimeOfDayView : UiTickViewBase
 		EventSystem.Instance.Remove(EEventName.TodTimeChange, new Action(this.UpdateTime));
 	}
 
-	// Token: 0x06017307 RID: 94983 RVA: 0x005E0884 File Offset: 0x005DEA84
+	// Token: 0x06014D38 RID: 85304 RVA: 0x0060D458 File Offset: 0x0060B658
 	private void ClearStartAnimationTimer()
 	{
 		if (TimerSystem.GameplayTimeInstance.Has(this.StartAnimationTimerId))
@@ -135,7 +134,7 @@ public class TimeOfDayView : UiTickViewBase
 		this.StartAnimationTimerId = null;
 	}
 
-	// Token: 0x06017308 RID: 94984 RVA: 0x005E08B0 File Offset: 0x005DEAB0
+	// Token: 0x06014D39 RID: 85305 RVA: 0x0060D484 File Offset: 0x0060B684
 	private void ResetView()
 	{
 		base.GetTexture(2).SetFillAmount(0f);
@@ -148,7 +147,7 @@ public class TimeOfDayView : UiTickViewBase
 		base.GetText(5).ShowTextNew(this.TimeAdjustingClock.DayTextId);
 	}
 
-	// Token: 0x06017309 RID: 94985 RVA: 0x005E0938 File Offset: 0x005DEB38
+	// Token: 0x06014D3A RID: 85306 RVA: 0x0060D50C File Offset: 0x0060B70C
 	private void UpdateTime()
 	{
 		if (this.TimeAdjustingClock.IsAdjusting)
@@ -181,7 +180,7 @@ public class TimeOfDayView : UiTickViewBase
 		item4.SetUIRelativeRotation(frotator);
 	}
 
-	// Token: 0x0601730A RID: 94986 RVA: 0x005E0A94 File Offset: 0x005DEC94
+	// Token: 0x06014D3B RID: 85307 RVA: 0x0060D668 File Offset: 0x0060B868
 	private void OnClockPointerPressed(ULGUIPointerEventData eventData)
 	{
 		if (this.TimeAdjustingClock.IsAdjusting)
@@ -208,7 +207,7 @@ public class TimeOfDayView : UiTickViewBase
 		base.GetTexture(3).SetFillDirectionFlip(false);
 	}
 
-	// Token: 0x0601730B RID: 94987 RVA: 0x005E0B60 File Offset: 0x005DED60
+	// Token: 0x06014D3C RID: 85308 RVA: 0x0060D734 File Offset: 0x0060B934
 	private void OnClockPointerDragCallBack(ULGUIPointerEventData eventData)
 	{
 		if (this.LastDragPoint.IsZero() || this.FirstDragPoint.IsZero())
@@ -243,14 +242,14 @@ public class TimeOfDayView : UiTickViewBase
 		this.RefreshAdjustingView();
 	}
 
-	// Token: 0x0601730C RID: 94988 RVA: 0x005E0C5C File Offset: 0x005DEE5C
+	// Token: 0x06014D3D RID: 85309 RVA: 0x0060D830 File Offset: 0x0060BA30
 	private void OnClockPointerReleaseCallBack(ULGUIPointerEventData eventData)
 	{
 		this.LastDragPoint.DeepCopy(global::Vector.ZeroVectorProxy);
 		this.FirstDragPoint.DeepCopy(global::Vector.ZeroVectorProxy);
 	}
 
-	// Token: 0x0601730D RID: 94989 RVA: 0x005E0C80 File Offset: 0x005DEE80
+	// Token: 0x06014D3E RID: 85310 RVA: 0x0060D854 File Offset: 0x0060BA54
 	private void OnUiDimensionsChangedCallBack(bool positionChanged, bool sizeChanged)
 	{
 		if (!sizeChanged)
@@ -263,7 +262,7 @@ public class TimeOfDayView : UiTickViewBase
 		this.DragCenterPoint = global::Vector.Create((double)uiitemPositionInViewPort.X, (double)uiitemPositionInViewPort.Y, 0.0);
 	}
 
-	// Token: 0x0601730E RID: 94990 RVA: 0x005E0CE8 File Offset: 0x005DEEE8
+	// Token: 0x06014D3F RID: 85311 RVA: 0x0060D8BC File Offset: 0x0060BABC
 	private void OnClickBtnConfirm()
 	{
 		TimeOfDayController.Instance.AdjustTime(this.TimeAdjustingClock.ToSecond, SceneDateUpdateReason.PlayerOperate, 0U, true);
@@ -272,8 +271,8 @@ public class TimeOfDayView : UiTickViewBase
 		Log.Instance.Info(ELogModule.Test, ELogAuthor.YZY, "OnClickBtnConfirm:" + CameraModel.Instance.MainModel.CurrentCameraActor.GetName(), default(ReadOnlySpan<ValueTuple<string, object>>));
 		int? intConfig = ConfigCommonParamById.GetIntConfig("TimeCameraSettingName");
 		int? intConfig2 = ConfigCommonParamById.GetIntConfig("TimeCameraBlendDataName");
-		this.CameraHandleData = UiCameraAnimationManager.Instance.PlayCameraAnimationFromCurrent(intConfig.ToString(), intConfig2.ToString());
-		SUiCameraAnimationSettings uiCameraAnimationConfig = UiCameraAnimationConfig.Instance.GetUiCameraAnimationConfig(intConfig.ToString());
+		this.CameraHandleData = UiCameraModel.Instance.PlayCameraAnimationFromCurrent(intConfig.ToString(), intConfig2.ToString());
+		SUiCameraAnimationSettings uiCameraAnimationConfig = UiCameraConfig.Instance.GetUiCameraAnimationConfig(intConfig.ToString());
 		this.ClearStartAnimationTimer();
 		this.StartAnimationTimerId = TimerSystem.GameplayTimeInstance.Delay(delegate(float _)
 		{
@@ -282,13 +281,13 @@ public class TimeOfDayView : UiTickViewBase
 		}, 1000f * uiCameraAnimationConfig.BlendInTime, null, null, true, 1f);
 	}
 
-	// Token: 0x0601730F RID: 94991 RVA: 0x005E0DEA File Offset: 0x005DEFEA
+	// Token: 0x06014D40 RID: 85312 RVA: 0x0060D9BE File Offset: 0x0060BBBE
 	private void OnClickBtnClose()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06017310 RID: 94992 RVA: 0x005E0DF4 File Offset: 0x005DEFF4
+	// Token: 0x06014D41 RID: 85313 RVA: 0x0060D9C8 File Offset: 0x0060BBC8
 	private void OnAnimationBegin()
 	{
 		this.TextureRotator.Yaw = (float)this.GetPointerAngle(this.TimeAdjustingClock.ToSecond);
@@ -304,7 +303,7 @@ public class TimeOfDayView : UiTickViewBase
 		base.GetItem(24).SetUIActive(false);
 	}
 
-	// Token: 0x06017311 RID: 94993 RVA: 0x005E0E8C File Offset: 0x005DF08C
+	// Token: 0x06014D42 RID: 85314 RVA: 0x0060DA60 File Offset: 0x0060BC60
 	private void OnAnimation(double second)
 	{
 		this.TimeAdjustingClock.AdjustStartSecond(second);
@@ -333,18 +332,18 @@ public class TimeOfDayView : UiTickViewBase
 		TimeOfDayController.Instance.SyncGlobalGameTime(TodDayTime.ConvertToOneDaySecond(second), false);
 	}
 
-	// Token: 0x06017312 RID: 94994 RVA: 0x005E0FDC File Offset: 0x005DF1DC
+	// Token: 0x06014D43 RID: 85315 RVA: 0x0060DBB0 File Offset: 0x0060BDB0
 	private void OnAnimationFinished()
 	{
 		UiLayer.Instance.SetShowNormalMaskLayer(false, "");
 		int? intConfig = ConfigCommonParamById.GetIntConfig("TimeCameraBlendDataName");
-		UiCameraAnimationManager.Instance.PlayCameraAnimationFromCurrent(this.CameraHandleData.GetHandleName(), intConfig.ToString());
+		UiCameraModel.Instance.PlayCameraAnimationFromCurrent(this.CameraHandleData.GetHandleName(), intConfig.ToString());
 		TimeOfDayController.Instance.ResumeTimeScale(true);
 		this.TimeAdjustingClock.Reset();
 		this.ResetView();
 	}
 
-	// Token: 0x06017313 RID: 94995 RVA: 0x005E1044 File Offset: 0x005DF244
+	// Token: 0x06014D44 RID: 85316 RVA: 0x0060DC18 File Offset: 0x0060BE18
 	private void RefreshAdjustingView()
 	{
 		if (this.TimeAdjustingClock.IsAdjustingMoreThanOneDay)
@@ -370,7 +369,7 @@ public class TimeOfDayView : UiTickViewBase
 		base.GetText(4).SetText(TodDayTime.ConvertToHourMinuteString(this.TimeAdjustingClock.ToSecondOneDay), true);
 	}
 
-	// Token: 0x06017314 RID: 94996 RVA: 0x005E1164 File Offset: 0x005DF364
+	// Token: 0x06014D45 RID: 85317 RVA: 0x0060DD38 File Offset: 0x0060BF38
 	private void SetBtnConfirmState(bool state)
 	{
 		base.GetInteractionGroup(22).SetInteractable(state);
@@ -378,19 +377,19 @@ public class TimeOfDayView : UiTickViewBase
 		base.GetText(21).ShowTextNew(TextConfig.Instance.GetTextContentIdById(id));
 	}
 
-	// Token: 0x06017315 RID: 94997 RVA: 0x005E11A7 File Offset: 0x005DF3A7
+	// Token: 0x06014D46 RID: 85318 RVA: 0x0060DD7B File Offset: 0x0060BF7B
 	private double GetPointerAngle(double second)
 	{
 		return -(TodDayTime.ConvertToOneDaySecond(second) / 86400.0) * 360.0;
 	}
 
-	// Token: 0x06017316 RID: 94998 RVA: 0x005E11C4 File Offset: 0x005DF3C4
+	// Token: 0x06014D47 RID: 85319 RVA: 0x0060DD98 File Offset: 0x0060BF98
 	private double GetSecondByAngle(double angle)
 	{
 		return angle / 360.0 * 86400.0;
 	}
 
-	// Token: 0x06017317 RID: 94999 RVA: 0x005E11DC File Offset: 0x005DF3DC
+	// Token: 0x06014D48 RID: 85320 RVA: 0x0060DDB0 File Offset: 0x0060BFB0
 	private double GetPointsAngle(global::Vector point1, global::Vector point2)
 	{
 		point1.Subtraction(this.DragCenterPoint, this.TempVector1);
@@ -403,7 +402,7 @@ public class TimeOfDayView : UiTickViewBase
 		return num;
 	}
 
-	// Token: 0x06017318 RID: 95000 RVA: 0x005E1258 File Offset: 0x005DF458
+	// Token: 0x06014D49 RID: 85321 RVA: 0x0060DE2C File Offset: 0x0060C02C
 	private bool JudgePointsClockwise(global::Vector from, global::Vector to)
 	{
 		from.Subtraction(this.DragCenterPoint, this.TempVector1);
@@ -412,164 +411,164 @@ public class TimeOfDayView : UiTickViewBase
 		return this.TempCrossProduct.Z > 0.0;
 	}
 
-	// Token: 0x0400AD90 RID: 44432
+	// Token: 0x0400B197 RID: 45463
 	private readonly global::Vector FirstDragPoint = global::Vector.Create();
 
-	// Token: 0x0400AD91 RID: 44433
+	// Token: 0x0400B198 RID: 45464
 	private readonly global::Vector LastDragPoint = global::Vector.Create();
 
-	// Token: 0x0400AD92 RID: 44434
+	// Token: 0x0400B199 RID: 45465
 	private readonly global::Vector TempVector1 = global::Vector.Create();
 
-	// Token: 0x0400AD93 RID: 44435
+	// Token: 0x0400B19A RID: 45466
 	private readonly global::Vector TempVector2 = global::Vector.Create();
 
-	// Token: 0x0400AD94 RID: 44436
+	// Token: 0x0400B19B RID: 45467
 	private readonly global::Vector TempCrossProduct = global::Vector.Create();
 
-	// Token: 0x0400AD95 RID: 44437
+	// Token: 0x0400B19C RID: 45468
 	private readonly global::Rotator DragPointerRotator = global::Rotator.Create();
 
-	// Token: 0x0400AD96 RID: 44438
+	// Token: 0x0400B19D RID: 45469
 	private readonly global::Rotator TextureRotator = global::Rotator.Create(0f, 0f, 180f);
 
-	// Token: 0x0400AD97 RID: 44439
+	// Token: 0x0400B19E RID: 45470
 	private readonly Dictionary<ETodDayState, TimeOfDayView.UiItemSwitcher> DayStateUiItemMap = new Dictionary<ETodDayState, TimeOfDayView.UiItemSwitcher>();
 
-	// Token: 0x0400AD98 RID: 44440
+	// Token: 0x0400B19F RID: 45471
 	[Nullable(2)]
 	private global::Vector DragCenterPoint;
 
-	// Token: 0x0400AD99 RID: 44441
+	// Token: 0x0400B1A0 RID: 45472
 	[Nullable(2)]
 	private TimeOfDayView.TodTimeAdjustingClock TimeAdjustingClock;
 
-	// Token: 0x0400AD9A RID: 44442
+	// Token: 0x0400B1A1 RID: 45473
 	[Nullable(2)]
 	private TodTimeAdjustingAnimation TimeAdjustingAnimation;
 
-	// Token: 0x0400AD9B RID: 44443
+	// Token: 0x0400B1A2 RID: 45474
 	[Nullable(2)]
 	private TimerHandle StartAnimationTimerId;
 
-	// Token: 0x0400AD9C RID: 44444
+	// Token: 0x0400B1A3 RID: 45475
 	[Nullable(2)]
 	private UiCameraHandleData CameraHandleData;
 
-	// Token: 0x0200916C RID: 37228
+	// Token: 0x020083AF RID: 33711
 	[NullableContext(0)]
 	private class EChildCom
 	{
-		// Token: 0x0402F112 RID: 192786
+		// Token: 0x0402A817 RID: 174103
 		public const int TextTime = 0;
 
-		// Token: 0x0402F113 RID: 192787
+		// Token: 0x0402A818 RID: 174104
 		public const int BtnConfirm = 1;
 
-		// Token: 0x0402F114 RID: 192788
+		// Token: 0x0402A819 RID: 174105
 		public const int TextureClockOuter = 2;
 
-		// Token: 0x0402F115 RID: 192789
+		// Token: 0x0402A81A RID: 174106
 		public const int TextureClockInner = 3;
 
-		// Token: 0x0402F116 RID: 192790
+		// Token: 0x0402A81B RID: 174107
 		public const int TextTimeAdjust = 4;
 
-		// Token: 0x0402F117 RID: 192791
+		// Token: 0x0402A81C RID: 174108
 		public const int TextTomorrow = 5;
 
-		// Token: 0x0402F118 RID: 192792
+		// Token: 0x0402A81D RID: 174109
 		public const int PanelMorning1 = 6;
 
-		// Token: 0x0402F119 RID: 192793
+		// Token: 0x0402A81E RID: 174110
 		public const int PanelMorning2 = 7;
 
-		// Token: 0x0402F11A RID: 192794
+		// Token: 0x0402A81F RID: 174111
 		public const int PanelSunset1 = 8;
 
-		// Token: 0x0402F11B RID: 192795
+		// Token: 0x0402A820 RID: 174112
 		public const int PanelSunset2 = 9;
 
-		// Token: 0x0402F11C RID: 192796
+		// Token: 0x0402A821 RID: 174113
 		public const int PanelNight1 = 10;
 
-		// Token: 0x0402F11D RID: 192797
+		// Token: 0x0402A822 RID: 174114
 		public const int PanelNight2 = 11;
 
-		// Token: 0x0402F11E RID: 192798
+		// Token: 0x0402A823 RID: 174115
 		public const int PanelSunrise1 = 12;
 
-		// Token: 0x0402F11F RID: 192799
+		// Token: 0x0402A824 RID: 174116
 		public const int PanelSunrise2 = 13;
 
-		// Token: 0x0402F120 RID: 192800
+		// Token: 0x0402A825 RID: 174117
 		public const int DraggableClock = 14;
 
-		// Token: 0x0402F121 RID: 192801
+		// Token: 0x0402A826 RID: 174118
 		public const int BtnBack = 15;
 
-		// Token: 0x0402F122 RID: 192802
+		// Token: 0x0402A827 RID: 174119
 		public const int TexturePointerShort = 16;
 
-		// Token: 0x0402F123 RID: 192803
+		// Token: 0x0402A828 RID: 174120
 		public const int PanelPointerLong = 17;
 
-		// Token: 0x0402F124 RID: 192804
+		// Token: 0x0402A829 RID: 174121
 		public const int PanelClockOuter = 18;
 
-		// Token: 0x0402F125 RID: 192805
+		// Token: 0x0402A82A RID: 174122
 		public const int PanelClockInner = 19;
 
-		// Token: 0x0402F126 RID: 192806
+		// Token: 0x0402A82B RID: 174123
 		public const int PanelTimeAdjust = 20;
 
-		// Token: 0x0402F127 RID: 192807
+		// Token: 0x0402A82C RID: 174124
 		public const int TextConfirm = 21;
 
-		// Token: 0x0402F128 RID: 192808
+		// Token: 0x0402A82D RID: 174125
 		public const int InteractionConfirm = 22;
 
-		// Token: 0x0402F129 RID: 192809
+		// Token: 0x0402A82E RID: 174126
 		public const int PanelBtnBack = 23;
 
-		// Token: 0x0402F12A RID: 192810
+		// Token: 0x0402A82F RID: 174127
 		public const int PanelBtnConfirm = 24;
 
-		// Token: 0x0402F12B RID: 192811
+		// Token: 0x0402A830 RID: 174128
 		public const int PanelBtnPointerLong = 25;
 	}
 
-	// Token: 0x0200916D RID: 37229
+	// Token: 0x020083B0 RID: 33712
 	[Nullable(0)]
 	private class UiItemSwitcher
 	{
-		// Token: 0x0604BCFB RID: 310523 RVA: 0x013FA8E3 File Offset: 0x013F8AE3
+		// Token: 0x060421ED RID: 270829 RVA: 0x013A62BB File Offset: 0x013A44BB
 		public UiItemSwitcher(UUIItem uiItemOff, UUIItem uiItemOn)
 		{
 			this.UiItemOn = uiItemOn;
 			this.UiItemOff = uiItemOff;
 		}
 
-		// Token: 0x0604BCFC RID: 310524 RVA: 0x013FA8F9 File Offset: 0x013F8AF9
+		// Token: 0x060421EE RID: 270830 RVA: 0x013A62D1 File Offset: 0x013A44D1
 		public void SwitchTo(bool state)
 		{
 			this.UiItemOn.SetUIActive(state);
 			this.UiItemOff.SetUIActive(!state);
 		}
 
-		// Token: 0x0402F12C RID: 192812
+		// Token: 0x0402A831 RID: 174129
 		private readonly UUIItem UiItemOn;
 
-		// Token: 0x0402F12D RID: 192813
+		// Token: 0x0402A832 RID: 174130
 		private readonly UUIItem UiItemOff;
 	}
 
-	// Token: 0x0200916E RID: 37230
+	// Token: 0x020083B1 RID: 33713
 	[NullableContext(0)]
 	private class TodTimeAdjustingClock
 	{
-		// Token: 0x1700A097 RID: 41111
-		// (get) Token: 0x0604BCFD RID: 310525 RVA: 0x013FA916 File Offset: 0x013F8B16
+		// Token: 0x17007835 RID: 30773
+		// (get) Token: 0x060421EF RID: 270831 RVA: 0x013A62EE File Offset: 0x013A44EE
 		public double DeltaSecond
 		{
 			get
@@ -578,8 +577,8 @@ public class TimeOfDayView : UiTickViewBase
 			}
 		}
 
-		// Token: 0x1700A098 RID: 41112
-		// (get) Token: 0x0604BCFE RID: 310526 RVA: 0x013FA925 File Offset: 0x013F8B25
+		// Token: 0x17007836 RID: 30774
+		// (get) Token: 0x060421F0 RID: 270832 RVA: 0x013A62FD File Offset: 0x013A44FD
 		public double DeltaMinute
 		{
 			get
@@ -588,8 +587,8 @@ public class TimeOfDayView : UiTickViewBase
 			}
 		}
 
-		// Token: 0x1700A099 RID: 41113
-		// (get) Token: 0x0604BCFF RID: 310527 RVA: 0x013FA952 File Offset: 0x013F8B52
+		// Token: 0x17007837 RID: 30775
+		// (get) Token: 0x060421F1 RID: 270833 RVA: 0x013A632A File Offset: 0x013A452A
 		public double DeltaSecondOneDay
 		{
 			get
@@ -598,8 +597,8 @@ public class TimeOfDayView : UiTickViewBase
 			}
 		}
 
-		// Token: 0x1700A09A RID: 41114
-		// (get) Token: 0x0604BD00 RID: 310528 RVA: 0x013FA95F File Offset: 0x013F8B5F
+		// Token: 0x17007838 RID: 30776
+		// (get) Token: 0x060421F2 RID: 270834 RVA: 0x013A6337 File Offset: 0x013A4537
 		public double DeltaDayOneDay
 		{
 			get
@@ -608,8 +607,8 @@ public class TimeOfDayView : UiTickViewBase
 			}
 		}
 
-		// Token: 0x1700A09B RID: 41115
-		// (get) Token: 0x0604BD01 RID: 310529 RVA: 0x013FA96C File Offset: 0x013F8B6C
+		// Token: 0x17007839 RID: 30777
+		// (get) Token: 0x060421F3 RID: 270835 RVA: 0x013A6344 File Offset: 0x013A4544
 		public double ToSecondOneDay
 		{
 			get
@@ -618,8 +617,8 @@ public class TimeOfDayView : UiTickViewBase
 			}
 		}
 
-		// Token: 0x1700A09C RID: 41116
-		// (get) Token: 0x0604BD02 RID: 310530 RVA: 0x013FA979 File Offset: 0x013F8B79
+		// Token: 0x1700783A RID: 30778
+		// (get) Token: 0x060421F4 RID: 270836 RVA: 0x013A6351 File Offset: 0x013A4551
 		public double StartSecondOneDay
 		{
 			get
@@ -628,8 +627,8 @@ public class TimeOfDayView : UiTickViewBase
 			}
 		}
 
-		// Token: 0x1700A09D RID: 41117
-		// (get) Token: 0x0604BD03 RID: 310531 RVA: 0x013FA986 File Offset: 0x013F8B86
+		// Token: 0x1700783B RID: 30779
+		// (get) Token: 0x060421F5 RID: 270837 RVA: 0x013A635E File Offset: 0x013A455E
 		public bool IsAdjusting
 		{
 			get
@@ -638,8 +637,8 @@ public class TimeOfDayView : UiTickViewBase
 			}
 		}
 
-		// Token: 0x1700A09E RID: 41118
-		// (get) Token: 0x0604BD04 RID: 310532 RVA: 0x013FA99C File Offset: 0x013F8B9C
+		// Token: 0x1700783C RID: 30780
+		// (get) Token: 0x060421F6 RID: 270838 RVA: 0x013A6374 File Offset: 0x013A4574
 		public bool IsTomorrow
 		{
 			get
@@ -648,8 +647,8 @@ public class TimeOfDayView : UiTickViewBase
 			}
 		}
 
-		// Token: 0x1700A09F RID: 41119
-		// (get) Token: 0x0604BD05 RID: 310533 RVA: 0x013FA9B4 File Offset: 0x013F8BB4
+		// Token: 0x1700783D RID: 30781
+		// (get) Token: 0x060421F7 RID: 270839 RVA: 0x013A638C File Offset: 0x013A458C
 		[Nullable(1)]
 		public string DayTextId
 		{
@@ -669,8 +668,8 @@ public class TimeOfDayView : UiTickViewBase
 			}
 		}
 
-		// Token: 0x1700A0A0 RID: 41120
-		// (get) Token: 0x0604BD06 RID: 310534 RVA: 0x013FAA0F File Offset: 0x013F8C0F
+		// Token: 0x1700783E RID: 30782
+		// (get) Token: 0x060421F8 RID: 270840 RVA: 0x013A63E7 File Offset: 0x013A45E7
 		public bool IsAdjustingMoreThanOneDay
 		{
 			get
@@ -679,8 +678,8 @@ public class TimeOfDayView : UiTickViewBase
 			}
 		}
 
-		// Token: 0x1700A0A1 RID: 41121
-		// (get) Token: 0x0604BD07 RID: 310535 RVA: 0x013FAA25 File Offset: 0x013F8C25
+		// Token: 0x1700783F RID: 30783
+		// (get) Token: 0x060421F9 RID: 270841 RVA: 0x013A63FD File Offset: 0x013A45FD
 		public bool IsAdjustingMoreThanMinLimit
 		{
 			get
@@ -689,8 +688,8 @@ public class TimeOfDayView : UiTickViewBase
 			}
 		}
 
-		// Token: 0x1700A0A2 RID: 41122
-		// (get) Token: 0x0604BD08 RID: 310536 RVA: 0x013FAA3B File Offset: 0x013F8C3B
+		// Token: 0x17007840 RID: 30784
+		// (get) Token: 0x060421FA RID: 270842 RVA: 0x013A6413 File Offset: 0x013A4613
 		public bool IsAdjustingToMaxLimit
 		{
 			get
@@ -699,21 +698,21 @@ public class TimeOfDayView : UiTickViewBase
 			}
 		}
 
-		// Token: 0x0604BD09 RID: 310537 RVA: 0x013FAA51 File Offset: 0x013F8C51
+		// Token: 0x060421FB RID: 270843 RVA: 0x013A6429 File Offset: 0x013A4629
 		public void Start()
 		{
 			this.StartSecond = TimeOfDayModel.Instance.GameTime.Second;
 			this.ToSecond = this.StartSecond;
 		}
 
-		// Token: 0x0604BD0A RID: 310538 RVA: 0x013FAA74 File Offset: 0x013F8C74
+		// Token: 0x060421FC RID: 270844 RVA: 0x013A644C File Offset: 0x013A464C
 		public void Reset()
 		{
 			this.StartSecond = -1.0;
 			this.ToSecond = -1.0;
 		}
 
-		// Token: 0x0604BD0B RID: 310539 RVA: 0x013FAA94 File Offset: 0x013F8C94
+		// Token: 0x060421FD RID: 270845 RVA: 0x013A646C File Offset: 0x013A466C
 		public ValueTuple<bool, double> AdjustToSecond(double addSecond, bool isClockwise)
 		{
 			if (addSecond == 0.0 || double.IsNaN(addSecond))
@@ -745,7 +744,7 @@ public class TimeOfDayView : UiTickViewBase
 			return new ValueTuple<bool, double>(true, 0.0);
 		}
 
-		// Token: 0x0604BD0C RID: 310540 RVA: 0x013FAB60 File Offset: 0x013F8D60
+		// Token: 0x060421FE RID: 270846 RVA: 0x013A6538 File Offset: 0x013A4738
 		public void AdjustStartSecond(double second)
 		{
 			if (second == 0.0 || double.IsNaN(second))
@@ -763,7 +762,7 @@ public class TimeOfDayView : UiTickViewBase
 			}
 		}
 
-		// Token: 0x0604BD0D RID: 310541 RVA: 0x013FABAC File Offset: 0x013F8DAC
+		// Token: 0x060421FF RID: 270847 RVA: 0x013A6584 File Offset: 0x013A4784
 		public unsafe void DebugPrint()
 		{
 			Log instance = Log.Instance;
@@ -776,10 +775,10 @@ public class TimeOfDayView : UiTickViewBase
 			instance.Warn(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x0402F12E RID: 192814
+		// Token: 0x0402A833 RID: 174131
 		public double StartSecond = -1.0;
 
-		// Token: 0x0402F12F RID: 192815
+		// Token: 0x0402A834 RID: 174132
 		public double ToSecond = -1.0;
 	}
 }

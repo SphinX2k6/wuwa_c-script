@@ -4,30 +4,30 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005E1 RID: 1505
+	// Token: 0x02000672 RID: 1650
 	public class IPatrol_SetValue
 	{
-		// Token: 0x0400166D RID: 5741
+		// Token: 0x04001844 RID: 6212
 		public bool? Disabled;
 
-		// Token: 0x0400166E RID: 5742
+		// Token: 0x04001845 RID: 6213
 		public bool? EdIsLocked;
 
-		// Token: 0x0400166F RID: 5743
+		// Token: 0x04001846 RID: 6214
 		public int SplineEntityId;
 
-		// Token: 0x04001670 RID: 5744
+		// Token: 0x04001847 RID: 6215
 		[Nullable(2)]
 		public List<int> SplineEntityIds;
 
-		// Token: 0x04001671 RID: 5745
+		// Token: 0x04001848 RID: 6216
 		public bool IsCircle;
 
-		// Token: 0x04001672 RID: 5746
+		// Token: 0x04001849 RID: 6217
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<IPatrolAction> Actions;
 	}

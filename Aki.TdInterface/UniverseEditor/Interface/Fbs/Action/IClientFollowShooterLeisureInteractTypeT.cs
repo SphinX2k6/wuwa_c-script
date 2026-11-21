@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020063C2 RID: 25538
+	// Token: 0x02006A3C RID: 27196
 	public class IClientFollowShooterLeisureInteractTypeT
 	{
-		// Token: 0x1700BE4D RID: 48717
-		// (get) Token: 0x0602C2D7 RID: 180951 RVA: 0x00610D72 File Offset: 0x0060EF72
-		// (set) Token: 0x0602C2D8 RID: 180952 RVA: 0x00610D7A File Offset: 0x0060EF7A
+		// Token: 0x1700C7D9 RID: 51161
+		// (get) Token: 0x0602EA6A RID: 191082 RVA: 0x0065C27A File Offset: 0x0065A47A
+		// (set) Token: 0x0602EA6B RID: 191083 RVA: 0x0065C282 File Offset: 0x0065A482
 		public EClientFollowShooterLeisureInteractType Type { get; set; }
 
-		// Token: 0x0602C2D9 RID: 180953 RVA: 0x00610D83 File Offset: 0x0060EF83
+		// Token: 0x0602EA6C RID: 191084 RVA: 0x0065C28B File Offset: 0x0065A48B
 		public IClientFollowShooterLeisureInteractTypeT()
 		{
-			this.Type = EClientFollowShooterLeisureInteractType.ResetToPlayer;
+			this.Type = EClientFollowShooterLeisureInteractType.PlayAnimation;
 		}
 	}
 }

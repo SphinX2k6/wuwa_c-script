@@ -8,16 +8,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002D32 RID: 11570
+// Token: 0x0200228C RID: 8844
 public class WeeklyRogueCaptionItem : UiPanelBase
 {
-	// Token: 0x0601853F RID: 99647 RVA: 0x00631284 File Offset: 0x0062F484
+	// Token: 0x06015DE1 RID: 89569 RVA: 0x00657298 File Offset: 0x00655498
 	public WeeklyRogueCaptionItem(bool needCurrency = true)
 	{
 		this.NeedCurrency = needCurrency;
 	}
 
-	// Token: 0x06018540 RID: 99648 RVA: 0x006312B8 File Offset: 0x0062F4B8
+	// Token: 0x06015DE2 RID: 89570 RVA: 0x006572CC File Offset: 0x006554CC
 	protected unsafe override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -41,7 +41,7 @@ public class WeeklyRogueCaptionItem : UiPanelBase
 		this.BtnBindInfo = list;
 	}
 
-	// Token: 0x06018541 RID: 99649 RVA: 0x006313C4 File Offset: 0x0062F5C4
+	// Token: 0x06015DE3 RID: 89571 RVA: 0x006573D8 File Offset: 0x006555D8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WeeklyRogueCaptionItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -52,7 +52,7 @@ public class WeeklyRogueCaptionItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06018542 RID: 99650 RVA: 0x00631407 File Offset: 0x0062F607
+	// Token: 0x06015DE4 RID: 89572 RVA: 0x0065741B File Offset: 0x0065561B
 	private void OnBtnBack()
 	{
 		Action onClickCloseBtnCall = this.OnClickCloseBtnCall;
@@ -63,57 +63,57 @@ public class WeeklyRogueCaptionItem : UiPanelBase
 		onClickCloseBtnCall();
 	}
 
-	// Token: 0x06018543 RID: 99651 RVA: 0x00631419 File Offset: 0x0062F619
+	// Token: 0x06015DE5 RID: 89573 RVA: 0x0065742D File Offset: 0x0065562D
 	[NullableContext(1)]
 	public void SetCloseCallBack(Action call)
 	{
 		this.OnClickCloseBtnCall = call;
 	}
 
-	// Token: 0x06018544 RID: 99652 RVA: 0x00631422 File Offset: 0x0062F622
+	// Token: 0x06015DE6 RID: 89574 RVA: 0x00657436 File Offset: 0x00655636
 	private void OnBtnInfo()
 	{
 		UiManager.Instance.OpenView(EUiViewName.WeeklyRogueInfo, null, null);
 	}
 
-	// Token: 0x06018545 RID: 99653 RVA: 0x00631435 File Offset: 0x0062F635
+	// Token: 0x06015DE7 RID: 89575 RVA: 0x00657449 File Offset: 0x00655649
 	private void OnToggleDesc(EToggleState toggleState)
 	{
 		WeeklyRogueModel.Instance.ChangeDescMode();
 	}
 
-	// Token: 0x06018546 RID: 99654 RVA: 0x00631444 File Offset: 0x0062F644
+	// Token: 0x06015DE8 RID: 89576 RVA: 0x00657458 File Offset: 0x00655658
 	private void RefreshToggleState()
 	{
 		EToggleState state = (WeeklyRogueModel.Instance.DescMode == EDescModel.SIMPLE) ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 		base.GetExtendToggle(2).SetToggleState(state, false, false, false);
 	}
 
-	// Token: 0x0400B49F RID: 46239
+	// Token: 0x0400B814 RID: 47124
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x0400B4A0 RID: 46240
+	// Token: 0x0400B815 RID: 47125
 	[Nullable(1)]
 	private Action OnClickCloseBtnCall = delegate()
 	{
 	};
 
-	// Token: 0x0400B4A1 RID: 46241
+	// Token: 0x0400B816 RID: 47126
 	public bool NeedCurrency;
 
-	// Token: 0x020092C0 RID: 37568
+	// Token: 0x020084E7 RID: 34023
 	private enum EComponents
 	{
-		// Token: 0x0402F6FA RID: 194298
+		// Token: 0x0402AD82 RID: 175490
 		PanelCaption,
-		// Token: 0x0402F6FB RID: 194299
+		// Token: 0x0402AD83 RID: 175491
 		BtnBack,
-		// Token: 0x0402F6FC RID: 194300
+		// Token: 0x0402AD84 RID: 175492
 		ToggleDesc,
-		// Token: 0x0402F6FD RID: 194301
+		// Token: 0x0402AD85 RID: 175493
 		TxtDesc,
-		// Token: 0x0402F6FE RID: 194302
+		// Token: 0x0402AD86 RID: 175494
 		BtnInfo
 	}
 }

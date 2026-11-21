@@ -8,12 +8,12 @@ using CSharpScript.Game.NewWorld.SceneItem.Util;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x02007175 RID: 29045
+	// Token: 0x02006229 RID: 25129
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemDamageComponent : EntityComponent
 	{
-		// Token: 0x06046ED1 RID: 290513 RVA: 0x011EA174 File Offset: 0x011E8374
+		// Token: 0x0603C746 RID: 247622 RVA: 0x011453C4 File Offset: 0x011435C4
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			DestructibleItem config = args.GetP1<CreateEntityData>().GetParam<SceneItemDamageComponent>() as DestructibleItem;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046ED2 RID: 290514 RVA: 0x011EA2C4 File Offset: 0x011E84C4
+		// Token: 0x0603C747 RID: 247623 RVA: 0x01145514 File Offset: 0x01143714
 		protected override bool OnStart()
 		{
 			this.HitComp = base.Entity.GetComponent<SceneItemHitComponent>();
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046ED3 RID: 290515 RVA: 0x011EA34C File Offset: 0x011E854C
+		// Token: 0x0603C748 RID: 247624 RVA: 0x0114559C File Offset: 0x0114379C
 		protected override bool OnEnd()
 		{
 			if (this.OnSceneItemHitByHitData != null)
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046ED4 RID: 290516 RVA: 0x011EA3AC File Offset: 0x011E85AC
+		// Token: 0x0603C749 RID: 247625 RVA: 0x011455FC File Offset: 0x011437FC
 		[NullableContext(1)]
 		private void OnHit(HitInformation hitData)
 		{
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046ED5 RID: 290517 RVA: 0x011EA4E8 File Offset: 0x011E86E8
+		// Token: 0x0603C74A RID: 247626 RVA: 0x01145738 File Offset: 0x01143938
 		[NullableContext(1)]
 		public Vector GetHitPoint()
 		{
@@ -139,13 +139,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return vector2;
 		}
 
-		// Token: 0x06046ED6 RID: 290518 RVA: 0x011EA581 File Offset: 0x011E8781
+		// Token: 0x0603C74B RID: 247627 RVA: 0x011457D1 File Offset: 0x011439D1
 		public float GetMaxDurablePoint()
 		{
 			return this.MaxDurablePoint;
 		}
 
-		// Token: 0x06046ED7 RID: 290519 RVA: 0x011EA58C File Offset: 0x011E878C
+		// Token: 0x0603C74C RID: 247628 RVA: 0x011457DC File Offset: 0x011439DC
 		private bool IgnoreOnlyPlayerAttack()
 		{
 			DestructibleItem config = this.Config;
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return ((hitBullet != null) ? new EHitBulletType?(hitBullet.Type) : null).GetValueOrDefault() == EHitBulletType.PlayerOrThrenodianAttack;
 		}
 
-		// Token: 0x06046ED8 RID: 290520 RVA: 0x011EA5D0 File Offset: 0x011E87D0
+		// Token: 0x0603C74D RID: 247629 RVA: 0x01145820 File Offset: 0x01143A20
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -166,93 +166,89 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemDamageComponent sceneItemDamageComponent = (SceneItemDamageComponent)componentTemplate;
-			if (base.CanResetComponentProperty("HitComp"))
+			if (sceneItemDamageComponent.HitComp == null)
 			{
-				if (sceneItemDamageComponent.HitComp == null)
-				{
-					this.HitComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemHitComponent>(this.HitComp), "HitComp"))
-				{
-					return false;
-				}
+				this.HitComp = null;
 			}
-			if (base.CanResetComponentProperty("MaxDurablePoint"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.HitComp), "HitComp"))
 			{
-				this.MaxDurablePoint = sceneItemDamageComponent.MaxDurablePoint;
+				return false;
 			}
-			if (base.CanResetComponentProperty("CurDurablePoint"))
+			this.MaxDurablePoint = sceneItemDamageComponent.MaxDurablePoint;
+			this.CurDurablePoint = sceneItemDamageComponent.CurDurablePoint;
+			if (sceneItemDamageComponent.OnSceneItemHitByHitData == null)
 			{
-				this.CurDurablePoint = sceneItemDamageComponent.CurDurablePoint;
+				this.OnSceneItemHitByHitData = null;
 			}
-			if (base.CanResetComponentProperty("OnSceneItemHitByHitData"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnSceneItemHitByHitData), "OnSceneItemHitByHitData"))
 			{
-				if (sceneItemDamageComponent.OnSceneItemHitByHitData == null)
-				{
-					this.OnSceneItemHitByHitData = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Action<HitInformation>>(this.OnSceneItemHitByHitData), "OnSceneItemHitByHitData"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("OnSceneItemDurabilityChange"))
+			if (sceneItemDamageComponent.OnSceneItemDurabilityChange == null)
 			{
-				if (sceneItemDamageComponent.OnSceneItemDurabilityChange == null)
-				{
-					this.OnSceneItemDurabilityChange = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Action<int>>(this.OnSceneItemDurabilityChange), "OnSceneItemDurabilityChange"))
-				{
-					return false;
-				}
+				this.OnSceneItemDurabilityChange = null;
 			}
-			if (base.CanResetComponentProperty("Config"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnSceneItemDurabilityChange), "OnSceneItemDurabilityChange"))
 			{
-				if (sceneItemDamageComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<DestructibleItem>(this.Config), "Config"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("ActorComponent"))
+			if (sceneItemDamageComponent.Config == null)
 			{
-				if (sceneItemDamageComponent.ActorComponent == null)
-				{
-					this.ActorComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.ActorComponent), "ActorComponent"))
-				{
-					return false;
-				}
+				this.Config = null;
 			}
-			if (base.CanResetComponentProperty("HitPointOffset"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 			{
-				if (sceneItemDamageComponent.HitPointOffset == null)
-				{
-					this.HitPointOffset = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.HitPointOffset), "HitPointOffset"))
-				{
-					return false;
-				}
+				return false;
+			}
+			if (sceneItemDamageComponent.ActorComponent == null)
+			{
+				this.ActorComponent = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComponent), "ActorComponent"))
+			{
+				return false;
+			}
+			if (sceneItemDamageComponent.HitPointOffset == null)
+			{
+				this.HitPointOffset = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.HitPointOffset), "HitPointOffset"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x040253F6 RID: 152566
+		// Token: 0x17007234 RID: 29236
+		// (get) Token: 0x0603C74E RID: 247630 RVA: 0x0114595A File Offset: 0x01143B5A
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007235 RID: 29237
+		// (get) Token: 0x0603C74F RID: 247631 RVA: 0x0114595D File Offset: 0x01143B5D
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0402005D RID: 131165
 		private SceneItemHitComponent HitComp;
 
-		// Token: 0x040253F7 RID: 152567
+		// Token: 0x0402005E RID: 131166
 		private float MaxDurablePoint;
 
-		// Token: 0x040253F8 RID: 152568
+		// Token: 0x0402005F RID: 131167
 		private float CurDurablePoint;
 
-		// Token: 0x040253F9 RID: 152569
+		// Token: 0x04020060 RID: 131168
 		[Nullable(new byte[]
 		{
 			2,
@@ -260,16 +256,16 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 		})]
 		private Action<HitInformation> OnSceneItemHitByHitData;
 
-		// Token: 0x040253FA RID: 152570
+		// Token: 0x04020061 RID: 131169
 		private Action<int> OnSceneItemDurabilityChange;
 
-		// Token: 0x040253FB RID: 152571
+		// Token: 0x04020062 RID: 131170
 		private DestructibleItem Config;
 
-		// Token: 0x040253FC RID: 152572
+		// Token: 0x04020063 RID: 131171
 		private BaseActorComponent ActorComponent;
 
-		// Token: 0x040253FD RID: 152573
+		// Token: 0x04020064 RID: 131172
 		private Vector HitPointOffset;
 	}
 }

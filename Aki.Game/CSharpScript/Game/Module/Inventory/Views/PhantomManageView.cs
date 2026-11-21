@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -15,17 +14,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Inventory.Views
 {
-	// Token: 0x0200583D RID: 22589
+	// Token: 0x02004814 RID: 18452
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomManageView : UiViewBase
 	{
-		// Token: 0x0603967F RID: 235135 RVA: 0x00D9F7D6 File Offset: 0x00D9D9D6
+		// Token: 0x0602E592 RID: 189842 RVA: 0x00CEE66A File Offset: 0x00CEC86A
 		public PhantomManageView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06039680 RID: 235136 RVA: 0x00D9F7EC File Offset: 0x00D9D9EC
+		// Token: 0x0602E593 RID: 189843 RVA: 0x00CEE680 File Offset: 0x00CEC880
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 20;
@@ -94,7 +93,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06039681 RID: 235137 RVA: 0x00D9FBCC File Offset: 0x00D9DDCC
+		// Token: 0x0602E594 RID: 189844 RVA: 0x00CEEA60 File Offset: 0x00CECC60
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PhantomManageView.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -105,7 +104,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039682 RID: 235138 RVA: 0x00D9FC10 File Offset: 0x00D9DE10
+		// Token: 0x0602E595 RID: 189845 RVA: 0x00CEEAA4 File Offset: 0x00CECCA4
 		protected override void OnStart()
 		{
 			this.ViewModel = new PhantomManageViewModel();
@@ -120,7 +119,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			this.CaptionItem.SetCloseBtnShowState(false);
 		}
 
-		// Token: 0x06039683 RID: 235139 RVA: 0x00D9FCEC File Offset: 0x00D9DEEC
+		// Token: 0x0602E596 RID: 189846 RVA: 0x00CEEB80 File Offset: 0x00CECD80
 		protected override void OnBeforeShow()
 		{
 			this.OpenParamId = (this.OpenParam as int?).GetValueOrDefault();
@@ -139,10 +138,10 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			this.RefreshBtn();
 		}
 
-		// Token: 0x06039684 RID: 235140 RVA: 0x00D9FD6C File Offset: 0x00D9DF6C
+		// Token: 0x0602E597 RID: 189847 RVA: 0x00CEEC00 File Offset: 0x00CECE00
 		private void ClearInvalidSelectItems()
 		{
-			foreach (int uniqueId in this.ViewModel.GetSelectSet().ToList<int>())
+			foreach (int uniqueId in new List<int>(this.ViewModel.GetSelectSet()))
 			{
 				if (InventoryModel.Instance.GetPhantomItemData(uniqueId) == null)
 				{
@@ -152,7 +151,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			}
 		}
 
-		// Token: 0x06039685 RID: 235141 RVA: 0x00D9FDE4 File Offset: 0x00D9DFE4
+		// Token: 0x0602E598 RID: 189848 RVA: 0x00CEEC78 File Offset: 0x00CECE78
 		protected override void OnBeforeDestroy()
 		{
 			this.ViewModel.UnBind(new Action<EPhantomManageViewData>(this.OnViewModelUpdate));
@@ -160,7 +159,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			this.ClearFilterData();
 		}
 
-		// Token: 0x06039686 RID: 235142 RVA: 0x00D9FE10 File Offset: 0x00D9E010
+		// Token: 0x0602E599 RID: 189849 RVA: 0x00CEECA4 File Offset: 0x00CECEA4
 		private void RefreshCapacity()
 		{
 			ItemMainType? itemMainTypeConfig = InventoryConfig.Instance.GetItemMainTypeConfig(3);
@@ -197,13 +196,14 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			uuitext2.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x06039687 RID: 235143 RVA: 0x00D9FF08 File Offset: 0x00D9E108
+		// Token: 0x0602E59A RID: 189850 RVA: 0x00CEED9C File Offset: 0x00CECF9C
 		private void RefreshList()
 		{
-			IEnumerable<PhantomItemData> enumerable = InventoryModel.Instance.GetItemDataBaseByMainType(InventoryDefine.EItemMainTypeId.Phantom).Cast<PhantomItemData>();
+			HashSet<ItemDataBase> itemDataBaseByMainType = InventoryModel.Instance.GetItemDataBaseByMainType(InventoryDefine.EItemMainTypeId.Phantom);
 			List<PhantomItemData> list = new List<PhantomItemData>();
-			foreach (PhantomItemData phantomItemData in enumerable)
+			foreach (ItemDataBase itemDataBase in itemDataBaseByMainType)
 			{
+				PhantomItemData phantomItemData = (PhantomItemData)itemDataBase;
 				PhantomBattleData phantomBattleData = PhantomBattleModel.Instance.GetPhantomBattleData(phantomItemData.GetUniqueId());
 				if (phantomBattleData != null && (this.ShowStrengthened || phantomBattleData.GetPhantomLevel() <= 0))
 				{
@@ -213,7 +213,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			this.FilterEntrance.UpdateDataWithConfig(EFilterSortGroupId.PhantomManage, EFilterSortConfigId.PhantomManage, list, "", Array.Empty<object>());
 		}
 
-		// Token: 0x06039688 RID: 235144 RVA: 0x00D9FFA4 File Offset: 0x00D9E1A4
+		// Token: 0x0602E59B RID: 189851 RVA: 0x00CEEE40 File Offset: 0x00CED040
 		private void RefreshItem(PhantomItemData itemData)
 		{
 			this.RefreshTips(itemData);
@@ -222,7 +222,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			this.RefreshSelect(itemData);
 		}
 
-		// Token: 0x06039689 RID: 235145 RVA: 0x00D9FFC4 File Offset: 0x00D9E1C4
+		// Token: 0x0602E59C RID: 189852 RVA: 0x00CEEE60 File Offset: 0x00CED060
 		private void RefreshTips(PhantomItemData itemData)
 		{
 			int configId = itemData.GetConfigId();
@@ -240,7 +240,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			this.ItemTipsComponent.SetTipsComponentLockButton(false);
 		}
 
-		// Token: 0x0603968A RID: 235146 RVA: 0x00DA0020 File Offset: 0x00D9E220
+		// Token: 0x0602E59D RID: 189853 RVA: 0x00CEEEBC File Offset: 0x00CED0BC
 		private void RefreshRedDot(PhantomItemData itemData)
 		{
 			InventoryModel instance = InventoryModel.Instance;
@@ -255,13 +255,13 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			instance.SaveRedDotAttributeItemUniqueIdList();
 		}
 
-		// Token: 0x0603968B RID: 235147 RVA: 0x00DA006F File Offset: 0x00D9E26F
+		// Token: 0x0602E59E RID: 189854 RVA: 0x00CEEF0B File Offset: 0x00CED10B
 		private void RefreshNew(PhantomItemData itemData)
 		{
 			InventoryModel.Instance.RemoveNewAttributeItem(itemData.GetUniqueId());
 		}
 
-		// Token: 0x0603968C RID: 235148 RVA: 0x00DA0084 File Offset: 0x00D9E284
+		// Token: 0x0602E59F RID: 189855 RVA: 0x00CEEF20 File Offset: 0x00CED120
 		private void RefreshSelect(PhantomItemData itemData)
 		{
 			int gridIndex = this.AllData.IndexOf(itemData);
@@ -271,7 +271,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			}
 		}
 
-		// Token: 0x0603968D RID: 235149 RVA: 0x00DA00B8 File Offset: 0x00D9E2B8
+		// Token: 0x0602E5A0 RID: 189856 RVA: 0x00CEEF54 File Offset: 0x00CED154
 		private void RefreshBtn()
 		{
 			InventoryDefine.EItemDataFunctionValue? allSameState = this.CheckSelectStateSame();
@@ -282,7 +282,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			this.BtnDispose.SetLocalTextNew(textId2, Array.Empty<object>());
 		}
 
-		// Token: 0x0603968E RID: 235150 RVA: 0x00DA012B File Offset: 0x00D9E32B
+		// Token: 0x0602E5A1 RID: 189857 RVA: 0x00CEEFC7 File Offset: 0x00CED1C7
 		private void OnViewModelUpdate(EPhantomManageViewData data)
 		{
 			if (data == EPhantomManageViewData.SelectSet)
@@ -291,21 +291,35 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			}
 		}
 
-		// Token: 0x0603968F RID: 235151 RVA: 0x00DA0138 File Offset: 0x00D9E338
-		protected int SortViewDataSelectOn(PhantomItemData dataA, PhantomItemData dataB)
+		// Token: 0x0602E5A2 RID: 189858 RVA: 0x00CEEFD4 File Offset: 0x00CED1D4
+		private int ComparePhantomDefaultSort(PhantomItemData dataA, PhantomItemData dataB)
 		{
-			int num = (this.CheckItemSelect(dataA) > false) ? 1 : 0;
-			return ((this.CheckItemSelect(dataB) > false) ? 1 : 0) - num;
+			PhantomBattleModel instance = PhantomBattleModel.Instance;
+			PhantomBattleData phantomBattleData = instance.GetPhantomBattleData(dataA.GetUniqueId());
+			int num = (phantomBattleData != null) ? phantomBattleData.GetQuality() : 0;
+			PhantomBattleData phantomBattleData2 = instance.GetPhantomBattleData(dataB.GetUniqueId());
+			int num2 = (phantomBattleData2 != null) ? phantomBattleData2.GetQuality() : 0;
+			if (num != num2)
+			{
+				return num2 - num;
+			}
+			int configId = dataA.GetConfigId();
+			int configId2 = dataB.GetConfigId();
+			if (configId != configId2)
+			{
+				return configId2 - configId;
+			}
+			return dataB.GetUniqueId() - dataA.GetUniqueId();
 		}
 
-		// Token: 0x06039690 RID: 235152 RVA: 0x00DA015C File Offset: 0x00D9E35C
+		// Token: 0x0602E5A3 RID: 189859 RVA: 0x00CEF044 File Offset: 0x00CED244
 		private void OnFilterSortRefresh(List<PhantomItemData> list, bool isOutSideChange, EFilterSortType operationType)
 		{
-			HashSet<int> selectSet = this.ViewModel.GetSelectSet();
-			if (selectSet != null && selectSet.Count > 0)
+			if (!isOutSideChange)
 			{
-				list.Sort(new Comparison<PhantomItemData>(this.SortViewDataSelectOn));
+				this.ResetSelectOnFilter();
 			}
+			list.Sort(new Comparison<PhantomItemData>(this.ComparePhantomDefaultSort));
 			this.AllData = list;
 			this.ItemScroll.RefreshByData(list, false, null, false);
 			this.ItemTipsComponent.SetVisible(this.AllData.Count > 0);
@@ -324,7 +338,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			this.RefreshTips(phantomItemData);
 		}
 
-		// Token: 0x06039691 RID: 235153 RVA: 0x00DA0224 File Offset: 0x00D9E424
+		// Token: 0x0602E5A4 RID: 189860 RVA: 0x00CEF0FC File Offset: 0x00CED2FC
 		private void RefreshOpenParamItem()
 		{
 			for (int i = 0; i < this.AllData.Count; i++)
@@ -341,7 +355,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			this.OpenParamId = 0;
 		}
 
-		// Token: 0x06039692 RID: 235154 RVA: 0x00DA028C File Offset: 0x00D9E48C
+		// Token: 0x0602E5A5 RID: 189861 RVA: 0x00CEF164 File Offset: 0x00CED364
 		private void RefreshTipsGrid(int newUniqueId)
 		{
 			int selectId = this.SelectId;
@@ -356,7 +370,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			}
 		}
 
-		// Token: 0x06039693 RID: 235155 RVA: 0x00DA02E8 File Offset: 0x00D9E4E8
+		// Token: 0x0602E5A6 RID: 189862 RVA: 0x00CEF1C0 File Offset: 0x00CED3C0
 		private void OnItemFuncValueChange(int changeId)
 		{
 			this.RefreshBtn();
@@ -371,7 +385,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			}
 		}
 
-		// Token: 0x06039694 RID: 235156 RVA: 0x00DA0334 File Offset: 0x00D9E534
+		// Token: 0x0602E5A7 RID: 189863 RVA: 0x00CEF20C File Offset: 0x00CED40C
 		private void OnItemFuncValueBatchChange(IReadOnlyList<int> uniqueIdList)
 		{
 			for (int i = 0; i < this.AllData.Count; i++)
@@ -397,26 +411,26 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			this.RefreshBtn();
 		}
 
-		// Token: 0x06039695 RID: 235157 RVA: 0x00DA03BC File Offset: 0x00D9E5BC
+		// Token: 0x0602E5A8 RID: 189864 RVA: 0x00CEF294 File Offset: 0x00CED494
 		private void OnListenerFocus(PhantomItemData data)
 		{
 			this.RefreshTipsGrid(data.GetUniqueId());
 			this.RefreshTips(data);
 		}
 
-		// Token: 0x06039696 RID: 235158 RVA: 0x00DA03D1 File Offset: 0x00D9E5D1
+		// Token: 0x0602E5A9 RID: 189865 RVA: 0x00CEF2A9 File Offset: 0x00CED4A9
 		private bool CheckItemSelect(PhantomItemData data)
 		{
 			return this.ViewModel.GetSelectSet().Contains(data.GetUniqueId());
 		}
 
-		// Token: 0x06039697 RID: 235159 RVA: 0x00DA03E9 File Offset: 0x00D9E5E9
+		// Token: 0x0602E5AA RID: 189866 RVA: 0x00CEF2C1 File Offset: 0x00CED4C1
 		private bool CheckItemTips(PhantomItemData data)
 		{
 			return data.GetUniqueId() == this.SelectId;
 		}
 
-		// Token: 0x06039698 RID: 235160 RVA: 0x00DA03FC File Offset: 0x00D9E5FC
+		// Token: 0x0602E5AB RID: 189867 RVA: 0x00CEF2D4 File Offset: 0x00CED4D4
 		private InventoryDefine.EItemDataFunctionValue? CheckSelectStateSame()
 		{
 			HashSet<int> selectSet = this.ViewModel.GetSelectSet();
@@ -447,7 +461,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			return eitemDataFunctionValue;
 		}
 
-		// Token: 0x06039699 RID: 235161 RVA: 0x00DA04B8 File Offset: 0x00D9E6B8
+		// Token: 0x0602E5AC RID: 189868 RVA: 0x00CEF390 File Offset: 0x00CED590
 		private bool CheckSelectHasLock(HashSet<int> uniqueIdSet)
 		{
 			if (uniqueIdSet.Count == 0)
@@ -464,13 +478,13 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			return false;
 		}
 
-		// Token: 0x0603969A RID: 235162 RVA: 0x00DA0524 File Offset: 0x00D9E724
+		// Token: 0x0602E5AD RID: 189869 RVA: 0x00CEF3FC File Offset: 0x00CED5FC
 		private bool OnItemCanExecuteChange(object data, bool isForceSelected, EToggleState state)
 		{
 			return isForceSelected;
 		}
 
-		// Token: 0x0603969B RID: 235163 RVA: 0x00DA0528 File Offset: 0x00D9E728
+		// Token: 0x0602E5AE RID: 189870 RVA: 0x00CEF400 File Offset: 0x00CED600
 		private void OnClickedItem(MediumItemGridExtendCallback callbackData)
 		{
 			PhantomItemData phantomItemData = callbackData.Data as PhantomItemData;
@@ -479,21 +493,21 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			this.RefreshItem(phantomItemData);
 		}
 
-		// Token: 0x0603969C RID: 235164 RVA: 0x00DA0566 File Offset: 0x00D9E766
+		// Token: 0x0602E5AF RID: 189871 RVA: 0x00CEF43E File Offset: 0x00CED63E
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int>(EEventName.OnItemFuncValueChange, new Action<int>(this.OnItemFuncValueChange));
 			EventSystem.Instance.Add<IReadOnlyList<int>>(EEventName.OnItemFuncValueBatchChange, new Action<IReadOnlyList<int>>(this.OnItemFuncValueBatchChange));
 		}
 
-		// Token: 0x0603969D RID: 235165 RVA: 0x00DA05A0 File Offset: 0x00D9E7A0
+		// Token: 0x0602E5B0 RID: 189872 RVA: 0x00CEF478 File Offset: 0x00CED678
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnItemFuncValueChange, new Action<int>(this.OnItemFuncValueChange));
 			EventSystem.Instance.Remove(EEventName.OnItemFuncValueBatchChange, new Action<IReadOnlyList<int>>(this.OnItemFuncValueBatchChange));
 		}
 
-		// Token: 0x0603969E RID: 235166 RVA: 0x00DA05DA File Offset: 0x00D9E7DA
+		// Token: 0x0602E5B1 RID: 189873 RVA: 0x00CEF4B2 File Offset: 0x00CED6B2
 		private PhantomManageMediumItemGrid InitItem()
 		{
 			PhantomManageMediumItemGrid phantomManageMediumItemGrid = new PhantomManageMediumItemGrid();
@@ -503,7 +517,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			return phantomManageMediumItemGrid;
 		}
 
-		// Token: 0x0603969F RID: 235167 RVA: 0x00DA060C File Offset: 0x00D9E80C
+		// Token: 0x0602E5B2 RID: 189874 RVA: 0x00CEF4E4 File Offset: 0x00CED6E4
 		private void ClearFilterData()
 		{
 			int filterIdConst = InventoryModel.Instance.GetFilterIdConst();
@@ -515,13 +529,13 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			FilterModel.Instance.SetFilterConfigData(EFilterSortConfigId.PhantomManage, 43, data, "");
 		}
 
-		// Token: 0x060396A0 RID: 235168 RVA: 0x00DA064F File Offset: 0x00D9E84F
+		// Token: 0x0602E5B3 RID: 189875 RVA: 0x00CEF527 File Offset: 0x00CED727
 		private void OnClickedBtnClose()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x060396A1 RID: 235169 RVA: 0x00DA0658 File Offset: 0x00D9E858
+		// Token: 0x0602E5B4 RID: 189876 RVA: 0x00CEF530 File Offset: 0x00CED730
 		private void OnClickedBtnSelectAll(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -536,7 +550,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			this.OnClickedBtnClearSelect();
 		}
 
-		// Token: 0x060396A2 RID: 235170 RVA: 0x00DA06D0 File Offset: 0x00D9E8D0
+		// Token: 0x0602E5B5 RID: 189877 RVA: 0x00CEF5A8 File Offset: 0x00CED7A8
 		private void OnClickedBtnClearSelect()
 		{
 			foreach (int uniqueId in this.ViewModel.GetSelectSet())
@@ -547,7 +561,17 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			base.GetExtendToggle(12).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x060396A3 RID: 235171 RVA: 0x00DA074C File Offset: 0x00D9E94C
+		// Token: 0x0602E5B6 RID: 189878 RVA: 0x00CEF624 File Offset: 0x00CED824
+		private void ResetSelectOnFilter()
+		{
+			if (this.ViewModel.GetSelectSet().Count > 0)
+			{
+				this.ViewModel.ClearSelectSet();
+			}
+			base.GetExtendToggle(12).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
+		}
+
+		// Token: 0x0602E5B7 RID: 189879 RVA: 0x00CEF658 File Offset: 0x00CED858
 		private void OnClickedBtnLock(int __)
 		{
 			if (this.CheckSelectStateSame().GetValueOrDefault() != InventoryDefine.EItemDataFunctionValue.Lock)
@@ -558,7 +582,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			this.OnResetConfirm(true);
 		}
 
-		// Token: 0x060396A4 RID: 235172 RVA: 0x00DA077C File Offset: 0x00D9E97C
+		// Token: 0x0602E5B8 RID: 189880 RVA: 0x00CEF688 File Offset: 0x00CED888
 		private void OnClickedBtnDispose(int __)
 		{
 			if (this.CheckSelectStateSame().GetValueOrDefault() != InventoryDefine.EItemDataFunctionValue.Deprecate)
@@ -569,7 +593,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			this.OnResetConfirm(false);
 		}
 
-		// Token: 0x060396A5 RID: 235173 RVA: 0x00DA07AC File Offset: 0x00D9E9AC
+		// Token: 0x0602E5B9 RID: 189881 RVA: 0x00CEF6B8 File Offset: 0x00CED8B8
 		private void ShowDisposeConfirm()
 		{
 			HashSet<int> selectSet = this.ViewModel.GetSelectSet();
@@ -591,41 +615,41 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			this.OnDisposeConfirm();
 		}
 
-		// Token: 0x060396A6 RID: 235174 RVA: 0x00DA0824 File Offset: 0x00D9EA24
+		// Token: 0x0602E5BA RID: 189882 RVA: 0x00CEF730 File Offset: 0x00CED930
 		private UniTask OnDisposeConfirm()
 		{
-			PhantomManageView.<OnDisposeConfirm>d__51 <OnDisposeConfirm>d__;
+			PhantomManageView.<OnDisposeConfirm>d__52 <OnDisposeConfirm>d__;
 			<OnDisposeConfirm>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<OnDisposeConfirm>d__.<>4__this = this;
 			<OnDisposeConfirm>d__.<>1__state = -1;
-			<OnDisposeConfirm>d__.<>t__builder.Start<PhantomManageView.<OnDisposeConfirm>d__51>(ref <OnDisposeConfirm>d__);
+			<OnDisposeConfirm>d__.<>t__builder.Start<PhantomManageView.<OnDisposeConfirm>d__52>(ref <OnDisposeConfirm>d__);
 			return <OnDisposeConfirm>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060396A7 RID: 235175 RVA: 0x00DA0868 File Offset: 0x00D9EA68
+		// Token: 0x0602E5BB RID: 189883 RVA: 0x00CEF774 File Offset: 0x00CED974
 		private UniTask OnLockConfirm()
 		{
-			PhantomManageView.<OnLockConfirm>d__52 <OnLockConfirm>d__;
+			PhantomManageView.<OnLockConfirm>d__53 <OnLockConfirm>d__;
 			<OnLockConfirm>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<OnLockConfirm>d__.<>4__this = this;
 			<OnLockConfirm>d__.<>1__state = -1;
-			<OnLockConfirm>d__.<>t__builder.Start<PhantomManageView.<OnLockConfirm>d__52>(ref <OnLockConfirm>d__);
+			<OnLockConfirm>d__.<>t__builder.Start<PhantomManageView.<OnLockConfirm>d__53>(ref <OnLockConfirm>d__);
 			return <OnLockConfirm>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060396A8 RID: 235176 RVA: 0x00DA08AC File Offset: 0x00D9EAAC
+		// Token: 0x0602E5BC RID: 189884 RVA: 0x00CEF7B8 File Offset: 0x00CED9B8
 		private UniTask OnResetConfirm(bool fromLock)
 		{
-			PhantomManageView.<OnResetConfirm>d__53 <OnResetConfirm>d__;
+			PhantomManageView.<OnResetConfirm>d__54 <OnResetConfirm>d__;
 			<OnResetConfirm>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<OnResetConfirm>d__.<>4__this = this;
 			<OnResetConfirm>d__.fromLock = fromLock;
 			<OnResetConfirm>d__.<>1__state = -1;
-			<OnResetConfirm>d__.<>t__builder.Start<PhantomManageView.<OnResetConfirm>d__53>(ref <OnResetConfirm>d__);
+			<OnResetConfirm>d__.<>t__builder.Start<PhantomManageView.<OnResetConfirm>d__54>(ref <OnResetConfirm>d__);
 			return <OnResetConfirm>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060396A9 RID: 235177 RVA: 0x00DA08F8 File Offset: 0x00D9EAF8
+		// Token: 0x0602E5BD RID: 189885 RVA: 0x00CEF804 File Offset: 0x00CEDA04
 		private void OnClickedBtnConfig()
 		{
 			if (UiManager.Instance.IsViewOpen(EUiViewName.PhantomManageConfigView) || UiManager.Instance.IsViewHide(EUiViewName.PhantomManageConfigView))
@@ -636,7 +660,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			this.OnCloseManageConfigView(true);
 		}
 
-		// Token: 0x060396AA RID: 235178 RVA: 0x00DA094A File Offset: 0x00D9EB4A
+		// Token: 0x0602E5BE RID: 189886 RVA: 0x00CEF856 File Offset: 0x00CEDA56
 		private void OnCloseManageConfigView(bool success)
 		{
 			if (success)
@@ -645,13 +669,13 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			}
 		}
 
-		// Token: 0x060396AB RID: 235179 RVA: 0x00DA0959 File Offset: 0x00D9EB59
+		// Token: 0x0602E5BF RID: 189887 RVA: 0x00CEF865 File Offset: 0x00CEDA65
 		private void OnClickedBtnManage()
 		{
 			CalabashController.Instance.JumpToCalabashRootView(EUiTabViewName.VisionRecoveryTabView, null);
 		}
 
-		// Token: 0x060396AC RID: 235180 RVA: 0x00DA096B File Offset: 0x00D9EB6B
+		// Token: 0x0602E5C0 RID: 189888 RVA: 0x00CEF877 File Offset: 0x00CEDA77
 		private void OnClickedBtnSmartDiscard()
 		{
 			UiManager.Instance.OpenView(EUiViewName.PhantomSmartDiscardPopupView, null, delegate(bool success, int viewId)
@@ -672,7 +696,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			});
 		}
 
-		// Token: 0x060396AD RID: 235181 RVA: 0x00DA099C File Offset: 0x00D9EB9C
+		// Token: 0x0602E5C1 RID: 189889 RVA: 0x00CEF8A8 File Offset: 0x00CEDAA8
 		private void OnToggleShowStrengthened(EToggleState state)
 		{
 			this.ShowStrengthened = (state == EToggleState.ETT_Checked);
@@ -680,23 +704,23 @@ namespace CSharpScript.Game.Module.Inventory.Views
 			this.RefreshBtn();
 		}
 
-		// Token: 0x0401E065 RID: 122981
+		// Token: 0x04018AFE RID: 101118
 		private int OpenParamId;
 
-		// Token: 0x0401E066 RID: 122982
+		// Token: 0x04018AFF RID: 101119
 		private int SelectId;
 
-		// Token: 0x0401E067 RID: 122983
+		// Token: 0x04018B00 RID: 101120
 		private InventoryDefine.EItemDataFunctionValue? AllSameState;
 
-		// Token: 0x0401E068 RID: 122984
+		// Token: 0x04018B01 RID: 101121
 		private List<PhantomItemData> AllData = new List<PhantomItemData>();
 
-		// Token: 0x0401E069 RID: 122985
+		// Token: 0x04018B02 RID: 101122
 		[Nullable(2)]
 		private PhantomManageViewModel ViewModel;
 
-		// Token: 0x0401E06A RID: 122986
+		// Token: 0x04018B03 RID: 101123
 		[Nullable(new byte[]
 		{
 			2,
@@ -705,7 +729,7 @@ namespace CSharpScript.Game.Module.Inventory.Views
 		})]
 		private LoopScrollView<PhantomManageMediumItemGrid, PhantomItemData> ItemScroll;
 
-		// Token: 0x0401E06B RID: 122987
+		// Token: 0x04018B04 RID: 101124
 		[Nullable(new byte[]
 		{
 			2,
@@ -713,23 +737,23 @@ namespace CSharpScript.Game.Module.Inventory.Views
 		})]
 		private FilterEntrance<PhantomItemData> FilterEntrance;
 
-		// Token: 0x0401E06C RID: 122988
+		// Token: 0x04018B05 RID: 101125
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401E06D RID: 122989
+		// Token: 0x04018B06 RID: 101126
 		[Nullable(2)]
 		private ItemTipsWithButtonComponent ItemTipsComponent;
 
-		// Token: 0x0401E06E RID: 122990
+		// Token: 0x04018B07 RID: 101127
 		[Nullable(2)]
 		private ButtonItem BtnLock;
 
-		// Token: 0x0401E06F RID: 122991
+		// Token: 0x04018B08 RID: 101128
 		[Nullable(2)]
 		private ButtonItem BtnDispose;
 
-		// Token: 0x0401E070 RID: 122992
+		// Token: 0x04018B09 RID: 101129
 		private bool ShowStrengthened;
 	}
 }

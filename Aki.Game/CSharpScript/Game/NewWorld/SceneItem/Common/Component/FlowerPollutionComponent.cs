@@ -19,12 +19,12 @@ using UnrealEngine.Interface;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 {
-	// Token: 0x02007211 RID: 29201
+	// Token: 0x020062C6 RID: 25286
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FlowerPollutionComponent : EntityComponent, IFlowerPollutionManager
 	{
-		// Token: 0x060477B0 RID: 292784 RVA: 0x01234D50 File Offset: 0x01232F50
+		// Token: 0x0603D0C7 RID: 250055 RVA: 0x0118E7D4 File Offset: 0x0118C9D4
 		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x060477B1 RID: 292785 RVA: 0x01234FF8 File Offset: 0x012331F8
+		// Token: 0x0603D0C8 RID: 250056 RVA: 0x0118EA7C File Offset: 0x0118CC7C
 		protected override bool OnStart()
 		{
 			this.ActorComponent = base.Entity.CheckGetComponent<BaseActorComponent>();
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x060477B2 RID: 292786 RVA: 0x01235100 File Offset: 0x01233300
+		// Token: 0x0603D0C9 RID: 250057 RVA: 0x0118EB84 File Offset: 0x0118CD84
 		protected override bool OnEnd()
 		{
 			CustomPromise<bool?> waitEntitiesActivate = this.WaitEntitiesActivate;
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x060477B3 RID: 292787 RVA: 0x012351AC File Offset: 0x012333AC
+		// Token: 0x0603D0CA RID: 250058 RVA: 0x0118EC30 File Offset: 0x0118CE30
 		private unsafe void CheckPlayerInPollutionRange()
 		{
 			if (Global.BaseCharacter == null || this.CreatureDataComponent == null)
@@ -208,7 +208,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}, 0);
 		}
 
-		// Token: 0x060477B4 RID: 292788 RVA: 0x0123524C File Offset: 0x0123344C
+		// Token: 0x0603D0CB RID: 250059 RVA: 0x0118ECD0 File Offset: 0x0118CED0
 		public unsafe void UpdateFlowerPollution(float delta)
 		{
 			if (!this.AsyncTasksDone || !base.Active)
@@ -385,7 +385,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.CheckPlayerInPollutionRange();
 		}
 
-		// Token: 0x060477B5 RID: 292789 RVA: 0x01235678 File Offset: 0x01233878
+		// Token: 0x0603D0CC RID: 250060 RVA: 0x0118F0FC File Offset: 0x0118D2FC
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -403,7 +403,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return <LoadResourceAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060477B6 RID: 292790 RVA: 0x012356CC File Offset: 0x012338CC
+		// Token: 0x0603D0CD RID: 250061 RVA: 0x0118F150 File Offset: 0x0118D350
 		private TaskGraph FlowerPollutionComponentTaskGraph()
 		{
 			Dictionary<string, IGraphNode> dictionary = new Dictionary<string, IGraphNode>();
@@ -482,7 +482,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return new TaskGraph(dictionary, dependencies);
 		}
 
-		// Token: 0x060477B7 RID: 292791 RVA: 0x012357F8 File Offset: 0x012339F8
+		// Token: 0x0603D0CE RID: 250062 RVA: 0x0118F27C File Offset: 0x0118D47C
 		private unsafe void OnLightUpPointLight(int sourcePbDataId, int targetPbDataId)
 		{
 			EntityHandle entityByPbDataId = CreatureModel.Instance.GetEntityByPbDataId(sourcePbDataId);
@@ -562,7 +562,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x060477B8 RID: 292792 RVA: 0x01235A18 File Offset: 0x01233C18
+		// Token: 0x0603D0CF RID: 250063 RVA: 0x0118F49C File Offset: 0x0118D69C
 		private unsafe void OnSplinePollutionStateChanged(int splinePbDataId, bool bAllPolluted)
 		{
 			if (this.CreatureDataComponent == null)
@@ -593,7 +593,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			Net.Instance.Send(EPushMessageId.FlowerPollutionSplinePush, flowerPollutionSplinePush);
 		}
 
-		// Token: 0x060477B9 RID: 292793 RVA: 0x01235B14 File Offset: 0x01233D14
+		// Token: 0x0603D0D0 RID: 250064 RVA: 0x0118F598 File Offset: 0x0118D798
 		private unsafe bool AddFlowerPollutionComponent()
 		{
 			BaseActorComponent actorComponent = this.ActorComponent;
@@ -693,7 +693,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return false;
 		}
 
-		// Token: 0x060477BA RID: 292794 RVA: 0x01235F34 File Offset: 0x01234134
+		// Token: 0x0603D0D1 RID: 250065 RVA: 0x0118F9B8 File Offset: 0x0118DBB8
 		private void DestroyFlowerPollutionComponentAndConsumer()
 		{
 			UKuroLevelPlayFlowerPollutionComponent kuroLevelPlayFlowerPollutionComponent = this.KuroLevelPlayFlowerPollutionComponent;
@@ -718,7 +718,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x060477BB RID: 292795 RVA: 0x01236024 File Offset: 0x01234224
+		// Token: 0x0603D0D2 RID: 250066 RVA: 0x0118FAA8 File Offset: 0x0118DCA8
 		public void ClearFlowerPollution()
 		{
 			this.DestroyFlowerPollutionComponentAndConsumer();
@@ -734,7 +734,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			UKismetMaterialLibrary.SetVectorParameterValue(world, collection, parameterName, flinearColor);
 		}
 
-		// Token: 0x060477BC RID: 292796 RVA: 0x01236080 File Offset: 0x01234280
+		// Token: 0x0603D0D3 RID: 250067 RVA: 0x0118FB04 File Offset: 0x0118DD04
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -742,234 +742,197 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 				return false;
 			}
 			FlowerPollutionComponent flowerPollutionComponent = (FlowerPollutionComponent)componentTemplate;
-			if (base.CanResetComponentProperty("WaitEntitiesActivate"))
+			if (flowerPollutionComponent.WaitEntitiesActivate == null)
 			{
-				if (flowerPollutionComponent.WaitEntitiesActivate == null)
-				{
-					this.WaitEntitiesActivate = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CustomPromise<bool?>>(this.WaitEntitiesActivate), "WaitEntitiesActivate"))
-				{
-					return false;
-				}
+				this.WaitEntitiesActivate = null;
 			}
-			if (base.CanResetComponentProperty("WaitSelfEntityStart"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.WaitEntitiesActivate), "WaitEntitiesActivate"))
 			{
-				if (flowerPollutionComponent.WaitSelfEntityStart == null)
-				{
-					this.WaitSelfEntityStart = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CustomPromise<bool>>(this.WaitSelfEntityStart), "WaitSelfEntityStart"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("SplineValues"))
+			if (flowerPollutionComponent.WaitSelfEntityStart == null)
 			{
-				if (flowerPollutionComponent.SplineValues == null)
-				{
-					this.SplineValues = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, bool>>(this.SplineValues), "SplineValues"))
-				{
-					return false;
-				}
+				this.WaitSelfEntityStart = null;
 			}
-			if (base.CanResetComponentProperty("PointLightPbDataIds"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.WaitSelfEntityStart), "WaitSelfEntityStart"))
 			{
-				if (flowerPollutionComponent.PointLightPbDataIds == null)
-				{
-					this.PointLightPbDataIds = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<int>>(this.PointLightPbDataIds), "PointLightPbDataIds"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("PointLightOperations"))
+			if (flowerPollutionComponent.SplineValues == null)
 			{
-				if (flowerPollutionComponent.PointLightOperations == null)
-				{
-					this.PointLightOperations = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<IPointLightOperations>>(this.PointLightOperations), "PointLightOperations"))
-				{
-					return false;
-				}
+				this.SplineValues = null;
 			}
-			if (base.CanResetComponentProperty("PointLightsInfo"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SplineValues), "SplineValues"))
 			{
-				if (flowerPollutionComponent.PointLightsInfo == null)
-				{
-					this.PointLightsInfo = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, IKuroLevelPlayPointLight>>(this.PointLightsInfo), "PointLightsInfo"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("MapPointLightsInfo"))
+			if (flowerPollutionComponent.PointLightPbDataIds == null)
 			{
-				if (flowerPollutionComponent.MapPointLightsInfo == null)
-				{
-					this.MapPointLightsInfo = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<int, FKuroLevelPlayPointLight>(this.MapPointLightsInfo), "MapPointLightsInfo"))
-				{
-					return false;
-				}
+				this.PointLightPbDataIds = null;
 			}
-			if (base.CanResetComponentProperty("ObstaclePbDataIds"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PointLightPbDataIds), "PointLightPbDataIds"))
 			{
-				if (flowerPollutionComponent.ObstaclePbDataIds == null)
-				{
-					this.ObstaclePbDataIds = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<int>>(this.ObstaclePbDataIds), "ObstaclePbDataIds"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("CurrentObstaclePbDataIds"))
+			if (flowerPollutionComponent.PointLightOperations == null)
 			{
-				if (flowerPollutionComponent.CurrentObstaclePbDataIds == null)
-				{
-					this.CurrentObstaclePbDataIds = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.CurrentObstaclePbDataIds), "CurrentObstaclePbDataIds"))
-				{
-					return false;
-				}
+				this.PointLightOperations = null;
 			}
-			if (base.CanResetComponentProperty("CreatureDataComponent"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PointLightOperations), "PointLightOperations"))
 			{
-				if (flowerPollutionComponent.CreatureDataComponent == null)
-				{
-					this.CreatureDataComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComponent), "CreatureDataComponent"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("ActorComponent"))
+			if (flowerPollutionComponent.PointLightsInfo == null)
 			{
-				if (flowerPollutionComponent.ActorComponent == null)
-				{
-					this.ActorComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.ActorComponent), "ActorComponent"))
-				{
-					return false;
-				}
+				this.PointLightsInfo = null;
 			}
-			if (base.CanResetComponentProperty("Consumer"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PointLightsInfo), "PointLightsInfo"))
 			{
-				if (flowerPollutionComponent.Consumer == null)
-				{
-					this.Consumer = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.Consumer), "Consumer"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("CircularPackingAlongSplinePrimaryDataAssetPath"))
+			if (flowerPollutionComponent.MapPointLightsInfo == null)
 			{
-				this.CircularPackingAlongSplinePrimaryDataAssetPath = flowerPollutionComponent.CircularPackingAlongSplinePrimaryDataAssetPath;
+				this.MapPointLightsInfo = null;
 			}
-			if (base.CanResetComponentProperty("CircularPackingAlongSplinePrimaryDataAsset"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<int, FKuroLevelPlayPointLight>(this.MapPointLightsInfo), "MapPointLightsInfo"))
 			{
-				if (flowerPollutionComponent.CircularPackingAlongSplinePrimaryDataAsset == null)
-				{
-					this.CircularPackingAlongSplinePrimaryDataAsset = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UKuroLevelPlayCircularPackingAlongSplinePrimaryDataAsset>(this.CircularPackingAlongSplinePrimaryDataAsset), "CircularPackingAlongSplinePrimaryDataAsset"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("KuroLevelPlayFlowerPollutionComponent"))
+			if (flowerPollutionComponent.ObstaclePbDataIds == null)
 			{
-				if (flowerPollutionComponent.KuroLevelPlayFlowerPollutionComponent == null)
-				{
-					this.KuroLevelPlayFlowerPollutionComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UKuroLevelPlayFlowerPollutionComponent>(this.KuroLevelPlayFlowerPollutionComponent), "KuroLevelPlayFlowerPollutionComponent"))
-				{
-					return false;
-				}
+				this.ObstaclePbDataIds = null;
 			}
-			if (base.CanResetComponentProperty("AsyncTasksDone"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ObstaclePbDataIds), "ObstaclePbDataIds"))
 			{
-				this.AsyncTasksDone = flowerPollutionComponent.AsyncTasksDone;
+				return false;
 			}
-			if (base.CanResetComponentProperty("OnEnterPollutionRangeActions"))
+			if (flowerPollutionComponent.CurrentObstaclePbDataIds == null)
 			{
-				if (flowerPollutionComponent.OnEnterPollutionRangeActions == null)
-				{
-					this.OnEnterPollutionRangeActions = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<ActionInfo>>(this.OnEnterPollutionRangeActions), "OnEnterPollutionRangeActions"))
-				{
-					return false;
-				}
+				this.CurrentObstaclePbDataIds = null;
 			}
-			if (base.CanResetComponentProperty("OnLeavePollutionRangeActions"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.CurrentObstaclePbDataIds), "CurrentObstaclePbDataIds"))
 			{
-				if (flowerPollutionComponent.OnLeavePollutionRangeActions == null)
-				{
-					this.OnLeavePollutionRangeActions = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<ActionInfo>>(this.OnLeavePollutionRangeActions), "OnLeavePollutionRangeActions"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("PlayerInPollutionRange"))
+			if (flowerPollutionComponent.CreatureDataComponent == null)
 			{
-				this.PlayerInPollutionRange = flowerPollutionComponent.PlayerInPollutionRange;
+				this.CreatureDataComponent = null;
 			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComponent), "CreatureDataComponent"))
+			{
+				return false;
+			}
+			if (flowerPollutionComponent.ActorComponent == null)
+			{
+				this.ActorComponent = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComponent), "ActorComponent"))
+			{
+				return false;
+			}
+			if (flowerPollutionComponent.Consumer == null)
+			{
+				this.Consumer = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Consumer), "Consumer"))
+			{
+				return false;
+			}
+			this.CircularPackingAlongSplinePrimaryDataAssetPath = flowerPollutionComponent.CircularPackingAlongSplinePrimaryDataAssetPath;
+			if (flowerPollutionComponent.CircularPackingAlongSplinePrimaryDataAsset == null)
+			{
+				this.CircularPackingAlongSplinePrimaryDataAsset = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CircularPackingAlongSplinePrimaryDataAsset), "CircularPackingAlongSplinePrimaryDataAsset"))
+			{
+				return false;
+			}
+			if (flowerPollutionComponent.KuroLevelPlayFlowerPollutionComponent == null)
+			{
+				this.KuroLevelPlayFlowerPollutionComponent = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.KuroLevelPlayFlowerPollutionComponent), "KuroLevelPlayFlowerPollutionComponent"))
+			{
+				return false;
+			}
+			this.AsyncTasksDone = flowerPollutionComponent.AsyncTasksDone;
+			if (flowerPollutionComponent.OnEnterPollutionRangeActions == null)
+			{
+				this.OnEnterPollutionRangeActions = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnEnterPollutionRangeActions), "OnEnterPollutionRangeActions"))
+			{
+				return false;
+			}
+			if (flowerPollutionComponent.OnLeavePollutionRangeActions == null)
+			{
+				this.OnLeavePollutionRangeActions = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnLeavePollutionRangeActions), "OnLeavePollutionRangeActions"))
+			{
+				return false;
+			}
+			this.PlayerInPollutionRange = flowerPollutionComponent.PlayerInPollutionRange;
 			return true;
 		}
 
-		// Token: 0x0402599E RID: 154014
+		// Token: 0x1700738F RID: 29583
+		// (get) Token: 0x0603D0D4 RID: 250068 RVA: 0x0118FDF8 File Offset: 0x0118DFF8
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007390 RID: 29584
+		// (get) Token: 0x0603D0D5 RID: 250069 RVA: 0x0118FDFB File Offset: 0x0118DFFB
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0402060D RID: 132621
 		private static readonly FName pollutionCenterSizeName = FNameUtil.GetDynamicFName("PollutionCenterSize").Value;
 
-		// Token: 0x0402599F RID: 154015
+		// Token: 0x0402060E RID: 132622
 		private static readonly string LoadCircularPackingAlongSplinePrimaryDataAsset = "LoadCircularPackingAlongSplinePrimaryDataAsset";
 
-		// Token: 0x040259A0 RID: 154016
+		// Token: 0x0402060F RID: 132623
 		private static readonly string StringWaitEntitiesActivate = "WaitEntitiesActivate";
 
-		// Token: 0x040259A1 RID: 154017
+		// Token: 0x04020610 RID: 132624
 		private static readonly string StringAddFlowerPollutionComponent = "AddFlowerPollutionComponent";
 
-		// Token: 0x040259A2 RID: 154018
+		// Token: 0x04020611 RID: 132625
 		private static readonly string StringAsyncTasksDone = "AsyncTasksDone";
 
-		// Token: 0x040259A3 RID: 154019
+		// Token: 0x04020612 RID: 132626
 		private static readonly string StringWaitSelfEntityStart = "WaitSelfEntityStart";
 
-		// Token: 0x040259A4 RID: 154020
+		// Token: 0x04020613 RID: 132627
 		[Nullable(2)]
 		private CustomPromise<bool?> WaitEntitiesActivate;
 
-		// Token: 0x040259A5 RID: 154021
+		// Token: 0x04020614 RID: 132628
 		[Nullable(2)]
 		private CustomPromise<bool> WaitSelfEntityStart;
 
-		// Token: 0x040259A6 RID: 154022
+		// Token: 0x04020615 RID: 132629
 		[Nullable(2)]
 		private Dictionary<int, bool> SplineValues;
 
-		// Token: 0x040259A7 RID: 154023
+		// Token: 0x04020616 RID: 132630
 		private List<int> PointLightPbDataIds = new List<int>();
 
-		// Token: 0x040259A8 RID: 154024
+		// Token: 0x04020617 RID: 132631
 		private List<IPointLightOperations> PointLightOperations = new List<IPointLightOperations>();
 
-		// Token: 0x040259A9 RID: 154025
+		// Token: 0x04020618 RID: 132632
 		[Nullable(new byte[]
 		{
 			2,
@@ -977,7 +940,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 		})]
 		private Dictionary<int, IKuroLevelPlayPointLight> PointLightsInfo;
 
-		// Token: 0x040259AA RID: 154026
+		// Token: 0x04020619 RID: 132633
 		[Nullable(new byte[]
 		{
 			2,
@@ -985,46 +948,46 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 		})]
 		private TMap<int, FKuroLevelPlayPointLight> MapPointLightsInfo;
 
-		// Token: 0x040259AB RID: 154027
+		// Token: 0x0402061A RID: 132634
 		private List<int> ObstaclePbDataIds = new List<int>();
 
-		// Token: 0x040259AC RID: 154028
+		// Token: 0x0402061B RID: 132635
 		[Nullable(2)]
 		private HashSet<int> CurrentObstaclePbDataIds;
 
-		// Token: 0x040259AD RID: 154029
+		// Token: 0x0402061C RID: 132636
 		[Nullable(2)]
 		private CreatureDataComponent CreatureDataComponent;
 
-		// Token: 0x040259AE RID: 154030
+		// Token: 0x0402061D RID: 132637
 		[Nullable(2)]
 		private BaseActorComponent ActorComponent;
 
-		// Token: 0x040259AF RID: 154031
+		// Token: 0x0402061E RID: 132638
 		[Nullable(2)]
 		private AActor Consumer;
 
-		// Token: 0x040259B0 RID: 154032
+		// Token: 0x0402061F RID: 132639
 		private string CircularPackingAlongSplinePrimaryDataAssetPath = "";
 
-		// Token: 0x040259B1 RID: 154033
+		// Token: 0x04020620 RID: 132640
 		[Nullable(2)]
 		private UKuroLevelPlayCircularPackingAlongSplinePrimaryDataAsset CircularPackingAlongSplinePrimaryDataAsset;
 
-		// Token: 0x040259B2 RID: 154034
+		// Token: 0x04020621 RID: 132641
 		[Nullable(2)]
 		private UKuroLevelPlayFlowerPollutionComponent KuroLevelPlayFlowerPollutionComponent;
 
-		// Token: 0x040259B3 RID: 154035
+		// Token: 0x04020622 RID: 132642
 		private bool AsyncTasksDone;
 
-		// Token: 0x040259B4 RID: 154036
+		// Token: 0x04020623 RID: 132643
 		public List<ActionInfo> OnEnterPollutionRangeActions = new List<ActionInfo>();
 
-		// Token: 0x040259B5 RID: 154037
+		// Token: 0x04020624 RID: 132644
 		public List<ActionInfo> OnLeavePollutionRangeActions = new List<ActionInfo>();
 
-		// Token: 0x040259B6 RID: 154038
+		// Token: 0x04020625 RID: 132645
 		private bool PlayerInPollutionRange;
 	}
 }

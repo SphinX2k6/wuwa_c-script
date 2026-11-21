@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200747F RID: 29823
+	// Token: 0x02007C72 RID: 31858
 	public class ITriggeredVehicleT
 	{
-		// Token: 0x1700E269 RID: 57961
-		// (get) Token: 0x06036326 RID: 221990 RVA: 0x0075E546 File Offset: 0x0075C746
-		// (set) Token: 0x06036327 RID: 221991 RVA: 0x0075E54E File Offset: 0x0075C74E
+		// Token: 0x1700EE86 RID: 61062
+		// (get) Token: 0x0603970F RID: 235279 RVA: 0x007C1272 File Offset: 0x007BF472
+		// (set) Token: 0x06039710 RID: 235280 RVA: 0x007C127A File Offset: 0x007BF47A
 		public ETargetVehicle Type { get; set; }
 
-		// Token: 0x06036328 RID: 221992 RVA: 0x0075E557 File Offset: 0x0075C757
+		// Token: 0x06039711 RID: 235281 RVA: 0x007C1283 File Offset: 0x007BF483
 		public ITriggeredVehicleT()
 		{
 			this.Type = ETargetVehicle.Current;

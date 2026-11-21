@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020017DA RID: 6106
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001961 RID: 6497
 	public class IAssistCharacterMoveType
 	{
-		// Token: 0x06008319 RID: 33561 RVA: 0x001393F0 File Offset: 0x001375F0
+		// Token: 0x06008A2B RID: 35371 RVA: 0x001489D8 File Offset: 0x00146BD8
 		private IAssistCharacterMoveType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600831A RID: 33562 RVA: 0x00139428 File Offset: 0x00137628
+		// Token: 0x06008A2C RID: 35372 RVA: 0x00148A10 File Offset: 0x00146C10
 		public static IAssistCharacterMoveType Create([Nullable(2)] IAssistCharacterMoveType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600831B RID: 33563 RVA: 0x0013943B File Offset: 0x0013763B
+		// Token: 0x06008A2D RID: 35373 RVA: 0x00148A23 File Offset: 0x00146C23
 		public static IAssistCharacterMoveType CreateFromSetValue([Nullable(2)] IAssistCharacterMoveType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600831C RID: 33564 RVA: 0x0013944E File Offset: 0x0013764E
+		// Token: 0x06008A2E RID: 35374 RVA: 0x00148A36 File Offset: 0x00146C36
 		public IAssistCharacterMoveType_SetValue ToSetValue()
 		{
 			return new IAssistCharacterMoveType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002B1A RID: 11034
-		// (get) Token: 0x0600831D RID: 33565 RVA: 0x00139461 File Offset: 0x00137661
-		// (set) Token: 0x0600831E RID: 33566 RVA: 0x0013948C File Offset: 0x0013768C
+		// Token: 0x17002D10 RID: 11536
+		// (get) Token: 0x06008A2F RID: 35375 RVA: 0x00148A49 File Offset: 0x00146C49
+		// (set) Token: 0x06008A30 RID: 35376 RVA: 0x00148A74 File Offset: 0x00146C74
 		public virtual EAssistCharacterMoveType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005341 RID: 21313
+		// Token: 0x04005785 RID: 22405
 		[Nullable(2)]
 		protected IAssistCharacterMoveType FbInstance;
 
-		// Token: 0x04005342 RID: 21314
+		// Token: 0x04005786 RID: 22406
 		[Nullable(2)]
 		protected IAssistCharacterMoveType_SetValue PocoInterface;
 	}

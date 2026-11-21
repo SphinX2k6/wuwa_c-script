@@ -2,40 +2,40 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x020048BD RID: 18621
+	// Token: 0x02004D22 RID: 19746
 	public class IUgsSyncDataT
 	{
-		// Token: 0x17008711 RID: 34577
-		// (get) Token: 0x0601D164 RID: 119140 RVA: 0x0041B590 File Offset: 0x00419790
-		// (set) Token: 0x0601D165 RID: 119141 RVA: 0x0041B598 File Offset: 0x00419798
+		// Token: 0x17008D59 RID: 36185
+		// (get) Token: 0x0601E951 RID: 125265 RVA: 0x00447D2C File Offset: 0x00445F2C
+		// (set) Token: 0x0601E952 RID: 125266 RVA: 0x00447D34 File Offset: 0x00445F34
 		public EP4SyncMethodType Type { get; set; }
 
-		// Token: 0x17008712 RID: 34578
-		// (get) Token: 0x0601D166 RID: 119142 RVA: 0x0041B5A1 File Offset: 0x004197A1
-		// (set) Token: 0x0601D167 RID: 119143 RVA: 0x0041B5A9 File Offset: 0x004197A9
+		// Token: 0x17008D5A RID: 36186
+		// (get) Token: 0x0601E953 RID: 125267 RVA: 0x00447D3D File Offset: 0x00445F3D
+		// (set) Token: 0x0601E954 RID: 125268 RVA: 0x00447D45 File Offset: 0x00445F45
 		public string ClientName { get; set; }
 
-		// Token: 0x17008713 RID: 34579
-		// (get) Token: 0x0601D168 RID: 119144 RVA: 0x0041B5B2 File Offset: 0x004197B2
-		// (set) Token: 0x0601D169 RID: 119145 RVA: 0x0041B5BA File Offset: 0x004197BA
+		// Token: 0x17008D5B RID: 36187
+		// (get) Token: 0x0601E955 RID: 125269 RVA: 0x00447D4E File Offset: 0x00445F4E
+		// (set) Token: 0x0601E956 RID: 125270 RVA: 0x00447D56 File Offset: 0x00445F56
 		public string StreamName { get; set; }
 
-		// Token: 0x17008714 RID: 34580
-		// (get) Token: 0x0601D16A RID: 119146 RVA: 0x0041B5C3 File Offset: 0x004197C3
-		// (set) Token: 0x0601D16B RID: 119147 RVA: 0x0041B5CB File Offset: 0x004197CB
+		// Token: 0x17008D5C RID: 36188
+		// (get) Token: 0x0601E957 RID: 125271 RVA: 0x00447D5F File Offset: 0x00445F5F
+		// (set) Token: 0x0601E958 RID: 125272 RVA: 0x00447D67 File Offset: 0x00445F67
 		public int CurrentChangeNumber { get; set; }
 
-		// Token: 0x17008715 RID: 34581
-		// (get) Token: 0x0601D16C RID: 119148 RVA: 0x0041B5D4 File Offset: 0x004197D4
-		// (set) Token: 0x0601D16D RID: 119149 RVA: 0x0041B5DC File Offset: 0x004197DC
+		// Token: 0x17008D5D RID: 36189
+		// (get) Token: 0x0601E959 RID: 125273 RVA: 0x00447D70 File Offset: 0x00445F70
+		// (set) Token: 0x0601E95A RID: 125274 RVA: 0x00447D78 File Offset: 0x00445F78
 		public string LastSyncTime { get; set; }
 
-		// Token: 0x17008716 RID: 34582
-		// (get) Token: 0x0601D16E RID: 119150 RVA: 0x0041B5E5 File Offset: 0x004197E5
-		// (set) Token: 0x0601D16F RID: 119151 RVA: 0x0041B5ED File Offset: 0x004197ED
+		// Token: 0x17008D5E RID: 36190
+		// (get) Token: 0x0601E95B RID: 125275 RVA: 0x00447D81 File Offset: 0x00445F81
+		// (set) Token: 0x0601E95C RID: 125276 RVA: 0x00447D89 File Offset: 0x00445F89
 		public int Timestamp { get; set; }
 
-		// Token: 0x0601D170 RID: 119152 RVA: 0x0041B5F6 File Offset: 0x004197F6
+		// Token: 0x0601E95D RID: 125277 RVA: 0x00447D92 File Offset: 0x00445F92
 		public IUgsSyncDataT()
 		{
 			this.Type = EP4SyncMethodType.EditorSavior;

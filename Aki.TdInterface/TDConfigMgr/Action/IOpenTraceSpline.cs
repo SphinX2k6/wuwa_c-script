@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CB4 RID: 7348
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001EBB RID: 7867
 	public class IOpenTraceSpline : ToggleScanSplineEffect
 	{
-		// Token: 0x06009DBD RID: 40381 RVA: 0x00169234 File Offset: 0x00167434
+		// Token: 0x0600A76B RID: 42859 RVA: 0x0017CE94 File Offset: 0x0017B094
 		private IOpenTraceSpline_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009DBE RID: 40382 RVA: 0x0016926C File Offset: 0x0016746C
+		// Token: 0x0600A76C RID: 42860 RVA: 0x0017CECC File Offset: 0x0017B0CC
 		public static IOpenTraceSpline Create([Nullable(2)] IOpenTraceSpline instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009DBF RID: 40383 RVA: 0x0016927F File Offset: 0x0016747F
+		// Token: 0x0600A76D RID: 42861 RVA: 0x0017CEDF File Offset: 0x0017B0DF
 		public static IOpenTraceSpline CreateFromSetValue([Nullable(2)] IOpenTraceSpline_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009DC0 RID: 40384 RVA: 0x00169292 File Offset: 0x00167492
+		// Token: 0x0600A76E RID: 42862 RVA: 0x0017CEF2 File Offset: 0x0017B0F2
 		public new IOpenTraceSpline_SetValue ToSetValue()
 		{
 			return new IOpenTraceSpline_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003127 RID: 12583
-		// (get) Token: 0x06009DC1 RID: 40385 RVA: 0x001692BD File Offset: 0x001674BD
-		// (set) Token: 0x06009DC2 RID: 40386 RVA: 0x001692E8 File Offset: 0x001674E8
+		// Token: 0x170033AB RID: 13227
+		// (get) Token: 0x0600A76F RID: 42863 RVA: 0x0017CF1D File Offset: 0x0017B11D
+		// (set) Token: 0x0600A770 RID: 42864 RVA: 0x0017CF48 File Offset: 0x0017B148
 		public override ETraceSplineOptionType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003128 RID: 12584
-		// (get) Token: 0x06009DC3 RID: 40387 RVA: 0x001692F6 File Offset: 0x001674F6
-		// (set) Token: 0x06009DC4 RID: 40388 RVA: 0x00169321 File Offset: 0x00167521
+		// Token: 0x170033AC RID: 13228
+		// (get) Token: 0x0600A771 RID: 42865 RVA: 0x0017CF56 File Offset: 0x0017B156
+		// (set) Token: 0x0600A772 RID: 42866 RVA: 0x0017CF81 File Offset: 0x0017B181
 		public virtual int SplineEntityId
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003129 RID: 12585
-		// (get) Token: 0x06009DC5 RID: 40389 RVA: 0x0016932F File Offset: 0x0016752F
-		// (set) Token: 0x06009DC6 RID: 40390 RVA: 0x0016935E File Offset: 0x0016755E
+		// Token: 0x170033AD RID: 13229
+		// (get) Token: 0x0600A773 RID: 42867 RVA: 0x0017CF8F File Offset: 0x0017B18F
+		// (set) Token: 0x0600A774 RID: 42868 RVA: 0x0017CFBE File Offset: 0x0017B1BE
 		public virtual float Duration
 		{
 			get
@@ -130,11 +128,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005F74 RID: 24436
+		// Token: 0x040064D0 RID: 25808
 		[Nullable(2)]
 		protected new IOpenTraceSpline FbInstance;
 
-		// Token: 0x04005F75 RID: 24437
+		// Token: 0x040064D1 RID: 25809
 		[Nullable(2)]
 		protected new IOpenTraceSpline_SetValue PocoInterface;
 	}

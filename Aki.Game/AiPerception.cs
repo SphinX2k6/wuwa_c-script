@@ -11,7 +11,7 @@ using UnrealEngine;
 [Nullable(0)]
 public class AiPerception : IAiPerception
 {
-	// Token: 0x06000DD1 RID: 3537 RVA: 0x0004D294 File Offset: 0x0004B494
+	// Token: 0x06000DD7 RID: 3543 RVA: 0x0004DE24 File Offset: 0x0004C024
 	public AiPerception(AiController aiController, AiSenseGroup aiSenseGroup, AiSense[] aiSenses)
 	{
 		this.AiController = aiController;
@@ -49,7 +49,7 @@ public class AiPerception : IAiPerception
 		this.InitTraceInfo();
 	}
 
-	// Token: 0x06000DD2 RID: 3538 RVA: 0x0004D551 File Offset: 0x0004B751
+	// Token: 0x06000DD8 RID: 3544 RVA: 0x0004E0E1 File Offset: 0x0004C2E1
 	private void InitTraceInfo()
 	{
 		this.LineTrace = new UTraceLineElement();
@@ -58,7 +58,7 @@ public class AiPerception : IAiPerception
 		this.LineTrace.bIgnoreSelf = true;
 	}
 
-	// Token: 0x06000DD3 RID: 3539 RVA: 0x0004D594 File Offset: 0x0004B794
+	// Token: 0x06000DD9 RID: 3545 RVA: 0x0004E124 File Offset: 0x0004C324
 	public override string GetEnableAiSenseDebug()
 	{
 		string text = "感知配置激活情况: ";
@@ -73,7 +73,7 @@ public class AiPerception : IAiPerception
 		return text;
 	}
 
-	// Token: 0x06000DD4 RID: 3540 RVA: 0x0004D634 File Offset: 0x0004B834
+	// Token: 0x06000DDA RID: 3546 RVA: 0x0004E1C4 File Offset: 0x0004C3C4
 	private unsafe void EnableAiSenseInternal(AiSenseObject aiSenseObject, bool enable)
 	{
 		HashSet<AiSenseObject> hashSet = this.ActivateAiSenseObjects[(ESenseTargetType)aiSenseObject.AiSense.SenseTarget];
@@ -114,7 +114,7 @@ public class AiPerception : IAiPerception
 		hashSet.Remove(aiSenseObject);
 	}
 
-	// Token: 0x06000DD5 RID: 3541 RVA: 0x0004D767 File Offset: 0x0004B967
+	// Token: 0x06000DDB RID: 3547 RVA: 0x0004E2F7 File Offset: 0x0004C4F7
 	public override void SetAiSenseEnable(int index, bool enable)
 	{
 		if (index < 0 || this.AiSenseObjects.Count <= index)
@@ -124,7 +124,7 @@ public class AiPerception : IAiPerception
 		this.EnableAiSenseInternal(this.AiSenseObjects[index], enable);
 	}
 
-	// Token: 0x06000DD6 RID: 3542 RVA: 0x0004D790 File Offset: 0x0004B990
+	// Token: 0x06000DDC RID: 3548 RVA: 0x0004E320 File Offset: 0x0004C520
 	public override void SetAiSenseEnableWithoutForbidAllSense(bool enable)
 	{
 		if (this.AiSenseObjects.Count <= 0)
@@ -137,7 +137,7 @@ public class AiPerception : IAiPerception
 		}
 	}
 
-	// Token: 0x06000DD7 RID: 3543 RVA: 0x0004D7F4 File Offset: 0x0004B9F4
+	// Token: 0x06000DDD RID: 3549 RVA: 0x0004E384 File Offset: 0x0004C584
 	public override void SetAllAiSenseEnable(bool enable)
 	{
 		if (!enable)
@@ -170,7 +170,7 @@ public class AiPerception : IAiPerception
 		instance.Info(flag, entity2, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x06000DD8 RID: 3544 RVA: 0x0004D90C File Offset: 0x0004BB0C
+	// Token: 0x06000DDE RID: 3550 RVA: 0x0004E49C File Offset: 0x0004C69C
 	public override void AddOrRemoveAiSense(int aiSenseId, bool add)
 	{
 		if (add && !this.ExtraAiSenseObjects.ContainsKey(aiSenseId))
@@ -189,7 +189,7 @@ public class AiPerception : IAiPerception
 		this.EnableAiSenseInternal(aiSenseObject, add);
 	}
 
-	// Token: 0x06000DD9 RID: 3545 RVA: 0x0004D978 File Offset: 0x0004BB78
+	// Token: 0x06000DDF RID: 3551 RVA: 0x0004E508 File Offset: 0x0004C708
 	public override void EnableAiSenseByType(int type, bool enable)
 	{
 		foreach (AiSenseObject aiSenseObject in this.AiSenseObjects)
@@ -208,7 +208,7 @@ public class AiPerception : IAiPerception
 		}
 	}
 
-	// Token: 0x06000DDA RID: 3546 RVA: 0x0004DA40 File Offset: 0x0004BC40
+	// Token: 0x06000DE0 RID: 3552 RVA: 0x0004E5D0 File Offset: 0x0004C7D0
 	public override void Clear(bool allClear = true, bool collectEvent = false)
 	{
 		if (collectEvent)
@@ -243,7 +243,7 @@ public class AiPerception : IAiPerception
 		}
 	}
 
-	// Token: 0x06000DDB RID: 3547 RVA: 0x0004DBD0 File Offset: 0x0004BDD0
+	// Token: 0x06000DE1 RID: 3553 RVA: 0x0004E760 File Offset: 0x0004C960
 	public override void Tick()
 	{
 		CharacterActorComponent charActorComp = this.AiController.CharActorComp;
@@ -273,7 +273,7 @@ public class AiPerception : IAiPerception
 		this.RefreshAllEnemies();
 	}
 
-	// Token: 0x06000DDC RID: 3548 RVA: 0x0004DCAC File Offset: 0x0004BEAC
+	// Token: 0x06000DE2 RID: 3554 RVA: 0x0004E83C File Offset: 0x0004CA3C
 	private unsafe bool IsActorInSense(Entity entity, bool inSenseBefore, ESenseTargetType senseTargetType, bool debugLog = false)
 	{
 		global::Vector actorLocationProxy = this.AiController.CharActorComp.ActorLocationProxy;
@@ -355,7 +355,7 @@ public class AiPerception : IAiPerception
 		return false;
 	}
 
-	// Token: 0x06000DDD RID: 3549 RVA: 0x0004E058 File Offset: 0x0004C258
+	// Token: 0x06000DE3 RID: 3555 RVA: 0x0004EBE8 File Offset: 0x0004CDE8
 	private void FindNewInSenseActor()
 	{
 		global::Vector actorLocationProxy = this.AiController.CharActorComp.ActorLocationProxy;
@@ -384,7 +384,7 @@ public class AiPerception : IAiPerception
 		}
 	}
 
-	// Token: 0x06000DDE RID: 3550 RVA: 0x0004E238 File Offset: 0x0004C438
+	// Token: 0x06000DE4 RID: 3556 RVA: 0x0004EDC8 File Offset: 0x0004CFC8
 	private void FindOutSenseActor()
 	{
 		this.EntitiesToRemove.Clear();
@@ -450,7 +450,7 @@ public class AiPerception : IAiPerception
 		}
 	}
 
-	// Token: 0x06000DDF RID: 3551 RVA: 0x0004E53C File Offset: 0x0004C73C
+	// Token: 0x06000DE5 RID: 3557 RVA: 0x0004F0CC File Offset: 0x0004D2CC
 	private void SenseActor(Entity entity, bool inSense)
 	{
 		int id = entity.Id;
@@ -504,7 +504,7 @@ public class AiPerception : IAiPerception
 		}
 	}
 
-	// Token: 0x06000DE0 RID: 3552 RVA: 0x0004E64C File Offset: 0x0004C84C
+	// Token: 0x06000DE6 RID: 3558 RVA: 0x0004F1DC File Offset: 0x0004D3DC
 	private void FindShareAlly()
 	{
 		if (this.AiSenseGroup.Value.ShareDis <= 0f)
@@ -564,7 +564,7 @@ public class AiPerception : IAiPerception
 		this.ShareAllyLink = newShareAllyLink;
 	}
 
-	// Token: 0x06000DE1 RID: 3553 RVA: 0x0004E900 File Offset: 0x0004CB00
+	// Token: 0x06000DE7 RID: 3559 RVA: 0x0004F490 File Offset: 0x0004D690
 	private void RefreshAllEnemies()
 	{
 		this.AllEnemies.Clear();
@@ -616,7 +616,7 @@ public class AiPerception : IAiPerception
 		goto IL_BA;
 	}
 
-	// Token: 0x06000DE2 RID: 3554 RVA: 0x0004EB30 File Offset: 0x0004CD30
+	// Token: 0x06000DE8 RID: 3560 RVA: 0x0004F6C0 File Offset: 0x0004D8C0
 	public override void OnEntityCampModified(Entity entity, ECamp oldCamp, ECamp newCamp)
 	{
 		int id = entity.Id;
@@ -679,97 +679,97 @@ public class AiPerception : IAiPerception
 		}
 	}
 
-	// Token: 0x04000B2C RID: 2860
+	// Token: 0x04000B34 RID: 2868
 	private const string PROFILE_KEY = "AiPerception_IsActorInSense";
 
-	// Token: 0x04000B2D RID: 2861
+	// Token: 0x04000B35 RID: 2869
 	public readonly HashSet<int> SceneItems = new HashSet<int>();
 
-	// Token: 0x04000B2E RID: 2862
+	// Token: 0x04000B36 RID: 2870
 	private HashSet<int> NewShareAllyLink = new HashSet<int>();
 
-	// Token: 0x04000B2F RID: 2863
+	// Token: 0x04000B37 RID: 2871
 	private readonly HashSet<int> BeShared = new HashSet<int>();
 
-	// Token: 0x04000B30 RID: 2864
+	// Token: 0x04000B38 RID: 2872
 	private readonly HashSet<int> AddedBeShared = new HashSet<int>();
 
-	// Token: 0x04000B31 RID: 2865
+	// Token: 0x04000B39 RID: 2873
 	private readonly List<int> Pending = new List<int>();
 
-	// Token: 0x04000B32 RID: 2866
+	// Token: 0x04000B3A RID: 2874
 	public Dictionary<int, ESenseTargetType> EntitiesInSense = new Dictionary<int, ESenseTargetType>();
 
-	// Token: 0x04000B33 RID: 2867
+	// Token: 0x04000B3B RID: 2875
 	protected Dictionary<int, ESenseTargetType> EntitiesToAdd = new Dictionary<int, ESenseTargetType>();
 
-	// Token: 0x04000B34 RID: 2868
+	// Token: 0x04000B3C RID: 2876
 	private readonly List<int> EntitiesToRemove = new List<int>();
 
-	// Token: 0x04000B35 RID: 2869
+	// Token: 0x04000B3D RID: 2877
 	private readonly Dictionary<int, float> EntitiesRemoveTime = new Dictionary<int, float>();
 
-	// Token: 0x04000B36 RID: 2870
+	// Token: 0x04000B3E RID: 2878
 	private readonly List<EntityHandle> TmpHandles = new List<EntityHandle>();
 
-	// Token: 0x04000B37 RID: 2871
+	// Token: 0x04000B3F RID: 2879
 	private readonly global::Vector TmpVector;
 
-	// Token: 0x04000B38 RID: 2872
+	// Token: 0x04000B40 RID: 2880
 	private readonly HashSet<int> TmpCheckedTraceType = new HashSet<int>();
 
-	// Token: 0x04000B39 RID: 2873
+	// Token: 0x04000B41 RID: 2881
 	private ECamp Camp;
 
-	// Token: 0x04000B3A RID: 2874
+	// Token: 0x04000B42 RID: 2882
 	private readonly int EntityId;
 
-	// Token: 0x04000B3B RID: 2875
+	// Token: 0x04000B43 RID: 2883
 	private readonly List<AiSenseObject> AiSenseObjects = new List<AiSenseObject>();
 
-	// Token: 0x04000B3C RID: 2876
+	// Token: 0x04000B44 RID: 2884
 	private readonly Dictionary<int, AiSenseObject> ExtraAiSenseObjects = new Dictionary<int, AiSenseObject>();
 
-	// Token: 0x04000B3D RID: 2877
+	// Token: 0x04000B45 RID: 2885
 	private readonly float SquaredShareDist;
 
-	// Token: 0x04000B3E RID: 2878
+	// Token: 0x04000B46 RID: 2886
 	private readonly Dictionary<ESenseTargetType, HashSet<AiSenseObject>> ActivateAiSenseObjects = new Dictionary<ESenseTargetType, HashSet<AiSenseObject>>();
 
-	// Token: 0x04000B3F RID: 2879
+	// Token: 0x04000B47 RID: 2887
 	private int WithAngleHorizontalCount;
 
-	// Token: 0x04000B40 RID: 2880
+	// Token: 0x04000B48 RID: 2888
 	private int WithAngleVerticalCount;
 
-	// Token: 0x04000B41 RID: 2881
+	// Token: 0x04000B49 RID: 2889
 	[Nullable(2)]
 	private UTraceLineElement LineTrace;
 
-	// Token: 0x04000B42 RID: 2882
+	// Token: 0x04000B4A RID: 2890
 	private bool ForbidAllSense;
 
-	// Token: 0x04000B43 RID: 2883
+	// Token: 0x04000B4B RID: 2891
 	public readonly AiController AiController;
 
-	// Token: 0x04000B44 RID: 2884
+	// Token: 0x04000B4C RID: 2892
 	public readonly AiSenseGroup? AiSenseGroup;
 
-	// Token: 0x04000B45 RID: 2885
+	// Token: 0x04000B4D RID: 2893
 	private readonly Stat IsActorInSenseStat = Stat.Create("IsActorInSense", "", "");
 
-	// Token: 0x04000B46 RID: 2886
+	// Token: 0x04000B4E RID: 2894
 	private readonly Stat FindNewInSenseActorStat = Stat.Create("FindNewInSenseActor", "", "");
 
-	// Token: 0x04000B47 RID: 2887
+	// Token: 0x04000B4F RID: 2895
 	private readonly Stat FindOutSenseActorStat = Stat.Create("FindOutSenseActor", "", "");
 
-	// Token: 0x04000B48 RID: 2888
+	// Token: 0x04000B50 RID: 2896
 	private readonly Stat SenseActorStat = Stat.Create("SenseActor", "", "");
 
-	// Token: 0x04000B49 RID: 2889
+	// Token: 0x04000B51 RID: 2897
 	private readonly Stat FindShareAllyStat = Stat.Create("FindShareAlly", "", "");
 
-	// Token: 0x04000B4A RID: 2890
+	// Token: 0x04000B52 RID: 2898
 	private readonly Stat RefreshAllEnemiesStat = Stat.Create("RefreshAllEnemies", "", "");
 }

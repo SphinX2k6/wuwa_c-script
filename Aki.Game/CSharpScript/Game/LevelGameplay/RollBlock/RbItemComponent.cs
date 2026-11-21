@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.RollBlock
 {
-	// Token: 0x02006AA2 RID: 27298
+	// Token: 0x02005BFF RID: 23551
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RbItemComponent : RbBaseComponent
 	{
-		// Token: 0x06043D1A RID: 277786 RVA: 0x0109A390 File Offset: 0x01098590
+		// Token: 0x06039D6C RID: 236908 RVA: 0x0103EAD4 File Offset: 0x0103CCD4
 		protected override bool OnStart()
 		{
 			this.CreatureDataComp = base.Entity.GetComponent<CreatureDataComponent>();
@@ -51,13 +51,13 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			return true;
 		}
 
-		// Token: 0x06043D1B RID: 277787 RVA: 0x0109A484 File Offset: 0x01098684
+		// Token: 0x06039D6D RID: 236909 RVA: 0x0103EBC8 File Offset: 0x0103CDC8
 		public override void OnActualShow()
 		{
 			this.InitItemLogic();
 		}
 
-		// Token: 0x06043D1C RID: 277788 RVA: 0x0109A48C File Offset: 0x0109868C
+		// Token: 0x06039D6E RID: 236910 RVA: 0x0103EBD0 File Offset: 0x0103CDD0
 		private void InitItemLogic()
 		{
 			RbItemComponentPb rbItemInfo = this.CreatureDataComp.RbItemInfo;
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			}
 		}
 
-		// Token: 0x06043D1D RID: 277789 RVA: 0x0109A538 File Offset: 0x01098738
+		// Token: 0x06039D6F RID: 236911 RVA: 0x0103EC7C File Offset: 0x0103CE7C
 		protected override void OnEnable()
 		{
 			if (!EventSystem.Instance.HasWithTarget<int, bool>(base.Entity, EEventName.OnSceneItemStateChange, new Action<int, bool>(this.OnSceneItemStateChange)))
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			}
 		}
 
-		// Token: 0x06043D1E RID: 277790 RVA: 0x0109A614 File Offset: 0x01098814
+		// Token: 0x06039D70 RID: 236912 RVA: 0x0103ED58 File Offset: 0x0103CF58
 		protected override void OnDisable(string reason)
 		{
 			if (this.ItemLogic != null)
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			}
 		}
 
-		// Token: 0x06043D1F RID: 277791 RVA: 0x0109A70C File Offset: 0x0109890C
+		// Token: 0x06039D71 RID: 236913 RVA: 0x0103EE50 File Offset: 0x0103D050
 		public void UpdateRollBlockItem(RbItemComponentPb rbItemInfo)
 		{
 			if (rbItemInfo == null)
@@ -149,8 +149,8 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			}
 		}
 
-		// Token: 0x17009947 RID: 39239
-		// (get) Token: 0x06043D20 RID: 277792 RVA: 0x0109A7A6 File Offset: 0x010989A6
+		// Token: 0x17006E30 RID: 28208
+		// (get) Token: 0x06039D72 RID: 236914 RVA: 0x0103EEEA File Offset: 0x0103D0EA
 		public FTransformDouble ActorTransform
 		{
 			get
@@ -159,8 +159,8 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			}
 		}
 
-		// Token: 0x17009948 RID: 39240
-		// (get) Token: 0x06043D21 RID: 277793 RVA: 0x0109A7B3 File Offset: 0x010989B3
+		// Token: 0x17006E31 RID: 28209
+		// (get) Token: 0x06039D73 RID: 236915 RVA: 0x0103EEF7 File Offset: 0x0103D0F7
 		public long CreatureDataId
 		{
 			get
@@ -169,8 +169,8 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			}
 		}
 
-		// Token: 0x17009949 RID: 39241
-		// (get) Token: 0x06043D22 RID: 277794 RVA: 0x0109A7C0 File Offset: 0x010989C0
+		// Token: 0x17006E32 RID: 28210
+		// (get) Token: 0x06039D74 RID: 236916 RVA: 0x0103EF04 File Offset: 0x0103D104
 		public SceneItemActorComponent ActorComp
 		{
 			get
@@ -179,13 +179,13 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			}
 		}
 
-		// Token: 0x06043D23 RID: 277795 RVA: 0x0109A7C8 File Offset: 0x010989C8
+		// Token: 0x06039D75 RID: 236917 RVA: 0x0103EF0C File Offset: 0x0103D10C
 		private void OnSceneItemStateChange(int stateId, bool _)
 		{
 			this.OnStateChange(stateId);
 		}
 
-		// Token: 0x06043D24 RID: 277796 RVA: 0x0109A7D1 File Offset: 0x010989D1
+		// Token: 0x06039D76 RID: 236918 RVA: 0x0103EF15 File Offset: 0x0103D115
 		public void OnStateChange(int stateId)
 		{
 			if (this.ItemLogic != null)
@@ -194,7 +194,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 			}
 		}
 
-		// Token: 0x06043D25 RID: 277797 RVA: 0x0109A7E8 File Offset: 0x010989E8
+		// Token: 0x06039D77 RID: 236919 RVA: 0x0103EF2C File Offset: 0x0103D12C
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -202,51 +202,72 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock
 				return false;
 			}
 			RbItemComponent rbItemComponent = (RbItemComponent)componentTemplate;
-			if (base.CanResetComponentProperty("CreatureDataComp"))
+			if (rbItemComponent.CreatureDataComp == null)
 			{
-				if (rbItemComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
+				this.CreatureDataComp = null;
 			}
-			if (base.CanResetComponentProperty("ActorCompInternal"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 			{
-				if (rbItemComponent.ActorCompInternal == null)
-				{
-					this.ActorCompInternal = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorCompInternal), "ActorCompInternal"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("ItemLogic"))
+			if (rbItemComponent.ActorCompInternal == null)
 			{
-				if (rbItemComponent.ItemLogic == null)
-				{
-					this.ItemLogic = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<RbItemLogicBase>(this.ItemLogic), "ItemLogic"))
-				{
-					return false;
-				}
+				this.ActorCompInternal = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorCompInternal), "ActorCompInternal"))
+			{
+				return false;
+			}
+			if (rbItemComponent.ItemLogic == null)
+			{
+				this.ItemLogic = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ItemLogic), "ItemLogic"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x040236E7 RID: 145127
+		// Token: 0x17006E33 RID: 28211
+		// (get) Token: 0x06039D78 RID: 236920 RVA: 0x0103EFCD File Offset: 0x0103D1CD
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17006E34 RID: 28212
+		// (get) Token: 0x06039D79 RID: 236921 RVA: 0x0103EFD0 File Offset: 0x0103D1D0
+		public override bool NeedEnableInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17006E35 RID: 28213
+		// (get) Token: 0x06039D7A RID: 236922 RVA: 0x0103EFD3 File Offset: 0x0103D1D3
+		public override bool NeedDisableInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401E8D9 RID: 125145
 		[Nullable(2)]
 		private CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x040236E8 RID: 145128
+		// Token: 0x0401E8DA RID: 125146
 		[Nullable(2)]
 		private SceneItemActorComponent ActorCompInternal;
 
-		// Token: 0x040236E9 RID: 145129
+		// Token: 0x0401E8DB RID: 125147
 		[Nullable(2)]
 		private RbItemLogicBase ItemLogic;
 	}

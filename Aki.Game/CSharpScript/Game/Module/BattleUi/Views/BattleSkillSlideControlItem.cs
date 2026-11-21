@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CF1 RID: 23793
+	// Token: 0x02004CD3 RID: 19667
 	public class BattleSkillSlideControlItem : UiPanelBase
 	{
-		// Token: 0x0603C406 RID: 246790 RVA: 0x00E6C5F4 File Offset: 0x00E6A7F4
+		// Token: 0x0603135C RID: 201564 RVA: 0x00DBCBA8 File Offset: 0x00DBADA8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C407 RID: 246791 RVA: 0x00E6C67E File Offset: 0x00E6A87E
+		// Token: 0x0603135D RID: 201565 RVA: 0x00DBCC32 File Offset: 0x00DBAE32
 		protected override void OnStart()
 		{
 			this.tweenAnimPlayer.InitTweenAnim(1, base.GetItem(1), false);
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetComponentActive(this.TargetActive);
 		}
 
-		// Token: 0x0603C408 RID: 246792 RVA: 0x00E6C6B4 File Offset: 0x00E6A8B4
+		// Token: 0x0603135E RID: 201566 RVA: 0x00DBCC68 File Offset: 0x00DBAE68
 		protected override void OnBeforeShow()
 		{
 			base.OnBeforeShow();
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.tweenAnimPlayer.PlayTweenAnim(1);
 		}
 
-		// Token: 0x0603C409 RID: 246793 RVA: 0x00E6C72C File Offset: 0x00E6A92C
+		// Token: 0x0603135F RID: 201567 RVA: 0x00DBCCE0 File Offset: 0x00DBAEE0
 		protected override void OnBeforeHide()
 		{
 			base.OnBeforeHide();
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.tweenAnimPlayer.PlayTweenAnim(2);
 		}
 
-		// Token: 0x0603C40A RID: 246794 RVA: 0x00E6C786 File Offset: 0x00E6A986
+		// Token: 0x06031360 RID: 201568 RVA: 0x00DBCD3A File Offset: 0x00DBAF3A
 		public void SetComponentActive(bool visibility)
 		{
 			if (this.TargetActive == visibility && !this.IsFirstShow)
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetActive(visibility);
 		}
 
-		// Token: 0x0603C40B RID: 246795 RVA: 0x00E6C7B8 File Offset: 0x00E6A9B8
+		// Token: 0x06031361 RID: 201569 RVA: 0x00DBCD6C File Offset: 0x00DBAF6C
 		public void Tick(float delta)
 		{
 			if (!base.IsShowOrShowing)
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.InputAction(null);
 		}
 
-		// Token: 0x0603C40C RID: 246796 RVA: 0x00E6C838 File Offset: 0x00E6AA38
+		// Token: 0x06031362 RID: 201570 RVA: 0x00DBCDEC File Offset: 0x00DBAFEC
 		[NullableContext(2)]
 		private void InputAction(string inputAction)
 		{
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.LastInputAction = inputAction;
 		}
 
-		// Token: 0x0603C40D RID: 246797 RVA: 0x00E6C890 File Offset: 0x00E6AA90
+		// Token: 0x06031363 RID: 201571 RVA: 0x00DBCE44 File Offset: 0x00DBB044
 		private bool CheckInTouch()
 		{
 			if (Time.Instance.Now < this.NextCheckInTouchTime)
@@ -139,34 +139,34 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return characterController != null && characterController.IsInTouch((float)touchId);
 		}
 
-		// Token: 0x0401F65C RID: 128604
+		// Token: 0x0401A115 RID: 106773
 		private const double CHECK_IN_TOUCH_INTERVAL = 500.0;
 
-		// Token: 0x0401F65D RID: 128605
+		// Token: 0x0401A116 RID: 106774
 		[Nullable(1)]
 		private readonly BattleUiTweenAnimPlayer tweenAnimPlayer = new BattleUiTweenAnimPlayer();
 
-		// Token: 0x0401F65E RID: 128606
+		// Token: 0x0401A117 RID: 106775
 		public bool TargetActive;
 
-		// Token: 0x0401F65F RID: 128607
+		// Token: 0x0401A118 RID: 106776
 		private bool IsFirstShow = true;
 
-		// Token: 0x0401F660 RID: 128608
+		// Token: 0x0401A119 RID: 106777
 		[Nullable(2)]
 		private string LastInputAction;
 
-		// Token: 0x0401F661 RID: 128609
+		// Token: 0x0401A11A RID: 106778
 		private double NextCheckInTouchTime;
 
-		// Token: 0x0200BF50 RID: 48976
+		// Token: 0x0200A956 RID: 43350
 		private enum EChildItem
 		{
-			// Token: 0x04039B34 RID: 236340
+			// Token: 0x040344F6 RID: 214262
 			DragItem,
-			// Token: 0x04039B35 RID: 236341
+			// Token: 0x040344F7 RID: 214263
 			AniArrowIn,
-			// Token: 0x04039B36 RID: 236342
+			// Token: 0x040344F8 RID: 214264
 			AniArrowOut
 		}
 	}

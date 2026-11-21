@@ -6,16 +6,16 @@ using CSharpScript.Game.Module.MapRogue;
 using CSharpScript.Game.Module.Roguelike;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02002925 RID: 10533
+// Token: 0x02001EA0 RID: 7840
 public class RouletteFunctionOpenController : IStaticVariableResetter
 {
-	// Token: 0x06015BDB RID: 89051 RVA: 0x0057BF28 File Offset: 0x0057A128
+	// Token: 0x060135E0 RID: 79328 RVA: 0x005A6F68 File Offset: 0x005A5168
 	static RouletteFunctionOpenController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(RouletteFunctionOpenController.CreateStaticDefaultValue), new Action(RouletteFunctionOpenController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06015BDC RID: 89052 RVA: 0x0057BF48 File Offset: 0x0057A148
+	// Token: 0x060135E1 RID: 79329 RVA: 0x005A6F88 File Offset: 0x005A5188
 	public static void OpenRelateView(ERouletteFuncId rouletteFuncId)
 	{
 		Action action;
@@ -32,7 +32,7 @@ public class RouletteFunctionOpenController : IStaticVariableResetter
 		instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x06015BDD RID: 89053 RVA: 0x0057BF97 File Offset: 0x0057A197
+	// Token: 0x060135E2 RID: 79330 RVA: 0x005A6FD7 File Offset: 0x005A51D7
 	private static void OpenWeeklyRogueInfoView()
 	{
 		if (WeeklyRogueModel.Instance.CheckIsInWeeklyRogue())
@@ -41,7 +41,7 @@ public class RouletteFunctionOpenController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06015BDE RID: 89054 RVA: 0x0057BFB6 File Offset: 0x0057A1B6
+	// Token: 0x060135E3 RID: 79331 RVA: 0x005A6FF6 File Offset: 0x005A51F6
 	private static void OpenRogueResSummaryView()
 	{
 		if (MapRogueController.Instance.CheckInMapRogueInstance())
@@ -50,7 +50,7 @@ public class RouletteFunctionOpenController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06015BDF RID: 89055 RVA: 0x0057BFD5 File Offset: 0x0057A1D5
+	// Token: 0x060135E4 RID: 79332 RVA: 0x005A7015 File Offset: 0x005A5215
 	private static void OpenSurvivorsInfoView()
 	{
 		if (SurvivorsRogueController.Instance.CheckInSurvivorsRogueInstance())
@@ -59,7 +59,7 @@ public class RouletteFunctionOpenController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06015BE0 RID: 89056 RVA: 0x0057BFF4 File Offset: 0x0057A1F4
+	// Token: 0x060135E5 RID: 79333 RVA: 0x005A7034 File Offset: 0x005A5234
 	private static void OpenHonamiStoryQuestView()
 	{
 		if (HonamiStoryUtil.CheckInHonamiStoryAreaDungeon())
@@ -68,7 +68,7 @@ public class RouletteFunctionOpenController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06015BE1 RID: 89057 RVA: 0x0057C00E File Offset: 0x0057A20E
+	// Token: 0x060135E6 RID: 79334 RVA: 0x005A704E File Offset: 0x005A524E
 	private static void OpenSpringManorAtmosphereView()
 	{
 		if (!SpringManorModel.Instance.CheckInInstance())
@@ -78,7 +78,7 @@ public class RouletteFunctionOpenController : IStaticVariableResetter
 		UiManager.Instance.OpenView(EUiViewName.SpringManorAtmosphereLevelView, null, null);
 	}
 
-	// Token: 0x06015BE2 RID: 89058 RVA: 0x0057C02E File Offset: 0x0057A22E
+	// Token: 0x060135E7 RID: 79335 RVA: 0x005A706E File Offset: 0x005A526E
 	private static void OpenSpringManorQuestView()
 	{
 		if (!SpringManorModel.Instance.CheckInInstance())
@@ -88,7 +88,7 @@ public class RouletteFunctionOpenController : IStaticVariableResetter
 		UiManager.Instance.OpenView(EUiViewName.SpringManorQuestView, null, null);
 	}
 
-	// Token: 0x06015BE3 RID: 89059 RVA: 0x0057C04E File Offset: 0x0057A24E
+	// Token: 0x060135E8 RID: 79336 RVA: 0x005A708E File Offset: 0x005A528E
 	private static void OpenSpringManorRoleSwitchView()
 	{
 		if (!SpringManorModel.Instance.CheckInInstance())
@@ -98,7 +98,7 @@ public class RouletteFunctionOpenController : IStaticVariableResetter
 		UiManager.Instance.OpenView(EUiViewName.SpringManorRoleSwitchView, null, null);
 	}
 
-	// Token: 0x06015BE4 RID: 89060 RVA: 0x0057C06E File Offset: 0x0057A26E
+	// Token: 0x060135E9 RID: 79337 RVA: 0x005A70AE File Offset: 0x005A52AE
 	private static void OpenRoguelikeInfoView()
 	{
 		if (!RoguelikeModel.Instance.CheckInRoguelike())
@@ -108,7 +108,7 @@ public class RouletteFunctionOpenController : IStaticVariableResetter
 		RoguelikeController.Instance.OpenRogueInfoView(null, true, true, ERogueInfoViewPage.Overview);
 	}
 
-	// Token: 0x06015BE5 RID: 89061 RVA: 0x0057C08C File Offset: 0x0057A28C
+	// Token: 0x060135EA RID: 79338 RVA: 0x005A70CC File Offset: 0x005A52CC
 	public static void CreateStaticDefaultValue()
 	{
 		Dictionary<ERouletteFuncId, Action> dictionary = new Dictionary<ERouletteFuncId, Action>();
@@ -171,13 +171,13 @@ public class RouletteFunctionOpenController : IStaticVariableResetter
 		RouletteFunctionOpenController.RouletteFunctionOpenMap = dictionary;
 	}
 
-	// Token: 0x06015BE6 RID: 89062 RVA: 0x0057C1D3 File Offset: 0x0057A3D3
+	// Token: 0x060135EB RID: 79339 RVA: 0x005A7213 File Offset: 0x005A5413
 	public static void ResetStaticDefaultValue()
 	{
 		RouletteFunctionOpenController.RouletteFunctionOpenMap = null;
 	}
 
-	// Token: 0x0400A1E1 RID: 41441
+	// Token: 0x0400A5CC RID: 42444
 	[Nullable(new byte[]
 	{
 		2,
@@ -185,32 +185,32 @@ public class RouletteFunctionOpenController : IStaticVariableResetter
 	})]
 	private static Dictionary<ERouletteFuncId, Action> RouletteFunctionOpenMap;
 
-	// Token: 0x02008F0D RID: 36621
+	// Token: 0x02008155 RID: 33109
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x0402E612 RID: 189970
+		// Token: 0x04029D0F RID: 171279
 		public static Action <0>__OpenWeeklyRogueInfoView;
 
-		// Token: 0x0402E613 RID: 189971
+		// Token: 0x04029D10 RID: 171280
 		public static Action <1>__OpenRogueResSummaryView;
 
-		// Token: 0x0402E614 RID: 189972
+		// Token: 0x04029D11 RID: 171281
 		public static Action <2>__OpenSurvivorsInfoView;
 
-		// Token: 0x0402E615 RID: 189973
+		// Token: 0x04029D12 RID: 171282
 		public static Action <3>__OpenHonamiStoryQuestView;
 
-		// Token: 0x0402E616 RID: 189974
+		// Token: 0x04029D13 RID: 171283
 		public static Action <4>__OpenSpringManorAtmosphereView;
 
-		// Token: 0x0402E617 RID: 189975
+		// Token: 0x04029D14 RID: 171284
 		public static Action <5>__OpenSpringManorQuestView;
 
-		// Token: 0x0402E618 RID: 189976
+		// Token: 0x04029D15 RID: 171285
 		public static Action <6>__OpenSpringManorRoleSwitchView;
 
-		// Token: 0x0402E619 RID: 189977
+		// Token: 0x04029D16 RID: 171286
 		public static Action <7>__OpenRoguelikeInfoView;
 	}
 }

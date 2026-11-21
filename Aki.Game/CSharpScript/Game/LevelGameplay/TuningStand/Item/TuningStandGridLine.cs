@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.TuningStand.Item
 {
-	// Token: 0x020069D2 RID: 27090
+	// Token: 0x02005B2E RID: 23342
 	public class TuningStandGridLine : UiPanelBase
 	{
-		// Token: 0x06043675 RID: 276085 RVA: 0x01078BDD File Offset: 0x01076DDD
+		// Token: 0x060396B1 RID: 235185 RVA: 0x0101D091 File Offset: 0x0101B291
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand.Item
 			};
 		}
 
-		// Token: 0x06043676 RID: 276086 RVA: 0x01078C16 File Offset: 0x01076E16
+		// Token: 0x060396B2 RID: 235186 RVA: 0x0101D0CA File Offset: 0x0101B2CA
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
@@ -36,13 +36,13 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand.Item
 			item2.SetUIActive(false);
 		}
 
-		// Token: 0x06043677 RID: 276087 RVA: 0x01078C4E File Offset: 0x01076E4E
+		// Token: 0x060396B3 RID: 235187 RVA: 0x0101D102 File Offset: 0x0101B302
 		protected override void OnBeforeDestroy()
 		{
 			this.LevelSequencePlayer = null;
 		}
 
-		// Token: 0x06043678 RID: 276088 RVA: 0x01078C58 File Offset: 0x01076E58
+		// Token: 0x060396B4 RID: 235188 RVA: 0x0101D10C File Offset: 0x0101B30C
 		public void Refresh(bool isVisible, EGridBelongType type = EGridBelongType.Empty)
 		{
 			if (isVisible)
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand.Item
 			levelSequencePlayer4.PlayLevelSequenceByName("Start", false, null, false);
 		}
 
-		// Token: 0x06043679 RID: 276089 RVA: 0x01078D1F File Offset: 0x01076F1F
+		// Token: 0x060396B5 RID: 235189 RVA: 0x0101D1D3 File Offset: 0x0101B3D3
 		public void HideLine()
 		{
 			this.CurVisible = false;
@@ -108,11 +108,11 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand.Item
 			item2.SetUIActive(false);
 		}
 
-		// Token: 0x040232AF RID: 144047
+		// Token: 0x0401E49F RID: 124063
 		[Nullable(2)]
 		protected LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x040232B0 RID: 144048
+		// Token: 0x0401E4A0 RID: 124064
 		protected bool CurVisible;
 	}
 }

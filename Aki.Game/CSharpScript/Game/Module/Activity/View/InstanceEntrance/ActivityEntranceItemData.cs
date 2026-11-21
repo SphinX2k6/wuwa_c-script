@@ -4,12 +4,12 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 {
-	// Token: 0x02005F0A RID: 24330
+	// Token: 0x02004EF1 RID: 20209
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ActivityEntranceItemData
 	{
-		// Token: 0x0603DD1B RID: 253211 RVA: 0x00EF1604 File Offset: 0x00EEF804
+		// Token: 0x06032CB6 RID: 208054 RVA: 0x00E4330C File Offset: 0x00E4150C
 		public int GetSelectDataIndex()
 		{
 			ActivityEntranceSelectItemBaseData activityEntranceSelectItemBaseData = (this.MainData != null) ? this.MainData : this.SubData;
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			return 0;
 		}
 
-		// Token: 0x0603DD1C RID: 253212 RVA: 0x00EF1634 File Offset: 0x00EEF834
+		// Token: 0x06032CB7 RID: 208055 RVA: 0x00E4333C File Offset: 0x00E4153C
 		public int GetSelectUiLogicIndex()
 		{
 			ActivityEntranceSelectItemBaseData activityEntranceSelectItemBaseData = (this.MainData != null) ? this.MainData : this.SubData;
@@ -31,14 +31,14 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			return 0;
 		}
 
-		// Token: 0x0603DD1D RID: 253213 RVA: 0x00EF1664 File Offset: 0x00EEF864
+		// Token: 0x06032CB8 RID: 208056 RVA: 0x00E4336C File Offset: 0x00E4156C
 		public bool GetLockState()
 		{
 			ActivityEntranceSelectItemBaseData activityEntranceSelectItemBaseData = (this.MainData != null) ? this.MainData : this.SubData;
 			return activityEntranceSelectItemBaseData != null && activityEntranceSelectItemBaseData.GetLockState();
 		}
 
-		// Token: 0x0603DD1E RID: 253214 RVA: 0x00EF1694 File Offset: 0x00EEF894
+		// Token: 0x06032CB9 RID: 208057 RVA: 0x00E4339C File Offset: 0x00E4159C
 		public string GetUnLockDesc()
 		{
 			ActivityEntranceSelectItemBaseData activityEntranceSelectItemBaseData = (this.MainData != null) ? this.MainData : this.SubData;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			return string.Empty;
 		}
 
-		// Token: 0x0603DD1F RID: 253215 RVA: 0x00EF16C7 File Offset: 0x00EEF8C7
+		// Token: 0x06032CBA RID: 208058 RVA: 0x00E433CF File Offset: 0x00E415CF
 		public int GetStyle()
 		{
 			if (this.MainData != null)
@@ -59,21 +59,21 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			return 1;
 		}
 
-		// Token: 0x0603DD20 RID: 253216 RVA: 0x00EF16D4 File Offset: 0x00EEF8D4
+		// Token: 0x06032CBB RID: 208059 RVA: 0x00E433DC File Offset: 0x00E415DC
 		public bool GetSelectState()
 		{
 			ActivityEntranceSelectItemBaseData activityEntranceSelectItemBaseData = (this.MainData != null) ? this.MainData : this.SubData;
 			return activityEntranceSelectItemBaseData != null && activityEntranceSelectItemBaseData.GetSelectState();
 		}
 
-		// Token: 0x0603DD21 RID: 253217 RVA: 0x00EF1704 File Offset: 0x00EEF904
+		// Token: 0x06032CBC RID: 208060 RVA: 0x00E4340C File Offset: 0x00E4160C
 		public bool GetFinishState()
 		{
 			ActivityEntranceSelectItemBaseData activityEntranceSelectItemBaseData = (this.MainData != null) ? this.MainData : this.SubData;
 			return activityEntranceSelectItemBaseData != null && activityEntranceSelectItemBaseData.GetFinishState();
 		}
 
-		// Token: 0x0603DD22 RID: 253218 RVA: 0x00EF1734 File Offset: 0x00EEF934
+		// Token: 0x06032CBD RID: 208061 RVA: 0x00E4343C File Offset: 0x00E4163C
 		public int GetInstanceDungeonId()
 		{
 			ActivityEntranceSelectItemBaseData activityEntranceSelectItemBaseData = (this.MainData != null) ? this.MainData : this.SubData;
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			return 0;
 		}
 
-		// Token: 0x0603DD23 RID: 253219 RVA: 0x00EF1764 File Offset: 0x00EEF964
+		// Token: 0x06032CBE RID: 208062 RVA: 0x00E4346C File Offset: 0x00E4166C
 		public string GetDesc()
 		{
 			ActivityEntranceSelectItemBaseData activityEntranceSelectItemBaseData = (this.MainData != null) ? this.MainData : this.SubData;
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			return string.Empty;
 		}
 
-		// Token: 0x0603DD24 RID: 253220 RVA: 0x00EF1798 File Offset: 0x00EEF998
+		// Token: 0x06032CBF RID: 208063 RVA: 0x00E434A0 File Offset: 0x00E416A0
 		public bool HaveChildData()
 		{
 			if (this.MainData != null)
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			return false;
 		}
 
-		// Token: 0x0603DD25 RID: 253221 RVA: 0x00EF17C8 File Offset: 0x00EEF9C8
+		// Token: 0x06032CC0 RID: 208064 RVA: 0x00E434D0 File Offset: 0x00E416D0
 		public InstanceDungeon? GetInstanceConfig()
 		{
 			int instanceDungeonId = this.GetInstanceDungeonId();
@@ -117,14 +117,14 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			return InstanceDungeonConfig.Instance.GetConfig(instanceDungeonId);
 		}
 
-		// Token: 0x0603DD26 RID: 253222 RVA: 0x00EF17F4 File Offset: 0x00EEF9F4
+		// Token: 0x06032CC1 RID: 208065 RVA: 0x00E434FC File Offset: 0x00E416FC
 		public string GetInstanceDifficultIconPath()
 		{
 			InstanceDungeon? instanceDungeon;
 			return ((this.GetInstanceConfig() != null) ? instanceDungeon.GetValueOrDefault().DifficultyIcon : null) ?? string.Empty;
 		}
 
-		// Token: 0x0603DD27 RID: 253223 RVA: 0x00EF182C File Offset: 0x00EEFA2C
+		// Token: 0x06032CC2 RID: 208066 RVA: 0x00E43534 File Offset: 0x00E41734
 		public string GetInstanceName()
 		{
 			InstanceDungeon? instanceDungeon;
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			return string.Empty;
 		}
 
-		// Token: 0x0603DD28 RID: 253224 RVA: 0x00EF1874 File Offset: 0x00EEFA74
+		// Token: 0x06032CC3 RID: 208067 RVA: 0x00E4357C File Offset: 0x00E4177C
 		[NullableContext(2)]
 		public Action<int> GetSelectCallBack()
 		{
@@ -148,14 +148,14 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			return null;
 		}
 
-		// Token: 0x0603DD29 RID: 253225 RVA: 0x00EF18A4 File Offset: 0x00EEFAA4
+		// Token: 0x06032CC4 RID: 208068 RVA: 0x00E435AC File Offset: 0x00E417AC
 		public bool GetRedDotState()
 		{
 			ActivityEntranceSelectItemBaseData activityEntranceSelectItemBaseData = (this.MainData != null) ? this.MainData : this.SubData;
 			return activityEntranceSelectItemBaseData != null && activityEntranceSelectItemBaseData.GetRedDotState();
 		}
 
-		// Token: 0x0603DD2A RID: 253226 RVA: 0x00EF18D4 File Offset: 0x00EEFAD4
+		// Token: 0x06032CC5 RID: 208069 RVA: 0x00E435DC File Offset: 0x00E417DC
 		public int GetRecommendLevel()
 		{
 			ActivityEntranceSelectItemBaseData activityEntranceSelectItemBaseData = (this.MainData != null) ? this.MainData : this.SubData;
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			return 0;
 		}
 
-		// Token: 0x0603DD2B RID: 253227 RVA: 0x00EF1904 File Offset: 0x00EEFB04
+		// Token: 0x06032CC6 RID: 208070 RVA: 0x00E4360C File Offset: 0x00E4180C
 		public string GetSubTitle()
 		{
 			ActivityEntranceSelectItemBaseData activityEntranceSelectItemBaseData = (this.MainData != null) ? this.MainData : this.SubData;
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			return string.Empty;
 		}
 
-		// Token: 0x0603DD2C RID: 253228 RVA: 0x00EF1938 File Offset: 0x00EEFB38
+		// Token: 0x06032CC7 RID: 208071 RVA: 0x00E43640 File Offset: 0x00E41840
 		public int GetDefaultDifficultIndex()
 		{
 			ActivityEntranceSelectItemBaseData activityEntranceSelectItemBaseData = (this.MainData != null) ? this.MainData : this.SubData;
@@ -188,7 +188,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			return 0;
 		}
 
-		// Token: 0x0603DD2D RID: 253229 RVA: 0x00EF1968 File Offset: 0x00EEFB68
+		// Token: 0x06032CC8 RID: 208072 RVA: 0x00E43670 File Offset: 0x00E41870
 		public string GetBgPath()
 		{
 			ActivityEntranceSelectItemBaseData activityEntranceSelectItemBaseData = (this.MainData != null) ? this.MainData : this.SubData;
@@ -199,11 +199,11 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			return string.Empty;
 		}
 
-		// Token: 0x040204A9 RID: 132265
+		// Token: 0x0401AF7B RID: 110459
 		[Nullable(2)]
 		public ActivityEntranceSelectItemBaseData MainData;
 
-		// Token: 0x040204AA RID: 132266
+		// Token: 0x0401AF7C RID: 110460
 		[Nullable(2)]
 		public ActivityEntranceSelectItemSubData SubData;
 	}

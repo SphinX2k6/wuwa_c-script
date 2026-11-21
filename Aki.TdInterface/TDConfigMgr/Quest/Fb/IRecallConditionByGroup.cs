@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200145C RID: 5212
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020015B5 RID: 5557
 	public class IRecallConditionByGroup : IRecallConditionBase
 	{
-		// Token: 0x06007673 RID: 30323 RVA: 0x0011AE4C File Offset: 0x0011904C
+		// Token: 0x06007D40 RID: 32064 RVA: 0x00129A30 File Offset: 0x00127C30
 		public static IRecallConditionByGroup Create(IRecallConditionByGroup? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700278E RID: 10126
-		// (get) Token: 0x06007674 RID: 30324 RVA: 0x0011AE6B File Offset: 0x0011906B
+		// Token: 0x17002978 RID: 10616
+		// (get) Token: 0x06007D41 RID: 32065 RVA: 0x00129A4F File Offset: 0x00127C4F
 		public override ERecallConditionType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700278F RID: 10127
-		// (get) Token: 0x06007675 RID: 30325 RVA: 0x0011AE78 File Offset: 0x00119078
+		// Token: 0x17002979 RID: 10617
+		// (get) Token: 0x06007D42 RID: 32066 RVA: 0x00129A5C File Offset: 0x00127C5C
 		public override ERecallOperation Operation
 		{
 			get
@@ -43,8 +40,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002790 RID: 10128
-		// (get) Token: 0x06007676 RID: 30326 RVA: 0x0011AE88 File Offset: 0x00119088
+		// Token: 0x1700297A RID: 10618
+		// (get) Token: 0x06007D43 RID: 32067 RVA: 0x00129A6C File Offset: 0x00127C6C
 		public virtual List<int> GroupIds
 		{
 			get
@@ -64,13 +61,13 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040044C8 RID: 17608
+		// Token: 0x04004861 RID: 18529
 		private IRecallConditionByGroup Instance;
 
-		// Token: 0x040044C9 RID: 17609
+		// Token: 0x04004862 RID: 18530
 		private List<int> _GroupIdsCache;
 
-		// Token: 0x040044CA RID: 17610
+		// Token: 0x04004863 RID: 18531
 		private bool _GroupIdsInited;
 	}
 }

@@ -5,15 +5,15 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B95 RID: 27541
+	// Token: 0x02005D0D RID: 23821
 	public class LevelEventSpawnTraceEffect : LevelEventBase
 	{
-		// Token: 0x060442C8 RID: 279240 RVA: 0x010CC81D File Offset: 0x010CAA1D
+		// Token: 0x0603A41B RID: 238619 RVA: 0x010765A5 File Offset: 0x010747A5
 		public LevelEventSpawnTraceEffect(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060442C9 RID: 279241 RVA: 0x010CC828 File Offset: 0x010CAA28
+		// Token: 0x0603A41C RID: 238620 RVA: 0x010765B0 File Offset: 0x010747B0
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
@@ -34,13 +34,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			global::Log.Instance.Error(ELogModule.Event, ELogAuthor.YSQ, "该事件仅用于任务行为树内配置", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x060442CA RID: 279242 RVA: 0x010CC89F File Offset: 0x010CAA9F
+		// Token: 0x0603A41D RID: 238621 RVA: 0x01076627 File Offset: 0x01074827
 		protected override void OnReset()
 		{
 			QuestNewController.Instance.ClearQuestTraceEffect(this.QuestId);
 		}
 
-		// Token: 0x0402396F RID: 145775
+		// Token: 0x0401EC11 RID: 125969
 		private int QuestId;
 	}
 }

@@ -6,22 +6,22 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x0200431E RID: 17182
+	// Token: 0x02003356 RID: 13142
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/SInputActive.SInputActive")]
 	[UnrealStructLayout(32, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 32)]
 	public class SInputActive : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602C79E RID: 182174 RVA: 0x00A209AD File Offset: 0x00A1EBAD
+		// Token: 0x06021474 RID: 136308 RVA: 0x0095D0F7 File Offset: 0x0095B2F7
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SInputActive._ScriptStructPtr != 0) ? SInputActive._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Character/BaseCharacter/SInputActive.SInputActive", ref SInputActive._ScriptStructPtr);
 		}
 
-		// Token: 0x17006F72 RID: 28530
-		// (get) Token: 0x0602C79F RID: 182175 RVA: 0x00A209D4 File Offset: 0x00A1EBD4
-		// (set) Token: 0x0602C7A0 RID: 182176 RVA: 0x00A20A17 File Offset: 0x00A1EC17
+		// Token: 0x17004385 RID: 17285
+		// (get) Token: 0x06021475 RID: 136309 RVA: 0x0095D11C File Offset: 0x0095B31C
+		// (set) Token: 0x06021476 RID: 136310 RVA: 0x0095D15F File Offset: 0x0095B35F
 		public TArray<SInputActiveCondition> InputActiveConditionGroup
 		{
 			get
@@ -30,7 +30,7 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 				TArray<SInputActiveCondition> result;
 				if ((result = this._InputActiveConditionGroup) == null)
 				{
-					result = (this._InputActiveConditionGroup = new TArray<SInputActiveCondition>(base.NativePtr + (IntPtr)SInputActive.__PropertyOffset_0, base.MemoryOwner ?? this));
+					result = (this._InputActiveConditionGroup = new TArray<SInputActiveCondition>(base.NativePtr + (IntPtr)SInputActive.__PropertyOffset_InputActiveConditionGroup, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -40,72 +40,65 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 			}
 		}
 
-		// Token: 0x17006F73 RID: 28531
-		// (get) Token: 0x0602C7A1 RID: 182177 RVA: 0x00A20A25 File Offset: 0x00A1EC25
-		// (set) Token: 0x0602C7A2 RID: 182178 RVA: 0x00A20A39 File Offset: 0x00A1EC39
+		// Token: 0x17004386 RID: 17286
+		// (get) Token: 0x06021477 RID: 136311 RVA: 0x0095D16D File Offset: 0x0095B36D
+		// (set) Token: 0x06021478 RID: 136312 RVA: 0x0095D181 File Offset: 0x0095B381
 		public unsafe string InputActiveConditionFormula
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SInputActive.__PropertyOffset_1)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SInputActive.__PropertyOffset_InputActiveConditionFormula)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SInputActive.__PropertyOffset_1)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SInputActive.__PropertyOffset_InputActiveConditionFormula)), value);
 			}
 		}
 
-		// Token: 0x0602C7A3 RID: 182179 RVA: 0x00A20A4E File Offset: 0x00A1EC4E
+		// Token: 0x06021479 RID: 136313 RVA: 0x0095D196 File Offset: 0x0095B396
 		public SInputActive()
 		{
 		}
 
-		// Token: 0x0602C7A4 RID: 182180 RVA: 0x00A20A56 File Offset: 0x00A1EC56
-		public SInputActive(TArray<SInputActiveCondition> InputActiveConditionGroup, string InputActiveConditionFormula)
-		{
-			this.InputActiveConditionGroup = InputActiveConditionGroup;
-			this.InputActiveConditionFormula = InputActiveConditionFormula;
-		}
-
-		// Token: 0x0602C7A5 RID: 182181 RVA: 0x00A20A6C File Offset: 0x00A1EC6C
+		// Token: 0x0602147A RID: 136314 RVA: 0x0095D19E File Offset: 0x0095B39E
 		protected override IntPtr GetUStructPtr()
 		{
 			return SInputActive.StaticStruct();
 		}
 
-		// Token: 0x0602C7A6 RID: 182182 RVA: 0x00A20A78 File Offset: 0x00A1EC78
+		// Token: 0x0602147B RID: 136315 RVA: 0x0095D1AA File Offset: 0x0095B3AA
 		[NullableContext(2)]
 		public SInputActive(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602C7A7 RID: 182183 RVA: 0x00A20A82 File Offset: 0x00A1EC82
+		// Token: 0x0602147C RID: 136316 RVA: 0x0095D1B4 File Offset: 0x0095B3B4
 		public SInputActive(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602C7A8 RID: 182184 RVA: 0x00A20A8D File Offset: 0x00A1EC8D
+		// Token: 0x0602147D RID: 136317 RVA: 0x0095D1BF File Offset: 0x0095B3BF
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SInputActive(Pointer, false, true);
 		}
 
-		// Token: 0x0602C7A9 RID: 182185 RVA: 0x00A20A97 File Offset: 0x00A1EC97
+		// Token: 0x0602147E RID: 136318 RVA: 0x0095D1C9 File Offset: 0x0095B3C9
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SInputActive(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04017721 RID: 96033
+		// Token: 0x0401230B RID: 74507
 		public const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/SInputActive.SInputActive";
 
-		// Token: 0x04017722 RID: 96034
+		// Token: 0x0401230C RID: 74508
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04017723 RID: 96035
-		internal static int __PropertyOffset_0;
+		// Token: 0x0401230D RID: 74509
+		internal static int __PropertyOffset_InputActiveConditionGroup;
 
-		// Token: 0x04017724 RID: 96036
+		// Token: 0x0401230E RID: 74510
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +106,7 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 		})]
 		private TArray<SInputActiveCondition> _InputActiveConditionGroup;
 
-		// Token: 0x04017725 RID: 96037
-		internal static int __PropertyOffset_1;
+		// Token: 0x0401230F RID: 74511
+		internal static int __PropertyOffset_InputActiveConditionFormula;
 	}
 }

@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AB9 RID: 2745
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B83 RID: 2947
 	public class IProbabilityRefreshGroup
 	{
-		// Token: 0x06003F43 RID: 16195 RVA: 0x000A1A81 File Offset: 0x0009FC81
+		// Token: 0x0600436D RID: 17261 RVA: 0x000AB075 File Offset: 0x000A9275
 		public static IProbabilityRefreshGroup Create(IProbabilityRefreshGroup? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000F8E RID: 3982
-		// (get) Token: 0x06003F44 RID: 16196 RVA: 0x000A1AA0 File Offset: 0x0009FCA0
+		// Token: 0x17001062 RID: 4194
+		// (get) Token: 0x0600436E RID: 17262 RVA: 0x000AB094 File Offset: 0x000A9294
 		[Nullable(2)]
 		public virtual string CheckOccupation
 		{
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F8F RID: 3983
-		// (get) Token: 0x06003F45 RID: 16197 RVA: 0x000A1AB0 File Offset: 0x0009FCB0
+		// Token: 0x17001063 RID: 4195
+		// (get) Token: 0x0600436F RID: 17263 RVA: 0x000AB0A4 File Offset: 0x000A92A4
 		public virtual List<IProbabilityRefreshItem> RefreshItems
 		{
 			get
@@ -56,13 +54,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002320 RID: 8992
+		// Token: 0x0400253C RID: 9532
 		private IProbabilityRefreshGroup Instance;
 
-		// Token: 0x04002321 RID: 8993
+		// Token: 0x0400253D RID: 9533
 		private List<IProbabilityRefreshItem> _RefreshItemsCache;
 
-		// Token: 0x04002322 RID: 8994
+		// Token: 0x0400253E RID: 9534
 		private bool _RefreshItemsInited;
 	}
 }

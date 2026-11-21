@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F42 RID: 3906
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200106C RID: 4204
 	public class IDisableUro : ILogicProgramSpecialProcessOperation
 	{
-		// Token: 0x060056CA RID: 22218 RVA: 0x000D4898 File Offset: 0x000D2A98
+		// Token: 0x06005C9A RID: 23706 RVA: 0x000E125C File Offset: 0x000DF45C
 		private IDisableUro_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060056CB RID: 22219 RVA: 0x000D48D0 File Offset: 0x000D2AD0
+		// Token: 0x06005C9B RID: 23707 RVA: 0x000E1294 File Offset: 0x000DF494
 		public static IDisableUro Create([Nullable(2)] IDisableUro instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060056CC RID: 22220 RVA: 0x000D48E3 File Offset: 0x000D2AE3
+		// Token: 0x06005C9C RID: 23708 RVA: 0x000E12A7 File Offset: 0x000DF4A7
 		public static IDisableUro CreateFromSetValue([Nullable(2)] IDisableUro_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060056CD RID: 22221 RVA: 0x000D48F6 File Offset: 0x000D2AF6
+		// Token: 0x06005C9D RID: 23709 RVA: 0x000E12BA File Offset: 0x000DF4BA
 		public new IDisableUro_SetValue ToSetValue()
 		{
 			return new IDisableUro_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001D03 RID: 7427
-		// (get) Token: 0x060056CE RID: 22222 RVA: 0x000D4915 File Offset: 0x000D2B15
-		// (set) Token: 0x060056CF RID: 22223 RVA: 0x000D4940 File Offset: 0x000D2B40
+		// Token: 0x17001EA7 RID: 7847
+		// (get) Token: 0x06005C9E RID: 23710 RVA: 0x000E12D9 File Offset: 0x000DF4D9
+		// (set) Token: 0x06005C9F RID: 23711 RVA: 0x000E1304 File Offset: 0x000DF504
 		public override ELogicProgramSpecialProcess Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D04 RID: 7428
-		// (get) Token: 0x060056D0 RID: 22224 RVA: 0x000D494E File Offset: 0x000D2B4E
-		// (set) Token: 0x060056D1 RID: 22225 RVA: 0x000D4975 File Offset: 0x000D2B75
+		// Token: 0x17001EA8 RID: 7848
+		// (get) Token: 0x06005CA0 RID: 23712 RVA: 0x000E1312 File Offset: 0x000DF512
+		// (set) Token: 0x06005CA1 RID: 23713 RVA: 0x000E1339 File Offset: 0x000DF539
 		public virtual List<int> EntityIds
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003496 RID: 13462
+		// Token: 0x040037C5 RID: 14277
 		[Nullable(2)]
 		protected new IDisableUro FbInstance;
 
-		// Token: 0x04003497 RID: 13463
+		// Token: 0x040037C6 RID: 14278
 		[Nullable(2)]
 		protected new IDisableUro_SetValue PocoInterface;
 	}

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A4E RID: 10830
+	// Token: 0x02002D3B RID: 11579
 	public class ReignsSetPropertyVisible : ActionParams
 	{
-		// Token: 0x0600EE5A RID: 61018 RVA: 0x0022B3E4 File Offset: 0x002295E4
-		[NullableContext(1)]
+		// Token: 0x0600FCF2 RID: 64754 RVA: 0x00248D98 File Offset: 0x00246F98
 		public static ReignsSetPropertyVisible Create(IReignsSetPropertyVisible? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B80 RID: 19328
-		// (get) Token: 0x0600EE5B RID: 61019 RVA: 0x0022B403 File Offset: 0x00229603
+		// Token: 0x17004F2A RID: 20266
+		// (get) Token: 0x0600FCF3 RID: 64755 RVA: 0x00248DB7 File Offset: 0x00246FB7
 		public virtual int PropertyId
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004B81 RID: 19329
-		// (get) Token: 0x0600EE5C RID: 61020 RVA: 0x0022B410 File Offset: 0x00229610
+		// Token: 0x17004F2B RID: 20267
+		// (get) Token: 0x0600FCF4 RID: 64756 RVA: 0x00248DC4 File Offset: 0x00246FC4
 		public virtual bool IsVisible
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400832A RID: 33578
+		// Token: 0x04008A1D RID: 35357
 		private IReignsSetPropertyVisible Instance;
 	}
 }

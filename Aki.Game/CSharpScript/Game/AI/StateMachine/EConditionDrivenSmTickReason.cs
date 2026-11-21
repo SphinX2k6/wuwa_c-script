@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.AI.StateMachine
 {
-	// Token: 0x02007313 RID: 29459
+	// Token: 0x02006496 RID: 25750
 	public enum EConditionDrivenSmTickReason
 	{
-		// Token: 0x04026392 RID: 156562
+		// Token: 0x0402167F RID: 136831
 		BeginSkill
 	}
 }

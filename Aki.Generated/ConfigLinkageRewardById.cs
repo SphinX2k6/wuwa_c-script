@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020004DC RID: 1244
+	// Token: 0x020004F2 RID: 1266
 	public class ConfigLinkageRewardById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001D33 RID: 7475 RVA: 0x000FE40F File Offset: 0x000FC60F
+		// Token: 0x06001DB7 RID: 7607 RVA: 0x00104B63 File Offset: 0x00102D63
 		static ConfigLinkageRewardById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigLinkageRewardById.CreateStaticDefaultValue), new Action(ConfigLinkageRewardById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001D34 RID: 7476 RVA: 0x000FE430 File Offset: 0x000FC630
+		// Token: 0x06001DB8 RID: 7608 RVA: 0x00104B84 File Offset: 0x00102D84
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigLinkageRewardById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001D35 RID: 7477 RVA: 0x000FE4AF File Offset: 0x000FC6AF
+		// Token: 0x06001DB9 RID: 7609 RVA: 0x00104C03 File Offset: 0x00102E03
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigLinkageRewardById.LogPair = null;
 			ConfigLinkageRewardById.HandleId = 0;
 		}
 
-		// Token: 0x06001D36 RID: 7478 RVA: 0x000FE4BD File Offset: 0x000FC6BD
+		// Token: 0x06001DBA RID: 7610 RVA: 0x00104C11 File Offset: 0x00102E11
 		public static void Init()
 		{
 			ConfigLinkageRewardById.HandleId = ConfigCommon.InitDataStatement(ConfigLinkageRewardById.HandleId, "db_linkagereward.db", "select BinData from `LinkageReward` where Id=?");
 		}
 
-		// Token: 0x06001D37 RID: 7479 RVA: 0x000FE4D8 File Offset: 0x000FC6D8
+		// Token: 0x06001DBB RID: 7611 RVA: 0x00104C2C File Offset: 0x00102E2C
 		public static LinkageReward? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigLinkageRewardById.HandleId, ConfigLinkageRewardById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new LinkageReward?(rootAsLinkageReward);
 		}
 
-		// Token: 0x040021E8 RID: 8680
+		// Token: 0x04002282 RID: 8834
 		private const string DB = "db_linkagereward.db";
 
-		// Token: 0x040021E9 RID: 8681
+		// Token: 0x04002283 RID: 8835
 		private const string FILE = "l.联动签到活动.xlsx";
 
-		// Token: 0x040021EA RID: 8682
+		// Token: 0x04002284 RID: 8836
 		private const string TABLE = "LinkageReward";
 
-		// Token: 0x040021EB RID: 8683
+		// Token: 0x04002285 RID: 8837
 		private const string COMMAND = "select BinData from `LinkageReward` where Id=?";
 
-		// Token: 0x040021EC RID: 8684
+		// Token: 0x04002286 RID: 8838
 		private const string KEY_PREFIX = "LinkageRewardById";
 
-		// Token: 0x040021ED RID: 8685
+		// Token: 0x04002287 RID: 8839
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040021EE RID: 8686
+		// Token: 0x04002288 RID: 8840
 		private static int HandleId;
 	}
 }

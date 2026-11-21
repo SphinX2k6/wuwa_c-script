@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DBE RID: 3518
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000EBA RID: 3770
 	public class SunSpiritGearComponent : IComponentBase
 	{
-		// Token: 0x06004FD8 RID: 20440 RVA: 0x000C5843 File Offset: 0x000C3A43
+		// Token: 0x060054FD RID: 21757 RVA: 0x000D1093 File Offset: 0x000CF293
 		public static SunSpiritGearComponent Create(ISunSpiritGearComponent? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001A19 RID: 6681
-		// (get) Token: 0x06004FD9 RID: 20441 RVA: 0x000C5864 File Offset: 0x000C3A64
+		// Token: 0x17001B84 RID: 7044
+		// (get) Token: 0x060054FE RID: 21758 RVA: 0x000D10B4 File Offset: 0x000CF2B4
 		public override bool? Disabled
 		{
 			get
@@ -36,8 +33,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A1A RID: 6682
-		// (get) Token: 0x06004FDA RID: 20442 RVA: 0x000C589C File Offset: 0x000C3A9C
+		// Token: 0x17001B85 RID: 7045
+		// (get) Token: 0x060054FF RID: 21759 RVA: 0x000D10EC File Offset: 0x000CF2EC
 		public override bool? EdIsLocked
 		{
 			get
@@ -46,8 +43,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A1B RID: 6683
-		// (get) Token: 0x06004FDB RID: 20443 RVA: 0x000C58B2 File Offset: 0x000C3AB2
+		// Token: 0x17001B86 RID: 7046
+		// (get) Token: 0x06005500 RID: 21760 RVA: 0x000D1102 File Offset: 0x000CF302
 		public virtual ISunSpiritGearPerformConfig PerformConfig
 		{
 			get
@@ -62,13 +59,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002DCB RID: 11723
+		// Token: 0x04003091 RID: 12433
 		private ISunSpiritGearComponent Instance;
 
-		// Token: 0x04002DCC RID: 11724
+		// Token: 0x04003092 RID: 12434
 		private ISunSpiritGearPerformConfig _PerformConfigCache;
 
-		// Token: 0x04002DCD RID: 11725
+		// Token: 0x04003093 RID: 12435
 		private bool _PerformConfigInited;
 	}
 }

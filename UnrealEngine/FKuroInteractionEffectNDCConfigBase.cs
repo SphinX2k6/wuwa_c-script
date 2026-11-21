@@ -5,20 +5,20 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x020019A4 RID: 6564
+	// Token: 0x02000450 RID: 1104
 	[UnrealObjectPath("/Script/KuroInteractionEffect.KuroInteractionEffectNDCConfigBase")]
 	[UnrealStructLayout(56, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 56)]
 	public class FKuroInteractionEffectNDCConfigBase : FTableRowBase, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x060186C2 RID: 100034 RVA: 0x0023FEFA File Offset: 0x0023E0FA
+		// Token: 0x06006AC0 RID: 27328 RVA: 0x0009B848 File Offset: 0x00099A48
 		public new static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FKuroInteractionEffectNDCConfigBase._ScriptStructPtr != 0) ? FKuroInteractionEffectNDCConfigBase._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroInteractionEffect.KuroInteractionEffectNDCConfigBase", ref FKuroInteractionEffectNDCConfigBase._ScriptStructPtr);
 		}
 
-		// Token: 0x1700618E RID: 24974
-		// (get) Token: 0x060186C3 RID: 100035 RVA: 0x0023FF1E File Offset: 0x0023E11E
-		// (set) Token: 0x060186C4 RID: 100036 RVA: 0x0023FF2E File Offset: 0x0023E12E
+		// Token: 0x17001543 RID: 5443
+		// (get) Token: 0x06006AC1 RID: 27329 RVA: 0x0009B86C File Offset: 0x00099A6C
+		// (set) Token: 0x06006AC2 RID: 27330 RVA: 0x0009B87C File Offset: 0x00099A7C
 		public unsafe bool bEnableNDC
 		{
 			get
@@ -31,9 +31,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700618F RID: 24975
-		// (get) Token: 0x060186C5 RID: 100037 RVA: 0x0023FF3F File Offset: 0x0023E13F
-		// (set) Token: 0x060186C6 RID: 100038 RVA: 0x0023FF4F File Offset: 0x0023E14F
+		// Token: 0x17001544 RID: 5444
+		// (get) Token: 0x06006AC3 RID: 27331 RVA: 0x0009B88D File Offset: 0x00099A8D
+		// (set) Token: 0x06006AC4 RID: 27332 RVA: 0x0009B89D File Offset: 0x00099A9D
 		public unsafe float SpawnNum
 		{
 			get
@@ -46,9 +46,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006190 RID: 24976
-		// (get) Token: 0x060186C7 RID: 100039 RVA: 0x0023FF60 File Offset: 0x0023E160
-		// (set) Token: 0x060186C8 RID: 100040 RVA: 0x0023FF70 File Offset: 0x0023E170
+		// Token: 0x17001545 RID: 5445
+		// (get) Token: 0x06006AC5 RID: 27333 RVA: 0x0009B8AE File Offset: 0x00099AAE
+		// (set) Token: 0x06006AC6 RID: 27334 RVA: 0x0009B8BE File Offset: 0x00099ABE
 		public unsafe float HeightClamp
 		{
 			get
@@ -61,9 +61,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006191 RID: 24977
-		// (get) Token: 0x060186C9 RID: 100041 RVA: 0x0023FF81 File Offset: 0x0023E181
-		// (set) Token: 0x060186CA RID: 100042 RVA: 0x0023FF91 File Offset: 0x0023E191
+		// Token: 0x17001546 RID: 5446
+		// (get) Token: 0x06006AC7 RID: 27335 RVA: 0x0009B8CF File Offset: 0x00099ACF
+		// (set) Token: 0x06006AC8 RID: 27336 RVA: 0x0009B8DF File Offset: 0x00099ADF
 		public unsafe float Weight
 		{
 			get
@@ -76,9 +76,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006192 RID: 24978
-		// (get) Token: 0x060186CB RID: 100043 RVA: 0x0023FFA2 File Offset: 0x0023E1A2
-		// (set) Token: 0x060186CC RID: 100044 RVA: 0x0023FFB2 File Offset: 0x0023E1B2
+		// Token: 0x17001547 RID: 5447
+		// (get) Token: 0x06006AC9 RID: 27337 RVA: 0x0009B8F0 File Offset: 0x00099AF0
+		// (set) Token: 0x06006ACA RID: 27338 RVA: 0x0009B900 File Offset: 0x00099B00
 		public unsafe float MoveSpawn
 		{
 			get
@@ -91,9 +91,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006193 RID: 24979
-		// (get) Token: 0x060186CD RID: 100045 RVA: 0x0023FFC3 File Offset: 0x0023E1C3
-		// (set) Token: 0x060186CE RID: 100046 RVA: 0x0023FFD3 File Offset: 0x0023E1D3
+		// Token: 0x17001548 RID: 5448
+		// (get) Token: 0x06006ACB RID: 27339 RVA: 0x0009B911 File Offset: 0x00099B11
+		// (set) Token: 0x06006ACC RID: 27340 RVA: 0x0009B921 File Offset: 0x00099B21
 		public unsafe float WeaponSpawn
 		{
 			get
@@ -106,9 +106,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006194 RID: 24980
-		// (get) Token: 0x060186CF RID: 100047 RVA: 0x0023FFE4 File Offset: 0x0023E1E4
-		// (set) Token: 0x060186D0 RID: 100048 RVA: 0x0023FFF4 File Offset: 0x0023E1F4
+		// Token: 0x17001549 RID: 5449
+		// (get) Token: 0x06006ACD RID: 27341 RVA: 0x0009B932 File Offset: 0x00099B32
+		// (set) Token: 0x06006ACE RID: 27342 RVA: 0x0009B942 File Offset: 0x00099B42
 		public unsafe int EffectIndex
 		{
 			get
@@ -121,9 +121,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006195 RID: 24981
-		// (get) Token: 0x060186D1 RID: 100049 RVA: 0x00240005 File Offset: 0x0023E205
-		// (set) Token: 0x060186D2 RID: 100050 RVA: 0x00240015 File Offset: 0x0023E215
+		// Token: 0x1700154A RID: 5450
+		// (get) Token: 0x06006ACF RID: 27343 RVA: 0x0009B953 File Offset: 0x00099B53
+		// (set) Token: 0x06006AD0 RID: 27344 RVA: 0x0009B963 File Offset: 0x00099B63
 		public unsafe float TypeIndex
 		{
 			get
@@ -136,9 +136,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006196 RID: 24982
-		// (get) Token: 0x060186D3 RID: 100051 RVA: 0x00240026 File Offset: 0x0023E226
-		// (set) Token: 0x060186D4 RID: 100052 RVA: 0x0024003A File Offset: 0x0023E23A
+		// Token: 0x1700154B RID: 5451
+		// (get) Token: 0x06006AD1 RID: 27345 RVA: 0x0009B974 File Offset: 0x00099B74
+		// (set) Token: 0x06006AD2 RID: 27346 RVA: 0x0009B988 File Offset: 0x00099B88
 		public unsafe FVector PlayerSpawnOffset
 		{
 			get
@@ -151,88 +151,74 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060186D5 RID: 100053 RVA: 0x0024004F File Offset: 0x0023E24F
+		// Token: 0x06006AD3 RID: 27347 RVA: 0x0009B99D File Offset: 0x00099B9D
 		public FKuroInteractionEffectNDCConfigBase()
 		{
 		}
 
-		// Token: 0x060186D6 RID: 100054 RVA: 0x00240058 File Offset: 0x0023E258
-		public FKuroInteractionEffectNDCConfigBase(bool bEnableNDC, float SpawnNum, float HeightClamp, float Weight, float MoveSpawn, float WeaponSpawn, int EffectIndex, float TypeIndex, FVector PlayerSpawnOffset)
-		{
-			this.bEnableNDC = bEnableNDC;
-			this.SpawnNum = SpawnNum;
-			this.HeightClamp = HeightClamp;
-			this.Weight = Weight;
-			this.MoveSpawn = MoveSpawn;
-			this.WeaponSpawn = WeaponSpawn;
-			this.EffectIndex = EffectIndex;
-			this.TypeIndex = TypeIndex;
-			this.PlayerSpawnOffset = PlayerSpawnOffset;
-		}
-
-		// Token: 0x060186D7 RID: 100055 RVA: 0x002400B0 File Offset: 0x0023E2B0
+		// Token: 0x06006AD4 RID: 27348 RVA: 0x0009B9A5 File Offset: 0x00099BA5
 		protected override IntPtr GetUStructPtr()
 		{
 			return FKuroInteractionEffectNDCConfigBase.StaticStruct();
 		}
 
-		// Token: 0x060186D8 RID: 100056 RVA: 0x002400BC File Offset: 0x0023E2BC
+		// Token: 0x06006AD5 RID: 27349 RVA: 0x0009B9B1 File Offset: 0x00099BB1
 		[NullableContext(2)]
 		public FKuroInteractionEffectNDCConfigBase(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060186D9 RID: 100057 RVA: 0x002400C6 File Offset: 0x0023E2C6
+		// Token: 0x06006AD6 RID: 27350 RVA: 0x0009B9BB File Offset: 0x00099BBB
 		public FKuroInteractionEffectNDCConfigBase(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060186DA RID: 100058 RVA: 0x002400D1 File Offset: 0x0023E2D1
+		// Token: 0x06006AD7 RID: 27351 RVA: 0x0009B9C6 File Offset: 0x00099BC6
 		[NullableContext(1)]
 		public new static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FKuroInteractionEffectNDCConfigBase(Pointer, false, true);
 		}
 
-		// Token: 0x060186DB RID: 100059 RVA: 0x002400DB File Offset: 0x0023E2DB
+		// Token: 0x06006AD8 RID: 27352 RVA: 0x0009B9D0 File Offset: 0x00099BD0
 		[NullableContext(1)]
 		public new static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FKuroInteractionEffectNDCConfigBase(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0400D32F RID: 54063
+		// Token: 0x04002D48 RID: 11592
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroInteractionEffect.KuroInteractionEffectNDCConfigBase";
 
-		// Token: 0x0400D330 RID: 54064
+		// Token: 0x04002D49 RID: 11593
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0400D331 RID: 54065
+		// Token: 0x04002D4A RID: 11594
 		internal static int __PropertyOffset_bEnableNDC;
 
-		// Token: 0x0400D332 RID: 54066
+		// Token: 0x04002D4B RID: 11595
 		internal static int __PropertyOffset_SpawnNum;
 
-		// Token: 0x0400D333 RID: 54067
+		// Token: 0x04002D4C RID: 11596
 		internal static int __PropertyOffset_HeightClamp;
 
-		// Token: 0x0400D334 RID: 54068
+		// Token: 0x04002D4D RID: 11597
 		internal static int __PropertyOffset_Weight;
 
-		// Token: 0x0400D335 RID: 54069
+		// Token: 0x04002D4E RID: 11598
 		internal static int __PropertyOffset_MoveSpawn;
 
-		// Token: 0x0400D336 RID: 54070
+		// Token: 0x04002D4F RID: 11599
 		internal static int __PropertyOffset_WeaponSpawn;
 
-		// Token: 0x0400D337 RID: 54071
+		// Token: 0x04002D50 RID: 11600
 		internal static int __PropertyOffset_EffectIndex;
 
-		// Token: 0x0400D338 RID: 54072
+		// Token: 0x04002D51 RID: 11601
 		internal static int __PropertyOffset_TypeIndex;
 
-		// Token: 0x0400D339 RID: 54073
+		// Token: 0x04002D52 RID: 11602
 		internal static int __PropertyOffset_PlayerSpawnOffset;
 	}
 }

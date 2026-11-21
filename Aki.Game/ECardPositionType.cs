@@ -1,22 +1,22 @@
 ﻿using System;
 
-// Token: 0x02001052 RID: 4178
+// Token: 0x02000506 RID: 1286
 public enum ECardPositionType
 {
-	// Token: 0x04003194 RID: 12692
+	// Token: 0x0400322D RID: 12845
 	AiInitial,
-	// Token: 0x04003195 RID: 12693
+	// Token: 0x0400322E RID: 12846
 	PlayerInitial,
-	// Token: 0x04003196 RID: 12694
+	// Token: 0x0400322F RID: 12847
 	AiHand,
-	// Token: 0x04003197 RID: 12695
+	// Token: 0x04003230 RID: 12848
 	PlayerHand,
-	// Token: 0x04003198 RID: 12696
+	// Token: 0x04003231 RID: 12849
 	PlayerPlay,
-	// Token: 0x04003199 RID: 12697
+	// Token: 0x04003232 RID: 12850
 	AiBeDrawCard,
-	// Token: 0x0400319A RID: 12698
+	// Token: 0x04003233 RID: 12851
 	PlayerBeDrawCard,
-	// Token: 0x0400319B RID: 12699
+	// Token: 0x04003234 RID: 12852
 	Middle
 }

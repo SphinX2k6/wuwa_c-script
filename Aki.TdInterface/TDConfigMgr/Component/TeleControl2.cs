@@ -6,13 +6,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008BC RID: 2236
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x0200095F RID: 2399
 	public class TeleControl2 : IComponentBase
 	{
-		// Token: 0x0600323B RID: 12859 RVA: 0x00080CD8 File Offset: 0x0007EED8
-		[NullableContext(1)]
+		// Token: 0x06003577 RID: 13687 RVA: 0x000881C0 File Offset: 0x000863C0
 		private TeleControl2_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,8 +24,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600323C RID: 12860 RVA: 0x00080D10 File Offset: 0x0007EF10
-		[NullableContext(1)]
+		// Token: 0x06003578 RID: 13688 RVA: 0x000881F8 File Offset: 0x000863F8
 		public static TeleControl2 Create([Nullable(2)] TeleControl2 instance)
 		{
 			if (instance == null)
@@ -41,8 +37,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600323D RID: 12861 RVA: 0x00080D23 File Offset: 0x0007EF23
-		[NullableContext(1)]
+		// Token: 0x06003579 RID: 13689 RVA: 0x0008820B File Offset: 0x0008640B
 		public static TeleControl2 CreateFromSetValue([Nullable(2)] TeleControl2_SetValue value)
 		{
 			if (value == null)
@@ -55,8 +50,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600323E RID: 12862 RVA: 0x00080D38 File Offset: 0x0007EF38
-		[NullableContext(1)]
+		// Token: 0x0600357A RID: 13690 RVA: 0x00088220 File Offset: 0x00086420
 		public new TeleControl2_SetValue ToSetValue()
 		{
 			return new TeleControl2_SetValue
@@ -75,9 +69,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000D6B RID: 3435
-		// (get) Token: 0x0600323F RID: 12863 RVA: 0x00080DD0 File Offset: 0x0007EFD0
-		// (set) Token: 0x06003240 RID: 12864 RVA: 0x00080E0A File Offset: 0x0007F00A
+		// Token: 0x17000E34 RID: 3636
+		// (get) Token: 0x0600357B RID: 13691 RVA: 0x000882B8 File Offset: 0x000864B8
+		// (set) Token: 0x0600357C RID: 13692 RVA: 0x000882F2 File Offset: 0x000864F2
 		public override bool? Disabled
 		{
 			get
@@ -99,9 +93,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D6C RID: 3436
-		// (get) Token: 0x06003241 RID: 12865 RVA: 0x00080E18 File Offset: 0x0007F018
-		// (set) Token: 0x06003242 RID: 12866 RVA: 0x00080E42 File Offset: 0x0007F042
+		// Token: 0x17000E35 RID: 3637
+		// (get) Token: 0x0600357D RID: 13693 RVA: 0x00088300 File Offset: 0x00086500
+		// (set) Token: 0x0600357E RID: 13694 RVA: 0x0008832A File Offset: 0x0008652A
 		public override bool? EdIsLocked
 		{
 			get
@@ -118,13 +112,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D6D RID: 3437
-		// (get) Token: 0x06003243 RID: 12867 RVA: 0x00080E50 File Offset: 0x0007F050
-		// (set) Token: 0x06003244 RID: 12868 RVA: 0x00080EB1 File Offset: 0x0007F0B1
-		[Nullable(1)]
+		// Token: 0x17000E36 RID: 3638
+		// (get) Token: 0x0600357F RID: 13695 RVA: 0x00088338 File Offset: 0x00086538
+		// (set) Token: 0x06003580 RID: 13696 RVA: 0x00088399 File Offset: 0x00086599
 		public virtual ITeleControlBaseCfg BaseCfg
 		{
-			[NullableContext(1)]
 			get
 			{
 				if (this._BaseCfgInited)
@@ -143,7 +135,6 @@ namespace Aki.TDConfigMgr.Component
 				}
 				return this._BaseCfgCache;
 			}
-			[NullableContext(1)]
 			set
 			{
 				this.GetOrCreatePoco().BaseCfg = value;
@@ -151,11 +142,13 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D6E RID: 3438
-		// (get) Token: 0x06003245 RID: 12869 RVA: 0x00080EC8 File Offset: 0x0007F0C8
-		// (set) Token: 0x06003246 RID: 12870 RVA: 0x00080F29 File Offset: 0x0007F129
+		// Token: 0x17000E37 RID: 3639
+		// (get) Token: 0x06003581 RID: 13697 RVA: 0x000883B0 File Offset: 0x000865B0
+		// (set) Token: 0x06003582 RID: 13698 RVA: 0x00088411 File Offset: 0x00086611
+		[Nullable(2)]
 		public virtual ISearchTargetCfg SearchTargetCfg
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this._SearchTargetCfgInited)
@@ -174,6 +167,7 @@ namespace Aki.TDConfigMgr.Component
 				}
 				return this._SearchTargetCfgCache;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().SearchTargetCfg = value;
@@ -181,11 +175,13 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D6F RID: 3439
-		// (get) Token: 0x06003247 RID: 12871 RVA: 0x00080F40 File Offset: 0x0007F140
-		// (set) Token: 0x06003248 RID: 12872 RVA: 0x00080FA1 File Offset: 0x0007F1A1
+		// Token: 0x17000E38 RID: 3640
+		// (get) Token: 0x06003583 RID: 13699 RVA: 0x00088428 File Offset: 0x00086628
+		// (set) Token: 0x06003584 RID: 13700 RVA: 0x00088489 File Offset: 0x00086689
+		[Nullable(2)]
 		public virtual IBulletCfg BulletCfg
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this._BulletCfgInited)
@@ -204,6 +200,7 @@ namespace Aki.TDConfigMgr.Component
 				}
 				return this._BulletCfgCache;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().BulletCfg = value;
@@ -211,11 +208,13 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D70 RID: 3440
-		// (get) Token: 0x06003249 RID: 12873 RVA: 0x00080FB8 File Offset: 0x0007F1B8
-		// (set) Token: 0x0600324A RID: 12874 RVA: 0x00081019 File Offset: 0x0007F219
+		// Token: 0x17000E39 RID: 3641
+		// (get) Token: 0x06003585 RID: 13701 RVA: 0x000884A0 File Offset: 0x000866A0
+		// (set) Token: 0x06003586 RID: 13702 RVA: 0x00088501 File Offset: 0x00086701
+		[Nullable(2)]
 		public virtual IDestroyCfg DestroyCfg
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this._DestroyCfgInited)
@@ -234,6 +233,7 @@ namespace Aki.TDConfigMgr.Component
 				}
 				return this._DestroyCfgCache;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().DestroyCfg = value;
@@ -241,11 +241,13 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D71 RID: 3441
-		// (get) Token: 0x0600324B RID: 12875 RVA: 0x00081030 File Offset: 0x0007F230
-		// (set) Token: 0x0600324C RID: 12876 RVA: 0x00081091 File Offset: 0x0007F291
+		// Token: 0x17000E3A RID: 3642
+		// (get) Token: 0x06003587 RID: 13703 RVA: 0x00088518 File Offset: 0x00086718
+		// (set) Token: 0x06003588 RID: 13704 RVA: 0x00088579 File Offset: 0x00086779
+		[Nullable(2)]
 		public virtual IHoldCfg HoldCfg
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this._HoldCfgInited)
@@ -264,6 +266,7 @@ namespace Aki.TDConfigMgr.Component
 				}
 				return this._HoldCfgCache;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().HoldCfg = value;
@@ -271,13 +274,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D72 RID: 3442
-		// (get) Token: 0x0600324D RID: 12877 RVA: 0x000810A8 File Offset: 0x0007F2A8
-		// (set) Token: 0x0600324E RID: 12878 RVA: 0x00081109 File Offset: 0x0007F309
-		[Nullable(1)]
+		// Token: 0x17000E3B RID: 3643
+		// (get) Token: 0x06003589 RID: 13705 RVA: 0x00088590 File Offset: 0x00086790
+		// (set) Token: 0x0600358A RID: 13706 RVA: 0x000885F1 File Offset: 0x000867F1
 		public virtual IThrowCfg ThrowCfg
 		{
-			[NullableContext(1)]
 			get
 			{
 				if (this._ThrowCfgInited)
@@ -296,7 +297,6 @@ namespace Aki.TDConfigMgr.Component
 				}
 				return this._ThrowCfgCache;
 			}
-			[NullableContext(1)]
 			set
 			{
 				this.GetOrCreatePoco().ThrowCfg = value;
@@ -304,9 +304,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D73 RID: 3443
-		// (get) Token: 0x0600324F RID: 12879 RVA: 0x00081120 File Offset: 0x0007F320
-		// (set) Token: 0x06003250 RID: 12880 RVA: 0x0008115A File Offset: 0x0007F35A
+		// Token: 0x17000E3C RID: 3644
+		// (get) Token: 0x0600358B RID: 13707 RVA: 0x00088608 File Offset: 0x00086808
+		// (set) Token: 0x0600358C RID: 13708 RVA: 0x00088642 File Offset: 0x00086842
 		public virtual int? PlayerStateRestritionId
 		{
 			get
@@ -328,20 +328,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D74 RID: 3444
-		// (get) Token: 0x06003251 RID: 12881 RVA: 0x00081168 File Offset: 0x0007F368
-		// (set) Token: 0x06003252 RID: 12882 RVA: 0x0008118F File Offset: 0x0007F38F
+		// Token: 0x17000E3D RID: 3645
+		// (get) Token: 0x0600358D RID: 13709 RVA: 0x00088650 File Offset: 0x00086850
+		// (set) Token: 0x0600358E RID: 13710 RVA: 0x00088677 File Offset: 0x00086877
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IMatchRoleType> MatchRoleOption
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -359,7 +359,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -367,11 +367,13 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D75 RID: 3445
-		// (get) Token: 0x06003253 RID: 12883 RVA: 0x0008119D File Offset: 0x0007F39D
-		// (set) Token: 0x06003254 RID: 12884 RVA: 0x000811C4 File Offset: 0x0007F3C4
+		// Token: 0x17000E3E RID: 3646
+		// (get) Token: 0x0600358F RID: 13711 RVA: 0x00088685 File Offset: 0x00086885
+		// (set) Token: 0x06003590 RID: 13712 RVA: 0x000886AC File Offset: 0x000868AC
+		[Nullable(2)]
 		public virtual ITeleCtrlTriggerConfig TriggerCfg
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -385,58 +387,55 @@ namespace Aki.TDConfigMgr.Component
 				}
 				return pocoInterface.TriggerCfg;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().TriggerCfg = value;
 			}
 		}
 
-		// Token: 0x040020EE RID: 8430
+		// Token: 0x04002300 RID: 8960
+		[Nullable(2)]
 		protected new TeleControl2 FbInstance;
 
-		// Token: 0x040020EF RID: 8431
+		// Token: 0x04002301 RID: 8961
+		[Nullable(2)]
 		protected new TeleControl2_SetValue PocoInterface;
 
-		// Token: 0x040020F0 RID: 8432
-		[Nullable(1)]
+		// Token: 0x04002302 RID: 8962
 		private ITeleControlBaseCfg _BaseCfgCache;
 
-		// Token: 0x040020F1 RID: 8433
+		// Token: 0x04002303 RID: 8963
 		private bool _BaseCfgInited;
 
-		// Token: 0x040020F2 RID: 8434
-		[Nullable(1)]
+		// Token: 0x04002304 RID: 8964
 		private ISearchTargetCfg _SearchTargetCfgCache;
 
-		// Token: 0x040020F3 RID: 8435
+		// Token: 0x04002305 RID: 8965
 		private bool _SearchTargetCfgInited;
 
-		// Token: 0x040020F4 RID: 8436
-		[Nullable(1)]
+		// Token: 0x04002306 RID: 8966
 		private IBulletCfg _BulletCfgCache;
 
-		// Token: 0x040020F5 RID: 8437
+		// Token: 0x04002307 RID: 8967
 		private bool _BulletCfgInited;
 
-		// Token: 0x040020F6 RID: 8438
-		[Nullable(1)]
+		// Token: 0x04002308 RID: 8968
 		private IDestroyCfg _DestroyCfgCache;
 
-		// Token: 0x040020F7 RID: 8439
+		// Token: 0x04002309 RID: 8969
 		private bool _DestroyCfgInited;
 
-		// Token: 0x040020F8 RID: 8440
-		[Nullable(1)]
+		// Token: 0x0400230A RID: 8970
 		private IHoldCfg _HoldCfgCache;
 
-		// Token: 0x040020F9 RID: 8441
+		// Token: 0x0400230B RID: 8971
 		private bool _HoldCfgInited;
 
-		// Token: 0x040020FA RID: 8442
-		[Nullable(1)]
+		// Token: 0x0400230C RID: 8972
 		private IThrowCfg _ThrowCfgCache;
 
-		// Token: 0x040020FB RID: 8443
+		// Token: 0x0400230D RID: 8973
 		private bool _ThrowCfgInited;
 	}
 }

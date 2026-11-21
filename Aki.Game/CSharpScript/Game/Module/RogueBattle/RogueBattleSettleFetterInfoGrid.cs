@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E97 RID: 20119
+	// Token: 0x02003E60 RID: 15968
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 	})]
 	public class RogueBattleSettleFetterInfoGrid : GridProxyAbstract<RoleBondInfo>
 	{
-		// Token: 0x06033B8D RID: 211853 RVA: 0x00C1DBBC File Offset: 0x00C1BDBC
+		// Token: 0x060289F8 RID: 166392 RVA: 0x00B670D8 File Offset: 0x00B652D8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033B8E RID: 211854 RVA: 0x00C1DC18 File Offset: 0x00C1BE18
+		// Token: 0x060289F9 RID: 166393 RVA: 0x00B67134 File Offset: 0x00B65334
 		public override void Refresh(RoleBondInfo data, bool isSelected, int gridIndex)
 		{
 			RogueResBond? rogueResBond = RogueBattleConfig.Instance.GetRogueResBond(data.ConfigId);

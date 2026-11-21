@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001161 RID: 4449
+	// Token: 0x02001291 RID: 4753
 	public class ISurvivorsRougeConditionStepShopping_SetValue
 	{
-		// Token: 0x04003C99 RID: 15513
+		// Token: 0x04003FEC RID: 16364
 		public ESurvivorsRougeConditionStep Type;
 	}
 }

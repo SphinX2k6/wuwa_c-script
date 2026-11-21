@@ -13,9 +13,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskFindRandomPosition.TsTaskFindRandomPosition_C")]
 public class TsTaskFindRandomPosition : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x1700015D RID: 349
-	// (get) Token: 0x0600083D RID: 2109 RVA: 0x00028DFD File Offset: 0x00026FFD
-	// (set) Token: 0x0600083E RID: 2110 RVA: 0x00028E11 File Offset: 0x00027011
+	// Token: 0x1700015F RID: 351
+	// (get) Token: 0x06000841 RID: 2113 RVA: 0x00029C39 File Offset: 0x00027E39
+	// (set) Token: 0x06000842 RID: 2114 RVA: 0x00029C4D File Offset: 0x00027E4D
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FVector StartPositionOffset
 	{
@@ -29,9 +29,9 @@ public class TsTaskFindRandomPosition : TsTaskAbortImmediatelyBase, IUnrealUObje
 		}
 	}
 
-	// Token: 0x1700015E RID: 350
-	// (get) Token: 0x0600083F RID: 2111 RVA: 0x00028E26 File Offset: 0x00027026
-	// (set) Token: 0x06000840 RID: 2112 RVA: 0x00028E36 File Offset: 0x00027036
+	// Token: 0x17000160 RID: 352
+	// (get) Token: 0x06000843 RID: 2115 RVA: 0x00029C62 File Offset: 0x00027E62
+	// (set) Token: 0x06000844 RID: 2116 RVA: 0x00029C72 File Offset: 0x00027E72
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float MinRange
 	{
@@ -45,9 +45,9 @@ public class TsTaskFindRandomPosition : TsTaskAbortImmediatelyBase, IUnrealUObje
 		}
 	}
 
-	// Token: 0x1700015F RID: 351
-	// (get) Token: 0x06000841 RID: 2113 RVA: 0x00028E47 File Offset: 0x00027047
-	// (set) Token: 0x06000842 RID: 2114 RVA: 0x00028E57 File Offset: 0x00027057
+	// Token: 0x17000161 RID: 353
+	// (get) Token: 0x06000845 RID: 2117 RVA: 0x00029C83 File Offset: 0x00027E83
+	// (set) Token: 0x06000846 RID: 2118 RVA: 0x00029C93 File Offset: 0x00027E93
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float MaxRange
 	{
@@ -61,9 +61,9 @@ public class TsTaskFindRandomPosition : TsTaskAbortImmediatelyBase, IUnrealUObje
 		}
 	}
 
-	// Token: 0x17000160 RID: 352
-	// (get) Token: 0x06000843 RID: 2115 RVA: 0x00028E68 File Offset: 0x00027068
-	// (set) Token: 0x06000844 RID: 2116 RVA: 0x00028E78 File Offset: 0x00027078
+	// Token: 0x17000162 RID: 354
+	// (get) Token: 0x06000847 RID: 2119 RVA: 0x00029CA4 File Offset: 0x00027EA4
+	// (set) Token: 0x06000848 RID: 2120 RVA: 0x00029CB4 File Offset: 0x00027EB4
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool UseFullRange
 	{
@@ -77,9 +77,9 @@ public class TsTaskFindRandomPosition : TsTaskAbortImmediatelyBase, IUnrealUObje
 		}
 	}
 
-	// Token: 0x17000161 RID: 353
-	// (get) Token: 0x06000845 RID: 2117 RVA: 0x00028E89 File Offset: 0x00027089
-	// (set) Token: 0x06000846 RID: 2118 RVA: 0x00028E9D File Offset: 0x0002709D
+	// Token: 0x17000163 RID: 355
+	// (get) Token: 0x06000849 RID: 2121 RVA: 0x00029CC5 File Offset: 0x00027EC5
+	// (set) Token: 0x0600084A RID: 2122 RVA: 0x00029CD9 File Offset: 0x00027ED9
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string SaveBlackBoardKey
 	{
@@ -93,7 +93,7 @@ public class TsTaskFindRandomPosition : TsTaskAbortImmediatelyBase, IUnrealUObje
 		}
 	}
 
-	// Token: 0x06000847 RID: 2119 RVA: 0x00028EB4 File Offset: 0x000270B4
+	// Token: 0x0600084B RID: 2123 RVA: 0x00029CF0 File Offset: 0x00027EF0
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -107,30 +107,27 @@ public class TsTaskFindRandomPosition : TsTaskAbortImmediatelyBase, IUnrealUObje
 		}
 	}
 
-	// Token: 0x06000848 RID: 2120 RVA: 0x00028F20 File Offset: 0x00027120
+	// Token: 0x0600084C RID: 2124 RVA: 0x00029D5C File Offset: 0x00027F5C
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveExecuteAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskFindRandomPosition) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveExecuteAI"), TsTaskFindRandomPosition.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			this.ReceiveExecuteAI_Implementation(ownerController, controlledPawn);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000849 RID: 2121 RVA: 0x00028FBC File Offset: 0x000271BC
+	// Token: 0x0600084D RID: 2125 RVA: 0x00029E0C File Offset: 0x0002800C
 	[NullableContext(2)]
 	protected virtual void ReceiveExecuteAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -157,7 +154,7 @@ public class TsTaskFindRandomPosition : TsTaskAbortImmediatelyBase, IUnrealUObje
 		base.FinishExecute(true);
 	}
 
-	// Token: 0x0600084A RID: 2122 RVA: 0x0002907C File Offset: 0x0002727C
+	// Token: 0x0600084E RID: 2126 RVA: 0x00029ECC File Offset: 0x000280CC
 	private Vector CalculateTargetPosition(CharacterActorComponent actorComp)
 	{
 		Vector actorLocationProxy = actorComp.ActorLocationProxy;
@@ -171,7 +168,7 @@ public class TsTaskFindRandomPosition : TsTaskAbortImmediatelyBase, IUnrealUObje
 		return vector2.AdditionEqual(inB);
 	}
 
-	// Token: 0x0600084B RID: 2123 RVA: 0x00029106 File Offset: 0x00027306
+	// Token: 0x0600084F RID: 2127 RVA: 0x00029F56 File Offset: 0x00028156
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskFindRandomPosition._ClassPtr == IntPtr.Zero)
@@ -181,22 +178,22 @@ public class TsTaskFindRandomPosition : TsTaskAbortImmediatelyBase, IUnrealUObje
 		return TsTaskFindRandomPosition._ClassPtr;
 	}
 
-	// Token: 0x0600084C RID: 2124 RVA: 0x0002912C File Offset: 0x0002732C
+	// Token: 0x06000850 RID: 2128 RVA: 0x00029F7C File Offset: 0x0002817C
 	public TsTaskFindRandomPosition() : this(BuiltinUtils.AllocNativeUObject(TsTaskFindRandomPosition.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0600084D RID: 2125 RVA: 0x00029154 File Offset: 0x00027354
+	// Token: 0x06000851 RID: 2129 RVA: 0x00029FA4 File Offset: 0x000281A4
 	public TsTaskFindRandomPosition(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskFindRandomPosition.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0600084E RID: 2126 RVA: 0x00029187 File Offset: 0x00027387
+	// Token: 0x06000852 RID: 2130 RVA: 0x00029FD7 File Offset: 0x000281D7
 	protected TsTaskFindRandomPosition(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0600084F RID: 2127 RVA: 0x0002919C File Offset: 0x0002739C
+	// Token: 0x06000853 RID: 2131 RVA: 0x00029FEC File Offset: 0x000281EC
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
@@ -205,49 +202,49 @@ public class TsTaskFindRandomPosition : TsTaskAbortImmediatelyBase, IUnrealUObje
 		this.ReceiveExecuteAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x0400062A RID: 1578
+	// Token: 0x0400062E RID: 1582
 	private const float PI_DEG_DOUBLE = 360f;
 
-	// Token: 0x0400062B RID: 1579
+	// Token: 0x0400062F RID: 1583
 	private bool IsInitTsVariables;
 
-	// Token: 0x0400062C RID: 1580
+	// Token: 0x04000630 RID: 1584
 	[Nullable(2)]
 	private Vector TsStartPositionOffset;
 
-	// Token: 0x0400062D RID: 1581
+	// Token: 0x04000631 RID: 1585
 	private float TsMinRange;
 
-	// Token: 0x0400062E RID: 1582
+	// Token: 0x04000632 RID: 1586
 	private float TsMaxRange;
 
-	// Token: 0x0400062F RID: 1583
+	// Token: 0x04000633 RID: 1587
 	private bool TsUseFullRange;
 
-	// Token: 0x04000630 RID: 1584
+	// Token: 0x04000634 RID: 1588
 	private string TsSaveBlackBoardKey = "";
 
-	// Token: 0x04000631 RID: 1585
+	// Token: 0x04000635 RID: 1589
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskFindRandomPosition.TsTaskFindRandomPosition_C";
 
-	// Token: 0x04000632 RID: 1586
+	// Token: 0x04000636 RID: 1590
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04000633 RID: 1587
+	// Token: 0x04000637 RID: 1591
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x04000634 RID: 1588
+	// Token: 0x04000638 RID: 1592
 	private static int __PropertyOffset_StartPositionOffset;
 
-	// Token: 0x04000635 RID: 1589
+	// Token: 0x04000639 RID: 1593
 	private static int __PropertyOffset_MinRange;
 
-	// Token: 0x04000636 RID: 1590
+	// Token: 0x0400063A RID: 1594
 	private static int __PropertyOffset_MaxRange;
 
-	// Token: 0x04000637 RID: 1591
+	// Token: 0x0400063B RID: 1595
 	private static int __PropertyOffset_UseFullRange;
 
-	// Token: 0x04000638 RID: 1592
+	// Token: 0x0400063C RID: 1596
 	private static int __PropertyOffset_SaveBlackBoardKey;
 }

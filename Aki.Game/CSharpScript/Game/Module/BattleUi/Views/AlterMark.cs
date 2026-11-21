@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CAE RID: 23726
+	// Token: 0x02004C90 RID: 19600
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AlterMark : UiPanelBase
 	{
-		// Token: 0x0603BEFD RID: 245501 RVA: 0x00E52820 File Offset: 0x00E50A20
+		// Token: 0x06030E50 RID: 200272 RVA: 0x00DA2EC8 File Offset: 0x00DA10C8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603BEFE RID: 245502 RVA: 0x00E528AC File Offset: 0x00E50AAC
+		// Token: 0x06030E51 RID: 200273 RVA: 0x00DA2F54 File Offset: 0x00DA1154
 		protected override void OnStart()
 		{
 			this.Mark = base.GetItem(0);
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetSprite(2).SetUIActive(false);
 		}
 
-		// Token: 0x0603BEFF RID: 245503 RVA: 0x00E52954 File Offset: 0x00E50B54
+		// Token: 0x06030E52 RID: 200274 RVA: 0x00DA2FFC File Offset: 0x00DA11FC
 		[NullableContext(2)]
 		public AlterMark([Nullable(1)] UUIItem parent, Vector originPosition = null, AActor trackActor = null)
 		{
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.PlayerCameraManager = Global.CharacterCameraManager;
 		}
 
-		// Token: 0x0603BF00 RID: 245504 RVA: 0x00E52A54 File Offset: 0x00E50C54
+		// Token: 0x06030E53 RID: 200275 RVA: 0x00DA30FC File Offset: 0x00DA12FC
 		protected override void OnBeforeDestroy()
 		{
 			this.OriginalPosition = null;
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ProjectScreenLocation = null;
 		}
 
-		// Token: 0x0603BF01 RID: 245505 RVA: 0x00E52A94 File Offset: 0x00E50C94
+		// Token: 0x06030E54 RID: 200276 RVA: 0x00DA313C File Offset: 0x00DA133C
 		public void Update()
 		{
 			if (GlobalData.World == null)
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AlertValueUpdate();
 		}
 
-		// Token: 0x0603BF02 RID: 245506 RVA: 0x00E52B88 File Offset: 0x00E50D88
+		// Token: 0x06030E55 RID: 200277 RVA: 0x00DA3230 File Offset: 0x00DA1430
 		private FVectorDouble? GetCurTrackPosition()
 		{
 			if (!ObjectUtils.IsValid(this.TrackingActor))
@@ -114,13 +114,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return new FVectorDouble?(this.TrackingActor.D_K2_GetActorLocation());
 		}
 
-		// Token: 0x0603BF03 RID: 245507 RVA: 0x00E52BAE File Offset: 0x00E50DAE
+		// Token: 0x06030E56 RID: 200278 RVA: 0x00DA3256 File Offset: 0x00DA1456
 		private FVectorDouble GetMonsterLocation(AActor monsterActor)
 		{
 			return monsterActor.D_K2_GetActorLocation();
 		}
 
-		// Token: 0x0603BF04 RID: 245508 RVA: 0x00E52BB8 File Offset: 0x00E50DB8
+		// Token: 0x06030E57 RID: 200279 RVA: 0x00DA3260 File Offset: 0x00DA1460
 		private FVector2D GetInEllipsePosition(in FVectorDouble monsterLocation)
 		{
 			FVector2D screenPosition = new FVector2D();
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return this.ScreenPositionToEllipsePosition(screenPosition, false);
 		}
 
-		// Token: 0x0603BF05 RID: 245509 RVA: 0x00E52C10 File Offset: 0x00E50E10
+		// Token: 0x06030E58 RID: 200280 RVA: 0x00DA32B8 File Offset: 0x00DA14B8
 		private FVector2D ScreenPositionToEllipsePosition(FVector2D screenPosition, bool isInScreen)
 		{
 			float viewportSizeX = this.GetViewportSizeX();
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return fvector2D5 + fvector2D;
 		}
 
-		// Token: 0x0603BF06 RID: 245510 RVA: 0x00E52C9C File Offset: 0x00E50E9C
+		// Token: 0x06030E59 RID: 200281 RVA: 0x00DA3344 File Offset: 0x00DA1544
 		private float GetViewportSizeX()
 		{
 			int num = 0;
@@ -159,14 +159,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return (float)num;
 		}
 
-		// Token: 0x0603BF07 RID: 245511 RVA: 0x00E52CC0 File Offset: 0x00E50EC0
+		// Token: 0x06030E5A RID: 200282 RVA: 0x00DA3368 File Offset: 0x00DA1568
 		private FVector2D GetUiRootItemSize()
 		{
 			UUIItem uiRootItem = UiLayer.Instance.UiRootItem;
 			return new FVector2D(uiRootItem.GetWidth(), uiRootItem.GetHeight());
 		}
 
-		// Token: 0x0603BF08 RID: 245512 RVA: 0x00E52CEC File Offset: 0x00E50EEC
+		// Token: 0x06030E5B RID: 200283 RVA: 0x00DA3394 File Offset: 0x00DA1594
 		private FVector2D ClampToEllipse(FVector2D vector, float majorAxis, float minorAxis, bool isInScreen)
 		{
 			float x = vector.X;
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return vector * (float)num;
 		}
 
-		// Token: 0x0603BF09 RID: 245513 RVA: 0x00E52D48 File Offset: 0x00E50F48
+		// Token: 0x06030E5C RID: 200284 RVA: 0x00DA33F0 File Offset: 0x00DA15F0
 		private Vector GetProjectionToFrontPosition(in FVectorDouble targetLocation)
 		{
 			this.TargetLocation.Set(targetLocation.X, targetLocation.Y, targetLocation.Z);
@@ -194,7 +194,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return this.TargetLocation;
 		}
 
-		// Token: 0x0603BF0A RID: 245514 RVA: 0x00E52DE8 File Offset: 0x00E50FE8
+		// Token: 0x06030E5D RID: 200285 RVA: 0x00DA3490 File Offset: 0x00DA1690
 		private Vector GetPlayerLocation()
 		{
 			FVectorDouble actorLocation = SceneTeamModel.Instance.GetCurrentEntity.Entity.GetComponent<BaseActorComponent>().ActorLocation;
@@ -202,7 +202,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return this.PlayerLocation;
 		}
 
-		// Token: 0x0603BF0B RID: 245515 RVA: 0x00E52E34 File Offset: 0x00E51034
+		// Token: 0x06030E5E RID: 200286 RVA: 0x00DA34DC File Offset: 0x00DA16DC
 		private Vector GetMonsterToPlayerVector(Vector monsterLocation)
 		{
 			Vector playerLocation = this.GetPlayerLocation();
@@ -210,13 +210,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return this.MonsterToPlayerVector;
 		}
 
-		// Token: 0x0603BF0C RID: 245516 RVA: 0x00E52E5C File Offset: 0x00E5105C
+		// Token: 0x06030E5F RID: 200287 RVA: 0x00DA3504 File Offset: 0x00DA1704
 		private FVectorDouble GetCameraForwardVector()
 		{
 			return this.PlayerCameraManager.GetCameraRotation().VectorDouble();
 		}
 
-		// Token: 0x0603BF0D RID: 245517 RVA: 0x00E52E7C File Offset: 0x00E5107C
+		// Token: 0x06030E60 RID: 200288 RVA: 0x00DA3524 File Offset: 0x00DA1724
 		private void AlertValueUpdate()
 		{
 			float alertValue = ActorUtils.GetEntityByActor(this.TrackingActor, true).Entity.GetComponent<CharacterAiComponent>().AiController.AiAlert.AlertValue;
@@ -257,94 +257,94 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401F46F RID: 128111
+		// Token: 0x04019F28 RID: 106280
 		private const int MAX_ALERT = 100;
 
-		// Token: 0x0401F470 RID: 128112
+		// Token: 0x04019F29 RID: 106281
 		private const float START_FILL_AMOUNT = 0.5f;
 
-		// Token: 0x0401F471 RID: 128113
+		// Token: 0x04019F2A RID: 106282
 		private const string NORMAL_COLOR = "B7E6E7FF";
 
-		// Token: 0x0401F472 RID: 128114
+		// Token: 0x04019F2B RID: 106283
 		private const string WARNING_COLOR = "EDDC4DFF";
 
-		// Token: 0x0401F473 RID: 128115
+		// Token: 0x04019F2C RID: 106284
 		private const string ERROR_COLOR = "F01D1BFF";
 
-		// Token: 0x0401F474 RID: 128116
+		// Token: 0x04019F2D RID: 106285
 		private FVectorDouble? OriginalPosition;
 
-		// Token: 0x0401F475 RID: 128117
+		// Token: 0x04019F2E RID: 106286
 		[Nullable(2)]
 		private AActor TrackingActor;
 
-		// Token: 0x0401F476 RID: 128118
+		// Token: 0x04019F2F RID: 106287
 		private readonly float LimitA;
 
-		// Token: 0x0401F477 RID: 128119
+		// Token: 0x04019F30 RID: 106288
 		private readonly float LimitB;
 
-		// Token: 0x0401F478 RID: 128120
+		// Token: 0x04019F31 RID: 106289
 		private readonly Vector TempTrackPosition = Vector.Create();
 
-		// Token: 0x0401F479 RID: 128121
+		// Token: 0x04019F32 RID: 106290
 		[Nullable(2)]
 		private UUISprite RightSprite;
 
-		// Token: 0x0401F47A RID: 128122
+		// Token: 0x04019F33 RID: 106291
 		[Nullable(2)]
 		private UUISprite LeftSprite;
 
-		// Token: 0x0401F47B RID: 128123
+		// Token: 0x04019F34 RID: 106292
 		[Nullable(2)]
 		private UUIItem Mark;
 
-		// Token: 0x0401F47C RID: 128124
+		// Token: 0x04019F35 RID: 106293
 		[Nullable(2)]
 		private APlayerController PlayerController;
 
-		// Token: 0x0401F47D RID: 128125
+		// Token: 0x04019F36 RID: 106294
 		private readonly Vector TargetLocation = Vector.Create();
 
-		// Token: 0x0401F47E RID: 128126
+		// Token: 0x04019F37 RID: 106295
 		private readonly Vector PlayerLocation = Vector.Create();
 
-		// Token: 0x0401F47F RID: 128127
+		// Token: 0x04019F38 RID: 106296
 		private readonly Vector MonsterToPlayerVector = Vector.Create();
 
-		// Token: 0x0401F480 RID: 128128
+		// Token: 0x04019F39 RID: 106297
 		[Nullable(2)]
 		private APlayerCameraManager PlayerCameraManager;
 
-		// Token: 0x0401F481 RID: 128129
+		// Token: 0x04019F3A RID: 106298
 		[Nullable(2)]
 		private Vector ProjectScreenLocation = Vector.Create();
 
-		// Token: 0x0401F482 RID: 128130
+		// Token: 0x04019F3B RID: 106299
 		private AlterMark.EAlterLevel AlterLevel;
 
-		// Token: 0x0200BE86 RID: 48774
+		// Token: 0x0200A88C RID: 43148
 		[NullableContext(0)]
 		private enum EComponents
 		{
-			// Token: 0x04039751 RID: 235345
+			// Token: 0x04034112 RID: 213266
 			UIContainerRoot,
-			// Token: 0x04039752 RID: 235346
+			// Token: 0x04034113 RID: 213267
 			UIContainerRight,
-			// Token: 0x04039753 RID: 235347
+			// Token: 0x04034114 RID: 213268
 			UIContainerLeft
 		}
 
-		// Token: 0x0200BE87 RID: 48775
+		// Token: 0x0200A88D RID: 43149
 		[NullableContext(0)]
 		private enum EAlterLevel
 		{
-			// Token: 0x04039755 RID: 235349
+			// Token: 0x04034116 RID: 213270
 			Normal,
-			// Token: 0x04039756 RID: 235350
+			// Token: 0x04034117 RID: 213271
 			Warning = 50,
-			// Token: 0x04039757 RID: 235351
+			// Token: 0x04034118 RID: 213272
 			Error = 80
 		}
 	}

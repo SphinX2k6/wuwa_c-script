@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006B7B RID: 27515
+	// Token: 0x020072C1 RID: 29377
 	public class IMp4BackgroundColorT
 	{
-		// Token: 0x1700CC84 RID: 52356
-		// (get) Token: 0x06030512 RID: 197906 RVA: 0x00690968 File Offset: 0x0068EB68
-		// (set) Token: 0x06030513 RID: 197907 RVA: 0x00690970 File Offset: 0x0068EB70
+		// Token: 0x1700D769 RID: 55145
+		// (get) Token: 0x0603336A RID: 209770 RVA: 0x006E8F88 File Offset: 0x006E7188
+		// (set) Token: 0x0603336B RID: 209771 RVA: 0x006E8F90 File Offset: 0x006E7190
 		public EMp4BackgroundColor FadeIn { get; set; }
 
-		// Token: 0x1700CC85 RID: 52357
-		// (get) Token: 0x06030514 RID: 197908 RVA: 0x00690979 File Offset: 0x0068EB79
-		// (set) Token: 0x06030515 RID: 197909 RVA: 0x00690981 File Offset: 0x0068EB81
+		// Token: 0x1700D76A RID: 55146
+		// (get) Token: 0x0603336C RID: 209772 RVA: 0x006E8F99 File Offset: 0x006E7199
+		// (set) Token: 0x0603336D RID: 209773 RVA: 0x006E8FA1 File Offset: 0x006E71A1
 		public EMp4BackgroundColor FadeOut { get; set; }
 
-		// Token: 0x06030516 RID: 197910 RVA: 0x0069098A File Offset: 0x0068EB8A
+		// Token: 0x0603336E RID: 209774 RVA: 0x006E8FAA File Offset: 0x006E71AA
 		public IMp4BackgroundColorT()
 		{
 			this.FadeIn = EMp4BackgroundColor.Black;

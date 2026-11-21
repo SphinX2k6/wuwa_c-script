@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WuwaGo.Movement
 {
-	// Token: 0x0200472B RID: 18219
+	// Token: 0x0200365C RID: 13916
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WuWaGoActorMoveHelper
 	{
-		// Token: 0x0602F9C7 RID: 195015 RVA: 0x00B075F0 File Offset: 0x00B057F0
+		// Token: 0x06024191 RID: 147857 RVA: 0x00A3747C File Offset: 0x00A3567C
 		public static void SnapMoveTargetsByGridCoordinateDelta(Transform originTransform, Vector fromCoordinate, Vector toCoordinate, IReadOnlyList<IWuWaGoWorldMoveTarget> moveTargets)
 		{
 			if (moveTargets.Count == 0)
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Movement
 			}
 		}
 
-		// Token: 0x0602F9C8 RID: 195016 RVA: 0x00B07790 File Offset: 0x00B05990
+		// Token: 0x06024192 RID: 147858 RVA: 0x00A3761C File Offset: 0x00A3581C
 		public static List<IWuWaGoWorldMoveTarget> BuildGridMoveTargets(WuWaGoGrid grid, [Nullable(2)] WuWaGoGameplayEntityBase gameplayEntity = null, [Nullable(2)] WuWaGoRole role = null, [Nullable(new byte[]
 		{
 			2,
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Movement
 			return list;
 		}
 
-		// Token: 0x0602F9C9 RID: 195017 RVA: 0x00B07818 File Offset: 0x00B05A18
+		// Token: 0x06024193 RID: 147859 RVA: 0x00A376A4 File Offset: 0x00A358A4
 		public static List<IWuWaGoWorldMoveTarget> BuildEntityMoveTargets([Nullable(2)] WuWaGoGameplayEntityBase gameplayEntity = null)
 		{
 			List<IWuWaGoWorldMoveTarget> list = new List<IWuWaGoWorldMoveTarget>();
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Movement
 			return list;
 		}
 
-		// Token: 0x0602F9CA RID: 195018 RVA: 0x00B0782B File Offset: 0x00B05A2B
+		// Token: 0x06024194 RID: 147860 RVA: 0x00A376B7 File Offset: 0x00A358B7
 		public static List<IWuWaGoWorldMoveTarget> BuildRoleMoveTargets([Nullable(2)] WuWaGoRole role = null)
 		{
 			List<IWuWaGoWorldMoveTarget> list = new List<IWuWaGoWorldMoveTarget>();
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Movement
 			return list;
 		}
 
-		// Token: 0x0602F9CB RID: 195019 RVA: 0x00B0783E File Offset: 0x00B05A3E
+		// Token: 0x06024195 RID: 147861 RVA: 0x00A376CA File Offset: 0x00A358CA
 		private static void AppendUnitMoveTarget(List<IWuWaGoWorldMoveTarget> targets, HashSet<WuWaGoBaseUnit> seenUnits, [Nullable(2)] WuWaGoBaseUnit unit = null)
 		{
 			if (unit == null || !unit.IsActorValid() || !seenUnits.Add(unit))
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Movement
 			});
 		}
 
-		// Token: 0x0602F9CC RID: 195020 RVA: 0x00B07867 File Offset: 0x00B05A67
+		// Token: 0x06024196 RID: 147862 RVA: 0x00A376F3 File Offset: 0x00A358F3
 		private static void AppendActorMoveTarget(List<IWuWaGoWorldMoveTarget> targets, HashSet<AActor> seenActors, [Nullable(2)] AActor actor = null)
 		{
 			if (actor == null || !actor.IsValid() || !seenActors.Add(actor))
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Movement
 			});
 		}
 
-		// Token: 0x0602F9CD RID: 195021 RVA: 0x00B07898 File Offset: 0x00B05A98
+		// Token: 0x06024197 RID: 147863 RVA: 0x00A37724 File Offset: 0x00A35924
 		private static void AppendMoveTarget(List<IWuWaGoWorldMoveTarget> targets, HashSet<WuWaGoBaseUnit> seenUnits, HashSet<AActor> seenActors, IWuWaGoWorldMoveTarget target)
 		{
 			if (target.Unit != null)
@@ -147,19 +147,19 @@ namespace CSharpScript.Game.Module.WuwaGo.Movement
 			}
 		}
 
-		// Token: 0x04019B57 RID: 105303
+		// Token: 0x04014207 RID: 82439
 		[StaticVariableRuleIgnore]
 		private static readonly Vector InterpLocation = Vector.Create();
 
-		// Token: 0x04019B58 RID: 105304
+		// Token: 0x04014208 RID: 82440
 		[StaticVariableRuleIgnore]
 		private static readonly Vector FromWorldPosition = Vector.Create();
 
-		// Token: 0x04019B59 RID: 105305
+		// Token: 0x04014209 RID: 82441
 		[StaticVariableRuleIgnore]
 		private static readonly Vector ToWorldPosition = Vector.Create();
 
-		// Token: 0x04019B5A RID: 105306
+		// Token: 0x0401420A RID: 82442
 		[StaticVariableRuleIgnore]
 		private static readonly Vector WorldDelta = Vector.Create();
 	}

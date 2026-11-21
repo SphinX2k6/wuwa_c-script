@@ -9,16 +9,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020022B2 RID: 8882
+// Token: 0x02001796 RID: 6038
 public class MotorcycleScenePopupView : UiViewBase
 {
-	// Token: 0x06011693 RID: 71315 RVA: 0x00443B5F File Offset: 0x00441D5F
+	// Token: 0x0600EB2B RID: 60203 RVA: 0x00450743 File Offset: 0x0044E943
 	[NullableContext(1)]
 	public MotorcycleScenePopupView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06011694 RID: 71316 RVA: 0x00443B68 File Offset: 0x00441D68
+	// Token: 0x0600EB2C RID: 60204 RVA: 0x0045074C File Offset: 0x0044E94C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,7 +30,7 @@ public class MotorcycleScenePopupView : UiViewBase
 		};
 	}
 
-	// Token: 0x06011695 RID: 71317 RVA: 0x00443BD8 File Offset: 0x00441DD8
+	// Token: 0x0600EB2D RID: 60205 RVA: 0x004507BC File Offset: 0x0044E9BC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		MotorcycleScenePopupView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -41,7 +41,7 @@ public class MotorcycleScenePopupView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011696 RID: 71318 RVA: 0x00443C1C File Offset: 0x00441E1C
+	// Token: 0x0600EB2E RID: 60206 RVA: 0x00450800 File Offset: 0x0044EA00
 	private UniTask InitDeActivePanelAsync()
 	{
 		MotorcycleScenePopupView.<InitDeActivePanelAsync>d__8 <InitDeActivePanelAsync>d__;
@@ -52,7 +52,7 @@ public class MotorcycleScenePopupView : UiViewBase
 		return <InitDeActivePanelAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011697 RID: 71319 RVA: 0x00443C60 File Offset: 0x00441E60
+	// Token: 0x0600EB2F RID: 60207 RVA: 0x00450844 File Offset: 0x0044EA44
 	private UniTask InitConfirmBtnAsync()
 	{
 		MotorcycleScenePopupView.<InitConfirmBtnAsync>d__9 <InitConfirmBtnAsync>d__;
@@ -63,7 +63,7 @@ public class MotorcycleScenePopupView : UiViewBase
 		return <InitConfirmBtnAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011698 RID: 71320 RVA: 0x00443CA3 File Offset: 0x00441EA3
+	// Token: 0x0600EB30 RID: 60208 RVA: 0x00450887 File Offset: 0x0044EA87
 	protected override void OnBeforeDestroy()
 	{
 		GenericLayout<MotorcycleScenePopupItem, int> sceneLayout = this.SceneLayout;
@@ -75,7 +75,7 @@ public class MotorcycleScenePopupView : UiViewBase
 		this.ConfirmBtn = null;
 	}
 
-	// Token: 0x06011699 RID: 71321 RVA: 0x00443CC4 File Offset: 0x00441EC4
+	// Token: 0x0600EB31 RID: 60209 RVA: 0x004508A8 File Offset: 0x0044EAA8
 	[NullableContext(1)]
 	private MotorcycleScenePopupItem CreateSceneItem()
 	{
@@ -86,7 +86,7 @@ public class MotorcycleScenePopupView : UiViewBase
 		};
 	}
 
-	// Token: 0x0601169A RID: 71322 RVA: 0x00443CF0 File Offset: 0x00441EF0
+	// Token: 0x0600EB32 RID: 60210 RVA: 0x004508D4 File Offset: 0x0044EAD4
 	private UniTask RefreshSceneListAsync()
 	{
 		MotorcycleScenePopupView.<RefreshSceneListAsync>d__12 <RefreshSceneListAsync>d__;
@@ -97,7 +97,7 @@ public class MotorcycleScenePopupView : UiViewBase
 		return <RefreshSceneListAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601169B RID: 71323 RVA: 0x00443D34 File Offset: 0x00441F34
+	// Token: 0x0600EB33 RID: 60211 RVA: 0x00450918 File Offset: 0x0044EB18
 	private void SelectDefaultScene()
 	{
 		int currentSceneId = MotorcycleDiyModel.Instance.GetCurrentSceneId();
@@ -122,7 +122,7 @@ public class MotorcycleScenePopupView : UiViewBase
 		}
 	}
 
-	// Token: 0x0601169C RID: 71324 RVA: 0x00443D8C File Offset: 0x00441F8C
+	// Token: 0x0600EB34 RID: 60212 RVA: 0x00450970 File Offset: 0x0044EB70
 	private void RefreshBottomBar()
 	{
 		MotorScene? motorSceneConfig = MotorDiyConfig.Instance.GetMotorSceneConfig(this.CurrentSelectedSceneId);
@@ -200,7 +200,7 @@ public class MotorcycleScenePopupView : UiViewBase
 		}
 	}
 
-	// Token: 0x0601169D RID: 71325 RVA: 0x00443F0C File Offset: 0x0044210C
+	// Token: 0x0600EB35 RID: 60213 RVA: 0x00450AF0 File Offset: 0x0044ECF0
 	private void OnClickSceneItem(int sceneId)
 	{
 		if (this.CurrentSelectedSceneId > 0 && this.CurrentSelectedSceneId != sceneId)
@@ -227,7 +227,7 @@ public class MotorcycleScenePopupView : UiViewBase
 		this.RefreshBottomBar();
 	}
 
-	// Token: 0x0601169E RID: 71326 RVA: 0x00443F8E File Offset: 0x0044218E
+	// Token: 0x0600EB36 RID: 60214 RVA: 0x00450B72 File Offset: 0x0044ED72
 	private void OnClickConfirmButton()
 	{
 		if (!MotorcycleDiyModel.Instance.HasScene(this.CurrentSelectedSceneId))
@@ -240,7 +240,7 @@ public class MotorcycleScenePopupView : UiViewBase
 		});
 	}
 
-	// Token: 0x0601169F RID: 71327 RVA: 0x00443FC0 File Offset: 0x004421C0
+	// Token: 0x0600EB37 RID: 60215 RVA: 0x00450BA4 File Offset: 0x0044EDA4
 	protected void SwitchScene()
 	{
 		int currentSceneId = MotorcycleDiyModel.Instance.GetCurrentSceneId();
@@ -265,7 +265,7 @@ public class MotorcycleScenePopupView : UiViewBase
 		}).Forget();
 	}
 
-	// Token: 0x0400844A RID: 33866
+	// Token: 0x04008588 RID: 34184
 	[Nullable(new byte[]
 	{
 		2,
@@ -273,30 +273,30 @@ public class MotorcycleScenePopupView : UiViewBase
 	})]
 	private GenericLayout<MotorcycleScenePopupItem, int> SceneLayout;
 
-	// Token: 0x0400844B RID: 33867
+	// Token: 0x04008589 RID: 34185
 	[Nullable(2)]
 	private FunctionalPanelConditionLock DeActivePanel;
 
-	// Token: 0x0400844C RID: 33868
+	// Token: 0x0400858A RID: 34186
 	[Nullable(2)]
 	private ButtonItem ConfirmBtn;
 
-	// Token: 0x0400844D RID: 33869
+	// Token: 0x0400858B RID: 34187
 	private int CurrentSelectedSceneId;
 
-	// Token: 0x02008821 RID: 34849
+	// Token: 0x020079A5 RID: 31141
 	private class EComponent
 	{
-		// Token: 0x0402C3D0 RID: 181200
+		// Token: 0x040276D5 RID: 161493
 		public const int SceneLayout = 0;
 
-		// Token: 0x0402C3D1 RID: 181201
+		// Token: 0x040276D6 RID: 161494
 		public const int SceneItem = 1;
 
-		// Token: 0x0402C3D2 RID: 181202
+		// Token: 0x040276D7 RID: 161495
 		public const int DeActivePanel = 2;
 
-		// Token: 0x0402C3D3 RID: 181203
+		// Token: 0x040276D8 RID: 161496
 		public const int ConfirmButton = 3;
 	}
 }

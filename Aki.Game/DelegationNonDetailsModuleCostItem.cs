@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001313 RID: 4883
+// Token: 0x020007C7 RID: 1991
 public class DelegationNonDetailsModuleCostItem : UiPanelBase
 {
-	// Token: 0x0600876A RID: 34666 RVA: 0x001CE673 File Offset: 0x001CC873
+	// Token: 0x06005B05 RID: 23301 RVA: 0x001D74DF File Offset: 0x001D56DF
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -16,7 +16,7 @@ public class DelegationNonDetailsModuleCostItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600876B RID: 34667 RVA: 0x001CE6AC File Offset: 0x001CC8AC
+	// Token: 0x06005B06 RID: 23302 RVA: 0x001D7518 File Offset: 0x001D5718
 	public void UpdateItem(int id, int count)
 	{
 		this.ItemId = id;
@@ -26,7 +26,7 @@ public class DelegationNonDetailsModuleCostItem : UiPanelBase
 		this.RefreshCountEnableState();
 	}
 
-	// Token: 0x0600876C RID: 34668 RVA: 0x001CE6FC File Offset: 0x001CC8FC
+	// Token: 0x06005B07 RID: 23303 RVA: 0x001D7568 File Offset: 0x001D5768
 	public void RefreshCountEnableState()
 	{
 		UUIText text = base.GetText(0);
@@ -36,8 +36,8 @@ public class DelegationNonDetailsModuleCostItem : UiPanelBase
 		uuiitem.SetChangeColor(bUseChangeColor, fcolor);
 	}
 
-	// Token: 0x17000B8A RID: 2954
-	// (get) Token: 0x0600876D RID: 34669 RVA: 0x001CE72E File Offset: 0x001CC92E
+	// Token: 0x17000BAA RID: 2986
+	// (get) Token: 0x06005B08 RID: 23304 RVA: 0x001D759A File Offset: 0x001D579A
 	public bool IsEnough
 	{
 		get
@@ -46,19 +46,19 @@ public class DelegationNonDetailsModuleCostItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x04003C6C RID: 15468
+	// Token: 0x04003D04 RID: 15620
 	private int ItemId;
 
-	// Token: 0x04003C6D RID: 15469
+	// Token: 0x04003D05 RID: 15621
 	private int Count;
 
-	// Token: 0x0200795C RID: 31068
+	// Token: 0x02006AE6 RID: 27366
 	private static class ECostItemDefine
 	{
-		// Token: 0x04027F86 RID: 163718
+		// Token: 0x040232B3 RID: 144051
 		public const int CostText = 0;
 
-		// Token: 0x04027F87 RID: 163719
+		// Token: 0x040232B4 RID: 144052
 		public const int Icon = 1;
 	}
 }

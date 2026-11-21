@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200135F RID: 4959
+// Token: 0x02000813 RID: 2067
 public class RewardMainTabItem : CommonTabItemBase, ITabViewRegister
 {
-	// Token: 0x06008A22 RID: 35362 RVA: 0x001D856C File Offset: 0x001D676C
+	// Token: 0x06005DBD RID: 23997 RVA: 0x001E13C8 File Offset: 0x001DF5C8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -21,45 +21,45 @@ public class RewardMainTabItem : CommonTabItemBase, ITabViewRegister
 		};
 	}
 
-	// Token: 0x06008A23 RID: 35363 RVA: 0x001D85D3 File Offset: 0x001D67D3
+	// Token: 0x06005DBE RID: 23998 RVA: 0x001E142F File Offset: 0x001DF62F
 	protected override void OnStart()
 	{
 		this.SetRedDotVisible(false);
 	}
 
-	// Token: 0x06008A24 RID: 35364 RVA: 0x001D85DC File Offset: 0x001D67DC
+	// Token: 0x06005DBF RID: 23999 RVA: 0x001E1438 File Offset: 0x001DF638
 	[NullableContext(1)]
 	public void RegisterViewModule(UiTabViewBase tabView)
 	{
 		tabView.AddUiTabViewBehavior<UiTabSequence>().SetRootItem(tabView);
 	}
 
-	// Token: 0x06008A25 RID: 35365 RVA: 0x001D85EA File Offset: 0x001D67EA
+	// Token: 0x06005DC0 RID: 24000 RVA: 0x001E1446 File Offset: 0x001DF646
 	public void SetRedDotVisible(bool bVisible)
 	{
 		base.GetItem(1).SetUIActive(bVisible);
 	}
 
-	// Token: 0x06008A26 RID: 35366 RVA: 0x001D85F9 File Offset: 0x001D67F9
+	// Token: 0x06005DC1 RID: 24001 RVA: 0x001E1455 File Offset: 0x001DF655
 	[NullableContext(1)]
 	protected override void OnUpdateTabIcon(string iconPath)
 	{
 	}
 
-	// Token: 0x06008A27 RID: 35367 RVA: 0x001D85FB File Offset: 0x001D67FB
+	// Token: 0x06005DC2 RID: 24002 RVA: 0x001E1457 File Offset: 0x001DF657
 	protected override void OnSetToggleState(EToggleState state, bool bFire)
 	{
 		base.GetExtendToggle(0).SetToggleState(state, bFire, false, false);
 	}
 
-	// Token: 0x06008A28 RID: 35368 RVA: 0x001D860E File Offset: 0x001D680E
+	// Token: 0x06005DC3 RID: 24003 RVA: 0x001E146A File Offset: 0x001DF66A
 	[NullableContext(1)]
 	protected override UUIExtendToggle GetTabToggle()
 	{
 		return base.GetExtendToggle(0);
 	}
 
-	// Token: 0x06008A29 RID: 35369 RVA: 0x001D8617 File Offset: 0x001D6817
+	// Token: 0x06005DC4 RID: 24004 RVA: 0x001E1473 File Offset: 0x001DF673
 	protected void OnToggle(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked && this.SelectedCallBack != null)
@@ -68,16 +68,16 @@ public class RewardMainTabItem : CommonTabItemBase, ITabViewRegister
 		}
 	}
 
-	// Token: 0x04003D9B RID: 15771
+	// Token: 0x04003E33 RID: 15923
 	public int TabIndex;
 
-	// Token: 0x020079C1 RID: 31169
+	// Token: 0x02006B4B RID: 27467
 	private class EComponentDefine
 	{
-		// Token: 0x04028156 RID: 164182
+		// Token: 0x04023483 RID: 144515
 		public const int Toggle = 0;
 
-		// Token: 0x04028157 RID: 164183
+		// Token: 0x04023484 RID: 144516
 		public const int RedDot = 1;
 	}
 }

@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004F06 RID: 20230
+	// Token: 0x02003ECF RID: 16079
 	internal enum <RogueBattleSummaryTokenTabView>FF9518760EBC4EC4D2CB5F4F531D2BC8890256981C094266299119A817CC403AC__ERogueBattleSummaryTokenTabViewDefine
 	{
-		// Token: 0x0401B92E RID: 112942
+		// Token: 0x04016301 RID: 90881
 		LoopScrollView,
-		// Token: 0x0401B92F RID: 112943
+		// Token: 0x04016302 RID: 90882
 		TokenItem,
-		// Token: 0x0401B930 RID: 112944
+		// Token: 0x04016303 RID: 90883
 		GridItem
 	}
 }

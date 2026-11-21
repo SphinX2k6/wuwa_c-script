@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200260D RID: 9741
+	// Token: 0x020028CD RID: 10445
 	public class IHonamiStoryCorruptedChestConfirmBox : IInteractionConfirmBoxType
 	{
-		// Token: 0x0600DABA RID: 55994 RVA: 0x00209592 File Offset: 0x00207792
-		[NullableContext(1)]
+		// Token: 0x0600E887 RID: 59527 RVA: 0x00225CE6 File Offset: 0x00223EE6
 		public static IHonamiStoryCorruptedChestConfirmBox Create(IHonamiStoryCorruptedChestConfirmBox? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004062 RID: 16482
-		// (get) Token: 0x0600DABB RID: 55995 RVA: 0x002095B1 File Offset: 0x002077B1
+		// Token: 0x1700439B RID: 17307
+		// (get) Token: 0x0600E888 RID: 59528 RVA: 0x00225D05 File Offset: 0x00223F05
 		public override EInteractionConfirmBoxType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004063 RID: 16483
-		// (get) Token: 0x0600DABC RID: 55996 RVA: 0x002095BE File Offset: 0x002077BE
+		// Token: 0x1700439C RID: 17308
+		// (get) Token: 0x0600E889 RID: 59529 RVA: 0x00225D12 File Offset: 0x00223F12
 		public virtual int Id
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400797D RID: 31101
+		// Token: 0x04008017 RID: 32791
 		private IHonamiStoryCorruptedChestConfirmBox Instance;
 	}
 }

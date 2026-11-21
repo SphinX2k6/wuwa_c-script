@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002644 RID: 9796
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002904 RID: 10500
 	public class SetEntityClientVisible : ActionParams
 	{
-		// Token: 0x0600DBC6 RID: 56262 RVA: 0x0020B562 File Offset: 0x00209762
+		// Token: 0x0600E994 RID: 59796 RVA: 0x00227D2E File Offset: 0x00225F2E
 		public static SetEntityClientVisible Create(ISetEntityClientVisible? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004100 RID: 16640
-		// (get) Token: 0x0600DBC7 RID: 56263 RVA: 0x0020B584 File Offset: 0x00209784
+		// Token: 0x1700443A RID: 17466
+		// (get) Token: 0x0600E995 RID: 59797 RVA: 0x00227D50 File Offset: 0x00225F50
 		public virtual List<int> EntityIds
 		{
 			get
@@ -44,8 +41,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004101 RID: 16641
-		// (get) Token: 0x0600DBC8 RID: 56264 RVA: 0x0020B5E8 File Offset: 0x002097E8
+		// Token: 0x1700443B RID: 17467
+		// (get) Token: 0x0600E996 RID: 59798 RVA: 0x00227DB4 File Offset: 0x00225FB4
 		public virtual bool Visible
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007A20 RID: 31264
+		// Token: 0x040080BC RID: 32956
 		private ISetEntityClientVisible Instance;
 
-		// Token: 0x04007A21 RID: 31265
+		// Token: 0x040080BD RID: 32957
 		private List<int> _EntityIdsCache;
 
-		// Token: 0x04007A22 RID: 31266
+		// Token: 0x040080BE RID: 32958
 		private bool _EntityIdsInited;
 	}
 }

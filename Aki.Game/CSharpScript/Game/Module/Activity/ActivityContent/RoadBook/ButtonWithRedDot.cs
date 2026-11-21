@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 {
-	// Token: 0x020061D8 RID: 25048
+	// Token: 0x02005156 RID: 20822
 	public class ButtonWithRedDot : UiPanelBase
 	{
-		// Token: 0x0603F403 RID: 259075 RVA: 0x00F4891C File Offset: 0x00F46B1C
+		// Token: 0x060340C4 RID: 213188 RVA: 0x00E8F874 File Offset: 0x00E8DA74
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			};
 		}
 
-		// Token: 0x0603F404 RID: 259076 RVA: 0x00F48983 File Offset: 0x00F46B83
+		// Token: 0x060340C5 RID: 213189 RVA: 0x00E8F8DB File Offset: 0x00E8DADB
 		private void ButtonClick()
 		{
 			if (this.ButtonFunction != null)
@@ -32,20 +32,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			}
 		}
 
-		// Token: 0x0603F405 RID: 259077 RVA: 0x00F48998 File Offset: 0x00F46B98
+		// Token: 0x060340C6 RID: 213190 RVA: 0x00E8F8F0 File Offset: 0x00E8DAF0
 		[NullableContext(1)]
 		public void SetFunction(Action buttonFunction)
 		{
 			this.ButtonFunction = buttonFunction;
 		}
 
-		// Token: 0x0603F406 RID: 259078 RVA: 0x00F489A1 File Offset: 0x00F46BA1
+		// Token: 0x060340C7 RID: 213191 RVA: 0x00E8F8F9 File Offset: 0x00E8DAF9
 		public void SetRedDotVisible(bool bVisible)
 		{
 			base.GetItem(1).SetUIActive(bVisible);
 		}
 
-		// Token: 0x04020F9C RID: 135068
+		// Token: 0x0401B8CB RID: 112843
 		[Nullable(2)]
 		private Action ButtonFunction;
 	}

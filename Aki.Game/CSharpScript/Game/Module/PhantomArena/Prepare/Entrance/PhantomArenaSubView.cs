@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 {
-	// Token: 0x0200517E RID: 20862
+	// Token: 0x0200414E RID: 16718
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PhantomArenaSubView : ActivitySubViewBase
 	{
-		// Token: 0x0603559E RID: 218526 RVA: 0x00CA3BCC File Offset: 0x00CA1DCC
+		// Token: 0x0602A499 RID: 173209 RVA: 0x00BF1184 File Offset: 0x00BEF384
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			};
 		}
 
-		// Token: 0x0603559F RID: 218527 RVA: 0x00CA3C80 File Offset: 0x00CA1E80
+		// Token: 0x0602A49A RID: 173210 RVA: 0x00BF1238 File Offset: 0x00BEF438
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PhantomArenaSubView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060355A0 RID: 218528 RVA: 0x00CA3CC4 File Offset: 0x00CA1EC4
+		// Token: 0x0602A49B RID: 173211 RVA: 0x00BF127C File Offset: 0x00BEF47C
 		protected override void OnBeforeShow()
 		{
 			string animationName = (PlayerInfoModel.Instance.GetPlayerGender() == EPlayerGender.Female) ? "IdleF" : "IdleM";
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.BindRedDot();
 		}
 
-		// Token: 0x060355A1 RID: 218529 RVA: 0x00CA3D0C File Offset: 0x00CA1F0C
+		// Token: 0x0602A49C RID: 173212 RVA: 0x00BF12C4 File Offset: 0x00BEF4C4
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnEventRefresh));
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			EventSystem.Instance.Add<int, QuestState, EQuestStatusUpdateReason>(EEventName.OnQuestStateChange, new Action<int, QuestState, EQuestStatusUpdateReason>(this.OnEventQuestChange));
 		}
 
-		// Token: 0x060355A2 RID: 218530 RVA: 0x00CA3D70 File Offset: 0x00CA1F70
+		// Token: 0x0602A49D RID: 173213 RVA: 0x00BF1328 File Offset: 0x00BEF528
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnEventRefresh));
@@ -66,14 +66,14 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			EventSystem.Instance.Remove(EEventName.OnQuestStateChange, new Action<int, QuestState, EQuestStatusUpdateReason>(this.OnEventQuestChange));
 		}
 
-		// Token: 0x060355A3 RID: 218531 RVA: 0x00CA3DD1 File Offset: 0x00CA1FD1
+		// Token: 0x0602A49E RID: 173214 RVA: 0x00BF1389 File Offset: 0x00BEF589
 		protected override void OnRefreshView()
 		{
 			this.RefreshInfo();
 			this.BindRedDot();
 		}
 
-		// Token: 0x060355A4 RID: 218532 RVA: 0x00CA3DE0 File Offset: 0x00CA1FE0
+		// Token: 0x0602A49F RID: 173215 RVA: 0x00BF1398 File Offset: 0x00BEF598
 		private void RefreshInfo()
 		{
 			this.InfoComponent.SetBtnText("PhantomBattle_1103", Array.Empty<object>());
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.RefreshLevel();
 		}
 
-		// Token: 0x060355A5 RID: 218533 RVA: 0x00CA3E6C File Offset: 0x00CA206C
+		// Token: 0x0602A4A0 RID: 173216 RVA: 0x00BF1424 File Offset: 0x00BEF624
 		private void RefreshRecommend()
 		{
 			PhantomArenaActivityData phantomArenaActivityData = this.ActivityBaseData as PhantomArenaActivityData;
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			this.RecommendQuestTips.SetUiActive(phantomArenaActivityData.RecommendQuestId > 0 && !QuestNewModel.Instance.CheckQuestFinished(phantomArenaActivityData.RecommendQuestId));
 		}
 
-		// Token: 0x060355A6 RID: 218534 RVA: 0x00CA3EC8 File Offset: 0x00CA20C8
+		// Token: 0x0602A4A1 RID: 173217 RVA: 0x00BF1480 File Offset: 0x00BEF680
 		private void RefreshLevel()
 		{
 			PhantomArenaModel instance = PhantomArenaModel.Instance;
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			});
 		}
 
-		// Token: 0x060355A7 RID: 218535 RVA: 0x00CA3F2A File Offset: 0x00CA212A
+		// Token: 0x0602A4A2 RID: 173218 RVA: 0x00BF14E2 File Offset: 0x00BEF6E2
 		private void OnClickConfirm(ActivityBaseData data)
 		{
 			ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate(ActivityViewJumpClickLogData logData)
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			});
 		}
 
-		// Token: 0x060355A8 RID: 218536 RVA: 0x00CA3F48 File Offset: 0x00CA2148
+		// Token: 0x0602A4A3 RID: 173219 RVA: 0x00BF1500 File Offset: 0x00BEF700
 		private void OnClickTask(int _)
 		{
 			BattleShopViewOpenParam param = new BattleShopViewOpenParam
@@ -149,13 +149,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			UiManager.Instance.OpenView(EUiViewName.PhantomArenaEntranceShopMainView, param, null);
 		}
 
-		// Token: 0x060355A9 RID: 218537 RVA: 0x00CA3F88 File Offset: 0x00CA2188
+		// Token: 0x0602A4A4 RID: 173220 RVA: 0x00BF1540 File Offset: 0x00BEF740
 		private void OnClickLevel(int _)
 		{
 			UiManager.Instance.OpenView(EUiViewName.PhantomArenaMasterInfoView, this.ActivityBaseData.Id, null);
 		}
 
-		// Token: 0x060355AA RID: 218538 RVA: 0x00CA3FAC File Offset: 0x00CA21AC
+		// Token: 0x0602A4A5 RID: 173221 RVA: 0x00BF1564 File Offset: 0x00BEF764
 		private void OnClickRecommend()
 		{
 			PhantomArenaActivityData phantomArenaActivityData = this.ActivityBaseData as PhantomArenaActivityData;
@@ -165,25 +165,25 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			}
 		}
 
-		// Token: 0x060355AB RID: 218539 RVA: 0x00CA3FFB File Offset: 0x00CA21FB
+		// Token: 0x0602A4A6 RID: 173222 RVA: 0x00BF15B3 File Offset: 0x00BEF7B3
 		protected override void OnBeforeHide()
 		{
 			this.UnBindRedDot();
 		}
 
-		// Token: 0x060355AC RID: 218540 RVA: 0x00CA4003 File Offset: 0x00CA2203
+		// Token: 0x0602A4A7 RID: 173223 RVA: 0x00BF15BB File Offset: 0x00BEF7BB
 		private void CrossDayRefresh()
 		{
 			this.RefreshInfo();
 		}
 
-		// Token: 0x060355AD RID: 218541 RVA: 0x00CA400B File Offset: 0x00CA220B
+		// Token: 0x0602A4A8 RID: 173224 RVA: 0x00BF15C3 File Offset: 0x00BEF7C3
 		private void OnEventRefresh(int activityId)
 		{
 			this.RefreshInfo();
 		}
 
-		// Token: 0x060355AE RID: 218542 RVA: 0x00CA4013 File Offset: 0x00CA2213
+		// Token: 0x0602A4A9 RID: 173225 RVA: 0x00BF15CB File Offset: 0x00BEF7CB
 		private void OnEventQuestChange(int questId, QuestState state, EQuestStatusUpdateReason reason)
 		{
 			if (state >= QuestState.Finish)
@@ -192,7 +192,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			}
 		}
 
-		// Token: 0x060355AF RID: 218543 RVA: 0x00CA4020 File Offset: 0x00CA2220
+		// Token: 0x0602A4AA RID: 173226 RVA: 0x00BF15D8 File Offset: 0x00BEF7D8
 		private void BindRedDot()
 		{
 			this.UnBindRedDot();
@@ -214,7 +214,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, this.ActivityBaseData.Id);
 		}
 
-		// Token: 0x060355B0 RID: 218544 RVA: 0x00CA40BB File Offset: 0x00CA22BB
+		// Token: 0x0602A4AB RID: 173227 RVA: 0x00BF1673 File Offset: 0x00BEF873
 		private void UnBindRedDot()
 		{
 			this.BtnLimit.UnBindRedDot();
@@ -237,7 +237,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			functionButton.UnBindRedDot();
 		}
 
-		// Token: 0x060355B1 RID: 218545 RVA: 0x00CA40F8 File Offset: 0x00CA22F8
+		// Token: 0x0602A4AC RID: 173228 RVA: 0x00BF16B0 File Offset: 0x00BEF8B0
 		protected override void OnTimer(float gap)
 		{
 			ValueTuple<bool, string> valueTuple = PhantomArenaModel.Instance.IsInLimitTime(this.ActivityBaseData.Id, null);
@@ -259,41 +259,41 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Entrance
 			}
 		}
 
-		// Token: 0x0401C5CC RID: 116172
+		// Token: 0x04017001 RID: 94209
 		private ActivitySubViewGeneralInfo InfoComponent;
 
-		// Token: 0x0401C5CD RID: 116173
+		// Token: 0x04017002 RID: 94210
 		private ActivityQuestTipsItem RecommendQuestTips;
 
-		// Token: 0x0401C5CE RID: 116174
+		// Token: 0x04017003 RID: 94211
 		private ButtonItem BtnLimit;
 
-		// Token: 0x0401C5CF RID: 116175
+		// Token: 0x04017004 RID: 94212
 		private ButtonItem BtnLevel;
 
-		// Token: 0x0200B2F2 RID: 45810
+		// Token: 0x02009D2B RID: 40235
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x040363B2 RID: 222130
+			// Token: 0x04030E07 RID: 200199
 			public const int InfoItem = 0;
 
-			// Token: 0x040363B3 RID: 222131
+			// Token: 0x04030E08 RID: 200200
 			public const int BtnLeft = 1;
 
-			// Token: 0x040363B4 RID: 222132
+			// Token: 0x04030E09 RID: 200201
 			public const int RewardRedDot = 2;
 
-			// Token: 0x040363B5 RID: 222133
+			// Token: 0x04030E0A RID: 200202
 			public const int BtnLimit = 3;
 
-			// Token: 0x040363B6 RID: 222134
+			// Token: 0x04030E0B RID: 200203
 			public const int BtnLevel = 4;
 
-			// Token: 0x040363B7 RID: 222135
+			// Token: 0x04030E0C RID: 200204
 			public const int PanelTips = 5;
 
-			// Token: 0x040363B8 RID: 222136
+			// Token: 0x04030E0D RID: 200205
 			public const int ItemSpine = 6;
 		}
 	}

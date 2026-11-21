@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004F83 RID: 20355
+	// Token: 0x020054B2 RID: 21682
 	public class ICharacterConnectorLogicType_UnionUnion
 	{
-		// Token: 0x1700931A RID: 37658
-		// (get) Token: 0x060204FF RID: 132351 RVA: 0x0047ECF0 File Offset: 0x0047CEF0
-		// (set) Token: 0x06020500 RID: 132352 RVA: 0x0047ECF8 File Offset: 0x0047CEF8
+		// Token: 0x17009A93 RID: 39571
+		// (get) Token: 0x06022251 RID: 139857 RVA: 0x004B4CE0 File Offset: 0x004B2EE0
+		// (set) Token: 0x06022252 RID: 139858 RVA: 0x004B4CE8 File Offset: 0x004B2EE8
 		public ICharacterConnectorLogicType_Union Type { get; set; }
 
-		// Token: 0x1700931B RID: 37659
-		// (get) Token: 0x06020501 RID: 132353 RVA: 0x0047ED01 File Offset: 0x0047CF01
-		// (set) Token: 0x06020502 RID: 132354 RVA: 0x0047ED09 File Offset: 0x0047CF09
+		// Token: 0x17009A94 RID: 39572
+		// (get) Token: 0x06022253 RID: 139859 RVA: 0x004B4CF1 File Offset: 0x004B2EF1
+		// (set) Token: 0x06022254 RID: 139860 RVA: 0x004B4CF9 File Offset: 0x004B2EF9
 		public object Value { get; set; }
 
-		// Token: 0x06020503 RID: 132355 RVA: 0x0047ED12 File Offset: 0x0047CF12
+		// Token: 0x06022255 RID: 139861 RVA: 0x004B4D02 File Offset: 0x004B2F02
 		public ICharacterConnectorLogicType_UnionUnion()
 		{
 			this.Type = ICharacterConnectorLogicType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06020504 RID: 132356 RVA: 0x0047ED28 File Offset: 0x0047CF28
+		// Token: 0x06022256 RID: 139862 RVA: 0x004B4D18 File Offset: 0x004B2F18
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06020505 RID: 132357 RVA: 0x0047ED3A File Offset: 0x0047CF3A
+		// Token: 0x06022257 RID: 139863 RVA: 0x004B4D2A File Offset: 0x004B2F2A
 		public ICharacterConnectorLogicTypeT AsICharacterConnectorLogicType()
 		{
 			return this.As<ICharacterConnectorLogicTypeT>();
 		}
 
-		// Token: 0x06020506 RID: 132358 RVA: 0x0047ED42 File Offset: 0x0047CF42
+		// Token: 0x06022258 RID: 139864 RVA: 0x004B4D32 File Offset: 0x004B2F32
 		public static ICharacterConnectorLogicType_UnionUnion FromICharacterConnectorLogicType(ICharacterConnectorLogicTypeT _icharacterconnectorlogictype)
 		{
 			return new ICharacterConnectorLogicType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06020507 RID: 132359 RVA: 0x0047ED57 File Offset: 0x0047CF57
+		// Token: 0x06022259 RID: 139865 RVA: 0x004B4D47 File Offset: 0x004B2F47
 		public ICharacterConnectorRangeT AsICharacterConnectorRange()
 		{
 			return this.As<ICharacterConnectorRangeT>();
 		}
 
-		// Token: 0x06020508 RID: 132360 RVA: 0x0047ED5F File Offset: 0x0047CF5F
+		// Token: 0x0602225A RID: 139866 RVA: 0x004B4D4F File Offset: 0x004B2F4F
 		public static ICharacterConnectorLogicType_UnionUnion FromICharacterConnectorRange(ICharacterConnectorRangeT _icharacterconnectorrange)
 		{
 			return new ICharacterConnectorLogicType_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06020509 RID: 132361 RVA: 0x0047ED74 File Offset: 0x0047CF74
+		// Token: 0x0602225B RID: 139867 RVA: 0x004B4D64 File Offset: 0x004B2F64
 		public static int Pack(FlatBufferBuilder builder, ICharacterConnectorLogicType_UnionUnion _o)
 		{
 			ICharacterConnectorLogicType_Union type = _o.Type;

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007154 RID: 29012
+	// Token: 0x02007920 RID: 31008
 	public struct ISlideRailStart : IFlatbufferObject
 	{
-		// Token: 0x1700D785 RID: 55173
-		// (get) Token: 0x060336DE RID: 210654 RVA: 0x006EDF94 File Offset: 0x006EC194
+		// Token: 0x1700E36A RID: 58218
+		// (get) Token: 0x06036988 RID: 223624 RVA: 0x0074E7A0 File Offset: 0x0074C9A0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060336DF RID: 210655 RVA: 0x006EDFA1 File Offset: 0x006EC1A1
+		// Token: 0x06036989 RID: 223625 RVA: 0x0074E7AD File Offset: 0x0074C9AD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060336E0 RID: 210656 RVA: 0x006EDFA8 File Offset: 0x006EC1A8
+		// Token: 0x0603698A RID: 223626 RVA: 0x0074E7B4 File Offset: 0x0074C9B4
 		public static ISlideRailStart GetRootAsISlideRailStart(ByteBuffer _bb)
 		{
 			return ISlideRailStart.GetRootAsISlideRailStart(_bb, default(ISlideRailStart));
 		}
 
-		// Token: 0x060336E1 RID: 210657 RVA: 0x006EDFC4 File Offset: 0x006EC1C4
+		// Token: 0x0603698B RID: 223627 RVA: 0x0074E7D0 File Offset: 0x0074C9D0
 		public static ISlideRailStart GetRootAsISlideRailStart(ByteBuffer _bb, ISlideRailStart obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060336E2 RID: 210658 RVA: 0x006EDFE1 File Offset: 0x006EC1E1
+		// Token: 0x0603698C RID: 223628 RVA: 0x0074E7ED File Offset: 0x0074C9ED
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060336E3 RID: 210659 RVA: 0x006EDFF0 File Offset: 0x006EC1F0
+		// Token: 0x0603698D RID: 223629 RVA: 0x0074E7FC File Offset: 0x0074C9FC
 		public ISlideRailStart __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D786 RID: 55174
-		// (get) Token: 0x060336E4 RID: 210660 RVA: 0x006EE000 File Offset: 0x006EC200
+		// Token: 0x1700E36B RID: 58219
+		// (get) Token: 0x0603698E RID: 223630 RVA: 0x0074E80C File Offset: 0x0074CA0C
 		public int RailEntityId
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D787 RID: 55175
-		// (get) Token: 0x060336E5 RID: 210661 RVA: 0x006EE03C File Offset: 0x006EC23C
+		// Token: 0x1700E36C RID: 58220
+		// (get) Token: 0x0603698F RID: 223631 RVA: 0x0074E848 File Offset: 0x0074CA48
 		public string SlidePerformDaPath
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060336E6 RID: 210662 RVA: 0x006EE073 File Offset: 0x006EC273
+		// Token: 0x06036990 RID: 223632 RVA: 0x0074E87F File Offset: 0x0074CA7F
 		public Span<byte> GetSlidePerformDaPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x060336E7 RID: 210663 RVA: 0x006EE082 File Offset: 0x006EC282
+		// Token: 0x06036991 RID: 223633 RVA: 0x0074E88E File Offset: 0x0074CA8E
 		public byte[] GetSlidePerformDaPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x1700D788 RID: 55176
-		// (get) Token: 0x060336E8 RID: 210664 RVA: 0x006EE090 File Offset: 0x006EC290
+		// Token: 0x1700E36D RID: 58221
+		// (get) Token: 0x06036992 RID: 223634 RVA: 0x0074E89C File Offset: 0x0074CA9C
 		public ISlideRailFollowConfig? SlideRailFollowConfig
 		{
 			get
@@ -104,8 +104,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D789 RID: 55177
-		// (get) Token: 0x060336E9 RID: 210665 RVA: 0x006EE0F0 File Offset: 0x006EC2F0
+		// Token: 0x1700E36E RID: 58222
+		// (get) Token: 0x06036993 RID: 223635 RVA: 0x0074E8FC File Offset: 0x0074CAFC
 		public ISlideRailRTPCParams? RTPCParams
 		{
 			get
@@ -119,7 +119,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060336EA RID: 210666 RVA: 0x006EE14E File Offset: 0x006EC34E
+		// Token: 0x06036994 RID: 223636 RVA: 0x0074E95A File Offset: 0x0074CB5A
 		public static Offset<ISlideRailStart> CreateISlideRailStart(FlatBufferBuilder builder, int RailEntityId = 0, StringOffset SlidePerformDaPathOffset = default(StringOffset), Offset<ISlideRailFollowConfig> SlideRailFollowConfigOffset = default(Offset<ISlideRailFollowConfig>), Offset<ISlideRailRTPCParams> RTPCParamsOffset = default(Offset<ISlideRailRTPCParams>))
 		{
 			builder.StartTable(4);
@@ -130,43 +130,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISlideRailStart.EndISlideRailStart(builder);
 		}
 
-		// Token: 0x060336EB RID: 210667 RVA: 0x006EE17A File Offset: 0x006EC37A
+		// Token: 0x06036995 RID: 223637 RVA: 0x0074E986 File Offset: 0x0074CB86
 		public static void StartISlideRailStart(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x060336EC RID: 210668 RVA: 0x006EE183 File Offset: 0x006EC383
+		// Token: 0x06036996 RID: 223638 RVA: 0x0074E98F File Offset: 0x0074CB8F
 		public static void AddRailEntityId(FlatBufferBuilder builder, int railEntityId)
 		{
 			builder.AddInt(0, railEntityId, 0);
 		}
 
-		// Token: 0x060336ED RID: 210669 RVA: 0x006EE18E File Offset: 0x006EC38E
+		// Token: 0x06036997 RID: 223639 RVA: 0x0074E99A File Offset: 0x0074CB9A
 		public static void AddSlidePerformDaPath(FlatBufferBuilder builder, StringOffset slidePerformDaPathOffset)
 		{
 			builder.AddOffset(1, slidePerformDaPathOffset.Value, 0);
 		}
 
-		// Token: 0x060336EE RID: 210670 RVA: 0x006EE19E File Offset: 0x006EC39E
+		// Token: 0x06036998 RID: 223640 RVA: 0x0074E9AA File Offset: 0x0074CBAA
 		public static void AddSlideRailFollowConfig(FlatBufferBuilder builder, Offset<ISlideRailFollowConfig> slideRailFollowConfigOffset)
 		{
 			builder.AddOffset(2, slideRailFollowConfigOffset.Value, 0);
 		}
 
-		// Token: 0x060336EF RID: 210671 RVA: 0x006EE1AE File Offset: 0x006EC3AE
+		// Token: 0x06036999 RID: 223641 RVA: 0x0074E9BA File Offset: 0x0074CBBA
 		public static void AddRTPCParams(FlatBufferBuilder builder, Offset<ISlideRailRTPCParams> rTPCParamsOffset)
 		{
 			builder.AddOffset(3, rTPCParamsOffset.Value, 0);
 		}
 
-		// Token: 0x060336F0 RID: 210672 RVA: 0x006EE1BE File Offset: 0x006EC3BE
+		// Token: 0x0603699A RID: 223642 RVA: 0x0074E9CA File Offset: 0x0074CBCA
 		public static Offset<ISlideRailStart> EndISlideRailStart(FlatBufferBuilder builder)
 		{
 			return new Offset<ISlideRailStart>(builder.EndTable());
 		}
 
-		// Token: 0x060336F1 RID: 210673 RVA: 0x006EE1CC File Offset: 0x006EC3CC
+		// Token: 0x0603699B RID: 223643 RVA: 0x0074E9D8 File Offset: 0x0074CBD8
 		public ISlideRailStartT UnPack()
 		{
 			ISlideRailStartT slideRailStartT = new ISlideRailStartT();
@@ -174,7 +174,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return slideRailStartT;
 		}
 
-		// Token: 0x060336F2 RID: 210674 RVA: 0x006EE1E8 File Offset: 0x006EC3E8
+		// Token: 0x0603699C RID: 223644 RVA: 0x0074E9F4 File Offset: 0x0074CBF4
 		public void UnPackTo(ISlideRailStartT _o)
 		{
 			_o.RailEntityId = this.RailEntityId;
@@ -183,7 +183,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.RTPCParams = ((this.RTPCParams != null) ? this.RTPCParams.Value.UnPack() : null);
 		}
 
-		// Token: 0x060336F3 RID: 210675 RVA: 0x006EE26C File Offset: 0x006EC46C
+		// Token: 0x0603699D RID: 223645 RVA: 0x0074EA78 File Offset: 0x0074CC78
 		public static Offset<ISlideRailStart> Pack(FlatBufferBuilder builder, ISlideRailStartT _o)
 		{
 			if (_o == null)
@@ -196,7 +196,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISlideRailStart.CreateISlideRailStart(builder, _o.RailEntityId, slidePerformDaPathOffset, slideRailFollowConfigOffset, rtpcparamsOffset);
 		}
 
-		// Token: 0x04011BF0 RID: 72688
+		// Token: 0x04012BDF RID: 76767
 		private Table __p;
 	}
 }

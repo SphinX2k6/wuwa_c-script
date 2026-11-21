@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200096A RID: 2410
+	// Token: 0x02000A3F RID: 2623
 	public class ConfigSpeakerChangeAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003890 RID: 14480 RVA: 0x00199590 File Offset: 0x00197790
+		// Token: 0x06003D8E RID: 15758 RVA: 0x001B8924 File Offset: 0x001B6B24
 		static ConfigSpeakerChangeAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSpeakerChangeAll.CreateStaticDefaultValue), new Action(ConfigSpeakerChangeAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003891 RID: 14481 RVA: 0x001995B0 File Offset: 0x001977B0
+		// Token: 0x06003D8F RID: 15759 RVA: 0x001B8944 File Offset: 0x001B6B44
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSpeakerChangeAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003892 RID: 14482 RVA: 0x0019962F File Offset: 0x0019782F
+		// Token: 0x06003D90 RID: 15760 RVA: 0x001B89C3 File Offset: 0x001B6BC3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSpeakerChangeAll.LogPair = null;
 			ConfigSpeakerChangeAll.HandleId = 0;
 		}
 
-		// Token: 0x06003893 RID: 14483 RVA: 0x0019963D File Offset: 0x0019783D
+		// Token: 0x06003D91 RID: 15761 RVA: 0x001B89D1 File Offset: 0x001B6BD1
 		public static void Init()
 		{
 			ConfigSpeakerChangeAll.HandleId = ConfigCommon.InitDataStatement(ConfigSpeakerChangeAll.HandleId, "db_phonemsg.db", "select BinData from `SpeakerChange`");
 		}
 
-		// Token: 0x06003894 RID: 14484 RVA: 0x00199658 File Offset: 0x00197858
+		// Token: 0x06003D92 RID: 15762 RVA: 0x001B89EC File Offset: 0x001B6BEC
 		[NullableContext(2)]
 		public static IReadOnlyList<SpeakerChange> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040041CC RID: 16844
+		// Token: 0x0400479F RID: 18335
 		private const string DB = "db_phonemsg.db";
 
-		// Token: 0x040041CD RID: 16845
+		// Token: 0x040047A0 RID: 18336
 		private const string FILE = "s.手机系统.xlsx";
 
-		// Token: 0x040041CE RID: 16846
+		// Token: 0x040047A1 RID: 18337
 		private const string TABLE = "SpeakerChange";
 
-		// Token: 0x040041CF RID: 16847
+		// Token: 0x040047A2 RID: 18338
 		private const string COMMAND = "select BinData from `SpeakerChange`";
 
-		// Token: 0x040041D0 RID: 16848
+		// Token: 0x040047A3 RID: 18339
 		private const string KEY_PREFIX = "SpeakerChangeAll";
 
-		// Token: 0x040041D1 RID: 16849
+		// Token: 0x040047A4 RID: 18340
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040041D2 RID: 16850
+		// Token: 0x040047A5 RID: 18341
 		private static int HandleId;
 	}
 }

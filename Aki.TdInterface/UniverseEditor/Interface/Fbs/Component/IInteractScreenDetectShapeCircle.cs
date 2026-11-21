@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005470 RID: 21616
+	// Token: 0x020059F6 RID: 23030
 	public struct IInteractScreenDetectShapeCircle : IFlatbufferObject
 	{
-		// Token: 0x17009F1C RID: 40732
-		// (get) Token: 0x060238E9 RID: 145641 RVA: 0x004EAEBE File Offset: 0x004E90BE
+		// Token: 0x1700A756 RID: 42838
+		// (get) Token: 0x060259A1 RID: 154017 RVA: 0x00527F32 File Offset: 0x00526132
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060238EA RID: 145642 RVA: 0x004EAECB File Offset: 0x004E90CB
+		// Token: 0x060259A2 RID: 154018 RVA: 0x00527F3F File Offset: 0x0052613F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060238EB RID: 145643 RVA: 0x004EAED4 File Offset: 0x004E90D4
+		// Token: 0x060259A3 RID: 154019 RVA: 0x00527F48 File Offset: 0x00526148
 		public static IInteractScreenDetectShapeCircle GetRootAsIInteractScreenDetectShapeCircle(ByteBuffer _bb)
 		{
 			return IInteractScreenDetectShapeCircle.GetRootAsIInteractScreenDetectShapeCircle(_bb, default(IInteractScreenDetectShapeCircle));
 		}
 
-		// Token: 0x060238EC RID: 145644 RVA: 0x004EAEF0 File Offset: 0x004E90F0
+		// Token: 0x060259A4 RID: 154020 RVA: 0x00527F64 File Offset: 0x00526164
 		public static IInteractScreenDetectShapeCircle GetRootAsIInteractScreenDetectShapeCircle(ByteBuffer _bb, IInteractScreenDetectShapeCircle obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060238ED RID: 145645 RVA: 0x004EAF0D File Offset: 0x004E910D
+		// Token: 0x060259A5 RID: 154021 RVA: 0x00527F81 File Offset: 0x00526181
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060238EE RID: 145646 RVA: 0x004EAF1C File Offset: 0x004E911C
+		// Token: 0x060259A6 RID: 154022 RVA: 0x00527F90 File Offset: 0x00526190
 		public IInteractScreenDetectShapeCircle __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009F1D RID: 40733
-		// (get) Token: 0x060238EF RID: 145647 RVA: 0x004EAF2C File Offset: 0x004E912C
+		// Token: 0x1700A757 RID: 42839
+		// (get) Token: 0x060259A7 RID: 154023 RVA: 0x00527FA0 File Offset: 0x005261A0
 		public EInteractScreenDetectShape Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009F1E RID: 40734
-		// (get) Token: 0x060238F0 RID: 145648 RVA: 0x004EAF68 File Offset: 0x004E9168
+		// Token: 0x1700A758 RID: 42840
+		// (get) Token: 0x060259A8 RID: 154024 RVA: 0x00527FDC File Offset: 0x005261DC
 		public float RadiusRatio
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060238F1 RID: 145649 RVA: 0x004EAFA8 File Offset: 0x004E91A8
+		// Token: 0x060259A9 RID: 154025 RVA: 0x0052801C File Offset: 0x0052621C
 		public static Offset<IInteractScreenDetectShapeCircle> CreateIInteractScreenDetectShapeCircle(FlatBufferBuilder builder, EInteractScreenDetectShape Type = EInteractScreenDetectShape.Circle, float RadiusRatio = 0f)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IInteractScreenDetectShapeCircle.EndIInteractScreenDetectShapeCircle(builder);
 		}
 
-		// Token: 0x060238F2 RID: 145650 RVA: 0x004EAFC5 File Offset: 0x004E91C5
+		// Token: 0x060259AA RID: 154026 RVA: 0x00528039 File Offset: 0x00526239
 		public static void StartIInteractScreenDetectShapeCircle(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060238F3 RID: 145651 RVA: 0x004EAFCE File Offset: 0x004E91CE
+		// Token: 0x060259AB RID: 154027 RVA: 0x00528042 File Offset: 0x00526242
 		public static void AddType(FlatBufferBuilder builder, EInteractScreenDetectShape type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060238F4 RID: 145652 RVA: 0x004EAFD9 File Offset: 0x004E91D9
+		// Token: 0x060259AC RID: 154028 RVA: 0x0052804D File Offset: 0x0052624D
 		public static void AddRadiusRatio(FlatBufferBuilder builder, float radiusRatio)
 		{
 			builder.AddFloat(1, radiusRatio, 0.0);
 		}
 
-		// Token: 0x060238F5 RID: 145653 RVA: 0x004EAFEC File Offset: 0x004E91EC
+		// Token: 0x060259AD RID: 154029 RVA: 0x00528060 File Offset: 0x00526260
 		public static Offset<IInteractScreenDetectShapeCircle> EndIInteractScreenDetectShapeCircle(FlatBufferBuilder builder)
 		{
 			return new Offset<IInteractScreenDetectShapeCircle>(builder.EndTable());
 		}
 
-		// Token: 0x060238F6 RID: 145654 RVA: 0x004EAFFC File Offset: 0x004E91FC
+		// Token: 0x060259AE RID: 154030 RVA: 0x00528070 File Offset: 0x00526270
 		public IInteractScreenDetectShapeCircleT UnPack()
 		{
 			IInteractScreenDetectShapeCircleT interactScreenDetectShapeCircleT = new IInteractScreenDetectShapeCircleT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return interactScreenDetectShapeCircleT;
 		}
 
-		// Token: 0x060238F7 RID: 145655 RVA: 0x004EB017 File Offset: 0x004E9217
+		// Token: 0x060259AF RID: 154031 RVA: 0x0052808B File Offset: 0x0052628B
 		public void UnPackTo(IInteractScreenDetectShapeCircleT _o)
 		{
 			_o.Type = this.Type;
 			_o.RadiusRatio = this.RadiusRatio;
 		}
 
-		// Token: 0x060238F8 RID: 145656 RVA: 0x004EB034 File Offset: 0x004E9234
+		// Token: 0x060259B0 RID: 154032 RVA: 0x005280A8 File Offset: 0x005262A8
 		public static Offset<IInteractScreenDetectShapeCircle> Pack(FlatBufferBuilder builder, IInteractScreenDetectShapeCircleT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IInteractScreenDetectShapeCircle.CreateIInteractScreenDetectShapeCircle(builder, _o.Type, _o.RadiusRatio);
 		}
 
-		// Token: 0x0400E6EE RID: 59118
+		// Token: 0x0400F31F RID: 62239
 		private Table __p;
 	}
 }

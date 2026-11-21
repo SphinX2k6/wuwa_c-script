@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 {
-	// Token: 0x02006EC4 RID: 28356
+	// Token: 0x02006044 RID: 24644
 	public interface IDollGrabInfiniteShowCaseRewardData
 	{
-		// Token: 0x17009AB2 RID: 39602
-		// (get) Token: 0x060450C6 RID: 282822
-		// (set) Token: 0x060450C7 RID: 282823
+		// Token: 0x17006FE9 RID: 28649
+		// (get) Token: 0x0603B267 RID: 242279
+		// (set) Token: 0x0603B268 RID: 242280
 		int DropId { get; set; }
 
-		// Token: 0x17009AB3 RID: 39603
-		// (get) Token: 0x060450C8 RID: 282824
-		// (set) Token: 0x060450C9 RID: 282825
+		// Token: 0x17006FEA RID: 28650
+		// (get) Token: 0x0603B269 RID: 242281
+		// (set) Token: 0x0603B26A RID: 242282
 		int GetRewardIndex { get; set; }
 
-		// Token: 0x17009AB4 RID: 39604
-		// (get) Token: 0x060450CA RID: 282826
-		// (set) Token: 0x060450CB RID: 282827
+		// Token: 0x17006FEB RID: 28651
+		// (get) Token: 0x0603B26B RID: 242283
+		// (set) Token: 0x0603B26C RID: 242284
 		int NextRewardIndex { get; set; }
 	}
 }

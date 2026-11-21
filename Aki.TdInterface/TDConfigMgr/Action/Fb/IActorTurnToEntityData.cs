@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025A8 RID: 9640
+	// Token: 0x02002857 RID: 10327
 	public class IActorTurnToEntityData : IActorTurnToData
 	{
-		// Token: 0x0600D8E6 RID: 55526 RVA: 0x00205EAA File Offset: 0x002040AA
-		[NullableContext(1)]
+		// Token: 0x0600E660 RID: 58976 RVA: 0x00221B7E File Offset: 0x0021FD7E
 		public static IActorTurnToEntityData Create(IActorTurnToEntityData? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003F58 RID: 16216
-		// (get) Token: 0x0600D8E7 RID: 55527 RVA: 0x00205EC9 File Offset: 0x002040C9
+		// Token: 0x17004260 RID: 16992
+		// (get) Token: 0x0600E661 RID: 58977 RVA: 0x00221B9D File Offset: 0x0021FD9D
 		public override EActorTurnToMode Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F59 RID: 16217
-		// (get) Token: 0x0600D8E8 RID: 55528 RVA: 0x00205ED6 File Offset: 0x002040D6
+		// Token: 0x17004261 RID: 16993
+		// (get) Token: 0x0600E662 RID: 58978 RVA: 0x00221BAA File Offset: 0x0021FDAA
 		public virtual int EntityId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007882 RID: 30850
+		// Token: 0x04007EE9 RID: 32489
 		private IActorTurnToEntityData Instance;
 	}
 }

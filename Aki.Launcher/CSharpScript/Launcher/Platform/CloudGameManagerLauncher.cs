@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Platform
 {
-	// Token: 0x02000125 RID: 293
+	// Token: 0x02000129 RID: 297
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CloudGameManagerLauncher : Singleton
 	{
-		// Token: 0x06000968 RID: 2408 RVA: 0x00042A5C File Offset: 0x00040C5C
+		// Token: 0x0600099C RID: 2460 RVA: 0x00044E50 File Offset: 0x00043050
 		public unsafe void Init()
 		{
 			if (!Platform.Instance.IsCloudGame())
@@ -52,8 +52,8 @@ namespace CSharpScript.Launcher.Platform
 			instance.Info(message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 		}
 
-		// Token: 0x170000F7 RID: 247
-		// (get) Token: 0x06000969 RID: 2409 RVA: 0x00042BAA File Offset: 0x00040DAA
+		// Token: 0x170000FD RID: 253
+		// (get) Token: 0x0600099D RID: 2461 RVA: 0x00044F9E File Offset: 0x0004319E
 		public static CloudGameManagerLauncher Instance
 		{
 			get
@@ -67,12 +67,12 @@ namespace CSharpScript.Launcher.Platform
 			}
 		}
 
-		// Token: 0x0600096A RID: 2410 RVA: 0x00042BCD File Offset: 0x00040DCD
+		// Token: 0x0600099E RID: 2462 RVA: 0x00044FC1 File Offset: 0x000431C1
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0600096B RID: 2411 RVA: 0x00042BCF File Offset: 0x00040DCF
+		// Token: 0x0600099F RID: 2463 RVA: 0x00044FC3 File Offset: 0x000431C3
 		public static void ResetStaticDefaultValue()
 		{
 			CloudGameManagerLauncher instance = CloudGameManagerLauncher._instance;
@@ -83,31 +83,31 @@ namespace CSharpScript.Launcher.Platform
 			CloudGameManagerLauncher._instance = null;
 		}
 
-		// Token: 0x0600096C RID: 2412 RVA: 0x00042BE8 File Offset: 0x00040DE8
+		// Token: 0x060009A0 RID: 2464 RVA: 0x00044FDC File Offset: 0x000431DC
 		static CloudGameManagerLauncher()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(CloudGameManagerLauncher.CreateStaticDefaultValue), new Action(CloudGameManagerLauncher.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04000570 RID: 1392
+		// Token: 0x040005AB RID: 1451
 		public const string CLOUD_GAME_REBOOT_CMD = "-Reboot";
 
-		// Token: 0x04000571 RID: 1393
+		// Token: 0x040005AC RID: 1452
 		public const string CLOUD_GAME_PRE_LAUNCH_CMD = "-CloudGamePreLaunch";
 
-		// Token: 0x04000572 RID: 1394
+		// Token: 0x040005AD RID: 1453
 		private readonly Regex CloudGameServerTagRegex = new Regex("-ServerTag=([^\\s]+)");
 
-		// Token: 0x04000573 RID: 1395
+		// Token: 0x040005AE RID: 1454
 		private bool IsInited;
 
-		// Token: 0x04000574 RID: 1396
+		// Token: 0x040005AF RID: 1455
 		public bool IsPreLaunch;
 
-		// Token: 0x04000575 RID: 1397
+		// Token: 0x040005B0 RID: 1456
 		public string ServerTag = "";
 
-		// Token: 0x04000576 RID: 1398
+		// Token: 0x040005B1 RID: 1457
 		[Nullable(2)]
 		private static CloudGameManagerLauncher _instance;
 	}

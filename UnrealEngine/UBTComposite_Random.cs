@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020015F4 RID: 5620
+	// Token: 0x020002D8 RID: 728
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroAI.BTComposite_Random")]
 	[UnrealStructLayout(216, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 216)]
 	public class UBTComposite_Random : UBTCompositeNode, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060143D9 RID: 82905 RVA: 0x001DB85F File Offset: 0x001D9A5F
+		// Token: 0x06004EB1 RID: 20145 RVA: 0x0006DEED File Offset: 0x0006C0ED
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UBTComposite_Random._ClassPtr;
 		}
 
-		// Token: 0x060143DA RID: 82906 RVA: 0x001DB86C File Offset: 0x001D9A6C
+		// Token: 0x06004EB2 RID: 20146 RVA: 0x0006DEFC File Offset: 0x0006C0FC
 		public UBTComposite_Random() : this(BuiltinUtils.AllocNativeUObject(UBTComposite_Random.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060143DB RID: 82907 RVA: 0x001DB894 File Offset: 0x001D9A94
+		// Token: 0x06004EB3 RID: 20147 RVA: 0x0006DF24 File Offset: 0x0006C124
 		public UBTComposite_Random(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UBTComposite_Random.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17004F50 RID: 20304
-		// (get) Token: 0x060143DC RID: 82908 RVA: 0x001DB8C8 File Offset: 0x001D9AC8
-		// (set) Token: 0x060143DD RID: 82909 RVA: 0x001DB901 File Offset: 0x001D9B01
+		// Token: 0x17000F0D RID: 3853
+		// (get) Token: 0x06004EB4 RID: 20148 RVA: 0x0006DF58 File Offset: 0x0006C158
+		// (set) Token: 0x06004EB5 RID: 20149 RVA: 0x0006DF91 File Offset: 0x0006C191
 		public TArray<int> Weights
 		{
 			get
@@ -50,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F51 RID: 20305
-		// (get) Token: 0x060143DE RID: 82910 RVA: 0x001DB910 File Offset: 0x001D9B10
-		// (set) Token: 0x060143DF RID: 82911 RVA: 0x001DB949 File Offset: 0x001D9B49
+		// Token: 0x17000F0E RID: 3854
+		// (get) Token: 0x06004EB6 RID: 20150 RVA: 0x0006DFA0 File Offset: 0x0006C1A0
+		// (set) Token: 0x06004EB7 RID: 20151 RVA: 0x0006DFD9 File Offset: 0x0006C1D9
 		public TArray<int> WeightIncrements
 		{
 			get
@@ -71,9 +71,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F52 RID: 20306
-		// (get) Token: 0x060143E0 RID: 82912 RVA: 0x001DB957 File Offset: 0x001D9B57
-		// (set) Token: 0x060143E1 RID: 82913 RVA: 0x001DB967 File Offset: 0x001D9B67
+		// Token: 0x17000F0F RID: 3855
+		// (get) Token: 0x06004EB8 RID: 20152 RVA: 0x0006DFE7 File Offset: 0x0006C1E7
+		// (set) Token: 0x06004EB9 RID: 20153 RVA: 0x0006DFF7 File Offset: 0x0006C1F7
 		public unsafe float ResetTime
 		{
 			get
@@ -86,9 +86,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004F53 RID: 20307
-		// (get) Token: 0x060143E2 RID: 82914 RVA: 0x001DB978 File Offset: 0x001D9B78
-		// (set) Token: 0x060143E3 RID: 82915 RVA: 0x001DB98C File Offset: 0x001D9B8C
+		// Token: 0x17000F10 RID: 3856
+		// (get) Token: 0x06004EBA RID: 20154 RVA: 0x0006E008 File Offset: 0x0006C208
+		// (set) Token: 0x06004EBB RID: 20155 RVA: 0x0006E01C File Offset: 0x0006C21C
 		public unsafe FName Key
 		{
 			get
@@ -101,44 +101,44 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060143E4 RID: 82916 RVA: 0x001DB9A1 File Offset: 0x001D9BA1
+		// Token: 0x06004EBC RID: 20156 RVA: 0x0006E031 File Offset: 0x0006C231
 		static UBTComposite_Random()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroAI.BTComposite_Random");
 		}
 
-		// Token: 0x060143E5 RID: 82917 RVA: 0x001DB9AF File Offset: 0x001D9BAF
+		// Token: 0x06004EBD RID: 20157 RVA: 0x0006E03F File Offset: 0x0006C23F
 		protected UBTComposite_Random(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400B02D RID: 45101
+		// Token: 0x04001F75 RID: 8053
 		public new const string __ObjectPath = "/Script/KuroAI.BTComposite_Random";
 
-		// Token: 0x0400B02E RID: 45102
+		// Token: 0x04001F76 RID: 8054
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400B02F RID: 45103
+		// Token: 0x04001F77 RID: 8055
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400B030 RID: 45104
+		// Token: 0x04001F78 RID: 8056
 		internal static int __PropertyOffset_Weights;
 
-		// Token: 0x0400B031 RID: 45105
+		// Token: 0x04001F79 RID: 8057
 		[Nullable(2)]
 		private TArray<int> _Weights;
 
-		// Token: 0x0400B032 RID: 45106
+		// Token: 0x04001F7A RID: 8058
 		internal static int __PropertyOffset_WeightIncrements;
 
-		// Token: 0x0400B033 RID: 45107
+		// Token: 0x04001F7B RID: 8059
 		[Nullable(2)]
 		private TArray<int> _WeightIncrements;
 
-		// Token: 0x0400B034 RID: 45108
+		// Token: 0x04001F7C RID: 8060
 		internal static int __PropertyOffset_ResetTime;
 
-		// Token: 0x0400B035 RID: 45109
+		// Token: 0x04001F7D RID: 8061
 		internal static int __PropertyOffset_Key;
 	}
 }

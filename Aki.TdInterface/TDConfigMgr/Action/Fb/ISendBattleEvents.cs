@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026E7 RID: 9959
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020029AB RID: 10667
 	public class ISendBattleEvents : IExecBattleActionType
 	{
-		// Token: 0x0600DE76 RID: 56950 RVA: 0x00210105 File Offset: 0x0020E305
+		// Token: 0x0600EC52 RID: 60498 RVA: 0x0022C945 File Offset: 0x0022AB45
 		public static ISendBattleEvents Create(ISendBattleEvents? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700426A RID: 17002
-		// (get) Token: 0x0600DE77 RID: 56951 RVA: 0x00210124 File Offset: 0x0020E324
+		// Token: 0x170045AA RID: 17834
+		// (get) Token: 0x0600EC53 RID: 60499 RVA: 0x0022C964 File Offset: 0x0022AB64
 		public override EExecBattleActionType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700426B RID: 17003
-		// (get) Token: 0x0600DE78 RID: 56952 RVA: 0x00210134 File Offset: 0x0020E334
+		// Token: 0x170045AB RID: 17835
+		// (get) Token: 0x0600EC54 RID: 60500 RVA: 0x0022C974 File Offset: 0x0022AB74
 		public virtual List<ISetBattleTagConfig> Configs
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B7B RID: 31611
+		// Token: 0x0400821B RID: 33307
 		private ISendBattleEvents Instance;
 
-		// Token: 0x04007B7C RID: 31612
+		// Token: 0x0400821C RID: 33308
 		private List<ISetBattleTagConfig> _ConfigsCache;
 
-		// Token: 0x04007B7D RID: 31613
+		// Token: 0x0400821D RID: 33309
 		private bool _ConfigsInited;
 	}
 }

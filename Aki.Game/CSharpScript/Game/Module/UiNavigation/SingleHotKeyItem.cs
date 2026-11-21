@@ -6,10 +6,10 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020049F3 RID: 18931
+	// Token: 0x0200396D RID: 14701
 	public class SingleHotKeyItem : HotKeyItem
 	{
-		// Token: 0x0603126E RID: 201326 RVA: 0x00B66D18 File Offset: 0x00B64F18
+		// Token: 0x06025DA4 RID: 155044 RVA: 0x00AA1CD4 File Offset: 0x00A9FED4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SingleHotKeyItem.<OnBeforeStartAsync>d__1 <OnBeforeStartAsync>d__;
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603126F RID: 201327 RVA: 0x00B66D5C File Offset: 0x00B64F5C
+		// Token: 0x06025DA5 RID: 155045 RVA: 0x00AA1D18 File Offset: 0x00A9FF18
 		private void RegisterLinkComponent()
 		{
 			TsUiHotKeyLinkListener tsUiHotKeyLinkListener = this.RootActor.GetComponentByClass(TsUiHotKeyLinkListener.StaticClass()) as TsUiHotKeyLinkListener;
@@ -37,13 +37,13 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06031270 RID: 201328 RVA: 0x00B66DD4 File Offset: 0x00B64FD4
+		// Token: 0x06025DA6 RID: 155046 RVA: 0x00AA1D90 File Offset: 0x00A9FF90
 		protected override void OnClear()
 		{
 			this.HotKeyTypeComponent.Clear();
 		}
 
-		// Token: 0x06031271 RID: 201329 RVA: 0x00B66DE1 File Offset: 0x00B64FE1
+		// Token: 0x06025DA7 RID: 155047 RVA: 0x00AA1D9D File Offset: 0x00A9FF9D
 		[return: Nullable(new byte[]
 		{
 			1,
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return new List<HotKeyComponent>();
 		}
 
-		// Token: 0x0401A4E5 RID: 107749
+		// Token: 0x04014D57 RID: 85335
 		[Nullable(2)]
 		private HotKeyTypeBase HotKeyTypeComponent;
 	}

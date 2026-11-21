@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CE3 RID: 3299
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000DDA RID: 3546
 	public class IMeshNpcModel : INpcModelConfig
 	{
-		// Token: 0x06004B5B RID: 19291 RVA: 0x000BC3D6 File Offset: 0x000BA5D6
+		// Token: 0x06005063 RID: 20579 RVA: 0x000C77D2 File Offset: 0x000C59D2
 		public static IMeshNpcModel Create(IMeshNpcModel? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001752 RID: 5970
-		// (get) Token: 0x06004B5C RID: 19292 RVA: 0x000BC3F5 File Offset: 0x000BA5F5
+		// Token: 0x170018AA RID: 6314
+		// (get) Token: 0x06005064 RID: 20580 RVA: 0x000C77F1 File Offset: 0x000C59F1
 		public override ENpcModelType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001753 RID: 5971
-		// (get) Token: 0x06004B5D RID: 19293 RVA: 0x000BC402 File Offset: 0x000BA602
+		// Token: 0x170018AB RID: 6315
+		// (get) Token: 0x06005065 RID: 20581 RVA: 0x000C77FE File Offset: 0x000C59FE
 		public virtual string Mesh
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002B1A RID: 11034
+		// Token: 0x04002DCF RID: 11727
 		private IMeshNpcModel Instance;
 	}
 }

@@ -13,7 +13,7 @@ namespace CSharpScript.Launcher
 	[Nullable(0)]
 	public static class LauncherHttp
 	{
-		// Token: 0x06000295 RID: 661 RVA: 0x0000D3B8 File Offset: 0x0000B5B8
+		// Token: 0x06000296 RID: 662 RVA: 0x0000D6D8 File Offset: 0x0000B8D8
 		public static void Get(string url, [Nullable(new byte[]
 		{
 			2,
@@ -51,7 +51,7 @@ namespace CSharpScript.Launcher
 			UKuroHttp.Get(url, tmap, DelegateUtils.ToManualReleaseDelegate<FHttpResponseHandle>(new Action<bool, int, string>(CS$<>8__locals1.<Get>g__ResponseInternal|0)), (float)timeoutSecs.GetValueOrDefault());
 		}
 
-		// Token: 0x06000296 RID: 662 RVA: 0x0000D46C File Offset: 0x0000B66C
+		// Token: 0x06000297 RID: 663 RVA: 0x0000D78C File Offset: 0x0000B98C
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -74,7 +74,7 @@ namespace CSharpScript.Launcher
 			return <GetAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000297 RID: 663 RVA: 0x0000D4C0 File Offset: 0x0000B6C0
+		// Token: 0x06000298 RID: 664 RVA: 0x0000D7E0 File Offset: 0x0000B9E0
 		public static void Post(string url, string content, [Nullable(new byte[]
 		{
 			2,
@@ -112,7 +112,7 @@ namespace CSharpScript.Launcher
 			UKuroHttp.Post(url, tmap, content, DelegateUtils.ToManualReleaseDelegate<FHttpResponseHandle>(new Action<bool, int, string>(CS$<>8__locals1.<Post>g__ResponseInternal|0)), (float)inTimeoutSecs.GetValueOrDefault());
 		}
 
-		// Token: 0x06000298 RID: 664 RVA: 0x0000D574 File Offset: 0x0000B774
+		// Token: 0x06000299 RID: 665 RVA: 0x0000D894 File Offset: 0x0000BA94
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -136,19 +136,19 @@ namespace CSharpScript.Launcher
 			return <PostAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000299 RID: 665 RVA: 0x0000D5CF File Offset: 0x0000B7CF
+		// Token: 0x0600029A RID: 666 RVA: 0x0000D8EF File Offset: 0x0000BAEF
 		public static void SetHttpThreadActiveMinimumSleepTimeInSeconds(float httpThreadActiveMinimumSleepTimeInSeconds)
 		{
 			UKuroStaticLibrary.SetHttpThreadActiveMinimumSleepTimeInSeconds(httpThreadActiveMinimumSleepTimeInSeconds);
 		}
 
-		// Token: 0x0600029A RID: 666 RVA: 0x0000D5D7 File Offset: 0x0000B7D7
+		// Token: 0x0600029B RID: 667 RVA: 0x0000D8F7 File Offset: 0x0000BAF7
 		public static void SetHttpThreadIdleMinimumSleepTimeInSeconds(float httpThreadIdleMinimumSleepTimeInSeconds)
 		{
 			UKuroStaticLibrary.SetHttpThreadIdleMinimumSleepTimeInSeconds(httpThreadIdleMinimumSleepTimeInSeconds);
 		}
 
-		// Token: 0x0600029B RID: 667 RVA: 0x0000D5E0 File Offset: 0x0000B7E0
+		// Token: 0x0600029C RID: 668 RVA: 0x0000D900 File Offset: 0x0000BB00
 		public static bool IsConnectionInvalid(IHttpPostResult responseData)
 		{
 			bool flag = !responseData.Success && responseData.Code == 0;
@@ -156,7 +156,7 @@ namespace CSharpScript.Launcher
 			return flag || flag2;
 		}
 
-		// Token: 0x04000189 RID: 393
+		// Token: 0x04000195 RID: 405
 		private const int BAD_REQUEST = 400;
 	}
 }

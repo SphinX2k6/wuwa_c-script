@@ -6,29 +6,30 @@ using Aki.TDConfigMgr.Action;
 using Aki.TDConfigMgr.Component;
 using AkiClient.Game.Aki.CreatureTools;
 using CSharpScript.Game.Common.Event;
+using CSharpScript.Game.LevelGamePlay;
 using CSharpScript.Game.NewWorld.Common.Component;
 using CSharpScript.Game.NewWorld.SceneItem.Common.Component;
 using UnrealEngine;
 
-// Token: 0x02000EE4 RID: 3812
+// Token: 0x02000399 RID: 921
 [NullableContext(1)]
 [Nullable(0)]
 public class LevelGeneralCommons : IStaticVariableResetter
 {
-	// Token: 0x06005F55 RID: 24405 RVA: 0x0011D42D File Offset: 0x0011B62D
+	// Token: 0x060032EB RID: 13035 RVA: 0x001251B1 File Offset: 0x001233B1
 	static LevelGeneralCommons()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(LevelGeneralCommons.CreateStaticDefaultValue), new Action(LevelGeneralCommons.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06005F56 RID: 24406 RVA: 0x0011D44C File Offset: 0x0011B64C
+	// Token: 0x060032EC RID: 13036 RVA: 0x001251D0 File Offset: 0x001233D0
 	public static void Init()
 	{
 		LevelGeneralCommons.TempTags = new List<string>();
 		LevelGeneralCommons.TempFindEntities = new List<EntityHandle>();
 	}
 
-	// Token: 0x06005F57 RID: 24407 RVA: 0x0011D462 File Offset: 0x0011B662
+	// Token: 0x060032ED RID: 13037 RVA: 0x001251E6 File Offset: 0x001233E6
 	public static void Clear()
 	{
 		if (LevelGeneralCommons.TempTags != null)
@@ -41,7 +42,7 @@ public class LevelGeneralCommons : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06005F58 RID: 24408 RVA: 0x0011D488 File Offset: 0x0011B688
+	// Token: 0x060032EE RID: 13038 RVA: 0x0012520C File Offset: 0x0012340C
 	public static void AddPublicTag(string inTag, AActor inTarget)
 	{
 		if (LevelGeneralCommons.TempTags == null)
@@ -58,7 +59,7 @@ public class LevelGeneralCommons : IStaticVariableResetter
 		CreatureController.Instance.AddPublicTags(ibpi_CreatureInterface_C.GetEntityId(), LevelGeneralCommons.TempTags);
 	}
 
-	// Token: 0x06005F59 RID: 24409 RVA: 0x0011D4D4 File Offset: 0x0011B6D4
+	// Token: 0x060032EF RID: 13039 RVA: 0x00125258 File Offset: 0x00123458
 	public static void RemovePublicTag(string inTag, AActor inTarget)
 	{
 		if (LevelGeneralCommons.TempTags == null)
@@ -75,7 +76,7 @@ public class LevelGeneralCommons : IStaticVariableResetter
 		CreatureController.Instance.RemovePublicTags(ibpi_CreatureInterface_C.GetEntityId(), LevelGeneralCommons.TempTags);
 	}
 
-	// Token: 0x06005F5A RID: 24410 RVA: 0x0011D51E File Offset: 0x0011B71E
+	// Token: 0x060032F0 RID: 13040 RVA: 0x001252A2 File Offset: 0x001234A2
 	[return: Nullable(2)]
 	public static AActor FindTargetWithTag(string inTag)
 	{
@@ -91,7 +92,7 @@ public class LevelGeneralCommons : IStaticVariableResetter
 		return CharacterController.Instance.GetActor(LevelGeneralCommons.TempFindEntities[0]);
 	}
 
-	// Token: 0x06005F5B RID: 24411 RVA: 0x0011D55C File Offset: 0x0011B75C
+	// Token: 0x060032F1 RID: 13041 RVA: 0x001252E0 File Offset: 0x001234E0
 	public static void FindTargetsWithTag(string inTag, ref List<AActor> refActors)
 	{
 		if (LevelGeneralCommons.TempFindEntities == null)
@@ -114,7 +115,7 @@ public class LevelGeneralCommons : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06005F5C RID: 24412 RVA: 0x0011D5EC File Offset: 0x0011B7EC
+	// Token: 0x060032F2 RID: 13042 RVA: 0x00125370 File Offset: 0x00123570
 	public unsafe static void UpdateEntityTag(int inEntityId, string inTag, bool isAdd)
 	{
 		EntityHandle entityById = CreatureModel.Instance.GetEntityById(inEntityId);
@@ -159,7 +160,7 @@ public class LevelGeneralCommons : IStaticVariableResetter
 		LevelGeneralCommons.RemovePublicTag(inTag, actor);
 	}
 
-	// Token: 0x06005F5D RID: 24413 RVA: 0x0011D718 File Offset: 0x0011B918
+	// Token: 0x060032F3 RID: 13043 RVA: 0x0012549C File Offset: 0x0012369C
 	[NullableContext(2)]
 	public static string GetConditionGroupHintText(int inConditionGroupId)
 	{
@@ -171,7 +172,28 @@ public class LevelGeneralCommons : IStaticVariableResetter
 		return config.GetValueOrDefault().HintText;
 	}
 
-	// Token: 0x06005F5E RID: 24414 RVA: 0x0011D748 File Offset: 0x0011B948
+	// Token: 0x060032F4 RID: 13044 RVA: 0x001254CC File Offset: 0x001236CC
+	public static string GetReachedConditionIds(int inConditionGroupId)
+	{
+		ConditionGroup? config = ConfigConditionGroupById.GetConfig(inConditionGroupId, true);
+		if (config == null)
+		{
+			return string.Empty;
+		}
+		List<string> list = new List<string>();
+		for (int i = 0; i < config.Value.GroupIdLength; i++)
+		{
+			int p0Id = config.Value.GroupId(i);
+			Condition? config2 = ConfigConditionById.GetConfig(p0Id, true);
+			if (config2 != null && LevelGeneralController.Instance.HandleCondition(config2.Value, null, inConditionGroupId.ToString(), Array.Empty<object>()))
+			{
+				list.Add(p0Id.ToString());
+			}
+		}
+		return string.Join(",", list);
+	}
+
+	// Token: 0x060032F5 RID: 13045 RVA: 0x00125570 File Offset: 0x00123770
 	public static void PrechangeStateTag(int pbDataId, int tagId, string reason)
 	{
 		EntityHandle entityByPbDataId = CreatureModel.Instance.GetEntityByPbDataId(pbDataId);
@@ -198,7 +220,7 @@ public class LevelGeneralCommons : IStaticVariableResetter
 		instance2.Error(module2, author2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
 	}
 
-	// Token: 0x06005F5F RID: 24415 RVA: 0x0011D7D0 File Offset: 0x0011B9D0
+	// Token: 0x060032F6 RID: 13046 RVA: 0x001255F8 File Offset: 0x001237F8
 	private unsafe static void PrechangeStateTagInternal(int pbDataId, EntityHandle handle, int tagId)
 	{
 		WorldEntity entity = handle.Entity;
@@ -238,7 +260,7 @@ public class LevelGeneralCommons : IStaticVariableResetter
 		EventSystem.Instance.EmitWithTarget<int>(handle.Entity, EEventName.OnSceneItemStatePreChangeInSequence, tagId);
 	}
 
-	// Token: 0x06005F60 RID: 24416 RVA: 0x0011D93C File Offset: 0x0011BB3C
+	// Token: 0x060032F7 RID: 13047 RVA: 0x00125764 File Offset: 0x00123964
 	public static void ChangeToDestroyState(int pbDataId)
 	{
 		EntityHandle entityByPbDataId = CreatureModel.Instance.GetEntityByPbDataId(pbDataId);
@@ -268,7 +290,7 @@ public class LevelGeneralCommons : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06005F61 RID: 24417 RVA: 0x0011D9C4 File Offset: 0x0011BBC4
+	// Token: 0x060032F8 RID: 13048 RVA: 0x001257EC File Offset: 0x001239EC
 	public static void RollbackDestroyState(int pbDataId, int tagId)
 	{
 		EntityHandle entityByPbDataId = CreatureModel.Instance.GetEntityByPbDataId(pbDataId);
@@ -304,19 +326,19 @@ public class LevelGeneralCommons : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06005F62 RID: 24418 RVA: 0x0011DA4B File Offset: 0x0011BC4B
+	// Token: 0x060032F9 RID: 13049 RVA: 0x00125873 File Offset: 0x00123A73
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06005F63 RID: 24419 RVA: 0x0011DA4D File Offset: 0x0011BC4D
+	// Token: 0x060032FA RID: 13050 RVA: 0x00125875 File Offset: 0x00123A75
 	public static void ResetStaticDefaultValue()
 	{
 		LevelGeneralCommons.TempTags = null;
 		LevelGeneralCommons.TempFindEntities = null;
 	}
 
-	// Token: 0x04002B3B RID: 11067
+	// Token: 0x04002BD5 RID: 11221
 	[Nullable(new byte[]
 	{
 		2,
@@ -324,7 +346,7 @@ public class LevelGeneralCommons : IStaticVariableResetter
 	})]
 	private static List<string> TempTags;
 
-	// Token: 0x04002B3C RID: 11068
+	// Token: 0x04002BD6 RID: 11222
 	[Nullable(new byte[]
 	{
 		2,

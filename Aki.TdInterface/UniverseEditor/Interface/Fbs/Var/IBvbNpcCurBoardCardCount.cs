@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003A6C RID: 14956
+	// Token: 0x02003E47 RID: 15943
 	public struct IBvbNpcCurBoardCardCount : IFlatbufferObject
 	{
-		// Token: 0x1700667E RID: 26238
-		// (get) Token: 0x06014463 RID: 83043 RVA: 0x002F6121 File Offset: 0x002F4321
+		// Token: 0x17006BAE RID: 27566
+		// (get) Token: 0x0601577F RID: 87935 RVA: 0x0031930D File Offset: 0x0031750D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x06014464 RID: 83044 RVA: 0x002F612E File Offset: 0x002F432E
+		// Token: 0x06015780 RID: 87936 RVA: 0x0031931A File Offset: 0x0031751A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06014465 RID: 83045 RVA: 0x002F6138 File Offset: 0x002F4338
+		// Token: 0x06015781 RID: 87937 RVA: 0x00319324 File Offset: 0x00317524
 		public static IBvbNpcCurBoardCardCount GetRootAsIBvbNpcCurBoardCardCount(ByteBuffer _bb)
 		{
 			return IBvbNpcCurBoardCardCount.GetRootAsIBvbNpcCurBoardCardCount(_bb, default(IBvbNpcCurBoardCardCount));
 		}
 
-		// Token: 0x06014466 RID: 83046 RVA: 0x002F6154 File Offset: 0x002F4354
+		// Token: 0x06015782 RID: 87938 RVA: 0x00319340 File Offset: 0x00317540
 		public static IBvbNpcCurBoardCardCount GetRootAsIBvbNpcCurBoardCardCount(ByteBuffer _bb, IBvbNpcCurBoardCardCount obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06014467 RID: 83047 RVA: 0x002F6171 File Offset: 0x002F4371
+		// Token: 0x06015783 RID: 87939 RVA: 0x0031935D File Offset: 0x0031755D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06014468 RID: 83048 RVA: 0x002F6180 File Offset: 0x002F4380
+		// Token: 0x06015784 RID: 87940 RVA: 0x0031936C File Offset: 0x0031756C
 		public IBvbNpcCurBoardCardCount __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700667F RID: 26239
-		// (get) Token: 0x06014469 RID: 83049 RVA: 0x002F6190 File Offset: 0x002F4390
+		// Token: 0x17006BAF RID: 27567
+		// (get) Token: 0x06015785 RID: 87941 RVA: 0x0031937C File Offset: 0x0031757C
 		public ESystemVarName Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x0601446A RID: 83050 RVA: 0x002F61CC File Offset: 0x002F43CC
+		// Token: 0x06015786 RID: 87942 RVA: 0x003193B8 File Offset: 0x003175B8
 		public static Offset<IBvbNpcCurBoardCardCount> CreateIBvbNpcCurBoardCardCount(FlatBufferBuilder builder, ESystemVarName Type = ESystemVarName.CommonHotFixVar)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return IBvbNpcCurBoardCardCount.EndIBvbNpcCurBoardCardCount(builder);
 		}
 
-		// Token: 0x0601446B RID: 83051 RVA: 0x002F61E2 File Offset: 0x002F43E2
+		// Token: 0x06015787 RID: 87943 RVA: 0x003193CE File Offset: 0x003175CE
 		public static void StartIBvbNpcCurBoardCardCount(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0601446C RID: 83052 RVA: 0x002F61EB File Offset: 0x002F43EB
+		// Token: 0x06015788 RID: 87944 RVA: 0x003193D7 File Offset: 0x003175D7
 		public static void AddType(FlatBufferBuilder builder, ESystemVarName type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601446D RID: 83053 RVA: 0x002F61F6 File Offset: 0x002F43F6
+		// Token: 0x06015789 RID: 87945 RVA: 0x003193E2 File Offset: 0x003175E2
 		public static Offset<IBvbNpcCurBoardCardCount> EndIBvbNpcCurBoardCardCount(FlatBufferBuilder builder)
 		{
 			return new Offset<IBvbNpcCurBoardCardCount>(builder.EndTable());
 		}
 
-		// Token: 0x0601446E RID: 83054 RVA: 0x002F6204 File Offset: 0x002F4404
+		// Token: 0x0601578A RID: 87946 RVA: 0x003193F0 File Offset: 0x003175F0
 		public IBvbNpcCurBoardCardCountT UnPack()
 		{
 			IBvbNpcCurBoardCardCountT bvbNpcCurBoardCardCountT = new IBvbNpcCurBoardCardCountT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return bvbNpcCurBoardCardCountT;
 		}
 
-		// Token: 0x0601446F RID: 83055 RVA: 0x002F621F File Offset: 0x002F441F
+		// Token: 0x0601578B RID: 87947 RVA: 0x0031940B File Offset: 0x0031760B
 		public void UnPackTo(IBvbNpcCurBoardCardCountT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06014470 RID: 83056 RVA: 0x002F6230 File Offset: 0x002F4430
+		// Token: 0x0601578C RID: 87948 RVA: 0x0031941C File Offset: 0x0031761C
 		public static Offset<IBvbNpcCurBoardCardCount> Pack(FlatBufferBuilder builder, IBvbNpcCurBoardCardCountT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return IBvbNpcCurBoardCardCount.CreateIBvbNpcCurBoardCardCount(builder, _o.Type);
 		}
 
-		// Token: 0x0400AEEE RID: 44782
+		// Token: 0x0400B810 RID: 47120
 		private Table __p;
 	}
 }

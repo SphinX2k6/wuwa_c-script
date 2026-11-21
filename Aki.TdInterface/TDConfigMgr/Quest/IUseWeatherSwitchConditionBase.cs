@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020011F6 RID: 4598
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001332 RID: 4914
 	public class IUseWeatherSwitchConditionBase
 	{
-		// Token: 0x06006864 RID: 26724 RVA: 0x000F9538 File Offset: 0x000F7738
+		// Token: 0x06006EA5 RID: 28325 RVA: 0x00106E44 File Offset: 0x00105044
 		private IUseWeatherSwitchConditionBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006865 RID: 26725 RVA: 0x000F9570 File Offset: 0x000F7770
+		// Token: 0x06006EA6 RID: 28326 RVA: 0x00106E7C File Offset: 0x0010507C
 		public static IUseWeatherSwitchConditionBase Create([Nullable(2)] IUseWeatherSwitchConditionBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006866 RID: 26726 RVA: 0x000F9583 File Offset: 0x000F7783
+		// Token: 0x06006EA7 RID: 28327 RVA: 0x00106E8F File Offset: 0x0010508F
 		public static IUseWeatherSwitchConditionBase CreateFromSetValue([Nullable(2)] IUseWeatherSwitchConditionBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006867 RID: 26727 RVA: 0x000F9596 File Offset: 0x000F7796
+		// Token: 0x06006EA8 RID: 28328 RVA: 0x00106EA2 File Offset: 0x001050A2
 		public IUseWeatherSwitchConditionBase_SetValue ToSetValue()
 		{
 			return new IUseWeatherSwitchConditionBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x170021C6 RID: 8646
-		// (get) Token: 0x06006868 RID: 26728 RVA: 0x000F95A9 File Offset: 0x000F77A9
-		// (set) Token: 0x06006869 RID: 26729 RVA: 0x000F95D4 File Offset: 0x000F77D4
+		// Token: 0x17002387 RID: 9095
+		// (get) Token: 0x06006EA9 RID: 28329 RVA: 0x00106EB5 File Offset: 0x001050B5
+		// (set) Token: 0x06006EAA RID: 28330 RVA: 0x00106EE0 File Offset: 0x001050E0
 		public virtual EUseWeatherSwitchCheckType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003E85 RID: 16005
+		// Token: 0x040041F3 RID: 16883
 		[Nullable(2)]
 		protected IUseWeatherSwitchConditionBase FbInstance;
 
-		// Token: 0x04003E86 RID: 16006
+		// Token: 0x040041F4 RID: 16884
 		[Nullable(2)]
 		protected IUseWeatherSwitchConditionBase_SetValue PocoInterface;
 	}

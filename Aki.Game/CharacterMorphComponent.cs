@@ -11,19 +11,19 @@ using CSharpScript.Game.Input;
 using CSharpScript.Game.NewWorld.Character.Common.Component.Move;
 using UnrealEngine;
 
-// Token: 0x020030E9 RID: 12521
+// Token: 0x02002641 RID: 9793
 [NullableContext(1)]
 [Nullable(0)]
 public class CharacterMorphComponent : EntityComponent
 {
-	// Token: 0x0601AD23 RID: 109859 RVA: 0x0073BD59 File Offset: 0x00739F59
+	// Token: 0x0601873F RID: 100159 RVA: 0x00761795 File Offset: 0x0075F995
 	[NullableContext(2)]
 	protected override bool OnInitData(IEntityArgs args = null)
 	{
 		return true;
 	}
 
-	// Token: 0x0601AD24 RID: 109860 RVA: 0x0073BD5C File Offset: 0x00739F5C
+	// Token: 0x06018740 RID: 100160 RVA: 0x00761798 File Offset: 0x0075F998
 	protected override bool OnStart()
 	{
 		this.CreatureDataComp = base.Entity.GetComponent<CreatureDataComponent>();
@@ -66,7 +66,7 @@ public class CharacterMorphComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601AD25 RID: 109861 RVA: 0x0073BECC File Offset: 0x0073A0CC
+	// Token: 0x06018741 RID: 100161 RVA: 0x00761908 File Offset: 0x0075FB08
 	protected override bool OnEnd()
 	{
 		if (this.IsEnableMorphInternal)
@@ -136,7 +136,7 @@ public class CharacterMorphComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601AD26 RID: 109862 RVA: 0x0073C0D4 File Offset: 0x0073A2D4
+	// Token: 0x06018742 RID: 100162 RVA: 0x00761B10 File Offset: 0x0075FD10
 	private void OnMorphTagChanged(EMorphType morphType, bool tagExist)
 	{
 		if (tagExist)
@@ -147,7 +147,7 @@ public class CharacterMorphComponent : EntityComponent
 		this.SetMorphType(this.GetActiveMorphTypeFromTags());
 	}
 
-	// Token: 0x0601AD27 RID: 109863 RVA: 0x0073C0F0 File Offset: 0x0073A2F0
+	// Token: 0x06018743 RID: 100163 RVA: 0x00761B2C File Offset: 0x0075FD2C
 	private EMorphType GetActiveMorphTypeFromTags()
 	{
 		if (this.TagComp == null)
@@ -170,7 +170,7 @@ public class CharacterMorphComponent : EntityComponent
 		return EMorphType.默认形态;
 	}
 
-	// Token: 0x0601AD28 RID: 109864 RVA: 0x0073C188 File Offset: 0x0073A388
+	// Token: 0x06018744 RID: 100164 RVA: 0x00761BC4 File Offset: 0x0075FDC4
 	private unsafe void InitMorphData()
 	{
 		this.InitModelIdMap();
@@ -263,7 +263,7 @@ public class CharacterMorphComponent : EntityComponent
 		this.IsEnableMorphInternal = (dictionary.Count != 0);
 	}
 
-	// Token: 0x0601AD29 RID: 109865 RVA: 0x0073C4F4 File Offset: 0x0073A6F4
+	// Token: 0x06018745 RID: 100165 RVA: 0x00761F30 File Offset: 0x00760130
 	private void InitModelIdMap()
 	{
 		if (this.MorphModelIdMap != null)
@@ -310,7 +310,7 @@ public class CharacterMorphComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601AD2A RID: 109866 RVA: 0x0073C5E4 File Offset: 0x0073A7E4
+	// Token: 0x06018746 RID: 100166 RVA: 0x00762028 File Offset: 0x00760228
 	private void InitComponentFloatParams(IMorphData morphData, [Nullable(new byte[]
 	{
 		2,
@@ -348,7 +348,7 @@ public class CharacterMorphComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601AD2B RID: 109867 RVA: 0x0073C6A8 File Offset: 0x0073A8A8
+	// Token: 0x06018747 RID: 100167 RVA: 0x007620F0 File Offset: 0x007602F0
 	private void InitComponentVectorParams(IMorphData morphData, [Nullable(new byte[]
 	{
 		2,
@@ -384,7 +384,7 @@ public class CharacterMorphComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601AD2C RID: 109868 RVA: 0x0073C758 File Offset: 0x0073A958
+	// Token: 0x06018748 RID: 100168 RVA: 0x007621A8 File Offset: 0x007603A8
 	private void InitComponentStringParams(IMorphData morphData, [Nullable(new byte[]
 	{
 		2,
@@ -423,7 +423,7 @@ public class CharacterMorphComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601AD2D RID: 109869 RVA: 0x0073C820 File Offset: 0x0073AA20
+	// Token: 0x06018749 RID: 100169 RVA: 0x00762274 File Offset: 0x00760474
 	private static string[] ProcessAdjustableCapsuleParamName(string[] sp)
 	{
 		string text = sp[0] + "#" + sp[1];
@@ -443,7 +443,7 @@ public class CharacterMorphComponent : EntityComponent
 		};
 	}
 
-	// Token: 0x0601AD2E RID: 109870 RVA: 0x0073C87C File Offset: 0x0073AA7C
+	// Token: 0x0601874A RID: 100170 RVA: 0x007622D0 File Offset: 0x007604D0
 	[return: Nullable(2)]
 	private static UKuroAdjustableCapsuleComponent FindAdjustableCapsuleByName(string capsuleName, USkeletalMeshComponent mesh)
 	{
@@ -465,13 +465,13 @@ public class CharacterMorphComponent : EntityComponent
 		return null;
 	}
 
-	// Token: 0x0601AD2F RID: 109871 RVA: 0x0073C8E2 File Offset: 0x0073AAE2
+	// Token: 0x0601874B RID: 100171 RVA: 0x00762336 File Offset: 0x00760536
 	public EMorphType GetMorphType()
 	{
 		return this.MorphType;
 	}
 
-	// Token: 0x0601AD30 RID: 109872 RVA: 0x0073C8EC File Offset: 0x0073AAEC
+	// Token: 0x0601874C RID: 100172 RVA: 0x00762340 File Offset: 0x00760540
 	[NullableContext(2)]
 	public IMorphData GetMorphData(EMorphType? morphType = null)
 	{
@@ -487,7 +487,7 @@ public class CharacterMorphComponent : EntityComponent
 		return null;
 	}
 
-	// Token: 0x0601AD31 RID: 109873 RVA: 0x0073C92C File Offset: 0x0073AB2C
+	// Token: 0x0601874D RID: 100173 RVA: 0x00762380 File Offset: 0x00760580
 	[NullableContext(2)]
 	public UDataTable GetMorphCameraConfig(EMorphType? morphType = null)
 	{
@@ -500,7 +500,7 @@ public class CharacterMorphComponent : EntityComponent
 		return morphData.CameraConfig;
 	}
 
-	// Token: 0x0601AD32 RID: 109874 RVA: 0x0073C96B File Offset: 0x0073AB6B
+	// Token: 0x0601874E RID: 100174 RVA: 0x007623BF File Offset: 0x007605BF
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -511,7 +511,7 @@ public class CharacterMorphComponent : EntityComponent
 		return this.MorphDataMap;
 	}
 
-	// Token: 0x0601AD33 RID: 109875 RVA: 0x0073C973 File Offset: 0x0073AB73
+	// Token: 0x0601874F RID: 100175 RVA: 0x007623C7 File Offset: 0x007605C7
 	[NullableContext(2)]
 	public BP_InputBase_C GetMorphBpInputComp(EMorphType morphType)
 	{
@@ -523,25 +523,25 @@ public class CharacterMorphComponent : EntityComponent
 		return morphData.InputComponent;
 	}
 
-	// Token: 0x0601AD34 RID: 109876 RVA: 0x0073C98C File Offset: 0x0073AB8C
+	// Token: 0x06018750 RID: 100176 RVA: 0x007623E0 File Offset: 0x007605E0
 	private bool IsValidMorphType(EMorphType morphType)
 	{
 		return morphType < EMorphType.EMorphType_MAX;
 	}
 
-	// Token: 0x0601AD35 RID: 109877 RVA: 0x0073C992 File Offset: 0x0073AB92
+	// Token: 0x06018751 RID: 100177 RVA: 0x007623E6 File Offset: 0x007605E6
 	public bool IsEnableMorph()
 	{
 		return this.IsEnableMorphInternal;
 	}
 
-	// Token: 0x0601AD36 RID: 109878 RVA: 0x0073C99A File Offset: 0x0073AB9A
+	// Token: 0x06018752 RID: 100178 RVA: 0x007623EE File Offset: 0x007605EE
 	public bool IsMorphing()
 	{
 		return this.MorphType > EMorphType.默认形态;
 	}
 
-	// Token: 0x0601AD37 RID: 109879 RVA: 0x0073C9A8 File Offset: 0x0073ABA8
+	// Token: 0x06018753 RID: 100179 RVA: 0x007623FC File Offset: 0x007605FC
 	public bool HasComponentFloatParam(EMorphType morphType, string compName, string paramName)
 	{
 		IMorphData morphData = this.GetMorphData(new EMorphType?(morphType));
@@ -550,7 +550,7 @@ public class CharacterMorphComponent : EntityComponent
 		return morphData != null && morphData.ComponentFloatParams != null && morphData.ComponentFloatParams.TryGetValue(compName, out dictionary) && dictionary != null && dictionary.TryGetValue(paramName, out num);
 	}
 
-	// Token: 0x0601AD38 RID: 109880 RVA: 0x0073C9F4 File Offset: 0x0073ABF4
+	// Token: 0x06018754 RID: 100180 RVA: 0x00762448 File Offset: 0x00760648
 	public void SetComponentFloatParam(EMorphType morphType, string compName, string paramName, float value)
 	{
 		IMorphData morphData = this.GetMorphData(new EMorphType?(morphType));
@@ -572,7 +572,7 @@ public class CharacterMorphComponent : EntityComponent
 		dictionary[paramName] = value;
 	}
 
-	// Token: 0x0601AD39 RID: 109881 RVA: 0x0073CA44 File Offset: 0x0073AC44
+	// Token: 0x06018755 RID: 100181 RVA: 0x00762498 File Offset: 0x00760698
 	public bool HasComponentVectorParam(EMorphType morphType, string compName, string paramName)
 	{
 		IMorphData morphData = this.GetMorphData(new EMorphType?(morphType));
@@ -581,7 +581,7 @@ public class CharacterMorphComponent : EntityComponent
 		return morphData != null && morphData.ComponentVectorParams != null && morphData.ComponentVectorParams.TryGetValue(compName, out dictionary) && dictionary != null && dictionary.TryGetValue(paramName, out vector);
 	}
 
-	// Token: 0x0601AD3A RID: 109882 RVA: 0x0073CA90 File Offset: 0x0073AC90
+	// Token: 0x06018756 RID: 100182 RVA: 0x007624E4 File Offset: 0x007606E4
 	public void SetComponentVectorParam(EMorphType morphType, string compName, string paramName, Vector value)
 	{
 		IMorphData morphData = this.GetMorphData(new EMorphType?(morphType));
@@ -603,7 +603,7 @@ public class CharacterMorphComponent : EntityComponent
 		dictionary[paramName] = value;
 	}
 
-	// Token: 0x0601AD3B RID: 109883 RVA: 0x0073CAE0 File Offset: 0x0073ACE0
+	// Token: 0x06018757 RID: 100183 RVA: 0x00762534 File Offset: 0x00760734
 	public bool HasComponentStringParam(EMorphType morphType, string compName, string paramName)
 	{
 		IMorphData morphData = this.GetMorphData(new EMorphType?(morphType));
@@ -612,7 +612,7 @@ public class CharacterMorphComponent : EntityComponent
 		return morphData != null && morphData.ComponentStringParams != null && morphData.ComponentStringParams.TryGetValue(compName, out dictionary) && dictionary != null && dictionary.TryGetValue(paramName, out text);
 	}
 
-	// Token: 0x0601AD3C RID: 109884 RVA: 0x0073CB2C File Offset: 0x0073AD2C
+	// Token: 0x06018758 RID: 100184 RVA: 0x00762580 File Offset: 0x00760780
 	public void SetComponentStringParam(EMorphType morphType, string compName, string paramName, string value)
 	{
 		IMorphData morphData = this.GetMorphData(new EMorphType?(morphType));
@@ -634,7 +634,7 @@ public class CharacterMorphComponent : EntityComponent
 		dictionary[paramName] = value;
 	}
 
-	// Token: 0x0601AD3D RID: 109885 RVA: 0x0073CB7A File Offset: 0x0073AD7A
+	// Token: 0x06018759 RID: 100185 RVA: 0x007625CE File Offset: 0x007607CE
 	public void SetAssetElement(EMorphType morphType, AssetElement assetElement)
 	{
 		if (this.MorphAssetMap == null)
@@ -644,7 +644,7 @@ public class CharacterMorphComponent : EntityComponent
 		this.MorphAssetMap[morphType] = assetElement;
 	}
 
-	// Token: 0x0601AD3E RID: 109886 RVA: 0x0073CB9C File Offset: 0x0073AD9C
+	// Token: 0x0601875A RID: 100186 RVA: 0x007625F0 File Offset: 0x007607F0
 	public void AddMontage(string name, UAnimMontage montage, string path)
 	{
 		Dictionary<string, EMorphType> morphMontagePathMap = this.MorphMontagePathMap;
@@ -682,7 +682,7 @@ public class CharacterMorphComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601AD3F RID: 109887 RVA: 0x0073CC88 File Offset: 0x0073AE88
+	// Token: 0x0601875B RID: 100187 RVA: 0x007626DC File Offset: 0x007608DC
 	public void AddMorphMontagePath(string path, EMorphType morphType)
 	{
 		if (this.MorphMontagePathMap == null)
@@ -692,7 +692,7 @@ public class CharacterMorphComponent : EntityComponent
 		this.MorphMontagePathMap[path] = morphType;
 	}
 
-	// Token: 0x0601AD40 RID: 109888 RVA: 0x0073CCAA File Offset: 0x0073AEAA
+	// Token: 0x0601875C RID: 100188 RVA: 0x007626FE File Offset: 0x007608FE
 	public void SetMontageSubPathMorphType(string name, EMorphType morphType)
 	{
 		if (this.SubPathNameMorphTypeMap == null)
@@ -702,7 +702,7 @@ public class CharacterMorphComponent : EntityComponent
 		this.SubPathNameMorphTypeMap[name] = morphType;
 	}
 
-	// Token: 0x0601AD41 RID: 109889 RVA: 0x0073CCCC File Offset: 0x0073AECC
+	// Token: 0x0601875D RID: 100189 RVA: 0x00762720 File Offset: 0x00760920
 	public EMorphType GetMontagePathMorphType(string path)
 	{
 		if (this.SubPathNameMorphTypeMap != null)
@@ -719,7 +719,7 @@ public class CharacterMorphComponent : EntityComponent
 		return EMorphType.默认形态;
 	}
 
-	// Token: 0x0601AD42 RID: 109890 RVA: 0x0073CD3C File Offset: 0x0073AF3C
+	// Token: 0x0601875E RID: 100190 RVA: 0x00762790 File Offset: 0x00760990
 	[return: Nullable(2)]
 	public UAnimMontage GetMontageByName(string name)
 	{
@@ -740,7 +740,7 @@ public class CharacterMorphComponent : EntityComponent
 		return result;
 	}
 
-	// Token: 0x0601AD43 RID: 109891 RVA: 0x0073CD7C File Offset: 0x0073AF7C
+	// Token: 0x0601875F RID: 100191 RVA: 0x007627D0 File Offset: 0x007609D0
 	[return: Nullable(2)]
 	public string GetMontagePathByName(string name)
 	{
@@ -761,7 +761,7 @@ public class CharacterMorphComponent : EntityComponent
 		return result;
 	}
 
-	// Token: 0x0601AD44 RID: 109892 RVA: 0x0073CDBC File Offset: 0x0073AFBC
+	// Token: 0x06018760 RID: 100192 RVA: 0x00762810 File Offset: 0x00760A10
 	public FVectorDouble? GetCenterActorLocationOffset()
 	{
 		if (this.IsMorphing())
@@ -775,7 +775,7 @@ public class CharacterMorphComponent : EntityComponent
 		return null;
 	}
 
-	// Token: 0x0601AD45 RID: 109893 RVA: 0x0073CE08 File Offset: 0x0073B008
+	// Token: 0x06018761 RID: 100193 RVA: 0x0076285C File Offset: 0x00760A5C
 	public unsafe void SetMorphType(EMorphType morphType)
 	{
 		if (morphType == this.MorphType)
@@ -817,13 +817,26 @@ public class CharacterMorphComponent : EntityComponent
 			instance3.Warn(module3, author3, message3, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 			return;
 		}
+		if (this.ActorComp != null && !this.ActorComp.IsAutonomousProxy)
+		{
+			Entity entity = base.Entity;
+			CharacterCombatMessageComponent component = entity.GetComponent<CharacterCombatMessageComponent>();
+			if (component != null)
+			{
+				component.FlushPendingMessagesBeforeMorph();
+			}
+			if (entity.IsEnd || morphType == this.MorphType)
+			{
+				return;
+			}
+		}
 		this.SetBpCompParamsBackup();
 		CombatLog instance4 = CombatLog.Instance;
 		CombatLog.EDebugModule flag = CombatLog.EDebugModule.Skill;
-		Entity entity = base.Entity;
+		Entity entity2 = base.Entity;
 		string message4 = "设置形态成功, 开始切换";
 		ValueTuple<string, object> valueTuple3 = new ValueTuple<string, object>("MorphType", morphType);
-		instance4.Info(flag, entity, message4, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple3));
+		instance4.Info(flag, entity2, message4, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple3));
 		EMorphType morphType2 = this.MorphType;
 		this.MorphType = morphType;
 		this.MorphData = morphData;
@@ -853,7 +866,7 @@ public class CharacterMorphComponent : EntityComponent
 		EventSystem.Instance.EmitWithTarget<Entity, EMorphType, EMorphType>(base.Entity, EEventName.OnCharacterMorphTypeChanged, base.Entity, morphType, morphType2);
 	}
 
-	// Token: 0x0601AD46 RID: 109894 RVA: 0x0073D030 File Offset: 0x0073B230
+	// Token: 0x06018762 RID: 100194 RVA: 0x00762AC4 File Offset: 0x00760CC4
 	private void UpdateMovementData()
 	{
 		if (this.MoveComp == null)
@@ -881,7 +894,7 @@ public class CharacterMorphComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601AD47 RID: 109895 RVA: 0x0073D0B4 File Offset: 0x0073B2B4
+	// Token: 0x06018763 RID: 100195 RVA: 0x00762B48 File Offset: 0x00760D48
 	private void UpdateMoveComp()
 	{
 		CharacterMoveComponent moveComp = this.MoveComp;
@@ -935,7 +948,7 @@ public class CharacterMorphComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601AD48 RID: 109896 RVA: 0x0073D200 File Offset: 0x0073B400
+	// Token: 0x06018764 RID: 100196 RVA: 0x00762C94 File Offset: 0x00760E94
 	private void UpdateMeshComp()
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -971,7 +984,7 @@ public class CharacterMorphComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601AD49 RID: 109897 RVA: 0x0073D294 File Offset: 0x0073B494
+	// Token: 0x06018765 RID: 100197 RVA: 0x00762D28 File Offset: 0x00760F28
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -1011,7 +1024,7 @@ public class CharacterMorphComponent : EntityComponent
 		return dictionary;
 	}
 
-	// Token: 0x0601AD4A RID: 109898 RVA: 0x0073D340 File Offset: 0x0073B540
+	// Token: 0x06018766 RID: 100198 RVA: 0x00762DD4 File Offset: 0x00760FD4
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -1053,7 +1066,7 @@ public class CharacterMorphComponent : EntityComponent
 		return dictionary;
 	}
 
-	// Token: 0x0601AD4B RID: 109899 RVA: 0x0073D3EC File Offset: 0x0073B5EC
+	// Token: 0x06018767 RID: 100199 RVA: 0x00762E80 File Offset: 0x00761080
 	private static string[] ParseSocketNamesString(string value)
 	{
 		string text = value.Trim();
@@ -1082,7 +1095,7 @@ public class CharacterMorphComponent : EntityComponent
 		return list.ToArray();
 	}
 
-	// Token: 0x0601AD4C RID: 109900 RVA: 0x0073D480 File Offset: 0x0073B680
+	// Token: 0x06018768 RID: 100200 RVA: 0x00762F14 File Offset: 0x00761114
 	private static void SetAdjustableCapsuleBindSocketNames(UKuroAdjustableCapsuleComponent adjustableCapsule, string[] socketNames)
 	{
 		TArray<FName> tarray = new TArray<FName>();
@@ -1093,7 +1106,7 @@ public class CharacterMorphComponent : EntityComponent
 		adjustableCapsule.BindSocketNames = tarray;
 	}
 
-	// Token: 0x0601AD4D RID: 109901 RVA: 0x0073D4BC File Offset: 0x0073B6BC
+	// Token: 0x06018769 RID: 100201 RVA: 0x00762F50 File Offset: 0x00761150
 	private static string GetAdjustableCapsuleBindSocketNames(UKuroAdjustableCapsuleComponent adjustableCapsule)
 	{
 		TArray<FName> bindSocketNames = adjustableCapsule.BindSocketNames;
@@ -1105,7 +1118,7 @@ public class CharacterMorphComponent : EntityComponent
 		return "[" + string.Join(",", list) + "]";
 	}
 
-	// Token: 0x0601AD4E RID: 109902 RVA: 0x0073D51C File Offset: 0x0073B71C
+	// Token: 0x0601876A RID: 100202 RVA: 0x00762FB0 File Offset: 0x007611B0
 	private void UpdateAdjustableCapsule()
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -1243,7 +1256,7 @@ public class CharacterMorphComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601AD4F RID: 109903 RVA: 0x0073D950 File Offset: 0x0073BB50
+	// Token: 0x0601876B RID: 100203 RVA: 0x007633E4 File Offset: 0x007615E4
 	private void UpdateCapsuleComp()
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -1346,7 +1359,7 @@ public class CharacterMorphComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601AD50 RID: 109904 RVA: 0x0073DD28 File Offset: 0x0073BF28
+	// Token: 0x0601876C RID: 100204 RVA: 0x007637BC File Offset: 0x007619BC
 	private void UpdateCameraConfig()
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -1381,7 +1394,7 @@ public class CharacterMorphComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601AD51 RID: 109905 RVA: 0x0073DDD0 File Offset: 0x0073BFD0
+	// Token: 0x0601876D RID: 100205 RVA: 0x00763864 File Offset: 0x00761A64
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -1426,7 +1439,7 @@ public class CharacterMorphComponent : EntityComponent
 		return dictionary;
 	}
 
-	// Token: 0x0601AD52 RID: 109906 RVA: 0x0073DEBC File Offset: 0x0073C0BC
+	// Token: 0x0601876E RID: 100206 RVA: 0x00763950 File Offset: 0x00761B50
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -1472,7 +1485,7 @@ public class CharacterMorphComponent : EntityComponent
 		return dictionary;
 	}
 
-	// Token: 0x0601AD53 RID: 109907 RVA: 0x0073DFA8 File Offset: 0x0073C1A8
+	// Token: 0x0601876F RID: 100207 RVA: 0x00763A3C File Offset: 0x00761C3C
 	private bool HasAnyMorphFloatParam(string compName, string paramName)
 	{
 		if (this.MorphDataMap == null)
@@ -1489,7 +1502,7 @@ public class CharacterMorphComponent : EntityComponent
 		return false;
 	}
 
-	// Token: 0x0601AD54 RID: 109908 RVA: 0x0073E018 File Offset: 0x0073C218
+	// Token: 0x06018770 RID: 100208 RVA: 0x00763AAC File Offset: 0x00761CAC
 	private bool HasAnyMorphVectorParam(string compName, string paramName)
 	{
 		if (this.MorphDataMap == null)
@@ -1506,7 +1519,7 @@ public class CharacterMorphComponent : EntityComponent
 		return false;
 	}
 
-	// Token: 0x0601AD55 RID: 109909 RVA: 0x0073E088 File Offset: 0x0073C288
+	// Token: 0x06018771 RID: 100209 RVA: 0x00763B1C File Offset: 0x00761D1C
 	private void SetBpCompParamsBackup()
 	{
 		if (this.MorphType != EMorphType.默认形态 || this.IsBackupBpCompParams)
@@ -1605,7 +1618,7 @@ public class CharacterMorphComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601AD56 RID: 109910 RVA: 0x0073E3E8 File Offset: 0x0073C5E8
+	// Token: 0x06018772 RID: 100210 RVA: 0x00763E7C File Offset: 0x0076207C
 	private void LoadMorphResource()
 	{
 		if (this.MorphDataMap == null)
@@ -1633,7 +1646,7 @@ public class CharacterMorphComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601AD57 RID: 109911 RVA: 0x0073E480 File Offset: 0x0073C680
+	// Token: 0x06018773 RID: 100211 RVA: 0x00763F14 File Offset: 0x00762114
 	private void LoadMovementDataForType(EMorphType morphType, IMorphData morphData)
 	{
 		if (morphData.BaseMovementSetting == null)
@@ -1683,7 +1696,7 @@ public class CharacterMorphComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601AD58 RID: 109912 RVA: 0x0073E554 File Offset: 0x0073C754
+	// Token: 0x06018774 RID: 100212 RVA: 0x00763FE8 File Offset: 0x007621E8
 	private void LoadCameraConfigForType(EMorphType morphType, IMorphData morphData)
 	{
 		if (morphData.CameraConfig == null)
@@ -1733,7 +1746,7 @@ public class CharacterMorphComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601AD59 RID: 109913 RVA: 0x0073E628 File Offset: 0x0073C828
+	// Token: 0x06018775 RID: 100213 RVA: 0x007640BC File Offset: 0x007622BC
 	private void LoadBpInputCompForType(EMorphType morphType, IMorphData morphData)
 	{
 		if (morphData.InputComponent == null)
@@ -1787,7 +1800,7 @@ public class CharacterMorphComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601AD5A RID: 109914 RVA: 0x0073E6FC File Offset: 0x0073C8FC
+	// Token: 0x06018776 RID: 100214 RVA: 0x00764190 File Offset: 0x00762390
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -1795,287 +1808,220 @@ public class CharacterMorphComponent : EntityComponent
 			return false;
 		}
 		CharacterMorphComponent characterMorphComponent = (CharacterMorphComponent)componentTemplate;
-		if (base.CanResetComponentProperty("MorphType"))
+		this.MorphType = characterMorphComponent.MorphType;
+		if (characterMorphComponent.MorphData == null)
 		{
-			this.MorphType = characterMorphComponent.MorphType;
+			this.MorphData = null;
 		}
-		if (base.CanResetComponentProperty("MorphData"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MorphData), "MorphData"))
 		{
-			if (characterMorphComponent.MorphData == null)
-			{
-				this.MorphData = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<IMorphData>(this.MorphData), "MorphData"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsEnableMorphInternal"))
+		this.IsEnableMorphInternal = characterMorphComponent.IsEnableMorphInternal;
+		if (characterMorphComponent.MorphDataMap == null)
 		{
-			this.IsEnableMorphInternal = characterMorphComponent.IsEnableMorphInternal;
+			this.MorphDataMap = null;
 		}
-		if (base.CanResetComponentProperty("MorphDataMap"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MorphDataMap), "MorphDataMap"))
 		{
-			if (characterMorphComponent.MorphDataMap == null)
-			{
-				this.MorphDataMap = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<EMorphType, IMorphData>>(this.MorphDataMap), "MorphDataMap"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("MorphModelIdMap"))
+		if (characterMorphComponent.MorphModelIdMap == null)
 		{
-			if (characterMorphComponent.MorphModelIdMap == null)
-			{
-				this.MorphModelIdMap = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<EMorphType, int>>(this.MorphModelIdMap), "MorphModelIdMap"))
-			{
-				return false;
-			}
+			this.MorphModelIdMap = null;
 		}
-		if (base.CanResetComponentProperty("MorphAssetMap"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MorphModelIdMap), "MorphModelIdMap"))
 		{
-			if (characterMorphComponent.MorphAssetMap == null)
-			{
-				this.MorphAssetMap = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<EMorphType, AssetElement>>(this.MorphAssetMap), "MorphAssetMap"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("MorphMontageMapByName"))
+		if (characterMorphComponent.MorphAssetMap == null)
 		{
-			if (characterMorphComponent.MorphMontageMapByName == null)
-			{
-				this.MorphMontageMapByName = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<EMorphType, Dictionary<string, UAnimMontage>>>(this.MorphMontageMapByName), "MorphMontageMapByName"))
-			{
-				return false;
-			}
+			this.MorphAssetMap = null;
 		}
-		if (base.CanResetComponentProperty("MorphMontagePathMapByName"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MorphAssetMap), "MorphAssetMap"))
 		{
-			if (characterMorphComponent.MorphMontagePathMapByName == null)
-			{
-				this.MorphMontagePathMapByName = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<EMorphType, Dictionary<string, string>>>(this.MorphMontagePathMapByName), "MorphMontagePathMapByName"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("MorphMontagePathMap"))
+		if (characterMorphComponent.MorphMontageMapByName == null)
 		{
-			if (characterMorphComponent.MorphMontagePathMap == null)
-			{
-				this.MorphMontagePathMap = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, EMorphType>>(this.MorphMontagePathMap), "MorphMontagePathMap"))
-			{
-				return false;
-			}
+			this.MorphMontageMapByName = null;
 		}
-		if (base.CanResetComponentProperty("SubPathNameMorphTypeMap"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MorphMontageMapByName), "MorphMontageMapByName"))
 		{
-			if (characterMorphComponent.SubPathNameMorphTypeMap == null)
-			{
-				this.SubPathNameMorphTypeMap = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, EMorphType>>(this.SubPathNameMorphTypeMap), "SubPathNameMorphTypeMap"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("CreatureDataComp"))
+		if (characterMorphComponent.MorphMontagePathMapByName == null)
 		{
-			if (characterMorphComponent.CreatureDataComp == null)
-			{
-				this.CreatureDataComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-			{
-				return false;
-			}
+			this.MorphMontagePathMapByName = null;
 		}
-		if (base.CanResetComponentProperty("RolePreloadComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MorphMontagePathMapByName), "MorphMontagePathMapByName"))
 		{
-			if (characterMorphComponent.RolePreloadComp == null)
-			{
-				this.RolePreloadComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<RolePreloadComponent>(this.RolePreloadComp), "RolePreloadComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("ActorComp"))
+		if (characterMorphComponent.MorphMontagePathMap == null)
 		{
-			if (characterMorphComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			this.MorphMontagePathMap = null;
 		}
-		if (base.CanResetComponentProperty("MoveComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MorphMontagePathMap), "MorphMontagePathMap"))
 		{
-			if (characterMorphComponent.MoveComp == null)
-			{
-				this.MoveComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterMoveComponent>(this.MoveComp), "MoveComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("TagComp"))
+		if (characterMorphComponent.SubPathNameMorphTypeMap == null)
 		{
-			if (characterMorphComponent.TagComp == null)
-			{
-				this.TagComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-			{
-				return false;
-			}
+			this.SubPathNameMorphTypeMap = null;
 		}
-		if (base.CanResetComponentProperty("CharacterAnimationComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SubPathNameMorphTypeMap), "SubPathNameMorphTypeMap"))
 		{
-			if (characterMorphComponent.CharacterAnimationComp == null)
-			{
-				this.CharacterAnimationComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterAnimationComponent>(this.CharacterAnimationComp), "CharacterAnimationComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("CharacterFloatingComp"))
+		if (characterMorphComponent.CreatureDataComp == null)
 		{
-			if (characterMorphComponent.CharacterFloatingComp == null)
-			{
-				this.CharacterFloatingComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterFloatingComponent>(this.CharacterFloatingComp), "CharacterFloatingComp"))
-			{
-				return false;
-			}
+			this.CreatureDataComp = null;
 		}
-		if (base.CanResetComponentProperty("MorphTagListenTasks"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 		{
-			if (characterMorphComponent.MorphTagListenTasks == null)
-			{
-				this.MorphTagListenTasks = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<ITagTask>>(this.MorphTagListenTasks), "MorphTagListenTasks"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsBackupBpCompParams"))
+		if (characterMorphComponent.RolePreloadComp == null)
 		{
-			this.IsBackupBpCompParams = characterMorphComponent.IsBackupBpCompParams;
+			this.RolePreloadComp = null;
 		}
-		if (base.CanResetComponentProperty("IsBackupDefaultCapsule"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RolePreloadComp), "RolePreloadComp"))
 		{
-			this.IsBackupDefaultCapsule = characterMorphComponent.IsBackupDefaultCapsule;
+			return false;
 		}
-		if (base.CanResetComponentProperty("LoadingBpInputTypes"))
+		if (characterMorphComponent.ActorComp == null)
 		{
-			if (characterMorphComponent.LoadingBpInputTypes == null)
-			{
-				this.LoadingBpInputTypes = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<EMorphType, int>>(this.LoadingBpInputTypes), "LoadingBpInputTypes"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("LoadingMovementDataTypes"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
-			if (characterMorphComponent.LoadingMovementDataTypes == null)
-			{
-				this.LoadingMovementDataTypes = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<EMorphType, int>>(this.LoadingMovementDataTypes), "LoadingMovementDataTypes"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("LoadingCameraConfigTypes"))
+		if (characterMorphComponent.MoveComp == null)
 		{
-			if (characterMorphComponent.LoadingCameraConfigTypes == null)
-			{
-				this.LoadingCameraConfigTypes = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<EMorphType, int>>(this.LoadingCameraConfigTypes), "LoadingCameraConfigTypes"))
-			{
-				return false;
-			}
+			this.MoveComp = null;
 		}
-		if (base.CanResetComponentProperty("CurrentCameraConfig"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
 		{
-			if (characterMorphComponent.CurrentCameraConfig == null)
-			{
-				this.CurrentCameraConfig = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UDataTable>(this.CurrentCameraConfig), "CurrentCameraConfig"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("TempVector"))
+		if (characterMorphComponent.TagComp == null)
 		{
-			if (characterMorphComponent.TempVector == null)
-			{
-				this.TempVector = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TempVector), "TempVector"))
-			{
-				return false;
-			}
+			this.TagComp = null;
 		}
-		if (base.CanResetComponentProperty("DefaultRadiusInternal"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 		{
-			this.DefaultRadiusInternal = characterMorphComponent.DefaultRadiusInternal;
+			return false;
 		}
-		if (base.CanResetComponentProperty("DefaultHalfHeightInternal"))
+		if (characterMorphComponent.CharacterAnimationComp == null)
 		{
-			this.DefaultHalfHeightInternal = characterMorphComponent.DefaultHalfHeightInternal;
+			this.CharacterAnimationComp = null;
 		}
-		if (base.CanResetComponentProperty("DefaultAdjustableCapsuleParams"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CharacterAnimationComp), "CharacterAnimationComp"))
 		{
-			if (characterMorphComponent.DefaultAdjustableCapsuleParams == null)
-			{
-				this.DefaultAdjustableCapsuleParams = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, Dictionary<string, float>>>(this.DefaultAdjustableCapsuleParams), "DefaultAdjustableCapsuleParams"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("DefaultAdjustableCapsuleStringParams"))
+		if (characterMorphComponent.CharacterFloatingComp == null)
 		{
-			if (characterMorphComponent.DefaultAdjustableCapsuleStringParams == null)
-			{
-				this.DefaultAdjustableCapsuleStringParams = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, Dictionary<string, string>>>(this.DefaultAdjustableCapsuleStringParams), "DefaultAdjustableCapsuleStringParams"))
-			{
-				return false;
-			}
+			this.CharacterFloatingComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CharacterFloatingComp), "CharacterFloatingComp"))
+		{
+			return false;
+		}
+		if (characterMorphComponent.MorphTagListenTasks == null)
+		{
+			this.MorphTagListenTasks = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MorphTagListenTasks), "MorphTagListenTasks"))
+		{
+			return false;
+		}
+		this.IsBackupBpCompParams = characterMorphComponent.IsBackupBpCompParams;
+		this.IsBackupDefaultCapsule = characterMorphComponent.IsBackupDefaultCapsule;
+		if (characterMorphComponent.LoadingBpInputTypes == null)
+		{
+			this.LoadingBpInputTypes = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LoadingBpInputTypes), "LoadingBpInputTypes"))
+		{
+			return false;
+		}
+		if (characterMorphComponent.LoadingMovementDataTypes == null)
+		{
+			this.LoadingMovementDataTypes = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LoadingMovementDataTypes), "LoadingMovementDataTypes"))
+		{
+			return false;
+		}
+		if (characterMorphComponent.LoadingCameraConfigTypes == null)
+		{
+			this.LoadingCameraConfigTypes = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LoadingCameraConfigTypes), "LoadingCameraConfigTypes"))
+		{
+			return false;
+		}
+		if (characterMorphComponent.CurrentCameraConfig == null)
+		{
+			this.CurrentCameraConfig = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurrentCameraConfig), "CurrentCameraConfig"))
+		{
+			return false;
+		}
+		if (characterMorphComponent.TempVector == null)
+		{
+			this.TempVector = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempVector), "TempVector"))
+		{
+			return false;
+		}
+		this.DefaultRadiusInternal = characterMorphComponent.DefaultRadiusInternal;
+		this.DefaultHalfHeightInternal = characterMorphComponent.DefaultHalfHeightInternal;
+		if (characterMorphComponent.DefaultAdjustableCapsuleParams == null)
+		{
+			this.DefaultAdjustableCapsuleParams = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DefaultAdjustableCapsuleParams), "DefaultAdjustableCapsuleParams"))
+		{
+			return false;
+		}
+		if (characterMorphComponent.DefaultAdjustableCapsuleStringParams == null)
+		{
+			this.DefaultAdjustableCapsuleStringParams = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DefaultAdjustableCapsuleStringParams), "DefaultAdjustableCapsuleStringParams"))
+		{
+			return false;
 		}
 		return true;
 	}
 
-	// Token: 0x0601AD5C RID: 109916 RVA: 0x0073ECC4 File Offset: 0x0073CEC4
+	// Token: 0x17002679 RID: 9849
+	// (get) Token: 0x06018777 RID: 100215 RVA: 0x007645D5 File Offset: 0x007627D5
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700267A RID: 9850
+	// (get) Token: 0x06018778 RID: 100216 RVA: 0x007645D8 File Offset: 0x007627D8
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0601877A RID: 100218 RVA: 0x007645E4 File Offset: 0x007627E4
 	// Note: this type is marked as 'beforefieldinit'.
 	static CharacterMorphComponent()
 	{
@@ -2091,85 +2037,85 @@ public class CharacterMorphComponent : EntityComponent
 		CharacterMorphComponent.StatOnUpdateComponents = Stat.Create("[CharacterMorphComponent]UpdateComponents", "", "");
 	}
 
-	// Token: 0x0400CF22 RID: 53026
+	// Token: 0x0400D312 RID: 54034
 	private const string CAPSULE_COMPONENT = "胶囊体组件";
 
-	// Token: 0x0400CF23 RID: 53027
+	// Token: 0x0400D313 RID: 54035
 	private const string CAPSULE_HALF_HEIGHT = "胶囊体半高";
 
-	// Token: 0x0400CF24 RID: 53028
+	// Token: 0x0400D314 RID: 54036
 	private const string CAPSULE_RADIUS = "胶囊体半径";
 
-	// Token: 0x0400CF25 RID: 53029
+	// Token: 0x0400D315 RID: 54037
 	private const string MESH_COMPONENT = "网格体";
 
-	// Token: 0x0400CF26 RID: 53030
+	// Token: 0x0400D316 RID: 54038
 	private const string MESH_LOCATION = "位置";
 
-	// Token: 0x0400CF27 RID: 53031
+	// Token: 0x0400D317 RID: 54039
 	private const string MOVE_COMPONENT = "角色移动";
 
-	// Token: 0x0400CF28 RID: 53032
+	// Token: 0x0400D318 RID: 54040
 	private const string MOVE_MAX_STEP_HEIGHT = "最大步高";
 
-	// Token: 0x0400CF29 RID: 53033
+	// Token: 0x0400D319 RID: 54041
 	private const string MOVE_WALKABLE_FLOOR_ANGLE = "可行走地面角度";
 
-	// Token: 0x0400CF2A RID: 53034
+	// Token: 0x0400D31A RID: 54042
 	private const string MOVE_MAINTAIN_HORIZONTAL_GROUND_VELOCITY = "维持水平地面速度";
 
-	// Token: 0x0400CF2B RID: 53035
+	// Token: 0x0400D31B RID: 54043
 	private const string MOVE_DEFAULT_WATER_MOVEMENT_MODE = "默认水中运动模式";
 
-	// Token: 0x0400CF2C RID: 53036
+	// Token: 0x0400D31C RID: 54044
 	private const string MESH_ADJUSTABLE_CAPSULE = "网格体#可变胶囊体碰撞";
 
-	// Token: 0x0400CF2D RID: 53037
+	// Token: 0x0400D31D RID: 54045
 	private const string CAPSULE_ADD_RADIUS = "AddRadius";
 
-	// Token: 0x0400CF2E RID: 53038
+	// Token: 0x0400D31E RID: 54046
 	private const string CAPSULE_MIN_RADIUS = "MinRadius";
 
-	// Token: 0x0400CF2F RID: 53039
+	// Token: 0x0400D31F RID: 54047
 	private const string CAPSULE_MAX_RADIUS = "MaxRadius";
 
-	// Token: 0x0400CF30 RID: 53040
+	// Token: 0x0400D320 RID: 54048
 	private const string CAPSULE_BIND_SOCKET_NAMES = "BindSocketNames";
 
-	// Token: 0x0400CF31 RID: 53041
+	// Token: 0x0400D321 RID: 54049
 	private const bool IS_ENABLE_OPTIMIZE = true;
 
-	// Token: 0x0400CF32 RID: 53042
+	// Token: 0x0400D322 RID: 54050
 	[StaticVariableRuleIgnore]
 	private static readonly Dictionary<int, EMorphType> morphTagTypeMap;
 
-	// Token: 0x0400CF33 RID: 53043
+	// Token: 0x0400D323 RID: 54051
 	[StaticVariableRuleIgnore]
 	private static readonly Stat StatOnSetMorphType;
 
-	// Token: 0x0400CF34 RID: 53044
+	// Token: 0x0400D324 RID: 54052
 	[StaticVariableRuleIgnore]
 	private static readonly Stat StatOnUpdateModel;
 
-	// Token: 0x0400CF35 RID: 53045
+	// Token: 0x0400D325 RID: 54053
 	[StaticVariableRuleIgnore]
 	private static readonly Stat StatOnUpdateMovement;
 
-	// Token: 0x0400CF36 RID: 53046
+	// Token: 0x0400D326 RID: 54054
 	[StaticVariableRuleIgnore]
 	private static readonly Stat StatOnUpdateComponents;
 
-	// Token: 0x0400CF37 RID: 53047
+	// Token: 0x0400D327 RID: 54055
 	private EMorphType MorphType;
 
-	// Token: 0x0400CF38 RID: 53048
+	// Token: 0x0400D328 RID: 54056
 	[Nullable(2)]
 	private IMorphData MorphData;
 
-	// Token: 0x0400CF39 RID: 53049
+	// Token: 0x0400D329 RID: 54057
 	private bool IsEnableMorphInternal;
 
-	// Token: 0x0400CF3A RID: 53050
+	// Token: 0x0400D32A RID: 54058
 	[Nullable(new byte[]
 	{
 		2,
@@ -2177,11 +2123,11 @@ public class CharacterMorphComponent : EntityComponent
 	})]
 	private Dictionary<EMorphType, IMorphData> MorphDataMap;
 
-	// Token: 0x0400CF3B RID: 53051
+	// Token: 0x0400D32B RID: 54059
 	[Nullable(2)]
 	private Dictionary<EMorphType, int> MorphModelIdMap;
 
-	// Token: 0x0400CF3C RID: 53052
+	// Token: 0x0400D32C RID: 54060
 	[Nullable(new byte[]
 	{
 		2,
@@ -2189,7 +2135,7 @@ public class CharacterMorphComponent : EntityComponent
 	})]
 	private Dictionary<EMorphType, AssetElement> MorphAssetMap;
 
-	// Token: 0x0400CF3D RID: 53053
+	// Token: 0x0400D32D RID: 54061
 	[Nullable(new byte[]
 	{
 		2,
@@ -2199,7 +2145,7 @@ public class CharacterMorphComponent : EntityComponent
 	})]
 	private Dictionary<EMorphType, Dictionary<string, UAnimMontage>> MorphMontageMapByName;
 
-	// Token: 0x0400CF3E RID: 53054
+	// Token: 0x0400D32E RID: 54062
 	[Nullable(new byte[]
 	{
 		2,
@@ -2209,7 +2155,7 @@ public class CharacterMorphComponent : EntityComponent
 	})]
 	private Dictionary<EMorphType, Dictionary<string, string>> MorphMontagePathMapByName;
 
-	// Token: 0x0400CF3F RID: 53055
+	// Token: 0x0400D32F RID: 54063
 	[Nullable(new byte[]
 	{
 		2,
@@ -2217,7 +2163,7 @@ public class CharacterMorphComponent : EntityComponent
 	})]
 	private Dictionary<string, EMorphType> MorphMontagePathMap;
 
-	// Token: 0x0400CF40 RID: 53056
+	// Token: 0x0400D330 RID: 54064
 	[Nullable(new byte[]
 	{
 		2,
@@ -2225,35 +2171,35 @@ public class CharacterMorphComponent : EntityComponent
 	})]
 	private Dictionary<string, EMorphType> SubPathNameMorphTypeMap;
 
-	// Token: 0x0400CF41 RID: 53057
+	// Token: 0x0400D331 RID: 54065
 	[Nullable(2)]
 	private CreatureDataComponent CreatureDataComp;
 
-	// Token: 0x0400CF42 RID: 53058
+	// Token: 0x0400D332 RID: 54066
 	[Nullable(2)]
 	private RolePreloadComponent RolePreloadComp;
 
-	// Token: 0x0400CF43 RID: 53059
+	// Token: 0x0400D333 RID: 54067
 	[Nullable(2)]
 	private CharacterActorComponent ActorComp;
 
-	// Token: 0x0400CF44 RID: 53060
+	// Token: 0x0400D334 RID: 54068
 	[Nullable(2)]
 	private CharacterMoveComponent MoveComp;
 
-	// Token: 0x0400CF45 RID: 53061
+	// Token: 0x0400D335 RID: 54069
 	[Nullable(2)]
 	private BaseTagComponent TagComp;
 
-	// Token: 0x0400CF46 RID: 53062
+	// Token: 0x0400D336 RID: 54070
 	[Nullable(2)]
 	private CharacterAnimationComponent CharacterAnimationComp;
 
-	// Token: 0x0400CF47 RID: 53063
+	// Token: 0x0400D337 RID: 54071
 	[Nullable(2)]
 	private CharacterFloatingComponent CharacterFloatingComp;
 
-	// Token: 0x0400CF48 RID: 53064
+	// Token: 0x0400D338 RID: 54072
 	[Nullable(new byte[]
 	{
 		2,
@@ -2261,39 +2207,39 @@ public class CharacterMorphComponent : EntityComponent
 	})]
 	private List<ITagTask> MorphTagListenTasks;
 
-	// Token: 0x0400CF49 RID: 53065
+	// Token: 0x0400D339 RID: 54073
 	private bool IsBackupBpCompParams;
 
-	// Token: 0x0400CF4A RID: 53066
+	// Token: 0x0400D33A RID: 54074
 	private bool IsBackupDefaultCapsule;
 
-	// Token: 0x0400CF4B RID: 53067
+	// Token: 0x0400D33B RID: 54075
 	[Nullable(2)]
 	private Dictionary<EMorphType, int> LoadingBpInputTypes;
 
-	// Token: 0x0400CF4C RID: 53068
+	// Token: 0x0400D33C RID: 54076
 	[Nullable(2)]
 	private Dictionary<EMorphType, int> LoadingMovementDataTypes;
 
-	// Token: 0x0400CF4D RID: 53069
+	// Token: 0x0400D33D RID: 54077
 	[Nullable(2)]
 	private Dictionary<EMorphType, int> LoadingCameraConfigTypes;
 
-	// Token: 0x0400CF4E RID: 53070
+	// Token: 0x0400D33E RID: 54078
 	[Nullable(2)]
 	private UDataTable CurrentCameraConfig;
 
-	// Token: 0x0400CF4F RID: 53071
+	// Token: 0x0400D33F RID: 54079
 	[Nullable(2)]
 	private Vector TempVector;
 
-	// Token: 0x0400CF50 RID: 53072
+	// Token: 0x0400D340 RID: 54080
 	private float DefaultRadiusInternal;
 
-	// Token: 0x0400CF51 RID: 53073
+	// Token: 0x0400D341 RID: 54081
 	private float DefaultHalfHeightInternal;
 
-	// Token: 0x0400CF52 RID: 53074
+	// Token: 0x0400D342 RID: 54082
 	[Nullable(new byte[]
 	{
 		2,
@@ -2303,7 +2249,7 @@ public class CharacterMorphComponent : EntityComponent
 	})]
 	private Dictionary<string, Dictionary<string, float>> DefaultAdjustableCapsuleParams;
 
-	// Token: 0x0400CF53 RID: 53075
+	// Token: 0x0400D343 RID: 54083
 	[Nullable(new byte[]
 	{
 		2,

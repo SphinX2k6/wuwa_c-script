@@ -1,26 +1,26 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000E53 RID: 3667
+// Token: 0x02000308 RID: 776
 [NullableContext(1)]
 [Nullable(0)]
 public class OpenCustomerServiceParamOpenHarmony
 {
-	// Token: 0x040028B5 RID: 10421
+	// Token: 0x04002950 RID: 10576
 	public string IsLogin = "";
 
-	// Token: 0x040028B6 RID: 10422
+	// Token: 0x04002951 RID: 10577
 	public string FromLogin = "";
 
-	// Token: 0x040028B7 RID: 10423
+	// Token: 0x04002952 RID: 10578
 	public string RoleId = "";
 
-	// Token: 0x040028B8 RID: 10424
+	// Token: 0x04002953 RID: 10579
 	public string ServerId = "";
 
-	// Token: 0x040028B9 RID: 10425
+	// Token: 0x04002954 RID: 10580
 	public string IsLandscape = "";
 
-	// Token: 0x040028BA RID: 10426
+	// Token: 0x04002955 RID: 10581
 	public OpenCustomerServiceExtendsInfoData[] ExtendsInfo = Array.Empty<OpenCustomerServiceExtendsInfoData>();
 }

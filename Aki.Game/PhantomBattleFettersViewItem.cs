@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.FilterSort.Sort.SortEntrance;
@@ -12,12 +11,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002436 RID: 9270
+// Token: 0x0200191B RID: 6427
 [NullableContext(1)]
 [Nullable(0)]
 public class PhantomBattleFettersViewItem : UiPanelBase
 {
-	// Token: 0x0601296C RID: 76140 RVA: 0x00495A28 File Offset: 0x00493C28
+	// Token: 0x0600FE22 RID: 65058 RVA: 0x004A2FF4 File Offset: 0x004A11F4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -51,7 +50,7 @@ public class PhantomBattleFettersViewItem : UiPanelBase
 		this.BtnBindInfo.Add(new ValueTuple<int, Delegate>(12, new Action(this.OnClickDetect)));
 	}
 
-	// Token: 0x0601296D RID: 76141 RVA: 0x00495BCC File Offset: 0x00493DCC
+	// Token: 0x0600FE23 RID: 65059 RVA: 0x004A3198 File Offset: 0x004A1398
 	protected override void OnStart()
 	{
 		this.LevelSequencePlayer = new LevelSequencePlayer(base.GetRootItem());
@@ -64,13 +63,13 @@ public class PhantomBattleFettersViewItem : UiPanelBase
 		this.SortEntrance.SetUiActive(!CalabashModel.Instance.OnlyShowBattleFettersTab);
 	}
 
-	// Token: 0x0601296E RID: 76142 RVA: 0x00495CC9 File Offset: 0x00493EC9
+	// Token: 0x0600FE24 RID: 65060 RVA: 0x004A3295 File Offset: 0x004A1495
 	private VisionFetterMonsterItem InitMonsterItem()
 	{
 		return new VisionFetterMonsterItem();
 	}
 
-	// Token: 0x0601296F RID: 76143 RVA: 0x00495CD0 File Offset: 0x00493ED0
+	// Token: 0x0600FE25 RID: 65061 RVA: 0x004A329C File Offset: 0x004A149C
 	public UniTask PlayStartSequence()
 	{
 		PhantomBattleFettersViewItem.<PlayStartSequence>d__18 <PlayStartSequence>d__;
@@ -81,7 +80,7 @@ public class PhantomBattleFettersViewItem : UiPanelBase
 		return <PlayStartSequence>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012970 RID: 76144 RVA: 0x00495D14 File Offset: 0x00493F14
+	// Token: 0x0600FE26 RID: 65062 RVA: 0x004A32E0 File Offset: 0x004A14E0
 	public UniTask PlayHideSequence()
 	{
 		PhantomBattleFettersViewItem.<PlayHideSequence>d__19 <PlayHideSequence>d__;
@@ -92,19 +91,19 @@ public class PhantomBattleFettersViewItem : UiPanelBase
 		return <PlayHideSequence>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012971 RID: 76145 RVA: 0x00495D57 File Offset: 0x00493F57
+	// Token: 0x0600FE27 RID: 65063 RVA: 0x004A3323 File Offset: 0x004A1523
 	private VisionFetterDescItem InitItem()
 	{
 		return new VisionFetterDescItem();
 	}
 
-	// Token: 0x06012972 RID: 76146 RVA: 0x00495D60 File Offset: 0x00493F60
+	// Token: 0x0600FE28 RID: 65064 RVA: 0x004A332C File Offset: 0x004A152C
 	private void OnClickDetect()
 	{
 		SkipTaskManager.RunByConfigId(PhantomBattleConfig.Instance.GetFetterGroupById(this.CurrentSelectGroupId).AccessId, null);
 	}
 
-	// Token: 0x06012973 RID: 76147 RVA: 0x00495D8B File Offset: 0x00493F8B
+	// Token: 0x0600FE29 RID: 65065 RVA: 0x004A3357 File Offset: 0x004A1557
 	private PhantomFettersItem OnGridProxyCreate()
 	{
 		PhantomFettersItem phantomFettersItem = new PhantomFettersItem();
@@ -112,7 +111,7 @@ public class PhantomBattleFettersViewItem : UiPanelBase
 		return phantomFettersItem;
 	}
 
-	// Token: 0x06012974 RID: 76148 RVA: 0x00495DA4 File Offset: 0x00493FA4
+	// Token: 0x0600FE2A RID: 65066 RVA: 0x004A3370 File Offset: 0x004A1570
 	protected override void OnBeforeShow()
 	{
 		object openParam = this.OpenParam;
@@ -141,17 +140,17 @@ public class PhantomBattleFettersViewItem : UiPanelBase
 		this.UpdateFliterComponent();
 	}
 
-	// Token: 0x06012975 RID: 76149 RVA: 0x00495E28 File Offset: 0x00494028
+	// Token: 0x0600FE2B RID: 65067 RVA: 0x004A33F4 File Offset: 0x004A15F4
 	private void UpdateFliterComponent()
 	{
 		PhantomFetterGroup[] phantomFetterGroupList = CalabashModel.Instance.GetPhantomFetterGroupList();
-		this.FilterEntrance.UpdateData(this.UseWayId, phantomFetterGroupList.ToList<PhantomFetterGroup>(), new object[]
+		this.FilterEntrance.UpdateData(this.UseWayId, new List<PhantomFetterGroup>(phantomFetterGroupList), new object[]
 		{
 			this.RoleId
 		});
 		int uniqueIdByGroupId = this.FilterEntrance.GetUniqueIdByGroupId(this.UseWayId);
 		this.SortEntrance.SetFilterUniqueId(uniqueIdByGroupId);
-		this.SortEntrance.UpdateData(this.UseWayId, phantomFetterGroupList.ToList<PhantomFetterGroup>(), new object[]
+		this.SortEntrance.UpdateData(this.UseWayId, new List<PhantomFetterGroup>(phantomFetterGroupList), new object[]
 		{
 			this.RoleId
 		});
@@ -159,7 +158,7 @@ public class PhantomBattleFettersViewItem : UiPanelBase
 		this.FilterEntrance.SetSortUniqueId(uniqueIdByGroupId2);
 	}
 
-	// Token: 0x06012976 RID: 76150 RVA: 0x00495ED4 File Offset: 0x004940D4
+	// Token: 0x0600FE2C RID: 65068 RVA: 0x004A34A0 File Offset: 0x004A16A0
 	private void SortFetterDataListByRecommend()
 	{
 		if (this.PhantomFetterDataList == null || this.PhantomFetterDataList.Count == 0)
@@ -197,7 +196,7 @@ public class PhantomBattleFettersViewItem : UiPanelBase
 		});
 	}
 
-	// Token: 0x06012977 RID: 76151 RVA: 0x00495F5C File Offset: 0x0049415C
+	// Token: 0x0600FE2D RID: 65069 RVA: 0x004A3528 File Offset: 0x004A1728
 	private void OnFilterRefresh(List<PhantomFetterGroup> list, bool isOutSideChange, EFilterSortType operationType)
 	{
 		this.PhantomFetterDataList = new List<PhantomFetterItemData>();
@@ -215,14 +214,14 @@ public class PhantomBattleFettersViewItem : UiPanelBase
 		this.RefreshRightItem(list);
 	}
 
-	// Token: 0x06012978 RID: 76152 RVA: 0x00495FD8 File Offset: 0x004941D8
+	// Token: 0x0600FE2E RID: 65070 RVA: 0x004A35A4 File Offset: 0x004A17A4
 	private void RefreshRightItem(IList list)
 	{
 		base.GetItem(8).SetUIActive(list.Count > 0);
 		base.GetButton(5).RootUIComp.Get().SetUIActive(list.Count > 0 && this.OnFastFilter != null);
 	}
 
-	// Token: 0x06012979 RID: 76153 RVA: 0x00496028 File Offset: 0x00494228
+	// Token: 0x0600FE2F RID: 65071 RVA: 0x004A35F4 File Offset: 0x004A17F4
 	private void RefreshMonster(List<int> monsterList)
 	{
 		int count = monsterList.Count;
@@ -273,7 +272,7 @@ public class PhantomBattleFettersViewItem : UiPanelBase
 		}));
 	}
 
-	// Token: 0x0601297A RID: 76154 RVA: 0x00496204 File Offset: 0x00494404
+	// Token: 0x0600FE30 RID: 65072 RVA: 0x004A37D0 File Offset: 0x004A19D0
 	private void RefreshScrollView()
 	{
 		if (this.PhantomFetterDataList == null)
@@ -305,7 +304,7 @@ public class PhantomBattleFettersViewItem : UiPanelBase
 		this.PhantomFettersScrollView.RefreshGridProxy(gridIndex);
 	}
 
-	// Token: 0x0601297B RID: 76155 RVA: 0x00496300 File Offset: 0x00494500
+	// Token: 0x0600FE31 RID: 65073 RVA: 0x004A38CC File Offset: 0x004A1ACC
 	public void SelectByFetterId(int id)
 	{
 		int num = this.PhantomFetterDataList.FindIndex((PhantomFetterItemData data) => data.PhantomFetterGroup.Value.Id == id);
@@ -316,37 +315,37 @@ public class PhantomBattleFettersViewItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0601297C RID: 76156 RVA: 0x00496350 File Offset: 0x00494550
+	// Token: 0x0600FE32 RID: 65074 RVA: 0x004A391C File Offset: 0x004A1B1C
 	public void SetSelectRoleId(int roleId)
 	{
 		this.RoleId = roleId;
 	}
 
-	// Token: 0x0601297D RID: 76157 RVA: 0x00496359 File Offset: 0x00494559
+	// Token: 0x0600FE33 RID: 65075 RVA: 0x004A3925 File Offset: 0x004A1B25
 	public void SetRecommendGroupIds(List<int> groupIds)
 	{
 		this.RecommendGroupIds = groupIds;
 	}
 
-	// Token: 0x0601297E RID: 76158 RVA: 0x00496364 File Offset: 0x00494564
+	// Token: 0x0600FE34 RID: 65076 RVA: 0x004A3930 File Offset: 0x004A1B30
 	private void RefreshRight(PhantomFetterGroup itemData)
 	{
 		this.CurrentSelectGroupId = itemData.Id;
 		this.RefreshName(itemData.FetterGroupName);
 		this.RefreshInfo(itemData.FetterMap());
 		this.RefreshConfigInfo(itemData.FetterGroupDesc);
-		List<int> monsterList = PhantomBattleModel.Instance.GetFetterGroupMonsterIdArray(this.CurrentSelectGroupId).ToList<int>();
+		List<int> monsterList = new List<int>(PhantomBattleModel.Instance.GetFetterGroupMonsterIdArray(this.CurrentSelectGroupId));
 		this.RefreshMonster(monsterList);
 		base.GetScrollViewWithScrollbar(13).SetScrollProgress(0f);
 	}
 
-	// Token: 0x0601297F RID: 76159 RVA: 0x004963D4 File Offset: 0x004945D4
+	// Token: 0x0600FE35 RID: 65077 RVA: 0x004A39A0 File Offset: 0x004A1BA0
 	private void RefreshName(string name)
 	{
 		base.GetText(2).ShowTextNew(name);
 	}
 
-	// Token: 0x06012980 RID: 76160 RVA: 0x004963E4 File Offset: 0x004945E4
+	// Token: 0x0600FE36 RID: 65078 RVA: 0x004A39B0 File Offset: 0x004A1BB0
 	private void RefreshInfo(Dictionary<int, int> data)
 	{
 		List<VisionFetterDescData> list = new List<VisionFetterDescData>();
@@ -389,13 +388,13 @@ public class PhantomBattleFettersViewItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06012981 RID: 76161 RVA: 0x004964D8 File Offset: 0x004946D8
+	// Token: 0x0600FE37 RID: 65079 RVA: 0x004A3AA4 File Offset: 0x004A1CA4
 	private void RefreshConfigInfo(string configInfo)
 	{
 		base.GetText(4).ShowTextNew(configInfo);
 	}
 
-	// Token: 0x06012982 RID: 76162 RVA: 0x004964E8 File Offset: 0x004946E8
+	// Token: 0x0600FE38 RID: 65080 RVA: 0x004A3AB4 File Offset: 0x004A1CB4
 	private void OnItemButtonClicked(PhantomFetterItemData itemData)
 	{
 		this.PhantomFettersScrollView.DeselectCurrentGridProxy(false);
@@ -409,13 +408,13 @@ public class PhantomBattleFettersViewItem : UiPanelBase
 		this.PhantomFettersScrollView.RefreshGridProxy(gridIndex);
 	}
 
-	// Token: 0x06012983 RID: 76163 RVA: 0x00496547 File Offset: 0x00494747
+	// Token: 0x0600FE39 RID: 65081 RVA: 0x004A3B13 File Offset: 0x004A1D13
 	public int GetCurrentSelectGroupId()
 	{
 		return this.CurrentSelectGroupId;
 	}
 
-	// Token: 0x06012984 RID: 76164 RVA: 0x00496550 File Offset: 0x00494750
+	// Token: 0x0600FE3A RID: 65082 RVA: 0x004A3B1C File Offset: 0x004A1D1C
 	protected override void OnBeforeDestroy()
 	{
 		PhantomBattleModel.Instance.CurrentSelectedFetter = null;
@@ -435,10 +434,10 @@ public class PhantomBattleFettersViewItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x04008C1C RID: 35868
+	// Token: 0x04008D63 RID: 36195
 	private readonly EFilterSortGroupId UseWayId = EFilterSortGroupId.PhantomFetter;
 
-	// Token: 0x04008C1D RID: 35869
+	// Token: 0x04008D64 RID: 36196
 	[Nullable(new byte[]
 	{
 		2,
@@ -447,7 +446,7 @@ public class PhantomBattleFettersViewItem : UiPanelBase
 	})]
 	private LoopScrollView<PhantomFettersItem, PhantomFetterItemData> PhantomFettersScrollView;
 
-	// Token: 0x04008C1E RID: 35870
+	// Token: 0x04008D65 RID: 36197
 	[Nullable(new byte[]
 	{
 		2,
@@ -455,15 +454,15 @@ public class PhantomBattleFettersViewItem : UiPanelBase
 	})]
 	private List<PhantomFetterItemData> PhantomFetterDataList;
 
-	// Token: 0x04008C1F RID: 35871
+	// Token: 0x04008D66 RID: 36198
 	[Nullable(2)]
 	private FilterEntrance<PhantomFetterGroup> FilterEntrance;
 
-	// Token: 0x04008C20 RID: 35872
+	// Token: 0x04008D67 RID: 36199
 	[Nullable(2)]
 	private SortEntrance<PhantomFetterGroup> SortEntrance;
 
-	// Token: 0x04008C21 RID: 35873
+	// Token: 0x04008D68 RID: 36200
 	[Nullable(new byte[]
 	{
 		2,
@@ -472,7 +471,7 @@ public class PhantomBattleFettersViewItem : UiPanelBase
 	})]
 	private GenericLayout<VisionFetterDescItem, VisionFetterDescData> Layout;
 
-	// Token: 0x04008C22 RID: 35874
+	// Token: 0x04008D69 RID: 36201
 	[Nullable(new byte[]
 	{
 		2,
@@ -481,29 +480,29 @@ public class PhantomBattleFettersViewItem : UiPanelBase
 	})]
 	private GenericLayout<VisionFetterMonsterItem, VisionFetterMonsterData> MonsterLayout;
 
-	// Token: 0x04008C23 RID: 35875
+	// Token: 0x04008D6A RID: 36202
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x04008C24 RID: 35876
+	// Token: 0x04008D6B RID: 36203
 	private int CurrentSelectGroupId;
 
-	// Token: 0x04008C25 RID: 35877
+	// Token: 0x04008D6C RID: 36204
 	private int RoleId;
 
-	// Token: 0x04008C26 RID: 35878
+	// Token: 0x04008D6D RID: 36205
 	private List<int> RecommendGroupIds = new List<int>();
 
-	// Token: 0x04008C27 RID: 35879
+	// Token: 0x04008D6E RID: 36206
 	private readonly int OutSizeSelectFetterGroupId;
 
-	// Token: 0x04008C28 RID: 35880
+	// Token: 0x04008D6F RID: 36207
 	private bool ObserverShowState;
 
-	// Token: 0x04008C29 RID: 35881
+	// Token: 0x04008D70 RID: 36208
 	private bool NeedProcessObserver;
 
-	// Token: 0x04008C2A RID: 35882
+	// Token: 0x04008D71 RID: 36209
 	[Nullable(2)]
 	public Action OnFastFilter;
 }

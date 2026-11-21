@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A72 RID: 2674
+	// Token: 0x02000B3C RID: 2876
 	public class IInteractPlayerDiractionToNpc : IInteractPlayerDiractionType
 	{
-		// Token: 0x06003DA0 RID: 15776 RVA: 0x0009E1F5 File Offset: 0x0009C3F5
-		[NullableContext(1)]
+		// Token: 0x060041C9 RID: 16841 RVA: 0x000A77AD File Offset: 0x000A59AD
 		public static IInteractPlayerDiractionToNpc Create(IInteractPlayerDiractionToNpc? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000E79 RID: 3705
-		// (get) Token: 0x06003DA1 RID: 15777 RVA: 0x0009E214 File Offset: 0x0009C414
+		// Token: 0x17000F4C RID: 3916
+		// (get) Token: 0x060041CA RID: 16842 RVA: 0x000A77CC File Offset: 0x000A59CC
 		public override EInteractPlayerDiractionType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002253 RID: 8787
+		// Token: 0x0400246F RID: 9327
 		private IInteractPlayerDiractionToNpc Instance;
 	}
 }

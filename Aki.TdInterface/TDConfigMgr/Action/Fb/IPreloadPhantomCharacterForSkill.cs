@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029E0 RID: 10720
+	// Token: 0x02002CCD RID: 11469
 	public class IPreloadPhantomCharacterForSkill : IPreloadCharacterType
 	{
-		// Token: 0x0600ECCE RID: 60622 RVA: 0x002290D1 File Offset: 0x002272D1
-		[NullableContext(1)]
+		// Token: 0x0600FB65 RID: 64357 RVA: 0x00246A55 File Offset: 0x00244C55
 		public static IPreloadPhantomCharacterForSkill Create(IPreloadPhantomCharacterForSkill? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004AD0 RID: 19152
-		// (get) Token: 0x0600ECCF RID: 60623 RVA: 0x002290F0 File Offset: 0x002272F0
+		// Token: 0x17004E79 RID: 20089
+		// (get) Token: 0x0600FB66 RID: 64358 RVA: 0x00246A74 File Offset: 0x00244C74
 		public override EPreloadObjectType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004AD1 RID: 19153
-		// (get) Token: 0x0600ECD0 RID: 60624 RVA: 0x002290FD File Offset: 0x002272FD
+		// Token: 0x17004E7A RID: 20090
+		// (get) Token: 0x0600FB67 RID: 64359 RVA: 0x00246A81 File Offset: 0x00244C81
 		public virtual int Id
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400826A RID: 33386
+		// Token: 0x0400895B RID: 35163
 		private IPreloadPhantomCharacterForSkill Instance;
 	}
 }

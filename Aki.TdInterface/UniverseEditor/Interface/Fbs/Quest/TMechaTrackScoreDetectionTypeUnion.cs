@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020042E8 RID: 17128
+	// Token: 0x02004747 RID: 18247
 	public class TMechaTrackScoreDetectionTypeUnion
 	{
-		// Token: 0x17007952 RID: 31058
-		// (get) Token: 0x06019677 RID: 104055 RVA: 0x003A4B46 File Offset: 0x003A2D46
-		// (set) Token: 0x06019678 RID: 104056 RVA: 0x003A4B4E File Offset: 0x003A2D4E
+		// Token: 0x17007F85 RID: 32645
+		// (get) Token: 0x0601ADF9 RID: 110073 RVA: 0x003D0476 File Offset: 0x003CE676
+		// (set) Token: 0x0601ADFA RID: 110074 RVA: 0x003D047E File Offset: 0x003CE67E
 		public TMechaTrackScoreDetectionType Type { get; set; }
 
-		// Token: 0x17007953 RID: 31059
-		// (get) Token: 0x06019679 RID: 104057 RVA: 0x003A4B57 File Offset: 0x003A2D57
-		// (set) Token: 0x0601967A RID: 104058 RVA: 0x003A4B5F File Offset: 0x003A2D5F
+		// Token: 0x17007F86 RID: 32646
+		// (get) Token: 0x0601ADFB RID: 110075 RVA: 0x003D0487 File Offset: 0x003CE687
+		// (set) Token: 0x0601ADFC RID: 110076 RVA: 0x003D048F File Offset: 0x003CE68F
 		public object Value { get; set; }
 
-		// Token: 0x0601967B RID: 104059 RVA: 0x003A4B68 File Offset: 0x003A2D68
+		// Token: 0x0601ADFD RID: 110077 RVA: 0x003D0498 File Offset: 0x003CE698
 		public TMechaTrackScoreDetectionTypeUnion()
 		{
 			this.Type = TMechaTrackScoreDetectionType.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601967C RID: 104060 RVA: 0x003A4B7E File Offset: 0x003A2D7E
+		// Token: 0x0601ADFE RID: 110078 RVA: 0x003D04AE File Offset: 0x003CE6AE
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601967D RID: 104061 RVA: 0x003A4B90 File Offset: 0x003A2D90
+		// Token: 0x0601ADFF RID: 110079 RVA: 0x003D04C0 File Offset: 0x003CE6C0
 		public IMechaTrackScoreMechanismStateT AsIMechaTrackScoreMechanismState()
 		{
 			return this.As<IMechaTrackScoreMechanismStateT>();
 		}
 
-		// Token: 0x0601967E RID: 104062 RVA: 0x003A4B98 File Offset: 0x003A2D98
+		// Token: 0x0601AE00 RID: 110080 RVA: 0x003D04C8 File Offset: 0x003CE6C8
 		public static TMechaTrackScoreDetectionTypeUnion FromIMechaTrackScoreMechanismState(IMechaTrackScoreMechanismStateT _imechatrackscoremechanismstate)
 		{
 			return new TMechaTrackScoreDetectionTypeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x0601967F RID: 104063 RVA: 0x003A4BAD File Offset: 0x003A2DAD
+		// Token: 0x0601AE01 RID: 110081 RVA: 0x003D04DD File Offset: 0x003CE6DD
 		public IMechaTrackScoreStuntActionT AsIMechaTrackScoreStuntAction()
 		{
 			return this.As<IMechaTrackScoreStuntActionT>();
 		}
 
-		// Token: 0x06019680 RID: 104064 RVA: 0x003A4BB5 File Offset: 0x003A2DB5
+		// Token: 0x0601AE02 RID: 110082 RVA: 0x003D04E5 File Offset: 0x003CE6E5
 		public static TMechaTrackScoreDetectionTypeUnion FromIMechaTrackScoreStuntAction(IMechaTrackScoreStuntActionT _imechatrackscorestuntaction)
 		{
 			return new TMechaTrackScoreDetectionTypeUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06019681 RID: 104065 RVA: 0x003A4BCA File Offset: 0x003A2DCA
+		// Token: 0x0601AE03 RID: 110083 RVA: 0x003D04FA File Offset: 0x003CE6FA
 		public IMechaTrackScoreTagDetectionT AsIMechaTrackScoreTagDetection()
 		{
 			return this.As<IMechaTrackScoreTagDetectionT>();
 		}
 
-		// Token: 0x06019682 RID: 104066 RVA: 0x003A4BD2 File Offset: 0x003A2DD2
+		// Token: 0x0601AE04 RID: 110084 RVA: 0x003D0502 File Offset: 0x003CE702
 		public static TMechaTrackScoreDetectionTypeUnion FromIMechaTrackScoreTagDetection(IMechaTrackScoreTagDetectionT _imechatrackscoretagdetection)
 		{
 			return new TMechaTrackScoreDetectionTypeUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06019683 RID: 104067 RVA: 0x003A4BE8 File Offset: 0x003A2DE8
+		// Token: 0x0601AE05 RID: 110085 RVA: 0x003D0518 File Offset: 0x003CE718
 		public static int Pack(FlatBufferBuilder builder, TMechaTrackScoreDetectionTypeUnion _o)
 		{
 			switch (_o.Type)

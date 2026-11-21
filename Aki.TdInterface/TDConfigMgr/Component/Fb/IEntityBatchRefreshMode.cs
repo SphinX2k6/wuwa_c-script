@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AC3 RID: 2755
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B8D RID: 2957
 	public class IEntityBatchRefreshMode
 	{
-		// Token: 0x06003F73 RID: 16243 RVA: 0x000A211C File Offset: 0x000A031C
+		// Token: 0x0600439D RID: 17309 RVA: 0x000AB710 File Offset: 0x000A9910
 		public static IEntityBatchRefreshMode Create(IEntityBatchRefreshMode? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000FAA RID: 4010
-		// (get) Token: 0x06003F74 RID: 16244 RVA: 0x000A213B File Offset: 0x000A033B
+		// Token: 0x1700107E RID: 4222
+		// (get) Token: 0x0600439E RID: 17310 RVA: 0x000AB72F File Offset: 0x000A992F
 		public virtual EEntityBatchRefreshMode Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FAB RID: 4011
-		// (get) Token: 0x06003F75 RID: 16245 RVA: 0x000A2148 File Offset: 0x000A0348
+		// Token: 0x1700107F RID: 4223
+		// (get) Token: 0x0600439F RID: 17311 RVA: 0x000AB73C File Offset: 0x000A993C
 		public virtual List<IEntityListBatch> EntityBatches
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002340 RID: 9024
+		// Token: 0x0400255C RID: 9564
 		private IEntityBatchRefreshMode Instance;
 
-		// Token: 0x04002341 RID: 9025
+		// Token: 0x0400255D RID: 9565
 		private List<IEntityListBatch> _EntityBatchesCache;
 
-		// Token: 0x04002342 RID: 9026
+		// Token: 0x0400255E RID: 9566
 		private bool _EntityBatchesInited;
 	}
 }

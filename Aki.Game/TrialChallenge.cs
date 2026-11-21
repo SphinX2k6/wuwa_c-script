@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001DAA RID: 7594
+// Token: 0x0200126C RID: 4716
 [NullableContext(1)]
 [Nullable(0)]
 public class TrialChallenge : ITrialChallenge
 {
-	// Token: 0x17001269 RID: 4713
-	// (get) Token: 0x0600E680 RID: 59008 RVA: 0x0036512C File Offset: 0x0036332C
-	// (set) Token: 0x0600E681 RID: 59009 RVA: 0x00365134 File Offset: 0x00363334
+	// Token: 0x17001293 RID: 4755
+	// (get) Token: 0x0600BA9E RID: 47774 RVA: 0x00370D8C File Offset: 0x0036EF8C
+	// (set) Token: 0x0600BA9F RID: 47775 RVA: 0x00370D94 File Offset: 0x0036EF94
 	public int BoardId { get; set; }
 
-	// Token: 0x1700126A RID: 4714
-	// (get) Token: 0x0600E682 RID: 59010 RVA: 0x0036513D File Offset: 0x0036333D
-	// (set) Token: 0x0600E683 RID: 59011 RVA: 0x00365145 File Offset: 0x00363345
+	// Token: 0x17001294 RID: 4756
+	// (get) Token: 0x0600BAA0 RID: 47776 RVA: 0x00370D9D File Offset: 0x0036EF9D
+	// (set) Token: 0x0600BAA1 RID: 47777 RVA: 0x00370DA5 File Offset: 0x0036EFA5
 	public IReadOnlyList<ITrialSubChallenge> SubChallenges { get; set; }
 }

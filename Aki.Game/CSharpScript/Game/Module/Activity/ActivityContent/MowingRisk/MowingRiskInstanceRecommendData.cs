@@ -3,24 +3,24 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 {
-	// Token: 0x020063C4 RID: 25540
+	// Token: 0x02005342 RID: 21314
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MowingRiskInstanceRecommendData : IMowingRiskInstanceRecommendData
 	{
-		// Token: 0x170093D0 RID: 37840
-		// (get) Token: 0x06040401 RID: 263169 RVA: 0x00F8B875 File Offset: 0x00F89A75
-		// (set) Token: 0x06040402 RID: 263170 RVA: 0x00F8B87D File Offset: 0x00F89A7D
+		// Token: 0x17006732 RID: 26418
+		// (get) Token: 0x060350C2 RID: 217282 RVA: 0x00ED280D File Offset: 0x00ED0A0D
+		// (set) Token: 0x060350C3 RID: 217283 RVA: 0x00ED2815 File Offset: 0x00ED0A15
 		public string TextId { get; set; }
 
-		// Token: 0x170093D1 RID: 37841
-		// (get) Token: 0x06040403 RID: 263171 RVA: 0x00F8B886 File Offset: 0x00F89A86
-		// (set) Token: 0x06040404 RID: 263172 RVA: 0x00F8B88E File Offset: 0x00F89A8E
+		// Token: 0x17006733 RID: 26419
+		// (get) Token: 0x060350C4 RID: 217284 RVA: 0x00ED281E File Offset: 0x00ED0A1E
+		// (set) Token: 0x060350C5 RID: 217285 RVA: 0x00ED2826 File Offset: 0x00ED0A26
 		public string[] TextArgs { get; set; }
 
-		// Token: 0x170093D2 RID: 37842
-		// (get) Token: 0x06040405 RID: 263173 RVA: 0x00F8B897 File Offset: 0x00F89A97
-		// (set) Token: 0x06040406 RID: 263174 RVA: 0x00F8B89F File Offset: 0x00F89A9F
+		// Token: 0x17006734 RID: 26420
+		// (get) Token: 0x060350C6 RID: 217286 RVA: 0x00ED282F File Offset: 0x00ED0A2F
+		// (set) Token: 0x060350C7 RID: 217287 RVA: 0x00ED2837 File Offset: 0x00ED0A37
 		public int RecommendLevel { get; set; }
 	}
 }

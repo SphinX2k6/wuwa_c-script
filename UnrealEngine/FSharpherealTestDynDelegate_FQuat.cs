@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002732 RID: 10034
+	// Token: 0x020007E7 RID: 2023
 	public sealed class FSharpherealTestDynDelegate_FQuat : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0602528D RID: 152205 RVA: 0x003709EA File Offset: 0x0036EBEA
+		// Token: 0x0600AD7D RID: 44413 RVA: 0x001009CE File Offset: 0x000FEBCE
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FSharpherealTestDynDelegate_FQuat.StaticFunctionPtr();
 		}
 
-		// Token: 0x0602528E RID: 152206 RVA: 0x003709F6 File Offset: 0x0036EBF6
+		// Token: 0x0600AD7E RID: 44414 RVA: 0x001009DA File Offset: 0x000FEBDA
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FSharpherealTestDynDelegate_FQuat._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FSharpherealTestDynDelegate_FQuat._FunctionPtr;
 		}
 
-		// Token: 0x0602528F RID: 152207 RVA: 0x00370A19 File Offset: 0x0036EC19
+		// Token: 0x0600AD7F RID: 44415 RVA: 0x001009FD File Offset: 0x000FEBFD
 		public FSharpherealTestDynDelegate_FQuat()
 		{
 		}
 
-		// Token: 0x06025290 RID: 152208 RVA: 0x00370A21 File Offset: 0x0036EC21
+		// Token: 0x0600AD80 RID: 44416 RVA: 0x00100A05 File Offset: 0x000FEC05
 		[NullableContext(2)]
 		public FSharpherealTestDynDelegate_FQuat(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06025291 RID: 152209 RVA: 0x00370A2B File Offset: 0x0036EC2B
+		// Token: 0x0600AD81 RID: 44417 RVA: 0x00100A0F File Offset: 0x000FEC0F
 		public FSharpherealTestDynDelegate_FQuat(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06025292 RID: 152210 RVA: 0x00370A36 File Offset: 0x0036EC36
+		// Token: 0x0600AD82 RID: 44418 RVA: 0x00100A1A File Offset: 0x000FEC1A
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Func<FQuat, FQuat, FQuat>) ?? ((Func<FQuat, FQuat, FQuat>)Delegate.CreateDelegate(typeof(Func<FQuat, FQuat, FQuat>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06025293 RID: 152211 RVA: 0x00370A68 File Offset: 0x0036EC68
+		// Token: 0x0600AD83 RID: 44419 RVA: 0x00100A4C File Offset: 0x000FEC4C
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Func<FQuat, FQuat, FQuat> Callback)
 		{
 			if (FSharpherealTestDynDelegate_FQuat.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FSharpherealTestDynDelegate_FQuat.RegisterId);
 		}
 
-		// Token: 0x06025294 RID: 152212 RVA: 0x00370AA4 File Offset: 0x0036ECA4
+		// Token: 0x0600AD84 RID: 44420 RVA: 0x00100A88 File Offset: 0x000FEC88
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe FQuat Execute(in FQuat A, in FQuat B)
 		{
 			FSharpherealTestDynDelegate_FQuat.__FSharpherealTestDynDelegate_FQuat_DelegateParams* ptr = stackalloc FSharpherealTestDynDelegate_FQuat.__FSharpherealTestDynDelegate_FQuat_DelegateParams[(UIntPtr)63] + 15L / (long)sizeof(FSharpherealTestDynDelegate_FQuat.__FSharpherealTestDynDelegate_FQuat_DelegateParams) & -16L;
@@ -78,10 +76,9 @@ namespace UnrealEngine
 			return ptr->__Result;
 		}
 
-		// Token: 0x06025295 RID: 152213 RVA: 0x00370AF8 File Offset: 0x0036ECF8
+		// Token: 0x0600AD85 RID: 44421 RVA: 0x00100ADC File Offset: 0x000FECDC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Func<FQuat, FQuat, FQuat> func = target as Func<FQuat, FQuat, FQuat>;
@@ -93,39 +90,39 @@ namespace UnrealEngine
 			((FSharpherealTestDynDelegate_FQuat.__FSharpherealTestDynDelegate_FQuat_DelegateParams*)__Parameters)->__Result = _Result;
 		}
 
-		// Token: 0x0401407A RID: 82042
+		// Token: 0x04004ADD RID: 19165
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0401407B RID: 82043
+		// Token: 0x04004ADE RID: 19166
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/SharpherealTest.SharpherealTestDynDelegate_FQuat__DelegateSignature";
 
-		// Token: 0x0401407C RID: 82044
+		// Token: 0x04004ADF RID: 19167
 		private static int RegisterId;
 
-		// Token: 0x020036BD RID: 14013
+		// Token: 0x02000F8F RID: 3983
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 48)]
-		protected ref struct __FSharpherealTestDynDelegate_FQuat_DelegateParams
+		private ref struct __FSharpherealTestDynDelegate_FQuat_DelegateParams
 		{
-			// Token: 0x040177D8 RID: 96216
+			// Token: 0x0400638B RID: 25483
 			[FieldOffset(0)]
 			public FQuat A;
 
-			// Token: 0x040177D9 RID: 96217
+			// Token: 0x0400638C RID: 25484
 			[FieldOffset(16)]
 			public FQuat B;
 
-			// Token: 0x040177DA RID: 96218
+			// Token: 0x0400638D RID: 25485
 			[FieldOffset(32)]
 			public FQuat __Result;
 		}
 
-		// Token: 0x020036BE RID: 14014
+		// Token: 0x02000F90 RID: 3984
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040177DB RID: 96219
+			// Token: 0x0400638E RID: 25486
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

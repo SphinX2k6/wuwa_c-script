@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C44 RID: 3140
+	// Token: 0x02000D17 RID: 3351
 	public class IEffectSplineEquidistantPointMode : IEffectSplineCreationMode
 	{
-		// Token: 0x060047E2 RID: 18402 RVA: 0x000B4DC1 File Offset: 0x000B2FC1
-		[NullableContext(1)]
+		// Token: 0x06004C52 RID: 19538 RVA: 0x000BF171 File Offset: 0x000BD371
 		public static IEffectSplineEquidistantPointMode Create(IEffectSplineEquidistantPointMode? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001517 RID: 5399
-		// (get) Token: 0x060047E3 RID: 18403 RVA: 0x000B4DE0 File Offset: 0x000B2FE0
+		// Token: 0x1700161F RID: 5663
+		// (get) Token: 0x06004C53 RID: 19539 RVA: 0x000BF190 File Offset: 0x000BD390
 		public override EEffectSplineCreateMode Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001518 RID: 5400
-		// (get) Token: 0x060047E4 RID: 18404 RVA: 0x000B4DED File Offset: 0x000B2FED
+		// Token: 0x17001620 RID: 5664
+		// (get) Token: 0x06004C54 RID: 19540 RVA: 0x000BF19D File Offset: 0x000BD39D
 		public virtual int Space
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040028E9 RID: 10473
+		// Token: 0x04002B3E RID: 11070
 		private IEffectSplineEquidistantPointMode Instance;
 	}
 }

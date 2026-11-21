@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002F92 RID: 12178
+// Token: 0x020024E6 RID: 9446
 [NullableContext(1)]
 [Nullable(0)]
 public class ExecuteAddBuffByStackCount : PeriodExecution
 {
-	// Token: 0x06019DAC RID: 105900 RVA: 0x006C00FB File Offset: 0x006BE2FB
+	// Token: 0x060176BE RID: 95934 RVA: 0x006E69CF File Offset: 0x006E4BCF
 	public ExecuteAddBuffByStackCount(RequireAndLimits requireAndLimits) : base(requireAndLimits)
 	{
 	}
 
-	// Token: 0x06019DAD RID: 105901 RVA: 0x006C0104 File Offset: 0x006BE304
+	// Token: 0x060176BF RID: 95935 RVA: 0x006E69D8 File Offset: 0x006E4BD8
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		this.TargetType = EExecutionTargetType.Self;
@@ -28,17 +26,17 @@ public class ExecuteAddBuffByStackCount : PeriodExecution
 		{
 			long[][] ids = this.Ids;
 			int num = i;
-			IEnumerable<string> source = extraEffectParameters_[i].Split('#', StringSplitOptions.None);
-			Func<string, long> selector;
-			if ((selector = ExecuteAddBuffByStackCount.<>O.<0>__Parse) == null)
+			string[] array = extraEffectParameters_[i].Split('#', StringSplitOptions.None);
+			Converter<string, long> converter;
+			if ((converter = ExecuteAddBuffByStackCount.<>O.<0>__Parse) == null)
 			{
-				selector = (ExecuteAddBuffByStackCount.<>O.<0>__Parse = new Func<string, long>(long.Parse));
+				converter = (ExecuteAddBuffByStackCount.<>O.<0>__Parse = new Converter<string, long>(long.Parse));
 			}
-			ids[num] = source.Select(selector).ToArray<long>();
+			ids[num] = Array.ConvertAll<string, long>(array, converter);
 		}
 	}
 
-	// Token: 0x06019DAE RID: 105902 RVA: 0x006C0184 File Offset: 0x006BE384
+	// Token: 0x060176C0 RID: 95936 RVA: 0x006E6A54 File Offset: 0x006E4C54
 	[return: Nullable(2)]
 	public unsafe override object OnExecute(params object[] args)
 	{
@@ -77,7 +75,7 @@ public class ExecuteAddBuffByStackCount : PeriodExecution
 		return null;
 	}
 
-	// Token: 0x0400C352 RID: 50002
+	// Token: 0x0400C6FB RID: 50939
 	[Nullable(new byte[]
 	{
 		2,
@@ -85,12 +83,12 @@ public class ExecuteAddBuffByStackCount : PeriodExecution
 	})]
 	public long[][] Ids;
 
-	// Token: 0x0200960F RID: 38415
+	// Token: 0x02008830 RID: 34864
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x0403027D RID: 197245
+		// Token: 0x0402B90A RID: 178442
 		[Nullable(0)]
-		public static Func<string, long> <0>__Parse;
+		public static Converter<string, long> <0>__Parse;
 	}
 }

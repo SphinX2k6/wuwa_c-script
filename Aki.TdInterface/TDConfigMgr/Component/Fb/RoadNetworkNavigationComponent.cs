@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DCB RID: 3531
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000EC7 RID: 3783
 	public class RoadNetworkNavigationComponent : IComponentBase
 	{
-		// Token: 0x0600501D RID: 20509 RVA: 0x000C5FFA File Offset: 0x000C41FA
+		// Token: 0x06005542 RID: 21826 RVA: 0x000D184A File Offset: 0x000CFA4A
 		public static RoadNetworkNavigationComponent Create(IRoadNetworkNavigationComponent? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001A44 RID: 6724
-		// (get) Token: 0x0600501E RID: 20510 RVA: 0x000C601C File Offset: 0x000C421C
+		// Token: 0x17001BAF RID: 7087
+		// (get) Token: 0x06005543 RID: 21827 RVA: 0x000D186C File Offset: 0x000CFA6C
 		public override bool? Disabled
 		{
 			get
@@ -36,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A45 RID: 6725
-		// (get) Token: 0x0600501F RID: 20511 RVA: 0x000C6054 File Offset: 0x000C4254
+		// Token: 0x17001BB0 RID: 7088
+		// (get) Token: 0x06005544 RID: 21828 RVA: 0x000D18A4 File Offset: 0x000CFAA4
 		public override bool? EdIsLocked
 		{
 			get
@@ -46,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A46 RID: 6726
-		// (get) Token: 0x06005020 RID: 20512 RVA: 0x000C606C File Offset: 0x000C426C
+		// Token: 0x17001BB1 RID: 7089
+		// (get) Token: 0x06005545 RID: 21829 RVA: 0x000D18BC File Offset: 0x000CFABC
 		public virtual bool? KeepSelf
 		{
 			get
@@ -60,8 +58,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A47 RID: 6727
-		// (get) Token: 0x06005021 RID: 20513 RVA: 0x000C60A2 File Offset: 0x000C42A2
+		// Token: 0x17001BB2 RID: 7090
+		// (get) Token: 0x06005546 RID: 21830 RVA: 0x000D18F2 File Offset: 0x000CFAF2
 		public virtual ITrafficNavigationConfig BasicConfig
 		{
 			get
@@ -76,8 +74,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A48 RID: 6728
-		// (get) Token: 0x06005022 RID: 20514 RVA: 0x000C60D6 File Offset: 0x000C42D6
+		// Token: 0x17001BB3 RID: 7091
+		// (get) Token: 0x06005547 RID: 21831 RVA: 0x000D1926 File Offset: 0x000CFB26
 		public virtual IObstacleDetectionConfig ObstacleConfig
 		{
 			get
@@ -92,21 +90,21 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002DF0 RID: 11760
+		// Token: 0x040030B6 RID: 12470
 		private IRoadNetworkNavigationComponent Instance;
 
-		// Token: 0x04002DF1 RID: 11761
+		// Token: 0x040030B7 RID: 12471
 		[Nullable(2)]
 		private ITrafficNavigationConfig _BasicConfigCache;
 
-		// Token: 0x04002DF2 RID: 11762
+		// Token: 0x040030B8 RID: 12472
 		private bool _BasicConfigInited;
 
-		// Token: 0x04002DF3 RID: 11763
+		// Token: 0x040030B9 RID: 12473
 		[Nullable(2)]
 		private IObstacleDetectionConfig _ObstacleConfigCache;
 
-		// Token: 0x04002DF4 RID: 11764
+		// Token: 0x040030BA RID: 12474
 		private bool _ObstacleConfigInited;
 	}
 }

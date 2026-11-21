@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002802 RID: 10242
+// Token: 0x02001D7D RID: 7549
 [NullableContext(2)]
 public interface IRoleDevPhantomSuitDisplayItemData
 {
-	// Token: 0x17001BAC RID: 7084
-	// (get) Token: 0x06015040 RID: 86080
-	// (set) Token: 0x06015041 RID: 86081
+	// Token: 0x17001C04 RID: 7172
+	// (get) Token: 0x06012A40 RID: 76352
+	// (set) Token: 0x06012A41 RID: 76353
 	IPhantomMonsterItemData MonsterData { get; set; }
 
-	// Token: 0x17001BAD RID: 7085
-	// (get) Token: 0x06015042 RID: 86082
-	// (set) Token: 0x06015043 RID: 86083
+	// Token: 0x17001C05 RID: 7173
+	// (get) Token: 0x06012A42 RID: 76354
+	// (set) Token: 0x06012A43 RID: 76355
 	IDropRewardItemData RewardData { get; set; }
 }

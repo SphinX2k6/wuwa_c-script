@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E09 RID: 7689
+	// Token: 0x0200203C RID: 8252
 	public class ISetAlertValueType_SetValue
 	{
-		// Token: 0x04006280 RID: 25216
+		// Token: 0x04006857 RID: 26711
 		public EValueChangeType Type;
 	}
 }

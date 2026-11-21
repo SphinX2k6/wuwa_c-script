@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020010AA RID: 4266
+	// Token: 0x020011A5 RID: 4517
 	public struct ShopBankInfo : IFlatbufferObject
 	{
-		// Token: 0x170035BC RID: 13756
-		// (get) Token: 0x0600D1B9 RID: 53689 RVA: 0x0030EA68 File Offset: 0x0030CC68
+		// Token: 0x170036CA RID: 14026
+		// (get) Token: 0x0600D98F RID: 55695 RVA: 0x0032DF3C File Offset: 0x0032C13C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,39 +20,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D1BA RID: 53690 RVA: 0x0030EA75 File Offset: 0x0030CC75
+		// Token: 0x0600D990 RID: 55696 RVA: 0x0032DF49 File Offset: 0x0032C149
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600D1BB RID: 53691 RVA: 0x0030EA7C File Offset: 0x0030CC7C
+		// Token: 0x0600D991 RID: 55697 RVA: 0x0032DF50 File Offset: 0x0032C150
 		public static ShopBankInfo GetRootAsShopBankInfo(ByteBuffer _bb)
 		{
 			return ShopBankInfo.GetRootAsShopBankInfo(_bb, default(ShopBankInfo));
 		}
 
-		// Token: 0x0600D1BC RID: 53692 RVA: 0x0030EA98 File Offset: 0x0030CC98
+		// Token: 0x0600D992 RID: 55698 RVA: 0x0032DF6C File Offset: 0x0032C16C
 		public static ShopBankInfo GetRootAsShopBankInfo(ByteBuffer _bb, ShopBankInfo obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600D1BD RID: 53693 RVA: 0x0030EAB5 File Offset: 0x0030CCB5
+		// Token: 0x0600D993 RID: 55699 RVA: 0x0032DF89 File Offset: 0x0032C189
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600D1BE RID: 53694 RVA: 0x0030EAC4 File Offset: 0x0030CCC4
+		// Token: 0x0600D994 RID: 55700 RVA: 0x0032DF98 File Offset: 0x0032C198
 		public ShopBankInfo __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170035BD RID: 13757
-		// (get) Token: 0x0600D1BF RID: 53695 RVA: 0x0030EAD4 File Offset: 0x0030CCD4
+		// Token: 0x170036CB RID: 14027
+		// (get) Token: 0x0600D995 RID: 55701 RVA: 0x0032DFA8 File Offset: 0x0032C1A8
 		public int Id
 		{
 			get
@@ -66,8 +66,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170035BE RID: 13758
-		// (get) Token: 0x0600D1C0 RID: 53696 RVA: 0x0030EB10 File Offset: 0x0030CD10
+		// Token: 0x170036CC RID: 14028
+		// (get) Token: 0x0600D996 RID: 55702 RVA: 0x0032DFE4 File Offset: 0x0032C1E4
 		public int BankId
 		{
 			get
@@ -81,8 +81,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170035BF RID: 13759
-		// (get) Token: 0x0600D1C1 RID: 53697 RVA: 0x0030EB4C File Offset: 0x0030CD4C
+		// Token: 0x170036CD RID: 14029
+		// (get) Token: 0x0600D997 RID: 55703 RVA: 0x0032E020 File Offset: 0x0032C220
 		public int ItemId
 		{
 			get
@@ -96,8 +96,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170035C0 RID: 13760
-		// (get) Token: 0x0600D1C2 RID: 53698 RVA: 0x0030EB88 File Offset: 0x0030CD88
+		// Token: 0x170036CE RID: 14030
+		// (get) Token: 0x0600D998 RID: 55704 RVA: 0x0032E05C File Offset: 0x0032C25C
 		public int Weight
 		{
 			get
@@ -111,8 +111,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170035C1 RID: 13761
-		// (get) Token: 0x0600D1C3 RID: 53699 RVA: 0x0030EBC8 File Offset: 0x0030CDC8
+		// Token: 0x170036CF RID: 14031
+		// (get) Token: 0x0600D999 RID: 55705 RVA: 0x0032E09C File Offset: 0x0032C29C
 		public int ItemNum
 		{
 			get
@@ -126,8 +126,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170035C2 RID: 13762
-		// (get) Token: 0x0600D1C4 RID: 53700 RVA: 0x0030EC08 File Offset: 0x0030CE08
+		// Token: 0x170036D0 RID: 14032
+		// (get) Token: 0x0600D99A RID: 55706 RVA: 0x0032E0DC File Offset: 0x0032C2DC
 		public int LimitNum
 		{
 			get
@@ -141,7 +141,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D1C5 RID: 53701 RVA: 0x0030EC48 File Offset: 0x0030CE48
+		// Token: 0x0600D99B RID: 55707 RVA: 0x0032E11C File Offset: 0x0032C31C
 		public DicIntInt? OriginalPrice(int j)
 		{
 			int num = this.__p.__offset(16);
@@ -152,8 +152,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x170035C3 RID: 13763
-		// (get) Token: 0x0600D1C6 RID: 53702 RVA: 0x0030ECAC File Offset: 0x0030CEAC
+		// Token: 0x170036D1 RID: 14033
+		// (get) Token: 0x0600D99C RID: 55708 RVA: 0x0032E180 File Offset: 0x0032C380
 		public int OriginalPriceLength
 		{
 			get
@@ -167,7 +167,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D1C7 RID: 53703 RVA: 0x0030ECD8 File Offset: 0x0030CED8
+		// Token: 0x0600D99D RID: 55709 RVA: 0x0032E1AC File Offset: 0x0032C3AC
 		public DicIntInt? Price(int j)
 		{
 			int num = this.__p.__offset(18);
@@ -178,8 +178,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x170035C4 RID: 13764
-		// (get) Token: 0x0600D1C8 RID: 53704 RVA: 0x0030ED3C File Offset: 0x0030CF3C
+		// Token: 0x170036D2 RID: 14034
+		// (get) Token: 0x0600D99E RID: 55710 RVA: 0x0032E210 File Offset: 0x0032C410
 		public int PriceLength
 		{
 			get
@@ -193,8 +193,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170035C5 RID: 13765
-		// (get) Token: 0x0600D1C9 RID: 53705 RVA: 0x0030ED68 File Offset: 0x0030CF68
+		// Token: 0x170036D3 RID: 14035
+		// (get) Token: 0x0600D99F RID: 55711 RVA: 0x0032E23C File Offset: 0x0032C43C
 		public bool Show
 		{
 			get
@@ -204,8 +204,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170035C6 RID: 13766
-		// (get) Token: 0x0600D1CA RID: 53706 RVA: 0x0030EDA8 File Offset: 0x0030CFA8
+		// Token: 0x170036D4 RID: 14036
+		// (get) Token: 0x0600D9A0 RID: 55712 RVA: 0x0032E27C File Offset: 0x0032C47C
 		public string Label
 		{
 			get
@@ -219,53 +219,51 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D1CB RID: 53707 RVA: 0x0030EDE0 File Offset: 0x0030CFE0
+		// Token: 0x0600D9A1 RID: 55713 RVA: 0x0032E2B4 File Offset: 0x0032C4B4
 		public Span<byte> GetLabelBytes()
 		{
 			return this.__p.__vector_as_span<byte>(22, 1);
 		}
 
-		// Token: 0x0600D1CC RID: 53708 RVA: 0x0030EDF0 File Offset: 0x0030CFF0
+		// Token: 0x0600D9A2 RID: 55714 RVA: 0x0032E2C4 File Offset: 0x0032C4C4
 		public byte[] GetLabelArray()
 		{
 			return this.__p.__vector_as_array<byte>(22) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0600D1CD RID: 53709 RVA: 0x0030EE08 File Offset: 0x0030D008
+		// Token: 0x0600D9A3 RID: 55715 RVA: 0x0032E2DC File Offset: 0x0032C4DC
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用OriginalPriceFrozenDict()缓存字典，遍历请使用OriginalPriceIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> OriginalPrice()
+		public Dictionary<int, int> OriginalPrice()
 		{
 			return this.OriginalPriceIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x0600D1CE RID: 53710 RVA: 0x0030EE5E File Offset: 0x0030D05E
+		// Token: 0x0600D9A4 RID: 55716 RVA: 0x0032E332 File Offset: 0x0032C532
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> OriginalPriceIter()
+		public IEnumerable<DicIntInt> OriginalPriceIter()
 		{
 			ShopBankInfo.<OriginalPriceIter>d__33 <OriginalPriceIter>d__ = new ShopBankInfo.<OriginalPriceIter>d__33(-2);
 			<OriginalPriceIter>d__.<>3__<>4__this = this;
 			return <OriginalPriceIter>d__;
 		}
 
-		// Token: 0x0600D1CF RID: 53711 RVA: 0x0030EE74 File Offset: 0x0030D074
+		// Token: 0x0600D9A5 RID: 55717 RVA: 0x0032E348 File Offset: 0x0032C548
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用PriceFrozenDict()缓存字典，遍历请使用PriceIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> Price()
+		public Dictionary<int, int> Price()
 		{
 			return this.PriceIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x0600D1D0 RID: 53712 RVA: 0x0030EECA File Offset: 0x0030D0CA
+		// Token: 0x0600D9A6 RID: 55718 RVA: 0x0032E39E File Offset: 0x0032C59E
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> PriceIter()
+		public IEnumerable<DicIntInt> PriceIter()
 		{
 			ShopBankInfo.<PriceIter>d__35 <PriceIter>d__ = new ShopBankInfo.<PriceIter>d__35(-2);
 			<PriceIter>d__.<>3__<>4__this = this;
 			return <PriceIter>d__;
 		}
 
-		// Token: 0x0600D1D1 RID: 53713 RVA: 0x0030EEE0 File Offset: 0x0030D0E0
+		// Token: 0x0600D9A7 RID: 55719 RVA: 0x0032E3B4 File Offset: 0x0032C5B4
 		public int? GetOriginalPrice(int key)
 		{
 			this.EnsureOriginalPriceCacheIfNeeded();
@@ -277,7 +275,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x0600D1D2 RID: 53714 RVA: 0x0030EF14 File Offset: 0x0030D114
+		// Token: 0x0600D9A8 RID: 55720 RVA: 0x0032E3E8 File Offset: 0x0032C5E8
 		public int? GetPrice(int key)
 		{
 			this.EnsurePriceCacheIfNeeded();
@@ -289,7 +287,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x0600D1D3 RID: 53715 RVA: 0x0030EF48 File Offset: 0x0030D148
+		// Token: 0x0600D9A9 RID: 55721 RVA: 0x0032E41C File Offset: 0x0032C61C
 		private void EnsureOriginalPriceCacheIfNeeded()
 		{
 			if (this.OriginalPriceCache != null)
@@ -299,7 +297,7 @@ namespace Aki.Config
 			this.OriginalPriceCache = this.OriginalPriceIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x0600D1D4 RID: 53716 RVA: 0x0030EFB0 File Offset: 0x0030D1B0
+		// Token: 0x0600D9AA RID: 55722 RVA: 0x0032E484 File Offset: 0x0032C684
 		private void EnsurePriceCacheIfNeeded()
 		{
 			if (this.PriceCache != null)
@@ -309,30 +307,30 @@ namespace Aki.Config
 			this.PriceCache = this.PriceIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x0600D1D5 RID: 53717 RVA: 0x0030F016 File Offset: 0x0030D216
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetOriginalPriceFrozenDict(int key)
+		// Token: 0x0600D9AB RID: 55723 RVA: 0x0032E4EA File Offset: 0x0032C6EA
+		[NullableContext(1)]
+		public FrozenDictionary<int, int> GetOriginalPriceFrozenDict()
 		{
 			this.EnsureOriginalPriceCacheIfNeeded();
 			return this.OriginalPriceCache;
 		}
 
-		// Token: 0x0600D1D6 RID: 53718 RVA: 0x0030F024 File Offset: 0x0030D224
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetPriceFrozenDict(int key)
+		// Token: 0x0600D9AC RID: 55724 RVA: 0x0032E4F8 File Offset: 0x0032C6F8
+		[NullableContext(1)]
+		public FrozenDictionary<int, int> GetPriceFrozenDict()
 		{
 			this.EnsurePriceCacheIfNeeded();
 			return this.PriceCache;
 		}
 
-		// Token: 0x040051B9 RID: 20921
+		// Token: 0x040057B8 RID: 22456
 		private Table __p;
 
-		// Token: 0x040051BA RID: 20922
+		// Token: 0x040057B9 RID: 22457
 		[Nullable(2)]
 		private FrozenDictionary<int, int> OriginalPriceCache;
 
-		// Token: 0x040051BB RID: 20923
+		// Token: 0x040057BA RID: 22458
 		[Nullable(2)]
 		private FrozenDictionary<int, int> PriceCache;
 	}

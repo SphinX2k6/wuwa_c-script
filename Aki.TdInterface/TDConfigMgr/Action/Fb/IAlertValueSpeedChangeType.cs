@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029F7 RID: 10743
+	// Token: 0x02002CE4 RID: 11492
 	public class IAlertValueSpeedChangeType
 	{
-		// Token: 0x0600ED24 RID: 60708 RVA: 0x002297E6 File Offset: 0x002279E6
-		[NullableContext(1)]
+		// Token: 0x0600FBBB RID: 64443 RVA: 0x0024716A File Offset: 0x0024536A
 		public static IAlertValueSpeedChangeType Create(IAlertValueSpeedChangeType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004AF8 RID: 19192
-		// (get) Token: 0x0600ED25 RID: 60709 RVA: 0x00229805 File Offset: 0x00227A05
+		// Token: 0x17004EA1 RID: 20129
+		// (get) Token: 0x0600FBBC RID: 64444 RVA: 0x00247189 File Offset: 0x00245389
 		public virtual EValueChangeType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008291 RID: 33425
+		// Token: 0x04008982 RID: 35202
 		private IAlertValueSpeedChangeType Instance;
 	}
 }

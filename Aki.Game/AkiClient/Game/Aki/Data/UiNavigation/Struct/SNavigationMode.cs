@@ -7,7 +7,7 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Data.UiNavigation.Struct
 {
-	// Token: 0x02003E8A RID: 16010
+	// Token: 0x02003161 RID: 12641
 	[NullableContext(2)]
 	[Nullable(0)]
 	[HasGetTypeHash]
@@ -15,210 +15,196 @@ namespace AkiClient.Game.Aki.Data.UiNavigation.Struct
 	[UnrealStructLayout(64, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 64)]
 	public class SNavigationMode : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x060286DB RID: 165595 RVA: 0x009AC578 File Offset: 0x009AA778
+		// Token: 0x0601F240 RID: 127552 RVA: 0x00927568 File Offset: 0x00925768
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SNavigationMode._ScriptStructPtr != 0) ? SNavigationMode._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Data/UiNavigation/Struct/SNavigationMode.SNavigationMode", ref SNavigationMode._ScriptStructPtr);
 		}
 
-		// Token: 0x17005DB2 RID: 23986
-		// (get) Token: 0x060286DC RID: 165596 RVA: 0x009AC59C File Offset: 0x009AA79C
-		// (set) Token: 0x060286DD RID: 165597 RVA: 0x009AC5AC File Offset: 0x009AA7AC
+		// Token: 0x1700379C RID: 14236
+		// (get) Token: 0x0601F241 RID: 127553 RVA: 0x0092758C File Offset: 0x0092578C
+		// (set) Token: 0x0601F242 RID: 127554 RVA: 0x0092759C File Offset: 0x0092579C
 		public unsafe EUISelectableNavigationMode TopMode
 		{
 			get
 			{
-				return (EUISelectableNavigationMode)(*(base.NativePtr + (IntPtr)SNavigationMode.__PropertyOffset_0));
+				return (EUISelectableNavigationMode)(*(base.NativePtr + (IntPtr)SNavigationMode.__PropertyOffset_TopMode));
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SNavigationMode.__PropertyOffset_0) = (byte)value;
+				*(base.NativePtr + (IntPtr)SNavigationMode.__PropertyOffset_TopMode) = (byte)value;
 			}
 		}
 
-		// Token: 0x17005DB3 RID: 23987
-		// (get) Token: 0x060286DE RID: 165598 RVA: 0x009AC5BD File Offset: 0x009AA7BD
-		// (set) Token: 0x060286DF RID: 165599 RVA: 0x009AC5D1 File Offset: 0x009AA7D1
+		// Token: 0x1700379D RID: 14237
+		// (get) Token: 0x0601F243 RID: 127555 RVA: 0x009275AD File Offset: 0x009257AD
+		// (set) Token: 0x0601F244 RID: 127556 RVA: 0x009275C1 File Offset: 0x009257C1
 		public unsafe AActor TopActor
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<AActor>(base.NativePtr / (IntPtr)sizeof(void*) + SNavigationMode.__PropertyOffset_1);
+				return BuiltinUtils.ObjectPropertyGetter<AActor>(base.NativePtr / (IntPtr)sizeof(void*) + SNavigationMode.__PropertyOffset_TopActor);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + SNavigationMode.__PropertyOffset_1, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + SNavigationMode.__PropertyOffset_TopActor, value);
 			}
 		}
 
-		// Token: 0x17005DB4 RID: 23988
-		// (get) Token: 0x060286E0 RID: 165600 RVA: 0x009AC5E6 File Offset: 0x009AA7E6
-		// (set) Token: 0x060286E1 RID: 165601 RVA: 0x009AC5F6 File Offset: 0x009AA7F6
+		// Token: 0x1700379E RID: 14238
+		// (get) Token: 0x0601F245 RID: 127557 RVA: 0x009275D6 File Offset: 0x009257D6
+		// (set) Token: 0x0601F246 RID: 127558 RVA: 0x009275E6 File Offset: 0x009257E6
 		public unsafe EUISelectableNavigationMode DownMode
 		{
 			get
 			{
-				return (EUISelectableNavigationMode)(*(base.NativePtr + (IntPtr)SNavigationMode.__PropertyOffset_2));
+				return (EUISelectableNavigationMode)(*(base.NativePtr + (IntPtr)SNavigationMode.__PropertyOffset_DownMode));
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SNavigationMode.__PropertyOffset_2) = (byte)value;
+				*(base.NativePtr + (IntPtr)SNavigationMode.__PropertyOffset_DownMode) = (byte)value;
 			}
 		}
 
-		// Token: 0x17005DB5 RID: 23989
-		// (get) Token: 0x060286E2 RID: 165602 RVA: 0x009AC607 File Offset: 0x009AA807
-		// (set) Token: 0x060286E3 RID: 165603 RVA: 0x009AC61B File Offset: 0x009AA81B
+		// Token: 0x1700379F RID: 14239
+		// (get) Token: 0x0601F247 RID: 127559 RVA: 0x009275F7 File Offset: 0x009257F7
+		// (set) Token: 0x0601F248 RID: 127560 RVA: 0x0092760B File Offset: 0x0092580B
 		public unsafe AActor DownActor
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<AActor>(base.NativePtr / (IntPtr)sizeof(void*) + SNavigationMode.__PropertyOffset_3);
+				return BuiltinUtils.ObjectPropertyGetter<AActor>(base.NativePtr / (IntPtr)sizeof(void*) + SNavigationMode.__PropertyOffset_DownActor);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + SNavigationMode.__PropertyOffset_3, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + SNavigationMode.__PropertyOffset_DownActor, value);
 			}
 		}
 
-		// Token: 0x17005DB6 RID: 23990
-		// (get) Token: 0x060286E4 RID: 165604 RVA: 0x009AC630 File Offset: 0x009AA830
-		// (set) Token: 0x060286E5 RID: 165605 RVA: 0x009AC640 File Offset: 0x009AA840
+		// Token: 0x170037A0 RID: 14240
+		// (get) Token: 0x0601F249 RID: 127561 RVA: 0x00927620 File Offset: 0x00925820
+		// (set) Token: 0x0601F24A RID: 127562 RVA: 0x00927630 File Offset: 0x00925830
 		public unsafe EUISelectableNavigationMode LeftMode
 		{
 			get
 			{
-				return (EUISelectableNavigationMode)(*(base.NativePtr + (IntPtr)SNavigationMode.__PropertyOffset_4));
+				return (EUISelectableNavigationMode)(*(base.NativePtr + (IntPtr)SNavigationMode.__PropertyOffset_LeftMode));
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SNavigationMode.__PropertyOffset_4) = (byte)value;
+				*(base.NativePtr + (IntPtr)SNavigationMode.__PropertyOffset_LeftMode) = (byte)value;
 			}
 		}
 
-		// Token: 0x17005DB7 RID: 23991
-		// (get) Token: 0x060286E6 RID: 165606 RVA: 0x009AC651 File Offset: 0x009AA851
-		// (set) Token: 0x060286E7 RID: 165607 RVA: 0x009AC665 File Offset: 0x009AA865
+		// Token: 0x170037A1 RID: 14241
+		// (get) Token: 0x0601F24B RID: 127563 RVA: 0x00927641 File Offset: 0x00925841
+		// (set) Token: 0x0601F24C RID: 127564 RVA: 0x00927655 File Offset: 0x00925855
 		public unsafe AActor LeftActor
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<AActor>(base.NativePtr / (IntPtr)sizeof(void*) + SNavigationMode.__PropertyOffset_5);
+				return BuiltinUtils.ObjectPropertyGetter<AActor>(base.NativePtr / (IntPtr)sizeof(void*) + SNavigationMode.__PropertyOffset_LeftActor);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + SNavigationMode.__PropertyOffset_5, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + SNavigationMode.__PropertyOffset_LeftActor, value);
 			}
 		}
 
-		// Token: 0x17005DB8 RID: 23992
-		// (get) Token: 0x060286E8 RID: 165608 RVA: 0x009AC67A File Offset: 0x009AA87A
-		// (set) Token: 0x060286E9 RID: 165609 RVA: 0x009AC68A File Offset: 0x009AA88A
+		// Token: 0x170037A2 RID: 14242
+		// (get) Token: 0x0601F24D RID: 127565 RVA: 0x0092766A File Offset: 0x0092586A
+		// (set) Token: 0x0601F24E RID: 127566 RVA: 0x0092767A File Offset: 0x0092587A
 		public unsafe EUISelectableNavigationMode RightMode
 		{
 			get
 			{
-				return (EUISelectableNavigationMode)(*(base.NativePtr + (IntPtr)SNavigationMode.__PropertyOffset_6));
+				return (EUISelectableNavigationMode)(*(base.NativePtr + (IntPtr)SNavigationMode.__PropertyOffset_RightMode));
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SNavigationMode.__PropertyOffset_6) = (byte)value;
+				*(base.NativePtr + (IntPtr)SNavigationMode.__PropertyOffset_RightMode) = (byte)value;
 			}
 		}
 
-		// Token: 0x17005DB9 RID: 23993
-		// (get) Token: 0x060286EA RID: 165610 RVA: 0x009AC69B File Offset: 0x009AA89B
-		// (set) Token: 0x060286EB RID: 165611 RVA: 0x009AC6AF File Offset: 0x009AA8AF
+		// Token: 0x170037A3 RID: 14243
+		// (get) Token: 0x0601F24F RID: 127567 RVA: 0x0092768B File Offset: 0x0092588B
+		// (set) Token: 0x0601F250 RID: 127568 RVA: 0x0092769F File Offset: 0x0092589F
 		public unsafe AActor RightActor
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<AActor>(base.NativePtr / (IntPtr)sizeof(void*) + SNavigationMode.__PropertyOffset_7);
+				return BuiltinUtils.ObjectPropertyGetter<AActor>(base.NativePtr / (IntPtr)sizeof(void*) + SNavigationMode.__PropertyOffset_RightActor);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + SNavigationMode.__PropertyOffset_7, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + SNavigationMode.__PropertyOffset_RightActor, value);
 			}
 		}
 
-		// Token: 0x060286EC RID: 165612 RVA: 0x009AC6C4 File Offset: 0x009AA8C4
+		// Token: 0x0601F251 RID: 127569 RVA: 0x009276B4 File Offset: 0x009258B4
 		public SNavigationMode()
 		{
 		}
 
-		// Token: 0x060286ED RID: 165613 RVA: 0x009AC6CC File Offset: 0x009AA8CC
-		[NullableContext(1)]
-		public SNavigationMode(EUISelectableNavigationMode TopMode, AActor TopActor, EUISelectableNavigationMode DownMode, AActor DownActor, EUISelectableNavigationMode LeftMode, AActor LeftActor, EUISelectableNavigationMode RightMode, AActor RightActor)
-		{
-			this.TopMode = TopMode;
-			this.TopActor = TopActor;
-			this.DownMode = DownMode;
-			this.DownActor = DownActor;
-			this.LeftMode = LeftMode;
-			this.LeftActor = LeftActor;
-			this.RightMode = RightMode;
-			this.RightActor = RightActor;
-		}
-
-		// Token: 0x060286EE RID: 165614 RVA: 0x009AC71C File Offset: 0x009AA91C
+		// Token: 0x0601F252 RID: 127570 RVA: 0x009276BC File Offset: 0x009258BC
 		protected override IntPtr GetUStructPtr()
 		{
 			return SNavigationMode.StaticStruct();
 		}
 
-		// Token: 0x060286EF RID: 165615 RVA: 0x009AC728 File Offset: 0x009AA928
+		// Token: 0x0601F253 RID: 127571 RVA: 0x009276C8 File Offset: 0x009258C8
 		public SNavigationMode(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060286F0 RID: 165616 RVA: 0x009AC732 File Offset: 0x009AA932
+		// Token: 0x0601F254 RID: 127572 RVA: 0x009276D2 File Offset: 0x009258D2
 		public SNavigationMode(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060286F1 RID: 165617 RVA: 0x009AC73D File Offset: 0x009AA93D
+		// Token: 0x0601F255 RID: 127573 RVA: 0x009276DD File Offset: 0x009258DD
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SNavigationMode(Pointer, false, true);
 		}
 
-		// Token: 0x060286F2 RID: 165618 RVA: 0x009AC747 File Offset: 0x009AA947
+		// Token: 0x0601F256 RID: 127574 RVA: 0x009276E7 File Offset: 0x009258E7
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SNavigationMode(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x040149CA RID: 84426
+		// Token: 0x04010A4B RID: 68171
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/Data/UiNavigation/Struct/SNavigationMode.SNavigationMode";
 
-		// Token: 0x040149CB RID: 84427
+		// Token: 0x04010A4C RID: 68172
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040149CC RID: 84428
-		internal static int __PropertyOffset_0;
+		// Token: 0x04010A4D RID: 68173
+		internal static int __PropertyOffset_TopMode;
 
-		// Token: 0x040149CD RID: 84429
-		internal static int __PropertyOffset_1;
+		// Token: 0x04010A4E RID: 68174
+		internal static int __PropertyOffset_TopActor;
 
-		// Token: 0x040149CE RID: 84430
-		internal static int __PropertyOffset_2;
+		// Token: 0x04010A4F RID: 68175
+		internal static int __PropertyOffset_DownMode;
 
-		// Token: 0x040149CF RID: 84431
-		internal static int __PropertyOffset_3;
+		// Token: 0x04010A50 RID: 68176
+		internal static int __PropertyOffset_DownActor;
 
-		// Token: 0x040149D0 RID: 84432
-		internal static int __PropertyOffset_4;
+		// Token: 0x04010A51 RID: 68177
+		internal static int __PropertyOffset_LeftMode;
 
-		// Token: 0x040149D1 RID: 84433
-		internal static int __PropertyOffset_5;
+		// Token: 0x04010A52 RID: 68178
+		internal static int __PropertyOffset_LeftActor;
 
-		// Token: 0x040149D2 RID: 84434
-		internal static int __PropertyOffset_6;
+		// Token: 0x04010A53 RID: 68179
+		internal static int __PropertyOffset_RightMode;
 
-		// Token: 0x040149D3 RID: 84435
-		internal static int __PropertyOffset_7;
+		// Token: 0x04010A54 RID: 68180
+		internal static int __PropertyOffset_RightActor;
 	}
 }

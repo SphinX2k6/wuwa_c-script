@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020060BD RID: 24765
+	// Token: 0x0200671F RID: 26399
 	public class IActorFxEmoteStopSubTypeT
 	{
-		// Token: 0x1700B685 RID: 46725
-		// (get) Token: 0x0602A496 RID: 173206 RVA: 0x005D4272 File Offset: 0x005D2472
-		// (set) Token: 0x0602A497 RID: 173207 RVA: 0x005D427A File Offset: 0x005D247A
+		// Token: 0x1700BFF0 RID: 49136
+		// (get) Token: 0x0602CB77 RID: 183159 RVA: 0x0061E21A File Offset: 0x0061C41A
+		// (set) Token: 0x0602CB78 RID: 183160 RVA: 0x0061E222 File Offset: 0x0061C422
 		public EActorFxEmoteStopSubType Type { get; set; }
 
-		// Token: 0x0602A498 RID: 173208 RVA: 0x005D4283 File Offset: 0x005D2483
+		// Token: 0x0602CB79 RID: 183161 RVA: 0x0061E22B File Offset: 0x0061C42B
 		public IActorFxEmoteStopSubTypeT()
 		{
 			this.Type = EActorFxEmoteStopSubType.StopAll;

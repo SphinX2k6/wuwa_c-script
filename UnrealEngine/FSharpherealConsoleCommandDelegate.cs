@@ -5,16 +5,16 @@ using UnrealEngine.Interface;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002764 RID: 10084
+	// Token: 0x0200080D RID: 2061
 	public sealed class FSharpherealConsoleCommandDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06025B64 RID: 154468 RVA: 0x00392792 File Offset: 0x00390992
+		// Token: 0x0600B53B RID: 46395 RVA: 0x0012034D File Offset: 0x0011E54D
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FSharpherealConsoleCommandDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x06025B65 RID: 154469 RVA: 0x0039279E File Offset: 0x0039099E
+		// Token: 0x0600B53C RID: 46396 RVA: 0x00120359 File Offset: 0x0011E559
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FSharpherealConsoleCommandDelegate._FunctionPtr == IntPtr.Zero)
@@ -24,32 +24,31 @@ namespace UnrealEngine
 			return FSharpherealConsoleCommandDelegate._FunctionPtr;
 		}
 
-		// Token: 0x06025B66 RID: 154470 RVA: 0x003927C1 File Offset: 0x003909C1
+		// Token: 0x0600B53D RID: 46397 RVA: 0x0012037C File Offset: 0x0011E57C
 		public FSharpherealConsoleCommandDelegate()
 		{
 		}
 
-		// Token: 0x06025B67 RID: 154471 RVA: 0x003927C9 File Offset: 0x003909C9
+		// Token: 0x0600B53E RID: 46398 RVA: 0x00120384 File Offset: 0x0011E584
 		[NullableContext(2)]
 		public FSharpherealConsoleCommandDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06025B68 RID: 154472 RVA: 0x003927D3 File Offset: 0x003909D3
+		// Token: 0x0600B53F RID: 46399 RVA: 0x0012038E File Offset: 0x0011E58E
 		public FSharpherealConsoleCommandDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06025B69 RID: 154473 RVA: 0x003927DE File Offset: 0x003909DE
+		// Token: 0x0600B540 RID: 46400 RVA: 0x00120399 File Offset: 0x0011E599
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action) ?? ((Action)Delegate.CreateDelegate(typeof(Action), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06025B6A RID: 154474 RVA: 0x00392810 File Offset: 0x00390A10
+		// Token: 0x0600B541 RID: 46401 RVA: 0x001203CB File Offset: 0x0011E5CB
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action Callback)
 		{
 			if (FSharpherealConsoleCommandDelegate.RegisterId == 0)
@@ -64,18 +63,16 @@ namespace UnrealEngine
 			base.Bind(Callback, FSharpherealConsoleCommandDelegate.RegisterId);
 		}
 
-		// Token: 0x06025B6B RID: 154475 RVA: 0x0039284A File Offset: 0x00390A4A
+		// Token: 0x0600B542 RID: 46402 RVA: 0x00120405 File Offset: 0x0011E605
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Execute()
 		{
 			base.ExecuteInternal(null);
 		}
 
-		// Token: 0x06025B6C RID: 154476 RVA: 0x00392858 File Offset: 0x00390A58
+		// Token: 0x0600B543 RID: 46403 RVA: 0x00120410 File Offset: 0x0011E610
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action action = target as Action;
@@ -86,21 +83,21 @@ namespace UnrealEngine
 			action();
 		}
 
-		// Token: 0x0401487E RID: 84094
+		// Token: 0x040051CC RID: 20940
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0401487F RID: 84095
+		// Token: 0x040051CD RID: 20941
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/Sharphereal.SharpherealConsoleCommandDelegate__DelegateSignature";
 
-		// Token: 0x04014880 RID: 84096
+		// Token: 0x040051CE RID: 20942
 		private static int RegisterId;
 
-		// Token: 0x02003A59 RID: 14937
+		// Token: 0x0200132B RID: 4907
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017BB3 RID: 97203
+			// Token: 0x04006766 RID: 26470
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CBE RID: 7358
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001EC5 RID: 7877
 	public class IPainCoveringHead : ILeisureInteractType
 	{
-		// Token: 0x06009DF9 RID: 40441 RVA: 0x00169884 File Offset: 0x00167A84
+		// Token: 0x0600A7A7 RID: 42919 RVA: 0x0017D4E4 File Offset: 0x0017B6E4
 		private IPainCoveringHead_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009DFA RID: 40442 RVA: 0x001698BC File Offset: 0x00167ABC
+		// Token: 0x0600A7A8 RID: 42920 RVA: 0x0017D51C File Offset: 0x0017B71C
 		public static IPainCoveringHead Create([Nullable(2)] IPainCoveringHead instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009DFB RID: 40443 RVA: 0x001698CF File Offset: 0x00167ACF
+		// Token: 0x0600A7A9 RID: 42921 RVA: 0x0017D52F File Offset: 0x0017B72F
 		public static IPainCoveringHead CreateFromSetValue([Nullable(2)] IPainCoveringHead_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009DFC RID: 40444 RVA: 0x001698E2 File Offset: 0x00167AE2
+		// Token: 0x0600A7AA RID: 42922 RVA: 0x0017D542 File Offset: 0x0017B742
 		public new IPainCoveringHead_SetValue ToSetValue()
 		{
 			return new IPainCoveringHead_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003136 RID: 12598
-		// (get) Token: 0x06009DFD RID: 40445 RVA: 0x001698F5 File Offset: 0x00167AF5
-		// (set) Token: 0x06009DFE RID: 40446 RVA: 0x00169920 File Offset: 0x00167B20
+		// Token: 0x170033BA RID: 13242
+		// (get) Token: 0x0600A7AB RID: 42923 RVA: 0x0017D555 File Offset: 0x0017B755
+		// (set) Token: 0x0600A7AC RID: 42924 RVA: 0x0017D580 File Offset: 0x0017B780
 		public override ELeisureInteract Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005F8D RID: 24461
+		// Token: 0x040064E9 RID: 25833
 		[Nullable(2)]
 		protected new IPainCoveringHead FbInstance;
 
-		// Token: 0x04005F8E RID: 24462
+		// Token: 0x040064EA RID: 25834
 		[Nullable(2)]
 		protected new IPainCoveringHead_SetValue PocoInterface;
 	}

@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005169 RID: 20841
+	// Token: 0x020056CE RID: 22222
 	public class IEntityBundleChildInfoT
 	{
-		// Token: 0x17009803 RID: 38915
-		// (get) Token: 0x06021A6C RID: 137836 RVA: 0x004AB796 File Offset: 0x004A9996
-		// (set) Token: 0x06021A6D RID: 137837 RVA: 0x004AB79E File Offset: 0x004A999E
+		// Token: 0x17009FF0 RID: 40944
+		// (get) Token: 0x060239C0 RID: 145856 RVA: 0x004E5722 File Offset: 0x004E3922
+		// (set) Token: 0x060239C1 RID: 145857 RVA: 0x004E572A File Offset: 0x004E392A
 		public bool IsDisable { get; set; }
 
-		// Token: 0x17009804 RID: 38916
-		// (get) Token: 0x06021A6E RID: 137838 RVA: 0x004AB7A7 File Offset: 0x004A99A7
-		// (set) Token: 0x06021A6F RID: 137839 RVA: 0x004AB7AF File Offset: 0x004A99AF
+		// Token: 0x17009FF1 RID: 40945
+		// (get) Token: 0x060239C2 RID: 145858 RVA: 0x004E5733 File Offset: 0x004E3933
+		// (set) Token: 0x060239C3 RID: 145859 RVA: 0x004E573B File Offset: 0x004E393B
 		public int ChildId { get; set; }
 
-		// Token: 0x17009805 RID: 38917
-		// (get) Token: 0x06021A70 RID: 137840 RVA: 0x004AB7B8 File Offset: 0x004A99B8
-		// (set) Token: 0x06021A71 RID: 137841 RVA: 0x004AB7C0 File Offset: 0x004A99C0
+		// Token: 0x17009FF2 RID: 40946
+		// (get) Token: 0x060239C4 RID: 145860 RVA: 0x004E5744 File Offset: 0x004E3944
+		// (set) Token: 0x060239C5 RID: 145861 RVA: 0x004E574C File Offset: 0x004E394C
 		public int EntityId { get; set; }
 
-		// Token: 0x06021A72 RID: 137842 RVA: 0x004AB7C9 File Offset: 0x004A99C9
+		// Token: 0x060239C6 RID: 145862 RVA: 0x004E5755 File Offset: 0x004E3955
 		public IEntityBundleChildInfoT()
 		{
 			this.IsDisable = false;

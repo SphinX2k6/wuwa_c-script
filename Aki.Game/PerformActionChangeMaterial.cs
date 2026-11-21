@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020031DE RID: 12766
+// Token: 0x0200274D RID: 10061
 [NullableContext(1)]
 [Nullable(0)]
 public class PerformActionChangeMaterial : PerformAction
 {
-	// Token: 0x0601B890 RID: 112784 RVA: 0x0078DF44 File Offset: 0x0078C144
+	// Token: 0x06019409 RID: 103433 RVA: 0x007B683C File Offset: 0x007B4A3C
 	public override void Register(Entity entity)
 	{
 		base.Register(entity);
@@ -14,14 +14,14 @@ public class PerformActionChangeMaterial : PerformAction
 		this.NpcMatController = component.MaterialController;
 	}
 
-	// Token: 0x0601B891 RID: 112785 RVA: 0x0078DF6B File Offset: 0x0078C16B
+	// Token: 0x0601940A RID: 103434 RVA: 0x007B6863 File Offset: 0x007B4A63
 	public override void UnRegister()
 	{
 		this.NpcMatController = null;
 		base.UnRegister();
 	}
 
-	// Token: 0x0601B892 RID: 112786 RVA: 0x0078DF7A File Offset: 0x0078C17A
+	// Token: 0x0601940B RID: 103435 RVA: 0x007B6872 File Offset: 0x007B4A72
 	public override void Begin()
 	{
 		if (this.Entity == null)
@@ -35,7 +35,7 @@ public class PerformActionChangeMaterial : PerformAction
 		this.Handle = this.NpcMatController.ApplyMaterialEffect(this.DaPath);
 	}
 
-	// Token: 0x0601B893 RID: 112787 RVA: 0x0078DFAF File Offset: 0x0078C1AF
+	// Token: 0x0601940C RID: 103436 RVA: 0x007B68A7 File Offset: 0x007B4AA7
 	public override void End()
 	{
 		if (this.Entity == null)
@@ -50,16 +50,16 @@ public class PerformActionChangeMaterial : PerformAction
 		this.Handle = 0;
 	}
 
-	// Token: 0x0400D855 RID: 55381
+	// Token: 0x0400DCF3 RID: 56563
 	public new EPerformActionType Type = EPerformActionType.ChangeMaterial;
 
-	// Token: 0x0400D856 RID: 55382
+	// Token: 0x0400DCF4 RID: 56564
 	public string DaPath = "";
 
-	// Token: 0x0400D857 RID: 55383
+	// Token: 0x0400DCF5 RID: 56565
 	public int Handle;
 
-	// Token: 0x0400D858 RID: 55384
+	// Token: 0x0400DCF6 RID: 56566
 	[Nullable(2)]
 	public NpcMaterialController NpcMatController;
 }

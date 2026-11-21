@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Util
 {
-	// Token: 0x020048D2 RID: 18642
+	// Token: 0x02003849 RID: 14409
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal sealed class SVolumeRange : SRange
 	{
-		// Token: 0x06030B90 RID: 199568 RVA: 0x00B506FC File Offset: 0x00B4E8FC
+		// Token: 0x060256BC RID: 153276 RVA: 0x00A8B504 File Offset: 0x00A89704
 		public override bool CheckPositionReached(Vector pos)
 		{
 			if (StringUtils.IsBlank(this.VolumeKey))
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.Util
 			return result;
 		}
 
-		// Token: 0x06030B91 RID: 199569 RVA: 0x00B50894 File Offset: 0x00B4EA94
+		// Token: 0x060256BD RID: 153277 RVA: 0x00A8B69C File Offset: 0x00A8989C
 		public override bool MakeRange(IEntityData entityData, ITriggerShape shapeConfig)
 		{
 			IVolumeTriggerShape volumeTriggerShape = shapeConfig as IVolumeTriggerShape;
@@ -75,11 +75,11 @@ namespace CSharpScript.Game.Module.Util
 			return true;
 		}
 
-		// Token: 0x0401A2C9 RID: 107209
+		// Token: 0x04014B3C RID: 84796
 		[Nullable(2)]
 		public string VolumeKey;
 
-		// Token: 0x0401A2CA RID: 107210
+		// Token: 0x04014B3D RID: 84797
 		private int EntityPbId;
 	}
 }

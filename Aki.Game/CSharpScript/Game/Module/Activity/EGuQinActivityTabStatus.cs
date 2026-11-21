@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Activity
 {
-	// Token: 0x02005EF4 RID: 24308
+	// Token: 0x02004EDB RID: 20187
 	public enum EGuQinActivityTabStatus
 	{
-		// Token: 0x0402045F RID: 132191
+		// Token: 0x0401AF31 RID: 110385
 		Lock,
-		// Token: 0x04020460 RID: 132192
+		// Token: 0x0401AF32 RID: 110386
 		Progressing,
-		// Token: 0x04020461 RID: 132193
+		// Token: 0x0401AF33 RID: 110387
 		Completed
 	}
 }

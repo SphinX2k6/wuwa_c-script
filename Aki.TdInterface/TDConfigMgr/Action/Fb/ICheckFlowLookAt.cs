@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A75 RID: 10869
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002D69 RID: 11625
 	public class ICheckFlowLookAt : IOverrideLookAtType
 	{
-		// Token: 0x0600EEF7 RID: 61175 RVA: 0x0022C29C File Offset: 0x0022A49C
+		// Token: 0x0600FDAD RID: 64941 RVA: 0x00249FA8 File Offset: 0x002481A8
 		public static ICheckFlowLookAt Create(ICheckFlowLookAt? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004BCF RID: 19407
-		// (get) Token: 0x0600EEF8 RID: 61176 RVA: 0x0022C2BB File Offset: 0x0022A4BB
+		// Token: 0x17004F89 RID: 20361
+		// (get) Token: 0x0600FDAE RID: 64942 RVA: 0x00249FC7 File Offset: 0x002481C7
 		public override EOverrideLookAtType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004BD0 RID: 19408
-		// (get) Token: 0x0600EEF9 RID: 61177 RVA: 0x0022C2C8 File Offset: 0x0022A4C8
+		// Token: 0x17004F8A RID: 20362
+		// (get) Token: 0x0600FDAF RID: 64943 RVA: 0x00249FD4 File Offset: 0x002481D4
 		public virtual List<ICheckFlowLookAtConfig> CheckFlowLookAtConfigs
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008377 RID: 33655
+		// Token: 0x04008A7B RID: 35451
 		private ICheckFlowLookAt Instance;
 
-		// Token: 0x04008378 RID: 33656
+		// Token: 0x04008A7C RID: 35452
 		private List<ICheckFlowLookAtConfig> _CheckFlowLookAtConfigsCache;
 
-		// Token: 0x04008379 RID: 33657
+		// Token: 0x04008A7D RID: 35453
 		private bool _CheckFlowLookAtConfigsInited;
 	}
 }

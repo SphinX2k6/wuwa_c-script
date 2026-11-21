@@ -9,13 +9,13 @@ using CSharpScript.Game.World.Define;
 using UnrealEngine;
 using UnrealEngine.Extension;
 
-// Token: 0x020032D9 RID: 13017
+// Token: 0x0200284B RID: 10315
 [NullableContext(1)]
 [Nullable(0)]
 public class VehiclePerformComponent : BaseVehiclePerformComponent
 {
-	// Token: 0x17002737 RID: 10039
-	// (get) Token: 0x0601C4B7 RID: 115895 RVA: 0x007E5CB5 File Offset: 0x007E3EB5
+	// Token: 0x17002A6B RID: 10859
+	// (get) Token: 0x0601A140 RID: 106816 RVA: 0x0080C5AC File Offset: 0x0080A7AC
 	[Nullable(2)]
 	public Vector ActorLocationProxy
 	{
@@ -31,8 +31,8 @@ public class VehiclePerformComponent : BaseVehiclePerformComponent
 		}
 	}
 
-	// Token: 0x17002738 RID: 10040
-	// (get) Token: 0x0601C4B8 RID: 115896 RVA: 0x007E5CC8 File Offset: 0x007E3EC8
+	// Token: 0x17002A6C RID: 10860
+	// (get) Token: 0x0601A141 RID: 106817 RVA: 0x0080C5BF File Offset: 0x0080A7BF
 	[Nullable(2)]
 	public Rotator ActorRotationProxy
 	{
@@ -48,7 +48,7 @@ public class VehiclePerformComponent : BaseVehiclePerformComponent
 		}
 	}
 
-	// Token: 0x0601C4B9 RID: 115897 RVA: 0x007E5CDC File Offset: 0x007E3EDC
+	// Token: 0x0601A142 RID: 106818 RVA: 0x0080C5D4 File Offset: 0x0080A7D4
 	protected override bool OnStart()
 	{
 		if (!base.OnStart())
@@ -69,7 +69,7 @@ public class VehiclePerformComponent : BaseVehiclePerformComponent
 		return this.InitVehicleConfig();
 	}
 
-	// Token: 0x0601C4BA RID: 115898 RVA: 0x007E5D89 File Offset: 0x007E3F89
+	// Token: 0x0601A143 RID: 106819 RVA: 0x0080C681 File Offset: 0x0080A881
 	protected override void OnTick(float delta)
 	{
 		this.UpdateRotYawSpeed(delta);
@@ -83,7 +83,7 @@ public class VehiclePerformComponent : BaseVehiclePerformComponent
 		}
 	}
 
-	// Token: 0x0601C4BB RID: 115899 RVA: 0x007E5DC0 File Offset: 0x007E3FC0
+	// Token: 0x0601A144 RID: 106820 RVA: 0x0080C6B8 File Offset: 0x0080A8B8
 	[NullableContext(2)]
 	protected override BP_VehicleConfig_C LoadVehicleConfigAsset()
 	{
@@ -105,7 +105,7 @@ public class VehiclePerformComponent : BaseVehiclePerformComponent
 		return base.LoadVehicleConfigAsset();
 	}
 
-	// Token: 0x0601C4BC RID: 115900 RVA: 0x007E5E14 File Offset: 0x007E4014
+	// Token: 0x0601A145 RID: 106821 RVA: 0x0080C70C File Offset: 0x0080A90C
 	public override void Enter(Entity entity, int seat, bool byChangeRole = false)
 	{
 		base.Enter(entity, seat, byChangeRole);
@@ -128,7 +128,7 @@ public class VehiclePerformComponent : BaseVehiclePerformComponent
 		}
 	}
 
-	// Token: 0x0601C4BD RID: 115901 RVA: 0x007E5EC8 File Offset: 0x007E40C8
+	// Token: 0x0601A146 RID: 106822 RVA: 0x0080C7C0 File Offset: 0x0080A9C0
 	public override void Leave(Entity entity, ELeaveVehicleType type = ELeaveVehicleType.Launch, bool byChangeRole = false)
 	{
 		base.Leave(entity, type, byChangeRole);
@@ -158,41 +158,41 @@ public class VehiclePerformComponent : BaseVehiclePerformComponent
 		component2.OnPassengerLeave(entity);
 	}
 
-	// Token: 0x0601C4BE RID: 115902 RVA: 0x007E5F9C File Offset: 0x007E419C
+	// Token: 0x0601A147 RID: 106823 RVA: 0x0080C894 File Offset: 0x0080AA94
 	public virtual bool CheckIfCanLeave()
 	{
 		return true;
 	}
 
-	// Token: 0x0601C4BF RID: 115903 RVA: 0x007E5F9F File Offset: 0x007E419F
+	// Token: 0x0601A148 RID: 106824 RVA: 0x0080C897 File Offset: 0x0080AA97
 	public virtual bool CheckIfCanSprint()
 	{
 		return true;
 	}
 
-	// Token: 0x0601C4C0 RID: 115904 RVA: 0x007E5FA2 File Offset: 0x007E41A2
+	// Token: 0x0601A149 RID: 106825 RVA: 0x0080C89A File Offset: 0x0080AA9A
 	public virtual bool CheckIfCanRiderSharing()
 	{
 		return VehicleModel.Instance.IsReadyRiderSharing && !VehicleModel.Instance.IsForbidRiderSharing;
 	}
 
-	// Token: 0x0601C4C1 RID: 115905 RVA: 0x007E5FBF File Offset: 0x007E41BF
+	// Token: 0x0601A14A RID: 106826 RVA: 0x0080C8B7 File Offset: 0x0080AAB7
 	public virtual void AddVehicleTagListeners()
 	{
 	}
 
-	// Token: 0x0601C4C2 RID: 115906 RVA: 0x007E5FC1 File Offset: 0x007E41C1
+	// Token: 0x0601A14B RID: 106827 RVA: 0x0080C8B9 File Offset: 0x0080AAB9
 	public virtual void RemoveVehicleTagListeners()
 	{
 	}
 
-	// Token: 0x0601C4C3 RID: 115907 RVA: 0x007E5FC3 File Offset: 0x007E41C3
+	// Token: 0x0601A14C RID: 106828 RVA: 0x0080C8BB File Offset: 0x0080AABB
 	public void RefreshRideSharingSkillState()
 	{
 		EventSystem.Instance.Emit<bool, EInputAction>(EEventName.OnVehicleSkillEnableChanged, this.CheckIfCanRiderSharing(), EInputAction.技能1);
 	}
 
-	// Token: 0x0601C4C4 RID: 115908 RVA: 0x007E5FE0 File Offset: 0x007E41E0
+	// Token: 0x0601A14D RID: 106829 RVA: 0x0080C8D8 File Offset: 0x0080AAD8
 	protected override void EnterVehiclePerform(VehiclePassengerInfo info)
 	{
 		if (info.IsRolePassenger(true))
@@ -206,7 +206,7 @@ public class VehiclePerformComponent : BaseVehiclePerformComponent
 		}
 	}
 
-	// Token: 0x0601C4C5 RID: 115909 RVA: 0x007E6016 File Offset: 0x007E4216
+	// Token: 0x0601A14E RID: 106830 RVA: 0x0080C90E File Offset: 0x0080AB0E
 	protected override void LeaveVehiclePerform(VehiclePassengerInfo info)
 	{
 		if (info.IsRolePassenger(true))
@@ -220,7 +220,7 @@ public class VehiclePerformComponent : BaseVehiclePerformComponent
 		}
 	}
 
-	// Token: 0x0601C4C6 RID: 115910 RVA: 0x007E604C File Offset: 0x007E424C
+	// Token: 0x0601A14F RID: 106831 RVA: 0x0080C944 File Offset: 0x0080AB44
 	private void SetPassengerVisible(Entity entity, bool visible)
 	{
 		BaseActorComponent component = entity.GetComponent<BaseActorComponent>();
@@ -251,7 +251,7 @@ public class VehiclePerformComponent : BaseVehiclePerformComponent
 		}
 	}
 
-	// Token: 0x0601C4C7 RID: 115911 RVA: 0x007E60F0 File Offset: 0x007E42F0
+	// Token: 0x0601A150 RID: 106832 RVA: 0x0080C9E8 File Offset: 0x0080ABE8
 	protected void IgnorePlatformCollisionToCamera(bool ignore)
 	{
 		VehicleActorComponent actorComp = this.ActorComp;
@@ -273,7 +273,7 @@ public class VehiclePerformComponent : BaseVehiclePerformComponent
 		ustaticMeshComponent.SetCollisionResponseToChannel(KuroCollisionChannel.Camera, ECollisionResponse.ECR_Block);
 	}
 
-	// Token: 0x0601C4C8 RID: 115912 RVA: 0x007E616B File Offset: 0x007E436B
+	// Token: 0x0601A151 RID: 106833 RVA: 0x0080CA63 File Offset: 0x0080AC63
 	[NullableContext(2)]
 	protected virtual void OnEnterHitCollision(UPrimitiveComponent hitComp, AActor otherActor, UPrimitiveComponent otherComp, FVector normalImpulse, [Nullable(1)] FHitResult hitResult)
 	{
@@ -287,18 +287,18 @@ public class VehiclePerformComponent : BaseVehiclePerformComponent
 		moveComp.EnableUeMovementTick("载具受到碰撞");
 	}
 
-	// Token: 0x0601C4C9 RID: 115913 RVA: 0x007E6192 File Offset: 0x007E4392
+	// Token: 0x0601A152 RID: 106834 RVA: 0x0080CA8A File Offset: 0x0080AC8A
 	public virtual bool CheckCanPerformHit()
 	{
 		return true;
 	}
 
-	// Token: 0x0601C4CA RID: 115914 RVA: 0x007E6195 File Offset: 0x007E4395
+	// Token: 0x0601A153 RID: 106835 RVA: 0x0080CA8D File Offset: 0x0080AC8D
 	public virtual void OnBulletHit(HitInformation hitData, BulletInfo bulletInfo)
 	{
 	}
 
-	// Token: 0x0601C4CB RID: 115915 RVA: 0x007E6197 File Offset: 0x007E4397
+	// Token: 0x0601A154 RID: 106836 RVA: 0x0080CA8F File Offset: 0x0080AC8F
 	public override void GetVehicleVelocity(Vector output)
 	{
 		if (this.ActorComp == null)
@@ -308,7 +308,7 @@ public class VehiclePerformComponent : BaseVehiclePerformComponent
 		output.DeepCopy(this.ActorComp.ActorVelocityProxy);
 	}
 
-	// Token: 0x0601C4CC RID: 115916 RVA: 0x007E61B4 File Offset: 0x007E43B4
+	// Token: 0x0601A155 RID: 106837 RVA: 0x0080CAAC File Offset: 0x0080ACAC
 	public void UpdateRotYawSpeed(float delta)
 	{
 		float yaw = this.LastActorRotation.Yaw;
@@ -317,7 +317,7 @@ public class VehiclePerformComponent : BaseVehiclePerformComponent
 		this.LastActorRotation.DeepCopy(this.ActorComp.ActorRotationProxy);
 	}
 
-	// Token: 0x0601C4CD RID: 115917 RVA: 0x007E6214 File Offset: 0x007E4414
+	// Token: 0x0601A156 RID: 106838 RVA: 0x0080CB0C File Offset: 0x0080AD0C
 	protected void CacheImpact(FHitResult hitResult)
 	{
 		VehicleActorComponent actorComp = this.ActorComp;
@@ -333,7 +333,7 @@ public class VehiclePerformComponent : BaseVehiclePerformComponent
 		this.CacheImpactHitResult = hitResult;
 	}
 
-	// Token: 0x0601C4CE RID: 115918 RVA: 0x007E6278 File Offset: 0x007E4478
+	// Token: 0x0601A157 RID: 106839 RVA: 0x0080CB70 File Offset: 0x0080AD70
 	public void SimulatedImpactInfo(float velocityX, float velocityY, float velocityZ, float normalX, float normalY, float normalZ)
 	{
 		if (this.CacheImpactHitResult == null)
@@ -344,7 +344,7 @@ public class VehiclePerformComponent : BaseVehiclePerformComponent
 		this.ImpactedVelocity.Set((double)velocityX, (double)velocityY, (double)velocityZ);
 	}
 
-	// Token: 0x0601C4CF RID: 115919 RVA: 0x007E62C8 File Offset: 0x007E44C8
+	// Token: 0x0601A158 RID: 106840 RVA: 0x0080CBC0 File Offset: 0x0080ADC0
 	protected virtual void OnHit(FHitResult hitResult)
 	{
 		VehicleConfig configInternal = this.ConfigInternal;
@@ -407,7 +407,7 @@ public class VehiclePerformComponent : BaseVehiclePerformComponent
 		}
 	}
 
-	// Token: 0x0601C4D0 RID: 115920 RVA: 0x007E64F4 File Offset: 0x007E46F4
+	// Token: 0x0601A159 RID: 106841 RVA: 0x0080CDEC File Offset: 0x0080AFEC
 	protected bool ChooseCameraShake([Nullable(new byte[]
 	{
 		2,
@@ -440,7 +440,7 @@ public class VehiclePerformComponent : BaseVehiclePerformComponent
 		return false;
 	}
 
-	// Token: 0x0601C4D1 RID: 115921 RVA: 0x007E6590 File Offset: 0x007E4790
+	// Token: 0x0601A15A RID: 106842 RVA: 0x0080CE88 File Offset: 0x0080B088
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -448,181 +448,206 @@ public class VehiclePerformComponent : BaseVehiclePerformComponent
 			return false;
 		}
 		VehiclePerformComponent vehiclePerformComponent = (VehiclePerformComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ActorComp"))
+		if (vehiclePerformComponent.ActorComp == null)
 		{
-			if (vehiclePerformComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehicleActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("AnimComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
-			if (vehiclePerformComponent.AnimComp == null)
-			{
-				this.AnimComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehicleAnimationComponent>(this.AnimComp), "AnimComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("MoveComp"))
+		if (vehiclePerformComponent.AnimComp == null)
 		{
-			if (vehiclePerformComponent.MoveComp == null)
-			{
-				this.MoveComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehicleMoveComponent>(this.MoveComp), "MoveComp"))
-			{
-				return false;
-			}
+			this.AnimComp = null;
 		}
-		if (base.CanResetComponentProperty("TagComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AnimComp), "AnimComp"))
 		{
-			if (vehiclePerformComponent.TagComp == null)
-			{
-				this.TagComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsBeingImpacted"))
+		if (vehiclePerformComponent.MoveComp == null)
 		{
-			this.IsBeingImpacted = vehiclePerformComponent.IsBeingImpacted;
+			this.MoveComp = null;
 		}
-		if (base.CanResetComponentProperty("ImpactedVelocity"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
 		{
-			if (vehiclePerformComponent.ImpactedVelocity == null)
-			{
-				this.ImpactedVelocity = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.ImpactedVelocity), "ImpactedVelocity"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("CacheImpactHitResult"))
+		if (vehiclePerformComponent.TagComp == null)
 		{
-			if (vehiclePerformComponent.CacheImpactHitResult == null)
-			{
-				this.CacheImpactHitResult = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<FHitResult>(this.CacheImpactHitResult), "CacheImpactHitResult"))
-			{
-				return false;
-			}
+			this.TagComp = null;
 		}
-		if (base.CanResetComponentProperty("LastImpactFrame"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 		{
-			this.LastImpactFrame = vehiclePerformComponent.LastImpactFrame;
+			return false;
 		}
-		if (base.CanResetComponentProperty("CollisionVelocity"))
+		this.IsBeingImpacted = vehiclePerformComponent.IsBeingImpacted;
+		if (vehiclePerformComponent.ImpactedVelocity == null)
 		{
-			if (vehiclePerformComponent.CollisionVelocity == null)
-			{
-				this.CollisionVelocity = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.CollisionVelocity), "CollisionVelocity"))
-			{
-				return false;
-			}
+			this.ImpactedVelocity = null;
 		}
-		if (base.CanResetComponentProperty("HasRoleAndCtrlByMe"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ImpactedVelocity), "ImpactedVelocity"))
 		{
-			this.HasRoleAndCtrlByMe = vehiclePerformComponent.HasRoleAndCtrlByMe;
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsHidePassenger"))
+		if (vehiclePerformComponent.CacheImpactHitResult == null)
 		{
-			this.IsHidePassenger = vehiclePerformComponent.IsHidePassenger;
+			this.CacheImpactHitResult = null;
 		}
-		if (base.CanResetComponentProperty("LastActorRotation"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CacheImpactHitResult), "CacheImpactHitResult"))
 		{
-			if (vehiclePerformComponent.LastActorRotation == null)
-			{
-				this.LastActorRotation = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Rotator>(this.LastActorRotation), "LastActorRotation"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("VehicleTagListeners"))
+		this.LastImpactFrame = vehiclePerformComponent.LastImpactFrame;
+		if (vehiclePerformComponent.CollisionVelocity == null)
 		{
-			if (vehiclePerformComponent.VehicleTagListeners == null)
-			{
-				this.VehicleTagListeners = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<ITagTask>>(this.VehicleTagListeners), "VehicleTagListeners"))
-			{
-				return false;
-			}
+			this.CollisionVelocity = null;
 		}
-		if (base.CanResetComponentProperty("DisableActorHandleMap"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CollisionVelocity), "CollisionVelocity"))
 		{
-			if (vehiclePerformComponent.DisableActorHandleMap == null)
-			{
-				this.DisableActorHandleMap = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, int>>(this.DisableActorHandleMap), "DisableActorHandleMap"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("NextCameraShakeTime"))
+		this.HasRoleAndCtrlByMe = vehiclePerformComponent.HasRoleAndCtrlByMe;
+		this.IsHidePassenger = vehiclePerformComponent.IsHidePassenger;
+		if (vehiclePerformComponent.LastActorRotation == null)
 		{
-			this.NextCameraShakeTime = vehiclePerformComponent.NextCameraShakeTime;
+			this.LastActorRotation = null;
 		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastActorRotation), "LastActorRotation"))
+		{
+			return false;
+		}
+		if (vehiclePerformComponent.VehicleTagListeners == null)
+		{
+			this.VehicleTagListeners = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.VehicleTagListeners), "VehicleTagListeners"))
+		{
+			return false;
+		}
+		if (vehiclePerformComponent.DisableActorHandleMap == null)
+		{
+			this.DisableActorHandleMap = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DisableActorHandleMap), "DisableActorHandleMap"))
+		{
+			return false;
+		}
+		this.NextCameraShakeTime = vehiclePerformComponent.NextCameraShakeTime;
 		return true;
 	}
 
-	// Token: 0x0400E03A RID: 57402
+	// Token: 0x17002A6D RID: 10861
+	// (get) Token: 0x0601A15B RID: 106843 RVA: 0x0080D098 File Offset: 0x0080B298
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A6E RID: 10862
+	// (get) Token: 0x0601A15C RID: 106844 RVA: 0x0080D09B File Offset: 0x0080B29B
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A6F RID: 10863
+	// (get) Token: 0x0601A15D RID: 106845 RVA: 0x0080D09E File Offset: 0x0080B29E
+	public override bool NeedPostActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A70 RID: 10864
+	// (get) Token: 0x0601A15E RID: 106846 RVA: 0x0080D0A1 File Offset: 0x0080B2A1
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A71 RID: 10865
+	// (get) Token: 0x0601A15F RID: 106847 RVA: 0x0080D0A4 File Offset: 0x0080B2A4
+	public override bool NeedEnableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A72 RID: 10866
+	// (get) Token: 0x0601A160 RID: 106848 RVA: 0x0080D0A7 File Offset: 0x0080B2A7
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A73 RID: 10867
+	// (get) Token: 0x0601A161 RID: 106849 RVA: 0x0080D0AA File Offset: 0x0080B2AA
+	public override bool NeedAfterTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400E4E5 RID: 58597
 	[Nullable(2)]
 	public VehicleActorComponent ActorComp;
 
-	// Token: 0x0400E03B RID: 57403
+	// Token: 0x0400E4E6 RID: 58598
 	[Nullable(2)]
 	protected VehicleAnimationComponent AnimComp;
 
-	// Token: 0x0400E03C RID: 57404
+	// Token: 0x0400E4E7 RID: 58599
 	[Nullable(2)]
 	protected VehicleMoveComponent MoveComp;
 
-	// Token: 0x0400E03D RID: 57405
+	// Token: 0x0400E4E8 RID: 58600
 	[Nullable(2)]
 	protected BaseTagComponent TagComp;
 
-	// Token: 0x0400E03E RID: 57406
+	// Token: 0x0400E4E9 RID: 58601
 	public bool IsBeingImpacted;
 
-	// Token: 0x0400E03F RID: 57407
+	// Token: 0x0400E4EA RID: 58602
 	public Vector ImpactedVelocity = Vector.Create();
 
-	// Token: 0x0400E040 RID: 57408
+	// Token: 0x0400E4EB RID: 58603
 	[Nullable(2)]
 	public FHitResult CacheImpactHitResult;
 
-	// Token: 0x0400E041 RID: 57409
+	// Token: 0x0400E4EC RID: 58604
 	private int LastImpactFrame;
 
-	// Token: 0x0400E042 RID: 57410
+	// Token: 0x0400E4ED RID: 58605
 	public Vector CollisionVelocity = Vector.Create();
 
-	// Token: 0x0400E043 RID: 57411
+	// Token: 0x0400E4EE RID: 58606
 	public bool HasRoleAndCtrlByMe;
 
-	// Token: 0x0400E044 RID: 57412
+	// Token: 0x0400E4EF RID: 58607
 	public bool IsHidePassenger;
 
-	// Token: 0x0400E045 RID: 57413
+	// Token: 0x0400E4F0 RID: 58608
 	public Rotator LastActorRotation = Rotator.Create();
 
-	// Token: 0x0400E046 RID: 57414
+	// Token: 0x0400E4F1 RID: 58609
 	[Nullable(new byte[]
 	{
 		2,
@@ -630,10 +655,10 @@ public class VehiclePerformComponent : BaseVehiclePerformComponent
 	})]
 	protected List<ITagTask> VehicleTagListeners;
 
-	// Token: 0x0400E047 RID: 57415
+	// Token: 0x0400E4F2 RID: 58610
 	[Nullable(2)]
 	private Dictionary<int, int> DisableActorHandleMap;
 
-	// Token: 0x0400E048 RID: 57416
+	// Token: 0x0400E4F3 RID: 58611
 	private double NextCameraShakeTime;
 }

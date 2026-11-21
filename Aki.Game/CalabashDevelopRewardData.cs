@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x0200173B RID: 5947
+// Token: 0x02000BF4 RID: 3060
 [NullableContext(1)]
 [Nullable(0)]
 public class CalabashDevelopRewardData
 {
-	// Token: 0x0600ABD4 RID: 43988 RVA: 0x002682E0 File Offset: 0x002664E0
+	// Token: 0x06007FBB RID: 32699 RVA: 0x002726F4 File Offset: 0x002708F4
 	public CalabashDevelopRewardData(CalabashDevelopReward developReward, string skillName)
 	{
 		this.DevelopReward = developReward;
@@ -16,9 +16,9 @@ public class CalabashDevelopRewardData
 		this.UnlockConditionMap = new Dictionary<int, bool>();
 	}
 
-	// Token: 0x17000E59 RID: 3673
-	// (get) Token: 0x0600ABD5 RID: 43989 RVA: 0x00268301 File Offset: 0x00266501
-	// (set) Token: 0x0600ABD6 RID: 43990 RVA: 0x00268309 File Offset: 0x00266509
+	// Token: 0x17000E7C RID: 3708
+	// (get) Token: 0x06007FBC RID: 32700 RVA: 0x00272715 File Offset: 0x00270915
+	// (set) Token: 0x06007FBD RID: 32701 RVA: 0x0027271D File Offset: 0x0027091D
 	public bool UnlockData
 	{
 		get
@@ -31,9 +31,9 @@ public class CalabashDevelopRewardData
 		}
 	}
 
-	// Token: 0x17000E5A RID: 3674
-	// (get) Token: 0x0600ABD7 RID: 43991 RVA: 0x00268312 File Offset: 0x00266512
-	// (set) Token: 0x0600ABD8 RID: 43992 RVA: 0x0026831A File Offset: 0x0026651A
+	// Token: 0x17000E7D RID: 3709
+	// (get) Token: 0x06007FBE RID: 32702 RVA: 0x00272726 File Offset: 0x00270926
+	// (set) Token: 0x06007FBF RID: 32703 RVA: 0x0027272E File Offset: 0x0027092E
 	public int RewardNumData
 	{
 		get
@@ -46,8 +46,8 @@ public class CalabashDevelopRewardData
 		}
 	}
 
-	// Token: 0x17000E5B RID: 3675
-	// (get) Token: 0x0600ABD9 RID: 43993 RVA: 0x00268323 File Offset: 0x00266523
+	// Token: 0x17000E7E RID: 3710
+	// (get) Token: 0x06007FC0 RID: 32704 RVA: 0x00272737 File Offset: 0x00270937
 	public CalabashDevelopReward DevelopRewardData
 	{
 		get
@@ -56,8 +56,8 @@ public class CalabashDevelopRewardData
 		}
 	}
 
-	// Token: 0x17000E5C RID: 3676
-	// (get) Token: 0x0600ABDA RID: 43994 RVA: 0x0026832C File Offset: 0x0026652C
+	// Token: 0x17000E7F RID: 3711
+	// (get) Token: 0x06007FC1 RID: 32705 RVA: 0x00272740 File Offset: 0x00270940
 	public int RewardSumNumData
 	{
 		get
@@ -66,7 +66,7 @@ public class CalabashDevelopRewardData
 		}
 	}
 
-	// Token: 0x0600ABDB RID: 43995 RVA: 0x0026834C File Offset: 0x0026654C
+	// Token: 0x06007FC2 RID: 32706 RVA: 0x00272760 File Offset: 0x00270960
 	public void SetUnlockConditionMap(List<ICalabashDevelopConditionState> list)
 	{
 		foreach (ICalabashDevelopConditionState calabashDevelopConditionState in list)
@@ -75,14 +75,14 @@ public class CalabashDevelopRewardData
 		}
 	}
 
-	// Token: 0x0600ABDC RID: 43996 RVA: 0x002683AC File Offset: 0x002665AC
+	// Token: 0x06007FC3 RID: 32707 RVA: 0x002727C0 File Offset: 0x002709C0
 	public Dictionary<int, bool> GetUnlockConditionMap()
 	{
 		return this.UnlockConditionMap;
 	}
 
-	// Token: 0x17000E5D RID: 3677
-	// (get) Token: 0x0600ABDD RID: 43997 RVA: 0x002683B4 File Offset: 0x002665B4
+	// Token: 0x17000E80 RID: 3712
+	// (get) Token: 0x06007FC4 RID: 32708 RVA: 0x002727C8 File Offset: 0x002709C8
 	public int UnlockSize
 	{
 		get
@@ -91,7 +91,7 @@ public class CalabashDevelopRewardData
 		}
 	}
 
-	// Token: 0x0600ABDE RID: 43998 RVA: 0x002683C4 File Offset: 0x002665C4
+	// Token: 0x06007FC5 RID: 32709 RVA: 0x002727D8 File Offset: 0x002709D8
 	public bool CheckCanGetReward()
 	{
 		using (Dictionary<int, bool>.ValueCollection.Enumerator enumerator = this.UnlockConditionMap.Values.GetEnumerator())
@@ -107,18 +107,18 @@ public class CalabashDevelopRewardData
 		return false;
 	}
 
-	// Token: 0x04004DFE RID: 19966
+	// Token: 0x04004EA7 RID: 20135
 	private bool Unlock;
 
-	// Token: 0x04004DFF RID: 19967
+	// Token: 0x04004EA8 RID: 20136
 	private int RewardNum;
 
-	// Token: 0x04004E00 RID: 19968
+	// Token: 0x04004EA9 RID: 20137
 	private readonly Dictionary<int, bool> UnlockConditionMap;
 
-	// Token: 0x04004E01 RID: 19969
+	// Token: 0x04004EAA RID: 20138
 	public CalabashDevelopReward DevelopReward;
 
-	// Token: 0x04004E02 RID: 19970
+	// Token: 0x04004EAB RID: 20139
 	public readonly string SkillName;
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200076B RID: 1899
+	// Token: 0x02000785 RID: 1925
 	public class ConfigQteInputActionMappingByQteInputActionId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002C93 RID: 11411 RVA: 0x0015525F File Offset: 0x0015345F
+		// Token: 0x06002D2F RID: 11567 RVA: 0x0015C16B File Offset: 0x0015A36B
 		static ConfigQteInputActionMappingByQteInputActionId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigQteInputActionMappingByQteInputActionId.CreateStaticDefaultValue), new Action(ConfigQteInputActionMappingByQteInputActionId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002C94 RID: 11412 RVA: 0x00155280 File Offset: 0x00153480
+		// Token: 0x06002D30 RID: 11568 RVA: 0x0015C18C File Offset: 0x0015A38C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigQteInputActionMappingByQteInputActionId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002C95 RID: 11413 RVA: 0x001552FF File Offset: 0x001534FF
+		// Token: 0x06002D31 RID: 11569 RVA: 0x0015C20B File Offset: 0x0015A40B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigQteInputActionMappingByQteInputActionId.LogPair = null;
 			ConfigQteInputActionMappingByQteInputActionId.HandleId = 0;
 		}
 
-		// Token: 0x06002C96 RID: 11414 RVA: 0x0015530D File Offset: 0x0015350D
+		// Token: 0x06002D32 RID: 11570 RVA: 0x0015C219 File Offset: 0x0015A419
 		public static void Init()
 		{
 			ConfigQteInputActionMappingByQteInputActionId.HandleId = ConfigCommon.InitDataStatement(ConfigQteInputActionMappingByQteInputActionId.HandleId, "db_input_settings.db", "select BinData from `QteInputActionMapping` where QteInputActionId=?");
 		}
 
-		// Token: 0x06002C97 RID: 11415 RVA: 0x00155328 File Offset: 0x00153528
+		// Token: 0x06002D33 RID: 11571 RVA: 0x0015C234 File Offset: 0x0015A434
 		public static QteInputActionMapping? GetConfig(int p0QteInputActionId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigQteInputActionMappingByQteInputActionId.HandleId, ConfigQteInputActionMappingByQteInputActionId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new QteInputActionMapping?(rootAsQteInputActionMapping);
 		}
 
-		// Token: 0x040033D3 RID: 13267
+		// Token: 0x04003489 RID: 13449
 		private const string DB = "db_input_settings.db";
 
-		// Token: 0x040033D4 RID: 13268
+		// Token: 0x0400348A RID: 13450
 		private const string FILE = "s.输入配置.xlsx";
 
-		// Token: 0x040033D5 RID: 13269
+		// Token: 0x0400348B RID: 13451
 		private const string TABLE = "QteInputActionMapping";
 
-		// Token: 0x040033D6 RID: 13270
+		// Token: 0x0400348C RID: 13452
 		private const string COMMAND = "select BinData from `QteInputActionMapping` where QteInputActionId=?";
 
-		// Token: 0x040033D7 RID: 13271
+		// Token: 0x0400348D RID: 13453
 		private const string KEY_PREFIX = "QteInputActionMappingByQteInputActionId";
 
-		// Token: 0x040033D8 RID: 13272
+		// Token: 0x0400348E RID: 13454
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040033D9 RID: 13273
+		// Token: 0x0400348F RID: 13455
 		private static int HandleId;
 	}
 }

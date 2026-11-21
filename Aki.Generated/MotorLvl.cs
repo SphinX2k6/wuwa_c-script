@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000E5C RID: 3676
+	// Token: 0x02000F41 RID: 3905
 	public struct MotorLvl : IFlatbufferObject
 	{
-		// Token: 0x170021B0 RID: 8624
-		// (get) Token: 0x06009AD0 RID: 39632 RVA: 0x00294535 File Offset: 0x00292735
+		// Token: 0x17002215 RID: 8725
+		// (get) Token: 0x0600A0F0 RID: 41200 RVA: 0x002B1F02 File Offset: 0x002B0102
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,39 +20,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009AD1 RID: 39633 RVA: 0x00294542 File Offset: 0x00292742
+		// Token: 0x0600A0F1 RID: 41201 RVA: 0x002B1F0F File Offset: 0x002B010F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06009AD2 RID: 39634 RVA: 0x0029454C File Offset: 0x0029274C
+		// Token: 0x0600A0F2 RID: 41202 RVA: 0x002B1F18 File Offset: 0x002B0118
 		public static MotorLvl GetRootAsMotorLvl(ByteBuffer _bb)
 		{
 			return MotorLvl.GetRootAsMotorLvl(_bb, default(MotorLvl));
 		}
 
-		// Token: 0x06009AD3 RID: 39635 RVA: 0x00294568 File Offset: 0x00292768
+		// Token: 0x0600A0F3 RID: 41203 RVA: 0x002B1F34 File Offset: 0x002B0134
 		public static MotorLvl GetRootAsMotorLvl(ByteBuffer _bb, MotorLvl obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06009AD4 RID: 39636 RVA: 0x00294585 File Offset: 0x00292785
+		// Token: 0x0600A0F4 RID: 41204 RVA: 0x002B1F51 File Offset: 0x002B0151
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06009AD5 RID: 39637 RVA: 0x00294594 File Offset: 0x00292794
+		// Token: 0x0600A0F5 RID: 41205 RVA: 0x002B1F60 File Offset: 0x002B0160
 		public MotorLvl __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170021B1 RID: 8625
-		// (get) Token: 0x06009AD6 RID: 39638 RVA: 0x002945A4 File Offset: 0x002927A4
+		// Token: 0x17002216 RID: 8726
+		// (get) Token: 0x0600A0F6 RID: 41206 RVA: 0x002B1F70 File Offset: 0x002B0170
 		public int Level
 		{
 			get
@@ -66,8 +66,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170021B2 RID: 8626
-		// (get) Token: 0x06009AD7 RID: 39639 RVA: 0x002945E0 File Offset: 0x002927E0
+		// Token: 0x17002217 RID: 8727
+		// (get) Token: 0x0600A0F7 RID: 41207 RVA: 0x002B1FAC File Offset: 0x002B01AC
 		public int Exp
 		{
 			get
@@ -81,8 +81,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170021B3 RID: 8627
-		// (get) Token: 0x06009AD8 RID: 39640 RVA: 0x0029461C File Offset: 0x0029281C
+		// Token: 0x17002218 RID: 8728
+		// (get) Token: 0x0600A0F8 RID: 41208 RVA: 0x002B1FE8 File Offset: 0x002B01E8
 		public int RewardId
 		{
 			get
@@ -96,7 +96,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009AD9 RID: 39641 RVA: 0x00294658 File Offset: 0x00292858
+		// Token: 0x0600A0F9 RID: 41209 RVA: 0x002B2024 File Offset: 0x002B0224
 		public DicIntInt? WorldLv2Attack(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -107,8 +107,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x170021B4 RID: 8628
-		// (get) Token: 0x06009ADA RID: 39642 RVA: 0x002946BC File Offset: 0x002928BC
+		// Token: 0x17002219 RID: 8729
+		// (get) Token: 0x0600A0FA RID: 41210 RVA: 0x002B2088 File Offset: 0x002B0288
 		public int WorldLv2AttackLength
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170021B5 RID: 8629
-		// (get) Token: 0x06009ADB RID: 39643 RVA: 0x002946E8 File Offset: 0x002928E8
+		// Token: 0x1700221A RID: 8730
+		// (get) Token: 0x0600A0FB RID: 41211 RVA: 0x002B20B4 File Offset: 0x002B02B4
 		public int Speed
 		{
 			get
@@ -137,8 +137,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170021B6 RID: 8630
-		// (get) Token: 0x06009ADC RID: 39644 RVA: 0x00294728 File Offset: 0x00292928
+		// Token: 0x1700221B RID: 8731
+		// (get) Token: 0x0600A0FC RID: 41212 RVA: 0x002B20F4 File Offset: 0x002B02F4
 		public int NitrogenSpeedValue
 		{
 			get
@@ -152,8 +152,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170021B7 RID: 8631
-		// (get) Token: 0x06009ADD RID: 39645 RVA: 0x00294768 File Offset: 0x00292968
+		// Token: 0x1700221C RID: 8732
+		// (get) Token: 0x0600A0FD RID: 41213 RVA: 0x002B2134 File Offset: 0x002B0334
 		public int NitrogenValue
 		{
 			get
@@ -167,8 +167,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170021B8 RID: 8632
-		// (get) Token: 0x06009ADE RID: 39646 RVA: 0x002947A8 File Offset: 0x002929A8
+		// Token: 0x1700221D RID: 8733
+		// (get) Token: 0x0600A0FE RID: 41214 RVA: 0x002B2174 File Offset: 0x002B0374
 		public int NitrogenRecoverRate
 		{
 			get
@@ -182,8 +182,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170021B9 RID: 8633
-		// (get) Token: 0x06009ADF RID: 39647 RVA: 0x002947E8 File Offset: 0x002929E8
+		// Token: 0x1700221E RID: 8734
+		// (get) Token: 0x0600A0FF RID: 41215 RVA: 0x002B21B4 File Offset: 0x002B03B4
 		public float NitrogenRecoverCoolDown
 		{
 			get
@@ -197,8 +197,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170021BA RID: 8634
-		// (get) Token: 0x06009AE0 RID: 39648 RVA: 0x0029482C File Offset: 0x00292A2C
+		// Token: 0x1700221F RID: 8735
+		// (get) Token: 0x0600A100 RID: 41216 RVA: 0x002B21F8 File Offset: 0x002B03F8
 		public int NitrogenConsumeRate
 		{
 			get
@@ -212,8 +212,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170021BB RID: 8635
-		// (get) Token: 0x06009AE1 RID: 39649 RVA: 0x0029486C File Offset: 0x00292A6C
+		// Token: 0x17002220 RID: 8736
+		// (get) Token: 0x0600A101 RID: 41217 RVA: 0x002B2238 File Offset: 0x002B0438
 		public int MotorInitialShieldRate
 		{
 			get
@@ -227,7 +227,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009AE2 RID: 39650 RVA: 0x002948AC File Offset: 0x00292AAC
+		// Token: 0x0600A102 RID: 41218 RVA: 0x002B2278 File Offset: 0x002B0478
 		public DicIntInt? WorldLv2MotorShield(int j)
 		{
 			int num = this.__p.__offset(26);
@@ -238,8 +238,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x170021BC RID: 8636
-		// (get) Token: 0x06009AE3 RID: 39651 RVA: 0x00294910 File Offset: 0x00292B10
+		// Token: 0x17002221 RID: 8737
+		// (get) Token: 0x0600A103 RID: 41219 RVA: 0x002B22DC File Offset: 0x002B04DC
 		public int WorldLv2MotorShieldLength
 		{
 			get
@@ -253,8 +253,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170021BD RID: 8637
-		// (get) Token: 0x06009AE4 RID: 39652 RVA: 0x0029493C File Offset: 0x00292B3C
+		// Token: 0x17002222 RID: 8738
+		// (get) Token: 0x0600A104 RID: 41220 RVA: 0x002B2308 File Offset: 0x002B0508
 		public int MotorShieldRecoverRate
 		{
 			get
@@ -268,8 +268,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170021BE RID: 8638
-		// (get) Token: 0x06009AE5 RID: 39653 RVA: 0x0029497C File Offset: 0x00292B7C
+		// Token: 0x17002223 RID: 8739
+		// (get) Token: 0x0600A105 RID: 41221 RVA: 0x002B2348 File Offset: 0x002B0548
 		public float MotorShieldCoolDown
 		{
 			get
@@ -283,8 +283,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170021BF RID: 8639
-		// (get) Token: 0x06009AE6 RID: 39654 RVA: 0x002949C0 File Offset: 0x00292BC0
+		// Token: 0x17002224 RID: 8740
+		// (get) Token: 0x0600A106 RID: 41222 RVA: 0x002B238C File Offset: 0x002B058C
 		public int SoaringEnergy
 		{
 			get
@@ -298,41 +298,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009AE7 RID: 39655 RVA: 0x00294A00 File Offset: 0x00292C00
+		// Token: 0x0600A107 RID: 41223 RVA: 0x002B23CC File Offset: 0x002B05CC
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用WorldLv2AttackFrozenDict()缓存字典，遍历请使用WorldLv2AttackIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> WorldLv2Attack()
+		public Dictionary<int, int> WorldLv2Attack()
 		{
 			return this.WorldLv2AttackIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x06009AE8 RID: 39656 RVA: 0x00294A56 File Offset: 0x00292C56
+		// Token: 0x0600A108 RID: 41224 RVA: 0x002B2422 File Offset: 0x002B0622
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> WorldLv2AttackIter()
+		public IEnumerable<DicIntInt> WorldLv2AttackIter()
 		{
 			MotorLvl.<WorldLv2AttackIter>d__41 <WorldLv2AttackIter>d__ = new MotorLvl.<WorldLv2AttackIter>d__41(-2);
 			<WorldLv2AttackIter>d__.<>3__<>4__this = this;
 			return <WorldLv2AttackIter>d__;
 		}
 
-		// Token: 0x06009AE9 RID: 39657 RVA: 0x00294A6C File Offset: 0x00292C6C
+		// Token: 0x0600A109 RID: 41225 RVA: 0x002B2438 File Offset: 0x002B0638
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用WorldLv2MotorShieldFrozenDict()缓存字典，遍历请使用WorldLv2MotorShieldIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> WorldLv2MotorShield()
+		public Dictionary<int, int> WorldLv2MotorShield()
 		{
 			return this.WorldLv2MotorShieldIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x06009AEA RID: 39658 RVA: 0x00294AC2 File Offset: 0x00292CC2
+		// Token: 0x0600A10A RID: 41226 RVA: 0x002B248E File Offset: 0x002B068E
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> WorldLv2MotorShieldIter()
+		public IEnumerable<DicIntInt> WorldLv2MotorShieldIter()
 		{
 			MotorLvl.<WorldLv2MotorShieldIter>d__43 <WorldLv2MotorShieldIter>d__ = new MotorLvl.<WorldLv2MotorShieldIter>d__43(-2);
 			<WorldLv2MotorShieldIter>d__.<>3__<>4__this = this;
 			return <WorldLv2MotorShieldIter>d__;
 		}
 
-		// Token: 0x06009AEB RID: 39659 RVA: 0x00294AD8 File Offset: 0x00292CD8
+		// Token: 0x0600A10B RID: 41227 RVA: 0x002B24A4 File Offset: 0x002B06A4
 		public int? GetWorldLv2Attack(int key)
 		{
 			this.EnsureWorldLv2AttackCacheIfNeeded();
@@ -344,7 +342,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x06009AEC RID: 39660 RVA: 0x00294B0C File Offset: 0x00292D0C
+		// Token: 0x0600A10C RID: 41228 RVA: 0x002B24D8 File Offset: 0x002B06D8
 		public int? GetWorldLv2MotorShield(int key)
 		{
 			this.EnsureWorldLv2MotorShieldCacheIfNeeded();
@@ -356,7 +354,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x06009AED RID: 39661 RVA: 0x00294B40 File Offset: 0x00292D40
+		// Token: 0x0600A10D RID: 41229 RVA: 0x002B250C File Offset: 0x002B070C
 		private void EnsureWorldLv2AttackCacheIfNeeded()
 		{
 			if (this.WorldLv2AttackCache != null)
@@ -366,7 +364,7 @@ namespace Aki.Config
 			this.WorldLv2AttackCache = this.WorldLv2AttackIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x06009AEE RID: 39662 RVA: 0x00294BA8 File Offset: 0x00292DA8
+		// Token: 0x0600A10E RID: 41230 RVA: 0x002B2574 File Offset: 0x002B0774
 		private void EnsureWorldLv2MotorShieldCacheIfNeeded()
 		{
 			if (this.WorldLv2MotorShieldCache != null)
@@ -376,30 +374,30 @@ namespace Aki.Config
 			this.WorldLv2MotorShieldCache = this.WorldLv2MotorShieldIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x06009AEF RID: 39663 RVA: 0x00294C0E File Offset: 0x00292E0E
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetWorldLv2AttackFrozenDict(int key)
+		// Token: 0x0600A10F RID: 41231 RVA: 0x002B25DA File Offset: 0x002B07DA
+		[NullableContext(1)]
+		public FrozenDictionary<int, int> GetWorldLv2AttackFrozenDict()
 		{
 			this.EnsureWorldLv2AttackCacheIfNeeded();
 			return this.WorldLv2AttackCache;
 		}
 
-		// Token: 0x06009AF0 RID: 39664 RVA: 0x00294C1C File Offset: 0x00292E1C
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetWorldLv2MotorShieldFrozenDict(int key)
+		// Token: 0x0600A110 RID: 41232 RVA: 0x002B25E8 File Offset: 0x002B07E8
+		[NullableContext(1)]
+		public FrozenDictionary<int, int> GetWorldLv2MotorShieldFrozenDict()
 		{
 			this.EnsureWorldLv2MotorShieldCacheIfNeeded();
 			return this.WorldLv2MotorShieldCache;
 		}
 
-		// Token: 0x04004F06 RID: 20230
+		// Token: 0x040054EB RID: 21739
 		private Table __p;
 
-		// Token: 0x04004F07 RID: 20231
+		// Token: 0x040054EC RID: 21740
 		[Nullable(2)]
 		private FrozenDictionary<int, int> WorldLv2AttackCache;
 
-		// Token: 0x04004F08 RID: 20232
+		// Token: 0x040054ED RID: 21741
 		[Nullable(2)]
 		private FrozenDictionary<int, int> WorldLv2MotorShieldCache;
 	}

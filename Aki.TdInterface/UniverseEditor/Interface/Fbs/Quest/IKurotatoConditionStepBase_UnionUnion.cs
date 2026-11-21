@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003ED6 RID: 16086
+	// Token: 0x02004314 RID: 17172
 	public class IKurotatoConditionStepBase_UnionUnion
 	{
-		// Token: 0x17006FAA RID: 28586
-		// (get) Token: 0x06016C01 RID: 93185 RVA: 0x00348B89 File Offset: 0x00346D89
-		// (set) Token: 0x06016C02 RID: 93186 RVA: 0x00348B91 File Offset: 0x00346D91
+		// Token: 0x17007599 RID: 30105
+		// (get) Token: 0x06018258 RID: 98904 RVA: 0x00371D55 File Offset: 0x0036FF55
+		// (set) Token: 0x06018259 RID: 98905 RVA: 0x00371D5D File Offset: 0x0036FF5D
 		public IKurotatoConditionStepBase_Union Type { get; set; }
 
-		// Token: 0x17006FAB RID: 28587
-		// (get) Token: 0x06016C03 RID: 93187 RVA: 0x00348B9A File Offset: 0x00346D9A
-		// (set) Token: 0x06016C04 RID: 93188 RVA: 0x00348BA2 File Offset: 0x00346DA2
+		// Token: 0x1700759A RID: 30106
+		// (get) Token: 0x0601825A RID: 98906 RVA: 0x00371D66 File Offset: 0x0036FF66
+		// (set) Token: 0x0601825B RID: 98907 RVA: 0x00371D6E File Offset: 0x0036FF6E
 		public object Value { get; set; }
 
-		// Token: 0x06016C05 RID: 93189 RVA: 0x00348BAB File Offset: 0x00346DAB
+		// Token: 0x0601825C RID: 98908 RVA: 0x00371D77 File Offset: 0x0036FF77
 		public IKurotatoConditionStepBase_UnionUnion()
 		{
 			this.Type = IKurotatoConditionStepBase_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06016C06 RID: 93190 RVA: 0x00348BC1 File Offset: 0x00346DC1
+		// Token: 0x0601825D RID: 98909 RVA: 0x00371D8D File Offset: 0x0036FF8D
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06016C07 RID: 93191 RVA: 0x00348BD3 File Offset: 0x00346DD3
+		// Token: 0x0601825E RID: 98910 RVA: 0x00371D9F File Offset: 0x0036FF9F
 		public IKurotatoConditionStepBaseT AsIKurotatoConditionStepBase()
 		{
 			return this.As<IKurotatoConditionStepBaseT>();
 		}
 
-		// Token: 0x06016C08 RID: 93192 RVA: 0x00348BDB File Offset: 0x00346DDB
+		// Token: 0x0601825F RID: 98911 RVA: 0x00371DA7 File Offset: 0x0036FFA7
 		public static IKurotatoConditionStepBase_UnionUnion FromIKurotatoConditionStepBase(IKurotatoConditionStepBaseT _ikurotatoconditionstepbase)
 		{
 			return new IKurotatoConditionStepBase_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06016C09 RID: 93193 RVA: 0x00348BF0 File Offset: 0x00346DF0
+		// Token: 0x06018260 RID: 98912 RVA: 0x00371DBC File Offset: 0x0036FFBC
 		public IKurotatoConditionStepPrepareT AsIKurotatoConditionStepPrepare()
 		{
 			return this.As<IKurotatoConditionStepPrepareT>();
 		}
 
-		// Token: 0x06016C0A RID: 93194 RVA: 0x00348BF8 File Offset: 0x00346DF8
+		// Token: 0x06018261 RID: 98913 RVA: 0x00371DC4 File Offset: 0x0036FFC4
 		public static IKurotatoConditionStepBase_UnionUnion FromIKurotatoConditionStepPrepare(IKurotatoConditionStepPrepareT _ikurotatoconditionstepprepare)
 		{
 			return new IKurotatoConditionStepBase_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06016C0B RID: 93195 RVA: 0x00348C0D File Offset: 0x00346E0D
+		// Token: 0x06018262 RID: 98914 RVA: 0x00371DD9 File Offset: 0x0036FFD9
 		public IKurotatoConditionStepBattleT AsIKurotatoConditionStepBattle()
 		{
 			return this.As<IKurotatoConditionStepBattleT>();
 		}
 
-		// Token: 0x06016C0C RID: 93196 RVA: 0x00348C15 File Offset: 0x00346E15
+		// Token: 0x06018263 RID: 98915 RVA: 0x00371DE1 File Offset: 0x0036FFE1
 		public static IKurotatoConditionStepBase_UnionUnion FromIKurotatoConditionStepBattle(IKurotatoConditionStepBattleT _ikurotatoconditionstepbattle)
 		{
 			return new IKurotatoConditionStepBase_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06016C0D RID: 93197 RVA: 0x00348C2A File Offset: 0x00346E2A
+		// Token: 0x06018264 RID: 98916 RVA: 0x00371DF6 File Offset: 0x0036FFF6
 		public IKurotatoConditionStepEndT AsIKurotatoConditionStepEnd()
 		{
 			return this.As<IKurotatoConditionStepEndT>();
 		}
 
-		// Token: 0x06016C0E RID: 93198 RVA: 0x00348C32 File Offset: 0x00346E32
+		// Token: 0x06018265 RID: 98917 RVA: 0x00371DFE File Offset: 0x0036FFFE
 		public static IKurotatoConditionStepBase_UnionUnion FromIKurotatoConditionStepEnd(IKurotatoConditionStepEndT _ikurotatoconditionstepend)
 		{
 			return new IKurotatoConditionStepBase_UnionUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06016C0F RID: 93199 RVA: 0x00348C47 File Offset: 0x00346E47
+		// Token: 0x06018266 RID: 98918 RVA: 0x00371E13 File Offset: 0x00370013
 		public IKurotatoConditionStepSaveRoleT AsIKurotatoConditionStepSaveRole()
 		{
 			return this.As<IKurotatoConditionStepSaveRoleT>();
 		}
 
-		// Token: 0x06016C10 RID: 93200 RVA: 0x00348C4F File Offset: 0x00346E4F
+		// Token: 0x06018267 RID: 98919 RVA: 0x00371E1B File Offset: 0x0037001B
 		public static IKurotatoConditionStepBase_UnionUnion FromIKurotatoConditionStepSaveRole(IKurotatoConditionStepSaveRoleT _ikurotatoconditionstepsaverole)
 		{
 			return new IKurotatoConditionStepBase_UnionUnion
@@ -109,13 +109,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06016C11 RID: 93201 RVA: 0x00348C64 File Offset: 0x00346E64
+		// Token: 0x06018268 RID: 98920 RVA: 0x00371E30 File Offset: 0x00370030
 		public IKurotatoConditionStepChestRewardT AsIKurotatoConditionStepChestReward()
 		{
 			return this.As<IKurotatoConditionStepChestRewardT>();
 		}
 
-		// Token: 0x06016C12 RID: 93202 RVA: 0x00348C6C File Offset: 0x00346E6C
+		// Token: 0x06018269 RID: 98921 RVA: 0x00371E38 File Offset: 0x00370038
 		public static IKurotatoConditionStepBase_UnionUnion FromIKurotatoConditionStepChestReward(IKurotatoConditionStepChestRewardT _ikurotatoconditionstepchestreward)
 		{
 			return new IKurotatoConditionStepBase_UnionUnion
@@ -125,13 +125,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06016C13 RID: 93203 RVA: 0x00348C81 File Offset: 0x00346E81
+		// Token: 0x0601826A RID: 98922 RVA: 0x00371E4D File Offset: 0x0037004D
 		public IKurotatoConditionStepUpgradeRewardT AsIKurotatoConditionStepUpgradeReward()
 		{
 			return this.As<IKurotatoConditionStepUpgradeRewardT>();
 		}
 
-		// Token: 0x06016C14 RID: 93204 RVA: 0x00348C89 File Offset: 0x00346E89
+		// Token: 0x0601826B RID: 98923 RVA: 0x00371E55 File Offset: 0x00370055
 		public static IKurotatoConditionStepBase_UnionUnion FromIKurotatoConditionStepUpgradeReward(IKurotatoConditionStepUpgradeRewardT _ikurotatoconditionstepupgradereward)
 		{
 			return new IKurotatoConditionStepBase_UnionUnion
@@ -141,13 +141,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06016C15 RID: 93205 RVA: 0x00348C9E File Offset: 0x00346E9E
+		// Token: 0x0601826C RID: 98924 RVA: 0x00371E6A File Offset: 0x0037006A
 		public IKurotatoConditionStepShoppingT AsIKurotatoConditionStepShopping()
 		{
 			return this.As<IKurotatoConditionStepShoppingT>();
 		}
 
-		// Token: 0x06016C16 RID: 93206 RVA: 0x00348CA6 File Offset: 0x00346EA6
+		// Token: 0x0601826D RID: 98925 RVA: 0x00371E72 File Offset: 0x00370072
 		public static IKurotatoConditionStepBase_UnionUnion FromIKurotatoConditionStepShopping(IKurotatoConditionStepShoppingT _ikurotatoconditionstepshopping)
 		{
 			return new IKurotatoConditionStepBase_UnionUnion
@@ -157,13 +157,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06016C17 RID: 93207 RVA: 0x00348CBB File Offset: 0x00346EBB
+		// Token: 0x0601826E RID: 98926 RVA: 0x00371E87 File Offset: 0x00370087
 		public IKurotatoConditionStepUpdateBatchT AsIKurotatoConditionStepUpdateBatch()
 		{
 			return this.As<IKurotatoConditionStepUpdateBatchT>();
 		}
 
-		// Token: 0x06016C18 RID: 93208 RVA: 0x00348CC3 File Offset: 0x00346EC3
+		// Token: 0x0601826F RID: 98927 RVA: 0x00371E8F File Offset: 0x0037008F
 		public static IKurotatoConditionStepBase_UnionUnion FromIKurotatoConditionStepUpdateBatch(IKurotatoConditionStepUpdateBatchT _ikurotatoconditionstepupdatebatch)
 		{
 			return new IKurotatoConditionStepBase_UnionUnion
@@ -173,7 +173,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06016C19 RID: 93209 RVA: 0x00348CDC File Offset: 0x00346EDC
+		// Token: 0x06018270 RID: 98928 RVA: 0x00371EA8 File Offset: 0x003700A8
 		public static int Pack(FlatBufferBuilder builder, IKurotatoConditionStepBase_UnionUnion _o)
 		{
 			switch (_o.Type)

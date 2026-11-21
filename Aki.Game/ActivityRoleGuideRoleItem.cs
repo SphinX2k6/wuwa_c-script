@@ -4,10 +4,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020014C4 RID: 5316
+// Token: 0x02000978 RID: 2424
 public class ActivityRoleGuideRoleItem : UiPanelBase
 {
-	// Token: 0x060096C4 RID: 38596 RVA: 0x00208FD0 File Offset: 0x002071D0
+	// Token: 0x06006A59 RID: 27225 RVA: 0x00211F3C File Offset: 0x0021013C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -19,7 +19,7 @@ public class ActivityRoleGuideRoleItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060096C5 RID: 38597 RVA: 0x00209018 File Offset: 0x00207218
+	// Token: 0x06006A5A RID: 27226 RVA: 0x00211F84 File Offset: 0x00210184
 	protected override void OnBeforeShow()
 	{
 		USpineSkeletonAnimationComponent spine = base.GetSpine(0);
@@ -30,10 +30,10 @@ public class ActivityRoleGuideRoleItem : UiPanelBase
 		spine.SetAnimation(0, "idle", true);
 	}
 
-	// Token: 0x02007AFA RID: 31482
+	// Token: 0x02006C7E RID: 27774
 	private class EComponents
 	{
-		// Token: 0x04028739 RID: 165689
+		// Token: 0x04023A53 RID: 146003
 		public const int SpineActor = 0;
 	}
 }

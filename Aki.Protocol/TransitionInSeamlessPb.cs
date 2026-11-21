@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020013F9 RID: 5113
+	// Token: 0x0200146C RID: 5228
 	public sealed class TransitionInSeamlessPb : IMessage<TransitionInSeamlessPb>, IMessage, IEquatable<TransitionInSeamlessPb>, IDeepCloneable<TransitionInSeamlessPb>, IBufferMessage
 	{
-		// Token: 0x0601B177 RID: 110967 RVA: 0x003EC3AF File Offset: 0x003EA5AF
+		// Token: 0x0601BC02 RID: 113666 RVA: 0x00407683 File Offset: 0x00405883
 		[NullableContext(1)]
 		public static TransitionInSeamlessPb Create()
 		{
 			return new TransitionInSeamlessPb();
 		}
 
-		// Token: 0x17005B4A RID: 23370
-		// (get) Token: 0x0601B178 RID: 110968 RVA: 0x003EC3B6 File Offset: 0x003EA5B6
+		// Token: 0x17005DDF RID: 24031
+		// (get) Token: 0x0601BC03 RID: 113667 RVA: 0x0040768A File Offset: 0x0040588A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B4B RID: 23371
-		// (get) Token: 0x0601B179 RID: 110969 RVA: 0x003EC3B9 File Offset: 0x003EA5B9
+		// Token: 0x17005DE0 RID: 24032
+		// (get) Token: 0x0601BC04 RID: 113668 RVA: 0x0040768D File Offset: 0x0040588D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B17A RID: 110970 RVA: 0x003EC3C0 File Offset: 0x003EA5C0
+		// Token: 0x0601BC05 RID: 113669 RVA: 0x00407694 File Offset: 0x00405894
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TransitionInSeamlessPb()
 		{
 		}
 
-		// Token: 0x0601B17B RID: 110971 RVA: 0x003EC3E0 File Offset: 0x003EA5E0
+		// Token: 0x0601BC06 RID: 113670 RVA: 0x004076B4 File Offset: 0x004058B4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TransitionInSeamlessPb(TransitionInSeamlessPb other) : this()
@@ -70,7 +70,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601B17C RID: 110972 RVA: 0x003EC4C5 File Offset: 0x003EA6C5
+		// Token: 0x0601BC07 RID: 113671 RVA: 0x00407799 File Offset: 0x00405999
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TransitionInSeamlessPb Clone()
@@ -78,9 +78,9 @@ namespace Aki.Protocol
 			return new TransitionInSeamlessPb(this);
 		}
 
-		// Token: 0x17005B4C RID: 23372
-		// (get) Token: 0x0601B17D RID: 110973 RVA: 0x003EC4CD File Offset: 0x003EA6CD
-		// (set) Token: 0x0601B17E RID: 110974 RVA: 0x003EC4D5 File Offset: 0x003EA6D5
+		// Token: 0x17005DE1 RID: 24033
+		// (get) Token: 0x0601BC08 RID: 113672 RVA: 0x004077A1 File Offset: 0x004059A1
+		// (set) Token: 0x0601BC09 RID: 113673 RVA: 0x004077A9 File Offset: 0x004059A9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string EffectDaPath
@@ -95,9 +95,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B4D RID: 23373
-		// (get) Token: 0x0601B17F RID: 110975 RVA: 0x003EC4E8 File Offset: 0x003EA6E8
-		// (set) Token: 0x0601B180 RID: 110976 RVA: 0x003EC4F0 File Offset: 0x003EA6F0
+		// Token: 0x17005DE2 RID: 24034
+		// (get) Token: 0x0601BC0A RID: 113674 RVA: 0x004077BC File Offset: 0x004059BC
+		// (set) Token: 0x0601BC0B RID: 113675 RVA: 0x004077C4 File Offset: 0x004059C4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public float LeastTime
@@ -112,9 +112,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B4E RID: 23374
-		// (get) Token: 0x0601B181 RID: 110977 RVA: 0x003EC4F9 File Offset: 0x003EA6F9
-		// (set) Token: 0x0601B182 RID: 110978 RVA: 0x003EC501 File Offset: 0x003EA701
+		// Token: 0x17005DE3 RID: 24035
+		// (get) Token: 0x0601BC0C RID: 113676 RVA: 0x004077CD File Offset: 0x004059CD
+		// (set) Token: 0x0601BC0D RID: 113677 RVA: 0x004077D5 File Offset: 0x004059D5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public float EffectExpandTime
@@ -129,9 +129,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B4F RID: 23375
-		// (get) Token: 0x0601B183 RID: 110979 RVA: 0x003EC50A File Offset: 0x003EA70A
-		// (set) Token: 0x0601B184 RID: 110980 RVA: 0x003EC512 File Offset: 0x003EA712
+		// Token: 0x17005DE4 RID: 24036
+		// (get) Token: 0x0601BC0E RID: 113678 RVA: 0x004077DE File Offset: 0x004059DE
+		// (set) Token: 0x0601BC0F RID: 113679 RVA: 0x004077E6 File Offset: 0x004059E6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public float EffectCollapseTime
@@ -146,9 +146,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B50 RID: 23376
-		// (get) Token: 0x0601B185 RID: 110981 RVA: 0x003EC51B File Offset: 0x003EA71B
-		// (set) Token: 0x0601B186 RID: 110982 RVA: 0x003EC523 File Offset: 0x003EA723
+		// Token: 0x17005DE5 RID: 24037
+		// (get) Token: 0x0601BC10 RID: 113680 RVA: 0x004077EF File Offset: 0x004059EF
+		// (set) Token: 0x0601BC11 RID: 113681 RVA: 0x004077F7 File Offset: 0x004059F7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool HasFloorSettings
@@ -163,9 +163,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B51 RID: 23377
-		// (get) Token: 0x0601B187 RID: 110983 RVA: 0x003EC52C File Offset: 0x003EA72C
-		// (set) Token: 0x0601B188 RID: 110984 RVA: 0x003EC534 File Offset: 0x003EA734
+		// Token: 0x17005DE6 RID: 24038
+		// (get) Token: 0x0601BC12 RID: 113682 RVA: 0x00407800 File Offset: 0x00405A00
+		// (set) Token: 0x0601BC13 RID: 113683 RVA: 0x00407808 File Offset: 0x00405A08
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FloorSettingsPb FloorSettings
@@ -180,9 +180,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B52 RID: 23378
-		// (get) Token: 0x0601B189 RID: 110985 RVA: 0x003EC53D File Offset: 0x003EA73D
-		// (set) Token: 0x0601B18A RID: 110986 RVA: 0x003EC545 File Offset: 0x003EA745
+		// Token: 0x17005DE7 RID: 24039
+		// (get) Token: 0x0601BC14 RID: 113684 RVA: 0x00407811 File Offset: 0x00405A11
+		// (set) Token: 0x0601BC15 RID: 113685 RVA: 0x00407819 File Offset: 0x00405A19
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool IsTeleportInPlace
@@ -197,9 +197,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B53 RID: 23379
-		// (get) Token: 0x0601B18B RID: 110987 RVA: 0x003EC54E File Offset: 0x003EA74E
-		// (set) Token: 0x0601B18C RID: 110988 RVA: 0x003EC55F File Offset: 0x003EA75F
+		// Token: 0x17005DE8 RID: 24040
+		// (get) Token: 0x0601BC16 RID: 113686 RVA: 0x00407822 File Offset: 0x00405A22
+		// (set) Token: 0x0601BC17 RID: 113687 RVA: 0x00407833 File Offset: 0x00405A33
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string TransitionWeatherDaPath
@@ -214,8 +214,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B54 RID: 23380
-		// (get) Token: 0x0601B18D RID: 110989 RVA: 0x003EC572 File Offset: 0x003EA772
+		// Token: 0x17005DE9 RID: 24041
+		// (get) Token: 0x0601BC18 RID: 113688 RVA: 0x00407846 File Offset: 0x00405A46
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool HasTransitionWeatherDaPath
@@ -226,7 +226,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B18E RID: 110990 RVA: 0x003EC57D File Offset: 0x003EA77D
+		// Token: 0x0601BC19 RID: 113689 RVA: 0x00407851 File Offset: 0x00405A51
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearTransitionWeatherDaPath()
@@ -234,8 +234,8 @@ namespace Aki.Protocol
 			this.transitionWeatherDaPath_ = null;
 		}
 
-		// Token: 0x17005B55 RID: 23381
-		// (get) Token: 0x0601B18F RID: 110991 RVA: 0x003EC586 File Offset: 0x003EA786
+		// Token: 0x17005DEA RID: 24042
+		// (get) Token: 0x0601BC1A RID: 113690 RVA: 0x0040785A File Offset: 0x00405A5A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<KeepMovementState> KeepStates
@@ -246,9 +246,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B56 RID: 23382
-		// (get) Token: 0x0601B190 RID: 110992 RVA: 0x003EC58E File Offset: 0x003EA78E
-		// (set) Token: 0x0601B191 RID: 110993 RVA: 0x003EC59F File Offset: 0x003EA79F
+		// Token: 0x17005DEB RID: 24043
+		// (get) Token: 0x0601BC1B RID: 113691 RVA: 0x00407862 File Offset: 0x00405A62
+		// (set) Token: 0x0601BC1C RID: 113692 RVA: 0x00407873 File Offset: 0x00405A73
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string SceneEffectDaPath
@@ -263,8 +263,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B57 RID: 23383
-		// (get) Token: 0x0601B192 RID: 110994 RVA: 0x003EC5B2 File Offset: 0x003EA7B2
+		// Token: 0x17005DEC RID: 24044
+		// (get) Token: 0x0601BC1D RID: 113693 RVA: 0x00407886 File Offset: 0x00405A86
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool HasSceneEffectDaPath
@@ -275,7 +275,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B193 RID: 110995 RVA: 0x003EC5BD File Offset: 0x003EA7BD
+		// Token: 0x0601BC1E RID: 113694 RVA: 0x00407891 File Offset: 0x00405A91
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearSceneEffectDaPath()
@@ -283,9 +283,9 @@ namespace Aki.Protocol
 			this.sceneEffectDaPath_ = null;
 		}
 
-		// Token: 0x17005B58 RID: 23384
-		// (get) Token: 0x0601B194 RID: 110996 RVA: 0x003EC5C6 File Offset: 0x003EA7C6
-		// (set) Token: 0x0601B195 RID: 110997 RVA: 0x003EC5CE File Offset: 0x003EA7CE
+		// Token: 0x17005DED RID: 24045
+		// (get) Token: 0x0601BC1F RID: 113695 RVA: 0x0040789A File Offset: 0x00405A9A
+		// (set) Token: 0x0601BC20 RID: 113696 RVA: 0x004078A2 File Offset: 0x00405AA2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SeamlessTeleportFinishConfigPb SeamlessTeleportFinishConfig
@@ -300,9 +300,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B59 RID: 23385
-		// (get) Token: 0x0601B196 RID: 110998 RVA: 0x003EC5D7 File Offset: 0x003EA7D7
-		// (set) Token: 0x0601B197 RID: 110999 RVA: 0x003EC5EF File Offset: 0x003EA7EF
+		// Token: 0x17005DEE RID: 24046
+		// (get) Token: 0x0601BC21 RID: 113697 RVA: 0x004078AB File Offset: 0x00405AAB
+		// (set) Token: 0x0601BC22 RID: 113698 RVA: 0x004078C3 File Offset: 0x00405AC3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool NormalStreamingLoad
@@ -322,8 +322,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B5A RID: 23386
-		// (get) Token: 0x0601B198 RID: 111000 RVA: 0x003EC606 File Offset: 0x003EA806
+		// Token: 0x17005DEF RID: 24047
+		// (get) Token: 0x0601BC23 RID: 113699 RVA: 0x004078DA File Offset: 0x00405ADA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool HasNormalStreamingLoad
@@ -334,7 +334,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B199 RID: 111001 RVA: 0x003EC613 File Offset: 0x003EA813
+		// Token: 0x0601BC24 RID: 113700 RVA: 0x004078E7 File Offset: 0x00405AE7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearNormalStreamingLoad()
@@ -342,7 +342,7 @@ namespace Aki.Protocol
 			this._hasBits0 &= -2;
 		}
 
-		// Token: 0x0601B19A RID: 111002 RVA: 0x003EC624 File Offset: 0x003EA824
+		// Token: 0x0601BC25 RID: 113701 RVA: 0x004078F8 File Offset: 0x00405AF8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -350,7 +350,7 @@ namespace Aki.Protocol
 			return this.Equals(other as TransitionInSeamlessPb);
 		}
 
-		// Token: 0x0601B19B RID: 111003 RVA: 0x003EC634 File Offset: 0x003EA834
+		// Token: 0x0601BC26 RID: 113702 RVA: 0x00407908 File Offset: 0x00405B08
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(TransitionInSeamlessPb other)
@@ -358,7 +358,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (!(this.EffectDaPath != other.EffectDaPath) && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.LeastTime, other.LeastTime) && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.EffectExpandTime, other.EffectExpandTime) && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.EffectCollapseTime, other.EffectCollapseTime) && this.HasFloorSettings == other.HasFloorSettings && object.Equals(this.FloorSettings, other.FloorSettings) && this.IsTeleportInPlace == other.IsTeleportInPlace && !(this.TransitionWeatherDaPath != other.TransitionWeatherDaPath) && this.keepStates_.Equals(other.keepStates_) && !(this.SceneEffectDaPath != other.SceneEffectDaPath) && object.Equals(this.SeamlessTeleportFinishConfig, other.SeamlessTeleportFinishConfig) && this.NormalStreamingLoad == other.NormalStreamingLoad && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601B19C RID: 111004 RVA: 0x003EC75C File Offset: 0x003EA95C
+		// Token: 0x0601BC27 RID: 113703 RVA: 0x00407A30 File Offset: 0x00405C30
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -416,7 +416,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601B19D RID: 111005 RVA: 0x003EC8AE File Offset: 0x003EAAAE
+		// Token: 0x0601BC28 RID: 113704 RVA: 0x00407B82 File Offset: 0x00405D82
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -424,7 +424,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601B19E RID: 111006 RVA: 0x003EC8BB File Offset: 0x003EAABB
+		// Token: 0x0601BC29 RID: 113705 RVA: 0x00407B8F File Offset: 0x00405D8F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -432,7 +432,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601B19F RID: 111007 RVA: 0x003EC8C4 File Offset: 0x003EAAC4
+		// Token: 0x0601BC2A RID: 113706 RVA: 0x00407B98 File Offset: 0x00405D98
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -499,7 +499,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B1A0 RID: 111008 RVA: 0x003ECA40 File Offset: 0x003EAC40
+		// Token: 0x0601BC2B RID: 113707 RVA: 0x00407D14 File Offset: 0x00405F14
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -557,7 +557,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601B1A1 RID: 111009 RVA: 0x003ECB50 File Offset: 0x003EAD50
+		// Token: 0x0601BC2C RID: 113708 RVA: 0x00407E24 File Offset: 0x00406024
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(TransitionInSeamlessPb other)
@@ -622,7 +622,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601B1A2 RID: 111010 RVA: 0x003ECCA9 File Offset: 0x003EAEA9
+		// Token: 0x0601BC2D RID: 113709 RVA: 0x00407F7D File Offset: 0x0040617D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -630,7 +630,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601B1A3 RID: 111011 RVA: 0x003ECCB4 File Offset: 0x003EAEB4
+		// Token: 0x0601BC2E RID: 113710 RVA: 0x00407F88 File Offset: 0x00406188
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -739,94 +739,94 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04009CB2 RID: 40114
+		// Token: 0x0400A0F9 RID: 41209
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04009CB3 RID: 40115
+		// Token: 0x0400A0FA RID: 41210
 		private int _hasBits0;
 
-		// Token: 0x04009CB4 RID: 40116
+		// Token: 0x0400A0FB RID: 41211
 		public const int EffectDaPathFieldNumber = 1;
 
-		// Token: 0x04009CB5 RID: 40117
+		// Token: 0x0400A0FC RID: 41212
 		private string effectDaPath_ = "";
 
-		// Token: 0x04009CB6 RID: 40118
+		// Token: 0x0400A0FD RID: 41213
 		public const int LeastTimeFieldNumber = 2;
 
-		// Token: 0x04009CB7 RID: 40119
+		// Token: 0x0400A0FE RID: 41214
 		private float leastTime_;
 
-		// Token: 0x04009CB8 RID: 40120
+		// Token: 0x0400A0FF RID: 41215
 		public const int EffectExpandTimeFieldNumber = 3;
 
-		// Token: 0x04009CB9 RID: 40121
+		// Token: 0x0400A100 RID: 41216
 		private float effectExpandTime_;
 
-		// Token: 0x04009CBA RID: 40122
+		// Token: 0x0400A101 RID: 41217
 		public const int EffectCollapseTimeFieldNumber = 4;
 
-		// Token: 0x04009CBB RID: 40123
+		// Token: 0x0400A102 RID: 41218
 		private float effectCollapseTime_;
 
-		// Token: 0x04009CBC RID: 40124
+		// Token: 0x0400A103 RID: 41219
 		public const int HasFloorSettingsFieldNumber = 5;
 
-		// Token: 0x04009CBD RID: 40125
+		// Token: 0x0400A104 RID: 41220
 		private bool hasFloorSettings_;
 
-		// Token: 0x04009CBE RID: 40126
+		// Token: 0x0400A105 RID: 41221
 		public const int FloorSettingsFieldNumber = 6;
 
-		// Token: 0x04009CBF RID: 40127
+		// Token: 0x0400A106 RID: 41222
 		private FloorSettingsPb floorSettings_;
 
-		// Token: 0x04009CC0 RID: 40128
+		// Token: 0x0400A107 RID: 41223
 		public const int IsTeleportInPlaceFieldNumber = 7;
 
-		// Token: 0x04009CC1 RID: 40129
+		// Token: 0x0400A108 RID: 41224
 		private bool isTeleportInPlace_;
 
-		// Token: 0x04009CC2 RID: 40130
+		// Token: 0x0400A109 RID: 41225
 		public const int TransitionWeatherDaPathFieldNumber = 8;
 
-		// Token: 0x04009CC3 RID: 40131
+		// Token: 0x0400A10A RID: 41226
 		private static readonly string TransitionWeatherDaPathDefaultValue = "";
 
-		// Token: 0x04009CC4 RID: 40132
+		// Token: 0x0400A10B RID: 41227
 		private string transitionWeatherDaPath_;
 
-		// Token: 0x04009CC5 RID: 40133
+		// Token: 0x0400A10C RID: 41228
 		public const int KeepStatesFieldNumber = 9;
 
-		// Token: 0x04009CC6 RID: 40134
+		// Token: 0x0400A10D RID: 41229
 		private static readonly FieldCodec<KeepMovementState> _repeated_keepStates_codec = FieldCodec.ForEnum<KeepMovementState>(74U, (KeepMovementState x) => (int)x, (int x) => (KeepMovementState)x);
 
-		// Token: 0x04009CC7 RID: 40135
+		// Token: 0x0400A10E RID: 41230
 		private readonly RepeatedField<KeepMovementState> keepStates_ = new RepeatedField<KeepMovementState>();
 
-		// Token: 0x04009CC8 RID: 40136
+		// Token: 0x0400A10F RID: 41231
 		public const int SceneEffectDaPathFieldNumber = 10;
 
-		// Token: 0x04009CC9 RID: 40137
+		// Token: 0x0400A110 RID: 41232
 		private static readonly string SceneEffectDaPathDefaultValue = "";
 
-		// Token: 0x04009CCA RID: 40138
+		// Token: 0x0400A111 RID: 41233
 		private string sceneEffectDaPath_;
 
-		// Token: 0x04009CCB RID: 40139
+		// Token: 0x0400A112 RID: 41234
 		public const int SeamlessTeleportFinishConfigFieldNumber = 11;
 
-		// Token: 0x04009CCC RID: 40140
+		// Token: 0x0400A113 RID: 41235
 		private SeamlessTeleportFinishConfigPb seamlessTeleportFinishConfig_;
 
-		// Token: 0x04009CCD RID: 40141
+		// Token: 0x0400A114 RID: 41236
 		public const int NormalStreamingLoadFieldNumber = 12;
 
-		// Token: 0x04009CCE RID: 40142
+		// Token: 0x0400A115 RID: 41237
 		private static readonly bool NormalStreamingLoadDefaultValue = false;
 
-		// Token: 0x04009CCF RID: 40143
+		// Token: 0x0400A116 RID: 41238
 		private bool normalStreamingLoad_;
 	}
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 using CSharpScript.Game.Camera;
@@ -13,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.Flow
 {
-	// Token: 0x020050A2 RID: 20642
+	// Token: 0x02004072 RID: 16498
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class FlowShowTalk
 	{
-		// Token: 0x06034E6B RID: 216683 RVA: 0x00C8723C File Offset: 0x00C8543C
+		// Token: 0x06029D64 RID: 171364 RVA: 0x00BD44C4 File Offset: 0x00BD26C4
 		public void FinishShowTalk()
 		{
 			FlowContext context = this.Context;
@@ -77,7 +76,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			FlowController.Instance.RunNextAction();
 		}
 
-		// Token: 0x06034E6C RID: 216684 RVA: 0x00C87420 File Offset: 0x00C85620
+		// Token: 0x06029D65 RID: 171365 RVA: 0x00BD46A8 File Offset: 0x00BD28A8
 		[NullableContext(1)]
 		public void Start(ShowTalk inShowTalk, FlowContext context)
 		{
@@ -86,59 +85,40 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			this.CurTalkItemIndex = -1;
 			this.Level = PlotModel.Instance.PlotConfig.PlotLevel;
 			PlotModel.Instance.ResetOptionReadState(inShowTalk);
+			List<ITalkItem> list = (inShowTalk != null) ? inShowTalk.TalkItems : null;
+			ITalkItem talkItem = (list != null && list.Count > 0) ? list[0] : null;
 			if (this.Level.GetValueOrDefault() == EPlotLevel.LevelC)
 			{
 				bool flag;
-				if (inShowTalk == null)
+				if (talkItem == null)
 				{
 					flag = true;
 				}
 				else
 				{
-					ITalkItem talkItem = inShowTalk.TalkItems.ElementAtOrDefault(0);
-					if (talkItem == null)
+					ITalkBackground backgroundConfig = talkItem.BackgroundConfig;
+					if (backgroundConfig == null)
 					{
 						flag = true;
 					}
 					else
 					{
-						ITalkBackground backgroundConfig = talkItem.BackgroundConfig;
-						if (backgroundConfig == null)
-						{
-							flag = true;
-						}
-						else
-						{
-							ETalkBackgroundType type = backgroundConfig.Type;
-							flag = false;
-						}
+						ETalkBackgroundType type = backgroundConfig.Type;
+						flag = false;
 					}
 				}
-				if (flag)
+				if (flag && (talkItem == null || talkItem.Type.GetValueOrDefault() != ETalkItemType.CenterText))
 				{
-					bool flag2;
-					if (inShowTalk == null)
-					{
-						flag2 = true;
-					}
-					else
-					{
-						ITalkItem talkItem2 = inShowTalk.TalkItems.ElementAtOrDefault(0);
-						flag2 = (((talkItem2 != null) ? talkItem2.Type : null).GetValueOrDefault() != ETalkItemType.CenterText);
-					}
-					if (flag2)
-					{
-						LevelLoadingController instance = LevelLoadingController.Instance;
-						ELoadingReason reason = ELoadingReason.Common;
-						DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(15, 3);
-						defaultInterpolatedStringHandler.AppendLiteral("FlowShowTalk_");
-						defaultInterpolatedStringHandler.AppendFormatted(context.FlowListName);
-						defaultInterpolatedStringHandler.AppendLiteral("_");
-						defaultInterpolatedStringHandler.AppendFormatted<int>(context.FlowId);
-						defaultInterpolatedStringHandler.AppendLiteral("_");
-						defaultInterpolatedStringHandler.AppendFormatted<int>(context.FlowStateId);
-						instance.CloseLoading(reason, defaultInterpolatedStringHandler.ToStringAndClear(), null, new float?(0f));
-					}
+					LevelLoadingController instance = LevelLoadingController.Instance;
+					ELoadingReason reason = ELoadingReason.Common;
+					DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(15, 3);
+					defaultInterpolatedStringHandler.AppendLiteral("FlowShowTalk_");
+					defaultInterpolatedStringHandler.AppendFormatted(context.FlowListName);
+					defaultInterpolatedStringHandler.AppendLiteral("_");
+					defaultInterpolatedStringHandler.AppendFormatted<int>(context.FlowId);
+					defaultInterpolatedStringHandler.AppendLiteral("_");
+					defaultInterpolatedStringHandler.AppendFormatted<int>(context.FlowStateId);
+					instance.CloseLoading(reason, defaultInterpolatedStringHandler.ToStringAndClear(), null, new float?(0f));
 				}
 			}
 			PlotController.Instance.PlotViewManager.EmitPlotStartShowTalk(this.CurShowTalk);
@@ -158,7 +138,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			});
 		}
 
-		// Token: 0x06034E6D RID: 216685 RVA: 0x00C875A4 File Offset: 0x00C857A4
+		// Token: 0x06029D66 RID: 171366 RVA: 0x00BD4824 File Offset: 0x00BD2A24
 		private void NextShowTalkItem()
 		{
 			if (this.CurShowTalk == null)
@@ -176,7 +156,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			this.HandleShowTalkItem(talkItem).Forget();
 		}
 
-		// Token: 0x06034E6E RID: 216686 RVA: 0x00C87630 File Offset: 0x00C85830
+		// Token: 0x06029D67 RID: 171367 RVA: 0x00BD48B0 File Offset: 0x00BD2AB0
 		public void SwitchTalkItem(int inTalkId)
 		{
 			int count = this.CurShowTalk.TalkItems.Count;
@@ -193,7 +173,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			this.FinishShowTalk();
 		}
 
-		// Token: 0x06034E6F RID: 216687 RVA: 0x00C87690 File Offset: 0x00C85890
+		// Token: 0x06029D68 RID: 171368 RVA: 0x00BD4910 File Offset: 0x00BD2B10
 		[NullableContext(1)]
 		private UniTask HandleShowTalkItem(ITalkItem talkItem)
 		{
@@ -206,7 +186,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return <HandleShowTalkItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034E70 RID: 216688 RVA: 0x00C876DC File Offset: 0x00C858DC
+		// Token: 0x06029D69 RID: 171369 RVA: 0x00BD495C File Offset: 0x00BD2B5C
 		private void PlayStartActions()
 		{
 			if (this.IsPlayingStartActions)
@@ -223,14 +203,14 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			FlowController.Instance.ExecuteSubActions(list, new Action<bool>(this.OnStartActionsCompleted), false);
 		}
 
-		// Token: 0x06034E71 RID: 216689 RVA: 0x00C87730 File Offset: 0x00C85930
+		// Token: 0x06029D6A RID: 171370 RVA: 0x00BD49B0 File Offset: 0x00BD2BB0
 		private void OnStartActionsCompleted(bool result)
 		{
 			this.IsPlayingStartActions = false;
 			this.HandleShowTalkItemEnd(null);
 		}
 
-		// Token: 0x06034E72 RID: 216690 RVA: 0x00C87740 File Offset: 0x00C85940
+		// Token: 0x06029D6B RID: 171371 RVA: 0x00BD49C0 File Offset: 0x00BD2BC0
 		private unsafe void HandleShowTalkItemEnd(ITalkItem config = null)
 		{
 			if (this.CurShowTalk == null || this.CurTalkSubtitleEnd || this.IsPlayingStartActions || this.IsShowingSubtitle)
@@ -259,7 +239,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			FlowController.Instance.ExecuteSubActions(talkItem.Actions, new Action<bool>(this.OnTalkActionCompleted), false);
 		}
 
-		// Token: 0x06034E73 RID: 216691 RVA: 0x00C87864 File Offset: 0x00C85A64
+		// Token: 0x06029D6C RID: 171372 RVA: 0x00BD4AE4 File Offset: 0x00BD2CE4
 		private void OnTalkActionCompleted(bool result)
 		{
 			if (!result)
@@ -300,7 +280,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			PlotController.Instance.PlotViewManager.ShowPlotSubtitleOptions();
 		}
 
-		// Token: 0x06034E74 RID: 216692 RVA: 0x00C87964 File Offset: 0x00C85B64
+		// Token: 0x06029D6D RID: 171373 RVA: 0x00BD4BE4 File Offset: 0x00BD2DE4
 		[NullableContext(1)]
 		public void HandleShowTalkItemOption(int optionId, List<ActionInfo> inActions)
 		{
@@ -327,7 +307,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			FlowController.Instance.ExecuteSubActions(inActions, new Action<bool>(this.OnOptionActionCompleted), false);
 		}
 
-		// Token: 0x06034E75 RID: 216693 RVA: 0x00C87A20 File Offset: 0x00C85C20
+		// Token: 0x06029D6E RID: 171374 RVA: 0x00BD4CA0 File Offset: 0x00BD2EA0
 		public void OnOptionActionCompleted(bool result)
 		{
 			if (!result)
@@ -337,7 +317,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			this.NextShowTalkItem();
 		}
 
-		// Token: 0x06034E76 RID: 216694 RVA: 0x00C87A2C File Offset: 0x00C85C2C
+		// Token: 0x06029D6F RID: 171375 RVA: 0x00BD4CAC File Offset: 0x00BD2EAC
 		public void Skip()
 		{
 			if (this.CurTalkItemIndex == -1)
@@ -366,7 +346,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			}
 		}
 
-		// Token: 0x06034E77 RID: 216695 RVA: 0x00C87AD8 File Offset: 0x00C85CD8
+		// Token: 0x06029D70 RID: 171376 RVA: 0x00BD4D58 File Offset: 0x00BD2F58
 		private void CheckLastOption()
 		{
 			if (this.LastHasOption && !this.LastSelectedOption)
@@ -385,7 +365,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			this.LastId = this.CurShowTalk.TalkItems[this.CurTalkItemIndex].Id;
 		}
 
-		// Token: 0x06034E78 RID: 216696 RVA: 0x00C87BB9 File Offset: 0x00C85DB9
+		// Token: 0x06029D71 RID: 171377 RVA: 0x00BD4E39 File Offset: 0x00BD3039
 		private void PlayMontage()
 		{
 			FlowContext context = this.Context;
@@ -396,7 +376,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			PlotModel.Instance.HandlePlayMontage(this.CurTalkItem.Montage);
 		}
 
-		// Token: 0x06034E79 RID: 216697 RVA: 0x00C87BE8 File Offset: 0x00C85DE8
+		// Token: 0x06029D72 RID: 171378 RVA: 0x00BD4E68 File Offset: 0x00BD3068
 		private void PlayGamepadShake(IGamepadShakeInTalk config)
 		{
 			FlowContext context = this.Context;
@@ -411,7 +391,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			}, (float)((int)(config.DelayTime * 1000f)), null, null, true, 1f);
 		}
 
-		// Token: 0x06034E7A RID: 216698 RVA: 0x00C87C6C File Offset: 0x00C85E6C
+		// Token: 0x06029D73 RID: 171379 RVA: 0x00BD4EEC File Offset: 0x00BD30EC
 		private UniTask SetBackgroundImage()
 		{
 			FlowShowTalk.<SetBackgroundImage>d__30 <SetBackgroundImage>d__;
@@ -422,7 +402,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return <SetBackgroundImage>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034E7B RID: 216699 RVA: 0x00C87CB0 File Offset: 0x00C85EB0
+		// Token: 0x06029D74 RID: 171380 RVA: 0x00BD4F30 File Offset: 0x00BD3130
 		[NullableContext(1)]
 		private UniTask SetTemplate(ITalkItem talkItem)
 		{
@@ -435,7 +415,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return <SetTemplate>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034E7C RID: 216700 RVA: 0x00C87CFC File Offset: 0x00C85EFC
+		// Token: 0x06029D75 RID: 171381 RVA: 0x00BD4F7C File Offset: 0x00BD317C
 		private UniTask ShowCenterTextView()
 		{
 			FlowShowTalk.<ShowCenterTextView>d__32 <ShowCenterTextView>d__;
@@ -446,7 +426,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return <ShowCenterTextView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034E7D RID: 216701 RVA: 0x00C87D40 File Offset: 0x00C85F40
+		// Token: 0x06029D76 RID: 171382 RVA: 0x00BD4FC0 File Offset: 0x00BD31C0
 		private void ShowSubtitle()
 		{
 			if (this.Context.IsBackground)
@@ -473,14 +453,14 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			PlotController.Instance.PlotViewManager.UpdatePlotSubtitle(this.CurTalkItem);
 		}
 
-		// Token: 0x06034E7E RID: 216702 RVA: 0x00C87E02 File Offset: 0x00C86002
+		// Token: 0x06029D77 RID: 171383 RVA: 0x00BD5082 File Offset: 0x00BD3282
 		private void SubmitSubtitleInternal(ITalkItem config = null)
 		{
 			this.IsShowingSubtitle = false;
 			this.HandleShowTalkItemEnd(config);
 		}
 
-		// Token: 0x06034E7F RID: 216703 RVA: 0x00C87E12 File Offset: 0x00C86012
+		// Token: 0x06029D78 RID: 171384 RVA: 0x00BD5092 File Offset: 0x00BD3292
 		public void SubmitSubtitle(ITalkItem config)
 		{
 			if (this.Context == null || this.Context.IsBackground)
@@ -490,7 +470,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			this.SubmitSubtitleInternal(config);
 		}
 
-		// Token: 0x06034E80 RID: 216704 RVA: 0x00C87E31 File Offset: 0x00C86031
+		// Token: 0x06029D79 RID: 171385 RVA: 0x00BD50B1 File Offset: 0x00BD32B1
 		[NullableContext(1)]
 		public void SelectOption(int optionId, List<ActionInfo> inActions)
 		{
@@ -501,7 +481,7 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			this.HandleShowTalkItemOption(optionId, inActions);
 		}
 
-		// Token: 0x06034E81 RID: 216705 RVA: 0x00C87E54 File Offset: 0x00C86054
+		// Token: 0x06029D7A RID: 171386 RVA: 0x00BD50D4 File Offset: 0x00BD32D4
 		public bool CheckPlotLevelInAbc()
 		{
 			EPlotLevel? level = this.Level;
@@ -509,49 +489,49 @@ namespace CSharpScript.Game.Module.Plot.Flow
 			return (level.GetValueOrDefault() == eplotLevel & level != null) || this.Level.GetValueOrDefault() == EPlotLevel.LevelB || this.Level.GetValueOrDefault() == EPlotLevel.LevelC;
 		}
 
-		// Token: 0x0401C2EF RID: 115439
+		// Token: 0x04016D20 RID: 93472
 		public ShowTalk CurShowTalk;
 
-		// Token: 0x0401C2F0 RID: 115440
+		// Token: 0x04016D21 RID: 93473
 		public int CurTalkItemIndex;
 
-		// Token: 0x0401C2F1 RID: 115441
+		// Token: 0x04016D22 RID: 93474
 		public FlowContext Context;
 
-		// Token: 0x0401C2F2 RID: 115442
+		// Token: 0x04016D23 RID: 93475
 		private EPlotLevel? Level;
 
-		// Token: 0x0401C2F3 RID: 115443
+		// Token: 0x04016D24 RID: 93476
 		private ITalkItem CurTalkItem;
 
-		// Token: 0x0401C2F4 RID: 115444
+		// Token: 0x04016D25 RID: 93477
 		private int LastId = -1;
 
-		// Token: 0x0401C2F5 RID: 115445
+		// Token: 0x04016D26 RID: 93478
 		private bool LastHasOption;
 
-		// Token: 0x0401C2F6 RID: 115446
+		// Token: 0x04016D27 RID: 93479
 		private bool LastSelectedOption;
 
-		// Token: 0x0401C2F7 RID: 115447
+		// Token: 0x04016D28 RID: 93480
 		private bool IsShowCompleted;
 
-		// Token: 0x0401C2F8 RID: 115448
+		// Token: 0x04016D29 RID: 93481
 		private bool CurTalkSubtitleEnd;
 
-		// Token: 0x0401C2F9 RID: 115449
+		// Token: 0x04016D2A RID: 93482
 		private bool CurOptionShowing;
 
-		// Token: 0x0401C2FA RID: 115450
+		// Token: 0x04016D2B RID: 93483
 		private bool IsPlayingStartActions;
 
-		// Token: 0x0401C2FB RID: 115451
+		// Token: 0x04016D2C RID: 93484
 		public bool IsShowingSubtitle;
 
-		// Token: 0x0401C2FC RID: 115452
+		// Token: 0x04016D2D RID: 93485
 		private IStopGamepadShake StopGamepadShakeParams;
 
-		// Token: 0x0401C2FD RID: 115453
+		// Token: 0x04016D2E RID: 93486
 		private TimerHandle DelayPlayGamepadShakeHandle;
 	}
 }

@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 {
-	// Token: 0x02006316 RID: 25366
+	// Token: 0x02005294 RID: 21140
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballRoleSelectView : UiViewBase
 	{
-		// Token: 0x0603FD0D RID: 261389 RVA: 0x00F701AC File Offset: 0x00F6E3AC
+		// Token: 0x060349CE RID: 215502 RVA: 0x00EB7108 File Offset: 0x00EB5308
 		public PinballRoleSelectView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603FD0E RID: 261390 RVA: 0x00F701CC File Offset: 0x00F6E3CC
+		// Token: 0x060349CF RID: 215503 RVA: 0x00EB7128 File Offset: 0x00EB5328
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603FD0F RID: 261391 RVA: 0x00F7037C File Offset: 0x00F6E57C
+		// Token: 0x060349D0 RID: 215504 RVA: 0x00EB72D8 File Offset: 0x00EB54D8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PinballRoleSelectView.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -69,13 +69,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FD10 RID: 261392 RVA: 0x00F703BF File Offset: 0x00F6E5BF
+		// Token: 0x060349D1 RID: 215505 RVA: 0x00EB731B File Offset: 0x00EB551B
 		protected override void OnBeforeShow()
 		{
 			this.RoleScrollView.ResetGridController();
 		}
 
-		// Token: 0x0603FD11 RID: 261393 RVA: 0x00F703CC File Offset: 0x00F6E5CC
+		// Token: 0x060349D2 RID: 215506 RVA: 0x00EB7328 File Offset: 0x00EB5528
 		protected void BuildAllRoleDataList()
 		{
 			if (this.OpenData == null)
@@ -120,14 +120,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			}
 		}
 
-		// Token: 0x0603FD12 RID: 261394 RVA: 0x00F70570 File Offset: 0x00F6E770
+		// Token: 0x060349D3 RID: 215507 RVA: 0x00EB74CC File Offset: 0x00EB56CC
 		public bool SetSelectedRoleDataByRoleId(int roleId)
 		{
 			int num = this.CurShowGridDataList.FindIndex((IPinballRoleSelectGridItemData role) => role.RoleData.GetId() == roleId);
 			return num >= 0 && this.SetSelectedRoleDataByIndex(num);
 		}
 
-		// Token: 0x0603FD13 RID: 261395 RVA: 0x00F705B0 File Offset: 0x00F6E7B0
+		// Token: 0x060349D4 RID: 215508 RVA: 0x00EB750C File Offset: 0x00EB570C
 		public bool SetSelectedRoleDataByIndex(int index)
 		{
 			if (index < 0 || index >= this.CurShowGridDataList.Count)
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			return true;
 		}
 
-		// Token: 0x0603FD14 RID: 261396 RVA: 0x00F7063C File Offset: 0x00F6E83C
+		// Token: 0x060349D5 RID: 215509 RVA: 0x00EB7598 File Offset: 0x00EB5798
 		public void SelectRoleByIndex(int index)
 		{
 			int selectedIndex = this.SelectedIndex;
@@ -174,7 +174,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			uiViewSequence.PlayOrReplaySequenceByName("Switch", false, null);
 		}
 
-		// Token: 0x0603FD15 RID: 261397 RVA: 0x00F706AC File Offset: 0x00F6E8AC
+		// Token: 0x060349D6 RID: 215510 RVA: 0x00EB7608 File Offset: 0x00EB5808
 		public void SelectRoleByRoleId(int roleId)
 		{
 			int num = this.CurShowGridDataList.FindIndex((IPinballRoleSelectGridItemData role) => role.RoleData.GetId() == roleId);
@@ -185,7 +185,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			this.SelectRoleByIndex(num);
 		}
 
-		// Token: 0x0603FD16 RID: 261398 RVA: 0x00F706EC File Offset: 0x00F6E8EC
+		// Token: 0x060349D7 RID: 215511 RVA: 0x00EB7648 File Offset: 0x00EB5848
 		public void RefreshRole()
 		{
 			PinballRoleSelectView.<>c__DisplayClass21_0 CS$<>8__locals1 = new PinballRoleSelectView.<>c__DisplayClass21_0();
@@ -207,7 +207,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			base.RunAsyncTask(task).Forget();
 		}
 
-		// Token: 0x0603FD17 RID: 261399 RVA: 0x00F70760 File Offset: 0x00F6E960
+		// Token: 0x060349D8 RID: 215512 RVA: 0x00EB76BC File Offset: 0x00EB58BC
 		public UniTask RefreshRoleAsync()
 		{
 			PinballRoleSelectView.<RefreshRoleAsync>d__22 <RefreshRoleAsync>d__;
@@ -218,7 +218,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			return <RefreshRoleAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FD18 RID: 261400 RVA: 0x00F707A4 File Offset: 0x00F6E9A4
+		// Token: 0x060349D9 RID: 215513 RVA: 0x00EB7700 File Offset: 0x00EB5900
 		public UniTask RefreshRoleByRoleDataAsync(IPinballRoleSelectGridItemData gridData)
 		{
 			PinballRoleSelectView.<RefreshRoleByRoleDataAsync>d__23 <RefreshRoleByRoleDataAsync>d__;
@@ -230,7 +230,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			return <RefreshRoleByRoleDataAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FD19 RID: 261401 RVA: 0x00F707EF File Offset: 0x00F6E9EF
+		// Token: 0x060349DA RID: 215514 RVA: 0x00EB774B File Offset: 0x00EB594B
 		private void UpdateRoleList(List<IPinballRoleSelectGridItemData> list, bool isOutSideChange, EFilterSortType operationType)
 		{
 			this.CurShowGridDataList = list;
@@ -241,7 +241,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			}
 		}
 
-		// Token: 0x0603FD1A RID: 261402 RVA: 0x00F7082C File Offset: 0x00F6EA2C
+		// Token: 0x060349DB RID: 215515 RVA: 0x00EB7788 File Offset: 0x00EB5988
 		private PinballRoleSelectGridItem CreateRoleSelectGridItem()
 		{
 			PinballRoleSelectGridItem pinballRoleSelectGridItem = new PinballRoleSelectGridItem();
@@ -249,7 +249,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			return pinballRoleSelectGridItem;
 		}
 
-		// Token: 0x0603FD1B RID: 261403 RVA: 0x00F70848 File Offset: 0x00F6EA48
+		// Token: 0x060349DC RID: 215516 RVA: 0x00EB77A4 File Offset: 0x00EB59A4
 		private void OnGridStateChange(IPinballItemToggleCallback callbackParameter)
 		{
 			if (callbackParameter.State == EToggleState.ETT_Checked)
@@ -259,7 +259,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			}
 		}
 
-		// Token: 0x0603FD1C RID: 261404 RVA: 0x00F70876 File Offset: 0x00F6EA76
+		// Token: 0x060349DD RID: 215517 RVA: 0x00EB77D2 File Offset: 0x00EB59D2
 		private void OnBackButtonClick()
 		{
 			IPinballRoleSelectViewOpenData openData = this.OpenData;
@@ -270,31 +270,31 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			base.CloseMe(null);
 		}
 
-		// Token: 0x040214CD RID: 136397
+		// Token: 0x0401BDFC RID: 114172
 		[Nullable(2)]
 		protected IPinballRoleSelectViewOpenData OpenData;
 
-		// Token: 0x040214CE RID: 136398
+		// Token: 0x0401BDFD RID: 114173
 		protected List<IPinballRoleSelectGridItemData> AllGridDataList = new List<IPinballRoleSelectGridItemData>();
 
-		// Token: 0x040214CF RID: 136399
+		// Token: 0x0401BDFE RID: 114174
 		protected List<IPinballRoleSelectGridItemData> CurShowGridDataList = new List<IPinballRoleSelectGridItemData>();
 
-		// Token: 0x040214D0 RID: 136400
+		// Token: 0x0401BDFF RID: 114175
 		protected int SelectedIndex;
 
-		// Token: 0x040214D1 RID: 136401
+		// Token: 0x0401BE00 RID: 114176
 		protected int SelectedRoleId;
 
-		// Token: 0x040214D2 RID: 136402
+		// Token: 0x0401BE01 RID: 114177
 		[Nullable(2)]
 		protected IPinballRoleSelectGridItemData SelectedRoleData;
 
-		// Token: 0x040214D3 RID: 136403
+		// Token: 0x0401BE02 RID: 114178
 		[Nullable(2)]
 		protected PopupCaptionItem CaptionItem;
 
-		// Token: 0x040214D4 RID: 136404
+		// Token: 0x0401BE03 RID: 114179
 		[Nullable(new byte[]
 		{
 			2,
@@ -303,15 +303,15 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 		})]
 		protected LoopScrollView<PinballRoleSelectGridItem, IPinballRoleSelectGridItemData> RoleScrollView;
 
-		// Token: 0x040214D5 RID: 136405
+		// Token: 0x0401BE04 RID: 114180
 		[Nullable(2)]
 		protected PinballRoleSpineItem RoleSpineItem;
 
-		// Token: 0x040214D6 RID: 136406
+		// Token: 0x0401BE05 RID: 114181
 		[Nullable(2)]
 		protected PinballRoleBdItem BdItem;
 
-		// Token: 0x040214D7 RID: 136407
+		// Token: 0x0401BE06 RID: 114182
 		[Nullable(new byte[]
 		{
 			2,
@@ -319,29 +319,29 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 		})]
 		protected FilterSortEntrance<IPinballRoleSelectGridItemData> FilterSortEntrance;
 
-		// Token: 0x0200C50A RID: 50442
+		// Token: 0x0200AEF1 RID: 44785
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403B774 RID: 243572
+			// Token: 0x040360D6 RID: 221398
 			CaptionItem,
-			// Token: 0x0403B775 RID: 243573
+			// Token: 0x040360D7 RID: 221399
 			RoleLoopScrollView,
-			// Token: 0x0403B776 RID: 243574
+			// Token: 0x040360D8 RID: 221400
 			RoleTemplateItem,
-			// Token: 0x0403B777 RID: 243575
+			// Token: 0x040360D9 RID: 221401
 			RoleSpineItem,
-			// Token: 0x0403B778 RID: 243576
+			// Token: 0x040360DA RID: 221402
 			NameText,
-			// Token: 0x0403B779 RID: 243577
+			// Token: 0x040360DB RID: 221403
 			BdItem,
-			// Token: 0x0403B77A RID: 243578
+			// Token: 0x040360DC RID: 221404
 			LevelText,
-			// Token: 0x0403B77B RID: 243579
+			// Token: 0x040360DD RID: 221405
 			BdBgTexture,
-			// Token: 0x0403B77C RID: 243580
+			// Token: 0x040360DE RID: 221406
 			BackButton,
-			// Token: 0x0403B77D RID: 243581
+			// Token: 0x040360DF RID: 221407
 			FilterSortItem
 		}
 	}

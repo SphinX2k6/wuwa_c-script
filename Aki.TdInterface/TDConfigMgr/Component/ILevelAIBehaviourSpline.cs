@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004B2 RID: 1202
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200050B RID: 1291
 	public class ILevelAIBehaviourSpline : ILevelAIBehaviourBase
 	{
-		// Token: 0x06001844 RID: 6212 RVA: 0x00048BE4 File Offset: 0x00046DE4
+		// Token: 0x060019DE RID: 6622 RVA: 0x0004C92C File Offset: 0x0004AB2C
 		private ILevelAIBehaviourSpline_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001845 RID: 6213 RVA: 0x00048C1C File Offset: 0x00046E1C
+		// Token: 0x060019DF RID: 6623 RVA: 0x0004C964 File Offset: 0x0004AB64
 		public static ILevelAIBehaviourSpline Create([Nullable(2)] ILevelAIBehaviourSpline instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001846 RID: 6214 RVA: 0x00048C2F File Offset: 0x00046E2F
+		// Token: 0x060019E0 RID: 6624 RVA: 0x0004C977 File Offset: 0x0004AB77
 		public static ILevelAIBehaviourSpline CreateFromSetValue([Nullable(2)] ILevelAIBehaviourSpline_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001847 RID: 6215 RVA: 0x00048C42 File Offset: 0x00046E42
+		// Token: 0x060019E1 RID: 6625 RVA: 0x0004C98A File Offset: 0x0004AB8A
 		public new ILevelAIBehaviourSpline_SetValue ToSetValue()
 		{
 			return new ILevelAIBehaviourSpline_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000676 RID: 1654
-		// (get) Token: 0x06001848 RID: 6216 RVA: 0x00048C61 File Offset: 0x00046E61
-		// (set) Token: 0x06001849 RID: 6217 RVA: 0x00048C8C File Offset: 0x00046E8C
+		// Token: 0x170006DD RID: 1757
+		// (get) Token: 0x060019E2 RID: 6626 RVA: 0x0004C9A9 File Offset: 0x0004ABA9
+		// (set) Token: 0x060019E3 RID: 6627 RVA: 0x0004C9D4 File Offset: 0x0004ABD4
 		public override ELevelAIBehaviourType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000677 RID: 1655
-		// (get) Token: 0x0600184A RID: 6218 RVA: 0x00048C9C File Offset: 0x00046E9C
-		// (set) Token: 0x0600184B RID: 6219 RVA: 0x00048CD6 File Offset: 0x00046ED6
+		// Token: 0x170006DE RID: 1758
+		// (get) Token: 0x060019E4 RID: 6628 RVA: 0x0004C9E4 File Offset: 0x0004ABE4
+		// (set) Token: 0x060019E5 RID: 6629 RVA: 0x0004CA1E File Offset: 0x0004AC1E
 		public virtual int? SplineEntityId
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001206 RID: 4614
+		// Token: 0x04001328 RID: 4904
 		[Nullable(2)]
 		protected new ILevelAIBehaviourSpline FbInstance;
 
-		// Token: 0x04001207 RID: 4615
+		// Token: 0x04001329 RID: 4905
 		[Nullable(2)]
 		protected new ILevelAIBehaviourSpline_SetValue PocoInterface;
 	}

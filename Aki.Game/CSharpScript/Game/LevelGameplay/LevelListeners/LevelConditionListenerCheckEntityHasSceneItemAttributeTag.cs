@@ -5,12 +5,12 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 {
-	// Token: 0x02006ADC RID: 27356
+	// Token: 0x02005C54 RID: 23636
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class LevelConditionListenerCheckEntityHasSceneItemAttributeTag : LevelListenerBase
 	{
-		// Token: 0x06043F6A RID: 278378 RVA: 0x010AB960 File Offset: 0x010A9B60
+		// Token: 0x0603A0BC RID: 237756 RVA: 0x010551D8 File Offset: 0x010533D8
 		[NullableContext(1)]
 		protected override void OnListen(object listeningInfo, TListenerCallbackFunc callback, [Nullable(2)] GeneralContext context = null, params object[] otherParams)
 		{
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			}, 60000, false, true);
 		}
 
-		// Token: 0x06043F6B RID: 278379 RVA: 0x010AB9B4 File Offset: 0x010A9BB4
+		// Token: 0x0603A0BD RID: 237757 RVA: 0x0105522C File Offset: 0x0105342C
 		private void HandleListenEntityAttributeTagChange()
 		{
 			Entity listeningEntity = this.ListeningEntity;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			}
 		}
 
-		// Token: 0x06043F6C RID: 278380 RVA: 0x010ABA80 File Offset: 0x010A9C80
+		// Token: 0x0603A0BE RID: 237758 RVA: 0x010552F8 File Offset: 0x010534F8
 		private void OnEntityAttributeTagChange(int tagId, bool tagExist)
 		{
 			TListenerCallbackFunc callback = this.Callback;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			callback(null, Array.Empty<object>());
 		}
 
-		// Token: 0x06043F6D RID: 278381 RVA: 0x010ABA98 File Offset: 0x010A9C98
+		// Token: 0x0603A0BF RID: 237759 RVA: 0x01055310 File Offset: 0x01053510
 		protected override void OnUnListen()
 		{
 			EventSystem.Instance.RemoveAllTargetUseKey(this);
@@ -80,10 +80,10 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			}
 		}
 
-		// Token: 0x0402385E RID: 145502
+		// Token: 0x0401EB00 RID: 125696
 		private Entity ListeningEntity;
 
-		// Token: 0x0402385F RID: 145503
+		// Token: 0x0401EB01 RID: 125697
 		private WaitEntityTask WaitEntityTask;
 	}
 }

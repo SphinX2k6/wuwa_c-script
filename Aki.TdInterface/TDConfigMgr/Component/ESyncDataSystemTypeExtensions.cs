@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000A28 RID: 2600
+	// Token: 0x02000AED RID: 2797
 	public static class ESyncDataSystemTypeExtensions
 	{
-		// Token: 0x06003965 RID: 14693 RVA: 0x0009440C File Offset: 0x0009260C
+		// Token: 0x06003D3D RID: 15677 RVA: 0x0009CD40 File Offset: 0x0009AF40
 		public static string ToEnumString(this ESyncDataSystemType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003966 RID: 14694 RVA: 0x00094434 File Offset: 0x00092634
+		// Token: 0x06003D3E RID: 15678 RVA: 0x0009CD68 File Offset: 0x0009AF68
 		public static ESyncDataSystemType FromString(string name)
 		{
 			ESyncDataSystemType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003967 RID: 14695 RVA: 0x0009445D File Offset: 0x0009265D
+		// Token: 0x06003D3F RID: 15679 RVA: 0x0009CD91 File Offset: 0x0009AF91
 		public static bool TryFromString(string name, out ESyncDataSystemType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x06003968 RID: 14696 RVA: 0x00094482 File Offset: 0x00092682
+		// Token: 0x06003D40 RID: 15680 RVA: 0x0009CDB6 File Offset: 0x0009AFB6
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003969 RID: 14697 RVA: 0x00094492 File Offset: 0x00092692
+		// Token: 0x06003D41 RID: 15681 RVA: 0x0009CDC6 File Offset: 0x0009AFC6
 		public static ESyncDataSystemType[] GetValues()
 		{
 			return new ESyncDataSystemType[1];
 		}
 
-		// Token: 0x0600396A RID: 14698 RVA: 0x0009449A File Offset: 0x0009269A
+		// Token: 0x06003D42 RID: 15682 RVA: 0x0009CDCE File Offset: 0x0009AFCE
 		public static string[] GetNames()
 		{
 			return new string[]

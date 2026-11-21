@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000289 RID: 649
+	// Token: 0x0200029D RID: 669
 	public class ConfigExchangeParamById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000F3B RID: 3899 RVA: 0x000AF980 File Offset: 0x000ADB80
+		// Token: 0x06000FB3 RID: 4019 RVA: 0x000B5C44 File Offset: 0x000B3E44
 		static ConfigExchangeParamById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigExchangeParamById.CreateStaticDefaultValue), new Action(ConfigExchangeParamById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000F3C RID: 3900 RVA: 0x000AF9A0 File Offset: 0x000ADBA0
+		// Token: 0x06000FB4 RID: 4020 RVA: 0x000B5C64 File Offset: 0x000B3E64
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigExchangeParamById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000F3D RID: 3901 RVA: 0x000AFA1F File Offset: 0x000ADC1F
+		// Token: 0x06000FB5 RID: 4021 RVA: 0x000B5CE3 File Offset: 0x000B3EE3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigExchangeParamById.LogPair = null;
 			ConfigExchangeParamById.HandleId = 0;
 		}
 
-		// Token: 0x06000F3E RID: 3902 RVA: 0x000AFA2D File Offset: 0x000ADC2D
+		// Token: 0x06000FB6 RID: 4022 RVA: 0x000B5CF1 File Offset: 0x000B3EF1
 		public static void Init()
 		{
 			ConfigExchangeParamById.HandleId = ConfigCommon.InitDataStatement(ConfigExchangeParamById.HandleId, "db_compose.db", "select BinData from `ExchangeParam` where Id=?");
 		}
 
-		// Token: 0x06000F3F RID: 3903 RVA: 0x000AFA48 File Offset: 0x000ADC48
+		// Token: 0x06000FB7 RID: 4023 RVA: 0x000B5D0C File Offset: 0x000B3F0C
 		public static ExchangeParam? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigExchangeParamById.HandleId, ConfigExchangeParamById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new ExchangeParam?(rootAsExchangeParam);
 		}
 
-		// Token: 0x040011A3 RID: 4515
+		// Token: 0x0400122F RID: 4655
 		private const string DB = "db_compose.db";
 
-		// Token: 0x040011A4 RID: 4516
+		// Token: 0x04001230 RID: 4656
 		private const string FILE = "h.合成.xlsx";
 
-		// Token: 0x040011A5 RID: 4517
+		// Token: 0x04001231 RID: 4657
 		private const string TABLE = "ExchangeParam";
 
-		// Token: 0x040011A6 RID: 4518
+		// Token: 0x04001232 RID: 4658
 		private const string COMMAND = "select BinData from `ExchangeParam` where Id=?";
 
-		// Token: 0x040011A7 RID: 4519
+		// Token: 0x04001233 RID: 4659
 		private const string KEY_PREFIX = "ExchangeParamById";
 
-		// Token: 0x040011A8 RID: 4520
+		// Token: 0x04001234 RID: 4660
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040011A9 RID: 4521
+		// Token: 0x04001235 RID: 4661
 		private static int HandleId;
 	}
 }

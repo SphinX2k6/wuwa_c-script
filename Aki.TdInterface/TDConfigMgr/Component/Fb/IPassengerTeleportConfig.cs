@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D4E RID: 3406
+	// Token: 0x02000E48 RID: 3656
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IPassengerTeleportConfig
 	{
-		// Token: 0x06004D9F RID: 19871 RVA: 0x000C0F30 File Offset: 0x000BF130
-		[NullableContext(1)]
+		// Token: 0x060052BB RID: 21179 RVA: 0x000CC674 File Offset: 0x000CA874
+		[NullableContext(0)]
 		public static IPassengerTeleportConfig Create(IPassengerTeleportConfig? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170018C0 RID: 6336
-		// (get) Token: 0x06004DA0 RID: 19872 RVA: 0x000C0F4F File Offset: 0x000BF14F
+		// Token: 0x17001A26 RID: 6694
+		// (get) Token: 0x060052BC RID: 21180 RVA: 0x000CC693 File Offset: 0x000CA893
 		public virtual PosA PosA
 		{
 			get
@@ -40,13 +40,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002C7B RID: 11387
+		// Token: 0x04002F3B RID: 12091
 		private IPassengerTeleportConfig Instance;
 
-		// Token: 0x04002C7C RID: 11388
+		// Token: 0x04002F3C RID: 12092
 		private PosA _PosACache;
 
-		// Token: 0x04002C7D RID: 11389
+		// Token: 0x04002F3D RID: 12093
 		private bool _PosAInited;
 	}
 }

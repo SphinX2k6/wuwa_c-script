@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Physics
 {
-	// Token: 0x02004345 RID: 17221
+	// Token: 0x020047A7 RID: 18343
 	public struct IAngularConstraintMotion : IFlatbufferObject
 	{
-		// Token: 0x17007995 RID: 31125
-		// (get) Token: 0x06019881 RID: 104577 RVA: 0x003A7CF1 File Offset: 0x003A5EF1
+		// Token: 0x17007FCA RID: 32714
+		// (get) Token: 0x0601B00F RID: 110607 RVA: 0x003D3719 File Offset: 0x003D1919
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Physics
 			}
 		}
 
-		// Token: 0x06019882 RID: 104578 RVA: 0x003A7CFE File Offset: 0x003A5EFE
+		// Token: 0x0601B010 RID: 110608 RVA: 0x003D3726 File Offset: 0x003D1926
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06019883 RID: 104579 RVA: 0x003A7D08 File Offset: 0x003A5F08
+		// Token: 0x0601B011 RID: 110609 RVA: 0x003D3730 File Offset: 0x003D1930
 		public static IAngularConstraintMotion GetRootAsIAngularConstraintMotion(ByteBuffer _bb)
 		{
 			return IAngularConstraintMotion.GetRootAsIAngularConstraintMotion(_bb, default(IAngularConstraintMotion));
 		}
 
-		// Token: 0x06019884 RID: 104580 RVA: 0x003A7D24 File Offset: 0x003A5F24
+		// Token: 0x0601B012 RID: 110610 RVA: 0x003D374C File Offset: 0x003D194C
 		public static IAngularConstraintMotion GetRootAsIAngularConstraintMotion(ByteBuffer _bb, IAngularConstraintMotion obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06019885 RID: 104581 RVA: 0x003A7D41 File Offset: 0x003A5F41
+		// Token: 0x0601B013 RID: 110611 RVA: 0x003D3769 File Offset: 0x003D1969
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06019886 RID: 104582 RVA: 0x003A7D50 File Offset: 0x003A5F50
+		// Token: 0x0601B014 RID: 110612 RVA: 0x003D3778 File Offset: 0x003D1978
 		public IAngularConstraintMotion __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007996 RID: 31126
-		// (get) Token: 0x06019887 RID: 104583 RVA: 0x003A7D60 File Offset: 0x003A5F60
+		// Token: 0x17007FCB RID: 32715
+		// (get) Token: 0x0601B015 RID: 110613 RVA: 0x003D3788 File Offset: 0x003D1988
 		public EAngularConstraintMotion Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Physics
 			}
 		}
 
-		// Token: 0x06019888 RID: 104584 RVA: 0x003A7D9C File Offset: 0x003A5F9C
+		// Token: 0x0601B016 RID: 110614 RVA: 0x003D37C4 File Offset: 0x003D19C4
 		public static Offset<IAngularConstraintMotion> CreateIAngularConstraintMotion(FlatBufferBuilder builder, EAngularConstraintMotion Type = EAngularConstraintMotion.ACM_Free)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Physics
 			return IAngularConstraintMotion.EndIAngularConstraintMotion(builder);
 		}
 
-		// Token: 0x06019889 RID: 104585 RVA: 0x003A7DB2 File Offset: 0x003A5FB2
+		// Token: 0x0601B017 RID: 110615 RVA: 0x003D37DA File Offset: 0x003D19DA
 		public static void StartIAngularConstraintMotion(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0601988A RID: 104586 RVA: 0x003A7DBB File Offset: 0x003A5FBB
+		// Token: 0x0601B018 RID: 110616 RVA: 0x003D37E3 File Offset: 0x003D19E3
 		public static void AddType(FlatBufferBuilder builder, EAngularConstraintMotion type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601988B RID: 104587 RVA: 0x003A7DC6 File Offset: 0x003A5FC6
+		// Token: 0x0601B019 RID: 110617 RVA: 0x003D37EE File Offset: 0x003D19EE
 		public static Offset<IAngularConstraintMotion> EndIAngularConstraintMotion(FlatBufferBuilder builder)
 		{
 			return new Offset<IAngularConstraintMotion>(builder.EndTable());
 		}
 
-		// Token: 0x0601988C RID: 104588 RVA: 0x003A7DD4 File Offset: 0x003A5FD4
+		// Token: 0x0601B01A RID: 110618 RVA: 0x003D37FC File Offset: 0x003D19FC
 		public IAngularConstraintMotionT UnPack()
 		{
 			IAngularConstraintMotionT angularConstraintMotionT = new IAngularConstraintMotionT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Physics
 			return angularConstraintMotionT;
 		}
 
-		// Token: 0x0601988D RID: 104589 RVA: 0x003A7DEF File Offset: 0x003A5FEF
+		// Token: 0x0601B01B RID: 110619 RVA: 0x003D3817 File Offset: 0x003D1A17
 		public void UnPackTo(IAngularConstraintMotionT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0601988E RID: 104590 RVA: 0x003A7E00 File Offset: 0x003A6000
+		// Token: 0x0601B01C RID: 110620 RVA: 0x003D3828 File Offset: 0x003D1A28
 		public static Offset<IAngularConstraintMotion> Pack(FlatBufferBuilder builder, IAngularConstraintMotionT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Physics
 			return IAngularConstraintMotion.CreateIAngularConstraintMotion(builder, _o.Type);
 		}
 
-		// Token: 0x0400C11E RID: 49438
+		// Token: 0x0400CB3C RID: 52028
 		private Table __p;
 	}
 }

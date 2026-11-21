@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 using Aki.Config;
-using CSharpScript.Game.Module.Activity.ActivityContent.Encircle;
+using Aki.Game.Module.Activity.ActivityContent.Encircle;
 using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006C79 RID: 27769
+	// Token: 0x02005DF3 RID: 24051
 	public class LevelConditionCheckEncircleCurrentChallengeId : LevelConditionBase
 	{
-		// Token: 0x0604457F RID: 279935 RVA: 0x010D9588 File Offset: 0x010D7788
+		// Token: 0x0603A6D9 RID: 239321 RVA: 0x0108352C File Offset: 0x0108172C
 		[NullableContext(1)]
 		public override bool Check(Condition inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{

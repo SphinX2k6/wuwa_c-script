@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001183 RID: 4483
+	// Token: 0x020011BD RID: 4541
 	public sealed class SceneMonsterState : IMessage<SceneMonsterState>, IMessage, IEquatable<SceneMonsterState>, IDeepCloneable<SceneMonsterState>, IBufferMessage
 	{
-		// Token: 0x06017E3B RID: 97851 RVA: 0x00377E34 File Offset: 0x00376034
+		// Token: 0x060183DC RID: 99292 RVA: 0x00387178 File Offset: 0x00385378
 		[NullableContext(1)]
 		public static SceneMonsterState Create()
 		{
 			return new SceneMonsterState();
 		}
 
-		// Token: 0x1700503A RID: 20538
-		// (get) Token: 0x06017E3C RID: 97852 RVA: 0x00377E3B File Offset: 0x0037603B
+		// Token: 0x170051A6 RID: 20902
+		// (get) Token: 0x060183DD RID: 99293 RVA: 0x0038717F File Offset: 0x0038537F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700503B RID: 20539
-		// (get) Token: 0x06017E3D RID: 97853 RVA: 0x00377E3E File Offset: 0x0037603E
+		// Token: 0x170051A7 RID: 20903
+		// (get) Token: 0x060183DE RID: 99294 RVA: 0x00387182 File Offset: 0x00385382
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -41,14 +41,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06017E3E RID: 97854 RVA: 0x00377E45 File Offset: 0x00376045
+		// Token: 0x060183DF RID: 99295 RVA: 0x00387189 File Offset: 0x00385389
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SceneMonsterState()
 		{
 		}
 
-		// Token: 0x06017E3F RID: 97855 RVA: 0x00377E4D File Offset: 0x0037604D
+		// Token: 0x060183E0 RID: 99296 RVA: 0x00387191 File Offset: 0x00385391
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SceneMonsterState(SceneMonsterState other) : this()
@@ -56,7 +56,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06017E40 RID: 97856 RVA: 0x00377E66 File Offset: 0x00376066
+		// Token: 0x060183E1 RID: 99297 RVA: 0x003871AA File Offset: 0x003853AA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SceneMonsterState Clone()
@@ -64,7 +64,7 @@ namespace Aki.Protocol
 			return new SceneMonsterState(this);
 		}
 
-		// Token: 0x06017E41 RID: 97857 RVA: 0x00377E6E File Offset: 0x0037606E
+		// Token: 0x060183E2 RID: 99298 RVA: 0x003871B2 File Offset: 0x003853B2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -72,7 +72,7 @@ namespace Aki.Protocol
 			return this.Equals(other as SceneMonsterState);
 		}
 
-		// Token: 0x06017E42 RID: 97858 RVA: 0x00377E7C File Offset: 0x0037607C
+		// Token: 0x060183E3 RID: 99299 RVA: 0x003871C0 File Offset: 0x003853C0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(SceneMonsterState other)
@@ -80,7 +80,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || object.Equals(this._unknownFields, other._unknownFields));
 		}
 
-		// Token: 0x06017E43 RID: 97859 RVA: 0x00377E9C File Offset: 0x0037609C
+		// Token: 0x060183E4 RID: 99300 RVA: 0x003871E0 File Offset: 0x003853E0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -93,7 +93,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06017E44 RID: 97860 RVA: 0x00377EC2 File Offset: 0x003760C2
+		// Token: 0x060183E5 RID: 99301 RVA: 0x00387206 File Offset: 0x00385406
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -101,7 +101,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06017E45 RID: 97861 RVA: 0x00377ECF File Offset: 0x003760CF
+		// Token: 0x060183E6 RID: 99302 RVA: 0x00387213 File Offset: 0x00385413
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06017E46 RID: 97862 RVA: 0x00377ED8 File Offset: 0x003760D8
+		// Token: 0x060183E7 RID: 99303 RVA: 0x0038721C File Offset: 0x0038541C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -120,7 +120,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06017E47 RID: 97863 RVA: 0x00377EF0 File Offset: 0x003760F0
+		// Token: 0x060183E8 RID: 99304 RVA: 0x00387234 File Offset: 0x00385434
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -133,7 +133,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06017E48 RID: 97864 RVA: 0x00377F16 File Offset: 0x00376116
+		// Token: 0x060183E9 RID: 99305 RVA: 0x0038725A File Offset: 0x0038545A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(SceneMonsterState other)
@@ -145,7 +145,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06017E49 RID: 97865 RVA: 0x00377F33 File Offset: 0x00376133
+		// Token: 0x060183EA RID: 99306 RVA: 0x00387277 File Offset: 0x00385477
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -153,7 +153,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06017E4A RID: 97866 RVA: 0x00377F3C File Offset: 0x0037613C
+		// Token: 0x060183EB RID: 99307 RVA: 0x00387280 File Offset: 0x00385480
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -169,24 +169,24 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04008D7F RID: 36223
+		// Token: 0x04009012 RID: 36882
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0200197A RID: 6522
+		// Token: 0x02001A06 RID: 6662
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static class Types
 		{
-			// Token: 0x02001A0F RID: 6671
+			// Token: 0x02001AB1 RID: 6833
 			public enum ENUMS
 			{
-				// Token: 0x0400CC31 RID: 52273
+				// Token: 0x0400D19B RID: 53659
 				[OriginalName("NotCreate")]
 				NotCreate,
-				// Token: 0x0400CC32 RID: 52274
+				// Token: 0x0400D19C RID: 53660
 				[OriginalName("Alive")]
 				Alive,
-				// Token: 0x0400CC33 RID: 52275
+				// Token: 0x0400D19D RID: 53661
 				[OriginalName("Death")]
 				Death
 			}

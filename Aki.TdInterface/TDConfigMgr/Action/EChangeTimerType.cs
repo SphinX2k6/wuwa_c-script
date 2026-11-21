@@ -3,15 +3,15 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020015A6 RID: 5542
+	// Token: 0x02001705 RID: 5893
 	[EnumExtensions]
 	public enum EChangeTimerType
 	{
-		// Token: 0x040049CA RID: 18890
+		// Token: 0x04004D7C RID: 19836
 		Add,
-		// Token: 0x040049CB RID: 18891
+		// Token: 0x04004D7D RID: 19837
 		Reduce,
-		// Token: 0x040049CC RID: 18892
+		// Token: 0x04004D7E RID: 19838
 		Set
 	}
 }

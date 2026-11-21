@@ -3,25 +3,25 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003EBB RID: 16059
+	// Token: 0x020042F9 RID: 17145
 	public class IItemObtainT
 	{
-		// Token: 0x17006F78 RID: 28536
-		// (get) Token: 0x06016B0C RID: 92940 RVA: 0x00346ADD File Offset: 0x00344CDD
-		// (set) Token: 0x06016B0D RID: 92941 RVA: 0x00346AE5 File Offset: 0x00344CE5
+		// Token: 0x17007565 RID: 30053
+		// (get) Token: 0x06018159 RID: 98649 RVA: 0x0036FA65 File Offset: 0x0036DC65
+		// (set) Token: 0x0601815A RID: 98650 RVA: 0x0036FA6D File Offset: 0x0036DC6D
 		public EShowUiType Type { get; set; }
 
-		// Token: 0x17006F79 RID: 28537
-		// (get) Token: 0x06016B0E RID: 92942 RVA: 0x00346AEE File Offset: 0x00344CEE
-		// (set) Token: 0x06016B0F RID: 92943 RVA: 0x00346AF6 File Offset: 0x00344CF6
+		// Token: 0x17007566 RID: 30054
+		// (get) Token: 0x0601815B RID: 98651 RVA: 0x0036FA76 File Offset: 0x0036DC76
+		// (set) Token: 0x0601815C RID: 98652 RVA: 0x0036FA7E File Offset: 0x0036DC7E
 		public List<int> ItemIds { get; set; }
 
-		// Token: 0x17006F7A RID: 28538
-		// (get) Token: 0x06016B10 RID: 92944 RVA: 0x00346AFF File Offset: 0x00344CFF
-		// (set) Token: 0x06016B11 RID: 92945 RVA: 0x00346B07 File Offset: 0x00344D07
+		// Token: 0x17007567 RID: 30055
+		// (get) Token: 0x0601815D RID: 98653 RVA: 0x0036FA87 File Offset: 0x0036DC87
+		// (set) Token: 0x0601815E RID: 98654 RVA: 0x0036FA8F File Offset: 0x0036DC8F
 		public byte NullMask { get; set; }
 
-		// Token: 0x06016B12 RID: 92946 RVA: 0x00346B10 File Offset: 0x00344D10
+		// Token: 0x0601815F RID: 98655 RVA: 0x0036FA98 File Offset: 0x0036DC98
 		public IItemObtainT()
 		{
 			this.Type = EShowUiType.All;

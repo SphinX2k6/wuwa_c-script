@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Match
 {
-	// Token: 0x020043F6 RID: 17398
+	// Token: 0x0200485B RID: 18523
 	public enum ESunSpiritInteractType : byte
 	{
-		// Token: 0x0400C33C RID: 49980
+		// Token: 0x0400CD64 RID: 52580
 		RollingBall
 	}
 }

@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002790 RID: 10128
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A62 RID: 10850
 	public class ShowSpecificEntities : ActionParams
 	{
-		// Token: 0x0600E176 RID: 57718 RVA: 0x002150D0 File Offset: 0x002132D0
+		// Token: 0x0600EF94 RID: 61332 RVA: 0x00231E64 File Offset: 0x00230064
 		public static ShowSpecificEntities Create(IShowSpecificEntities? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004418 RID: 17432
-		// (get) Token: 0x0600E177 RID: 57719 RVA: 0x002150F0 File Offset: 0x002132F0
+		// Token: 0x1700477E RID: 18302
+		// (get) Token: 0x0600EF95 RID: 61333 RVA: 0x00231E84 File Offset: 0x00230084
 		public virtual List<int> EntityIds
 		{
 			get
@@ -44,8 +41,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004419 RID: 17433
-		// (get) Token: 0x0600E178 RID: 57720 RVA: 0x00215154 File Offset: 0x00213354
+		// Token: 0x1700477F RID: 18303
+		// (get) Token: 0x0600EF96 RID: 61334 RVA: 0x00231EE8 File Offset: 0x002300E8
 		public virtual bool DelayShow
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007CFE RID: 31998
+		// Token: 0x040083B4 RID: 33716
 		private IShowSpecificEntities Instance;
 
-		// Token: 0x04007CFF RID: 31999
+		// Token: 0x040083B5 RID: 33717
 		private List<int> _EntityIdsCache;
 
-		// Token: 0x04007D00 RID: 32000
+		// Token: 0x040083B6 RID: 33718
 		private bool _EntityIdsInited;
 	}
 }

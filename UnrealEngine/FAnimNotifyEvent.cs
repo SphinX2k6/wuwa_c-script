@@ -6,20 +6,22 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000827 RID: 2087
+	// Token: 0x0200017C RID: 380
+	[NullableContext(2)]
+	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.AnimNotifyEvent")]
 	[UnrealStructLayout(224, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 224)]
 	public class FAnimNotifyEvent : FAnimLinkableElement, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0600703C RID: 28732 RVA: 0x000A0FAC File Offset: 0x0009F1AC
+		// Token: 0x06001816 RID: 6166 RVA: 0x00024DB1 File Offset: 0x00022FB1
 		public new static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FAnimNotifyEvent._ScriptStructPtr != 0) ? FAnimNotifyEvent._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/Engine.AnimNotifyEvent", ref FAnimNotifyEvent._ScriptStructPtr);
 		}
 
-		// Token: 0x17001A63 RID: 6755
-		// (get) Token: 0x0600703D RID: 28733 RVA: 0x000A0FD0 File Offset: 0x0009F1D0
-		// (set) Token: 0x0600703E RID: 28734 RVA: 0x000A0FE0 File Offset: 0x0009F1E0
+		// Token: 0x1700028E RID: 654
+		// (get) Token: 0x06001817 RID: 6167 RVA: 0x00024DD5 File Offset: 0x00022FD5
+		// (set) Token: 0x06001818 RID: 6168 RVA: 0x00024DE5 File Offset: 0x00022FE5
 		public unsafe float DisplayTime_DEPRECATED
 		{
 			get
@@ -32,9 +34,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001A64 RID: 6756
-		// (get) Token: 0x0600703F RID: 28735 RVA: 0x000A0FF1 File Offset: 0x0009F1F1
-		// (set) Token: 0x06007040 RID: 28736 RVA: 0x000A1001 File Offset: 0x0009F201
+		// Token: 0x1700028F RID: 655
+		// (get) Token: 0x06001819 RID: 6169 RVA: 0x00024DF6 File Offset: 0x00022FF6
+		// (set) Token: 0x0600181A RID: 6170 RVA: 0x00024E06 File Offset: 0x00023006
 		public unsafe float TriggerTimeOffset
 		{
 			get
@@ -47,9 +49,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001A65 RID: 6757
-		// (get) Token: 0x06007041 RID: 28737 RVA: 0x000A1012 File Offset: 0x0009F212
-		// (set) Token: 0x06007042 RID: 28738 RVA: 0x000A1022 File Offset: 0x0009F222
+		// Token: 0x17000290 RID: 656
+		// (get) Token: 0x0600181B RID: 6171 RVA: 0x00024E17 File Offset: 0x00023017
+		// (set) Token: 0x0600181C RID: 6172 RVA: 0x00024E27 File Offset: 0x00023027
 		public unsafe float EndTriggerTimeOffset
 		{
 			get
@@ -62,9 +64,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001A66 RID: 6758
-		// (get) Token: 0x06007043 RID: 28739 RVA: 0x000A1033 File Offset: 0x0009F233
-		// (set) Token: 0x06007044 RID: 28740 RVA: 0x000A1043 File Offset: 0x0009F243
+		// Token: 0x17000291 RID: 657
+		// (get) Token: 0x0600181D RID: 6173 RVA: 0x00024E38 File Offset: 0x00023038
+		// (set) Token: 0x0600181E RID: 6174 RVA: 0x00024E48 File Offset: 0x00023048
 		public unsafe float TriggerWeightThreshold
 		{
 			get
@@ -77,9 +79,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001A67 RID: 6759
-		// (get) Token: 0x06007045 RID: 28741 RVA: 0x000A1054 File Offset: 0x0009F254
-		// (set) Token: 0x06007046 RID: 28742 RVA: 0x000A1068 File Offset: 0x0009F268
+		// Token: 0x17000292 RID: 658
+		// (get) Token: 0x0600181F RID: 6175 RVA: 0x00024E59 File Offset: 0x00023059
+		// (set) Token: 0x06001820 RID: 6176 RVA: 0x00024E6D File Offset: 0x0002306D
 		public unsafe FName NotifyName
 		{
 			get
@@ -92,45 +94,39 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001A68 RID: 6760
-		// (get) Token: 0x06007047 RID: 28743 RVA: 0x000A107D File Offset: 0x0009F27D
-		// (set) Token: 0x06007048 RID: 28744 RVA: 0x000A1091 File Offset: 0x0009F291
-		[Nullable(2)]
+		// Token: 0x17000293 RID: 659
+		// (get) Token: 0x06001821 RID: 6177 RVA: 0x00024E82 File Offset: 0x00023082
+		// (set) Token: 0x06001822 RID: 6178 RVA: 0x00024E96 File Offset: 0x00023096
 		public unsafe UAnimNotify Notify
 		{
-			[NullableContext(2)]
 			get
 			{
 				return BuiltinUtils.ObjectPropertyGetter<UAnimNotify>(base.NativePtr / (IntPtr)sizeof(void*) + FAnimNotifyEvent.__PropertyOffset_Notify);
 			}
-			[NullableContext(2)]
 			set
 			{
 				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + FAnimNotifyEvent.__PropertyOffset_Notify, value);
 			}
 		}
 
-		// Token: 0x17001A69 RID: 6761
-		// (get) Token: 0x06007049 RID: 28745 RVA: 0x000A10A6 File Offset: 0x0009F2A6
-		// (set) Token: 0x0600704A RID: 28746 RVA: 0x000A10BA File Offset: 0x0009F2BA
-		[Nullable(2)]
+		// Token: 0x17000294 RID: 660
+		// (get) Token: 0x06001823 RID: 6179 RVA: 0x00024EAB File Offset: 0x000230AB
+		// (set) Token: 0x06001824 RID: 6180 RVA: 0x00024EBF File Offset: 0x000230BF
 		public unsafe UAnimNotifyState NotifyStateClass
 		{
-			[NullableContext(2)]
 			get
 			{
 				return BuiltinUtils.ObjectPropertyGetter<UAnimNotifyState>(base.NativePtr / (IntPtr)sizeof(void*) + FAnimNotifyEvent.__PropertyOffset_NotifyStateClass);
 			}
-			[NullableContext(2)]
 			set
 			{
 				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + FAnimNotifyEvent.__PropertyOffset_NotifyStateClass, value);
 			}
 		}
 
-		// Token: 0x17001A6A RID: 6762
-		// (get) Token: 0x0600704B RID: 28747 RVA: 0x000A10CF File Offset: 0x0009F2CF
-		// (set) Token: 0x0600704C RID: 28748 RVA: 0x000A10DF File Offset: 0x0009F2DF
+		// Token: 0x17000295 RID: 661
+		// (get) Token: 0x06001825 RID: 6181 RVA: 0x00024ED4 File Offset: 0x000230D4
+		// (set) Token: 0x06001826 RID: 6182 RVA: 0x00024EE4 File Offset: 0x000230E4
 		public unsafe float Duration
 		{
 			get
@@ -143,9 +139,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001A6B RID: 6763
-		// (get) Token: 0x0600704D RID: 28749 RVA: 0x000A10F0 File Offset: 0x0009F2F0
-		// (set) Token: 0x0600704E RID: 28750 RVA: 0x000A1133 File Offset: 0x0009F333
+		// Token: 0x17000296 RID: 662
+		// (get) Token: 0x06001827 RID: 6183 RVA: 0x00024EF8 File Offset: 0x000230F8
+		// (set) Token: 0x06001828 RID: 6184 RVA: 0x00024F3B File Offset: 0x0002313B
 		[Nullable(1)]
 		public FAnimLinkableElement EndLink
 		{
@@ -167,9 +163,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001A6C RID: 6764
-		// (get) Token: 0x0600704F RID: 28751 RVA: 0x000A1154 File Offset: 0x0009F354
-		// (set) Token: 0x06007050 RID: 28752 RVA: 0x000A1164 File Offset: 0x0009F364
+		// Token: 0x17000297 RID: 663
+		// (get) Token: 0x06001829 RID: 6185 RVA: 0x00024F5C File Offset: 0x0002315C
+		// (set) Token: 0x0600182A RID: 6186 RVA: 0x00024F6C File Offset: 0x0002316C
 		public unsafe bool bConvertedFromBranchingPoint
 		{
 			get
@@ -182,24 +178,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001A6D RID: 6765
-		// (get) Token: 0x06007051 RID: 28753 RVA: 0x000A1175 File Offset: 0x0009F375
-		// (set) Token: 0x06007052 RID: 28754 RVA: 0x000A1189 File Offset: 0x0009F389
-		public unsafe TEnumAsByte<EMontageNotifyTickType> MontageTickType
-		{
-			get
-			{
-				return *(base.NativePtr + (IntPtr)FAnimNotifyEvent.__PropertyOffset_MontageTickType);
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)FAnimNotifyEvent.__PropertyOffset_MontageTickType) = value;
-			}
-		}
-
-		// Token: 0x17001A6E RID: 6766
-		// (get) Token: 0x06007053 RID: 28755 RVA: 0x000A119E File Offset: 0x0009F39E
-		// (set) Token: 0x06007054 RID: 28756 RVA: 0x000A11AE File Offset: 0x0009F3AE
+		// Token: 0x17000298 RID: 664
+		// (get) Token: 0x0600182B RID: 6187 RVA: 0x00024F7D File Offset: 0x0002317D
+		// (set) Token: 0x0600182C RID: 6188 RVA: 0x00024F8D File Offset: 0x0002318D
 		public unsafe bool bEnabled
 		{
 			get
@@ -212,9 +193,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001A6F RID: 6767
-		// (get) Token: 0x06007055 RID: 28757 RVA: 0x000A11BF File Offset: 0x0009F3BF
-		// (set) Token: 0x06007056 RID: 28758 RVA: 0x000A11CF File Offset: 0x0009F3CF
+		// Token: 0x17000299 RID: 665
+		// (get) Token: 0x0600182D RID: 6189 RVA: 0x00024F9E File Offset: 0x0002319E
+		// (set) Token: 0x0600182E RID: 6190 RVA: 0x00024FAE File Offset: 0x000231AE
 		public unsafe float NotifyTriggerChance
 		{
 			get
@@ -227,24 +208,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001A70 RID: 6768
-		// (get) Token: 0x06007057 RID: 28759 RVA: 0x000A11E0 File Offset: 0x0009F3E0
-		// (set) Token: 0x06007058 RID: 28760 RVA: 0x000A11F4 File Offset: 0x0009F3F4
-		public unsafe TEnumAsByte<ENotifyFilterType> NotifyFilterType
-		{
-			get
-			{
-				return *(base.NativePtr + (IntPtr)FAnimNotifyEvent.__PropertyOffset_NotifyFilterType);
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)FAnimNotifyEvent.__PropertyOffset_NotifyFilterType) = value;
-			}
-		}
-
-		// Token: 0x17001A71 RID: 6769
-		// (get) Token: 0x06007059 RID: 28761 RVA: 0x000A1209 File Offset: 0x0009F409
-		// (set) Token: 0x0600705A RID: 28762 RVA: 0x000A1219 File Offset: 0x0009F419
+		// Token: 0x1700029A RID: 666
+		// (get) Token: 0x0600182F RID: 6191 RVA: 0x00024FBF File Offset: 0x000231BF
+		// (set) Token: 0x06001830 RID: 6192 RVA: 0x00024FCF File Offset: 0x000231CF
 		public unsafe int NotifyFilterLOD
 		{
 			get
@@ -257,9 +223,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001A72 RID: 6770
-		// (get) Token: 0x0600705B RID: 28763 RVA: 0x000A122A File Offset: 0x0009F42A
-		// (set) Token: 0x0600705C RID: 28764 RVA: 0x000A123A File Offset: 0x0009F43A
+		// Token: 0x1700029B RID: 667
+		// (get) Token: 0x06001831 RID: 6193 RVA: 0x00024FE0 File Offset: 0x000231E0
+		// (set) Token: 0x06001832 RID: 6194 RVA: 0x00024FF0 File Offset: 0x000231F0
 		public unsafe bool bTriggerOnDedicatedServer
 		{
 			get
@@ -272,9 +238,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001A73 RID: 6771
-		// (get) Token: 0x0600705D RID: 28765 RVA: 0x000A124B File Offset: 0x0009F44B
-		// (set) Token: 0x0600705E RID: 28766 RVA: 0x000A125B File Offset: 0x0009F45B
+		// Token: 0x1700029C RID: 668
+		// (get) Token: 0x06001833 RID: 6195 RVA: 0x00025001 File Offset: 0x00023201
+		// (set) Token: 0x06001834 RID: 6196 RVA: 0x00025011 File Offset: 0x00023211
 		public unsafe bool bTriggerOnFollower
 		{
 			get
@@ -287,9 +253,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001A74 RID: 6772
-		// (get) Token: 0x0600705F RID: 28767 RVA: 0x000A126C File Offset: 0x0009F46C
-		// (set) Token: 0x06007060 RID: 28768 RVA: 0x000A127C File Offset: 0x0009F47C
+		// Token: 0x1700029D RID: 669
+		// (get) Token: 0x06001835 RID: 6197 RVA: 0x00025022 File Offset: 0x00023222
+		// (set) Token: 0x06001836 RID: 6198 RVA: 0x00025032 File Offset: 0x00023232
 		public unsafe bool bForceTriggerOnState
 		{
 			get
@@ -302,9 +268,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001A75 RID: 6773
-		// (get) Token: 0x06007061 RID: 28769 RVA: 0x000A128D File Offset: 0x0009F48D
-		// (set) Token: 0x06007062 RID: 28770 RVA: 0x000A129D File Offset: 0x0009F49D
+		// Token: 0x1700029E RID: 670
+		// (get) Token: 0x06001837 RID: 6199 RVA: 0x00025043 File Offset: 0x00023243
+		// (set) Token: 0x06001838 RID: 6200 RVA: 0x00025053 File Offset: 0x00023253
 		public unsafe int TrackIndex
 		{
 			get
@@ -317,142 +283,100 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06007063 RID: 28771 RVA: 0x000A12AE File Offset: 0x0009F4AE
+		// Token: 0x06001839 RID: 6201 RVA: 0x00025064 File Offset: 0x00023264
 		public FAnimNotifyEvent()
 		{
 		}
 
-		// Token: 0x06007064 RID: 28772 RVA: 0x000A12B8 File Offset: 0x0009F4B8
-		[NullableContext(1)]
-		public FAnimNotifyEvent(float DisplayTime_DEPRECATED, float TriggerTimeOffset, float EndTriggerTimeOffset, float TriggerWeightThreshold, FName NotifyName, UAnimNotify Notify, UAnimNotifyState NotifyStateClass, float Duration, FAnimLinkableElement EndLink, bool bConvertedFromBranchingPoint, [Nullable(0)] TEnumAsByte<EMontageNotifyTickType> MontageTickType, bool bEnabled, bool bCreateByChild, bool bCreateByMerge, bool bKuroKeepBeginInSection, bool bKuroKeepEndInSection, float NotifyTriggerChance, [Nullable(0)] TEnumAsByte<ENotifyFilterType> NotifyFilterType, int NotifyFilterLOD, bool bTriggerOnDedicatedServer, bool bTriggerOnFollower, bool bForceTriggerOnState, FColor NotifyColor, FGuid Guid, int TrackIndex, UAnimMontage LinkedMontage, int SlotIndex, int SegmentIndex, [Nullable(0)] TEnumAsByte<EAnimLinkMethod> LinkMethod, [Nullable(0)] TEnumAsByte<EAnimLinkMethod> CachedLinkMethod, float SegmentBeginTime, float SegmentLength, float LinkValue, UAnimSequenceBase LinkedSequence)
-		{
-			this.DisplayTime_DEPRECATED = DisplayTime_DEPRECATED;
-			this.TriggerTimeOffset = TriggerTimeOffset;
-			this.EndTriggerTimeOffset = EndTriggerTimeOffset;
-			this.TriggerWeightThreshold = TriggerWeightThreshold;
-			this.NotifyName = NotifyName;
-			this.Notify = Notify;
-			this.NotifyStateClass = NotifyStateClass;
-			this.Duration = Duration;
-			this.EndLink = EndLink;
-			this.bConvertedFromBranchingPoint = bConvertedFromBranchingPoint;
-			this.MontageTickType = MontageTickType;
-			this.bEnabled = bEnabled;
-			this.NotifyTriggerChance = NotifyTriggerChance;
-			this.NotifyFilterType = NotifyFilterType;
-			this.NotifyFilterLOD = NotifyFilterLOD;
-			this.bTriggerOnDedicatedServer = bTriggerOnDedicatedServer;
-			this.bTriggerOnFollower = bTriggerOnFollower;
-			this.bForceTriggerOnState = bForceTriggerOnState;
-			this.TrackIndex = TrackIndex;
-			base.LinkedMontage = LinkedMontage;
-			base.SlotIndex = SlotIndex;
-			base.SegmentIndex = SegmentIndex;
-			base.LinkMethod = LinkMethod;
-			base.CachedLinkMethod = CachedLinkMethod;
-			base.SegmentBeginTime = SegmentBeginTime;
-			base.SegmentLength = SegmentLength;
-			base.LinkValue = LinkValue;
-			base.LinkedSequence = LinkedSequence;
-		}
-
-		// Token: 0x06007065 RID: 28773 RVA: 0x000A13A8 File Offset: 0x0009F5A8
+		// Token: 0x0600183A RID: 6202 RVA: 0x0002506C File Offset: 0x0002326C
 		protected override IntPtr GetUStructPtr()
 		{
 			return FAnimNotifyEvent.StaticStruct();
 		}
 
-		// Token: 0x06007066 RID: 28774 RVA: 0x000A13B4 File Offset: 0x0009F5B4
-		[NullableContext(2)]
+		// Token: 0x0600183B RID: 6203 RVA: 0x00025078 File Offset: 0x00023278
 		public FAnimNotifyEvent(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06007067 RID: 28775 RVA: 0x000A13BE File Offset: 0x0009F5BE
+		// Token: 0x0600183C RID: 6204 RVA: 0x00025082 File Offset: 0x00023282
 		public FAnimNotifyEvent(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06007068 RID: 28776 RVA: 0x000A13C9 File Offset: 0x0009F5C9
+		// Token: 0x0600183D RID: 6205 RVA: 0x0002508D File Offset: 0x0002328D
 		[NullableContext(1)]
 		public new static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FAnimNotifyEvent(Pointer, false, true);
 		}
 
-		// Token: 0x06007069 RID: 28777 RVA: 0x000A13D3 File Offset: 0x0009F5D3
+		// Token: 0x0600183E RID: 6206 RVA: 0x00025097 File Offset: 0x00023297
 		[NullableContext(1)]
 		public new static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FAnimNotifyEvent(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x040035E4 RID: 13796
+		// Token: 0x0400079A RID: 1946
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.AnimNotifyEvent";
 
-		// Token: 0x040035E5 RID: 13797
+		// Token: 0x0400079B RID: 1947
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040035E6 RID: 13798
+		// Token: 0x0400079C RID: 1948
 		internal static int __PropertyOffset_DisplayTime_DEPRECATED;
 
-		// Token: 0x040035E7 RID: 13799
+		// Token: 0x0400079D RID: 1949
 		internal static int __PropertyOffset_TriggerTimeOffset;
 
-		// Token: 0x040035E8 RID: 13800
+		// Token: 0x0400079E RID: 1950
 		internal static int __PropertyOffset_EndTriggerTimeOffset;
 
-		// Token: 0x040035E9 RID: 13801
+		// Token: 0x0400079F RID: 1951
 		internal static int __PropertyOffset_TriggerWeightThreshold;
 
-		// Token: 0x040035EA RID: 13802
+		// Token: 0x040007A0 RID: 1952
 		internal static int __PropertyOffset_NotifyName;
 
-		// Token: 0x040035EB RID: 13803
+		// Token: 0x040007A1 RID: 1953
 		internal static int __PropertyOffset_Notify;
 
-		// Token: 0x040035EC RID: 13804
+		// Token: 0x040007A2 RID: 1954
 		internal static int __PropertyOffset_NotifyStateClass;
 
-		// Token: 0x040035ED RID: 13805
+		// Token: 0x040007A3 RID: 1955
 		internal static int __PropertyOffset_Duration;
 
-		// Token: 0x040035EE RID: 13806
+		// Token: 0x040007A4 RID: 1956
 		internal static int __PropertyOffset_EndLink;
 
-		// Token: 0x040035EF RID: 13807
-		[Nullable(2)]
+		// Token: 0x040007A5 RID: 1957
 		private FAnimLinkableElement _EndLink;
 
-		// Token: 0x040035F0 RID: 13808
+		// Token: 0x040007A6 RID: 1958
 		internal static int __PropertyOffset_bConvertedFromBranchingPoint;
 
-		// Token: 0x040035F1 RID: 13809
-		internal static int __PropertyOffset_MontageTickType;
-
-		// Token: 0x040035F2 RID: 13810
+		// Token: 0x040007A7 RID: 1959
 		internal static int __PropertyOffset_bEnabled;
 
-		// Token: 0x040035F3 RID: 13811
+		// Token: 0x040007A8 RID: 1960
 		internal static int __PropertyOffset_NotifyTriggerChance;
 
-		// Token: 0x040035F4 RID: 13812
-		internal static int __PropertyOffset_NotifyFilterType;
-
-		// Token: 0x040035F5 RID: 13813
+		// Token: 0x040007A9 RID: 1961
 		internal static int __PropertyOffset_NotifyFilterLOD;
 
-		// Token: 0x040035F6 RID: 13814
+		// Token: 0x040007AA RID: 1962
 		internal static int __PropertyOffset_bTriggerOnDedicatedServer;
 
-		// Token: 0x040035F7 RID: 13815
+		// Token: 0x040007AB RID: 1963
 		internal static int __PropertyOffset_bTriggerOnFollower;
 
-		// Token: 0x040035F8 RID: 13816
+		// Token: 0x040007AC RID: 1964
 		internal static int __PropertyOffset_bForceTriggerOnState;
 
-		// Token: 0x040035F9 RID: 13817
+		// Token: 0x040007AD RID: 1965
 		internal static int __PropertyOffset_TrackIndex;
 	}
 }

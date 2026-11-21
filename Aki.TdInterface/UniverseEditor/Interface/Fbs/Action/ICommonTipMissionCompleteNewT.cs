@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020064A5 RID: 25765
+	// Token: 0x02006B10 RID: 27408
 	public class ICommonTipMissionCompleteNewT
 	{
-		// Token: 0x1700BFBD RID: 49085
-		// (get) Token: 0x0602CA8E RID: 182926 RVA: 0x006217A1 File Offset: 0x0061F9A1
-		// (set) Token: 0x0602CA8F RID: 182927 RVA: 0x006217A9 File Offset: 0x0061F9A9
+		// Token: 0x1700C94A RID: 51530
+		// (get) Token: 0x0602F208 RID: 193032 RVA: 0x0066D375 File Offset: 0x0066B575
+		// (set) Token: 0x0602F209 RID: 193033 RVA: 0x0066D37D File Offset: 0x0066B57D
 		public ECommonTipType Type { get; set; }
 
-		// Token: 0x1700BFBE RID: 49086
-		// (get) Token: 0x0602CA90 RID: 182928 RVA: 0x006217B2 File Offset: 0x0061F9B2
-		// (set) Token: 0x0602CA91 RID: 182929 RVA: 0x006217BA File Offset: 0x0061F9BA
+		// Token: 0x1700C94B RID: 51531
+		// (get) Token: 0x0602F20A RID: 193034 RVA: 0x0066D386 File Offset: 0x0066B586
+		// (set) Token: 0x0602F20B RID: 193035 RVA: 0x0066D38E File Offset: 0x0066B58E
 		public EQuestCommonTipType QuestType { get; set; }
 
-		// Token: 0x1700BFBF RID: 49087
-		// (get) Token: 0x0602CA92 RID: 182930 RVA: 0x006217C3 File Offset: 0x0061F9C3
-		// (set) Token: 0x0602CA93 RID: 182931 RVA: 0x006217CB File Offset: 0x0061F9CB
+		// Token: 0x1700C94C RID: 51532
+		// (get) Token: 0x0602F20C RID: 193036 RVA: 0x0066D397 File Offset: 0x0066B597
+		// (set) Token: 0x0602F20D RID: 193037 RVA: 0x0066D39F File Offset: 0x0066B59F
 		public string TipTextKey { get; set; }
 
-		// Token: 0x0602CA94 RID: 182932 RVA: 0x006217D4 File Offset: 0x0061F9D4
+		// Token: 0x0602F20E RID: 193038 RVA: 0x0066D3A8 File Offset: 0x0066B5A8
 		public ICommonTipMissionCompleteNewT()
 		{
 			this.Type = ECommonTipType.ChallengeCondition;

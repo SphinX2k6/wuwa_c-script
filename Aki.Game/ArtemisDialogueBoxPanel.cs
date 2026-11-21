@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020010F1 RID: 4337
+// Token: 0x020005A5 RID: 1445
 [NullableContext(1)]
 [Nullable(0)]
 public class ArtemisDialogueBoxPanel : UiPanelBase
 {
-	// Token: 0x0600710F RID: 28943 RVA: 0x0017170C File Offset: 0x0016F90C
+	// Token: 0x060044A5 RID: 17573 RVA: 0x0017A0C8 File Offset: 0x001782C8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ public class ArtemisDialogueBoxPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x06007110 RID: 28944 RVA: 0x001717C0 File Offset: 0x0016F9C0
+	// Token: 0x060044A6 RID: 17574 RVA: 0x0017A17C File Offset: 0x0017837C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ArtemisDialogueBoxPanel.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -38,14 +38,14 @@ public class ArtemisDialogueBoxPanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007111 RID: 28945 RVA: 0x00171803 File Offset: 0x0016FA03
+	// Token: 0x060044A7 RID: 17575 RVA: 0x0017A1BF File Offset: 0x001783BF
 	protected override void OnStart()
 	{
 		this.ItemLayout = new GenericLayout<CommonItemSmallItemGrid, TItem>(base.GetHorizontalLayout(4), new Func<CommonItemSmallItemGrid>(this.InitGridItem), null, false, true);
 		this.UiScrollView = base.GetScrollViewWithScrollbar(0);
 	}
 
-	// Token: 0x06007112 RID: 28946 RVA: 0x00171833 File Offset: 0x0016FA33
+	// Token: 0x060044A8 RID: 17576 RVA: 0x0017A1EF File Offset: 0x001783EF
 	protected override void OnBeforeDestroy()
 	{
 		if (this.ScrollTimer != null && this.ScrollTimer.Valid())
@@ -55,7 +55,7 @@ public class ArtemisDialogueBoxPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06007113 RID: 28947 RVA: 0x0017185D File Offset: 0x0016FA5D
+	// Token: 0x060044A9 RID: 17577 RVA: 0x0017A219 File Offset: 0x00178419
 	private CommonItemSmallItemGrid InitGridItem()
 	{
 		return new CommonItemSmallItemGrid
@@ -64,7 +64,7 @@ public class ArtemisDialogueBoxPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x06007114 RID: 28948 RVA: 0x00171876 File Offset: 0x0016FA76
+	// Token: 0x060044AA RID: 17578 RVA: 0x0017A232 File Offset: 0x00178432
 	public void SetShowRewardItems(bool isShow)
 	{
 		UUIItem item = base.GetItem(2);
@@ -75,7 +75,7 @@ public class ArtemisDialogueBoxPanel : UiPanelBase
 		item.SetUIActive(isShow);
 	}
 
-	// Token: 0x06007115 RID: 28949 RVA: 0x0017188C File Offset: 0x0016FA8C
+	// Token: 0x060044AB RID: 17579 RVA: 0x0017A248 File Offset: 0x00178448
 	public void SetRewardItems(List<TItem> rewardItems, bool isRewarded)
 	{
 		this.IsRewarded = isRewarded;
@@ -96,7 +96,7 @@ public class ArtemisDialogueBoxPanel : UiPanelBase
 		itemLayout2.RefreshByData(rewardItems, null, false);
 	}
 
-	// Token: 0x06007116 RID: 28950 RVA: 0x001718DF File Offset: 0x0016FADF
+	// Token: 0x060044AC RID: 17580 RVA: 0x0017A29B File Offset: 0x0017849B
 	public void ShowDialogue(int[] ids, bool isLockStatus, bool isShowEffect)
 	{
 		ArtemisDialogueParentItem chatParentItem = this.ChatParentItem;
@@ -107,13 +107,13 @@ public class ArtemisDialogueBoxPanel : UiPanelBase
 		chatParentItem.RefreshChatUiItem(ids, isLockStatus, isShowEffect);
 	}
 
-	// Token: 0x06007117 RID: 28951 RVA: 0x001718F4 File Offset: 0x0016FAF4
+	// Token: 0x060044AD RID: 17581 RVA: 0x0017A2B0 File Offset: 0x001784B0
 	public void ScrollToTop(bool isTop)
 	{
 		this.IsScrollToTop = isTop;
 	}
 
-	// Token: 0x06007118 RID: 28952 RVA: 0x001718FD File Offset: 0x0016FAFD
+	// Token: 0x060044AE RID: 17582 RVA: 0x0017A2B9 File Offset: 0x001784B9
 	public void DelayScrollToBotttom()
 	{
 		this.ScrollTimer = TimerSystem.GameplayTimeInstance.Delay(delegate(float _)
@@ -142,7 +142,7 @@ public class ArtemisDialogueBoxPanel : UiPanelBase
 		}, 100f, null, null, true, 1f);
 	}
 
-	// Token: 0x06007119 RID: 28953 RVA: 0x00171928 File Offset: 0x0016FB28
+	// Token: 0x060044AF RID: 17583 RVA: 0x0017A2E4 File Offset: 0x001784E4
 	public void PlayFixDoneSequence()
 	{
 		ArtemisDialogueParentItem chatParentItem = this.ChatParentItem;
@@ -153,11 +153,11 @@ public class ArtemisDialogueBoxPanel : UiPanelBase
 		chatParentItem.LeftPlayFixDoneLevelSequence();
 	}
 
-	// Token: 0x0400345E RID: 13406
+	// Token: 0x040034F7 RID: 13559
 	[Nullable(2)]
 	private ArtemisDialogueParentItem ChatParentItem;
 
-	// Token: 0x0400345F RID: 13407
+	// Token: 0x040034F8 RID: 13560
 	[Nullable(new byte[]
 	{
 		2,
@@ -165,42 +165,42 @@ public class ArtemisDialogueBoxPanel : UiPanelBase
 	})]
 	private GenericLayout<CommonItemSmallItemGrid, TItem> ItemLayout;
 
-	// Token: 0x04003460 RID: 13408
+	// Token: 0x040034F9 RID: 13561
 	private bool IsRewarded;
 
-	// Token: 0x04003461 RID: 13409
+	// Token: 0x040034FA RID: 13562
 	[Nullable(2)]
 	private TimerHandle ScrollTimer;
 
-	// Token: 0x04003462 RID: 13410
+	// Token: 0x040034FB RID: 13563
 	private bool IsScrollToTop;
 
-	// Token: 0x04003463 RID: 13411
+	// Token: 0x040034FC RID: 13564
 	public UUIScrollViewWithScrollbarComponent UiScrollView;
 
-	// Token: 0x020076B5 RID: 30389
+	// Token: 0x02006849 RID: 26697
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x040272D6 RID: 160470
+		// Token: 0x0402261F RID: 140831
 		public const int ChatView = 0;
 
-		// Token: 0x040272D7 RID: 160471
+		// Token: 0x04022620 RID: 140832
 		public const int DiglogueItem = 1;
 
-		// Token: 0x040272D8 RID: 160472
+		// Token: 0x04022621 RID: 140833
 		public const int PnlReward = 2;
 
-		// Token: 0x040272D9 RID: 160473
+		// Token: 0x04022622 RID: 140834
 		public const int RewardTitle = 3;
 
-		// Token: 0x040272DA RID: 160474
+		// Token: 0x04022623 RID: 140835
 		public const int RewardItemLayout = 4;
 
-		// Token: 0x040272DB RID: 160475
+		// Token: 0x04022624 RID: 140836
 		public const int RewardItem = 5;
 
-		// Token: 0x040272DC RID: 160476
+		// Token: 0x04022625 RID: 140837
 		public const int ChatScrollBar = 6;
 	}
 }

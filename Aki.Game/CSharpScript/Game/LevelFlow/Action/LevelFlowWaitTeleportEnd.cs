@@ -5,16 +5,16 @@ using CSharpScript.Game.Module.Teleport;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006FAD RID: 28589
+	// Token: 0x0200612E RID: 24878
 	public class LevelFlowWaitTeleportEnd : LevelFlowActionBase
 	{
-		// Token: 0x060457B7 RID: 284599 RVA: 0x0113CA1C File Offset: 0x0113AC1C
+		// Token: 0x0603B966 RID: 244070 RVA: 0x010E6880 File Offset: 0x010E4A80
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<TeleportContext>(EEventName.TeleportComplete, new Action<TeleportContext>(this.OnTeleportComplete));
 		}
 
-		// Token: 0x060457B8 RID: 284600 RVA: 0x0113CA3A File Offset: 0x0113AC3A
+		// Token: 0x0603B967 RID: 244071 RVA: 0x010E689E File Offset: 0x010E4A9E
 		protected override void OnExecute()
 		{
 			if (LevelFlowModel.Instance.IsEnd)
@@ -23,13 +23,13 @@ namespace CSharpScript.Game.LevelFlow.Action
 			}
 		}
 
-		// Token: 0x060457B9 RID: 284601 RVA: 0x0113CA4F File Offset: 0x0113AC4F
+		// Token: 0x0603B968 RID: 244072 RVA: 0x010E68B3 File Offset: 0x010E4AB3
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<TeleportContext>(EEventName.TeleportComplete, new Action<TeleportContext>(this.OnTeleportComplete));
 		}
 
-		// Token: 0x060457BA RID: 284602 RVA: 0x0113CA6D File Offset: 0x0113AC6D
+		// Token: 0x0603B969 RID: 244073 RVA: 0x010E68D1 File Offset: 0x010E4AD1
 		[NullableContext(2)]
 		private void OnTeleportComplete(TeleportContext context)
 		{

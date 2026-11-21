@@ -4,6 +4,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
 using Aki.Protocol;
+using CSharpScript.Core.Common;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Common.RoleDevelop;
 using CSharpScript.Game.Module.GenericPrompt;
@@ -22,7 +23,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.AdventureGuide.Views
 {
-	// Token: 0x02005EDA RID: 24282
+	// Token: 0x02004EC1 RID: 20161
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -31,10 +32,10 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 	})]
 	public class NewSoundDetectItem : GridProxyAbstract<NewSoundDetectItemData>
 	{
-		// Token: 0x0603DB94 RID: 252820 RVA: 0x00EE8BCC File Offset: 0x00EE6DCC
+		// Token: 0x06032B26 RID: 207654 RVA: 0x00E3A3A4 File Offset: 0x00E385A4
 		protected unsafe override void OnRegisterComponent()
 		{
-			int num = 16;
+			int num = 18;
 			List<ValueTuple<int, Type>> list = new List<ValueTuple<int, Type>>(num);
 			CollectionsMarshal.SetCount<ValueTuple<int, Type>>(list, num);
 			Span<ValueTuple<int, Type>> span = CollectionsMarshal.AsSpan<ValueTuple<int, Type>>(list);
@@ -70,28 +71,36 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			*span[num2] = new ValueTuple<int, Type>(14, typeof(UUIItem));
 			num2++;
 			*span[num2] = new ValueTuple<int, Type>(15, typeof(UUIItem));
+			num2++;
+			*span[num2] = new ValueTuple<int, Type>(16, typeof(UUIButtonComponent));
+			num2++;
+			*span[num2] = new ValueTuple<int, Type>(17, typeof(UUIButtonComponent));
 			this.ComponentRegisterInfos = list;
-			num2 = 1;
+			num2 = 3;
 			List<ValueTuple<int, Delegate>> list2 = new List<ValueTuple<int, Delegate>>(num2);
 			CollectionsMarshal.SetCount<ValueTuple<int, Delegate>>(list2, num2);
 			Span<ValueTuple<int, Delegate>> span2 = CollectionsMarshal.AsSpan<ValueTuple<int, Delegate>>(list2);
 			num = 0;
 			*span2[num] = new ValueTuple<int, Delegate>(12, new Action(this.OnClickLockBtn));
+			num++;
+			*span2[num] = new ValueTuple<int, Delegate>(16, new Action(this.OnMapClick));
+			num++;
+			*span2[num] = new ValueTuple<int, Delegate>(17, new Action(this.OnMapClick));
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603DB95 RID: 252821 RVA: 0x00EE8E4C File Offset: 0x00EE704C
+		// Token: 0x06032B27 RID: 207655 RVA: 0x00E3A6B0 File Offset: 0x00E388B0
 		protected override UniTask OnBeforeStartAsync()
 		{
-			NewSoundDetectItem.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
+			NewSoundDetectItem.<OnBeforeStartAsync>d__15 <OnBeforeStartAsync>d__;
 			<OnBeforeStartAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<OnBeforeStartAsync>d__.<>4__this = this;
 			<OnBeforeStartAsync>d__.<>1__state = -1;
-			<OnBeforeStartAsync>d__.<>t__builder.Start<NewSoundDetectItem.<OnBeforeStartAsync>d__14>(ref <OnBeforeStartAsync>d__);
+			<OnBeforeStartAsync>d__.<>t__builder.Start<NewSoundDetectItem.<OnBeforeStartAsync>d__15>(ref <OnBeforeStartAsync>d__);
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603DB96 RID: 252822 RVA: 0x00EE8E90 File Offset: 0x00EE7090
+		// Token: 0x06032B28 RID: 207656 RVA: 0x00E3A6F4 File Offset: 0x00E388F4
 		public void SyncStart()
 		{
 			this.ConfirmButton = new ButtonItem(null);
@@ -117,20 +126,128 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			this.ItemRoleBadge.CreateByActor(base.GetItem(15).GetOwner(), null);
 		}
 
-		// Token: 0x0603DB97 RID: 252823 RVA: 0x00EE9026 File Offset: 0x00EE7226
+		// Token: 0x06032B29 RID: 207657 RVA: 0x00E3A88C File Offset: 0x00E38A8C
 		protected override void OnStart()
 		{
 			EventSystem.Instance.Add<int>(EEventName.NewSoundAreaRefreshReward, new Action<int>(this.NewSoundAreaRefreshReward));
+			EventSystem.Instance.Add<EInputControllerMainType, EInputControllerMainType>(EEventName.InputControllerMainTypeChange, new Action<EInputControllerMainType, EInputControllerMainType>(this.OnInputControllerMainTypeChange));
+			EventSystem.Instance.Add(EEventName.UpdateNavigationListener, new Action(this.OnNavigationFocusChange));
+			EventSystem.Instance.Add(EEventName.ResetNavigationListener, new Action(this.OnNavigationFocusChange));
 		}
 
-		// Token: 0x0603DB98 RID: 252824 RVA: 0x00EE9044 File Offset: 0x00EE7244
+		// Token: 0x06032B2A RID: 207658 RVA: 0x00E3A909 File Offset: 0x00E38B09
+		private void OnInputControllerMainTypeChange(EInputControllerMainType last, EInputControllerMainType now)
+		{
+			if (this.Data == null || !base.IsUiActiveInHierarchy())
+			{
+				return;
+			}
+			this.RefreshButtonState();
+		}
+
+		// Token: 0x06032B2B RID: 207659 RVA: 0x00E3A922 File Offset: 0x00E38B22
+		private void OnNavigationFocusChange()
+		{
+			if (this.Data == null || !base.IsUiActiveInHierarchy())
+			{
+				return;
+			}
+			this.RefreshButtonState();
+		}
+
+		// Token: 0x06032B2C RID: 207660 RVA: 0x00E3A93C File Offset: 0x00E38B3C
+		private void RefreshButtonState()
+		{
+			bool flag2;
+			if (!AdventureGuideModel.Instance.GetIsDetectionPreOpenByData(this.Data))
+			{
+				bool? isLock = this.Data.IsLock;
+				bool flag = false;
+				flag2 = (isLock.GetValueOrDefault() == flag & isLock != null);
+			}
+			else
+			{
+				flag2 = true;
+			}
+			bool flag3 = flag2;
+			ButtonItem confirmButton = this.ConfirmButton;
+			if (confirmButton != null)
+			{
+				confirmButton.SetUiActive(flag3);
+			}
+			ButtonItem confirmButton2 = this.ConfirmButton;
+			if (confirmButton2 != null)
+			{
+				confirmButton2.SetLocalTextNew(this.GetConfirmButtonTextId(), Array.Empty<object>());
+			}
+			this.RefreshMapButtonState();
+			if (this.Data.Secondary == 63 || this.Data.Secondary == 64 || this.Data.Secondary == 61)
+			{
+				base.GetItem(6).SetUIActive(false);
+				base.GetItem(11).SetUIActive(!flag3);
+				return;
+			}
+			base.GetItem(6).SetUIActive(!flag3);
+			base.GetItem(11).SetUIActive(false);
+		}
+
+		// Token: 0x06032B2D RID: 207661 RVA: 0x00E3AA20 File Offset: 0x00E38C20
+		private bool IsNavigationFocusOnSelf()
+		{
+			AActor rootActor = base.GetRootActor();
+			if (rootActor == null || !rootActor.IsValid())
+			{
+				return false;
+			}
+			TsUiNavigationBehaviorListener currentNavigationFocusListener = UiNavigationNewController.Instance.GetCurrentNavigationFocusListener();
+			AActor aactor = (currentNavigationFocusListener != null) ? currentNavigationFocusListener.GetOwner() : null;
+			int num = 0;
+			while (aactor != null && num < 16)
+			{
+				if (aactor == rootActor)
+				{
+					return true;
+				}
+				aactor = aactor.GetAttachParentActor();
+				num++;
+			}
+			return false;
+		}
+
+		// Token: 0x06032B2E RID: 207662 RVA: 0x00E3AA78 File Offset: 0x00E38C78
+		private void RefreshMapButtonState()
+		{
+			bool flag = this.ShouldShowMapButton();
+			UUIButtonComponent button = base.GetButton(16);
+			if (button != null)
+			{
+				UUIItem uuiitem = button.RootUIComp.Get();
+				if (uuiitem != null)
+				{
+					uuiitem.SetUIActive(flag && !Info.Instance.IsInGamepad());
+				}
+			}
+			UUIButtonComponent button2 = base.GetButton(17);
+			if (button2 == null)
+			{
+				return;
+			}
+			UUIItem uuiitem2 = button2.RootUIComp.Get();
+			if (uuiitem2 == null)
+			{
+				return;
+			}
+			uuiitem2.SetUIActive(flag && Info.Instance.IsInGamepad() && this.IsNavigationFocusOnSelf());
+		}
+
+		// Token: 0x06032B2F RID: 207663 RVA: 0x00E3AB01 File Offset: 0x00E38D01
 		[NullableContext(1)]
 		private NewSoundDetectRewardItem OnRewardLayoutUpdater()
 		{
 			return new NewSoundDetectRewardItem();
 		}
 
-		// Token: 0x0603DB99 RID: 252825 RVA: 0x00EE904C File Offset: 0x00EE724C
+		// Token: 0x06032B30 RID: 207664 RVA: 0x00E3AB08 File Offset: 0x00E38D08
 		[NullableContext(1)]
 		private void TryPlayTrackSequence(NewSoundDetectItemData data)
 		{
@@ -146,7 +263,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			}
 		}
 
-		// Token: 0x0603DB9A RID: 252826 RVA: 0x00EE9098 File Offset: 0x00EE7298
+		// Token: 0x06032B31 RID: 207665 RVA: 0x00E3AB54 File Offset: 0x00E38D54
 		[NullableContext(1)]
 		public void TryPlayJumpToGridSquence(NewSoundDetectItemData data)
 		{
@@ -198,7 +315,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			ulevelSequencePlayer2.JumpToSeconds((float)num);
 		}
 
-		// Token: 0x0603DB9B RID: 252827 RVA: 0x00EE9204 File Offset: 0x00EE7404
+		// Token: 0x06032B32 RID: 207666 RVA: 0x00E3ACC0 File Offset: 0x00E38EC0
 		[NullableContext(1)]
 		public override void Refresh(NewSoundDetectItemData sourceData, bool isSelected, int gridIndex)
 		{
@@ -310,39 +427,8 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 				this.ItemRoleBadge.SetRoleHeadIconPath(instance.GetDevelopRoleSmallIconPath());
 			}
 			bool isDetectionPreOpenByData = AdventureGuideModel.Instance.GetIsDetectionPreOpenByData(detectRecordData);
-			bool flag3;
-			if (!isDetectionPreOpenByData)
-			{
-				bool? isLock = detectRecordData.IsLock;
-				bool flag2 = false;
-				flag3 = (isLock.GetValueOrDefault() == flag2 & isLock != null);
-			}
-			else
-			{
-				flag3 = true;
-			}
-			bool flag4 = flag3;
 			base.GetItem(7).SetUIActive(false);
-			ButtonItem confirmButton = this.ConfirmButton;
-			if (confirmButton != null)
-			{
-				confirmButton.SetUiActive(flag4);
-			}
-			ButtonItem confirmButton2 = this.ConfirmButton;
-			if (confirmButton2 != null)
-			{
-				confirmButton2.SetLocalTextNew(this.GetConfirmButtonTextId(), Array.Empty<object>());
-			}
-			if (this.Data.Secondary == 63 || this.Data.Secondary == 64 || this.Data.Secondary == 61)
-			{
-				base.GetItem(6).SetUIActive(false);
-				base.GetItem(11).SetUIActive(!flag4);
-			}
-			else
-			{
-				base.GetItem(6).SetUIActive(!flag4);
-				base.GetItem(11).SetUIActive(false);
-			}
+			this.RefreshButtonState();
 			if (secondary == EDungeonType.Tutorial || secondary == EDungeonType.SkillTeach)
 			{
 				bool uiactive = AdventureGuideModel.Instance.IsRoleTutorialNew(detectRecordData.Id) && !AdventureGuideModel.Instance.IsDetectionFinished(this.Data);
@@ -350,10 +436,10 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			}
 			else
 			{
-				bool flag5 = AdventureGuideModel.Instance.IsDetectionNewContentOpen(detectRecordData);
-				bool flag6 = !isDetectionPreOpenByData && flag5;
-				base.GetItem(9).SetUIActive(flag6);
-				if (flag6)
+				bool flag2 = AdventureGuideModel.Instance.IsDetectionNewContentOpen(detectRecordData);
+				bool flag3 = !isDetectionPreOpenByData && flag2;
+				base.GetItem(9).SetUIActive(flag3);
+				if (flag3 && secondary != EDungeonType.LordGym)
 				{
 					AdventureGuideModel.Instance.SetAdventureItemNew(detectRecordData.Id);
 				}
@@ -416,7 +502,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			}
 		}
 
-		// Token: 0x0603DB9C RID: 252828 RVA: 0x00EE9744 File Offset: 0x00EE7944
+		// Token: 0x06032B33 RID: 207667 RVA: 0x00E3B148 File Offset: 0x00E39348
 		private void OnTrackClick(int _)
 		{
 			if (GameModeController.Instance.IsInInstance())
@@ -424,6 +510,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 				GenericPromptController.Instance.ShowPromptByCode("DungeonDetection", Array.Empty<object>());
 				return;
 			}
+			AdventureGuideModel.Instance.SendAdventureGuideBtnClickLogData((this.GetConfirmButtonTextId() == "NewSoundDetectGoTo") ? EAdventureGuideBtnClickType.GoTo : EAdventureGuideBtnClickType.DirectChallenge, this.Data.Id, this.Data.Secondary, this.GetLogComboType());
 			if (this.Data.Secondary == 6 || this.Data.Secondary == 62)
 			{
 				int dungeonId = ((T1)this.Data.Conf.Value).SubDungeonId;
@@ -548,7 +635,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			}
 		}
 
-		// Token: 0x0603DB9D RID: 252829 RVA: 0x00EE9A78 File Offset: 0x00EE7C78
+		// Token: 0x06032B34 RID: 207668 RVA: 0x00E3B4B8 File Offset: 0x00E396B8
 		private void NewSoundAreaRefreshReward(int worldLevel)
 		{
 			if (this.Data == null)
@@ -575,7 +662,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			this.RewardScroll.RefreshByData(list, new Action(this.RewardScrollRefreshCallBack), false);
 		}
 
-		// Token: 0x0603DB9E RID: 252830 RVA: 0x00EE9B70 File Offset: 0x00EE7D70
+		// Token: 0x06032B35 RID: 207669 RVA: 0x00E3B5B0 File Offset: 0x00E397B0
 		private void RewardScrollRefreshCallBack()
 		{
 			GenericScrollViewNew<NewSoundDetectRewardItem, INewSoundDetectRewardItemData> rewardScroll = this.RewardScroll;
@@ -591,7 +678,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			}
 		}
 
-		// Token: 0x0603DB9F RID: 252831 RVA: 0x00EE9BC4 File Offset: 0x00EE7DC4
+		// Token: 0x06032B36 RID: 207670 RVA: 0x00E3B604 File Offset: 0x00E39804
 		private void HandleDungeonDetection()
 		{
 			if (AdventureGuideModel.Instance.GetIsDetectionPreOpenByData(this.Data))
@@ -627,7 +714,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			}, this.Data.Id);
 		}
 
-		// Token: 0x0603DBA0 RID: 252832 RVA: 0x00EE9CF8 File Offset: 0x00EE7EF8
+		// Token: 0x06032B37 RID: 207671 RVA: 0x00E3B738 File Offset: 0x00E39938
 		private void HandlePreOpenDetection()
 		{
 			if (OnlineModel.Instance.GetIsTeamModel())
@@ -651,7 +738,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			this.HandlePreOpenDetectionConfirmAction();
 		}
 
-		// Token: 0x0603DBA1 RID: 252833 RVA: 0x00EE9DAC File Offset: 0x00EE7FAC
+		// Token: 0x06032B38 RID: 207672 RVA: 0x00E3B7EC File Offset: 0x00E399EC
 		private void HandleSilentAreaDetection()
 		{
 			if (AdventureGuideModel.Instance.GetIsDetectionPreOpenByData(this.Data))
@@ -678,7 +765,7 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			AdventureGuideController.Instance.RequestForDetection(DetectionType.SilentArea, silentAreaDetectData.Conf.LevelPlayList(), this.Data.Id);
 		}
 
-		// Token: 0x0603DBA2 RID: 252834 RVA: 0x00EE9EA0 File Offset: 0x00EE80A0
+		// Token: 0x06032B39 RID: 207673 RVA: 0x00E3B8E0 File Offset: 0x00E39AE0
 		private int? GetMarkIdForJumpType()
 		{
 			ESoundAreaDataType? type = this.Data.Type;
@@ -708,27 +795,16 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			}
 		}
 
-		// Token: 0x0603DBA3 RID: 252835 RVA: 0x00EE9F70 File Offset: 0x00EE8170
+		// Token: 0x06032B3A RID: 207674 RVA: 0x00E3B9B0 File Offset: 0x00E39BB0
 		[NullableContext(1)]
 		private string GetConfirmButtonTextId()
 		{
-			ESoundAreaDataType? type = this.Data.Type;
-			ESoundAreaDataType esoundAreaDataType = ESoundAreaDataType.Dungeon;
-			int jumpType;
-			if (type.GetValueOrDefault() == esoundAreaDataType & type != null)
-			{
-				jumpType = ((T1)this.Data.Conf.Value).JumpType;
-			}
-			else
-			{
-				jumpType = ((T2)this.Data.Conf.Value).JumpType;
-			}
-			EDetectionJumpType edetectionJumpType = (EDetectionJumpType)jumpType;
-			if (edetectionJumpType == EDetectionJumpType.MapMark)
+			EDetectionJumpType jumpTye = this.GetJumpTye();
+			if (jumpTye == EDetectionJumpType.MapMark)
 			{
 				return "NewSoundDetectGoTo";
 			}
-			if (edetectionJumpType == EDetectionJumpType.DirectEntrance)
+			if (jumpTye == EDetectionJumpType.DirectEntrance)
 			{
 				return "NewSoundDetectDirectChallenge";
 			}
@@ -744,13 +820,13 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			return "NewSoundDetectDirectChallenge";
 		}
 
-		// Token: 0x0603DBA4 RID: 252836 RVA: 0x00EEA044 File Offset: 0x00EE8244
+		// Token: 0x06032B3B RID: 207675 RVA: 0x00E3BA1D File Offset: 0x00E39C1D
 		private void HandlePreOpenDetectionConfirmAction()
 		{
 			AdventureGuideController.Instance.HandlePreOpenDetection(this.Data.Id, this.Data.Type.Value, this.Data.PreOpenId);
 		}
 
-		// Token: 0x0603DBA5 RID: 252837 RVA: 0x00EEA078 File Offset: 0x00EE8278
+		// Token: 0x06032B3C RID: 207676 RVA: 0x00E3BA50 File Offset: 0x00E39C50
 		protected override void OnBeforeDestroy()
 		{
 			NewSoundLordItem newSoundLordItem = this.NewSoundLordItem;
@@ -779,9 +855,12 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 				newSoundWeeklyRogueItem.Destroy(null);
 			}
 			EventSystem.Instance.Remove(EEventName.NewSoundAreaRefreshReward, new Action<int>(this.NewSoundAreaRefreshReward));
+			EventSystem.Instance.Remove<EInputControllerMainType, EInputControllerMainType>(EEventName.InputControllerMainTypeChange, new Action<EInputControllerMainType, EInputControllerMainType>(this.OnInputControllerMainTypeChange));
+			EventSystem.Instance.Remove(EEventName.UpdateNavigationListener, new Action(this.OnNavigationFocusChange));
+			EventSystem.Instance.Remove(EEventName.ResetNavigationListener, new Action(this.OnNavigationFocusChange));
 		}
 
-		// Token: 0x0603DBA6 RID: 252838 RVA: 0x00EEA0FC File Offset: 0x00EE82FC
+		// Token: 0x06032B3D RID: 207677 RVA: 0x00E3BB28 File Offset: 0x00E39D28
 		private void OnClickLockBtn()
 		{
 			List<IActivityConditionData> list = new List<IActivityConditionData>();
@@ -807,7 +886,93 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 			UiManager.Instance.OpenView(EUiViewName.CommonConditionView, param, null);
 		}
 
-		// Token: 0x040203CA RID: 132042
+		// Token: 0x06032B3E RID: 207678 RVA: 0x00E3BC34 File Offset: 0x00E39E34
+		private EDetectionJumpType GetJumpTye()
+		{
+			ESoundAreaDataType? type = this.Data.Type;
+			ESoundAreaDataType esoundAreaDataType = ESoundAreaDataType.Dungeon;
+			if (!(type.GetValueOrDefault() == esoundAreaDataType & type != null))
+			{
+				return (EDetectionJumpType)((T2)this.Data.Conf.Value).JumpType;
+			}
+			return (EDetectionJumpType)((T1)this.Data.Conf.Value).JumpType;
+		}
+
+		// Token: 0x06032B3F RID: 207679 RVA: 0x00E3BCA8 File Offset: 0x00E39EA8
+		private bool ShouldShowMapButton()
+		{
+			bool isDetectionPreOpenByData = AdventureGuideModel.Instance.GetIsDetectionPreOpenByData(this.Data);
+			if (!isDetectionPreOpenByData && this.Data.IsLock.GetValueOrDefault())
+			{
+				return false;
+			}
+			EDetectionJumpType jumpTye = this.GetJumpTye();
+			if (jumpTye == EDetectionJumpType.MapMark)
+			{
+				return false;
+			}
+			if (jumpTye == EDetectionJumpType.DirectEntrance)
+			{
+				return true;
+			}
+			int? markIdForJumpType = this.GetMarkIdForJumpType();
+			return (markIdForJumpType != null && MapModel.Instance.MapMarkIsCanTeleport(markIdForJumpType.Value)) || isDetectionPreOpenByData;
+		}
+
+		// Token: 0x06032B40 RID: 207680 RVA: 0x00E3BD18 File Offset: 0x00E39F18
+		private EAdventureGuideBtnComboType GetLogComboType()
+		{
+			if (!this.ShouldShowMapButton())
+			{
+				return EAdventureGuideBtnComboType.OnlyGoTo;
+			}
+			return EAdventureGuideBtnComboType.ChallengeAndMapJump;
+		}
+
+		// Token: 0x06032B41 RID: 207681 RVA: 0x00E3BD28 File Offset: 0x00E39F28
+		private unsafe void OnMapClick()
+		{
+			if (GameModeController.Instance.IsInInstance())
+			{
+				GenericPromptController.Instance.ShowPromptByCode("DungeonDetection", Array.Empty<object>());
+				return;
+			}
+			AdventureGuideModel.Instance.SendAdventureGuideBtnClickLogData(EAdventureGuideBtnClickType.MapJump, this.Data.Id, this.Data.Secondary, this.GetLogComboType());
+			int? markIdForJumpType = this.GetMarkIdForJumpType();
+			if (markIdForJumpType == null || markIdForJumpType.Value == 0)
+			{
+				Log instance = Log.Instance;
+				ELogModule module = ELogModule.AdventureGuide;
+				ELogAuthor author = ELogAuthor.LY;
+				string message = "点击地图跳转按钮但未找到对应地图标记";
+				ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("Id:", this.Data.Id);
+				instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
+				return;
+			}
+			MapConfig instance2 = MapConfig.Instance;
+			MapMark? mapMark = (instance2 != null) ? instance2.GetConfigMark(markIdForJumpType.Value) : null;
+			if (mapMark == null)
+			{
+				Log instance3 = Log.Instance;
+				ELogModule module2 = ELogModule.AdventureGuide;
+				ELogAuthor author2 = ELogAuthor.LY;
+				string message2 = "地图标记配置不存在";
+				<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
+				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("Id:", this.Data.Id);
+				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("MarkId:", markIdForJumpType.Value);
+				instance3.Error(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
+				return;
+			}
+			WorldMapViewOpenParams data = new WorldMapViewOpenParams
+			{
+				MarkId = new int?(mapMark.Value.MarkId),
+				MarkType = (EMarkType)mapMark.Value.ObjectType,
+				OpenFogId = new int?(0)
+			};
+			WorldMapController.Instance.OpenView(EOpenMapType.Other, false, data, null);
+		}
+
+		// Token: 0x0401AE9B RID: 110235
 		[Nullable(new byte[]
 		{
 			2,
@@ -816,40 +981,43 @@ namespace CSharpScript.Game.Module.AdventureGuide.Views
 		})]
 		private GenericScrollViewNew<NewSoundDetectRewardItem, INewSoundDetectRewardItemData> RewardScroll;
 
-		// Token: 0x040203CB RID: 132043
+		// Token: 0x0401AE9C RID: 110236
 		private SoundAreaDetectionRecord Data;
 
-		// Token: 0x040203CC RID: 132044
+		// Token: 0x0401AE9D RID: 110237
 		private ButtonItem ConfirmButton;
 
-		// Token: 0x040203CD RID: 132045
+		// Token: 0x0401AE9E RID: 110238
 		private INewSoundItem LeftItem;
 
-		// Token: 0x040203CE RID: 132046
+		// Token: 0x0401AE9F RID: 110239
 		private NewSoundLordItem NewSoundLordItem;
 
-		// Token: 0x040203CF RID: 132047
+		// Token: 0x0401AEA0 RID: 110240
 		private NewSoundNormalItem NewSoundNormalItem;
 
-		// Token: 0x040203D0 RID: 132048
+		// Token: 0x0401AEA1 RID: 110241
 		private NewSoundTeachItem NewSoundTeachItem;
 
-		// Token: 0x040203D1 RID: 132049
+		// Token: 0x0401AEA2 RID: 110242
 		private NewSoundTowerItem NewSoundTowerItem;
 
-		// Token: 0x040203D2 RID: 132050
+		// Token: 0x0401AEA3 RID: 110243
 		private NewSoundWeeklyRogueItem NewSoundWeeklyRogueItem;
 
-		// Token: 0x040203D3 RID: 132051
+		// Token: 0x0401AEA4 RID: 110244
 		private NewSoundVisionItem NewSoundVisionItem;
 
-		// Token: 0x040203D4 RID: 132052
+		// Token: 0x0401AEA5 RID: 110245
 		private NewSoundNoSoundAreaItem NewSoundNoSoundAreaItem;
 
-		// Token: 0x040203D5 RID: 132053
+		// Token: 0x0401AEA6 RID: 110246
 		private LevelSequencePlayer LevelSequencePlay;
 
-		// Token: 0x040203D6 RID: 132054
+		// Token: 0x0401AEA7 RID: 110247
 		private RoleDevelopItemRoleBadge ItemRoleBadge;
+
+		// Token: 0x0401AEA8 RID: 110248
+		private const int FocusSearchMaxDepth = 16;
 	}
 }

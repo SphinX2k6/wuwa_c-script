@@ -5,12 +5,12 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.ExploreLevel
 {
-	// Token: 0x02005A8B RID: 23179
+	// Token: 0x02004A67 RID: 19047
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CountryExploreLevelData
 	{
-		// Token: 0x0603AB4B RID: 240459 RVA: 0x00DFBF94 File Offset: 0x00DFA194
+		// Token: 0x0602FA94 RID: 195220 RVA: 0x00D4C528 File Offset: 0x00D4A728
 		public void Initialize(int countryId, IReadOnlyList<ExploreReward> rewardConfigList)
 		{
 			this.CountryId = countryId;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.ExploreLevel
 			}
 		}
 
-		// Token: 0x0603AB4C RID: 240460 RVA: 0x00DFC038 File Offset: 0x00DFA238
+		// Token: 0x0602FA95 RID: 195221 RVA: 0x00D4C5CC File Offset: 0x00D4A7CC
 		public void AddExploreScoreData(int areaId, int progress, int lastProgress, int score)
 		{
 			CountryExploreScoreData countryExploreScoreData = new CountryExploreScoreData();
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.ExploreLevel
 			this.CountryExploreScoreDataList.Add(countryExploreScoreData);
 		}
 
-		// Token: 0x0603AB4D RID: 240461 RVA: 0x00DFC094 File Offset: 0x00DFA294
+		// Token: 0x0602FA96 RID: 195222 RVA: 0x00D4C628 File Offset: 0x00D4A828
 		[NullableContext(2)]
 		public CountryExploreScoreData GetExploreScoreData(int areaId, int progress)
 		{
@@ -62,13 +62,13 @@ namespace CSharpScript.Game.Module.ExploreLevel
 			return null;
 		}
 
-		// Token: 0x0603AB4E RID: 240462 RVA: 0x00DFC0BE File Offset: 0x00DFA2BE
+		// Token: 0x0602FA97 RID: 195223 RVA: 0x00D4C652 File Offset: 0x00D4A852
 		public List<CountryExploreScoreData> GetAllExploreScoreData()
 		{
 			return this.CountryExploreScoreDataList;
 		}
 
-		// Token: 0x0603AB4F RID: 240463 RVA: 0x00DFC0C8 File Offset: 0x00DFA2C8
+		// Token: 0x0602FA98 RID: 195224 RVA: 0x00D4C65C File Offset: 0x00D4A85C
 		public List<CountryExploreScoreData> GetVisibleExploreScoreDataList()
 		{
 			List<CountryExploreScoreData> list = new List<CountryExploreScoreData>();
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.ExploreLevel
 			return list;
 		}
 
-		// Token: 0x0603AB50 RID: 240464 RVA: 0x00DFC1CC File Offset: 0x00DFA3CC
+		// Token: 0x0602FA99 RID: 195225 RVA: 0x00D4C760 File Offset: 0x00D4A960
 		public void SetExploreScoreDataReceived(int areaId, int progress, bool bReceived)
 		{
 			CountryExploreScoreData exploreScoreData = this.GetExploreScoreData(areaId, progress);
@@ -115,37 +115,37 @@ namespace CSharpScript.Game.Module.ExploreLevel
 			exploreScoreData.SetReceived(bReceived);
 		}
 
-		// Token: 0x0603AB51 RID: 240465 RVA: 0x00DFC1E1 File Offset: 0x00DFA3E1
+		// Token: 0x0602FA9A RID: 195226 RVA: 0x00D4C775 File Offset: 0x00D4A975
 		public int GetCountryId()
 		{
 			return this.CountryId;
 		}
 
-		// Token: 0x0603AB52 RID: 240466 RVA: 0x00DFC1E9 File Offset: 0x00DFA3E9
+		// Token: 0x0602FA9B RID: 195227 RVA: 0x00D4C77D File Offset: 0x00D4A97D
 		public void SetExploreLevel(int exploreLevel)
 		{
 			this.ExploreLevel = exploreLevel;
 		}
 
-		// Token: 0x0603AB53 RID: 240467 RVA: 0x00DFC1F2 File Offset: 0x00DFA3F2
+		// Token: 0x0602FA9C RID: 195228 RVA: 0x00D4C786 File Offset: 0x00D4A986
 		public int GetExploreLevel()
 		{
 			return this.ExploreLevel;
 		}
 
-		// Token: 0x0603AB54 RID: 240468 RVA: 0x00DFC1FA File Offset: 0x00DFA3FA
+		// Token: 0x0602FA9D RID: 195229 RVA: 0x00D4C78E File Offset: 0x00D4A98E
 		public void SetExploreScore(int exploreScore)
 		{
 			this.ExploreScore = exploreScore;
 		}
 
-		// Token: 0x0603AB55 RID: 240469 RVA: 0x00DFC203 File Offset: 0x00DFA403
+		// Token: 0x0602FA9E RID: 195230 RVA: 0x00D4C797 File Offset: 0x00D4A997
 		public int GetExploreScore()
 		{
 			return this.ExploreScore;
 		}
 
-		// Token: 0x0603AB56 RID: 240470 RVA: 0x00DFC20C File Offset: 0x00DFA40C
+		// Token: 0x0602FA9F RID: 195231 RVA: 0x00D4C7A0 File Offset: 0x00D4A9A0
 		[NullableContext(2)]
 		public CountryExploreLevelRewardData GetExploreLevelRewardData(int exploreLevel)
 		{
@@ -154,38 +154,38 @@ namespace CSharpScript.Game.Module.ExploreLevel
 			return result;
 		}
 
-		// Token: 0x0603AB57 RID: 240471 RVA: 0x00DFC229 File Offset: 0x00DFA429
+		// Token: 0x0602FAA0 RID: 195232 RVA: 0x00D4C7BD File Offset: 0x00D4A9BD
 		public Dictionary<int, CountryExploreLevelRewardData> GetExploreLevelRewardDataMap()
 		{
 			return this.ExploreLevelRewardDataMap;
 		}
 
-		// Token: 0x0603AB58 RID: 240472 RVA: 0x00DFC231 File Offset: 0x00DFA431
+		// Token: 0x0602FAA1 RID: 195233 RVA: 0x00D4C7C5 File Offset: 0x00D4A9C5
 		[NullableContext(2)]
 		public CountryExploreLevelRewardData GetCurrentExploreLevelRewardData()
 		{
 			return this.GetExploreLevelRewardData(this.ExploreLevel);
 		}
 
-		// Token: 0x0603AB59 RID: 240473 RVA: 0x00DFC23F File Offset: 0x00DFA43F
+		// Token: 0x0602FAA2 RID: 195234 RVA: 0x00D4C7D3 File Offset: 0x00D4A9D3
 		public List<CountryExploreLevelRewardData> GetAllExploreLevelRewardData()
 		{
 			return this.ExploreLevelRewardDataList;
 		}
 
-		// Token: 0x0603AB5A RID: 240474 RVA: 0x00DFC247 File Offset: 0x00DFA447
+		// Token: 0x0602FAA3 RID: 195235 RVA: 0x00D4C7DB File Offset: 0x00D4A9DB
 		public List<CountryExploreLevelRewardData> GetUnlockFunctionExploreLevelRewardDataList()
 		{
 			return this.UnlockFunctionExploreLevelRewardDataList;
 		}
 
-		// Token: 0x0603AB5B RID: 240475 RVA: 0x00DFC24F File Offset: 0x00DFA44F
+		// Token: 0x0602FAA4 RID: 195236 RVA: 0x00D4C7E3 File Offset: 0x00D4A9E3
 		public int GetMaxExploreLevel()
 		{
 			return this.MaxExploreLevel;
 		}
 
-		// Token: 0x0603AB5C RID: 240476 RVA: 0x00DFC258 File Offset: 0x00DFA458
+		// Token: 0x0602FAA5 RID: 195237 RVA: 0x00D4C7EC File Offset: 0x00D4A9EC
 		public bool CanLevelUp()
 		{
 			int num = 0;
@@ -200,31 +200,31 @@ namespace CSharpScript.Game.Module.ExploreLevel
 			return num != 0 && this.ExploreScore < currentExploreLevelRewardData.GetMaxExploreScore() && this.ExploreScore + num >= currentExploreLevelRewardData.GetMaxExploreScore();
 		}
 
-		// Token: 0x0401EA46 RID: 125510
+		// Token: 0x040194ED RID: 103661
 		private int CountryId;
 
-		// Token: 0x0401EA47 RID: 125511
+		// Token: 0x040194EE RID: 103662
 		private int ExploreLevel;
 
-		// Token: 0x0401EA48 RID: 125512
+		// Token: 0x040194EF RID: 103663
 		private int ExploreScore;
 
-		// Token: 0x0401EA49 RID: 125513
+		// Token: 0x040194F0 RID: 103664
 		private Dictionary<int, CountryExploreLevelRewardData> ExploreLevelRewardDataMap = new Dictionary<int, CountryExploreLevelRewardData>();
 
-		// Token: 0x0401EA4A RID: 125514
+		// Token: 0x040194F1 RID: 103665
 		private List<CountryExploreLevelRewardData> ExploreLevelRewardDataList = new List<CountryExploreLevelRewardData>();
 
-		// Token: 0x0401EA4B RID: 125515
+		// Token: 0x040194F2 RID: 103666
 		private List<CountryExploreLevelRewardData> UnlockFunctionExploreLevelRewardDataList = new List<CountryExploreLevelRewardData>();
 
-		// Token: 0x0401EA4C RID: 125516
+		// Token: 0x040194F3 RID: 103667
 		private Dictionary<int, Dictionary<int, CountryExploreScoreData>> CountryExploreScoreDataAreaMap = new Dictionary<int, Dictionary<int, CountryExploreScoreData>>();
 
-		// Token: 0x0401EA4D RID: 125517
+		// Token: 0x040194F4 RID: 103668
 		private List<CountryExploreScoreData> CountryExploreScoreDataList = new List<CountryExploreScoreData>();
 
-		// Token: 0x0401EA4E RID: 125518
+		// Token: 0x040194F5 RID: 103669
 		private int MaxExploreLevel;
 	}
 }

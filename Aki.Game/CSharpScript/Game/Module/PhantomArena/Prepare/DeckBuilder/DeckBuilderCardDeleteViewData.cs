@@ -4,19 +4,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 {
-	// Token: 0x02005185 RID: 20869
+	// Token: 0x02004155 RID: 16725
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DeckBuilderCardDeleteViewData : IDeckBuilderCardDeleteViewData
 	{
-		// Token: 0x1700813E RID: 33086
-		// (get) Token: 0x0603560E RID: 218638 RVA: 0x00CA4E25 File Offset: 0x00CA3025
-		// (set) Token: 0x0603560F RID: 218639 RVA: 0x00CA4E2D File Offset: 0x00CA302D
+		// Token: 0x170054FE RID: 21758
+		// (get) Token: 0x0602A509 RID: 173321 RVA: 0x00BF23DD File Offset: 0x00BF05DD
+		// (set) Token: 0x0602A50A RID: 173322 RVA: 0x00BF23E5 File Offset: 0x00BF05E5
 		public HashSet<ECardElement> EnabledElementSet { get; set; }
 
-		// Token: 0x1700813F RID: 33087
-		// (get) Token: 0x06035610 RID: 218640 RVA: 0x00CA4E36 File Offset: 0x00CA3036
-		// (set) Token: 0x06035611 RID: 218641 RVA: 0x00CA4E3E File Offset: 0x00CA303E
+		// Token: 0x170054FF RID: 21759
+		// (get) Token: 0x0602A50B RID: 173323 RVA: 0x00BF23EE File Offset: 0x00BF05EE
+		// (set) Token: 0x0602A50C RID: 173324 RVA: 0x00BF23F6 File Offset: 0x00BF05F6
 		public Action<HashSet<ECardElement>> DeleteFunc { get; set; }
 	}
 }

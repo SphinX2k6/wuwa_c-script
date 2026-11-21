@@ -1,18 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020021C8 RID: 8648
+// Token: 0x020016AC RID: 5804
 public class MailParamHandlerDefine : IStaticVariableResetter
 {
-	// Token: 0x06010CE3 RID: 68835 RVA: 0x00414EFE File Offset: 0x004130FE
+	// Token: 0x0600E174 RID: 57716 RVA: 0x004217DE File Offset: 0x0041F9DE
 	static MailParamHandlerDefine()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(MailParamHandlerDefine.CreateStaticDefaultValue), new Action(MailParamHandlerDefine.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06010CE4 RID: 68836 RVA: 0x00414F20 File Offset: 0x00413120
+	// Token: 0x0600E175 RID: 57717 RVA: 0x00421800 File Offset: 0x0041FA00
 	public static void CreateStaticDefaultValue()
 	{
 		Dictionary<string, IMailParamHandler> dictionary = new Dictionary<string, IMailParamHandler>();
@@ -31,22 +30,29 @@ public class MailParamHandlerDefine : IStaticVariableResetter
 		});
 		dictionary["jumpId"] = new MailParamHandler(delegate(MailData instance, string value)
 		{
-			string[] array = (from part in value.Split('/', StringSplitOptions.None)
-			select part.Trim() into part
-			where part.Length > 0
-			select part).ToArray<string>();
+			string[] array = value.Split('/', StringSplitOptions.None);
+			List<string> list = new List<string>(array.Length);
+			for (int i = 0; i < array.Length; i++)
+			{
+				string text = array[i].Trim();
+				if (text.Length > 0)
+				{
+					list.Add(text);
+				}
+			}
+			string[] array2 = list.ToArray();
 			int num;
-			if (array.Length != 0 && int.TryParse(array[0], out num) && num > 0)
+			if (array2.Length != 0 && int.TryParse(array2[0], out num) && num > 0)
 			{
 				instance.SetShowSubContentJumpId(num);
 			}
 			int showSubContentJumpParam;
-			if (array.Length > 1 && int.TryParse(array[1], out showSubContentJumpParam))
+			if (array2.Length > 1 && int.TryParse(array2[1], out showSubContentJumpParam))
 			{
 				instance.SetShowSubContentJumpParam(showSubContentJumpParam);
 			}
 			int showSubContentJumpParam2;
-			if (array.Length > 2 && int.TryParse(array[2], out showSubContentJumpParam2))
+			if (array2.Length > 2 && int.TryParse(array2[2], out showSubContentJumpParam2))
 			{
 				instance.SetShowSubContentJumpParam2(showSubContentJumpParam2);
 			}
@@ -122,13 +128,13 @@ public class MailParamHandlerDefine : IStaticVariableResetter
 		MailParamHandlerDefine.mailParamHandlerMapDefine = dictionary;
 	}
 
-	// Token: 0x06010CE5 RID: 68837 RVA: 0x00415227 File Offset: 0x00413427
+	// Token: 0x0600E176 RID: 57718 RVA: 0x00421B07 File Offset: 0x0041FD07
 	public static void ResetStaticDefaultValue()
 	{
 		MailParamHandlerDefine.mailParamHandlerMapDefine = null;
 	}
 
-	// Token: 0x04007FD1 RID: 32721
+	// Token: 0x04008118 RID: 33048
 	[Nullable(1)]
 	public static Dictionary<string, IMailParamHandler> mailParamHandlerMapDefine;
 }

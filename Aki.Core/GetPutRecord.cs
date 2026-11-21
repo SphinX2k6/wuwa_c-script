@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 [RequiredMember]
 public class GetPutRecord
 {
-	// Token: 0x0600002A RID: 42 RVA: 0x00003955 File Offset: 0x00001B55
+	// Token: 0x0600002A RID: 42 RVA: 0x00003565 File Offset: 0x00001765
 	[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 	[CompilerFeatureRequired("RequiredMembers")]
 	public GetPutRecord()

@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A42 RID: 19010
+	// Token: 0x020039EA RID: 14826
 	public enum ETrapDefensePosCalc
 	{
-		// Token: 0x0401A61A RID: 108058
+		// Token: 0x04014F6C RID: 85868
 		Two = 100,
-		// Token: 0x0401A61B RID: 108059
+		// Token: 0x04014F6D RID: 85869
 		Four = 10000,
-		// Token: 0x0401A61C RID: 108060
+		// Token: 0x04014F6E RID: 85870
 		Six = 1000000
 	}
 }

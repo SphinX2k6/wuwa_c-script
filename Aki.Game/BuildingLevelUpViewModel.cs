@@ -1,11 +1,11 @@
 ﻿using System;
 
-// Token: 0x020012F5 RID: 4853
+// Token: 0x020007A9 RID: 1961
 public class BuildingLevelUpViewModel
 {
-	// Token: 0x04003C22 RID: 15394
+	// Token: 0x04003CBA RID: 15546
 	public bool IsLevelUp;
 
-	// Token: 0x04003C23 RID: 15395
+	// Token: 0x04003CBB RID: 15547
 	public int BuildingId;
 }

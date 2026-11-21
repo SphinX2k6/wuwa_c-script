@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine.Script
 {
-	// Token: 0x02002ADA RID: 10970
+	// Token: 0x02000889 RID: 2185
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FOnControllerConnectionChanged : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x060283CB RID: 164811 RVA: 0x003D32B0 File Offset: 0x003D14B0
+		// Token: 0x0600BD7E RID: 48510 RVA: 0x0012E5A0 File Offset: 0x0012C7A0
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnControllerConnectionChanged.StaticFunctionPtr();
 		}
 
-		// Token: 0x060283CC RID: 164812 RVA: 0x003D32BC File Offset: 0x003D14BC
+		// Token: 0x0600BD7F RID: 48511 RVA: 0x0012E5AC File Offset: 0x0012C7AC
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnControllerConnectionChanged._FunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace UnrealEngine.Script
 			return FOnControllerConnectionChanged._FunctionPtr;
 		}
 
-		// Token: 0x060283CD RID: 164813 RVA: 0x003D32DF File Offset: 0x003D14DF
+		// Token: 0x0600BD80 RID: 48512 RVA: 0x0012E5CF File Offset: 0x0012C7CF
 		public FOnControllerConnectionChanged()
 		{
 		}
 
-		// Token: 0x060283CE RID: 164814 RVA: 0x003D32E7 File Offset: 0x003D14E7
+		// Token: 0x0600BD81 RID: 48513 RVA: 0x0012E5D7 File Offset: 0x0012C7D7
 		[NullableContext(2)]
 		public FOnControllerConnectionChanged(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060283CF RID: 164815 RVA: 0x003D32F1 File Offset: 0x003D14F1
+		// Token: 0x0600BD82 RID: 48514 RVA: 0x0012E5E1 File Offset: 0x0012C7E1
 		public FOnControllerConnectionChanged(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060283D0 RID: 164816 RVA: 0x003D32FC File Offset: 0x003D14FC
+		// Token: 0x0600BD83 RID: 48515 RVA: 0x0012E5EC File Offset: 0x0012C7EC
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<bool, int, int>) ?? ((Action<bool, int, int>)Delegate.CreateDelegate(typeof(Action<bool, int, int>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x060283D1 RID: 164817 RVA: 0x003D332E File Offset: 0x003D152E
+		// Token: 0x0600BD84 RID: 48516 RVA: 0x0012E61E File Offset: 0x0012C81E
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action<bool, int, int> Callback)
 		{
 			if (FOnControllerConnectionChanged.RegisterId == 0)
@@ -67,17 +66,15 @@ namespace UnrealEngine.Script
 			base.Add(Callback, FOnControllerConnectionChanged.RegisterId);
 		}
 
-		// Token: 0x060283D2 RID: 164818 RVA: 0x003D3368 File Offset: 0x003D1568
+		// Token: 0x0600BD85 RID: 48517 RVA: 0x0012E658 File Offset: 0x0012C858
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action<bool, int, int> Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x060283D3 RID: 164819 RVA: 0x003D3374 File Offset: 0x003D1574
+		// Token: 0x0600BD86 RID: 48518 RVA: 0x0012E664 File Offset: 0x0012C864
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(bool bIsConnected, int PlatformUserId, int ControllerId)
 		{
 			FOnControllerConnectionChanged.__FOnControllerConnectionChanged_DelegateParams* ptr = stackalloc FOnControllerConnectionChanged.__FOnControllerConnectionChanged_DelegateParams[(UIntPtr)27] + 15L / (long)sizeof(FOnControllerConnectionChanged.__FOnControllerConnectionChanged_DelegateParams) & -16L;
@@ -88,10 +85,9 @@ namespace UnrealEngine.Script
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x060283D4 RID: 164820 RVA: 0x003D33C0 File Offset: 0x003D15C0
+		// Token: 0x0600BD87 RID: 48519 RVA: 0x0012E6B0 File Offset: 0x0012C8B0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<bool, int, int> action = target as Action<bool, int, int>;
@@ -102,39 +98,39 @@ namespace UnrealEngine.Script
 			action(((FOnControllerConnectionChanged.__FOnControllerConnectionChanged_DelegateParams*)__Parameters)->bIsConnected, ((FOnControllerConnectionChanged.__FOnControllerConnectionChanged_DelegateParams*)__Parameters)->PlatformUserId, ((FOnControllerConnectionChanged.__FOnControllerConnectionChanged_DelegateParams*)__Parameters)->ControllerId);
 		}
 
-		// Token: 0x0401627F RID: 90751
+		// Token: 0x04005696 RID: 22166
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04016280 RID: 90752
+		// Token: 0x04005697 RID: 22167
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/LGUI.OnControllerConnectionChanged__DelegateSignature";
 
-		// Token: 0x04016281 RID: 90753
+		// Token: 0x04005698 RID: 22168
 		private static int RegisterId;
 
-		// Token: 0x02003C0A RID: 15370
+		// Token: 0x02001413 RID: 5139
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 12)]
-		protected ref struct __FOnControllerConnectionChanged_DelegateParams
+		private ref struct __FOnControllerConnectionChanged_DelegateParams
 		{
-			// Token: 0x04017E40 RID: 97856
+			// Token: 0x040068C1 RID: 26817
 			[FieldOffset(0)]
 			public bool bIsConnected;
 
-			// Token: 0x04017E41 RID: 97857
+			// Token: 0x040068C2 RID: 26818
 			[FieldOffset(4)]
 			public int PlatformUserId;
 
-			// Token: 0x04017E42 RID: 97858
+			// Token: 0x040068C3 RID: 26819
 			[FieldOffset(8)]
 			public int ControllerId;
 		}
 
-		// Token: 0x02003C0B RID: 15371
+		// Token: 0x02001414 RID: 5140
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017E43 RID: 97859
+			// Token: 0x040068C4 RID: 26820
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

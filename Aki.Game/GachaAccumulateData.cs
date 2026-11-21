@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.ItemReward;
 
-// Token: 0x02001C56 RID: 7254
+// Token: 0x02001115 RID: 4373
 [NullableContext(1)]
 [Nullable(0)]
 public class GachaAccumulateData
 {
-	// Token: 0x170011DD RID: 4573
-	// (get) Token: 0x0600DAC3 RID: 56003 RVA: 0x0032CC10 File Offset: 0x0032AE10
+	// Token: 0x17001203 RID: 4611
+	// (get) Token: 0x0600AED9 RID: 44761 RVA: 0x00338018 File Offset: 0x00336218
 	public bool HasClaimable
 	{
 		get
@@ -38,7 +37,7 @@ public class GachaAccumulateData
 		}
 	}
 
-	// Token: 0x0600DAC4 RID: 56004 RVA: 0x0032CCA0 File Offset: 0x0032AEA0
+	// Token: 0x0600AEDA RID: 44762 RVA: 0x003380A8 File Offset: 0x003362A8
 	public List<int> CollectAllClaimableRewardIds()
 	{
 		List<int> list = new List<int>();
@@ -67,8 +66,8 @@ public class GachaAccumulateData
 		return list;
 	}
 
-	// Token: 0x170011DE RID: 4574
-	// (get) Token: 0x0600DAC5 RID: 56005 RVA: 0x0032CD4C File Offset: 0x0032AF4C
+	// Token: 0x17001204 RID: 4612
+	// (get) Token: 0x0600AEDB RID: 44763 RVA: 0x00338154 File Offset: 0x00336354
 	public int CurGachaNum
 	{
 		get
@@ -82,7 +81,7 @@ public class GachaAccumulateData
 		}
 	}
 
-	// Token: 0x0600DAC6 RID: 56006 RVA: 0x0032CD60 File Offset: 0x0032AF60
+	// Token: 0x0600AEDC RID: 44764 RVA: 0x00338168 File Offset: 0x00336368
 	public double GetCurrentGachaProgress()
 	{
 		GachaAccumulateGroupData groupData = this.GroupData;
@@ -94,7 +93,7 @@ public class GachaAccumulateData
 		return (double)this.CurGachaNum / (double)num;
 	}
 
-	// Token: 0x0600DAC7 RID: 56007 RVA: 0x0032CDCC File Offset: 0x0032AFCC
+	// Token: 0x0600AEDD RID: 44765 RVA: 0x003381D4 File Offset: 0x003363D4
 	[NullableContext(0)]
 	public ValueTuple<int, int> GetProgress()
 	{
@@ -116,7 +115,7 @@ public class GachaAccumulateData
 		return new ValueTuple<int, int>(num, list.Count);
 	}
 
-	// Token: 0x0600DAC8 RID: 56008 RVA: 0x0032CE70 File Offset: 0x0032B070
+	// Token: 0x0600AEDE RID: 44766 RVA: 0x00338278 File Offset: 0x00336478
 	[NullableContext(2)]
 	public RewardItemData GetTipsShowReward()
 	{
@@ -143,9 +142,14 @@ public class GachaAccumulateData
 		}
 		else
 		{
-			List<GachaAccumulateRewardData> list2 = (from r in list
-			where !r.GetIfCyclic()
-			select r).ToList<GachaAccumulateRewardData>();
+			List<GachaAccumulateRewardData> list2 = new List<GachaAccumulateRewardData>();
+			foreach (GachaAccumulateRewardData gachaAccumulateRewardData3 in list)
+			{
+				if (!gachaAccumulateRewardData3.GetIfCyclic())
+				{
+					list2.Add(gachaAccumulateRewardData3);
+				}
+			}
 			if (list2.Count == 0)
 			{
 				return null;
@@ -161,7 +165,7 @@ public class GachaAccumulateData
 		return result;
 	}
 
-	// Token: 0x0600DAC9 RID: 56009 RVA: 0x0032CFB4 File Offset: 0x0032B1B4
+	// Token: 0x0600AEDF RID: 44767 RVA: 0x003383E0 File Offset: 0x003365E0
 	public bool GetIfFinishAll()
 	{
 		GachaAccumulateGroupData groupData = this.GroupData;
@@ -178,7 +182,7 @@ public class GachaAccumulateData
 		return true;
 	}
 
-	// Token: 0x0600DACA RID: 56010 RVA: 0x0032D024 File Offset: 0x0032B224
+	// Token: 0x0600AEE0 RID: 44768 RVA: 0x00338450 File Offset: 0x00336650
 	public int GetUnTakeRewardNum()
 	{
 		int num = 0;
@@ -196,7 +200,7 @@ public class GachaAccumulateData
 		return num;
 	}
 
-	// Token: 0x0600DACB RID: 56011 RVA: 0x0032D094 File Offset: 0x0032B294
+	// Token: 0x0600AEE1 RID: 44769 RVA: 0x003384C0 File Offset: 0x003366C0
 	public bool GetIfTakeAllReward()
 	{
 		using (List<GachaAccumulateRewardData>.Enumerator enumerator = this.GroupData.RewardInfos.GetEnumerator())
@@ -212,7 +216,7 @@ public class GachaAccumulateData
 		return true;
 	}
 
-	// Token: 0x0600DACC RID: 56012 RVA: 0x0032D0F4 File Offset: 0x0032B2F4
+	// Token: 0x0600AEE2 RID: 44770 RVA: 0x00338520 File Offset: 0x00336720
 	public int GetNextRewardNeedGachaNum()
 	{
 		if (this.GroupData == null)
@@ -239,7 +243,7 @@ public class GachaAccumulateData
 		return 0;
 	}
 
-	// Token: 0x0600DACD RID: 56013 RVA: 0x0032D200 File Offset: 0x0032B400
+	// Token: 0x0600AEE3 RID: 44771 RVA: 0x0033862C File Offset: 0x0033682C
 	public int GetCyclicBaseGachaNum()
 	{
 		int num = 0;
@@ -254,13 +258,13 @@ public class GachaAccumulateData
 		return num;
 	}
 
-	// Token: 0x0600DACE RID: 56014 RVA: 0x0032D27C File Offset: 0x0032B47C
+	// Token: 0x0600AEE4 RID: 44772 RVA: 0x003386A8 File Offset: 0x003368A8
 	public bool IsCyclicExhausted(GachaAccumulateRewardData reward)
 	{
 		return reward.GetIfCyclic() && reward.CycleCount != -1 && reward.CycleRewardedTimes >= reward.CycleCount;
 	}
 
-	// Token: 0x0600DACF RID: 56015 RVA: 0x0032D2A4 File Offset: 0x0032B4A4
+	// Token: 0x0600AEE5 RID: 44773 RVA: 0x003386D0 File Offset: 0x003368D0
 	public int GetCyclicAchievedTimes(GachaAccumulateRewardData reward)
 	{
 		if (!reward.GetIfCyclic() || reward.GachaNum <= 0)
@@ -275,13 +279,13 @@ public class GachaAccumulateData
 		return (int)Math.Floor((double)(this.CurGachaNum - cyclicBaseGachaNum) / (double)reward.GachaNum);
 	}
 
-	// Token: 0x0600DAD0 RID: 56016 RVA: 0x0032D2ED File Offset: 0x0032B4ED
+	// Token: 0x0600AEE6 RID: 44774 RVA: 0x00338719 File Offset: 0x00336919
 	public bool IsCyclicAchievedFull(GachaAccumulateRewardData reward)
 	{
 		return reward.GetIfCyclic() && reward.CycleCount != -1 && this.GetCyclicAchievedTimes(reward) >= reward.CycleCount;
 	}
 
-	// Token: 0x0600DAD1 RID: 56017 RVA: 0x0032D314 File Offset: 0x0032B514
+	// Token: 0x0600AEE7 RID: 44775 RVA: 0x00338740 File Offset: 0x00336940
 	public bool GetIfAllRewardAchieved()
 	{
 		if (this.GroupData == null)
@@ -309,7 +313,7 @@ public class GachaAccumulateData
 		return true;
 	}
 
-	// Token: 0x0600DAD2 RID: 56018 RVA: 0x0032D3A0 File Offset: 0x0032B5A0
+	// Token: 0x0600AEE8 RID: 44776 RVA: 0x003387CC File Offset: 0x003369CC
 	public bool GetIfTakeAllRewardIncludingCyclic()
 	{
 		if (this.GroupData == null)
@@ -337,10 +341,10 @@ public class GachaAccumulateData
 		return true;
 	}
 
-	// Token: 0x0400641A RID: 25626
+	// Token: 0x040064EC RID: 25836
 	public int AccumulateId;
 
-	// Token: 0x0400641B RID: 25627
+	// Token: 0x040064ED RID: 25837
 	[Nullable(2)]
 	public GachaAccumulateGroupData GroupData;
 }

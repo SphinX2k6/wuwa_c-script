@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025A7 RID: 9639
+	// Token: 0x02002856 RID: 10326
 	public class IActorTurnToEmptyData : IActorTurnToData
 	{
-		// Token: 0x0600D8E3 RID: 55523 RVA: 0x00205E76 File Offset: 0x00204076
-		[NullableContext(1)]
+		// Token: 0x0600E65D RID: 58973 RVA: 0x00221B4A File Offset: 0x0021FD4A
 		public static IActorTurnToEmptyData Create(IActorTurnToEmptyData? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003F57 RID: 16215
-		// (get) Token: 0x0600D8E4 RID: 55524 RVA: 0x00205E95 File Offset: 0x00204095
+		// Token: 0x1700425F RID: 16991
+		// (get) Token: 0x0600E65E RID: 58974 RVA: 0x00221B69 File Offset: 0x0021FD69
 		public override EActorTurnToMode Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007881 RID: 30849
+		// Token: 0x04007EE8 RID: 32488
 		private IActorTurnToEmptyData Instance;
 	}
 }

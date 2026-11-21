@@ -2,42 +2,42 @@
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 {
-	// Token: 0x02006EC0 RID: 28352
+	// Token: 0x02006040 RID: 24640
 	public interface IDollGrabInfiniteRewardData
 	{
-		// Token: 0x17009AA0 RID: 39584
-		// (get) Token: 0x0604509E RID: 282782
-		// (set) Token: 0x0604509F RID: 282783
+		// Token: 0x17006FD7 RID: 28631
+		// (get) Token: 0x0603B23F RID: 242239
+		// (set) Token: 0x0603B240 RID: 242240
 		int DropId { get; set; }
 
-		// Token: 0x17009AA1 RID: 39585
-		// (get) Token: 0x060450A0 RID: 282784
-		// (set) Token: 0x060450A1 RID: 282785
+		// Token: 0x17006FD8 RID: 28632
+		// (get) Token: 0x0603B241 RID: 242241
+		// (set) Token: 0x0603B242 RID: 242242
 		int CurrentScore { get; set; }
 
-		// Token: 0x17009AA2 RID: 39586
-		// (get) Token: 0x060450A2 RID: 282786
-		// (set) Token: 0x060450A3 RID: 282787
+		// Token: 0x17006FD9 RID: 28633
+		// (get) Token: 0x0603B243 RID: 242243
+		// (set) Token: 0x0603B244 RID: 242244
 		int CurrentAccumulatedScore { get; set; }
 
-		// Token: 0x17009AA3 RID: 39587
-		// (get) Token: 0x060450A4 RID: 282788
-		// (set) Token: 0x060450A5 RID: 282789
+		// Token: 0x17006FDA RID: 28634
+		// (get) Token: 0x0603B245 RID: 242245
+		// (set) Token: 0x0603B246 RID: 242246
 		int TargetAccumulatedScore { get; set; }
 
-		// Token: 0x17009AA4 RID: 39588
-		// (get) Token: 0x060450A6 RID: 282790
-		// (set) Token: 0x060450A7 RID: 282791
+		// Token: 0x17006FDB RID: 28635
+		// (get) Token: 0x0603B247 RID: 242247
+		// (set) Token: 0x0603B248 RID: 242248
 		int HighestScore { get; set; }
 
-		// Token: 0x17009AA5 RID: 39589
-		// (get) Token: 0x060450A8 RID: 282792
-		// (set) Token: 0x060450A9 RID: 282793
+		// Token: 0x17006FDC RID: 28636
+		// (get) Token: 0x0603B249 RID: 242249
+		// (set) Token: 0x0603B24A RID: 242250
 		bool IsFinalReward { get; set; }
 
-		// Token: 0x17009AA6 RID: 39590
-		// (get) Token: 0x060450AA RID: 282794
-		// (set) Token: 0x060450AB RID: 282795
+		// Token: 0x17006FDD RID: 28637
+		// (get) Token: 0x0603B24B RID: 242251
+		// (set) Token: 0x0603B24C RID: 242252
 		bool IsFirstGetReward { get; set; }
 	}
 }

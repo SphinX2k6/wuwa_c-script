@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x020049B3 RID: 18867
+	// Token: 0x02004E6D RID: 20077
 	public class ICheckCurrentRoleT
 	{
-		// Token: 0x1700886F RID: 34927
-		// (get) Token: 0x0601D748 RID: 120648 RVA: 0x00426667 File Offset: 0x00424867
-		// (set) Token: 0x0601D749 RID: 120649 RVA: 0x0042666F File Offset: 0x0042486F
+		// Token: 0x17008F31 RID: 36657
+		// (get) Token: 0x0601F187 RID: 127367 RVA: 0x00456DAF File Offset: 0x00454FAF
+		// (set) Token: 0x0601F188 RID: 127368 RVA: 0x00456DB7 File Offset: 0x00454FB7
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008870 RID: 34928
-		// (get) Token: 0x0601D74A RID: 120650 RVA: 0x00426678 File Offset: 0x00424878
-		// (set) Token: 0x0601D74B RID: 120651 RVA: 0x00426680 File Offset: 0x00424880
+		// Token: 0x17008F32 RID: 36658
+		// (get) Token: 0x0601F189 RID: 127369 RVA: 0x00456DC0 File Offset: 0x00454FC0
+		// (set) Token: 0x0601F18A RID: 127370 RVA: 0x00456DC8 File Offset: 0x00454FC8
 		public int RoleId { get; set; }
 
-		// Token: 0x17008871 RID: 34929
-		// (get) Token: 0x0601D74C RID: 120652 RVA: 0x00426689 File Offset: 0x00424889
-		// (set) Token: 0x0601D74D RID: 120653 RVA: 0x00426691 File Offset: 0x00424891
+		// Token: 0x17008F33 RID: 36659
+		// (get) Token: 0x0601F18B RID: 127371 RVA: 0x00456DD1 File Offset: 0x00454FD1
+		// (set) Token: 0x0601F18C RID: 127372 RVA: 0x00456DD9 File Offset: 0x00454FD9
 		public ECompare Compare { get; set; }
 
-		// Token: 0x17008872 RID: 34930
-		// (get) Token: 0x0601D74E RID: 120654 RVA: 0x0042669A File Offset: 0x0042489A
-		// (set) Token: 0x0601D74F RID: 120655 RVA: 0x004266A2 File Offset: 0x004248A2
+		// Token: 0x17008F34 RID: 36660
+		// (get) Token: 0x0601F18D RID: 127373 RVA: 0x00456DE2 File Offset: 0x00454FE2
+		// (set) Token: 0x0601F18E RID: 127374 RVA: 0x00456DEA File Offset: 0x00454FEA
 		public TOnlinePlayerConditionTargetUnion OnlinePlayerConditionTargetOption { get; set; }
 
-		// Token: 0x0601D750 RID: 120656 RVA: 0x004266AB File Offset: 0x004248AB
+		// Token: 0x0601F18F RID: 127375 RVA: 0x00456DF3 File Offset: 0x00454FF3
 		public ICheckCurrentRoleT()
 		{
 			this.Type = ECondition.CompareVar;

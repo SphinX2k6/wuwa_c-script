@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002656 RID: 9814
+	// Token: 0x0200291A RID: 10522
 	public class IMapConfig
 	{
-		// Token: 0x0600DC0A RID: 56330 RVA: 0x0020BF67 File Offset: 0x0020A167
-		[NullableContext(1)]
+		// Token: 0x0600E9E6 RID: 59878 RVA: 0x0022883F File Offset: 0x00226A3F
 		public static IMapConfig Create(IMapConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004120 RID: 16672
-		// (get) Token: 0x0600DC0B RID: 56331 RVA: 0x0020BF86 File Offset: 0x0020A186
+		// Token: 0x17004460 RID: 17504
+		// (get) Token: 0x0600E9E7 RID: 59879 RVA: 0x0022885E File Offset: 0x00226A5E
 		public virtual bool ExpandAreaTerminal
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007A52 RID: 31314
+		// Token: 0x040080F4 RID: 33012
 		private IMapConfig Instance;
 	}
 }

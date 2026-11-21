@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004F7C RID: 20348
+	// Token: 0x020054AB RID: 21675
 	public struct ICharacterConnectorComponent : IFlatbufferObject
 	{
-		// Token: 0x1700930E RID: 37646
-		// (get) Token: 0x060204CF RID: 132303 RVA: 0x0047E745 File Offset: 0x0047C945
+		// Token: 0x17009A87 RID: 39559
+		// (get) Token: 0x06022221 RID: 139809 RVA: 0x004B4735 File Offset: 0x004B2935
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060204D0 RID: 132304 RVA: 0x0047E752 File Offset: 0x0047C952
+		// Token: 0x06022222 RID: 139810 RVA: 0x004B4742 File Offset: 0x004B2942
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060204D1 RID: 132305 RVA: 0x0047E75C File Offset: 0x0047C95C
+		// Token: 0x06022223 RID: 139811 RVA: 0x004B474C File Offset: 0x004B294C
 		public static ICharacterConnectorComponent GetRootAsICharacterConnectorComponent(ByteBuffer _bb)
 		{
 			return ICharacterConnectorComponent.GetRootAsICharacterConnectorComponent(_bb, default(ICharacterConnectorComponent));
 		}
 
-		// Token: 0x060204D2 RID: 132306 RVA: 0x0047E778 File Offset: 0x0047C978
+		// Token: 0x06022224 RID: 139812 RVA: 0x004B4768 File Offset: 0x004B2968
 		public static ICharacterConnectorComponent GetRootAsICharacterConnectorComponent(ByteBuffer _bb, ICharacterConnectorComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060204D3 RID: 132307 RVA: 0x0047E795 File Offset: 0x0047C995
+		// Token: 0x06022225 RID: 139813 RVA: 0x004B4785 File Offset: 0x004B2985
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060204D4 RID: 132308 RVA: 0x0047E7A4 File Offset: 0x0047C9A4
+		// Token: 0x06022226 RID: 139814 RVA: 0x004B4794 File Offset: 0x004B2994
 		public ICharacterConnectorComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700930F RID: 37647
-		// (get) Token: 0x060204D5 RID: 132309 RVA: 0x0047E7B4 File Offset: 0x0047C9B4
+		// Token: 0x17009A88 RID: 39560
+		// (get) Token: 0x06022227 RID: 139815 RVA: 0x004B47A4 File Offset: 0x004B29A4
 		public bool Disabled
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009310 RID: 37648
-		// (get) Token: 0x060204D6 RID: 132310 RVA: 0x0047E7F4 File Offset: 0x0047C9F4
+		// Token: 0x17009A89 RID: 39561
+		// (get) Token: 0x06022228 RID: 139816 RVA: 0x004B47E4 File Offset: 0x004B29E4
 		public ICharacterConnectorRange? LogicType
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009311 RID: 37649
-		// (get) Token: 0x060204D7 RID: 132311 RVA: 0x0047E854 File Offset: 0x0047CA54
+		// Token: 0x17009A8A RID: 39562
+		// (get) Token: 0x06022229 RID: 139817 RVA: 0x004B4844 File Offset: 0x004B2A44
 		public byte NullMask
 		{
 			get
@@ -88,7 +88,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060204D8 RID: 132312 RVA: 0x0047E890 File Offset: 0x0047CA90
+		// Token: 0x0602222A RID: 139818 RVA: 0x004B4880 File Offset: 0x004B2A80
 		public static Offset<ICharacterConnectorComponent> CreateICharacterConnectorComponent(FlatBufferBuilder builder, bool Disabled = false, Offset<ICharacterConnectorRange> LogicTypeOffset = default(Offset<ICharacterConnectorRange>), byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -98,37 +98,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ICharacterConnectorComponent.EndICharacterConnectorComponent(builder);
 		}
 
-		// Token: 0x060204D9 RID: 132313 RVA: 0x0047E8B4 File Offset: 0x0047CAB4
+		// Token: 0x0602222B RID: 139819 RVA: 0x004B48A4 File Offset: 0x004B2AA4
 		public static void StartICharacterConnectorComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x060204DA RID: 132314 RVA: 0x0047E8BD File Offset: 0x0047CABD
+		// Token: 0x0602222C RID: 139820 RVA: 0x004B48AD File Offset: 0x004B2AAD
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x060204DB RID: 132315 RVA: 0x0047E8C8 File Offset: 0x0047CAC8
+		// Token: 0x0602222D RID: 139821 RVA: 0x004B48B8 File Offset: 0x004B2AB8
 		public static void AddLogicType(FlatBufferBuilder builder, Offset<ICharacterConnectorRange> logicTypeOffset)
 		{
 			builder.AddOffset(1, logicTypeOffset.Value, 0);
 		}
 
-		// Token: 0x060204DC RID: 132316 RVA: 0x0047E8D8 File Offset: 0x0047CAD8
+		// Token: 0x0602222E RID: 139822 RVA: 0x004B48C8 File Offset: 0x004B2AC8
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x060204DD RID: 132317 RVA: 0x0047E8E3 File Offset: 0x0047CAE3
+		// Token: 0x0602222F RID: 139823 RVA: 0x004B48D3 File Offset: 0x004B2AD3
 		public static Offset<ICharacterConnectorComponent> EndICharacterConnectorComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<ICharacterConnectorComponent>(builder.EndTable());
 		}
 
-		// Token: 0x060204DE RID: 132318 RVA: 0x0047E8F0 File Offset: 0x0047CAF0
+		// Token: 0x06022230 RID: 139824 RVA: 0x004B48E0 File Offset: 0x004B2AE0
 		public ICharacterConnectorComponentT UnPack()
 		{
 			ICharacterConnectorComponentT characterConnectorComponentT = new ICharacterConnectorComponentT();
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return characterConnectorComponentT;
 		}
 
-		// Token: 0x060204DF RID: 132319 RVA: 0x0047E90C File Offset: 0x0047CB0C
+		// Token: 0x06022231 RID: 139825 RVA: 0x004B48FC File Offset: 0x004B2AFC
 		public void UnPackTo(ICharacterConnectorComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x060204E0 RID: 132320 RVA: 0x0047E960 File Offset: 0x0047CB60
+		// Token: 0x06022232 RID: 139826 RVA: 0x004B4950 File Offset: 0x004B2B50
 		public static Offset<ICharacterConnectorComponent> Pack(FlatBufferBuilder builder, ICharacterConnectorComponentT _o)
 		{
 			if (_o == null)
@@ -155,7 +155,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ICharacterConnectorComponent.CreateICharacterConnectorComponent(builder, _o.Disabled, logicTypeOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400DE23 RID: 56867
+		// Token: 0x0400E9CD RID: 59853
 		private Table __p;
 	}
 }

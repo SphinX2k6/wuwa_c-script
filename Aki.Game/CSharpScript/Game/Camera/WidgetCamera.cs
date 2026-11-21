@@ -4,34 +4,34 @@ using CSharpScript.Game.World.Define;
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072E3 RID: 29411
+	// Token: 0x02006466 RID: 25702
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class WidgetCamera : Entity
 	{
-		// Token: 0x060482F9 RID: 295673 RVA: 0x01289718 File Offset: 0x01287918
+		// Token: 0x0603E73D RID: 255805 RVA: 0x0122C15C File Offset: 0x0122A35C
 		public WidgetCamera(int id, int index) : base(id, index)
 		{
 		}
 
-		// Token: 0x060482FA RID: 295674 RVA: 0x01289722 File Offset: 0x01287922
+		// Token: 0x0603E73E RID: 255806 RVA: 0x0122C166 File Offset: 0x0122A366
 		[NullableContext(1)]
 		protected override TsGameBudgetGroupConfig StaticGameBudgetConfig()
 		{
 			return new TsGameBudgetGroupConfig(GameBudgetAllocatorConfigCreator.Instance.TsAlwaysTick2Config);
 		}
 
-		// Token: 0x17009F47 RID: 40775
-		// (get) Token: 0x060482FB RID: 295675 RVA: 0x01289733 File Offset: 0x01287933
-		// (set) Token: 0x060482FC RID: 295676 RVA: 0x0128973B File Offset: 0x0128793B
+		// Token: 0x170076DE RID: 30430
+		// (get) Token: 0x0603E73F RID: 255807 RVA: 0x0122C177 File Offset: 0x0122A377
+		// (set) Token: 0x0603E740 RID: 255808 RVA: 0x0122C17F File Offset: 0x0122A37F
 		public WidgetCameraBlendComponent BlendComponent { get; private set; }
 
-		// Token: 0x17009F48 RID: 40776
-		// (get) Token: 0x060482FD RID: 295677 RVA: 0x01289744 File Offset: 0x01287944
-		// (set) Token: 0x060482FE RID: 295678 RVA: 0x0128974C File Offset: 0x0128794C
+		// Token: 0x170076DF RID: 30431
+		// (get) Token: 0x0603E741 RID: 255809 RVA: 0x0122C188 File Offset: 0x0122A388
+		// (set) Token: 0x0603E742 RID: 255810 RVA: 0x0122C190 File Offset: 0x0122A390
 		public WidgetCameraDisplayComponent DisplayComponent { get; private set; }
 
-		// Token: 0x060482FF RID: 295679 RVA: 0x01289758 File Offset: 0x01287958
+		// Token: 0x0603E743 RID: 255811 RVA: 0x0122C19C File Offset: 0x0122A39C
 		protected override bool OnCreate(IEntityArgs args = null)
 		{
 			if (((args != null) ? args.GetP1<CameraModelInstance>() : null) == null)
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Camera
 			return true;
 		}
 
-		// Token: 0x06048300 RID: 295680 RVA: 0x012897CF File Offset: 0x012879CF
+		// Token: 0x0603E744 RID: 255812 RVA: 0x0122C213 File Offset: 0x0122A413
 		protected override bool OnStart()
 		{
 			this.BlendComponent = base.GetComponent<WidgetCameraBlendComponent>();
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Camera
 			return true;
 		}
 
-		// Token: 0x06048301 RID: 295681 RVA: 0x012897EA File Offset: 0x012879EA
+		// Token: 0x0603E745 RID: 255813 RVA: 0x0122C22E File Offset: 0x0122A42E
 		protected override bool OnClear()
 		{
 			this.BlendComponent = null;

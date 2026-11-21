@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002AB2 RID: 10930
+// Token: 0x0200202E RID: 8238
 internal class SubPackageTab : GridProxyAbstract<int>
 {
-	// Token: 0x06016C1F RID: 93215 RVA: 0x005C721C File Offset: 0x005C541C
+	// Token: 0x06014650 RID: 83536 RVA: 0x005F3D70 File Offset: 0x005F1F70
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -21,7 +21,7 @@ internal class SubPackageTab : GridProxyAbstract<int>
 		};
 	}
 
-	// Token: 0x06016C20 RID: 93216 RVA: 0x005C7284 File Offset: 0x005C5484
+	// Token: 0x06014651 RID: 83537 RVA: 0x005F3DD8 File Offset: 0x005F1FD8
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		if (data == 0)
@@ -35,7 +35,7 @@ internal class SubPackageTab : GridProxyAbstract<int>
 		this.CurrentType = data;
 	}
 
-	// Token: 0x06016C21 RID: 93217 RVA: 0x005C72D5 File Offset: 0x005C54D5
+	// Token: 0x06014652 RID: 83538 RVA: 0x005F3E29 File Offset: 0x005F2029
 	private void OnToggleClick(EToggleState state)
 	{
 		Action<UUIExtendToggle, int> onClickCallBack = this.OnClickCallBack;
@@ -46,16 +46,16 @@ internal class SubPackageTab : GridProxyAbstract<int>
 		onClickCallBack(base.GetExtendToggle(0), this.CurrentType);
 	}
 
-	// Token: 0x06016C22 RID: 93218 RVA: 0x005C72F4 File Offset: 0x005C54F4
+	// Token: 0x06014653 RID: 83539 RVA: 0x005F3E48 File Offset: 0x005F2048
 	public void SelectToggle()
 	{
 		base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_Checked, true, false, false);
 	}
 
-	// Token: 0x0400A8F1 RID: 43249
+	// Token: 0x0400ACF7 RID: 44279
 	private int CurrentType;
 
-	// Token: 0x0400A8F2 RID: 43250
+	// Token: 0x0400ACF8 RID: 44280
 	[Nullable(new byte[]
 	{
 		2,

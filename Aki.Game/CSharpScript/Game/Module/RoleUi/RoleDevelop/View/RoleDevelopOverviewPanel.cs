@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 {
-	// Token: 0x02004D3B RID: 19771
+	// Token: 0x02003CFA RID: 15610
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoleDevelopOverviewPanel : UiPanelBase
 	{
-		// Token: 0x06033149 RID: 209225 RVA: 0x00BE6E0C File Offset: 0x00BE500C
+		// Token: 0x06027F50 RID: 163664 RVA: 0x00B2D718 File Offset: 0x00B2B918
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 17;
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603314A RID: 209226 RVA: 0x00BE7114 File Offset: 0x00BE5314
+		// Token: 0x06027F51 RID: 163665 RVA: 0x00B2DA20 File Offset: 0x00B2BC20
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoleDevelopOverviewPanel.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603314B RID: 209227 RVA: 0x00BE7150 File Offset: 0x00BE5350
+		// Token: 0x06027F52 RID: 163666 RVA: 0x00B2DA5C File Offset: 0x00B2BC5C
 		protected override void OnStart()
 		{
 			this.MaterialItemLayout = new GenericLayout<RoleDevelopOverviewMaterialItem, RoleDevelopOverviewMaterialItemData>(base.GetVerticalLayout(6), new Func<RoleDevelopOverviewMaterialItem>(this.CreateMaterialItem), null, false, true);
@@ -92,13 +92,13 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			EventSystem.Instance.Add<int, int>(EEventName.OnCommonItemCountAnyChange, new Action<int, int>(this.OnCommonItemCountAnyChange));
 		}
 
-		// Token: 0x0603314C RID: 209228 RVA: 0x00BE71BC File Offset: 0x00BE53BC
+		// Token: 0x06027F53 RID: 163667 RVA: 0x00B2DAC8 File Offset: 0x00B2BCC8
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove<int, int>(EEventName.OnCommonItemCountAnyChange, new Action<int, int>(this.OnCommonItemCountAnyChange));
 		}
 
-		// Token: 0x0603314D RID: 209229 RVA: 0x00BE71DC File Offset: 0x00BE53DC
+		// Token: 0x06027F54 RID: 163668 RVA: 0x00B2DAE8 File Offset: 0x00B2BCE8
 		public void RefreshView(bool forceRefresh = false)
 		{
 			int devTargetRoleId = RoleDevelopModel.Instance.DevTargetRoleId;
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			this.RefreshPhantomSuitList(forceRefresh);
 		}
 
-		// Token: 0x0603314E RID: 209230 RVA: 0x00BE7478 File Offset: 0x00BE5678
+		// Token: 0x06027F55 RID: 163669 RVA: 0x00B2DD84 File Offset: 0x00B2BF84
 		private bool CheckMaterialsSufficient(List<RoleDevelopNeedItem> needItems)
 		{
 			Dictionary<int, int> dictionary = new Dictionary<int, int>();
@@ -200,19 +200,14 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			return true;
 		}
 
-		// Token: 0x0603314F RID: 209231 RVA: 0x00BE7554 File Offset: 0x00BE5754
+		// Token: 0x06027F56 RID: 163670 RVA: 0x00B2DE60 File Offset: 0x00B2C060
 		private bool IsWeaponQualityLow(int roleId)
 		{
-			WeaponInstance weaponInstance = WeaponModel.Instance.GetWeaponDataByRoleDataId(roleId, true) as WeaponInstance;
-			if (weaponInstance == null)
-			{
-				return true;
-			}
-			int weaponQualityThreshold = RoleDevConfig.Instance.GetRoleDevStaticConfig().Value.WeaponQualityThreshold;
-			return weaponInstance.GetItemConfig().QualityId < weaponQualityThreshold;
+			ERoleDevelopWeaponState weaponState = RoleDevelopUtil.GetWeaponState(roleId);
+			return weaponState == ERoleDevelopWeaponState.NotEquipped || weaponState == ERoleDevelopWeaponState.QualityLow;
 		}
 
-		// Token: 0x06033150 RID: 209232 RVA: 0x00BE75A8 File Offset: 0x00BE57A8
+		// Token: 0x06027F57 RID: 163671 RVA: 0x00B2DE80 File Offset: 0x00B2C080
 		private void OnClickJumpBtn()
 		{
 			int devTargetRoleId = RoleDevelopModel.Instance.DevTargetRoleId;
@@ -232,7 +227,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			}
 		}
 
-		// Token: 0x06033151 RID: 209233 RVA: 0x00BE760C File Offset: 0x00BE580C
+		// Token: 0x06027F58 RID: 163672 RVA: 0x00B2DEE4 File Offset: 0x00B2C0E4
 		private void OnClickRecommendBtn()
 		{
 			int developRoleId = RoleDevelopModel.Instance.DevTargetRoleId;
@@ -259,19 +254,19 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			RoleController.Instance.OpenRoleMainViewByParam(param);
 		}
 
-		// Token: 0x06033152 RID: 209234 RVA: 0x00BE7684 File Offset: 0x00BE5884
+		// Token: 0x06027F59 RID: 163673 RVA: 0x00B2DF5C File Offset: 0x00B2C15C
 		private RoleDevelopOverviewMaterialItem CreateMaterialItem()
 		{
 			return new RoleDevelopOverviewMaterialItem();
 		}
 
-		// Token: 0x06033153 RID: 209235 RVA: 0x00BE768B File Offset: 0x00BE588B
+		// Token: 0x06027F5A RID: 163674 RVA: 0x00B2DF63 File Offset: 0x00B2C163
 		private RoleDevelopProjectPhantomSuitItem CreatePhantomSuitItem()
 		{
 			return new RoleDevelopProjectPhantomSuitItem();
 		}
 
-		// Token: 0x06033154 RID: 209236 RVA: 0x00BE7694 File Offset: 0x00BE5894
+		// Token: 0x06027F5B RID: 163675 RVA: 0x00B2DF6C File Offset: 0x00B2C16C
 		private void OnMaterialJump(RoleDevelopItemGroup groupItem)
 		{
 			int devTargetRoleId = RoleDevelopModel.Instance.DevTargetRoleId;
@@ -281,7 +276,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			}
 		}
 
-		// Token: 0x06033155 RID: 209237 RVA: 0x00BE76B8 File Offset: 0x00BE58B8
+		// Token: 0x06027F5C RID: 163676 RVA: 0x00B2DF90 File Offset: 0x00B2C190
 		private void RefreshPhantomSuitList(bool forceRefresh)
 		{
 			int devTargetRoleId = RoleDevelopModel.Instance.DevTargetRoleId;
@@ -300,10 +295,48 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			{
 				recommendPhantomSuits[0].IsNeedFetterButton = new bool?(true);
 			}
+			else
+			{
+				this.LogEmptyPhantomSuit(devTargetRoleId);
+			}
 			this.PhantomSuitLayout.RefreshByData(recommendPhantomSuits, null, false);
 		}
 
-		// Token: 0x06033156 RID: 209238 RVA: 0x00BE7744 File Offset: 0x00BE5944
+		// Token: 0x06027F5D RID: 163677 RVA: 0x00B2E024 File Offset: 0x00B2C224
+		private unsafe void LogEmptyPhantomSuit(int roleId)
+		{
+			List<VisionFetterRecommendInfo> roleFetterRecommendInfo = VisionRecommendModel.Instance.GetRoleFetterRecommendInfo(roleId);
+			string text = "null";
+			if (roleFetterRecommendInfo != null)
+			{
+				text = "";
+				foreach (VisionFetterRecommendInfo visionFetterRecommendInfo in roleFetterRecommendInfo)
+				{
+					string str = text;
+					DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(3, 3);
+					defaultInterpolatedStringHandler.AppendFormatted<int>(visionFetterRecommendInfo.GetPlanId());
+					defaultInterpolatedStringHandler.AppendLiteral(":");
+					defaultInterpolatedStringHandler.AppendFormatted<int>(visionFetterRecommendInfo.GetRecommendFetterGroupId());
+					defaultInterpolatedStringHandler.AppendLiteral(":");
+					defaultInterpolatedStringHandler.AppendFormatted<int>(visionFetterRecommendInfo.GetUsage());
+					defaultInterpolatedStringHandler.AppendLiteral("|");
+					text = str + defaultInterpolatedStringHandler.ToStringAndClear();
+				}
+			}
+			Log instance = Log.Instance;
+			ELogModule module = ELogModule.RoleDev;
+			ELogAuthor author = ELogAuthor.CB;
+			string message = "培养总览声骸套装为空";
+			<>y__InlineArray5<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray5<ValueTuple<string, object>>);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("roleId", roleId);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("panelPlanId", this.SelectPlanId);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("modelPlanId", RoleDevelopModel.Instance.SelectPlanId);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 3) = new ValueTuple<string, object>("firstMonsterId", this.SelectFirstVisionMonsterId);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 4) = new ValueTuple<string, object>("recommend", text);
+			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 5));
+		}
+
+		// Token: 0x06027F5E RID: 163678 RVA: 0x00B2E1B4 File Offset: 0x00B2C3B4
 		private void OnClickPhantomJumpBtn()
 		{
 			int devTargetRoleId = RoleDevelopModel.Instance.DevTargetRoleId;
@@ -322,7 +355,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			UiManager.Instance.OpenView(EUiViewName.VisionNewRecommendView, param, null);
 		}
 
-		// Token: 0x06033157 RID: 209239 RVA: 0x00BE77BC File Offset: 0x00BE59BC
+		// Token: 0x06027F5F RID: 163679 RVA: 0x00B2E22C File Offset: 0x00B2C42C
 		private void OnCommonItemCountAnyChange(int configId, int count)
 		{
 			GenericLayout<RoleDevelopOverviewMaterialItem, RoleDevelopOverviewMaterialItemData> materialItemLayout = this.MaterialItemLayout;
@@ -344,7 +377,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			materialItemLayout2.RefreshWithoutDataSync();
 		}
 
-		// Token: 0x06033158 RID: 209240 RVA: 0x00BE7808 File Offset: 0x00BE5A08
+		// Token: 0x06027F60 RID: 163680 RVA: 0x00B2E278 File Offset: 0x00B2C478
 		private int GetCurrentMaterialGroupCount()
 		{
 			int devTargetRoleId = RoleDevelopModel.Instance.DevTargetRoleId;
@@ -360,7 +393,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			return RoleDevelopUtil.BuildGroupItemDataByNeedItems(list, true, true, true).Count;
 		}
 
-		// Token: 0x06033159 RID: 209241 RVA: 0x00BE7844 File Offset: 0x00BE5A44
+		// Token: 0x06027F61 RID: 163681 RVA: 0x00B2E2B4 File Offset: 0x00B2C4B4
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -387,13 +420,13 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			return list;
 		}
 
-		// Token: 0x0603315A RID: 209242 RVA: 0x00BE78C8 File Offset: 0x00BE5AC8
+		// Token: 0x06027F62 RID: 163682 RVA: 0x00B2E338 File Offset: 0x00B2C538
 		private void OnClickChooseBtn()
 		{
 			RoleController.OpenRoleDevelopSelectTargetView(ERoleDevelopUpdateTargetSource.Detection, null);
 		}
 
-		// Token: 0x0603315B RID: 209243 RVA: 0x00BE78E4 File Offset: 0x00BE5AE4
+		// Token: 0x06027F63 RID: 163683 RVA: 0x00B2E354 File Offset: 0x00B2C554
 		private void OnChangeFetterGroupSuccessCallBack(int roleId, int planId, int? firstVisionMonsterId)
 		{
 			this.SelectPlanId = planId;
@@ -402,87 +435,71 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			RoleController.Instance.RequestUpdateDevelopTarget(roleId, ERoleDevelopUpdateTargetSource.Detection, new int?(planId), firstVisionMonsterId);
 		}
 
-		// Token: 0x0603315C RID: 209244 RVA: 0x00BE790E File Offset: 0x00BE5B0E
+		// Token: 0x06027F64 RID: 163684 RVA: 0x00B2E37E File Offset: 0x00B2C57E
 		private int OnGetSelectedPlanIdCallBack(int roleId)
 		{
 			return this.SelectPlanId;
 		}
 
-		// Token: 0x0603315D RID: 209245 RVA: 0x00BE7916 File Offset: 0x00BE5B16
+		// Token: 0x06027F65 RID: 163685 RVA: 0x00B2E386 File Offset: 0x00B2C586
 		private int OnGetSelectedFirstVisionMonsterIdCallBack(int roleId)
 		{
 			return this.SelectFirstVisionMonsterId.GetValueOrDefault();
 		}
 
-		// Token: 0x0401B28D RID: 111245
+		// Token: 0x04015C49 RID: 89161
 		private GenericLayout<RoleDevelopOverviewMaterialItem, RoleDevelopOverviewMaterialItemData> MaterialItemLayout;
 
-		// Token: 0x0401B28E RID: 111246
+		// Token: 0x04015C4A RID: 89162
 		private GenericLayout<RoleDevelopProjectPhantomSuitItem, RoleDevelopPhantomSuitData> PhantomSuitLayout;
 
-		// Token: 0x0401B28F RID: 111247
+		// Token: 0x04015C4B RID: 89163
 		private int SelectPlanId;
 
-		// Token: 0x0401B290 RID: 111248
+		// Token: 0x04015C4C RID: 89164
 		private int? SelectFirstVisionMonsterId = new int?(0);
 
-		// Token: 0x0401B291 RID: 111249
+		// Token: 0x04015C4D RID: 89165
 		private int FetterInitRoleId;
 
-		// Token: 0x0200AE9B RID: 44699
+		// Token: 0x020098BA RID: 39098
 		[NullableContext(0)]
-		public static class EComponentType
+		private enum EComponentType
 		{
-			// Token: 0x0403504D RID: 217165
-			public const int EmptyItem = 0;
-
-			// Token: 0x0403504E RID: 217166
-			public const int ContentItem = 1;
-
-			// Token: 0x0403504F RID: 217167
-			public const int FinishSprite = 2;
-
-			// Token: 0x04035050 RID: 217168
-			public const int JumpButton = 3;
-
-			// Token: 0x04035051 RID: 217169
-			public const int RecommendRootItem = 4;
-
-			// Token: 0x04035052 RID: 217170
-			public const int RecommendButton = 5;
-
-			// Token: 0x04035053 RID: 217171
-			public const int MaterialVerticalLayout = 6;
-
-			// Token: 0x04035054 RID: 217172
-			public const int MaterialItem = 7;
-
-			// Token: 0x04035055 RID: 217173
-			public const int PhantomJumpButton = 8;
-
-			// Token: 0x04035056 RID: 217174
-			public const int PhantomVerticalLayout = 9;
-
-			// Token: 0x04035057 RID: 217175
-			public const int PhantomItem = 10;
-
-			// Token: 0x04035058 RID: 217176
-			public const int ChooseButton = 11;
-
-			// Token: 0x04035059 RID: 217177
-			public const int MaterialTitleText = 12;
-
-			// Token: 0x0403505A RID: 217178
-			public const int JumpButtonText = 13;
-
-			// Token: 0x0403505B RID: 217179
-			public const int RecommendHintText = 14;
-
-			// Token: 0x0403505C RID: 217180
-			public const int PhantomRootItem = 15;
-
-			// Token: 0x0403505D RID: 217181
-			public const int JumpRootItem = 16;
+			// Token: 0x0402F9FC RID: 195068
+			EmptyItem,
+			// Token: 0x0402F9FD RID: 195069
+			ContentItem,
+			// Token: 0x0402F9FE RID: 195070
+			FinishSprite,
+			// Token: 0x0402F9FF RID: 195071
+			JumpButton,
+			// Token: 0x0402FA00 RID: 195072
+			RecommendRootItem,
+			// Token: 0x0402FA01 RID: 195073
+			RecommendButton,
+			// Token: 0x0402FA02 RID: 195074
+			MaterialVerticalLayout,
+			// Token: 0x0402FA03 RID: 195075
+			MaterialItem,
+			// Token: 0x0402FA04 RID: 195076
+			PhantomJumpButton,
+			// Token: 0x0402FA05 RID: 195077
+			PhantomVerticalLayout,
+			// Token: 0x0402FA06 RID: 195078
+			PhantomItem,
+			// Token: 0x0402FA07 RID: 195079
+			ChooseButton,
+			// Token: 0x0402FA08 RID: 195080
+			MaterialTitleText,
+			// Token: 0x0402FA09 RID: 195081
+			JumpButtonText,
+			// Token: 0x0402FA0A RID: 195082
+			RecommendHintText,
+			// Token: 0x0402FA0B RID: 195083
+			PhantomRootItem,
+			// Token: 0x0402FA0C RID: 195084
+			JumpRootItem
 		}
 	}
 }

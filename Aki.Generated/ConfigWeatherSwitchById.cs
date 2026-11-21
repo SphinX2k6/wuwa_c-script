@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A91 RID: 2705
+	// Token: 0x02000B66 RID: 2918
 	public class ConfigWeatherSwitchById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003F7A RID: 16250 RVA: 0x001C14A7 File Offset: 0x001BF6A7
+		// Token: 0x06004478 RID: 17528 RVA: 0x001E083B File Offset: 0x001DEA3B
 		static ConfigWeatherSwitchById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigWeatherSwitchById.CreateStaticDefaultValue), new Action(ConfigWeatherSwitchById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003F7B RID: 16251 RVA: 0x001C14C8 File Offset: 0x001BF6C8
+		// Token: 0x06004479 RID: 17529 RVA: 0x001E085C File Offset: 0x001DEA5C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigWeatherSwitchById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003F7C RID: 16252 RVA: 0x001C1547 File Offset: 0x001BF747
+		// Token: 0x0600447A RID: 17530 RVA: 0x001E08DB File Offset: 0x001DEADB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigWeatherSwitchById.LogPair = null;
 			ConfigWeatherSwitchById.HandleId = 0;
 		}
 
-		// Token: 0x06003F7D RID: 16253 RVA: 0x001C1555 File Offset: 0x001BF755
+		// Token: 0x0600447B RID: 17531 RVA: 0x001E08E9 File Offset: 0x001DEAE9
 		public static void Init()
 		{
 			ConfigWeatherSwitchById.HandleId = ConfigCommon.InitDataStatement(ConfigWeatherSwitchById.HandleId, "db_weather.db", "select BinData from `WeatherSwitch` where Id=?");
 		}
 
-		// Token: 0x06003F7E RID: 16254 RVA: 0x001C1570 File Offset: 0x001BF770
+		// Token: 0x0600447C RID: 17532 RVA: 0x001E0904 File Offset: 0x001DEB04
 		public static WeatherSwitch? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigWeatherSwitchById.HandleId, ConfigWeatherSwitchById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new WeatherSwitch?(rootAsWeatherSwitch);
 		}
 
-		// Token: 0x040049DD RID: 18909
+		// Token: 0x04004FB0 RID: 20400
 		private const string DB = "db_weather.db";
 
-		// Token: 0x040049DE RID: 18910
+		// Token: 0x04004FB1 RID: 20401
 		private const string FILE = "t.天气系统.xlsx";
 
-		// Token: 0x040049DF RID: 18911
+		// Token: 0x04004FB2 RID: 20402
 		private const string TABLE = "WeatherSwitch";
 
-		// Token: 0x040049E0 RID: 18912
+		// Token: 0x04004FB3 RID: 20403
 		private const string COMMAND = "select BinData from `WeatherSwitch` where Id=?";
 
-		// Token: 0x040049E1 RID: 18913
+		// Token: 0x04004FB4 RID: 20404
 		private const string KEY_PREFIX = "WeatherSwitchById";
 
-		// Token: 0x040049E2 RID: 18914
+		// Token: 0x04004FB5 RID: 20405
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040049E3 RID: 18915
+		// Token: 0x04004FB6 RID: 20406
 		private static int HandleId;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018AE RID: 6318
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001A39 RID: 6713
 	public class IClientEventPianoUpdateSubtitle : IClientEventPianoEvent
 	{
-		// Token: 0x0600879B RID: 34715 RVA: 0x00141590 File Offset: 0x0013F790
+		// Token: 0x06008EC3 RID: 36547 RVA: 0x00150DC4 File Offset: 0x0014EFC4
 		private IClientEventPianoUpdateSubtitle_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600879C RID: 34716 RVA: 0x001415C8 File Offset: 0x0013F7C8
+		// Token: 0x06008EC4 RID: 36548 RVA: 0x00150DFC File Offset: 0x0014EFFC
 		public static IClientEventPianoUpdateSubtitle Create([Nullable(2)] IClientEventPianoUpdateSubtitle instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600879D RID: 34717 RVA: 0x001415DB File Offset: 0x0013F7DB
+		// Token: 0x06008EC5 RID: 36549 RVA: 0x00150E0F File Offset: 0x0014F00F
 		public static IClientEventPianoUpdateSubtitle CreateFromSetValue([Nullable(2)] IClientEventPianoUpdateSubtitle_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600879E RID: 34718 RVA: 0x001415EE File Offset: 0x0013F7EE
+		// Token: 0x06008EC6 RID: 36550 RVA: 0x00150E22 File Offset: 0x0014F022
 		public new IClientEventPianoUpdateSubtitle_SetValue ToSetValue()
 		{
 			return new IClientEventPianoUpdateSubtitle_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002C1D RID: 11293
-		// (get) Token: 0x0600879F RID: 34719 RVA: 0x00141619 File Offset: 0x0013F819
-		// (set) Token: 0x060087A0 RID: 34720 RVA: 0x00141644 File Offset: 0x0013F844
+		// Token: 0x17002E18 RID: 11800
+		// (get) Token: 0x06008EC7 RID: 36551 RVA: 0x00150E4D File Offset: 0x0014F04D
+		// (set) Token: 0x06008EC8 RID: 36552 RVA: 0x00150E78 File Offset: 0x0014F078
 		public override EClientEventPianoEventType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C1E RID: 11294
-		// (get) Token: 0x060087A1 RID: 34721 RVA: 0x00141654 File Offset: 0x0013F854
-		// (set) Token: 0x060087A2 RID: 34722 RVA: 0x001416B5 File Offset: 0x0013F8B5
+		// Token: 0x17002E19 RID: 11801
+		// (get) Token: 0x06008EC9 RID: 36553 RVA: 0x00150E88 File Offset: 0x0014F088
+		// (set) Token: 0x06008ECA RID: 36554 RVA: 0x00150EE9 File Offset: 0x0014F0E9
 		public virtual PlayFlow Flow
 		{
 			get
@@ -114,9 +112,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002C1F RID: 11295
-		// (get) Token: 0x060087A3 RID: 34723 RVA: 0x001416CA File Offset: 0x0013F8CA
-		// (set) Token: 0x060087A4 RID: 34724 RVA: 0x001416F5 File Offset: 0x0013F8F5
+		// Token: 0x17002E1A RID: 11802
+		// (get) Token: 0x06008ECB RID: 36555 RVA: 0x00150EFE File Offset: 0x0014F0FE
+		// (set) Token: 0x06008ECC RID: 36556 RVA: 0x00150F29 File Offset: 0x0014F129
 		public virtual bool DisableMove
 		{
 			get
@@ -133,18 +131,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005550 RID: 21840
+		// Token: 0x0400599D RID: 22941
 		[Nullable(2)]
 		protected new IClientEventPianoUpdateSubtitle FbInstance;
 
-		// Token: 0x04005551 RID: 21841
+		// Token: 0x0400599E RID: 22942
 		[Nullable(2)]
 		protected new IClientEventPianoUpdateSubtitle_SetValue PocoInterface;
 
-		// Token: 0x04005552 RID: 21842
+		// Token: 0x0400599F RID: 22943
 		private PlayFlow _FlowCache;
 
-		// Token: 0x04005553 RID: 21843
+		// Token: 0x040059A0 RID: 22944
 		private bool _FlowInited;
 	}
 }

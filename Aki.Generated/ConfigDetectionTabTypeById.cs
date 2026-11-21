@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000200 RID: 512
+	// Token: 0x02000212 RID: 530
 	public class ConfigDetectionTabTypeById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000C03 RID: 3075 RVA: 0x0009D8C0 File Offset: 0x0009BAC0
+		// Token: 0x06000C6F RID: 3183 RVA: 0x000A37F8 File Offset: 0x000A19F8
 		static ConfigDetectionTabTypeById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDetectionTabTypeById.CreateStaticDefaultValue), new Action(ConfigDetectionTabTypeById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000C04 RID: 3076 RVA: 0x0009D8E0 File Offset: 0x0009BAE0
+		// Token: 0x06000C70 RID: 3184 RVA: 0x000A3818 File Offset: 0x000A1A18
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDetectionTabTypeById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000C05 RID: 3077 RVA: 0x0009D95F File Offset: 0x0009BB5F
+		// Token: 0x06000C71 RID: 3185 RVA: 0x000A3897 File Offset: 0x000A1A97
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDetectionTabTypeById.LogPair = null;
 			ConfigDetectionTabTypeById.HandleId = 0;
 		}
 
-		// Token: 0x06000C06 RID: 3078 RVA: 0x0009D96D File Offset: 0x0009BB6D
+		// Token: 0x06000C72 RID: 3186 RVA: 0x000A38A5 File Offset: 0x000A1AA5
 		public static void Init()
 		{
 			ConfigDetectionTabTypeById.HandleId = ConfigCommon.InitDataStatement(ConfigDetectionTabTypeById.HandleId, "db_adventure_detect.db", "select BinData from `DetectionTabType` where Id=?");
 		}
 
-		// Token: 0x06000C07 RID: 3079 RVA: 0x0009D988 File Offset: 0x0009BB88
+		// Token: 0x06000C73 RID: 3187 RVA: 0x000A38C0 File Offset: 0x000A1AC0
 		public static DetectionTabType? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigDetectionTabTypeById.HandleId, ConfigDetectionTabTypeById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new DetectionTabType?(rootAsDetectionTabType);
 		}
 
-		// Token: 0x04000DE4 RID: 3556
+		// Token: 0x04000E62 RID: 3682
 		private const string DB = "db_adventure_detect.db";
 
-		// Token: 0x04000DE5 RID: 3557
+		// Token: 0x04000E63 RID: 3683
 		private const string FILE = "k.开拓探测.xlsx";
 
-		// Token: 0x04000DE6 RID: 3558
+		// Token: 0x04000E64 RID: 3684
 		private const string TABLE = "DetectionTabType";
 
-		// Token: 0x04000DE7 RID: 3559
+		// Token: 0x04000E65 RID: 3685
 		private const string COMMAND = "select BinData from `DetectionTabType` where Id=?";
 
-		// Token: 0x04000DE8 RID: 3560
+		// Token: 0x04000E66 RID: 3686
 		private const string KEY_PREFIX = "DetectionTabTypeById";
 
-		// Token: 0x04000DE9 RID: 3561
+		// Token: 0x04000E67 RID: 3687
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000DEA RID: 3562
+		// Token: 0x04000E68 RID: 3688
 		private static int HandleId;
 	}
 }

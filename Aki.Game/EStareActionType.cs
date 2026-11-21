@@ -1,22 +1,22 @@
 ﻿using System;
 
-// Token: 0x02003213 RID: 12819
+// Token: 0x02002782 RID: 10114
 public enum EStareActionType
 {
-	// Token: 0x0400D976 RID: 55670
+	// Token: 0x0400DE15 RID: 56853
 	TurnToTargetForSmallAngle,
-	// Token: 0x0400D977 RID: 55671
+	// Token: 0x0400DE16 RID: 56854
 	InterestEvent,
-	// Token: 0x0400D978 RID: 55672
+	// Token: 0x0400DE17 RID: 56855
 	LookAtPlayer,
-	// Token: 0x0400D979 RID: 55673
+	// Token: 0x0400DE18 RID: 56856
 	LevelEventEntityLookAt,
-	// Token: 0x0400D97A RID: 55674
+	// Token: 0x0400DE19 RID: 56857
 	TurnToPlayer,
-	// Token: 0x0400D97B RID: 55675
+	// Token: 0x0400DE1A RID: 56858
 	SystemUI,
-	// Token: 0x0400D97C RID: 55676
+	// Token: 0x0400DE1B RID: 56859
 	Plot,
-	// Token: 0x0400D97D RID: 55677
+	// Token: 0x0400DE1C RID: 56860
 	Photograph
 }

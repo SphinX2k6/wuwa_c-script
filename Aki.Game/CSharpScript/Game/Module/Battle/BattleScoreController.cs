@@ -5,13 +5,13 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Battle
 {
-	// Token: 0x02005C59 RID: 23641
+	// Token: 0x02004C39 RID: 19513
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class BattleScoreController : ControllerBase
 	{
-		// Token: 0x0603BC24 RID: 244772 RVA: 0x00E46058 File Offset: 0x00E44258
+		// Token: 0x06030B6F RID: 199535 RVA: 0x00D96438 File Offset: 0x00D94638
 		protected override bool OnInit()
 		{
 			Net instance = Net.Instance;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Battle
 			return true;
 		}
 
-		// Token: 0x0603BC25 RID: 244773 RVA: 0x00E460BC File Offset: 0x00E442BC
+		// Token: 0x06030B70 RID: 199536 RVA: 0x00D9649C File Offset: 0x00D9469C
 		protected override bool OnClear()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.BattleScoreNotify);
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Battle
 			return true;
 		}
 
-		// Token: 0x0603BC26 RID: 244774 RVA: 0x00E460E0 File Offset: 0x00E442E0
+		// Token: 0x06030B71 RID: 199537 RVA: 0x00D964C0 File Offset: 0x00D946C0
 		[NullableContext(2)]
 		private static void HandleBattleScoreNotify(IMessage msg, Net.CallbackStatus callbackStatus)
 		{
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Battle
 			BattleScoreModel.Instance.HandleBattleScoreNotify(notify);
 		}
 
-		// Token: 0x0603BC27 RID: 244775 RVA: 0x00E46100 File Offset: 0x00E44300
+		// Token: 0x06030B72 RID: 199538 RVA: 0x00D964E0 File Offset: 0x00D946E0
 		[NullableContext(2)]
 		private static void HandleBattleScoreEnableNotify(IMessage msg, Net.CallbackStatus callbackStatus)
 		{
@@ -57,8 +57,8 @@ namespace CSharpScript.Game.Module.Battle
 			BattleScoreModel.Instance.HandleBattleScoreEnableNotify(notify);
 		}
 
-		// Token: 0x17008DBD RID: 36285
-		// (get) Token: 0x0603BC28 RID: 244776 RVA: 0x00E4611F File Offset: 0x00E4431F
+		// Token: 0x1700618F RID: 24975
+		// (get) Token: 0x06030B73 RID: 199539 RVA: 0x00D964FF File Offset: 0x00D946FF
 		public static BattleScoreController Instance
 		{
 			get
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BC29 RID: 244777 RVA: 0x00E46126 File Offset: 0x00E44326
+		// Token: 0x06030B74 RID: 199540 RVA: 0x00D96506 File Offset: 0x00D94706
 		public static BattleScoreController GetOrCreateInstance()
 		{
 			if (BattleScoreController._Instance == null)
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.Battle
 			return BattleScoreController._Instance;
 		}
 
-		// Token: 0x0603BC2A RID: 244778 RVA: 0x00E4613A File Offset: 0x00E4433A
+		// Token: 0x06030B75 RID: 199541 RVA: 0x00D9651A File Offset: 0x00D9471A
 		public static bool CreateInstance()
 		{
 			if (BattleScoreController._Instance != null)
@@ -88,32 +88,32 @@ namespace CSharpScript.Game.Module.Battle
 			return true;
 		}
 
-		// Token: 0x0603BC2B RID: 244779 RVA: 0x00E46150 File Offset: 0x00E44350
+		// Token: 0x06030B76 RID: 199542 RVA: 0x00D96530 File Offset: 0x00D94730
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603BC2C RID: 244780 RVA: 0x00E46152 File Offset: 0x00E44352
+		// Token: 0x06030B77 RID: 199543 RVA: 0x00D96532 File Offset: 0x00D94732
 		public static void ResetStaticDefaultValue()
 		{
 			BattleScoreController._Instance = null;
 		}
 
-		// Token: 0x0603BC2D RID: 244781 RVA: 0x00E4615A File Offset: 0x00E4435A
+		// Token: 0x06030B78 RID: 199544 RVA: 0x00D9653A File Offset: 0x00D9473A
 		static BattleScoreController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(BattleScoreController.CreateStaticDefaultValue), new Action(BattleScoreController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401F1E5 RID: 127461
+		// Token: 0x04019C96 RID: 105622
 		[Nullable(2)]
 		private static BattleScoreController _Instance;
 
-		// Token: 0x0200BE6E RID: 48750
+		// Token: 0x0200A874 RID: 43124
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040396D6 RID: 235222
+			// Token: 0x04034097 RID: 213143
 			[Nullable(new byte[]
 			{
 				0,
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.Module.Battle
 			})]
 			public static Action<IMessage, Net.CallbackStatus> <0>__HandleBattleScoreNotify;
 
-			// Token: 0x040396D7 RID: 235223
+			// Token: 0x04034098 RID: 213144
 			[Nullable(new byte[]
 			{
 				0,

@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006F43 RID: 28483
+	// Token: 0x020076CA RID: 30410
 	public class ISceneItemRoadNetworkNavigationT
 	{
-		// Token: 0x1700D3AD RID: 54189
-		// (get) Token: 0x0603252D RID: 206125 RVA: 0x006CBC98 File Offset: 0x006C9E98
-		// (set) Token: 0x0603252E RID: 206126 RVA: 0x006CBCA0 File Offset: 0x006C9EA0
+		// Token: 0x1700DF09 RID: 57097
+		// (get) Token: 0x06035585 RID: 218501 RVA: 0x00727C00 File Offset: 0x00725E00
+		// (set) Token: 0x06035586 RID: 218502 RVA: 0x00727C08 File Offset: 0x00725E08
 		public ERoadNetworkNavigationTarget Type { get; set; }
 
-		// Token: 0x1700D3AE RID: 54190
-		// (get) Token: 0x0603252F RID: 206127 RVA: 0x006CBCA9 File Offset: 0x006C9EA9
-		// (set) Token: 0x06032530 RID: 206128 RVA: 0x006CBCB1 File Offset: 0x006C9EB1
+		// Token: 0x1700DF0A RID: 57098
+		// (get) Token: 0x06035587 RID: 218503 RVA: 0x00727C11 File Offset: 0x00725E11
+		// (set) Token: 0x06035588 RID: 218504 RVA: 0x00727C19 File Offset: 0x00725E19
 		public int TargetId { get; set; }
 
-		// Token: 0x06032531 RID: 206129 RVA: 0x006CBCBA File Offset: 0x006C9EBA
+		// Token: 0x06035589 RID: 218505 RVA: 0x00727C22 File Offset: 0x00725E22
 		public ISceneItemRoadNetworkNavigationT()
 		{
 			this.Type = ERoadNetworkNavigationTarget.SceneItem;

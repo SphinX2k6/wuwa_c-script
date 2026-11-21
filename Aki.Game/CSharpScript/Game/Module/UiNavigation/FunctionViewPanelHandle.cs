@@ -5,28 +5,28 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020048FB RID: 18683
+	// Token: 0x02003872 RID: 14450
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FunctionViewPanelHandle : SpecialPanelHandleBase
 	{
-		// Token: 0x06030DA0 RID: 200096 RVA: 0x00B58618 File Offset: 0x00B56818
+		// Token: 0x060258CD RID: 153805 RVA: 0x00A93488 File Offset: 0x00A91688
 		public FunctionViewPanelHandle(string type) : base(type)
 		{
 		}
 
-		// Token: 0x06030DA1 RID: 200097 RVA: 0x00B58649 File Offset: 0x00B56849
+		// Token: 0x060258CE RID: 153806 RVA: 0x00A934B9 File Offset: 0x00A916B9
 		protected override void OnDefaultNavigationListenerList(TArray<AActor> actorArray)
 		{
 		}
 
-		// Token: 0x06030DA2 RID: 200098 RVA: 0x00B5864B File Offset: 0x00B5684B
+		// Token: 0x060258CF RID: 153807 RVA: 0x00A934BB File Offset: 0x00A916BB
 		protected override TsUiNavigationBehaviorListener OnGetLoopOrLayoutListener(TsUiNavigationBehaviorListener listener)
 		{
 			return listener;
 		}
 
-		// Token: 0x06030DA3 RID: 200099 RVA: 0x00B58650 File Offset: 0x00B56850
+		// Token: 0x060258D0 RID: 153808 RVA: 0x00A934C0 File Offset: 0x00A916C0
 		public void AddNavigationListener(TsUiNavigationBehaviorListener listener)
 		{
 			this.PageListenerSet.Add(listener);
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030DA4 RID: 200100 RVA: 0x00B586D2 File Offset: 0x00B568D2
+		// Token: 0x060258D1 RID: 153809 RVA: 0x00A93542 File Offset: 0x00A91742
 		private void SetDefaultListener(int index, TsUiNavigationBehaviorListener listener)
 		{
 			this.CurrentPageIndex = index;
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			this.DefaultNavigationListener.Add(listener);
 		}
 
-		// Token: 0x06030DA5 RID: 200101 RVA: 0x00B586FC File Offset: 0x00B568FC
+		// Token: 0x060258D2 RID: 153810 RVA: 0x00A9356C File Offset: 0x00A9176C
 		private void FindFocusListener(int index)
 		{
 			TsUiNavigationBehaviorListener listener;
@@ -72,28 +72,28 @@ namespace CSharpScript.Game.Module.UiNavigation
 			UiNavigationModel.Instance.SetCursorActiveDelayTime(350f);
 		}
 
-		// Token: 0x06030DA6 RID: 200102 RVA: 0x00B58760 File Offset: 0x00B56960
+		// Token: 0x060258D3 RID: 153811 RVA: 0x00A935D0 File Offset: 0x00A917D0
 		public void FindNextFocusListener()
 		{
 			this.FindFocusListener(this.CurrentPageIndex + 1);
 		}
 
-		// Token: 0x06030DA7 RID: 200103 RVA: 0x00B58770 File Offset: 0x00B56970
+		// Token: 0x060258D4 RID: 153812 RVA: 0x00A935E0 File Offset: 0x00A917E0
 		public void FindPrevFocusListener()
 		{
 			this.FindFocusListener(this.CurrentPageIndex - 1);
 		}
 
-		// Token: 0x0401A3B4 RID: 107444
+		// Token: 0x04014C27 RID: 85031
 		private readonly HashSet<AActor> PageLayoutActorSet = new HashSet<AActor>();
 
-		// Token: 0x0401A3B5 RID: 107445
+		// Token: 0x04014C28 RID: 85032
 		private readonly Dictionary<int, TsUiNavigationBehaviorListener> PageFirstListenerMap = new Dictionary<int, TsUiNavigationBehaviorListener>();
 
-		// Token: 0x0401A3B6 RID: 107446
+		// Token: 0x04014C29 RID: 85033
 		private readonly HashSet<TsUiNavigationBehaviorListener> PageListenerSet = new HashSet<TsUiNavigationBehaviorListener>();
 
-		// Token: 0x0401A3B7 RID: 107447
+		// Token: 0x04014C2A RID: 85034
 		private int CurrentPageIndex = 1;
 	}
 }

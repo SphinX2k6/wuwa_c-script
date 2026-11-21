@@ -2,18 +2,18 @@
 
 namespace CSharpScript.Game.LevelGamePlay.SeekTrace
 {
-	// Token: 0x02006A5E RID: 27230
+	// Token: 0x02005BBB RID: 23483
 	public enum ESeekTraceMoveDirection
 	{
-		// Token: 0x040235C6 RID: 144838
+		// Token: 0x0401E7B8 RID: 124856
 		None,
-		// Token: 0x040235C7 RID: 144839
+		// Token: 0x0401E7B9 RID: 124857
 		Up,
-		// Token: 0x040235C8 RID: 144840
+		// Token: 0x0401E7BA RID: 124858
 		Down,
-		// Token: 0x040235C9 RID: 144841
+		// Token: 0x0401E7BB RID: 124859
 		Left,
-		// Token: 0x040235CA RID: 144842
+		// Token: 0x0401E7BC RID: 124860
 		Right
 	}
 }

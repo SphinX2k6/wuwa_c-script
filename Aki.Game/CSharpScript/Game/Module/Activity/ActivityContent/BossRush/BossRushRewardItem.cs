@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
@@ -8,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 {
-	// Token: 0x0200690C RID: 26892
+	// Token: 0x0200585C RID: 22620
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +16,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 	})]
 	internal class BossRushRewardItem : GridProxyAbstract<RewardContentData>
 	{
-		// Token: 0x060430E6 RID: 274662 RVA: 0x01056720 File Offset: 0x01054920
+		// Token: 0x06037C3E RID: 228414 RVA: 0x00F97D54 File Offset: 0x00F95F54
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -48,19 +47,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060430E7 RID: 274663 RVA: 0x0105686B File Offset: 0x01054A6B
+		// Token: 0x06037C3F RID: 228415 RVA: 0x00F97E9F File Offset: 0x00F9609F
 		protected override void OnStart()
 		{
 			this.ItemLayout = new GenericLayout<CommonItemSmallItemGrid, TItem>(base.GetHorizontalLayout(2), new Func<CommonItemSmallItemGrid>(this.InitGridItem), null, false, true);
 		}
 
-		// Token: 0x060430E8 RID: 274664 RVA: 0x0105688E File Offset: 0x01054A8E
+		// Token: 0x06037C40 RID: 228416 RVA: 0x00F97EC2 File Offset: 0x00F960C2
 		private CommonItemSmallItemGrid InitGridItem()
 		{
 			return new CommonItemSmallItemGrid();
 		}
 
-		// Token: 0x060430E9 RID: 274665 RVA: 0x01056898 File Offset: 0x01054A98
+		// Token: 0x06037C41 RID: 228417 RVA: 0x00F97ECC File Offset: 0x00F960CC
 		public override void Refresh(RewardContentData contentData, bool isSelected, int gridIndex)
 		{
 			this.RewardData = contentData;
@@ -86,10 +85,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			{
 				return;
 			}
-			itemLayout.RefreshByData(rewardData.RewardList.ToList<TItem>() ?? new List<TItem>(), null, false);
+			itemLayout.RefreshByData(new List<TItem>(rewardData.RewardList), null, false);
 		}
 
-		// Token: 0x060430EA RID: 274666 RVA: 0x0105697C File Offset: 0x01054B7C
+		// Token: 0x06037C42 RID: 228418 RVA: 0x00F97FA7 File Offset: 0x00F961A7
 		private void OnClickButton()
 		{
 			RewardContentData rewardData = this.RewardData;
@@ -110,35 +109,35 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			clickFunction();
 		}
 
-		// Token: 0x04022E86 RID: 142982
+		// Token: 0x0401D6E2 RID: 120546
 		private RewardContentData RewardData;
 
-		// Token: 0x04022E87 RID: 142983
+		// Token: 0x0401D6E3 RID: 120547
 		private GenericLayout<CommonItemSmallItemGrid, TItem> ItemLayout;
 
-		// Token: 0x0200CABB RID: 51899
+		// Token: 0x0200B483 RID: 46211
 		[NullableContext(0)]
 		public class EBossRushRewardItemComponent
 		{
-			// Token: 0x0403D451 RID: 250961
+			// Token: 0x04037D2B RID: 228651
 			public const int NameText = 0;
 
-			// Token: 0x0403D452 RID: 250962
+			// Token: 0x04037D2C RID: 228652
 			public const int NumText = 1;
 
-			// Token: 0x0403D453 RID: 250963
+			// Token: 0x04037D2D RID: 228653
 			public const int RewardLayout = 2;
 
-			// Token: 0x0403D454 RID: 250964
+			// Token: 0x04037D2E RID: 228654
 			public const int RewardItem = 3;
 
-			// Token: 0x0403D455 RID: 250965
+			// Token: 0x04037D2F RID: 228655
 			public const int Button = 4;
 
-			// Token: 0x0403D456 RID: 250966
+			// Token: 0x04037D30 RID: 228656
 			public const int DoingItem = 5;
 
-			// Token: 0x0403D457 RID: 250967
+			// Token: 0x04037D31 RID: 228657
 			public const int ClaimedItem = 6;
 		}
 	}

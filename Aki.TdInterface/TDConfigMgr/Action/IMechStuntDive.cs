@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001BD4 RID: 7124
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001DBD RID: 7613
 	public class IMechStuntDive : IMechStuntConfigType
 	{
-		// Token: 0x060098A1 RID: 39073 RVA: 0x0015FB60 File Offset: 0x0015DD60
+		// Token: 0x0600A1AF RID: 41391 RVA: 0x00172720 File Offset: 0x00170920
 		private IMechStuntDive_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060098A2 RID: 39074 RVA: 0x0015FB98 File Offset: 0x0015DD98
+		// Token: 0x0600A1B0 RID: 41392 RVA: 0x00172758 File Offset: 0x00170958
 		public static IMechStuntDive Create([Nullable(2)] IMechStuntDive instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060098A3 RID: 39075 RVA: 0x0015FBAB File Offset: 0x0015DDAB
+		// Token: 0x0600A1B1 RID: 41393 RVA: 0x0017276B File Offset: 0x0017096B
 		public static IMechStuntDive CreateFromSetValue([Nullable(2)] IMechStuntDive_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060098A4 RID: 39076 RVA: 0x0015FBBE File Offset: 0x0015DDBE
+		// Token: 0x0600A1B2 RID: 41394 RVA: 0x0017277E File Offset: 0x0017097E
 		public new IMechStuntDive_SetValue ToSetValue()
 		{
 			return new IMechStuntDive_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002FE9 RID: 12265
-		// (get) Token: 0x060098A5 RID: 39077 RVA: 0x0015FBD1 File Offset: 0x0015DDD1
-		// (set) Token: 0x060098A6 RID: 39078 RVA: 0x0015FBFC File Offset: 0x0015DDFC
+		// Token: 0x1700324A RID: 12874
+		// (get) Token: 0x0600A1B3 RID: 41395 RVA: 0x00172791 File Offset: 0x00170991
+		// (set) Token: 0x0600A1B4 RID: 41396 RVA: 0x001727BC File Offset: 0x001709BC
 		public override EMechStuntType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005D10 RID: 23824
+		// Token: 0x04006229 RID: 25129
 		[Nullable(2)]
 		protected new IMechStuntDive FbInstance;
 
-		// Token: 0x04005D11 RID: 23825
+		// Token: 0x0400622A RID: 25130
 		[Nullable(2)]
 		protected new IMechStuntDive_SetValue PocoInterface;
 	}

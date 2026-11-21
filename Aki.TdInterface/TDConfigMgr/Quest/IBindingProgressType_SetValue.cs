@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000EDD RID: 3805
+	// Token: 0x02000FF3 RID: 4083
 	public class IBindingProgressType_SetValue
 	{
-		// Token: 0x040032D6 RID: 13014
+		// Token: 0x040035E3 RID: 13795
 		public EBindingProgressType Type;
 	}
 }

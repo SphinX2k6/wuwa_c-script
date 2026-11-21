@@ -7,12 +7,12 @@ using CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 {
-	// Token: 0x020071A6 RID: 29094
+	// Token: 0x0200625B RID: 25179
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class DragPlayEffectVisibilityProvider : ISceneItemGuidePathVisibilityProvider
 	{
-		// Token: 0x06047319 RID: 291609 RVA: 0x01217C7A File Offset: 0x01215E7A
+		// Token: 0x0603CC14 RID: 248852 RVA: 0x01171B7F File Offset: 0x0116FD7F
 		public DragPlayEffectVisibilityProvider(IConditionGroup condition, [Nullable(new byte[]
 		{
 			1,
@@ -24,9 +24,9 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			this.OwnerActorKey = ownerActorKey;
 		}
 
-		// Token: 0x17009DA5 RID: 40357
-		// (get) Token: 0x0604731A RID: 291610 RVA: 0x01217C97 File Offset: 0x01215E97
-		// (set) Token: 0x0604731B RID: 291611 RVA: 0x01217CA5 File Offset: 0x01215EA5
+		// Token: 0x170072F5 RID: 29429
+		// (get) Token: 0x0603CC15 RID: 248853 RVA: 0x01171B9C File Offset: 0x0116FD9C
+		// (set) Token: 0x0603CC16 RID: 248854 RVA: 0x01171BAA File Offset: 0x0116FDAA
 		[Nullable(1)]
 		Func<bool> ISceneItemGuidePathVisibilityProvider.IsVisible
 		{
@@ -41,9 +41,9 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			}
 		}
 
-		// Token: 0x17009DA6 RID: 40358
-		// (get) Token: 0x0604731C RID: 291612 RVA: 0x01217CA7 File Offset: 0x01215EA7
-		// (set) Token: 0x0604731D RID: 291613 RVA: 0x01217CB5 File Offset: 0x01215EB5
+		// Token: 0x170072F6 RID: 29430
+		// (get) Token: 0x0603CC17 RID: 248855 RVA: 0x01171BAC File Offset: 0x0116FDAC
+		// (set) Token: 0x0603CC18 RID: 248856 RVA: 0x01171BBA File Offset: 0x0116FDBA
 		Action ISceneItemGuidePathVisibilityProvider.OnDetached
 		{
 			get
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			}
 		}
 
-		// Token: 0x0604731E RID: 291614 RVA: 0x01217CB8 File Offset: 0x01215EB8
+		// Token: 0x0603CC19 RID: 248857 RVA: 0x01171BBC File Offset: 0x0116FDBC
 		[NullableContext(1)]
 		public void AttachTo(IGuidePathVisibilityHost host)
 		{
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			host.NotifyExternalVisibilityChanged(this);
 		}
 
-		// Token: 0x0604731F RID: 291615 RVA: 0x01217D10 File Offset: 0x01215F10
+		// Token: 0x0603CC1A RID: 248858 RVA: 0x01171C14 File Offset: 0x0116FE14
 		public void RequestRefresh()
 		{
 			if (this.TargetHost != null)
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			}
 		}
 
-		// Token: 0x06047320 RID: 291616 RVA: 0x01217D2C File Offset: 0x01215F2C
+		// Token: 0x0603CC1B RID: 248859 RVA: 0x01171C30 File Offset: 0x0116FE30
 		public bool IsVisible()
 		{
 			SplineConstrainedDragModel instance = SplineConstrainedDragModel.Instance;
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			return (activeDragActorKey == null || !(activeDragActorKey != this.OwnerActorKey) || !SplineConstrainedDragController.Instance.IsActiveDragMovingLatched()) && (this.Condition == null || LevelGeneralController.Instance.CheckConditionNew(this.Condition, null, this.EntityContextProvider(), null));
 		}
 
-		// Token: 0x06047321 RID: 291617 RVA: 0x01217DA8 File Offset: 0x01215FA8
+		// Token: 0x0603CC1C RID: 248860 RVA: 0x01171CAC File Offset: 0x0116FEAC
 		public void OnDetached()
 		{
 			if (EventSystem.Instance.Has<bool>(EEventName.DragActorPlayActivationChanged, new Action<bool>(this.OnActivationChanged)))
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			this.TargetHost = null;
 		}
 
-		// Token: 0x06047322 RID: 291618 RVA: 0x01217E2E File Offset: 0x0121602E
+		// Token: 0x0603CC1D RID: 248861 RVA: 0x01171D32 File Offset: 0x0116FF32
 		private void OnActivationChanged(bool isActive)
 		{
 			if (this.TargetHost != null)
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			}
 		}
 
-		// Token: 0x06047323 RID: 291619 RVA: 0x01217E49 File Offset: 0x01216049
+		// Token: 0x0603CC1E RID: 248862 RVA: 0x01171D4D File Offset: 0x0116FF4D
 		private void OnConditionRecheck()
 		{
 			if (this.TargetHost != null)
@@ -118,13 +118,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			}
 		}
 
-		// Token: 0x040256EE RID: 153326
+		// Token: 0x0402035D RID: 131933
 		private IGuidePathVisibilityHost TargetHost;
 
-		// Token: 0x040256EF RID: 153327
+		// Token: 0x0402035E RID: 131934
 		private readonly IConditionGroup Condition;
 
-		// Token: 0x040256F0 RID: 153328
+		// Token: 0x0402035F RID: 131935
 		[Nullable(new byte[]
 		{
 			1,
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 		})]
 		private readonly Func<GeneralContext> EntityContextProvider;
 
-		// Token: 0x040256F1 RID: 153329
+		// Token: 0x04020360 RID: 131936
 		private readonly string OwnerActorKey;
 	}
 }

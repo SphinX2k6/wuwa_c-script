@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200051C RID: 1308
+	// Token: 0x02000532 RID: 1330
 	public class ConfigMapMarkHasEntityConfigId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001EB3 RID: 7859 RVA: 0x00106C75 File Offset: 0x00104E75
+		// Token: 0x06001F37 RID: 7991 RVA: 0x0010D3C9 File Offset: 0x0010B5C9
 		static ConfigMapMarkHasEntityConfigId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMapMarkHasEntityConfigId.CreateStaticDefaultValue), new Action(ConfigMapMarkHasEntityConfigId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001EB4 RID: 7860 RVA: 0x00106C94 File Offset: 0x00104E94
+		// Token: 0x06001F38 RID: 7992 RVA: 0x0010D3E8 File Offset: 0x0010B5E8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMapMarkHasEntityConfigId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001EB5 RID: 7861 RVA: 0x00106D13 File Offset: 0x00104F13
+		// Token: 0x06001F39 RID: 7993 RVA: 0x0010D467 File Offset: 0x0010B667
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMapMarkHasEntityConfigId.LogPair = null;
 			ConfigMapMarkHasEntityConfigId.HandleId = 0;
 		}
 
-		// Token: 0x06001EB6 RID: 7862 RVA: 0x00106D21 File Offset: 0x00104F21
+		// Token: 0x06001F3A RID: 7994 RVA: 0x0010D475 File Offset: 0x0010B675
 		public static void Init()
 		{
 			ConfigMapMarkHasEntityConfigId.HandleId = ConfigCommon.InitDataStatement(ConfigMapMarkHasEntityConfigId.HandleId, "db_map_mark.db", "select BinData from `MapMark` where EntityConfigId > 0");
 		}
 
-		// Token: 0x06001EB7 RID: 7863 RVA: 0x00106D3C File Offset: 0x00104F3C
+		// Token: 0x06001F3B RID: 7995 RVA: 0x0010D490 File Offset: 0x0010B690
 		[NullableContext(2)]
 		public static IReadOnlyList<MapMark> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040023A8 RID: 9128
+		// Token: 0x04002442 RID: 9282
 		private const string DB = "db_map_mark.db";
 
-		// Token: 0x040023A9 RID: 9129
+		// Token: 0x04002443 RID: 9283
 		private const string FILE = "d.地图标记.xlsx";
 
-		// Token: 0x040023AA RID: 9130
+		// Token: 0x04002444 RID: 9284
 		private const string TABLE = "MapMark";
 
-		// Token: 0x040023AB RID: 9131
+		// Token: 0x04002445 RID: 9285
 		private const string COMMAND = "select BinData from `MapMark` where EntityConfigId > 0";
 
-		// Token: 0x040023AC RID: 9132
+		// Token: 0x04002446 RID: 9286
 		private const string KEY_PREFIX = "MapMarkHasEntityConfigId";
 
-		// Token: 0x040023AD RID: 9133
+		// Token: 0x04002447 RID: 9287
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040023AE RID: 9134
+		// Token: 0x04002448 RID: 9288
 		private static int HandleId;
 	}
 }

@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002C06 RID: 11270
+// Token: 0x02002181 RID: 8577
 public class TowerRoleComplexItem : UiPanelBase
 {
-	// Token: 0x06017684 RID: 95876 RVA: 0x005F5C4C File Offset: 0x005F3E4C
+	// Token: 0x060150B5 RID: 86197 RVA: 0x00622770 File Offset: 0x00620970
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -29,7 +29,7 @@ public class TowerRoleComplexItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06017685 RID: 95877 RVA: 0x005F5D18 File Offset: 0x005F3F18
+	// Token: 0x060150B6 RID: 86198 RVA: 0x0062283C File Offset: 0x00620A3C
 	protected override void OnStart()
 	{
 		base.GetItem(2).SetUIActive(true);
@@ -37,7 +37,7 @@ public class TowerRoleComplexItem : UiPanelBase
 		base.GetSprite(4).SetUIActive(false);
 	}
 
-	// Token: 0x06017686 RID: 95878 RVA: 0x005F5D44 File Offset: 0x005F3F44
+	// Token: 0x060150B7 RID: 86199 RVA: 0x00622868 File Offset: 0x00620A68
 	public void RefreshRoleId(int roleId)
 	{
 		UUITexture texture = base.GetTexture(1);
@@ -55,18 +55,18 @@ public class TowerRoleComplexItem : UiPanelBase
 		this.SetSpriteByPath(RoleConfig.Instance.GetRoleQualityInfo(roleConfig.Value.QualityId).Value.Image, sprite, false, null, null);
 	}
 
-	// Token: 0x020091D1 RID: 37329
+	// Token: 0x02008414 RID: 33812
 	private enum EChildType
 	{
-		// Token: 0x0402F2D8 RID: 193240
+		// Token: 0x0402A9D9 RID: 174553
 		BgQualitySprite,
-		// Token: 0x0402F2D9 RID: 193241
+		// Token: 0x0402A9DA RID: 174554
 		RoleIcon,
-		// Token: 0x0402F2DA RID: 193242
+		// Token: 0x0402A9DB RID: 174555
 		RoleLevelItem,
-		// Token: 0x0402F2DB RID: 193243
+		// Token: 0x0402A9DC RID: 174556
 		RoleLevelText,
-		// Token: 0x0402F2DC RID: 193244
+		// Token: 0x0402A9DD RID: 174557
 		BgRoleLevelText
 	}
 }

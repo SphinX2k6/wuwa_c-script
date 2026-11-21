@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200116E RID: 4462
+// Token: 0x02000622 RID: 1570
 public class BabelTowerTeamSelectPanel : UiPanelBase
 {
-	// Token: 0x060075C6 RID: 30150 RVA: 0x00185AB4 File Offset: 0x00183CB4
+	// Token: 0x0600495D RID: 18781 RVA: 0x0018E65C File Offset: 0x0018C85C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -23,7 +23,7 @@ public class BabelTowerTeamSelectPanel : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060075C7 RID: 30151 RVA: 0x00185B20 File Offset: 0x00183D20
+	// Token: 0x0600495E RID: 18782 RVA: 0x0018E6C8 File Offset: 0x0018C8C8
 	protected override void OnStart()
 	{
 		this.TeamScroll = new GenericScrollViewNew<BabelTowerPreTeamItem, FormationData>(base.GetScrollViewWithScrollbar(0), new Func<BabelTowerPreTeamItem>(this.CreateTeamItem), null, false, null);
@@ -35,7 +35,7 @@ public class BabelTowerTeamSelectPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x060075C8 RID: 30152 RVA: 0x00185B6C File Offset: 0x00183D6C
+	// Token: 0x0600495F RID: 18783 RVA: 0x0018E714 File Offset: 0x0018C914
 	public void RefreshTeamList()
 	{
 		this.SelectedTeamIndex = -1;
@@ -56,7 +56,7 @@ public class BabelTowerTeamSelectPanel : UiPanelBase
 		emptyStateItem.SetUIActive(this.TeamList.Count <= 0);
 	}
 
-	// Token: 0x060075C9 RID: 30153 RVA: 0x00185BD5 File Offset: 0x00183DD5
+	// Token: 0x06004960 RID: 18784 RVA: 0x0018E77D File Offset: 0x0018C97D
 	[NullableContext(1)]
 	private BabelTowerPreTeamItem CreateTeamItem()
 	{
@@ -76,7 +76,7 @@ public class BabelTowerTeamSelectPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x060075CA RID: 30154 RVA: 0x00185BF0 File Offset: 0x00183DF0
+	// Token: 0x06004961 RID: 18785 RVA: 0x0018E798 File Offset: 0x0018C998
 	private void UpdateAllSelection()
 	{
 		GenericScrollViewNew<BabelTowerPreTeamItem, FormationData> teamScroll = this.TeamScroll;
@@ -93,7 +93,7 @@ public class BabelTowerTeamSelectPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0400360D RID: 13837
+	// Token: 0x040036A6 RID: 13990
 	[Nullable(new byte[]
 	{
 		2,
@@ -101,7 +101,7 @@ public class BabelTowerTeamSelectPanel : UiPanelBase
 	})]
 	public Action<FormationData> OnTeamSelect;
 
-	// Token: 0x0400360E RID: 13838
+	// Token: 0x040036A7 RID: 13991
 	[Nullable(new byte[]
 	{
 		2,
@@ -110,24 +110,24 @@ public class BabelTowerTeamSelectPanel : UiPanelBase
 	})]
 	private GenericScrollViewNew<BabelTowerPreTeamItem, FormationData> TeamScroll;
 
-	// Token: 0x0400360F RID: 13839
+	// Token: 0x040036A8 RID: 13992
 	[Nullable(1)]
 	private List<FormationData> TeamList = new List<FormationData>();
 
-	// Token: 0x04003610 RID: 13840
+	// Token: 0x040036A9 RID: 13993
 	[Nullable(2)]
 	private UUIItem EmptyStateItem;
 
-	// Token: 0x04003611 RID: 13841
+	// Token: 0x040036AA RID: 13994
 	private int SelectedTeamIndex = -1;
 
-	// Token: 0x02007740 RID: 30528
+	// Token: 0x020068CD RID: 26829
 	private class EComp
 	{
-		// Token: 0x04027559 RID: 161113
+		// Token: 0x04022892 RID: 141458
 		public const int TeamScrollView = 0;
 
-		// Token: 0x0402755A RID: 161114
+		// Token: 0x04022893 RID: 141459
 		public const int EmptyState = 1;
 	}
 }

@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Match
 {
-	// Token: 0x020043D9 RID: 17369
+	// Token: 0x0200483E RID: 18494
 	public enum EAnimalType : byte
 	{
-		// Token: 0x0400C238 RID: 49720
+		// Token: 0x0400CC5C RID: 52316
 		Cat,
-		// Token: 0x0400C239 RID: 49721
+		// Token: 0x0400CC5D RID: 52317
 		Dog
 	}
 }

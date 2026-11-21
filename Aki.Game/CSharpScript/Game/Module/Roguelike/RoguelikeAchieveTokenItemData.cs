@@ -3,14 +3,14 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DAE RID: 19886
+	// Token: 0x02003D77 RID: 15735
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoguelikeAchieveTokenItemData : IRoguelikeAchieveTokenItemData
 	{
-		// Token: 0x17007EA4 RID: 32420
-		// (get) Token: 0x06033587 RID: 210311 RVA: 0x00BFCD40 File Offset: 0x00BFAF40
-		// (set) Token: 0x06033588 RID: 210312 RVA: 0x00BFCD48 File Offset: 0x00BFAF48
+		// Token: 0x17005254 RID: 21076
+		// (get) Token: 0x060283F4 RID: 164852 RVA: 0x00B46272 File Offset: 0x00B44472
+		// (set) Token: 0x060283F5 RID: 164853 RVA: 0x00B4627A File Offset: 0x00B4447A
 		public RogueGainEntry GainEntry { get; set; }
 	}
 }

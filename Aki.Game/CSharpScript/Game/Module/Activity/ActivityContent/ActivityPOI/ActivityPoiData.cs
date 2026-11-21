@@ -6,28 +6,28 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.ActivityPOI
 {
-	// Token: 0x0200692E RID: 26926
+	// Token: 0x0200587E RID: 22654
 	public class ActivityPoiData : ActivityBaseData
 	{
-		// Token: 0x060431E5 RID: 274917 RVA: 0x0105B8FA File Offset: 0x01059AFA
+		// Token: 0x06037D3D RID: 228669 RVA: 0x00F9CF26 File Offset: 0x00F9B126
 		private void HandleQuestStateChange(int questId, QuestState state, EQuestStatusUpdateReason _)
 		{
 			this.OnQuestStateChange(questId, state);
 		}
 
-		// Token: 0x060431E6 RID: 274918 RVA: 0x0105B905 File Offset: 0x01059B05
+		// Token: 0x06037D3E RID: 228670 RVA: 0x00F9CF31 File Offset: 0x00F9B131
 		protected override void OnAddEvents()
 		{
 			EventSystem.Instance.Add<int, QuestState, EQuestStatusUpdateReason>(EEventName.OnQuestStateChange, new Action<int, QuestState, EQuestStatusUpdateReason>(this.HandleQuestStateChange));
 		}
 
-		// Token: 0x060431E7 RID: 274919 RVA: 0x0105B923 File Offset: 0x01059B23
+		// Token: 0x06037D3F RID: 228671 RVA: 0x00F9CF4F File Offset: 0x00F9B14F
 		protected override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.OnQuestStateChange, new Action<int, QuestState, EQuestStatusUpdateReason>(this.HandleQuestStateChange));
 		}
 
-		// Token: 0x060431E8 RID: 274920 RVA: 0x0105B944 File Offset: 0x01059B44
+		// Token: 0x06037D40 RID: 228672 RVA: 0x00F9CF70 File Offset: 0x00F9B170
 		[NullableContext(1)]
 		protected override void PhraseEx(ActivityData data)
 		{
@@ -39,13 +39,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.ActivityPOI
 			this.RoleQuestId = config.Value.RoleQuestId;
 		}
 
-		// Token: 0x060431E9 RID: 274921 RVA: 0x0105B97D File Offset: 0x01059B7D
+		// Token: 0x06037D41 RID: 228673 RVA: 0x00F9CFA9 File Offset: 0x00F9B1A9
 		protected override bool GetExDataFinishShowState()
 		{
 			return QuestNewModel.Instance.CheckQuestFinished(this.RoleQuestId);
 		}
 
-		// Token: 0x060431EA RID: 274922 RVA: 0x0105B98F File Offset: 0x01059B8F
+		// Token: 0x06037D42 RID: 228674 RVA: 0x00F9CFBB File Offset: 0x00F9B1BB
 		public bool OnQuestStateChange(int questId, QuestState state)
 		{
 			if (questId != this.RoleQuestId)
@@ -57,19 +57,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.ActivityPOI
 			return true;
 		}
 
-		// Token: 0x060431EB RID: 274923 RVA: 0x0105B9C9 File Offset: 0x01059BC9
+		// Token: 0x06037D43 RID: 228675 RVA: 0x00F9CFF5 File Offset: 0x00F9B1F5
 		public override bool GetExDataRedPointShowState()
 		{
 			return false;
 		}
 
-		// Token: 0x060431EC RID: 274924 RVA: 0x0105B9CC File Offset: 0x01059BCC
+		// Token: 0x06037D44 RID: 228676 RVA: 0x00F9CFF8 File Offset: 0x00F9B1F8
 		public override bool NeedSelfControlFirstRedPoint()
 		{
 			return false;
 		}
 
-		// Token: 0x04022F05 RID: 143109
+		// Token: 0x0401D761 RID: 120673
 		public int RoleQuestId;
 	}
 }

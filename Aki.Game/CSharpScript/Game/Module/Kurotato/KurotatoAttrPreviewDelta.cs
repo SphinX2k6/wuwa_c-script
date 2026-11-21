@@ -3,24 +3,24 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Kurotato
 {
-	// Token: 0x02005702 RID: 22274
+	// Token: 0x020046D9 RID: 18137
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class KurotatoAttrPreviewDelta : IKurotatoAttrPreviewDelta
 	{
-		// Token: 0x17008831 RID: 34865
-		// (get) Token: 0x06038A4D RID: 232013 RVA: 0x00D70834 File Offset: 0x00D6EA34
-		// (set) Token: 0x06038A4E RID: 232014 RVA: 0x00D7083C File Offset: 0x00D6EA3C
+		// Token: 0x17005BF9 RID: 23545
+		// (get) Token: 0x0602D95D RID: 186717 RVA: 0x00CBEE1C File Offset: 0x00CBD01C
+		// (set) Token: 0x0602D95E RID: 186718 RVA: 0x00CBEE24 File Offset: 0x00CBD024
 		public int PropertyId { get; set; }
 
-		// Token: 0x17008832 RID: 34866
-		// (get) Token: 0x06038A4F RID: 232015 RVA: 0x00D70845 File Offset: 0x00D6EA45
-		// (set) Token: 0x06038A50 RID: 232016 RVA: 0x00D7084D File Offset: 0x00D6EA4D
+		// Token: 0x17005BFA RID: 23546
+		// (get) Token: 0x0602D95F RID: 186719 RVA: 0x00CBEE2D File Offset: 0x00CBD02D
+		// (set) Token: 0x0602D960 RID: 186720 RVA: 0x00CBEE35 File Offset: 0x00CBD035
 		public string ValueStr { get; set; }
 
-		// Token: 0x17008833 RID: 34867
-		// (get) Token: 0x06038A51 RID: 232017 RVA: 0x00D70856 File Offset: 0x00D6EA56
-		// (set) Token: 0x06038A52 RID: 232018 RVA: 0x00D7085E File Offset: 0x00D6EA5E
+		// Token: 0x17005BFB RID: 23547
+		// (get) Token: 0x0602D961 RID: 186721 RVA: 0x00CBEE3E File Offset: 0x00CBD03E
+		// (set) Token: 0x0602D962 RID: 186722 RVA: 0x00CBEE46 File Offset: 0x00CBD046
 		public int? LockValue { get; set; }
 	}
 }

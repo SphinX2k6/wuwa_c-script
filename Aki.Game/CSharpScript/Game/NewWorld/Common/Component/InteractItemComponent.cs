@@ -4,12 +4,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Common.Component
 {
-	// Token: 0x02007084 RID: 28804
+	// Token: 0x02006205 RID: 25093
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class InteractItemComponent : EntityComponent
 	{
-		// Token: 0x06046278 RID: 287352 RVA: 0x011869A0 File Offset: 0x01184BA0
+		// Token: 0x0603C495 RID: 246933 RVA: 0x0112FF28 File Offset: 0x0112E128
 		protected override bool OnStart()
 		{
 			AActor dynamicEntity = WorldFunctionLibrary.GetDynamicEntity(base.Entity.Id);
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x06046279 RID: 287353 RVA: 0x01186A18 File Offset: 0x01184C18
+		// Token: 0x0603C496 RID: 246934 RVA: 0x0112FFA0 File Offset: 0x0112E1A0
 		public FVectorDouble? GetInteractPosition()
 		{
 			if (this.Position != null)
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return null;
 		}
 
-		// Token: 0x0604627A RID: 287354 RVA: 0x01186A48 File Offset: 0x01184C48
+		// Token: 0x0603C497 RID: 246935 RVA: 0x0112FFD0 File Offset: 0x0112E1D0
 		public FRotator? GetInteractRotator()
 		{
 			if (this.Arrow != null)
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return null;
 		}
 
-		// Token: 0x0604627B RID: 287355 RVA: 0x01186A78 File Offset: 0x01184C78
+		// Token: 0x0603C498 RID: 246936 RVA: 0x01130000 File Offset: 0x0112E200
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -55,45 +55,46 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 				return false;
 			}
 			InteractItemComponent interactItemComponent = (InteractItemComponent)componentTemplate;
-			if (base.CanResetComponentProperty("Position"))
+			if (interactItemComponent.Position == null)
 			{
-				if (interactItemComponent.Position == null)
-				{
-					this.Position = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UChildActorComponent>(this.Position), "Position"))
-				{
-					return false;
-				}
+				this.Position = null;
 			}
-			if (base.CanResetComponentProperty("Arrow"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Position), "Position"))
 			{
-				if (interactItemComponent.Arrow == null)
-				{
-					this.Arrow = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UArrowComponent>(this.Arrow), "Arrow"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("IsInit"))
+			if (interactItemComponent.Arrow == null)
 			{
-				this.IsInit = interactItemComponent.IsInit;
+				this.Arrow = null;
 			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Arrow), "Arrow"))
+			{
+				return false;
+			}
+			this.IsInit = interactItemComponent.IsInit;
 			return true;
 		}
 
-		// Token: 0x04024C02 RID: 150530
+		// Token: 0x170071C7 RID: 29127
+		// (get) Token: 0x0603C499 RID: 246937 RVA: 0x01130082 File Offset: 0x0112E282
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FEBD RID: 130749
 		private static readonly FName POSITION_TAG = new FName("Position");
 
-		// Token: 0x04024C03 RID: 150531
+		// Token: 0x0401FEBE RID: 130750
 		private UChildActorComponent Position;
 
-		// Token: 0x04024C04 RID: 150532
+		// Token: 0x0401FEBF RID: 130751
 		private UArrowComponent Arrow;
 
-		// Token: 0x04024C05 RID: 150533
+		// Token: 0x0401FEC0 RID: 130752
 		public bool IsInit;
 	}
 }

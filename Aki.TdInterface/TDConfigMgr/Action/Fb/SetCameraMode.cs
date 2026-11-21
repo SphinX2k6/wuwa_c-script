@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025BE RID: 9662
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200286D RID: 10349
 	public class SetCameraMode : ActionParams
 	{
-		// Token: 0x0600D950 RID: 55632 RVA: 0x00206B34 File Offset: 0x00204D34
+		// Token: 0x0600E6CA RID: 59082 RVA: 0x00222808 File Offset: 0x00220A08
 		public static SetCameraMode Create(ISetCameraMode? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003F96 RID: 16278
-		// (get) Token: 0x0600D951 RID: 55633 RVA: 0x00206B53 File Offset: 0x00204D53
+		// Token: 0x1700429E RID: 17054
+		// (get) Token: 0x0600E6CB RID: 59083 RVA: 0x00222827 File Offset: 0x00220A27
 		public virtual string Mode
 		{
 			get
@@ -32,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040078B6 RID: 30902
+		// Token: 0x04007F1D RID: 32541
 		private ISetCameraMode Instance;
 	}
 }

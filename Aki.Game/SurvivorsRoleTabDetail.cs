@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002B29 RID: 11049
+// Token: 0x020020A5 RID: 8357
 public class SurvivorsRoleTabDetail : UiPanelBase
 {
-	// Token: 0x06016EFD RID: 93949 RVA: 0x005D24E4 File Offset: 0x005D06E4
+	// Token: 0x0601492E RID: 84270 RVA: 0x005FF060 File Offset: 0x005FD260
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ public class SurvivorsRoleTabDetail : UiPanelBase
 		};
 	}
 
-	// Token: 0x06016EFE RID: 93950 RVA: 0x005D2590 File Offset: 0x005D0790
+	// Token: 0x0601492F RID: 84271 RVA: 0x005FF10C File Offset: 0x005FD30C
 	protected override void OnStart()
 	{
 		this.RoleVisionAttribute = new SurvivorsRoleVisionAttribute(base.GetItem(1));
@@ -40,7 +40,7 @@ public class SurvivorsRoleTabDetail : UiPanelBase
 		TermExplanationController.Instance.RegisterTextHyperlinkByParam(param);
 	}
 
-	// Token: 0x06016EFF RID: 93951 RVA: 0x005D25E8 File Offset: 0x005D07E8
+	// Token: 0x06014930 RID: 84272 RVA: 0x005FF164 File Offset: 0x005FD364
 	public void Refresh(int cfgId, bool playGridAnim = false, int showAttrNum = 4)
 	{
 		SurvivorsRole value = SurvivorsRogueConfig.Instance.GetSurvivorsRole(cfgId).Value;
@@ -84,13 +84,13 @@ public class SurvivorsRoleTabDetail : UiPanelBase
 		text.ShowTextNew(value3.Name);
 	}
 
-	// Token: 0x06016F00 RID: 93952 RVA: 0x005D26FF File Offset: 0x005D08FF
+	// Token: 0x06014931 RID: 84273 RVA: 0x005FF27B File Offset: 0x005FD47B
 	public void RefreshFourAttr(int cfgId, bool playGridAnim = false)
 	{
 		this.Refresh(cfgId, playGridAnim, 4);
 	}
 
-	// Token: 0x06016F01 RID: 93953 RVA: 0x005D270C File Offset: 0x005D090C
+	// Token: 0x06014932 RID: 84274 RVA: 0x005FF288 File Offset: 0x005FD488
 	private void OnClickMoreBtn()
 	{
 		if (this.CurrentRoleId == 0)
@@ -101,13 +101,13 @@ public class SurvivorsRoleTabDetail : UiPanelBase
 		UiManager.Instance.OpenView(EUiViewName.SurvivorsAttributeDetailView, SurvivorsRogueModel.Instance.GetRoleDefaultAttributeList(this.CurrentRoleId, value.GetPropertyListArray()), null);
 	}
 
-	// Token: 0x0400AAC5 RID: 43717
+	// Token: 0x0400AECB RID: 44747
 	[Nullable(2)]
 	private SurvivorsRoleVisionAttribute RoleVisionAttribute;
 
-	// Token: 0x0400AAC6 RID: 43718
+	// Token: 0x0400AECC RID: 44748
 	private int CurrentRoleId;
 
-	// Token: 0x0400AAC7 RID: 43719
+	// Token: 0x0400AECD RID: 44749
 	private const int DEFAULT_SHOW_ATTRIBUTE_NUM = 4;
 }

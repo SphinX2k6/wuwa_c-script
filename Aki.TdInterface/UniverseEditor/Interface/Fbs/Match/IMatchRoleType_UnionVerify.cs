@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Match
 {
-	// Token: 0x02004405 RID: 17413
+	// Token: 0x0200486D RID: 18541
 	public static class IMatchRoleType_UnionVerify
 	{
-		// Token: 0x06019ECB RID: 106187 RVA: 0x003B54DC File Offset: 0x003B36DC
+		// Token: 0x0601B69A RID: 112282 RVA: 0x003E168C File Offset: 0x003DF88C
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;
@@ -20,6 +20,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.Match
 				break;
 			case 3:
 				result = IMatchPhantomRoleVerify.Verify(verifier, tablePos);
+				break;
+			case 4:
+				result = IMatchAssistCharacterRoleVerify.Verify(verifier, tablePos);
 				break;
 			default:
 				result = true;

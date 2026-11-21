@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 {
-	// Token: 0x02004383 RID: 17283
+	// Token: 0x020047E5 RID: 18405
 	public static class TPerformerAiDecoratorVerify
 	{
-		// Token: 0x06019B60 RID: 105312 RVA: 0x003AEB90 File Offset: 0x003ACD90
+		// Token: 0x0601B2EE RID: 111342 RVA: 0x003DA5B8 File Offset: 0x003D87B8
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;

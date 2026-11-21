@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002776 RID: 10102
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A48 RID: 10824
 	public class IFadeBackgroundUiPrefab : IFadeBackgroundType
 	{
-		// Token: 0x0600E0EF RID: 57583 RVA: 0x00213B58 File Offset: 0x00211D58
+		// Token: 0x0600EF0D RID: 61197 RVA: 0x002308EC File Offset: 0x0022EAEC
 		public static IFadeBackgroundUiPrefab Create(IFadeBackgroundUiPrefab? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170043C5 RID: 17349
-		// (get) Token: 0x0600E0F0 RID: 57584 RVA: 0x00213B77 File Offset: 0x00211D77
+		// Token: 0x1700472B RID: 18219
+		// (get) Token: 0x0600EF0E RID: 61198 RVA: 0x0023090B File Offset: 0x0022EB0B
 		public override EFadeBackgroundType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043C6 RID: 17350
-		// (get) Token: 0x0600E0F1 RID: 57585 RVA: 0x00213B84 File Offset: 0x00211D84
+		// Token: 0x1700472C RID: 18220
+		// (get) Token: 0x0600EF0F RID: 61199 RVA: 0x00230918 File Offset: 0x0022EB18
 		public virtual IFadeBackgroundUiPrefabBlackScreenWhiteText PrefabType
 		{
 			get
@@ -48,14 +46,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C8C RID: 31884
+		// Token: 0x04008342 RID: 33602
 		private IFadeBackgroundUiPrefab Instance;
 
-		// Token: 0x04007C8D RID: 31885
+		// Token: 0x04008343 RID: 33603
 		[Nullable(2)]
 		private IFadeBackgroundUiPrefabBlackScreenWhiteText _PrefabTypeCache;
 
-		// Token: 0x04007C8E RID: 31886
+		// Token: 0x04008344 RID: 33604
 		private bool _PrefabTypeInited;
 	}
 }

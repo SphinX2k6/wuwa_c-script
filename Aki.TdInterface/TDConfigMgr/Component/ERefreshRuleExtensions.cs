@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009F0 RID: 2544
+	// Token: 0x02000AB5 RID: 2741
 	public static class ERefreshRuleExtensions
 	{
-		// Token: 0x06003869 RID: 14441 RVA: 0x00092124 File Offset: 0x00090324
+		// Token: 0x06003C41 RID: 15425 RVA: 0x0009A9E4 File Offset: 0x00098BE4
 		public static string ToEnumString(this ERefreshRule value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600386A RID: 14442 RVA: 0x0009216C File Offset: 0x0009036C
+		// Token: 0x06003C42 RID: 15426 RVA: 0x0009AA2C File Offset: 0x00098C2C
 		public static ERefreshRule FromString(string name)
 		{
 			ERefreshRule result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600386B RID: 14443 RVA: 0x00092198 File Offset: 0x00090398
+		// Token: 0x06003C43 RID: 15427 RVA: 0x0009AA58 File Offset: 0x00098C58
 		public static bool TryFromString(string name, out ERefreshRule value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x0600386C RID: 14444 RVA: 0x000921EE File Offset: 0x000903EE
+		// Token: 0x06003C44 RID: 15428 RVA: 0x0009AAAE File Offset: 0x00098CAE
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600386D RID: 14445 RVA: 0x0009220E File Offset: 0x0009040E
+		// Token: 0x06003C45 RID: 15429 RVA: 0x0009AACE File Offset: 0x00098CCE
 		public static ERefreshRule[] GetValues()
 		{
 			return new ERefreshRule[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600386E RID: 14446 RVA: 0x0009221E File Offset: 0x0009041E
+		// Token: 0x06003C46 RID: 15430 RVA: 0x0009AADE File Offset: 0x00098CDE
 		public static string[] GetNames()
 		{
 			return new string[]

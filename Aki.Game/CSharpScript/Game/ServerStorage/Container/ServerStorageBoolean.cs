@@ -4,15 +4,15 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.ServerStorage.Container
 {
-	// Token: 0x02004585 RID: 17797
+	// Token: 0x020034AD RID: 13485
 	public class ServerStorageBoolean : ServerStorageValueEntry<bool?>
 	{
-		// Token: 0x0602DEAD RID: 188077 RVA: 0x00A8ED38 File Offset: 0x00A8CF38
+		// Token: 0x06022597 RID: 140695 RVA: 0x009BAF58 File Offset: 0x009B9158
 		public ServerStorageBoolean(EClientStorageSystemIdType key) : base(key)
 		{
 		}
 
-		// Token: 0x0602DEAE RID: 188078 RVA: 0x00A8ED44 File Offset: 0x00A8CF44
+		// Token: 0x06022598 RID: 140696 RVA: 0x009BAF64 File Offset: 0x009B9164
 		[NullableContext(1)]
 		public unsafe override void Serialize(ClientStorageInfo info)
 		{
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.ServerStorage.Container
 			this.Data = new bool?(info.BoolData.Data);
 		}
 
-		// Token: 0x0602DEAF RID: 188079 RVA: 0x00A8EDD0 File Offset: 0x00A8CFD0
+		// Token: 0x06022599 RID: 140697 RVA: 0x009BAFF0 File Offset: 0x009B91F0
 		[NullableContext(2)]
 		public unsafe override ClientStorageInfo Deserialize()
 		{

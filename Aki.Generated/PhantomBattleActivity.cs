@@ -7,52 +7,60 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000EBB RID: 3771
+	// Token: 0x02000FA0 RID: 4000
+	[NullableContext(1)]
+	[Nullable(0)]
 	public struct PhantomBattleActivity : IFlatbufferObject
 	{
-		// Token: 0x170024FF RID: 9471
-		// (get) Token: 0x0600A3D8 RID: 41944 RVA: 0x002A82DC File Offset: 0x002A64DC
+		// Token: 0x17002565 RID: 9573
+		// (get) Token: 0x0600A9F9 RID: 43513 RVA: 0x002C561C File Offset: 0x002C381C
+		[Nullable(0)]
 		public ByteBuffer ByteBuffer
 		{
+			[NullableContext(0)]
 			get
 			{
 				return this.__p.bb;
 			}
 		}
 
-		// Token: 0x0600A3D9 RID: 41945 RVA: 0x002A82E9 File Offset: 0x002A64E9
+		// Token: 0x0600A9FA RID: 43514 RVA: 0x002C5629 File Offset: 0x002C3829
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600A3DA RID: 41946 RVA: 0x002A82F0 File Offset: 0x002A64F0
+		// Token: 0x0600A9FB RID: 43515 RVA: 0x002C5630 File Offset: 0x002C3830
+		[NullableContext(0)]
 		public static PhantomBattleActivity GetRootAsPhantomBattleActivity(ByteBuffer _bb)
 		{
 			return PhantomBattleActivity.GetRootAsPhantomBattleActivity(_bb, default(PhantomBattleActivity));
 		}
 
-		// Token: 0x0600A3DB RID: 41947 RVA: 0x002A830C File Offset: 0x002A650C
+		// Token: 0x0600A9FC RID: 43516 RVA: 0x002C564C File Offset: 0x002C384C
+		[NullableContext(0)]
 		public static PhantomBattleActivity GetRootAsPhantomBattleActivity(ByteBuffer _bb, PhantomBattleActivity obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600A3DC RID: 41948 RVA: 0x002A8329 File Offset: 0x002A6529
+		// Token: 0x0600A9FD RID: 43517 RVA: 0x002C5669 File Offset: 0x002C3869
+		[NullableContext(0)]
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600A3DD RID: 41949 RVA: 0x002A8338 File Offset: 0x002A6538
+		// Token: 0x0600A9FE RID: 43518 RVA: 0x002C5678 File Offset: 0x002C3878
+		[NullableContext(0)]
 		public PhantomBattleActivity __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002500 RID: 9472
-		// (get) Token: 0x0600A3DE RID: 41950 RVA: 0x002A8348 File Offset: 0x002A6548
+		// Token: 0x17002566 RID: 9574
+		// (get) Token: 0x0600A9FF RID: 43519 RVA: 0x002C5688 File Offset: 0x002C3888
 		public int ActivityId
 		{
 			get
@@ -66,8 +74,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002501 RID: 9473
-		// (get) Token: 0x0600A3DF RID: 41951 RVA: 0x002A8384 File Offset: 0x002A6584
+		// Token: 0x17002567 RID: 9575
+		// (get) Token: 0x0600AA00 RID: 43520 RVA: 0x002C56C4 File Offset: 0x002C38C4
 		public int TimeQuantumId
 		{
 			get
@@ -81,8 +89,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002502 RID: 9474
-		// (get) Token: 0x0600A3E0 RID: 41952 RVA: 0x002A83C0 File Offset: 0x002A65C0
+		// Token: 0x17002568 RID: 9576
+		// (get) Token: 0x0600AA01 RID: 43521 RVA: 0x002C5700 File Offset: 0x002C3900
 		public int ShopId
 		{
 			get
@@ -96,8 +104,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002503 RID: 9475
-		// (get) Token: 0x0600A3E1 RID: 41953 RVA: 0x002A83FC File Offset: 0x002A65FC
+		// Token: 0x17002569 RID: 9577
+		// (get) Token: 0x0600AA02 RID: 43522 RVA: 0x002C573C File Offset: 0x002C393C
 		public int ShopItemId
 		{
 			get
@@ -111,8 +119,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002504 RID: 9476
-		// (get) Token: 0x0600A3E2 RID: 41954 RVA: 0x002A843C File Offset: 0x002A663C
+		// Token: 0x1700256A RID: 9578
+		// (get) Token: 0x0600AA03 RID: 43523 RVA: 0x002C577C File Offset: 0x002C397C
 		public int DustItemId
 		{
 			get
@@ -126,8 +134,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002505 RID: 9477
-		// (get) Token: 0x0600A3E3 RID: 41955 RVA: 0x002A847C File Offset: 0x002A667C
+		// Token: 0x1700256B RID: 9579
+		// (get) Token: 0x0600AA04 RID: 43524 RVA: 0x002C57BC File Offset: 0x002C39BC
 		public int ExpItemId
 		{
 			get
@@ -141,8 +149,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002506 RID: 9478
-		// (get) Token: 0x0600A3E4 RID: 41956 RVA: 0x002A84BC File Offset: 0x002A66BC
+		// Token: 0x1700256C RID: 9580
+		// (get) Token: 0x0600AA05 RID: 43525 RVA: 0x002C57FC File Offset: 0x002C39FC
 		public int Integration
 		{
 			get
@@ -156,8 +164,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002507 RID: 9479
-		// (get) Token: 0x0600A3E5 RID: 41957 RVA: 0x002A84FC File Offset: 0x002A66FC
+		// Token: 0x1700256D RID: 9581
+		// (get) Token: 0x0600AA06 RID: 43526 RVA: 0x002C583C File Offset: 0x002C3A3C
 		public int AttackFactor
 		{
 			get
@@ -171,8 +179,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002508 RID: 9480
-		// (get) Token: 0x0600A3E6 RID: 41958 RVA: 0x002A853C File Offset: 0x002A673C
+		// Token: 0x1700256E RID: 9582
+		// (get) Token: 0x0600AA07 RID: 43527 RVA: 0x002C587C File Offset: 0x002C3A7C
 		public int LifeFactor
 		{
 			get
@@ -186,8 +194,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002509 RID: 9481
-		// (get) Token: 0x0600A3E7 RID: 41959 RVA: 0x002A857C File Offset: 0x002A677C
+		// Token: 0x1700256F RID: 9583
+		// (get) Token: 0x0600AA08 RID: 43528 RVA: 0x002C58BC File Offset: 0x002C3ABC
 		public int CardGroupNeedNum
 		{
 			get
@@ -201,8 +209,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700250A RID: 9482
-		// (get) Token: 0x0600A3E8 RID: 41960 RVA: 0x002A85BC File Offset: 0x002A67BC
+		// Token: 0x17002570 RID: 9584
+		// (get) Token: 0x0600AA09 RID: 43529 RVA: 0x002C58FC File Offset: 0x002C3AFC
 		public int CanBattlePhantomNum
 		{
 			get
@@ -216,8 +224,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700250B RID: 9483
-		// (get) Token: 0x0600A3E9 RID: 41961 RVA: 0x002A85FC File Offset: 0x002A67FC
+		// Token: 0x17002571 RID: 9585
+		// (get) Token: 0x0600AA0A RID: 43530 RVA: 0x002C593C File Offset: 0x002C3B3C
 		public int BattleSlotNum
 		{
 			get
@@ -231,8 +239,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700250C RID: 9484
-		// (get) Token: 0x0600A3EA RID: 41962 RVA: 0x002A863C File Offset: 0x002A683C
+		// Token: 0x17002572 RID: 9586
+		// (get) Token: 0x0600AA0B RID: 43531 RVA: 0x002C597C File Offset: 0x002C3B7C
 		public int FourCostCardCount
 		{
 			get
@@ -246,8 +254,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700250D RID: 9485
-		// (get) Token: 0x0600A3EB RID: 41963 RVA: 0x002A867C File Offset: 0x002A687C
+		// Token: 0x17002573 RID: 9587
+		// (get) Token: 0x0600AA0C RID: 43532 RVA: 0x002C59BC File Offset: 0x002C3BBC
 		public int AreaCardCount
 		{
 			get
@@ -261,8 +269,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700250E RID: 9486
-		// (get) Token: 0x0600A3EC RID: 41964 RVA: 0x002A86BC File Offset: 0x002A68BC
+		// Token: 0x17002574 RID: 9588
+		// (get) Token: 0x0600AA0D RID: 43533 RVA: 0x002C59FC File Offset: 0x002C3BFC
 		public int ItemCardMaxCount
 		{
 			get
@@ -276,8 +284,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700250F RID: 9487
-		// (get) Token: 0x0600A3ED RID: 41965 RVA: 0x002A86FC File Offset: 0x002A68FC
+		// Token: 0x17002575 RID: 9589
+		// (get) Token: 0x0600AA0E RID: 43534 RVA: 0x002C5A3C File Offset: 0x002C3C3C
 		public int NormalCardCount
 		{
 			get
@@ -291,8 +299,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002510 RID: 9488
-		// (get) Token: 0x0600A3EE RID: 41966 RVA: 0x002A873C File Offset: 0x002A693C
+		// Token: 0x17002576 RID: 9590
+		// (get) Token: 0x0600AA0F RID: 43535 RVA: 0x002C5A7C File Offset: 0x002C3C7C
 		public int DeckLimit
 		{
 			get
@@ -306,7 +314,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A3EF RID: 41967 RVA: 0x002A877C File Offset: 0x002A697C
+		// Token: 0x0600AA10 RID: 43536 RVA: 0x002C5ABC File Offset: 0x002C3CBC
 		public DicIntInt? CardMinRequired(int j)
 		{
 			int num = this.__p.__offset(38);
@@ -317,8 +325,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17002511 RID: 9489
-		// (get) Token: 0x0600A3F0 RID: 41968 RVA: 0x002A87E0 File Offset: 0x002A69E0
+		// Token: 0x17002577 RID: 9591
+		// (get) Token: 0x0600AA11 RID: 43537 RVA: 0x002C5B20 File Offset: 0x002C3D20
 		public int CardMinRequiredLength
 		{
 			get
@@ -332,7 +340,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A3F1 RID: 41969 RVA: 0x002A880C File Offset: 0x002A6A0C
+		// Token: 0x0600AA12 RID: 43538 RVA: 0x002C5B4C File Offset: 0x002C3D4C
 		public DicIntInt? CardMaxLimit(int j)
 		{
 			int num = this.__p.__offset(40);
@@ -343,8 +351,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17002512 RID: 9490
-		// (get) Token: 0x0600A3F2 RID: 41970 RVA: 0x002A8870 File Offset: 0x002A6A70
+		// Token: 0x17002578 RID: 9592
+		// (get) Token: 0x0600AA13 RID: 43539 RVA: 0x002C5BB0 File Offset: 0x002C3DB0
 		public int CardMaxLimitLength
 		{
 			get
@@ -358,7 +366,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A3F3 RID: 41971 RVA: 0x002A889C File Offset: 0x002A6A9C
+		// Token: 0x0600AA14 RID: 43540 RVA: 0x002C5BDC File Offset: 0x002C3DDC
 		public int GroupNameLimit(int j)
 		{
 			int num = this.__p.__offset(42);
@@ -369,8 +377,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17002513 RID: 9491
-		// (get) Token: 0x0600A3F4 RID: 41972 RVA: 0x002A88DC File Offset: 0x002A6ADC
+		// Token: 0x17002579 RID: 9593
+		// (get) Token: 0x0600AA15 RID: 43541 RVA: 0x002C5C1C File Offset: 0x002C3E1C
 		public int GroupNameLimitLength
 		{
 			get
@@ -384,20 +392,22 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A3F5 RID: 41973 RVA: 0x002A8908 File Offset: 0x002A6B08
+		// Token: 0x0600AA16 RID: 43542 RVA: 0x002C5C48 File Offset: 0x002C3E48
+		[NullableContext(0)]
 		public Span<int> GetGroupNameLimitBytes()
 		{
 			return this.__p.__vector_as_span<int>(42, 4);
 		}
 
-		// Token: 0x0600A3F6 RID: 41974 RVA: 0x002A8918 File Offset: 0x002A6B18
+		// Token: 0x0600AA17 RID: 43543 RVA: 0x002C5C58 File Offset: 0x002C3E58
+		[NullableContext(0)]
 		public int[] GetGroupNameLimitArray()
 		{
 			return this.__p.__vector_as_array<int>(42) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17002514 RID: 9492
-		// (get) Token: 0x0600A3F7 RID: 41975 RVA: 0x002A8930 File Offset: 0x002A6B30
+		// Token: 0x1700257A RID: 9594
+		// (get) Token: 0x0600AA18 RID: 43544 RVA: 0x002C5C70 File Offset: 0x002C3E70
 		public int ElementMax
 		{
 			get
@@ -411,8 +421,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002515 RID: 9493
-		// (get) Token: 0x0600A3F8 RID: 41976 RVA: 0x002A8970 File Offset: 0x002A6B70
+		// Token: 0x1700257B RID: 9595
+		// (get) Token: 0x0600AA19 RID: 43545 RVA: 0x002C5CB0 File Offset: 0x002C3EB0
 		public int WeeklyExpLimit
 		{
 			get
@@ -426,7 +436,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A3F9 RID: 41977 RVA: 0x002A89B0 File Offset: 0x002A6BB0
+		// Token: 0x0600AA1A RID: 43546 RVA: 0x002C5CF0 File Offset: 0x002C3EF0
 		public DicIntInt? MaxItemLimit(int j)
 		{
 			int num = this.__p.__offset(48);
@@ -437,8 +447,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17002516 RID: 9494
-		// (get) Token: 0x0600A3FA RID: 41978 RVA: 0x002A8A14 File Offset: 0x002A6C14
+		// Token: 0x1700257C RID: 9596
+		// (get) Token: 0x0600AA1B RID: 43547 RVA: 0x002C5D54 File Offset: 0x002C3F54
 		public int MaxItemLimitLength
 		{
 			get
@@ -452,7 +462,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A3FB RID: 41979 RVA: 0x002A8A40 File Offset: 0x002A6C40
+		// Token: 0x0600AA1C RID: 43548 RVA: 0x002C5D80 File Offset: 0x002C3F80
 		public int QuicklyBuild(int j)
 		{
 			int num = this.__p.__offset(50);
@@ -463,8 +473,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17002517 RID: 9495
-		// (get) Token: 0x0600A3FC RID: 41980 RVA: 0x002A8A80 File Offset: 0x002A6C80
+		// Token: 0x1700257D RID: 9597
+		// (get) Token: 0x0600AA1D RID: 43549 RVA: 0x002C5DC0 File Offset: 0x002C3FC0
 		public int QuicklyBuildLength
 		{
 			get
@@ -478,19 +488,21 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A3FD RID: 41981 RVA: 0x002A8AAC File Offset: 0x002A6CAC
+		// Token: 0x0600AA1E RID: 43550 RVA: 0x002C5DEC File Offset: 0x002C3FEC
+		[NullableContext(0)]
 		public Span<int> GetQuicklyBuildBytes()
 		{
 			return this.__p.__vector_as_span<int>(50, 4);
 		}
 
-		// Token: 0x0600A3FE RID: 41982 RVA: 0x002A8ABC File Offset: 0x002A6CBC
+		// Token: 0x0600AA1F RID: 43551 RVA: 0x002C5DFC File Offset: 0x002C3FFC
+		[NullableContext(0)]
 		public int[] GetQuicklyBuildArray()
 		{
 			return this.__p.__vector_as_array<int>(50) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600A3FF RID: 41983 RVA: 0x002A8AD4 File Offset: 0x002A6CD4
+		// Token: 0x0600AA20 RID: 43552 RVA: 0x002C5E14 File Offset: 0x002C4014
 		public int BadgeGroupEffects(int j)
 		{
 			int num = this.__p.__offset(52);
@@ -501,8 +513,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17002518 RID: 9496
-		// (get) Token: 0x0600A400 RID: 41984 RVA: 0x002A8B14 File Offset: 0x002A6D14
+		// Token: 0x1700257E RID: 9598
+		// (get) Token: 0x0600AA21 RID: 43553 RVA: 0x002C5E54 File Offset: 0x002C4054
 		public int BadgeGroupEffectsLength
 		{
 			get
@@ -516,19 +528,21 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A401 RID: 41985 RVA: 0x002A8B40 File Offset: 0x002A6D40
+		// Token: 0x0600AA22 RID: 43554 RVA: 0x002C5E80 File Offset: 0x002C4080
+		[NullableContext(0)]
 		public Span<int> GetBadgeGroupEffectsBytes()
 		{
 			return this.__p.__vector_as_span<int>(52, 4);
 		}
 
-		// Token: 0x0600A402 RID: 41986 RVA: 0x002A8B50 File Offset: 0x002A6D50
+		// Token: 0x0600AA23 RID: 43555 RVA: 0x002C5E90 File Offset: 0x002C4090
+		[NullableContext(0)]
 		public int[] GetBadgeGroupEffectsArray()
 		{
 			return this.__p.__vector_as_array<int>(52) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600A403 RID: 41987 RVA: 0x002A8B68 File Offset: 0x002A6D68
+		// Token: 0x0600AA24 RID: 43556 RVA: 0x002C5EA8 File Offset: 0x002C40A8
 		public DicIntInt? FuncOpenChallenge(int j)
 		{
 			int num = this.__p.__offset(54);
@@ -539,8 +553,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17002519 RID: 9497
-		// (get) Token: 0x0600A404 RID: 41988 RVA: 0x002A8BCC File Offset: 0x002A6DCC
+		// Token: 0x1700257F RID: 9599
+		// (get) Token: 0x0600AA25 RID: 43557 RVA: 0x002C5F0C File Offset: 0x002C410C
 		public int FuncOpenChallengeLength
 		{
 			get
@@ -554,7 +568,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A405 RID: 41989 RVA: 0x002A8BF8 File Offset: 0x002A6DF8
+		// Token: 0x0600AA26 RID: 43558 RVA: 0x002C5F38 File Offset: 0x002C4138
 		public int MainRoleList(int j)
 		{
 			int num = this.__p.__offset(56);
@@ -565,8 +579,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700251A RID: 9498
-		// (get) Token: 0x0600A406 RID: 41990 RVA: 0x002A8C38 File Offset: 0x002A6E38
+		// Token: 0x17002580 RID: 9600
+		// (get) Token: 0x0600AA27 RID: 43559 RVA: 0x002C5F78 File Offset: 0x002C4178
 		public int MainRoleListLength
 		{
 			get
@@ -580,19 +594,21 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A407 RID: 41991 RVA: 0x002A8C64 File Offset: 0x002A6E64
+		// Token: 0x0600AA28 RID: 43560 RVA: 0x002C5FA4 File Offset: 0x002C41A4
+		[NullableContext(0)]
 		public Span<int> GetMainRoleListBytes()
 		{
 			return this.__p.__vector_as_span<int>(56, 4);
 		}
 
-		// Token: 0x0600A408 RID: 41992 RVA: 0x002A8C74 File Offset: 0x002A6E74
+		// Token: 0x0600AA29 RID: 43561 RVA: 0x002C5FB4 File Offset: 0x002C41B4
+		[NullableContext(0)]
 		public int[] GetMainRoleListArray()
 		{
 			return this.__p.__vector_as_array<int>(56) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600A409 RID: 41993 RVA: 0x002A8C8C File Offset: 0x002A6E8C
+		// Token: 0x0600AA2A RID: 43562 RVA: 0x002C5FCC File Offset: 0x002C41CC
 		public DicIntInt? MainRoleSexChange(int j)
 		{
 			int num = this.__p.__offset(58);
@@ -603,8 +619,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700251B RID: 9499
-		// (get) Token: 0x0600A40A RID: 41994 RVA: 0x002A8CF0 File Offset: 0x002A6EF0
+		// Token: 0x17002581 RID: 9601
+		// (get) Token: 0x0600AA2B RID: 43563 RVA: 0x002C6030 File Offset: 0x002C4230
 		public int MainRoleSexChangeLength
 		{
 			get
@@ -618,8 +634,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700251C RID: 9500
-		// (get) Token: 0x0600A40B RID: 41995 RVA: 0x002A8D1C File Offset: 0x002A6F1C
+		// Token: 0x17002582 RID: 9602
+		// (get) Token: 0x0600AA2C RID: 43564 RVA: 0x002C605C File Offset: 0x002C425C
 		public int CopyUidPlayer
 		{
 			get
@@ -633,8 +649,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700251D RID: 9501
-		// (get) Token: 0x0600A40C RID: 41996 RVA: 0x002A8D5C File Offset: 0x002A6F5C
+		// Token: 0x17002583 RID: 9603
+		// (get) Token: 0x0600AA2D RID: 43565 RVA: 0x002C609C File Offset: 0x002C429C
 		public int CopyUidNpc
 		{
 			get
@@ -648,8 +664,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700251E RID: 9502
-		// (get) Token: 0x0600A40D RID: 41997 RVA: 0x002A8D9C File Offset: 0x002A6F9C
+		// Token: 0x17002584 RID: 9604
+		// (get) Token: 0x0600AA2E RID: 43566 RVA: 0x002C60DC File Offset: 0x002C42DC
 		public int CopyUidDifference
 		{
 			get
@@ -663,8 +679,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700251F RID: 9503
-		// (get) Token: 0x0600A40E RID: 41998 RVA: 0x002A8DDC File Offset: 0x002A6FDC
+		// Token: 0x17002585 RID: 9605
+		// (get) Token: 0x0600AA2F RID: 43567 RVA: 0x002C611C File Offset: 0x002C431C
 		public int SlotLongPressTime
 		{
 			get
@@ -678,8 +694,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002520 RID: 9504
-		// (get) Token: 0x0600A40F RID: 41999 RVA: 0x002A8E20 File Offset: 0x002A7020
+		// Token: 0x17002586 RID: 9606
+		// (get) Token: 0x0600AA30 RID: 43568 RVA: 0x002C6160 File Offset: 0x002C4360
 		public int SlotLongPressStartTime
 		{
 			get
@@ -693,8 +709,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002521 RID: 9505
-		// (get) Token: 0x0600A410 RID: 42000 RVA: 0x002A8E64 File Offset: 0x002A7064
+		// Token: 0x17002587 RID: 9607
+		// (get) Token: 0x0600AA31 RID: 43569 RVA: 0x002C61A4 File Offset: 0x002C43A4
 		public int SlotLongPressEndTime
 		{
 			get
@@ -708,8 +724,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002522 RID: 9506
-		// (get) Token: 0x0600A411 RID: 42001 RVA: 0x002A8EA8 File Offset: 0x002A70A8
+		// Token: 0x17002588 RID: 9608
+		// (get) Token: 0x0600AA32 RID: 43570 RVA: 0x002C61E8 File Offset: 0x002C43E8
 		public int RewardItemId
 		{
 			get
@@ -723,8 +739,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002523 RID: 9507
-		// (get) Token: 0x0600A412 RID: 42002 RVA: 0x002A8EE8 File Offset: 0x002A70E8
+		// Token: 0x17002589 RID: 9609
+		// (get) Token: 0x0600AA33 RID: 43571 RVA: 0x002C6228 File Offset: 0x002C4428
 		public int RecommendQuestId
 		{
 			get
@@ -738,10 +754,12 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002524 RID: 9508
-		// (get) Token: 0x0600A413 RID: 42003 RVA: 0x002A8F28 File Offset: 0x002A7128
+		// Token: 0x1700258A RID: 9610
+		// (get) Token: 0x0600AA34 RID: 43572 RVA: 0x002C6268 File Offset: 0x002C4468
+		[Nullable(0)]
 		public string RecommendQuestTips
 		{
+			[NullableContext(0)]
 			get
 			{
 				int num = this.__p.__offset(76);
@@ -753,176 +771,147 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A414 RID: 42004 RVA: 0x002A8F60 File Offset: 0x002A7160
+		// Token: 0x0600AA35 RID: 43573 RVA: 0x002C62A0 File Offset: 0x002C44A0
+		[NullableContext(0)]
 		public Span<byte> GetRecommendQuestTipsBytes()
 		{
 			return this.__p.__vector_as_span<byte>(76, 1);
 		}
 
-		// Token: 0x0600A415 RID: 42005 RVA: 0x002A8F70 File Offset: 0x002A7170
+		// Token: 0x0600AA36 RID: 43574 RVA: 0x002C62B0 File Offset: 0x002C44B0
+		[NullableContext(0)]
 		public byte[] GetRecommendQuestTipsArray()
 		{
 			return this.__p.__vector_as_array<byte>(76) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0600A416 RID: 42006 RVA: 0x002A8F88 File Offset: 0x002A7188
-		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用BadgeGroupEffectsIter()或GetBadgeGroupEffectsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] BadgeGroupEffects()
+		// Token: 0x0600AA37 RID: 43575 RVA: 0x002C62C8 File Offset: 0x002C44C8
+		public int[] BadgeGroupEffects()
 		{
-			PhantomBattleActivity phantomBattleActivity = this;
-			return phantomBattleActivity.GetBadgeGroupEffectsArray() ?? Array.Empty<int>();
+			return this.GetBadgeGroupEffectsArray();
 		}
 
-		// Token: 0x0600A417 RID: 42007 RVA: 0x002A8FAC File Offset: 0x002A71AC
-		[NullableContext(1)]
-		public readonly IEnumerable<int> BadgeGroupEffectsIter()
+		// Token: 0x0600AA38 RID: 43576 RVA: 0x002C62D0 File Offset: 0x002C44D0
+		public IEnumerable<int> BadgeGroupEffectsIter()
 		{
 			PhantomBattleActivity.<BadgeGroupEffectsIter>d__102 <BadgeGroupEffectsIter>d__ = new PhantomBattleActivity.<BadgeGroupEffectsIter>d__102(-2);
 			<BadgeGroupEffectsIter>d__.<>3__<>4__this = this;
 			return <BadgeGroupEffectsIter>d__;
 		}
 
-		// Token: 0x0600A418 RID: 42008 RVA: 0x002A8FC4 File Offset: 0x002A71C4
-		[NullableContext(1)]
-		[Obsolete("已废弃，请使用CardMaxLimitFrozenDict()缓存字典，遍历请使用CardMaxLimitIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> CardMaxLimit()
+		// Token: 0x0600AA39 RID: 43577 RVA: 0x002C62E8 File Offset: 0x002C44E8
+		public Dictionary<int, int> CardMaxLimit()
 		{
 			return this.CardMaxLimitIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x0600A419 RID: 42009 RVA: 0x002A901A File Offset: 0x002A721A
-		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> CardMaxLimitIter()
+		// Token: 0x0600AA3A RID: 43578 RVA: 0x002C633E File Offset: 0x002C453E
+		public IEnumerable<DicIntInt> CardMaxLimitIter()
 		{
 			PhantomBattleActivity.<CardMaxLimitIter>d__104 <CardMaxLimitIter>d__ = new PhantomBattleActivity.<CardMaxLimitIter>d__104(-2);
 			<CardMaxLimitIter>d__.<>3__<>4__this = this;
 			return <CardMaxLimitIter>d__;
 		}
 
-		// Token: 0x0600A41A RID: 42010 RVA: 0x002A9030 File Offset: 0x002A7230
-		[NullableContext(1)]
-		[Obsolete("已废弃，请使用CardMinRequiredFrozenDict()缓存字典，遍历请使用CardMinRequiredIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> CardMinRequired()
+		// Token: 0x0600AA3B RID: 43579 RVA: 0x002C6354 File Offset: 0x002C4554
+		public Dictionary<int, int> CardMinRequired()
 		{
 			return this.CardMinRequiredIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x0600A41B RID: 42011 RVA: 0x002A9086 File Offset: 0x002A7286
-		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> CardMinRequiredIter()
+		// Token: 0x0600AA3C RID: 43580 RVA: 0x002C63AA File Offset: 0x002C45AA
+		public IEnumerable<DicIntInt> CardMinRequiredIter()
 		{
 			PhantomBattleActivity.<CardMinRequiredIter>d__106 <CardMinRequiredIter>d__ = new PhantomBattleActivity.<CardMinRequiredIter>d__106(-2);
 			<CardMinRequiredIter>d__.<>3__<>4__this = this;
 			return <CardMinRequiredIter>d__;
 		}
 
-		// Token: 0x0600A41C RID: 42012 RVA: 0x002A909C File Offset: 0x002A729C
-		[NullableContext(1)]
-		[Obsolete("已废弃，请使用FuncOpenChallengeFrozenDict()缓存字典，遍历请使用FuncOpenChallengeIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> FuncOpenChallenge()
+		// Token: 0x0600AA3D RID: 43581 RVA: 0x002C63C0 File Offset: 0x002C45C0
+		public Dictionary<int, int> FuncOpenChallenge()
 		{
 			return this.FuncOpenChallengeIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x0600A41D RID: 42013 RVA: 0x002A90F2 File Offset: 0x002A72F2
-		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> FuncOpenChallengeIter()
+		// Token: 0x0600AA3E RID: 43582 RVA: 0x002C6416 File Offset: 0x002C4616
+		public IEnumerable<DicIntInt> FuncOpenChallengeIter()
 		{
 			PhantomBattleActivity.<FuncOpenChallengeIter>d__108 <FuncOpenChallengeIter>d__ = new PhantomBattleActivity.<FuncOpenChallengeIter>d__108(-2);
 			<FuncOpenChallengeIter>d__.<>3__<>4__this = this;
 			return <FuncOpenChallengeIter>d__;
 		}
 
-		// Token: 0x0600A41E RID: 42014 RVA: 0x002A9108 File Offset: 0x002A7308
-		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用GroupNameLimitIter()或GetGroupNameLimitBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] GroupNameLimit()
+		// Token: 0x0600AA3F RID: 43583 RVA: 0x002C642B File Offset: 0x002C462B
+		public int[] GroupNameLimit()
 		{
-			PhantomBattleActivity phantomBattleActivity = this;
-			return phantomBattleActivity.GetGroupNameLimitArray() ?? Array.Empty<int>();
+			return this.GetGroupNameLimitArray();
 		}
 
-		// Token: 0x0600A41F RID: 42015 RVA: 0x002A912C File Offset: 0x002A732C
-		[NullableContext(1)]
-		public readonly IEnumerable<int> GroupNameLimitIter()
+		// Token: 0x0600AA40 RID: 43584 RVA: 0x002C6433 File Offset: 0x002C4633
+		public IEnumerable<int> GroupNameLimitIter()
 		{
 			PhantomBattleActivity.<GroupNameLimitIter>d__110 <GroupNameLimitIter>d__ = new PhantomBattleActivity.<GroupNameLimitIter>d__110(-2);
 			<GroupNameLimitIter>d__.<>3__<>4__this = this;
 			return <GroupNameLimitIter>d__;
 		}
 
-		// Token: 0x0600A420 RID: 42016 RVA: 0x002A9144 File Offset: 0x002A7344
-		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用MainRoleListIter()或GetMainRoleListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] MainRoleList()
+		// Token: 0x0600AA41 RID: 43585 RVA: 0x002C6448 File Offset: 0x002C4648
+		public int[] MainRoleList()
 		{
-			PhantomBattleActivity phantomBattleActivity = this;
-			return phantomBattleActivity.GetMainRoleListArray() ?? Array.Empty<int>();
+			return this.GetMainRoleListArray();
 		}
 
-		// Token: 0x0600A421 RID: 42017 RVA: 0x002A9168 File Offset: 0x002A7368
-		[NullableContext(1)]
-		public readonly IEnumerable<int> MainRoleListIter()
+		// Token: 0x0600AA42 RID: 43586 RVA: 0x002C6450 File Offset: 0x002C4650
+		public IEnumerable<int> MainRoleListIter()
 		{
 			PhantomBattleActivity.<MainRoleListIter>d__112 <MainRoleListIter>d__ = new PhantomBattleActivity.<MainRoleListIter>d__112(-2);
 			<MainRoleListIter>d__.<>3__<>4__this = this;
 			return <MainRoleListIter>d__;
 		}
 
-		// Token: 0x0600A422 RID: 42018 RVA: 0x002A9180 File Offset: 0x002A7380
-		[NullableContext(1)]
-		[Obsolete("已废弃，请使用MainRoleSexChangeFrozenDict()缓存字典，遍历请使用MainRoleSexChangeIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> MainRoleSexChange()
+		// Token: 0x0600AA43 RID: 43587 RVA: 0x002C6468 File Offset: 0x002C4668
+		public Dictionary<int, int> MainRoleSexChange()
 		{
 			return this.MainRoleSexChangeIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x0600A423 RID: 42019 RVA: 0x002A91D6 File Offset: 0x002A73D6
-		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> MainRoleSexChangeIter()
+		// Token: 0x0600AA44 RID: 43588 RVA: 0x002C64BE File Offset: 0x002C46BE
+		public IEnumerable<DicIntInt> MainRoleSexChangeIter()
 		{
 			PhantomBattleActivity.<MainRoleSexChangeIter>d__114 <MainRoleSexChangeIter>d__ = new PhantomBattleActivity.<MainRoleSexChangeIter>d__114(-2);
 			<MainRoleSexChangeIter>d__.<>3__<>4__this = this;
 			return <MainRoleSexChangeIter>d__;
 		}
 
-		// Token: 0x0600A424 RID: 42020 RVA: 0x002A91EC File Offset: 0x002A73EC
-		[NullableContext(1)]
-		[Obsolete("已废弃，请使用MaxItemLimitFrozenDict()缓存字典，遍历请使用MaxItemLimitIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> MaxItemLimit()
+		// Token: 0x0600AA45 RID: 43589 RVA: 0x002C64D4 File Offset: 0x002C46D4
+		public Dictionary<int, int> MaxItemLimit()
 		{
 			return this.MaxItemLimitIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x0600A425 RID: 42021 RVA: 0x002A9242 File Offset: 0x002A7442
-		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> MaxItemLimitIter()
+		// Token: 0x0600AA46 RID: 43590 RVA: 0x002C652A File Offset: 0x002C472A
+		public IEnumerable<DicIntInt> MaxItemLimitIter()
 		{
 			PhantomBattleActivity.<MaxItemLimitIter>d__116 <MaxItemLimitIter>d__ = new PhantomBattleActivity.<MaxItemLimitIter>d__116(-2);
 			<MaxItemLimitIter>d__.<>3__<>4__this = this;
 			return <MaxItemLimitIter>d__;
 		}
 
-		// Token: 0x0600A426 RID: 42022 RVA: 0x002A9258 File Offset: 0x002A7458
-		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用QuicklyBuildIter()或GetQuicklyBuildBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] QuicklyBuild()
+		// Token: 0x0600AA47 RID: 43591 RVA: 0x002C653F File Offset: 0x002C473F
+		public int[] QuicklyBuild()
 		{
-			PhantomBattleActivity phantomBattleActivity = this;
-			return phantomBattleActivity.GetQuicklyBuildArray() ?? Array.Empty<int>();
+			return this.GetQuicklyBuildArray();
 		}
 
-		// Token: 0x0600A427 RID: 42023 RVA: 0x002A927C File Offset: 0x002A747C
-		[NullableContext(1)]
-		public readonly IEnumerable<int> QuicklyBuildIter()
+		// Token: 0x0600AA48 RID: 43592 RVA: 0x002C6547 File Offset: 0x002C4747
+		public IEnumerable<int> QuicklyBuildIter()
 		{
 			PhantomBattleActivity.<QuicklyBuildIter>d__118 <QuicklyBuildIter>d__ = new PhantomBattleActivity.<QuicklyBuildIter>d__118(-2);
 			<QuicklyBuildIter>d__.<>3__<>4__this = this;
 			return <QuicklyBuildIter>d__;
 		}
 
-		// Token: 0x0600A428 RID: 42024 RVA: 0x002A9294 File Offset: 0x002A7494
+		// Token: 0x0600AA49 RID: 43593 RVA: 0x002C655C File Offset: 0x002C475C
 		public int? GetCardMaxLimit(int key)
 		{
 			this.EnsureCardMaxLimitCacheIfNeeded();
@@ -934,7 +923,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x0600A429 RID: 42025 RVA: 0x002A92C8 File Offset: 0x002A74C8
+		// Token: 0x0600AA4A RID: 43594 RVA: 0x002C6590 File Offset: 0x002C4790
 		public int? GetCardMinRequired(int key)
 		{
 			this.EnsureCardMinRequiredCacheIfNeeded();
@@ -946,7 +935,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x0600A42A RID: 42026 RVA: 0x002A92FC File Offset: 0x002A74FC
+		// Token: 0x0600AA4B RID: 43595 RVA: 0x002C65C4 File Offset: 0x002C47C4
 		public int? GetFuncOpenChallenge(int key)
 		{
 			this.EnsureFuncOpenChallengeCacheIfNeeded();
@@ -958,7 +947,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x0600A42B RID: 42027 RVA: 0x002A9330 File Offset: 0x002A7530
+		// Token: 0x0600AA4C RID: 43596 RVA: 0x002C65F8 File Offset: 0x002C47F8
 		public int? GetMainRoleSexChange(int key)
 		{
 			this.EnsureMainRoleSexChangeCacheIfNeeded();
@@ -970,7 +959,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x0600A42C RID: 42028 RVA: 0x002A9364 File Offset: 0x002A7564
+		// Token: 0x0600AA4D RID: 43597 RVA: 0x002C662C File Offset: 0x002C482C
 		public int? GetMaxItemLimit(int key)
 		{
 			this.EnsureMaxItemLimitCacheIfNeeded();
@@ -982,7 +971,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x0600A42D RID: 42029 RVA: 0x002A9398 File Offset: 0x002A7598
+		// Token: 0x0600AA4E RID: 43598 RVA: 0x002C6660 File Offset: 0x002C4860
 		private void EnsureCardMaxLimitCacheIfNeeded()
 		{
 			if (this.CardMaxLimitCache != null)
@@ -992,7 +981,7 @@ namespace Aki.Config
 			this.CardMaxLimitCache = this.CardMaxLimitIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x0600A42E RID: 42030 RVA: 0x002A9400 File Offset: 0x002A7600
+		// Token: 0x0600AA4F RID: 43599 RVA: 0x002C66C8 File Offset: 0x002C48C8
 		private void EnsureCardMinRequiredCacheIfNeeded()
 		{
 			if (this.CardMinRequiredCache != null)
@@ -1002,7 +991,7 @@ namespace Aki.Config
 			this.CardMinRequiredCache = this.CardMinRequiredIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x0600A42F RID: 42031 RVA: 0x002A9468 File Offset: 0x002A7668
+		// Token: 0x0600AA50 RID: 43600 RVA: 0x002C6730 File Offset: 0x002C4930
 		private void EnsureFuncOpenChallengeCacheIfNeeded()
 		{
 			if (this.FuncOpenChallengeCache != null)
@@ -1012,7 +1001,7 @@ namespace Aki.Config
 			this.FuncOpenChallengeCache = this.FuncOpenChallengeIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x0600A430 RID: 42032 RVA: 0x002A94D0 File Offset: 0x002A76D0
+		// Token: 0x0600AA51 RID: 43601 RVA: 0x002C6798 File Offset: 0x002C4998
 		private void EnsureMainRoleSexChangeCacheIfNeeded()
 		{
 			if (this.MainRoleSexChangeCache != null)
@@ -1022,7 +1011,7 @@ namespace Aki.Config
 			this.MainRoleSexChangeCache = this.MainRoleSexChangeIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x0600A431 RID: 42033 RVA: 0x002A9538 File Offset: 0x002A7738
+		// Token: 0x0600AA52 RID: 43602 RVA: 0x002C6800 File Offset: 0x002C4A00
 		private void EnsureMaxItemLimitCacheIfNeeded()
 		{
 			if (this.MaxItemLimitCache != null)
@@ -1032,66 +1021,61 @@ namespace Aki.Config
 			this.MaxItemLimitCache = this.MaxItemLimitIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x0600A432 RID: 42034 RVA: 0x002A959E File Offset: 0x002A779E
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetCardMaxLimitFrozenDict(int key)
+		// Token: 0x0600AA53 RID: 43603 RVA: 0x002C6866 File Offset: 0x002C4A66
+		public FrozenDictionary<int, int> GetCardMaxLimitFrozenDict()
 		{
 			this.EnsureCardMaxLimitCacheIfNeeded();
 			return this.CardMaxLimitCache;
 		}
 
-		// Token: 0x0600A433 RID: 42035 RVA: 0x002A95AC File Offset: 0x002A77AC
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetCardMinRequiredFrozenDict(int key)
+		// Token: 0x0600AA54 RID: 43604 RVA: 0x002C6874 File Offset: 0x002C4A74
+		public FrozenDictionary<int, int> GetCardMinRequiredFrozenDict()
 		{
 			this.EnsureCardMinRequiredCacheIfNeeded();
 			return this.CardMinRequiredCache;
 		}
 
-		// Token: 0x0600A434 RID: 42036 RVA: 0x002A95BA File Offset: 0x002A77BA
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetFuncOpenChallengeFrozenDict(int key)
+		// Token: 0x0600AA55 RID: 43605 RVA: 0x002C6882 File Offset: 0x002C4A82
+		public FrozenDictionary<int, int> GetFuncOpenChallengeFrozenDict()
 		{
 			this.EnsureFuncOpenChallengeCacheIfNeeded();
 			return this.FuncOpenChallengeCache;
 		}
 
-		// Token: 0x0600A435 RID: 42037 RVA: 0x002A95C8 File Offset: 0x002A77C8
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetMainRoleSexChangeFrozenDict(int key)
+		// Token: 0x0600AA56 RID: 43606 RVA: 0x002C6890 File Offset: 0x002C4A90
+		public FrozenDictionary<int, int> GetMainRoleSexChangeFrozenDict()
 		{
 			this.EnsureMainRoleSexChangeCacheIfNeeded();
 			return this.MainRoleSexChangeCache;
 		}
 
-		// Token: 0x0600A436 RID: 42038 RVA: 0x002A95D6 File Offset: 0x002A77D6
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetMaxItemLimitFrozenDict(int key)
+		// Token: 0x0600AA57 RID: 43607 RVA: 0x002C689E File Offset: 0x002C4A9E
+		public FrozenDictionary<int, int> GetMaxItemLimitFrozenDict()
 		{
 			this.EnsureMaxItemLimitCacheIfNeeded();
 			return this.MaxItemLimitCache;
 		}
 
-		// Token: 0x04004F71 RID: 20337
+		// Token: 0x04005556 RID: 21846
 		private Table __p;
 
-		// Token: 0x04004F72 RID: 20338
+		// Token: 0x04005557 RID: 21847
 		[Nullable(2)]
 		private FrozenDictionary<int, int> CardMaxLimitCache;
 
-		// Token: 0x04004F73 RID: 20339
+		// Token: 0x04005558 RID: 21848
 		[Nullable(2)]
 		private FrozenDictionary<int, int> CardMinRequiredCache;
 
-		// Token: 0x04004F74 RID: 20340
+		// Token: 0x04005559 RID: 21849
 		[Nullable(2)]
 		private FrozenDictionary<int, int> FuncOpenChallengeCache;
 
-		// Token: 0x04004F75 RID: 20341
+		// Token: 0x0400555A RID: 21850
 		[Nullable(2)]
 		private FrozenDictionary<int, int> MainRoleSexChangeCache;
 
-		// Token: 0x04004F76 RID: 20342
+		// Token: 0x0400555B RID: 21851
 		[Nullable(2)]
 		private FrozenDictionary<int, int> MaxItemLimitCache;
 	}

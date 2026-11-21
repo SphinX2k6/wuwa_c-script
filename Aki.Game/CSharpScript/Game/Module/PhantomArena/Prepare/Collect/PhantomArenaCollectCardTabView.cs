@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 {
-	// Token: 0x020051B8 RID: 20920
+	// Token: 0x02004188 RID: 16776
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaCollectCardTabView : UiTabViewBase
 	{
-		// Token: 0x06035906 RID: 219398 RVA: 0x00CB0340 File Offset: 0x00CAE540
+		// Token: 0x0602A801 RID: 174081 RVA: 0x00BFD97C File Offset: 0x00BFBB7C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			};
 		}
 
-		// Token: 0x06035907 RID: 219399 RVA: 0x00CB0408 File Offset: 0x00CAE608
+		// Token: 0x0602A802 RID: 174082 RVA: 0x00BFDA44 File Offset: 0x00BFBC44
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PhantomArenaCollectCardTabView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035908 RID: 219400 RVA: 0x00CB044C File Offset: 0x00CAE64C
+		// Token: 0x0602A803 RID: 174083 RVA: 0x00BFDA88 File Offset: 0x00BFBC88
 		protected override void OnStart()
 		{
 			this.CardScrollView = new LoopScrollView<CollectGridCardItem, CollectGridCardData>(base.GetLoopScrollViewComponent(4), base.GetItem(5).GetOwner() as AUIBaseActor, new Func<CollectGridCardItem>(this.CreateCardItem), false);
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			this.InturnAniComponent = (base.GetLoopScrollViewComponent(4).GetContent().GetComponentByClass(UUIInturnAnimController.StaticClass()) as UUIInturnAnimController);
 		}
 
-		// Token: 0x06035909 RID: 219401 RVA: 0x00CB04F1 File Offset: 0x00CAE6F1
+		// Token: 0x0602A804 RID: 174084 RVA: 0x00BFDB2D File Offset: 0x00BFBD2D
 		protected override void OnBeforeShow()
 		{
 			this.RefreshCard(true);
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			this.RefreshReward();
 		}
 
-		// Token: 0x0603590A RID: 219402 RVA: 0x00CB0508 File Offset: 0x00CAE708
+		// Token: 0x0602A805 RID: 174085 RVA: 0x00BFDB44 File Offset: 0x00BFBD44
 		protected override void OnAfterShow()
 		{
 			this.UiViewSequence.PlaySequence("Start", false, null);
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			inturnAniComponent.Play("", -1, false);
 		}
 
-		// Token: 0x0603590B RID: 219403 RVA: 0x00CB0548 File Offset: 0x00CAE748
+		// Token: 0x0602A806 RID: 174086 RVA: 0x00BFDB84 File Offset: 0x00BFBD84
 		protected override void AddEventListener()
 		{
 			EventSystem.Instance.Add<int>(EEventName.OnPhantomArenaCardRewardUpdate, new Action<int>(this.OnCardRewardUpdate));
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			EventSystem.Instance.Add(EEventName.OnPhantomArenaCardOutlookUnlock, new Action<int>(this.OnCardInfoUpdate));
 		}
 
-		// Token: 0x0603590C RID: 219404 RVA: 0x00CB05AC File Offset: 0x00CAE7AC
+		// Token: 0x0602A807 RID: 174087 RVA: 0x00BFDBE8 File Offset: 0x00BFBDE8
 		protected override void RemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnPhantomArenaCardRewardUpdate, new Action<int>(this.OnCardRewardUpdate));
@@ -88,14 +88,14 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			EventSystem.Instance.Remove(EEventName.OnPhantomArenaCardOutlookUnlock, new Action<int>(this.OnCardInfoUpdate));
 		}
 
-		// Token: 0x0603590D RID: 219405 RVA: 0x00CB0610 File Offset: 0x00CAE810
+		// Token: 0x0602A808 RID: 174088 RVA: 0x00BFDC4C File Offset: 0x00BFBE4C
 		private void RefreshCard(bool keepContentPosition)
 		{
 			List<CollectGridCardData> collectCardDataList = PhantomArenaModel.Instance.GetCollectCardDataList(this.ActivityId, this.SelectedElementId, false);
 			this.CardScrollView.RefreshByData(collectCardDataList, keepContentPosition, null, false);
 		}
 
-		// Token: 0x0603590E RID: 219406 RVA: 0x00CB0644 File Offset: 0x00CAE844
+		// Token: 0x0602A809 RID: 174089 RVA: 0x00BFDC80 File Offset: 0x00BFBE80
 		private void RefreshElement()
 		{
 			List<CardElementCount> collectCardElementDataList = PhantomArenaModel.Instance.GetCollectCardElementDataList(this.ActivityId);
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			text2.SetUIActive(false);
 		}
 
-		// Token: 0x0603590F RID: 219407 RVA: 0x00CB0744 File Offset: 0x00CAE944
+		// Token: 0x0602A80A RID: 174090 RVA: 0x00BFDD80 File Offset: 0x00BFBF80
 		private void RefreshReward()
 		{
 			List<int> cardRewardConfigList = PhantomArenaModel.Instance.GetCardRewardConfigList(this.ActivityId);
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			base.GetSprite(1).SetFillAmount(cardRewardProgress);
 		}
 
-		// Token: 0x06035910 RID: 219408 RVA: 0x00CB07B4 File Offset: 0x00CAE9B4
+		// Token: 0x0602A80B RID: 174091 RVA: 0x00BFDDF0 File Offset: 0x00BFBFF0
 		private void RequestReward()
 		{
 			List<int> cardRewardConfigList = PhantomArenaModel.Instance.GetCardRewardConfigList(this.ActivityId);
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			PhantomArenaController.Instance.CardRewardRequest(list.ToArray(), this.ActivityId);
 		}
 
-		// Token: 0x06035911 RID: 219409 RVA: 0x00CB0848 File Offset: 0x00CAEA48
+		// Token: 0x0602A80C RID: 174092 RVA: 0x00BFDE84 File Offset: 0x00BFC084
 		private void OnClickReward(int rewardId, UUIItem root)
 		{
 			if (PhantomArenaModel.Instance.GetCardRewardStateById(rewardId) == ECollectRewardState.Finish)
@@ -184,7 +184,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			this.RewardPopup.Refresh(data);
 		}
 
-		// Token: 0x06035912 RID: 219410 RVA: 0x00CB08B8 File Offset: 0x00CAEAB8
+		// Token: 0x0602A80D RID: 174093 RVA: 0x00BFDEF4 File Offset: 0x00BFC0F4
 		private void OnClickCard(int cardId)
 		{
 			CollectCardDetailViewOpenParam param = new CollectCardDetailViewOpenParam
@@ -196,13 +196,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			UiManager.Instance.OpenView(EUiViewName.CollectCardDetailView, param, null);
 		}
 
-		// Token: 0x06035913 RID: 219411 RVA: 0x00CB0901 File Offset: 0x00CAEB01
+		// Token: 0x0602A80E RID: 174094 RVA: 0x00BFDF3D File Offset: 0x00BFC13D
 		private void OnCardRewardUpdate(int activityId)
 		{
 			this.RefreshReward();
 		}
 
-		// Token: 0x06035914 RID: 219412 RVA: 0x00CB0909 File Offset: 0x00CAEB09
+		// Token: 0x0602A80F RID: 174095 RVA: 0x00BFDF45 File Offset: 0x00BFC145
 		private void OnCardInfoUpdate(int cardId)
 		{
 			this.RefreshCard(true);
@@ -210,12 +210,12 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			this.RefreshReward();
 		}
 
-		// Token: 0x06035915 RID: 219413 RVA: 0x00CB091E File Offset: 0x00CAEB1E
+		// Token: 0x0602A810 RID: 174096 RVA: 0x00BFDF5A File Offset: 0x00BFC15A
 		private void OnCloseDetailView(int cardId)
 		{
 		}
 
-		// Token: 0x06035916 RID: 219414 RVA: 0x00CB0920 File Offset: 0x00CAEB20
+		// Token: 0x0602A811 RID: 174097 RVA: 0x00BFDF5C File Offset: 0x00BFC15C
 		private CollectGridCardItem CreateCardItem()
 		{
 			return new CollectGridCardItem
@@ -224,7 +224,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			};
 		}
 
-		// Token: 0x06035917 RID: 219415 RVA: 0x00CB0939 File Offset: 0x00CAEB39
+		// Token: 0x0602A812 RID: 174098 RVA: 0x00BFDF75 File Offset: 0x00BFC175
 		private CollectRewardItem CreateRewardItem()
 		{
 			return new CollectRewardItem
@@ -234,7 +234,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			};
 		}
 
-		// Token: 0x06035918 RID: 219416 RVA: 0x00CB0959 File Offset: 0x00CAEB59
+		// Token: 0x0602A813 RID: 174099 RVA: 0x00BFDF95 File Offset: 0x00BFC195
 		private CardElementCountItem CreateElementItem()
 		{
 			return new CardElementCountItem
@@ -243,66 +243,66 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			};
 		}
 
-		// Token: 0x06035919 RID: 219417 RVA: 0x00CB0972 File Offset: 0x00CAEB72
+		// Token: 0x0602A814 RID: 174100 RVA: 0x00BFDFAE File Offset: 0x00BFC1AE
 		private void OnSelectElement(int elementId)
 		{
 			this.SelectedElementId = elementId;
 			this.RefreshCard(false);
 		}
 
-		// Token: 0x0603591A RID: 219418 RVA: 0x00CB0982 File Offset: 0x00CAEB82
+		// Token: 0x0602A815 RID: 174101 RVA: 0x00BFDFBE File Offset: 0x00BFC1BE
 		protected override void OnBeforeHide()
 		{
 			this.RewardPopup.SetActive(false);
 		}
 
-		// Token: 0x0401C6F4 RID: 116468
+		// Token: 0x04017129 RID: 94505
 		protected int ActivityId;
 
-		// Token: 0x0401C6F5 RID: 116469
+		// Token: 0x0401712A RID: 94506
 		protected LoopScrollView<CollectGridCardItem, CollectGridCardData> CardScrollView;
 
-		// Token: 0x0401C6F6 RID: 116470
+		// Token: 0x0401712B RID: 94507
 		private GenericLayout<CollectRewardItem, int> RewardLayout;
 
-		// Token: 0x0401C6F7 RID: 116471
+		// Token: 0x0401712C RID: 94508
 		private GenericLayout<CardElementCountItem, CardElementCount> ElementLayout;
 
-		// Token: 0x0401C6F8 RID: 116472
+		// Token: 0x0401712D RID: 94509
 		private CollectRewardPopup RewardPopup;
 
-		// Token: 0x0401C6F9 RID: 116473
+		// Token: 0x0401712E RID: 94510
 		private UUIInturnAnimController InturnAniComponent;
 
-		// Token: 0x0401C6FA RID: 116474
+		// Token: 0x0401712F RID: 94511
 		private int SelectedElementId = -1;
 
-		// Token: 0x0200B342 RID: 45890
+		// Token: 0x02009D7A RID: 40314
 		[NullableContext(0)]
 		private static class EComponents
 		{
-			// Token: 0x04036547 RID: 222535
+			// Token: 0x04030F9A RID: 200602
 			public const int TextArtNum = 0;
 
-			// Token: 0x04036548 RID: 222536
+			// Token: 0x04030F9B RID: 200603
 			public const int SpriteBar = 1;
 
-			// Token: 0x04036549 RID: 222537
+			// Token: 0x04030F9C RID: 200604
 			public const int LayoutReward = 2;
 
-			// Token: 0x0403654A RID: 222538
+			// Token: 0x04030F9D RID: 200605
 			public const int PanelReward = 3;
 
-			// Token: 0x0403654B RID: 222539
+			// Token: 0x04030F9E RID: 200606
 			public const int LoopCard = 4;
 
-			// Token: 0x0403654C RID: 222540
+			// Token: 0x04030F9F RID: 200607
 			public const int ItemCard = 5;
 
-			// Token: 0x0403654D RID: 222541
+			// Token: 0x04030FA0 RID: 200608
 			public const int LayoutElement = 6;
 
-			// Token: 0x0403654E RID: 222542
+			// Token: 0x04030FA1 RID: 200609
 			public const int TextPhysical = 7;
 		}
 	}

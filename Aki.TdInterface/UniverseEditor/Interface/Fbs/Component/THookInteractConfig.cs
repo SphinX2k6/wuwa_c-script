@@ -2,52 +2,52 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C36 RID: 23606
+	// Token: 0x0200625B RID: 25179
 	public enum THookInteractConfig : byte
 	{
-		// Token: 0x0400F42B RID: 62507
+		// Token: 0x04010155 RID: 65877
 		NONE,
-		// Token: 0x0400F42C RID: 62508
+		// Token: 0x04010156 RID: 65878
 		ICableWay,
-		// Token: 0x0400F42D RID: 62509
+		// Token: 0x04010157 RID: 65879
 		IChargeSlashHook,
-		// Token: 0x0400F42E RID: 62510
+		// Token: 0x04010158 RID: 65880
+		IChongLouHook,
+		// Token: 0x04010159 RID: 65881
 		IFixedPointHook,
-		// Token: 0x0400F42F RID: 62511
+		// Token: 0x0401015A RID: 65882
 		IFlyingFeather,
-		// Token: 0x0400F430 RID: 62512
+		// Token: 0x0401015B RID: 65883
 		IFollowerShoot,
-		// Token: 0x0400F431 RID: 62513
+		// Token: 0x0401015C RID: 65884
 		IFoxJumpingPoint,
-		// Token: 0x0400F432 RID: 62514
+		// Token: 0x0401015D RID: 65885
 		IGravityHook,
-		// Token: 0x0400F433 RID: 62515
+		// Token: 0x0401015E RID: 65886
 		IHookSpaceStationEnergyCore,
-		// Token: 0x0400F434 RID: 62516
+		// Token: 0x0401015F RID: 65887
 		IKiteHook,
-		// Token: 0x0400F435 RID: 62517
-		IMechHook,
-		// Token: 0x0400F436 RID: 62518
-		IMechPullInteract,
-		// Token: 0x0400F437 RID: 62519
+		// Token: 0x04010160 RID: 65888
+		IMechTransformHook,
+		// Token: 0x04010161 RID: 65889
 		IMotorEjectHook,
-		// Token: 0x0400F438 RID: 62520
+		// Token: 0x04010162 RID: 65890
 		IMotorPullInteract,
-		// Token: 0x0400F439 RID: 62521
+		// Token: 0x04010163 RID: 65891
 		IMovementPointHook,
-		// Token: 0x0400F43A RID: 62522
+		// Token: 0x04010164 RID: 65892
 		IPilotThrow,
-		// Token: 0x0400F43B RID: 62523
+		// Token: 0x04010165 RID: 65893
 		IRagDollClimbingPoint,
-		// Token: 0x0400F43C RID: 62524
+		// Token: 0x04010166 RID: 65894
 		IRagDollJumpingPoint,
-		// Token: 0x0400F43D RID: 62525
+		// Token: 0x04010167 RID: 65895
 		ISlashHook,
-		// Token: 0x0400F43E RID: 62526
+		// Token: 0x04010168 RID: 65896
 		ISuiGuangHook,
-		// Token: 0x0400F43F RID: 62527
+		// Token: 0x04010169 RID: 65897
 		ISunSpiritLauncher,
-		// Token: 0x0400F440 RID: 62528
+		// Token: 0x0401016A RID: 65898
 		IWaterBoxBigWeaponHook
 	}
 }

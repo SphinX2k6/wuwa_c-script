@@ -8,17 +8,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Manufacture.Common
 {
-	// Token: 0x0200569D RID: 22173
+	// Token: 0x02004673 RID: 18035
 	public class RewardPopItem : UiPanelBase
 	{
-		// Token: 0x060386CB RID: 231115 RVA: 0x00D6582E File Offset: 0x00D63A2E
+		// Token: 0x0602D5C8 RID: 185800 RVA: 0x00CB397E File Offset: 0x00CB1B7E
 		[NullableContext(1)]
 		public RewardPopItem(UUIItem uiItem)
 		{
 			base.CreateThenShowByActor(uiItem.GetOwner(), null);
 		}
 
-		// Token: 0x060386CC RID: 231116 RVA: 0x00D65844 File Offset: 0x00D63A44
+		// Token: 0x0602D5C9 RID: 185801 RVA: 0x00CB3994 File Offset: 0x00CB1B94
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060386CD RID: 231117 RVA: 0x00D6592E File Offset: 0x00D63B2E
+		// Token: 0x0602D5CA RID: 185802 RVA: 0x00CB3A7E File Offset: 0x00CB1C7E
 		[NullableContext(1)]
 		public void Update(ICommonPopItemData data)
 		{
@@ -53,47 +53,47 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			this.SetCount();
 		}
 
-		// Token: 0x060386CE RID: 231118 RVA: 0x00D6594C File Offset: 0x00D63B4C
+		// Token: 0x0602D5CB RID: 185803 RVA: 0x00CB3A9C File Offset: 0x00CB1C9C
 		private void SetIcon()
 		{
 			base.SetItemIcon(base.GetTexture(4), this.ItemData.ItemId, null, null);
 		}
 
-		// Token: 0x060386CF RID: 231119 RVA: 0x00D6597C File Offset: 0x00D63B7C
+		// Token: 0x0602D5CC RID: 185804 RVA: 0x00CB3ACC File Offset: 0x00CB1CCC
 		private void SetQuality()
 		{
 			base.SetItemQualityIcon(base.GetSprite(5), this.ItemData.ItemId, null, CommonDefine.EQualityIconType.BackgroundSprite, null);
 		}
 
-		// Token: 0x060386D0 RID: 231120 RVA: 0x00D659AC File Offset: 0x00D63BAC
+		// Token: 0x0602D5CD RID: 185805 RVA: 0x00CB3AFC File Offset: 0x00CB1CFC
 		private void SetCount()
 		{
 			base.GetText(8).SetText(this.ItemData.ItemNum.ToString(), true);
 		}
 
-		// Token: 0x060386D1 RID: 231121 RVA: 0x00D659D9 File Offset: 0x00D63BD9
+		// Token: 0x0602D5CE RID: 185806 RVA: 0x00CB3B29 File Offset: 0x00CB1D29
 		private void OnClick()
 		{
-			ItemController.Instance.OpenItemTipsByItemId(this.ItemData.ItemId, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(this.ItemData.ItemId, true, null, false);
 		}
 
-		// Token: 0x0401DA2D RID: 121389
+		// Token: 0x040184B8 RID: 99512
 		[Nullable(2)]
 		private ICommonPopItemData ItemData;
 
-		// Token: 0x0200B861 RID: 47201
+		// Token: 0x0200A289 RID: 41609
 		private class ECommonPopItemDefine
 		{
-			// Token: 0x04037CEC RID: 228588
+			// Token: 0x04032709 RID: 206601
 			public const int IconTexture = 4;
 
-			// Token: 0x04037CED RID: 228589
+			// Token: 0x0403270A RID: 206602
 			public const int QualitySprite = 5;
 
-			// Token: 0x04037CEE RID: 228590
+			// Token: 0x0403270B RID: 206603
 			public const int NumText = 8;
 
-			// Token: 0x04037CEF RID: 228591
+			// Token: 0x0403270C RID: 206604
 			public const int ItemButton = 9;
 		}
 	}

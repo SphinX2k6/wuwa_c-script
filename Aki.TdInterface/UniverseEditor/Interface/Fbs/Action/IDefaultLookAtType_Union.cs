@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200655B RID: 25947
+	// Token: 0x02006BCC RID: 27596
 	public enum IDefaultLookAtType_Union : byte
 	{
-		// Token: 0x04010BAB RID: 68523
+		// Token: 0x040119C9 RID: 72137
 		NONE,
-		// Token: 0x04010BAC RID: 68524
+		// Token: 0x040119CA RID: 72138
 		IDefaultLookAtType,
-		// Token: 0x04010BAD RID: 68525
+		// Token: 0x040119CB RID: 72139
 		ILookAtBubbleEntity,
-		// Token: 0x04010BAE RID: 68526
+		// Token: 0x040119CC RID: 72140
 		ILookAtTarget
 	}
 }

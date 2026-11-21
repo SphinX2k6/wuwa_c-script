@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200027D RID: 637
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020002C0 RID: 704
 	public class IConnectorPointToPointPathAdvance : IConnectorLogicType
 	{
-		// Token: 0x06000BB5 RID: 2997 RVA: 0x0002E760 File Offset: 0x0002C960
+		// Token: 0x06000CCF RID: 3279 RVA: 0x00031450 File Offset: 0x0002F650
 		private IConnectorPointToPointPathAdvance_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000BB6 RID: 2998 RVA: 0x0002E798 File Offset: 0x0002C998
+		// Token: 0x06000CD0 RID: 3280 RVA: 0x00031488 File Offset: 0x0002F688
 		public static IConnectorPointToPointPathAdvance Create([Nullable(2)] IConnectorPointToPointPathAdvance instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000BB7 RID: 2999 RVA: 0x0002E7AB File Offset: 0x0002C9AB
+		// Token: 0x06000CD1 RID: 3281 RVA: 0x0003149B File Offset: 0x0002F69B
 		public static IConnectorPointToPointPathAdvance CreateFromSetValue([Nullable(2)] IConnectorPointToPointPathAdvance_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000BB8 RID: 3000 RVA: 0x0002E7BE File Offset: 0x0002C9BE
+		// Token: 0x06000CD2 RID: 3282 RVA: 0x000314AE File Offset: 0x0002F6AE
 		public new IConnectorPointToPointPathAdvance_SetValue ToSetValue()
 		{
 			return new IConnectorPointToPointPathAdvance_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700037C RID: 892
-		// (get) Token: 0x06000BB9 RID: 3001 RVA: 0x0002E7F5 File Offset: 0x0002C9F5
-		// (set) Token: 0x06000BBA RID: 3002 RVA: 0x0002E820 File Offset: 0x0002CA20
+		// Token: 0x170003C4 RID: 964
+		// (get) Token: 0x06000CD3 RID: 3283 RVA: 0x000314E5 File Offset: 0x0002F6E5
+		// (set) Token: 0x06000CD4 RID: 3284 RVA: 0x00031510 File Offset: 0x0002F710
 		public override EConnectorLogicType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700037D RID: 893
-		// (get) Token: 0x06000BBB RID: 3003 RVA: 0x0002E830 File Offset: 0x0002CA30
-		// (set) Token: 0x06000BBC RID: 3004 RVA: 0x0002E891 File Offset: 0x0002CA91
+		// Token: 0x170003C5 RID: 965
+		// (get) Token: 0x06000CD5 RID: 3285 RVA: 0x00031520 File Offset: 0x0002F720
+		// (set) Token: 0x06000CD6 RID: 3286 RVA: 0x00031581 File Offset: 0x0002F781
 		public override IConnectorEffectConfig EffectConfig
 		{
 			get
@@ -115,9 +113,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700037E RID: 894
-		// (get) Token: 0x06000BBD RID: 3005 RVA: 0x0002E8A8 File Offset: 0x0002CAA8
-		// (set) Token: 0x06000BBE RID: 3006 RVA: 0x0002E909 File Offset: 0x0002CB09
+		// Token: 0x170003C6 RID: 966
+		// (get) Token: 0x06000CD7 RID: 3287 RVA: 0x00031598 File Offset: 0x0002F798
+		// (set) Token: 0x06000CD8 RID: 3288 RVA: 0x000315F9 File Offset: 0x0002F7F9
 		[Nullable(2)]
 		public virtual IConnectorPathAdvanceInitiator Initiator
 		{
@@ -148,9 +146,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700037F RID: 895
-		// (get) Token: 0x06000BBF RID: 3007 RVA: 0x0002E920 File Offset: 0x0002CB20
-		// (set) Token: 0x06000BC0 RID: 3008 RVA: 0x0002E981 File Offset: 0x0002CB81
+		// Token: 0x170003C7 RID: 967
+		// (get) Token: 0x06000CD9 RID: 3289 RVA: 0x00031610 File Offset: 0x0002F810
+		// (set) Token: 0x06000CDA RID: 3290 RVA: 0x00031671 File Offset: 0x0002F871
 		[Nullable(2)]
 		public virtual IConnectorPathAdvanceReceiver Receiver
 		{
@@ -181,30 +179,30 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000B33 RID: 2867
+		// Token: 0x04000C14 RID: 3092
 		[Nullable(2)]
 		protected new IConnectorPointToPointPathAdvance FbInstance;
 
-		// Token: 0x04000B34 RID: 2868
+		// Token: 0x04000C15 RID: 3093
 		[Nullable(2)]
 		protected new IConnectorPointToPointPathAdvance_SetValue PocoInterface;
 
-		// Token: 0x04000B35 RID: 2869
+		// Token: 0x04000C16 RID: 3094
 		private IConnectorEffectConfig _EffectConfigCache;
 
-		// Token: 0x04000B36 RID: 2870
+		// Token: 0x04000C17 RID: 3095
 		private bool _EffectConfigInited;
 
-		// Token: 0x04000B37 RID: 2871
+		// Token: 0x04000C18 RID: 3096
 		private IConnectorPathAdvanceInitiator _InitiatorCache;
 
-		// Token: 0x04000B38 RID: 2872
+		// Token: 0x04000C19 RID: 3097
 		private bool _InitiatorInited;
 
-		// Token: 0x04000B39 RID: 2873
+		// Token: 0x04000C1A RID: 3098
 		private IConnectorPathAdvanceReceiver _ReceiverCache;
 
-		// Token: 0x04000B3A RID: 2874
+		// Token: 0x04000C1B RID: 3099
 		private bool _ReceiverInited;
 	}
 }

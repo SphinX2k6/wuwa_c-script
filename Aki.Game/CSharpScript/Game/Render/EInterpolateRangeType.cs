@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045B1 RID: 17841
+	// Token: 0x020034D9 RID: 13529
 	public enum EInterpolateRangeType
 	{
-		// Token: 0x0401891C RID: 100636
+		// Token: 0x04012F57 RID: 77655
 		Start,
-		// Token: 0x0401891D RID: 100637
+		// Token: 0x04012F58 RID: 77656
 		Loop,
-		// Token: 0x0401891E RID: 100638
+		// Token: 0x04012F59 RID: 77657
 		End
 	}
 }

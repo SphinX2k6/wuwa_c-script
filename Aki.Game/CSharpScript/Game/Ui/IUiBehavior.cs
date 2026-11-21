@@ -3,22 +3,22 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004628 RID: 17960
+	// Token: 0x02003552 RID: 13650
 	public interface IUiBehavior
 	{
-		// Token: 0x0602E436 RID: 189494
+		// Token: 0x06022B49 RID: 142153
 		UniTask OnUiCreateAsync();
 
-		// Token: 0x0602E437 RID: 189495
-		void OnAfterUiStart();
+		// Token: 0x06022B4A RID: 142154
+		void OnUiStart();
 
-		// Token: 0x0602E438 RID: 189496
-		void OnAfterUiShow();
+		// Token: 0x06022B4B RID: 142155
+		void OnUiShow();
 
-		// Token: 0x0602E439 RID: 189497
-		void OnBeforeUiHide();
+		// Token: 0x06022B4C RID: 142156
+		void OnUiHide();
 
-		// Token: 0x0602E43A RID: 189498
-		void OnBeforeDestroy();
+		// Token: 0x06022B4D RID: 142157
+		void OnDestroy();
 	}
 }

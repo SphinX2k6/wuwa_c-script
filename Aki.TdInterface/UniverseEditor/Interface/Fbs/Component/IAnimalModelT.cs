@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004EAB RID: 20139
+	// Token: 0x020053D4 RID: 21460
 	public class IAnimalModelT
 	{
-		// Token: 0x1700907F RID: 36991
-		// (get) Token: 0x0601FB6E RID: 129902 RVA: 0x0046A770 File Offset: 0x00468970
-		// (set) Token: 0x0601FB6F RID: 129903 RVA: 0x0046A778 File Offset: 0x00468978
+		// Token: 0x170097E0 RID: 38880
+		// (get) Token: 0x0602186F RID: 137327 RVA: 0x0049FBEC File Offset: 0x0049DDEC
+		// (set) Token: 0x06021870 RID: 137328 RVA: 0x0049FBF4 File Offset: 0x0049DDF4
 		public EModelType Type { get; set; }
 
-		// Token: 0x17009080 RID: 36992
-		// (get) Token: 0x0601FB70 RID: 129904 RVA: 0x0046A781 File Offset: 0x00468981
-		// (set) Token: 0x0601FB71 RID: 129905 RVA: 0x0046A789 File Offset: 0x00468989
+		// Token: 0x170097E1 RID: 38881
+		// (get) Token: 0x06021871 RID: 137329 RVA: 0x0049FBFD File Offset: 0x0049DDFD
+		// (set) Token: 0x06021872 RID: 137330 RVA: 0x0049FC05 File Offset: 0x0049DE05
 		public string BlueprintPath { get; set; }
 
-		// Token: 0x17009081 RID: 36993
-		// (get) Token: 0x0601FB72 RID: 129906 RVA: 0x0046A792 File Offset: 0x00468992
-		// (set) Token: 0x0601FB73 RID: 129907 RVA: 0x0046A79A File Offset: 0x0046899A
+		// Token: 0x170097E2 RID: 38882
+		// (get) Token: 0x06021873 RID: 137331 RVA: 0x0049FC0E File Offset: 0x0049DE0E
+		// (set) Token: 0x06021874 RID: 137332 RVA: 0x0049FC16 File Offset: 0x0049DE16
 		public IMeshAnimalModelT AnimalModel { get; set; }
 
-		// Token: 0x17009082 RID: 36994
-		// (get) Token: 0x0601FB74 RID: 129908 RVA: 0x0046A7A3 File Offset: 0x004689A3
-		// (set) Token: 0x0601FB75 RID: 129909 RVA: 0x0046A7AB File Offset: 0x004689AB
+		// Token: 0x170097E3 RID: 38883
+		// (get) Token: 0x06021875 RID: 137333 RVA: 0x0049FC1F File Offset: 0x0049DE1F
+		// (set) Token: 0x06021876 RID: 137334 RVA: 0x0049FC27 File Offset: 0x0049DE27
 		public string Abp { get; set; }
 
-		// Token: 0x0601FB76 RID: 129910 RVA: 0x0046A7B4 File Offset: 0x004689B4
+		// Token: 0x06021877 RID: 137335 RVA: 0x0049FC30 File Offset: 0x0049DE30
 		public IAnimalModelT()
 		{
 			this.Type = EModelType.LevelPrefab;

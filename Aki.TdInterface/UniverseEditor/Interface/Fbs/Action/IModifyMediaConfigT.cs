@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006AC5 RID: 27333
+	// Token: 0x020071F9 RID: 29177
 	public class IModifyMediaConfigT
 	{
-		// Token: 0x1700CACB RID: 51915
-		// (get) Token: 0x0602FE6E RID: 196206 RVA: 0x0068407A File Offset: 0x0068227A
-		// (set) Token: 0x0602FE6F RID: 196207 RVA: 0x00684082 File Offset: 0x00682282
+		// Token: 0x1700D593 RID: 54675
+		// (get) Token: 0x06032C24 RID: 207908 RVA: 0x006DB31E File Offset: 0x006D951E
+		// (set) Token: 0x06032C25 RID: 207909 RVA: 0x006DB326 File Offset: 0x006D9526
 		public EModifyActorMediaType Type { get; set; }
 
-		// Token: 0x0602FE70 RID: 196208 RVA: 0x0068408B File Offset: 0x0068228B
+		// Token: 0x06032C26 RID: 207910 RVA: 0x006DB32F File Offset: 0x006D952F
 		public IModifyMediaConfigT()
 		{
 			this.Type = EModifyActorMediaType.ChangeMediaPlayDA;

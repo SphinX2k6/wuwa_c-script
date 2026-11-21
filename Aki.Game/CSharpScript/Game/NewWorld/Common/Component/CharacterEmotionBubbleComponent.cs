@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Common.Component
 {
-	// Token: 0x0200707D RID: 28797
+	// Token: 0x020061FE RID: 25086
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CharacterEmotionBubbleComponent : EntityComponent
 	{
-		// Token: 0x06046203 RID: 287235 RVA: 0x01181654 File Offset: 0x0117F854
+		// Token: 0x0603C410 RID: 246800 RVA: 0x0112AE38 File Offset: 0x01129038
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<CharacterActorComponent>();
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x06046204 RID: 287236 RVA: 0x01181702 File Offset: 0x0117F902
+		// Token: 0x0603C411 RID: 246801 RVA: 0x0112AEE6 File Offset: 0x011290E6
 		protected override bool OnClear()
 		{
 			this.ClearAnimalEmotionOnClear();
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x06046205 RID: 287237 RVA: 0x01181714 File Offset: 0x0117F914
+		// Token: 0x0603C412 RID: 246802 RVA: 0x0112AEF8 File Offset: 0x011290F8
 		private unsafe int SpawnEmotionEffect(string key, IEmotionEffectInfo info)
 		{
 			string effect = info.Effect;
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return num;
 		}
 
-		// Token: 0x06046206 RID: 287238 RVA: 0x0118184C File Offset: 0x0117FA4C
+		// Token: 0x0603C413 RID: 246803 RVA: 0x0112B030 File Offset: 0x01129230
 		public unsafe void PlayEmotionBubbleById(int id, bool once = false)
 		{
 			if (this.EmotionRecordMap != null && this.EmotionRecordMap.ContainsKey(id))
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.AddRecord(record);
 		}
 
-		// Token: 0x06046207 RID: 287239 RVA: 0x011819F0 File Offset: 0x0117FBF0
+		// Token: 0x0603C414 RID: 246804 RVA: 0x0112B1D4 File Offset: 0x011293D4
 		public void RemoveEmotionBubbleById(int id)
 		{
 			IMonsterListenerRecord record;
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.RemoveRecord(record);
 		}
 
-		// Token: 0x06046208 RID: 287240 RVA: 0x01181A20 File Offset: 0x0117FC20
+		// Token: 0x0603C415 RID: 246805 RVA: 0x0112B204 File Offset: 0x01129404
 		private void AddRecord(IMonsterListenerRecord record)
 		{
 			if (this.EmotionRecordMap == null)
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x06046209 RID: 287241 RVA: 0x01181B08 File Offset: 0x0117FD08
+		// Token: 0x0603C416 RID: 246806 RVA: 0x0112B2EC File Offset: 0x011294EC
 		private void RemoveRecord(IMonsterListenerRecord record)
 		{
 			Dictionary<int, IMonsterListenerRecord> emotionRecordMap = this.EmotionRecordMap;
@@ -197,7 +197,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.DestroyEmotionEffectById(record.EmotionId);
 		}
 
-		// Token: 0x0604620A RID: 287242 RVA: 0x01181BD0 File Offset: 0x0117FDD0
+		// Token: 0x0603C417 RID: 246807 RVA: 0x0112B3B4 File Offset: 0x011295B4
 		private void TagChangeListener(int tagId, bool tagExist)
 		{
 			if (tagExist)
@@ -208,7 +208,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.OnListenedTagRemoved(tagId);
 		}
 
-		// Token: 0x0604620B RID: 287243 RVA: 0x01181BE4 File Offset: 0x0117FDE4
+		// Token: 0x0603C418 RID: 246808 RVA: 0x0112B3C8 File Offset: 0x011295C8
 		private void OnListenedTagAdded(int tagId)
 		{
 			HashSet<int> hashSet;
@@ -226,7 +226,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x0604620C RID: 287244 RVA: 0x01181C7C File Offset: 0x0117FE7C
+		// Token: 0x0603C419 RID: 246809 RVA: 0x0112B460 File Offset: 0x01129660
 		private void OnListenedTagRemoved(int tagId)
 		{
 			HashSet<int> collection;
@@ -248,7 +248,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x0604620D RID: 287245 RVA: 0x01181D20 File Offset: 0x0117FF20
+		// Token: 0x0603C41A RID: 246810 RVA: 0x0112B504 File Offset: 0x01129704
 		private bool HasAnyActiveTag(HashSet<int> tagIds)
 		{
 			if (this.TagComp == null)
@@ -265,7 +265,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return false;
 		}
 
-		// Token: 0x0604620E RID: 287246 RVA: 0x01181D88 File Offset: 0x0117FF88
+		// Token: 0x0603C41B RID: 246811 RVA: 0x0112B56C File Offset: 0x0112976C
 		private unsafe void PlayEmotionBubbleForId(IMonsterListenerRecord record)
 		{
 			IEmotionEffectInfo monsterEmotionInfo = CharacterEmotionBubbleController.Instance.GetMonsterEmotionInfo(record.EmotionId);
@@ -303,7 +303,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			instance.Warn(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 5));
 		}
 
-		// Token: 0x0604620F RID: 287247 RVA: 0x01181EEC File Offset: 0x011800EC
+		// Token: 0x0603C41C RID: 246812 RVA: 0x0112B6D0 File Offset: 0x011298D0
 		private void DestroyEmotionEffectById(int id)
 		{
 			int handle;
@@ -315,7 +315,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.EmotionEffectMap.Remove(id);
 		}
 
-		// Token: 0x06046210 RID: 287248 RVA: 0x01181F3C File Offset: 0x0118013C
+		// Token: 0x0603C41D RID: 246813 RVA: 0x0112B720 File Offset: 0x01129920
 		private void ClearMonsterEmotionOnClear()
 		{
 			if (this.EmotionEffectMap != null)
@@ -347,7 +347,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.EmotionRecordMap = null;
 		}
 
-		// Token: 0x06046211 RID: 287249 RVA: 0x01182038 File Offset: 0x01180238
+		// Token: 0x0603C41E RID: 246814 RVA: 0x0112B81C File Offset: 0x01129A1C
 		private void InitAnimalMontageEmotion()
 		{
 			CharacterActorComponent actorComp = this.ActorComp;
@@ -381,7 +381,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x06046212 RID: 287250 RVA: 0x011820F4 File Offset: 0x011802F4
+		// Token: 0x0603C41F RID: 246815 RVA: 0x0112B8D8 File Offset: 0x01129AD8
 		public void UpdateAnimalEmotionPair(string path, string emotion)
 		{
 			if (this.AnimalEmotionMap == null)
@@ -396,7 +396,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x06046213 RID: 287251 RVA: 0x01182144 File Offset: 0x01180344
+		// Token: 0x0603C420 RID: 246816 RVA: 0x0112B928 File Offset: 0x01129B28
 		private void DestroyAnimalEffectByPath(string path)
 		{
 			int num;
@@ -408,7 +408,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.AnimalEffectHandle.Remove(path);
 		}
 
-		// Token: 0x06046214 RID: 287252 RVA: 0x01182198 File Offset: 0x01180398
+		// Token: 0x0603C421 RID: 246817 RVA: 0x0112B97C File Offset: 0x01129B7C
 		public unsafe void PlayAnimalMontageEmotion(string montage)
 		{
 			string text = montage.Split('.', StringSplitOptions.None)[0];
@@ -454,14 +454,14 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			instance.Warn(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray6<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 6));
 		}
 
-		// Token: 0x06046215 RID: 287253 RVA: 0x0118232C File Offset: 0x0118052C
+		// Token: 0x0603C422 RID: 246818 RVA: 0x0112BB10 File Offset: 0x01129D10
 		public void StopAnimalMontageEmotion(string montage)
 		{
 			string path = montage.Split('.', StringSplitOptions.None)[0];
 			this.DestroyAnimalEffectByPath(path);
 		}
 
-		// Token: 0x06046216 RID: 287254 RVA: 0x0118234C File Offset: 0x0118054C
+		// Token: 0x0603C423 RID: 246819 RVA: 0x0112BB30 File Offset: 0x01129D30
 		private void ClearAnimalEmotionOnClear()
 		{
 			if (this.AnimalEffectHandle == null)
@@ -475,7 +475,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.AnimalEffectHandle = null;
 		}
 
-		// Token: 0x06046217 RID: 287255 RVA: 0x011823BC File Offset: 0x011805BC
+		// Token: 0x0603C424 RID: 246820 RVA: 0x0112BBA0 File Offset: 0x01129DA0
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -483,110 +483,106 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 				return false;
 			}
 			CharacterEmotionBubbleComponent characterEmotionBubbleComponent = (CharacterEmotionBubbleComponent)componentTemplate;
-			if (base.CanResetComponentProperty("ActorComp"))
+			if (characterEmotionBubbleComponent.ActorComp == null)
 			{
-				if (characterEmotionBubbleComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("TagComp"))
-			{
-				if (characterEmotionBubbleComponent.TagComp == null)
-				{
-					this.TagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("BlueprintPath"))
-			{
-				this.BlueprintPath = characterEmotionBubbleComponent.BlueprintPath;
-			}
-			if (base.CanResetComponentProperty("TransformCache") && characterEmotionBubbleComponent.TransformCache != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Transform>(this.TransformCache), "TransformCache"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("EmotionRecordMap"))
+			if (characterEmotionBubbleComponent.TagComp == null)
 			{
-				if (characterEmotionBubbleComponent.EmotionRecordMap == null)
-				{
-					this.EmotionRecordMap = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, IMonsterListenerRecord>>(this.EmotionRecordMap), "EmotionRecordMap"))
-				{
-					return false;
-				}
+				this.TagComp = null;
 			}
-			if (base.CanResetComponentProperty("EmotionEffectMap"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 			{
-				if (characterEmotionBubbleComponent.EmotionEffectMap == null)
-				{
-					this.EmotionEffectMap = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, int>>(this.EmotionEffectMap), "EmotionEffectMap"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("TagToEmotionIdMap"))
+			this.BlueprintPath = characterEmotionBubbleComponent.BlueprintPath;
+			if (characterEmotionBubbleComponent.TransformCache != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TransformCache), "TransformCache"))
 			{
-				if (characterEmotionBubbleComponent.TagToEmotionIdMap == null)
-				{
-					this.TagToEmotionIdMap = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, HashSet<int>>>(this.TagToEmotionIdMap), "TagToEmotionIdMap"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("AnimalEmotionMap"))
+			if (characterEmotionBubbleComponent.EmotionRecordMap == null)
 			{
-				if (characterEmotionBubbleComponent.AnimalEmotionMap == null)
-				{
-					this.AnimalEmotionMap = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, string>>(this.AnimalEmotionMap), "AnimalEmotionMap"))
-				{
-					return false;
-				}
+				this.EmotionRecordMap = null;
 			}
-			if (base.CanResetComponentProperty("AnimalEffectHandle"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.EmotionRecordMap), "EmotionRecordMap"))
 			{
-				if (characterEmotionBubbleComponent.AnimalEffectHandle == null)
-				{
-					this.AnimalEffectHandle = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, int>>(this.AnimalEffectHandle), "AnimalEffectHandle"))
-				{
-					return false;
-				}
+				return false;
+			}
+			if (characterEmotionBubbleComponent.EmotionEffectMap == null)
+			{
+				this.EmotionEffectMap = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.EmotionEffectMap), "EmotionEffectMap"))
+			{
+				return false;
+			}
+			if (characterEmotionBubbleComponent.TagToEmotionIdMap == null)
+			{
+				this.TagToEmotionIdMap = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagToEmotionIdMap), "TagToEmotionIdMap"))
+			{
+				return false;
+			}
+			if (characterEmotionBubbleComponent.AnimalEmotionMap == null)
+			{
+				this.AnimalEmotionMap = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AnimalEmotionMap), "AnimalEmotionMap"))
+			{
+				return false;
+			}
+			if (characterEmotionBubbleComponent.AnimalEffectHandle == null)
+			{
+				this.AnimalEffectHandle = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AnimalEffectHandle), "AnimalEffectHandle"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x04024BC7 RID: 150471
+		// Token: 0x170071B6 RID: 29110
+		// (get) Token: 0x0603C425 RID: 246821 RVA: 0x0112BD1B File Offset: 0x01129F1B
+		public override bool NeedClearInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071B7 RID: 29111
+		// (get) Token: 0x0603C426 RID: 246822 RVA: 0x0112BD1E File Offset: 0x01129F1E
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FE82 RID: 130690
 		[Nullable(2)]
 		private CharacterActorComponent ActorComp;
 
-		// Token: 0x04024BC8 RID: 150472
+		// Token: 0x0401FE83 RID: 130691
 		[Nullable(2)]
 		private BaseTagComponent TagComp;
 
-		// Token: 0x04024BC9 RID: 150473
+		// Token: 0x0401FE84 RID: 130692
 		[Nullable(2)]
 		private string BlueprintPath;
 
-		// Token: 0x04024BCA RID: 150474
+		// Token: 0x0401FE85 RID: 130693
 		private readonly Transform TransformCache = Transform.Create();
 
-		// Token: 0x04024BCB RID: 150475
+		// Token: 0x0401FE86 RID: 130694
 		[Nullable(new byte[]
 		{
 			2,
@@ -594,11 +590,11 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 		})]
 		private Dictionary<int, IMonsterListenerRecord> EmotionRecordMap;
 
-		// Token: 0x04024BCC RID: 150476
+		// Token: 0x0401FE87 RID: 130695
 		[Nullable(2)]
 		private Dictionary<int, int> EmotionEffectMap;
 
-		// Token: 0x04024BCD RID: 150477
+		// Token: 0x0401FE88 RID: 130696
 		[Nullable(new byte[]
 		{
 			2,
@@ -606,7 +602,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 		})]
 		private Dictionary<int, HashSet<int>> TagToEmotionIdMap;
 
-		// Token: 0x04024BCE RID: 150478
+		// Token: 0x0401FE89 RID: 130697
 		[Nullable(new byte[]
 		{
 			2,
@@ -615,7 +611,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 		})]
 		private Dictionary<string, string> AnimalEmotionMap;
 
-		// Token: 0x04024BCF RID: 150479
+		// Token: 0x0401FE8A RID: 130698
 		[Nullable(new byte[]
 		{
 			2,

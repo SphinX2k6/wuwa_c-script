@@ -2,18 +2,18 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 {
-	// Token: 0x020066BA RID: 26298
+	// Token: 0x0200560A RID: 22026
 	internal enum <DropCatchDropItemDetailView>F2C7100D8385EDD0144984CA8F119B653089E0B5C8C65EE9A3258D3831D78F6DD__EComponents
 	{
-		// Token: 0x04022423 RID: 140323
+		// Token: 0x0401CC7C RID: 117884
 		UiltemCaption,
-		// Token: 0x04022424 RID: 140324
+		// Token: 0x0401CC7D RID: 117885
 		Content,
-		// Token: 0x04022425 RID: 140325
+		// Token: 0x0401CC7E RID: 117886
 		PnlListB,
-		// Token: 0x04022426 RID: 140326
+		// Token: 0x0401CC7F RID: 117887
 		TxtDescript,
-		// Token: 0x04022427 RID: 140327
+		// Token: 0x0401CC80 RID: 117888
 		SpineRobot
 	}
 }

@@ -4,13 +4,13 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020011A6 RID: 4518
+	// Token: 0x020012E0 RID: 4832
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ITimerUiConfig
 	{
-		// Token: 0x06006694 RID: 26260 RVA: 0x000F5CAC File Offset: 0x000F3EAC
-		[NullableContext(1)]
+		// Token: 0x06006CCB RID: 27851 RVA: 0x00103478 File Offset: 0x00101678
+		[NullableContext(0)]
 		private ITimerUiConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006695 RID: 26261 RVA: 0x000F5CE4 File Offset: 0x000F3EE4
-		[NullableContext(1)]
+		// Token: 0x06006CCC RID: 27852 RVA: 0x001034B0 File Offset: 0x001016B0
+		[NullableContext(0)]
 		public static ITimerUiConfig Create([Nullable(2)] ITimerUiConfig instance)
 		{
 			if (instance == null)
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006696 RID: 26262 RVA: 0x000F5CF7 File Offset: 0x000F3EF7
-		[NullableContext(1)]
+		// Token: 0x06006CCD RID: 27853 RVA: 0x001034C3 File Offset: 0x001016C3
+		[NullableContext(0)]
 		public static ITimerUiConfig CreateFromSetValue([Nullable(2)] ITimerUiConfig_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +53,8 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006697 RID: 26263 RVA: 0x000F5D0A File Offset: 0x000F3F0A
-		[NullableContext(1)]
+		// Token: 0x06006CCE RID: 27854 RVA: 0x001034D6 File Offset: 0x001016D6
+		[NullableContext(0)]
 		public ITimerUiConfig_SetValue ToSetValue()
 		{
 			return new ITimerUiConfig_SetValue
@@ -65,9 +65,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17002156 RID: 8534
-		// (get) Token: 0x06006698 RID: 26264 RVA: 0x000F5D35 File Offset: 0x000F3F35
-		// (set) Token: 0x06006699 RID: 26265 RVA: 0x000F5D60 File Offset: 0x000F3F60
+		// Token: 0x17002315 RID: 8981
+		// (get) Token: 0x06006CCF RID: 27855 RVA: 0x00103501 File Offset: 0x00101701
+		// (set) Token: 0x06006CD0 RID: 27856 RVA: 0x0010352C File Offset: 0x0010172C
 		public virtual ETimerUiType UiType
 		{
 			get
@@ -88,9 +88,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002157 RID: 8535
-		// (get) Token: 0x0600669A RID: 26266 RVA: 0x000F5D6E File Offset: 0x000F3F6E
-		// (set) Token: 0x0600669B RID: 26267 RVA: 0x000F5D95 File Offset: 0x000F3F95
+		// Token: 0x17002316 RID: 8982
+		// (get) Token: 0x06006CD1 RID: 27857 RVA: 0x0010353A File Offset: 0x0010173A
+		// (set) Token: 0x06006CD2 RID: 27858 RVA: 0x00103561 File Offset: 0x00101761
 		public virtual string TidTitle
 		{
 			get
@@ -112,9 +112,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002158 RID: 8536
-		// (get) Token: 0x0600669C RID: 26268 RVA: 0x000F5DA3 File Offset: 0x000F3FA3
-		// (set) Token: 0x0600669D RID: 26269 RVA: 0x000F5DBA File Offset: 0x000F3FBA
+		// Token: 0x17002317 RID: 8983
+		// (get) Token: 0x06006CD3 RID: 27859 RVA: 0x0010356F File Offset: 0x0010176F
+		// (set) Token: 0x06006CD4 RID: 27860 RVA: 0x00103586 File Offset: 0x00101786
 		public virtual string EdTidTitle
 		{
 			get
@@ -131,10 +131,10 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003D8D RID: 15757
+		// Token: 0x040040F5 RID: 16629
 		protected ITimerUiConfig FbInstance;
 
-		// Token: 0x04003D8E RID: 15758
+		// Token: 0x040040F6 RID: 16630
 		protected ITimerUiConfig_SetValue PocoInterface;
 	}
 }

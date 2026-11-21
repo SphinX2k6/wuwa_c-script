@@ -10,35 +10,35 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 {
-	// Token: 0x0200627F RID: 25215
+	// Token: 0x020051FD RID: 20989
 	public class RealmBetweenPhantomCardItem : GridProxyAbstract<int>, IStaticVariableResetter
 	{
-		// Token: 0x0603F789 RID: 259977 RVA: 0x00F581E6 File Offset: 0x00F563E6
+		// Token: 0x0603444A RID: 214090 RVA: 0x00E9F142 File Offset: 0x00E9D342
 		static RealmBetweenPhantomCardItem()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(RealmBetweenPhantomCardItem.CreateStaticDefaultValue), new Action(RealmBetweenPhantomCardItem.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0603F78A RID: 259978 RVA: 0x00F58205 File Offset: 0x00F56405
+		// Token: 0x0603444B RID: 214091 RVA: 0x00E9F161 File Offset: 0x00E9D361
 		public static void CreateStaticDefaultValue()
 		{
 			RealmBetweenPhantomCardItem.LastClickTimestamp = 0.0;
 		}
 
-		// Token: 0x0603F78B RID: 259979 RVA: 0x00F58215 File Offset: 0x00F56415
+		// Token: 0x0603444C RID: 214092 RVA: 0x00E9F171 File Offset: 0x00E9D371
 		public static void ResetStaticDefaultValue()
 		{
 			RealmBetweenPhantomCardItem.LastClickTimestamp = 0.0;
 		}
 
-		// Token: 0x0603F78C RID: 259980 RVA: 0x00F58225 File Offset: 0x00F56425
+		// Token: 0x0603444D RID: 214093 RVA: 0x00E9F181 File Offset: 0x00E9D381
 		[NullableContext(1)]
 		public RealmBetweenPhantomCardItem(ActivityRealmBetweenData activityData)
 		{
 			this.ActivityData = activityData;
 		}
 
-		// Token: 0x0603F78D RID: 259981 RVA: 0x00F58234 File Offset: 0x00F56434
+		// Token: 0x0603444E RID: 214094 RVA: 0x00E9F190 File Offset: 0x00E9D390
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			};
 		}
 
-		// Token: 0x0603F78E RID: 259982 RVA: 0x00F5830C File Offset: 0x00F5650C
+		// Token: 0x0603444F RID: 214095 RVA: 0x00E9F268 File Offset: 0x00E9D468
 		public override void Refresh(int phantomId, bool isSelected, int gridIndex)
 		{
 			this.PhantomId = phantomId;
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			}
 		}
 
-		// Token: 0x0603F78F RID: 259983 RVA: 0x00F5846C File Offset: 0x00F5666C
+		// Token: 0x06034450 RID: 214096 RVA: 0x00E9F3C8 File Offset: 0x00E9D5C8
 		private void RefreshTexture(int rarity)
 		{
 			string resourceId;
@@ -103,12 +103,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			base.SetTextureByPath(resourcePath, base.GetTexture(3), null, null);
 		}
 
-		// Token: 0x0603F790 RID: 259984 RVA: 0x00F584B6 File Offset: 0x00F566B6
+		// Token: 0x06034451 RID: 214097 RVA: 0x00E9F412 File Offset: 0x00E9D612
 		private void TryUnlockItem()
 		{
 		}
 
-		// Token: 0x0603F791 RID: 259985 RVA: 0x00F584B8 File Offset: 0x00F566B8
+		// Token: 0x06034452 RID: 214098 RVA: 0x00E9F414 File Offset: 0x00E9D614
 		private void OnClickItem()
 		{
 			double systemNow = Time.Instance.SystemNow;
@@ -131,16 +131,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			AdventureGuideController.Instance.RequestForDetection(DetectionType.NormalMonster, Array.Empty<int>(), phantomConfig.Value.MonsterInfoId);
 		}
 
-		// Token: 0x040212B6 RID: 135862
+		// Token: 0x0401BBE5 RID: 113637
 		private const int CLICK_COOLDOWN_MS = 3000;
 
-		// Token: 0x040212B7 RID: 135863
+		// Token: 0x0401BBE6 RID: 113638
 		protected int PhantomId;
 
-		// Token: 0x040212B8 RID: 135864
+		// Token: 0x0401BBE7 RID: 113639
 		private static double LastClickTimestamp;
 
-		// Token: 0x040212B9 RID: 135865
+		// Token: 0x0401BBE8 RID: 113640
 		[Nullable(1)]
 		protected ActivityRealmBetweenData ActivityData;
 	}

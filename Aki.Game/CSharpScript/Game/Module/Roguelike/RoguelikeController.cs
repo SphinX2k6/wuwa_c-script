@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -20,25 +19,25 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DA7 RID: 19879
+	// Token: 0x02003D70 RID: 15728
 	[NullableContext(2)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class RoguelikeController : UiControllerBase
 	{
-		// Token: 0x06033528 RID: 210216 RVA: 0x00BFA933 File Offset: 0x00BF8B33
+		// Token: 0x06028395 RID: 164757 RVA: 0x00B43F2F File Offset: 0x00B4212F
 		protected override void OnAddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.OnCloseLoadingView, new Action(this.OnCloseLoading));
 		}
 
-		// Token: 0x06033529 RID: 210217 RVA: 0x00BFA951 File Offset: 0x00BF8B51
+		// Token: 0x06028396 RID: 164758 RVA: 0x00B43F4D File Offset: 0x00B4214D
 		protected override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.OnCloseLoadingView, new Action(this.OnCloseLoading));
 		}
 
-		// Token: 0x0603352A RID: 210218 RVA: 0x00BFA970 File Offset: 0x00BF8B70
+		// Token: 0x06028397 RID: 164759 RVA: 0x00B43F6C File Offset: 0x00B4216C
 		public void OnCloseLoading()
 		{
 			if (RoguelikeModel.Instance.ShowRewardList != null && RoguelikeModel.Instance.ShowRewardList.Count > 0)
@@ -67,7 +66,7 @@ namespace CSharpScript.Game.Module.Roguelike
 										RogueParam? paramConfigBySeasonId = RoguelikeModel.Instance.GetParamConfigBySeasonId(null);
 										if (paramConfigBySeasonId != null && paramConfigBySeasonId.Value.DungeonList() != null && RoguelikeModel.Instance != null && RoguelikeModel.Instance.CurDungeonId != null)
 										{
-											int num = paramConfigBySeasonId.Value.DungeonList().ToList<int>().FindIndex((int value) => value == RoguelikeModel.Instance.CurDungeonId.Value);
+											int num = Array.IndexOf<int>(paramConfigBySeasonId.Value.DungeonList(), RoguelikeModel.Instance.CurDungeonId.Value);
 											int num2 = num + 1;
 											if (num != -1 && num2 < paramConfigBySeasonId.Value.DungeonListLength)
 											{
@@ -99,7 +98,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.CurrentStateId = 0;
 		}
 
-		// Token: 0x0603352B RID: 210219 RVA: 0x00BFAA7C File Offset: 0x00BF8C7C
+		// Token: 0x06028398 RID: 164760 RVA: 0x00B44078 File Offset: 0x00B42278
 		[NullableContext(0)]
 		public UniTask<bool> OpenRoguelikeActivityView()
 		{
@@ -110,7 +109,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <OpenRoguelikeActivityView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603352C RID: 210220 RVA: 0x00BFAAB8 File Offset: 0x00BF8CB8
+		// Token: 0x06028399 RID: 164761 RVA: 0x00B440B4 File Offset: 0x00B422B4
 		protected override void OnAddOpenViewCheckFunction()
 		{
 			UiManager.Instance.AddOpenViewCheckFunction(EUiViewName.RoguelikeActivityView, new Func<EUiViewName, object, bool>(this.CheckCanOpen), "RoguelikeController.CheckCanOpen");
@@ -124,7 +123,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			UiManager.Instance.AddOpenViewCheckFunction(EUiViewName.RoguelikeAchieveView, new Func<EUiViewName, object, bool>(this.CheckCanOpenAchieve), "RoguelikeController.CheckCanOpen");
 		}
 
-		// Token: 0x0603352D RID: 210221 RVA: 0x00BFABE8 File Offset: 0x00BF8DE8
+		// Token: 0x0602839A RID: 164762 RVA: 0x00B441E4 File Offset: 0x00B423E4
 		protected override void OnRemoveOpenViewCheckFunction()
 		{
 			UiManager.Instance.RemoveOpenViewCheckFunction(EUiViewName.RoguelikeActivityView, new Func<EUiViewName, object, bool>(this.CheckCanOpen));
@@ -138,7 +137,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			UiManager.Instance.RemoveOpenViewCheckFunction(EUiViewName.RoguelikeAchieveView, new Func<EUiViewName, object, bool>(this.CheckCanOpenAchieve));
 		}
 
-		// Token: 0x0603352E RID: 210222 RVA: 0x00BFACE8 File Offset: 0x00BF8EE8
+		// Token: 0x0602839B RID: 164763 RVA: 0x00B442E4 File Offset: 0x00B424E4
 		[NullableContext(1)]
 		public bool CheckCanOpen(EUiViewName viewName, object openParam)
 		{
@@ -160,7 +159,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return true;
 		}
 
-		// Token: 0x0603352F RID: 210223 RVA: 0x00BFAD60 File Offset: 0x00BF8F60
+		// Token: 0x0602839C RID: 164764 RVA: 0x00B4435C File Offset: 0x00B4255C
 		[NullableContext(1)]
 		private bool CheckCanOpenAchieve(EUiViewName viewName, object openParam)
 		{
@@ -177,7 +176,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return true;
 		}
 
-		// Token: 0x06033530 RID: 210224 RVA: 0x00BFADB2 File Offset: 0x00BF8FB2
+		// Token: 0x0602839D RID: 164765 RVA: 0x00B443AE File Offset: 0x00B425AE
 		[NullableContext(1)]
 		public bool CheckCanOpenExitTips(EUiViewName viewName, object openParam)
 		{
@@ -189,7 +188,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return true;
 		}
 
-		// Token: 0x06033531 RID: 210225 RVA: 0x00BFADD8 File Offset: 0x00BF8FD8
+		// Token: 0x0602839E RID: 164766 RVA: 0x00B443D4 File Offset: 0x00B425D4
 		public UniTask OpenBuffSelectViewByIdAsync(int index)
 		{
 			RoguelikeController.<OpenBuffSelectViewByIdAsync>d__14 <OpenBuffSelectViewByIdAsync>d__;
@@ -201,7 +200,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <OpenBuffSelectViewByIdAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033532 RID: 210226 RVA: 0x00BFAE24 File Offset: 0x00BF9024
+		// Token: 0x0602839F RID: 164767 RVA: 0x00B44420 File Offset: 0x00B42620
 		[NullableContext(0)]
 		public UniTask<bool> OpenBuffSelectViewById(int index)
 		{
@@ -214,7 +213,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <OpenBuffSelectViewById>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033533 RID: 210227 RVA: 0x00BFAE70 File Offset: 0x00BF9070
+		// Token: 0x060283A0 RID: 164768 RVA: 0x00B4446C File Offset: 0x00B4266C
 		public EUiViewName? GetViewNameByGainType(RoguelikeGainDataType type)
 		{
 			switch (type)
@@ -247,7 +246,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return null;
 		}
 
-		// Token: 0x06033534 RID: 210228 RVA: 0x00BFAF68 File Offset: 0x00BF9168
+		// Token: 0x060283A1 RID: 164769 RVA: 0x00B44564 File Offset: 0x00B42764
 		public void RoguelikeCurrencyNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			RoguelikeCurrencyNotify roguelikeCurrencyNotify = (RoguelikeCurrencyNotify)msg;
@@ -260,7 +259,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			EventSystem.Instance.Emit(EEventName.PayShopGoodsBuy);
 		}
 
-		// Token: 0x06033535 RID: 210229 RVA: 0x00BFB000 File Offset: 0x00BF9200
+		// Token: 0x060283A2 RID: 164770 RVA: 0x00B445FC File Offset: 0x00B427FC
 		public void RoguelikeCurrencyUpdateNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			RoguelikeCurrencyUpdateNotify roguelikeCurrencyUpdateNotify = (RoguelikeCurrencyUpdateNotify)msg;
@@ -282,14 +281,14 @@ namespace CSharpScript.Game.Module.Roguelike
 			EventSystem.Instance.Emit(EEventName.RoguelikeCurrencyUpdate);
 		}
 
-		// Token: 0x06033536 RID: 210230 RVA: 0x00BFB0D8 File Offset: 0x00BF92D8
+		// Token: 0x060283A3 RID: 164771 RVA: 0x00B446D4 File Offset: 0x00B428D4
 		private void OnRoguelikeEventGainNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			RoguelikeEventGainNotify notify = (RoguelikeEventGainNotify)msg;
 			this.RoguelikeEventGainNotify(notify, null);
 		}
 
-		// Token: 0x06033537 RID: 210231 RVA: 0x00BFB0F4 File Offset: 0x00BF92F4
+		// Token: 0x060283A4 RID: 164772 RVA: 0x00B446F0 File Offset: 0x00B428F0
 		[NullableContext(1)]
 		public void RoguelikeEventGainNotify(RoguelikeEventGainNotify notify, [Nullable(2)] Action<bool?> callback = null)
 		{
@@ -318,7 +317,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x06033538 RID: 210232 RVA: 0x00BFB200 File Offset: 0x00BF9400
+		// Token: 0x060283A5 RID: 164773 RVA: 0x00B447FC File Offset: 0x00B429FC
 		public void RoguelikeGainDataUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			RoguelikeGainDataUpdateNotify notify = (RoguelikeGainDataUpdateNotify)msg;
@@ -329,7 +328,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			RoguelikeModel.Instance.RogueInfo.Update(notify);
 		}
 
-		// Token: 0x06033539 RID: 210233 RVA: 0x00BFB234 File Offset: 0x00BF9434
+		// Token: 0x060283A6 RID: 164774 RVA: 0x00B44830 File Offset: 0x00B42A30
 		public void RoguelikeChooseDataNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			RoguelikeChooseDataNotify roguelikeChooseDataNotify = (RoguelikeChooseDataNotify)msg;
@@ -337,14 +336,14 @@ namespace CSharpScript.Game.Module.Roguelike
 			EventSystem.Instance.Emit(EEventName.RoguelikeChooseDataNotify);
 		}
 
-		// Token: 0x0603353A RID: 210234 RVA: 0x00BFB268 File Offset: 0x00BF9468
+		// Token: 0x060283A7 RID: 164775 RVA: 0x00B44864 File Offset: 0x00B42A64
 		public void RoguelikeTalentUnlockNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			RoguelikeTalentUnlockNotify roguelikeTalentUnlockNotify = (RoguelikeTalentUnlockNotify)msg;
 			RoguelikeModel.Instance.SetRoguelikeSkillData(roguelikeTalentUnlockNotify.SkillId, 0);
 		}
 
-		// Token: 0x0603353B RID: 210235 RVA: 0x00BFB290 File Offset: 0x00BF9490
+		// Token: 0x060283A8 RID: 164776 RVA: 0x00B4488C File Offset: 0x00B42A8C
 		public void RoguelikeRefreshGainRequest(int bindId)
 		{
 			RoguelikeRefreshGainRequest roguelikeRefreshGainRequest = Aki.Protocol.RoguelikeRefreshGainRequest.Create();
@@ -355,7 +354,9 @@ namespace CSharpScript.Game.Module.Roguelike
 				RoguelikeRefreshGainResponse roguelikeRefreshGainResponse = (RoguelikeRefreshGainResponse)msg;
 				if (roguelikeRefreshGainResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeScrollingTipsView(roguelikeRefreshGainResponse.ErrorCode, roguelikeRefreshGainResponse.ErrorParams.ToArray<string>());
+					string[] array = new string[roguelikeRefreshGainResponse.ErrorParams.Count];
+					roguelikeRefreshGainResponse.ErrorParams.CopyTo(array, 0);
+					ErrorCodeController.Instance.OpenErrorCodeScrollingTipsView(roguelikeRefreshGainResponse.ErrorCode, array);
 					return;
 				}
 				RoguelikeModel.Instance.SetRoguelikeChooseData(new <>z__ReadOnlySingleElementList<RoguelikeChooseData>(roguelikeRefreshGainResponse.RoguelikeChooseData));
@@ -363,7 +364,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}, 0);
 		}
 
-		// Token: 0x0603353C RID: 210236 RVA: 0x00BFB2EC File Offset: 0x00BF94EC
+		// Token: 0x060283A9 RID: 164777 RVA: 0x00B448E8 File Offset: 0x00B42AE8
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -378,7 +379,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <RoguelikeLastInfoRequestAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603353D RID: 210237 RVA: 0x00BFB328 File Offset: 0x00BF9528
+		// Token: 0x060283AA RID: 164778 RVA: 0x00B44924 File Offset: 0x00B42B24
 		public void EnterCurrentRogueEntrance()
 		{
 			RogueSeasonData seasonData = ActivityRogueController.Instance.GetCurrentActivityData().SeasonData;
@@ -391,14 +392,14 @@ namespace CSharpScript.Game.Module.Roguelike
 			InstanceDungeonEntranceController.Instance.EnterEntrance(rogueSeasonConfigById.Value.InstanceDungeonEntrance, 0, null).Forget<bool>();
 		}
 
-		// Token: 0x0603353E RID: 210238 RVA: 0x00BFB39C File Offset: 0x00BF959C
+		// Token: 0x060283AB RID: 164779 RVA: 0x00B44998 File Offset: 0x00B42B98
 		public void OpenRoguelikeInstanceView()
 		{
 			RoguelikeDungeonViewModel param = new RoguelikeDungeonViewModel();
 			UiManager.Instance.OpenView(EUiViewName.InstanceDungeonEntranceView, param, null);
 		}
 
-		// Token: 0x0603353F RID: 210239 RVA: 0x00BFB3C0 File Offset: 0x00BF95C0
+		// Token: 0x060283AC RID: 164780 RVA: 0x00B449BC File Offset: 0x00B42BBC
 		public void OpenRogueInfoView(RoguelikeInfo rogueInfo = null, bool checkLimit = true, bool showCurrency = true, ERogueInfoViewPage defaultPage = ERogueInfoViewPage.Overview)
 		{
 			if (checkLimit)
@@ -425,7 +426,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			UiManager.Instance.OpenView(EUiViewName.RogueInfoView, rogueInfoViewModel, null);
 		}
 
-		// Token: 0x06033540 RID: 210240 RVA: 0x00BFB46C File Offset: 0x00BF966C
+		// Token: 0x060283AD RID: 164781 RVA: 0x00B44A68 File Offset: 0x00B42C68
 		[NullableContext(1)]
 		public UniTask OpenRoguelikeAchieveView(IRoguelikeAchieveViewInfo viewInfo)
 		{
@@ -437,13 +438,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <OpenRoguelikeAchieveView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033541 RID: 210241 RVA: 0x00BFB4AF File Offset: 0x00BF96AF
+		// Token: 0x060283AE RID: 164782 RVA: 0x00B44AAB File Offset: 0x00B42CAB
 		public void OpenRoguelikeSelectRoleView(int instanceId)
 		{
 			UiManager.Instance.OpenView(EUiViewName.RoguelikeEntranceView, instanceId, null);
 		}
 
-		// Token: 0x06033542 RID: 210242 RVA: 0x00BFB4C8 File Offset: 0x00BF96C8
+		// Token: 0x060283AF RID: 164783 RVA: 0x00B44AC4 File Offset: 0x00B42CC4
 		public void OpenRoguelikeSkillView(int seasonId)
 		{
 			this.RoguelikeTalentInfoRequest(seasonId).ContinueWith(delegate()
@@ -452,7 +453,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			});
 		}
 
-		// Token: 0x06033543 RID: 210243 RVA: 0x00BFB500 File Offset: 0x00BF9700
+		// Token: 0x060283B0 RID: 164784 RVA: 0x00B44AFC File Offset: 0x00B42CFC
 		[NullableContext(1)]
 		private unsafe void OpenRoguelikeBossChallengeResultView(int instId, RogueTowerTrialResultInfo resultInfo)
 		{
@@ -532,7 +533,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			ItemRewardController.Instance.OpenExploreRewardViewNew(exploreRewardViewData2);
 		}
 
-		// Token: 0x06033544 RID: 210244 RVA: 0x00BFB6E4 File Offset: 0x00BF98E4
+		// Token: 0x060283B1 RID: 164785 RVA: 0x00B44CE0 File Offset: 0x00B42EE0
 		public UniTask RoguelikeTalentInfoRequest(int seasonId)
 		{
 			RoguelikeController.<RoguelikeTalentInfoRequest>d__33 <RoguelikeTalentInfoRequest>d__;
@@ -543,7 +544,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <RoguelikeTalentInfoRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033545 RID: 210245 RVA: 0x00BFB728 File Offset: 0x00BF9928
+		// Token: 0x060283B2 RID: 164786 RVA: 0x00B44D24 File Offset: 0x00B42F24
 		[NullableContext(0)]
 		public UniTask<bool> RoguelikeRoleRoomSelectRequest(int roomId, int index)
 		{
@@ -556,7 +557,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <RoguelikeRoleRoomSelectRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033546 RID: 210246 RVA: 0x00BFB774 File Offset: 0x00BF9974
+		// Token: 0x060283B3 RID: 164787 RVA: 0x00B44D70 File Offset: 0x00B42F70
 		[NullableContext(0)]
 		public UniTask<bool> RoguelikeSeasonRewardReceiveRequest([Nullable(1)] List<int> indexList, int? seasonId = null)
 		{
@@ -569,7 +570,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <RoguelikeSeasonRewardReceiveRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033547 RID: 210247 RVA: 0x00BFB7C0 File Offset: 0x00BF99C0
+		// Token: 0x060283B4 RID: 164788 RVA: 0x00B44DBC File Offset: 0x00B42FBC
 		public UniTask RoguelikeTalentLevelUpRequest(int skillId)
 		{
 			RoguelikeController.<RoguelikeTalentLevelUpRequest>d__36 <RoguelikeTalentLevelUpRequest>d__;
@@ -580,7 +581,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <RoguelikeTalentLevelUpRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033548 RID: 210248 RVA: 0x00BFB804 File Offset: 0x00BF9A04
+		// Token: 0x060283B5 RID: 164789 RVA: 0x00B44E00 File Offset: 0x00B43000
 		[NullableContext(0)]
 		public UniTask<bool> RoguelikeStartRequest(bool isContinue, int instanceId, [Nullable(1)] List<int> roleIds, int hotEntryGroupId)
 		{
@@ -595,7 +596,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <RoguelikeStartRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033549 RID: 210249 RVA: 0x00BFB860 File Offset: 0x00BF9A60
+		// Token: 0x060283B6 RID: 164790 RVA: 0x00B44E5C File Offset: 0x00B4305C
 		public void RoguelikeQuitRequest()
 		{
 			if (this.IsFromRogueToNormal.GetValueOrDefault())
@@ -609,14 +610,14 @@ namespace CSharpScript.Game.Module.Roguelike
 				RoguelikeQuitResponse roguelikeQuitResponse = (RoguelikeQuitResponse)msg;
 				if (roguelikeQuitResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(roguelikeQuitResponse.ErrorCode, 15309, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(roguelikeQuitResponse.ErrorCode, 18512, null, true, true);
 				}
 				this.IsFromRogueToNormal = new bool?(!isGuideDungeon);
 				InstanceDungeonModel.Instance.ClearInstanceDungeonInfo();
 			}, 0);
 		}
 
-		// Token: 0x0603354A RID: 210250 RVA: 0x00BFB8BC File Offset: 0x00BF9ABC
+		// Token: 0x060283B7 RID: 164791 RVA: 0x00B44EB8 File Offset: 0x00B430B8
 		public void RoguelikeResultRequest(int instId, Action<bool> callback = null)
 		{
 			if (!this.IsFromRogueToNormal.GetValueOrDefault())
@@ -628,7 +629,7 @@ namespace CSharpScript.Game.Module.Roguelike
 					RoguelikeResultResponse roguelikeResultResponse = (RoguelikeResultResponse)msg;
 					if (roguelikeResultResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 					{
-						ErrorCodeController.Instance.OpenErrorCodeTipView(roguelikeResultResponse.ErrorCode, 28757, null, true, true);
+						ErrorCodeController.Instance.OpenErrorCodeTipView(roguelikeResultResponse.ErrorCode, 15568, null, true, true);
 						Action<bool> callback3 = callback;
 						if (callback3 == null)
 						{
@@ -674,7 +675,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			callback2(false);
 		}
 
-		// Token: 0x0603354B RID: 210251 RVA: 0x00BFB928 File Offset: 0x00BF9B28
+		// Token: 0x060283B8 RID: 164792 RVA: 0x00B44F24 File Offset: 0x00B43124
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -690,7 +691,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <RoguelikeInstExtraInfoRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603354C RID: 210252 RVA: 0x00BFB96C File Offset: 0x00BF9B6C
+		// Token: 0x060283B9 RID: 164793 RVA: 0x00B44F68 File Offset: 0x00B43168
 		public void RogueChooseDataResultRequest(EPerkType perkType)
 		{
 			RogueGainEntry selectRogueGainEntry = RoguelikeModel.Instance.CurrentRogueGainEntry;
@@ -737,12 +738,12 @@ namespace CSharpScript.Game.Module.Roguelike
 				RoguelikeChooseDataResultResponse roguelikeChooseDataResultResponse = (RoguelikeChooseDataResultResponse)msg;
 				if (roguelikeChooseDataResultResponse.ErrorCode == Aki.Protocol.ErrorCode.RogueGainIsSelect)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(roguelikeChooseDataResultResponse.ErrorCode, 26274, roguelikeChooseDataResultResponse.ErrorParams, false, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(roguelikeChooseDataResultResponse.ErrorCode, 18731, roguelikeChooseDataResultResponse.ErrorParams, false, true);
 					return;
 				}
 				if (roguelikeChooseDataResultResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(roguelikeChooseDataResultResponse.ErrorCode, 26274, roguelikeChooseDataResultResponse.ErrorParams, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(roguelikeChooseDataResultResponse.ErrorCode, 18731, roguelikeChooseDataResultResponse.ErrorParams, true, true);
 					return;
 				}
 				RoguelikeChooseData roguelikeChooseDataById = RoguelikeModel.Instance.GetRoguelikeChooseDataById(request.BindId);
@@ -790,7 +791,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}, 0);
 		}
 
-		// Token: 0x0603354D RID: 210253 RVA: 0x00BFBB44 File Offset: 0x00BF9D44
+		// Token: 0x060283BA RID: 164794 RVA: 0x00B45140 File Offset: 0x00B43340
 		[NullableContext(0)]
 		public UniTask<bool> RoguelikeAchieveSaveRecordRequest(int slotId)
 		{
@@ -802,7 +803,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <RoguelikeAchieveSaveRecordRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603354E RID: 210254 RVA: 0x00BFBB88 File Offset: 0x00BF9D88
+		// Token: 0x060283BB RID: 164795 RVA: 0x00B45184 File Offset: 0x00B43384
 		public void RoguelikeAchieveGiveUpRequest(Action<bool> callback = null)
 		{
 			RogueTowerTrialGiveUpTempArchiveRequest message = RogueTowerTrialGiveUpTempArchiveRequest.Create();
@@ -811,7 +812,7 @@ namespace CSharpScript.Game.Module.Roguelike
 				RogueTowerTrialGiveUpTempArchiveResponse rogueTowerTrialGiveUpTempArchiveResponse = (RogueTowerTrialGiveUpTempArchiveResponse)msg;
 				if (rogueTowerTrialGiveUpTempArchiveResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(rogueTowerTrialGiveUpTempArchiveResponse.ErrorCode, 29294, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(rogueTowerTrialGiveUpTempArchiveResponse.ErrorCode, 25299, null, true, true);
 					Action<bool> callback2 = callback;
 					if (callback2 == null)
 					{
@@ -833,7 +834,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}, 0);
 		}
 
-		// Token: 0x0603354F RID: 210255 RVA: 0x00BFBBC8 File Offset: 0x00BF9DC8
+		// Token: 0x060283BC RID: 164796 RVA: 0x00B451C4 File Offset: 0x00B433C4
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -850,7 +851,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <RogueArchiveListRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033550 RID: 210256 RVA: 0x00BFBC0C File Offset: 0x00BF9E0C
+		// Token: 0x060283BD RID: 164797 RVA: 0x00B45208 File Offset: 0x00B43408
 		public void RoguelikeBossChallengeStartRequest(int instId, int slotId, Action<bool> callback = null)
 		{
 			RogueTowerTrialStartRequest rogueTowerTrialStartRequest = RogueTowerTrialStartRequest.Create();
@@ -861,7 +862,7 @@ namespace CSharpScript.Game.Module.Roguelike
 				RogueTowerTrialStartResponse rogueTowerTrialStartResponse = (RogueTowerTrialStartResponse)msg;
 				if (rogueTowerTrialStartResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(rogueTowerTrialStartResponse.ErrorCode, 24439, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(rogueTowerTrialStartResponse.ErrorCode, 23092, null, true, true);
 					Action<bool> callback2 = callback;
 					if (callback2 == null)
 					{
@@ -883,7 +884,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}, 0);
 		}
 
-		// Token: 0x06033551 RID: 210257 RVA: 0x00BFBC58 File Offset: 0x00BF9E58
+		// Token: 0x060283BE RID: 164798 RVA: 0x00B45254 File Offset: 0x00B43454
 		public void RoguelikeBossChallengeSelectBossRequest(int id, Action<bool> callback = null)
 		{
 			RogueTowerTrialSelectBossRequest rogueTowerTrialSelectBossRequest = RogueTowerTrialSelectBossRequest.Create();
@@ -893,7 +894,7 @@ namespace CSharpScript.Game.Module.Roguelike
 				RogueTowerTrialSelectBossResponse rogueTowerTrialSelectBossResponse = (RogueTowerTrialSelectBossResponse)msg;
 				if (rogueTowerTrialSelectBossResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(rogueTowerTrialSelectBossResponse.ErrorCode, 22338, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(rogueTowerTrialSelectBossResponse.ErrorCode, 28302, null, true, true);
 					Action<bool> callback2 = callback;
 					if (callback2 == null)
 					{
@@ -915,7 +916,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}, 0);
 		}
 
-		// Token: 0x06033552 RID: 210258 RVA: 0x00BFBC9C File Offset: 0x00BF9E9C
+		// Token: 0x060283BF RID: 164799 RVA: 0x00B45298 File Offset: 0x00B43498
 		public void RoguelikeBossChallengeResultRequest(int instId, Action<bool> callback = null)
 		{
 			RogueTowerTrialResultRequest rogueTowerTrialResultRequest = RogueTowerTrialResultRequest.Create();
@@ -925,7 +926,7 @@ namespace CSharpScript.Game.Module.Roguelike
 				RogueTowerTrialResultResponse rogueTowerTrialResultResponse = (RogueTowerTrialResultResponse)msg;
 				if (rogueTowerTrialResultResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(rogueTowerTrialResultResponse.ErrorCode, 15310, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(rogueTowerTrialResultResponse.ErrorCode, 19217, null, true, true);
 					this.OpenRoguelikeBossChallengeResultView(instId, null);
 					Action<bool> callback2 = callback;
 					if (callback2 == null)
@@ -949,7 +950,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}, 0);
 		}
 
-		// Token: 0x06033553 RID: 210259 RVA: 0x00BFBCF4 File Offset: 0x00BF9EF4
+		// Token: 0x060283C0 RID: 164800 RVA: 0x00B452F0 File Offset: 0x00B434F0
 		protected override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.RoguelikeSubLevelNotify, new Action<IMessage, Net.CallbackStatus>(this.RoguelikeSubLevelNotify));
@@ -968,7 +969,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			Net.Instance.Register(ENotifyMessageId.RogueTowerTrialResultNotify, new Action<IMessage, Net.CallbackStatus>(this.OnRogueTowerTrialResultNotify));
 		}
 
-		// Token: 0x06033554 RID: 210260 RVA: 0x00BFBE8C File Offset: 0x00BFA08C
+		// Token: 0x060283C1 RID: 164801 RVA: 0x00B45488 File Offset: 0x00B43688
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.RoguelikeSubLevelNotify);
@@ -986,7 +987,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			Net.Instance.UnRegister(ENotifyMessageId.RogueTowerTrialResultNotify);
 		}
 
-		// Token: 0x06033555 RID: 210261 RVA: 0x00BFBF6C File Offset: 0x00BFA16C
+		// Token: 0x060283C2 RID: 164802 RVA: 0x00B45568 File Offset: 0x00B43768
 		private void OnRogueBlackFlowerNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			RogueBlackFlowerNotify notify = (RogueBlackFlowerNotify)msg;
@@ -1021,19 +1022,19 @@ namespace CSharpScript.Game.Module.Roguelike
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x06033556 RID: 210262 RVA: 0x00BFC078 File Offset: 0x00BFA278
+		// Token: 0x060283C3 RID: 164803 RVA: 0x00B45674 File Offset: 0x00B43874
 		private void RoguelikeRoleRoomNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			RoguelikeRoleRoomNotify roguelikeRoleRoomNotify = (RoguelikeRoleRoomNotify)msg;
 			RoguelikeCharacterSelectOpenParam param = new RoguelikeCharacterSelectOpenParam
 			{
 				Index = roguelikeRoleRoomNotify.Index,
-				RoomIdList = roguelikeRoleRoomNotify.RoleRoomIds.ToList<int>()
+				RoomIdList = new List<int>(roguelikeRoleRoomNotify.RoleRoomIds)
 			};
 			UiManager.Instance.OpenView(EUiViewName.RogueCharacterRoomSelectView, param, null);
 		}
 
-		// Token: 0x06033557 RID: 210263 RVA: 0x00BFC0C0 File Offset: 0x00BFA2C0
+		// Token: 0x060283C4 RID: 164804 RVA: 0x00B456BC File Offset: 0x00B438BC
 		private void RoguelikeResultNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			RoguelikeResultNotify roguelikeResultNotify = (RoguelikeResultNotify)msg;
@@ -1054,7 +1055,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			UiManager.Instance.OpenView(EUiViewName.RoguelikeSettleView, resultInfo, null);
 		}
 
-		// Token: 0x06033558 RID: 210264 RVA: 0x00BFC155 File Offset: 0x00BFA355
+		// Token: 0x060283C5 RID: 164805 RVA: 0x00B45751 File Offset: 0x00B43951
 		[NullableContext(1)]
 		private bool TryExitRoguelikeWithoutSettleView(RoguelikeResultInfo resultInfo)
 		{
@@ -1069,7 +1070,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return true;
 		}
 
-		// Token: 0x06033559 RID: 210265 RVA: 0x00BFC17C File Offset: 0x00BFA37C
+		// Token: 0x060283C6 RID: 164806 RVA: 0x00B45778 File Offset: 0x00B43978
 		private unsafe void RoguelikeRoomInfoNotify(IMessage msg, Net.CallbackStatus status)
 		{
 			RoguelikeRoomInfoNotify roguelikeRoomInfoNotify = (RoguelikeRoomInfoNotify)msg;
@@ -1110,7 +1111,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			instance2.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 4));
 		}
 
-		// Token: 0x0603355A RID: 210266 RVA: 0x00BFC3E0 File Offset: 0x00BFA5E0
+		// Token: 0x060283C7 RID: 164807 RVA: 0x00B459DC File Offset: 0x00B43BDC
 		private unsafe void OnRogueInfoNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			RoguelikeInfoNotify roguelikeInfoNotify = (RoguelikeInfoNotify)msg;
@@ -1133,7 +1134,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x0603355B RID: 210267 RVA: 0x00BFC4B0 File Offset: 0x00BFA6B0
+		// Token: 0x060283C8 RID: 164808 RVA: 0x00B45AAC File Offset: 0x00B43CAC
 		private void OnRogueTowerTrialSelectBossNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			RogueTowerTrialSelectBossNotify rogueTowerTrialSelectBossNotify = (RogueTowerTrialSelectBossNotify)msg;
@@ -1141,10 +1142,10 @@ namespace CSharpScript.Game.Module.Roguelike
 			{
 				UiManager.Instance.CloseView(EUiViewName.RoguelikeBossChallengeView, null);
 			}
-			UiManager.Instance.OpenView(EUiViewName.RoguelikeBossChallengeView, rogueTowerTrialSelectBossNotify.BossInfos.ToList<RogueTowerTrialBossInfo>(), null);
+			UiManager.Instance.OpenView(EUiViewName.RoguelikeBossChallengeView, new List<RogueTowerTrialBossInfo>(rogueTowerTrialSelectBossNotify.BossInfos), null);
 		}
 
-		// Token: 0x0603355C RID: 210268 RVA: 0x00BFC500 File Offset: 0x00BFA700
+		// Token: 0x060283C9 RID: 164809 RVA: 0x00B45AFC File Offset: 0x00B43CFC
 		private void OnRogueTowerTrialResultNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			RogueTowerTrialResultNotify rogueTowerTrialResultNotify = (RogueTowerTrialResultNotify)msg;
@@ -1152,7 +1153,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.OpenRoguelikeBossChallengeResultView(instanceId, rogueTowerTrialResultNotify.RogueTowerTrialResultInfo);
 		}
 
-		// Token: 0x0603355D RID: 210269 RVA: 0x00BFC52C File Offset: 0x00BFA72C
+		// Token: 0x060283CA RID: 164810 RVA: 0x00B45B28 File Offset: 0x00B43D28
 		private void RoguelikeSubLevelNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			RoguelikeController.<>c__DisplayClass58_0 CS$<>8__locals1 = new RoguelikeController.<>c__DisplayClass58_0();
@@ -1171,7 +1172,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			TaskSystem.Instance.Run();
 		}
 
-		// Token: 0x0603355E RID: 210270 RVA: 0x00BFC584 File Offset: 0x00BFA784
+		// Token: 0x060283CB RID: 164811 RVA: 0x00B45B80 File Offset: 0x00B43D80
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -1183,44 +1184,12 @@ namespace CSharpScript.Game.Module.Roguelike
 		})]
 		private ValueTuple<string[], string[]> FilterSameSubLevel(RoguelikeSubLevelNotify notify)
 		{
-			List<string> list = new List<string>();
-			List<string> list2 = new List<string>();
-			foreach (string text in notify.UnLoadSubLevels)
-			{
-				bool flag = false;
-				foreach (string b in notify.LoadSubLevels)
-				{
-					if (text == b)
-					{
-						flag = true;
-						break;
-					}
-				}
-				if (!flag)
-				{
-					list.Add(text);
-				}
-			}
-			foreach (string text2 in notify.LoadSubLevels)
-			{
-				bool flag2 = false;
-				foreach (string b2 in notify.UnLoadSubLevels)
-				{
-					if (text2 == b2)
-					{
-						flag2 = true;
-						break;
-					}
-				}
-				if (!flag2)
-				{
-					list2.Add(text2);
-				}
-			}
-			return new ValueTuple<string[], string[]>(list.ToArray(), list2.ToArray());
+			HashSet<string> loadSet = new HashSet<string>(notify.LoadSubLevels, StringComparer.Ordinal);
+			HashSet<string> unloadSet = new HashSet<string>(notify.UnLoadSubLevels, StringComparer.Ordinal);
+			return new ValueTuple<string[], string[]>(NoLinq.WhereToArray<string>(notify.UnLoadSubLevels, (string item) => !loadSet.Contains(item)), NoLinq.WhereToArray<string>(notify.LoadSubLevels, (string item) => !unloadSet.Contains(item)));
 		}
 
-		// Token: 0x0603355F RID: 210271 RVA: 0x00BFC6D0 File Offset: 0x00BFA8D0
+		// Token: 0x060283CC RID: 164812 RVA: 0x00B45BF4 File Offset: 0x00B43DF4
 		private void RogueBlackFlowerRequest(int entityId, bool isReceive)
 		{
 			RogueBlackFlowerRequest rogueBlackFlowerRequest = Aki.Protocol.RogueBlackFlowerRequest.Create();
@@ -1231,12 +1200,12 @@ namespace CSharpScript.Game.Module.Roguelike
 				RogueBlackFlowerResponse rogueBlackFlowerResponse = (RogueBlackFlowerResponse)msg;
 				if (rogueBlackFlowerResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(rogueBlackFlowerResponse.ErrorCode, 18239, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(rogueBlackFlowerResponse.ErrorCode, 19376, null, true, true);
 				}
 			}, 0);
 		}
 
-		// Token: 0x06033560 RID: 210272 RVA: 0x00BFC724 File Offset: 0x00BFA924
+		// Token: 0x060283CD RID: 164813 RVA: 0x00B45C48 File Offset: 0x00B43E48
 		private UniTask RoguelikeGotoNextRoomRequest()
 		{
 			RoguelikeController.<RoguelikeGotoNextRoomRequest>d__61 <RoguelikeGotoNextRoomRequest>d__;
@@ -1246,7 +1215,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <RoguelikeGotoNextRoomRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033561 RID: 210273 RVA: 0x00BFC760 File Offset: 0x00BFA960
+		// Token: 0x060283CE RID: 164814 RVA: 0x00B45C84 File Offset: 0x00B43E84
 		public UniTask RoguelikeGiveUpGainRequest(int bindId)
 		{
 			RoguelikeController.<RoguelikeGiveUpGainRequest>d__62 <RoguelikeGiveUpGainRequest>d__;
@@ -1257,7 +1226,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <RoguelikeGiveUpGainRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033562 RID: 210274 RVA: 0x00BFC7A4 File Offset: 0x00BFA9A4
+		// Token: 0x060283CF RID: 164815 RVA: 0x00B45CC8 File Offset: 0x00B43EC8
 		[NullableContext(0)]
 		public UniTask<bool> RoguelikeTokenReceiveRequest(int seasonId, int id)
 		{
@@ -1270,7 +1239,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <RoguelikeTokenReceiveRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033563 RID: 210275 RVA: 0x00BFC7F0 File Offset: 0x00BFA9F0
+		// Token: 0x060283D0 RID: 164816 RVA: 0x00B45D14 File Offset: 0x00B43F14
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -1286,7 +1255,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <RoguelikePopularEntriesInfoRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033564 RID: 210276 RVA: 0x00BFC834 File Offset: 0x00BFAA34
+		// Token: 0x060283D1 RID: 164817 RVA: 0x00B45D58 File Offset: 0x00B43F58
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -1303,7 +1272,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <RoguelikeTrialRoleInfoRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033565 RID: 210277 RVA: 0x00BFC878 File Offset: 0x00BFAA78
+		// Token: 0x060283D2 RID: 164818 RVA: 0x00B45D9C File Offset: 0x00B43F9C
 		[NullableContext(1)]
 		public UniTask RoguelikePopularEntriesChangeRequest(int instanceId, List<int> entries)
 		{
@@ -1316,7 +1285,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <RoguelikePopularEntriesChangeRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033566 RID: 210278 RVA: 0x00BFC8C4 File Offset: 0x00BFAAC4
+		// Token: 0x060283D3 RID: 164819 RVA: 0x00B45DE8 File Offset: 0x00B43FE8
 		public unsafe Action<bool?> CreateCloseViewCallBack([Nullable(1)] RoguelikeChooseDataResultResponse notify, Action<bool?> finishCallback = null)
 		{
 			RogueViewPackage rogueViewPackage = notify.RogueViewPackage;
@@ -1406,8 +1375,8 @@ namespace CSharpScript.Game.Module.Roguelike
 			return callback;
 		}
 
-		// Token: 0x17007E9C RID: 32412
-		// (get) Token: 0x06033567 RID: 210279 RVA: 0x00BFCA30 File Offset: 0x00BFAC30
+		// Token: 0x1700524C RID: 21068
+		// (get) Token: 0x060283D4 RID: 164820 RVA: 0x00B45F54 File Offset: 0x00B44154
 		[Nullable(1)]
 		public static RoguelikeController Instance
 		{
@@ -1418,7 +1387,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x06033568 RID: 210280 RVA: 0x00BFCA37 File Offset: 0x00BFAC37
+		// Token: 0x060283D5 RID: 164821 RVA: 0x00B45F5B File Offset: 0x00B4415B
 		[NullableContext(1)]
 		public static RoguelikeController GetOrCreateInstance()
 		{
@@ -1429,7 +1398,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return RoguelikeController._Instance;
 		}
 
-		// Token: 0x06033569 RID: 210281 RVA: 0x00BFCA4B File Offset: 0x00BFAC4B
+		// Token: 0x060283D6 RID: 164822 RVA: 0x00B45F6F File Offset: 0x00B4416F
 		public static bool CreateInstance()
 		{
 			if (RoguelikeController._Instance != null)
@@ -1440,40 +1409,40 @@ namespace CSharpScript.Game.Module.Roguelike
 			return true;
 		}
 
-		// Token: 0x0603356A RID: 210282 RVA: 0x00BFCA61 File Offset: 0x00BFAC61
+		// Token: 0x060283D7 RID: 164823 RVA: 0x00B45F85 File Offset: 0x00B44185
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603356B RID: 210283 RVA: 0x00BFCA63 File Offset: 0x00BFAC63
+		// Token: 0x060283D8 RID: 164824 RVA: 0x00B45F87 File Offset: 0x00B44187
 		public static void ResetStaticDefaultValue()
 		{
 			RoguelikeController._Instance = null;
 		}
 
-		// Token: 0x0603356C RID: 210284 RVA: 0x00BFCA6B File Offset: 0x00BFAC6B
+		// Token: 0x060283D9 RID: 164825 RVA: 0x00B45F8F File Offset: 0x00B4418F
 		static RoguelikeController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(RoguelikeController.CreateStaticDefaultValue), new Action(RoguelikeController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401B45A RID: 111706
+		// Token: 0x04015E2D RID: 89645
 		private bool? IsFromRogueToNormal = new bool?(false);
 
-		// Token: 0x0401B45B RID: 111707
+		// Token: 0x04015E2E RID: 89646
 		[Nullable(1)]
 		public string CurrentFlowListName = "";
 
-		// Token: 0x0401B45C RID: 111708
+		// Token: 0x04015E2F RID: 89647
 		public int CurrentFlowId;
 
-		// Token: 0x0401B45D RID: 111709
+		// Token: 0x04015E30 RID: 89648
 		public int CurrentStateId;
 
-		// Token: 0x0401B45E RID: 111710
+		// Token: 0x04015E31 RID: 89649
 		public int RandomEventIndex;
 
-		// Token: 0x0401B45F RID: 111711
+		// Token: 0x04015E32 RID: 89650
 		private static RoguelikeController _Instance;
 	}
 }

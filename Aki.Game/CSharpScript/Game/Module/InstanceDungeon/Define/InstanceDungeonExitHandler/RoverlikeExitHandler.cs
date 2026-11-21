@@ -5,16 +5,16 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.Define.InstanceDungeonExitHandler
 {
-	// Token: 0x020058FA RID: 22778
+	// Token: 0x020048D3 RID: 18643
 	public class RoverlikeExitHandler : InstanceDungeonExitHandlerBase
 	{
-		// Token: 0x06039D3C RID: 236860 RVA: 0x00DBC498 File Offset: 0x00DBA698
+		// Token: 0x0602EC62 RID: 191586 RVA: 0x00D0B464 File Offset: 0x00D09664
 		public override bool Checker()
 		{
 			return RoverlikeController.Instance.CheckInRoverlike();
 		}
 
-		// Token: 0x06039D3D RID: 236861 RVA: 0x00DBC4A4 File Offset: 0x00DBA6A4
+		// Token: 0x0602EC63 RID: 191587 RVA: 0x00D0B470 File Offset: 0x00D09670
 		[NullableContext(2)]
 		public override void HandleExit(InstanceDungeonExitHandlerData data)
 		{

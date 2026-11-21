@@ -7,18 +7,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.FlagChallenge
 {
-	// Token: 0x02005A4E RID: 23118
+	// Token: 0x02004A2A RID: 18986
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FlagChallengeAreaStrongholdItem : UiPanelBase
 	{
-		// Token: 0x0603A9E6 RID: 240102 RVA: 0x00DF4174 File Offset: 0x00DF2374
+		// Token: 0x0602F92F RID: 194863 RVA: 0x00D446F8 File Offset: 0x00D428F8
 		public FlagChallengeAreaStrongholdItem(FlagChallengeStrongholdData data)
 		{
 			this.Data = data;
 		}
 
-		// Token: 0x0603A9E7 RID: 240103 RVA: 0x00DF41CC File Offset: 0x00DF23CC
+		// Token: 0x0602F930 RID: 194864 RVA: 0x00D44750 File Offset: 0x00D42950
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			};
 		}
 
-		// Token: 0x0603A9E8 RID: 240104 RVA: 0x00DF42E4 File Offset: 0x00DF24E4
+		// Token: 0x0602F931 RID: 194865 RVA: 0x00D44868 File Offset: 0x00D42A68
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new UiSequencePlayer(this.RootItem);
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			}
 		}
 
-		// Token: 0x0603A9E9 RID: 240105 RVA: 0x00DF4549 File Offset: 0x00DF2749
+		// Token: 0x0602F932 RID: 194866 RVA: 0x00D44ACD File Offset: 0x00D42CCD
 		protected override void OnBeforeDestroy()
 		{
 			UiSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -120,13 +120,13 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			this.SequencePlayer = null;
 		}
 
-		// Token: 0x0603A9EA RID: 240106 RVA: 0x00DF4563 File Offset: 0x00DF2763
+		// Token: 0x0602F933 RID: 194867 RVA: 0x00D44AE7 File Offset: 0x00D42CE7
 		public void SetClickCallback(Action<int> callback)
 		{
 			this.ClickCallback = callback;
 		}
 
-		// Token: 0x0603A9EB RID: 240107 RVA: 0x00DF456C File Offset: 0x00DF276C
+		// Token: 0x0602F934 RID: 194868 RVA: 0x00D44AF0 File Offset: 0x00D42CF0
 		public void SetSelected(bool isSelected, bool bFireEvent = false)
 		{
 			EToggleState state = isSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			this.IsSelected = isSelected;
 		}
 
-		// Token: 0x0603A9EC RID: 240108 RVA: 0x00DF45A5 File Offset: 0x00DF27A5
+		// Token: 0x0602F935 RID: 194869 RVA: 0x00D44B29 File Offset: 0x00D42D29
 		private void OnClickToggle(EToggleState state)
 		{
 			this.SetSelected(true, false);
@@ -147,19 +147,19 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			clickCallback(this.Data.Id);
 		}
 
-		// Token: 0x0603A9ED RID: 240109 RVA: 0x00DF45CA File Offset: 0x00DF27CA
+		// Token: 0x0602F936 RID: 194870 RVA: 0x00D44B4E File Offset: 0x00D42D4E
 		private bool OnCanExecuteChange()
 		{
 			return !this.IsSelected;
 		}
 
-		// Token: 0x0603A9EE RID: 240110 RVA: 0x00DF45D5 File Offset: 0x00DF27D5
+		// Token: 0x0602F937 RID: 194871 RVA: 0x00D44B59 File Offset: 0x00D42D59
 		public bool GetIsBoss()
 		{
 			return this.Data.IsBossStronghold();
 		}
 
-		// Token: 0x0401E8C9 RID: 125129
+		// Token: 0x04019370 RID: 103280
 		private readonly Dictionary<EFlagChallengeUiStyleType, string> rollTexColor = new Dictionary<EFlagChallengeUiStyleType, string>
 		{
 			{
@@ -180,18 +180,18 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			}
 		};
 
-		// Token: 0x0401E8CA RID: 125130
+		// Token: 0x04019371 RID: 103281
 		private readonly FlagChallengeStrongholdData Data;
 
-		// Token: 0x0401E8CB RID: 125131
+		// Token: 0x04019372 RID: 103282
 		[Nullable(2)]
 		private Action<int> ClickCallback;
 
-		// Token: 0x0401E8CC RID: 125132
+		// Token: 0x04019373 RID: 103283
 		[Nullable(2)]
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x0401E8CD RID: 125133
+		// Token: 0x04019374 RID: 103284
 		private bool IsSelected;
 	}
 }

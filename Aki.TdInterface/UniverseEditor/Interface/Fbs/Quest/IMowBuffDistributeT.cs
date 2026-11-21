@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003F4E RID: 16206
+	// Token: 0x0200438C RID: 17292
 	public class IMowBuffDistributeT
 	{
-		// Token: 0x170070B5 RID: 28853
-		// (get) Token: 0x060170BA RID: 94394 RVA: 0x00352B04 File Offset: 0x00350D04
-		// (set) Token: 0x060170BB RID: 94395 RVA: 0x00352B0C File Offset: 0x00350D0C
+		// Token: 0x170076A6 RID: 30374
+		// (get) Token: 0x0601871C RID: 100124 RVA: 0x0037BF78 File Offset: 0x0037A178
+		// (set) Token: 0x0601871D RID: 100125 RVA: 0x0037BF80 File Offset: 0x0037A180
 		public EShowUiType Type { get; set; }
 
-		// Token: 0x170070B6 RID: 28854
-		// (get) Token: 0x060170BC RID: 94396 RVA: 0x00352B15 File Offset: 0x00350D15
-		// (set) Token: 0x060170BD RID: 94397 RVA: 0x00352B1D File Offset: 0x00350D1D
+		// Token: 0x170076A7 RID: 30375
+		// (get) Token: 0x0601871E RID: 100126 RVA: 0x0037BF89 File Offset: 0x0037A189
+		// (set) Token: 0x0601871F RID: 100127 RVA: 0x0037BF91 File Offset: 0x0037A191
 		public int BoardId { get; set; }
 
-		// Token: 0x060170BE RID: 94398 RVA: 0x00352B26 File Offset: 0x00350D26
+		// Token: 0x06018720 RID: 100128 RVA: 0x0037BF9A File Offset: 0x0037A19A
 		public IMowBuffDistributeT()
 		{
 			this.Type = EShowUiType.All;

@@ -1,22 +1,22 @@
 ﻿using System;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02003450 RID: 13392
+// Token: 0x020029C4 RID: 10692
 public class VisionLevelUpSettingRedDot : RedDotBase
 {
-	// Token: 0x0601CE5B RID: 118363 RVA: 0x0080E23E File Offset: 0x0080C43E
+	// Token: 0x0601AB5B RID: 109403 RVA: 0x00834926 File Offset: 0x00832B26
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.RefreshVisionLevelUpSettingRedPoint, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CE5C RID: 118364 RVA: 0x0080E25C File Offset: 0x0080C45C
+	// Token: 0x0601AB5C RID: 109404 RVA: 0x00834944 File Offset: 0x00832B44
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.RefreshVisionLevelUpSettingRedPoint, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CE5D RID: 118365 RVA: 0x0080E27A File Offset: 0x0080C47A
+	// Token: 0x0601AB5D RID: 109405 RVA: 0x00834962 File Offset: 0x00832B62
 	protected override bool OnCheck(int uId = 0)
 	{
 		return PhantomBattleModel.Instance.CheckVisionLevelUpSettingRedDot();

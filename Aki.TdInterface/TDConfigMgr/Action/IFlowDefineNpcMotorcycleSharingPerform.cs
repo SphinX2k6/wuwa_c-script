@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A8B RID: 6795
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001C20 RID: 7200
 	public class IFlowDefineNpcMotorcycleSharingPerform : IFlowDefineNpcGroupPerformType
 	{
-		// Token: 0x06009184 RID: 37252 RVA: 0x00152A98 File Offset: 0x00150C98
+		// Token: 0x060098EE RID: 39150 RVA: 0x001629C4 File Offset: 0x00160BC4
 		private IFlowDefineNpcMotorcycleSharingPerform_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009185 RID: 37253 RVA: 0x00152AD0 File Offset: 0x00150CD0
+		// Token: 0x060098EF RID: 39151 RVA: 0x001629FC File Offset: 0x00160BFC
 		public static IFlowDefineNpcMotorcycleSharingPerform Create([Nullable(2)] IFlowDefineNpcMotorcycleSharingPerform instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009186 RID: 37254 RVA: 0x00152AE3 File Offset: 0x00150CE3
+		// Token: 0x060098F0 RID: 39152 RVA: 0x00162A0F File Offset: 0x00160C0F
 		public static IFlowDefineNpcMotorcycleSharingPerform CreateFromSetValue([Nullable(2)] IFlowDefineNpcMotorcycleSharingPerform_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009187 RID: 37255 RVA: 0x00152AF6 File Offset: 0x00150CF6
+		// Token: 0x060098F1 RID: 39153 RVA: 0x00162A22 File Offset: 0x00160C22
 		public new IFlowDefineNpcMotorcycleSharingPerform_SetValue ToSetValue()
 		{
 			return new IFlowDefineNpcMotorcycleSharingPerform_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002E47 RID: 11847
-		// (get) Token: 0x06009188 RID: 37256 RVA: 0x00152B15 File Offset: 0x00150D15
-		// (set) Token: 0x06009189 RID: 37257 RVA: 0x00152B40 File Offset: 0x00150D40
+		// Token: 0x17003054 RID: 12372
+		// (get) Token: 0x060098F2 RID: 39154 RVA: 0x00162A41 File Offset: 0x00160C41
+		// (set) Token: 0x060098F3 RID: 39155 RVA: 0x00162A6C File Offset: 0x00160C6C
 		public override ENpcGroupPerformType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002E48 RID: 11848
-		// (get) Token: 0x0600918A RID: 37258 RVA: 0x00152B4E File Offset: 0x00150D4E
-		// (set) Token: 0x0600918B RID: 37259 RVA: 0x00152B79 File Offset: 0x00150D79
+		// Token: 0x17003055 RID: 12373
+		// (get) Token: 0x060098F4 RID: 39156 RVA: 0x00162A7A File Offset: 0x00160C7A
+		// (set) Token: 0x060098F5 RID: 39157 RVA: 0x00162AA5 File Offset: 0x00160CA5
 		public virtual string Key
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040059B8 RID: 22968
+		// Token: 0x04005E1D RID: 24093
 		[Nullable(2)]
 		protected new IFlowDefineNpcMotorcycleSharingPerform FbInstance;
 
-		// Token: 0x040059B9 RID: 22969
+		// Token: 0x04005E1E RID: 24094
 		[Nullable(2)]
 		protected new IFlowDefineNpcMotorcycleSharingPerform_SetValue PocoInterface;
 	}

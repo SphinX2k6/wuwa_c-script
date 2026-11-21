@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005D0 RID: 1488
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200065F RID: 1631
 	public class IPasserbyNpcSpline
 	{
-		// Token: 0x06001F7E RID: 8062 RVA: 0x0005850C File Offset: 0x0005670C
+		// Token: 0x06002240 RID: 8768 RVA: 0x0005EA58 File Offset: 0x0005CC58
 		private IPasserbyNpcSpline_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001F7F RID: 8063 RVA: 0x00058544 File Offset: 0x00056744
+		// Token: 0x06002241 RID: 8769 RVA: 0x0005EA90 File Offset: 0x0005CC90
 		public static IPasserbyNpcSpline Create([Nullable(2)] IPasserbyNpcSpline instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001F80 RID: 8064 RVA: 0x00058557 File Offset: 0x00056757
+		// Token: 0x06002242 RID: 8770 RVA: 0x0005EAA3 File Offset: 0x0005CCA3
 		public static IPasserbyNpcSpline CreateFromSetValue([Nullable(2)] IPasserbyNpcSpline_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001F81 RID: 8065 RVA: 0x0005856C File Offset: 0x0005676C
+		// Token: 0x06002243 RID: 8771 RVA: 0x0005EAB8 File Offset: 0x0005CCB8
 		public IPasserbyNpcSpline_SetValue ToSetValue()
 		{
 			return new IPasserbyNpcSpline_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000866 RID: 2150
-		// (get) Token: 0x06001F82 RID: 8066 RVA: 0x000585BA File Offset: 0x000567BA
-		// (set) Token: 0x06001F83 RID: 8067 RVA: 0x000585E5 File Offset: 0x000567E5
+		// Token: 0x17000910 RID: 2320
+		// (get) Token: 0x06002244 RID: 8772 RVA: 0x0005EB06 File Offset: 0x0005CD06
+		// (set) Token: 0x06002245 RID: 8773 RVA: 0x0005EB31 File Offset: 0x0005CD31
 		public virtual int SplineEntityId
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000867 RID: 2151
-		// (get) Token: 0x06001F84 RID: 8068 RVA: 0x000585F3 File Offset: 0x000567F3
-		// (set) Token: 0x06001F85 RID: 8069 RVA: 0x0005861E File Offset: 0x0005681E
+		// Token: 0x17000911 RID: 2321
+		// (get) Token: 0x06002246 RID: 8774 RVA: 0x0005EB3F File Offset: 0x0005CD3F
+		// (set) Token: 0x06002247 RID: 8775 RVA: 0x0005EB6A File Offset: 0x0005CD6A
 		public virtual int SpawnWeight
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000868 RID: 2152
-		// (get) Token: 0x06001F86 RID: 8070 RVA: 0x0005862C File Offset: 0x0005682C
-		// (set) Token: 0x06001F87 RID: 8071 RVA: 0x00058666 File Offset: 0x00056866
+		// Token: 0x17000912 RID: 2322
+		// (get) Token: 0x06002248 RID: 8776 RVA: 0x0005EB78 File Offset: 0x0005CD78
+		// (set) Token: 0x06002249 RID: 8777 RVA: 0x0005EBB2 File Offset: 0x0005CDB2
 		public virtual bool? IsLoop
 		{
 			get
@@ -133,9 +131,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000869 RID: 2153
-		// (get) Token: 0x06001F88 RID: 8072 RVA: 0x00058674 File Offset: 0x00056874
-		// (set) Token: 0x06001F89 RID: 8073 RVA: 0x000586D5 File Offset: 0x000568D5
+		// Token: 0x17000913 RID: 2323
+		// (get) Token: 0x0600224A RID: 8778 RVA: 0x0005EBC0 File Offset: 0x0005CDC0
+		// (set) Token: 0x0600224B RID: 8779 RVA: 0x0005EC21 File Offset: 0x0005CE21
 		[Nullable(2)]
 		public virtual IPasserbyNpcMoveState MoveState
 		{
@@ -166,9 +164,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700086A RID: 2154
-		// (get) Token: 0x06001F8A RID: 8074 RVA: 0x000586EC File Offset: 0x000568EC
-		// (set) Token: 0x06001F8B RID: 8075 RVA: 0x00058726 File Offset: 0x00056926
+		// Token: 0x17000914 RID: 2324
+		// (get) Token: 0x0600224C RID: 8780 RVA: 0x0005EC38 File Offset: 0x0005CE38
+		// (set) Token: 0x0600224D RID: 8781 RVA: 0x0005EC72 File Offset: 0x0005CE72
 		public virtual bool? IsIkEnabled
 		{
 			get
@@ -190,18 +188,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400163E RID: 5694
+		// Token: 0x0400180F RID: 6159
 		[Nullable(2)]
 		protected IPasserbyNpcSpline FbInstance;
 
-		// Token: 0x0400163F RID: 5695
+		// Token: 0x04001810 RID: 6160
 		[Nullable(2)]
 		protected IPasserbyNpcSpline_SetValue PocoInterface;
 
-		// Token: 0x04001640 RID: 5696
+		// Token: 0x04001811 RID: 6161
 		private IPasserbyNpcMoveState _MoveStateCache;
 
-		// Token: 0x04001641 RID: 5697
+		// Token: 0x04001812 RID: 6162
 		private bool _MoveStateInited;
 	}
 }

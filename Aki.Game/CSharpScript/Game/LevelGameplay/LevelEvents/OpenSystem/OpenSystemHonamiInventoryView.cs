@@ -7,17 +7,17 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents.OpenSystem
 {
-	// Token: 0x02006BEE RID: 27630
+	// Token: 0x02005D67 RID: 23911
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class OpenSystemHonamiInventoryView : OpenSystemBase
 	{
-		// Token: 0x060443DE RID: 279518 RVA: 0x010D15C3 File Offset: 0x010CF7C3
+		// Token: 0x0603A536 RID: 238902 RVA: 0x0107B517 File Offset: 0x01079717
 		public OpenSystemHonamiInventoryView(LevelEventOpenSystem eventBase) : base(eventBase)
 		{
 		}
 
-		// Token: 0x060443DF RID: 279519 RVA: 0x010D15CC File Offset: 0x010CF7CC
+		// Token: 0x0603A537 RID: 238903 RVA: 0x0107B520 File Offset: 0x01079720
 		[return: Nullable(0)]
 		public override UniTask<bool> ExecuteOpenView(OpenSystemBoard inParams, GeneralContext context)
 		{
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents.OpenSystem
 			return <ExecuteOpenView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060443E0 RID: 279520 RVA: 0x010D1607 File Offset: 0x010CF807
+		// Token: 0x0603A538 RID: 238904 RVA: 0x0107B55B File Offset: 0x0107975B
 		[NullableContext(2)]
 		public override EUiViewName? GetViewName(OpenSystemBoard inParams = null, GeneralContext context = null)
 		{

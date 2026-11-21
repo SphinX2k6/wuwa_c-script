@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D82 RID: 7554
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F93 RID: 8083
 	public class IQuestVarContext : IVarContext
 	{
-		// Token: 0x0600A1E5 RID: 41445 RVA: 0x001707D0 File Offset: 0x0016E9D0
+		// Token: 0x0600ABD1 RID: 43985 RVA: 0x00184BF4 File Offset: 0x00182DF4
 		private IQuestVarContext_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A1E6 RID: 41446 RVA: 0x00170808 File Offset: 0x0016EA08
+		// Token: 0x0600ABD2 RID: 43986 RVA: 0x00184C2C File Offset: 0x00182E2C
 		public static IQuestVarContext Create([Nullable(2)] IQuestVarContext instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A1E7 RID: 41447 RVA: 0x0017081B File Offset: 0x0016EA1B
+		// Token: 0x0600ABD3 RID: 43987 RVA: 0x00184C3F File Offset: 0x00182E3F
 		public static IQuestVarContext CreateFromSetValue([Nullable(2)] IQuestVarContext_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A1E8 RID: 41448 RVA: 0x0017082E File Offset: 0x0016EA2E
+		// Token: 0x0600ABD4 RID: 43988 RVA: 0x00184C52 File Offset: 0x00182E52
 		public new IQuestVarContext_SetValue ToSetValue()
 		{
 			return new IQuestVarContext_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003206 RID: 12806
-		// (get) Token: 0x0600A1E9 RID: 41449 RVA: 0x0017084D File Offset: 0x0016EA4D
-		// (set) Token: 0x0600A1EA RID: 41450 RVA: 0x00170878 File Offset: 0x0016EA78
+		// Token: 0x1700349A RID: 13466
+		// (get) Token: 0x0600ABD5 RID: 43989 RVA: 0x00184C71 File Offset: 0x00182E71
+		// (set) Token: 0x0600ABD6 RID: 43990 RVA: 0x00184C9C File Offset: 0x00182E9C
 		public override EVarContext Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003207 RID: 12807
-		// (get) Token: 0x0600A1EB RID: 41451 RVA: 0x00170886 File Offset: 0x0016EA86
-		// (set) Token: 0x0600A1EC RID: 41452 RVA: 0x001708B1 File Offset: 0x0016EAB1
+		// Token: 0x1700349B RID: 13467
+		// (get) Token: 0x0600ABD7 RID: 43991 RVA: 0x00184CAA File Offset: 0x00182EAA
+		// (set) Token: 0x0600ABD8 RID: 43992 RVA: 0x00184CD5 File Offset: 0x00182ED5
 		public virtual int Id
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006153 RID: 24915
+		// Token: 0x040066CF RID: 26319
 		[Nullable(2)]
 		protected new IQuestVarContext FbInstance;
 
-		// Token: 0x04006154 RID: 24916
+		// Token: 0x040066D0 RID: 26320
 		[Nullable(2)]
 		protected new IQuestVarContext_SetValue PocoInterface;
 	}

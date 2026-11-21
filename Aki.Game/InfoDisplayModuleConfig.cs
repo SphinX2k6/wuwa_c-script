@@ -2,13 +2,13 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02001F93 RID: 8083
+// Token: 0x02001455 RID: 5205
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class InfoDisplayModuleConfig : ConfigBase
 {
-	// Token: 0x0600FB03 RID: 64259 RVA: 0x003CD010 File Offset: 0x003CB210
+	// Token: 0x0600CF25 RID: 53029 RVA: 0x003D8BD0 File Offset: 0x003D6DD0
 	private InfoDisplay? GetInfoDisplayConfig(int id)
 	{
 		InfoDisplay? config = ConfigInfoDisplayById.GetConfig(id, true);
@@ -19,7 +19,7 @@ public class InfoDisplayModuleConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x0600FB04 RID: 64260 RVA: 0x003CD03C File Offset: 0x003CB23C
+	// Token: 0x0600CF26 RID: 53030 RVA: 0x003D8BFC File Offset: 0x003D6DFC
 	public int GetInfoDisplayType(int id)
 	{
 		InfoDisplay? infoDisplayConfig = this.GetInfoDisplayConfig(id);
@@ -30,7 +30,7 @@ public class InfoDisplayModuleConfig : ConfigBase
 		return 0;
 	}
 
-	// Token: 0x0600FB05 RID: 64261 RVA: 0x003CD06C File Offset: 0x003CB26C
+	// Token: 0x0600CF27 RID: 53031 RVA: 0x003D8C2C File Offset: 0x003D6E2C
 	public string GetInfoDisplayTitle(int id)
 	{
 		InfoDisplay? infoDisplayConfig = this.GetInfoDisplayConfig(id);
@@ -41,7 +41,7 @@ public class InfoDisplayModuleConfig : ConfigBase
 		return "";
 	}
 
-	// Token: 0x0600FB06 RID: 64262 RVA: 0x003CD0B0 File Offset: 0x003CB2B0
+	// Token: 0x0600CF28 RID: 53032 RVA: 0x003D8C70 File Offset: 0x003D6E70
 	public string GetInfoDisplayDesc(int id)
 	{
 		InfoDisplay? infoDisplayConfig = this.GetInfoDisplayConfig(id);
@@ -52,7 +52,7 @@ public class InfoDisplayModuleConfig : ConfigBase
 		return "";
 	}
 
-	// Token: 0x0600FB07 RID: 64263 RVA: 0x003CD0F4 File Offset: 0x003CB2F4
+	// Token: 0x0600CF29 RID: 53033 RVA: 0x003D8CB4 File Offset: 0x003D6EB4
 	public string GetInfoDisplayAudio(int id)
 	{
 		InfoDisplay? infoDisplayConfig = this.GetInfoDisplayConfig(id);
@@ -63,7 +63,7 @@ public class InfoDisplayModuleConfig : ConfigBase
 		return "";
 	}
 
-	// Token: 0x0600FB08 RID: 64264 RVA: 0x003CD128 File Offset: 0x003CB328
+	// Token: 0x0600CF2A RID: 53034 RVA: 0x003D8CE8 File Offset: 0x003D6EE8
 	public string GetInfoDisplayBgStamp(int id)
 	{
 		InfoDisplay? infoDisplayConfig = this.GetInfoDisplayConfig(id);
@@ -74,7 +74,7 @@ public class InfoDisplayModuleConfig : ConfigBase
 		return "";
 	}
 
-	// Token: 0x0600FB09 RID: 64265 RVA: 0x003CD15C File Offset: 0x003CB35C
+	// Token: 0x0600CF2B RID: 53035 RVA: 0x003D8D1C File Offset: 0x003D6F1C
 	public string[] GetInfoDisplayPictures(int id)
 	{
 		InfoDisplay? infoDisplayConfig = this.GetInfoDisplayConfig(id);
@@ -86,7 +86,7 @@ public class InfoDisplayModuleConfig : ConfigBase
 		return result;
 	}
 
-	// Token: 0x0600FB0A RID: 64266 RVA: 0x003CD1B8 File Offset: 0x003CB3B8
+	// Token: 0x0600CF2C RID: 53036 RVA: 0x003D8D78 File Offset: 0x003D6F78
 	public string GetInfoDisplayEntryAudio(int id)
 	{
 		InfoDisplay? infoDisplayConfig = this.GetInfoDisplayConfig(id);
@@ -97,7 +97,7 @@ public class InfoDisplayModuleConfig : ConfigBase
 		return "";
 	}
 
-	// Token: 0x0600FB0B RID: 64267 RVA: 0x003CD1EC File Offset: 0x003CB3EC
+	// Token: 0x0600CF2D RID: 53037 RVA: 0x003D8DAC File Offset: 0x003D6FAC
 	public string GetInfoDisplayExitAudio(int id)
 	{
 		InfoDisplay? infoDisplayConfig = this.GetInfoDisplayConfig(id);
@@ -108,8 +108,8 @@ public class InfoDisplayModuleConfig : ConfigBase
 		return "";
 	}
 
-	// Token: 0x17001347 RID: 4935
-	// (get) Token: 0x0600FB0C RID: 64268 RVA: 0x003CD21F File Offset: 0x003CB41F
+	// Token: 0x17001371 RID: 4977
+	// (get) Token: 0x0600CF2E RID: 53038 RVA: 0x003D8DDF File Offset: 0x003D6FDF
 	public static InfoDisplayModuleConfig Instance
 	{
 		get
@@ -118,7 +118,7 @@ public class InfoDisplayModuleConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x0600FB0D RID: 64269 RVA: 0x003CD226 File Offset: 0x003CB426
+	// Token: 0x0600CF2F RID: 53039 RVA: 0x003D8DE6 File Offset: 0x003D6FE6
 	public static InfoDisplayModuleConfig GetOrCreateInstance()
 	{
 		if (InfoDisplayModuleConfig._Instance == null)
@@ -128,7 +128,7 @@ public class InfoDisplayModuleConfig : ConfigBase
 		return InfoDisplayModuleConfig._Instance;
 	}
 
-	// Token: 0x0600FB0E RID: 64270 RVA: 0x003CD23A File Offset: 0x003CB43A
+	// Token: 0x0600CF30 RID: 53040 RVA: 0x003D8DFA File Offset: 0x003D6FFA
 	public static bool CreateInstance()
 	{
 		if (InfoDisplayModuleConfig._Instance != null)
@@ -139,24 +139,24 @@ public class InfoDisplayModuleConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0600FB0F RID: 64271 RVA: 0x003CD250 File Offset: 0x003CB450
+	// Token: 0x0600CF31 RID: 53041 RVA: 0x003D8E10 File Offset: 0x003D7010
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600FB10 RID: 64272 RVA: 0x003CD252 File Offset: 0x003CB452
+	// Token: 0x0600CF32 RID: 53042 RVA: 0x003D8E12 File Offset: 0x003D7012
 	public static void ResetStaticDefaultValue()
 	{
 		InfoDisplayModuleConfig._Instance = null;
 	}
 
-	// Token: 0x0600FB11 RID: 64273 RVA: 0x003CD25A File Offset: 0x003CB45A
+	// Token: 0x0600CF33 RID: 53043 RVA: 0x003D8E1A File Offset: 0x003D701A
 	static InfoDisplayModuleConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(InfoDisplayModuleConfig.CreateStaticDefaultValue), new Action(InfoDisplayModuleConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040074D5 RID: 29909
+	// Token: 0x040075B7 RID: 30135
 	[Nullable(2)]
 	private static InfoDisplayModuleConfig _Instance;
 }

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200429C RID: 17052
+	// Token: 0x020046F8 RID: 18168
 	public class IWaveConfigT
 	{
-		// Token: 0x1700790F RID: 30991
-		// (get) Token: 0x06019443 RID: 103491 RVA: 0x003A0F4E File Offset: 0x0039F14E
-		// (set) Token: 0x06019444 RID: 103492 RVA: 0x003A0F56 File Offset: 0x0039F156
+		// Token: 0x17007F40 RID: 32576
+		// (get) Token: 0x0601ABAF RID: 109487 RVA: 0x003CC626 File Offset: 0x003CA826
+		// (set) Token: 0x0601ABB0 RID: 109488 RVA: 0x003CC62E File Offset: 0x003CA82E
 		public int Id { get; set; }
 
-		// Token: 0x06019445 RID: 103493 RVA: 0x003A0F5F File Offset: 0x0039F15F
+		// Token: 0x0601ABB1 RID: 109489 RVA: 0x003CC637 File Offset: 0x003CA837
 		public IWaveConfigT()
 		{
 			this.Id = 0;

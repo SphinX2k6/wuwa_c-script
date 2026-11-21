@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200092F RID: 2351
+	// Token: 0x0200097A RID: 2426
 	public class ConfigSimpleCombatDetailConfigBySimpleCombatIdAndSubTypeId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600372D RID: 14125 RVA: 0x00191528 File Offset: 0x0018F728
+		// Token: 0x060038EF RID: 14575 RVA: 0x0019E748 File Offset: 0x0019C948
 		static ConfigSimpleCombatDetailConfigBySimpleCombatIdAndSubTypeId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSimpleCombatDetailConfigBySimpleCombatIdAndSubTypeId.CreateStaticDefaultValue), new Action(ConfigSimpleCombatDetailConfigBySimpleCombatIdAndSubTypeId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600372E RID: 14126 RVA: 0x00191548 File Offset: 0x0018F748
+		// Token: 0x060038F0 RID: 14576 RVA: 0x0019E768 File Offset: 0x0019C968
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSimpleCombatDetailConfigBySimpleCombatIdAndSubTypeId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600372F RID: 14127 RVA: 0x001915C7 File Offset: 0x0018F7C7
+		// Token: 0x060038F1 RID: 14577 RVA: 0x0019E7E7 File Offset: 0x0019C9E7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSimpleCombatDetailConfigBySimpleCombatIdAndSubTypeId.LogPair = null;
 			ConfigSimpleCombatDetailConfigBySimpleCombatIdAndSubTypeId.HandleId = 0;
 		}
 
-		// Token: 0x06003730 RID: 14128 RVA: 0x001915D5 File Offset: 0x0018F7D5
+		// Token: 0x060038F2 RID: 14578 RVA: 0x0019E7F5 File Offset: 0x0019C9F5
 		public static void Init()
 		{
 			ConfigSimpleCombatDetailConfigBySimpleCombatIdAndSubTypeId.HandleId = ConfigCommon.InitDataStatement(ConfigSimpleCombatDetailConfigBySimpleCombatIdAndSubTypeId.HandleId, "db_simplecombatdetailconfig.db", "select BinData from `SimpleCombatDetailConfig` where SimpleCombatId=? and SubTypeId=?");
 		}
 
-		// Token: 0x06003731 RID: 14129 RVA: 0x001915F0 File Offset: 0x0018F7F0
+		// Token: 0x060038F3 RID: 14579 RVA: 0x0019E810 File Offset: 0x0019CA10
 		public static SimpleCombatDetailConfig? GetConfig(int p0SimpleCombatId, int p1SubTypeId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigSimpleCombatDetailConfigBySimpleCombatIdAndSubTypeId.HandleId, ConfigSimpleCombatDetailConfigBySimpleCombatIdAndSubTypeId.LogPair))
@@ -93,22 +93,22 @@ namespace Aki.Config
 			return new SimpleCombatDetailConfig?(rootAsSimpleCombatDetailConfig);
 		}
 
-		// Token: 0x0400402F RID: 16431
+		// Token: 0x0400423C RID: 16956
 		private const string DB = "db_simplecombatdetailconfig.db";
 
-		// Token: 0x04004030 RID: 16432
+		// Token: 0x0400423D RID: 16957
 		private const string FILE = "k.可视化编辑/c.Csv/s.SimpleCombat配置/*.csv*";
 
-		// Token: 0x04004031 RID: 16433
+		// Token: 0x0400423E RID: 16958
 		private const string TABLE = "SimpleCombatDetailConfig";
 
-		// Token: 0x04004032 RID: 16434
+		// Token: 0x0400423F RID: 16959
 		private const string COMMAND = "select BinData from `SimpleCombatDetailConfig` where SimpleCombatId=? and SubTypeId=?";
 
-		// Token: 0x04004033 RID: 16435
+		// Token: 0x04004240 RID: 16960
 		private const string KEY_PREFIX = "SimpleCombatDetailConfigBySimpleCombatIdAndSubTypeId";
 
-		// Token: 0x04004034 RID: 16436
+		// Token: 0x04004241 RID: 16961
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,7 +118,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004035 RID: 16437
+		// Token: 0x04004242 RID: 16962
 		private static int HandleId;
 	}
 }

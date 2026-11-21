@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BossPiling.View
 {
-	// Token: 0x02005C1B RID: 23579
+	// Token: 0x02004BFB RID: 19451
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.BossPiling.View
 	})]
 	public class BossPilingRewardItem : GridProxyAbstract<ActivityRewardData>
 	{
-		// Token: 0x0603B945 RID: 244037 RVA: 0x00E35944 File Offset: 0x00E33B44
+		// Token: 0x06030890 RID: 198800 RVA: 0x00D85CA0 File Offset: 0x00D83EA0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -47,19 +47,19 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B946 RID: 244038 RVA: 0x00E35A8F File Offset: 0x00E33C8F
+		// Token: 0x06030891 RID: 198801 RVA: 0x00D85DEB File Offset: 0x00D83FEB
 		protected override void OnStart()
 		{
 			this.ItemLayout = new GenericLayout<CommonItemSmallItemGrid, TItem>(base.GetHorizontalLayout(2), new Func<CommonItemSmallItemGrid>(this.InitGridItem), null, false, true);
 		}
 
-		// Token: 0x0603B947 RID: 244039 RVA: 0x00E35AB2 File Offset: 0x00E33CB2
+		// Token: 0x06030892 RID: 198802 RVA: 0x00D85E0E File Offset: 0x00D8400E
 		private CommonItemSmallItemGrid InitGridItem()
 		{
 			return new CommonItemSmallItemGrid();
 		}
 
-		// Token: 0x0603B948 RID: 244040 RVA: 0x00E35ABC File Offset: 0x00E33CBC
+		// Token: 0x06030893 RID: 198803 RVA: 0x00D85E18 File Offset: 0x00D84018
 		public override void Refresh(ActivityRewardData data, bool isSelected, int gridIndex)
 		{
 			this.RewardData = data;
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			itemLayout.RefreshByData(data.RewardList ?? Array.Empty<TItem>(), null, false);
 		}
 
-		// Token: 0x0603B949 RID: 244041 RVA: 0x00E35B93 File Offset: 0x00E33D93
+		// Token: 0x06030894 RID: 198804 RVA: 0x00D85EEF File Offset: 0x00D840EF
 		private void OnClickButton()
 		{
 			ActivityRewardData rewardData = this.RewardData;
@@ -100,11 +100,11 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			clickFunction();
 		}
 
-		// Token: 0x0401F056 RID: 127062
+		// Token: 0x04019B07 RID: 105223
 		[Nullable(2)]
 		private ActivityRewardData RewardData;
 
-		// Token: 0x0401F057 RID: 127063
+		// Token: 0x04019B08 RID: 105224
 		[Nullable(new byte[]
 		{
 			2,
@@ -112,23 +112,23 @@ namespace CSharpScript.Game.Module.BossPiling.View
 		})]
 		private GenericLayout<CommonItemSmallItemGrid, TItem> ItemLayout;
 
-		// Token: 0x0200BE07 RID: 48647
+		// Token: 0x0200A80F RID: 43023
 		[NullableContext(0)]
 		private enum EReward
 		{
-			// Token: 0x040394C6 RID: 234694
+			// Token: 0x04033E89 RID: 212617
 			NameText,
-			// Token: 0x040394C7 RID: 234695
+			// Token: 0x04033E8A RID: 212618
 			NumText,
-			// Token: 0x040394C8 RID: 234696
+			// Token: 0x04033E8B RID: 212619
 			RewardLayout,
-			// Token: 0x040394C9 RID: 234697
+			// Token: 0x04033E8C RID: 212620
 			RewardItem,
-			// Token: 0x040394CA RID: 234698
+			// Token: 0x04033E8D RID: 212621
 			Button,
-			// Token: 0x040394CB RID: 234699
+			// Token: 0x04033E8E RID: 212622
 			DoingItem,
-			// Token: 0x040394CC RID: 234700
+			// Token: 0x04033E8F RID: 212623
 			ClaimedItem
 		}
 	}

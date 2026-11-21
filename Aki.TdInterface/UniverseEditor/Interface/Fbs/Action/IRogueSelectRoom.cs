@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006EEE RID: 28398
+	// Token: 0x02007672 RID: 30322
 	public struct IRogueSelectRoom : IFlatbufferObject
 	{
-		// Token: 0x1700D344 RID: 54084
-		// (get) Token: 0x060322ED RID: 205549 RVA: 0x006C81E5 File Offset: 0x006C63E5
+		// Token: 0x1700DE9B RID: 56987
+		// (get) Token: 0x0603532D RID: 217901 RVA: 0x00723F19 File Offset: 0x00722119
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060322EE RID: 205550 RVA: 0x006C81F2 File Offset: 0x006C63F2
+		// Token: 0x0603532E RID: 217902 RVA: 0x00723F26 File Offset: 0x00722126
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060322EF RID: 205551 RVA: 0x006C81FC File Offset: 0x006C63FC
+		// Token: 0x0603532F RID: 217903 RVA: 0x00723F30 File Offset: 0x00722130
 		public static IRogueSelectRoom GetRootAsIRogueSelectRoom(ByteBuffer _bb)
 		{
 			return IRogueSelectRoom.GetRootAsIRogueSelectRoom(_bb, default(IRogueSelectRoom));
 		}
 
-		// Token: 0x060322F0 RID: 205552 RVA: 0x006C8218 File Offset: 0x006C6418
+		// Token: 0x06035330 RID: 217904 RVA: 0x00723F4C File Offset: 0x0072214C
 		public static IRogueSelectRoom GetRootAsIRogueSelectRoom(ByteBuffer _bb, IRogueSelectRoom obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060322F1 RID: 205553 RVA: 0x006C8235 File Offset: 0x006C6435
+		// Token: 0x06035331 RID: 217905 RVA: 0x00723F69 File Offset: 0x00722169
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060322F2 RID: 205554 RVA: 0x006C8244 File Offset: 0x006C6444
+		// Token: 0x06035332 RID: 217906 RVA: 0x00723F78 File Offset: 0x00722178
 		public IRogueSelectRoom __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D345 RID: 54085
-		// (get) Token: 0x060322F3 RID: 205555 RVA: 0x006C8254 File Offset: 0x006C6454
+		// Token: 0x1700DE9C RID: 56988
+		// (get) Token: 0x06035333 RID: 217907 RVA: 0x00723F88 File Offset: 0x00722188
 		public IRogueRoleSelectRoom? Config
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060322F4 RID: 205556 RVA: 0x006C82B1 File Offset: 0x006C64B1
+		// Token: 0x06035334 RID: 217908 RVA: 0x00723FE5 File Offset: 0x007221E5
 		public static Offset<IRogueSelectRoom> CreateIRogueSelectRoom(FlatBufferBuilder builder, Offset<IRogueRoleSelectRoom> ConfigOffset = default(Offset<IRogueRoleSelectRoom>))
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IRogueSelectRoom.EndIRogueSelectRoom(builder);
 		}
 
-		// Token: 0x060322F5 RID: 205557 RVA: 0x006C82C7 File Offset: 0x006C64C7
+		// Token: 0x06035335 RID: 217909 RVA: 0x00723FFB File Offset: 0x007221FB
 		public static void StartIRogueSelectRoom(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060322F6 RID: 205558 RVA: 0x006C82D0 File Offset: 0x006C64D0
+		// Token: 0x06035336 RID: 217910 RVA: 0x00724004 File Offset: 0x00722204
 		public static void AddConfig(FlatBufferBuilder builder, Offset<IRogueRoleSelectRoom> configOffset)
 		{
 			builder.AddOffset(0, configOffset.Value, 0);
 		}
 
-		// Token: 0x060322F7 RID: 205559 RVA: 0x006C82E0 File Offset: 0x006C64E0
+		// Token: 0x06035337 RID: 217911 RVA: 0x00724014 File Offset: 0x00722214
 		public static Offset<IRogueSelectRoom> EndIRogueSelectRoom(FlatBufferBuilder builder)
 		{
 			return new Offset<IRogueSelectRoom>(builder.EndTable());
 		}
 
-		// Token: 0x060322F8 RID: 205560 RVA: 0x006C82F0 File Offset: 0x006C64F0
+		// Token: 0x06035338 RID: 217912 RVA: 0x00724024 File Offset: 0x00722224
 		public IRogueSelectRoomT UnPack()
 		{
 			IRogueSelectRoomT rogueSelectRoomT = new IRogueSelectRoomT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return rogueSelectRoomT;
 		}
 
-		// Token: 0x060322F9 RID: 205561 RVA: 0x006C830C File Offset: 0x006C650C
+		// Token: 0x06035339 RID: 217913 RVA: 0x00724040 File Offset: 0x00722240
 		public void UnPackTo(IRogueSelectRoomT _o)
 		{
 			_o.Config = ((this.Config != null) ? this.Config.Value.UnPack() : null);
 		}
 
-		// Token: 0x060322FA RID: 205562 RVA: 0x006C8348 File Offset: 0x006C6548
+		// Token: 0x0603533A RID: 217914 RVA: 0x0072407C File Offset: 0x0072227C
 		public static Offset<IRogueSelectRoom> Pack(FlatBufferBuilder builder, IRogueSelectRoomT _o)
 		{
 			if (_o == null)
@@ -113,7 +113,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IRogueSelectRoom.CreateIRogueSelectRoom(builder, configOffset);
 		}
 
-		// Token: 0x040118E2 RID: 71906
+		// Token: 0x04012867 RID: 75879
 		private Table __p;
 	}
 }

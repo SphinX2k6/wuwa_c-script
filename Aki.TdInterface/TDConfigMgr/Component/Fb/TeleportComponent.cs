@@ -5,13 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B76 RID: 2934
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02000C44 RID: 3140
 	public class TeleportComponent : IComponentBase
 	{
-		// Token: 0x0600439A RID: 17306 RVA: 0x000AC42C File Offset: 0x000AA62C
-		[NullableContext(1)]
+		// Token: 0x060047F3 RID: 18419 RVA: 0x000B64F0 File Offset: 0x000B46F0
 		public static TeleportComponent Create(ITeleportComponent? instance)
 		{
 			if (instance == null)
@@ -24,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700126B RID: 4715
-		// (get) Token: 0x0600439B RID: 17307 RVA: 0x000AC44C File Offset: 0x000AA64C
+		// Token: 0x17001366 RID: 4966
+		// (get) Token: 0x060047F4 RID: 18420 RVA: 0x000B6510 File Offset: 0x000B4710
 		public override bool? Disabled
 		{
 			get
@@ -38,8 +35,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700126C RID: 4716
-		// (get) Token: 0x0600439C RID: 17308 RVA: 0x000AC484 File Offset: 0x000AA684
+		// Token: 0x17001367 RID: 4967
+		// (get) Token: 0x060047F5 RID: 18421 RVA: 0x000B6548 File Offset: 0x000B4748
 		public override bool? EdIsLocked
 		{
 			get
@@ -48,8 +45,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700126D RID: 4717
-		// (get) Token: 0x0600439D RID: 17309 RVA: 0x000AC49A File Offset: 0x000AA69A
+		// Token: 0x17001368 RID: 4968
+		// (get) Token: 0x060047F6 RID: 18422 RVA: 0x000B655E File Offset: 0x000B475E
 		public virtual int TeleporterId
 		{
 			get
@@ -58,12 +55,10 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700126E RID: 4718
-		// (get) Token: 0x0600439E RID: 17310 RVA: 0x000AC4A7 File Offset: 0x000AA6A7
-		[Nullable(1)]
+		// Token: 0x17001369 RID: 4969
+		// (get) Token: 0x060047F7 RID: 18423 RVA: 0x000B656B File Offset: 0x000B476B
 		public virtual PosA TeleportPos
 		{
-			[NullableContext(1)]
 			get
 			{
 				if (this._TeleportPosInited)
@@ -76,10 +71,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700126F RID: 4719
-		// (get) Token: 0x0600439F RID: 17311 RVA: 0x000AC4DB File Offset: 0x000AA6DB
+		// Token: 0x1700136A RID: 4970
+		// (get) Token: 0x060047F8 RID: 18424 RVA: 0x000B659F File Offset: 0x000B479F
+		[Nullable(2)]
 		public virtual IGravityFlipTeleportConfig GravityConfig
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this._GravityConfigInited)
@@ -92,19 +89,21 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002623 RID: 9763
+		// Token: 0x0400286B RID: 10347
 		private ITeleportComponent Instance;
 
-		// Token: 0x04002624 RID: 9764
+		// Token: 0x0400286C RID: 10348
+		[Nullable(2)]
 		private PosA _TeleportPosCache;
 
-		// Token: 0x04002625 RID: 9765
+		// Token: 0x0400286D RID: 10349
 		private bool _TeleportPosInited;
 
-		// Token: 0x04002626 RID: 9766
+		// Token: 0x0400286E RID: 10350
+		[Nullable(2)]
 		private IGravityFlipTeleportConfig _GravityConfigCache;
 
-		// Token: 0x04002627 RID: 9767
+		// Token: 0x0400286F RID: 10351
 		private bool _GravityConfigInited;
 	}
 }

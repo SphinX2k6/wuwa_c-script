@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001F5 RID: 501
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200021E RID: 542
 	public class IBeamRangeConfig
 	{
-		// Token: 0x06000832 RID: 2098 RVA: 0x00026584 File Offset: 0x00024784
+		// Token: 0x060008B2 RID: 2226 RVA: 0x00027ED8 File Offset: 0x000260D8
 		private IBeamRangeConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000833 RID: 2099 RVA: 0x000265BC File Offset: 0x000247BC
+		// Token: 0x060008B3 RID: 2227 RVA: 0x00027F10 File Offset: 0x00026110
 		public static IBeamRangeConfig Create([Nullable(2)] IBeamRangeConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000834 RID: 2100 RVA: 0x000265CF File Offset: 0x000247CF
+		// Token: 0x060008B4 RID: 2228 RVA: 0x00027F23 File Offset: 0x00026123
 		public static IBeamRangeConfig CreateFromSetValue([Nullable(2)] IBeamRangeConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000835 RID: 2101 RVA: 0x000265E2 File Offset: 0x000247E2
+		// Token: 0x060008B5 RID: 2229 RVA: 0x00027F36 File Offset: 0x00026136
 		public IBeamRangeConfig_SetValue ToSetValue()
 		{
 			return new IBeamRangeConfig_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000287 RID: 647
-		// (get) Token: 0x06000836 RID: 2102 RVA: 0x0002660D File Offset: 0x0002480D
-		// (set) Token: 0x06000837 RID: 2103 RVA: 0x0002663C File Offset: 0x0002483C
+		// Token: 0x170002A9 RID: 681
+		// (get) Token: 0x060008B6 RID: 2230 RVA: 0x00027F61 File Offset: 0x00026161
+		// (set) Token: 0x060008B7 RID: 2231 RVA: 0x00027F90 File Offset: 0x00026190
 		public virtual float Radius
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000288 RID: 648
-		// (get) Token: 0x06000838 RID: 2104 RVA: 0x0002664A File Offset: 0x0002484A
-		// (set) Token: 0x06000839 RID: 2105 RVA: 0x00026679 File Offset: 0x00024879
+		// Token: 0x170002AA RID: 682
+		// (get) Token: 0x060008B8 RID: 2232 RVA: 0x00027F9E File Offset: 0x0002619E
+		// (set) Token: 0x060008B9 RID: 2233 RVA: 0x00027FCD File Offset: 0x000261CD
 		public virtual float Length
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000289 RID: 649
-		// (get) Token: 0x0600083A RID: 2106 RVA: 0x00026688 File Offset: 0x00024888
-		// (set) Token: 0x0600083B RID: 2107 RVA: 0x000266E9 File Offset: 0x000248E9
+		// Token: 0x170002AB RID: 683
+		// (get) Token: 0x060008BA RID: 2234 RVA: 0x00027FDC File Offset: 0x000261DC
+		// (set) Token: 0x060008BB RID: 2235 RVA: 0x0002803D File Offset: 0x0002623D
 		[Nullable(2)]
 		public virtual VectorInfo PosOffset
 		{
@@ -141,18 +139,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000903 RID: 2307
+		// Token: 0x04000994 RID: 2452
 		[Nullable(2)]
 		protected IBeamRangeConfig FbInstance;
 
-		// Token: 0x04000904 RID: 2308
+		// Token: 0x04000995 RID: 2453
 		[Nullable(2)]
 		protected IBeamRangeConfig_SetValue PocoInterface;
 
-		// Token: 0x04000905 RID: 2309
+		// Token: 0x04000996 RID: 2454
 		private VectorInfo _PosOffsetCache;
 
-		// Token: 0x04000906 RID: 2310
+		// Token: 0x04000997 RID: 2455
 		private bool _PosOffsetInited;
 	}
 }

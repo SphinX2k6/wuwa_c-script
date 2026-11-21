@@ -4,10 +4,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005B58 RID: 23384
+	// Token: 0x0200616E RID: 24942
 	public static class IWaySplineVerify
 	{
-		// Token: 0x06028030 RID: 163888 RVA: 0x005804B4 File Offset: 0x0057E6B4
+		// Token: 0x0602A5F4 RID: 173556 RVA: 0x005C7F44 File Offset: 0x005C6144
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			if (verifier.VerifyTableStart(tablePos) && verifier.VerifyField(tablePos, 4, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 6, 4UL, 4UL, false) && verifier.VerifyString(tablePos, 8, false) && verifier.VerifyField(tablePos, 10, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 12, 1UL, 1UL, false))
@@ -26,11 +26,11 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return false;
 		}
 
-		// Token: 0x02007C7A RID: 31866
+		// Token: 0x020084EB RID: 34027
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0401379F RID: 79775
+			// Token: 0x04014845 RID: 84037
 			public static VerifyTableAction <0>__Verify;
 		}
 	}

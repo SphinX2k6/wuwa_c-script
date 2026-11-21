@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleUi
 {
-	// Token: 0x02004CDD RID: 19677
+	// Token: 0x02003C8F RID: 15503
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AttributeDynScrollItem : UiPanelBase, IDynamicScrollItem<IAttributeInfo>
 	{
-		// Token: 0x06032CB3 RID: 208051 RVA: 0x00BD5E10 File Offset: 0x00BD4010
+		// Token: 0x06027A88 RID: 162440 RVA: 0x00B1B518 File Offset: 0x00B19718
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,26 +26,26 @@ namespace CSharpScript.Game.Module.RoleUi
 			};
 		}
 
-		// Token: 0x06032CB4 RID: 208052 RVA: 0x00BD5E80 File Offset: 0x00BD4080
+		// Token: 0x06027A89 RID: 162441 RVA: 0x00B1B588 File Offset: 0x00B19788
 		protected override void OnStart()
 		{
 			this.RoleAttributeItem = new RoleAttributeItem();
 			this.RoleAttributeItem.CreateThenShowByActor(base.GetItem(0).GetOwner(), null);
 		}
 
-		// Token: 0x06032CB5 RID: 208053 RVA: 0x00BD5EA5 File Offset: 0x00BD40A5
+		// Token: 0x06027A8A RID: 162442 RVA: 0x00B1B5AD File Offset: 0x00B197AD
 		protected override void OnBeforeDestroy()
 		{
 		}
 
-		// Token: 0x06032CB6 RID: 208054 RVA: 0x00BD5EA7 File Offset: 0x00BD40A7
+		// Token: 0x06027A8B RID: 162443 RVA: 0x00B1B5AF File Offset: 0x00B197AF
 		[return: Nullable(2)]
 		public AUIBaseActor GetUsingItem(IAttributeInfo data)
 		{
 			return base.GetRootItem().GetOwner() as AUIBaseActor;
 		}
 
-		// Token: 0x06032CB7 RID: 208055 RVA: 0x00BD5EBC File Offset: 0x00BD40BC
+		// Token: 0x06027A8C RID: 162444 RVA: 0x00B1B5C4 File Offset: 0x00B197C4
 		public UniTask Init(UUIItem actor)
 		{
 			AttributeDynScrollItem.<Init>d__6 <Init>d__;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032CB8 RID: 208056 RVA: 0x00BD5F08 File Offset: 0x00BD4108
+		// Token: 0x06027A8D RID: 162445 RVA: 0x00B1B610 File Offset: 0x00B19810
 		public void Update(IAttributeInfo data, int index)
 		{
 			if (data.IsLine.GetValueOrDefault())
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			this.RefreshBg(data.IsNormalBg);
 		}
 
-		// Token: 0x06032CB9 RID: 208057 RVA: 0x00BD5F88 File Offset: 0x00BD4188
+		// Token: 0x06027A8E RID: 162446 RVA: 0x00B1B690 File Offset: 0x00B19890
 		private void RefreshBg(bool? bNormalBg)
 		{
 			bool valueOrDefault = bNormalBg.GetValueOrDefault(true);
@@ -82,27 +82,27 @@ namespace CSharpScript.Game.Module.RoleUi
 			base.GetItem(2).SetUIActive(valueOrDefault);
 		}
 
-		// Token: 0x06032CBA RID: 208058 RVA: 0x00BD5FBB File Offset: 0x00BD41BB
+		// Token: 0x06027A8F RID: 162447 RVA: 0x00B1B6C3 File Offset: 0x00B198C3
 		public void ClearItem()
 		{
 			base.Destroy(null);
 		}
 
-		// Token: 0x0401B0A9 RID: 110761
+		// Token: 0x04015A2D RID: 88621
 		[Nullable(2)]
 		private RoleAttributeItem RoleAttributeItem;
 
-		// Token: 0x0200AE57 RID: 44631
+		// Token: 0x02009876 RID: 39030
 		[NullableContext(0)]
 		private enum ESlotComponent
 		{
-			// Token: 0x04034EF8 RID: 216824
+			// Token: 0x0402F8A0 RID: 194720
 			AttributePanel,
-			// Token: 0x04034EF9 RID: 216825
+			// Token: 0x0402F8A1 RID: 194721
 			BgDark,
-			// Token: 0x04034EFA RID: 216826
+			// Token: 0x0402F8A2 RID: 194722
 			BgNormal,
-			// Token: 0x04034EFB RID: 216827
+			// Token: 0x0402F8A3 RID: 194723
 			Line
 		}
 	}

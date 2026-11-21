@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200138F RID: 5007
+	// Token: 0x020014E0 RID: 5344
 	public class ITargetBattleAttribute
 	{
-		// Token: 0x06007285 RID: 29317 RVA: 0x0011358A File Offset: 0x0011178A
-		[NullableContext(1)]
+		// Token: 0x0600792B RID: 31019 RVA: 0x00121C0E File Offset: 0x0011FE0E
 		public static ITargetBattleAttribute Create(ITargetBattleAttribute? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700253A RID: 9530
-		// (get) Token: 0x06007286 RID: 29318 RVA: 0x001135A9 File Offset: 0x001117A9
+		// Token: 0x1700270D RID: 9997
+		// (get) Token: 0x0600792C RID: 31020 RVA: 0x00121C2D File Offset: 0x0011FE2D
 		public virtual ETargetBattleAttribute Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400422D RID: 16941
+		// Token: 0x040045AE RID: 17838
 		private ITargetBattleAttribute Instance;
 	}
 }

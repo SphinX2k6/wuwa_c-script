@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000748 RID: 1864
+	// Token: 0x02000760 RID: 1888
 	public class ConfigPlayStationStaticActivityAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002BC1 RID: 11201 RVA: 0x00150D5F File Offset: 0x0014EF5F
+		// Token: 0x06002C51 RID: 11345 RVA: 0x001577DB File Offset: 0x001559DB
 		static ConfigPlayStationStaticActivityAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPlayStationStaticActivityAll.CreateStaticDefaultValue), new Action(ConfigPlayStationStaticActivityAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002BC2 RID: 11202 RVA: 0x00150D80 File Offset: 0x0014EF80
+		// Token: 0x06002C52 RID: 11346 RVA: 0x001577FC File Offset: 0x001559FC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPlayStationStaticActivityAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002BC3 RID: 11203 RVA: 0x00150DFF File Offset: 0x0014EFFF
+		// Token: 0x06002C53 RID: 11347 RVA: 0x0015787B File Offset: 0x00155A7B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPlayStationStaticActivityAll.LogPair = null;
 			ConfigPlayStationStaticActivityAll.HandleId = 0;
 		}
 
-		// Token: 0x06002BC4 RID: 11204 RVA: 0x00150E0D File Offset: 0x0014F00D
+		// Token: 0x06002C54 RID: 11348 RVA: 0x00157889 File Offset: 0x00155A89
 		public static void Init()
 		{
 			ConfigPlayStationStaticActivityAll.HandleId = ConfigCommon.InitDataStatement(ConfigPlayStationStaticActivityAll.HandleId, "db_quest.db", "select BinData from `PlayStationStaticActivity`");
 		}
 
-		// Token: 0x06002BC5 RID: 11205 RVA: 0x00150E28 File Offset: 0x0014F028
+		// Token: 0x06002C55 RID: 11349 RVA: 0x001578A4 File Offset: 0x00155AA4
 		[NullableContext(2)]
 		public static IReadOnlyList<PlayStationStaticActivity> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040032DE RID: 13022
+		// Token: 0x04003386 RID: 13190
 		private const string DB = "db_quest.db";
 
-		// Token: 0x040032DF RID: 13023
+		// Token: 0x04003387 RID: 13191
 		private const string FILE = "r.任务.xlsx";
 
-		// Token: 0x040032E0 RID: 13024
+		// Token: 0x04003388 RID: 13192
 		private const string TABLE = "PlayStationStaticActivity";
 
-		// Token: 0x040032E1 RID: 13025
+		// Token: 0x04003389 RID: 13193
 		private const string COMMAND = "select BinData from `PlayStationStaticActivity`";
 
-		// Token: 0x040032E2 RID: 13026
+		// Token: 0x0400338A RID: 13194
 		private const string KEY_PREFIX = "PlayStationStaticActivityAll";
 
-		// Token: 0x040032E3 RID: 13027
+		// Token: 0x0400338B RID: 13195
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040032E4 RID: 13028
+		// Token: 0x0400338C RID: 13196
 		private static int HandleId;
 	}
 }

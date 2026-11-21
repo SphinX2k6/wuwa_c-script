@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x02002019 RID: 8217
+// Token: 0x020014EC RID: 5356
 public interface ICostData
 {
-	// Token: 0x170013A9 RID: 5033
-	// (get) Token: 0x060101B3 RID: 65971
-	// (set) Token: 0x060101B4 RID: 65972
+	// Token: 0x170013D6 RID: 5078
+	// (get) Token: 0x0600D61B RID: 54811
+	// (set) Token: 0x0600D61C RID: 54812
 	int ItemId { get; set; }
 
-	// Token: 0x170013AA RID: 5034
-	// (get) Token: 0x060101B5 RID: 65973
-	// (set) Token: 0x060101B6 RID: 65974
+	// Token: 0x170013D7 RID: 5079
+	// (get) Token: 0x0600D61D RID: 54813
+	// (set) Token: 0x0600D61E RID: 54814
 	int Count { get; set; }
 
-	// Token: 0x170013AB RID: 5035
-	// (get) Token: 0x060101B7 RID: 65975
-	// (set) Token: 0x060101B8 RID: 65976
+	// Token: 0x170013D8 RID: 5080
+	// (get) Token: 0x0600D61F RID: 54815
+	// (set) Token: 0x0600D620 RID: 54816
 	int Cost { get; set; }
 }

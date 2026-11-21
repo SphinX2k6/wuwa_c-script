@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D76 RID: 7542
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F87 RID: 8071
 	public class IQiuyuanQinggongHovering : ILeisureInteractType
 	{
-		// Token: 0x0600A1A9 RID: 41385 RVA: 0x0017013C File Offset: 0x0016E33C
+		// Token: 0x0600AB95 RID: 43925 RVA: 0x00184560 File Offset: 0x00182760
 		private IQiuyuanQinggongHovering_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A1AA RID: 41386 RVA: 0x00170174 File Offset: 0x0016E374
+		// Token: 0x0600AB96 RID: 43926 RVA: 0x00184598 File Offset: 0x00182798
 		public static IQiuyuanQinggongHovering Create([Nullable(2)] IQiuyuanQinggongHovering instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A1AB RID: 41387 RVA: 0x00170187 File Offset: 0x0016E387
+		// Token: 0x0600AB97 RID: 43927 RVA: 0x001845AB File Offset: 0x001827AB
 		public static IQiuyuanQinggongHovering CreateFromSetValue([Nullable(2)] IQiuyuanQinggongHovering_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A1AC RID: 41388 RVA: 0x0017019A File Offset: 0x0016E39A
+		// Token: 0x0600AB98 RID: 43928 RVA: 0x001845BE File Offset: 0x001827BE
 		public new IQiuyuanQinggongHovering_SetValue ToSetValue()
 		{
 			return new IQiuyuanQinggongHovering_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170031FA RID: 12794
-		// (get) Token: 0x0600A1AD RID: 41389 RVA: 0x001701AD File Offset: 0x0016E3AD
-		// (set) Token: 0x0600A1AE RID: 41390 RVA: 0x001701D8 File Offset: 0x0016E3D8
+		// Token: 0x1700348E RID: 13454
+		// (get) Token: 0x0600AB99 RID: 43929 RVA: 0x001845D1 File Offset: 0x001827D1
+		// (set) Token: 0x0600AB9A RID: 43930 RVA: 0x001845FC File Offset: 0x001827FC
 		public override ELeisureInteract Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006139 RID: 24889
+		// Token: 0x040066B5 RID: 26293
 		[Nullable(2)]
 		protected new IQiuyuanQinggongHovering FbInstance;
 
-		// Token: 0x0400613A RID: 24890
+		// Token: 0x040066B6 RID: 26294
 		[Nullable(2)]
 		protected new IQiuyuanQinggongHovering_SetValue PocoInterface;
 	}

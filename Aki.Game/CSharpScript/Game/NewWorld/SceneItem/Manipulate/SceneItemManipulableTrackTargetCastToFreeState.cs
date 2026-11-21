@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 {
-	// Token: 0x020071EE RID: 29166
+	// Token: 0x020062A3 RID: 25251
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemManipulableTrackTargetCastToFreeState : SceneItemManipulableCastState, IStaticVariableResetter
 	{
-		// Token: 0x06047627 RID: 292391 RVA: 0x01229125 File Offset: 0x01227325
+		// Token: 0x0603CF29 RID: 249641 RVA: 0x01182F79 File Offset: 0x01181179
 		[NullableContext(1)]
 		public SceneItemManipulableTrackTargetCastToFreeState(SceneItemManipulatableComponent sceneItem, [Nullable(new byte[]
 		{
@@ -23,32 +23,32 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 		{
 		}
 
-		// Token: 0x06047628 RID: 292392 RVA: 0x01229130 File Offset: 0x01227330
+		// Token: 0x0603CF2A RID: 249642 RVA: 0x01182F84 File Offset: 0x01181184
 		static SceneItemManipulableTrackTargetCastToFreeState()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SceneItemManipulableTrackTargetCastToFreeState.CreateStaticDefaultValue), new Action(SceneItemManipulableTrackTargetCastToFreeState.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06047629 RID: 292393 RVA: 0x0122914F File Offset: 0x0122734F
+		// Token: 0x0603CF2B RID: 249643 RVA: 0x01182FA3 File Offset: 0x011811A3
 		public static void CreateStaticDefaultValue()
 		{
 			SceneItemManipulableTrackTargetCastToFreeState._sphereTrace = null;
 		}
 
-		// Token: 0x0604762A RID: 292394 RVA: 0x01229157 File Offset: 0x01227357
+		// Token: 0x0603CF2C RID: 249644 RVA: 0x01182FAB File Offset: 0x011811AB
 		public static void ResetStaticDefaultValue()
 		{
 			SceneItemManipulableTrackTargetCastToFreeState._sphereTrace = null;
 		}
 
-		// Token: 0x0604762B RID: 292395 RVA: 0x0122915F File Offset: 0x0122735F
+		// Token: 0x0603CF2D RID: 249645 RVA: 0x01182FB3 File Offset: 0x011811B3
 		[NullableContext(1)]
 		public void SetStartCameraLocation(global::Vector inStartCameraLocation)
 		{
 			this.StartCameraLocation = inStartCameraLocation;
 		}
 
-		// Token: 0x0604762C RID: 292396 RVA: 0x01229168 File Offset: 0x01227368
+		// Token: 0x0603CF2E RID: 249646 RVA: 0x01182FBC File Offset: 0x011811BC
 		protected override void OnEnter()
 		{
 			base.OnEnter();
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			this.SceneItem.ActorComp.PhysicsMode = SceneItemActorComponent.EPhysicsMode.Kinematic;
 		}
 
-		// Token: 0x0604762D RID: 292397 RVA: 0x01229354 File Offset: 0x01227554
+		// Token: 0x0603CF2F RID: 249647 RVA: 0x011831A8 File Offset: 0x011813A8
 		private void InitTraceInfo()
 		{
 			SceneItemManipulableTrackTargetCastToFreeState._sphereTrace = new UTraceSphereElement();
@@ -109,14 +109,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			SceneItemManipulableTrackTargetCastToFreeState._sphereTrace.DrawTime = 5f;
 		}
 
-		// Token: 0x0604762E RID: 292398 RVA: 0x0122940B File Offset: 0x0122760B
+		// Token: 0x0603CF30 RID: 249648 RVA: 0x0118325F File Offset: 0x0118145F
 		protected override void OnExit()
 		{
 			base.OnExit();
 			this.StartCameraLocation = null;
 		}
 
-		// Token: 0x0604762F RID: 292399 RVA: 0x0122941C File Offset: 0x0122761C
+		// Token: 0x0603CF31 RID: 249649 RVA: 0x01183270 File Offset: 0x01181470
 		protected override void OnTick(float delta)
 		{
 			global::Vector vector = global::Vector.Create(global::Vector.Create(this.SceneItem.ActorComp.ActorLocationProxy));
@@ -156,44 +156,44 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x06047630 RID: 292400 RVA: 0x012295F7 File Offset: 0x012277F7
+		// Token: 0x0603CF32 RID: 249650 RVA: 0x0118344B File Offset: 0x0118164B
 		public override bool IsNoLockCasting()
 		{
 			return true;
 		}
 
-		// Token: 0x040258A1 RID: 153761
+		// Token: 0x04020510 RID: 132368
 		[Nullable(1)]
 		private const string PROFILE_KEY = "[SceneItemManipulableTrackTargetCastToFreeState.OnEnter]";
 
-		// Token: 0x040258A2 RID: 153762
+		// Token: 0x04020511 RID: 132369
 		private const float MAX_DISTANCE = 5000f;
 
-		// Token: 0x040258A3 RID: 153763
+		// Token: 0x04020512 RID: 132370
 		private const float SPHERE_TRACE_RADIUS = 1f;
 
-		// Token: 0x040258A4 RID: 153764
+		// Token: 0x04020513 RID: 132371
 		private static UTraceSphereElement _sphereTrace;
 
-		// Token: 0x040258A5 RID: 153765
+		// Token: 0x04020514 RID: 132372
 		private global::Vector StartCameraLocation;
 
-		// Token: 0x040258A6 RID: 153766
+		// Token: 0x04020515 RID: 132373
 		private global::Vector MoveStartLocation;
 
-		// Token: 0x040258A7 RID: 153767
+		// Token: 0x04020516 RID: 132374
 		private global::Vector MoveEndLocation;
 
-		// Token: 0x040258A8 RID: 153768
+		// Token: 0x04020517 RID: 132375
 		private global::Vector MoveDirection;
 
-		// Token: 0x040258A9 RID: 153769
+		// Token: 0x04020518 RID: 132376
 		private float? TotalDistance;
 
-		// Token: 0x040258AA RID: 153770
+		// Token: 0x04020519 RID: 132377
 		private bool IsPastEnd;
 
-		// Token: 0x040258AB RID: 153771
+		// Token: 0x0402051A RID: 132378
 		private float MoveSpeed;
 	}
 }

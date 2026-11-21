@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.QuickHack
 {
-	// Token: 0x02004F65 RID: 20325
+	// Token: 0x02003F2E RID: 16174
 	[NullableContext(1)]
 	public interface IQuickHackHighlightPreProcessResult
 	{
-		// Token: 0x17007F51 RID: 32593
-		// (get) Token: 0x06034125 RID: 213285
-		// (set) Token: 0x06034126 RID: 213286
+		// Token: 0x17005301 RID: 21249
+		// (get) Token: 0x06028F93 RID: 167827
+		// (set) Token: 0x06028F94 RID: 167828
 		HashSet<EntityHandle> NewOnScreenTargetSet { get; set; }
 
-		// Token: 0x17007F52 RID: 32594
-		// (get) Token: 0x06034127 RID: 213287
-		// (set) Token: 0x06034128 RID: 213288
+		// Token: 0x17005302 RID: 21250
+		// (get) Token: 0x06028F95 RID: 167829
+		// (set) Token: 0x06028F96 RID: 167830
 		HashSet<EntityHandle> NewLockTargetSet { get; set; }
 	}
 }

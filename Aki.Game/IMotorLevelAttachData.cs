@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02002250 RID: 8784
+// Token: 0x02001734 RID: 5940
 public interface IMotorLevelAttachData
 {
-	// Token: 0x170015C4 RID: 5572
-	// (get) Token: 0x0601123D RID: 70205
-	// (set) Token: 0x0601123E RID: 70206
+	// Token: 0x170015FB RID: 5627
+	// (get) Token: 0x0600E6D3 RID: 59091
+	// (set) Token: 0x0600E6D4 RID: 59092
 	int Level { get; set; }
 
-	// Token: 0x170015C5 RID: 5573
-	// (get) Token: 0x0601123F RID: 70207
-	// (set) Token: 0x06011240 RID: 70208
+	// Token: 0x170015FC RID: 5628
+	// (get) Token: 0x0600E6D5 RID: 59093
+	// (set) Token: 0x0600E6D6 RID: 59094
 	int Exp { get; set; }
 }

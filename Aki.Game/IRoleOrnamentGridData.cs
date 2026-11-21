@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02002A57 RID: 10839
+// Token: 0x02001FD2 RID: 8146
 public interface IRoleOrnamentGridData
 {
-	// Token: 0x17001DFC RID: 7676
-	// (get) Token: 0x0601696C RID: 92524
-	// (set) Token: 0x0601696D RID: 92525
+	// Token: 0x17001E54 RID: 7764
+	// (get) Token: 0x0601438D RID: 82829
+	// (set) Token: 0x0601438E RID: 82830
 	int SkinId { get; set; }
 
-	// Token: 0x17001DFD RID: 7677
-	// (get) Token: 0x0601696E RID: 92526
-	// (set) Token: 0x0601696F RID: 92527
+	// Token: 0x17001E55 RID: 7765
+	// (get) Token: 0x0601438F RID: 82831
+	// (set) Token: 0x06014390 RID: 82832
 	int OrnamentId { get; set; }
 }

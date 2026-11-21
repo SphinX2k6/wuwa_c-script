@@ -7,7 +7,7 @@ using CSharpScript.Game.Module.Item;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001B96 RID: 7062
+// Token: 0x02001055 RID: 4181
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class FloroRanchMilestoneRewardItem : GridProxyAbstract<FloroRanchMilestoneData>
 {
-	// Token: 0x0600D243 RID: 53827 RVA: 0x0030444C File Offset: 0x0030264C
+	// Token: 0x0600A654 RID: 42580 RVA: 0x0030F524 File Offset: 0x0030D724
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -32,7 +32,7 @@ public class FloroRanchMilestoneRewardItem : GridProxyAbstract<FloroRanchMilesto
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600D244 RID: 53828 RVA: 0x003044D8 File Offset: 0x003026D8
+	// Token: 0x0600A655 RID: 42581 RVA: 0x0030F5B0 File Offset: 0x0030D7B0
 	protected override void OnStart()
 	{
 		this.RewardItemGrid = new SmallItemGrid();
@@ -41,7 +41,7 @@ public class FloroRanchMilestoneRewardItem : GridProxyAbstract<FloroRanchMilesto
 		this.RewardItemGrid.BindOnExtendToggleClicked(new Action<MediumItemGridExtendCallback>(this.OnClickedGrid));
 	}
 
-	// Token: 0x0600D245 RID: 53829 RVA: 0x00304548 File Offset: 0x00302748
+	// Token: 0x0600A656 RID: 42582 RVA: 0x0030F620 File Offset: 0x0030D820
 	public override void Refresh(FloroRanchMilestoneData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -54,7 +54,7 @@ public class FloroRanchMilestoneRewardItem : GridProxyAbstract<FloroRanchMilesto
 		this.RefreshGrid();
 	}
 
-	// Token: 0x0600D246 RID: 53830 RVA: 0x003045BC File Offset: 0x003027BC
+	// Token: 0x0600A657 RID: 42583 RVA: 0x0030F694 File Offset: 0x0030D894
 	private void RefreshGrid()
 	{
 		bool lockBlackVisible = !this.Data.IsFinished;
@@ -73,12 +73,12 @@ public class FloroRanchMilestoneRewardItem : GridProxyAbstract<FloroRanchMilesto
 		this.RewardItemGrid.SetLockBlackVisible(lockBlackVisible);
 	}
 
-	// Token: 0x0600D247 RID: 53831 RVA: 0x00304690 File Offset: 0x00302890
+	// Token: 0x0600A658 RID: 42584 RVA: 0x0030F768 File Offset: 0x0030D968
 	private void OnClickedGrid(MediumItemGridExtendCallback onExtendToggleClickedCallback)
 	{
 		if (!this.Data.IsFinished || this.Data.IsReceive)
 		{
-			ItemController.Instance.OpenItemTipsByItemId(this.RewardItem.Value.ItemData.ItemId, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(this.RewardItem.Value.ItemData.ItemId, true, null, false);
 			return;
 		}
 		Action onClickToGet = this.OnClickToGet;
@@ -89,31 +89,31 @@ public class FloroRanchMilestoneRewardItem : GridProxyAbstract<FloroRanchMilesto
 		onClickToGet();
 	}
 
-	// Token: 0x0400605C RID: 24668
+	// Token: 0x0400612B RID: 24875
 	private FloroRanchMilestoneData Data;
 
-	// Token: 0x0400605D RID: 24669
+	// Token: 0x0400612C RID: 24876
 	[Nullable(2)]
 	private SmallItemGrid RewardItemGrid;
 
-	// Token: 0x0400605E RID: 24670
+	// Token: 0x0400612D RID: 24877
 	private TItem? RewardItem;
 
-	// Token: 0x0400605F RID: 24671
+	// Token: 0x0400612E RID: 24878
 	[Nullable(2)]
 	public Action OnClickToGet;
 
-	// Token: 0x02008123 RID: 33059
+	// Token: 0x020072B1 RID: 29361
 	[NullableContext(0)]
 	private class EItemComponent
 	{
-		// Token: 0x0402A275 RID: 172661
+		// Token: 0x040255A9 RID: 153001
 		public const int SpriteBg = 0;
 
-		// Token: 0x0402A276 RID: 172662
+		// Token: 0x040255AA RID: 153002
 		public const int TxtGoal = 1;
 
-		// Token: 0x0402A277 RID: 172663
+		// Token: 0x040255AB RID: 153003
 		public const int RewardItem = 2;
 	}
 }

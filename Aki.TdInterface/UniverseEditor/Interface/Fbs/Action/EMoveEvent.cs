@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005FB2 RID: 24498
+	// Token: 0x02006604 RID: 26116
 	public enum EMoveEvent : byte
 	{
-		// Token: 0x0400FECE RID: 65230
+		// Token: 0x04010C86 RID: 68742
 		Walk,
-		// Token: 0x0400FECF RID: 65231
+		// Token: 0x04010C87 RID: 68743
 		Run
 	}
 }

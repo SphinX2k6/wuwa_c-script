@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005DE0 RID: 24032
+	// Token: 0x0200641D RID: 25629
 	public class IGiantStableValueType_UnionUnion
 	{
-		// Token: 0x1700B3E3 RID: 46051
-		// (get) Token: 0x0602921E RID: 168478 RVA: 0x005A5139 File Offset: 0x005A3339
-		// (set) Token: 0x0602921F RID: 168479 RVA: 0x005A5141 File Offset: 0x005A3341
+		// Token: 0x1700BD49 RID: 48457
+		// (get) Token: 0x0602B8A8 RID: 178344 RVA: 0x005EDE69 File Offset: 0x005EC069
+		// (set) Token: 0x0602B8A9 RID: 178345 RVA: 0x005EDE71 File Offset: 0x005EC071
 		public IGiantStableValueType_Union Type { get; set; }
 
-		// Token: 0x1700B3E4 RID: 46052
-		// (get) Token: 0x06029220 RID: 168480 RVA: 0x005A514A File Offset: 0x005A334A
-		// (set) Token: 0x06029221 RID: 168481 RVA: 0x005A5152 File Offset: 0x005A3352
+		// Token: 0x1700BD4A RID: 48458
+		// (get) Token: 0x0602B8AA RID: 178346 RVA: 0x005EDE7A File Offset: 0x005EC07A
+		// (set) Token: 0x0602B8AB RID: 178347 RVA: 0x005EDE82 File Offset: 0x005EC082
 		public object Value { get; set; }
 
-		// Token: 0x06029222 RID: 168482 RVA: 0x005A515B File Offset: 0x005A335B
+		// Token: 0x0602B8AC RID: 178348 RVA: 0x005EDE8B File Offset: 0x005EC08B
 		public IGiantStableValueType_UnionUnion()
 		{
 			this.Type = IGiantStableValueType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06029223 RID: 168483 RVA: 0x005A5171 File Offset: 0x005A3371
+		// Token: 0x0602B8AD RID: 178349 RVA: 0x005EDEA1 File Offset: 0x005EC0A1
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06029224 RID: 168484 RVA: 0x005A5183 File Offset: 0x005A3383
+		// Token: 0x0602B8AE RID: 178350 RVA: 0x005EDEB3 File Offset: 0x005EC0B3
 		public IGiantStableValueTypeT AsIGiantStableValueType()
 		{
 			return this.As<IGiantStableValueTypeT>();
 		}
 
-		// Token: 0x06029225 RID: 168485 RVA: 0x005A518B File Offset: 0x005A338B
+		// Token: 0x0602B8AF RID: 178351 RVA: 0x005EDEBB File Offset: 0x005EC0BB
 		public static IGiantStableValueType_UnionUnion FromIGiantStableValueType(IGiantStableValueTypeT _igiantstablevaluetype)
 		{
 			return new IGiantStableValueType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			};
 		}
 
-		// Token: 0x06029226 RID: 168486 RVA: 0x005A51A0 File Offset: 0x005A33A0
+		// Token: 0x0602B8B0 RID: 178352 RVA: 0x005EDED0 File Offset: 0x005EC0D0
 		public IGiantStableValueRegionT AsIGiantStableValueRegion()
 		{
 			return this.As<IGiantStableValueRegionT>();
 		}
 
-		// Token: 0x06029227 RID: 168487 RVA: 0x005A51A8 File Offset: 0x005A33A8
+		// Token: 0x0602B8B1 RID: 178353 RVA: 0x005EDED8 File Offset: 0x005EC0D8
 		public static IGiantStableValueType_UnionUnion FromIGiantStableValueRegion(IGiantStableValueRegionT _igiantstablevalueregion)
 		{
 			return new IGiantStableValueType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			};
 		}
 
-		// Token: 0x06029228 RID: 168488 RVA: 0x005A51BD File Offset: 0x005A33BD
+		// Token: 0x0602B8B2 RID: 178354 RVA: 0x005EDEED File Offset: 0x005EC0ED
 		public IGiantStableValueTotalT AsIGiantStableValueTotal()
 		{
 			return this.As<IGiantStableValueTotalT>();
 		}
 
-		// Token: 0x06029229 RID: 168489 RVA: 0x005A51C5 File Offset: 0x005A33C5
+		// Token: 0x0602B8B3 RID: 178355 RVA: 0x005EDEF5 File Offset: 0x005EC0F5
 		public static IGiantStableValueType_UnionUnion FromIGiantStableValueTotal(IGiantStableValueTotalT _igiantstablevaluetotal)
 		{
 			return new IGiantStableValueType_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			};
 		}
 
-		// Token: 0x0602922A RID: 168490 RVA: 0x005A51DC File Offset: 0x005A33DC
+		// Token: 0x0602B8B4 RID: 178356 RVA: 0x005EDF0C File Offset: 0x005EC10C
 		public static int Pack(FlatBufferBuilder builder, IGiantStableValueType_UnionUnion _o)
 		{
 			switch (_o.Type)

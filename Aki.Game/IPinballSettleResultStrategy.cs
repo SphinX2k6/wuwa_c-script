@@ -1,60 +1,60 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001402 RID: 5122
+// Token: 0x020008B6 RID: 2230
 [NullableContext(1)]
 public interface IPinballSettleResultStrategy
 {
-	// Token: 0x17000C42 RID: 3138
-	// (get) Token: 0x060090AA RID: 37034
-	// (set) Token: 0x060090AB RID: 37035
+	// Token: 0x17000C62 RID: 3170
+	// (get) Token: 0x0600643F RID: 25663
+	// (set) Token: 0x06006440 RID: 25664
 	IPinballSettleResultViewContext Context { get; set; }
 
-	// Token: 0x060090AC RID: 37036
+	// Token: 0x06006441 RID: 25665
 	void RefreshStarLayout();
 
-	// Token: 0x060090AD RID: 37037
+	// Token: 0x06006442 RID: 25666
 	void RefreshRewards();
 
-	// Token: 0x060090AE RID: 37038
+	// Token: 0x06006443 RID: 25667
 	void RefreshButtons();
 
-	// Token: 0x060090AF RID: 37039
+	// Token: 0x06006444 RID: 25668
 	void RefreshProgressRewards();
 
-	// Token: 0x060090B0 RID: 37040
+	// Token: 0x06006445 RID: 25669
 	void RefreshUnlockTips();
 
-	// Token: 0x060090B1 RID: 37041
+	// Token: 0x06006446 RID: 25670
 	void RefreshFailTips();
 
-	// Token: 0x060090B2 RID: 37042
+	// Token: 0x06006447 RID: 25671
 	void RefreshDialog();
 
-	// Token: 0x060090B3 RID: 37043
+	// Token: 0x06006448 RID: 25672
 	void RefreshTitle();
 
-	// Token: 0x060090B4 RID: 37044
+	// Token: 0x06006449 RID: 25673
 	void OnClickBtnRestart(Action callback);
 
-	// Token: 0x060090B5 RID: 37045
+	// Token: 0x0600644A RID: 25674
 	void OnClickBtnNext(Action callback);
 
-	// Token: 0x060090B6 RID: 37046
+	// Token: 0x0600644B RID: 25675
 	void OnClickBtnBack(Action callback);
 
-	// Token: 0x060090B7 RID: 37047
+	// Token: 0x0600644C RID: 25676
 	bool GetIsNeedRewardView();
 
-	// Token: 0x060090B8 RID: 37048
+	// Token: 0x0600644D RID: 25677
 	bool GetIsNeedProgressRewardView();
 
-	// Token: 0x060090B9 RID: 37049
+	// Token: 0x0600644E RID: 25678
 	bool GetIsNeedFailTipsView();
 
-	// Token: 0x060090BA RID: 37050
+	// Token: 0x0600644F RID: 25679
 	bool GetIsNeedUnlockTipsView();
 
-	// Token: 0x060090BB RID: 37051
+	// Token: 0x06006450 RID: 25680
 	bool GetIsNeedDialogView();
 }

@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005FAF RID: 24495
+	// Token: 0x02006601 RID: 26113
 	public enum EMotorSpeedDownConfig
 	{
-		// Token: 0x0400FEC3 RID: 65219
+		// Token: 0x04010C7B RID: 68731
 		None,
-		// Token: 0x0400FEC4 RID: 65220
+		// Token: 0x04010C7C RID: 68732
 		ForceBrake = 866079887
 	}
 }

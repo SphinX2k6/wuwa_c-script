@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020030D2 RID: 12498
+// Token: 0x0200262A RID: 9770
 public enum EFilter
 {
-	// Token: 0x0400CE90 RID: 52880
+	// Token: 0x0400D280 RID: 53888
 	Invalid,
-	// Token: 0x0400CE91 RID: 52881
+	// Token: 0x0400D281 RID: 53889
 	Valid,
-	// Token: 0x0400CE92 RID: 52882
+	// Token: 0x0400D282 RID: 53890
 	Must
 }

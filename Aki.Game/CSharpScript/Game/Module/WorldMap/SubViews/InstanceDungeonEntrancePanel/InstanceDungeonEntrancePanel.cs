@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.InstanceDungeon;
@@ -15,13 +14,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePanel
 {
-	// Token: 0x02004810 RID: 18448
+	// Token: 0x02003741 RID: 14145
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InstanceDungeonEntrancePanel : WorldMapSecondaryUiLayoutA
 	{
-		// Token: 0x170078E6 RID: 30950
-		// (get) Token: 0x060304BA RID: 197818 RVA: 0x00B33E7C File Offset: 0x00B3207C
+		// Token: 0x17004BA3 RID: 19363
+		// (get) Token: 0x06024C8A RID: 150666 RVA: 0x00A63DE4 File Offset: 0x00A61FE4
 		private InstanceDungeonEntrance? EntranceConfig
 		{
 			get
@@ -39,13 +38,13 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			}
 		}
 
-		// Token: 0x060304BB RID: 197819 RVA: 0x00B33EB9 File Offset: 0x00B320B9
+		// Token: 0x06024C8B RID: 150667 RVA: 0x00A63E21 File Offset: 0x00A62021
 		public override string GetResourceId()
 		{
 			return "UiView_InstanceEntranceTip_Prefab";
 		}
 
-		// Token: 0x060304BC RID: 197820 RVA: 0x00B33EC0 File Offset: 0x00B320C0
+		// Token: 0x06024C8C RID: 150668 RVA: 0x00A63E28 File Offset: 0x00A62028
 		protected override void OnStart()
 		{
 			UUIVerticalLayout verticalLayout = base.GetVerticalLayout(5);
@@ -58,7 +57,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			base.OnStart();
 		}
 
-		// Token: 0x060304BD RID: 197821 RVA: 0x00B33F32 File Offset: 0x00B32132
+		// Token: 0x06024C8D RID: 150669 RVA: 0x00A63E9A File Offset: 0x00A6209A
 		protected override void OnBeforeDestroy()
 		{
 			GenericLayoutAdd<InstanceDungeonCostTip> instanceCostTipView = this.InstanceCostTipView;
@@ -69,7 +68,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			base.OnBeforeDestroy();
 		}
 
-		// Token: 0x060304BE RID: 197822 RVA: 0x00B33F4C File Offset: 0x00B3214C
+		// Token: 0x06024C8E RID: 150670 RVA: 0x00A63EB4 File Offset: 0x00A620B4
 		private ILayoutItem<InstanceDungeonCostTip> OnInstanceRefresh(object data, UUIItem uiItem, int index, int originalItemIndex)
 		{
 			InstanceDungeonCostTip instanceDungeonCostTip = new InstanceDungeonCostTip();
@@ -81,7 +80,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			};
 		}
 
-		// Token: 0x060304BF RID: 197823 RVA: 0x00B33F7F File Offset: 0x00B3217F
+		// Token: 0x06024C8F RID: 150671 RVA: 0x00A63EE7 File Offset: 0x00A620E7
 		protected override void SetupWorldMapSecondaryUiLayout()
 		{
 			base.SetupWorldMapSecondaryUiLayout();
@@ -93,7 +92,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			item.SetUIActive(false);
 		}
 
-		// Token: 0x060304C0 RID: 197824 RVA: 0x00B33F9C File Offset: 0x00B3219C
+		// Token: 0x06024C90 RID: 150672 RVA: 0x00A63F04 File Offset: 0x00A62104
 		protected override void OnShowWorldMapSecondaryUi(params object[] param)
 		{
 			if (param.Length != 0)
@@ -148,7 +147,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			}
 		}
 
-		// Token: 0x060304C1 RID: 197825 RVA: 0x00B34154 File Offset: 0x00B32354
+		// Token: 0x06024C91 RID: 150673 RVA: 0x00A640C0 File Offset: 0x00A622C0
 		public List<int> GetMaxUnlockInstanceList()
 		{
 			List<int> list = new List<int>();
@@ -203,7 +202,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			return list;
 		}
 
-		// Token: 0x060304C2 RID: 197826 RVA: 0x00B342C8 File Offset: 0x00B324C8
+		// Token: 0x06024C92 RID: 150674 RVA: 0x00A64234 File Offset: 0x00A62434
 		private void InitView()
 		{
 			InstanceDungeonEntrance? entranceConfig = this.EntranceConfig;
@@ -243,7 +242,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			layoutContext.SetConfirmBtnActive(!flag);
 		}
 
-		// Token: 0x060304C3 RID: 197827 RVA: 0x00B3439C File Offset: 0x00B3259C
+		// Token: 0x06024C93 RID: 150675 RVA: 0x00A64308 File Offset: 0x00A62508
 		private void UpdateInstanceList()
 		{
 			this.InstanceIdList.Clear();
@@ -253,7 +252,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			{
 				return;
 			}
-			List<KeyValuePair<int, int>> list = dictionary.ToList<KeyValuePair<int, int>>();
+			List<KeyValuePair<int, int>> list = new List<KeyValuePair<int, int>>(dictionary);
 			list.Sort((KeyValuePair<int, int> a, KeyValuePair<int, int> b) => a.Value - b.Value);
 			foreach (KeyValuePair<int, int> keyValuePair in list)
 			{
@@ -371,7 +370,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			}
 		}
 
-		// Token: 0x060304C4 RID: 197828 RVA: 0x00B3480C File Offset: 0x00B32A0C
+		// Token: 0x06024C94 RID: 150676 RVA: 0x00A64778 File Offset: 0x00A62978
 		private void UpdateCost()
 		{
 			if (this.InstanceIdList.Count == 0)
@@ -406,7 +405,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			}
 		}
 
-		// Token: 0x060304C5 RID: 197829 RVA: 0x00B348FF File Offset: 0x00B32AFF
+		// Token: 0x06024C95 RID: 150677 RVA: 0x00A6486B File Offset: 0x00A62A6B
 		private void OnClickHelpButton()
 		{
 			HelpController instance = HelpController.Instance;
@@ -417,7 +416,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			instance.OpenHelpById(89);
 		}
 
-		// Token: 0x060304C6 RID: 197830 RVA: 0x00B34912 File Offset: 0x00B32B12
+		// Token: 0x06024C96 RID: 150678 RVA: 0x00A6487E File Offset: 0x00A62A7E
 		protected override void OnCloseWorldMapSecondaryUi()
 		{
 			GenericLayoutAdd<InstanceDungeonCostTip> instanceCostTipView = this.InstanceCostTipView;
@@ -428,13 +427,13 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			instanceCostTipView.ClearChildren();
 		}
 
-		// Token: 0x060304C7 RID: 197831 RVA: 0x00B34924 File Offset: 0x00B32B24
+		// Token: 0x06024C97 RID: 150679 RVA: 0x00A64890 File Offset: 0x00A62A90
 		private InstanceTipGrid InitItem()
 		{
 			return new InstanceTipGrid();
 		}
 
-		// Token: 0x060304C8 RID: 197832 RVA: 0x00B3492B File Offset: 0x00B32B2B
+		// Token: 0x06024C98 RID: 150680 RVA: 0x00A64897 File Offset: 0x00A62A97
 		[NullableContext(2)]
 		public override UUIItem GetGuideFocusUiItem()
 		{
@@ -452,26 +451,26 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 			return obj as UUIItem;
 		}
 
-		// Token: 0x04019FD6 RID: 106454
+		// Token: 0x0401468A RID: 83594
 		private const int HELP_ID = 89;
 
-		// Token: 0x04019FD7 RID: 106455
+		// Token: 0x0401468B RID: 83595
 		private const string POWER_COST_KEY = "power";
 
-		// Token: 0x04019FD8 RID: 106456
+		// Token: 0x0401468C RID: 83596
 		private const string COUNT_LIMMIT_KEY = "countLimit";
 
-		// Token: 0x04019FD9 RID: 106457
+		// Token: 0x0401468D RID: 83597
 		private int EntranceId;
 
-		// Token: 0x04019FDA RID: 106458
+		// Token: 0x0401468E RID: 83598
 		private List<int> InstanceIdList = new List<int>();
 
-		// Token: 0x04019FDB RID: 106459
+		// Token: 0x0401468F RID: 83599
 		[Nullable(2)]
 		private TeleportMarkItem SelectedMarkItem;
 
-		// Token: 0x04019FDC RID: 106460
+		// Token: 0x04014690 RID: 83600
 		[Nullable(new byte[]
 		{
 			2,
@@ -479,7 +478,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 		})]
 		private GenericLayoutAdd<InstanceDungeonCostTip> InstanceCostTipView;
 
-		// Token: 0x04019FDD RID: 106461
+		// Token: 0x04014691 RID: 83601
 		[Nullable(new byte[]
 		{
 			2,
@@ -488,11 +487,11 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.InstanceDungeonEntrancePane
 		})]
 		private GenericLayout<InstanceTipGrid, IInstanceTipGridData> InstanceScrollView;
 
-		// Token: 0x0200AADB RID: 43739
+		// Token: 0x0200948C RID: 38028
 		[NullableContext(0)]
 		public static class EComponents
 		{
-			// Token: 0x04033F52 RID: 212818
+			// Token: 0x0402E6D5 RID: 190165
 			public const int InstanceDungeonEntrancePanel = 0;
 		}
 	}

@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02003190 RID: 12688
+// Token: 0x020026FD RID: 9981
 [NullableContext(2)]
 [Nullable(0)]
 public class SpecialSkillFeiXue : SpecialSkillBase
 {
-	// Token: 0x0601B518 RID: 111896 RVA: 0x007757FD File Offset: 0x007739FD
+	// Token: 0x0601901C RID: 102428 RVA: 0x0079D175 File Offset: 0x0079B375
 	[NullableContext(1)]
 	public SpecialSkillFeiXue(CharacterSpecialSkillComponent specialSkillComponent) : base(specialSkillComponent)
 	{
 	}
 
-	// Token: 0x0601B519 RID: 111897 RVA: 0x00775814 File Offset: 0x00773A14
+	// Token: 0x0601901D RID: 102429 RVA: 0x0079D18C File Offset: 0x0079B38C
 	public override void OnStart()
 	{
 		this.Entity = this.SpecialSkillComponent.Entity;
@@ -45,7 +45,7 @@ public class SpecialSkillFeiXue : SpecialSkillBase
 		this.ListenForTagAddOrRemove(GameplayTagDefine.EGameplayTagId["角色.R2T1TaidaonvMd10011.状态标识.拔刀解禁"], new BaseTagComponent.TTagSwitchedCallback(this.OnEnableMorphTagChange));
 	}
 
-	// Token: 0x0601B51A RID: 111898 RVA: 0x00775954 File Offset: 0x00773B54
+	// Token: 0x0601901E RID: 102430 RVA: 0x0079D2CC File Offset: 0x0079B4CC
 	public override void OnEnd()
 	{
 		BaseAttributeComponent attributeComponent = this.AttributeComponent;
@@ -61,7 +61,7 @@ public class SpecialSkillFeiXue : SpecialSkillBase
 		this.ClearAllTagTask();
 	}
 
-	// Token: 0x0601B51B RID: 111899 RVA: 0x007759A8 File Offset: 0x00773BA8
+	// Token: 0x0601901F RID: 102431 RVA: 0x0079D320 File Offset: 0x0079B520
 	[NullableContext(1)]
 	protected void ListenForTagAddOrRemove(int tagId, BaseTagComponent.TTagSwitchedCallback onTagChange)
 	{
@@ -74,7 +74,7 @@ public class SpecialSkillFeiXue : SpecialSkillBase
 		this.TagTaskList.Add(item);
 	}
 
-	// Token: 0x0601B51C RID: 111900 RVA: 0x007759DC File Offset: 0x00773BDC
+	// Token: 0x06019020 RID: 102432 RVA: 0x0079D354 File Offset: 0x0079B554
 	protected void ClearAllTagTask()
 	{
 		if (this.TagTaskList != null)
@@ -87,13 +87,13 @@ public class SpecialSkillFeiXue : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B51D RID: 111901 RVA: 0x00775A40 File Offset: 0x00773C40
+	// Token: 0x06019021 RID: 102433 RVA: 0x0079D3B8 File Offset: 0x0079B5B8
 	private void RefreshStarScarMaterialProperty(EAttributeType attribute, float newValue, float oldValue)
 	{
 		this.RefreshStarScarMaterial();
 	}
 
-	// Token: 0x0601B51E RID: 111902 RVA: 0x00775A48 File Offset: 0x00773C48
+	// Token: 0x06019022 RID: 102434 RVA: 0x0079D3C0 File Offset: 0x0079B5C0
 	public void RefreshStarScarMaterial()
 	{
 		if (this.AttributeComponent == null)
@@ -113,7 +113,7 @@ public class SpecialSkillFeiXue : SpecialSkillBase
 		actor.CharRenderingComponent.SetStarScarEnergy(this.GetEnergyPercent());
 	}
 
-	// Token: 0x0601B51F RID: 111903 RVA: 0x00775A78 File Offset: 0x00773C78
+	// Token: 0x06019023 RID: 102435 RVA: 0x0079D3F0 File Offset: 0x0079B5F0
 	private float GetEnergyPercent()
 	{
 		if (this.HasMorphTag)
@@ -129,39 +129,39 @@ public class SpecialSkillFeiXue : SpecialSkillBase
 		return 0f;
 	}
 
-	// Token: 0x0601B520 RID: 111904 RVA: 0x00775ABE File Offset: 0x00773CBE
+	// Token: 0x06019024 RID: 102436 RVA: 0x0079D436 File Offset: 0x0079B636
 	private void OnMorphTagChange(int tagId, bool tagExist)
 	{
 		this.HasMorphTag = tagExist;
 		this.RefreshStarScarMaterial();
 	}
 
-	// Token: 0x0601B521 RID: 111905 RVA: 0x00775ACD File Offset: 0x00773CCD
+	// Token: 0x06019025 RID: 102437 RVA: 0x0079D445 File Offset: 0x0079B645
 	private void OnEnableMorphTagChange(int tagId, bool tagExist)
 	{
 		this.HasEnableMorphTag = tagExist;
 		this.RefreshStarScarMaterial();
 	}
 
-	// Token: 0x0400D593 RID: 54675
+	// Token: 0x0400D9F6 RID: 55798
 	private Entity Entity;
 
-	// Token: 0x0400D594 RID: 54676
+	// Token: 0x0400D9F7 RID: 55799
 	private BaseAttributeComponent AttributeComponent;
 
-	// Token: 0x0400D595 RID: 54677
+	// Token: 0x0400D9F8 RID: 55800
 	private RoleTagComponent TagComponent;
 
-	// Token: 0x0400D596 RID: 54678
+	// Token: 0x0400D9F9 RID: 55801
 	private CharacterActorComponent ActorComponent;
 
-	// Token: 0x0400D597 RID: 54679
+	// Token: 0x0400D9FA RID: 55802
 	[Nullable(1)]
 	private readonly List<ITagTask> TagTaskList = new List<ITagTask>();
 
-	// Token: 0x0400D598 RID: 54680
+	// Token: 0x0400D9FB RID: 55803
 	private bool HasMorphTag;
 
-	// Token: 0x0400D599 RID: 54681
+	// Token: 0x0400D9FC RID: 55804
 	private bool HasEnableMorphTag;
 }

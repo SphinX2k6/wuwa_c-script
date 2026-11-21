@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200400B RID: 16395
+	// Token: 0x0200444C RID: 17484
 	public class IQuestRecallConfigT
 	{
-		// Token: 0x17007334 RID: 29492
-		// (get) Token: 0x06017A98 RID: 96920 RVA: 0x00369C4B File Offset: 0x00367E4B
-		// (set) Token: 0x06017A99 RID: 96921 RVA: 0x00369C53 File Offset: 0x00367E53
+		// Token: 0x17007936 RID: 31030
+		// (get) Token: 0x06019131 RID: 102705 RVA: 0x00393A3F File Offset: 0x00391C3F
+		// (set) Token: 0x06019132 RID: 102706 RVA: 0x00393A47 File Offset: 0x00391C47
 		public int RecallId { get; set; }
 
-		// Token: 0x17007335 RID: 29493
-		// (get) Token: 0x06017A9A RID: 96922 RVA: 0x00369C5C File Offset: 0x00367E5C
-		// (set) Token: 0x06017A9B RID: 96923 RVA: 0x00369C64 File Offset: 0x00367E64
+		// Token: 0x17007937 RID: 31031
+		// (get) Token: 0x06019133 RID: 102707 RVA: 0x00393A50 File Offset: 0x00391C50
+		// (set) Token: 0x06019134 RID: 102708 RVA: 0x00393A58 File Offset: 0x00391C58
 		public List<IRecallEntityListT> RecallEntityList { get; set; }
 
-		// Token: 0x06017A9C RID: 96924 RVA: 0x00369C6D File Offset: 0x00367E6D
+		// Token: 0x06019135 RID: 102709 RVA: 0x00393A61 File Offset: 0x00391C61
 		public IQuestRecallConfigT()
 		{
 			this.RecallId = 0;

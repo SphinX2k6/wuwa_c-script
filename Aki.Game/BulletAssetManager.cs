@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02003312 RID: 13074
+// Token: 0x02002884 RID: 10372
 [NullableContext(1)]
 [Nullable(0)]
 public class BulletAssetManager
 {
-	// Token: 0x0601C7BA RID: 116666 RVA: 0x007FDB9F File Offset: 0x007FBD9F
+	// Token: 0x0601A4B3 RID: 107699 RVA: 0x0082410B File Offset: 0x0082230B
 	public BulletAssetManager(FightAssetManager fightAssetManager)
 	{
 		this.FightAssetManager = fightAssetManager;
 	}
 
-	// Token: 0x0601C7BB RID: 116667 RVA: 0x007FDBD8 File Offset: 0x007FBDD8
+	// Token: 0x0601A4B4 RID: 107700 RVA: 0x00824144 File Offset: 0x00822344
 	[NullableContext(2)]
 	public bool AddBullet(long bulletId, AssetElement assetElement)
 	{
@@ -71,7 +71,7 @@ public class BulletAssetManager
 		return true;
 	}
 
-	// Token: 0x0601C7BC RID: 116668 RVA: 0x007FDCD8 File Offset: 0x007FBED8
+	// Token: 0x0601A4B5 RID: 107701 RVA: 0x00824244 File Offset: 0x00822444
 	[NullableContext(2)]
 	public AssetElement GetBullet(long bulletId)
 	{
@@ -83,7 +83,7 @@ public class BulletAssetManager
 		return this.BulletAssetMap.GetValueOrDefault(key);
 	}
 
-	// Token: 0x0601C7BD RID: 116669 RVA: 0x007FDD04 File Offset: 0x007FBF04
+	// Token: 0x0601A4B6 RID: 107702 RVA: 0x00824270 File Offset: 0x00822470
 	public bool RemoveBullet(long bulletId)
 	{
 		int num;
@@ -107,7 +107,7 @@ public class BulletAssetManager
 		return true;
 	}
 
-	// Token: 0x0601C7BE RID: 116670 RVA: 0x007FDD7C File Offset: 0x007FBF7C
+	// Token: 0x0601A4B7 RID: 107703 RVA: 0x008242E8 File Offset: 0x008224E8
 	public void Clear()
 	{
 		foreach (KeyValuePair<int, AssetElement> keyValuePair in this.BulletAssetMap)
@@ -126,22 +126,22 @@ public class BulletAssetManager
 		holdAssetObject.Clear();
 	}
 
-	// Token: 0x0400E237 RID: 57911
+	// Token: 0x0400E6E8 RID: 59112
 	public readonly FightAssetManager FightAssetManager;
 
-	// Token: 0x0400E238 RID: 57912
+	// Token: 0x0400E6E9 RID: 59113
 	public Dictionary<long, int> BulletMapping = new Dictionary<long, int>();
 
-	// Token: 0x0400E239 RID: 57913
+	// Token: 0x0400E6EA RID: 59114
 	public Dictionary<int, long> IndexMapping = new Dictionary<int, long>();
 
-	// Token: 0x0400E23A RID: 57914
+	// Token: 0x0400E6EB RID: 59115
 	public Dictionary<int, AssetElement> BulletAssetMap = new Dictionary<int, AssetElement>();
 
-	// Token: 0x0400E23B RID: 57915
+	// Token: 0x0400E6EC RID: 59116
 	[Nullable(2)]
 	private UHoldPreloadObject HoldAssetObject;
 
-	// Token: 0x0400E23C RID: 57916
+	// Token: 0x0400E6ED RID: 59117
 	private int Key = -1;
 }

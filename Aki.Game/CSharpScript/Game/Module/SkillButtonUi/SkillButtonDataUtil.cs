@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.SkillButtonUi
 {
-	// Token: 0x02004C04 RID: 19460
+	// Token: 0x02003BB5 RID: 15285
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SkillButtonDataUtil
 	{
-		// Token: 0x06032589 RID: 206217 RVA: 0x00BB4154 File Offset: 0x00BB2354
+		// Token: 0x06027336 RID: 160566 RVA: 0x00AF8A40 File Offset: 0x00AF6C40
 		// Note: this type is marked as 'beforefieldinit'.
 		static SkillButtonDataUtil()
 		{
@@ -38,11 +38,11 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			SkillButtonDataUtil.HiddenTagMap = dictionary2;
 		}
 
-		// Token: 0x0401AC94 RID: 109716
+		// Token: 0x040155F0 RID: 87536
 		[StaticVariableRuleIgnore]
 		public static readonly Dictionary<ESkillButtonType, int> DisableTagMap;
 
-		// Token: 0x0401AC95 RID: 109717
+		// Token: 0x040155F1 RID: 87537
 		[StaticVariableRuleIgnore]
 		public static readonly Dictionary<ESkillButtonType, int> HiddenTagMap;
 	}

@@ -4,19 +4,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 {
-	// Token: 0x020061F8 RID: 25080
+	// Token: 0x02005176 RID: 20854
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TabGroupData : ITabGroupData
 	{
-		// Token: 0x1700922C RID: 37420
-		// (get) Token: 0x0603F481 RID: 259201 RVA: 0x00F4AC23 File Offset: 0x00F48E23
-		// (set) Token: 0x0603F482 RID: 259202 RVA: 0x00F4AC2B File Offset: 0x00F48E2B
+		// Token: 0x1700658E RID: 25998
+		// (get) Token: 0x06034142 RID: 213314 RVA: 0x00E91B7B File Offset: 0x00E8FD7B
+		// (set) Token: 0x06034143 RID: 213315 RVA: 0x00E91B83 File Offset: 0x00E8FD83
 		public List<MotorChallengePlayData> TabDataList { get; set; } = new List<MotorChallengePlayData>();
 
-		// Token: 0x1700922D RID: 37421
-		// (get) Token: 0x0603F483 RID: 259203 RVA: 0x00F4AC34 File Offset: 0x00F48E34
-		// (set) Token: 0x0603F484 RID: 259204 RVA: 0x00F4AC3C File Offset: 0x00F48E3C
+		// Token: 0x1700658F RID: 25999
+		// (get) Token: 0x06034144 RID: 213316 RVA: 0x00E91B8C File Offset: 0x00E8FD8C
+		// (set) Token: 0x06034145 RID: 213317 RVA: 0x00E91B94 File Offset: 0x00E8FD94
 		[Nullable(2)]
 		public string GroupTitleId { [NullableContext(2)] get; [NullableContext(2)] set; }
 	}

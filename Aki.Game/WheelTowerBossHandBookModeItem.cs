@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x0200158D RID: 5517
+// Token: 0x02000A45 RID: 2629
 public class WheelTowerBossHandBookModeItem : GridProxyAbstract<bool>
 {
-	// Token: 0x17000D77 RID: 3447
-	// (get) Token: 0x06009D62 RID: 40290 RVA: 0x00221EB7 File Offset: 0x002200B7
-	// (set) Token: 0x06009D63 RID: 40291 RVA: 0x00221EBF File Offset: 0x002200BF
+	// Token: 0x17000D98 RID: 3480
+	// (get) Token: 0x06007140 RID: 28992 RVA: 0x0022BC67 File Offset: 0x00229E67
+	// (set) Token: 0x06007141 RID: 28993 RVA: 0x0022BC6F File Offset: 0x00229E6F
 	[Nullable(new byte[]
 	{
 		2,
@@ -26,7 +26,7 @@ public class WheelTowerBossHandBookModeItem : GridProxyAbstract<bool>
 		1
 	})] set; }
 
-	// Token: 0x06009D64 RID: 40292 RVA: 0x00221EC8 File Offset: 0x002200C8
+	// Token: 0x06007142 RID: 28994 RVA: 0x0022BC78 File Offset: 0x00229E78
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -49,7 +49,7 @@ public class WheelTowerBossHandBookModeItem : GridProxyAbstract<bool>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009D65 RID: 40293 RVA: 0x00221F90 File Offset: 0x00220190
+	// Token: 0x06007143 RID: 28995 RVA: 0x0022BD40 File Offset: 0x00229F40
 	public override void Refresh(bool isEndless, bool isSelected, int gridIndex)
 	{
 		this.IsEndless = isEndless;
@@ -63,19 +63,19 @@ public class WheelTowerBossHandBookModeItem : GridProxyAbstract<bool>
 		item.SetUIActive(false);
 	}
 
-	// Token: 0x06009D66 RID: 40294 RVA: 0x00221FDD File Offset: 0x002201DD
+	// Token: 0x06007144 RID: 28996 RVA: 0x0022BD8D File Offset: 0x00229F8D
 	public override void OnSelected(bool fireEvent)
 	{
 		this.InvokeToggleClick(fireEvent);
 	}
 
-	// Token: 0x06009D67 RID: 40295 RVA: 0x00221FE6 File Offset: 0x002201E6
+	// Token: 0x06007145 RID: 28997 RVA: 0x0022BD96 File Offset: 0x00229F96
 	private void OnToggleClick(EToggleState state)
 	{
 		this.InvokeToggleClick(state == EToggleState.ETT_Checked);
 	}
 
-	// Token: 0x06009D68 RID: 40296 RVA: 0x00221FF4 File Offset: 0x002201F4
+	// Token: 0x06007146 RID: 28998 RVA: 0x0022BDA4 File Offset: 0x00229FA4
 	private void InvokeToggleClick(bool fireEvent)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -90,6 +90,6 @@ public class WheelTowerBossHandBookModeItem : GridProxyAbstract<bool>
 		}
 	}
 
-	// Token: 0x04004533 RID: 17715
+	// Token: 0x040045D9 RID: 17881
 	private bool IsEndless;
 }

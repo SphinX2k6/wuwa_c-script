@@ -4,19 +4,19 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using UnrealEngine;
 
-// Token: 0x02002F2A RID: 12074
+// Token: 0x0200247D RID: 9341
 [NullableContext(1)]
 [Nullable(0)]
 public class ExtraEffectDamageAccumulation : BuffEffect, IStaticVariableResetter
 {
-	// Token: 0x06019B95 RID: 105365 RVA: 0x006B2BC6 File Offset: 0x006B0DC6
+	// Token: 0x060174A0 RID: 95392 RVA: 0x006D8EDE File Offset: 0x006D70DE
 	static ExtraEffectDamageAccumulation()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ExtraEffectDamageAccumulation.CreateStaticDefaultValue), new Action(ExtraEffectDamageAccumulation.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x170023AE RID: 9134
-	// (get) Token: 0x06019B96 RID: 105366 RVA: 0x006B2BE5 File Offset: 0x006B0DE5
+	// Token: 0x17002470 RID: 9328
+	// (get) Token: 0x060174A1 RID: 95393 RVA: 0x006D8EFD File Offset: 0x006D70FD
 	private static Dictionary<int, float> AccumulationMap
 	{
 		get
@@ -25,12 +25,12 @@ public class ExtraEffectDamageAccumulation : BuffEffect, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06019B97 RID: 105367 RVA: 0x006B2BEC File Offset: 0x006B0DEC
+	// Token: 0x060174A2 RID: 95394 RVA: 0x006D8F04 File Offset: 0x006D7104
 	public ExtraEffectDamageAccumulation(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019B98 RID: 105368 RVA: 0x006B2C08 File Offset: 0x006B0E08
+	// Token: 0x060174A3 RID: 95395 RVA: 0x006D8F20 File Offset: 0x006D7120
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -74,13 +74,13 @@ public class ExtraEffectDamageAccumulation : BuffEffect, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06019B99 RID: 105369 RVA: 0x006B2D50 File Offset: 0x006B0F50
+	// Token: 0x060174A4 RID: 95396 RVA: 0x006D9068 File Offset: 0x006D7268
 	public override void OnCreated()
 	{
 		this.PreTriggerEffect(ExtraEffectDamageAccumulation.ETriggerType.Accumulated);
 	}
 
-	// Token: 0x06019B9A RID: 105370 RVA: 0x006B2D59 File Offset: 0x006B0F59
+	// Token: 0x060174A5 RID: 95397 RVA: 0x006D9071 File Offset: 0x006D7271
 	public override void OnRemoved(bool bPremature)
 	{
 		if (bPremature)
@@ -91,7 +91,7 @@ public class ExtraEffectDamageAccumulation : BuffEffect, IStaticVariableResetter
 		this.PreTriggerEffect(ExtraEffectDamageAccumulation.ETriggerType.Expired);
 	}
 
-	// Token: 0x06019B9B RID: 105371 RVA: 0x006B2D6D File Offset: 0x006B0F6D
+	// Token: 0x060174A6 RID: 95398 RVA: 0x006D9085 File Offset: 0x006D7285
 	public override void OnStackDecreased(int newCount, int oldCount, bool bPremature)
 	{
 		if (newCount < oldCount)
@@ -100,7 +100,7 @@ public class ExtraEffectDamageAccumulation : BuffEffect, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06019B9C RID: 105372 RVA: 0x006B2D7C File Offset: 0x006B0F7C
+	// Token: 0x060174A7 RID: 95399 RVA: 0x006D9094 File Offset: 0x006D7294
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
@@ -130,7 +130,7 @@ public class ExtraEffectDamageAccumulation : BuffEffect, IStaticVariableResetter
 		return null;
 	}
 
-	// Token: 0x06019B9D RID: 105373 RVA: 0x006B2DE8 File Offset: 0x006B0FE8
+	// Token: 0x060174A8 RID: 95400 RVA: 0x006D9100 File Offset: 0x006D7300
 	public static void ApplyEffects(DamageResult damageResult, RequirementPayload requirements, BaseDamageComponent attacker, BaseDamageComponent victim)
 	{
 		BaseBuffComponent[] array = new BaseBuffComponent[]
@@ -185,7 +185,7 @@ public class ExtraEffectDamageAccumulation : BuffEffect, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06019B9E RID: 105374 RVA: 0x006B2F60 File Offset: 0x006B1160
+	// Token: 0x060174A9 RID: 95401 RVA: 0x006D9278 File Offset: 0x006D7478
 	public static float GetAccumulation(int bulletEntityId)
 	{
 		float valueOrDefault = ExtraEffectDamageAccumulation.AccumulationMap.GetValueOrDefault(bulletEntityId, 0f);
@@ -193,13 +193,13 @@ public class ExtraEffectDamageAccumulation : BuffEffect, IStaticVariableResetter
 		return valueOrDefault;
 	}
 
-	// Token: 0x06019B9F RID: 105375 RVA: 0x006B2F7E File Offset: 0x006B117E
+	// Token: 0x060174AA RID: 95402 RVA: 0x006D9296 File Offset: 0x006D7496
 	private bool CheckTriggeredType(ExtraEffectDamageAccumulation.ETriggerType triggerType)
 	{
 		return (this.Triggers & 1 << (int)triggerType) != 0;
 	}
 
-	// Token: 0x06019BA0 RID: 105376 RVA: 0x006B2F90 File Offset: 0x006B1190
+	// Token: 0x060174AB RID: 95403 RVA: 0x006D92A8 File Offset: 0x006D74A8
 	private void PreTriggerEffect(ExtraEffectDamageAccumulation.ETriggerType triggerType)
 	{
 		if (!this.CheckTriggeredType(triggerType))
@@ -231,7 +231,7 @@ public class ExtraEffectDamageAccumulation : BuffEffect, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06019BA1 RID: 105377 RVA: 0x006B300C File Offset: 0x006B120C
+	// Token: 0x060174AC RID: 95404 RVA: 0x006D9324 File Offset: 0x006D7524
 	private void TriggerEffect()
 	{
 		EPassiveEffectGoalType goalType = this.GoalType;
@@ -249,7 +249,7 @@ public class ExtraEffectDamageAccumulation : BuffEffect, IStaticVariableResetter
 		this.Accumulation = 0f;
 	}
 
-	// Token: 0x06019BA2 RID: 105378 RVA: 0x006B3040 File Offset: 0x006B1240
+	// Token: 0x060174AD RID: 95405 RVA: 0x006D9358 File Offset: 0x006D7558
 	private void ExecuteAddBuffs()
 	{
 		IActiveBuff buffByHandle = this.OwnerBuffComponent.GetBuffByHandle(this.ActiveHandleId);
@@ -278,7 +278,7 @@ public class ExtraEffectDamageAccumulation : BuffEffect, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06019BA3 RID: 105379 RVA: 0x006B3114 File Offset: 0x006B1314
+	// Token: 0x060174AE RID: 95406 RVA: 0x006D942C File Offset: 0x006D762C
 	private void ExecuteAddBullets()
 	{
 		CharacterActorComponent component = base.OwnerEntity.GetComponent<CharacterActorComponent>();
@@ -303,54 +303,54 @@ public class ExtraEffectDamageAccumulation : BuffEffect, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06019BA4 RID: 105380 RVA: 0x006B31DB File Offset: 0x006B13DB
+	// Token: 0x060174AF RID: 95407 RVA: 0x006D94F3 File Offset: 0x006D76F3
 	public static void CreateStaticDefaultValue()
 	{
 		ExtraEffectDamageAccumulation._accumulationMap = new Dictionary<int, float>();
 	}
 
-	// Token: 0x06019BA5 RID: 105381 RVA: 0x006B31E7 File Offset: 0x006B13E7
+	// Token: 0x060174B0 RID: 95408 RVA: 0x006D94FF File Offset: 0x006D76FF
 	public static void ResetStaticDefaultValue()
 	{
 		ExtraEffectDamageAccumulation._accumulationMap = null;
 	}
 
-	// Token: 0x0400C1E0 RID: 49632
+	// Token: 0x0400C582 RID: 50562
 	private float Accumulation;
 
-	// Token: 0x0400C1E1 RID: 49633
+	// Token: 0x0400C583 RID: 50563
 	[Nullable(2)]
 	private static Dictionary<int, float> _accumulationMap;
 
-	// Token: 0x0400C1E2 RID: 49634
+	// Token: 0x0400C584 RID: 50564
 	private EAccumulationType AccumulationType;
 
-	// Token: 0x0400C1E3 RID: 49635
+	// Token: 0x0400C585 RID: 50565
 	private EPassiveEffectGoalType GoalType;
 
-	// Token: 0x0400C1E4 RID: 49636
+	// Token: 0x0400C586 RID: 50566
 	private long[] Ids = Array.Empty<long>();
 
-	// Token: 0x0400C1E5 RID: 49637
+	// Token: 0x0400C587 RID: 50567
 	private int Triggers;
 
-	// Token: 0x0400C1E6 RID: 49638
+	// Token: 0x0400C588 RID: 50568
 	private float Lower;
 
-	// Token: 0x0400C1E7 RID: 49639
+	// Token: 0x0400C589 RID: 50569
 	private EAttributeType? AttributeId;
 
-	// Token: 0x020095FF RID: 38399
+	// Token: 0x02008824 RID: 34852
 	[NullableContext(0)]
 	public enum ETriggerType
 	{
-		// Token: 0x0403024A RID: 197194
+		// Token: 0x0402B8DF RID: 178399
 		Accumulated,
-		// Token: 0x0403024B RID: 197195
+		// Token: 0x0402B8E0 RID: 178400
 		Expired,
-		// Token: 0x0403024C RID: 197196
+		// Token: 0x0402B8E1 RID: 178401
 		Premature,
-		// Token: 0x0403024D RID: 197197
+		// Token: 0x0402B8E2 RID: 178402
 		Reduced
 	}
 }

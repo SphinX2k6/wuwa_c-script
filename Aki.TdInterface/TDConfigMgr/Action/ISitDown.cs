@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E73 RID: 7795
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020020A8 RID: 8360
 	public class ISitDown : ILeisureInteractType
 	{
-		// Token: 0x0600A6D8 RID: 42712 RVA: 0x00179720 File Offset: 0x00177920
+		// Token: 0x0600B190 RID: 45456 RVA: 0x0018F420 File Offset: 0x0018D620
 		private ISitDown_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A6D9 RID: 42713 RVA: 0x00179758 File Offset: 0x00177958
+		// Token: 0x0600B191 RID: 45457 RVA: 0x0018F458 File Offset: 0x0018D658
 		public static ISitDown Create([Nullable(2)] ISitDown instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A6DA RID: 42714 RVA: 0x0017976B File Offset: 0x0017796B
+		// Token: 0x0600B192 RID: 45458 RVA: 0x0018F46B File Offset: 0x0018D66B
 		public static ISitDown CreateFromSetValue([Nullable(2)] ISitDown_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A6DB RID: 42715 RVA: 0x0017977E File Offset: 0x0017797E
+		// Token: 0x0600B193 RID: 45459 RVA: 0x0018F47E File Offset: 0x0018D67E
 		public new ISitDown_SetValue ToSetValue()
 		{
 			return new ISitDown_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003317 RID: 13079
-		// (get) Token: 0x0600A6DC RID: 42716 RVA: 0x0017979D File Offset: 0x0017799D
-		// (set) Token: 0x0600A6DD RID: 42717 RVA: 0x001797C8 File Offset: 0x001779C8
+		// Token: 0x170035DB RID: 13787
+		// (get) Token: 0x0600B194 RID: 45460 RVA: 0x0018F49D File Offset: 0x0018D69D
+		// (set) Token: 0x0600B195 RID: 45461 RVA: 0x0018F4C8 File Offset: 0x0018D6C8
 		public override ELeisureInteract Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003318 RID: 13080
-		// (get) Token: 0x0600A6DE RID: 42718 RVA: 0x001797D8 File Offset: 0x001779D8
-		// (set) Token: 0x0600A6DF RID: 42719 RVA: 0x00179812 File Offset: 0x00177A12
+		// Token: 0x170035DC RID: 13788
+		// (get) Token: 0x0600B196 RID: 45462 RVA: 0x0018F4D8 File Offset: 0x0018D6D8
+		// (set) Token: 0x0600B197 RID: 45463 RVA: 0x0018F512 File Offset: 0x0018D712
 		public virtual bool? OnlyAllowForwardStandUp
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040063A0 RID: 25504
+		// Token: 0x04006984 RID: 27012
 		[Nullable(2)]
 		protected new ISitDown FbInstance;
 
-		// Token: 0x040063A1 RID: 25505
+		// Token: 0x04006985 RID: 27013
 		[Nullable(2)]
 		protected new ISitDown_SetValue PocoInterface;
 	}

@@ -4,12 +4,12 @@ using Aki.TDConfigMgr.Action;
 using Aki.TDConfigMgr.Component;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02003230 RID: 12848
+// Token: 0x0200279F RID: 10143
 [NullableContext(1)]
 [Nullable(0)]
 public class NpcPerformUnderAttackState : NpcPerformBaseState
 {
-	// Token: 0x0601BB57 RID: 113495 RVA: 0x007A0988 File Offset: 0x0079EB88
+	// Token: 0x060196DC RID: 104156 RVA: 0x007C9294 File Offset: 0x007C7494
 	public NpcPerformUnderAttackState(EntityHandle owner, ENpcPerformState state, [Nullable(new byte[]
 	{
 		2,
@@ -18,20 +18,20 @@ public class NpcPerformUnderAttackState : NpcPerformBaseState
 	{
 	}
 
-	// Token: 0x0601BB58 RID: 113496 RVA: 0x007A09A0 File Offset: 0x0079EBA0
+	// Token: 0x060196DD RID: 104157 RVA: 0x007C92AC File Offset: 0x007C74AC
 	public override bool CanChangeFrom(ENpcPerformState fromState)
 	{
 		CommonNpcPerformComponent component = this.Owner.Entity.GetComponent<CommonNpcPerformComponent>();
 		return this.HaveUnderAttackConfig && fromState == ENpcPerformState.Idle && !component.IsInPlot;
 	}
 
-	// Token: 0x0601BB59 RID: 113497 RVA: 0x007A09D5 File Offset: 0x0079EBD5
+	// Token: 0x060196DE RID: 104158 RVA: 0x007C92E1 File Offset: 0x007C74E1
 	public void SetDefaultDirect(Vector direct)
 	{
 		this.DefaultDirect.DeepCopy(direct);
 	}
 
-	// Token: 0x0601BB5A RID: 113498 RVA: 0x007A09E4 File Offset: 0x0079EBE4
+	// Token: 0x060196DF RID: 104159 RVA: 0x007C92F0 File Offset: 0x007C74F0
 	[NullableContext(2)]
 	protected override void OnCreate(IEntityArgs args = null)
 	{
@@ -47,7 +47,7 @@ public class NpcPerformUnderAttackState : NpcPerformBaseState
 		this.FlowConfig = p.NpcHitShow.HitBubble;
 	}
 
-	// Token: 0x0601BB5B RID: 113499 RVA: 0x007A0A40 File Offset: 0x0079EC40
+	// Token: 0x060196E0 RID: 104160 RVA: 0x007C934C File Offset: 0x007C754C
 	protected override void OnEnter(ENpcPerformState? lastState)
 	{
 		this.LastState = lastState;
@@ -79,33 +79,33 @@ public class NpcPerformUnderAttackState : NpcPerformBaseState
 		EventSystem.Instance.EmitWithTarget(this.Owner, EEventName.OnNpcBeenAttackedStart);
 	}
 
-	// Token: 0x0601BB5C RID: 113500 RVA: 0x007A0B23 File Offset: 0x0079ED23
+	// Token: 0x060196E1 RID: 104161 RVA: 0x007C942F File Offset: 0x007C762F
 	protected override void OnExit(ENpcPerformState nextState)
 	{
 		EventSystem.Instance.EmitWithTarget(this.Owner, EEventName.OnNpcBeenAttackedEnd);
 	}
 
-	// Token: 0x0601BB5D RID: 113501 RVA: 0x007A0B3B File Offset: 0x0079ED3B
+	// Token: 0x060196E2 RID: 104162 RVA: 0x007C9447 File Offset: 0x007C7647
 	protected override void OnDestroy()
 	{
 	}
 
-	// Token: 0x0400DA40 RID: 55872
+	// Token: 0x0400DEDF RID: 57055
 	private const int BUBBLE_TIME = 3;
 
-	// Token: 0x0400DA41 RID: 55873
+	// Token: 0x0400DEE0 RID: 57056
 	private bool HaveUnderAttackConfig;
 
-	// Token: 0x0400DA42 RID: 55874
+	// Token: 0x0400DEE1 RID: 57057
 	private int BubbleRate;
 
-	// Token: 0x0400DA43 RID: 55875
+	// Token: 0x0400DEE2 RID: 57058
 	[Nullable(2)]
 	private IBubbleIndex FlowConfig;
 
-	// Token: 0x0400DA44 RID: 55876
+	// Token: 0x0400DEE3 RID: 57059
 	private readonly Vector DefaultDirect = Vector.Create();
 
-	// Token: 0x0400DA45 RID: 55877
+	// Token: 0x0400DEE4 RID: 57060
 	private ENpcPerformState? LastState;
 }

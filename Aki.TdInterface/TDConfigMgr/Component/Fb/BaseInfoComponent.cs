@@ -7,13 +7,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AA8 RID: 2728
+	// Token: 0x02000B72 RID: 2930
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class BaseInfoComponent : IComponentBase
 	{
-		// Token: 0x06003ECE RID: 16078 RVA: 0x000A098A File Offset: 0x0009EB8A
-		[NullableContext(1)]
+		// Token: 0x060042F8 RID: 17144 RVA: 0x000A9F7E File Offset: 0x000A817E
+		[NullableContext(0)]
 		public static BaseInfoComponent Create(IBaseInfoComponent? instance)
 		{
 			if (instance == null)
@@ -26,8 +26,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000F3B RID: 3899
-		// (get) Token: 0x06003ECF RID: 16079 RVA: 0x000A09AC File Offset: 0x0009EBAC
+		// Token: 0x1700100F RID: 4111
+		// (get) Token: 0x060042F9 RID: 17145 RVA: 0x000A9FA0 File Offset: 0x000A81A0
 		public override bool? Disabled
 		{
 			get
@@ -40,8 +40,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F3C RID: 3900
-		// (get) Token: 0x06003ED0 RID: 16080 RVA: 0x000A09E4 File Offset: 0x0009EBE4
+		// Token: 0x17001010 RID: 4112
+		// (get) Token: 0x060042FA RID: 17146 RVA: 0x000A9FD8 File Offset: 0x000A81D8
 		public override bool? EdIsLocked
 		{
 			get
@@ -50,20 +50,20 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F3D RID: 3901
-		// (get) Token: 0x06003ED1 RID: 16081 RVA: 0x000A09FA File Offset: 0x0009EBFA
-		[Nullable(1)]
+		// Token: 0x17001011 RID: 4113
+		// (get) Token: 0x060042FB RID: 17147 RVA: 0x000A9FEE File Offset: 0x000A81EE
+		[Nullable(0)]
 		public virtual string TidName
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				return this.Instance.TidName;
 			}
 		}
 
-		// Token: 0x17000F3E RID: 3902
-		// (get) Token: 0x06003ED2 RID: 16082 RVA: 0x000A0A08 File Offset: 0x0009EC08
+		// Token: 0x17001012 RID: 4114
+		// (get) Token: 0x060042FC RID: 17148 RVA: 0x000A9FFC File Offset: 0x000A81FC
 		public virtual bool? IsShowNameOnHead
 		{
 			get
@@ -76,12 +76,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F3F RID: 3903
-		// (get) Token: 0x06003ED3 RID: 16083 RVA: 0x000A0A3E File Offset: 0x0009EC3E
-		[Nullable(1)]
+		// Token: 0x17001013 RID: 4115
+		// (get) Token: 0x060042FD RID: 17149 RVA: 0x000AA032 File Offset: 0x000A8232
+		[Nullable(0)]
 		public virtual IEntityCategory Category
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._CategoryInited)
@@ -94,8 +94,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F40 RID: 3904
-		// (get) Token: 0x06003ED4 RID: 16084 RVA: 0x000A0A72 File Offset: 0x0009EC72
+		// Token: 0x17001014 RID: 4116
+		// (get) Token: 0x060042FE RID: 17150 RVA: 0x000AA066 File Offset: 0x000A8266
 		public virtual IEntityScanFunction ScanFunction
 		{
 			get
@@ -110,8 +110,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F41 RID: 3905
-		// (get) Token: 0x06003ED5 RID: 16085 RVA: 0x000A0AA8 File Offset: 0x0009ECA8
+		// Token: 0x17001015 RID: 4117
+		// (get) Token: 0x060042FF RID: 17151 RVA: 0x000AA09C File Offset: 0x000A829C
 		public virtual int? HeadInfo
 		{
 			get
@@ -124,8 +124,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F42 RID: 3906
-		// (get) Token: 0x06003ED6 RID: 16086 RVA: 0x000A0ADE File Offset: 0x0009ECDE
+		// Token: 0x17001016 RID: 4118
+		// (get) Token: 0x06004300 RID: 17152 RVA: 0x000AA0D2 File Offset: 0x000A82D2
 		public virtual ECamp Camp
 		{
 			get
@@ -134,8 +134,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F43 RID: 3907
-		// (get) Token: 0x06003ED7 RID: 16087 RVA: 0x000A0AEB File Offset: 0x0009ECEB
+		// Token: 0x17001017 RID: 4119
+		// (get) Token: 0x06004301 RID: 17153 RVA: 0x000AA0DF File Offset: 0x000A82DF
 		public virtual EAoiLayer AoiLayer
 		{
 			get
@@ -144,8 +144,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F44 RID: 3908
-		// (get) Token: 0x06003ED8 RID: 16088 RVA: 0x000A0AF8 File Offset: 0x0009ECF8
+		// Token: 0x17001018 RID: 4120
+		// (get) Token: 0x06004302 RID: 17154 RVA: 0x000AA0EC File Offset: 0x000A82EC
 		public virtual AoiZRadius AoiZRadius
 		{
 			get
@@ -154,8 +154,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F45 RID: 3909
-		// (get) Token: 0x06003ED9 RID: 16089 RVA: 0x000A0B05 File Offset: 0x0009ED05
+		// Token: 0x17001019 RID: 4121
+		// (get) Token: 0x06004303 RID: 17155 RVA: 0x000AA0F9 File Offset: 0x000A82F9
 		public virtual string AoiGroupKey
 		{
 			get
@@ -164,8 +164,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F46 RID: 3910
-		// (get) Token: 0x06003EDA RID: 16090 RVA: 0x000A0B14 File Offset: 0x0009ED14
+		// Token: 0x1700101A RID: 4122
+		// (get) Token: 0x06004304 RID: 17156 RVA: 0x000AA108 File Offset: 0x000A8308
 		public virtual bool? IsAoiFitterPlatform
 		{
 			get
@@ -178,8 +178,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F47 RID: 3911
-		// (get) Token: 0x06003EDB RID: 16091 RVA: 0x000A0B4A File Offset: 0x0009ED4A
+		// Token: 0x1700101B RID: 4123
+		// (get) Token: 0x06004305 RID: 17157 RVA: 0x000AA13E File Offset: 0x000A833E
 		public virtual ICustomAoizRadius CustomAoiZRadius
 		{
 			get
@@ -194,8 +194,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F48 RID: 3912
-		// (get) Token: 0x06003EDC RID: 16092 RVA: 0x000A0B80 File Offset: 0x0009ED80
+		// Token: 0x1700101C RID: 4124
+		// (get) Token: 0x06004306 RID: 17158 RVA: 0x000AA174 File Offset: 0x000A8374
 		public virtual int? MapIcon
 		{
 			get
@@ -208,8 +208,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F49 RID: 3913
-		// (get) Token: 0x06003EDD RID: 16093 RVA: 0x000A0BB8 File Offset: 0x0009EDB8
+		// Token: 0x1700101D RID: 4125
+		// (get) Token: 0x06004307 RID: 17159 RVA: 0x000AA1AC File Offset: 0x000A83AC
 		public virtual int? PackId
 		{
 			get
@@ -222,8 +222,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F4A RID: 3914
-		// (get) Token: 0x06003EDE RID: 16094 RVA: 0x000A0BEF File Offset: 0x0009EDEF
+		// Token: 0x1700101E RID: 4126
+		// (get) Token: 0x06004308 RID: 17160 RVA: 0x000AA1E3 File Offset: 0x000A83E3
 		public virtual string Occupation
 		{
 			get
@@ -232,8 +232,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F4B RID: 3915
-		// (get) Token: 0x06003EDF RID: 16095 RVA: 0x000A0BFC File Offset: 0x0009EDFC
+		// Token: 0x1700101F RID: 4127
+		// (get) Token: 0x06004309 RID: 17161 RVA: 0x000AA1F0 File Offset: 0x000A83F0
 		public virtual IHeadStateViewConfig HeadStateViewConfig
 		{
 			get
@@ -248,8 +248,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F4C RID: 3916
-		// (get) Token: 0x06003EE0 RID: 16096 RVA: 0x000A0C30 File Offset: 0x0009EE30
+		// Token: 0x17001020 RID: 4128
+		// (get) Token: 0x0600430A RID: 17162 RVA: 0x000AA224 File Offset: 0x000A8424
 		public virtual int EntityPropertyId
 		{
 			get
@@ -258,8 +258,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F4D RID: 3917
-		// (get) Token: 0x06003EE1 RID: 16097 RVA: 0x000A0C40 File Offset: 0x0009EE40
+		// Token: 0x17001021 RID: 4129
+		// (get) Token: 0x0600430B RID: 17163 RVA: 0x000AA234 File Offset: 0x000A8434
 		public virtual int? FocusPriority
 		{
 			get
@@ -272,8 +272,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F4E RID: 3918
-		// (get) Token: 0x06003EE2 RID: 16098 RVA: 0x000A0C77 File Offset: 0x0009EE77
+		// Token: 0x17001022 RID: 4130
+		// (get) Token: 0x0600430C RID: 17164 RVA: 0x000AA26B File Offset: 0x000A846B
 		public virtual EOnlineInteractType OnlineInteractType
 		{
 			get
@@ -282,8 +282,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F4F RID: 3919
-		// (get) Token: 0x06003EE3 RID: 16099 RVA: 0x000A0C84 File Offset: 0x0009EE84
+		// Token: 0x17001023 RID: 4131
+		// (get) Token: 0x0600430D RID: 17165 RVA: 0x000AA278 File Offset: 0x000A8478
 		public virtual bool? NotAllowHidedByTargetRange
 		{
 			get
@@ -296,8 +296,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F50 RID: 3920
-		// (get) Token: 0x06003EE4 RID: 16100 RVA: 0x000A0CC0 File Offset: 0x0009EEC0
+		// Token: 0x17001024 RID: 4132
+		// (get) Token: 0x0600430E RID: 17166 RVA: 0x000AA2B4 File Offset: 0x000A84B4
 		public virtual ENpcDensity? LowerNpcDensity
 		{
 			get
@@ -310,8 +310,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F51 RID: 3921
-		// (get) Token: 0x06003EE5 RID: 16101 RVA: 0x000A0CFC File Offset: 0x0009EEFC
+		// Token: 0x17001025 RID: 4133
+		// (get) Token: 0x0600430F RID: 17167 RVA: 0x000AA2F0 File Offset: 0x000A84F0
 		public virtual List<int> DataLayers
 		{
 			get
@@ -335,8 +335,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F52 RID: 3922
-		// (get) Token: 0x06003EE6 RID: 16102 RVA: 0x000A0D78 File Offset: 0x0009EF78
+		// Token: 0x17001026 RID: 4134
+		// (get) Token: 0x06004310 RID: 17168 RVA: 0x000AA36C File Offset: 0x000A856C
 		public virtual List<int> ChildEntityIds
 		{
 			get
@@ -360,8 +360,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F53 RID: 3923
-		// (get) Token: 0x06003EE7 RID: 16103 RVA: 0x000A0DF4 File Offset: 0x0009EFF4
+		// Token: 0x17001027 RID: 4135
+		// (get) Token: 0x06004311 RID: 17169 RVA: 0x000AA3E8 File Offset: 0x000A85E8
 		public virtual bool? IsOnlineStandalone
 		{
 			get
@@ -374,19 +374,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F54 RID: 3924
-		// (get) Token: 0x06003EE8 RID: 16104 RVA: 0x000A0E30 File Offset: 0x0009F030
+		// Token: 0x17001028 RID: 4136
+		// (get) Token: 0x06004312 RID: 17170 RVA: 0x000AA424 File Offset: 0x000A8624
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<string> SpecifiedOnlineStandaloneParentUids
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -409,8 +409,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F55 RID: 3925
-		// (get) Token: 0x06003EE9 RID: 16105 RVA: 0x000A0EA9 File Offset: 0x0009F0A9
+		// Token: 0x17001029 RID: 4137
+		// (get) Token: 0x06004313 RID: 17171 RVA: 0x000AA49D File Offset: 0x000A869D
 		public virtual IFixProcessor FixProcessor
 		{
 			get
@@ -425,8 +425,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F56 RID: 3926
-		// (get) Token: 0x06003EEA RID: 16106 RVA: 0x000A0EE0 File Offset: 0x0009F0E0
+		// Token: 0x1700102A RID: 4138
+		// (get) Token: 0x06004314 RID: 17172 RVA: 0x000AA4D4 File Offset: 0x000A86D4
 		public virtual EEntityUpdateStrategy? EntityUpdateStrategy
 		{
 			get
@@ -439,8 +439,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F57 RID: 3927
-		// (get) Token: 0x06003EEB RID: 16107 RVA: 0x000A0F1C File Offset: 0x0009F11C
+		// Token: 0x1700102B RID: 4139
+		// (get) Token: 0x06004315 RID: 17173 RVA: 0x000AA510 File Offset: 0x000A8710
 		public virtual EMaterialUpdateStrategy? MaterialUpdateStrategy
 		{
 			get
@@ -453,8 +453,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F58 RID: 3928
-		// (get) Token: 0x06003EEC RID: 16108 RVA: 0x000A0F58 File Offset: 0x0009F158
+		// Token: 0x1700102C RID: 4140
+		// (get) Token: 0x06004316 RID: 17174 RVA: 0x000AA54C File Offset: 0x000A874C
 		public virtual ETimeScaleModifyStrategy? TimeScaleModifyStrategy
 		{
 			get
@@ -467,8 +467,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F59 RID: 3929
-		// (get) Token: 0x06003EED RID: 16109 RVA: 0x000A0F92 File Offset: 0x0009F192
+		// Token: 0x1700102D RID: 4141
+		// (get) Token: 0x06004317 RID: 17175 RVA: 0x000AA586 File Offset: 0x000A8786
 		public virtual IEntityGravityConfig GravityConfig
 		{
 			get
@@ -483,19 +483,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F5A RID: 3930
-		// (get) Token: 0x06003EEE RID: 16110 RVA: 0x000A0FC8 File Offset: 0x0009F1C8
+		// Token: 0x1700102E RID: 4142
+		// (get) Token: 0x06004318 RID: 17176 RVA: 0x000AA5BC File Offset: 0x000A87BC
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IHeadInfoChangeData> HeadInfoChangeConfig
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -518,8 +518,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F5B RID: 3931
-		// (get) Token: 0x06003EEF RID: 16111 RVA: 0x000A1048 File Offset: 0x0009F248
+		// Token: 0x1700102F RID: 4143
+		// (get) Token: 0x06004319 RID: 17177 RVA: 0x000AA63C File Offset: 0x000A883C
 		public virtual bool? IsForceDestroy
 		{
 			get
@@ -532,8 +532,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F5C RID: 3932
-		// (get) Token: 0x06003EF0 RID: 16112 RVA: 0x000A1082 File Offset: 0x0009F282
+		// Token: 0x17001030 RID: 4144
+		// (get) Token: 0x0600431A RID: 17178 RVA: 0x000AA676 File Offset: 0x000A8876
 		public virtual ITimeScaleConfig TimeScaleConfig
 		{
 			get
@@ -548,19 +548,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F5D RID: 3933
-		// (get) Token: 0x06003EF1 RID: 16113 RVA: 0x000A10B8 File Offset: 0x0009F2B8
+		// Token: 0x17001031 RID: 4145
+		// (get) Token: 0x0600431B RID: 17179 RVA: 0x000AA6AC File Offset: 0x000A88AC
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IEntityAttachPoint> EntityAttachPointList
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -583,8 +583,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F5E RID: 3934
-		// (get) Token: 0x06003EF2 RID: 16114 RVA: 0x000A1138 File Offset: 0x0009F338
+		// Token: 0x17001032 RID: 4146
+		// (get) Token: 0x0600431C RID: 17180 RVA: 0x000AA72C File Offset: 0x000A892C
 		public virtual int? DelayDestroyDistance
 		{
 			get
@@ -597,8 +597,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F5F RID: 3935
-		// (get) Token: 0x06003EF3 RID: 16115 RVA: 0x000A1174 File Offset: 0x0009F374
+		// Token: 0x17001033 RID: 4147
+		// (get) Token: 0x0600431D RID: 17181 RVA: 0x000AA768 File Offset: 0x000A8968
 		public virtual EClientEntityMark? IsClientEntityFlag
 		{
 			get
@@ -611,8 +611,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F60 RID: 3936
-		// (get) Token: 0x06003EF4 RID: 16116 RVA: 0x000A11B0 File Offset: 0x0009F3B0
+		// Token: 0x17001034 RID: 4148
+		// (get) Token: 0x0600431E RID: 17182 RVA: 0x000AA7A4 File Offset: 0x000A89A4
 		public virtual bool? KeepAnimationRateWithShadow
 		{
 			get
@@ -625,8 +625,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F61 RID: 3937
-		// (get) Token: 0x06003EF5 RID: 16117 RVA: 0x000A11EA File Offset: 0x0009F3EA
+		// Token: 0x17001035 RID: 4149
+		// (get) Token: 0x0600431F RID: 17183 RVA: 0x000AA7DE File Offset: 0x000A89DE
 		public virtual string EdTidName
 		{
 			get
@@ -635,8 +635,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F62 RID: 3938
-		// (get) Token: 0x06003EF6 RID: 16118 RVA: 0x000A11F0 File Offset: 0x0009F3F0
+		// Token: 0x17001036 RID: 4150
+		// (get) Token: 0x06004320 RID: 17184 RVA: 0x000AA7E4 File Offset: 0x000A89E4
 		public virtual ESnapFloorType? EdSnapFloor
 		{
 			get
@@ -645,94 +645,94 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040022E1 RID: 8929
+		// Token: 0x040024FD RID: 9469
 		private IBaseInfoComponent Instance;
 
-		// Token: 0x040022E2 RID: 8930
+		// Token: 0x040024FE RID: 9470
 		private IEntityCategory _CategoryCache;
 
-		// Token: 0x040022E3 RID: 8931
+		// Token: 0x040024FF RID: 9471
 		private bool _CategoryInited;
 
-		// Token: 0x040022E4 RID: 8932
+		// Token: 0x04002500 RID: 9472
 		private IEntityScanFunction _ScanFunctionCache;
 
-		// Token: 0x040022E5 RID: 8933
+		// Token: 0x04002501 RID: 9473
 		private bool _ScanFunctionInited;
 
-		// Token: 0x040022E6 RID: 8934
+		// Token: 0x04002502 RID: 9474
 		private ICustomAoizRadius _CustomAoiZRadiusCache;
 
-		// Token: 0x040022E7 RID: 8935
+		// Token: 0x04002503 RID: 9475
 		private bool _CustomAoiZRadiusInited;
 
-		// Token: 0x040022E8 RID: 8936
+		// Token: 0x04002504 RID: 9476
 		private IHeadStateViewConfig _HeadStateViewConfigCache;
 
-		// Token: 0x040022E9 RID: 8937
+		// Token: 0x04002505 RID: 9477
 		private bool _HeadStateViewConfigInited;
 
-		// Token: 0x040022EA RID: 8938
+		// Token: 0x04002506 RID: 9478
 		private List<int> _DataLayersCache;
 
-		// Token: 0x040022EB RID: 8939
+		// Token: 0x04002507 RID: 9479
 		private bool _DataLayersInited;
 
-		// Token: 0x040022EC RID: 8940
+		// Token: 0x04002508 RID: 9480
 		private List<int> _ChildEntityIdsCache;
 
-		// Token: 0x040022ED RID: 8941
+		// Token: 0x04002509 RID: 9481
 		private bool _ChildEntityIdsInited;
 
-		// Token: 0x040022EE RID: 8942
+		// Token: 0x0400250A RID: 9482
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<string> _SpecifiedOnlineStandaloneParentUidsCache;
 
-		// Token: 0x040022EF RID: 8943
+		// Token: 0x0400250B RID: 9483
 		private bool _SpecifiedOnlineStandaloneParentUidsInited;
 
-		// Token: 0x040022F0 RID: 8944
+		// Token: 0x0400250C RID: 9484
 		private IFixProcessor _FixProcessorCache;
 
-		// Token: 0x040022F1 RID: 8945
+		// Token: 0x0400250D RID: 9485
 		private bool _FixProcessorInited;
 
-		// Token: 0x040022F2 RID: 8946
+		// Token: 0x0400250E RID: 9486
 		private IEntityGravityConfig _GravityConfigCache;
 
-		// Token: 0x040022F3 RID: 8947
+		// Token: 0x0400250F RID: 9487
 		private bool _GravityConfigInited;
 
-		// Token: 0x040022F4 RID: 8948
+		// Token: 0x04002510 RID: 9488
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IHeadInfoChangeData> _HeadInfoChangeConfigCache;
 
-		// Token: 0x040022F5 RID: 8949
+		// Token: 0x04002511 RID: 9489
 		private bool _HeadInfoChangeConfigInited;
 
-		// Token: 0x040022F6 RID: 8950
+		// Token: 0x04002512 RID: 9490
 		private ITimeScaleConfig _TimeScaleConfigCache;
 
-		// Token: 0x040022F7 RID: 8951
+		// Token: 0x04002513 RID: 9491
 		private bool _TimeScaleConfigInited;
 
-		// Token: 0x040022F8 RID: 8952
+		// Token: 0x04002514 RID: 9492
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IEntityAttachPoint> _EntityAttachPointListCache;
 
-		// Token: 0x040022F9 RID: 8953
+		// Token: 0x04002515 RID: 9493
 		private bool _EntityAttachPointListInited;
 	}
 }

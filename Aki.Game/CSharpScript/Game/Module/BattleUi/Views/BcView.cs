@@ -8,16 +8,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CFF RID: 23807
+	// Token: 0x02004CE1 RID: 19681
 	public class BcView : UiViewBase
 	{
-		// Token: 0x0603C4C3 RID: 246979 RVA: 0x00E70C8E File Offset: 0x00E6EE8E
+		// Token: 0x0603141C RID: 201756 RVA: 0x00DC12F6 File Offset: 0x00DBF4F6
 		[NullableContext(1)]
 		public BcView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603C4C4 RID: 246980 RVA: 0x00E70CA4 File Offset: 0x00E6EEA4
+		// Token: 0x0603141D RID: 201757 RVA: 0x00DC130C File Offset: 0x00DBF50C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.CurrentCode = new Code12();
 		}
 
-		// Token: 0x0603C4C5 RID: 246981 RVA: 0x00E70DE0 File Offset: 0x00E6EFE0
+		// Token: 0x0603141E RID: 201758 RVA: 0x00DC1448 File Offset: 0x00DBF648
 		protected override void OnStart()
 		{
 			if ((KuroApplication.IsBuildShipping() && KuroApplication.GetAppReleaseType() == "Product") || UKuroLauncherLibrary.GetAppInternalUseType() == "Marketing")
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.InitContent(item7, item8, contentString, BcView.EBcOrientation.Vertical);
 		}
 
-		// Token: 0x0603C4C6 RID: 246982 RVA: 0x00E70F08 File Offset: 0x00E6F108
+		// Token: 0x0603141F RID: 201759 RVA: 0x00DC1570 File Offset: 0x00DBF770
 		[NullableContext(1)]
 		private void InitContent(UUIItem parentItem, UUIItem barItem, string contentString, BcView.EBcOrientation orientation)
 		{
@@ -168,51 +168,51 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401F69A RID: 128666
+		// Token: 0x0401A153 RID: 106835
 		private const int ITEM_WIDTH_MIN = 10;
 
-		// Token: 0x0401F69B RID: 128667
+		// Token: 0x0401A154 RID: 106836
 		private const int ITEM_WIDTH_MAX = 14;
 
-		// Token: 0x0401F69C RID: 128668
+		// Token: 0x0401A155 RID: 106837
 		private const int ITEM_HEIGHT_1 = 5;
 
-		// Token: 0x0401F69D RID: 128669
+		// Token: 0x0401A156 RID: 106838
 		private const int ITEM_HEIGHT_2 = 7;
 
-		// Token: 0x0401F69E RID: 128670
+		// Token: 0x0401A157 RID: 106839
 		[Nullable(1)]
 		private CodeNBase CurrentCode = new Code54();
 
-		// Token: 0x0200BF72 RID: 49010
+		// Token: 0x0200A978 RID: 43384
 		private enum EBcComponents
 		{
-			// Token: 0x04039BB9 RID: 236473
+			// Token: 0x0403457B RID: 214395
 			BcContainerTop,
-			// Token: 0x04039BBA RID: 236474
+			// Token: 0x0403457C RID: 214396
 			ItemTop,
-			// Token: 0x04039BBB RID: 236475
+			// Token: 0x0403457D RID: 214397
 			BcContainerBottom,
-			// Token: 0x04039BBC RID: 236476
+			// Token: 0x0403457E RID: 214398
 			ItemBottom,
-			// Token: 0x04039BBD RID: 236477
+			// Token: 0x0403457F RID: 214399
 			BcContainerLeft,
-			// Token: 0x04039BBE RID: 236478
+			// Token: 0x04034580 RID: 214400
 			ItemLeft,
-			// Token: 0x04039BBF RID: 236479
+			// Token: 0x04034581 RID: 214401
 			BcContainerRight,
-			// Token: 0x04039BC0 RID: 236480
+			// Token: 0x04034582 RID: 214402
 			ItemRight,
-			// Token: 0x04039BC1 RID: 236481
+			// Token: 0x04034583 RID: 214403
 			ItemMask
 		}
 
-		// Token: 0x0200BF73 RID: 49011
+		// Token: 0x0200A979 RID: 43385
 		private enum EBcOrientation
 		{
-			// Token: 0x04039BC3 RID: 236483
+			// Token: 0x04034585 RID: 214405
 			Horizontal,
-			// Token: 0x04039BC4 RID: 236484
+			// Token: 0x04034586 RID: 214406
 			Vertical
 		}
 	}

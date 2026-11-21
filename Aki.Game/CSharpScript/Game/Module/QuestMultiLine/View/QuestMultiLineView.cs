@@ -11,18 +11,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.QuestMultiLine.View
 {
-	// Token: 0x02004FB1 RID: 20401
+	// Token: 0x02003F7A RID: 16250
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class QuestMultiLineView : UiTickViewBase
 	{
-		// Token: 0x0603437C RID: 213884 RVA: 0x00C41DCE File Offset: 0x00C3FFCE
+		// Token: 0x060291EA RID: 168426 RVA: 0x00B8B57A File Offset: 0x00B8977A
 		public QuestMultiLineView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x17007F81 RID: 32641
-		// (get) Token: 0x0603437D RID: 213885 RVA: 0x00C41DED File Offset: 0x00C3FFED
+		// Token: 0x17005331 RID: 21297
+		// (get) Token: 0x060291EB RID: 168427 RVA: 0x00B8B599 File Offset: 0x00B89799
 		[Nullable(2)]
 		public new QuestMultiLineViewParams OpenParam
 		{
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			}
 		}
 
-		// Token: 0x0603437E RID: 213886 RVA: 0x00C41DFC File Offset: 0x00C3FFFC
+		// Token: 0x060291EC RID: 168428 RVA: 0x00B8B5A8 File Offset: 0x00B897A8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			};
 		}
 
-		// Token: 0x0603437F RID: 213887 RVA: 0x00C41EC4 File Offset: 0x00C400C4
+		// Token: 0x060291ED RID: 168429 RVA: 0x00B8B670 File Offset: 0x00B89870
 		protected override UniTask OnBeforeStartAsync()
 		{
 			QuestMultiLineView.<OnBeforeStartAsync>d__18 <OnBeforeStartAsync>d__;
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034380 RID: 213888 RVA: 0x00C41F08 File Offset: 0x00C40108
+		// Token: 0x060291EE RID: 168430 RVA: 0x00B8B6B4 File Offset: 0x00B898B4
 		private UniTask PrepareViewAsync()
 		{
 			QuestMultiLineView.<PrepareViewAsync>d__19 <PrepareViewAsync>d__;
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			return <PrepareViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034381 RID: 213889 RVA: 0x00C41F4C File Offset: 0x00C4014C
+		// Token: 0x060291EF RID: 168431 RVA: 0x00B8B6F8 File Offset: 0x00B898F8
 		private UniTask PrepareNormalTimePointView(QuestMultiLineTimePointData curShowTimePoint)
 		{
 			QuestMultiLineView.<PrepareNormalTimePointView>d__20 <PrepareNormalTimePointView>d__;
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			return <PrepareNormalTimePointView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034382 RID: 213890 RVA: 0x00C41F98 File Offset: 0x00C40198
+		// Token: 0x060291F0 RID: 168432 RVA: 0x00B8B744 File Offset: 0x00B89944
 		private void PlayEnterAnimations()
 		{
 			QuestMultiLineTimePointData firstShowTimePoint = this.FirstShowTimePoint;
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			}
 		}
 
-		// Token: 0x06034383 RID: 213891 RVA: 0x00C42054 File Offset: 0x00C40254
+		// Token: 0x060291F1 RID: 168433 RVA: 0x00B8B800 File Offset: 0x00B89A00
 		private UniTask PlayStartSequencerAsync(QuestMultiLineTimePointData curShowTimePoint)
 		{
 			QuestMultiLineView.<PlayStartSequencerAsync>d__22 <PlayStartSequencerAsync>d__;
@@ -125,13 +125,13 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			return <PlayStartSequencerAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034384 RID: 213892 RVA: 0x00C4209F File Offset: 0x00C4029F
+		// Token: 0x060291F2 RID: 168434 RVA: 0x00B8B84B File Offset: 0x00B89A4B
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<List<QuestMultiLineTimePointData>>(EEventName.QuestMultiLineTimePointChange, new Action<List<QuestMultiLineTimePointData>>(this.OnTimePointChange));
 		}
 
-		// Token: 0x06034385 RID: 213893 RVA: 0x00C420C0 File Offset: 0x00C402C0
+		// Token: 0x060291F3 RID: 168435 RVA: 0x00B8B86C File Offset: 0x00B89A6C
 		protected override void OnRemoveEventListener()
 		{
 			QuestMultiLineAnimationSequencer sequencer = this.Sequencer;
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			EventSystem.Instance.Remove(EEventName.QuestMultiLineTimePointChange, new Action<List<QuestMultiLineTimePointData>>(this.OnTimePointChange));
 		}
 
-		// Token: 0x06034386 RID: 213894 RVA: 0x00C42113 File Offset: 0x00C40313
+		// Token: 0x060291F4 RID: 168436 RVA: 0x00B8B8BF File Offset: 0x00B89ABF
 		protected override void OnAfterPlayStartSequence()
 		{
 			base.OnAfterPlayStartSequence();
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			}
 		}
 
-		// Token: 0x06034387 RID: 213895 RVA: 0x00C42144 File Offset: 0x00C40344
+		// Token: 0x060291F5 RID: 168437 RVA: 0x00B8B8F0 File Offset: 0x00B89AF0
 		protected override void OnStart()
 		{
 			PopupCaptionItem popupCaptionItem = new PopupCaptionItem(base.GetItem(1));
@@ -197,7 +197,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			}
 		}
 
-		// Token: 0x06034388 RID: 213896 RVA: 0x00C42205 File Offset: 0x00C40405
+		// Token: 0x060291F6 RID: 168438 RVA: 0x00B8B9B1 File Offset: 0x00B89BB1
 		protected override void OnAfterShow()
 		{
 			QuestMultiLineMapPanel mapPanel = this.MapPanel;
@@ -208,7 +208,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			mapPanel.MapShow();
 		}
 
-		// Token: 0x06034389 RID: 213897 RVA: 0x00C42217 File Offset: 0x00C40417
+		// Token: 0x060291F7 RID: 168439 RVA: 0x00B8B9C3 File Offset: 0x00B89BC3
 		protected override void OnBeforeHide()
 		{
 			QuestMultiLineMapPanel mapPanel = this.MapPanel;
@@ -219,7 +219,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			mapPanel.MapHide();
 		}
 
-		// Token: 0x0603438A RID: 213898 RVA: 0x00C42229 File Offset: 0x00C40429
+		// Token: 0x060291F8 RID: 168440 RVA: 0x00B8B9D5 File Offset: 0x00B89BD5
 		protected override void OnTick(float delta)
 		{
 			QuestMultiLineMapPanel mapPanel = this.MapPanel;
@@ -230,7 +230,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			mapPanel.OnTick(delta);
 		}
 
-		// Token: 0x0603438B RID: 213899 RVA: 0x00C4223C File Offset: 0x00C4043C
+		// Token: 0x060291F9 RID: 168441 RVA: 0x00B8B9E8 File Offset: 0x00B89BE8
 		private UniTask RefreshView()
 		{
 			QuestMultiLineView.<RefreshView>d__30 <RefreshView>d__;
@@ -241,7 +241,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			return <RefreshView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603438C RID: 213900 RVA: 0x00C42280 File Offset: 0x00C40480
+		// Token: 0x060291FA RID: 168442 RVA: 0x00B8BA2C File Offset: 0x00B89C2C
 		[NullableContext(2)]
 		private QuestMultiLineTimePointData ResolveCurrentTimePoint()
 		{
@@ -258,7 +258,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			return this.TimePoints[0];
 		}
 
-		// Token: 0x0603438D RID: 213901 RVA: 0x00C422DC File Offset: 0x00C404DC
+		// Token: 0x060291FB RID: 168443 RVA: 0x00B8BA88 File Offset: 0x00B89C88
 		private void RefreshBranchSelectView(QuestMultiLineTimePointData curShowTimePoint)
 		{
 			QuestMultiLineTimeLinePanel timeLinePanel = this.TimeLinePanel;
@@ -277,7 +277,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			this.MapPanel.RefreshFullScreenNiagara(false, curShowTimePoint.ScreenEffect);
 		}
 
-		// Token: 0x0603438E RID: 213902 RVA: 0x00C4233C File Offset: 0x00C4053C
+		// Token: 0x060291FC RID: 168444 RVA: 0x00B8BAE8 File Offset: 0x00B89CE8
 		private UniTask RefreshNormalTimePointView(QuestMultiLineTimePointData curShowTimePoint)
 		{
 			QuestMultiLineView.<RefreshNormalTimePointView>d__33 <RefreshNormalTimePointView>d__;
@@ -289,7 +289,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			return <RefreshNormalTimePointView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603438F RID: 213903 RVA: 0x00C42388 File Offset: 0x00C40588
+		// Token: 0x060291FD RID: 168445 RVA: 0x00B8BB34 File Offset: 0x00B89D34
 		private UniTask RunSequencerAsync(QuestMultiLineTimePointData curShowTimePoint)
 		{
 			QuestMultiLineView.<RunSequencerAsync>d__34 <RunSequencerAsync>d__;
@@ -301,7 +301,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			return <RunSequencerAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034390 RID: 213904 RVA: 0x00C423D4 File Offset: 0x00C405D4
+		// Token: 0x060291FE RID: 168446 RVA: 0x00B8BB80 File Offset: 0x00B89D80
 		private void RefreshTaskDescPanel(QuestMultiLineTimePointData curShowTimePoint, bool playAnim = true)
 		{
 			UUIItem item = base.GetItem(5);
@@ -330,7 +330,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			}
 		}
 
-		// Token: 0x06034391 RID: 213905 RVA: 0x00C42474 File Offset: 0x00C40674
+		// Token: 0x060291FF RID: 168447 RVA: 0x00B8BC20 File Offset: 0x00B89E20
 		private UniTask RunBranchSelectSequencerAsync(List<QuestMultiLineComponentData> components, List<int> fightAreas)
 		{
 			QuestMultiLineView.<RunBranchSelectSequencerAsync>d__36 <RunBranchSelectSequencerAsync>d__;
@@ -343,7 +343,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			return <RunBranchSelectSequencerAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034392 RID: 213906 RVA: 0x00C424C8 File Offset: 0x00C406C8
+		// Token: 0x06029200 RID: 168448 RVA: 0x00B8BC74 File Offset: 0x00B89E74
 		private UniTask RefreshMap()
 		{
 			QuestMultiLineView.<RefreshMap>d__37 <RefreshMap>d__;
@@ -354,7 +354,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			return <RefreshMap>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034393 RID: 213907 RVA: 0x00C4250C File Offset: 0x00C4070C
+		// Token: 0x06029201 RID: 168449 RVA: 0x00B8BCB8 File Offset: 0x00B89EB8
 		private UniTask RefreshTimeLine(List<QuestMultiLineTimePointData> timePoints)
 		{
 			QuestMultiLineView.<RefreshTimeLine>d__38 <RefreshTimeLine>d__;
@@ -366,20 +366,20 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			return <RefreshTimeLine>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034394 RID: 213908 RVA: 0x00C42557 File Offset: 0x00C40757
+		// Token: 0x06029202 RID: 168450 RVA: 0x00B8BD03 File Offset: 0x00B89F03
 		private void RefreshComponents(List<QuestMultiLineComponentData> components)
 		{
 			this.MapPanel.RefreshComponents(components);
 			this.MapPanel.SetComponentFunction(new Action<QuestMultiLineComponentData>(this.OnClickComponent));
 		}
 
-		// Token: 0x06034395 RID: 213909 RVA: 0x00C4257D File Offset: 0x00C4077D
+		// Token: 0x06029203 RID: 168451 RVA: 0x00B8BD29 File Offset: 0x00B89F29
 		private void RefreshAreaStatus(Dictionary<int, bool> fightAreas)
 		{
 			this.MapPanel.RefreshFightArea(fightAreas);
 		}
 
-		// Token: 0x06034396 RID: 213910 RVA: 0x00C4258C File Offset: 0x00C4078C
+		// Token: 0x06029204 RID: 168452 RVA: 0x00B8BD38 File Offset: 0x00B89F38
 		private bool HasActiveFightArea(Dictionary<int, bool> fightAreas)
 		{
 			using (Dictionary<int, bool>.ValueCollection.Enumerator enumerator = fightAreas.Values.GetEnumerator())
@@ -395,7 +395,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			return false;
 		}
 
-		// Token: 0x06034397 RID: 213911 RVA: 0x00C425E0 File Offset: 0x00C407E0
+		// Token: 0x06029205 RID: 168453 RVA: 0x00B8BD8C File Offset: 0x00B89F8C
 		private void ShowComponentTips(QuestMultiLineComponentData componentData)
 		{
 			QuestMultiLineTipsPanel tipsPanel = this.TipsPanel;
@@ -409,13 +409,13 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			}
 		}
 
-		// Token: 0x06034398 RID: 213912 RVA: 0x00C42608 File Offset: 0x00C40808
+		// Token: 0x06029206 RID: 168454 RVA: 0x00B8BDB4 File Offset: 0x00B89FB4
 		private void RefreshSelectPanel(QuestMultiLineTimePointData timePointData)
 		{
 			this.SelectPanel.RefreshPanel(timePointData);
 		}
 
-		// Token: 0x06034399 RID: 213913 RVA: 0x00C42618 File Offset: 0x00C40818
+		// Token: 0x06029207 RID: 168455 RVA: 0x00B8BDC4 File Offset: 0x00B89FC4
 		[NullableContext(2)]
 		private QuestMultiLineTimePointData GetCurShowTimePoint()
 		{
@@ -442,7 +442,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			return null;
 		}
 
-		// Token: 0x0603439A RID: 213914 RVA: 0x00C426C4 File Offset: 0x00C408C4
+		// Token: 0x06029208 RID: 168456 RVA: 0x00B8BE70 File Offset: 0x00B8A070
 		private void OnHelpBtnClick()
 		{
 			if (this.Sequencer != null && this.Sequencer.IsPlaying)
@@ -452,7 +452,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			HelpController.Instance.OpenHelpById(617);
 		}
 
-		// Token: 0x0603439B RID: 213915 RVA: 0x00C426EB File Offset: 0x00C408EB
+		// Token: 0x06029209 RID: 168457 RVA: 0x00B8BE97 File Offset: 0x00B8A097
 		private void OnCloseBtnClick()
 		{
 			QuestMultiLineAnimationSequencer sequencer = this.Sequencer;
@@ -468,7 +468,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603439C RID: 213916 RVA: 0x00C42718 File Offset: 0x00C40918
+		// Token: 0x0602920A RID: 168458 RVA: 0x00B8BEC4 File Offset: 0x00B8A0C4
 		private void OnClickTimePoint(QuestMultiLineTimePointData timePoint)
 		{
 			if (this.Sequencer != null && this.Sequencer.IsPlaying)
@@ -484,7 +484,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			this.RefreshMap();
 		}
 
-		// Token: 0x0603439D RID: 213917 RVA: 0x00C42764 File Offset: 0x00C40964
+		// Token: 0x0602920B RID: 168459 RVA: 0x00B8BF10 File Offset: 0x00B8A110
 		private void OnSelectBranch(int branchPageId, int branchId)
 		{
 			List<QuestMultiLineBranchData> branchData = this.GetCurShowTimePoint().BranchPageData.BranchData;
@@ -510,7 +510,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			this.BranchPlayPromise = this.RunBranchSelectSequencerAsync(questMultiLineBranchData.Components, list);
 		}
 
-		// Token: 0x0603439E RID: 213918 RVA: 0x00C42850 File Offset: 0x00C40A50
+		// Token: 0x0602920C RID: 168460 RVA: 0x00B8BFFC File Offset: 0x00B8A1FC
 		private UniTask OnEnsureBranch(int branchPageId, int branchId)
 		{
 			QuestMultiLineView.<OnEnsureBranch>d__49 <OnEnsureBranch>d__;
@@ -523,7 +523,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			return <OnEnsureBranch>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603439F RID: 213919 RVA: 0x00C428A4 File Offset: 0x00C40AA4
+		// Token: 0x0602920D RID: 168461 RVA: 0x00B8C050 File Offset: 0x00B8A250
 		[NullableContext(2)]
 		private QuestMultiLineComponentData FindBranchMainRole(int branchId)
 		{
@@ -560,7 +560,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			return null;
 		}
 
-		// Token: 0x060343A0 RID: 213920 RVA: 0x00C42970 File Offset: 0x00C40B70
+		// Token: 0x0602920E RID: 168462 RVA: 0x00B8C11C File Offset: 0x00B8A31C
 		private void OnTimePointChange(List<QuestMultiLineTimePointData> timePoints)
 		{
 			this.TimePoints = timePoints;
@@ -571,7 +571,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			this.RefreshView();
 		}
 
-		// Token: 0x060343A1 RID: 213921 RVA: 0x00C42998 File Offset: 0x00C40B98
+		// Token: 0x0602920F RID: 168463 RVA: 0x00B8C144 File Offset: 0x00B8A344
 		private void OnClickComponent(QuestMultiLineComponentData componentData)
 		{
 			if (this.Sequencer != null && this.Sequencer.IsPlaying)
@@ -586,7 +586,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			this.ShowComponentTips(componentData);
 		}
 
-		// Token: 0x060343A2 RID: 213922 RVA: 0x00C429D5 File Offset: 0x00C40BD5
+		// Token: 0x06029210 RID: 168464 RVA: 0x00B8C181 File Offset: 0x00B8A381
 		private void OnTipsHide()
 		{
 			QuestMultiLineMapPanel mapPanel = this.MapPanel;
@@ -597,14 +597,14 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			mapPanel.ClearAllComponentSelection();
 		}
 
-		// Token: 0x060343A3 RID: 213923 RVA: 0x00C429E7 File Offset: 0x00C40BE7
+		// Token: 0x06029211 RID: 168465 RVA: 0x00B8C193 File Offset: 0x00B8A393
 		private bool OnTipsHideSelfBtnIntercept()
 		{
 			QuestMultiLineMapPanel mapPanel = this.MapPanel;
 			return mapPanel != null && mapPanel.TryClickComponentAtMousePosition();
 		}
 
-		// Token: 0x060343A4 RID: 213924 RVA: 0x00C429FC File Offset: 0x00C40BFC
+		// Token: 0x06029212 RID: 168466 RVA: 0x00B8C1A8 File Offset: 0x00B8A3A8
 		public UniTask PlayFightLightAsync()
 		{
 			QuestMultiLineView.<PlayFightLightAsync>d__55 <PlayFightLightAsync>d__;
@@ -615,7 +615,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			return <PlayFightLightAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060343A5 RID: 213925 RVA: 0x00C42A40 File Offset: 0x00C40C40
+		// Token: 0x06029213 RID: 168467 RVA: 0x00B8C1EC File Offset: 0x00B8A3EC
 		private UniTask PlayUiOutAsync()
 		{
 			QuestMultiLineView.<PlayUiOutAsync>d__56 <PlayUiOutAsync>d__;
@@ -626,17 +626,17 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			return <PlayUiOutAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060343A6 RID: 213926 RVA: 0x00C42A83 File Offset: 0x00C40C83
+		// Token: 0x06029214 RID: 168468 RVA: 0x00B8C22F File Offset: 0x00B8A42F
 		public void DebugDrawPath(IReadOnlyList<Vector> points)
 		{
 		}
 
-		// Token: 0x060343A7 RID: 213927 RVA: 0x00C42A85 File Offset: 0x00C40C85
+		// Token: 0x06029215 RID: 168469 RVA: 0x00B8C231 File Offset: 0x00B8A431
 		public void DebugPlayBranchConfirmAnim(int? branchId = null)
 		{
 		}
 
-		// Token: 0x060343A8 RID: 213928 RVA: 0x00C42A88 File Offset: 0x00C40C88
+		// Token: 0x06029216 RID: 168470 RVA: 0x00B8C234 File Offset: 0x00B8A434
 		private UniTask RunDebugBranchConfirmAnim(int? branchId = null)
 		{
 			QuestMultiLineView.<RunDebugBranchConfirmAnim>d__59 <RunDebugBranchConfirmAnim>d__;
@@ -648,7 +648,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			return <RunDebugBranchConfirmAnim>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060343A9 RID: 213929 RVA: 0x00C42AD4 File Offset: 0x00C40CD4
+		// Token: 0x06029217 RID: 168471 RVA: 0x00B8C280 File Offset: 0x00B8A480
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -733,10 +733,10 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 			}
 		}
 
-		// Token: 0x0401BC3F RID: 113727
+		// Token: 0x04016614 RID: 91668
 		private const int EARLY_PREPARE_TIME_POINT_ID = 2;
 
-		// Token: 0x0401BC40 RID: 113728
+		// Token: 0x04016615 RID: 91669
 		[Nullable(new byte[]
 		{
 			2,
@@ -744,46 +744,46 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View
 		})]
 		private List<QuestMultiLineTimePointData> TimePoints;
 
-		// Token: 0x0401BC41 RID: 113729
+		// Token: 0x04016616 RID: 91670
 		private int ShowTimePointId;
 
-		// Token: 0x0401BC42 RID: 113730
+		// Token: 0x04016617 RID: 91671
 		private bool PlayTimePointComponentAnim;
 
-		// Token: 0x0401BC43 RID: 113731
+		// Token: 0x04016618 RID: 91672
 		[Nullable(2)]
 		private QuestMultiLineMapPanel MapPanel;
 
-		// Token: 0x0401BC44 RID: 113732
+		// Token: 0x04016619 RID: 91673
 		[Nullable(2)]
 		private QuestMultiLineTimeLinePanel TimeLinePanel;
 
-		// Token: 0x0401BC45 RID: 113733
+		// Token: 0x0401661A RID: 91674
 		[Nullable(2)]
 		private QuestMultiLineSelectPanel SelectPanel;
 
-		// Token: 0x0401BC46 RID: 113734
+		// Token: 0x0401661B RID: 91675
 		[Nullable(2)]
 		private QuestMultiLineTipsPanel TipsPanel;
 
-		// Token: 0x0401BC47 RID: 113735
+		// Token: 0x0401661C RID: 91676
 		[Nullable(2)]
 		private QuestMultiLineAnimationSequencer Sequencer;
 
-		// Token: 0x0401BC48 RID: 113736
+		// Token: 0x0401661D RID: 91677
 		private UniTask BranchPlayPromise = UniTask.CompletedTask;
 
-		// Token: 0x0401BC49 RID: 113737
+		// Token: 0x0401661E RID: 91678
 		private UniTask StartSequenceFinishedTask = UniTask.CompletedTask;
 
-		// Token: 0x0401BC4A RID: 113738
+		// Token: 0x0401661F RID: 91679
 		[Nullable(2)]
 		private UniTaskCompletionSource StartSequenceFinishedResolve;
 
-		// Token: 0x0401BC4B RID: 113739
+		// Token: 0x04016620 RID: 91680
 		private bool EarlyPrepare;
 
-		// Token: 0x0401BC4C RID: 113740
+		// Token: 0x04016621 RID: 91681
 		[Nullable(2)]
 		private QuestMultiLineTimePointData FirstShowTimePoint;
 	}

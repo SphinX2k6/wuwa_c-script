@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200128D RID: 4749
+	// Token: 0x020013CD RID: 5069
 	public class EShowUiTypeJsonConverter : JsonConverter<EShowUiType>
 	{
-		// Token: 0x06006B23 RID: 27427 RVA: 0x001012DC File Offset: 0x000FF4DC
+		// Token: 0x06007176 RID: 29046 RVA: 0x0010EFD8 File Offset: 0x0010D1D8
 		public override EShowUiType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Quest
 			return EShowUiTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x06006B24 RID: 27428 RVA: 0x00101300 File Offset: 0x000FF500
+		// Token: 0x06007177 RID: 29047 RVA: 0x0010EFFC File Offset: 0x0010D1FC
 		public override void Write(Utf8JsonWriter writer, EShowUiType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

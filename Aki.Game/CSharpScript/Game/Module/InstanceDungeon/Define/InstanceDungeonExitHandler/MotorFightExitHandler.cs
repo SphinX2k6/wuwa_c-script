@@ -5,10 +5,10 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.Define.InstanceDungeonExitHandler
 {
-	// Token: 0x020058F5 RID: 22773
+	// Token: 0x020048CD RID: 18637
 	public class MotorFightExitHandler : InstanceDungeonExitHandlerBase
 	{
-		// Token: 0x06039D29 RID: 236841 RVA: 0x00DBC018 File Offset: 0x00DBA218
+		// Token: 0x0602EC4C RID: 191564 RVA: 0x00D0AF7C File Offset: 0x00D0917C
 		public override bool Checker()
 		{
 			if (!GameModeController.Instance.IsInInstance())
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.Define.InstanceDungeonExitHan
 			return config != null && config.Value.InstSubType == 44;
 		}
 
-		// Token: 0x06039D2A RID: 236842 RVA: 0x00DBC069 File Offset: 0x00DBA269
+		// Token: 0x0602EC4D RID: 191565 RVA: 0x00D0AFCD File Offset: 0x00D091CD
 		[NullableContext(2)]
 		public override void HandleExit(InstanceDungeonExitHandlerData data)
 		{

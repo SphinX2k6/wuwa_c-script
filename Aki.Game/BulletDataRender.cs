@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Core.Fight;
 using UnrealEngine;
 
-// Token: 0x02002DB1 RID: 11697
+// Token: 0x0200230B RID: 8971
 [NullableContext(1)]
 [Nullable(0)]
 public class BulletDataRender
 {
-	// Token: 0x17002199 RID: 8601
-	// (get) Token: 0x06018987 RID: 100743 RVA: 0x00649149 File Offset: 0x00647349
+	// Token: 0x170021F5 RID: 8693
+	// (get) Token: 0x0601622F RID: 90671 RVA: 0x0066EF39 File Offset: 0x0066D139
 	public FName VictimCameraShakeOnHit
 	{
 		get
@@ -23,8 +23,8 @@ public class BulletDataRender
 		}
 	}
 
-	// Token: 0x1700219A RID: 8602
-	// (get) Token: 0x06018988 RID: 100744 RVA: 0x0064917E File Offset: 0x0064737E
+	// Token: 0x170021F6 RID: 8694
+	// (get) Token: 0x06016230 RID: 90672 RVA: 0x0066EF6E File Offset: 0x0066D16E
 	public FName AttackerCameraShakeOnHit
 	{
 		get
@@ -37,8 +37,8 @@ public class BulletDataRender
 		}
 	}
 
-	// Token: 0x1700219B RID: 8603
-	// (get) Token: 0x06018989 RID: 100745 RVA: 0x006491B4 File Offset: 0x006473B4
+	// Token: 0x170021F7 RID: 8695
+	// (get) Token: 0x06016231 RID: 90673 RVA: 0x0066EFA4 File Offset: 0x0066D1A4
 	public Dictionary<EBulletHitEffect, FName> EffectOnHit
 	{
 		get
@@ -60,8 +60,8 @@ public class BulletDataRender
 		}
 	}
 
-	// Token: 0x1700219C RID: 8604
-	// (get) Token: 0x0601898A RID: 100746 RVA: 0x00649240 File Offset: 0x00647440
+	// Token: 0x170021F8 RID: 8696
+	// (get) Token: 0x06016232 RID: 90674 RVA: 0x0066F038 File Offset: 0x0066D238
 	public string AudioOnHit
 	{
 		get
@@ -74,8 +74,8 @@ public class BulletDataRender
 		}
 	}
 
-	// Token: 0x1700219D RID: 8605
-	// (get) Token: 0x0601898B RID: 100747 RVA: 0x00649264 File Offset: 0x00647464
+	// Token: 0x170021F9 RID: 8697
+	// (get) Token: 0x06016233 RID: 90675 RVA: 0x0066F05C File Offset: 0x0066D25C
 	public Dictionary<global::EBulletEffectOnHitType, BulletHitEffectConf> EffectOnHitConf
 	{
 		get
@@ -96,8 +96,8 @@ public class BulletDataRender
 		}
 	}
 
-	// Token: 0x1700219E RID: 8606
-	// (get) Token: 0x0601898C RID: 100748 RVA: 0x006492D1 File Offset: 0x006474D1
+	// Token: 0x170021FA RID: 8698
+	// (get) Token: 0x06016234 RID: 90676 RVA: 0x0066F0C9 File Offset: 0x0066D2C9
 	public FName EffectBullet
 	{
 		get
@@ -110,8 +110,8 @@ public class BulletDataRender
 		}
 	}
 
-	// Token: 0x1700219F RID: 8607
-	// (get) Token: 0x0601898D RID: 100749 RVA: 0x00649308 File Offset: 0x00647508
+	// Token: 0x170021FB RID: 8699
+	// (get) Token: 0x06016235 RID: 90677 RVA: 0x0066F100 File Offset: 0x0066D300
 	public Dictionary<int, string> EffectBulletParams
 	{
 		get
@@ -133,8 +133,8 @@ public class BulletDataRender
 		}
 	}
 
-	// Token: 0x170021A0 RID: 8608
-	// (get) Token: 0x0601898E RID: 100750 RVA: 0x00649390 File Offset: 0x00647590
+	// Token: 0x170021FC RID: 8700
+	// (get) Token: 0x06016236 RID: 90678 RVA: 0x0066F190 File Offset: 0x0066D390
 	public bool EffectStopInsteadDestroy
 	{
 		get
@@ -147,8 +147,8 @@ public class BulletDataRender
 		}
 	}
 
-	// Token: 0x170021A1 RID: 8609
-	// (get) Token: 0x0601898F RID: 100751 RVA: 0x006493C0 File Offset: 0x006475C0
+	// Token: 0x170021FD RID: 8701
+	// (get) Token: 0x06016237 RID: 90679 RVA: 0x0066F1C0 File Offset: 0x0066D3C0
 	public bool HandOverParentEffect
 	{
 		get
@@ -161,8 +161,8 @@ public class BulletDataRender
 		}
 	}
 
-	// Token: 0x170021A2 RID: 8610
-	// (get) Token: 0x06018990 RID: 100752 RVA: 0x006493F0 File Offset: 0x006475F0
+	// Token: 0x170021FE RID: 8702
+	// (get) Token: 0x06016238 RID: 90680 RVA: 0x0066F1F0 File Offset: 0x0066D3F0
 	public int CameraShakeCountMax
 	{
 		get
@@ -175,8 +175,8 @@ public class BulletDataRender
 		}
 	}
 
-	// Token: 0x170021A3 RID: 8611
-	// (get) Token: 0x06018991 RID: 100753 RVA: 0x00649420 File Offset: 0x00647620
+	// Token: 0x170021FF RID: 8703
+	// (get) Token: 0x06016239 RID: 90681 RVA: 0x0066F220 File Offset: 0x0066D420
 	public Dictionary<EBulletSpecificEffect, FName> SpecialEffect
 	{
 		get
@@ -198,8 +198,8 @@ public class BulletDataRender
 		}
 	}
 
-	// Token: 0x170021A4 RID: 8612
-	// (get) Token: 0x06018992 RID: 100754 RVA: 0x006494AC File Offset: 0x006476AC
+	// Token: 0x17002200 RID: 8704
+	// (get) Token: 0x0601623A RID: 90682 RVA: 0x0066F2B4 File Offset: 0x0066D4B4
 	public FName AttackerCameraShakeOnStart
 	{
 		get
@@ -212,8 +212,8 @@ public class BulletDataRender
 		}
 	}
 
-	// Token: 0x170021A5 RID: 8613
-	// (get) Token: 0x06018993 RID: 100755 RVA: 0x006494E1 File Offset: 0x006476E1
+	// Token: 0x17002201 RID: 8705
+	// (get) Token: 0x0601623B RID: 90683 RVA: 0x0066F2E9 File Offset: 0x0066D4E9
 	public bool CameraShakeToSummonOwner
 	{
 		get
@@ -226,8 +226,8 @@ public class BulletDataRender
 		}
 	}
 
-	// Token: 0x170021A6 RID: 8614
-	// (get) Token: 0x06018994 RID: 100756 RVA: 0x00649511 File Offset: 0x00647711
+	// Token: 0x17002202 RID: 8706
+	// (get) Token: 0x0601623C RID: 90684 RVA: 0x0066F319 File Offset: 0x0066D519
 	public FName AttackerCameraShakeOnHitWeakPoint
 	{
 		get
@@ -240,8 +240,8 @@ public class BulletDataRender
 		}
 	}
 
-	// Token: 0x170021A7 RID: 8615
-	// (get) Token: 0x06018995 RID: 100757 RVA: 0x00649546 File Offset: 0x00647746
+	// Token: 0x17002203 RID: 8707
+	// (get) Token: 0x0601623D RID: 90685 RVA: 0x0066F34E File Offset: 0x0066D54E
 	public FName OnHitMaterialEffect
 	{
 		get
@@ -254,13 +254,13 @@ public class BulletDataRender
 		}
 	}
 
-	// Token: 0x06018996 RID: 100758 RVA: 0x0064957B File Offset: 0x0064777B
+	// Token: 0x0601623E RID: 90686 RVA: 0x0066F383 File Offset: 0x0066D583
 	public BulletDataRender(SReBulletDataPerformance data)
 	{
 		this.Data = data;
 	}
 
-	// Token: 0x06018997 RID: 100759 RVA: 0x0064958C File Offset: 0x0064778C
+	// Token: 0x0601623F RID: 90687 RVA: 0x0066F394 File Offset: 0x0066D594
 	public bool Preload()
 	{
 		FName effectBullet = this.EffectBullet;
@@ -281,25 +281,25 @@ public class BulletDataRender
 		return true;
 	}
 
-	// Token: 0x0400B6B3 RID: 46771
+	// Token: 0x0400BA2D RID: 47661
 	[Nullable(2)]
 	private readonly SReBulletDataPerformance Data;
 
-	// Token: 0x0400B6B4 RID: 46772
+	// Token: 0x0400BA2E RID: 47662
 	private FName? VictimCameraShakeOnHitInternal;
 
-	// Token: 0x0400B6B5 RID: 46773
+	// Token: 0x0400BA2F RID: 47663
 	private FName? AttackerCameraShakeOnHitInternal;
 
-	// Token: 0x0400B6B6 RID: 46774
+	// Token: 0x0400BA30 RID: 47664
 	[Nullable(2)]
 	private Dictionary<EBulletHitEffect, FName> EffectOnHitInternal;
 
-	// Token: 0x0400B6B7 RID: 46775
+	// Token: 0x0400BA31 RID: 47665
 	[Nullable(2)]
 	private string AudioOnHitInternal;
 
-	// Token: 0x0400B6B8 RID: 46776
+	// Token: 0x0400BA32 RID: 47666
 	[Nullable(new byte[]
 	{
 		2,
@@ -307,10 +307,10 @@ public class BulletDataRender
 	})]
 	private Dictionary<global::EBulletEffectOnHitType, BulletHitEffectConf> EffectOnHitConfInternal;
 
-	// Token: 0x0400B6B9 RID: 46777
+	// Token: 0x0400BA33 RID: 47667
 	private FName? EffectBulletInternal;
 
-	// Token: 0x0400B6BA RID: 46778
+	// Token: 0x0400BA34 RID: 47668
 	[Nullable(new byte[]
 	{
 		2,
@@ -318,28 +318,28 @@ public class BulletDataRender
 	})]
 	private Dictionary<int, string> EffectBulletParamsInternal;
 
-	// Token: 0x0400B6BB RID: 46779
+	// Token: 0x0400BA35 RID: 47669
 	private bool? EffectStopInsteadDestroyInternal;
 
-	// Token: 0x0400B6BC RID: 46780
+	// Token: 0x0400BA36 RID: 47670
 	private bool? HandOverParentEffectInternal;
 
-	// Token: 0x0400B6BD RID: 46781
+	// Token: 0x0400BA37 RID: 47671
 	private int? CameraShakeCountMaxInternal;
 
-	// Token: 0x0400B6BE RID: 46782
+	// Token: 0x0400BA38 RID: 47672
 	[Nullable(2)]
 	private Dictionary<EBulletSpecificEffect, FName> SpecialEffectInternal;
 
-	// Token: 0x0400B6BF RID: 46783
+	// Token: 0x0400BA39 RID: 47673
 	private FName? AttackerCameraShakeOnStartInternal;
 
-	// Token: 0x0400B6C0 RID: 46784
+	// Token: 0x0400BA3A RID: 47674
 	private bool? CameraShakeToSummonOwnerInternal;
 
-	// Token: 0x0400B6C1 RID: 46785
+	// Token: 0x0400BA3B RID: 47675
 	private FName? AttackerCameraShakeOnHitWeakPointInternal;
 
-	// Token: 0x0400B6C2 RID: 46786
+	// Token: 0x0400BA3C RID: 47676
 	private FName? OnHitMaterialEffectInternal;
 }

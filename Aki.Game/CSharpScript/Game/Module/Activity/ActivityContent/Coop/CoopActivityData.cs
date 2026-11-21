@@ -8,13 +8,13 @@ using CSharpScript.Game.ServerStorage.Container;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 {
-	// Token: 0x020068C5 RID: 26821
+	// Token: 0x02005815 RID: 22549
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CoopActivityData : ActivityBaseData
 	{
-		// Token: 0x170097CE RID: 38862
-		// (get) Token: 0x06042F06 RID: 274182 RVA: 0x0104CF61 File Offset: 0x0104B161
+		// Token: 0x17006B0E RID: 27406
+		// (get) Token: 0x06037A5E RID: 227934 RVA: 0x00F8E589 File Offset: 0x00F8C789
 		public List<CoopRoleData> CoopRoleDataList
 		{
 			get
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			}
 		}
 
-		// Token: 0x06042F07 RID: 274183 RVA: 0x0104CF74 File Offset: 0x0104B174
+		// Token: 0x06037A5F RID: 227935 RVA: 0x00F8E59C File Offset: 0x00F8C79C
 		protected override void PhraseEx(ActivityData data)
 		{
 			this.InitCoopRoleItemDataList(data.RoleCoopActivityData.CoopRoleInfos);
@@ -32,19 +32,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			this.UpdatePreCompleteLevelIdSet(data.RoleCoopActivityData.PreCompleteIds);
 		}
 
-		// Token: 0x06042F08 RID: 274184 RVA: 0x0104CFC5 File Offset: 0x0104B1C5
+		// Token: 0x06037A60 RID: 227936 RVA: 0x00F8E5ED File Offset: 0x00F8C7ED
 		public override bool GetExternalButtonRedPointState()
 		{
 			return this.IsAnyRoleHasRedDot() || this.IsHasCoopSpRewardRedDot();
 		}
 
-		// Token: 0x06042F09 RID: 274185 RVA: 0x0104CFD7 File Offset: 0x0104B1D7
+		// Token: 0x06037A61 RID: 227937 RVA: 0x00F8E5FF File Offset: 0x00F8C7FF
 		public override bool GetExDataRedPointShowState()
 		{
 			return this.IsAnyRoleHasRedDot() || this.IsHasCoopSpRewardRedDot();
 		}
 
-		// Token: 0x06042F0A RID: 274186 RVA: 0x0104CFEC File Offset: 0x0104B1EC
+		// Token: 0x06037A62 RID: 227938 RVA: 0x00F8E614 File Offset: 0x00F8C814
 		protected override bool GetExDataFinishShowState()
 		{
 			using (List<CoopSpRewardData>.Enumerator enumerator = this.CoopSpRewardDataList.GetEnumerator())
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			return true;
 		}
 
-		// Token: 0x06042F0B RID: 274187 RVA: 0x0104D0D4 File Offset: 0x0104B2D4
+		// Token: 0x06037A63 RID: 227939 RVA: 0x00F8E6FC File Offset: 0x00F8C8FC
 		private void InitCoopRoleItemDataList(IList<CoopRoleInfo> dataList)
 		{
 			this.CoopRoleDataDict.Clear();
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			this.CoopRoleDataDict = dictionary;
 		}
 
-		// Token: 0x06042F0C RID: 274188 RVA: 0x0104D268 File Offset: 0x0104B468
+		// Token: 0x06037A64 RID: 227940 RVA: 0x00F8E890 File Offset: 0x00F8CA90
 		private void InitCoopLevelItemDataList(IList<CoopTaskCompleteInfo> dataList)
 		{
 			foreach (CoopTaskCompleteInfo data in dataList)
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			}
 		}
 
-		// Token: 0x06042F0D RID: 274189 RVA: 0x0104D2B0 File Offset: 0x0104B4B0
+		// Token: 0x06037A65 RID: 227941 RVA: 0x00F8E8D8 File Offset: 0x00F8CAD8
 		private void InitCoopSpRewardDataList(IList<int> idList)
 		{
 			this.CoopSpRewardClaimedSet.Clear();
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			this.UpdateCoopSpRewardDataList();
 		}
 
-		// Token: 0x06042F0E RID: 274190 RVA: 0x0104D310 File Offset: 0x0104B510
+		// Token: 0x06037A66 RID: 227942 RVA: 0x00F8E938 File Offset: 0x00F8CB38
 		public void UpdatePreCompleteLevelIdSet(IList<int> preCompleteIds)
 		{
 			foreach (int item in preCompleteIds)
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			this.UpdateAllCoopRoleLevelDataState();
 		}
 
-		// Token: 0x06042F0F RID: 274191 RVA: 0x0104D364 File Offset: 0x0104B564
+		// Token: 0x06037A67 RID: 227943 RVA: 0x00F8E98C File Offset: 0x00F8CB8C
 		private void UpdateCoopSpRewardDataList()
 		{
 			IReadOnlyList<CoopSpReward> coopSpRewardConfigByActivityId = CoopConfig.Instance.GetCoopSpRewardConfigByActivityId(base.Id);
@@ -178,13 +178,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			}
 		}
 
-		// Token: 0x06042F10 RID: 274192 RVA: 0x0104D429 File Offset: 0x0104B629
+		// Token: 0x06037A68 RID: 227944 RVA: 0x00F8EA51 File Offset: 0x00F8CC51
 		public bool IsLevelPreComplete(int levelId)
 		{
 			return this.PreCompleteLevelIdSet.Contains(levelId);
 		}
 
-		// Token: 0x06042F11 RID: 274193 RVA: 0x0104D438 File Offset: 0x0104B638
+		// Token: 0x06037A69 RID: 227945 RVA: 0x00F8EA60 File Offset: 0x00F8CC60
 		public int GetCurTotalCoopLevel()
 		{
 			int num = 0;
@@ -195,7 +195,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			return num;
 		}
 
-		// Token: 0x06042F12 RID: 274194 RVA: 0x0104D490 File Offset: 0x0104B690
+		// Token: 0x06037A6A RID: 227946 RVA: 0x00F8EAB8 File Offset: 0x00F8CCB8
 		public bool UpdateOneRoleData(CoopRoleInfo data)
 		{
 			CoopRoleData coopRoleData;
@@ -213,7 +213,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			return curRoleLevel < data.RoleLevel;
 		}
 
-		// Token: 0x06042F13 RID: 274195 RVA: 0x0104D4F4 File Offset: 0x0104B6F4
+		// Token: 0x06037A6B RID: 227947 RVA: 0x00F8EB1C File Offset: 0x00F8CD1C
 		public void UpdateOneRoleLevelSubConditionData(CoopTaskCompleteInfo data)
 		{
 			CoopTaskConfig? coopTaskConfigById = CoopConfig.Instance.GetCoopTaskConfigById(data.CoopTaskId);
@@ -234,7 +234,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			coopLevelData.UpdateSubConditionState(data);
 		}
 
-		// Token: 0x06042F14 RID: 274196 RVA: 0x0104D550 File Offset: 0x0104B750
+		// Token: 0x06037A6C RID: 227948 RVA: 0x00F8EB78 File Offset: 0x00F8CD78
 		public void UpdateCoopRoleReward(int levelId)
 		{
 			CoopRoleLevel? coopConfigById = CoopConfig.Instance.GetCoopConfigById(levelId);
@@ -251,7 +251,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			coopRoleData.UpdateAllCoopLevelDataState();
 		}
 
-		// Token: 0x06042F15 RID: 274197 RVA: 0x0104D5B8 File Offset: 0x0104B7B8
+		// Token: 0x06037A6D RID: 227949 RVA: 0x00F8EBE0 File Offset: 0x00F8CDE0
 		public void UpdateCoopSpRewardClaimed(List<int> rewardIds)
 		{
 			foreach (int item in rewardIds)
@@ -261,7 +261,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			this.UpdateCoopSpRewardDataList();
 		}
 
-		// Token: 0x06042F16 RID: 274198 RVA: 0x0104D614 File Offset: 0x0104B814
+		// Token: 0x06037A6E RID: 227950 RVA: 0x00F8EC3C File Offset: 0x00F8CE3C
 		[NullableContext(2)]
 		public CoopRoleData GetRoleData(int roleId)
 		{
@@ -281,7 +281,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			return result;
 		}
 
-		// Token: 0x06042F17 RID: 274199 RVA: 0x0104D680 File Offset: 0x0104B880
+		// Token: 0x06037A6F RID: 227951 RVA: 0x00F8ECA8 File Offset: 0x00F8CEA8
 		public int GetRoleIndexByRoleId(int roleId)
 		{
 			int num = new List<int>(this.CoopRoleDataDict.Keys).IndexOf(roleId);
@@ -298,7 +298,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			return num;
 		}
 
-		// Token: 0x06042F18 RID: 274200 RVA: 0x0104D6E8 File Offset: 0x0104B8E8
+		// Token: 0x06037A70 RID: 227952 RVA: 0x00F8ED10 File Offset: 0x00F8CF10
 		public int GetRoleIdByIndex(int index)
 		{
 			if (index < 0 || index >= this.CoopRoleDataList.Count)
@@ -315,7 +315,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			return this.CoopRoleDataList[index].RoleId;
 		}
 
-		// Token: 0x06042F19 RID: 274201 RVA: 0x0104D75C File Offset: 0x0104B95C
+		// Token: 0x06037A71 RID: 227953 RVA: 0x00F8ED84 File Offset: 0x00F8CF84
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -338,7 +338,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			return null;
 		}
 
-		// Token: 0x06042F1A RID: 274202 RVA: 0x0104D7C0 File Offset: 0x0104B9C0
+		// Token: 0x06037A72 RID: 227954 RVA: 0x00F8EDE8 File Offset: 0x00F8CFE8
 		public long GetRoleMaxLevelTimeStamp(int roleId)
 		{
 			CoopRoleData roleData = this.GetRoleData(roleId);
@@ -349,7 +349,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			return roleData.MaxLevelTimeStamp;
 		}
 
-		// Token: 0x06042F1B RID: 274203 RVA: 0x0104D7D8 File Offset: 0x0104B9D8
+		// Token: 0x06037A73 RID: 227955 RVA: 0x00F8EE00 File Offset: 0x00F8D000
 		[NullableContext(2)]
 		public CoopLevelData GetCoopLevelData(int levelId)
 		{
@@ -369,7 +369,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			return result;
 		}
 
-		// Token: 0x06042F1C RID: 274204 RVA: 0x0104D844 File Offset: 0x0104BA44
+		// Token: 0x06037A74 RID: 227956 RVA: 0x00F8EE6C File Offset: 0x00F8D06C
 		public int GetRoleCurCoopLevel(int roleId)
 		{
 			CoopRoleData coopRoleData;
@@ -388,7 +388,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			return 0;
 		}
 
-		// Token: 0x06042F1D RID: 274205 RVA: 0x0104D8B4 File Offset: 0x0104BAB4
+		// Token: 0x06037A75 RID: 227957 RVA: 0x00F8EEDC File Offset: 0x00F8D0DC
 		public int GetRoleCurCoopLevelId(int roleId)
 		{
 			CoopRoleData coopRoleData;
@@ -421,7 +421,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			return coopRoleLevel.GetValueOrDefault().Id;
 		}
 
-		// Token: 0x06042F1E RID: 274206 RVA: 0x0104D9B0 File Offset: 0x0104BBB0
+		// Token: 0x06037A76 RID: 227958 RVA: 0x00F8EFD8 File Offset: 0x00F8D1D8
 		public int GetRoleCurCoopLevelIdFinalZero(int roleId)
 		{
 			CoopRoleData coopRoleData;
@@ -454,7 +454,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			return coopRoleLevel.GetValueOrDefault().Id;
 		}
 
-		// Token: 0x06042F1F RID: 274207 RVA: 0x0104DA9C File Offset: 0x0104BC9C
+		// Token: 0x06037A77 RID: 227959 RVA: 0x00F8F0C4 File Offset: 0x00F8D2C4
 		public int GetClaimedRewardCount()
 		{
 			int num = 0;
@@ -471,14 +471,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			return num;
 		}
 
-		// Token: 0x06042F20 RID: 274208 RVA: 0x0104DAF8 File Offset: 0x0104BCF8
+		// Token: 0x06037A78 RID: 227960 RVA: 0x00F8F120 File Offset: 0x00F8D320
 		public bool IsRoleCurCoopLevelMax(int roleId)
 		{
 			CoopRoleData coopRoleData;
 			return this.CoopRoleDataDict.TryGetValue(roleId, out coopRoleData) && coopRoleData.IsMaxLevel;
 		}
 
-		// Token: 0x06042F21 RID: 274209 RVA: 0x0104DB20 File Offset: 0x0104BD20
+		// Token: 0x06037A79 RID: 227961 RVA: 0x00F8F148 File Offset: 0x00F8D348
 		public bool IsAnyRoleHasRedDot()
 		{
 			foreach (CoopRoleData coopRoleData in this.CoopRoleDataDict.Values)
@@ -491,7 +491,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			return false;
 		}
 
-		// Token: 0x06042F22 RID: 274210 RVA: 0x0104DB88 File Offset: 0x0104BD88
+		// Token: 0x06037A7A RID: 227962 RVA: 0x00F8F1B0 File Offset: 0x00F8D3B0
 		public bool IsHasCoopSpRewardRedDot()
 		{
 			using (List<CoopSpRewardData>.Enumerator enumerator = this.CoopSpRewardDataList.GetEnumerator())
@@ -507,20 +507,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			return false;
 		}
 
-		// Token: 0x06042F23 RID: 274211 RVA: 0x0104DBE4 File Offset: 0x0104BDE4
+		// Token: 0x06037A7B RID: 227963 RVA: 0x00F8F20C File Offset: 0x00F8D40C
 		public bool IsRoleHasRedDot(int roleId)
 		{
 			CoopRoleData coopRoleData;
 			return this.CoopRoleDataDict.TryGetValue(roleId, out coopRoleData) && coopRoleData.IsUnLock && (this.IsRoleHasPhotoRedDot(roleId) || this.IsRoleHasCoopLevelRedDot(roleId));
 		}
 
-		// Token: 0x06042F24 RID: 274212 RVA: 0x0104DC20 File Offset: 0x0104BE20
+		// Token: 0x06037A7C RID: 227964 RVA: 0x00F8F248 File Offset: 0x00F8D448
 		public bool IsRoleHasPhotoRedDot(int roleId)
 		{
 			return this.IsRoleCurCoopLevelMax(roleId) && !(ServerStorageModel.Instance.Get(EClientStorageSystemIdType.CoopRolePhotoRedDot) as ServerStorageSet).Has(roleId);
 		}
 
-		// Token: 0x06042F25 RID: 274213 RVA: 0x0104DC4C File Offset: 0x0104BE4C
+		// Token: 0x06037A7D RID: 227965 RVA: 0x00F8F274 File Offset: 0x00F8D474
 		private bool IsRoleHasCoopLevelRedDot(int roleId)
 		{
 			CoopRoleData coopRoleData;
@@ -539,12 +539,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			return false;
 		}
 
-		// Token: 0x06042F26 RID: 274214 RVA: 0x0104DCC8 File Offset: 0x0104BEC8
+		// Token: 0x06037A7E RID: 227966 RVA: 0x00F8F2F0 File Offset: 0x00F8D4F0
 		public void ClearRolePhotoRedDot(int roleId)
 		{
 		}
 
-		// Token: 0x06042F27 RID: 274215 RVA: 0x0104DCCC File Offset: 0x0104BECC
+		// Token: 0x06037A7F RID: 227967 RVA: 0x00F8F2F4 File Offset: 0x00F8D4F4
 		public void UpdateAllCoopRoleLevelDataState()
 		{
 			foreach (CoopRoleData coopRoleData in this.CoopRoleDataDict.Values)
@@ -553,19 +553,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			}
 		}
 
-		// Token: 0x04022D1E RID: 142622
+		// Token: 0x0401D57A RID: 120186
 		public Dictionary<int, CoopRoleData> CoopRoleDataDict = new Dictionary<int, CoopRoleData>();
 
-		// Token: 0x04022D1F RID: 142623
+		// Token: 0x0401D57B RID: 120187
 		public Dictionary<int, CoopLevelData> CoopLevelDataDict = new Dictionary<int, CoopLevelData>();
 
-		// Token: 0x04022D20 RID: 142624
+		// Token: 0x0401D57C RID: 120188
 		public HashSet<int> CoopSpRewardClaimedSet = new HashSet<int>();
 
-		// Token: 0x04022D21 RID: 142625
+		// Token: 0x0401D57D RID: 120189
 		public List<CoopSpRewardData> CoopSpRewardDataList = new List<CoopSpRewardData>();
 
-		// Token: 0x04022D22 RID: 142626
+		// Token: 0x0401D57E RID: 120190
 		public HashSet<int> PreCompleteLevelIdSet = new HashSet<int>();
 	}
 }

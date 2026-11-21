@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DF2 RID: 7666
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002025 RID: 8229
 	public class ISelfEntity : ITargetEntityType
 	{
-		// Token: 0x0600A40F RID: 41999 RVA: 0x00174350 File Offset: 0x00172550
+		// Token: 0x0600AEB7 RID: 44727 RVA: 0x00189D58 File Offset: 0x00187F58
 		private ISelfEntity_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A410 RID: 42000 RVA: 0x00174388 File Offset: 0x00172588
+		// Token: 0x0600AEB8 RID: 44728 RVA: 0x00189D90 File Offset: 0x00187F90
 		public static ISelfEntity Create([Nullable(2)] ISelfEntity instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A411 RID: 42001 RVA: 0x0017439B File Offset: 0x0017259B
+		// Token: 0x0600AEB9 RID: 44729 RVA: 0x00189DA3 File Offset: 0x00187FA3
 		public static ISelfEntity CreateFromSetValue([Nullable(2)] ISelfEntity_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A412 RID: 42002 RVA: 0x001743AE File Offset: 0x001725AE
+		// Token: 0x0600AEBA RID: 44730 RVA: 0x00189DB6 File Offset: 0x00187FB6
 		public new ISelfEntity_SetValue ToSetValue()
 		{
 			return new ISelfEntity_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003273 RID: 12915
-		// (get) Token: 0x0600A413 RID: 42003 RVA: 0x001743C1 File Offset: 0x001725C1
-		// (set) Token: 0x0600A414 RID: 42004 RVA: 0x001743EC File Offset: 0x001725EC
+		// Token: 0x17003532 RID: 13618
+		// (get) Token: 0x0600AEBB RID: 44731 RVA: 0x00189DC9 File Offset: 0x00187FC9
+		// (set) Token: 0x0600AEBC RID: 44732 RVA: 0x00189DF4 File Offset: 0x00187FF4
 		public override ETargetEntityType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006246 RID: 25158
+		// Token: 0x0400681D RID: 26653
 		[Nullable(2)]
 		protected new ISelfEntity FbInstance;
 
-		// Token: 0x04006247 RID: 25159
+		// Token: 0x0400681E RID: 26654
 		[Nullable(2)]
 		protected new ISelfEntity_SetValue PocoInterface;
 	}

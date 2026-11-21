@@ -3,22 +3,22 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.BaseCharacter;
 
-// Token: 0x02001A6D RID: 6765
+// Token: 0x02000F2C RID: 3884
 public class DangoPerformConfig
 {
-	// Token: 0x04005BC5 RID: 23493
+	// Token: 0x04005C94 RID: 23700
 	public EDangoActionPerformType ActionType;
 
-	// Token: 0x04005BC6 RID: 23494
+	// Token: 0x04005C95 RID: 23701
 	public EDangoActionTargetType ActionTargetType;
 
-	// Token: 0x04005BC7 RID: 23495
+	// Token: 0x04005C96 RID: 23702
 	public EDangoActionPerformType RecursionActionType;
 
-	// Token: 0x04005BC8 RID: 23496
+	// Token: 0x04005C97 RID: 23703
 	public int Duration;
 
-	// Token: 0x04005BC9 RID: 23497
+	// Token: 0x04005C98 RID: 23704
 	[Nullable(1)]
 	public List<DangoPerformEffectConfig> EffectConfigList = new List<DangoPerformEffectConfig>();
 }

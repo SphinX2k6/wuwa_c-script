@@ -4,22 +4,22 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x020021BE RID: 8638
+	// Token: 0x0200072A RID: 1834
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/LGUI.UISpriteFillMethod")]
 	public enum UISpriteFillMethod : byte
 	{
-		// Token: 0x040118E5 RID: 71909
+		// Token: 0x04004456 RID: 17494
 		Horizontal,
-		// Token: 0x040118E6 RID: 71910
+		// Token: 0x04004457 RID: 17495
 		Vertical,
-		// Token: 0x040118E7 RID: 71911
+		// Token: 0x04004458 RID: 17496
 		Radial90,
-		// Token: 0x040118E8 RID: 71912
+		// Token: 0x04004459 RID: 17497
 		Radial180,
-		// Token: 0x040118E9 RID: 71913
+		// Token: 0x0400445A RID: 17498
 		Radial360,
-		// Token: 0x040118EA RID: 71914
+		// Token: 0x0400445B RID: 17499
 		UISpriteFillMethod_MAX
 	}
 }

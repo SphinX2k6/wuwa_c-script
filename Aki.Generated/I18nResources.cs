@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000D59 RID: 3417
+	// Token: 0x02000E3E RID: 3646
 	public struct I18nResources : IFlatbufferObject
 	{
-		// Token: 0x17001897 RID: 6295
-		// (get) Token: 0x06008259 RID: 33369 RVA: 0x0025CAA9 File Offset: 0x0025ACA9
+		// Token: 0x170018FA RID: 6394
+		// (get) Token: 0x06008873 RID: 34931 RVA: 0x0027B196 File Offset: 0x00279396
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600825A RID: 33370 RVA: 0x0025CAB6 File Offset: 0x0025ACB6
+		// Token: 0x06008874 RID: 34932 RVA: 0x0027B1A3 File Offset: 0x002793A3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600825B RID: 33371 RVA: 0x0025CAC0 File Offset: 0x0025ACC0
+		// Token: 0x06008875 RID: 34933 RVA: 0x0027B1AC File Offset: 0x002793AC
 		public static I18nResources GetRootAsI18nResources(ByteBuffer _bb)
 		{
 			return I18nResources.GetRootAsI18nResources(_bb, default(I18nResources));
 		}
 
-		// Token: 0x0600825C RID: 33372 RVA: 0x0025CADC File Offset: 0x0025ACDC
+		// Token: 0x06008876 RID: 34934 RVA: 0x0027B1C8 File Offset: 0x002793C8
 		public static I18nResources GetRootAsI18nResources(ByteBuffer _bb, I18nResources obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600825D RID: 33373 RVA: 0x0025CAF9 File Offset: 0x0025ACF9
+		// Token: 0x06008877 RID: 34935 RVA: 0x0027B1E5 File Offset: 0x002793E5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600825E RID: 33374 RVA: 0x0025CB08 File Offset: 0x0025AD08
+		// Token: 0x06008878 RID: 34936 RVA: 0x0027B1F4 File Offset: 0x002793F4
 		public I18nResources __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001898 RID: 6296
-		// (get) Token: 0x0600825F RID: 33375 RVA: 0x0025CB18 File Offset: 0x0025AD18
+		// Token: 0x170018FB RID: 6395
+		// (get) Token: 0x06008879 RID: 34937 RVA: 0x0027B204 File Offset: 0x00279404
 		public string Id
 		{
 			get
@@ -62,20 +62,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008260 RID: 33376 RVA: 0x0025CB4F File Offset: 0x0025AD4F
+		// Token: 0x0600887A RID: 34938 RVA: 0x0027B23B File Offset: 0x0027943B
 		public Span<byte> GetIdBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x06008261 RID: 33377 RVA: 0x0025CB5E File Offset: 0x0025AD5E
+		// Token: 0x0600887B RID: 34939 RVA: 0x0027B24A File Offset: 0x0027944A
 		public byte[] GetIdArray()
 		{
 			return this.__p.__vector_as_array<byte>(4) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17001899 RID: 6297
-		// (get) Token: 0x06008262 RID: 33378 RVA: 0x0025CB78 File Offset: 0x0025AD78
+		// Token: 0x170018FC RID: 6396
+		// (get) Token: 0x0600887C RID: 34940 RVA: 0x0027B264 File Offset: 0x00279464
 		public string PlotAudioRef
 		{
 			get
@@ -89,20 +89,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008263 RID: 33379 RVA: 0x0025CBAF File Offset: 0x0025ADAF
+		// Token: 0x0600887D RID: 34941 RVA: 0x0027B29B File Offset: 0x0027949B
 		public Span<byte> GetPlotAudioRefBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06008264 RID: 33380 RVA: 0x0025CBBE File Offset: 0x0025ADBE
+		// Token: 0x0600887E RID: 34942 RVA: 0x0027B2AA File Offset: 0x002794AA
 		public byte[] GetPlotAudioRefArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700189A RID: 6298
-		// (get) Token: 0x06008265 RID: 33381 RVA: 0x0025CBD8 File Offset: 0x0025ADD8
+		// Token: 0x170018FD RID: 6397
+		// (get) Token: 0x0600887F RID: 34943 RVA: 0x0027B2C4 File Offset: 0x002794C4
 		public string TextureRef
 		{
 			get
@@ -116,19 +116,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008266 RID: 33382 RVA: 0x0025CC0F File Offset: 0x0025AE0F
+		// Token: 0x06008880 RID: 34944 RVA: 0x0027B2FB File Offset: 0x002794FB
 		public Span<byte> GetTextureRefBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x06008267 RID: 33383 RVA: 0x0025CC1E File Offset: 0x0025AE1E
+		// Token: 0x06008881 RID: 34945 RVA: 0x0027B30A File Offset: 0x0027950A
 		public byte[] GetTextureRefArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04004DD8 RID: 19928
+		// Token: 0x040053BD RID: 21437
 		private Table __p;
 	}
 }

@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003A01 RID: 14849
+	// Token: 0x02003DDC RID: 15836
 	public enum EVarCompare : byte
 	{
-		// Token: 0x0400AE56 RID: 44630
+		// Token: 0x0400B778 RID: 46968
 		Eq,
-		// Token: 0x0400AE57 RID: 44631
+		// Token: 0x0400B779 RID: 46969
 		Ne,
-		// Token: 0x0400AE58 RID: 44632
+		// Token: 0x0400B77A RID: 46970
 		Ge,
-		// Token: 0x0400AE59 RID: 44633
+		// Token: 0x0400B77B RID: 46971
 		Gt,
-		// Token: 0x0400AE5A RID: 44634
+		// Token: 0x0400B77C RID: 46972
 		Le,
-		// Token: 0x0400AE5B RID: 44635
+		// Token: 0x0400B77D RID: 46973
 		Lt
 	}
 }

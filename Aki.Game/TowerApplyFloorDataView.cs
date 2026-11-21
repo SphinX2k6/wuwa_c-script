@@ -7,16 +7,16 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02002BDE RID: 11230
+// Token: 0x02002159 RID: 8537
 public class TowerApplyFloorDataView : UiViewBase
 {
-	// Token: 0x06017536 RID: 95542 RVA: 0x005EE084 File Offset: 0x005EC284
+	// Token: 0x06014F67 RID: 85863 RVA: 0x0061ABC4 File Offset: 0x00618DC4
 	[NullableContext(1)]
 	public TowerApplyFloorDataView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06017537 RID: 95543 RVA: 0x005EE090 File Offset: 0x005EC290
+	// Token: 0x06014F68 RID: 85864 RVA: 0x0061ABD0 File Offset: 0x00618DD0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -55,13 +55,13 @@ public class TowerApplyFloorDataView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06017538 RID: 95544 RVA: 0x005EE263 File Offset: 0x005EC463
+	// Token: 0x06014F69 RID: 85865 RVA: 0x0061ADA3 File Offset: 0x00618FA3
 	protected override void OnStart()
 	{
 		this.InitView();
 	}
 
-	// Token: 0x06017539 RID: 95545 RVA: 0x005EE26C File Offset: 0x005EC46C
+	// Token: 0x06014F6A RID: 85866 RVA: 0x0061ADAC File Offset: 0x00618FAC
 	private void InitView()
 	{
 		TowerFloorInfo currentNotConfirmedFloor = TowerModel.Instance.CurrentNotConfirmedFloor;
@@ -148,47 +148,47 @@ public class TowerApplyFloorDataView : UiViewBase
 		}));
 	}
 
-	// Token: 0x0601753A RID: 95546 RVA: 0x005EE598 File Offset: 0x005EC798
+	// Token: 0x06014F6B RID: 85867 RVA: 0x0061B0D8 File Offset: 0x006192D8
 	protected override void OnBeforeDestroy()
 	{
 		TowerModel.Instance.ClearNotConfirmedData();
 	}
 
-	// Token: 0x0601753B RID: 95547 RVA: 0x005EE5A4 File Offset: 0x005EC7A4
+	// Token: 0x06014F6C RID: 85868 RVA: 0x0061B0E4 File Offset: 0x006192E4
 	private void OnClickCancelButton()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0601753C RID: 95548 RVA: 0x005EE5AD File Offset: 0x005EC7AD
+	// Token: 0x06014F6D RID: 85869 RVA: 0x0061B0ED File Offset: 0x006192ED
 	private void OnClickConfirmButton()
 	{
 		TowerController.Instance.TowerApplyFloorDataRequest(true);
 		base.CloseMe(null);
 	}
 
-	// Token: 0x02009194 RID: 37268
+	// Token: 0x020083D8 RID: 33752
 	private enum EChildType
 	{
-		// Token: 0x0402F1B3 RID: 192947
+		// Token: 0x0402A8B8 RID: 174264
 		TitleText,
-		// Token: 0x0402F1B4 RID: 192948
+		// Token: 0x0402A8B9 RID: 174265
 		DescriptionText,
-		// Token: 0x0402F1B5 RID: 192949
+		// Token: 0x0402A8BA RID: 174266
 		OldRoleItem,
-		// Token: 0x0402F1B6 RID: 192950
+		// Token: 0x0402A8BB RID: 174267
 		OldStarRootItem,
-		// Token: 0x0402F1B7 RID: 192951
+		// Token: 0x0402A8BC RID: 174268
 		NewRoleItem,
-		// Token: 0x0402F1B8 RID: 192952
+		// Token: 0x0402A8BD RID: 174269
 		NewStarRootItem,
-		// Token: 0x0402F1B9 RID: 192953
+		// Token: 0x0402A8BE RID: 174270
 		CancelButton,
-		// Token: 0x0402F1BA RID: 192954
+		// Token: 0x0402A8BF RID: 174271
 		ConfirmButton,
-		// Token: 0x0402F1BB RID: 192955
+		// Token: 0x0402A8C0 RID: 174272
 		StarItem,
-		// Token: 0x0402F1BC RID: 192956
+		// Token: 0x0402A8C1 RID: 174273
 		RoleItem
 	}
 }

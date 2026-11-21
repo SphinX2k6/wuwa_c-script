@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005CC3 RID: 23747
+	// Token: 0x020062F4 RID: 25332
 	public enum TThrowMotion : byte
 	{
-		// Token: 0x0400F58E RID: 62862
+		// Token: 0x040102D5 RID: 66261
 		NONE,
-		// Token: 0x0400F58F RID: 62863
+		// Token: 0x040102D6 RID: 66262
 		ICircumnutation,
-		// Token: 0x0400F590 RID: 62864
+		// Token: 0x040102D7 RID: 66263
 		IProjectileMotion,
-		// Token: 0x0400F591 RID: 62865
+		// Token: 0x040102D8 RID: 66264
 		IThrowMotionFreeFall,
-		// Token: 0x0400F592 RID: 62866
+		// Token: 0x040102D9 RID: 66265
 		IThrowMotionLevitate,
-		// Token: 0x0400F593 RID: 62867
+		// Token: 0x040102DA RID: 66266
 		IThrowMotionTrackTarget
 	}
 }

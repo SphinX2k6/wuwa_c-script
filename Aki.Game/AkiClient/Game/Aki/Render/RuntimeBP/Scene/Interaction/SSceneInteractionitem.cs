@@ -9,37 +9,37 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 {
-	// Token: 0x02003B49 RID: 15177
+	// Token: 0x020030C3 RID: 12483
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/Scene/Interaction/SSceneInteractionitem.SSceneInteractionitem")]
 	[UnrealStructLayout(536, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 529)]
 	public class SSceneInteractionitem : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06021983 RID: 137603 RVA: 0x008F05E6 File Offset: 0x008EE7E6
+		// Token: 0x0601E02F RID: 122927 RVA: 0x009085C0 File Offset: 0x009067C0
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SSceneInteractionitem._ScriptStructPtr != 0) ? SSceneInteractionitem._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Render/RuntimeBP/Scene/Interaction/SSceneInteractionitem.SSceneInteractionitem", ref SSceneInteractionitem._ScriptStructPtr);
 		}
 
-		// Token: 0x1700375A RID: 14170
-		// (get) Token: 0x06021984 RID: 137604 RVA: 0x008F060A File Offset: 0x008EE80A
-		// (set) Token: 0x06021985 RID: 137605 RVA: 0x008F061E File Offset: 0x008EE81E
+		// Token: 0x1700318B RID: 12683
+		// (get) Token: 0x0601E030 RID: 122928 RVA: 0x009085E4 File Offset: 0x009067E4
+		// (set) Token: 0x0601E031 RID: 122929 RVA: 0x009085F8 File Offset: 0x009067F8
 		public unsafe string Name
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SSceneInteractionitem.__PropertyOffset_0)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SSceneInteractionitem.__PropertyOffset_Name)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SSceneInteractionitem.__PropertyOffset_0)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SSceneInteractionitem.__PropertyOffset_Name)), value);
 			}
 		}
 
-		// Token: 0x1700375B RID: 14171
-		// (get) Token: 0x06021986 RID: 137606 RVA: 0x008F0634 File Offset: 0x008EE834
-		// (set) Token: 0x06021987 RID: 137607 RVA: 0x008F0677 File Offset: 0x008EE877
+		// Token: 0x1700318C RID: 12684
+		// (get) Token: 0x0601E032 RID: 122930 RVA: 0x00908610 File Offset: 0x00906810
+		// (set) Token: 0x0601E033 RID: 122931 RVA: 0x00908653 File Offset: 0x00906853
 		public SSceneInteractionSequence Sequence
 		{
 			get
@@ -48,19 +48,19 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 				SSceneInteractionSequence result;
 				if ((result = this._Sequence) == null)
 				{
-					result = (this._Sequence = new SSceneInteractionSequence(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_1, base.MemoryOwner ?? this));
+					result = (this._Sequence = new SSceneInteractionSequence(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_Sequence, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SSceneInteractionSequence.StaticStruct(), base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_1, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SSceneInteractionSequence.StaticStruct(), base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_Sequence, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x1700375C RID: 14172
-		// (get) Token: 0x06021988 RID: 137608 RVA: 0x008F0698 File Offset: 0x008EE898
-		// (set) Token: 0x06021989 RID: 137609 RVA: 0x008F06DB File Offset: 0x008EE8DB
+		// Token: 0x1700318D RID: 12685
+		// (get) Token: 0x0601E034 RID: 122932 RVA: 0x00908674 File Offset: 0x00906874
+		// (set) Token: 0x0601E035 RID: 122933 RVA: 0x009086B7 File Offset: 0x009068B7
 		public SSceneInteractionMontage AnimMontage
 		{
 			get
@@ -69,19 +69,19 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 				SSceneInteractionMontage result;
 				if ((result = this._AnimMontage) == null)
 				{
-					result = (this._AnimMontage = new SSceneInteractionMontage(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_2, base.MemoryOwner ?? this));
+					result = (this._AnimMontage = new SSceneInteractionMontage(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_AnimMontage, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SSceneInteractionMontage.StaticStruct(), base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_2, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SSceneInteractionMontage.StaticStruct(), base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_AnimMontage, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x1700375D RID: 14173
-		// (get) Token: 0x0602198A RID: 137610 RVA: 0x008F06FC File Offset: 0x008EE8FC
-		// (set) Token: 0x0602198B RID: 137611 RVA: 0x008F073F File Offset: 0x008EE93F
+		// Token: 0x1700318E RID: 12686
+		// (get) Token: 0x0601E036 RID: 122934 RVA: 0x009086D8 File Offset: 0x009068D8
+		// (set) Token: 0x0601E037 RID: 122935 RVA: 0x0090871B File Offset: 0x0090691B
 		public TArray<BP_EffectActor_C> Effects
 		{
 			get
@@ -90,7 +90,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 				TArray<BP_EffectActor_C> result;
 				if ((result = this._Effects) == null)
 				{
-					result = (this._Effects = new TArray<BP_EffectActor_C>(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_3, base.MemoryOwner ?? this));
+					result = (this._Effects = new TArray<BP_EffectActor_C>(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_Effects, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -100,9 +100,9 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 			}
 		}
 
-		// Token: 0x1700375E RID: 14174
-		// (get) Token: 0x0602198C RID: 137612 RVA: 0x008F0750 File Offset: 0x008EE950
-		// (set) Token: 0x0602198D RID: 137613 RVA: 0x008F0793 File Offset: 0x008EE993
+		// Token: 0x1700318F RID: 12687
+		// (get) Token: 0x0601E038 RID: 122936 RVA: 0x0090872C File Offset: 0x0090692C
+		// (set) Token: 0x0601E039 RID: 122937 RVA: 0x0090876F File Offset: 0x0090696F
 		public TArray<AActor> Actors
 		{
 			get
@@ -111,7 +111,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 				TArray<AActor> result;
 				if ((result = this._Actors) == null)
 				{
-					result = (this._Actors = new TArray<AActor>(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_4, base.MemoryOwner ?? this));
+					result = (this._Actors = new TArray<AActor>(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_Actors, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -121,9 +121,9 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 			}
 		}
 
-		// Token: 0x1700375F RID: 14175
-		// (get) Token: 0x0602198E RID: 137614 RVA: 0x008F07A4 File Offset: 0x008EE9A4
-		// (set) Token: 0x0602198F RID: 137615 RVA: 0x008F07E7 File Offset: 0x008EE9E7
+		// Token: 0x17003190 RID: 12688
+		// (get) Token: 0x0601E03A RID: 122938 RVA: 0x00908780 File Offset: 0x00906980
+		// (set) Token: 0x0601E03B RID: 122939 RVA: 0x009087C3 File Offset: 0x009069C3
 		public TArray<AActor> HideActors
 		{
 			get
@@ -132,7 +132,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 				TArray<AActor> result;
 				if ((result = this._HideActors) == null)
 				{
-					result = (this._HideActors = new TArray<AActor>(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_5, base.MemoryOwner ?? this));
+					result = (this._HideActors = new TArray<AActor>(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_HideActors, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -142,9 +142,9 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 			}
 		}
 
-		// Token: 0x17003760 RID: 14176
-		// (get) Token: 0x06021990 RID: 137616 RVA: 0x008F07F8 File Offset: 0x008EE9F8
-		// (set) Token: 0x06021991 RID: 137617 RVA: 0x008F083B File Offset: 0x008EEA3B
+		// Token: 0x17003191 RID: 12689
+		// (get) Token: 0x0601E03C RID: 122940 RVA: 0x009087D4 File Offset: 0x009069D4
+		// (set) Token: 0x0601E03D RID: 122941 RVA: 0x00908817 File Offset: 0x00906A17
 		public TMap<EKuroSceneInteractionState, EKuroSceneInteractionState> TransitionMap
 		{
 			get
@@ -153,7 +153,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 				TMap<EKuroSceneInteractionState, EKuroSceneInteractionState> result;
 				if ((result = this._TransitionMap) == null)
 				{
-					result = (this._TransitionMap = new TMap<EKuroSceneInteractionState, EKuroSceneInteractionState>(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_6, base.MemoryOwner ?? this));
+					result = (this._TransitionMap = new TMap<EKuroSceneInteractionState, EKuroSceneInteractionState>(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_TransitionMap, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -163,9 +163,9 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 			}
 		}
 
-		// Token: 0x17003761 RID: 14177
-		// (get) Token: 0x06021992 RID: 137618 RVA: 0x008F084C File Offset: 0x008EEA4C
-		// (set) Token: 0x06021993 RID: 137619 RVA: 0x008F088F File Offset: 0x008EEA8F
+		// Token: 0x17003192 RID: 12690
+		// (get) Token: 0x0601E03E RID: 122942 RVA: 0x00908828 File Offset: 0x00906A28
+		// (set) Token: 0x0601E03F RID: 122943 RVA: 0x0090886B File Offset: 0x00906A6B
 		public TArray<SSceneInteractionMaterialController> MaterialControllers
 		{
 			get
@@ -174,7 +174,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 				TArray<SSceneInteractionMaterialController> result;
 				if ((result = this._MaterialControllers) == null)
 				{
-					result = (this._MaterialControllers = new TArray<SSceneInteractionMaterialController>(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_7, base.MemoryOwner ?? this));
+					result = (this._MaterialControllers = new TArray<SSceneInteractionMaterialController>(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_MaterialControllers, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -184,9 +184,9 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 			}
 		}
 
-		// Token: 0x17003762 RID: 14178
-		// (get) Token: 0x06021994 RID: 137620 RVA: 0x008F08A0 File Offset: 0x008EEAA0
-		// (set) Token: 0x06021995 RID: 137621 RVA: 0x008F08E3 File Offset: 0x008EEAE3
+		// Token: 0x17003193 RID: 12691
+		// (get) Token: 0x0601E040 RID: 122944 RVA: 0x0090887C File Offset: 0x00906A7C
+		// (set) Token: 0x0601E041 RID: 122945 RVA: 0x009088BF File Offset: 0x00906ABF
 		public SSceneInteractionAudio AkEvent
 		{
 			get
@@ -195,19 +195,19 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 				SSceneInteractionAudio result;
 				if ((result = this._AkEvent) == null)
 				{
-					result = (this._AkEvent = new SSceneInteractionAudio(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_8, base.MemoryOwner ?? this));
+					result = (this._AkEvent = new SSceneInteractionAudio(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_AkEvent, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SSceneInteractionAudio.StaticStruct(), base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_8, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SSceneInteractionAudio.StaticStruct(), base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_AkEvent, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17003763 RID: 14179
-		// (get) Token: 0x06021996 RID: 137622 RVA: 0x008F0904 File Offset: 0x008EEB04
-		// (set) Token: 0x06021997 RID: 137623 RVA: 0x008F0947 File Offset: 0x008EEB47
+		// Token: 0x17003194 RID: 12692
+		// (get) Token: 0x0601E042 RID: 122946 RVA: 0x009088E0 File Offset: 0x00906AE0
+		// (set) Token: 0x0601E043 RID: 122947 RVA: 0x00908923 File Offset: 0x00906B23
 		public TArray<SStateBasedEffect> StateBasedEffect
 		{
 			get
@@ -216,7 +216,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 				TArray<SStateBasedEffect> result;
 				if ((result = this._StateBasedEffect) == null)
 				{
-					result = (this._StateBasedEffect = new TArray<SStateBasedEffect>(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_9, base.MemoryOwner ?? this));
+					result = (this._StateBasedEffect = new TArray<SStateBasedEffect>(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_StateBasedEffect, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -226,63 +226,42 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 			}
 		}
 
-		// Token: 0x17003764 RID: 14180
-		// (get) Token: 0x06021998 RID: 137624 RVA: 0x008F0955 File Offset: 0x008EEB55
-		// (set) Token: 0x06021999 RID: 137625 RVA: 0x008F0965 File Offset: 0x008EEB65
+		// Token: 0x17003195 RID: 12693
+		// (get) Token: 0x0601E044 RID: 122948 RVA: 0x00908931 File Offset: 0x00906B31
+		// (set) Token: 0x0601E045 RID: 122949 RVA: 0x00908941 File Offset: 0x00906B41
 		public unsafe bool IsForceSetState
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_10) != 0;
+				return *(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_IsForceSetState) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_10) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_IsForceSetState) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17003765 RID: 14181
-		// (get) Token: 0x0602199A RID: 137626 RVA: 0x008F0976 File Offset: 0x008EEB76
-		// (set) Token: 0x0602199B RID: 137627 RVA: 0x008F098A File Offset: 0x008EEB8A
+		// Token: 0x17003196 RID: 12694
+		// (get) Token: 0x0601E046 RID: 122950 RVA: 0x00908952 File Offset: 0x00906B52
+		// (set) Token: 0x0601E047 RID: 122951 RVA: 0x00908966 File Offset: 0x00906B66
 		[Nullable(2)]
 		public unsafe PD_CharacterControllerDataGroup_C CharacterDataGroupForOrgan
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<PD_CharacterControllerDataGroup_C>(base.NativePtr / (IntPtr)sizeof(void*) + SSceneInteractionitem.__PropertyOffset_11);
+				return BuiltinUtils.ObjectPropertyGetter<PD_CharacterControllerDataGroup_C>(base.NativePtr / (IntPtr)sizeof(void*) + SSceneInteractionitem.__PropertyOffset_CharacterDataGroupForOrgan);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + SSceneInteractionitem.__PropertyOffset_11, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + SSceneInteractionitem.__PropertyOffset_CharacterDataGroupForOrgan, value);
 			}
 		}
 
-		// Token: 0x17003766 RID: 14182
-		// (get) Token: 0x0602199C RID: 137628 RVA: 0x008F09A0 File Offset: 0x008EEBA0
-		// (set) Token: 0x0602199D RID: 137629 RVA: 0x008F09E3 File Offset: 0x008EEBE3
-		public TArray<SSceneInteractionitemIndestructibleEffectsParameters> IndestructibleEffectsParameters
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<SSceneInteractionitemIndestructibleEffectsParameters> result;
-				if ((result = this._IndestructibleEffectsParameters) == null)
-				{
-					result = (this._IndestructibleEffectsParameters = new TArray<SSceneInteractionitemIndestructibleEffectsParameters>(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_12, base.MemoryOwner ?? this));
-				}
-				return result;
-			}
-			set
-			{
-				this.IndestructibleEffectsParameters.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17003767 RID: 14183
-		// (get) Token: 0x0602199E RID: 137630 RVA: 0x008F09F4 File Offset: 0x008EEBF4
-		// (set) Token: 0x0602199F RID: 137631 RVA: 0x008F0A37 File Offset: 0x008EEC37
+		// Token: 0x17003197 RID: 12695
+		// (get) Token: 0x0601E048 RID: 122952 RVA: 0x0090897C File Offset: 0x00906B7C
+		// (set) Token: 0x0601E049 RID: 122953 RVA: 0x009089BF File Offset: 0x00906BBF
 		public TArray<SSceneInteractionCrossStateEffect> CrossStateEffects
 		{
 			get
@@ -291,7 +270,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 				TArray<SSceneInteractionCrossStateEffect> result;
 				if ((result = this._CrossStateEffects) == null)
 				{
-					result = (this._CrossStateEffects = new TArray<SSceneInteractionCrossStateEffect>(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_13, base.MemoryOwner ?? this));
+					result = (this._CrossStateEffects = new TArray<SSceneInteractionCrossStateEffect>(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_CrossStateEffects, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -301,57 +280,57 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 			}
 		}
 
-		// Token: 0x17003768 RID: 14184
-		// (get) Token: 0x060219A0 RID: 137632 RVA: 0x008F0A45 File Offset: 0x008EEC45
-		// (set) Token: 0x060219A1 RID: 137633 RVA: 0x008F0A55 File Offset: 0x008EEC55
+		// Token: 0x17003198 RID: 12696
+		// (get) Token: 0x0601E04A RID: 122954 RVA: 0x009089CD File Offset: 0x00906BCD
+		// (set) Token: 0x0601E04B RID: 122955 RVA: 0x009089DD File Offset: 0x00906BDD
 		public unsafe float TransitionTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_14);
+				return *(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_TransitionTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_14) = value;
+				*(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_TransitionTime) = value;
 			}
 		}
 
-		// Token: 0x17003769 RID: 14185
-		// (get) Token: 0x060219A2 RID: 137634 RVA: 0x008F0A66 File Offset: 0x008EEC66
-		// (set) Token: 0x060219A3 RID: 137635 RVA: 0x008F0A76 File Offset: 0x008EEC76
+		// Token: 0x17003199 RID: 12697
+		// (get) Token: 0x0601E04C RID: 122956 RVA: 0x009089EE File Offset: 0x00906BEE
+		// (set) Token: 0x0601E04D RID: 122957 RVA: 0x009089FE File Offset: 0x00906BFE
 		public unsafe bool NeedExpressionAnyway
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_15) != 0;
+				return *(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_NeedExpressionAnyway) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_15) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_NeedExpressionAnyway) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x1700376A RID: 14186
-		// (get) Token: 0x060219A4 RID: 137636 RVA: 0x008F0A87 File Offset: 0x008EEC87
-		// (set) Token: 0x060219A5 RID: 137637 RVA: 0x008F0A9B File Offset: 0x008EEC9B
+		// Token: 0x1700319A RID: 12698
+		// (get) Token: 0x0601E04E RID: 122958 RVA: 0x00908A0F File Offset: 0x00906C0F
+		// (set) Token: 0x0601E04F RID: 122959 RVA: 0x00908A23 File Offset: 0x00906C23
 		[Nullable(2)]
 		public unsafe BP_MaterialRuntimeParUpdate_C BP_MaterialRuntimeParUpdate
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<BP_MaterialRuntimeParUpdate_C>(base.NativePtr / (IntPtr)sizeof(void*) + SSceneInteractionitem.__PropertyOffset_16);
+				return BuiltinUtils.ObjectPropertyGetter<BP_MaterialRuntimeParUpdate_C>(base.NativePtr / (IntPtr)sizeof(void*) + SSceneInteractionitem.__PropertyOffset_BP_MaterialRuntimeParUpdate);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + SSceneInteractionitem.__PropertyOffset_16, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + SSceneInteractionitem.__PropertyOffset_BP_MaterialRuntimeParUpdate, value);
 			}
 		}
 
-		// Token: 0x1700376B RID: 14187
-		// (get) Token: 0x060219A6 RID: 137638 RVA: 0x008F0AB0 File Offset: 0x008EECB0
-		// (set) Token: 0x060219A7 RID: 137639 RVA: 0x008F0AF3 File Offset: 0x008EECF3
+		// Token: 0x1700319B RID: 12699
+		// (get) Token: 0x0601E050 RID: 122960 RVA: 0x00908A38 File Offset: 0x00906C38
+		// (set) Token: 0x0601E051 RID: 122961 RVA: 0x00908A7B File Offset: 0x00906C7B
 		public SSceneInteractionActorSkeletalMeshDestructible SkeletalMeshDestructible
 		{
 			get
@@ -360,19 +339,19 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 				SSceneInteractionActorSkeletalMeshDestructible result;
 				if ((result = this._SkeletalMeshDestructible) == null)
 				{
-					result = (this._SkeletalMeshDestructible = new SSceneInteractionActorSkeletalMeshDestructible(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_17, base.MemoryOwner ?? this));
+					result = (this._SkeletalMeshDestructible = new SSceneInteractionActorSkeletalMeshDestructible(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_SkeletalMeshDestructible, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SSceneInteractionActorSkeletalMeshDestructible.StaticStruct(), base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_17, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SSceneInteractionActorSkeletalMeshDestructible.StaticStruct(), base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_SkeletalMeshDestructible, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x1700376C RID: 14188
-		// (get) Token: 0x060219A8 RID: 137640 RVA: 0x008F0B14 File Offset: 0x008EED14
-		// (set) Token: 0x060219A9 RID: 137641 RVA: 0x008F0B57 File Offset: 0x008EED57
+		// Token: 0x1700319C RID: 12700
+		// (get) Token: 0x0601E052 RID: 122962 RVA: 0x00908A9C File Offset: 0x00906C9C
+		// (set) Token: 0x0601E053 RID: 122963 RVA: 0x00908ADF File Offset: 0x00906CDF
 		public TMap<AActor, FCollisionProfileName> EnterStateActorCollisionProfile
 		{
 			get
@@ -381,7 +360,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 				TMap<AActor, FCollisionProfileName> result;
 				if ((result = this._EnterStateActorCollisionProfile) == null)
 				{
-					result = (this._EnterStateActorCollisionProfile = new TMap<AActor, FCollisionProfileName>(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_18, base.MemoryOwner ?? this));
+					result = (this._EnterStateActorCollisionProfile = new TMap<AActor, FCollisionProfileName>(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_EnterStateActorCollisionProfile, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -391,9 +370,9 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 			}
 		}
 
-		// Token: 0x1700376D RID: 14189
-		// (get) Token: 0x060219AA RID: 137642 RVA: 0x008F0B68 File Offset: 0x008EED68
-		// (set) Token: 0x060219AB RID: 137643 RVA: 0x008F0BAB File Offset: 0x008EEDAB
+		// Token: 0x1700319D RID: 12701
+		// (get) Token: 0x0601E054 RID: 122964 RVA: 0x00908AF0 File Offset: 0x00906CF0
+		// (set) Token: 0x0601E055 RID: 122965 RVA: 0x00908B33 File Offset: 0x00906D33
 		public TMap<AActor, FCollisionProfileName> ExitStateActorCollisionProfile
 		{
 			get
@@ -402,7 +381,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 				TMap<AActor, FCollisionProfileName> result;
 				if ((result = this._ExitStateActorCollisionProfile) == null)
 				{
-					result = (this._ExitStateActorCollisionProfile = new TMap<AActor, FCollisionProfileName>(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_19, base.MemoryOwner ?? this));
+					result = (this._ExitStateActorCollisionProfile = new TMap<AActor, FCollisionProfileName>(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_ExitStateActorCollisionProfile, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -412,108 +391,82 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 			}
 		}
 
-		// Token: 0x1700376E RID: 14190
-		// (get) Token: 0x060219AC RID: 137644 RVA: 0x008F0BB9 File Offset: 0x008EEDB9
-		// (set) Token: 0x060219AD RID: 137645 RVA: 0x008F0BC9 File Offset: 0x008EEDC9
+		// Token: 0x1700319E RID: 12702
+		// (get) Token: 0x0601E056 RID: 122966 RVA: 0x00908B41 File Offset: 0x00906D41
+		// (set) Token: 0x0601E057 RID: 122967 RVA: 0x00908B51 File Offset: 0x00906D51
 		public unsafe bool WaitForPlayableFinished
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_20) != 0;
+				return *(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_WaitForPlayableFinished) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_20) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SSceneInteractionitem.__PropertyOffset_WaitForPlayableFinished) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x060219AE RID: 137646 RVA: 0x008F0BDA File Offset: 0x008EEDDA
+		// Token: 0x0601E058 RID: 122968 RVA: 0x00908B62 File Offset: 0x00906D62
 		public SSceneInteractionitem()
 		{
 		}
 
-		// Token: 0x060219AF RID: 137647 RVA: 0x008F0BE4 File Offset: 0x008EEDE4
-		public SSceneInteractionitem(string Name, SSceneInteractionSequence Sequence, SSceneInteractionMontage AnimMontage, TArray<BP_EffectActor_C> Effects, TArray<AActor> Actors, TArray<AActor> HideActors, TMap<EKuroSceneInteractionState, EKuroSceneInteractionState> TransitionMap, TArray<SSceneInteractionMaterialController> MaterialControllers, SSceneInteractionAudio AkEvent, TArray<SStateBasedEffect> StateBasedEffect, bool IsForceSetState, PD_CharacterControllerDataGroup_C CharacterDataGroupForOrgan, TArray<SSceneInteractionitemIndestructibleEffectsParameters> IndestructibleEffectsParameters, TArray<SSceneInteractionCrossStateEffect> CrossStateEffects, float TransitionTime, bool NeedExpressionAnyway, BP_MaterialRuntimeParUpdate_C BP_MaterialRuntimeParUpdate, SSceneInteractionActorSkeletalMeshDestructible SkeletalMeshDestructible, TMap<AActor, FCollisionProfileName> EnterStateActorCollisionProfile, TMap<AActor, FCollisionProfileName> ExitStateActorCollisionProfile, bool WaitForPlayableFinished)
-		{
-			this.Name = Name;
-			this.Sequence = Sequence;
-			this.AnimMontage = AnimMontage;
-			this.Effects = Effects;
-			this.Actors = Actors;
-			this.HideActors = HideActors;
-			this.TransitionMap = TransitionMap;
-			this.MaterialControllers = MaterialControllers;
-			this.AkEvent = AkEvent;
-			this.StateBasedEffect = StateBasedEffect;
-			this.IsForceSetState = IsForceSetState;
-			this.CharacterDataGroupForOrgan = CharacterDataGroupForOrgan;
-			this.IndestructibleEffectsParameters = IndestructibleEffectsParameters;
-			this.CrossStateEffects = CrossStateEffects;
-			this.TransitionTime = TransitionTime;
-			this.NeedExpressionAnyway = NeedExpressionAnyway;
-			this.BP_MaterialRuntimeParUpdate = BP_MaterialRuntimeParUpdate;
-			this.SkeletalMeshDestructible = SkeletalMeshDestructible;
-			this.EnterStateActorCollisionProfile = EnterStateActorCollisionProfile;
-			this.ExitStateActorCollisionProfile = ExitStateActorCollisionProfile;
-			this.WaitForPlayableFinished = WaitForPlayableFinished;
-		}
-
-		// Token: 0x060219B0 RID: 137648 RVA: 0x008F0C9C File Offset: 0x008EEE9C
+		// Token: 0x0601E059 RID: 122969 RVA: 0x00908B6A File Offset: 0x00906D6A
 		protected override IntPtr GetUStructPtr()
 		{
 			return SSceneInteractionitem.StaticStruct();
 		}
 
-		// Token: 0x060219B1 RID: 137649 RVA: 0x008F0CA8 File Offset: 0x008EEEA8
+		// Token: 0x0601E05A RID: 122970 RVA: 0x00908B76 File Offset: 0x00906D76
 		[NullableContext(2)]
 		public SSceneInteractionitem(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060219B2 RID: 137650 RVA: 0x008F0CB2 File Offset: 0x008EEEB2
+		// Token: 0x0601E05B RID: 122971 RVA: 0x00908B80 File Offset: 0x00906D80
 		public SSceneInteractionitem(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060219B3 RID: 137651 RVA: 0x008F0CBD File Offset: 0x008EEEBD
+		// Token: 0x0601E05C RID: 122972 RVA: 0x00908B8B File Offset: 0x00906D8B
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SSceneInteractionitem(Pointer, false, true);
 		}
 
-		// Token: 0x060219B4 RID: 137652 RVA: 0x008F0CC7 File Offset: 0x008EEEC7
+		// Token: 0x0601E05D RID: 122973 RVA: 0x00908B95 File Offset: 0x00906D95
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SSceneInteractionitem(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04010609 RID: 67081
+		// Token: 0x0400FDBB RID: 64955
 		public const string __ObjectPath = "/Game/Aki/Render/RuntimeBP/Scene/Interaction/SSceneInteractionitem.SSceneInteractionitem";
 
-		// Token: 0x0401060A RID: 67082
+		// Token: 0x0400FDBC RID: 64956
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0401060B RID: 67083
-		internal static int __PropertyOffset_0;
+		// Token: 0x0400FDBD RID: 64957
+		internal static int __PropertyOffset_Name;
 
-		// Token: 0x0401060C RID: 67084
-		internal static int __PropertyOffset_1;
+		// Token: 0x0400FDBE RID: 64958
+		internal static int __PropertyOffset_Sequence;
 
-		// Token: 0x0401060D RID: 67085
+		// Token: 0x0400FDBF RID: 64959
 		[Nullable(2)]
 		private SSceneInteractionSequence _Sequence;
 
-		// Token: 0x0401060E RID: 67086
-		internal static int __PropertyOffset_2;
+		// Token: 0x0400FDC0 RID: 64960
+		internal static int __PropertyOffset_AnimMontage;
 
-		// Token: 0x0401060F RID: 67087
+		// Token: 0x0400FDC1 RID: 64961
 		[Nullable(2)]
 		private SSceneInteractionMontage _AnimMontage;
 
-		// Token: 0x04010610 RID: 67088
-		internal static int __PropertyOffset_3;
+		// Token: 0x0400FDC2 RID: 64962
+		internal static int __PropertyOffset_Effects;
 
-		// Token: 0x04010611 RID: 67089
+		// Token: 0x0400FDC3 RID: 64963
 		[Nullable(new byte[]
 		{
 			2,
@@ -521,10 +474,10 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 		})]
 		private TArray<BP_EffectActor_C> _Effects;
 
-		// Token: 0x04010612 RID: 67090
-		internal static int __PropertyOffset_4;
+		// Token: 0x0400FDC4 RID: 64964
+		internal static int __PropertyOffset_Actors;
 
-		// Token: 0x04010613 RID: 67091
+		// Token: 0x0400FDC5 RID: 64965
 		[Nullable(new byte[]
 		{
 			2,
@@ -532,10 +485,10 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 		})]
 		private TArray<AActor> _Actors;
 
-		// Token: 0x04010614 RID: 67092
-		internal static int __PropertyOffset_5;
+		// Token: 0x0400FDC6 RID: 64966
+		internal static int __PropertyOffset_HideActors;
 
-		// Token: 0x04010615 RID: 67093
+		// Token: 0x0400FDC7 RID: 64967
 		[Nullable(new byte[]
 		{
 			2,
@@ -543,17 +496,17 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 		})]
 		private TArray<AActor> _HideActors;
 
-		// Token: 0x04010616 RID: 67094
-		internal static int __PropertyOffset_6;
+		// Token: 0x0400FDC8 RID: 64968
+		internal static int __PropertyOffset_TransitionMap;
 
-		// Token: 0x04010617 RID: 67095
+		// Token: 0x0400FDC9 RID: 64969
 		[Nullable(2)]
 		private TMap<EKuroSceneInteractionState, EKuroSceneInteractionState> _TransitionMap;
 
-		// Token: 0x04010618 RID: 67096
-		internal static int __PropertyOffset_7;
+		// Token: 0x0400FDCA RID: 64970
+		internal static int __PropertyOffset_MaterialControllers;
 
-		// Token: 0x04010619 RID: 67097
+		// Token: 0x0400FDCB RID: 64971
 		[Nullable(new byte[]
 		{
 			2,
@@ -561,17 +514,17 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 		})]
 		private TArray<SSceneInteractionMaterialController> _MaterialControllers;
 
-		// Token: 0x0401061A RID: 67098
-		internal static int __PropertyOffset_8;
+		// Token: 0x0400FDCC RID: 64972
+		internal static int __PropertyOffset_AkEvent;
 
-		// Token: 0x0401061B RID: 67099
+		// Token: 0x0400FDCD RID: 64973
 		[Nullable(2)]
 		private SSceneInteractionAudio _AkEvent;
 
-		// Token: 0x0401061C RID: 67100
-		internal static int __PropertyOffset_9;
+		// Token: 0x0400FDCE RID: 64974
+		internal static int __PropertyOffset_StateBasedEffect;
 
-		// Token: 0x0401061D RID: 67101
+		// Token: 0x0400FDCF RID: 64975
 		[Nullable(new byte[]
 		{
 			2,
@@ -579,27 +532,16 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 		})]
 		private TArray<SStateBasedEffect> _StateBasedEffect;
 
-		// Token: 0x0401061E RID: 67102
-		internal static int __PropertyOffset_10;
+		// Token: 0x0400FDD0 RID: 64976
+		internal static int __PropertyOffset_IsForceSetState;
 
-		// Token: 0x0401061F RID: 67103
-		internal static int __PropertyOffset_11;
+		// Token: 0x0400FDD1 RID: 64977
+		internal static int __PropertyOffset_CharacterDataGroupForOrgan;
 
-		// Token: 0x04010620 RID: 67104
-		internal static int __PropertyOffset_12;
+		// Token: 0x0400FDD2 RID: 64978
+		internal static int __PropertyOffset_CrossStateEffects;
 
-		// Token: 0x04010621 RID: 67105
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<SSceneInteractionitemIndestructibleEffectsParameters> _IndestructibleEffectsParameters;
-
-		// Token: 0x04010622 RID: 67106
-		internal static int __PropertyOffset_13;
-
-		// Token: 0x04010623 RID: 67107
+		// Token: 0x0400FDD3 RID: 64979
 		[Nullable(new byte[]
 		{
 			2,
@@ -607,26 +549,26 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 		})]
 		private TArray<SSceneInteractionCrossStateEffect> _CrossStateEffects;
 
-		// Token: 0x04010624 RID: 67108
-		internal static int __PropertyOffset_14;
+		// Token: 0x0400FDD4 RID: 64980
+		internal static int __PropertyOffset_TransitionTime;
 
-		// Token: 0x04010625 RID: 67109
-		internal static int __PropertyOffset_15;
+		// Token: 0x0400FDD5 RID: 64981
+		internal static int __PropertyOffset_NeedExpressionAnyway;
 
-		// Token: 0x04010626 RID: 67110
-		internal static int __PropertyOffset_16;
+		// Token: 0x0400FDD6 RID: 64982
+		internal static int __PropertyOffset_BP_MaterialRuntimeParUpdate;
 
-		// Token: 0x04010627 RID: 67111
-		internal static int __PropertyOffset_17;
+		// Token: 0x0400FDD7 RID: 64983
+		internal static int __PropertyOffset_SkeletalMeshDestructible;
 
-		// Token: 0x04010628 RID: 67112
+		// Token: 0x0400FDD8 RID: 64984
 		[Nullable(2)]
 		private SSceneInteractionActorSkeletalMeshDestructible _SkeletalMeshDestructible;
 
-		// Token: 0x04010629 RID: 67113
-		internal static int __PropertyOffset_18;
+		// Token: 0x0400FDD9 RID: 64985
+		internal static int __PropertyOffset_EnterStateActorCollisionProfile;
 
-		// Token: 0x0401062A RID: 67114
+		// Token: 0x0400FDDA RID: 64986
 		[Nullable(new byte[]
 		{
 			2,
@@ -635,10 +577,10 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 		})]
 		private TMap<AActor, FCollisionProfileName> _EnterStateActorCollisionProfile;
 
-		// Token: 0x0401062B RID: 67115
-		internal static int __PropertyOffset_19;
+		// Token: 0x0400FDDB RID: 64987
+		internal static int __PropertyOffset_ExitStateActorCollisionProfile;
 
-		// Token: 0x0401062C RID: 67116
+		// Token: 0x0400FDDC RID: 64988
 		[Nullable(new byte[]
 		{
 			2,
@@ -647,7 +589,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.Interaction
 		})]
 		private TMap<AActor, FCollisionProfileName> _ExitStateActorCollisionProfile;
 
-		// Token: 0x0401062D RID: 67117
-		internal static int __PropertyOffset_20;
+		// Token: 0x0400FDDD RID: 64989
+		internal static int __PropertyOffset_WaitForPlayableFinished;
 	}
 }

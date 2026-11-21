@@ -8,13 +8,13 @@ using CSharpScript.Game.NewWorld.SceneItem.Manipulate;
 
 namespace CSharpScript.Game.NewWorld.Common.Component
 {
-	// Token: 0x02007083 RID: 28803
+	// Token: 0x02006204 RID: 25092
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class DurabilityComponent : EntityComponent
 	{
-		// Token: 0x17009C1E RID: 39966
-		// (get) Token: 0x06046270 RID: 287344 RVA: 0x011866AC File Offset: 0x011848AC
+		// Token: 0x170071C3 RID: 29123
+		// (get) Token: 0x0603C48A RID: 246922 RVA: 0x0112FC6C File Offset: 0x0112DE6C
 		public bool IsDestroyed
 		{
 			get
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			}
 		}
 
-		// Token: 0x06046271 RID: 287345 RVA: 0x011866D8 File Offset: 0x011848D8
+		// Token: 0x0603C48B RID: 246923 RVA: 0x0112FC98 File Offset: 0x0112DE98
 		protected override bool OnInit()
 		{
 			this.CreatureDataComponent = base.Entity.GetComponent<CreatureDataComponent>();
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x06046272 RID: 287346 RVA: 0x01186767 File Offset: 0x01184967
+		// Token: 0x0603C48C RID: 246924 RVA: 0x0112FD27 File Offset: 0x0112DF27
 		protected override bool OnStart()
 		{
 			this.OnSceneItemDurabilityChange = delegate(int durability)
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x06046273 RID: 287347 RVA: 0x011867A0 File Offset: 0x011849A0
+		// Token: 0x0603C48D RID: 246925 RVA: 0x0112FD60 File Offset: 0x0112DF60
 		protected override bool OnEnd()
 		{
 			if (this.OnSceneItemDurabilityChange != null)
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			return true;
 		}
 
-		// Token: 0x06046274 RID: 287348 RVA: 0x01186818 File Offset: 0x01184A18
+		// Token: 0x0603C48E RID: 246926 RVA: 0x0112FDD8 File Offset: 0x0112DFD8
 		private void CheckDurablePoint()
 		{
 			DurabilityComponent.ESceneItemDestroyState? state = this.State;
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 			this.State = new DurabilityComponent.ESceneItemDestroyState?(DurabilityComponent.ESceneItemDestroyState.Destroying);
 		}
 
-		// Token: 0x06046275 RID: 287349 RVA: 0x01186874 File Offset: 0x01184A74
+		// Token: 0x0603C48F RID: 246927 RVA: 0x0112FE34 File Offset: 0x0112E034
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -96,70 +96,85 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 				return false;
 			}
 			DurabilityComponent durabilityComponent = (DurabilityComponent)componentTemplate;
-			if (base.CanResetComponentProperty("CreatureDataComponent"))
+			if (durabilityComponent.CreatureDataComponent == null)
 			{
-				if (durabilityComponent.CreatureDataComponent == null)
-				{
-					this.CreatureDataComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComponent), "CreatureDataComponent"))
-				{
-					return false;
-				}
+				this.CreatureDataComponent = null;
 			}
-			if (base.CanResetComponentProperty("State"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComponent), "CreatureDataComponent"))
 			{
-				this.State = durabilityComponent.State;
+				return false;
 			}
-			if (base.CanResetComponentProperty("DelayTimerId"))
+			this.State = durabilityComponent.State;
+			if (durabilityComponent.DelayTimerId == null)
 			{
-				if (durabilityComponent.DelayTimerId == null)
-				{
-					this.DelayTimerId = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.DelayTimerId), "DelayTimerId"))
-				{
-					return false;
-				}
+				this.DelayTimerId = null;
 			}
-			if (base.CanResetComponentProperty("OnSceneItemDurabilityChange"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DelayTimerId), "DelayTimerId"))
 			{
-				if (durabilityComponent.OnSceneItemDurabilityChange == null)
-				{
-					this.OnSceneItemDurabilityChange = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Action<int>>(this.OnSceneItemDurabilityChange), "OnSceneItemDurabilityChange"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("DeadActions"))
+			if (durabilityComponent.OnSceneItemDurabilityChange == null)
 			{
-				if (durabilityComponent.DeadActions == null)
-				{
-					this.DeadActions = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<ActionInfo>>(this.DeadActions), "DeadActions"))
-				{
-					return false;
-				}
+				this.OnSceneItemDurabilityChange = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnSceneItemDurabilityChange), "OnSceneItemDurabilityChange"))
+			{
+				return false;
+			}
+			if (durabilityComponent.DeadActions == null)
+			{
+				this.DeadActions = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DeadActions), "DeadActions"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x04024BFD RID: 150525
+		// Token: 0x170071C4 RID: 29124
+		// (get) Token: 0x0603C490 RID: 246928 RVA: 0x0112FF0C File Offset: 0x0112E10C
+		public override bool NeedInitInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071C5 RID: 29125
+		// (get) Token: 0x0603C491 RID: 246929 RVA: 0x0112FF0F File Offset: 0x0112E10F
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170071C6 RID: 29126
+		// (get) Token: 0x0603C492 RID: 246930 RVA: 0x0112FF12 File Offset: 0x0112E112
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FEB8 RID: 130744
 		private CreatureDataComponent CreatureDataComponent;
 
-		// Token: 0x04024BFE RID: 150526
+		// Token: 0x0401FEB9 RID: 130745
 		private DurabilityComponent.ESceneItemDestroyState? State;
 
-		// Token: 0x04024BFF RID: 150527
+		// Token: 0x0401FEBA RID: 130746
 		private TimerHandle DelayTimerId;
 
-		// Token: 0x04024C00 RID: 150528
+		// Token: 0x0401FEBB RID: 130747
 		private Action<int> OnSceneItemDurabilityChange;
 
-		// Token: 0x04024C01 RID: 150529
+		// Token: 0x0401FEBC RID: 130748
 		[Nullable(new byte[]
 		{
 			2,
@@ -167,15 +182,15 @@ namespace CSharpScript.Game.NewWorld.Common.Component
 		})]
 		public List<ActionInfo> DeadActions;
 
-		// Token: 0x0200CE3E RID: 52798
+		// Token: 0x0200BA2F RID: 47663
 		[NullableContext(0)]
 		private enum ESceneItemDestroyState
 		{
-			// Token: 0x0403E1BF RID: 254399
+			// Token: 0x040395EA RID: 234986
 			Alive,
-			// Token: 0x0403E1C0 RID: 254400
+			// Token: 0x040395EB RID: 234987
 			Destroying,
-			// Token: 0x0403E1C1 RID: 254401
+			// Token: 0x040395EC RID: 234988
 			Destroyed
 		}
 	}

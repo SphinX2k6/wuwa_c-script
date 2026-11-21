@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046D5 RID: 18133
+	// Token: 0x02003605 RID: 13829
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UiMask
 	{
-		// Token: 0x0602EC88 RID: 191624 RVA: 0x00AD514F File Offset: 0x00AD334F
+		// Token: 0x060233C2 RID: 144322 RVA: 0x00A02BF3 File Offset: 0x00A00DF3
 		private void RemoveMaskTimer(MaskData maskData)
 		{
 			if (maskData.Timer != null)
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EC89 RID: 191625 RVA: 0x00AD5174 File Offset: 0x00AD3374
+		// Token: 0x060233C3 RID: 144323 RVA: 0x00A02C18 File Offset: 0x00A00E18
 		[return: Nullable(2)]
 		private TimerHandle CreateTimer(string maskTag, int count)
 		{
@@ -35,14 +35,14 @@ namespace CSharpScript.Game.Ui
 			}, 2000f, null, null, true, 1f);
 		}
 
-		// Token: 0x0602EC8A RID: 191626 RVA: 0x00AD51B8 File Offset: 0x00AD33B8
+		// Token: 0x060233C4 RID: 144324 RVA: 0x00A02C5C File Offset: 0x00A00E5C
 		private void AddMaskTimer(MaskData maskData)
 		{
 			maskData.Timer = this.CreateTimer(maskData.Tag, maskData.Count);
 			UiLayer.Instance.SetShowMaskLayer(maskData.Tag, true);
 		}
 
-		// Token: 0x0602EC8B RID: 191627 RVA: 0x00AD51E4 File Offset: 0x00AD33E4
+		// Token: 0x060233C5 RID: 144325 RVA: 0x00A02C88 File Offset: 0x00A00E88
 		private void AddMaskData(string maskTag)
 		{
 			MaskData maskData;
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Ui
 			this.AddMaskTimer(maskData);
 		}
 
-		// Token: 0x0602EC8C RID: 191628 RVA: 0x00AD5250 File Offset: 0x00AD3450
+		// Token: 0x060233C6 RID: 144326 RVA: 0x00A02CF4 File Offset: 0x00A00EF4
 		private void RemoveMaskData(string maskTag)
 		{
 			MaskData maskData;
@@ -79,14 +79,14 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EC8D RID: 191629 RVA: 0x00AD5293 File Offset: 0x00AD3493
+		// Token: 0x060233C7 RID: 144327 RVA: 0x00A02D37 File Offset: 0x00A00F37
 		private void ClearMaskData(string maskTag)
 		{
 			this.MaskDataMap.Remove(maskTag);
 			UiLayer.Instance.SetShowMaskLayer(maskTag, false);
 		}
 
-		// Token: 0x0602EC8E RID: 191630 RVA: 0x00AD52AE File Offset: 0x00AD34AE
+		// Token: 0x060233C8 RID: 144328 RVA: 0x00A02D52 File Offset: 0x00A00F52
 		public void SetMask(string maskTag, bool value)
 		{
 			if (value)
@@ -97,10 +97,10 @@ namespace CSharpScript.Game.Ui
 			this.RemoveMaskData(maskTag);
 		}
 
-		// Token: 0x04019744 RID: 104260
+		// Token: 0x04013DE2 RID: 81378
 		private const int MASK_DESTROY_TIME = 2000;
 
-		// Token: 0x04019745 RID: 104261
+		// Token: 0x04013DE3 RID: 81379
 		private readonly Dictionary<string, MaskData> MaskDataMap = new Dictionary<string, MaskData>();
 	}
 }

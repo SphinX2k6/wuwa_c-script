@@ -20,13 +20,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D7E RID: 23934
+	// Token: 0x02004D60 RID: 19808
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MissionViewItem : BattleChildView
 	{
-		// Token: 0x17008E51 RID: 36433
-		// (get) Token: 0x0603CBFB RID: 248827 RVA: 0x00E95798 File Offset: 0x00E93998
+		// Token: 0x17006223 RID: 25123
+		// (get) Token: 0x06031B57 RID: 203607 RVA: 0x00DE5FE0 File Offset: 0x00DE41E0
 		public long? ShowDataId
 		{
 			get
@@ -40,8 +40,8 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x17008E52 RID: 36434
-		// (get) Token: 0x0603CBFC RID: 248828 RVA: 0x00E957C3 File Offset: 0x00E939C3
+		// Token: 0x17006224 RID: 25124
+		// (get) Token: 0x06031B58 RID: 203608 RVA: 0x00DE600B File Offset: 0x00DE420B
 		public IMissionItemViewShowData ShowData
 		{
 			get
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CBFD RID: 248829 RVA: 0x00E957D8 File Offset: 0x00E939D8
+		// Token: 0x06031B59 RID: 203609 RVA: 0x00DE6020 File Offset: 0x00DE4220
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 12;
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603CBFE RID: 248830 RVA: 0x00E959CC File Offset: 0x00E93BCC
+		// Token: 0x06031B5A RID: 203610 RVA: 0x00DE6214 File Offset: 0x00DE4414
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MissionViewItem.<OnBeforeStartAsync>d__25 <OnBeforeStartAsync>d__;
@@ -102,13 +102,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CBFF RID: 248831 RVA: 0x00E95A0F File Offset: 0x00E93C0F
+		// Token: 0x06031B5B RID: 203611 RVA: 0x00DE6257 File Offset: 0x00DE4457
 		private void InitController()
 		{
 			this.ShortcutKeyController.Init(this, this.ViewType, base.GetItem(11), base.GetSprite(10), base.GetText(2));
 		}
 
-		// Token: 0x0603CC00 RID: 248832 RVA: 0x00E95A3C File Offset: 0x00E93C3C
+		// Token: 0x06031B5C RID: 203612 RVA: 0x00DE6284 File Offset: 0x00DE4484
 		private void InitRegistryComponentsState()
 		{
 			base.GetText(2).SetAlpha(1f);
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetUiNiagara(7).SetNiagaraUIActive(true, false);
 		}
 
-		// Token: 0x0603CC01 RID: 248833 RVA: 0x00E95AA8 File Offset: 0x00E93CA8
+		// Token: 0x06031B5D RID: 203613 RVA: 0x00DE62F0 File Offset: 0x00DE44F0
 		private UniTask InitMissionPanelStep()
 		{
 			MissionViewItem.<InitMissionPanelStep>d__28 <InitMissionPanelStep>d__;
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitMissionPanelStep>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CC02 RID: 248834 RVA: 0x00E95AEC File Offset: 0x00E93CEC
+		// Token: 0x06031B5E RID: 203614 RVA: 0x00DE6334 File Offset: 0x00DE4534
 		private UniTask InitFishingEntrustNavigation()
 		{
 			MissionViewItem.<InitFishingEntrustNavigation>d__29 <InitFishingEntrustNavigation>d__;
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitFishingEntrustNavigation>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CC03 RID: 248835 RVA: 0x00E95B30 File Offset: 0x00E93D30
+		// Token: 0x06031B5F RID: 203615 RVA: 0x00DE6378 File Offset: 0x00DE4578
 		protected override void OnStart()
 		{
 			base.GetText(6).OnSelfLanguageChange.Bind(new Action(this.SetCompleteQuestName));
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.QuestFinishSequencePlayer.BindSequenceCloseEvent(new TSequenceEndEvent(this.OnFinishSequenceClose), false);
 		}
 
-		// Token: 0x0603CC04 RID: 248836 RVA: 0x00E95BCC File Offset: 0x00E93DCC
+		// Token: 0x06031B60 RID: 203616 RVA: 0x00DE6414 File Offset: 0x00DE4614
 		protected override void OnBeforeDestroy()
 		{
 			this.ShortcutKeyController.Dispose();
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TotalTitleSequencePlayer = null;
 		}
 
-		// Token: 0x0603CC05 RID: 248837 RVA: 0x00E95C30 File Offset: 0x00E93E30
+		// Token: 0x06031B61 RID: 203617 RVA: 0x00DE6478 File Offset: 0x00DE4678
 		public void OnPanelShow()
 		{
 			this.IsPanelShow = true;
@@ -188,7 +188,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.UpdateTotalTitleText();
 		}
 
-		// Token: 0x0603CC06 RID: 248838 RVA: 0x00E95C7E File Offset: 0x00E93E7E
+		// Token: 0x06031B62 RID: 203618 RVA: 0x00DE64C6 File Offset: 0x00DE46C6
 		public void OnPanelHide()
 		{
 			this.IsPanelShow = false;
@@ -199,7 +199,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ShortcutKeyController.OnPanelHide();
 		}
 
-		// Token: 0x0603CC07 RID: 248839 RVA: 0x00E95CBC File Offset: 0x00E93EBC
+		// Token: 0x06031B63 RID: 203619 RVA: 0x00DE6504 File Offset: 0x00DE4704
 		private void ProcessMissionPanelStepVisibleProcess()
 		{
 			if (this.MissionPanelStepVisibleProcessQueue.Empty)
@@ -228,7 +228,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CC08 RID: 248840 RVA: 0x00E95D24 File Offset: 0x00E93F24
+		// Token: 0x06031B64 RID: 203620 RVA: 0x00DE656C File Offset: 0x00DE476C
 		private void AddEvents()
 		{
 			EventSystem.Instance.Add<GeneralContext, ChildQuestNodeStatus, ChildQuestNodeStatus, ENodeStatusUpdateReason>(EEventName.OnLogicTreeChildQuestNodeStatusChange, new Action<GeneralContext, ChildQuestNodeStatus, ChildQuestNodeStatus, ENodeStatusUpdateReason>(this.OnLogicTreeChildQuestNodeStatusChange));
@@ -246,7 +246,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CC09 RID: 248841 RVA: 0x00E95E5C File Offset: 0x00E9405C
+		// Token: 0x06031B65 RID: 203621 RVA: 0x00DE66A4 File Offset: 0x00DE48A4
 		private void RemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.OnLogicTreeChildQuestNodeStatusChange, new Action<GeneralContext, ChildQuestNodeStatus, ChildQuestNodeStatus, ENodeStatusUpdateReason>(this.OnLogicTreeChildQuestNodeStatusChange));
@@ -261,27 +261,27 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Remove<EInputControllerType, EInputControllerType>(EEventName.InputControllerChange, new Action<EInputControllerType, EInputControllerType>(this.ShortcutKeyController.UpdateShortcutButton));
 		}
 
-		// Token: 0x0603CC0A RID: 248842 RVA: 0x00E95F86 File Offset: 0x00E94186
+		// Token: 0x06031B66 RID: 203622 RVA: 0x00DE67CE File Offset: 0x00DE49CE
 		private void OnShortcutKeyClick()
 		{
 			this.ShortcutKeyController.OnShortcutKeyClick();
 		}
 
-		// Token: 0x0603CC0B RID: 248843 RVA: 0x00E95F93 File Offset: 0x00E94193
+		// Token: 0x06031B67 RID: 203623 RVA: 0x00DE67DB File Offset: 0x00DE49DB
 		[NullableContext(1)]
 		private void OnLogicTreeChildQuestNodeStatusChange(GeneralContext context, ChildQuestNodeStatus _2, ChildQuestNodeStatus _3, ENodeStatusUpdateReason _4)
 		{
 			this.OnChildQuestNodeStatusChanged(context);
 		}
 
-		// Token: 0x0603CC0C RID: 248844 RVA: 0x00E95F9C File Offset: 0x00E9419C
+		// Token: 0x06031B68 RID: 203624 RVA: 0x00DE67E4 File Offset: 0x00DE49E4
 		[NullableContext(1)]
 		private void OnLogicTreeNodeStatusChange(GeneralContext context, NodeStatus _2, NodeStatus _3, ENodeStatusUpdateReason _4)
 		{
 			this.OnChildQuestNodeStatusChanged(context);
 		}
 
-		// Token: 0x0603CC0D RID: 248845 RVA: 0x00E95FA8 File Offset: 0x00E941A8
+		// Token: 0x06031B69 RID: 203625 RVA: 0x00DE67F0 File Offset: 0x00DE49F0
 		[NullableContext(1)]
 		private void OnChildQuestNodeStatusChanged(GeneralContext context)
 		{
@@ -298,7 +298,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CC0E RID: 248846 RVA: 0x00E95FF0 File Offset: 0x00E941F0
+		// Token: 0x06031B6A RID: 203626 RVA: 0x00DE6838 File Offset: 0x00DE4A38
 		[NullableContext(1)]
 		private void OnNodeProgressChanged(GeneralContext context, ChildQuestNodeProgress progress)
 		{
@@ -319,7 +319,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CC0F RID: 248847 RVA: 0x00E96038 File Offset: 0x00E94238
+		// Token: 0x06031B6B RID: 203627 RVA: 0x00DE6880 File Offset: 0x00DE4A80
 		private void OnGeneralLogicTreeCommunicateTagChange(EBehaviorTreeTag tag)
 		{
 			if (tag != EBehaviorTreeTag.CanCommunicateAgain)
@@ -329,7 +329,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ShortcutKeyController.UpdateShortcutButton(EInputControllerType.None, EInputControllerType.None);
 		}
 
-		// Token: 0x0603CC10 RID: 248848 RVA: 0x00E9604C File Offset: 0x00E9424C
+		// Token: 0x06031B6C RID: 203628 RVA: 0x00DE6894 File Offset: 0x00DE4A94
 		private void OnMissionPanelStepTitleAnimStart(long id)
 		{
 			long? showDataId = this.ShowDataId;
@@ -349,7 +349,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			sprite.SetUIActive(false);
 		}
 
-		// Token: 0x0603CC11 RID: 248849 RVA: 0x00E96098 File Offset: 0x00E94298
+		// Token: 0x06031B6D RID: 203629 RVA: 0x00DE68E0 File Offset: 0x00DE4AE0
 		private void OnMissionPanelStepTitleAnimEnd(long id)
 		{
 			long? showDataId = this.ShowDataId;
@@ -364,7 +364,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetIcon();
 		}
 
-		// Token: 0x0603CC12 RID: 248850 RVA: 0x00E960D8 File Offset: 0x00E942D8
+		// Token: 0x06031B6E RID: 203630 RVA: 0x00DE6920 File Offset: 0x00DE4B20
 		[NullableContext(1)]
 		private void OnTotalTitleSequenceClose(string sequenceName)
 		{
@@ -387,7 +387,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CC13 RID: 248851 RVA: 0x00E96140 File Offset: 0x00E94340
+		// Token: 0x06031B6F RID: 203631 RVA: 0x00DE6988 File Offset: 0x00DE4B88
 		[NullableContext(1)]
 		private void OnFinishSequenceClose(string sequenceName)
 		{
@@ -410,7 +410,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CC14 RID: 248852 RVA: 0x00E961A8 File Offset: 0x00E943A8
+		// Token: 0x06031B70 RID: 203632 RVA: 0x00DE69F0 File Offset: 0x00DE4BF0
 		[NullableContext(1)]
 		private void UpdateSelfData(IMissionItemViewShowData showData)
 		{
@@ -419,13 +419,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ShortcutKeyController.UpdateShortcutButton(EInputControllerType.None, EInputControllerType.None);
 		}
 
-		// Token: 0x0603CC15 RID: 248853 RVA: 0x00E961C4 File Offset: 0x00E943C4
+		// Token: 0x06031B71 RID: 203633 RVA: 0x00DE6A0C File Offset: 0x00DE4C0C
 		private void SetShowData(IMissionItemViewShowData showData = null)
 		{
 			BattleUiModel.Instance.SetMissionViewData(this.ViewType, showData);
 		}
 
-		// Token: 0x0603CC16 RID: 248854 RVA: 0x00E961D8 File Offset: 0x00E943D8
+		// Token: 0x06031B72 RID: 203634 RVA: 0x00DE6A20 File Offset: 0x00DE4C20
 		private void SetIcon()
 		{
 			if (this.ShowData == null)
@@ -447,7 +447,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetSpriteByPath(QuestNewConfig.Instance.GetQuestTypeMark(trackIconConfigId), sprite, false, null, null);
 		}
 
-		// Token: 0x0603CC17 RID: 248855 RVA: 0x00E96240 File Offset: 0x00E94440
+		// Token: 0x06031B73 RID: 203635 RVA: 0x00DE6A88 File Offset: 0x00DE4C88
 		[NullableContext(0)]
 		public UniTask<bool> StartShow(int processId, [Nullable(1)] IMissionItemViewShowData showData, bool bSkipAnim)
 		{
@@ -462,7 +462,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <StartShow>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CC18 RID: 248856 RVA: 0x00E9629C File Offset: 0x00E9449C
+		// Token: 0x06031B74 RID: 203636 RVA: 0x00DE6AE4 File Offset: 0x00DE4CE4
 		[NullableContext(0)]
 		public UniTask<bool> OnLogicTreeUpdateShow(int processId, [Nullable(1)] IMissionItemViewShowData showData, bool bSkipAnim)
 		{
@@ -477,7 +477,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnLogicTreeUpdateShow>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CC19 RID: 248857 RVA: 0x00E962F8 File Offset: 0x00E944F8
+		// Token: 0x06031B75 RID: 203637 RVA: 0x00DE6B40 File Offset: 0x00DE4D40
 		[NullableContext(0)]
 		public UniTask<bool> EndShow(int processId, bool bSkipAnim, ETreeTextExpressReason? reason = null)
 		{
@@ -492,7 +492,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <EndShow>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CC1A RID: 248858 RVA: 0x00E96354 File Offset: 0x00E94554
+		// Token: 0x06031B76 RID: 203638 RVA: 0x00DE6B9C File Offset: 0x00DE4D9C
 		public UniTask ChildStepConditionIndexChange(int stepId, int? curConditionTextIndex)
 		{
 			MissionViewItem.<ChildStepConditionIndexChange>d__53 <ChildStepConditionIndexChange>d__;
@@ -505,19 +505,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <ChildStepConditionIndexChange>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CC1B RID: 248859 RVA: 0x00E963A7 File Offset: 0x00E945A7
+		// Token: 0x06031B77 RID: 203639 RVA: 0x00DE6BEF File Offset: 0x00DE4DEF
 		private void OnQuestStageNameChange(int questId)
 		{
 			this.UpdateTotalTitleText();
 		}
 
-		// Token: 0x0603CC1C RID: 248860 RVA: 0x00E963B0 File Offset: 0x00E945B0
+		// Token: 0x06031B78 RID: 203640 RVA: 0x00DE6BF8 File Offset: 0x00DE4DF8
 		private void UpdateTotalTitleText_ForBind()
 		{
 			this.UpdateTotalTitleText();
 		}
 
-		// Token: 0x0603CC1D RID: 248861 RVA: 0x00E963BC File Offset: 0x00E945BC
+		// Token: 0x06031B79 RID: 203641 RVA: 0x00DE6C04 File Offset: 0x00DE4E04
 		private bool UpdateTotalTitleText()
 		{
 			UUIText text = base.GetText(8);
@@ -541,7 +541,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return true;
 		}
 
-		// Token: 0x0603CC1E RID: 248862 RVA: 0x00E96416 File Offset: 0x00E94616
+		// Token: 0x06031B7A RID: 203642 RVA: 0x00DE6C5E File Offset: 0x00DE4E5E
 		[NullableContext(1)]
 		private string GetTotalTitleText()
 		{
@@ -552,7 +552,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return PublicUtil.Instance.GetConfigTextByKey(this.ShowData.TitleTextKey);
 		}
 
-		// Token: 0x0603CC1F RID: 248863 RVA: 0x00E96450 File Offset: 0x00E94650
+		// Token: 0x06031B7B RID: 203643 RVA: 0x00DE6C98 File Offset: 0x00DE4E98
 		public void OnRefresh(float delta, int curProcessId)
 		{
 			this.ProcessMissionPanelStepVisibleProcess();
@@ -569,7 +569,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.CurTickTime += delta;
 		}
 
-		// Token: 0x0603CC20 RID: 248864 RVA: 0x00E964AC File Offset: 0x00E946AC
+		// Token: 0x06031B7C RID: 203644 RVA: 0x00DE6CF4 File Offset: 0x00DE4EF4
 		private void OnTickImp(int curProcessId)
 		{
 			if (curProcessId != 0 && curProcessId == this.CurProcessId)
@@ -601,7 +601,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CC21 RID: 248865 RVA: 0x00E96514 File Offset: 0x00E94714
+		// Token: 0x06031B7D RID: 203645 RVA: 0x00DE6D5C File Offset: 0x00DE4F5C
 		private void SetCompleteQuestName()
 		{
 			BehaviorTreeViewShowData behaviorTreeViewShowData = this.ShowData as BehaviorTreeViewShowData;
@@ -613,7 +613,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetText(6).SetText(((quest != null) ? quest.Name : null) ?? string.Empty, true);
 		}
 
-		// Token: 0x0603CC22 RID: 248866 RVA: 0x00E96570 File Offset: 0x00E94770
+		// Token: 0x06031B7E RID: 203646 RVA: 0x00DE6DB8 File Offset: 0x00DE4FB8
 		private void SetNiagaraColor(float _)
 		{
 			if (this.ShowData == null)
@@ -634,7 +634,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			uiNiagara.ActivateSystem(true);
 		}
 
-		// Token: 0x0603CC23 RID: 248867 RVA: 0x00E965D4 File Offset: 0x00E947D4
+		// Token: 0x06031B7F RID: 203647 RVA: 0x00DE6E1C File Offset: 0x00DE501C
 		private void OnForceRefresh(long treeIncId)
 		{
 			IMissionItemViewShowData showData = this.ShowData;
@@ -650,7 +650,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.OnTickImp(0);
 		}
 
-		// Token: 0x0603CC24 RID: 248868 RVA: 0x00E96628 File Offset: 0x00E94828
+		// Token: 0x06031B80 RID: 203648 RVA: 0x00DE6E70 File Offset: 0x00DE5070
 		public bool CheckVisible()
 		{
 			if (!BattleUiModel.Instance.IsMissionPanelVisible)
@@ -681,106 +681,106 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return false;
 		}
 
-		// Token: 0x0401FA5B RID: 129627
+		// Token: 0x0401A513 RID: 107795
 		[Nullable(1)]
 		private readonly MissionViewItem.ShortcutKeyControllerImpl ShortcutKeyController = new MissionViewItem.ShortcutKeyControllerImpl();
 
-		// Token: 0x0401FA5C RID: 129628
+		// Token: 0x0401A514 RID: 107796
 		private UUIItem ProcessItem;
 
-		// Token: 0x0401FA5D RID: 129629
+		// Token: 0x0401A515 RID: 107797
 		private UUIItem CompleteItem;
 
-		// Token: 0x0401FA5E RID: 129630
+		// Token: 0x0401A516 RID: 107798
 		protected LevelSequencePlayer TotalTitleSequencePlayer;
 
-		// Token: 0x0401FA5F RID: 129631
+		// Token: 0x0401A517 RID: 107799
 		protected LevelSequencePlayer QuestFinishSequencePlayer;
 
-		// Token: 0x0401FA60 RID: 129632
+		// Token: 0x0401A518 RID: 107800
 		private MissionPanelStep MissionPanelStep;
 
-		// Token: 0x0401FA61 RID: 129633
+		// Token: 0x0401A519 RID: 107801
 		[Nullable(1)]
 		private readonly FishingEntrustNavigationItem FishingEntrustNavigationItem = new FishingEntrustNavigationItem();
 
-		// Token: 0x0401FA62 RID: 129634
+		// Token: 0x0401A51A RID: 107802
 		private int CurProcessId;
 
-		// Token: 0x0401FA63 RID: 129635
+		// Token: 0x0401A51B RID: 107803
 		private float CurTickTime;
 
-		// Token: 0x0401FA64 RID: 129636
+		// Token: 0x0401A51C RID: 107804
 		public EMissionItemView ViewType;
 
-		// Token: 0x0401FA65 RID: 129637
+		// Token: 0x0401A51D RID: 107805
 		private bool IsPanelShow;
 
-		// Token: 0x0401FA66 RID: 129638
+		// Token: 0x0401A51E RID: 107806
 		private bool LastStepShowState;
 
-		// Token: 0x0401FA67 RID: 129639
+		// Token: 0x0401A51F RID: 107807
 		private CustomPromise<bool> TotalSequenceStartPromise;
 
-		// Token: 0x0401FA68 RID: 129640
+		// Token: 0x0401A520 RID: 107808
 		private CustomPromise<bool> TotalSequenceClosePromise;
 
-		// Token: 0x0401FA69 RID: 129641
+		// Token: 0x0401A521 RID: 107809
 		private CustomPromise<bool> QuestFinishStartPromise;
 
-		// Token: 0x0401FA6A RID: 129642
+		// Token: 0x0401A522 RID: 107810
 		private CustomPromise<bool> QuestFinishClosePromise;
 
-		// Token: 0x0401FA6B RID: 129643
+		// Token: 0x0401A523 RID: 107811
 		[Nullable(1)]
 		private readonly Queue<MissionViewItem.EProcessType> MissionPanelStepVisibleProcessQueue = new Queue<MissionViewItem.EProcessType>(4);
 
-		// Token: 0x0200C031 RID: 49201
+		// Token: 0x0200AA37 RID: 43575
 		[NullableContext(0)]
 		private enum EChildComponentType
 		{
-			// Token: 0x04039FEE RID: 237550
+			// Token: 0x040349B1 RID: 215473
 			Icon,
-			// Token: 0x04039FEF RID: 237551
+			// Token: 0x040349B2 RID: 215474
 			ParentStep,
-			// Token: 0x04039FF0 RID: 237552
+			// Token: 0x040349B3 RID: 215475
 			ShortcutKeyText,
-			// Token: 0x04039FF1 RID: 237553
+			// Token: 0x040349B4 RID: 215476
 			ShortcutKeyButton,
-			// Token: 0x04039FF2 RID: 237554
+			// Token: 0x040349B5 RID: 215477
 			CompleteItem,
-			// Token: 0x04039FF3 RID: 237555
+			// Token: 0x040349B6 RID: 215478
 			ProcessItem,
-			// Token: 0x04039FF4 RID: 237556
+			// Token: 0x040349B7 RID: 215479
 			CompleteQuestName,
-			// Token: 0x04039FF5 RID: 237557
+			// Token: 0x040349B8 RID: 215480
 			StartNiagara,
-			// Token: 0x04039FF6 RID: 237558
+			// Token: 0x040349B9 RID: 215481
 			TotalTitleText,
-			// Token: 0x04039FF7 RID: 237559
+			// Token: 0x040349BA RID: 215482
 			TotalTitleTextNode,
-			// Token: 0x04039FF8 RID: 237560
+			// Token: 0x040349BB RID: 215483
 			ShortcutKeyMobileSprite,
-			// Token: 0x04039FF9 RID: 237561
+			// Token: 0x040349BC RID: 215484
 			ShortcutKeyRoot
 		}
 
-		// Token: 0x0200C032 RID: 49202
+		// Token: 0x0200AA38 RID: 43576
 		[NullableContext(0)]
 		private enum EProcessType
 		{
-			// Token: 0x04039FFB RID: 237563
+			// Token: 0x040349BE RID: 215486
 			Show,
-			// Token: 0x04039FFC RID: 237564
+			// Token: 0x040349BF RID: 215487
 			Hide
 		}
 
-		// Token: 0x0200C033 RID: 49203
+		// Token: 0x0200AA39 RID: 43577
 		[Nullable(0)]
 		private class ShortcutKeyControllerImpl
 		{
-			// Token: 0x1700A267 RID: 41575
-			// (get) Token: 0x060502CD RID: 328397 RVA: 0x0158522A File Offset: 0x0158342A
+			// Token: 0x17007A04 RID: 31236
+			// (get) Token: 0x06046810 RID: 288784 RVA: 0x0153E5AA File Offset: 0x0153C7AA
 			public IMissionItemViewShowData ShowData
 			{
 				get
@@ -789,7 +789,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 				}
 			}
 
-			// Token: 0x060502CE RID: 328398 RVA: 0x0158523C File Offset: 0x0158343C
+			// Token: 0x06046811 RID: 288785 RVA: 0x0153E5BC File Offset: 0x0153C7BC
 			[NullableContext(1)]
 			public void Init(MissionViewItem owner, EMissionItemView viewType, UUIItem shortcutKeyRoot, UUISprite shortcutKeySprite, UUIText shortcutTextComp)
 			{
@@ -800,38 +800,38 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 				this.ShortcutTextComp = shortcutTextComp;
 			}
 
-			// Token: 0x060502CF RID: 328399 RVA: 0x01585263 File Offset: 0x01583463
+			// Token: 0x06046812 RID: 288786 RVA: 0x0153E5E3 File Offset: 0x0153C7E3
 			public void OnPanelShow()
 			{
 				this.UpdateShortcutButton(EInputControllerType.None, EInputControllerType.None);
 			}
 
-			// Token: 0x060502D0 RID: 328400 RVA: 0x0158526D File Offset: 0x0158346D
+			// Token: 0x06046813 RID: 288787 RVA: 0x0153E5ED File Offset: 0x0153C7ED
 			public void OnPanelHide()
 			{
 				this.SetUpShortcutKeyByType(EActiveNodeShortcutShow.None);
 			}
 
-			// Token: 0x060502D1 RID: 328401 RVA: 0x01585276 File Offset: 0x01583476
+			// Token: 0x06046814 RID: 288788 RVA: 0x0153E5F6 File Offset: 0x0153C7F6
 			public void OnProcessStart()
 			{
 				this.SetUpShortcutKeyByType(EActiveNodeShortcutShow.None);
 			}
 
-			// Token: 0x060502D2 RID: 328402 RVA: 0x0158527F File Offset: 0x0158347F
+			// Token: 0x06046815 RID: 288789 RVA: 0x0153E5FF File Offset: 0x0153C7FF
 			public void OnProcessEnd()
 			{
 				this.UpdateShortcutButton(EInputControllerType.None, EInputControllerType.None);
 			}
 
-			// Token: 0x060502D3 RID: 328403 RVA: 0x01585289 File Offset: 0x01583489
+			// Token: 0x06046816 RID: 288790 RVA: 0x0153E609 File Offset: 0x0153C809
 			public void Dispose()
 			{
 				InputDistributeController.Instance.UnBindAction("玩法放弃", new TInputHandle<InputDistributeDefine.EActionType>(this.OnInputAction));
 				InputDistributeController.Instance.UnBindAction("任务追踪", new TInputHandle<InputDistributeDefine.EActionType>(this.OnInputAction));
 			}
 
-			// Token: 0x060502D4 RID: 328404 RVA: 0x015852C1 File Offset: 0x015834C1
+			// Token: 0x06046817 RID: 288791 RVA: 0x0153E641 File Offset: 0x0153C841
 			[NullableContext(1)]
 			private void OnInputAction(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 			{
@@ -842,14 +842,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 				this.OnShortcutKeyClick();
 			}
 
-			// Token: 0x060502D5 RID: 328405 RVA: 0x015852CE File Offset: 0x015834CE
+			// Token: 0x06046818 RID: 288792 RVA: 0x0153E64E File Offset: 0x0153C84E
 			public void UpdateShortcutButton(EInputControllerType last = EInputControllerType.None, EInputControllerType now = EInputControllerType.None)
 			{
 				this.UpdateCurShortcutType();
 				this.SetUpShortcutKeyByType(this.CurShortcutType);
 			}
 
-			// Token: 0x060502D6 RID: 328406 RVA: 0x015852E4 File Offset: 0x015834E4
+			// Token: 0x06046819 RID: 288793 RVA: 0x0153E664 File Offset: 0x0153C864
 			private void UpdateCurShortcutType()
 			{
 				this.CurShortcutType = EActiveNodeShortcutShow.None;
@@ -864,7 +864,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 				}
 			}
 
-			// Token: 0x060502D7 RID: 328407 RVA: 0x0158533C File Offset: 0x0158353C
+			// Token: 0x0604681A RID: 288794 RVA: 0x0153E6BC File Offset: 0x0153C8BC
 			private void SetUpShortcutKeyByType(EActiveNodeShortcutShow type)
 			{
 				BaseBehaviorTree baseBehaviorTree = null;
@@ -1360,13 +1360,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 				}
 			}
 
-			// Token: 0x060502D8 RID: 328408 RVA: 0x01586354 File Offset: 0x01584554
+			// Token: 0x0604681B RID: 288795 RVA: 0x0153F6D4 File Offset: 0x0153D8D4
 			public void UpdateTrackTargetShortcutKey()
 			{
 				this.RefreshTrackTarget();
 			}
 
-			// Token: 0x060502D9 RID: 328409 RVA: 0x01586360 File Offset: 0x01584560
+			// Token: 0x0604681C RID: 288796 RVA: 0x0153F6E0 File Offset: 0x0153D8E0
 			public void RefreshFastReturnShortcutKey()
 			{
 				if (this.ShowData == null || this.ShowData.DataSource != EMissionItemViewDataSource.BehaviorTree)
@@ -1387,7 +1387,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 				this.UpdateShortcutButton(EInputControllerType.None, EInputControllerType.None);
 			}
 
-			// Token: 0x060502DA RID: 328410 RVA: 0x015863C4 File Offset: 0x015845C4
+			// Token: 0x0604681D RID: 288797 RVA: 0x0153F744 File Offset: 0x0153D944
 			private bool RefreshTrackTarget()
 			{
 				if (this.CurShortcutType != EActiveNodeShortcutShow.TrackTarget)
@@ -1463,7 +1463,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 				return true;
 			}
 
-			// Token: 0x060502DB RID: 328411 RVA: 0x015865F0 File Offset: 0x015847F0
+			// Token: 0x0604681E RID: 288798 RVA: 0x0153F970 File Offset: 0x0153DB70
 			[NullableContext(1)]
 			[return: Nullable(2)]
 			private string GetGamepadShortcutString(string actionName, string sourceString)
@@ -1509,7 +1509,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 				return defaultInterpolatedStringHandler.ToStringAndClear();
 			}
 
-			// Token: 0x060502DC RID: 328412 RVA: 0x015866F4 File Offset: 0x015848F4
+			// Token: 0x0604681F RID: 288799 RVA: 0x0153FA74 File Offset: 0x0153DC74
 			public void OnShortcutKeyClick()
 			{
 				if (this.Owner == null || !this.Owner.CheckVisible())
@@ -1542,11 +1542,15 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 							EventSystem.Instance.EmitWithTarget(tree.GetBlackBoard(), EEventName.GeneralLogicTreeRollbackWaitingUpdate);
 						}
 					});
+					confirmBoxDataNew.FunctionMap[0] = delegate()
+					{
+						this.IsRequesting = false;
+					};
 					confirmBoxDataNew.FunctionMap[1] = delegate()
 					{
 						this.IsRequesting = false;
 					};
-					Action<bool> <>9__3;
+					Action<bool> <>9__4;
 					confirmBoxDataNew.FunctionMap[2] = delegate()
 					{
 						if (this.ShowData == null || tree.ContainTag(EBehaviorTreeTag.RollbackWaiting))
@@ -1557,9 +1561,9 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 						GeneralLogicTreeController instance = GeneralLogicTreeController.Instance;
 						long id = this.ShowData.Id;
 						Action<bool> callback;
-						if ((callback = <>9__3) == null)
+						if ((callback = <>9__4) == null)
 						{
-							callback = (<>9__3 = delegate(bool _)
+							callback = (<>9__4 = delegate(bool _)
 							{
 								this.IsRequesting = false;
 							});
@@ -1678,28 +1682,28 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 				}
 			}
 
-			// Token: 0x04039FFD RID: 237565
+			// Token: 0x040349C0 RID: 215488
 			private MissionViewItem Owner;
 
-			// Token: 0x04039FFE RID: 237566
+			// Token: 0x040349C1 RID: 215489
 			private EMissionItemView ViewType;
 
-			// Token: 0x04039FFF RID: 237567
+			// Token: 0x040349C2 RID: 215490
 			public UUIItem ShortcutKeyRoot;
 
-			// Token: 0x0403A000 RID: 237568
+			// Token: 0x040349C3 RID: 215491
 			public UUISprite ShortcutKeySprite;
 
-			// Token: 0x0403A001 RID: 237569
+			// Token: 0x040349C4 RID: 215492
 			public UUIText ShortcutTextComp;
 
-			// Token: 0x0403A002 RID: 237570
+			// Token: 0x040349C5 RID: 215493
 			private EActiveNodeShortcutShow CurShortcutType;
 
-			// Token: 0x0403A003 RID: 237571
+			// Token: 0x040349C6 RID: 215494
 			private QueryNearestTeleporterResult QueryResult;
 
-			// Token: 0x0403A004 RID: 237572
+			// Token: 0x040349C7 RID: 215495
 			private bool IsRequesting;
 		}
 	}

@@ -2,34 +2,34 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005D06 RID: 23814
+	// Token: 0x0200633A RID: 25402
 	public enum EPresetEaseType : byte
 	{
-		// Token: 0x0400F67C RID: 63100
+		// Token: 0x040103CB RID: 66507
 		Linear,
-		// Token: 0x0400F67D RID: 63101
+		// Token: 0x040103CC RID: 66508
 		EaseIn,
-		// Token: 0x0400F67E RID: 63102
+		// Token: 0x040103CD RID: 66509
 		EaseOut,
-		// Token: 0x0400F67F RID: 63103
+		// Token: 0x040103CE RID: 66510
 		EaseInOut,
-		// Token: 0x0400F680 RID: 63104
+		// Token: 0x040103CF RID: 66511
 		SinIn,
-		// Token: 0x0400F681 RID: 63105
+		// Token: 0x040103D0 RID: 66512
 		SinOut,
-		// Token: 0x0400F682 RID: 63106
+		// Token: 0x040103D1 RID: 66513
 		SinInOut,
-		// Token: 0x0400F683 RID: 63107
+		// Token: 0x040103D2 RID: 66514
 		ExpoIn,
-		// Token: 0x0400F684 RID: 63108
+		// Token: 0x040103D3 RID: 66515
 		ExpoOut,
-		// Token: 0x0400F685 RID: 63109
+		// Token: 0x040103D4 RID: 66516
 		ExpoInOut,
-		// Token: 0x0400F686 RID: 63110
+		// Token: 0x040103D5 RID: 66517
 		CircularIn,
-		// Token: 0x0400F687 RID: 63111
+		// Token: 0x040103D6 RID: 66518
 		CircularOut,
-		// Token: 0x0400F688 RID: 63112
+		// Token: 0x040103D7 RID: 66519
 		CircularInOut
 	}
 }

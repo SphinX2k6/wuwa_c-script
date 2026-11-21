@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000068 RID: 104
+	// Token: 0x0200004D RID: 77
 	[Nullable(new byte[]
 	{
 		0,

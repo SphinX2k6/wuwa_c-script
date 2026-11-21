@@ -5,12 +5,12 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.QuickHack
 {
-	// Token: 0x02004F63 RID: 20323
+	// Token: 0x02003F2C RID: 16172
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class QuickHackSkillConditionHelper
 	{
-		// Token: 0x0603411A RID: 213274 RVA: 0x00C3646C File Offset: 0x00C3466C
+		// Token: 0x06028F88 RID: 167816 RVA: 0x00B7FC0C File Offset: 0x00B7DE0C
 		public QuickHackSkillConditionResult CheckConditions(IEnumerable<QuickHackConditionInfo> conditionTypes, QuickHackSkillInstance skill, EQuickHackTargetType? hackType, [Nullable(new byte[]
 		{
 			2,
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			return new QuickHackSkillConditionResult(true, null);
 		}
 
-		// Token: 0x0603411B RID: 213275 RVA: 0x00C364FC File Offset: 0x00C346FC
+		// Token: 0x06028F89 RID: 167817 RVA: 0x00B7FC9C File Offset: 0x00B7DE9C
 		public void RegisterConditionsListener(IEnumerable<EQuickHackSkillCondition> conditionTypes, GenericEventHandler onReceiveEvent)
 		{
 			foreach (EQuickHackSkillCondition key in conditionTypes)
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x0603411C RID: 213276 RVA: 0x00C365A4 File Offset: 0x00C347A4
+		// Token: 0x06028F8A RID: 167818 RVA: 0x00B7FD44 File Offset: 0x00B7DF44
 		public void UnRegisterConditionsListener(IEnumerable<EQuickHackSkillCondition> conditionTypes, GenericEventHandler onReceiveEvent)
 		{
 			foreach (EQuickHackSkillCondition key in conditionTypes)
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x0603411D RID: 213277 RVA: 0x00C3664C File Offset: 0x00C3484C
+		// Token: 0x06028F8B RID: 167819 RVA: 0x00B7FDEC File Offset: 0x00B7DFEC
 		[NullableContext(2)]
 		public List<EQuickHackSkillCondition> GetTargetExtraConditions(EQuickHackTargetType type)
 		{
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			return result;
 		}
 
-		// Token: 0x0401BA9C RID: 113308
+		// Token: 0x04016471 RID: 91249
 		private readonly Dictionary<EQuickHackSkillCondition, IQuickHackSkillCondition> ConditionMap = new Dictionary<EQuickHackSkillCondition, IQuickHackSkillCondition>
 		{
 			{
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		};
 
-		// Token: 0x0401BA9D RID: 113309
+		// Token: 0x04016472 RID: 91250
 		private readonly Dictionary<EQuickHackSkillCondition, List<EEventName>> ConditionEventMap = new Dictionary<EQuickHackSkillCondition, List<EEventName>>
 		{
 			{
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		};
 
-		// Token: 0x0401BA9E RID: 113310
+		// Token: 0x04016473 RID: 91251
 		private readonly Dictionary<EQuickHackTargetType, List<EQuickHackSkillCondition>> TargetExtraConditionsMap = new Dictionary<EQuickHackTargetType, List<EQuickHackSkillCondition>>
 		{
 			{

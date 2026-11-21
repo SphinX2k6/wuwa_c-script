@@ -9,16 +9,16 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002737 RID: 10039
+// Token: 0x02001C22 RID: 7202
 public class RacingBetsRankView : UiTickViewBase
 {
-	// Token: 0x06014990 RID: 84368 RVA: 0x005363F7 File Offset: 0x005345F7
+	// Token: 0x06011E72 RID: 73330 RVA: 0x00545103 File Offset: 0x00543303
 	[NullableContext(1)]
 	public RacingBetsRankView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06014991 RID: 84369 RVA: 0x00536400 File Offset: 0x00534600
+	// Token: 0x06011E73 RID: 73331 RVA: 0x0054510C File Offset: 0x0054330C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -43,14 +43,14 @@ public class RacingBetsRankView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x06014992 RID: 84370 RVA: 0x00536560 File Offset: 0x00534760
+	// Token: 0x06011E74 RID: 73332 RVA: 0x0054526C File Offset: 0x0054346C
 	protected override void OnStart()
 	{
 		this.RankLoopViewRoot = base.GetLoopScrollViewComponent(0).RootUIComp.Get();
 		this.RankLoopView = new LoopScrollView<RacingBetsRankItem, IRacingBetsRankData>(base.GetLoopScrollViewComponent(0), base.GetItem(1).GetOwner() as AUIBaseActor, new Func<RacingBetsRankItem>(this.CreateRankItem), false);
 	}
 
-	// Token: 0x06014993 RID: 84371 RVA: 0x005365B8 File Offset: 0x005347B8
+	// Token: 0x06011E75 RID: 73333 RVA: 0x005452C4 File Offset: 0x005434C4
 	protected override void OnBeforeShow()
 	{
 		this.RefreshView();
@@ -62,7 +62,7 @@ public class RacingBetsRankView : UiTickViewBase
 		this.NextUpdateTime = (double)RacingBetsModel.Instance.GetRacingBetsSeasonData().GetNextRankUpdateTime();
 	}
 
-	// Token: 0x06014994 RID: 84372 RVA: 0x0053661C File Offset: 0x0053481C
+	// Token: 0x06011E76 RID: 73334 RVA: 0x00545328 File Offset: 0x00543528
 	protected override void OnTick(float delta)
 	{
 		if (this.NextUpdateTime < 0.0)
@@ -104,14 +104,14 @@ public class RacingBetsRankView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06014995 RID: 84373 RVA: 0x00536719 File Offset: 0x00534919
+	// Token: 0x06011E77 RID: 73335 RVA: 0x00545425 File Offset: 0x00543625
 	[NullableContext(1)]
 	private RacingBetsRankItem CreateRankItem()
 	{
 		return new RacingBetsRankItem();
 	}
 
-	// Token: 0x06014996 RID: 84374 RVA: 0x00536720 File Offset: 0x00534920
+	// Token: 0x06011E78 RID: 73336 RVA: 0x0054542C File Offset: 0x0054362C
 	private void RefreshView()
 	{
 		List<IRacingBetsRankData> rankData = RacingBetsModel.Instance.GetRankData();
@@ -129,7 +129,7 @@ public class RacingBetsRankView : UiTickViewBase
 		this.RefreshSelfData();
 	}
 
-	// Token: 0x06014997 RID: 84375 RVA: 0x00536780 File Offset: 0x00534980
+	// Token: 0x06011E79 RID: 73337 RVA: 0x0054548C File Offset: 0x0054368C
 	private void RefreshSelfData()
 	{
 		IRacingBetsSelfRankData selfRank = RacingBetsModel.Instance.GetSelfRank();
@@ -232,13 +232,13 @@ public class RacingBetsRankView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06014998 RID: 84376 RVA: 0x00536955 File Offset: 0x00534B55
+	// Token: 0x06011E7A RID: 73338 RVA: 0x00545661 File Offset: 0x00543861
 	private void OnClickCloseBtn()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x04009ACD RID: 39629
+	// Token: 0x04009C25 RID: 39973
 	[Nullable(new byte[]
 	{
 		2,
@@ -247,56 +247,56 @@ public class RacingBetsRankView : UiTickViewBase
 	})]
 	private LoopScrollView<RacingBetsRankItem, IRacingBetsRankData> RankLoopView;
 
-	// Token: 0x04009ACE RID: 39630
+	// Token: 0x04009C26 RID: 39974
 	[Nullable(2)]
 	private UUIItem RankLoopViewRoot;
 
-	// Token: 0x04009ACF RID: 39631
+	// Token: 0x04009C27 RID: 39975
 	private bool CrossDayRefresh;
 
-	// Token: 0x04009AD0 RID: 39632
+	// Token: 0x04009C28 RID: 39976
 	private double NextUpdateTime;
 
-	// Token: 0x02008DAA RID: 36266
+	// Token: 0x02007F32 RID: 32562
 	private class EComponent
 	{
-		// Token: 0x0402DFC8 RID: 188360
+		// Token: 0x040292DE RID: 168670
 		public const int RankLoopView = 0;
 
-		// Token: 0x0402DFC9 RID: 188361
+		// Token: 0x040292DF RID: 168671
 		public const int RankViewItem = 1;
 
-		// Token: 0x0402DFCA RID: 188362
+		// Token: 0x040292E0 RID: 168672
 		public const int SelfRankPanel = 2;
 
-		// Token: 0x0402DFCB RID: 188363
+		// Token: 0x040292E1 RID: 168673
 		public const int SelfNoRankPanel = 3;
 
-		// Token: 0x0402DFCC RID: 188364
+		// Token: 0x040292E2 RID: 168674
 		public const int SelfRankNumArtText = 4;
 
-		// Token: 0x0402DFCD RID: 188365
+		// Token: 0x040292E3 RID: 168675
 		public const int SelfHeadIcon = 5;
 
-		// Token: 0x0402DFCE RID: 188366
+		// Token: 0x040292E4 RID: 168676
 		public const int SelfNameText = 6;
 
-		// Token: 0x0402DFCF RID: 188367
+		// Token: 0x040292E5 RID: 168677
 		public const int SelfHitNum = 7;
 
-		// Token: 0x0402DFD0 RID: 188368
+		// Token: 0x040292E6 RID: 168678
 		public const int SelfTotalMoney = 8;
 
-		// Token: 0x0402DFD1 RID: 188369
+		// Token: 0x040292E7 RID: 168679
 		public const int CloseBtn = 9;
 
-		// Token: 0x0402DFD2 RID: 188370
+		// Token: 0x040292E8 RID: 168680
 		public const int EmptyItem = 10;
 
-		// Token: 0x0402DFD3 RID: 188371
+		// Token: 0x040292E9 RID: 168681
 		public const int SelfPercentRankText = 11;
 
-		// Token: 0x0402DFD4 RID: 188372
+		// Token: 0x040292EA RID: 168682
 		public const int RankUpdateTimeText = 12;
 	}
 }

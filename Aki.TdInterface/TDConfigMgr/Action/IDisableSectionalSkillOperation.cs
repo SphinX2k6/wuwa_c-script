@@ -5,14 +5,14 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019B6 RID: 6582
+	// Token: 0x02001B43 RID: 6979
 	[NullableContext(2)]
 	[Nullable(0)]
 	[JsonConverter(typeof(IDisableSectionalSkillOperationConverter))]
 	public class IDisableSectionalSkillOperation : ISkillOperationType
 	{
-		// Token: 0x06008CFD RID: 36093 RVA: 0x0014A950 File Offset: 0x00148B50
-		[NullableContext(1)]
+		// Token: 0x0600943F RID: 37951 RVA: 0x0015A45C File Offset: 0x0015865C
+		[NullableContext(0)]
 		private IDisableSectionalSkillOperation_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,8 +27,8 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008CFE RID: 36094 RVA: 0x0014A988 File Offset: 0x00148B88
-		[NullableContext(1)]
+		// Token: 0x06009440 RID: 37952 RVA: 0x0015A494 File Offset: 0x00158694
+		[NullableContext(0)]
 		public static IDisableSectionalSkillOperation Create([Nullable(2)] IDisableSectionalSkillOperation instance)
 		{
 			if (instance == null)
@@ -41,8 +41,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008CFF RID: 36095 RVA: 0x0014A99B File Offset: 0x00148B9B
-		[NullableContext(1)]
+		// Token: 0x06009441 RID: 37953 RVA: 0x0015A4A7 File Offset: 0x001586A7
+		[NullableContext(0)]
 		public static IDisableSectionalSkillOperation CreateFromSetValue([Nullable(2)] IDisableSectionalSkillOperation_SetValue value)
 		{
 			if (value == null)
@@ -55,8 +55,8 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008D00 RID: 36096 RVA: 0x0014A9B0 File Offset: 0x00148BB0
-		[NullableContext(1)]
+		// Token: 0x06009442 RID: 37954 RVA: 0x0015A4BC File Offset: 0x001586BC
+		[NullableContext(0)]
 		public new IDisableSectionalSkillOperation_SetValue ToSetValue()
 		{
 			return new IDisableSectionalSkillOperation_SetValue
@@ -71,9 +71,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002D42 RID: 11586
-		// (get) Token: 0x06008D01 RID: 36097 RVA: 0x0014AA16 File Offset: 0x00148C16
-		// (set) Token: 0x06008D02 RID: 36098 RVA: 0x0014AA41 File Offset: 0x00148C41
+		// Token: 0x17002F47 RID: 12103
+		// (get) Token: 0x06009443 RID: 37955 RVA: 0x0015A522 File Offset: 0x00158722
+		// (set) Token: 0x06009444 RID: 37956 RVA: 0x0015A54D File Offset: 0x0015874D
 		public override ESkillOperationType Type
 		{
 			get
@@ -94,9 +94,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D43 RID: 11587
-		// (get) Token: 0x06008D03 RID: 36099 RVA: 0x0014AA50 File Offset: 0x00148C50
-		// (set) Token: 0x06008D04 RID: 36100 RVA: 0x0014AA8A File Offset: 0x00148C8A
+		// Token: 0x17002F48 RID: 12104
+		// (get) Token: 0x06009445 RID: 37957 RVA: 0x0015A55C File Offset: 0x0015875C
+		// (set) Token: 0x06009446 RID: 37958 RVA: 0x0015A596 File Offset: 0x00158796
 		public virtual EDisplayModeInSkillOp? DisplayMode
 		{
 			get
@@ -118,9 +118,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D44 RID: 11588
-		// (get) Token: 0x06008D05 RID: 36101 RVA: 0x0014AA98 File Offset: 0x00148C98
-		// (set) Token: 0x06008D06 RID: 36102 RVA: 0x0014AAF9 File Offset: 0x00148CF9
+		// Token: 0x17002F49 RID: 12105
+		// (get) Token: 0x06009447 RID: 37959 RVA: 0x0015A5A4 File Offset: 0x001587A4
+		// (set) Token: 0x06009448 RID: 37960 RVA: 0x0015A605 File Offset: 0x00158805
 		public virtual IDisableExploreSkill DisableExploreSkill
 		{
 			get
@@ -148,9 +148,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D45 RID: 11589
-		// (get) Token: 0x06008D07 RID: 36103 RVA: 0x0014AB10 File Offset: 0x00148D10
-		// (set) Token: 0x06008D08 RID: 36104 RVA: 0x0014AB4A File Offset: 0x00148D4A
+		// Token: 0x17002F4A RID: 12106
+		// (get) Token: 0x06009449 RID: 37961 RVA: 0x0015A61C File Offset: 0x0015881C
+		// (set) Token: 0x0600944A RID: 37962 RVA: 0x0015A656 File Offset: 0x00158856
 		public virtual bool? DisableSkillWheel
 		{
 			get
@@ -172,9 +172,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D46 RID: 11590
-		// (get) Token: 0x06008D09 RID: 36105 RVA: 0x0014AB58 File Offset: 0x00148D58
-		// (set) Token: 0x06008D0A RID: 36106 RVA: 0x0014ABB9 File Offset: 0x00148DB9
+		// Token: 0x17002F4B RID: 12107
+		// (get) Token: 0x0600944B RID: 37963 RVA: 0x0015A664 File Offset: 0x00158864
+		// (set) Token: 0x0600944C RID: 37964 RVA: 0x0015A6C5 File Offset: 0x001588C5
 		public virtual IDisableBattleSkillOptions DisableBattleSkill
 		{
 			get
@@ -202,9 +202,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D47 RID: 11591
-		// (get) Token: 0x06008D0B RID: 36107 RVA: 0x0014ABD0 File Offset: 0x00148DD0
-		// (set) Token: 0x06008D0C RID: 36108 RVA: 0x0014AC0A File Offset: 0x00148E0A
+		// Token: 0x17002F4C RID: 12108
+		// (get) Token: 0x0600944D RID: 37965 RVA: 0x0015A6DC File Offset: 0x001588DC
+		// (set) Token: 0x0600944E RID: 37966 RVA: 0x0015A716 File Offset: 0x00158916
 		public virtual bool? DisableSwitchRole
 		{
 			get
@@ -226,9 +226,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D48 RID: 11592
-		// (get) Token: 0x06008D0D RID: 36109 RVA: 0x0014AC18 File Offset: 0x00148E18
-		// (set) Token: 0x06008D0E RID: 36110 RVA: 0x0014AC52 File Offset: 0x00148E52
+		// Token: 0x17002F4D RID: 12109
+		// (get) Token: 0x0600944F RID: 37967 RVA: 0x0015A724 File Offset: 0x00158924
+		// (set) Token: 0x06009450 RID: 37968 RVA: 0x0015A75E File Offset: 0x0015895E
 		public virtual ETeamDisplayModeInSkillOp? TeamDisplayMode
 		{
 			get
@@ -250,24 +250,24 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040057A9 RID: 22441
+		// Token: 0x04005BFE RID: 23550
 		protected new IDisableSectionalSkillOperation FbInstance;
 
-		// Token: 0x040057AA RID: 22442
+		// Token: 0x04005BFF RID: 23551
 		protected new IDisableSectionalSkillOperation_SetValue PocoInterface;
 
-		// Token: 0x040057AB RID: 22443
-		[Nullable(1)]
+		// Token: 0x04005C00 RID: 23552
+		[Nullable(0)]
 		private IDisableExploreSkill _DisableExploreSkillCache;
 
-		// Token: 0x040057AC RID: 22444
+		// Token: 0x04005C01 RID: 23553
 		private bool _DisableExploreSkillInited;
 
-		// Token: 0x040057AD RID: 22445
-		[Nullable(1)]
+		// Token: 0x04005C02 RID: 23554
+		[Nullable(0)]
 		private IDisableBattleSkillOptions _DisableBattleSkillCache;
 
-		// Token: 0x040057AE RID: 22446
+		// Token: 0x04005C03 RID: 23555
 		private bool _DisableBattleSkillInited;
 	}
 }

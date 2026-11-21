@@ -18,19 +18,19 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200312E RID: 12590
+// Token: 0x0200268A RID: 9866
 [NullableContext(1)]
 [Nullable(0)]
 public class RolePreloadComponent : EntityComponent, IStaticVariableResetter
 {
-	// Token: 0x0601B0B8 RID: 110776 RVA: 0x00756FF0 File Offset: 0x007551F0
+	// Token: 0x06018B14 RID: 101140 RVA: 0x0077D064 File Offset: 0x0077B264
 	static RolePreloadComponent()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(RolePreloadComponent.CreateStaticDefaultValue), new Action(RolePreloadComponent.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x17002571 RID: 9585
-	// (get) Token: 0x0601B0B9 RID: 110777 RVA: 0x007571A2 File Offset: 0x007553A2
+	// Token: 0x1700271C RID: 10012
+	// (get) Token: 0x06018B15 RID: 101141 RVA: 0x0077D261 File Offset: 0x0077B461
 	private static TimeLimit TimeLimit
 	{
 		get
@@ -39,7 +39,7 @@ public class RolePreloadComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601B0BA RID: 110778 RVA: 0x007571AC File Offset: 0x007553AC
+	// Token: 0x06018B16 RID: 101142 RVA: 0x0077D268 File Offset: 0x0077B468
 	[NullableContext(2)]
 	protected override bool OnInitData(IEntityArgs args = null)
 	{
@@ -53,7 +53,7 @@ public class RolePreloadComponent : EntityComponent, IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x0601B0BB RID: 110779 RVA: 0x00757218 File Offset: 0x00755418
+	// Token: 0x06018B17 RID: 101143 RVA: 0x0077D2D4 File Offset: 0x0077B4D4
 	protected override void OnTick(float delta)
 	{
 		int frame = Time.Instance.Frame;
@@ -86,7 +86,7 @@ public class RolePreloadComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601B0BC RID: 110780 RVA: 0x00757303 File Offset: 0x00755503
+	// Token: 0x06018B18 RID: 101144 RVA: 0x0077D3BF File Offset: 0x0077B5BF
 	public void InitPreload(EntityAssetElement entityAssetElement)
 	{
 		this.EntityAssetElement = entityAssetElement;
@@ -103,7 +103,7 @@ public class RolePreloadComponent : EntityComponent, IStaticVariableResetter
 		this.InitStateRepPerf();
 	}
 
-	// Token: 0x0601B0BD RID: 110781 RVA: 0x0075733F File Offset: 0x0075553F
+	// Token: 0x06018B19 RID: 101145 RVA: 0x0077D3FB File Offset: 0x0077B5FB
 	public void QueueSkillLoadDebug(int skillId)
 	{
 		if (this.EntityAssetElement.FightAssetManager.SkillAssetManager.GetSkill(skillId) != null)
@@ -117,7 +117,7 @@ public class RolePreloadComponent : EntityComponent, IStaticVariableResetter
 		this.WaitLoadSkillList.Add(skillId);
 	}
 
-	// Token: 0x0601B0BE RID: 110782 RVA: 0x00757375 File Offset: 0x00755575
+	// Token: 0x06018B1A RID: 101146 RVA: 0x0077D431 File Offset: 0x0077B631
 	public void QueueBulletLoadDebug(long bulletId)
 	{
 		if (this.EntityAssetElement.FightAssetManager.BulletAssetManager.GetBullet(bulletId) != null)
@@ -131,14 +131,14 @@ public class RolePreloadComponent : EntityComponent, IStaticVariableResetter
 		this.WaitLoadBulletList.Add(bulletId);
 	}
 
-	// Token: 0x0601B0BF RID: 110783 RVA: 0x007573AB File Offset: 0x007555AB
+	// Token: 0x06018B1B RID: 101147 RVA: 0x0077D467 File Offset: 0x0077B667
 	[NullableContext(2)]
 	public SCharacterFightInfo GetFightInfo()
 	{
 		return this.FightInfo;
 	}
 
-	// Token: 0x0601B0C0 RID: 110784 RVA: 0x007573B4 File Offset: 0x007555B4
+	// Token: 0x06018B1C RID: 101148 RVA: 0x0077D470 File Offset: 0x0077B670
 	private void InitFightInfo()
 	{
 		EntityAssetElement entityAssetElement = this.EntityAssetElement;
@@ -149,7 +149,7 @@ public class RolePreloadComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601B0C1 RID: 110785 RVA: 0x007573F0 File Offset: 0x007555F0
+	// Token: 0x06018B1D RID: 101149 RVA: 0x0077D4AC File Offset: 0x0077B6AC
 	private unsafe void InitLoadType()
 	{
 		this.CharacterLoadTypeList.Clear();
@@ -162,13 +162,13 @@ public class RolePreloadComponent : EntityComponent, IStaticVariableResetter
 				int num = *fightInfoDtTypeBytes[i];
 				this.CharacterLoadTypeList.Add((ECharacterLoadType)num);
 			}
-			this.<InitLoadType>g__ApplyLoadTypes|24_0();
+			this.<InitLoadType>g__ApplyLoadTypes|27_0();
 			return;
 		}
 		if (this.CreatureDataComponent.IsAutoRole())
 		{
 			this.CharacterLoadTypeList.Add(ECharacterLoadType.Ai角色);
-			this.<InitLoadType>g__ApplyLoadTypes|24_0();
+			this.<InitLoadType>g__ApplyLoadTypes|27_0();
 			return;
 		}
 		if (this.CreatureDataComponent.IsMonster())
@@ -181,7 +181,7 @@ public class RolePreloadComponent : EntityComponent, IStaticVariableResetter
 				if (config2 != null && config2.Value.RoleMappingId > 0)
 				{
 					this.CharacterLoadTypeList.Add(ECharacterLoadType.Ai角色);
-					this.<InitLoadType>g__ApplyLoadTypes|24_0();
+					this.<InitLoadType>g__ApplyLoadTypes|27_0();
 					return;
 				}
 			}
@@ -190,10 +190,10 @@ public class RolePreloadComponent : EntityComponent, IStaticVariableResetter
 		{
 			this.CharacterLoadTypeList.Add(ECharacterLoadType.肉鸽);
 		}
-		this.<InitLoadType>g__ApplyLoadTypes|24_0();
+		this.<InitLoadType>g__ApplyLoadTypes|27_0();
 	}
 
-	// Token: 0x0601B0C2 RID: 110786 RVA: 0x00757548 File Offset: 0x00755748
+	// Token: 0x06018B1E RID: 101150 RVA: 0x0077D604 File Offset: 0x0077B804
 	private unsafe void InitSkill()
 	{
 		EntityAssetElement entityAssetElement = this.EntityAssetElement;
@@ -281,7 +281,7 @@ public class RolePreloadComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601B0C3 RID: 110787 RVA: 0x007577DC File Offset: 0x007559DC
+	// Token: 0x06018B1F RID: 101151 RVA: 0x0077D898 File Offset: 0x0077BA98
 	private void InitPlayerSkill()
 	{
 		this.InitGameplayExtraSkill();
@@ -299,21 +299,21 @@ public class RolePreloadComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601B0C4 RID: 110788 RVA: 0x00757890 File Offset: 0x00755A90
+	// Token: 0x06018B20 RID: 101152 RVA: 0x0077D94C File Offset: 0x0077BB4C
 	[NullableContext(0)]
 	public UniTask<ELoadResultType> LoadSkillAsync(int skillId, ResourceSystem.EResourceLoadPriority? priority = null)
 	{
-		RolePreloadComponent.<LoadSkillAsync>d__27 <LoadSkillAsync>d__;
+		RolePreloadComponent.<LoadSkillAsync>d__30 <LoadSkillAsync>d__;
 		<LoadSkillAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder<ELoadResultType>.Create();
 		<LoadSkillAsync>d__.<>4__this = this;
 		<LoadSkillAsync>d__.skillId = skillId;
 		<LoadSkillAsync>d__.priority = priority;
 		<LoadSkillAsync>d__.<>1__state = -1;
-		<LoadSkillAsync>d__.<>t__builder.Start<RolePreloadComponent.<LoadSkillAsync>d__27>(ref <LoadSkillAsync>d__);
+		<LoadSkillAsync>d__.<>t__builder.Start<RolePreloadComponent.<LoadSkillAsync>d__30>(ref <LoadSkillAsync>d__);
 		return <LoadSkillAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601B0C5 RID: 110789 RVA: 0x007578E4 File Offset: 0x00755AE4
+	// Token: 0x06018B21 RID: 101153 RVA: 0x0077D9A0 File Offset: 0x0077BBA0
 	private void LoadBulletAsync(long bulletId)
 	{
 		if (this.EntityAssetElement.FightAssetManager.BulletAssetManager.GetBullet(bulletId) != null)
@@ -327,106 +327,170 @@ public class RolePreloadComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601B0C6 RID: 110790 RVA: 0x00757938 File Offset: 0x00755B38
+	// Token: 0x06018B22 RID: 101154 RVA: 0x0077D9F4 File Offset: 0x0077BBF4
 	public void FlushSkill(int skillId)
 	{
 		PreloadControllerNew.Instance.FlushSkill(this.EntityAssetElement, skillId);
 	}
 
-	// Token: 0x0601B0C7 RID: 110791 RVA: 0x0075794C File Offset: 0x00755B4C
+	// Token: 0x06018B23 RID: 101155 RVA: 0x0077DA08 File Offset: 0x0077BC08
 	public void RemoveSkill(int skillId)
 	{
 		PreloadControllerNew.Instance.RemoveSkill(this.EntityAssetElement, skillId);
 	}
 
-	// Token: 0x0601B0C8 RID: 110792 RVA: 0x00757960 File Offset: 0x00755B60
+	// Token: 0x06018B24 RID: 101156 RVA: 0x0077DA1C File Offset: 0x0077BC1C
 	public void RemoveBullet(long bulletId)
 	{
 		PreloadControllerNew.Instance.RemoveBullet(this.EntityAssetElement, bulletId);
 	}
 
-	// Token: 0x0601B0C9 RID: 110793 RVA: 0x00757974 File Offset: 0x00755B74
+	// Token: 0x06018B25 RID: 101157 RVA: 0x0077DA30 File Offset: 0x0077BC30
 	[NullableContext(2)]
-	public FightDataTableLoadRecord LoadDynamicFightDataTables(UDataTable skillDataTable = null, UDataTable bulletDataTable = null, UDataTable hitEffectDataTable = null, UDataTable cameraDataTable = null)
+	public FightDataTableLoadRecord PrepareDynamicFightDataTables(UDataTable skillDataTable = null, UDataTable bulletDataTable = null, UDataTable hitEffectDataTable = null, UDataTable cameraDataTable = null)
 	{
-		FightDataTableLoadRecord fightDataTableLoadRecord = new FightDataTableLoadRecord
+		FightDataTableLoadRecord result;
+		try
 		{
-			SkillDataTable = ((skillDataTable != null && skillDataTable.IsValid()) ? skillDataTable : null),
-			BulletDataTable = ((bulletDataTable != null && bulletDataTable.IsValid()) ? bulletDataTable : null),
-			HitEffectDataTable = ((hitEffectDataTable != null && hitEffectDataTable.IsValid()) ? hitEffectDataTable : null),
-			CameraDataTable = ((cameraDataTable != null && cameraDataTable.IsValid()) ? cameraDataTable : null),
-			SkillIds = this.CollectSkillIdsFromTable(skillDataTable),
-			BulletIds = this.CollectBulletIdsFromTable(bulletDataTable)
-		};
-		if (fightDataTableLoadRecord.SkillDataTable == null && fightDataTableLoadRecord.BulletDataTable == null && fightDataTableLoadRecord.HitEffectDataTable == null && fightDataTableLoadRecord.CameraDataTable == null)
-		{
-			return null;
+			string idType = "技能";
+			Func<string, int> convert;
+			if ((convert = RolePreloadComponent.<>O.<0>__Parse) == null)
+			{
+				convert = (RolePreloadComponent.<>O.<0>__Parse = new Func<string, int>(int.Parse));
+			}
+			List<int> skillIds = this.CollectIdsFromTable<int>(skillDataTable, idType, convert, null);
+			string idType2 = "子弹";
+			Func<string, long> convert2;
+			if ((convert2 = RolePreloadComponent.<>O.<1>__Parse) == null)
+			{
+				convert2 = (RolePreloadComponent.<>O.<1>__Parse = new Func<string, long>(long.Parse));
+			}
+			List<long> bulletIds = this.CollectIdsFromTable<long>(bulletDataTable, idType2, convert2, null);
+			FightDataTableLoadRecord fightDataTableLoadRecord = new FightDataTableLoadRecord
+			{
+				SkillDataTable = ((skillDataTable != null && skillDataTable.IsValid()) ? skillDataTable : null),
+				BulletDataTable = ((bulletDataTable != null && bulletDataTable.IsValid()) ? bulletDataTable : null),
+				HitEffectDataTable = ((hitEffectDataTable != null && hitEffectDataTable.IsValid()) ? hitEffectDataTable : null),
+				CameraDataTable = ((cameraDataTable != null && cameraDataTable.IsValid()) ? cameraDataTable : null),
+				SkillIds = skillIds,
+				BulletIds = bulletIds
+			};
+			if (fightDataTableLoadRecord.SkillDataTable == null && fightDataTableLoadRecord.BulletDataTable == null && fightDataTableLoadRecord.HitEffectDataTable == null && fightDataTableLoadRecord.CameraDataTable == null)
+			{
+				result = null;
+			}
+			else
+			{
+				foreach (int id3 in fightDataTableLoadRecord.SkillIds)
+				{
+					this.AcquireDynamicResource<int>(id3, this.DynamicSkillReferences, (int id) => this.QueueSkillLoad(id));
+				}
+				foreach (long id2 in fightDataTableLoadRecord.BulletIds)
+				{
+					this.AcquireDynamicResource<long>(id2, this.DynamicBulletReferences, (long id) => this.QueueBulletLoad(id));
+				}
+				this.PreparedDynamicFightDataTableRecords.Add(fightDataTableLoadRecord);
+				result = fightDataTableLoadRecord;
+			}
 		}
-		if (fightDataTableLoadRecord.SkillDataTable != null)
+		finally
 		{
-			this.SkillComponent.AddFightDataTable(EFightDataTableKind.Skill, fightDataTableLoadRecord.SkillDataTable, EFightDataTableSourceType.Extra);
 		}
-		if (fightDataTableLoadRecord.BulletDataTable != null)
-		{
-			this.SkillComponent.AddFightDataTable(EFightDataTableKind.Bullet, fightDataTableLoadRecord.BulletDataTable, EFightDataTableSourceType.Extra);
-		}
-		if (fightDataTableLoadRecord.HitEffectDataTable != null)
-		{
-			this.SkillComponent.AddFightDataTable(EFightDataTableKind.HitEffect, fightDataTableLoadRecord.HitEffectDataTable, EFightDataTableSourceType.Extra);
-		}
-		if (fightDataTableLoadRecord.CameraDataTable != null)
-		{
-			CameraController.Instance.LoadCharacterCameraConfig(fightDataTableLoadRecord.CameraDataTable);
-		}
-		foreach (int skillId in fightDataTableLoadRecord.SkillIds)
-		{
-			this.QueueSkillLoad(skillId);
-		}
-		foreach (long bulletId in fightDataTableLoadRecord.BulletIds)
-		{
-			this.QueueBulletLoad(bulletId);
-		}
-		this.ActiveDynamicFightDataTableRecords.Add(fightDataTableLoadRecord);
-		return fightDataTableLoadRecord;
+		return result;
 	}
 
-	// Token: 0x0601B0CA RID: 110794 RVA: 0x00757B1C File Offset: 0x00755D1C
+	// Token: 0x06018B26 RID: 101158 RVA: 0x0077DC18 File Offset: 0x0077BE18
 	[NullableContext(2)]
-	public void UnloadDynamicFightDataTables(FightDataTableLoadRecord record)
+	public void SwitchDynamicFightDataTables(FightDataTableLoadRecord oldRecord, FightDataTableLoadRecord newRecord)
 	{
-		if (record == null || !this.ActiveDynamicFightDataTableRecords.Remove(record))
+		if (oldRecord == newRecord)
 		{
 			return;
 		}
-		this.RemoveQueuedSkillLoads(record.SkillIds);
-		this.RemoveQueuedBulletLoads(record.BulletIds);
-		if (record.SkillDataTable != null)
+		if (oldRecord != null && !this.ActiveDynamicFightDataTableRecords.Contains(oldRecord))
 		{
-			this.SkillComponent.RemoveFightDataTable(EFightDataTableKind.Skill, record.SkillDataTable, EFightDataTableSourceType.Extra);
+			CombatLog.Instance.Error(CombatLog.EDebugModule.Skill, base.Entity, "替换了尚未激活的动态战斗表记录", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return;
 		}
-		if (record.BulletDataTable != null)
+		if (newRecord != null && !this.PreparedDynamicFightDataTableRecords.Contains(newRecord))
 		{
-			this.SkillComponent.RemoveFightDataTable(EFightDataTableKind.Bullet, record.BulletDataTable, EFightDataTableSourceType.Extra);
+			CombatLog.Instance.Error(CombatLog.EDebugModule.Skill, base.Entity, "激活了尚未准备的动态战斗表记录", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return;
 		}
-		if (record.HitEffectDataTable != null)
+		if (newRecord != null && this.ActiveDynamicFightDataTableRecords.Contains(newRecord))
 		{
-			this.SkillComponent.RemoveFightDataTable(EFightDataTableKind.HitEffect, record.HitEffectDataTable, EFightDataTableSourceType.Extra);
+			CombatLog.Instance.Error(CombatLog.EDebugModule.Skill, base.Entity, "重复激活动态战斗表记录", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return;
 		}
-		if (record.CameraDataTable != null)
+		try
 		{
-			CameraController.Instance.UnloadCharacterCameraConfig(record.CameraDataTable, "MainCamera");
+			this.SkillComponent.ReplaceFightDataTable(EFightDataTableKind.Bullet, (oldRecord != null) ? oldRecord.BulletDataTable : null, (newRecord != null) ? newRecord.BulletDataTable : null, EFightDataTableSourceType.Extra);
+			this.SkillComponent.ReplaceFightDataTable(EFightDataTableKind.HitEffect, (oldRecord != null) ? oldRecord.HitEffectDataTable : null, (newRecord != null) ? newRecord.HitEffectDataTable : null, EFightDataTableSourceType.Extra);
+			this.SkillComponent.ReplaceFightDataTable(EFightDataTableKind.Skill, (oldRecord != null) ? oldRecord.SkillDataTable : null, (newRecord != null) ? newRecord.SkillDataTable : null, EFightDataTableSourceType.Extra);
+			if (((oldRecord != null) ? oldRecord.CameraDataTable : null) != ((newRecord != null) ? newRecord.CameraDataTable : null))
+			{
+				CameraController.Instance.UnloadCharacterCameraConfig((oldRecord != null) ? oldRecord.CameraDataTable : null, "MainCamera");
+				CameraController.Instance.LoadCharacterCameraConfig((newRecord != null) ? newRecord.CameraDataTable : null);
+			}
+			if (oldRecord != null)
+			{
+				this.ActiveDynamicFightDataTableRecords.Remove(oldRecord);
+			}
+			if (newRecord != null)
+			{
+				this.ActiveDynamicFightDataTableRecords.Add(newRecord);
+			}
 		}
-		foreach (int skillId in record.SkillIds)
+		finally
 		{
-			this.RemoveSkill(skillId);
-		}
-		foreach (long bulletId in record.BulletIds)
-		{
-			this.RemoveBullet(bulletId);
 		}
 	}
 
-	// Token: 0x0601B0CB RID: 110795 RVA: 0x00757C4C File Offset: 0x00755E4C
+	// Token: 0x06018B27 RID: 101159 RVA: 0x0077DDAC File Offset: 0x0077BFAC
+	[NullableContext(2)]
+	public void ReleaseDynamicFightDataTables(FightDataTableLoadRecord record)
+	{
+		if (record == null || !this.PreparedDynamicFightDataTableRecords.Remove(record))
+		{
+			return;
+		}
+		try
+		{
+			if (this.ActiveDynamicFightDataTableRecords.Contains(record))
+			{
+				this.SwitchDynamicFightDataTables(record, null);
+			}
+			List<int> list = new List<int>();
+			foreach (int num in record.SkillIds)
+			{
+				if (this.ReleaseDynamicResource<int>(num, this.DynamicSkillReferences, delegate(int id)
+				{
+					this.RemoveSkill(id);
+				}))
+				{
+					list.Add(num);
+				}
+			}
+			this.RemoveQueuedLoads<int>(list, this.WaitLoadSkillList);
+			List<long> list2 = new List<long>();
+			foreach (long num2 in record.BulletIds)
+			{
+				if (this.ReleaseDynamicResource<long>(num2, this.DynamicBulletReferences, delegate(long id)
+				{
+					this.RemoveBullet(id);
+				}))
+				{
+					list2.Add(num2);
+				}
+			}
+			this.RemoveQueuedLoads<long>(list2, this.WaitLoadBulletList);
+		}
+		finally
+		{
+		}
+	}
+
+	// Token: 0x06018B28 RID: 101160 RVA: 0x0077DEDC File Offset: 0x0077C0DC
 	private void InitMonsterSkill()
 	{
 		foreach (DataTableKeyRow<SSkillInfo> dataTableKeyRow in this.SkillComponent.GetSkillInfoRows(EFightDataTableSourceType.Self))
@@ -453,7 +517,7 @@ public class RolePreloadComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601B0CC RID: 110796 RVA: 0x00757D20 File Offset: 0x00755F20
+	// Token: 0x06018B29 RID: 101161 RVA: 0x0077DFB0 File Offset: 0x0077C1B0
 	private void InitVehicleSkill()
 	{
 		this.InitGameplayExtraSkill();
@@ -463,7 +527,7 @@ public class RolePreloadComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601B0CD RID: 110797 RVA: 0x00757D7C File Offset: 0x00755F7C
+	// Token: 0x06018B2A RID: 101162 RVA: 0x0077E00C File Offset: 0x0077C20C
 	private void InitGameplayExtraSkill()
 	{
 		foreach (int skillId in this.SkillComponent.GetAllSkillId(EFightDataTableSourceType.Extra))
@@ -472,123 +536,167 @@ public class RolePreloadComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601B0CE RID: 110798 RVA: 0x00757DD0 File Offset: 0x00755FD0
-	private void QueueSkillLoad(int skillId)
+	// Token: 0x06018B2B RID: 101163 RVA: 0x0077E060 File Offset: 0x0077C260
+	private void AcquireDynamicResource<T>(T id, Dictionary<T, DynamicResourceReference> references, Func<T, bool> queueLoad)
 	{
-		if (this.EntityAssetElement.FightAssetManager.SkillAssetManager.GetSkill(skillId) != null)
+		DynamicResourceReference dynamicResourceReference;
+		if (references.TryGetValue(id, out dynamicResourceReference))
 		{
+			dynamicResourceReference.RefCount++;
 			return;
 		}
-		if (this.WaitLoadSkillList.Contains(skillId))
+		references[id] = new DynamicResourceReference
 		{
-			return;
-		}
-		this.WaitLoadSkillList.Add(skillId);
+			RefCount = 1,
+			AddedByDynamicLoad = queueLoad(id)
+		};
 	}
 
-	// Token: 0x0601B0CF RID: 110799 RVA: 0x00757E06 File Offset: 0x00756006
-	private void QueueBulletLoad(long bulletId)
+	// Token: 0x06018B2C RID: 101164 RVA: 0x0077E0A8 File Offset: 0x0077C2A8
+	private bool ReleaseDynamicResource<T>(T id, Dictionary<T, DynamicResourceReference> references, Action<T> removeResource)
 	{
-		if (this.EntityAssetElement.FightAssetManager.BulletAssetManager.GetBullet(bulletId) != null)
+		DynamicResourceReference dynamicResourceReference;
+		if (!references.TryGetValue(id, out dynamicResourceReference))
 		{
-			return;
+			return false;
 		}
-		if (this.WaitLoadBulletList.Contains(bulletId))
+		if (dynamicResourceReference.RefCount > 1)
 		{
-			return;
+			dynamicResourceReference.RefCount--;
+			return false;
 		}
-		this.WaitLoadBulletList.Add(bulletId);
+		references.Remove(id);
+		if (dynamicResourceReference.AddedByDynamicLoad)
+		{
+			removeResource(id);
+		}
+		return dynamicResourceReference.AddedByDynamicLoad;
 	}
 
-	// Token: 0x0601B0D0 RID: 110800 RVA: 0x00757E3C File Offset: 0x0075603C
-	private void RemoveQueuedSkillLoads(IReadOnlyList<int> skillIds)
+	// Token: 0x06018B2D RID: 101165 RVA: 0x0077E0F8 File Offset: 0x0077C2F8
+	private bool QueueSkillLoad(int skillId)
 	{
-		if (skillIds.Count <= 0 || this.WaitLoadSkillList.Count <= 0)
+		return this.QueueResourceLoad<int>(skillId, this.WaitLoadSkillList, (int id) => this.EntityAssetElement.FightAssetManager.SkillAssetManager.GetSkill(id) != null);
+	}
+
+	// Token: 0x06018B2E RID: 101166 RVA: 0x0077E113 File Offset: 0x0077C313
+	private bool QueueBulletLoad(long bulletId)
+	{
+		return this.QueueResourceLoad<long>(bulletId, this.WaitLoadBulletList, (long id) => this.EntityAssetElement.FightAssetManager.BulletAssetManager.GetBullet(id) != null);
+	}
+
+	// Token: 0x06018B2F RID: 101167 RVA: 0x0077E12E File Offset: 0x0077C32E
+	private bool QueueResourceLoad<[Nullable(2)] T>(T id, List<T> waitLoadList, Func<T, bool> isLoaded)
+	{
+		if (isLoaded(id) || waitLoadList.Contains(id))
+		{
+			return false;
+		}
+		waitLoadList.Add(id);
+		return true;
+	}
+
+	// Token: 0x06018B30 RID: 101168 RVA: 0x0077E14C File Offset: 0x0077C34C
+	private void RemoveQueuedLoads<[Nullable(2)] T>(IReadOnlyList<T> ids, List<T> waitLoadList)
+	{
+		if (ids.Count <= 0 || waitLoadList.Count <= 0)
 		{
 			return;
 		}
-		HashSet<int> hashSet = new HashSet<int>(skillIds);
-		for (int i = this.WaitLoadSkillList.Count - 1; i >= 0; i--)
+		HashSet<T> hashSet = new HashSet<T>(ids);
+		for (int i = waitLoadList.Count - 1; i >= 0; i--)
 		{
-			if (hashSet.Contains(this.WaitLoadSkillList[i]))
+			if (hashSet.Contains(waitLoadList[i]))
 			{
-				this.WaitLoadSkillList.RemoveAt(i);
+				waitLoadList.RemoveAt(i);
 			}
 		}
 	}
 
-	// Token: 0x0601B0D1 RID: 110801 RVA: 0x00757EA0 File Offset: 0x007560A0
-	private void RemoveQueuedBulletLoads(IReadOnlyList<long> bulletIds)
+	// Token: 0x06018B31 RID: 101169 RVA: 0x0077E19C File Offset: 0x0077C39C
+	private unsafe List<T> CollectIdsFromTable<T>([Nullable(2)] UDataTable dataTable, string idType, Func<string, T> convert, [Nullable(new byte[]
 	{
-		if (bulletIds.Count <= 0 || this.WaitLoadBulletList.Count <= 0)
-		{
-			return;
-		}
-		HashSet<long> hashSet = new HashSet<long>(bulletIds);
-		for (int i = this.WaitLoadBulletList.Count - 1; i >= 0; i--)
-		{
-			if (hashSet.Contains(this.WaitLoadBulletList[i]))
-			{
-				this.WaitLoadBulletList.RemoveAt(i);
-			}
-		}
-	}
-
-	// Token: 0x0601B0D2 RID: 110802 RVA: 0x00757F04 File Offset: 0x00756104
-	private List<int> CollectSkillIdsFromTable([Nullable(2)] UDataTable dataTable)
+		2,
+		1
+	})] Func<T, bool> isValid = null)
 	{
 		if (dataTable == null || !dataTable.IsValid())
 		{
-			return new List<int>();
+			return new List<T>();
 		}
 		List<string> list = new List<string>();
 		DataTableUtil.GetDataTableAllRowNamesFromTable(dataTable, list);
-		List<int> list2 = new List<int>();
-		using (List<string>.Enumerator enumerator = list.GetEnumerator())
-		{
-			while (enumerator.MoveNext())
-			{
-				int item;
-				if (int.TryParse(enumerator.Current, out item))
-				{
-					list2.Add(item);
-				}
-			}
-		}
-		return list2;
-	}
-
-	// Token: 0x0601B0D3 RID: 110803 RVA: 0x00757F88 File Offset: 0x00756188
-	private List<long> CollectBulletIdsFromTable([Nullable(2)] UDataTable dataTable)
-	{
-		if (dataTable == null || !dataTable.IsValid())
-		{
-			return new List<long>();
-		}
-		List<string> list = new List<string>();
-		DataTableUtil.GetDataTableAllRowNamesFromTable(dataTable, list);
-		List<long> list2 = new List<long>();
+		List<T> list2 = new List<T>();
+		HashSet<T> hashSet = new HashSet<T>();
 		foreach (string text in list)
 		{
-			long item;
-			if (long.TryParse(text, out item))
+			T t;
+			try
 			{
-				list2.Add(item);
+				t = convert(text);
 			}
-			else
+			catch
 			{
 				CombatLog instance = CombatLog.Instance;
 				CombatLog.EDebugModule flag = CombatLog.EDebugModule.Skill;
 				Entity entity = base.Entity;
-				string message = "子弹ID不合法";
-				ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("子弹Id", text);
-				instance.Error(flag, entity, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
+				DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(11, 2);
+				defaultInterpolatedStringHandler.AppendLiteral("动态");
+				defaultInterpolatedStringHandler.AppendFormatted(idType);
+				defaultInterpolatedStringHandler.AppendLiteral("表存在不合法的");
+				defaultInterpolatedStringHandler.AppendFormatted(idType);
+				defaultInterpolatedStringHandler.AppendLiteral("ID");
+				string message = defaultInterpolatedStringHandler.ToStringAndClear();
+				<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
+				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>(idType + "Id", text);
+				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("表", dataTable.GetName());
+				instance.Error(flag, entity, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
+				continue;
+			}
+			if (isValid != null && !isValid(t))
+			{
+				CombatLog instance2 = CombatLog.Instance;
+				CombatLog.EDebugModule flag2 = CombatLog.EDebugModule.Skill;
+				Entity entity2 = base.Entity;
+				DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(11, 2);
+				defaultInterpolatedStringHandler.AppendLiteral("动态");
+				defaultInterpolatedStringHandler.AppendFormatted(idType);
+				defaultInterpolatedStringHandler.AppendLiteral("表存在不合法的");
+				defaultInterpolatedStringHandler.AppendFormatted(idType);
+				defaultInterpolatedStringHandler.AppendLiteral("ID");
+				string message2 = defaultInterpolatedStringHandler.ToStringAndClear();
+				<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray2 = default(<>y__InlineArray2<ValueTuple<string, object>>);
+				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 0) = new ValueTuple<string, object>(idType + "Id", text);
+				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 1) = new ValueTuple<string, object>("表", dataTable.GetName());
+				instance2.Error(flag2, entity2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 2));
+			}
+			else if (hashSet.Contains(t))
+			{
+				CombatLog instance3 = CombatLog.Instance;
+				CombatLog.EDebugModule flag3 = CombatLog.EDebugModule.Skill;
+				Entity entity3 = base.Entity;
+				DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(11, 2);
+				defaultInterpolatedStringHandler.AppendLiteral("动态");
+				defaultInterpolatedStringHandler.AppendFormatted(idType);
+				defaultInterpolatedStringHandler.AppendLiteral("表内存在重复的");
+				defaultInterpolatedStringHandler.AppendFormatted(idType);
+				defaultInterpolatedStringHandler.AppendLiteral("ID");
+				string message3 = defaultInterpolatedStringHandler.ToStringAndClear();
+				<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray3 = default(<>y__InlineArray2<ValueTuple<string, object>>);
+				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 0) = new ValueTuple<string, object>(idType + "Id", text);
+				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 1) = new ValueTuple<string, object>("表", dataTable.GetName());
+				instance3.Error(flag3, entity3, message3, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray3, 2));
+			}
+			else
+			{
+				hashSet.Add(t);
+				list2.Add(t);
 			}
 		}
 		return list2;
 	}
 
-	// Token: 0x0601B0D4 RID: 110804 RVA: 0x0075803C File Offset: 0x0075623C
+	// Token: 0x06018B32 RID: 101170 RVA: 0x0077E478 File Offset: 0x0077C678
 	private void InitBullet()
 	{
 		EEntityType entityType = this.CreatureDataComponent.GetEntityType();
@@ -605,7 +713,7 @@ public class RolePreloadComponent : EntityComponent, IStaticVariableResetter
 		this.InitAllBullet(false);
 	}
 
-	// Token: 0x0601B0D5 RID: 110805 RVA: 0x00758084 File Offset: 0x00756284
+	// Token: 0x06018B33 RID: 101171 RVA: 0x0077E4C0 File Offset: 0x0077C6C0
 	private void InitAllBullet(bool collectAsset)
 	{
 		SCharacterFightInfo fightInfo = this.FightInfo;
@@ -649,7 +757,7 @@ public class RolePreloadComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601B0D6 RID: 110806 RVA: 0x007581FC File Offset: 0x007563FC
+	// Token: 0x06018B34 RID: 101172 RVA: 0x0077E638 File Offset: 0x0077C838
 	[NullableContext(2)]
 	private unsafe bool InitBulletDataTable(UDataTable bulletDataTable, bool collectAsset = true)
 	{
@@ -692,7 +800,7 @@ public class RolePreloadComponent : EntityComponent, IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x0601B0D7 RID: 110807 RVA: 0x00758310 File Offset: 0x00756510
+	// Token: 0x06018B35 RID: 101173 RVA: 0x0077E74C File Offset: 0x0077C94C
 	private void InitHitEffect()
 	{
 		SCharacterFightInfo fightInfo = this.FightInfo;
@@ -719,7 +827,7 @@ public class RolePreloadComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601B0D8 RID: 110808 RVA: 0x00758418 File Offset: 0x00756618
+	// Token: 0x06018B36 RID: 101174 RVA: 0x0077E854 File Offset: 0x0077CA54
 	private void InitStateRepPerf()
 	{
 		EntityAssetElement entityAssetElement = this.EntityAssetElement;
@@ -770,7 +878,7 @@ public class RolePreloadComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601B0D9 RID: 110809 RVA: 0x007585A0 File Offset: 0x007567A0
+	// Token: 0x06018B37 RID: 101175 RVA: 0x0077E9DC File Offset: 0x0077CBDC
 	[NullableContext(2)]
 	private AssetElement CollectAssetBySkillId(int skillId)
 	{
@@ -781,7 +889,7 @@ public class RolePreloadComponent : EntityComponent, IStaticVariableResetter
 		return PreloadControllerNew.Instance.CollectAssetBySkillId(this.EntityAssetElement, skillId, false);
 	}
 
-	// Token: 0x0601B0DA RID: 110810 RVA: 0x007585CE File Offset: 0x007567CE
+	// Token: 0x06018B38 RID: 101176 RVA: 0x0077EA0A File Offset: 0x0077CC0A
 	[NullableContext(2)]
 	private AssetElement CollectAssetByBulletId(long bulletId)
 	{
@@ -792,7 +900,7 @@ public class RolePreloadComponent : EntityComponent, IStaticVariableResetter
 		return PreloadControllerNew.Instance.CollectAssetByBulletId(this.EntityAssetElement, bulletId);
 	}
 
-	// Token: 0x0601B0DB RID: 110811 RVA: 0x007585FC File Offset: 0x007567FC
+	// Token: 0x06018B39 RID: 101177 RVA: 0x0077EA38 File Offset: 0x0077CC38
 	public void PreInitMorph()
 	{
 		if (this.EntityAssetElement == null || this.FightInfo == null)
@@ -839,7 +947,7 @@ public class RolePreloadComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601B0DC RID: 110812 RVA: 0x00758790 File Offset: 0x00756990
+	// Token: 0x06018B3A RID: 101178 RVA: 0x0077EBD0 File Offset: 0x0077CDD0
 	private void InitVisionSkill()
 	{
 		this.InitGameplayExtraSkill();
@@ -853,7 +961,7 @@ public class RolePreloadComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601B0DD RID: 110813 RVA: 0x00758838 File Offset: 0x00756A38
+	// Token: 0x06018B3B RID: 101179 RVA: 0x0077EC78 File Offset: 0x0077CE78
 	private void OnMonsterBeginFight(int tagId, bool tagExists)
 	{
 		if (!tagExists)
@@ -874,7 +982,7 @@ public class RolePreloadComponent : EntityComponent, IStaticVariableResetter
 		this.InitSkillOnFight();
 	}
 
-	// Token: 0x0601B0DE RID: 110814 RVA: 0x007588A4 File Offset: 0x00756AA4
+	// Token: 0x06018B3C RID: 101180 RVA: 0x0077ECE4 File Offset: 0x0077CEE4
 	public bool IsEnableInitMorph()
 	{
 		SCharacterFightInfo fightInfo = this.FightInfo;
@@ -882,18 +990,18 @@ public class RolePreloadComponent : EntityComponent, IStaticVariableResetter
 		return tmap != null && tmap.Num() != 0;
 	}
 
-	// Token: 0x0601B0DF RID: 110815 RVA: 0x007588D4 File Offset: 0x00756AD4
+	// Token: 0x06018B3D RID: 101181 RVA: 0x0077ED14 File Offset: 0x0077CF14
 	public UniTask InitMorph()
 	{
-		RolePreloadComponent.<InitMorph>d__64 <InitMorph>d__;
+		RolePreloadComponent.<InitMorph>d__72 <InitMorph>d__;
 		<InitMorph>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<InitMorph>d__.<>4__this = this;
 		<InitMorph>d__.<>1__state = -1;
-		<InitMorph>d__.<>t__builder.Start<RolePreloadComponent.<InitMorph>d__64>(ref <InitMorph>d__);
+		<InitMorph>d__.<>t__builder.Start<RolePreloadComponent.<InitMorph>d__72>(ref <InitMorph>d__);
 		return <InitMorph>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601B0E0 RID: 110816 RVA: 0x00758918 File Offset: 0x00756B18
+	// Token: 0x06018B3E RID: 101182 RVA: 0x0077ED58 File Offset: 0x0077CF58
 	private void InitBulletOnFight()
 	{
 		foreach (long bulletId in this.SkillComponent.GetAllBulletId(EFightDataTableSourceType.Self | EFightDataTableSourceType.Extra))
@@ -902,7 +1010,7 @@ public class RolePreloadComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601B0E1 RID: 110817 RVA: 0x0075896C File Offset: 0x00756B6C
+	// Token: 0x06018B3F RID: 101183 RVA: 0x0077EDAC File Offset: 0x0077CFAC
 	private void InitSkillOnFight()
 	{
 		foreach (int skillId in this.SkillComponent.GetAllSkillId(EFightDataTableSourceType.Self | EFightDataTableSourceType.Extra))
@@ -911,33 +1019,33 @@ public class RolePreloadComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601B0E2 RID: 110818 RVA: 0x007589C0 File Offset: 0x00756BC0
+	// Token: 0x06018B40 RID: 101184 RVA: 0x0077EE00 File Offset: 0x0077D000
 	public IEnumerable<int> GetPreloadedSkillIds()
 	{
 		return this.EntityAssetElement.FightAssetManager.SkillAssetManager.SkillAssetMap.Keys;
 	}
 
-	// Token: 0x0601B0E3 RID: 110819 RVA: 0x007589DC File Offset: 0x00756BDC
+	// Token: 0x06018B41 RID: 101185 RVA: 0x0077EE1C File Offset: 0x0077D01C
 	public IReadOnlyList<ECharacterLoadType> GetCharacterLoadTypeList()
 	{
 		return this.CharacterLoadTypeList;
 	}
 
-	// Token: 0x0601B0E4 RID: 110820 RVA: 0x007589E4 File Offset: 0x00756BE4
+	// Token: 0x06018B42 RID: 101186 RVA: 0x0077EE24 File Offset: 0x0077D024
 	public static void CreateStaticDefaultValue()
 	{
 		RolePreloadComponent._timeLimit = new TimeLimit(new long?(5000L));
 		RolePreloadComponent._lastResetFrame = -1;
 	}
 
-	// Token: 0x0601B0E5 RID: 110821 RVA: 0x00758A01 File Offset: 0x00756C01
+	// Token: 0x06018B43 RID: 101187 RVA: 0x0077EE41 File Offset: 0x0077D041
 	public static void ResetStaticDefaultValue()
 	{
 		RolePreloadComponent._timeLimit = null;
 		RolePreloadComponent._lastResetFrame = -1;
 	}
 
-	// Token: 0x0601B0E6 RID: 110822 RVA: 0x00758A10 File Offset: 0x00756C10
+	// Token: 0x06018B44 RID: 101188 RVA: 0x0077EE50 File Offset: 0x0077D050
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -945,80 +1053,84 @@ public class RolePreloadComponent : EntityComponent, IStaticVariableResetter
 			return false;
 		}
 		RolePreloadComponent rolePreloadComponent = (RolePreloadComponent)componentTemplate;
-		if (base.CanResetComponentProperty("CreatureDataComponent"))
+		if (rolePreloadComponent.CreatureDataComponent == null)
 		{
-			if (rolePreloadComponent.CreatureDataComponent == null)
-			{
-				this.CreatureDataComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComponent), "CreatureDataComponent"))
-			{
-				return false;
-			}
+			this.CreatureDataComponent = null;
 		}
-		if (base.CanResetComponentProperty("SkillComponent"))
-		{
-			if (rolePreloadComponent.SkillComponent == null)
-			{
-				this.SkillComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseSkillComponent>(this.SkillComponent), "SkillComponent"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("EntityAssetElement"))
-		{
-			if (rolePreloadComponent.EntityAssetElement == null)
-			{
-				this.EntityAssetElement = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<EntityAssetElement>(this.EntityAssetElement), "EntityAssetElement"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("IsMonsterEnterFight"))
-		{
-			this.IsMonsterEnterFight = rolePreloadComponent.IsMonsterEnterFight;
-		}
-		if (base.CanResetComponentProperty("FightInfo"))
-		{
-			if (rolePreloadComponent.FightInfo == null)
-			{
-				this.FightInfo = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SCharacterFightInfo>(this.FightInfo), "FightInfo"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CharacterLoadTypeList") && rolePreloadComponent.CharacterLoadTypeList != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<ECharacterLoadType>>(this.CharacterLoadTypeList), "CharacterLoadTypeList"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComponent), "CreatureDataComponent"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("WaitLoadSkillList") && rolePreloadComponent.WaitLoadSkillList != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<int>>(this.WaitLoadSkillList), "WaitLoadSkillList"))
+		if (rolePreloadComponent.SkillComponent == null)
+		{
+			this.SkillComponent = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SkillComponent), "SkillComponent"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("WaitLoadBulletList") && rolePreloadComponent.WaitLoadBulletList != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<long>>(this.WaitLoadBulletList), "WaitLoadBulletList"))
+		if (rolePreloadComponent.EntityAssetElement == null)
+		{
+			this.EntityAssetElement = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.EntityAssetElement), "EntityAssetElement"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("ActiveDynamicFightDataTableRecords") && rolePreloadComponent.ActiveDynamicFightDataTableRecords != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<FightDataTableLoadRecord>(this.ActiveDynamicFightDataTableRecords), "ActiveDynamicFightDataTableRecords"))
+		this.IsMonsterEnterFight = rolePreloadComponent.IsMonsterEnterFight;
+		if (rolePreloadComponent.FightInfo == null)
+		{
+			this.FightInfo = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FightInfo), "FightInfo"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("IsInDungeon"))
+		if (rolePreloadComponent.CharacterLoadTypeList != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CharacterLoadTypeList), "CharacterLoadTypeList"))
 		{
-			this.IsInDungeon = rolePreloadComponent.IsInDungeon;
+			return false;
 		}
+		if (rolePreloadComponent.WaitLoadSkillList != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.WaitLoadSkillList), "WaitLoadSkillList"))
+		{
+			return false;
+		}
+		if (rolePreloadComponent.WaitLoadBulletList != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.WaitLoadBulletList), "WaitLoadBulletList"))
+		{
+			return false;
+		}
+		if (rolePreloadComponent.PreparedDynamicFightDataTableRecords != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<FightDataTableLoadRecord>(this.PreparedDynamicFightDataTableRecords), "PreparedDynamicFightDataTableRecords"))
+		{
+			return false;
+		}
+		if (rolePreloadComponent.ActiveDynamicFightDataTableRecords != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<FightDataTableLoadRecord>(this.ActiveDynamicFightDataTableRecords), "ActiveDynamicFightDataTableRecords"))
+		{
+			return false;
+		}
+		if (rolePreloadComponent.DynamicSkillReferences != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.DynamicSkillReferences), "DynamicSkillReferences"))
+		{
+			return false;
+		}
+		if (rolePreloadComponent.DynamicBulletReferences != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.DynamicBulletReferences), "DynamicBulletReferences"))
+		{
+			return false;
+		}
+		this.IsInDungeon = rolePreloadComponent.IsInDungeon;
 		return true;
 	}
 
-	// Token: 0x0601B0E8 RID: 110824 RVA: 0x00758C38 File Offset: 0x00756E38
+	// Token: 0x1700271D RID: 10013
+	// (get) Token: 0x06018B45 RID: 101189 RVA: 0x0077F028 File Offset: 0x0077D228
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x06018B47 RID: 101191 RVA: 0x0077F08C File Offset: 0x0077D28C
 	[CompilerGenerated]
-	private void <InitLoadType>g__ApplyLoadTypes|24_0()
+	private void <InitLoadType>g__ApplyLoadTypes|27_0()
 	{
 		EntityAssetElement entityAssetElement = this.EntityAssetElement;
 		if (entityAssetElement == null)
@@ -1028,7 +1140,7 @@ public class RolePreloadComponent : EntityComponent, IStaticVariableResetter
 		entityAssetElement.SetCharacterLoadTypes(this.CharacterLoadTypeList);
 	}
 
-	// Token: 0x0400D254 RID: 53844
+	// Token: 0x0400D678 RID: 54904
 	[StaticVariableRuleIgnore]
 	private static readonly HashSet<int> characterCommonSkillSet = new HashSet<int>
 	{
@@ -1045,87 +1157,129 @@ public class RolePreloadComponent : EntityComponent, IStaticVariableResetter
 		210030
 	};
 
-	// Token: 0x0400D255 RID: 53845
+	// Token: 0x0400D679 RID: 54905
 	private const long TIME_LIMIT_MICRO_SECOND = 5000L;
 
-	// Token: 0x0400D256 RID: 53846
+	// Token: 0x0400D67A RID: 54906
 	[Nullable(2)]
 	private CreatureDataComponent CreatureDataComponent;
 
-	// Token: 0x0400D257 RID: 53847
+	// Token: 0x0400D67B RID: 54907
 	[Nullable(2)]
 	private BaseSkillComponent SkillComponent;
 
-	// Token: 0x0400D258 RID: 53848
+	// Token: 0x0400D67C RID: 54908
 	[Nullable(2)]
 	private EntityAssetElement EntityAssetElement;
 
-	// Token: 0x0400D259 RID: 53849
+	// Token: 0x0400D67D RID: 54909
 	private bool IsMonsterEnterFight;
 
-	// Token: 0x0400D25A RID: 53850
+	// Token: 0x0400D67E RID: 54910
 	[Nullable(2)]
 	private SCharacterFightInfo FightInfo;
 
-	// Token: 0x0400D25B RID: 53851
+	// Token: 0x0400D67F RID: 54911
 	private readonly List<ECharacterLoadType> CharacterLoadTypeList = new List<ECharacterLoadType>();
 
-	// Token: 0x0400D25C RID: 53852
+	// Token: 0x0400D680 RID: 54912
 	private readonly List<int> WaitLoadSkillList = new List<int>();
 
-	// Token: 0x0400D25D RID: 53853
+	// Token: 0x0400D681 RID: 54913
 	private readonly List<long> WaitLoadBulletList = new List<long>();
 
-	// Token: 0x0400D25E RID: 53854
+	// Token: 0x0400D682 RID: 54914
+	private readonly HashSet<FightDataTableLoadRecord> PreparedDynamicFightDataTableRecords = new HashSet<FightDataTableLoadRecord>();
+
+	// Token: 0x0400D683 RID: 54915
 	private readonly HashSet<FightDataTableLoadRecord> ActiveDynamicFightDataTableRecords = new HashSet<FightDataTableLoadRecord>();
 
-	// Token: 0x0400D25F RID: 53855
+	// Token: 0x0400D684 RID: 54916
+	private readonly Dictionary<int, DynamicResourceReference> DynamicSkillReferences = new Dictionary<int, DynamicResourceReference>();
+
+	// Token: 0x0400D685 RID: 54917
+	private readonly Dictionary<long, DynamicResourceReference> DynamicBulletReferences = new Dictionary<long, DynamicResourceReference>();
+
+	// Token: 0x0400D686 RID: 54918
 	[Nullable(2)]
 	private static TimeLimit _timeLimit;
 
-	// Token: 0x0400D260 RID: 53856
+	// Token: 0x0400D687 RID: 54919
 	private static int _lastResetFrame;
 
-	// Token: 0x0400D261 RID: 53857
+	// Token: 0x0400D688 RID: 54920
 	private bool IsInDungeon;
 
-	// Token: 0x0400D262 RID: 53858
+	// Token: 0x0400D689 RID: 54921
 	[StaticVariableRuleIgnore]
 	private static readonly Stat PreloadInit = Stat.Create("Preload.InitPreload", "", "");
 
-	// Token: 0x0400D263 RID: 53859
+	// Token: 0x0400D68A RID: 54922
 	[StaticVariableRuleIgnore]
 	private static readonly Stat PreloadSkill = Stat.Create("Preload.PreloadSkill", "", "");
 
-	// Token: 0x0400D264 RID: 53860
+	// Token: 0x0400D68B RID: 54923
 	[StaticVariableRuleIgnore]
 	private static readonly Stat PreloadBullet1 = Stat.Create("Preload.PreloadBullet1", "", "");
 
-	// Token: 0x0400D265 RID: 53861
+	// Token: 0x0400D68C RID: 54924
 	[StaticVariableRuleIgnore]
 	private static readonly Stat PreloadBullet2 = Stat.Create("Preload.PreloadBullet2", "", "");
 
-	// Token: 0x0400D266 RID: 53862
+	// Token: 0x0400D68D RID: 54925
 	[StaticVariableRuleIgnore]
 	private static readonly Stat PreloadBulletGetDataTableAllRow = Stat.Create("Preload.PreloadBulletGetDataTableAllRow", "", "");
 
-	// Token: 0x0400D267 RID: 53863
+	// Token: 0x0400D68E RID: 54926
 	[StaticVariableRuleIgnore]
 	private static readonly Stat PreloadBulletAsync = Stat.Create("Preload.LoadBulletAsync", "", "");
 
-	// Token: 0x0400D268 RID: 53864
+	// Token: 0x0400D68F RID: 54927
 	[StaticVariableRuleIgnore]
 	private static readonly Stat PreloadSkillAsync = Stat.Create("Preload.LoadSkillAsync", "", "");
 
-	// Token: 0x0400D269 RID: 53865
+	// Token: 0x0400D690 RID: 54928
 	[StaticVariableRuleIgnore]
 	private static readonly Stat PreloadHitEffect = Stat.Create("Preload.PreloadHitEffect", "", "");
 
-	// Token: 0x0400D26A RID: 53866
+	// Token: 0x0400D691 RID: 54929
+	[StaticVariableRuleIgnore]
+	private static readonly Stat PrepareDynamicFightDataTablesStat = Stat.Create("Preload.PrepareDynamicFightDataTables", "", "");
+
+	// Token: 0x0400D692 RID: 54930
+	[StaticVariableRuleIgnore]
+	private static readonly Stat SwitchDynamicFightDataTablesStat = Stat.Create("Preload.SwitchDynamicFightDataTables", "", "");
+
+	// Token: 0x0400D693 RID: 54931
+	[StaticVariableRuleIgnore]
+	private static readonly Stat ReleaseDynamicFightDataTablesStat = Stat.Create("Preload.ReleaseDynamicFightDataTables", "", "");
+
+	// Token: 0x0400D694 RID: 54932
 	[StaticVariableRuleIgnore]
 	private static readonly Stat PreloadMorphCollectAssetByModelId = Stat.Create("Preload.PreloadMorphCollectAssetByModelId", "", "");
 
-	// Token: 0x0400D26B RID: 53867
+	// Token: 0x0400D695 RID: 54933
 	[StaticVariableRuleIgnore]
 	private static readonly Stat PreloadMorphLoadAssetAsync = Stat.Create("Preload.PreloadMorphLoadAssetAsync", "", "");
+
+	// Token: 0x020088B7 RID: 34999
+	[CompilerGenerated]
+	private static class <>O
+	{
+		// Token: 0x0402BAEC RID: 178924
+		[Nullable(new byte[]
+		{
+			0,
+			1
+		})]
+		public static Func<string, int> <0>__Parse;
+
+		// Token: 0x0402BAED RID: 178925
+		[Nullable(new byte[]
+		{
+			0,
+			1
+		})]
+		public static Func<string, long> <1>__Parse;
+	}
 }

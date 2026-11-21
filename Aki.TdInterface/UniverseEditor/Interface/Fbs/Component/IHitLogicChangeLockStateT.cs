@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005396 RID: 21398
+	// Token: 0x0200591C RID: 22812
 	public class IHitLogicChangeLockStateT
 	{
-		// Token: 0x17009D3D RID: 40253
-		// (get) Token: 0x060230B6 RID: 143542 RVA: 0x004DA36A File Offset: 0x004D856A
-		// (set) Token: 0x060230B7 RID: 143543 RVA: 0x004DA372 File Offset: 0x004D8572
+		// Token: 0x1700A575 RID: 42357
+		// (get) Token: 0x0602516A RID: 151914 RVA: 0x0051723E File Offset: 0x0051543E
+		// (set) Token: 0x0602516B RID: 151915 RVA: 0x00517246 File Offset: 0x00515446
 		public EHitLogicType Type { get; set; }
 
-		// Token: 0x060230B8 RID: 143544 RVA: 0x004DA37B File Offset: 0x004D857B
+		// Token: 0x0602516C RID: 151916 RVA: 0x0051724F File Offset: 0x0051544F
 		public IHitLogicChangeLockStateT()
 		{
 			this.Type = EHitLogicType.ChangeNextState;

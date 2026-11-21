@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000150 RID: 336
+	// Token: 0x0200015F RID: 351
 	public class ConfigChatExpressionGroupAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060007E1 RID: 2017 RVA: 0x000862AC File Offset: 0x000844AC
+		// Token: 0x0600083B RID: 2107 RVA: 0x0008BC10 File Offset: 0x00089E10
 		static ConfigChatExpressionGroupAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigChatExpressionGroupAll.CreateStaticDefaultValue), new Action(ConfigChatExpressionGroupAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060007E2 RID: 2018 RVA: 0x000862CC File Offset: 0x000844CC
+		// Token: 0x0600083C RID: 2108 RVA: 0x0008BC30 File Offset: 0x00089E30
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigChatExpressionGroupAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060007E3 RID: 2019 RVA: 0x0008634B File Offset: 0x0008454B
+		// Token: 0x0600083D RID: 2109 RVA: 0x0008BCAF File Offset: 0x00089EAF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigChatExpressionGroupAll.LogPair = null;
 			ConfigChatExpressionGroupAll.HandleId = 0;
 		}
 
-		// Token: 0x060007E4 RID: 2020 RVA: 0x00086359 File Offset: 0x00084559
+		// Token: 0x0600083E RID: 2110 RVA: 0x0008BCBD File Offset: 0x00089EBD
 		public static void Init()
 		{
 			ConfigChatExpressionGroupAll.HandleId = ConfigCommon.InitDataStatement(ConfigChatExpressionGroupAll.HandleId, "db_chat.db", "select BinData from `ChatExpressionGroup`");
 		}
 
-		// Token: 0x060007E5 RID: 2021 RVA: 0x00086374 File Offset: 0x00084574
+		// Token: 0x0600083F RID: 2111 RVA: 0x0008BCD8 File Offset: 0x00089ED8
 		[NullableContext(2)]
 		public static IReadOnlyList<ChatExpressionGroup> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04000914 RID: 2324
+		// Token: 0x0400097D RID: 2429
 		private const string DB = "db_chat.db";
 
-		// Token: 0x04000915 RID: 2325
+		// Token: 0x0400097E RID: 2430
 		private const string FILE = "l.聊天.xlsx";
 
-		// Token: 0x04000916 RID: 2326
+		// Token: 0x0400097F RID: 2431
 		private const string TABLE = "ChatExpressionGroup";
 
-		// Token: 0x04000917 RID: 2327
+		// Token: 0x04000980 RID: 2432
 		private const string COMMAND = "select BinData from `ChatExpressionGroup`";
 
-		// Token: 0x04000918 RID: 2328
+		// Token: 0x04000981 RID: 2433
 		private const string KEY_PREFIX = "ChatExpressionGroupAll";
 
-		// Token: 0x04000919 RID: 2329
+		// Token: 0x04000982 RID: 2434
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400091A RID: 2330
+		// Token: 0x04000983 RID: 2435
 		private static int HandleId;
 	}
 }

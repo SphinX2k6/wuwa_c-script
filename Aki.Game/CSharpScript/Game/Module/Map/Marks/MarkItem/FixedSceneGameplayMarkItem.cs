@@ -9,65 +9,81 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 {
-	// Token: 0x020054E5 RID: 21733
+	// Token: 0x020044B8 RID: 17592
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FixedSceneGameplayMarkItem : ConfigMarkItem
 	{
-		// Token: 0x060377DC RID: 227292 RVA: 0x00D2DF22 File Offset: 0x00D2C122
+		// Token: 0x0602C698 RID: 181912 RVA: 0x00C7C002 File Offset: 0x00C7A202
 		public FixedSceneGameplayMarkItem(int markId, MapMark markConfig, UUIItem parent, EMapType mapType, float markScale, ETrackSource trackSource = ETrackSource.MapMark) : base(markId, markConfig, parent, mapType, markScale, new ETrackSource?(trackSource))
 		{
 		}
 
-		// Token: 0x060377DD RID: 227293 RVA: 0x00D2DF38 File Offset: 0x00D2C138
+		// Token: 0x0602C699 RID: 181913 RVA: 0x00C7C018 File Offset: 0x00C7A218
 		protected override EMarkItemViewType GetMarkItemViewType()
 		{
 			return EMarkItemViewType.FixedSceneGamePlayMarkItemView;
 		}
 
-		// Token: 0x060377DE RID: 227294 RVA: 0x00D2DF3C File Offset: 0x00D2C13C
+		// Token: 0x0602C69A RID: 181914 RVA: 0x00C7C01C File Offset: 0x00C7A21C
 		[PreserveBaseOverrides]
 		protected new virtual FixedSceneGamePlayMarkItemView CreateView()
 		{
 			return new FixedSceneGamePlayMarkItemView(this);
 		}
 
-		// Token: 0x060377DF RID: 227295 RVA: 0x00D2DF44 File Offset: 0x00D2C144
+		// Token: 0x0602C69B RID: 181915 RVA: 0x00C7C024 File Offset: 0x00C7A224
 		protected override void OnInitialize()
 		{
 			base.OnInitialize();
 			this.UpdateMultiMapFloorSelectedState();
 		}
 
-		// Token: 0x060377E0 RID: 227296 RVA: 0x00D2DF54 File Offset: 0x00D2C154
+		// Token: 0x0602C69C RID: 181916 RVA: 0x00C7C034 File Offset: 0x00C7A234
 		protected override void InitIcon()
 		{
-			LevelPlayInfo levelPlayInfo = LevelPlayModel.Instance.GetLevelPlayInfo((this.MarkConfig != null) ? this.MarkConfig.GetValueOrDefault().RelativeId : 0);
+			LevelPlayModel instance = LevelPlayModel.Instance;
+			MapMark? markConfig = base.MarkConfig;
+			LevelPlayInfo levelPlayInfo = instance.GetLevelPlayInfo((markConfig != null) ? markConfig.GetValueOrDefault().RelativeId : 0);
 			if (levelPlayInfo == null || levelPlayInfo.IsClose)
 			{
-				this.IconPath = (((this.MarkConfig != null) ? this.MarkConfig.GetValueOrDefault().LockMarkPic : null) ?? "");
+				markConfig = base.MarkConfig;
+				this.IconPath = (((markConfig != null) ? markConfig.GetValueOrDefault().LockMarkPic : null) ?? "");
 				return;
 			}
-			this.IconPath = (((this.MarkConfig != null) ? this.MarkConfig.GetValueOrDefault().UnlockMarkPic : null) ?? "");
+			markConfig = base.MarkConfig;
+			this.IconPath = (((markConfig != null) ? markConfig.GetValueOrDefault().UnlockMarkPic : null) ?? "");
 		}
 
-		// Token: 0x060377E1 RID: 227297 RVA: 0x00D2DFF4 File Offset: 0x00D2C1F4
+		// Token: 0x170058CF RID: 22735
+		// (get) Token: 0x0602C69D RID: 181917 RVA: 0x00C7C0DC File Offset: 0x00C7A2DC
+		public override bool IsGamePlayFinishWithReward
+		{
+			get
+			{
+				return false;
+			}
+		}
+
+		// Token: 0x0602C69E RID: 181918 RVA: 0x00C7C0E0 File Offset: 0x00C7A2E0
 		public override bool IsMultiMap()
 		{
-			return this.MarkConfig == null || this.MarkConfig.GetValueOrDefault().MultiMapFloorId != 0;
+			MapMark? mapMark;
+			return base.MarkConfig == null || mapMark.GetValueOrDefault().MultiMapFloorId != 0;
 		}
 
-		// Token: 0x060377E2 RID: 227298 RVA: 0x00D2E024 File Offset: 0x00D2C224
+		// Token: 0x0602C69F RID: 181919 RVA: 0x00C7C114 File Offset: 0x00C7A314
 		public override int GetMultiMapId()
 		{
-			if (this.MarkConfig == null)
+			if (base.MarkConfig == null)
 			{
 				return 0;
 			}
-			return this.MarkConfig.GetValueOrDefault().MultiMapFloorId;
+			MapMark? mapMark;
+			return mapMark.GetValueOrDefault().MultiMapFloorId;
 		}
 
-		// Token: 0x060377E3 RID: 227299 RVA: 0x00D2E04F File Offset: 0x00D2C24F
+		// Token: 0x0602C6A0 RID: 181920 RVA: 0x00C7C142 File Offset: 0x00C7A342
 		protected override void OnUpdate(global::Vector playerLocation)
 		{
 			base.OnUpdate(playerLocation);
@@ -77,7 +93,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			}
 		}
 
-		// Token: 0x060377E4 RID: 227300 RVA: 0x00D2E067 File Offset: 0x00D2C267
+		// Token: 0x0602C6A1 RID: 181921 RVA: 0x00C7C15A File Offset: 0x00C7A35A
 		private void UpdateMultiMapFloorSelectedState()
 		{
 			bool isSelectThisFloor = base.IsSelectThisFloor;
@@ -88,7 +104,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			}
 		}
 
-		// Token: 0x060377E5 RID: 227301 RVA: 0x00D2E089 File Offset: 0x00D2C289
+		// Token: 0x0602C6A2 RID: 181922 RVA: 0x00C7C17C File Offset: 0x00C7A37C
 		public override ESecondaryPanel GetSecondaryUiType()
 		{
 			if (this.MarkType == EMarkType.CorniceMeeting)

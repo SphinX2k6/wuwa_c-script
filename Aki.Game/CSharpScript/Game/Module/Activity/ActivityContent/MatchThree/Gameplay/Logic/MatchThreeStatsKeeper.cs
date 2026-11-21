@@ -4,63 +4,63 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Logic
 {
-	// Token: 0x020064F6 RID: 25846
+	// Token: 0x02005474 RID: 21620
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MatchThreeStatsKeeper : ISolvedSequencesConsumer
 	{
-		// Token: 0x170094F6 RID: 38134
-		// (get) Token: 0x06040E23 RID: 265763 RVA: 0x00FB9CE8 File Offset: 0x00FB7EE8
-		// (set) Token: 0x06040E24 RID: 265764 RVA: 0x00FB9CF0 File Offset: 0x00FB7EF0
+		// Token: 0x17006858 RID: 26712
+		// (get) Token: 0x06035AE7 RID: 219879 RVA: 0x00F00D18 File Offset: 0x00EFEF18
+		// (set) Token: 0x06035AE8 RID: 219880 RVA: 0x00F00D20 File Offset: 0x00EFEF20
 		public int BigSkillCount { get; private set; }
 
-		// Token: 0x170094F7 RID: 38135
-		// (get) Token: 0x06040E25 RID: 265765 RVA: 0x00FB9CF9 File Offset: 0x00FB7EF9
-		// (set) Token: 0x06040E26 RID: 265766 RVA: 0x00FB9D01 File Offset: 0x00FB7F01
+		// Token: 0x17006859 RID: 26713
+		// (get) Token: 0x06035AE9 RID: 219881 RVA: 0x00F00D29 File Offset: 0x00EFEF29
+		// (set) Token: 0x06035AEA RID: 219882 RVA: 0x00F00D31 File Offset: 0x00EFEF31
 		public int SmallSkillCount { get; private set; }
 
-		// Token: 0x170094F8 RID: 38136
-		// (get) Token: 0x06040E27 RID: 265767 RVA: 0x00FB9D0A File Offset: 0x00FB7F0A
-		// (set) Token: 0x06040E28 RID: 265768 RVA: 0x00FB9D12 File Offset: 0x00FB7F12
+		// Token: 0x1700685A RID: 26714
+		// (get) Token: 0x06035AEB RID: 219883 RVA: 0x00F00D3A File Offset: 0x00EFEF3A
+		// (set) Token: 0x06035AEC RID: 219884 RVA: 0x00F00D42 File Offset: 0x00EFEF42
 		public int GeneratedBombCount { get; private set; }
 
-		// Token: 0x170094F9 RID: 38137
-		// (get) Token: 0x06040E29 RID: 265769 RVA: 0x00FB9D1B File Offset: 0x00FB7F1B
-		// (set) Token: 0x06040E2A RID: 265770 RVA: 0x00FB9D23 File Offset: 0x00FB7F23
+		// Token: 0x1700685B RID: 26715
+		// (get) Token: 0x06035AED RID: 219885 RVA: 0x00F00D4B File Offset: 0x00EFEF4B
+		// (set) Token: 0x06035AEE RID: 219886 RVA: 0x00F00D53 File Offset: 0x00EFEF53
 		public int GeneratedCrossCount { get; private set; }
 
-		// Token: 0x170094FA RID: 38138
-		// (get) Token: 0x06040E2B RID: 265771 RVA: 0x00FB9D2C File Offset: 0x00FB7F2C
-		// (set) Token: 0x06040E2C RID: 265772 RVA: 0x00FB9D34 File Offset: 0x00FB7F34
+		// Token: 0x1700685C RID: 26716
+		// (get) Token: 0x06035AEF RID: 219887 RVA: 0x00F00D5C File Offset: 0x00EFEF5C
+		// (set) Token: 0x06035AF0 RID: 219888 RVA: 0x00F00D64 File Offset: 0x00EFEF64
 		public int GeneratedUltimateCount { get; private set; }
 
-		// Token: 0x170094FB RID: 38139
-		// (get) Token: 0x06040E2D RID: 265773 RVA: 0x00FB9D3D File Offset: 0x00FB7F3D
-		// (set) Token: 0x06040E2E RID: 265774 RVA: 0x00FB9D45 File Offset: 0x00FB7F45
+		// Token: 0x1700685D RID: 26717
+		// (get) Token: 0x06035AF1 RID: 219889 RVA: 0x00F00D6D File Offset: 0x00EFEF6D
+		// (set) Token: 0x06035AF2 RID: 219890 RVA: 0x00F00D75 File Offset: 0x00EFEF75
 		public int ClearedBombCount { get; private set; }
 
-		// Token: 0x170094FC RID: 38140
-		// (get) Token: 0x06040E2F RID: 265775 RVA: 0x00FB9D4E File Offset: 0x00FB7F4E
-		// (set) Token: 0x06040E30 RID: 265776 RVA: 0x00FB9D56 File Offset: 0x00FB7F56
+		// Token: 0x1700685E RID: 26718
+		// (get) Token: 0x06035AF3 RID: 219891 RVA: 0x00F00D7E File Offset: 0x00EFEF7E
+		// (set) Token: 0x06035AF4 RID: 219892 RVA: 0x00F00D86 File Offset: 0x00EFEF86
 		public int ClearedCrossCount { get; private set; }
 
-		// Token: 0x170094FD RID: 38141
-		// (get) Token: 0x06040E31 RID: 265777 RVA: 0x00FB9D5F File Offset: 0x00FB7F5F
-		// (set) Token: 0x06040E32 RID: 265778 RVA: 0x00FB9D67 File Offset: 0x00FB7F67
+		// Token: 0x1700685F RID: 26719
+		// (get) Token: 0x06035AF5 RID: 219893 RVA: 0x00F00D8F File Offset: 0x00EFEF8F
+		// (set) Token: 0x06035AF6 RID: 219894 RVA: 0x00F00D97 File Offset: 0x00EFEF97
 		public int ClearedUltimateCount { get; private set; }
 
-		// Token: 0x170094FE RID: 38142
-		// (get) Token: 0x06040E33 RID: 265779 RVA: 0x00FB9D70 File Offset: 0x00FB7F70
-		// (set) Token: 0x06040E34 RID: 265780 RVA: 0x00FB9D78 File Offset: 0x00FB7F78
+		// Token: 0x17006860 RID: 26720
+		// (get) Token: 0x06035AF7 RID: 219895 RVA: 0x00F00DA0 File Offset: 0x00EFEFA0
+		// (set) Token: 0x06035AF8 RID: 219896 RVA: 0x00F00DA8 File Offset: 0x00EFEFA8
 		public int MaxSegmentScore { get; private set; }
 
-		// Token: 0x170094FF RID: 38143
-		// (get) Token: 0x06040E35 RID: 265781 RVA: 0x00FB9D81 File Offset: 0x00FB7F81
-		// (set) Token: 0x06040E36 RID: 265782 RVA: 0x00FB9D89 File Offset: 0x00FB7F89
+		// Token: 0x17006861 RID: 26721
+		// (get) Token: 0x06035AF9 RID: 219897 RVA: 0x00F00DB1 File Offset: 0x00EFEFB1
+		// (set) Token: 0x06035AFA RID: 219898 RVA: 0x00F00DB9 File Offset: 0x00EFEFB9
 		public int HourglassTurnGain { get; private set; }
 
-		// Token: 0x17009500 RID: 38144
-		// (get) Token: 0x06040E37 RID: 265783 RVA: 0x00FB9D92 File Offset: 0x00FB7F92
+		// Token: 0x17006862 RID: 26722
+		// (get) Token: 0x06035AFB RID: 219899 RVA: 0x00F00DC2 File Offset: 0x00EFEFC2
 		public IReadOnlyList<int> RoundCountByGrade
 		{
 			get
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x06040E38 RID: 265784 RVA: 0x00FB9D9C File Offset: 0x00FB7F9C
+		// Token: 0x06035AFC RID: 219900 RVA: 0x00F00DCC File Offset: 0x00EFEFCC
 		public void AddSkillCast(bool isUltimate)
 		{
 			int num;
@@ -83,42 +83,42 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.SmallSkillCount = num + 1;
 		}
 
-		// Token: 0x06040E39 RID: 265785 RVA: 0x00FB9DD0 File Offset: 0x00FB7FD0
+		// Token: 0x06035AFD RID: 219901 RVA: 0x00F00E00 File Offset: 0x00EFF000
 		public void AddGeneratedBomb()
 		{
 			int generatedBombCount = this.GeneratedBombCount;
 			this.GeneratedBombCount = generatedBombCount + 1;
 		}
 
-		// Token: 0x06040E3A RID: 265786 RVA: 0x00FB9DF0 File Offset: 0x00FB7FF0
+		// Token: 0x06035AFE RID: 219902 RVA: 0x00F00E20 File Offset: 0x00EFF020
 		public void AddGeneratedCross()
 		{
 			int generatedCrossCount = this.GeneratedCrossCount;
 			this.GeneratedCrossCount = generatedCrossCount + 1;
 		}
 
-		// Token: 0x06040E3B RID: 265787 RVA: 0x00FB9E10 File Offset: 0x00FB8010
+		// Token: 0x06035AFF RID: 219903 RVA: 0x00F00E40 File Offset: 0x00EFF040
 		public void AddGeneratedUltimate()
 		{
 			int generatedUltimateCount = this.GeneratedUltimateCount;
 			this.GeneratedUltimateCount = generatedUltimateCount + 1;
 		}
 
-		// Token: 0x06040E3C RID: 265788 RVA: 0x00FB9E30 File Offset: 0x00FB8030
+		// Token: 0x06035B00 RID: 219904 RVA: 0x00F00E60 File Offset: 0x00EFF060
 		public void AddClearedBomb()
 		{
 			int clearedBombCount = this.ClearedBombCount;
 			this.ClearedBombCount = clearedBombCount + 1;
 		}
 
-		// Token: 0x06040E3D RID: 265789 RVA: 0x00FB9E50 File Offset: 0x00FB8050
+		// Token: 0x06035B01 RID: 219905 RVA: 0x00F00E80 File Offset: 0x00EFF080
 		public void AddClearedCross()
 		{
 			int clearedCrossCount = this.ClearedCrossCount;
 			this.ClearedCrossCount = clearedCrossCount + 1;
 		}
 
-		// Token: 0x06040E3E RID: 265790 RVA: 0x00FB9E70 File Offset: 0x00FB8070
+		// Token: 0x06035B02 RID: 219906 RVA: 0x00F00EA0 File Offset: 0x00EFF0A0
 		public void OnSequencesSolved(SolvedData solved)
 		{
 			this.MaxSegmentScore = Math.Max(this.MaxSegmentScore, solved.SegmentScore);
@@ -135,13 +135,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x06040E3F RID: 265791 RVA: 0x00FB9EEC File Offset: 0x00FB80EC
+		// Token: 0x06035B03 RID: 219907 RVA: 0x00F00F1C File Offset: 0x00EFF11C
 		public void BeginTurn()
 		{
 			this.TurnScore = 0;
 		}
 
-		// Token: 0x06040E40 RID: 265792 RVA: 0x00FB9EF8 File Offset: 0x00FB80F8
+		// Token: 0x06035B04 RID: 219908 RVA: 0x00F00F28 File Offset: 0x00EFF128
 		public unsafe void CountTurnGrade()
 		{
 			if (this.TurnScore <= 0)
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			array[num2]++;
 		}
 
-		// Token: 0x06040E41 RID: 265793 RVA: 0x00FB9FCB File Offset: 0x00FB81CB
+		// Token: 0x06035B05 RID: 219909 RVA: 0x00F00FFB File Offset: 0x00EFF1FB
 		private int[] EnsureGradeRoundCounts()
 		{
 			if (this.GradeRoundCounts.Length == 0)
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return this.GradeRoundCounts;
 		}
 
-		// Token: 0x06040E42 RID: 265794 RVA: 0x00FB9FF4 File Offset: 0x00FB81F4
+		// Token: 0x06035B06 RID: 219910 RVA: 0x00F01024 File Offset: 0x00EFF224
 		public void Reset()
 		{
 			this.BigSkillCount = 0;
@@ -195,10 +195,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.GradeRoundCounts = Array.Empty<int>();
 		}
 
-		// Token: 0x04021D2C RID: 138540
+		// Token: 0x0401C65D RID: 116317
 		private int[] GradeRoundCounts = Array.Empty<int>();
 
-		// Token: 0x04021D2D RID: 138541
+		// Token: 0x0401C65E RID: 116318
 		private int TurnScore;
 	}
 }

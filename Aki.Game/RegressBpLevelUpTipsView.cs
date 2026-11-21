@@ -5,16 +5,16 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200147F RID: 5247
+// Token: 0x02000933 RID: 2355
 public class RegressBpLevelUpTipsView : UiViewBase
 {
-	// Token: 0x0600946C RID: 37996 RVA: 0x001FF4B3 File Offset: 0x001FD6B3
+	// Token: 0x06006801 RID: 26625 RVA: 0x00208417 File Offset: 0x00206617
 	[NullableContext(1)]
 	public RegressBpLevelUpTipsView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600946D RID: 37997 RVA: 0x001FF4BC File Offset: 0x001FD6BC
+	// Token: 0x06006802 RID: 26626 RVA: 0x00208420 File Offset: 0x00206620
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -32,7 +32,7 @@ public class RegressBpLevelUpTipsView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600946E RID: 37998 RVA: 0x001FF568 File Offset: 0x001FD768
+	// Token: 0x06006803 RID: 26627 RVA: 0x002084CC File Offset: 0x002066CC
 	protected override void OnStart()
 	{
 		IRegressBpLevelUpTipsData regressBpLevelUpTipsData = this.OpenParam as IRegressBpLevelUpTipsData;
@@ -84,19 +84,19 @@ public class RegressBpLevelUpTipsView : UiViewBase
 		}, 2000f, null, null, true, 1f);
 	}
 
-	// Token: 0x02007AA1 RID: 31393
+	// Token: 0x02006C25 RID: 27685
 	private class ELevelUpTipsComponents
 	{
-		// Token: 0x0402858E RID: 165262
+		// Token: 0x040238A8 RID: 145576
 		public const int TxtCurLevel = 0;
 
-		// Token: 0x0402858F RID: 165263
+		// Token: 0x040238A9 RID: 145577
 		public const int TxtTargetLevel = 1;
 
-		// Token: 0x04028590 RID: 165264
+		// Token: 0x040238AA RID: 145578
 		public const int PanelLevelUpDesc = 2;
 
-		// Token: 0x04028591 RID: 165265
+		// Token: 0x040238AB RID: 145579
 		public const int TxtOpenTips = 3;
 	}
 }

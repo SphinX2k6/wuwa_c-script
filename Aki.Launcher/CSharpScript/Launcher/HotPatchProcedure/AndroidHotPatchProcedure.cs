@@ -9,16 +9,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.HotPatchProcedure
 {
-	// Token: 0x020001D2 RID: 466
+	// Token: 0x020001D6 RID: 470
 	public class AndroidHotPatchProcedure : MobileHotPatchProcedure
 	{
-		// Token: 0x06000C5D RID: 3165 RVA: 0x0004BF49 File Offset: 0x0004A149
+		// Token: 0x06000C94 RID: 3220 RVA: 0x0004E75D File Offset: 0x0004C95D
 		[NullableContext(1)]
 		public AndroidHotPatchProcedure(AppPathMisc pathMisc, HotFixManager viewMgr) : base(pathMisc, viewMgr)
 		{
 		}
 
-		// Token: 0x06000C5E RID: 3166 RVA: 0x0004BF54 File Offset: 0x0004A154
+		// Token: 0x06000C95 RID: 3221 RVA: 0x0004E768 File Offset: 0x0004C968
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -36,7 +36,7 @@ namespace CSharpScript.Launcher.HotPatchProcedure
 			return <RequestAndroidPermissions>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000C5F RID: 3167 RVA: 0x0004BF98 File Offset: 0x0004A198
+		// Token: 0x06000C96 RID: 3222 RVA: 0x0004E7AC File Offset: 0x0004C9AC
 		public override UniTask<bool> Start()
 		{
 			AndroidHotPatchProcedure.<Start>d__2 <Start>d__;

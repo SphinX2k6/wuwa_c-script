@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E21 RID: 7713
+	// Token: 0x02002054 RID: 8276
 	public class ISetGlobalTimeScaleType_SetValue
 	{
-		// Token: 0x040062B8 RID: 25272
+		// Token: 0x0400688F RID: 26767
 		public ESetTimeScaleType Type;
 	}
 }

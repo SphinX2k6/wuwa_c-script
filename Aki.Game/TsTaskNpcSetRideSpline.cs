@@ -11,9 +11,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/NPC/TsTaskNpcSetRideSpline.TsTaskNpcSetRideSpline_C")]
 public class TsTaskNpcSetRideSpline : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170000F5 RID: 245
-	// (get) Token: 0x0600060E RID: 1550 RVA: 0x0001E2E1 File Offset: 0x0001C4E1
-	// (set) Token: 0x0600060F RID: 1551 RVA: 0x0001E2F1 File Offset: 0x0001C4F1
+	// Token: 0x170000F7 RID: 247
+	// (get) Token: 0x06000612 RID: 1554 RVA: 0x0001EEE1 File Offset: 0x0001D0E1
+	// (set) Token: 0x06000613 RID: 1555 RVA: 0x0001EEF1 File Offset: 0x0001D0F1
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int SplineEntityPbDataId
 	{
@@ -27,30 +27,27 @@ public class TsTaskNpcSetRideSpline : TsTaskAbortImmediatelyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x06000610 RID: 1552 RVA: 0x0001E304 File Offset: 0x0001C504
+	// Token: 0x06000614 RID: 1556 RVA: 0x0001EF04 File Offset: 0x0001D104
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveExecuteAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskNpcSetRideSpline) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveExecuteAI"), TsTaskNpcSetRideSpline.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			this.ReceiveExecuteAI_Implementation(ownerController, controlledPawn);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000611 RID: 1553 RVA: 0x0001E3A0 File Offset: 0x0001C5A0
+	// Token: 0x06000615 RID: 1557 RVA: 0x0001EFB4 File Offset: 0x0001D1B4
 	[NullableContext(2)]
 	protected unsafe virtual void ReceiveExecuteAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -116,7 +113,7 @@ public class TsTaskNpcSetRideSpline : TsTaskAbortImmediatelyBase, IUnrealUObject
 		base.FinishExecute(true);
 	}
 
-	// Token: 0x06000612 RID: 1554 RVA: 0x0001E540 File Offset: 0x0001C740
+	// Token: 0x06000616 RID: 1558 RVA: 0x0001F154 File Offset: 0x0001D354
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskNpcSetRideSpline._ClassPtr == IntPtr.Zero)
@@ -126,23 +123,23 @@ public class TsTaskNpcSetRideSpline : TsTaskAbortImmediatelyBase, IUnrealUObject
 		return TsTaskNpcSetRideSpline._ClassPtr;
 	}
 
-	// Token: 0x06000613 RID: 1555 RVA: 0x0001E564 File Offset: 0x0001C764
+	// Token: 0x06000617 RID: 1559 RVA: 0x0001F178 File Offset: 0x0001D378
 	public TsTaskNpcSetRideSpline() : this(BuiltinUtils.AllocNativeUObject(TsTaskNpcSetRideSpline.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06000614 RID: 1556 RVA: 0x0001E58C File Offset: 0x0001C78C
+	// Token: 0x06000618 RID: 1560 RVA: 0x0001F1A0 File Offset: 0x0001D3A0
 	[NullableContext(1)]
 	public TsTaskNpcSetRideSpline(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskNpcSetRideSpline.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06000615 RID: 1557 RVA: 0x0001E5BF File Offset: 0x0001C7BF
+	// Token: 0x06000619 RID: 1561 RVA: 0x0001F1D3 File Offset: 0x0001D3D3
 	protected TsTaskNpcSetRideSpline(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06000616 RID: 1558 RVA: 0x0001E5C8 File Offset: 0x0001C7C8
+	// Token: 0x0600061A RID: 1562 RVA: 0x0001F1DC File Offset: 0x0001D3DC
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);
@@ -150,16 +147,16 @@ public class TsTaskNpcSetRideSpline : TsTaskAbortImmediatelyBase, IUnrealUObject
 		this.ReceiveExecuteAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x0400046F RID: 1135
+	// Token: 0x04000473 RID: 1139
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/NPC/TsTaskNpcSetRideSpline.TsTaskNpcSetRideSpline_C";
 
-	// Token: 0x04000470 RID: 1136
+	// Token: 0x04000474 RID: 1140
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04000471 RID: 1137
+	// Token: 0x04000475 RID: 1141
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x04000472 RID: 1138
+	// Token: 0x04000476 RID: 1142
 	private static int __PropertyOffset_SplineEntityPbDataId;
 }

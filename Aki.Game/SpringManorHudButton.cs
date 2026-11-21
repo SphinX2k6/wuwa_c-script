@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001D14 RID: 7444
+// Token: 0x020011D6 RID: 4566
 [NullableContext(2)]
 [Nullable(0)]
 public class SpringManorHudButton : UiPanelBase
 {
-	// Token: 0x0600E0FA RID: 57594 RVA: 0x0034C360 File Offset: 0x0034A560
+	// Token: 0x0600B517 RID: 46359 RVA: 0x00357D90 File Offset: 0x00355F90
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ public class SpringManorHudButton : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600E0FB RID: 57595 RVA: 0x0034C3C8 File Offset: 0x0034A5C8
+	// Token: 0x0600B518 RID: 46360 RVA: 0x00357DF8 File Offset: 0x00355FF8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SpringManorHudButton.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -36,14 +36,14 @@ public class SpringManorHudButton : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E0FC RID: 57596 RVA: 0x0034C40B File Offset: 0x0034A60B
+	// Token: 0x0600B519 RID: 46361 RVA: 0x00357E3B File Offset: 0x0035603B
 	[NullableContext(1)]
 	public void SetAction(string actionName)
 	{
 		this.ActionName = actionName;
 	}
 
-	// Token: 0x0600E0FD RID: 57597 RVA: 0x0034C414 File Offset: 0x0034A614
+	// Token: 0x0600B51A RID: 46362 RVA: 0x00357E44 File Offset: 0x00356044
 	private void OnClickedButton()
 	{
 		Action clickCallBack = this.ClickCallBack;
@@ -54,26 +54,26 @@ public class SpringManorHudButton : UiPanelBase
 		clickCallBack();
 	}
 
-	// Token: 0x040067EC RID: 26604
+	// Token: 0x040068CB RID: 26827
 	private InputMultiKeyItem KeyItem;
 
-	// Token: 0x040067ED RID: 26605
+	// Token: 0x040068CC RID: 26828
 	private string ActionName;
 
-	// Token: 0x040067EE RID: 26606
+	// Token: 0x040068CD RID: 26829
 	public Action ClickCallBack;
 
-	// Token: 0x020082FD RID: 33533
+	// Token: 0x02007486 RID: 29830
 	[NullableContext(0)]
 	private static class EComp
 	{
-		// Token: 0x0402AB90 RID: 174992
+		// Token: 0x04025EB8 RID: 155320
 		public const int Button = 0;
 
-		// Token: 0x0402AB91 RID: 174993
+		// Token: 0x04025EB9 RID: 155321
 		public const int RedDot = 1;
 
-		// Token: 0x0402AB92 RID: 174994
+		// Token: 0x04025EBA RID: 155322
 		public const int KeyRoot = 2;
 	}
 }

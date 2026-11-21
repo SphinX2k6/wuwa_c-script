@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020003CF RID: 975
+	// Token: 0x02000426 RID: 1062
 	public class IGameplayDataPersistence_SetValue
 	{
-		// Token: 0x04000F99 RID: 3993
+		// Token: 0x040010B2 RID: 4274
 		public EDataPersistenceGameplayType Type;
 	}
 }

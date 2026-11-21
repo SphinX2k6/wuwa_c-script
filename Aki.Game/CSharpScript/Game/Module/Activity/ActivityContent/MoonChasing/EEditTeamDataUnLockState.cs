@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 {
-	// Token: 0x02006489 RID: 25737
+	// Token: 0x02005407 RID: 21511
 	public enum EEditTeamDataUnLockState
 	{
-		// Token: 0x040219D4 RID: 137684
+		// Token: 0x0401C305 RID: 115461
 		BuildingUnlock,
-		// Token: 0x040219D5 RID: 137685
+		// Token: 0x0401C306 RID: 115462
 		TaskUnFinish,
-		// Token: 0x040219D6 RID: 137686
+		// Token: 0x0401C307 RID: 115463
 		UnLock
 	}
 }

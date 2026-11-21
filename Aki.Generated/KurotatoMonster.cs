@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000DA8 RID: 3496
+	// Token: 0x02000E8D RID: 3725
 	public struct KurotatoMonster : IFlatbufferObject
 	{
-		// Token: 0x17001BCC RID: 7116
-		// (get) Token: 0x06008A9A RID: 35482 RVA: 0x00270484 File Offset: 0x0026E684
+		// Token: 0x17001C30 RID: 7216
+		// (get) Token: 0x060090B6 RID: 37046 RVA: 0x0028EE58 File Offset: 0x0028D058
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008A9B RID: 35483 RVA: 0x00270491 File Offset: 0x0026E691
+		// Token: 0x060090B7 RID: 37047 RVA: 0x0028EE65 File Offset: 0x0028D065
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06008A9C RID: 35484 RVA: 0x00270498 File Offset: 0x0026E698
+		// Token: 0x060090B8 RID: 37048 RVA: 0x0028EE6C File Offset: 0x0028D06C
 		public static KurotatoMonster GetRootAsKurotatoMonster(ByteBuffer _bb)
 		{
 			return KurotatoMonster.GetRootAsKurotatoMonster(_bb, default(KurotatoMonster));
 		}
 
-		// Token: 0x06008A9D RID: 35485 RVA: 0x002704B4 File Offset: 0x0026E6B4
+		// Token: 0x060090B9 RID: 37049 RVA: 0x0028EE88 File Offset: 0x0028D088
 		public static KurotatoMonster GetRootAsKurotatoMonster(ByteBuffer _bb, KurotatoMonster obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06008A9E RID: 35486 RVA: 0x002704D1 File Offset: 0x0026E6D1
+		// Token: 0x060090BA RID: 37050 RVA: 0x0028EEA5 File Offset: 0x0028D0A5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06008A9F RID: 35487 RVA: 0x002704E0 File Offset: 0x0026E6E0
+		// Token: 0x060090BB RID: 37051 RVA: 0x0028EEB4 File Offset: 0x0028D0B4
 		public KurotatoMonster __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001BCD RID: 7117
-		// (get) Token: 0x06008AA0 RID: 35488 RVA: 0x002704F0 File Offset: 0x0026E6F0
+		// Token: 0x17001C31 RID: 7217
+		// (get) Token: 0x060090BC RID: 37052 RVA: 0x0028EEC4 File Offset: 0x0028D0C4
 		public int Id
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001BCE RID: 7118
-		// (get) Token: 0x06008AA1 RID: 35489 RVA: 0x0027052C File Offset: 0x0026E72C
+		// Token: 0x17001C32 RID: 7218
+		// (get) Token: 0x060090BD RID: 37053 RVA: 0x0028EF00 File Offset: 0x0028D100
 		public int BasicProperty
 		{
 			get
@@ -80,8 +80,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001BCF RID: 7119
-		// (get) Token: 0x06008AA2 RID: 35490 RVA: 0x00270568 File Offset: 0x0026E768
+		// Token: 0x17001C33 RID: 7219
+		// (get) Token: 0x060090BE RID: 37054 RVA: 0x0028EF3C File Offset: 0x0028D13C
 		public string Name
 		{
 			get
@@ -95,20 +95,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008AA3 RID: 35491 RVA: 0x0027059F File Offset: 0x0026E79F
+		// Token: 0x060090BF RID: 37055 RVA: 0x0028EF73 File Offset: 0x0028D173
 		public Span<byte> GetNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x06008AA4 RID: 35492 RVA: 0x002705AE File Offset: 0x0026E7AE
+		// Token: 0x060090C0 RID: 37056 RVA: 0x0028EF82 File Offset: 0x0028D182
 		public byte[] GetNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17001BD0 RID: 7120
-		// (get) Token: 0x06008AA5 RID: 35493 RVA: 0x002705C8 File Offset: 0x0026E7C8
+		// Token: 0x17001C34 RID: 7220
+		// (get) Token: 0x060090C1 RID: 37057 RVA: 0x0028EF9C File Offset: 0x0028D19C
 		public string Desc
 		{
 			get
@@ -122,19 +122,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008AA6 RID: 35494 RVA: 0x00270600 File Offset: 0x0026E800
+		// Token: 0x060090C2 RID: 37058 RVA: 0x0028EFD4 File Offset: 0x0028D1D4
 		public Span<byte> GetDescBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x06008AA7 RID: 35495 RVA: 0x00270610 File Offset: 0x0026E810
+		// Token: 0x060090C3 RID: 37059 RVA: 0x0028EFE4 File Offset: 0x0028D1E4
 		public byte[] GetDescArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x06008AA8 RID: 35496 RVA: 0x00270628 File Offset: 0x0026E828
+		// Token: 0x060090C4 RID: 37060 RVA: 0x0028EFFC File Offset: 0x0028D1FC
 		public string DescArgs(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -145,8 +145,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001BD1 RID: 7121
-		// (get) Token: 0x06008AA9 RID: 35497 RVA: 0x00270664 File Offset: 0x0026E864
+		// Token: 0x17001C35 RID: 7221
+		// (get) Token: 0x060090C5 RID: 37061 RVA: 0x0028F038 File Offset: 0x0028D238
 		public int DescArgsLength
 		{
 			get
@@ -160,8 +160,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001BD2 RID: 7122
-		// (get) Token: 0x06008AAA RID: 35498 RVA: 0x00270690 File Offset: 0x0026E890
+		// Token: 0x17001C36 RID: 7222
+		// (get) Token: 0x060090C6 RID: 37062 RVA: 0x0028F064 File Offset: 0x0028D264
 		public int MonsterType
 		{
 			get
@@ -175,8 +175,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001BD3 RID: 7123
-		// (get) Token: 0x06008AAB RID: 35499 RVA: 0x002706D0 File Offset: 0x0026E8D0
+		// Token: 0x17001C37 RID: 7223
+		// (get) Token: 0x060090C7 RID: 37063 RVA: 0x0028F0A4 File Offset: 0x0028D2A4
 		public int SimpleCombatSubtypeId
 		{
 			get
@@ -190,7 +190,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008AAC RID: 35500 RVA: 0x00270710 File Offset: 0x0026E910
+		// Token: 0x060090C8 RID: 37064 RVA: 0x0028F0E4 File Offset: 0x0028D2E4
 		public int InitBuffs(int j)
 		{
 			int num = this.__p.__offset(18);
@@ -201,8 +201,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001BD4 RID: 7124
-		// (get) Token: 0x06008AAD RID: 35501 RVA: 0x00270750 File Offset: 0x0026E950
+		// Token: 0x17001C38 RID: 7224
+		// (get) Token: 0x060090C9 RID: 37065 RVA: 0x0028F124 File Offset: 0x0028D324
 		public int InitBuffsLength
 		{
 			get
@@ -216,19 +216,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008AAE RID: 35502 RVA: 0x0027077C File Offset: 0x0026E97C
+		// Token: 0x060090CA RID: 37066 RVA: 0x0028F150 File Offset: 0x0028D350
 		public Span<int> GetInitBuffsBytes()
 		{
 			return this.__p.__vector_as_span<int>(18, 4);
 		}
 
-		// Token: 0x06008AAF RID: 35503 RVA: 0x0027078C File Offset: 0x0026E98C
+		// Token: 0x060090CB RID: 37067 RVA: 0x0028F160 File Offset: 0x0028D360
 		public int[] GetInitBuffsArray()
 		{
 			return this.__p.__vector_as_array<int>(18) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06008AB0 RID: 35504 RVA: 0x002707A4 File Offset: 0x0026E9A4
+		// Token: 0x060090CC RID: 37068 RVA: 0x0028F178 File Offset: 0x0028D378
 		public int Deathrattles(int j)
 		{
 			int num = this.__p.__offset(20);
@@ -239,8 +239,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001BD5 RID: 7125
-		// (get) Token: 0x06008AB1 RID: 35505 RVA: 0x002707E4 File Offset: 0x0026E9E4
+		// Token: 0x17001C39 RID: 7225
+		// (get) Token: 0x060090CD RID: 37069 RVA: 0x0028F1B8 File Offset: 0x0028D3B8
 		public int DeathrattlesLength
 		{
 			get
@@ -254,19 +254,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008AB2 RID: 35506 RVA: 0x00270810 File Offset: 0x0026EA10
+		// Token: 0x060090CE RID: 37070 RVA: 0x0028F1E4 File Offset: 0x0028D3E4
 		public Span<int> GetDeathrattlesBytes()
 		{
 			return this.__p.__vector_as_span<int>(20, 4);
 		}
 
-		// Token: 0x06008AB3 RID: 35507 RVA: 0x00270820 File Offset: 0x0026EA20
+		// Token: 0x060090CF RID: 37071 RVA: 0x0028F1F4 File Offset: 0x0028D3F4
 		public int[] GetDeathrattlesArray()
 		{
 			return this.__p.__vector_as_array<int>(20) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06008AB4 RID: 35508 RVA: 0x00270838 File Offset: 0x0026EA38
+		// Token: 0x060090D0 RID: 37072 RVA: 0x0028F20C File Offset: 0x0028D40C
 		public int Tag(int j)
 		{
 			int num = this.__p.__offset(22);
@@ -277,8 +277,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001BD6 RID: 7126
-		// (get) Token: 0x06008AB5 RID: 35509 RVA: 0x00270878 File Offset: 0x0026EA78
+		// Token: 0x17001C3A RID: 7226
+		// (get) Token: 0x060090D1 RID: 37073 RVA: 0x0028F24C File Offset: 0x0028D44C
 		public int TagLength
 		{
 			get
@@ -292,19 +292,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008AB6 RID: 35510 RVA: 0x002708A4 File Offset: 0x0026EAA4
+		// Token: 0x060090D2 RID: 37074 RVA: 0x0028F278 File Offset: 0x0028D478
 		public Span<int> GetTagBytes()
 		{
 			return this.__p.__vector_as_span<int>(22, 4);
 		}
 
-		// Token: 0x06008AB7 RID: 35511 RVA: 0x002708B4 File Offset: 0x0026EAB4
+		// Token: 0x060090D3 RID: 37075 RVA: 0x0028F288 File Offset: 0x0028D488
 		public int[] GetTagArray()
 		{
 			return this.__p.__vector_as_array<int>(22) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06008AB8 RID: 35512 RVA: 0x002708CC File Offset: 0x0026EACC
+		// Token: 0x060090D4 RID: 37076 RVA: 0x0028F2A0 File Offset: 0x0028D4A0
 		public int AttrShow(int j)
 		{
 			int num = this.__p.__offset(24);
@@ -315,8 +315,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001BD7 RID: 7127
-		// (get) Token: 0x06008AB9 RID: 35513 RVA: 0x0027090C File Offset: 0x0026EB0C
+		// Token: 0x17001C3B RID: 7227
+		// (get) Token: 0x060090D5 RID: 37077 RVA: 0x0028F2E0 File Offset: 0x0028D4E0
 		public int AttrShowLength
 		{
 			get
@@ -330,20 +330,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008ABA RID: 35514 RVA: 0x00270938 File Offset: 0x0026EB38
+		// Token: 0x060090D6 RID: 37078 RVA: 0x0028F30C File Offset: 0x0028D50C
 		public Span<int> GetAttrShowBytes()
 		{
 			return this.__p.__vector_as_span<int>(24, 4);
 		}
 
-		// Token: 0x06008ABB RID: 35515 RVA: 0x00270948 File Offset: 0x0026EB48
+		// Token: 0x060090D7 RID: 37079 RVA: 0x0028F31C File Offset: 0x0028D51C
 		public int[] GetAttrShowArray()
 		{
 			return this.__p.__vector_as_array<int>(24) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17001BD8 RID: 7128
-		// (get) Token: 0x06008ABC RID: 35516 RVA: 0x00270960 File Offset: 0x0026EB60
+		// Token: 0x17001C3C RID: 7228
+		// (get) Token: 0x060090D8 RID: 37080 RVA: 0x0028F334 File Offset: 0x0028D534
 		public bool IsHideInBook
 		{
 			get
@@ -353,96 +353,87 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008ABD RID: 35517 RVA: 0x002709A0 File Offset: 0x0026EBA0
+		// Token: 0x060090D9 RID: 37081 RVA: 0x0028F374 File Offset: 0x0028D574
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用AttrShowIter()或GetAttrShowBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] AttrShow()
+		public int[] AttrShow()
 		{
-			KurotatoMonster kurotatoMonster = this;
-			return kurotatoMonster.GetAttrShowArray() ?? Array.Empty<int>();
+			return this.GetAttrShowArray();
 		}
 
-		// Token: 0x06008ABE RID: 35518 RVA: 0x002709C4 File Offset: 0x0026EBC4
+		// Token: 0x060090DA RID: 37082 RVA: 0x0028F37C File Offset: 0x0028D57C
 		[NullableContext(1)]
-		public readonly IEnumerable<int> AttrShowIter()
+		public IEnumerable<int> AttrShowIter()
 		{
 			KurotatoMonster.<AttrShowIter>d__50 <AttrShowIter>d__ = new KurotatoMonster.<AttrShowIter>d__50(-2);
 			<AttrShowIter>d__.<>3__<>4__this = this;
 			return <AttrShowIter>d__;
 		}
 
-		// Token: 0x06008ABF RID: 35519 RVA: 0x002709DC File Offset: 0x0026EBDC
+		// Token: 0x060090DB RID: 37083 RVA: 0x0028F391 File Offset: 0x0028D591
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用DeathrattlesIter()或GetDeathrattlesBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] Deathrattles()
+		public int[] Deathrattles()
 		{
-			KurotatoMonster kurotatoMonster = this;
-			return kurotatoMonster.GetDeathrattlesArray() ?? Array.Empty<int>();
+			return this.GetDeathrattlesArray();
 		}
 
-		// Token: 0x06008AC0 RID: 35520 RVA: 0x00270A00 File Offset: 0x0026EC00
+		// Token: 0x060090DC RID: 37084 RVA: 0x0028F399 File Offset: 0x0028D599
 		[NullableContext(1)]
-		public readonly IEnumerable<int> DeathrattlesIter()
+		public IEnumerable<int> DeathrattlesIter()
 		{
 			KurotatoMonster.<DeathrattlesIter>d__52 <DeathrattlesIter>d__ = new KurotatoMonster.<DeathrattlesIter>d__52(-2);
 			<DeathrattlesIter>d__.<>3__<>4__this = this;
 			return <DeathrattlesIter>d__;
 		}
 
-		// Token: 0x06008AC1 RID: 35521 RVA: 0x00270A15 File Offset: 0x0026EC15
+		// Token: 0x060090DD RID: 37085 RVA: 0x0028F3AE File Offset: 0x0028D5AE
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用DescArgsIter()或GetDescArgsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] DescArgs()
+		public string[] DescArgs()
 		{
 			return this.DescArgsIter().ToArray<string>();
 		}
 
-		// Token: 0x06008AC2 RID: 35522 RVA: 0x00270A22 File Offset: 0x0026EC22
+		// Token: 0x060090DE RID: 37086 RVA: 0x0028F3BB File Offset: 0x0028D5BB
 		[NullableContext(1)]
-		public readonly IEnumerable<string> DescArgsIter()
+		public IEnumerable<string> DescArgsIter()
 		{
 			KurotatoMonster.<DescArgsIter>d__54 <DescArgsIter>d__ = new KurotatoMonster.<DescArgsIter>d__54(-2);
 			<DescArgsIter>d__.<>3__<>4__this = this;
 			return <DescArgsIter>d__;
 		}
 
-		// Token: 0x06008AC3 RID: 35523 RVA: 0x00270A38 File Offset: 0x0026EC38
+		// Token: 0x060090DF RID: 37087 RVA: 0x0028F3D0 File Offset: 0x0028D5D0
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用InitBuffsIter()或GetInitBuffsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] InitBuffs()
+		public int[] InitBuffs()
 		{
-			KurotatoMonster kurotatoMonster = this;
-			return kurotatoMonster.GetInitBuffsArray() ?? Array.Empty<int>();
+			return this.GetInitBuffsArray();
 		}
 
-		// Token: 0x06008AC4 RID: 35524 RVA: 0x00270A5C File Offset: 0x0026EC5C
+		// Token: 0x060090E0 RID: 37088 RVA: 0x0028F3D8 File Offset: 0x0028D5D8
 		[NullableContext(1)]
-		public readonly IEnumerable<int> InitBuffsIter()
+		public IEnumerable<int> InitBuffsIter()
 		{
 			KurotatoMonster.<InitBuffsIter>d__56 <InitBuffsIter>d__ = new KurotatoMonster.<InitBuffsIter>d__56(-2);
 			<InitBuffsIter>d__.<>3__<>4__this = this;
 			return <InitBuffsIter>d__;
 		}
 
-		// Token: 0x06008AC5 RID: 35525 RVA: 0x00270A74 File Offset: 0x0026EC74
+		// Token: 0x060090E1 RID: 37089 RVA: 0x0028F3ED File Offset: 0x0028D5ED
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用TagIter()或GetTagBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] Tag()
+		public int[] Tag()
 		{
-			KurotatoMonster kurotatoMonster = this;
-			return kurotatoMonster.GetTagArray() ?? Array.Empty<int>();
+			return this.GetTagArray();
 		}
 
-		// Token: 0x06008AC6 RID: 35526 RVA: 0x00270A98 File Offset: 0x0026EC98
+		// Token: 0x060090E2 RID: 37090 RVA: 0x0028F3F5 File Offset: 0x0028D5F5
 		[NullableContext(1)]
-		public readonly IEnumerable<int> TagIter()
+		public IEnumerable<int> TagIter()
 		{
 			KurotatoMonster.<TagIter>d__58 <TagIter>d__ = new KurotatoMonster.<TagIter>d__58(-2);
 			<TagIter>d__.<>3__<>4__this = this;
 			return <TagIter>d__;
 		}
 
-		// Token: 0x04004E3A RID: 20026
+		// Token: 0x0400541F RID: 21535
 		private Table __p;
 	}
 }

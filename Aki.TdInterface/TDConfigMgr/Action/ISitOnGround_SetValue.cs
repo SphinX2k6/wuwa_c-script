@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E76 RID: 7798
+	// Token: 0x020020AB RID: 8363
 	public class ISitOnGround_SetValue
 	{
-		// Token: 0x040063A6 RID: 25510
+		// Token: 0x0400698A RID: 27018
 		public ELeisureInteract Type;
 	}
 }

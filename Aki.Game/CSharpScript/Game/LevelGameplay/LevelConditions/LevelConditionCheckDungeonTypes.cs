@@ -6,18 +6,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006C77 RID: 27767
+	// Token: 0x02005DF1 RID: 24049
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelConditionCheckDungeonTypes : LevelConditionBase, IStaticVariableResetter
 	{
-		// Token: 0x06044578 RID: 279928 RVA: 0x010D92C0 File Offset: 0x010D74C0
+		// Token: 0x0603A6D2 RID: 239314 RVA: 0x01083264 File Offset: 0x01081464
 		static LevelConditionCheckDungeonTypes()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LevelConditionCheckDungeonTypes.CreateStaticDefaultValue), new Action(LevelConditionCheckDungeonTypes.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06044579 RID: 279929 RVA: 0x010D93C0 File Offset: 0x010D75C0
+		// Token: 0x0603A6D3 RID: 239315 RVA: 0x01083364 File Offset: 0x01081564
 		public override bool Check(Condition inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{
 			LevelConditionCheckDungeonTypes.typeSet.Clear();
@@ -50,21 +50,21 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return instanceDungeon != null && LevelConditionCheckDungeonTypes.typeSet.Contains(instanceDungeon.Value.InstType) && LevelConditionCheckDungeonTypes.subTypeSet.Contains(instanceDungeon.Value.InstSubType);
 		}
 
-		// Token: 0x0604457A RID: 279930 RVA: 0x010D94C4 File Offset: 0x010D76C4
+		// Token: 0x0603A6D4 RID: 239316 RVA: 0x01083468 File Offset: 0x01081668
 		public static void CreateStaticDefaultValue()
 		{
 			LevelConditionCheckDungeonTypes.typeSet = new HashSet<int>();
 			LevelConditionCheckDungeonTypes.subTypeSet = new HashSet<int>();
 		}
 
-		// Token: 0x0604457B RID: 279931 RVA: 0x010D94DA File Offset: 0x010D76DA
+		// Token: 0x0603A6D5 RID: 239317 RVA: 0x0108347E File Offset: 0x0108167E
 		public static void ResetStaticDefaultValue()
 		{
 			LevelConditionCheckDungeonTypes.typeSet = null;
 			LevelConditionCheckDungeonTypes.subTypeSet = null;
 		}
 
-		// Token: 0x040239B9 RID: 145849
+		// Token: 0x0401EC5B RID: 126043
 		[StaticVariableRuleIgnore]
 		private static readonly string[][] paramList = new string[][]
 		{
@@ -110,10 +110,10 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			}
 		};
 
-		// Token: 0x040239BA RID: 145850
+		// Token: 0x0401EC5C RID: 126044
 		private static HashSet<int> typeSet;
 
-		// Token: 0x040239BB RID: 145851
+		// Token: 0x0401EC5D RID: 126045
 		private static HashSet<int> subTypeSet;
 	}
 }

@@ -3,11 +3,11 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Core.Components
 {
-	// Token: 0x02006535 RID: 25909
+	// Token: 0x020054B3 RID: 21683
 	public sealed class MatchableComponent : IPieceComponent, IClearBehavior
 	{
-		// Token: 0x1700952F RID: 38191
-		// (get) Token: 0x06040F20 RID: 266016 RVA: 0x00FBCC59 File Offset: 0x00FBAE59
+		// Token: 0x17006891 RID: 26769
+		// (get) Token: 0x06035BE5 RID: 220133 RVA: 0x00F03C9D File Offset: 0x00F01E9D
 		public EPieceCaps Caps
 		{
 			get
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x06040F21 RID: 266017 RVA: 0x00FBCC60 File Offset: 0x00FBAE60
+		// Token: 0x06035BE6 RID: 220134 RVA: 0x00F03CA4 File Offset: 0x00F01EA4
 		[NullableContext(1)]
 		public void OnCleared(IDispatchContext sink, Piece self, GridPosition pos, EPieceType? source)
 		{
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			MatchableComponent.Charge(sink, item);
 		}
 
-		// Token: 0x06040F22 RID: 266018 RVA: 0x00FBCCBC File Offset: 0x00FBAEBC
+		// Token: 0x06035BE7 RID: 220135 RVA: 0x00F03D00 File Offset: 0x00F01F00
 		[NullableContext(1)]
 		private static void Charge(IDispatchContext sink, int energy)
 		{

@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002738 RID: 10040
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A04 RID: 10756
 	public class PlayerMoveToPoint : ActionParams
 	{
-		// Token: 0x0600DFC9 RID: 57289 RVA: 0x00212598 File Offset: 0x00210798
+		// Token: 0x0600EDC9 RID: 60873 RVA: 0x0022F0D0 File Offset: 0x0022D2D0
 		public static PlayerMoveToPoint Create(IPlayerMoveToPoint? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700431B RID: 17179
-		// (get) Token: 0x0600DFCA RID: 57290 RVA: 0x002125B7 File Offset: 0x002107B7
+		// Token: 0x1700466F RID: 18031
+		// (get) Token: 0x0600EDCA RID: 60874 RVA: 0x0022F0EF File Offset: 0x0022D2EF
 		public virtual VectorInfo Pos
 		{
 			get
@@ -39,8 +37,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700431C RID: 17180
-		// (get) Token: 0x0600DFCB RID: 57291 RVA: 0x002125EB File Offset: 0x002107EB
+		// Token: 0x17004670 RID: 18032
+		// (get) Token: 0x0600EDCB RID: 60875 RVA: 0x0022F123 File Offset: 0x0022D323
 		public virtual EMoveToPointType MoveType
 		{
 			get
@@ -49,8 +47,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700431D RID: 17181
-		// (get) Token: 0x0600DFCC RID: 57292 RVA: 0x002125F8 File Offset: 0x002107F8
+		// Token: 0x17004671 RID: 18033
+		// (get) Token: 0x0600EDCC RID: 60876 RVA: 0x0022F130 File Offset: 0x0022D330
 		public virtual bool? IsExact
 		{
 			get
@@ -63,14 +61,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C2E RID: 31790
+		// Token: 0x040082DC RID: 33500
 		private IPlayerMoveToPoint Instance;
 
-		// Token: 0x04007C2F RID: 31791
+		// Token: 0x040082DD RID: 33501
 		[Nullable(2)]
 		private VectorInfo _PosCache;
 
-		// Token: 0x04007C30 RID: 31792
+		// Token: 0x040082DE RID: 33502
 		private bool _PosInited;
 	}
 }

@@ -3,13 +3,13 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200153D RID: 5437
+	// Token: 0x020015B3 RID: 5555
 	public enum ActionInfrastructureV2ItemDeliveryType
 	{
-		// Token: 0x0400A4D1 RID: 42193
+		// Token: 0x0400A92D RID: 43309
 		[OriginalName("Village")]
 		Village,
-		// Token: 0x0400A4D2 RID: 42194
+		// Token: 0x0400A92E RID: 43310
 		[OriginalName("Tree")]
 		Tree
 	}

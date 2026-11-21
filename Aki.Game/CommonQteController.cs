@@ -16,14 +16,14 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002605 RID: 9733
+// Token: 0x02001AF0 RID: 6896
 [NullableContext(2)]
 [Nullable(0)]
 [Controller(0)]
 public class CommonQteController : ControllerBase
 {
-	// Token: 0x1700195D RID: 6493
-	// (get) Token: 0x06013D1D RID: 81181 RVA: 0x004F8473 File Offset: 0x004F6673
+	// Token: 0x17001995 RID: 6549
+	// (get) Token: 0x060111FF RID: 70143 RVA: 0x0050724F File Offset: 0x0050544F
 	public CommonQteContextBase ContextProp
 	{
 		get
@@ -32,35 +32,35 @@ public class CommonQteController : ControllerBase
 		}
 	}
 
-	// Token: 0x06013D1E RID: 81182 RVA: 0x004F847B File Offset: 0x004F667B
+	// Token: 0x06011200 RID: 70144 RVA: 0x00507257 File Offset: 0x00505457
 	protected override bool OnInit()
 	{
 		EventSystem.Instance.Add<TeleportContext>(EEventName.TeleportComplete, new Action<TeleportContext>(this.OnTeleportComplete));
 		return true;
 	}
 
-	// Token: 0x06013D1F RID: 81183 RVA: 0x004F849A File Offset: 0x004F669A
+	// Token: 0x06011201 RID: 70145 RVA: 0x00507276 File Offset: 0x00505476
 	protected override bool OnClear()
 	{
 		EventSystem.Instance.Remove<TeleportContext>(EEventName.TeleportComplete, new Action<TeleportContext>(this.OnTeleportComplete));
 		return true;
 	}
 
-	// Token: 0x06013D20 RID: 81184 RVA: 0x004F84B9 File Offset: 0x004F66B9
+	// Token: 0x06011202 RID: 70146 RVA: 0x00507295 File Offset: 0x00505495
 	protected override bool OnLeaveLevel()
 	{
 		this.ClearAll();
 		return true;
 	}
 
-	// Token: 0x06013D21 RID: 81185 RVA: 0x004F84C2 File Offset: 0x004F66C2
+	// Token: 0x06011203 RID: 70147 RVA: 0x0050729E File Offset: 0x0050549E
 	protected override bool OnChangeMode()
 	{
 		this.ClearAll();
 		return true;
 	}
 
-	// Token: 0x06013D22 RID: 81186 RVA: 0x004F84CC File Offset: 0x004F66CC
+	// Token: 0x06011204 RID: 70148 RVA: 0x005072A8 File Offset: 0x005054A8
 	private void OnTeleportComplete(TeleportContext _)
 	{
 		if (this.IsInQte())
@@ -77,7 +77,7 @@ public class CommonQteController : ControllerBase
 		}
 	}
 
-	// Token: 0x06013D23 RID: 81187 RVA: 0x004F8524 File Offset: 0x004F6724
+	// Token: 0x06011205 RID: 70149 RVA: 0x00507300 File Offset: 0x00505500
 	public void RecoverTimeDilationAfterTeleport()
 	{
 		if (this.IsInQte())
@@ -94,7 +94,7 @@ public class CommonQteController : ControllerBase
 		}
 	}
 
-	// Token: 0x06013D24 RID: 81188 RVA: 0x004F857C File Offset: 0x004F677C
+	// Token: 0x06011206 RID: 70150 RVA: 0x00507358 File Offset: 0x00505558
 	private void ClearAll()
 	{
 		if (this.IsInQte())
@@ -104,7 +104,7 @@ public class CommonQteController : ControllerBase
 		this.ClearQte();
 	}
 
-	// Token: 0x06013D25 RID: 81189 RVA: 0x004F8594 File Offset: 0x004F6794
+	// Token: 0x06011207 RID: 70151 RVA: 0x00507370 File Offset: 0x00505570
 	public CommonQteContextBase StartQte(int qteId, TCommonQteCallback onSuccess = null, TCommonQteCallback onFail = null, EQteSource source = EQteSource.Battle, IQteExtraParams extraParams = null)
 	{
 		string value = null;
@@ -137,7 +137,7 @@ public class CommonQteController : ControllerBase
 		return null;
 	}
 
-	// Token: 0x06013D26 RID: 81190 RVA: 0x004F8600 File Offset: 0x004F6800
+	// Token: 0x06011208 RID: 70152 RVA: 0x005073DC File Offset: 0x005055DC
 	[NullableContext(1)]
 	private unsafe bool StartQteInternal(CommonQteContextBase context)
 	{
@@ -271,7 +271,7 @@ public class CommonQteController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06013D27 RID: 81191 RVA: 0x004F8760 File Offset: 0x004F6960
+	// Token: 0x06011209 RID: 70153 RVA: 0x0050753C File Offset: 0x0050573C
 	public CommonQteGroupContext StartQteGroup(int qteGroupId, TCommonQteCallback onSuccess = null, TCommonQteCallback onFail = null, EQteSource source = EQteSource.Battle, IQteExtraParams extraParams = null)
 	{
 		string value = null;
@@ -299,7 +299,7 @@ public class CommonQteController : ControllerBase
 		return null;
 	}
 
-	// Token: 0x06013D28 RID: 81192 RVA: 0x004F87BC File Offset: 0x004F69BC
+	// Token: 0x0601120A RID: 70154 RVA: 0x00507598 File Offset: 0x00505798
 	[NullableContext(1)]
 	private bool StartQteGroupInternal(CommonQteGroupContext groupContext)
 	{
@@ -380,7 +380,7 @@ public class CommonQteController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06013D29 RID: 81193 RVA: 0x004F88DC File Offset: 0x004F6ADC
+	// Token: 0x0601120B RID: 70155 RVA: 0x005076B8 File Offset: 0x005058B8
 	[NullableContext(1)]
 	public void SetExpiredTimer(CommonQteContextBase context)
 	{
@@ -401,7 +401,7 @@ public class CommonQteController : ControllerBase
 		}, MathUtils.Instance.Clamp(currentValue, 20f, 180000f), null, null, true, 1f);
 	}
 
-	// Token: 0x06013D2A RID: 81194 RVA: 0x004F898C File Offset: 0x004F6B8C
+	// Token: 0x0601120C RID: 70156 RVA: 0x00507768 File Offset: 0x00505968
 	public void StopQte(int qteHandle)
 	{
 		CommonQteContextBase context = this.Context;
@@ -413,13 +413,13 @@ public class CommonQteController : ControllerBase
 		this.OnQteEnd();
 	}
 
-	// Token: 0x06013D2B RID: 81195 RVA: 0x004F89D4 File Offset: 0x004F6BD4
+	// Token: 0x0601120D RID: 70157 RVA: 0x005077B0 File Offset: 0x005059B0
 	public void StopCurrentQte()
 	{
 		this.OnQteEnd();
 	}
 
-	// Token: 0x06013D2C RID: 81196 RVA: 0x004F89DC File Offset: 0x004F6BDC
+	// Token: 0x0601120E RID: 70158 RVA: 0x005077B8 File Offset: 0x005059B8
 	public void WaitQteEnd(int qteHandle)
 	{
 		CommonQteContextBase context = this.Context;
@@ -431,7 +431,7 @@ public class CommonQteController : ControllerBase
 		this.OnQteWaitEnd();
 	}
 
-	// Token: 0x06013D2D RID: 81197 RVA: 0x004F8A24 File Offset: 0x004F6C24
+	// Token: 0x0601120F RID: 70159 RVA: 0x00507800 File Offset: 0x00505A00
 	private void OnQteWaitEnd()
 	{
 		CommonQteContextBase context = this.Context;
@@ -441,13 +441,13 @@ public class CommonQteController : ControllerBase
 		}
 	}
 
-	// Token: 0x06013D2E RID: 81198 RVA: 0x004F8A75 File Offset: 0x004F6C75
+	// Token: 0x06011210 RID: 70160 RVA: 0x00507851 File Offset: 0x00505A51
 	private bool ShouldQteShowMouse(CommonQteContextBase context)
 	{
 		return context == null || (!this.TempHideCursorQteSet.Contains(context.QteId) && context.ShouldShowMouseCursor());
 	}
 
-	// Token: 0x06013D2F RID: 81199 RVA: 0x004F8A98 File Offset: 0x004F6C98
+	// Token: 0x06011211 RID: 70161 RVA: 0x00507874 File Offset: 0x00505A74
 	private void OnQteEnd()
 	{
 		this.ResetQteTimeDilation();
@@ -498,7 +498,7 @@ public class CommonQteController : ControllerBase
 		this.ClearQte();
 	}
 
-	// Token: 0x06013D30 RID: 81200 RVA: 0x004F8BF8 File Offset: 0x004F6DF8
+	// Token: 0x06011212 RID: 70162 RVA: 0x005079D4 File Offset: 0x00505BD4
 	public void PauseQte(int handleId)
 	{
 		if (this.Context == null || handleId != this.Context.HandleId)
@@ -512,7 +512,7 @@ public class CommonQteController : ControllerBase
 		this.ResetQteTimeDilation();
 	}
 
-	// Token: 0x06013D31 RID: 81201 RVA: 0x004F8C38 File Offset: 0x004F6E38
+	// Token: 0x06011213 RID: 70163 RVA: 0x00507A14 File Offset: 0x00505C14
 	public void ResumeQte(int handleId)
 	{
 		if (this.Context == null || handleId != this.Context.HandleId)
@@ -527,19 +527,19 @@ public class CommonQteController : ControllerBase
 		this.ResumeFightInputBlock();
 	}
 
-	// Token: 0x06013D32 RID: 81202 RVA: 0x004F8C9E File Offset: 0x004F6E9E
+	// Token: 0x06011214 RID: 70164 RVA: 0x00507A7A File Offset: 0x00505C7A
 	public bool IsInQte()
 	{
 		return this.IsInQteInternal;
 	}
 
-	// Token: 0x06013D33 RID: 81203 RVA: 0x004F8CA6 File Offset: 0x004F6EA6
+	// Token: 0x06011215 RID: 70165 RVA: 0x00507A82 File Offset: 0x00505C82
 	public bool IsPreloading()
 	{
 		return this.IsPreloadingQte;
 	}
 
-	// Token: 0x06013D34 RID: 81204 RVA: 0x004F8CB0 File Offset: 0x004F6EB0
+	// Token: 0x06011216 RID: 70166 RVA: 0x00507A8C File Offset: 0x00505C8C
 	public void ClearQte()
 	{
 		this.RemoveFightInputBlock();
@@ -558,7 +558,7 @@ public class CommonQteController : ControllerBase
 		this.ClearPreloadQteRes();
 	}
 
-	// Token: 0x06013D35 RID: 81205 RVA: 0x004F8D08 File Offset: 0x004F6F08
+	// Token: 0x06011217 RID: 70167 RVA: 0x00507AE4 File Offset: 0x00505CE4
 	private void RemoveExpiredTimer()
 	{
 		if (this.ExpiredTimer != null)
@@ -568,7 +568,7 @@ public class CommonQteController : ControllerBase
 		this.ExpiredTimer = null;
 	}
 
-	// Token: 0x06013D36 RID: 81206 RVA: 0x004F8D2C File Offset: 0x004F6F2C
+	// Token: 0x06011218 RID: 70168 RVA: 0x00507B08 File Offset: 0x00505D08
 	public void SetQteTimeDilation(float timeDilation)
 	{
 		if (!this.IsInQte())
@@ -595,19 +595,19 @@ public class CommonQteController : ControllerBase
 		}
 	}
 
-	// Token: 0x06013D37 RID: 81207 RVA: 0x004F8D8B File Offset: 0x004F6F8B
+	// Token: 0x06011219 RID: 70169 RVA: 0x00507B67 File Offset: 0x00505D67
 	public void ResetQteTimeDilation()
 	{
 		this.SetQteTimeDilationInternal(1f);
 	}
 
-	// Token: 0x06013D38 RID: 81208 RVA: 0x004F8D98 File Offset: 0x004F6F98
+	// Token: 0x0601121A RID: 70170 RVA: 0x00507B74 File Offset: 0x00505D74
 	public bool IsSelfTriggeringTimeDilationChange()
 	{
 		return this.IsSelfTriggeringTimeDilation;
 	}
 
-	// Token: 0x06013D39 RID: 81209 RVA: 0x004F8DA0 File Offset: 0x004F6FA0
+	// Token: 0x0601121B RID: 70171 RVA: 0x00507B7C File Offset: 0x00505D7C
 	private void SetQteTimeDilationInternal(float timeDilation)
 	{
 		bool flag = timeDilation != 1f;
@@ -625,7 +625,7 @@ public class CommonQteController : ControllerBase
 		this.IsSelfTriggeringTimeDilation = false;
 	}
 
-	// Token: 0x06013D3A RID: 81210 RVA: 0x004F8DF4 File Offset: 0x004F6FF4
+	// Token: 0x0601121C RID: 70172 RVA: 0x00507BD0 File Offset: 0x00505DD0
 	[NullableContext(1)]
 	public void AddExtraEffect(SCommonQte_Extra config)
 	{
@@ -654,7 +654,7 @@ public class CommonQteController : ControllerBase
 		this.HideBattleUiChildren = null;
 	}
 
-	// Token: 0x06013D3B RID: 81211 RVA: 0x004F8E98 File Offset: 0x004F7098
+	// Token: 0x0601121D RID: 70173 RVA: 0x00507C74 File Offset: 0x00505E74
 	public void RemoveExtraEffect()
 	{
 		if (this.IsHideAllBattleUi)
@@ -675,7 +675,7 @@ public class CommonQteController : ControllerBase
 		this.RemoveCameraShake(true);
 	}
 
-	// Token: 0x06013D3C RID: 81212 RVA: 0x004F8F00 File Offset: 0x004F7100
+	// Token: 0x0601121E RID: 70174 RVA: 0x00507CDC File Offset: 0x00505EDC
 	private void RemoveScreenEffect()
 	{
 		if (this.ScreenEffectTimer != null)
@@ -695,7 +695,7 @@ public class CommonQteController : ControllerBase
 		}
 	}
 
-	// Token: 0x06013D3D RID: 81213 RVA: 0x004F8F7C File Offset: 0x004F717C
+	// Token: 0x0601121F RID: 70175 RVA: 0x00507D58 File Offset: 0x00505F58
 	private void RemoveCameraShake(bool immediatly = true)
 	{
 		if (this.CameraShakeTimer != null)
@@ -710,7 +710,7 @@ public class CommonQteController : ControllerBase
 		}
 	}
 
-	// Token: 0x06013D3E RID: 81214 RVA: 0x004F8FCC File Offset: 0x004F71CC
+	// Token: 0x06011220 RID: 70176 RVA: 0x00507DA8 File Offset: 0x00505FA8
 	public void PlayScreenEffect()
 	{
 		CommonQteController.<>c__DisplayClass57_0 CS$<>8__locals1 = new CommonQteController.<>c__DisplayClass57_0();
@@ -770,7 +770,7 @@ public class CommonQteController : ControllerBase
 		}
 	}
 
-	// Token: 0x06013D3F RID: 81215 RVA: 0x004F9198 File Offset: 0x004F7398
+	// Token: 0x06011221 RID: 70177 RVA: 0x00507F74 File Offset: 0x00506174
 	public bool IsPlayingScreenEffect()
 	{
 		if (this.ScreenEffectType == EQteScreenEffectType.Type1)
@@ -780,7 +780,7 @@ public class CommonQteController : ControllerBase
 		return this.ScreenEffectType == EQteScreenEffectType.Type2 && this.ScreenEffectHandle != -1;
 	}
 
-	// Token: 0x06013D40 RID: 81216 RVA: 0x004F91C4 File Offset: 0x004F73C4
+	// Token: 0x06011222 RID: 70178 RVA: 0x00507FA0 File Offset: 0x005061A0
 	public void PlayCameraShake()
 	{
 		if (this.Context == null)
@@ -809,7 +809,7 @@ public class CommonQteController : ControllerBase
 		}
 	}
 
-	// Token: 0x06013D41 RID: 81217 RVA: 0x004F9284 File Offset: 0x004F7484
+	// Token: 0x06011223 RID: 70179 RVA: 0x00508060 File Offset: 0x00506260
 	public void PlayGamepadShake()
 	{
 		if (this.Context == null)
@@ -825,7 +825,7 @@ public class CommonQteController : ControllerBase
 		GamepadController.Instance.TriggerGamepadShakeByQte(this.Context.Type.Value, ukuroForceFeedbackEffect);
 	}
 
-	// Token: 0x06013D42 RID: 81218 RVA: 0x004F92E4 File Offset: 0x004F74E4
+	// Token: 0x06011224 RID: 70180 RVA: 0x005080C0 File Offset: 0x005062C0
 	public void StopGamepadShake()
 	{
 		if (this.Context == null)
@@ -841,7 +841,7 @@ public class CommonQteController : ControllerBase
 		GamepadController.Instance.StopQteGamepadShake(this.Context.Type.Value, ukuroForceFeedbackEffect);
 	}
 
-	// Token: 0x06013D43 RID: 81219 RVA: 0x004F9343 File Offset: 0x004F7543
+	// Token: 0x06011225 RID: 70181 RVA: 0x0050811F File Offset: 0x0050631F
 	public void PlayExtraEffect(int qteHandle)
 	{
 		if (this.Context == null || qteHandle != this.Context.HandleId)
@@ -853,7 +853,7 @@ public class CommonQteController : ControllerBase
 		this.PlayGamepadShake();
 	}
 
-	// Token: 0x06013D44 RID: 81220 RVA: 0x004F936E File Offset: 0x004F756E
+	// Token: 0x06011226 RID: 70182 RVA: 0x0050814A File Offset: 0x0050634A
 	public void StopExtraEffect(int qteHandle)
 	{
 		if (this.Context == null || qteHandle != this.Context.HandleId)
@@ -865,7 +865,7 @@ public class CommonQteController : ControllerBase
 		this.StopGamepadShake();
 	}
 
-	// Token: 0x06013D45 RID: 81221 RVA: 0x004F939C File Offset: 0x004F759C
+	// Token: 0x06011227 RID: 70183 RVA: 0x00508178 File Offset: 0x00506378
 	public int PlayQteAudio([Nullable(new byte[]
 	{
 		2,
@@ -888,8 +888,8 @@ public class CommonQteController : ControllerBase
 		return AudioSystem.Instance.PostEvent(text);
 	}
 
-	// Token: 0x06013D46 RID: 81222 RVA: 0x004F93F4 File Offset: 0x004F75F4
-	public void SeekAudio(Number position, [Nullable(new byte[]
+	// Token: 0x06011228 RID: 70184 RVA: 0x005081D0 File Offset: 0x005063D0
+	public void SeekAudio(float position, [Nullable(new byte[]
 	{
 		2,
 		1
@@ -904,10 +904,10 @@ public class CommonQteController : ControllerBase
 		{
 			return;
 		}
-		AudioSystem.Instance.SeekOnEvent(text, position, new SeekOnEventArgs?(new SeekOnEventArgs(actor, handle, null)));
+		AudioSystem.Instance.SeekOnEvent(text, (int)position, new SeekOnEventArgs?(new SeekOnEventArgs(actor, handle, null)));
 	}
 
-	// Token: 0x06013D47 RID: 81223 RVA: 0x004F944C File Offset: 0x004F764C
+	// Token: 0x06011229 RID: 70185 RVA: 0x00508224 File Offset: 0x00506424
 	public void StopQteAudio(int handle, float? blendOutTime = null)
 	{
 		if (handle == 0)
@@ -922,7 +922,7 @@ public class CommonQteController : ControllerBase
 		AudioSystem.Instance.ExecuteAction(handle, EAudioActionType.Stop, new ExecuteActionArgs?(value));
 	}
 
-	// Token: 0x06013D48 RID: 81224 RVA: 0x004F94A8 File Offset: 0x004F76A8
+	// Token: 0x0601122A RID: 70186 RVA: 0x00508280 File Offset: 0x00506480
 	[NullableContext(0)]
 	public UniTask<bool> PreloadQteRes([Nullable(1)] IReadOnlyList<int> qteIdList, int preloadHandleId = -1, bool isGroupQte = false)
 	{
@@ -937,7 +937,7 @@ public class CommonQteController : ControllerBase
 		return <PreloadQteRes>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013D49 RID: 81225 RVA: 0x004F9504 File Offset: 0x004F7704
+	// Token: 0x0601122B RID: 70187 RVA: 0x005082DC File Offset: 0x005064DC
 	public void ClearPreloadQteRes()
 	{
 		foreach (KeyValuePair<EUiViewName, CommonQteViewBase> keyValuePair in this.CommonQteViewMap)
@@ -967,7 +967,7 @@ public class CommonQteController : ControllerBase
 		commonQteViewMapDebug.Clear();
 	}
 
-	// Token: 0x06013D4A RID: 81226 RVA: 0x004F95FC File Offset: 0x004F77FC
+	// Token: 0x0601122C RID: 70188 RVA: 0x005083D4 File Offset: 0x005065D4
 	private void AddFightInputBlock(EUiViewName viewName)
 	{
 		if (this.FightInputBlockViewName != null)
@@ -979,7 +979,7 @@ public class CommonQteController : ControllerBase
 		EventSystem.Instance.Emit(EEventName.OnAddNotAllowFightInputViewName);
 	}
 
-	// Token: 0x06013D4B RID: 81227 RVA: 0x004F9634 File Offset: 0x004F7834
+	// Token: 0x0601122D RID: 70189 RVA: 0x0050840C File Offset: 0x0050660C
 	private void RemoveFightInputBlock()
 	{
 		if (this.FightInputBlockViewName == null)
@@ -991,7 +991,7 @@ public class CommonQteController : ControllerBase
 		this.FightInputBlockViewName = null;
 	}
 
-	// Token: 0x06013D4C RID: 81228 RVA: 0x004F9680 File Offset: 0x004F7880
+	// Token: 0x0601122E RID: 70190 RVA: 0x00508458 File Offset: 0x00506658
 	private void ShowMouseCursor(EUiViewName viewName)
 	{
 		if (this.ShowMouseCursorName != null)
@@ -1003,7 +1003,7 @@ public class CommonQteController : ControllerBase
 		InputManager.Instance.AddDynamicShowMouseView(viewName);
 	}
 
-	// Token: 0x06013D4D RID: 81229 RVA: 0x004F96B9 File Offset: 0x004F78B9
+	// Token: 0x0601122F RID: 70191 RVA: 0x00508491 File Offset: 0x00506691
 	private void HideMouseCursor()
 	{
 		if (this.ShowMouseCursorName == null)
@@ -1015,7 +1015,7 @@ public class CommonQteController : ControllerBase
 		this.ShowMouseCursorName = null;
 	}
 
-	// Token: 0x06013D4E RID: 81230 RVA: 0x004F96FC File Offset: 0x004F78FC
+	// Token: 0x06011230 RID: 70192 RVA: 0x005084D4 File Offset: 0x005066D4
 	private void ResumeFightInputBlock()
 	{
 		if (this.FightInputBlockViewName == null)
@@ -1029,7 +1029,7 @@ public class CommonQteController : ControllerBase
 		}
 	}
 
-	// Token: 0x06013D4F RID: 81231 RVA: 0x004F9754 File Offset: 0x004F7954
+	// Token: 0x06011231 RID: 70193 RVA: 0x0050852C File Offset: 0x0050672C
 	[NullableContext(1)]
 	private static List<EBattleUiChild> ConvertToBattleUiChildren(List<int> hideBattleUiChildren)
 	{
@@ -1041,7 +1041,7 @@ public class CommonQteController : ControllerBase
 		return list;
 	}
 
-	// Token: 0x06013D50 RID: 81232 RVA: 0x004F978C File Offset: 0x004F798C
+	// Token: 0x06011232 RID: 70194 RVA: 0x00508564 File Offset: 0x00506764
 	private UniTask CloseViewSafe(EUiViewName viewName)
 	{
 		CommonQteController.<CloseViewSafe>d__75 <CloseViewSafe>d__;
@@ -1052,7 +1052,7 @@ public class CommonQteController : ControllerBase
 		return <CloseViewSafe>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013D51 RID: 81233 RVA: 0x004F97D0 File Offset: 0x004F79D0
+	// Token: 0x06011233 RID: 70195 RVA: 0x005085A8 File Offset: 0x005067A8
 	[NullableContext(0)]
 	private UniTask<int?> OpenViewSafe(EUiViewName viewName)
 	{
@@ -1064,7 +1064,7 @@ public class CommonQteController : ControllerBase
 		return <OpenViewSafe>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013D52 RID: 81234 RVA: 0x004F9814 File Offset: 0x004F7A14
+	// Token: 0x06011234 RID: 70196 RVA: 0x005085EC File Offset: 0x005067EC
 	[NullableContext(1)]
 	private UniTask CreateItemSafe(CommonQteItemBase item, string itemName)
 	{
@@ -1077,8 +1077,8 @@ public class CommonQteController : ControllerBase
 		return <CreateItemSafe>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x1700195E RID: 6494
-	// (get) Token: 0x06013D53 RID: 81235 RVA: 0x004F985F File Offset: 0x004F7A5F
+	// Token: 0x17001996 RID: 6550
+	// (get) Token: 0x06011235 RID: 70197 RVA: 0x00508637 File Offset: 0x00506837
 	[Nullable(1)]
 	public static CommonQteController Instance
 	{
@@ -1089,7 +1089,7 @@ public class CommonQteController : ControllerBase
 		}
 	}
 
-	// Token: 0x06013D54 RID: 81236 RVA: 0x004F9866 File Offset: 0x004F7A66
+	// Token: 0x06011236 RID: 70198 RVA: 0x0050863E File Offset: 0x0050683E
 	[NullableContext(1)]
 	public static CommonQteController GetOrCreateInstance()
 	{
@@ -1100,7 +1100,7 @@ public class CommonQteController : ControllerBase
 		return CommonQteController._Instance;
 	}
 
-	// Token: 0x06013D55 RID: 81237 RVA: 0x004F987A File Offset: 0x004F7A7A
+	// Token: 0x06011237 RID: 70199 RVA: 0x00508652 File Offset: 0x00506852
 	public static bool CreateInstance()
 	{
 		if (CommonQteController._Instance != null)
@@ -1111,48 +1111,48 @@ public class CommonQteController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06013D56 RID: 81238 RVA: 0x004F9890 File Offset: 0x004F7A90
+	// Token: 0x06011238 RID: 70200 RVA: 0x00508668 File Offset: 0x00506868
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06013D57 RID: 81239 RVA: 0x004F9892 File Offset: 0x004F7A92
+	// Token: 0x06011239 RID: 70201 RVA: 0x0050866A File Offset: 0x0050686A
 	public static void ResetStaticDefaultValue()
 	{
 		CommonQteController._Instance = null;
 	}
 
-	// Token: 0x06013D58 RID: 81240 RVA: 0x004F989A File Offset: 0x004F7A9A
+	// Token: 0x0601123A RID: 70202 RVA: 0x00508672 File Offset: 0x00506872
 	static CommonQteController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CommonQteController.CreateStaticDefaultValue), new Action(CommonQteController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04009555 RID: 38229
+	// Token: 0x040096AC RID: 38572
 	private const int EXTRA_EXPIRED_TIME = 5000;
 
-	// Token: 0x04009556 RID: 38230
+	// Token: 0x040096AD RID: 38573
 	private const int MAX_EXPIRED_TIME = 60000;
 
-	// Token: 0x04009557 RID: 38231
+	// Token: 0x040096AE RID: 38574
 	private CommonQteContextBase Context;
 
-	// Token: 0x04009558 RID: 38232
+	// Token: 0x040096AF RID: 38575
 	private bool IsInQteInternal;
 
-	// Token: 0x04009559 RID: 38233
+	// Token: 0x040096B0 RID: 38576
 	private bool IsHideAllBattleUi;
 
-	// Token: 0x0400955A RID: 38234
+	// Token: 0x040096B1 RID: 38577
 	private List<int> HideBattleUiChildren;
 
-	// Token: 0x0400955B RID: 38235
+	// Token: 0x040096B2 RID: 38578
 	private TimerHandle ExpiredTimer;
 
-	// Token: 0x0400955C RID: 38236
+	// Token: 0x040096B3 RID: 38579
 	private bool IsPreloadingQte;
 
-	// Token: 0x0400955D RID: 38237
+	// Token: 0x040096B4 RID: 38580
 	[Nullable(new byte[]
 	{
 		1,
@@ -1160,41 +1160,41 @@ public class CommonQteController : ControllerBase
 	})]
 	private readonly Dictionary<EUiViewName, CommonQteViewBase> CommonQteViewMap = new Dictionary<EUiViewName, CommonQteViewBase>();
 
-	// Token: 0x0400955E RID: 38238
+	// Token: 0x040096B5 RID: 38581
 	[Nullable(1)]
 	private readonly Dictionary<int, CommonQteItemBase> CommonQteItemMap = new Dictionary<int, CommonQteItemBase>();
 
-	// Token: 0x0400955F RID: 38239
+	// Token: 0x040096B6 RID: 38582
 	private EUiViewName? FightInputBlockViewName;
 
-	// Token: 0x04009560 RID: 38240
+	// Token: 0x040096B7 RID: 38583
 	private EUiViewName? ShowMouseCursorName;
 
-	// Token: 0x04009561 RID: 38241
+	// Token: 0x040096B8 RID: 38584
 	private bool IsSetQteTimeDilation;
 
-	// Token: 0x04009562 RID: 38242
+	// Token: 0x040096B9 RID: 38585
 	private EQteScreenEffectType ScreenEffectType;
 
-	// Token: 0x04009563 RID: 38243
+	// Token: 0x040096BA RID: 38586
 	private EffectScreenPlayData_C ScreenEffect;
 
-	// Token: 0x04009564 RID: 38244
+	// Token: 0x040096BB RID: 38587
 	private int ScreenEffectHandle = -1;
 
-	// Token: 0x04009565 RID: 38245
+	// Token: 0x040096BC RID: 38588
 	private TimerHandle ScreenEffectTimer;
 
-	// Token: 0x04009566 RID: 38246
+	// Token: 0x040096BD RID: 38589
 	private UMatineeCameraShake CameraShake;
 
-	// Token: 0x04009567 RID: 38247
+	// Token: 0x040096BE RID: 38590
 	private TimerHandle CameraShakeTimer;
 
-	// Token: 0x04009568 RID: 38248
+	// Token: 0x040096BF RID: 38591
 	public Dictionary<EUiViewName, CommonQteViewBase> CommonQteViewMapDebug;
 
-	// Token: 0x04009569 RID: 38249
+	// Token: 0x040096C0 RID: 38592
 	[Nullable(new byte[]
 	{
 		2,
@@ -1202,10 +1202,10 @@ public class CommonQteController : ControllerBase
 	})]
 	public Dictionary<int, CommonQteItemBase> CommonQteItemMapDebug;
 
-	// Token: 0x0400956A RID: 38250
+	// Token: 0x040096C1 RID: 38593
 	private bool IsSelfTriggeringTimeDilation;
 
-	// Token: 0x0400956B RID: 38251
+	// Token: 0x040096C2 RID: 38594
 	[Nullable(1)]
 	private readonly HashSet<int> TempHideCursorQteSet = new HashSet<int>
 	{
@@ -1218,6 +1218,6 @@ public class CommonQteController : ControllerBase
 		9035018
 	};
 
-	// Token: 0x0400956C RID: 38252
+	// Token: 0x040096C3 RID: 38595
 	private static CommonQteController _Instance;
 }

@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.AutoPilot
 {
-	// Token: 0x02005E77 RID: 24183
+	// Token: 0x02004E5C RID: 20060
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AutoPilotUtil
 	{
-		// Token: 0x0603D815 RID: 251925 RVA: 0x00ED7CF8 File Offset: 0x00ED5EF8
+		// Token: 0x060327A5 RID: 206757 RVA: 0x00E29284 File Offset: 0x00E27484
 		public static double GenerateAllSplinePoints(UKuroRoadway[] roadways, TArray<FVector2D> splinePoints, [Nullable(2)] Vector startPoint = null, [Nullable(2)] Vector endPoint = null, [Nullable(new byte[]
 		{
 			2,
@@ -35,14 +35,14 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return num;
 		}
 
-		// Token: 0x0603D816 RID: 251926 RVA: 0x00ED7D5A File Offset: 0x00ED5F5A
+		// Token: 0x060327A6 RID: 206758 RVA: 0x00E292E6 File Offset: 0x00E274E6
 		public static void GenerateSingleSplinePoints(USplineComponent splineComp, TArray<FVector2D> splinePoints)
 		{
 			splinePoints.Empty(true);
 			AutoPilotUtil.GenerateSplinePoints(splineComp, 0.0, (double)splineComp.GetSplineLength(), splinePoints, true, true, null);
 		}
 
-		// Token: 0x0603D817 RID: 251927 RVA: 0x00ED7D80 File Offset: 0x00ED5F80
+		// Token: 0x060327A7 RID: 206759 RVA: 0x00E2930C File Offset: 0x00E2750C
 		[NullableContext(2)]
 		private static double ProcessRoadwaySpline([Nullable(1)] USplineComponent splineComp, int index, int totalRoadways, [Nullable(1)] TArray<FVector2D> splinePoints, Vector startPoint = null, Vector endPoint = null, List<double> splinePointsDistanceArr = null)
 		{
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return result;
 		}
 
-		// Token: 0x0603D818 RID: 251928 RVA: 0x00ED7E18 File Offset: 0x00ED6018
+		// Token: 0x060327A8 RID: 206760 RVA: 0x00E293A4 File Offset: 0x00E275A4
 		public static double GetDistanceAlongSplineAtWorldLocation(USplineComponent splineComp, Vector location)
 		{
 			FVectorDouble fvectorDouble = location.ToUeVector(false);
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return (double)splineComp.GetDistanceAlongSplineAtSplineInputKey(inKey);
 		}
 
-		// Token: 0x0603D819 RID: 251929 RVA: 0x00ED7E40 File Offset: 0x00ED6040
+		// Token: 0x060327A9 RID: 206761 RVA: 0x00E293CC File Offset: 0x00E275CC
 		public static void GenerateSplinePoints(USplineComponent splineComp, double startDistance, double endDistance, TArray<FVector2D> splinePoints, bool isAddStartPoint, bool isAddEndPoint, [Nullable(2)] List<double> splinePointsDistanceArr = null)
 		{
 			double num = endDistance - startDistance;
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 		}
 
-		// Token: 0x0603D81A RID: 251930 RVA: 0x00ED7ED4 File Offset: 0x00ED60D4
+		// Token: 0x060327AA RID: 206762 RVA: 0x00E29460 File Offset: 0x00E27660
 		private static FVector2D GetPoint(double distance, USplineComponent splineComp)
 		{
 			FVectorDouble fvectorDouble = splineComp.D_GetLocationAtDistanceAlongSpline((float)distance, ESplineCoordinateSpace.World);
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return AutoPilotUtil.SplinePoint2D.ToUeVector2D(false);
 		}
 
-		// Token: 0x0603D81B RID: 251931 RVA: 0x00ED7F1C File Offset: 0x00ED611C
+		// Token: 0x060327AB RID: 206763 RVA: 0x00E294A8 File Offset: 0x00E276A8
 		public static void ProcessSplinePointsForAutoPilotRoute(UKuroRoadway roadway, TArray<FVector2D> splinePoints, Vector startPoint, Dictionary<int, List<double>> roadWaySplinePointsMap)
 		{
 			if (!roadWaySplinePointsMap.ContainsKey(roadway.Id))
@@ -189,14 +189,14 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 		}
 
-		// Token: 0x0603D81C RID: 251932 RVA: 0x00ED8078 File Offset: 0x00ED6278
+		// Token: 0x060327AC RID: 206764 RVA: 0x00E29604 File Offset: 0x00E27804
 		public static bool CheckReachEnd(USplineComponent splineComp, Vector startPoint, Vector endPoint, int reachEndThreshold = 1000)
 		{
 			double distanceAlongSplineAtWorldLocation = AutoPilotUtil.GetDistanceAlongSplineAtWorldLocation(splineComp, startPoint);
 			return AutoPilotUtil.GetDistanceAlongSplineAtWorldLocation(splineComp, endPoint) - distanceAlongSplineAtWorldLocation < (double)reachEndThreshold;
 		}
 
-		// Token: 0x0603D81D RID: 251933 RVA: 0x00ED809C File Offset: 0x00ED629C
+		// Token: 0x060327AD RID: 206765 RVA: 0x00E29628 File Offset: 0x00E27828
 		public static bool IsNearRoadWay(UKuroRoadway roadWay, Vector location)
 		{
 			if (roadWay.RoadSpline == null)
@@ -222,7 +222,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return num3 <= num6;
 		}
 
-		// Token: 0x0603D81E RID: 251934 RVA: 0x00ED8168 File Offset: 0x00ED6368
+		// Token: 0x060327AE RID: 206766 RVA: 0x00E296F4 File Offset: 0x00E278F4
 		public static UniTask TeleportToTarget(string reason, FVectorDouble targetPos, FRotator? targetRotator = null)
 		{
 			AutoPilotUtil.<TeleportToTarget>d__19 <TeleportToTarget>d__;
@@ -235,43 +235,43 @@ namespace CSharpScript.Game.Module.AutoPilot
 			return <TeleportToTarget>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x04020191 RID: 131473
+		// Token: 0x0401AC58 RID: 109656
 		[StaticVariableRuleIgnore]
 		private static readonly Vector2D TmpVector2D = Vector2D.Create();
 
-		// Token: 0x04020192 RID: 131474
+		// Token: 0x0401AC59 RID: 109657
 		[StaticVariableRuleIgnore]
 		private static readonly Vector2D SplinePoint2D = Vector2D.Create();
 
-		// Token: 0x04020193 RID: 131475
+		// Token: 0x0401AC5A RID: 109658
 		[StaticVariableRuleIgnore]
 		private static readonly List<int> TmpArray = new List<int>();
 
-		// Token: 0x04020194 RID: 131476
+		// Token: 0x0401AC5B RID: 109659
 		[StaticVariableRuleIgnore]
 		private static readonly Vector SplineLocation = Vector.Create();
 
-		// Token: 0x04020195 RID: 131477
+		// Token: 0x0401AC5C RID: 109660
 		[StaticVariableRuleIgnore]
 		private static readonly Stat StatsObject0 = Stat.Create("GenerateSplinePoints", "", "");
 
-		// Token: 0x04020196 RID: 131478
+		// Token: 0x0401AC5D RID: 109661
 		[StaticVariableRuleIgnore]
 		private static readonly Stat StatsObject1 = Stat.Create("IsNearRoadWay", "", "");
 
-		// Token: 0x04020197 RID: 131479
+		// Token: 0x0401AC5E RID: 109662
 		[StaticVariableRuleIgnore]
 		private static readonly Stat StatsObject2 = Stat.Create("ProcessRoadwaySpline", "", "");
 
-		// Token: 0x04020198 RID: 131480
+		// Token: 0x0401AC5F RID: 109663
 		[StaticVariableRuleIgnore]
 		private static readonly Stat StatsObject3 = Stat.Create("CheckReachEnd", "", "");
 
-		// Token: 0x04020199 RID: 131481
+		// Token: 0x0401AC60 RID: 109664
 		[StaticVariableRuleIgnore]
 		private static readonly Stat StatsObject4 = Stat.Create("ProcessSplinePointsForAutoPilotRoute", "", "");
 
-		// Token: 0x0402019A RID: 131482
+		// Token: 0x0401AC61 RID: 109665
 		[StaticVariableRuleIgnore]
 		private static readonly Stat StatsObject5 = Stat.Create("GetDistanceAlongSplineAtWorldLocation", "", "");
 	}

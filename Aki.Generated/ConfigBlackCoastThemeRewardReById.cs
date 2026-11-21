@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020000F6 RID: 246
+	// Token: 0x02000105 RID: 261
 	public class ConfigBlackCoastThemeRewardReById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060005C5 RID: 1477 RVA: 0x0007A537 File Offset: 0x00078737
+		// Token: 0x0600061F RID: 1567 RVA: 0x0007FE9B File Offset: 0x0007E09B
 		static ConfigBlackCoastThemeRewardReById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigBlackCoastThemeRewardReById.CreateStaticDefaultValue), new Action(ConfigBlackCoastThemeRewardReById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060005C6 RID: 1478 RVA: 0x0007A558 File Offset: 0x00078758
+		// Token: 0x06000620 RID: 1568 RVA: 0x0007FEBC File Offset: 0x0007E0BC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigBlackCoastThemeRewardReById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060005C7 RID: 1479 RVA: 0x0007A5D7 File Offset: 0x000787D7
+		// Token: 0x06000621 RID: 1569 RVA: 0x0007FF3B File Offset: 0x0007E13B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigBlackCoastThemeRewardReById.LogPair = null;
 			ConfigBlackCoastThemeRewardReById.HandleId = 0;
 		}
 
-		// Token: 0x060005C8 RID: 1480 RVA: 0x0007A5E5 File Offset: 0x000787E5
+		// Token: 0x06000622 RID: 1570 RVA: 0x0007FF49 File Offset: 0x0007E149
 		public static void Init()
 		{
 			ConfigBlackCoastThemeRewardReById.HandleId = ConfigCommon.InitDataStatement(ConfigBlackCoastThemeRewardReById.HandleId, "db_blackcoasttheme.db", "select BinData from `BlackCoastThemeRewardRe` where Id=?");
 		}
 
-		// Token: 0x060005C9 RID: 1481 RVA: 0x0007A600 File Offset: 0x00078800
+		// Token: 0x06000623 RID: 1571 RVA: 0x0007FF64 File Offset: 0x0007E164
 		public static BlackCoastThemeRewardRe? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigBlackCoastThemeRewardReById.HandleId, ConfigBlackCoastThemeRewardReById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new BlackCoastThemeRewardRe?(rootAsBlackCoastThemeRewardRe);
 		}
 
-		// Token: 0x0400069E RID: 1694
+		// Token: 0x04000707 RID: 1799
 		private const string DB = "db_blackcoasttheme.db";
 
-		// Token: 0x0400069F RID: 1695
+		// Token: 0x04000708 RID: 1800
 		private const string FILE = "h.黑海岸主题活动.xlsx";
 
-		// Token: 0x040006A0 RID: 1696
+		// Token: 0x04000709 RID: 1801
 		private const string TABLE = "BlackCoastThemeRewardRe";
 
-		// Token: 0x040006A1 RID: 1697
+		// Token: 0x0400070A RID: 1802
 		private const string COMMAND = "select BinData from `BlackCoastThemeRewardRe` where Id=?";
 
-		// Token: 0x040006A2 RID: 1698
+		// Token: 0x0400070B RID: 1803
 		private const string KEY_PREFIX = "BlackCoastThemeRewardReById";
 
-		// Token: 0x040006A3 RID: 1699
+		// Token: 0x0400070C RID: 1804
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040006A4 RID: 1700
+		// Token: 0x0400070D RID: 1805
 		private static int HandleId;
 	}
 }

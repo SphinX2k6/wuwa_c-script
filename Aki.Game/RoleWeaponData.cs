@@ -1,25 +1,25 @@
 ﻿using System;
 
-// Token: 0x020027C5 RID: 10181
+// Token: 0x02001D40 RID: 7488
 public class RoleWeaponData : IRoleWeaponData
 {
-	// Token: 0x17001B3D RID: 6973
-	// (get) Token: 0x06014F0A RID: 85770 RVA: 0x00550B4A File Offset: 0x0054ED4A
-	// (set) Token: 0x06014F0B RID: 85771 RVA: 0x00550B52 File Offset: 0x0054ED52
+	// Token: 0x17001B95 RID: 7061
+	// (get) Token: 0x0601290A RID: 76042 RVA: 0x0057B8BC File Offset: 0x00579ABC
+	// (set) Token: 0x0601290B RID: 76043 RVA: 0x0057B8C4 File Offset: 0x00579AC4
 	public int WeaponId { get; set; }
 
-	// Token: 0x17001B3E RID: 6974
-	// (get) Token: 0x06014F0C RID: 85772 RVA: 0x00550B5B File Offset: 0x0054ED5B
-	// (set) Token: 0x06014F0D RID: 85773 RVA: 0x00550B63 File Offset: 0x0054ED63
+	// Token: 0x17001B96 RID: 7062
+	// (get) Token: 0x0601290C RID: 76044 RVA: 0x0057B8CD File Offset: 0x00579ACD
+	// (set) Token: 0x0601290D RID: 76045 RVA: 0x0057B8D5 File Offset: 0x00579AD5
 	public int WeaponLevel { get; set; }
 
-	// Token: 0x17001B3F RID: 6975
-	// (get) Token: 0x06014F0E RID: 85774 RVA: 0x00550B6C File Offset: 0x0054ED6C
-	// (set) Token: 0x06014F0F RID: 85775 RVA: 0x00550B74 File Offset: 0x0054ED74
+	// Token: 0x17001B97 RID: 7063
+	// (get) Token: 0x0601290E RID: 76046 RVA: 0x0057B8DE File Offset: 0x00579ADE
+	// (set) Token: 0x0601290F RID: 76047 RVA: 0x0057B8E6 File Offset: 0x00579AE6
 	public int WeaponBreachLevel { get; set; }
 
-	// Token: 0x17001B40 RID: 6976
-	// (get) Token: 0x06014F10 RID: 85776 RVA: 0x00550B7D File Offset: 0x0054ED7D
-	// (set) Token: 0x06014F11 RID: 85777 RVA: 0x00550B85 File Offset: 0x0054ED85
+	// Token: 0x17001B98 RID: 7064
+	// (get) Token: 0x06012910 RID: 76048 RVA: 0x0057B8EF File Offset: 0x00579AEF
+	// (set) Token: 0x06012911 RID: 76049 RVA: 0x0057B8F7 File Offset: 0x00579AF7
 	public int WeaponResonanceLevel { get; set; }
 }

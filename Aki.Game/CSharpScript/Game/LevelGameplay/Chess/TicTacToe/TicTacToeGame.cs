@@ -5,18 +5,18 @@ using AkiClient.Game.Aki.Data.AIGearStrategy;
 
 namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 {
-	// Token: 0x02006F3D RID: 28477
+	// Token: 0x020060BE RID: 24766
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TicTacToeGame
 	{
-		// Token: 0x06045482 RID: 283778 RVA: 0x01124ED0 File Offset: 0x011230D0
+		// Token: 0x0603B630 RID: 243248 RVA: 0x010CEE7C File Offset: 0x010CD07C
 		public TicTacToeGame()
 		{
 			this.CurrentCamp = this.CampLoop[0];
 		}
 
-		// Token: 0x06045483 RID: 283779 RVA: 0x01124F44 File Offset: 0x01123144
+		// Token: 0x0603B631 RID: 243249 RVA: 0x010CEEF0 File Offset: 0x010CD0F0
 		public void Init(bool isAiOffensive, Action<int, int> onPieceMove)
 		{
 			this.Board.Init(this.WinLineCount, new Action<ETicTacToeBoardContent>(this.OnGameOverCallback), new Action(this.OnEndRoundCallback));
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			this.SetOffensive(isAiOffensive);
 		}
 
-		// Token: 0x06045484 RID: 283780 RVA: 0x01124FCD File Offset: 0x011231CD
+		// Token: 0x0603B632 RID: 243250 RVA: 0x010CEF79 File Offset: 0x010CD179
 		public void RefreshAiEnable(bool enable)
 		{
 			if (this.IsAiEnable != enable)
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			}
 		}
 
-		// Token: 0x06045485 RID: 283781 RVA: 0x01124FFC File Offset: 0x011231FC
+		// Token: 0x0603B633 RID: 243251 RVA: 0x010CEFA8 File Offset: 0x010CD1A8
 		public void StartRound()
 		{
 			if (this.CurrentCamp == this.PlayerCamp)
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			}
 		}
 
-		// Token: 0x06045486 RID: 283782 RVA: 0x01125061 File Offset: 0x01123261
+		// Token: 0x0603B634 RID: 243252 RVA: 0x010CF00D File Offset: 0x010CD20D
 		public bool OnIndexSelect(int index)
 		{
 			if (!this.Controller.IsSelecting)
@@ -72,14 +72,14 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			return this.Controller.ResetSelectPiece(index) || this.Controller.MovePiece(index);
 		}
 
-		// Token: 0x06045487 RID: 283783 RVA: 0x01125099 File Offset: 0x01123299
+		// Token: 0x0603B635 RID: 243253 RVA: 0x010CF045 File Offset: 0x010CD245
 		public bool OnIndexMove(int oldIndex, int newIndex)
 		{
 			this.Controller.SelectPiece(oldIndex);
 			return this.Controller.IsSelecting && this.Controller.MovePiece(newIndex);
 		}
 
-		// Token: 0x06045488 RID: 283784 RVA: 0x011250C4 File Offset: 0x011232C4
+		// Token: 0x0603B636 RID: 243254 RVA: 0x010CF070 File Offset: 0x010CD270
 		public void NextRound()
 		{
 			this.CurrentRound++;
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			this.StartRound();
 		}
 
-		// Token: 0x06045489 RID: 283785 RVA: 0x01125104 File Offset: 0x01123304
+		// Token: 0x0603B637 RID: 243255 RVA: 0x010CF0B0 File Offset: 0x010CD2B0
 		public void SetCurrentRound(int round)
 		{
 			this.CurrentRound = round;
@@ -98,8 +98,8 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			this.StartRound();
 		}
 
-		// Token: 0x17009B27 RID: 39719
-		// (get) Token: 0x0604548A RID: 283786 RVA: 0x01125143 File Offset: 0x01123343
+		// Token: 0x17007066 RID: 28774
+		// (get) Token: 0x0603B638 RID: 243256 RVA: 0x010CF0EF File Offset: 0x010CD2EF
 		public bool IsPlayerRound
 		{
 			get
@@ -108,8 +108,8 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			}
 		}
 
-		// Token: 0x17009B28 RID: 39720
-		// (get) Token: 0x0604548B RID: 283787 RVA: 0x01125153 File Offset: 0x01123353
+		// Token: 0x17007067 RID: 28775
+		// (get) Token: 0x0603B639 RID: 243257 RVA: 0x010CF0FF File Offset: 0x010CD2FF
 		public bool PlayerWin
 		{
 			get
@@ -118,8 +118,8 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			}
 		}
 
-		// Token: 0x17009B29 RID: 39721
-		// (get) Token: 0x0604548C RID: 283788 RVA: 0x01125163 File Offset: 0x01123363
+		// Token: 0x17007068 RID: 28776
+		// (get) Token: 0x0603B63A RID: 243258 RVA: 0x010CF10F File Offset: 0x010CD30F
 		public bool AiWin
 		{
 			get
@@ -128,8 +128,8 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			}
 		}
 
-		// Token: 0x17009B2A RID: 39722
-		// (get) Token: 0x0604548D RID: 283789 RVA: 0x01125173 File Offset: 0x01123373
+		// Token: 0x17007069 RID: 28777
+		// (get) Token: 0x0603B63B RID: 243259 RVA: 0x010CF11F File Offset: 0x010CD31F
 		public bool IsFinish
 		{
 			get
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			}
 		}
 
-		// Token: 0x0604548E RID: 283790 RVA: 0x0112517E File Offset: 0x0112337E
+		// Token: 0x0603B63C RID: 243260 RVA: 0x010CF12A File Offset: 0x010CD32A
 		public void StartGame()
 		{
 			this.CurrentRound = 0;
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			this.StartRound();
 		}
 
-		// Token: 0x0604548F RID: 283791 RVA: 0x011251A2 File Offset: 0x011233A2
+		// Token: 0x0603B63D RID: 243261 RVA: 0x010CF14E File Offset: 0x010CD34E
 		public void ResetGame()
 		{
 			this.Controller.OnResetGame();
@@ -156,19 +156,19 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			this.StartGame();
 		}
 
-		// Token: 0x06045490 RID: 283792 RVA: 0x011251CB File Offset: 0x011233CB
+		// Token: 0x0603B63E RID: 243262 RVA: 0x010CF177 File Offset: 0x010CD377
 		protected void OnGameOver(ETicTacToeBoardContent winCamp)
 		{
 			this.WinCampInternal = winCamp;
 		}
 
-		// Token: 0x06045491 RID: 283793 RVA: 0x011251D4 File Offset: 0x011233D4
+		// Token: 0x0603B63F RID: 243263 RVA: 0x010CF180 File Offset: 0x010CD380
 		protected void OnGameOverCallback(ETicTacToeBoardContent winCamp)
 		{
 			this.OnGameOver(winCamp);
 		}
 
-		// Token: 0x06045492 RID: 283794 RVA: 0x011251DD File Offset: 0x011233DD
+		// Token: 0x0603B640 RID: 243264 RVA: 0x010CF189 File Offset: 0x010CD389
 		protected void OnEndRound()
 		{
 			if (this.AutoNextRound)
@@ -177,19 +177,19 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			}
 		}
 
-		// Token: 0x06045493 RID: 283795 RVA: 0x011251ED File Offset: 0x011233ED
+		// Token: 0x0603B641 RID: 243265 RVA: 0x010CF199 File Offset: 0x010CD399
 		protected void OnEndRoundCallback()
 		{
 			this.OnEndRound();
 		}
 
-		// Token: 0x06045494 RID: 283796 RVA: 0x011251F5 File Offset: 0x011233F5
+		// Token: 0x0603B642 RID: 243266 RVA: 0x010CF1A1 File Offset: 0x010CD3A1
 		public void RefreshAiInfo(BP_AIGearStrategy_C aiInfo)
 		{
 			this.AiController.RefreshAiInfo(aiInfo);
 		}
 
-		// Token: 0x06045495 RID: 283797 RVA: 0x01125204 File Offset: 0x01123404
+		// Token: 0x0603B643 RID: 243267 RVA: 0x010CF1B0 File Offset: 0x010CD3B0
 		public void InitBoardInfo(IList<int> aiPieces, IList<int> playerPieces, bool initOriginBoardInfo = false)
 		{
 			ETicTacToeBoardContent[] array = new ETicTacToeBoardContent[this.Board.BoardLength * this.Board.BoardLength];
@@ -219,7 +219,7 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			this.Board.InitBoardInfo(array);
 		}
 
-		// Token: 0x06045496 RID: 283798 RVA: 0x011252E4 File Offset: 0x011234E4
+		// Token: 0x0603B644 RID: 243268 RVA: 0x010CF290 File Offset: 0x010CD490
 		public int[] GetPlayerPieces()
 		{
 			List<int> list = new List<int>();
@@ -235,7 +235,7 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			return list.ToArray();
 		}
 
-		// Token: 0x06045497 RID: 283799 RVA: 0x01125336 File Offset: 0x01123536
+		// Token: 0x0603B645 RID: 243269 RVA: 0x010CF2E2 File Offset: 0x010CD4E2
 		public void SetOffensive(bool isAiOffensive)
 		{
 			ETicTacToeBoardContent[] campLoop;
@@ -256,74 +256,74 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			this.CampLoop = campLoop;
 		}
 
-		// Token: 0x06045498 RID: 283800 RVA: 0x01125373 File Offset: 0x01123573
+		// Token: 0x0603B646 RID: 243270 RVA: 0x010CF31F File Offset: 0x010CD51F
 		public IReadOnlyList<int> GetNoneNeighbors(int selectIndex)
 		{
 			return this.Board.GetNoneNeighbors(selectIndex);
 		}
 
-		// Token: 0x06045499 RID: 283801 RVA: 0x01125381 File Offset: 0x01123581
+		// Token: 0x0603B647 RID: 243271 RVA: 0x010CF32D File Offset: 0x010CD52D
 		public bool CheckCanMove(int index)
 		{
 			return this.Board.CheckBoardValue(index, ETicTacToeBoardContent.None);
 		}
 
-		// Token: 0x0604549A RID: 283802 RVA: 0x01125390 File Offset: 0x01123590
+		// Token: 0x0603B648 RID: 243272 RVA: 0x010CF33C File Offset: 0x010CD53C
 		public bool CheckIsPlayerPiece(int index)
 		{
 			return this.Board.CheckBoardValue(index, this.PlayerCamp);
 		}
 
-		// Token: 0x0604549B RID: 283803 RVA: 0x011253A4 File Offset: 0x011235A4
+		// Token: 0x0603B649 RID: 243273 RVA: 0x010CF350 File Offset: 0x010CD550
 		public bool CheckIsCenter(int index)
 		{
 			return this.Board.CenterIndex == index;
 		}
 
-		// Token: 0x0604549C RID: 283804 RVA: 0x011253B4 File Offset: 0x011235B4
+		// Token: 0x0603B64A RID: 243274 RVA: 0x010CF360 File Offset: 0x010CD560
 		public bool CheckGameOver(int index)
 		{
 			return this.Board.CheckGameOver(index);
 		}
 
-		// Token: 0x04024214 RID: 147988
+		// Token: 0x0401F4C9 RID: 128201
 		protected readonly TicTacToeController Controller = new TicTacToeController();
 
-		// Token: 0x04024215 RID: 147989
+		// Token: 0x0401F4CA RID: 128202
 		protected readonly TicTacToeAiController AiController = new TicTacToeAiController();
 
-		// Token: 0x04024216 RID: 147990
+		// Token: 0x0401F4CB RID: 128203
 		protected readonly TicTacToeBoard Board = new TicTacToeBoard();
 
-		// Token: 0x04024217 RID: 147991
+		// Token: 0x0401F4CC RID: 128204
 		protected readonly int WinLineCount = 3;
 
-		// Token: 0x04024218 RID: 147992
+		// Token: 0x0401F4CD RID: 128205
 		protected ETicTacToeBoardContent[] CampLoop = new ETicTacToeBoardContent[]
 		{
 			ETicTacToeBoardContent.White,
 			ETicTacToeBoardContent.Black
 		};
 
-		// Token: 0x04024219 RID: 147993
+		// Token: 0x0401F4CE RID: 128206
 		protected readonly ETicTacToeBoardContent PlayerCamp = ETicTacToeBoardContent.White;
 
-		// Token: 0x0402421A RID: 147994
+		// Token: 0x0401F4CF RID: 128207
 		protected readonly ETicTacToeBoardContent AiCamp = ETicTacToeBoardContent.Black;
 
-		// Token: 0x0402421B RID: 147995
+		// Token: 0x0401F4D0 RID: 128208
 		protected ETicTacToeBoardContent CurrentCamp;
 
-		// Token: 0x0402421C RID: 147996
+		// Token: 0x0401F4D1 RID: 128209
 		protected bool AutoNextRound;
 
-		// Token: 0x0402421D RID: 147997
+		// Token: 0x0401F4D2 RID: 128210
 		private int CurrentRound;
 
-		// Token: 0x0402421E RID: 147998
+		// Token: 0x0401F4D3 RID: 128211
 		private bool IsAiEnable = true;
 
-		// Token: 0x0402421F RID: 147999
+		// Token: 0x0401F4D4 RID: 128212
 		private ETicTacToeBoardContent WinCampInternal;
 	}
 }

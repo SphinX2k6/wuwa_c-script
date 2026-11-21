@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002F3C RID: 12092
+// Token: 0x0200248F RID: 9359
 [NullableContext(1)]
 [Nullable(0)]
 public class ModifyFormationAttributeMax : BuffEffect
 {
-	// Token: 0x06019BED RID: 105453 RVA: 0x006B5621 File Offset: 0x006B3821
+	// Token: 0x060174F8 RID: 95480 RVA: 0x006DB93F File Offset: 0x006D9B3F
 	public ModifyFormationAttributeMax(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019BEE RID: 105454 RVA: 0x006B5638 File Offset: 0x006B3838
+	// Token: 0x060174F9 RID: 95481 RVA: 0x006DB958 File Offset: 0x006D9B58
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -28,7 +28,7 @@ public class ModifyFormationAttributeMax : BuffEffect
 		this.ModifierKey = defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06019BEF RID: 105455 RVA: 0x006B56CC File Offset: 0x006B38CC
+	// Token: 0x060174FA RID: 95482 RVA: 0x006DB9EC File Offset: 0x006D9BEC
 	public override void OnCreated()
 	{
 		if (this.AttributeId != (EFormationAttributeId)(-1))
@@ -41,14 +41,14 @@ public class ModifyFormationAttributeMax : BuffEffect
 		}
 	}
 
-	// Token: 0x06019BF0 RID: 105456 RVA: 0x006B5718 File Offset: 0x006B3918
+	// Token: 0x060174FB RID: 95483 RVA: 0x006DBA38 File Offset: 0x006D9C38
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
 		return null;
 	}
 
-	// Token: 0x06019BF1 RID: 105457 RVA: 0x006B571B File Offset: 0x006B391B
+	// Token: 0x060174FC RID: 95484 RVA: 0x006DBA3B File Offset: 0x006D9C3B
 	public override void OnRemoved(bool bPremature)
 	{
 		if (this.AttributeId != (EFormationAttributeId)(-1))
@@ -61,16 +61,16 @@ public class ModifyFormationAttributeMax : BuffEffect
 		}
 	}
 
-	// Token: 0x0400C21B RID: 49691
+	// Token: 0x0400C5BD RID: 50621
 	protected EFormationAttributeId AttributeId = (EFormationAttributeId)(-1);
 
-	// Token: 0x0400C21C RID: 49692
+	// Token: 0x0400C5BE RID: 50622
 	protected float Offset;
 
-	// Token: 0x0400C21D RID: 49693
+	// Token: 0x0400C5BF RID: 50623
 	protected float Percent;
 
-	// Token: 0x0400C21E RID: 49694
+	// Token: 0x0400C5C0 RID: 50624
 	[Nullable(2)]
 	protected string ModifierKey;
 }

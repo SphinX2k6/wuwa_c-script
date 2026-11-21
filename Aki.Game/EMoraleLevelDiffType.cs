@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002228 RID: 8744
+// Token: 0x0200170C RID: 5900
 public enum EMoraleLevelDiffType
 {
-	// Token: 0x040081F4 RID: 33268
+	// Token: 0x04008332 RID: 33586
 	Easy,
-	// Token: 0x040081F5 RID: 33269
+	// Token: 0x04008333 RID: 33587
 	Normal,
-	// Token: 0x040081F6 RID: 33270
+	// Token: 0x04008334 RID: 33588
 	Hard
 }

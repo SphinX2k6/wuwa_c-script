@@ -10,16 +10,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.InstanceDungeon
 {
-	// Token: 0x02005883 RID: 22659
+	// Token: 0x0200485B RID: 18523
 	public class InstanceMatchingConfirm : UiViewBase
 	{
-		// Token: 0x06039AAA RID: 236202 RVA: 0x00DB486E File Offset: 0x00DB2A6E
+		// Token: 0x0602E9CD RID: 190925 RVA: 0x00D03786 File Offset: 0x00D01986
 		[NullableContext(1)]
 		public InstanceMatchingConfirm(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06039AAB RID: 236203 RVA: 0x00DB4878 File Offset: 0x00DB2A78
+		// Token: 0x0602E9CE RID: 190926 RVA: 0x00D03790 File Offset: 0x00D01990
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06039AAC RID: 236204 RVA: 0x00DB49A4 File Offset: 0x00DB2BA4
+		// Token: 0x0602E9CF RID: 190927 RVA: 0x00D038BC File Offset: 0x00D01ABC
 		protected override void OnStart()
 		{
 			this.ShowConfirmState(ConfigMultiTextLang.GetLocalTextNew(InstanceDungeonConfig.Instance.GetConfig(InstanceDungeonEntranceModel.Instance.GetMatchingId()).Value.MapName, null));
@@ -79,19 +79,19 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			});
 		}
 
-		// Token: 0x06039AAD RID: 236205 RVA: 0x00DB4A24 File Offset: 0x00DB2C24
+		// Token: 0x0602E9D0 RID: 190928 RVA: 0x00D0393C File Offset: 0x00D01B3C
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnMatchingChange, new Action(this.OnMatchingChange));
 		}
 
-		// Token: 0x06039AAE RID: 236206 RVA: 0x00DB4A42 File Offset: 0x00DB2C42
+		// Token: 0x0602E9D1 RID: 190929 RVA: 0x00D0395A File Offset: 0x00D01B5A
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnMatchingChange, new Action(this.OnMatchingChange));
 		}
 
-		// Token: 0x06039AAF RID: 236207 RVA: 0x00DB4A60 File Offset: 0x00DB2C60
+		// Token: 0x0602E9D2 RID: 190930 RVA: 0x00D03978 File Offset: 0x00D01B78
 		protected override void OnBeforeDestroy()
 		{
 			if (this.Timer != null)
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.ConfirmTime = 0;
 		}
 
-		// Token: 0x06039AB0 RID: 236208 RVA: 0x00DB4A8C File Offset: 0x00DB2C8C
+		// Token: 0x0602E9D3 RID: 190931 RVA: 0x00D039A4 File Offset: 0x00D01BA4
 		private void OnMatchingChange()
 		{
 			switch (InstanceDungeonEntranceModel.Instance.GetMatchingState())
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x06039AB1 RID: 236209 RVA: 0x00DB4AD0 File Offset: 0x00DB2CD0
+		// Token: 0x0602E9D4 RID: 190932 RVA: 0x00D039E8 File Offset: 0x00D01BE8
 		private void TimerHandle(float _)
 		{
 			if (InstanceDungeonEntranceModel.Instance.GetMatchingState() != EInstanceMatchState.MatchConfirm && this.Timer != null)
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			instance.SetLocalText(text, textTableId, new <>z__ReadOnlySingleElementList<object>(instance2.GetCoolDown((double)confirmTime)));
 		}
 
-		// Token: 0x06039AB2 RID: 236210 RVA: 0x00DB4B44 File Offset: 0x00DB2D44
+		// Token: 0x0602E9D5 RID: 190933 RVA: 0x00D03A5C File Offset: 0x00D01C5C
 		[NullableContext(1)]
 		public void ShowConfirmState(string instanceName)
 		{
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.Timer = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.TimerHandle), 1000f, 1f, null, null, true);
 		}
 
-		// Token: 0x06039AB3 RID: 236211 RVA: 0x00DB4C44 File Offset: 0x00DB2E44
+		// Token: 0x0602E9D6 RID: 190934 RVA: 0x00D03B5C File Offset: 0x00D01D5C
 		public void ShowWaitState()
 		{
 			UUIText text = base.GetText(0);
@@ -192,46 +192,46 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			childPopView2.PopItem.SetBackBtnShowState(false);
 		}
 
-		// Token: 0x06039AB4 RID: 236212 RVA: 0x00DB4CC2 File Offset: 0x00DB2EC2
+		// Token: 0x0602E9D7 RID: 190935 RVA: 0x00D03BDA File Offset: 0x00D01DDA
 		private void OnClickBtnCancel()
 		{
 			InstanceDungeonEntranceController.Instance.MatchConfirmRequest(false);
 			InstanceDungeonModel.Instance.ResetData();
 		}
 
-		// Token: 0x06039AB5 RID: 236213 RVA: 0x00DB4CD9 File Offset: 0x00DB2ED9
+		// Token: 0x0602E9D8 RID: 190936 RVA: 0x00D03BF1 File Offset: 0x00D01DF1
 		private void OnClickBtnConfirm()
 		{
 			InstanceDungeonEntranceController.Instance.MatchConfirmRequest(true);
 			this.ShowWaitState();
 		}
 
-		// Token: 0x0401E222 RID: 123426
+		// Token: 0x04018CBF RID: 101567
 		private int ConfirmTime;
 
-		// Token: 0x0401E223 RID: 123427
+		// Token: 0x04018CC0 RID: 101568
 		[Nullable(2)]
 		private TimerHandle Timer;
 
-		// Token: 0x0401E224 RID: 123428
+		// Token: 0x04018CC1 RID: 101569
 		private const int ONE_SECONDS = 1000;
 
-		// Token: 0x0200BADE RID: 47838
+		// Token: 0x0200A4F7 RID: 42231
 		private static class EInstanceMatchingConfirmComponent
 		{
-			// Token: 0x0403877A RID: 231290
+			// Token: 0x0403317B RID: 209275
 			public const int TextTips = 0;
 
-			// Token: 0x0403877B RID: 231291
+			// Token: 0x0403317C RID: 209276
 			public const int TextContent = 1;
 
-			// Token: 0x0403877C RID: 231292
+			// Token: 0x0403317D RID: 209277
 			public const int BtnCancel = 2;
 
-			// Token: 0x0403877D RID: 231293
+			// Token: 0x0403317E RID: 209278
 			public const int BtnConfirm = 3;
 
-			// Token: 0x0403877E RID: 231294
+			// Token: 0x0403317F RID: 209279
 			public const int WaitingItem = 4;
 		}
 	}

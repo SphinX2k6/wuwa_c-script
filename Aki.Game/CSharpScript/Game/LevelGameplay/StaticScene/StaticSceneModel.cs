@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.StaticScene
 {
-	// Token: 0x02006A10 RID: 27152
+	// Token: 0x02005B6D RID: 23405
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class StaticSceneModel : ModelBase
 	{
-		// Token: 0x060438DD RID: 276701 RVA: 0x01087417 File Offset: 0x01085617
+		// Token: 0x06039929 RID: 235817 RVA: 0x0102BA67 File Offset: 0x01029C67
 		protected override bool OnInit()
 		{
 			return true;
 		}
 
-		// Token: 0x060438DE RID: 276702 RVA: 0x0108741A File Offset: 0x0108561A
+		// Token: 0x0603992A RID: 235818 RVA: 0x0102BA6A File Offset: 0x01029C6A
 		protected override bool OnClear()
 		{
 			this.IsNotAutoExitSceneCamera = false;
@@ -22,8 +22,8 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			return true;
 		}
 
-		// Token: 0x170098A8 RID: 39080
-		// (get) Token: 0x060438DF RID: 276703 RVA: 0x0108742B File Offset: 0x0108562B
+		// Token: 0x17006D8D RID: 28045
+		// (get) Token: 0x0603992B RID: 235819 RVA: 0x0102BA7B File Offset: 0x01029C7B
 		public static StaticSceneModel Instance
 		{
 			get
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			}
 		}
 
-		// Token: 0x060438E0 RID: 276704 RVA: 0x01087432 File Offset: 0x01085632
+		// Token: 0x0603992C RID: 235820 RVA: 0x0102BA82 File Offset: 0x01029C82
 		public static StaticSceneModel GetOrCreateInstance()
 		{
 			if (StaticSceneModel._Instance == null)
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			return StaticSceneModel._Instance;
 		}
 
-		// Token: 0x060438E1 RID: 276705 RVA: 0x01087446 File Offset: 0x01085646
+		// Token: 0x0603992D RID: 235821 RVA: 0x0102BA96 File Offset: 0x01029C96
 		public static bool CreateInstance()
 		{
 			if (StaticSceneModel._Instance != null)
@@ -53,30 +53,30 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene
 			return true;
 		}
 
-		// Token: 0x060438E2 RID: 276706 RVA: 0x0108745C File Offset: 0x0108565C
+		// Token: 0x0603992E RID: 235822 RVA: 0x0102BAAC File Offset: 0x01029CAC
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060438E3 RID: 276707 RVA: 0x0108745E File Offset: 0x0108565E
+		// Token: 0x0603992F RID: 235823 RVA: 0x0102BAAE File Offset: 0x01029CAE
 		public static void ResetStaticDefaultValue()
 		{
 			StaticSceneModel._Instance = null;
 		}
 
-		// Token: 0x060438E4 RID: 276708 RVA: 0x01087466 File Offset: 0x01085666
+		// Token: 0x06039930 RID: 235824 RVA: 0x0102BAB6 File Offset: 0x01029CB6
 		static StaticSceneModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(StaticSceneModel.CreateStaticDefaultValue), new Action(StaticSceneModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04023465 RID: 144485
+		// Token: 0x0401E657 RID: 124503
 		public bool IsNotAutoExitSceneCamera;
 
-		// Token: 0x04023466 RID: 144486
+		// Token: 0x0401E658 RID: 124504
 		public bool IsForceKeepUi;
 
-		// Token: 0x04023467 RID: 144487
+		// Token: 0x0401E659 RID: 124505
 		[Nullable(2)]
 		private static StaticSceneModel _Instance;
 	}

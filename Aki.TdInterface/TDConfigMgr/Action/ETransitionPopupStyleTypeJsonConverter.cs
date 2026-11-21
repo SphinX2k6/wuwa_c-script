@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002484 RID: 9348
+	// Token: 0x02002727 RID: 10023
 	public class ETransitionPopupStyleTypeJsonConverter : JsonConverter<ETransitionPopupStyleType>
 	{
-		// Token: 0x0600CAD2 RID: 51922 RVA: 0x001DDA70 File Offset: 0x001DBC70
+		// Token: 0x0600D78B RID: 55179 RVA: 0x001F7C38 File Offset: 0x001F5E38
 		public override ETransitionPopupStyleType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return ETransitionPopupStyleTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600CAD3 RID: 51923 RVA: 0x001DDA94 File Offset: 0x001DBC94
+		// Token: 0x0600D78C RID: 55180 RVA: 0x001F7C5C File Offset: 0x001F5E5C
 		public override void Write(Utf8JsonWriter writer, ETransitionPopupStyleType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.CreatureTools;
 using UnrealEngine;
 
-// Token: 0x020034D4 RID: 13524
+// Token: 0x02002A48 RID: 10824
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class AttachToActorController : ControllerBase
 {
-	// Token: 0x0601D8BE RID: 121022 RVA: 0x0083E06C File Offset: 0x0083C26C
+	// Token: 0x0601B5BD RID: 112061 RVA: 0x008655DC File Offset: 0x008637DC
 	[NullableContext(2)]
 	public unsafe bool AttachToActor(AActor actor, AActor parentActor, EDetachType detachType, [Nullable(1)] string reason, FName? socketName, EAttachmentRule locationRule, EAttachmentRule rotationRule, EAttachmentRule scaleRule, bool bWeldSimulatedBodies, bool doAttach = true, bool ignoreTargetLocationX = false, bool ignoreTargetLocationY = false, bool ignoreTargetLocationZ = false)
 	{
@@ -104,7 +104,7 @@ public class AttachToActorController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601D8BF RID: 121023 RVA: 0x0083E300 File Offset: 0x0083C500
+	// Token: 0x0601B5BE RID: 112062 RVA: 0x00865870 File Offset: 0x00863A70
 	[NullableContext(2)]
 	public unsafe bool AttachToComponent(AActor actor, USceneComponent parentComponent, EDetachType detachType, [Nullable(1)] string reason, FName? socketName, EAttachmentRule locationRule, EAttachmentRule rotationRule, EAttachmentRule scaleRule, bool bWeldSimulatedBodies, bool doAttach = true, bool ignoreTargetLocationX = false, bool ignoreTargetLocationY = false, bool ignoreTargetLocationZ = false)
 	{
@@ -209,7 +209,7 @@ public class AttachToActorController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601D8C0 RID: 121024 RVA: 0x0083E5E0 File Offset: 0x0083C7E0
+	// Token: 0x0601B5BF RID: 112063 RVA: 0x00865B50 File Offset: 0x00863D50
 	[NullableContext(0)]
 	private unsafe void OnEndPlay([Nullable(2)] AActor actor, TEnumAsByte<EEndPlayReason> reason)
 	{
@@ -262,7 +262,7 @@ public class AttachToActorController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D8C1 RID: 121025 RVA: 0x0083E710 File Offset: 0x0083C910
+	// Token: 0x0601B5C0 RID: 112064 RVA: 0x00865C80 File Offset: 0x00863E80
 	public unsafe bool DetachActor([Nullable(2)] AActor srcActor, bool destroy, string reason, EDetachmentRule locationRule, EDetachmentRule rotationRule, EDetachmentRule scaleRule)
 	{
 		if (string.IsNullOrEmpty(reason))
@@ -347,7 +347,7 @@ public class AttachToActorController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D8C2 RID: 121026 RVA: 0x0083E960 File Offset: 0x0083CB60
+	// Token: 0x0601B5C1 RID: 112065 RVA: 0x00865ED0 File Offset: 0x008640D0
 	public unsafe bool DetachActorByEntity([Nullable(2)] AActor srcActor, string reason, int entityId, bool destroy, EDetachmentRule locationRule, EDetachmentRule rotationRule, EDetachmentRule scaleRule)
 	{
 		if (string.IsNullOrEmpty(reason))
@@ -434,7 +434,7 @@ public class AttachToActorController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601D8C3 RID: 121027 RVA: 0x0083EC04 File Offset: 0x0083CE04
+	// Token: 0x0601B5C2 RID: 112066 RVA: 0x00866174 File Offset: 0x00864374
 	public bool DetachActorsBeforeDestroyEntity(EntityHandle handle)
 	{
 		if (handle == null || !handle.Valid)
@@ -467,7 +467,7 @@ public class AttachToActorController : ControllerBase
 		return result;
 	}
 
-	// Token: 0x0601D8C4 RID: 121028 RVA: 0x0083ECB4 File Offset: 0x0083CEB4
+	// Token: 0x0601B5C3 RID: 112067 RVA: 0x00866224 File Offset: 0x00864424
 	public unsafe bool DetachActorsAfterDestroyEntity(int entityId)
 	{
 		AttachActorEntry attachActorEntry = AttachToActorModel.Instance.GetAttachActorEntry(entityId);
@@ -508,7 +508,7 @@ public class AttachToActorController : ControllerBase
 		return result;
 	}
 
-	// Token: 0x0601D8C5 RID: 121029 RVA: 0x0083EE00 File Offset: 0x0083D000
+	// Token: 0x0601B5C4 RID: 112068 RVA: 0x00866370 File Offset: 0x00864570
 	public unsafe bool CheckAttachError(int entityId)
 	{
 		AttachToActorModel instance = AttachToActorModel.Instance;
@@ -548,7 +548,7 @@ public class AttachToActorController : ControllerBase
 		return result;
 	}
 
-	// Token: 0x0601D8C6 RID: 121030 RVA: 0x0083EF38 File Offset: 0x0083D138
+	// Token: 0x0601B5C5 RID: 112069 RVA: 0x008664A8 File Offset: 0x008646A8
 	private bool TryAttachToActor(AActor actor, AActor parentActor, FName? socketName, EAttachmentRule locationRule, EAttachmentRule rotationRule, EAttachmentRule scaleRule, bool bWeldSimulatedBodies, bool ignoreTargetLocationX, bool ignoreTargetLocationY, bool ignoreTargetLocationZ)
 	{
 		if (this.HasLocationAxisFilter(ignoreTargetLocationX, ignoreTargetLocationY, ignoreTargetLocationZ))
@@ -561,7 +561,7 @@ public class AttachToActorController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601D8C7 RID: 121031 RVA: 0x0083EFB8 File Offset: 0x0083D1B8
+	// Token: 0x0601B5C6 RID: 112070 RVA: 0x00866528 File Offset: 0x00864728
 	private bool TryAttachToComponent(AActor actor, USceneComponent parentComponent, FName? socketName, EAttachmentRule locationRule, EAttachmentRule rotationRule, EAttachmentRule scaleRule, bool bWeldSimulatedBodies, bool ignoreTargetLocationX, bool ignoreTargetLocationY, bool ignoreTargetLocationZ)
 	{
 		if (this.HasLocationAxisFilter(ignoreTargetLocationX, ignoreTargetLocationY, ignoreTargetLocationZ))
@@ -574,27 +574,27 @@ public class AttachToActorController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601D8C8 RID: 121032 RVA: 0x0083F036 File Offset: 0x0083D236
+	// Token: 0x0601B5C7 RID: 112071 RVA: 0x008665A6 File Offset: 0x008647A6
 	private bool HasLocationAxisFilter(bool ignoreTargetLocationX, bool ignoreTargetLocationY, bool ignoreTargetLocationZ)
 	{
 		return ignoreTargetLocationX || ignoreTargetLocationY || ignoreTargetLocationZ;
 	}
 
-	// Token: 0x0601D8C9 RID: 121033 RVA: 0x0083F03D File Offset: 0x0083D23D
+	// Token: 0x0601B5C8 RID: 112072 RVA: 0x008665AD File Offset: 0x008647AD
 	private void RemoveEntityActorAfterAttachFailed(AttachToActorModel attachToActorModel, int entityId, AActor actor, string reason)
 	{
 		this.ClearLocationAxisFilteredAttach(actor);
 		attachToActorModel.RemoveEntityActor(entityId, actor, reason + " AttachFailed");
 	}
 
-	// Token: 0x0601D8CA RID: 121034 RVA: 0x0083F05B File Offset: 0x0083D25B
+	// Token: 0x0601B5C9 RID: 112073 RVA: 0x008665CB File Offset: 0x008647CB
 	private void ClearLocationAxisFilteredAttach(AActor actor)
 	{
 		UKuroAttachLibrary.ClearKuroLocationAxisFilteredAttach(actor);
 	}
 
-	// Token: 0x170028DC RID: 10460
-	// (get) Token: 0x0601D8CB RID: 121035 RVA: 0x0083F063 File Offset: 0x0083D263
+	// Token: 0x17002C74 RID: 11380
+	// (get) Token: 0x0601B5CA RID: 112074 RVA: 0x008665D3 File Offset: 0x008647D3
 	public static AttachToActorController Instance
 	{
 		get
@@ -603,7 +603,7 @@ public class AttachToActorController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D8CC RID: 121036 RVA: 0x0083F06A File Offset: 0x0083D26A
+	// Token: 0x0601B5CB RID: 112075 RVA: 0x008665DA File Offset: 0x008647DA
 	public static AttachToActorController GetOrCreateInstance()
 	{
 		if (AttachToActorController._Instance == null)
@@ -613,7 +613,7 @@ public class AttachToActorController : ControllerBase
 		return AttachToActorController._Instance;
 	}
 
-	// Token: 0x0601D8CD RID: 121037 RVA: 0x0083F07E File Offset: 0x0083D27E
+	// Token: 0x0601B5CC RID: 112076 RVA: 0x008665EE File Offset: 0x008647EE
 	public static bool CreateInstance()
 	{
 		if (AttachToActorController._Instance != null)
@@ -624,27 +624,27 @@ public class AttachToActorController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601D8CE RID: 121038 RVA: 0x0083F094 File Offset: 0x0083D294
+	// Token: 0x0601B5CD RID: 112077 RVA: 0x00866604 File Offset: 0x00864804
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601D8CF RID: 121039 RVA: 0x0083F096 File Offset: 0x0083D296
+	// Token: 0x0601B5CE RID: 112078 RVA: 0x00866606 File Offset: 0x00864806
 	public static void ResetStaticDefaultValue()
 	{
 		AttachToActorController._Instance = null;
 	}
 
-	// Token: 0x0601D8D0 RID: 121040 RVA: 0x0083F09E File Offset: 0x0083D29E
+	// Token: 0x0601B5CF RID: 112079 RVA: 0x0086660E File Offset: 0x0086480E
 	static AttachToActorController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(AttachToActorController.CreateStaticDefaultValue), new Action(AttachToActorController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400E828 RID: 59432
+	// Token: 0x0400ECDC RID: 60636
 	private const int ATTACH_REASON_LENGTH_LIMIT = 4;
 
-	// Token: 0x0400E829 RID: 59433
+	// Token: 0x0400ECDD RID: 60637
 	[Nullable(2)]
 	private static AttachToActorController _Instance;
 }

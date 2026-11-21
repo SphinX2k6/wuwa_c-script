@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot
 {
-	// Token: 0x02004FD3 RID: 20435
+	// Token: 0x02003F9D RID: 16285
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CameraSequencePlayer
 	{
-		// Token: 0x060344B5 RID: 214197 RVA: 0x00C479D4 File Offset: 0x00C45BD4
+		// Token: 0x0602933A RID: 168762 RVA: 0x00B916F4 File Offset: 0x00B8F8F4
 		public void Play(string path, bool isRelativeCamera)
 		{
 			if (this.IsPlaying)
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.Plot
 			this.LoadId = ResourceSystem.Instance.LoadAsync<ULevelSequence>(path, new Action<ULevelSequence, string>(this.OnLoad), 100, "js_undefined");
 		}
 
-		// Token: 0x060344B6 RID: 214198 RVA: 0x00C47A24 File Offset: 0x00C45C24
+		// Token: 0x0602933B RID: 168763 RVA: 0x00B91744 File Offset: 0x00B8F944
 		public void Stop()
 		{
 			if (!this.IsPlaying)
@@ -41,13 +41,22 @@ namespace CSharpScript.Game.Module.Plot
 			{
 				this.CurLevelSeqActor.SequencePlayer.OnStop.Clear();
 				this.CurLevelSeqActor.SequencePlayer.Stop();
+				CameraModel instance = CameraModel.Instance;
+				if (instance != null)
+				{
+					SequenceCamera sequenceCamera = instance.MainModel.SequenceCamera;
+					if (sequenceCamera != null)
+					{
+						sequenceCamera.UnregisterLevelSequenceActor(this.CurLevelSeqActor);
+					}
+				}
 				this.CurLevelSeqActor.ResetBindings();
-				ActorSystem.Instance.Put("CameraSequencePlayer.Stop", this.CurLevelSeqActor, null);
+				ActorSystem.Instance.Put("MovingShotCameraSequencePlayer.Stop", this.CurLevelSeqActor, null);
 			}
 			this.CurLevelSeqActor = null;
 		}
 
-		// Token: 0x060344B7 RID: 214199 RVA: 0x00C47AB8 File Offset: 0x00C45CB8
+		// Token: 0x0602933C RID: 168764 RVA: 0x00B91800 File Offset: 0x00B8FA00
 		private void OnLoad([Nullable(2)] ULevelSequence sequence, string _)
 		{
 			this.LoadId = -1;
@@ -58,6 +67,7 @@ namespace CSharpScript.Game.Module.Plot
 			ALevelSequenceActor alevelSequenceActor = ActorSystem.Instance.Spawn<ALevelSequenceActor>(ALevelSequenceActor.StaticClass(), new FTransformDouble(), null);
 			this.CurLevelSeqActor = alevelSequenceActor;
 			this.CurLevelSeqActor.SetSequence(sequence);
+			CameraModel.Instance.MainModel.SequenceCamera.RegisterLevelSequenceActor(alevelSequenceActor);
 			if (this.IsRelative)
 			{
 				FTransformDouble inT = CameraController.Instance.MainModel.SequenceCamera.DisplayComponent.CineCamera.D_GetTransform();
@@ -75,23 +85,23 @@ namespace CSharpScript.Game.Module.Plot
 			alevelSequenceActor.SequencePlayer.Play();
 		}
 
-		// Token: 0x060344B8 RID: 214200 RVA: 0x00C47BBB File Offset: 0x00C45DBB
+		// Token: 0x0602933D RID: 168765 RVA: 0x00B91918 File Offset: 0x00B8FB18
 		private void OnStop()
 		{
 			this.Stop();
 		}
 
-		// Token: 0x0401BCFF RID: 113919
+		// Token: 0x040166DA RID: 91866
 		[Nullable(2)]
 		private ALevelSequenceActor CurLevelSeqActor;
 
-		// Token: 0x0401BD00 RID: 113920
+		// Token: 0x040166DB RID: 91867
 		private int LoadId = -1;
 
-		// Token: 0x0401BD01 RID: 113921
+		// Token: 0x040166DC RID: 91868
 		private bool IsPlaying;
 
-		// Token: 0x0401BD02 RID: 113922
+		// Token: 0x040166DD RID: 91869
 		private bool IsRelative;
 	}
 }

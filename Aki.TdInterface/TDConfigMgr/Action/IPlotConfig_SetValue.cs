@@ -1,23 +1,20 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D29 RID: 7465
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F3A RID: 7994
 	public class IPlotConfig_SetValue
 	{
-		// Token: 0x04006096 RID: 24726
+		// Token: 0x04006612 RID: 26130
 		public string EdPlotNode;
 
-		// Token: 0x04006097 RID: 24727
+		// Token: 0x04006613 RID: 26131
 		public bool EdPlotHandleJump;
 
-		// Token: 0x04006098 RID: 24728
+		// Token: 0x04006614 RID: 26132
 		public string EdPlotFileId;
 
-		// Token: 0x04006099 RID: 24729
+		// Token: 0x04006615 RID: 26133
 		public EVisualNovelLayout? EdPlotLayout;
 	}
 }

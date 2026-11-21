@@ -2,19 +2,19 @@
 
 namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 {
-	// Token: 0x02004FB9 RID: 20409
+	// Token: 0x02003F82 RID: 16258
 	public struct IDragArea
 	{
-		// Token: 0x0401BC70 RID: 113776
+		// Token: 0x04016645 RID: 91717
 		public float MinX;
 
-		// Token: 0x0401BC71 RID: 113777
+		// Token: 0x04016646 RID: 91718
 		public float MaxX;
 
-		// Token: 0x0401BC72 RID: 113778
+		// Token: 0x04016647 RID: 91719
 		public float MinY;
 
-		// Token: 0x0401BC73 RID: 113779
+		// Token: 0x04016648 RID: 91720
 		public float MaxY;
 	}
 }

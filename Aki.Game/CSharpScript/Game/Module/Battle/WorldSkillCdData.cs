@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Battle
 {
-	// Token: 0x02005C64 RID: 23652
+	// Token: 0x02004C44 RID: 19524
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WorldSkillCdData
 	{
-		// Token: 0x0603BC8C RID: 244876 RVA: 0x00E478DB File Offset: 0x00E45ADB
+		// Token: 0x06030BD7 RID: 199639 RVA: 0x00D97CBB File Offset: 0x00D95EBB
 		public void Clear()
 		{
 			this.EntitySkillCdMap.Clear();
@@ -21,14 +21,14 @@ namespace CSharpScript.Game.Module.Battle
 			this.MultiSkillMap.Clear();
 		}
 
-		// Token: 0x0603BC8D RID: 244877 RVA: 0x00E4790C File Offset: 0x00E45B0C
+		// Token: 0x06030BD8 RID: 199640 RVA: 0x00D97CEC File Offset: 0x00D95EEC
 		public GroupSkillCdInfo InitSkillCd(Entity entity, int skillId, SSkillInfo skillInfo)
 		{
 			SSkillCooldownInfo cooldownConfig = skillInfo.CooldownConfig;
 			return this.InitSkillCdCommon(entity, skillId, cooldownConfig.CdTime, cooldownConfig.CdDelay, cooldownConfig.MaxCount, cooldownConfig.ShareGroupId, cooldownConfig.IsShareAllCdSkill, cooldownConfig.CdTags);
 		}
 
-		// Token: 0x0603BC8E RID: 244878 RVA: 0x00E4794C File Offset: 0x00E45B4C
+		// Token: 0x06030BD9 RID: 199641 RVA: 0x00D97D2C File Offset: 0x00D95F2C
 		public GroupSkillCdInfo InitSkillCdCommon(Entity entity, int skillId, float skillCd, float cdDelay, int maxCount, int shareGroupId, bool isShareAllCdSkill, TArray<FGameplayTag> cdTags)
 		{
 			SkillCdData skillCdData;
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.Battle
 			return groupSkillCdInfo2;
 		}
 
-		// Token: 0x0603BC8F RID: 244879 RVA: 0x00E47B98 File Offset: 0x00E45D98
+		// Token: 0x06030BDA RID: 199642 RVA: 0x00D97F78 File Offset: 0x00D96178
 		private void HandleServerCd(Dictionary<int, List<long>> serverCdMap, int key, GroupSkillCdInfo groupSkillCdInfo, int skillId)
 		{
 			List<long> list;
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.Module.Battle
 			serverCdMap.Remove(key);
 		}
 
-		// Token: 0x0603BC90 RID: 244880 RVA: 0x00E47C7C File Offset: 0x00E45E7C
+		// Token: 0x06030BDB RID: 199643 RVA: 0x00D9805C File Offset: 0x00D9625C
 		public MultiSkillData InitMultiSkill(int entityId)
 		{
 			MultiSkillData multiSkillData;
@@ -185,7 +185,7 @@ namespace CSharpScript.Game.Module.Battle
 			return multiSkillData;
 		}
 
-		// Token: 0x0603BC91 RID: 244881 RVA: 0x00E47CDC File Offset: 0x00E45EDC
+		// Token: 0x06030BDC RID: 199644 RVA: 0x00D980BC File Offset: 0x00D962BC
 		public void RemoveEntity(Entity entity)
 		{
 			int id = entity.Id;
@@ -210,13 +210,13 @@ namespace CSharpScript.Game.Module.Battle
 			this.RemoveMultiSkill(id);
 		}
 
-		// Token: 0x0603BC92 RID: 244882 RVA: 0x00E47DCC File Offset: 0x00E45FCC
+		// Token: 0x06030BDD RID: 199645 RVA: 0x00D981AC File Offset: 0x00D963AC
 		public void RemoveMultiSkill(int entityId)
 		{
 			this.MultiSkillMap.Remove(entityId);
 		}
 
-		// Token: 0x0603BC93 RID: 244883 RVA: 0x00E47DDC File Offset: 0x00E45FDC
+		// Token: 0x06030BDE RID: 199646 RVA: 0x00D981BC File Offset: 0x00D963BC
 		public void HandlePlayerSkillInfoPbNotify(PlayerSkillInfoPbNotify notify)
 		{
 			if (notify.PlayerSkillInfoPb == null)
@@ -243,7 +243,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BC94 RID: 244884 RVA: 0x00E47E8C File Offset: 0x00E4608C
+		// Token: 0x06030BDF RID: 199647 RVA: 0x00D9826C File Offset: 0x00D9646C
 		private void HandlePlayerSkillInfoPb(SkillCdData skillCdData, SkillInfoPb skillInfoPb)
 		{
 			long curTimeMs = (long)Time.Instance.ServerTimeStamp;
@@ -263,7 +263,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BC95 RID: 244885 RVA: 0x00E47F68 File Offset: 0x00E46168
+		// Token: 0x06030BE0 RID: 199648 RVA: 0x00D98348 File Offset: 0x00D96548
 		private bool UpdateSkillCdBySeverCd(SkillCdData skillCdData, SkillCdInfo skillCdInfo, int shareGroupId = 0)
 		{
 			int num = (int)skillCdInfo.SkillId;
@@ -288,7 +288,7 @@ namespace CSharpScript.Game.Module.Battle
 			return true;
 		}
 
-		// Token: 0x0603BC96 RID: 244886 RVA: 0x00E47FC8 File Offset: 0x00E461C8
+		// Token: 0x06030BE1 RID: 199649 RVA: 0x00D983A8 File Offset: 0x00D965A8
 		private void SaveServerSkillCd(SkillCdInfo skillCdInfo, long curTimeMs, Dictionary<int, List<long>> saveMap, int key)
 		{
 			List<long> list = new List<long>();
@@ -309,7 +309,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BC97 RID: 244887 RVA: 0x00E48060 File Offset: 0x00E46260
+		// Token: 0x06030BE2 RID: 199650 RVA: 0x00D98440 File Offset: 0x00D96640
 		[NullableContext(2)]
 		private SkillCdData FindSkillCdDataByRoleId(long roleId)
 		{
@@ -342,19 +342,19 @@ namespace CSharpScript.Game.Module.Battle
 			return null;
 		}
 
-		// Token: 0x0401F222 RID: 127522
+		// Token: 0x04019CD3 RID: 105683
 		private const int MIN_SHARE_GROUP_ID = 1000;
 
-		// Token: 0x0401F223 RID: 127523
+		// Token: 0x04019CD4 RID: 105684
 		public readonly Dictionary<int, SkillCdData> EntitySkillCdMap = new Dictionary<int, SkillCdData>();
 
-		// Token: 0x0401F224 RID: 127524
+		// Token: 0x04019CD5 RID: 105685
 		public readonly SkillCdData AllShareSkillCdData = new SkillCdData();
 
-		// Token: 0x0401F225 RID: 127525
+		// Token: 0x04019CD6 RID: 105686
 		public readonly Dictionary<long, SkillCdData> OffRoleSkillCdMap = new Dictionary<long, SkillCdData>();
 
-		// Token: 0x0401F226 RID: 127526
+		// Token: 0x04019CD7 RID: 105687
 		public readonly Dictionary<int, MultiSkillData> MultiSkillMap = new Dictionary<int, MultiSkillData>();
 	}
 }

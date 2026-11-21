@@ -2,23 +2,23 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001F19 RID: 7961
+// Token: 0x020013DB RID: 5083
 [NullableContext(1)]
 [Nullable(0)]
 public class HonamiStorySettleSuccessViewParams : IHonamiStorySettleSuccessViewParams
 {
-	// Token: 0x17001334 RID: 4916
-	// (get) Token: 0x0600F53E RID: 62782 RVA: 0x003B2B76 File Offset: 0x003B0D76
-	// (set) Token: 0x0600F53F RID: 62783 RVA: 0x003B2B7E File Offset: 0x003B0D7E
+	// Token: 0x1700135E RID: 4958
+	// (get) Token: 0x0600C95D RID: 51549 RVA: 0x003BE662 File Offset: 0x003BC862
+	// (set) Token: 0x0600C95E RID: 51550 RVA: 0x003BE66A File Offset: 0x003BC86A
 	public List<IHonamiStorySettleItemParams> DisplayItems { get; set; } = new List<IHonamiStorySettleItemParams>();
 
-	// Token: 0x17001335 RID: 4917
-	// (get) Token: 0x0600F540 RID: 62784 RVA: 0x003B2B87 File Offset: 0x003B0D87
-	// (set) Token: 0x0600F541 RID: 62785 RVA: 0x003B2B8F File Offset: 0x003B0D8F
+	// Token: 0x1700135F RID: 4959
+	// (get) Token: 0x0600C95F RID: 51551 RVA: 0x003BE673 File Offset: 0x003BC873
+	// (set) Token: 0x0600C960 RID: 51552 RVA: 0x003BE67B File Offset: 0x003BC87B
 	public int TotalReward { get; set; }
 
-	// Token: 0x17001336 RID: 4918
-	// (get) Token: 0x0600F542 RID: 62786 RVA: 0x003B2B98 File Offset: 0x003B0D98
-	// (set) Token: 0x0600F543 RID: 62787 RVA: 0x003B2BA0 File Offset: 0x003B0DA0
+	// Token: 0x17001360 RID: 4960
+	// (get) Token: 0x0600C961 RID: 51553 RVA: 0x003BE684 File Offset: 0x003BC884
+	// (set) Token: 0x0600C962 RID: 51554 RVA: 0x003BE68C File Offset: 0x003BC88C
 	public bool IsNewRecord { get; set; }
 }

@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x02002878 RID: 10360
+// Token: 0x02001DF3 RID: 7667
 public interface ILevelLayoutGridData
 {
-	// Token: 0x17001C6C RID: 7276
-	// (get) Token: 0x06015517 RID: 87319
-	// (set) Token: 0x06015518 RID: 87320
+	// Token: 0x17001CC4 RID: 7364
+	// (get) Token: 0x06012F15 RID: 77589
+	// (set) Token: 0x06012F16 RID: 77590
 	bool IsChosen { get; set; }
 
-	// Token: 0x17001C6D RID: 7277
-	// (get) Token: 0x06015519 RID: 87321
-	// (set) Token: 0x0601551A RID: 87322
+	// Token: 0x17001CC5 RID: 7365
+	// (get) Token: 0x06012F17 RID: 77591
+	// (set) Token: 0x06012F18 RID: 77592
 	bool IsAvailable { get; set; }
 
-	// Token: 0x17001C6E RID: 7278
-	// (get) Token: 0x0601551B RID: 87323
-	// (set) Token: 0x0601551C RID: 87324
+	// Token: 0x17001CC6 RID: 7366
+	// (get) Token: 0x06012F19 RID: 77593
+	// (set) Token: 0x06012F1A RID: 77594
 	int LevelContent { get; set; }
 }

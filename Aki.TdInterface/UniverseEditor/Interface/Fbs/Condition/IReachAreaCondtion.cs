@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004CAF RID: 19631
+	// Token: 0x020051A8 RID: 20904
 	public struct IReachAreaCondtion : IFlatbufferObject
 	{
-		// Token: 0x17008E8D RID: 36493
-		// (get) Token: 0x0601F25F RID: 127583 RVA: 0x00459BB0 File Offset: 0x00457DB0
+		// Token: 0x170095BB RID: 38331
+		// (get) Token: 0x06020E81 RID: 134785 RVA: 0x0048D700 File Offset: 0x0048B900
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601F260 RID: 127584 RVA: 0x00459BBD File Offset: 0x00457DBD
+		// Token: 0x06020E82 RID: 134786 RVA: 0x0048D70D File Offset: 0x0048B90D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601F261 RID: 127585 RVA: 0x00459BC4 File Offset: 0x00457DC4
+		// Token: 0x06020E83 RID: 134787 RVA: 0x0048D714 File Offset: 0x0048B914
 		public static IReachAreaCondtion GetRootAsIReachAreaCondtion(ByteBuffer _bb)
 		{
 			return IReachAreaCondtion.GetRootAsIReachAreaCondtion(_bb, default(IReachAreaCondtion));
 		}
 
-		// Token: 0x0601F262 RID: 127586 RVA: 0x00459BE0 File Offset: 0x00457DE0
+		// Token: 0x06020E84 RID: 134788 RVA: 0x0048D730 File Offset: 0x0048B930
 		public static IReachAreaCondtion GetRootAsIReachAreaCondtion(ByteBuffer _bb, IReachAreaCondtion obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601F263 RID: 127587 RVA: 0x00459BFD File Offset: 0x00457DFD
+		// Token: 0x06020E85 RID: 134789 RVA: 0x0048D74D File Offset: 0x0048B94D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601F264 RID: 127588 RVA: 0x00459C0C File Offset: 0x00457E0C
+		// Token: 0x06020E86 RID: 134790 RVA: 0x0048D75C File Offset: 0x0048B95C
 		public IReachAreaCondtion __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008E8E RID: 36494
-		// (get) Token: 0x0601F265 RID: 127589 RVA: 0x00459C1C File Offset: 0x00457E1C
+		// Token: 0x170095BC RID: 38332
+		// (get) Token: 0x06020E87 RID: 134791 RVA: 0x0048D76C File Offset: 0x0048B96C
 		public EAccessQuestCondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008E8F RID: 36495
-		// (get) Token: 0x0601F266 RID: 127590 RVA: 0x00459C58 File Offset: 0x00457E58
+		// Token: 0x170095BD RID: 38333
+		// (get) Token: 0x06020E88 RID: 134792 RVA: 0x0048D7A8 File Offset: 0x0048B9A8
 		public int RangeEntityId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601F267 RID: 127591 RVA: 0x00459C94 File Offset: 0x00457E94
+		// Token: 0x06020E89 RID: 134793 RVA: 0x0048D7E4 File Offset: 0x0048B9E4
 		public static Offset<IReachAreaCondtion> CreateIReachAreaCondtion(FlatBufferBuilder builder, EAccessQuestCondition Type = EAccessQuestCondition.ExploreLevel, int RangeEntityId = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IReachAreaCondtion.EndIReachAreaCondtion(builder);
 		}
 
-		// Token: 0x0601F268 RID: 127592 RVA: 0x00459CB1 File Offset: 0x00457EB1
+		// Token: 0x06020E8A RID: 134794 RVA: 0x0048D801 File Offset: 0x0048BA01
 		public static void StartIReachAreaCondtion(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601F269 RID: 127593 RVA: 0x00459CBA File Offset: 0x00457EBA
+		// Token: 0x06020E8B RID: 134795 RVA: 0x0048D80A File Offset: 0x0048BA0A
 		public static void AddType(FlatBufferBuilder builder, EAccessQuestCondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601F26A RID: 127594 RVA: 0x00459CC5 File Offset: 0x00457EC5
+		// Token: 0x06020E8C RID: 134796 RVA: 0x0048D815 File Offset: 0x0048BA15
 		public static void AddRangeEntityId(FlatBufferBuilder builder, int rangeEntityId)
 		{
 			builder.AddInt(1, rangeEntityId, 0);
 		}
 
-		// Token: 0x0601F26B RID: 127595 RVA: 0x00459CD0 File Offset: 0x00457ED0
+		// Token: 0x06020E8D RID: 134797 RVA: 0x0048D820 File Offset: 0x0048BA20
 		public static Offset<IReachAreaCondtion> EndIReachAreaCondtion(FlatBufferBuilder builder)
 		{
 			return new Offset<IReachAreaCondtion>(builder.EndTable());
 		}
 
-		// Token: 0x0601F26C RID: 127596 RVA: 0x00459CE0 File Offset: 0x00457EE0
+		// Token: 0x06020E8E RID: 134798 RVA: 0x0048D830 File Offset: 0x0048BA30
 		public IReachAreaCondtionT UnPack()
 		{
 			IReachAreaCondtionT reachAreaCondtionT = new IReachAreaCondtionT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return reachAreaCondtionT;
 		}
 
-		// Token: 0x0601F26D RID: 127597 RVA: 0x00459CFB File Offset: 0x00457EFB
+		// Token: 0x06020E8F RID: 134799 RVA: 0x0048D84B File Offset: 0x0048BA4B
 		public void UnPackTo(IReachAreaCondtionT _o)
 		{
 			_o.Type = this.Type;
 			_o.RangeEntityId = this.RangeEntityId;
 		}
 
-		// Token: 0x0601F26E RID: 127598 RVA: 0x00459D18 File Offset: 0x00457F18
+		// Token: 0x06020E90 RID: 134800 RVA: 0x0048D868 File Offset: 0x0048BA68
 		public static Offset<IReachAreaCondtion> Pack(FlatBufferBuilder builder, IReachAreaCondtionT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IReachAreaCondtion.CreateIReachAreaCondtion(builder, _o.Type, _o.RangeEntityId);
 		}
 
-		// Token: 0x0400D672 RID: 54898
+		// Token: 0x0400E199 RID: 57753
 		private Table __p;
 	}
 }

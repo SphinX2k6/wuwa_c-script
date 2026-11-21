@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020005F9 RID: 1529
+	// Token: 0x02000611 RID: 1553
 	public class ConfigNewPlayerSupV2TrialByTrialRoleGroupId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060023E5 RID: 9189 RVA: 0x001246D4 File Offset: 0x001228D4
+		// Token: 0x06002475 RID: 9333 RVA: 0x0012B150 File Offset: 0x00129350
 		static ConfigNewPlayerSupV2TrialByTrialRoleGroupId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigNewPlayerSupV2TrialByTrialRoleGroupId.CreateStaticDefaultValue), new Action(ConfigNewPlayerSupV2TrialByTrialRoleGroupId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060023E6 RID: 9190 RVA: 0x001246F4 File Offset: 0x001228F4
+		// Token: 0x06002476 RID: 9334 RVA: 0x0012B170 File Offset: 0x00129370
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigNewPlayerSupV2TrialByTrialRoleGroupId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060023E7 RID: 9191 RVA: 0x00124773 File Offset: 0x00122973
+		// Token: 0x06002477 RID: 9335 RVA: 0x0012B1EF File Offset: 0x001293EF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigNewPlayerSupV2TrialByTrialRoleGroupId.LogPair = null;
 			ConfigNewPlayerSupV2TrialByTrialRoleGroupId.HandleId = 0;
 		}
 
-		// Token: 0x060023E8 RID: 9192 RVA: 0x00124781 File Offset: 0x00122981
+		// Token: 0x06002478 RID: 9336 RVA: 0x0012B1FD File Offset: 0x001293FD
 		public static void Init()
 		{
 			ConfigNewPlayerSupV2TrialByTrialRoleGroupId.HandleId = ConfigCommon.InitDataStatement(ConfigNewPlayerSupV2TrialByTrialRoleGroupId.HandleId, "db_newplayersupportactivityv2.db", "select BinData from `NewPlayerSupV2Trial` where TrialRoleGroupId=?");
 		}
 
-		// Token: 0x060023E9 RID: 9193 RVA: 0x0012479C File Offset: 0x0012299C
+		// Token: 0x06002479 RID: 9337 RVA: 0x0012B218 File Offset: 0x00129418
 		public static NewPlayerSupV2Trial? GetConfig(int p0TrialRoleGroupId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigNewPlayerSupV2TrialByTrialRoleGroupId.HandleId, ConfigNewPlayerSupV2TrialByTrialRoleGroupId.LogPair))
@@ -89,7 +89,7 @@ namespace Aki.Config
 			return new NewPlayerSupV2Trial?(rootAsNewPlayerSupV2Trial);
 		}
 
-		// Token: 0x060023EA RID: 9194 RVA: 0x00124914 File Offset: 0x00122B14
+		// Token: 0x0600247A RID: 9338 RVA: 0x0012B390 File Offset: 0x00129590
 		[NullableContext(2)]
 		public static IReadOnlyList<NewPlayerSupV2Trial> GetConfigList(int p0TrialRoleGroupId, bool useCache = true)
 		{
@@ -142,22 +142,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040029B5 RID: 10677
+		// Token: 0x04002A5D RID: 10845
 		private const string DB = "db_newplayersupportactivityv2.db";
 
-		// Token: 0x040029B6 RID: 10678
+		// Token: 0x04002A5E RID: 10846
 		private const string FILE = "x.新玩家助力活动V2.xlsx";
 
-		// Token: 0x040029B7 RID: 10679
+		// Token: 0x04002A5F RID: 10847
 		private const string TABLE = "NewPlayerSupV2Trial";
 
-		// Token: 0x040029B8 RID: 10680
+		// Token: 0x04002A60 RID: 10848
 		private const string COMMAND = "select BinData from `NewPlayerSupV2Trial` where TrialRoleGroupId=?";
 
-		// Token: 0x040029B9 RID: 10681
+		// Token: 0x04002A61 RID: 10849
 		private const string KEY_PREFIX = "NewPlayerSupV2TrialByTrialRoleGroupId";
 
-		// Token: 0x040029BA RID: 10682
+		// Token: 0x04002A62 RID: 10850
 		[Nullable(new byte[]
 		{
 			2,
@@ -167,7 +167,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040029BB RID: 10683
+		// Token: 0x04002A63 RID: 10851
 		private static int HandleId;
 	}
 }

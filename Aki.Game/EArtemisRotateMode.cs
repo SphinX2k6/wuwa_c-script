@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020010FD RID: 4349
+// Token: 0x020005B1 RID: 1457
 public enum EArtemisRotateMode
 {
-	// Token: 0x0400348F RID: 13455
+	// Token: 0x04003528 RID: 13608
 	Arrow,
-	// Token: 0x04003490 RID: 13456
+	// Token: 0x04003529 RID: 13609
 	Ring
 }

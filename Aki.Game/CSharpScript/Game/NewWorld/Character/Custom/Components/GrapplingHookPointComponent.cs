@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Protocol;
@@ -25,33 +24,33 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 {
-	// Token: 0x020070AB RID: 28843
+	// Token: 0x0200630A RID: 25354
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class GrapplingHookPointComponent : EntityComponent, IStaticVariableResetter
 	{
-		// Token: 0x06046471 RID: 287857 RVA: 0x01197768 File Offset: 0x01195968
+		// Token: 0x0603D544 RID: 251204 RVA: 0x011B9AA4 File Offset: 0x011B7CA4
 		static GrapplingHookPointComponent()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(GrapplingHookPointComponent.CreateStaticDefaultValue), new Action(GrapplingHookPointComponent.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06046472 RID: 287858 RVA: 0x01197895 File Offset: 0x01195A95
+		// Token: 0x0603D545 RID: 251205 RVA: 0x011B9BD1 File Offset: 0x011B7DD1
 		public static void CreateStaticDefaultValue()
 		{
 			GrapplingHookPointComponent.PlayerDetectableHookPoints = new List<GrapplingHookPointComponent>();
 			GrapplingHookPointComponent.MotorcycleDetectableHookPoints = new List<GrapplingHookPointComponent>();
 		}
 
-		// Token: 0x06046473 RID: 287859 RVA: 0x011978AB File Offset: 0x01195AAB
+		// Token: 0x0603D546 RID: 251206 RVA: 0x011B9BE7 File Offset: 0x011B7DE7
 		public static void ResetStaticDefaultValue()
 		{
 			GrapplingHookPointComponent.PlayerDetectableHookPoints = null;
 			GrapplingHookPointComponent.MotorcycleDetectableHookPoints = null;
 		}
 
-		// Token: 0x17009C32 RID: 39986
-		// (get) Token: 0x06046474 RID: 287860 RVA: 0x011978B9 File Offset: 0x01195AB9
+		// Token: 0x1700741A RID: 29722
+		// (get) Token: 0x0603D547 RID: 251207 RVA: 0x011B9BF5 File Offset: 0x011B7DF5
 		public long ServerEntityId
 		{
 			get
@@ -65,8 +64,8 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x17009C33 RID: 39987
-		// (get) Token: 0x06046475 RID: 287861 RVA: 0x011978CD File Offset: 0x01195ACD
+		// Token: 0x1700741B RID: 29723
+		// (get) Token: 0x0603D548 RID: 251208 RVA: 0x011B9C09 File Offset: 0x011B7E09
 		public int EntityConfigId
 		{
 			get
@@ -80,8 +79,8 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x17009C34 RID: 39988
-		// (get) Token: 0x06046476 RID: 287862 RVA: 0x011978E0 File Offset: 0x01195AE0
+		// Token: 0x1700741C RID: 29724
+		// (get) Token: 0x0603D549 RID: 251209 RVA: 0x011B9C1C File Offset: 0x011B7E1C
 		public EHookInteractType? HookInteractType
 		{
 			get
@@ -100,8 +99,8 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x17009C35 RID: 39989
-		// (get) Token: 0x06046477 RID: 287863 RVA: 0x0119791E File Offset: 0x01195B1E
+		// Token: 0x1700741D RID: 29725
+		// (get) Token: 0x0603D54A RID: 251210 RVA: 0x011B9C5A File Offset: 0x011B7E5A
 		[Nullable(1)]
 		public global::Vector HookLocation
 		{
@@ -118,8 +117,8 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x17009C36 RID: 39990
-		// (get) Token: 0x06046478 RID: 287864 RVA: 0x01197948 File Offset: 0x01195B48
+		// Token: 0x1700741E RID: 29726
+		// (get) Token: 0x0603D54B RID: 251211 RVA: 0x011B9C84 File Offset: 0x011B7E84
 		public FTransformDouble? HookTransform
 		{
 			get
@@ -133,8 +132,8 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x17009C37 RID: 39991
-		// (get) Token: 0x06046479 RID: 287865 RVA: 0x01197974 File Offset: 0x01195B74
+		// Token: 0x1700741F RID: 29727
+		// (get) Token: 0x0603D54C RID: 251212 RVA: 0x011B9CB0 File Offset: 0x011B7EB0
 		private global::Vector OverwriteLocationProxy
 		{
 			get
@@ -178,8 +177,8 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x17009C38 RID: 39992
-		// (get) Token: 0x0604647A RID: 287866 RVA: 0x01197A30 File Offset: 0x01195C30
+		// Token: 0x17007420 RID: 29728
+		// (get) Token: 0x0603D54D RID: 251213 RVA: 0x011B9D6C File Offset: 0x011B7F6C
 		[Nullable(1)]
 		public global::Vector TriggerLocation
 		{
@@ -198,8 +197,8 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x17009C39 RID: 39993
-		// (get) Token: 0x0604647B RID: 287867 RVA: 0x01197AF1 File Offset: 0x01195CF1
+		// Token: 0x17007421 RID: 29729
+		// (get) Token: 0x0603D54E RID: 251214 RVA: 0x011B9E2D File Offset: 0x011B802D
 		public float Radius
 		{
 			get
@@ -209,8 +208,8 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x17009C3A RID: 39994
-		// (get) Token: 0x0604647C RID: 287868 RVA: 0x01197B0B File Offset: 0x01195D0B
+		// Token: 0x17007422 RID: 29730
+		// (get) Token: 0x0603D54F RID: 251215 RVA: 0x011B9E47 File Offset: 0x011B8047
 		public ICameraGaze CameraGaze
 		{
 			get
@@ -224,8 +223,8 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x17009C3B RID: 39995
-		// (get) Token: 0x0604647D RID: 287869 RVA: 0x01197B1E File Offset: 0x01195D1E
+		// Token: 0x17007423 RID: 29731
+		// (get) Token: 0x0603D550 RID: 251216 RVA: 0x011B9E5A File Offset: 0x011B805A
 		public bool InheritSpeed
 		{
 			get
@@ -235,8 +234,8 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x17009C3C RID: 39996
-		// (get) Token: 0x0604647E RID: 287870 RVA: 0x01197B34 File Offset: 0x01195D34
+		// Token: 0x17007424 RID: 29732
+		// (get) Token: 0x0603D551 RID: 251217 RVA: 0x011B9E70 File Offset: 0x011B8070
 		public bool IsClimb
 		{
 			get
@@ -246,8 +245,8 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x17009C3D RID: 39997
-		// (get) Token: 0x0604647F RID: 287871 RVA: 0x01197B63 File Offset: 0x01195D63
+		// Token: 0x17007425 RID: 29733
+		// (get) Token: 0x0603D552 RID: 251218 RVA: 0x011B9E9F File Offset: 0x011B809F
 		public bool IsInCd
 		{
 			get
@@ -256,8 +255,8 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x17009C3E RID: 39998
-		// (get) Token: 0x06046480 RID: 287872 RVA: 0x01197B6C File Offset: 0x01195D6C
+		// Token: 0x17007426 RID: 29734
+		// (get) Token: 0x0603D553 RID: 251219 RVA: 0x011B9EA8 File Offset: 0x011B80A8
 		public bool DisableInBornState
 		{
 			get
@@ -267,8 +266,8 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x17009C3F RID: 39999
-		// (get) Token: 0x06046481 RID: 287873 RVA: 0x01197B9C File Offset: 0x01195D9C
+		// Token: 0x17007427 RID: 29735
+		// (get) Token: 0x0603D554 RID: 251220 RVA: 0x011B9ED8 File Offset: 0x011B80D8
 		public bool WillBeDestroyedAfterHook
 		{
 			get
@@ -278,8 +277,8 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x17009C40 RID: 40000
-		// (get) Token: 0x06046482 RID: 287874 RVA: 0x01197BCC File Offset: 0x01195DCC
+		// Token: 0x17007428 RID: 29736
+		// (get) Token: 0x0603D555 RID: 251221 RVA: 0x011B9F08 File Offset: 0x011B8108
 		public bool WillBeHideAfterHook
 		{
 			get
@@ -289,8 +288,8 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x17009C41 RID: 40001
-		// (get) Token: 0x06046483 RID: 287875 RVA: 0x01197BFC File Offset: 0x01195DFC
+		// Token: 0x17007429 RID: 29737
+		// (get) Token: 0x0603D556 RID: 251222 RVA: 0x011B9F38 File Offset: 0x011B8138
 		public bool UseRangeComponent
 		{
 			get
@@ -300,8 +299,8 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x17009C42 RID: 40002
-		// (get) Token: 0x06046484 RID: 287876 RVA: 0x01197C2B File Offset: 0x01195E2B
+		// Token: 0x1700742A RID: 29738
+		// (get) Token: 0x0603D557 RID: 251223 RVA: 0x011B9F67 File Offset: 0x011B8167
 		public IGazeNextPointAfterInteract GazeNextPointAfterInteract
 		{
 			get
@@ -315,8 +314,8 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x17009C43 RID: 40003
-		// (get) Token: 0x06046485 RID: 287877 RVA: 0x01197C3E File Offset: 0x01195E3E
+		// Token: 0x1700742B RID: 29739
+		// (get) Token: 0x0603D558 RID: 251224 RVA: 0x011B9F7A File Offset: 0x011B817A
 		[Nullable(new byte[]
 		{
 			2,
@@ -340,8 +339,8 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x17009C44 RID: 40004
-		// (get) Token: 0x06046486 RID: 287878 RVA: 0x01197C54 File Offset: 0x01195E54
+		// Token: 0x1700742C RID: 29740
+		// (get) Token: 0x0603D559 RID: 251225 RVA: 0x011B9F90 File Offset: 0x011B8190
 		public bool IsSummitPoint
 		{
 			get
@@ -366,8 +365,8 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x17009C45 RID: 40005
-		// (get) Token: 0x06046487 RID: 287879 RVA: 0x01197CC0 File Offset: 0x01195EC0
+		// Token: 0x1700742D RID: 29741
+		// (get) Token: 0x0603D55A RID: 251226 RVA: 0x011B9FFC File Offset: 0x011B81FC
 		public bool IsNormalHookPoint
 		{
 			get
@@ -397,8 +396,8 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x17009C46 RID: 40006
-		// (get) Token: 0x06046488 RID: 287880 RVA: 0x01197D48 File Offset: 0x01195F48
+		// Token: 0x1700742E RID: 29742
+		// (get) Token: 0x0603D55B RID: 251227 RVA: 0x011BA084 File Offset: 0x011B8284
 		public bool IsGravityHookPoint
 		{
 			get
@@ -413,8 +412,8 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x17009C47 RID: 40007
-		// (get) Token: 0x06046489 RID: 287881 RVA: 0x01197D8C File Offset: 0x01195F8C
+		// Token: 0x1700742F RID: 29743
+		// (get) Token: 0x0603D55C RID: 251228 RVA: 0x011BA0C8 File Offset: 0x011B82C8
 		public bool SupportSwitchHookMidway
 		{
 			get
@@ -439,8 +438,8 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x17009C48 RID: 40008
-		// (get) Token: 0x0604648A RID: 287882 RVA: 0x01197DF6 File Offset: 0x01195FF6
+		// Token: 0x17007430 RID: 29744
+		// (get) Token: 0x0603D55D RID: 251229 RVA: 0x011BA132 File Offset: 0x011B8332
 		public bool OnlineTypeCanInteract
 		{
 			get
@@ -449,8 +448,8 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x17009C49 RID: 40009
-		// (get) Token: 0x0604648B RID: 287883 RVA: 0x01197E0E File Offset: 0x0119600E
+		// Token: 0x17007431 RID: 29745
+		// (get) Token: 0x0603D55E RID: 251230 RVA: 0x011BA14A File Offset: 0x011B834A
 		public bool IsHookDisabled
 		{
 			get
@@ -459,8 +458,8 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x17009C4A RID: 40010
-		// (get) Token: 0x0604648C RID: 287884 RVA: 0x01197E18 File Offset: 0x01196018
+		// Token: 0x17007432 RID: 29746
+		// (get) Token: 0x0603D55F RID: 251231 RVA: 0x011BA154 File Offset: 0x011B8354
 		public bool IsIgnorePlayerCollision
 		{
 			get
@@ -470,8 +469,8 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x17009C4B RID: 40011
-		// (get) Token: 0x0604648D RID: 287885 RVA: 0x01197E48 File Offset: 0x01196048
+		// Token: 0x17007433 RID: 29747
+		// (get) Token: 0x0603D560 RID: 251232 RVA: 0x011BA184 File Offset: 0x011B8384
 		public Entity MotorInteractConstraintTarget
 		{
 			get
@@ -497,8 +496,8 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x17009C4C RID: 40012
-		// (get) Token: 0x0604648E RID: 287886 RVA: 0x01197E8C File Offset: 0x0119608C
+		// Token: 0x17007434 RID: 29748
+		// (get) Token: 0x0603D561 RID: 251233 RVA: 0x011BA1C8 File Offset: 0x011B83C8
 		public float MotorInteractConstraintAngle
 		{
 			get
@@ -519,8 +518,8 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x17009C4D RID: 40013
-		// (get) Token: 0x0604648F RID: 287887 RVA: 0x01197EE0 File Offset: 0x011960E0
+		// Token: 0x17007435 RID: 29749
+		// (get) Token: 0x0603D562 RID: 251234 RVA: 0x011BA21C File Offset: 0x011B841C
 		public float HookOverrideSpeed
 		{
 			get
@@ -537,8 +536,8 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x17009C4E RID: 40014
-		// (get) Token: 0x06046490 RID: 287888 RVA: 0x01197F4E File Offset: 0x0119614E
+		// Token: 0x17007436 RID: 29750
+		// (get) Token: 0x0603D563 RID: 251235 RVA: 0x011BA28A File Offset: 0x011B848A
 		public int SplineMoveEndCount
 		{
 			get
@@ -547,8 +546,8 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x17009C4F RID: 40015
-		// (get) Token: 0x06046491 RID: 287889 RVA: 0x01197F56 File Offset: 0x01196156
+		// Token: 0x17007437 RID: 29751
+		// (get) Token: 0x0603D564 RID: 251236 RVA: 0x011BA292 File Offset: 0x011B8492
 		public int SplineMoveBrokenCount
 		{
 			get
@@ -557,8 +556,8 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x17009C50 RID: 40016
-		// (get) Token: 0x06046492 RID: 287890 RVA: 0x01197F5E File Offset: 0x0119615E
+		// Token: 0x17007438 RID: 29752
+		// (get) Token: 0x0603D565 RID: 251237 RVA: 0x011BA29A File Offset: 0x011B849A
 		public EEntity? EntityType
 		{
 			get
@@ -567,8 +566,8 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x17009C51 RID: 40017
-		// (get) Token: 0x06046493 RID: 287891 RVA: 0x01197F68 File Offset: 0x01196168
+		// Token: 0x17007439 RID: 29753
+		// (get) Token: 0x0603D566 RID: 251238 RVA: 0x011BA2A4 File Offset: 0x011B84A4
 		public bool PullCollectionWithProgress
 		{
 			get
@@ -593,8 +592,8 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x17009C52 RID: 40018
-		// (get) Token: 0x06046494 RID: 287892 RVA: 0x01197FE0 File Offset: 0x011961E0
+		// Token: 0x1700743A RID: 29754
+		// (get) Token: 0x0603D567 RID: 251239 RVA: 0x011BA31C File Offset: 0x011B851C
 		public bool AllowBatchCollect
 		{
 			get
@@ -619,8 +618,8 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x17009C53 RID: 40019
-		// (get) Token: 0x06046495 RID: 287893 RVA: 0x01198054 File Offset: 0x01196254
+		// Token: 0x1700743B RID: 29755
+		// (get) Token: 0x0603D568 RID: 251240 RVA: 0x011BA390 File Offset: 0x011B8590
 		public bool DisableCollectEffect
 		{
 			get
@@ -645,8 +644,8 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x17009C54 RID: 40020
-		// (get) Token: 0x06046496 RID: 287894 RVA: 0x011980CB File Offset: 0x011962CB
+		// Token: 0x1700743C RID: 29756
+		// (get) Token: 0x0603D569 RID: 251241 RVA: 0x011BA407 File Offset: 0x011B8607
 		public bool MoveFinish
 		{
 			get
@@ -655,8 +654,8 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x17009C55 RID: 40021
-		// (get) Token: 0x06046497 RID: 287895 RVA: 0x011980D4 File Offset: 0x011962D4
+		// Token: 0x1700743D RID: 29757
+		// (get) Token: 0x0603D56A RID: 251242 RVA: 0x011BA410 File Offset: 0x011B8610
 		public bool PlayerDetectable
 		{
 			get
@@ -681,8 +680,8 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x17009C56 RID: 40022
-		// (get) Token: 0x06046498 RID: 287896 RVA: 0x0119814C File Offset: 0x0119634C
+		// Token: 0x1700743E RID: 29758
+		// (get) Token: 0x0603D56B RID: 251243 RVA: 0x011BA488 File Offset: 0x011B8688
 		public bool MotorcycleDetectable
 		{
 			get
@@ -734,7 +733,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x06046499 RID: 287897 RVA: 0x01198260 File Offset: 0x01196460
+		// Token: 0x0603D56C RID: 251244 RVA: 0x011BA59C File Offset: 0x011B879C
 		private void OnSceneInteractionLoadCompleted()
 		{
 			SceneItemActorComponent actorComp = this.ActorComp;
@@ -752,7 +751,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			this.HasOverwriteLocation = (fvectorDouble2 != null);
 		}
 
-		// Token: 0x0604649A RID: 287898 RVA: 0x011982B4 File Offset: 0x011964B4
+		// Token: 0x0603D56D RID: 251245 RVA: 0x011BA5F0 File Offset: 0x011B87F0
 		protected unsafe override bool OnInitData(IEntityArgs args = null)
 		{
 			CreatureDataComponent component = base.Entity.GetComponent<CreatureDataComponent>();
@@ -888,7 +887,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return true;
 		}
 
-		// Token: 0x0604649B RID: 287899 RVA: 0x0119870C File Offset: 0x0119690C
+		// Token: 0x0603D56E RID: 251246 RVA: 0x011BAA48 File Offset: 0x011B8C48
 		protected override bool OnStart()
 		{
 			if (RouletteModel.Instance.GetExploreDataBySkillId(1001) != null)
@@ -923,7 +922,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return true;
 		}
 
-		// Token: 0x0604649C RID: 287900 RVA: 0x01198864 File Offset: 0x01196A64
+		// Token: 0x0603D56F RID: 251247 RVA: 0x011BABA0 File Offset: 0x011B8DA0
 		protected override bool OnEnd()
 		{
 			if (this.PlayerDetectable)
@@ -942,13 +941,13 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return true;
 		}
 
-		// Token: 0x0604649D RID: 287901 RVA: 0x0119893E File Offset: 0x01196B3E
+		// Token: 0x0603D570 RID: 251248 RVA: 0x011BAC7A File Offset: 0x011B8E7A
 		protected override void OnTick(float delta)
 		{
 			this.MoveTick(delta);
 		}
 
-		// Token: 0x0604649E RID: 287902 RVA: 0x01198948 File Offset: 0x01196B48
+		// Token: 0x0603D571 RID: 251249 RVA: 0x011BAC84 File Offset: 0x011B8E84
 		private unsafe void MoveTick(float delta)
 		{
 			if (!this.MoveEnable)
@@ -1001,7 +1000,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			this.ActorComp.SetActorLocation(this.TmpVector.ToUeVector(false), "unknown", true);
 		}
 
-		// Token: 0x0604649F RID: 287903 RVA: 0x01198B20 File Offset: 0x01196D20
+		// Token: 0x0603D572 RID: 251250 RVA: 0x011BAE5C File Offset: 0x011B905C
 		private void SetCommonState(int id)
 		{
 			if (id != 1001)
@@ -1020,7 +1019,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			this.State = EHookPointState.Normal;
 		}
 
-		// Token: 0x060464A0 RID: 287904 RVA: 0x01198B80 File Offset: 0x01196D80
+		// Token: 0x0603D573 RID: 251251 RVA: 0x011BAEBC File Offset: 0x011B90BC
 		private void OnSceneItemStateChange(int stateId, bool isReady)
 		{
 			if (!this.DisableInBornState)
@@ -1034,14 +1033,14 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x060464A1 RID: 287905 RVA: 0x01198BCE File Offset: 0x01196DCE
+		// Token: 0x0603D574 RID: 251252 RVA: 0x011BAF0A File Offset: 0x011B910A
 		[NullableContext(1)]
 		private void OnSplineMoveStopped(Entity _)
 		{
 			this.SplineMoveEndCountInternal++;
 		}
 
-		// Token: 0x060464A2 RID: 287906 RVA: 0x01198BDE File Offset: 0x01196DDE
+		// Token: 0x0603D575 RID: 251253 RVA: 0x011BAF1A File Offset: 0x011B911A
 		[NullableContext(1)]
 		private void OnSplineMoveBroken(Entity _)
 		{
@@ -1049,14 +1048,14 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			this.SplineMoveEndCountInternal++;
 		}
 
-		// Token: 0x060464A3 RID: 287907 RVA: 0x01198BFC File Offset: 0x01196DFC
+		// Token: 0x0603D576 RID: 251254 RVA: 0x011BAF38 File Offset: 0x011B9138
 		[NullableContext(1)]
 		public void UpdateHookPointInfoByNotify(HookLockPointInfoNotify notify)
 		{
 			this.HookDisabledByServer = notify.IsDisabled;
 		}
 
-		// Token: 0x060464A4 RID: 287908 RVA: 0x01198C0C File Offset: 0x01196E0C
+		// Token: 0x0603D577 RID: 251255 RVA: 0x011BAF48 File Offset: 0x011B9148
 		public int GetHighlightTagId()
 		{
 			EHookInteractType? hookInteractType = this.GetHookInteractType();
@@ -1072,14 +1071,14 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return valueOrNull.GetValueOrDefault();
 		}
 
-		// Token: 0x060464A5 RID: 287909 RVA: 0x01198C58 File Offset: 0x01196E58
+		// Token: 0x0603D578 RID: 251256 RVA: 0x011BAF94 File Offset: 0x011B9194
 		public bool IsMovable()
 		{
 			EHookInteractType? hookInteractType = this.GetHookInteractType();
 			return base.Entity.GetComponent<BaseMovementSyncComponent>() != null || hookInteractType.GetValueOrDefault() == EHookInteractType.SuiGuangHook || hookInteractType.GetValueOrDefault() == EHookInteractType.FlyingFeather || hookInteractType.GetValueOrDefault() == EHookInteractType.PilotThrow;
 		}
 
-		// Token: 0x060464A6 RID: 287910 RVA: 0x01198C9C File Offset: 0x01196E9C
+		// Token: 0x0603D579 RID: 251257 RVA: 0x011BAFD8 File Offset: 0x011B91D8
 		public void ChangeHookPointState(EHookPointState newState)
 		{
 			if (this.State == newState)
@@ -1104,13 +1103,13 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			EventSystem.Instance.EmitWithTarget<EHookPointState>(base.Entity, EEventName.OnHookPointStateChanged, this.State);
 		}
 
-		// Token: 0x060464A7 RID: 287911 RVA: 0x01198D3B File Offset: 0x01196F3B
+		// Token: 0x0603D57A RID: 251258 RVA: 0x011BB077 File Offset: 0x011B9277
 		public EHookPointState GetCurrentHookPointState()
 		{
 			return this.State;
 		}
 
-		// Token: 0x060464A8 RID: 287912 RVA: 0x01198D44 File Offset: 0x01196F44
+		// Token: 0x0603D57B RID: 251259 RVA: 0x011BB080 File Offset: 0x011B9280
 		public void SetHookPointLogicEnable(bool enable)
 		{
 			if (!enable)
@@ -1137,20 +1136,32 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x060464A9 RID: 287913 RVA: 0x01198DFD File Offset: 0x01196FFD
+		// Token: 0x0603D57C RID: 251260 RVA: 0x011BB13C File Offset: 0x011B933C
 		public bool CheckCondition()
 		{
-			return this.ConditionGroups == null || this.ConditionGroups.Count == 0 || this.ConditionGroups.All((IConditionGroup group) => LevelGeneralController.Instance.CheckConditionNew(group, this.ActorComp.Owner, EntityContext.Create(base.Entity.Id, null), null));
+			if (this.ConditionGroups == null || this.ConditionGroups.Count == 0)
+			{
+				return true;
+			}
+			for (int i = 0; i < this.ConditionGroups.Count; i++)
+			{
+				IConditionGroup conditionGroup = this.ConditionGroups[i];
+				if (!LevelGeneralController.Instance.CheckConditionNew(conditionGroup, this.ActorComp.Owner, EntityContext.Create(base.Entity.Id, null), null))
+				{
+					return false;
+				}
+			}
+			return true;
 		}
 
-		// Token: 0x060464AA RID: 287914 RVA: 0x01198E30 File Offset: 0x01197030
+		// Token: 0x0603D57D RID: 251261 RVA: 0x011BB1C0 File Offset: 0x011B93C0
 		public bool CheckHookEnableCondition()
 		{
 			IConditionGroup hookEnableCondition = this.Config.HookEnableCondition;
 			return hookEnableCondition == null || LevelGeneralController.Instance.CheckConditionNew(hookEnableCondition, this.ActorComp.Owner, EntityContext.Create(base.Entity.Id, null), null);
 		}
 
-		// Token: 0x060464AB RID: 287915 RVA: 0x01198E88 File Offset: 0x01197088
+		// Token: 0x0603D57E RID: 251262 RVA: 0x011BB218 File Offset: 0x011B9418
 		public void BeHooked(int skillId)
 		{
 			this.TryStartCd();
@@ -1171,7 +1182,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x060464AC RID: 287916 RVA: 0x01198EEC File Offset: 0x011970EC
+		// Token: 0x0603D57F RID: 251263 RVA: 0x011BB27C File Offset: 0x011B947C
 		private void TryStartCd()
 		{
 			HookLockPoint config = this.Config;
@@ -1188,7 +1199,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}, this.Config.HookLockCd.Value * (float)TimeUtil.Instance.InverseMillisecond, null, null, true, 1f);
 		}
 
-		// Token: 0x060464AD RID: 287917 RVA: 0x01198F7C File Offset: 0x0119717C
+		// Token: 0x0603D580 RID: 251264 RVA: 0x011BB30C File Offset: 0x011B950C
 		private void OnSlashHookBeHooked(int skillId)
 		{
 			HookLockPoint config = this.Config;
@@ -1237,7 +1248,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		}
 
-		// Token: 0x060464AE RID: 287918 RVA: 0x011990AC File Offset: 0x011972AC
+		// Token: 0x0603D581 RID: 251265 RVA: 0x011BB43C File Offset: 0x011B963C
 		public bool WasRecentlyRenderOnScreen()
 		{
 			SceneItemActorComponent actorComp = this.ActorComp;
@@ -1272,7 +1283,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return false;
 		}
 
-		// Token: 0x060464AF RID: 287919 RVA: 0x01199170 File Offset: 0x01197370
+		// Token: 0x0603D582 RID: 251266 RVA: 0x011BB500 File Offset: 0x011B9700
 		public int? GetTagId()
 		{
 			if (!this.MotorcycleDetectable)
@@ -1292,7 +1303,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return new int?(CharacterExploreModel.Instance.IsPlayerDrivingMotorcycle ? array[1] : array[0]);
 		}
 
-		// Token: 0x060464B0 RID: 287920 RVA: 0x011991D8 File Offset: 0x011973D8
+		// Token: 0x0603D583 RID: 251267 RVA: 0x011BB568 File Offset: 0x011B9768
 		public EHookInteractType? GetHookInteractType()
 		{
 			if (this.Config == null)
@@ -1303,7 +1314,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return new EHookInteractType?((hookInteractConfig != null) ? hookInteractConfig.Type : EHookInteractType.FixedPointHook);
 		}
 
-		// Token: 0x060464B1 RID: 287921 RVA: 0x01199214 File Offset: 0x01197414
+		// Token: 0x0603D584 RID: 251268 RVA: 0x011BB5A4 File Offset: 0x011B97A4
 		public EHookInteractTypeBp GetHookInteractTypeBp()
 		{
 			EHookInteractType? hookInteractType = this.GetHookInteractType();
@@ -1335,7 +1346,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return result;
 		}
 
-		// Token: 0x060464B2 RID: 287922 RVA: 0x0119927A File Offset: 0x0119747A
+		// Token: 0x0603D585 RID: 251269 RVA: 0x011BB60A File Offset: 0x011B980A
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -1351,7 +1362,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return hookInteractConfig.HookActions;
 		}
 
-		// Token: 0x060464B3 RID: 287923 RVA: 0x01199292 File Offset: 0x01197492
+		// Token: 0x0603D586 RID: 251270 RVA: 0x011BB622 File Offset: 0x011B9822
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -1367,7 +1378,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return hookInteractConfig.ExitHookActions;
 		}
 
-		// Token: 0x060464B4 RID: 287924 RVA: 0x011992AA File Offset: 0x011974AA
+		// Token: 0x0603D587 RID: 251271 RVA: 0x011BB63A File Offset: 0x011B983A
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -1383,7 +1394,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return hookInteractConfig.FinishActions;
 		}
 
-		// Token: 0x060464B5 RID: 287925 RVA: 0x011992C4 File Offset: 0x011974C4
+		// Token: 0x0603D588 RID: 251272 RVA: 0x011BB654 File Offset: 0x011B9854
 		public global::Vector GetSlashHookCharacterLookAtPoint()
 		{
 			global::Vector vector = global::Vector.Create();
@@ -1424,7 +1435,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return vector;
 		}
 
-		// Token: 0x060464B6 RID: 287926 RVA: 0x011993AC File Offset: 0x011975AC
+		// Token: 0x0603D589 RID: 251273 RVA: 0x011BB73C File Offset: 0x011B993C
 		public bool GetLevelPlayTakeOverCamera()
 		{
 			IHookInteractType hookInteractConfig = this.Config.HookInteractConfig;
@@ -1453,7 +1464,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return flag.GetValueOrDefault();
 		}
 
-		// Token: 0x060464B7 RID: 287927 RVA: 0x0119943C File Offset: 0x0119763C
+		// Token: 0x0603D58A RID: 251274 RVA: 0x011BB7CC File Offset: 0x011B99CC
 		[NullableContext(1)]
 		public global::Vector GetSafePointLocation()
 		{
@@ -1482,7 +1493,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return vector;
 		}
 
-		// Token: 0x060464B8 RID: 287928 RVA: 0x01199518 File Offset: 0x01197718
+		// Token: 0x0603D58B RID: 251275 RVA: 0x011BB8A8 File Offset: 0x011B9AA8
 		[NullableContext(1)]
 		public global::Rotator GetSafePointRotation()
 		{
@@ -1544,7 +1555,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return rotator;
 		}
 
-		// Token: 0x060464B9 RID: 287929 RVA: 0x0119961C File Offset: 0x0119781C
+		// Token: 0x0603D58C RID: 251276 RVA: 0x011BB9AC File Offset: 0x011B9BAC
 		private IEntityData GetSafePointEntityData()
 		{
 			if (this.CachedSafeEntityData != null)
@@ -1589,7 +1600,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return this.CachedSafeEntityData;
 		}
 
-		// Token: 0x060464BA RID: 287930 RVA: 0x01199710 File Offset: 0x01197910
+		// Token: 0x0603D58D RID: 251277 RVA: 0x011BBAA0 File Offset: 0x011B9CA0
 		public ESlashHitType? GetSlashHitType()
 		{
 			HookLockPoint config = this.Config;
@@ -1610,7 +1621,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return null;
 		}
 
-		// Token: 0x060464BB RID: 287931 RVA: 0x01199784 File Offset: 0x01197984
+		// Token: 0x0603D58E RID: 251278 RVA: 0x011BBB14 File Offset: 0x011B9D14
 		public int GetHookBindEntityConfig()
 		{
 			HookLockPoint config = this.Config;
@@ -1631,7 +1642,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return 0;
 		}
 
-		// Token: 0x060464BC RID: 287932 RVA: 0x011997E9 File Offset: 0x011979E9
+		// Token: 0x0603D58F RID: 251279 RVA: 0x011BBB79 File Offset: 0x011B9D79
 		public IHookInteractType GetHookInteractConfig()
 		{
 			HookLockPoint config = this.Config;
@@ -1642,7 +1653,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return config.HookInteractConfig;
 		}
 
-		// Token: 0x060464BD RID: 287933 RVA: 0x011997FC File Offset: 0x011979FC
+		// Token: 0x0603D590 RID: 251280 RVA: 0x011BBB8C File Offset: 0x011B9D8C
 		public IMotorHookConfig GetMotorHookConfig()
 		{
 			HookLockPoint config = this.Config;
@@ -1653,7 +1664,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return config.MotorHookConfig;
 		}
 
-		// Token: 0x060464BE RID: 287934 RVA: 0x01199810 File Offset: 0x01197A10
+		// Token: 0x0603D591 RID: 251281 RVA: 0x011BBBA0 File Offset: 0x011B9DA0
 		public long? GetHookEffectBuffId()
 		{
 			HookLockPoint config = this.Config;
@@ -1669,7 +1680,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return hookPerformanceConfig.HookEffectBuffId;
 		}
 
-		// Token: 0x060464BF RID: 287935 RVA: 0x0119984C File Offset: 0x01197A4C
+		// Token: 0x0603D592 RID: 251282 RVA: 0x011BBBDC File Offset: 0x011B9DDC
 		public long? GetMotorHookEffectBuffId()
 		{
 			HookLockPoint config = this.Config;
@@ -1690,7 +1701,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return motorHookPerformanceConfig.HookEffectBuffId;
 		}
 
-		// Token: 0x060464C0 RID: 287936 RVA: 0x01199898 File Offset: 0x01197A98
+		// Token: 0x0603D593 RID: 251283 RVA: 0x011BBC28 File Offset: 0x011B9E28
 		[NullableContext(1)]
 		public bool GetGravityDirect(global::Vector @out, bool isCharacter)
 		{
@@ -1720,7 +1731,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return false;
 		}
 
-		// Token: 0x060464C1 RID: 287937 RVA: 0x01199934 File Offset: 0x01197B34
+		// Token: 0x0603D594 RID: 251284 RVA: 0x011BBCC4 File Offset: 0x011B9EC4
 		[NullableContext(1)]
 		[return: Nullable(2)]
 		private Entity GetTargetEntity(Aki.TDConfigMgr.Action.ITargetEntityType targetEntityConfig)
@@ -1748,7 +1759,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return result;
 		}
 
-		// Token: 0x060464C2 RID: 287938 RVA: 0x011999A4 File Offset: 0x01197BA4
+		// Token: 0x0603D595 RID: 251285 RVA: 0x011BBD34 File Offset: 0x011B9F34
 		public void GetMotorcycleFixHookParams(ref float speed, ref UCurveFloat speedCurve, ref bool needQuat, ref FQuat targetQuat, ref UCurveFloat quatCurve)
 		{
 			HookLockPoint config = this.Config;
@@ -1771,7 +1782,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			needQuat = false;
 		}
 
-		// Token: 0x060464C3 RID: 287939 RVA: 0x01199AA0 File Offset: 0x01197CA0
+		// Token: 0x0603D596 RID: 251286 RVA: 0x011BBE30 File Offset: 0x011BA030
 		public bool StartPullMove(Action onPullFinish)
 		{
 			this.MoveFinishInternal = false;
@@ -1796,7 +1807,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return true;
 		}
 
-		// Token: 0x060464C4 RID: 287940 RVA: 0x01199B24 File Offset: 0x01197D24
+		// Token: 0x0603D597 RID: 251287 RVA: 0x011BBEB4 File Offset: 0x011BA0B4
 		public void StopPullMove()
 		{
 			this.MoveEnable = false;
@@ -1823,7 +1834,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			this.OnPullFinish = null;
 		}
 
-		// Token: 0x060464C5 RID: 287941 RVA: 0x01199C0C File Offset: 0x01197E0C
+		// Token: 0x0603D598 RID: 251288 RVA: 0x011BBF9C File Offset: 0x011BA19C
 		public float GetMotorEjectHookInterpSpeed()
 		{
 			HookLockPoint config = this.Config;
@@ -1849,7 +1860,7 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			return motorEjectHook.InterpSpeed;
 		}
 
-		// Token: 0x060464C6 RID: 287942 RVA: 0x01199C78 File Offset: 0x01197E78
+		// Token: 0x0603D599 RID: 251289 RVA: 0x011BC008 File Offset: 0x011BA208
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -1858,251 +1869,194 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 				return false;
 			}
 			GrapplingHookPointComponent grapplingHookPointComponent = (GrapplingHookPointComponent)componentTemplate;
-			if (base.CanResetComponentProperty("ActorComp"))
+			if (grapplingHookPointComponent.ActorComp == null)
 			{
-				if (grapplingHookPointComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("TagComp"))
-			{
-				if (grapplingHookPointComponent.TagComp == null)
-				{
-					this.TagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LevelTagComponent>(this.TagComp), "TagComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CreatureDataComp"))
-			{
-				if (grapplingHookPointComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("InteractComponent"))
-			{
-				if (grapplingHookPointComponent.InteractComponent == null)
-				{
-					this.InteractComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PawnInteractNewComponent>(this.InteractComponent), "InteractComponent"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CachedOverwriteLocationTime"))
-			{
-				this.CachedOverwriteLocationTime = grapplingHookPointComponent.CachedOverwriteLocationTime;
-			}
-			if (base.CanResetComponentProperty("CachedOverwriteLocation"))
-			{
-				if (grapplingHookPointComponent.CachedOverwriteLocation == null)
-				{
-					this.CachedOverwriteLocation = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.CachedOverwriteLocation), "CachedOverwriteLocation"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("HasOverwriteLocation"))
-			{
-				this.HasOverwriteLocation = grapplingHookPointComponent.HasOverwriteLocation;
-			}
-			if (base.CanResetComponentProperty("CachedSafeEntityData"))
-			{
-				if (grapplingHookPointComponent.CachedSafeEntityData == null)
-				{
-					this.CachedSafeEntityData = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<IEntityData>(this.CachedSafeEntityData), "CachedSafeEntityData"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("HookDisabledByServer"))
-			{
-				this.HookDisabledByServer = grapplingHookPointComponent.HookDisabledByServer;
-			}
-			if (base.CanResetComponentProperty("Config"))
-			{
-				if (grapplingHookPointComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<HookLockPoint>(this.Config), "Config"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("NormalHookMinRadiusSquared"))
-			{
-				this.NormalHookMinRadiusSquared = grapplingHookPointComponent.NormalHookMinRadiusSquared;
-			}
-			if (base.CanResetComponentProperty("MotorcycleHookMinRadiusSquared"))
-			{
-				this.MotorcycleHookMinRadiusSquared = grapplingHookPointComponent.MotorcycleHookMinRadiusSquared;
-			}
-			if (base.CanResetComponentProperty("NormalHookMaxRadiusSquared"))
-			{
-				this.NormalHookMaxRadiusSquared = grapplingHookPointComponent.NormalHookMaxRadiusSquared;
-			}
-			if (base.CanResetComponentProperty("MotorcycleHookMaxRadiusSquared"))
-			{
-				this.MotorcycleHookMaxRadiusSquared = grapplingHookPointComponent.MotorcycleHookMaxRadiusSquared;
-			}
-			if (base.CanResetComponentProperty("State"))
-			{
-				this.State = grapplingHookPointComponent.State;
-			}
-			if (base.CanResetComponentProperty("ConditionGroups") && grapplingHookPointComponent.ConditionGroups != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<IConditionGroup>>(this.ConditionGroups), "ConditionGroups"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("OnlineType"))
+			if (grapplingHookPointComponent.TagComp == null)
 			{
-				this.OnlineType = grapplingHookPointComponent.OnlineType;
+				this.TagComp = null;
 			}
-			if (base.CanResetComponentProperty("InCd"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 			{
-				this.InCd = grapplingHookPointComponent.InCd;
+				return false;
 			}
-			if (base.CanResetComponentProperty("TagIdInternal"))
+			if (grapplingHookPointComponent.CreatureDataComp == null)
 			{
-				this.TagIdInternal = grapplingHookPointComponent.TagIdInternal;
+				this.CreatureDataComp = null;
 			}
-			if (base.CanResetComponentProperty("SplineMoveEndCountInternal"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 			{
-				this.SplineMoveEndCountInternal = grapplingHookPointComponent.SplineMoveEndCountInternal;
+				return false;
 			}
-			if (base.CanResetComponentProperty("SplineMoveBrokenCountInternal"))
+			if (grapplingHookPointComponent.InteractComponent == null)
 			{
-				this.SplineMoveBrokenCountInternal = grapplingHookPointComponent.SplineMoveBrokenCountInternal;
+				this.InteractComponent = null;
 			}
-			if (base.CanResetComponentProperty("EntityTypeInternal"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.InteractComponent), "InteractComponent"))
 			{
-				this.EntityTypeInternal = grapplingHookPointComponent.EntityTypeInternal;
+				return false;
 			}
-			if (base.CanResetComponentProperty("TmpVector"))
+			this.CachedOverwriteLocationTime = grapplingHookPointComponent.CachedOverwriteLocationTime;
+			if (grapplingHookPointComponent.CachedOverwriteLocation == null)
 			{
-				if (grapplingHookPointComponent.TmpVector == null)
-				{
-					this.TmpVector = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.TmpVector), "TmpVector"))
-				{
-					return false;
-				}
+				this.CachedOverwriteLocation = null;
 			}
-			if (base.CanResetComponentProperty("PullStateMoveSpeed"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CachedOverwriteLocation), "CachedOverwriteLocation"))
 			{
-				this.PullStateMoveSpeed = grapplingHookPointComponent.PullStateMoveSpeed;
+				return false;
 			}
-			if (base.CanResetComponentProperty("PullStateCurrentMoveSpeed"))
+			this.HasOverwriteLocation = grapplingHookPointComponent.HasOverwriteLocation;
+			if (grapplingHookPointComponent.CachedSafeEntityData == null)
 			{
-				this.PullStateCurrentMoveSpeed = grapplingHookPointComponent.PullStateCurrentMoveSpeed;
+				this.CachedSafeEntityData = null;
 			}
-			if (base.CanResetComponentProperty("MoveEnable"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CachedSafeEntityData), "CachedSafeEntityData"))
 			{
-				this.MoveEnable = grapplingHookPointComponent.MoveEnable;
+				return false;
 			}
-			if (base.CanResetComponentProperty("MovePassedTime"))
+			this.HookDisabledByServer = grapplingHookPointComponent.HookDisabledByServer;
+			if (grapplingHookPointComponent.Config == null)
 			{
-				this.MovePassedTime = grapplingHookPointComponent.MovePassedTime;
+				this.Config = null;
 			}
-			if (base.CanResetComponentProperty("MoveFinishInternal"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 			{
-				this.MoveFinishInternal = grapplingHookPointComponent.MoveFinishInternal;
+				return false;
 			}
-			if (base.CanResetComponentProperty("MotorcycleDetectableInternal"))
+			this.NormalHookMinRadiusSquared = grapplingHookPointComponent.NormalHookMinRadiusSquared;
+			this.MotorcycleHookMinRadiusSquared = grapplingHookPointComponent.MotorcycleHookMinRadiusSquared;
+			this.NormalHookMaxRadiusSquared = grapplingHookPointComponent.NormalHookMaxRadiusSquared;
+			this.MotorcycleHookMaxRadiusSquared = grapplingHookPointComponent.MotorcycleHookMaxRadiusSquared;
+			this.State = grapplingHookPointComponent.State;
+			if (grapplingHookPointComponent.ConditionGroups != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ConditionGroups), "ConditionGroups"))
 			{
-				this.MotorcycleDetectableInternal = grapplingHookPointComponent.MotorcycleDetectableInternal;
+				return false;
 			}
-			if (base.CanResetComponentProperty("OnPullFinish"))
+			this.OnlineType = grapplingHookPointComponent.OnlineType;
+			this.InCd = grapplingHookPointComponent.InCd;
+			this.TagIdInternal = grapplingHookPointComponent.TagIdInternal;
+			this.SplineMoveEndCountInternal = grapplingHookPointComponent.SplineMoveEndCountInternal;
+			this.SplineMoveBrokenCountInternal = grapplingHookPointComponent.SplineMoveBrokenCountInternal;
+			this.EntityTypeInternal = grapplingHookPointComponent.EntityTypeInternal;
+			if (grapplingHookPointComponent.TmpVector == null)
 			{
-				if (grapplingHookPointComponent.OnPullFinish == null)
-				{
-					this.OnPullFinish = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Action>(this.OnPullFinish), "OnPullFinish"))
-				{
-					return false;
-				}
+				this.TmpVector = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector), "TmpVector"))
+			{
+				return false;
+			}
+			this.PullStateMoveSpeed = grapplingHookPointComponent.PullStateMoveSpeed;
+			this.PullStateCurrentMoveSpeed = grapplingHookPointComponent.PullStateCurrentMoveSpeed;
+			this.MoveEnable = grapplingHookPointComponent.MoveEnable;
+			this.MovePassedTime = grapplingHookPointComponent.MovePassedTime;
+			this.MoveFinishInternal = grapplingHookPointComponent.MoveFinishInternal;
+			this.MotorcycleDetectableInternal = grapplingHookPointComponent.MotorcycleDetectableInternal;
+			if (grapplingHookPointComponent.OnPullFinish == null)
+			{
+				this.OnPullFinish = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnPullFinish), "OnPullFinish"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x04024D3C RID: 150844
+		// Token: 0x1700743F RID: 29759
+		// (get) Token: 0x0603D59A RID: 251290 RVA: 0x011BC2BD File Offset: 0x011BA4BD
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007440 RID: 29760
+		// (get) Token: 0x0603D59B RID: 251291 RVA: 0x011BC2C0 File Offset: 0x011BA4C0
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007441 RID: 29761
+		// (get) Token: 0x0603D59C RID: 251292 RVA: 0x011BC2C3 File Offset: 0x011BA4C3
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020880 RID: 133248
 		[Nullable(1)]
 		private const string OVERWRITE_HOOK_LOCATION_KEY = "OverwriteLocation";
 
-		// Token: 0x04024D3D RID: 150845
+		// Token: 0x04020881 RID: 133249
 		private const float CAPTURE_LENGTH = 150f;
 
-		// Token: 0x04024D3E RID: 150846
+		// Token: 0x04020882 RID: 133250
 		public const float CAPTURE_LENGTH_SQUARE = 22500f;
 
-		// Token: 0x04024D3F RID: 150847
+		// Token: 0x04020883 RID: 133251
 		private const float CAPTURE_LENGTH_LIMIT = 10000f;
 
-		// Token: 0x04024D40 RID: 150848
+		// Token: 0x04020884 RID: 133252
 		private const float CAPTURE_LENGTH_LIMIT_SQUARE = 100000000f;
 
-		// Token: 0x04024D41 RID: 150849
+		// Token: 0x04020885 RID: 133253
 		private const float NORMALIZE = 0.01f;
 
-		// Token: 0x04024D42 RID: 150850
+		// Token: 0x04020886 RID: 133254
 		private const float PULL_COLLECTION_MOVE_SPEED = 4000f;
 
-		// Token: 0x04024D43 RID: 150851
+		// Token: 0x04020887 RID: 133255
 		public const float PULL_COLLECTION_ACCELERATION = 500f;
 
-		// Token: 0x04024D44 RID: 150852
+		// Token: 0x04020888 RID: 133256
 		public const float PULL_COLLECTION_MOVE_MAX_SPEED = 6000f;
 
-		// Token: 0x04024D45 RID: 150853
+		// Token: 0x04020889 RID: 133257
 		private const float PULL_COLLECTION_MOVE_DURATION = 500f;
 
-		// Token: 0x04024D46 RID: 150854
+		// Token: 0x0402088A RID: 133258
 		private static readonly int SlashLeftQteTag = GameplayTagDefine.EGameplayTagId["角色.Common.技能通用标识.古英雄铠.模式标识.QTE左斩"];
 
-		// Token: 0x04024D47 RID: 150855
+		// Token: 0x0402088B RID: 133259
 		private static readonly int SlashRightQteTag = GameplayTagDefine.EGameplayTagId["角色.Common.技能通用标识.古英雄铠.模式标识.QTE右斩"];
 
-		// Token: 0x04024D48 RID: 150856
+		// Token: 0x0402088C RID: 133260
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly global::Rotator TmpRotator = global::Rotator.Create();
 
-		// Token: 0x04024D49 RID: 150857
+		// Token: 0x0402088D RID: 133261
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly Quat TmpQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x04024D4A RID: 150858
+		// Token: 0x0402088E RID: 133262
 		[Nullable(1)]
 		public static List<GrapplingHookPointComponent> PlayerDetectableHookPoints;
 
-		// Token: 0x04024D4B RID: 150859
+		// Token: 0x0402088F RID: 133263
 		[Nullable(1)]
 		public static List<GrapplingHookPointComponent> MotorcycleDetectableHookPoints;
 
-		// Token: 0x04024D4C RID: 150860
+		// Token: 0x04020890 RID: 133264
 		private static readonly int DefaultHighlightTagId = GameplayTagDefine.EGameplayTagId["角色.Common.技能通用标识.钩索类技能可用"];
 
-		// Token: 0x04024D4D RID: 150861
+		// Token: 0x04020891 RID: 133265
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<EHookInteractType, int> HighlightTagIdMap = new Dictionary<EHookInteractType, int>
@@ -2113,99 +2067,99 @@ namespace CSharpScript.Game.NewWorld.Character.Custom.Components
 			}
 		};
 
-		// Token: 0x04024D4E RID: 150862
+		// Token: 0x04020892 RID: 133266
 		public SceneItemActorComponent ActorComp;
 
-		// Token: 0x04024D4F RID: 150863
+		// Token: 0x04020893 RID: 133267
 		private LevelTagComponent TagComp;
 
-		// Token: 0x04024D50 RID: 150864
+		// Token: 0x04020894 RID: 133268
 		private CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x04024D51 RID: 150865
+		// Token: 0x04020895 RID: 133269
 		private PawnInteractNewComponent InteractComponent;
 
-		// Token: 0x04024D52 RID: 150866
+		// Token: 0x04020896 RID: 133270
 		private int CachedOverwriteLocationTime = -1;
 
-		// Token: 0x04024D53 RID: 150867
+		// Token: 0x04020897 RID: 133271
 		private global::Vector CachedOverwriteLocation;
 
-		// Token: 0x04024D54 RID: 150868
+		// Token: 0x04020898 RID: 133272
 		private bool HasOverwriteLocation;
 
-		// Token: 0x04024D55 RID: 150869
+		// Token: 0x04020899 RID: 133273
 		private IEntityData CachedSafeEntityData;
 
-		// Token: 0x04024D56 RID: 150870
+		// Token: 0x0402089A RID: 133274
 		private bool HookDisabledByServer;
 
-		// Token: 0x04024D57 RID: 150871
+		// Token: 0x0402089B RID: 133275
 		private HookLockPoint Config;
 
-		// Token: 0x04024D58 RID: 150872
+		// Token: 0x0402089C RID: 133276
 		public float? NormalHookMinRadiusSquared;
 
-		// Token: 0x04024D59 RID: 150873
+		// Token: 0x0402089D RID: 133277
 		public float MotorcycleHookMinRadiusSquared;
 
-		// Token: 0x04024D5A RID: 150874
+		// Token: 0x0402089E RID: 133278
 		public float NormalHookMaxRadiusSquared;
 
-		// Token: 0x04024D5B RID: 150875
+		// Token: 0x0402089F RID: 133279
 		public float MotorcycleHookMaxRadiusSquared;
 
-		// Token: 0x04024D5C RID: 150876
+		// Token: 0x040208A0 RID: 133280
 		private EHookPointState State = EHookPointState.None;
 
-		// Token: 0x04024D5D RID: 150877
+		// Token: 0x040208A1 RID: 133281
 		[Nullable(1)]
 		private readonly List<IConditionGroup> ConditionGroups = new List<IConditionGroup>();
 
-		// Token: 0x04024D5E RID: 150878
+		// Token: 0x040208A2 RID: 133282
 		private EOnlineInteractType? OnlineType;
 
-		// Token: 0x04024D5F RID: 150879
+		// Token: 0x040208A3 RID: 133283
 		private bool InCd;
 
-		// Token: 0x04024D60 RID: 150880
+		// Token: 0x040208A4 RID: 133284
 		private int? TagIdInternal;
 
-		// Token: 0x04024D61 RID: 150881
+		// Token: 0x040208A5 RID: 133285
 		private int SplineMoveEndCountInternal;
 
-		// Token: 0x04024D62 RID: 150882
+		// Token: 0x040208A6 RID: 133286
 		private int SplineMoveBrokenCountInternal;
 
-		// Token: 0x04024D63 RID: 150883
+		// Token: 0x040208A7 RID: 133287
 		private EEntity? EntityTypeInternal;
 
-		// Token: 0x04024D64 RID: 150884
+		// Token: 0x040208A8 RID: 133288
 		[Nullable(1)]
 		private global::Vector TmpVector;
 
-		// Token: 0x04024D65 RID: 150885
+		// Token: 0x040208A9 RID: 133289
 		private float PullStateMoveSpeed;
 
-		// Token: 0x04024D66 RID: 150886
+		// Token: 0x040208AA RID: 133290
 		private float PullStateCurrentMoveSpeed;
 
-		// Token: 0x04024D67 RID: 150887
+		// Token: 0x040208AB RID: 133291
 		private bool MoveEnable;
 
-		// Token: 0x04024D68 RID: 150888
+		// Token: 0x040208AC RID: 133292
 		private float MovePassedTime;
 
-		// Token: 0x04024D69 RID: 150889
+		// Token: 0x040208AD RID: 133293
 		private bool MoveFinishInternal = true;
 
-		// Token: 0x04024D6A RID: 150890
+		// Token: 0x040208AE RID: 133294
 		private bool? MotorcycleDetectableInternal;
 
-		// Token: 0x04024D6B RID: 150891
+		// Token: 0x040208AF RID: 133295
 		private Action OnPullFinish;
 
-		// Token: 0x04024D6C RID: 150892
+		// Token: 0x040208B0 RID: 133296
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<EHookInteractType, EHookInteractTypeBp> InteractTsType2BpType = new Dictionary<EHookInteractType, EHookInteractTypeBp>

@@ -5,24 +5,24 @@ using Aki.Config;
 using AkiClient.Game.Aki.Scene.NewGacha.BP;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.BlackScreen;
-using CSharpScript.Game.Module.UiCameraAnimation.UiCameraContext;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020028F3 RID: 10483
+// Token: 0x02001E6E RID: 7790
 [NullableContext(2)]
 [Nullable(0)]
 public class RoleNewJoinView : UiViewBase
 {
-	// Token: 0x06015A3F RID: 88639 RVA: 0x00576469 File Offset: 0x00574669
+	// Token: 0x06013443 RID: 78915 RVA: 0x005A133D File Offset: 0x0059F53D
 	[NullableContext(1)]
 	public RoleNewJoinView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06015A40 RID: 88640 RVA: 0x00576474 File Offset: 0x00574674
+	// Token: 0x06013444 RID: 78916 RVA: 0x005A1348 File Offset: 0x0059F548
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -43,7 +43,7 @@ public class RoleNewJoinView : UiViewBase
 		};
 	}
 
-	// Token: 0x06015A41 RID: 88641 RVA: 0x00576578 File Offset: 0x00574778
+	// Token: 0x06013445 RID: 78917 RVA: 0x005A144C File Offset: 0x0059F64C
 	protected override void OnBeforeCreate()
 	{
 		this.RoleId = (int)(this.OpenParam ?? 0);
@@ -56,7 +56,7 @@ public class RoleNewJoinView : UiViewBase
 		base.AddUiBehavior(this.GachaSequence);
 	}
 
-	// Token: 0x06015A42 RID: 88642 RVA: 0x005765E8 File Offset: 0x005747E8
+	// Token: 0x06013446 RID: 78918 RVA: 0x005A14BC File Offset: 0x0059F6BC
 	protected override UniTask OnCreateAsync()
 	{
 		RoleNewJoinView.<OnCreateAsync>d__16 <OnCreateAsync>d__;
@@ -66,7 +66,7 @@ public class RoleNewJoinView : UiViewBase
 		return <OnCreateAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015A43 RID: 88643 RVA: 0x00576624 File Offset: 0x00574824
+	// Token: 0x06013447 RID: 78919 RVA: 0x005A14F8 File Offset: 0x0059F6F8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RoleNewJoinView.<OnBeforeStartAsync>d__17 <OnBeforeStartAsync>d__;
@@ -77,20 +77,20 @@ public class RoleNewJoinView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015A44 RID: 88644 RVA: 0x00576667 File Offset: 0x00574867
+	// Token: 0x06013448 RID: 78920 RVA: 0x005A153B File Offset: 0x0059F73B
 	protected override void OnStart()
 	{
 		this.StarLayout = new SimpleGenericLayout(base.GetHorizontalLayout(4));
 	}
 
-	// Token: 0x06015A45 RID: 88645 RVA: 0x0057667B File Offset: 0x0057487B
+	// Token: 0x06013449 RID: 78921 RVA: 0x005A154F File Offset: 0x0059F74F
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<string>(EEventName.PlaySequenceEventByStringParam, new Action<string>(this.OnSequenceEventByStringParam));
 		EventSystem.Instance.Add(EEventName.CloseGachaSceneView, new Action(this.CloseViewEvent));
 	}
 
-	// Token: 0x06015A46 RID: 88646 RVA: 0x005766B8 File Offset: 0x005748B8
+	// Token: 0x0601344A RID: 78922 RVA: 0x005A158C File Offset: 0x0059F78C
 	protected override void OnHandleLoadScene()
 	{
 		this.SceneCamera = UKuroCollectActorComponent.GetActorWithTag(FNameUtil.GetDynamicFName("SceneCamera1").Value, ECollectActorType.Default);
@@ -152,33 +152,33 @@ public class RoleNewJoinView : UiViewBase
 			this.EffectWhite.D_K2_SetActorRelativeLocation(newRelativeLocation, false, ref fhitResult, false);
 			this.EffectWhite.K2_SetActorRelativeRotation(newRelativeRotation, false, ref fhitResult2, false);
 		}
-		this.UiCameraHandleData = UiCameraAnimationManager.Instance.PushCameraHandleByHandleName("1041_New", true, true, "10007", false, null, null);
+		this.UiCameraHandleData = UiCameraModel.Instance.PushCameraHandleByHandleName("1041_New", true, true, "10007", false, null);
 	}
 
-	// Token: 0x06015A47 RID: 88647 RVA: 0x005769C5 File Offset: 0x00574BC5
+	// Token: 0x0601344B RID: 78923 RVA: 0x005A188F File Offset: 0x0059FA8F
 	protected override void OnAfterShow()
 	{
 		this.IsDetail = false;
 		this.Refresh();
 	}
 
-	// Token: 0x06015A48 RID: 88648 RVA: 0x005769D4 File Offset: 0x00574BD4
+	// Token: 0x0601344C RID: 78924 RVA: 0x005A189E File Offset: 0x0059FA9E
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.PlaySequenceEventByStringParam, new Action<string>(this.OnSequenceEventByStringParam));
 		EventSystem.Instance.Remove(EEventName.CloseGachaSceneView, new Action(this.CloseViewEvent));
 	}
 
-	// Token: 0x06015A49 RID: 88649 RVA: 0x00576A0E File Offset: 0x00574C0E
+	// Token: 0x0601344D RID: 78925 RVA: 0x005A18D8 File Offset: 0x0059FAD8
 	protected override void OnBeforeDestroy()
 	{
 		if (this.UiCameraHandleData != null)
 		{
-			UiCameraAnimationManager.Instance.PopCameraHandle(this.UiCameraHandleData, "10007");
+			UiCameraModel.Instance.PopCameraHandle(this.UiCameraHandleData, "10007");
 		}
 	}
 
-	// Token: 0x06015A4A RID: 88650 RVA: 0x00576A30 File Offset: 0x00574C30
+	// Token: 0x0601344E RID: 78926 RVA: 0x005A18F8 File Offset: 0x0059FAF8
 	[NullableContext(1)]
 	protected void OnSequenceEventByStringParam(string param)
 	{
@@ -245,7 +245,7 @@ public class RoleNewJoinView : UiViewBase
 		}
 	}
 
-	// Token: 0x06015A4B RID: 88651 RVA: 0x00576B10 File Offset: 0x00574D10
+	// Token: 0x0601344F RID: 78927 RVA: 0x005A19D8 File Offset: 0x0059FBD8
 	private void Refresh()
 	{
 		this.HideBackgroundEffects();
@@ -255,7 +255,7 @@ public class RoleNewJoinView : UiViewBase
 		this.UiViewSequence.PlaySequence("Show", true, null);
 	}
 
-	// Token: 0x06015A4C RID: 88652 RVA: 0x00576B58 File Offset: 0x00574D58
+	// Token: 0x06013450 RID: 78928 RVA: 0x005A1A20 File Offset: 0x0059FC20
 	private void RefreshView()
 	{
 		int roleId = this.RoleId;
@@ -282,7 +282,7 @@ public class RoleNewJoinView : UiViewBase
 		BlackScreenController.Instance.RemoveBlackScreen("Close", EUiViewName.RoleNewJoinView, "Default");
 	}
 
-	// Token: 0x06015A4D RID: 88653 RVA: 0x00576C7C File Offset: 0x00574E7C
+	// Token: 0x06013451 RID: 78929 RVA: 0x005A1B44 File Offset: 0x0059FD44
 	protected void PlayGachaSequence()
 	{
 		if (this.GachaSequence == null)
@@ -297,7 +297,7 @@ public class RoleNewJoinView : UiViewBase
 		this.ShowRole();
 	}
 
-	// Token: 0x06015A4E RID: 88654 RVA: 0x00576CD0 File Offset: 0x00574ED0
+	// Token: 0x06013452 RID: 78930 RVA: 0x005A1B98 File Offset: 0x0059FD98
 	private void ShowRole()
 	{
 		RoleInfo? roleInfoById = GachaConfig.Instance.GetRoleInfoById(this.RoleId);
@@ -400,7 +400,7 @@ public class RoleNewJoinView : UiViewBase
 		}
 	}
 
-	// Token: 0x06015A4F RID: 88655 RVA: 0x00576E50 File Offset: 0x00575050
+	// Token: 0x06013453 RID: 78931 RVA: 0x005A1D18 File Offset: 0x0059FF18
 	private void HideBackgroundEffects()
 	{
 		if (this.EffectGold != null)
@@ -433,25 +433,25 @@ public class RoleNewJoinView : UiViewBase
 		}
 	}
 
-	// Token: 0x06015A50 RID: 88656 RVA: 0x00576EDA File Offset: 0x005750DA
+	// Token: 0x06013454 RID: 78932 RVA: 0x005A1DA2 File Offset: 0x0059FFA2
 	private void Finish()
 	{
 		EventSystem.Instance.Emit(EEventName.CloseGachaSceneView);
 	}
 
-	// Token: 0x06015A51 RID: 88657 RVA: 0x00576EEC File Offset: 0x005750EC
+	// Token: 0x06013455 RID: 78933 RVA: 0x005A1DB4 File Offset: 0x0059FFB4
 	protected void CloseViewEvent()
 	{
 		this.BindCloseUiScene();
 	}
 
-	// Token: 0x06015A52 RID: 88658 RVA: 0x00576EF4 File Offset: 0x005750F4
+	// Token: 0x06013456 RID: 78934 RVA: 0x005A1DBC File Offset: 0x0059FFBC
 	private void BindCloseUiScene()
 	{
 		this.AfterCloseUiScene(true);
 	}
 
-	// Token: 0x06015A53 RID: 88659 RVA: 0x00576EFD File Offset: 0x005750FD
+	// Token: 0x06013457 RID: 78935 RVA: 0x005A1DC5 File Offset: 0x0059FFC5
 	private void AfterCloseUiScene(bool ret)
 	{
 		if (!ret)
@@ -465,13 +465,13 @@ public class RoleNewJoinView : UiViewBase
 		EventSystem.Instance.Emit(EEventName.AfterCloseGachaScene);
 	}
 
-	// Token: 0x06015A54 RID: 88660 RVA: 0x00576F31 File Offset: 0x00575131
+	// Token: 0x06013458 RID: 78936 RVA: 0x005A1DF9 File Offset: 0x0059FFF9
 	private void CloseBtn()
 	{
 		this.Finish();
 	}
 
-	// Token: 0x06015A55 RID: 88661 RVA: 0x00576F39 File Offset: 0x00575139
+	// Token: 0x06013459 RID: 78937 RVA: 0x005A1E01 File Offset: 0x005A0001
 	private void DetailBtn()
 	{
 		if (this.IsDetail)
@@ -482,7 +482,7 @@ public class RoleNewJoinView : UiViewBase
 		this.ClickDetail().Forget();
 	}
 
-	// Token: 0x06015A56 RID: 88662 RVA: 0x00576F58 File Offset: 0x00575158
+	// Token: 0x0601345A RID: 78938 RVA: 0x005A1E20 File Offset: 0x005A0020
 	private UniTask ClickDetail()
 	{
 		RoleNewJoinView.<ClickDetail>d__36 <ClickDetail>d__;
@@ -493,61 +493,61 @@ public class RoleNewJoinView : UiViewBase
 		return <ClickDetail>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0400A0F5 RID: 41205
+	// Token: 0x0400A4E0 RID: 42208
 	private int RoleId;
 
-	// Token: 0x0400A0F6 RID: 41206
+	// Token: 0x0400A4E1 RID: 42209
 	protected UiCameraHandleData UiCameraHandleData;
 
-	// Token: 0x0400A0F7 RID: 41207
+	// Token: 0x0400A4E2 RID: 42210
 	private ANiagaraActor CameraEffect;
 
-	// Token: 0x0400A0F8 RID: 41208
+	// Token: 0x0400A4E3 RID: 42211
 	private ANiagaraActor EffectGold;
 
-	// Token: 0x0400A0F9 RID: 41209
+	// Token: 0x0400A4E4 RID: 42212
 	private ANiagaraActor EffectPurple;
 
-	// Token: 0x0400A0FA RID: 41210
+	// Token: 0x0400A4E5 RID: 42213
 	private ANiagaraActor EffectWhite;
 
-	// Token: 0x0400A0FB RID: 41211
+	// Token: 0x0400A4E6 RID: 42214
 	private AActor SceneCamera;
 
-	// Token: 0x0400A0FC RID: 41212
+	// Token: 0x0400A4E7 RID: 42215
 	private BP_UpdateInteract_C UpdateInteractBP;
 
-	// Token: 0x0400A0FD RID: 41213
+	// Token: 0x0400A4E8 RID: 42216
 	private SimpleGenericLayout StarLayout;
 
-	// Token: 0x0400A0FE RID: 41214
+	// Token: 0x0400A4E9 RID: 42217
 	private UiBehaviorGachaSequence GachaSequence;
 
-	// Token: 0x0400A0FF RID: 41215
+	// Token: 0x0400A4EA RID: 42218
 	private int CurQuality;
 
-	// Token: 0x0400A100 RID: 41216
+	// Token: 0x0400A4EB RID: 42219
 	private bool IsDetail;
 
-	// Token: 0x02008EFC RID: 36604
+	// Token: 0x02008144 RID: 33092
 	[NullableContext(0)]
 	private enum ERoleNewJoinComponents
 	{
-		// Token: 0x0402E5CC RID: 189900
+		// Token: 0x04029CC7 RID: 171207
 		NameText,
-		// Token: 0x0402E5CD RID: 189901
+		// Token: 0x04029CC8 RID: 171208
 		AttributesItem,
-		// Token: 0x0402E5CE RID: 189902
+		// Token: 0x04029CC9 RID: 171209
 		AttributesTexture,
-		// Token: 0x0402E5CF RID: 189903
+		// Token: 0x04029CCA RID: 171210
 		AttributesBoxSprite,
-		// Token: 0x0402E5D0 RID: 189904
+		// Token: 0x04029CCB RID: 171211
 		StarParentItem,
-		// Token: 0x0402E5D1 RID: 189905
+		// Token: 0x04029CCC RID: 171212
 		TxtDetail,
-		// Token: 0x0402E5D2 RID: 189906
+		// Token: 0x04029CCD RID: 171213
 		BtnConfirm,
-		// Token: 0x0402E5D3 RID: 189907
+		// Token: 0x04029CCE RID: 171214
 		BtnBack
 	}
 }

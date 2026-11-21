@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000F0F RID: 3855
+	// Token: 0x02000254 RID: 596
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FOnGlobalDataLayerActivationStateChanged : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0600D086 RID: 53382 RVA: 0x00130932 File Offset: 0x0012EB32
+		// Token: 0x060032FF RID: 13055 RVA: 0x00048F6A File Offset: 0x0004716A
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnGlobalDataLayerActivationStateChanged.StaticFunctionPtr();
 		}
 
-		// Token: 0x0600D087 RID: 53383 RVA: 0x0013093E File Offset: 0x0012EB3E
+		// Token: 0x06003300 RID: 13056 RVA: 0x00048F76 File Offset: 0x00047176
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnGlobalDataLayerActivationStateChanged._FunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace UnrealEngine
 			return FOnGlobalDataLayerActivationStateChanged._FunctionPtr;
 		}
 
-		// Token: 0x0600D088 RID: 53384 RVA: 0x00130961 File Offset: 0x0012EB61
+		// Token: 0x06003301 RID: 13057 RVA: 0x00048F99 File Offset: 0x00047199
 		public FOnGlobalDataLayerActivationStateChanged()
 		{
 		}
 
-		// Token: 0x0600D089 RID: 53385 RVA: 0x00130969 File Offset: 0x0012EB69
+		// Token: 0x06003302 RID: 13058 RVA: 0x00048FA1 File Offset: 0x000471A1
 		[NullableContext(2)]
 		public FOnGlobalDataLayerActivationStateChanged(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0600D08A RID: 53386 RVA: 0x00130973 File Offset: 0x0012EB73
+		// Token: 0x06003303 RID: 13059 RVA: 0x00048FAB File Offset: 0x000471AB
 		public FOnGlobalDataLayerActivationStateChanged(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0600D08B RID: 53387 RVA: 0x0013097E File Offset: 0x0012EB7E
+		// Token: 0x06003304 RID: 13060 RVA: 0x00048FB6 File Offset: 0x000471B6
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<FName, bool>) ?? ((Action<FName, bool>)Delegate.CreateDelegate(typeof(Action<FName, bool>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0600D08C RID: 53388 RVA: 0x001309B0 File Offset: 0x0012EBB0
+		// Token: 0x06003305 RID: 13061 RVA: 0x00048FE8 File Offset: 0x000471E8
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action<FName, bool> Callback)
 		{
 			if (FOnGlobalDataLayerActivationStateChanged.RegisterId == 0)
@@ -67,17 +66,15 @@ namespace UnrealEngine
 			base.Add(Callback, FOnGlobalDataLayerActivationStateChanged.RegisterId);
 		}
 
-		// Token: 0x0600D08D RID: 53389 RVA: 0x001309EA File Offset: 0x0012EBEA
+		// Token: 0x06003306 RID: 13062 RVA: 0x00049022 File Offset: 0x00047222
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action<FName, bool> Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0600D08E RID: 53390 RVA: 0x001309F4 File Offset: 0x0012EBF4
+		// Token: 0x06003307 RID: 13063 RVA: 0x0004902C File Offset: 0x0004722C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(FName DataLayerLabel, bool bIsActive)
 		{
 			FOnGlobalDataLayerActivationStateChanged.__FOnGlobalDataLayerActivationStateChanged_DelegateParams* ptr = stackalloc FOnGlobalDataLayerActivationStateChanged.__FOnGlobalDataLayerActivationStateChanged_DelegateParams[(UIntPtr)31] + 15L / (long)sizeof(FOnGlobalDataLayerActivationStateChanged.__FOnGlobalDataLayerActivationStateChanged_DelegateParams) & -16L;
@@ -87,10 +84,9 @@ namespace UnrealEngine
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x0600D08F RID: 53391 RVA: 0x00130A38 File Offset: 0x0012EC38
+		// Token: 0x06003308 RID: 13064 RVA: 0x00049070 File Offset: 0x00047270
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<FName, bool> action = target as Action<FName, bool>;
@@ -101,35 +97,35 @@ namespace UnrealEngine
 			action(((FOnGlobalDataLayerActivationStateChanged.__FOnGlobalDataLayerActivationStateChanged_DelegateParams*)__Parameters)->DataLayerLabel, ((FOnGlobalDataLayerActivationStateChanged.__FOnGlobalDataLayerActivationStateChanged_DelegateParams*)__Parameters)->bIsActive);
 		}
 
-		// Token: 0x04007042 RID: 28738
+		// Token: 0x040011C8 RID: 4552
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04007043 RID: 28739
+		// Token: 0x040011C9 RID: 4553
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/Engine.OnGlobalDataLayerActivationStateChanged__DelegateSignature";
 
-		// Token: 0x04007044 RID: 28740
+		// Token: 0x040011CA RID: 4554
 		private static int RegisterId;
 
-		// Token: 0x02002D6D RID: 11629
+		// Token: 0x020009D3 RID: 2515
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
-		protected ref struct __FOnGlobalDataLayerActivationStateChanged_DelegateParams
+		private ref struct __FOnGlobalDataLayerActivationStateChanged_DelegateParams
 		{
-			// Token: 0x04016787 RID: 92039
+			// Token: 0x04005960 RID: 22880
 			[FieldOffset(0)]
 			public FName DataLayerLabel;
 
-			// Token: 0x04016788 RID: 92040
+			// Token: 0x04005961 RID: 22881
 			[FieldOffset(12)]
 			public bool bIsActive;
 		}
 
-		// Token: 0x02002D6E RID: 11630
+		// Token: 0x020009D4 RID: 2516
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016789 RID: 92041
+			// Token: 0x04005962 RID: 22882
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

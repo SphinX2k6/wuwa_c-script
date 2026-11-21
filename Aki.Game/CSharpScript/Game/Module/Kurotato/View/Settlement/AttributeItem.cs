@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 {
-	// Token: 0x02005731 RID: 22321
+	// Token: 0x02004708 RID: 18184
 	[Nullable(new byte[]
 	{
 		0,
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 	})]
 	internal class AttributeItem : GridProxyAbstract<IKurotatoRoleSkillInfo>
 	{
-		// Token: 0x06038BF6 RID: 232438 RVA: 0x00D78430 File Offset: 0x00D76630
+		// Token: 0x0602DB06 RID: 187142 RVA: 0x00CC6ADC File Offset: 0x00CC4CDC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038BF7 RID: 232439 RVA: 0x00D784BC File Offset: 0x00D766BC
+		// Token: 0x0602DB07 RID: 187143 RVA: 0x00CC6B68 File Offset: 0x00CC4D68
 		[NullableContext(1)]
 		public override void Refresh(IKurotatoRoleSkillInfo data, bool isSelected, int gridIndex)
 		{
@@ -42,16 +42,16 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			base.GetText(2).SetText(KurotatoUtil.GetPropertyShowValue(data.AttrId, (float)data.Value), true);
 		}
 
-		// Token: 0x0200B903 RID: 47363
+		// Token: 0x0200A324 RID: 41764
 		private class EAttributeComps
 		{
-			// Token: 0x04037F53 RID: 229203
+			// Token: 0x04032963 RID: 207203
 			public const int TextureIcon = 0;
 
-			// Token: 0x04037F54 RID: 229204
+			// Token: 0x04032964 RID: 207204
 			public const int TextName = 1;
 
-			// Token: 0x04037F55 RID: 229205
+			// Token: 0x04032965 RID: 207205
 			public const int TextValue = 2;
 		}
 	}

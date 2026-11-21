@@ -3,40 +3,40 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006E6E RID: 28270
+	// Token: 0x020075F2 RID: 30194
 	public class IRemoveTrialCharacterT
 	{
-		// Token: 0x1700D293 RID: 53907
-		// (get) Token: 0x06031F66 RID: 204646 RVA: 0x006C244F File Offset: 0x006C064F
-		// (set) Token: 0x06031F67 RID: 204647 RVA: 0x006C2457 File Offset: 0x006C0657
+		// Token: 0x1700DDEA RID: 56810
+		// (get) Token: 0x06034FA6 RID: 216998 RVA: 0x0071E183 File Offset: 0x0071C383
+		// (set) Token: 0x06034FA7 RID: 216999 RVA: 0x0071E18B File Offset: 0x0071C38B
 		public int CharacterId { get; set; }
 
-		// Token: 0x1700D294 RID: 53908
-		// (get) Token: 0x06031F68 RID: 204648 RVA: 0x006C2460 File Offset: 0x006C0660
-		// (set) Token: 0x06031F69 RID: 204649 RVA: 0x006C2468 File Offset: 0x006C0668
+		// Token: 0x1700DDEB RID: 56811
+		// (get) Token: 0x06034FA8 RID: 217000 RVA: 0x0071E194 File Offset: 0x0071C394
+		// (set) Token: 0x06034FA9 RID: 217001 RVA: 0x0071E19C File Offset: 0x0071C39C
 		public List<int> CharacterGroup { get; set; }
 
-		// Token: 0x1700D295 RID: 53909
-		// (get) Token: 0x06031F6A RID: 204650 RVA: 0x006C2471 File Offset: 0x006C0671
-		// (set) Token: 0x06031F6B RID: 204651 RVA: 0x006C2479 File Offset: 0x006C0679
+		// Token: 0x1700DDEC RID: 56812
+		// (get) Token: 0x06034FAA RID: 217002 RVA: 0x0071E1A5 File Offset: 0x0071C3A5
+		// (set) Token: 0x06034FAB RID: 217003 RVA: 0x0071E1AD File Offset: 0x0071C3AD
 		public bool IsRemoveTips { get; set; }
 
-		// Token: 0x1700D296 RID: 53910
-		// (get) Token: 0x06031F6C RID: 204652 RVA: 0x006C2482 File Offset: 0x006C0682
-		// (set) Token: 0x06031F6D RID: 204653 RVA: 0x006C248A File Offset: 0x006C068A
+		// Token: 0x1700DDED RID: 56813
+		// (get) Token: 0x06034FAC RID: 217004 RVA: 0x0071E1B6 File Offset: 0x0071C3B6
+		// (set) Token: 0x06034FAD RID: 217005 RVA: 0x0071E1BE File Offset: 0x0071C3BE
 		public bool EnableSeamlessTeamSwitch { get; set; }
 
-		// Token: 0x1700D297 RID: 53911
-		// (get) Token: 0x06031F6E RID: 204654 RVA: 0x006C2493 File Offset: 0x006C0693
-		// (set) Token: 0x06031F6F RID: 204655 RVA: 0x006C249B File Offset: 0x006C069B
+		// Token: 0x1700DDEE RID: 56814
+		// (get) Token: 0x06034FAE RID: 217006 RVA: 0x0071E1C7 File Offset: 0x0071C3C7
+		// (set) Token: 0x06034FAF RID: 217007 RVA: 0x0071E1CF File Offset: 0x0071C3CF
 		public bool OnlyLowMemoryDeviceExecute { get; set; }
 
-		// Token: 0x1700D298 RID: 53912
-		// (get) Token: 0x06031F70 RID: 204656 RVA: 0x006C24A4 File Offset: 0x006C06A4
-		// (set) Token: 0x06031F71 RID: 204657 RVA: 0x006C24AC File Offset: 0x006C06AC
+		// Token: 0x1700DDEF RID: 56815
+		// (get) Token: 0x06034FB0 RID: 217008 RVA: 0x0071E1D8 File Offset: 0x0071C3D8
+		// (set) Token: 0x06034FB1 RID: 217009 RVA: 0x0071E1E0 File Offset: 0x0071C3E0
 		public byte NullMask { get; set; }
 
-		// Token: 0x06031F72 RID: 204658 RVA: 0x006C24B5 File Offset: 0x006C06B5
+		// Token: 0x06034FB2 RID: 217010 RVA: 0x0071E1E9 File Offset: 0x0071C3E9
 		public IRemoveTrialCharacterT()
 		{
 			this.CharacterId = 0;

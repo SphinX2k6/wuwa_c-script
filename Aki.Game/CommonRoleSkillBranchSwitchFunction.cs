@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200289D RID: 10397
+// Token: 0x02001E18 RID: 7704
 [NullableContext(2)]
 [Nullable(0)]
 public class CommonRoleSkillBranchSwitchFunction
 {
-	// Token: 0x0601575B RID: 87899 RVA: 0x00569E28 File Offset: 0x00568028
+	// Token: 0x0601315B RID: 78171 RVA: 0x00594C70 File Offset: 0x00592E70
 	public void OnToggleStateChange(EToggleState state)
 	{
 		int num = (state != EToggleState.ETT_Checked) ? 1 : 0;
@@ -20,7 +20,7 @@ public class CommonRoleSkillBranchSwitchFunction
 		switchBranchHandler(num);
 	}
 
-	// Token: 0x0601575C RID: 87900 RVA: 0x00569E58 File Offset: 0x00568058
+	// Token: 0x0601315C RID: 78172 RVA: 0x00594CA0 File Offset: 0x00592EA0
 	private void SetSkillBranchState(int index, bool state)
 	{
 		SkillBranchSwitchItemGroup[] skillItemGroups = this.SkillItemGroups;
@@ -37,7 +37,7 @@ public class CommonRoleSkillBranchSwitchFunction
 		activeIndexHandler(state);
 	}
 
-	// Token: 0x0601575D RID: 87901 RVA: 0x00569E8C File Offset: 0x0056808C
+	// Token: 0x0601315D RID: 78173 RVA: 0x00594CD4 File Offset: 0x00592ED4
 	public void SetActiveBranchIndex(int index)
 	{
 		UUIExtendToggle toggle = this.Toggle;
@@ -60,7 +60,7 @@ public class CommonRoleSkillBranchSwitchFunction
 		}
 	}
 
-	// Token: 0x0601575E RID: 87902 RVA: 0x00569EFC File Offset: 0x005680FC
+	// Token: 0x0601315E RID: 78174 RVA: 0x00594D44 File Offset: 0x00592F44
 	[NullableContext(1)]
 	public void RefreshIcon(Func<int, string> handler)
 	{
@@ -88,7 +88,7 @@ public class CommonRoleSkillBranchSwitchFunction
 		}
 	}
 
-	// Token: 0x04009FF8 RID: 40952
+	// Token: 0x0400A3E1 RID: 41953
 	[Nullable(new byte[]
 	{
 		2,
@@ -96,13 +96,13 @@ public class CommonRoleSkillBranchSwitchFunction
 	})]
 	public SkillBranchSwitchItemGroup[] SkillItemGroups;
 
-	// Token: 0x04009FF9 RID: 40953
+	// Token: 0x0400A3E2 RID: 41954
 	public Action<int> SwitchBranchHandler;
 
-	// Token: 0x04009FFA RID: 40954
+	// Token: 0x0400A3E3 RID: 41955
 	public UUIExtendToggle Toggle;
 
-	// Token: 0x04009FFB RID: 40955
+	// Token: 0x0400A3E4 RID: 41956
 	[Nullable(new byte[]
 	{
 		2,

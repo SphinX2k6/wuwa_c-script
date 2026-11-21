@@ -4,40 +4,40 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005A08 RID: 23048
+	// Token: 0x02006015 RID: 24597
 	public class ISunSpiritLauncherT
 	{
-		// Token: 0x1700AD2B RID: 44331
-		// (get) Token: 0x060271FA RID: 160250 RVA: 0x00561DE0 File Offset: 0x0055FFE0
-		// (set) Token: 0x060271FB RID: 160251 RVA: 0x00561DE8 File Offset: 0x0055FFE8
+		// Token: 0x1700B663 RID: 46691
+		// (get) Token: 0x06029772 RID: 169842 RVA: 0x005A8DA4 File Offset: 0x005A6FA4
+		// (set) Token: 0x06029773 RID: 169843 RVA: 0x005A8DAC File Offset: 0x005A6FAC
 		public EHookInteractType Type { get; set; }
 
-		// Token: 0x1700AD2C RID: 44332
-		// (get) Token: 0x060271FC RID: 160252 RVA: 0x00561DF1 File Offset: 0x0055FFF1
-		// (set) Token: 0x060271FD RID: 160253 RVA: 0x00561DF9 File Offset: 0x0055FFF9
+		// Token: 0x1700B664 RID: 46692
+		// (get) Token: 0x06029774 RID: 169844 RVA: 0x005A8DB5 File Offset: 0x005A6FB5
+		// (set) Token: 0x06029775 RID: 169845 RVA: 0x005A8DBD File Offset: 0x005A6FBD
 		public List<IActionInfoT> HookActions { get; set; }
 
-		// Token: 0x1700AD2D RID: 44333
-		// (get) Token: 0x060271FE RID: 160254 RVA: 0x00561E02 File Offset: 0x00560002
-		// (set) Token: 0x060271FF RID: 160255 RVA: 0x00561E0A File Offset: 0x0056000A
+		// Token: 0x1700B665 RID: 46693
+		// (get) Token: 0x06029776 RID: 169846 RVA: 0x005A8DC6 File Offset: 0x005A6FC6
+		// (set) Token: 0x06029777 RID: 169847 RVA: 0x005A8DCE File Offset: 0x005A6FCE
 		public List<IActionInfoT> ExitHookActions { get; set; }
 
-		// Token: 0x1700AD2E RID: 44334
-		// (get) Token: 0x06027200 RID: 160256 RVA: 0x00561E13 File Offset: 0x00560013
-		// (set) Token: 0x06027201 RID: 160257 RVA: 0x00561E1B File Offset: 0x0056001B
+		// Token: 0x1700B666 RID: 46694
+		// (get) Token: 0x06029778 RID: 169848 RVA: 0x005A8DD7 File Offset: 0x005A6FD7
+		// (set) Token: 0x06029779 RID: 169849 RVA: 0x005A8DDF File Offset: 0x005A6FDF
 		public List<IActionInfoT> FinishActions { get; set; }
 
-		// Token: 0x1700AD2F RID: 44335
-		// (get) Token: 0x06027202 RID: 160258 RVA: 0x00561E24 File Offset: 0x00560024
-		// (set) Token: 0x06027203 RID: 160259 RVA: 0x00561E2C File Offset: 0x0056002C
+		// Token: 0x1700B667 RID: 46695
+		// (get) Token: 0x0602977A RID: 169850 RVA: 0x005A8DE8 File Offset: 0x005A6FE8
+		// (set) Token: 0x0602977B RID: 169851 RVA: 0x005A8DF0 File Offset: 0x005A6FF0
 		public IClientHookActionConfigT ClientHookActionConfig { get; set; }
 
-		// Token: 0x1700AD30 RID: 44336
-		// (get) Token: 0x06027204 RID: 160260 RVA: 0x00561E35 File Offset: 0x00560035
-		// (set) Token: 0x06027205 RID: 160261 RVA: 0x00561E3D File Offset: 0x0056003D
+		// Token: 0x1700B668 RID: 46696
+		// (get) Token: 0x0602977C RID: 169852 RVA: 0x005A8DF9 File Offset: 0x005A6FF9
+		// (set) Token: 0x0602977D RID: 169853 RVA: 0x005A8E01 File Offset: 0x005A7001
 		public byte NullMask { get; set; }
 
-		// Token: 0x06027206 RID: 160262 RVA: 0x00561E46 File Offset: 0x00560046
+		// Token: 0x0602977E RID: 169854 RVA: 0x005A8E0A File Offset: 0x005A700A
 		public ISunSpiritLauncherT()
 		{
 			this.Type = EHookInteractType.FixedPointHook;

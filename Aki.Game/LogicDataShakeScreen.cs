@@ -6,16 +6,16 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02002DFE RID: 11774
+// Token: 0x02002359 RID: 9049
 [NullableContext(1)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/LogicDataShakeScreen.LogicDataShakeScreen_C")]
 public class LogicDataShakeScreen : LogicDataBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x1700220C RID: 8716
-	// (get) Token: 0x06018BE9 RID: 101353 RVA: 0x006590F4 File Offset: 0x006572F4
-	// (set) Token: 0x06018BEA RID: 101354 RVA: 0x00659104 File Offset: 0x00657304
+	// Token: 0x17002270 RID: 8816
+	// (get) Token: 0x0601649E RID: 91294 RVA: 0x0067F178 File Offset: 0x0067D378
+	// (set) Token: 0x0601649F RID: 91295 RVA: 0x0067F188 File Offset: 0x0067D388
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float Count
 	{
@@ -29,9 +29,9 @@ public class LogicDataShakeScreen : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x1700220D RID: 8717
-	// (get) Token: 0x06018BEB RID: 101355 RVA: 0x00659115 File Offset: 0x00657315
-	// (set) Token: 0x06018BEC RID: 101356 RVA: 0x00659129 File Offset: 0x00657329
+	// Token: 0x17002271 RID: 8817
+	// (get) Token: 0x060164A0 RID: 91296 RVA: 0x0067F199 File Offset: 0x0067D399
+	// (set) Token: 0x060164A1 RID: 91297 RVA: 0x0067F1AD File Offset: 0x0067D3AD
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string Epicenter
 	{
@@ -45,9 +45,9 @@ public class LogicDataShakeScreen : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x1700220E RID: 8718
-	// (get) Token: 0x06018BED RID: 101357 RVA: 0x0065913E File Offset: 0x0065733E
-	// (set) Token: 0x06018BEE RID: 101358 RVA: 0x0065914E File Offset: 0x0065734E
+	// Token: 0x17002272 RID: 8818
+	// (get) Token: 0x060164A2 RID: 91298 RVA: 0x0067F1C2 File Offset: 0x0067D3C2
+	// (set) Token: 0x060164A3 RID: 91299 RVA: 0x0067F1D2 File Offset: 0x0067D3D2
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float Falloff
 	{
@@ -61,9 +61,9 @@ public class LogicDataShakeScreen : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x1700220F RID: 8719
-	// (get) Token: 0x06018BEF RID: 101359 RVA: 0x0065915F File Offset: 0x0065735F
-	// (set) Token: 0x06018BF0 RID: 101360 RVA: 0x0065916F File Offset: 0x0065736F
+	// Token: 0x17002273 RID: 8819
+	// (get) Token: 0x060164A4 RID: 91300 RVA: 0x0067F1E3 File Offset: 0x0067D3E3
+	// (set) Token: 0x060164A5 RID: 91301 RVA: 0x0067F1F3 File Offset: 0x0067D3F3
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float InnerRadius
 	{
@@ -77,9 +77,9 @@ public class LogicDataShakeScreen : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x17002210 RID: 8720
-	// (get) Token: 0x06018BF1 RID: 101361 RVA: 0x00659180 File Offset: 0x00657380
-	// (set) Token: 0x06018BF2 RID: 101362 RVA: 0x00659190 File Offset: 0x00657390
+	// Token: 0x17002274 RID: 8820
+	// (get) Token: 0x060164A6 RID: 91302 RVA: 0x0067F204 File Offset: 0x0067D404
+	// (set) Token: 0x060164A7 RID: 91303 RVA: 0x0067F214 File Offset: 0x0067D414
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float Interval
 	{
@@ -93,9 +93,9 @@ public class LogicDataShakeScreen : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x17002211 RID: 8721
-	// (get) Token: 0x06018BF3 RID: 101363 RVA: 0x006591A1 File Offset: 0x006573A1
-	// (set) Token: 0x06018BF4 RID: 101364 RVA: 0x006591B1 File Offset: 0x006573B1
+	// Token: 0x17002275 RID: 8821
+	// (get) Token: 0x060164A8 RID: 91304 RVA: 0x0067F225 File Offset: 0x0067D425
+	// (set) Token: 0x060164A9 RID: 91305 RVA: 0x0067F235 File Offset: 0x0067D435
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool OrientShakeTowardsEpicenter
 	{
@@ -109,9 +109,9 @@ public class LogicDataShakeScreen : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x17002212 RID: 8722
-	// (get) Token: 0x06018BF5 RID: 101365 RVA: 0x006591C2 File Offset: 0x006573C2
-	// (set) Token: 0x06018BF6 RID: 101366 RVA: 0x006591D2 File Offset: 0x006573D2
+	// Token: 0x17002276 RID: 8822
+	// (get) Token: 0x060164AA RID: 91306 RVA: 0x0067F246 File Offset: 0x0067D446
+	// (set) Token: 0x060164AB RID: 91307 RVA: 0x0067F256 File Offset: 0x0067D456
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float OuterRadius
 	{
@@ -125,9 +125,9 @@ public class LogicDataShakeScreen : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x17002213 RID: 8723
-	// (get) Token: 0x06018BF7 RID: 101367 RVA: 0x006591E4 File Offset: 0x006573E4
-	// (set) Token: 0x06018BF8 RID: 101368 RVA: 0x0065921D File Offset: 0x0065741D
+	// Token: 0x17002277 RID: 8823
+	// (get) Token: 0x060164AC RID: 91308 RVA: 0x0067F268 File Offset: 0x0067D468
+	// (set) Token: 0x060164AD RID: 91309 RVA: 0x0067F2A1 File Offset: 0x0067D4A1
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TSoftClassPtr<UMatineeCameraShake> Shake
 	{
@@ -147,7 +147,7 @@ public class LogicDataShakeScreen : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x06018BF9 RID: 101369 RVA: 0x00659242 File Offset: 0x00657442
+	// Token: 0x060164AE RID: 91310 RVA: 0x0067F2C6 File Offset: 0x0067D4C6
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (LogicDataShakeScreen._ClassPtr == IntPtr.Zero)
@@ -157,55 +157,55 @@ public class LogicDataShakeScreen : LogicDataBase, IUnrealUObject, IUnrealObject
 		return LogicDataShakeScreen._ClassPtr;
 	}
 
-	// Token: 0x06018BFA RID: 101370 RVA: 0x00659268 File Offset: 0x00657468
+	// Token: 0x060164AF RID: 91311 RVA: 0x0067F2EC File Offset: 0x0067D4EC
 	public LogicDataShakeScreen() : this(BuiltinUtils.AllocNativeUObject(LogicDataShakeScreen.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06018BFB RID: 101371 RVA: 0x00659290 File Offset: 0x00657490
+	// Token: 0x060164B0 RID: 91312 RVA: 0x0067F314 File Offset: 0x0067D514
 	public LogicDataShakeScreen(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(LogicDataShakeScreen.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06018BFC RID: 101372 RVA: 0x006592C3 File Offset: 0x006574C3
+	// Token: 0x060164B1 RID: 91313 RVA: 0x0067F347 File Offset: 0x0067D547
 	protected LogicDataShakeScreen(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0400B8AB RID: 47275
+	// Token: 0x0400BC31 RID: 48177
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/LogicDataShakeScreen.LogicDataShakeScreen_C";
 
-	// Token: 0x0400B8AC RID: 47276
+	// Token: 0x0400BC32 RID: 48178
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400B8AD RID: 47277
+	// Token: 0x0400BC33 RID: 48179
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400B8AE RID: 47278
+	// Token: 0x0400BC34 RID: 48180
 	private static int __PropertyOffset_Count;
 
-	// Token: 0x0400B8AF RID: 47279
+	// Token: 0x0400BC35 RID: 48181
 	private static int __PropertyOffset_Epicenter;
 
-	// Token: 0x0400B8B0 RID: 47280
+	// Token: 0x0400BC36 RID: 48182
 	private static int __PropertyOffset_Falloff;
 
-	// Token: 0x0400B8B1 RID: 47281
+	// Token: 0x0400BC37 RID: 48183
 	private static int __PropertyOffset_InnerRadius;
 
-	// Token: 0x0400B8B2 RID: 47282
+	// Token: 0x0400BC38 RID: 48184
 	private static int __PropertyOffset_Interval;
 
-	// Token: 0x0400B8B3 RID: 47283
+	// Token: 0x0400BC39 RID: 48185
 	private static int __PropertyOffset_OrientShakeTowardsEpicenter;
 
-	// Token: 0x0400B8B4 RID: 47284
+	// Token: 0x0400BC3A RID: 48186
 	private static int __PropertyOffset_OuterRadius;
 
-	// Token: 0x0400B8B5 RID: 47285
+	// Token: 0x0400BC3B RID: 48187
 	private static int __PropertyOffset_Shake;
 
-	// Token: 0x0400B8B6 RID: 47286
+	// Token: 0x0400BC3C RID: 48188
 	[Nullable(new byte[]
 	{
 		2,

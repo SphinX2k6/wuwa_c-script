@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003AA9 RID: 15017
+	// Token: 0x02003EAB RID: 16043
 	public class IOtherVarRefT
 	{
-		// Token: 0x170066FA RID: 26362
-		// (get) Token: 0x06014676 RID: 83574 RVA: 0x002F9A29 File Offset: 0x002F7C29
-		// (set) Token: 0x06014677 RID: 83575 RVA: 0x002F9A31 File Offset: 0x002F7C31
+		// Token: 0x17006C95 RID: 27797
+		// (get) Token: 0x06015B1C RID: 88860 RVA: 0x0031FC35 File Offset: 0x0031DE35
+		// (set) Token: 0x06015B1D RID: 88861 RVA: 0x0031FC3D File Offset: 0x0031DE3D
 		public EVar Type { get; set; }
 
-		// Token: 0x170066FB RID: 26363
-		// (get) Token: 0x06014678 RID: 83576 RVA: 0x002F9A3A File Offset: 0x002F7C3A
-		// (set) Token: 0x06014679 RID: 83577 RVA: 0x002F9A42 File Offset: 0x002F7C42
+		// Token: 0x17006C96 RID: 27798
+		// (get) Token: 0x06015B1E RID: 88862 RVA: 0x0031FC46 File Offset: 0x0031DE46
+		// (set) Token: 0x06015B1F RID: 88863 RVA: 0x0031FC4E File Offset: 0x0031DE4E
 		public EVarRefSource Source { get; set; }
 
-		// Token: 0x170066FC RID: 26364
-		// (get) Token: 0x0601467A RID: 83578 RVA: 0x002F9A4B File Offset: 0x002F7C4B
-		// (set) Token: 0x0601467B RID: 83579 RVA: 0x002F9A53 File Offset: 0x002F7C53
+		// Token: 0x17006C97 RID: 27799
+		// (get) Token: 0x06015B20 RID: 88864 RVA: 0x0031FC57 File Offset: 0x0031DE57
+		// (set) Token: 0x06015B21 RID: 88865 RVA: 0x0031FC5F File Offset: 0x0031DE5F
 		public ERefType RefType { get; set; }
 
-		// Token: 0x170066FD RID: 26365
-		// (get) Token: 0x0601467C RID: 83580 RVA: 0x002F9A5C File Offset: 0x002F7C5C
-		// (set) Token: 0x0601467D RID: 83581 RVA: 0x002F9A64 File Offset: 0x002F7C64
+		// Token: 0x17006C98 RID: 27800
+		// (get) Token: 0x06015B22 RID: 88866 RVA: 0x0031FC68 File Offset: 0x0031DE68
+		// (set) Token: 0x06015B23 RID: 88867 RVA: 0x0031FC70 File Offset: 0x0031DE70
 		public int RefId { get; set; }
 
-		// Token: 0x170066FE RID: 26366
-		// (get) Token: 0x0601467E RID: 83582 RVA: 0x002F9A6D File Offset: 0x002F7C6D
-		// (set) Token: 0x0601467F RID: 83583 RVA: 0x002F9A75 File Offset: 0x002F7C75
+		// Token: 0x17006C99 RID: 27801
+		// (get) Token: 0x06015B24 RID: 88868 RVA: 0x0031FC79 File Offset: 0x0031DE79
+		// (set) Token: 0x06015B25 RID: 88869 RVA: 0x0031FC81 File Offset: 0x0031DE81
 		public string Name { get; set; }
 
-		// Token: 0x06014680 RID: 83584 RVA: 0x002F9A7E File Offset: 0x002F7C7E
+		// Token: 0x06015B26 RID: 88870 RVA: 0x0031FC8A File Offset: 0x0031DE8A
 		public IOtherVarRefT()
 		{
 			this.Type = EVar.Boolean;

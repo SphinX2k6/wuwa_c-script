@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002194 RID: 8596
+// Token: 0x02001678 RID: 5752
 [NullableContext(1)]
 [Nullable(0)]
 public class ButtonPreset : IButtonPreset
 {
-	// Token: 0x1700152E RID: 5422
-	// (get) Token: 0x06010B5E RID: 68446 RVA: 0x0040F61B File Offset: 0x0040D81B
-	// (set) Token: 0x06010B5F RID: 68447 RVA: 0x0040F623 File Offset: 0x0040D823
+	// Token: 0x17001565 RID: 5477
+	// (get) Token: 0x0600DFEF RID: 57327 RVA: 0x0041BF03 File Offset: 0x0041A103
+	// (set) Token: 0x0600DFF0 RID: 57328 RVA: 0x0041BF0B File Offset: 0x0041A10B
 	public string Title { get; set; }
 
-	// Token: 0x1700152F RID: 5423
-	// (get) Token: 0x06010B60 RID: 68448 RVA: 0x0040F62C File Offset: 0x0040D82C
-	// (set) Token: 0x06010B61 RID: 68449 RVA: 0x0040F634 File Offset: 0x0040D834
+	// Token: 0x17001566 RID: 5478
+	// (get) Token: 0x0600DFF1 RID: 57329 RVA: 0x0041BF14 File Offset: 0x0041A114
+	// (set) Token: 0x0600DFF2 RID: 57330 RVA: 0x0041BF1C File Offset: 0x0041A11C
 	public Action ClickFunc { get; set; }
 }

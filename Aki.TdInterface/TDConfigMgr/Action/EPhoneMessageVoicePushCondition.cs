@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200166F RID: 5743
+	// Token: 0x020017E1 RID: 6113
 	[EnumExtensions]
 	public enum EPhoneMessageVoicePushCondition
 	{
-		// Token: 0x04004CEA RID: 19690
+		// Token: 0x040050EC RID: 20716
 		PlayVoice,
-		// Token: 0x04004CEB RID: 19691
+		// Token: 0x040050ED RID: 20717
 		FinishVoice
 	}
 }

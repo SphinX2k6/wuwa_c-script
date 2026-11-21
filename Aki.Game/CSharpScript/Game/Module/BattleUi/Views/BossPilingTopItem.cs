@@ -12,10 +12,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E4B RID: 24139
+	// Token: 0x02004E30 RID: 20016
 	public class BossPilingTopItem : BattleVisibleChildView
 	{
-		// Token: 0x0603D64D RID: 251469 RVA: 0x00ECF740 File Offset: 0x00ECD940
+		// Token: 0x060325DD RID: 206301 RVA: 0x00E20CB0 File Offset: 0x00E1EEB0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603D64E RID: 251470 RVA: 0x00ECF7E6 File Offset: 0x00ECD9E6
+		// Token: 0x060325DE RID: 206302 RVA: 0x00E20D56 File Offset: 0x00E1EF56
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TryShow();
 		}
 
-		// Token: 0x0603D64F RID: 251471 RVA: 0x00ECF80D File Offset: 0x00ECDA0D
+		// Token: 0x060325DF RID: 206303 RVA: 0x00E20D7D File Offset: 0x00E1EF7D
 		protected override void OnBeforeDestroy()
 		{
 			BattleUiControl.OffsetMissionAnchor(-1f);
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.OnBeforeDestroy();
 		}
 
-		// Token: 0x0603D650 RID: 251472 RVA: 0x00ECF837 File Offset: 0x00ECDA37
+		// Token: 0x060325E0 RID: 206304 RVA: 0x00E20DA7 File Offset: 0x00E1EFA7
 		public override void ShowBattleVisibleChildView(bool checkVisible = false)
 		{
 			if (!this.IsPendingLoaded)
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D651 RID: 251473 RVA: 0x00ECF848 File Offset: 0x00ECDA48
+		// Token: 0x060325E1 RID: 206305 RVA: 0x00E20DB8 File Offset: 0x00E1EFB8
 		protected override UniTask OnShowAsyncImplementImplement()
 		{
 			BossPilingTopItem.<OnShowAsyncImplementImplement>d__9 <OnShowAsyncImplementImplement>d__;
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnShowAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D652 RID: 251474 RVA: 0x00ECF88C File Offset: 0x00ECDA8C
+		// Token: 0x060325E2 RID: 206306 RVA: 0x00E20DFC File Offset: 0x00E1EFFC
 		protected override UniTask OnHideAsyncImplementImplement()
 		{
 			BossPilingTopItem.<OnHideAsyncImplementImplement>d__10 <OnHideAsyncImplementImplement>d__;
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnHideAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D653 RID: 251475 RVA: 0x00ECF8D0 File Offset: 0x00ECDAD0
+		// Token: 0x060325E3 RID: 206307 RVA: 0x00E20E40 File Offset: 0x00E1F040
 		private void TryShow()
 		{
 			if (this.IsPendingLoaded)
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ShowInner();
 		}
 
-		// Token: 0x0603D654 RID: 251476 RVA: 0x00ECF91C File Offset: 0x00ECDB1C
+		// Token: 0x060325E4 RID: 206308 RVA: 0x00E20E8C File Offset: 0x00E1F08C
 		private void RemoveEvent()
 		{
 			if (EventSystem.Instance.Has(EEventName.WorldDoneAndCloseLoading, new Action(this.OnWorldDoneAndCloseLoading)))
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D655 RID: 251477 RVA: 0x00ECF957 File Offset: 0x00ECDB57
+		// Token: 0x060325E5 RID: 206309 RVA: 0x00E20EC7 File Offset: 0x00E1F0C7
 		private void OnWorldDoneAndCloseLoading()
 		{
 			this.IsPendingLoaded = false;
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ShowInner();
 		}
 
-		// Token: 0x0603D656 RID: 251478 RVA: 0x00ECF973 File Offset: 0x00ECDB73
+		// Token: 0x060325E6 RID: 206310 RVA: 0x00E20EE3 File Offset: 0x00E1F0E3
 		private void ShowInner()
 		{
 			BattleUiChildViewData childViewData = BattleUiModel.Instance.ChildViewData;
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ShowBattleVisibleChildView(false);
 		}
 
-		// Token: 0x0603D657 RID: 251479 RVA: 0x00ECF998 File Offset: 0x00ECDB98
+		// Token: 0x060325E7 RID: 206311 RVA: 0x00E20F08 File Offset: 0x00E1F108
 		public void StartShow()
 		{
 			if (this.RootItem != null && !this.RootItem.bIsUIActive)
@@ -141,14 +141,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TryShow();
 		}
 
-		// Token: 0x0603D658 RID: 251480 RVA: 0x00ECF9BC File Offset: 0x00ECDBBC
+		// Token: 0x060325E8 RID: 206312 RVA: 0x00E20F2C File Offset: 0x00E1F12C
 		public void EndShow()
 		{
 			this.SeqEndState = 0;
 			base.SetVisible(0, false);
 		}
 
-		// Token: 0x0603D659 RID: 251481 RVA: 0x00ECF9D0 File Offset: 0x00ECDBD0
+		// Token: 0x060325E9 RID: 206313 RVA: 0x00E20F40 File Offset: 0x00E1F140
 		private void OnClickCollection()
 		{
 			InstanceDungeon? instanceDungeon = GameModeModel.Instance.InstanceDungeon;
@@ -165,29 +165,29 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			UiManager.Instance.OpenView(EUiViewName.BossPilingBuffView, param, null);
 		}
 
-		// Token: 0x04020096 RID: 131222
+		// Token: 0x0401AB5D RID: 109405
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x04020097 RID: 131223
+		// Token: 0x0401AB5E RID: 109406
 		private int SeqStartState;
 
-		// Token: 0x04020098 RID: 131224
+		// Token: 0x0401AB5F RID: 109407
 		private int SeqEndState = 1;
 
-		// Token: 0x04020099 RID: 131225
+		// Token: 0x0401AB60 RID: 109408
 		[Nullable(2)]
 		public UiPanelBase ParentLogic;
 
-		// Token: 0x0402009A RID: 131226
+		// Token: 0x0401AB61 RID: 109409
 		private bool IsPendingLoaded;
 
-		// Token: 0x0200C1CE RID: 49614
+		// Token: 0x0200ABDD RID: 43997
 		private enum EChildType
 		{
-			// Token: 0x0403A923 RID: 239907
+			// Token: 0x04035315 RID: 217877
 			BtnCollection,
-			// Token: 0x0403A924 RID: 239908
+			// Token: 0x04035316 RID: 217878
 			PnlMissionContent
 		}
 	}

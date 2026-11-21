@@ -6,13 +6,13 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055B0 RID: 21936
+	// Token: 0x02004586 RID: 17798
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class MapRogueModel : ModelBase
 	{
-		// Token: 0x06037EB5 RID: 229045 RVA: 0x00D3FD50 File Offset: 0x00D3DF50
+		// Token: 0x0602CDB3 RID: 183731 RVA: 0x00C8DA98 File Offset: 0x00C8BC98
 		public void RefreshGameInfo(IGameInfoInitData gameInfo)
 		{
 			if (this.GameInfo == null)
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.RoleMaxStar = gameInfo.RoleMaxStar;
 		}
 
-		// Token: 0x06037EB6 RID: 229046 RVA: 0x00D3FDA0 File Offset: 0x00D3DFA0
+		// Token: 0x0602CDB4 RID: 183732 RVA: 0x00C8DAE8 File Offset: 0x00C8BCE8
 		public void ResetGameInfo()
 		{
 			MapRogueGameInfo gameInfo = this.GameInfo;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.GameOpList.Clear();
 		}
 
-		// Token: 0x06037EB7 RID: 229047 RVA: 0x00D3FDC8 File Offset: 0x00D3DFC8
+		// Token: 0x0602CDB5 RID: 183733 RVA: 0x00C8DB10 File Offset: 0x00C8BD10
 		public void GenerateOpList(IList<RogueResOpData> dataList)
 		{
 			this.GameOpList.Clear();
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.PrintAllOpList();
 		}
 
-		// Token: 0x06037EB8 RID: 229048 RVA: 0x00D3FE3C File Offset: 0x00D3E03C
+		// Token: 0x0602CDB6 RID: 183734 RVA: 0x00C8DB84 File Offset: 0x00C8BD84
 		public unsafe void PrintAllOpList()
 		{
 			Log instance = Log.Instance;
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x06037EB9 RID: 229049 RVA: 0x00D3FF20 File Offset: 0x00D3E120
+		// Token: 0x0602CDB7 RID: 183735 RVA: 0x00C8DC68 File Offset: 0x00C8BE68
 		public unsafe void AddOpData(RogueResOpData data, bool emitSort = true)
 		{
 			MapRogueOp mapRogueOp = null;
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x06037EBA RID: 229050 RVA: 0x00D40088 File Offset: 0x00D3E288
+		// Token: 0x0602CDB8 RID: 183736 RVA: 0x00C8DDD0 File Offset: 0x00C8BFD0
 		public unsafe void RemoveOpData(int incId)
 		{
 			if (this.GameInfo == null)
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x06037EBB RID: 229051 RVA: 0x00D4016C File Offset: 0x00D3E36C
+		// Token: 0x0602CDB9 RID: 183737 RVA: 0x00C8DEB4 File Offset: 0x00C8C0B4
 		public void UpdateOpData(RogueResOpData data)
 		{
 			MapRogueOp mapRogueOp;
@@ -174,13 +174,13 @@ namespace CSharpScript.Game.Module.MapRogue
 			mapRogueOp.Update(data, this.GameInfo);
 		}
 
-		// Token: 0x06037EBC RID: 229052 RVA: 0x00D4019C File Offset: 0x00D3E39C
+		// Token: 0x0602CDBA RID: 183738 RVA: 0x00C8DEE4 File Offset: 0x00C8C0E4
 		private int SortOpData(MapRogueOp opA, MapRogueOp opB)
 		{
 			return opB.Priority - opA.Priority;
 		}
 
-		// Token: 0x06037EBD RID: 229053 RVA: 0x00D401AC File Offset: 0x00D3E3AC
+		// Token: 0x0602CDBB RID: 183739 RVA: 0x00C8DEF4 File Offset: 0x00C8C0F4
 		[NullableContext(2)]
 		public MapRogueOp GetOpData(int incId)
 		{
@@ -189,13 +189,13 @@ namespace CSharpScript.Game.Module.MapRogue
 			return result;
 		}
 
-		// Token: 0x06037EBE RID: 229054 RVA: 0x00D401C9 File Offset: 0x00D3E3C9
+		// Token: 0x0602CDBC RID: 183740 RVA: 0x00C8DF11 File Offset: 0x00C8C111
 		public List<MapRogueOp> GetAllOpData()
 		{
 			return this.GameOpList;
 		}
 
-		// Token: 0x06037EBF RID: 229055 RVA: 0x00D401D4 File Offset: 0x00D3E3D4
+		// Token: 0x0602CDBD RID: 183741 RVA: 0x00C8DF1C File Offset: 0x00C8C11C
 		public List<MapRogueOp> GetOpDataByType(RogueResOpType type)
 		{
 			List<MapRogueOp> list = new List<MapRogueOp>();
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return list;
 		}
 
-		// Token: 0x06037EC0 RID: 229056 RVA: 0x00D40238 File Offset: 0x00D3E438
+		// Token: 0x0602CDBE RID: 183742 RVA: 0x00C8DF80 File Offset: 0x00C8C180
 		[NullableContext(2)]
 		public void ExecuteOpData(int incId, Action<bool> callback = null)
 		{
@@ -224,7 +224,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x06037EC1 RID: 229057 RVA: 0x00D40270 File Offset: 0x00D3E470
+		// Token: 0x0602CDBF RID: 183743 RVA: 0x00C8DFB8 File Offset: 0x00C8C1B8
 		public void ExecuteOpDataList()
 		{
 			if (this.GameInfo == null)
@@ -241,7 +241,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.GameInfo.GameStage = EMapRogueGameStage.Norm;
 		}
 
-		// Token: 0x06037EC2 RID: 229058 RVA: 0x00D402D0 File Offset: 0x00D3E4D0
+		// Token: 0x0602CDC0 RID: 183744 RVA: 0x00C8E018 File Offset: 0x00C8C218
 		public List<MapGridData> CreateMapGridDataList(IList<RogueResGridData> dataList, int randomSeed)
 		{
 			SeedRandomUtil seedRandomUtil = new SeedRandomUtil();
@@ -259,7 +259,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return list;
 		}
 
-		// Token: 0x06037EC3 RID: 229059 RVA: 0x00D40334 File Offset: 0x00D3E534
+		// Token: 0x0602CDC1 RID: 183745 RVA: 0x00C8E07C File Offset: 0x00C8C27C
 		public void RefreshMapGridData(int index, RogueResGridData data)
 		{
 			if (index >= this.GameInfo.MapGrids.Count)
@@ -283,7 +283,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.GameInfo.RefreshGrid(index, isExplore != mapGridData.IsExplore);
 		}
 
-		// Token: 0x06037EC4 RID: 229060 RVA: 0x00D403C0 File Offset: 0x00D3E5C0
+		// Token: 0x0602CDC2 RID: 183746 RVA: 0x00C8E108 File Offset: 0x00C8C308
 		private void SetGridType(MapGridData gridData, SeedRandomUtil seedRandomUtil)
 		{
 			RogueResGridMapType? gridMapTypeConfigById = MapRogueConfig.Instance.GetGridMapTypeConfigById(gridData.GridTypeId);
@@ -303,7 +303,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			gridData.ExtraPathIndex = -1;
 		}
 
-		// Token: 0x06037EC5 RID: 229061 RVA: 0x00D4044E File Offset: 0x00D3E64E
+		// Token: 0x0602CDC3 RID: 183747 RVA: 0x00C8E196 File Offset: 0x00C8C396
 		[NullableContext(2)]
 		public IRogueGetListItemData ShiftGetItemData()
 		{
@@ -314,31 +314,31 @@ namespace CSharpScript.Game.Module.MapRogue
 			return this.GameInfo.ShiftGetItemData();
 		}
 
-		// Token: 0x06037EC6 RID: 229062 RVA: 0x00D40465 File Offset: 0x00D3E665
+		// Token: 0x0602CDC4 RID: 183748 RVA: 0x00C8E1AD File Offset: 0x00C8C3AD
 		public int GetRogueCurrencyItemId()
 		{
 			return this.CurrencyItemId;
 		}
 
-		// Token: 0x06037EC7 RID: 229063 RVA: 0x00D4046D File Offset: 0x00D3E66D
+		// Token: 0x0602CDC5 RID: 183749 RVA: 0x00C8E1B5 File Offset: 0x00C8C3B5
 		public int GetRogueRoleLevel()
 		{
 			return this.RoleLevel;
 		}
 
-		// Token: 0x06037EC8 RID: 229064 RVA: 0x00D40475 File Offset: 0x00D3E675
+		// Token: 0x0602CDC6 RID: 183750 RVA: 0x00C8E1BD File Offset: 0x00C8C3BD
 		public void SetRoleLevel(int level)
 		{
 			this.RoleLevel = level;
 		}
 
-		// Token: 0x06037EC9 RID: 229065 RVA: 0x00D4047E File Offset: 0x00D3E67E
+		// Token: 0x0602CDC7 RID: 183751 RVA: 0x00C8E1C6 File Offset: 0x00C8C3C6
 		public int GetRogueRoleMaxStar()
 		{
 			return this.RoleMaxStar;
 		}
 
-		// Token: 0x06037ECA RID: 229066 RVA: 0x00D40488 File Offset: 0x00D3E688
+		// Token: 0x0602CDC8 RID: 183752 RVA: 0x00C8E1D0 File Offset: 0x00C8C3D0
 		public int GetExploredGridCount()
 		{
 			int num = 0;
@@ -349,20 +349,20 @@ namespace CSharpScript.Game.Module.MapRogue
 			return num;
 		}
 
-		// Token: 0x06037ECB RID: 229067 RVA: 0x00D404E8 File Offset: 0x00D3E6E8
+		// Token: 0x0602CDC9 RID: 183753 RVA: 0x00C8E230 File Offset: 0x00C8C430
 		public bool GetDebugMode()
 		{
 			return false;
 		}
 
-		// Token: 0x06037ECC RID: 229068 RVA: 0x00D404EB File Offset: 0x00D3E6EB
+		// Token: 0x0602CDCA RID: 183754 RVA: 0x00C8E233 File Offset: 0x00C8C433
 		public void SetDebugMode(bool bOn)
 		{
 			this.DebugMode = bOn;
 		}
 
-		// Token: 0x170086BE RID: 34494
-		// (get) Token: 0x06037ECD RID: 229069 RVA: 0x00D404F4 File Offset: 0x00D3E6F4
+		// Token: 0x17005A85 RID: 23173
+		// (get) Token: 0x0602CDCB RID: 183755 RVA: 0x00C8E23C File Offset: 0x00C8C43C
 		public static MapRogueModel Instance
 		{
 			get
@@ -371,7 +371,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x06037ECE RID: 229070 RVA: 0x00D404FB File Offset: 0x00D3E6FB
+		// Token: 0x0602CDCC RID: 183756 RVA: 0x00C8E243 File Offset: 0x00C8C443
 		public static MapRogueModel GetOrCreateInstance()
 		{
 			if (MapRogueModel._Instance == null)
@@ -381,7 +381,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return MapRogueModel._Instance;
 		}
 
-		// Token: 0x06037ECF RID: 229071 RVA: 0x00D4050F File Offset: 0x00D3E70F
+		// Token: 0x0602CDCD RID: 183757 RVA: 0x00C8E257 File Offset: 0x00C8C457
 		public static bool CreateInstance()
 		{
 			if (MapRogueModel._Instance != null)
@@ -392,46 +392,46 @@ namespace CSharpScript.Game.Module.MapRogue
 			return true;
 		}
 
-		// Token: 0x06037ED0 RID: 229072 RVA: 0x00D40525 File Offset: 0x00D3E725
+		// Token: 0x0602CDCE RID: 183758 RVA: 0x00C8E26D File Offset: 0x00C8C46D
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06037ED1 RID: 229073 RVA: 0x00D40527 File Offset: 0x00D3E727
+		// Token: 0x0602CDCF RID: 183759 RVA: 0x00C8E26F File Offset: 0x00C8C46F
 		public static void ResetStaticDefaultValue()
 		{
 			MapRogueModel._Instance = null;
 		}
 
-		// Token: 0x06037ED2 RID: 229074 RVA: 0x00D4052F File Offset: 0x00D3E72F
+		// Token: 0x0602CDD0 RID: 183760 RVA: 0x00C8E277 File Offset: 0x00C8C477
 		static MapRogueModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MapRogueModel.CreateStaticDefaultValue), new Action(MapRogueModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401D604 RID: 120324
+		// Token: 0x0401808F RID: 98447
 		[Nullable(2)]
 		public MapRogueGameInfo GameInfo;
 
-		// Token: 0x0401D605 RID: 120325
+		// Token: 0x04018090 RID: 98448
 		protected List<MapRogueOp> GameOpList = new List<MapRogueOp>();
 
-		// Token: 0x0401D606 RID: 120326
+		// Token: 0x04018091 RID: 98449
 		protected Dictionary<int, MapRogueOp> GameOpMap = new Dictionary<int, MapRogueOp>();
 
-		// Token: 0x0401D607 RID: 120327
+		// Token: 0x04018092 RID: 98450
 		private int CurrencyItemId;
 
-		// Token: 0x0401D608 RID: 120328
+		// Token: 0x04018093 RID: 98451
 		private int RoleLevel;
 
-		// Token: 0x0401D609 RID: 120329
+		// Token: 0x04018094 RID: 98452
 		private int RoleMaxStar;
 
-		// Token: 0x0401D60A RID: 120330
+		// Token: 0x04018095 RID: 98453
 		private bool DebugMode;
 
-		// Token: 0x0401D60B RID: 120331
+		// Token: 0x04018096 RID: 98454
 		[Nullable(2)]
 		private static MapRogueModel _Instance;
 	}

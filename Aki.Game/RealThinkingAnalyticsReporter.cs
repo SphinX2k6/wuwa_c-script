@@ -5,12 +5,12 @@ using CSharpScript.Launcher.BaseConfig;
 using CSharpScript.Typing;
 using UnrealEngine;
 
-// Token: 0x02002185 RID: 8581
+// Token: 0x02001669 RID: 5737
 [NullableContext(1)]
 [Nullable(0)]
 public class RealThinkingAnalyticsReporter : Singleton
 {
-	// Token: 0x06010AC6 RID: 68294 RVA: 0x0040CA14 File Offset: 0x0040AC14
+	// Token: 0x0600DF57 RID: 57175 RVA: 0x004192F0 File Offset: 0x004174F0
 	public void Init()
 	{
 		EventSystem.Instance.Add(EEventName.OnGetPlayerBasicInfo, new Action(this.OnGetPlayerBasicInfo));
@@ -18,19 +18,19 @@ public class RealThinkingAnalyticsReporter : Singleton
 		EventSystem.Instance.Add(EEventName.OnSetLoginServerId, new Action(this.SwitchToLoginServerConfig));
 	}
 
-	// Token: 0x06010AC7 RID: 68295 RVA: 0x0040CA78 File Offset: 0x0040AC78
+	// Token: 0x0600DF58 RID: 57176 RVA: 0x00419354 File Offset: 0x00417554
 	private void OnGetPlayerBasicInfo()
 	{
 		UThinkingAnalytics.Login(PlayerInfoModel.Instance.GetId().ToString(), 0);
 	}
 
-	// Token: 0x06010AC8 RID: 68296 RVA: 0x0040CAA3 File Offset: 0x0040ACA3
+	// Token: 0x0600DF59 RID: 57177 RVA: 0x0041937F File Offset: 0x0041757F
 	private void LogOut()
 	{
 		UThinkingAnalytics.Logout(0);
 	}
 
-	// Token: 0x06010AC9 RID: 68297 RVA: 0x0040CAAC File Offset: 0x0040ACAC
+	// Token: 0x0600DF5A RID: 57178 RVA: 0x00419388 File Offset: 0x00417588
 	private unsafe void SwitchToLoginServerConfig()
 	{
 		if (!KuroSdkController.Instance.GetIfGlobalSdk())
@@ -90,13 +90,13 @@ public class RealThinkingAnalyticsReporter : Singleton
 		Log.Instance.Error(ELogModule.Login, ELogAuthor.LW, "未找到 " + text + " 对应的数数上报配置", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x06010ACA RID: 68298 RVA: 0x0040CC63 File Offset: 0x0040AE63
+	// Token: 0x0600DF5B RID: 57179 RVA: 0x0041953F File Offset: 0x0041773F
 	public void Report(string key, string jsonLog)
 	{
 		FThinkingAnalyticsForCSharp.Track(key, jsonLog, 0);
 	}
 
-	// Token: 0x06010ACB RID: 68299 RVA: 0x0040CC70 File Offset: 0x0040AE70
+	// Token: 0x0600DF5C RID: 57180 RVA: 0x0041954C File Offset: 0x0041774C
 	private void OnCalibrate(int index)
 	{
 		if (!UThinkingAnalytics.HasInstanceTimeCalibrated(index))
@@ -105,8 +105,8 @@ public class RealThinkingAnalyticsReporter : Singleton
 		}
 	}
 
-	// Token: 0x17001524 RID: 5412
-	// (get) Token: 0x06010ACC RID: 68300 RVA: 0x0040CCA4 File Offset: 0x0040AEA4
+	// Token: 0x1700155B RID: 5467
+	// (get) Token: 0x0600DF5D RID: 57181 RVA: 0x00419580 File Offset: 0x00417780
 	public static RealThinkingAnalyticsReporter Instance
 	{
 		get
@@ -120,12 +120,12 @@ public class RealThinkingAnalyticsReporter : Singleton
 		}
 	}
 
-	// Token: 0x06010ACD RID: 68301 RVA: 0x0040CCC7 File Offset: 0x0040AEC7
+	// Token: 0x0600DF5E RID: 57182 RVA: 0x004195A3 File Offset: 0x004177A3
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06010ACE RID: 68302 RVA: 0x0040CCC9 File Offset: 0x0040AEC9
+	// Token: 0x0600DF5F RID: 57183 RVA: 0x004195A5 File Offset: 0x004177A5
 	public static void ResetStaticDefaultValue()
 	{
 		RealThinkingAnalyticsReporter instance = RealThinkingAnalyticsReporter._instance;
@@ -136,20 +136,20 @@ public class RealThinkingAnalyticsReporter : Singleton
 		RealThinkingAnalyticsReporter._instance = null;
 	}
 
-	// Token: 0x06010ACF RID: 68303 RVA: 0x0040CCE2 File Offset: 0x0040AEE2
+	// Token: 0x0600DF60 RID: 57184 RVA: 0x004195BE File Offset: 0x004177BE
 	static RealThinkingAnalyticsReporter()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(RealThinkingAnalyticsReporter.CreateStaticDefaultValue), new Action(RealThinkingAnalyticsReporter.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04007EF7 RID: 32503
+	// Token: 0x0400803E RID: 32830
 	private readonly Stat TrackStat = Stat.Create("ThinkingAnalyticsReporter.Track", "", "");
 
-	// Token: 0x04007EF8 RID: 32504
+	// Token: 0x0400803F RID: 32831
 	[Nullable(2)]
 	private FOnTimeCalibrated OnCalibrateDelegate;
 
-	// Token: 0x04007EF9 RID: 32505
+	// Token: 0x04008040 RID: 32832
 	[Nullable(2)]
 	private static RealThinkingAnalyticsReporter _instance;
 }

@@ -3,19 +3,19 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020015F6 RID: 5622
+	// Token: 0x02001758 RID: 5976
 	[EnumExtensions]
 	public enum EHideType
 	{
-		// Token: 0x04004B0D RID: 19213
+		// Token: 0x04004ED3 RID: 20179
 		WorldMonsterAndMonsterTreasure,
-		// Token: 0x04004B0E RID: 19214
+		// Token: 0x04004ED4 RID: 20180
 		WorldEntityAndLevelPlay,
-		// Token: 0x04004B0F RID: 19215
+		// Token: 0x04004ED5 RID: 20181
 		SpecifyEntity,
-		// Token: 0x04004B10 RID: 19216
+		// Token: 0x04004ED6 RID: 20182
 		SpecifyLevelPlay,
-		// Token: 0x04004B11 RID: 19217
+		// Token: 0x04004ED7 RID: 20183
 		SpecifyDataLayers
 	}
 }

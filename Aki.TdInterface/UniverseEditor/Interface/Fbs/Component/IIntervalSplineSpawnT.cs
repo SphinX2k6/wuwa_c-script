@@ -2,55 +2,55 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005483 RID: 21635
+	// Token: 0x02005A09 RID: 23049
 	public class IIntervalSplineSpawnT
 	{
-		// Token: 0x17009F4B RID: 40779
-		// (get) Token: 0x0602399D RID: 145821 RVA: 0x004EC513 File Offset: 0x004EA713
-		// (set) Token: 0x0602399E RID: 145822 RVA: 0x004EC51B File Offset: 0x004EA71B
+		// Token: 0x1700A785 RID: 42885
+		// (get) Token: 0x06025A55 RID: 154197 RVA: 0x00529587 File Offset: 0x00527787
+		// (set) Token: 0x06025A56 RID: 154198 RVA: 0x0052958F File Offset: 0x0052778F
 		public EPathDrivenActorSpawnType Type { get; set; }
 
-		// Token: 0x17009F4C RID: 40780
-		// (get) Token: 0x0602399F RID: 145823 RVA: 0x004EC524 File Offset: 0x004EA724
-		// (set) Token: 0x060239A0 RID: 145824 RVA: 0x004EC52C File Offset: 0x004EA72C
+		// Token: 0x1700A786 RID: 42886
+		// (get) Token: 0x06025A57 RID: 154199 RVA: 0x00529598 File Offset: 0x00527798
+		// (set) Token: 0x06025A58 RID: 154200 RVA: 0x005295A0 File Offset: 0x005277A0
 		public string ActorBlueprintPath { get; set; }
 
-		// Token: 0x17009F4D RID: 40781
-		// (get) Token: 0x060239A1 RID: 145825 RVA: 0x004EC535 File Offset: 0x004EA735
-		// (set) Token: 0x060239A2 RID: 145826 RVA: 0x004EC53D File Offset: 0x004EA73D
+		// Token: 0x1700A787 RID: 42887
+		// (get) Token: 0x06025A59 RID: 154201 RVA: 0x005295A9 File Offset: 0x005277A9
+		// (set) Token: 0x06025A5A RID: 154202 RVA: 0x005295B1 File Offset: 0x005277B1
 		public IPathDrivenActorSplineMoveT MoveMode { get; set; }
 
-		// Token: 0x17009F4E RID: 40782
-		// (get) Token: 0x060239A3 RID: 145827 RVA: 0x004EC546 File Offset: 0x004EA746
-		// (set) Token: 0x060239A4 RID: 145828 RVA: 0x004EC54E File Offset: 0x004EA74E
+		// Token: 0x1700A788 RID: 42888
+		// (get) Token: 0x06025A5B RID: 154203 RVA: 0x005295BA File Offset: 0x005277BA
+		// (set) Token: 0x06025A5C RID: 154204 RVA: 0x005295C2 File Offset: 0x005277C2
 		public float SpawnInterval { get; set; }
 
-		// Token: 0x17009F4F RID: 40783
-		// (get) Token: 0x060239A5 RID: 145829 RVA: 0x004EC557 File Offset: 0x004EA757
-		// (set) Token: 0x060239A6 RID: 145830 RVA: 0x004EC55F File Offset: 0x004EA75F
+		// Token: 0x1700A789 RID: 42889
+		// (get) Token: 0x06025A5D RID: 154205 RVA: 0x005295CB File Offset: 0x005277CB
+		// (set) Token: 0x06025A5E RID: 154206 RVA: 0x005295D3 File Offset: 0x005277D3
 		public int MaxActiveCount { get; set; }
 
-		// Token: 0x17009F50 RID: 40784
-		// (get) Token: 0x060239A7 RID: 145831 RVA: 0x004EC568 File Offset: 0x004EA768
-		// (set) Token: 0x060239A8 RID: 145832 RVA: 0x004EC570 File Offset: 0x004EA770
+		// Token: 0x1700A78A RID: 42890
+		// (get) Token: 0x06025A5F RID: 154207 RVA: 0x005295DC File Offset: 0x005277DC
+		// (set) Token: 0x06025A60 RID: 154208 RVA: 0x005295E4 File Offset: 0x005277E4
 		public float MaxSpawnInterval { get; set; }
 
-		// Token: 0x17009F51 RID: 40785
-		// (get) Token: 0x060239A9 RID: 145833 RVA: 0x004EC579 File Offset: 0x004EA779
-		// (set) Token: 0x060239AA RID: 145834 RVA: 0x004EC581 File Offset: 0x004EA781
+		// Token: 0x1700A78B RID: 42891
+		// (get) Token: 0x06025A61 RID: 154209 RVA: 0x005295ED File Offset: 0x005277ED
+		// (set) Token: 0x06025A62 RID: 154210 RVA: 0x005295F5 File Offset: 0x005277F5
 		public IPathDrivenActorInitialSpawnConfigT InitialSpawnConfig { get; set; }
 
-		// Token: 0x17009F52 RID: 40786
-		// (get) Token: 0x060239AB RID: 145835 RVA: 0x004EC58A File Offset: 0x004EA78A
-		// (set) Token: 0x060239AC RID: 145836 RVA: 0x004EC592 File Offset: 0x004EA792
+		// Token: 0x1700A78C RID: 42892
+		// (get) Token: 0x06025A63 RID: 154211 RVA: 0x005295FE File Offset: 0x005277FE
+		// (set) Token: 0x06025A64 RID: 154212 RVA: 0x00529606 File Offset: 0x00527806
 		public IIntervalSplineSpawnAllActorAudioT AudioConfig { get; set; }
 
-		// Token: 0x17009F53 RID: 40787
-		// (get) Token: 0x060239AD RID: 145837 RVA: 0x004EC59B File Offset: 0x004EA79B
-		// (set) Token: 0x060239AE RID: 145838 RVA: 0x004EC5A3 File Offset: 0x004EA7A3
+		// Token: 0x1700A78D RID: 42893
+		// (get) Token: 0x06025A65 RID: 154213 RVA: 0x0052960F File Offset: 0x0052780F
+		// (set) Token: 0x06025A66 RID: 154214 RVA: 0x00529617 File Offset: 0x00527817
 		public byte NullMask { get; set; }
 
-		// Token: 0x060239AF RID: 145839 RVA: 0x004EC5AC File Offset: 0x004EA7AC
+		// Token: 0x06025A67 RID: 154215 RVA: 0x00529620 File Offset: 0x00527820
 		public IIntervalSplineSpawnT()
 		{
 			this.Type = EPathDrivenActorSpawnType.IntervalSplineSpawn;

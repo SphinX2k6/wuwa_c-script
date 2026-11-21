@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002001 RID: 8193
+// Token: 0x020014D4 RID: 5332
 public class ItemHintPanel<T, [Nullable(2)] TData> : UiPanelBase where T : ItemHintItemBase<TData>
 {
-	// Token: 0x06010118 RID: 65816 RVA: 0x003EA0E4 File Offset: 0x003E82E4
+	// Token: 0x0600D580 RID: 54656 RVA: 0x003F66DC File Offset: 0x003F48DC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -18,14 +18,14 @@ public class ItemHintPanel<T, [Nullable(2)] TData> : UiPanelBase where T : ItemH
 		};
 	}
 
-	// Token: 0x06010119 RID: 65817 RVA: 0x003EA13E File Offset: 0x003E833E
+	// Token: 0x0600D581 RID: 54657 RVA: 0x003F6736 File Offset: 0x003F4936
 	[NullableContext(1)]
 	public ItemHintPanel(IItemHintPanelData<T, TData> data)
 	{
 		this.Data = data;
 	}
 
-	// Token: 0x0601011A RID: 65818 RVA: 0x003EA14D File Offset: 0x003E834D
+	// Token: 0x0600D582 RID: 54658 RVA: 0x003F6745 File Offset: 0x003F4945
 	protected override void OnBeforeDestroy()
 	{
 		if (this.ListSlideControl != null)
@@ -35,7 +35,7 @@ public class ItemHintPanel<T, [Nullable(2)] TData> : UiPanelBase where T : ItemH
 		}
 	}
 
-	// Token: 0x0601011B RID: 65819 RVA: 0x003EA16C File Offset: 0x003E836C
+	// Token: 0x0600D583 RID: 54659 RVA: 0x003F6764 File Offset: 0x003F4964
 	protected override void OnStart()
 	{
 		if (!this.CheckNext())
@@ -88,7 +88,7 @@ public class ItemHintPanel<T, [Nullable(2)] TData> : UiPanelBase where T : ItemH
 		this.ListSlideControl.DisEnableParentLayout();
 	}
 
-	// Token: 0x0601011C RID: 65820 RVA: 0x003EA3A3 File Offset: 0x003E85A3
+	// Token: 0x0600D584 RID: 54660 RVA: 0x003F699B File Offset: 0x003F4B9B
 	public void OnTick(float delta)
 	{
 		if (this.ListSlideControl != null)
@@ -97,7 +97,7 @@ public class ItemHintPanel<T, [Nullable(2)] TData> : UiPanelBase where T : ItemH
 		}
 	}
 
-	// Token: 0x0601011D RID: 65821 RVA: 0x003EA3B9 File Offset: 0x003E85B9
+	// Token: 0x0600D585 RID: 54661 RVA: 0x003F69B1 File Offset: 0x003F4BB1
 	[NullableContext(1)]
 	private T CreateProxyFunction()
 	{
@@ -106,7 +106,7 @@ public class ItemHintPanel<T, [Nullable(2)] TData> : UiPanelBase where T : ItemH
 		return t;
 	}
 
-	// Token: 0x0601011E RID: 65822 RVA: 0x003EA3E4 File Offset: 0x003E85E4
+	// Token: 0x0600D586 RID: 54662 RVA: 0x003F69DC File Offset: 0x003F4BDC
 	private bool CheckNext()
 	{
 		IItemHintPanelData<T, TData> data = this.Data;
@@ -124,7 +124,7 @@ public class ItemHintPanel<T, [Nullable(2)] TData> : UiPanelBase where T : ItemH
 		return flag2.GetValueOrDefault();
 	}
 
-	// Token: 0x0601011F RID: 65823 RVA: 0x003EA42C File Offset: 0x003E862C
+	// Token: 0x0600D587 RID: 54663 RVA: 0x003F6A24 File Offset: 0x003F4C24
 	[NullableContext(2)]
 	private TData ShiftItem()
 	{
@@ -135,7 +135,7 @@ public class ItemHintPanel<T, [Nullable(2)] TData> : UiPanelBase where T : ItemH
 		return this.Data.ShiftItem();
 	}
 
-	// Token: 0x040076D1 RID: 30417
+	// Token: 0x040077BA RID: 30650
 	[Nullable(new byte[]
 	{
 		2,
@@ -144,7 +144,7 @@ public class ItemHintPanel<T, [Nullable(2)] TData> : UiPanelBase where T : ItemH
 	})]
 	private readonly IItemHintPanelData<T, TData> Data;
 
-	// Token: 0x040076D2 RID: 30418
+	// Token: 0x040077BB RID: 30651
 	[Nullable(new byte[]
 	{
 		2,
@@ -152,14 +152,14 @@ public class ItemHintPanel<T, [Nullable(2)] TData> : UiPanelBase where T : ItemH
 	})]
 	private ListSliderControl<T> ListSlideControl;
 
-	// Token: 0x02008609 RID: 34313
+	// Token: 0x02007790 RID: 30608
 	private enum EItemHintViewCom
 	{
-		// Token: 0x0402B9F9 RID: 178681
+		// Token: 0x04026D08 RID: 158984
 		TitleRoot,
-		// Token: 0x0402B9FA RID: 178682
+		// Token: 0x04026D09 RID: 158985
 		TextTitle,
-		// Token: 0x0402B9FB RID: 178683
+		// Token: 0x04026D0A RID: 158986
 		ItemLayout
 	}
 }

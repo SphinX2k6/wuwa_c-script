@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02002C2A RID: 11306
+// Token: 0x020021A5 RID: 8613
 public class TutorialViewParam : ITutorialViewParam
 {
-	// Token: 0x17001FB8 RID: 8120
-	// (get) Token: 0x060178DA RID: 96474 RVA: 0x005FD0C8 File Offset: 0x005FB2C8
-	// (set) Token: 0x060178DB RID: 96475 RVA: 0x005FD0D0 File Offset: 0x005FB2D0
+	// Token: 0x17002010 RID: 8208
+	// (get) Token: 0x0601530C RID: 86796 RVA: 0x00629AEC File Offset: 0x00627CEC
+	// (set) Token: 0x0601530D RID: 86797 RVA: 0x00629AF4 File Offset: 0x00627CF4
 	public int? TutorialId { get; set; }
 
-	// Token: 0x17001FB9 RID: 8121
-	// (get) Token: 0x060178DC RID: 96476 RVA: 0x005FD0D9 File Offset: 0x005FB2D9
-	// (set) Token: 0x060178DD RID: 96477 RVA: 0x005FD0E1 File Offset: 0x005FB2E1
+	// Token: 0x17002011 RID: 8209
+	// (get) Token: 0x0601530E RID: 86798 RVA: 0x00629AFD File Offset: 0x00627CFD
+	// (set) Token: 0x0601530F RID: 86799 RVA: 0x00629B05 File Offset: 0x00627D05
 	public EExclusiveTutorialType? ExclusiveType { get; set; }
 }

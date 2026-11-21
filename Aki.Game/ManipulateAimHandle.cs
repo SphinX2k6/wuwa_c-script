@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x02001F32 RID: 7986
+// Token: 0x020013F4 RID: 5108
 [NullableContext(2)]
 [Nullable(0)]
 public class ManipulateAimHandle : HudUnitHandleBase
 {
-	// Token: 0x0600F654 RID: 63060 RVA: 0x003B77E4 File Offset: 0x003B59E4
+	// Token: 0x0600CA73 RID: 51827 RVA: 0x003C32D0 File Offset: 0x003C14D0
 	protected override void OnDestroyed()
 	{
 		this.DestroyManipulateAimUnit();
@@ -18,13 +18,13 @@ public class ManipulateAimHandle : HudUnitHandleBase
 		this.HasTargetSocketName = false;
 	}
 
-	// Token: 0x0600F655 RID: 63061 RVA: 0x003B7808 File Offset: 0x003B5A08
+	// Token: 0x0600CA74 RID: 51828 RVA: 0x003C32F4 File Offset: 0x003C14F4
 	protected override void OnTick(float delta)
 	{
 		this.RefreshScreenPosition();
 	}
 
-	// Token: 0x0600F656 RID: 63062 RVA: 0x003B7810 File Offset: 0x003B5A10
+	// Token: 0x0600CA75 RID: 51829 RVA: 0x003C32FC File Offset: 0x003C14FC
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<bool, Entity, bool>(EEventName.OnManipulateSwitchToNewTarget, new Action<bool, Entity, bool>(this.OnSwitchToNewTarget));
@@ -34,7 +34,7 @@ public class ManipulateAimHandle : HudUnitHandleBase
 		EventSystem.Instance.Add(EEventName.HiddenManipulateUI, new Action(this.OnManipulateEnded));
 	}
 
-	// Token: 0x0600F657 RID: 63063 RVA: 0x003B78AC File Offset: 0x003B5AAC
+	// Token: 0x0600CA76 RID: 51830 RVA: 0x003C3398 File Offset: 0x003C1598
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove<bool, Entity, bool>(EEventName.OnManipulateSwitchToNewTarget, new Action<bool, Entity, bool>(this.OnSwitchToNewTarget));
@@ -44,7 +44,7 @@ public class ManipulateAimHandle : HudUnitHandleBase
 		EventSystem.Instance.Remove(EEventName.HiddenManipulateUI, new Action(this.OnManipulateEnded));
 	}
 
-	// Token: 0x0600F658 RID: 63064 RVA: 0x003B7945 File Offset: 0x003B5B45
+	// Token: 0x0600CA77 RID: 51831 RVA: 0x003C3431 File Offset: 0x003C1631
 	private void OnSwitchToNewTarget(bool isActive, Entity entity, bool isCastTarget)
 	{
 		if (isActive)
@@ -63,7 +63,7 @@ public class ManipulateAimHandle : HudUnitHandleBase
 		manipulateAimUnit.PlayCloseAnim();
 	}
 
-	// Token: 0x0600F659 RID: 63065 RVA: 0x003B7964 File Offset: 0x003B5B64
+	// Token: 0x0600CA78 RID: 51832 RVA: 0x003C3450 File Offset: 0x003C1650
 	[NullableContext(1)]
 	private void OnManipulateStart(float time, string resId)
 	{
@@ -84,7 +84,7 @@ public class ManipulateAimHandle : HudUnitHandleBase
 		this.ManipulateAimUnit.PlayStartAnim();
 	}
 
-	// Token: 0x0600F65A RID: 63066 RVA: 0x003B79C4 File Offset: 0x003B5BC4
+	// Token: 0x0600CA79 RID: 51833 RVA: 0x003C34B0 File Offset: 0x003C16B0
 	[NullableContext(1)]
 	private void OnManipulateStartLockCastTarget(Entity lockEntity, CharacterPart lockPart)
 	{
@@ -113,7 +113,7 @@ public class ManipulateAimHandle : HudUnitHandleBase
 		this.RefreshWeakness();
 	}
 
-	// Token: 0x0600F65B RID: 63067 RVA: 0x003B7A71 File Offset: 0x003B5C71
+	// Token: 0x0600CA7A RID: 51834 RVA: 0x003C355D File Offset: 0x003C175D
 	private void OnManipulateEndLockCastTarget()
 	{
 		this.TargetActorComponent = null;
@@ -127,7 +127,7 @@ public class ManipulateAimHandle : HudUnitHandleBase
 		manipulateAimUnit.SetTargetAimVisible(false);
 	}
 
-	// Token: 0x0600F65C RID: 63068 RVA: 0x003B7A99 File Offset: 0x003B5C99
+	// Token: 0x0600CA7B RID: 51835 RVA: 0x003C3585 File Offset: 0x003C1785
 	private void OnManipulateEnded()
 	{
 		this.TargetActorComponent = null;
@@ -142,7 +142,7 @@ public class ManipulateAimHandle : HudUnitHandleBase
 		manipulateAimUnit.PlayCloseAnim();
 	}
 
-	// Token: 0x0600F65D RID: 63069 RVA: 0x003B7AC8 File Offset: 0x003B5CC8
+	// Token: 0x0600CA7C RID: 51836 RVA: 0x003C35B4 File Offset: 0x003C17B4
 	private void NewManipulateAimUnit()
 	{
 		if (string.IsNullOrEmpty(this.ResId))
@@ -169,7 +169,7 @@ public class ManipulateAimHandle : HudUnitHandleBase
 		EventSystem.Instance.Emit<bool, ECameraAimVisibleReason, string, string>(EEventName.SetCameraAimVisible, false, ECameraAimVisibleReason.InManipulate, null, null);
 	}
 
-	// Token: 0x0600F65E RID: 63070 RVA: 0x003B7B21 File Offset: 0x003B5D21
+	// Token: 0x0600CA7D RID: 51837 RVA: 0x003C360D File Offset: 0x003C180D
 	private void DestroyManipulateAimUnit()
 	{
 		if (this.ManipulateAimUnit == null)
@@ -181,7 +181,7 @@ public class ManipulateAimHandle : HudUnitHandleBase
 		EventSystem.Instance.Emit<bool, ECameraAimVisibleReason, string, string>(EEventName.SetCameraAimVisible, true, ECameraAimVisibleReason.InManipulate, null, null);
 	}
 
-	// Token: 0x0600F65F RID: 63071 RVA: 0x003B7B54 File Offset: 0x003B5D54
+	// Token: 0x0600CA7E RID: 51838 RVA: 0x003C3640 File Offset: 0x003C1840
 	private void RefreshScreenPosition()
 	{
 		if (this.ManipulateAimUnit == null)
@@ -208,7 +208,7 @@ public class ManipulateAimHandle : HudUnitHandleBase
 		this.ManipulateAimUnit.SetTargetAimVisible(true);
 	}
 
-	// Token: 0x0600F660 RID: 63072 RVA: 0x003B7BE8 File Offset: 0x003B5DE8
+	// Token: 0x0600CA7F RID: 51839 RVA: 0x003C36D4 File Offset: 0x003C18D4
 	private void RefreshWeakness()
 	{
 		if (this.ManipulateAimUnit == null)
@@ -222,7 +222,7 @@ public class ManipulateAimHandle : HudUnitHandleBase
 		this.ManipulateAimUnit.SetIsWeakness(this.TargetIsWeakness);
 	}
 
-	// Token: 0x0600F661 RID: 63073 RVA: 0x003B7C14 File Offset: 0x003B5E14
+	// Token: 0x0600CA80 RID: 51840 RVA: 0x003C3700 File Offset: 0x003C1900
 	private FVectorDouble? GetTargetLocation()
 	{
 		if (this.TargetActorComponent == null)
@@ -241,24 +241,24 @@ public class ManipulateAimHandle : HudUnitHandleBase
 		return new FVectorDouble?(this.TargetSkeletalMesh.D_GetSocketLocation(inSocketName));
 	}
 
-	// Token: 0x04007202 RID: 29186
+	// Token: 0x040072E3 RID: 29411
 	private ManipulateAimUnit ManipulateAimUnit;
 
-	// Token: 0x04007203 RID: 29187
+	// Token: 0x040072E4 RID: 29412
 	private CharacterActorComponent TargetActorComponent;
 
-	// Token: 0x04007204 RID: 29188
+	// Token: 0x040072E5 RID: 29413
 	private USkeletalMeshComponent TargetSkeletalMesh;
 
-	// Token: 0x04007205 RID: 29189
+	// Token: 0x040072E6 RID: 29414
 	private FName? TargetSocketName;
 
-	// Token: 0x04007206 RID: 29190
+	// Token: 0x040072E7 RID: 29415
 	private bool HasTargetSocketName;
 
-	// Token: 0x04007207 RID: 29191
+	// Token: 0x040072E8 RID: 29416
 	private bool TargetIsWeakness;
 
-	// Token: 0x04007208 RID: 29192
+	// Token: 0x040072E9 RID: 29417
 	private string ResId;
 }

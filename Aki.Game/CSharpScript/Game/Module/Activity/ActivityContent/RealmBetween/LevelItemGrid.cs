@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 {
-	// Token: 0x02006275 RID: 25205
+	// Token: 0x020051F3 RID: 20979
 	public class LevelItemGrid : GridProxyAbstract<int>
 	{
-		// Token: 0x0603F755 RID: 259925 RVA: 0x00F572C4 File Offset: 0x00F554C4
+		// Token: 0x06034416 RID: 214038 RVA: 0x00E9E220 File Offset: 0x00E9C420
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -21,13 +21,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			};
 		}
 
-		// Token: 0x0603F756 RID: 259926 RVA: 0x00F57334 File Offset: 0x00F55534
+		// Token: 0x06034417 RID: 214039 RVA: 0x00E9E290 File Offset: 0x00E9C490
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x0603F757 RID: 259927 RVA: 0x00F57347 File Offset: 0x00F55547
+		// Token: 0x06034418 RID: 214040 RVA: 0x00E9E2A3 File Offset: 0x00E9C4A3
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			UUIArtText artText = base.GetArtText(1);
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			this.SetIsCurrentLevelItem(isSelected);
 		}
 
-		// Token: 0x0603F758 RID: 259928 RVA: 0x00F57382 File Offset: 0x00F55582
+		// Token: 0x06034419 RID: 214041 RVA: 0x00E9E2DE File Offset: 0x00E9C4DE
 		public void SetIsCurrentLevelItem(bool isActive)
 		{
 			UUIItem item = base.GetItem(0);
@@ -59,13 +59,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			item2.SetUIActive(!isActive);
 		}
 
-		// Token: 0x0603F759 RID: 259929 RVA: 0x00F573AC File Offset: 0x00F555AC
+		// Token: 0x0603441A RID: 214042 RVA: 0x00E9E308 File Offset: 0x00E9C508
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetIsCurrentLevelItem(true);
 		}
 
-		// Token: 0x0603F75A RID: 259930 RVA: 0x00F573B8 File Offset: 0x00F555B8
+		// Token: 0x0603441B RID: 214043 RVA: 0x00E9E314 File Offset: 0x00E9C514
 		public void PlayLevelUpAnim()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			levelSequencePlayer.PlayLevelSequenceByName("LevelUp", false, null, false);
 		}
 
-		// Token: 0x0603F75B RID: 259931 RVA: 0x00F573E8 File Offset: 0x00F555E8
+		// Token: 0x0603441C RID: 214044 RVA: 0x00E9E344 File Offset: 0x00E9C544
 		public void PlayBigAnim()
 		{
 			UUIItem item = base.GetItem(0);
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			levelSequencePlayer.PlayLevelSequenceByName("TtoA", false, null, false);
 		}
 
-		// Token: 0x0603F75C RID: 259932 RVA: 0x00F5743C File Offset: 0x00F5563C
+		// Token: 0x0603441D RID: 214045 RVA: 0x00E9E398 File Offset: 0x00E9C598
 		public void PlaySmallAnim()
 		{
 			UUIItem item = base.GetItem(0);
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			levelSequencePlayer.PlayLevelSequenceByName("AtoT", false, null, false);
 		}
 
-		// Token: 0x04021280 RID: 135808
+		// Token: 0x0401BBAF RID: 113583
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 	}

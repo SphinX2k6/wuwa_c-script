@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001BB RID: 443
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020001DE RID: 478
 	public class IAllKillCondition : ISpawnMonsterCompleteCondition
 	{
-		// Token: 0x06000700 RID: 1792 RVA: 0x000241D8 File Offset: 0x000223D8
+		// Token: 0x06000754 RID: 1876 RVA: 0x000254DC File Offset: 0x000236DC
 		private IAllKillCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000701 RID: 1793 RVA: 0x00024210 File Offset: 0x00022410
+		// Token: 0x06000755 RID: 1877 RVA: 0x00025514 File Offset: 0x00023714
 		public static IAllKillCondition Create([Nullable(2)] IAllKillCondition instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000702 RID: 1794 RVA: 0x00024223 File Offset: 0x00022423
+		// Token: 0x06000756 RID: 1878 RVA: 0x00025527 File Offset: 0x00023727
 		public static IAllKillCondition CreateFromSetValue([Nullable(2)] IAllKillCondition_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000703 RID: 1795 RVA: 0x00024236 File Offset: 0x00022436
+		// Token: 0x06000757 RID: 1879 RVA: 0x0002553A File Offset: 0x0002373A
 		public new IAllKillCondition_SetValue ToSetValue()
 		{
 			return new IAllKillCondition_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000245 RID: 581
-		// (get) Token: 0x06000704 RID: 1796 RVA: 0x00024249 File Offset: 0x00022449
-		// (set) Token: 0x06000705 RID: 1797 RVA: 0x00024274 File Offset: 0x00022474
+		// Token: 0x1700025A RID: 602
+		// (get) Token: 0x06000758 RID: 1880 RVA: 0x0002554D File Offset: 0x0002374D
+		// (set) Token: 0x06000759 RID: 1881 RVA: 0x00025578 File Offset: 0x00023778
 		public override ESpawnMonsterCompleteCondition Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000867 RID: 2151
+		// Token: 0x040008DB RID: 2267
 		[Nullable(2)]
 		protected new IAllKillCondition FbInstance;
 
-		// Token: 0x04000868 RID: 2152
+		// Token: 0x040008DC RID: 2268
 		[Nullable(2)]
 		protected new IAllKillCondition_SetValue PocoInterface;
 	}

@@ -11,12 +11,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020031D1 RID: 12753
+// Token: 0x02002740 RID: 10048
 [NullableContext(1)]
 [Nullable(0)]
 public class MonsterDeathEffectMachine
 {
-	// Token: 0x0601B7C9 RID: 112585 RVA: 0x00787CFC File Offset: 0x00785EFC
+	// Token: 0x06019314 RID: 103188 RVA: 0x007AFD27 File Offset: 0x007ADF27
 	public void Init(Entity entity, IEffectConfigMonsterDeath effectData, MonsterDeathEffectMachine.TDeathEndCallback callback)
 	{
 		this.Entity = entity;
@@ -24,7 +24,7 @@ public class MonsterDeathEffectMachine
 		this.OnDeathEnded = callback;
 	}
 
-	// Token: 0x0601B7CA RID: 112586 RVA: 0x00787D13 File Offset: 0x00785F13
+	// Token: 0x06019315 RID: 103189 RVA: 0x007AFD3E File Offset: 0x007ADF3E
 	public void Clear()
 	{
 		this.ClearDeathEffect();
@@ -33,7 +33,7 @@ public class MonsterDeathEffectMachine
 		this.OnDeathEnded = null;
 	}
 
-	// Token: 0x0601B7CB RID: 112587 RVA: 0x00787D30 File Offset: 0x00785F30
+	// Token: 0x06019316 RID: 103190 RVA: 0x007AFD5C File Offset: 0x007ADF5C
 	public void Play()
 	{
 		if (this.EffectData != null)
@@ -67,7 +67,7 @@ public class MonsterDeathEffectMachine
 		onDeathEnded();
 	}
 
-	// Token: 0x0601B7CC RID: 112588 RVA: 0x00787DEC File Offset: 0x00785FEC
+	// Token: 0x06019317 RID: 103191 RVA: 0x007AFE18 File Offset: 0x007AE018
 	private UniTask LoadDeathEffects(List<IDeathEffectData> dataList)
 	{
 		MonsterDeathEffectMachine.<LoadDeathEffects>d__16 <LoadDeathEffects>d__;
@@ -79,7 +79,7 @@ public class MonsterDeathEffectMachine
 		return <LoadDeathEffects>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601B7CD RID: 112589 RVA: 0x00787E38 File Offset: 0x00786038
+	// Token: 0x06019318 RID: 103192 RVA: 0x007AFE64 File Offset: 0x007AE064
 	private UniTask LoadDeathEffect(IDeathEffectData data)
 	{
 		CustomPromise promise = new CustomPromise();
@@ -99,7 +99,7 @@ public class MonsterDeathEffectMachine
 		return promise.Promise;
 	}
 
-	// Token: 0x0601B7CE RID: 112590 RVA: 0x00787E98 File Offset: 0x00786098
+	// Token: 0x06019319 RID: 103193 RVA: 0x007AFEC4 File Offset: 0x007AE0C4
 	private void SetDeathEffectLoaded(IDeathEffectData param, UObject data)
 	{
 		param.DataAsset = data;
@@ -161,7 +161,7 @@ public class MonsterDeathEffectMachine
 		}
 	}
 
-	// Token: 0x0601B7CF RID: 112591 RVA: 0x00788000 File Offset: 0x00786200
+	// Token: 0x0601931A RID: 103194 RVA: 0x007B002C File Offset: 0x007AE22C
 	private bool PlayDeathEffect(string path, UObject data, bool needCallback)
 	{
 		Entity entity = this.Entity;
@@ -200,13 +200,13 @@ public class MonsterDeathEffectMachine
 		return false;
 	}
 
-	// Token: 0x0601B7D0 RID: 112592 RVA: 0x007880EC File Offset: 0x007862EC
+	// Token: 0x0601931B RID: 103195 RVA: 0x007B0118 File Offset: 0x007AE318
 	private void OnDeathEffectEnd(int handleId)
 	{
 		this.OnDeathEffectEnd(handleId, false);
 	}
 
-	// Token: 0x0601B7D1 RID: 112593 RVA: 0x007880F8 File Offset: 0x007862F8
+	// Token: 0x0601931C RID: 103196 RVA: 0x007B0124 File Offset: 0x007AE324
 	private void OnDeathEffectEnd(int handleId, bool isOverTime)
 	{
 		if (handleId == this.DeathEffectHandleId)
@@ -225,7 +225,7 @@ public class MonsterDeathEffectMachine
 		}
 	}
 
-	// Token: 0x0601B7D2 RID: 112594 RVA: 0x00788148 File Offset: 0x00786348
+	// Token: 0x0601931D RID: 103197 RVA: 0x007B0174 File Offset: 0x007AE374
 	private bool PlayDeathMaterial(string path, UObject data, bool needCallback)
 	{
 		Entity entity = this.Entity;
@@ -287,13 +287,13 @@ public class MonsterDeathEffectMachine
 		return false;
 	}
 
-	// Token: 0x0601B7D3 RID: 112595 RVA: 0x007881ED File Offset: 0x007863ED
+	// Token: 0x0601931E RID: 103198 RVA: 0x007B0219 File Offset: 0x007AE419
 	private void OnDeathMaterialEnd(int mId)
 	{
 		this.OnDeathMaterialEnd(mId, new bool?(false));
 	}
 
-	// Token: 0x0601B7D4 RID: 112596 RVA: 0x007881FC File Offset: 0x007863FC
+	// Token: 0x0601931F RID: 103199 RVA: 0x007B0228 File Offset: 0x007AE428
 	private void OnDeathMaterialEnd(int mId, bool? isOverTime)
 	{
 		if (mId == this.DeathMaterialId)
@@ -310,7 +310,7 @@ public class MonsterDeathEffectMachine
 		}
 	}
 
-	// Token: 0x0601B7D5 RID: 112597 RVA: 0x00788234 File Offset: 0x00786434
+	// Token: 0x06019320 RID: 103200 RVA: 0x007B0260 File Offset: 0x007AE460
 	private bool AddDeathMaterialFinishCallback(UObject data, int mId)
 	{
 		if (this.CharRenderingComp != null)
@@ -380,7 +380,7 @@ public class MonsterDeathEffectMachine
 		return false;
 	}
 
-	// Token: 0x0601B7D6 RID: 112598 RVA: 0x00788498 File Offset: 0x00786698
+	// Token: 0x06019321 RID: 103201 RVA: 0x007B04C4 File Offset: 0x007AE6C4
 	private void RemoveDeathMaterialFinishCallback()
 	{
 		if (this.CharRenderingComp != null)
@@ -409,7 +409,7 @@ public class MonsterDeathEffectMachine
 		this.DeathMaterialCallbackType = EMaterialCallbackType.None;
 	}
 
-	// Token: 0x0601B7D7 RID: 112599 RVA: 0x00788566 File Offset: 0x00786766
+	// Token: 0x06019322 RID: 103202 RVA: 0x007B0592 File Offset: 0x007AE792
 	private void FreezeOnDeathEffect()
 	{
 		Entity entity = this.Entity;
@@ -425,7 +425,7 @@ public class MonsterDeathEffectMachine
 		component.SetTimeScale(100, 0f, null, 10000f, ETimeScaleSourceType.DeathEffect, false, false);
 	}
 
-	// Token: 0x0601B7D8 RID: 112600 RVA: 0x00788594 File Offset: 0x00786794
+	// Token: 0x06019323 RID: 103203 RVA: 0x007B05C0 File Offset: 0x007AE7C0
 	private void AddDeathEffectTimer()
 	{
 		this.RemoveDeathEffectTimer();
@@ -451,7 +451,7 @@ public class MonsterDeathEffectMachine
 		}, 10000f, null, null, true, 1f);
 	}
 
-	// Token: 0x0601B7D9 RID: 112601 RVA: 0x007885C5 File Offset: 0x007867C5
+	// Token: 0x06019324 RID: 103204 RVA: 0x007B05F1 File Offset: 0x007AE7F1
 	private void RemoveDeathEffectTimer()
 	{
 		if (this.DeathEffectTimer != null)
@@ -461,7 +461,7 @@ public class MonsterDeathEffectMachine
 		}
 	}
 
-	// Token: 0x0601B7DA RID: 112602 RVA: 0x007885E8 File Offset: 0x007867E8
+	// Token: 0x06019325 RID: 103205 RVA: 0x007B0614 File Offset: 0x007AE814
 	private void ClearDeathEffect()
 	{
 		this.RemoveDeathEffectTimer();
@@ -479,46 +479,46 @@ public class MonsterDeathEffectMachine
 		this.DeathMaterialId = -1;
 	}
 
-	// Token: 0x0400D7BC RID: 55228
+	// Token: 0x0400DC43 RID: 56387
 	private const int DEATH_EFFECT_MAX_TIME = 10000;
 
-	// Token: 0x0400D7BD RID: 55229
+	// Token: 0x0400DC44 RID: 56388
 	private const int DEATH_MATERIAL_TOLERANCE_TIME = 500;
 
-	// Token: 0x0400D7BE RID: 55230
+	// Token: 0x0400DC45 RID: 56389
 	[Nullable(2)]
 	private Entity Entity;
 
-	// Token: 0x0400D7BF RID: 55231
+	// Token: 0x0400DC46 RID: 56390
 	[Nullable(2)]
 	private IEffectConfigMonsterDeath EffectData;
 
-	// Token: 0x0400D7C0 RID: 55232
+	// Token: 0x0400DC47 RID: 56391
 	[Nullable(2)]
 	private MonsterDeathEffectMachine.TDeathEndCallback OnDeathEnded;
 
-	// Token: 0x0400D7C1 RID: 55233
+	// Token: 0x0400DC48 RID: 56392
 	private int DeathEffectHandleId;
 
-	// Token: 0x0400D7C2 RID: 55234
+	// Token: 0x0400DC49 RID: 56393
 	private int DeathMaterialId = -1;
 
-	// Token: 0x0400D7C3 RID: 55235
+	// Token: 0x0400DC4A RID: 56394
 	private EMaterialCallbackType DeathMaterialCallbackType;
 
-	// Token: 0x0400D7C4 RID: 55236
+	// Token: 0x0400DC4B RID: 56395
 	[Nullable(2)]
 	private CharRenderingComponent CharRenderingComp;
 
-	// Token: 0x0400D7C5 RID: 55237
+	// Token: 0x0400DC4C RID: 56396
 	[Nullable(2)]
 	private TimerHandle DeathEffectTimer;
 
-	// Token: 0x0400D7C6 RID: 55238
+	// Token: 0x0400DC4D RID: 56397
 	[Nullable(2)]
 	private TimerHandle DeathMaterialTimer;
 
-	// Token: 0x0400D7C7 RID: 55239
+	// Token: 0x0400DC4E RID: 56398
 	[Nullable(new byte[]
 	{
 		2,
@@ -526,8 +526,8 @@ public class MonsterDeathEffectMachine
 	})]
 	private List<IDeathEffectData> DeathEffectDataList;
 
-	// Token: 0x020096FC RID: 38652
-	// (Invoke) Token: 0x0604C43F RID: 312383
+	// Token: 0x02008922 RID: 35106
+	// (Invoke) Token: 0x060428CD RID: 272589
 	[NullableContext(0)]
 	public delegate void TDeathEndCallback();
 }

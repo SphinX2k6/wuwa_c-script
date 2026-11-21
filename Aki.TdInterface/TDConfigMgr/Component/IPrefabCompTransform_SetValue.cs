@@ -3,22 +3,22 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200061B RID: 1563
+	// Token: 0x020006B8 RID: 1720
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IPrefabCompTransform_SetValue
 	{
-		// Token: 0x04001751 RID: 5969
-		[Nullable(1)]
+		// Token: 0x04001943 RID: 6467
+		[Nullable(0)]
 		public string ReferenceActorKey;
 
-		// Token: 0x04001752 RID: 5970
+		// Token: 0x04001944 RID: 6468
 		public IPrefabCompTransformItem Location;
 
-		// Token: 0x04001753 RID: 5971
+		// Token: 0x04001945 RID: 6469
 		public IPrefabCompTransformItem Rotation;
 
-		// Token: 0x04001754 RID: 5972
+		// Token: 0x04001946 RID: 6470
 		public IPrefabCompTransformItem Scale;
 	}
 }

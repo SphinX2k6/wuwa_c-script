@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.LevelGamePlay.TuningStand
 {
-	// Token: 0x020069C1 RID: 27073
+	// Token: 0x02005B1D RID: 23325
 	public enum EGridCheckReturnState
 	{
-		// Token: 0x0402323F RID: 143935
+		// Token: 0x0401E42F RID: 123951
 		Empty,
-		// Token: 0x04023240 RID: 143936
+		// Token: 0x0401E430 RID: 123952
 		Valid,
-		// Token: 0x04023241 RID: 143937
+		// Token: 0x0401E431 RID: 123953
 		Error
 	}
 }

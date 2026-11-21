@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020018A9 RID: 6313
+	// Token: 0x020003CB RID: 971
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroGameplay.EffectModelPostProcess")]
 	[UnrealStructLayout(29368, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 29368)]
 	public class UEffectModelPostProcess : UEffectModelBase, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601744A RID: 95306 RVA: 0x0021F31A File Offset: 0x0021D51A
+		// Token: 0x06005EDD RID: 24285 RVA: 0x00086534 File Offset: 0x00084734
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UEffectModelPostProcess._ClassPtr;
 		}
 
-		// Token: 0x0601744B RID: 95307 RVA: 0x0021F328 File Offset: 0x0021D528
+		// Token: 0x06005EDE RID: 24286 RVA: 0x00086540 File Offset: 0x00084740
 		public UEffectModelPostProcess() : this(BuiltinUtils.AllocNativeUObject(UEffectModelPostProcess.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601744C RID: 95308 RVA: 0x0021F350 File Offset: 0x0021D550
+		// Token: 0x06005EDF RID: 24287 RVA: 0x00086568 File Offset: 0x00084768
 		public UEffectModelPostProcess(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UEffectModelPostProcess.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005DAD RID: 23981
-		// (get) Token: 0x0601744D RID: 95309 RVA: 0x0021F384 File Offset: 0x0021D584
-		// (set) Token: 0x0601744E RID: 95310 RVA: 0x0021F3BD File Offset: 0x0021D5BD
+		// Token: 0x170012E8 RID: 4840
+		// (get) Token: 0x06005EE0 RID: 24288 RVA: 0x0008659C File Offset: 0x0008479C
+		// (set) Token: 0x06005EE1 RID: 24289 RVA: 0x000865D5 File Offset: 0x000847D5
 		public FKuroCurveVector Location
 		{
 			get
@@ -50,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DAE RID: 23982
-		// (get) Token: 0x0601744F RID: 95311 RVA: 0x0021F3DE File Offset: 0x0021D5DE
-		// (set) Token: 0x06017450 RID: 95312 RVA: 0x0021F3EE File Offset: 0x0021D5EE
+		// Token: 0x170012E9 RID: 4841
+		// (get) Token: 0x06005EE2 RID: 24290 RVA: 0x000865F6 File Offset: 0x000847F6
+		// (set) Token: 0x06005EE3 RID: 24291 RVA: 0x00086606 File Offset: 0x00084806
 		public unsafe bool EnableVolume
 		{
 			get
@@ -65,9 +65,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DAF RID: 23983
-		// (get) Token: 0x06017451 RID: 95313 RVA: 0x0021F3FF File Offset: 0x0021D5FF
-		// (set) Token: 0x06017452 RID: 95314 RVA: 0x0021F40F File Offset: 0x0021D60F
+		// Token: 0x170012EA RID: 4842
+		// (get) Token: 0x06005EE4 RID: 24292 RVA: 0x00086617 File Offset: 0x00084817
+		// (set) Token: 0x06005EE5 RID: 24293 RVA: 0x00086627 File Offset: 0x00084827
 		public unsafe float VolumeRadius
 		{
 			get
@@ -80,9 +80,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DB0 RID: 23984
-		// (get) Token: 0x06017453 RID: 95315 RVA: 0x0021F420 File Offset: 0x0021D620
-		// (set) Token: 0x06017454 RID: 95316 RVA: 0x0021F430 File Offset: 0x0021D630
+		// Token: 0x170012EB RID: 4843
+		// (get) Token: 0x06005EE6 RID: 24294 RVA: 0x00086638 File Offset: 0x00084838
+		// (set) Token: 0x06005EE7 RID: 24295 RVA: 0x00086648 File Offset: 0x00084848
 		public unsafe float VolumeHardness
 		{
 			get
@@ -95,9 +95,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DB1 RID: 23985
-		// (get) Token: 0x06017455 RID: 95317 RVA: 0x0021F441 File Offset: 0x0021D641
-		// (set) Token: 0x06017456 RID: 95318 RVA: 0x0021F451 File Offset: 0x0021D651
+		// Token: 0x170012EC RID: 4844
+		// (get) Token: 0x06005EE8 RID: 24296 RVA: 0x00086659 File Offset: 0x00084859
+		// (set) Token: 0x06005EE9 RID: 24297 RVA: 0x00086669 File Offset: 0x00084869
 		public unsafe bool UseVolumeHardnessCurve
 		{
 			get
@@ -110,9 +110,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DB2 RID: 23986
-		// (get) Token: 0x06017457 RID: 95319 RVA: 0x0021F464 File Offset: 0x0021D664
-		// (set) Token: 0x06017458 RID: 95320 RVA: 0x0021F49D File Offset: 0x0021D69D
+		// Token: 0x170012ED RID: 4845
+		// (get) Token: 0x06005EEA RID: 24298 RVA: 0x0008667C File Offset: 0x0008487C
+		// (set) Token: 0x06005EEB RID: 24299 RVA: 0x000866B5 File Offset: 0x000848B5
 		public FKuroCurveFloat VolumeHardnessCurve
 		{
 			get
@@ -131,9 +131,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DB3 RID: 23987
-		// (get) Token: 0x06017459 RID: 95321 RVA: 0x0021F4BE File Offset: 0x0021D6BE
-		// (set) Token: 0x0601745A RID: 95322 RVA: 0x0021F4CE File Offset: 0x0021D6CE
+		// Token: 0x170012EE RID: 4846
+		// (get) Token: 0x06005EEC RID: 24300 RVA: 0x000866D6 File Offset: 0x000848D6
+		// (set) Token: 0x06005EED RID: 24301 RVA: 0x000866E6 File Offset: 0x000848E6
 		public unsafe float WeatherPriority
 		{
 			get
@@ -146,9 +146,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DB4 RID: 23988
-		// (get) Token: 0x0601745B RID: 95323 RVA: 0x0021F4DF File Offset: 0x0021D6DF
-		// (set) Token: 0x0601745C RID: 95324 RVA: 0x0021F4EF File Offset: 0x0021D6EF
+		// Token: 0x170012EF RID: 4847
+		// (get) Token: 0x06005EEE RID: 24302 RVA: 0x000866F7 File Offset: 0x000848F7
+		// (set) Token: 0x06005EEF RID: 24303 RVA: 0x00086707 File Offset: 0x00084907
 		public unsafe bool VisibleForProtoPlayer
 		{
 			get
@@ -161,9 +161,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DB5 RID: 23989
-		// (get) Token: 0x0601745D RID: 95325 RVA: 0x0021F500 File Offset: 0x0021D700
-		// (set) Token: 0x0601745E RID: 95326 RVA: 0x0021F510 File Offset: 0x0021D710
+		// Token: 0x170012F0 RID: 4848
+		// (get) Token: 0x06005EF0 RID: 24304 RVA: 0x00086718 File Offset: 0x00084918
+		// (set) Token: 0x06005EF1 RID: 24305 RVA: 0x00086728 File Offset: 0x00084928
 		public unsafe bool OverrideTOD
 		{
 			get
@@ -176,9 +176,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DB6 RID: 23990
-		// (get) Token: 0x0601745F RID: 95327 RVA: 0x0021F521 File Offset: 0x0021D721
-		// (set) Token: 0x06017460 RID: 95328 RVA: 0x0021F531 File Offset: 0x0021D731
+		// Token: 0x170012F1 RID: 4849
+		// (get) Token: 0x06005EF2 RID: 24306 RVA: 0x00086739 File Offset: 0x00084939
+		// (set) Token: 0x06005EF3 RID: 24307 RVA: 0x00086749 File Offset: 0x00084949
 		public unsafe bool StopWhenActorHidden
 		{
 			get
@@ -191,9 +191,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DB7 RID: 23991
-		// (get) Token: 0x06017461 RID: 95329 RVA: 0x0021F542 File Offset: 0x0021D742
-		// (set) Token: 0x06017462 RID: 95330 RVA: 0x0021F552 File Offset: 0x0021D752
+		// Token: 0x170012F2 RID: 4850
+		// (get) Token: 0x06005EF4 RID: 24308 RVA: 0x0008675A File Offset: 0x0008495A
+		// (set) Token: 0x06005EF5 RID: 24309 RVA: 0x0008676A File Offset: 0x0008496A
 		public unsafe bool bEnablePostprocessMaterial
 		{
 			get
@@ -206,9 +206,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DB8 RID: 23992
-		// (get) Token: 0x06017463 RID: 95331 RVA: 0x0021F563 File Offset: 0x0021D763
-		// (set) Token: 0x06017464 RID: 95332 RVA: 0x0021F577 File Offset: 0x0021D777
+		// Token: 0x170012F3 RID: 4851
+		// (get) Token: 0x06005EF6 RID: 24310 RVA: 0x0008677B File Offset: 0x0008497B
+		// (set) Token: 0x06005EF7 RID: 24311 RVA: 0x0008678F File Offset: 0x0008498F
 		[Nullable(2)]
 		public unsafe UMaterialInterface PostprocessMaterial
 		{
@@ -224,9 +224,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DB9 RID: 23993
-		// (get) Token: 0x06017465 RID: 95333 RVA: 0x0021F58C File Offset: 0x0021D78C
-		// (set) Token: 0x06017466 RID: 95334 RVA: 0x0021F5C5 File Offset: 0x0021D7C5
+		// Token: 0x170012F4 RID: 4852
+		// (get) Token: 0x06005EF8 RID: 24312 RVA: 0x000867A4 File Offset: 0x000849A4
+		// (set) Token: 0x06005EF9 RID: 24313 RVA: 0x000867DD File Offset: 0x000849DD
 		public TArray<UMaterialInterface> PostprocessMaterialQualityArray
 		{
 			get
@@ -245,9 +245,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DBA RID: 23994
-		// (get) Token: 0x06017467 RID: 95335 RVA: 0x0021F5D4 File Offset: 0x0021D7D4
-		// (set) Token: 0x06017468 RID: 95336 RVA: 0x0021F60D File Offset: 0x0021D80D
+		// Token: 0x170012F5 RID: 4853
+		// (get) Token: 0x06005EFA RID: 24314 RVA: 0x000867EC File Offset: 0x000849EC
+		// (set) Token: 0x06005EFB RID: 24315 RVA: 0x00086825 File Offset: 0x00084A25
 		public TArray<UMaterialInterface> PostprocessMaterialQualityArrayMobile
 		{
 			get
@@ -266,9 +266,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DBB RID: 23995
-		// (get) Token: 0x06017469 RID: 95337 RVA: 0x0021F61C File Offset: 0x0021D81C
-		// (set) Token: 0x0601746A RID: 95338 RVA: 0x0021F655 File Offset: 0x0021D855
+		// Token: 0x170012F6 RID: 4854
+		// (get) Token: 0x06005EFC RID: 24316 RVA: 0x00086834 File Offset: 0x00084A34
+		// (set) Token: 0x06005EFD RID: 24317 RVA: 0x0008686D File Offset: 0x00084A6D
 		public TMap<FName, FKuroCurveFloat> PostprocessMaterialFloatParameters
 		{
 			get
@@ -287,9 +287,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DBC RID: 23996
-		// (get) Token: 0x0601746B RID: 95339 RVA: 0x0021F664 File Offset: 0x0021D864
-		// (set) Token: 0x0601746C RID: 95340 RVA: 0x0021F69D File Offset: 0x0021D89D
+		// Token: 0x170012F7 RID: 4855
+		// (get) Token: 0x06005EFE RID: 24318 RVA: 0x0008687C File Offset: 0x00084A7C
+		// (set) Token: 0x06005EFF RID: 24319 RVA: 0x000868B5 File Offset: 0x00084AB5
 		public TMap<FName, FKuroCurveLinearColor> PostprocessMaterialColorParameters
 		{
 			get
@@ -308,9 +308,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DBD RID: 23997
-		// (get) Token: 0x0601746D RID: 95341 RVA: 0x0021F6AB File Offset: 0x0021D8AB
-		// (set) Token: 0x0601746E RID: 95342 RVA: 0x0021F6BB File Offset: 0x0021D8BB
+		// Token: 0x170012F8 RID: 4856
+		// (get) Token: 0x06005F00 RID: 24320 RVA: 0x000868C3 File Offset: 0x00084AC3
+		// (set) Token: 0x06005F01 RID: 24321 RVA: 0x000868D3 File Offset: 0x00084AD3
 		public unsafe bool BlurIntensityOverride
 		{
 			get
@@ -323,9 +323,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DBE RID: 23998
-		// (get) Token: 0x0601746F RID: 95343 RVA: 0x0021F6CC File Offset: 0x0021D8CC
-		// (set) Token: 0x06017470 RID: 95344 RVA: 0x0021F705 File Offset: 0x0021D905
+		// Token: 0x170012F9 RID: 4857
+		// (get) Token: 0x06005F02 RID: 24322 RVA: 0x000868E4 File Offset: 0x00084AE4
+		// (set) Token: 0x06005F03 RID: 24323 RVA: 0x0008691D File Offset: 0x00084B1D
 		public FKuroCurveFloat BlurIntensity
 		{
 			get
@@ -344,9 +344,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DBF RID: 23999
-		// (get) Token: 0x06017471 RID: 95345 RVA: 0x0021F726 File Offset: 0x0021D926
-		// (set) Token: 0x06017472 RID: 95346 RVA: 0x0021F736 File Offset: 0x0021D936
+		// Token: 0x170012FA RID: 4858
+		// (get) Token: 0x06005F04 RID: 24324 RVA: 0x0008693E File Offset: 0x00084B3E
+		// (set) Token: 0x06005F05 RID: 24325 RVA: 0x0008694E File Offset: 0x00084B4E
 		public unsafe bool UseWorldPosition
 		{
 			get
@@ -359,9 +359,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DC0 RID: 24000
-		// (get) Token: 0x06017473 RID: 95347 RVA: 0x0021F747 File Offset: 0x0021D947
-		// (set) Token: 0x06017474 RID: 95348 RVA: 0x0021F75B File Offset: 0x0021D95B
+		// Token: 0x170012FB RID: 4859
+		// (get) Token: 0x06005F06 RID: 24326 RVA: 0x0008695F File Offset: 0x00084B5F
+		// (set) Token: 0x06005F07 RID: 24327 RVA: 0x00086973 File Offset: 0x00084B73
 		public unsafe FVector2D ScreenPosition
 		{
 			get
@@ -374,9 +374,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DC1 RID: 24001
-		// (get) Token: 0x06017475 RID: 95349 RVA: 0x0021F770 File Offset: 0x0021D970
-		// (set) Token: 0x06017476 RID: 95350 RVA: 0x0021F7A9 File Offset: 0x0021D9A9
+		// Token: 0x170012FC RID: 4860
+		// (get) Token: 0x06005F08 RID: 24328 RVA: 0x00086988 File Offset: 0x00084B88
+		// (set) Token: 0x06005F09 RID: 24329 RVA: 0x000869C1 File Offset: 0x00084BC1
 		public FKuroCurveFloat RadialBlurRadius
 		{
 			get
@@ -395,9 +395,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DC2 RID: 24002
-		// (get) Token: 0x06017477 RID: 95351 RVA: 0x0021F7CC File Offset: 0x0021D9CC
-		// (set) Token: 0x06017478 RID: 95352 RVA: 0x0021F805 File Offset: 0x0021DA05
+		// Token: 0x170012FD RID: 4861
+		// (get) Token: 0x06005F0A RID: 24330 RVA: 0x000869E4 File Offset: 0x00084BE4
+		// (set) Token: 0x06005F0B RID: 24331 RVA: 0x00086A1D File Offset: 0x00084C1D
 		public FKuroCurveFloat RadialBlurHardness
 		{
 			get
@@ -416,9 +416,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DC3 RID: 24003
-		// (get) Token: 0x06017479 RID: 95353 RVA: 0x0021F826 File Offset: 0x0021DA26
-		// (set) Token: 0x0601747A RID: 95354 RVA: 0x0021F83A File Offset: 0x0021DA3A
+		// Token: 0x170012FE RID: 4862
+		// (get) Token: 0x06005F0C RID: 24332 RVA: 0x00086A3E File Offset: 0x00084C3E
+		// (set) Token: 0x06005F0D RID: 24333 RVA: 0x00086A52 File Offset: 0x00084C52
 		[Nullable(2)]
 		public unsafe UTexture RadialBlurMask
 		{
@@ -434,9 +434,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DC4 RID: 24004
-		// (get) Token: 0x0601747B RID: 95355 RVA: 0x0021F84F File Offset: 0x0021DA4F
-		// (set) Token: 0x0601747C RID: 95356 RVA: 0x0021F863 File Offset: 0x0021DA63
+		// Token: 0x170012FF RID: 4863
+		// (get) Token: 0x06005F0E RID: 24334 RVA: 0x00086A67 File Offset: 0x00084C67
+		// (set) Token: 0x06005F0F RID: 24335 RVA: 0x00086A7B File Offset: 0x00084C7B
 		public unsafe FVector2D RadialBlurMaskScale
 		{
 			get
@@ -449,9 +449,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DC5 RID: 24005
-		// (get) Token: 0x0601747D RID: 95357 RVA: 0x0021F878 File Offset: 0x0021DA78
-		// (set) Token: 0x0601747E RID: 95358 RVA: 0x0021F8B1 File Offset: 0x0021DAB1
+		// Token: 0x17001300 RID: 4864
+		// (get) Token: 0x06005F10 RID: 24336 RVA: 0x00086A90 File Offset: 0x00084C90
+		// (set) Token: 0x06005F11 RID: 24337 RVA: 0x00086AC9 File Offset: 0x00084CC9
 		public FKuroCurveLinearColor RadialBlurMaskScaleOffset
 		{
 			get
@@ -470,9 +470,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DC6 RID: 24006
-		// (get) Token: 0x0601747F RID: 95359 RVA: 0x0021F8D2 File Offset: 0x0021DAD2
-		// (set) Token: 0x06017480 RID: 95360 RVA: 0x0021F8E2 File Offset: 0x0021DAE2
+		// Token: 0x17001301 RID: 4865
+		// (get) Token: 0x06005F12 RID: 24338 RVA: 0x00086AEA File Offset: 0x00084CEA
+		// (set) Token: 0x06005F13 RID: 24339 RVA: 0x00086AFA File Offset: 0x00084CFA
 		public unsafe bool MainLightIntensityOverride
 		{
 			get
@@ -485,9 +485,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DC7 RID: 24007
-		// (get) Token: 0x06017481 RID: 95361 RVA: 0x0021F8F4 File Offset: 0x0021DAF4
-		// (set) Token: 0x06017482 RID: 95362 RVA: 0x0021F92D File Offset: 0x0021DB2D
+		// Token: 0x17001302 RID: 4866
+		// (get) Token: 0x06005F14 RID: 24340 RVA: 0x00086B0C File Offset: 0x00084D0C
+		// (set) Token: 0x06005F15 RID: 24341 RVA: 0x00086B45 File Offset: 0x00084D45
 		public FKuroCurveFloat MainLightIntensity
 		{
 			get
@@ -506,9 +506,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DC8 RID: 24008
-		// (get) Token: 0x06017483 RID: 95363 RVA: 0x0021F94E File Offset: 0x0021DB4E
-		// (set) Token: 0x06017484 RID: 95364 RVA: 0x0021F95E File Offset: 0x0021DB5E
+		// Token: 0x17001303 RID: 4867
+		// (get) Token: 0x06005F16 RID: 24342 RVA: 0x00086B66 File Offset: 0x00084D66
+		// (set) Token: 0x06005F17 RID: 24343 RVA: 0x00086B76 File Offset: 0x00084D76
 		public unsafe bool MainLightColorOverride
 		{
 			get
@@ -521,9 +521,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DC9 RID: 24009
-		// (get) Token: 0x06017485 RID: 95365 RVA: 0x0021F970 File Offset: 0x0021DB70
-		// (set) Token: 0x06017486 RID: 95366 RVA: 0x0021F9A9 File Offset: 0x0021DBA9
+		// Token: 0x17001304 RID: 4868
+		// (get) Token: 0x06005F18 RID: 24344 RVA: 0x00086B88 File Offset: 0x00084D88
+		// (set) Token: 0x06005F19 RID: 24345 RVA: 0x00086BC1 File Offset: 0x00084DC1
 		public FKuroCurveLinearColor MainLightColor
 		{
 			get
@@ -542,9 +542,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DCA RID: 24010
-		// (get) Token: 0x06017487 RID: 95367 RVA: 0x0021F9CA File Offset: 0x0021DBCA
-		// (set) Token: 0x06017488 RID: 95368 RVA: 0x0021F9DA File Offset: 0x0021DBDA
+		// Token: 0x17001305 RID: 4869
+		// (get) Token: 0x06005F1A RID: 24346 RVA: 0x00086BE2 File Offset: 0x00084DE2
+		// (set) Token: 0x06005F1B RID: 24347 RVA: 0x00086BF2 File Offset: 0x00084DF2
 		public unsafe bool SkyLightIntensityOverride
 		{
 			get
@@ -557,9 +557,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DCB RID: 24011
-		// (get) Token: 0x06017489 RID: 95369 RVA: 0x0021F9EC File Offset: 0x0021DBEC
-		// (set) Token: 0x0601748A RID: 95370 RVA: 0x0021FA25 File Offset: 0x0021DC25
+		// Token: 0x17001306 RID: 4870
+		// (get) Token: 0x06005F1C RID: 24348 RVA: 0x00086C04 File Offset: 0x00084E04
+		// (set) Token: 0x06005F1D RID: 24349 RVA: 0x00086C3D File Offset: 0x00084E3D
 		public FKuroCurveFloat SkyLightIntensity
 		{
 			get
@@ -578,9 +578,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DCC RID: 24012
-		// (get) Token: 0x0601748B RID: 95371 RVA: 0x0021FA46 File Offset: 0x0021DC46
-		// (set) Token: 0x0601748C RID: 95372 RVA: 0x0021FA56 File Offset: 0x0021DC56
+		// Token: 0x17001307 RID: 4871
+		// (get) Token: 0x06005F1E RID: 24350 RVA: 0x00086C5E File Offset: 0x00084E5E
+		// (set) Token: 0x06005F1F RID: 24351 RVA: 0x00086C6E File Offset: 0x00084E6E
 		public unsafe bool SkyLightColorOverride
 		{
 			get
@@ -593,9 +593,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DCD RID: 24013
-		// (get) Token: 0x0601748D RID: 95373 RVA: 0x0021FA68 File Offset: 0x0021DC68
-		// (set) Token: 0x0601748E RID: 95374 RVA: 0x0021FAA1 File Offset: 0x0021DCA1
+		// Token: 0x17001308 RID: 4872
+		// (get) Token: 0x06005F20 RID: 24352 RVA: 0x00086C80 File Offset: 0x00084E80
+		// (set) Token: 0x06005F21 RID: 24353 RVA: 0x00086CB9 File Offset: 0x00084EB9
 		public FKuroCurveLinearColor SkyLightColor
 		{
 			get
@@ -614,9 +614,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DCE RID: 24014
-		// (get) Token: 0x0601748F RID: 95375 RVA: 0x0021FAC2 File Offset: 0x0021DCC2
-		// (set) Token: 0x06017490 RID: 95376 RVA: 0x0021FAD2 File Offset: 0x0021DCD2
+		// Token: 0x17001309 RID: 4873
+		// (get) Token: 0x06005F22 RID: 24354 RVA: 0x00086CDA File Offset: 0x00084EDA
+		// (set) Token: 0x06005F23 RID: 24355 RVA: 0x00086CEA File Offset: 0x00084EEA
 		public unsafe bool EnableEffectFog
 		{
 			get
@@ -629,9 +629,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DCF RID: 24015
-		// (get) Token: 0x06017491 RID: 95377 RVA: 0x0021FAE4 File Offset: 0x0021DCE4
-		// (set) Token: 0x06017492 RID: 95378 RVA: 0x0021FB1D File Offset: 0x0021DD1D
+		// Token: 0x1700130A RID: 4874
+		// (get) Token: 0x06005F24 RID: 24356 RVA: 0x00086CFC File Offset: 0x00084EFC
+		// (set) Token: 0x06005F25 RID: 24357 RVA: 0x00086D35 File Offset: 0x00084F35
 		public FKuroCurveFloat EffectFogSwitch
 		{
 			get
@@ -650,9 +650,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DD0 RID: 24016
-		// (get) Token: 0x06017493 RID: 95379 RVA: 0x0021FB40 File Offset: 0x0021DD40
-		// (set) Token: 0x06017494 RID: 95380 RVA: 0x0021FB79 File Offset: 0x0021DD79
+		// Token: 0x1700130B RID: 4875
+		// (get) Token: 0x06005F26 RID: 24358 RVA: 0x00086D58 File Offset: 0x00084F58
+		// (set) Token: 0x06005F27 RID: 24359 RVA: 0x00086D91 File Offset: 0x00084F91
 		public FKuroCurveFloat KuroEffectFogBlendSceneFogMin
 		{
 			get
@@ -671,9 +671,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DD1 RID: 24017
-		// (get) Token: 0x06017495 RID: 95381 RVA: 0x0021FB9A File Offset: 0x0021DD9A
-		// (set) Token: 0x06017496 RID: 95382 RVA: 0x0021FBAA File Offset: 0x0021DDAA
+		// Token: 0x1700130C RID: 4876
+		// (get) Token: 0x06005F28 RID: 24360 RVA: 0x00086DB2 File Offset: 0x00084FB2
+		// (set) Token: 0x06005F29 RID: 24361 RVA: 0x00086DC2 File Offset: 0x00084FC2
 		public unsafe bool FogDensityOverride
 		{
 			get
@@ -686,9 +686,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DD2 RID: 24018
-		// (get) Token: 0x06017497 RID: 95383 RVA: 0x0021FBBC File Offset: 0x0021DDBC
-		// (set) Token: 0x06017498 RID: 95384 RVA: 0x0021FBF5 File Offset: 0x0021DDF5
+		// Token: 0x1700130D RID: 4877
+		// (get) Token: 0x06005F2A RID: 24362 RVA: 0x00086DD4 File Offset: 0x00084FD4
+		// (set) Token: 0x06005F2B RID: 24363 RVA: 0x00086E0D File Offset: 0x0008500D
 		public FKuroCurveFloat FogDensity
 		{
 			get
@@ -707,9 +707,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DD3 RID: 24019
-		// (get) Token: 0x06017499 RID: 95385 RVA: 0x0021FC18 File Offset: 0x0021DE18
-		// (set) Token: 0x0601749A RID: 95386 RVA: 0x0021FC51 File Offset: 0x0021DE51
+		// Token: 0x1700130E RID: 4878
+		// (get) Token: 0x06005F2C RID: 24364 RVA: 0x00086E30 File Offset: 0x00085030
+		// (set) Token: 0x06005F2D RID: 24365 RVA: 0x00086E69 File Offset: 0x00085069
 		public FKuroCurveFloat FogStartDistance
 		{
 			get
@@ -728,9 +728,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DD4 RID: 24020
-		// (get) Token: 0x0601749B RID: 95387 RVA: 0x0021FC72 File Offset: 0x0021DE72
-		// (set) Token: 0x0601749C RID: 95388 RVA: 0x0021FC82 File Offset: 0x0021DE82
+		// Token: 0x1700130F RID: 4879
+		// (get) Token: 0x06005F2E RID: 24366 RVA: 0x00086E8A File Offset: 0x0008508A
+		// (set) Token: 0x06005F2F RID: 24367 RVA: 0x00086E9A File Offset: 0x0008509A
 		public unsafe float FogFalloff
 		{
 			get
@@ -743,9 +743,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DD5 RID: 24021
-		// (get) Token: 0x0601749D RID: 95389 RVA: 0x0021FC94 File Offset: 0x0021DE94
-		// (set) Token: 0x0601749E RID: 95390 RVA: 0x0021FCCD File Offset: 0x0021DECD
+		// Token: 0x17001310 RID: 4880
+		// (get) Token: 0x06005F30 RID: 24368 RVA: 0x00086EAC File Offset: 0x000850AC
+		// (set) Token: 0x06005F31 RID: 24369 RVA: 0x00086EE5 File Offset: 0x000850E5
 		public FKuroCurveFloat FogMaxOpacity
 		{
 			get
@@ -764,9 +764,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DD6 RID: 24022
-		// (get) Token: 0x0601749F RID: 95391 RVA: 0x0021FCEE File Offset: 0x0021DEEE
-		// (set) Token: 0x060174A0 RID: 95392 RVA: 0x0021FCFE File Offset: 0x0021DEFE
+		// Token: 0x17001311 RID: 4881
+		// (get) Token: 0x06005F32 RID: 24370 RVA: 0x00086F06 File Offset: 0x00085106
+		// (set) Token: 0x06005F33 RID: 24371 RVA: 0x00086F16 File Offset: 0x00085116
 		public unsafe bool FogColorOverride
 		{
 			get
@@ -779,9 +779,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DD7 RID: 24023
-		// (get) Token: 0x060174A1 RID: 95393 RVA: 0x0021FD10 File Offset: 0x0021DF10
-		// (set) Token: 0x060174A2 RID: 95394 RVA: 0x0021FD49 File Offset: 0x0021DF49
+		// Token: 0x17001312 RID: 4882
+		// (get) Token: 0x06005F34 RID: 24372 RVA: 0x00086F28 File Offset: 0x00085128
+		// (set) Token: 0x06005F35 RID: 24373 RVA: 0x00086F61 File Offset: 0x00085161
 		public FKuroCurveLinearColor FogNearColor
 		{
 			get
@@ -800,9 +800,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DD8 RID: 24024
-		// (get) Token: 0x060174A3 RID: 95395 RVA: 0x0021FD6C File Offset: 0x0021DF6C
-		// (set) Token: 0x060174A4 RID: 95396 RVA: 0x0021FDA5 File Offset: 0x0021DFA5
+		// Token: 0x17001313 RID: 4883
+		// (get) Token: 0x06005F36 RID: 24374 RVA: 0x00086F84 File Offset: 0x00085184
+		// (set) Token: 0x06005F37 RID: 24375 RVA: 0x00086FBD File Offset: 0x000851BD
 		public FKuroCurveLinearColor FogFarColor
 		{
 			get
@@ -821,9 +821,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DD9 RID: 24025
-		// (get) Token: 0x060174A5 RID: 95397 RVA: 0x0021FDC8 File Offset: 0x0021DFC8
-		// (set) Token: 0x060174A6 RID: 95398 RVA: 0x0021FE01 File Offset: 0x0021E001
+		// Token: 0x17001314 RID: 4884
+		// (get) Token: 0x06005F38 RID: 24376 RVA: 0x00086FE0 File Offset: 0x000851E0
+		// (set) Token: 0x06005F39 RID: 24377 RVA: 0x00087019 File Offset: 0x00085219
 		public FKuroCurveFloat FogNearColorDistance
 		{
 			get
@@ -842,9 +842,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DDA RID: 24026
-		// (get) Token: 0x060174A7 RID: 95399 RVA: 0x0021FE24 File Offset: 0x0021E024
-		// (set) Token: 0x060174A8 RID: 95400 RVA: 0x0021FE5D File Offset: 0x0021E05D
+		// Token: 0x17001315 RID: 4885
+		// (get) Token: 0x06005F3A RID: 24378 RVA: 0x0008703C File Offset: 0x0008523C
+		// (set) Token: 0x06005F3B RID: 24379 RVA: 0x00087075 File Offset: 0x00085275
 		public FKuroCurveFloat FogFarColorDistance
 		{
 			get
@@ -863,9 +863,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DDB RID: 24027
-		// (get) Token: 0x060174A9 RID: 95401 RVA: 0x0021FE7E File Offset: 0x0021E07E
-		// (set) Token: 0x060174AA RID: 95402 RVA: 0x0021FE8E File Offset: 0x0021E08E
+		// Token: 0x17001316 RID: 4886
+		// (get) Token: 0x06005F3C RID: 24380 RVA: 0x00087096 File Offset: 0x00085296
+		// (set) Token: 0x06005F3D RID: 24381 RVA: 0x000870A6 File Offset: 0x000852A6
 		public unsafe float FogColorRatio
 		{
 			get
@@ -878,9 +878,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DDC RID: 24028
-		// (get) Token: 0x060174AB RID: 95403 RVA: 0x0021FE9F File Offset: 0x0021E09F
-		// (set) Token: 0x060174AC RID: 95404 RVA: 0x0021FEAF File Offset: 0x0021E0AF
+		// Token: 0x17001317 RID: 4887
+		// (get) Token: 0x06005F3E RID: 24382 RVA: 0x000870B7 File Offset: 0x000852B7
+		// (set) Token: 0x06005F3F RID: 24383 RVA: 0x000870C7 File Offset: 0x000852C7
 		public unsafe bool FogDistanceViewOverride
 		{
 			get
@@ -893,9 +893,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DDD RID: 24029
-		// (get) Token: 0x060174AD RID: 95405 RVA: 0x0021FEC0 File Offset: 0x0021E0C0
-		// (set) Token: 0x060174AE RID: 95406 RVA: 0x0021FED0 File Offset: 0x0021E0D0
+		// Token: 0x17001318 RID: 4888
+		// (get) Token: 0x06005F40 RID: 24384 RVA: 0x000870D8 File Offset: 0x000852D8
+		// (set) Token: 0x06005F41 RID: 24385 RVA: 0x000870E8 File Offset: 0x000852E8
 		public unsafe float FogFalloffFarSky
 		{
 			get
@@ -908,9 +908,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DDE RID: 24030
-		// (get) Token: 0x060174AF RID: 95407 RVA: 0x0021FEE1 File Offset: 0x0021E0E1
-		// (set) Token: 0x060174B0 RID: 95408 RVA: 0x0021FEF1 File Offset: 0x0021E0F1
+		// Token: 0x17001319 RID: 4889
+		// (get) Token: 0x06005F42 RID: 24386 RVA: 0x000870F9 File Offset: 0x000852F9
+		// (set) Token: 0x06005F43 RID: 24387 RVA: 0x00087109 File Offset: 0x00085309
 		public unsafe float FogMixDistance
 		{
 			get
@@ -923,9 +923,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DDF RID: 24031
-		// (get) Token: 0x060174B1 RID: 95409 RVA: 0x0021FF02 File Offset: 0x0021E102
-		// (set) Token: 0x060174B2 RID: 95410 RVA: 0x0021FF12 File Offset: 0x0021E112
+		// Token: 0x1700131A RID: 4890
+		// (get) Token: 0x06005F44 RID: 24388 RVA: 0x0008711A File Offset: 0x0008531A
+		// (set) Token: 0x06005F45 RID: 24389 RVA: 0x0008712A File Offset: 0x0008532A
 		public unsafe float FogMixWidth
 		{
 			get
@@ -938,9 +938,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DE0 RID: 24032
-		// (get) Token: 0x060174B3 RID: 95411 RVA: 0x0021FF23 File Offset: 0x0021E123
-		// (set) Token: 0x060174B4 RID: 95412 RVA: 0x0021FF33 File Offset: 0x0021E133
+		// Token: 0x1700131B RID: 4891
+		// (get) Token: 0x06005F46 RID: 24390 RVA: 0x0008713B File Offset: 0x0008533B
+		// (set) Token: 0x06005F47 RID: 24391 RVA: 0x0008714B File Offset: 0x0008534B
 		public unsafe bool KuroBloomIntensityOverride
 		{
 			get
@@ -953,9 +953,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DE1 RID: 24033
-		// (get) Token: 0x060174B5 RID: 95413 RVA: 0x0021FF44 File Offset: 0x0021E144
-		// (set) Token: 0x060174B6 RID: 95414 RVA: 0x0021FF7D File Offset: 0x0021E17D
+		// Token: 0x1700131C RID: 4892
+		// (get) Token: 0x06005F48 RID: 24392 RVA: 0x0008715C File Offset: 0x0008535C
+		// (set) Token: 0x06005F49 RID: 24393 RVA: 0x00087195 File Offset: 0x00085395
 		public FKuroCurveFloat KuroBloomIntensity
 		{
 			get
@@ -974,9 +974,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DE2 RID: 24034
-		// (get) Token: 0x060174B7 RID: 95415 RVA: 0x0021FF9E File Offset: 0x0021E19E
-		// (set) Token: 0x060174B8 RID: 95416 RVA: 0x0021FFAE File Offset: 0x0021E1AE
+		// Token: 0x1700131D RID: 4893
+		// (get) Token: 0x06005F4A RID: 24394 RVA: 0x000871B6 File Offset: 0x000853B6
+		// (set) Token: 0x06005F4B RID: 24395 RVA: 0x000871C6 File Offset: 0x000853C6
 		public unsafe bool KuroThresholdOverride
 		{
 			get
@@ -989,9 +989,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DE3 RID: 24035
-		// (get) Token: 0x060174B9 RID: 95417 RVA: 0x0021FFC0 File Offset: 0x0021E1C0
-		// (set) Token: 0x060174BA RID: 95418 RVA: 0x0021FFF9 File Offset: 0x0021E1F9
+		// Token: 0x1700131E RID: 4894
+		// (get) Token: 0x06005F4C RID: 24396 RVA: 0x000871D8 File Offset: 0x000853D8
+		// (set) Token: 0x06005F4D RID: 24397 RVA: 0x00087211 File Offset: 0x00085411
 		public FKuroCurveFloat KuroThreshold
 		{
 			get
@@ -1010,9 +1010,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DE4 RID: 24036
-		// (get) Token: 0x060174BB RID: 95419 RVA: 0x0022001A File Offset: 0x0021E21A
-		// (set) Token: 0x060174BC RID: 95420 RVA: 0x0022002A File Offset: 0x0021E22A
+		// Token: 0x1700131F RID: 4895
+		// (get) Token: 0x06005F4E RID: 24398 RVA: 0x00087232 File Offset: 0x00085432
+		// (set) Token: 0x06005F4F RID: 24399 RVA: 0x00087242 File Offset: 0x00085442
 		public unsafe bool SceneFringeIntensityOverride
 		{
 			get
@@ -1025,9 +1025,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DE5 RID: 24037
-		// (get) Token: 0x060174BD RID: 95421 RVA: 0x0022003C File Offset: 0x0021E23C
-		// (set) Token: 0x060174BE RID: 95422 RVA: 0x00220075 File Offset: 0x0021E275
+		// Token: 0x17001320 RID: 4896
+		// (get) Token: 0x06005F50 RID: 24400 RVA: 0x00087254 File Offset: 0x00085454
+		// (set) Token: 0x06005F51 RID: 24401 RVA: 0x0008728D File Offset: 0x0008548D
 		public FKuroCurveFloat SceneFringeIntensity
 		{
 			get
@@ -1046,9 +1046,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DE6 RID: 24038
-		// (get) Token: 0x060174BF RID: 95423 RVA: 0x00220096 File Offset: 0x0021E296
-		// (set) Token: 0x060174C0 RID: 95424 RVA: 0x002200A6 File Offset: 0x0021E2A6
+		// Token: 0x17001321 RID: 4897
+		// (get) Token: 0x06005F52 RID: 24402 RVA: 0x000872AE File Offset: 0x000854AE
+		// (set) Token: 0x06005F53 RID: 24403 RVA: 0x000872BE File Offset: 0x000854BE
 		public unsafe bool StartOffsetOverride
 		{
 			get
@@ -1061,9 +1061,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DE7 RID: 24039
-		// (get) Token: 0x060174C1 RID: 95425 RVA: 0x002200B8 File Offset: 0x0021E2B8
-		// (set) Token: 0x060174C2 RID: 95426 RVA: 0x002200F1 File Offset: 0x0021E2F1
+		// Token: 0x17001322 RID: 4898
+		// (get) Token: 0x06005F54 RID: 24404 RVA: 0x000872D0 File Offset: 0x000854D0
+		// (set) Token: 0x06005F55 RID: 24405 RVA: 0x00087309 File Offset: 0x00085509
 		public FKuroCurveFloat StartOffset
 		{
 			get
@@ -1082,9 +1082,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DE8 RID: 24040
-		// (get) Token: 0x060174C3 RID: 95427 RVA: 0x00220112 File Offset: 0x0021E312
-		// (set) Token: 0x060174C4 RID: 95428 RVA: 0x00220122 File Offset: 0x0021E322
+		// Token: 0x17001323 RID: 4899
+		// (get) Token: 0x06005F56 RID: 24406 RVA: 0x0008732A File Offset: 0x0008552A
+		// (set) Token: 0x06005F57 RID: 24407 RVA: 0x0008733A File Offset: 0x0008553A
 		public unsafe bool VignetteIntensityOverride
 		{
 			get
@@ -1097,9 +1097,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DE9 RID: 24041
-		// (get) Token: 0x060174C5 RID: 95429 RVA: 0x00220134 File Offset: 0x0021E334
-		// (set) Token: 0x060174C6 RID: 95430 RVA: 0x0022016D File Offset: 0x0021E36D
+		// Token: 0x17001324 RID: 4900
+		// (get) Token: 0x06005F58 RID: 24408 RVA: 0x0008734C File Offset: 0x0008554C
+		// (set) Token: 0x06005F59 RID: 24409 RVA: 0x00087385 File Offset: 0x00085585
 		public FKuroCurveFloat VignetteIntensity
 		{
 			get
@@ -1118,9 +1118,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DEA RID: 24042
-		// (get) Token: 0x060174C7 RID: 95431 RVA: 0x00220190 File Offset: 0x0021E390
-		// (set) Token: 0x060174C8 RID: 95432 RVA: 0x002201C9 File Offset: 0x0021E3C9
+		// Token: 0x17001325 RID: 4901
+		// (get) Token: 0x06005F5A RID: 24410 RVA: 0x000873A8 File Offset: 0x000855A8
+		// (set) Token: 0x06005F5B RID: 24411 RVA: 0x000873E1 File Offset: 0x000855E1
 		public FKuroCurveFloat VignetteHardness
 		{
 			get
@@ -1139,9 +1139,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DEB RID: 24043
-		// (get) Token: 0x060174C9 RID: 95433 RVA: 0x002201EC File Offset: 0x0021E3EC
-		// (set) Token: 0x060174CA RID: 95434 RVA: 0x00220225 File Offset: 0x0021E425
+		// Token: 0x17001326 RID: 4902
+		// (get) Token: 0x06005F5C RID: 24412 RVA: 0x00087404 File Offset: 0x00085604
+		// (set) Token: 0x06005F5D RID: 24413 RVA: 0x0008743D File Offset: 0x0008563D
 		public FKuroCurveFloat VignetteXScale
 		{
 			get
@@ -1160,9 +1160,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DEC RID: 24044
-		// (get) Token: 0x060174CB RID: 95435 RVA: 0x00220248 File Offset: 0x0021E448
-		// (set) Token: 0x060174CC RID: 95436 RVA: 0x00220281 File Offset: 0x0021E481
+		// Token: 0x17001327 RID: 4903
+		// (get) Token: 0x06005F5E RID: 24414 RVA: 0x00087460 File Offset: 0x00085660
+		// (set) Token: 0x06005F5F RID: 24415 RVA: 0x00087499 File Offset: 0x00085699
 		public FKuroCurveFloat VignetteYScale
 		{
 			get
@@ -1181,9 +1181,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DED RID: 24045
-		// (get) Token: 0x060174CD RID: 95437 RVA: 0x002202A4 File Offset: 0x0021E4A4
-		// (set) Token: 0x060174CE RID: 95438 RVA: 0x002202DD File Offset: 0x0021E4DD
+		// Token: 0x17001328 RID: 4904
+		// (get) Token: 0x06005F60 RID: 24416 RVA: 0x000874BC File Offset: 0x000856BC
+		// (set) Token: 0x06005F61 RID: 24417 RVA: 0x000874F5 File Offset: 0x000856F5
 		public FKuroCurveFloat VignetteXPos
 		{
 			get
@@ -1202,9 +1202,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DEE RID: 24046
-		// (get) Token: 0x060174CF RID: 95439 RVA: 0x00220300 File Offset: 0x0021E500
-		// (set) Token: 0x060174D0 RID: 95440 RVA: 0x00220339 File Offset: 0x0021E539
+		// Token: 0x17001329 RID: 4905
+		// (get) Token: 0x06005F62 RID: 24418 RVA: 0x00087518 File Offset: 0x00085718
+		// (set) Token: 0x06005F63 RID: 24419 RVA: 0x00087551 File Offset: 0x00085751
 		public FKuroCurveFloat VignetteYPos
 		{
 			get
@@ -1223,9 +1223,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DEF RID: 24047
-		// (get) Token: 0x060174D1 RID: 95441 RVA: 0x0022035C File Offset: 0x0021E55C
-		// (set) Token: 0x060174D2 RID: 95442 RVA: 0x00220395 File Offset: 0x0021E595
+		// Token: 0x1700132A RID: 4906
+		// (get) Token: 0x06005F64 RID: 24420 RVA: 0x00087574 File Offset: 0x00085774
+		// (set) Token: 0x06005F65 RID: 24421 RVA: 0x000875AD File Offset: 0x000857AD
 		public FKuroCurveLinearColor VignetteColor
 		{
 			get
@@ -1244,9 +1244,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DF0 RID: 24048
-		// (get) Token: 0x060174D3 RID: 95443 RVA: 0x002203B8 File Offset: 0x0021E5B8
-		// (set) Token: 0x060174D4 RID: 95444 RVA: 0x002203F1 File Offset: 0x0021E5F1
+		// Token: 0x1700132B RID: 4907
+		// (get) Token: 0x06005F66 RID: 24422 RVA: 0x000875D0 File Offset: 0x000857D0
+		// (set) Token: 0x06005F67 RID: 24423 RVA: 0x00087609 File Offset: 0x00085809
 		public FKuroCurveFloat VignetteGain
 		{
 			get
@@ -1265,9 +1265,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DF1 RID: 24049
-		// (get) Token: 0x060174D5 RID: 95445 RVA: 0x00220412 File Offset: 0x0021E612
-		// (set) Token: 0x060174D6 RID: 95446 RVA: 0x00220422 File Offset: 0x0021E622
+		// Token: 0x1700132C RID: 4908
+		// (get) Token: 0x06005F68 RID: 24424 RVA: 0x0008762A File Offset: 0x0008582A
+		// (set) Token: 0x06005F69 RID: 24425 RVA: 0x0008763A File Offset: 0x0008583A
 		public unsafe bool GrainJitterOverride
 		{
 			get
@@ -1280,9 +1280,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DF2 RID: 24050
-		// (get) Token: 0x060174D7 RID: 95447 RVA: 0x00220434 File Offset: 0x0021E634
-		// (set) Token: 0x060174D8 RID: 95448 RVA: 0x0022046D File Offset: 0x0021E66D
+		// Token: 0x1700132D RID: 4909
+		// (get) Token: 0x06005F6A RID: 24426 RVA: 0x0008764C File Offset: 0x0008584C
+		// (set) Token: 0x06005F6B RID: 24427 RVA: 0x00087685 File Offset: 0x00085885
 		public FKuroCurveFloat GrainJitter
 		{
 			get
@@ -1301,9 +1301,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DF3 RID: 24051
-		// (get) Token: 0x060174D9 RID: 95449 RVA: 0x0022048E File Offset: 0x0021E68E
-		// (set) Token: 0x060174DA RID: 95450 RVA: 0x0022049E File Offset: 0x0021E69E
+		// Token: 0x1700132E RID: 4910
+		// (get) Token: 0x06005F6C RID: 24428 RVA: 0x000876A6 File Offset: 0x000858A6
+		// (set) Token: 0x06005F6D RID: 24429 RVA: 0x000876B6 File Offset: 0x000858B6
 		public unsafe bool GrainIntensityOverride
 		{
 			get
@@ -1316,9 +1316,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DF4 RID: 24052
-		// (get) Token: 0x060174DB RID: 95451 RVA: 0x002204B0 File Offset: 0x0021E6B0
-		// (set) Token: 0x060174DC RID: 95452 RVA: 0x002204E9 File Offset: 0x0021E6E9
+		// Token: 0x1700132F RID: 4911
+		// (get) Token: 0x06005F6E RID: 24430 RVA: 0x000876C8 File Offset: 0x000858C8
+		// (set) Token: 0x06005F6F RID: 24431 RVA: 0x00087701 File Offset: 0x00085901
 		public FKuroCurveFloat GrainIntensity
 		{
 			get
@@ -1337,9 +1337,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DF5 RID: 24053
-		// (get) Token: 0x060174DD RID: 95453 RVA: 0x0022050A File Offset: 0x0021E70A
-		// (set) Token: 0x060174DE RID: 95454 RVA: 0x0022051A File Offset: 0x0021E71A
+		// Token: 0x17001330 RID: 4912
+		// (get) Token: 0x06005F70 RID: 24432 RVA: 0x00087722 File Offset: 0x00085922
+		// (set) Token: 0x06005F71 RID: 24433 RVA: 0x00087732 File Offset: 0x00085932
 		public unsafe bool LutIntensityOverride
 		{
 			get
@@ -1352,9 +1352,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DF6 RID: 24054
-		// (get) Token: 0x060174DF RID: 95455 RVA: 0x0022052C File Offset: 0x0021E72C
-		// (set) Token: 0x060174E0 RID: 95456 RVA: 0x00220565 File Offset: 0x0021E765
+		// Token: 0x17001331 RID: 4913
+		// (get) Token: 0x06005F72 RID: 24434 RVA: 0x00087744 File Offset: 0x00085944
+		// (set) Token: 0x06005F73 RID: 24435 RVA: 0x0008777D File Offset: 0x0008597D
 		public FKuroCurveFloat LutIntensity
 		{
 			get
@@ -1373,9 +1373,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DF7 RID: 24055
-		// (get) Token: 0x060174E1 RID: 95457 RVA: 0x00220586 File Offset: 0x0021E786
-		// (set) Token: 0x060174E2 RID: 95458 RVA: 0x00220596 File Offset: 0x0021E796
+		// Token: 0x17001332 RID: 4914
+		// (get) Token: 0x06005F74 RID: 24436 RVA: 0x0008779E File Offset: 0x0008599E
+		// (set) Token: 0x06005F75 RID: 24437 RVA: 0x000877AE File Offset: 0x000859AE
 		public unsafe bool LutTextureOverride
 		{
 			get
@@ -1388,9 +1388,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DF8 RID: 24056
-		// (get) Token: 0x060174E3 RID: 95459 RVA: 0x002205A7 File Offset: 0x0021E7A7
-		// (set) Token: 0x060174E4 RID: 95460 RVA: 0x002205BB File Offset: 0x0021E7BB
+		// Token: 0x17001333 RID: 4915
+		// (get) Token: 0x06005F76 RID: 24438 RVA: 0x000877BF File Offset: 0x000859BF
+		// (set) Token: 0x06005F77 RID: 24439 RVA: 0x000877D3 File Offset: 0x000859D3
 		[Nullable(2)]
 		public unsafe UTexture2D LutTexture
 		{
@@ -1406,9 +1406,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DF9 RID: 24057
-		// (get) Token: 0x060174E5 RID: 95461 RVA: 0x002205D0 File Offset: 0x0021E7D0
-		// (set) Token: 0x060174E6 RID: 95462 RVA: 0x002205E0 File Offset: 0x0021E7E0
+		// Token: 0x17001334 RID: 4916
+		// (get) Token: 0x06005F78 RID: 24440 RVA: 0x000877E8 File Offset: 0x000859E8
+		// (set) Token: 0x06005F79 RID: 24441 RVA: 0x000877F8 File Offset: 0x000859F8
 		public unsafe bool SceneColorTintOverride
 		{
 			get
@@ -1421,9 +1421,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DFA RID: 24058
-		// (get) Token: 0x060174E7 RID: 95463 RVA: 0x002205F4 File Offset: 0x0021E7F4
-		// (set) Token: 0x060174E8 RID: 95464 RVA: 0x0022062D File Offset: 0x0021E82D
+		// Token: 0x17001335 RID: 4917
+		// (get) Token: 0x06005F7A RID: 24442 RVA: 0x0008780C File Offset: 0x00085A0C
+		// (set) Token: 0x06005F7B RID: 24443 RVA: 0x00087845 File Offset: 0x00085A45
 		public FKuroCurveLinearColor SceneColorTint
 		{
 			get
@@ -1442,9 +1442,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DFB RID: 24059
-		// (get) Token: 0x060174E9 RID: 95465 RVA: 0x0022064E File Offset: 0x0021E84E
-		// (set) Token: 0x060174EA RID: 95466 RVA: 0x0022065E File Offset: 0x0021E85E
+		// Token: 0x17001336 RID: 4918
+		// (get) Token: 0x06005F7C RID: 24444 RVA: 0x00087866 File Offset: 0x00085A66
+		// (set) Token: 0x06005F7D RID: 24445 RVA: 0x00087876 File Offset: 0x00085A76
 		public unsafe bool SceneColorDesaturateOverride
 		{
 			get
@@ -1457,9 +1457,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DFC RID: 24060
-		// (get) Token: 0x060174EB RID: 95467 RVA: 0x00220670 File Offset: 0x0021E870
-		// (set) Token: 0x060174EC RID: 95468 RVA: 0x002206A9 File Offset: 0x0021E8A9
+		// Token: 0x17001337 RID: 4919
+		// (get) Token: 0x06005F7E RID: 24446 RVA: 0x00087888 File Offset: 0x00085A88
+		// (set) Token: 0x06005F7F RID: 24447 RVA: 0x000878C1 File Offset: 0x00085AC1
 		public FKuroCurveFloat SceneColorDesaturate
 		{
 			get
@@ -1478,9 +1478,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DFD RID: 24061
-		// (get) Token: 0x060174ED RID: 95469 RVA: 0x002206CA File Offset: 0x0021E8CA
-		// (set) Token: 0x060174EE RID: 95470 RVA: 0x002206DA File Offset: 0x0021E8DA
+		// Token: 0x17001338 RID: 4920
+		// (get) Token: 0x06005F80 RID: 24448 RVA: 0x000878E2 File Offset: 0x00085AE2
+		// (set) Token: 0x06005F81 RID: 24449 RVA: 0x000878F2 File Offset: 0x00085AF2
 		public unsafe bool TranslucentColorTintOverride
 		{
 			get
@@ -1493,9 +1493,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DFE RID: 24062
-		// (get) Token: 0x060174EF RID: 95471 RVA: 0x002206EC File Offset: 0x0021E8EC
-		// (set) Token: 0x060174F0 RID: 95472 RVA: 0x00220725 File Offset: 0x0021E925
+		// Token: 0x17001339 RID: 4921
+		// (get) Token: 0x06005F82 RID: 24450 RVA: 0x00087904 File Offset: 0x00085B04
+		// (set) Token: 0x06005F83 RID: 24451 RVA: 0x0008793D File Offset: 0x00085B3D
 		public FKuroCurveLinearColor TranslucentColorTint
 		{
 			get
@@ -1514,9 +1514,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005DFF RID: 24063
-		// (get) Token: 0x060174F1 RID: 95473 RVA: 0x00220746 File Offset: 0x0021E946
-		// (set) Token: 0x060174F2 RID: 95474 RVA: 0x00220756 File Offset: 0x0021E956
+		// Token: 0x1700133A RID: 4922
+		// (get) Token: 0x06005F84 RID: 24452 RVA: 0x0008795E File Offset: 0x00085B5E
+		// (set) Token: 0x06005F85 RID: 24453 RVA: 0x0008796E File Offset: 0x00085B6E
 		public unsafe bool TranslucentColorDesaturateOverride
 		{
 			get
@@ -1529,9 +1529,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E00 RID: 24064
-		// (get) Token: 0x060174F3 RID: 95475 RVA: 0x00220768 File Offset: 0x0021E968
-		// (set) Token: 0x060174F4 RID: 95476 RVA: 0x002207A1 File Offset: 0x0021E9A1
+		// Token: 0x1700133B RID: 4923
+		// (get) Token: 0x06005F86 RID: 24454 RVA: 0x00087980 File Offset: 0x00085B80
+		// (set) Token: 0x06005F87 RID: 24455 RVA: 0x000879B9 File Offset: 0x00085BB9
 		public FKuroCurveFloat TranslucentColorDesaturate
 		{
 			get
@@ -1550,9 +1550,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E01 RID: 24065
-		// (get) Token: 0x060174F5 RID: 95477 RVA: 0x002207C2 File Offset: 0x0021E9C2
-		// (set) Token: 0x060174F6 RID: 95478 RVA: 0x002207D2 File Offset: 0x0021E9D2
+		// Token: 0x1700133C RID: 4924
+		// (get) Token: 0x06005F88 RID: 24456 RVA: 0x000879DA File Offset: 0x00085BDA
+		// (set) Token: 0x06005F89 RID: 24457 RVA: 0x000879EA File Offset: 0x00085BEA
 		public unsafe bool FightTranslucentNoDesaturateOverride
 		{
 			get
@@ -1565,9 +1565,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E02 RID: 24066
-		// (get) Token: 0x060174F7 RID: 95479 RVA: 0x002207E3 File Offset: 0x0021E9E3
-		// (set) Token: 0x060174F8 RID: 95480 RVA: 0x002207F3 File Offset: 0x0021E9F3
+		// Token: 0x1700133D RID: 4925
+		// (get) Token: 0x06005F8A RID: 24458 RVA: 0x000879FB File Offset: 0x00085BFB
+		// (set) Token: 0x06005F8B RID: 24459 RVA: 0x00087A0B File Offset: 0x00085C0B
 		public unsafe bool FightTranslucentNoDesaturate
 		{
 			get
@@ -1580,9 +1580,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E03 RID: 24067
-		// (get) Token: 0x060174F9 RID: 95481 RVA: 0x00220804 File Offset: 0x0021EA04
-		// (set) Token: 0x060174FA RID: 95482 RVA: 0x00220814 File Offset: 0x0021EA14
+		// Token: 0x1700133E RID: 4926
+		// (get) Token: 0x06005F8C RID: 24460 RVA: 0x00087A1C File Offset: 0x00085C1C
+		// (set) Token: 0x06005F8D RID: 24461 RVA: 0x00087A2C File Offset: 0x00085C2C
 		public unsafe bool BlackWhiteFlashIntensityOverride
 		{
 			get
@@ -1595,9 +1595,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E04 RID: 24068
-		// (get) Token: 0x060174FB RID: 95483 RVA: 0x00220828 File Offset: 0x0021EA28
-		// (set) Token: 0x060174FC RID: 95484 RVA: 0x00220861 File Offset: 0x0021EA61
+		// Token: 0x1700133F RID: 4927
+		// (get) Token: 0x06005F8E RID: 24462 RVA: 0x00087A40 File Offset: 0x00085C40
+		// (set) Token: 0x06005F8F RID: 24463 RVA: 0x00087A79 File Offset: 0x00085C79
 		public FKuroCurveFloat BlackWhiteFlashIntensity
 		{
 			get
@@ -1616,9 +1616,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E05 RID: 24069
-		// (get) Token: 0x060174FD RID: 95485 RVA: 0x00220882 File Offset: 0x0021EA82
-		// (set) Token: 0x060174FE RID: 95486 RVA: 0x00220892 File Offset: 0x0021EA92
+		// Token: 0x17001340 RID: 4928
+		// (get) Token: 0x06005F90 RID: 24464 RVA: 0x00087A9A File Offset: 0x00085C9A
+		// (set) Token: 0x06005F91 RID: 24465 RVA: 0x00087AAA File Offset: 0x00085CAA
 		public unsafe bool BlackWhiteFlashFactorOverride
 		{
 			get
@@ -1631,9 +1631,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E06 RID: 24070
-		// (get) Token: 0x060174FF RID: 95487 RVA: 0x002208A4 File Offset: 0x0021EAA4
-		// (set) Token: 0x06017500 RID: 95488 RVA: 0x002208DD File Offset: 0x0021EADD
+		// Token: 0x17001341 RID: 4929
+		// (get) Token: 0x06005F92 RID: 24466 RVA: 0x00087ABC File Offset: 0x00085CBC
+		// (set) Token: 0x06005F93 RID: 24467 RVA: 0x00087AF5 File Offset: 0x00085CF5
 		public FKuroCurveFloat BlackWhiteFlashFactor
 		{
 			get
@@ -1652,9 +1652,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E07 RID: 24071
-		// (get) Token: 0x06017501 RID: 95489 RVA: 0x002208FE File Offset: 0x0021EAFE
-		// (set) Token: 0x06017502 RID: 95490 RVA: 0x0022090E File Offset: 0x0021EB0E
+		// Token: 0x17001342 RID: 4930
+		// (get) Token: 0x06005F94 RID: 24468 RVA: 0x00087B16 File Offset: 0x00085D16
+		// (set) Token: 0x06005F95 RID: 24469 RVA: 0x00087B26 File Offset: 0x00085D26
 		public unsafe bool BlackWhiteFlashThresholdOverride
 		{
 			get
@@ -1667,9 +1667,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E08 RID: 24072
-		// (get) Token: 0x06017503 RID: 95491 RVA: 0x00220920 File Offset: 0x0021EB20
-		// (set) Token: 0x06017504 RID: 95492 RVA: 0x00220959 File Offset: 0x0021EB59
+		// Token: 0x17001343 RID: 4931
+		// (get) Token: 0x06005F96 RID: 24470 RVA: 0x00087B38 File Offset: 0x00085D38
+		// (set) Token: 0x06005F97 RID: 24471 RVA: 0x00087B71 File Offset: 0x00085D71
 		public FKuroCurveFloat BlackWhiteFlashThreshold
 		{
 			get
@@ -1688,9 +1688,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E09 RID: 24073
-		// (get) Token: 0x06017505 RID: 95493 RVA: 0x0022097A File Offset: 0x0021EB7A
-		// (set) Token: 0x06017506 RID: 95494 RVA: 0x0022098A File Offset: 0x0021EB8A
+		// Token: 0x17001344 RID: 4932
+		// (get) Token: 0x06005F98 RID: 24472 RVA: 0x00087B92 File Offset: 0x00085D92
+		// (set) Token: 0x06005F99 RID: 24473 RVA: 0x00087BA2 File Offset: 0x00085DA2
 		public unsafe bool BlackWhiteFlashBlackAreaColorOverride
 		{
 			get
@@ -1703,9 +1703,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E0A RID: 24074
-		// (get) Token: 0x06017507 RID: 95495 RVA: 0x0022099C File Offset: 0x0021EB9C
-		// (set) Token: 0x06017508 RID: 95496 RVA: 0x002209D5 File Offset: 0x0021EBD5
+		// Token: 0x17001345 RID: 4933
+		// (get) Token: 0x06005F9A RID: 24474 RVA: 0x00087BB4 File Offset: 0x00085DB4
+		// (set) Token: 0x06005F9B RID: 24475 RVA: 0x00087BED File Offset: 0x00085DED
 		public FKuroCurveLinearColor BlackWhiteFlashBlackAreaColor
 		{
 			get
@@ -1724,9 +1724,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E0B RID: 24075
-		// (get) Token: 0x06017509 RID: 95497 RVA: 0x002209F6 File Offset: 0x0021EBF6
-		// (set) Token: 0x0601750A RID: 95498 RVA: 0x00220A06 File Offset: 0x0021EC06
+		// Token: 0x17001346 RID: 4934
+		// (get) Token: 0x06005F9C RID: 24476 RVA: 0x00087C0E File Offset: 0x00085E0E
+		// (set) Token: 0x06005F9D RID: 24477 RVA: 0x00087C1E File Offset: 0x00085E1E
 		public unsafe bool BlackWhiteFlashWhiteAreaColorOverride
 		{
 			get
@@ -1739,9 +1739,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E0C RID: 24076
-		// (get) Token: 0x0601750B RID: 95499 RVA: 0x00220A18 File Offset: 0x0021EC18
-		// (set) Token: 0x0601750C RID: 95500 RVA: 0x00220A51 File Offset: 0x0021EC51
+		// Token: 0x17001347 RID: 4935
+		// (get) Token: 0x06005F9E RID: 24478 RVA: 0x00087C30 File Offset: 0x00085E30
+		// (set) Token: 0x06005F9F RID: 24479 RVA: 0x00087C69 File Offset: 0x00085E69
 		public FKuroCurveLinearColor BlackWhiteFlashWhiteAreaColor
 		{
 			get
@@ -1760,9 +1760,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E0D RID: 24077
-		// (get) Token: 0x0601750D RID: 95501 RVA: 0x00220A72 File Offset: 0x0021EC72
-		// (set) Token: 0x0601750E RID: 95502 RVA: 0x00220A82 File Offset: 0x0021EC82
+		// Token: 0x17001348 RID: 4936
+		// (get) Token: 0x06005FA0 RID: 24480 RVA: 0x00087C8A File Offset: 0x00085E8A
+		// (set) Token: 0x06005FA1 RID: 24481 RVA: 0x00087C9A File Offset: 0x00085E9A
 		public unsafe bool GrayGradationOverride
 		{
 			get
@@ -1775,9 +1775,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E0E RID: 24078
-		// (get) Token: 0x0601750F RID: 95503 RVA: 0x00220A93 File Offset: 0x0021EC93
-		// (set) Token: 0x06017510 RID: 95504 RVA: 0x00220AA3 File Offset: 0x0021ECA3
+		// Token: 0x17001349 RID: 4937
+		// (get) Token: 0x06005FA2 RID: 24482 RVA: 0x00087CAB File Offset: 0x00085EAB
+		// (set) Token: 0x06005FA3 RID: 24483 RVA: 0x00087CBB File Offset: 0x00085EBB
 		public unsafe bool GrayGradationCullTranslucency
 		{
 			get
@@ -1790,9 +1790,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E0F RID: 24079
-		// (get) Token: 0x06017511 RID: 95505 RVA: 0x00220AB4 File Offset: 0x0021ECB4
-		// (set) Token: 0x06017512 RID: 95506 RVA: 0x00220AC4 File Offset: 0x0021ECC4
+		// Token: 0x1700134A RID: 4938
+		// (get) Token: 0x06005FA4 RID: 24484 RVA: 0x00087CCC File Offset: 0x00085ECC
+		// (set) Token: 0x06005FA5 RID: 24485 RVA: 0x00087CDC File Offset: 0x00085EDC
 		public unsafe bool GrayGradationUsePlayerLocation
 		{
 			get
@@ -1805,9 +1805,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E10 RID: 24080
-		// (get) Token: 0x06017513 RID: 95507 RVA: 0x00220AD8 File Offset: 0x0021ECD8
-		// (set) Token: 0x06017514 RID: 95508 RVA: 0x00220B11 File Offset: 0x0021ED11
+		// Token: 0x1700134B RID: 4939
+		// (get) Token: 0x06005FA6 RID: 24486 RVA: 0x00087CF0 File Offset: 0x00085EF0
+		// (set) Token: 0x06005FA7 RID: 24487 RVA: 0x00087D29 File Offset: 0x00085F29
 		public FKuroCurveFloat GrayGradationDegree
 		{
 			get
@@ -1826,9 +1826,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E11 RID: 24081
-		// (get) Token: 0x06017515 RID: 95509 RVA: 0x00220B34 File Offset: 0x0021ED34
-		// (set) Token: 0x06017516 RID: 95510 RVA: 0x00220B6D File Offset: 0x0021ED6D
+		// Token: 0x1700134C RID: 4940
+		// (get) Token: 0x06005FA8 RID: 24488 RVA: 0x00087D4C File Offset: 0x00085F4C
+		// (set) Token: 0x06005FA9 RID: 24489 RVA: 0x00087D85 File Offset: 0x00085F85
 		public FKuroCurveFloat GrayGradationLerpWidth
 		{
 			get
@@ -1847,9 +1847,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E12 RID: 24082
-		// (get) Token: 0x06017517 RID: 95511 RVA: 0x00220B8E File Offset: 0x0021ED8E
-		// (set) Token: 0x06017518 RID: 95512 RVA: 0x00220BA2 File Offset: 0x0021EDA2
+		// Token: 0x1700134D RID: 4941
+		// (get) Token: 0x06005FAA RID: 24490 RVA: 0x00087DA6 File Offset: 0x00085FA6
+		// (set) Token: 0x06005FAB RID: 24491 RVA: 0x00087DBA File Offset: 0x00085FBA
 		[Nullable(2)]
 		public unsafe UTexture2D GrayGradationRampTexture
 		{
@@ -1865,9 +1865,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E13 RID: 24083
-		// (get) Token: 0x06017519 RID: 95513 RVA: 0x00220BB8 File Offset: 0x0021EDB8
-		// (set) Token: 0x0601751A RID: 95514 RVA: 0x00220BF1 File Offset: 0x0021EDF1
+		// Token: 0x1700134E RID: 4942
+		// (get) Token: 0x06005FAC RID: 24492 RVA: 0x00087DD0 File Offset: 0x00085FD0
+		// (set) Token: 0x06005FAD RID: 24493 RVA: 0x00087E09 File Offset: 0x00086009
 		public FKuroCurveLinearColor GrayGradationColorTint
 		{
 			get
@@ -1886,9 +1886,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E14 RID: 24084
-		// (get) Token: 0x0601751B RID: 95515 RVA: 0x00220C14 File Offset: 0x0021EE14
-		// (set) Token: 0x0601751C RID: 95516 RVA: 0x00220C4D File Offset: 0x0021EE4D
+		// Token: 0x1700134F RID: 4943
+		// (get) Token: 0x06005FAE RID: 24494 RVA: 0x00087E2C File Offset: 0x0008602C
+		// (set) Token: 0x06005FAF RID: 24495 RVA: 0x00087E65 File Offset: 0x00086065
 		public FKuroCurveFloat GrayGradationBlendWeight
 		{
 			get
@@ -1907,9 +1907,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E15 RID: 24085
-		// (get) Token: 0x0601751D RID: 95517 RVA: 0x00220C6E File Offset: 0x0021EE6E
-		// (set) Token: 0x0601751E RID: 95518 RVA: 0x00220C7E File Offset: 0x0021EE7E
+		// Token: 0x17001350 RID: 4944
+		// (get) Token: 0x06005FB0 RID: 24496 RVA: 0x00087E86 File Offset: 0x00086086
+		// (set) Token: 0x06005FB1 RID: 24497 RVA: 0x00087E96 File Offset: 0x00086096
 		public unsafe bool RetroFuturisticOverride
 		{
 			get
@@ -1922,9 +1922,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E16 RID: 24086
-		// (get) Token: 0x0601751F RID: 95519 RVA: 0x00220C90 File Offset: 0x0021EE90
-		// (set) Token: 0x06017520 RID: 95520 RVA: 0x00220CC9 File Offset: 0x0021EEC9
+		// Token: 0x17001351 RID: 4945
+		// (get) Token: 0x06005FB2 RID: 24498 RVA: 0x00087EA8 File Offset: 0x000860A8
+		// (set) Token: 0x06005FB3 RID: 24499 RVA: 0x00087EE1 File Offset: 0x000860E1
 		public FKuroCurveFloat MainCenterMask
 		{
 			get
@@ -1943,9 +1943,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E17 RID: 24087
-		// (get) Token: 0x06017521 RID: 95521 RVA: 0x00220CEC File Offset: 0x0021EEEC
-		// (set) Token: 0x06017522 RID: 95522 RVA: 0x00220D25 File Offset: 0x0021EF25
+		// Token: 0x17001352 RID: 4946
+		// (get) Token: 0x06005FB4 RID: 24500 RVA: 0x00087F04 File Offset: 0x00086104
+		// (set) Token: 0x06005FB5 RID: 24501 RVA: 0x00087F3D File Offset: 0x0008613D
 		public FKuroCurveFloat MainCenterMaskRadius
 		{
 			get
@@ -1964,9 +1964,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E18 RID: 24088
-		// (get) Token: 0x06017523 RID: 95523 RVA: 0x00220D48 File Offset: 0x0021EF48
-		// (set) Token: 0x06017524 RID: 95524 RVA: 0x00220D81 File Offset: 0x0021EF81
+		// Token: 0x17001353 RID: 4947
+		// (get) Token: 0x06005FB6 RID: 24502 RVA: 0x00087F60 File Offset: 0x00086160
+		// (set) Token: 0x06005FB7 RID: 24503 RVA: 0x00087F99 File Offset: 0x00086199
 		public FKuroCurveFloat MainCenterMaskHardness
 		{
 			get
@@ -1985,9 +1985,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E19 RID: 24089
-		// (get) Token: 0x06017525 RID: 95525 RVA: 0x00220DA4 File Offset: 0x0021EFA4
-		// (set) Token: 0x06017526 RID: 95526 RVA: 0x00220DDD File Offset: 0x0021EFDD
+		// Token: 0x17001354 RID: 4948
+		// (get) Token: 0x06005FB8 RID: 24504 RVA: 0x00087FBC File Offset: 0x000861BC
+		// (set) Token: 0x06005FB9 RID: 24505 RVA: 0x00087FF5 File Offset: 0x000861F5
 		public FKuroCurveFloat MainStartDistance
 		{
 			get
@@ -2006,9 +2006,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E1A RID: 24090
-		// (get) Token: 0x06017527 RID: 95527 RVA: 0x00220E00 File Offset: 0x0021F000
-		// (set) Token: 0x06017528 RID: 95528 RVA: 0x00220E39 File Offset: 0x0021F039
+		// Token: 0x17001355 RID: 4949
+		// (get) Token: 0x06005FBA RID: 24506 RVA: 0x00088018 File Offset: 0x00086218
+		// (set) Token: 0x06005FBB RID: 24507 RVA: 0x00088051 File Offset: 0x00086251
 		public FKuroCurveFloat MainCharacterIntensity
 		{
 			get
@@ -2027,9 +2027,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E1B RID: 24091
-		// (get) Token: 0x06017529 RID: 95529 RVA: 0x00220E5C File Offset: 0x0021F05C
-		// (set) Token: 0x0601752A RID: 95530 RVA: 0x00220E95 File Offset: 0x0021F095
+		// Token: 0x17001356 RID: 4950
+		// (get) Token: 0x06005FBC RID: 24508 RVA: 0x00088074 File Offset: 0x00086274
+		// (set) Token: 0x06005FBD RID: 24509 RVA: 0x000880AD File Offset: 0x000862AD
 		public FKuroCurveFloat VintageColorIntensity
 		{
 			get
@@ -2048,9 +2048,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E1C RID: 24092
-		// (get) Token: 0x0601752B RID: 95531 RVA: 0x00220EB8 File Offset: 0x0021F0B8
-		// (set) Token: 0x0601752C RID: 95532 RVA: 0x00220EF1 File Offset: 0x0021F0F1
+		// Token: 0x17001357 RID: 4951
+		// (get) Token: 0x06005FBE RID: 24510 RVA: 0x000880D0 File Offset: 0x000862D0
+		// (set) Token: 0x06005FBF RID: 24511 RVA: 0x00088109 File Offset: 0x00086309
 		public FKuroCurveFloat VintageColorBlackPoint
 		{
 			get
@@ -2069,9 +2069,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E1D RID: 24093
-		// (get) Token: 0x0601752D RID: 95533 RVA: 0x00220F14 File Offset: 0x0021F114
-		// (set) Token: 0x0601752E RID: 95534 RVA: 0x00220F4D File Offset: 0x0021F14D
+		// Token: 0x17001358 RID: 4952
+		// (get) Token: 0x06005FC0 RID: 24512 RVA: 0x0008812C File Offset: 0x0008632C
+		// (set) Token: 0x06005FC1 RID: 24513 RVA: 0x00088165 File Offset: 0x00086365
 		public FKuroCurveFloat VintageColorWhitePoint
 		{
 			get
@@ -2090,9 +2090,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E1E RID: 24094
-		// (get) Token: 0x0601752F RID: 95535 RVA: 0x00220F70 File Offset: 0x0021F170
-		// (set) Token: 0x06017530 RID: 95536 RVA: 0x00220FA9 File Offset: 0x0021F1A9
+		// Token: 0x17001359 RID: 4953
+		// (get) Token: 0x06005FC2 RID: 24514 RVA: 0x00088188 File Offset: 0x00086388
+		// (set) Token: 0x06005FC3 RID: 24515 RVA: 0x000881C1 File Offset: 0x000863C1
 		public FKuroCurveFloat VHSLinesColorIntensity
 		{
 			get
@@ -2111,9 +2111,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E1F RID: 24095
-		// (get) Token: 0x06017531 RID: 95537 RVA: 0x00220FCC File Offset: 0x0021F1CC
-		// (set) Token: 0x06017532 RID: 95538 RVA: 0x00221005 File Offset: 0x0021F205
+		// Token: 0x1700135A RID: 4954
+		// (get) Token: 0x06005FC4 RID: 24516 RVA: 0x000881E4 File Offset: 0x000863E4
+		// (set) Token: 0x06005FC5 RID: 24517 RVA: 0x0008821D File Offset: 0x0008641D
 		public FKuroCurveFloat VHSLinesDistortIntensity
 		{
 			get
@@ -2132,9 +2132,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E20 RID: 24096
-		// (get) Token: 0x06017533 RID: 95539 RVA: 0x00221028 File Offset: 0x0021F228
-		// (set) Token: 0x06017534 RID: 95540 RVA: 0x00221061 File Offset: 0x0021F261
+		// Token: 0x1700135B RID: 4955
+		// (get) Token: 0x06005FC6 RID: 24518 RVA: 0x00088240 File Offset: 0x00086440
+		// (set) Token: 0x06005FC7 RID: 24519 RVA: 0x00088279 File Offset: 0x00086479
 		public FKuroCurveFloat VHSEffectIntensity
 		{
 			get
@@ -2153,9 +2153,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E21 RID: 24097
-		// (get) Token: 0x06017535 RID: 95541 RVA: 0x00221084 File Offset: 0x0021F284
-		// (set) Token: 0x06017536 RID: 95542 RVA: 0x002210BD File Offset: 0x0021F2BD
+		// Token: 0x1700135C RID: 4956
+		// (get) Token: 0x06005FC8 RID: 24520 RVA: 0x0008829C File Offset: 0x0008649C
+		// (set) Token: 0x06005FC9 RID: 24521 RVA: 0x000882D5 File Offset: 0x000864D5
 		public FKuroCurveFloat VHSSpecklesIntensity
 		{
 			get
@@ -2174,9 +2174,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E22 RID: 24098
-		// (get) Token: 0x06017537 RID: 95543 RVA: 0x002210E0 File Offset: 0x0021F2E0
-		// (set) Token: 0x06017538 RID: 95544 RVA: 0x00221119 File Offset: 0x0021F319
+		// Token: 0x1700135D RID: 4957
+		// (get) Token: 0x06005FCA RID: 24522 RVA: 0x000882F8 File Offset: 0x000864F8
+		// (set) Token: 0x06005FCB RID: 24523 RVA: 0x00088331 File Offset: 0x00086531
 		public FKuroCurveFloat VHSSpecklesAmount
 		{
 			get
@@ -2195,9 +2195,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E23 RID: 24099
-		// (get) Token: 0x06017539 RID: 95545 RVA: 0x0022113C File Offset: 0x0021F33C
-		// (set) Token: 0x0601753A RID: 95546 RVA: 0x00221175 File Offset: 0x0021F375
+		// Token: 0x1700135E RID: 4958
+		// (get) Token: 0x06005FCC RID: 24524 RVA: 0x00088354 File Offset: 0x00086554
+		// (set) Token: 0x06005FCD RID: 24525 RVA: 0x0008838D File Offset: 0x0008658D
 		public FKuroCurveFloat VHSSpecklesSize
 		{
 			get
@@ -2216,9 +2216,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E24 RID: 24100
-		// (get) Token: 0x0601753B RID: 95547 RVA: 0x00221198 File Offset: 0x0021F398
-		// (set) Token: 0x0601753C RID: 95548 RVA: 0x002211D1 File Offset: 0x0021F3D1
+		// Token: 0x1700135F RID: 4959
+		// (get) Token: 0x06005FCE RID: 24526 RVA: 0x000883B0 File Offset: 0x000865B0
+		// (set) Token: 0x06005FCF RID: 24527 RVA: 0x000883E9 File Offset: 0x000865E9
 		public FKuroCurveFloat CRTDistortion
 		{
 			get
@@ -2237,9 +2237,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E25 RID: 24101
-		// (get) Token: 0x0601753D RID: 95549 RVA: 0x002211F2 File Offset: 0x0021F3F2
-		// (set) Token: 0x0601753E RID: 95550 RVA: 0x00221202 File Offset: 0x0021F402
+		// Token: 0x17001360 RID: 4960
+		// (get) Token: 0x06005FD0 RID: 24528 RVA: 0x0008840A File Offset: 0x0008660A
+		// (set) Token: 0x06005FD1 RID: 24529 RVA: 0x0008841A File Offset: 0x0008661A
 		public unsafe bool RetroFuturisticAdvancedOverride
 		{
 			get
@@ -2252,9 +2252,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E26 RID: 24102
-		// (get) Token: 0x0601753F RID: 95551 RVA: 0x00221214 File Offset: 0x0021F414
-		// (set) Token: 0x06017540 RID: 95552 RVA: 0x0022124D File Offset: 0x0021F44D
+		// Token: 0x17001361 RID: 4961
+		// (get) Token: 0x06005FD2 RID: 24530 RVA: 0x0008842C File Offset: 0x0008662C
+		// (set) Token: 0x06005FD3 RID: 24531 RVA: 0x00088465 File Offset: 0x00086665
 		public FKuroCurveFloat VintageColorCenterMask
 		{
 			get
@@ -2273,9 +2273,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E27 RID: 24103
-		// (get) Token: 0x06017541 RID: 95553 RVA: 0x00221270 File Offset: 0x0021F470
-		// (set) Token: 0x06017542 RID: 95554 RVA: 0x002212A9 File Offset: 0x0021F4A9
+		// Token: 0x17001362 RID: 4962
+		// (get) Token: 0x06005FD4 RID: 24532 RVA: 0x00088488 File Offset: 0x00086688
+		// (set) Token: 0x06005FD5 RID: 24533 RVA: 0x000884C1 File Offset: 0x000866C1
 		public FKuroCurveFloat VintageColorStartDistance
 		{
 			get
@@ -2294,9 +2294,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E28 RID: 24104
-		// (get) Token: 0x06017543 RID: 95555 RVA: 0x002212CC File Offset: 0x0021F4CC
-		// (set) Token: 0x06017544 RID: 95556 RVA: 0x00221305 File Offset: 0x0021F505
+		// Token: 0x17001363 RID: 4963
+		// (get) Token: 0x06005FD6 RID: 24534 RVA: 0x000884E4 File Offset: 0x000866E4
+		// (set) Token: 0x06005FD7 RID: 24535 RVA: 0x0008851D File Offset: 0x0008671D
 		public FKuroCurveFloat VintageColorCharacterIntensity
 		{
 			get
@@ -2315,9 +2315,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E29 RID: 24105
-		// (get) Token: 0x06017545 RID: 95557 RVA: 0x00221328 File Offset: 0x0021F528
-		// (set) Token: 0x06017546 RID: 95558 RVA: 0x00221361 File Offset: 0x0021F561
+		// Token: 0x17001364 RID: 4964
+		// (get) Token: 0x06005FD8 RID: 24536 RVA: 0x00088540 File Offset: 0x00086740
+		// (set) Token: 0x06005FD9 RID: 24537 RVA: 0x00088579 File Offset: 0x00086779
 		public FKuroCurveFloat VHSLinesCenterMask
 		{
 			get
@@ -2336,9 +2336,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E2A RID: 24106
-		// (get) Token: 0x06017547 RID: 95559 RVA: 0x00221384 File Offset: 0x0021F584
-		// (set) Token: 0x06017548 RID: 95560 RVA: 0x002213BD File Offset: 0x0021F5BD
+		// Token: 0x17001365 RID: 4965
+		// (get) Token: 0x06005FDA RID: 24538 RVA: 0x0008859C File Offset: 0x0008679C
+		// (set) Token: 0x06005FDB RID: 24539 RVA: 0x000885D5 File Offset: 0x000867D5
 		public FKuroCurveFloat VHSLinesStartDistance
 		{
 			get
@@ -2357,9 +2357,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E2B RID: 24107
-		// (get) Token: 0x06017549 RID: 95561 RVA: 0x002213E0 File Offset: 0x0021F5E0
-		// (set) Token: 0x0601754A RID: 95562 RVA: 0x00221419 File Offset: 0x0021F619
+		// Token: 0x17001366 RID: 4966
+		// (get) Token: 0x06005FDC RID: 24540 RVA: 0x000885F8 File Offset: 0x000867F8
+		// (set) Token: 0x06005FDD RID: 24541 RVA: 0x00088631 File Offset: 0x00086831
 		public FKuroCurveFloat VHSLinesCharacterIntensity
 		{
 			get
@@ -2378,9 +2378,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E2C RID: 24108
-		// (get) Token: 0x0601754B RID: 95563 RVA: 0x0022143C File Offset: 0x0021F63C
-		// (set) Token: 0x0601754C RID: 95564 RVA: 0x00221475 File Offset: 0x0021F675
+		// Token: 0x17001367 RID: 4967
+		// (get) Token: 0x06005FDE RID: 24542 RVA: 0x00088654 File Offset: 0x00086854
+		// (set) Token: 0x06005FDF RID: 24543 RVA: 0x0008868D File Offset: 0x0008688D
 		public FKuroCurveFloat VHSEffectCenterMask
 		{
 			get
@@ -2399,9 +2399,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E2D RID: 24109
-		// (get) Token: 0x0601754D RID: 95565 RVA: 0x00221498 File Offset: 0x0021F698
-		// (set) Token: 0x0601754E RID: 95566 RVA: 0x002214D1 File Offset: 0x0021F6D1
+		// Token: 0x17001368 RID: 4968
+		// (get) Token: 0x06005FE0 RID: 24544 RVA: 0x000886B0 File Offset: 0x000868B0
+		// (set) Token: 0x06005FE1 RID: 24545 RVA: 0x000886E9 File Offset: 0x000868E9
 		public FKuroCurveFloat VHSEffectStartDistance
 		{
 			get
@@ -2420,9 +2420,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E2E RID: 24110
-		// (get) Token: 0x0601754F RID: 95567 RVA: 0x002214F4 File Offset: 0x0021F6F4
-		// (set) Token: 0x06017550 RID: 95568 RVA: 0x0022152D File Offset: 0x0021F72D
+		// Token: 0x17001369 RID: 4969
+		// (get) Token: 0x06005FE2 RID: 24546 RVA: 0x0008870C File Offset: 0x0008690C
+		// (set) Token: 0x06005FE3 RID: 24547 RVA: 0x00088745 File Offset: 0x00086945
 		public FKuroCurveFloat VHSEffectCharacterIntensity
 		{
 			get
@@ -2441,9 +2441,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E2F RID: 24111
-		// (get) Token: 0x06017551 RID: 95569 RVA: 0x00221550 File Offset: 0x0021F750
-		// (set) Token: 0x06017552 RID: 95570 RVA: 0x00221589 File Offset: 0x0021F789
+		// Token: 0x1700136A RID: 4970
+		// (get) Token: 0x06005FE4 RID: 24548 RVA: 0x00088768 File Offset: 0x00086968
+		// (set) Token: 0x06005FE5 RID: 24549 RVA: 0x000887A1 File Offset: 0x000869A1
 		public FKuroCurveFloat VHSSpecklesCenterMask
 		{
 			get
@@ -2462,9 +2462,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E30 RID: 24112
-		// (get) Token: 0x06017553 RID: 95571 RVA: 0x002215AC File Offset: 0x0021F7AC
-		// (set) Token: 0x06017554 RID: 95572 RVA: 0x002215E5 File Offset: 0x0021F7E5
+		// Token: 0x1700136B RID: 4971
+		// (get) Token: 0x06005FE6 RID: 24550 RVA: 0x000887C4 File Offset: 0x000869C4
+		// (set) Token: 0x06005FE7 RID: 24551 RVA: 0x000887FD File Offset: 0x000869FD
 		public FKuroCurveFloat VHSSpecklesStartDistance
 		{
 			get
@@ -2483,9 +2483,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E31 RID: 24113
-		// (get) Token: 0x06017555 RID: 95573 RVA: 0x00221608 File Offset: 0x0021F808
-		// (set) Token: 0x06017556 RID: 95574 RVA: 0x00221641 File Offset: 0x0021F841
+		// Token: 0x1700136C RID: 4972
+		// (get) Token: 0x06005FE8 RID: 24552 RVA: 0x00088820 File Offset: 0x00086A20
+		// (set) Token: 0x06005FE9 RID: 24553 RVA: 0x00088859 File Offset: 0x00086A59
 		public FKuroCurveFloat VHSSpecklesCharacterIntensity
 		{
 			get
@@ -2504,9 +2504,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E32 RID: 24114
-		// (get) Token: 0x06017557 RID: 95575 RVA: 0x00221662 File Offset: 0x0021F862
-		// (set) Token: 0x06017558 RID: 95576 RVA: 0x00221672 File Offset: 0x0021F872
+		// Token: 0x1700136D RID: 4973
+		// (get) Token: 0x06005FEA RID: 24554 RVA: 0x0008887A File Offset: 0x00086A7A
+		// (set) Token: 0x06005FEB RID: 24555 RVA: 0x0008888A File Offset: 0x00086A8A
 		public unsafe bool ScreenWaveOverride
 		{
 			get
@@ -2519,9 +2519,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E33 RID: 24115
-		// (get) Token: 0x06017559 RID: 95577 RVA: 0x00221683 File Offset: 0x0021F883
-		// (set) Token: 0x0601755A RID: 95578 RVA: 0x00221693 File Offset: 0x0021F893
+		// Token: 0x1700136E RID: 4974
+		// (get) Token: 0x06005FEC RID: 24556 RVA: 0x0008889B File Offset: 0x00086A9B
+		// (set) Token: 0x06005FED RID: 24557 RVA: 0x000888AB File Offset: 0x00086AAB
 		public unsafe bool UsePolarWavePattern
 		{
 			get
@@ -2534,9 +2534,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E34 RID: 24116
-		// (get) Token: 0x0601755B RID: 95579 RVA: 0x002216A4 File Offset: 0x0021F8A4
-		// (set) Token: 0x0601755C RID: 95580 RVA: 0x002216B8 File Offset: 0x0021F8B8
+		// Token: 0x1700136F RID: 4975
+		// (get) Token: 0x06005FEE RID: 24558 RVA: 0x000888BC File Offset: 0x00086ABC
+		// (set) Token: 0x06005FEF RID: 24559 RVA: 0x000888D0 File Offset: 0x00086AD0
 		[Nullable(2)]
 		public unsafe UTexture2D WavePatternTexture
 		{
@@ -2552,9 +2552,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E35 RID: 24117
-		// (get) Token: 0x0601755D RID: 95581 RVA: 0x002216D0 File Offset: 0x0021F8D0
-		// (set) Token: 0x0601755E RID: 95582 RVA: 0x00221709 File Offset: 0x0021F909
+		// Token: 0x17001370 RID: 4976
+		// (get) Token: 0x06005FF0 RID: 24560 RVA: 0x000888E8 File Offset: 0x00086AE8
+		// (set) Token: 0x06005FF1 RID: 24561 RVA: 0x00088921 File Offset: 0x00086B21
 		public FKuroCurveLinearColor WavePatternScaleBias
 		{
 			get
@@ -2573,9 +2573,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E36 RID: 24118
-		// (get) Token: 0x0601755F RID: 95583 RVA: 0x0022172C File Offset: 0x0021F92C
-		// (set) Token: 0x06017560 RID: 95584 RVA: 0x00221765 File Offset: 0x0021F965
+		// Token: 0x17001371 RID: 4977
+		// (get) Token: 0x06005FF2 RID: 24562 RVA: 0x00088944 File Offset: 0x00086B44
+		// (set) Token: 0x06005FF3 RID: 24563 RVA: 0x0008897D File Offset: 0x00086B7D
 		public FKuroCurveFloat WaveRadius
 		{
 			get
@@ -2594,9 +2594,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E37 RID: 24119
-		// (get) Token: 0x06017561 RID: 95585 RVA: 0x00221788 File Offset: 0x0021F988
-		// (set) Token: 0x06017562 RID: 95586 RVA: 0x002217C1 File Offset: 0x0021F9C1
+		// Token: 0x17001372 RID: 4978
+		// (get) Token: 0x06005FF4 RID: 24564 RVA: 0x000889A0 File Offset: 0x00086BA0
+		// (set) Token: 0x06005FF5 RID: 24565 RVA: 0x000889D9 File Offset: 0x00086BD9
 		public FKuroCurveFloat WaveRadiusSmooth
 		{
 			get
@@ -2615,9 +2615,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E38 RID: 24120
-		// (get) Token: 0x06017563 RID: 95587 RVA: 0x002217E4 File Offset: 0x0021F9E4
-		// (set) Token: 0x06017564 RID: 95588 RVA: 0x0022181D File Offset: 0x0021FA1D
+		// Token: 0x17001373 RID: 4979
+		// (get) Token: 0x06005FF6 RID: 24566 RVA: 0x000889FC File Offset: 0x00086BFC
+		// (set) Token: 0x06005FF7 RID: 24567 RVA: 0x00088A35 File Offset: 0x00086C35
 		public FKuroCurveFloat WaveHeight
 		{
 			get
@@ -2636,9 +2636,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E39 RID: 24121
-		// (get) Token: 0x06017565 RID: 95589 RVA: 0x00221840 File Offset: 0x0021FA40
-		// (set) Token: 0x06017566 RID: 95590 RVA: 0x00221879 File Offset: 0x0021FA79
+		// Token: 0x17001374 RID: 4980
+		// (get) Token: 0x06005FF8 RID: 24568 RVA: 0x00088A58 File Offset: 0x00086C58
+		// (set) Token: 0x06005FF9 RID: 24569 RVA: 0x00088A91 File Offset: 0x00086C91
 		public FKuroCurveFloat WaveHeightSmooth
 		{
 			get
@@ -2657,9 +2657,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E3A RID: 24122
-		// (get) Token: 0x06017567 RID: 95591 RVA: 0x0022189C File Offset: 0x0021FA9C
-		// (set) Token: 0x06017568 RID: 95592 RVA: 0x002218D5 File Offset: 0x0021FAD5
+		// Token: 0x17001375 RID: 4981
+		// (get) Token: 0x06005FFA RID: 24570 RVA: 0x00088AB4 File Offset: 0x00086CB4
+		// (set) Token: 0x06005FFB RID: 24571 RVA: 0x00088AED File Offset: 0x00086CED
 		public FKuroCurveFloat WaveNormalSize
 		{
 			get
@@ -2678,9 +2678,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E3B RID: 24123
-		// (get) Token: 0x06017569 RID: 95593 RVA: 0x002218F8 File Offset: 0x0021FAF8
-		// (set) Token: 0x0601756A RID: 95594 RVA: 0x00221931 File Offset: 0x0021FB31
+		// Token: 0x17001376 RID: 4982
+		// (get) Token: 0x06005FFC RID: 24572 RVA: 0x00088B10 File Offset: 0x00086D10
+		// (set) Token: 0x06005FFD RID: 24573 RVA: 0x00088B49 File Offset: 0x00086D49
 		public FKuroCurveFloat WaveRoughness
 		{
 			get
@@ -2699,9 +2699,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E3C RID: 24124
-		// (get) Token: 0x0601756B RID: 95595 RVA: 0x00221952 File Offset: 0x0021FB52
-		// (set) Token: 0x0601756C RID: 95596 RVA: 0x00221966 File Offset: 0x0021FB66
+		// Token: 0x17001377 RID: 4983
+		// (get) Token: 0x06005FFE RID: 24574 RVA: 0x00088B6A File Offset: 0x00086D6A
+		// (set) Token: 0x06005FFF RID: 24575 RVA: 0x00088B7E File Offset: 0x00086D7E
 		[Nullable(2)]
 		public unsafe UTexture2D WaveDissolveTexture
 		{
@@ -2717,9 +2717,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E3D RID: 24125
-		// (get) Token: 0x0601756D RID: 95597 RVA: 0x0022197C File Offset: 0x0021FB7C
-		// (set) Token: 0x0601756E RID: 95598 RVA: 0x002219B5 File Offset: 0x0021FBB5
+		// Token: 0x17001378 RID: 4984
+		// (get) Token: 0x06006000 RID: 24576 RVA: 0x00088B94 File Offset: 0x00086D94
+		// (set) Token: 0x06006001 RID: 24577 RVA: 0x00088BCD File Offset: 0x00086DCD
 		public FKuroCurveLinearColor WaveDissolveScaleBias
 		{
 			get
@@ -2738,9 +2738,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E3E RID: 24126
-		// (get) Token: 0x0601756F RID: 95599 RVA: 0x002219D8 File Offset: 0x0021FBD8
-		// (set) Token: 0x06017570 RID: 95600 RVA: 0x00221A11 File Offset: 0x0021FC11
+		// Token: 0x17001379 RID: 4985
+		// (get) Token: 0x06006002 RID: 24578 RVA: 0x00088BF0 File Offset: 0x00086DF0
+		// (set) Token: 0x06006003 RID: 24579 RVA: 0x00088C29 File Offset: 0x00086E29
 		public FKuroCurveFloat WaveDissolveProgress
 		{
 			get
@@ -2759,9 +2759,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E3F RID: 24127
-		// (get) Token: 0x06017571 RID: 95601 RVA: 0x00221A34 File Offset: 0x0021FC34
-		// (set) Token: 0x06017572 RID: 95602 RVA: 0x00221A6D File Offset: 0x0021FC6D
+		// Token: 0x1700137A RID: 4986
+		// (get) Token: 0x06006004 RID: 24580 RVA: 0x00088C4C File Offset: 0x00086E4C
+		// (set) Token: 0x06006005 RID: 24581 RVA: 0x00088C85 File Offset: 0x00086E85
 		public FKuroCurveFloat WaveDissolveSmooth
 		{
 			get
@@ -2780,9 +2780,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E40 RID: 24128
-		// (get) Token: 0x06017573 RID: 95603 RVA: 0x00221A8E File Offset: 0x0021FC8E
-		// (set) Token: 0x06017574 RID: 95604 RVA: 0x00221AA2 File Offset: 0x0021FCA2
+		// Token: 0x1700137B RID: 4987
+		// (get) Token: 0x06006006 RID: 24582 RVA: 0x00088CA6 File Offset: 0x00086EA6
+		// (set) Token: 0x06006007 RID: 24583 RVA: 0x00088CBA File Offset: 0x00086EBA
 		[Nullable(2)]
 		public unsafe UTexture2D WaveColorTexture
 		{
@@ -2798,9 +2798,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E41 RID: 24129
-		// (get) Token: 0x06017575 RID: 95605 RVA: 0x00221AB8 File Offset: 0x0021FCB8
-		// (set) Token: 0x06017576 RID: 95606 RVA: 0x00221AF1 File Offset: 0x0021FCF1
+		// Token: 0x1700137C RID: 4988
+		// (get) Token: 0x06006008 RID: 24584 RVA: 0x00088CD0 File Offset: 0x00086ED0
+		// (set) Token: 0x06006009 RID: 24585 RVA: 0x00088D09 File Offset: 0x00086F09
 		public FKuroCurveLinearColor WaveColorScaleBias
 		{
 			get
@@ -2819,9 +2819,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E42 RID: 24130
-		// (get) Token: 0x06017577 RID: 95607 RVA: 0x00221B14 File Offset: 0x0021FD14
-		// (set) Token: 0x06017578 RID: 95608 RVA: 0x00221B4D File Offset: 0x0021FD4D
+		// Token: 0x1700137D RID: 4989
+		// (get) Token: 0x0600600A RID: 24586 RVA: 0x00088D2C File Offset: 0x00086F2C
+		// (set) Token: 0x0600600B RID: 24587 RVA: 0x00088D65 File Offset: 0x00086F65
 		public FKuroCurveLinearColor WaveColorTextureTint
 		{
 			get
@@ -2840,9 +2840,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E43 RID: 24131
-		// (get) Token: 0x06017579 RID: 95609 RVA: 0x00221B70 File Offset: 0x0021FD70
-		// (set) Token: 0x0601757A RID: 95610 RVA: 0x00221BA9 File Offset: 0x0021FDA9
+		// Token: 0x1700137E RID: 4990
+		// (get) Token: 0x0600600C RID: 24588 RVA: 0x00088D88 File Offset: 0x00086F88
+		// (set) Token: 0x0600600D RID: 24589 RVA: 0x00088DC1 File Offset: 0x00086FC1
 		public FKuroCurveFloat WaveAmplitude
 		{
 			get
@@ -2861,9 +2861,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E44 RID: 24132
-		// (get) Token: 0x0601757B RID: 95611 RVA: 0x00221BCA File Offset: 0x0021FDCA
-		// (set) Token: 0x0601757C RID: 95612 RVA: 0x00221BDA File Offset: 0x0021FDDA
+		// Token: 0x1700137F RID: 4991
+		// (get) Token: 0x0600600E RID: 24590 RVA: 0x00088DE2 File Offset: 0x00086FE2
+		// (set) Token: 0x0600600F RID: 24591 RVA: 0x00088DF2 File Offset: 0x00086FF2
 		public unsafe bool AutoExposureOverride
 		{
 			get
@@ -2876,9 +2876,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E45 RID: 24133
-		// (get) Token: 0x0601757D RID: 95613 RVA: 0x00221BEC File Offset: 0x0021FDEC
-		// (set) Token: 0x0601757E RID: 95614 RVA: 0x00221C25 File Offset: 0x0021FE25
+		// Token: 0x17001380 RID: 4992
+		// (get) Token: 0x06006010 RID: 24592 RVA: 0x00088E04 File Offset: 0x00087004
+		// (set) Token: 0x06006011 RID: 24593 RVA: 0x00088E3D File Offset: 0x0008703D
 		public FKuroCurveFloat AutoExposureMinBrightness
 		{
 			get
@@ -2897,9 +2897,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E46 RID: 24134
-		// (get) Token: 0x0601757F RID: 95615 RVA: 0x00221C48 File Offset: 0x0021FE48
-		// (set) Token: 0x06017580 RID: 95616 RVA: 0x00221C81 File Offset: 0x0021FE81
+		// Token: 0x17001381 RID: 4993
+		// (get) Token: 0x06006012 RID: 24594 RVA: 0x00088E60 File Offset: 0x00087060
+		// (set) Token: 0x06006013 RID: 24595 RVA: 0x00088E99 File Offset: 0x00087099
 		public FKuroCurveFloat AutoExposureMaxBrightness
 		{
 			get
@@ -2918,9 +2918,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E47 RID: 24135
-		// (get) Token: 0x06017581 RID: 95617 RVA: 0x00221CA2 File Offset: 0x0021FEA2
-		// (set) Token: 0x06017582 RID: 95618 RVA: 0x00221CB6 File Offset: 0x0021FEB6
+		// Token: 0x17001382 RID: 4994
+		// (get) Token: 0x06006014 RID: 24596 RVA: 0x00088EBA File Offset: 0x000870BA
+		// (set) Token: 0x06006015 RID: 24597 RVA: 0x00088ECE File Offset: 0x000870CE
 		[Nullable(2)]
 		public unsafe UKuroWeatherDataAsset WeatherDataAsset
 		{
@@ -2936,9 +2936,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E48 RID: 24136
-		// (get) Token: 0x06017583 RID: 95619 RVA: 0x00221CCB File Offset: 0x0021FECB
-		// (set) Token: 0x06017584 RID: 95620 RVA: 0x00221CDB File Offset: 0x0021FEDB
+		// Token: 0x17001383 RID: 4995
+		// (get) Token: 0x06006016 RID: 24598 RVA: 0x00088EE3 File Offset: 0x000870E3
+		// (set) Token: 0x06006017 RID: 24599 RVA: 0x00088EF3 File Offset: 0x000870F3
 		public unsafe bool BurstDissolveOverride
 		{
 			get
@@ -2951,9 +2951,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E49 RID: 24137
-		// (get) Token: 0x06017585 RID: 95621 RVA: 0x00221CEC File Offset: 0x0021FEEC
-		// (set) Token: 0x06017586 RID: 95622 RVA: 0x00221D00 File Offset: 0x0021FF00
+		// Token: 0x17001384 RID: 4996
+		// (get) Token: 0x06006018 RID: 24600 RVA: 0x00088F04 File Offset: 0x00087104
+		// (set) Token: 0x06006019 RID: 24601 RVA: 0x00088F18 File Offset: 0x00087118
 		[Nullable(2)]
 		public unsafe UTexture2D BurstDissolveTexture
 		{
@@ -2969,9 +2969,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E4A RID: 24138
-		// (get) Token: 0x06017587 RID: 95623 RVA: 0x00221D18 File Offset: 0x0021FF18
-		// (set) Token: 0x06017588 RID: 95624 RVA: 0x00221D51 File Offset: 0x0021FF51
+		// Token: 0x17001385 RID: 4997
+		// (get) Token: 0x0600601A RID: 24602 RVA: 0x00088F30 File Offset: 0x00087130
+		// (set) Token: 0x0600601B RID: 24603 RVA: 0x00088F69 File Offset: 0x00087169
 		public FKuroCurveFloat BurstDissolveThreshold
 		{
 			get
@@ -2990,9 +2990,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E4B RID: 24139
-		// (get) Token: 0x06017589 RID: 95625 RVA: 0x00221D74 File Offset: 0x0021FF74
-		// (set) Token: 0x0601758A RID: 95626 RVA: 0x00221DAD File Offset: 0x0021FFAD
+		// Token: 0x17001386 RID: 4998
+		// (get) Token: 0x0600601C RID: 24604 RVA: 0x00088F8C File Offset: 0x0008718C
+		// (set) Token: 0x0600601D RID: 24605 RVA: 0x00088FC5 File Offset: 0x000871C5
 		public FKuroCurveFloat BurstDissolveSmooth
 		{
 			get
@@ -3011,9 +3011,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E4C RID: 24140
-		// (get) Token: 0x0601758B RID: 95627 RVA: 0x00221DD0 File Offset: 0x0021FFD0
-		// (set) Token: 0x0601758C RID: 95628 RVA: 0x00221E09 File Offset: 0x00220009
+		// Token: 0x17001387 RID: 4999
+		// (get) Token: 0x0600601E RID: 24606 RVA: 0x00088FE8 File Offset: 0x000871E8
+		// (set) Token: 0x0600601F RID: 24607 RVA: 0x00089021 File Offset: 0x00087221
 		public FKuroCurveFloat BurstClipThreshold
 		{
 			get
@@ -3032,9 +3032,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E4D RID: 24141
-		// (get) Token: 0x0601758D RID: 95629 RVA: 0x00221E2A File Offset: 0x0022002A
-		// (set) Token: 0x0601758E RID: 95630 RVA: 0x00221E3A File Offset: 0x0022003A
+		// Token: 0x17001388 RID: 5000
+		// (get) Token: 0x06006020 RID: 24608 RVA: 0x00089042 File Offset: 0x00087242
+		// (set) Token: 0x06006021 RID: 24609 RVA: 0x00089052 File Offset: 0x00087252
 		public unsafe bool SkyBoxOverride
 		{
 			get
@@ -3047,30 +3047,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E4E RID: 24142
-		// (get) Token: 0x0601758F RID: 95631 RVA: 0x00221E4C File Offset: 0x0022004C
-		// (set) Token: 0x06017590 RID: 95632 RVA: 0x00221E85 File Offset: 0x00220085
-		public FKuroEffectPostProcessSkyBoxSetting SkyBoxSetting
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FKuroEffectPostProcessSkyBoxSetting result;
-				if ((result = this._SkyBoxSetting) == null)
-				{
-					result = (this._SkyBoxSetting = new FKuroEffectPostProcessSkyBoxSetting(base.NativePtr + (IntPtr)UEffectModelPostProcess.__PropertyOffset_SkyBoxSetting, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FKuroEffectPostProcessSkyBoxSetting.StaticStruct(), base.NativePtr + (IntPtr)UEffectModelPostProcess.__PropertyOffset_SkyBoxSetting, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x17005E4F RID: 24143
-		// (get) Token: 0x06017591 RID: 95633 RVA: 0x00221EA6 File Offset: 0x002200A6
-		// (set) Token: 0x06017592 RID: 95634 RVA: 0x00221EB6 File Offset: 0x002200B6
+		// Token: 0x17001389 RID: 5001
+		// (get) Token: 0x06006022 RID: 24610 RVA: 0x00089063 File Offset: 0x00087263
+		// (set) Token: 0x06006023 RID: 24611 RVA: 0x00089073 File Offset: 0x00087273
 		public unsafe bool ColorGradingOverride
 		{
 			get
@@ -3083,9 +3062,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E50 RID: 24144
-		// (get) Token: 0x06017593 RID: 95635 RVA: 0x00221EC8 File Offset: 0x002200C8
-		// (set) Token: 0x06017594 RID: 95636 RVA: 0x00221F01 File Offset: 0x00220101
+		// Token: 0x1700138A RID: 5002
+		// (get) Token: 0x06006024 RID: 24612 RVA: 0x00089084 File Offset: 0x00087284
+		// (set) Token: 0x06006025 RID: 24613 RVA: 0x000890BD File Offset: 0x000872BD
 		public FKuroCurveFloat Desaturate
 		{
 			get
@@ -3104,9 +3083,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005E51 RID: 24145
-		// (get) Token: 0x06017595 RID: 95637 RVA: 0x00221F24 File Offset: 0x00220124
-		// (set) Token: 0x06017596 RID: 95638 RVA: 0x00221F5D File Offset: 0x0022015D
+		// Token: 0x1700138B RID: 5003
+		// (get) Token: 0x06006026 RID: 24614 RVA: 0x000890E0 File Offset: 0x000872E0
+		// (set) Token: 0x06006027 RID: 24615 RVA: 0x00089119 File Offset: 0x00087319
 		public FKuroCurveLinearColor Tint
 		{
 			get
@@ -3125,74 +3104,74 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06017597 RID: 95639 RVA: 0x00221F7E File Offset: 0x0022017E
+		// Token: 0x06006028 RID: 24616 RVA: 0x0008913A File Offset: 0x0008733A
 		static UEffectModelPostProcess()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroGameplay.EffectModelPostProcess");
 		}
 
-		// Token: 0x06017598 RID: 95640 RVA: 0x00221F8C File Offset: 0x0022018C
+		// Token: 0x06006029 RID: 24617 RVA: 0x00089148 File Offset: 0x00087348
 		protected UEffectModelPostProcess(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400CA0B RID: 51723
+		// Token: 0x040027CB RID: 10187
 		public new const string __ObjectPath = "/Script/KuroGameplay.EffectModelPostProcess";
 
-		// Token: 0x0400CA0C RID: 51724
+		// Token: 0x040027CC RID: 10188
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400CA0D RID: 51725
+		// Token: 0x040027CD RID: 10189
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400CA0E RID: 51726
+		// Token: 0x040027CE RID: 10190
 		internal static int __PropertyOffset_Location;
 
-		// Token: 0x0400CA0F RID: 51727
+		// Token: 0x040027CF RID: 10191
 		[Nullable(2)]
 		private FKuroCurveVector _Location;
 
-		// Token: 0x0400CA10 RID: 51728
+		// Token: 0x040027D0 RID: 10192
 		internal static int __PropertyOffset_EnableVolume;
 
-		// Token: 0x0400CA11 RID: 51729
+		// Token: 0x040027D1 RID: 10193
 		internal static int __PropertyOffset_VolumeRadius;
 
-		// Token: 0x0400CA12 RID: 51730
+		// Token: 0x040027D2 RID: 10194
 		internal static int __PropertyOffset_VolumeHardness;
 
-		// Token: 0x0400CA13 RID: 51731
+		// Token: 0x040027D3 RID: 10195
 		internal static int __PropertyOffset_UseVolumeHardnessCurve;
 
-		// Token: 0x0400CA14 RID: 51732
+		// Token: 0x040027D4 RID: 10196
 		internal static int __PropertyOffset_VolumeHardnessCurve;
 
-		// Token: 0x0400CA15 RID: 51733
+		// Token: 0x040027D5 RID: 10197
 		[Nullable(2)]
 		private FKuroCurveFloat _VolumeHardnessCurve;
 
-		// Token: 0x0400CA16 RID: 51734
+		// Token: 0x040027D6 RID: 10198
 		internal static int __PropertyOffset_WeatherPriority;
 
-		// Token: 0x0400CA17 RID: 51735
+		// Token: 0x040027D7 RID: 10199
 		internal static int __PropertyOffset_VisibleForProtoPlayer;
 
-		// Token: 0x0400CA18 RID: 51736
+		// Token: 0x040027D8 RID: 10200
 		internal static int __PropertyOffset_OverrideTOD;
 
-		// Token: 0x0400CA19 RID: 51737
+		// Token: 0x040027D9 RID: 10201
 		internal static int __PropertyOffset_StopWhenActorHidden;
 
-		// Token: 0x0400CA1A RID: 51738
+		// Token: 0x040027DA RID: 10202
 		internal static int __PropertyOffset_bEnablePostprocessMaterial;
 
-		// Token: 0x0400CA1B RID: 51739
+		// Token: 0x040027DB RID: 10203
 		internal static int __PropertyOffset_PostprocessMaterial;
 
-		// Token: 0x0400CA1C RID: 51740
+		// Token: 0x040027DC RID: 10204
 		internal static int __PropertyOffset_PostprocessMaterialQualityArray;
 
-		// Token: 0x0400CA1D RID: 51741
+		// Token: 0x040027DD RID: 10205
 		[Nullable(new byte[]
 		{
 			2,
@@ -3200,10 +3179,10 @@ namespace UnrealEngine
 		})]
 		private TArray<UMaterialInterface> _PostprocessMaterialQualityArray;
 
-		// Token: 0x0400CA1E RID: 51742
+		// Token: 0x040027DE RID: 10206
 		internal static int __PropertyOffset_PostprocessMaterialQualityArrayMobile;
 
-		// Token: 0x0400CA1F RID: 51743
+		// Token: 0x040027DF RID: 10207
 		[Nullable(new byte[]
 		{
 			2,
@@ -3211,10 +3190,10 @@ namespace UnrealEngine
 		})]
 		private TArray<UMaterialInterface> _PostprocessMaterialQualityArrayMobile;
 
-		// Token: 0x0400CA20 RID: 51744
+		// Token: 0x040027E0 RID: 10208
 		internal static int __PropertyOffset_PostprocessMaterialFloatParameters;
 
-		// Token: 0x0400CA21 RID: 51745
+		// Token: 0x040027E1 RID: 10209
 		[Nullable(new byte[]
 		{
 			2,
@@ -3222,10 +3201,10 @@ namespace UnrealEngine
 		})]
 		private TMap<FName, FKuroCurveFloat> _PostprocessMaterialFloatParameters;
 
-		// Token: 0x0400CA22 RID: 51746
+		// Token: 0x040027E2 RID: 10210
 		internal static int __PropertyOffset_PostprocessMaterialColorParameters;
 
-		// Token: 0x0400CA23 RID: 51747
+		// Token: 0x040027E3 RID: 10211
 		[Nullable(new byte[]
 		{
 			2,
@@ -3233,822 +3212,815 @@ namespace UnrealEngine
 		})]
 		private TMap<FName, FKuroCurveLinearColor> _PostprocessMaterialColorParameters;
 
-		// Token: 0x0400CA24 RID: 51748
+		// Token: 0x040027E4 RID: 10212
 		internal static int __PropertyOffset_BlurIntensityOverride;
 
-		// Token: 0x0400CA25 RID: 51749
+		// Token: 0x040027E5 RID: 10213
 		internal static int __PropertyOffset_BlurIntensity;
 
-		// Token: 0x0400CA26 RID: 51750
+		// Token: 0x040027E6 RID: 10214
 		[Nullable(2)]
 		private FKuroCurveFloat _BlurIntensity;
 
-		// Token: 0x0400CA27 RID: 51751
+		// Token: 0x040027E7 RID: 10215
 		internal static int __PropertyOffset_UseWorldPosition;
 
-		// Token: 0x0400CA28 RID: 51752
+		// Token: 0x040027E8 RID: 10216
 		internal static int __PropertyOffset_ScreenPosition;
 
-		// Token: 0x0400CA29 RID: 51753
+		// Token: 0x040027E9 RID: 10217
 		internal static int __PropertyOffset_RadialBlurRadius;
 
-		// Token: 0x0400CA2A RID: 51754
+		// Token: 0x040027EA RID: 10218
 		[Nullable(2)]
 		private FKuroCurveFloat _RadialBlurRadius;
 
-		// Token: 0x0400CA2B RID: 51755
+		// Token: 0x040027EB RID: 10219
 		internal static int __PropertyOffset_RadialBlurHardness;
 
-		// Token: 0x0400CA2C RID: 51756
+		// Token: 0x040027EC RID: 10220
 		[Nullable(2)]
 		private FKuroCurveFloat _RadialBlurHardness;
 
-		// Token: 0x0400CA2D RID: 51757
+		// Token: 0x040027ED RID: 10221
 		internal static int __PropertyOffset_RadialBlurMask;
 
-		// Token: 0x0400CA2E RID: 51758
+		// Token: 0x040027EE RID: 10222
 		internal static int __PropertyOffset_RadialBlurMaskScale;
 
-		// Token: 0x0400CA2F RID: 51759
+		// Token: 0x040027EF RID: 10223
 		internal static int __PropertyOffset_RadialBlurMaskScaleOffset;
 
-		// Token: 0x0400CA30 RID: 51760
+		// Token: 0x040027F0 RID: 10224
 		[Nullable(2)]
 		private FKuroCurveLinearColor _RadialBlurMaskScaleOffset;
 
-		// Token: 0x0400CA31 RID: 51761
+		// Token: 0x040027F1 RID: 10225
 		internal static int __PropertyOffset_MainLightIntensityOverride;
 
-		// Token: 0x0400CA32 RID: 51762
+		// Token: 0x040027F2 RID: 10226
 		internal static int __PropertyOffset_MainLightIntensity;
 
-		// Token: 0x0400CA33 RID: 51763
+		// Token: 0x040027F3 RID: 10227
 		[Nullable(2)]
 		private FKuroCurveFloat _MainLightIntensity;
 
-		// Token: 0x0400CA34 RID: 51764
+		// Token: 0x040027F4 RID: 10228
 		internal static int __PropertyOffset_MainLightColorOverride;
 
-		// Token: 0x0400CA35 RID: 51765
+		// Token: 0x040027F5 RID: 10229
 		internal static int __PropertyOffset_MainLightColor;
 
-		// Token: 0x0400CA36 RID: 51766
+		// Token: 0x040027F6 RID: 10230
 		[Nullable(2)]
 		private FKuroCurveLinearColor _MainLightColor;
 
-		// Token: 0x0400CA37 RID: 51767
+		// Token: 0x040027F7 RID: 10231
 		internal static int __PropertyOffset_SkyLightIntensityOverride;
 
-		// Token: 0x0400CA38 RID: 51768
+		// Token: 0x040027F8 RID: 10232
 		internal static int __PropertyOffset_SkyLightIntensity;
 
-		// Token: 0x0400CA39 RID: 51769
+		// Token: 0x040027F9 RID: 10233
 		[Nullable(2)]
 		private FKuroCurveFloat _SkyLightIntensity;
 
-		// Token: 0x0400CA3A RID: 51770
+		// Token: 0x040027FA RID: 10234
 		internal static int __PropertyOffset_SkyLightColorOverride;
 
-		// Token: 0x0400CA3B RID: 51771
+		// Token: 0x040027FB RID: 10235
 		internal static int __PropertyOffset_SkyLightColor;
 
-		// Token: 0x0400CA3C RID: 51772
+		// Token: 0x040027FC RID: 10236
 		[Nullable(2)]
 		private FKuroCurveLinearColor _SkyLightColor;
 
-		// Token: 0x0400CA3D RID: 51773
+		// Token: 0x040027FD RID: 10237
 		internal static int __PropertyOffset_EnableEffectFog;
 
-		// Token: 0x0400CA3E RID: 51774
+		// Token: 0x040027FE RID: 10238
 		internal static int __PropertyOffset_EffectFogSwitch;
 
-		// Token: 0x0400CA3F RID: 51775
+		// Token: 0x040027FF RID: 10239
 		[Nullable(2)]
 		private FKuroCurveFloat _EffectFogSwitch;
 
-		// Token: 0x0400CA40 RID: 51776
+		// Token: 0x04002800 RID: 10240
 		internal static int __PropertyOffset_KuroEffectFogBlendSceneFogMin;
 
-		// Token: 0x0400CA41 RID: 51777
+		// Token: 0x04002801 RID: 10241
 		[Nullable(2)]
 		private FKuroCurveFloat _KuroEffectFogBlendSceneFogMin;
 
-		// Token: 0x0400CA42 RID: 51778
+		// Token: 0x04002802 RID: 10242
 		internal static int __PropertyOffset_FogDensityOverride;
 
-		// Token: 0x0400CA43 RID: 51779
+		// Token: 0x04002803 RID: 10243
 		internal static int __PropertyOffset_FogDensity;
 
-		// Token: 0x0400CA44 RID: 51780
+		// Token: 0x04002804 RID: 10244
 		[Nullable(2)]
 		private FKuroCurveFloat _FogDensity;
 
-		// Token: 0x0400CA45 RID: 51781
+		// Token: 0x04002805 RID: 10245
 		internal static int __PropertyOffset_FogStartDistance;
 
-		// Token: 0x0400CA46 RID: 51782
+		// Token: 0x04002806 RID: 10246
 		[Nullable(2)]
 		private FKuroCurveFloat _FogStartDistance;
 
-		// Token: 0x0400CA47 RID: 51783
+		// Token: 0x04002807 RID: 10247
 		internal static int __PropertyOffset_FogFalloff;
 
-		// Token: 0x0400CA48 RID: 51784
+		// Token: 0x04002808 RID: 10248
 		internal static int __PropertyOffset_FogMaxOpacity;
 
-		// Token: 0x0400CA49 RID: 51785
+		// Token: 0x04002809 RID: 10249
 		[Nullable(2)]
 		private FKuroCurveFloat _FogMaxOpacity;
 
-		// Token: 0x0400CA4A RID: 51786
+		// Token: 0x0400280A RID: 10250
 		internal static int __PropertyOffset_FogColorOverride;
 
-		// Token: 0x0400CA4B RID: 51787
+		// Token: 0x0400280B RID: 10251
 		internal static int __PropertyOffset_FogNearColor;
 
-		// Token: 0x0400CA4C RID: 51788
+		// Token: 0x0400280C RID: 10252
 		[Nullable(2)]
 		private FKuroCurveLinearColor _FogNearColor;
 
-		// Token: 0x0400CA4D RID: 51789
+		// Token: 0x0400280D RID: 10253
 		internal static int __PropertyOffset_FogFarColor;
 
-		// Token: 0x0400CA4E RID: 51790
+		// Token: 0x0400280E RID: 10254
 		[Nullable(2)]
 		private FKuroCurveLinearColor _FogFarColor;
 
-		// Token: 0x0400CA4F RID: 51791
+		// Token: 0x0400280F RID: 10255
 		internal static int __PropertyOffset_FogNearColorDistance;
 
-		// Token: 0x0400CA50 RID: 51792
+		// Token: 0x04002810 RID: 10256
 		[Nullable(2)]
 		private FKuroCurveFloat _FogNearColorDistance;
 
-		// Token: 0x0400CA51 RID: 51793
+		// Token: 0x04002811 RID: 10257
 		internal static int __PropertyOffset_FogFarColorDistance;
 
-		// Token: 0x0400CA52 RID: 51794
+		// Token: 0x04002812 RID: 10258
 		[Nullable(2)]
 		private FKuroCurveFloat _FogFarColorDistance;
 
-		// Token: 0x0400CA53 RID: 51795
+		// Token: 0x04002813 RID: 10259
 		internal static int __PropertyOffset_FogColorRatio;
 
-		// Token: 0x0400CA54 RID: 51796
+		// Token: 0x04002814 RID: 10260
 		internal static int __PropertyOffset_FogDistanceViewOverride;
 
-		// Token: 0x0400CA55 RID: 51797
+		// Token: 0x04002815 RID: 10261
 		internal static int __PropertyOffset_FogFalloffFarSky;
 
-		// Token: 0x0400CA56 RID: 51798
+		// Token: 0x04002816 RID: 10262
 		internal static int __PropertyOffset_FogMixDistance;
 
-		// Token: 0x0400CA57 RID: 51799
+		// Token: 0x04002817 RID: 10263
 		internal static int __PropertyOffset_FogMixWidth;
 
-		// Token: 0x0400CA58 RID: 51800
+		// Token: 0x04002818 RID: 10264
 		internal static int __PropertyOffset_KuroBloomIntensityOverride;
 
-		// Token: 0x0400CA59 RID: 51801
+		// Token: 0x04002819 RID: 10265
 		internal static int __PropertyOffset_KuroBloomIntensity;
 
-		// Token: 0x0400CA5A RID: 51802
+		// Token: 0x0400281A RID: 10266
 		[Nullable(2)]
 		private FKuroCurveFloat _KuroBloomIntensity;
 
-		// Token: 0x0400CA5B RID: 51803
+		// Token: 0x0400281B RID: 10267
 		internal static int __PropertyOffset_KuroThresholdOverride;
 
-		// Token: 0x0400CA5C RID: 51804
+		// Token: 0x0400281C RID: 10268
 		internal static int __PropertyOffset_KuroThreshold;
 
-		// Token: 0x0400CA5D RID: 51805
+		// Token: 0x0400281D RID: 10269
 		[Nullable(2)]
 		private FKuroCurveFloat _KuroThreshold;
 
-		// Token: 0x0400CA5E RID: 51806
+		// Token: 0x0400281E RID: 10270
 		internal static int __PropertyOffset_SceneFringeIntensityOverride;
 
-		// Token: 0x0400CA5F RID: 51807
+		// Token: 0x0400281F RID: 10271
 		internal static int __PropertyOffset_SceneFringeIntensity;
 
-		// Token: 0x0400CA60 RID: 51808
+		// Token: 0x04002820 RID: 10272
 		[Nullable(2)]
 		private FKuroCurveFloat _SceneFringeIntensity;
 
-		// Token: 0x0400CA61 RID: 51809
+		// Token: 0x04002821 RID: 10273
 		internal static int __PropertyOffset_StartOffsetOverride;
 
-		// Token: 0x0400CA62 RID: 51810
+		// Token: 0x04002822 RID: 10274
 		internal static int __PropertyOffset_StartOffset;
 
-		// Token: 0x0400CA63 RID: 51811
+		// Token: 0x04002823 RID: 10275
 		[Nullable(2)]
 		private FKuroCurveFloat _StartOffset;
 
-		// Token: 0x0400CA64 RID: 51812
+		// Token: 0x04002824 RID: 10276
 		internal static int __PropertyOffset_VignetteIntensityOverride;
 
-		// Token: 0x0400CA65 RID: 51813
+		// Token: 0x04002825 RID: 10277
 		internal static int __PropertyOffset_VignetteIntensity;
 
-		// Token: 0x0400CA66 RID: 51814
+		// Token: 0x04002826 RID: 10278
 		[Nullable(2)]
 		private FKuroCurveFloat _VignetteIntensity;
 
-		// Token: 0x0400CA67 RID: 51815
+		// Token: 0x04002827 RID: 10279
 		internal static int __PropertyOffset_VignetteHardness;
 
-		// Token: 0x0400CA68 RID: 51816
+		// Token: 0x04002828 RID: 10280
 		[Nullable(2)]
 		private FKuroCurveFloat _VignetteHardness;
 
-		// Token: 0x0400CA69 RID: 51817
+		// Token: 0x04002829 RID: 10281
 		internal static int __PropertyOffset_VignetteXScale;
 
-		// Token: 0x0400CA6A RID: 51818
+		// Token: 0x0400282A RID: 10282
 		[Nullable(2)]
 		private FKuroCurveFloat _VignetteXScale;
 
-		// Token: 0x0400CA6B RID: 51819
+		// Token: 0x0400282B RID: 10283
 		internal static int __PropertyOffset_VignetteYScale;
 
-		// Token: 0x0400CA6C RID: 51820
+		// Token: 0x0400282C RID: 10284
 		[Nullable(2)]
 		private FKuroCurveFloat _VignetteYScale;
 
-		// Token: 0x0400CA6D RID: 51821
+		// Token: 0x0400282D RID: 10285
 		internal static int __PropertyOffset_VignetteXPos;
 
-		// Token: 0x0400CA6E RID: 51822
+		// Token: 0x0400282E RID: 10286
 		[Nullable(2)]
 		private FKuroCurveFloat _VignetteXPos;
 
-		// Token: 0x0400CA6F RID: 51823
+		// Token: 0x0400282F RID: 10287
 		internal static int __PropertyOffset_VignetteYPos;
 
-		// Token: 0x0400CA70 RID: 51824
+		// Token: 0x04002830 RID: 10288
 		[Nullable(2)]
 		private FKuroCurveFloat _VignetteYPos;
 
-		// Token: 0x0400CA71 RID: 51825
+		// Token: 0x04002831 RID: 10289
 		internal static int __PropertyOffset_VignetteColor;
 
-		// Token: 0x0400CA72 RID: 51826
+		// Token: 0x04002832 RID: 10290
 		[Nullable(2)]
 		private FKuroCurveLinearColor _VignetteColor;
 
-		// Token: 0x0400CA73 RID: 51827
+		// Token: 0x04002833 RID: 10291
 		internal static int __PropertyOffset_VignetteGain;
 
-		// Token: 0x0400CA74 RID: 51828
+		// Token: 0x04002834 RID: 10292
 		[Nullable(2)]
 		private FKuroCurveFloat _VignetteGain;
 
-		// Token: 0x0400CA75 RID: 51829
+		// Token: 0x04002835 RID: 10293
 		internal static int __PropertyOffset_GrainJitterOverride;
 
-		// Token: 0x0400CA76 RID: 51830
+		// Token: 0x04002836 RID: 10294
 		internal static int __PropertyOffset_GrainJitter;
 
-		// Token: 0x0400CA77 RID: 51831
+		// Token: 0x04002837 RID: 10295
 		[Nullable(2)]
 		private FKuroCurveFloat _GrainJitter;
 
-		// Token: 0x0400CA78 RID: 51832
+		// Token: 0x04002838 RID: 10296
 		internal static int __PropertyOffset_GrainIntensityOverride;
 
-		// Token: 0x0400CA79 RID: 51833
+		// Token: 0x04002839 RID: 10297
 		internal static int __PropertyOffset_GrainIntensity;
 
-		// Token: 0x0400CA7A RID: 51834
+		// Token: 0x0400283A RID: 10298
 		[Nullable(2)]
 		private FKuroCurveFloat _GrainIntensity;
 
-		// Token: 0x0400CA7B RID: 51835
+		// Token: 0x0400283B RID: 10299
 		internal static int __PropertyOffset_LutIntensityOverride;
 
-		// Token: 0x0400CA7C RID: 51836
+		// Token: 0x0400283C RID: 10300
 		internal static int __PropertyOffset_LutIntensity;
 
-		// Token: 0x0400CA7D RID: 51837
+		// Token: 0x0400283D RID: 10301
 		[Nullable(2)]
 		private FKuroCurveFloat _LutIntensity;
 
-		// Token: 0x0400CA7E RID: 51838
+		// Token: 0x0400283E RID: 10302
 		internal static int __PropertyOffset_LutTextureOverride;
 
-		// Token: 0x0400CA7F RID: 51839
+		// Token: 0x0400283F RID: 10303
 		internal static int __PropertyOffset_LutTexture;
 
-		// Token: 0x0400CA80 RID: 51840
+		// Token: 0x04002840 RID: 10304
 		internal static int __PropertyOffset_SceneColorTintOverride;
 
-		// Token: 0x0400CA81 RID: 51841
+		// Token: 0x04002841 RID: 10305
 		internal static int __PropertyOffset_SceneColorTint;
 
-		// Token: 0x0400CA82 RID: 51842
+		// Token: 0x04002842 RID: 10306
 		[Nullable(2)]
 		private FKuroCurveLinearColor _SceneColorTint;
 
-		// Token: 0x0400CA83 RID: 51843
+		// Token: 0x04002843 RID: 10307
 		internal static int __PropertyOffset_SceneColorDesaturateOverride;
 
-		// Token: 0x0400CA84 RID: 51844
+		// Token: 0x04002844 RID: 10308
 		internal static int __PropertyOffset_SceneColorDesaturate;
 
-		// Token: 0x0400CA85 RID: 51845
+		// Token: 0x04002845 RID: 10309
 		[Nullable(2)]
 		private FKuroCurveFloat _SceneColorDesaturate;
 
-		// Token: 0x0400CA86 RID: 51846
+		// Token: 0x04002846 RID: 10310
 		internal static int __PropertyOffset_TranslucentColorTintOverride;
 
-		// Token: 0x0400CA87 RID: 51847
+		// Token: 0x04002847 RID: 10311
 		internal static int __PropertyOffset_TranslucentColorTint;
 
-		// Token: 0x0400CA88 RID: 51848
+		// Token: 0x04002848 RID: 10312
 		[Nullable(2)]
 		private FKuroCurveLinearColor _TranslucentColorTint;
 
-		// Token: 0x0400CA89 RID: 51849
+		// Token: 0x04002849 RID: 10313
 		internal static int __PropertyOffset_TranslucentColorDesaturateOverride;
 
-		// Token: 0x0400CA8A RID: 51850
+		// Token: 0x0400284A RID: 10314
 		internal static int __PropertyOffset_TranslucentColorDesaturate;
 
-		// Token: 0x0400CA8B RID: 51851
+		// Token: 0x0400284B RID: 10315
 		[Nullable(2)]
 		private FKuroCurveFloat _TranslucentColorDesaturate;
 
-		// Token: 0x0400CA8C RID: 51852
+		// Token: 0x0400284C RID: 10316
 		internal static int __PropertyOffset_FightTranslucentNoDesaturateOverride;
 
-		// Token: 0x0400CA8D RID: 51853
+		// Token: 0x0400284D RID: 10317
 		internal static int __PropertyOffset_FightTranslucentNoDesaturate;
 
-		// Token: 0x0400CA8E RID: 51854
+		// Token: 0x0400284E RID: 10318
 		internal static int __PropertyOffset_BlackWhiteFlashIntensityOverride;
 
-		// Token: 0x0400CA8F RID: 51855
+		// Token: 0x0400284F RID: 10319
 		internal static int __PropertyOffset_BlackWhiteFlashIntensity;
 
-		// Token: 0x0400CA90 RID: 51856
+		// Token: 0x04002850 RID: 10320
 		[Nullable(2)]
 		private FKuroCurveFloat _BlackWhiteFlashIntensity;
 
-		// Token: 0x0400CA91 RID: 51857
+		// Token: 0x04002851 RID: 10321
 		internal static int __PropertyOffset_BlackWhiteFlashFactorOverride;
 
-		// Token: 0x0400CA92 RID: 51858
+		// Token: 0x04002852 RID: 10322
 		internal static int __PropertyOffset_BlackWhiteFlashFactor;
 
-		// Token: 0x0400CA93 RID: 51859
+		// Token: 0x04002853 RID: 10323
 		[Nullable(2)]
 		private FKuroCurveFloat _BlackWhiteFlashFactor;
 
-		// Token: 0x0400CA94 RID: 51860
+		// Token: 0x04002854 RID: 10324
 		internal static int __PropertyOffset_BlackWhiteFlashThresholdOverride;
 
-		// Token: 0x0400CA95 RID: 51861
+		// Token: 0x04002855 RID: 10325
 		internal static int __PropertyOffset_BlackWhiteFlashThreshold;
 
-		// Token: 0x0400CA96 RID: 51862
+		// Token: 0x04002856 RID: 10326
 		[Nullable(2)]
 		private FKuroCurveFloat _BlackWhiteFlashThreshold;
 
-		// Token: 0x0400CA97 RID: 51863
+		// Token: 0x04002857 RID: 10327
 		internal static int __PropertyOffset_BlackWhiteFlashBlackAreaColorOverride;
 
-		// Token: 0x0400CA98 RID: 51864
+		// Token: 0x04002858 RID: 10328
 		internal static int __PropertyOffset_BlackWhiteFlashBlackAreaColor;
 
-		// Token: 0x0400CA99 RID: 51865
+		// Token: 0x04002859 RID: 10329
 		[Nullable(2)]
 		private FKuroCurveLinearColor _BlackWhiteFlashBlackAreaColor;
 
-		// Token: 0x0400CA9A RID: 51866
+		// Token: 0x0400285A RID: 10330
 		internal static int __PropertyOffset_BlackWhiteFlashWhiteAreaColorOverride;
 
-		// Token: 0x0400CA9B RID: 51867
+		// Token: 0x0400285B RID: 10331
 		internal static int __PropertyOffset_BlackWhiteFlashWhiteAreaColor;
 
-		// Token: 0x0400CA9C RID: 51868
+		// Token: 0x0400285C RID: 10332
 		[Nullable(2)]
 		private FKuroCurveLinearColor _BlackWhiteFlashWhiteAreaColor;
 
-		// Token: 0x0400CA9D RID: 51869
+		// Token: 0x0400285D RID: 10333
 		internal static int __PropertyOffset_GrayGradationOverride;
 
-		// Token: 0x0400CA9E RID: 51870
+		// Token: 0x0400285E RID: 10334
 		internal static int __PropertyOffset_GrayGradationCullTranslucency;
 
-		// Token: 0x0400CA9F RID: 51871
+		// Token: 0x0400285F RID: 10335
 		internal static int __PropertyOffset_GrayGradationUsePlayerLocation;
 
-		// Token: 0x0400CAA0 RID: 51872
+		// Token: 0x04002860 RID: 10336
 		internal static int __PropertyOffset_GrayGradationDegree;
 
-		// Token: 0x0400CAA1 RID: 51873
+		// Token: 0x04002861 RID: 10337
 		[Nullable(2)]
 		private FKuroCurveFloat _GrayGradationDegree;
 
-		// Token: 0x0400CAA2 RID: 51874
+		// Token: 0x04002862 RID: 10338
 		internal static int __PropertyOffset_GrayGradationLerpWidth;
 
-		// Token: 0x0400CAA3 RID: 51875
+		// Token: 0x04002863 RID: 10339
 		[Nullable(2)]
 		private FKuroCurveFloat _GrayGradationLerpWidth;
 
-		// Token: 0x0400CAA4 RID: 51876
+		// Token: 0x04002864 RID: 10340
 		internal static int __PropertyOffset_GrayGradationRampTexture;
 
-		// Token: 0x0400CAA5 RID: 51877
+		// Token: 0x04002865 RID: 10341
 		internal static int __PropertyOffset_GrayGradationColorTint;
 
-		// Token: 0x0400CAA6 RID: 51878
+		// Token: 0x04002866 RID: 10342
 		[Nullable(2)]
 		private FKuroCurveLinearColor _GrayGradationColorTint;
 
-		// Token: 0x0400CAA7 RID: 51879
+		// Token: 0x04002867 RID: 10343
 		internal static int __PropertyOffset_GrayGradationBlendWeight;
 
-		// Token: 0x0400CAA8 RID: 51880
+		// Token: 0x04002868 RID: 10344
 		[Nullable(2)]
 		private FKuroCurveFloat _GrayGradationBlendWeight;
 
-		// Token: 0x0400CAA9 RID: 51881
+		// Token: 0x04002869 RID: 10345
 		internal static int __PropertyOffset_RetroFuturisticOverride;
 
-		// Token: 0x0400CAAA RID: 51882
+		// Token: 0x0400286A RID: 10346
 		internal static int __PropertyOffset_MainCenterMask;
 
-		// Token: 0x0400CAAB RID: 51883
+		// Token: 0x0400286B RID: 10347
 		[Nullable(2)]
 		private FKuroCurveFloat _MainCenterMask;
 
-		// Token: 0x0400CAAC RID: 51884
+		// Token: 0x0400286C RID: 10348
 		internal static int __PropertyOffset_MainCenterMaskRadius;
 
-		// Token: 0x0400CAAD RID: 51885
+		// Token: 0x0400286D RID: 10349
 		[Nullable(2)]
 		private FKuroCurveFloat _MainCenterMaskRadius;
 
-		// Token: 0x0400CAAE RID: 51886
+		// Token: 0x0400286E RID: 10350
 		internal static int __PropertyOffset_MainCenterMaskHardness;
 
-		// Token: 0x0400CAAF RID: 51887
+		// Token: 0x0400286F RID: 10351
 		[Nullable(2)]
 		private FKuroCurveFloat _MainCenterMaskHardness;
 
-		// Token: 0x0400CAB0 RID: 51888
+		// Token: 0x04002870 RID: 10352
 		internal static int __PropertyOffset_MainStartDistance;
 
-		// Token: 0x0400CAB1 RID: 51889
+		// Token: 0x04002871 RID: 10353
 		[Nullable(2)]
 		private FKuroCurveFloat _MainStartDistance;
 
-		// Token: 0x0400CAB2 RID: 51890
+		// Token: 0x04002872 RID: 10354
 		internal static int __PropertyOffset_MainCharacterIntensity;
 
-		// Token: 0x0400CAB3 RID: 51891
+		// Token: 0x04002873 RID: 10355
 		[Nullable(2)]
 		private FKuroCurveFloat _MainCharacterIntensity;
 
-		// Token: 0x0400CAB4 RID: 51892
+		// Token: 0x04002874 RID: 10356
 		internal static int __PropertyOffset_VintageColorIntensity;
 
-		// Token: 0x0400CAB5 RID: 51893
+		// Token: 0x04002875 RID: 10357
 		[Nullable(2)]
 		private FKuroCurveFloat _VintageColorIntensity;
 
-		// Token: 0x0400CAB6 RID: 51894
+		// Token: 0x04002876 RID: 10358
 		internal static int __PropertyOffset_VintageColorBlackPoint;
 
-		// Token: 0x0400CAB7 RID: 51895
+		// Token: 0x04002877 RID: 10359
 		[Nullable(2)]
 		private FKuroCurveFloat _VintageColorBlackPoint;
 
-		// Token: 0x0400CAB8 RID: 51896
+		// Token: 0x04002878 RID: 10360
 		internal static int __PropertyOffset_VintageColorWhitePoint;
 
-		// Token: 0x0400CAB9 RID: 51897
+		// Token: 0x04002879 RID: 10361
 		[Nullable(2)]
 		private FKuroCurveFloat _VintageColorWhitePoint;
 
-		// Token: 0x0400CABA RID: 51898
+		// Token: 0x0400287A RID: 10362
 		internal static int __PropertyOffset_VHSLinesColorIntensity;
 
-		// Token: 0x0400CABB RID: 51899
+		// Token: 0x0400287B RID: 10363
 		[Nullable(2)]
 		private FKuroCurveFloat _VHSLinesColorIntensity;
 
-		// Token: 0x0400CABC RID: 51900
+		// Token: 0x0400287C RID: 10364
 		internal static int __PropertyOffset_VHSLinesDistortIntensity;
 
-		// Token: 0x0400CABD RID: 51901
+		// Token: 0x0400287D RID: 10365
 		[Nullable(2)]
 		private FKuroCurveFloat _VHSLinesDistortIntensity;
 
-		// Token: 0x0400CABE RID: 51902
+		// Token: 0x0400287E RID: 10366
 		internal static int __PropertyOffset_VHSEffectIntensity;
 
-		// Token: 0x0400CABF RID: 51903
+		// Token: 0x0400287F RID: 10367
 		[Nullable(2)]
 		private FKuroCurveFloat _VHSEffectIntensity;
 
-		// Token: 0x0400CAC0 RID: 51904
+		// Token: 0x04002880 RID: 10368
 		internal static int __PropertyOffset_VHSSpecklesIntensity;
 
-		// Token: 0x0400CAC1 RID: 51905
+		// Token: 0x04002881 RID: 10369
 		[Nullable(2)]
 		private FKuroCurveFloat _VHSSpecklesIntensity;
 
-		// Token: 0x0400CAC2 RID: 51906
+		// Token: 0x04002882 RID: 10370
 		internal static int __PropertyOffset_VHSSpecklesAmount;
 
-		// Token: 0x0400CAC3 RID: 51907
+		// Token: 0x04002883 RID: 10371
 		[Nullable(2)]
 		private FKuroCurveFloat _VHSSpecklesAmount;
 
-		// Token: 0x0400CAC4 RID: 51908
+		// Token: 0x04002884 RID: 10372
 		internal static int __PropertyOffset_VHSSpecklesSize;
 
-		// Token: 0x0400CAC5 RID: 51909
+		// Token: 0x04002885 RID: 10373
 		[Nullable(2)]
 		private FKuroCurveFloat _VHSSpecklesSize;
 
-		// Token: 0x0400CAC6 RID: 51910
+		// Token: 0x04002886 RID: 10374
 		internal static int __PropertyOffset_CRTDistortion;
 
-		// Token: 0x0400CAC7 RID: 51911
+		// Token: 0x04002887 RID: 10375
 		[Nullable(2)]
 		private FKuroCurveFloat _CRTDistortion;
 
-		// Token: 0x0400CAC8 RID: 51912
+		// Token: 0x04002888 RID: 10376
 		internal static int __PropertyOffset_RetroFuturisticAdvancedOverride;
 
-		// Token: 0x0400CAC9 RID: 51913
+		// Token: 0x04002889 RID: 10377
 		internal static int __PropertyOffset_VintageColorCenterMask;
 
-		// Token: 0x0400CACA RID: 51914
+		// Token: 0x0400288A RID: 10378
 		[Nullable(2)]
 		private FKuroCurveFloat _VintageColorCenterMask;
 
-		// Token: 0x0400CACB RID: 51915
+		// Token: 0x0400288B RID: 10379
 		internal static int __PropertyOffset_VintageColorStartDistance;
 
-		// Token: 0x0400CACC RID: 51916
+		// Token: 0x0400288C RID: 10380
 		[Nullable(2)]
 		private FKuroCurveFloat _VintageColorStartDistance;
 
-		// Token: 0x0400CACD RID: 51917
+		// Token: 0x0400288D RID: 10381
 		internal static int __PropertyOffset_VintageColorCharacterIntensity;
 
-		// Token: 0x0400CACE RID: 51918
+		// Token: 0x0400288E RID: 10382
 		[Nullable(2)]
 		private FKuroCurveFloat _VintageColorCharacterIntensity;
 
-		// Token: 0x0400CACF RID: 51919
+		// Token: 0x0400288F RID: 10383
 		internal static int __PropertyOffset_VHSLinesCenterMask;
 
-		// Token: 0x0400CAD0 RID: 51920
+		// Token: 0x04002890 RID: 10384
 		[Nullable(2)]
 		private FKuroCurveFloat _VHSLinesCenterMask;
 
-		// Token: 0x0400CAD1 RID: 51921
+		// Token: 0x04002891 RID: 10385
 		internal static int __PropertyOffset_VHSLinesStartDistance;
 
-		// Token: 0x0400CAD2 RID: 51922
+		// Token: 0x04002892 RID: 10386
 		[Nullable(2)]
 		private FKuroCurveFloat _VHSLinesStartDistance;
 
-		// Token: 0x0400CAD3 RID: 51923
+		// Token: 0x04002893 RID: 10387
 		internal static int __PropertyOffset_VHSLinesCharacterIntensity;
 
-		// Token: 0x0400CAD4 RID: 51924
+		// Token: 0x04002894 RID: 10388
 		[Nullable(2)]
 		private FKuroCurveFloat _VHSLinesCharacterIntensity;
 
-		// Token: 0x0400CAD5 RID: 51925
+		// Token: 0x04002895 RID: 10389
 		internal static int __PropertyOffset_VHSEffectCenterMask;
 
-		// Token: 0x0400CAD6 RID: 51926
+		// Token: 0x04002896 RID: 10390
 		[Nullable(2)]
 		private FKuroCurveFloat _VHSEffectCenterMask;
 
-		// Token: 0x0400CAD7 RID: 51927
+		// Token: 0x04002897 RID: 10391
 		internal static int __PropertyOffset_VHSEffectStartDistance;
 
-		// Token: 0x0400CAD8 RID: 51928
+		// Token: 0x04002898 RID: 10392
 		[Nullable(2)]
 		private FKuroCurveFloat _VHSEffectStartDistance;
 
-		// Token: 0x0400CAD9 RID: 51929
+		// Token: 0x04002899 RID: 10393
 		internal static int __PropertyOffset_VHSEffectCharacterIntensity;
 
-		// Token: 0x0400CADA RID: 51930
+		// Token: 0x0400289A RID: 10394
 		[Nullable(2)]
 		private FKuroCurveFloat _VHSEffectCharacterIntensity;
 
-		// Token: 0x0400CADB RID: 51931
+		// Token: 0x0400289B RID: 10395
 		internal static int __PropertyOffset_VHSSpecklesCenterMask;
 
-		// Token: 0x0400CADC RID: 51932
+		// Token: 0x0400289C RID: 10396
 		[Nullable(2)]
 		private FKuroCurveFloat _VHSSpecklesCenterMask;
 
-		// Token: 0x0400CADD RID: 51933
+		// Token: 0x0400289D RID: 10397
 		internal static int __PropertyOffset_VHSSpecklesStartDistance;
 
-		// Token: 0x0400CADE RID: 51934
+		// Token: 0x0400289E RID: 10398
 		[Nullable(2)]
 		private FKuroCurveFloat _VHSSpecklesStartDistance;
 
-		// Token: 0x0400CADF RID: 51935
+		// Token: 0x0400289F RID: 10399
 		internal static int __PropertyOffset_VHSSpecklesCharacterIntensity;
 
-		// Token: 0x0400CAE0 RID: 51936
+		// Token: 0x040028A0 RID: 10400
 		[Nullable(2)]
 		private FKuroCurveFloat _VHSSpecklesCharacterIntensity;
 
-		// Token: 0x0400CAE1 RID: 51937
+		// Token: 0x040028A1 RID: 10401
 		internal static int __PropertyOffset_ScreenWaveOverride;
 
-		// Token: 0x0400CAE2 RID: 51938
+		// Token: 0x040028A2 RID: 10402
 		internal static int __PropertyOffset_UsePolarWavePattern;
 
-		// Token: 0x0400CAE3 RID: 51939
+		// Token: 0x040028A3 RID: 10403
 		internal static int __PropertyOffset_WavePatternTexture;
 
-		// Token: 0x0400CAE4 RID: 51940
+		// Token: 0x040028A4 RID: 10404
 		internal static int __PropertyOffset_WavePatternScaleBias;
 
-		// Token: 0x0400CAE5 RID: 51941
+		// Token: 0x040028A5 RID: 10405
 		[Nullable(2)]
 		private FKuroCurveLinearColor _WavePatternScaleBias;
 
-		// Token: 0x0400CAE6 RID: 51942
+		// Token: 0x040028A6 RID: 10406
 		internal static int __PropertyOffset_WaveRadius;
 
-		// Token: 0x0400CAE7 RID: 51943
+		// Token: 0x040028A7 RID: 10407
 		[Nullable(2)]
 		private FKuroCurveFloat _WaveRadius;
 
-		// Token: 0x0400CAE8 RID: 51944
+		// Token: 0x040028A8 RID: 10408
 		internal static int __PropertyOffset_WaveRadiusSmooth;
 
-		// Token: 0x0400CAE9 RID: 51945
+		// Token: 0x040028A9 RID: 10409
 		[Nullable(2)]
 		private FKuroCurveFloat _WaveRadiusSmooth;
 
-		// Token: 0x0400CAEA RID: 51946
+		// Token: 0x040028AA RID: 10410
 		internal static int __PropertyOffset_WaveHeight;
 
-		// Token: 0x0400CAEB RID: 51947
+		// Token: 0x040028AB RID: 10411
 		[Nullable(2)]
 		private FKuroCurveFloat _WaveHeight;
 
-		// Token: 0x0400CAEC RID: 51948
+		// Token: 0x040028AC RID: 10412
 		internal static int __PropertyOffset_WaveHeightSmooth;
 
-		// Token: 0x0400CAED RID: 51949
+		// Token: 0x040028AD RID: 10413
 		[Nullable(2)]
 		private FKuroCurveFloat _WaveHeightSmooth;
 
-		// Token: 0x0400CAEE RID: 51950
+		// Token: 0x040028AE RID: 10414
 		internal static int __PropertyOffset_WaveNormalSize;
 
-		// Token: 0x0400CAEF RID: 51951
+		// Token: 0x040028AF RID: 10415
 		[Nullable(2)]
 		private FKuroCurveFloat _WaveNormalSize;
 
-		// Token: 0x0400CAF0 RID: 51952
+		// Token: 0x040028B0 RID: 10416
 		internal static int __PropertyOffset_WaveRoughness;
 
-		// Token: 0x0400CAF1 RID: 51953
+		// Token: 0x040028B1 RID: 10417
 		[Nullable(2)]
 		private FKuroCurveFloat _WaveRoughness;
 
-		// Token: 0x0400CAF2 RID: 51954
+		// Token: 0x040028B2 RID: 10418
 		internal static int __PropertyOffset_WaveDissolveTexture;
 
-		// Token: 0x0400CAF3 RID: 51955
+		// Token: 0x040028B3 RID: 10419
 		internal static int __PropertyOffset_WaveDissolveScaleBias;
 
-		// Token: 0x0400CAF4 RID: 51956
+		// Token: 0x040028B4 RID: 10420
 		[Nullable(2)]
 		private FKuroCurveLinearColor _WaveDissolveScaleBias;
 
-		// Token: 0x0400CAF5 RID: 51957
+		// Token: 0x040028B5 RID: 10421
 		internal static int __PropertyOffset_WaveDissolveProgress;
 
-		// Token: 0x0400CAF6 RID: 51958
+		// Token: 0x040028B6 RID: 10422
 		[Nullable(2)]
 		private FKuroCurveFloat _WaveDissolveProgress;
 
-		// Token: 0x0400CAF7 RID: 51959
+		// Token: 0x040028B7 RID: 10423
 		internal static int __PropertyOffset_WaveDissolveSmooth;
 
-		// Token: 0x0400CAF8 RID: 51960
+		// Token: 0x040028B8 RID: 10424
 		[Nullable(2)]
 		private FKuroCurveFloat _WaveDissolveSmooth;
 
-		// Token: 0x0400CAF9 RID: 51961
+		// Token: 0x040028B9 RID: 10425
 		internal static int __PropertyOffset_WaveColorTexture;
 
-		// Token: 0x0400CAFA RID: 51962
+		// Token: 0x040028BA RID: 10426
 		internal static int __PropertyOffset_WaveColorScaleBias;
 
-		// Token: 0x0400CAFB RID: 51963
+		// Token: 0x040028BB RID: 10427
 		[Nullable(2)]
 		private FKuroCurveLinearColor _WaveColorScaleBias;
 
-		// Token: 0x0400CAFC RID: 51964
+		// Token: 0x040028BC RID: 10428
 		internal static int __PropertyOffset_WaveColorTextureTint;
 
-		// Token: 0x0400CAFD RID: 51965
+		// Token: 0x040028BD RID: 10429
 		[Nullable(2)]
 		private FKuroCurveLinearColor _WaveColorTextureTint;
 
-		// Token: 0x0400CAFE RID: 51966
+		// Token: 0x040028BE RID: 10430
 		internal static int __PropertyOffset_WaveAmplitude;
 
-		// Token: 0x0400CAFF RID: 51967
+		// Token: 0x040028BF RID: 10431
 		[Nullable(2)]
 		private FKuroCurveFloat _WaveAmplitude;
 
-		// Token: 0x0400CB00 RID: 51968
+		// Token: 0x040028C0 RID: 10432
 		internal static int __PropertyOffset_AutoExposureOverride;
 
-		// Token: 0x0400CB01 RID: 51969
+		// Token: 0x040028C1 RID: 10433
 		internal static int __PropertyOffset_AutoExposureMinBrightness;
 
-		// Token: 0x0400CB02 RID: 51970
+		// Token: 0x040028C2 RID: 10434
 		[Nullable(2)]
 		private FKuroCurveFloat _AutoExposureMinBrightness;
 
-		// Token: 0x0400CB03 RID: 51971
+		// Token: 0x040028C3 RID: 10435
 		internal static int __PropertyOffset_AutoExposureMaxBrightness;
 
-		// Token: 0x0400CB04 RID: 51972
+		// Token: 0x040028C4 RID: 10436
 		[Nullable(2)]
 		private FKuroCurveFloat _AutoExposureMaxBrightness;
 
-		// Token: 0x0400CB05 RID: 51973
+		// Token: 0x040028C5 RID: 10437
 		internal static int __PropertyOffset_WeatherDataAsset;
 
-		// Token: 0x0400CB06 RID: 51974
+		// Token: 0x040028C6 RID: 10438
 		internal static int __PropertyOffset_BurstDissolveOverride;
 
-		// Token: 0x0400CB07 RID: 51975
+		// Token: 0x040028C7 RID: 10439
 		internal static int __PropertyOffset_BurstDissolveTexture;
 
-		// Token: 0x0400CB08 RID: 51976
+		// Token: 0x040028C8 RID: 10440
 		internal static int __PropertyOffset_BurstDissolveThreshold;
 
-		// Token: 0x0400CB09 RID: 51977
+		// Token: 0x040028C9 RID: 10441
 		[Nullable(2)]
 		private FKuroCurveFloat _BurstDissolveThreshold;
 
-		// Token: 0x0400CB0A RID: 51978
+		// Token: 0x040028CA RID: 10442
 		internal static int __PropertyOffset_BurstDissolveSmooth;
 
-		// Token: 0x0400CB0B RID: 51979
+		// Token: 0x040028CB RID: 10443
 		[Nullable(2)]
 		private FKuroCurveFloat _BurstDissolveSmooth;
 
-		// Token: 0x0400CB0C RID: 51980
+		// Token: 0x040028CC RID: 10444
 		internal static int __PropertyOffset_BurstClipThreshold;
 
-		// Token: 0x0400CB0D RID: 51981
+		// Token: 0x040028CD RID: 10445
 		[Nullable(2)]
 		private FKuroCurveFloat _BurstClipThreshold;
 
-		// Token: 0x0400CB0E RID: 51982
+		// Token: 0x040028CE RID: 10446
 		internal static int __PropertyOffset_SkyBoxOverride;
 
-		// Token: 0x0400CB0F RID: 51983
-		internal static int __PropertyOffset_SkyBoxSetting;
-
-		// Token: 0x0400CB10 RID: 51984
-		[Nullable(2)]
-		private FKuroEffectPostProcessSkyBoxSetting _SkyBoxSetting;
-
-		// Token: 0x0400CB11 RID: 51985
+		// Token: 0x040028CF RID: 10447
 		internal static int __PropertyOffset_ColorGradingOverride;
 
-		// Token: 0x0400CB12 RID: 51986
+		// Token: 0x040028D0 RID: 10448
 		internal static int __PropertyOffset_Desaturate;
 
-		// Token: 0x0400CB13 RID: 51987
+		// Token: 0x040028D1 RID: 10449
 		[Nullable(2)]
 		private FKuroCurveFloat _Desaturate;
 
-		// Token: 0x0400CB14 RID: 51988
+		// Token: 0x040028D2 RID: 10450
 		internal static int __PropertyOffset_Tint;
 
-		// Token: 0x0400CB15 RID: 51989
+		// Token: 0x040028D3 RID: 10451
 		[Nullable(2)]
 		private FKuroCurveLinearColor _Tint;
 	}

@@ -11,16 +11,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001DCA RID: 7626
+// Token: 0x0200128C RID: 4748
 public class GuideTipsView : GuideBaseView
 {
-	// Token: 0x0600E800 RID: 59392 RVA: 0x0036D1C4 File Offset: 0x0036B3C4
+	// Token: 0x0600BC1F RID: 48159 RVA: 0x00378EC4 File Offset: 0x003770C4
 	[NullableContext(1)]
 	public GuideTipsView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600E801 RID: 59393 RVA: 0x0036D1D4 File Offset: 0x0036B3D4
+	// Token: 0x0600BC20 RID: 48160 RVA: 0x00378ED4 File Offset: 0x003770D4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -42,19 +42,19 @@ public class GuideTipsView : GuideBaseView
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600E802 RID: 59394 RVA: 0x0036D2C1 File Offset: 0x0036B4C1
+	// Token: 0x0600BC21 RID: 48161 RVA: 0x00378FC1 File Offset: 0x003771C1
 	protected override void OnGuideBaseViewAddEvent()
 	{
 		EventSystem.Instance.Add<bool>(EEventName.OnShowMouseCursor, new Action<bool>(this.OnShowMouseCursor));
 	}
 
-	// Token: 0x0600E803 RID: 59395 RVA: 0x0036D2DF File Offset: 0x0036B4DF
+	// Token: 0x0600BC22 RID: 48162 RVA: 0x00378FDF File Offset: 0x003771DF
 	protected override void OnGuideBaseViewRemoveEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.OnShowMouseCursor, new Action<bool>(this.OnShowMouseCursor));
 	}
 
-	// Token: 0x0600E804 RID: 59396 RVA: 0x0036D300 File Offset: 0x0036B500
+	// Token: 0x0600BC23 RID: 48163 RVA: 0x00379000 File Offset: 0x00377200
 	protected override void OnGuideBaseViewAfterHide()
 	{
 		base.UnbindInput(this.Config.Value.InputEnums(), this.Config.Value.InputEnums());
@@ -64,7 +64,7 @@ public class GuideTipsView : GuideBaseView
 		}
 	}
 
-	// Token: 0x0600E805 RID: 59397 RVA: 0x0036D358 File Offset: 0x0036B558
+	// Token: 0x0600BC24 RID: 48164 RVA: 0x00379058 File Offset: 0x00377258
 	protected override void OnBeforeGuideBaseViewCreate()
 	{
 		this.Config = new GuideTips?((GuideTips)this.GuideStepInfo.ViewData.ViewConf);
@@ -72,7 +72,7 @@ public class GuideTipsView : GuideBaseView
 		base.BindInput(list, list, new TInputHandle<float>(this.ProcessInput));
 	}
 
-	// Token: 0x0600E806 RID: 59398 RVA: 0x0036D3B4 File Offset: 0x0036B5B4
+	// Token: 0x0600BC25 RID: 48165 RVA: 0x003790B4 File Offset: 0x003772B4
 	protected override void OnGuideBaseViewStart()
 	{
 		UUIText text = base.GetText(2);
@@ -86,7 +86,7 @@ public class GuideTipsView : GuideBaseView
 		item.SetRaycastTarget(num > 0f);
 	}
 
-	// Token: 0x0600E807 RID: 59399 RVA: 0x0036D458 File Offset: 0x0036B658
+	// Token: 0x0600BC26 RID: 48166 RVA: 0x00379158 File Offset: 0x00377358
 	protected override void OnGuideViewAfterShow()
 	{
 		UUIItem item = base.GetItem(3);
@@ -102,7 +102,7 @@ public class GuideTipsView : GuideBaseView
 		base.BindInput(new List<string>(this.Config.Value.InputEnumsIter()), new List<string>(this.Config.Value.InputEnumsIter()), new TInputHandle<float>(this.ProcessInput));
 	}
 
-	// Token: 0x0600E808 RID: 59400 RVA: 0x0036D4E4 File Offset: 0x0036B6E4
+	// Token: 0x0600BC27 RID: 48167 RVA: 0x003791E4 File Offset: 0x003773E4
 	protected override UniTask OnBeforeHideAsync()
 	{
 		GuideTipsView.<OnBeforeHideAsync>d__13 <OnBeforeHideAsync>d__;
@@ -113,7 +113,7 @@ public class GuideTipsView : GuideBaseView
 		return <OnBeforeHideAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E809 RID: 59401 RVA: 0x0036D528 File Offset: 0x0036B728
+	// Token: 0x0600BC28 RID: 48168 RVA: 0x00379228 File Offset: 0x00377428
 	protected override void OnGuideBaseViewTick(float delta)
 	{
 		bool flag = this.IsAllowedViewShow() && BattleUiModel.Instance.ChildViewData.GetChildVisible(EBattleUiChild.GuideTipsView) && !base.HasConflictView();
@@ -124,7 +124,7 @@ public class GuideTipsView : GuideBaseView
 		}
 	}
 
-	// Token: 0x0600E80A RID: 59402 RVA: 0x0036D57C File Offset: 0x0036B77C
+	// Token: 0x0600BC29 RID: 48169 RVA: 0x0037927C File Offset: 0x0037747C
 	protected override void OnAfterPlayStartSequence()
 	{
 		if (!this.Config.Value.UseLoopAnim)
@@ -135,7 +135,7 @@ public class GuideTipsView : GuideBaseView
 		this.UiViewSequence.PlaySequence("AutoLoop1", false, null);
 	}
 
-	// Token: 0x0600E80B RID: 59403 RVA: 0x0036D5CC File Offset: 0x0036B7CC
+	// Token: 0x0600BC2A RID: 48170 RVA: 0x003792CC File Offset: 0x003774CC
 	private void OnShowMouseCursor(bool isOn)
 	{
 		InputDistributeController.Instance.RefreshInputTag();
@@ -155,7 +155,7 @@ public class GuideTipsView : GuideBaseView
 		}
 	}
 
-	// Token: 0x0600E80C RID: 59404 RVA: 0x0036D634 File Offset: 0x0036B834
+	// Token: 0x0600BC2B RID: 48171 RVA: 0x00379334 File Offset: 0x00377534
 	private void SetGameOnlyInputMode()
 	{
 		TsCharacterController characterController = Global.CharacterController;
@@ -165,7 +165,7 @@ public class GuideTipsView : GuideBaseView
 		}
 	}
 
-	// Token: 0x0600E80D RID: 59405 RVA: 0x0036D673 File Offset: 0x0036B873
+	// Token: 0x0600BC2C RID: 48172 RVA: 0x00379373 File Offset: 0x00377573
 	private void ReplyGameOnlyInputMode()
 	{
 		if (this.InputModeReply != null)
@@ -175,7 +175,7 @@ public class GuideTipsView : GuideBaseView
 		}
 	}
 
-	// Token: 0x0600E80E RID: 59406 RVA: 0x0036D69C File Offset: 0x0036B89C
+	// Token: 0x0600BC2D RID: 48173 RVA: 0x0037939C File Offset: 0x0037759C
 	[NullableContext(1)]
 	private void ProcessInput([Nullable(2)] string name, float value, InputIdentification _)
 	{
@@ -191,7 +191,7 @@ public class GuideTipsView : GuideBaseView
 		base.DoCloseByFinished();
 	}
 
-	// Token: 0x0600E80F RID: 59407 RVA: 0x0036D6F4 File Offset: 0x0036B8F4
+	// Token: 0x0600BC2E RID: 48174 RVA: 0x003793F4 File Offset: 0x003775F4
 	protected override void OnDurationChange(float remainDuration)
 	{
 		if (this.CountDownItem != null)
@@ -200,7 +200,7 @@ public class GuideTipsView : GuideBaseView
 		}
 	}
 
-	// Token: 0x0600E810 RID: 59408 RVA: 0x0036D70C File Offset: 0x0036B90C
+	// Token: 0x0600BC2F RID: 48175 RVA: 0x0037940C File Offset: 0x0037760C
 	private bool IsAllowedViewShow()
 	{
 		foreach (EUiViewName name in GuideDefine.guideTipsAllowedViews)
@@ -213,34 +213,34 @@ public class GuideTipsView : GuideBaseView
 		return false;
 	}
 
-	// Token: 0x04006B56 RID: 27478
+	// Token: 0x04006C37 RID: 27703
 	private GuideTips? Config;
 
-	// Token: 0x04006B57 RID: 27479
+	// Token: 0x04006C38 RID: 27704
 	[Nullable(2)]
 	private GuideCountDownItem CountDownItem;
 
-	// Token: 0x04006B58 RID: 27480
+	// Token: 0x04006C39 RID: 27705
 	private bool IsBattleViewReady = true;
 
-	// Token: 0x04006B59 RID: 27481
+	// Token: 0x04006C3A RID: 27706
 	[Nullable(2)]
 	private FInputModeReply InputModeReply;
 
-	// Token: 0x020083A7 RID: 33703
+	// Token: 0x0200752E RID: 29998
 	private enum EGuideTipsView
 	{
-		// Token: 0x0402AE0E RID: 175630
+		// Token: 0x04026133 RID: 155955
 		UiItemTips,
-		// Token: 0x0402AE0F RID: 175631
+		// Token: 0x04026134 RID: 155956
 		ToggleIcon,
-		// Token: 0x0402AE10 RID: 175632
+		// Token: 0x04026135 RID: 155957
 		GuideDescNew,
-		// Token: 0x0402AE11 RID: 175633
+		// Token: 0x04026136 RID: 155958
 		CountDownItem,
-		// Token: 0x0402AE12 RID: 175634
+		// Token: 0x04026137 RID: 155959
 		UiItemBlackBg,
-		// Token: 0x0402AE13 RID: 175635
+		// Token: 0x04026138 RID: 155960
 		IconParent
 	}
 }

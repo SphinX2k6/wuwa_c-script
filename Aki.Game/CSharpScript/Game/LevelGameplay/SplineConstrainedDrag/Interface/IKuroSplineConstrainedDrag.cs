@@ -7,61 +7,61 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag.Interface
 {
-	// Token: 0x02006A36 RID: 27190
+	// Token: 0x02005B93 RID: 23443
 	[NullableContext(2)]
 	public interface IKuroSplineConstrainedDrag
 	{
-		// Token: 0x06043A28 RID: 277032
+		// Token: 0x06039A76 RID: 236150
 		void ApplyDragMode(EKuroSplineConstrainedDragMode mode);
 
-		// Token: 0x06043A29 RID: 277033
+		// Token: 0x06039A77 RID: 236151
 		USplineComponent GetConstraintSpline();
 
-		// Token: 0x06043A2A RID: 277034
+		// Token: 0x06039A78 RID: 236152
 		AActor GetActor();
 
-		// Token: 0x06043A2B RID: 277035
+		// Token: 0x06039A79 RID: 236153
 		float GetCurrentDistanceAlongSpline();
 
-		// Token: 0x06043A2C RID: 277036
+		// Token: 0x06039A7A RID: 236154
 		float SetDistanceAlongSpline(float distance, bool checkSpeed = true);
 
-		// Token: 0x06043A2D RID: 277037
+		// Token: 0x06039A7B RID: 236155
 		float SnapToSpline();
 
-		// Token: 0x06043A2E RID: 277038
+		// Token: 0x06039A7C RID: 236156
 		IDragModeStrategy GetCurrentStrategy();
 
-		// Token: 0x06043A2F RID: 277039
+		// Token: 0x06039A7D RID: 236157
 		void RunCommonBeginDrag();
 
-		// Token: 0x06043A30 RID: 277040
+		// Token: 0x06039A7E RID: 236158
 		float RunCommonEndDrag(bool checkRelease);
 
-		// Token: 0x06043A31 RID: 277041
+		// Token: 0x06039A7F RID: 236159
 		float? GetMagneticStiffness();
 
-		// Token: 0x06043A32 RID: 277042
+		// Token: 0x06039A80 RID: 236160
 		float? GetMagneticDamping();
 
-		// Token: 0x06043A33 RID: 277043
+		// Token: 0x06039A81 RID: 236161
 		IConditionGroup GetCondition();
 
-		// Token: 0x06043A34 RID: 277044
+		// Token: 0x06039A82 RID: 236162
 		EntityContext GetEntityContext();
 
-		// Token: 0x06043A35 RID: 277045
+		// Token: 0x06039A83 RID: 236163
 		[NullableContext(1)]
 		string GetActorKey();
 
-		// Token: 0x06043A36 RID: 277046
+		// Token: 0x06039A84 RID: 236164
 		[NullableContext(1)]
 		IDraggableStateApplier GetCustomStateApplier();
 
-		// Token: 0x06043A37 RID: 277047
+		// Token: 0x06039A85 RID: 236165
 		EDragHintType? GetDragHintType();
 
-		// Token: 0x06043A38 RID: 277048
+		// Token: 0x06039A86 RID: 236166
 		void Clear();
 	}
 }

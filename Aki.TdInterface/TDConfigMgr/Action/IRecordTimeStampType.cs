@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D8A RID: 7562
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F9B RID: 8091
 	public class IRecordTimeStampType : IDungeonEventType
 	{
-		// Token: 0x0600A217 RID: 41495 RVA: 0x00170D98 File Offset: 0x0016EF98
+		// Token: 0x0600AC03 RID: 44035 RVA: 0x001851BC File Offset: 0x001833BC
 		private IRecordTimeStampType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A218 RID: 41496 RVA: 0x00170DD0 File Offset: 0x0016EFD0
+		// Token: 0x0600AC04 RID: 44036 RVA: 0x001851F4 File Offset: 0x001833F4
 		public static IRecordTimeStampType Create([Nullable(2)] IRecordTimeStampType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A219 RID: 41497 RVA: 0x00170DE3 File Offset: 0x0016EFE3
+		// Token: 0x0600AC05 RID: 44037 RVA: 0x00185207 File Offset: 0x00183407
 		public static IRecordTimeStampType CreateFromSetValue([Nullable(2)] IRecordTimeStampType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A21A RID: 41498 RVA: 0x00170DF6 File Offset: 0x0016EFF6
+		// Token: 0x0600AC06 RID: 44038 RVA: 0x0018521A File Offset: 0x0018341A
 		public new IRecordTimeStampType_SetValue ToSetValue()
 		{
 			return new IRecordTimeStampType_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003213 RID: 12819
-		// (get) Token: 0x0600A21B RID: 41499 RVA: 0x00170E15 File Offset: 0x0016F015
-		// (set) Token: 0x0600A21C RID: 41500 RVA: 0x00170E40 File Offset: 0x0016F040
+		// Token: 0x170034A7 RID: 13479
+		// (get) Token: 0x0600AC07 RID: 44039 RVA: 0x00185239 File Offset: 0x00183439
+		// (set) Token: 0x0600AC08 RID: 44040 RVA: 0x00185264 File Offset: 0x00183464
 		public override EDungeonEventType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003214 RID: 12820
-		// (get) Token: 0x0600A21D RID: 41501 RVA: 0x00170E4E File Offset: 0x0016F04E
-		// (set) Token: 0x0600A21E RID: 41502 RVA: 0x00170E79 File Offset: 0x0016F079
+		// Token: 0x170034A8 RID: 13480
+		// (get) Token: 0x0600AC09 RID: 44041 RVA: 0x00185272 File Offset: 0x00183472
+		// (set) Token: 0x0600AC0A RID: 44042 RVA: 0x0018529D File Offset: 0x0018349D
 		public virtual ETimeStampType TimeStampType
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006168 RID: 24936
+		// Token: 0x040066E4 RID: 26340
 		[Nullable(2)]
 		protected new IRecordTimeStampType FbInstance;
 
-		// Token: 0x04006169 RID: 24937
+		// Token: 0x040066E5 RID: 26341
 		[Nullable(2)]
 		protected new IRecordTimeStampType_SetValue PocoInterface;
 	}

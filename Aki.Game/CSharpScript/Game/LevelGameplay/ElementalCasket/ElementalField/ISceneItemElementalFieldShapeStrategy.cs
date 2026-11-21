@@ -4,25 +4,25 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 {
-	// Token: 0x02006EA2 RID: 28322
+	// Token: 0x02006022 RID: 24610
 	[NullableContext(1)]
 	public interface ISceneItemElementalFieldShapeStrategy
 	{
-		// Token: 0x17009A75 RID: 39541
-		// (get) Token: 0x06045025 RID: 282661
+		// Token: 0x17006FAC RID: 28588
+		// (get) Token: 0x0603B1C6 RID: 242118
 		ESceneItemElementalFieldShapeType ShapeType { get; }
 
-		// Token: 0x17009A76 RID: 39542
-		// (get) Token: 0x06045026 RID: 282662
+		// Token: 0x17006FAD RID: 28589
+		// (get) Token: 0x0603B1C7 RID: 242119
 		Action<UKuroFastCollisionShapeComponent> ApplyStaticConfig { get; }
 
-		// Token: 0x17009A77 RID: 39543
-		// (get) Token: 0x06045027 RID: 282663
+		// Token: 0x17006FAE RID: 28590
+		// (get) Token: 0x0603B1C8 RID: 242120
 		[Nullable(2)]
 		Action<UKuroFastCollisionShapeComponent> SyncRuntime { [NullableContext(2)] get; }
 
-		// Token: 0x17009A78 RID: 39544
-		// (get) Token: 0x06045028 RID: 282664
+		// Token: 0x17006FAF RID: 28591
+		// (get) Token: 0x0603B1C9 RID: 242121
 		Func<ISceneItemElementalFieldSnapshot<ESceneItemElementalFieldShapeType>, ISceneItemElementalFieldSnapshot<ESceneItemElementalFieldShapeType>> FillSnapshot { get; }
 	}
 }

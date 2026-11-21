@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002010 RID: 8208
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002259 RID: 8793
 	public static class IUiGameExtensions
 	{
-		// Token: 0x0600B482 RID: 46210 RVA: 0x001A3B30 File Offset: 0x001A1D30
+		// Token: 0x0600BFA4 RID: 49060 RVA: 0x001BA1F4 File Offset: 0x001B83F4
 		public static IReadOnlyList<IColorPiece> GetConfig(this IUiGame p)
 		{
 			ISignalDevice signalDevice = p as ISignalDevice;
@@ -30,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return config;
 		}
 
-		// Token: 0x0600B483 RID: 46211 RVA: 0x001A3B88 File Offset: 0x001A1D88
+		// Token: 0x0600BFA5 RID: 49061 RVA: 0x001BA24C File Offset: 0x001B844C
 		public static IReadOnlyList<object> GetMaxStepRewardRule(this IUiGame p)
 		{
 			ILifePoint lifePoint = p as ILifePoint;

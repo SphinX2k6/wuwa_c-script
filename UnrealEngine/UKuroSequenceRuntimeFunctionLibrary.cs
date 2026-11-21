@@ -6,43 +6,43 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200190C RID: 6412
+	// Token: 0x02000401 RID: 1025
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroGameplay.KuroSequenceRuntimeFunctionLibrary")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 48)]
 	public class UKuroSequenceRuntimeFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06017C9C RID: 97436 RVA: 0x0022D942 File Offset: 0x0022BB42
+		// Token: 0x0600646A RID: 25706 RVA: 0x0008F738 File Offset: 0x0008D938
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroSequenceRuntimeFunctionLibrary._ClassPtr;
 		}
 
-		// Token: 0x06017C9D RID: 97437 RVA: 0x0022D950 File Offset: 0x0022BB50
+		// Token: 0x0600646B RID: 25707 RVA: 0x0008F744 File Offset: 0x0008D944
 		public UKuroSequenceRuntimeFunctionLibrary() : this(BuiltinUtils.AllocNativeUObject(UKuroSequenceRuntimeFunctionLibrary.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06017C9E RID: 97438 RVA: 0x0022D978 File Offset: 0x0022BB78
+		// Token: 0x0600646C RID: 25708 RVA: 0x0008F76C File Offset: 0x0008D96C
 		[NullableContext(1)]
 		public UKuroSequenceRuntimeFunctionLibrary(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroSequenceRuntimeFunctionLibrary.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x06017C9F RID: 97439 RVA: 0x0022D9AB File Offset: 0x0022BBAB
+		// Token: 0x0600646D RID: 25709 RVA: 0x0008F79F File Offset: 0x0008D99F
 		public static bool StopEasingPlayRate(ALevelSequenceActor SequenceActor, int HandleId, bool JumpToTarget = false)
 		{
 			return UKuroSequenceRuntimeFunctionLibrary.__StopEasingPlayRate_Internal((SequenceActor != null) ? SequenceActor.NativePtr : IntPtr.Zero, HandleId, JumpToTarget);
 		}
 
-		// Token: 0x06017CA0 RID: 97440 RVA: 0x0022D9C4 File Offset: 0x0022BBC4
+		// Token: 0x0600646E RID: 25710 RVA: 0x0008F7B8 File Offset: 0x0008D9B8
 		public static bool SetSequenceInUiScene(UMovieSceneSequence Sequence, bool IsEnable)
 		{
 			return UKuroSequenceRuntimeFunctionLibrary.__SetSequenceInUiScene_Internal((Sequence != null) ? Sequence.NativePtr : IntPtr.Zero, IsEnable);
 		}
 
-		// Token: 0x06017CA1 RID: 97441 RVA: 0x0022D9DC File Offset: 0x0022BBDC
+		// Token: 0x0600646F RID: 25711 RVA: 0x0008F7D0 File Offset: 0x0008D9D0
 		public static void SetBindings(ALevelSequenceActor SequenceActor, [Nullable(new byte[]
 		{
 			2,
@@ -56,25 +56,25 @@ namespace UnrealEngine
 			UKuroSequenceRuntimeFunctionLibrary.__SetBindings_Internal((SequenceActor != null) ? SequenceActor.NativePtr : IntPtr.Zero, (Bindings ?? new TArray<FMovieSceneObjectBindingID>()).NativePtr, (Actors ?? new TArray<AActor>()).NativePtr, bAllowBindingsFromAsset);
 		}
 
-		// Token: 0x06017CA2 RID: 97442 RVA: 0x0022DA14 File Offset: 0x0022BC14
+		// Token: 0x06006470 RID: 25712 RVA: 0x0008F808 File Offset: 0x0008DA08
 		public static bool SectionContains(UMovieSceneSection Section, FFrameTime Frame)
 		{
 			return UKuroSequenceRuntimeFunctionLibrary.__SectionContains_Internal((Section != null) ? Section.NativePtr : IntPtr.Zero, (Frame ?? new FFrameTime()).NativePtr);
 		}
 
-		// Token: 0x06017CA3 RID: 97443 RVA: 0x0022DA3A File Offset: 0x0022BC3A
+		// Token: 0x06006471 RID: 25713 RVA: 0x0008F82E File Offset: 0x0008DA2E
 		public static void SearchAttachAndReattach(UMovieSceneSequence Sequence, TArray<FName> InBindingNames, FName Tag)
 		{
 			UKuroSequenceRuntimeFunctionLibrary.__SearchAttachAndReattach_Internal((Sequence != null) ? Sequence.NativePtr : IntPtr.Zero, (InBindingNames ?? new TArray<FName>()).NativePtr, Tag);
 		}
 
-		// Token: 0x06017CA4 RID: 97444 RVA: 0x0022DA61 File Offset: 0x0022BC61
+		// Token: 0x06006472 RID: 25714 RVA: 0x0008F855 File Offset: 0x0008DA55
 		public static void ResetMovieSceneCompiledData(UMovieSceneSequence Sequence)
 		{
 			UKuroSequenceRuntimeFunctionLibrary.__ResetMovieSceneCompiledData_Internal((Sequence != null) ? Sequence.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06017CA5 RID: 97445 RVA: 0x0022DA78 File Offset: 0x0022BC78
+		// Token: 0x06006473 RID: 25715 RVA: 0x0008F86C File Offset: 0x0008DA6C
 		public static UKuroActorStreamingHandle RequestActorExternalStreaming(UObject WorldContextObject, [Nullable(new byte[]
 		{
 			2,
@@ -84,77 +84,77 @@ namespace UnrealEngine
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UKuroActorStreamingHandle>(UKuroSequenceRuntimeFunctionLibrary.__RequestActorExternalStreaming_Internal((WorldContextObject != null) ? WorldContextObject.NativePtr : IntPtr.Zero, (ActorRefs ?? new TArray<FSoftObjectPath>()).NativePtr));
 		}
 
-		// Token: 0x06017CA6 RID: 97446 RVA: 0x0022DAA4 File Offset: 0x0022BCA4
+		// Token: 0x06006474 RID: 25716 RVA: 0x0008F898 File Offset: 0x0008DA98
 		public static void MuteTrackByTag(UMovieSceneSequence Sequence, FName Tag, bool bIsMuted = true)
 		{
 			UKuroSequenceRuntimeFunctionLibrary.__MuteTrackByTag_Internal((Sequence != null) ? Sequence.NativePtr : IntPtr.Zero, Tag, bIsMuted);
 		}
 
-		// Token: 0x06017CA7 RID: 97447 RVA: 0x0022DABD File Offset: 0x0022BCBD
+		// Token: 0x06006475 RID: 25717 RVA: 0x0008F8B1 File Offset: 0x0008DAB1
 		public static void MuteTrackByName(UMovieSceneSequence Sequence, FName Name, bool bIsMuted = true)
 		{
 			UKuroSequenceRuntimeFunctionLibrary.__MuteTrackByName_Internal((Sequence != null) ? Sequence.NativePtr : IntPtr.Zero, Name, bIsMuted);
 		}
 
-		// Token: 0x06017CA8 RID: 97448 RVA: 0x0022DAD6 File Offset: 0x0022BCD6
+		// Token: 0x06006476 RID: 25718 RVA: 0x0008F8CA File Offset: 0x0008DACA
 		public static bool HandleSeqTexStreaming(ULevelSequence LevelSequences, bool bStartForceStreamIn, bool bCollectExtraTexture = false)
 		{
 			return UKuroSequenceRuntimeFunctionLibrary.__HandleSeqTexStreaming_Internal((LevelSequences != null) ? LevelSequences.NativePtr : IntPtr.Zero, bStartForceStreamIn, bCollectExtraTexture);
 		}
 
-		// Token: 0x06017CA9 RID: 97449 RVA: 0x0022DAEF File Offset: 0x0022BCEF
+		// Token: 0x06006477 RID: 25719 RVA: 0x0008F8E3 File Offset: 0x0008DAE3
 		[NullableContext(1)]
 		public static TArray<UMovieSceneTrack> GetTracks([Nullable(2)] in FSequencerBindingRuntimeProxy InBinding)
 		{
 			return new TArray<UMovieSceneTrack>(UKuroSequenceRuntimeFunctionLibrary.__GetTracks_Internal((InBinding ?? new FSequencerBindingRuntimeProxy()).NativePtr), null);
 		}
 
-		// Token: 0x06017CAA RID: 97450 RVA: 0x0022DB0C File Offset: 0x0022BD0C
+		// Token: 0x06006478 RID: 25720 RVA: 0x0008F900 File Offset: 0x0008DB00
 		public static int GetStartFrame(UMovieSceneSection Section)
 		{
 			return UKuroSequenceRuntimeFunctionLibrary.__GetStartFrame_Internal((Section != null) ? Section.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06017CAB RID: 97451 RVA: 0x0022DB23 File Offset: 0x0022BD23
+		// Token: 0x06006479 RID: 25721 RVA: 0x0008F917 File Offset: 0x0008DB17
 		[NullableContext(1)]
 		public static TArray<FSequencerBindingRuntimeProxy> GetSpawnables([Nullable(2)] UMovieSceneSequence Sequence)
 		{
 			return new TArray<FSequencerBindingRuntimeProxy>(UKuroSequenceRuntimeFunctionLibrary.__GetSpawnables_Internal((Sequence != null) ? Sequence.NativePtr : IntPtr.Zero), null);
 		}
 
-		// Token: 0x06017CAC RID: 97452 RVA: 0x0022DB40 File Offset: 0x0022BD40
+		// Token: 0x0600647A RID: 25722 RVA: 0x0008F934 File Offset: 0x0008DB34
 		[NullableContext(1)]
 		public static TArray<UMovieSceneSection> GetSections([Nullable(2)] UMovieSceneTrack Track)
 		{
 			return new TArray<UMovieSceneSection>(UKuroSequenceRuntimeFunctionLibrary.__GetSections_Internal((Track != null) ? Track.NativePtr : IntPtr.Zero), null);
 		}
 
-		// Token: 0x06017CAD RID: 97453 RVA: 0x0022DB5D File Offset: 0x0022BD5D
+		// Token: 0x0600647B RID: 25723 RVA: 0x0008F951 File Offset: 0x0008DB51
 		public static int GetPlaybackStart(UMovieSceneSequence Sequence)
 		{
 			return UKuroSequenceRuntimeFunctionLibrary.__GetPlaybackStart_Internal((Sequence != null) ? Sequence.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06017CAE RID: 97454 RVA: 0x0022DB74 File Offset: 0x0022BD74
+		// Token: 0x0600647C RID: 25724 RVA: 0x0008F968 File Offset: 0x0008DB68
 		public static int GetPlaybackEnd(UMovieSceneSequence Sequence)
 		{
 			return UKuroSequenceRuntimeFunctionLibrary.__GetPlaybackEnd_Internal((Sequence != null) ? Sequence.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06017CAF RID: 97455 RVA: 0x0022DB8B File Offset: 0x0022BD8B
+		// Token: 0x0600647D RID: 25725 RVA: 0x0008F97F File Offset: 0x0008DB7F
 		public static UObject GetObjectTemplate(in FSequencerBindingRuntimeProxy InBinding)
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UObject>(UKuroSequenceRuntimeFunctionLibrary.__GetObjectTemplate_Internal((InBinding ?? new FSequencerBindingRuntimeProxy()).NativePtr));
 		}
 
-		// Token: 0x06017CB0 RID: 97456 RVA: 0x0022DBA7 File Offset: 0x0022BDA7
+		// Token: 0x0600647E RID: 25726 RVA: 0x0008F99B File Offset: 0x0008DB9B
 		[NullableContext(1)]
 		public static TArray<UMovieSceneTrack> GetMasterTracks([Nullable(2)] UMovieSceneSequence Sequence)
 		{
 			return new TArray<UMovieSceneTrack>(UKuroSequenceRuntimeFunctionLibrary.__GetMasterTracks_Internal((Sequence != null) ? Sequence.NativePtr : IntPtr.Zero), null);
 		}
 
-		// Token: 0x06017CB1 RID: 97457 RVA: 0x0022DBC4 File Offset: 0x0022BDC4
+		// Token: 0x0600647F RID: 25727 RVA: 0x0008F9B8 File Offset: 0x0008DBB8
 		public unsafe static bool GetFrameTransformByTag(UMovieSceneSequence Sequence, FName Tag, int OutsideFrame, ref FTransform OutTransfom)
 		{
 			ref FTransform ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)63] + 15UL & 18446744073709551600UL);
@@ -164,25 +164,25 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06017CB2 RID: 97458 RVA: 0x0022DC11 File Offset: 0x0022BE11
+		// Token: 0x06006480 RID: 25728 RVA: 0x0008FA05 File Offset: 0x0008DC05
 		public static FTransform GetFrameTransform(UMovieSceneTrack Track, FFrameTime Frame)
 		{
 			return UKuroSequenceRuntimeFunctionLibrary.__GetFrameTransform_Internal((Track != null) ? Track.NativePtr : IntPtr.Zero, (Frame ?? new FFrameTime()).NativePtr);
 		}
 
-		// Token: 0x06017CB3 RID: 97459 RVA: 0x0022DC37 File Offset: 0x0022BE37
+		// Token: 0x06006481 RID: 25729 RVA: 0x0008FA2B File Offset: 0x0008DC2B
 		public static float GetFadeAmountAt(UMovieSceneFadeSection Section, FFrameTime Frame)
 		{
 			return UKuroSequenceRuntimeFunctionLibrary.__GetFadeAmountAt_Internal((Section != null) ? Section.NativePtr : IntPtr.Zero, (Frame ?? new FFrameTime()).NativePtr);
 		}
 
-		// Token: 0x06017CB4 RID: 97460 RVA: 0x0022DC5D File Offset: 0x0022BE5D
+		// Token: 0x06006482 RID: 25730 RVA: 0x0008FA51 File Offset: 0x0008DC51
 		public static int GetEndFrame(UMovieSceneSection Section)
 		{
 			return UKuroSequenceRuntimeFunctionLibrary.__GetEndFrame_Internal((Section != null) ? Section.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06017CB5 RID: 97461 RVA: 0x0022DC74 File Offset: 0x0022BE74
+		// Token: 0x06006483 RID: 25731 RVA: 0x0008FA68 File Offset: 0x0008DC68
 		[NullableContext(1)]
 		public static TArray<UMovieSceneTrack> FindTracksByType([Nullable(2)] in FSequencerBindingRuntimeProxy InBinding, [Nullable(new byte[]
 		{
@@ -193,14 +193,14 @@ namespace UnrealEngine
 			return new TArray<UMovieSceneTrack>(UKuroSequenceRuntimeFunctionLibrary.__FindTracksByType_Internal((InBinding ?? new FSequencerBindingRuntimeProxy()).NativePtr, TrackType._NativePtr), null);
 		}
 
-		// Token: 0x06017CB6 RID: 97462 RVA: 0x0022DC97 File Offset: 0x0022BE97
+		// Token: 0x06006484 RID: 25732 RVA: 0x0008FA8B File Offset: 0x0008DC8B
 		[return: Nullable(1)]
 		public static TArray<FMovieSceneObjectBindingID> FindMatchAllTagsBinding(in TArray<FName> Tags, ULevelSequence LevelSequence)
 		{
 			return new TArray<FMovieSceneObjectBindingID>(UKuroSequenceRuntimeFunctionLibrary.__FindMatchAllTagsBinding_Internal((Tags ?? new TArray<FName>()).NativePtr, (LevelSequence != null) ? LevelSequence.NativePtr : IntPtr.Zero), null);
 		}
 
-		// Token: 0x06017CB7 RID: 97463 RVA: 0x0022DCC4 File Offset: 0x0022BEC4
+		// Token: 0x06006485 RID: 25733 RVA: 0x0008FAB8 File Offset: 0x0008DCB8
 		[NullableContext(1)]
 		public static TArray<UMovieSceneTrack> FindMasterTracksByType([Nullable(2)] UMovieSceneSequence Sequence, [Nullable(new byte[]
 		{
@@ -211,146 +211,150 @@ namespace UnrealEngine
 			return new TArray<UMovieSceneTrack>(UKuroSequenceRuntimeFunctionLibrary.__FindMasterTracksByType_Internal((Sequence != null) ? Sequence.NativePtr : IntPtr.Zero, TrackType._NativePtr), null);
 		}
 
-		// Token: 0x06017CB8 RID: 97464 RVA: 0x0022DCE7 File Offset: 0x0022BEE7
+		// Token: 0x06006486 RID: 25734 RVA: 0x0008FADB File Offset: 0x0008DCDB
 		[NullableContext(1)]
 		public static FSequencerBindingRuntimeProxy FindBindingById([Nullable(2)] UMovieSceneSequence Sequence, FGuid BindingId)
 		{
 			return new FSequencerBindingRuntimeProxy(UKuroSequenceRuntimeFunctionLibrary.__FindBindingById_Internal((Sequence != null) ? Sequence.NativePtr : IntPtr.Zero, BindingId), null);
 		}
 
-		// Token: 0x06017CB9 RID: 97465 RVA: 0x0022DD05 File Offset: 0x0022BF05
+		// Token: 0x06006487 RID: 25735 RVA: 0x0008FAF9 File Offset: 0x0008DCF9
 		public static int EasePlayRateTo(ALevelSequenceActor SequenceActor, float TargetPlayRate, EKuroEasingFuncType EaseType, float Duration, float Exp)
 		{
 			return UKuroSequenceRuntimeFunctionLibrary.__EasePlayRateTo_Internal((SequenceActor != null) ? SequenceActor.NativePtr : IntPtr.Zero, TargetPlayRate, EaseType, Duration, Exp);
 		}
 
-		// Token: 0x06017CBA RID: 97466
+		// Token: 0x06006488 RID: 25736
+		[MethodImpl(MethodImplOptions.InternalCall)]
+		public static extern void AddOrRemoveRenderAssetsQueryViewInfo(in FVector ViewOrigin, float Duration = 0f, float BoostFactor = 1.2f);
+
+		// Token: 0x06006489 RID: 25737
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __StopEasingPlayRate_Internal(IntPtr SequenceActor, int HandleId, bool JumpToTarget);
 
-		// Token: 0x06017CBB RID: 97467
+		// Token: 0x0600648A RID: 25738
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __SetSequenceInUiScene_Internal(IntPtr Sequence, bool IsEnable);
 
-		// Token: 0x06017CBC RID: 97468
+		// Token: 0x0600648B RID: 25739
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetBindings_Internal(IntPtr SequenceActor, IntPtr Bindings, IntPtr Actors, bool bAllowBindingsFromAsset);
 
-		// Token: 0x06017CBD RID: 97469
+		// Token: 0x0600648C RID: 25740
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __SectionContains_Internal(IntPtr Section, IntPtr Frame);
 
-		// Token: 0x06017CBE RID: 97470
+		// Token: 0x0600648D RID: 25741
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SearchAttachAndReattach_Internal(IntPtr Sequence, IntPtr InBindingNames, FName Tag);
 
-		// Token: 0x06017CBF RID: 97471
+		// Token: 0x0600648E RID: 25742
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ResetMovieSceneCompiledData_Internal(IntPtr Sequence);
 
-		// Token: 0x06017CC0 RID: 97472
+		// Token: 0x0600648F RID: 25743
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __RequestActorExternalStreaming_Internal(IntPtr WorldContextObject, IntPtr ActorRefs);
 
-		// Token: 0x06017CC1 RID: 97473
+		// Token: 0x06006490 RID: 25744
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __MuteTrackByTag_Internal(IntPtr Sequence, FName Tag, bool bIsMuted);
 
-		// Token: 0x06017CC2 RID: 97474
+		// Token: 0x06006491 RID: 25745
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __MuteTrackByName_Internal(IntPtr Sequence, FName Name, bool bIsMuted);
 
-		// Token: 0x06017CC3 RID: 97475
+		// Token: 0x06006492 RID: 25746
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __HandleSeqTexStreaming_Internal(IntPtr LevelSequences, bool bStartForceStreamIn, bool bCollectExtraTexture);
 
-		// Token: 0x06017CC4 RID: 97476
+		// Token: 0x06006493 RID: 25747
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetTracks_Internal(IntPtr InBinding);
 
-		// Token: 0x06017CC5 RID: 97477
+		// Token: 0x06006494 RID: 25748
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetStartFrame_Internal(IntPtr Section);
 
-		// Token: 0x06017CC6 RID: 97478
+		// Token: 0x06006495 RID: 25749
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetSpawnables_Internal(IntPtr Sequence);
 
-		// Token: 0x06017CC7 RID: 97479
+		// Token: 0x06006496 RID: 25750
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetSections_Internal(IntPtr Track);
 
-		// Token: 0x06017CC8 RID: 97480
+		// Token: 0x06006497 RID: 25751
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetPlaybackStart_Internal(IntPtr Sequence);
 
-		// Token: 0x06017CC9 RID: 97481
+		// Token: 0x06006498 RID: 25752
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetPlaybackEnd_Internal(IntPtr Sequence);
 
-		// Token: 0x06017CCA RID: 97482
+		// Token: 0x06006499 RID: 25753
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetObjectTemplate_Internal(IntPtr InBinding);
 
-		// Token: 0x06017CCB RID: 97483
+		// Token: 0x0600649A RID: 25754
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetMasterTracks_Internal(IntPtr Sequence);
 
-		// Token: 0x06017CCC RID: 97484
+		// Token: 0x0600649B RID: 25755
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetFrameTransformByTag_Internal(IntPtr Sequence, FName Tag, int OutsideFrame, ref FTransform OutTransfom);
 
-		// Token: 0x06017CCD RID: 97485
+		// Token: 0x0600649C RID: 25756
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransform __GetFrameTransform_Internal(IntPtr Track, IntPtr Frame);
 
-		// Token: 0x06017CCE RID: 97486
+		// Token: 0x0600649D RID: 25757
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetFadeAmountAt_Internal(IntPtr Section, IntPtr Frame);
 
-		// Token: 0x06017CCF RID: 97487
+		// Token: 0x0600649E RID: 25758
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetEndFrame_Internal(IntPtr Section);
 
-		// Token: 0x06017CD0 RID: 97488
+		// Token: 0x0600649F RID: 25759
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __FindTracksByType_Internal(IntPtr InBinding, IntPtr TrackType);
 
-		// Token: 0x06017CD1 RID: 97489
+		// Token: 0x060064A0 RID: 25760
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __FindMatchAllTagsBinding_Internal(IntPtr Tags, IntPtr LevelSequence);
 
-		// Token: 0x06017CD2 RID: 97490
+		// Token: 0x060064A1 RID: 25761
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __FindMasterTracksByType_Internal(IntPtr Sequence, IntPtr TrackType);
 
-		// Token: 0x06017CD3 RID: 97491
+		// Token: 0x060064A2 RID: 25762
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __FindBindingById_Internal(IntPtr Sequence, FGuid BindingId);
 
-		// Token: 0x06017CD4 RID: 97492
+		// Token: 0x060064A3 RID: 25763
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __EasePlayRateTo_Internal(IntPtr SequenceActor, float TargetPlayRate, EKuroEasingFuncType EaseType, float Duration, float Exp);
 
-		// Token: 0x06017CD5 RID: 97493 RVA: 0x0022DD21 File Offset: 0x0022BF21
+		// Token: 0x060064A4 RID: 25764 RVA: 0x0008FB15 File Offset: 0x0008DD15
 		static UKuroSequenceRuntimeFunctionLibrary()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroGameplay.KuroSequenceRuntimeFunctionLibrary");
 		}
 
-		// Token: 0x06017CD6 RID: 97494 RVA: 0x0022DD2F File Offset: 0x0022BF2F
+		// Token: 0x060064A5 RID: 25765 RVA: 0x0008FB23 File Offset: 0x0008DD23
 		protected UKuroSequenceRuntimeFunctionLibrary(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400CE6E RID: 52846
+		// Token: 0x04002A62 RID: 10850
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroGameplay.KuroSequenceRuntimeFunctionLibrary";
 
-		// Token: 0x0400CE6F RID: 52847
+		// Token: 0x04002A63 RID: 10851
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400CE70 RID: 52848
+		// Token: 0x04002A64 RID: 10852
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

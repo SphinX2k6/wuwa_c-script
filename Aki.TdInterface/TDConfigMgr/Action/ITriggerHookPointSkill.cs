@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002000 RID: 8192
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002247 RID: 8775
 	public class ITriggerHookPointSkill : IExecClientBattleActionType
 	{
-		// Token: 0x0600B424 RID: 46116 RVA: 0x001A3000 File Offset: 0x001A1200
+		// Token: 0x0600BF3A RID: 48954 RVA: 0x001B956C File Offset: 0x001B776C
 		private ITriggerHookPointSkill_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B425 RID: 46117 RVA: 0x001A3038 File Offset: 0x001A1238
+		// Token: 0x0600BF3B RID: 48955 RVA: 0x001B95A4 File Offset: 0x001B77A4
 		public static ITriggerHookPointSkill Create([Nullable(2)] ITriggerHookPointSkill instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B426 RID: 46118 RVA: 0x001A304B File Offset: 0x001A124B
+		// Token: 0x0600BF3C RID: 48956 RVA: 0x001B95B7 File Offset: 0x001B77B7
 		public static ITriggerHookPointSkill CreateFromSetValue([Nullable(2)] ITriggerHookPointSkill_SetValue value)
 		{
 			if (value == null)
@@ -50,20 +48,21 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B427 RID: 46119 RVA: 0x001A305E File Offset: 0x001A125E
+		// Token: 0x0600BF3D RID: 48957 RVA: 0x001B95CA File Offset: 0x001B77CA
 		public new ITriggerHookPointSkill_SetValue ToSetValue()
 		{
 			return new ITriggerHookPointSkill_SetValue
 			{
 				Type = this.Type,
+				AssistCharacterId = this.AssistCharacterId,
 				HookEntityId = this.HookEntityId,
 				SpecTriggerType = this.SpecTriggerType
 			};
 		}
 
-		// Token: 0x1700376A RID: 14186
-		// (get) Token: 0x0600B428 RID: 46120 RVA: 0x001A3089 File Offset: 0x001A1289
-		// (set) Token: 0x0600B429 RID: 46121 RVA: 0x001A30B4 File Offset: 0x001A12B4
+		// Token: 0x17003A42 RID: 14914
+		// (get) Token: 0x0600BF3E RID: 48958 RVA: 0x001B9601 File Offset: 0x001B7801
+		// (set) Token: 0x0600BF3F RID: 48959 RVA: 0x001B962C File Offset: 0x001B782C
 		public override EExecClientBattleActionType Type
 		{
 			get
@@ -84,9 +83,33 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700376B RID: 14187
-		// (get) Token: 0x0600B42A RID: 46122 RVA: 0x001A30C2 File Offset: 0x001A12C2
-		// (set) Token: 0x0600B42B RID: 46123 RVA: 0x001A30ED File Offset: 0x001A12ED
+		// Token: 0x17003A43 RID: 14915
+		// (get) Token: 0x0600BF40 RID: 48960 RVA: 0x001B963C File Offset: 0x001B783C
+		// (set) Token: 0x0600BF41 RID: 48961 RVA: 0x001B9676 File Offset: 0x001B7876
+		public virtual int? AssistCharacterId
+		{
+			get
+			{
+				if (this.FbInstance != null)
+				{
+					return this.FbInstance.AssistCharacterId;
+				}
+				ITriggerHookPointSkill_SetValue pocoInterface = this.PocoInterface;
+				if (pocoInterface == null)
+				{
+					return null;
+				}
+				return pocoInterface.AssistCharacterId;
+			}
+			set
+			{
+				this.GetOrCreatePoco().AssistCharacterId = value;
+			}
+		}
+
+		// Token: 0x17003A44 RID: 14916
+		// (get) Token: 0x0600BF42 RID: 48962 RVA: 0x001B9684 File Offset: 0x001B7884
+		// (set) Token: 0x0600BF43 RID: 48963 RVA: 0x001B96AF File Offset: 0x001B78AF
 		public virtual int HookEntityId
 		{
 			get
@@ -107,9 +130,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700376C RID: 14188
-		// (get) Token: 0x0600B42C RID: 46124 RVA: 0x001A30FC File Offset: 0x001A12FC
-		// (set) Token: 0x0600B42D RID: 46125 RVA: 0x001A3136 File Offset: 0x001A1336
+		// Token: 0x17003A45 RID: 14917
+		// (get) Token: 0x0600BF44 RID: 48964 RVA: 0x001B96C0 File Offset: 0x001B78C0
+		// (set) Token: 0x0600BF45 RID: 48965 RVA: 0x001B96FA File Offset: 0x001B78FA
 		public virtual EHookTriggerType? SpecTriggerType
 		{
 			get
@@ -131,11 +154,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006C97 RID: 27799
+		// Token: 0x04007299 RID: 29337
 		[Nullable(2)]
 		protected new ITriggerHookPointSkill FbInstance;
 
-		// Token: 0x04006C98 RID: 27800
+		// Token: 0x0400729A RID: 29338
 		[Nullable(2)]
 		protected new ITriggerHookPointSkill_SetValue PocoInterface;
 	}

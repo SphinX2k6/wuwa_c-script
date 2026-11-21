@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004AAB RID: 19115
+	// Token: 0x02003A53 RID: 14931
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseDifficultyChangePanel : UiPanelBase
 	{
-		// Token: 0x06031870 RID: 202864 RVA: 0x00B7BE40 File Offset: 0x00B7A040
+		// Token: 0x06026600 RID: 157184 RVA: 0x00ABFDF4 File Offset: 0x00ABDFF4
 		public UniTask Init(UUIItem item)
 		{
 			TrapDefenseDifficultyChangePanel.<Init>d__6 <Init>d__;
@@ -26,12 +26,12 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031871 RID: 202865 RVA: 0x00B7BE8B File Offset: 0x00B7A08B
+		// Token: 0x06026601 RID: 157185 RVA: 0x00ABFE3F File Offset: 0x00ABE03F
 		protected override void OnBeforeCreate()
 		{
 		}
 
-		// Token: 0x06031872 RID: 202866 RVA: 0x00B7BE90 File Offset: 0x00B7A090
+		// Token: 0x06026602 RID: 157186 RVA: 0x00ABFE44 File Offset: 0x00ABE044
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06031873 RID: 202867 RVA: 0x00B7BFE0 File Offset: 0x00B7A1E0
+		// Token: 0x06026603 RID: 157187 RVA: 0x00ABFF94 File Offset: 0x00ABE194
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TrapDefenseDifficultyChangePanel.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -73,34 +73,34 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031874 RID: 202868 RVA: 0x00B7C023 File Offset: 0x00B7A223
+		// Token: 0x06026604 RID: 157188 RVA: 0x00ABFFD7 File Offset: 0x00ABE1D7
 		protected override void OnStart()
 		{
 		}
 
-		// Token: 0x06031875 RID: 202869 RVA: 0x00B7C025 File Offset: 0x00B7A225
+		// Token: 0x06026605 RID: 157189 RVA: 0x00ABFFD9 File Offset: 0x00ABE1D9
 		protected override void OnBeforeShow()
 		{
 		}
 
-		// Token: 0x06031876 RID: 202870 RVA: 0x00B7C027 File Offset: 0x00B7A227
+		// Token: 0x06026606 RID: 157190 RVA: 0x00ABFFDB File Offset: 0x00ABE1DB
 		protected override void OnBeforeDestroy()
 		{
 		}
 
-		// Token: 0x06031877 RID: 202871 RVA: 0x00B7C029 File Offset: 0x00B7A229
+		// Token: 0x06026607 RID: 157191 RVA: 0x00ABFFDD File Offset: 0x00ABE1DD
 		public void OnClickBtnLeft()
 		{
 			this.ChangeDifficultyAdd(-1);
 		}
 
-		// Token: 0x06031878 RID: 202872 RVA: 0x00B7C032 File Offset: 0x00B7A232
+		// Token: 0x06026608 RID: 157192 RVA: 0x00ABFFE6 File Offset: 0x00ABE1E6
 		public void OnClickBtnRight()
 		{
 			this.ChangeDifficultyAdd(1);
 		}
 
-		// Token: 0x06031879 RID: 202873 RVA: 0x00B7C03B File Offset: 0x00B7A23B
+		// Token: 0x06026609 RID: 157193 RVA: 0x00ABFFEF File Offset: 0x00ABE1EF
 		public void SetRedDotLeftVisible(bool visible)
 		{
 			UUIItem item = base.GetItem(3);
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			item.SetUIActive(visible);
 		}
 
-		// Token: 0x0603187A RID: 202874 RVA: 0x00B7C04F File Offset: 0x00B7A24F
+		// Token: 0x0602660A RID: 157194 RVA: 0x00AC0003 File Offset: 0x00ABE203
 		public void SetRedDotRightVisible(bool visible)
 		{
 			UUIItem item = base.GetItem(5);
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			item.SetUIActive(visible);
 		}
 
-		// Token: 0x0603187B RID: 202875 RVA: 0x00B7C063 File Offset: 0x00B7A263
+		// Token: 0x0602660B RID: 157195 RVA: 0x00AC0017 File Offset: 0x00ABE217
 		public void UpdateDataList(ITrapDefenseDifficultyLevelInfo[] list, int selectIndex = 0)
 		{
 			this.DataList = list;
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.UpdateSelectData();
 		}
 
-		// Token: 0x0603187C RID: 202876 RVA: 0x00B7C07C File Offset: 0x00B7A27C
+		// Token: 0x0602660C RID: 157196 RVA: 0x00AC0030 File Offset: 0x00ABE230
 		private void UpdateSelectData()
 		{
 			ITrapDefenseDifficultyLevelInfo trapDefenseDifficultyLevelInfo = this.DataList[this.SelectIndex];
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			onSelectDifficultyCallback(trapDefenseDifficultyLevelInfo);
 		}
 
-		// Token: 0x0603187D RID: 202877 RVA: 0x00B7C14D File Offset: 0x00B7A34D
+		// Token: 0x0602660D RID: 157197 RVA: 0x00AC0101 File Offset: 0x00ABE301
 		public void ChangeDifficultyAdd(int add)
 		{
 			this.SelectIndex = this.GetAddAfterIndex(this.SelectIndex, add);
@@ -166,27 +166,27 @@ namespace CSharpScript.Game.Module.TrapDefense
 			GuideModel.Instance.FinishFocusGuideGroupOnView(EUiViewName.TrapDefenseMainLevelView);
 		}
 
-		// Token: 0x0603187E RID: 202878 RVA: 0x00B7C177 File Offset: 0x00B7A377
+		// Token: 0x0602660E RID: 157198 RVA: 0x00AC012B File Offset: 0x00ABE32B
 		public int GetAddAfterIndex(int index, int add)
 		{
 			return (int)MathCommon.Warp((float)(index + add), 0f, (float)this.DataList.Length);
 		}
 
-		// Token: 0x0401A792 RID: 108434
+		// Token: 0x040150E4 RID: 86244
 		public ITrapDefenseDifficultyLevelInfo[] DataList = new ITrapDefenseDifficultyLevelInfo[0];
 
-		// Token: 0x0401A793 RID: 108435
+		// Token: 0x040150E5 RID: 86245
 		public int SelectIndex;
 
-		// Token: 0x0401A794 RID: 108436
+		// Token: 0x040150E6 RID: 86246
 		[Nullable(2)]
 		public Func<int, bool> OnRedDotLeftVisibleCallback;
 
-		// Token: 0x0401A795 RID: 108437
+		// Token: 0x040150E7 RID: 86247
 		[Nullable(2)]
 		public Func<int, bool> OnRedDotRightVisibleCallback;
 
-		// Token: 0x0401A796 RID: 108438
+		// Token: 0x040150E8 RID: 86248
 		[Nullable(new byte[]
 		{
 			2,
@@ -194,26 +194,26 @@ namespace CSharpScript.Game.Module.TrapDefense
 		})]
 		public Action<ITrapDefenseDifficultyLevelInfo> OnSelectDifficultyCallback;
 
-		// Token: 0x0200ABFE RID: 44030
+		// Token: 0x0200961E RID: 38430
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x04034436 RID: 214070
+			// Token: 0x0402EDE7 RID: 191975
 			public const int SpriteBg = 0;
 
-			// Token: 0x04034437 RID: 214071
+			// Token: 0x0402EDE8 RID: 191976
 			public const int TextTitle = 1;
 
-			// Token: 0x04034438 RID: 214072
+			// Token: 0x0402EDE9 RID: 191977
 			public const int BtnLeft = 2;
 
-			// Token: 0x04034439 RID: 214073
+			// Token: 0x0402EDEA RID: 191978
 			public const int ItemRedDotLeft = 3;
 
-			// Token: 0x0403443A RID: 214074
+			// Token: 0x0402EDEB RID: 191979
 			public const int BtnRight = 4;
 
-			// Token: 0x0403443B RID: 214075
+			// Token: 0x0402EDEC RID: 191980
 			public const int ItemRedDotRight = 5;
 		}
 	}

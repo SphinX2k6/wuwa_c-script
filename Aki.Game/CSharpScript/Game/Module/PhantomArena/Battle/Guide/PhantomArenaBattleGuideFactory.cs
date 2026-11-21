@@ -5,12 +5,12 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.Guide
 {
-	// Token: 0x020052AC RID: 21164
+	// Token: 0x0200427C RID: 17020
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaBattleGuideFactory
 	{
-		// Token: 0x06036267 RID: 221799 RVA: 0x00CCF8FC File Offset: 0x00CCDAFC
+		// Token: 0x0602B162 RID: 176482 RVA: 0x00C1D024 File Offset: 0x00C1B224
 		public static IPhantomArenaTabViewModelBase GetGuideData(EBvbPlayerOperationType type, BvbPlayerOperationConstraint data)
 		{
 			Func<EBvbPlayerOperationType, BvbPlayerOperationConstraint, IPhantomArenaTabViewModelBase> func;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Guide
 			return func(type, data);
 		}
 
-		// Token: 0x0401CA72 RID: 117362
+		// Token: 0x040174A7 RID: 95399
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<EBvbPlayerOperationType, Func<EBvbPlayerOperationType, BvbPlayerOperationConstraint, IPhantomArenaTabViewModelBase>> GuideDataMap = new Dictionary<EBvbPlayerOperationType, Func<EBvbPlayerOperationType, BvbPlayerOperationConstraint, IPhantomArenaTabViewModelBase>>
 		{

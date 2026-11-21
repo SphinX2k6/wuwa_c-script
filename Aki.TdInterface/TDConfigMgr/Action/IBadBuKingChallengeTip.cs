@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020017F6 RID: 6134
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200197F RID: 6527
 	public class IBadBuKingChallengeTip : ICommonTipType
 	{
-		// Token: 0x060083BD RID: 33725 RVA: 0x0013A5C8 File Offset: 0x001387C8
+		// Token: 0x06008AD9 RID: 35545 RVA: 0x00149CB0 File Offset: 0x00147EB0
 		private IBadBuKingChallengeTip_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060083BE RID: 33726 RVA: 0x0013A600 File Offset: 0x00138800
+		// Token: 0x06008ADA RID: 35546 RVA: 0x00149CE8 File Offset: 0x00147EE8
 		public static IBadBuKingChallengeTip Create([Nullable(2)] IBadBuKingChallengeTip instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060083BF RID: 33727 RVA: 0x0013A613 File Offset: 0x00138813
+		// Token: 0x06008ADB RID: 35547 RVA: 0x00149CFB File Offset: 0x00147EFB
 		public static IBadBuKingChallengeTip CreateFromSetValue([Nullable(2)] IBadBuKingChallengeTip_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060083C0 RID: 33728 RVA: 0x0013A626 File Offset: 0x00138826
+		// Token: 0x06008ADC RID: 35548 RVA: 0x00149D0E File Offset: 0x00147F0E
 		public new IBadBuKingChallengeTip_SetValue ToSetValue()
 		{
 			return new IBadBuKingChallengeTip_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002B42 RID: 11074
-		// (get) Token: 0x060083C1 RID: 33729 RVA: 0x0013A645 File Offset: 0x00138845
-		// (set) Token: 0x060083C2 RID: 33730 RVA: 0x0013A670 File Offset: 0x00138870
+		// Token: 0x17002D3A RID: 11578
+		// (get) Token: 0x06008ADD RID: 35549 RVA: 0x00149D2D File Offset: 0x00147F2D
+		// (set) Token: 0x06008ADE RID: 35550 RVA: 0x00149D58 File Offset: 0x00147F58
 		public override ECommonTipType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B43 RID: 11075
-		// (get) Token: 0x060083C3 RID: 33731 RVA: 0x0013A67E File Offset: 0x0013887E
-		// (set) Token: 0x060083C4 RID: 33732 RVA: 0x0013A6A9 File Offset: 0x001388A9
+		// Token: 0x17002D3B RID: 11579
+		// (get) Token: 0x06008ADF RID: 35551 RVA: 0x00149D66 File Offset: 0x00147F66
+		// (set) Token: 0x06008AE0 RID: 35552 RVA: 0x00149D91 File Offset: 0x00147F91
 		public virtual string WarningText
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005387 RID: 21383
+		// Token: 0x040057CF RID: 22479
 		[Nullable(2)]
 		protected new IBadBuKingChallengeTip FbInstance;
 
-		// Token: 0x04005388 RID: 21384
+		// Token: 0x040057D0 RID: 22480
 		[Nullable(2)]
 		protected new IBadBuKingChallengeTip_SetValue PocoInterface;
 	}

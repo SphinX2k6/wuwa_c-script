@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.Module.Cook
 {
-	// Token: 0x02005B0B RID: 23307
+	// Token: 0x02004AEC RID: 19180
 	public interface ICookPopItem
 	{
-		// Token: 0x17008C85 RID: 35973
-		// (get) Token: 0x0603B02E RID: 241710
-		// (set) Token: 0x0603B02F RID: 241711
+		// Token: 0x1700605F RID: 24671
+		// (get) Token: 0x0602FFA0 RID: 196512
+		// (set) Token: 0x0602FFA1 RID: 196513
 		int ItemId { get; set; }
 
-		// Token: 0x17008C86 RID: 35974
-		// (get) Token: 0x0603B030 RID: 241712
-		// (set) Token: 0x0603B031 RID: 241713
+		// Token: 0x17006060 RID: 24672
+		// (get) Token: 0x0602FFA2 RID: 196514
+		// (set) Token: 0x0602FFA3 RID: 196515
 		int ItemNum { get; set; }
 	}
 }

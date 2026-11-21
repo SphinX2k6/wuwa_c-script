@@ -6,22 +6,22 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001720 RID: 5920
+	// Token: 0x02000331 RID: 817
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroBullet.BulletHitWorldEntityOperation")]
 	[UnrealStructLayout(88, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 88)]
 	public class FBulletHitWorldEntityOperation : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0601556F RID: 87407 RVA: 0x001F5C1D File Offset: 0x001F3E1D
+		// Token: 0x0600553F RID: 21823 RVA: 0x00077401 File Offset: 0x00075601
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FBulletHitWorldEntityOperation._ScriptStructPtr != 0) ? FBulletHitWorldEntityOperation._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroBullet.BulletHitWorldEntityOperation", ref FBulletHitWorldEntityOperation._ScriptStructPtr);
 		}
 
-		// Token: 0x17005446 RID: 21574
-		// (get) Token: 0x06015570 RID: 87408 RVA: 0x001F5C41 File Offset: 0x001F3E41
-		// (set) Token: 0x06015571 RID: 87409 RVA: 0x001F5C51 File Offset: 0x001F3E51
+		// Token: 0x170010C7 RID: 4295
+		// (get) Token: 0x06005540 RID: 21824 RVA: 0x00077425 File Offset: 0x00075625
+		// (set) Token: 0x06005541 RID: 21825 RVA: 0x00077435 File Offset: 0x00075635
 		public unsafe EBulletHitWorldEntityOperation OperationType
 		{
 			get
@@ -34,9 +34,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005447 RID: 21575
-		// (get) Token: 0x06015572 RID: 87410 RVA: 0x001F5C64 File Offset: 0x001F3E64
-		// (set) Token: 0x06015573 RID: 87411 RVA: 0x001F5CA7 File Offset: 0x001F3EA7
+		// Token: 0x170010C8 RID: 4296
+		// (get) Token: 0x06005542 RID: 21826 RVA: 0x00077448 File Offset: 0x00075648
+		// (set) Token: 0x06005543 RID: 21827 RVA: 0x0007748B File Offset: 0x0007568B
 		public FWorldEntityBulletParam ExtraParam
 		{
 			get
@@ -55,9 +55,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005448 RID: 21576
-		// (get) Token: 0x06015574 RID: 87412 RVA: 0x001F5CC8 File Offset: 0x001F3EC8
-		// (set) Token: 0x06015575 RID: 87413 RVA: 0x001F5CD8 File Offset: 0x001F3ED8
+		// Token: 0x170010C9 RID: 4297
+		// (get) Token: 0x06005544 RID: 21828 RVA: 0x000774AC File Offset: 0x000756AC
+		// (set) Token: 0x06005545 RID: 21829 RVA: 0x000774BC File Offset: 0x000756BC
 		public unsafe int CasterEntityId
 		{
 			get
@@ -70,9 +70,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005449 RID: 21577
-		// (get) Token: 0x06015576 RID: 87414 RVA: 0x001F5CE9 File Offset: 0x001F3EE9
-		// (set) Token: 0x06015577 RID: 87415 RVA: 0x001F5CF9 File Offset: 0x001F3EF9
+		// Token: 0x170010CA RID: 4298
+		// (get) Token: 0x06005546 RID: 21830 RVA: 0x000774CD File Offset: 0x000756CD
+		// (set) Token: 0x06005547 RID: 21831 RVA: 0x000774DD File Offset: 0x000756DD
 		public unsafe int EntityId
 		{
 			get
@@ -85,9 +85,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700544A RID: 21578
-		// (get) Token: 0x06015578 RID: 87416 RVA: 0x001F5D0A File Offset: 0x001F3F0A
-		// (set) Token: 0x06015579 RID: 87417 RVA: 0x001F5D1A File Offset: 0x001F3F1A
+		// Token: 0x170010CB RID: 4299
+		// (get) Token: 0x06005548 RID: 21832 RVA: 0x000774EE File Offset: 0x000756EE
+		// (set) Token: 0x06005549 RID: 21833 RVA: 0x000774FE File Offset: 0x000756FE
 		public unsafe long LongParam1
 		{
 			get
@@ -100,9 +100,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700544B RID: 21579
-		// (get) Token: 0x0601557A RID: 87418 RVA: 0x001F5D2B File Offset: 0x001F3F2B
-		// (set) Token: 0x0601557B RID: 87419 RVA: 0x001F5D3F File Offset: 0x001F3F3F
+		// Token: 0x170010CC RID: 4300
+		// (get) Token: 0x0600554A RID: 21834 RVA: 0x0007750F File Offset: 0x0007570F
+		// (set) Token: 0x0600554B RID: 21835 RVA: 0x00077523 File Offset: 0x00075723
 		public unsafe FVectorDouble Location
 		{
 			get
@@ -115,9 +115,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700544C RID: 21580
-		// (get) Token: 0x0601557C RID: 87420 RVA: 0x001F5D54 File Offset: 0x001F3F54
-		// (set) Token: 0x0601557D RID: 87421 RVA: 0x001F5D68 File Offset: 0x001F3F68
+		// Token: 0x170010CD RID: 4301
+		// (get) Token: 0x0600554C RID: 21836 RVA: 0x00077538 File Offset: 0x00075738
+		// (set) Token: 0x0600554D RID: 21837 RVA: 0x0007754C File Offset: 0x0007574C
 		public unsafe FRotator Rotation
 		{
 			get
@@ -130,81 +130,69 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601557E RID: 87422 RVA: 0x001F5D7D File Offset: 0x001F3F7D
+		// Token: 0x0600554E RID: 21838 RVA: 0x00077561 File Offset: 0x00075761
 		public FBulletHitWorldEntityOperation()
 		{
 		}
 
-		// Token: 0x0601557F RID: 87423 RVA: 0x001F5D85 File Offset: 0x001F3F85
-		public FBulletHitWorldEntityOperation(EBulletHitWorldEntityOperation OperationType, FWorldEntityBulletParam ExtraParam, int CasterEntityId, int EntityId, long LongParam1, FVectorDouble Location, FRotator Rotation)
-		{
-			this.OperationType = OperationType;
-			this.ExtraParam = ExtraParam;
-			this.CasterEntityId = CasterEntityId;
-			this.EntityId = EntityId;
-			this.LongParam1 = LongParam1;
-			this.Location = Location;
-			this.Rotation = Rotation;
-		}
-
-		// Token: 0x06015580 RID: 87424 RVA: 0x001F5DC2 File Offset: 0x001F3FC2
+		// Token: 0x0600554F RID: 21839 RVA: 0x00077569 File Offset: 0x00075769
 		protected override IntPtr GetUStructPtr()
 		{
 			return FBulletHitWorldEntityOperation.StaticStruct();
 		}
 
-		// Token: 0x06015581 RID: 87425 RVA: 0x001F5DCE File Offset: 0x001F3FCE
+		// Token: 0x06005550 RID: 21840 RVA: 0x00077575 File Offset: 0x00075775
 		[NullableContext(2)]
 		public FBulletHitWorldEntityOperation(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06015582 RID: 87426 RVA: 0x001F5DD8 File Offset: 0x001F3FD8
+		// Token: 0x06005551 RID: 21841 RVA: 0x0007757F File Offset: 0x0007577F
 		public FBulletHitWorldEntityOperation(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06015583 RID: 87427 RVA: 0x001F5DE3 File Offset: 0x001F3FE3
+		// Token: 0x06005552 RID: 21842 RVA: 0x0007758A File Offset: 0x0007578A
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FBulletHitWorldEntityOperation(Pointer, false, true);
 		}
 
-		// Token: 0x06015584 RID: 87428 RVA: 0x001F5DED File Offset: 0x001F3FED
+		// Token: 0x06005553 RID: 21843 RVA: 0x00077594 File Offset: 0x00075794
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FBulletHitWorldEntityOperation(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0400BA0D RID: 47629
+		// Token: 0x040022C9 RID: 8905
 		public const string __ObjectPath = "/Script/KuroBullet.BulletHitWorldEntityOperation";
 
-		// Token: 0x0400BA0E RID: 47630
+		// Token: 0x040022CA RID: 8906
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0400BA0F RID: 47631
+		// Token: 0x040022CB RID: 8907
 		internal static int __PropertyOffset_OperationType;
 
-		// Token: 0x0400BA10 RID: 47632
+		// Token: 0x040022CC RID: 8908
 		internal static int __PropertyOffset_ExtraParam;
 
-		// Token: 0x0400BA11 RID: 47633
+		// Token: 0x040022CD RID: 8909
 		[Nullable(2)]
 		private FWorldEntityBulletParam _ExtraParam;
 
-		// Token: 0x0400BA12 RID: 47634
+		// Token: 0x040022CE RID: 8910
 		internal static int __PropertyOffset_CasterEntityId;
 
-		// Token: 0x0400BA13 RID: 47635
+		// Token: 0x040022CF RID: 8911
 		internal static int __PropertyOffset_EntityId;
 
-		// Token: 0x0400BA14 RID: 47636
+		// Token: 0x040022D0 RID: 8912
 		internal static int __PropertyOffset_LongParam1;
 
-		// Token: 0x0400BA15 RID: 47637
+		// Token: 0x040022D1 RID: 8913
 		internal static int __PropertyOffset_Location;
 
-		// Token: 0x0400BA16 RID: 47638
+		// Token: 0x040022D2 RID: 8914
 		internal static int __PropertyOffset_Rotation;
 	}
 }

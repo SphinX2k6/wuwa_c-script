@@ -6,31 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020008BD RID: 2237
+	// Token: 0x0200018F RID: 399
 	[UnrealObjectPath("/Script/Engine.BlueprintCore")]
 	[UnrealStructLayout(88, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 88)]
 	public class UBlueprintCore : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06007A3B RID: 31291 RVA: 0x000AED04 File Offset: 0x000ACF04
+		// Token: 0x060019FB RID: 6651 RVA: 0x0002700F File Offset: 0x0002520F
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UBlueprintCore._ClassPtr;
 		}
 
-		// Token: 0x06007A3C RID: 31292 RVA: 0x000AED10 File Offset: 0x000ACF10
+		// Token: 0x060019FC RID: 6652 RVA: 0x0002701C File Offset: 0x0002521C
 		public UBlueprintCore() : this(BuiltinUtils.AllocNativeUObject(UBlueprintCore.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06007A3D RID: 31293 RVA: 0x000AED38 File Offset: 0x000ACF38
+		// Token: 0x060019FD RID: 6653 RVA: 0x00027044 File Offset: 0x00025244
 		[NullableContext(1)]
 		public UBlueprintCore(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UBlueprintCore.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17001CE2 RID: 7394
-		// (get) Token: 0x06007A3E RID: 31294 RVA: 0x000AED6B File Offset: 0x000ACF6B
-		// (set) Token: 0x06007A3F RID: 31295 RVA: 0x000AED7F File Offset: 0x000ACF7F
+		// Token: 0x17000301 RID: 769
+		// (get) Token: 0x060019FE RID: 6654 RVA: 0x00027077 File Offset: 0x00025277
+		// (set) Token: 0x060019FF RID: 6655 RVA: 0x0002708B File Offset: 0x0002528B
 		public unsafe UClassStackOnlyPtr SkeletonGeneratedClass
 		{
 			get
@@ -43,9 +43,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001CE3 RID: 7395
-		// (get) Token: 0x06007A40 RID: 31296 RVA: 0x000AED94 File Offset: 0x000ACF94
-		// (set) Token: 0x06007A41 RID: 31297 RVA: 0x000AEDA8 File Offset: 0x000ACFA8
+		// Token: 0x17000302 RID: 770
+		// (get) Token: 0x06001A00 RID: 6656 RVA: 0x000270A0 File Offset: 0x000252A0
+		// (set) Token: 0x06001A01 RID: 6657 RVA: 0x000270B4 File Offset: 0x000252B4
 		public unsafe UClassStackOnlyPtr GeneratedClass
 		{
 			get
@@ -58,9 +58,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001CE4 RID: 7396
-		// (get) Token: 0x06007A42 RID: 31298 RVA: 0x000AEDBD File Offset: 0x000ACFBD
-		// (set) Token: 0x06007A43 RID: 31299 RVA: 0x000AEDCD File Offset: 0x000ACFCD
+		// Token: 0x17000303 RID: 771
+		// (get) Token: 0x06001A02 RID: 6658 RVA: 0x000270C9 File Offset: 0x000252C9
+		// (set) Token: 0x06001A03 RID: 6659 RVA: 0x000270D9 File Offset: 0x000252D9
 		public unsafe bool bLegacyNeedToPurgeSkelRefs
 		{
 			get
@@ -73,9 +73,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001CE5 RID: 7397
-		// (get) Token: 0x06007A44 RID: 31300 RVA: 0x000AEDDE File Offset: 0x000ACFDE
-		// (set) Token: 0x06007A45 RID: 31301 RVA: 0x000AEDF2 File Offset: 0x000ACFF2
+		// Token: 0x17000304 RID: 772
+		// (get) Token: 0x06001A04 RID: 6660 RVA: 0x000270EA File Offset: 0x000252EA
+		// (set) Token: 0x06001A05 RID: 6661 RVA: 0x000270FE File Offset: 0x000252FE
 		public unsafe FGuid BlueprintGuid
 		{
 			get
@@ -88,37 +88,37 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06007A46 RID: 31302 RVA: 0x000AEE07 File Offset: 0x000AD007
+		// Token: 0x06001A06 RID: 6662 RVA: 0x00027113 File Offset: 0x00025313
 		static UBlueprintCore()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.BlueprintCore");
 		}
 
-		// Token: 0x06007A47 RID: 31303 RVA: 0x000AEE15 File Offset: 0x000AD015
+		// Token: 0x06001A07 RID: 6663 RVA: 0x00027121 File Offset: 0x00025321
 		protected UBlueprintCore(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04003AC3 RID: 15043
+		// Token: 0x04000859 RID: 2137
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.BlueprintCore";
 
-		// Token: 0x04003AC4 RID: 15044
+		// Token: 0x0400085A RID: 2138
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04003AC5 RID: 15045
+		// Token: 0x0400085B RID: 2139
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04003AC6 RID: 15046
+		// Token: 0x0400085C RID: 2140
 		internal static int __PropertyOffset_SkeletonGeneratedClass;
 
-		// Token: 0x04003AC7 RID: 15047
+		// Token: 0x0400085D RID: 2141
 		internal static int __PropertyOffset_GeneratedClass;
 
-		// Token: 0x04003AC8 RID: 15048
+		// Token: 0x0400085E RID: 2142
 		internal static int __PropertyOffset_bLegacyNeedToPurgeSkelRefs;
 
-		// Token: 0x04003AC9 RID: 15049
+		// Token: 0x0400085F RID: 2143
 		internal static int __PropertyOffset_BlueprintGuid;
 	}
 }

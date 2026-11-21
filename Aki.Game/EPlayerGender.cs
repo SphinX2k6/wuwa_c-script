@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020025EA RID: 9706
+// Token: 0x02001AD5 RID: 6869
 public enum EPlayerGender
 {
-	// Token: 0x040094C7 RID: 38087
+	// Token: 0x0400961E RID: 38430
 	Female,
-	// Token: 0x040094C8 RID: 38088
+	// Token: 0x0400961F RID: 38431
 	Male,
-	// Token: 0x040094C9 RID: 38089
+	// Token: 0x04009620 RID: 38432
 	None
 }

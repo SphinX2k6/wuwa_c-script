@@ -1,30 +1,30 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002B87 RID: 11143
+// Token: 0x02002103 RID: 8451
 [NullableContext(1)]
 [Nullable(0)]
 public readonly struct ESurvivorsSequenceName : IEquatable<ESurvivorsSequenceName>
 {
-	// Token: 0x06017181 RID: 94593 RVA: 0x005DC857 File Offset: 0x005DAA57
+	// Token: 0x06014BB2 RID: 84914 RVA: 0x00609437 File Offset: 0x00607637
 	private ESurvivorsSequenceName(string value)
 	{
 		this._Value = value;
 	}
 
-	// Token: 0x06017182 RID: 94594 RVA: 0x005DC860 File Offset: 0x005DAA60
+	// Token: 0x06014BB3 RID: 84915 RVA: 0x00609440 File Offset: 0x00607640
 	public override string ToString()
 	{
 		return this._Value;
 	}
 
-	// Token: 0x06017183 RID: 94595 RVA: 0x005DC868 File Offset: 0x005DAA68
+	// Token: 0x06014BB4 RID: 84916 RVA: 0x00609448 File Offset: 0x00607648
 	public bool Equals(ESurvivorsSequenceName other)
 	{
 		return this._Value == other._Value;
 	}
 
-	// Token: 0x06017184 RID: 94596 RVA: 0x005DC87C File Offset: 0x005DAA7C
+	// Token: 0x06014BB5 RID: 84917 RVA: 0x0060945C File Offset: 0x0060765C
 	[NullableContext(2)]
 	public override bool Equals(object obj)
 	{
@@ -36,7 +36,7 @@ public readonly struct ESurvivorsSequenceName : IEquatable<ESurvivorsSequenceNam
 		return false;
 	}
 
-	// Token: 0x06017185 RID: 94597 RVA: 0x005DC8A1 File Offset: 0x005DAAA1
+	// Token: 0x06014BB6 RID: 84918 RVA: 0x00609481 File Offset: 0x00607681
 	public override int GetHashCode()
 	{
 		string value = this._Value;
@@ -47,33 +47,33 @@ public readonly struct ESurvivorsSequenceName : IEquatable<ESurvivorsSequenceNam
 		return value.GetHashCode();
 	}
 
-	// Token: 0x06017186 RID: 94598 RVA: 0x005DC8B4 File Offset: 0x005DAAB4
+	// Token: 0x06014BB7 RID: 84919 RVA: 0x00609494 File Offset: 0x00607694
 	public static bool operator ==(ESurvivorsSequenceName left, ESurvivorsSequenceName right)
 	{
 		return left.Equals(right);
 	}
 
-	// Token: 0x06017187 RID: 94599 RVA: 0x005DC8BE File Offset: 0x005DAABE
+	// Token: 0x06014BB8 RID: 84920 RVA: 0x0060949E File Offset: 0x0060769E
 	public static bool operator !=(ESurvivorsSequenceName left, ESurvivorsSequenceName right)
 	{
 		return !left.Equals(right);
 	}
 
-	// Token: 0x0400ACCC RID: 44236
+	// Token: 0x0400B0D3 RID: 45267
 	private readonly string _Value;
 
-	// Token: 0x0400ACCD RID: 44237
+	// Token: 0x0400B0D4 RID: 45268
 	public static readonly ESurvivorsSequenceName PreSelect = new ESurvivorsSequenceName("PreArm");
 
-	// Token: 0x0400ACCE RID: 44238
+	// Token: 0x0400B0D5 RID: 45269
 	public static readonly ESurvivorsSequenceName LevelUp = new ESurvivorsSequenceName("LevelUp");
 
-	// Token: 0x0400ACCF RID: 44239
+	// Token: 0x0400B0D6 RID: 45270
 	public static readonly ESurvivorsSequenceName Unlock = new ESurvivorsSequenceName("Unlock");
 
-	// Token: 0x0400ACD0 RID: 44240
+	// Token: 0x0400B0D7 RID: 45271
 	public static readonly ESurvivorsSequenceName Connect = new ESurvivorsSequenceName("Connect");
 
-	// Token: 0x0400ACD1 RID: 44241
+	// Token: 0x0400B0D8 RID: 45272
 	public static readonly ESurvivorsSequenceName Disconnect = new ESurvivorsSequenceName("Disconnect");
 }

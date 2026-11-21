@@ -12,8 +12,8 @@ namespace Aki.TDConfigMgr.Component
 	[Nullable(0)]
 	public class BaseInfoComponent : IComponentBase
 	{
-		// Token: 0x06000110 RID: 272 RVA: 0x00016034 File Offset: 0x00014234
-		[NullableContext(1)]
+		// Token: 0x06000114 RID: 276 RVA: 0x000169A8 File Offset: 0x00014BA8
+		[NullableContext(0)]
 		private BaseInfoComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -28,8 +28,8 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000111 RID: 273 RVA: 0x0001606C File Offset: 0x0001426C
-		[NullableContext(1)]
+		// Token: 0x06000115 RID: 277 RVA: 0x000169E0 File Offset: 0x00014BE0
+		[NullableContext(0)]
 		public static BaseInfoComponent Create([Nullable(2)] BaseInfoComponent instance)
 		{
 			if (instance == null)
@@ -42,8 +42,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000112 RID: 274 RVA: 0x0001607F File Offset: 0x0001427F
-		[NullableContext(1)]
+		// Token: 0x06000116 RID: 278 RVA: 0x000169F3 File Offset: 0x00014BF3
+		[NullableContext(0)]
 		public static BaseInfoComponent CreateFromSetValue([Nullable(2)] BaseInfoComponent_SetValue value)
 		{
 			if (value == null)
@@ -56,8 +56,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000113 RID: 275 RVA: 0x00016094 File Offset: 0x00014294
-		[NullableContext(1)]
+		// Token: 0x06000117 RID: 279 RVA: 0x00016A08 File Offset: 0x00014C08
+		[NullableContext(0)]
 		public new BaseInfoComponent_SetValue ToSetValue()
 		{
 			return new BaseInfoComponent_SetValue
@@ -105,9 +105,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700005E RID: 94
-		// (get) Token: 0x06000114 RID: 276 RVA: 0x00016288 File Offset: 0x00014488
-		// (set) Token: 0x06000115 RID: 277 RVA: 0x000162C2 File Offset: 0x000144C2
+		// Token: 0x17000060 RID: 96
+		// (get) Token: 0x06000118 RID: 280 RVA: 0x00016BFC File Offset: 0x00014DFC
+		// (set) Token: 0x06000119 RID: 281 RVA: 0x00016C36 File Offset: 0x00014E36
 		public override bool? Disabled
 		{
 			get
@@ -129,9 +129,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700005F RID: 95
-		// (get) Token: 0x06000116 RID: 278 RVA: 0x000162D0 File Offset: 0x000144D0
-		// (set) Token: 0x06000117 RID: 279 RVA: 0x000162FA File Offset: 0x000144FA
+		// Token: 0x17000061 RID: 97
+		// (get) Token: 0x0600011A RID: 282 RVA: 0x00016C44 File Offset: 0x00014E44
+		// (set) Token: 0x0600011B RID: 283 RVA: 0x00016C6E File Offset: 0x00014E6E
 		public override bool? EdIsLocked
 		{
 			get
@@ -148,13 +148,13 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000060 RID: 96
-		// (get) Token: 0x06000118 RID: 280 RVA: 0x00016308 File Offset: 0x00014508
-		// (set) Token: 0x06000119 RID: 281 RVA: 0x00016333 File Offset: 0x00014533
-		[Nullable(1)]
+		// Token: 0x17000062 RID: 98
+		// (get) Token: 0x0600011C RID: 284 RVA: 0x00016C7C File Offset: 0x00014E7C
+		// (set) Token: 0x0600011D RID: 285 RVA: 0x00016CA7 File Offset: 0x00014EA7
+		[Nullable(0)]
 		public virtual string TidName
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -167,16 +167,16 @@ namespace Aki.TDConfigMgr.Component
 				}
 				return this.PocoInterface.TidName;
 			}
-			[NullableContext(1)]
+			[NullableContext(0)]
 			set
 			{
 				this.GetOrCreatePoco().TidName = value;
 			}
 		}
 
-		// Token: 0x17000061 RID: 97
-		// (get) Token: 0x0600011A RID: 282 RVA: 0x00016344 File Offset: 0x00014544
-		// (set) Token: 0x0600011B RID: 283 RVA: 0x0001637E File Offset: 0x0001457E
+		// Token: 0x17000063 RID: 99
+		// (get) Token: 0x0600011E RID: 286 RVA: 0x00016CB8 File Offset: 0x00014EB8
+		// (set) Token: 0x0600011F RID: 287 RVA: 0x00016CF2 File Offset: 0x00014EF2
 		public virtual bool? IsShowNameOnHead
 		{
 			get
@@ -198,13 +198,13 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000062 RID: 98
-		// (get) Token: 0x0600011C RID: 284 RVA: 0x0001638C File Offset: 0x0001458C
-		// (set) Token: 0x0600011D RID: 285 RVA: 0x000163ED File Offset: 0x000145ED
-		[Nullable(1)]
+		// Token: 0x17000064 RID: 100
+		// (get) Token: 0x06000120 RID: 288 RVA: 0x00016D00 File Offset: 0x00014F00
+		// (set) Token: 0x06000121 RID: 289 RVA: 0x00016D61 File Offset: 0x00014F61
+		[Nullable(0)]
 		public virtual IEntityCategory Category
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._CategoryInited)
@@ -223,7 +223,7 @@ namespace Aki.TDConfigMgr.Component
 				}
 				return this._CategoryCache;
 			}
-			[NullableContext(1)]
+			[NullableContext(0)]
 			set
 			{
 				this.GetOrCreatePoco().Category = value;
@@ -231,9 +231,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000063 RID: 99
-		// (get) Token: 0x0600011E RID: 286 RVA: 0x00016404 File Offset: 0x00014604
-		// (set) Token: 0x0600011F RID: 287 RVA: 0x00016465 File Offset: 0x00014665
+		// Token: 0x17000065 RID: 101
+		// (get) Token: 0x06000122 RID: 290 RVA: 0x00016D78 File Offset: 0x00014F78
+		// (set) Token: 0x06000123 RID: 291 RVA: 0x00016DD9 File Offset: 0x00014FD9
 		public virtual IEntityScanFunction ScanFunction
 		{
 			get
@@ -261,9 +261,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000064 RID: 100
-		// (get) Token: 0x06000120 RID: 288 RVA: 0x0001647C File Offset: 0x0001467C
-		// (set) Token: 0x06000121 RID: 289 RVA: 0x000164B6 File Offset: 0x000146B6
+		// Token: 0x17000066 RID: 102
+		// (get) Token: 0x06000124 RID: 292 RVA: 0x00016DF0 File Offset: 0x00014FF0
+		// (set) Token: 0x06000125 RID: 293 RVA: 0x00016E2A File Offset: 0x0001502A
 		public virtual int? HeadInfo
 		{
 			get
@@ -285,9 +285,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000065 RID: 101
-		// (get) Token: 0x06000122 RID: 290 RVA: 0x000164C4 File Offset: 0x000146C4
-		// (set) Token: 0x06000123 RID: 291 RVA: 0x000164EF File Offset: 0x000146EF
+		// Token: 0x17000067 RID: 103
+		// (get) Token: 0x06000126 RID: 294 RVA: 0x00016E38 File Offset: 0x00015038
+		// (set) Token: 0x06000127 RID: 295 RVA: 0x00016E63 File Offset: 0x00015063
 		public virtual ECamp Camp
 		{
 			get
@@ -308,9 +308,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000066 RID: 102
-		// (get) Token: 0x06000124 RID: 292 RVA: 0x000164FD File Offset: 0x000146FD
-		// (set) Token: 0x06000125 RID: 293 RVA: 0x00016528 File Offset: 0x00014728
+		// Token: 0x17000068 RID: 104
+		// (get) Token: 0x06000128 RID: 296 RVA: 0x00016E71 File Offset: 0x00015071
+		// (set) Token: 0x06000129 RID: 297 RVA: 0x00016E9C File Offset: 0x0001509C
 		public virtual EAoiLayer AoiLayer
 		{
 			get
@@ -331,9 +331,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000067 RID: 103
-		// (get) Token: 0x06000126 RID: 294 RVA: 0x00016536 File Offset: 0x00014736
-		// (set) Token: 0x06000127 RID: 295 RVA: 0x00016561 File Offset: 0x00014761
+		// Token: 0x17000069 RID: 105
+		// (get) Token: 0x0600012A RID: 298 RVA: 0x00016EAA File Offset: 0x000150AA
+		// (set) Token: 0x0600012B RID: 299 RVA: 0x00016ED5 File Offset: 0x000150D5
 		public virtual AoiZRadius AoiZRadius
 		{
 			get
@@ -354,9 +354,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000068 RID: 104
-		// (get) Token: 0x06000128 RID: 296 RVA: 0x0001656F File Offset: 0x0001476F
-		// (set) Token: 0x06000129 RID: 297 RVA: 0x00016596 File Offset: 0x00014796
+		// Token: 0x1700006A RID: 106
+		// (get) Token: 0x0600012C RID: 300 RVA: 0x00016EE3 File Offset: 0x000150E3
+		// (set) Token: 0x0600012D RID: 301 RVA: 0x00016F0A File Offset: 0x0001510A
 		public virtual string AoiGroupKey
 		{
 			get
@@ -378,9 +378,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000069 RID: 105
-		// (get) Token: 0x0600012A RID: 298 RVA: 0x000165A4 File Offset: 0x000147A4
-		// (set) Token: 0x0600012B RID: 299 RVA: 0x000165DE File Offset: 0x000147DE
+		// Token: 0x1700006B RID: 107
+		// (get) Token: 0x0600012E RID: 302 RVA: 0x00016F18 File Offset: 0x00015118
+		// (set) Token: 0x0600012F RID: 303 RVA: 0x00016F52 File Offset: 0x00015152
 		public virtual bool? IsAoiFitterPlatform
 		{
 			get
@@ -402,9 +402,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700006A RID: 106
-		// (get) Token: 0x0600012C RID: 300 RVA: 0x000165EC File Offset: 0x000147EC
-		// (set) Token: 0x0600012D RID: 301 RVA: 0x0001664D File Offset: 0x0001484D
+		// Token: 0x1700006C RID: 108
+		// (get) Token: 0x06000130 RID: 304 RVA: 0x00016F60 File Offset: 0x00015160
+		// (set) Token: 0x06000131 RID: 305 RVA: 0x00016FC1 File Offset: 0x000151C1
 		public virtual ICustomAoizRadius CustomAoiZRadius
 		{
 			get
@@ -432,9 +432,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700006B RID: 107
-		// (get) Token: 0x0600012E RID: 302 RVA: 0x00016664 File Offset: 0x00014864
-		// (set) Token: 0x0600012F RID: 303 RVA: 0x0001669E File Offset: 0x0001489E
+		// Token: 0x1700006D RID: 109
+		// (get) Token: 0x06000132 RID: 306 RVA: 0x00016FD8 File Offset: 0x000151D8
+		// (set) Token: 0x06000133 RID: 307 RVA: 0x00017012 File Offset: 0x00015212
 		public virtual int? MapIcon
 		{
 			get
@@ -456,9 +456,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700006C RID: 108
-		// (get) Token: 0x06000130 RID: 304 RVA: 0x000166AC File Offset: 0x000148AC
-		// (set) Token: 0x06000131 RID: 305 RVA: 0x000166E6 File Offset: 0x000148E6
+		// Token: 0x1700006E RID: 110
+		// (get) Token: 0x06000134 RID: 308 RVA: 0x00017020 File Offset: 0x00015220
+		// (set) Token: 0x06000135 RID: 309 RVA: 0x0001705A File Offset: 0x0001525A
 		public virtual int? PackId
 		{
 			get
@@ -480,9 +480,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700006D RID: 109
-		// (get) Token: 0x06000132 RID: 306 RVA: 0x000166F4 File Offset: 0x000148F4
-		// (set) Token: 0x06000133 RID: 307 RVA: 0x0001671B File Offset: 0x0001491B
+		// Token: 0x1700006F RID: 111
+		// (get) Token: 0x06000136 RID: 310 RVA: 0x00017068 File Offset: 0x00015268
+		// (set) Token: 0x06000137 RID: 311 RVA: 0x0001708F File Offset: 0x0001528F
 		public virtual string Occupation
 		{
 			get
@@ -504,9 +504,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700006E RID: 110
-		// (get) Token: 0x06000134 RID: 308 RVA: 0x0001672C File Offset: 0x0001492C
-		// (set) Token: 0x06000135 RID: 309 RVA: 0x0001678D File Offset: 0x0001498D
+		// Token: 0x17000070 RID: 112
+		// (get) Token: 0x06000138 RID: 312 RVA: 0x000170A0 File Offset: 0x000152A0
+		// (set) Token: 0x06000139 RID: 313 RVA: 0x00017101 File Offset: 0x00015301
 		public virtual IHeadStateViewConfig HeadStateViewConfig
 		{
 			get
@@ -534,9 +534,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700006F RID: 111
-		// (get) Token: 0x06000136 RID: 310 RVA: 0x000167A2 File Offset: 0x000149A2
-		// (set) Token: 0x06000137 RID: 311 RVA: 0x000167CD File Offset: 0x000149CD
+		// Token: 0x17000071 RID: 113
+		// (get) Token: 0x0600013A RID: 314 RVA: 0x00017116 File Offset: 0x00015316
+		// (set) Token: 0x0600013B RID: 315 RVA: 0x00017141 File Offset: 0x00015341
 		public virtual int EntityPropertyId
 		{
 			get
@@ -557,9 +557,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000070 RID: 112
-		// (get) Token: 0x06000138 RID: 312 RVA: 0x000167DC File Offset: 0x000149DC
-		// (set) Token: 0x06000139 RID: 313 RVA: 0x00016816 File Offset: 0x00014A16
+		// Token: 0x17000072 RID: 114
+		// (get) Token: 0x0600013C RID: 316 RVA: 0x00017150 File Offset: 0x00015350
+		// (set) Token: 0x0600013D RID: 317 RVA: 0x0001718A File Offset: 0x0001538A
 		public virtual int? FocusPriority
 		{
 			get
@@ -581,9 +581,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000071 RID: 113
-		// (get) Token: 0x0600013A RID: 314 RVA: 0x00016824 File Offset: 0x00014A24
-		// (set) Token: 0x0600013B RID: 315 RVA: 0x0001684F File Offset: 0x00014A4F
+		// Token: 0x17000073 RID: 115
+		// (get) Token: 0x0600013E RID: 318 RVA: 0x00017198 File Offset: 0x00015398
+		// (set) Token: 0x0600013F RID: 319 RVA: 0x000171C3 File Offset: 0x000153C3
 		public virtual EOnlineInteractType OnlineInteractType
 		{
 			get
@@ -604,9 +604,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000072 RID: 114
-		// (get) Token: 0x0600013C RID: 316 RVA: 0x00016860 File Offset: 0x00014A60
-		// (set) Token: 0x0600013D RID: 317 RVA: 0x0001689A File Offset: 0x00014A9A
+		// Token: 0x17000074 RID: 116
+		// (get) Token: 0x06000140 RID: 320 RVA: 0x000171D4 File Offset: 0x000153D4
+		// (set) Token: 0x06000141 RID: 321 RVA: 0x0001720E File Offset: 0x0001540E
 		public virtual bool? NotAllowHidedByTargetRange
 		{
 			get
@@ -628,9 +628,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000073 RID: 115
-		// (get) Token: 0x0600013E RID: 318 RVA: 0x000168A8 File Offset: 0x00014AA8
-		// (set) Token: 0x0600013F RID: 319 RVA: 0x000168E2 File Offset: 0x00014AE2
+		// Token: 0x17000075 RID: 117
+		// (get) Token: 0x06000142 RID: 322 RVA: 0x0001721C File Offset: 0x0001541C
+		// (set) Token: 0x06000143 RID: 323 RVA: 0x00017256 File Offset: 0x00015456
 		public virtual ENpcDensity? LowerNpcDensity
 		{
 			get
@@ -652,9 +652,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000074 RID: 116
-		// (get) Token: 0x06000140 RID: 320 RVA: 0x000168F0 File Offset: 0x00014AF0
-		// (set) Token: 0x06000141 RID: 321 RVA: 0x00016917 File Offset: 0x00014B17
+		// Token: 0x17000076 RID: 118
+		// (get) Token: 0x06000144 RID: 324 RVA: 0x00017264 File Offset: 0x00015464
+		// (set) Token: 0x06000145 RID: 325 RVA: 0x0001728B File Offset: 0x0001548B
 		public virtual List<int> DataLayers
 		{
 			get
@@ -676,9 +676,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000075 RID: 117
-		// (get) Token: 0x06000142 RID: 322 RVA: 0x00016925 File Offset: 0x00014B25
-		// (set) Token: 0x06000143 RID: 323 RVA: 0x0001694C File Offset: 0x00014B4C
+		// Token: 0x17000077 RID: 119
+		// (get) Token: 0x06000146 RID: 326 RVA: 0x00017299 File Offset: 0x00015499
+		// (set) Token: 0x06000147 RID: 327 RVA: 0x000172C0 File Offset: 0x000154C0
 		public virtual List<int> ChildEntityIds
 		{
 			get
@@ -700,9 +700,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000076 RID: 118
-		// (get) Token: 0x06000144 RID: 324 RVA: 0x0001695C File Offset: 0x00014B5C
-		// (set) Token: 0x06000145 RID: 325 RVA: 0x00016996 File Offset: 0x00014B96
+		// Token: 0x17000078 RID: 120
+		// (get) Token: 0x06000148 RID: 328 RVA: 0x000172D0 File Offset: 0x000154D0
+		// (set) Token: 0x06000149 RID: 329 RVA: 0x0001730A File Offset: 0x0001550A
 		public virtual bool? IsOnlineStandalone
 		{
 			get
@@ -724,20 +724,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000077 RID: 119
-		// (get) Token: 0x06000146 RID: 326 RVA: 0x000169A4 File Offset: 0x00014BA4
-		// (set) Token: 0x06000147 RID: 327 RVA: 0x000169CB File Offset: 0x00014BCB
+		// Token: 0x17000079 RID: 121
+		// (get) Token: 0x0600014A RID: 330 RVA: 0x00017318 File Offset: 0x00015518
+		// (set) Token: 0x0600014B RID: 331 RVA: 0x0001733F File Offset: 0x0001553F
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<string> SpecifiedOnlineStandaloneParentUids
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -755,7 +755,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -763,9 +763,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000078 RID: 120
-		// (get) Token: 0x06000148 RID: 328 RVA: 0x000169DC File Offset: 0x00014BDC
-		// (set) Token: 0x06000149 RID: 329 RVA: 0x00016A3D File Offset: 0x00014C3D
+		// Token: 0x1700007A RID: 122
+		// (get) Token: 0x0600014C RID: 332 RVA: 0x00017350 File Offset: 0x00015550
+		// (set) Token: 0x0600014D RID: 333 RVA: 0x000173B1 File Offset: 0x000155B1
 		public virtual IFixProcessor FixProcessor
 		{
 			get
@@ -793,9 +793,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000079 RID: 121
-		// (get) Token: 0x0600014A RID: 330 RVA: 0x00016A54 File Offset: 0x00014C54
-		// (set) Token: 0x0600014B RID: 331 RVA: 0x00016A8E File Offset: 0x00014C8E
+		// Token: 0x1700007B RID: 123
+		// (get) Token: 0x0600014E RID: 334 RVA: 0x000173C8 File Offset: 0x000155C8
+		// (set) Token: 0x0600014F RID: 335 RVA: 0x00017402 File Offset: 0x00015602
 		public virtual EEntityUpdateStrategy? EntityUpdateStrategy
 		{
 			get
@@ -817,9 +817,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700007A RID: 122
-		// (get) Token: 0x0600014C RID: 332 RVA: 0x00016A9C File Offset: 0x00014C9C
-		// (set) Token: 0x0600014D RID: 333 RVA: 0x00016AD6 File Offset: 0x00014CD6
+		// Token: 0x1700007C RID: 124
+		// (get) Token: 0x06000150 RID: 336 RVA: 0x00017410 File Offset: 0x00015610
+		// (set) Token: 0x06000151 RID: 337 RVA: 0x0001744A File Offset: 0x0001564A
 		public virtual EMaterialUpdateStrategy? MaterialUpdateStrategy
 		{
 			get
@@ -841,9 +841,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700007B RID: 123
-		// (get) Token: 0x0600014E RID: 334 RVA: 0x00016AE4 File Offset: 0x00014CE4
-		// (set) Token: 0x0600014F RID: 335 RVA: 0x00016B1E File Offset: 0x00014D1E
+		// Token: 0x1700007D RID: 125
+		// (get) Token: 0x06000152 RID: 338 RVA: 0x00017458 File Offset: 0x00015658
+		// (set) Token: 0x06000153 RID: 339 RVA: 0x00017492 File Offset: 0x00015692
 		public virtual ETimeScaleModifyStrategy? TimeScaleModifyStrategy
 		{
 			get
@@ -865,9 +865,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700007C RID: 124
-		// (get) Token: 0x06000150 RID: 336 RVA: 0x00016B2C File Offset: 0x00014D2C
-		// (set) Token: 0x06000151 RID: 337 RVA: 0x00016B8D File Offset: 0x00014D8D
+		// Token: 0x1700007E RID: 126
+		// (get) Token: 0x06000154 RID: 340 RVA: 0x000174A0 File Offset: 0x000156A0
+		// (set) Token: 0x06000155 RID: 341 RVA: 0x00017501 File Offset: 0x00015701
 		public virtual IEntityGravityConfig GravityConfig
 		{
 			get
@@ -895,20 +895,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700007D RID: 125
-		// (get) Token: 0x06000152 RID: 338 RVA: 0x00016BA4 File Offset: 0x00014DA4
-		// (set) Token: 0x06000153 RID: 339 RVA: 0x00016C37 File Offset: 0x00014E37
+		// Token: 0x1700007F RID: 127
+		// (get) Token: 0x06000156 RID: 342 RVA: 0x00017518 File Offset: 0x00015718
+		// (set) Token: 0x06000157 RID: 343 RVA: 0x000175AB File Offset: 0x000157AB
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IHeadInfoChangeData> HeadInfoChangeConfig
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -939,7 +939,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -948,9 +948,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700007E RID: 126
-		// (get) Token: 0x06000154 RID: 340 RVA: 0x00016C4C File Offset: 0x00014E4C
-		// (set) Token: 0x06000155 RID: 341 RVA: 0x00016C86 File Offset: 0x00014E86
+		// Token: 0x17000080 RID: 128
+		// (get) Token: 0x06000158 RID: 344 RVA: 0x000175C0 File Offset: 0x000157C0
+		// (set) Token: 0x06000159 RID: 345 RVA: 0x000175FA File Offset: 0x000157FA
 		public virtual bool? IsForceDestroy
 		{
 			get
@@ -972,9 +972,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700007F RID: 127
-		// (get) Token: 0x06000156 RID: 342 RVA: 0x00016C94 File Offset: 0x00014E94
-		// (set) Token: 0x06000157 RID: 343 RVA: 0x00016CF5 File Offset: 0x00014EF5
+		// Token: 0x17000081 RID: 129
+		// (get) Token: 0x0600015A RID: 346 RVA: 0x00017608 File Offset: 0x00015808
+		// (set) Token: 0x0600015B RID: 347 RVA: 0x00017669 File Offset: 0x00015869
 		public virtual ITimeScaleConfig TimeScaleConfig
 		{
 			get
@@ -1002,20 +1002,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000080 RID: 128
-		// (get) Token: 0x06000158 RID: 344 RVA: 0x00016D0C File Offset: 0x00014F0C
-		// (set) Token: 0x06000159 RID: 345 RVA: 0x00016D9F File Offset: 0x00014F9F
+		// Token: 0x17000082 RID: 130
+		// (get) Token: 0x0600015C RID: 348 RVA: 0x00017680 File Offset: 0x00015880
+		// (set) Token: 0x0600015D RID: 349 RVA: 0x00017713 File Offset: 0x00015913
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IEntityAttachPoint> EntityAttachPointList
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -1046,7 +1046,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -1055,9 +1055,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000081 RID: 129
-		// (get) Token: 0x0600015A RID: 346 RVA: 0x00016DB4 File Offset: 0x00014FB4
-		// (set) Token: 0x0600015B RID: 347 RVA: 0x00016DEE File Offset: 0x00014FEE
+		// Token: 0x17000083 RID: 131
+		// (get) Token: 0x0600015E RID: 350 RVA: 0x00017728 File Offset: 0x00015928
+		// (set) Token: 0x0600015F RID: 351 RVA: 0x00017762 File Offset: 0x00015962
 		public virtual int? DelayDestroyDistance
 		{
 			get
@@ -1079,9 +1079,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000082 RID: 130
-		// (get) Token: 0x0600015C RID: 348 RVA: 0x00016DFC File Offset: 0x00014FFC
-		// (set) Token: 0x0600015D RID: 349 RVA: 0x00016E36 File Offset: 0x00015036
+		// Token: 0x17000084 RID: 132
+		// (get) Token: 0x06000160 RID: 352 RVA: 0x00017770 File Offset: 0x00015970
+		// (set) Token: 0x06000161 RID: 353 RVA: 0x000177AA File Offset: 0x000159AA
 		public virtual EClientEntityMark? IsClientEntityFlag
 		{
 			get
@@ -1103,9 +1103,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000083 RID: 131
-		// (get) Token: 0x0600015E RID: 350 RVA: 0x00016E44 File Offset: 0x00015044
-		// (set) Token: 0x0600015F RID: 351 RVA: 0x00016E7E File Offset: 0x0001507E
+		// Token: 0x17000085 RID: 133
+		// (get) Token: 0x06000162 RID: 354 RVA: 0x000177B8 File Offset: 0x000159B8
+		// (set) Token: 0x06000163 RID: 355 RVA: 0x000177F2 File Offset: 0x000159F2
 		public virtual bool? KeepAnimationRateWithShadow
 		{
 			get
@@ -1127,9 +1127,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000084 RID: 132
-		// (get) Token: 0x06000160 RID: 352 RVA: 0x00016E8C File Offset: 0x0001508C
-		// (set) Token: 0x06000161 RID: 353 RVA: 0x00016EA3 File Offset: 0x000150A3
+		// Token: 0x17000086 RID: 134
+		// (get) Token: 0x06000164 RID: 356 RVA: 0x00017800 File Offset: 0x00015A00
+		// (set) Token: 0x06000165 RID: 357 RVA: 0x00017817 File Offset: 0x00015A17
 		public virtual string EdTidName
 		{
 			get
@@ -1146,9 +1146,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000085 RID: 133
-		// (get) Token: 0x06000162 RID: 354 RVA: 0x00016EB4 File Offset: 0x000150B4
-		// (set) Token: 0x06000163 RID: 355 RVA: 0x00016EDE File Offset: 0x000150DE
+		// Token: 0x17000087 RID: 135
+		// (get) Token: 0x06000166 RID: 358 RVA: 0x00017828 File Offset: 0x00015A28
+		// (set) Token: 0x06000167 RID: 359 RVA: 0x00017852 File Offset: 0x00015A52
 		public virtual ESnapFloorType? EdSnapFloor
 		{
 			get
@@ -1165,81 +1165,81 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040000A9 RID: 169
+		// Token: 0x040000AE RID: 174
 		protected new BaseInfoComponent FbInstance;
 
-		// Token: 0x040000AA RID: 170
+		// Token: 0x040000AF RID: 175
 		protected new BaseInfoComponent_SetValue PocoInterface;
 
-		// Token: 0x040000AB RID: 171
-		[Nullable(1)]
+		// Token: 0x040000B0 RID: 176
+		[Nullable(0)]
 		private IEntityCategory _CategoryCache;
 
-		// Token: 0x040000AC RID: 172
+		// Token: 0x040000B1 RID: 177
 		private bool _CategoryInited;
 
-		// Token: 0x040000AD RID: 173
-		[Nullable(1)]
+		// Token: 0x040000B2 RID: 178
+		[Nullable(0)]
 		private IEntityScanFunction _ScanFunctionCache;
 
-		// Token: 0x040000AE RID: 174
+		// Token: 0x040000B3 RID: 179
 		private bool _ScanFunctionInited;
 
-		// Token: 0x040000AF RID: 175
-		[Nullable(1)]
+		// Token: 0x040000B4 RID: 180
+		[Nullable(0)]
 		private ICustomAoizRadius _CustomAoiZRadiusCache;
 
-		// Token: 0x040000B0 RID: 176
+		// Token: 0x040000B5 RID: 181
 		private bool _CustomAoiZRadiusInited;
 
-		// Token: 0x040000B1 RID: 177
-		[Nullable(1)]
+		// Token: 0x040000B6 RID: 182
+		[Nullable(0)]
 		private IHeadStateViewConfig _HeadStateViewConfigCache;
 
-		// Token: 0x040000B2 RID: 178
+		// Token: 0x040000B7 RID: 183
 		private bool _HeadStateViewConfigInited;
 
-		// Token: 0x040000B3 RID: 179
-		[Nullable(1)]
+		// Token: 0x040000B8 RID: 184
+		[Nullable(0)]
 		private IFixProcessor _FixProcessorCache;
 
-		// Token: 0x040000B4 RID: 180
+		// Token: 0x040000B9 RID: 185
 		private bool _FixProcessorInited;
 
-		// Token: 0x040000B5 RID: 181
-		[Nullable(1)]
+		// Token: 0x040000BA RID: 186
+		[Nullable(0)]
 		private IEntityGravityConfig _GravityConfigCache;
 
-		// Token: 0x040000B6 RID: 182
+		// Token: 0x040000BB RID: 187
 		private bool _GravityConfigInited;
 
-		// Token: 0x040000B7 RID: 183
+		// Token: 0x040000BC RID: 188
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IHeadInfoChangeData> _HeadInfoChangeConfigCache;
 
-		// Token: 0x040000B8 RID: 184
+		// Token: 0x040000BD RID: 189
 		private bool _HeadInfoChangeConfigInited;
 
-		// Token: 0x040000B9 RID: 185
-		[Nullable(1)]
+		// Token: 0x040000BE RID: 190
+		[Nullable(0)]
 		private ITimeScaleConfig _TimeScaleConfigCache;
 
-		// Token: 0x040000BA RID: 186
+		// Token: 0x040000BF RID: 191
 		private bool _TimeScaleConfigInited;
 
-		// Token: 0x040000BB RID: 187
+		// Token: 0x040000C0 RID: 192
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IEntityAttachPoint> _EntityAttachPointListCache;
 
-		// Token: 0x040000BC RID: 188
+		// Token: 0x040000C1 RID: 193
 		private bool _EntityAttachPointListInited;
 	}
 }

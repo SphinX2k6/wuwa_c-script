@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001F4F RID: 8015
+// Token: 0x02001411 RID: 5137
 [NullableContext(2)]
 [Nullable(0)]
 public class ManipulateCursorUnit : HudUnitBase
 {
-	// Token: 0x0600F7F0 RID: 63472 RVA: 0x003BF534 File Offset: 0x003BD734
+	// Token: 0x0600CC0F RID: 52239 RVA: 0x003CB020 File Offset: 0x003C9220
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 13;
@@ -53,7 +53,7 @@ public class ManipulateCursorUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F7F1 RID: 63473 RVA: 0x003BF738 File Offset: 0x003BD938
+	// Token: 0x0600CC10 RID: 52240 RVA: 0x003CB224 File Offset: 0x003C9424
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ManipulateCursorUnit.<OnBeforeStartAsync>d__20 <OnBeforeStartAsync>d__;
@@ -64,7 +64,7 @@ public class ManipulateCursorUnit : HudUnitBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F7F2 RID: 63474 RVA: 0x003BF77C File Offset: 0x003BD97C
+	// Token: 0x0600CC11 RID: 52241 RVA: 0x003CB268 File Offset: 0x003C9468
 	protected override void OnBeforeDestroy()
 	{
 		this.DestroyCloseTimer();
@@ -93,7 +93,7 @@ public class ManipulateCursorUnit : HudUnitBase
 		base.OnBeforeDestroy();
 	}
 
-	// Token: 0x0600F7F3 RID: 63475 RVA: 0x003BF838 File Offset: 0x003BDA38
+	// Token: 0x0600CC12 RID: 52242 RVA: 0x003CB324 File Offset: 0x003C9524
 	[NullableContext(1)]
 	public void Refresh(bool isInScreen, Vector2D position, bool isCastTarget)
 	{
@@ -114,7 +114,7 @@ public class ManipulateCursorUnit : HudUnitBase
 		this.SetIsCastTarget(isCastTarget);
 	}
 
-	// Token: 0x0600F7F4 RID: 63476 RVA: 0x003BF8EC File Offset: 0x003BDAEC
+	// Token: 0x0600CC13 RID: 52243 RVA: 0x003CB3D8 File Offset: 0x003C95D8
 	private void SetIsCastTarget(bool isCastTarget)
 	{
 		if (this.IsCastTarget == isCastTarget)
@@ -136,7 +136,7 @@ public class ManipulateCursorUnit : HudUnitBase
 		this.SetKeyAction("幻象1");
 	}
 
-	// Token: 0x0600F7F5 RID: 63477 RVA: 0x003BF950 File Offset: 0x003BDB50
+	// Token: 0x0600CC14 RID: 52244 RVA: 0x003CB43C File Offset: 0x003C963C
 	public void SetIconPath(string iconPath)
 	{
 		if (this.IconSprite == null)
@@ -175,7 +175,7 @@ public class ManipulateCursorUnit : HudUnitBase
 		}, ResourceSystem.EResourceLoadPriority.BattleUi, this.MemoryTag);
 	}
 
-	// Token: 0x0600F7F6 RID: 63478 RVA: 0x003BFA37 File Offset: 0x003BDC37
+	// Token: 0x0600CC15 RID: 52245 RVA: 0x003CB523 File Offset: 0x003C9723
 	[NullableContext(1)]
 	public void SetKeyAction(string actionName)
 	{
@@ -187,7 +187,7 @@ public class ManipulateCursorUnit : HudUnitBase
 		keyItem.RefreshAction(actionName);
 	}
 
-	// Token: 0x0600F7F7 RID: 63479 RVA: 0x003BFA4C File Offset: 0x003BDC4C
+	// Token: 0x0600CC16 RID: 52246 RVA: 0x003CB538 File Offset: 0x003C9738
 	public void StartProcess(float totalSeconds)
 	{
 		UUIItem processItem = this.ProcessItem;
@@ -207,7 +207,7 @@ public class ManipulateCursorUnit : HudUnitBase
 		this.StartProcessTime = Time.Instance.WorldTime;
 	}
 
-	// Token: 0x0600F7F8 RID: 63480 RVA: 0x003BFAB4 File Offset: 0x003BDCB4
+	// Token: 0x0600CC17 RID: 52247 RVA: 0x003CB5A0 File Offset: 0x003C97A0
 	public void EndProcess(bool resetProcess)
 	{
 		this.StopProcessAnim();
@@ -218,7 +218,7 @@ public class ManipulateCursorUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F7F9 RID: 63481 RVA: 0x003BFAD8 File Offset: 0x003BDCD8
+	// Token: 0x0600CC18 RID: 52248 RVA: 0x003CB5C4 File Offset: 0x003C97C4
 	private void UpdateProcess()
 	{
 		if (this.ProcessSpeed <= 0f)
@@ -229,7 +229,7 @@ public class ManipulateCursorUnit : HudUnitBase
 		this.SetProcess(process);
 	}
 
-	// Token: 0x0600F7FA RID: 63482 RVA: 0x003BFB1F File Offset: 0x003BDD1F
+	// Token: 0x0600CC19 RID: 52249 RVA: 0x003CB60B File Offset: 0x003C980B
 	private void SetProcess(float percent)
 	{
 		UUISprite processSprite = this.ProcessSprite;
@@ -240,7 +240,7 @@ public class ManipulateCursorUnit : HudUnitBase
 		processSprite.SetFillAmount(percent);
 	}
 
-	// Token: 0x0600F7FB RID: 63483 RVA: 0x003BFB32 File Offset: 0x003BDD32
+	// Token: 0x0600CC1A RID: 52250 RVA: 0x003CB61E File Offset: 0x003C981E
 	public void PlayActivateEffect()
 	{
 		UUINiagara uiNiagara = base.GetUiNiagara(6);
@@ -248,7 +248,7 @@ public class ManipulateCursorUnit : HudUnitBase
 		uiNiagara.ActivateSystem(true);
 	}
 
-	// Token: 0x0600F7FC RID: 63484 RVA: 0x003BFB48 File Offset: 0x003BDD48
+	// Token: 0x0600CC1B RID: 52251 RVA: 0x003CB634 File Offset: 0x003C9834
 	private void InitAllTweenAnim()
 	{
 		base.InitTweenAnim(7);
@@ -258,7 +258,7 @@ public class ManipulateCursorUnit : HudUnitBase
 		base.InitTweenAnim(12);
 	}
 
-	// Token: 0x0600F7FD RID: 63485 RVA: 0x003BFB70 File Offset: 0x003BDD70
+	// Token: 0x0600CC1C RID: 52252 RVA: 0x003CB65C File Offset: 0x003C985C
 	public void Appear()
 	{
 		this.IsActive = true;
@@ -285,7 +285,7 @@ public class ManipulateCursorUnit : HudUnitBase
 		arrowItem.SetAlpha(1f);
 	}
 
-	// Token: 0x0600F7FE RID: 63486 RVA: 0x003BFBD4 File Offset: 0x003BDDD4
+	// Token: 0x0600CC1D RID: 52253 RVA: 0x003CB6C0 File Offset: 0x003C98C0
 	public void PlayStartAnim()
 	{
 		if (!this.IsActive)
@@ -295,7 +295,7 @@ public class ManipulateCursorUnit : HudUnitBase
 		base.PlayTweenAnim(7);
 	}
 
-	// Token: 0x0600F7FF RID: 63487 RVA: 0x003BFBE6 File Offset: 0x003BDDE6
+	// Token: 0x0600CC1E RID: 52254 RVA: 0x003CB6D2 File Offset: 0x003C98D2
 	public void PlayCompleteAnim()
 	{
 		if (!this.IsActive)
@@ -305,7 +305,7 @@ public class ManipulateCursorUnit : HudUnitBase
 		base.PlayTweenAnim(9);
 	}
 
-	// Token: 0x0600F800 RID: 63488 RVA: 0x003BFBF9 File Offset: 0x003BDDF9
+	// Token: 0x0600CC1F RID: 52255 RVA: 0x003CB6E5 File Offset: 0x003C98E5
 	public void PlayInterruptedAnim()
 	{
 		if (!this.IsActive)
@@ -315,7 +315,7 @@ public class ManipulateCursorUnit : HudUnitBase
 		base.PlayTweenAnim(10);
 	}
 
-	// Token: 0x0600F801 RID: 63489 RVA: 0x003BFC0C File Offset: 0x003BDE0C
+	// Token: 0x0600CC20 RID: 52256 RVA: 0x003CB6F8 File Offset: 0x003C98F8
 	public void PlayProcessAnim()
 	{
 		if (!this.IsActive)
@@ -325,7 +325,7 @@ public class ManipulateCursorUnit : HudUnitBase
 		base.PlayTweenAnim(8);
 	}
 
-	// Token: 0x0600F802 RID: 63490 RVA: 0x003BFC1E File Offset: 0x003BDE1E
+	// Token: 0x0600CC21 RID: 52257 RVA: 0x003CB70A File Offset: 0x003C990A
 	public void StopProcessAnim()
 	{
 		if (!this.IsActive)
@@ -335,7 +335,7 @@ public class ManipulateCursorUnit : HudUnitBase
 		base.StopTweenAnim(8);
 	}
 
-	// Token: 0x0600F803 RID: 63491 RVA: 0x003BFC30 File Offset: 0x003BDE30
+	// Token: 0x0600CC22 RID: 52258 RVA: 0x003CB71C File Offset: 0x003C991C
 	public void PlayCloseAnim(float delay)
 	{
 		if (!this.IsActive)
@@ -369,7 +369,7 @@ public class ManipulateCursorUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F804 RID: 63492 RVA: 0x003BFCA4 File Offset: 0x003BDEA4
+	// Token: 0x0600CC23 RID: 52259 RVA: 0x003CB790 File Offset: 0x003C9990
 	private void OnCloseTimerEnd()
 	{
 		this.CloseTimer = TimerSystem.Instance.Delay(delegate(float _)
@@ -384,7 +384,7 @@ public class ManipulateCursorUnit : HudUnitBase
 		base.PlayTweenAnim(12);
 	}
 
-	// Token: 0x0600F805 RID: 63493 RVA: 0x003BFCF4 File Offset: 0x003BDEF4
+	// Token: 0x0600CC24 RID: 52260 RVA: 0x003CB7E0 File Offset: 0x003C99E0
 	private void OnCloseAnimTimerEnd()
 	{
 		this.CloseTimer = null;
@@ -396,7 +396,7 @@ public class ManipulateCursorUnit : HudUnitBase
 		closeAnimCallback();
 	}
 
-	// Token: 0x0600F806 RID: 63494 RVA: 0x003BFD0D File Offset: 0x003BDF0D
+	// Token: 0x0600CC25 RID: 52261 RVA: 0x003CB7F9 File Offset: 0x003C99F9
 	public void StopCloseAnim()
 	{
 		this.DestroyCloseTimer();
@@ -408,7 +408,7 @@ public class ManipulateCursorUnit : HudUnitBase
 		base.StopTweenAnim(12);
 	}
 
-	// Token: 0x0600F807 RID: 63495 RVA: 0x003BFD2F File Offset: 0x003BDF2F
+	// Token: 0x0600CC26 RID: 52262 RVA: 0x003CB81B File Offset: 0x003C9A1B
 	private void DestroyCloseTimer()
 	{
 		if (this.CloseTimer != null)
@@ -418,98 +418,98 @@ public class ManipulateCursorUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F808 RID: 63496 RVA: 0x003BFD51 File Offset: 0x003BDF51
+	// Token: 0x0600CC27 RID: 52263 RVA: 0x003CB83D File Offset: 0x003C9A3D
 	[NullableContext(1)]
 	public void SetCloseAnimCallback(Action closeAnimCallback)
 	{
 		this.CloseAnimCallback = closeAnimCallback;
 	}
 
-	// Token: 0x040072F3 RID: 29427
+	// Token: 0x040073D4 RID: 29652
 	private const int CLOSE_ANIM_TIME = 300;
 
-	// Token: 0x040072F4 RID: 29428
+	// Token: 0x040073D5 RID: 29653
 	private const float RAD_2_DEG = 57.295776f;
 
-	// Token: 0x040072F5 RID: 29429
+	// Token: 0x040073D6 RID: 29654
 	private FRotator RotatorCache = new FRotator();
 
-	// Token: 0x040072F6 RID: 29430
+	// Token: 0x040073D7 RID: 29655
 	private UUISprite IconSprite;
 
-	// Token: 0x040072F7 RID: 29431
+	// Token: 0x040073D8 RID: 29656
 	private UUISprite ThrowSprite;
 
-	// Token: 0x040072F8 RID: 29432
+	// Token: 0x040073D9 RID: 29657
 	private UUIItem ArrowItem;
 
-	// Token: 0x040072F9 RID: 29433
+	// Token: 0x040073DA RID: 29658
 	private CombineKeyItem KeyItem;
 
-	// Token: 0x040072FA RID: 29434
+	// Token: 0x040073DB RID: 29659
 	private UUIItem ProcessItem;
 
-	// Token: 0x040072FB RID: 29435
+	// Token: 0x040073DC RID: 29660
 	private UUISprite ProcessSprite;
 
-	// Token: 0x040072FC RID: 29436
+	// Token: 0x040073DD RID: 29661
 	private TimerHandle CloseTimer;
 
-	// Token: 0x040072FD RID: 29437
+	// Token: 0x040073DE RID: 29662
 	private Action CloseAnimCallback;
 
-	// Token: 0x040072FE RID: 29438
+	// Token: 0x040073DF RID: 29663
 	private bool IsActive;
 
-	// Token: 0x040072FF RID: 29439
+	// Token: 0x040073E0 RID: 29664
 	private float ProcessSpeed;
 
-	// Token: 0x04007300 RID: 29440
+	// Token: 0x040073E1 RID: 29665
 	private double StartProcessTime;
 
-	// Token: 0x04007301 RID: 29441
+	// Token: 0x040073E2 RID: 29666
 	private bool IsCastTarget;
 
-	// Token: 0x04007302 RID: 29442
+	// Token: 0x040073E3 RID: 29667
 	private string IconPath;
 
-	// Token: 0x04007303 RID: 29443
+	// Token: 0x040073E4 RID: 29668
 	private ULGUISpriteData_BaseObject DefaultIconSpriteData;
 
-	// Token: 0x04007304 RID: 29444
+	// Token: 0x040073E5 RID: 29669
 	private int LoadHandleId;
 
-	// Token: 0x02008548 RID: 34120
+	// Token: 0x020076CD RID: 30413
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402B640 RID: 177728
+		// Token: 0x04026964 RID: 158052
 		IconSprite,
-		// Token: 0x0402B641 RID: 177729
+		// Token: 0x04026965 RID: 158053
 		ThrowSprite,
-		// Token: 0x0402B642 RID: 177730
+		// Token: 0x04026966 RID: 158054
 		ArrowItem,
-		// Token: 0x0402B643 RID: 177731
+		// Token: 0x04026967 RID: 158055
 		ProcessItem,
-		// Token: 0x0402B644 RID: 177732
+		// Token: 0x04026968 RID: 158056
 		ProcessSprite,
-		// Token: 0x0402B645 RID: 177733
+		// Token: 0x04026969 RID: 158057
 		LockNode,
-		// Token: 0x0402B646 RID: 177734
+		// Token: 0x0402696A RID: 158058
 		ActivateEffect,
-		// Token: 0x0402B647 RID: 177735
+		// Token: 0x0402696B RID: 158059
 		AnimStart,
-		// Token: 0x0402B648 RID: 177736
+		// Token: 0x0402696C RID: 158060
 		AnimProcess,
-		// Token: 0x0402B649 RID: 177737
+		// Token: 0x0402696D RID: 158061
 		AnimComplete,
-		// Token: 0x0402B64A RID: 177738
+		// Token: 0x0402696E RID: 158062
 		AnimInterrupted,
-		// Token: 0x0402B64B RID: 177739
+		// Token: 0x0402696F RID: 158063
 		AnimBanned,
-		// Token: 0x0402B64C RID: 177740
+		// Token: 0x04026970 RID: 158064
 		AnimClose,
-		// Token: 0x0402B64D RID: 177741
+		// Token: 0x04026971 RID: 158065
 		KeyItem
 	}
 }

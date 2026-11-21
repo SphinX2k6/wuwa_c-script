@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000AA8 RID: 2728
+	// Token: 0x02000B7D RID: 2941
 	public struct AbpExtendConfigCsv : IFlatbufferObject
 	{
 		// Token: 0x17000015 RID: 21
-		// (get) Token: 0x0600400C RID: 16396 RVA: 0x001C45B5 File Offset: 0x001C27B5
+		// (get) Token: 0x0600450A RID: 17674 RVA: 0x001E3949 File Offset: 0x001E1B49
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,31 +16,31 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600400D RID: 16397 RVA: 0x001C45C2 File Offset: 0x001C27C2
+		// Token: 0x0600450B RID: 17675 RVA: 0x001E3956 File Offset: 0x001E1B56
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600400E RID: 16398 RVA: 0x001C45CC File Offset: 0x001C27CC
+		// Token: 0x0600450C RID: 17676 RVA: 0x001E3960 File Offset: 0x001E1B60
 		public static AbpExtendConfigCsv GetRootAsAbpExtendConfigCsv(ByteBuffer _bb)
 		{
 			return AbpExtendConfigCsv.GetRootAsAbpExtendConfigCsv(_bb, default(AbpExtendConfigCsv));
 		}
 
-		// Token: 0x0600400F RID: 16399 RVA: 0x001C45E8 File Offset: 0x001C27E8
+		// Token: 0x0600450D RID: 17677 RVA: 0x001E397C File Offset: 0x001E1B7C
 		public static AbpExtendConfigCsv GetRootAsAbpExtendConfigCsv(ByteBuffer _bb, AbpExtendConfigCsv obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06004010 RID: 16400 RVA: 0x001C4605 File Offset: 0x001C2805
+		// Token: 0x0600450E RID: 17678 RVA: 0x001E3999 File Offset: 0x001E1B99
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06004011 RID: 16401 RVA: 0x001C4614 File Offset: 0x001C2814
+		// Token: 0x0600450F RID: 17679 RVA: 0x001E39A8 File Offset: 0x001E1BA8
 		public AbpExtendConfigCsv __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
@@ -48,7 +48,7 @@ namespace Aki.Config
 		}
 
 		// Token: 0x17000016 RID: 22
-		// (get) Token: 0x06004012 RID: 16402 RVA: 0x001C4624 File Offset: 0x001C2824
+		// (get) Token: 0x06004510 RID: 17680 RVA: 0x001E39B8 File Offset: 0x001E1BB8
 		public string Abp
 		{
 			get
@@ -62,20 +62,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004013 RID: 16403 RVA: 0x001C465B File Offset: 0x001C285B
+		// Token: 0x06004511 RID: 17681 RVA: 0x001E39EF File Offset: 0x001E1BEF
 		public Span<byte> GetAbpBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x06004014 RID: 16404 RVA: 0x001C466A File Offset: 0x001C286A
+		// Token: 0x06004512 RID: 17682 RVA: 0x001E39FE File Offset: 0x001E1BFE
 		public byte[] GetAbpArray()
 		{
 			return this.__p.__vector_as_array<byte>(4) ?? Array.Empty<byte>();
 		}
 
 		// Token: 0x17000017 RID: 23
-		// (get) Token: 0x06004015 RID: 16405 RVA: 0x001C4684 File Offset: 0x001C2884
+		// (get) Token: 0x06004513 RID: 17683 RVA: 0x001E3A18 File Offset: 0x001E1C18
 		public int WalkSpeed
 		{
 			get
@@ -90,7 +90,7 @@ namespace Aki.Config
 		}
 
 		// Token: 0x17000018 RID: 24
-		// (get) Token: 0x06004016 RID: 16406 RVA: 0x001C46C0 File Offset: 0x001C28C0
+		// (get) Token: 0x06004514 RID: 17684 RVA: 0x001E3A54 File Offset: 0x001E1C54
 		public int RunSpeed
 		{
 			get
@@ -104,7 +104,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004A78 RID: 19064
+		// Token: 0x0400504B RID: 20555
 		private Table __p;
 	}
 }

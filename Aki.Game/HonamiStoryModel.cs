@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -17,13 +16,13 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf.Collections;
 using UnrealEngine;
 
-// Token: 0x02001E8A RID: 7818
+// Token: 0x0200134C RID: 4940
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class HonamiStoryModel : ModelBase
 {
-	// Token: 0x0600EE85 RID: 61061 RVA: 0x0038E151 File Offset: 0x0038C351
+	// Token: 0x0600C2A4 RID: 49828 RVA: 0x00399D41 File Offset: 0x00397F41
 	protected override bool OnInit()
 	{
 		this.ActivityData = null;
@@ -32,14 +31,14 @@ public class HonamiStoryModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600EE86 RID: 61062 RVA: 0x0038E16C File Offset: 0x0038C36C
+	// Token: 0x0600C2A5 RID: 49829 RVA: 0x00399D5C File Offset: 0x00397F5C
 	protected override bool OnClear()
 	{
 		this.RemoveOpenViewCheck();
 		return true;
 	}
 
-	// Token: 0x0600EE87 RID: 61063 RVA: 0x0038E178 File Offset: 0x0038C378
+	// Token: 0x0600C2A6 RID: 49830 RVA: 0x00399D68 File Offset: 0x00397F68
 	private void AddOpenViewCheck()
 	{
 		UiManager.Instance.AddOpenViewCheckFunction(EUiViewName.HonamiStoryBackpackView, new Func<EUiViewName, object, bool>(HonamiStoryController.Instance.CanOpenBackpack), "HonamiStoryController.CanOpenView");
@@ -47,7 +46,7 @@ public class HonamiStoryModel : ModelBase
 		UiManager.Instance.AddOpenViewCheckFunction(EUiViewName.HonamiStoryPickUpMobileView, new Func<EUiViewName, object, bool>(HonamiStoryController.Instance.CanOpenBackpack), "HonamiStoryController.CanOpenView");
 	}
 
-	// Token: 0x0600EE88 RID: 61064 RVA: 0x0038E1F4 File Offset: 0x0038C3F4
+	// Token: 0x0600C2A7 RID: 49831 RVA: 0x00399DE4 File Offset: 0x00397FE4
 	private void RemoveOpenViewCheck()
 	{
 		UiManager.Instance.RemoveOpenViewCheckFunction(EUiViewName.HonamiStoryBackpackView, new Func<EUiViewName, object, bool>(HonamiStoryController.Instance.CanOpenBackpack));
@@ -55,7 +54,7 @@ public class HonamiStoryModel : ModelBase
 		UiManager.Instance.RemoveOpenViewCheckFunction(EUiViewName.HonamiStoryPickUpMobileView, new Func<EUiViewName, object, bool>(HonamiStoryController.Instance.CanOpenBackpack));
 	}
 
-	// Token: 0x0600EE89 RID: 61065 RVA: 0x0038E260 File Offset: 0x0038C460
+	// Token: 0x0600C2A8 RID: 49832 RVA: 0x00399E50 File Offset: 0x00398050
 	protected override bool OnLeaveLevel()
 	{
 		this.CurTrackTaskData = null;
@@ -78,13 +77,13 @@ public class HonamiStoryModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600EE8A RID: 61066 RVA: 0x0038E2DA File Offset: 0x0038C4DA
+	// Token: 0x0600C2A9 RID: 49833 RVA: 0x00399ECA File Offset: 0x003980CA
 	public void SetActivityData(HonamiStoryActivityData activityData)
 	{
 		this.ActivityData = activityData;
 	}
 
-	// Token: 0x0600EE8B RID: 61067 RVA: 0x0038E2E4 File Offset: 0x0038C4E4
+	// Token: 0x0600C2AA RID: 49834 RVA: 0x00399ED4 File Offset: 0x003980D4
 	[NullableContext(2)]
 	public HonamiStoryActivityData GetActivityData(bool needErrorLog = true)
 	{
@@ -99,13 +98,13 @@ public class HonamiStoryModel : ModelBase
 		return this.ActivityData;
 	}
 
-	// Token: 0x0600EE8C RID: 61068 RVA: 0x0038E323 File Offset: 0x0038C523
+	// Token: 0x0600C2AB RID: 49835 RVA: 0x00399F13 File Offset: 0x00398113
 	public HonamiStoryPlayerData GetPlayerData()
 	{
 		return this.PlayerData;
 	}
 
-	// Token: 0x0600EE8D RID: 61069 RVA: 0x0038E32C File Offset: 0x0038C52C
+	// Token: 0x0600C2AC RID: 49836 RVA: 0x00399F1C File Offset: 0x0039811C
 	public void InitActivityInfo(int activityId, HonamiStoryActivityInfo activityInfo)
 	{
 		this.ActivityId = activityId;
@@ -116,7 +115,7 @@ public class HonamiStoryModel : ModelBase
 		this.UpdateLiefSupport(activityInfo.LifeSupportLevel);
 	}
 
-	// Token: 0x0600EE8E RID: 61070 RVA: 0x0038E37C File Offset: 0x0038C57C
+	// Token: 0x0600C2AD RID: 49837 RVA: 0x00399F6C File Offset: 0x0039816C
 	public void UpdateActivityInfo(int activityId, HonamiStoryActivityInfo activityInfo)
 	{
 		this.UpdatePlayerInfo(activityId, activityInfo.HonamiStoryPlayerBagInfo);
@@ -125,13 +124,13 @@ public class HonamiStoryModel : ModelBase
 		this.UpdateLiefSupport(activityInfo.LifeSupportLevel);
 	}
 
-	// Token: 0x0600EE8F RID: 61071 RVA: 0x0038E3B4 File Offset: 0x0038C5B4
+	// Token: 0x0600C2AE RID: 49838 RVA: 0x00399FA4 File Offset: 0x003981A4
 	private void UpdateLiefSupport(int curLevel)
 	{
 		this.PlayerData.SetLifeSupportLevel(curLevel);
 	}
 
-	// Token: 0x0600EE90 RID: 61072 RVA: 0x0038E3C4 File Offset: 0x0038C5C4
+	// Token: 0x0600C2AF RID: 49839 RVA: 0x00399FB4 File Offset: 0x003981B4
 	[NullableContext(2)]
 	private void InitPlayerInfo(int activityId, HonamiStoryPlayerBagInfo playerInfo)
 	{
@@ -147,10 +146,10 @@ public class HonamiStoryModel : ModelBase
 			HonamiStoryWeaponData value = new HonamiStoryWeaponData(honamiStoryWeapon.Id);
 			this.WeaponDataMap[honamiStoryWeapon.Id] = value;
 		}
-		this.UpdateWeaponDataList(playerInfo.UnlockWeapon.ToList<int>());
+		this.UpdateWeaponDataList(playerInfo.UnlockWeapon);
 	}
 
-	// Token: 0x0600EE91 RID: 61073 RVA: 0x0038E47C File Offset: 0x0038C67C
+	// Token: 0x0600C2B0 RID: 49840 RVA: 0x0039A068 File Offset: 0x00398268
 	[NullableContext(2)]
 	private void UpdatePlayerInfo(int activityId, HonamiStoryPlayerBagInfo playerInfo)
 	{
@@ -159,50 +158,50 @@ public class HonamiStoryModel : ModelBase
 			Log.Instance.Error(ELogModule.HonamiStory, ELogAuthor.BB, "InitPlayerBagInfo 无效playerInfo", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return;
 		}
-		this.PlayerBackpackData.RefreshEquipInfo(playerInfo.HonamiStoryRackInfos.ToList<HonamiStoryRackInfo>());
+		this.PlayerBackpackData.RefreshEquipInfo(playerInfo.HonamiStoryRackInfos);
 		if (playerInfo.EquipRack != null)
 		{
-			this.PlayerBackpackData.RefreshGridItemInfo(playerInfo.EquipRack.HonamiStoryBagItemInfos.ToList<HonamiStoryBagItemInfo>());
+			this.PlayerBackpackData.RefreshGridItemInfo(playerInfo.EquipRack.HonamiStoryBagItemInfos);
 		}
 		foreach (HonamiStoryWeapon honamiStoryWeapon in HonamiStoryConfig.Instance.GetHonamiStoryWeaponConfigList(activityId))
 		{
 			HonamiStoryWeaponData value = new HonamiStoryWeaponData(honamiStoryWeapon.Id);
 			this.WeaponDataMap[honamiStoryWeapon.Id] = value;
 		}
-		this.UpdateWeaponDataList(playerInfo.UnlockWeapon.ToList<int>());
+		this.UpdateWeaponDataList(playerInfo.UnlockWeapon);
 	}
 
-	// Token: 0x0600EE92 RID: 61074 RVA: 0x0038E554 File Offset: 0x0038C754
+	// Token: 0x0600C2B1 RID: 49841 RVA: 0x0039A134 File Offset: 0x00398334
 	public void UpdateRoleList(List<int> roleList)
 	{
 		this.PlayerBackpackData.RefreshRoleInfo(roleList);
 	}
 
-	// Token: 0x0600EE93 RID: 61075 RVA: 0x0038E562 File Offset: 0x0038C762
+	// Token: 0x0600C2B2 RID: 49842 RVA: 0x0039A142 File Offset: 0x00398342
 	public void UpdateRoleByPosition(int roleId, int position)
 	{
 		this.PlayerBackpackData.RefreshRoleInfoByPosition(roleId, position);
 	}
 
-	// Token: 0x0600EE94 RID: 61076 RVA: 0x0038E571 File Offset: 0x0038C771
+	// Token: 0x0600C2B3 RID: 49843 RVA: 0x0039A151 File Offset: 0x00398351
 	public void UpdateWeaponByPosition(int weaponId, int position)
 	{
 		this.PlayerBackpackData.RefreshWeaponInfoByPosition(weaponId, position);
 	}
 
-	// Token: 0x0600EE95 RID: 61077 RVA: 0x0038E580 File Offset: 0x0038C780
+	// Token: 0x0600C2B4 RID: 49844 RVA: 0x0039A160 File Offset: 0x00398360
 	public void UpdatePlayerBackPack(HonamiStoryBagUpdateContext updateContext)
 	{
-		this.PlayerBackpackData.UpdateByContext(updateContext.HonamiStoryBagUpdateInfo.ToList<HonamiStoryBagUpdateInfo>());
+		this.PlayerBackpackData.UpdateByContext(updateContext.HonamiStoryBagUpdateInfo);
 	}
 
-	// Token: 0x0600EE96 RID: 61078 RVA: 0x0038E598 File Offset: 0x0038C798
+	// Token: 0x0600C2B5 RID: 49845 RVA: 0x0039A173 File Offset: 0x00398373
 	public HonamiStoryPlayerBackpackData GetPlayerBackpackData()
 	{
 		return this.PlayerBackpackData;
 	}
 
-	// Token: 0x0600EE97 RID: 61079 RVA: 0x0038E5A0 File Offset: 0x0038C7A0
+	// Token: 0x0600C2B6 RID: 49846 RVA: 0x0039A17C File Offset: 0x0039837C
 	public int[] GetAllRoleIdList()
 	{
 		List<int> list = new List<int>();
@@ -213,28 +212,28 @@ public class HonamiStoryModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x0600EE98 RID: 61080 RVA: 0x0038E60C File Offset: 0x0038C80C
+	// Token: 0x0600C2B7 RID: 49847 RVA: 0x0039A1E8 File Offset: 0x003983E8
 	[NullableContext(2)]
 	public HonamiStoryRoleEquipData GetRoleItemDataByPosition(int position)
 	{
 		return this.PlayerBackpackData.GetRoleItemDataByPosition(position);
 	}
 
-	// Token: 0x0600EE99 RID: 61081 RVA: 0x0038E61A File Offset: 0x0038C81A
+	// Token: 0x0600C2B8 RID: 49848 RVA: 0x0039A1F6 File Offset: 0x003983F6
 	[NullableContext(2)]
 	public HonamiStoryRoleEquipData GetRoleEquipDataByPosition(int position)
 	{
 		return this.PlayerBackpackData.GetRoleEquipDataByPosition(position);
 	}
 
-	// Token: 0x0600EE9A RID: 61082 RVA: 0x0038E628 File Offset: 0x0038C828
+	// Token: 0x0600C2B9 RID: 49849 RVA: 0x0039A204 File Offset: 0x00398404
 	[NullableContext(2)]
 	public HonamiStoryRoleEquipData GetRoleEquipDataByRoleId(int roleId)
 	{
 		return this.PlayerBackpackData.GetRoleEquipDataByRoleId(roleId);
 	}
 
-	// Token: 0x0600EE9B RID: 61083 RVA: 0x0038E638 File Offset: 0x0038C838
+	// Token: 0x0600C2BA RID: 49850 RVA: 0x0039A214 File Offset: 0x00398414
 	[NullableContext(2)]
 	public HonamiStoryItemDataBase GetEquipItemDataByIncId(int incId)
 	{
@@ -252,7 +251,7 @@ public class HonamiStoryModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0600EE9C RID: 61084 RVA: 0x0038E6DC File Offset: 0x0038C8DC
+	// Token: 0x0600C2BB RID: 49851 RVA: 0x0039A2B8 File Offset: 0x003984B8
 	public EHonamiStoryWeaponType[] GetWeaponTypeList()
 	{
 		HashSet<EHonamiStoryWeaponType> hashSet = new HashSet<EHonamiStoryWeaponType>();
@@ -279,7 +278,7 @@ public class HonamiStoryModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x0600EE9D RID: 61085 RVA: 0x0038E7B8 File Offset: 0x0038C9B8
+	// Token: 0x0600C2BC RID: 49852 RVA: 0x0039A394 File Offset: 0x00398594
 	public List<HonamiStoryWeaponData> GetWeaponDataListByType(EHonamiStoryWeaponType type)
 	{
 		List<HonamiStoryWeaponData> list = new List<HonamiStoryWeaponData>();
@@ -293,8 +292,8 @@ public class HonamiStoryModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600EE9E RID: 61086 RVA: 0x0038E820 File Offset: 0x0038CA20
-	public void UpdateWeaponDataList(List<int> weaponIdList)
+	// Token: 0x0600C2BD RID: 49853 RVA: 0x0039A3FC File Offset: 0x003985FC
+	public void UpdateWeaponDataList(IEnumerable<int> weaponIdList)
 	{
 		foreach (int weaponId in weaponIdList)
 		{
@@ -306,7 +305,7 @@ public class HonamiStoryModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600EE9F RID: 61087 RVA: 0x0038E87C File Offset: 0x0038CA7C
+	// Token: 0x0600C2BE RID: 49854 RVA: 0x0039A450 File Offset: 0x00398650
 	[NullableContext(2)]
 	public HonamiStoryWeaponData GetWeaponData(int weaponId)
 	{
@@ -318,7 +317,7 @@ public class HonamiStoryModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0600EEA0 RID: 61088 RVA: 0x0038E89C File Offset: 0x0038CA9C
+	// Token: 0x0600C2BF RID: 49855 RVA: 0x0039A470 File Offset: 0x00398670
 	public EHonamiStoryWeaponState CheckSelectWeaponState(int weaponId, HonamiStoryRoleEquipData equipData)
 	{
 		int weaponId2 = equipData.GetWeaponId();
@@ -333,7 +332,7 @@ public class HonamiStoryModel : ModelBase
 		return EHonamiStoryWeaponState.Change;
 	}
 
-	// Token: 0x0600EEA1 RID: 61089 RVA: 0x0038E8BC File Offset: 0x0038CABC
+	// Token: 0x0600C2C0 RID: 49856 RVA: 0x0039A490 File Offset: 0x00398690
 	[NullableContext(2)]
 	public HonamiStoryRoleEquipData GetWeaponEquipState(int weaponId)
 	{
@@ -351,7 +350,7 @@ public class HonamiStoryModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0600EEA2 RID: 61090 RVA: 0x0038E924 File Offset: 0x0038CB24
+	// Token: 0x0600C2C1 RID: 49857 RVA: 0x0039A4F8 File Offset: 0x003986F8
 	public void SetTotalRevenueInternal(int value)
 	{
 		Log instance = Log.Instance;
@@ -363,8 +362,8 @@ public class HonamiStoryModel : ModelBase
 		this.TotalRevenueInternal = value;
 	}
 
-	// Token: 0x170012D3 RID: 4819
-	// (get) Token: 0x0600EEA3 RID: 61091 RVA: 0x0038E967 File Offset: 0x0038CB67
+	// Token: 0x170012FD RID: 4861
+	// (get) Token: 0x0600C2C2 RID: 49858 RVA: 0x0039A53B File Offset: 0x0039873B
 	public int TotalRevenue
 	{
 		get
@@ -377,26 +376,26 @@ public class HonamiStoryModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600EEA4 RID: 61092 RVA: 0x0038E982 File Offset: 0x0038CB82
+	// Token: 0x0600C2C3 RID: 49859 RVA: 0x0039A556 File Offset: 0x00398756
 	[NullableContext(2)]
 	public HonamiStoryBackpackData GetInventory()
 	{
 		return this.WareHouseBackpackData;
 	}
 
-	// Token: 0x0600EEA5 RID: 61093 RVA: 0x0038E98A File Offset: 0x0038CB8A
+	// Token: 0x0600C2C4 RID: 49860 RVA: 0x0039A55E File Offset: 0x0039875E
 	public void SetInventory(HonamiStoryBackpackData newData)
 	{
 		this.WareHouseBackpackData = newData;
 	}
 
-	// Token: 0x0600EEA6 RID: 61094 RVA: 0x0038E993 File Offset: 0x0038CB93
+	// Token: 0x0600C2C5 RID: 49861 RVA: 0x0039A567 File Offset: 0x00398767
 	public bool CheckIsNewInInventory()
 	{
 		return this.WareHouseBackpackData != null && (this.WareHouseBackpackData.CheckIsNewInBackpack() || (LocalStorage.GetPlayer<HashSet<int>>(ELocalStoragePlayerKey.HonamiStoryWeaponUnlockSet, null) ?? new HashSet<int>()).Count > 0);
 	}
 
-	// Token: 0x0600EEA7 RID: 61095 RVA: 0x0038E9CC File Offset: 0x0038CBCC
+	// Token: 0x0600C2C6 RID: 49862 RVA: 0x0039A5A0 File Offset: 0x003987A0
 	private void InitTechNodeData()
 	{
 		this.TechNodeDataMap.Clear();
@@ -417,7 +416,7 @@ public class HonamiStoryModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600EEA8 RID: 61096 RVA: 0x0038EAA8 File Offset: 0x0038CCA8
+	// Token: 0x0600C2C7 RID: 49863 RVA: 0x0039A67C File Offset: 0x0039887C
 	public bool CheckNodeCanActiveAndIsEnough(HonamiStoryTechNodeData data)
 	{
 		if (data == null)
@@ -443,7 +442,7 @@ public class HonamiStoryModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600EEA9 RID: 61097 RVA: 0x0038EB38 File Offset: 0x0038CD38
+	// Token: 0x0600C2C8 RID: 49864 RVA: 0x0039A70C File Offset: 0x0039890C
 	public void RefreshTalentInfos(IReadOnlyList<HonamiStoryTalentInfo> techNodeList)
 	{
 		if (techNodeList == null)
@@ -462,7 +461,7 @@ public class HonamiStoryModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600EEAA RID: 61098 RVA: 0x0038EBA0 File Offset: 0x0038CDA0
+	// Token: 0x0600C2C9 RID: 49865 RVA: 0x0039A774 File Offset: 0x00398974
 	[NullableContext(2)]
 	public HonamiStoryTechNodeData GetTechNodeData(int id)
 	{
@@ -480,7 +479,7 @@ public class HonamiStoryModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600EEAB RID: 61099 RVA: 0x0038EBF0 File Offset: 0x0038CDF0
+	// Token: 0x0600C2CA RID: 49866 RVA: 0x0039A7C4 File Offset: 0x003989C4
 	[NullableContext(2)]
 	public HonamiStoryTechAreaData GetTechAreaData(int id)
 	{
@@ -498,8 +497,8 @@ public class HonamiStoryModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x170012D4 RID: 4820
-	// (get) Token: 0x0600EEAC RID: 61100 RVA: 0x0038EC40 File Offset: 0x0038CE40
+	// Token: 0x170012FE RID: 4862
+	// (get) Token: 0x0600C2CB RID: 49867 RVA: 0x0039A814 File Offset: 0x00398A14
 	public HonamiStoryTechAreaData[] GetTechAreaDataList
 	{
 		get
@@ -516,7 +515,7 @@ public class HonamiStoryModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600EEAD RID: 61101 RVA: 0x0038ECB0 File Offset: 0x0038CEB0
+	// Token: 0x0600C2CC RID: 49868 RVA: 0x0039A884 File Offset: 0x00398A84
 	public void CheckCurrentTalentTreeNode()
 	{
 		HonamiStoryTechNodeData honamiStoryTechNodeData = null;
@@ -556,7 +555,7 @@ public class HonamiStoryModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600EEAE RID: 61102 RVA: 0x0038EDD4 File Offset: 0x0038CFD4
+	// Token: 0x0600C2CD RID: 49869 RVA: 0x0039A9A8 File Offset: 0x00398BA8
 	[NullableContext(2)]
 	public HonamiStoryTechNodeData GetFirstTechnologyNode()
 	{
@@ -571,7 +570,7 @@ public class HonamiStoryModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600EEAF RID: 61103 RVA: 0x0038EE44 File Offset: 0x0038D044
+	// Token: 0x0600C2CE RID: 49870 RVA: 0x0039AA18 File Offset: 0x00398C18
 	public bool IsTechHasRedDot()
 	{
 		foreach (HonamiStoryTechNodeData data in this.TechNodeDataMap.Values)
@@ -584,7 +583,7 @@ public class HonamiStoryModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600EEB0 RID: 61104 RVA: 0x0038EEA8 File Offset: 0x0038D0A8
+	// Token: 0x0600C2CF RID: 49871 RVA: 0x0039AA7C File Offset: 0x00398C7C
 	public HonamiStoryTechNodeData[] GetAllTechNodeDataList()
 	{
 		List<HonamiStoryTechNodeData> list = new List<HonamiStoryTechNodeData>();
@@ -595,7 +594,7 @@ public class HonamiStoryModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x0600EEB1 RID: 61105 RVA: 0x0038EF0C File Offset: 0x0038D10C
+	// Token: 0x0600C2D0 RID: 49872 RVA: 0x0039AAE0 File Offset: 0x00398CE0
 	public HonamiStoryTechAreaData[] GetAllTechAreaDataList()
 	{
 		List<HonamiStoryTechAreaData> list = new List<HonamiStoryTechAreaData>();
@@ -606,7 +605,7 @@ public class HonamiStoryModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x0600EEB2 RID: 61106 RVA: 0x0038EF70 File Offset: 0x0038D170
+	// Token: 0x0600C2D1 RID: 49873 RVA: 0x0039AB44 File Offset: 0x00398D44
 	public HonamiStoryTechNodeData[] GetAllActiveTechNodeDataList()
 	{
 		List<HonamiStoryTechNodeData> list = new List<HonamiStoryTechNodeData>();
@@ -620,7 +619,7 @@ public class HonamiStoryModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x0600EEB3 RID: 61107 RVA: 0x0038EFE0 File Offset: 0x0038D1E0
+	// Token: 0x0600C2D2 RID: 49874 RVA: 0x0039ABB4 File Offset: 0x00398DB4
 	public int GetSubTaskBonusDataList()
 	{
 		HonamiStoryTechNodeData[] allActiveTechNodeDataList = this.GetAllActiveTechNodeDataList();
@@ -641,7 +640,7 @@ public class HonamiStoryModel : ModelBase
 		return num;
 	}
 
-	// Token: 0x0600EEB4 RID: 61108 RVA: 0x0038F080 File Offset: 0x0038D280
+	// Token: 0x0600C2D3 RID: 49875 RVA: 0x0039AC54 File Offset: 0x00398E54
 	public bool IsShopHasRedDot()
 	{
 		if (this.ActivityData == null)
@@ -652,7 +651,7 @@ public class HonamiStoryModel : ModelBase
 		return PayShopModel.Instance.CheckShopItemCheckFlag((PayShopDefine.EPayShopTabType)shopId, 1);
 	}
 
-	// Token: 0x0600EEB5 RID: 61109 RVA: 0x0038F0B0 File Offset: 0x0038D2B0
+	// Token: 0x0600C2D4 RID: 49876 RVA: 0x0039AC84 File Offset: 0x00398E84
 	public HonamiStoryOutDialog? GetRandomDialogData(int dialogType)
 	{
 		IEnumerable<HonamiStoryOutDialog> honamiStoryOutDialogList = HonamiStoryConfig.Instance.GetHonamiStoryOutDialogList(this.ActivityId);
@@ -677,7 +676,7 @@ public class HonamiStoryModel : ModelBase
 		return new HonamiStoryOutDialog?(list[index]);
 	}
 
-	// Token: 0x0600EEB6 RID: 61110 RVA: 0x0038F160 File Offset: 0x0038D360
+	// Token: 0x0600C2D5 RID: 49877 RVA: 0x0039AD34 File Offset: 0x00398F34
 	public CSharpScript.Game.Module.HonamiStory.Data.HonamiStoryWeaponSuitData GetWeaponSuitData(int suitId)
 	{
 		CSharpScript.Game.Module.HonamiStory.Data.HonamiStoryWeaponSuitData result;
@@ -688,7 +687,7 @@ public class HonamiStoryModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600EEB7 RID: 61111 RVA: 0x0038F194 File Offset: 0x0038D394
+	// Token: 0x0600C2D6 RID: 49878 RVA: 0x0039AD68 File Offset: 0x00398F68
 	public int GetParentRoleId(int id)
 	{
 		int baseRoleId;
@@ -700,7 +699,7 @@ public class HonamiStoryModel : ModelBase
 		return this.RoleParentMap[id];
 	}
 
-	// Token: 0x0600EEB8 RID: 61112 RVA: 0x0038F1D8 File Offset: 0x0038D3D8
+	// Token: 0x0600C2D7 RID: 49879 RVA: 0x0039ADAC File Offset: 0x00398FAC
 	public bool CheckItemPlayerAlreadyPick(int incId)
 	{
 		HonamiStoryBackpackData backPackData = this.GetBackPackData(2, false);
@@ -708,7 +707,7 @@ public class HonamiStoryModel : ModelBase
 		return backPackData.GetItemDataByInstanceId(incId, false) != null || playerBackpackData.CheckItemByIncId(incId);
 	}
 
-	// Token: 0x0600EEB9 RID: 61113 RVA: 0x0038F208 File Offset: 0x0038D408
+	// Token: 0x0600C2D8 RID: 49880 RVA: 0x0039ADDC File Offset: 0x00398FDC
 	public HonamiStoryItemDataBase CreateHonamiStoryItemData(HonamiStoryItemInfo itemInfo, [Nullable(2)] HonamiStoryPosInfo posInfo = null)
 	{
 		HonamiStoryItemDataBase honamiStoryItemDataBase;
@@ -722,7 +721,7 @@ public class HonamiStoryModel : ModelBase
 		return honamiStoryItemDataBase;
 	}
 
-	// Token: 0x0600EEBA RID: 61114 RVA: 0x0038F258 File Offset: 0x0038D458
+	// Token: 0x0600C2D9 RID: 49881 RVA: 0x0039AE2C File Offset: 0x0039902C
 	private HonamiStoryItemDataBase CreateItemData(int itemId)
 	{
 		if (HonamiStoryConfig.Instance.GetHonamiStoryItem(itemId).Value.ItemType == 1)
@@ -732,7 +731,7 @@ public class HonamiStoryModel : ModelBase
 		return new HonamiStoryItemDataBase();
 	}
 
-	// Token: 0x0600EEBB RID: 61115 RVA: 0x0038F290 File Offset: 0x0038D490
+	// Token: 0x0600C2DA RID: 49882 RVA: 0x0039AE64 File Offset: 0x00399064
 	[NullableContext(2)]
 	public HonamiStoryItemDataBase GetItemData(int instanceId)
 	{
@@ -751,7 +750,7 @@ public class HonamiStoryModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600EEBC RID: 61116 RVA: 0x0038F2F0 File Offset: 0x0038D4F0
+	// Token: 0x0600C2DB RID: 49883 RVA: 0x0039AEC4 File Offset: 0x003990C4
 	public void RemoveItemData(int instanceId)
 	{
 		if (this.GetItemData(instanceId) == null)
@@ -766,7 +765,7 @@ public class HonamiStoryModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600EEBD RID: 61117 RVA: 0x0038F348 File Offset: 0x0038D548
+	// Token: 0x0600C2DC RID: 49884 RVA: 0x0039AF1C File Offset: 0x0039911C
 	public List<HonamiStoryQuestDataBase> GetQuestDataListByQuestType(EHonamiStoryQuestType taskType)
 	{
 		if (this.ActivityData == null)
@@ -787,12 +786,12 @@ public class HonamiStoryModel : ModelBase
 		else if (taskType == EHonamiStoryQuestType.Sub)
 		{
 			List<HonamiStorySubQuestData> subQuestTaskDataList = this.ActivityData.GetSubQuestTaskDataList();
-			this.QuestDataMapCache[taskType] = subQuestTaskDataList.Cast<HonamiStoryQuestDataBase>().ToList<HonamiStoryQuestDataBase>();
+			this.QuestDataMapCache[taskType] = new List<HonamiStoryQuestDataBase>(subQuestTaskDataList);
 		}
 		return this.QuestDataMapCache[taskType];
 	}
 
-	// Token: 0x0600EEBE RID: 61118 RVA: 0x0038F3CC File Offset: 0x0038D5CC
+	// Token: 0x0600C2DD RID: 49885 RVA: 0x0039AF9C File Offset: 0x0039919C
 	public void SetSubQuestTrack(HonamiStoryQuestDataBase taskData)
 	{
 		if (taskData.TaskType != EHonamiStoryQuestType.Sub)
@@ -842,7 +841,7 @@ public class HonamiStoryModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600EEBF RID: 61119 RVA: 0x0038F57C File Offset: 0x0038D77C
+	// Token: 0x0600C2DE RID: 49886 RVA: 0x0039B14C File Offset: 0x0039934C
 	public void InitSubQuestTrack()
 	{
 		if (this.CurTrackTaskData != null && !this.CurTrackTaskData.IsFinished())
@@ -864,8 +863,8 @@ public class HonamiStoryModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600EEC0 RID: 61120 RVA: 0x0038F600 File Offset: 0x0038D800
-	public void InitBackPackInfoList(List<HonamiStoryBagInfo> backpackInfoList)
+	// Token: 0x0600C2DF RID: 49887 RVA: 0x0039B1D0 File Offset: 0x003993D0
+	public void InitBackPackInfoList(IEnumerable<HonamiStoryBagInfo> backpackInfoList)
 	{
 		foreach (HonamiStoryBagInfo bagInfo in backpackInfoList)
 		{
@@ -873,7 +872,7 @@ public class HonamiStoryModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600EEC1 RID: 61121 RVA: 0x0038F650 File Offset: 0x0038D850
+	// Token: 0x0600C2E0 RID: 49888 RVA: 0x0039B218 File Offset: 0x00399418
 	[NullableContext(2)]
 	public void InitBackPackInfo(HonamiStoryBagInfo bagInfo)
 	{
@@ -909,7 +908,7 @@ public class HonamiStoryModel : ModelBase
 		honamiStoryBackpackData2.Init(bagInfo);
 	}
 
-	// Token: 0x0600EEC2 RID: 61122 RVA: 0x0038F6E8 File Offset: 0x0038D8E8
+	// Token: 0x0600C2E1 RID: 49889 RVA: 0x0039B2B0 File Offset: 0x003994B0
 	[NullableContext(2)]
 	public void UpdateBackPackInfo(HonamiStoryBagInfo bagInfo)
 	{
@@ -950,20 +949,20 @@ public class HonamiStoryModel : ModelBase
 		this.WareHouseBackpackData.Init(bagInfo);
 	}
 
-	// Token: 0x0600EEC3 RID: 61123 RVA: 0x0038F794 File Offset: 0x0038D994
+	// Token: 0x0600C2E2 RID: 49890 RVA: 0x0039B35C File Offset: 0x0039955C
 	public bool GetSkillDescMode()
 	{
 		return LocalStorage.GetPlayer<bool>(ELocalStoragePlayerKey.HonamiStorySkillDescMode, false);
 	}
 
-	// Token: 0x0600EEC4 RID: 61124 RVA: 0x0038F7A1 File Offset: 0x0038D9A1
+	// Token: 0x0600C2E3 RID: 49891 RVA: 0x0039B369 File Offset: 0x00399569
 	public void SetSkillDescMode(bool isSimple)
 	{
 		LocalStorage.SetPlayer<bool>(ELocalStoragePlayerKey.HonamiStorySkillDescMode, isSimple);
 		EventSystem.Instance.Emit<bool>(EEventName.OnHonamiStorySkillDescModeChange, isSimple);
 	}
 
-	// Token: 0x0600EEC5 RID: 61125 RVA: 0x0038F7C0 File Offset: 0x0038D9C0
+	// Token: 0x0600C2E4 RID: 49892 RVA: 0x0039B388 File Offset: 0x00399588
 	public void RemoveBackPack(int backpackId)
 	{
 		HonamiStoryBackpackData backPackData = this.GetBackPackData(backpackId, false);
@@ -982,18 +981,18 @@ public class HonamiStoryModel : ModelBase
 		this.BackpackDataMap.Remove(backpackId);
 	}
 
-	// Token: 0x0600EEC6 RID: 61126 RVA: 0x0038F82C File Offset: 0x0038DA2C
+	// Token: 0x0600C2E5 RID: 49893 RVA: 0x0039B3F4 File Offset: 0x003995F4
 	public void UpdateBackpackInfo(HonamiStoryBagInfoUpdateNotify updateInfo)
 	{
 		foreach (HonamiStoryBagInfo honamiStoryBagInfo in updateInfo.HonamiStoryBagInfos)
 		{
 			HonamiStoryBackpackData backPackData = this.GetBackPackData(honamiStoryBagInfo.BagConfigId, false);
 			backPackData.SetCapacity(honamiStoryBagInfo.BagSize);
-			backPackData.Update(honamiStoryBagInfo.HonamiStoryBagItemInfos.ToList<HonamiStoryBagItemInfo>());
+			backPackData.Update(honamiStoryBagInfo.HonamiStoryBagItemInfos);
 		}
 	}
 
-	// Token: 0x0600EEC7 RID: 61127 RVA: 0x0038F89C File Offset: 0x0038DA9C
+	// Token: 0x0600C2E6 RID: 49894 RVA: 0x0039B460 File Offset: 0x00399660
 	public void UpdateBackpackSize(Dictionary<int, int> updateInfo)
 	{
 		foreach (KeyValuePair<int, int> keyValuePair in updateInfo)
@@ -1007,7 +1006,7 @@ public class HonamiStoryModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600EEC8 RID: 61128 RVA: 0x0038F908 File Offset: 0x0038DB08
+	// Token: 0x0600C2E7 RID: 49895 RVA: 0x0039B4CC File Offset: 0x003996CC
 	public void UpdateBackPackContext(IReadOnlyList<HonamiStoryBagUpdateContext> updateContext)
 	{
 		foreach (HonamiStoryBagUpdateContext honamiStoryBagUpdateContext in updateContext)
@@ -1025,18 +1024,18 @@ public class HonamiStoryModel : ModelBase
 					HonamiStoryBackpackData inventory = this.GetInventory();
 					if (inventory != null)
 					{
-						inventory.UpdateByContext(honamiStoryBagUpdateInfo.ToList<HonamiStoryBagUpdateInfo>());
+						inventory.UpdateByContext(honamiStoryBagUpdateInfo);
 					}
 				}
 				else
 				{
-					this.GetBackPackData(backPackConfigId, false).UpdateByContext(honamiStoryBagUpdateInfo.ToList<HonamiStoryBagUpdateInfo>());
+					this.GetBackPackData(backPackConfigId, false).UpdateByContext(honamiStoryBagUpdateInfo);
 				}
 			}
 		}
 	}
 
-	// Token: 0x0600EEC9 RID: 61129 RVA: 0x0038F994 File Offset: 0x0038DB94
+	// Token: 0x0600C2E8 RID: 49896 RVA: 0x0039B550 File Offset: 0x00399750
 	[NullableContext(2)]
 	public HonamiStoryBackpackData GetBackPackData(int backpackId, bool notLog = false)
 	{
@@ -1073,13 +1072,13 @@ public class HonamiStoryModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600EECA RID: 61130 RVA: 0x0038FA48 File Offset: 0x0038DC48
+	// Token: 0x0600C2E9 RID: 49897 RVA: 0x0039B604 File Offset: 0x00399804
 	public bool IsPickUpViewOpened()
 	{
 		return UiManager.Instance.GetViewByName(EUiViewName.HonamiStoryPickUpBackpackView) != null || UiManager.Instance.GetViewByName(EUiViewName.HonamiStoryPickUpMobileView) != null;
 	}
 
-	// Token: 0x0600EECB RID: 61131 RVA: 0x0038FA70 File Offset: 0x0038DC70
+	// Token: 0x0600C2EA RID: 49898 RVA: 0x0039B62C File Offset: 0x0039982C
 	public void TryPickUp(HonamiStoryItemDataBase itemDataBase, Entity entity)
 	{
 		HonamiStoryBackpackData backPackData = this.GetBackPackData(2, false);
@@ -1125,7 +1124,7 @@ public class HonamiStoryModel : ModelBase
 		this.OnPickUpEnd();
 	}
 
-	// Token: 0x0600EECC RID: 61132 RVA: 0x0038FB78 File Offset: 0x0038DD78
+	// Token: 0x0600C2EB RID: 49899 RVA: 0x0039B734 File Offset: 0x00399934
 	public void OnPickUpEnd()
 	{
 		if (this.PickUpItemDataQueue.Count == 0)
@@ -1155,7 +1154,7 @@ public class HonamiStoryModel : ModelBase
 		this.ExecutePickUp(itemData).Forget();
 	}
 
-	// Token: 0x0600EECD RID: 61133 RVA: 0x0038FC54 File Offset: 0x0038DE54
+	// Token: 0x0600C2EC RID: 49900 RVA: 0x0039B810 File Offset: 0x00399A10
 	private UniTask ExecutePickUp(IPickUpItemInfo info)
 	{
 		HonamiStoryModel.<ExecutePickUp>d__121 <ExecutePickUp>d__;
@@ -1167,7 +1166,7 @@ public class HonamiStoryModel : ModelBase
 		return <ExecutePickUp>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600EECE RID: 61134 RVA: 0x0038FCA0 File Offset: 0x0038DEA0
+	// Token: 0x0600C2ED RID: 49901 RVA: 0x0039B85C File Offset: 0x00399A5C
 	[NullableContext(0)]
 	protected UniTask<bool> DoPickUpLogic([Nullable(1)] IPickUpItemInfo info)
 	{
@@ -1180,7 +1179,7 @@ public class HonamiStoryModel : ModelBase
 		return <DoPickUpLogic>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600EECF RID: 61135 RVA: 0x0038FCEC File Offset: 0x0038DEEC
+	// Token: 0x0600C2EE RID: 49902 RVA: 0x0039B8A8 File Offset: 0x00399AA8
 	private void ClearPickUpQueue()
 	{
 		foreach (IPickUpItemInfo pickUpItemInfo in this.PickUpItemDataQueue)
@@ -1194,7 +1193,7 @@ public class HonamiStoryModel : ModelBase
 		this.PickUpItemDataQueue.Clear();
 	}
 
-	// Token: 0x0600EED0 RID: 61136 RVA: 0x0038FD5C File Offset: 0x0038DF5C
+	// Token: 0x0600C2EF RID: 49903 RVA: 0x0039B918 File Offset: 0x00399B18
 	private void AddHonamiStoryItemNewGetTipsList(HonamiStoryItemDataBase itemData)
 	{
 		int itemId = itemData.GetItemId();
@@ -1227,14 +1226,14 @@ public class HonamiStoryModel : ModelBase
 		ItemHintModel.Instance.AddItemToPriorInterfaceData(itemId, 1, honamiStoryItem.Value.QualityId);
 	}
 
-	// Token: 0x0600EED1 RID: 61137 RVA: 0x0038FE3B File Offset: 0x0038E03B
+	// Token: 0x0600C2F0 RID: 49904 RVA: 0x0039B9F7 File Offset: 0x00399BF7
 	[NullableContext(2)]
 	public HonamiStoryBackpackLogicController GetBackpackLogic()
 	{
 		return this.CurBackpackLogicController;
 	}
 
-	// Token: 0x0600EED2 RID: 61138 RVA: 0x0038FE43 File Offset: 0x0038E043
+	// Token: 0x0600C2F1 RID: 49905 RVA: 0x0039B9FF File Offset: 0x00399BFF
 	[NullableContext(2)]
 	public void SetBackpackLogic(HonamiStoryBackpackLogicController value)
 	{
@@ -1245,19 +1244,19 @@ public class HonamiStoryModel : ModelBase
 		this.CurBackpackLogicController = value;
 	}
 
-	// Token: 0x0600EED3 RID: 61139 RVA: 0x0038FE5F File Offset: 0x0038E05F
+	// Token: 0x0600C2F2 RID: 49906 RVA: 0x0039BA1B File Offset: 0x00399C1B
 	public EHonamiStoryBackpackLogicState GetBackpackLogicState()
 	{
 		return this.CurBackpackLogicController.GetLogicState();
 	}
 
-	// Token: 0x0600EED4 RID: 61140 RVA: 0x0038FE6C File Offset: 0x0038E06C
+	// Token: 0x0600C2F3 RID: 49907 RVA: 0x0039BA28 File Offset: 0x00399C28
 	public void SetBackpackLogicState(EHonamiStoryBackpackLogicState state)
 	{
 		this.CurBackpackLogicController.SetLogicState(state, null, null);
 	}
 
-	// Token: 0x0600EED5 RID: 61141 RVA: 0x0038FE90 File Offset: 0x0038E090
+	// Token: 0x0600C2F4 RID: 49908 RVA: 0x0039BA4C File Offset: 0x00399C4C
 	public void ShowDiscardTips(HonamiStoryItemDataBase item)
 	{
 		string name = item.GetName();
@@ -1268,20 +1267,20 @@ public class HonamiStoryModel : ModelBase
 		});
 	}
 
-	// Token: 0x0600EED6 RID: 61142 RVA: 0x0038FECA File Offset: 0x0038E0CA
+	// Token: 0x0600C2F5 RID: 49909 RVA: 0x0039BA86 File Offset: 0x00399C86
 	public HonamiStoryInteractController GetInteractController()
 	{
 		return this.CurBackpackLogicController.GetInteractController();
 	}
 
-	// Token: 0x0600EED7 RID: 61143 RVA: 0x0038FED8 File Offset: 0x0038E0D8
+	// Token: 0x0600C2F6 RID: 49910 RVA: 0x0039BA94 File Offset: 0x00399C94
 	public int GetCurrencyCount()
 	{
 		int outCoinItemId = HonamiStoryConfig.Instance.GetHonamiStoryActivityConfig(this.ActivityData.Id).Value.OutCoinItemId;
 		return InventoryModel.Instance.GetItemCountByConfigId(outCoinItemId, 0);
 	}
 
-	// Token: 0x0600EED8 RID: 61144 RVA: 0x0038FF18 File Offset: 0x0038E118
+	// Token: 0x0600C2F7 RID: 49911 RVA: 0x0039BAD4 File Offset: 0x00399CD4
 	public void QuickPickUpFromPickUpBox(HonamiStoryItemDataBase itemData, int curPos)
 	{
 		HonamiStoryBackpackData backPackData = this.GetBackPackData(2, false);
@@ -1323,7 +1322,7 @@ public class HonamiStoryModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600EED9 RID: 61145 RVA: 0x0039000C File Offset: 0x0038E20C
+	// Token: 0x0600C2F8 RID: 49912 RVA: 0x0039BBC8 File Offset: 0x00399DC8
 	public bool QuickEquipFromBackpack(HonamiStoryItemDataBase itemData, int curPos)
 	{
 		if (itemData.GetItemType() == EHonamiStoryItemType.Normal)
@@ -1348,7 +1347,7 @@ public class HonamiStoryModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600EEDA RID: 61146 RVA: 0x00390084 File Offset: 0x0038E284
+	// Token: 0x0600C2F9 RID: 49913 RVA: 0x0039BC40 File Offset: 0x00399E40
 	[NullableContext(0)]
 	public UniTask<bool> PickUpFromWorld([Nullable(1)] HonamiStoryItemDataBase itemData, int position)
 	{
@@ -1362,7 +1361,7 @@ public class HonamiStoryModel : ModelBase
 		return <PickUpFromWorld>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600EEDB RID: 61147 RVA: 0x003900D8 File Offset: 0x0038E2D8
+	// Token: 0x0600C2FA RID: 49914 RVA: 0x0039BC94 File Offset: 0x00399E94
 	public int CheckCanEquipOnEmpty(HonamiStoryItemDataBase itemDataBase)
 	{
 		if (itemDataBase.GetItemType() == EHonamiStoryItemType.Normal)
@@ -1394,7 +1393,7 @@ public class HonamiStoryModel : ModelBase
 		return honamiStoryRoleEquipData.GetNextEmptySlot();
 	}
 
-	// Token: 0x0600EEDC RID: 61148 RVA: 0x00390188 File Offset: 0x0038E388
+	// Token: 0x0600C2FB RID: 49915 RVA: 0x0039BD44 File Offset: 0x00399F44
 	[NullableContext(0)]
 	public UniTask<bool> TryQuickEquipOnEmpty([Nullable(1)] HonamiStoryItemDataBase itemDataBase)
 	{
@@ -1407,7 +1406,7 @@ public class HonamiStoryModel : ModelBase
 		return <TryQuickEquipOnEmpty>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600EEDD RID: 61149 RVA: 0x003901D4 File Offset: 0x0038E3D4
+	// Token: 0x0600C2FC RID: 49916 RVA: 0x0039BD90 File Offset: 0x00399F90
 	[return: TupleElementNames(new string[]
 	{
 		"equipPosition",
@@ -1450,7 +1449,7 @@ public class HonamiStoryModel : ModelBase
 		return new ValueTuple<int, HonamiStoryItemDataBase>(item, item2);
 	}
 
-	// Token: 0x0600EEDE RID: 61150 RVA: 0x003902A4 File Offset: 0x0038E4A4
+	// Token: 0x0600C2FD RID: 49917 RVA: 0x0039BE60 File Offset: 0x0039A060
 	[NullableContext(0)]
 	public UniTask<bool> TryQuickEquipInstead([Nullable(1)] HonamiStoryItemDataBase itemDataBase, int position)
 	{
@@ -1464,7 +1463,7 @@ public class HonamiStoryModel : ModelBase
 		return <TryQuickEquipInstead>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600EEDF RID: 61151 RVA: 0x003902F8 File Offset: 0x0038E4F8
+	// Token: 0x0600C2FE RID: 49918 RVA: 0x0039BEB4 File Offset: 0x0039A0B4
 	public bool SetItemIntoBag(HonamiStoryItemDataBase itemData, EHonamiStoryBackpack curBackpack, EHonamiStoryBackpack toBackpack)
 	{
 		HonamiStoryBackpackData backPackData = this.GetBackPackData((int)toBackpack, false);
@@ -1498,7 +1497,7 @@ public class HonamiStoryModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600EEE0 RID: 61152 RVA: 0x00390400 File Offset: 0x0038E600
+	// Token: 0x0600C2FF RID: 49919 RVA: 0x0039BFBC File Offset: 0x0039A1BC
 	[NullableContext(0)]
 	public UniTask<bool> SellSingleItem([Nullable(1)] HonamiStoryItemDataBase itemData, EHonamiStoryBackpack backpack)
 	{
@@ -1511,19 +1510,19 @@ public class HonamiStoryModel : ModelBase
 		return <SellSingleItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600EEE1 RID: 61153 RVA: 0x0039044B File Offset: 0x0038E64B
+	// Token: 0x0600C300 RID: 49920 RVA: 0x0039C007 File Offset: 0x0039A207
 	public void SetIsLastPickUpViewDirty(bool value)
 	{
 		this.IsLastPickUpViewDirty = value;
 	}
 
-	// Token: 0x0600EEE2 RID: 61154 RVA: 0x00390454 File Offset: 0x0038E654
+	// Token: 0x0600C301 RID: 49921 RVA: 0x0039C010 File Offset: 0x0039A210
 	public bool GetIsLastPickUpViewDirty()
 	{
 		return HonamiStoryUtil.CheckInHonamiStoryDungeon() && this.IsLastPickUpViewDirty;
 	}
 
-	// Token: 0x0600EEE3 RID: 61155 RVA: 0x00390465 File Offset: 0x0038E665
+	// Token: 0x0600C302 RID: 49922 RVA: 0x0039C021 File Offset: 0x0039A221
 	public void SetQuickAllDirty(bool needRefresh = true)
 	{
 		this.QuickAllManager.SetDirty();
@@ -1534,13 +1533,13 @@ public class HonamiStoryModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600EEE4 RID: 61156 RVA: 0x00390490 File Offset: 0x0038E690
+	// Token: 0x0600C303 RID: 49923 RVA: 0x0039C04C File Offset: 0x0039A24C
 	public bool QuickAllRefresh(bool force = false)
 	{
 		return this.QuickAllManager.Refresh(force);
 	}
 
-	// Token: 0x0600EEE5 RID: 61157 RVA: 0x003904A0 File Offset: 0x0038E6A0
+	// Token: 0x0600C304 RID: 49924 RVA: 0x0039C05C File Offset: 0x0039A25C
 	public bool QuickAllCheck(bool needVirtual = true)
 	{
 		if (this.QuickAllManager.GetDirty())
@@ -1551,7 +1550,7 @@ public class HonamiStoryModel : ModelBase
 		return (needVirtual ? this.QuickAllManager.GetCurPowerLevel() : this.QuickAllManager.GetRealPowerLevel()) > powerLevel;
 	}
 
-	// Token: 0x0600EEE6 RID: 61158 RVA: 0x003904F0 File Offset: 0x0038E6F0
+	// Token: 0x0600C305 RID: 49925 RVA: 0x0039C0AC File Offset: 0x0039A2AC
 	public void ApplyQuickAll()
 	{
 		if (!this.QuickAllCheck(true))
@@ -1566,7 +1565,7 @@ public class HonamiStoryModel : ModelBase
 		this.QuickAllManager.ApplyQuickAll();
 	}
 
-	// Token: 0x0600EEE7 RID: 61159 RVA: 0x00390530 File Offset: 0x0038E730
+	// Token: 0x0600C306 RID: 49926 RVA: 0x0039C0EC File Offset: 0x0039A2EC
 	public void QuickUnloadAllSlot()
 	{
 		List<HonamiStoryRoleEquipData> roleEquipDataList = this.GetPlayerBackpackData().GetRoleEquipDataList(true);
@@ -1614,7 +1613,7 @@ public class HonamiStoryModel : ModelBase
 		HonamiStoryController.Instance.RequestHonamiStoryQuickUnloadAll(list, hashSet, ehonamiStoryBackpack).Forget<bool>();
 	}
 
-	// Token: 0x0600EEE8 RID: 61160 RVA: 0x003906D8 File Offset: 0x0038E8D8
+	// Token: 0x0600C307 RID: 49927 RVA: 0x0039C294 File Offset: 0x0039A494
 	[return: Nullable(2)]
 	protected HonamiStoryBagUpdateContext GetSortContext(EHonamiStoryBackpack backpack, Dictionary<HonamiStoryItemDataBase, IHonamiStoryAvailablePosInfo> sortMap)
 	{
@@ -1638,7 +1637,7 @@ public class HonamiStoryModel : ModelBase
 		return honamiStoryBagUpdateContext;
 	}
 
-	// Token: 0x0600EEE9 RID: 61161 RVA: 0x00390794 File Offset: 0x0038E994
+	// Token: 0x0600C308 RID: 49928 RVA: 0x0039C350 File Offset: 0x0039A550
 	public void SortBackpack()
 	{
 		EHonamiStoryBackpack backpack = HonamiStoryUtil.CheckInHonamiStoryDungeon() ? EHonamiStoryBackpack.Backpack : EHonamiStoryBackpack.Inventory;
@@ -1677,7 +1676,7 @@ public class HonamiStoryModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600EEEA RID: 61162 RVA: 0x0039085C File Offset: 0x0038EA5C
+	// Token: 0x0600C309 RID: 49929 RVA: 0x0039C418 File Offset: 0x0039A618
 	[return: TupleElementNames(new string[]
 	{
 		"sortFailTips",
@@ -1733,7 +1732,7 @@ public class HonamiStoryModel : ModelBase
 		return new ValueTuple<bool, HonamiStoryBagUpdateContext>(false, item3);
 	}
 
-	// Token: 0x0600EEEB RID: 61163 RVA: 0x0039097C File Offset: 0x0038EB7C
+	// Token: 0x0600C30A RID: 49930 RVA: 0x0039C538 File Offset: 0x0039A738
 	[return: TupleElementNames(new string[]
 	{
 		"valid",
@@ -1778,7 +1777,7 @@ public class HonamiStoryModel : ModelBase
 		return new ValueTuple<bool, HonamiStoryBagUpdateContext>(true, this.GetSortContext(backpackId, dictionary));
 	}
 
-	// Token: 0x0600EEEC RID: 61164 RVA: 0x00390AF0 File Offset: 0x0038ECF0
+	// Token: 0x0600C30B RID: 49931 RVA: 0x0039C6AC File Offset: 0x0039A8AC
 	[return: TupleElementNames(new string[]
 	{
 		"context",
@@ -1878,7 +1877,7 @@ public class HonamiStoryModel : ModelBase
 		return new ValueTuple<HonamiStoryBagUpdateContext, int>(this.GetSortContext(backpackId, dictionary), 0);
 	}
 
-	// Token: 0x0600EEED RID: 61165 RVA: 0x00390DF0 File Offset: 0x0038EFF0
+	// Token: 0x0600C30C RID: 49932 RVA: 0x0039C9AC File Offset: 0x0039ABAC
 	[NullableContext(2)]
 	public HonamiStoryGamepadLogicController GetGamepadLogic()
 	{
@@ -1889,40 +1888,40 @@ public class HonamiStoryModel : ModelBase
 		return this.CurGamepadLogicController;
 	}
 
-	// Token: 0x0600EEEE RID: 61166 RVA: 0x00390E0B File Offset: 0x0038F00B
+	// Token: 0x0600C30D RID: 49933 RVA: 0x0039C9C7 File Offset: 0x0039ABC7
 	[NullableContext(2)]
 	public void SetGamepadLogic(HonamiStoryGamepadLogicController value)
 	{
 		this.CurGamepadLogicController = value;
 	}
 
-	// Token: 0x0600EEEF RID: 61167 RVA: 0x00390E14 File Offset: 0x0038F014
+	// Token: 0x0600C30E RID: 49934 RVA: 0x0039C9D0 File Offset: 0x0039ABD0
 	public void SetMainTaskLoadingData(IHonamiStoryLoadingData data)
 	{
 		this.MainTaskParam = data;
 	}
 
-	// Token: 0x0600EEF0 RID: 61168 RVA: 0x00390E1D File Offset: 0x0038F01D
+	// Token: 0x0600C30F RID: 49935 RVA: 0x0039C9D9 File Offset: 0x0039ABD9
 	public void SetGamePlayLoadingData(IHonamiStoryLoadingData data)
 	{
 		this.GamePlayParam = data;
 	}
 
-	// Token: 0x0600EEF1 RID: 61169 RVA: 0x00390E26 File Offset: 0x0038F026
+	// Token: 0x0600C310 RID: 49936 RVA: 0x0039C9E2 File Offset: 0x0039ABE2
 	public void ClearCurLoadingData()
 	{
 		this.MainTaskParam = null;
 		this.GamePlayParam = null;
 	}
 
-	// Token: 0x0600EEF2 RID: 61170 RVA: 0x00390E36 File Offset: 0x0038F036
+	// Token: 0x0600C311 RID: 49937 RVA: 0x0039C9F2 File Offset: 0x0039ABF2
 	[NullableContext(2)]
 	public IHonamiStoryLoadingData GetCurLoadingData()
 	{
 		return this.MainTaskParam ?? this.GamePlayParam;
 	}
 
-	// Token: 0x0600EEF3 RID: 61171 RVA: 0x00390E48 File Offset: 0x0038F048
+	// Token: 0x0600C312 RID: 49938 RVA: 0x0039CA04 File Offset: 0x0039AC04
 	public EUiViewName? GetCurLoadViewName()
 	{
 		IHonamiStoryLoadingData curLoadingData = this.GetCurLoadingData();
@@ -1964,8 +1963,8 @@ public class HonamiStoryModel : ModelBase
 		return new EUiViewName?(EUiViewName.HonamiStoryLoadingView);
 	}
 
-	// Token: 0x170012D5 RID: 4821
-	// (get) Token: 0x0600EEF4 RID: 61172 RVA: 0x00390F8D File Offset: 0x0038F18D
+	// Token: 0x170012FF RID: 4863
+	// (get) Token: 0x0600C313 RID: 49939 RVA: 0x0039CB49 File Offset: 0x0039AD49
 	public static HonamiStoryModel Instance
 	{
 		get
@@ -1974,7 +1973,7 @@ public class HonamiStoryModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600EEF5 RID: 61173 RVA: 0x00390F94 File Offset: 0x0038F194
+	// Token: 0x0600C314 RID: 49940 RVA: 0x0039CB50 File Offset: 0x0039AD50
 	public static HonamiStoryModel GetOrCreateInstance()
 	{
 		if (HonamiStoryModel._Instance == null)
@@ -1984,7 +1983,7 @@ public class HonamiStoryModel : ModelBase
 		return HonamiStoryModel._Instance;
 	}
 
-	// Token: 0x0600EEF6 RID: 61174 RVA: 0x00390FA8 File Offset: 0x0038F1A8
+	// Token: 0x0600C315 RID: 49941 RVA: 0x0039CB64 File Offset: 0x0039AD64
 	public static bool CreateInstance()
 	{
 		if (HonamiStoryModel._Instance != null)
@@ -1995,74 +1994,74 @@ public class HonamiStoryModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600EEF7 RID: 61175 RVA: 0x00390FBE File Offset: 0x0038F1BE
+	// Token: 0x0600C316 RID: 49942 RVA: 0x0039CB7A File Offset: 0x0039AD7A
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600EEF8 RID: 61176 RVA: 0x00390FC0 File Offset: 0x0038F1C0
+	// Token: 0x0600C317 RID: 49943 RVA: 0x0039CB7C File Offset: 0x0039AD7C
 	public static void ResetStaticDefaultValue()
 	{
 		HonamiStoryModel._Instance = null;
 	}
 
-	// Token: 0x0600EEF9 RID: 61177 RVA: 0x00390FC8 File Offset: 0x0038F1C8
+	// Token: 0x0600C318 RID: 49944 RVA: 0x0039CB84 File Offset: 0x0039AD84
 	static HonamiStoryModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(HonamiStoryModel.CreateStaticDefaultValue), new Action(HonamiStoryModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04006E8F RID: 28303
+	// Token: 0x04006F70 RID: 28528
 	public int ActivityId;
 
-	// Token: 0x04006E90 RID: 28304
+	// Token: 0x04006F71 RID: 28529
 	public HonamiStoryQuickEquipAllManager QuickAllManager = new HonamiStoryQuickEquipAllManager();
 
-	// Token: 0x04006E91 RID: 28305
+	// Token: 0x04006F72 RID: 28530
 	[Nullable(2)]
 	protected HonamiStoryBackpackLogicController CurBackpackLogicController;
 
-	// Token: 0x04006E92 RID: 28306
+	// Token: 0x04006F73 RID: 28531
 	[Nullable(2)]
 	private HonamiStoryGamepadLogicController CurGamepadLogicController;
 
-	// Token: 0x04006E93 RID: 28307
+	// Token: 0x04006F74 RID: 28532
 	protected List<IPickUpItemInfo> PickUpItemDataQueue = new List<IPickUpItemInfo>();
 
-	// Token: 0x04006E94 RID: 28308
+	// Token: 0x04006F75 RID: 28533
 	protected double PickUpTime;
 
-	// Token: 0x04006E95 RID: 28309
+	// Token: 0x04006F76 RID: 28534
 	protected bool IsPickingUp;
 
-	// Token: 0x04006E96 RID: 28310
+	// Token: 0x04006F77 RID: 28535
 	public HashSet<int> PickedEntityId = new HashSet<int>();
 
-	// Token: 0x04006E97 RID: 28311
+	// Token: 0x04006F78 RID: 28536
 	public readonly FRotator NormalRotation = global::Rotator.Create(0f, 0f, 0f).ToUeRotator();
 
-	// Token: 0x04006E98 RID: 28312
+	// Token: 0x04006F79 RID: 28537
 	public readonly FRotator TransRotation = global::Rotator.Create(0f, 90f, 0f).ToUeRotator();
 
-	// Token: 0x04006E99 RID: 28313
+	// Token: 0x04006F7A RID: 28538
 	protected bool IsLastPickUpViewDirty;
 
-	// Token: 0x04006E9A RID: 28314
+	// Token: 0x04006F7B RID: 28539
 	public bool CanSafeLeave;
 
-	// Token: 0x04006E9B RID: 28315
+	// Token: 0x04006F7C RID: 28540
 	public bool CacheShowSafeLeaveUpdate;
 
-	// Token: 0x04006E9C RID: 28316
+	// Token: 0x04006F7D RID: 28541
 	public int PollutionLevel;
 
-	// Token: 0x04006E9D RID: 28317
+	// Token: 0x04006F7E RID: 28542
 	public int PollutionMaxLevel;
 
-	// Token: 0x04006E9E RID: 28318
+	// Token: 0x04006F7F RID: 28543
 	public float PollutionStarTime;
 
-	// Token: 0x04006E9F RID: 28319
+	// Token: 0x04006F80 RID: 28544
 	[Nullable(new byte[]
 	{
 		2,
@@ -2070,108 +2069,108 @@ public class HonamiStoryModel : ModelBase
 	})]
 	public Dictionary<int, IHonamiStoryPollution> PollutionLevelMap;
 
-	// Token: 0x04006EA0 RID: 28320
+	// Token: 0x04006F81 RID: 28545
 	public int PollutionWarningLevel;
 
-	// Token: 0x04006EA1 RID: 28321
+	// Token: 0x04006F82 RID: 28546
 	public int PollutionDangerLevel;
 
-	// Token: 0x04006EA2 RID: 28322
+	// Token: 0x04006F83 RID: 28547
 	public int MonsterBaseEnhanceLevel;
 
-	// Token: 0x04006EA3 RID: 28323
+	// Token: 0x04006F84 RID: 28548
 	public int DangerLevel;
 
-	// Token: 0x04006EA4 RID: 28324
+	// Token: 0x04006F85 RID: 28549
 	public int MonsterLevelSafeOffset;
 
-	// Token: 0x04006EA5 RID: 28325
+	// Token: 0x04006F86 RID: 28550
 	public int MonsterLevelDangerOffset;
 
-	// Token: 0x04006EA6 RID: 28326
+	// Token: 0x04006F87 RID: 28551
 	public int? ScanMarkId;
 
-	// Token: 0x04006EA7 RID: 28327
+	// Token: 0x04006F88 RID: 28552
 	public HashSet<int> ScanMarkItemIds = new HashSet<int>();
 
-	// Token: 0x04006EA8 RID: 28328
+	// Token: 0x04006F89 RID: 28553
 	public int CurrentUnlockFogId;
 
-	// Token: 0x04006EA9 RID: 28329
+	// Token: 0x04006F8A RID: 28554
 	public int CurAreaId;
 
-	// Token: 0x04006EAA RID: 28330
+	// Token: 0x04006F8B RID: 28555
 	[Nullable(2)]
 	private IHonamiStoryLoadingData MainTaskParam;
 
-	// Token: 0x04006EAB RID: 28331
+	// Token: 0x04006F8C RID: 28556
 	[Nullable(2)]
 	private IHonamiStoryLoadingData GamePlayParam;
 
-	// Token: 0x04006EAC RID: 28332
+	// Token: 0x04006F8D RID: 28557
 	[Nullable(2)]
 	private HonamiStoryActivityData ActivityData;
 
-	// Token: 0x04006EAD RID: 28333
+	// Token: 0x04006F8E RID: 28558
 	public HonamiStoryPlayerData PlayerData = HonamiStoryPlayerData.Create();
 
-	// Token: 0x04006EAE RID: 28334
+	// Token: 0x04006F8F RID: 28559
 	private HonamiStoryPlayerBackpackData PlayerBackpackData;
 
-	// Token: 0x04006EAF RID: 28335
+	// Token: 0x04006F90 RID: 28560
 	private readonly Dictionary<int, HonamiStoryWeaponData> WeaponDataMap = new Dictionary<int, HonamiStoryWeaponData>();
 
-	// Token: 0x04006EB0 RID: 28336
+	// Token: 0x04006F91 RID: 28561
 	public int LastRecordRevenue;
 
-	// Token: 0x04006EB1 RID: 28337
+	// Token: 0x04006F92 RID: 28562
 	private int TotalRevenueInternal;
 
-	// Token: 0x04006EB2 RID: 28338
+	// Token: 0x04006F93 RID: 28563
 	[Nullable(2)]
 	private HonamiStoryBackpackData WareHouseBackpackData;
 
-	// Token: 0x04006EB3 RID: 28339
+	// Token: 0x04006F94 RID: 28564
 	private readonly Dictionary<int, HonamiStoryTechNodeData> TechNodeDataMap = new Dictionary<int, HonamiStoryTechNodeData>();
 
-	// Token: 0x04006EB4 RID: 28340
+	// Token: 0x04006F95 RID: 28565
 	private readonly Dictionary<int, HonamiStoryTechAreaData> TechAreaDataMap = new Dictionary<int, HonamiStoryTechAreaData>();
 
-	// Token: 0x04006EB5 RID: 28341
+	// Token: 0x04006F96 RID: 28566
 	[Nullable(2)]
 	public HonamiStoryTechNodeData CurrentSelectNode;
 
-	// Token: 0x04006EB6 RID: 28342
+	// Token: 0x04006F97 RID: 28567
 	[Nullable(2)]
 	public HonamiStoryTechnologyNodeItem CurrentSelectNodeItem;
 
-	// Token: 0x04006EB7 RID: 28343
+	// Token: 0x04006F98 RID: 28568
 	public Dictionary<int, int> RoleParentMap = new Dictionary<int, int>();
 
-	// Token: 0x04006EB8 RID: 28344
+	// Token: 0x04006F99 RID: 28569
 	public Dictionary<int, HonamiStoryItemDataBase> ItemDataMap = new Dictionary<int, HonamiStoryItemDataBase>();
 
-	// Token: 0x04006EB9 RID: 28345
+	// Token: 0x04006F9A RID: 28570
 	public Dictionary<int, CSharpScript.Game.Module.HonamiStory.Data.HonamiStoryWeaponSuitData> WeaponSuitMap = new Dictionary<int, CSharpScript.Game.Module.HonamiStory.Data.HonamiStoryWeaponSuitData>();
 
-	// Token: 0x04006EBA RID: 28346
+	// Token: 0x04006F9B RID: 28571
 	public int[] AddLevel = new int[]
 	{
 		-1,
 		-1
 	};
 
-	// Token: 0x04006EBB RID: 28347
+	// Token: 0x04006F9C RID: 28572
 	[Nullable(2)]
 	public HonamiStoryQuestDataBase CurTrackTaskData;
 
-	// Token: 0x04006EBC RID: 28348
+	// Token: 0x04006F9D RID: 28573
 	private readonly Dictionary<EHonamiStoryQuestType, List<HonamiStoryQuestDataBase>> QuestDataMapCache = new Dictionary<EHonamiStoryQuestType, List<HonamiStoryQuestDataBase>>();
 
-	// Token: 0x04006EBD RID: 28349
+	// Token: 0x04006F9E RID: 28574
 	private readonly Dictionary<int, HonamiStoryBackpackData> BackpackDataMap = new Dictionary<int, HonamiStoryBackpackData>();
 
-	// Token: 0x04006EBE RID: 28350
+	// Token: 0x04006F9F RID: 28575
 	private readonly Comparison<HonamiStoryItemDataBase> NormalSort = delegate(HonamiStoryItemDataBase a, HonamiStoryItemDataBase b)
 	{
 		if (a.IsLock() != b.IsLock())
@@ -2206,7 +2205,7 @@ public class HonamiStoryModel : ModelBase
 		}
 	};
 
-	// Token: 0x04006EBF RID: 28351
+	// Token: 0x04006FA0 RID: 28576
 	private readonly Comparison<HonamiStoryItemDataBase> PluginSort = delegate(HonamiStoryItemDataBase a, HonamiStoryItemDataBase b)
 	{
 		if (a.IsLock() != b.IsLock())
@@ -2235,7 +2234,7 @@ public class HonamiStoryModel : ModelBase
 		}
 	};
 
-	// Token: 0x04006EC0 RID: 28352
+	// Token: 0x04006FA1 RID: 28577
 	[Nullable(2)]
 	private static HonamiStoryModel _Instance;
 }

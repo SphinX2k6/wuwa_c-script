@@ -7,13 +7,13 @@ using AkiClient.Game.Aki.Data.Entity.Struct;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x0200326F RID: 12911
+// Token: 0x020027DE RID: 10206
 [NullableContext(1)]
 [Nullable(0)]
 public class BaseActorComponent : EntityComponent
 {
-	// Token: 0x17002665 RID: 9829
-	// (get) Token: 0x0601BE73 RID: 114291 RVA: 0x007BCFA4 File Offset: 0x007BB1A4
+	// Token: 0x170028F8 RID: 10488
+	// (get) Token: 0x06019A4E RID: 105038 RVA: 0x007E487C File Offset: 0x007E2A7C
 	public float ScaledRadius
 	{
 		get
@@ -22,8 +22,8 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x17002666 RID: 9830
-	// (get) Token: 0x0601BE74 RID: 114292 RVA: 0x007BCFBA File Offset: 0x007BB1BA
+	// Token: 0x170028F9 RID: 10489
+	// (get) Token: 0x06019A4F RID: 105039 RVA: 0x007E4892 File Offset: 0x007E2A92
 	public float Radius
 	{
 		get
@@ -32,8 +32,8 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x17002667 RID: 9831
-	// (get) Token: 0x0601BE75 RID: 114293 RVA: 0x007BCFC2 File Offset: 0x007BB1C2
+	// Token: 0x170028FA RID: 10490
+	// (get) Token: 0x06019A50 RID: 105040 RVA: 0x007E489A File Offset: 0x007E2A9A
 	public float ScaledHalfHeight
 	{
 		get
@@ -42,8 +42,8 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x17002668 RID: 9832
-	// (get) Token: 0x0601BE76 RID: 114294 RVA: 0x007BCFD8 File Offset: 0x007BB1D8
+	// Token: 0x170028FB RID: 10491
+	// (get) Token: 0x06019A51 RID: 105041 RVA: 0x007E48B0 File Offset: 0x007E2AB0
 	public float HalfHeight
 	{
 		get
@@ -52,8 +52,8 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x17002669 RID: 9833
-	// (get) Token: 0x0601BE77 RID: 114295 RVA: 0x007BCFE0 File Offset: 0x007BB1E0
+	// Token: 0x170028FC RID: 10492
+	// (get) Token: 0x06019A52 RID: 105042 RVA: 0x007E48B8 File Offset: 0x007E2AB8
 	public float DefaultRadius
 	{
 		get
@@ -62,8 +62,8 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x1700266A RID: 9834
-	// (get) Token: 0x0601BE78 RID: 114296 RVA: 0x007BCFE8 File Offset: 0x007BB1E8
+	// Token: 0x170028FD RID: 10493
+	// (get) Token: 0x06019A53 RID: 105043 RVA: 0x007E48C0 File Offset: 0x007E2AC0
 	public float DefaultHalfHeight
 	{
 		get
@@ -72,13 +72,13 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BE79 RID: 114297 RVA: 0x007BCFF0 File Offset: 0x007BB1F0
+	// Token: 0x06019A54 RID: 105044 RVA: 0x007E48C8 File Offset: 0x007E2AC8
 	protected virtual void InitSizeInternal()
 	{
 	}
 
-	// Token: 0x1700266B RID: 9835
-	// (get) Token: 0x0601BE7A RID: 114298 RVA: 0x007BCFF2 File Offset: 0x007BB1F2
+	// Token: 0x170028FE RID: 10494
+	// (get) Token: 0x06019A55 RID: 105045 RVA: 0x007E48CA File Offset: 0x007E2ACA
 	public bool IsAutonomousProxy
 	{
 		get
@@ -87,8 +87,8 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x1700266C RID: 9836
-	// (get) Token: 0x0601BE7B RID: 114299 RVA: 0x007BCFFA File Offset: 0x007BB1FA
+	// Token: 0x170028FF RID: 10495
+	// (get) Token: 0x06019A56 RID: 105046 RVA: 0x007E48D2 File Offset: 0x007E2AD2
 	public bool IsMoveAutonomousProxy
 	{
 		get
@@ -97,22 +97,16 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BE7C RID: 114300 RVA: 0x007BD004 File Offset: 0x007BB204
+	// Token: 0x06019A57 RID: 105047 RVA: 0x007E48DA File Offset: 0x007E2ADA
 	[NullableContext(2)]
 	protected override bool OnCreate(IEntityArgs args = null)
 	{
 		this.DisableActorHandle = new DisableEntityHandle("SetActorHiddenInGame");
 		this.DisableCollisionHandle = new DisableEntityHandle("SetActorEnableCollision");
-		base.AddUnResetProperty(new string[]
-		{
-			"DisableActorHandle",
-			"DisableCollisionHandle",
-			"DisableTickHandle"
-		});
 		return true;
 	}
 
-	// Token: 0x0601BE7D RID: 114301 RVA: 0x007BD058 File Offset: 0x007BB258
+	// Token: 0x06019A58 RID: 105048 RVA: 0x007E4900 File Offset: 0x007E2B00
 	[NullableContext(2)]
 	protected override bool OnInitData(IEntityArgs args = null)
 	{
@@ -122,7 +116,7 @@ public class BaseActorComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601BE7E RID: 114302 RVA: 0x007BD0D8 File Offset: 0x007BB2D8
+	// Token: 0x06019A59 RID: 105049 RVA: 0x007E4980 File Offset: 0x007E2B80
 	protected override bool OnStart()
 	{
 		this.MoveComp = base.Entity.GetComponent<BaseMoveComponent>();
@@ -131,7 +125,7 @@ public class BaseActorComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601BE7F RID: 114303 RVA: 0x007BD118 File Offset: 0x007BB318
+	// Token: 0x06019A5A RID: 105050 RVA: 0x007E49C0 File Offset: 0x007E2BC0
 	protected override void OnActivate()
 	{
 		this.ActorInternal.Kuro_SetRole(this.MoveAutonomous ? EKuroNetRole.KURO_ROLE_AutonomousProxy : EKuroNetRole.KURO_ROLE_SimulatedProxy);
@@ -141,21 +135,21 @@ public class BaseActorComponent : EntityComponent
 		this.ActorInternal.SetActorEnableCollision(this.DisableCollisionHandle.Empty);
 	}
 
-	// Token: 0x0601BE80 RID: 114304 RVA: 0x007BD18D File Offset: 0x007BB38D
+	// Token: 0x06019A5B RID: 105051 RVA: 0x007E4A35 File Offset: 0x007E2C35
 	protected override bool OnEnd()
 	{
 		this.ClearDebugLocationCube();
 		return true;
 	}
 
-	// Token: 0x0601BE81 RID: 114305 RVA: 0x007BD196 File Offset: 0x007BB396
+	// Token: 0x06019A5C RID: 105052 RVA: 0x007E4A3E File Offset: 0x007E2C3E
 	public virtual void SetAutonomous(bool logicAutonomous, bool? moveAutonomous = null)
 	{
 		this.LogicAutonomous = logicAutonomous;
 		this.SetMoveAutonomous(moveAutonomous.GetValueOrDefault(logicAutonomous), "切换逻辑主控");
 	}
 
-	// Token: 0x0601BE82 RID: 114306 RVA: 0x007BD1B2 File Offset: 0x007BB3B2
+	// Token: 0x06019A5D RID: 105053 RVA: 0x007E4A5A File Offset: 0x007E2C5A
 	protected virtual void SetMoveAutonomous(bool moveAutonomous, string reason = "")
 	{
 		this.MoveAutonomous = moveAutonomous;
@@ -167,19 +161,19 @@ public class BaseActorComponent : EntityComponent
 		actorInternal.Kuro_SetRole(this.MoveAutonomous ? EKuroNetRole.KURO_ROLE_AutonomousProxy : EKuroNetRole.KURO_ROLE_SimulatedProxy);
 	}
 
-	// Token: 0x0601BE83 RID: 114307 RVA: 0x007BD1D7 File Offset: 0x007BB3D7
+	// Token: 0x06019A5E RID: 105054 RVA: 0x007E4A7F File Offset: 0x007E2C7F
 	public virtual void SetMoveControlled(bool controlled, double maxControlTime = 2.0, string reason = "")
 	{
 		this.SetMoveAutonomous(controlled, reason);
 	}
 
-	// Token: 0x0601BE84 RID: 114308 RVA: 0x007BD1E1 File Offset: 0x007BB3E1
+	// Token: 0x06019A5F RID: 105055 RVA: 0x007E4A89 File Offset: 0x007E2C89
 	public virtual void ResetMoveControlled(string reason = "")
 	{
 		this.SetMoveAutonomous(this.IsAutonomousProxy, reason);
 	}
 
-	// Token: 0x0601BE85 RID: 114309 RVA: 0x007BD1F0 File Offset: 0x007BB3F0
+	// Token: 0x06019A60 RID: 105056 RVA: 0x007E4A98 File Offset: 0x007E2C98
 	protected bool InitCreatureData()
 	{
 		this.CreatureDataInternal = base.Entity.GetComponent<CreatureDataComponent>();
@@ -192,8 +186,8 @@ public class BaseActorComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x1700266D RID: 9837
-	// (get) Token: 0x0601BE86 RID: 114310 RVA: 0x007BD243 File Offset: 0x007BB443
+	// Token: 0x17002900 RID: 10496
+	// (get) Token: 0x06019A61 RID: 105057 RVA: 0x007E4AEB File Offset: 0x007E2CEB
 	public CreatureDataComponent CreatureData
 	{
 		get
@@ -202,8 +196,8 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x1700266E RID: 9838
-	// (get) Token: 0x0601BE87 RID: 114311 RVA: 0x007BD24B File Offset: 0x007BB44B
+	// Token: 0x17002901 RID: 10497
+	// (get) Token: 0x06019A62 RID: 105058 RVA: 0x007E4AF3 File Offset: 0x007E2CF3
 	public FQuat ActorQuat
 	{
 		get
@@ -212,8 +206,8 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x1700266F RID: 9839
-	// (get) Token: 0x0601BE88 RID: 114312 RVA: 0x007BD258 File Offset: 0x007BB458
+	// Token: 0x17002902 RID: 10498
+	// (get) Token: 0x06019A63 RID: 105059 RVA: 0x007E4B00 File Offset: 0x007E2D00
 	public Quat ActorQuatProxy
 	{
 		get
@@ -234,8 +228,8 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x17002670 RID: 9840
-	// (get) Token: 0x0601BE89 RID: 114313 RVA: 0x007BD2CC File Offset: 0x007BB4CC
+	// Token: 0x17002903 RID: 10499
+	// (get) Token: 0x06019A64 RID: 105060 RVA: 0x007E4B74 File Offset: 0x007E2D74
 	public global::Rotator ActorRotationProxy
 	{
 		get
@@ -256,8 +250,8 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x17002671 RID: 9841
-	// (get) Token: 0x0601BE8A RID: 114314 RVA: 0x007BD340 File Offset: 0x007BB540
+	// Token: 0x17002904 RID: 10500
+	// (get) Token: 0x06019A65 RID: 105061 RVA: 0x007E4BE8 File Offset: 0x007E2DE8
 	public FRotator ActorRotation
 	{
 		get
@@ -266,8 +260,8 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x17002672 RID: 9842
-	// (get) Token: 0x0601BE8B RID: 114315 RVA: 0x007BD350 File Offset: 0x007BB550
+	// Token: 0x17002905 RID: 10501
+	// (get) Token: 0x06019A66 RID: 105062 RVA: 0x007E4BF8 File Offset: 0x007E2DF8
 	public global::Vector ActorScaleProxy
 	{
 		get
@@ -287,8 +281,8 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x17002673 RID: 9843
-	// (get) Token: 0x0601BE8C RID: 114316 RVA: 0x007BD3A0 File Offset: 0x007BB5A0
+	// Token: 0x17002906 RID: 10502
+	// (get) Token: 0x06019A67 RID: 105063 RVA: 0x007E4C48 File Offset: 0x007E2E48
 	public FVectorDouble ActorScale
 	{
 		get
@@ -297,8 +291,8 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x17002674 RID: 9844
-	// (get) Token: 0x0601BE8D RID: 114317 RVA: 0x007BD3B0 File Offset: 0x007BB5B0
+	// Token: 0x17002907 RID: 10503
+	// (get) Token: 0x06019A68 RID: 105064 RVA: 0x007E4C58 File Offset: 0x007E2E58
 	public FTransformDouble? ActorTransformOrNull
 	{
 		get
@@ -316,8 +310,8 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x17002675 RID: 9845
-	// (get) Token: 0x0601BE8E RID: 114318 RVA: 0x007BD410 File Offset: 0x007BB610
+	// Token: 0x17002908 RID: 10504
+	// (get) Token: 0x06019A69 RID: 105065 RVA: 0x007E4CB8 File Offset: 0x007E2EB8
 	public FTransformDouble ActorTransform
 	{
 		get
@@ -331,8 +325,8 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x17002676 RID: 9846
-	// (get) Token: 0x0601BE8F RID: 114319 RVA: 0x007BD43A File Offset: 0x007BB63A
+	// Token: 0x17002909 RID: 10505
+	// (get) Token: 0x06019A6A RID: 105066 RVA: 0x007E4CE2 File Offset: 0x007E2EE2
 	public FVectorDouble ActorLocation
 	{
 		get
@@ -341,8 +335,8 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x17002677 RID: 9847
-	// (get) Token: 0x0601BE90 RID: 114320 RVA: 0x007BD448 File Offset: 0x007BB648
+	// Token: 0x1700290A RID: 10506
+	// (get) Token: 0x06019A6B RID: 105067 RVA: 0x007E4CF0 File Offset: 0x007E2EF0
 	public virtual global::Vector ActorLocationProxy
 	{
 		get
@@ -366,15 +360,15 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BE91 RID: 114321 RVA: 0x007BD4B9 File Offset: 0x007BB6B9
+	// Token: 0x06019A6C RID: 105068 RVA: 0x007E4D61 File Offset: 0x007E2F61
 	[Conditional("NO_SUPPORT")]
 	protected void SetCachedActorLocationWritable(bool canWrite)
 	{
 		bool isPlayInEditor = GlobalData.IsPlayInEditor;
 	}
 
-	// Token: 0x17002678 RID: 9848
-	// (get) Token: 0x0601BE92 RID: 114322 RVA: 0x007BD4C1 File Offset: 0x007BB6C1
+	// Token: 0x1700290B RID: 10507
+	// (get) Token: 0x06019A6D RID: 105069 RVA: 0x007E4D69 File Offset: 0x007E2F69
 	public global::Vector ActorLocationProxyNoUpdate
 	{
 		get
@@ -387,8 +381,8 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x17002679 RID: 9849
-	// (get) Token: 0x0601BE93 RID: 114323 RVA: 0x007BD4D9 File Offset: 0x007BB6D9
+	// Token: 0x1700290C RID: 10508
+	// (get) Token: 0x06019A6E RID: 105070 RVA: 0x007E4D81 File Offset: 0x007E2F81
 	public global::Vector ActorForwardProxy
 	{
 		get
@@ -402,8 +396,8 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x1700267A RID: 9850
-	// (get) Token: 0x0601BE94 RID: 114324 RVA: 0x007BD519 File Offset: 0x007BB719
+	// Token: 0x1700290D RID: 10509
+	// (get) Token: 0x06019A6F RID: 105071 RVA: 0x007E4DC1 File Offset: 0x007E2FC1
 	public FVectorDouble ActorRight
 	{
 		get
@@ -412,8 +406,8 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x1700267B RID: 9851
-	// (get) Token: 0x0601BE95 RID: 114325 RVA: 0x007BD527 File Offset: 0x007BB727
+	// Token: 0x1700290E RID: 10510
+	// (get) Token: 0x06019A70 RID: 105072 RVA: 0x007E4DCF File Offset: 0x007E2FCF
 	public global::Vector ActorRightProxy
 	{
 		get
@@ -427,8 +421,8 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x1700267C RID: 9852
-	// (get) Token: 0x0601BE96 RID: 114326 RVA: 0x007BD567 File Offset: 0x007BB767
+	// Token: 0x1700290F RID: 10511
+	// (get) Token: 0x06019A71 RID: 105073 RVA: 0x007E4E0F File Offset: 0x007E300F
 	public FVectorDouble ActorForward
 	{
 		get
@@ -437,8 +431,8 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x1700267D RID: 9853
-	// (get) Token: 0x0601BE97 RID: 114327 RVA: 0x007BD575 File Offset: 0x007BB775
+	// Token: 0x17002910 RID: 10512
+	// (get) Token: 0x06019A72 RID: 105074 RVA: 0x007E4E1D File Offset: 0x007E301D
 	public global::Vector ActorUpProxy
 	{
 		get
@@ -452,8 +446,8 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x1700267E RID: 9854
-	// (get) Token: 0x0601BE98 RID: 114328 RVA: 0x007BD5B5 File Offset: 0x007BB7B5
+	// Token: 0x17002911 RID: 10513
+	// (get) Token: 0x06019A73 RID: 105075 RVA: 0x007E4E5D File Offset: 0x007E305D
 	public FVectorDouble ActorUp
 	{
 		get
@@ -462,8 +456,8 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x1700267F RID: 9855
-	// (get) Token: 0x0601BE99 RID: 114329 RVA: 0x007BD5C4 File Offset: 0x007BB7C4
+	// Token: 0x17002912 RID: 10514
+	// (get) Token: 0x06019A74 RID: 105076 RVA: 0x007E4E6C File Offset: 0x007E306C
 	public virtual global::Vector ActorGravityDirectProxy
 	{
 		get
@@ -481,10 +475,11 @@ public class BaseActorComponent : EntityComponent
 				}
 				else
 				{
-					Aki.Protocol.Vector initGravityDirection = this.CreatureData.GetInitGravityDirection();
-					if (initGravityDirection != null)
+					CreatureDataComponent creatureData = this.CreatureData;
+					Aki.Protocol.Vector vector = (creatureData != null) ? creatureData.GetInitGravityDirection() : null;
+					if (vector != null)
 					{
-						this.CachedActorGravityDirect.FromConfigVector(initGravityDirection);
+						this.CachedActorGravityDirect.FromConfigVector(vector);
 					}
 				}
 			}
@@ -492,8 +487,8 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x17002680 RID: 9856
-	// (get) Token: 0x0601BE9A RID: 114330 RVA: 0x007BD654 File Offset: 0x007BB854
+	// Token: 0x17002913 RID: 10515
+	// (get) Token: 0x06019A75 RID: 105077 RVA: 0x007E4F03 File Offset: 0x007E3103
 	public FVectorDouble ActorGravityDirection
 	{
 		get
@@ -502,8 +497,8 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x17002681 RID: 9857
-	// (get) Token: 0x0601BE9B RID: 114331 RVA: 0x007BD662 File Offset: 0x007BB862
+	// Token: 0x17002914 RID: 10516
+	// (get) Token: 0x06019A76 RID: 105078 RVA: 0x007E4F11 File Offset: 0x007E3111
 	public bool ActorInitNotStandardGravity
 	{
 		get
@@ -516,8 +511,8 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x17002682 RID: 9858
-	// (get) Token: 0x0601BE9C RID: 114332 RVA: 0x007BD682 File Offset: 0x007BB882
+	// Token: 0x17002915 RID: 10517
+	// (get) Token: 0x06019A77 RID: 105079 RVA: 0x007E4F31 File Offset: 0x007E3131
 	public global::Rotator ActorInitGravityRotationProxy
 	{
 		get
@@ -530,8 +525,8 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x17002683 RID: 9859
-	// (get) Token: 0x0601BE9D RID: 114333 RVA: 0x007BD698 File Offset: 0x007BB898
+	// Token: 0x17002916 RID: 10518
+	// (get) Token: 0x06019A78 RID: 105080 RVA: 0x007E4F47 File Offset: 0x007E3147
 	public FRotator ActorInitGravityRotation
 	{
 		get
@@ -544,7 +539,7 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BE9E RID: 114334 RVA: 0x007BD6B4 File Offset: 0x007BB8B4
+	// Token: 0x06019A79 RID: 105081 RVA: 0x007E4F64 File Offset: 0x007E3164
 	private void InitCacheGravityRotation()
 	{
 		Aki.Protocol.Vector initGravityDirection = this.CreatureData.GetInitGravityDirection();
@@ -574,14 +569,14 @@ public class BaseActorComponent : EntityComponent
 		this.CachedActorInitGravityRotation = global::Rotator.Create(0f, 0f, 0f);
 	}
 
-	// Token: 0x0601BE9F RID: 114335 RVA: 0x007BD7D6 File Offset: 0x007BB9D6
+	// Token: 0x06019A7A RID: 105082 RVA: 0x007E5086 File Offset: 0x007E3286
 	public virtual float GetRadius()
 	{
 		return 0f;
 	}
 
-	// Token: 0x17002684 RID: 9860
-	// (get) Token: 0x0601BEA0 RID: 114336 RVA: 0x007BD7DD File Offset: 0x007BB9DD
+	// Token: 0x17002917 RID: 10519
+	// (get) Token: 0x06019A7B RID: 105083 RVA: 0x007E508D File Offset: 0x007E328D
 	[Nullable(2)]
 	public AActor Owner
 	{
@@ -597,8 +592,8 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x17002685 RID: 9861
-	// (get) Token: 0x0601BEA1 RID: 114337 RVA: 0x007BD800 File Offset: 0x007BBA00
+	// Token: 0x17002918 RID: 10520
+	// (get) Token: 0x06019A7C RID: 105084 RVA: 0x007E50B0 File Offset: 0x007E32B0
 	[Obsolete("非安全获取速度，需要提前校验ActorInternal, 或者使用SafeActorVelocityProxy")]
 	public global::Vector ActorVelocityProxy
 	{
@@ -615,8 +610,8 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x17002686 RID: 9862
-	// (get) Token: 0x0601BEA2 RID: 114338 RVA: 0x007BD84E File Offset: 0x007BBA4E
+	// Token: 0x17002919 RID: 10521
+	// (get) Token: 0x06019A7D RID: 105085 RVA: 0x007E50FE File Offset: 0x007E32FE
 	public FVector ActorVelocity
 	{
 		get
@@ -625,8 +620,8 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x17002687 RID: 9863
-	// (get) Token: 0x0601BEA3 RID: 114339 RVA: 0x007BD85B File Offset: 0x007BBA5B
+	// Token: 0x1700291A RID: 10522
+	// (get) Token: 0x06019A7E RID: 105086 RVA: 0x007E510B File Offset: 0x007E330B
 	[Nullable(2)]
 	public global::Vector SafeActorVelocityProxy
 	{
@@ -642,8 +637,8 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x17002688 RID: 9864
-	// (get) Token: 0x0601BEA4 RID: 114340 RVA: 0x007BD87C File Offset: 0x007BBA7C
+	// Token: 0x1700291B RID: 10523
+	// (get) Token: 0x06019A7F RID: 105087 RVA: 0x007E512C File Offset: 0x007E332C
 	[Nullable(2)]
 	public virtual USkeletalMeshComponent SkeletalMesh
 	{
@@ -654,20 +649,20 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BEA5 RID: 114341 RVA: 0x007BD87F File Offset: 0x007BBA7F
+	// Token: 0x06019A80 RID: 105088 RVA: 0x007E512F File Offset: 0x007E332F
 	public virtual bool HasMesh()
 	{
 		return false;
 	}
 
-	// Token: 0x0601BEA6 RID: 114342 RVA: 0x007BD882 File Offset: 0x007BBA82
+	// Token: 0x06019A81 RID: 105089 RVA: 0x007E5132 File Offset: 0x007E3332
 	protected virtual void OnTeleport()
 	{
 		this.LastActorLocation.DeepCopy(this.ActorLocationProxy);
 		this.LastActorRotation.DeepCopy(this.ActorRotationProxy);
 	}
 
-	// Token: 0x0601BEA7 RID: 114343 RVA: 0x007BD8A8 File Offset: 0x007BBAA8
+	// Token: 0x06019A82 RID: 105090 RVA: 0x007E5158 File Offset: 0x007E3358
 	public unsafe virtual bool SetActorLocation(FVectorDouble value, string context = "unknown", bool sweep = true)
 	{
 		if (!MathUtils.Instance.IsValidVector(value, 100000000))
@@ -716,7 +711,7 @@ public class BaseActorComponent : EntityComponent
 		return result;
 	}
 
-	// Token: 0x0601BEA8 RID: 114344 RVA: 0x007BDA48 File Offset: 0x007BBC48
+	// Token: 0x06019A83 RID: 105091 RVA: 0x007E52F8 File Offset: 0x007E34F8
 	public unsafe virtual bool SetActorLocationNoTeleport(FVectorDouble value, string context = "unknown", bool sweep = true)
 	{
 		if (!MathUtils.Instance.IsValidVector(value, 100000000))
@@ -764,7 +759,7 @@ public class BaseActorComponent : EntityComponent
 		return result;
 	}
 
-	// Token: 0x0601BEA9 RID: 114345 RVA: 0x007BDBE0 File Offset: 0x007BBDE0
+	// Token: 0x06019A84 RID: 105092 RVA: 0x007E5490 File Offset: 0x007E3690
 	public unsafe virtual bool TeleportTo(FVectorDouble location, FRotator rotator, string context = "unknown")
 	{
 		if (!MathUtils.Instance.IsValidVector(location, 100000000) || !MathUtils.Instance.IsValidRotator(rotator, 100000000))
@@ -813,14 +808,14 @@ public class BaseActorComponent : EntityComponent
 		return result;
 	}
 
-	// Token: 0x0601BEAA RID: 114346 RVA: 0x007BDD8F File Offset: 0x007BBF8F
+	// Token: 0x06019A85 RID: 105093 RVA: 0x007E563F File Offset: 0x007E383F
 	public void ResetLocationCachedTime()
 	{
 		this.CachedTransformTime = -1;
 		this.CachedLocationTime = -1;
 	}
 
-	// Token: 0x0601BEAB RID: 114347 RVA: 0x007BDDA0 File Offset: 0x007BBFA0
+	// Token: 0x06019A86 RID: 105094 RVA: 0x007E5650 File Offset: 0x007E3850
 	public virtual bool SetActorRotation(FRotator value, string context = "unknown", bool sweep = true)
 	{
 		bool result = false;
@@ -838,7 +833,7 @@ public class BaseActorComponent : EntityComponent
 		return result;
 	}
 
-	// Token: 0x0601BEAC RID: 114348 RVA: 0x007BDE09 File Offset: 0x007BC009
+	// Token: 0x06019A87 RID: 105095 RVA: 0x007E56B9 File Offset: 0x007E38B9
 	public void ResetRotationCachedTime()
 	{
 		this.CachedTransformTime = 0;
@@ -848,7 +843,7 @@ public class BaseActorComponent : EntityComponent
 		this.CachedForwardTime = 0;
 	}
 
-	// Token: 0x0601BEAD RID: 114349 RVA: 0x007BDE30 File Offset: 0x007BC030
+	// Token: 0x06019A88 RID: 105096 RVA: 0x007E56E0 File Offset: 0x007E38E0
 	public unsafe virtual bool SetActorLocationAndRotation(FVectorDouble location, FRotator rotation, string context = "unknown", bool sweep = false, ESetRotationPriority? priority = null)
 	{
 		if (!MathUtils.Instance.IsValidVector(location, 100000000))
@@ -892,7 +887,7 @@ public class BaseActorComponent : EntityComponent
 		return result;
 	}
 
-	// Token: 0x0601BEAE RID: 114350 RVA: 0x007BDFC4 File Offset: 0x007BC1C4
+	// Token: 0x06019A89 RID: 105097 RVA: 0x007E5874 File Offset: 0x007E3A74
 	public unsafe virtual bool SetActorTransform(FTransformDouble value, string context = "unknown", bool sweep = true, ESetRotationPriority? priority = null)
 	{
 		FVectorDouble location = value.GetLocation();
@@ -936,7 +931,7 @@ public class BaseActorComponent : EntityComponent
 		return result;
 	}
 
-	// Token: 0x0601BEAF RID: 114351 RVA: 0x007BE13C File Offset: 0x007BC33C
+	// Token: 0x06019A8A RID: 105098 RVA: 0x007E59EC File Offset: 0x007E3BEC
 	public virtual void AddActorWorldOffset(FVectorDouble offset, string context = "unknown", bool sweep = true)
 	{
 		if (this.CheckIsForbidSettingLocAndRot(true, false, true))
@@ -951,7 +946,7 @@ public class BaseActorComponent : EntityComponent
 		this.ResetLocationCachedTime();
 	}
 
-	// Token: 0x0601BEB0 RID: 114352 RVA: 0x007BE194 File Offset: 0x007BC394
+	// Token: 0x06019A8B RID: 105099 RVA: 0x007E5A44 File Offset: 0x007E3C44
 	public virtual void AddActorLocalOffset(FVectorDouble offset, string context = "unknown", bool sweep = true)
 	{
 		if (this.CheckIsForbidSettingLocAndRot(true, false, true))
@@ -966,7 +961,7 @@ public class BaseActorComponent : EntityComponent
 		this.ResetLocationCachedTime();
 	}
 
-	// Token: 0x0601BEB1 RID: 114353 RVA: 0x007BE1EC File Offset: 0x007BC3EC
+	// Token: 0x06019A8C RID: 105100 RVA: 0x007E5A9C File Offset: 0x007E3C9C
 	public virtual void AddActorWorldRotation(FRotator rotation, string context = "unknown", bool sweep = false)
 	{
 		if (this.CheckIsForbidSettingLocAndRot(false, true, true))
@@ -981,7 +976,7 @@ public class BaseActorComponent : EntityComponent
 		this.ResetRotationCachedTime();
 	}
 
-	// Token: 0x0601BEB2 RID: 114354 RVA: 0x007BE244 File Offset: 0x007BC444
+	// Token: 0x06019A8D RID: 105101 RVA: 0x007E5AF4 File Offset: 0x007E3CF4
 	public virtual void AddActorLocalRotation(FRotator rotation, string context = "unknown", bool sweep = false)
 	{
 		if (this.CheckIsForbidSettingLocAndRot(false, true, true))
@@ -996,7 +991,7 @@ public class BaseActorComponent : EntityComponent
 		this.ResetRotationCachedTime();
 	}
 
-	// Token: 0x0601BEB3 RID: 114355 RVA: 0x007BE29C File Offset: 0x007BC49C
+	// Token: 0x06019A8E RID: 105102 RVA: 0x007E5B4C File Offset: 0x007E3D4C
 	public virtual void AddActorWorldOffsetAndQuat(FVectorDouble offset, FQuat quatOffset, string context = "unknown", bool sweep = true)
 	{
 		if (this.CheckIsForbidSettingLocAndRot(true, false, true))
@@ -1012,7 +1007,7 @@ public class BaseActorComponent : EntityComponent
 		this.ResetTransformCachedTime();
 	}
 
-	// Token: 0x0601BEB4 RID: 114356 RVA: 0x007BE310 File Offset: 0x007BC510
+	// Token: 0x06019A8F RID: 105103 RVA: 0x007E5BC0 File Offset: 0x007E3DC0
 	protected void ResetTransformCachedTime()
 	{
 		this.CachedTransformTime = 0;
@@ -1030,7 +1025,7 @@ public class BaseActorComponent : EntityComponent
 		moveComp.ResetCharTraceHeight();
 	}
 
-	// Token: 0x0601BEB5 RID: 114357 RVA: 0x007BE360 File Offset: 0x007BC560
+	// Token: 0x06019A90 RID: 105104 RVA: 0x007E5C10 File Offset: 0x007E3E10
 	public void ResetAllCachedTime()
 	{
 		this.CachedTransformTime = -1;
@@ -1049,19 +1044,19 @@ public class BaseActorComponent : EntityComponent
 		moveComp.ResetCharTraceHeight();
 	}
 
-	// Token: 0x0601BEB6 RID: 114358 RVA: 0x007BE3B5 File Offset: 0x007BC5B5
+	// Token: 0x06019A91 RID: 105105 RVA: 0x007E5C65 File Offset: 0x007E3E65
 	public void ResetCachedVelocityTime()
 	{
 		this.CachedVelocityTime = -1;
 	}
 
-	// Token: 0x0601BEB7 RID: 114359 RVA: 0x007BE3BE File Offset: 0x007BC5BE
+	// Token: 0x06019A92 RID: 105106 RVA: 0x007E5C6E File Offset: 0x007E3E6E
 	public void ResetGravityRelatedCachedTime()
 	{
 		this.CachedGravityDirectTime = -1;
 	}
 
-	// Token: 0x0601BEB8 RID: 114360 RVA: 0x007BE3C7 File Offset: 0x007BC5C7
+	// Token: 0x06019A93 RID: 105107 RVA: 0x007E5C77 File Offset: 0x007E3E77
 	private void SetForbidSettingLocAndRotInternal(bool forbid, EForbidSettingLocAndRotReason reason, HashSet<EForbidSettingLocAndRotReason> target)
 	{
 		if (forbid)
@@ -1072,7 +1067,7 @@ public class BaseActorComponent : EntityComponent
 		target.Remove(reason);
 	}
 
-	// Token: 0x0601BEB9 RID: 114361 RVA: 0x007BE3E0 File Offset: 0x007BC5E0
+	// Token: 0x06019A94 RID: 105108 RVA: 0x007E5C90 File Offset: 0x007E3E90
 	public void SetForbidSettingLocAndRot(bool forbid, EForbidSettingLocAndRotReason reason)
 	{
 		switch (ForbidSettingLocAndRotTypeDefines.Values[(int)reason])
@@ -1094,7 +1089,7 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BEBA RID: 114362 RVA: 0x007BE448 File Offset: 0x007BC648
+	// Token: 0x06019A95 RID: 105109 RVA: 0x007E5CF8 File Offset: 0x007E3EF8
 	protected unsafe bool CheckIsForbidSettingLocAndRot(bool Loc = false, bool Rot = false, bool Debug = true)
 	{
 		bool flag = this.ForbidSettingRotSet.Count > 0 && Rot;
@@ -1119,7 +1114,7 @@ public class BaseActorComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601BEBB RID: 114363 RVA: 0x007BE530 File Offset: 0x007BC730
+	// Token: 0x06019A96 RID: 105110 RVA: 0x007E5DE0 File Offset: 0x007E3FE0
 	[NullableContext(2)]
 	protected virtual void OnSetActorActive(bool active, string reason = null)
 	{
@@ -1135,19 +1130,19 @@ public class BaseActorComponent : EntityComponent
 		this.CollisionHandleForEntityDisable = new int?(this.DisableCollision(reason));
 	}
 
-	// Token: 0x0601BEBC RID: 114364 RVA: 0x007BE5A1 File Offset: 0x007BC7A1
+	// Token: 0x06019A97 RID: 105111 RVA: 0x007E5E51 File Offset: 0x007E4051
 	public void SetSequenceBinding(bool inEnable)
 	{
 		this.IsInSequenceBinding = inEnable;
 	}
 
-	// Token: 0x0601BEBD RID: 114365 RVA: 0x007BE5AA File Offset: 0x007BC7AA
+	// Token: 0x06019A98 RID: 105112 RVA: 0x007E5E5A File Offset: 0x007E405A
 	public bool GetSequenceBinding()
 	{
 		return this.IsInSequenceBinding;
 	}
 
-	// Token: 0x0601BEBE RID: 114366 RVA: 0x007BE5B4 File Offset: 0x007BC7B4
+	// Token: 0x06019A99 RID: 105113 RVA: 0x007E5E64 File Offset: 0x007E4064
 	public unsafe int DisableActor(string reason)
 	{
 		int num = this.DisableActorHandle.Disable(reason, base.GetType().Name);
@@ -1191,7 +1186,7 @@ public class BaseActorComponent : EntityComponent
 		return num;
 	}
 
-	// Token: 0x0601BEBF RID: 114367 RVA: 0x007BE778 File Offset: 0x007BC978
+	// Token: 0x06019A9A RID: 105114 RVA: 0x007E6028 File Offset: 0x007E4228
 	public unsafe int DisableCollision(string reason)
 	{
 		int num = this.DisableCollisionHandle.Disable(reason, base.GetType().Name);
@@ -1226,7 +1221,7 @@ public class BaseActorComponent : EntityComponent
 		return num;
 	}
 
-	// Token: 0x0601BEC0 RID: 114368 RVA: 0x007BE8E8 File Offset: 0x007BCAE8
+	// Token: 0x06019A9B RID: 105115 RVA: 0x007E6198 File Offset: 0x007E4398
 	public unsafe bool EnableActor(int handle)
 	{
 		CreatureController instance = CreatureController.Instance;
@@ -1284,7 +1279,7 @@ public class BaseActorComponent : EntityComponent
 		return flag;
 	}
 
-	// Token: 0x0601BEC1 RID: 114369 RVA: 0x007BEABC File Offset: 0x007BCCBC
+	// Token: 0x06019A9C RID: 105116 RVA: 0x007E636C File Offset: 0x007E456C
 	public unsafe bool EnableCollision(int handle)
 	{
 		CreatureController instance = CreatureController.Instance;
@@ -1322,26 +1317,26 @@ public class BaseActorComponent : EntityComponent
 		return flag;
 	}
 
-	// Token: 0x0601BEC2 RID: 114370 RVA: 0x007BEC22 File Offset: 0x007BCE22
+	// Token: 0x06019A9D RID: 105117 RVA: 0x007E64D2 File Offset: 0x007E46D2
 	public string DumpDisableActorInfo()
 	{
 		return this.DisableActorHandle.DumpDisableInfo();
 	}
 
-	// Token: 0x0601BEC3 RID: 114371 RVA: 0x007BEC2F File Offset: 0x007BCE2F
+	// Token: 0x06019A9E RID: 105118 RVA: 0x007E64DF File Offset: 0x007E46DF
 	public string DumpDisableCollisionInfo()
 	{
 		return this.DisableCollisionHandle.DumpDisableInfo();
 	}
 
-	// Token: 0x0601BEC4 RID: 114372 RVA: 0x007BEC3C File Offset: 0x007BCE3C
+	// Token: 0x06019A9F RID: 105119 RVA: 0x007E64EC File Offset: 0x007E46EC
 	public string DumpDisableTickInfo()
 	{
 		UeActorTickManageComponent component = base.Entity.GetComponent<UeActorTickManageComponent>();
 		return ((component != null) ? component.DumpDisableTickInfo() : null) ?? "";
 	}
 
-	// Token: 0x0601BEC5 RID: 114373 RVA: 0x007BEC60 File Offset: 0x007BCE60
+	// Token: 0x06019AA0 RID: 105120 RVA: 0x007E6510 File Offset: 0x007E4710
 	public void SetActorVisible(bool visible, string reason)
 	{
 		if (!visible)
@@ -1365,7 +1360,7 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BEC6 RID: 114374 RVA: 0x007BECC0 File Offset: 0x007BCEC0
+	// Token: 0x06019AA1 RID: 105121 RVA: 0x007E6570 File Offset: 0x007E4770
 	public void SetCollisionEnable(bool enable, string reason)
 	{
 		if (!enable)
@@ -1389,7 +1384,7 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BEC7 RID: 114375 RVA: 0x007BED20 File Offset: 0x007BCF20
+	// Token: 0x06019AA2 RID: 105122 RVA: 0x007E65D0 File Offset: 0x007E47D0
 	public void SetTickEnable(bool enable, string reason)
 	{
 		if (!enable)
@@ -1418,7 +1413,7 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BEC8 RID: 114376 RVA: 0x007BEDA7 File Offset: 0x007BCFA7
+	// Token: 0x06019AA3 RID: 105123 RVA: 0x007E6657 File Offset: 0x007E4857
 	protected override bool OnClear()
 	{
 		if (this.CreatureDataInternal != null)
@@ -1432,45 +1427,45 @@ public class BaseActorComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601BEC9 RID: 114377 RVA: 0x007BEDE0 File Offset: 0x007BCFE0
+	// Token: 0x06019AA4 RID: 105124 RVA: 0x007E6690 File Offset: 0x007E4890
 	public virtual FTransformDouble GetSocketTransform(FName socketName)
 	{
 		return this.ActorTransform;
 	}
 
-	// Token: 0x0601BECA RID: 114378 RVA: 0x007BEDE8 File Offset: 0x007BCFE8
+	// Token: 0x06019AA5 RID: 105125 RVA: 0x007E6698 File Offset: 0x007E4898
 	public virtual FVectorDouble GetSocketLocation(FName socketName)
 	{
 		return this.ActorLocation;
 	}
 
-	// Token: 0x0601BECB RID: 114379 RVA: 0x007BEDF0 File Offset: 0x007BCFF0
+	// Token: 0x06019AA6 RID: 105126 RVA: 0x007E66A0 File Offset: 0x007E48A0
 	public virtual global::Vector GetWatchedPoint()
 	{
 		return this.ActorLocationProxy;
 	}
 
-	// Token: 0x0601BECC RID: 114380 RVA: 0x007BEDF8 File Offset: 0x007BCFF8
+	// Token: 0x06019AA7 RID: 105127 RVA: 0x007E66A8 File Offset: 0x007E48A8
 	[return: Nullable(2)]
 	public string GetReplaceEffect(string path)
 	{
 		return this.ReplaceEffectMap.GetValueOrDefault(path);
 	}
 
-	// Token: 0x0601BECD RID: 114381 RVA: 0x007BEE06 File Offset: 0x007BD006
+	// Token: 0x06019AA8 RID: 105128 RVA: 0x007E66B6 File Offset: 0x007E48B6
 	public void SetReplaceEffect(Dictionary<string, string> map)
 	{
 		this.ReplaceEffectMap = map;
 	}
 
-	// Token: 0x0601BECE RID: 114382 RVA: 0x007BEE0F File Offset: 0x007BD00F
+	// Token: 0x06019AA9 RID: 105129 RVA: 0x007E66BF File Offset: 0x007E48BF
 	[return: Nullable(2)]
 	public string GetReplaceMontage(string path)
 	{
 		return this.ReplaceMontageMap.GetValueOrDefault(path);
 	}
 
-	// Token: 0x0601BECF RID: 114383 RVA: 0x007BEE20 File Offset: 0x007BD020
+	// Token: 0x06019AAA RID: 105130 RVA: 0x007E66D0 File Offset: 0x007E48D0
 	public void SetupReplacement([Nullable(2)] SModelConfig modelConfig, EntityAssetElement entityAssetElement)
 	{
 		if (modelConfig != null)
@@ -1491,20 +1486,20 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BED0 RID: 114384 RVA: 0x007BEE8B File Offset: 0x007BD08B
+	// Token: 0x06019AAB RID: 105131 RVA: 0x007E673B File Offset: 0x007E493B
 	public static void RegisterDebugCube(AStaticMeshActor cube)
 	{
 		BaseActorComponent.AllDebugCubes.Add(cube);
 		cube.SetActorHiddenInGame(!BaseActorComponent.AllDebugCubesVisible);
 	}
 
-	// Token: 0x0601BED1 RID: 114385 RVA: 0x007BEEA7 File Offset: 0x007BD0A7
+	// Token: 0x06019AAC RID: 105132 RVA: 0x007E6757 File Offset: 0x007E4957
 	public static void UnregisterDebugCube(AStaticMeshActor cube)
 	{
 		BaseActorComponent.AllDebugCubes.Remove(cube);
 	}
 
-	// Token: 0x0601BED2 RID: 114386 RVA: 0x007BEEB8 File Offset: 0x007BD0B8
+	// Token: 0x06019AAD RID: 105133 RVA: 0x007E6768 File Offset: 0x007E4968
 	public static void SetAllDebugCubesVisible(bool visible)
 	{
 		BaseActorComponent.AllDebugCubesVisible = visible;
@@ -1521,7 +1516,7 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BED3 RID: 114387 RVA: 0x007BEF34 File Offset: 0x007BD134
+	// Token: 0x06019AAE RID: 105134 RVA: 0x007E67E4 File Offset: 0x007E49E4
 	public static void ApplyDebugCubeMaterial(UStaticMeshComponent meshComp)
 	{
 		if (BaseActorComponent.DebugCubeMaterialCache == null)
@@ -1534,7 +1529,7 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BED4 RID: 114388 RVA: 0x007BEF6C File Offset: 0x007BD16C
+	// Token: 0x06019AAF RID: 105135 RVA: 0x007E681C File Offset: 0x007E4A1C
 	public void ShowDebugLocationCube(bool enable)
 	{
 		if (!enable)
@@ -1567,7 +1562,7 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BED5 RID: 114389 RVA: 0x007BF0D0 File Offset: 0x007BD2D0
+	// Token: 0x06019AB0 RID: 105136 RVA: 0x007E6980 File Offset: 0x007E4B80
 	public void ClearDebugLocationCube()
 	{
 		AStaticMeshActor debugPositionCube = this.DebugPositionCube;
@@ -1593,7 +1588,7 @@ public class BaseActorComponent : EntityComponent
 		this.DebugForwardCube = null;
 	}
 
-	// Token: 0x0601BED6 RID: 114390 RVA: 0x007BF170 File Offset: 0x007BD370
+	// Token: 0x06019AB1 RID: 105137 RVA: 0x007E6A20 File Offset: 0x007E4C20
 	[NullableContext(2)]
 	private AStaticMeshActor SpawnDebugCube(FVectorDouble scale, FVectorDouble relativeLocation, bool followRotation)
 	{
@@ -1620,7 +1615,7 @@ public class BaseActorComponent : EntityComponent
 		return astaticMeshActor;
 	}
 
-	// Token: 0x0601BED7 RID: 114391 RVA: 0x007BF220 File Offset: 0x007BD420
+	// Token: 0x06019AB2 RID: 105138 RVA: 0x007E6AD0 File Offset: 0x007E4CD0
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -1628,360 +1623,262 @@ public class BaseActorComponent : EntityComponent
 			return false;
 		}
 		BaseActorComponent baseActorComponent = (BaseActorComponent)componentTemplate;
-		if (base.CanResetComponentProperty("MoveComp"))
+		if (baseActorComponent.MoveComp == null)
 		{
-			if (baseActorComponent.MoveComp == null)
-			{
-				this.MoveComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseMoveComponent>(this.MoveComp), "MoveComp"))
-			{
-				return false;
-			}
+			this.MoveComp = null;
 		}
-		if (base.CanResetComponentProperty("VehicleMoveComp"))
-		{
-			if (baseActorComponent.VehicleMoveComp == null)
-			{
-				this.VehicleMoveComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VehicleMoveComponent>(this.VehicleMoveComp), "VehicleMoveComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("ActorInternal"))
-		{
-			if (baseActorComponent.ActorInternal == null)
-			{
-				this.ActorInternal = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.ActorInternal), "ActorInternal"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CachedActorTransform"))
-		{
-			this.CachedActorTransform = baseActorComponent.CachedActorTransform;
-		}
-		if (base.CanResetComponentProperty("CachedActorLocation") && baseActorComponent.CachedActorLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.CachedActorLocation), "CachedActorLocation"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("CachedActorRotation") && baseActorComponent.CachedActorRotation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Rotator>(this.CachedActorRotation), "CachedActorRotation"))
+		if (baseActorComponent.VehicleMoveComp == null)
+		{
+			this.VehicleMoveComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.VehicleMoveComp), "VehicleMoveComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("CachedActorScale") && baseActorComponent.CachedActorScale != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.CachedActorScale), "CachedActorScale"))
+		if (baseActorComponent.ActorInternal == null)
+		{
+			this.ActorInternal = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorInternal), "ActorInternal"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("CachedActorQuat") && baseActorComponent.CachedActorQuat != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.CachedActorQuat), "CachedActorQuat"))
+		this.CachedActorTransform = baseActorComponent.CachedActorTransform;
+		if (baseActorComponent.CachedActorLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CachedActorLocation), "CachedActorLocation"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("CachedActorForward") && baseActorComponent.CachedActorForward != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.CachedActorForward), "CachedActorForward"))
+		if (baseActorComponent.CachedActorRotation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CachedActorRotation), "CachedActorRotation"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("CachedActorRight") && baseActorComponent.CachedActorRight != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.CachedActorRight), "CachedActorRight"))
+		if (baseActorComponent.CachedActorScale != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CachedActorScale), "CachedActorScale"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("CachedActorUp") && baseActorComponent.CachedActorUp != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.CachedActorUp), "CachedActorUp"))
+		if (baseActorComponent.CachedActorQuat != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CachedActorQuat), "CachedActorQuat"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("CachedActorGravityDirect") && baseActorComponent.CachedActorGravityDirect != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.CachedActorGravityDirect), "CachedActorGravityDirect"))
+		if (baseActorComponent.CachedActorForward != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CachedActorForward), "CachedActorForward"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("CachedActorInitNotStandardGravity"))
-		{
-			this.CachedActorInitNotStandardGravity = baseActorComponent.CachedActorInitNotStandardGravity;
-		}
-		if (base.CanResetComponentProperty("CachedActorInitGravityRotation"))
-		{
-			if (baseActorComponent.CachedActorInitGravityRotation == null)
-			{
-				this.CachedActorInitGravityRotation = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Rotator>(this.CachedActorInitGravityRotation), "CachedActorInitGravityRotation"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CachedLocationTime"))
-		{
-			this.CachedLocationTime = baseActorComponent.CachedLocationTime;
-		}
-		if (base.CanResetComponentProperty("CachedForwardTime"))
-		{
-			this.CachedForwardTime = baseActorComponent.CachedForwardTime;
-		}
-		if (base.CanResetComponentProperty("CachedScaleTime"))
-		{
-			this.CachedScaleTime = baseActorComponent.CachedScaleTime;
-		}
-		if (base.CanResetComponentProperty("CachedRotationTime"))
-		{
-			this.CachedRotationTime = baseActorComponent.CachedRotationTime;
-		}
-		if (base.CanResetComponentProperty("CachedTransformTime"))
-		{
-			this.CachedTransformTime = baseActorComponent.CachedTransformTime;
-		}
-		if (base.CanResetComponentProperty("CachedRightTime"))
-		{
-			this.CachedRightTime = baseActorComponent.CachedRightTime;
-		}
-		if (base.CanResetComponentProperty("CachedUpTime"))
-		{
-			this.CachedUpTime = baseActorComponent.CachedUpTime;
-		}
-		if (base.CanResetComponentProperty("CachedVelocityTime"))
-		{
-			this.CachedVelocityTime = baseActorComponent.CachedVelocityTime;
-		}
-		if (base.CanResetComponentProperty("CachedActorVelocity") && baseActorComponent.CachedActorVelocity != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.CachedActorVelocity), "CachedActorVelocity"))
+		if (baseActorComponent.CachedActorRight != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CachedActorRight), "CachedActorRight"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("CachedGravityDirectTime"))
-		{
-			this.CachedGravityDirectTime = baseActorComponent.CachedGravityDirectTime;
-		}
-		if (base.CanResetComponentProperty("CachedDesiredActorLocation") && baseActorComponent.CachedDesiredActorLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.CachedDesiredActorLocation), "CachedDesiredActorLocation"))
+		if (baseActorComponent.CachedActorUp != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CachedActorUp), "CachedActorUp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("IsChangingLocation"))
-		{
-			this.IsChangingLocation = baseActorComponent.IsChangingLocation;
-		}
-		if (base.CanResetComponentProperty("CreatureDataInternal"))
-		{
-			if (baseActorComponent.CreatureDataInternal == null)
-			{
-				this.CreatureDataInternal = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataInternal), "CreatureDataInternal"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("DebugMovementComp"))
-		{
-			if (baseActorComponent.DebugMovementComp == null)
-			{
-				this.DebugMovementComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ActorDebugMovementComponent>(this.DebugMovementComp), "DebugMovementComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("LogicAutonomous"))
-		{
-			this.LogicAutonomous = baseActorComponent.LogicAutonomous;
-		}
-		if (base.CanResetComponentProperty("MoveAutonomous"))
-		{
-			this.MoveAutonomous = baseActorComponent.MoveAutonomous;
-		}
-		if (base.CanResetComponentProperty("IsInSequenceBinding"))
-		{
-			this.IsInSequenceBinding = baseActorComponent.IsInSequenceBinding;
-		}
-		if (base.CanResetComponentProperty("DisableActorHandle"))
-		{
-			if (baseActorComponent.DisableActorHandle == null)
-			{
-				this.DisableActorHandle = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<DisableEntityHandle>(this.DisableActorHandle), "DisableActorHandle"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("DisableCollisionHandle"))
-		{
-			if (baseActorComponent.DisableCollisionHandle == null)
-			{
-				this.DisableCollisionHandle = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<DisableEntityHandle>(this.DisableCollisionHandle), "DisableCollisionHandle"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("ActorHandleForCommon"))
-		{
-			this.ActorHandleForCommon = baseActorComponent.ActorHandleForCommon;
-		}
-		if (base.CanResetComponentProperty("CollisionHandleForCommon"))
-		{
-			this.CollisionHandleForCommon = baseActorComponent.CollisionHandleForCommon;
-		}
-		if (base.CanResetComponentProperty("TickHandleForCommon"))
-		{
-			this.TickHandleForCommon = baseActorComponent.TickHandleForCommon;
-		}
-		if (base.CanResetComponentProperty("ActorHandleForEntityDisable"))
-		{
-			this.ActorHandleForEntityDisable = baseActorComponent.ActorHandleForEntityDisable;
-		}
-		if (base.CanResetComponentProperty("CollisionHandleForEntityDisable"))
-		{
-			this.CollisionHandleForEntityDisable = baseActorComponent.CollisionHandleForEntityDisable;
-		}
-		if (base.CanResetComponentProperty("LastActorLocation"))
-		{
-			if (baseActorComponent.LastActorLocation == null)
-			{
-				this.LastActorLocation = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.LastActorLocation), "LastActorLocation"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("LastActorRotation"))
-		{
-			if (baseActorComponent.LastActorRotation == null)
-			{
-				this.LastActorRotation = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Rotator>(this.LastActorRotation), "LastActorRotation"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("SimulatedVelocity"))
-		{
-			if (baseActorComponent.SimulatedVelocity == null)
-			{
-				this.SimulatedVelocity = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.SimulatedVelocity), "SimulatedVelocity"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("SimulatedRotYawSpeed"))
-		{
-			this.SimulatedRotYawSpeed = baseActorComponent.SimulatedRotYawSpeed;
-		}
-		if (base.CanResetComponentProperty("Handle"))
-		{
-			if (baseActorComponent.Handle == null)
-			{
-				this.Handle = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<EntityHandle>(this.Handle), "Handle"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("IsRoleAndCtrlByMe"))
-		{
-			this.IsRoleAndCtrlByMe = baseActorComponent.IsRoleAndCtrlByMe;
-		}
-		if (base.CanResetComponentProperty("RadiusInternal"))
-		{
-			this.RadiusInternal = baseActorComponent.RadiusInternal;
-		}
-		if (base.CanResetComponentProperty("HalfHeightInternal"))
-		{
-			this.HalfHeightInternal = baseActorComponent.HalfHeightInternal;
-		}
-		if (base.CanResetComponentProperty("DefaultRadiusInternal"))
-		{
-			this.DefaultRadiusInternal = baseActorComponent.DefaultRadiusInternal;
-		}
-		if (base.CanResetComponentProperty("DefaultHalfHeightInternal"))
-		{
-			this.DefaultHalfHeightInternal = baseActorComponent.DefaultHalfHeightInternal;
-		}
-		if (base.CanResetComponentProperty("ForbidSettingLocSet") && baseActorComponent.ForbidSettingLocSet != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<EForbidSettingLocAndRotReason>(this.ForbidSettingLocSet), "ForbidSettingLocSet"))
+		if (baseActorComponent.CachedActorGravityDirect != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CachedActorGravityDirect), "CachedActorGravityDirect"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("ForbidSettingRotSet") && baseActorComponent.ForbidSettingRotSet != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<EForbidSettingLocAndRotReason>(this.ForbidSettingRotSet), "ForbidSettingRotSet"))
+		this.CachedActorInitNotStandardGravity = baseActorComponent.CachedActorInitNotStandardGravity;
+		if (baseActorComponent.CachedActorInitGravityRotation == null)
+		{
+			this.CachedActorInitGravityRotation = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CachedActorInitGravityRotation), "CachedActorInitGravityRotation"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("OwnedBasePlatform"))
+		this.CachedLocationTime = baseActorComponent.CachedLocationTime;
+		this.CachedForwardTime = baseActorComponent.CachedForwardTime;
+		this.CachedScaleTime = baseActorComponent.CachedScaleTime;
+		this.CachedRotationTime = baseActorComponent.CachedRotationTime;
+		this.CachedTransformTime = baseActorComponent.CachedTransformTime;
+		this.CachedRightTime = baseActorComponent.CachedRightTime;
+		this.CachedUpTime = baseActorComponent.CachedUpTime;
+		this.CachedVelocityTime = baseActorComponent.CachedVelocityTime;
+		if (baseActorComponent.CachedActorVelocity != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CachedActorVelocity), "CachedActorVelocity"))
 		{
-			if (baseActorComponent.OwnedBasePlatform == null)
-			{
-				this.OwnedBasePlatform = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BasePlatform>(this.OwnedBasePlatform), "OwnedBasePlatform"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("ReplaceEffectMap"))
+		this.CachedGravityDirectTime = baseActorComponent.CachedGravityDirectTime;
+		if (baseActorComponent.CachedDesiredActorLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CachedDesiredActorLocation), "CachedDesiredActorLocation"))
 		{
-			if (baseActorComponent.ReplaceEffectMap == null)
-			{
-				this.ReplaceEffectMap = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, string>>(this.ReplaceEffectMap), "ReplaceEffectMap"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("ReplaceMontageMap"))
+		this.IsChangingLocation = baseActorComponent.IsChangingLocation;
+		if (baseActorComponent.CreatureDataInternal == null)
 		{
-			if (baseActorComponent.ReplaceMontageMap == null)
-			{
-				this.ReplaceMontageMap = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, string>>(this.ReplaceMontageMap), "ReplaceMontageMap"))
-			{
-				return false;
-			}
+			this.CreatureDataInternal = null;
 		}
-		if (base.CanResetComponentProperty("DebugPositionCube"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataInternal), "CreatureDataInternal"))
 		{
-			if (baseActorComponent.DebugPositionCube == null)
-			{
-				this.DebugPositionCube = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AStaticMeshActor>(this.DebugPositionCube), "DebugPositionCube"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("DebugFootCube"))
+		if (baseActorComponent.DebugMovementComp == null)
 		{
-			if (baseActorComponent.DebugFootCube == null)
-			{
-				this.DebugFootCube = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AStaticMeshActor>(this.DebugFootCube), "DebugFootCube"))
-			{
-				return false;
-			}
+			this.DebugMovementComp = null;
 		}
-		if (base.CanResetComponentProperty("DebugForwardCube"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DebugMovementComp), "DebugMovementComp"))
 		{
-			if (baseActorComponent.DebugForwardCube == null)
-			{
-				this.DebugForwardCube = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AStaticMeshActor>(this.DebugForwardCube), "DebugForwardCube"))
-			{
-				return false;
-			}
+			return false;
+		}
+		this.LogicAutonomous = baseActorComponent.LogicAutonomous;
+		this.MoveAutonomous = baseActorComponent.MoveAutonomous;
+		this.IsInSequenceBinding = baseActorComponent.IsInSequenceBinding;
+		this.ActorHandleForCommon = baseActorComponent.ActorHandleForCommon;
+		this.CollisionHandleForCommon = baseActorComponent.CollisionHandleForCommon;
+		this.TickHandleForCommon = baseActorComponent.TickHandleForCommon;
+		this.ActorHandleForEntityDisable = baseActorComponent.ActorHandleForEntityDisable;
+		this.CollisionHandleForEntityDisable = baseActorComponent.CollisionHandleForEntityDisable;
+		if (baseActorComponent.LastActorLocation == null)
+		{
+			this.LastActorLocation = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastActorLocation), "LastActorLocation"))
+		{
+			return false;
+		}
+		if (baseActorComponent.LastActorRotation == null)
+		{
+			this.LastActorRotation = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastActorRotation), "LastActorRotation"))
+		{
+			return false;
+		}
+		if (baseActorComponent.SimulatedVelocity == null)
+		{
+			this.SimulatedVelocity = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SimulatedVelocity), "SimulatedVelocity"))
+		{
+			return false;
+		}
+		this.SimulatedRotYawSpeed = baseActorComponent.SimulatedRotYawSpeed;
+		if (baseActorComponent.Handle == null)
+		{
+			this.Handle = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Handle), "Handle"))
+		{
+			return false;
+		}
+		this.IsRoleAndCtrlByMe = baseActorComponent.IsRoleAndCtrlByMe;
+		this.RadiusInternal = baseActorComponent.RadiusInternal;
+		this.HalfHeightInternal = baseActorComponent.HalfHeightInternal;
+		this.DefaultRadiusInternal = baseActorComponent.DefaultRadiusInternal;
+		this.DefaultHalfHeightInternal = baseActorComponent.DefaultHalfHeightInternal;
+		if (baseActorComponent.ForbidSettingLocSet != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<EForbidSettingLocAndRotReason>(this.ForbidSettingLocSet), "ForbidSettingLocSet"))
+		{
+			return false;
+		}
+		if (baseActorComponent.ForbidSettingRotSet != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<EForbidSettingLocAndRotReason>(this.ForbidSettingRotSet), "ForbidSettingRotSet"))
+		{
+			return false;
+		}
+		if (baseActorComponent.OwnedBasePlatform == null)
+		{
+			this.OwnedBasePlatform = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OwnedBasePlatform), "OwnedBasePlatform"))
+		{
+			return false;
+		}
+		if (baseActorComponent.ReplaceEffectMap == null)
+		{
+			this.ReplaceEffectMap = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ReplaceEffectMap), "ReplaceEffectMap"))
+		{
+			return false;
+		}
+		if (baseActorComponent.ReplaceMontageMap == null)
+		{
+			this.ReplaceMontageMap = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ReplaceMontageMap), "ReplaceMontageMap"))
+		{
+			return false;
+		}
+		if (baseActorComponent.DebugPositionCube == null)
+		{
+			this.DebugPositionCube = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DebugPositionCube), "DebugPositionCube"))
+		{
+			return false;
+		}
+		if (baseActorComponent.DebugFootCube == null)
+		{
+			this.DebugFootCube = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DebugFootCube), "DebugFootCube"))
+		{
+			return false;
+		}
+		if (baseActorComponent.DebugForwardCube == null)
+		{
+			this.DebugForwardCube = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DebugForwardCube), "DebugForwardCube"))
+		{
+			return false;
 		}
 		return true;
 	}
 
-	// Token: 0x0601BEDA RID: 114394 RVA: 0x007BFCE0 File Offset: 0x007BDEE0
+	// Token: 0x1700291C RID: 10524
+	// (get) Token: 0x06019AB3 RID: 105139 RVA: 0x007E7070 File Offset: 0x007E5270
+	public override bool NeedCreateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700291D RID: 10525
+	// (get) Token: 0x06019AB4 RID: 105140 RVA: 0x007E7073 File Offset: 0x007E5273
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700291E RID: 10526
+	// (get) Token: 0x06019AB5 RID: 105141 RVA: 0x007E7076 File Offset: 0x007E5276
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700291F RID: 10527
+	// (get) Token: 0x06019AB6 RID: 105142 RVA: 0x007E7079 File Offset: 0x007E5279
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002920 RID: 10528
+	// (get) Token: 0x06019AB7 RID: 105143 RVA: 0x007E707C File Offset: 0x007E527C
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x06019ABA RID: 105146 RVA: 0x007E7270 File Offset: 0x007E5470
 	[CompilerGenerated]
 	private void <EnableActor>g__SetVisible|164_0()
 	{
@@ -1994,197 +1891,199 @@ public class BaseActorComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0400DC37 RID: 56375
+	// Token: 0x0400E0D6 RID: 57558
 	[Nullable(2)]
 	public BaseMoveComponent MoveComp;
 
-	// Token: 0x0400DC38 RID: 56376
+	// Token: 0x0400E0D7 RID: 57559
 	[Nullable(2)]
 	public VehicleMoveComponent VehicleMoveComp;
 
-	// Token: 0x0400DC39 RID: 56377
+	// Token: 0x0400E0D8 RID: 57560
 	[Nullable(2)]
 	protected AActor ActorInternal;
 
-	// Token: 0x0400DC3A RID: 56378
+	// Token: 0x0400E0D9 RID: 57561
 	protected FTransformDouble? CachedActorTransform;
 
-	// Token: 0x0400DC3B RID: 56379
+	// Token: 0x0400E0DA RID: 57562
 	protected readonly global::Vector CachedActorLocation = global::Vector.Create();
 
-	// Token: 0x0400DC3C RID: 56380
+	// Token: 0x0400E0DB RID: 57563
 	protected readonly global::Rotator CachedActorRotation = global::Rotator.Create(0f, 0f, 0f);
 
-	// Token: 0x0400DC3D RID: 56381
+	// Token: 0x0400E0DC RID: 57564
 	protected readonly global::Vector CachedActorScale = global::Vector.Create();
 
-	// Token: 0x0400DC3E RID: 56382
+	// Token: 0x0400E0DD RID: 57565
 	protected readonly Quat CachedActorQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400DC3F RID: 56383
+	// Token: 0x0400E0DE RID: 57566
 	protected readonly global::Vector CachedActorForward = global::Vector.Create(1.0, 0.0, 0.0);
 
-	// Token: 0x0400DC40 RID: 56384
+	// Token: 0x0400E0DF RID: 57567
 	protected readonly global::Vector CachedActorRight = global::Vector.Create(0.0, 1.0, 0.0);
 
-	// Token: 0x0400DC41 RID: 56385
+	// Token: 0x0400E0E0 RID: 57568
 	protected readonly global::Vector CachedActorUp = global::Vector.Create(0.0, 0.0, 1.0);
 
-	// Token: 0x0400DC42 RID: 56386
+	// Token: 0x0400E0E1 RID: 57569
 	protected readonly global::Vector CachedActorGravityDirect = global::Vector.Create(0.0, 0.0, -1.0);
 
-	// Token: 0x0400DC43 RID: 56387
+	// Token: 0x0400E0E2 RID: 57570
 	protected bool? CachedActorInitNotStandardGravity;
 
-	// Token: 0x0400DC44 RID: 56388
+	// Token: 0x0400E0E3 RID: 57571
 	[Nullable(2)]
 	protected global::Rotator CachedActorInitGravityRotation;
 
-	// Token: 0x0400DC45 RID: 56389
+	// Token: 0x0400E0E4 RID: 57572
 	protected int CachedLocationTime = -1;
 
-	// Token: 0x0400DC46 RID: 56390
+	// Token: 0x0400E0E5 RID: 57573
 	protected int CachedForwardTime = -1;
 
-	// Token: 0x0400DC47 RID: 56391
+	// Token: 0x0400E0E6 RID: 57574
 	protected int CachedScaleTime = -1;
 
-	// Token: 0x0400DC48 RID: 56392
+	// Token: 0x0400E0E7 RID: 57575
 	protected int CachedRotationTime = -1;
 
-	// Token: 0x0400DC49 RID: 56393
+	// Token: 0x0400E0E8 RID: 57576
 	protected int CachedTransformTime = -1;
 
-	// Token: 0x0400DC4A RID: 56394
+	// Token: 0x0400E0E9 RID: 57577
 	protected int CachedRightTime = -1;
 
-	// Token: 0x0400DC4B RID: 56395
+	// Token: 0x0400E0EA RID: 57578
 	protected int CachedUpTime = -1;
 
-	// Token: 0x0400DC4C RID: 56396
+	// Token: 0x0400E0EB RID: 57579
 	protected int CachedVelocityTime = -1;
 
-	// Token: 0x0400DC4D RID: 56397
+	// Token: 0x0400E0EC RID: 57580
 	protected readonly global::Vector CachedActorVelocity = global::Vector.Create(0.0, 0.0, 0.0);
 
-	// Token: 0x0400DC4E RID: 56398
+	// Token: 0x0400E0ED RID: 57581
 	protected int CachedGravityDirectTime = -1;
 
-	// Token: 0x0400DC4F RID: 56399
+	// Token: 0x0400E0EE RID: 57582
 	protected readonly global::Vector CachedDesiredActorLocation = global::Vector.Create();
 
-	// Token: 0x0400DC50 RID: 56400
+	// Token: 0x0400E0EF RID: 57583
 	protected bool IsChangingLocation;
 
-	// Token: 0x0400DC51 RID: 56401
+	// Token: 0x0400E0F0 RID: 57584
 	[Nullable(2)]
 	protected CreatureDataComponent CreatureDataInternal;
 
-	// Token: 0x0400DC52 RID: 56402
+	// Token: 0x0400E0F1 RID: 57585
 	[Nullable(2)]
 	public ActorDebugMovementComponent DebugMovementComp;
 
-	// Token: 0x0400DC53 RID: 56403
+	// Token: 0x0400E0F2 RID: 57586
 	private bool LogicAutonomous = true;
 
-	// Token: 0x0400DC54 RID: 56404
+	// Token: 0x0400E0F3 RID: 57587
 	private bool MoveAutonomous = true;
 
-	// Token: 0x0400DC55 RID: 56405
+	// Token: 0x0400E0F4 RID: 57588
 	protected bool IsInSequenceBinding;
 
-	// Token: 0x0400DC56 RID: 56406
+	// Token: 0x0400E0F5 RID: 57589
 	[Nullable(2)]
+	[UnResetProperty]
 	public DisableEntityHandle DisableActorHandle;
 
-	// Token: 0x0400DC57 RID: 56407
+	// Token: 0x0400E0F6 RID: 57590
 	[Nullable(2)]
+	[UnResetProperty]
 	public DisableEntityHandle DisableCollisionHandle;
 
-	// Token: 0x0400DC58 RID: 56408
+	// Token: 0x0400E0F7 RID: 57591
 	private int? ActorHandleForCommon;
 
-	// Token: 0x0400DC59 RID: 56409
+	// Token: 0x0400E0F8 RID: 57592
 	private int? CollisionHandleForCommon;
 
-	// Token: 0x0400DC5A RID: 56410
+	// Token: 0x0400E0F9 RID: 57593
 	private int? TickHandleForCommon;
 
-	// Token: 0x0400DC5B RID: 56411
+	// Token: 0x0400E0FA RID: 57594
 	private int? ActorHandleForEntityDisable;
 
-	// Token: 0x0400DC5C RID: 56412
+	// Token: 0x0400E0FB RID: 57595
 	private int? CollisionHandleForEntityDisable;
 
-	// Token: 0x0400DC5D RID: 56413
+	// Token: 0x0400E0FC RID: 57596
 	public global::Vector LastActorLocation = global::Vector.Create();
 
-	// Token: 0x0400DC5E RID: 56414
+	// Token: 0x0400E0FD RID: 57597
 	public global::Rotator LastActorRotation = global::Rotator.Create();
 
-	// Token: 0x0400DC5F RID: 56415
+	// Token: 0x0400E0FE RID: 57598
 	public global::Vector SimulatedVelocity = global::Vector.Create();
 
-	// Token: 0x0400DC60 RID: 56416
+	// Token: 0x0400E0FF RID: 57599
 	public float SimulatedRotYawSpeed;
 
-	// Token: 0x0400DC61 RID: 56417
+	// Token: 0x0400E100 RID: 57600
 	[Nullable(2)]
 	private EntityHandle Handle;
 
-	// Token: 0x0400DC62 RID: 56418
+	// Token: 0x0400E101 RID: 57601
 	public bool IsRoleAndCtrlByMe;
 
-	// Token: 0x0400DC63 RID: 56419
+	// Token: 0x0400E102 RID: 57602
 	protected float RadiusInternal;
 
-	// Token: 0x0400DC64 RID: 56420
+	// Token: 0x0400E103 RID: 57603
 	protected float HalfHeightInternal;
 
-	// Token: 0x0400DC65 RID: 56421
+	// Token: 0x0400E104 RID: 57604
 	protected float DefaultRadiusInternal;
 
-	// Token: 0x0400DC66 RID: 56422
+	// Token: 0x0400E105 RID: 57605
 	protected float DefaultHalfHeightInternal;
 
-	// Token: 0x0400DC67 RID: 56423
+	// Token: 0x0400E106 RID: 57606
 	private readonly HashSet<EForbidSettingLocAndRotReason> ForbidSettingLocSet = new HashSet<EForbidSettingLocAndRotReason>();
 
-	// Token: 0x0400DC68 RID: 56424
+	// Token: 0x0400E107 RID: 57607
 	private readonly HashSet<EForbidSettingLocAndRotReason> ForbidSettingRotSet = new HashSet<EForbidSettingLocAndRotReason>();
 
-	// Token: 0x0400DC69 RID: 56425
+	// Token: 0x0400E108 RID: 57608
 	[Nullable(2)]
 	public BasePlatform OwnedBasePlatform;
 
-	// Token: 0x0400DC6A RID: 56426
+	// Token: 0x0400E109 RID: 57609
 	public Dictionary<string, string> ReplaceEffectMap = new Dictionary<string, string>();
 
-	// Token: 0x0400DC6B RID: 56427
+	// Token: 0x0400E10A RID: 57610
 	public Dictionary<string, string> ReplaceMontageMap = new Dictionary<string, string>();
 
-	// Token: 0x0400DC6C RID: 56428
+	// Token: 0x0400E10B RID: 57611
 	[StaticVariableRuleIgnore]
 	private static readonly HashSet<AStaticMeshActor> AllDebugCubes = new HashSet<AStaticMeshActor>();
 
-	// Token: 0x0400DC6D RID: 56429
+	// Token: 0x0400E10C RID: 57612
 	[StaticVariableRuleIgnore]
 	private static bool AllDebugCubesVisible = false;
 
-	// Token: 0x0400DC6E RID: 56430
+	// Token: 0x0400E10D RID: 57613
 	[Nullable(2)]
 	[StaticVariableRuleIgnore]
 	private static UMaterialInterface DebugCubeMaterialCache = null;
 
-	// Token: 0x0400DC6F RID: 56431
+	// Token: 0x0400E10E RID: 57614
 	[Nullable(2)]
 	private AStaticMeshActor DebugPositionCube;
 
-	// Token: 0x0400DC70 RID: 56432
+	// Token: 0x0400E10F RID: 57615
 	[Nullable(2)]
 	private AStaticMeshActor DebugFootCube;
 
-	// Token: 0x0400DC71 RID: 56433
+	// Token: 0x0400E110 RID: 57616
 	[Nullable(2)]
 	private AStaticMeshActor DebugForwardCube;
 }

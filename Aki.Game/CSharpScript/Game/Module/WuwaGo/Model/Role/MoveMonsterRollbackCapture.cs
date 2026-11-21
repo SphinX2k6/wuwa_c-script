@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.WuwaGo.Model.Role
 {
-	// Token: 0x0200473D RID: 18237
+	// Token: 0x0200366E RID: 13934
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -13,7 +13,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.Role
 	})]
 	internal class MoveMonsterRollbackCapture : RoleRollbackCapture<WuWaGoMoveMonster>
 	{
-		// Token: 0x0602FA9D RID: 195229 RVA: 0x00B0C264 File Offset: 0x00B0A464
+		// Token: 0x06024267 RID: 148071 RVA: 0x00A3C230 File Offset: 0x00A3A430
 		public MoveMonsterRollbackCapture(WuWaGoMoveMonster monster) : base(monster)
 		{
 			this.FootprintIds = new List<int>();
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.Role
 			this.HasObservedPlayer = monster.HasObservedPlayer;
 		}
 
-		// Token: 0x0602FA9E RID: 195230 RVA: 0x00B0C2F4 File Offset: 0x00B0A4F4
+		// Token: 0x06024268 RID: 148072 RVA: 0x00A3C2C0 File Offset: 0x00A3A4C0
 		public override void Restore()
 		{
 			base.Restore();
@@ -45,16 +45,16 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.Role
 			base.Role.SetHasObservedPlayer(this.HasObservedPlayer);
 		}
 
-		// Token: 0x04019BC9 RID: 105417
+		// Token: 0x04014279 RID: 82553
 		private readonly List<int> FootprintIds;
 
-		// Token: 0x04019BCA RID: 105418
+		// Token: 0x0401427A RID: 82554
 		private readonly bool IsTracking;
 
-		// Token: 0x04019BCB RID: 105419
+		// Token: 0x0401427B RID: 82555
 		private readonly int LastSeenPlayerGridId;
 
-		// Token: 0x04019BCC RID: 105420
+		// Token: 0x0401427C RID: 82556
 		private readonly bool HasObservedPlayer;
 	}
 }

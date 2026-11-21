@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.Area.Functional
 {
-	// Token: 0x020052CD RID: 21197
+	// Token: 0x0200429D RID: 17053
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaAreaFunctionalItem : PhantomArenaAreaItemBase
 	{
-		// Token: 0x060363C7 RID: 222151 RVA: 0x00CD4F14 File Offset: 0x00CD3114
+		// Token: 0x0602B2C2 RID: 176834 RVA: 0x00C2263C File Offset: 0x00C2083C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,20 +25,20 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Area.Functional
 			};
 		}
 
-		// Token: 0x060363C8 RID: 222152 RVA: 0x00CD4F6E File Offset: 0x00CD316E
+		// Token: 0x0602B2C3 RID: 176835 RVA: 0x00C22696 File Offset: 0x00C20896
 		protected override void OnStartImplement()
 		{
 			this.Sequence = new UiSequencePlayer(this.RootItem);
 			this.Sequence.BindOnEndSequenceEvent(new Action<string>(this.OnEndSequenceEvent));
 		}
 
-		// Token: 0x060363C9 RID: 222153 RVA: 0x00CD4F98 File Offset: 0x00CD3198
+		// Token: 0x0602B2C4 RID: 176836 RVA: 0x00C226C0 File Offset: 0x00C208C0
 		protected override void OnBeforeDestroy()
 		{
 			this.Sequence.Clear();
 		}
 
-		// Token: 0x060363CA RID: 222154 RVA: 0x00CD4FA5 File Offset: 0x00CD31A5
+		// Token: 0x0602B2C5 RID: 176837 RVA: 0x00C226CD File Offset: 0x00C208CD
 		private void OnEndSequenceEvent(string sequenceName)
 		{
 			if (sequenceName == "Close".ToString())
@@ -47,17 +47,17 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Area.Functional
 			}
 		}
 
-		// Token: 0x060363CB RID: 222155 RVA: 0x00CD4FC6 File Offset: 0x00CD31C6
+		// Token: 0x0602B2C6 RID: 176838 RVA: 0x00C226EE File Offset: 0x00C208EE
 		public override void Refresh(PhantomArenaCard card)
 		{
 		}
 
-		// Token: 0x060363CC RID: 222156 RVA: 0x00CD4FC8 File Offset: 0x00CD31C8
+		// Token: 0x0602B2C7 RID: 176839 RVA: 0x00C226F0 File Offset: 0x00C208F0
 		public override void SetHoverStateActive(bool value)
 		{
 		}
 
-		// Token: 0x060363CD RID: 222157 RVA: 0x00CD4FCC File Offset: 0x00CD31CC
+		// Token: 0x0602B2C8 RID: 176840 RVA: 0x00C226F4 File Offset: 0x00C208F4
 		public override void SetCanUseStateActive(bool value)
 		{
 			this.Sequence.StopPrevSequence(false, true);
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Area.Functional
 			this.Sequence.PlaySequence("Close", false, null);
 		}
 
-		// Token: 0x060363CE RID: 222158 RVA: 0x00CD502C File Offset: 0x00CD322C
+		// Token: 0x0602B2C9 RID: 176841 RVA: 0x00C22754 File Offset: 0x00C20954
 		public UniTask SetIncreaseActive(bool isActive)
 		{
 			PhantomArenaAreaFunctionalItem.<SetIncreaseActive>d__10 <SetIncreaseActive>d__;
@@ -82,29 +82,29 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Area.Functional
 			return <SetIncreaseActive>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060363CF RID: 222159 RVA: 0x00CD5077 File Offset: 0x00CD3277
+		// Token: 0x0602B2CA RID: 176842 RVA: 0x00C2279F File Offset: 0x00C2099F
 		public UUIItem GetCardRootItem()
 		{
 			return base.GetItem(1);
 		}
 
-		// Token: 0x0401CAD6 RID: 117462
+		// Token: 0x0401750B RID: 95499
 		private PhantomArenaCardComponentLogic UseSkill;
 
-		// Token: 0x0401CAD7 RID: 117463
+		// Token: 0x0401750C RID: 95500
 		protected UiSequencePlayer Sequence;
 
-		// Token: 0x0200B551 RID: 46417
+		// Token: 0x02009F89 RID: 40841
 		[NullableContext(0)]
 		private static class EComponentDefine
 		{
-			// Token: 0x04036F04 RID: 225028
+			// Token: 0x04031957 RID: 203095
 			public const int BgTexture = 0;
 
-			// Token: 0x04036F05 RID: 225029
+			// Token: 0x04031958 RID: 203096
 			public const int CardRootItem = 1;
 
-			// Token: 0x04036F06 RID: 225030
+			// Token: 0x04031959 RID: 203097
 			public const int ContentItem = 2;
 		}
 	}

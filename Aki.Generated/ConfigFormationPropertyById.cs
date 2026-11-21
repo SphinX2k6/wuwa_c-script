@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000353 RID: 851
+	// Token: 0x02000368 RID: 872
 	public class ConfigFormationPropertyById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060013F7 RID: 5111 RVA: 0x000CA67F File Offset: 0x000C887F
+		// Token: 0x06001475 RID: 5237 RVA: 0x000D0B8B File Offset: 0x000CED8B
 		static ConfigFormationPropertyById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigFormationPropertyById.CreateStaticDefaultValue), new Action(ConfigFormationPropertyById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060013F8 RID: 5112 RVA: 0x000CA6A0 File Offset: 0x000C88A0
+		// Token: 0x06001476 RID: 5238 RVA: 0x000D0BAC File Offset: 0x000CEDAC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigFormationPropertyById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060013F9 RID: 5113 RVA: 0x000CA71F File Offset: 0x000C891F
+		// Token: 0x06001477 RID: 5239 RVA: 0x000D0C2B File Offset: 0x000CEE2B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigFormationPropertyById.LogPair = null;
 			ConfigFormationPropertyById.HandleId = 0;
 		}
 
-		// Token: 0x060013FA RID: 5114 RVA: 0x000CA72D File Offset: 0x000C892D
+		// Token: 0x06001478 RID: 5240 RVA: 0x000D0C39 File Offset: 0x000CEE39
 		public static void Init()
 		{
 			ConfigFormationPropertyById.HandleId = ConfigCommon.InitDataStatement(ConfigFormationPropertyById.HandleId, "db_formationproperty.db", "select BinData from `FormationProperty` where Id=?");
 		}
 
-		// Token: 0x060013FB RID: 5115 RVA: 0x000CA748 File Offset: 0x000C8948
+		// Token: 0x06001479 RID: 5241 RVA: 0x000D0C54 File Offset: 0x000CEE54
 		public static FormationProperty? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigFormationPropertyById.HandleId, ConfigFormationPropertyById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new FormationProperty?(rootAsFormationProperty);
 		}
 
-		// Token: 0x04001729 RID: 5929
+		// Token: 0x040017BC RID: 6076
 		private const string DB = "db_formationproperty.db";
 
-		// Token: 0x0400172A RID: 5930
+		// Token: 0x040017BD RID: 6077
 		private const string FILE = "d.队伍属性表.xlsx";
 
-		// Token: 0x0400172B RID: 5931
+		// Token: 0x040017BE RID: 6078
 		private const string TABLE = "FormationProperty";
 
-		// Token: 0x0400172C RID: 5932
+		// Token: 0x040017BF RID: 6079
 		private const string COMMAND = "select BinData from `FormationProperty` where Id=?";
 
-		// Token: 0x0400172D RID: 5933
+		// Token: 0x040017C0 RID: 6080
 		private const string KEY_PREFIX = "FormationPropertyById";
 
-		// Token: 0x0400172E RID: 5934
+		// Token: 0x040017C1 RID: 6081
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400172F RID: 5935
+		// Token: 0x040017C2 RID: 6082
 		private static int HandleId;
 	}
 }

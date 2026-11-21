@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004910 RID: 18704
+	// Token: 0x02003887 RID: 14471
 	public interface INavigationInteractClick
 	{
-		// Token: 0x06030E2D RID: 200237
+		// Token: 0x0602595A RID: 153946
 		void InteractClickHandle();
 	}
 }

@@ -5,18 +5,18 @@ using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02001C1C RID: 7196
+// Token: 0x020010DB RID: 4315
 [NullableContext(1)]
 [Nullable(0)]
 public class FragmentMemoryTopicData
 {
-	// Token: 0x0600D804 RID: 55300 RVA: 0x0031F9BF File Offset: 0x0031DBBF
+	// Token: 0x0600AC19 RID: 44057 RVA: 0x0032AD53 File Offset: 0x00328F53
 	public int GetId()
 	{
 		return this.Id;
 	}
 
-	// Token: 0x0600D805 RID: 55301 RVA: 0x0031F9C8 File Offset: 0x0031DBC8
+	// Token: 0x0600AC1A RID: 44058 RVA: 0x0032AD5C File Offset: 0x00328F5C
 	public void Phrase(PhotoMemoryTopicInfo data)
 	{
 		this.Id = data.Id;
@@ -53,13 +53,13 @@ public class FragmentMemoryTopicData
 		EventSystem.Instance.Emit<int>(EEventName.FragmentRewardTopicRedDot, this.Id);
 	}
 
-	// Token: 0x0600D806 RID: 55302 RVA: 0x0031FB78 File Offset: 0x0031DD78
+	// Token: 0x0600AC1B RID: 44059 RVA: 0x0032AF0C File Offset: 0x0032910C
 	public bool GetFirstOpen()
 	{
 		return FragmentMemoryModel.Instance.GetTopicFirstOpenRedDotState(this.Id);
 	}
 
-	// Token: 0x0600D807 RID: 55303 RVA: 0x0031FB8C File Offset: 0x0031DD8C
+	// Token: 0x0600AC1C RID: 44060 RVA: 0x0032AF20 File Offset: 0x00329120
 	public bool GetRedDotState()
 	{
 		if (!this.UnlockState)
@@ -83,7 +83,7 @@ public class FragmentMemoryTopicData
 		return false;
 	}
 
-	// Token: 0x0600D808 RID: 55304 RVA: 0x0031FBFC File Offset: 0x0031DDFC
+	// Token: 0x0600AC1D RID: 44061 RVA: 0x0032AF90 File Offset: 0x00329190
 	public bool GetCollectRedDotState()
 	{
 		if (!this.UnlockState)
@@ -103,32 +103,32 @@ public class FragmentMemoryTopicData
 		return false;
 	}
 
-	// Token: 0x0600D809 RID: 55305 RVA: 0x0031FC60 File Offset: 0x0031DE60
+	// Token: 0x0600AC1E RID: 44062 RVA: 0x0032AFF4 File Offset: 0x003291F4
 	public ClueEntrance GetClueEntrance()
 	{
 		PhotoMemoryTopic? photoMemoryTopicById = FragmentMemoryConfig.Instance.GetPhotoMemoryTopicById(this.Id);
 		return FragmentMemoryConfig.Instance.GetClueEntrance(photoMemoryTopicById.Value.ClueId).Value;
 	}
 
-	// Token: 0x0600D80A RID: 55306 RVA: 0x0031FCA0 File Offset: 0x0031DEA0
+	// Token: 0x0600AC1F RID: 44063 RVA: 0x0032B034 File Offset: 0x00329234
 	public IReadOnlyList<ClueContent> GetClueContent()
 	{
 		return FragmentMemoryConfig.Instance.GetClueContent(this.GetClueEntrance().ContentGroupId);
 	}
 
-	// Token: 0x0600D80B RID: 55307 RVA: 0x0031FCC5 File Offset: 0x0031DEC5
+	// Token: 0x0600AC20 RID: 44064 RVA: 0x0032B059 File Offset: 0x00329259
 	public List<FragmentMemoryCollectData> GetCollectDataList()
 	{
 		return this.FragmentMemoryCollectDataList;
 	}
 
-	// Token: 0x0600D80C RID: 55308 RVA: 0x0031FCCD File Offset: 0x0031DECD
+	// Token: 0x0600AC21 RID: 44065 RVA: 0x0032B061 File Offset: 0x00329261
 	public int GetMemoryCollectNum()
 	{
 		return this.FragmentMemoryCollectDataList.Count;
 	}
 
-	// Token: 0x0600D80D RID: 55309 RVA: 0x0031FCDC File Offset: 0x0031DEDC
+	// Token: 0x0600AC22 RID: 44066 RVA: 0x0032B070 File Offset: 0x00329270
 	public bool GetCollectRewardDoneState()
 	{
 		if (this.FragmentMemoryCollectDataList.Count == 0)
@@ -148,7 +148,7 @@ public class FragmentMemoryTopicData
 		return true;
 	}
 
-	// Token: 0x0600D80E RID: 55310 RVA: 0x0031FD44 File Offset: 0x0031DF44
+	// Token: 0x0600AC23 RID: 44067 RVA: 0x0032B0D8 File Offset: 0x003292D8
 	public int GetFinishCollectNum()
 	{
 		int num = 0;
@@ -165,7 +165,7 @@ public class FragmentMemoryTopicData
 		return num;
 	}
 
-	// Token: 0x0600D80F RID: 55311 RVA: 0x0031FDA0 File Offset: 0x0031DFA0
+	// Token: 0x0600AC24 RID: 44068 RVA: 0x0032B134 File Offset: 0x00329334
 	public bool GetAllCollectState()
 	{
 		using (List<FragmentMemoryCollectData>.Enumerator enumerator = this.FragmentMemoryCollectDataList.GetEnumerator())
@@ -181,30 +181,30 @@ public class FragmentMemoryTopicData
 		return true;
 	}
 
-	// Token: 0x0600D810 RID: 55312 RVA: 0x0031FDFC File Offset: 0x0031DFFC
+	// Token: 0x0600AC25 RID: 44069 RVA: 0x0032B190 File Offset: 0x00329390
 	public bool GetUnlockState()
 	{
 		return this.UnlockState;
 	}
 
-	// Token: 0x0600D811 RID: 55313 RVA: 0x0031FE04 File Offset: 0x0031E004
+	// Token: 0x0600AC26 RID: 44070 RVA: 0x0032B198 File Offset: 0x00329398
 	public PhotoMemoryTopic GetConfig()
 	{
 		return FragmentMemoryConfig.Instance.GetPhotoMemoryTopicById(this.Id).Value;
 	}
 
-	// Token: 0x0600D812 RID: 55314 RVA: 0x0031FE2C File Offset: 0x0031E02C
+	// Token: 0x0600AC27 RID: 44071 RVA: 0x0032B1C0 File Offset: 0x003293C0
 	public string GetConditionDesc()
 	{
 		return LevelGeneralCommons.GetConditionGroupHintText(this.GetConfig().ConditionGroupId) ?? "";
 	}
 
-	// Token: 0x04006287 RID: 25223
+	// Token: 0x04006359 RID: 25433
 	private int Id;
 
-	// Token: 0x04006288 RID: 25224
+	// Token: 0x0400635A RID: 25434
 	private List<FragmentMemoryCollectData> FragmentMemoryCollectDataList = new List<FragmentMemoryCollectData>();
 
-	// Token: 0x04006289 RID: 25225
+	// Token: 0x0400635B RID: 25435
 	private bool UnlockState = true;
 }

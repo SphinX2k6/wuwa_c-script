@@ -12,17 +12,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 {
-	// Token: 0x02004D7D RID: 19837
+	// Token: 0x02003D46 RID: 15686
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoleLangRemoveView : UiViewBase
 	{
-		// Token: 0x06033485 RID: 210053 RVA: 0x00BF72CE File Offset: 0x00BF54CE
+		// Token: 0x060282F2 RID: 164594 RVA: 0x00B408A6 File Offset: 0x00B3EAA6
 		public RoleLangRemoveView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06033486 RID: 210054 RVA: 0x00BF72EC File Offset: 0x00BF54EC
+		// Token: 0x060282F3 RID: 164595 RVA: 0x00B408C4 File Offset: 0x00B3EAC4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06033487 RID: 210055 RVA: 0x00BF7480 File Offset: 0x00BF5680
+		// Token: 0x060282F4 RID: 164596 RVA: 0x00B40A58 File Offset: 0x00B3EC58
 		protected override void OnStart()
 		{
 			IRoleLangCustomDeleteInfo roleLangCustomDeleteInfo = this.OpenParam as IRoleLangCustomDeleteInfo;
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			this.RefreshVoiceList();
 		}
 
-		// Token: 0x06033488 RID: 210056 RVA: 0x00BF7550 File Offset: 0x00BF5750
+		// Token: 0x060282F5 RID: 164597 RVA: 0x00B40B28 File Offset: 0x00B3ED28
 		protected override void OnBeforeHide()
 		{
 			Action closeCallback = this.CloseCallback;
@@ -96,13 +96,13 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			closeCallback();
 		}
 
-		// Token: 0x06033489 RID: 210057 RVA: 0x00BF7562 File Offset: 0x00BF5762
+		// Token: 0x060282F6 RID: 164598 RVA: 0x00B40B3A File Offset: 0x00B3ED3A
 		protected override void OnBeforeDestroy()
 		{
 			this.StopCurrentAudioEvent();
 		}
 
-		// Token: 0x0603348A RID: 210058 RVA: 0x00BF756C File Offset: 0x00BF576C
+		// Token: 0x060282F7 RID: 164599 RVA: 0x00B40B44 File Offset: 0x00B3ED44
 		protected void RefreshVoiceList()
 		{
 			List<int> allLanguageTypeForAudio = LanguageUpdateManager.Instance.GetAllLanguageTypeForAudio();
@@ -122,13 +122,13 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			this.RefreshButton();
 		}
 
-		// Token: 0x0603348B RID: 210059 RVA: 0x00BF7628 File Offset: 0x00BF5828
+		// Token: 0x060282F8 RID: 164600 RVA: 0x00B40C00 File Offset: 0x00B3EE00
 		protected void RefreshButton()
 		{
 			base.GetButton(5).SetSelfInteractive(this.CurSelectedSet.Count > 0);
 		}
 
-		// Token: 0x0603348C RID: 210060 RVA: 0x00BF7644 File Offset: 0x00BF5844
+		// Token: 0x060282F9 RID: 164601 RVA: 0x00B40C1C File Offset: 0x00B3EE1C
 		protected void StopCurrentAudioEvent()
 		{
 			if (!string.IsNullOrEmpty(this.OldAudioCode))
@@ -145,13 +145,13 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			this.OldCodeRoleId = null;
 		}
 
-		// Token: 0x0603348D RID: 210061 RVA: 0x00BF76DE File Offset: 0x00BF58DE
+		// Token: 0x060282FA RID: 164602 RVA: 0x00B40CB6 File Offset: 0x00B3EEB6
 		private void OnClickedBtnBackB()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603348E RID: 210062 RVA: 0x00BF76E8 File Offset: 0x00BF58E8
+		// Token: 0x060282FB RID: 164603 RVA: 0x00B40CC0 File Offset: 0x00B3EEC0
 		private void OnClickedBtnConfirmB()
 		{
 			if (this.CurSelectedSet.Count == 0)
@@ -159,12 +159,17 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 				return;
 			}
 			List<IRoleLangCustomLangPackageInfo> list = new List<IRoleLangCustomLangPackageInfo>();
-			foreach (int langIndex in this.CurSelectedSet)
+			foreach (int num in this.CurSelectedSet)
 			{
+				if (RoleLangCustomModel.Instance.CheckPackageAudioDownloading(num))
+				{
+					ScrollingTipsController.Instance.ShowTipsByTextId("VoiceDIY_CannotDeleteTips", Array.Empty<object>());
+					return;
+				}
 				list.Add(new RoleLangCustomLangPackageInfo
 				{
 					RoleId = this.RoleId,
-					LangIndex = langIndex
+					LangIndex = num
 				});
 			}
 			RoleLangCustomModel.Instance.GetUpdateManager().DeletePackage(list);
@@ -179,7 +184,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			clickedDeleteCallback();
 		}
 
-		// Token: 0x0603348F RID: 210063 RVA: 0x00BF77AC File Offset: 0x00BF59AC
+		// Token: 0x060282FC RID: 164604 RVA: 0x00B40DA8 File Offset: 0x00B3EFA8
 		private RoleLangCustomLangDeleteItem CreateVoiceActingItem()
 		{
 			return new RoleLangCustomLangDeleteItem
@@ -189,7 +194,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			};
 		}
 
-		// Token: 0x06033490 RID: 210064 RVA: 0x00BF77D8 File Offset: 0x00BF59D8
+		// Token: 0x060282FD RID: 164605 RVA: 0x00B40DD4 File Offset: 0x00B3EFD4
 		private void OnVoiceItemToggleStateChanged(IRoleLangCustomLangSelectInfo data, bool isSelected)
 		{
 			if (isSelected)
@@ -207,63 +212,63 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			this.RefreshButton();
 		}
 
-		// Token: 0x06033491 RID: 210065 RVA: 0x00BF786C File Offset: 0x00BF5A6C
+		// Token: 0x060282FE RID: 164606 RVA: 0x00B40E68 File Offset: 0x00B3F068
 		private bool CheckVoiceSelectedCallback(IRoleLangCustomLangSelectInfo data)
 		{
 			return this.CurSelectedSet.Contains(data.LangIndex);
 		}
 
-		// Token: 0x0401B36F RID: 111471
+		// Token: 0x04015D42 RID: 89410
 		protected int RoleId;
 
-		// Token: 0x0401B370 RID: 111472
+		// Token: 0x04015D43 RID: 89411
 		[Nullable(2)]
 		protected Action CloseCallback;
 
-		// Token: 0x0401B371 RID: 111473
+		// Token: 0x04015D44 RID: 89412
 		[Nullable(2)]
 		protected Action ClickedDeleteCallback;
 
-		// Token: 0x0401B372 RID: 111474
+		// Token: 0x04015D45 RID: 89413
 		protected GenericScrollViewNew<RoleLangCustomLangDeleteItem, IRoleLangCustomLangSelectInfo> VoiceScroll;
 
-		// Token: 0x0401B373 RID: 111475
+		// Token: 0x04015D46 RID: 89414
 		protected HashSet<int> CurSelectedSet = new HashSet<int>();
 
-		// Token: 0x0401B374 RID: 111476
+		// Token: 0x04015D47 RID: 89415
 		[Nullable(2)]
 		protected IRoleLangCustomLangSelectInfo CurrentIsPlayingInfo;
 
-		// Token: 0x0401B375 RID: 111477
+		// Token: 0x04015D48 RID: 89416
 		protected int? PlayAudioHandle;
 
-		// Token: 0x0401B376 RID: 111478
+		// Token: 0x04015D49 RID: 89417
 		[Nullable(2)]
 		protected string OldAudioCode;
 
-		// Token: 0x0401B377 RID: 111479
+		// Token: 0x04015D4A RID: 89418
 		protected int? OldCodeRoleId;
 
-		// Token: 0x0401B378 RID: 111480
+		// Token: 0x04015D4B RID: 89419
 		protected bool IsNormalEnd = true;
 
-		// Token: 0x0200AEF2 RID: 44786
+		// Token: 0x02009926 RID: 39206
 		[NullableContext(0)]
 		private enum EDefine
 		{
-			// Token: 0x04035229 RID: 217641
+			// Token: 0x0402FC5D RID: 195677
 			BtnBackB,
-			// Token: 0x0403522A RID: 217642
+			// Token: 0x0402FC5E RID: 195678
 			TxtTitle,
-			// Token: 0x0403522B RID: 217643
+			// Token: 0x0402FC5F RID: 195679
 			VoiceActingItemScroll,
-			// Token: 0x0403522C RID: 217644
+			// Token: 0x0402FC60 RID: 195680
 			VoiceActingItem,
-			// Token: 0x0403522D RID: 217645
+			// Token: 0x0402FC61 RID: 195681
 			TxtDesc,
-			// Token: 0x0403522E RID: 217646
+			// Token: 0x0402FC62 RID: 195682
 			BtnConfirmB,
-			// Token: 0x0403522F RID: 217647
+			// Token: 0x0402FC63 RID: 195683
 			BtnCloseAll
 		}
 	}

@@ -7,22 +7,22 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.BulletCaster
 {
-	// Token: 0x0200722F RID: 29231
+	// Token: 0x020062E4 RID: 25316
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BulletCasterSprint : BulletCasterCommon
 	{
-		// Token: 0x06047A52 RID: 293458 RVA: 0x01254C79 File Offset: 0x01252E79
+		// Token: 0x0603D3B3 RID: 250803 RVA: 0x011AD811 File Offset: 0x011ABA11
 		public BulletCasterSprint(BulletCasterInitParam bulletCasterInitParam) : base(bulletCasterInitParam)
 		{
 		}
 
-		// Token: 0x06047A53 RID: 293459 RVA: 0x01254C82 File Offset: 0x01252E82
+		// Token: 0x0603D3B4 RID: 250804 RVA: 0x011AD81A File Offset: 0x011ABA1A
 		protected override void OnStart()
 		{
 		}
 
-		// Token: 0x06047A54 RID: 293460 RVA: 0x01254C84 File Offset: 0x01252E84
+		// Token: 0x0603D3B5 RID: 250805 RVA: 0x011AD81C File Offset: 0x011ABA1C
 		protected override void StartImmediately()
 		{
 			if (this.CasterConfig.FlyTime < 20)
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.BulletCaster
 			this.SetTimeDilationRespectOwnerEntity();
 		}
 
-		// Token: 0x06047A55 RID: 293461 RVA: 0x01254F8C File Offset: 0x0125318C
+		// Token: 0x0603D3B6 RID: 250806 RVA: 0x011ADB24 File Offset: 0x011ABD24
 		protected unsafe override void SetEffectParam(int effectHandleId)
 		{
 			EffectParameterNiagara effectParameterNiagara = new EffectParameterNiagara();
@@ -123,10 +123,10 @@ namespace CSharpScript.Game.NewWorld.SceneItem.BulletCaster
 			EffectSystem.Instance.SetEffectParameterNiagara(effectHandleId, parameter);
 		}
 
-		// Token: 0x04025B1D RID: 154397
+		// Token: 0x0402078C RID: 133004
 		private const string WARNING_EFFECT_LENGTH_KEY = "length";
 
-		// Token: 0x04025B1E RID: 154398
+		// Token: 0x0402078D RID: 133005
 		private const string WARNING_EFFECT_WIDTH_KEY = "width";
 	}
 }

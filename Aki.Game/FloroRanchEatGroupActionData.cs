@@ -4,18 +4,18 @@ using Aki.Protocol;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02001AE1 RID: 6881
+// Token: 0x02000FA0 RID: 4000
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchEatGroupActionData : FloroRanchActionDataBase
 {
-	// Token: 0x0600CC0E RID: 52238 RVA: 0x002E916F File Offset: 0x002E736F
+	// Token: 0x0600A01F RID: 40991 RVA: 0x002F4303 File Offset: 0x002F2503
 	public FloroRanchEatGroupActionData(FloroRanchUnitActionMsg actionData) : base(actionData)
 	{
 		this.EatingActionGroupData = actionData.EatingGroup;
 	}
 
-	// Token: 0x0600CC0F RID: 52239 RVA: 0x002E9184 File Offset: 0x002E7384
+	// Token: 0x0600A020 RID: 40992 RVA: 0x002F4318 File Offset: 0x002F2518
 	public override UniTask OnExecute()
 	{
 		FloroRanchEatGroupActionData.<OnExecute>d__3 <OnExecute>d__;
@@ -26,7 +26,7 @@ public class FloroRanchEatGroupActionData : FloroRanchActionDataBase
 		return <OnExecute>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CC10 RID: 52240 RVA: 0x002E91C7 File Offset: 0x002E73C7
+	// Token: 0x0600A021 RID: 40993 RVA: 0x002F435B File Offset: 0x002F255B
 	protected override void OnPause()
 	{
 		if (this.GroupActionData != null)
@@ -35,7 +35,7 @@ public class FloroRanchEatGroupActionData : FloroRanchActionDataBase
 		}
 	}
 
-	// Token: 0x0600CC11 RID: 52241 RVA: 0x002E91DC File Offset: 0x002E73DC
+	// Token: 0x0600A022 RID: 40994 RVA: 0x002F4370 File Offset: 0x002F2570
 	protected override void OnResume()
 	{
 		if (this.GroupActionData != null)
@@ -44,9 +44,9 @@ public class FloroRanchEatGroupActionData : FloroRanchActionDataBase
 		}
 	}
 
-	// Token: 0x04005DCD RID: 24013
+	// Token: 0x04005E9C RID: 24220
 	private readonly FRUnitEatingActionGroup EatingActionGroupData;
 
-	// Token: 0x04005DCE RID: 24014
+	// Token: 0x04005E9D RID: 24221
 	private FloroRanchGroupActionData GroupActionData;
 }

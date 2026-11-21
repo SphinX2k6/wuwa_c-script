@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200597D RID: 22909
+	// Token: 0x02005F8A RID: 24458
 	public struct ISphereFactoryComponent : IFlatbufferObject
 	{
-		// Token: 0x1700ABE3 RID: 44003
-		// (get) Token: 0x06026C75 RID: 158837 RVA: 0x005567B0 File Offset: 0x005549B0
+		// Token: 0x1700B517 RID: 46359
+		// (get) Token: 0x060291DF RID: 168415 RVA: 0x0059D41C File Offset: 0x0059B61C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026C76 RID: 158838 RVA: 0x005567BD File Offset: 0x005549BD
+		// Token: 0x060291E0 RID: 168416 RVA: 0x0059D429 File Offset: 0x0059B629
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06026C77 RID: 158839 RVA: 0x005567C4 File Offset: 0x005549C4
+		// Token: 0x060291E1 RID: 168417 RVA: 0x0059D430 File Offset: 0x0059B630
 		public static ISphereFactoryComponent GetRootAsISphereFactoryComponent(ByteBuffer _bb)
 		{
 			return ISphereFactoryComponent.GetRootAsISphereFactoryComponent(_bb, default(ISphereFactoryComponent));
 		}
 
-		// Token: 0x06026C78 RID: 158840 RVA: 0x005567E0 File Offset: 0x005549E0
+		// Token: 0x060291E2 RID: 168418 RVA: 0x0059D44C File Offset: 0x0059B64C
 		public static ISphereFactoryComponent GetRootAsISphereFactoryComponent(ByteBuffer _bb, ISphereFactoryComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06026C79 RID: 158841 RVA: 0x005567FD File Offset: 0x005549FD
+		// Token: 0x060291E3 RID: 168419 RVA: 0x0059D469 File Offset: 0x0059B669
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06026C7A RID: 158842 RVA: 0x0055680C File Offset: 0x00554A0C
+		// Token: 0x060291E4 RID: 168420 RVA: 0x0059D478 File Offset: 0x0059B678
 		public ISphereFactoryComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700ABE4 RID: 44004
-		// (get) Token: 0x06026C7B RID: 158843 RVA: 0x0055681C File Offset: 0x00554A1C
+		// Token: 0x1700B518 RID: 46360
+		// (get) Token: 0x060291E5 RID: 168421 RVA: 0x0059D488 File Offset: 0x0059B688
 		public bool Disabled
 		{
 			get
@@ -59,8 +59,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700ABE5 RID: 44005
-		// (get) Token: 0x06026C7C RID: 158844 RVA: 0x0055685C File Offset: 0x00554A5C
+		// Token: 0x1700B519 RID: 46361
+		// (get) Token: 0x060291E6 RID: 168422 RVA: 0x0059D4C8 File Offset: 0x0059B6C8
 		public IVectorInfo? SphereLocation
 		{
 			get
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700ABE6 RID: 44006
-		// (get) Token: 0x06026C7D RID: 158845 RVA: 0x005568BC File Offset: 0x00554ABC
+		// Token: 0x1700B51A RID: 46362
+		// (get) Token: 0x060291E7 RID: 168423 RVA: 0x0059D528 File Offset: 0x0059B728
 		public string SphereGuid
 		{
 			get
@@ -89,20 +89,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026C7E RID: 158846 RVA: 0x005568F3 File Offset: 0x00554AF3
+		// Token: 0x060291E8 RID: 168424 RVA: 0x0059D55F File Offset: 0x0059B75F
 		public Span<byte> GetSphereGuidBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x06026C7F RID: 158847 RVA: 0x00556902 File Offset: 0x00554B02
+		// Token: 0x060291E9 RID: 168425 RVA: 0x0059D56E File Offset: 0x0059B76E
 		public byte[] GetSphereGuidArray()
 		{
 			return this.__p.__vector_as_array<byte>(8);
 		}
 
-		// Token: 0x1700ABE7 RID: 44007
-		// (get) Token: 0x06026C80 RID: 158848 RVA: 0x00556910 File Offset: 0x00554B10
+		// Token: 0x1700B51B RID: 46363
+		// (get) Token: 0x060291EA RID: 168426 RVA: 0x0059D57C File Offset: 0x0059B77C
 		public byte NullMask
 		{
 			get
@@ -116,7 +116,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026C81 RID: 158849 RVA: 0x0055694D File Offset: 0x00554B4D
+		// Token: 0x060291EB RID: 168427 RVA: 0x0059D5B9 File Offset: 0x0059B7B9
 		public static Offset<ISphereFactoryComponent> CreateISphereFactoryComponent(FlatBufferBuilder builder, bool Disabled = false, Offset<IVectorInfo> SphereLocationOffset = default(Offset<IVectorInfo>), StringOffset SphereGuidOffset = default(StringOffset), byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -127,43 +127,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISphereFactoryComponent.EndISphereFactoryComponent(builder);
 		}
 
-		// Token: 0x06026C82 RID: 158850 RVA: 0x00556979 File Offset: 0x00554B79
+		// Token: 0x060291EC RID: 168428 RVA: 0x0059D5E5 File Offset: 0x0059B7E5
 		public static void StartISphereFactoryComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06026C83 RID: 158851 RVA: 0x00556982 File Offset: 0x00554B82
+		// Token: 0x060291ED RID: 168429 RVA: 0x0059D5EE File Offset: 0x0059B7EE
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x06026C84 RID: 158852 RVA: 0x0055698D File Offset: 0x00554B8D
+		// Token: 0x060291EE RID: 168430 RVA: 0x0059D5F9 File Offset: 0x0059B7F9
 		public static void AddSphereLocation(FlatBufferBuilder builder, Offset<IVectorInfo> sphereLocationOffset)
 		{
 			builder.AddOffset(1, sphereLocationOffset.Value, 0);
 		}
 
-		// Token: 0x06026C85 RID: 158853 RVA: 0x0055699D File Offset: 0x00554B9D
+		// Token: 0x060291EF RID: 168431 RVA: 0x0059D609 File Offset: 0x0059B809
 		public static void AddSphereGuid(FlatBufferBuilder builder, StringOffset sphereGuidOffset)
 		{
 			builder.AddOffset(2, sphereGuidOffset.Value, 0);
 		}
 
-		// Token: 0x06026C86 RID: 158854 RVA: 0x005569AD File Offset: 0x00554BAD
+		// Token: 0x060291F0 RID: 168432 RVA: 0x0059D619 File Offset: 0x0059B819
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x06026C87 RID: 158855 RVA: 0x005569B8 File Offset: 0x00554BB8
+		// Token: 0x060291F1 RID: 168433 RVA: 0x0059D624 File Offset: 0x0059B824
 		public static Offset<ISphereFactoryComponent> EndISphereFactoryComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<ISphereFactoryComponent>(builder.EndTable());
 		}
 
-		// Token: 0x06026C88 RID: 158856 RVA: 0x005569C8 File Offset: 0x00554BC8
+		// Token: 0x060291F2 RID: 168434 RVA: 0x0059D634 File Offset: 0x0059B834
 		public ISphereFactoryComponentT UnPack()
 		{
 			ISphereFactoryComponentT sphereFactoryComponentT = new ISphereFactoryComponentT();
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return sphereFactoryComponentT;
 		}
 
-		// Token: 0x06026C89 RID: 158857 RVA: 0x005569E4 File Offset: 0x00554BE4
+		// Token: 0x060291F3 RID: 168435 RVA: 0x0059D650 File Offset: 0x0059B850
 		public void UnPackTo(ISphereFactoryComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -180,7 +180,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06026C8A RID: 158858 RVA: 0x00556A44 File Offset: 0x00554C44
+		// Token: 0x060291F4 RID: 168436 RVA: 0x0059D6B0 File Offset: 0x0059B8B0
 		public static Offset<ISphereFactoryComponent> Pack(FlatBufferBuilder builder, ISphereFactoryComponentT _o)
 		{
 			if (_o == null)
@@ -192,7 +192,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISphereFactoryComponent.CreateISphereFactoryComponent(builder, _o.Disabled, sphereLocationOffset, sphereGuidOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400EF6B RID: 61291
+		// Token: 0x0400FC60 RID: 64608
 		private Table __p;
 	}
 }

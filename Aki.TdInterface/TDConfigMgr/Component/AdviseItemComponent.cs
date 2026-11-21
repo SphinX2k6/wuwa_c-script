@@ -5,11 +5,9 @@ using Aki.TDConfigMgr.Component.Fb;
 namespace Aki.TDConfigMgr.Component
 {
 	// Token: 0x02000015 RID: 21
-	[NullableContext(1)]
-	[Nullable(0)]
 	public class AdviseItemComponent : IComponentBase
 	{
-		// Token: 0x06000054 RID: 84 RVA: 0x000145B8 File Offset: 0x000127B8
+		// Token: 0x06000054 RID: 84 RVA: 0x00014E64 File Offset: 0x00013064
 		private AdviseItemComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000055 RID: 85 RVA: 0x000145F0 File Offset: 0x000127F0
+		// Token: 0x06000055 RID: 85 RVA: 0x00014E9C File Offset: 0x0001309C
 		public static AdviseItemComponent Create([Nullable(2)] AdviseItemComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000056 RID: 86 RVA: 0x00014603 File Offset: 0x00012803
+		// Token: 0x06000056 RID: 86 RVA: 0x00014EAF File Offset: 0x000130AF
 		public static AdviseItemComponent CreateFromSetValue([Nullable(2)] AdviseItemComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000057 RID: 87 RVA: 0x00014616 File Offset: 0x00012816
+		// Token: 0x06000057 RID: 87 RVA: 0x00014EC2 File Offset: 0x000130C2
 		public new AdviseItemComponent_SetValue ToSetValue()
 		{
 			return new AdviseItemComponent_SetValue
@@ -61,8 +59,8 @@ namespace Aki.TDConfigMgr.Component
 		}
 
 		// Token: 0x1700001B RID: 27
-		// (get) Token: 0x06000058 RID: 88 RVA: 0x00014638 File Offset: 0x00012838
-		// (set) Token: 0x06000059 RID: 89 RVA: 0x00014672 File Offset: 0x00012872
+		// (get) Token: 0x06000058 RID: 88 RVA: 0x00014EE4 File Offset: 0x000130E4
+		// (set) Token: 0x06000059 RID: 89 RVA: 0x00014F1E File Offset: 0x0001311E
 		public override bool? Disabled
 		{
 			get
@@ -85,8 +83,8 @@ namespace Aki.TDConfigMgr.Component
 		}
 
 		// Token: 0x1700001C RID: 28
-		// (get) Token: 0x0600005A RID: 90 RVA: 0x00014680 File Offset: 0x00012880
-		// (set) Token: 0x0600005B RID: 91 RVA: 0x000146AA File Offset: 0x000128AA
+		// (get) Token: 0x0600005A RID: 90 RVA: 0x00014F2C File Offset: 0x0001312C
+		// (set) Token: 0x0600005B RID: 91 RVA: 0x00014F56 File Offset: 0x00013156
 		public override bool? EdIsLocked
 		{
 			get
@@ -103,11 +101,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400003E RID: 62
+		// Token: 0x0400003F RID: 63
 		[Nullable(2)]
 		protected new AdviseItemComponent FbInstance;
 
-		// Token: 0x0400003F RID: 63
+		// Token: 0x04000040 RID: 64
 		[Nullable(2)]
 		protected new AdviseItemComponent_SetValue PocoInterface;
 	}

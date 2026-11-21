@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200288B RID: 10379
+	// Token: 0x02002B60 RID: 11104
 	public class ChangePhantom : ActionParams
 	{
-		// Token: 0x0600E5EB RID: 58859 RVA: 0x0021CBAC File Offset: 0x0021ADAC
-		[NullableContext(1)]
+		// Token: 0x0600F41A RID: 62490 RVA: 0x00239B2C File Offset: 0x00237D2C
 		public static ChangePhantom Create(IChangePhantom? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004697 RID: 18071
-		// (get) Token: 0x0600E5EC RID: 58860 RVA: 0x0021CBCB File Offset: 0x0021ADCB
+		// Token: 0x17004A08 RID: 18952
+		// (get) Token: 0x0600F41B RID: 62491 RVA: 0x00239B4B File Offset: 0x00237D4B
 		public virtual int Id
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007F1D RID: 32541
+		// Token: 0x040085DC RID: 34268
 		private IChangePhantom Instance;
 	}
 }

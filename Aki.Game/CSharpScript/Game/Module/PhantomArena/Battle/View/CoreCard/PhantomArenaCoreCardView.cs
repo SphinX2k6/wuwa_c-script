@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.View.CoreCard
 {
-	// Token: 0x02005268 RID: 21096
+	// Token: 0x02004238 RID: 16952
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaCoreCardView : UiViewBase, IUiViewResource
 	{
-		// Token: 0x06035F0A RID: 220938 RVA: 0x00CC325E File Offset: 0x00CC145E
+		// Token: 0x0602AE05 RID: 175621 RVA: 0x00C10926 File Offset: 0x00C0EB26
 		public PhantomArenaCoreCardView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06035F0B RID: 220939 RVA: 0x00CC3268 File Offset: 0x00CC1468
+		// Token: 0x0602AE06 RID: 175622 RVA: 0x00C10930 File Offset: 0x00C0EB30
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,13 +37,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.CoreCard
 			};
 		}
 
-		// Token: 0x06035F0C RID: 220940 RVA: 0x00CC32FB File Offset: 0x00CC14FB
+		// Token: 0x0602AE07 RID: 175623 RVA: 0x00C109C3 File Offset: 0x00C0EBC3
 		private void OnCloseClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06035F0D RID: 220941 RVA: 0x00CC3304 File Offset: 0x00CC1504
+		// Token: 0x0602AE08 RID: 175624 RVA: 0x00C109CC File Offset: 0x00C0EBCC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PhantomArenaCoreCardView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.CoreCard
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035F0E RID: 220942 RVA: 0x00CC3347 File Offset: 0x00CC1547
+		// Token: 0x0602AE09 RID: 175625 RVA: 0x00C10A0F File Offset: 0x00C0EC0F
 		protected override void OnStart()
 		{
 			this.Data = (this.OpenParam as IPhantomArenaCoreCardData);
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.CoreCard
 			this.BindSequence();
 		}
 
-		// Token: 0x06035F0F RID: 220943 RVA: 0x00CC336C File Offset: 0x00CC156C
+		// Token: 0x0602AE0A RID: 175626 RVA: 0x00C10A34 File Offset: 0x00C0EC34
 		protected override void OnBeforeDestroy()
 		{
 			IPhantomArenaCoreCardData data = this.Data;
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.CoreCard
 			callback();
 		}
 
-		// Token: 0x06035F10 RID: 220944 RVA: 0x00CC3388 File Offset: 0x00CC1588
+		// Token: 0x0602AE0B RID: 175627 RVA: 0x00C10A50 File Offset: 0x00C0EC50
 		private UniTask InitCard()
 		{
 			PhantomArenaCoreCardView.<InitCard>d__9 <InitCard>d__;
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.CoreCard
 			return <InitCard>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035F11 RID: 220945 RVA: 0x00CC33CC File Offset: 0x00CC15CC
+		// Token: 0x0602AE0C RID: 175628 RVA: 0x00C10A94 File Offset: 0x00C0EC94
 		private void SetCard()
 		{
 			int taskCardConfigId = PhantomArenaBattleModel.Instance.OwnData.TaskData.TaskCardConfigId;
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.CoreCard
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(2), phantomBattleCardConfig.Name, Array.Empty<object>());
 		}
 
-		// Token: 0x06035F12 RID: 220946 RVA: 0x00CC3424 File Offset: 0x00CC1624
+		// Token: 0x0602AE0D RID: 175629 RVA: 0x00C10AEC File Offset: 0x00C0ECEC
 		private void SetCardTaskDesc()
 		{
 			bool isAllFinish = PhantomArenaBattleModel.Instance.OwnData.TaskData.IsAllFinish;
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.CoreCard
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), phantomArenaFourTask.CoreDesc, Array.Empty<object>());
 		}
 
-		// Token: 0x06035F13 RID: 220947 RVA: 0x00CC349E File Offset: 0x00CC169E
+		// Token: 0x0602AE0E RID: 175630 RVA: 0x00C10B66 File Offset: 0x00C0ED66
 		private void BindSequence()
 		{
 			if (PhantomArenaBattleModel.Instance.OwnData.TaskData.IsAllFinish)
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.CoreCard
 			}
 		}
 
-		// Token: 0x06035F14 RID: 220948 RVA: 0x00CC34D2 File Offset: 0x00CC16D2
+		// Token: 0x0602AE0F RID: 175631 RVA: 0x00C10B9A File Offset: 0x00C0ED9A
 		private void PlayUpdateSequence(string sequenceName, string eventName)
 		{
 			if (sequenceName != "Start")
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.CoreCard
 			}
 		}
 
-		// Token: 0x06035F15 RID: 220949 RVA: 0x00CC3506 File Offset: 0x00CC1706
+		// Token: 0x0602AE10 RID: 175632 RVA: 0x00C10BCE File Offset: 0x00C0EDCE
 		public string GetExtraResourceId([Nullable(2)] object param = null)
 		{
 			if (!PhantomArenaBattleModel.Instance.IsOldBvb)
@@ -154,26 +154,26 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.CoreCard
 			return "UiView_CoreCard";
 		}
 
-		// Token: 0x0401C910 RID: 117008
+		// Token: 0x04017345 RID: 95045
 		protected CommonCardItem CardItem;
 
-		// Token: 0x0401C911 RID: 117009
+		// Token: 0x04017346 RID: 95046
 		private IPhantomArenaCoreCardData Data;
 
-		// Token: 0x0200B451 RID: 46161
+		// Token: 0x02009E89 RID: 40585
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x04036A26 RID: 223782
+			// Token: 0x04031479 RID: 201849
 			public const int CardItem = 0;
 
-			// Token: 0x04036A27 RID: 223783
+			// Token: 0x0403147A RID: 201850
 			public const int ProgressText = 1;
 
-			// Token: 0x04036A28 RID: 223784
+			// Token: 0x0403147B RID: 201851
 			public const int NameText = 2;
 
-			// Token: 0x04036A29 RID: 223785
+			// Token: 0x0403147C RID: 201852
 			public const int CloseBtn = 3;
 		}
 	}

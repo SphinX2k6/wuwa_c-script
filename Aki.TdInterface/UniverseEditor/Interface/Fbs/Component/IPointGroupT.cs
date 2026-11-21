@@ -4,20 +4,20 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200575B RID: 22363
+	// Token: 0x02005D62 RID: 23906
 	public class IPointGroupT
 	{
-		// Token: 0x1700A6D2 RID: 42706
-		// (get) Token: 0x0602579F RID: 153503 RVA: 0x0052BAA4 File Offset: 0x00529CA4
-		// (set) Token: 0x060257A0 RID: 153504 RVA: 0x0052BAAC File Offset: 0x00529CAC
+		// Token: 0x1700AFF6 RID: 45046
+		// (get) Token: 0x06027CBF RID: 163007 RVA: 0x00571C30 File Offset: 0x0056FE30
+		// (set) Token: 0x06027CC0 RID: 163008 RVA: 0x00571C38 File Offset: 0x0056FE38
 		public IPointGroupByLayerT GroupConfig { get; set; }
 
-		// Token: 0x1700A6D3 RID: 42707
-		// (get) Token: 0x060257A1 RID: 153505 RVA: 0x0052BAB5 File Offset: 0x00529CB5
-		// (set) Token: 0x060257A2 RID: 153506 RVA: 0x0052BABD File Offset: 0x00529CBD
+		// Token: 0x1700AFF7 RID: 45047
+		// (get) Token: 0x06027CC1 RID: 163009 RVA: 0x00571C41 File Offset: 0x0056FE41
+		// (set) Token: 0x06027CC2 RID: 163010 RVA: 0x00571C49 File Offset: 0x0056FE49
 		public List<IVectorInfoT> Points { get; set; }
 
-		// Token: 0x060257A3 RID: 153507 RVA: 0x0052BAC6 File Offset: 0x00529CC6
+		// Token: 0x06027CC3 RID: 163011 RVA: 0x00571C52 File Offset: 0x0056FE52
 		public IPointGroupT()
 		{
 			this.GroupConfig = null;

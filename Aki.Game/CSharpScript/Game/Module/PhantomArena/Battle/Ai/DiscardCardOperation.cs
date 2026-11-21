@@ -7,23 +7,23 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.Ai
 {
-	// Token: 0x020052DA RID: 21210
+	// Token: 0x020042AA RID: 17066
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DiscardCardOperation : NpcAiOperation
 	{
-		// Token: 0x170082FF RID: 33535
-		// (get) Token: 0x0603646E RID: 222318 RVA: 0x00CD7193 File Offset: 0x00CD5393
-		// (set) Token: 0x0603646F RID: 222319 RVA: 0x00CD719B File Offset: 0x00CD539B
+		// Token: 0x170056BF RID: 22207
+		// (get) Token: 0x0602B369 RID: 177001 RVA: 0x00C248BB File Offset: 0x00C22ABB
+		// (set) Token: 0x0602B36A RID: 177002 RVA: 0x00C248C3 File Offset: 0x00C22AC3
 		public NpcPhantomBattleDiscardInfo Info { get; private set; }
 
-		// Token: 0x06036470 RID: 222320 RVA: 0x00CD71A4 File Offset: 0x00CD53A4
+		// Token: 0x0602B36B RID: 177003 RVA: 0x00C248CC File Offset: 0x00C22ACC
 		public DiscardCardOperation(NpcPhantomBattleDiscardInfo info)
 		{
 			this.Info = info;
 		}
 
-		// Token: 0x06036471 RID: 222321 RVA: 0x00CD71B4 File Offset: 0x00CD53B4
+		// Token: 0x0602B36C RID: 177004 RVA: 0x00C248DC File Offset: 0x00C22ADC
 		public override UniTask ExecuteAiOperation(PhantomArenaBattleProxy proxy)
 		{
 			DiscardCardOperation.<ExecuteAiOperation>d__5 <ExecuteAiOperation>d__;

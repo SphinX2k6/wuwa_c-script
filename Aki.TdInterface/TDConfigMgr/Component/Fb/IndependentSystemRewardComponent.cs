@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AB3 RID: 2739
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B7D RID: 2941
 	public class IndependentSystemRewardComponent : IComponentBase
 	{
-		// Token: 0x06003F25 RID: 16165 RVA: 0x000A17D9 File Offset: 0x0009F9D9
+		// Token: 0x0600434F RID: 17231 RVA: 0x000AADCD File Offset: 0x000A8FCD
 		public static IndependentSystemRewardComponent Create(IIndependentSystemRewardComponent? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000F7C RID: 3964
-		// (get) Token: 0x06003F26 RID: 16166 RVA: 0x000A17F8 File Offset: 0x0009F9F8
+		// Token: 0x17001050 RID: 4176
+		// (get) Token: 0x06004350 RID: 17232 RVA: 0x000AADEC File Offset: 0x000A8FEC
 		public override bool? Disabled
 		{
 			get
@@ -36,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F7D RID: 3965
-		// (get) Token: 0x06003F27 RID: 16167 RVA: 0x000A1830 File Offset: 0x0009FA30
+		// Token: 0x17001051 RID: 4177
+		// (get) Token: 0x06004351 RID: 17233 RVA: 0x000AAE24 File Offset: 0x000A9024
 		public override bool? EdIsLocked
 		{
 			get
@@ -46,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F7E RID: 3966
-		// (get) Token: 0x06003F28 RID: 16168 RVA: 0x000A1846 File Offset: 0x0009FA46
+		// Token: 0x17001052 RID: 4178
+		// (get) Token: 0x06004352 RID: 17234 RVA: 0x000AAE3A File Offset: 0x000A903A
 		public virtual IDarkTideIndependentSystemReward RewardType
 		{
 			get
@@ -62,14 +60,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002314 RID: 8980
+		// Token: 0x04002530 RID: 9520
 		private IIndependentSystemRewardComponent Instance;
 
-		// Token: 0x04002315 RID: 8981
+		// Token: 0x04002531 RID: 9521
 		[Nullable(2)]
 		private IDarkTideIndependentSystemReward _RewardTypeCache;
 
-		// Token: 0x04002316 RID: 8982
+		// Token: 0x04002532 RID: 9522
 		private bool _RewardTypeInited;
 	}
 }

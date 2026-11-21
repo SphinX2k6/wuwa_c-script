@@ -1,24 +1,24 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020018F2 RID: 6386
+// Token: 0x02000DAB RID: 3499
 [NullableContext(2)]
 public interface IItemTipsLockStateData
 {
-	// Token: 0x17000F92 RID: 3986
-	// (get) Token: 0x0600BB24 RID: 47908
+	// Token: 0x17000FB5 RID: 4021
+	// (get) Token: 0x06008F0E RID: 36622
 	bool? IsShowLockIcon { get; }
 
-	// Token: 0x17000F93 RID: 3987
-	// (get) Token: 0x0600BB25 RID: 47909
+	// Token: 0x17000FB6 RID: 4022
+	// (get) Token: 0x06008F0F RID: 36623
 	bool? IsShowHelpButton { get; }
 
-	// Token: 0x17000F94 RID: 3988
-	// (get) Token: 0x0600BB26 RID: 47910
+	// Token: 0x17000FB7 RID: 4023
+	// (get) Token: 0x06008F10 RID: 36624
 	string TipsTextKey { get; }
 
-	// Token: 0x17000F95 RID: 3989
-	// (get) Token: 0x0600BB27 RID: 47911
+	// Token: 0x17000FB8 RID: 4024
+	// (get) Token: 0x06008F11 RID: 36625
 	[Nullable(new byte[]
 	{
 		2,
@@ -30,7 +30,7 @@ public interface IItemTipsLockStateData
 		1
 	})] get; }
 
-	// Token: 0x17000F96 RID: 3990
-	// (get) Token: 0x0600BB28 RID: 47912
+	// Token: 0x17000FB9 RID: 4025
+	// (get) Token: 0x06008F12 RID: 36626
 	Action HelpBtnCallback { get; }
 }

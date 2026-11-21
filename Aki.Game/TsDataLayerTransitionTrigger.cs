@@ -10,16 +10,16 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x020032BA RID: 12986
+// Token: 0x0200282B RID: 10283
 [NullableContext(2)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/NewWorld/TriggerItems/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/NewWorld/TriggerItems/TsDataLayerTransitionTrigger.TsDataLayerTransitionTrigger_C")]
 public class TsDataLayerTransitionTrigger : AActor, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170026DB RID: 9947
-	// (get) Token: 0x0601C219 RID: 115225 RVA: 0x007D4A52 File Offset: 0x007D2C52
-	// (set) Token: 0x0601C21A RID: 115226 RVA: 0x007D4A62 File Offset: 0x007D2C62
+	// Token: 0x170029C8 RID: 10696
+	// (get) Token: 0x06019E5A RID: 106074 RVA: 0x007FBB4E File Offset: 0x007F9D4E
+	// (set) Token: 0x06019E5B RID: 106075 RVA: 0x007FBB5E File Offset: 0x007F9D5E
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool FunctionEnable
 	{
@@ -33,9 +33,9 @@ public class TsDataLayerTransitionTrigger : AActor, IUnrealUObject, IUnrealObjec
 		}
 	}
 
-	// Token: 0x170026DC RID: 9948
-	// (get) Token: 0x0601C21B RID: 115227 RVA: 0x007D4A73 File Offset: 0x007D2C73
-	// (set) Token: 0x0601C21C RID: 115228 RVA: 0x007D4A83 File Offset: 0x007D2C83
+	// Token: 0x170029C9 RID: 10697
+	// (get) Token: 0x06019E5C RID: 106076 RVA: 0x007FBB6F File Offset: 0x007F9D6F
+	// (set) Token: 0x06019E5D RID: 106077 RVA: 0x007FBB7F File Offset: 0x007F9D7F
 	[UProperty(EPropertyFlags.CPF_None)]
 	private unsafe bool TriggerState
 	{
@@ -49,9 +49,9 @@ public class TsDataLayerTransitionTrigger : AActor, IUnrealUObject, IUnrealObjec
 		}
 	}
 
-	// Token: 0x170026DD RID: 9949
-	// (get) Token: 0x0601C21D RID: 115229 RVA: 0x007D4A94 File Offset: 0x007D2C94
-	// (set) Token: 0x0601C21E RID: 115230 RVA: 0x007D4AA4 File Offset: 0x007D2CA4
+	// Token: 0x170029CA RID: 10698
+	// (get) Token: 0x06019E5E RID: 106078 RVA: 0x007FBB90 File Offset: 0x007F9D90
+	// (set) Token: 0x06019E5F RID: 106079 RVA: 0x007FBBA0 File Offset: 0x007F9DA0
 	[UProperty(EPropertyFlags.CPF_None)]
 	protected unsafe bool UseTransitionWhenTeleport
 	{
@@ -65,9 +65,9 @@ public class TsDataLayerTransitionTrigger : AActor, IUnrealUObject, IUnrealObjec
 		}
 	}
 
-	// Token: 0x170026DE RID: 9950
-	// (get) Token: 0x0601C21F RID: 115231 RVA: 0x007D4AB5 File Offset: 0x007D2CB5
-	// (set) Token: 0x0601C220 RID: 115232 RVA: 0x007D4AC9 File Offset: 0x007D2CC9
+	// Token: 0x170029CB RID: 10699
+	// (get) Token: 0x06019E60 RID: 106080 RVA: 0x007FBBB1 File Offset: 0x007F9DB1
+	// (set) Token: 0x06019E61 RID: 106081 RVA: 0x007FBBC5 File Offset: 0x007F9DC5
 	[UProperty(EPropertyFlags.CPF_None)]
 	protected unsafe AVolume Volume
 	{
@@ -81,8 +81,8 @@ public class TsDataLayerTransitionTrigger : AActor, IUnrealUObject, IUnrealObjec
 		}
 	}
 
-	// Token: 0x170026DF RID: 9951
-	// (get) Token: 0x0601C221 RID: 115233 RVA: 0x007D4AE0 File Offset: 0x007D2CE0
+	// Token: 0x170029CC RID: 10700
+	// (get) Token: 0x06019E62 RID: 106082 RVA: 0x007FBBDC File Offset: 0x007F9DDC
 	[Nullable(1)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	protected TMap<FName, bool> DatalayerStateMap
@@ -100,9 +100,9 @@ public class TsDataLayerTransitionTrigger : AActor, IUnrealUObject, IUnrealObjec
 		}
 	}
 
-	// Token: 0x170026E0 RID: 9952
-	// (get) Token: 0x0601C222 RID: 115234 RVA: 0x007D4B19 File Offset: 0x007D2D19
-	// (set) Token: 0x0601C223 RID: 115235 RVA: 0x007D4B2D File Offset: 0x007D2D2D
+	// Token: 0x170029CD RID: 10701
+	// (get) Token: 0x06019E63 RID: 106083 RVA: 0x007FBC15 File Offset: 0x007F9E15
+	// (set) Token: 0x06019E64 RID: 106084 RVA: 0x007FBC29 File Offset: 0x007F9E29
 	[UProperty(EPropertyFlags.CPF_None)]
 	protected unsafe UKuroSceneMatModifyDataAsset MatForActivatingDataLayers
 	{
@@ -116,9 +116,9 @@ public class TsDataLayerTransitionTrigger : AActor, IUnrealUObject, IUnrealObjec
 		}
 	}
 
-	// Token: 0x170026E1 RID: 9953
-	// (get) Token: 0x0601C224 RID: 115236 RVA: 0x007D4B42 File Offset: 0x007D2D42
-	// (set) Token: 0x0601C225 RID: 115237 RVA: 0x007D4B56 File Offset: 0x007D2D56
+	// Token: 0x170029CE RID: 10702
+	// (get) Token: 0x06019E65 RID: 106085 RVA: 0x007FBC3E File Offset: 0x007F9E3E
+	// (set) Token: 0x06019E66 RID: 106086 RVA: 0x007FBC52 File Offset: 0x007F9E52
 	[UProperty(EPropertyFlags.CPF_None)]
 	protected unsafe UKuroSceneMatModifyDataAsset MatForDeactivatingDataLayers
 	{
@@ -132,9 +132,9 @@ public class TsDataLayerTransitionTrigger : AActor, IUnrealUObject, IUnrealObjec
 		}
 	}
 
-	// Token: 0x170026E2 RID: 9954
-	// (get) Token: 0x0601C226 RID: 115238 RVA: 0x007D4B6B File Offset: 0x007D2D6B
-	// (set) Token: 0x0601C227 RID: 115239 RVA: 0x007D4B7F File Offset: 0x007D2D7F
+	// Token: 0x170029CF RID: 10703
+	// (get) Token: 0x06019E67 RID: 106087 RVA: 0x007FBC67 File Offset: 0x007F9E67
+	// (set) Token: 0x06019E68 RID: 106088 RVA: 0x007FBC7B File Offset: 0x007F9E7B
 	[UProperty(EPropertyFlags.CPF_None)]
 	protected unsafe ULevelSequence SeqForSourceIn
 	{
@@ -148,9 +148,9 @@ public class TsDataLayerTransitionTrigger : AActor, IUnrealUObject, IUnrealObjec
 		}
 	}
 
-	// Token: 0x170026E3 RID: 9955
-	// (get) Token: 0x0601C228 RID: 115240 RVA: 0x007D4B94 File Offset: 0x007D2D94
-	// (set) Token: 0x0601C229 RID: 115241 RVA: 0x007D4BA8 File Offset: 0x007D2DA8
+	// Token: 0x170029D0 RID: 10704
+	// (get) Token: 0x06019E69 RID: 106089 RVA: 0x007FBC90 File Offset: 0x007F9E90
+	// (set) Token: 0x06019E6A RID: 106090 RVA: 0x007FBCA4 File Offset: 0x007F9EA4
 	[Nullable(1)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	protected unsafe string SeqMarkBeforeModifyMatForSourceIn
@@ -167,9 +167,9 @@ public class TsDataLayerTransitionTrigger : AActor, IUnrealUObject, IUnrealObjec
 		}
 	}
 
-	// Token: 0x170026E4 RID: 9956
-	// (get) Token: 0x0601C22A RID: 115242 RVA: 0x007D4BBD File Offset: 0x007D2DBD
-	// (set) Token: 0x0601C22B RID: 115243 RVA: 0x007D4BD1 File Offset: 0x007D2DD1
+	// Token: 0x170029D1 RID: 10705
+	// (get) Token: 0x06019E6B RID: 106091 RVA: 0x007FBCB9 File Offset: 0x007F9EB9
+	// (set) Token: 0x06019E6C RID: 106092 RVA: 0x007FBCCD File Offset: 0x007F9ECD
 	[UProperty(EPropertyFlags.CPF_None)]
 	protected unsafe ULevelSequence SeqForSourceOut
 	{
@@ -183,9 +183,9 @@ public class TsDataLayerTransitionTrigger : AActor, IUnrealUObject, IUnrealObjec
 		}
 	}
 
-	// Token: 0x170026E5 RID: 9957
-	// (get) Token: 0x0601C22C RID: 115244 RVA: 0x007D4BE6 File Offset: 0x007D2DE6
-	// (set) Token: 0x0601C22D RID: 115245 RVA: 0x007D4BFA File Offset: 0x007D2DFA
+	// Token: 0x170029D2 RID: 10706
+	// (get) Token: 0x06019E6D RID: 106093 RVA: 0x007FBCE2 File Offset: 0x007F9EE2
+	// (set) Token: 0x06019E6E RID: 106094 RVA: 0x007FBCF6 File Offset: 0x007F9EF6
 	[Nullable(1)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	protected unsafe string SeqMarkBeforeModifyMatForSourceOut
@@ -202,28 +202,25 @@ public class TsDataLayerTransitionTrigger : AActor, IUnrealUObject, IUnrealObjec
 		}
 	}
 
-	// Token: 0x0601C22E RID: 115246 RVA: 0x007D4C10 File Offset: 0x007D2E10
+	// Token: 0x06019E6F RID: 106095 RVA: 0x007FBD0C File Offset: 0x007F9F0C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void SetMatForActivatingDataLayers(UKuroSceneMatModifyDataAsset asset)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetMatForActivatingDataLayers"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsDataLayerTransitionTrigger.__SetMatForActivatingDataLayers_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsDataLayerTransitionTrigger) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetMatForActivatingDataLayers"), TsDataLayerTransitionTrigger.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsDataLayerTransitionTrigger.__SetMatForActivatingDataLayers_FunctionParams*)ptr + 15L / (long)sizeof(TsDataLayerTransitionTrigger.__SetMatForActivatingDataLayers_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->asset) = ((asset != null) ? asset.NativePtr : ((IntPtr)0));
+			this.SetMatForActivatingDataLayers_Implementation(asset);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsDataLayerTransitionTrigger.__SetMatForActivatingDataLayers_FunctionParams* ptr = stackalloc TsDataLayerTransitionTrigger.__SetMatForActivatingDataLayers_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsDataLayerTransitionTrigger.__SetMatForActivatingDataLayers_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->asset) = ((asset != null) ? asset.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601C22F RID: 115247 RVA: 0x007D4C94 File Offset: 0x007D2E94
+	// Token: 0x06019E70 RID: 106096 RVA: 0x007FBDA6 File Offset: 0x007F9FA6
 	protected void SetMatForActivatingDataLayers_Implementation(UKuroSceneMatModifyDataAsset asset)
 	{
 		this.MatForActivatingDataLayers = asset;
@@ -235,7 +232,7 @@ public class TsDataLayerTransitionTrigger : AActor, IUnrealUObject, IUnrealObjec
 		}
 	}
 
-	// Token: 0x0601C230 RID: 115248 RVA: 0x007D4CC4 File Offset: 0x007D2EC4
+	// Token: 0x06019E71 RID: 106097 RVA: 0x007FBDD8 File Offset: 0x007F9FD8
 	public void SetMatForActivatingDataLayersByPath(string path)
 	{
 		this.MatForActivatingDataLayers = null;
@@ -261,29 +258,25 @@ public class TsDataLayerTransitionTrigger : AActor, IUnrealUObject, IUnrealObjec
 		}
 	}
 
-	// Token: 0x0601C231 RID: 115249 RVA: 0x007D4D44 File Offset: 0x007D2F44
+	// Token: 0x06019E72 RID: 106098 RVA: 0x007FBE58 File Offset: 0x007FA058
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual bool WasMatForActivatingDataLayersSet()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("WasMatForActivatingDataLayersSet"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsDataLayerTransitionTrigger.__WasMatForActivatingDataLayersSet_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsDataLayerTransitionTrigger) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("WasMatForActivatingDataLayersSet"), TsDataLayerTransitionTrigger.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsDataLayerTransitionTrigger.__WasMatForActivatingDataLayersSet_FunctionParams*)ptr + 15L / (long)sizeof(TsDataLayerTransitionTrigger.__WasMatForActivatingDataLayersSet_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.WasMatForActivatingDataLayersSet_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsDataLayerTransitionTrigger.__WasMatForActivatingDataLayersSet_FunctionParams* ptr = stackalloc TsDataLayerTransitionTrigger.__WasMatForActivatingDataLayersSet_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsDataLayerTransitionTrigger.__WasMatForActivatingDataLayersSet_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x0601C232 RID: 115250 RVA: 0x007D4DB9 File Offset: 0x007D2FB9
+	// Token: 0x06019E73 RID: 106099 RVA: 0x007FBEE2 File Offset: 0x007FA0E2
 	protected bool WasMatForActivatingDataLayersSet_Implementation()
 	{
 		if (this.MatForActivatingDataLayersLoadingHandle != -1)
@@ -295,28 +288,25 @@ public class TsDataLayerTransitionTrigger : AActor, IUnrealUObject, IUnrealObjec
 		return matForActivatingDataLayers != null && matForActivatingDataLayers.IsValid();
 	}
 
-	// Token: 0x0601C233 RID: 115251 RVA: 0x007D4DEC File Offset: 0x007D2FEC
+	// Token: 0x06019E74 RID: 106100 RVA: 0x007FBF14 File Offset: 0x007FA114
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void SetMatForDeactivatingDataLayers(UKuroSceneMatModifyDataAsset asset)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetMatForDeactivatingDataLayers"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsDataLayerTransitionTrigger.__SetMatForDeactivatingDataLayers_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsDataLayerTransitionTrigger) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetMatForDeactivatingDataLayers"), TsDataLayerTransitionTrigger.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsDataLayerTransitionTrigger.__SetMatForDeactivatingDataLayers_FunctionParams*)ptr + 15L / (long)sizeof(TsDataLayerTransitionTrigger.__SetMatForDeactivatingDataLayers_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->asset) = ((asset != null) ? asset.NativePtr : ((IntPtr)0));
+			this.SetMatForDeactivatingDataLayers_Implementation(asset);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsDataLayerTransitionTrigger.__SetMatForDeactivatingDataLayers_FunctionParams* ptr = stackalloc TsDataLayerTransitionTrigger.__SetMatForDeactivatingDataLayers_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsDataLayerTransitionTrigger.__SetMatForDeactivatingDataLayers_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->asset) = ((asset != null) ? asset.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601C234 RID: 115252 RVA: 0x007D4E70 File Offset: 0x007D3070
+	// Token: 0x06019E75 RID: 106101 RVA: 0x007FBFAE File Offset: 0x007FA1AE
 	protected void SetMatForDeactivatingDataLayers_Implementation(UKuroSceneMatModifyDataAsset asset)
 	{
 		this.MatForDeactivatingDataLayers = asset;
@@ -328,7 +318,7 @@ public class TsDataLayerTransitionTrigger : AActor, IUnrealUObject, IUnrealObjec
 		}
 	}
 
-	// Token: 0x0601C235 RID: 115253 RVA: 0x007D4EA0 File Offset: 0x007D30A0
+	// Token: 0x06019E76 RID: 106102 RVA: 0x007FBFE0 File Offset: 0x007FA1E0
 	public void SetMatForDeactivatingDataLayersByPath(string path)
 	{
 		this.MatForDeactivatingDataLayers = null;
@@ -354,29 +344,25 @@ public class TsDataLayerTransitionTrigger : AActor, IUnrealUObject, IUnrealObjec
 		}
 	}
 
-	// Token: 0x0601C236 RID: 115254 RVA: 0x007D4F20 File Offset: 0x007D3120
+	// Token: 0x06019E77 RID: 106103 RVA: 0x007FC060 File Offset: 0x007FA260
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual bool WasMatForDeactivatingDataLayersSet()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("WasMatForDeactivatingDataLayersSet"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsDataLayerTransitionTrigger.__WasMatForDeactivatingDataLayersSet_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsDataLayerTransitionTrigger) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("WasMatForDeactivatingDataLayersSet"), TsDataLayerTransitionTrigger.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsDataLayerTransitionTrigger.__WasMatForDeactivatingDataLayersSet_FunctionParams*)ptr + 15L / (long)sizeof(TsDataLayerTransitionTrigger.__WasMatForDeactivatingDataLayersSet_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.WasMatForDeactivatingDataLayersSet_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsDataLayerTransitionTrigger.__WasMatForDeactivatingDataLayersSet_FunctionParams* ptr = stackalloc TsDataLayerTransitionTrigger.__WasMatForDeactivatingDataLayersSet_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsDataLayerTransitionTrigger.__WasMatForDeactivatingDataLayersSet_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x0601C237 RID: 115255 RVA: 0x007D4F95 File Offset: 0x007D3195
+	// Token: 0x06019E78 RID: 106104 RVA: 0x007FC0EA File Offset: 0x007FA2EA
 	protected bool WasMatForDeactivatingDataLayersSet_Implementation()
 	{
 		if (this.MatForDeactivatingDataLayersLoadingHandle != -1)
@@ -388,30 +374,27 @@ public class TsDataLayerTransitionTrigger : AActor, IUnrealUObject, IUnrealObjec
 		return matForDeactivatingDataLayers != null && matForDeactivatingDataLayers.IsValid();
 	}
 
-	// Token: 0x0601C238 RID: 115256 RVA: 0x007D4FC8 File Offset: 0x007D31C8
+	// Token: 0x06019E79 RID: 106105 RVA: 0x007FC11C File Offset: 0x007FA31C
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void SetSeqForSourceIn([Nullable(2)] ULevelSequence asset, string beforeModifyMatMark)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetSeqForSourceIn"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsDataLayerTransitionTrigger.__SetSeqForSourceIn_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsDataLayerTransitionTrigger) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetSeqForSourceIn"), TsDataLayerTransitionTrigger.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsDataLayerTransitionTrigger.__SetSeqForSourceIn_FunctionParams*)ptr + 15L / (long)sizeof(TsDataLayerTransitionTrigger.__SetSeqForSourceIn_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->asset) = ((asset != null) ? asset.NativePtr : ((IntPtr)0));
-			FString.CopyFrom((void*)(&ptr2->beforeModifyMatMark), beforeModifyMatMark);
+			this.SetSeqForSourceIn_Implementation(asset, beforeModifyMatMark);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsDataLayerTransitionTrigger.__SetSeqForSourceIn_FunctionParams* ptr = stackalloc TsDataLayerTransitionTrigger.__SetSeqForSourceIn_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsDataLayerTransitionTrigger.__SetSeqForSourceIn_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->asset) = ((asset != null) ? asset.NativePtr : ((IntPtr)0));
+		FString.CopyFrom((void*)(&ptr->beforeModifyMatMark), beforeModifyMatMark);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601C239 RID: 115257 RVA: 0x007D5059 File Offset: 0x007D3259
+	// Token: 0x06019E7A RID: 106106 RVA: 0x007FC1C4 File Offset: 0x007FA3C4
 	[NullableContext(1)]
 	protected void SetSeqForSourceIn_Implementation([Nullable(2)] ULevelSequence asset, string beforeModifyMatMark)
 	{
@@ -425,7 +408,7 @@ public class TsDataLayerTransitionTrigger : AActor, IUnrealUObject, IUnrealObjec
 		}
 	}
 
-	// Token: 0x0601C23A RID: 115258 RVA: 0x007D5090 File Offset: 0x007D3290
+	// Token: 0x06019E7B RID: 106107 RVA: 0x007FC1FC File Offset: 0x007FA3FC
 	[NullableContext(1)]
 	public void SetSeqForSourceInByPath([Nullable(2)] string path, string beforeModifyMatMark = "")
 	{
@@ -453,29 +436,25 @@ public class TsDataLayerTransitionTrigger : AActor, IUnrealUObject, IUnrealObjec
 		}
 	}
 
-	// Token: 0x0601C23B RID: 115259 RVA: 0x007D5124 File Offset: 0x007D3324
+	// Token: 0x06019E7C RID: 106108 RVA: 0x007FC290 File Offset: 0x007FA490
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual bool WasSeqForSourceInSet()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("WasSeqForSourceInSet"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsDataLayerTransitionTrigger.__WasSeqForSourceInSet_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsDataLayerTransitionTrigger) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("WasSeqForSourceInSet"), TsDataLayerTransitionTrigger.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsDataLayerTransitionTrigger.__WasSeqForSourceInSet_FunctionParams*)ptr + 15L / (long)sizeof(TsDataLayerTransitionTrigger.__WasSeqForSourceInSet_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.WasSeqForSourceInSet_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsDataLayerTransitionTrigger.__WasSeqForSourceInSet_FunctionParams* ptr = stackalloc TsDataLayerTransitionTrigger.__WasSeqForSourceInSet_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsDataLayerTransitionTrigger.__WasSeqForSourceInSet_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x0601C23C RID: 115260 RVA: 0x007D5199 File Offset: 0x007D3399
+	// Token: 0x06019E7D RID: 106109 RVA: 0x007FC31A File Offset: 0x007FA51A
 	protected bool WasSeqForSourceInSet_Implementation()
 	{
 		if (this.SeqForSourceInLoadingHandle != -1)
@@ -487,30 +466,27 @@ public class TsDataLayerTransitionTrigger : AActor, IUnrealUObject, IUnrealObjec
 		return seqForSourceIn != null && seqForSourceIn.IsValid();
 	}
 
-	// Token: 0x0601C23D RID: 115261 RVA: 0x007D51CC File Offset: 0x007D33CC
+	// Token: 0x06019E7E RID: 106110 RVA: 0x007FC34C File Offset: 0x007FA54C
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void SetSeqForSourceOut([Nullable(2)] ULevelSequence asset, string beforeModifyMatMark)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetSeqForSourceOut"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsDataLayerTransitionTrigger.__SetSeqForSourceOut_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsDataLayerTransitionTrigger) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetSeqForSourceOut"), TsDataLayerTransitionTrigger.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsDataLayerTransitionTrigger.__SetSeqForSourceOut_FunctionParams*)ptr + 15L / (long)sizeof(TsDataLayerTransitionTrigger.__SetSeqForSourceOut_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->asset) = ((asset != null) ? asset.NativePtr : ((IntPtr)0));
-			FString.CopyFrom((void*)(&ptr2->beforeModifyMatMark), beforeModifyMatMark);
+			this.SetSeqForSourceOut_Implementation(asset, beforeModifyMatMark);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsDataLayerTransitionTrigger.__SetSeqForSourceOut_FunctionParams* ptr = stackalloc TsDataLayerTransitionTrigger.__SetSeqForSourceOut_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsDataLayerTransitionTrigger.__SetSeqForSourceOut_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->asset) = ((asset != null) ? asset.NativePtr : ((IntPtr)0));
+		FString.CopyFrom((void*)(&ptr->beforeModifyMatMark), beforeModifyMatMark);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601C23E RID: 115262 RVA: 0x007D525D File Offset: 0x007D345D
+	// Token: 0x06019E7F RID: 106111 RVA: 0x007FC3F4 File Offset: 0x007FA5F4
 	[NullableContext(1)]
 	protected void SetSeqForSourceOut_Implementation([Nullable(2)] ULevelSequence asset, string beforeModifyMatMark)
 	{
@@ -524,7 +500,7 @@ public class TsDataLayerTransitionTrigger : AActor, IUnrealUObject, IUnrealObjec
 		}
 	}
 
-	// Token: 0x0601C23F RID: 115263 RVA: 0x007D5294 File Offset: 0x007D3494
+	// Token: 0x06019E80 RID: 106112 RVA: 0x007FC42C File Offset: 0x007FA62C
 	[NullableContext(1)]
 	public void SetSeqForSourceOutByPath([Nullable(2)] string path, string beforeModifyMatMark = "")
 	{
@@ -552,29 +528,25 @@ public class TsDataLayerTransitionTrigger : AActor, IUnrealUObject, IUnrealObjec
 		}
 	}
 
-	// Token: 0x0601C240 RID: 115264 RVA: 0x007D5328 File Offset: 0x007D3528
+	// Token: 0x06019E81 RID: 106113 RVA: 0x007FC4C0 File Offset: 0x007FA6C0
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual bool WasSeqForSourceOutSet()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("WasSeqForSourceOutSet"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsDataLayerTransitionTrigger.__WasSeqForSourceOutSet_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsDataLayerTransitionTrigger) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("WasSeqForSourceOutSet"), TsDataLayerTransitionTrigger.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsDataLayerTransitionTrigger.__WasSeqForSourceOutSet_FunctionParams*)ptr + 15L / (long)sizeof(TsDataLayerTransitionTrigger.__WasSeqForSourceOutSet_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.WasSeqForSourceOutSet_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsDataLayerTransitionTrigger.__WasSeqForSourceOutSet_FunctionParams* ptr = stackalloc TsDataLayerTransitionTrigger.__WasSeqForSourceOutSet_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsDataLayerTransitionTrigger.__WasSeqForSourceOutSet_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x0601C241 RID: 115265 RVA: 0x007D539D File Offset: 0x007D359D
+	// Token: 0x06019E82 RID: 106114 RVA: 0x007FC54A File Offset: 0x007FA74A
 	protected bool WasSeqForSourceOutSet_Implementation()
 	{
 		if (this.SeqForSourceOutLoadingHandle != -1)
@@ -586,7 +558,7 @@ public class TsDataLayerTransitionTrigger : AActor, IUnrealUObject, IUnrealObjec
 		return seqForSourceOut != null && seqForSourceOut.IsValid();
 	}
 
-	// Token: 0x0601C242 RID: 115266 RVA: 0x007D53D0 File Offset: 0x007D35D0
+	// Token: 0x06019E83 RID: 106115 RVA: 0x007FC57C File Offset: 0x007FA77C
 	public override void ReceiveBeginPlay()
 	{
 		BP_EWorldType worldType = UKuroRenderingRuntimeBPPluginBPLibrary.GetWorldType(this);
@@ -597,7 +569,7 @@ public class TsDataLayerTransitionTrigger : AActor, IUnrealUObject, IUnrealObjec
 		this.InitVolume();
 	}
 
-	// Token: 0x0601C243 RID: 115267 RVA: 0x007D53F4 File Offset: 0x007D35F4
+	// Token: 0x06019E84 RID: 106116 RVA: 0x007FC5A0 File Offset: 0x007FA7A0
 	private void InitVolume()
 	{
 		if (this.Volume == null)
@@ -627,7 +599,7 @@ public class TsDataLayerTransitionTrigger : AActor, IUnrealUObject, IUnrealObjec
 		}
 	}
 
-	// Token: 0x0601C244 RID: 115268 RVA: 0x007D549C File Offset: 0x007D369C
+	// Token: 0x06019E85 RID: 106117 RVA: 0x007FC648 File Offset: 0x007FA848
 	[NullableContext(0)]
 	private void OnVolumeEndPlayHandle([Nullable(2)] AActor actor, TEnumAsByte<EEndPlayReason> endPlayReason)
 	{
@@ -644,7 +616,7 @@ public class TsDataLayerTransitionTrigger : AActor, IUnrealUObject, IUnrealObjec
 		volume2.OnActorEndOverlap.Remove(new Action<AActor, AActor>(this.OnVolumeActorEndOverlapHandle));
 	}
 
-	// Token: 0x0601C245 RID: 115269 RVA: 0x007D54EC File Offset: 0x007D36EC
+	// Token: 0x06019E86 RID: 106118 RVA: 0x007FC698 File Offset: 0x007FA898
 	private void OnVolumeActorBeginOverlapHandle(AActor overlappedActor, AActor otherActor)
 	{
 		if (otherActor != RoleTriggerController.Instance.GetMyRoleTriggerOrUndefined())
@@ -655,7 +627,7 @@ public class TsDataLayerTransitionTrigger : AActor, IUnrealUObject, IUnrealObjec
 		this.OnTriggerStateChanged();
 	}
 
-	// Token: 0x0601C246 RID: 115270 RVA: 0x007D5509 File Offset: 0x007D3709
+	// Token: 0x06019E87 RID: 106119 RVA: 0x007FC6B5 File Offset: 0x007FA8B5
 	private void OnVolumeActorEndOverlapHandle(AActor overlappedActor, AActor otherActor)
 	{
 		if (otherActor != RoleTriggerController.Instance.GetMyRoleTriggerOrUndefined())
@@ -666,7 +638,7 @@ public class TsDataLayerTransitionTrigger : AActor, IUnrealUObject, IUnrealObjec
 		this.OnTriggerStateChanged();
 	}
 
-	// Token: 0x0601C247 RID: 115271 RVA: 0x007D5528 File Offset: 0x007D3728
+	// Token: 0x06019E88 RID: 106120 RVA: 0x007FC6D4 File Offset: 0x007FA8D4
 	public unsafe void OnTriggerStateChanged()
 	{
 		if (!this.FunctionEnable)
@@ -755,7 +727,7 @@ public class TsDataLayerTransitionTrigger : AActor, IUnrealUObject, IUnrealObjec
 		this.TryStartNextTask();
 	}
 
-	// Token: 0x0601C248 RID: 115272 RVA: 0x007D58D8 File Offset: 0x007D3AD8
+	// Token: 0x06019E89 RID: 106121 RVA: 0x007FCA84 File Offset: 0x007FAC84
 	private void TryStartNextTask()
 	{
 		if (this.ExecutingTransitionTasks.Count > 0)
@@ -775,7 +747,7 @@ public class TsDataLayerTransitionTrigger : AActor, IUnrealUObject, IUnrealObjec
 		dataLayersTransitionTask.StartTask();
 	}
 
-	// Token: 0x0601C249 RID: 115273 RVA: 0x007D592B File Offset: 0x007D3B2B
+	// Token: 0x06019E8A RID: 106122 RVA: 0x007FCAD7 File Offset: 0x007FACD7
 	[NullableContext(1)]
 	private void OnTransitionTaskFinish(DataLayersTransitionTask task, bool success)
 	{
@@ -783,7 +755,7 @@ public class TsDataLayerTransitionTrigger : AActor, IUnrealUObject, IUnrealObjec
 		this.TryStartNextTask();
 	}
 
-	// Token: 0x0601C24A RID: 115274 RVA: 0x007D5940 File Offset: 0x007D3B40
+	// Token: 0x06019E8B RID: 106123 RVA: 0x007FCAEC File Offset: 0x007FACEC
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsDataLayerTransitionTrigger._ClassPtr == IntPtr.Zero)
@@ -793,36 +765,24 @@ public class TsDataLayerTransitionTrigger : AActor, IUnrealUObject, IUnrealObjec
 		return TsDataLayerTransitionTrigger._ClassPtr;
 	}
 
-	// Token: 0x0601C24B RID: 115275 RVA: 0x007D5964 File Offset: 0x007D3B64
+	// Token: 0x06019E8C RID: 106124 RVA: 0x007FCB10 File Offset: 0x007FAD10
 	public TsDataLayerTransitionTrigger() : this(BuiltinUtils.AllocNativeUObject(TsDataLayerTransitionTrigger.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0601C24C RID: 115276 RVA: 0x007D598C File Offset: 0x007D3B8C
+	// Token: 0x06019E8D RID: 106125 RVA: 0x007FCB38 File Offset: 0x007FAD38
 	[NullableContext(1)]
 	public TsDataLayerTransitionTrigger(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsDataLayerTransitionTrigger.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601C24D RID: 115277 RVA: 0x007D59BF File Offset: 0x007D3BBF
+	// Token: 0x06019E8E RID: 106126 RVA: 0x007FCB6B File Offset: 0x007FAD6B
 	protected TsDataLayerTransitionTrigger(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x170026E6 RID: 9958
-	// (get) Token: 0x0601C24E RID: 115278 RVA: 0x007D59FB File Offset: 0x007D3BFB
-	[Nullable(1)]
-	public unsafe FPointerToUberGraphFrame UberGraphFrame
-	{
-		[NullableContext(1)]
-		get
-		{
-			return *(base.NativePtr + (IntPtr)TsDataLayerTransitionTrigger.__PropertyOffset_UberGraphFrame);
-		}
-	}
-
-	// Token: 0x170026E7 RID: 9959
-	// (get) Token: 0x0601C24F RID: 115279 RVA: 0x007D5A0B File Offset: 0x007D3C0B
+	// Token: 0x170029D3 RID: 10707
+	// (get) Token: 0x06019E8F RID: 106127 RVA: 0x007FCBA7 File Offset: 0x007FADA7
 	public unsafe USceneComponent DefaultSceneRoot
 	{
 		get
@@ -831,7 +791,7 @@ public class TsDataLayerTransitionTrigger : AActor, IUnrealUObject, IUnrealObjec
 		}
 	}
 
-	// Token: 0x0601C250 RID: 115280 RVA: 0x007D5A20 File Offset: 0x007D3C20
+	// Token: 0x06019E90 RID: 106128 RVA: 0x007FCBBC File Offset: 0x007FADBC
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_SetMatForActivatingDataLayers_Implementation(TsDataLayerTransitionTrigger.__SetMatForActivatingDataLayers_FunctionParams* __Params)
 	{
@@ -839,14 +799,14 @@ public class TsDataLayerTransitionTrigger : AActor, IUnrealUObject, IUnrealObjec
 		this.SetMatForActivatingDataLayers_Implementation(orCreateUObjectByNativePointer);
 	}
 
-	// Token: 0x0601C251 RID: 115281 RVA: 0x007D5A40 File Offset: 0x007D3C40
+	// Token: 0x06019E91 RID: 106129 RVA: 0x007FCBDC File Offset: 0x007FADDC
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_WasMatForActivatingDataLayersSet_Implementation(TsDataLayerTransitionTrigger.__WasMatForActivatingDataLayersSet_FunctionParams* __Params)
 	{
 		__Params->__Result = this.WasMatForActivatingDataLayersSet_Implementation();
 	}
 
-	// Token: 0x0601C252 RID: 115282 RVA: 0x007D5A50 File Offset: 0x007D3C50
+	// Token: 0x06019E92 RID: 106130 RVA: 0x007FCBEC File Offset: 0x007FADEC
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_SetMatForDeactivatingDataLayers_Implementation(TsDataLayerTransitionTrigger.__SetMatForDeactivatingDataLayers_FunctionParams* __Params)
 	{
@@ -854,14 +814,14 @@ public class TsDataLayerTransitionTrigger : AActor, IUnrealUObject, IUnrealObjec
 		this.SetMatForDeactivatingDataLayers_Implementation(orCreateUObjectByNativePointer);
 	}
 
-	// Token: 0x0601C253 RID: 115283 RVA: 0x007D5A70 File Offset: 0x007D3C70
+	// Token: 0x06019E93 RID: 106131 RVA: 0x007FCC0C File Offset: 0x007FAE0C
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_WasMatForDeactivatingDataLayersSet_Implementation(TsDataLayerTransitionTrigger.__WasMatForDeactivatingDataLayersSet_FunctionParams* __Params)
 	{
 		__Params->__Result = this.WasMatForDeactivatingDataLayersSet_Implementation();
 	}
 
-	// Token: 0x0601C254 RID: 115284 RVA: 0x007D5A80 File Offset: 0x007D3C80
+	// Token: 0x06019E94 RID: 106132 RVA: 0x007FCC1C File Offset: 0x007FAE1C
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_SetSeqForSourceIn_Implementation(TsDataLayerTransitionTrigger.__SetSeqForSourceIn_FunctionParams* __Params)
 	{
@@ -870,14 +830,14 @@ public class TsDataLayerTransitionTrigger : AActor, IUnrealUObject, IUnrealObjec
 		this.SetSeqForSourceIn_Implementation(orCreateUObjectByNativePointer, beforeModifyMatMark);
 	}
 
-	// Token: 0x0601C255 RID: 115285 RVA: 0x007D5AAE File Offset: 0x007D3CAE
+	// Token: 0x06019E95 RID: 106133 RVA: 0x007FCC4A File Offset: 0x007FAE4A
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_WasSeqForSourceInSet_Implementation(TsDataLayerTransitionTrigger.__WasSeqForSourceInSet_FunctionParams* __Params)
 	{
 		__Params->__Result = this.WasSeqForSourceInSet_Implementation();
 	}
 
-	// Token: 0x0601C256 RID: 115286 RVA: 0x007D5ABC File Offset: 0x007D3CBC
+	// Token: 0x06019E96 RID: 106134 RVA: 0x007FCC58 File Offset: 0x007FAE58
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_SetSeqForSourceOut_Implementation(TsDataLayerTransitionTrigger.__SetSeqForSourceOut_FunctionParams* __Params)
 	{
@@ -886,189 +846,186 @@ public class TsDataLayerTransitionTrigger : AActor, IUnrealUObject, IUnrealObjec
 		this.SetSeqForSourceOut_Implementation(orCreateUObjectByNativePointer, beforeModifyMatMark);
 	}
 
-	// Token: 0x0601C257 RID: 115287 RVA: 0x007D5AEA File Offset: 0x007D3CEA
+	// Token: 0x06019E97 RID: 106135 RVA: 0x007FCC86 File Offset: 0x007FAE86
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_WasSeqForSourceOutSet_Implementation(TsDataLayerTransitionTrigger.__WasSeqForSourceOutSet_FunctionParams* __Params)
 	{
 		__Params->__Result = this.WasSeqForSourceOutSet_Implementation();
 	}
 
-	// Token: 0x0400DEA1 RID: 56993
+	// Token: 0x0400E347 RID: 58183
 	private string MatPathForActivatingDataLayers;
 
-	// Token: 0x0400DEA2 RID: 56994
+	// Token: 0x0400E348 RID: 58184
 	private int MatForActivatingDataLayersLoadingHandle = -1;
 
-	// Token: 0x0400DEA3 RID: 56995
+	// Token: 0x0400E349 RID: 58185
 	private string MatPathForDeactivatingDataLayers;
 
-	// Token: 0x0400DEA4 RID: 56996
+	// Token: 0x0400E34A RID: 58186
 	private int MatForDeactivatingDataLayersLoadingHandle = -1;
 
-	// Token: 0x0400DEA5 RID: 56997
+	// Token: 0x0400E34B RID: 58187
 	private string SeqPathForSourceIn;
 
-	// Token: 0x0400DEA6 RID: 56998
+	// Token: 0x0400E34C RID: 58188
 	private int SeqForSourceInLoadingHandle = -1;
 
-	// Token: 0x0400DEA7 RID: 56999
+	// Token: 0x0400E34D RID: 58189
 	private string SeqPathForSourceOut;
 
-	// Token: 0x0400DEA8 RID: 57000
+	// Token: 0x0400E34E RID: 58190
 	private int SeqForSourceOutLoadingHandle = -1;
 
-	// Token: 0x0400DEA9 RID: 57001
+	// Token: 0x0400E34F RID: 58191
 	[Nullable(1)]
 	private readonly Queue<DataLayersTransitionTask> TransitionTaskQueue = new Queue<DataLayersTransitionTask>(4);
 
-	// Token: 0x0400DEAA RID: 57002
+	// Token: 0x0400E350 RID: 58192
 	[Nullable(1)]
 	private readonly HashSet<DataLayersTransitionTask> ExecutingTransitionTasks = new HashSet<DataLayersTransitionTask>();
 
-	// Token: 0x0400DEAB RID: 57003
+	// Token: 0x0400E351 RID: 58193
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/NewWorld/TriggerItems/TsDataLayerTransitionTrigger.TsDataLayerTransitionTrigger_C";
 
-	// Token: 0x0400DEAC RID: 57004
+	// Token: 0x0400E352 RID: 58194
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400DEAD RID: 57005
+	// Token: 0x0400E353 RID: 58195
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400DEAE RID: 57006
-	private static int __PropertyOffset_UberGraphFrame;
-
-	// Token: 0x0400DEAF RID: 57007
+	// Token: 0x0400E354 RID: 58196
 	private static int __PropertyOffset_DefaultSceneRoot;
 
-	// Token: 0x0400DEB0 RID: 57008
+	// Token: 0x0400E355 RID: 58197
 	private static int __PropertyOffset_FunctionEnable;
 
-	// Token: 0x0400DEB1 RID: 57009
+	// Token: 0x0400E356 RID: 58198
 	private static int __PropertyOffset_TriggerState;
 
-	// Token: 0x0400DEB2 RID: 57010
+	// Token: 0x0400E357 RID: 58199
 	private static int __PropertyOffset_UseTransitionWhenTeleport;
 
-	// Token: 0x0400DEB3 RID: 57011
+	// Token: 0x0400E358 RID: 58200
 	private static int __PropertyOffset_Volume;
 
-	// Token: 0x0400DEB4 RID: 57012
+	// Token: 0x0400E359 RID: 58201
 	private static int __PropertyOffset_DatalayerStateMap;
 
-	// Token: 0x0400DEB5 RID: 57013
+	// Token: 0x0400E35A RID: 58202
 	private TMap<FName, bool> _DatalayerStateMap;
 
-	// Token: 0x0400DEB6 RID: 57014
+	// Token: 0x0400E35B RID: 58203
 	private static int __PropertyOffset_MatForActivatingDataLayers;
 
-	// Token: 0x0400DEB7 RID: 57015
+	// Token: 0x0400E35C RID: 58204
 	private static int __PropertyOffset_MatForDeactivatingDataLayers;
 
-	// Token: 0x0400DEB8 RID: 57016
+	// Token: 0x0400E35D RID: 58205
 	private static int __PropertyOffset_SeqForSourceIn;
 
-	// Token: 0x0400DEB9 RID: 57017
+	// Token: 0x0400E35E RID: 58206
 	private static int __PropertyOffset_SeqMarkBeforeModifyMatForSourceIn;
 
-	// Token: 0x0400DEBA RID: 57018
+	// Token: 0x0400E35F RID: 58207
 	private static int __PropertyOffset_SeqForSourceOut;
 
-	// Token: 0x0400DEBB RID: 57019
+	// Token: 0x0400E360 RID: 58208
 	private static int __PropertyOffset_SeqMarkBeforeModifyMatForSourceOut;
 
-	// Token: 0x0200974D RID: 38733
+	// Token: 0x02008974 RID: 35188
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __SetMatForActivatingDataLayers_FunctionParams
 	{
-		// Token: 0x04030679 RID: 198265
+		// Token: 0x0402BD10 RID: 179472
 		[FieldOffset(0)]
 		public IntPtr asset;
 	}
 
-	// Token: 0x0200974E RID: 38734
+	// Token: 0x02008975 RID: 35189
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 1)]
 	protected ref struct __WasMatForActivatingDataLayersSet_FunctionParams
 	{
-		// Token: 0x0403067A RID: 198266
+		// Token: 0x0402BD11 RID: 179473
 		[FieldOffset(0)]
 		public bool __Result;
 	}
 
-	// Token: 0x0200974F RID: 38735
+	// Token: 0x02008976 RID: 35190
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __SetMatForDeactivatingDataLayers_FunctionParams
 	{
-		// Token: 0x0403067B RID: 198267
+		// Token: 0x0402BD12 RID: 179474
 		[FieldOffset(0)]
 		public IntPtr asset;
 	}
 
-	// Token: 0x02009750 RID: 38736
+	// Token: 0x02008977 RID: 35191
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 1)]
 	protected ref struct __WasMatForDeactivatingDataLayersSet_FunctionParams
 	{
-		// Token: 0x0403067C RID: 198268
+		// Token: 0x0402BD13 RID: 179475
 		[FieldOffset(0)]
 		public bool __Result;
 	}
 
-	// Token: 0x02009751 RID: 38737
+	// Token: 0x02008978 RID: 35192
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __SetSeqForSourceIn_FunctionParams
 	{
-		// Token: 0x0403067D RID: 198269
+		// Token: 0x0402BD14 RID: 179476
 		[FieldOffset(0)]
 		public IntPtr asset;
 
-		// Token: 0x0403067E RID: 198270
+		// Token: 0x0402BD15 RID: 179477
 		[FieldOffset(8)]
 		public FString beforeModifyMatMark;
 	}
 
-	// Token: 0x02009752 RID: 38738
+	// Token: 0x02008979 RID: 35193
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 1)]
 	protected ref struct __WasSeqForSourceInSet_FunctionParams
 	{
-		// Token: 0x0403067F RID: 198271
+		// Token: 0x0402BD16 RID: 179478
 		[FieldOffset(0)]
 		public bool __Result;
 	}
 
-	// Token: 0x02009753 RID: 38739
+	// Token: 0x0200897A RID: 35194
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __SetSeqForSourceOut_FunctionParams
 	{
-		// Token: 0x04030680 RID: 198272
+		// Token: 0x0402BD17 RID: 179479
 		[FieldOffset(0)]
 		public IntPtr asset;
 
-		// Token: 0x04030681 RID: 198273
+		// Token: 0x0402BD18 RID: 179480
 		[FieldOffset(8)]
 		public FString beforeModifyMatMark;
 	}
 
-	// Token: 0x02009754 RID: 38740
+	// Token: 0x0200897B RID: 35195
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 1)]
 	protected ref struct __WasSeqForSourceOutSet_FunctionParams
 	{
-		// Token: 0x04030682 RID: 198274
+		// Token: 0x0402BD19 RID: 179481
 		[FieldOffset(0)]
 		public bool __Result;
 	}

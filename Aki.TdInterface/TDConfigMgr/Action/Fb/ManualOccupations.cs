@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027AC RID: 10156
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A7F RID: 10879
 	public class ManualOccupations : ActionParams
 	{
-		// Token: 0x0600E1F5 RID: 57845 RVA: 0x00216015 File Offset: 0x00214215
+		// Token: 0x0600F017 RID: 61463 RVA: 0x00232DEA File Offset: 0x00230FEA
 		public static ManualOccupations Create(IManualOccupations? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700445F RID: 17503
-		// (get) Token: 0x0600E1F6 RID: 57846 RVA: 0x00216034 File Offset: 0x00214234
+		// Token: 0x170047C7 RID: 18375
+		// (get) Token: 0x0600F018 RID: 61464 RVA: 0x00232E09 File Offset: 0x00231009
 		public virtual EOccupationActionType OccupationType
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004460 RID: 17504
-		// (get) Token: 0x0600E1F7 RID: 57847 RVA: 0x00216044 File Offset: 0x00214244
+		// Token: 0x170047C8 RID: 18376
+		// (get) Token: 0x0600F019 RID: 61465 RVA: 0x00232E18 File Offset: 0x00231018
 		public virtual List<string> Occupations
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007D4C RID: 32076
+		// Token: 0x04008403 RID: 33795
 		private IManualOccupations Instance;
 
-		// Token: 0x04007D4D RID: 32077
+		// Token: 0x04008404 RID: 33796
 		private List<string> _OccupationsCache;
 
-		// Token: 0x04007D4E RID: 32078
+		// Token: 0x04008405 RID: 33797
 		private bool _OccupationsInited;
 	}
 }

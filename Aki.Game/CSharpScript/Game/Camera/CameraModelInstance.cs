@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.BaseCharacter;
 using AkiClient.Game.Aki.Character.BaseCharacter.Camera;
@@ -13,16 +12,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072B8 RID: 29368
+	// Token: 0x0200643A RID: 25658
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CameraModelInstance
 	{
-		// Token: 0x17009F10 RID: 40720
-		// (get) Token: 0x060480AD RID: 295085 RVA: 0x01278725 File Offset: 0x01276925
+		// Token: 0x17007677 RID: 30327
+		// (get) Token: 0x0603E49F RID: 255135 RVA: 0x0121AA55 File Offset: 0x01218C55
 		public string CameraName { get; }
 
-		// Token: 0x060480AE RID: 295086 RVA: 0x01278730 File Offset: 0x01276930
+		// Token: 0x0603E4A0 RID: 255136 RVA: 0x0121AA60 File Offset: 0x01218C60
 		public CameraModelInstance(string cameraName)
 		{
 			Comparison<CameraSpecificLockTarget> compare;
@@ -40,8 +39,8 @@ namespace CSharpScript.Game.Camera
 			this.CurrentAimAssistMode = this.DefaultAimAssistModeInternal;
 		}
 
-		// Token: 0x17009F11 RID: 40721
-		// (get) Token: 0x060480AF RID: 295087 RVA: 0x012788DF File Offset: 0x01276ADF
+		// Token: 0x17007678 RID: 30328
+		// (get) Token: 0x0603E4A1 RID: 255137 RVA: 0x0121AC0F File Offset: 0x01218E0F
 		[Nullable(2)]
 		public APlayerCameraManager PlayerCameraManager
 		{
@@ -56,8 +55,8 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x17009F12 RID: 40722
-		// (get) Token: 0x060480B0 RID: 295088 RVA: 0x012788FF File Offset: 0x01276AFF
+		// Token: 0x17007679 RID: 30329
+		// (get) Token: 0x0603E4A2 RID: 255138 RVA: 0x0121AC2F File Offset: 0x01218E2F
 		public double CameraBaseYawSensitivity
 		{
 			get
@@ -66,8 +65,8 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x17009F13 RID: 40723
-		// (get) Token: 0x060480B1 RID: 295089 RVA: 0x01278907 File Offset: 0x01276B07
+		// Token: 0x1700767A RID: 30330
+		// (get) Token: 0x0603E4A3 RID: 255139 RVA: 0x0121AC37 File Offset: 0x01218E37
 		public double CameraBasePitchSensitivity
 		{
 			get
@@ -76,8 +75,8 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x17009F14 RID: 40724
-		// (get) Token: 0x060480B2 RID: 295090 RVA: 0x0127890F File Offset: 0x01276B0F
+		// Token: 0x1700767B RID: 30331
+		// (get) Token: 0x0603E4A4 RID: 255140 RVA: 0x0121AC3F File Offset: 0x01218E3F
 		public double CameraAimingYawSensitivity
 		{
 			get
@@ -86,8 +85,8 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x17009F15 RID: 40725
-		// (get) Token: 0x060480B3 RID: 295091 RVA: 0x01278917 File Offset: 0x01276B17
+		// Token: 0x1700767C RID: 30332
+		// (get) Token: 0x0603E4A5 RID: 255141 RVA: 0x0121AC47 File Offset: 0x01218E47
 		public double CameraAimingPitchSensitivity
 		{
 			get
@@ -96,8 +95,8 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x17009F16 RID: 40726
-		// (get) Token: 0x060480B4 RID: 295092 RVA: 0x0127891F File Offset: 0x01276B1F
+		// Token: 0x1700767D RID: 30333
+		// (get) Token: 0x0603E4A6 RID: 255142 RVA: 0x0121AC4F File Offset: 0x01218E4F
 		public bool IsEnableSoftLockCameraExternal
 		{
 			get
@@ -106,8 +105,8 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x17009F17 RID: 40727
-		// (get) Token: 0x060480B5 RID: 295093 RVA: 0x01278928 File Offset: 0x01276B28
+		// Token: 0x1700767E RID: 30334
+		// (get) Token: 0x0603E4A7 RID: 255143 RVA: 0x0121AC58 File Offset: 0x01218E58
 		public float CameraBaseYawSensitivityInputModifier
 		{
 			get
@@ -138,8 +137,8 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x17009F18 RID: 40728
-		// (get) Token: 0x060480B6 RID: 295094 RVA: 0x01278A28 File Offset: 0x01276C28
+		// Token: 0x1700767F RID: 30335
+		// (get) Token: 0x0603E4A8 RID: 255144 RVA: 0x0121AD58 File Offset: 0x01218F58
 		public float CameraBasePitchSensitivityInputModifier
 		{
 			get
@@ -170,8 +169,8 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x17009F19 RID: 40729
-		// (get) Token: 0x060480B7 RID: 295095 RVA: 0x01278B28 File Offset: 0x01276D28
+		// Token: 0x17007680 RID: 30336
+		// (get) Token: 0x0603E4A9 RID: 255145 RVA: 0x0121AE58 File Offset: 0x01219058
 		public float CameraAimingYawSensitivityInputModifier
 		{
 			get
@@ -202,8 +201,8 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x17009F1A RID: 40730
-		// (get) Token: 0x060480B8 RID: 295096 RVA: 0x01278C28 File Offset: 0x01276E28
+		// Token: 0x17007681 RID: 30337
+		// (get) Token: 0x0603E4AA RID: 255146 RVA: 0x0121AF58 File Offset: 0x01219158
 		public float CameraAimingPitchSensitivityInputModifier
 		{
 			get
@@ -234,8 +233,8 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x17009F1B RID: 40731
-		// (get) Token: 0x060480B9 RID: 295097 RVA: 0x01278D28 File Offset: 0x01276F28
+		// Token: 0x17007682 RID: 30338
+		// (get) Token: 0x0603E4AB RID: 255147 RVA: 0x0121B058 File Offset: 0x01219258
 		public bool IsCameraResetPitch
 		{
 			get
@@ -244,8 +243,8 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x17009F1C RID: 40732
-		// (get) Token: 0x060480BA RID: 295098 RVA: 0x01278D30 File Offset: 0x01276F30
+		// Token: 0x17007683 RID: 30339
+		// (get) Token: 0x0603E4AC RID: 255148 RVA: 0x0121B060 File Offset: 0x01219260
 		public double MotionBlurModifier
 		{
 			get
@@ -254,8 +253,8 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x17009F1D RID: 40733
-		// (get) Token: 0x060480BB RID: 295099 RVA: 0x01278D98 File Offset: 0x01276F98
+		// Token: 0x17007684 RID: 30340
+		// (get) Token: 0x0603E4AD RID: 255149 RVA: 0x0121B0C8 File Offset: 0x012192C8
 		public double CameraSettingArmLengthPercentage
 		{
 			get
@@ -268,8 +267,8 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x17009F1E RID: 40734
-		// (get) Token: 0x060480BC RID: 295100 RVA: 0x01278E30 File Offset: 0x01277030
+		// Token: 0x17007685 RID: 30341
+		// (get) Token: 0x0603E4AE RID: 255150 RVA: 0x0121B160 File Offset: 0x01219360
 		public EAimAssistMode AimAssistMode
 		{
 			get
@@ -278,8 +277,8 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x17009F1F RID: 40735
-		// (get) Token: 0x060480BD RID: 295101 RVA: 0x01278E38 File Offset: 0x01277038
+		// Token: 0x17007686 RID: 30342
+		// (get) Token: 0x0603E4AF RID: 255151 RVA: 0x0121B168 File Offset: 0x01219368
 		[Nullable(2)]
 		public FightCamera FightCamera
 		{
@@ -290,8 +289,8 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x17009F20 RID: 40736
-		// (get) Token: 0x060480BE RID: 295102 RVA: 0x01278E40 File Offset: 0x01277040
+		// Token: 0x17007687 RID: 30343
+		// (get) Token: 0x0603E4B0 RID: 255152 RVA: 0x0121B170 File Offset: 0x01219370
 		[Nullable(2)]
 		public SequenceCamera SequenceCamera
 		{
@@ -302,8 +301,8 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x17009F21 RID: 40737
-		// (get) Token: 0x060480BF RID: 295103 RVA: 0x01278E48 File Offset: 0x01277048
+		// Token: 0x17007688 RID: 30344
+		// (get) Token: 0x0603E4B1 RID: 255153 RVA: 0x0121B178 File Offset: 0x01219378
 		[Nullable(2)]
 		public WidgetCamera WidgetCamera
 		{
@@ -314,8 +313,8 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x17009F22 RID: 40738
-		// (get) Token: 0x060480C0 RID: 295104 RVA: 0x01278E50 File Offset: 0x01277050
+		// Token: 0x17007689 RID: 30345
+		// (get) Token: 0x0603E4B2 RID: 255154 RVA: 0x0121B180 File Offset: 0x01219380
 		[Nullable(2)]
 		public SceneCamera SceneCamera
 		{
@@ -326,8 +325,8 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x17009F23 RID: 40739
-		// (get) Token: 0x060480C1 RID: 295105 RVA: 0x01278E58 File Offset: 0x01277058
+		// Token: 0x1700768A RID: 30346
+		// (get) Token: 0x0603E4B3 RID: 255155 RVA: 0x0121B188 File Offset: 0x01219388
 		[Nullable(2)]
 		public OrbitalCamera OrbitalCamera
 		{
@@ -338,8 +337,8 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x17009F24 RID: 40740
-		// (get) Token: 0x060480C2 RID: 295106 RVA: 0x01278E60 File Offset: 0x01277060
+		// Token: 0x1700768B RID: 30347
+		// (get) Token: 0x0603E4B4 RID: 255156 RVA: 0x0121B190 File Offset: 0x01219390
 		[Nullable(2)]
 		public FreeCamera FreeCamera
 		{
@@ -350,8 +349,8 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x17009F25 RID: 40741
-		// (get) Token: 0x060480C3 RID: 295107 RVA: 0x01278E68 File Offset: 0x01277068
+		// Token: 0x1700768C RID: 30348
+		// (get) Token: 0x0603E4B5 RID: 255157 RVA: 0x0121B198 File Offset: 0x01219398
 		public ECustomCameraMode? CameraMode
 		{
 			get
@@ -360,8 +359,8 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x17009F26 RID: 40742
-		// (get) Token: 0x060480C4 RID: 295108 RVA: 0x01278E70 File Offset: 0x01277070
+		// Token: 0x1700768D RID: 30349
+		// (get) Token: 0x0603E4B6 RID: 255158 RVA: 0x0121B1A0 File Offset: 0x012193A0
 		public float ShakeModify
 		{
 			get
@@ -370,8 +369,8 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x17009F27 RID: 40743
-		// (get) Token: 0x060480C5 RID: 295109 RVA: 0x01278E78 File Offset: 0x01277078
+		// Token: 0x1700768E RID: 30350
+		// (get) Token: 0x0603E4B7 RID: 255159 RVA: 0x0121B1A8 File Offset: 0x012193A8
 		public double FightCameraFinalDistance
 		{
 			get
@@ -392,8 +391,8 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x17009F28 RID: 40744
-		// (get) Token: 0x060480C6 RID: 295110 RVA: 0x01278EC1 File Offset: 0x012770C1
+		// Token: 0x1700768F RID: 30351
+		// (get) Token: 0x0603E4B8 RID: 255160 RVA: 0x0121B1F1 File Offset: 0x012193F1
 		public bool ViewHideHeadEnabled
 		{
 			get
@@ -402,8 +401,8 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x17009F29 RID: 40745
-		// (get) Token: 0x060480C7 RID: 295111 RVA: 0x01278EE1 File Offset: 0x012770E1
+		// Token: 0x17007690 RID: 30352
+		// (get) Token: 0x0603E4B9 RID: 255161 RVA: 0x0121B211 File Offset: 0x01219411
 		public bool LogicHideHeadEnabled
 		{
 			get
@@ -412,8 +411,8 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x17009F2A RID: 40746
-		// (get) Token: 0x060480C8 RID: 295112 RVA: 0x01278EF1 File Offset: 0x012770F1
+		// Token: 0x17007691 RID: 30353
+		// (get) Token: 0x0603E4BA RID: 255162 RVA: 0x0121B221 File Offset: 0x01219421
 		public bool Blending
 		{
 			get
@@ -422,8 +421,8 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x17009F2B RID: 40747
-		// (get) Token: 0x060480C9 RID: 295113 RVA: 0x01278EF9 File Offset: 0x012770F9
+		// Token: 0x17007692 RID: 30354
+		// (get) Token: 0x0603E4BB RID: 255163 RVA: 0x0121B229 File Offset: 0x01219429
 		[Nullable(2)]
 		public TimerHandle BlendTimerId
 		{
@@ -434,7 +433,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x060480CA RID: 295114 RVA: 0x01278F04 File Offset: 0x01277104
+		// Token: 0x0603E4BC RID: 255164 RVA: 0x0121B234 File Offset: 0x01219434
 		public void SetHideHeadEnabled(bool v, EHideHeadEnum firstPersonType)
 		{
 			bool flag = this.HideHeadEnabledInternal.Contains(firstPersonType);
@@ -458,7 +457,7 @@ namespace CSharpScript.Game.Camera
 			this.UpdateHeadState();
 		}
 
-		// Token: 0x060480CB RID: 295115 RVA: 0x01278FA8 File Offset: 0x012771A8
+		// Token: 0x0603E4BD RID: 255165 RVA: 0x0121B2D8 File Offset: 0x012194D8
 		public void SetHideHeadDisabled(bool v, EHideHeadDisabledEnum firstPersonDisableType)
 		{
 			bool flag = this.HideHeadDisabledInternal.Contains(firstPersonDisableType);
@@ -477,7 +476,7 @@ namespace CSharpScript.Game.Camera
 			this.UpdateHeadState();
 		}
 
-		// Token: 0x060480CC RID: 295116 RVA: 0x01278FF4 File Offset: 0x012771F4
+		// Token: 0x0603E4BE RID: 255166 RVA: 0x0121B324 File Offset: 0x01219524
 		private void UpdateHeadState()
 		{
 			if (this.ViewHideHeadEnabled)
@@ -728,7 +727,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x060480CD RID: 295117 RVA: 0x01279324 File Offset: 0x01277524
+		// Token: 0x0603E4BF RID: 255167 RVA: 0x0121B654 File Offset: 0x01219854
 		public unsafe void SetHidePlayer(bool v, bool useDither = false)
 		{
 			if (!v)
@@ -842,13 +841,13 @@ namespace CSharpScript.Game.Camera
 			instance5.Info(module5, author5, message5, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
 		}
 
-		// Token: 0x060480CE RID: 295118 RVA: 0x01279698 File Offset: 0x01277898
+		// Token: 0x0603E4C0 RID: 255168 RVA: 0x0121B9C8 File Offset: 0x01219BC8
 		public void SetCameraShakeModify(double modify)
 		{
 			this.ShakeModifyInternal = (float)MathUtils.Instance.Clamp(modify, 0.0, 2.0);
 		}
 
-		// Token: 0x060480CF RID: 295119 RVA: 0x012796BE File Offset: 0x012778BE
+		// Token: 0x0603E4C1 RID: 255169 RVA: 0x0121B9EE File Offset: 0x01219BEE
 		public void SetCameraMode(ECustomCameraMode mode)
 		{
 			EventSystem.Instance.Emit<ECustomCameraMode, ECustomCameraMode?, string>(EEventName.CameraModeChanged, mode, this.CameraModeInternal, this.CameraName);
@@ -856,7 +855,7 @@ namespace CSharpScript.Game.Camera
 			Global.PlayerController.ClientSetCameraMode(CameraUtility.GetCameraMode(mode));
 		}
 
-		// Token: 0x060480D0 RID: 295120 RVA: 0x012796FC File Offset: 0x012778FC
+		// Token: 0x0603E4C2 RID: 255170 RVA: 0x0121BA2C File Offset: 0x01219C2C
 		private void RefreshAimAssetMode()
 		{
 			if (this.AimAssistModeMap.Count == 0)
@@ -871,120 +870,120 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x060480D1 RID: 295121 RVA: 0x01279784 File Offset: 0x01277984
+		// Token: 0x0603E4C3 RID: 255171 RVA: 0x0121BAB4 File Offset: 0x01219CB4
 		public void SetAimAssistMode(EAimAssistMode mode)
 		{
 			this.DefaultAimAssistModeInternal = mode;
 			this.RefreshAimAssetMode();
 		}
 
-		// Token: 0x060480D2 RID: 295122 RVA: 0x01279793 File Offset: 0x01277993
+		// Token: 0x0603E4C4 RID: 255172 RVA: 0x0121BAC3 File Offset: 0x01219CC3
 		public void SetAimAssistModeWithKey(string key, EAimAssistMode mode)
 		{
 			this.AimAssistModeMap[key] = mode;
 			this.RefreshAimAssetMode();
 		}
 
-		// Token: 0x060480D3 RID: 295123 RVA: 0x012797A8 File Offset: 0x012779A8
+		// Token: 0x0603E4C5 RID: 255173 RVA: 0x0121BAD8 File Offset: 0x01219CD8
 		public void ClearAimAssistModeWithKey(string key)
 		{
 			this.AimAssistModeMap.Remove(key);
 			this.RefreshAimAssetMode();
 		}
 
-		// Token: 0x060480D4 RID: 295124 RVA: 0x012797BD File Offset: 0x012779BD
+		// Token: 0x0603E4C6 RID: 255174 RVA: 0x0121BAED File Offset: 0x01219CED
 		public void SetIsCameraResetPitch(bool isReset)
 		{
 			this.IsCameraResetPitchInternal = isReset;
 		}
 
-		// Token: 0x060480D5 RID: 295125 RVA: 0x012797C6 File Offset: 0x012779C6
+		// Token: 0x0603E4C7 RID: 255175 RVA: 0x0121BAF6 File Offset: 0x01219CF6
 		public void SetCameraBaseYawSensitivity(double sensitivity)
 		{
 			this.CameraBaseYawSensitivityInternal = MathUtils.Instance.Clamp(sensitivity, 0.0, 100.0);
 		}
 
-		// Token: 0x060480D6 RID: 295126 RVA: 0x012797EB File Offset: 0x012779EB
+		// Token: 0x0603E4C8 RID: 255176 RVA: 0x0121BB1B File Offset: 0x01219D1B
 		public void SetCameraBasePitchSensitivity(double sensitivity)
 		{
 			this.CameraBasePitchSensitivityInternal = MathUtils.Instance.Clamp(sensitivity, 0.0, 100.0);
 		}
 
-		// Token: 0x060480D7 RID: 295127 RVA: 0x01279810 File Offset: 0x01277A10
+		// Token: 0x0603E4C9 RID: 255177 RVA: 0x0121BB40 File Offset: 0x01219D40
 		public void SetCameraAimingYawSensitivity(double sensitivity)
 		{
 			this.CameraAimingYawSensitivityInternal = MathUtils.Instance.Clamp(sensitivity, 0.0, 100.0);
 		}
 
-		// Token: 0x060480D8 RID: 295128 RVA: 0x01279835 File Offset: 0x01277A35
+		// Token: 0x0603E4CA RID: 255178 RVA: 0x0121BB65 File Offset: 0x01219D65
 		public void SetCameraAimingPitchSensitivity(double sensitivity)
 		{
 			this.CameraAimingPitchSensitivityInternal = MathUtils.Instance.Clamp(sensitivity, 0.0, 100.0);
 		}
 
-		// Token: 0x060480D9 RID: 295129 RVA: 0x0127985A File Offset: 0x01277A5A
+		// Token: 0x0603E4CB RID: 255179 RVA: 0x0121BB8A File Offset: 0x01219D8A
 		public void SetCameraBaseYawReverse(bool bIsReverse)
 		{
 			this.CameraBaseYawReverseInternal = bIsReverse;
 		}
 
-		// Token: 0x060480DA RID: 295130 RVA: 0x01279863 File Offset: 0x01277A63
+		// Token: 0x0603E4CC RID: 255180 RVA: 0x0121BB93 File Offset: 0x01219D93
 		public void SetCameraBasePitchReverse(bool bIsReverse)
 		{
 			this.CameraBasePitchReverseInternal = bIsReverse;
 		}
 
-		// Token: 0x060480DB RID: 295131 RVA: 0x0127986C File Offset: 0x01277A6C
+		// Token: 0x0603E4CD RID: 255181 RVA: 0x0121BB9C File Offset: 0x01219D9C
 		public void SetCameraAimingYawReverse(bool bIsReverse)
 		{
 			this.CameraAimingYawReverseInternal = bIsReverse;
 		}
 
-		// Token: 0x060480DC RID: 295132 RVA: 0x01279875 File Offset: 0x01277A75
+		// Token: 0x0603E4CE RID: 255182 RVA: 0x0121BBA5 File Offset: 0x01219DA5
 		public void SetCameraAimingPitchReverse(bool bIsReverse)
 		{
 			this.CameraAimingPitchReverseInternal = bIsReverse;
 		}
 
-		// Token: 0x060480DD RID: 295133 RVA: 0x0127987E File Offset: 0x01277A7E
+		// Token: 0x0603E4CF RID: 255183 RVA: 0x0121BBAE File Offset: 0x01219DAE
 		public void SetMotionBlurValue(double value)
 		{
 			this.MotionBlurValueInternal = (float)MathUtils.Instance.Clamp(value, 0.0, 100.0);
 			GameSettingsManager.Instance.HandleValueChange(EFunction.MOTIONBLUR, (int)this.MotionBlurValueInternal, EGameSettingsApplyReason.AnyTime);
 		}
 
-		// Token: 0x060480DE RID: 295134 RVA: 0x012798B8 File Offset: 0x01277AB8
+		// Token: 0x0603E4D0 RID: 255184 RVA: 0x0121BBE8 File Offset: 0x01219DE8
 		public void SetBlending(bool blending)
 		{
 			this.BlendingInternal = blending;
 		}
 
-		// Token: 0x060480DF RID: 295135 RVA: 0x012798C1 File Offset: 0x01277AC1
+		// Token: 0x0603E4D1 RID: 255185 RVA: 0x0121BBF1 File Offset: 0x01219DF1
 		[NullableContext(2)]
 		public void SetBlendTimerId(TimerHandle timerId)
 		{
 			this.BlendTimerIdInternal = timerId;
 		}
 
-		// Token: 0x060480E0 RID: 295136 RVA: 0x012798CA File Offset: 0x01277ACA
+		// Token: 0x0603E4D2 RID: 255186 RVA: 0x0121BBFA File Offset: 0x01219DFA
 		public void EnableMode(ECustomCameraMode mode)
 		{
 			this.CameraModeEnabledArray[(int)mode] = true;
 		}
 
-		// Token: 0x060480E1 RID: 295137 RVA: 0x012798D9 File Offset: 0x01277AD9
+		// Token: 0x0603E4D3 RID: 255187 RVA: 0x0121BC09 File Offset: 0x01219E09
 		public void DisableMode(ECustomCameraMode mode)
 		{
 			this.CameraModeEnabledArray[(int)mode] = false;
 		}
 
-		// Token: 0x060480E2 RID: 295138 RVA: 0x012798E8 File Offset: 0x01277AE8
+		// Token: 0x0603E4D4 RID: 255188 RVA: 0x0121BC18 File Offset: 0x01219E18
 		public bool IsModeEnabled(ECustomCameraMode mode)
 		{
 			return this.CameraModeEnabledArray[(int)mode];
 		}
 
-		// Token: 0x060480E3 RID: 295139 RVA: 0x012798F8 File Offset: 0x01277AF8
+		// Token: 0x0603E4D5 RID: 255189 RVA: 0x0121BC28 File Offset: 0x01219E28
 		public ECustomCameraMode GetNextMode()
 		{
 			foreach (int num in this.CameraModeSequence)
@@ -997,25 +996,25 @@ namespace CSharpScript.Game.Camera
 			return ECustomCameraMode.LockOn;
 		}
 
-		// Token: 0x060480E4 RID: 295140 RVA: 0x0127995C File Offset: 0x01277B5C
+		// Token: 0x0603E4D6 RID: 255190 RVA: 0x0121BC8C File Offset: 0x01219E8C
 		public bool IsInHigherMode(ECustomCameraMode mode)
 		{
 			return this.CameraMode != null && this.CameraModePriorityValues[(int)this.CameraMode.Value] > this.CameraModePriorityValues[(int)mode];
 		}
 
-		// Token: 0x060480E5 RID: 295141 RVA: 0x012799A2 File Offset: 0x01277BA2
+		// Token: 0x0603E4D7 RID: 255191 RVA: 0x0121BCD2 File Offset: 0x01219ED2
 		public void SetAimAssistEnable(bool isEnable)
 		{
 			this.IsAimAssistEnable = isEnable;
 		}
 
-		// Token: 0x060480E6 RID: 295142 RVA: 0x012799AB File Offset: 0x01277BAB
+		// Token: 0x0603E4D8 RID: 255192 RVA: 0x0121BCDB File Offset: 0x01219EDB
 		public bool GetAimAssistEnable()
 		{
 			return this.IsAimAssistEnable;
 		}
 
-		// Token: 0x060480E7 RID: 295143 RVA: 0x012799B4 File Offset: 0x01277BB4
+		// Token: 0x0603E4D9 RID: 255193 RVA: 0x0121BCE4 File Offset: 0x01219EE4
 		public int EnableSoftLock(string reason)
 		{
 			HashSet<int> softLockEnableHandleSet = this.SoftLockEnableHandleSet;
@@ -1025,7 +1024,7 @@ namespace CSharpScript.Game.Camera
 			return this.SoftLockEnableHandle;
 		}
 
-		// Token: 0x060480E8 RID: 295144 RVA: 0x012799E4 File Offset: 0x01277BE4
+		// Token: 0x0603E4DA RID: 255194 RVA: 0x0121BD14 File Offset: 0x01219F14
 		public void DisableSoftLock(int enableHandle, string reason)
 		{
 			if (!this.SoftLockEnableHandleSet.Contains(enableHandle))
@@ -1035,19 +1034,19 @@ namespace CSharpScript.Game.Camera
 			this.SoftLockEnableHandleSet.Remove(enableHandle);
 		}
 
-		// Token: 0x060480E9 RID: 295145 RVA: 0x01279A02 File Offset: 0x01277C02
+		// Token: 0x0603E4DB RID: 255195 RVA: 0x0121BD32 File Offset: 0x01219F32
 		public void SetSettingSoftLockState(bool isEnable)
 		{
 			this.IsEnableSoftLockCamera = isEnable;
 		}
 
-		// Token: 0x060480EA RID: 295146 RVA: 0x01279A0B File Offset: 0x01277C0B
+		// Token: 0x0603E4DC RID: 255196 RVA: 0x0121BD3B File Offset: 0x01219F3B
 		public bool IsSoftLockEnable()
 		{
 			return this.IsEnableSoftLockCamera || this.SoftLockEnableHandleSet.Count > 0;
 		}
 
-		// Token: 0x060480EB RID: 295147 RVA: 0x01279A28 File Offset: 0x01277C28
+		// Token: 0x0603E4DD RID: 255197 RVA: 0x0121BD58 File Offset: 0x01219F58
 		public int EnableCameraSpecificLockEntity(int entityId, int priority, ECameraSpecificLockGroup group = ECameraSpecificLockGroup.Normal)
 		{
 			int num = this.CameraLockId + 1;
@@ -1058,7 +1057,7 @@ namespace CSharpScript.Game.Camera
 			return cameraSpecificLockEntity.Id;
 		}
 
-		// Token: 0x060480EC RID: 295148 RVA: 0x01279A74 File Offset: 0x01277C74
+		// Token: 0x0603E4DE RID: 255198 RVA: 0x0121BDA4 File Offset: 0x01219FA4
 		public int EnableCameraSpecificLockLocation(Vector location, int priority, ECameraSpecificLockGroup group = ECameraSpecificLockGroup.Normal)
 		{
 			int num = this.CameraLockId + 1;
@@ -1069,7 +1068,7 @@ namespace CSharpScript.Game.Camera
 			return cameraSpecificLocLocation.Id;
 		}
 
-		// Token: 0x060480ED RID: 295149 RVA: 0x01279AC0 File Offset: 0x01277CC0
+		// Token: 0x0603E4DF RID: 255199 RVA: 0x0121BDF0 File Offset: 0x01219FF0
 		public void DisableCameraSpecificLockTarget(int id)
 		{
 			CameraSpecificLockTarget cameraSpecificLockTarget;
@@ -1080,7 +1079,7 @@ namespace CSharpScript.Game.Camera
 			cameraSpecificLockTarget.MarkDelete = true;
 		}
 
-		// Token: 0x060480EE RID: 295150 RVA: 0x01279AE8 File Offset: 0x01277CE8
+		// Token: 0x0603E4E0 RID: 255200 RVA: 0x0121BE18 File Offset: 0x0121A018
 		[NullableContext(2)]
 		public CameraSpecificLockTarget GetCameraSpecificLockTarget()
 		{
@@ -1101,7 +1100,7 @@ namespace CSharpScript.Game.Camera
 			return null;
 		}
 
-		// Token: 0x060480EF RID: 295151 RVA: 0x01279B48 File Offset: 0x01277D48
+		// Token: 0x0603E4E1 RID: 255201 RVA: 0x0121BE78 File Offset: 0x0121A078
 		public void PlaySpecialMovieCamera(string movieCameraConfigRowName, [Nullable(2)] Action<bool> callback = null)
 		{
 			if (this.CameraMovieModeController == null)
@@ -1111,13 +1110,13 @@ namespace CSharpScript.Game.Camera
 			this.CameraMovieModeController.PlaySpecialMovieCamera(movieCameraConfigRowName, callback).Forget();
 		}
 
-		// Token: 0x060480F0 RID: 295152 RVA: 0x01279B65 File Offset: 0x01277D65
+		// Token: 0x0603E4E2 RID: 255202 RVA: 0x0121BE95 File Offset: 0x0121A095
 		public bool IsPlayingSpecialMovieCamera(string specialMovieCameraConfigKey)
 		{
 			return this.CameraMovieModeController != null && this.CameraMovieModeController.IsPlayingSpecialMovieCamera(specialMovieCameraConfigKey);
 		}
 
-		// Token: 0x060480F1 RID: 295153 RVA: 0x01279B7D File Offset: 0x01277D7D
+		// Token: 0x0603E4E3 RID: 255203 RVA: 0x0121BEAD File Offset: 0x0121A0AD
 		public void PlayMovieCamera(string movieCameraConfigRowName, int initialPlayCameraIndex = -1, [Nullable(2)] Action<bool> callback = null)
 		{
 			if (this.CameraMovieModeController == null)
@@ -1127,7 +1126,7 @@ namespace CSharpScript.Game.Camera
 			this.CameraMovieModeController.PlayMovieCamera(movieCameraConfigRowName, initialPlayCameraIndex, callback).Forget();
 		}
 
-		// Token: 0x060480F2 RID: 295154 RVA: 0x01279B9B File Offset: 0x01277D9B
+		// Token: 0x0603E4E4 RID: 255204 RVA: 0x0121BECB File Offset: 0x0121A0CB
 		public void PauseMovieCamera()
 		{
 			if (this.CameraMovieModeController == null)
@@ -1137,7 +1136,7 @@ namespace CSharpScript.Game.Camera
 			this.CameraMovieModeController.PauseMovieCamera();
 		}
 
-		// Token: 0x060480F3 RID: 295155 RVA: 0x01279BB1 File Offset: 0x01277DB1
+		// Token: 0x0603E4E5 RID: 255205 RVA: 0x0121BEE1 File Offset: 0x0121A0E1
 		public void ResumeMovieCamera()
 		{
 			if (this.CameraMovieModeController == null)
@@ -1147,7 +1146,7 @@ namespace CSharpScript.Game.Camera
 			this.CameraMovieModeController.ResumeMovieCamera();
 		}
 
-		// Token: 0x060480F4 RID: 295156 RVA: 0x01279BC7 File Offset: 0x01277DC7
+		// Token: 0x0603E4E6 RID: 255206 RVA: 0x0121BEF7 File Offset: 0x0121A0F7
 		public void StopMovieCamera([Nullable(2)] Action<bool> callback = null, string reason = "外部调用,停止播放")
 		{
 			if (this.CameraMovieModeController == null)
@@ -1157,7 +1156,7 @@ namespace CSharpScript.Game.Camera
 			this.CameraMovieModeController.StopMovieCamera(callback, reason);
 		}
 
-		// Token: 0x060480F5 RID: 295157 RVA: 0x01279BE0 File Offset: 0x01277DE0
+		// Token: 0x0603E4E7 RID: 255207 RVA: 0x0121BF10 File Offset: 0x0121A110
 		public bool HasLockTarget()
 		{
 			FightCamera fightCamera = this.FightCamera;
@@ -1169,7 +1168,7 @@ namespace CSharpScript.Game.Camera
 			return targetEntity != null && targetEntity.Valid && this.FightCamera.LogicComponent.IsTargetLocationValid;
 		}
 
-		// Token: 0x060480F6 RID: 295158 RVA: 0x01279C33 File Offset: 0x01277E33
+		// Token: 0x0603E4E8 RID: 255208 RVA: 0x0121BF63 File Offset: 0x0121A163
 		public bool GetLockTargetLocation(Vector outVector)
 		{
 			outVector.Reset();
@@ -1181,7 +1180,7 @@ namespace CSharpScript.Game.Camera
 			return true;
 		}
 
-		// Token: 0x060480F7 RID: 295159 RVA: 0x01279C5C File Offset: 0x01277E5C
+		// Token: 0x0603E4E9 RID: 255209 RVA: 0x0121BF8C File Offset: 0x0121A18C
 		public void SaveSeqCamera()
 		{
 			SequenceCamera sequenceCamera = this.SequenceCamera;
@@ -1198,20 +1197,20 @@ namespace CSharpScript.Game.Camera
 			this.SavedSeqCameraThings = savedSeqCameraThings;
 		}
 
-		// Token: 0x060480F8 RID: 295160 RVA: 0x01279C82 File Offset: 0x01277E82
+		// Token: 0x0603E4EA RID: 255210 RVA: 0x0121BFB2 File Offset: 0x0121A1B2
 		[NullableContext(2)]
 		public SeqCameraThings GetSavedSeqCameraThings()
 		{
 			return this.SavedSeqCameraThings;
 		}
 
-		// Token: 0x060480F9 RID: 295161 RVA: 0x01279C8A File Offset: 0x01277E8A
+		// Token: 0x0603E4EB RID: 255211 RVA: 0x0121BFBA File Offset: 0x0121A1BA
 		public void ResetSavedSeqCameraThings()
 		{
 			this.SavedSeqCameraThings = null;
 		}
 
-		// Token: 0x060480FA RID: 295162 RVA: 0x01279C94 File Offset: 0x01277E94
+		// Token: 0x0603E4EC RID: 255212 RVA: 0x0121BFC4 File Offset: 0x0121A1C4
 		public bool IsToLockOnCameraMode()
 		{
 			ECustomCameraMode? cameraMode = this.CameraMode;
@@ -1219,7 +1218,7 @@ namespace CSharpScript.Game.Camera
 			return cameraMode.GetValueOrDefault() == ecustomCameraMode & cameraMode != null;
 		}
 
-		// Token: 0x060480FB RID: 295163 RVA: 0x01279CBC File Offset: 0x01277EBC
+		// Token: 0x0603E4ED RID: 255213 RVA: 0x0121BFEC File Offset: 0x0121A1EC
 		public bool IsToSceneCameraMode()
 		{
 			ECustomCameraMode? cameraMode = this.CameraMode;
@@ -1227,32 +1226,48 @@ namespace CSharpScript.Game.Camera
 			return cameraMode.GetValueOrDefault() == ecustomCameraMode & cameraMode != null;
 		}
 
-		// Token: 0x060480FC RID: 295164 RVA: 0x01279CE4 File Offset: 0x01277EE4
+		// Token: 0x0603E4EE RID: 255214 RVA: 0x0121C014 File Offset: 0x0121A214
 		public void SetViewInfo(Vector2D viewLocation, Vector2D viewSize, bool enableScissorOffset)
 		{
 			this.SeparateCameraLayout.SetViewInfo(viewLocation, viewSize, enableScissorOffset);
 		}
 
-		// Token: 0x060480FD RID: 295165 RVA: 0x01279CF4 File Offset: 0x01277EF4
+		// Token: 0x0603E4EF RID: 255215 RVA: 0x0121C024 File Offset: 0x0121A224
+		public void ReleaseOwnedSequenceSeparateCamera(string cameraName)
+		{
+			if (CameraController.Instance.GetSeparateCameraModel(cameraName) != this)
+			{
+				return;
+			}
+			CameraController.Instance.DestroySeparateCameraModelImmediately(cameraName);
+		}
+
+		// Token: 0x0603E4F0 RID: 255216 RVA: 0x0121C040 File Offset: 0x0121A240
+		public void ResetMainCameraLayout()
+		{
+			this.SetViewInfo(Vector2D.Create(0.0, 0.0), Vector2D.Create(1.0, 1.0), false);
+		}
+
+		// Token: 0x0603E4F1 RID: 255217 RVA: 0x0121C077 File Offset: 0x0121A277
 		public void SetTargetViewInfo(float blendTime, Vector2D targetViewLocation, Vector2D targetViewSize, bool enableScissorOffset = false, [Nullable(2)] UCurveFloat blendCurve = null, [Nullable(2)] Action callback = null)
 		{
 			this.SeparateCameraLayout.SetTargetViewInfo(blendTime, targetViewLocation, targetViewSize, enableScissorOffset, blendCurve, callback);
 		}
 
-		// Token: 0x060480FE RID: 295166 RVA: 0x01279D0A File Offset: 0x01277F0A
+		// Token: 0x0603E4F2 RID: 255218 RVA: 0x0121C08D File Offset: 0x0121A28D
 		public void UpdateCameraLayout(float deltaTime)
 		{
 			this.SeparateCameraLayout.BlendToTarget(deltaTime);
 			this.UpdateBoundScreenEffectsAlpha();
 		}
 
-		// Token: 0x060480FF RID: 295167 RVA: 0x01279D1E File Offset: 0x01277F1E
+		// Token: 0x0603E4F3 RID: 255219 RVA: 0x0121C0A1 File Offset: 0x0121A2A1
 		public void BindScreenEffect(int handleId)
 		{
 			this.BoundScreenEffectHandleIds.Add(handleId);
 		}
 
-		// Token: 0x06048100 RID: 295168 RVA: 0x01279D2D File Offset: 0x01277F2D
+		// Token: 0x0603E4F4 RID: 255220 RVA: 0x0121C0B0 File Offset: 0x0121A2B0
 		public void UnbindScreenEffect(int handleId)
 		{
 			this.BoundScreenEffectHandleIds.Remove(handleId);
@@ -1264,7 +1279,7 @@ namespace CSharpScript.Game.Camera
 			instance.TrySetScreenEffectAlpha(handleId, 0f);
 		}
 
-		// Token: 0x06048101 RID: 295169 RVA: 0x01279D54 File Offset: 0x01277F54
+		// Token: 0x0603E4F5 RID: 255221 RVA: 0x0121C0D8 File Offset: 0x0121A2D8
 		private void UpdateBoundScreenEffectsAlpha()
 		{
 			if (this.BoundScreenEffectHandleIds.Count == 0)
@@ -1279,7 +1294,9 @@ namespace CSharpScript.Game.Camera
 			ScreenEffectModel instance = ScreenEffectModel.Instance;
 			double num = separateCameraLayout.CurrentViewLocation.X + separateCameraLayout.CurrentViewSize.X;
 			double num2 = double.IsFinite(num) ? MathUtils.Instance.Clamp(num, 0.0, 1.0) : 0.0;
-			foreach (int num3 in this.BoundScreenEffectHandleIds.ToArray<int>())
+			int[] array = new int[this.BoundScreenEffectHandleIds.Count];
+			this.BoundScreenEffectHandleIds.CopyTo(array);
+			foreach (int num3 in array)
 			{
 				if (!instance.TrySetScreenEffectAlpha(num3, (float)num2))
 				{
@@ -1288,14 +1305,14 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x06048102 RID: 295170 RVA: 0x01279E0A File Offset: 0x0127800A
+		// Token: 0x0603E4F6 RID: 255222 RVA: 0x0121C1A4 File Offset: 0x0121A3A4
 		public bool IsEnableScissorOffsetCenter()
 		{
 			SeparateCameraLayout separateCameraLayout = this.SeparateCameraLayout;
 			return separateCameraLayout != null && separateCameraLayout.EnableScissorOffset;
 		}
 
-		// Token: 0x06048103 RID: 295171 RVA: 0x01279E20 File Offset: 0x01278020
+		// Token: 0x0603E4F7 RID: 255223 RVA: 0x0121C1B8 File Offset: 0x0121A3B8
 		public void UpdateCameraDitherRadius()
 		{
 			if (Time.Instance.Now < (double)this.NextFindStartHideDistanceTime)
@@ -1320,7 +1337,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x06048104 RID: 295172 RVA: 0x01279F0C File Offset: 0x0127810C
+		// Token: 0x0603E4F8 RID: 255224 RVA: 0x0121C2A4 File Offset: 0x0121A4A4
 		public bool Init()
 		{
 			if (this.CameraName != "MainCamera")
@@ -1397,7 +1414,7 @@ namespace CSharpScript.Game.Camera
 			return this.FightCameraInternal.Valid && this.SequenceCameraInternal.Valid && this.WidgetCameraInternal.Valid && this.SceneCameraInternal.Valid && this.OrbitalCameraInternal.Valid;
 		}
 
-		// Token: 0x06048105 RID: 295173 RVA: 0x0127A398 File Offset: 0x01278598
+		// Token: 0x0603E4F9 RID: 255225 RVA: 0x0121C730 File Offset: 0x0121A930
 		public bool Clear()
 		{
 			EventSystem.Instance.Remove<float, string>(EEventName.CameraViewTargetChanged, new Action<float, string>(this.OnCameraViewTargetChanged));
@@ -1405,15 +1422,15 @@ namespace CSharpScript.Game.Camera
 			this.CameraSpecificLockTargetList.Clear();
 			this.CameraSpecificLockTargetMap.Clear();
 			Global.CharacterCameraManager.CameraModifyCustomTimeDilation = 1f;
-			bool flag = EntitySystem.Instance.Destroy<FightCamera>(this.FightCameraInternal);
+			bool flag = EntitySystem.Instance.Destroy(this.FightCameraInternal);
 			this.FightCameraInternal = null;
-			bool flag2 = flag & EntitySystem.Instance.Destroy<SequenceCamera>(this.SequenceCameraInternal);
+			bool flag2 = flag & EntitySystem.Instance.Destroy(this.SequenceCameraInternal);
 			this.SequenceCameraInternal = null;
-			bool flag3 = flag2 & EntitySystem.Instance.Destroy<WidgetCamera>(this.WidgetCameraInternal);
+			bool flag3 = flag2 & EntitySystem.Instance.Destroy(this.WidgetCameraInternal);
 			this.WidgetCameraInternal = null;
-			bool flag4 = flag3 & EntitySystem.Instance.Destroy<SceneCamera>(this.SceneCameraInternal);
+			bool flag4 = flag3 & EntitySystem.Instance.Destroy(this.SceneCameraInternal);
 			this.SceneCameraInternal = null;
-			bool flag5 = flag4 & EntitySystem.Instance.Destroy<OrbitalCamera>(this.OrbitalCameraInternal);
+			bool flag5 = flag4 & EntitySystem.Instance.Destroy(this.OrbitalCameraInternal);
 			this.OrbitalCameraInternal = null;
 			bool result = flag5 & this.DestroyFreeCamera();
 			this.CameraTransform = null;
@@ -1438,7 +1455,7 @@ namespace CSharpScript.Game.Camera
 			return result;
 		}
 
-		// Token: 0x06048106 RID: 295174 RVA: 0x0127A4F0 File Offset: 0x012786F0
+		// Token: 0x0603E4FA RID: 255226 RVA: 0x0121C888 File Offset: 0x0121AA88
 		public bool CreateFreeCamera()
 		{
 			this.FreeCameraInternal = EntitySystem.Instance.Create<FreeCamera>(-100, new EntityArgs<CameraModelInstance>(this));
@@ -1450,19 +1467,19 @@ namespace CSharpScript.Game.Camera
 			return this.FreeCameraInternal.Valid;
 		}
 
-		// Token: 0x06048107 RID: 295175 RVA: 0x0127A57C File Offset: 0x0127877C
+		// Token: 0x0603E4FB RID: 255227 RVA: 0x0121C914 File Offset: 0x0121AB14
 		public bool DestroyFreeCamera()
 		{
 			if (this.FreeCameraInternal == null)
 			{
 				return true;
 			}
-			bool result = EntitySystem.Instance.Destroy<FreeCamera>(this.FreeCameraInternal);
+			bool result = EntitySystem.Instance.Destroy(this.FreeCameraInternal);
 			this.FreeCameraInternal = null;
 			return result;
 		}
 
-		// Token: 0x06048108 RID: 295176 RVA: 0x0127A5A0 File Offset: 0x012787A0
+		// Token: 0x0603E4FC RID: 255228 RVA: 0x0121C938 File Offset: 0x0121AB38
 		private void OnCameraViewTargetChanged(float blendTime, string cameraName)
 		{
 			if (cameraName != this.CameraName)
@@ -1547,7 +1564,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x06048109 RID: 295177 RVA: 0x0127A687 File Offset: 0x01278887
+		// Token: 0x0603E4FD RID: 255229 RVA: 0x0121CA1F File Offset: 0x0121AC1F
 		private static int CompareCameraSpecificLockIdPriority(CameraSpecificLockTarget a, CameraSpecificLockTarget b)
 		{
 			if (a.Group != b.Group)
@@ -1561,324 +1578,324 @@ namespace CSharpScript.Game.Camera
 			return b.Priority - a.Priority;
 		}
 
-		// Token: 0x04025FEC RID: 155628
+		// Token: 0x040212CC RID: 135884
 		private const int CAMERA_TICK_PRIORITY = -100;
 
-		// Token: 0x04025FED RID: 155629
+		// Token: 0x040212CD RID: 135885
 		private const int CAMERA_DEFAULT_SENSITIVITY = 50;
 
-		// Token: 0x04025FEE RID: 155630
+		// Token: 0x040212CE RID: 135886
 		private const int CAMERA_MAX_SENSITIVITY = 100;
 
-		// Token: 0x04025FEF RID: 155631
+		// Token: 0x040212CF RID: 135887
 		private const int CAMERA_MIN_SENSITIVITY = 0;
 
-		// Token: 0x04025FF0 RID: 155632
+		// Token: 0x040212D0 RID: 135888
 		private const int CAMERA_DEFAULT_SENSITIVITY_MODIFIER = 1;
 
-		// Token: 0x04025FF1 RID: 155633
+		// Token: 0x040212D1 RID: 135889
 		private const int CAMERA_MAX_SENSITIVITY_MODIFIER = 2;
 
-		// Token: 0x04025FF2 RID: 155634
+		// Token: 0x040212D2 RID: 135890
 		private const float CAMERA_MIN_SENSITIVITY_MODIFIER = 0.1f;
 
-		// Token: 0x04025FF3 RID: 155635
+		// Token: 0x040212D3 RID: 135891
 		private const int MOTION_BLUR_DEFAULT_VALUE = 50;
 
-		// Token: 0x04025FF4 RID: 155636
+		// Token: 0x040212D4 RID: 135892
 		private const int MOTION_BLUR_MAX_VALUE = 100;
 
-		// Token: 0x04025FF5 RID: 155637
+		// Token: 0x040212D5 RID: 135893
 		private const int MOTION_BLUR_MIN_VALUE = 0;
 
-		// Token: 0x04025FF6 RID: 155638
+		// Token: 0x040212D6 RID: 135894
 		private const float MOTION_BLUR_DEFAULT_MODIFIER = 0.25f;
 
-		// Token: 0x04025FF7 RID: 155639
+		// Token: 0x040212D7 RID: 135895
 		private const float MOTION_BLUR_MAX_MODIFIER = 0.4f;
 
-		// Token: 0x04025FF8 RID: 155640
+		// Token: 0x040212D8 RID: 135896
 		private const float MOTION_BLUR_MIN_MODIFIER = 0.1f;
 
-		// Token: 0x04025FF9 RID: 155641
+		// Token: 0x040212D9 RID: 135897
 		private const bool CAMERA_DEFAULT_REVERSE = false;
 
-		// Token: 0x04025FFA RID: 155642
+		// Token: 0x040212DA RID: 135898
 		private const int CAMERA_ADDITION_ARM_LENGTH_VALUE_MAX = 100;
 
-		// Token: 0x04025FFB RID: 155643
+		// Token: 0x040212DB RID: 135899
 		private const int CAMERA_ADDITION_ARM_LENGTH_VALUE_DEFAULT = 50;
 
-		// Token: 0x04025FFC RID: 155644
+		// Token: 0x040212DC RID: 135900
 		private const int CAMERA_ADDITION_ARM_LENGTH_VALUE_MIN = 0;
 
-		// Token: 0x04025FFD RID: 155645
+		// Token: 0x040212DD RID: 135901
 		private const int CAMERA_SHAKE_MODIFIER_MIN = 0;
 
-		// Token: 0x04025FFE RID: 155646
+		// Token: 0x040212DE RID: 135902
 		private const int CAMERA_SHAKE_MODIFIER_MAX = 2;
 
-		// Token: 0x04025FFF RID: 155647
+		// Token: 0x040212DF RID: 135903
 		private const float HIDE_PLAYER_DITHER_SPEED_RATE = 2f;
 
-		// Token: 0x04026001 RID: 155649
+		// Token: 0x040212E1 RID: 135905
 		public bool AimAssistDebugDraw;
 
-		// Token: 0x04026002 RID: 155650
+		// Token: 0x040212E2 RID: 135906
 		public bool CameraDebugToolEnabled;
 
-		// Token: 0x04026003 RID: 155651
+		// Token: 0x040212E3 RID: 135907
 		public bool CameraDebugToolDrawRotator;
 
-		// Token: 0x04026004 RID: 155652
+		// Token: 0x040212E4 RID: 135908
 		public bool CameraDebugToolDrawCameraCollision;
 
-		// Token: 0x04026005 RID: 155653
+		// Token: 0x040212E5 RID: 135909
 		public bool CameraDebugToolDrawSpringArm;
 
-		// Token: 0x04026006 RID: 155654
+		// Token: 0x040212E6 RID: 135910
 		public bool CameraDebugToolDrawFocusTargetLine;
 
-		// Token: 0x04026007 RID: 155655
+		// Token: 0x040212E7 RID: 135911
 		public bool CameraDebugToolDrawSpringArmEdgeRange;
 
-		// Token: 0x04026008 RID: 155656
+		// Token: 0x040212E8 RID: 135912
 		public bool CameraDebugToolDrawLockCameraMoveLine;
 
-		// Token: 0x04026009 RID: 155657
+		// Token: 0x040212E9 RID: 135913
 		public bool CameraDebugToolDrawSettlementCamera;
 
-		// Token: 0x0402600A RID: 155658
+		// Token: 0x040212EA RID: 135914
 		public bool CameraDebugToolDrawCameraZone;
 
-		// Token: 0x0402600B RID: 155659
+		// Token: 0x040212EB RID: 135915
 		public bool CameraDebugToolDrawCameraRotator;
 
-		// Token: 0x0402600C RID: 155660
+		// Token: 0x040212EC RID: 135916
 		public bool UiCameraDebugToolEnabled;
 
-		// Token: 0x0402600D RID: 155661
+		// Token: 0x040212ED RID: 135917
 		[Nullable(2)]
 		private APlayerCameraManager PlayerCameraManagerInternal;
 
-		// Token: 0x0402600E RID: 155662
+		// Token: 0x040212EE RID: 135918
 		[Nullable(2)]
 		public AActor CurrentCameraActor;
 
-		// Token: 0x0402600F RID: 155663
+		// Token: 0x040212EF RID: 135919
 		[Nullable(2)]
 		public UCameraComponent CurrentCameraComponent;
 
-		// Token: 0x04026010 RID: 155664
+		// Token: 0x040212F0 RID: 135920
 		public Vector CameraLocation = Vector.Create();
 
-		// Token: 0x04026011 RID: 155665
+		// Token: 0x040212F1 RID: 135921
 		public Rotator CameraRotator = Rotator.Create();
 
-		// Token: 0x04026012 RID: 155666
+		// Token: 0x040212F2 RID: 135922
 		public FTransformDouble? CameraTransform;
 
-		// Token: 0x04026013 RID: 155667
+		// Token: 0x040212F3 RID: 135923
 		public float CameraDitherStartHideDistance;
 
-		// Token: 0x04026014 RID: 155668
+		// Token: 0x040212F4 RID: 135924
 		public float NextFindStartHideDistanceTime;
 
-		// Token: 0x04026015 RID: 155669
+		// Token: 0x040212F5 RID: 135925
 		[Nullable(2)]
 		private FightCamera FightCameraInternal;
 
-		// Token: 0x04026016 RID: 155670
+		// Token: 0x040212F6 RID: 135926
 		[Nullable(2)]
 		private SequenceCamera SequenceCameraInternal;
 
-		// Token: 0x04026017 RID: 155671
+		// Token: 0x040212F7 RID: 135927
 		[Nullable(2)]
 		private WidgetCamera WidgetCameraInternal;
 
-		// Token: 0x04026018 RID: 155672
+		// Token: 0x040212F8 RID: 135928
 		[Nullable(2)]
 		private SceneCamera SceneCameraInternal;
 
-		// Token: 0x04026019 RID: 155673
+		// Token: 0x040212F9 RID: 135929
 		[Nullable(2)]
 		private OrbitalCamera OrbitalCameraInternal;
 
-		// Token: 0x0402601A RID: 155674
+		// Token: 0x040212FA RID: 135930
 		[Nullable(2)]
 		private FreeCamera FreeCameraInternal;
 
-		// Token: 0x0402601B RID: 155675
+		// Token: 0x040212FB RID: 135931
 		private ECustomCameraMode? CameraModeInternal;
 
-		// Token: 0x0402601C RID: 155676
+		// Token: 0x040212FC RID: 135932
 		private readonly List<bool> CameraModeEnabledArray = new List<bool>();
 
-		// Token: 0x0402601D RID: 155677
+		// Token: 0x040212FD RID: 135933
 		private readonly List<int> CameraModeSequence = new List<int>();
 
-		// Token: 0x0402601E RID: 155678
+		// Token: 0x040212FE RID: 135934
 		private readonly List<int> CameraModePriorityValues = new List<int>();
 
-		// Token: 0x0402601F RID: 155679
+		// Token: 0x040212FF RID: 135935
 		[Nullable(2)]
 		public CameraMovieModeController CameraMovieModeController;
 
-		// Token: 0x04026020 RID: 155680
+		// Token: 0x04021300 RID: 135936
 		public bool IsInCameraModeBlending;
 
-		// Token: 0x04026021 RID: 155681
+		// Token: 0x04021301 RID: 135937
 		private bool BlendingInternal;
 
-		// Token: 0x04026022 RID: 155682
+		// Token: 0x04021302 RID: 135938
 		[Nullable(2)]
 		private TimerHandle BlendTimerIdInternal;
 
-		// Token: 0x04026023 RID: 155683
+		// Token: 0x04021303 RID: 135939
 		private float ShakeModifyInternal = 1f;
 
-		// Token: 0x04026024 RID: 155684
+		// Token: 0x04021304 RID: 135940
 		private EAimAssistMode DefaultAimAssistModeInternal = EAimAssistMode.OpenOnStart;
 
-		// Token: 0x04026025 RID: 155685
+		// Token: 0x04021305 RID: 135941
 		private readonly Dictionary<string, EAimAssistMode> AimAssistModeMap = new Dictionary<string, EAimAssistMode>();
 
-		// Token: 0x04026026 RID: 155686
+		// Token: 0x04021306 RID: 135942
 		private EAimAssistMode CurrentAimAssistMode;
 
-		// Token: 0x04026027 RID: 155687
+		// Token: 0x04021307 RID: 135943
 		public int CameraShakeInstanceId = -1;
 
-		// Token: 0x04026028 RID: 155688
+		// Token: 0x04021308 RID: 135944
 		public readonly Dictionary<int, UCameraShakeBase> CameraShakeMap = new Dictionary<int, UCameraShakeBase>();
 
-		// Token: 0x04026029 RID: 155689
+		// Token: 0x04021309 RID: 135945
 		[Nullable(2)]
 		public SeparateCameraLayout SeparateCameraLayout;
 
-		// Token: 0x0402602A RID: 155690
+		// Token: 0x0402130A RID: 135946
 		private readonly HashSet<int> BoundScreenEffectHandleIds = new HashSet<int>();
 
-		// Token: 0x0402602B RID: 155691
+		// Token: 0x0402130B RID: 135947
 		private double CameraBaseYawSensitivityInternal = 50.0;
 
-		// Token: 0x0402602C RID: 155692
+		// Token: 0x0402130C RID: 135948
 		private double CameraBasePitchSensitivityInternal = 50.0;
 
-		// Token: 0x0402602D RID: 155693
+		// Token: 0x0402130D RID: 135949
 		private double CameraAimingYawSensitivityInternal = 50.0;
 
-		// Token: 0x0402602E RID: 155694
+		// Token: 0x0402130E RID: 135950
 		private double CameraAimingPitchSensitivityInternal = 50.0;
 
-		// Token: 0x0402602F RID: 155695
+		// Token: 0x0402130F RID: 135951
 		public bool IsEnableSpecificCameraSensitivity;
 
-		// Token: 0x04026030 RID: 155696
+		// Token: 0x04021310 RID: 135952
 		public float SpecificCameraBaseYawSensitivity = 1f;
 
-		// Token: 0x04026031 RID: 155697
+		// Token: 0x04021311 RID: 135953
 		public float SpecificCameraBasePitchSensitivity = 1f;
 
-		// Token: 0x04026032 RID: 155698
+		// Token: 0x04021312 RID: 135954
 		public float SpecificCameraAimingYawSensitivity = 1f;
 
-		// Token: 0x04026033 RID: 155699
+		// Token: 0x04021313 RID: 135955
 		public float SpecificCameraAimingPitchSensitivity = 1f;
 
-		// Token: 0x04026034 RID: 155700
+		// Token: 0x04021314 RID: 135956
 		private bool CameraBaseYawReverseInternal;
 
-		// Token: 0x04026035 RID: 155701
+		// Token: 0x04021315 RID: 135957
 		private bool CameraBasePitchReverseInternal;
 
-		// Token: 0x04026036 RID: 155702
+		// Token: 0x04021316 RID: 135958
 		private bool CameraAimingYawReverseInternal;
 
-		// Token: 0x04026037 RID: 155703
+		// Token: 0x04021317 RID: 135959
 		private bool CameraAimingPitchReverseInternal;
 
-		// Token: 0x04026038 RID: 155704
+		// Token: 0x04021318 RID: 135960
 		private bool IsCameraResetPitchInternal = true;
 
-		// Token: 0x04026039 RID: 155705
+		// Token: 0x04021319 RID: 135961
 		private float MotionBlurValueInternal = 50f;
 
-		// Token: 0x0402603A RID: 155706
+		// Token: 0x0402131A RID: 135962
 		public bool IsEnableResetFocus = true;
 
-		// Token: 0x0402603B RID: 155707
+		// Token: 0x0402131B RID: 135963
 		public bool IsEnableSidestepCamera = true;
 
-		// Token: 0x0402603C RID: 155708
+		// Token: 0x0402131C RID: 135964
 		private bool IsEnableSoftLockCamera = true;
 
-		// Token: 0x0402603D RID: 155709
+		// Token: 0x0402131D RID: 135965
 		public double CameraSettingFightAdditionArmLength = 50.0;
 
-		// Token: 0x0402603E RID: 155710
+		// Token: 0x0402131E RID: 135966
 		public double CameraSettingNormalAdditionArmLength = 50.0;
 
-		// Token: 0x0402603F RID: 155711
+		// Token: 0x0402131F RID: 135967
 		[Nullable(2)]
 		private SeqCameraThings SavedSeqCameraThings;
 
-		// Token: 0x04026040 RID: 155712
+		// Token: 0x04021320 RID: 135968
 		private bool IsAimAssistEnable = true;
 
-		// Token: 0x04026041 RID: 155713
+		// Token: 0x04021321 RID: 135969
 		private readonly HashSet<int> SoftLockEnableHandleSet = new HashSet<int>();
 
-		// Token: 0x04026042 RID: 155714
+		// Token: 0x04021322 RID: 135970
 		private int SoftLockEnableHandle;
 
-		// Token: 0x04026043 RID: 155715
+		// Token: 0x04021323 RID: 135971
 		private int CameraLockId;
 
-		// Token: 0x04026044 RID: 155716
+		// Token: 0x04021324 RID: 135972
 		private readonly Dictionary<int, CameraSpecificLockTarget> CameraSpecificLockTargetMap = new Dictionary<int, CameraSpecificLockTarget>();
 
-		// Token: 0x04026045 RID: 155717
+		// Token: 0x04021325 RID: 135973
 		private readonly PriorityQueue<CameraSpecificLockTarget> CameraSpecificLockTargetList;
 
-		// Token: 0x04026046 RID: 155718
+		// Token: 0x04021326 RID: 135974
 		public readonly DisjointSet<long> DitherEntityGroups;
 
-		// Token: 0x04026047 RID: 155719
+		// Token: 0x04021327 RID: 135975
 		private readonly HashSet<EHideHeadEnum> HideHeadEnabledInternal;
 
-		// Token: 0x04026048 RID: 155720
+		// Token: 0x04021328 RID: 135976
 		private readonly HashSet<EHideHeadDisabledEnum> HideHeadDisabledInternal;
 
-		// Token: 0x04026049 RID: 155721
+		// Token: 0x04021329 RID: 135977
 		private int HidePlayerHandle;
 
-		// Token: 0x0402604A RID: 155722
+		// Token: 0x0402132A RID: 135978
 		private int HidePlayerEntityId;
 
-		// Token: 0x0402604B RID: 155723
+		// Token: 0x0402132B RID: 135979
 		private CameraModelInstance.ECameraHidePlayerMode HidePlayerMode;
 
-		// Token: 0x0402604C RID: 155724
+		// Token: 0x0402132C RID: 135980
 		public int CurSeqCameraIndex;
 
-		// Token: 0x0200CFC8 RID: 53192
+		// Token: 0x0200BBA3 RID: 48035
 		[NullableContext(0)]
 		private enum ECameraHidePlayerMode
 		{
-			// Token: 0x0403E7B7 RID: 255927
+			// Token: 0x04039BF4 RID: 236532
 			None,
-			// Token: 0x0403E7B8 RID: 255928
+			// Token: 0x04039BF5 RID: 236533
 			Instant,
-			// Token: 0x0403E7B9 RID: 255929
+			// Token: 0x04039BF6 RID: 236534
 			Dither
 		}
 
-		// Token: 0x0200CFC9 RID: 53193
+		// Token: 0x0200BBA4 RID: 48036
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0403E7BA RID: 255930
+			// Token: 0x04039BF7 RID: 236535
 			[Nullable(new byte[]
 			{
 				0,

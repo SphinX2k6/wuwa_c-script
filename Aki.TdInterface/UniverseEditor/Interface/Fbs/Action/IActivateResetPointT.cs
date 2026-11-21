@@ -2,7 +2,7 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006093 RID: 24723
+	// Token: 0x020066F5 RID: 26357
 	public class IActivateResetPointT
 	{
 	}

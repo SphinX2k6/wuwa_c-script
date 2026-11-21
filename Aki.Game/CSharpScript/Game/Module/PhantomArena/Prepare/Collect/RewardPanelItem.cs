@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 {
-	// Token: 0x020051B6 RID: 20918
+	// Token: 0x02004186 RID: 16774
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 	})]
 	internal class RewardPanelItem : GridProxyAbstract<RewardTuple>
 	{
-		// Token: 0x060358ED RID: 219373 RVA: 0x00CAFBA7 File Offset: 0x00CADDA7
+		// Token: 0x0602A7E8 RID: 174056 RVA: 0x00BFD1E3 File Offset: 0x00BFB3E3
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			};
 		}
 
-		// Token: 0x060358EE RID: 219374 RVA: 0x00CAFBCC File Offset: 0x00CADDCC
+		// Token: 0x0602A7E9 RID: 174057 RVA: 0x00BFD208 File Offset: 0x00BFB408
 		protected override void OnStart()
 		{
 			AActor owner = base.GetItem(0).GetOwner();
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			this.Grid.Initialize(owner);
 		}
 
-		// Token: 0x060358EF RID: 219375 RVA: 0x00CAFC00 File Offset: 0x00CADE00
+		// Token: 0x0602A7EA RID: 174058 RVA: 0x00BFD23C File Offset: 0x00BFB43C
 		public override void Refresh(RewardTuple data, bool isSelected, int gridIndex)
 		{
 			this.RewardData = data;
@@ -40,23 +40,23 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			this.Grid.SetReceivedVisible(this.RewardData.Taken);
 		}
 
-		// Token: 0x060358F0 RID: 219376 RVA: 0x00CAFC53 File Offset: 0x00CADE53
+		// Token: 0x0602A7EB RID: 174059 RVA: 0x00BFD28F File Offset: 0x00BFB48F
 		protected override void OnBeforeDestroy()
 		{
 			this.RewardData = null;
 		}
 
-		// Token: 0x0401C6EB RID: 116459
+		// Token: 0x04017120 RID: 94496
 		private RewardTuple RewardData;
 
-		// Token: 0x0401C6EC RID: 116460
+		// Token: 0x04017121 RID: 94497
 		private CommonItemSmallItemGrid Grid;
 
-		// Token: 0x0200B33F RID: 45887
+		// Token: 0x02009D77 RID: 40311
 		[NullableContext(0)]
 		private static class EItemComponents
 		{
-			// Token: 0x04036534 RID: 222516
+			// Token: 0x04030F87 RID: 200583
 			public const int ButtonItem = 0;
 		}
 	}

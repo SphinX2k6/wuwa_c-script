@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B6E RID: 2926
+	// Token: 0x02000C3C RID: 3132
 	public class IHitTimeScaleRatio
 	{
-		// Token: 0x06004361 RID: 17249 RVA: 0x000ABC69 File Offset: 0x000A9E69
-		[NullableContext(1)]
+		// Token: 0x060047BA RID: 18362 RVA: 0x000B5D2D File Offset: 0x000B3F2D
 		public static IHitTimeScaleRatio Create(IHitTimeScaleRatio? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001242 RID: 4674
-		// (get) Token: 0x06004362 RID: 17250 RVA: 0x000ABC88 File Offset: 0x000A9E88
+		// Token: 0x1700133D RID: 4925
+		// (get) Token: 0x060047BB RID: 18363 RVA: 0x000B5D4C File Offset: 0x000B3F4C
 		public virtual float TimeRatio
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001243 RID: 4675
-		// (get) Token: 0x06004363 RID: 17251 RVA: 0x000ABC98 File Offset: 0x000A9E98
+		// Token: 0x1700133E RID: 4926
+		// (get) Token: 0x060047BC RID: 18364 RVA: 0x000B5D5C File Offset: 0x000B3F5C
 		public virtual float? MaxExtraTime
 		{
 			get
@@ -45,8 +43,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001244 RID: 4676
-		// (get) Token: 0x06004364 RID: 17252 RVA: 0x000ABCCE File Offset: 0x000A9ECE
+		// Token: 0x1700133F RID: 4927
+		// (get) Token: 0x060047BD RID: 18365 RVA: 0x000B5D92 File Offset: 0x000B3F92
 		public virtual float ValueRatio
 		{
 			get
@@ -55,7 +53,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040025FD RID: 9725
+		// Token: 0x04002845 RID: 10309
 		private IHitTimeScaleRatio Instance;
 	}
 }

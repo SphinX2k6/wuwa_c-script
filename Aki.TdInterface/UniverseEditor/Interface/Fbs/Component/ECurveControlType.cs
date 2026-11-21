@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004D88 RID: 19848
+	// Token: 0x02005289 RID: 21129
 	public enum ECurveControlType : byte
 	{
-		// Token: 0x0400D936 RID: 55606
+		// Token: 0x0400E47A RID: 58490
 		ChargeSlash
 	}
 }

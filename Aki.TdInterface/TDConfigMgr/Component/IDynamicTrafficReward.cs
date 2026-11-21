@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002EF RID: 751
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000336 RID: 822
 	public class IDynamicTrafficReward : IDynamicEntityRewardType
 	{
-		// Token: 0x06000E7D RID: 3709 RVA: 0x0003474C File Offset: 0x0003294C
+		// Token: 0x06000FAD RID: 4013 RVA: 0x00037680 File Offset: 0x00035880
 		private IDynamicTrafficReward_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000E7E RID: 3710 RVA: 0x00034784 File Offset: 0x00032984
+		// Token: 0x06000FAE RID: 4014 RVA: 0x000376B8 File Offset: 0x000358B8
 		public static IDynamicTrafficReward Create([Nullable(2)] IDynamicTrafficReward instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000E7F RID: 3711 RVA: 0x00034797 File Offset: 0x00032997
+		// Token: 0x06000FAF RID: 4015 RVA: 0x000376CB File Offset: 0x000358CB
 		public static IDynamicTrafficReward CreateFromSetValue([Nullable(2)] IDynamicTrafficReward_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000E80 RID: 3712 RVA: 0x000347AA File Offset: 0x000329AA
+		// Token: 0x06000FB0 RID: 4016 RVA: 0x000376DE File Offset: 0x000358DE
 		public new IDynamicTrafficReward_SetValue ToSetValue()
 		{
 			return new IDynamicTrafficReward_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000435 RID: 1077
-		// (get) Token: 0x06000E81 RID: 3713 RVA: 0x000347C9 File Offset: 0x000329C9
-		// (set) Token: 0x06000E82 RID: 3714 RVA: 0x000347F4 File Offset: 0x000329F4
+		// Token: 0x17000482 RID: 1154
+		// (get) Token: 0x06000FB1 RID: 4017 RVA: 0x000376FD File Offset: 0x000358FD
+		// (set) Token: 0x06000FB2 RID: 4018 RVA: 0x00037728 File Offset: 0x00035928
 		public override EDynamicEntityRewardType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000436 RID: 1078
-		// (get) Token: 0x06000E83 RID: 3715 RVA: 0x00034802 File Offset: 0x00032A02
-		// (set) Token: 0x06000E84 RID: 3716 RVA: 0x0003482D File Offset: 0x00032A2D
+		// Token: 0x17000483 RID: 1155
+		// (get) Token: 0x06000FB3 RID: 4019 RVA: 0x00037736 File Offset: 0x00035936
+		// (set) Token: 0x06000FB4 RID: 4020 RVA: 0x00037761 File Offset: 0x00035961
 		public virtual int RewardId
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000CD0 RID: 3280
+		// Token: 0x04000DBA RID: 3514
 		[Nullable(2)]
 		protected new IDynamicTrafficReward FbInstance;
 
-		// Token: 0x04000CD1 RID: 3281
+		// Token: 0x04000DBB RID: 3515
 		[Nullable(2)]
 		protected new IDynamicTrafficReward_SetValue PocoInterface;
 	}

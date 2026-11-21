@@ -4,10 +4,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045CB RID: 17867
+	// Token: 0x020034F3 RID: 13555
 	public class EffectRuntimeDataBase
 	{
-		// Token: 0x04018AD5 RID: 101077
+		// Token: 0x04013110 RID: 78096
 		[Nullable(2)]
 		public USkeletalMeshComponent SkeletalMeshComp;
 	}

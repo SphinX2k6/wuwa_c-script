@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02000EF8 RID: 3832
+// Token: 0x020003AD RID: 941
 [NullableContext(1)]
 [Nullable(0)]
 public class UiViewManager : Singleton
 {
-	// Token: 0x06006032 RID: 24626 RVA: 0x00121830 File Offset: 0x0011FA30
+	// Token: 0x060033CA RID: 13258 RVA: 0x00129834 File Offset: 0x00127A34
 	public void Init()
 	{
 		TUiTsInfo[] array = new TUiTsInfo[this.Cache.Length];
@@ -19,8 +19,8 @@ public class UiViewManager : Singleton
 		UiViewStorage.Instance.RegisterUiViewInfoDynamicData(this.DynamicDataCache);
 	}
 
-	// Token: 0x17000766 RID: 1894
-	// (get) Token: 0x06006033 RID: 24627 RVA: 0x001218B4 File Offset: 0x0011FAB4
+	// Token: 0x17000788 RID: 1928
+	// (get) Token: 0x060033CB RID: 13259 RVA: 0x001298B8 File Offset: 0x00127AB8
 	public static UiViewManager Instance
 	{
 		get
@@ -34,12 +34,12 @@ public class UiViewManager : Singleton
 		}
 	}
 
-	// Token: 0x06006034 RID: 24628 RVA: 0x001218D7 File Offset: 0x0011FAD7
+	// Token: 0x060033CC RID: 13260 RVA: 0x001298DB File Offset: 0x00127ADB
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06006035 RID: 24629 RVA: 0x001218D9 File Offset: 0x0011FAD9
+	// Token: 0x060033CD RID: 13261 RVA: 0x001298DD File Offset: 0x00127ADD
 	public static void ResetStaticDefaultValue()
 	{
 		UiViewManager instance = UiViewManager._instance;
@@ -50,13 +50,13 @@ public class UiViewManager : Singleton
 		UiViewManager._instance = null;
 	}
 
-	// Token: 0x06006036 RID: 24630 RVA: 0x001218F2 File Offset: 0x0011FAF2
+	// Token: 0x060033CE RID: 13262 RVA: 0x001298F6 File Offset: 0x00127AF6
 	static UiViewManager()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(UiViewManager.CreateStaticDefaultValue), new Action(UiViewManager.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06006037 RID: 24631 RVA: 0x00121914 File Offset: 0x0011FB14
+	// Token: 0x060033CF RID: 13263 RVA: 0x00129918 File Offset: 0x00127B18
 	public UiViewManager()
 	{
 		ValueTuple<EUiViewName, TViewInfoDynamicData>[] array = new ValueTuple<EUiViewName, TViewInfoDynamicData>[1];
@@ -127,6 +127,7 @@ public class UiViewManager : Singleton
 			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.TurntableControlView, "TurntableControlView", "UiView_OpenDoor", ESourceType.Normal),
 			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SundialControlView, "SundialControlView", "UiView_OpenDoor", ESourceType.Normal),
 			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.PlotSubtitleView, "PlotSubtitleView", "UiView_Plot_Prefab", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolVisualNovelChoiceView, "SolarSchoolVisualNovelChoiceView", "UiView_SolarSchoolDialogueChoice", ESourceType.Normal),
 			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.PlotView, "PlotView", "UiView_Plot_Prefab", ESourceType.Normal),
 			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.PlotViewHUD, "PlotViewHud", "UiView_PlotD_Prefab", ESourceType.Normal),
 			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.PlotGiantSubtitleView, "PlotViewGiantSubtitle", "UiView_PlotsGiantSystem", ESourceType.Normal),
@@ -139,6 +140,8 @@ public class UiViewManager : Singleton
 			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.MusicSubtitleView, "MusicSubtitleView", "UiView_MusicSubtitle_Prefab", ESourceType.Normal),
 			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SummaryPopView, "SummaryPopView", "UiView_Summarize", ESourceType.Normal),
 			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.PlotReviewView, "PlotReviewView", "UiView_PlotReviewView_Prefab", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolVisualNovelReviewView, "SolarSchoolVisualNovelReviewView", "UiView_PlotReviewView_Prefab", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolVisualNovelCenterTextView, "SolarSchoolVisualNovelCenterTextView", "UiView_PlotTransitionSolorSchool", ESourceType.Normal),
 			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.AdmissionStudentCardView, "AdmissionStudentCardView", "UiView_AdmissionStudentCard", ESourceType.Normal),
 			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.VideoPromptView, "VideoPromptView", "UiView_VideoPromptView", ESourceType.Normal),
 			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.NetWorkMaskView, "NetWorkMaskView", "UiView_NetWorkMask_Prefab", ESourceType.Normal),
@@ -422,7 +425,7 @@ public class UiViewManager : Singleton
 			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.RemainStarWarningTips, "RemainStarWarningFloatTips", "UiItem_WarningTips", ESourceType.Normal),
 			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.RogueSilentAreaFloatTips, "RogueSilentAreaFloatTips", "UiItem_RogueSilentAreaFloatTips", ESourceType.Normal),
 			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.CorniceMeetingSettleView, "ActivityCorniceMeetingSettleView", "UiView_ResultTip", ESourceType.Normal),
-			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.RoleElementView, "RoleElementView", "UiView_RoleElement", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.RoleElementView, "RoleElementView", "UiView_RoverElementChange", ESourceType.Normal),
 			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.ComboTeachingView, "ComboTeachingView", "UiView_ComboTeaching", ESourceType.Normal),
 			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.PersonalOptionView, "PersonalOptionView", "UiItem_CommonData_Prefab", ESourceType.Normal),
 			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.PersonalRootView, "PersonalRootView", "UiView_RoleArchives", ESourceType.Normal),
@@ -685,6 +688,29 @@ public class UiViewManager : Singleton
 			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSpeedResultView, "SolarSpeedResultView", "UiView_RaceResultTip", ESourceType.Normal),
 			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSpeedRewardView, "SolarSpeedRewardView", "UiView_GongduolaReward", ESourceType.Normal),
 			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.ShipTowerView, "ShipTowerView", "UiView_ActivityMowingTowerMain", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.RoleTowerActivityView, "RoleTowerActivityView", "UiView_MowingTowerEnterMain", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.RoleTowerLoadingView, "RoleTowerLoadingView", "UiView_MowingTower38Loading", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.RoleTowerPrepareView, "RoleTowerPrepareView", "UiView_MowingTowerLevelMain", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.RoleTowerMonsterDetailView, "RoleTowerMonsterDetailView", "UiItem_MowingTowerMonsterPopup38", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.RoleTowerTokenView, "RoleTowerTokenView", "UiItem_MowingTowerGuide", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.RoleTowerRankView, "RoleTowerRankView", "UiView_MowingTowerRankView", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.RoleTowerLevelSelectView, "RoleTowerLevelSelectView", "UiView_RoleFightRecordView", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.RoleTowerRewardView, "RoleTowerRewardView", "UiView_MowingTowerReward38", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.RoleTowerVisionDetailView, "RoleTowerVisionDetailView", "UiView_VisionInfoDetail", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.RoleTowerRolePropertyView, "RoleTowerRolePropertyView", "UiView_RolePropertyPreview", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.RoleTowerAttributeDetailView, "RoleAttributeDetailView", "UiView_Attribute", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.RoleTowerMonsterSelectView, "RoleTowerMonsterSelectView", "UiView_MonsterSelectView", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.RoleTowerCountdownView, "RoleTowerCountdownView", "UiView_MowingTowerCountdown", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.RoleTowerWaveView, "RoleTowerWaveView", "UiView_MowingTowerFightHud", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.RoleTowerBossTipsView, "RoleTowerBossTipsView", "UiView_MowingTowerBossTips", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.RoleTowerBuffDetailView, "RoleTowerBuffDetailView", "UiView_BuffDetailPop", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.RoleTowerPauseView, "RoleTowerPauseView", "UiView_MowingTowerPause38", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.RoleTowerSaveExitConfirm, "RoleTowerSaveExitConfirmView", "UiView_RogueExitTips", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.RoleTowerFloorSettleView, "RoleTowerFloorSettleView", "UiView_BattleResultView", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.RoleTowerStarUpView, "RoleTowerStarUpView", "UiView_RoleUpgradeView", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.RoleTowerResultView, "RoleTowerResultView", "UiView_MowingTower38Settlement", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.RoleTowerTimeRecordView, "RoleTowerTimeRecordView", "UiView_TimeRecord", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.RoleTowerExitButtonView, "RoleTowerExitButtonView", "UiView_MowingTowerFightExit", ESourceType.Normal),
 			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.ShipTowerBuffView, "ShipTowerBuffView", "UiItem_MowingTowerBag", ESourceType.Normal),
 			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.ShipTowerFightFinishView, "ShipTowerFightFinishView", "UiView_MowingTowerSettlement", ESourceType.Normal),
 			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.ShipTowerDescView, "ShipTowerDescView", "UiView_MowingTowerDetail", ESourceType.Normal),
@@ -1486,12 +1512,58 @@ public class UiViewManager : Singleton
 			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.MatchThreeTargetPopView, "MatchThreeTargetPopView", "UiView_PopupTarget", ESourceType.Normal),
 			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.MatchThreeSuccessPopView, "MatchThreeSuccessPopView", "UiView_Match3GamePopupSuccess", ESourceType.Normal),
 			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.MatchThreeFailPopView, "MatchThreeFailPopView", "UiView_Match3GamePopupFail", ESourceType.Normal),
-			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.MatchThreeConfirmBoxView, "MatchThreeConfirmBoxView", "UiView_MatchThreePopupCom", ESourceType.Normal)
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.MatchThreeConfirmBoxView, "MatchThreeConfirmBoxView", "UiView_MatchThreePopupCom", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.PetalMechanicView, "PetalMechanicView", "UiView_PetalMechanic", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolRootView, "SolarSchoolRootView", "UiView_SolarSchoolCom", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolScheduleView, "SolarSchoolScheduleView", "UiView_SolarSchoolSchedule", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolEventCheckView, "SolarSchoolEventCheckView", "UiView_SolarSchoolEvent", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolInfoOverviewView, "SolarSchoolInfoOverviewView", "UiView_SolarSchoolInfoOverview", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolBagView, "SolarSchoolBagView", "UiView_SolarSchoolBag", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolShopView, "SolarSchoolShopView", "UiView_SolarSchoolShop", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolTipsPopupView, "SolarSchoolTipsPopupView", "UiView_SolarSchoolItemTipsPopup", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolConfirmPopupView, "SolarSchoolConfirmPopupView", "UiView_SolarSchoolConfirmPopup", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolSpecialBehaviorAcceptView, "SolarSchoolSpecialBehaviorAcceptView", "UiView_SolarSchoolNotice", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolBuildPopupView, "SolarSchoolBuildPopupView", "UiView_SolarSchoolBuildPopup", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolFavorLevelUpPopupView, "SolarSchoolFavorLevelUpPopupView", "UiView_SolarSchoolFavorabilityPopup", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolUnlockItemPopupView, "SolarSchoolUnlockItemPopupView", "UiItem_SolarSchoolUnLockItemPopup", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolJumpAccessPopupView, "SolarSchoolJumpAccessPopupView", "UiItem_SolarSchoolUnLockItemPopup", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolBehaviorDonePopupView, "SolarSchoolBehaviorDonePopupView", "UiView_SolarSchoolDonePopup", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolSettingView, "SolarSchoolSettingView", "UiView_SolarSchoolOverview", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolVolumeView, "SolarSchoolVolumeView", "UiView_SolarSchoolSet", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolEventPopupView, "SolarSchoolEventPopupView", "UiView_SolarSchoolEventPopup", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolExamView, "SolarSchoolExamView", "UiView_SolarSchoolExam", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolEntranceView, "SolarSchoolEntranceView", "UiView_SolarSchoolEntrance", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolChooseEndingView, "SolarSchoolChooseEndingView", "UiView_SolarSchoolChooseCardPopup", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolEndingSummaryView, "SolarSchoolEndingSummaryView", "UiView_SolarSchoolEndingPPT", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolQuestDetailView, "SolarSchoolQuestDetailView", "UiView_SolarSchoolMissionDetail", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolLetterView, "SolarSchoolLetterView", "UiView_SolarSchoolLetter", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolForumView, "SolarSchoolForumView", "UiView_SolarSchoolForum", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolAffairsView, "SolarSchoolAffairsView", "UiView_SolarSchoolMailboxAffairs", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolVisualNovelDialogueView, "SolarSchoolVisualNovelDialogueView", "UiView_SolarSchoolPlotText", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolRewardTipView, "SolarSchoolRewardTipView", "UiView_SolarSchoolAcquireList", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolPrizeDrawingView, "SolarSchoolPrizeDrawingView", "UiView_SolarSchoolPrizeDrawing", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolPrizeDrawingTearView, "SolarSchoolPrizeDrawingTearView", "UiView_SolarSchoolPrizeDrawingTear", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolNormalRewardView, "SolarSchoolNormalRewardView", "UiView_SolarSchoolRewardB", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolLimitTimeRewardView, "SolarSchoolLimitTimeRewardView", "UiView_SolarSchoolRewardA", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolGalleryView, "SolarSchoolGalleryView", "UiView_SolarSchoolTujian", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolGalleryEndingDetailView, "SolarSchoolGalleryEndingDetailView", "UiView_SolarSchoolTujianADetail", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolGalleryCgDetailView, "SolarSchoolGalleryCgDetailView", "UiView_SolarSchoolTujianBDetail", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolGalleryOpDetailView, "SolarSchoolGalleryOpDetailView", "UiView_SolarSchoolTujianCDetail", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolScratchTicketView, "SolarSchoolScratchTicketView", "UiView_SolarSchoolScratchTicket", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolSaveView, "SolarSchoolSaveView", "UiView_SolarSchoolSave", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolLoadingView, "SolarSchoolLoadingView", "UiView_SolarSchoolLoadingA", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolUpgradePopupView, "SolarSchoolUpgradePopupView", "UiView_SolarSchoolUpgradePopup", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolDayChangeLoadingView, "SolarSchoolDayChangeLoadingView", "UiView_SolarSchoolLoadingC", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolLocationChangeLoadingView, "SolarSchoolLocationChangeLoadingView", "UiView_SolarSchoolLoadingB", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolMonthSummaryView, "SolarSchoolMonthSummaryView", "UiView_SolarSchoolSummary", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.SolarSchoolActivityOpenTipsView, "ActivityGeneralTipView", "UiView_SolarSchoolOpeningTips", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.PianoGameplayView, "PianoGameplayView", "UiView_PlotQtePiano", ESourceType.Normal),
+			new ValueTuple<EUiViewName, string, string, ESourceType>(EUiViewName.AnimatedScreenTextView, "AnimatedScreenTextView", "UiItem_ScreenTxt", ESourceType.Normal)
 		};
 		base..ctor();
 	}
 
-	// Token: 0x04002BF4 RID: 11252
+	// Token: 0x04002C8D RID: 11405
 	[Nullable(new byte[]
 	{
 		1,
@@ -1500,7 +1572,7 @@ public class UiViewManager : Singleton
 	})]
 	private readonly ValueTuple<EUiViewName, TViewInfoDynamicData>[] DynamicDataCache;
 
-	// Token: 0x04002BF5 RID: 11253
+	// Token: 0x04002C8E RID: 11406
 	[Nullable(new byte[]
 	{
 		1,
@@ -1510,7 +1582,7 @@ public class UiViewManager : Singleton
 	})]
 	private readonly ValueTuple<EUiViewName, string, string, ESourceType>[] Cache;
 
-	// Token: 0x04002BF6 RID: 11254
+	// Token: 0x04002C8F RID: 11407
 	[Nullable(2)]
 	private static UiViewManager _instance;
 }

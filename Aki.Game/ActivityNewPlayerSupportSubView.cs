@@ -10,18 +10,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020013B8 RID: 5048
+// Token: 0x0200086C RID: 2156
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityNewPlayerSupportSubView : ActivitySubViewBase
 {
-	// Token: 0x06008E59 RID: 36441 RVA: 0x001EB443 File Offset: 0x001E9643
+	// Token: 0x060061EE RID: 25070 RVA: 0x001F3F63 File Offset: 0x001F2163
 	protected override void OnSetData()
 	{
 		this.ActivityData = (this.ActivityBaseData as ActivityNewPlayerSupportData);
 	}
 
-	// Token: 0x06008E5A RID: 36442 RVA: 0x001EB458 File Offset: 0x001E9658
+	// Token: 0x060061EF RID: 25071 RVA: 0x001F3F78 File Offset: 0x001F2178
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -49,7 +49,7 @@ public class ActivityNewPlayerSupportSubView : ActivitySubViewBase
 		};
 	}
 
-	// Token: 0x06008E5B RID: 36443 RVA: 0x001EB5FC File Offset: 0x001E97FC
+	// Token: 0x060061F0 RID: 25072 RVA: 0x001F411C File Offset: 0x001F231C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivityNewPlayerSupportSubView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -60,7 +60,7 @@ public class ActivityNewPlayerSupportSubView : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008E5C RID: 36444 RVA: 0x001EB640 File Offset: 0x001E9840
+	// Token: 0x060061F1 RID: 25073 RVA: 0x001F4160 File Offset: 0x001F2360
 	protected override void OnStart()
 	{
 		this.RemainTimeText = ConfigMultiTextLang.GetLocalTextNew("ActivityRemainingTime", null);
@@ -74,13 +74,13 @@ public class ActivityNewPlayerSupportSubView : ActivitySubViewBase
 		RedDotController.Instance.BindRedDot(ERedDotName.RedDotNewPlayerSupportTrialRoleEntrance, base.GetItem(12), null, 0);
 	}
 
-	// Token: 0x06008E5D RID: 36445 RVA: 0x001EB70C File Offset: 0x001E990C
+	// Token: 0x060061F2 RID: 25074 RVA: 0x001F422C File Offset: 0x001F242C
 	protected override void OnBeforeDestroy()
 	{
 		RedDotController.Instance.UnBindGivenUi(ERedDotName.RedDotNewPlayerSupportTrialRoleEntrance, base.GetItem(12), 0);
 	}
 
-	// Token: 0x06008E5E RID: 36446 RVA: 0x001EB726 File Offset: 0x001E9926
+	// Token: 0x060061F3 RID: 25075 RVA: 0x001F4246 File Offset: 0x001F2446
 	protected override void OnBeforeShow()
 	{
 		this.RefreshTrailRoleView();
@@ -88,21 +88,21 @@ public class ActivityNewPlayerSupportSubView : ActivitySubViewBase
 		EventSystem.Instance.Emit(EEventName.OnActivityNewPlayerSupportEntranceRedDotUpdate);
 	}
 
-	// Token: 0x06008E5F RID: 36447 RVA: 0x001EB744 File Offset: 0x001E9944
+	// Token: 0x060061F4 RID: 25076 RVA: 0x001F4264 File Offset: 0x001F2464
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnActivityNewPlayerSupportTaskUpdate, new Action(this.OnTaskUpdate));
 		EventSystem.Instance.Add<int>(EEventName.OnActivityNewPlayerSupportCurTrialRoleChange, new Action<int>(this.OnCurTrialRoleChange));
 	}
 
-	// Token: 0x06008E60 RID: 36448 RVA: 0x001EB77E File Offset: 0x001E997E
+	// Token: 0x060061F5 RID: 25077 RVA: 0x001F429E File Offset: 0x001F249E
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnActivityNewPlayerSupportTaskUpdate, new Action(this.OnTaskUpdate));
 		EventSystem.Instance.Remove(EEventName.OnActivityNewPlayerSupportCurTrialRoleChange, new Action<int>(this.OnCurTrialRoleChange));
 	}
 
-	// Token: 0x06008E61 RID: 36449 RVA: 0x001EB7B8 File Offset: 0x001E99B8
+	// Token: 0x060061F6 RID: 25078 RVA: 0x001F42D8 File Offset: 0x001F24D8
 	protected override void OnRefreshView()
 	{
 		this.RefreshTrailRoleView();
@@ -110,7 +110,7 @@ public class ActivityNewPlayerSupportSubView : ActivitySubViewBase
 		EventSystem.Instance.Emit(EEventName.OnActivityNewPlayerSupportEntranceRedDotUpdate);
 	}
 
-	// Token: 0x06008E62 RID: 36450 RVA: 0x001EB7D6 File Offset: 0x001E99D6
+	// Token: 0x060061F7 RID: 25079 RVA: 0x001F42F6 File Offset: 0x001F24F6
 	private void SetRemainTimeActive(bool isActive)
 	{
 		if (this.IsRemainTimeActive == isActive)
@@ -121,7 +121,7 @@ public class ActivityNewPlayerSupportSubView : ActivitySubViewBase
 		this.TimeTxt.SetUIActive(isActive);
 	}
 
-	// Token: 0x06008E63 RID: 36451 RVA: 0x001EB7F8 File Offset: 0x001E99F8
+	// Token: 0x060061F8 RID: 25080 RVA: 0x001F4318 File Offset: 0x001F2518
 	private void SetRemainTimeText()
 	{
 		ValueTuple<bool, string> isInRemainTime = this.GetIsInRemainTime();
@@ -134,7 +134,7 @@ public class ActivityNewPlayerSupportSubView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06008E64 RID: 36452 RVA: 0x001EB830 File Offset: 0x001E9A30
+	// Token: 0x060061F9 RID: 25081 RVA: 0x001F4350 File Offset: 0x001F2550
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -150,13 +150,13 @@ public class ActivityNewPlayerSupportSubView : ActivitySubViewBase
 		return new ValueTuple<bool, string>(true, remainTimeText);
 	}
 
-	// Token: 0x06008E65 RID: 36453 RVA: 0x001EB879 File Offset: 0x001E9A79
+	// Token: 0x060061FA RID: 25082 RVA: 0x001F4399 File Offset: 0x001F2599
 	protected override void OnTimer(float gap)
 	{
 		this.SetRemainTimeText();
 	}
 
-	// Token: 0x06008E66 RID: 36454 RVA: 0x001EB884 File Offset: 0x001E9A84
+	// Token: 0x060061FB RID: 25083 RVA: 0x001F43A4 File Offset: 0x001F25A4
 	private void RefreshTrailRoleView()
 	{
 		TrialRoleGroupData curUseTrialRoleData = this.ActivityData.CurUseTrialRoleData;
@@ -192,7 +192,7 @@ public class ActivityNewPlayerSupportSubView : ActivitySubViewBase
 		LguiUtil.Instance.SetLocalTextNew(text2, "PrefabTextItem_436156489_Text", Array.Empty<object>());
 	}
 
-	// Token: 0x06008E67 RID: 36455 RVA: 0x001EBA0C File Offset: 0x001E9C0C
+	// Token: 0x060061FC RID: 25084 RVA: 0x001F452C File Offset: 0x001F272C
 	private void RefreshTaskView()
 	{
 		ActivityNewPlayerSupportData activityData = this.ActivityData;
@@ -219,7 +219,7 @@ public class ActivityNewPlayerSupportSubView : ActivitySubViewBase
 		taskLayout.RefreshByData(list2, null, false);
 	}
 
-	// Token: 0x06008E68 RID: 36456 RVA: 0x001EBA84 File Offset: 0x001E9C84
+	// Token: 0x060061FD RID: 25085 RVA: 0x001F45A4 File Offset: 0x001F27A4
 	private void OnChangeRoleClick()
 	{
 		ActivityNewPlayerSupportController instance = ActivityNewPlayerSupportController.Instance;
@@ -230,25 +230,25 @@ public class ActivityNewPlayerSupportSubView : ActivitySubViewBase
 		instance.OpenTrialRoleView(null);
 	}
 
-	// Token: 0x06008E69 RID: 36457 RVA: 0x001EBAA9 File Offset: 0x001E9CA9
+	// Token: 0x060061FE RID: 25086 RVA: 0x001F45C9 File Offset: 0x001F27C9
 	private ActivityNewPlayerSupportTaskItem CreateLayoutItem()
 	{
 		return new ActivityNewPlayerSupportTaskItem();
 	}
 
-	// Token: 0x06008E6A RID: 36458 RVA: 0x001EBAB0 File Offset: 0x001E9CB0
+	// Token: 0x060061FF RID: 25087 RVA: 0x001F45D0 File Offset: 0x001F27D0
 	private void OnTaskUpdate()
 	{
 		this.RefreshTaskView();
 	}
 
-	// Token: 0x06008E6B RID: 36459 RVA: 0x001EBAB8 File Offset: 0x001E9CB8
+	// Token: 0x06006200 RID: 25088 RVA: 0x001F45D8 File Offset: 0x001F27D8
 	private void OnCurTrialRoleChange(int _)
 	{
 		this.RefreshTrailRoleView();
 	}
 
-	// Token: 0x06008E6C RID: 36460 RVA: 0x001EBAC0 File Offset: 0x001E9CC0
+	// Token: 0x06006201 RID: 25089 RVA: 0x001F45E0 File Offset: 0x001F27E0
 	private void AdventureEntranceFunc()
 	{
 		IActivityRegressMainViewOpenData activityRegressMainViewOpenData = new IActivityRegressMainViewOpenData
@@ -259,7 +259,7 @@ public class ActivityNewPlayerSupportSubView : ActivitySubViewBase
 		UiManager.Instance.OpenView(EUiViewName.ActivityRegressMainView, activityRegressMainViewOpenData, null);
 	}
 
-	// Token: 0x06008E6D RID: 36461 RVA: 0x001EBB00 File Offset: 0x001E9D00
+	// Token: 0x06006202 RID: 25090 RVA: 0x001F4620 File Offset: 0x001F2820
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -303,24 +303,24 @@ public class ActivityNewPlayerSupportSubView : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x04003F05 RID: 16133
+	// Token: 0x04003F9D RID: 16285
 	[Nullable(2)]
 	private ActivityNewPlayerSupportData ActivityData;
 
-	// Token: 0x04003F06 RID: 16134
+	// Token: 0x04003F9E RID: 16286
 	[Nullable(2)]
 	private UUIText TimeTxt;
 
-	// Token: 0x04003F07 RID: 16135
+	// Token: 0x04003F9F RID: 16287
 	private bool IsRemainTimeActive;
 
-	// Token: 0x04003F08 RID: 16136
+	// Token: 0x04003FA0 RID: 16288
 	private string RemainTimeText = "";
 
-	// Token: 0x04003F09 RID: 16137
+	// Token: 0x04003FA1 RID: 16289
 	private string ChosenText = "";
 
-	// Token: 0x04003F0A RID: 16138
+	// Token: 0x04003FA2 RID: 16290
 	[Nullable(new byte[]
 	{
 		2,
@@ -329,60 +329,60 @@ public class ActivityNewPlayerSupportSubView : ActivitySubViewBase
 	})]
 	private GenericLayout<ActivityNewPlayerSupportTaskItem, IActivityNewPlayerSupportTaskItemData> TaskLayout;
 
-	// Token: 0x04003F0B RID: 16139
+	// Token: 0x04003FA3 RID: 16291
 	[Nullable(2)]
 	private ActivityNewPlayerSupportEntranceItem AdventureEntrance;
 
-	// Token: 0x02007A2D RID: 31277
+	// Token: 0x02006BB3 RID: 27571
 	[NullableContext(0)]
 	private static class EComponentType
 	{
-		// Token: 0x0402836F RID: 164719
+		// Token: 0x0402368C RID: 145036
 		public const int TitleTxt = 0;
 
-		// Token: 0x04028370 RID: 164720
+		// Token: 0x0402368D RID: 145037
 		public const int TimeTxt = 1;
 
-		// Token: 0x04028371 RID: 164721
+		// Token: 0x0402368E RID: 145038
 		public const int DescTxt = 2;
 
-		// Token: 0x04028372 RID: 164722
+		// Token: 0x0402368F RID: 145039
 		public const int RoleItem = 3;
 
-		// Token: 0x04028373 RID: 164723
+		// Token: 0x04023690 RID: 145040
 		public const int RoleTex = 4;
 
-		// Token: 0x04028374 RID: 164724
+		// Token: 0x04023691 RID: 145041
 		public const int RoleLockTex = 5;
 
-		// Token: 0x04028375 RID: 164725
+		// Token: 0x04023692 RID: 145042
 		public const int EntranceItem1 = 6;
 
-		// Token: 0x04028376 RID: 164726
+		// Token: 0x04023693 RID: 145043
 		public const int EntranceItem2 = 7;
 
-		// Token: 0x04028377 RID: 164727
+		// Token: 0x04023694 RID: 145044
 		public const int EntranceItem3 = 8;
 
-		// Token: 0x04028378 RID: 164728
+		// Token: 0x04023695 RID: 145045
 		public const int TaskLayout = 9;
 
-		// Token: 0x04028379 RID: 164729
+		// Token: 0x04023696 RID: 145046
 		public const int TaskItem = 10;
 
-		// Token: 0x0402837A RID: 164730
+		// Token: 0x04023697 RID: 145047
 		public const int RoleTxt = 11;
 
-		// Token: 0x0402837B RID: 164731
+		// Token: 0x04023698 RID: 145048
 		public const int RedDotItem = 12;
 
-		// Token: 0x0402837C RID: 164732
+		// Token: 0x04023699 RID: 145049
 		public const int TrialTxt = 13;
 
-		// Token: 0x0402837D RID: 164733
+		// Token: 0x0402369A RID: 145050
 		public const int RoleLockItem1 = 14;
 
-		// Token: 0x0402837E RID: 164734
+		// Token: 0x0402369B RID: 145051
 		public const int RoleLockItem2 = 15;
 	}
 }

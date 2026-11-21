@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200021E RID: 542
+	// Token: 0x02000230 RID: 560
 	public class ConfigDragonPoolById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000CB8 RID: 3256 RVA: 0x000A17C3 File Offset: 0x0009F9C3
+		// Token: 0x06000D24 RID: 3364 RVA: 0x000A76FB File Offset: 0x000A58FB
 		static ConfigDragonPoolById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDragonPoolById.CreateStaticDefaultValue), new Action(ConfigDragonPoolById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000CB9 RID: 3257 RVA: 0x000A17E4 File Offset: 0x0009F9E4
+		// Token: 0x06000D25 RID: 3365 RVA: 0x000A771C File Offset: 0x000A591C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDragonPoolById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000CBA RID: 3258 RVA: 0x000A1863 File Offset: 0x0009FA63
+		// Token: 0x06000D26 RID: 3366 RVA: 0x000A779B File Offset: 0x000A599B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDragonPoolById.LogPair = null;
 			ConfigDragonPoolById.HandleId = 0;
 		}
 
-		// Token: 0x06000CBB RID: 3259 RVA: 0x000A1871 File Offset: 0x0009FA71
+		// Token: 0x06000D27 RID: 3367 RVA: 0x000A77A9 File Offset: 0x000A59A9
 		public static void Init()
 		{
 			ConfigDragonPoolById.HandleId = ConfigCommon.InitDataStatement(ConfigDragonPoolById.HandleId, "db_dragon_ball.db", "select BinData from `DragonPool` where Id=?");
 		}
 
-		// Token: 0x06000CBC RID: 3260 RVA: 0x000A188C File Offset: 0x0009FA8C
+		// Token: 0x06000D28 RID: 3368 RVA: 0x000A77C4 File Offset: 0x000A59C4
 		public static DragonPool? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigDragonPoolById.HandleId, ConfigDragonPoolById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new DragonPool?(rootAsDragonPool);
 		}
 
-		// Token: 0x04000EB6 RID: 3766
+		// Token: 0x04000F34 RID: 3892
 		private const string DB = "db_dragon_ball.db";
 
-		// Token: 0x04000EB7 RID: 3767
+		// Token: 0x04000F35 RID: 3893
 		private const string FILE = "m.鸣素体.xlsx";
 
-		// Token: 0x04000EB8 RID: 3768
+		// Token: 0x04000F36 RID: 3894
 		private const string TABLE = "DragonPool";
 
-		// Token: 0x04000EB9 RID: 3769
+		// Token: 0x04000F37 RID: 3895
 		private const string COMMAND = "select BinData from `DragonPool` where Id=?";
 
-		// Token: 0x04000EBA RID: 3770
+		// Token: 0x04000F38 RID: 3896
 		private const string KEY_PREFIX = "DragonPoolById";
 
-		// Token: 0x04000EBB RID: 3771
+		// Token: 0x04000F39 RID: 3897
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000EBC RID: 3772
+		// Token: 0x04000F3A RID: 3898
 		private static int HandleId;
 	}
 }

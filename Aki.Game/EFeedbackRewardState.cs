@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02001AD5 RID: 6869
+// Token: 0x02000F94 RID: 3988
 public enum EFeedbackRewardState
 {
-	// Token: 0x04005DB6 RID: 23990
+	// Token: 0x04005E85 RID: 24197
 	UnFinish,
-	// Token: 0x04005DB7 RID: 23991
+	// Token: 0x04005E86 RID: 24198
 	Finish,
-	// Token: 0x04005DB8 RID: 23992
+	// Token: 0x04005E87 RID: 24199
 	Claimed
 }

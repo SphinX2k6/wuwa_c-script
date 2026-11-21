@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200103B RID: 4155
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001169 RID: 4457
 	public class IPermanentRogueUi : IShowUi
 	{
-		// Token: 0x06005D18 RID: 23832 RVA: 0x000E19C4 File Offset: 0x000DFBC4
+		// Token: 0x0600630A RID: 25354 RVA: 0x000EE998 File Offset: 0x000ECB98
 		private IPermanentRogueUi_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005D19 RID: 23833 RVA: 0x000E19FC File Offset: 0x000DFBFC
+		// Token: 0x0600630B RID: 25355 RVA: 0x000EE9D0 File Offset: 0x000ECBD0
 		public static IPermanentRogueUi Create([Nullable(2)] IPermanentRogueUi instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005D1A RID: 23834 RVA: 0x000E1A0F File Offset: 0x000DFC0F
+		// Token: 0x0600630C RID: 25356 RVA: 0x000EE9E3 File Offset: 0x000ECBE3
 		public static IPermanentRogueUi CreateFromSetValue([Nullable(2)] IPermanentRogueUi_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005D1B RID: 23835 RVA: 0x000E1A22 File Offset: 0x000DFC22
+		// Token: 0x0600630D RID: 25357 RVA: 0x000EE9F6 File Offset: 0x000ECBF6
 		public new IPermanentRogueUi_SetValue ToSetValue()
 		{
 			return new IPermanentRogueUi_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001EB5 RID: 7861
-		// (get) Token: 0x06005D1C RID: 23836 RVA: 0x000E1A4D File Offset: 0x000DFC4D
-		// (set) Token: 0x06005D1D RID: 23837 RVA: 0x000E1A78 File Offset: 0x000DFC78
+		// Token: 0x17002064 RID: 8292
+		// (get) Token: 0x0600630E RID: 25358 RVA: 0x000EEA21 File Offset: 0x000ECC21
+		// (set) Token: 0x0600630F RID: 25359 RVA: 0x000EEA4C File Offset: 0x000ECC4C
 		public override EShowUiType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001EB6 RID: 7862
-		// (get) Token: 0x06005D1E RID: 23838 RVA: 0x000E1A86 File Offset: 0x000DFC86
-		// (set) Token: 0x06005D1F RID: 23839 RVA: 0x000E1AB1 File Offset: 0x000DFCB1
+		// Token: 0x17002065 RID: 8293
+		// (get) Token: 0x06006310 RID: 25360 RVA: 0x000EEA5A File Offset: 0x000ECC5A
+		// (set) Token: 0x06006311 RID: 25361 RVA: 0x000EEA85 File Offset: 0x000ECC85
 		public virtual ERogueUiType UiType
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001EB7 RID: 7863
-		// (get) Token: 0x06005D20 RID: 23840 RVA: 0x000E1ABF File Offset: 0x000DFCBF
-		// (set) Token: 0x06005D21 RID: 23841 RVA: 0x000E1AEA File Offset: 0x000DFCEA
+		// Token: 0x17002066 RID: 8294
+		// (get) Token: 0x06006312 RID: 25362 RVA: 0x000EEA93 File Offset: 0x000ECC93
+		// (set) Token: 0x06006313 RID: 25363 RVA: 0x000EEABE File Offset: 0x000ECCBE
 		public virtual int BindId
 		{
 			get
@@ -130,11 +128,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x0400381A RID: 14362
+		// Token: 0x04003B62 RID: 15202
 		[Nullable(2)]
 		protected new IPermanentRogueUi FbInstance;
 
-		// Token: 0x0400381B RID: 14363
+		// Token: 0x04003B63 RID: 15203
 		[Nullable(2)]
 		protected new IPermanentRogueUi_SetValue PocoInterface;
 	}

@@ -17,8 +17,8 @@ using UnrealEngine.Utils;
 public class TsTaskKeepFollowingGuideSpline : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
 	// Token: 0x17000096 RID: 150
-	// (get) Token: 0x060003F9 RID: 1017 RVA: 0x00013668 File Offset: 0x00011868
-	// (set) Token: 0x060003FA RID: 1018 RVA: 0x000136A1 File Offset: 0x000118A1
+	// (get) Token: 0x060003F9 RID: 1017 RVA: 0x00013EC0 File Offset: 0x000120C0
+	// (set) Token: 0x060003FA RID: 1018 RVA: 0x00013EF9 File Offset: 0x000120F9
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TSoftObjectPtr<BP_KeepFollowingConfig_C> DataAssetPath
 	{
@@ -39,8 +39,8 @@ public class TsTaskKeepFollowingGuideSpline : TsTaskAbortImmediatelyBase, IUnrea
 	}
 
 	// Token: 0x17000097 RID: 151
-	// (get) Token: 0x060003FB RID: 1019 RVA: 0x000136C6 File Offset: 0x000118C6
-	// (set) Token: 0x060003FC RID: 1020 RVA: 0x000136D6 File Offset: 0x000118D6
+	// (get) Token: 0x060003FB RID: 1019 RVA: 0x00013F1E File Offset: 0x0001211E
+	// (set) Token: 0x060003FC RID: 1020 RVA: 0x00013F2E File Offset: 0x0001212E
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int SplinePbdataId
 	{
@@ -55,8 +55,8 @@ public class TsTaskKeepFollowingGuideSpline : TsTaskAbortImmediatelyBase, IUnrea
 	}
 
 	// Token: 0x17000098 RID: 152
-	// (get) Token: 0x060003FD RID: 1021 RVA: 0x000136E7 File Offset: 0x000118E7
-	// (set) Token: 0x060003FE RID: 1022 RVA: 0x000136F7 File Offset: 0x000118F7
+	// (get) Token: 0x060003FD RID: 1021 RVA: 0x00013F3F File Offset: 0x0001213F
+	// (set) Token: 0x060003FE RID: 1022 RVA: 0x00013F4F File Offset: 0x0001214F
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int WaitingRange
 	{
@@ -71,8 +71,8 @@ public class TsTaskKeepFollowingGuideSpline : TsTaskAbortImmediatelyBase, IUnrea
 	}
 
 	// Token: 0x17000099 RID: 153
-	// (get) Token: 0x060003FF RID: 1023 RVA: 0x00013708 File Offset: 0x00011908
-	// (set) Token: 0x06000400 RID: 1024 RVA: 0x00013718 File Offset: 0x00011918
+	// (get) Token: 0x060003FF RID: 1023 RVA: 0x00013F60 File Offset: 0x00012160
+	// (set) Token: 0x06000400 RID: 1024 RVA: 0x00013F70 File Offset: 0x00012170
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool SingleLane
 	{
@@ -86,7 +86,7 @@ public class TsTaskKeepFollowingGuideSpline : TsTaskAbortImmediatelyBase, IUnrea
 		}
 	}
 
-	// Token: 0x06000401 RID: 1025 RVA: 0x0001372C File Offset: 0x0001192C
+	// Token: 0x06000401 RID: 1025 RVA: 0x00013F84 File Offset: 0x00012184
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -100,30 +100,27 @@ public class TsTaskKeepFollowingGuideSpline : TsTaskAbortImmediatelyBase, IUnrea
 		}
 	}
 
-	// Token: 0x06000402 RID: 1026 RVA: 0x00013794 File Offset: 0x00011994
+	// Token: 0x06000402 RID: 1026 RVA: 0x00013FEC File Offset: 0x000121EC
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveExecuteAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskKeepFollowingGuideSpline) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveExecuteAI"), TsTaskKeepFollowingGuideSpline.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			this.ReceiveExecuteAI_Implementation(ownerController, controlledPawn);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000403 RID: 1027 RVA: 0x00013830 File Offset: 0x00011A30
+	// Token: 0x06000403 RID: 1027 RVA: 0x0001409C File Offset: 0x0001229C
 	[NullableContext(2)]
 	protected virtual void ReceiveExecuteAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -190,7 +187,7 @@ public class TsTaskKeepFollowingGuideSpline : TsTaskAbortImmediatelyBase, IUnrea
 		}
 	}
 
-	// Token: 0x06000404 RID: 1028 RVA: 0x000139B8 File Offset: 0x00011BB8
+	// Token: 0x06000404 RID: 1028 RVA: 0x00014224 File Offset: 0x00012424
 	protected override void OnClear()
 	{
 		if (this.HasStarted)
@@ -210,7 +207,7 @@ public class TsTaskKeepFollowingGuideSpline : TsTaskAbortImmediatelyBase, IUnrea
 		}
 	}
 
-	// Token: 0x06000405 RID: 1029 RVA: 0x000139E3 File Offset: 0x00011BE3
+	// Token: 0x06000405 RID: 1029 RVA: 0x0001424F File Offset: 0x0001244F
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskKeepFollowingGuideSpline._ClassPtr == IntPtr.Zero)
@@ -220,22 +217,22 @@ public class TsTaskKeepFollowingGuideSpline : TsTaskAbortImmediatelyBase, IUnrea
 		return TsTaskKeepFollowingGuideSpline._ClassPtr;
 	}
 
-	// Token: 0x06000406 RID: 1030 RVA: 0x00013A08 File Offset: 0x00011C08
+	// Token: 0x06000406 RID: 1030 RVA: 0x00014274 File Offset: 0x00012474
 	public TsTaskKeepFollowingGuideSpline() : this(BuiltinUtils.AllocNativeUObject(TsTaskKeepFollowingGuideSpline.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06000407 RID: 1031 RVA: 0x00013A30 File Offset: 0x00011C30
+	// Token: 0x06000407 RID: 1031 RVA: 0x0001429C File Offset: 0x0001249C
 	public TsTaskKeepFollowingGuideSpline(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskKeepFollowingGuideSpline.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06000408 RID: 1032 RVA: 0x00013A63 File Offset: 0x00011C63
+	// Token: 0x06000408 RID: 1032 RVA: 0x000142CF File Offset: 0x000124CF
 	protected TsTaskKeepFollowingGuideSpline(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06000409 RID: 1033 RVA: 0x00013A78 File Offset: 0x00011C78
+	// Token: 0x06000409 RID: 1033 RVA: 0x000142E4 File Offset: 0x000124E4
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{

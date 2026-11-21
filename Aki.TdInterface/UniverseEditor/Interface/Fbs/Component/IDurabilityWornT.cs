@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020050CD RID: 20685
+	// Token: 0x02005632 RID: 22066
 	public class IDurabilityWornT
 	{
-		// Token: 0x17009689 RID: 38537
-		// (get) Token: 0x0602146F RID: 136303 RVA: 0x0049F4EA File Offset: 0x0049D6EA
-		// (set) Token: 0x06021470 RID: 136304 RVA: 0x0049F4F2 File Offset: 0x0049D6F2
+		// Token: 0x17009E76 RID: 40566
+		// (get) Token: 0x060233C3 RID: 144323 RVA: 0x004D9476 File Offset: 0x004D7676
+		// (set) Token: 0x060233C4 RID: 144324 RVA: 0x004D947E File Offset: 0x004D767E
 		public int SlightWear { get; set; }
 
-		// Token: 0x1700968A RID: 38538
-		// (get) Token: 0x06021471 RID: 136305 RVA: 0x0049F4FB File Offset: 0x0049D6FB
-		// (set) Token: 0x06021472 RID: 136306 RVA: 0x0049F503 File Offset: 0x0049D703
+		// Token: 0x17009E77 RID: 40567
+		// (get) Token: 0x060233C5 RID: 144325 RVA: 0x004D9487 File Offset: 0x004D7687
+		// (set) Token: 0x060233C6 RID: 144326 RVA: 0x004D948F File Offset: 0x004D768F
 		public int SevereWear { get; set; }
 
-		// Token: 0x1700968B RID: 38539
-		// (get) Token: 0x06021473 RID: 136307 RVA: 0x0049F50C File Offset: 0x0049D70C
-		// (set) Token: 0x06021474 RID: 136308 RVA: 0x0049F514 File Offset: 0x0049D714
+		// Token: 0x17009E78 RID: 40568
+		// (get) Token: 0x060233C7 RID: 144327 RVA: 0x004D9498 File Offset: 0x004D7698
+		// (set) Token: 0x060233C8 RID: 144328 RVA: 0x004D94A0 File Offset: 0x004D76A0
 		public byte NullMask { get; set; }
 
-		// Token: 0x06021475 RID: 136309 RVA: 0x0049F51D File Offset: 0x0049D71D
+		// Token: 0x060233C9 RID: 144329 RVA: 0x004D94A9 File Offset: 0x004D76A9
 		public IDurabilityWornT()
 		{
 			this.SlightWear = 0;

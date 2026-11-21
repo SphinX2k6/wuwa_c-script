@@ -9,15 +9,17 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.GenericPrompt;
 using CSharpScript.Game.Module.InstanceDungeon;
 using CSharpScript.Game.Module.RoleUi;
+using CSharpScript.Game.ServerStorage;
+using CSharpScript.Game.ServerStorage.Container;
 using CSharpScript.Game.Ui;
 
-// Token: 0x020028EA RID: 10474
+// Token: 0x02001E65 RID: 7781
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class TrialRoleModel : ModelBase
 {
-	// Token: 0x060159F7 RID: 88567 RVA: 0x00574F04 File Offset: 0x00573104
+	// Token: 0x060133FB RID: 78843 RVA: 0x0059FDCC File Offset: 0x0059DFCC
 	public void AddTrialRoles(List<ITrialRoleCreateData> dataList)
 	{
 		foreach (ITrialRoleCreateData data in dataList)
@@ -26,7 +28,7 @@ public class TrialRoleModel : ModelBase
 		}
 	}
 
-	// Token: 0x060159F8 RID: 88568 RVA: 0x00574F54 File Offset: 0x00573154
+	// Token: 0x060133FC RID: 78844 RVA: 0x0059FE1C File Offset: 0x0059E01C
 	public void AddTrialRole(ITrialRoleCreateData data)
 	{
 		int trialRoleId = data.TrialRoleId;
@@ -56,7 +58,7 @@ public class TrialRoleModel : ModelBase
 		this.TrialRoleTypeMap[trialRoleType].Add(trialRoleGroupData);
 	}
 
-	// Token: 0x060159F9 RID: 88569 RVA: 0x00575018 File Offset: 0x00573218
+	// Token: 0x060133FD RID: 78845 RVA: 0x0059FEE0 File Offset: 0x0059E0E0
 	public List<TrialRoleGroupData> GetDataListByType(ETrialRoleType trialRoleType)
 	{
 		List<TrialRoleGroupData> result;
@@ -67,7 +69,7 @@ public class TrialRoleModel : ModelBase
 		return new List<TrialRoleGroupData>();
 	}
 
-	// Token: 0x060159FA RID: 88570 RVA: 0x0057503C File Offset: 0x0057323C
+	// Token: 0x060133FE RID: 78846 RVA: 0x0059FF04 File Offset: 0x0059E104
 	[NullableContext(2)]
 	public TrialRoleGroupData GetDataByGroupId(int groupId)
 	{
@@ -79,7 +81,7 @@ public class TrialRoleModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x060159FB RID: 88571 RVA: 0x0057505C File Offset: 0x0057325C
+	// Token: 0x060133FF RID: 78847 RVA: 0x0059FF24 File Offset: 0x0059E124
 	[NullableContext(2)]
 	public TrialRoleGroupData GetCurUseTrialRole(ETrialRoleType trialRoleType)
 	{
@@ -91,7 +93,7 @@ public class TrialRoleModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x060159FC RID: 88572 RVA: 0x0057507C File Offset: 0x0057327C
+	// Token: 0x06013400 RID: 78848 RVA: 0x0059FF44 File Offset: 0x0059E144
 	public void SetCurUseTrialRole(int trialRoleId, roleInfo trialRoleInfo)
 	{
 		if (!RoleUtils.IsTrialRole(trialRoleId))
@@ -116,7 +118,7 @@ public class TrialRoleModel : ModelBase
 		}
 	}
 
-	// Token: 0x060159FD RID: 88573 RVA: 0x005750EC File Offset: 0x005732EC
+	// Token: 0x06013401 RID: 78849 RVA: 0x0059FFB4 File Offset: 0x0059E1B4
 	public void SetCurUseTrialRoleByGroupId(int groupId)
 	{
 		TrialRoleGroupData trialRoleGroupData;
@@ -161,7 +163,7 @@ public class TrialRoleModel : ModelBase
 		EventSystem.Instance.Emit<int?, int>(EEventName.OnCurTrialRoleGroupChanged, (trialRoleGroupData2 != null) ? new int?(trialRoleGroupData2.TrialRoleGroupId) : null, trialRoleGroupData.TrialRoleGroupId);
 	}
 
-	// Token: 0x060159FE RID: 88574 RVA: 0x005751B0 File Offset: 0x005733B0
+	// Token: 0x06013402 RID: 78850 RVA: 0x005A0078 File Offset: 0x0059E278
 	[NullableContext(2)]
 	public void SetGroupTrialRoleId(int trialRoleId, roleInfo trialRoleInfo)
 	{
@@ -191,7 +193,8 @@ public class TrialRoleModel : ModelBase
 			trialRoleGroupData.SetActivatedRoleAttr(trialRoleInfo.BaseProp, trialRoleInfo.AddProp);
 		}
 		FormationData currentFormationData = FormationModel.Instance.CurrentFormationData;
-		if (((currentFormationData != null) ? currentFormationData.RoleIdList : null).Contains(trialRoleId))
+		List<int> list = (currentFormationData != null) ? currentFormationData.RoleIdList : null;
+		if (list != null && list.Contains(trialRoleId))
 		{
 			TrialRoleConfig instance2 = TrialRoleConfig.Instance;
 			TrialRoleInfo? trialRoleInfo2 = (instance2 != null) ? instance2.GetTrialRoleConfig(trialRoleId2) : null;
@@ -205,40 +208,41 @@ public class TrialRoleModel : ModelBase
 		EventSystem.Instance.Emit<int, int, int>(EEventName.OnGroupTrialRoleChanged, trialRoleId2, trialRoleId, trialRoleGroupData.TrialRoleGroupId);
 	}
 
-	// Token: 0x060159FF RID: 88575 RVA: 0x00575314 File Offset: 0x00573514
+	// Token: 0x06013403 RID: 78851 RVA: 0x005A01E0 File Offset: 0x0059E3E0
 	public void SaveTrialRoleUnlockRedDotById(int groupId, bool isUnlock)
 	{
-		Dictionary<int, bool> dictionary = LocalStorage.GetPlayer<Dictionary<int, bool>>(ELocalStoragePlayerKey.TrialRoleGroupUnlock, null);
-		if (dictionary == null)
-		{
-			dictionary = new Dictionary<int, bool>();
-		}
-		bool flag;
-		if (dictionary.TryGetValue(groupId, out flag) && flag == isUnlock)
+		ServerStorageUtil.OverrideLocalBoolMapToServerSet(ELocalStoragePlayerKey.TrialRoleGroupUnlock, EClientStorageSystemIdType.TrialRoleGroupUnlock, true);
+		ServerStorageSet serverStorageSet = ServerStorageModel.Instance.Get(EClientStorageSystemIdType.TrialRoleGroupUnlock) as ServerStorageSet;
+		if (isUnlock == serverStorageSet.Has(groupId))
 		{
 			return;
 		}
-		dictionary[groupId] = isUnlock;
-		LocalStorage.SetPlayer<Dictionary<int, bool>>(ELocalStoragePlayerKey.TrialRoleGroupUnlock, dictionary);
+		if (isUnlock)
+		{
+			serverStorageSet.Add(groupId);
+		}
+		else
+		{
+			serverStorageSet.Remove(groupId);
+		}
 		EventSystem.Instance.Emit(EEventName.OnGroupTrialRoleRedDotUpdate);
 	}
 
-	// Token: 0x06015A00 RID: 88576 RVA: 0x0057536C File Offset: 0x0057356C
+	// Token: 0x06013404 RID: 78852 RVA: 0x005A023B File Offset: 0x0059E43B
 	public bool GetTrialRoleUnlockRedDotById(int groupId)
 	{
-		Dictionary<int, bool> player = LocalStorage.GetPlayer<Dictionary<int, bool>>(ELocalStoragePlayerKey.TrialRoleGroupUnlock, null);
-		bool flag;
-		return player != null && player.TryGetValue(groupId, out flag) && flag;
+		ServerStorageUtil.OverrideLocalBoolMapToServerSet(ELocalStoragePlayerKey.TrialRoleGroupUnlock, EClientStorageSystemIdType.TrialRoleGroupUnlock, true);
+		return (ServerStorageModel.Instance.Get(EClientStorageSystemIdType.TrialRoleGroupUnlock) as ServerStorageSet).Has(groupId);
 	}
 
-	// Token: 0x06015A01 RID: 88577 RVA: 0x00575398 File Offset: 0x00573598
+	// Token: 0x06013405 RID: 78853 RVA: 0x005A0264 File Offset: 0x0059E464
 	public bool GetUpgradeRedDotById(int groupId)
 	{
 		TrialRoleGroupData dataByGroupId = this.GetDataByGroupId(groupId);
 		return dataByGroupId != null && dataByGroupId.CanUpgrade();
 	}
 
-	// Token: 0x06015A02 RID: 88578 RVA: 0x005753B8 File Offset: 0x005735B8
+	// Token: 0x06013406 RID: 78854 RVA: 0x005A0284 File Offset: 0x0059E484
 	public bool CheckCanOperateTrialRole()
 	{
 		ScrollingTipsController instance = ScrollingTipsController.Instance;
@@ -370,7 +374,7 @@ public class TrialRoleModel : ModelBase
 		return instance2.CurrentGroupType.GetValueOrDefault() == ETeamGroupType.Battle;
 	}
 
-	// Token: 0x06015A03 RID: 88579 RVA: 0x0057573C File Offset: 0x0057393C
+	// Token: 0x06013407 RID: 78855 RVA: 0x005A0608 File Offset: 0x0059E808
 	public void SetTrialRoleVisibility(int roleId, bool isVisible)
 	{
 		if (!RoleUtils.IsSpecialTrialRole(roleId))
@@ -386,8 +390,8 @@ public class TrialRoleModel : ModelBase
 		roleSpecialRobotData.SetIsVisibleInRoleSystem(isVisible);
 	}
 
-	// Token: 0x17001D0C RID: 7436
-	// (get) Token: 0x06015A04 RID: 88580 RVA: 0x00575776 File Offset: 0x00573976
+	// Token: 0x17001D66 RID: 7526
+	// (get) Token: 0x06013408 RID: 78856 RVA: 0x005A0642 File Offset: 0x0059E842
 	public static TrialRoleModel Instance
 	{
 		get
@@ -396,7 +400,7 @@ public class TrialRoleModel : ModelBase
 		}
 	}
 
-	// Token: 0x06015A05 RID: 88581 RVA: 0x0057577D File Offset: 0x0057397D
+	// Token: 0x06013409 RID: 78857 RVA: 0x005A0649 File Offset: 0x0059E849
 	public static TrialRoleModel GetOrCreateInstance()
 	{
 		if (TrialRoleModel._Instance == null)
@@ -406,7 +410,7 @@ public class TrialRoleModel : ModelBase
 		return TrialRoleModel._Instance;
 	}
 
-	// Token: 0x06015A06 RID: 88582 RVA: 0x00575791 File Offset: 0x00573991
+	// Token: 0x0601340A RID: 78858 RVA: 0x005A065D File Offset: 0x0059E85D
 	public static bool CreateInstance()
 	{
 		if (TrialRoleModel._Instance != null)
@@ -417,42 +421,42 @@ public class TrialRoleModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06015A07 RID: 88583 RVA: 0x005757A7 File Offset: 0x005739A7
+	// Token: 0x0601340B RID: 78859 RVA: 0x005A0673 File Offset: 0x0059E873
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06015A08 RID: 88584 RVA: 0x005757A9 File Offset: 0x005739A9
+	// Token: 0x0601340C RID: 78860 RVA: 0x005A0675 File Offset: 0x0059E875
 	public static void ResetStaticDefaultValue()
 	{
 		TrialRoleModel._Instance = null;
 	}
 
-	// Token: 0x06015A09 RID: 88585 RVA: 0x005757B1 File Offset: 0x005739B1
+	// Token: 0x0601340D RID: 78861 RVA: 0x005A067D File Offset: 0x0059E87D
 	static TrialRoleModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TrialRoleModel.CreateStaticDefaultValue), new Action(TrialRoleModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400A0D7 RID: 41175
+	// Token: 0x0400A4C1 RID: 42177
 	private readonly List<TrialRoleGroupData> TrialRoleGroupList = new List<TrialRoleGroupData>();
 
-	// Token: 0x0400A0D8 RID: 41176
+	// Token: 0x0400A4C2 RID: 42178
 	private readonly Dictionary<int, TrialRoleGroupData> TrialRoleGroupMap = new Dictionary<int, TrialRoleGroupData>();
 
-	// Token: 0x0400A0D9 RID: 41177
+	// Token: 0x0400A4C3 RID: 42179
 	private readonly Dictionary<ETrialRoleType, List<TrialRoleGroupData>> TrialRoleTypeMap = new Dictionary<ETrialRoleType, List<TrialRoleGroupData>>();
 
-	// Token: 0x0400A0DA RID: 41178
+	// Token: 0x0400A4C4 RID: 42180
 	private readonly Dictionary<ETrialRoleType, TrialRoleGroupData> CurUseTrailRoleMap = new Dictionary<ETrialRoleType, TrialRoleGroupData>();
 
-	// Token: 0x0400A0DB RID: 41179
+	// Token: 0x0400A4C5 RID: 42181
 	private readonly HashSet<int> TrialRoleLvUpSet = new HashSet<int>();
 
-	// Token: 0x0400A0DC RID: 41180
+	// Token: 0x0400A4C6 RID: 42182
 	private readonly string ForbiddenStatTips = "TrialRoleOperateForbidState";
 
-	// Token: 0x0400A0DD RID: 41181
+	// Token: 0x0400A4C7 RID: 42183
 	[Nullable(2)]
 	private static TrialRoleModel _Instance;
 }

@@ -14,17 +14,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B51 RID: 19281
+	// Token: 0x02003AF9 RID: 15097
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TowerDefenseLevelView : UiTickViewBase
 	{
-		// Token: 0x06031EC2 RID: 204482 RVA: 0x00B9489D File Offset: 0x00B92A9D
+		// Token: 0x06026C52 RID: 158802 RVA: 0x00AD8909 File Offset: 0x00AD6B09
 		public TowerDefenseLevelView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06031EC3 RID: 204483 RVA: 0x00B948B4 File Offset: 0x00B92AB4
+		// Token: 0x06026C53 RID: 158803 RVA: 0x00AD8920 File Offset: 0x00AD6B20
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -46,21 +46,21 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06031EC4 RID: 204484 RVA: 0x00B949A1 File Offset: 0x00B92BA1
+		// Token: 0x06026C54 RID: 158804 RVA: 0x00AD8A0D File Offset: 0x00AD6C0D
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnMatchingChange, new Action(this.OnMatchingChange));
 			EventSystem.Instance.Add(EEventName.OnMatchingBegin, new Action(this.OnMatchingBegin));
 		}
 
-		// Token: 0x06031EC5 RID: 204485 RVA: 0x00B949DB File Offset: 0x00B92BDB
+		// Token: 0x06026C55 RID: 158805 RVA: 0x00AD8A47 File Offset: 0x00AD6C47
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnMatchingChange, new Action(this.OnMatchingChange));
 			EventSystem.Instance.Remove(EEventName.OnMatchingBegin, new Action(this.OnMatchingBegin));
 		}
 
-		// Token: 0x06031EC6 RID: 204486 RVA: 0x00B94A18 File Offset: 0x00B92C18
+		// Token: 0x06026C56 RID: 158806 RVA: 0x00AD8A84 File Offset: 0x00AD6C84
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TowerDefenseLevelView.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -71,13 +71,13 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031EC7 RID: 204487 RVA: 0x00B94A5B File Offset: 0x00B92C5B
+		// Token: 0x06026C57 RID: 158807 RVA: 0x00AD8AC7 File Offset: 0x00AD6CC7
 		private void OnClickBackBtn()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06031EC8 RID: 204488 RVA: 0x00B94A64 File Offset: 0x00B92C64
+		// Token: 0x06026C58 RID: 158808 RVA: 0x00AD8AD0 File Offset: 0x00AD6CD0
 		protected override void OnBeforeShow()
 		{
 			TowerDefenseRewardEntranceItem pointsEntrance = this.PointsEntrance;
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			pointsEntrance.RefreshItem();
 		}
 
-		// Token: 0x06031EC9 RID: 204489 RVA: 0x00B94A78 File Offset: 0x00B92C78
+		// Token: 0x06026C59 RID: 158809 RVA: 0x00AD8AE4 File Offset: 0x00AD6CE4
 		protected override void OnAfterShow()
 		{
 			this.MatchingCountDownItem.BindOnClickBtnCancelMatching(delegate
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031ECA RID: 204490 RVA: 0x00B94AF4 File Offset: 0x00B92CF4
+		// Token: 0x06026C5A RID: 158810 RVA: 0x00AD8B60 File Offset: 0x00AD6D60
 		private void OnMatchingBegin()
 		{
 			TowerDefenseLevelDetailPanel detailPanel = this.DetailPanel;
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.BeginMatching();
 		}
 
-		// Token: 0x06031ECB RID: 204491 RVA: 0x00B94B60 File Offset: 0x00B92D60
+		// Token: 0x06026C5B RID: 158811 RVA: 0x00AD8BCC File Offset: 0x00AD6DCC
 		private void OnMatchingChange()
 		{
 			TowerDefenseLevelDetailPanel detailPanel = this.DetailPanel;
@@ -203,14 +203,14 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031ECC RID: 204492 RVA: 0x00B94C86 File Offset: 0x00B92E86
+		// Token: 0x06026C5C RID: 158812 RVA: 0x00AD8CF2 File Offset: 0x00AD6EF2
 		private void BeginMatching()
 		{
 			this.MatchingCountDownItem.SetMatchingTime(0);
 			this.MatchingCountDownItem.StartTimer();
 		}
 
-		// Token: 0x06031ECD RID: 204493 RVA: 0x00B94CA0 File Offset: 0x00B92EA0
+		// Token: 0x06026C5D RID: 158813 RVA: 0x00AD8D0C File Offset: 0x00AD6F0C
 		protected override void OnBeforeDestroy()
 		{
 			if (InstanceDungeonEntranceModel.Instance.GetMatchingState() == EInstanceMatchState.Matching)
@@ -227,7 +227,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.MatchingCountDownItem = null;
 		}
 
-		// Token: 0x06031ECE RID: 204494 RVA: 0x00B94CFC File Offset: 0x00B92EFC
+		// Token: 0x06026C5E RID: 158814 RVA: 0x00AD8D68 File Offset: 0x00AD6F68
 		protected override void OnTick(float delta)
 		{
 			if (this.LevelScroll == null)
@@ -240,7 +240,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031ECF RID: 204495 RVA: 0x00B94D5C File Offset: 0x00B92F5C
+		// Token: 0x06026C5F RID: 158815 RVA: 0x00AD8DC8 File Offset: 0x00AD6FC8
 		private List<TowerDefenseGroupData> BuildGroupDataList()
 		{
 			List<ITowerDefenseParsedStageMessage> stageListCache = TowerDefenseModel.Instance.PhantomMessageCache.StageListCache;
@@ -283,7 +283,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return list2;
 		}
 
-		// Token: 0x06031ED0 RID: 204496 RVA: 0x00B94ED4 File Offset: 0x00B930D4
+		// Token: 0x06026C60 RID: 158816 RVA: 0x00AD8F40 File Offset: 0x00AD7140
 		private int CompareSubLevel(int a, int b)
 		{
 			TowerDefenceInstance? towerDefenseConfigById = InstanceDungeonConfig.Instance.GetTowerDefenseConfigById(a);
@@ -295,7 +295,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return towerDefenseConfigById.Value.SortId - towerDefenseConfigById2.Value.SortId;
 		}
 
-		// Token: 0x06031ED1 RID: 204497 RVA: 0x00B94F58 File Offset: 0x00B93158
+		// Token: 0x06026C61 RID: 158817 RVA: 0x00AD8FC4 File Offset: 0x00AD71C4
 		private void OnClickSubLevel(int stageId)
 		{
 			if (stageId <= 0 || stageId == this.CurrentStageId)
@@ -339,13 +339,13 @@ namespace CSharpScript.Game.Module.TowerDefence
 			sequencePlayer2.PlayLevelSequenceByName("Switch", false, null, false);
 		}
 
-		// Token: 0x06031ED2 RID: 204498 RVA: 0x00B95074 File Offset: 0x00B93274
+		// Token: 0x06026C62 RID: 158818 RVA: 0x00AD90E0 File Offset: 0x00AD72E0
 		private bool IsStageSelected(int stageId)
 		{
 			return stageId == this.CurrentStageId;
 		}
 
-		// Token: 0x06031ED3 RID: 204499 RVA: 0x00B95080 File Offset: 0x00B93280
+		// Token: 0x06026C63 RID: 158819 RVA: 0x00AD90EC File Offset: 0x00AD72EC
 		private void RefreshBackground(int stageId)
 		{
 			TowerDefenceInstance? towerDefenseConfigById = InstanceDungeonConfig.Instance.GetTowerDefenseConfigById(stageId);
@@ -358,7 +358,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			base.SetTextureByPath(text, base.GetTexture(0), null, null);
 		}
 
-		// Token: 0x06031ED4 RID: 204500 RVA: 0x00B950F8 File Offset: 0x00B932F8
+		// Token: 0x06026C64 RID: 158820 RVA: 0x00AD9164 File Offset: 0x00AD7364
 		private void ScrollToTargetGroup(List<TowerDefenseGroupData> groups)
 		{
 			if (this.CurrentStageId <= 0)
@@ -378,10 +378,10 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x0401A9FB RID: 109051
+		// Token: 0x0401534D RID: 86861
 		private const int MATCHING_ITEM_OFFSET = -98;
 
-		// Token: 0x0401A9FC RID: 109052
+		// Token: 0x0401534E RID: 86862
 		[Nullable(new byte[]
 		{
 			2,
@@ -389,7 +389,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 		})]
 		private TabComponentWithCaptionItem<CommonTabItemBase> Caption;
 
-		// Token: 0x0401A9FD RID: 109053
+		// Token: 0x0401534F RID: 86863
 		[Nullable(new byte[]
 		{
 			2,
@@ -398,48 +398,48 @@ namespace CSharpScript.Game.Module.TowerDefence
 		})]
 		private GenericScrollViewNew<TowerDefenseLevelItem, TowerDefenseGroupData> LevelScroll;
 
-		// Token: 0x0401A9FE RID: 109054
+		// Token: 0x04015350 RID: 86864
 		[Nullable(2)]
 		private TowerDefenseLevelDetailPanel DetailPanel;
 
-		// Token: 0x0401A9FF RID: 109055
+		// Token: 0x04015351 RID: 86865
 		[Nullable(2)]
 		private TowerDefenseRewardEntranceItem PointsEntrance;
 
-		// Token: 0x0401AA00 RID: 109056
+		// Token: 0x04015352 RID: 86866
 		[Nullable(2)]
 		private LevelSequencePlayer SequencePlayer;
 
-		// Token: 0x0401AA01 RID: 109057
+		// Token: 0x04015353 RID: 86867
 		[Nullable(2)]
 		private InstanceDungeonMatchingCountDown MatchingCountDownItem;
 
-		// Token: 0x0401AA02 RID: 109058
+		// Token: 0x04015354 RID: 86868
 		private int CurrentStageId;
 
-		// Token: 0x0401AA03 RID: 109059
+		// Token: 0x04015355 RID: 86869
 		private string CurrentBgPath = "";
 
-		// Token: 0x0200ACD1 RID: 44241
+		// Token: 0x020096F1 RID: 38641
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x04034814 RID: 215060
+			// Token: 0x0402F1C4 RID: 192964
 			public const int BgTex = 0;
 
-			// Token: 0x04034815 RID: 215061
+			// Token: 0x0402F1C5 RID: 192965
 			public const int CaptionItem = 1;
 
-			// Token: 0x04034816 RID: 215062
+			// Token: 0x0402F1C6 RID: 192966
 			public const int LevelScroll = 2;
 
-			// Token: 0x04034817 RID: 215063
+			// Token: 0x0402F1C7 RID: 192967
 			public const int LevelItem = 3;
 
-			// Token: 0x04034818 RID: 215064
+			// Token: 0x0402F1C8 RID: 192968
 			public const int PointsItem = 4;
 
-			// Token: 0x04034819 RID: 215065
+			// Token: 0x0402F1C9 RID: 192969
 			public const int LevelDetailPnl = 5;
 		}
 	}

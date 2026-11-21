@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x02004675 RID: 18037
+	// Token: 0x02004ADD RID: 19165
 	public struct IOpenBackLoginView : IFlatbufferObject
 	{
-		// Token: 0x17008016 RID: 32790
-		// (get) Token: 0x0601B613 RID: 112147 RVA: 0x003E4568 File Offset: 0x003E2768
+		// Token: 0x17008657 RID: 34391
+		// (get) Token: 0x0601CDE8 RID: 118248 RVA: 0x00410804 File Offset: 0x0040EA04
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x0601B614 RID: 112148 RVA: 0x003E4575 File Offset: 0x003E2775
+		// Token: 0x0601CDE9 RID: 118249 RVA: 0x00410811 File Offset: 0x0040EA11
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601B615 RID: 112149 RVA: 0x003E457C File Offset: 0x003E277C
+		// Token: 0x0601CDEA RID: 118250 RVA: 0x00410818 File Offset: 0x0040EA18
 		public static IOpenBackLoginView GetRootAsIOpenBackLoginView(ByteBuffer _bb)
 		{
 			return IOpenBackLoginView.GetRootAsIOpenBackLoginView(_bb, default(IOpenBackLoginView));
 		}
 
-		// Token: 0x0601B616 RID: 112150 RVA: 0x003E4598 File Offset: 0x003E2798
+		// Token: 0x0601CDEB RID: 118251 RVA: 0x00410834 File Offset: 0x0040EA34
 		public static IOpenBackLoginView GetRootAsIOpenBackLoginView(ByteBuffer _bb, IOpenBackLoginView obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601B617 RID: 112151 RVA: 0x003E45B5 File Offset: 0x003E27B5
+		// Token: 0x0601CDEC RID: 118252 RVA: 0x00410851 File Offset: 0x0040EA51
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601B618 RID: 112152 RVA: 0x003E45C4 File Offset: 0x003E27C4
+		// Token: 0x0601CDED RID: 118253 RVA: 0x00410860 File Offset: 0x0040EA60
 		public IOpenBackLoginView __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008017 RID: 32791
-		// (get) Token: 0x0601B619 RID: 112153 RVA: 0x003E45D4 File Offset: 0x003E27D4
+		// Token: 0x17008658 RID: 34392
+		// (get) Token: 0x0601CDEE RID: 118254 RVA: 0x00410870 File Offset: 0x0040EA70
 		public EGmCommand Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x17008018 RID: 32792
-		// (get) Token: 0x0601B61A RID: 112154 RVA: 0x003E4610 File Offset: 0x003E2810
+		// Token: 0x17008659 RID: 34393
+		// (get) Token: 0x0601CDEF RID: 118255 RVA: 0x004108AC File Offset: 0x0040EAAC
 		public string Account
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			}
 		}
 
-		// Token: 0x0601B61B RID: 112155 RVA: 0x003E4647 File Offset: 0x003E2847
+		// Token: 0x0601CDF0 RID: 118256 RVA: 0x004108E3 File Offset: 0x0040EAE3
 		public Span<byte> GetAccountBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0601B61C RID: 112156 RVA: 0x003E4656 File Offset: 0x003E2856
+		// Token: 0x0601CDF1 RID: 118257 RVA: 0x004108F2 File Offset: 0x0040EAF2
 		public byte[] GetAccountArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x0601B61D RID: 112157 RVA: 0x003E4664 File Offset: 0x003E2864
+		// Token: 0x0601CDF2 RID: 118258 RVA: 0x00410900 File Offset: 0x0040EB00
 		public static Offset<IOpenBackLoginView> CreateIOpenBackLoginView(FlatBufferBuilder builder, EGmCommand Type = EGmCommand.SkipToLevelPlayNode, StringOffset AccountOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -98,31 +98,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return IOpenBackLoginView.EndIOpenBackLoginView(builder);
 		}
 
-		// Token: 0x0601B61E RID: 112158 RVA: 0x003E4681 File Offset: 0x003E2881
+		// Token: 0x0601CDF3 RID: 118259 RVA: 0x0041091D File Offset: 0x0040EB1D
 		public static void StartIOpenBackLoginView(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601B61F RID: 112159 RVA: 0x003E468A File Offset: 0x003E288A
+		// Token: 0x0601CDF4 RID: 118260 RVA: 0x00410926 File Offset: 0x0040EB26
 		public static void AddType(FlatBufferBuilder builder, EGmCommand type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601B620 RID: 112160 RVA: 0x003E4695 File Offset: 0x003E2895
+		// Token: 0x0601CDF5 RID: 118261 RVA: 0x00410931 File Offset: 0x0040EB31
 		public static void AddAccount(FlatBufferBuilder builder, StringOffset accountOffset)
 		{
 			builder.AddOffset(1, accountOffset.Value, 0);
 		}
 
-		// Token: 0x0601B621 RID: 112161 RVA: 0x003E46A5 File Offset: 0x003E28A5
+		// Token: 0x0601CDF6 RID: 118262 RVA: 0x00410941 File Offset: 0x0040EB41
 		public static Offset<IOpenBackLoginView> EndIOpenBackLoginView(FlatBufferBuilder builder)
 		{
 			return new Offset<IOpenBackLoginView>(builder.EndTable());
 		}
 
-		// Token: 0x0601B622 RID: 112162 RVA: 0x003E46B4 File Offset: 0x003E28B4
+		// Token: 0x0601CDF7 RID: 118263 RVA: 0x00410950 File Offset: 0x0040EB50
 		public IOpenBackLoginViewT UnPack()
 		{
 			IOpenBackLoginViewT openBackLoginViewT = new IOpenBackLoginViewT();
@@ -130,14 +130,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return openBackLoginViewT;
 		}
 
-		// Token: 0x0601B623 RID: 112163 RVA: 0x003E46CF File Offset: 0x003E28CF
+		// Token: 0x0601CDF8 RID: 118264 RVA: 0x0041096B File Offset: 0x0040EB6B
 		public void UnPackTo(IOpenBackLoginViewT _o)
 		{
 			_o.Type = this.Type;
 			_o.Account = this.Account;
 		}
 
-		// Token: 0x0601B624 RID: 112164 RVA: 0x003E46EC File Offset: 0x003E28EC
+		// Token: 0x0601CDF9 RID: 118265 RVA: 0x00410988 File Offset: 0x0040EB88
 		public static Offset<IOpenBackLoginView> Pack(FlatBufferBuilder builder, IOpenBackLoginViewT _o)
 		{
 			if (_o == null)
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Gm
 			return IOpenBackLoginView.CreateIOpenBackLoginView(builder, _o.Type, accountOffset);
 		}
 
-		// Token: 0x0400C838 RID: 51256
+		// Token: 0x0400D267 RID: 53863
 		private Table __p;
 	}
 }

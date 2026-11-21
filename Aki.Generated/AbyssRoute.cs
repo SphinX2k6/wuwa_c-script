@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000AB8 RID: 2744
+	// Token: 0x02000B8D RID: 2957
 	public struct AbyssRoute : IFlatbufferObject
 	{
 		// Token: 0x170000BE RID: 190
-		// (get) Token: 0x060041F7 RID: 16887 RVA: 0x001C8D10 File Offset: 0x001C6F10
+		// (get) Token: 0x060046F5 RID: 18165 RVA: 0x001E7F70 File Offset: 0x001E6170
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,31 +16,31 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060041F8 RID: 16888 RVA: 0x001C8D1D File Offset: 0x001C6F1D
+		// Token: 0x060046F6 RID: 18166 RVA: 0x001E7F7D File Offset: 0x001E617D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060041F9 RID: 16889 RVA: 0x001C8D24 File Offset: 0x001C6F24
+		// Token: 0x060046F7 RID: 18167 RVA: 0x001E7F84 File Offset: 0x001E6184
 		public static AbyssRoute GetRootAsAbyssRoute(ByteBuffer _bb)
 		{
 			return AbyssRoute.GetRootAsAbyssRoute(_bb, default(AbyssRoute));
 		}
 
-		// Token: 0x060041FA RID: 16890 RVA: 0x001C8D40 File Offset: 0x001C6F40
+		// Token: 0x060046F8 RID: 18168 RVA: 0x001E7FA0 File Offset: 0x001E61A0
 		public static AbyssRoute GetRootAsAbyssRoute(ByteBuffer _bb, AbyssRoute obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060041FB RID: 16891 RVA: 0x001C8D5D File Offset: 0x001C6F5D
+		// Token: 0x060046F9 RID: 18169 RVA: 0x001E7FBD File Offset: 0x001E61BD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060041FC RID: 16892 RVA: 0x001C8D6C File Offset: 0x001C6F6C
+		// Token: 0x060046FA RID: 18170 RVA: 0x001E7FCC File Offset: 0x001E61CC
 		public AbyssRoute __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
@@ -48,7 +48,7 @@ namespace Aki.Config
 		}
 
 		// Token: 0x170000BF RID: 191
-		// (get) Token: 0x060041FD RID: 16893 RVA: 0x001C8D7C File Offset: 0x001C6F7C
+		// (get) Token: 0x060046FB RID: 18171 RVA: 0x001E7FDC File Offset: 0x001E61DC
 		public int Id
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.Config
 		}
 
 		// Token: 0x170000C0 RID: 192
-		// (get) Token: 0x060041FE RID: 16894 RVA: 0x001C8DB8 File Offset: 0x001C6FB8
+		// (get) Token: 0x060046FC RID: 18172 RVA: 0x001E8018 File Offset: 0x001E6218
 		public int RouteId
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.Config
 		}
 
 		// Token: 0x170000C1 RID: 193
-		// (get) Token: 0x060041FF RID: 16895 RVA: 0x001C8DF4 File Offset: 0x001C6FF4
+		// (get) Token: 0x060046FD RID: 18173 RVA: 0x001E8054 File Offset: 0x001E6254
 		public int Floor
 		{
 			get
@@ -93,7 +93,7 @@ namespace Aki.Config
 		}
 
 		// Token: 0x170000C2 RID: 194
-		// (get) Token: 0x06004200 RID: 16896 RVA: 0x001C8E30 File Offset: 0x001C7030
+		// (get) Token: 0x060046FE RID: 18174 RVA: 0x001E8090 File Offset: 0x001E6290
 		public int MonsterRatio
 		{
 			get
@@ -108,7 +108,7 @@ namespace Aki.Config
 		}
 
 		// Token: 0x170000C3 RID: 195
-		// (get) Token: 0x06004201 RID: 16897 RVA: 0x001C8E70 File Offset: 0x001C7070
+		// (get) Token: 0x060046FF RID: 18175 RVA: 0x001E80D0 File Offset: 0x001E62D0
 		public string Desc
 		{
 			get
@@ -122,19 +122,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004202 RID: 16898 RVA: 0x001C8EA8 File Offset: 0x001C70A8
+		// Token: 0x06004700 RID: 18176 RVA: 0x001E8108 File Offset: 0x001E6308
 		public Span<byte> GetDescBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x06004203 RID: 16899 RVA: 0x001C8EB8 File Offset: 0x001C70B8
+		// Token: 0x06004701 RID: 18177 RVA: 0x001E8118 File Offset: 0x001E6318
 		public byte[] GetDescArray()
 		{
 			return this.__p.__vector_as_array<byte>(12) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04004A8F RID: 19087
+		// Token: 0x04005062 RID: 20578
 		private Table __p;
 	}
 }

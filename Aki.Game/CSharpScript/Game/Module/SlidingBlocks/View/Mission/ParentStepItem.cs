@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.SlidingBlocks.View.Mission
 {
-	// Token: 0x02004B9A RID: 19354
+	// Token: 0x02003B44 RID: 15172
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ParentStepItem : UiPanelBase
 	{
-		// Token: 0x0603226E RID: 205422 RVA: 0x00BA72B0 File Offset: 0x00BA54B0
+		// Token: 0x06026FFE RID: 159742 RVA: 0x00AEB3FC File Offset: 0x00AE95FC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View.Mission
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603226F RID: 205423 RVA: 0x00BA735C File Offset: 0x00BA555C
+		// Token: 0x06026FFF RID: 159743 RVA: 0x00AEB4A8 File Offset: 0x00AE96A8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ParentStepItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View.Mission
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032270 RID: 205424 RVA: 0x00BA73A0 File Offset: 0x00BA55A0
+		// Token: 0x06027000 RID: 159744 RVA: 0x00AEB4EC File Offset: 0x00AE96EC
 		public void OnTick(float delta)
 		{
 			foreach (ChildStepItem childStepItem in this.ChildSteps)
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View.Mission
 			}
 		}
 
-		// Token: 0x06032271 RID: 205425 RVA: 0x00BA73F4 File Offset: 0x00BA55F4
+		// Token: 0x06027001 RID: 159745 RVA: 0x00AEB540 File Offset: 0x00AE9740
 		private UniTask SetShowInfoOnNormalMode(SlidingBlocksGameServerData serverData)
 		{
 			ParentStepItem.<SetShowInfoOnNormalMode>d__6 <SetShowInfoOnNormalMode>d__;
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View.Mission
 			return <SetShowInfoOnNormalMode>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032272 RID: 205426 RVA: 0x00BA7440 File Offset: 0x00BA5640
+		// Token: 0x06027002 RID: 159746 RVA: 0x00AEB58C File Offset: 0x00AE978C
 		private UniTask SetShowInfoOnEndlessMode(SlidingBlocksGameData gameData, SlidingBlocksGameServerData serverData)
 		{
 			ParentStepItem.<SetShowInfoOnEndlessMode>d__7 <SetShowInfoOnEndlessMode>d__;
@@ -77,24 +77,24 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View.Mission
 			return <SetShowInfoOnEndlessMode>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401AB6C RID: 109420
+		// Token: 0x040154C0 RID: 87232
 		[Nullable(2)]
 		protected LevelSequencePlayer TitleSequencePlayer;
 
-		// Token: 0x0401AB6D RID: 109421
+		// Token: 0x040154C1 RID: 87233
 		private readonly List<ChildStepItem> ChildSteps = new List<ChildStepItem>();
 
-		// Token: 0x0200ADBC RID: 44476
+		// Token: 0x020097DB RID: 38875
 		[NullableContext(0)]
 		private enum EChildComponent
 		{
-			// Token: 0x04034C4D RID: 216141
+			// Token: 0x0402F5F4 RID: 194036
 			StepDescribeText,
-			// Token: 0x04034C4E RID: 216142
+			// Token: 0x0402F5F5 RID: 194037
 			StepDistanceText,
-			// Token: 0x04034C4F RID: 216143
+			// Token: 0x0402F5F6 RID: 194038
 			ChildStep,
-			// Token: 0x04034C50 RID: 216144
+			// Token: 0x0402F5F7 RID: 194039
 			TitleNode
 		}
 	}

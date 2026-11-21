@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006AE5 RID: 27365
+	// Token: 0x0200721C RID: 29212
 	public enum IMonsterNpcInteractConfigBase_Union : byte
 	{
-		// Token: 0x04011335 RID: 70453
+		// Token: 0x04012248 RID: 74312
 		NONE,
-		// Token: 0x04011336 RID: 70454
+		// Token: 0x04012249 RID: 74313
 		IMonsterNpcInteractConfigBase,
-		// Token: 0x04011337 RID: 70455
+		// Token: 0x0401224A RID: 74314
 		IMonsterNpcInteractTriggerHook
 	}
 }

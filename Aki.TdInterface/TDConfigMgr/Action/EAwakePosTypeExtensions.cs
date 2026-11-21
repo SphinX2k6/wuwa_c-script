@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022B5 RID: 8885
+	// Token: 0x02002524 RID: 9508
 	public static class EAwakePosTypeExtensions
 	{
-		// Token: 0x0600C2AD RID: 49837 RVA: 0x001C72C8 File Offset: 0x001C54C8
+		// Token: 0x0600CE7C RID: 52860 RVA: 0x001DF0D0 File Offset: 0x001DD2D0
 		public static string ToEnumString(this EAwakePosType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C2AE RID: 49838 RVA: 0x001C72F0 File Offset: 0x001C54F0
+		// Token: 0x0600CE7D RID: 52861 RVA: 0x001DF0F8 File Offset: 0x001DD2F8
 		public static EAwakePosType FromString(string name)
 		{
 			EAwakePosType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C2AF RID: 49839 RVA: 0x001C7319 File Offset: 0x001C5519
+		// Token: 0x0600CE7E RID: 52862 RVA: 0x001DF121 File Offset: 0x001DD321
 		public static bool TryFromString(string name, out EAwakePosType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C2B0 RID: 49840 RVA: 0x001C733E File Offset: 0x001C553E
+		// Token: 0x0600CE7F RID: 52863 RVA: 0x001DF146 File Offset: 0x001DD346
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C2B1 RID: 49841 RVA: 0x001C734E File Offset: 0x001C554E
+		// Token: 0x0600CE80 RID: 52864 RVA: 0x001DF156 File Offset: 0x001DD356
 		public static EAwakePosType[] GetValues()
 		{
 			return new EAwakePosType[1];
 		}
 
-		// Token: 0x0600C2B2 RID: 49842 RVA: 0x001C7356 File Offset: 0x001C5556
+		// Token: 0x0600CE81 RID: 52865 RVA: 0x001DF15E File Offset: 0x001DD35E
 		public static string[] GetNames()
 		{
 			return new string[]

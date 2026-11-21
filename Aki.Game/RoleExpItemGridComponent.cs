@@ -6,12 +6,12 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002880 RID: 10368
+// Token: 0x02001DFB RID: 7675
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleExpItemGridComponent : UiPanelBase
 {
-	// Token: 0x06015556 RID: 87382 RVA: 0x00562BE9 File Offset: 0x00560DE9
+	// Token: 0x06012F54 RID: 77652 RVA: 0x0058D945 File Offset: 0x0058BB45
 	public RoleExpItemGridComponent(Action levelUpClickCallBack, Action autoBtnClick, Action<int> itemClickCallBack, Action<int> itemReduceCallBack, Func<int, bool> canItemLongPress, Func<int, bool> canItemReduceLongPress, EUiViewName? belongView = null)
 	{
 		this.LevelUpClickCallBack = levelUpClickCallBack;
@@ -23,7 +23,7 @@ public class RoleExpItemGridComponent : UiPanelBase
 		this.BelongView = belongView;
 	}
 
-	// Token: 0x06015557 RID: 87383 RVA: 0x00562C28 File Offset: 0x00560E28
+	// Token: 0x06012F55 RID: 77653 RVA: 0x0058D984 File Offset: 0x0058BB84
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -44,7 +44,7 @@ public class RoleExpItemGridComponent : UiPanelBase
 		};
 	}
 
-	// Token: 0x06015558 RID: 87384 RVA: 0x00562D30 File Offset: 0x00560F30
+	// Token: 0x06012F56 RID: 77654 RVA: 0x0058DA8C File Offset: 0x0058BC8C
 	protected override void OnStart()
 	{
 		this.ButtonItem = new ButtonItem(base.GetItem(11));
@@ -56,7 +56,7 @@ public class RoleExpItemGridComponent : UiPanelBase
 		this.ScrollView = new GenericScrollViewNew<RoleLevelUpCostMediumItemGrid, ISelectedData>(scrollViewWithScrollbar, new Func<RoleLevelUpCostMediumItemGrid>(this.InitItem), null, false, null);
 	}
 
-	// Token: 0x06015559 RID: 87385 RVA: 0x00562D8C File Offset: 0x00560F8C
+	// Token: 0x06012F57 RID: 77655 RVA: 0x0058DAE8 File Offset: 0x0058BCE8
 	private RoleLevelUpCostMediumItemGrid InitItem()
 	{
 		RoleLevelUpCostMediumItemGrid roleLevelUpCostMediumItemGrid = new RoleLevelUpCostMediumItemGrid();
@@ -66,7 +66,7 @@ public class RoleExpItemGridComponent : UiPanelBase
 		return roleLevelUpCostMediumItemGrid;
 	}
 
-	// Token: 0x0601555A RID: 87386 RVA: 0x00562DEC File Offset: 0x00560FEC
+	// Token: 0x06012F58 RID: 77656 RVA: 0x0058DB48 File Offset: 0x0058BD48
 	private void OnExtendToggleStateChanged(bool isShortPress, ItemGridBase itemGrid, object data)
 	{
 		int itemId = ((ISelectedData)data).ItemId;
@@ -77,7 +77,7 @@ public class RoleExpItemGridComponent : UiPanelBase
 		this.ItemClickCallBack(itemId);
 	}
 
-	// Token: 0x0601555B RID: 87387 RVA: 0x00562E24 File Offset: 0x00561024
+	// Token: 0x06012F59 RID: 77657 RVA: 0x0058DB80 File Offset: 0x0058BD80
 	private void OnReduceButtonCallback(bool isShortPress, MediumItemGrid mediumItemGrid, [Nullable(2)] object data)
 	{
 		int itemId = ((ISelectedData)data).ItemId;
@@ -88,14 +88,14 @@ public class RoleExpItemGridComponent : UiPanelBase
 		this.ItemReduceCallBack(itemId);
 	}
 
-	// Token: 0x0601555C RID: 87388 RVA: 0x00562E58 File Offset: 0x00561058
+	// Token: 0x06012F5A RID: 77658 RVA: 0x0058DBB4 File Offset: 0x0058BDB4
 	public void Update(List<ISelectedData> dataList, int moneyId, int needMoney)
 	{
 		this.UpdateByDataList(dataList);
 		this.UpdateMoney(moneyId, needMoney);
 	}
 
-	// Token: 0x0601555D RID: 87389 RVA: 0x00562E69 File Offset: 0x00561069
+	// Token: 0x06012F5B RID: 77659 RVA: 0x0058DBC5 File Offset: 0x0058BDC5
 	public void UpdateByDataList(List<ISelectedData> dataList)
 	{
 		this.DataList = dataList;
@@ -103,7 +103,7 @@ public class RoleExpItemGridComponent : UiPanelBase
 		this.UpdateAutoButtonState();
 	}
 
-	// Token: 0x0601555E RID: 87390 RVA: 0x00562E8C File Offset: 0x0056108C
+	// Token: 0x06012F5C RID: 77660 RVA: 0x0058DBE8 File Offset: 0x0058BDE8
 	public void UpdateMoney(int moneyId, int needMoney)
 	{
 		this.MoneyId = moneyId;
@@ -119,13 +119,13 @@ public class RoleExpItemGridComponent : UiPanelBase
 		uuiitem.SetChangeColor(bUseChangeColor, fcolor);
 	}
 
-	// Token: 0x0601555F RID: 87391 RVA: 0x00562F1F File Offset: 0x0056111F
+	// Token: 0x06012F5D RID: 77661 RVA: 0x0058DC7B File Offset: 0x0058BE7B
 	public bool GetIsMoneyEnough()
 	{
 		return this.IsMoneyEnough;
 	}
 
-	// Token: 0x06015560 RID: 87392 RVA: 0x00562F28 File Offset: 0x00561128
+	// Token: 0x06012F5E RID: 77662 RVA: 0x0058DC84 File Offset: 0x0058BE84
 	public void UpdateAutoButtonState()
 	{
 		if (this.DataList == null)
@@ -147,13 +147,13 @@ public class RoleExpItemGridComponent : UiPanelBase
 		this.AutoButtonState = EAutoButtonState.AutoAdd;
 	}
 
-	// Token: 0x06015561 RID: 87393 RVA: 0x00562F9C File Offset: 0x0056119C
+	// Token: 0x06012F5F RID: 77663 RVA: 0x0058DCF8 File Offset: 0x0058BEF8
 	public EAutoButtonState GetAutoButtonState()
 	{
 		return this.AutoButtonState;
 	}
 
-	// Token: 0x06015562 RID: 87394 RVA: 0x00562FA4 File Offset: 0x005611A4
+	// Token: 0x06012F60 RID: 77664 RVA: 0x0058DD00 File Offset: 0x0058BF00
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -164,47 +164,47 @@ public class RoleExpItemGridComponent : UiPanelBase
 		return this.DataList;
 	}
 
-	// Token: 0x06015563 RID: 87395 RVA: 0x00562FAC File Offset: 0x005611AC
+	// Token: 0x06012F61 RID: 77665 RVA: 0x0058DD08 File Offset: 0x0058BF08
 	public void SetMaxItemActive(bool bActive)
 	{
 		base.GetItem(12).SetUIActive(bActive);
 	}
 
-	// Token: 0x06015564 RID: 87396 RVA: 0x00562FBC File Offset: 0x005611BC
+	// Token: 0x06012F62 RID: 77666 RVA: 0x0058DD18 File Offset: 0x0058BF18
 	public void SetLockItemActive(bool bActive)
 	{
 		base.GetItem(13).SetUIActive(bActive);
 	}
 
-	// Token: 0x06015565 RID: 87397 RVA: 0x00562FCC File Offset: 0x005611CC
+	// Token: 0x06012F63 RID: 77667 RVA: 0x0058DD28 File Offset: 0x0058BF28
 	public void SetButtonItemActive(bool bActive)
 	{
 		this.ButtonItem.SetActive(bActive);
 	}
 
-	// Token: 0x06015566 RID: 87398 RVA: 0x00562FDA File Offset: 0x005611DA
+	// Token: 0x06012F64 RID: 77668 RVA: 0x0058DD36 File Offset: 0x0058BF36
 	public void SetMaxText(string textId)
 	{
 	}
 
-	// Token: 0x06015567 RID: 87399 RVA: 0x00562FDC File Offset: 0x005611DC
+	// Token: 0x06012F65 RID: 77669 RVA: 0x0058DD38 File Offset: 0x0058BF38
 	public void SetLockText(string textId)
 	{
 	}
 
-	// Token: 0x06015568 RID: 87400 RVA: 0x00562FDE File Offset: 0x005611DE
+	// Token: 0x06012F66 RID: 77670 RVA: 0x0058DD3A File Offset: 0x0058BF3A
 	public void SetButtonItemText(string textId)
 	{
 		this.ButtonItem.SetLocalText(textId, Array.Empty<object>());
 	}
 
-	// Token: 0x06015569 RID: 87401 RVA: 0x00562FF1 File Offset: 0x005611F1
+	// Token: 0x06012F67 RID: 77671 RVA: 0x0058DD4D File Offset: 0x0058BF4D
 	public void SetAutoButtonText(string textId)
 	{
 		base.GetText(15).ShowTextNew(textId);
 	}
 
-	// Token: 0x0601556A RID: 87402 RVA: 0x00563001 File Offset: 0x00561201
+	// Token: 0x06012F68 RID: 77672 RVA: 0x0058DD5D File Offset: 0x0058BF5D
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -216,13 +216,13 @@ public class RoleExpItemGridComponent : UiPanelBase
 		return this.ScrollView;
 	}
 
-	// Token: 0x0601556B RID: 87403 RVA: 0x00563009 File Offset: 0x00561209
+	// Token: 0x06012F69 RID: 77673 RVA: 0x0058DD65 File Offset: 0x0058BF65
 	private void OnClickAutoButton()
 	{
 		this.AutoBtnClick();
 	}
 
-	// Token: 0x04009F77 RID: 40823
+	// Token: 0x0400A360 RID: 41824
 	[Nullable(new byte[]
 	{
 		2,
@@ -231,7 +231,7 @@ public class RoleExpItemGridComponent : UiPanelBase
 	})]
 	protected GenericScrollViewNew<RoleLevelUpCostMediumItemGrid, ISelectedData> ScrollView;
 
-	// Token: 0x04009F78 RID: 40824
+	// Token: 0x0400A361 RID: 41825
 	[Nullable(new byte[]
 	{
 		2,
@@ -239,40 +239,40 @@ public class RoleExpItemGridComponent : UiPanelBase
 	})]
 	private List<ISelectedData> DataList;
 
-	// Token: 0x04009F79 RID: 40825
+	// Token: 0x0400A362 RID: 41826
 	private int MoneyId;
 
-	// Token: 0x04009F7A RID: 40826
+	// Token: 0x0400A363 RID: 41827
 	private int NeedMoney;
 
-	// Token: 0x04009F7B RID: 40827
+	// Token: 0x0400A364 RID: 41828
 	[Nullable(2)]
 	private ButtonItem ButtonItem;
 
-	// Token: 0x04009F7C RID: 40828
+	// Token: 0x0400A365 RID: 41829
 	private EAutoButtonState AutoButtonState;
 
-	// Token: 0x04009F7D RID: 40829
+	// Token: 0x0400A366 RID: 41830
 	private bool IsMoneyEnough;
 
-	// Token: 0x04009F7E RID: 40830
+	// Token: 0x0400A367 RID: 41831
 	private readonly Action LevelUpClickCallBack;
 
-	// Token: 0x04009F7F RID: 40831
+	// Token: 0x0400A368 RID: 41832
 	private readonly Action AutoBtnClick;
 
-	// Token: 0x04009F80 RID: 40832
+	// Token: 0x0400A369 RID: 41833
 	private readonly Action<int> ItemClickCallBack;
 
-	// Token: 0x04009F81 RID: 40833
+	// Token: 0x0400A36A RID: 41834
 	private readonly Action<int> ItemReduceCallBack;
 
-	// Token: 0x04009F82 RID: 40834
+	// Token: 0x0400A36B RID: 41835
 	private readonly Func<int, bool> CanItemLongPress;
 
-	// Token: 0x04009F83 RID: 40835
+	// Token: 0x0400A36C RID: 41836
 	private readonly Func<int, bool> CanItemReduceLongPress;
 
-	// Token: 0x04009F84 RID: 40836
+	// Token: 0x0400A36D RID: 41837
 	public EUiViewName? BelongView;
 }

@@ -4,18 +4,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045EB RID: 17899
+	// Token: 0x02003514 RID: 13588
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ItemMaterialGlobalController : ItemMaterialControllerBase
 	{
-		// Token: 0x0602E297 RID: 189079 RVA: 0x00AAB38A File Offset: 0x00AA958A
+		// Token: 0x0602298C RID: 141708 RVA: 0x009D7B26 File Offset: 0x009D5D26
 		public bool IsValid()
 		{
 			return this.ParameterCollection != null && this.ParameterCollection.IsValid() && this.WorldContentObject != null && this.WorldContentObject.IsValid();
 		}
 
-		// Token: 0x0602E298 RID: 189080 RVA: 0x00AAB3B8 File Offset: 0x00AA95B8
+		// Token: 0x0602298D RID: 141709 RVA: 0x009D7B54 File Offset: 0x009D5D54
 		public ItemMaterialGlobalController(UObject worldContentObject, ItemMaterialControllerGlobalData data)
 		{
 			this.LifeTimeController = new EffectLifeTimeController(data.StartTime, data.LoopTime, data.EndTime, EEffectLifeTimeType.Auto, new Action(this.Destroy), null, 0f, 1f);
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Render
 			this.Play();
 		}
 
-		// Token: 0x0602E299 RID: 189081 RVA: 0x00AAB414 File Offset: 0x00AA9614
+		// Token: 0x0602298E RID: 141710 RVA: 0x009D7BB0 File Offset: 0x009D5DB0
 		public void UpdateParameters(bool forceUpdate)
 		{
 			if (!this.IsValid())
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Render
 			this.UpdateGlobalRim(forceUpdate);
 		}
 
-		// Token: 0x0602E29A RID: 189082 RVA: 0x00AAB628 File Offset: 0x00AA9828
+		// Token: 0x0602298F RID: 141711 RVA: 0x009D7DC4 File Offset: 0x009D5FC4
 		public void UpdateGlobalRim(bool forceUpdate)
 		{
 			if (!this.IsValid())
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E29B RID: 189083 RVA: 0x00AAB780 File Offset: 0x00AA9980
+		// Token: 0x06022990 RID: 141712 RVA: 0x009D7F1C File Offset: 0x009D611C
 		public void ResetParameters()
 		{
 			if (!this.IsValid())
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E29C RID: 189084 RVA: 0x00AAB87B File Offset: 0x00AA9A7B
+		// Token: 0x06022991 RID: 141713 RVA: 0x009D8017 File Offset: 0x009D6217
 		public void Play()
 		{
 			EffectLifeTimeController lifeTimeController = this.LifeTimeController;
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.Render
 			this.UpdateParameters(true);
 		}
 
-		// Token: 0x0602E29D RID: 189085 RVA: 0x00AAB895 File Offset: 0x00AA9A95
+		// Token: 0x06022992 RID: 141714 RVA: 0x009D8031 File Offset: 0x009D6231
 		public void Update(float deltaSecond)
 		{
 			if (!this.IsValid())
@@ -172,24 +172,24 @@ namespace CSharpScript.Game.Render
 			this.UpdateParameters(false);
 		}
 
-		// Token: 0x0602E29E RID: 189086 RVA: 0x00AAB8B9 File Offset: 0x00AA9AB9
+		// Token: 0x06022993 RID: 141715 RVA: 0x009D8055 File Offset: 0x009D6255
 		public void Destroy()
 		{
 			this.ResetParameters();
 			this.LifeTimeController = null;
 		}
 
-		// Token: 0x04018C53 RID: 101459
+		// Token: 0x04013292 RID: 78482
 		[Nullable(2)]
 		protected EffectLifeTimeController LifeTimeController;
 
-		// Token: 0x04018C54 RID: 101460
+		// Token: 0x04013293 RID: 78483
 		protected UObject WorldContentObject;
 
-		// Token: 0x04018C55 RID: 101461
+		// Token: 0x04013294 RID: 78484
 		protected ItemMaterialControllerGlobalData Data;
 
-		// Token: 0x04018C56 RID: 101462
+		// Token: 0x04013295 RID: 78485
 		[Nullable(2)]
 		protected UMaterialParameterCollection ParameterCollection;
 	}

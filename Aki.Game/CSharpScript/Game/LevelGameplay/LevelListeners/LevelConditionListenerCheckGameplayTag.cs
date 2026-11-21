@@ -5,12 +5,12 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 {
-	// Token: 0x02006AE0 RID: 27360
+	// Token: 0x02005C58 RID: 23640
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelConditionListenerCheckGameplayTag : LevelListenerBase
 	{
-		// Token: 0x06043F7C RID: 278396 RVA: 0x010ABEAC File Offset: 0x010AA0AC
+		// Token: 0x0603A0CE RID: 237774 RVA: 0x01055724 File Offset: 0x01053924
 		protected override void OnListen(object listeningInfo, TListenerCallbackFunc callback, [Nullable(2)] GeneralContext context = null, params object[] otherParams)
 		{
 			EventSystem.Instance.Add<EntityHandle, EntityHandle>(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.OnChangeRole));
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			}
 		}
 
-		// Token: 0x06043F7D RID: 278397 RVA: 0x010ABF20 File Offset: 0x010AA120
+		// Token: 0x0603A0CF RID: 237775 RVA: 0x01055798 File Offset: 0x01053998
 		private void AddTagListenerToEntity(EntityHandle entityHandle)
 		{
 			if (entityHandle == null || !entityHandle.Valid)
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			component.AddTagAddOrRemoveListener(GameplayTagUtils.GetTagIdByName(((ICheckGameplayTagCondition)this.ListeningInfo).GameplayTag), new BaseTagComponent.TTagSwitchedCallback(this.OnTagAddOrRemove), null);
 		}
 
-		// Token: 0x06043F7E RID: 278398 RVA: 0x010ABF78 File Offset: 0x010AA178
+		// Token: 0x0603A0D0 RID: 237776 RVA: 0x010557F0 File Offset: 0x010539F0
 		private void RemoveTagListenerFromEntity(EntityHandle entityHandle)
 		{
 			if (entityHandle == null || !entityHandle.Valid)
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			component.RemoveTagAddOrRemoveListener(GameplayTagUtils.GetTagIdByName(((ICheckGameplayTagCondition)this.ListeningInfo).GameplayTag), new BaseTagComponent.TTagSwitchedCallback(this.OnTagAddOrRemove));
 		}
 
-		// Token: 0x06043F7F RID: 278399 RVA: 0x010ABFCD File Offset: 0x010AA1CD
+		// Token: 0x0603A0D1 RID: 237777 RVA: 0x01055845 File Offset: 0x01053A45
 		private void OnChangeRole(EntityHandle newEntityHandle, [Nullable(2)] EntityHandle oldEntityHandle)
 		{
 			if (oldEntityHandle != null && oldEntityHandle.Valid)
@@ -76,13 +76,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			this.RefreshHasTag(true);
 		}
 
-		// Token: 0x06043F80 RID: 278400 RVA: 0x010ABFFA File Offset: 0x010AA1FA
+		// Token: 0x0603A0D2 RID: 237778 RVA: 0x01055872 File Offset: 0x01053A72
 		private void OnTagAddOrRemove(int tagId, bool tagExist)
 		{
 			this.RefreshHasTag(true);
 		}
 
-		// Token: 0x06043F81 RID: 278401 RVA: 0x010AC004 File Offset: 0x010AA204
+		// Token: 0x0603A0D3 RID: 237779 RVA: 0x0105587C File Offset: 0x01053A7C
 		private void RefreshHasTag(bool callbackIfUpdate)
 		{
 			SceneTeamModel instance = SceneTeamModel.Instance;
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			}
 		}
 
-		// Token: 0x06043F82 RID: 278402 RVA: 0x010AC0C4 File Offset: 0x010AA2C4
+		// Token: 0x0603A0D4 RID: 237780 RVA: 0x0105593C File Offset: 0x01053B3C
 		protected override void OnUnListen()
 		{
 			EventSystem.Instance.Remove<EntityHandle, EntityHandle>(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.OnChangeRole));
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			}
 		}
 
-		// Token: 0x04023862 RID: 145506
+		// Token: 0x0401EB04 RID: 125700
 		private bool? OldHasTag;
 	}
 }

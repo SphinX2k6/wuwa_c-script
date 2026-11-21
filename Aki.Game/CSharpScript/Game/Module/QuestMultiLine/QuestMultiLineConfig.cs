@@ -5,25 +5,25 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.QuestMultiLine
 {
-	// Token: 0x02004F9C RID: 20380
+	// Token: 0x02003F65 RID: 16229
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Config(0)]
 	public class QuestMultiLineConfig : ConfigBase
 	{
-		// Token: 0x060342FA RID: 213754 RVA: 0x00C4063F File Offset: 0x00C3E83F
+		// Token: 0x06029168 RID: 168296 RVA: 0x00B89DEB File Offset: 0x00B87FEB
 		protected override bool OnInit()
 		{
 			return true;
 		}
 
-		// Token: 0x060342FB RID: 213755 RVA: 0x00C40642 File Offset: 0x00C3E842
+		// Token: 0x06029169 RID: 168297 RVA: 0x00B89DEE File Offset: 0x00B87FEE
 		protected override bool OnClear()
 		{
 			return true;
 		}
 
-		// Token: 0x060342FC RID: 213756 RVA: 0x00C40648 File Offset: 0x00C3E848
+		// Token: 0x0602916A RID: 168298 RVA: 0x00B89DF4 File Offset: 0x00B87FF4
 		public static QuestTimePointConfig? GetTimePointConfigById(int id)
 		{
 			QuestTimePointConfig? config = ConfigQuestTimePointConfigById.GetConfig(id, true);
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine
 			return config;
 		}
 
-		// Token: 0x060342FD RID: 213757 RVA: 0x00C40698 File Offset: 0x00C3E898
+		// Token: 0x0602916B RID: 168299 RVA: 0x00B89E44 File Offset: 0x00B88044
 		public static QuestTimeComponentConfig? GetComponentConfigById(int id)
 		{
 			QuestTimeComponentConfig? config = ConfigQuestTimeComponentConfigById.GetConfig(id, true);
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine
 			return config;
 		}
 
-		// Token: 0x060342FE RID: 213758 RVA: 0x00C406E8 File Offset: 0x00C3E8E8
+		// Token: 0x0602916C RID: 168300 RVA: 0x00B89E94 File Offset: 0x00B88094
 		public static QuestComponentStatusType? GetComponentStatusConfigById(int id)
 		{
 			QuestComponentStatusType? config = ConfigQuestComponentStatusTypeById.GetConfig(id, true);
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine
 			return config;
 		}
 
-		// Token: 0x060342FF RID: 213759 RVA: 0x00C40738 File Offset: 0x00C3E938
+		// Token: 0x0602916D RID: 168301 RVA: 0x00B89EE4 File Offset: 0x00B880E4
 		public static QuestBranchPageConfig? GetBranchPageConfigById(int id)
 		{
 			QuestBranchPageConfig? config = ConfigQuestBranchPageConfigById.GetConfig(id, true);
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine
 			return config;
 		}
 
-		// Token: 0x06034300 RID: 213760 RVA: 0x00C40788 File Offset: 0x00C3E988
+		// Token: 0x0602916E RID: 168302 RVA: 0x00B89F34 File Offset: 0x00B88134
 		public static QuestBranchConfig? GetQuestBranchConfig(int id)
 		{
 			QuestBranchConfig? config = ConfigQuestBranchConfigById.GetConfig(id, true);
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine
 			return config;
 		}
 
-		// Token: 0x06034301 RID: 213761 RVA: 0x00C407D8 File Offset: 0x00C3E9D8
+		// Token: 0x0602916F RID: 168303 RVA: 0x00B89F84 File Offset: 0x00B88184
 		[NullableContext(2)]
 		public static IReadOnlyList<QuestTimePointConfig> GetAllTimePointConfigs()
 		{
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine
 			return configList;
 		}
 
-		// Token: 0x06034302 RID: 213762 RVA: 0x00C40810 File Offset: 0x00C3EA10
+		// Token: 0x06029170 RID: 168304 RVA: 0x00B89FBC File Offset: 0x00B881BC
 		public static QuestBranchComponentGroup? GetBranchComponentGroupConfig(int id)
 		{
 			QuestBranchComponentGroup? config = ConfigQuestBranchComponentGroupById.GetConfig(id, true);
@@ -131,8 +131,8 @@ namespace CSharpScript.Game.Module.QuestMultiLine
 			return config;
 		}
 
-		// Token: 0x17007F6D RID: 32621
-		// (get) Token: 0x06034303 RID: 213763 RVA: 0x00C4085E File Offset: 0x00C3EA5E
+		// Token: 0x1700531D RID: 21277
+		// (get) Token: 0x06029171 RID: 168305 RVA: 0x00B8A00A File Offset: 0x00B8820A
 		public static QuestMultiLineConfig Instance
 		{
 			get
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine
 			}
 		}
 
-		// Token: 0x06034304 RID: 213764 RVA: 0x00C40865 File Offset: 0x00C3EA65
+		// Token: 0x06029172 RID: 168306 RVA: 0x00B8A011 File Offset: 0x00B88211
 		public static QuestMultiLineConfig GetOrCreateInstance()
 		{
 			if (QuestMultiLineConfig._Instance == null)
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine
 			return QuestMultiLineConfig._Instance;
 		}
 
-		// Token: 0x06034305 RID: 213765 RVA: 0x00C40879 File Offset: 0x00C3EA79
+		// Token: 0x06029173 RID: 168307 RVA: 0x00B8A025 File Offset: 0x00B88225
 		public static bool CreateInstance()
 		{
 			if (QuestMultiLineConfig._Instance != null)
@@ -162,24 +162,24 @@ namespace CSharpScript.Game.Module.QuestMultiLine
 			return true;
 		}
 
-		// Token: 0x06034306 RID: 213766 RVA: 0x00C4088F File Offset: 0x00C3EA8F
+		// Token: 0x06029174 RID: 168308 RVA: 0x00B8A03B File Offset: 0x00B8823B
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06034307 RID: 213767 RVA: 0x00C40891 File Offset: 0x00C3EA91
+		// Token: 0x06029175 RID: 168309 RVA: 0x00B8A03D File Offset: 0x00B8823D
 		public static void ResetStaticDefaultValue()
 		{
 			QuestMultiLineConfig._Instance = null;
 		}
 
-		// Token: 0x06034308 RID: 213768 RVA: 0x00C40899 File Offset: 0x00C3EA99
+		// Token: 0x06029176 RID: 168310 RVA: 0x00B8A045 File Offset: 0x00B88245
 		static QuestMultiLineConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(QuestMultiLineConfig.CreateStaticDefaultValue), new Action(QuestMultiLineConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401BBE4 RID: 113636
+		// Token: 0x040165B9 RID: 91577
 		[Nullable(2)]
 		private static QuestMultiLineConfig _Instance;
 	}

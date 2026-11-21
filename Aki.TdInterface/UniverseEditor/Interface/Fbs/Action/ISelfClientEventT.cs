@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006F55 RID: 28501
+	// Token: 0x02007718 RID: 30488
 	public class ISelfClientEventT
 	{
-		// Token: 0x1700D3C7 RID: 54215
-		// (get) Token: 0x060325A7 RID: 206247 RVA: 0x006CC7AA File Offset: 0x006CA9AA
-		// (set) Token: 0x060325A8 RID: 206248 RVA: 0x006CC7B2 File Offset: 0x006CA9B2
+		// Token: 0x1700DF93 RID: 57235
+		// (get) Token: 0x060357E5 RID: 219109 RVA: 0x0072BFEA File Offset: 0x0072A1EA
+		// (set) Token: 0x060357E6 RID: 219110 RVA: 0x0072BFF2 File Offset: 0x0072A1F2
 		public EClientEventTarget Type { get; set; }
 
-		// Token: 0x060325A9 RID: 206249 RVA: 0x006CC7BB File Offset: 0x006CA9BB
+		// Token: 0x060357E7 RID: 219111 RVA: 0x0072BFFB File Offset: 0x0072A1FB
 		public ISelfClientEventT()
 		{
 			this.Type = EClientEventTarget.Self;

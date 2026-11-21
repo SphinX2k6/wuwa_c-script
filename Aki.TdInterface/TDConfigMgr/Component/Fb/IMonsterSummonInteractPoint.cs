@@ -6,11 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CC2 RID: 3266
+	// Token: 0x02000DA4 RID: 3492
 	public class IMonsterSummonInteractPoint : IExploreSkillInteractType
 	{
-		// Token: 0x06004AB0 RID: 19120 RVA: 0x000BADE8 File Offset: 0x000B8FE8
-		[NullableContext(1)]
+		// Token: 0x06004F5E RID: 20318 RVA: 0x000C57F8 File Offset: 0x000C39F8
 		public static IMonsterSummonInteractPoint Create(IMonsterSummonInteractPoint? instance)
 		{
 			if (instance == null)
@@ -23,8 +22,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170016E9 RID: 5865
-		// (get) Token: 0x06004AB1 RID: 19121 RVA: 0x000BAE07 File Offset: 0x000B9007
+		// Token: 0x17001811 RID: 6161
+		// (get) Token: 0x06004F5F RID: 20319 RVA: 0x000C5817 File Offset: 0x000C3A17
 		public override EExploreSkillInteractType Type
 		{
 			get
@@ -33,8 +32,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170016EA RID: 5866
-		// (get) Token: 0x06004AB2 RID: 19122 RVA: 0x000BAE14 File Offset: 0x000B9014
+		// Token: 0x17001812 RID: 6162
+		// (get) Token: 0x06004F60 RID: 20320 RVA: 0x000C5824 File Offset: 0x000C3A24
 		public virtual float Range
 		{
 			get
@@ -43,19 +42,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170016EB RID: 5867
-		// (get) Token: 0x06004AB3 RID: 19123 RVA: 0x000BAE24 File Offset: 0x000B9024
+		// Token: 0x17001813 RID: 6163
+		// (get) Token: 0x06004F61 RID: 20321 RVA: 0x000C5834 File Offset: 0x000C3A34
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> Actions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -78,18 +77,18 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002AB1 RID: 10929
+		// Token: 0x04002D2B RID: 11563
 		private IMonsterSummonInteractPoint Instance;
 
-		// Token: 0x04002AB2 RID: 10930
+		// Token: 0x04002D2C RID: 11564
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _ActionsCache;
 
-		// Token: 0x04002AB3 RID: 10931
+		// Token: 0x04002D2D RID: 11565
 		private bool _ActionsInited;
 	}
 }

@@ -7,10 +7,10 @@ using CSharpScript.Game.Module.Skin;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001188 RID: 4488
+// Token: 0x0200063C RID: 1596
 public class BabelTowerSettlementRoleItem : GridProxyAbstract<int>
 {
-	// Token: 0x060076AE RID: 30382 RVA: 0x0018B24C File Offset: 0x0018944C
+	// Token: 0x06004A45 RID: 19013 RVA: 0x00193DFC File Offset: 0x00191FFC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -22,7 +22,7 @@ public class BabelTowerSettlementRoleItem : GridProxyAbstract<int>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060076AF RID: 30383 RVA: 0x0018B294 File Offset: 0x00189494
+	// Token: 0x06004A46 RID: 19014 RVA: 0x00193E44 File Offset: 0x00192044
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		RoleInfo value = RoleConfig.Instance.GetRoleConfig(data).Value;
@@ -38,10 +38,10 @@ public class BabelTowerSettlementRoleItem : GridProxyAbstract<int>
 		base.SetRoleSkinIcon(value.Card, texture, num, null, null);
 	}
 
-	// Token: 0x02007764 RID: 30564
+	// Token: 0x020068F1 RID: 26865
 	private class EComponent
 	{
-		// Token: 0x0402761B RID: 161307
+		// Token: 0x04022954 RID: 141652
 		public const int IconTexture = 0;
 	}
 }

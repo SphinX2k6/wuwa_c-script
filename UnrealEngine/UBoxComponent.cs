@@ -6,31 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020008E7 RID: 2279
+	// Token: 0x02000195 RID: 405
 	[UnrealObjectPath("/Script/Engine.BoxComponent")]
 	[UnrealStructLayout(1600, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1600)]
 	public class UBoxComponent : UShapeComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06007D0A RID: 32010 RVA: 0x000B3453 File Offset: 0x000B1653
+		// Token: 0x06001B2D RID: 6957 RVA: 0x000287D2 File Offset: 0x000269D2
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UBoxComponent._ClassPtr;
 		}
 
-		// Token: 0x06007D0B RID: 32011 RVA: 0x000B3460 File Offset: 0x000B1660
+		// Token: 0x06001B2E RID: 6958 RVA: 0x000287E0 File Offset: 0x000269E0
 		public UBoxComponent() : this(BuiltinUtils.AllocNativeUObject(UBoxComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06007D0C RID: 32012 RVA: 0x000B3488 File Offset: 0x000B1688
+		// Token: 0x06001B2F RID: 6959 RVA: 0x00028808 File Offset: 0x00026A08
 		[NullableContext(1)]
 		public UBoxComponent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UBoxComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17001D5F RID: 7519
-		// (get) Token: 0x06007D0D RID: 32013 RVA: 0x000B34BB File Offset: 0x000B16BB
-		// (set) Token: 0x06007D0E RID: 32014 RVA: 0x000B34CF File Offset: 0x000B16CF
+		// Token: 0x1700033A RID: 826
+		// (get) Token: 0x06001B30 RID: 6960 RVA: 0x0002883B File Offset: 0x00026A3B
+		// (set) Token: 0x06001B31 RID: 6961 RVA: 0x0002884F File Offset: 0x00026A4F
 		public unsafe FVector BoxExtent
 		{
 			get
@@ -43,9 +43,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001D60 RID: 7520
-		// (get) Token: 0x06007D0F RID: 32015 RVA: 0x000B34E4 File Offset: 0x000B16E4
-		// (set) Token: 0x06007D10 RID: 32016 RVA: 0x000B34F4 File Offset: 0x000B16F4
+		// Token: 0x1700033B RID: 827
+		// (get) Token: 0x06001B32 RID: 6962 RVA: 0x00028864 File Offset: 0x00026A64
+		// (set) Token: 0x06001B33 RID: 6963 RVA: 0x00028874 File Offset: 0x00026A74
 		public unsafe float LineThickness
 		{
 			get
@@ -58,71 +58,71 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06007D11 RID: 32017 RVA: 0x000B3505 File Offset: 0x000B1705
+		// Token: 0x06001B34 RID: 6964 RVA: 0x00028885 File Offset: 0x00026A85
 		public void SetBoxExtent(FVector InBoxExtent, bool bUpdateOverlaps = true)
 		{
 			UBoxComponent.__SetBoxExtent_Internal(base.NativePtr, InBoxExtent, bUpdateOverlaps);
 		}
 
-		// Token: 0x06007D12 RID: 32018 RVA: 0x000B3514 File Offset: 0x000B1714
+		// Token: 0x06001B35 RID: 6965 RVA: 0x00028894 File Offset: 0x00026A94
 		public FVector GetUnscaledBoxExtent()
 		{
 			return UBoxComponent.__GetUnscaledBoxExtent_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06007D13 RID: 32019 RVA: 0x000B3521 File Offset: 0x000B1721
+		// Token: 0x06001B36 RID: 6966 RVA: 0x000288A1 File Offset: 0x00026AA1
 		public FVector GetScaledBoxExtent()
 		{
 			return UBoxComponent.__GetScaledBoxExtent_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06007D14 RID: 32020 RVA: 0x000B352E File Offset: 0x000B172E
+		// Token: 0x06001B37 RID: 6967 RVA: 0x000288AE File Offset: 0x00026AAE
 		public void D_SetBoxExtent(FVectorDouble InBoxExtent, bool bUpdateOverlaps = true)
 		{
 			UBoxComponent.__D_SetBoxExtent_Internal(base.NativePtr, InBoxExtent, bUpdateOverlaps);
 		}
 
-		// Token: 0x06007D15 RID: 32021
+		// Token: 0x06001B38 RID: 6968
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetBoxExtent_Internal(IntPtr @this, FVector InBoxExtent, bool bUpdateOverlaps);
 
-		// Token: 0x06007D16 RID: 32022
+		// Token: 0x06001B39 RID: 6969
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetUnscaledBoxExtent_Internal(IntPtr @this);
 
-		// Token: 0x06007D17 RID: 32023
+		// Token: 0x06001B3A RID: 6970
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetScaledBoxExtent_Internal(IntPtr @this);
 
-		// Token: 0x06007D18 RID: 32024
+		// Token: 0x06001B3B RID: 6971
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __D_SetBoxExtent_Internal(IntPtr @this, FVectorDouble InBoxExtent, bool bUpdateOverlaps);
 
-		// Token: 0x06007D19 RID: 32025 RVA: 0x000B353D File Offset: 0x000B173D
+		// Token: 0x06001B3C RID: 6972 RVA: 0x000288BD File Offset: 0x00026ABD
 		static UBoxComponent()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.BoxComponent");
 		}
 
-		// Token: 0x06007D1A RID: 32026 RVA: 0x000B354B File Offset: 0x000B174B
+		// Token: 0x06001B3D RID: 6973 RVA: 0x000288CB File Offset: 0x00026ACB
 		protected UBoxComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04003BEF RID: 15343
+		// Token: 0x040008C0 RID: 2240
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.BoxComponent";
 
-		// Token: 0x04003BF0 RID: 15344
+		// Token: 0x040008C1 RID: 2241
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04003BF1 RID: 15345
+		// Token: 0x040008C2 RID: 2242
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04003BF2 RID: 15346
+		// Token: 0x040008C3 RID: 2243
 		internal static int __PropertyOffset_BoxExtent;
 
-		// Token: 0x04003BF3 RID: 15347
+		// Token: 0x040008C4 RID: 2244
 		internal static int __PropertyOffset_LineThickness;
 	}
 }

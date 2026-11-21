@@ -4,40 +4,40 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004107 RID: 16647
+	// Token: 0x02004548 RID: 17736
 	public class IScheduleTimeConditionT
 	{
-		// Token: 0x17007559 RID: 30041
-		// (get) Token: 0x06018469 RID: 99433 RVA: 0x0037E7DC File Offset: 0x0037C9DC
-		// (set) Token: 0x0601846A RID: 99434 RVA: 0x0037E7E4 File Offset: 0x0037C9E4
+		// Token: 0x17007B5F RID: 31583
+		// (get) Token: 0x06019B0A RID: 105226 RVA: 0x003A872C File Offset: 0x003A692C
+		// (set) Token: 0x06019B0B RID: 105227 RVA: 0x003A8734 File Offset: 0x003A6934
 		public EChildQuest Type { get; set; }
 
-		// Token: 0x1700755A RID: 30042
-		// (get) Token: 0x0601846B RID: 99435 RVA: 0x0037E7ED File Offset: 0x0037C9ED
-		// (set) Token: 0x0601846C RID: 99436 RVA: 0x0037E7F5 File Offset: 0x0037C9F5
+		// Token: 0x17007B60 RID: 31584
+		// (get) Token: 0x06019B0C RID: 105228 RVA: 0x003A873D File Offset: 0x003A693D
+		// (set) Token: 0x06019B0D RID: 105229 RVA: 0x003A8745 File Offset: 0x003A6945
 		public IConditionGroupT PreConditions { get; set; }
 
-		// Token: 0x1700755B RID: 30043
-		// (get) Token: 0x0601846D RID: 99437 RVA: 0x0037E7FE File Offset: 0x0037C9FE
-		// (set) Token: 0x0601846E RID: 99438 RVA: 0x0037E806 File Offset: 0x0037CA06
+		// Token: 0x17007B61 RID: 31585
+		// (get) Token: 0x06019B0E RID: 105230 RVA: 0x003A874E File Offset: 0x003A694E
+		// (set) Token: 0x06019B0F RID: 105231 RVA: 0x003A8756 File Offset: 0x003A6956
 		public IBaseTimeT StartTime { get; set; }
 
-		// Token: 0x1700755C RID: 30044
-		// (get) Token: 0x0601846F RID: 99439 RVA: 0x0037E80F File Offset: 0x0037CA0F
-		// (set) Token: 0x06018470 RID: 99440 RVA: 0x0037E817 File Offset: 0x0037CA17
+		// Token: 0x17007B62 RID: 31586
+		// (get) Token: 0x06019B10 RID: 105232 RVA: 0x003A875F File Offset: 0x003A695F
+		// (set) Token: 0x06019B11 RID: 105233 RVA: 0x003A8767 File Offset: 0x003A6967
 		public IBaseTimeT EndTime { get; set; }
 
-		// Token: 0x1700755D RID: 30045
-		// (get) Token: 0x06018471 RID: 99441 RVA: 0x0037E820 File Offset: 0x0037CA20
-		// (set) Token: 0x06018472 RID: 99442 RVA: 0x0037E828 File Offset: 0x0037CA28
+		// Token: 0x17007B63 RID: 31587
+		// (get) Token: 0x06019B12 RID: 105234 RVA: 0x003A8770 File Offset: 0x003A6970
+		// (set) Token: 0x06019B13 RID: 105235 RVA: 0x003A8778 File Offset: 0x003A6978
 		public int Day { get; set; }
 
-		// Token: 0x1700755E RID: 30046
-		// (get) Token: 0x06018473 RID: 99443 RVA: 0x0037E831 File Offset: 0x0037CA31
-		// (set) Token: 0x06018474 RID: 99444 RVA: 0x0037E839 File Offset: 0x0037CA39
+		// Token: 0x17007B64 RID: 31588
+		// (get) Token: 0x06019B14 RID: 105236 RVA: 0x003A8781 File Offset: 0x003A6981
+		// (set) Token: 0x06019B15 RID: 105237 RVA: 0x003A8789 File Offset: 0x003A6989
 		public byte NullMask { get; set; }
 
-		// Token: 0x06018475 RID: 99445 RVA: 0x0037E842 File Offset: 0x0037CA42
+		// Token: 0x06019B16 RID: 105238 RVA: 0x003A8792 File Offset: 0x003A6992
 		public IScheduleTimeConditionT()
 		{
 			this.Type = EChildQuest.DoInteract;

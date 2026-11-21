@@ -3,21 +3,21 @@ using System.Runtime.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Utils;
 
-// Token: 0x0200361A RID: 13850
+// Token: 0x02002B8F RID: 11151
 public class __TsTaskNpcSitOnChairAndLeave_InheritProxy : TsTaskNpcSitOnChairAndLeave
 {
-	// Token: 0x0601E1B6 RID: 123318 RVA: 0x0088101C File Offset: 0x0087F21C
+	// Token: 0x0601BEDE RID: 114398 RVA: 0x008A90B0 File Offset: 0x008A72B0
 	[NullableContext(1)]
 	public __TsTaskNpcSitOnChairAndLeave_InheritProxy(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskNpcSitOnChairAndLeave.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601E1B7 RID: 123319 RVA: 0x0088104F File Offset: 0x0087F24F
+	// Token: 0x0601BEDF RID: 114399 RVA: 0x008A90E3 File Offset: 0x008A72E3
 	protected __TsTaskNpcSitOnChairAndLeave_InheritProxy(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0601E1B8 RID: 123320 RVA: 0x00881058 File Offset: 0x0087F258
+	// Token: 0x0601BEE0 RID: 114400 RVA: 0x008A90EC File Offset: 0x008A72EC
 	protected unsafe override void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);
@@ -25,7 +25,7 @@ public class __TsTaskNpcSitOnChairAndLeave_InheritProxy : TsTaskNpcSitOnChairAnd
 		base.ReceiveExecuteAI(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x0601E1B9 RID: 123321 RVA: 0x00881088 File Offset: 0x0087F288
+	// Token: 0x0601BEE1 RID: 114401 RVA: 0x008A911C File Offset: 0x008A731C
 	protected unsafe override void __CPPCALL_ReceiveTickAI_Implementation(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);

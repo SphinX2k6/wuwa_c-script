@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020073B6 RID: 29622
+	// Token: 0x02007B9D RID: 31645
 	public class ITeleportTransitionWithEffectT
 	{
-		// Token: 0x1700E0E7 RID: 57575
-		// (get) Token: 0x06035C8E RID: 220302 RVA: 0x0075225F File Offset: 0x0075045F
-		// (set) Token: 0x06035C8F RID: 220303 RVA: 0x00752267 File Offset: 0x00750467
+		// Token: 0x1700ECF7 RID: 60663
+		// (get) Token: 0x06039029 RID: 233513 RVA: 0x007B479F File Offset: 0x007B299F
+		// (set) Token: 0x0603902A RID: 233514 RVA: 0x007B47A7 File Offset: 0x007B29A7
 		public ETeleportTransitionType Type { get; set; }
 
-		// Token: 0x1700E0E8 RID: 57576
-		// (get) Token: 0x06035C90 RID: 220304 RVA: 0x00752270 File Offset: 0x00750470
-		// (set) Token: 0x06035C91 RID: 220305 RVA: 0x00752278 File Offset: 0x00750478
+		// Token: 0x1700ECF8 RID: 60664
+		// (get) Token: 0x0603902B RID: 233515 RVA: 0x007B47B0 File Offset: 0x007B29B0
+		// (set) Token: 0x0603902C RID: 233516 RVA: 0x007B47B8 File Offset: 0x007B29B8
 		public string EffectDaPath { get; set; }
 
-		// Token: 0x06035C92 RID: 220306 RVA: 0x00752281 File Offset: 0x00750481
+		// Token: 0x0603902D RID: 233517 RVA: 0x007B47C1 File Offset: 0x007B29C1
 		public ITeleportTransitionWithEffectT()
 		{
 			this.Type = ETeleportTransitionType.PlayMp4;

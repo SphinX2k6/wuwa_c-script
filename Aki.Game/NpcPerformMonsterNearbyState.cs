@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 using Aki.TDConfigMgr.Component;
 
-// Token: 0x02003228 RID: 12840
+// Token: 0x02002797 RID: 10135
 [NullableContext(2)]
 [Nullable(0)]
 public class NpcPerformMonsterNearbyState : NpcPerformBaseState
 {
-	// Token: 0x0601BAFB RID: 113403 RVA: 0x0079CA55 File Offset: 0x0079AC55
+	// Token: 0x06019680 RID: 104064 RVA: 0x007C51F1 File Offset: 0x007C33F1
 	[NullableContext(1)]
 	public NpcPerformMonsterNearbyState(EntityHandle owner, ENpcPerformState state, [Nullable(new byte[]
 	{
@@ -18,14 +18,14 @@ public class NpcPerformMonsterNearbyState : NpcPerformBaseState
 	{
 	}
 
-	// Token: 0x0601BAFC RID: 113404 RVA: 0x0079CA60 File Offset: 0x0079AC60
+	// Token: 0x06019681 RID: 104065 RVA: 0x007C51FC File Offset: 0x007C33FC
 	public override bool CanChangeFrom(ENpcPerformState fromState)
 	{
 		CommonNpcPerformComponent component = this.Owner.Entity.GetComponent<CommonNpcPerformComponent>();
 		return this.HaveConfig && fromState == ENpcPerformState.Idle && !component.IsInPlot;
 	}
 
-	// Token: 0x0601BAFD RID: 113405 RVA: 0x0079CA98 File Offset: 0x0079AC98
+	// Token: 0x06019682 RID: 104066 RVA: 0x007C5234 File Offset: 0x007C3434
 	protected override void OnCreate(IEntityArgs args = null)
 	{
 		base.OnCreate(args);
@@ -41,7 +41,7 @@ public class NpcPerformMonsterNearbyState : NpcPerformBaseState
 		this.FlowConfig = p.NpcMonsterClosePerform.Bubble;
 	}
 
-	// Token: 0x0601BAFE RID: 113406 RVA: 0x0079CB04 File Offset: 0x0079AD04
+	// Token: 0x06019683 RID: 104067 RVA: 0x007C52A0 File Offset: 0x007C34A0
 	protected override void OnEnter(ENpcPerformState? lastState)
 	{
 		this.LastState = lastState;
@@ -70,7 +70,7 @@ public class NpcPerformMonsterNearbyState : NpcPerformBaseState
 		NpcPerceptionReactionUtil.ShowHeadDialog(this.Owner.Entity, this.BubbleRate, this.FlowConfig);
 	}
 
-	// Token: 0x0601BAFF RID: 113407 RVA: 0x0079CBCE File Offset: 0x0079ADCE
+	// Token: 0x06019684 RID: 104068 RVA: 0x007C536A File Offset: 0x007C356A
 	protected override void OnExit(ENpcPerformState nextState)
 	{
 		base.StopMontage(new IStopMontageParam
@@ -79,29 +79,29 @@ public class NpcPerformMonsterNearbyState : NpcPerformBaseState
 		});
 	}
 
-	// Token: 0x0601BB00 RID: 113408 RVA: 0x0079CBE7 File Offset: 0x0079ADE7
+	// Token: 0x06019685 RID: 104069 RVA: 0x007C5383 File Offset: 0x007C3583
 	protected override void OnDestroy()
 	{
 	}
 
-	// Token: 0x0400D9FC RID: 55804
+	// Token: 0x0400DE9B RID: 56987
 	private const int BUBBLE_TIME = 3;
 
-	// Token: 0x0400D9FD RID: 55805
+	// Token: 0x0400DE9C RID: 56988
 	private readonly int PlayingMontageId;
 
-	// Token: 0x0400D9FE RID: 55806
+	// Token: 0x0400DE9D RID: 56989
 	private bool HaveConfig;
 
-	// Token: 0x0400D9FF RID: 55807
+	// Token: 0x0400DE9E RID: 56990
 	private IMontageId MontageInfo;
 
-	// Token: 0x0400DA00 RID: 55808
+	// Token: 0x0400DE9F RID: 56991
 	private float BubbleRate;
 
-	// Token: 0x0400DA01 RID: 55809
+	// Token: 0x0400DEA0 RID: 56992
 	private IBubbleIndex FlowConfig;
 
-	// Token: 0x0400DA02 RID: 55810
+	// Token: 0x0400DEA1 RID: 56993
 	private ENpcPerformState? LastState;
 }

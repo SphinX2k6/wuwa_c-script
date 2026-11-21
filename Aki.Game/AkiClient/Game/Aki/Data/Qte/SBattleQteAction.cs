@@ -6,37 +6,37 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Data.Qte
 {
-	// Token: 0x02003ED3 RID: 16083
+	// Token: 0x02003198 RID: 12696
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Data/Qte/SBattleQteAction.SBattleQteAction")]
 	[UnrealStructLayout(136, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 136)]
 	public class SBattleQteAction : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06028A7C RID: 166524 RVA: 0x009B1696 File Offset: 0x009AF896
+		// Token: 0x0601F4B0 RID: 128176 RVA: 0x0092A891 File Offset: 0x00928A91
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SBattleQteAction._ScriptStructPtr != 0) ? SBattleQteAction._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Data/Qte/SBattleQteAction.SBattleQteAction", ref SBattleQteAction._ScriptStructPtr);
 		}
 
-		// Token: 0x17005EEF RID: 24303
-		// (get) Token: 0x06028A7D RID: 166525 RVA: 0x009B16BA File Offset: 0x009AF8BA
-		// (set) Token: 0x06028A7E RID: 166526 RVA: 0x009B16CA File Offset: 0x009AF8CA
+		// Token: 0x1700387B RID: 14459
+		// (get) Token: 0x0601F4B1 RID: 128177 RVA: 0x0092A8B5 File Offset: 0x00928AB5
+		// (set) Token: 0x0601F4B2 RID: 128178 RVA: 0x0092A8C5 File Offset: 0x00928AC5
 		public unsafe int Target
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SBattleQteAction.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)SBattleQteAction.__PropertyOffset_Target);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SBattleQteAction.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)SBattleQteAction.__PropertyOffset_Target) = value;
 			}
 		}
 
-		// Token: 0x17005EF0 RID: 24304
-		// (get) Token: 0x06028A7F RID: 166527 RVA: 0x009B16DC File Offset: 0x009AF8DC
-		// (set) Token: 0x06028A80 RID: 166528 RVA: 0x009B171F File Offset: 0x009AF91F
+		// Token: 0x1700387C RID: 14460
+		// (get) Token: 0x0601F4B3 RID: 128179 RVA: 0x0092A8D8 File Offset: 0x00928AD8
+		// (set) Token: 0x0601F4B4 RID: 128180 RVA: 0x0092A91B File Offset: 0x00928B1B
 		public TArray<FGameplayTag> TagConditions
 		{
 			get
@@ -45,7 +45,7 @@ namespace AkiClient.Game.Aki.Data.Qte
 				TArray<FGameplayTag> result;
 				if ((result = this._TagConditions) == null)
 				{
-					result = (this._TagConditions = new TArray<FGameplayTag>(base.NativePtr + (IntPtr)SBattleQteAction.__PropertyOffset_1, base.MemoryOwner ?? this));
+					result = (this._TagConditions = new TArray<FGameplayTag>(base.NativePtr + (IntPtr)SBattleQteAction.__PropertyOffset_TagConditions, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -55,9 +55,9 @@ namespace AkiClient.Game.Aki.Data.Qte
 			}
 		}
 
-		// Token: 0x17005EF1 RID: 24305
-		// (get) Token: 0x06028A81 RID: 166529 RVA: 0x009B1730 File Offset: 0x009AF930
-		// (set) Token: 0x06028A82 RID: 166530 RVA: 0x009B1773 File Offset: 0x009AF973
+		// Token: 0x1700387D RID: 14461
+		// (get) Token: 0x0601F4B5 RID: 128181 RVA: 0x0092A92C File Offset: 0x00928B2C
+		// (set) Token: 0x0601F4B6 RID: 128182 RVA: 0x0092A96F File Offset: 0x00928B6F
 		public TArray<FGameplayTag> AddTags
 		{
 			get
@@ -66,7 +66,7 @@ namespace AkiClient.Game.Aki.Data.Qte
 				TArray<FGameplayTag> result;
 				if ((result = this._AddTags) == null)
 				{
-					result = (this._AddTags = new TArray<FGameplayTag>(base.NativePtr + (IntPtr)SBattleQteAction.__PropertyOffset_2, base.MemoryOwner ?? this));
+					result = (this._AddTags = new TArray<FGameplayTag>(base.NativePtr + (IntPtr)SBattleQteAction.__PropertyOffset_AddTags, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -76,9 +76,9 @@ namespace AkiClient.Game.Aki.Data.Qte
 			}
 		}
 
-		// Token: 0x17005EF2 RID: 24306
-		// (get) Token: 0x06028A83 RID: 166531 RVA: 0x009B1784 File Offset: 0x009AF984
-		// (set) Token: 0x06028A84 RID: 166532 RVA: 0x009B17C7 File Offset: 0x009AF9C7
+		// Token: 0x1700387E RID: 14462
+		// (get) Token: 0x0601F4B7 RID: 128183 RVA: 0x0092A980 File Offset: 0x00928B80
+		// (set) Token: 0x0601F4B8 RID: 128184 RVA: 0x0092A9C3 File Offset: 0x00928BC3
 		public TArray<FGameplayTag> RemoveTags
 		{
 			get
@@ -87,7 +87,7 @@ namespace AkiClient.Game.Aki.Data.Qte
 				TArray<FGameplayTag> result;
 				if ((result = this._RemoveTags) == null)
 				{
-					result = (this._RemoveTags = new TArray<FGameplayTag>(base.NativePtr + (IntPtr)SBattleQteAction.__PropertyOffset_3, base.MemoryOwner ?? this));
+					result = (this._RemoveTags = new TArray<FGameplayTag>(base.NativePtr + (IntPtr)SBattleQteAction.__PropertyOffset_RemoveTags, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -97,9 +97,9 @@ namespace AkiClient.Game.Aki.Data.Qte
 			}
 		}
 
-		// Token: 0x17005EF3 RID: 24307
-		// (get) Token: 0x06028A85 RID: 166533 RVA: 0x009B17D8 File Offset: 0x009AF9D8
-		// (set) Token: 0x06028A86 RID: 166534 RVA: 0x009B181B File Offset: 0x009AFA1B
+		// Token: 0x1700387F RID: 14463
+		// (get) Token: 0x0601F4B9 RID: 128185 RVA: 0x0092A9D4 File Offset: 0x00928BD4
+		// (set) Token: 0x0601F4BA RID: 128186 RVA: 0x0092AA17 File Offset: 0x00928C17
 		public TArray<long> AddBuffs
 		{
 			get
@@ -108,7 +108,7 @@ namespace AkiClient.Game.Aki.Data.Qte
 				TArray<long> result;
 				if ((result = this._AddBuffs) == null)
 				{
-					result = (this._AddBuffs = new TArray<long>(base.NativePtr + (IntPtr)SBattleQteAction.__PropertyOffset_4, base.MemoryOwner ?? this));
+					result = (this._AddBuffs = new TArray<long>(base.NativePtr + (IntPtr)SBattleQteAction.__PropertyOffset_AddBuffs, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -118,9 +118,9 @@ namespace AkiClient.Game.Aki.Data.Qte
 			}
 		}
 
-		// Token: 0x17005EF4 RID: 24308
-		// (get) Token: 0x06028A87 RID: 166535 RVA: 0x009B182C File Offset: 0x009AFA2C
-		// (set) Token: 0x06028A88 RID: 166536 RVA: 0x009B186F File Offset: 0x009AFA6F
+		// Token: 0x17003880 RID: 14464
+		// (get) Token: 0x0601F4BB RID: 128187 RVA: 0x0092AA28 File Offset: 0x00928C28
+		// (set) Token: 0x0601F4BC RID: 128188 RVA: 0x0092AA6B File Offset: 0x00928C6B
 		public TArray<long> RemoveBuffs
 		{
 			get
@@ -129,7 +129,7 @@ namespace AkiClient.Game.Aki.Data.Qte
 				TArray<long> result;
 				if ((result = this._RemoveBuffs) == null)
 				{
-					result = (this._RemoveBuffs = new TArray<long>(base.NativePtr + (IntPtr)SBattleQteAction.__PropertyOffset_5, base.MemoryOwner ?? this));
+					result = (this._RemoveBuffs = new TArray<long>(base.NativePtr + (IntPtr)SBattleQteAction.__PropertyOffset_RemoveBuffs, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -139,9 +139,9 @@ namespace AkiClient.Game.Aki.Data.Qte
 			}
 		}
 
-		// Token: 0x17005EF5 RID: 24309
-		// (get) Token: 0x06028A89 RID: 166537 RVA: 0x009B1880 File Offset: 0x009AFA80
-		// (set) Token: 0x06028A8A RID: 166538 RVA: 0x009B18C3 File Offset: 0x009AFAC3
+		// Token: 0x17003881 RID: 14465
+		// (get) Token: 0x0601F4BD RID: 128189 RVA: 0x0092AA7C File Offset: 0x00928C7C
+		// (set) Token: 0x0601F4BE RID: 128190 RVA: 0x0092AABF File Offset: 0x00928CBF
 		public TArray<long> AddBullets
 		{
 			get
@@ -150,7 +150,7 @@ namespace AkiClient.Game.Aki.Data.Qte
 				TArray<long> result;
 				if ((result = this._AddBullets) == null)
 				{
-					result = (this._AddBullets = new TArray<long>(base.NativePtr + (IntPtr)SBattleQteAction.__PropertyOffset_6, base.MemoryOwner ?? this));
+					result = (this._AddBullets = new TArray<long>(base.NativePtr + (IntPtr)SBattleQteAction.__PropertyOffset_AddBullets, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -160,180 +160,164 @@ namespace AkiClient.Game.Aki.Data.Qte
 			}
 		}
 
-		// Token: 0x17005EF6 RID: 24310
-		// (get) Token: 0x06028A8B RID: 166539 RVA: 0x009B18D1 File Offset: 0x009AFAD1
-		// (set) Token: 0x06028A8C RID: 166540 RVA: 0x009B18E1 File Offset: 0x009AFAE1
+		// Token: 0x17003882 RID: 14466
+		// (get) Token: 0x0601F4BF RID: 128191 RVA: 0x0092AACD File Offset: 0x00928CCD
+		// (set) Token: 0x0601F4C0 RID: 128192 RVA: 0x0092AADD File Offset: 0x00928CDD
 		public unsafe int UseSkillId
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SBattleQteAction.__PropertyOffset_7);
+				return *(base.NativePtr + (IntPtr)SBattleQteAction.__PropertyOffset_UseSkillId);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SBattleQteAction.__PropertyOffset_7) = value;
+				*(base.NativePtr + (IntPtr)SBattleQteAction.__PropertyOffset_UseSkillId) = value;
 			}
 		}
 
-		// Token: 0x17005EF7 RID: 24311
-		// (get) Token: 0x06028A8D RID: 166541 RVA: 0x009B18F2 File Offset: 0x009AFAF2
-		// (set) Token: 0x06028A8E RID: 166542 RVA: 0x009B1902 File Offset: 0x009AFB02
+		// Token: 0x17003883 RID: 14467
+		// (get) Token: 0x0601F4C1 RID: 128193 RVA: 0x0092AAEE File Offset: 0x00928CEE
+		// (set) Token: 0x0601F4C2 RID: 128194 RVA: 0x0092AAFE File Offset: 0x00928CFE
 		public unsafe int ChangeMainSkillPriority
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SBattleQteAction.__PropertyOffset_8);
+				return *(base.NativePtr + (IntPtr)SBattleQteAction.__PropertyOffset_ChangeMainSkillPriority);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SBattleQteAction.__PropertyOffset_8) = value;
+				*(base.NativePtr + (IntPtr)SBattleQteAction.__PropertyOffset_ChangeMainSkillPriority) = value;
 			}
 		}
 
-		// Token: 0x17005EF8 RID: 24312
-		// (get) Token: 0x06028A8F RID: 166543 RVA: 0x009B1913 File Offset: 0x009AFB13
-		// (set) Token: 0x06028A90 RID: 166544 RVA: 0x009B1927 File Offset: 0x009AFB27
+		// Token: 0x17003884 RID: 14468
+		// (get) Token: 0x0601F4C3 RID: 128195 RVA: 0x0092AB0F File Offset: 0x00928D0F
+		// (set) Token: 0x0601F4C4 RID: 128196 RVA: 0x0092AB23 File Offset: 0x00928D23
 		[Nullable(0)]
 		public unsafe TEnumAsByte<EBattleQteCustomAction> CustomAction
 		{
 			[NullableContext(0)]
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SBattleQteAction.__PropertyOffset_9);
+				return *(base.NativePtr + (IntPtr)SBattleQteAction.__PropertyOffset_CustomAction);
 			}
 			[NullableContext(0)]
 			set
 			{
-				*(base.NativePtr + (IntPtr)SBattleQteAction.__PropertyOffset_9) = value;
+				*(base.NativePtr + (IntPtr)SBattleQteAction.__PropertyOffset_CustomAction) = value;
 			}
 		}
 
-		// Token: 0x17005EF9 RID: 24313
-		// (get) Token: 0x06028A91 RID: 166545 RVA: 0x009B193C File Offset: 0x009AFB3C
-		// (set) Token: 0x06028A92 RID: 166546 RVA: 0x009B1950 File Offset: 0x009AFB50
+		// Token: 0x17003885 RID: 14469
+		// (get) Token: 0x0601F4C5 RID: 128197 RVA: 0x0092AB38 File Offset: 0x00928D38
+		// (set) Token: 0x0601F4C6 RID: 128198 RVA: 0x0092AB4C File Offset: 0x00928D4C
 		public unsafe string CustomActionParam
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SBattleQteAction.__PropertyOffset_10)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SBattleQteAction.__PropertyOffset_CustomActionParam)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SBattleQteAction.__PropertyOffset_10)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SBattleQteAction.__PropertyOffset_CustomActionParam)), value);
 			}
 		}
 
-		// Token: 0x06028A93 RID: 166547 RVA: 0x009B1965 File Offset: 0x009AFB65
+		// Token: 0x0601F4C7 RID: 128199 RVA: 0x0092AB61 File Offset: 0x00928D61
 		public SBattleQteAction()
 		{
 		}
 
-		// Token: 0x06028A94 RID: 166548 RVA: 0x009B1970 File Offset: 0x009AFB70
-		public SBattleQteAction(int Target, TArray<FGameplayTag> TagConditions, TArray<FGameplayTag> AddTags, TArray<FGameplayTag> RemoveTags, TArray<long> AddBuffs, TArray<long> RemoveBuffs, TArray<long> AddBullets, int UseSkillId, int ChangeMainSkillPriority, [Nullable(0)] TEnumAsByte<EBattleQteCustomAction> CustomAction, string CustomActionParam)
-		{
-			this.Target = Target;
-			this.TagConditions = TagConditions;
-			this.AddTags = AddTags;
-			this.RemoveTags = RemoveTags;
-			this.AddBuffs = AddBuffs;
-			this.RemoveBuffs = RemoveBuffs;
-			this.AddBullets = AddBullets;
-			this.UseSkillId = UseSkillId;
-			this.ChangeMainSkillPriority = ChangeMainSkillPriority;
-			this.CustomAction = CustomAction;
-			this.CustomActionParam = CustomActionParam;
-		}
-
-		// Token: 0x06028A95 RID: 166549 RVA: 0x009B19D8 File Offset: 0x009AFBD8
+		// Token: 0x0601F4C8 RID: 128200 RVA: 0x0092AB69 File Offset: 0x00928D69
 		protected override IntPtr GetUStructPtr()
 		{
 			return SBattleQteAction.StaticStruct();
 		}
 
-		// Token: 0x06028A96 RID: 166550 RVA: 0x009B19E4 File Offset: 0x009AFBE4
+		// Token: 0x0601F4C9 RID: 128201 RVA: 0x0092AB75 File Offset: 0x00928D75
 		[NullableContext(2)]
 		public SBattleQteAction(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06028A97 RID: 166551 RVA: 0x009B19EE File Offset: 0x009AFBEE
+		// Token: 0x0601F4CA RID: 128202 RVA: 0x0092AB7F File Offset: 0x00928D7F
 		public SBattleQteAction(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06028A98 RID: 166552 RVA: 0x009B19F9 File Offset: 0x009AFBF9
+		// Token: 0x0601F4CB RID: 128203 RVA: 0x0092AB8A File Offset: 0x00928D8A
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SBattleQteAction(Pointer, false, true);
 		}
 
-		// Token: 0x06028A99 RID: 166553 RVA: 0x009B1A03 File Offset: 0x009AFC03
+		// Token: 0x0601F4CC RID: 128204 RVA: 0x0092AB94 File Offset: 0x00928D94
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SBattleQteAction(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04014C7C RID: 85116
+		// Token: 0x04010C63 RID: 68707
 		public const string __ObjectPath = "/Game/Aki/Data/Qte/SBattleQteAction.SBattleQteAction";
 
-		// Token: 0x04014C7D RID: 85117
+		// Token: 0x04010C64 RID: 68708
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04014C7E RID: 85118
-		internal static int __PropertyOffset_0;
+		// Token: 0x04010C65 RID: 68709
+		internal static int __PropertyOffset_Target;
 
-		// Token: 0x04014C7F RID: 85119
-		internal static int __PropertyOffset_1;
+		// Token: 0x04010C66 RID: 68710
+		internal static int __PropertyOffset_TagConditions;
 
-		// Token: 0x04014C80 RID: 85120
+		// Token: 0x04010C67 RID: 68711
 		[Nullable(2)]
 		private TArray<FGameplayTag> _TagConditions;
 
-		// Token: 0x04014C81 RID: 85121
-		internal static int __PropertyOffset_2;
+		// Token: 0x04010C68 RID: 68712
+		internal static int __PropertyOffset_AddTags;
 
-		// Token: 0x04014C82 RID: 85122
+		// Token: 0x04010C69 RID: 68713
 		[Nullable(2)]
 		private TArray<FGameplayTag> _AddTags;
 
-		// Token: 0x04014C83 RID: 85123
-		internal static int __PropertyOffset_3;
+		// Token: 0x04010C6A RID: 68714
+		internal static int __PropertyOffset_RemoveTags;
 
-		// Token: 0x04014C84 RID: 85124
+		// Token: 0x04010C6B RID: 68715
 		[Nullable(2)]
 		private TArray<FGameplayTag> _RemoveTags;
 
-		// Token: 0x04014C85 RID: 85125
-		internal static int __PropertyOffset_4;
+		// Token: 0x04010C6C RID: 68716
+		internal static int __PropertyOffset_AddBuffs;
 
-		// Token: 0x04014C86 RID: 85126
+		// Token: 0x04010C6D RID: 68717
 		[Nullable(2)]
 		private TArray<long> _AddBuffs;
 
-		// Token: 0x04014C87 RID: 85127
-		internal static int __PropertyOffset_5;
+		// Token: 0x04010C6E RID: 68718
+		internal static int __PropertyOffset_RemoveBuffs;
 
-		// Token: 0x04014C88 RID: 85128
+		// Token: 0x04010C6F RID: 68719
 		[Nullable(2)]
 		private TArray<long> _RemoveBuffs;
 
-		// Token: 0x04014C89 RID: 85129
-		internal static int __PropertyOffset_6;
+		// Token: 0x04010C70 RID: 68720
+		internal static int __PropertyOffset_AddBullets;
 
-		// Token: 0x04014C8A RID: 85130
+		// Token: 0x04010C71 RID: 68721
 		[Nullable(2)]
 		private TArray<long> _AddBullets;
 
-		// Token: 0x04014C8B RID: 85131
-		internal static int __PropertyOffset_7;
+		// Token: 0x04010C72 RID: 68722
+		internal static int __PropertyOffset_UseSkillId;
 
-		// Token: 0x04014C8C RID: 85132
-		internal static int __PropertyOffset_8;
+		// Token: 0x04010C73 RID: 68723
+		internal static int __PropertyOffset_ChangeMainSkillPriority;
 
-		// Token: 0x04014C8D RID: 85133
-		internal static int __PropertyOffset_9;
+		// Token: 0x04010C74 RID: 68724
+		internal static int __PropertyOffset_CustomAction;
 
-		// Token: 0x04014C8E RID: 85134
-		internal static int __PropertyOffset_10;
+		// Token: 0x04010C75 RID: 68725
+		internal static int __PropertyOffset_CustomActionParam;
 	}
 }

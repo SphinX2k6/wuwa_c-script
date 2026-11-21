@@ -4,10 +4,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002BE0 RID: 11232
+// Token: 0x0200215B RID: 8539
 public class TowerBuffShowItem : GridProxyAbstract<long>
 {
-	// Token: 0x06017546 RID: 95558 RVA: 0x005EEA9C File Offset: 0x005ECC9C
+	// Token: 0x06014F77 RID: 85879 RVA: 0x0061B5DC File Offset: 0x006197DC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -21,14 +21,14 @@ public class TowerBuffShowItem : GridProxyAbstract<long>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06017547 RID: 95559 RVA: 0x005EEB05 File Offset: 0x005ECD05
+	// Token: 0x06014F78 RID: 85880 RVA: 0x0061B645 File Offset: 0x00619845
 	public override void Refresh(long data, bool isSelected, int gridIndex)
 	{
 		this.CurrentBuffId = data;
 		this.RefreshView();
 	}
 
-	// Token: 0x06017548 RID: 95560 RVA: 0x005EEB14 File Offset: 0x005ECD14
+	// Token: 0x06014F79 RID: 85881 RVA: 0x0061B654 File Offset: 0x00619854
 	private void RefreshView()
 	{
 		string towerBuffDesc = TowerClimbConfig.Instance.GetTowerBuffDesc(this.CurrentBuffId);
@@ -43,15 +43,15 @@ public class TowerBuffShowItem : GridProxyAbstract<long>
 		texture.SetUIActive(true);
 	}
 
-	// Token: 0x0400AEB0 RID: 44720
+	// Token: 0x0400B2B5 RID: 45749
 	private long CurrentBuffId;
 
-	// Token: 0x02009198 RID: 37272
+	// Token: 0x020083DC RID: 33756
 	private enum EChildType
 	{
-		// Token: 0x0402F1CD RID: 192973
+		// Token: 0x0402A8D2 RID: 174290
 		Icon,
-		// Token: 0x0402F1CE RID: 192974
+		// Token: 0x0402A8D3 RID: 174291
 		Desc
 	}
 }

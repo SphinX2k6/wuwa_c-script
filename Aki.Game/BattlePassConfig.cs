@@ -4,19 +4,19 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.Inventory;
 
-// Token: 0x0200231E RID: 8990
+// Token: 0x02001803 RID: 6147
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class BattlePassConfig : ConfigBase
 {
-	// Token: 0x06011C5B RID: 72795 RVA: 0x0045FFB4 File Offset: 0x0045E1B4
+	// Token: 0x0600F10B RID: 61707 RVA: 0x0046D05C File Offset: 0x0046B25C
 	public IReadOnlyList<BattlePassReward> GetAllRewardData(int battlePassId)
 	{
 		return ConfigBattlePassRewardByBattlePassId.GetConfigList(battlePassId, true);
 	}
 
-	// Token: 0x06011C5C RID: 72796 RVA: 0x0045FFC0 File Offset: 0x0045E1C0
+	// Token: 0x0600F10C RID: 61708 RVA: 0x0046D068 File Offset: 0x0046B268
 	public BattlePass? GetBattlePassData(int battlePassId)
 	{
 		BattlePass? config = ConfigBattlePassById.GetConfig(battlePassId, true);
@@ -33,7 +33,7 @@ public class BattlePassConfig : ConfigBase
 		return new BattlePass?(config.Value);
 	}
 
-	// Token: 0x06011C5D RID: 72797 RVA: 0x00460020 File Offset: 0x0045E220
+	// Token: 0x0600F10D RID: 61709 RVA: 0x0046D0C8 File Offset: 0x0046B2C8
 	public BattlePassTask? GetBattlePassTask(int taskId)
 	{
 		BattlePassTask? config = ConfigBattlePassTaskByTaskId.GetConfig(taskId, true);
@@ -50,7 +50,7 @@ public class BattlePassConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x06011C5E RID: 72798 RVA: 0x00460074 File Offset: 0x0045E274
+	// Token: 0x0600F10E RID: 61710 RVA: 0x0046D11C File Offset: 0x0046B31C
 	public BattlePassUnlockPop? GetBattlePassUnlock(int typeId)
 	{
 		BattlePassUnlockPop? config = ConfigBattlePassUnlockPopByBattlePassTypeId.GetConfig(typeId, true);
@@ -67,7 +67,7 @@ public class BattlePassConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x06011C5F RID: 72799 RVA: 0x004600C8 File Offset: 0x0045E2C8
+	// Token: 0x0600F10F RID: 61711 RVA: 0x0046D170 File Offset: 0x0046B370
 	public void GetBattlePassUnlockReward(EBattlePassUnlockType type, List<TItem> outList)
 	{
 		outList.Clear();
@@ -93,8 +93,8 @@ public class BattlePassConfig : ConfigBase
 		instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x170016B4 RID: 5812
-	// (get) Token: 0x06011C60 RID: 72800 RVA: 0x00460184 File Offset: 0x0045E384
+	// Token: 0x170016EE RID: 5870
+	// (get) Token: 0x0600F110 RID: 61712 RVA: 0x0046D22C File Offset: 0x0046B42C
 	public static BattlePassConfig Instance
 	{
 		get
@@ -103,7 +103,7 @@ public class BattlePassConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x06011C61 RID: 72801 RVA: 0x0046018B File Offset: 0x0045E38B
+	// Token: 0x0600F111 RID: 61713 RVA: 0x0046D233 File Offset: 0x0046B433
 	public static BattlePassConfig GetOrCreateInstance()
 	{
 		if (BattlePassConfig._Instance == null)
@@ -113,7 +113,7 @@ public class BattlePassConfig : ConfigBase
 		return BattlePassConfig._Instance;
 	}
 
-	// Token: 0x06011C62 RID: 72802 RVA: 0x0046019F File Offset: 0x0045E39F
+	// Token: 0x0600F112 RID: 61714 RVA: 0x0046D247 File Offset: 0x0046B447
 	public static bool CreateInstance()
 	{
 		if (BattlePassConfig._Instance != null)
@@ -124,24 +124,24 @@ public class BattlePassConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x06011C63 RID: 72803 RVA: 0x004601B5 File Offset: 0x0045E3B5
+	// Token: 0x0600F113 RID: 61715 RVA: 0x0046D25D File Offset: 0x0046B45D
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06011C64 RID: 72804 RVA: 0x004601B7 File Offset: 0x0045E3B7
+	// Token: 0x0600F114 RID: 61716 RVA: 0x0046D25F File Offset: 0x0046B45F
 	public static void ResetStaticDefaultValue()
 	{
 		BattlePassConfig._Instance = null;
 	}
 
-	// Token: 0x06011C65 RID: 72805 RVA: 0x004601BF File Offset: 0x0045E3BF
+	// Token: 0x0600F115 RID: 61717 RVA: 0x0046D267 File Offset: 0x0046B467
 	static BattlePassConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BattlePassConfig.CreateStaticDefaultValue), new Action(BattlePassConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040086D8 RID: 34520
+	// Token: 0x0400881B RID: 34843
 	[Nullable(2)]
 	private static BattlePassConfig _Instance;
 }

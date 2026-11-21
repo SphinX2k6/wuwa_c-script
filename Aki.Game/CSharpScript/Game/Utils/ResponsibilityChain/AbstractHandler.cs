@@ -3,19 +3,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Utils.ResponsibilityChain
 {
-	// Token: 0x0200455B RID: 17755
+	// Token: 0x02003483 RID: 13443
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class AbstractHandler<[Nullable(0)] T> : IParameterHandler<T> where T : IParameterContext
 	{
-		// Token: 0x0602DDBA RID: 187834 RVA: 0x00A8C06E File Offset: 0x00A8A26E
+		// Token: 0x0602249C RID: 140444 RVA: 0x009B7786 File Offset: 0x009B5986
 		public IParameterHandler<T> SetNext(IParameterHandler<T> handler)
 		{
 			this.NextHandler = handler;
 			return handler;
 		}
 
-		// Token: 0x0602DDBB RID: 187835 RVA: 0x00A8C078 File Offset: 0x00A8A278
+		// Token: 0x0602249D RID: 140445 RVA: 0x009B7790 File Offset: 0x009B5990
 		public unsafe bool Handle(T context)
 		{
 			if (this.CanHandle(context))
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Utils.ResponsibilityChain
 			return nextHandler2 != null && nextHandler2.Handle(context);
 		}
 
-		// Token: 0x0602DDBC RID: 187836 RVA: 0x00A8C120 File Offset: 0x00A8A320
+		// Token: 0x0602249E RID: 140446 RVA: 0x009B7838 File Offset: 0x009B5A38
 		public unsafe bool Stop(T context)
 		{
 			if (this.ShouldStop(context))
@@ -61,22 +61,22 @@ namespace CSharpScript.Game.Utils.ResponsibilityChain
 			return nextHandler2 != null && nextHandler2.Stop(context);
 		}
 
-		// Token: 0x0602DDBD RID: 187837
+		// Token: 0x0602249F RID: 140447
 		protected abstract bool CanHandle(T context);
 
-		// Token: 0x0602DDBE RID: 187838
+		// Token: 0x060224A0 RID: 140448
 		protected abstract bool ShouldStop(T context);
 
-		// Token: 0x0602DDBF RID: 187839
+		// Token: 0x060224A1 RID: 140449
 		protected abstract void ExecuteProcessing(T context);
 
-		// Token: 0x0602DDC0 RID: 187840
+		// Token: 0x060224A2 RID: 140450
 		protected abstract void ExecuteStopping(T context);
 
-		// Token: 0x040187EB RID: 100331
+		// Token: 0x04012E25 RID: 77349
 		private const bool ENABLE_RESPONSIBILITY_CHAIN_LOG = true;
 
-		// Token: 0x040187EC RID: 100332
+		// Token: 0x04012E26 RID: 77350
 		[Nullable(new byte[]
 		{
 			2,

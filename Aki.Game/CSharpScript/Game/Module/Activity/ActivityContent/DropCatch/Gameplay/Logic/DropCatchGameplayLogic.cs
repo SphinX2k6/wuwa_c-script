@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.Logic
 {
-	// Token: 0x02006736 RID: 26422
+	// Token: 0x02005686 RID: 22150
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DropCatchGameplayLogic : IGameplayLogicContext
 	{
-		// Token: 0x06041F05 RID: 270085 RVA: 0x00FFED6C File Offset: 0x00FFCF6C
+		// Token: 0x06036A51 RID: 223825 RVA: 0x00F40138 File Offset: 0x00F3E338
 		public void Init(DropCatchGameplayProxy proxy)
 		{
 			this.Proxy = proxy;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			this.InitAttributes();
 		}
 
-		// Token: 0x06041F06 RID: 270086 RVA: 0x00FFEE48 File Offset: 0x00FFD048
+		// Token: 0x06036A52 RID: 223826 RVA: 0x00F40214 File Offset: 0x00F3E414
 		private void InitManagers()
 		{
 			if (this.GameplayModifierMgr == null)
@@ -69,68 +69,68 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			this.GameplayCollisionMgr.Init();
 		}
 
-		// Token: 0x06041F07 RID: 270087 RVA: 0x00FFEF2E File Offset: 0x00FFD12E
+		// Token: 0x06036A53 RID: 223827 RVA: 0x00F402FA File Offset: 0x00F3E4FA
 		private void InitAttributes()
 		{
 			this.AddScoreRate = new DropCatchGameplayAttribute("AddScoreRate", 1f);
 			this.EnergyGetRate = new DropCatchGameplayAttribute("EnergyGetRate", 1f);
 		}
 
-		// Token: 0x06041F08 RID: 270088 RVA: 0x00FFEF5A File Offset: 0x00FFD15A
+		// Token: 0x06036A54 RID: 223828 RVA: 0x00F40326 File Offset: 0x00F3E526
 		public DropCatchGameplayProxy GetProxy()
 		{
 			return this.Proxy;
 		}
 
-		// Token: 0x06041F09 RID: 270089 RVA: 0x00FFEF62 File Offset: 0x00FFD162
+		// Token: 0x06036A55 RID: 223829 RVA: 0x00F4032E File Offset: 0x00F3E52E
 		public DropCatchGameplayTimeMgr GetGameplayTimeMgr()
 		{
 			return this.GameplayTimeMgr;
 		}
 
-		// Token: 0x06041F0A RID: 270090 RVA: 0x00FFEF6A File Offset: 0x00FFD16A
+		// Token: 0x06036A56 RID: 223830 RVA: 0x00F40336 File Offset: 0x00F3E536
 		public DropCatchGameplayRoleMgr GetGameplayRoleMgr()
 		{
 			return this.GameplayRoleMgr;
 		}
 
-		// Token: 0x06041F0B RID: 270091 RVA: 0x00FFEF72 File Offset: 0x00FFD172
+		// Token: 0x06036A57 RID: 223831 RVA: 0x00F4033E File Offset: 0x00F3E53E
 		public DropCatchGameplayDropItemMgr GetGameplayDropItemMgr()
 		{
 			return this.GameplayDropItemMgr;
 		}
 
-		// Token: 0x06041F0C RID: 270092 RVA: 0x00FFEF7A File Offset: 0x00FFD17A
+		// Token: 0x06036A58 RID: 223832 RVA: 0x00F40346 File Offset: 0x00F3E546
 		public DropCatchGameplayCollisionMgr GetGameplayCollisionMgr()
 		{
 			return this.GameplayCollisionMgr;
 		}
 
-		// Token: 0x06041F0D RID: 270093 RVA: 0x00FFEF82 File Offset: 0x00FFD182
+		// Token: 0x06036A59 RID: 223833 RVA: 0x00F4034E File Offset: 0x00F3E54E
 		public DropCatchGameplayCommandMgr GetGameplayCommandMgr()
 		{
 			return this.GameplayCommandMgr;
 		}
 
-		// Token: 0x06041F0E RID: 270094 RVA: 0x00FFEF8A File Offset: 0x00FFD18A
+		// Token: 0x06036A5A RID: 223834 RVA: 0x00F40356 File Offset: 0x00F3E556
 		public DropCatchGameplayModifierMgr GetGameplayModifierMgr()
 		{
 			return this.GameplayModifierMgr;
 		}
 
-		// Token: 0x06041F0F RID: 270095 RVA: 0x00FFEF92 File Offset: 0x00FFD192
+		// Token: 0x06036A5B RID: 223835 RVA: 0x00F4035E File Offset: 0x00F3E55E
 		public DropCatchGameplayInputMgr GetGameplayInputMgr()
 		{
 			return this.GameplayInputMgr;
 		}
 
-		// Token: 0x06041F10 RID: 270096 RVA: 0x00FFEF9A File Offset: 0x00FFD19A
+		// Token: 0x06036A5C RID: 223836 RVA: 0x00F40366 File Offset: 0x00F3E566
 		public IDropCatchGameplayArea GetGameplayArea()
 		{
 			return this.GameplayArea;
 		}
 
-		// Token: 0x06041F11 RID: 270097 RVA: 0x00FFEFA2 File Offset: 0x00FFD1A2
+		// Token: 0x06036A5D RID: 223837 RVA: 0x00F4036E File Offset: 0x00F3E56E
 		public void Pause()
 		{
 			if (this.GameplayState == EDropCatchGameplayState.Pause)
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			this.GameplayState = EDropCatchGameplayState.Pause;
 		}
 
-		// Token: 0x06041F12 RID: 270098 RVA: 0x00FFEFDF File Offset: 0x00FFD1DF
+		// Token: 0x06036A5E RID: 223838 RVA: 0x00F403AB File Offset: 0x00F3E5AB
 		public void Resume()
 		{
 			if (this.GameplayState != EDropCatchGameplayState.Pause)
@@ -159,25 +159,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			this.GameplayState = this.StateBeforePause;
 		}
 
-		// Token: 0x06041F13 RID: 270099 RVA: 0x00FFF015 File Offset: 0x00FFD215
+		// Token: 0x06036A5F RID: 223839 RVA: 0x00F403E1 File Offset: 0x00F3E5E1
 		public void Ready()
 		{
 			this.TickId = TickSystem.Instance.Add(new Action<float>(this.OnTick), "DropCatchGameplayLogic", ETickingGroup.TG_PrePhysics, true, 0, true);
 			this.GameplayState = EDropCatchGameplayState.Ready;
 		}
 
-		// Token: 0x06041F14 RID: 270100 RVA: 0x00FFF044 File Offset: 0x00FFD244
+		// Token: 0x06036A60 RID: 223840 RVA: 0x00F40410 File Offset: 0x00F3E610
 		public void Play()
 		{
 			this.GameplayState = EDropCatchGameplayState.Play;
 			DropCatchGameplayView gameplayView = this.Proxy.GetGameplayView();
 			if (gameplayView != null)
 			{
-				UiAudioModel.Instance.SetLoopAudioEventShow(gameplayView.GetViewId(), gameplayView.GetRootActor(), "play_ui_music_coincatch");
+				UiAudioSystem.Instance.PlayViewBgm(gameplayView, "play_ui_music_coincatch");
 			}
 		}
 
-		// Token: 0x06041F15 RID: 270101 RVA: 0x00FFF084 File Offset: 0x00FFD284
+		// Token: 0x06036A61 RID: 223841 RVA: 0x00F40444 File Offset: 0x00F3E644
 		public void End()
 		{
 			if (this.TickId != null)
@@ -189,11 +189,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			DropCatchGameplayView gameplayView = this.Proxy.GetGameplayView();
 			if (gameplayView != null)
 			{
-				UiAudioModel.Instance.SetLoopAudioEventDestroy(gameplayView.GetViewId(), gameplayView.GetRootActor(), "play_ui_music_coincatch");
+				UiAudioSystem.Instance.StopViewBgm(gameplayView);
 			}
 		}
 
-		// Token: 0x06041F16 RID: 270102 RVA: 0x00FFF0E7 File Offset: 0x00FFD2E7
+		// Token: 0x06036A62 RID: 223842 RVA: 0x00F40497 File Offset: 0x00F3E697
 		private void OnTick(float deltaTime)
 		{
 			if (this.GameplayState == EDropCatchGameplayState.Ready)
@@ -207,7 +207,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			}
 		}
 
-		// Token: 0x06041F17 RID: 270103 RVA: 0x00FFF109 File Offset: 0x00FFD309
+		// Token: 0x06036A63 RID: 223843 RVA: 0x00F404B9 File Offset: 0x00F3E6B9
 		private void OnReadyTick(float deltaTime)
 		{
 			DropCatchGameplayInputMgr gameplayInputMgr = this.GameplayInputMgr;
@@ -223,7 +223,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			gameplayRoleMgr.OnReadyTick(deltaTime);
 		}
 
-		// Token: 0x06041F18 RID: 270104 RVA: 0x00FFF130 File Offset: 0x00FFD330
+		// Token: 0x06036A64 RID: 223844 RVA: 0x00F404E0 File Offset: 0x00F3E6E0
 		private void OnPlayTick(float deltaTime)
 		{
 			DropCatchGameplayTimeMgr gameplayTimeMgr = this.GameplayTimeMgr;
@@ -264,7 +264,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			gameplayCollisionMgr.OnTick(deltaTime);
 		}
 
-		// Token: 0x06041F19 RID: 270105 RVA: 0x00FFF1BC File Offset: 0x00FFD3BC
+		// Token: 0x06036A65 RID: 223845 RVA: 0x00F4056C File Offset: 0x00F3E76C
 		public void UseRoleSkill()
 		{
 			DropCatchGameplayRoleMgr gameplayRoleMgr = this.GameplayRoleMgr;
@@ -299,19 +299,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			gameplayCommandMgr.ExecuteSkillCommand();
 		}
 
-		// Token: 0x06041F1A RID: 270106 RVA: 0x00FFF231 File Offset: 0x00FFD431
+		// Token: 0x06036A66 RID: 223846 RVA: 0x00F405E1 File Offset: 0x00F3E7E1
 		public float GetEnergyGetRate()
 		{
 			return this.EnergyGetRate.GetFinalValue();
 		}
 
-		// Token: 0x06041F1B RID: 270107 RVA: 0x00FFF23E File Offset: 0x00FFD43E
+		// Token: 0x06036A67 RID: 223847 RVA: 0x00F405EE File Offset: 0x00F3E7EE
 		public float GetAddScoreRate()
 		{
 			return this.AddScoreRate.GetFinalValue();
 		}
 
-		// Token: 0x06041F1C RID: 270108 RVA: 0x00FFF24B File Offset: 0x00FFD44B
+		// Token: 0x06036A68 RID: 223848 RVA: 0x00F405FB File Offset: 0x00F3E7FB
 		[NullableContext(2)]
 		public IRoleInstance GetRole()
 		{
@@ -323,7 +323,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			return gameplayRoleMgr.GetRole();
 		}
 
-		// Token: 0x06041F1D RID: 270109 RVA: 0x00FFF25E File Offset: 0x00FFD45E
+		// Token: 0x06036A69 RID: 223849 RVA: 0x00F4060E File Offset: 0x00F3E80E
 		public float GetRemainingTime()
 		{
 			DropCatchGameplayTimeMgr gameplayTimeMgr = this.GameplayTimeMgr;
@@ -334,25 +334,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			return gameplayTimeMgr.GetRemainingTime();
 		}
 
-		// Token: 0x06041F1E RID: 270110 RVA: 0x00FFF275 File Offset: 0x00FFD475
+		// Token: 0x06036A6A RID: 223850 RVA: 0x00F40625 File Offset: 0x00F3E825
 		public DropCatchGameplayAttribute GetAddScoreRateAttr()
 		{
 			return this.AddScoreRate;
 		}
 
-		// Token: 0x06041F1F RID: 270111 RVA: 0x00FFF27D File Offset: 0x00FFD47D
+		// Token: 0x06036A6B RID: 223851 RVA: 0x00F4062D File Offset: 0x00F3E82D
 		public DropCatchGameplayAttribute GetEnergyGetRateAttr()
 		{
 			return this.EnergyGetRate;
 		}
 
-		// Token: 0x06041F20 RID: 270112 RVA: 0x00FFF285 File Offset: 0x00FFD485
+		// Token: 0x06036A6C RID: 223852 RVA: 0x00F40635 File Offset: 0x00F3E835
 		public EDropCatchGameplayState GetGameplayState()
 		{
 			return this.GameplayState;
 		}
 
-		// Token: 0x06041F21 RID: 270113 RVA: 0x00FFF290 File Offset: 0x00FFD490
+		// Token: 0x06036A6D RID: 223853 RVA: 0x00F40640 File Offset: 0x00F3E840
 		public void Destroy()
 		{
 			this.End();
@@ -394,53 +394,53 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.L
 			gameplayModifierMgr.Destroy();
 		}
 
-		// Token: 0x040225AF RID: 140719
+		// Token: 0x0401CE08 RID: 118280
 		[Nullable(2)]
 		private Ticker TickId;
 
-		// Token: 0x040225B0 RID: 140720
+		// Token: 0x0401CE09 RID: 118281
 		public DropCatchGameplayProxy Proxy;
 
-		// Token: 0x040225B1 RID: 140721
+		// Token: 0x0401CE0A RID: 118282
 		[Nullable(2)]
 		private DropCatchGameplayTimeMgr GameplayTimeMgr;
 
-		// Token: 0x040225B2 RID: 140722
+		// Token: 0x0401CE0B RID: 118283
 		[Nullable(2)]
 		private DropCatchGameplayRoleMgr GameplayRoleMgr;
 
-		// Token: 0x040225B3 RID: 140723
+		// Token: 0x0401CE0C RID: 118284
 		[Nullable(2)]
 		private DropCatchGameplayDropItemMgr GameplayDropItemMgr;
 
-		// Token: 0x040225B4 RID: 140724
+		// Token: 0x0401CE0D RID: 118285
 		[Nullable(2)]
 		private DropCatchGameplayCollisionMgr GameplayCollisionMgr;
 
-		// Token: 0x040225B5 RID: 140725
+		// Token: 0x0401CE0E RID: 118286
 		[Nullable(2)]
 		private DropCatchGameplayCommandMgr GameplayCommandMgr;
 
-		// Token: 0x040225B6 RID: 140726
+		// Token: 0x0401CE0F RID: 118287
 		[Nullable(2)]
 		private DropCatchGameplayModifierMgr GameplayModifierMgr;
 
-		// Token: 0x040225B7 RID: 140727
+		// Token: 0x0401CE10 RID: 118288
 		private IDropCatchGameplayArea GameplayArea;
 
-		// Token: 0x040225B8 RID: 140728
+		// Token: 0x0401CE11 RID: 118289
 		private DropCatchGameplayAttribute AddScoreRate;
 
-		// Token: 0x040225B9 RID: 140729
+		// Token: 0x0401CE12 RID: 118290
 		private DropCatchGameplayAttribute EnergyGetRate;
 
-		// Token: 0x040225BA RID: 140730
+		// Token: 0x0401CE13 RID: 118291
 		private EDropCatchGameplayState GameplayState = EDropCatchGameplayState.End;
 
-		// Token: 0x040225BB RID: 140731
+		// Token: 0x0401CE14 RID: 118292
 		private EDropCatchGameplayState StateBeforePause = EDropCatchGameplayState.End;
 
-		// Token: 0x040225BC RID: 140732
+		// Token: 0x0401CE15 RID: 118293
 		[Nullable(2)]
 		private DropCatchGameplayInputMgr GameplayInputMgr;
 	}

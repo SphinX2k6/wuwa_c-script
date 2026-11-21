@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000FE5 RID: 4069
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001111 RID: 4369
 	public class IKurotatoConditionStepUpdateBatch : IKurotatoConditionStepBase
 	{
-		// Token: 0x06005A94 RID: 23188 RVA: 0x000DBF98 File Offset: 0x000DA198
+		// Token: 0x06006074 RID: 24692 RVA: 0x000E8BD8 File Offset: 0x000E6DD8
 		private IKurotatoConditionStepUpdateBatch_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005A95 RID: 23189 RVA: 0x000DBFD0 File Offset: 0x000DA1D0
+		// Token: 0x06006075 RID: 24693 RVA: 0x000E8C10 File Offset: 0x000E6E10
 		public static IKurotatoConditionStepUpdateBatch Create([Nullable(2)] IKurotatoConditionStepUpdateBatch instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005A96 RID: 23190 RVA: 0x000DBFE3 File Offset: 0x000DA1E3
+		// Token: 0x06006076 RID: 24694 RVA: 0x000E8C23 File Offset: 0x000E6E23
 		public static IKurotatoConditionStepUpdateBatch CreateFromSetValue([Nullable(2)] IKurotatoConditionStepUpdateBatch_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005A97 RID: 23191 RVA: 0x000DBFF6 File Offset: 0x000DA1F6
+		// Token: 0x06006077 RID: 24695 RVA: 0x000E8C36 File Offset: 0x000E6E36
 		public new IKurotatoConditionStepUpdateBatch_SetValue ToSetValue()
 		{
 			return new IKurotatoConditionStepUpdateBatch_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001DF4 RID: 7668
-		// (get) Token: 0x06005A98 RID: 23192 RVA: 0x000DC009 File Offset: 0x000DA209
-		// (set) Token: 0x06005A99 RID: 23193 RVA: 0x000DC034 File Offset: 0x000DA234
+		// Token: 0x17001F9D RID: 8093
+		// (get) Token: 0x06006078 RID: 24696 RVA: 0x000E8C49 File Offset: 0x000E6E49
+		// (set) Token: 0x06006079 RID: 24697 RVA: 0x000E8C74 File Offset: 0x000E6E74
 		public override EKurotatoConditionStep Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003689 RID: 13961
+		// Token: 0x040039C1 RID: 14785
 		[Nullable(2)]
 		protected new IKurotatoConditionStepUpdateBatch FbInstance;
 
-		// Token: 0x0400368A RID: 13962
+		// Token: 0x040039C2 RID: 14786
 		[Nullable(2)]
 		protected new IKurotatoConditionStepUpdateBatch_SetValue PocoInterface;
 	}

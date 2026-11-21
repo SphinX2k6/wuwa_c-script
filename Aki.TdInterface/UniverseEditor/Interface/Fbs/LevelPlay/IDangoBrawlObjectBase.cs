@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x0200445E RID: 17502
+	// Token: 0x020048C6 RID: 18630
 	public struct IDangoBrawlObjectBase : IFlatbufferObject
 	{
-		// Token: 0x17007B72 RID: 31602
-		// (get) Token: 0x0601A112 RID: 106770 RVA: 0x003B97F2 File Offset: 0x003B79F2
+		// Token: 0x170081B1 RID: 33201
+		// (get) Token: 0x0601B8E3 RID: 112867 RVA: 0x003E59FE File Offset: 0x003E3BFE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A113 RID: 106771 RVA: 0x003B97FF File Offset: 0x003B79FF
+		// Token: 0x0601B8E4 RID: 112868 RVA: 0x003E5A0B File Offset: 0x003E3C0B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601A114 RID: 106772 RVA: 0x003B9808 File Offset: 0x003B7A08
+		// Token: 0x0601B8E5 RID: 112869 RVA: 0x003E5A14 File Offset: 0x003E3C14
 		public static IDangoBrawlObjectBase GetRootAsIDangoBrawlObjectBase(ByteBuffer _bb)
 		{
 			return IDangoBrawlObjectBase.GetRootAsIDangoBrawlObjectBase(_bb, default(IDangoBrawlObjectBase));
 		}
 
-		// Token: 0x0601A115 RID: 106773 RVA: 0x003B9824 File Offset: 0x003B7A24
+		// Token: 0x0601B8E6 RID: 112870 RVA: 0x003E5A30 File Offset: 0x003E3C30
 		public static IDangoBrawlObjectBase GetRootAsIDangoBrawlObjectBase(ByteBuffer _bb, IDangoBrawlObjectBase obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601A116 RID: 106774 RVA: 0x003B9841 File Offset: 0x003B7A41
+		// Token: 0x0601B8E7 RID: 112871 RVA: 0x003E5A4D File Offset: 0x003E3C4D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601A117 RID: 106775 RVA: 0x003B9850 File Offset: 0x003B7A50
+		// Token: 0x0601B8E8 RID: 112872 RVA: 0x003E5A5C File Offset: 0x003E3C5C
 		public IDangoBrawlObjectBase __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007B73 RID: 31603
-		// (get) Token: 0x0601A118 RID: 106776 RVA: 0x003B9860 File Offset: 0x003B7A60
+		// Token: 0x170081B2 RID: 33202
+		// (get) Token: 0x0601B8E9 RID: 112873 RVA: 0x003E5A6C File Offset: 0x003E3C6C
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007B74 RID: 31604
-		// (get) Token: 0x0601A119 RID: 106777 RVA: 0x003B989C File Offset: 0x003B7A9C
+		// Token: 0x170081B3 RID: 33203
+		// (get) Token: 0x0601B8EA RID: 112874 RVA: 0x003E5AA8 File Offset: 0x003E3CA8
 		public ETwoDimensionLevelType Type
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007B75 RID: 31605
-		// (get) Token: 0x0601A11A RID: 106778 RVA: 0x003B98D8 File Offset: 0x003B7AD8
+		// Token: 0x170081B4 RID: 33204
+		// (get) Token: 0x0601B8EB RID: 112875 RVA: 0x003E5AE4 File Offset: 0x003E3CE4
 		public ITwoDimensionTransform? Transform
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007B76 RID: 31606
-		// (get) Token: 0x0601A11B RID: 106779 RVA: 0x003B9938 File Offset: 0x003B7B38
+		// Token: 0x170081B5 RID: 33205
+		// (get) Token: 0x0601B8EC RID: 112876 RVA: 0x003E5B44 File Offset: 0x003E3D44
 		public EDangoBrawlObjectType SubType
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007B77 RID: 31607
-		// (get) Token: 0x0601A11C RID: 106780 RVA: 0x003B9978 File Offset: 0x003B7B78
+		// Token: 0x170081B6 RID: 33206
+		// (get) Token: 0x0601B8ED RID: 112877 RVA: 0x003E5B84 File Offset: 0x003E3D84
 		public int DataId
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007B78 RID: 31608
-		// (get) Token: 0x0601A11D RID: 106781 RVA: 0x003B99B8 File Offset: 0x003B7BB8
+		// Token: 0x170081B7 RID: 33207
+		// (get) Token: 0x0601B8EE RID: 112878 RVA: 0x003E5BC4 File Offset: 0x003E3DC4
 		public EDangoBrawlDirection Direction
 		{
 			get
@@ -137,8 +137,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007B79 RID: 31609
-		// (get) Token: 0x0601A11E RID: 106782 RVA: 0x003B99F8 File Offset: 0x003B7BF8
+		// Token: 0x170081B8 RID: 33208
+		// (get) Token: 0x0601B8EF RID: 112879 RVA: 0x003E5C04 File Offset: 0x003E3E04
 		public int TemplateId
 		{
 			get
@@ -152,7 +152,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A11F RID: 106783 RVA: 0x003B9A38 File Offset: 0x003B7C38
+		// Token: 0x0601B8F0 RID: 112880 RVA: 0x003E5C44 File Offset: 0x003E3E44
 		public static Offset<IDangoBrawlObjectBase> CreateIDangoBrawlObjectBase(FlatBufferBuilder builder, int Id = 0, ETwoDimensionLevelType Type = ETwoDimensionLevelType.Marble, Offset<ITwoDimensionTransform> TransformOffset = default(Offset<ITwoDimensionTransform>), EDangoBrawlObjectType SubType = EDangoBrawlObjectType.Bag, int DataId = 0, EDangoBrawlDirection Direction = EDangoBrawlDirection.Up, int TemplateId = 0)
 		{
 			builder.StartTable(7);
@@ -166,61 +166,61 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IDangoBrawlObjectBase.EndIDangoBrawlObjectBase(builder);
 		}
 
-		// Token: 0x0601A120 RID: 106784 RVA: 0x003B9A87 File Offset: 0x003B7C87
+		// Token: 0x0601B8F1 RID: 112881 RVA: 0x003E5C93 File Offset: 0x003E3E93
 		public static void StartIDangoBrawlObjectBase(FlatBufferBuilder builder)
 		{
 			builder.StartTable(7);
 		}
 
-		// Token: 0x0601A121 RID: 106785 RVA: 0x003B9A90 File Offset: 0x003B7C90
+		// Token: 0x0601B8F2 RID: 112882 RVA: 0x003E5C9C File Offset: 0x003E3E9C
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(0, id, 0);
 		}
 
-		// Token: 0x0601A122 RID: 106786 RVA: 0x003B9A9B File Offset: 0x003B7C9B
+		// Token: 0x0601B8F3 RID: 112883 RVA: 0x003E5CA7 File Offset: 0x003E3EA7
 		public static void AddType(FlatBufferBuilder builder, ETwoDimensionLevelType type)
 		{
 			builder.AddByte(1, (byte)type, 0);
 		}
 
-		// Token: 0x0601A123 RID: 106787 RVA: 0x003B9AA6 File Offset: 0x003B7CA6
+		// Token: 0x0601B8F4 RID: 112884 RVA: 0x003E5CB2 File Offset: 0x003E3EB2
 		public static void AddTransform(FlatBufferBuilder builder, Offset<ITwoDimensionTransform> transformOffset)
 		{
 			builder.AddOffset(2, transformOffset.Value, 0);
 		}
 
-		// Token: 0x0601A124 RID: 106788 RVA: 0x003B9AB6 File Offset: 0x003B7CB6
+		// Token: 0x0601B8F5 RID: 112885 RVA: 0x003E5CC2 File Offset: 0x003E3EC2
 		public static void AddSubType(FlatBufferBuilder builder, EDangoBrawlObjectType subType)
 		{
 			builder.AddByte(3, (byte)subType, 0);
 		}
 
-		// Token: 0x0601A125 RID: 106789 RVA: 0x003B9AC1 File Offset: 0x003B7CC1
+		// Token: 0x0601B8F6 RID: 112886 RVA: 0x003E5CCD File Offset: 0x003E3ECD
 		public static void AddDataId(FlatBufferBuilder builder, int dataId)
 		{
 			builder.AddInt(4, dataId, 0);
 		}
 
-		// Token: 0x0601A126 RID: 106790 RVA: 0x003B9ACC File Offset: 0x003B7CCC
+		// Token: 0x0601B8F7 RID: 112887 RVA: 0x003E5CD8 File Offset: 0x003E3ED8
 		public static void AddDirection(FlatBufferBuilder builder, EDangoBrawlDirection direction)
 		{
 			builder.AddByte(5, (byte)direction, 0);
 		}
 
-		// Token: 0x0601A127 RID: 106791 RVA: 0x003B9AD7 File Offset: 0x003B7CD7
+		// Token: 0x0601B8F8 RID: 112888 RVA: 0x003E5CE3 File Offset: 0x003E3EE3
 		public static void AddTemplateId(FlatBufferBuilder builder, int templateId)
 		{
 			builder.AddInt(6, templateId, 0);
 		}
 
-		// Token: 0x0601A128 RID: 106792 RVA: 0x003B9AE2 File Offset: 0x003B7CE2
+		// Token: 0x0601B8F9 RID: 112889 RVA: 0x003E5CEE File Offset: 0x003E3EEE
 		public static Offset<IDangoBrawlObjectBase> EndIDangoBrawlObjectBase(FlatBufferBuilder builder)
 		{
 			return new Offset<IDangoBrawlObjectBase>(builder.EndTable());
 		}
 
-		// Token: 0x0601A129 RID: 106793 RVA: 0x003B9AF0 File Offset: 0x003B7CF0
+		// Token: 0x0601B8FA RID: 112890 RVA: 0x003E5CFC File Offset: 0x003E3EFC
 		public IDangoBrawlObjectBaseT UnPack()
 		{
 			IDangoBrawlObjectBaseT dangoBrawlObjectBaseT = new IDangoBrawlObjectBaseT();
@@ -228,7 +228,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return dangoBrawlObjectBaseT;
 		}
 
-		// Token: 0x0601A12A RID: 106794 RVA: 0x003B9B0C File Offset: 0x003B7D0C
+		// Token: 0x0601B8FB RID: 112891 RVA: 0x003E5D18 File Offset: 0x003E3F18
 		public void UnPackTo(IDangoBrawlObjectBaseT _o)
 		{
 			_o.Id = this.Id;
@@ -240,7 +240,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			_o.TemplateId = this.TemplateId;
 		}
 
-		// Token: 0x0601A12B RID: 106795 RVA: 0x003B9B90 File Offset: 0x003B7D90
+		// Token: 0x0601B8FC RID: 112892 RVA: 0x003E5D9C File Offset: 0x003E3F9C
 		public static Offset<IDangoBrawlObjectBase> Pack(FlatBufferBuilder builder, IDangoBrawlObjectBaseT _o)
 		{
 			if (_o == null)
@@ -251,7 +251,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IDangoBrawlObjectBase.CreateIDangoBrawlObjectBase(builder, _o.Id, _o.Type, transformOffset, _o.SubType, _o.DataId, _o.Direction, _o.TemplateId);
 		}
 
-		// Token: 0x0400C43F RID: 50239
+		// Token: 0x0400CE6D RID: 52845
 		private Table __p;
 	}
 }

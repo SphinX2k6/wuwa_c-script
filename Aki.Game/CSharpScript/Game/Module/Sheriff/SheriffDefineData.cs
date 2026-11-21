@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Sheriff
 {
-	// Token: 0x02004C44 RID: 19524
+	// Token: 0x02003BF5 RID: 15349
 	public static class SheriffDefineData
 	{
-		// Token: 0x060327E5 RID: 206821 RVA: 0x00BC3298 File Offset: 0x00BC1498
+		// Token: 0x06027598 RID: 161176 RVA: 0x00B07EB0 File Offset: 0x00B060B0
 		// Note: this type is marked as 'beforefieldinit'.
 		static SheriffDefineData()
 		{
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			SheriffDefineData.SheriffQuestMarkIconRecord = dictionary;
 		}
 
-		// Token: 0x0401AE25 RID: 110117
+		// Token: 0x04015782 RID: 87938
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		public static readonly IReadOnlyDictionary<int, IReadOnlyDictionary<int, string>> SheriffQuestMarkIconRecord;

@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x020031B1 RID: 12721
+// Token: 0x02002720 RID: 10016
 [NullableContext(1)]
 [Nullable(0)]
 public class WeaponComponentConfig : ConfigBase
 {
-	// Token: 0x0601B6D2 RID: 112338 RVA: 0x00780B48 File Offset: 0x0077ED48
+	// Token: 0x06019205 RID: 102917 RVA: 0x007A8EC8 File Offset: 0x007A70C8
 	public WeaponVisibleConfig? GetWeaponVisibleConfig(Entity entity)
 	{
 		CreatureDataComponent component = entity.GetComponent<CreatureDataComponent>();
@@ -19,13 +19,13 @@ public class WeaponComponentConfig : ConfigBase
 		return this.GetWeaponVisibleConfigById(pbDataId);
 	}
 
-	// Token: 0x0601B6D3 RID: 112339 RVA: 0x00780B77 File Offset: 0x0077ED77
+	// Token: 0x06019206 RID: 102918 RVA: 0x007A8EF7 File Offset: 0x007A70F7
 	public WeaponVisibleConfig? GetWeaponVisibleConfigById(int configId)
 	{
 		return ConfigWeaponVisibleConfigByIdWithZero.GetConfig(configId, configId, configId, true);
 	}
 
-	// Token: 0x0601B6D4 RID: 112340 RVA: 0x00780B84 File Offset: 0x0077ED84
+	// Token: 0x06019207 RID: 102919 RVA: 0x007A8F04 File Offset: 0x007A7104
 	public int[] GetHideWeaponTags(int configId)
 	{
 		string[] array = ConfigWeaponHideConfigByIdWithZero.GetConfig(configId, configId, configId, true).Value.HideWeaponTags();
@@ -38,8 +38,8 @@ public class WeaponComponentConfig : ConfigBase
 		return array2;
 	}
 
-	// Token: 0x170025EA RID: 9706
-	// (get) Token: 0x0601B6D5 RID: 112341 RVA: 0x00780BD8 File Offset: 0x0077EDD8
+	// Token: 0x170027E7 RID: 10215
+	// (get) Token: 0x06019208 RID: 102920 RVA: 0x007A8F58 File Offset: 0x007A7158
 	public static WeaponComponentConfig Instance
 	{
 		get
@@ -48,7 +48,7 @@ public class WeaponComponentConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x0601B6D6 RID: 112342 RVA: 0x00780BDF File Offset: 0x0077EDDF
+	// Token: 0x06019209 RID: 102921 RVA: 0x007A8F5F File Offset: 0x007A715F
 	public static WeaponComponentConfig GetOrCreateInstance()
 	{
 		if (WeaponComponentConfig._Instance == null)
@@ -58,7 +58,7 @@ public class WeaponComponentConfig : ConfigBase
 		return WeaponComponentConfig._Instance;
 	}
 
-	// Token: 0x0601B6D7 RID: 112343 RVA: 0x00780BF3 File Offset: 0x0077EDF3
+	// Token: 0x0601920A RID: 102922 RVA: 0x007A8F73 File Offset: 0x007A7173
 	public static bool CreateInstance()
 	{
 		if (WeaponComponentConfig._Instance != null)
@@ -69,24 +69,24 @@ public class WeaponComponentConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0601B6D8 RID: 112344 RVA: 0x00780C09 File Offset: 0x0077EE09
+	// Token: 0x0601920B RID: 102923 RVA: 0x007A8F89 File Offset: 0x007A7189
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601B6D9 RID: 112345 RVA: 0x00780C0B File Offset: 0x0077EE0B
+	// Token: 0x0601920C RID: 102924 RVA: 0x007A8F8B File Offset: 0x007A718B
 	public static void ResetStaticDefaultValue()
 	{
 		WeaponComponentConfig._Instance = null;
 	}
 
-	// Token: 0x0601B6DA RID: 112346 RVA: 0x00780C13 File Offset: 0x0077EE13
+	// Token: 0x0601920D RID: 102925 RVA: 0x007A8F93 File Offset: 0x007A7193
 	static WeaponComponentConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(WeaponComponentConfig.CreateStaticDefaultValue), new Action(WeaponComponentConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400D6EF RID: 55023
+	// Token: 0x0400DB76 RID: 56182
 	[Nullable(2)]
 	private static WeaponComponentConfig _Instance;
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006F9F RID: 28575
+	// Token: 0x02007765 RID: 30565
 	public struct ISetAreaState : IFlatbufferObject
 	{
-		// Token: 0x1700D439 RID: 54329
-		// (get) Token: 0x06032803 RID: 206851 RVA: 0x006D0F14 File Offset: 0x006CF114
+		// Token: 0x1700E008 RID: 57352
+		// (get) Token: 0x06035A53 RID: 219731 RVA: 0x007308CC File Offset: 0x0072EACC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032804 RID: 206852 RVA: 0x006D0F21 File Offset: 0x006CF121
+		// Token: 0x06035A54 RID: 219732 RVA: 0x007308D9 File Offset: 0x0072EAD9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06032805 RID: 206853 RVA: 0x006D0F28 File Offset: 0x006CF128
+		// Token: 0x06035A55 RID: 219733 RVA: 0x007308E0 File Offset: 0x0072EAE0
 		public static ISetAreaState GetRootAsISetAreaState(ByteBuffer _bb)
 		{
 			return ISetAreaState.GetRootAsISetAreaState(_bb, default(ISetAreaState));
 		}
 
-		// Token: 0x06032806 RID: 206854 RVA: 0x006D0F44 File Offset: 0x006CF144
+		// Token: 0x06035A56 RID: 219734 RVA: 0x007308FC File Offset: 0x0072EAFC
 		public static ISetAreaState GetRootAsISetAreaState(ByteBuffer _bb, ISetAreaState obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06032807 RID: 206855 RVA: 0x006D0F61 File Offset: 0x006CF161
+		// Token: 0x06035A57 RID: 219735 RVA: 0x00730919 File Offset: 0x0072EB19
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06032808 RID: 206856 RVA: 0x006D0F70 File Offset: 0x006CF170
+		// Token: 0x06035A58 RID: 219736 RVA: 0x00730928 File Offset: 0x0072EB28
 		public ISetAreaState __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D43A RID: 54330
-		// (get) Token: 0x06032809 RID: 206857 RVA: 0x006D0F80 File Offset: 0x006CF180
+		// Token: 0x1700E009 RID: 57353
+		// (get) Token: 0x06035A59 RID: 219737 RVA: 0x00730938 File Offset: 0x0072EB38
 		public int AreaId
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D43B RID: 54331
-		// (get) Token: 0x0603280A RID: 206858 RVA: 0x006D0FBC File Offset: 0x006CF1BC
+		// Token: 0x1700E00A RID: 57354
+		// (get) Token: 0x06035A5A RID: 219738 RVA: 0x00730974 File Offset: 0x0072EB74
 		public int State
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603280B RID: 206859 RVA: 0x006D0FF8 File Offset: 0x006CF1F8
+		// Token: 0x06035A5B RID: 219739 RVA: 0x007309B0 File Offset: 0x0072EBB0
 		public static Offset<ISetAreaState> CreateISetAreaState(FlatBufferBuilder builder, int AreaId = 0, int State = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISetAreaState.EndISetAreaState(builder);
 		}
 
-		// Token: 0x0603280C RID: 206860 RVA: 0x006D1015 File Offset: 0x006CF215
+		// Token: 0x06035A5C RID: 219740 RVA: 0x007309CD File Offset: 0x0072EBCD
 		public static void StartISetAreaState(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0603280D RID: 206861 RVA: 0x006D101E File Offset: 0x006CF21E
+		// Token: 0x06035A5D RID: 219741 RVA: 0x007309D6 File Offset: 0x0072EBD6
 		public static void AddAreaId(FlatBufferBuilder builder, int areaId)
 		{
 			builder.AddInt(0, areaId, 0);
 		}
 
-		// Token: 0x0603280E RID: 206862 RVA: 0x006D1029 File Offset: 0x006CF229
+		// Token: 0x06035A5E RID: 219742 RVA: 0x007309E1 File Offset: 0x0072EBE1
 		public static void AddState(FlatBufferBuilder builder, int state)
 		{
 			builder.AddInt(1, state, 0);
 		}
 
-		// Token: 0x0603280F RID: 206863 RVA: 0x006D1034 File Offset: 0x006CF234
+		// Token: 0x06035A5F RID: 219743 RVA: 0x007309EC File Offset: 0x0072EBEC
 		public static Offset<ISetAreaState> EndISetAreaState(FlatBufferBuilder builder)
 		{
 			return new Offset<ISetAreaState>(builder.EndTable());
 		}
 
-		// Token: 0x06032810 RID: 206864 RVA: 0x006D1044 File Offset: 0x006CF244
+		// Token: 0x06035A60 RID: 219744 RVA: 0x007309FC File Offset: 0x0072EBFC
 		public ISetAreaStateT UnPack()
 		{
 			ISetAreaStateT setAreaStateT = new ISetAreaStateT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return setAreaStateT;
 		}
 
-		// Token: 0x06032811 RID: 206865 RVA: 0x006D105F File Offset: 0x006CF25F
+		// Token: 0x06035A61 RID: 219745 RVA: 0x00730A17 File Offset: 0x0072EC17
 		public void UnPackTo(ISetAreaStateT _o)
 		{
 			_o.AreaId = this.AreaId;
 			_o.State = this.State;
 		}
 
-		// Token: 0x06032812 RID: 206866 RVA: 0x006D107C File Offset: 0x006CF27C
+		// Token: 0x06035A62 RID: 219746 RVA: 0x00730A34 File Offset: 0x0072EC34
 		public static Offset<ISetAreaState> Pack(FlatBufferBuilder builder, ISetAreaStateT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISetAreaState.CreateISetAreaState(builder, _o.AreaId, _o.State);
 		}
 
-		// Token: 0x040119A3 RID: 72099
+		// Token: 0x04012985 RID: 76165
 		private Table __p;
 	}
 }

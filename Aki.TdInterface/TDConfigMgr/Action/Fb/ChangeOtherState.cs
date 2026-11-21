@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025BD RID: 9661
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200286C RID: 10348
 	public class ChangeOtherState : ActionParams
 	{
-		// Token: 0x0600D94C RID: 55628 RVA: 0x00206ACC File Offset: 0x00204CCC
+		// Token: 0x0600E6C6 RID: 59078 RVA: 0x002227A0 File Offset: 0x002209A0
 		public static ChangeOtherState Create(IChangeOtherState? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003F94 RID: 16276
-		// (get) Token: 0x0600D94D RID: 55629 RVA: 0x00206AEB File Offset: 0x00204CEB
+		// Token: 0x1700429C RID: 17052
+		// (get) Token: 0x0600E6C7 RID: 59079 RVA: 0x002227BF File Offset: 0x002209BF
 		public virtual int EntityId
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F95 RID: 16277
-		// (get) Token: 0x0600D94E RID: 55630 RVA: 0x00206AF8 File Offset: 0x00204CF8
+		// Token: 0x1700429D RID: 17053
+		// (get) Token: 0x0600E6C8 RID: 59080 RVA: 0x002227CC File Offset: 0x002209CC
 		public virtual PlayFlow State
 		{
 			get
@@ -48,14 +46,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040078B3 RID: 30899
+		// Token: 0x04007F1A RID: 32538
 		private IChangeOtherState Instance;
 
-		// Token: 0x040078B4 RID: 30900
+		// Token: 0x04007F1B RID: 32539
 		[Nullable(2)]
 		private PlayFlow _StateCache;
 
-		// Token: 0x040078B5 RID: 30901
+		// Token: 0x04007F1C RID: 32540
 		private bool _StateInited;
 	}
 }

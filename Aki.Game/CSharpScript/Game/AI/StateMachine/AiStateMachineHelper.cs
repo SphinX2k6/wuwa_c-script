@@ -4,10 +4,10 @@ using System.Text;
 
 namespace CSharpScript.Game.AI.StateMachine
 {
-	// Token: 0x02007310 RID: 29456
+	// Token: 0x02006493 RID: 25747
 	public static class AiStateMachineHelper
 	{
-		// Token: 0x060484AF RID: 296111 RVA: 0x01294754 File Offset: 0x01292954
+		// Token: 0x0603E8FC RID: 256252 RVA: 0x012371D4 File Offset: 0x012353D4
 		[NullableContext(1)]
 		public static void AppendDepthSpace(StringBuilder outBuilder, int depth)
 		{

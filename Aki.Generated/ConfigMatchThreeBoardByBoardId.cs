@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200052B RID: 1323
+	// Token: 0x02000541 RID: 1345
 	public class ConfigMatchThreeBoardByBoardId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001F0D RID: 7949 RVA: 0x00108C98 File Offset: 0x00106E98
+		// Token: 0x06001F91 RID: 8081 RVA: 0x0010F3EC File Offset: 0x0010D5EC
 		static ConfigMatchThreeBoardByBoardId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMatchThreeBoardByBoardId.CreateStaticDefaultValue), new Action(ConfigMatchThreeBoardByBoardId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001F0E RID: 7950 RVA: 0x00108CB8 File Offset: 0x00106EB8
+		// Token: 0x06001F92 RID: 8082 RVA: 0x0010F40C File Offset: 0x0010D60C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMatchThreeBoardByBoardId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001F0F RID: 7951 RVA: 0x00108D37 File Offset: 0x00106F37
+		// Token: 0x06001F93 RID: 8083 RVA: 0x0010F48B File Offset: 0x0010D68B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMatchThreeBoardByBoardId.LogPair = null;
 			ConfigMatchThreeBoardByBoardId.HandleId = 0;
 		}
 
-		// Token: 0x06001F10 RID: 7952 RVA: 0x00108D45 File Offset: 0x00106F45
+		// Token: 0x06001F94 RID: 8084 RVA: 0x0010F499 File Offset: 0x0010D699
 		public static void Init()
 		{
 			ConfigMatchThreeBoardByBoardId.HandleId = ConfigCommon.InitDataStatement(ConfigMatchThreeBoardByBoardId.HandleId, "db_matchthree.db", "select BinData from `MatchThreeBoard` where BoardId=?");
 		}
 
-		// Token: 0x06001F11 RID: 7953 RVA: 0x00108D60 File Offset: 0x00106F60
+		// Token: 0x06001F95 RID: 8085 RVA: 0x0010F4B4 File Offset: 0x0010D6B4
 		[NullableContext(2)]
 		public static IReadOnlyList<MatchThreeBoard> GetConfigList(int p0BoardId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04002411 RID: 9233
+		// Token: 0x040024AB RID: 9387
 		private const string DB = "db_matchthree.db";
 
-		// Token: 0x04002412 RID: 9234
+		// Token: 0x040024AC RID: 9388
 		private const string FILE = "s.三消活动局内.xlsx";
 
-		// Token: 0x04002413 RID: 9235
+		// Token: 0x040024AD RID: 9389
 		private const string TABLE = "MatchThreeBoard";
 
-		// Token: 0x04002414 RID: 9236
+		// Token: 0x040024AE RID: 9390
 		private const string COMMAND = "select BinData from `MatchThreeBoard` where BoardId=?";
 
-		// Token: 0x04002415 RID: 9237
+		// Token: 0x040024AF RID: 9391
 		private const string KEY_PREFIX = "MatchThreeBoardByBoardId";
 
-		// Token: 0x04002416 RID: 9238
+		// Token: 0x040024B0 RID: 9392
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002417 RID: 9239
+		// Token: 0x040024B1 RID: 9393
 		private static int HandleId;
 	}
 }

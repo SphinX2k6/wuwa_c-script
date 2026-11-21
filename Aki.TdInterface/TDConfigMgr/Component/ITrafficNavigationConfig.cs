@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200079B RID: 1947
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200083C RID: 2108
 	public class ITrafficNavigationConfig : IRoadNetworkNavigationType
 	{
-		// Token: 0x06002A32 RID: 10802 RVA: 0x0006ED58 File Offset: 0x0006CF58
+		// Token: 0x06002D5A RID: 11610 RVA: 0x00076000 File Offset: 0x00074200
 		private ITrafficNavigationConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002A33 RID: 10803 RVA: 0x0006ED90 File Offset: 0x0006CF90
+		// Token: 0x06002D5B RID: 11611 RVA: 0x00076038 File Offset: 0x00074238
 		public static ITrafficNavigationConfig Create([Nullable(2)] ITrafficNavigationConfig instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002A34 RID: 10804 RVA: 0x0006EDA3 File Offset: 0x0006CFA3
+		// Token: 0x06002D5C RID: 11612 RVA: 0x0007604B File Offset: 0x0007424B
 		public static ITrafficNavigationConfig CreateFromSetValue([Nullable(2)] ITrafficNavigationConfig_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002A35 RID: 10805 RVA: 0x0006EDB8 File Offset: 0x0006CFB8
+		// Token: 0x06002D5D RID: 11613 RVA: 0x00076060 File Offset: 0x00074260
 		public new ITrafficNavigationConfig_SetValue ToSetValue()
 		{
 			return new ITrafficNavigationConfig_SetValue
@@ -67,9 +65,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000B12 RID: 2834
-		// (get) Token: 0x06002A36 RID: 10806 RVA: 0x0006EE1E File Offset: 0x0006D01E
-		// (set) Token: 0x06002A37 RID: 10807 RVA: 0x0006EE49 File Offset: 0x0006D049
+		// Token: 0x17000BD4 RID: 3028
+		// (get) Token: 0x06002D5E RID: 11614 RVA: 0x000760C6 File Offset: 0x000742C6
+		// (set) Token: 0x06002D5F RID: 11615 RVA: 0x000760F1 File Offset: 0x000742F1
 		public override ERoadNetworkNavigationType Type
 		{
 			get
@@ -90,9 +88,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B13 RID: 2835
-		// (get) Token: 0x06002A38 RID: 10808 RVA: 0x0006EE58 File Offset: 0x0006D058
-		// (set) Token: 0x06002A39 RID: 10809 RVA: 0x0006EEB9 File Offset: 0x0006D0B9
+		// Token: 0x17000BD5 RID: 3029
+		// (get) Token: 0x06002D60 RID: 11616 RVA: 0x00076100 File Offset: 0x00074300
+		// (set) Token: 0x06002D61 RID: 11617 RVA: 0x00076161 File Offset: 0x00074361
 		public virtual VectorInfo Size
 		{
 			get
@@ -120,9 +118,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B14 RID: 2836
-		// (get) Token: 0x06002A3A RID: 10810 RVA: 0x0006EECE File Offset: 0x0006D0CE
-		// (set) Token: 0x06002A3B RID: 10811 RVA: 0x0006EEF5 File Offset: 0x0006D0F5
+		// Token: 0x17000BD6 RID: 3030
+		// (get) Token: 0x06002D62 RID: 11618 RVA: 0x00076176 File Offset: 0x00074376
+		// (set) Token: 0x06002D63 RID: 11619 RVA: 0x0007619D File Offset: 0x0007439D
 		public virtual ITriggerShape BoundingVolume
 		{
 			get
@@ -144,9 +142,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B15 RID: 2837
-		// (get) Token: 0x06002A3C RID: 10812 RVA: 0x0006EF03 File Offset: 0x0006D103
-		// (set) Token: 0x06002A3D RID: 10813 RVA: 0x0006EF32 File Offset: 0x0006D132
+		// Token: 0x17000BD7 RID: 3031
+		// (get) Token: 0x06002D64 RID: 11620 RVA: 0x000761AB File Offset: 0x000743AB
+		// (set) Token: 0x06002D65 RID: 11621 RVA: 0x000761DA File Offset: 0x000743DA
 		public virtual float MaxSpeed
 		{
 			get
@@ -167,9 +165,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B16 RID: 2838
-		// (get) Token: 0x06002A3E RID: 10814 RVA: 0x0006EF40 File Offset: 0x0006D140
-		// (set) Token: 0x06002A3F RID: 10815 RVA: 0x0006EF6F File Offset: 0x0006D16F
+		// Token: 0x17000BD8 RID: 3032
+		// (get) Token: 0x06002D66 RID: 11622 RVA: 0x000761E8 File Offset: 0x000743E8
+		// (set) Token: 0x06002D67 RID: 11623 RVA: 0x00076217 File Offset: 0x00074417
 		public virtual float Acceleration
 		{
 			get
@@ -190,9 +188,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B17 RID: 2839
-		// (get) Token: 0x06002A40 RID: 10816 RVA: 0x0006EF7D File Offset: 0x0006D17D
-		// (set) Token: 0x06002A41 RID: 10817 RVA: 0x0006EFA4 File Offset: 0x0006D1A4
+		// Token: 0x17000BD9 RID: 3033
+		// (get) Token: 0x06002D68 RID: 11624 RVA: 0x00076225 File Offset: 0x00074425
+		// (set) Token: 0x06002D69 RID: 11625 RVA: 0x0007624C File Offset: 0x0007444C
 		[Nullable(2)]
 		public virtual string MaxSpeedCurve
 		{
@@ -217,9 +215,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B18 RID: 2840
-		// (get) Token: 0x06002A42 RID: 10818 RVA: 0x0006EFB2 File Offset: 0x0006D1B2
-		// (set) Token: 0x06002A43 RID: 10819 RVA: 0x0006EFD9 File Offset: 0x0006D1D9
+		// Token: 0x17000BDA RID: 3034
+		// (get) Token: 0x06002D6A RID: 11626 RVA: 0x0007625A File Offset: 0x0007445A
+		// (set) Token: 0x06002D6B RID: 11627 RVA: 0x00076281 File Offset: 0x00074481
 		[Nullable(2)]
 		public virtual string HitEffect
 		{
@@ -244,18 +242,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001C35 RID: 7221
+		// Token: 0x04001E3E RID: 7742
 		[Nullable(2)]
 		protected new ITrafficNavigationConfig FbInstance;
 
-		// Token: 0x04001C36 RID: 7222
+		// Token: 0x04001E3F RID: 7743
 		[Nullable(2)]
 		protected new ITrafficNavigationConfig_SetValue PocoInterface;
 
-		// Token: 0x04001C37 RID: 7223
+		// Token: 0x04001E40 RID: 7744
 		private VectorInfo _SizeCache;
 
-		// Token: 0x04001C38 RID: 7224
+		// Token: 0x04001E41 RID: 7745
 		private bool _SizeInited;
 	}
 }

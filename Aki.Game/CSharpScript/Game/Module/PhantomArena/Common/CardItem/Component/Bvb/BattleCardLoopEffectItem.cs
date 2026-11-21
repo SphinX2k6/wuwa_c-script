@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 {
-	// Token: 0x020051FE RID: 20990
+	// Token: 0x020041CE RID: 16846
 	public class BattleCardLoopEffectItem : UiPanelBase
 	{
-		// Token: 0x06035B2A RID: 219946 RVA: 0x00CB7249 File Offset: 0x00CB5449
+		// Token: 0x0602AA25 RID: 174629 RVA: 0x00C04885 File Offset: 0x00C02A85
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 			};
 		}
 
-		// Token: 0x06035B2B RID: 219947 RVA: 0x00CB726C File Offset: 0x00CB546C
+		// Token: 0x0602AA26 RID: 174630 RVA: 0x00C048A8 File Offset: 0x00C02AA8
 		[NullableContext(1)]
 		protected UniTask RefreshNiagara(string path, UUINiagara niagara)
 		{
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 			return <RefreshNiagara>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035B2C RID: 219948 RVA: 0x00CB72C0 File Offset: 0x00CB54C0
+		// Token: 0x0602AA27 RID: 174631 RVA: 0x00C048FC File Offset: 0x00C02AFC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			BattleCardLoopEffectItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035B2D RID: 219949 RVA: 0x00CB7304 File Offset: 0x00CB5504
+		// Token: 0x0602AA28 RID: 174632 RVA: 0x00C04940 File Offset: 0x00C02B40
 		private UniTask RefreshEffect(int configId)
 		{
 			BattleCardLoopEffectItem.<RefreshEffect>d__5 <RefreshEffect>d__;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 			return <RefreshEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035B2E RID: 219950 RVA: 0x00CB7348 File Offset: 0x00CB5548
+		// Token: 0x0602AA29 RID: 174633 RVA: 0x00C04984 File Offset: 0x00C02B84
 		public UniTask RefreshEffectById(int configId)
 		{
 			BattleCardLoopEffectItem.<RefreshEffectById>d__6 <RefreshEffectById>d__;
@@ -68,19 +68,19 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 			return <RefreshEffectById>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035B2F RID: 219951 RVA: 0x00CB7393 File Offset: 0x00CB5593
+		// Token: 0x0602AA2A RID: 174634 RVA: 0x00C049CF File Offset: 0x00C02BCF
 		public void SetCardConfigId(int cardConfigId)
 		{
 			this.CardConfigId = cardConfigId;
 		}
 
-		// Token: 0x0401C79A RID: 116634
+		// Token: 0x040171CF RID: 94671
 		protected int CardConfigId;
 
-		// Token: 0x0200B395 RID: 45973
+		// Token: 0x02009DCD RID: 40397
 		private static class EBattleCardLoopEffectItem
 		{
-			// Token: 0x040366E1 RID: 222945
+			// Token: 0x04031134 RID: 201012
 			public const int LoopNiagara = 0;
 		}
 	}

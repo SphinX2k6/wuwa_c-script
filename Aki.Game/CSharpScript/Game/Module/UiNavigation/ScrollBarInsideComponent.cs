@@ -3,17 +3,17 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020049C6 RID: 18886
+	// Token: 0x02003940 RID: 14656
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ScrollBarInsideComponent : HotKeyComponent
 	{
-		// Token: 0x060311D9 RID: 201177 RVA: 0x00B64F1D File Offset: 0x00B6311D
+		// Token: 0x06025D0F RID: 154895 RVA: 0x00A9FE6D File Offset: 0x00A9E06D
 		public ScrollBarInsideComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x060311DA RID: 201178 RVA: 0x00B64F28 File Offset: 0x00B63128
+		// Token: 0x06025D10 RID: 154896 RVA: 0x00A9FE78 File Offset: 0x00A9E078
 		protected override void OnInputAxis(string axisName, float value)
 		{
 			if (Math.Abs(value) <= 0.1f)
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			UiNavigationNewController.Instance.ScrollbarInsideComponentSetValue(base.GetBindButtonTag(), value);
 		}
 
-		// Token: 0x060311DB RID: 201179 RVA: 0x00B64F88 File Offset: 0x00B63188
+		// Token: 0x06025D11 RID: 154897 RVA: 0x00A9FED8 File Offset: 0x00A9E0D8
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{
 			string bindButtonTag = base.GetBindButtonTag();
@@ -48,10 +48,10 @@ namespace CSharpScript.Game.Module.UiNavigation
 			base.SetVisibleMode(HotKeyViewDefine.ELogicMode.ListenerActive, focusListenerInsideListenerByTag != null && focusListenerInsideListenerByTag.IsListenerActive(), false);
 		}
 
-		// Token: 0x0401A4C6 RID: 107718
+		// Token: 0x04014D38 RID: 85304
 		private const float THRESHOLD = 0.1f;
 
-		// Token: 0x0401A4C7 RID: 107719
+		// Token: 0x04014D39 RID: 85305
 		private float TempValue;
 	}
 }

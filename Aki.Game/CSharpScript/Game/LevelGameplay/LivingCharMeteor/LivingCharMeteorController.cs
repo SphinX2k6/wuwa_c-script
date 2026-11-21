@@ -10,27 +10,27 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LivingCharMeteor
 {
-	// Token: 0x02006AC7 RID: 27335
+	// Token: 0x02005C3F RID: 23615
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class LivingCharMeteorController : ControllerBase
 	{
-		// Token: 0x06043EB5 RID: 278197 RVA: 0x010A6D58 File Offset: 0x010A4F58
+		// Token: 0x06039FFE RID: 237566 RVA: 0x01050408 File Offset: 0x0104E608
 		protected override bool OnClear()
 		{
 			this.ClearAll();
 			return true;
 		}
 
-		// Token: 0x06043EB6 RID: 278198 RVA: 0x010A6D61 File Offset: 0x010A4F61
+		// Token: 0x06039FFF RID: 237567 RVA: 0x01050411 File Offset: 0x0104E611
 		protected override bool OnLeaveLevel()
 		{
 			this.ClearAll();
 			return true;
 		}
 
-		// Token: 0x06043EB7 RID: 278199 RVA: 0x010A6D6A File Offset: 0x010A4F6A
+		// Token: 0x0603A000 RID: 237568 RVA: 0x0105041A File Offset: 0x0104E61A
 		public void WakeUp()
 		{
 			if (this.IsAwake)
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.LevelGamePlay.LivingCharMeteor
 			this.StartTickTimer();
 		}
 
-		// Token: 0x06043EB8 RID: 278200 RVA: 0x010A6D88 File Offset: 0x010A4F88
+		// Token: 0x0603A001 RID: 237569 RVA: 0x01050438 File Offset: 0x0104E638
 		public void GetTargetActorsWithAutoWake(TArray<AActor> outActors)
 		{
 			this.WakeUp();
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.LevelGamePlay.LivingCharMeteor
 			this.GetTargetActors(outActors);
 		}
 
-		// Token: 0x06043EB9 RID: 278201 RVA: 0x010A6DA0 File Offset: 0x010A4FA0
+		// Token: 0x0603A002 RID: 237570 RVA: 0x01050450 File Offset: 0x0104E650
 		public void GetTargetActors(TArray<AActor> outActors)
 		{
 			outActors.Empty(true);
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.LevelGamePlay.LivingCharMeteor
 			tempTargetInfos.Clear();
 		}
 
-		// Token: 0x06043EBA RID: 278202 RVA: 0x010A6E6C File Offset: 0x010A506C
+		// Token: 0x0603A003 RID: 237571 RVA: 0x0105051C File Offset: 0x0104E71C
 		private bool CollectTargetInfos(List<LivingCharMeteorTargetInfo> targets, bool needLog)
 		{
 			targets.Clear();
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.LevelGamePlay.LivingCharMeteor
 			return true;
 		}
 
-		// Token: 0x06043EBB RID: 278203 RVA: 0x010A7048 File Offset: 0x010A5248
+		// Token: 0x0603A004 RID: 237572 RVA: 0x010506F8 File Offset: 0x0104E8F8
 		[NullableContext(2)]
 		private LivingCharMeteorTargetInfo GetTargetInfo(int entityId, int viewportSizeX, int viewportSizeY, double screenCenterX, double screenCenterY, bool needLog = true)
 		{
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.LevelGamePlay.LivingCharMeteor
 			};
 		}
 
-		// Token: 0x06043EBC RID: 278204 RVA: 0x010A7130 File Offset: 0x010A5330
+		// Token: 0x0603A005 RID: 237573 RVA: 0x010507E0 File Offset: 0x0104E9E0
 		[NullableContext(2)]
 		private Entity GetValidMeteorEntity(int entityId, bool needLog = true)
 		{
@@ -275,7 +275,7 @@ namespace CSharpScript.Game.LevelGamePlay.LivingCharMeteor
 			return entity;
 		}
 
-		// Token: 0x06043EBD RID: 278205 RVA: 0x010A72D0 File Offset: 0x010A54D0
+		// Token: 0x0603A006 RID: 237574 RVA: 0x01050980 File Offset: 0x0104EB80
 		private void RefreshSelectedTargetTags(List<LivingCharMeteorTargetInfo> targets)
 		{
 			HashSet<int> tempValidTargetEntityIds = this.TempValidTargetEntityIds;
@@ -307,7 +307,7 @@ namespace CSharpScript.Game.LevelGamePlay.LivingCharMeteor
 			tempValidTargetEntityIds.Clear();
 		}
 
-		// Token: 0x06043EBE RID: 278206 RVA: 0x010A7434 File Offset: 0x010A5634
+		// Token: 0x0603A007 RID: 237575 RVA: 0x01050AE4 File Offset: 0x0104ECE4
 		private void TryAddSelectedTargetTag(Entity entity)
 		{
 			LevelTagComponent component = entity.GetComponent<LevelTagComponent>();
@@ -318,7 +318,7 @@ namespace CSharpScript.Game.LevelGamePlay.LivingCharMeteor
 			this.SelectedEntityIds.Add(entity.Id);
 		}
 
-		// Token: 0x06043EBF RID: 278207 RVA: 0x010A7488 File Offset: 0x010A5688
+		// Token: 0x0603A008 RID: 237576 RVA: 0x01050B38 File Offset: 0x0104ED38
 		private void TryRemoveSelectedTargetTagById(int entityId)
 		{
 			Entity entity = EntitySystem.Instance.Get(entityId);
@@ -330,7 +330,7 @@ namespace CSharpScript.Game.LevelGamePlay.LivingCharMeteor
 			this.SelectedEntityIds.Remove(entityId);
 		}
 
-		// Token: 0x06043EC0 RID: 278208 RVA: 0x010A74E0 File Offset: 0x010A56E0
+		// Token: 0x0603A009 RID: 237577 RVA: 0x01050B90 File Offset: 0x0104ED90
 		private void ClearSelectedTargetTags()
 		{
 			foreach (int entityId in new List<int>(this.SelectedEntityIds))
@@ -340,7 +340,7 @@ namespace CSharpScript.Game.LevelGamePlay.LivingCharMeteor
 			this.SelectedEntityIds.Clear();
 		}
 
-		// Token: 0x06043EC1 RID: 278209 RVA: 0x010A7544 File Offset: 0x010A5744
+		// Token: 0x0603A00A RID: 237578 RVA: 0x01050BF4 File Offset: 0x0104EDF4
 		private void RemoveSelectedTargetTagsFromCandidates()
 		{
 			foreach (int entityId in this.CandidateEntityIds)
@@ -349,7 +349,7 @@ namespace CSharpScript.Game.LevelGamePlay.LivingCharMeteor
 			}
 		}
 
-		// Token: 0x06043EC2 RID: 278210 RVA: 0x010A7598 File Offset: 0x010A5798
+		// Token: 0x0603A00B RID: 237579 RVA: 0x01050C48 File Offset: 0x0104EE48
 		[return: Nullable(2)]
 		private LivingCharMeteorActorInfo GetActorInfo(Entity entity, bool needLog = true)
 		{
@@ -403,7 +403,7 @@ namespace CSharpScript.Game.LevelGamePlay.LivingCharMeteor
 			return livingCharMeteorActorInfo;
 		}
 
-		// Token: 0x06043EC3 RID: 278211 RVA: 0x010A76D8 File Offset: 0x010A58D8
+		// Token: 0x0603A00C RID: 237580 RVA: 0x01050D88 File Offset: 0x0104EF88
 		private bool CheckInScreen(FVectorDouble location, int viewportSizeX, int viewportSizeY)
 		{
 			if (!UGameplayStatics.D_ProjectWorldToScreen(Global.CharacterController, location, ref this.ScreenPositionRef, false))
@@ -414,7 +414,7 @@ namespace CSharpScript.Game.LevelGamePlay.LivingCharMeteor
 			return screenPositionRef.X >= 0f && screenPositionRef.X <= (float)viewportSizeX && screenPositionRef.Y >= 0f && screenPositionRef.Y <= (float)viewportSizeY;
 		}
 
-		// Token: 0x06043EC4 RID: 278212 RVA: 0x010A7738 File Offset: 0x010A5938
+		// Token: 0x0603A00D RID: 237581 RVA: 0x01050DE8 File Offset: 0x0104EFE8
 		private bool IsLivingCharMeteor(int entityId)
 		{
 			Entity entity = EntitySystem.Instance.Get(entityId);
@@ -427,7 +427,7 @@ namespace CSharpScript.Game.LevelGamePlay.LivingCharMeteor
 			return ((pbModelConfig != null) ? new EEntity?(pbModelConfig.EntityType) : null).GetValueOrDefault() == EEntity.LivingCharMeteor;
 		}
 
-		// Token: 0x06043EC5 RID: 278213 RVA: 0x010A7790 File Offset: 0x010A5990
+		// Token: 0x0603A00E RID: 237582 RVA: 0x01050E40 File Offset: 0x0104F040
 		private void AddEntityEvents()
 		{
 			if (!EventSystem.Instance.Has<CreatureDataComponent, EntityHandle>(EEventName.CreateEntity, new Action<CreatureDataComponent, EntityHandle>(this.OnCreateEntity)))
@@ -440,7 +440,7 @@ namespace CSharpScript.Game.LevelGamePlay.LivingCharMeteor
 			}
 		}
 
-		// Token: 0x06043EC6 RID: 278214 RVA: 0x010A7810 File Offset: 0x010A5A10
+		// Token: 0x0603A00F RID: 237583 RVA: 0x01050EC0 File Offset: 0x0104F0C0
 		private void RemoveEntityEvents()
 		{
 			if (EventSystem.Instance.Has<CreatureDataComponent, EntityHandle>(EEventName.CreateEntity, new Action<CreatureDataComponent, EntityHandle>(this.OnCreateEntity)))
@@ -453,7 +453,7 @@ namespace CSharpScript.Game.LevelGamePlay.LivingCharMeteor
 			}
 		}
 
-		// Token: 0x06043EC7 RID: 278215 RVA: 0x010A788F File Offset: 0x010A5A8F
+		// Token: 0x0603A010 RID: 237584 RVA: 0x01050F3F File Offset: 0x0104F13F
 		private void Sleep()
 		{
 			this.RemoveEntityEvents();
@@ -465,7 +465,7 @@ namespace CSharpScript.Game.LevelGamePlay.LivingCharMeteor
 			this.SleepTimerHandle = null;
 		}
 
-		// Token: 0x06043EC8 RID: 278216 RVA: 0x010A78C2 File Offset: 0x010A5AC2
+		// Token: 0x0603A011 RID: 237585 RVA: 0x01050F72 File Offset: 0x0104F172
 		private void RefreshSleepTimer()
 		{
 			this.RemoveSleepTimer();
@@ -475,7 +475,7 @@ namespace CSharpScript.Game.LevelGamePlay.LivingCharMeteor
 			}, 180000f, null, "LivingCharMeteorController.Sleep", true, 1f);
 		}
 
-		// Token: 0x06043EC9 RID: 278217 RVA: 0x010A78F8 File Offset: 0x010A5AF8
+		// Token: 0x0603A012 RID: 237586 RVA: 0x01050FA8 File Offset: 0x0104F1A8
 		private void RemoveSleepTimer()
 		{
 			TimerHandle sleepTimerHandle = this.SleepTimerHandle;
@@ -486,7 +486,7 @@ namespace CSharpScript.Game.LevelGamePlay.LivingCharMeteor
 			this.SleepTimerHandle = null;
 		}
 
-		// Token: 0x06043ECA RID: 278218 RVA: 0x010A792F File Offset: 0x010A5B2F
+		// Token: 0x0603A013 RID: 237587 RVA: 0x01050FDF File Offset: 0x0104F1DF
 		private void StartTickTimer()
 		{
 			if (this.TickTimerHandle != null && TimerSystem.GameplayTimeInstance.Has(this.TickTimerHandle))
@@ -496,7 +496,7 @@ namespace CSharpScript.Game.LevelGamePlay.LivingCharMeteor
 			this.TickTimerHandle = TimerSystem.GameplayTimeInstance.Next(new TTimerAction(this.OnTickTimer), null, "LivingCharMeteorController.Tick");
 		}
 
-		// Token: 0x06043ECB RID: 278219 RVA: 0x010A7970 File Offset: 0x010A5B70
+		// Token: 0x0603A014 RID: 237588 RVA: 0x01051020 File Offset: 0x0104F220
 		private void RemoveTickTimer()
 		{
 			TimerHandle tickTimerHandle = this.TickTimerHandle;
@@ -507,7 +507,7 @@ namespace CSharpScript.Game.LevelGamePlay.LivingCharMeteor
 			this.TickTimerHandle = null;
 		}
 
-		// Token: 0x06043ECC RID: 278220 RVA: 0x010A79A8 File Offset: 0x010A5BA8
+		// Token: 0x0603A015 RID: 237589 RVA: 0x01051058 File Offset: 0x0104F258
 		private void TickSelectedTargetTags()
 		{
 			List<LivingCharMeteorTargetInfo> tempTargetInfos = this.TempTargetInfos;
@@ -518,14 +518,14 @@ namespace CSharpScript.Game.LevelGamePlay.LivingCharMeteor
 			tempTargetInfos.Clear();
 		}
 
-		// Token: 0x06043ECD RID: 278221 RVA: 0x010A79D3 File Offset: 0x010A5BD3
+		// Token: 0x0603A016 RID: 237590 RVA: 0x01051083 File Offset: 0x0104F283
 		private void ClearAll()
 		{
 			this.RemoveSleepTimer();
 			this.Sleep();
 		}
 
-		// Token: 0x06043ECE RID: 278222 RVA: 0x010A79E1 File Offset: 0x010A5BE1
+		// Token: 0x0603A017 RID: 237591 RVA: 0x01051091 File Offset: 0x0104F291
 		private void OnCreateEntity(CreatureDataComponent creatureData, EntityHandle handle)
 		{
 			IBlueprintItem pbModelConfig = creatureData.GetPbModelConfig();
@@ -536,14 +536,14 @@ namespace CSharpScript.Game.LevelGamePlay.LivingCharMeteor
 			this.CandidateEntityIds.Add(handle.Id);
 		}
 
-		// Token: 0x06043ECF RID: 278223 RVA: 0x010A7A14 File Offset: 0x010A5C14
+		// Token: 0x0603A018 RID: 237592 RVA: 0x010510C4 File Offset: 0x0104F2C4
 		private void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle handle)
 		{
 			this.TryRemoveSelectedTargetTagById(handle.Id);
 			this.CandidateEntityIds.Remove(handle.Id);
 		}
 
-		// Token: 0x06043ED0 RID: 278224 RVA: 0x010A7A34 File Offset: 0x010A5C34
+		// Token: 0x0603A019 RID: 237593 RVA: 0x010510E4 File Offset: 0x0104F2E4
 		private void OnTickTimer(float _)
 		{
 			this.TickTimerHandle = null;
@@ -555,8 +555,8 @@ namespace CSharpScript.Game.LevelGamePlay.LivingCharMeteor
 			this.StartTickTimer();
 		}
 
-		// Token: 0x17009977 RID: 39287
-		// (get) Token: 0x06043ED1 RID: 278225 RVA: 0x010A7A52 File Offset: 0x010A5C52
+		// Token: 0x17006E7A RID: 28282
+		// (get) Token: 0x0603A01A RID: 237594 RVA: 0x01051102 File Offset: 0x0104F302
 		public static LivingCharMeteorController Instance
 		{
 			get
@@ -565,7 +565,7 @@ namespace CSharpScript.Game.LevelGamePlay.LivingCharMeteor
 			}
 		}
 
-		// Token: 0x06043ED2 RID: 278226 RVA: 0x010A7A59 File Offset: 0x010A5C59
+		// Token: 0x0603A01B RID: 237595 RVA: 0x01051109 File Offset: 0x0104F309
 		public static LivingCharMeteorController GetOrCreateInstance()
 		{
 			if (LivingCharMeteorController._Instance == null)
@@ -575,7 +575,7 @@ namespace CSharpScript.Game.LevelGamePlay.LivingCharMeteor
 			return LivingCharMeteorController._Instance;
 		}
 
-		// Token: 0x06043ED3 RID: 278227 RVA: 0x010A7A6D File Offset: 0x010A5C6D
+		// Token: 0x0603A01C RID: 237596 RVA: 0x0105111D File Offset: 0x0104F31D
 		public static bool CreateInstance()
 		{
 			if (LivingCharMeteorController._Instance != null)
@@ -586,68 +586,68 @@ namespace CSharpScript.Game.LevelGamePlay.LivingCharMeteor
 			return true;
 		}
 
-		// Token: 0x06043ED4 RID: 278228 RVA: 0x010A7A83 File Offset: 0x010A5C83
+		// Token: 0x0603A01D RID: 237597 RVA: 0x01051133 File Offset: 0x0104F333
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06043ED5 RID: 278229 RVA: 0x010A7A85 File Offset: 0x010A5C85
+		// Token: 0x0603A01E RID: 237598 RVA: 0x01051135 File Offset: 0x0104F335
 		public static void ResetStaticDefaultValue()
 		{
 			LivingCharMeteorController._Instance = null;
 		}
 
-		// Token: 0x06043ED6 RID: 278230 RVA: 0x010A7A8D File Offset: 0x010A5C8D
+		// Token: 0x0603A01F RID: 237599 RVA: 0x0105113D File Offset: 0x0104F33D
 		static LivingCharMeteorController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LivingCharMeteorController.CreateStaticDefaultValue), new Action(LivingCharMeteorController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040237DA RID: 145370
+		// Token: 0x0401EA7A RID: 125562
 		private bool IsAwake;
 
-		// Token: 0x040237DB RID: 145371
+		// Token: 0x0401EA7B RID: 125563
 		[Nullable(2)]
 		private TimerHandle SleepTimerHandle;
 
-		// Token: 0x040237DC RID: 145372
+		// Token: 0x0401EA7C RID: 125564
 		[Nullable(2)]
 		private TimerHandle TickTimerHandle;
 
-		// Token: 0x040237DD RID: 145373
+		// Token: 0x0401EA7D RID: 125565
 		private readonly HashSet<int> CandidateEntityIds = new HashSet<int>();
 
-		// Token: 0x040237DE RID: 145374
+		// Token: 0x0401EA7E RID: 125566
 		private FVector2D ScreenPositionRef = new FVector2D();
 
-		// Token: 0x040237DF RID: 145375
+		// Token: 0x0401EA7F RID: 125567
 		private int ViewportWidthRef;
 
-		// Token: 0x040237E0 RID: 145376
+		// Token: 0x0401EA80 RID: 125568
 		private int ViewportHeightRef;
 
-		// Token: 0x040237E1 RID: 145377
+		// Token: 0x0401EA81 RID: 125569
 		private readonly global::Vector CameraLocation = global::Vector.Create();
 
-		// Token: 0x040237E2 RID: 145378
+		// Token: 0x0401EA82 RID: 125570
 		private readonly global::Vector TempLocation = global::Vector.Create();
 
-		// Token: 0x040237E3 RID: 145379
+		// Token: 0x0401EA83 RID: 125571
 		private readonly List<LivingCharMeteorTargetInfo> TempTargetInfos = new List<LivingCharMeteorTargetInfo>();
 
-		// Token: 0x040237E4 RID: 145380
+		// Token: 0x0401EA84 RID: 125572
 		private readonly HashSet<int> TempValidTargetEntityIds = new HashSet<int>();
 
-		// Token: 0x040237E5 RID: 145381
+		// Token: 0x0401EA85 RID: 125573
 		private readonly HashSet<int> SelectedEntityIds = new HashSet<int>();
 
-		// Token: 0x040237E6 RID: 145382
+		// Token: 0x0401EA86 RID: 125574
 		private readonly int AttackTargetTagId = GameplayTagDefine.EGameplayTagId["关卡.Common.属性.可成为GA的目标"];
 
-		// Token: 0x040237E7 RID: 145383
+		// Token: 0x0401EA87 RID: 125575
 		private readonly int SelectedTargetTagId = GameplayTagDefine.EGameplayTagId["关卡.Common.属性.已成为GA的目标"];
 
-		// Token: 0x040237E8 RID: 145384
+		// Token: 0x0401EA88 RID: 125576
 		[Nullable(2)]
 		private static LivingCharMeteorController _Instance;
 	}

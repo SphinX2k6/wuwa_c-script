@@ -6,16 +6,16 @@ using CSharpScript.Game.Module.RecallQuest.Model;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D8A RID: 23946
+	// Token: 0x02004D6C RID: 19820
 	public class RecallInstancePendingProcessControllerRuleConfig : PendingProcessControllerRuleConfigBase
 	{
-		// Token: 0x0603CC61 RID: 248929 RVA: 0x00E9738D File Offset: 0x00E9558D
+		// Token: 0x06031BBD RID: 203709 RVA: 0x00DE7BD5 File Offset: 0x00DE5DD5
 		public override bool IsActive()
 		{
 			return RecallQuestModel.Instance.IsInRecallInstance();
 		}
 
-		// Token: 0x0603CC62 RID: 248930 RVA: 0x00E9739C File Offset: 0x00E9559C
+		// Token: 0x06031BBE RID: 203710 RVA: 0x00DE7BE4 File Offset: 0x00DE5DE4
 		[NullableContext(1)]
 		public override bool PendingProgressExCheck(TPendingProcess process)
 		{

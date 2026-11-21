@@ -11,18 +11,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 {
-	// Token: 0x0200711C RID: 28956
+	// Token: 0x0200634A RID: 25418
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InteractionTargetSelector : IClear
 	{
-		// Token: 0x06046B36 RID: 289590 RVA: 0x011CE544 File Offset: 0x011CC744
+		// Token: 0x0603D981 RID: 252289 RVA: 0x011D7194 File Offset: 0x011D5394
 		public bool ClearObject()
 		{
 			return true;
 		}
 
-		// Token: 0x06046B37 RID: 289591 RVA: 0x011CE548 File Offset: 0x011CC748
+		// Token: 0x0603D982 RID: 252290 RVA: 0x011D7198 File Offset: 0x011D5398
 		public void InitForMotorcycle(MotorcycleExploreComponent exploreComponent)
 		{
 			this.ExploreComponent = exploreComponent;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			this.LineTrace.AddObjectTypeQuery(KuroObjectTypeQuery.WorldStatic);
 		}
 
-		// Token: 0x06046B38 RID: 289592 RVA: 0x011CE628 File Offset: 0x011CC828
+		// Token: 0x0603D983 RID: 252291 RVA: 0x011D7278 File Offset: 0x011D5478
 		[NullableContext(2)]
 		public AActor DetectEntityByRestrictTags(float distance, EEntityTypeQuery entityType, FGameplayTagContainer restrictTagContainer = null, bool checkMultiplayerLimit = true)
 		{
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return result;
 		}
 
-		// Token: 0x06046B39 RID: 289593 RVA: 0x011CE800 File Offset: 0x011CCA00
+		// Token: 0x0603D984 RID: 252292 RVA: 0x011D7450 File Offset: 0x011D5650
 		[NullableContext(2)]
 		public void DetectBestTargetForMotorcycle(HashSet<EHookInteractType> enabledHookTypes = null)
 		{
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			}
 		}
 
-		// Token: 0x06046B3A RID: 289594 RVA: 0x011CEA40 File Offset: 0x011CCC40
+		// Token: 0x0603D985 RID: 252293 RVA: 0x011D7690 File Offset: 0x011D5890
 		public void ClearDetectionData()
 		{
 			this.MinScreenCenterDistSquared = double.MaxValue;
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			this.DetectedTarget = null;
 		}
 
-		// Token: 0x06046B3B RID: 289595 RVA: 0x011CEA70 File Offset: 0x011CCC70
+		// Token: 0x0603D986 RID: 252294 RVA: 0x011D76C0 File Offset: 0x011D58C0
 		private bool PreCheckInScreen(FVectorDouble location)
 		{
 			if (!UGameplayStatics.D_ProjectWorldToScreen(Global.PlayerController, location, ref this.ScreenPositionRef, false))
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return true;
 		}
 
-		// Token: 0x06046B3C RID: 289596 RVA: 0x011CEB24 File Offset: 0x011CCD24
+		// Token: 0x0603D987 RID: 252295 RVA: 0x011D7774 File Offset: 0x011D5974
 		private bool CheckValid(GrapplingHookPointComponent point)
 		{
 			if (!point.Valid)
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return (component2 == null || !component2.GetRemoveState()) && !point.IsInCd;
 		}
 
-		// Token: 0x06046B3D RID: 289597 RVA: 0x011CEB9C File Offset: 0x011CCD9C
+		// Token: 0x0603D988 RID: 252296 RVA: 0x011D77EC File Offset: 0x011D59EC
 		private bool CheckMultiPlayerHost(GrapplingHookPointComponent point)
 		{
 			if (point.EntityType.GetValueOrDefault() != EEntity.HookPullSoundBox)
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return id.GetValueOrDefault() == worldOwner & id != null;
 		}
 
-		// Token: 0x06046B3E RID: 289598 RVA: 0x011CEBF4 File Offset: 0x011CCDF4
+		// Token: 0x0603D989 RID: 252297 RVA: 0x011D7844 File Offset: 0x011D5A44
 		private bool CheckInteracting(GrapplingHookPointComponent point)
 		{
 			GrapplingHookPointComponent interactingTarget = this.ExploreComponent.InteractingTarget;
@@ -210,13 +210,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return pullingTarget == null || pullingTarget.Entity.Id != point.Entity.Id;
 		}
 
-		// Token: 0x06046B3F RID: 289599 RVA: 0x011CEC59 File Offset: 0x011CCE59
+		// Token: 0x0603D98A RID: 252298 RVA: 0x011D78A9 File Offset: 0x011D5AA9
 		private bool CheckCondition(GrapplingHookPointComponent point)
 		{
 			return point.CheckCondition();
 		}
 
-		// Token: 0x06046B40 RID: 289600 RVA: 0x011CEC64 File Offset: 0x011CCE64
+		// Token: 0x0603D98B RID: 252299 RVA: 0x011D78B4 File Offset: 0x011D5AB4
 		private bool CheckTargetRoleMatch(GrapplingHookPointComponent point)
 		{
 			IList<IMatchRoleType> matchRoleOption = point.MatchRoleOption;
@@ -227,7 +227,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return SceneTeamController.Instance.IsMatchRoleOption(matchRoleOption);
 		}
 
-		// Token: 0x06046B41 RID: 289601 RVA: 0x011CECA0 File Offset: 0x011CCEA0
+		// Token: 0x0603D98C RID: 252300 RVA: 0x011D78F0 File Offset: 0x011D5AF0
 		private bool CheckMaxDistance(GrapplingHookPointComponent point)
 		{
 			if (point.UseRangeComponent)
@@ -240,7 +240,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return num < (double)num2;
 		}
 
-		// Token: 0x06046B42 RID: 289602 RVA: 0x011CED00 File Offset: 0x011CCF00
+		// Token: 0x0603D98D RID: 252301 RVA: 0x011D7950 File Offset: 0x011D5B50
 		private bool CheckMinDistance(GrapplingHookPointComponent point)
 		{
 			double num = Vector.DistSquared(point.TriggerLocation, this.TmpSelfLocation);
@@ -248,13 +248,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return num2 <= 0f || num > (double)num2;
 		}
 
-		// Token: 0x06046B43 RID: 289603 RVA: 0x011CED54 File Offset: 0x011CCF54
+		// Token: 0x0603D98E RID: 252302 RVA: 0x011D79A4 File Offset: 0x011D5BA4
 		private bool CheckVisibility(GrapplingHookPointComponent point)
 		{
 			return point.WasRecentlyRenderOnScreen();
 		}
 
-		// Token: 0x06046B44 RID: 289604 RVA: 0x011CED5C File Offset: 0x011CCF5C
+		// Token: 0x0603D98F RID: 252303 RVA: 0x011D79AC File Offset: 0x011D5BAC
 		private bool CheckVehicleDirection(GrapplingHookPointComponent point)
 		{
 			Entity motorInteractConstraintTarget = point.MotorInteractConstraintTarget;
@@ -282,7 +282,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return true;
 		}
 
-		// Token: 0x06046B45 RID: 289605 RVA: 0x011CEE38 File Offset: 0x011CD038
+		// Token: 0x0603D990 RID: 252304 RVA: 0x011D7A88 File Offset: 0x011D5C88
 		private bool CheckBlockMidway(GrapplingHookPointComponent point)
 		{
 			if (this.LineTrace == null || this.ShapeTrace == null)
@@ -307,7 +307,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return TraceElementCommon.Instance.ShapeTrace(this.CapsuleComponent, this.ShapeTrace, "RoleSceneInteract", "FindBestTargetForMotorcycle");
 		}
 
-		// Token: 0x06046B46 RID: 289606 RVA: 0x011CEF34 File Offset: 0x011CD134
+		// Token: 0x0603D991 RID: 252305 RVA: 0x011D7B84 File Offset: 0x011D5D84
 		private bool CheckBlockMidwayByLocation(FVectorDouble location, AActor actorToIgnore)
 		{
 			UTraceLineElement lineTrace = this.LineTrace;
@@ -349,90 +349,90 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			return flag2 && this.LineTrace.HitResult.bBlockingHit;
 		}
 
-		// Token: 0x040251D4 RID: 152020
+		// Token: 0x04020AB4 RID: 133812
 		private const int SPHERE_TRACE_RADIUS = 5;
 
-		// Token: 0x040251D5 RID: 152021
+		// Token: 0x04020AB5 RID: 133813
 		private const int NORMAL_HOOK_MIN_RADIUS = 500;
 
-		// Token: 0x040251D6 RID: 152022
+		// Token: 0x04020AB6 RID: 133814
 		private const int NORMAL_HOOK_MIN_RADIUS_SQUARED = 250000;
 
-		// Token: 0x040251D7 RID: 152023
+		// Token: 0x04020AB7 RID: 133815
 		private const string TRACE_TAG_NAME = "RoleSceneInteract";
 
-		// Token: 0x040251D8 RID: 152024
+		// Token: 0x04020AB8 RID: 133816
 		private const string PROFILE_KEY = "FindBestTargetForMotorcycle";
 
-		// Token: 0x040251D9 RID: 152025
+		// Token: 0x04020AB9 RID: 133817
 		private const string DEBUG_KEY = "MotorcycleExploreComponent";
 
-		// Token: 0x040251DA RID: 152026
+		// Token: 0x04020ABA RID: 133818
 		private readonly Vector TmpSelfLocation = Vector.Create();
 
-		// Token: 0x040251DB RID: 152027
+		// Token: 0x04020ABB RID: 133819
 		private readonly Vector TmpVehicleLocation = Vector.Create();
 
-		// Token: 0x040251DC RID: 152028
+		// Token: 0x04020ABC RID: 133820
 		private readonly Vector TmpVehicleForward = Vector.Create();
 
-		// Token: 0x040251DD RID: 152029
+		// Token: 0x04020ABD RID: 133821
 		private readonly Vector TmpVehicleToPoint = Vector.Create();
 
-		// Token: 0x040251DE RID: 152030
+		// Token: 0x04020ABE RID: 133822
 		private readonly Vector TmpGravityComp = Vector.Create();
 
-		// Token: 0x040251DF RID: 152031
+		// Token: 0x04020ABF RID: 133823
 		private FVector2D ScreenPositionRef = new FVector2D();
 
-		// Token: 0x040251E0 RID: 152032
+		// Token: 0x04020AC0 RID: 133824
 		public bool TraceDebugEnabled;
 
-		// Token: 0x040251E1 RID: 152033
+		// Token: 0x04020AC1 RID: 133825
 		[Nullable(2)]
 		private BaseExploreComponent ExploreComponent;
 
-		// Token: 0x040251E2 RID: 152034
+		// Token: 0x04020AC2 RID: 133826
 		[Nullable(2)]
 		private UTraceSphereElement ShapeTrace;
 
-		// Token: 0x040251E3 RID: 152035
+		// Token: 0x04020AC3 RID: 133827
 		[Nullable(2)]
 		private UTraceLineElement LineTrace;
 
-		// Token: 0x040251E4 RID: 152036
+		// Token: 0x04020AC4 RID: 133828
 		[Nullable(2)]
 		private BaseActorComponent ActorComponent;
 
-		// Token: 0x040251E5 RID: 152037
+		// Token: 0x04020AC5 RID: 133829
 		[Nullable(2)]
 		private UCapsuleComponent CapsuleComponent;
 
-		// Token: 0x040251E6 RID: 152038
+		// Token: 0x04020AC6 RID: 133830
 		private float ViewportSizeX;
 
-		// Token: 0x040251E7 RID: 152039
+		// Token: 0x04020AC7 RID: 133831
 		private float ViewportSizeY;
 
-		// Token: 0x040251E8 RID: 152040
+		// Token: 0x04020AC8 RID: 133832
 		private float ScreenCenterX;
 
-		// Token: 0x040251E9 RID: 152041
+		// Token: 0x04020AC9 RID: 133833
 		private float ScreenCenterY;
 
-		// Token: 0x040251EA RID: 152042
+		// Token: 0x04020ACA RID: 133834
 		private bool TraceStartPositionFlag = true;
 
-		// Token: 0x040251EB RID: 152043
+		// Token: 0x04020ACB RID: 133835
 		private double MinScreenCenterDistSquared = double.MaxValue;
 
-		// Token: 0x040251EC RID: 152044
+		// Token: 0x04020ACC RID: 133836
 		private double ScreenCenterDistSquared = double.MaxValue;
 
-		// Token: 0x040251ED RID: 152045
+		// Token: 0x04020ACD RID: 133837
 		public bool DetectedTargetLegal;
 
-		// Token: 0x040251EE RID: 152046
+		// Token: 0x04020ACE RID: 133838
 		[Nullable(2)]
 		public GrapplingHookPointComponent DetectedTarget;
 	}

@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x020026C4 RID: 9924
+// Token: 0x02001BAF RID: 7087
 internal interface IDangoDungeonCommandStats
 {
-	// Token: 0x17001A56 RID: 6742
-	// (get) Token: 0x060145BA RID: 83386
-	// (set) Token: 0x060145BB RID: 83387
+	// Token: 0x17001A8E RID: 6798
+	// (get) Token: 0x06011A9C RID: 72348
+	// (set) Token: 0x06011A9D RID: 72349
 	double TotalTime { get; set; }
 
-	// Token: 0x17001A57 RID: 6743
-	// (get) Token: 0x060145BC RID: 83388
-	// (set) Token: 0x060145BD RID: 83389
+	// Token: 0x17001A8F RID: 6799
+	// (get) Token: 0x06011A9E RID: 72350
+	// (set) Token: 0x06011A9F RID: 72351
 	int Count { get; set; }
 }

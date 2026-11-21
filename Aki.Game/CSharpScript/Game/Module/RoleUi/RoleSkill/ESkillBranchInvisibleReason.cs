@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.RoleUi.RoleSkill
 {
-	// Token: 0x02004CF7 RID: 19703
+	// Token: 0x02003CA9 RID: 15529
 	public enum ESkillBranchInvisibleReason
 	{
-		// Token: 0x0401B187 RID: 110983
+		// Token: 0x04015B0C RID: 88844
 		NotHaveSkillBranch,
-		// Token: 0x0401B188 RID: 110984
+		// Token: 0x04015B0D RID: 88845
 		SkillInputPanel
 	}
 }

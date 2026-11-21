@@ -1,23 +1,23 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020024AF RID: 9391
+// Token: 0x02001996 RID: 6550
 [NullableContext(1)]
 public interface IMainPhantomItemData
 {
-	// Token: 0x170018A9 RID: 6313
-	// (get) Token: 0x06012DA8 RID: 77224
-	// (set) Token: 0x06012DA9 RID: 77225
+	// Token: 0x170018E3 RID: 6371
+	// (get) Token: 0x06010268 RID: 66152
+	// (set) Token: 0x06010269 RID: 66153
 	MainPhantomRecommendInfo Info { get; set; }
 
-	// Token: 0x170018AA RID: 6314
-	// (get) Token: 0x06012DAA RID: 77226
-	// (set) Token: 0x06012DAB RID: 77227
+	// Token: 0x170018E4 RID: 6372
+	// (get) Token: 0x0601026A RID: 66154
+	// (set) Token: 0x0601026B RID: 66155
 	[Nullable(2)]
 	VisionMainSelectPhantomData CurrentSelectMainPhantom { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-	// Token: 0x170018AB RID: 6315
-	// (get) Token: 0x06012DAC RID: 77228
-	// (set) Token: 0x06012DAD RID: 77229
+	// Token: 0x170018E5 RID: 6373
+	// (get) Token: 0x0601026C RID: 66156
+	// (set) Token: 0x0601026D RID: 66157
 	Action<IMainPhantomItemData> OnMainPhantomCallBack { get; set; }
 }

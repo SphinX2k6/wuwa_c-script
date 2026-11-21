@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001EEC RID: 7916
+	// Token: 0x020005F9 RID: 1529
 	public sealed class FOnStreamedAllSkeletalCompMips : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601E155 RID: 123221 RVA: 0x002CAC2C File Offset: 0x002C8E2C
+		// Token: 0x060087A0 RID: 34720 RVA: 0x000CBC30 File Offset: 0x000C9E30
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnStreamedAllSkeletalCompMips.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601E156 RID: 123222 RVA: 0x002CAC38 File Offset: 0x002C8E38
+		// Token: 0x060087A1 RID: 34721 RVA: 0x000CBC3C File Offset: 0x000C9E3C
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnStreamedAllSkeletalCompMips._FunctionPtr == IntPtr.Zero)
@@ -25,31 +25,30 @@ namespace UnrealEngine
 			return FOnStreamedAllSkeletalCompMips._FunctionPtr;
 		}
 
-		// Token: 0x0601E157 RID: 123223 RVA: 0x002CAC5B File Offset: 0x002C8E5B
+		// Token: 0x060087A2 RID: 34722 RVA: 0x000CBC5F File Offset: 0x000C9E5F
 		public FOnStreamedAllSkeletalCompMips()
 		{
 		}
 
-		// Token: 0x0601E158 RID: 123224 RVA: 0x002CAC63 File Offset: 0x002C8E63
+		// Token: 0x060087A3 RID: 34723 RVA: 0x000CBC67 File Offset: 0x000C9E67
 		[NullableContext(2)]
 		public FOnStreamedAllSkeletalCompMips(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601E159 RID: 123225 RVA: 0x002CAC6D File Offset: 0x002C8E6D
+		// Token: 0x060087A4 RID: 34724 RVA: 0x000CBC71 File Offset: 0x000C9E71
 		public FOnStreamedAllSkeletalCompMips(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601E15A RID: 123226 RVA: 0x002CAC78 File Offset: 0x002C8E78
+		// Token: 0x060087A5 RID: 34725 RVA: 0x000CBC7C File Offset: 0x000C9E7C
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<USkeletalMesh>) ?? ((Action<USkeletalMesh>)Delegate.CreateDelegate(typeof(Action<USkeletalMesh>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601E15B RID: 123227 RVA: 0x002CACAA File Offset: 0x002C8EAA
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x060087A6 RID: 34726 RVA: 0x000CBCAE File Offset: 0x000C9EAE
 		public void Bind([Nullable(new byte[]
 		{
 			1,
@@ -68,10 +67,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FOnStreamedAllSkeletalCompMips.RegisterId);
 		}
 
-		// Token: 0x0601E15C RID: 123228 RVA: 0x002CACE4 File Offset: 0x002C8EE4
+		// Token: 0x060087A7 RID: 34727 RVA: 0x000CBCE8 File Offset: 0x000C9EE8
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(USkeletalMesh SkeletalMesh)
 		{
 			FOnStreamedAllSkeletalCompMips.__FOnStreamedAllSkeletalCompMips_DelegateParams* ptr = stackalloc FOnStreamedAllSkeletalCompMips.__FOnStreamedAllSkeletalCompMips_DelegateParams[(UIntPtr)23] + 15L / (long)sizeof(FOnStreamedAllSkeletalCompMips.__FOnStreamedAllSkeletalCompMips_DelegateParams) & -16L;
@@ -80,10 +78,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x0601E15D RID: 123229 RVA: 0x002CAD30 File Offset: 0x002C8F30
+		// Token: 0x060087A8 RID: 34728 RVA: 0x000CBD34 File Offset: 0x000C9F34
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<USkeletalMesh> action = target as Action<USkeletalMesh>;
@@ -95,31 +92,31 @@ namespace UnrealEngine
 			action(orCreateUObjectByNativePointer);
 		}
 
-		// Token: 0x0401041E RID: 66590
+		// Token: 0x04003AF6 RID: 15094
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0401041F RID: 66591
+		// Token: 0x04003AF7 RID: 15095
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroUtility.OnStreamedAllSkeletalCompMips__DelegateSignature";
 
-		// Token: 0x04010420 RID: 66592
+		// Token: 0x04003AF8 RID: 15096
 		private static int RegisterId;
 
-		// Token: 0x020033C3 RID: 13251
+		// Token: 0x02000E10 RID: 3600
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
-		protected ref struct __FOnStreamedAllSkeletalCompMips_DelegateParams
+		private ref struct __FOnStreamedAllSkeletalCompMips_DelegateParams
 		{
-			// Token: 0x04017378 RID: 95096
+			// Token: 0x040061A5 RID: 24997
 			[FieldOffset(0)]
 			public IntPtr SkeletalMesh;
 		}
 
-		// Token: 0x020033C4 RID: 13252
+		// Token: 0x02000E11 RID: 3601
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017379 RID: 95097
+			// Token: 0x040061A6 RID: 24998
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

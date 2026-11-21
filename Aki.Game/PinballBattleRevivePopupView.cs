@@ -8,17 +8,17 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001D11 RID: 7441
+// Token: 0x020011D3 RID: 4563
 [NullableContext(1)]
 [Nullable(0)]
 public class PinballBattleRevivePopupView : UiViewBase
 {
-	// Token: 0x0600E0F0 RID: 57584 RVA: 0x0034C005 File Offset: 0x0034A205
+	// Token: 0x0600B50D RID: 46349 RVA: 0x00357A35 File Offset: 0x00355C35
 	public PinballBattleRevivePopupView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600E0F1 RID: 57585 RVA: 0x0034C010 File Offset: 0x0034A210
+	// Token: 0x0600B50E RID: 46350 RVA: 0x00357A40 File Offset: 0x00355C40
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -47,7 +47,7 @@ public class PinballBattleRevivePopupView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600E0F2 RID: 57586 RVA: 0x0034C13C File Offset: 0x0034A33C
+	// Token: 0x0600B50F RID: 46351 RVA: 0x00357B6C File Offset: 0x00355D6C
 	protected override void OnStart()
 	{
 		this.Param = (this.OpenParam as IPinballBattleRevivePopupViewParam);
@@ -79,7 +79,7 @@ public class PinballBattleRevivePopupView : UiViewBase
 		text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 	}
 
-	// Token: 0x0600E0F3 RID: 57587 RVA: 0x0034C25C File Offset: 0x0034A45C
+	// Token: 0x0600B510 RID: 46352 RVA: 0x00357C8C File Offset: 0x00355E8C
 	protected override void OnBeforeShow()
 	{
 		IUiPopFrameInterface childPopView = this.ChildPopView;
@@ -95,13 +95,13 @@ public class PinballBattleRevivePopupView : UiViewBase
 		childPopView2.PopItem.SetMaskResponsibleState(false);
 	}
 
-	// Token: 0x0600E0F4 RID: 57588 RVA: 0x0034C286 File Offset: 0x0034A486
+	// Token: 0x0600B511 RID: 46353 RVA: 0x00357CB6 File Offset: 0x00355EB6
 	private PinballBattleReviveRoleHeadItem CreateRoleHeadItem()
 	{
 		return new PinballBattleReviveRoleHeadItem();
 	}
 
-	// Token: 0x0600E0F5 RID: 57589 RVA: 0x0034C28D File Offset: 0x0034A48D
+	// Token: 0x0600B512 RID: 46354 RVA: 0x00357CBD File Offset: 0x00355EBD
 	private void OnBtnLeftClick()
 	{
 		IPinballBattleRevivePopupViewParam param = this.Param;
@@ -116,7 +116,7 @@ public class PinballBattleRevivePopupView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600E0F6 RID: 57590 RVA: 0x0034C2B2 File Offset: 0x0034A4B2
+	// Token: 0x0600B513 RID: 46355 RVA: 0x00357CE2 File Offset: 0x00355EE2
 	private void OnBtnRightClick()
 	{
 		IPinballBattleRevivePopupViewParam param = this.Param;
@@ -131,7 +131,7 @@ public class PinballBattleRevivePopupView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x040067E8 RID: 26600
+	// Token: 0x040068C7 RID: 26823
 	[Nullable(new byte[]
 	{
 		2,
@@ -139,7 +139,7 @@ public class PinballBattleRevivePopupView : UiViewBase
 	})]
 	private GenericLayout<PinballBattleReviveRoleHeadItem, int> RoleHeadLayout;
 
-	// Token: 0x040067E9 RID: 26601
+	// Token: 0x040068C8 RID: 26824
 	[Nullable(2)]
 	private IPinballBattleRevivePopupViewParam Param;
 }

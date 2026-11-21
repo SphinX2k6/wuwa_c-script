@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x0200611C RID: 24860
+	// Token: 0x0200509A RID: 20634
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoverlikeDetailView : UiViewBase
 	{
-		// Token: 0x0603EDBD RID: 257469 RVA: 0x00F2EA9B File Offset: 0x00F2CC9B
+		// Token: 0x06033A7F RID: 211583 RVA: 0x00E758AF File Offset: 0x00E73AAF
 		public RoverlikeDetailView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603EDBE RID: 257470 RVA: 0x00F2EAB0 File Offset: 0x00F2CCB0
+		// Token: 0x06033A80 RID: 211584 RVA: 0x00E758C4 File Offset: 0x00E73AC4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603EDBF RID: 257471 RVA: 0x00F2EB1C File Offset: 0x00F2CD1C
+		// Token: 0x06033A81 RID: 211585 RVA: 0x00E75930 File Offset: 0x00E73B30
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoverlikeDetailView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -45,12 +45,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603EDC0 RID: 257472 RVA: 0x00F2EB5F File Offset: 0x00F2CD5F
+		// Token: 0x06033A82 RID: 211586 RVA: 0x00E75973 File Offset: 0x00E73B73
 		protected override void OnBeforeDestroy()
 		{
 		}
 
-		// Token: 0x0603EDC1 RID: 257473 RVA: 0x00F2EB64 File Offset: 0x00F2CD64
+		// Token: 0x06033A83 RID: 211587 RVA: 0x00E75978 File Offset: 0x00E73B78
 		private void InitTabComponent()
 		{
 			CommonTabComponentData<RoverlikeTabItem> data = new CommonTabComponentData<RoverlikeTabItem>(new Func<UUIItem, int?, RoverlikeTabItem>(this.ProxyCreate), new Action<int>(this.ToggleCallBack), new Func<int, CommonTabData>(this.GetCommonData));
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.TabViewComponent = new TabViewComponent<UiDynamicTab>(base.GetItem(1), EKeyMode.Default);
 		}
 
-		// Token: 0x0603EDC2 RID: 257474 RVA: 0x00F2EBDC File Offset: 0x00F2CDDC
+		// Token: 0x06033A84 RID: 211588 RVA: 0x00E759F0 File Offset: 0x00E73BF0
 		private UniTask RefreshTabListAsync()
 		{
 			RoverlikeDetailView.<RefreshTabListAsync>d__10 <RefreshTabListAsync>d__;
@@ -70,20 +70,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return <RefreshTabListAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603EDC3 RID: 257475 RVA: 0x00F2EC1F File Offset: 0x00F2CE1F
+		// Token: 0x06033A85 RID: 211589 RVA: 0x00E75A33 File Offset: 0x00E73C33
 		private RoverlikeTabItem ProxyCreate([Nullable(2)] UUIItem uiItem, int? index)
 		{
 			return new RoverlikeTabItem();
 		}
 
-		// Token: 0x0603EDC4 RID: 257476 RVA: 0x00F2EC28 File Offset: 0x00F2CE28
+		// Token: 0x06033A86 RID: 211590 RVA: 0x00E75A3C File Offset: 0x00E73C3C
 		private CommonTabData GetCommonData(int index)
 		{
 			UiDynamicTab uiDynamicTab = this.TabDataList[index];
 			return new CommonTabData(uiDynamicTab.Icon, new CommonTabTitleData(uiDynamicTab.TabName, Array.Empty<object>()), null);
 		}
 
-		// Token: 0x0603EDC5 RID: 257477 RVA: 0x00F2EC60 File Offset: 0x00F2CE60
+		// Token: 0x06033A87 RID: 211591 RVA: 0x00E75A74 File Offset: 0x00E73C74
 		private void ToggleCallBack(int index)
 		{
 			UiDynamicTab data = this.TabDataList[index];
@@ -93,13 +93,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.CurSelectTabView = new EUiTabViewName?(euiTabViewName);
 		}
 
-		// Token: 0x0603EDC6 RID: 257478 RVA: 0x00F2ECB8 File Offset: 0x00F2CEB8
+		// Token: 0x06033A88 RID: 211592 RVA: 0x00E75ACC File Offset: 0x00E73CCC
 		private void OnCloseClicked()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x04020D2A RID: 134442
+		// Token: 0x0401B657 RID: 112215
 		[Nullable(new byte[]
 		{
 			2,
@@ -107,23 +107,23 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		private TabComponentWithCaptionItem<RoverlikeTabItem> TabComponent;
 
-		// Token: 0x04020D2B RID: 134443
+		// Token: 0x0401B658 RID: 112216
 		[Nullable(2)]
 		private TabViewComponent<UiDynamicTab> TabViewComponent;
 
-		// Token: 0x04020D2C RID: 134444
+		// Token: 0x0401B659 RID: 112217
 		private List<UiDynamicTab> TabDataList = new List<UiDynamicTab>();
 
-		// Token: 0x04020D2D RID: 134445
+		// Token: 0x0401B65A RID: 112218
 		private EUiTabViewName? CurSelectTabView;
 
-		// Token: 0x0200C377 RID: 50039
+		// Token: 0x0200AD5F RID: 44383
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403AFD4 RID: 241620
+			// Token: 0x04035939 RID: 219449
 			CaptionItem,
-			// Token: 0x0403AFD5 RID: 241621
+			// Token: 0x0403593A RID: 219450
 			Content
 		}
 	}

@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 {
-	// Token: 0x02006393 RID: 25491
+	// Token: 0x02005311 RID: 21265
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class MultiMotorDefine
 	{
-		// Token: 0x04021668 RID: 136808
+		// Token: 0x0401BF97 RID: 114583
 		public static readonly Dictionary<int, string> MultiMotorRankSprite = new Dictionary<int, string>
 		{
 			{
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		};
 
-		// Token: 0x04021669 RID: 136809
+		// Token: 0x0401BF98 RID: 114584
 		public static readonly Dictionary<int, string> MultiMotorBattleRankSprite = new Dictionary<int, string>
 		{
 			{
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		};
 
-		// Token: 0x0402166A RID: 136810
+		// Token: 0x0401BF99 RID: 114585
 		public static readonly Dictionary<int, string> MultiMotorFinishItem1RankColor = new Dictionary<int, string>
 		{
 			{
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		};
 
-		// Token: 0x0402166B RID: 136811
+		// Token: 0x0401BF9A RID: 114586
 		public static readonly Dictionary<int, string> MultiMotorFinishItem2RankColor = new Dictionary<int, string>
 		{
 			{
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		};
 
-		// Token: 0x0402166C RID: 136812
+		// Token: 0x0401BF9B RID: 114587
 		public static readonly Dictionary<int, string> MultiMotorFinishItem3RankColor = new Dictionary<int, string>
 		{
 			{
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		};
 
-		// Token: 0x0402166D RID: 136813
+		// Token: 0x0401BF9C RID: 114588
 		public static readonly Dictionary<int, string> MultiMotorNameRankColor = new Dictionary<int, string>
 		{
 			{
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		};
 
-		// Token: 0x0402166E RID: 136814
+		// Token: 0x0401BF9D RID: 114589
 		public static readonly Dictionary<int, string> MultiMotorFinishNiagaraColor = new Dictionary<int, string>
 		{
 			{
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		};
 
-		// Token: 0x0402166F RID: 136815
+		// Token: 0x0401BF9E RID: 114590
 		public static readonly Dictionary<int, string> MultiMotorFinishNiagaraLineColor = new Dictionary<int, string>
 		{
 			{
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		};
 
-		// Token: 0x04021670 RID: 136816
+		// Token: 0x0401BF9F RID: 114591
 		public static readonly Dictionary<int, EMultiMotorBroadcastGroup> MultiMotorRankToBroadcastGroup = new Dictionary<int, EMultiMotorBroadcastGroup>
 		{
 			{
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		};
 
-		// Token: 0x04021671 RID: 136817
+		// Token: 0x0401BFA0 RID: 114592
 		public const string MultiMotorSelfNameColor = "#000000FF";
 	}
 }

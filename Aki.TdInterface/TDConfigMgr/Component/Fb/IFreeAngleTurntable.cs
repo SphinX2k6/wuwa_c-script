@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C75 RID: 3189
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D54 RID: 3412
 	public class IFreeAngleTurntable : ITurntableControlType
 	{
-		// Token: 0x06004913 RID: 18707 RVA: 0x000B76D7 File Offset: 0x000B58D7
+		// Token: 0x06004DB2 RID: 19890 RVA: 0x000C1EDB File Offset: 0x000C00DB
 		public static IFreeAngleTurntable Create(IFreeAngleTurntable? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170015E6 RID: 5606
-		// (get) Token: 0x06004914 RID: 18708 RVA: 0x000B76F6 File Offset: 0x000B58F6
+		// Token: 0x17001705 RID: 5893
+		// (get) Token: 0x06004DB3 RID: 19891 RVA: 0x000C1EFA File Offset: 0x000C00FA
 		public override EControllerType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015E7 RID: 5607
-		// (get) Token: 0x06004915 RID: 18709 RVA: 0x000B7703 File Offset: 0x000B5903
+		// Token: 0x17001706 RID: 5894
+		// (get) Token: 0x06004DB4 RID: 19892 RVA: 0x000C1F07 File Offset: 0x000C0107
 		public override int RotationSpeed
 		{
 			get
@@ -43,8 +40,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015E8 RID: 5608
-		// (get) Token: 0x06004916 RID: 18710 RVA: 0x000B7710 File Offset: 0x000B5910
+		// Token: 0x17001707 RID: 5895
+		// (get) Token: 0x06004DB5 RID: 19893 RVA: 0x000C1F14 File Offset: 0x000C0114
 		public virtual List<IFreeAngleItem> ItemConfig
 		{
 			get
@@ -64,8 +61,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015E9 RID: 5609
-		// (get) Token: 0x06004917 RID: 18711 RVA: 0x000B7779 File Offset: 0x000B5979
+		// Token: 0x17001708 RID: 5896
+		// (get) Token: 0x06004DB6 RID: 19894 RVA: 0x000C1F7D File Offset: 0x000C017D
 		public virtual int IntervalAngle
 		{
 			get
@@ -74,13 +71,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040029B0 RID: 10672
+		// Token: 0x04002C1D RID: 11293
 		private IFreeAngleTurntable Instance;
 
-		// Token: 0x040029B1 RID: 10673
+		// Token: 0x04002C1E RID: 11294
 		private List<IFreeAngleItem> _ItemConfigCache;
 
-		// Token: 0x040029B2 RID: 10674
+		// Token: 0x04002C1F RID: 11295
 		private bool _ItemConfigInited;
 	}
 }

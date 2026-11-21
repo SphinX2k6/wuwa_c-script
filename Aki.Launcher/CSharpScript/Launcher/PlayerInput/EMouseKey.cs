@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Launcher.PlayerInput
 {
-	// Token: 0x0200011B RID: 283
+	// Token: 0x0200011F RID: 287
 	public enum EMouseKey
 	{
-		// Token: 0x04000548 RID: 1352
+		// Token: 0x04000583 RID: 1411
 		LeftMouseButton
 	}
 }

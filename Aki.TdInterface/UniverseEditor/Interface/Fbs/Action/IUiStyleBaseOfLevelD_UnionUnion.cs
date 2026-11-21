@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020074AF RID: 29871
+	// Token: 0x02007CA5 RID: 31909
 	public class IUiStyleBaseOfLevelD_UnionUnion
 	{
-		// Token: 0x1700E2BB RID: 58043
-		// (get) Token: 0x060364E0 RID: 222432 RVA: 0x007617E1 File Offset: 0x0075F9E1
-		// (set) Token: 0x060364E1 RID: 222433 RVA: 0x007617E9 File Offset: 0x0075F9E9
+		// Token: 0x1700EEDF RID: 61151
+		// (get) Token: 0x060398E9 RID: 235753 RVA: 0x007C486D File Offset: 0x007C2A6D
+		// (set) Token: 0x060398EA RID: 235754 RVA: 0x007C4875 File Offset: 0x007C2A75
 		public IUiStyleBaseOfLevelD_Union Type { get; set; }
 
-		// Token: 0x1700E2BC RID: 58044
-		// (get) Token: 0x060364E2 RID: 222434 RVA: 0x007617F2 File Offset: 0x0075F9F2
-		// (set) Token: 0x060364E3 RID: 222435 RVA: 0x007617FA File Offset: 0x0075F9FA
+		// Token: 0x1700EEE0 RID: 61152
+		// (get) Token: 0x060398EB RID: 235755 RVA: 0x007C487E File Offset: 0x007C2A7E
+		// (set) Token: 0x060398EC RID: 235756 RVA: 0x007C4886 File Offset: 0x007C2A86
 		public object Value { get; set; }
 
-		// Token: 0x060364E4 RID: 222436 RVA: 0x00761803 File Offset: 0x0075FA03
+		// Token: 0x060398ED RID: 235757 RVA: 0x007C488F File Offset: 0x007C2A8F
 		public IUiStyleBaseOfLevelD_UnionUnion()
 		{
 			this.Type = IUiStyleBaseOfLevelD_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060364E5 RID: 222437 RVA: 0x00761819 File Offset: 0x0075FA19
+		// Token: 0x060398EE RID: 235758 RVA: 0x007C48A5 File Offset: 0x007C2AA5
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060364E6 RID: 222438 RVA: 0x0076182B File Offset: 0x0075FA2B
+		// Token: 0x060398EF RID: 235759 RVA: 0x007C48B7 File Offset: 0x007C2AB7
 		public IUiStyleBaseOfLevelDT AsIUiStyleBaseOfLevelD()
 		{
 			return this.As<IUiStyleBaseOfLevelDT>();
 		}
 
-		// Token: 0x060364E7 RID: 222439 RVA: 0x00761833 File Offset: 0x0075FA33
+		// Token: 0x060398F0 RID: 235760 RVA: 0x007C48BF File Offset: 0x007C2ABF
 		public static IUiStyleBaseOfLevelD_UnionUnion FromIUiStyleBaseOfLevelD(IUiStyleBaseOfLevelDT _iuistylebaseofleveld)
 		{
 			return new IUiStyleBaseOfLevelD_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060364E8 RID: 222440 RVA: 0x00761848 File Offset: 0x0075FA48
+		// Token: 0x060398F1 RID: 235761 RVA: 0x007C48D4 File Offset: 0x007C2AD4
 		public IUiStyleGiantSubtitleOfLevelDT AsIUiStyleGiantSubtitleOfLevelD()
 		{
 			return this.As<IUiStyleGiantSubtitleOfLevelDT>();
 		}
 
-		// Token: 0x060364E9 RID: 222441 RVA: 0x00761850 File Offset: 0x0075FA50
+		// Token: 0x060398F2 RID: 235762 RVA: 0x007C48DC File Offset: 0x007C2ADC
 		public static IUiStyleBaseOfLevelD_UnionUnion FromIUiStyleGiantSubtitleOfLevelD(IUiStyleGiantSubtitleOfLevelDT _iuistylegiantsubtitleofleveld)
 		{
 			return new IUiStyleBaseOfLevelD_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060364EA RID: 222442 RVA: 0x00761865 File Offset: 0x0075FA65
+		// Token: 0x060398F3 RID: 235763 RVA: 0x007C48F1 File Offset: 0x007C2AF1
 		public IUiStylePlayPianoOfLevelDT AsIUiStylePlayPianoOfLevelD()
 		{
 			return this.As<IUiStylePlayPianoOfLevelDT>();
 		}
 
-		// Token: 0x060364EB RID: 222443 RVA: 0x0076186D File Offset: 0x0075FA6D
+		// Token: 0x060398F4 RID: 235764 RVA: 0x007C48F9 File Offset: 0x007C2AF9
 		public static IUiStyleBaseOfLevelD_UnionUnion FromIUiStylePlayPianoOfLevelD(IUiStylePlayPianoOfLevelDT _iuistyleplaypianoofleveld)
 		{
 			return new IUiStyleBaseOfLevelD_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060364EC RID: 222444 RVA: 0x00761884 File Offset: 0x0075FA84
+		// Token: 0x060398F5 RID: 235765 RVA: 0x007C4910 File Offset: 0x007C2B10
 		public static int Pack(FlatBufferBuilder builder, IUiStyleBaseOfLevelD_UnionUnion _o)
 		{
 			switch (_o.Type)

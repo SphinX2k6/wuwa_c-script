@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.SkillButtonUi
 {
-	// Token: 0x02004C15 RID: 19477
+	// Token: 0x02003BC6 RID: 15302
 	public enum ESkillButtonStatusType
 	{
-		// Token: 0x0401AD2D RID: 109869
+		// Token: 0x04015689 RID: 87689
 		Normal,
-		// Token: 0x0401AD2E RID: 109870
+		// Token: 0x0401568A RID: 87690
 		Motorcycle
 	}
 }

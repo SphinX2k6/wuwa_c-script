@@ -8,41 +8,41 @@ using CSharpScript.Game.Camera;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x02001FA6 RID: 8102
+// Token: 0x02001468 RID: 5224
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class InstanceGameplayModeController : ControllerBase
 {
-	// Token: 0x0600FBCD RID: 64461 RVA: 0x003D0C44 File Offset: 0x003CEE44
+	// Token: 0x0600CFEF RID: 53231 RVA: 0x003DC8C0 File Offset: 0x003DAAC0
 	protected override bool OnInit()
 	{
 		EventSystem.Instance.Add(EEventName.WorldDone, new Action(this.OnWorldDone));
 		return true;
 	}
 
-	// Token: 0x0600FBCE RID: 64462 RVA: 0x003D0C63 File Offset: 0x003CEE63
+	// Token: 0x0600CFF0 RID: 53232 RVA: 0x003DC8DF File Offset: 0x003DAADF
 	protected override bool OnClear()
 	{
 		EventSystem.Instance.Remove(EEventName.WorldDone, new Action(this.OnWorldDone));
 		return true;
 	}
 
-	// Token: 0x0600FBCF RID: 64463 RVA: 0x003D0C82 File Offset: 0x003CEE82
+	// Token: 0x0600CFF1 RID: 53233 RVA: 0x003DC8FE File Offset: 0x003DAAFE
 	protected override bool OnChangeMode()
 	{
 		this.ResetAll();
 		return true;
 	}
 
-	// Token: 0x0600FBD0 RID: 64464 RVA: 0x003D0C8B File Offset: 0x003CEE8B
+	// Token: 0x0600CFF2 RID: 53234 RVA: 0x003DC907 File Offset: 0x003DAB07
 	protected override bool OnLeaveLevel()
 	{
 		this.ResetAll();
 		return true;
 	}
 
-	// Token: 0x0600FBD1 RID: 64465 RVA: 0x003D0C94 File Offset: 0x003CEE94
+	// Token: 0x0600CFF3 RID: 53235 RVA: 0x003DC910 File Offset: 0x003DAB10
 	private void ResetAll()
 	{
 		if (InstanceGameplayModeModel.Instance.DefaultCameraMode == EDefaultCameraMode.FreeCamera)
@@ -60,7 +60,7 @@ public class InstanceGameplayModeController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600FBD2 RID: 64466 RVA: 0x003D0D34 File Offset: 0x003CEF34
+	// Token: 0x0600CFF4 RID: 53236 RVA: 0x003DC9B0 File Offset: 0x003DABB0
 	private void OnWorldDone()
 	{
 		InstanceDungeon? instanceDungeon;
@@ -81,7 +81,7 @@ public class InstanceGameplayModeController : ControllerBase
 		this.UpdateDefaultCameraMode((EDefaultCameraMode)gameplayModeConfig.Value.DefaultCameraMode, gameplayModeConfig.Value.GetCameraParamsArray());
 	}
 
-	// Token: 0x0600FBD3 RID: 64467 RVA: 0x003D0DC1 File Offset: 0x003CEFC1
+	// Token: 0x0600CFF5 RID: 53237 RVA: 0x003DCA3D File Offset: 0x003DAC3D
 	private void UpdateDefaultCameraMode(EDefaultCameraMode mode, int[] @params)
 	{
 		InstanceGameplayModeModel.Instance.DefaultCameraMode = mode;
@@ -95,7 +95,7 @@ public class InstanceGameplayModeController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600FBD4 RID: 64468 RVA: 0x003D0DE0 File Offset: 0x003CEFE0
+	// Token: 0x0600CFF6 RID: 53238 RVA: 0x003DCA5C File Offset: 0x003DAC5C
 	private void EnterFreeCameraMode(int[] configIdList)
 	{
 		CameraModel.Instance.MainModel.CreateFreeCamera();
@@ -103,14 +103,14 @@ public class InstanceGameplayModeController : ControllerBase
 		CameraController.Instance.EnterCameraMode(ECustomCameraMode.Free, 0f, EViewTargetBlendFunction.VTBlend_Linear, 0f, null, false, "MainCamera", null);
 	}
 
-	// Token: 0x0600FBD5 RID: 64469 RVA: 0x003D0E3B File Offset: 0x003CF03B
+	// Token: 0x0600CFF7 RID: 53239 RVA: 0x003DCAB7 File Offset: 0x003DACB7
 	private void ExitFreeCameraMode()
 	{
 		CameraController.Instance.ExitCameraMode(ECustomCameraMode.Free, 0f, EViewTargetBlendFunction.VTBlend_Linear, 0f, null, "MainCamera", null);
 		CameraModel.Instance.MainModel.DestroyFreeCamera();
 	}
 
-	// Token: 0x0600FBD6 RID: 64470 RVA: 0x003D0E6C File Offset: 0x003CF06C
+	// Token: 0x0600CFF8 RID: 53240 RVA: 0x003DCAE8 File Offset: 0x003DACE8
 	public void DisableAllPlayerRole()
 	{
 		IReadOnlyList<EntityHandle> allEntities = CreatureModel.Instance.GetAllEntities();
@@ -140,7 +140,7 @@ public class InstanceGameplayModeController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600FBD7 RID: 64471 RVA: 0x003D0F6C File Offset: 0x003CF16C
+	// Token: 0x0600CFF9 RID: 53241 RVA: 0x003DCBE8 File Offset: 0x003DADE8
 	private void OnCreateEntity(CreatureDataComponent creatureData, EntityHandle entityHandle)
 	{
 		if (entityHandle.EntityType == 0)
@@ -154,7 +154,7 @@ public class InstanceGameplayModeController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600FBD8 RID: 64472 RVA: 0x003D0FB1 File Offset: 0x003CF1B1
+	// Token: 0x0600CFFA RID: 53242 RVA: 0x003DCC2D File Offset: 0x003DAE2D
 	private void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle entityHandle)
 	{
 		if (entityHandle.EntityType == 0)
@@ -163,7 +163,7 @@ public class InstanceGameplayModeController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600FBD9 RID: 64473 RVA: 0x003D0FD4 File Offset: 0x003CF1D4
+	// Token: 0x0600CFFB RID: 53243 RVA: 0x003DCC50 File Offset: 0x003DAE50
 	private static float[] ToFloatArray(int[] intArray)
 	{
 		float[] array = new float[intArray.Length];
@@ -174,8 +174,8 @@ public class InstanceGameplayModeController : ControllerBase
 		return array;
 	}
 
-	// Token: 0x1700134B RID: 4939
-	// (get) Token: 0x0600FBDA RID: 64474 RVA: 0x003D1000 File Offset: 0x003CF200
+	// Token: 0x17001375 RID: 4981
+	// (get) Token: 0x0600CFFC RID: 53244 RVA: 0x003DCC7C File Offset: 0x003DAE7C
 	public static InstanceGameplayModeController Instance
 	{
 		get
@@ -184,7 +184,7 @@ public class InstanceGameplayModeController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600FBDB RID: 64475 RVA: 0x003D1007 File Offset: 0x003CF207
+	// Token: 0x0600CFFD RID: 53245 RVA: 0x003DCC83 File Offset: 0x003DAE83
 	public static InstanceGameplayModeController GetOrCreateInstance()
 	{
 		if (InstanceGameplayModeController._Instance == null)
@@ -194,7 +194,7 @@ public class InstanceGameplayModeController : ControllerBase
 		return InstanceGameplayModeController._Instance;
 	}
 
-	// Token: 0x0600FBDC RID: 64476 RVA: 0x003D101B File Offset: 0x003CF21B
+	// Token: 0x0600CFFE RID: 53246 RVA: 0x003DCC97 File Offset: 0x003DAE97
 	public static bool CreateInstance()
 	{
 		if (InstanceGameplayModeController._Instance != null)
@@ -205,24 +205,24 @@ public class InstanceGameplayModeController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0600FBDD RID: 64477 RVA: 0x003D1031 File Offset: 0x003CF231
+	// Token: 0x0600CFFF RID: 53247 RVA: 0x003DCCAD File Offset: 0x003DAEAD
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600FBDE RID: 64478 RVA: 0x003D1033 File Offset: 0x003CF233
+	// Token: 0x0600D000 RID: 53248 RVA: 0x003DCCAF File Offset: 0x003DAEAF
 	public static void ResetStaticDefaultValue()
 	{
 		InstanceGameplayModeController._Instance = null;
 	}
 
-	// Token: 0x0600FBDF RID: 64479 RVA: 0x003D103B File Offset: 0x003CF23B
+	// Token: 0x0600D001 RID: 53249 RVA: 0x003DCCB7 File Offset: 0x003DAEB7
 	static InstanceGameplayModeController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(InstanceGameplayModeController.CreateStaticDefaultValue), new Action(InstanceGameplayModeController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400751B RID: 29979
+	// Token: 0x040075FE RID: 30206
 	[Nullable(2)]
 	private static InstanceGameplayModeController _Instance;
 }

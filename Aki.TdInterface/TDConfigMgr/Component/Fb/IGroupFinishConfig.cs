@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BA6 RID: 2982
+	// Token: 0x02000C74 RID: 3188
 	public class IGroupFinishConfig
 	{
-		// Token: 0x06004472 RID: 17522 RVA: 0x000ADD9D File Offset: 0x000ABF9D
-		[NullableContext(1)]
+		// Token: 0x060048CB RID: 18635 RVA: 0x000B7E61 File Offset: 0x000B6061
 		public static IGroupFinishConfig Create(IGroupFinishConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170012E3 RID: 4835
-		// (get) Token: 0x06004473 RID: 17523 RVA: 0x000ADDBC File Offset: 0x000ABFBC
+		// Token: 0x170013DE RID: 5086
+		// (get) Token: 0x060048CC RID: 18636 RVA: 0x000B7E80 File Offset: 0x000B6080
 		public virtual EGroupFinishConfig Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040026A5 RID: 9893
+		// Token: 0x040028ED RID: 10477
 		private IGroupFinishConfig Instance;
 	}
 }

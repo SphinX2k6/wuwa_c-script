@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 
-// Token: 0x02002457 RID: 9303
+// Token: 0x0200193C RID: 6460
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class VisionRecommendModel : ModelBase
 {
-	// Token: 0x06012A62 RID: 76386 RVA: 0x0049996C File Offset: 0x00497B6C
+	// Token: 0x0600FF19 RID: 65305 RVA: 0x004A6F74 File Offset: 0x004A5174
 	protected override bool OnInit()
 	{
 		this.CostMap3012 = new Dictionary<int, int>
@@ -60,7 +59,7 @@ public class VisionRecommendModel : ModelBase
 		return base.OnInit();
 	}
 
-	// Token: 0x06012A63 RID: 76387 RVA: 0x00499A3C File Offset: 0x00497C3C
+	// Token: 0x0600FF1A RID: 65306 RVA: 0x004A7044 File Offset: 0x004A5244
 	private void InitializeSortFunctions()
 	{
 		this.NormalSortFuncList.Add(new TPhantomSortFunction(this.SortByFetterGroupId));
@@ -80,12 +79,24 @@ public class VisionRecommendModel : ModelBase
 		this.SpecialSortFuncList.Add(new TPhantomSortFunction(this.SortByConfigId));
 	}
 
-	// Token: 0x06012A64 RID: 76388 RVA: 0x00499BA4 File Offset: 0x00497DA4
-	public void OnRoleRecommendData(int roleId, PhantomFetterRecommendResponse data)
+	// Token: 0x0600FF1B RID: 65307 RVA: 0x004A71AC File Offset: 0x004A53AC
+	public unsafe void OnRoleRecommendData(int roleId, PhantomFetterRecommendResponse data)
 	{
 		if (data == null || data.PhantomFetterRecommendInfos == null)
 		{
 			return;
+		}
+		if (data.ErrorCode != Aki.Protocol.ErrorCode.Success || data.PhantomFetterRecommendInfos.Count == 0)
+		{
+			Log instance = Log.Instance;
+			ELogModule module = ELogModule.RoleDev;
+			ELogAuthor author = ELogAuthor.CB;
+			string message = "声骸推荐回包异常";
+			<>y__InlineArray3<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray3<ValueTuple<string, object>>);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("roleId", roleId);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("errorCode", data.ErrorCode);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("count", data.PhantomFetterRecommendInfos.Count);
+			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 		}
 		List<VisionFetterRecommendInfo> list = new List<VisionFetterRecommendInfo>();
 		foreach (PhantomFetterRecommendInfo data2 in data.PhantomFetterRecommendInfos)
@@ -98,7 +109,7 @@ public class VisionRecommendModel : ModelBase
 		this.BuildRecommendLists(roleId, list);
 	}
 
-	// Token: 0x06012A65 RID: 76389 RVA: 0x00499C28 File Offset: 0x00497E28
+	// Token: 0x0600FF1C RID: 65308 RVA: 0x004A72D4 File Offset: 0x004A54D4
 	private void BuildRecommendLists(int roleId, List<VisionFetterRecommendInfo> rawList)
 	{
 		List<VisionFetterRecommendInfo> list = new List<VisionFetterRecommendInfo>();
@@ -128,7 +139,7 @@ public class VisionRecommendModel : ModelBase
 		this.RoleUsageFetterRecommendMap[roleId] = list2;
 	}
 
-	// Token: 0x06012A66 RID: 76390 RVA: 0x00499D38 File Offset: 0x00497F38
+	// Token: 0x0600FF1D RID: 65309 RVA: 0x004A73E4 File Offset: 0x004A55E4
 	public void OnRoleRecommendAttrData(int roleId, PhantomAttrRecommendResponse data)
 	{
 		if (data == null || data.CostPhantomAttrRecommendInfos == null)
@@ -161,7 +172,16 @@ public class VisionRecommendModel : ModelBase
 		this.RoleCostAttrRecommendMap[roleId] = dictionary;
 	}
 
-	// Token: 0x06012A67 RID: 76391 RVA: 0x00499E7C File Offset: 0x0049807C
+	// Token: 0x0600FF1E RID: 65310 RVA: 0x004A7528 File Offset: 0x004A5728
+	public void ClearRoleRecommendData(int roleId)
+	{
+		this.RoleFetterRecommendMap.Remove(roleId);
+		this.RoleSystemFetterRecommendMap.Remove(roleId);
+		this.RoleUsageFetterRecommendMap.Remove(roleId);
+		this.RoleCostAttrRecommendMap.Remove(roleId);
+	}
+
+	// Token: 0x0600FF1F RID: 65311 RVA: 0x004A7560 File Offset: 0x004A5760
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -177,7 +197,7 @@ public class VisionRecommendModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06012A68 RID: 76392 RVA: 0x00499E9C File Offset: 0x0049809C
+	// Token: 0x0600FF20 RID: 65312 RVA: 0x004A7580 File Offset: 0x004A5780
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -193,7 +213,7 @@ public class VisionRecommendModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06012A69 RID: 76393 RVA: 0x00499EBC File Offset: 0x004980BC
+	// Token: 0x0600FF21 RID: 65313 RVA: 0x004A75A0 File Offset: 0x004A57A0
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -209,7 +229,7 @@ public class VisionRecommendModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06012A6A RID: 76394 RVA: 0x00499EDC File Offset: 0x004980DC
+	// Token: 0x0600FF22 RID: 65314 RVA: 0x004A75C0 File Offset: 0x004A57C0
 	[NullableContext(2)]
 	public VisionAttrRecommendInfo GetRoleCostAttrRecommendInfo(int roleId, int cost)
 	{
@@ -222,7 +242,7 @@ public class VisionRecommendModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06012A6B RID: 76395 RVA: 0x00499F08 File Offset: 0x00498108
+	// Token: 0x0600FF23 RID: 65315 RVA: 0x004A75EC File Offset: 0x004A57EC
 	public List<AttrRecommendInfo> GetRoleMainAttrRecommendListByPlan(int roleId, int cost, bool isOfficial)
 	{
 		VisionAttrRecommendInfo roleCostAttrRecommendInfo = this.GetRoleCostAttrRecommendInfo(roleId, cost);
@@ -237,7 +257,7 @@ public class VisionRecommendModel : ModelBase
 		return roleCostAttrRecommendInfo.GetOfficialMainAttrRecommendInfo();
 	}
 
-	// Token: 0x06012A6C RID: 76396 RVA: 0x00499F38 File Offset: 0x00498138
+	// Token: 0x0600FF24 RID: 65316 RVA: 0x004A761C File Offset: 0x004A581C
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -253,7 +273,7 @@ public class VisionRecommendModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06012A6D RID: 76397 RVA: 0x00499F58 File Offset: 0x00498158
+	// Token: 0x0600FF25 RID: 65317 RVA: 0x004A763C File Offset: 0x004A583C
 	public bool CheckVisionOneKeyEquipRedDot(int roleDataId)
 	{
 		RoleDataBase roleDataById = RoleModel.Instance.GetRoleDataById(roleDataId, true);
@@ -298,7 +318,7 @@ public class VisionRecommendModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x06012A6E RID: 76398 RVA: 0x0049A068 File Offset: 0x00498268
+	// Token: 0x0600FF26 RID: 65318 RVA: 0x004A774C File Offset: 0x004A594C
 	public int[] GetRecommendEquipUniqueIdListNew(int roleId, int firstVisionMonsterId, VisionFetterRecommendInfo recommendInfo)
 	{
 		int recommendFetterGroupId = recommendInfo.GetRecommendFetterGroupId();
@@ -365,7 +385,7 @@ public class VisionRecommendModel : ModelBase
 		return array;
 	}
 
-	// Token: 0x06012A6F RID: 76399 RVA: 0x0049A204 File Offset: 0x00498404
+	// Token: 0x0600FF27 RID: 65319 RVA: 0x004A78E8 File Offset: 0x004A5AE8
 	private List<List<int>> GetOtherVisionCostPlans(int firstCost, VisionFetterRecommendInfo recommendInfo)
 	{
 		int calabashLevel = CalabashModel.Instance.GetCalabashLevel();
@@ -433,7 +453,7 @@ public class VisionRecommendModel : ModelBase
 		}
 	}
 
-	// Token: 0x06012A70 RID: 76400 RVA: 0x0049A39C File Offset: 0x0049859C
+	// Token: 0x0600FF28 RID: 65320 RVA: 0x004A7A80 File Offset: 0x004A5C80
 	public int[] GetRecommendEquipUniqueIdList(int roleId, VisionFetterRecommendInfo recommendInfo)
 	{
 		int calabashLevel = CalabashModel.Instance.GetCalabashLevel();
@@ -464,7 +484,7 @@ public class VisionRecommendModel : ModelBase
 		return array;
 	}
 
-	// Token: 0x06012A71 RID: 76401 RVA: 0x0049A430 File Offset: 0x00498630
+	// Token: 0x0600FF29 RID: 65321 RVA: 0x004A7B14 File Offset: 0x004A5D14
 	private int[] GetSpecialRecommendEquipUniqueIdList(int roleId, int fetterGroupId, int fetterGroupSubId, int[] costArray, int[] uniqueIdList)
 	{
 		List<PhantomBattleData> allNotEquipPhantomList = this.GetAllNotEquipPhantomList(roleId);
@@ -501,7 +521,7 @@ public class VisionRecommendModel : ModelBase
 		return uniqueIdList;
 	}
 
-	// Token: 0x06012A72 RID: 76402 RVA: 0x0049A4E0 File Offset: 0x004986E0
+	// Token: 0x0600FF2A RID: 65322 RVA: 0x004A7BC4 File Offset: 0x004A5DC4
 	private bool CheckSpecialEnough(int[] uniqueIdList)
 	{
 		Dictionary<int, int> dictionary = new Dictionary<int, int>();
@@ -534,7 +554,7 @@ public class VisionRecommendModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x06012A73 RID: 76403 RVA: 0x0049A5BC File Offset: 0x004987BC
+	// Token: 0x0600FF2B RID: 65323 RVA: 0x004A7CA0 File Offset: 0x004A5EA0
 	private int[] GetNormalRecommendEquipUniqueIdList(int roleId, int fetterGroupId, int[] costArray, int[] uniqueIdList)
 	{
 		List<PhantomBattleData> allNotEquipPhantomList = this.GetAllNotEquipPhantomList(roleId);
@@ -561,16 +581,18 @@ public class VisionRecommendModel : ModelBase
 		return uniqueIdList;
 	}
 
-	// Token: 0x06012A74 RID: 76404 RVA: 0x0049A650 File Offset: 0x00498850
+	// Token: 0x0600FF2C RID: 65324 RVA: 0x004A7D34 File Offset: 0x004A5F34
 	private int GetCostRecommendEquipUniqueId(int[] currentSelectUniqueIdArray, int cost, List<PhantomBattleData> unEquipVisionArray, bool needEqual, List<int> disableGroupIdList)
 	{
 		List<int> list = new List<int>();
+		HashSet<ValueTuple<int, int>> hashSet = new HashSet<ValueTuple<int, int>>();
 		foreach (int uniqueId in currentSelectUniqueIdArray)
 		{
 			PhantomBattleData phantomBattleData = PhantomBattleModel.Instance.GetPhantomBattleData(uniqueId);
 			if (phantomBattleData != null)
 			{
 				list.Add(phantomBattleData.GetMonsterId(false));
+				hashSet.Add(new ValueTuple<int, int>(phantomBattleData.GetMonsterId(false), phantomBattleData.GetFetterGroupId()));
 			}
 		}
 		int count = unEquipVisionArray.Count;
@@ -582,12 +604,15 @@ public class VisionRecommendModel : ModelBase
 			if ((phantomBattleData2 == null || Array.IndexOf<int>(currentSelectUniqueIdArray, phantomBattleData2.GetUniqueId()) < 0) && !(needEqual ? (phantomBattleData2.GetCost() != cost) : (phantomBattleData2.GetCost() > cost)) && !disableGroupIdList.Contains(phantomBattleData2.GetFetterGroupId()))
 			{
 				int monsterId = phantomBattleData2.GetMonsterId(false);
-				if (!list.Contains(monsterId))
+				if (phantomBattleData2.GetPhantomLevel() != 0 || !hashSet.Contains(new ValueTuple<int, int>(monsterId, phantomBattleData2.GetFetterGroupId())))
 				{
-					num = phantomBattleData2.GetUniqueId();
-					break;
+					if (!list.Contains(monsterId))
+					{
+						num = phantomBattleData2.GetUniqueId();
+						break;
+					}
+					list2.Add(phantomBattleData2.GetUniqueId());
 				}
-				list2.Add(phantomBattleData2.GetUniqueId());
 			}
 		}
 		if (num == 0 && list2.Count > 0)
@@ -597,7 +622,7 @@ public class VisionRecommendModel : ModelBase
 		return num;
 	}
 
-	// Token: 0x06012A75 RID: 76405 RVA: 0x0049A754 File Offset: 0x00498954
+	// Token: 0x0600FF2D RID: 65325 RVA: 0x004A7E7C File Offset: 0x004A607C
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -630,7 +655,7 @@ public class VisionRecommendModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06012A76 RID: 76406 RVA: 0x0049A844 File Offset: 0x00498A44
+	// Token: 0x0600FF2E RID: 65326 RVA: 0x004A7F6C File Offset: 0x004A616C
 	private int SortByFetterGroupId(PhantomBattleData a, PhantomBattleData b, int roleId, int fetterGroupId, IReadOnlyList<int> equipIdNow, int? subGroupId)
 	{
 		bool flag = a.GetFetterGroupId() == fetterGroupId;
@@ -646,13 +671,13 @@ public class VisionRecommendModel : ModelBase
 		return 0;
 	}
 
-	// Token: 0x06012A77 RID: 76407 RVA: 0x0049A878 File Offset: 0x00498A78
+	// Token: 0x0600FF2F RID: 65327 RVA: 0x004A7FA0 File Offset: 0x004A61A0
 	private int SortByQuality(PhantomBattleData a, PhantomBattleData b, int roleId, int fetterGroupId, IReadOnlyList<int> equipIdNow, int? subGroupId)
 	{
 		return b.GetQuality() - a.GetQuality();
 	}
 
-	// Token: 0x06012A78 RID: 76408 RVA: 0x0049A888 File Offset: 0x00498A88
+	// Token: 0x0600FF30 RID: 65328 RVA: 0x004A7FB0 File Offset: 0x004A61B0
 	private int SortByMainProp(PhantomBattleData a, PhantomBattleData b, int roleId, int fetterGroupId, IReadOnlyList<int> equipIdNow, int? subGroupId)
 	{
 		bool hasRecommendMainProp = this.SortMetricCache[a.GetUniqueId()].HasRecommendMainProp;
@@ -668,7 +693,7 @@ public class VisionRecommendModel : ModelBase
 		return 0;
 	}
 
-	// Token: 0x06012A79 RID: 76409 RVA: 0x0049A8D4 File Offset: 0x00498AD4
+	// Token: 0x0600FF31 RID: 65329 RVA: 0x004A7FFC File Offset: 0x004A61FC
 	private int SortBySubProp(PhantomBattleData a, PhantomBattleData b, int roleId, int fetterGroupId, IReadOnlyList<int> equipIdNow, int? subGroupId)
 	{
 		bool hasRecommendSubProp = this.SortMetricCache[a.GetUniqueId()].HasRecommendSubProp;
@@ -684,31 +709,49 @@ public class VisionRecommendModel : ModelBase
 		return 0;
 	}
 
-	// Token: 0x06012A7A RID: 76410 RVA: 0x0049A920 File Offset: 0x00498B20
+	// Token: 0x0600FF32 RID: 65330 RVA: 0x004A8048 File Offset: 0x004A6248
 	private int SortBySubPropRecommendCount(PhantomBattleData a, PhantomBattleData b, int roleId, int fetterGroupId, IReadOnlyList<int> equipIdNow, int? subGroupId)
 	{
 		VisionAttrRecommendInfo roleCostAttrRecommendInfo = VisionRecommendModel.Instance.GetRoleCostAttrRecommendInfo(roleId, a.GetCost());
-		VisionRecommendModel.<>c__DisplayClass37_0 CS$<>8__locals1;
+		VisionRecommendModel.<>c__DisplayClass38_0 CS$<>8__locals1;
 		CS$<>8__locals1.subRecommend = ((roleCostAttrRecommendInfo != null) ? roleCostAttrRecommendInfo.GetSubAttrRecommendInfo() : null);
 		if (CS$<>8__locals1.subRecommend == null || CS$<>8__locals1.subRecommend.Count == 0)
 		{
 			return 0;
 		}
-		int num = VisionRecommendModel.<SortBySubPropRecommendCount>g__CountMatch|37_0(this.SortMetricCache[a.GetUniqueId()].SubPropConfigs, ref CS$<>8__locals1);
-		return VisionRecommendModel.<SortBySubPropRecommendCount>g__CountMatch|37_0(this.SortMetricCache[b.GetUniqueId()].SubPropConfigs, ref CS$<>8__locals1) - num;
+		int num = VisionRecommendModel.<SortBySubPropRecommendCount>g__CountMatch|38_0(this.SortMetricCache[a.GetUniqueId()].SubPropConfigs, ref CS$<>8__locals1);
+		return VisionRecommendModel.<SortBySubPropRecommendCount>g__CountMatch|38_0(this.SortMetricCache[b.GetUniqueId()].SubPropConfigs, ref CS$<>8__locals1) - num;
 	}
 
-	// Token: 0x06012A7B RID: 76411 RVA: 0x0049A9A6 File Offset: 0x00498BA6
+	// Token: 0x0600FF33 RID: 65331 RVA: 0x004A80CE File Offset: 0x004A62CE
 	private int SortByLevel(PhantomBattleData a, PhantomBattleData b, int roleId, int fetterGroupId, IReadOnlyList<int> equipIdNow, int? subGroupId)
 	{
 		return b.GetPhantomLevel() - a.GetPhantomLevel();
 	}
 
-	// Token: 0x06012A7C RID: 76412 RVA: 0x0049A9B8 File Offset: 0x00498BB8
+	// Token: 0x0600FF34 RID: 65332 RVA: 0x004A80E0 File Offset: 0x004A62E0
 	private int SortByEquipState(PhantomBattleData a, PhantomBattleData b, int roleId, int fetterGroupId, IReadOnlyList<int> equipIdNow, int? subGroupId)
 	{
-		bool flag = equipIdNow.Contains(a.GetUniqueId());
-		bool flag2 = equipIdNow.Contains(b.GetUniqueId());
+		int uniqueId = a.GetUniqueId();
+		bool flag = false;
+		for (int i = 0; i < equipIdNow.Count; i++)
+		{
+			if (equipIdNow[i] == uniqueId)
+			{
+				flag = true;
+				break;
+			}
+		}
+		int uniqueId2 = b.GetUniqueId();
+		bool flag2 = false;
+		for (int j = 0; j < equipIdNow.Count; j++)
+		{
+			if (equipIdNow[j] == uniqueId2)
+			{
+				flag2 = true;
+				break;
+			}
+		}
 		if (flag && !flag2)
 		{
 			return -1;
@@ -720,13 +763,13 @@ public class VisionRecommendModel : ModelBase
 		return 0;
 	}
 
-	// Token: 0x06012A7D RID: 76413 RVA: 0x0049A9F2 File Offset: 0x00498BF2
+	// Token: 0x0600FF35 RID: 65333 RVA: 0x004A815C File Offset: 0x004A635C
 	private int SortByConfigId(PhantomBattleData a, PhantomBattleData b, int roleId, int fetterGroupId, IReadOnlyList<int> equipIdNow, int? subGroupId)
 	{
 		return b.GetConfigId(false) - a.GetConfigId(false);
 	}
 
-	// Token: 0x06012A7E RID: 76414 RVA: 0x0049AA04 File Offset: 0x00498C04
+	// Token: 0x0600FF36 RID: 65334 RVA: 0x004A8170 File Offset: 0x004A6370
 	private int GetGroupSpecialValue(PhantomBattleData data, int fetterGroupId, int? subGroupId)
 	{
 		int fetterGroupId2 = data.GetFetterGroupId();
@@ -743,27 +786,27 @@ public class VisionRecommendModel : ModelBase
 		return 0;
 	}
 
-	// Token: 0x06012A7F RID: 76415 RVA: 0x0049AA38 File Offset: 0x00498C38
+	// Token: 0x0600FF37 RID: 65335 RVA: 0x004A81A4 File Offset: 0x004A63A4
 	private int SortByGroupSpecial(PhantomBattleData a, PhantomBattleData b, int roleId, int fetterGroupId, IReadOnlyList<int> equipIdNow, int? subGroupId)
 	{
 		int groupSpecialValue = this.GetGroupSpecialValue(a, fetterGroupId, subGroupId);
 		return this.GetGroupSpecialValue(b, fetterGroupId, subGroupId) - groupSpecialValue;
 	}
 
-	// Token: 0x06012A80 RID: 76416 RVA: 0x0049AA60 File Offset: 0x00498C60
+	// Token: 0x0600FF38 RID: 65336 RVA: 0x004A81CC File Offset: 0x004A63CC
 	private int SortByCost(PhantomBattleData a, PhantomBattleData b, int roleId, int fetterGroupId, IReadOnlyList<int> equipIdNow, int? subGroupId)
 	{
 		int cost = a.GetCost();
 		return b.GetCost() - cost;
 	}
 
-	// Token: 0x06012A81 RID: 76417 RVA: 0x0049AA7C File Offset: 0x00498C7C
+	// Token: 0x0600FF39 RID: 65337 RVA: 0x004A81E8 File Offset: 0x004A63E8
 	private int SortByGetTime(PhantomBattleData a, PhantomBattleData b, int roleId, int fetterGroupId, IReadOnlyList<int> equipIdNow, int? subGroupId)
 	{
 		return b.GetIncrId() - a.GetIncrId();
 	}
 
-	// Token: 0x06012A82 RID: 76418 RVA: 0x0049AA8C File Offset: 0x00498C8C
+	// Token: 0x0600FF3A RID: 65338 RVA: 0x004A81F8 File Offset: 0x004A63F8
 	private int SortByMainPropUsage(PhantomBattleData a, PhantomBattleData b, int roleId, int fetterGroupId, IReadOnlyList<int> equipIdNow, int? subGroupId)
 	{
 		int mainPropUsage = this.SortMetricCache[a.GetUniqueId()].MainPropUsage;
@@ -775,7 +818,7 @@ public class VisionRecommendModel : ModelBase
 		return mainPropUsage2 - mainPropUsage;
 	}
 
-	// Token: 0x06012A83 RID: 76419 RVA: 0x0049AAD4 File Offset: 0x00498CD4
+	// Token: 0x0600FF3B RID: 65339 RVA: 0x004A8240 File Offset: 0x004A6440
 	private int SortBySubPropUsage(PhantomBattleData a, PhantomBattleData b, int roleId, int fetterGroupId, IReadOnlyList<int> equipIdNow, int? subGroupId)
 	{
 		int subPropUsage = this.SortMetricCache[a.GetUniqueId()].SubPropUsage;
@@ -787,7 +830,7 @@ public class VisionRecommendModel : ModelBase
 		return subPropUsage2 - subPropUsage;
 	}
 
-	// Token: 0x06012A84 RID: 76420 RVA: 0x0049AB1C File Offset: 0x00498D1C
+	// Token: 0x0600FF3C RID: 65340 RVA: 0x004A8288 File Offset: 0x004A6488
 	private int CalculateAttrUsageSum(List<int> attrIds, List<AttrRecommendInfo> recommendList)
 	{
 		if (attrIds.Count == 0 || recommendList.Count == 0)
@@ -810,7 +853,7 @@ public class VisionRecommendModel : ModelBase
 		return num;
 	}
 
-	// Token: 0x06012A85 RID: 76421 RVA: 0x0049ABA4 File Offset: 0x00498DA4
+	// Token: 0x0600FF3D RID: 65341 RVA: 0x004A8310 File Offset: 0x004A6510
 	private List<int> GetMainAttrIdsFromPhantom(PhantomBattleData phantom)
 	{
 		List<Aki.Protocol.PhantomPropInfo> phantomMainProp = phantom.GetPhantomMainProp();
@@ -843,7 +886,7 @@ public class VisionRecommendModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06012A86 RID: 76422 RVA: 0x0049AC64 File Offset: 0x00498E64
+	// Token: 0x0600FF3E RID: 65342 RVA: 0x004A83D0 File Offset: 0x004A65D0
 	private List<int> GetSubAttrIdsFromPhantom(PhantomBattleData phantom)
 	{
 		List<Aki.Protocol.PhantomPropInfo> phantomSubProp = phantom.GetPhantomSubProp();
@@ -863,7 +906,7 @@ public class VisionRecommendModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06012A87 RID: 76423 RVA: 0x0049ACE4 File Offset: 0x00498EE4
+	// Token: 0x0600FF3F RID: 65343 RVA: 0x004A8450 File Offset: 0x004A6650
 	private void SortPhantomByRule(List<PhantomBattleData> dataList, List<TPhantomSortFunction> ruleList, int roleId, int fetterGroupId, int? subGroupId)
 	{
 		List<int> uniqueIdListNow = PhantomBattleModel.Instance.GetBattleDataById(roleId).GetIncrIdList();
@@ -883,7 +926,7 @@ public class VisionRecommendModel : ModelBase
 		this.SortMetricCache.Clear();
 	}
 
-	// Token: 0x06012A88 RID: 76424 RVA: 0x0049AD5C File Offset: 0x00498F5C
+	// Token: 0x0600FF40 RID: 65344 RVA: 0x004A84C8 File Offset: 0x004A66C8
 	private void BuildSortMetricCache(List<PhantomBattleData> dataList, int roleId)
 	{
 		this.SortMetricCache.Clear();
@@ -946,7 +989,7 @@ public class VisionRecommendModel : ModelBase
 		}
 	}
 
-	// Token: 0x06012A89 RID: 76425 RVA: 0x0049B064 File Offset: 0x00499264
+	// Token: 0x0600FF41 RID: 65345 RVA: 0x004A87D0 File Offset: 0x004A69D0
 	public List<VisionFetterDescData> GetFetterDescByRecommendInfo(VisionFetterRecommendInfo info)
 	{
 		List<VisionFetterDescData> list = new List<VisionFetterDescData>();
@@ -961,7 +1004,7 @@ public class VisionRecommendModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06012A8A RID: 76426 RVA: 0x0049B0DC File Offset: 0x004992DC
+	// Token: 0x0600FF42 RID: 65346 RVA: 0x004A8848 File Offset: 0x004A6A48
 	private void TryGetThreeGroupRecommendList(int roleId, List<IVisionFetterCount> fetterList, int[] uniqueIdList)
 	{
 		int fetterMainGroup = 0;
@@ -985,7 +1028,7 @@ public class VisionRecommendModel : ModelBase
 		this.GetThreeRecommendEquipUniqueIdList(roleId, fetterMainGroup, num, num2, uniqueIdList);
 	}
 
-	// Token: 0x06012A8B RID: 76427 RVA: 0x0049B164 File Offset: 0x00499364
+	// Token: 0x0600FF43 RID: 65347 RVA: 0x004A88D0 File Offset: 0x004A6AD0
 	private int[] GetThreeRecommendEquipUniqueIdList(int roleId, int fetterMainGroup, int fetterGroupIdA, int fetterGroupIdB, int[] uniqueIdList)
 	{
 		List<PhantomBattleData> allNotEquipPhantomList = this.GetAllNotEquipPhantomList(roleId);
@@ -1041,7 +1084,7 @@ public class VisionRecommendModel : ModelBase
 		return uniqueIdList;
 	}
 
-	// Token: 0x06012A8C RID: 76428 RVA: 0x0049B314 File Offset: 0x00499514
+	// Token: 0x0600FF44 RID: 65348 RVA: 0x004A8A80 File Offset: 0x004A6C80
 	[return: Nullable(new byte[]
 	{
 		1,
@@ -1075,7 +1118,7 @@ public class VisionRecommendModel : ModelBase
 		};
 	}
 
-	// Token: 0x06012A8D RID: 76429 RVA: 0x0049B3D0 File Offset: 0x004995D0
+	// Token: 0x0600FF45 RID: 65349 RVA: 0x004A8B3C File Offset: 0x004A6D3C
 	private PhantomPools CreateSortedPhantomPools(int roleId, int fetterGroupIdA, int fetterGroupIdB, List<PhantomBattleData> notEquipPhantomList)
 	{
 		List<PhantomBattleData> list = notEquipPhantomList.FindAll((PhantomBattleData data) => data.GetFetterGroupId() == fetterGroupIdA);
@@ -1139,7 +1182,7 @@ public class VisionRecommendModel : ModelBase
 		};
 	}
 
-	// Token: 0x06012A8E RID: 76430 RVA: 0x0049B75C File Offset: 0x0049995C
+	// Token: 0x0600FF46 RID: 65350 RVA: 0x004A8EC8 File Offset: 0x004A70C8
 	private FetterPlanResult EvaluateSingleFetterPlan(Dictionary<int, int> costMapA, Dictionary<int, int> costMapB, PhantomPools pools, int currentSelectUniqueId, int currentSelectCost, int maxCost)
 	{
 		int num = 0;
@@ -1201,7 +1244,7 @@ public class VisionRecommendModel : ModelBase
 		};
 	}
 
-	// Token: 0x06012A8F RID: 76431 RVA: 0x0049B95C File Offset: 0x00499B5C
+	// Token: 0x0600FF47 RID: 65351 RVA: 0x004A90C8 File Offset: 0x004A72C8
 	private bool IsCandidatePlanBetter(FetterPlanResult candidate, [Nullable(2)] FetterPlanResult best, int roleId)
 	{
 		if (best == null)
@@ -1225,7 +1268,7 @@ public class VisionRecommendModel : ModelBase
 		return valueTuple.Item3 != valueTuple2.Item3 && valueTuple.Item3 > valueTuple2.Item3;
 	}
 
-	// Token: 0x06012A90 RID: 76432 RVA: 0x0049BA00 File Offset: 0x00499C00
+	// Token: 0x0600FF48 RID: 65352 RVA: 0x004A916C File Offset: 0x004A736C
 	[NullableContext(0)]
 	[return: TupleElementNames(new string[]
 	{
@@ -1257,7 +1300,7 @@ public class VisionRecommendModel : ModelBase
 		return new ValueTuple<int, int, int>(num, num2, num3);
 	}
 
-	// Token: 0x06012A91 RID: 76433 RVA: 0x0049BA94 File Offset: 0x00499C94
+	// Token: 0x0600FF49 RID: 65353 RVA: 0x004A9200 File Offset: 0x004A7400
 	private int GetPhantomSubPropRecommendHitCount(PhantomBattleData data, int roleId)
 	{
 		VisionAttrRecommendInfo roleCostAttrRecommendInfo = this.GetRoleCostAttrRecommendInfo(roleId, data.GetCost());
@@ -1282,7 +1325,7 @@ public class VisionRecommendModel : ModelBase
 		return num;
 	}
 
-	// Token: 0x06012A92 RID: 76434 RVA: 0x0049BB7C File Offset: 0x00499D7C
+	// Token: 0x0600FF4A RID: 65354 RVA: 0x004A92E8 File Offset: 0x004A74E8
 	private int[] GetNewNormalRecommendEquipUniqueIdList(int roleId, int fetterGroupId, int firstSelectUniqueId, int currentSelectCost, VisionFetterRecommendInfo recommendInfo, List<PhantomBattleData> notEquipPhantomList, int[] uniqueIdList)
 	{
 		if (firstSelectUniqueId == 0)
@@ -1324,7 +1367,7 @@ public class VisionRecommendModel : ModelBase
 		return uniqueIdList;
 	}
 
-	// Token: 0x06012A93 RID: 76435 RVA: 0x0049BCD0 File Offset: 0x00499ED0
+	// Token: 0x0600FF4B RID: 65355 RVA: 0x004A943C File Offset: 0x004A763C
 	public int[] GetNewRecommendEquipUniqueIdList(int roleId, int fetterGroupId, int fetterGroupSubId, int firstSelectUniqueId, int currentSelectCost, List<PhantomBattleData> notEquipPhantomList, int[] uniqueIdList, VisionFetterRecommendInfo recommendInfo)
 	{
 		if (firstSelectUniqueId == 0)
@@ -1369,7 +1412,7 @@ public class VisionRecommendModel : ModelBase
 		return uniqueIdList;
 	}
 
-	// Token: 0x06012A94 RID: 76436 RVA: 0x0049BE04 File Offset: 0x0049A004
+	// Token: 0x0600FF4C RID: 65356 RVA: 0x004A9570 File Offset: 0x004A7770
 	[return: Nullable(new byte[]
 	{
 		1,
@@ -1417,7 +1460,7 @@ public class VisionRecommendModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06012A95 RID: 76437 RVA: 0x0049BF78 File Offset: 0x0049A178
+	// Token: 0x0600FF4D RID: 65357 RVA: 0x004A96E4 File Offset: 0x004A78E4
 	[return: Nullable(new byte[]
 	{
 		1,
@@ -1427,17 +1470,17 @@ public class VisionRecommendModel : ModelBase
 	})]
 	private List<ValueTuple<List<int>, List<int>>> EnumerateCostSplits(List<int> costs, int aSlotCount)
 	{
-		VisionRecommendModel.<>c__DisplayClass66_0 CS$<>8__locals1;
+		VisionRecommendModel.<>c__DisplayClass67_0 CS$<>8__locals1;
 		CS$<>8__locals1.aSlotCount = aSlotCount;
 		CS$<>8__locals1.costs = costs;
 		CS$<>8__locals1.n = CS$<>8__locals1.costs.Count;
 		CS$<>8__locals1.result = new List<ValueTuple<List<int>, List<int>>>();
 		CS$<>8__locals1.seen = new HashSet<string>();
-		VisionRecommendModel.<EnumerateCostSplits>g__Pick|66_0(0, new List<int>(), ref CS$<>8__locals1);
+		VisionRecommendModel.<EnumerateCostSplits>g__Pick|67_0(0, new List<int>(), ref CS$<>8__locals1);
 		return CS$<>8__locals1.result;
 	}
 
-	// Token: 0x06012A96 RID: 76438 RVA: 0x0049BFD4 File Offset: 0x0049A1D4
+	// Token: 0x0600FF4E RID: 65358 RVA: 0x004A9740 File Offset: 0x004A7940
 	private Dictionary<int, int> CostArrayToMap(List<int> costs)
 	{
 		Dictionary<int, int> dictionary = new Dictionary<int, int>();
@@ -1453,8 +1496,8 @@ public class VisionRecommendModel : ModelBase
 		return dictionary;
 	}
 
-	// Token: 0x17001833 RID: 6195
-	// (get) Token: 0x06012A97 RID: 76439 RVA: 0x0049C03C File Offset: 0x0049A23C
+	// Token: 0x1700186D RID: 6253
+	// (get) Token: 0x0600FF4F RID: 65359 RVA: 0x004A97A8 File Offset: 0x004A79A8
 	public static VisionRecommendModel Instance
 	{
 		get
@@ -1463,7 +1506,7 @@ public class VisionRecommendModel : ModelBase
 		}
 	}
 
-	// Token: 0x06012A98 RID: 76440 RVA: 0x0049C043 File Offset: 0x0049A243
+	// Token: 0x0600FF50 RID: 65360 RVA: 0x004A97AF File Offset: 0x004A79AF
 	public static VisionRecommendModel GetOrCreateInstance()
 	{
 		if (VisionRecommendModel._Instance == null)
@@ -1473,7 +1516,7 @@ public class VisionRecommendModel : ModelBase
 		return VisionRecommendModel._Instance;
 	}
 
-	// Token: 0x06012A99 RID: 76441 RVA: 0x0049C057 File Offset: 0x0049A257
+	// Token: 0x0600FF51 RID: 65361 RVA: 0x004A97C3 File Offset: 0x004A79C3
 	public static bool CreateInstance()
 	{
 		if (VisionRecommendModel._Instance != null)
@@ -1484,26 +1527,26 @@ public class VisionRecommendModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06012A9A RID: 76442 RVA: 0x0049C06D File Offset: 0x0049A26D
+	// Token: 0x0600FF52 RID: 65362 RVA: 0x004A97D9 File Offset: 0x004A79D9
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06012A9B RID: 76443 RVA: 0x0049C06F File Offset: 0x0049A26F
+	// Token: 0x0600FF53 RID: 65363 RVA: 0x004A97DB File Offset: 0x004A79DB
 	public static void ResetStaticDefaultValue()
 	{
 		VisionRecommendModel._Instance = null;
 	}
 
-	// Token: 0x06012A9C RID: 76444 RVA: 0x0049C077 File Offset: 0x0049A277
+	// Token: 0x0600FF54 RID: 65364 RVA: 0x004A97E3 File Offset: 0x004A79E3
 	static VisionRecommendModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(VisionRecommendModel.CreateStaticDefaultValue), new Action(VisionRecommendModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06012A9E RID: 76446 RVA: 0x0049C0A0 File Offset: 0x0049A2A0
+	// Token: 0x0600FF56 RID: 65366 RVA: 0x004A980C File Offset: 0x004A7A0C
 	[CompilerGenerated]
-	internal static int <SortBySubPropRecommendCount>g__CountMatch|37_0([TupleElementNames(new string[]
+	internal static int <SortBySubPropRecommendCount>g__CountMatch|38_0([TupleElementNames(new string[]
 	{
 		"AddType",
 		"PropId"
@@ -1511,7 +1554,7 @@ public class VisionRecommendModel : ModelBase
 	{
 		1,
 		0
-	})] List<ValueTuple<int, int>> configs, ref VisionRecommendModel.<>c__DisplayClass37_0 A_1)
+	})] List<ValueTuple<int, int>> configs, ref VisionRecommendModel.<>c__DisplayClass38_0 A_1)
 	{
 		int num = 0;
 		foreach (ValueTuple<int, int> valueTuple in configs)
@@ -1528,9 +1571,9 @@ public class VisionRecommendModel : ModelBase
 		return num;
 	}
 
-	// Token: 0x06012A9F RID: 76447 RVA: 0x0049C14C File Offset: 0x0049A34C
+	// Token: 0x0600FF57 RID: 65367 RVA: 0x004A98B8 File Offset: 0x004A7AB8
 	[CompilerGenerated]
-	internal static void <EnumerateCostSplits>g__Pick|66_0(int start, List<int> picked, ref VisionRecommendModel.<>c__DisplayClass66_0 A_2)
+	internal static void <EnumerateCostSplits>g__Pick|67_0(int start, List<int> picked, ref VisionRecommendModel.<>c__DisplayClass67_0 A_2)
 	{
 		if (picked.Count == A_2.aSlotCount)
 		{
@@ -1561,58 +1604,58 @@ public class VisionRecommendModel : ModelBase
 		for (int j = start; j < A_2.n; j++)
 		{
 			picked.Add(j);
-			VisionRecommendModel.<EnumerateCostSplits>g__Pick|66_0(j + 1, picked, ref A_2);
+			VisionRecommendModel.<EnumerateCostSplits>g__Pick|67_0(j + 1, picked, ref A_2);
 			picked.RemoveAt(picked.Count - 1);
 		}
 	}
 
-	// Token: 0x04008C90 RID: 35984
+	// Token: 0x04008DD7 RID: 36311
 	private Dictionary<int, int> CostMap3012;
 
-	// Token: 0x04008C91 RID: 35985
+	// Token: 0x04008DD8 RID: 36312
 	private Dictionary<int, int> CostMap3111;
 
-	// Token: 0x04008C92 RID: 35986
+	// Token: 0x04008DD9 RID: 36313
 	private Dictionary<int, int> CostMap3210;
 
-	// Token: 0x04008C93 RID: 35987
+	// Token: 0x04008DDA RID: 36314
 	private const int FIRST_VISION_COST_LIMIT = 4;
 
-	// Token: 0x04008C94 RID: 35988
+	// Token: 0x04008DDB RID: 36315
 	private const int CALABASH_LOW_LEVEL = 2;
 
-	// Token: 0x04008C95 RID: 35989
+	// Token: 0x04008DDC RID: 36316
 	private Dictionary<int, List<VisionFetterRecommendInfo>> RoleFetterRecommendMap;
 
-	// Token: 0x04008C96 RID: 35990
+	// Token: 0x04008DDD RID: 36317
 	private Dictionary<int, List<VisionFetterRecommendInfo>> RoleSystemFetterRecommendMap;
 
-	// Token: 0x04008C97 RID: 35991
+	// Token: 0x04008DDE RID: 36318
 	private Dictionary<int, List<VisionFetterRecommendInfo>> RoleUsageFetterRecommendMap;
 
-	// Token: 0x04008C98 RID: 35992
+	// Token: 0x04008DDF RID: 36319
 	private Dictionary<int, Dictionary<int, VisionAttrRecommendInfo>> RoleCostAttrRecommendMap;
 
-	// Token: 0x04008C99 RID: 35993
+	// Token: 0x04008DE0 RID: 36320
 	private Dictionary<int, PhantomSortMetric> SortMetricCache;
 
-	// Token: 0x04008C9A RID: 35994
+	// Token: 0x04008DE1 RID: 36321
 	public List<VisionSelectRecommendData> CurrentSelectMainAttrArray;
 
-	// Token: 0x04008C9B RID: 35995
+	// Token: 0x04008DE2 RID: 36322
 	public List<VisionSelectRecommendData> CurrentSelectSubAttrArray;
 
-	// Token: 0x04008C9C RID: 35996
+	// Token: 0x04008DE3 RID: 36323
 	[Nullable(2)]
 	public VisionMainSelectPhantomData CurrentMainPhantom;
 
-	// Token: 0x04008C9D RID: 35997
+	// Token: 0x04008DE4 RID: 36324
 	private List<TPhantomSortFunction> NormalSortFuncList;
 
-	// Token: 0x04008C9E RID: 35998
+	// Token: 0x04008DE5 RID: 36325
 	private List<TPhantomSortFunction> SpecialSortFuncList;
 
-	// Token: 0x04008C9F RID: 35999
+	// Token: 0x04008DE6 RID: 36326
 	[Nullable(2)]
 	private static VisionRecommendModel _Instance;
 }

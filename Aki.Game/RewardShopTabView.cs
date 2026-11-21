@@ -8,10 +8,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001362 RID: 4962
+// Token: 0x02000816 RID: 2070
 public class RewardShopTabView : UiTabViewBase
 {
-	// Token: 0x06008A41 RID: 35393 RVA: 0x001D8A8E File Offset: 0x001D6C8E
+	// Token: 0x06005DDC RID: 24028 RVA: 0x001E18EA File Offset: 0x001DFAEA
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -21,13 +21,13 @@ public class RewardShopTabView : UiTabViewBase
 		};
 	}
 
-	// Token: 0x06008A42 RID: 35394 RVA: 0x001D8AC7 File Offset: 0x001D6CC7
+	// Token: 0x06005DDD RID: 24029 RVA: 0x001E1923 File Offset: 0x001DFB23
 	protected override void OnStart()
 	{
 		this.LoopScrollView = new LoopScrollView<RewardShopGridItem, IPayShopUnionData>(base.GetLoopScrollViewComponent(0), (AUIBaseActor)base.GetItem(1).GetOwner(), new Func<RewardShopGridItem>(this.InitItem), false);
 	}
 
-	// Token: 0x06008A43 RID: 35395 RVA: 0x001D8AFC File Offset: 0x001D6CFC
+	// Token: 0x06005DDE RID: 24030 RVA: 0x001E1958 File Offset: 0x001DFB58
 	protected override UniTask OnShowAsyncImplementImplement()
 	{
 		RewardShopTabView.<OnShowAsyncImplementImplement>d__3 <OnShowAsyncImplementImplement>d__;
@@ -38,7 +38,7 @@ public class RewardShopTabView : UiTabViewBase
 		return <OnShowAsyncImplementImplement>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008A44 RID: 35396 RVA: 0x001D8B40 File Offset: 0x001D6D40
+	// Token: 0x06005DDF RID: 24031 RVA: 0x001E199C File Offset: 0x001DFB9C
 	protected override void OnBeforeShow()
 	{
 		UiTabSequence tabBehavior = base.GetTabBehavior<UiTabSequence>();
@@ -49,27 +49,27 @@ public class RewardShopTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x06008A45 RID: 35397 RVA: 0x001D8B7A File Offset: 0x001D6D7A
+	// Token: 0x06005DE0 RID: 24032 RVA: 0x001E19D6 File Offset: 0x001DFBD6
 	protected override void AddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.RefreshGoods, new Action<int, PayShopDefine.EPayShopTabType, int>(this.OnRefreshGoods));
 		EventSystem.Instance.Add(EEventName.ShopVersionCodeChange, new Action(this.OnShopVersionCodeChange));
 	}
 
-	// Token: 0x06008A46 RID: 35398 RVA: 0x001D8BB4 File Offset: 0x001D6DB4
+	// Token: 0x06005DE1 RID: 24033 RVA: 0x001E1A10 File Offset: 0x001DFC10
 	protected override void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.RefreshGoods, new Action<int, PayShopDefine.EPayShopTabType, int>(this.OnRefreshGoods));
 		EventSystem.Instance.Remove(EEventName.ShopVersionCodeChange, new Action(this.OnShopVersionCodeChange));
 	}
 
-	// Token: 0x06008A47 RID: 35399 RVA: 0x001D8BEE File Offset: 0x001D6DEE
+	// Token: 0x06005DE2 RID: 24034 RVA: 0x001E1A4A File Offset: 0x001DFC4A
 	private void OnRefreshGoods(int goodsId, PayShopDefine.EPayShopTabType shopId, int tabId)
 	{
 		this.LoopScrollView.RefreshAllGridProxies();
 	}
 
-	// Token: 0x06008A48 RID: 35400 RVA: 0x001D8BFC File Offset: 0x001D6DFC
+	// Token: 0x06005DE3 RID: 24035 RVA: 0x001E1A58 File Offset: 0x001DFC58
 	private void OnShopVersionCodeChange()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.PayShopRefresh);
@@ -82,24 +82,24 @@ public class RewardShopTabView : UiTabViewBase
 		Log.Instance.Info(ELogModule.Shop, ELogAuthor.XXJ, "PayShop:RewardShopTabView 商品VersionCode不同步,打开弹窗", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x06008A49 RID: 35401 RVA: 0x001D8C69 File Offset: 0x001D6E69
+	// Token: 0x06005DE4 RID: 24036 RVA: 0x001E1AC5 File Offset: 0x001DFCC5
 	[NullableContext(1)]
 	private RewardShopGridItem InitItem()
 	{
 		return new RewardShopGridItem();
 	}
 
-	// Token: 0x04003DA2 RID: 15778
+	// Token: 0x04003E3A RID: 15930
 	[Nullable(1)]
 	protected LoopScrollView<RewardShopGridItem, IPayShopUnionData> LoopScrollView;
 
-	// Token: 0x020079C7 RID: 31175
+	// Token: 0x02006B51 RID: 27473
 	private class EComponentDefine
 	{
-		// Token: 0x0402816D RID: 164205
+		// Token: 0x0402349A RID: 144538
 		public const int Scroll = 0;
 
-		// Token: 0x0402816E RID: 164206
+		// Token: 0x0402349B RID: 144539
 		public const int RewardItem = 1;
 	}
 }

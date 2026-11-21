@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 {
-	// Token: 0x0200525A RID: 21082
+	// Token: 0x0200422A RID: 16938
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaHeadItem : UiPanelBase
 	{
-		// Token: 0x06035E0C RID: 220684 RVA: 0x00CBFFCC File Offset: 0x00CBE1CC
+		// Token: 0x0602AD07 RID: 175367 RVA: 0x00C0D65C File Offset: 0x00C0B85C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			};
 		}
 
-		// Token: 0x06035E0D RID: 220685 RVA: 0x00CC0054 File Offset: 0x00CBE254
+		// Token: 0x0602AD08 RID: 175368 RVA: 0x00C0D6E4 File Offset: 0x00C0B8E4
 		protected UniTask InitAddHpItem()
 		{
 			PhantomArenaHeadItem.<InitAddHpItem>d__8 <InitAddHpItem>d__;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			return <InitAddHpItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035E0E RID: 220686 RVA: 0x00CC0097 File Offset: 0x00CBE297
+		// Token: 0x0602AD09 RID: 175369 RVA: 0x00C0D727 File Offset: 0x00C0B927
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new LevelSequencePlayer(this.RootItem);
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			this.RefreshDamageBar(0f);
 		}
 
-		// Token: 0x06035E0F RID: 220687 RVA: 0x00CC00D0 File Offset: 0x00CBE2D0
+		// Token: 0x0602AD0A RID: 175370 RVA: 0x00C0D760 File Offset: 0x00C0B960
 		private UniTask InitDialogItem()
 		{
 			PhantomArenaHeadItem.<InitDialogItem>d__10 <InitDialogItem>d__;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			return <InitDialogItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035E10 RID: 220688 RVA: 0x00CC0114 File Offset: 0x00CBE314
+		// Token: 0x0602AD0B RID: 175371 RVA: 0x00C0D7A4 File Offset: 0x00C0B9A4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PhantomArenaHeadItem.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -68,21 +68,21 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035E11 RID: 220689 RVA: 0x00CC0157 File Offset: 0x00CBE357
+		// Token: 0x0602AD0C RID: 175372 RVA: 0x00C0D7E7 File Offset: 0x00C0B9E7
 		public void SetBarActive(bool isOwn)
 		{
 			base.GetSprite(1).SetUIActive(isOwn);
 			base.GetSprite(2).SetUIActive(!isOwn);
 		}
 
-		// Token: 0x06035E12 RID: 220690 RVA: 0x00CC0176 File Offset: 0x00CBE376
+		// Token: 0x0602AD0D RID: 175373 RVA: 0x00C0D806 File Offset: 0x00C0BA06
 		public void RefreshLifeBar(float fillAmount)
 		{
 			base.GetSprite(2).SetFillAmount(fillAmount);
 			base.GetSprite(1).SetFillAmount(fillAmount);
 		}
 
-		// Token: 0x06035E13 RID: 220691 RVA: 0x00CC0192 File Offset: 0x00CBE392
+		// Token: 0x0602AD0E RID: 175374 RVA: 0x00C0D822 File Offset: 0x00C0BA22
 		public void RefreshDamageBar(float fillAmount)
 		{
 			UUISprite sprite = base.GetSprite(4);
@@ -93,19 +93,19 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			sprite.SetFillAmount(fillAmount);
 		}
 
-		// Token: 0x06035E14 RID: 220692 RVA: 0x00CC01A8 File Offset: 0x00CBE3A8
+		// Token: 0x0602AD0F RID: 175375 RVA: 0x00C0D838 File Offset: 0x00C0BA38
 		public void RefreshRoleIcon(string headIcon)
 		{
 			base.SetTextureByPath(headIcon, base.GetTexture(0), null, null);
 		}
 
-		// Token: 0x06035E15 RID: 220693 RVA: 0x00CC01CD File Offset: 0x00CBE3CD
+		// Token: 0x0602AD10 RID: 175376 RVA: 0x00C0D85D File Offset: 0x00C0BA5D
 		public UUIItem GetAttachItem()
 		{
 			return base.GetItem(3);
 		}
 
-		// Token: 0x06035E16 RID: 220694 RVA: 0x00CC01D8 File Offset: 0x00CBE3D8
+		// Token: 0x0602AD11 RID: 175377 RVA: 0x00C0D868 File Offset: 0x00C0BA68
 		public void PlayAccumulateDamage()
 		{
 			LevelSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			sequencePlayer.PlayLevelSequenceByName(EPhantomBattleHeadAnim.DamageAccumulate.ToString(), false, null, false);
 		}
 
-		// Token: 0x06035E17 RID: 220695 RVA: 0x00CC0210 File Offset: 0x00CBE410
+		// Token: 0x0602AD12 RID: 175378 RVA: 0x00C0D8A0 File Offset: 0x00C0BAA0
 		public UniTask PlayAddHpEffect(int addCount)
 		{
 			PhantomArenaHeadItem.<PlayAddHpEffect>d__18 <PlayAddHpEffect>d__;
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			return <PlayAddHpEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035E18 RID: 220696 RVA: 0x00CC025C File Offset: 0x00CBE45C
+		// Token: 0x0602AD13 RID: 175379 RVA: 0x00C0D8EC File Offset: 0x00C0BAEC
 		public UniTask PlayReduceHpEffect(int reduceCount)
 		{
 			PhantomArenaHeadItem.<PlayReduceHpEffect>d__19 <PlayReduceHpEffect>d__;
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			return <PlayReduceHpEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035E19 RID: 220697 RVA: 0x00CC02A7 File Offset: 0x00CBE4A7
+		// Token: 0x0602AD14 RID: 175380 RVA: 0x00C0D937 File Offset: 0x00C0BB37
 		private void OnDamageAccumulateEnd(string name)
 		{
 			if (name != EPhantomBattleHeadAnim.DamageAccumulate.ToString())
@@ -150,41 +150,41 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			EventSystem.Instance.Emit(EEventName.OnPhantomArenaBattleDamageAccumulateEnd);
 		}
 
-		// Token: 0x0401C8D1 RID: 116945
+		// Token: 0x04017306 RID: 94982
 		public PhantomArenaDialogItem DialogItem;
 
-		// Token: 0x0401C8D2 RID: 116946
+		// Token: 0x04017307 RID: 94983
 		public bool IsOwn;
 
-		// Token: 0x0401C8D3 RID: 116947
+		// Token: 0x04017308 RID: 94984
 		public bool NeedAddHpEffect;
 
-		// Token: 0x0401C8D4 RID: 116948
+		// Token: 0x04017309 RID: 94985
 		protected LevelSequencePlayer SequencePlayer;
 
-		// Token: 0x0401C8D5 RID: 116949
+		// Token: 0x0401730A RID: 94986
 		protected HpItem AddHpItem;
 
-		// Token: 0x0401C8D6 RID: 116950
+		// Token: 0x0401730B RID: 94987
 		protected HpItem ReduceHpItem;
 
-		// Token: 0x0200B419 RID: 46105
+		// Token: 0x02009E51 RID: 40529
 		[NullableContext(0)]
 		private class ERoleHead
 		{
-			// Token: 0x0403691C RID: 223516
+			// Token: 0x0403136F RID: 201583
 			public const int RoleIcon = 0;
 
-			// Token: 0x0403691D RID: 223517
+			// Token: 0x04031370 RID: 201584
 			public const int OwnBar = 1;
 
-			// Token: 0x0403691E RID: 223518
+			// Token: 0x04031371 RID: 201585
 			public const int OpponentBar = 2;
 
-			// Token: 0x0403691F RID: 223519
+			// Token: 0x04031372 RID: 201586
 			public const int AttachItem = 3;
 
-			// Token: 0x04036920 RID: 223520
+			// Token: 0x04031373 RID: 201587
 			public const int DamageBar = 4;
 		}
 	}

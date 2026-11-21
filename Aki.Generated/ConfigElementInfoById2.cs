@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000262 RID: 610
+	// Token: 0x02000276 RID: 630
 	public class ConfigElementInfoById2 : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000E50 RID: 3664 RVA: 0x000AA540 File Offset: 0x000A8740
+		// Token: 0x06000EC8 RID: 3784 RVA: 0x000B0804 File Offset: 0x000AEA04
 		static ConfigElementInfoById2()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigElementInfoById2.CreateStaticDefaultValue), new Action(ConfigElementInfoById2.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000E51 RID: 3665 RVA: 0x000AA560 File Offset: 0x000A8760
+		// Token: 0x06000EC9 RID: 3785 RVA: 0x000B0824 File Offset: 0x000AEA24
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigElementInfoById2.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000E52 RID: 3666 RVA: 0x000AA5DF File Offset: 0x000A87DF
+		// Token: 0x06000ECA RID: 3786 RVA: 0x000B08A3 File Offset: 0x000AEAA3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigElementInfoById2.LogPair = null;
 			ConfigElementInfoById2.HandleId = 0;
 		}
 
-		// Token: 0x06000E53 RID: 3667 RVA: 0x000AA5ED File Offset: 0x000A87ED
+		// Token: 0x06000ECB RID: 3787 RVA: 0x000B08B1 File Offset: 0x000AEAB1
 		public static void Init()
 		{
 			ConfigElementInfoById2.HandleId = ConfigCommon.InitDataStatement(ConfigElementInfoById2.HandleId, "db_element_info.db", "select BinData from `ElementInfo` where Id<>?");
 		}
 
-		// Token: 0x06000E54 RID: 3668 RVA: 0x000AA608 File Offset: 0x000A8808
+		// Token: 0x06000ECC RID: 3788 RVA: 0x000B08CC File Offset: 0x000AEACC
 		[NullableContext(2)]
 		public static IReadOnlyList<ElementInfo> GetConfigList(int p0Id, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04001092 RID: 4242
+		// Token: 0x0400111E RID: 4382
 		private const string DB = "db_element_info.db";
 
-		// Token: 0x04001093 RID: 4243
+		// Token: 0x0400111F RID: 4383
 		private const string FILE = "y.元素属性.xlsx";
 
-		// Token: 0x04001094 RID: 4244
+		// Token: 0x04001120 RID: 4384
 		private const string TABLE = "ElementInfo";
 
-		// Token: 0x04001095 RID: 4245
+		// Token: 0x04001121 RID: 4385
 		private const string COMMAND = "select BinData from `ElementInfo` where Id<>?";
 
-		// Token: 0x04001096 RID: 4246
+		// Token: 0x04001122 RID: 4386
 		private const string KEY_PREFIX = "ElementInfoById2";
 
-		// Token: 0x04001097 RID: 4247
+		// Token: 0x04001123 RID: 4387
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001098 RID: 4248
+		// Token: 0x04001124 RID: 4388
 		private static int HandleId;
 	}
 }

@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.InputSetting
 {
-	// Token: 0x02006FEA RID: 28650
+	// Token: 0x0200616B RID: 24939
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InputKeyDisplayData
 	{
-		// Token: 0x06045B18 RID: 285464 RVA: 0x0114FBDD File Offset: 0x0114DDDD
+		// Token: 0x0603BCC9 RID: 244937 RVA: 0x010F99D1 File Offset: 0x010F7BD1
 		public void RefreshInput(string actionOrAxisName, IReadOnlyList<string> keyNameList)
 		{
 			this.ActionOrAxisName = actionOrAxisName;
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.InputSetting
 			this.IsCombination = false;
 		}
 
-		// Token: 0x06045B19 RID: 285465 RVA: 0x0114FC04 File Offset: 0x0114DE04
+		// Token: 0x0603BCCA RID: 244938 RVA: 0x010F99F8 File Offset: 0x010F7BF8
 		public void RefreshCombinationInput(string actionOrAxisName, IReadOnlyDictionary<string, string> keyNameMap)
 		{
 			this.ActionOrAxisName = actionOrAxisName;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.InputSetting
 			this.IsCombination = true;
 		}
 
-		// Token: 0x06045B1A RID: 285466 RVA: 0x0114FC78 File Offset: 0x0114DE78
+		// Token: 0x0603BCCB RID: 244939 RVA: 0x010F9A6C File Offset: 0x010F7C6C
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.InputSetting
 			return null;
 		}
 
-		// Token: 0x06045B1B RID: 285467 RVA: 0x0114FD18 File Offset: 0x0114DF18
+		// Token: 0x0603BCCC RID: 244940 RVA: 0x010F9B0C File Offset: 0x010F7D0C
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -86,13 +86,13 @@ namespace CSharpScript.Game.InputSetting
 			return array;
 		}
 
-		// Token: 0x06045B1C RID: 285468 RVA: 0x0114FD75 File Offset: 0x0114DF75
+		// Token: 0x0603BCCD RID: 244941 RVA: 0x010F9B69 File Offset: 0x010F7D69
 		public bool IsValid()
 		{
 			return !string.IsNullOrEmpty(this.ActionOrAxisName);
 		}
 
-		// Token: 0x06045B1D RID: 285469 RVA: 0x0114FD85 File Offset: 0x0114DF85
+		// Token: 0x0603BCCE RID: 244942 RVA: 0x010F9B79 File Offset: 0x010F7D79
 		public void Reset()
 		{
 			this.ActionOrAxisName = null;
@@ -100,17 +100,17 @@ namespace CSharpScript.Game.InputSetting
 			this.KeyNameMap.Clear();
 		}
 
-		// Token: 0x040245D1 RID: 148945
+		// Token: 0x0401F886 RID: 129158
 		[Nullable(2)]
 		public string ActionOrAxisName;
 
-		// Token: 0x040245D2 RID: 148946
+		// Token: 0x0401F887 RID: 129159
 		public List<string> KeyNameList = new List<string>();
 
-		// Token: 0x040245D3 RID: 148947
+		// Token: 0x0401F888 RID: 129160
 		public Dictionary<string, string> KeyNameMap = new Dictionary<string, string>();
 
-		// Token: 0x040245D4 RID: 148948
+		// Token: 0x0401F889 RID: 129161
 		public bool IsCombination;
 	}
 }

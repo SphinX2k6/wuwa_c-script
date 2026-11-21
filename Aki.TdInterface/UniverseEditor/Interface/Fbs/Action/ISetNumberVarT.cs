@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007047 RID: 28743
+	// Token: 0x02007813 RID: 30739
 	public class ISetNumberVarT
 	{
-		// Token: 0x1700D57F RID: 54655
-		// (get) Token: 0x06032DCF RID: 208335 RVA: 0x006DC62B File Offset: 0x006DA82B
-		// (set) Token: 0x06032DD0 RID: 208336 RVA: 0x006DC633 File Offset: 0x006DA833
+		// Token: 0x1700E160 RID: 57696
+		// (get) Token: 0x0603606C RID: 221292 RVA: 0x0073CB53 File Offset: 0x0073AD53
+		// (set) Token: 0x0603606D RID: 221293 RVA: 0x0073CB5B File Offset: 0x0073AD5B
 		public string Name { get; set; }
 
-		// Token: 0x1700D580 RID: 54656
-		// (get) Token: 0x06032DD1 RID: 208337 RVA: 0x006DC63C File Offset: 0x006DA83C
-		// (set) Token: 0x06032DD2 RID: 208338 RVA: 0x006DC644 File Offset: 0x006DA844
+		// Token: 0x1700E161 RID: 57697
+		// (get) Token: 0x0603606E RID: 221294 RVA: 0x0073CB64 File Offset: 0x0073AD64
+		// (set) Token: 0x0603606F RID: 221295 RVA: 0x0073CB6C File Offset: 0x0073AD6C
 		public TVarValueUnion Value { get; set; }
 
-		// Token: 0x06032DD3 RID: 208339 RVA: 0x006DC64D File Offset: 0x006DA84D
+		// Token: 0x06036070 RID: 221296 RVA: 0x0073CB75 File Offset: 0x0073AD75
 		public ISetNumberVarT()
 		{
 			this.Name = null;

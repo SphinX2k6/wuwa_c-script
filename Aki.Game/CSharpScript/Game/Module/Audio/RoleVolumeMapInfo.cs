@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Audio
 {
-	// Token: 0x02005E93 RID: 24211
+	// Token: 0x02004E78 RID: 20088
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoleVolumeMapInfo
 	{
-		// Token: 0x0603D978 RID: 252280 RVA: 0x00EDE852 File Offset: 0x00EDCA52
+		// Token: 0x06032908 RID: 207112 RVA: 0x00E2FDE2 File Offset: 0x00E2DFE2
 		public void OnUpdateTeam()
 		{
 			this.MaintainCurrentList();
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Audio
 			this.LastPlayEntityId = -1;
 		}
 
-		// Token: 0x0603D979 RID: 252281 RVA: 0x00EDE868 File Offset: 0x00EDCA68
+		// Token: 0x06032909 RID: 207113 RVA: 0x00E2FDF8 File Offset: 0x00E2DFF8
 		public void UpdateVolume()
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Audio
 			this.LastPlayEntityId = this.CurrentPlayEntityId;
 		}
 
-		// Token: 0x0603D97A RID: 252282 RVA: 0x00EDEAD8 File Offset: 0x00EDCCD8
+		// Token: 0x0603290A RID: 207114 RVA: 0x00E30068 File Offset: 0x00E2E268
 		public void MaintainCurrentList()
 		{
 			this.TeamEntityIdList.Clear();
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D97B RID: 252283 RVA: 0x00EDEB60 File Offset: 0x00EDCD60
+		// Token: 0x0603290B RID: 207115 RVA: 0x00E300F0 File Offset: 0x00E2E2F0
 		public void MaintainMapData()
 		{
 			if (this.RoleVolumeMap.Count == 0)
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D97C RID: 252284 RVA: 0x00EDEC20 File Offset: 0x00EDCE20
+		// Token: 0x0603290C RID: 207116 RVA: 0x00E301B0 File Offset: 0x00E2E3B0
 		public void AddEvent(int entityId, int roleId, int handle, string eventName, AActor owner)
 		{
 			EventVolumeInfo info = new EventVolumeInfo(handle, eventName, owner);
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.Audio
 			this.UpdateVolume();
 		}
 
-		// Token: 0x0603D97D RID: 252285 RVA: 0x00EDEC50 File Offset: 0x00EDCE50
+		// Token: 0x0603290D RID: 207117 RVA: 0x00E301E0 File Offset: 0x00E2E3E0
 		public void RemoveEvent(int entityId, int handle)
 		{
 			if (this.RoleVolumeMap.ContainsKey(entityId))
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D97E RID: 252286 RVA: 0x00EDECEB File Offset: 0x00EDCEEB
+		// Token: 0x0603290E RID: 207118 RVA: 0x00E3027B File Offset: 0x00E2E47B
 		private RoleVolumeInfo GetRoleVolumeInfo(int entityId, int roleId)
 		{
 			if (!this.RoleVolumeMap.ContainsKey(entityId))
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.Module.Audio
 			return this.RoleVolumeMap[entityId];
 		}
 
-		// Token: 0x0603D97F RID: 252287 RVA: 0x00EDED1C File Offset: 0x00EDCF1C
+		// Token: 0x0603290F RID: 207119 RVA: 0x00E302AC File Offset: 0x00E2E4AC
 		public bool Empty()
 		{
 			if (this.RoleVolumeMap.Count == 0)
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Module.Audio
 			return true;
 		}
 
-		// Token: 0x0603D980 RID: 252288 RVA: 0x00EDED8C File Offset: 0x00EDCF8C
+		// Token: 0x06032910 RID: 207120 RVA: 0x00E3031C File Offset: 0x00E2E51C
 		public RoleVolumeMapInfo()
 		{
 			Comparison<RoleVolumeInfo> compare;
@@ -191,26 +191,26 @@ namespace CSharpScript.Game.Module.Audio
 			base..ctor();
 		}
 
-		// Token: 0x0402024A RID: 131658
+		// Token: 0x0401AD11 RID: 109841
 		public List<int> TeamEntityIdList = new List<int>();
 
-		// Token: 0x0402024B RID: 131659
+		// Token: 0x0401AD12 RID: 109842
 		public Dictionary<int, RoleVolumeInfo> RoleVolumeMap = new Dictionary<int, RoleVolumeInfo>();
 
-		// Token: 0x0402024C RID: 131660
+		// Token: 0x0401AD13 RID: 109843
 		public int CurrentPlayEntityId;
 
-		// Token: 0x0402024D RID: 131661
+		// Token: 0x0401AD14 RID: 109844
 		public int LastPlayEntityId = -1;
 
-		// Token: 0x0402024E RID: 131662
+		// Token: 0x0401AD15 RID: 109845
 		private readonly PriorityQueue<RoleVolumeInfo> TempQueue;
 
-		// Token: 0x0200C209 RID: 49673
+		// Token: 0x0200AC18 RID: 44056
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0403AA2E RID: 240174
+			// Token: 0x04035420 RID: 218144
 			[Nullable(new byte[]
 			{
 				0,

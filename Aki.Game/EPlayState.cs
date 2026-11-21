@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002C55 RID: 11349
+// Token: 0x020021AE RID: 8622
 public enum EPlayState
 {
-	// Token: 0x0400B078 RID: 45176
+	// Token: 0x0400B3E6 RID: 46054
 	None,
-	// Token: 0x0400B079 RID: 45177
+	// Token: 0x0400B3E7 RID: 46055
 	Play,
-	// Token: 0x0400B07A RID: 45178
+	// Token: 0x0400B3E8 RID: 46056
 	Stop
 }

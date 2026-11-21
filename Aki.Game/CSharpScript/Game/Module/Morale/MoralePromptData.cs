@@ -3,12 +3,12 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.Module.Morale
 {
-	// Token: 0x020053B4 RID: 21428
+	// Token: 0x02004397 RID: 17303
 	public class MoralePromptData : IMoralePromptData
 	{
-		// Token: 0x170083B4 RID: 33716
-		// (get) Token: 0x06036C18 RID: 224280 RVA: 0x00CF5A8A File Offset: 0x00CF3C8A
-		// (set) Token: 0x06036C19 RID: 224281 RVA: 0x00CF5A92 File Offset: 0x00CF3C92
+		// Token: 0x17005780 RID: 22400
+		// (get) Token: 0x0602BB5E RID: 179038 RVA: 0x00C44B32 File Offset: 0x00C42D32
+		// (set) Token: 0x0602BB5F RID: 179039 RVA: 0x00C44B3A File Offset: 0x00C42D3A
 		public EMoraleAreaType AreaId { get; set; }
 	}
 }

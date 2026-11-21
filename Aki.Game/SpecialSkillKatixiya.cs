@@ -5,13 +5,13 @@ using AkiClient.Game.Aki.Render.RuntimeBP.Character.Manager;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x02003194 RID: 12692
+// Token: 0x02002701 RID: 9985
 [NullableContext(1)]
 [Nullable(0)]
 public class SpecialSkillKatixiya : SpecialSkillMorphBase
 {
-	// Token: 0x170025C4 RID: 9668
-	// (get) Token: 0x0601B542 RID: 111938 RVA: 0x0077697E File Offset: 0x00774B7E
+	// Token: 0x170027B5 RID: 10165
+	// (get) Token: 0x06019046 RID: 102470 RVA: 0x0079E2F6 File Offset: 0x0079C4F6
 	protected override string MorphBuffsConfigKey
 	{
 		get
@@ -20,8 +20,8 @@ public class SpecialSkillKatixiya : SpecialSkillMorphBase
 		}
 	}
 
-	// Token: 0x170025C5 RID: 9669
-	// (get) Token: 0x0601B543 RID: 111939 RVA: 0x00776985 File Offset: 0x00774B85
+	// Token: 0x170027B6 RID: 10166
+	// (get) Token: 0x06019047 RID: 102471 RVA: 0x0079E2FD File Offset: 0x0079C4FD
 	protected override string MorphCueIdConfigKey
 	{
 		get
@@ -30,8 +30,8 @@ public class SpecialSkillKatixiya : SpecialSkillMorphBase
 		}
 	}
 
-	// Token: 0x170025C6 RID: 9670
-	// (get) Token: 0x0601B544 RID: 111940 RVA: 0x0077698C File Offset: 0x00774B8C
+	// Token: 0x170027B7 RID: 10167
+	// (get) Token: 0x06019048 RID: 102472 RVA: 0x0079E304 File Offset: 0x0079C504
 	protected override string ResetMorphSkillsConfigKey
 	{
 		get
@@ -40,8 +40,8 @@ public class SpecialSkillKatixiya : SpecialSkillMorphBase
 		}
 	}
 
-	// Token: 0x170025C7 RID: 9671
-	// (get) Token: 0x0601B545 RID: 111941 RVA: 0x00776993 File Offset: 0x00774B93
+	// Token: 0x170027B8 RID: 10168
+	// (get) Token: 0x06019049 RID: 102473 RVA: 0x0079E30B File Offset: 0x0079C50B
 	protected override string NotResetMorphSkillsConfigKey
 	{
 		get
@@ -50,8 +50,8 @@ public class SpecialSkillKatixiya : SpecialSkillMorphBase
 		}
 	}
 
-	// Token: 0x170025C8 RID: 9672
-	// (get) Token: 0x0601B546 RID: 111942 RVA: 0x0077699A File Offset: 0x00774B9A
+	// Token: 0x170027B9 RID: 10169
+	// (get) Token: 0x0601904A RID: 102474 RVA: 0x0079E312 File Offset: 0x0079C512
 	protected override string ChangeRoleResetMorphTagsConfigKey
 	{
 		get
@@ -60,7 +60,7 @@ public class SpecialSkillKatixiya : SpecialSkillMorphBase
 		}
 	}
 
-	// Token: 0x0601B547 RID: 111943 RVA: 0x007769A1 File Offset: 0x00774BA1
+	// Token: 0x0601904B RID: 102475 RVA: 0x0079E319 File Offset: 0x0079C519
 	protected override string GetSubMeshConfigKey(EMorphType morphType)
 	{
 		if (morphType == EMorphType.默认形态)
@@ -74,12 +74,12 @@ public class SpecialSkillKatixiya : SpecialSkillMorphBase
 		return "KatixiyaMorph1SubMeshList";
 	}
 
-	// Token: 0x0601B548 RID: 111944 RVA: 0x007769BD File Offset: 0x00774BBD
+	// Token: 0x0601904C RID: 102476 RVA: 0x0079E335 File Offset: 0x0079C535
 	public SpecialSkillKatixiya(CharacterSpecialSkillComponent specialSkillComponent) : base(specialSkillComponent)
 	{
 	}
 
-	// Token: 0x0601B549 RID: 111945 RVA: 0x007769C8 File Offset: 0x00774BC8
+	// Token: 0x0601904D RID: 102477 RVA: 0x0079E340 File Offset: 0x0079C540
 	public override void OnStart()
 	{
 		base.OnStart();
@@ -88,7 +88,7 @@ public class SpecialSkillKatixiya : SpecialSkillMorphBase
 		EventSystem.Instance.AddWithTarget<Entity, EMorphType, EMorphType>(entity, EEventName.OnBeforeCharacterMorphTypeChanged, new Action<Entity, EMorphType, EMorphType>(this.OnBeforeCharacterMorphTypeChanged));
 	}
 
-	// Token: 0x0601B54A RID: 111946 RVA: 0x00776A10 File Offset: 0x00774C10
+	// Token: 0x0601904E RID: 102478 RVA: 0x0079E388 File Offset: 0x0079C588
 	public override void OnEnd()
 	{
 		base.OnEnd();
@@ -97,7 +97,7 @@ public class SpecialSkillKatixiya : SpecialSkillMorphBase
 		this.ClearTimer();
 	}
 
-	// Token: 0x0601B54B RID: 111947 RVA: 0x00776A52 File Offset: 0x00774C52
+	// Token: 0x0601904F RID: 102479 RVA: 0x0079E3CA File Offset: 0x0079C5CA
 	private void ClearTimer()
 	{
 		if (this.UpdateMaterialTimer != null)
@@ -107,7 +107,7 @@ public class SpecialSkillKatixiya : SpecialSkillMorphBase
 		}
 	}
 
-	// Token: 0x0601B54C RID: 111948 RVA: 0x00776A74 File Offset: 0x00774C74
+	// Token: 0x06019050 RID: 102480 RVA: 0x0079E3EC File Offset: 0x0079C5EC
 	private void CheckCurrentSkill()
 	{
 		BaseSkillComponent skillComp = this.SkillComp;
@@ -149,7 +149,7 @@ public class SpecialSkillKatixiya : SpecialSkillMorphBase
 		}
 	}
 
-	// Token: 0x0601B54D RID: 111949 RVA: 0x00776AF4 File Offset: 0x00774CF4
+	// Token: 0x06019051 RID: 102481 RVA: 0x0079E46C File Offset: 0x0079C66C
 	protected override void OnCharacterMorphTypeChanged(Entity entity, EMorphType newMorphType, EMorphType oldMorphType)
 	{
 		if (newMorphType == EMorphType.默认形态)
@@ -172,7 +172,7 @@ public class SpecialSkillKatixiya : SpecialSkillMorphBase
 		base.RefreshNoUpdateMeshes(newMorphType);
 	}
 
-	// Token: 0x0601B54E RID: 111950 RVA: 0x00776B50 File Offset: 0x00774D50
+	// Token: 0x06019052 RID: 102482 RVA: 0x0079E4C8 File Offset: 0x0079C6C8
 	private void OnBeforeCharacterMorphTypeChanged(Entity entity, EMorphType newMorphType, EMorphType oldMorphType)
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -192,14 +192,14 @@ public class SpecialSkillKatixiya : SpecialSkillMorphBase
 		}
 	}
 
-	// Token: 0x0400D5BA RID: 54714
+	// Token: 0x0400DA1D RID: 55837
 	private const int UPDATE_MATERIAL_DELAY = 500;
 
-	// Token: 0x0400D5BB RID: 54715
+	// Token: 0x0400DA1E RID: 55838
 	[Nullable(2)]
 	private RoleEnergyComponent RoleEnergyComp;
 
-	// Token: 0x0400D5BC RID: 54716
+	// Token: 0x0400DA1F RID: 55839
 	[Nullable(2)]
 	private TimerHandle UpdateMaterialTimer;
 }

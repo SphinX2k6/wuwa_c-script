@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001048 RID: 4168
+	// Token: 0x02001038 RID: 4152
 	[NetMessage(EMessageId.RogueWeeklyRoomInfoNotify)]
 	public sealed class RogueWeeklyRoomInfoNotify : IMessage<RogueWeeklyRoomInfoNotify>, IMessage, IEquatable<RogueWeeklyRoomInfoNotify>, IDeepCloneable<RogueWeeklyRoomInfoNotify>, IBufferMessage
 	{
-		// Token: 0x0601644B RID: 91211 RVA: 0x0033BF7D File Offset: 0x0033A17D
+		// Token: 0x06016366 RID: 90982 RVA: 0x0033A8AD File Offset: 0x00338AAD
 		[NullableContext(1)]
 		public static RogueWeeklyRoomInfoNotify Create()
 		{
 			return new RogueWeeklyRoomInfoNotify();
 		}
 
-		// Token: 0x17004A70 RID: 19056
-		// (get) Token: 0x0601644C RID: 91212 RVA: 0x0033BF84 File Offset: 0x0033A184
+		// Token: 0x17004A46 RID: 19014
+		// (get) Token: 0x06016367 RID: 90983 RVA: 0x0033A8B4 File Offset: 0x00338AB4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004A71 RID: 19057
-		// (get) Token: 0x0601644D RID: 91213 RVA: 0x0033BF87 File Offset: 0x0033A187
+		// Token: 0x17004A47 RID: 19015
+		// (get) Token: 0x06016368 RID: 90984 RVA: 0x0033A8B7 File Offset: 0x00338AB7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601644E RID: 91214 RVA: 0x0033BF8E File Offset: 0x0033A18E
+		// Token: 0x06016369 RID: 90985 RVA: 0x0033A8BE File Offset: 0x00338ABE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueWeeklyRoomInfoNotify()
 		{
 		}
 
-		// Token: 0x0601644F RID: 91215 RVA: 0x0033BF98 File Offset: 0x0033A198
+		// Token: 0x0601636A RID: 90986 RVA: 0x0033A8C8 File Offset: 0x00338AC8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueWeeklyRoomInfoNotify(RogueWeeklyRoomInfoNotify other) : this()
@@ -63,7 +63,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06016450 RID: 91216 RVA: 0x0033C004 File Offset: 0x0033A204
+		// Token: 0x0601636B RID: 90987 RVA: 0x0033A934 File Offset: 0x00338B34
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueWeeklyRoomInfoNotify Clone()
@@ -71,9 +71,9 @@ namespace Aki.Protocol
 			return new RogueWeeklyRoomInfoNotify(this);
 		}
 
-		// Token: 0x17004A72 RID: 19058
-		// (get) Token: 0x06016451 RID: 91217 RVA: 0x0033C00C File Offset: 0x0033A20C
-		// (set) Token: 0x06016452 RID: 91218 RVA: 0x0033C014 File Offset: 0x0033A214
+		// Token: 0x17004A48 RID: 19016
+		// (get) Token: 0x0601636C RID: 90988 RVA: 0x0033A93C File Offset: 0x00338B3C
+		// (set) Token: 0x0601636D RID: 90989 RVA: 0x0033A944 File Offset: 0x00338B44
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CurLayer
@@ -88,9 +88,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004A73 RID: 19059
-		// (get) Token: 0x06016453 RID: 91219 RVA: 0x0033C01D File Offset: 0x0033A21D
-		// (set) Token: 0x06016454 RID: 91220 RVA: 0x0033C025 File Offset: 0x0033A225
+		// Token: 0x17004A49 RID: 19017
+		// (get) Token: 0x0601636E RID: 90990 RVA: 0x0033A94D File Offset: 0x00338B4D
+		// (set) Token: 0x0601636F RID: 90991 RVA: 0x0033A955 File Offset: 0x00338B55
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int MaxLayer
@@ -105,9 +105,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004A74 RID: 19060
-		// (get) Token: 0x06016455 RID: 91221 RVA: 0x0033C02E File Offset: 0x0033A22E
-		// (set) Token: 0x06016456 RID: 91222 RVA: 0x0033C036 File Offset: 0x0033A236
+		// Token: 0x17004A4A RID: 19018
+		// (get) Token: 0x06016370 RID: 90992 RVA: 0x0033A95E File Offset: 0x00338B5E
+		// (set) Token: 0x06016371 RID: 90993 RVA: 0x0033A966 File Offset: 0x00338B66
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RoguelikeRoomTypeId
@@ -122,9 +122,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004A75 RID: 19061
-		// (get) Token: 0x06016457 RID: 91223 RVA: 0x0033C03F File Offset: 0x0033A23F
-		// (set) Token: 0x06016458 RID: 91224 RVA: 0x0033C047 File Offset: 0x0033A247
+		// Token: 0x17004A4B RID: 19019
+		// (get) Token: 0x06016372 RID: 90994 RVA: 0x0033A96F File Offset: 0x00338B6F
+		// (set) Token: 0x06016373 RID: 90995 RVA: 0x0033A977 File Offset: 0x00338B77
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int SkyBoxId
@@ -139,9 +139,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004A76 RID: 19062
-		// (get) Token: 0x06016459 RID: 91225 RVA: 0x0033C050 File Offset: 0x0033A250
-		// (set) Token: 0x0601645A RID: 91226 RVA: 0x0033C058 File Offset: 0x0033A258
+		// Token: 0x17004A4C RID: 19020
+		// (get) Token: 0x06016374 RID: 90996 RVA: 0x0033A980 File Offset: 0x00338B80
+		// (set) Token: 0x06016375 RID: 90997 RVA: 0x0033A988 File Offset: 0x00338B88
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RoguelikeRoomId
@@ -156,9 +156,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004A77 RID: 19063
-		// (get) Token: 0x0601645B RID: 91227 RVA: 0x0033C061 File Offset: 0x0033A261
-		// (set) Token: 0x0601645C RID: 91228 RVA: 0x0033C069 File Offset: 0x0033A269
+		// Token: 0x17004A4D RID: 19021
+		// (get) Token: 0x06016376 RID: 90998 RVA: 0x0033A991 File Offset: 0x00338B91
+		// (set) Token: 0x06016377 RID: 90999 RVA: 0x0033A999 File Offset: 0x00338B99
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Score
@@ -173,7 +173,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601645D RID: 91229 RVA: 0x0033C072 File Offset: 0x0033A272
+		// Token: 0x06016378 RID: 91000 RVA: 0x0033A9A2 File Offset: 0x00338BA2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -181,7 +181,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RogueWeeklyRoomInfoNotify);
 		}
 
-		// Token: 0x0601645E RID: 91230 RVA: 0x0033C080 File Offset: 0x0033A280
+		// Token: 0x06016379 RID: 91001 RVA: 0x0033A9B0 File Offset: 0x00338BB0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RogueWeeklyRoomInfoNotify other)
@@ -189,7 +189,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.CurLayer == other.CurLayer && this.MaxLayer == other.MaxLayer && this.RoguelikeRoomTypeId == other.RoguelikeRoomTypeId && this.SkyBoxId == other.SkyBoxId && this.RoguelikeRoomId == other.RoguelikeRoomId && this.Score == other.Score && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601645F RID: 91231 RVA: 0x0033C10C File Offset: 0x0033A30C
+		// Token: 0x0601637A RID: 91002 RVA: 0x0033AA3C File Offset: 0x00338C3C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -226,7 +226,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06016460 RID: 91232 RVA: 0x0033C1C8 File Offset: 0x0033A3C8
+		// Token: 0x0601637B RID: 91003 RVA: 0x0033AAF8 File Offset: 0x00338CF8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -234,7 +234,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06016461 RID: 91233 RVA: 0x0033C1D5 File Offset: 0x0033A3D5
+		// Token: 0x0601637C RID: 91004 RVA: 0x0033AB05 File Offset: 0x00338D05
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -242,40 +242,40 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06016462 RID: 91234 RVA: 0x0033C1E0 File Offset: 0x0033A3E0
+		// Token: 0x0601637D RID: 91005 RVA: 0x0033AB10 File Offset: 0x00338D10
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.CurLayer != 0)
+			if (this.RoguelikeRoomId != 0)
 			{
-				output.WriteRawTag(8);
-				output.WriteInt32(this.CurLayer);
+				output.WriteRawTag(16);
+				output.WriteInt32(this.RoguelikeRoomId);
 			}
 			if (this.SkyBoxId != 0)
 			{
-				output.WriteRawTag(16);
+				output.WriteRawTag(32);
 				output.WriteInt32(this.SkyBoxId);
-			}
-			if (this.Score != 0)
-			{
-				output.WriteRawTag(24);
-				output.WriteInt32(this.Score);
-			}
-			if (this.RoguelikeRoomId != 0)
-			{
-				output.WriteRawTag(72);
-				output.WriteInt32(this.RoguelikeRoomId);
-			}
-			if (this.RoguelikeRoomTypeId != 0)
-			{
-				output.WriteRawTag(96);
-				output.WriteInt32(this.RoguelikeRoomTypeId);
 			}
 			if (this.MaxLayer != 0)
 			{
-				output.WriteRawTag(112);
+				output.WriteRawTag(48);
 				output.WriteInt32(this.MaxLayer);
+			}
+			if (this.CurLayer != 0)
+			{
+				output.WriteRawTag(64);
+				output.WriteInt32(this.CurLayer);
+			}
+			if (this.RoguelikeRoomTypeId != 0)
+			{
+				output.WriteRawTag(80);
+				output.WriteInt32(this.RoguelikeRoomTypeId);
+			}
+			if (this.Score != 0)
+			{
+				output.WriteRawTag(88);
+				output.WriteInt32(this.Score);
 			}
 			if (this._unknownFields != null)
 			{
@@ -283,7 +283,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06016463 RID: 91235 RVA: 0x0033C2A8 File Offset: 0x0033A4A8
+		// Token: 0x0601637E RID: 91006 RVA: 0x0033ABDC File Offset: 0x00338DDC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -320,7 +320,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06016464 RID: 91236 RVA: 0x0033C360 File Offset: 0x0033A560
+		// Token: 0x0601637F RID: 91007 RVA: 0x0033AC94 File Offset: 0x00338E94
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RogueWeeklyRoomInfoNotify other)
@@ -356,7 +356,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06016465 RID: 91237 RVA: 0x0033C400 File Offset: 0x0033A600
+		// Token: 0x06016380 RID: 91008 RVA: 0x0033AD34 File Offset: 0x00338F34
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -364,7 +364,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06016466 RID: 91238 RVA: 0x0033C40C File Offset: 0x0033A60C
+		// Token: 0x06016381 RID: 91009 RVA: 0x0033AD40 File Offset: 0x00338F40
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -376,39 +376,39 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 24U)
+				if (num <= 48U)
 				{
-					if (num == 8U)
+					if (num == 16U)
 					{
-						this.CurLayer = input.ReadInt32();
+						this.RoguelikeRoomId = input.ReadInt32();
 						continue;
 					}
-					if (num == 16U)
+					if (num == 32U)
 					{
 						this.SkyBoxId = input.ReadInt32();
 						continue;
 					}
-					if (num == 24U)
+					if (num == 48U)
 					{
-						this.Score = input.ReadInt32();
+						this.MaxLayer = input.ReadInt32();
 						continue;
 					}
 				}
 				else
 				{
-					if (num == 72U)
+					if (num == 64U)
 					{
-						this.RoguelikeRoomId = input.ReadInt32();
+						this.CurLayer = input.ReadInt32();
 						continue;
 					}
-					if (num == 96U)
+					if (num == 80U)
 					{
 						this.RoguelikeRoomTypeId = input.ReadInt32();
 						continue;
 					}
-					if (num == 112U)
+					if (num == 88U)
 					{
-						this.MaxLayer = input.ReadInt32();
+						this.Score = input.ReadInt32();
 						continue;
 					}
 				}
@@ -416,43 +416,43 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04008527 RID: 34087
+		// Token: 0x04008551 RID: 34129
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04008528 RID: 34088
-		public const int CurLayerFieldNumber = 1;
+		// Token: 0x04008552 RID: 34130
+		public const int CurLayerFieldNumber = 8;
 
-		// Token: 0x04008529 RID: 34089
+		// Token: 0x04008553 RID: 34131
 		private int curLayer_;
 
-		// Token: 0x0400852A RID: 34090
-		public const int MaxLayerFieldNumber = 14;
+		// Token: 0x04008554 RID: 34132
+		public const int MaxLayerFieldNumber = 6;
 
-		// Token: 0x0400852B RID: 34091
+		// Token: 0x04008555 RID: 34133
 		private int maxLayer_;
 
-		// Token: 0x0400852C RID: 34092
-		public const int RoguelikeRoomTypeIdFieldNumber = 12;
+		// Token: 0x04008556 RID: 34134
+		public const int RoguelikeRoomTypeIdFieldNumber = 10;
 
-		// Token: 0x0400852D RID: 34093
+		// Token: 0x04008557 RID: 34135
 		private int roguelikeRoomTypeId_;
 
-		// Token: 0x0400852E RID: 34094
-		public const int SkyBoxIdFieldNumber = 2;
+		// Token: 0x04008558 RID: 34136
+		public const int SkyBoxIdFieldNumber = 4;
 
-		// Token: 0x0400852F RID: 34095
+		// Token: 0x04008559 RID: 34137
 		private int skyBoxId_;
 
-		// Token: 0x04008530 RID: 34096
-		public const int RoguelikeRoomIdFieldNumber = 9;
+		// Token: 0x0400855A RID: 34138
+		public const int RoguelikeRoomIdFieldNumber = 2;
 
-		// Token: 0x04008531 RID: 34097
+		// Token: 0x0400855B RID: 34139
 		private int roguelikeRoomId_;
 
-		// Token: 0x04008532 RID: 34098
-		public const int ScoreFieldNumber = 3;
+		// Token: 0x0400855C RID: 34140
+		public const int ScoreFieldNumber = 11;
 
-		// Token: 0x04008533 RID: 34099
+		// Token: 0x0400855D RID: 34141
 		private int score_;
 	}
 }

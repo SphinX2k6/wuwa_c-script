@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb.DamageStatistics
 {
-	// Token: 0x0200527A RID: 21114
+	// Token: 0x0200424A RID: 16970
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaBattleDamageStatisticsItem : UiPanelBase
 	{
-		// Token: 0x06035FF9 RID: 221177 RVA: 0x00CC7320 File Offset: 0x00CC5520
+		// Token: 0x0602AEF4 RID: 175860 RVA: 0x00C14A20 File Offset: 0x00C12C20
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb.DamageStatistics
 			};
 		}
 
-		// Token: 0x06035FFA RID: 221178 RVA: 0x00CC73BC File Offset: 0x00CC55BC
+		// Token: 0x0602AEF5 RID: 175861 RVA: 0x00C14ABC File Offset: 0x00C12CBC
 		protected override void OnStart()
 		{
 			this.ValueSprite = base.GetSprite(4);
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb.DamageStatistics
 			this.OffsetTween.BindUpdateTween(new Action<int>(this.UpdateOffsetY));
 		}
 
-		// Token: 0x06035FFB RID: 221179 RVA: 0x00CC741A File Offset: 0x00CC561A
+		// Token: 0x0602AEF6 RID: 175862 RVA: 0x00C14B1A File Offset: 0x00C12D1A
 		protected override void OnDestroy()
 		{
 			this.ValueTween.Destroy();
@@ -48,14 +48,14 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb.DamageStatistics
 			this.Entity = null;
 		}
 
-		// Token: 0x06035FFC RID: 221180 RVA: 0x00CC7448 File Offset: 0x00CC5648
+		// Token: 0x0602AEF7 RID: 175863 RVA: 0x00C14B48 File Offset: 0x00C12D48
 		private void RefreshIcon()
 		{
 			PhantomCardData cardDataByEntityId = PhantomArenaBattleModel.Instance.BattleData.GetCardDataByEntityId(this.EntityId);
 			base.SetTextureByPath(PhantomArenaConfig.Instance.GetPhantomBattleCardConfig(cardDataByEntityId.ConfigId).BvbIcon, base.GetTexture(2), null, null);
 		}
 
-		// Token: 0x06035FFD RID: 221181 RVA: 0x00CC749C File Offset: 0x00CC569C
+		// Token: 0x0602AEF8 RID: 175864 RVA: 0x00C14B9C File Offset: 0x00C12D9C
 		private void RefreshName()
 		{
 			PhantomCardData cardDataByEntityId = PhantomArenaBattleModel.Instance.BattleData.GetCardDataByEntityId(this.EntityId);
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb.DamageStatistics
 			uuiitem.SetChangeColor(isNpcCard, fcolor);
 		}
 
-		// Token: 0x06035FFE RID: 221182 RVA: 0x00CC750C File Offset: 0x00CC570C
+		// Token: 0x0602AEF9 RID: 175865 RVA: 0x00C14C0C File Offset: 0x00C12E0C
 		private void RefreshBg()
 		{
 			PhantomCardData cardDataByEntityId = PhantomArenaBattleModel.Instance.BattleData.GetCardDataByEntityId(this.EntityId);
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb.DamageStatistics
 			valueSprite.SetChangeColor(isNpcCard, fcolor);
 		}
 
-		// Token: 0x06035FFF RID: 221183 RVA: 0x00CC757C File Offset: 0x00CC577C
+		// Token: 0x0602AEFA RID: 175866 RVA: 0x00C14C7C File Offset: 0x00C12E7C
 		public void Init(long entityId, UCurveFloat lerpCurve, float offsetY)
 		{
 			this.RemoveEntityEvents(this.Entity);
@@ -97,14 +97,14 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb.DamageStatistics
 			this.RefreshBg();
 		}
 
-		// Token: 0x06036000 RID: 221184 RVA: 0x00CC7604 File Offset: 0x00CC5804
+		// Token: 0x0602AEFB RID: 175867 RVA: 0x00C14D04 File Offset: 0x00C12F04
 		public void RefreshOffsetY(float offsetY)
 		{
 			float anchorOffsetY = this.GetOriginalItem().GetAnchorOffsetY();
 			this.OffsetTween.PlayTween((int)anchorOffsetY, (int)offsetY, 0.3f, null);
 		}
 
-		// Token: 0x06036001 RID: 221185 RVA: 0x00CC7634 File Offset: 0x00CC5834
+		// Token: 0x0602AEFC RID: 175868 RVA: 0x00C14D34 File Offset: 0x00C12F34
 		public void RefreshCount()
 		{
 			int num = this.GetAllCount();
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb.DamageStatistics
 			base.GetText(5).SetText(num2.ToString(), true);
 		}
 
-		// Token: 0x06036002 RID: 221186 RVA: 0x00CC76C0 File Offset: 0x00CC58C0
+		// Token: 0x0602AEFD RID: 175869 RVA: 0x00C14DC0 File Offset: 0x00C12FC0
 		private void AddEntityEvents(Entity entity)
 		{
 			if (entity == null)
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb.DamageStatistics
 			}
 		}
 
-		// Token: 0x06036003 RID: 221187 RVA: 0x00CC773C File Offset: 0x00CC593C
+		// Token: 0x0602AEFE RID: 175870 RVA: 0x00C14E3C File Offset: 0x00C1303C
 		private void RemoveEntityEvents(Entity entity)
 		{
 			if (entity == null)
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb.DamageStatistics
 			}
 		}
 
-		// Token: 0x06036004 RID: 221188 RVA: 0x00CC77B8 File Offset: 0x00CC59B8
+		// Token: 0x0602AEFF RID: 175871 RVA: 0x00C14EB8 File Offset: 0x00C130B8
 		private void OnEntityInjury(Entity attacker, Entity victim, RequirementPayload requirements, DamageResult damageResult, FVectorDouble _)
 		{
 			int arg = (int)this.AttributeComp.GetCurrentValue(EAttributeType.LifeMax);
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb.DamageStatistics
 			notifyValueChange(this.EntityId, (int)Math.Abs(damageResult.Damage), arg, EDamageStatisticsRankType.Injury);
 		}
 
-		// Token: 0x06036005 RID: 221189 RVA: 0x00CC77F8 File Offset: 0x00CC59F8
+		// Token: 0x0602AF00 RID: 175872 RVA: 0x00C14EF8 File Offset: 0x00C130F8
 		private void OnEntityDamage(Entity attacker, Entity victim, RequirementPayload requirements, DamageResult damageResult, FVectorDouble _)
 		{
 			if (damageResult.DamageData.Id == 700020001L)
@@ -187,71 +187,71 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb.DamageStatistics
 			notifyValueChange(this.EntityId, (int)Math.Abs(damageResult.Damage), arg, EDamageStatisticsRankType.Damage);
 		}
 
-		// Token: 0x06036006 RID: 221190 RVA: 0x00CC785C File Offset: 0x00CC5A5C
+		// Token: 0x0602AF01 RID: 175873 RVA: 0x00C14F5C File Offset: 0x00C1315C
 		private void UpdateSlider(float value)
 		{
 			this.ValueSprite.SetFillAmount(value);
 		}
 
-		// Token: 0x06036007 RID: 221191 RVA: 0x00CC786A File Offset: 0x00CC5A6A
+		// Token: 0x0602AF02 RID: 175874 RVA: 0x00C14F6A File Offset: 0x00C1316A
 		private void UpdateOffsetY(int value)
 		{
 			this.GetOriginalItem().SetAnchorOffsetY((float)value);
 		}
 
-		// Token: 0x0401C97A RID: 117114
+		// Token: 0x040173AF RID: 95151
 		private const int BURN_BLOOD_BUFF_RESULT_ID = 700020001;
 
-		// Token: 0x0401C97B RID: 117115
+		// Token: 0x040173B0 RID: 95152
 		protected LguiFloatTween ValueTween;
 
-		// Token: 0x0401C97C RID: 117116
+		// Token: 0x040173B1 RID: 95153
 		protected LguiIntTween OffsetTween;
 
-		// Token: 0x0401C97D RID: 117117
+		// Token: 0x040173B2 RID: 95154
 		protected long EntityId;
 
-		// Token: 0x0401C97E RID: 117118
+		// Token: 0x040173B3 RID: 95155
 		protected Entity Entity;
 
-		// Token: 0x0401C97F RID: 117119
+		// Token: 0x040173B4 RID: 95156
 		protected BaseAttributeComponent AttributeComp;
 
-		// Token: 0x0401C980 RID: 117120
+		// Token: 0x040173B5 RID: 95157
 		protected UUISprite ValueSprite;
 
-		// Token: 0x0401C981 RID: 117121
+		// Token: 0x040173B6 RID: 95158
 		protected UCurveFloat LerpCurve;
 
-		// Token: 0x0401C982 RID: 117122
+		// Token: 0x040173B7 RID: 95159
 		public Func<int> GetAllCount;
 
-		// Token: 0x0401C983 RID: 117123
+		// Token: 0x040173B8 RID: 95160
 		public Func<long, int> GetCount;
 
-		// Token: 0x0401C984 RID: 117124
+		// Token: 0x040173B9 RID: 95161
 		public Action<long, int, int, EDamageStatisticsRankType> NotifyValueChange;
 
-		// Token: 0x0200B479 RID: 46201
+		// Token: 0x02009EB1 RID: 40625
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x04036ADE RID: 223966
+			// Token: 0x04031531 RID: 202033
 			public const int OwnBg = 0;
 
-			// Token: 0x04036ADF RID: 223967
+			// Token: 0x04031532 RID: 202034
 			public const int OpponentBg = 1;
 
-			// Token: 0x04036AE0 RID: 223968
+			// Token: 0x04031533 RID: 202035
 			public const int Icon = 2;
 
-			// Token: 0x04036AE1 RID: 223969
+			// Token: 0x04031534 RID: 202036
 			public const int Name = 3;
 
-			// Token: 0x04036AE2 RID: 223970
+			// Token: 0x04031535 RID: 202037
 			public const int ValueSprite = 4;
 
-			// Token: 0x04036AE3 RID: 223971
+			// Token: 0x04031536 RID: 202038
 			public const int Count = 5;
 		}
 	}

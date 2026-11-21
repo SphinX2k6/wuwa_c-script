@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnrealEngine;
 
-// Token: 0x0200199B RID: 6555
+// Token: 0x02000E58 RID: 3672
 public class SmallItemTopRightTagComponent : SmallItemGridComponent
 {
-	// Token: 0x0600BF76 RID: 49014 RVA: 0x002B3E80 File Offset: 0x002B2080
+	// Token: 0x0600937E RID: 37758 RVA: 0x002BEE04 File Offset: 0x002BD004
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -21,7 +21,7 @@ public class SmallItemTopRightTagComponent : SmallItemGridComponent
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BF77 RID: 49015 RVA: 0x002B3EEC File Offset: 0x002B20EC
+	// Token: 0x0600937F RID: 37759 RVA: 0x002BEE70 File Offset: 0x002BD070
 	[NullableContext(2)]
 	protected override void OnRefresh(object tempData)
 	{
@@ -58,25 +58,25 @@ public class SmallItemTopRightTagComponent : SmallItemGridComponent
 		}
 	}
 
-	// Token: 0x0600BF78 RID: 49016 RVA: 0x002B3FAD File Offset: 0x002B21AD
+	// Token: 0x06009380 RID: 37760 RVA: 0x002BEF31 File Offset: 0x002BD131
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_ItemTopRightText";
 	}
 
-	// Token: 0x0600BF79 RID: 49017 RVA: 0x002B3FB4 File Offset: 0x002B21B4
+	// Token: 0x06009381 RID: 37761 RVA: 0x002BEF38 File Offset: 0x002BD138
 	public override EItemGridComponentLayoutLevel GetLayoutLevel()
 	{
 		return EItemGridComponentLayoutLevel.Bottom;
 	}
 
-	// Token: 0x02007ED3 RID: 32467
+	// Token: 0x02007062 RID: 28770
 	private enum EChildType
 	{
-		// Token: 0x04029724 RID: 169764
+		// Token: 0x04024A61 RID: 150113
 		BgSprite,
-		// Token: 0x04029725 RID: 169765
+		// Token: 0x04024A62 RID: 150114
 		TopRightText
 	}
 }

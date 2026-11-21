@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000BDE RID: 3038
+	// Token: 0x02000CC0 RID: 3264
 	public struct DangoSkill : IFlatbufferObject
 	{
-		// Token: 0x17000C0E RID: 3086
-		// (get) Token: 0x060060BF RID: 24767 RVA: 0x00210414 File Offset: 0x0020E614
+		// Token: 0x17000C54 RID: 3156
+		// (get) Token: 0x06006698 RID: 26264 RVA: 0x0022FA5C File Offset: 0x0022DC5C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060060C0 RID: 24768 RVA: 0x00210421 File Offset: 0x0020E621
+		// Token: 0x06006699 RID: 26265 RVA: 0x0022FA69 File Offset: 0x0022DC69
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060060C1 RID: 24769 RVA: 0x00210428 File Offset: 0x0020E628
+		// Token: 0x0600669A RID: 26266 RVA: 0x0022FA70 File Offset: 0x0022DC70
 		public static DangoSkill GetRootAsDangoSkill(ByteBuffer _bb)
 		{
 			return DangoSkill.GetRootAsDangoSkill(_bb, default(DangoSkill));
 		}
 
-		// Token: 0x060060C2 RID: 24770 RVA: 0x00210444 File Offset: 0x0020E644
+		// Token: 0x0600669B RID: 26267 RVA: 0x0022FA8C File Offset: 0x0022DC8C
 		public static DangoSkill GetRootAsDangoSkill(ByteBuffer _bb, DangoSkill obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060060C3 RID: 24771 RVA: 0x00210461 File Offset: 0x0020E661
+		// Token: 0x0600669C RID: 26268 RVA: 0x0022FAA9 File Offset: 0x0022DCA9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060060C4 RID: 24772 RVA: 0x00210470 File Offset: 0x0020E670
+		// Token: 0x0600669D RID: 26269 RVA: 0x0022FAB8 File Offset: 0x0022DCB8
 		public DangoSkill __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000C0F RID: 3087
-		// (get) Token: 0x060060C5 RID: 24773 RVA: 0x00210480 File Offset: 0x0020E680
+		// Token: 0x17000C55 RID: 3157
+		// (get) Token: 0x0600669E RID: 26270 RVA: 0x0022FAC8 File Offset: 0x0022DCC8
 		public int Id
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000C10 RID: 3088
-		// (get) Token: 0x060060C6 RID: 24774 RVA: 0x002104BC File Offset: 0x0020E6BC
+		// Token: 0x17000C56 RID: 3158
+		// (get) Token: 0x0600669F RID: 26271 RVA: 0x0022FB04 File Offset: 0x0022DD04
 		public string Name
 		{
 			get
@@ -80,20 +80,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060060C7 RID: 24775 RVA: 0x002104F3 File Offset: 0x0020E6F3
+		// Token: 0x060066A0 RID: 26272 RVA: 0x0022FB3B File Offset: 0x0022DD3B
 		public Span<byte> GetNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x060060C8 RID: 24776 RVA: 0x00210502 File Offset: 0x0020E702
+		// Token: 0x060066A1 RID: 26273 RVA: 0x0022FB4A File Offset: 0x0022DD4A
 		public byte[] GetNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17000C11 RID: 3089
-		// (get) Token: 0x060060C9 RID: 24777 RVA: 0x0021051C File Offset: 0x0020E71C
+		// Token: 0x17000C57 RID: 3159
+		// (get) Token: 0x060066A2 RID: 26274 RVA: 0x0022FB64 File Offset: 0x0022DD64
 		public string Desc
 		{
 			get
@@ -107,20 +107,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060060CA RID: 24778 RVA: 0x00210553 File Offset: 0x0020E753
+		// Token: 0x060066A3 RID: 26275 RVA: 0x0022FB9B File Offset: 0x0022DD9B
 		public Span<byte> GetDescBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x060060CB RID: 24779 RVA: 0x00210562 File Offset: 0x0020E762
+		// Token: 0x060066A4 RID: 26276 RVA: 0x0022FBAA File Offset: 0x0022DDAA
 		public byte[] GetDescArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17000C12 RID: 3090
-		// (get) Token: 0x060060CC RID: 24780 RVA: 0x0021057C File Offset: 0x0020E77C
+		// Token: 0x17000C58 RID: 3160
+		// (get) Token: 0x060066A5 RID: 26277 RVA: 0x0022FBC4 File Offset: 0x0022DDC4
 		public string ActivateDesc
 		{
 			get
@@ -134,20 +134,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060060CD RID: 24781 RVA: 0x002105B4 File Offset: 0x0020E7B4
+		// Token: 0x060066A6 RID: 26278 RVA: 0x0022FBFC File Offset: 0x0022DDFC
 		public Span<byte> GetActivateDescBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x060060CE RID: 24782 RVA: 0x002105C4 File Offset: 0x0020E7C4
+		// Token: 0x060066A7 RID: 26279 RVA: 0x0022FC0C File Offset: 0x0022DE0C
 		public byte[] GetActivateDescArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17000C13 RID: 3091
-		// (get) Token: 0x060060CF RID: 24783 RVA: 0x002105DC File Offset: 0x0020E7DC
+		// Token: 0x17000C59 RID: 3161
+		// (get) Token: 0x060066A8 RID: 26280 RVA: 0x0022FC24 File Offset: 0x0022DE24
 		public int SkillEffect
 		{
 			get
@@ -161,7 +161,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060060D0 RID: 24784 RVA: 0x0021061C File Offset: 0x0020E81C
+		// Token: 0x060066A9 RID: 26281 RVA: 0x0022FC64 File Offset: 0x0022DE64
 		public string Params(int j)
 		{
 			int num = this.__p.__offset(14);
@@ -172,8 +172,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000C14 RID: 3092
-		// (get) Token: 0x060060D1 RID: 24785 RVA: 0x00210658 File Offset: 0x0020E858
+		// Token: 0x17000C5A RID: 3162
+		// (get) Token: 0x060066AA RID: 26282 RVA: 0x0022FCA0 File Offset: 0x0022DEA0
 		public int ParamsLength
 		{
 			get
@@ -187,24 +187,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060060D2 RID: 24786 RVA: 0x00210684 File Offset: 0x0020E884
+		// Token: 0x060066AB RID: 26283 RVA: 0x0022FCCC File Offset: 0x0022DECC
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ParamsIter()或GetParamsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] Params()
+		public string[] Params()
 		{
 			return this.ParamsIter().ToArray<string>();
 		}
 
-		// Token: 0x060060D3 RID: 24787 RVA: 0x00210691 File Offset: 0x0020E891
+		// Token: 0x060066AC RID: 26284 RVA: 0x0022FCD9 File Offset: 0x0022DED9
 		[NullableContext(1)]
-		public readonly IEnumerable<string> ParamsIter()
+		public IEnumerable<string> ParamsIter()
 		{
 			DangoSkill.<ParamsIter>d__28 <ParamsIter>d__ = new DangoSkill.<ParamsIter>d__28(-2);
 			<ParamsIter>d__.<>3__<>4__this = this;
 			return <ParamsIter>d__;
 		}
 
-		// Token: 0x04004C0B RID: 19467
+		// Token: 0x040051ED RID: 20973
 		private Table __p;
 	}
 }

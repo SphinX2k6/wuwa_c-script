@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200123C RID: 4668
+	// Token: 0x0200137C RID: 4988
 	public static class EEnableSystemTypeExtensions
 	{
-		// Token: 0x060069B5 RID: 27061 RVA: 0x000FD1CC File Offset: 0x000FB3CC
+		// Token: 0x06007008 RID: 28680 RVA: 0x0010AD98 File Offset: 0x00108F98
 		public static string ToEnumString(this EEnableSystemType value)
 		{
 			string result;
@@ -53,6 +53,9 @@ namespace Aki.TDConfigMgr.Quest
 			case EEnableSystemType.RoleTower:
 				result = "RoleTower";
 				break;
+			case EEnableSystemType.DarkTide:
+				result = "DarkTide";
+				break;
 			default:
 				result = value.ToString();
 				break;
@@ -60,7 +63,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060069B6 RID: 27062 RVA: 0x000FD298 File Offset: 0x000FB498
+		// Token: 0x06007009 RID: 28681 RVA: 0x0010AE70 File Offset: 0x00109070
 		public static EEnableSystemType FromString(string name)
 		{
 			EEnableSystemType result;
@@ -71,7 +74,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060069B7 RID: 27063 RVA: 0x000FD2C4 File Offset: 0x000FB4C4
+		// Token: 0x0600700A RID: 28682 RVA: 0x0010AE9C File Offset: 0x0010909C
 		public static bool TryFromString(string name, out EEnableSystemType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -92,12 +95,26 @@ namespace Aki.TDConfigMgr.Quest
 					}
 					break;
 				case 8:
-					if (name == "Kurotato")
+				{
+					char c = name[0];
+					if (c != 'D')
 					{
-						value = EEnableSystemType.Kurotato;
+						if (c == 'K')
+						{
+							if (name == "Kurotato")
+							{
+								value = EEnableSystemType.Kurotato;
+								return true;
+							}
+						}
+					}
+					else if (name == "DarkTide")
+					{
+						value = EEnableSystemType.DarkTide;
 						return true;
 					}
 					break;
+				}
 				case 9:
 					if (name == "RoleTower")
 					{
@@ -224,7 +241,7 @@ namespace Aki.TDConfigMgr.Quest
 			return false;
 		}
 
-		// Token: 0x060069B8 RID: 27064 RVA: 0x000FD4F4 File Offset: 0x000FB6F4
+		// Token: 0x0600700B RID: 28683 RVA: 0x0010B110 File Offset: 0x00109310
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -242,11 +259,12 @@ namespace Aki.TDConfigMgr.Quest
 				"Flipper",
 				"RogueTowerTrial",
 				"KuroSimpleCombatKillMonster",
-				"RoleTower"
+				"RoleTower",
+				"DarkTide"
 			};
 		}
 
-		// Token: 0x060069B9 RID: 27065 RVA: 0x000FD57D File Offset: 0x000FB77D
+		// Token: 0x0600700C RID: 28684 RVA: 0x0010B1A2 File Offset: 0x001093A2
 		public static EEnableSystemType[] GetValues()
 		{
 			return new EEnableSystemType[]
@@ -264,11 +282,12 @@ namespace Aki.TDConfigMgr.Quest
 				EEnableSystemType.Flipper,
 				EEnableSystemType.RogueTowerTrial,
 				EEnableSystemType.KuroSimpleCombatKillMonster,
-				EEnableSystemType.RoleTower
+				EEnableSystemType.RoleTower,
+				EEnableSystemType.DarkTide
 			};
 		}
 
-		// Token: 0x060069BA RID: 27066 RVA: 0x000FD594 File Offset: 0x000FB794
+		// Token: 0x0600700D RID: 28685 RVA: 0x0010B1B8 File Offset: 0x001093B8
 		public static string[] GetNames()
 		{
 			return new string[]
@@ -286,7 +305,8 @@ namespace Aki.TDConfigMgr.Quest
 				"Flipper",
 				"RogueTowerTrial",
 				"KuroSimpleCombatKillMonster",
-				"RoleTower"
+				"RoleTower",
+				"DarkTide"
 			};
 		}
 	}

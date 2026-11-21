@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Cook.View
 {
-	// Token: 0x02005B20 RID: 23328
+	// Token: 0x02004B01 RID: 19201
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Cook.View
 	})]
 	public class CookRoleItem : GridProxyAbstract<ICookRoleItemData>
 	{
-		// Token: 0x0603B0D5 RID: 241877 RVA: 0x00E14420 File Offset: 0x00E12620
+		// Token: 0x06030047 RID: 196679 RVA: 0x00D65138 File Offset: 0x00D63338
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -41,14 +41,14 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B0D6 RID: 241878 RVA: 0x00E14508 File Offset: 0x00E12708
+		// Token: 0x06030048 RID: 196680 RVA: 0x00D65220 File Offset: 0x00D63420
 		protected override void OnStart()
 		{
 			this.ItemGrid = new SmallItemGrid();
 			this.ItemGrid.Initialize(base.GetItem(3).GetOwner());
 		}
 
-		// Token: 0x0603B0D7 RID: 241879 RVA: 0x00E1452C File Offset: 0x00E1272C
+		// Token: 0x06030049 RID: 196681 RVA: 0x00D65244 File Offset: 0x00D63444
 		[NullableContext(1)]
 		public override void Refresh(ICookRoleItemData data, bool isSelected, int gridIndex)
 		{
@@ -66,20 +66,20 @@ namespace CSharpScript.Game.Module.Cook.View
 			base.GetText(2).OnSelfLanguageChange.Bind(new Action(this.OnLanguageChange));
 		}
 
-		// Token: 0x0603B0D8 RID: 241880 RVA: 0x00E145AC File Offset: 0x00E127AC
+		// Token: 0x0603004A RID: 196682 RVA: 0x00D652C4 File Offset: 0x00D634C4
 		public override void Clear()
 		{
 			base.GetText(2).OnSelfLanguageChange.Unbind();
 		}
 
-		// Token: 0x0603B0D9 RID: 241881 RVA: 0x00E145BF File Offset: 0x00E127BF
+		// Token: 0x0603004B RID: 196683 RVA: 0x00D652D7 File Offset: 0x00D634D7
 		protected override void OnBeforeDestroy()
 		{
 			this.ItemGrid.Destroy(null);
 			this.ItemGrid = null;
 		}
 
-		// Token: 0x0603B0DA RID: 241882 RVA: 0x00E145D4 File Offset: 0x00E127D4
+		// Token: 0x0603004C RID: 196684 RVA: 0x00D652EC File Offset: 0x00D634EC
 		private void SetCookInfoText()
 		{
 			if (CookController.Instance.CheckIsBuff(this.ItemData.RoleId, this.ItemData.ItemId))
@@ -92,38 +92,38 @@ namespace CSharpScript.Game.Module.Cook.View
 			base.GetText(2).SetText(textById, true);
 		}
 
-		// Token: 0x0603B0DB RID: 241883 RVA: 0x00E14646 File Offset: 0x00E12846
+		// Token: 0x0603004D RID: 196685 RVA: 0x00D6535E File Offset: 0x00D6355E
 		private void SetName()
 		{
 			base.GetText(1).SetText(this.ItemData.RoleName, true);
 		}
 
-		// Token: 0x0603B0DC RID: 241884 RVA: 0x00E14660 File Offset: 0x00E12860
+		// Token: 0x0603004E RID: 196686 RVA: 0x00D65378 File Offset: 0x00D63578
 		private void OnLanguageChange()
 		{
 			this.SetCookInfoText();
 		}
 
-		// Token: 0x0603B0DD RID: 241885 RVA: 0x00E14668 File Offset: 0x00E12868
+		// Token: 0x0603004F RID: 196687 RVA: 0x00D65380 File Offset: 0x00D63580
 		[NullableContext(1)]
 		public void BindOnClickedCallback(Action<int> onItemButtonClicked)
 		{
 			this.OnClickedCallback = onItemButtonClicked;
 		}
 
-		// Token: 0x0603B0DE RID: 241886 RVA: 0x00E14671 File Offset: 0x00E12871
+		// Token: 0x06030050 RID: 196688 RVA: 0x00D65389 File Offset: 0x00D63589
 		public override void OnSelected(bool fireEvent)
 		{
 			this.Selected(true, true);
 		}
 
-		// Token: 0x0603B0DF RID: 241887 RVA: 0x00E1467B File Offset: 0x00E1287B
+		// Token: 0x06030051 RID: 196689 RVA: 0x00D65393 File Offset: 0x00D63593
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.Selected(false, true);
 		}
 
-		// Token: 0x0603B0E0 RID: 241888 RVA: 0x00E14688 File Offset: 0x00E12888
+		// Token: 0x06030052 RID: 196690 RVA: 0x00D653A0 File Offset: 0x00D635A0
 		private void Selected(bool bSelected, bool fire = true)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.Cook.View
 			extendToggle.SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0603B0E1 RID: 241889 RVA: 0x00E146B7 File Offset: 0x00E128B7
+		// Token: 0x06030053 RID: 196691 RVA: 0x00D653CF File Offset: 0x00D635CF
 		private void OnClick(EToggleState state)
 		{
 			if (this.OnClickedCallback != null)
@@ -144,26 +144,26 @@ namespace CSharpScript.Game.Module.Cook.View
 			}
 		}
 
-		// Token: 0x0401ECC6 RID: 126150
+		// Token: 0x04019782 RID: 104322
 		private ICookRoleItemData ItemData;
 
-		// Token: 0x0401ECC7 RID: 126151
+		// Token: 0x04019783 RID: 104323
 		private Action<int> OnClickedCallback;
 
-		// Token: 0x0401ECC8 RID: 126152
+		// Token: 0x04019784 RID: 104324
 		private SmallItemGrid ItemGrid;
 
-		// Token: 0x0200BD58 RID: 48472
+		// Token: 0x0200A761 RID: 42849
 		[NullableContext(0)]
 		public enum ECookRoleItemDefine
 		{
-			// Token: 0x040391BD RID: 233917
+			// Token: 0x04033B89 RID: 211849
 			CookRoleExtendToggle,
-			// Token: 0x040391BE RID: 233918
+			// Token: 0x04033B8A RID: 211850
 			RoleNameText,
-			// Token: 0x040391BF RID: 233919
+			// Token: 0x04033B8B RID: 211851
 			CookInfoText,
-			// Token: 0x040391C0 RID: 233920
+			// Token: 0x04033B8C RID: 211852
 			ItemGridItem
 		}
 	}

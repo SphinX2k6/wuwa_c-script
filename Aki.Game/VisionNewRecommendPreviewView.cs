@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -13,18 +11,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020024DB RID: 9435
+// Token: 0x020019C2 RID: 6594
 [NullableContext(1)]
 [Nullable(0)]
 public class VisionNewRecommendPreviewView : UiViewBase
 {
-	// Token: 0x06012F7C RID: 77692 RVA: 0x004B20CC File Offset: 0x004B02CC
+	// Token: 0x0601043B RID: 66619 RVA: 0x004BFCCC File Offset: 0x004BDECC
 	public VisionNewRecommendPreviewView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x170018B3 RID: 6323
-	// (get) Token: 0x06012F7D RID: 77693 RVA: 0x004B20D5 File Offset: 0x004B02D5
+	// Token: 0x170018ED RID: 6381
+	// (get) Token: 0x0601043C RID: 66620 RVA: 0x004BFCD5 File Offset: 0x004BDED5
 	public new IVisionNewRecommendPreviewViewOpenParam OpenParam
 	{
 		get
@@ -33,7 +31,7 @@ public class VisionNewRecommendPreviewView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012F7E RID: 77694 RVA: 0x004B20E4 File Offset: 0x004B02E4
+	// Token: 0x0601043D RID: 66621 RVA: 0x004BFCE4 File Offset: 0x004BDEE4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -58,7 +56,7 @@ public class VisionNewRecommendPreviewView : UiViewBase
 		};
 	}
 
-	// Token: 0x06012F7F RID: 77695 RVA: 0x004B2244 File Offset: 0x004B0444
+	// Token: 0x0601043E RID: 66622 RVA: 0x004BFE44 File Offset: 0x004BE044
 	protected override UniTask OnBeforeStartAsync()
 	{
 		VisionNewRecommendPreviewView.<OnBeforeStartAsync>d__19 <OnBeforeStartAsync>d__;
@@ -69,7 +67,7 @@ public class VisionNewRecommendPreviewView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012F80 RID: 77696 RVA: 0x004B2288 File Offset: 0x004B0488
+	// Token: 0x0601043F RID: 66623 RVA: 0x004BFE88 File Offset: 0x004BE088
 	protected override void OnHandlePostLoadScene(bool isSceneLoad)
 	{
 		if (!this.SceneLoaded)
@@ -85,13 +83,13 @@ public class VisionNewRecommendPreviewView : UiViewBase
 		this.ViewModel.HandleLoadScene(null);
 	}
 
-	// Token: 0x06012F81 RID: 77697 RVA: 0x004B22D6 File Offset: 0x004B04D6
+	// Token: 0x06010440 RID: 66624 RVA: 0x004BFED6 File Offset: 0x004BE0D6
 	protected override void OnHandleReleaseScene()
 	{
 		this.TryReleaseScene();
 	}
 
-	// Token: 0x06012F82 RID: 77698 RVA: 0x004B22DE File Offset: 0x004B04DE
+	// Token: 0x06010441 RID: 66625 RVA: 0x004BFEDE File Offset: 0x004BE0DE
 	private void TryReleaseScene()
 	{
 		if (this.ViewModel != null)
@@ -101,13 +99,13 @@ public class VisionNewRecommendPreviewView : UiViewBase
 		this.ViewModel = null;
 	}
 
-	// Token: 0x06012F83 RID: 77699 RVA: 0x004B22FA File Offset: 0x004B04FA
+	// Token: 0x06010442 RID: 66626 RVA: 0x004BFEFA File Offset: 0x004BE0FA
 	protected override void OnBeforeDestroy()
 	{
 		this.TryReleaseScene();
 	}
 
-	// Token: 0x06012F84 RID: 77700 RVA: 0x004B2302 File Offset: 0x004B0502
+	// Token: 0x06010443 RID: 66627 RVA: 0x004BFF02 File Offset: 0x004BE102
 	protected override void OnStart()
 	{
 		this.InitData();
@@ -122,41 +120,60 @@ public class VisionNewRecommendPreviewView : UiViewBase
 		this.RefreshApplyBtn();
 	}
 
-	// Token: 0x06012F85 RID: 77701 RVA: 0x004B2340 File Offset: 0x004B0540
+	// Token: 0x06010444 RID: 66628 RVA: 0x004BFF40 File Offset: 0x004BE140
 	private void InitData()
 	{
-		this.CurUniqueIdList = PhantomBattleModel.Instance.GetBattleDataById(this.OpenParam.Proxy.CurrentSelectRoleId).GetIncrIdList().ToList<int>();
+		this.CurUniqueIdList = new List<int>(PhantomBattleModel.Instance.GetBattleDataById(this.OpenParam.Proxy.CurrentSelectRoleId).GetIncrIdList());
 		this.RecommendUniqueIdList = VisionRecommendModel.Instance.GetRecommendEquipUniqueIdListNew(this.OpenParam.Proxy.CurrentSelectRoleId, this.OpenParam.Proxy.CurrentSelectFirstVisionMonsterId, this.OpenParam.Proxy.GetCurrentSelectRecommendInfo());
-		bool isBothEmpty;
-		if (this.CurUniqueIdList.All((int id) => id == 0))
+		List<int> curUniqueIdList = this.CurUniqueIdList;
+		bool flag = true;
+		for (int i = 0; i < curUniqueIdList.Count; i++)
 		{
-			isBothEmpty = this.RecommendUniqueIdList.All((int id) => id == 0);
+			if (curUniqueIdList[i] != 0)
+			{
+				flag = false;
+				break;
+			}
 		}
-		else
+		if (flag)
 		{
-			isBothEmpty = false;
+			int[] recommendUniqueIdList = this.RecommendUniqueIdList;
+			for (int j = 0; j < recommendUniqueIdList.Length; j++)
+			{
+				if (recommendUniqueIdList[j] != 0)
+				{
+					flag = false;
+					break;
+				}
+			}
 		}
-		this.IsBothEmpty = isBothEmpty;
+		this.IsBothEmpty = flag;
 		this.IsSameEquip = this.CheckUniqueIdListEqual(this.CurUniqueIdList, this.RecommendUniqueIdList);
 		this.RecommendAttrIdSet = this.GetRecommendAttrIds(this.OpenParam.Proxy.CurrentSelectRoleId);
 	}
 
-	// Token: 0x06012F86 RID: 77702 RVA: 0x004B244C File Offset: 0x004B064C
+	// Token: 0x06010445 RID: 66629 RVA: 0x004C0040 File Offset: 0x004BE240
 	private bool CheckUniqueIdListEqual(IReadOnlyList<int> listA, IReadOnlyList<int> listB)
 	{
 		if (listA[0] != listB[0])
 		{
 			return false;
 		}
-		List<int> list = (from x in listA.Skip(1)
-		orderby x
-		select x).ToList<int>();
-		List<int> list2 = (from x in listB.Skip(1)
-		orderby x
-		select x).ToList<int>();
-		for (int i = 0; i < list.Count; i++)
+		List<int> list = new List<int>();
+		for (int i = 1; i < listA.Count; i++)
 		{
-			if (list[i] != list2[i])
+			list.Add(listA[i]);
+		}
+		list.Sort();
+		List<int> list2 = new List<int>();
+		for (int j = 1; j < listB.Count; j++)
+		{
+			list2.Add(listB[j]);
+		}
+		list2.Sort();
+		for (int k = 0; k < list.Count; k++)
+		{
+			if (list[k] != list2[k])
 			{
 				return false;
 			}
@@ -164,7 +181,7 @@ public class VisionNewRecommendPreviewView : UiViewBase
 		return true;
 	}
 
-	// Token: 0x06012F87 RID: 77703 RVA: 0x004B24F4 File Offset: 0x004B06F4
+	// Token: 0x06010446 RID: 66630 RVA: 0x004C00E0 File Offset: 0x004BE2E0
 	private void RefreshApplyBtn()
 	{
 		this.ApplyBtn = new ButtonItem(base.GetItem(10));
@@ -189,7 +206,7 @@ public class VisionNewRecommendPreviewView : UiViewBase
 		this.ApplyBtn.SetFunction(new Action<int>(this.OnClickApplyBtn));
 	}
 
-	// Token: 0x06012F88 RID: 77704 RVA: 0x004B25AC File Offset: 0x004B07AC
+	// Token: 0x06010447 RID: 66631 RVA: 0x004C0198 File Offset: 0x004BE398
 	private void InitCaptionItem()
 	{
 		this.Caption = new PopupCaptionItem(base.GetItem(0));
@@ -197,25 +214,25 @@ public class VisionNewRecommendPreviewView : UiViewBase
 		this.Caption.SetHelpBtnActive(false);
 	}
 
-	// Token: 0x06012F89 RID: 77705 RVA: 0x004B25E3 File Offset: 0x004B07E3
+	// Token: 0x06010448 RID: 66632 RVA: 0x004C01CF File Offset: 0x004BE3CF
 	private void CloseCallBack()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06012F8A RID: 77706 RVA: 0x004B25EC File Offset: 0x004B07EC
+	// Token: 0x06010449 RID: 66633 RVA: 0x004C01D8 File Offset: 0x004BE3D8
 	private void InitAttributeLayout()
 	{
 		this.AttributeLayout = new GenericScrollViewNew<VisionNewRecommendPreviewAttrItem, VisionAssembleAttrData>(base.GetScrollViewWithScrollbar(7), new Func<VisionNewRecommendPreviewAttrItem>(this.InitAttributeItem), null, false, null);
 	}
 
-	// Token: 0x06012F8B RID: 77707 RVA: 0x004B260F File Offset: 0x004B080F
+	// Token: 0x0601044A RID: 66634 RVA: 0x004C01FB File Offset: 0x004BE3FB
 	private VisionNewRecommendPreviewAttrItem InitAttributeItem()
 	{
 		return new VisionNewRecommendPreviewAttrItem();
 	}
 
-	// Token: 0x06012F8C RID: 77708 RVA: 0x004B2618 File Offset: 0x004B0818
+	// Token: 0x0601044B RID: 66635 RVA: 0x004C0204 File Offset: 0x004BE404
 	private void RefreshRoleInfo()
 	{
 		RoleSkin? roleSkinConfig = this.GetRoleSkinConfig();
@@ -227,7 +244,7 @@ public class VisionNewRecommendPreviewView : UiViewBase
 		this.RefreshRoleName(roleSkinConfig.Value);
 	}
 
-	// Token: 0x06012F8D RID: 77709 RVA: 0x004B2650 File Offset: 0x004B0850
+	// Token: 0x0601044C RID: 66636 RVA: 0x004C023C File Offset: 0x004BE43C
 	private RoleSkin? GetRoleSkinConfig()
 	{
 		int currentSelectRoleId = this.OpenParam.Proxy.CurrentSelectRoleId;
@@ -245,26 +262,19 @@ public class VisionNewRecommendPreviewView : UiViewBase
 		return SkinConfig.Instance.GetRoleSkinConfig(roleConfig.Value.SkinId);
 	}
 
-	// Token: 0x06012F8E RID: 77710 RVA: 0x004B26CC File Offset: 0x004B08CC
+	// Token: 0x0601044D RID: 66637 RVA: 0x004C02B8 File Offset: 0x004BE4B8
 	private void RefreshRoleIcon(RoleSkin roleSkinConfig)
 	{
 		string tag = "RoleIcon1";
 		string roleSkinConfigParam = ComponentConfig.Instance.GetRoleSkinConfigParam(tag);
-		if (roleSkinConfigParam != null && roleSkinConfigParam != "")
+		string path;
+		if (roleSkinConfigParam != null && roleSkinConfigParam != "" && roleSkinConfig.TryGetMember(roleSkinConfigParam, out path))
 		{
-			PropertyInfo property = roleSkinConfig.GetType().GetProperty(roleSkinConfigParam);
-			if (property != null)
-			{
-				string text = property.GetValue(roleSkinConfig) as string;
-				if (text != null)
-				{
-					base.SetTextureByPath(text, base.GetTexture(1), null, null);
-				}
-			}
+			base.SetTextureByPath(path, base.GetTexture(1), null, null);
 		}
 	}
 
-	// Token: 0x06012F8F RID: 77711 RVA: 0x004B2744 File Offset: 0x004B0944
+	// Token: 0x0601044E RID: 66638 RVA: 0x004C030B File Offset: 0x004BE50B
 	private void RefreshRoleName(RoleSkin roleSkinConfig)
 	{
 		UUIText text = base.GetText(2);
@@ -275,7 +285,7 @@ public class VisionNewRecommendPreviewView : UiViewBase
 		text.SetText(RoleConfig.Instance.GetRoleName(roleSkinConfig.Name), true);
 	}
 
-	// Token: 0x06012F90 RID: 77712 RVA: 0x004B276C File Offset: 0x004B096C
+	// Token: 0x0601044F RID: 66639 RVA: 0x004C0330 File Offset: 0x004BE530
 	private void RefreshCurEquip()
 	{
 		List<VisionNewRecommendPhantomItemData> data = this.BuildCurEquipData();
@@ -287,7 +297,7 @@ public class VisionNewRecommendPreviewView : UiViewBase
 		curEquipPanel.Update(data);
 	}
 
-	// Token: 0x06012F91 RID: 77713 RVA: 0x004B2794 File Offset: 0x004B0994
+	// Token: 0x06010450 RID: 66640 RVA: 0x004C0358 File Offset: 0x004BE558
 	[return: Nullable(new byte[]
 	{
 		1,
@@ -326,7 +336,7 @@ public class VisionNewRecommendPreviewView : UiViewBase
 		return list;
 	}
 
-	// Token: 0x06012F92 RID: 77714 RVA: 0x004B2854 File Offset: 0x004B0A54
+	// Token: 0x06010451 RID: 66641 RVA: 0x004C0418 File Offset: 0x004BE618
 	private void RefreshRecommendEquip()
 	{
 		List<VisionNewRecommendPhantomItemData> data = this.BuildRecommendEquipData();
@@ -338,7 +348,7 @@ public class VisionNewRecommendPreviewView : UiViewBase
 		recommendEquipPanel.Update(data);
 	}
 
-	// Token: 0x06012F93 RID: 77715 RVA: 0x004B287C File Offset: 0x004B0A7C
+	// Token: 0x06010452 RID: 66642 RVA: 0x004C0440 File Offset: 0x004BE640
 	[return: Nullable(new byte[]
 	{
 		1,
@@ -369,7 +379,7 @@ public class VisionNewRecommendPreviewView : UiViewBase
 		return list;
 	}
 
-	// Token: 0x06012F94 RID: 77716 RVA: 0x004B2919 File Offset: 0x004B0B19
+	// Token: 0x06010453 RID: 66643 RVA: 0x004C04DD File Offset: 0x004BE6DD
 	private void RefreshCurEquipDetail()
 	{
 		VisionNewRecommendPreviewTopItem curEquipTopItem = this.CurEquipTopItem;
@@ -380,7 +390,7 @@ public class VisionNewRecommendPreviewView : UiViewBase
 		curEquipTopItem.Refresh(this.BuildTopData(false));
 	}
 
-	// Token: 0x06012F95 RID: 77717 RVA: 0x004B2932 File Offset: 0x004B0B32
+	// Token: 0x06010454 RID: 66644 RVA: 0x004C04F6 File Offset: 0x004BE6F6
 	private void RefreshRecommendEquipDetail()
 	{
 		VisionNewRecommendPreviewTopItem recommendEquipTopItem = this.RecommendEquipTopItem;
@@ -391,7 +401,7 @@ public class VisionNewRecommendPreviewView : UiViewBase
 		recommendEquipTopItem.Refresh(this.BuildTopData(true));
 	}
 
-	// Token: 0x06012F96 RID: 77718 RVA: 0x004B294C File Offset: 0x004B0B4C
+	// Token: 0x06010455 RID: 66645 RVA: 0x004C0510 File Offset: 0x004BE710
 	private HashSet<int> GetRecommendAttrIds(int roleId)
 	{
 		HashSet<int> hashSet = new HashSet<int>();
@@ -414,10 +424,10 @@ public class VisionNewRecommendPreviewView : UiViewBase
 		return hashSet;
 	}
 
-	// Token: 0x06012F97 RID: 77719 RVA: 0x004B2A4C File Offset: 0x004B0C4C
+	// Token: 0x06010456 RID: 66646 RVA: 0x004C0610 File Offset: 0x004BE810
 	private VisionNewRecommendPreviewTopData BuildTopData(bool isRecommend)
 	{
-		List<int> list = isRecommend ? this.RecommendUniqueIdList.ToList<int>() : this.CurUniqueIdList;
+		List<int> list = isRecommend ? new List<int>(this.RecommendUniqueIdList) : this.CurUniqueIdList;
 		List<VisionFetterData> list2 = this.FilterSameFetterData(VisionEquipGroupModel.Instance.GetVisionFetterDataByIncIdList(list));
 		List<VisionAssembleSuitItemData> list3 = new List<VisionAssembleSuitItemData>();
 		foreach (VisionFetterData data in list2)
@@ -440,7 +450,7 @@ public class VisionNewRecommendPreviewView : UiViewBase
 		};
 	}
 
-	// Token: 0x06012F98 RID: 77720 RVA: 0x004B2B44 File Offset: 0x004B0D44
+	// Token: 0x06010457 RID: 66647 RVA: 0x004C0708 File Offset: 0x004BE908
 	private List<VisionFetterData> FilterSameFetterData(List<VisionFetterData> dataList)
 	{
 		List<VisionFetterData> list = new List<VisionFetterData>();
@@ -456,7 +466,7 @@ public class VisionNewRecommendPreviewView : UiViewBase
 		return list;
 	}
 
-	// Token: 0x06012F99 RID: 77721 RVA: 0x004B2BEC File Offset: 0x004B0DEC
+	// Token: 0x06010458 RID: 66648 RVA: 0x004C07B0 File Offset: 0x004BE9B0
 	private void RefreshAttributeScroller()
 	{
 		List<VisionAssembleAttrData> list = this.BuildAttrDetailData();
@@ -471,17 +481,17 @@ public class VisionNewRecommendPreviewView : UiViewBase
 		attributeLayout.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x06012F9A RID: 77722 RVA: 0x004B2C48 File Offset: 0x004B0E48
+	// Token: 0x06010459 RID: 66649 RVA: 0x004C080C File Offset: 0x004BEA0C
 	private List<VisionAssembleAttrData> BuildAttrDetailData()
 	{
 		List<VisionAssembleAttrData> visionAttrDataListByIncIdList = this.GetVisionAttrDataListByIncIdList(this.CurUniqueIdList);
-		List<VisionAssembleAttrData> visionAttrDataListByIncIdList2 = this.GetVisionAttrDataListByIncIdList(this.RecommendUniqueIdList.ToList<int>());
+		List<VisionAssembleAttrData> visionAttrDataListByIncIdList2 = this.GetVisionAttrDataListByIncIdList(this.RecommendUniqueIdList);
 		this.CombineAttrList(visionAttrDataListByIncIdList2, visionAttrDataListByIncIdList);
 		visionAttrDataListByIncIdList2.Sort(new Comparison<VisionAssembleAttrData>(this.SortAttrList));
 		return visionAttrDataListByIncIdList2;
 	}
 
-	// Token: 0x06012F9B RID: 77723 RVA: 0x004B2C90 File Offset: 0x004B0E90
+	// Token: 0x0601045A RID: 66650 RVA: 0x004C0850 File Offset: 0x004BEA50
 	private List<VisionAssembleAttrData> GetVisionAttrDataListByIncIdList(IReadOnlyList<int> incIdList)
 	{
 		HashSet<int> recommendAttrIdSet = this.RecommendAttrIdSet;
@@ -545,7 +555,7 @@ public class VisionNewRecommendPreviewView : UiViewBase
 		return list;
 	}
 
-	// Token: 0x06012F9C RID: 77724 RVA: 0x004B2F30 File Offset: 0x004B1130
+	// Token: 0x0601045B RID: 66651 RVA: 0x004C0AF0 File Offset: 0x004BECF0
 	private int SortAttrList(VisionAssembleAttrData dataB, VisionAssembleAttrData dataA)
 	{
 		int priority = dataA.GetPriority();
@@ -576,7 +586,7 @@ public class VisionNewRecommendPreviewView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012F9D RID: 77725 RVA: 0x004B2F94 File Offset: 0x004B1194
+	// Token: 0x0601045C RID: 66652 RVA: 0x004C0B54 File Offset: 0x004BED54
 	private void CombineAttrList(List<VisionAssembleAttrData> compareAttrDataList, List<VisionAssembleAttrData> currentAttrDataList)
 	{
 		int count = currentAttrDataList.Count;
@@ -606,14 +616,14 @@ public class VisionNewRecommendPreviewView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012F9E RID: 77726 RVA: 0x004B3070 File Offset: 0x004B1270
+	// Token: 0x0601045D RID: 66653 RVA: 0x004C0C30 File Offset: 0x004BEE30
 	private void OnClickApplyBtn(int _)
 	{
 		if (this.OpenParam.Proxy.GetCurrentSelectRecommendInfo() == null)
 		{
 			return;
 		}
-		PhantomBattleController.Instance.ApplyRecommendEquip(this.OpenParam.Proxy.CurrentSelectRoleId, this.RecommendUniqueIdList.ToList<int>(), delegate
+		PhantomBattleController.Instance.ApplyRecommendEquip(this.OpenParam.Proxy.CurrentSelectRoleId, new List<int>(this.RecommendUniqueIdList), delegate
 		{
 			base.CloseMe(null);
 			Action onApplySuccess = this.OpenParam.OnApplySuccess;
@@ -625,27 +635,27 @@ public class VisionNewRecommendPreviewView : UiViewBase
 		});
 	}
 
-	// Token: 0x04008ECF RID: 36559
+	// Token: 0x04009019 RID: 36889
 	[Nullable(2)]
 	private PopupCaptionItem Caption;
 
-	// Token: 0x04008ED0 RID: 36560
+	// Token: 0x0400901A RID: 36890
 	[Nullable(2)]
 	private VisionNewRecommendPreviewEquipItem CurEquipPanel;
 
-	// Token: 0x04008ED1 RID: 36561
+	// Token: 0x0400901B RID: 36891
 	[Nullable(2)]
 	private VisionNewRecommendPreviewEquipItem RecommendEquipPanel;
 
-	// Token: 0x04008ED2 RID: 36562
+	// Token: 0x0400901C RID: 36892
 	[Nullable(2)]
 	private VisionNewRecommendPreviewTopItem CurEquipTopItem;
 
-	// Token: 0x04008ED3 RID: 36563
+	// Token: 0x0400901D RID: 36893
 	[Nullable(2)]
 	private VisionNewRecommendPreviewTopItem RecommendEquipTopItem;
 
-	// Token: 0x04008ED4 RID: 36564
+	// Token: 0x0400901E RID: 36894
 	[Nullable(new byte[]
 	{
 		2,
@@ -654,72 +664,72 @@ public class VisionNewRecommendPreviewView : UiViewBase
 	})]
 	private GenericScrollViewNew<VisionNewRecommendPreviewAttrItem, VisionAssembleAttrData> AttributeLayout;
 
-	// Token: 0x04008ED5 RID: 36565
+	// Token: 0x0400901F RID: 36895
 	[Nullable(2)]
 	private ButtonItem ApplyBtn;
 
-	// Token: 0x04008ED6 RID: 36566
+	// Token: 0x04009020 RID: 36896
 	[Nullable(2)]
 	private RoleViewViewModel ViewModel;
 
-	// Token: 0x04008ED7 RID: 36567
+	// Token: 0x04009021 RID: 36897
 	[Nullable(2)]
 	private List<int> CurUniqueIdList;
 
-	// Token: 0x04008ED8 RID: 36568
+	// Token: 0x04009022 RID: 36898
 	[Nullable(2)]
 	private int[] RecommendUniqueIdList;
 
-	// Token: 0x04008ED9 RID: 36569
+	// Token: 0x04009023 RID: 36899
 	private bool IsSameEquip;
 
-	// Token: 0x04008EDA RID: 36570
+	// Token: 0x04009024 RID: 36900
 	private bool IsBothEmpty;
 
-	// Token: 0x04008EDB RID: 36571
+	// Token: 0x04009025 RID: 36901
 	[Nullable(2)]
 	private HashSet<int> RecommendAttrIdSet;
 
-	// Token: 0x02008A69 RID: 35433
+	// Token: 0x02007BF2 RID: 31730
 	[Nullable(0)]
 	private static class ETextId
 	{
-		// Token: 0x0402CF1B RID: 184091
+		// Token: 0x04028239 RID: 164409
 		public const string Apply = "PhantomRecommend_Button05";
 
-		// Token: 0x0402CF1C RID: 184092
+		// Token: 0x0402823A RID: 164410
 		public const string ApplySameEquip = "PhantomRecommend_Tips05";
 	}
 
-	// Token: 0x02008A6A RID: 35434
+	// Token: 0x02007BF3 RID: 31731
 	[NullableContext(0)]
 	private enum EComp
 	{
-		// Token: 0x0402CF1E RID: 184094
+		// Token: 0x0402823C RID: 164412
 		Caption,
-		// Token: 0x0402CF1F RID: 184095
+		// Token: 0x0402823D RID: 164413
 		RoleIcon,
-		// Token: 0x0402CF20 RID: 184096
+		// Token: 0x0402823E RID: 164414
 		RoleName,
-		// Token: 0x0402CF21 RID: 184097
+		// Token: 0x0402823F RID: 164415
 		CurEquipItem,
-		// Token: 0x0402CF22 RID: 184098
+		// Token: 0x04028240 RID: 164416
 		RecommendEquipItem,
-		// Token: 0x0402CF23 RID: 184099
+		// Token: 0x04028241 RID: 164417
 		LeftTop,
-		// Token: 0x0402CF24 RID: 184100
+		// Token: 0x04028242 RID: 164418
 		RightTop,
-		// Token: 0x0402CF25 RID: 184101
+		// Token: 0x04028243 RID: 164419
 		Scroll,
-		// Token: 0x0402CF26 RID: 184102
+		// Token: 0x04028244 RID: 164420
 		ScrollContent,
-		// Token: 0x0402CF27 RID: 184103
+		// Token: 0x04028245 RID: 164421
 		ScrollItem,
-		// Token: 0x0402CF28 RID: 184104
+		// Token: 0x04028246 RID: 164422
 		ApplyBtn,
-		// Token: 0x0402CF29 RID: 184105
+		// Token: 0x04028247 RID: 164423
 		BackBtn,
-		// Token: 0x0402CF2A RID: 184106
+		// Token: 0x04028248 RID: 164424
 		EmptyItem
 	}
 }

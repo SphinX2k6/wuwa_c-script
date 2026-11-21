@@ -11,42 +11,42 @@ namespace Aki.TDConfigMgr.Component
 	[Nullable(0)]
 	public class BeamReceiveComponent_SetValue
 	{
-		// Token: 0x04000112 RID: 274
+		// Token: 0x04000117 RID: 279
 		public bool? Disabled;
 
-		// Token: 0x04000113 RID: 275
+		// Token: 0x04000118 RID: 280
 		public bool? EdIsLocked;
 
-		// Token: 0x04000114 RID: 276
+		// Token: 0x04000119 RID: 281
 		public string ReceiveTarget;
 
-		// Token: 0x04000115 RID: 277
+		// Token: 0x0400011A RID: 282
 		public float Duration;
 
-		// Token: 0x04000116 RID: 278
+		// Token: 0x0400011B RID: 283
 		public IConditionGroup ReceiveCondition;
 
-		// Token: 0x04000117 RID: 279
+		// Token: 0x0400011C RID: 284
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> BeginActions;
 
-		// Token: 0x04000118 RID: 280
+		// Token: 0x0400011D RID: 285
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> CompleteActions;
 
-		// Token: 0x04000119 RID: 281
+		// Token: 0x0400011E RID: 286
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> StopActions;
 	}

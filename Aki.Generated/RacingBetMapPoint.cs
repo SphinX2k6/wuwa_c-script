@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000F85 RID: 3973
+	// Token: 0x0200106C RID: 4204
 	public struct RacingBetMapPoint : IFlatbufferObject
 	{
-		// Token: 0x17002C83 RID: 11395
-		// (get) Token: 0x0600B7CF RID: 47055 RVA: 0x002D49F9 File Offset: 0x002D2BF9
+		// Token: 0x17002CFB RID: 11515
+		// (get) Token: 0x0600BE0C RID: 48652 RVA: 0x002F1386 File Offset: 0x002EF586
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B7D0 RID: 47056 RVA: 0x002D4A06 File Offset: 0x002D2C06
+		// Token: 0x0600BE0D RID: 48653 RVA: 0x002F1393 File Offset: 0x002EF593
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600B7D1 RID: 47057 RVA: 0x002D4A10 File Offset: 0x002D2C10
+		// Token: 0x0600BE0E RID: 48654 RVA: 0x002F139C File Offset: 0x002EF59C
 		public static RacingBetMapPoint GetRootAsRacingBetMapPoint(ByteBuffer _bb)
 		{
 			return RacingBetMapPoint.GetRootAsRacingBetMapPoint(_bb, default(RacingBetMapPoint));
 		}
 
-		// Token: 0x0600B7D2 RID: 47058 RVA: 0x002D4A2C File Offset: 0x002D2C2C
+		// Token: 0x0600BE0F RID: 48655 RVA: 0x002F13B8 File Offset: 0x002EF5B8
 		public static RacingBetMapPoint GetRootAsRacingBetMapPoint(ByteBuffer _bb, RacingBetMapPoint obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600B7D3 RID: 47059 RVA: 0x002D4A49 File Offset: 0x002D2C49
+		// Token: 0x0600BE10 RID: 48656 RVA: 0x002F13D5 File Offset: 0x002EF5D5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600B7D4 RID: 47060 RVA: 0x002D4A58 File Offset: 0x002D2C58
+		// Token: 0x0600BE11 RID: 48657 RVA: 0x002F13E4 File Offset: 0x002EF5E4
 		public RacingBetMapPoint __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002C84 RID: 11396
-		// (get) Token: 0x0600B7D5 RID: 47061 RVA: 0x002D4A68 File Offset: 0x002D2C68
+		// Token: 0x17002CFC RID: 11516
+		// (get) Token: 0x0600BE12 RID: 48658 RVA: 0x002F13F4 File Offset: 0x002EF5F4
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002C85 RID: 11397
-		// (get) Token: 0x0600B7D6 RID: 47062 RVA: 0x002D4AA4 File Offset: 0x002D2CA4
+		// Token: 0x17002CFD RID: 11517
+		// (get) Token: 0x0600BE13 RID: 48659 RVA: 0x002F1430 File Offset: 0x002EF630
 		public int SeasonId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002C86 RID: 11398
-		// (get) Token: 0x0600B7D7 RID: 47063 RVA: 0x002D4AE0 File Offset: 0x002D2CE0
+		// Token: 0x17002CFE RID: 11518
+		// (get) Token: 0x0600BE14 RID: 48660 RVA: 0x002F146C File Offset: 0x002EF66C
 		public int SortId
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002C87 RID: 11399
-		// (get) Token: 0x0600B7D8 RID: 47064 RVA: 0x002D4B1C File Offset: 0x002D2D1C
+		// Token: 0x17002CFF RID: 11519
+		// (get) Token: 0x0600BE15 RID: 48661 RVA: 0x002F14A8 File Offset: 0x002EF6A8
 		public int EntityId
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002C88 RID: 11400
-		// (get) Token: 0x0600B7D9 RID: 47065 RVA: 0x002D4B5C File Offset: 0x002D2D5C
+		// Token: 0x17002D00 RID: 11520
+		// (get) Token: 0x0600BE16 RID: 48662 RVA: 0x002F14E8 File Offset: 0x002EF6E8
 		public int BackwardEntityId
 		{
 			get
@@ -122,7 +122,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04005053 RID: 20563
+		// Token: 0x0400563A RID: 22074
 		private Table __p;
 	}
 }

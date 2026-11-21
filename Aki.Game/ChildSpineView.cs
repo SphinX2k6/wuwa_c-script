@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002A88 RID: 10888
+// Token: 0x02002004 RID: 8196
 public class ChildSpineView : UiPanelBase
 {
-	// Token: 0x06016AC5 RID: 92869 RVA: 0x005BDC8C File Offset: 0x005BBE8C
+	// Token: 0x060144EA RID: 83178 RVA: 0x005E9EBC File Offset: 0x005E80BC
 	[NullableContext(2)]
 	public unsafe void PlaySpineAnimation(string spineName, bool isLoop = true)
 	{

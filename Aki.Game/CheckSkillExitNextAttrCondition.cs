@@ -1,29 +1,29 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020017D6 RID: 6102
+// Token: 0x02000C8F RID: 3215
 [NullableContext(1)]
 [Nullable(0)]
 public class CheckSkillExitNextAttrCondition : BaseCheckCondition
 {
-	// Token: 0x0600B265 RID: 45669 RVA: 0x00284D29 File Offset: 0x00282F29
+	// Token: 0x0600864E RID: 34382 RVA: 0x0028F31F File Offset: 0x0028D51F
 	public CheckSkillExitNextAttrCondition(string paramsString, bool isSuccessNode) : base(paramsString, isSuccessNode)
 	{
 		this.Type = EComboTeachingCheckType.Update;
 		this.FailType = EComboTeachingFailCondition.NextAttrEnd;
 	}
 
-	// Token: 0x17000F05 RID: 3845
-	// (get) Token: 0x0600B266 RID: 45670 RVA: 0x00284D4F File Offset: 0x00282F4F
-	// (set) Token: 0x0600B267 RID: 45671 RVA: 0x00284D57 File Offset: 0x00282F57
+	// Token: 0x17000F28 RID: 3880
+	// (get) Token: 0x0600864F RID: 34383 RVA: 0x0028F345 File Offset: 0x0028D545
+	// (set) Token: 0x06008650 RID: 34384 RVA: 0x0028F34D File Offset: 0x0028D54D
 	public override EComboTeachingCheckType Type { get; set; } = EComboTeachingCheckType.Update;
 
-	// Token: 0x17000F06 RID: 3846
-	// (get) Token: 0x0600B268 RID: 45672 RVA: 0x00284D60 File Offset: 0x00282F60
-	// (set) Token: 0x0600B269 RID: 45673 RVA: 0x00284D68 File Offset: 0x00282F68
+	// Token: 0x17000F29 RID: 3881
+	// (get) Token: 0x06008651 RID: 34385 RVA: 0x0028F356 File Offset: 0x0028D556
+	// (set) Token: 0x06008652 RID: 34386 RVA: 0x0028F35E File Offset: 0x0028D55E
 	protected override EComboTeachingFailCondition FailType { get; set; } = EComboTeachingFailCondition.NextAttrEnd;
 
-	// Token: 0x0600B26A RID: 45674 RVA: 0x00284D71 File Offset: 0x00282F71
+	// Token: 0x06008653 RID: 34387 RVA: 0x0028F367 File Offset: 0x0028D567
 	public override bool Check(IComboTeachingInfo data, [Nullable(2)] IBaseCheckConditionInfo param = null)
 	{
 		return ComboTeachingModel.Instance.UseSkillId == ComboTeachingModel.Instance.NextAttrSkillId && !ComboTeachingModel.Instance.NextAttr && ComboTeachingModel.Instance.PreNextAttr;

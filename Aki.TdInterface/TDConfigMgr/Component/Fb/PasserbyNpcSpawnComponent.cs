@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CDB RID: 3291
+	// Token: 0x02000DD2 RID: 3538
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PasserbyNpcSpawnComponent : IComponentBase
 	{
-		// Token: 0x06004B33 RID: 19251 RVA: 0x000BBF65 File Offset: 0x000BA165
-		[NullableContext(1)]
+		// Token: 0x06005039 RID: 20537 RVA: 0x000C7305 File Offset: 0x000C5505
+		[NullableContext(0)]
 		public static PasserbyNpcSpawnComponent Create(IPasserbyNpcSpawnComponent? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700173A RID: 5946
-		// (get) Token: 0x06004B34 RID: 19252 RVA: 0x000BBF84 File Offset: 0x000BA184
+		// Token: 0x17001890 RID: 6288
+		// (get) Token: 0x0600503A RID: 20538 RVA: 0x000C7324 File Offset: 0x000C5524
 		public override bool? Disabled
 		{
 			get
@@ -38,8 +38,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700173B RID: 5947
-		// (get) Token: 0x06004B35 RID: 19253 RVA: 0x000BBFBC File Offset: 0x000BA1BC
+		// Token: 0x17001891 RID: 6289
+		// (get) Token: 0x0600503B RID: 20539 RVA: 0x000C735C File Offset: 0x000C555C
 		public override bool? EdIsLocked
 		{
 			get
@@ -48,12 +48,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700173C RID: 5948
-		// (get) Token: 0x06004B36 RID: 19254 RVA: 0x000BBFD2 File Offset: 0x000BA1D2
-		[Nullable(1)]
-		public virtual IPasserbyNpcSplineMove MoveConfig
+		// Token: 0x17001892 RID: 6290
+		// (get) Token: 0x0600503C RID: 20540 RVA: 0x000C7372 File Offset: 0x000C5572
+		[Nullable(0)]
+		public virtual IPasserbyNpcMoveBase MoveConfig
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._MoveConfigInited)
@@ -61,17 +61,17 @@ namespace Aki.TDConfigMgr.Component.Fb
 					return this._MoveConfigCache;
 				}
 				this._MoveConfigInited = true;
-				this._MoveConfigCache = IPasserbyNpcSplineMove.Create(this.Instance.MoveConfig);
+				this._MoveConfigCache = ComponentReadHelper.ReadPasserbyNpcSpawnComponent_MoveConfig(this.Instance);
 				return this._MoveConfigCache;
 			}
 		}
 
-		// Token: 0x1700173D RID: 5949
-		// (get) Token: 0x06004B37 RID: 19255 RVA: 0x000BC006 File Offset: 0x000BA206
-		[Nullable(1)]
-		public virtual IPasserbyNpcFixIntervalSpawn SpawnConfig
+		// Token: 0x17001893 RID: 6291
+		// (get) Token: 0x0600503D RID: 20541 RVA: 0x000C73A1 File Offset: 0x000C55A1
+		[Nullable(0)]
+		public virtual IPasserbyNpcSpawnBase SpawnConfig
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._SpawnConfigInited)
@@ -79,17 +79,17 @@ namespace Aki.TDConfigMgr.Component.Fb
 					return this._SpawnConfigCache;
 				}
 				this._SpawnConfigInited = true;
-				this._SpawnConfigCache = IPasserbyNpcFixIntervalSpawn.Create(this.Instance.SpawnConfig);
+				this._SpawnConfigCache = ComponentReadHelper.ReadPasserbyNpcSpawnComponent_SpawnConfig(this.Instance);
 				return this._SpawnConfigCache;
 			}
 		}
 
-		// Token: 0x1700173E RID: 5950
-		// (get) Token: 0x06004B38 RID: 19256 RVA: 0x000BC03A File Offset: 0x000BA23A
-		[Nullable(1)]
+		// Token: 0x17001894 RID: 6292
+		// (get) Token: 0x0600503E RID: 20542 RVA: 0x000C73D0 File Offset: 0x000C55D0
+		[Nullable(0)]
 		public virtual IPasserbyNpcTemplateSource SourceConfig
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._SourceConfigInited)
@@ -102,8 +102,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700173F RID: 5951
-		// (get) Token: 0x06004B39 RID: 19257 RVA: 0x000BC06E File Offset: 0x000BA26E
+		// Token: 0x17001895 RID: 6293
+		// (get) Token: 0x0600503F RID: 20543 RVA: 0x000C7404 File Offset: 0x000C5604
 		public virtual string NpcMaterialDa
 		{
 			get
@@ -112,8 +112,40 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001740 RID: 5952
-		// (get) Token: 0x06004B3A RID: 19258 RVA: 0x000BC07B File Offset: 0x000BA27B
+		// Token: 0x17001896 RID: 6294
+		// (get) Token: 0x06005040 RID: 20544 RVA: 0x000C7411 File Offset: 0x000C5611
+		public virtual IPasserbyNpcPerformance BornPerformance
+		{
+			get
+			{
+				if (this._BornPerformanceInited)
+				{
+					return this._BornPerformanceCache;
+				}
+				this._BornPerformanceInited = true;
+				this._BornPerformanceCache = IPasserbyNpcPerformance.Create(this.Instance.BornPerformance);
+				return this._BornPerformanceCache;
+			}
+		}
+
+		// Token: 0x17001897 RID: 6295
+		// (get) Token: 0x06005041 RID: 20545 RVA: 0x000C7445 File Offset: 0x000C5645
+		public virtual IPasserbyNpcPerformance DestroyPerformance
+		{
+			get
+			{
+				if (this._DestroyPerformanceInited)
+				{
+					return this._DestroyPerformanceCache;
+				}
+				this._DestroyPerformanceInited = true;
+				this._DestroyPerformanceCache = IPasserbyNpcPerformance.Create(this.Instance.DestroyPerformance);
+				return this._DestroyPerformanceCache;
+			}
+		}
+
+		// Token: 0x17001898 RID: 6296
+		// (get) Token: 0x06005042 RID: 20546 RVA: 0x000C7479 File Offset: 0x000C5679
 		public virtual IPasserbyNpcDeviceGradeConfig DeviceGradeConfig
 		{
 			get
@@ -128,8 +160,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001741 RID: 5953
-		// (get) Token: 0x06004B3B RID: 19259 RVA: 0x000BC0AF File Offset: 0x000BA2AF
+		// Token: 0x17001899 RID: 6297
+		// (get) Token: 0x06005043 RID: 20547 RVA: 0x000C74AD File Offset: 0x000C56AD
 		public virtual IConditionGroup VisibleConditions
 		{
 			get
@@ -144,37 +176,51 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002B02 RID: 11010
+		// Token: 0x04002DB3 RID: 11699
 		private IPasserbyNpcSpawnComponent Instance;
 
-		// Token: 0x04002B03 RID: 11011
-		private IPasserbyNpcSplineMove _MoveConfigCache;
+		// Token: 0x04002DB4 RID: 11700
+		[Nullable(0)]
+		private IPasserbyNpcMoveBase _MoveConfigCache;
 
-		// Token: 0x04002B04 RID: 11012
+		// Token: 0x04002DB5 RID: 11701
 		private bool _MoveConfigInited;
 
-		// Token: 0x04002B05 RID: 11013
-		private IPasserbyNpcFixIntervalSpawn _SpawnConfigCache;
+		// Token: 0x04002DB6 RID: 11702
+		[Nullable(0)]
+		private IPasserbyNpcSpawnBase _SpawnConfigCache;
 
-		// Token: 0x04002B06 RID: 11014
+		// Token: 0x04002DB7 RID: 11703
 		private bool _SpawnConfigInited;
 
-		// Token: 0x04002B07 RID: 11015
+		// Token: 0x04002DB8 RID: 11704
 		private IPasserbyNpcTemplateSource _SourceConfigCache;
 
-		// Token: 0x04002B08 RID: 11016
+		// Token: 0x04002DB9 RID: 11705
 		private bool _SourceConfigInited;
 
-		// Token: 0x04002B09 RID: 11017
+		// Token: 0x04002DBA RID: 11706
+		private IPasserbyNpcPerformance _BornPerformanceCache;
+
+		// Token: 0x04002DBB RID: 11707
+		private bool _BornPerformanceInited;
+
+		// Token: 0x04002DBC RID: 11708
+		private IPasserbyNpcPerformance _DestroyPerformanceCache;
+
+		// Token: 0x04002DBD RID: 11709
+		private bool _DestroyPerformanceInited;
+
+		// Token: 0x04002DBE RID: 11710
 		private IPasserbyNpcDeviceGradeConfig _DeviceGradeConfigCache;
 
-		// Token: 0x04002B0A RID: 11018
+		// Token: 0x04002DBF RID: 11711
 		private bool _DeviceGradeConfigInited;
 
-		// Token: 0x04002B0B RID: 11019
+		// Token: 0x04002DC0 RID: 11712
 		private IConditionGroup _VisibleConditionsCache;
 
-		// Token: 0x04002B0C RID: 11020
+		// Token: 0x04002DC1 RID: 11713
 		private bool _VisibleConditionsInited;
 	}
 }

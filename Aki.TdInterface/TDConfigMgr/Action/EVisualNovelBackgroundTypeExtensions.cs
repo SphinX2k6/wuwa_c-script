@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020024A3 RID: 9379
+	// Token: 0x02002746 RID: 10054
 	public static class EVisualNovelBackgroundTypeExtensions
 	{
-		// Token: 0x0600CB5C RID: 52060 RVA: 0x001DEF9C File Offset: 0x001DD19C
+		// Token: 0x0600D815 RID: 55317 RVA: 0x001F9164 File Offset: 0x001F7364
 		public static string ToEnumString(this EVisualNovelBackgroundType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CB5D RID: 52061 RVA: 0x001DEFD4 File Offset: 0x001DD1D4
+		// Token: 0x0600D816 RID: 55318 RVA: 0x001F919C File Offset: 0x001F739C
 		public static EVisualNovelBackgroundType FromString(string name)
 		{
 			EVisualNovelBackgroundType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CB5E RID: 52062 RVA: 0x001DEFFD File Offset: 0x001DD1FD
+		// Token: 0x0600D817 RID: 55319 RVA: 0x001F91C5 File Offset: 0x001F73C5
 		public static bool TryFromString(string name, out EVisualNovelBackgroundType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600CB5F RID: 52063 RVA: 0x001DF036 File Offset: 0x001DD236
+		// Token: 0x0600D818 RID: 55320 RVA: 0x001F91FE File Offset: 0x001F73FE
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CB60 RID: 52064 RVA: 0x001DF04E File Offset: 0x001DD24E
+		// Token: 0x0600D819 RID: 55321 RVA: 0x001F9216 File Offset: 0x001F7416
 		public static EVisualNovelBackgroundType[] GetValues()
 		{
 			return new EVisualNovelBackgroundType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CB61 RID: 52065 RVA: 0x001DF05A File Offset: 0x001DD25A
+		// Token: 0x0600D81A RID: 55322 RVA: 0x001F9222 File Offset: 0x001F7422
 		public static string[] GetNames()
 		{
 			return new string[]

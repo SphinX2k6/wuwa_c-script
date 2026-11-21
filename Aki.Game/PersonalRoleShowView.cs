@@ -8,17 +8,17 @@ using CSharpScript.Game.Module.Util.Layout;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020023EA RID: 9194
+// Token: 0x020018CF RID: 6351
 [NullableContext(1)]
 [Nullable(0)]
 public class PersonalRoleShowView : UiViewBase
 {
-	// Token: 0x060125E3 RID: 75235 RVA: 0x00486EDD File Offset: 0x004850DD
+	// Token: 0x0600FA95 RID: 64149 RVA: 0x004943E9 File Offset: 0x004925E9
 	public PersonalRoleShowView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060125E4 RID: 75236 RVA: 0x00486EE8 File Offset: 0x004850E8
+	// Token: 0x0600FA96 RID: 64150 RVA: 0x004943F4 File Offset: 0x004925F4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ public class PersonalRoleShowView : UiViewBase
 		};
 	}
 
-	// Token: 0x060125E5 RID: 75237 RVA: 0x00486F68 File Offset: 0x00485168
+	// Token: 0x0600FA97 RID: 64151 RVA: 0x00494474 File Offset: 0x00492674
 	private void OnClickConfirmButton()
 	{
 		List<RoleShowEntry> roleShowList = PersonalModel.Instance.GetRoleShowList();
@@ -82,14 +82,14 @@ public class PersonalRoleShowView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x060125E6 RID: 75238 RVA: 0x00487088 File Offset: 0x00485288
+	// Token: 0x0600FA98 RID: 64152 RVA: 0x00494594 File Offset: 0x00492794
 	protected override void OnStart()
 	{
 		this.CurInShowRoleId = (this.OpenParam as int?).GetValueOrDefault();
 		this.ScrollView = new GenericScrollView<PersonalRoleMediumItemGrid>(base.GetScrollViewWithScrollbar(0), new CSharpScript.Game.Module.Util.Layout.TLayoutRefresh<PersonalRoleMediumItemGrid>(this.InitRoleItem), null);
 	}
 
-	// Token: 0x060125E7 RID: 75239 RVA: 0x004870D4 File Offset: 0x004852D4
+	// Token: 0x0600FA99 RID: 64153 RVA: 0x004945E0 File Offset: 0x004927E0
 	private ILayoutItem<PersonalRoleMediumItemGrid> InitRoleItem(object roleId, UUIItem uiItem, int index)
 	{
 		PersonalRoleMediumItemGrid personalRoleMediumItemGrid = new PersonalRoleMediumItemGrid();
@@ -103,7 +103,7 @@ public class PersonalRoleShowView : UiViewBase
 		};
 	}
 
-	// Token: 0x060125E8 RID: 75240 RVA: 0x0048712C File Offset: 0x0048532C
+	// Token: 0x0600FA9A RID: 64154 RVA: 0x00494638 File Offset: 0x00492838
 	private void RoleItemToggleClick(MediumItemGridExtendCallback callbackParameter)
 	{
 		PersonalRoleMediumItemGrid currentSelectedItem = this.CurrentSelectedItem;
@@ -121,7 +121,7 @@ public class PersonalRoleShowView : UiViewBase
 		this.Refresh(roleId);
 	}
 
-	// Token: 0x060125E9 RID: 75241 RVA: 0x00487184 File Offset: 0x00485384
+	// Token: 0x0600FA9B RID: 64155 RVA: 0x00494690 File Offset: 0x00492890
 	protected void Refresh(int roleId)
 	{
 		this.CurSelectRoleId = roleId;
@@ -156,7 +156,7 @@ public class PersonalRoleShowView : UiViewBase
 		}
 	}
 
-	// Token: 0x060125EA RID: 75242 RVA: 0x0048722C File Offset: 0x0048542C
+	// Token: 0x0600FA9C RID: 64156 RVA: 0x00494738 File Offset: 0x00492938
 	private void SetConfirmButtonState(ERoleShowOpera state)
 	{
 		this.CurRoleShowOpera = state;
@@ -177,7 +177,7 @@ public class PersonalRoleShowView : UiViewBase
 		}
 	}
 
-	// Token: 0x060125EB RID: 75243 RVA: 0x0048729C File Offset: 0x0048549C
+	// Token: 0x0600FA9D RID: 64157 RVA: 0x004947A8 File Offset: 0x004929A8
 	protected bool IsRoleInShow(int roleId)
 	{
 		List<RoleShowEntry> roleShowList = PersonalModel.Instance.GetRoleShowList();
@@ -194,10 +194,10 @@ public class PersonalRoleShowView : UiViewBase
 		return result;
 	}
 
-	// Token: 0x060125EC RID: 75244 RVA: 0x004872E4 File Offset: 0x004854E4
+	// Token: 0x0600FA9E RID: 64158 RVA: 0x004947F0 File Offset: 0x004929F0
 	protected override void OnAfterShow()
 	{
-		this.RoleIdList = RoleModel.Instance.GetRoleIdList();
+		this.RoleIdList = RoleModel.Instance.GetRoleIdList(null);
 		if (this.RoleIdList.Count > 0)
 		{
 			this.ScrollView.RefreshByData<int>(this.RoleIdList, null);
@@ -208,7 +208,7 @@ public class PersonalRoleShowView : UiViewBase
 		}
 	}
 
-	// Token: 0x060125ED RID: 75245 RVA: 0x0048736B File Offset: 0x0048556B
+	// Token: 0x0600FA9F RID: 64159 RVA: 0x00494878 File Offset: 0x00492A78
 	protected override void OnBeforeDestroy()
 	{
 		if (this.ScrollView != null)
@@ -218,7 +218,7 @@ public class PersonalRoleShowView : UiViewBase
 		}
 	}
 
-	// Token: 0x04008B03 RID: 35587
+	// Token: 0x04008C4A RID: 35914
 	[Nullable(new byte[]
 	{
 		2,
@@ -226,20 +226,20 @@ public class PersonalRoleShowView : UiViewBase
 	})]
 	private GenericScrollView<PersonalRoleMediumItemGrid> ScrollView;
 
-	// Token: 0x04008B04 RID: 35588
+	// Token: 0x04008C4B RID: 35915
 	[Nullable(2)]
 	private List<int> RoleIdList;
 
-	// Token: 0x04008B05 RID: 35589
+	// Token: 0x04008C4C RID: 35916
 	private int CurSelectRoleId;
 
-	// Token: 0x04008B06 RID: 35590
+	// Token: 0x04008C4D RID: 35917
 	private int CurInShowRoleId;
 
-	// Token: 0x04008B07 RID: 35591
+	// Token: 0x04008C4E RID: 35918
 	private ERoleShowOpera CurRoleShowOpera;
 
-	// Token: 0x04008B08 RID: 35592
+	// Token: 0x04008C4F RID: 35919
 	[Nullable(2)]
 	private PersonalRoleMediumItemGrid CurrentSelectedItem;
 }

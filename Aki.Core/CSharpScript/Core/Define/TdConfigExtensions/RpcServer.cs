@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Core.Define.TdConfigExtensions
 {
-	// Token: 0x02000142 RID: 322
+	// Token: 0x02000146 RID: 326
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RpcServer
 	{
-		// Token: 0x06000B3C RID: 2876 RVA: 0x000365CC File Offset: 0x000347CC
+		// Token: 0x06000B97 RID: 2967 RVA: 0x0003714C File Offset: 0x0003534C
 		public RpcServer(ITransport tran, TService service, ILogger logger)
 		{
 			this.Tran = tran;
@@ -19,7 +19,7 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			this.Logger = logger;
 		}
 
-		// Token: 0x06000B3D RID: 2877 RVA: 0x000365EC File Offset: 0x000347EC
+		// Token: 0x06000B98 RID: 2968 RVA: 0x0003716C File Offset: 0x0003536C
 		public void Update()
 		{
 			IFunction function = this.Tran.Recv() as IFunction;
@@ -65,7 +65,7 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			}
 		}
 
-		// Token: 0x06000B3E RID: 2878 RVA: 0x00036720 File Offset: 0x00034920
+		// Token: 0x06000B99 RID: 2969 RVA: 0x000372A0 File Offset: 0x000354A0
 		[NullableContext(2)]
 		private UniTask SendRpcResultWhenComplete(int reqId, object resultObj)
 		{
@@ -79,7 +79,7 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			return <SendRpcResultWhenComplete>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000B3F RID: 2879 RVA: 0x00036773 File Offset: 0x00034973
+		// Token: 0x06000B9A RID: 2970 RVA: 0x000372F3 File Offset: 0x000354F3
 		public void Start()
 		{
 			if (this.Timer != null)
@@ -93,7 +93,7 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			}, 20f, 1f, null, null, true);
 		}
 
-		// Token: 0x06000B40 RID: 2880 RVA: 0x000367B2 File Offset: 0x000349B2
+		// Token: 0x06000B9B RID: 2971 RVA: 0x00037332 File Offset: 0x00035532
 		public void Stop()
 		{
 			if (this.Timer != null)
@@ -104,17 +104,17 @@ namespace CSharpScript.Core.Define.TdConfigExtensions
 			}
 		}
 
-		// Token: 0x040006E1 RID: 1761
+		// Token: 0x040006EF RID: 1775
 		[Nullable(2)]
 		private TimerHandle Timer;
 
-		// Token: 0x040006E2 RID: 1762
+		// Token: 0x040006F0 RID: 1776
 		private readonly ITransport Tran;
 
-		// Token: 0x040006E3 RID: 1763
+		// Token: 0x040006F1 RID: 1777
 		private readonly TService Service;
 
-		// Token: 0x040006E4 RID: 1764
+		// Token: 0x040006F2 RID: 1778
 		private readonly ILogger Logger;
 	}
 }

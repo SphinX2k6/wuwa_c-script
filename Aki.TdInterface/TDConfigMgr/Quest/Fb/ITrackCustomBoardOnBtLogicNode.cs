@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200141D RID: 5149
+	// Token: 0x02001575 RID: 5493
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ITrackCustomBoardOnBtLogicNode
 	{
-		// Token: 0x060074FB RID: 29947 RVA: 0x001178D7 File Offset: 0x00115AD7
-		[NullableContext(1)]
+		// Token: 0x06007BC0 RID: 31680 RVA: 0x00126323 File Offset: 0x00124523
+		[NullableContext(0)]
 		public static ITrackCustomBoardOnBtLogicNode Create(ITrackCustomBoardOnBtLogicNode? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002694 RID: 9876
-		// (get) Token: 0x060074FC RID: 29948 RVA: 0x001178F6 File Offset: 0x00115AF6
+		// Token: 0x17002878 RID: 10360
+		// (get) Token: 0x06007BC1 RID: 31681 RVA: 0x00126342 File Offset: 0x00124542
 		public virtual IFastReturnMapPos FastReturnMapPos
 		{
 			get
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002695 RID: 9877
-		// (get) Token: 0x060074FD RID: 29949 RVA: 0x0011792A File Offset: 0x00115B2A
+		// Token: 0x17002879 RID: 10361
+		// (get) Token: 0x06007BC2 RID: 31682 RVA: 0x00126376 File Offset: 0x00124576
 		public virtual ISheriffAnomalyProgressBoardConfig SheriffAnomalyProgressBoard
 		{
 			get
@@ -55,8 +55,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002696 RID: 9878
-		// (get) Token: 0x060074FE RID: 29950 RVA: 0x0011795E File Offset: 0x00115B5E
+		// Token: 0x1700287A RID: 10362
+		// (get) Token: 0x06007BC3 RID: 31683 RVA: 0x001263AA File Offset: 0x001245AA
 		public virtual ISheriffMainBoardConfig SheriffMainBoard
 		{
 			get
@@ -71,8 +71,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002697 RID: 9879
-		// (get) Token: 0x060074FF RID: 29951 RVA: 0x00117992 File Offset: 0x00115B92
+		// Token: 0x1700287B RID: 10363
+		// (get) Token: 0x06007BC4 RID: 31684 RVA: 0x001263DE File Offset: 0x001245DE
 		public virtual ISheriffClueDetailBoardConfig SheriffClueDetailBoard
 		{
 			get
@@ -87,31 +87,31 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040043C3 RID: 17347
+		// Token: 0x04004757 RID: 18263
 		private ITrackCustomBoardOnBtLogicNode Instance;
 
-		// Token: 0x040043C4 RID: 17348
+		// Token: 0x04004758 RID: 18264
 		private IFastReturnMapPos _FastReturnMapPosCache;
 
-		// Token: 0x040043C5 RID: 17349
+		// Token: 0x04004759 RID: 18265
 		private bool _FastReturnMapPosInited;
 
-		// Token: 0x040043C6 RID: 17350
+		// Token: 0x0400475A RID: 18266
 		private ISheriffAnomalyProgressBoardConfig _SheriffAnomalyProgressBoardCache;
 
-		// Token: 0x040043C7 RID: 17351
+		// Token: 0x0400475B RID: 18267
 		private bool _SheriffAnomalyProgressBoardInited;
 
-		// Token: 0x040043C8 RID: 17352
+		// Token: 0x0400475C RID: 18268
 		private ISheriffMainBoardConfig _SheriffMainBoardCache;
 
-		// Token: 0x040043C9 RID: 17353
+		// Token: 0x0400475D RID: 18269
 		private bool _SheriffMainBoardInited;
 
-		// Token: 0x040043CA RID: 17354
+		// Token: 0x0400475E RID: 18270
 		private ISheriffClueDetailBoardConfig _SheriffClueDetailBoardCache;
 
-		// Token: 0x040043CB RID: 17355
+		// Token: 0x0400475F RID: 18271
 		private bool _SheriffClueDetailBoardInited;
 	}
 }

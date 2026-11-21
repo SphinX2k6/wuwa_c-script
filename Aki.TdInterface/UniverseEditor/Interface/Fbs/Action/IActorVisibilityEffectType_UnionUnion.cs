@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200611A RID: 24858
+	// Token: 0x0200677C RID: 26492
 	public class IActorVisibilityEffectType_UnionUnion
 	{
-		// Token: 0x1700B72E RID: 46894
-		// (get) Token: 0x0602A789 RID: 173961 RVA: 0x005D985D File Offset: 0x005D7A5D
-		// (set) Token: 0x0602A78A RID: 173962 RVA: 0x005D9865 File Offset: 0x005D7A65
+		// Token: 0x1700C099 RID: 49305
+		// (get) Token: 0x0602CE6A RID: 183914 RVA: 0x00623805 File Offset: 0x00621A05
+		// (set) Token: 0x0602CE6B RID: 183915 RVA: 0x0062380D File Offset: 0x00621A0D
 		public IActorVisibilityEffectType_Union Type { get; set; }
 
-		// Token: 0x1700B72F RID: 46895
-		// (get) Token: 0x0602A78B RID: 173963 RVA: 0x005D986E File Offset: 0x005D7A6E
-		// (set) Token: 0x0602A78C RID: 173964 RVA: 0x005D9876 File Offset: 0x005D7A76
+		// Token: 0x1700C09A RID: 49306
+		// (get) Token: 0x0602CE6C RID: 183916 RVA: 0x00623816 File Offset: 0x00621A16
+		// (set) Token: 0x0602CE6D RID: 183917 RVA: 0x0062381E File Offset: 0x00621A1E
 		public object Value { get; set; }
 
-		// Token: 0x0602A78D RID: 173965 RVA: 0x005D987F File Offset: 0x005D7A7F
+		// Token: 0x0602CE6E RID: 183918 RVA: 0x00623827 File Offset: 0x00621A27
 		public IActorVisibilityEffectType_UnionUnion()
 		{
 			this.Type = IActorVisibilityEffectType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602A78E RID: 173966 RVA: 0x005D9895 File Offset: 0x005D7A95
+		// Token: 0x0602CE6F RID: 183919 RVA: 0x0062383D File Offset: 0x00621A3D
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602A78F RID: 173967 RVA: 0x005D98A7 File Offset: 0x005D7AA7
+		// Token: 0x0602CE70 RID: 183920 RVA: 0x0062384F File Offset: 0x00621A4F
 		public IActorVisibilityEffectTypeT AsIActorVisibilityEffectType()
 		{
 			return this.As<IActorVisibilityEffectTypeT>();
 		}
 
-		// Token: 0x0602A790 RID: 173968 RVA: 0x005D98AF File Offset: 0x005D7AAF
+		// Token: 0x0602CE71 RID: 183921 RVA: 0x00623857 File Offset: 0x00621A57
 		public static IActorVisibilityEffectType_UnionUnion FromIActorVisibilityEffectType(IActorVisibilityEffectTypeT _iactorvisibilityeffecttype)
 		{
 			return new IActorVisibilityEffectType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602A791 RID: 173969 RVA: 0x005D98C4 File Offset: 0x005D7AC4
+		// Token: 0x0602CE72 RID: 183922 RVA: 0x0062386C File Offset: 0x00621A6C
 		public IActorVisibilityEffectDefaultT AsIActorVisibilityEffectDefault()
 		{
 			return this.As<IActorVisibilityEffectDefaultT>();
 		}
 
-		// Token: 0x0602A792 RID: 173970 RVA: 0x005D98CC File Offset: 0x005D7ACC
+		// Token: 0x0602CE73 RID: 183923 RVA: 0x00623874 File Offset: 0x00621A74
 		public static IActorVisibilityEffectType_UnionUnion FromIActorVisibilityEffectDefault(IActorVisibilityEffectDefaultT _iactorvisibilityeffectdefault)
 		{
 			return new IActorVisibilityEffectType_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602A793 RID: 173971 RVA: 0x005D98E4 File Offset: 0x005D7AE4
+		// Token: 0x0602CE74 RID: 183924 RVA: 0x0062388C File Offset: 0x00621A8C
 		public static int Pack(FlatBufferBuilder builder, IActorVisibilityEffectType_UnionUnion _o)
 		{
 			IActorVisibilityEffectType_Union type = _o.Type;

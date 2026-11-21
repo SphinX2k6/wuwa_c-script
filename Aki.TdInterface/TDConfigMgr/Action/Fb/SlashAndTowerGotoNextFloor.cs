@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029B4 RID: 10676
+	// Token: 0x02002CA1 RID: 11425
 	public class SlashAndTowerGotoNextFloor : ActionParams
 	{
-		// Token: 0x0600EC27 RID: 60455 RVA: 0x00227FED File Offset: 0x002261ED
-		[NullableContext(1)]
+		// Token: 0x0600FABE RID: 64190 RVA: 0x00245971 File Offset: 0x00243B71
 		public static SlashAndTowerGotoNextFloor Create(ISlashAndTowerGotoNextFloor? instance)
 		{
 			if (instance == null)
@@ -21,7 +19,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x04008208 RID: 33288
+		// Token: 0x040088F9 RID: 35065
 		private ISlashAndTowerGotoNextFloor Instance;
 	}
 }

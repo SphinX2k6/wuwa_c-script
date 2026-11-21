@@ -10,66 +10,66 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 {
-	// Token: 0x020048BD RID: 18621
+	// Token: 0x02003834 RID: 14388
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class VehicleStateBase
 	{
-		// Token: 0x06030AAB RID: 199339 RVA: 0x00B4D388 File Offset: 0x00B4B588
+		// Token: 0x060255D7 RID: 153047 RVA: 0x00A88190 File Offset: 0x00A86390
 		public VehicleStateBase(EVehicleStateType state, VehicleSmBlackBoard blackBoard)
 		{
 			this.State = state;
 			this.BlackBoard = blackBoard;
 		}
 
-		// Token: 0x06030AAC RID: 199340 RVA: 0x00B4D401 File Offset: 0x00B4B601
+		// Token: 0x060255D8 RID: 153048 RVA: 0x00A88209 File Offset: 0x00A86409
 		public void Create()
 		{
 			this.OnCreate();
 		}
 
-		// Token: 0x06030AAD RID: 199341 RVA: 0x00B4D409 File Offset: 0x00B4B609
+		// Token: 0x060255D9 RID: 153049 RVA: 0x00A88211 File Offset: 0x00A86411
 		public void Update(float delta)
 		{
 			this.OnUpdate(delta);
 		}
 
-		// Token: 0x06030AAE RID: 199342 RVA: 0x00B4D412 File Offset: 0x00B4B612
+		// Token: 0x060255DA RID: 153050 RVA: 0x00A8821A File Offset: 0x00A8641A
 		[NullableContext(2)]
 		public void Enter(EVehicleStateType lastState, string reason = null)
 		{
 			this.OnEnter(lastState, reason);
 		}
 
-		// Token: 0x06030AAF RID: 199343 RVA: 0x00B4D41C File Offset: 0x00B4B61C
+		// Token: 0x060255DB RID: 153051 RVA: 0x00A88224 File Offset: 0x00A86424
 		public void Exit(EVehicleStateType nextState)
 		{
 			this.OnExit(nextState);
 		}
 
-		// Token: 0x06030AB0 RID: 199344 RVA: 0x00B4D425 File Offset: 0x00B4B625
+		// Token: 0x060255DC RID: 153052 RVA: 0x00A8822D File Offset: 0x00A8642D
 		public void Destroy()
 		{
 			this.OnDestroy();
 		}
 
-		// Token: 0x06030AB1 RID: 199345 RVA: 0x00B4D42D File Offset: 0x00B4B62D
+		// Token: 0x060255DD RID: 153053 RVA: 0x00A88235 File Offset: 0x00A86435
 		public void OnEnterPlayerRange()
 		{
 		}
 
-		// Token: 0x06030AB2 RID: 199346 RVA: 0x00B4D42F File Offset: 0x00B4B62F
+		// Token: 0x060255DE RID: 153054 RVA: 0x00A88237 File Offset: 0x00A86437
 		public void OnLeavePlayerRange()
 		{
 		}
 
-		// Token: 0x06030AB3 RID: 199347 RVA: 0x00B4D431 File Offset: 0x00B4B631
+		// Token: 0x060255DF RID: 153055 RVA: 0x00A88239 File Offset: 0x00A86439
 		protected virtual EVehicleStateType CheckGetNextState()
 		{
 			return EVehicleStateType.None;
 		}
 
-		// Token: 0x06030AB4 RID: 199348 RVA: 0x00B4D434 File Offset: 0x00B4B634
+		// Token: 0x060255E0 RID: 153056 RVA: 0x00A8823C File Offset: 0x00A8643C
 		protected string CheckObstruction(float rootDistance, string traceReason)
 		{
 			this.ObstructionCheckInfo.Reset();
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 			return this.ObstructionCheckInfo.CheckResultType.ToEnumString();
 		}
 
-		// Token: 0x06030AB5 RID: 199349 RVA: 0x00B4D491 File Offset: 0x00B4B691
+		// Token: 0x060255E1 RID: 153057 RVA: 0x00A88299 File Offset: 0x00A86499
 		private void CheckObstructionImp(float rootDistance, string traceReason)
 		{
 			if (!this.TraceCheck(traceReason))
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 			}
 		}
 
-		// Token: 0x06030AB6 RID: 199350 RVA: 0x00B4D4B4 File Offset: 0x00B4B6B4
+		// Token: 0x060255E2 RID: 153058 RVA: 0x00A882BC File Offset: 0x00A864BC
 		private bool TraceCheck(string traceReason)
 		{
 			UTraceBoxElement boxTrace = this.BlackBoard.BoxTrace;
@@ -170,7 +170,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 			return this.ObstructionCheckInfo.CheckResultType == EObstructionCheckResult.TraceBlock;
 		}
 
-		// Token: 0x06030AB7 RID: 199351 RVA: 0x00B4D748 File Offset: 0x00B4B948
+		// Token: 0x060255E3 RID: 153059 RVA: 0x00A88550 File Offset: 0x00A86750
 		private bool CheckPlayerBlock()
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -203,7 +203,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 			return true;
 		}
 
-		// Token: 0x06030AB8 RID: 199352 RVA: 0x00B4D844 File Offset: 0x00B4BA44
+		// Token: 0x060255E4 RID: 153060 RVA: 0x00A8864C File Offset: 0x00A8684C
 		private bool CheckVehiclesCollisionInSameRoadway(float rootDistance)
 		{
 			UKuroRoadway currentRoadway = this.BlackBoard.CurrentRoadway;
@@ -242,7 +242,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 			return result;
 		}
 
-		// Token: 0x06030AB9 RID: 199353 RVA: 0x00B4D9A0 File Offset: 0x00B4BBA0
+		// Token: 0x060255E5 RID: 153061 RVA: 0x00A887A8 File Offset: 0x00A869A8
 		private bool CheckVehiclesCollisionInNextRoadway(float rootDistance)
 		{
 			UKuroRoadway nextRoadway = this.BlackBoard.NextRoadway;
@@ -282,7 +282,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 			return result;
 		}
 
-		// Token: 0x06030ABA RID: 199354 RVA: 0x00B4DB18 File Offset: 0x00B4BD18
+		// Token: 0x060255E6 RID: 153062 RVA: 0x00A88920 File Offset: 0x00A86B20
 		protected EPositionRelationship CheckPositionalRelationshipToTarget(float selfRootDistance, float targetHeadDistance, float targetTailDistance)
 		{
 			float num = selfRootDistance + this.BlackBoard.RootCenterToHead;
@@ -306,7 +306,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 			return EPositionRelationship.OverlapForward;
 		}
 
-		// Token: 0x06030ABB RID: 199355 RVA: 0x00B4DB60 File Offset: 0x00B4BD60
+		// Token: 0x060255E7 RID: 153063 RVA: 0x00A88968 File Offset: 0x00A86B68
 		protected void EnterNextRoadway()
 		{
 			UKuroRoadway currentRoadway = this.BlackBoard.CurrentRoadway;
@@ -331,7 +331,7 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 			}
 		}
 
-		// Token: 0x06030ABC RID: 199356 RVA: 0x00B4DC34 File Offset: 0x00B4BE34
+		// Token: 0x060255E8 RID: 153064 RVA: 0x00A88A3C File Offset: 0x00A86C3C
 		private bool IsPlayer(long creatureDataId)
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -350,60 +350,60 @@ namespace CSharpScript.Game.Module.VehicleStream.StateMachine.States
 			return creatureDataId == num3.GetValueOrDefault() & num3 != null;
 		}
 
-		// Token: 0x06030ABD RID: 199357 RVA: 0x00B4DC8D File Offset: 0x00B4BE8D
+		// Token: 0x060255E9 RID: 153065 RVA: 0x00A88A95 File Offset: 0x00A86C95
 		protected virtual void OnCreate()
 		{
 		}
 
-		// Token: 0x06030ABE RID: 199358 RVA: 0x00B4DC8F File Offset: 0x00B4BE8F
+		// Token: 0x060255EA RID: 153066 RVA: 0x00A88A97 File Offset: 0x00A86C97
 		protected virtual void OnUpdate(float delta)
 		{
 		}
 
-		// Token: 0x06030ABF RID: 199359 RVA: 0x00B4DC91 File Offset: 0x00B4BE91
+		// Token: 0x060255EB RID: 153067 RVA: 0x00A88A99 File Offset: 0x00A86C99
 		[NullableContext(2)]
 		protected virtual void OnEnter(EVehicleStateType lastState, string reason = null)
 		{
 		}
 
-		// Token: 0x06030AC0 RID: 199360 RVA: 0x00B4DC93 File Offset: 0x00B4BE93
+		// Token: 0x060255EC RID: 153068 RVA: 0x00A88A9B File Offset: 0x00A86C9B
 		protected virtual void OnExit(EVehicleStateType nextState)
 		{
 		}
 
-		// Token: 0x06030AC1 RID: 199361 RVA: 0x00B4DC95 File Offset: 0x00B4BE95
+		// Token: 0x060255ED RID: 153069 RVA: 0x00A88A9D File Offset: 0x00A86C9D
 		protected virtual void OnDestroy()
 		{
 		}
 
-		// Token: 0x0401A289 RID: 107145
+		// Token: 0x04014AFC RID: 84732
 		public readonly EVehicleStateType State;
 
-		// Token: 0x0401A28A RID: 107146
+		// Token: 0x04014AFD RID: 84733
 		public readonly VehicleSmBlackBoard BlackBoard;
 
-		// Token: 0x0401A28B RID: 107147
+		// Token: 0x04014AFE RID: 84734
 		protected global::Vector HitLocation = global::Vector.Create();
 
-		// Token: 0x0401A28C RID: 107148
+		// Token: 0x04014AFF RID: 84735
 		protected global::Vector StartTracePosition = global::Vector.Create();
 
-		// Token: 0x0401A28D RID: 107149
+		// Token: 0x04014B00 RID: 84736
 		protected global::Vector EndTracePosition = global::Vector.Create();
 
-		// Token: 0x0401A28E RID: 107150
+		// Token: 0x04014B01 RID: 84737
 		protected global::Vector LocalHitPoint = global::Vector.Create();
 
-		// Token: 0x0401A28F RID: 107151
+		// Token: 0x04014B02 RID: 84738
 		protected FRotator TraceRotator = new FRotator();
 
-		// Token: 0x0401A290 RID: 107152
+		// Token: 0x04014B03 RID: 84739
 		private readonly ObstructionCheckInfo LastObstructionCheckInfo = new ObstructionCheckInfo();
 
-		// Token: 0x0401A291 RID: 107153
+		// Token: 0x04014B04 RID: 84740
 		protected readonly ObstructionCheckInfo ObstructionCheckInfo = new ObstructionCheckInfo();
 
-		// Token: 0x0401A292 RID: 107154
+		// Token: 0x04014B05 RID: 84741
 		protected readonly global::Transform TmpTransform = global::Transform.Create();
 	}
 }

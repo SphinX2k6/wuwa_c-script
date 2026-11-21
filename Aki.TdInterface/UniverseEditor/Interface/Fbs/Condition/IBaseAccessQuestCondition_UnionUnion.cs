@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004971 RID: 18801
+	// Token: 0x02004E28 RID: 20008
 	public class IBaseAccessQuestCondition_UnionUnion
 	{
-		// Token: 0x170087CE RID: 34766
-		// (get) Token: 0x0601D4CA RID: 120010 RVA: 0x00422049 File Offset: 0x00420249
-		// (set) Token: 0x0601D4CB RID: 120011 RVA: 0x00422051 File Offset: 0x00420251
+		// Token: 0x17008E89 RID: 36489
+		// (get) Token: 0x0601EEEF RID: 126703 RVA: 0x004524FD File Offset: 0x004506FD
+		// (set) Token: 0x0601EEF0 RID: 126704 RVA: 0x00452505 File Offset: 0x00450705
 		public IBaseAccessQuestCondition_Union Type { get; set; }
 
-		// Token: 0x170087CF RID: 34767
-		// (get) Token: 0x0601D4CC RID: 120012 RVA: 0x0042205A File Offset: 0x0042025A
-		// (set) Token: 0x0601D4CD RID: 120013 RVA: 0x00422062 File Offset: 0x00420262
+		// Token: 0x17008E8A RID: 36490
+		// (get) Token: 0x0601EEF1 RID: 126705 RVA: 0x0045250E File Offset: 0x0045070E
+		// (set) Token: 0x0601EEF2 RID: 126706 RVA: 0x00452516 File Offset: 0x00450716
 		public object Value { get; set; }
 
-		// Token: 0x0601D4CE RID: 120014 RVA: 0x0042206B File Offset: 0x0042026B
+		// Token: 0x0601EEF3 RID: 126707 RVA: 0x0045251F File Offset: 0x0045071F
 		public IBaseAccessQuestCondition_UnionUnion()
 		{
 			this.Type = IBaseAccessQuestCondition_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601D4CF RID: 120015 RVA: 0x00422081 File Offset: 0x00420281
+		// Token: 0x0601EEF4 RID: 126708 RVA: 0x00452535 File Offset: 0x00450735
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601D4D0 RID: 120016 RVA: 0x00422093 File Offset: 0x00420293
+		// Token: 0x0601EEF5 RID: 126709 RVA: 0x00452547 File Offset: 0x00450747
 		public IBaseAccessQuestConditionT AsIBaseAccessQuestCondition()
 		{
 			return this.As<IBaseAccessQuestConditionT>();
 		}
 
-		// Token: 0x0601D4D1 RID: 120017 RVA: 0x0042209B File Offset: 0x0042029B
+		// Token: 0x0601EEF6 RID: 126710 RVA: 0x0045254F File Offset: 0x0045074F
 		public static IBaseAccessQuestCondition_UnionUnion FromIBaseAccessQuestCondition(IBaseAccessQuestConditionT _ibaseaccessquestcondition)
 		{
 			return new IBaseAccessQuestCondition_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601D4D2 RID: 120018 RVA: 0x004220B0 File Offset: 0x004202B0
+		// Token: 0x0601EEF7 RID: 126711 RVA: 0x00452564 File Offset: 0x00450764
 		public IExploreLevelCondtionT AsIExploreLevelCondtion()
 		{
 			return this.As<IExploreLevelCondtionT>();
 		}
 
-		// Token: 0x0601D4D3 RID: 120019 RVA: 0x004220B8 File Offset: 0x004202B8
+		// Token: 0x0601EEF8 RID: 126712 RVA: 0x0045256C File Offset: 0x0045076C
 		public static IBaseAccessQuestCondition_UnionUnion FromIExploreLevelCondtion(IExploreLevelCondtionT _iexplorelevelcondtion)
 		{
 			return new IBaseAccessQuestCondition_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601D4D4 RID: 120020 RVA: 0x004220CD File Offset: 0x004202CD
+		// Token: 0x0601EEF9 RID: 126713 RVA: 0x00452581 File Offset: 0x00450781
 		public IPreQuestCondtionT AsIPreQuestCondtion()
 		{
 			return this.As<IPreQuestCondtionT>();
 		}
 
-		// Token: 0x0601D4D5 RID: 120021 RVA: 0x004220D5 File Offset: 0x004202D5
+		// Token: 0x0601EEFA RID: 126714 RVA: 0x00452589 File Offset: 0x00450789
 		public static IBaseAccessQuestCondition_UnionUnion FromIPreQuestCondtion(IPreQuestCondtionT _iprequestcondtion)
 		{
 			return new IBaseAccessQuestCondition_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601D4D6 RID: 120022 RVA: 0x004220EA File Offset: 0x004202EA
+		// Token: 0x0601EEFB RID: 126715 RVA: 0x0045259E File Offset: 0x0045079E
 		public IPreChildQuestCondtionT AsIPreChildQuestCondtion()
 		{
 			return this.As<IPreChildQuestCondtionT>();
 		}
 
-		// Token: 0x0601D4D7 RID: 120023 RVA: 0x004220F2 File Offset: 0x004202F2
+		// Token: 0x0601EEFC RID: 126716 RVA: 0x004525A6 File Offset: 0x004507A6
 		public static IBaseAccessQuestCondition_UnionUnion FromIPreChildQuestCondtion(IPreChildQuestCondtionT _iprechildquestcondtion)
 		{
 			return new IBaseAccessQuestCondition_UnionUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601D4D8 RID: 120024 RVA: 0x00422107 File Offset: 0x00420307
+		// Token: 0x0601EEFD RID: 126717 RVA: 0x004525BB File Offset: 0x004507BB
 		public IItemConditionT AsIItemCondition()
 		{
 			return this.As<IItemConditionT>();
 		}
 
-		// Token: 0x0601D4D9 RID: 120025 RVA: 0x0042210F File Offset: 0x0042030F
+		// Token: 0x0601EEFE RID: 126718 RVA: 0x004525C3 File Offset: 0x004507C3
 		public static IBaseAccessQuestCondition_UnionUnion FromIItemCondition(IItemConditionT _iitemcondition)
 		{
 			return new IBaseAccessQuestCondition_UnionUnion
@@ -109,13 +109,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601D4DA RID: 120026 RVA: 0x00422124 File Offset: 0x00420324
+		// Token: 0x0601EEFF RID: 126719 RVA: 0x004525D8 File Offset: 0x004507D8
 		public IPreLevelPlayCondtionT AsIPreLevelPlayCondtion()
 		{
 			return this.As<IPreLevelPlayCondtionT>();
 		}
 
-		// Token: 0x0601D4DB RID: 120027 RVA: 0x0042212C File Offset: 0x0042032C
+		// Token: 0x0601EF00 RID: 126720 RVA: 0x004525E0 File Offset: 0x004507E0
 		public static IBaseAccessQuestCondition_UnionUnion FromIPreLevelPlayCondtion(IPreLevelPlayCondtionT _iprelevelplaycondtion)
 		{
 			return new IBaseAccessQuestCondition_UnionUnion
@@ -125,13 +125,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601D4DC RID: 120028 RVA: 0x00422141 File Offset: 0x00420341
+		// Token: 0x0601EF01 RID: 126721 RVA: 0x004525F5 File Offset: 0x004507F5
 		public IPreGenderCondtionT AsIPreGenderCondtion()
 		{
 			return this.As<IPreGenderCondtionT>();
 		}
 
-		// Token: 0x0601D4DD RID: 120029 RVA: 0x00422149 File Offset: 0x00420349
+		// Token: 0x0601EF02 RID: 126722 RVA: 0x004525FD File Offset: 0x004507FD
 		public static IBaseAccessQuestCondition_UnionUnion FromIPreGenderCondtion(IPreGenderCondtionT _ipregendercondtion)
 		{
 			return new IBaseAccessQuestCondition_UnionUnion
@@ -141,13 +141,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601D4DE RID: 120030 RVA: 0x0042215E File Offset: 0x0042035E
+		// Token: 0x0601EF03 RID: 126723 RVA: 0x00452612 File Offset: 0x00450812
 		public IReachAreaCondtionT AsIReachAreaCondtion()
 		{
 			return this.As<IReachAreaCondtionT>();
 		}
 
-		// Token: 0x0601D4DF RID: 120031 RVA: 0x00422166 File Offset: 0x00420366
+		// Token: 0x0601EF04 RID: 126724 RVA: 0x0045261A File Offset: 0x0045081A
 		public static IBaseAccessQuestCondition_UnionUnion FromIReachAreaCondtion(IReachAreaCondtionT _ireachareacondtion)
 		{
 			return new IBaseAccessQuestCondition_UnionUnion
@@ -157,13 +157,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601D4E0 RID: 120032 RVA: 0x0042217B File Offset: 0x0042037B
+		// Token: 0x0601EF05 RID: 126725 RVA: 0x0045262F File Offset: 0x0045082F
 		public IOpenDateConditonT AsIOpenDateConditon()
 		{
 			return this.As<IOpenDateConditonT>();
 		}
 
-		// Token: 0x0601D4E1 RID: 120033 RVA: 0x00422183 File Offset: 0x00420383
+		// Token: 0x0601EF06 RID: 126726 RVA: 0x00452637 File Offset: 0x00450837
 		public static IBaseAccessQuestCondition_UnionUnion FromIOpenDateConditon(IOpenDateConditonT _iopendateconditon)
 		{
 			return new IBaseAccessQuestCondition_UnionUnion
@@ -173,13 +173,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601D4E2 RID: 120034 RVA: 0x00422199 File Offset: 0x00420399
+		// Token: 0x0601EF07 RID: 126727 RVA: 0x0045264D File Offset: 0x0045084D
 		public ISystemStateConditonT AsISystemStateConditon()
 		{
 			return this.As<ISystemStateConditonT>();
 		}
 
-		// Token: 0x0601D4E3 RID: 120035 RVA: 0x004221A1 File Offset: 0x004203A1
+		// Token: 0x0601EF08 RID: 126728 RVA: 0x00452655 File Offset: 0x00450855
 		public static IBaseAccessQuestCondition_UnionUnion FromISystemStateConditon(ISystemStateConditonT _isystemstateconditon)
 		{
 			return new IBaseAccessQuestCondition_UnionUnion
@@ -189,13 +189,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601D4E4 RID: 120036 RVA: 0x004221B7 File Offset: 0x004203B7
+		// Token: 0x0601EF09 RID: 126729 RVA: 0x0045266B File Offset: 0x0045086B
 		public IDungeonQuestPreConditionT AsIDungeonQuestPreCondition()
 		{
 			return this.As<IDungeonQuestPreConditionT>();
 		}
 
-		// Token: 0x0601D4E5 RID: 120037 RVA: 0x004221BF File Offset: 0x004203BF
+		// Token: 0x0601EF0A RID: 126730 RVA: 0x00452673 File Offset: 0x00450873
 		public static IBaseAccessQuestCondition_UnionUnion FromIDungeonQuestPreCondition(IDungeonQuestPreConditionT _idungeonquestprecondition)
 		{
 			return new IBaseAccessQuestCondition_UnionUnion
@@ -205,13 +205,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601D4E6 RID: 120038 RVA: 0x004221D5 File Offset: 0x004203D5
+		// Token: 0x0601EF0B RID: 126731 RVA: 0x00452689 File Offset: 0x00450889
 		public IFeatureCollectionLevelPreConditionT AsIFeatureCollectionLevelPreCondition()
 		{
 			return this.As<IFeatureCollectionLevelPreConditionT>();
 		}
 
-		// Token: 0x0601D4E7 RID: 120039 RVA: 0x004221DD File Offset: 0x004203DD
+		// Token: 0x0601EF0C RID: 126732 RVA: 0x00452691 File Offset: 0x00450891
 		public static IBaseAccessQuestCondition_UnionUnion FromIFeatureCollectionLevelPreCondition(IFeatureCollectionLevelPreConditionT _ifeaturecollectionlevelprecondition)
 		{
 			return new IBaseAccessQuestCondition_UnionUnion
@@ -221,13 +221,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601D4E8 RID: 120040 RVA: 0x004221F3 File Offset: 0x004203F3
+		// Token: 0x0601EF0D RID: 126733 RVA: 0x004526A7 File Offset: 0x004508A7
 		public IMapThemedActivityReachRankT AsIMapThemedActivityReachRank()
 		{
 			return this.As<IMapThemedActivityReachRankT>();
 		}
 
-		// Token: 0x0601D4E9 RID: 120041 RVA: 0x004221FB File Offset: 0x004203FB
+		// Token: 0x0601EF0E RID: 126734 RVA: 0x004526AF File Offset: 0x004508AF
 		public static IBaseAccessQuestCondition_UnionUnion FromIMapThemedActivityReachRank(IMapThemedActivityReachRankT _imapthemedactivityreachrank)
 		{
 			return new IBaseAccessQuestCondition_UnionUnion
@@ -237,7 +237,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601D4EA RID: 120042 RVA: 0x00422214 File Offset: 0x00420414
+		// Token: 0x0601EF0F RID: 126735 RVA: 0x004526C8 File Offset: 0x004508C8
 		public static int Pack(FlatBufferBuilder builder, IBaseAccessQuestCondition_UnionUnion _o)
 		{
 			switch (_o.Type)

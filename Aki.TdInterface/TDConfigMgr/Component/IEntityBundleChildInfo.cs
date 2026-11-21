@@ -5,13 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000313 RID: 787
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x0200035A RID: 858
 	public class IEntityBundleChildInfo
 	{
-		// Token: 0x06000F41 RID: 3905 RVA: 0x00035E94 File Offset: 0x00034094
-		[NullableContext(1)]
+		// Token: 0x06001071 RID: 4209 RVA: 0x00038DC8 File Offset: 0x00036FC8
 		private IEntityBundleChildInfo_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000F42 RID: 3906 RVA: 0x00035ECC File Offset: 0x000340CC
-		[NullableContext(1)]
+		// Token: 0x06001072 RID: 4210 RVA: 0x00038E00 File Offset: 0x00037000
 		public static IEntityBundleChildInfo Create([Nullable(2)] IEntityBundleChildInfo instance)
 		{
 			if (instance == null)
@@ -40,8 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000F43 RID: 3907 RVA: 0x00035EDF File Offset: 0x000340DF
-		[NullableContext(1)]
+		// Token: 0x06001073 RID: 4211 RVA: 0x00038E13 File Offset: 0x00037013
 		public static IEntityBundleChildInfo CreateFromSetValue([Nullable(2)] IEntityBundleChildInfo_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000F44 RID: 3908 RVA: 0x00035EF2 File Offset: 0x000340F2
-		[NullableContext(1)]
+		// Token: 0x06001074 RID: 4212 RVA: 0x00038E26 File Offset: 0x00037026
 		public IEntityBundleChildInfo_SetValue ToSetValue()
 		{
 			return new IEntityBundleChildInfo_SetValue
@@ -67,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000461 RID: 1121
-		// (get) Token: 0x06000F45 RID: 3909 RVA: 0x00035F29 File Offset: 0x00034129
-		// (set) Token: 0x06000F46 RID: 3910 RVA: 0x00035F54 File Offset: 0x00034154
+		// Token: 0x170004AE RID: 1198
+		// (get) Token: 0x06001075 RID: 4213 RVA: 0x00038E5D File Offset: 0x0003705D
+		// (set) Token: 0x06001076 RID: 4214 RVA: 0x00038E88 File Offset: 0x00037088
 		public virtual bool IsDisable
 		{
 			get
@@ -86,9 +80,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000462 RID: 1122
-		// (get) Token: 0x06000F47 RID: 3911 RVA: 0x00035F62 File Offset: 0x00034162
-		// (set) Token: 0x06000F48 RID: 3912 RVA: 0x00035F8D File Offset: 0x0003418D
+		// Token: 0x170004AF RID: 1199
+		// (get) Token: 0x06001077 RID: 4215 RVA: 0x00038E96 File Offset: 0x00037096
+		// (set) Token: 0x06001078 RID: 4216 RVA: 0x00038EC1 File Offset: 0x000370C1
 		public virtual int ChildId
 		{
 			get
@@ -109,9 +103,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000463 RID: 1123
-		// (get) Token: 0x06000F49 RID: 3913 RVA: 0x00035F9B File Offset: 0x0003419B
-		// (set) Token: 0x06000F4A RID: 3914 RVA: 0x00035FC6 File Offset: 0x000341C6
+		// Token: 0x170004B0 RID: 1200
+		// (get) Token: 0x06001079 RID: 4217 RVA: 0x00038ECF File Offset: 0x000370CF
+		// (set) Token: 0x0600107A RID: 4218 RVA: 0x00038EFA File Offset: 0x000370FA
 		public virtual int EntityId
 		{
 			get
@@ -132,11 +126,13 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000464 RID: 1124
-		// (get) Token: 0x06000F4B RID: 3915 RVA: 0x00035FD4 File Offset: 0x000341D4
-		// (set) Token: 0x06000F4C RID: 3916 RVA: 0x00035FEB File Offset: 0x000341EB
+		// Token: 0x170004B1 RID: 1201
+		// (get) Token: 0x0600107B RID: 4219 RVA: 0x00038F08 File Offset: 0x00037108
+		// (set) Token: 0x0600107C RID: 4220 RVA: 0x00038F1F File Offset: 0x0003711F
+		[Nullable(2)]
 		public virtual IEntityData DiffDataByBundle
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.PocoInterface != null)
@@ -145,16 +141,19 @@ namespace Aki.TDConfigMgr.Component
 				}
 				return null;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().DiffDataByBundle = value;
 			}
 		}
 
-		// Token: 0x04000D2E RID: 3374
+		// Token: 0x04000E18 RID: 3608
+		[Nullable(2)]
 		protected IEntityBundleChildInfo FbInstance;
 
-		// Token: 0x04000D2F RID: 3375
+		// Token: 0x04000E19 RID: 3609
+		[Nullable(2)]
 		protected IEntityBundleChildInfo_SetValue PocoInterface;
 	}
 }

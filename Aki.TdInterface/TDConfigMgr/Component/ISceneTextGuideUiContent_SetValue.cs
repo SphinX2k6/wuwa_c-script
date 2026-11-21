@@ -4,21 +4,20 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006B1 RID: 1713
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000752 RID: 1874
 	public class ISceneTextGuideUiContent_SetValue
 	{
-		// Token: 0x0400192F RID: 6447
+		// Token: 0x04001B2C RID: 6956
 		public string TidText;
 
-		// Token: 0x04001930 RID: 6448
+		// Token: 0x04001B2D RID: 6957
 		public List<ISceneTextGuideUiActionMappingIcon> ActionMappingIconList;
 
-		// Token: 0x04001931 RID: 6449
+		// Token: 0x04001B2E RID: 6958
 		public List<string> MobileIconList;
 
-		// Token: 0x04001932 RID: 6450
+		// Token: 0x04001B2F RID: 6959
+		[Nullable(2)]
 		public string EdTidText;
 	}
 }

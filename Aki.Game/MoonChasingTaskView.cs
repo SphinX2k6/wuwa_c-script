@@ -6,17 +6,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001366 RID: 4966
+// Token: 0x0200081A RID: 2074
 [NullableContext(1)]
 [Nullable(0)]
 public class MoonChasingTaskView : UiViewBase
 {
-	// Token: 0x06008A6A RID: 35434 RVA: 0x001D931A File Offset: 0x001D751A
+	// Token: 0x06005E05 RID: 24069 RVA: 0x001E2176 File Offset: 0x001E0376
 	public MoonChasingTaskView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x06008A6B RID: 35435 RVA: 0x001D9324 File Offset: 0x001D7524
+	// Token: 0x06005E06 RID: 24070 RVA: 0x001E2180 File Offset: 0x001E0380
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,7 +36,7 @@ public class MoonChasingTaskView : UiViewBase
 		};
 	}
 
-	// Token: 0x06008A6C RID: 35436 RVA: 0x001D9414 File Offset: 0x001D7614
+	// Token: 0x06005E07 RID: 24071 RVA: 0x001E2270 File Offset: 0x001E0470
 	private UniTask InitPopularity()
 	{
 		MoonChasingTaskView.<InitPopularity>d__8 <InitPopularity>d__;
@@ -47,7 +47,7 @@ public class MoonChasingTaskView : UiViewBase
 		return <InitPopularity>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008A6D RID: 35437 RVA: 0x001D9458 File Offset: 0x001D7658
+	// Token: 0x06005E08 RID: 24072 RVA: 0x001E22B4 File Offset: 0x001E04B4
 	private UniTask InitCaptionItem()
 	{
 		MoonChasingTaskView.<InitCaptionItem>d__9 <InitCaptionItem>d__;
@@ -58,14 +58,14 @@ public class MoonChasingTaskView : UiViewBase
 		return <InitCaptionItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008A6E RID: 35438 RVA: 0x001D949B File Offset: 0x001D769B
+	// Token: 0x06005E09 RID: 24073 RVA: 0x001E22F7 File Offset: 0x001E04F7
 	private void InitToggle()
 	{
 		base.GetExtendToggle(3).CanExecuteChange.Bind(new Func<bool>(this.MainLineCanChange));
 		base.GetExtendToggle(2).CanExecuteChange.Bind(new Func<bool>(this.BranchLineCanChange));
 	}
 
-	// Token: 0x06008A6F RID: 35439 RVA: 0x001D94D8 File Offset: 0x001D76D8
+	// Token: 0x06005E0A RID: 24074 RVA: 0x001E2334 File Offset: 0x001E0534
 	protected override UniTask OnBeforeStartAsync()
 	{
 		MoonChasingTaskView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -76,7 +76,7 @@ public class MoonChasingTaskView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008A70 RID: 35440 RVA: 0x001D951C File Offset: 0x001D771C
+	// Token: 0x06005E0B RID: 24075 RVA: 0x001E2378 File Offset: 0x001E0578
 	protected override void OnStart()
 	{
 		this.TaskViewData = (MoonChasingTaskViewData)this.OpenParam;
@@ -95,7 +95,7 @@ public class MoonChasingTaskView : UiViewBase
 		base.GetExtendToggle(2).SetToggleStateForce(EToggleState.ETT_Checked, true, false, false);
 	}
 
-	// Token: 0x06008A71 RID: 35441 RVA: 0x001D95BD File Offset: 0x001D77BD
+	// Token: 0x06005E0C RID: 24076 RVA: 0x001E2419 File Offset: 0x001E0619
 	protected override void OnBeforeShow()
 	{
 		RedDotController.Instance.BindRedDot(ERedDotName.MoonChasingMainlineTab, base.GetItem(5), null, 0);
@@ -103,14 +103,14 @@ public class MoonChasingTaskView : UiViewBase
 		ActivityMoonChasingController.Instance.CheckIsActivityClose();
 	}
 
-	// Token: 0x06008A72 RID: 35442 RVA: 0x001D95F9 File Offset: 0x001D77F9
+	// Token: 0x06005E0D RID: 24077 RVA: 0x001E2455 File Offset: 0x001E0655
 	protected override void OnBeforeHide()
 	{
 		RedDotController.Instance.UnBindRedDot(ERedDotName.MoonChasingMainlineTab);
 		RedDotController.Instance.UnBindRedDot(ERedDotName.MoonChasingBranchTab);
 	}
 
-	// Token: 0x06008A73 RID: 35443 RVA: 0x001D961C File Offset: 0x001D781C
+	// Token: 0x06005E0E RID: 24078 RVA: 0x001E2478 File Offset: 0x001E0678
 	private UniTask CreateAndShowMainLine(int taskId, bool isLastTask)
 	{
 		MoonChasingTaskView.<CreateAndShowMainLine>d__15 <CreateAndShowMainLine>d__;
@@ -123,7 +123,7 @@ public class MoonChasingTaskView : UiViewBase
 		return <CreateAndShowMainLine>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008A74 RID: 35444 RVA: 0x001D9670 File Offset: 0x001D7870
+	// Token: 0x06005E0F RID: 24079 RVA: 0x001E24CC File Offset: 0x001E06CC
 	private UniTask CreateAndShowBranchLine(int taskId)
 	{
 		MoonChasingTaskView.<CreateAndShowBranchLine>d__16 <CreateAndShowBranchLine>d__;
@@ -135,7 +135,7 @@ public class MoonChasingTaskView : UiViewBase
 		return <CreateAndShowBranchLine>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008A75 RID: 35445 RVA: 0x001D96BC File Offset: 0x001D78BC
+	// Token: 0x06005E10 RID: 24080 RVA: 0x001E2518 File Offset: 0x001E0718
 	private void SwitchHierarchyIndex(int index)
 	{
 		UUIItem uuiitem = base.GetExtendToggle(3).RootUIComp.Get();
@@ -150,7 +150,7 @@ public class MoonChasingTaskView : UiViewBase
 		uuiitem2.SetHierarchyIndex(hierarchyIndex);
 	}
 
-	// Token: 0x06008A76 RID: 35446 RVA: 0x001D9724 File Offset: 0x001D7924
+	// Token: 0x06005E11 RID: 24081 RVA: 0x001E2580 File Offset: 0x001E0780
 	private void OnBranchLine(EToggleState state)
 	{
 		this.TaskViewData.TaskType = EMoonChasingTaskType.BranchLine;
@@ -171,7 +171,7 @@ public class MoonChasingTaskView : UiViewBase
 		this.SwitchHierarchyIndex(1);
 	}
 
-	// Token: 0x06008A77 RID: 35447 RVA: 0x001D978C File Offset: 0x001D798C
+	// Token: 0x06005E12 RID: 24082 RVA: 0x001E25E8 File Offset: 0x001E07E8
 	private void OnMainLine(EToggleState state)
 	{
 		this.TaskViewData.TaskType = EMoonChasingTaskType.MainLine;
@@ -192,25 +192,25 @@ public class MoonChasingTaskView : UiViewBase
 		this.SwitchHierarchyIndex(0);
 	}
 
-	// Token: 0x06008A78 RID: 35448 RVA: 0x001D97FF File Offset: 0x001D79FF
+	// Token: 0x06005E13 RID: 24083 RVA: 0x001E265B File Offset: 0x001E085B
 	private bool MainLineCanChange()
 	{
 		return this.TaskViewData.TaskType == EMoonChasingTaskType.BranchLine;
 	}
 
-	// Token: 0x06008A79 RID: 35449 RVA: 0x001D980F File Offset: 0x001D7A0F
+	// Token: 0x06005E14 RID: 24084 RVA: 0x001E266B File Offset: 0x001E086B
 	private bool BranchLineCanChange()
 	{
 		return this.TaskViewData.TaskType != EMoonChasingTaskType.BranchLine;
 	}
 
-	// Token: 0x06008A7A RID: 35450 RVA: 0x001D9822 File Offset: 0x001D7A22
+	// Token: 0x06005E15 RID: 24085 RVA: 0x001E267E File Offset: 0x001E087E
 	private void OnClose()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06008A7B RID: 35451 RVA: 0x001D982C File Offset: 0x001D7A2C
+	// Token: 0x06005E16 RID: 24086 RVA: 0x001E2688 File Offset: 0x001E0888
 	public override UUIItem[] GetGuideUiItemAndUiItemForShowEx(string[] configParams)
 	{
 		if (configParams.Length < 1)
@@ -240,47 +240,47 @@ public class MoonChasingTaskView : UiViewBase
 		}
 	}
 
-	// Token: 0x04003DAB RID: 15787
+	// Token: 0x04003E43 RID: 15939
 	private PopularityModule Popularity;
 
-	// Token: 0x04003DAC RID: 15788
+	// Token: 0x04003E44 RID: 15940
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04003DAD RID: 15789
+	// Token: 0x04003E45 RID: 15941
 	private TaskBranchLineModule BranchLine;
 
-	// Token: 0x04003DAE RID: 15790
+	// Token: 0x04003E46 RID: 15942
 	private TaskMainLineModule MainLine;
 
-	// Token: 0x04003DAF RID: 15791
+	// Token: 0x04003E47 RID: 15943
 	private UUIInturnAnimController AnimationController;
 
-	// Token: 0x04003DB0 RID: 15792
+	// Token: 0x04003E48 RID: 15944
 	private MoonChasingTaskViewData TaskViewData;
 
-	// Token: 0x020079CE RID: 31182
+	// Token: 0x02006B58 RID: 27480
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x04028183 RID: 164227
+		// Token: 0x040234B0 RID: 144560
 		public const int CaptionItem = 0;
 
-		// Token: 0x04028184 RID: 164228
+		// Token: 0x040234B1 RID: 144561
 		public const int ContentItem = 1;
 
-		// Token: 0x04028185 RID: 164229
+		// Token: 0x040234B2 RID: 144562
 		public const int BranchLineToggle = 2;
 
-		// Token: 0x04028186 RID: 164230
+		// Token: 0x040234B3 RID: 144563
 		public const int MainLineToggle = 3;
 
-		// Token: 0x04028187 RID: 164231
+		// Token: 0x040234B4 RID: 144564
 		public const int PopularityItem = 4;
 
-		// Token: 0x04028188 RID: 164232
+		// Token: 0x040234B5 RID: 144565
 		public const int MainlineRedDotItem = 5;
 
-		// Token: 0x04028189 RID: 164233
+		// Token: 0x040234B6 RID: 144566
 		public const int BranchRedDotItem = 6;
 	}
 }

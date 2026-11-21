@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 {
-	// Token: 0x0200572F RID: 22319
+	// Token: 0x02004706 RID: 18182
 	public class KurotatoSettleTipInfoItem : UiPanelBase
 	{
-		// Token: 0x06038BD3 RID: 232403 RVA: 0x00D776B0 File Offset: 0x00D758B0
+		// Token: 0x0602DAE3 RID: 187107 RVA: 0x00CC5D5C File Offset: 0x00CC3F5C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038BD4 RID: 232404 RVA: 0x00D77719 File Offset: 0x00D75919
+		// Token: 0x0602DAE4 RID: 187108 RVA: 0x00CC5DC5 File Offset: 0x00CC3FC5
 		[NullableContext(1)]
 		public void Refresh(string tipsText, string valueText)
 		{
@@ -32,13 +32,13 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			base.GetText(1).SetText(valueText, true);
 		}
 
-		// Token: 0x0200B8F8 RID: 47352
+		// Token: 0x0200A319 RID: 41753
 		private class EComps
 		{
-			// Token: 0x04037F1F RID: 229151
+			// Token: 0x0403292F RID: 207151
 			public const int TextTips = 0;
 
-			// Token: 0x04037F20 RID: 229152
+			// Token: 0x04032930 RID: 207152
 			public const int TextValue = 1;
 		}
 	}

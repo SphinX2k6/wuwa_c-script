@@ -8,14 +8,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Data.Gameplay.ZoneFollowCamera
 {
-	// Token: 0x02003F25 RID: 16165
+	// Token: 0x020031D2 RID: 12754
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Data/Gameplay/ZoneFollowCamera/BP_ZoneFollowCameraController.BP_ZoneFollowCameraController_C")]
 	[UnrealStructLayout(1144, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1140)]
 	public class BP_ZoneFollowCameraController_C : AActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060290B7 RID: 168119 RVA: 0x009BA63F File Offset: 0x009B883F
+		// Token: 0x0601F9E8 RID: 129512 RVA: 0x00931AB7 File Offset: 0x0092FCB7
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_ZoneFollowCameraController_C._ClassPtr == IntPtr.Zero)
@@ -25,194 +25,169 @@ namespace AkiClient.Game.Aki.Data.Gameplay.ZoneFollowCamera
 			return BP_ZoneFollowCameraController_C._ClassPtr;
 		}
 
-		// Token: 0x060290B8 RID: 168120 RVA: 0x009BA664 File Offset: 0x009B8864
+		// Token: 0x0601F9E9 RID: 129513 RVA: 0x00931ADC File Offset: 0x0092FCDC
 		public BP_ZoneFollowCameraController_C() : this(BuiltinUtils.AllocNativeUObject(BP_ZoneFollowCameraController_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060290B9 RID: 168121 RVA: 0x009BA68C File Offset: 0x009B888C
+		// Token: 0x0601F9EA RID: 129514 RVA: 0x00931B04 File Offset: 0x0092FD04
 		[NullableContext(1)]
 		public BP_ZoneFollowCameraController_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_ZoneFollowCameraController_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700611A RID: 24858
-		// (get) Token: 0x060290BA RID: 168122 RVA: 0x009BA6BF File Offset: 0x009B88BF
-		// (set) Token: 0x060290BB RID: 168123 RVA: 0x009BA6D3 File Offset: 0x009B88D3
+		// Token: 0x17003A71 RID: 14961
+		// (get) Token: 0x0601F9EB RID: 129515 RVA: 0x00931B37 File Offset: 0x0092FD37
+		// (set) Token: 0x0601F9EC RID: 129516 RVA: 0x00931B4B File Offset: 0x0092FD4B
 		public unsafe UStaticMeshComponent Sphere
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UStaticMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_ZoneFollowCameraController_C.__PropertyOffset_0);
+				return BuiltinUtils.ObjectPropertyGetter<UStaticMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_ZoneFollowCameraController_C.__PropertyOffset_Sphere);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_ZoneFollowCameraController_C.__PropertyOffset_0, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_ZoneFollowCameraController_C.__PropertyOffset_Sphere, value);
 			}
 		}
 
-		// Token: 0x1700611B RID: 24859
-		// (get) Token: 0x060290BC RID: 168124 RVA: 0x009BA6E8 File Offset: 0x009B88E8
-		// (set) Token: 0x060290BD RID: 168125 RVA: 0x009BA6FC File Offset: 0x009B88FC
+		// Token: 0x17003A72 RID: 14962
+		// (get) Token: 0x0601F9ED RID: 129517 RVA: 0x00931B60 File Offset: 0x0092FD60
+		// (set) Token: 0x0601F9EE RID: 129518 RVA: 0x00931B74 File Offset: 0x0092FD74
 		public unsafe USceneComponent DefaultSceneRoot
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_ZoneFollowCameraController_C.__PropertyOffset_1);
+				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_ZoneFollowCameraController_C.__PropertyOffset_DefaultSceneRoot);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_ZoneFollowCameraController_C.__PropertyOffset_1, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_ZoneFollowCameraController_C.__PropertyOffset_DefaultSceneRoot, value);
 			}
 		}
 
-		// Token: 0x1700611C RID: 24860
-		// (get) Token: 0x060290BE RID: 168126 RVA: 0x009BA711 File Offset: 0x009B8911
-		// (set) Token: 0x060290BF RID: 168127 RVA: 0x009BA725 File Offset: 0x009B8925
+		// Token: 0x17003A73 RID: 14963
+		// (get) Token: 0x0601F9EF RID: 129519 RVA: 0x00931B89 File Offset: 0x0092FD89
+		// (set) Token: 0x0601F9F0 RID: 129520 RVA: 0x00931B9D File Offset: 0x0092FD9D
 		public unsafe ACameraActor 预览相机
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<ACameraActor>(base.NativePtr / (IntPtr)sizeof(void*) + BP_ZoneFollowCameraController_C.__PropertyOffset_2);
+				return BuiltinUtils.ObjectPropertyGetter<ACameraActor>(base.NativePtr / (IntPtr)sizeof(void*) + BP_ZoneFollowCameraController_C.__PropertyOffset_预览相机);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_ZoneFollowCameraController_C.__PropertyOffset_2, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_ZoneFollowCameraController_C.__PropertyOffset_预览相机, value);
 			}
 		}
 
-		// Token: 0x1700611D RID: 24861
-		// (get) Token: 0x060290C0 RID: 168128 RVA: 0x009BA73C File Offset: 0x009B893C
-		// (set) Token: 0x060290C1 RID: 168129 RVA: 0x009BA775 File Offset: 0x009B8975
-		[Nullable(1)]
-		public TArray<BP_ZoneFollowCameraZone_C> 区域配置
-		{
-			[NullableContext(1)]
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<BP_ZoneFollowCameraZone_C> result;
-				if ((result = this._区域配置) == null)
-				{
-					result = (this._区域配置 = new TArray<BP_ZoneFollowCameraZone_C>(base.NativePtr + (IntPtr)BP_ZoneFollowCameraController_C.__PropertyOffset_3, this));
-				}
-				return result;
-			}
-			[NullableContext(1)]
-			set
-			{
-				this.区域配置.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x1700611E RID: 24862
-		// (get) Token: 0x060290C2 RID: 168130 RVA: 0x009BA783 File Offset: 0x009B8983
-		// (set) Token: 0x060290C3 RID: 168131 RVA: 0x009BA793 File Offset: 0x009B8993
+		// Token: 0x17003A74 RID: 14964
+		// (get) Token: 0x0601F9F1 RID: 129521 RVA: 0x00931BB2 File Offset: 0x0092FDB2
+		// (set) Token: 0x0601F9F2 RID: 129522 RVA: 0x00931BC2 File Offset: 0x0092FDC2
 		public unsafe float 过渡速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_ZoneFollowCameraController_C.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)BP_ZoneFollowCameraController_C.__PropertyOffset_过渡速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_ZoneFollowCameraController_C.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)BP_ZoneFollowCameraController_C.__PropertyOffset_过渡速度) = value;
 			}
 		}
 
-		// Token: 0x1700611F RID: 24863
-		// (get) Token: 0x060290C4 RID: 168132 RVA: 0x009BA7A4 File Offset: 0x009B89A4
-		// (set) Token: 0x060290C5 RID: 168133 RVA: 0x009BA7B8 File Offset: 0x009B89B8
+		// Token: 0x17003A75 RID: 14965
+		// (get) Token: 0x0601F9F3 RID: 129523 RVA: 0x00931BD3 File Offset: 0x0092FDD3
+		// (set) Token: 0x0601F9F4 RID: 129524 RVA: 0x00931BE7 File Offset: 0x0092FDE7
 		public unsafe FVector TargetCameraPos
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_ZoneFollowCameraController_C.__PropertyOffset_5);
+				return *(base.NativePtr + (IntPtr)BP_ZoneFollowCameraController_C.__PropertyOffset_TargetCameraPos);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_ZoneFollowCameraController_C.__PropertyOffset_5) = value;
+				*(base.NativePtr + (IntPtr)BP_ZoneFollowCameraController_C.__PropertyOffset_TargetCameraPos) = value;
 			}
 		}
 
-		// Token: 0x17006120 RID: 24864
-		// (get) Token: 0x060290C6 RID: 168134 RVA: 0x009BA7CD File Offset: 0x009B89CD
-		// (set) Token: 0x060290C7 RID: 168135 RVA: 0x009BA7E1 File Offset: 0x009B89E1
+		// Token: 0x17003A76 RID: 14966
+		// (get) Token: 0x0601F9F5 RID: 129525 RVA: 0x00931BFC File Offset: 0x0092FDFC
+		// (set) Token: 0x0601F9F6 RID: 129526 RVA: 0x00931C10 File Offset: 0x0092FE10
 		public unsafe FRotator TargetCameraRot
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_ZoneFollowCameraController_C.__PropertyOffset_6);
+				return *(base.NativePtr + (IntPtr)BP_ZoneFollowCameraController_C.__PropertyOffset_TargetCameraRot);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_ZoneFollowCameraController_C.__PropertyOffset_6) = value;
+				*(base.NativePtr + (IntPtr)BP_ZoneFollowCameraController_C.__PropertyOffset_TargetCameraRot) = value;
 			}
 		}
 
-		// Token: 0x17006121 RID: 24865
-		// (get) Token: 0x060290C8 RID: 168136 RVA: 0x009BA7F6 File Offset: 0x009B89F6
-		// (set) Token: 0x060290C9 RID: 168137 RVA: 0x009BA806 File Offset: 0x009B8A06
+		// Token: 0x17003A77 RID: 14967
+		// (get) Token: 0x0601F9F7 RID: 129527 RVA: 0x00931C25 File Offset: 0x0092FE25
+		// (set) Token: 0x0601F9F8 RID: 129528 RVA: 0x00931C35 File Offset: 0x0092FE35
 		public unsafe bool IsActive
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_ZoneFollowCameraController_C.__PropertyOffset_7) != 0;
+				return *(base.NativePtr + (IntPtr)BP_ZoneFollowCameraController_C.__PropertyOffset_IsActive) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_ZoneFollowCameraController_C.__PropertyOffset_7) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_ZoneFollowCameraController_C.__PropertyOffset_IsActive) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006122 RID: 24866
-		// (get) Token: 0x060290CA RID: 168138 RVA: 0x009BA817 File Offset: 0x009B8A17
-		// (set) Token: 0x060290CB RID: 168139 RVA: 0x009BA827 File Offset: 0x009B8A27
+		// Token: 0x17003A78 RID: 14968
+		// (get) Token: 0x0601F9F9 RID: 129529 RVA: 0x00931C46 File Offset: 0x0092FE46
+		// (set) Token: 0x0601F9FA RID: 129530 RVA: 0x00931C56 File Offset: 0x0092FE56
 		public unsafe float 默认相机FOV
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_ZoneFollowCameraController_C.__PropertyOffset_8);
+				return *(base.NativePtr + (IntPtr)BP_ZoneFollowCameraController_C.__PropertyOffset_默认相机FOV);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_ZoneFollowCameraController_C.__PropertyOffset_8) = value;
+				*(base.NativePtr + (IntPtr)BP_ZoneFollowCameraController_C.__PropertyOffset_默认相机FOV) = value;
 			}
 		}
 
-		// Token: 0x17006123 RID: 24867
-		// (get) Token: 0x060290CC RID: 168140 RVA: 0x009BA838 File Offset: 0x009B8A38
-		// (set) Token: 0x060290CD RID: 168141 RVA: 0x009BA84C File Offset: 0x009B8A4C
+		// Token: 0x17003A79 RID: 14969
+		// (get) Token: 0x0601F9FB RID: 129531 RVA: 0x00931C67 File Offset: 0x0092FE67
+		// (set) Token: 0x0601F9FC RID: 129532 RVA: 0x00931C7B File Offset: 0x0092FE7B
 		public unsafe FVector 默认相机偏移
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_ZoneFollowCameraController_C.__PropertyOffset_9);
+				return *(base.NativePtr + (IntPtr)BP_ZoneFollowCameraController_C.__PropertyOffset_默认相机偏移);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_ZoneFollowCameraController_C.__PropertyOffset_9) = value;
+				*(base.NativePtr + (IntPtr)BP_ZoneFollowCameraController_C.__PropertyOffset_默认相机偏移) = value;
 			}
 		}
 
-		// Token: 0x17006124 RID: 24868
-		// (get) Token: 0x060290CE RID: 168142 RVA: 0x009BA861 File Offset: 0x009B8A61
-		// (set) Token: 0x060290CF RID: 168143 RVA: 0x009BA875 File Offset: 0x009B8A75
+		// Token: 0x17003A7A RID: 14970
+		// (get) Token: 0x0601F9FD RID: 129533 RVA: 0x00931C90 File Offset: 0x0092FE90
+		// (set) Token: 0x0601F9FE RID: 129534 RVA: 0x00931CA4 File Offset: 0x0092FEA4
 		public unsafe FRotator 默认相机旋转
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_ZoneFollowCameraController_C.__PropertyOffset_10);
+				return *(base.NativePtr + (IntPtr)BP_ZoneFollowCameraController_C.__PropertyOffset_默认相机旋转);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_ZoneFollowCameraController_C.__PropertyOffset_10) = value;
+				*(base.NativePtr + (IntPtr)BP_ZoneFollowCameraController_C.__PropertyOffset_默认相机旋转) = value;
 			}
 		}
 
-		// Token: 0x060290D0 RID: 168144 RVA: 0x009BA88C File Offset: 0x009B8A8C
+		// Token: 0x0601F9FF RID: 129535 RVA: 0x00931CBC File Offset: 0x0092FEBC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void PackageCameraConfig(ref SZoneFollowCameraSettings Configs)
 		{
 			BP_ZoneFollowCameraController_C.__PackageCameraConfig_FunctionParams* ptr = stackalloc BP_ZoneFollowCameraController_C.__PackageCameraConfig_FunctionParams[(UIntPtr)639] + 15L / (long)sizeof(BP_ZoneFollowCameraController_C.__PackageCameraConfig_FunctionParams) & -16L;
@@ -229,9 +204,8 @@ namespace AkiClient.Game.Aki.Data.Gameplay.ZoneFollowCamera
 			UnrealReflectionUtils.DestroyStruct(BP_ZoneFollowCameraController_C.__PackageCameraConfig_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060290D1 RID: 168145 RVA: 0x009BA928 File Offset: 0x009B8B28
+		// Token: 0x0601FA00 RID: 129536 RVA: 0x00931D58 File Offset: 0x0092FF58
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void ComputeTargetPosition(ref TArray<int> ZoneIndexs, FVector RoleWorldPos, ref FVector OutPosition, ref FRotator OutRotation)
 		{
 			BP_ZoneFollowCameraController_C.__ComputeTargetPosition_FunctionParams* ptr = stackalloc BP_ZoneFollowCameraController_C.__ComputeTargetPosition_FunctionParams[(UIntPtr)511] + 15L / (long)sizeof(BP_ZoneFollowCameraController_C.__ComputeTargetPosition_FunctionParams) & -16L;
@@ -255,9 +229,8 @@ namespace AkiClient.Game.Aki.Data.Gameplay.ZoneFollowCamera
 			UnrealReflectionUtils.DestroyStruct(BP_ZoneFollowCameraController_C.__ComputeTargetPosition_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060290D2 RID: 168146 RVA: 0x009BA9DC File Offset: 0x009B8BDC
+		// Token: 0x0601FA01 RID: 129537 RVA: 0x00931E0C File Offset: 0x0093000C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void FindActiveZone(FVector WorldPos, ref TArray<int> ZoneIndexs, ref bool bFound)
 		{
 			BP_ZoneFollowCameraController_C.__FindActiveZone_FunctionParams* ptr = stackalloc BP_ZoneFollowCameraController_C.__FindActiveZone_FunctionParams[(UIntPtr)239] + 15L / (long)sizeof(BP_ZoneFollowCameraController_C.__FindActiveZone_FunctionParams) & -16L;
@@ -279,139 +252,126 @@ namespace AkiClient.Game.Aki.Data.Gameplay.ZoneFollowCamera
 			UnrealReflectionUtils.DestroyStruct(BP_ZoneFollowCameraController_C.__FindActiveZone_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060290D3 RID: 168147 RVA: 0x009BAA6E File Offset: 0x009B8C6E
+		// Token: 0x0601FA02 RID: 129538 RVA: 0x00931E9E File Offset: 0x0093009E
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void UserConstructionScript()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_ZoneFollowCameraController_C.__UserConstructionScript_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060290D4 RID: 168148 RVA: 0x009BAA82 File Offset: 0x009B8C82
+		// Token: 0x0601FA03 RID: 129539 RVA: 0x00931EB2 File Offset: 0x009300B2
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void UserConstructionScript_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_ZoneFollowCameraController_C.__UserConstructionScript_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_ZoneFollowCameraController_C.__UserConstructionScript_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060290D5 RID: 168149 RVA: 0x009BAA97 File Offset: 0x009B8C97
+		// Token: 0x0601FA04 RID: 129540 RVA: 0x00931EC6 File Offset: 0x009300C6
 		protected BP_ZoneFollowCameraController_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0401501F RID: 86047
+		// Token: 0x04010F5F RID: 69471
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Data/Gameplay/ZoneFollowCamera/BP_ZoneFollowCameraController.BP_ZoneFollowCameraController_C";
 
-		// Token: 0x04015020 RID: 86048
+		// Token: 0x04010F60 RID: 69472
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04015021 RID: 86049
+		// Token: 0x04010F61 RID: 69473
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04015022 RID: 86050
-		internal static int __PropertyOffset_0;
+		// Token: 0x04010F62 RID: 69474
+		internal static int __PropertyOffset_Sphere;
 
-		// Token: 0x04015023 RID: 86051
-		internal static int __PropertyOffset_1;
+		// Token: 0x04010F63 RID: 69475
+		internal static int __PropertyOffset_DefaultSceneRoot;
 
-		// Token: 0x04015024 RID: 86052
-		internal static int __PropertyOffset_2;
+		// Token: 0x04010F64 RID: 69476
+		internal static int __PropertyOffset_预览相机;
 
-		// Token: 0x04015025 RID: 86053
-		internal static int __PropertyOffset_3;
+		// Token: 0x04010F65 RID: 69477
+		internal static int __PropertyOffset_过渡速度;
 
-		// Token: 0x04015026 RID: 86054
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<BP_ZoneFollowCameraZone_C> _区域配置;
+		// Token: 0x04010F66 RID: 69478
+		internal static int __PropertyOffset_TargetCameraPos;
 
-		// Token: 0x04015027 RID: 86055
-		internal static int __PropertyOffset_4;
+		// Token: 0x04010F67 RID: 69479
+		internal static int __PropertyOffset_TargetCameraRot;
 
-		// Token: 0x04015028 RID: 86056
-		internal static int __PropertyOffset_5;
+		// Token: 0x04010F68 RID: 69480
+		internal static int __PropertyOffset_IsActive;
 
-		// Token: 0x04015029 RID: 86057
-		internal static int __PropertyOffset_6;
+		// Token: 0x04010F69 RID: 69481
+		internal static int __PropertyOffset_默认相机FOV;
 
-		// Token: 0x0401502A RID: 86058
-		internal static int __PropertyOffset_7;
+		// Token: 0x04010F6A RID: 69482
+		internal static int __PropertyOffset_默认相机偏移;
 
-		// Token: 0x0401502B RID: 86059
-		internal static int __PropertyOffset_8;
+		// Token: 0x04010F6B RID: 69483
+		internal static int __PropertyOffset_默认相机旋转;
 
-		// Token: 0x0401502C RID: 86060
-		internal static int __PropertyOffset_9;
-
-		// Token: 0x0401502D RID: 86061
-		internal static int __PropertyOffset_10;
-
-		// Token: 0x0401502E RID: 86062
+		// Token: 0x04010F6C RID: 69484
 		private static IntPtr __PackageCameraConfig_NativeFunctionPtr;
 
-		// Token: 0x0401502F RID: 86063
+		// Token: 0x04010F6D RID: 69485
 		private static IntPtr __ComputeTargetPosition_NativeFunctionPtr;
 
-		// Token: 0x04015030 RID: 86064
+		// Token: 0x04010F6E RID: 69486
 		private static IntPtr __FindActiveZone_NativeFunctionPtr;
 
-		// Token: 0x04015031 RID: 86065
+		// Token: 0x04010F6F RID: 69487
 		private static IntPtr __UserConstructionScript_NativeFunctionPtr;
 
-		// Token: 0x0200A2DD RID: 41693
+		// Token: 0x02008F25 RID: 36645
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 624)]
 		protected ref struct __PackageCameraConfig_FunctionParams
 		{
-			// Token: 0x04032021 RID: 204833
+			// Token: 0x0402CC57 RID: 183383
 			[FieldOffset(0)]
 			public byte Configs;
 		}
 
-		// Token: 0x0200A2DE RID: 41694
+		// Token: 0x02008F26 RID: 36646
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 496)]
 		protected ref struct __ComputeTargetPosition_FunctionParams
 		{
-			// Token: 0x04032022 RID: 204834
+			// Token: 0x0402CC58 RID: 183384
 			[FieldOffset(0)]
 			public byte ZoneIndexs;
 
-			// Token: 0x04032023 RID: 204835
+			// Token: 0x0402CC59 RID: 183385
 			[FieldOffset(16)]
 			public FVector RoleWorldPos;
 
-			// Token: 0x04032024 RID: 204836
+			// Token: 0x0402CC5A RID: 183386
 			[FieldOffset(28)]
 			public FVector OutPosition;
 
-			// Token: 0x04032025 RID: 204837
+			// Token: 0x0402CC5B RID: 183387
 			[FieldOffset(40)]
 			public FRotator OutRotation;
 		}
 
-		// Token: 0x0200A2DF RID: 41695
+		// Token: 0x02008F27 RID: 36647
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 224)]
 		protected ref struct __FindActiveZone_FunctionParams
 		{
-			// Token: 0x04032026 RID: 204838
+			// Token: 0x0402CC5C RID: 183388
 			[FieldOffset(0)]
 			public FVector WorldPos;
 
-			// Token: 0x04032027 RID: 204839
+			// Token: 0x0402CC5D RID: 183389
 			[FieldOffset(16)]
 			public byte ZoneIndexs;
 
-			// Token: 0x04032028 RID: 204840
+			// Token: 0x0402CC5E RID: 183390
 			[FieldOffset(32)]
 			public bool bFound;
 		}

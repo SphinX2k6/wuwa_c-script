@@ -2,12 +2,12 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200159C RID: 5532
+	// Token: 0x020016FB RID: 5883
 	public enum EBulletLauncher
 	{
-		// Token: 0x0400499F RID: 18847
+		// Token: 0x04004D51 RID: 19793
 		Player,
-		// Token: 0x040049A0 RID: 18848
+		// Token: 0x04004D52 RID: 19794
 		SceneItem
 	}
 }

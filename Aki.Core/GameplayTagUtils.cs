@@ -8,13 +8,13 @@ using UnrealEngine;
 [Nullable(0)]
 public class GameplayTagUtils : IStaticVariableResetter
 {
-	// Token: 0x0600075A RID: 1882 RVA: 0x000282B5 File Offset: 0x000264B5
+	// Token: 0x06000794 RID: 1940 RVA: 0x000285E9 File Offset: 0x000267E9
 	static GameplayTagUtils()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(GameplayTagUtils.CreateStaticDefaultValue), new Action(GameplayTagUtils.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600075B RID: 1883 RVA: 0x000282F0 File Offset: 0x000264F0
+	// Token: 0x06000795 RID: 1941 RVA: 0x00028624 File Offset: 0x00026824
 	public static int GetTagIdByName(string tagName)
 	{
 		int result;
@@ -25,7 +25,7 @@ public class GameplayTagUtils : IStaticVariableResetter
 		return result;
 	}
 
-	// Token: 0x0600075C RID: 1884 RVA: 0x00028314 File Offset: 0x00026514
+	// Token: 0x06000796 RID: 1942 RVA: 0x00028648 File Offset: 0x00026848
 	[NullableContext(2)]
 	public static string GetNameByTagId(int tagId)
 	{
@@ -42,13 +42,13 @@ public class GameplayTagUtils : IStaticVariableResetter
 		return gameplayTagById.Value.TagName.ToString();
 	}
 
-	// Token: 0x0600075D RID: 1885 RVA: 0x0002837F File Offset: 0x0002657F
+	// Token: 0x06000797 RID: 1943 RVA: 0x000286B3 File Offset: 0x000268B3
 	public static FGameplayTag? GetGameplayTagByName(string tagName)
 	{
 		return GameplayTagUtils.GetGameplayTagById(GameplayTagUtils.GetTagIdByName(tagName));
 	}
 
-	// Token: 0x0600075E RID: 1886 RVA: 0x0002838C File Offset: 0x0002658C
+	// Token: 0x06000798 RID: 1944 RVA: 0x000286C0 File Offset: 0x000268C0
 	public static FGameplayTag? GetGameplayTagById(int tagId)
 	{
 		FGameplayTag? fgameplayTag;
@@ -74,13 +74,13 @@ public class GameplayTagUtils : IStaticVariableResetter
 		return fgameplayTag;
 	}
 
-	// Token: 0x0600075F RID: 1887 RVA: 0x0002841A File Offset: 0x0002661A
+	// Token: 0x06000799 RID: 1945 RVA: 0x0002874E File Offset: 0x0002694E
 	public static int GetParentTag(int tag)
 	{
 		return GameplayTagDefine.ParentTagIdMap.GetValueOrDefault(tag, 0);
 	}
 
-	// Token: 0x06000760 RID: 1888 RVA: 0x00028428 File Offset: 0x00026628
+	// Token: 0x0600079A RID: 1946 RVA: 0x0002875C File Offset: 0x0002695C
 	public static bool IsChildTag(int tagA, int tagB)
 	{
 		if (tagA == tagB)
@@ -101,7 +101,7 @@ public class GameplayTagUtils : IStaticVariableResetter
 		return false;
 	}
 
-	// Token: 0x06000761 RID: 1889 RVA: 0x0002845C File Offset: 0x0002665C
+	// Token: 0x0600079B RID: 1947 RVA: 0x00028790 File Offset: 0x00026990
 	[NullableContext(2)]
 	public static bool Contains(IEnumerable<int> tagContainer, int tag)
 	{
@@ -119,7 +119,7 @@ public class GameplayTagUtils : IStaticVariableResetter
 		return false;
 	}
 
-	// Token: 0x06000762 RID: 1890 RVA: 0x000284B4 File Offset: 0x000266B4
+	// Token: 0x0600079C RID: 1948 RVA: 0x000287E8 File Offset: 0x000269E8
 	[NullableContext(2)]
 	public static bool ContainsExact(IEnumerable<int> tagContainer, int tag)
 	{
@@ -140,7 +140,7 @@ public class GameplayTagUtils : IStaticVariableResetter
 		return false;
 	}
 
-	// Token: 0x06000763 RID: 1891 RVA: 0x00028504 File Offset: 0x00026704
+	// Token: 0x0600079D RID: 1949 RVA: 0x00028838 File Offset: 0x00026A38
 	[NullableContext(2)]
 	public static bool HasAll(IEnumerable<int> tagContainerA, IEnumerable<int> tagContainerB)
 	{
@@ -158,7 +158,7 @@ public class GameplayTagUtils : IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x06000764 RID: 1892 RVA: 0x0002855C File Offset: 0x0002675C
+	// Token: 0x0600079E RID: 1950 RVA: 0x00028890 File Offset: 0x00026A90
 	[NullableContext(2)]
 	public static bool HasAny(IEnumerable<int> tagContainerA, IEnumerable<int> tagContainerB)
 	{
@@ -176,7 +176,7 @@ public class GameplayTagUtils : IStaticVariableResetter
 		return false;
 	}
 
-	// Token: 0x06000765 RID: 1893 RVA: 0x000285B4 File Offset: 0x000267B4
+	// Token: 0x0600079F RID: 1951 RVA: 0x000288E8 File Offset: 0x00026AE8
 	public static List<int> ConvertFromUeContainer([Nullable(2)] FGameplayTagContainer ueContainer)
 	{
 		if (ueContainer == null)
@@ -192,27 +192,27 @@ public class GameplayTagUtils : IStaticVariableResetter
 		return list;
 	}
 
-	// Token: 0x06000766 RID: 1894 RVA: 0x00028606 File Offset: 0x00026806
+	// Token: 0x060007A0 RID: 1952 RVA: 0x0002893A File Offset: 0x00026B3A
 	public static bool IsValidTag(FGameplayTag? gameplayTag)
 	{
 		return gameplayTag != null && gameplayTag.Value.TagName != FName.NAME_None;
 	}
 
-	// Token: 0x06000767 RID: 1895 RVA: 0x00028629 File Offset: 0x00026829
+	// Token: 0x060007A1 RID: 1953 RVA: 0x0002895D File Offset: 0x00026B5D
 	public static void CreateStaticDefaultValue()
 	{
 		GameplayTagUtils.ErrorIdSet = new HashSet<int>();
 		GameplayTagUtils.GameplayTagMap = new Dictionary<int, FGameplayTag?>();
 	}
 
-	// Token: 0x06000768 RID: 1896 RVA: 0x0002863F File Offset: 0x0002683F
+	// Token: 0x060007A2 RID: 1954 RVA: 0x00028973 File Offset: 0x00026B73
 	public static void ResetStaticDefaultValue()
 	{
 		GameplayTagUtils.ErrorIdSet = null;
 		GameplayTagUtils.GameplayTagMap = null;
 	}
 
-	// Token: 0x06000769 RID: 1897 RVA: 0x00028650 File Offset: 0x00026850
+	// Token: 0x060007A3 RID: 1955 RVA: 0x00028984 File Offset: 0x00026B84
 	public static IList<int> GameplayTagsToTagIds(TArray<FGameplayTag> tags)
 	{
 		List<int> list = new List<int>();
@@ -226,7 +226,7 @@ public class GameplayTagUtils : IStaticVariableResetter
 		return list;
 	}
 
-	// Token: 0x0600076A RID: 1898 RVA: 0x00028690 File Offset: 0x00026890
+	// Token: 0x060007A4 RID: 1956 RVA: 0x000289C4 File Offset: 0x00026BC4
 	public static IList<string> GameplayTagsToTagNames(TArray<FGameplayTag> tags)
 	{
 		List<string> list = new List<string>();
@@ -240,13 +240,13 @@ public class GameplayTagUtils : IStaticVariableResetter
 		return list;
 	}
 
-	// Token: 0x040005CC RID: 1484
+	// Token: 0x040005D7 RID: 1495
 	private static HashSet<int> ErrorIdSet;
 
-	// Token: 0x040005CD RID: 1485
+	// Token: 0x040005D8 RID: 1496
 	[StaticVariableRuleIgnore]
 	private static readonly Stat Stat = Stat.Create("GameplayTagUtils.FnvHash", "", "");
 
-	// Token: 0x040005CE RID: 1486
+	// Token: 0x040005D9 RID: 1497
 	private static Dictionary<int, FGameplayTag?> GameplayTagMap;
 }

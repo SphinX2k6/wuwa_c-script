@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000697 RID: 1687
+	// Token: 0x02000738 RID: 1848
 	public class IScanTraceEffect_SetValue
 	{
-		// Token: 0x040018D6 RID: 6358
-		[Nullable(1)]
+		// Token: 0x04001AD3 RID: 6867
 		public string Effect;
 
-		// Token: 0x040018D7 RID: 6359
+		// Token: 0x04001AD4 RID: 6868
 		public int Target;
 	}
 }

@@ -5,12 +5,12 @@ using CSharpScript.Game.Module.Common.MediumItemGrid;
 using CSharpScript.Game.Module.RoleUi;
 using UnrealEngine;
 
-// Token: 0x02001581 RID: 5505
+// Token: 0x02000A39 RID: 2617
 [NullableContext(1)]
 [Nullable(0)]
 public class WheelTowerEnhanceRoleGridItem : LoopScrollMediumItemGrid<int>
 {
-	// Token: 0x06009D44 RID: 40260 RVA: 0x002214C1 File Offset: 0x0021F6C1
+	// Token: 0x06007122 RID: 28962 RVA: 0x0022B271 File Offset: 0x00229471
 	protected override void OnStart()
 	{
 		this.GetItemGridExtendToggle().bLockStateOnSelect = true;
@@ -21,7 +21,7 @@ public class WheelTowerEnhanceRoleGridItem : LoopScrollMediumItemGrid<int>
 		});
 	}
 
-	// Token: 0x06009D45 RID: 40261 RVA: 0x002214F4 File Offset: 0x0021F6F4
+	// Token: 0x06007123 RID: 28963 RVA: 0x0022B2A4 File Offset: 0x002294A4
 	protected override void OnRefresh(int roleId, bool isSelected, int gridIndex)
 	{
 		this.RoleId = roleId;
@@ -64,25 +64,25 @@ public class WheelTowerEnhanceRoleGridItem : LoopScrollMediumItemGrid<int>
 		this.SetSelected(isSelected, true);
 	}
 
-	// Token: 0x06009D46 RID: 40262 RVA: 0x00221609 File Offset: 0x0021F809
+	// Token: 0x06007124 RID: 28964 RVA: 0x0022B3B9 File Offset: 0x002295B9
 	public void SetToggleClickCallback(Action<int> callback)
 	{
 		this.ToggleClickCallback = callback;
 	}
 
-	// Token: 0x06009D47 RID: 40263 RVA: 0x00221612 File Offset: 0x0021F812
+	// Token: 0x06007125 RID: 28965 RVA: 0x0022B3C2 File Offset: 0x002295C2
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetSelected(true, true);
 	}
 
-	// Token: 0x06009D48 RID: 40264 RVA: 0x0022161C File Offset: 0x0021F81C
+	// Token: 0x06007126 RID: 28966 RVA: 0x0022B3CC File Offset: 0x002295CC
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetSelected(false, true);
 	}
 
-	// Token: 0x06009D49 RID: 40265 RVA: 0x00221626 File Offset: 0x0021F826
+	// Token: 0x06007127 RID: 28967 RVA: 0x0022B3D6 File Offset: 0x002295D6
 	private void OnExtendToggleStateChangedInternal(MediumItemGridExtendCallback callback)
 	{
 		if (callback.State == EToggleState.ETT_Checked)
@@ -96,7 +96,7 @@ public class WheelTowerEnhanceRoleGridItem : LoopScrollMediumItemGrid<int>
 		}
 	}
 
-	// Token: 0x06009D4A RID: 40266 RVA: 0x00221647 File Offset: 0x0021F847
+	// Token: 0x06007128 RID: 28968 RVA: 0x0022B3F7 File Offset: 0x002295F7
 	private void OnExtendToggleClickedInternal()
 	{
 		if (this.IsSelected)
@@ -111,10 +111,10 @@ public class WheelTowerEnhanceRoleGridItem : LoopScrollMediumItemGrid<int>
 		toggleClickCallback(this.RoleId);
 	}
 
-	// Token: 0x0400450C RID: 17676
+	// Token: 0x040045B2 RID: 17842
 	private int RoleId;
 
-	// Token: 0x0400450D RID: 17677
+	// Token: 0x040045B3 RID: 17843
 	[Nullable(2)]
 	private Action<int> ToggleClickCallback;
 }

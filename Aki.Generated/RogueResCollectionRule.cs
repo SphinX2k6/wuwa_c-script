@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000FF7 RID: 4087
+	// Token: 0x020010DF RID: 4319
 	public struct RogueResCollectionRule : IFlatbufferObject
 	{
-		// Token: 0x17002FEB RID: 12267
-		// (get) Token: 0x0600C151 RID: 49489 RVA: 0x002EA2C1 File Offset: 0x002E84C1
+		// Token: 0x17003066 RID: 12390
+		// (get) Token: 0x0600C79B RID: 51099 RVA: 0x00306569 File Offset: 0x00304769
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C152 RID: 49490 RVA: 0x002EA2CE File Offset: 0x002E84CE
+		// Token: 0x0600C79C RID: 51100 RVA: 0x00306576 File Offset: 0x00304776
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600C153 RID: 49491 RVA: 0x002EA2D8 File Offset: 0x002E84D8
+		// Token: 0x0600C79D RID: 51101 RVA: 0x00306580 File Offset: 0x00304780
 		public static RogueResCollectionRule GetRootAsRogueResCollectionRule(ByteBuffer _bb)
 		{
 			return RogueResCollectionRule.GetRootAsRogueResCollectionRule(_bb, default(RogueResCollectionRule));
 		}
 
-		// Token: 0x0600C154 RID: 49492 RVA: 0x002EA2F4 File Offset: 0x002E84F4
+		// Token: 0x0600C79E RID: 51102 RVA: 0x0030659C File Offset: 0x0030479C
 		public static RogueResCollectionRule GetRootAsRogueResCollectionRule(ByteBuffer _bb, RogueResCollectionRule obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600C155 RID: 49493 RVA: 0x002EA311 File Offset: 0x002E8511
+		// Token: 0x0600C79F RID: 51103 RVA: 0x003065B9 File Offset: 0x003047B9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600C156 RID: 49494 RVA: 0x002EA320 File Offset: 0x002E8520
+		// Token: 0x0600C7A0 RID: 51104 RVA: 0x003065C8 File Offset: 0x003047C8
 		public RogueResCollectionRule __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002FEC RID: 12268
-		// (get) Token: 0x0600C157 RID: 49495 RVA: 0x002EA330 File Offset: 0x002E8530
+		// Token: 0x17003067 RID: 12391
+		// (get) Token: 0x0600C7A1 RID: 51105 RVA: 0x003065D8 File Offset: 0x003047D8
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002FED RID: 12269
-		// (get) Token: 0x0600C158 RID: 49496 RVA: 0x002EA36C File Offset: 0x002E856C
+		// Token: 0x17003068 RID: 12392
+		// (get) Token: 0x0600C7A2 RID: 51106 RVA: 0x00306614 File Offset: 0x00304814
 		public int Type
 		{
 			get
@@ -79,7 +79,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C159 RID: 49497 RVA: 0x002EA3A8 File Offset: 0x002E85A8
+		// Token: 0x0600C7A3 RID: 51107 RVA: 0x00306650 File Offset: 0x00304850
 		public int Seasons(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -90,8 +90,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17002FEE RID: 12270
-		// (get) Token: 0x0600C15A RID: 49498 RVA: 0x002EA3E8 File Offset: 0x002E85E8
+		// Token: 0x17003069 RID: 12393
+		// (get) Token: 0x0600C7A4 RID: 51108 RVA: 0x00306690 File Offset: 0x00304890
 		public int SeasonsLength
 		{
 			get
@@ -105,37 +105,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C15B RID: 49499 RVA: 0x002EA413 File Offset: 0x002E8613
+		// Token: 0x0600C7A5 RID: 51109 RVA: 0x003066BB File Offset: 0x003048BB
 		public Span<int> GetSeasonsBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x0600C15C RID: 49500 RVA: 0x002EA422 File Offset: 0x002E8622
+		// Token: 0x0600C7A6 RID: 51110 RVA: 0x003066CA File Offset: 0x003048CA
 		public int[] GetSeasonsArray()
 		{
 			return this.__p.__vector_as_array<int>(8) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600C15D RID: 49501 RVA: 0x002EA43C File Offset: 0x002E863C
+		// Token: 0x0600C7A7 RID: 51111 RVA: 0x003066E1 File Offset: 0x003048E1
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用SeasonsIter()或GetSeasonsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] Seasons()
+		public int[] Seasons()
 		{
-			RogueResCollectionRule rogueResCollectionRule = this;
-			return rogueResCollectionRule.GetSeasonsArray() ?? Array.Empty<int>();
+			return this.GetSeasonsArray();
 		}
 
-		// Token: 0x0600C15E RID: 49502 RVA: 0x002EA460 File Offset: 0x002E8660
+		// Token: 0x0600C7A8 RID: 51112 RVA: 0x003066E9 File Offset: 0x003048E9
 		[NullableContext(1)]
-		public readonly IEnumerable<int> SeasonsIter()
+		public IEnumerable<int> SeasonsIter()
 		{
 			RogueResCollectionRule.<SeasonsIter>d__18 <SeasonsIter>d__ = new RogueResCollectionRule.<SeasonsIter>d__18(-2);
 			<SeasonsIter>d__.<>3__<>4__this = this;
 			return <SeasonsIter>d__;
 		}
 
-		// Token: 0x040050DF RID: 20703
+		// Token: 0x040056C7 RID: 22215
 		private Table __p;
 	}
 }

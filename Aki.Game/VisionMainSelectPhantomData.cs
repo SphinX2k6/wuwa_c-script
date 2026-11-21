@@ -1,11 +1,11 @@
 ﻿using System;
 
-// Token: 0x02002453 RID: 9299
+// Token: 0x02001938 RID: 6456
 public class VisionMainSelectPhantomData
 {
-	// Token: 0x04008C82 RID: 35970
+	// Token: 0x04008DC9 RID: 36297
 	public int MonsterId;
 
-	// Token: 0x04008C83 RID: 35971
+	// Token: 0x04008DCA RID: 36298
 	public int FetterGroupId;
 }

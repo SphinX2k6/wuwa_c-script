@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002358 RID: 9048
+	// Token: 0x02000762 RID: 1890
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/MovieSceneTracks.MovieSceneCinematicShotSection")]
-	[UnrealStructLayout(496, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 496)]
+	[UnrealStructLayout(512, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 512)]
 	public class UMovieSceneCinematicShotSection : UMovieSceneSubSection, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060222FB RID: 140027 RVA: 0x00328D36 File Offset: 0x00326F36
+		// Token: 0x0600A472 RID: 42098 RVA: 0x000F2E42 File Offset: 0x000F1042
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UMovieSceneCinematicShotSection._ClassPtr;
 		}
 
-		// Token: 0x060222FC RID: 140028 RVA: 0x00328D44 File Offset: 0x00326F44
+		// Token: 0x0600A473 RID: 42099 RVA: 0x000F2E50 File Offset: 0x000F1050
 		public UMovieSceneCinematicShotSection() : this(BuiltinUtils.AllocNativeUObject(UMovieSceneCinematicShotSection.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060222FD RID: 140029 RVA: 0x00328D6C File Offset: 0x00326F6C
+		// Token: 0x0600A474 RID: 42100 RVA: 0x000F2E78 File Offset: 0x000F1078
 		public UMovieSceneCinematicShotSection(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UMovieSceneCinematicShotSection.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17008404 RID: 33796
-		// (get) Token: 0x060222FE RID: 140030 RVA: 0x00328D9F File Offset: 0x00326F9F
-		// (set) Token: 0x060222FF RID: 140031 RVA: 0x00328DB3 File Offset: 0x00326FB3
+		// Token: 0x17001E68 RID: 7784
+		// (get) Token: 0x0600A475 RID: 42101 RVA: 0x000F2EAB File Offset: 0x000F10AB
+		// (set) Token: 0x0600A476 RID: 42102 RVA: 0x000F2EBF File Offset: 0x000F10BF
 		public unsafe string ShotDisplayName
 		{
 			get
@@ -44,9 +44,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008405 RID: 33797
-		// (get) Token: 0x06022300 RID: 140032 RVA: 0x00328DC8 File Offset: 0x00326FC8
-		// (set) Token: 0x06022301 RID: 140033 RVA: 0x00328E01 File Offset: 0x00327001
+		// Token: 0x17001E69 RID: 7785
+		// (get) Token: 0x0600A477 RID: 42103 RVA: 0x000F2ED4 File Offset: 0x000F10D4
+		// (set) Token: 0x0600A478 RID: 42104 RVA: 0x000F2F0D File Offset: 0x000F110D
 		public unsafe FText DisplayName_DEPRECATED
 		{
 			get
@@ -65,7 +65,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06022302 RID: 140034 RVA: 0x00328E1C File Offset: 0x0032701C
+		// Token: 0x0600A479 RID: 42105 RVA: 0x000F2F28 File Offset: 0x000F1128
 		public unsafe void SetShotDisplayName(string InShotDisplayName)
 		{
 			FString fstring = FString.AllocTemp(InShotDisplayName);
@@ -73,48 +73,48 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x06022303 RID: 140035 RVA: 0x00328E46 File Offset: 0x00327046
+		// Token: 0x0600A47A RID: 42106 RVA: 0x000F2F52 File Offset: 0x000F1152
 		public string GetShotDisplayName()
 		{
 			return FString.ToStringAndDeleteNativePtr(UMovieSceneCinematicShotSection.__GetShotDisplayName_Internal(base.NativePtr));
 		}
 
-		// Token: 0x06022304 RID: 140036
+		// Token: 0x0600A47B RID: 42107
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetShotDisplayName_Internal(IntPtr @this, in FString InShotDisplayName);
 
-		// Token: 0x06022305 RID: 140037
+		// Token: 0x0600A47C RID: 42108
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern FString* __GetShotDisplayName_Internal(IntPtr @this);
 
-		// Token: 0x06022306 RID: 140038 RVA: 0x00328E58 File Offset: 0x00327058
+		// Token: 0x0600A47D RID: 42109 RVA: 0x000F2F64 File Offset: 0x000F1164
 		static UMovieSceneCinematicShotSection()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/MovieSceneTracks.MovieSceneCinematicShotSection");
 		}
 
-		// Token: 0x06022307 RID: 140039 RVA: 0x00328E66 File Offset: 0x00327066
+		// Token: 0x0600A47E RID: 42110 RVA: 0x000F2F72 File Offset: 0x000F1172
 		protected UMovieSceneCinematicShotSection(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040123F8 RID: 74744
+		// Token: 0x04004622 RID: 17954
 		public new const string __ObjectPath = "/Script/MovieSceneTracks.MovieSceneCinematicShotSection";
 
-		// Token: 0x040123F9 RID: 74745
+		// Token: 0x04004623 RID: 17955
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040123FA RID: 74746
+		// Token: 0x04004624 RID: 17956
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040123FB RID: 74747
+		// Token: 0x04004625 RID: 17957
 		internal static int __PropertyOffset_ShotDisplayName;
 
-		// Token: 0x040123FC RID: 74748
+		// Token: 0x04004626 RID: 17958
 		internal static int __PropertyOffset_DisplayName_DEPRECATED;
 
-		// Token: 0x040123FD RID: 74749
+		// Token: 0x04004627 RID: 17959
 		[Nullable(2)]
 		private FText _DisplayName_DEPRECATED;
 	}

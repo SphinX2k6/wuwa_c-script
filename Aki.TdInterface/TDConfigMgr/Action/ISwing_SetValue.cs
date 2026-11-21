@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001EF8 RID: 7928
+	// Token: 0x02002131 RID: 8497
 	public class ISwing_SetValue
 	{
-		// Token: 0x040064D9 RID: 25817
+		// Token: 0x04006AC8 RID: 27336
 		public ELeisureInteract Type;
 
-		// Token: 0x040064DA RID: 25818
-		[Nullable(1)]
+		// Token: 0x04006AC9 RID: 27337
 		public string SwingDa;
 
-		// Token: 0x040064DB RID: 25819
+		// Token: 0x04006ACA RID: 27338
 		public int EntityId;
 	}
 }

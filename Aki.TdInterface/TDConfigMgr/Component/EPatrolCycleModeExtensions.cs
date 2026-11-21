@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009C8 RID: 2504
+	// Token: 0x02000A89 RID: 2697
 	public static class EPatrolCycleModeExtensions
 	{
-		// Token: 0x060037B5 RID: 14261 RVA: 0x00090BE4 File Offset: 0x0008EDE4
+		// Token: 0x06003B7B RID: 15227 RVA: 0x000992B4 File Offset: 0x000974B4
 		public static string ToEnumString(this EPatrolCycleMode value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060037B6 RID: 14262 RVA: 0x00090C1C File Offset: 0x0008EE1C
+		// Token: 0x06003B7C RID: 15228 RVA: 0x000992EC File Offset: 0x000974EC
 		public static EPatrolCycleMode FromString(string name)
 		{
 			EPatrolCycleMode result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060037B7 RID: 14263 RVA: 0x00090C45 File Offset: 0x0008EE45
+		// Token: 0x06003B7D RID: 15229 RVA: 0x00099315 File Offset: 0x00097515
 		public static bool TryFromString(string name, out EPatrolCycleMode value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x060037B8 RID: 14264 RVA: 0x00090C7E File Offset: 0x0008EE7E
+		// Token: 0x06003B7E RID: 15230 RVA: 0x0009934E File Offset: 0x0009754E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060037B9 RID: 14265 RVA: 0x00090C96 File Offset: 0x0008EE96
+		// Token: 0x06003B7F RID: 15231 RVA: 0x00099366 File Offset: 0x00097566
 		public static EPatrolCycleMode[] GetValues()
 		{
 			return new EPatrolCycleMode[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060037BA RID: 14266 RVA: 0x00090CA2 File Offset: 0x0008EEA2
+		// Token: 0x06003B80 RID: 15232 RVA: 0x00099372 File Offset: 0x00097572
 		public static string[] GetNames()
 		{
 			return new string[]

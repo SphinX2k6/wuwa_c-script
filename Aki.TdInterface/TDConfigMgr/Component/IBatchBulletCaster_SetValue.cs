@@ -2,28 +2,28 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001EC RID: 492
+	// Token: 0x02000215 RID: 533
 	public class IBatchBulletCaster_SetValue
 	{
-		// Token: 0x040008EB RID: 2283
+		// Token: 0x0400097C RID: 2428
 		public int BulletIndex;
 
-		// Token: 0x040008EC RID: 2284
+		// Token: 0x0400097D RID: 2429
 		public long BulletType;
 
-		// Token: 0x040008ED RID: 2285
+		// Token: 0x0400097E RID: 2430
 		public int? DelayTime;
 
-		// Token: 0x040008EE RID: 2286
+		// Token: 0x0400097F RID: 2431
 		public int FlyTime;
 
-		// Token: 0x040008EF RID: 2287
+		// Token: 0x04000980 RID: 2432
 		public int FlyDistance;
 
-		// Token: 0x040008F0 RID: 2288
+		// Token: 0x04000981 RID: 2433
 		public int WarningTime;
 
-		// Token: 0x040008F1 RID: 2289
+		// Token: 0x04000982 RID: 2434
 		public int WarningWidth;
 	}
 }

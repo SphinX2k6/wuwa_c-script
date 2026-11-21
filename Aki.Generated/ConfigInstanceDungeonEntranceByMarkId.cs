@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000446 RID: 1094
+	// Token: 0x0200045C RID: 1116
 	public class ConfigInstanceDungeonEntranceByMarkId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060019AE RID: 6574 RVA: 0x000EAA70 File Offset: 0x000E8C70
+		// Token: 0x06001A32 RID: 6706 RVA: 0x000F11C4 File Offset: 0x000EF3C4
 		static ConfigInstanceDungeonEntranceByMarkId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigInstanceDungeonEntranceByMarkId.CreateStaticDefaultValue), new Action(ConfigInstanceDungeonEntranceByMarkId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060019AF RID: 6575 RVA: 0x000EAA90 File Offset: 0x000E8C90
+		// Token: 0x06001A33 RID: 6707 RVA: 0x000F11E4 File Offset: 0x000EF3E4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigInstanceDungeonEntranceByMarkId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060019B0 RID: 6576 RVA: 0x000EAB0F File Offset: 0x000E8D0F
+		// Token: 0x06001A34 RID: 6708 RVA: 0x000F1263 File Offset: 0x000EF463
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigInstanceDungeonEntranceByMarkId.LogPair = null;
 			ConfigInstanceDungeonEntranceByMarkId.HandleId = 0;
 		}
 
-		// Token: 0x060019B1 RID: 6577 RVA: 0x000EAB1D File Offset: 0x000E8D1D
+		// Token: 0x06001A35 RID: 6709 RVA: 0x000F1271 File Offset: 0x000EF471
 		public static void Init()
 		{
 			ConfigInstanceDungeonEntranceByMarkId.HandleId = ConfigCommon.InitDataStatement(ConfigInstanceDungeonEntranceByMarkId.HandleId, "db_instance_dungeon.db", "select BinData from `InstanceDungeonEntrance` where MarkId=?");
 		}
 
-		// Token: 0x060019B2 RID: 6578 RVA: 0x000EAB38 File Offset: 0x000E8D38
+		// Token: 0x06001A36 RID: 6710 RVA: 0x000F128C File Offset: 0x000EF48C
 		public static InstanceDungeonEntrance? GetConfig(int p0MarkId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigInstanceDungeonEntranceByMarkId.HandleId, ConfigInstanceDungeonEntranceByMarkId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new InstanceDungeonEntrance?(rootAsInstanceDungeonEntrance);
 		}
 
-		// Token: 0x04001DCE RID: 7630
+		// Token: 0x04001E68 RID: 7784
 		private const string DB = "db_instance_dungeon.db";
 
-		// Token: 0x04001DCF RID: 7631
+		// Token: 0x04001E69 RID: 7785
 		private const string FILE = "f.副本.xlsx";
 
-		// Token: 0x04001DD0 RID: 7632
+		// Token: 0x04001E6A RID: 7786
 		private const string TABLE = "InstanceDungeonEntrance";
 
-		// Token: 0x04001DD1 RID: 7633
+		// Token: 0x04001E6B RID: 7787
 		private const string COMMAND = "select BinData from `InstanceDungeonEntrance` where MarkId=?";
 
-		// Token: 0x04001DD2 RID: 7634
+		// Token: 0x04001E6C RID: 7788
 		private const string KEY_PREFIX = "InstanceDungeonEntranceByMarkId";
 
-		// Token: 0x04001DD3 RID: 7635
+		// Token: 0x04001E6D RID: 7789
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001DD4 RID: 7636
+		// Token: 0x04001E6E RID: 7790
 		private static int HandleId;
 	}
 }

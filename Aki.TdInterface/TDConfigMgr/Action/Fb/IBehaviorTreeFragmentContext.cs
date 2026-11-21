@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020024EC RID: 9452
+	// Token: 0x02002791 RID: 10129
 	public class IBehaviorTreeFragmentContext : IVarContext
 	{
-		// Token: 0x0600D300 RID: 54016 RVA: 0x001F4B41 File Offset: 0x001F2D41
-		[NullableContext(1)]
+		// Token: 0x0600E056 RID: 57430 RVA: 0x002103D9 File Offset: 0x0020E5D9
 		public static IBehaviorTreeFragmentContext Create(IBehaviorTreeFragmentContext? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003AEA RID: 15082
-		// (get) Token: 0x0600D301 RID: 54017 RVA: 0x001F4B60 File Offset: 0x001F2D60
+		// Token: 0x17003DE2 RID: 15842
+		// (get) Token: 0x0600E057 RID: 57431 RVA: 0x002103F8 File Offset: 0x0020E5F8
 		public override EVarContext Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003AEB RID: 15083
-		// (get) Token: 0x0600D302 RID: 54018 RVA: 0x001F4B6D File Offset: 0x001F2D6D
+		// Token: 0x17003DE3 RID: 15843
+		// (get) Token: 0x0600E058 RID: 57432 RVA: 0x00210405 File Offset: 0x0020E605
 		public virtual int Id
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040073B6 RID: 29622
+		// Token: 0x04007A03 RID: 31235
 		private IBehaviorTreeFragmentContext Instance;
 	}
 }

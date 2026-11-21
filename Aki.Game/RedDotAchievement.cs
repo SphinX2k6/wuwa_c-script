@@ -1,22 +1,22 @@
 ﻿using System;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02000F19 RID: 3865
+// Token: 0x020003CE RID: 974
 public class RedDotAchievement : RedDotBase
 {
-	// Token: 0x060061C6 RID: 25030 RVA: 0x001316E1 File Offset: 0x0012F8E1
+	// Token: 0x0600355E RID: 13662 RVA: 0x0013A005 File Offset: 0x00138205
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.RefreshAchievementRedPoint, new Action(base.EventCheck));
 	}
 
-	// Token: 0x060061C7 RID: 25031 RVA: 0x001316FF File Offset: 0x0012F8FF
+	// Token: 0x0600355F RID: 13663 RVA: 0x0013A023 File Offset: 0x00138223
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.RefreshAchievementRedPoint, new Action(base.EventCheck));
 	}
 
-	// Token: 0x060061C8 RID: 25032 RVA: 0x0013171D File Offset: 0x0012F91D
+	// Token: 0x06003560 RID: 13664 RVA: 0x0013A041 File Offset: 0x00138241
 	protected override bool OnCheck(int uId = 0)
 	{
 		return AchievementModel.Instance.GetAchievementRedPointState();

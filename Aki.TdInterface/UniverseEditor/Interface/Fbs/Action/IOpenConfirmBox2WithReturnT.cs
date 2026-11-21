@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006BF5 RID: 27637
+	// Token: 0x02007359 RID: 29529
 	public class IOpenConfirmBox2WithReturnT
 	{
-		// Token: 0x1700CD80 RID: 52608
-		// (get) Token: 0x06030941 RID: 198977 RVA: 0x00698141 File Offset: 0x00696341
-		// (set) Token: 0x06030942 RID: 198978 RVA: 0x00698149 File Offset: 0x00696349
+		// Token: 0x1700D88E RID: 55438
+		// (get) Token: 0x06033861 RID: 211041 RVA: 0x006F1AD5 File Offset: 0x006EFCD5
+		// (set) Token: 0x06033862 RID: 211042 RVA: 0x006F1ADD File Offset: 0x006EFCDD
 		public ESystemType Type { get; set; }
 
-		// Token: 0x1700CD81 RID: 52609
-		// (get) Token: 0x06030943 RID: 198979 RVA: 0x00698152 File Offset: 0x00696352
-		// (set) Token: 0x06030944 RID: 198980 RVA: 0x0069815A File Offset: 0x0069635A
+		// Token: 0x1700D88F RID: 55439
+		// (get) Token: 0x06033863 RID: 211043 RVA: 0x006F1AE6 File Offset: 0x006EFCE6
+		// (set) Token: 0x06033864 RID: 211044 RVA: 0x006F1AEE File Offset: 0x006EFCEE
 		public int Id { get; set; }
 
-		// Token: 0x1700CD82 RID: 52610
-		// (get) Token: 0x06030945 RID: 198981 RVA: 0x00698163 File Offset: 0x00696363
-		// (set) Token: 0x06030946 RID: 198982 RVA: 0x0069816B File Offset: 0x0069636B
+		// Token: 0x1700D890 RID: 55440
+		// (get) Token: 0x06033865 RID: 211045 RVA: 0x006F1AF7 File Offset: 0x006EFCF7
+		// (set) Token: 0x06033866 RID: 211046 RVA: 0x006F1AFF File Offset: 0x006EFCFF
 		public TVarRefUnion ReturnVar { get; set; }
 
-		// Token: 0x06030947 RID: 198983 RVA: 0x00698174 File Offset: 0x00696374
+		// Token: 0x06033867 RID: 211047 RVA: 0x006F1B08 File Offset: 0x006EFD08
 		public IOpenConfirmBox2WithReturnT()
 		{
 			this.Type = ESystemType.Shop;

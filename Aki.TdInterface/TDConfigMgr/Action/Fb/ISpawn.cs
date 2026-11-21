@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020024CD RID: 9421
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002772 RID: 10098
 	public class ISpawn
 	{
-		// Token: 0x0600D272 RID: 53874 RVA: 0x001F39AA File Offset: 0x001F1BAA
+		// Token: 0x0600DFC7 RID: 57287 RVA: 0x0020F206 File Offset: 0x0020D406
 		public static ISpawn Create(ISpawn? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003A9A RID: 15002
-		// (get) Token: 0x0600D273 RID: 53875 RVA: 0x001F39C9 File Offset: 0x001F1BC9
+		// Token: 0x17003D91 RID: 15761
+		// (get) Token: 0x0600DFC8 RID: 57288 RVA: 0x0020F225 File Offset: 0x0020D425
 		public virtual int TemplateGuid
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003A9B RID: 15003
-		// (get) Token: 0x0600D274 RID: 53876 RVA: 0x001F39D6 File Offset: 0x001F1BD6
+		// Token: 0x17003D92 RID: 15762
+		// (get) Token: 0x0600DFC9 RID: 57289 RVA: 0x0020F232 File Offset: 0x0020D432
 		public virtual ITransform Transform
 		{
 			get
@@ -48,14 +46,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007375 RID: 29557
+		// Token: 0x040079C2 RID: 31170
 		private ISpawn Instance;
 
-		// Token: 0x04007376 RID: 29558
+		// Token: 0x040079C3 RID: 31171
 		[Nullable(2)]
 		private ITransform _TransformCache;
 
-		// Token: 0x04007377 RID: 29559
+		// Token: 0x040079C4 RID: 31172
 		private bool _TransformInited;
 	}
 }

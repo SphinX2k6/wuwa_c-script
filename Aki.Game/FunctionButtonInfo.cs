@@ -1,27 +1,27 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001C3A RID: 7226
+// Token: 0x020010F9 RID: 4345
 [NullableContext(1)]
 [Nullable(0)]
 public class FunctionButtonInfo
 {
-	// Token: 0x170011D2 RID: 4562
-	// (get) Token: 0x0600D98C RID: 55692 RVA: 0x00326B05 File Offset: 0x00324D05
-	// (set) Token: 0x0600D98D RID: 55693 RVA: 0x00326B0D File Offset: 0x00324D0D
+	// Token: 0x170011F8 RID: 4600
+	// (get) Token: 0x0600ADA2 RID: 44450 RVA: 0x00331F05 File Offset: 0x00330105
+	// (set) Token: 0x0600ADA3 RID: 44451 RVA: 0x00331F0D File Offset: 0x0033010D
 	public string SpritePath { get; set; }
 
-	// Token: 0x170011D3 RID: 4563
-	// (get) Token: 0x0600D98E RID: 55694 RVA: 0x00326B16 File Offset: 0x00324D16
-	// (set) Token: 0x0600D98F RID: 55695 RVA: 0x00326B1E File Offset: 0x00324D1E
+	// Token: 0x170011F9 RID: 4601
+	// (get) Token: 0x0600ADA4 RID: 44452 RVA: 0x00331F16 File Offset: 0x00330116
+	// (set) Token: 0x0600ADA5 RID: 44453 RVA: 0x00331F1E File Offset: 0x0033011E
 	public Func<bool> StateFunc { get; set; }
 
-	// Token: 0x170011D4 RID: 4564
-	// (get) Token: 0x0600D990 RID: 55696 RVA: 0x00326B27 File Offset: 0x00324D27
-	// (set) Token: 0x0600D991 RID: 55697 RVA: 0x00326B2F File Offset: 0x00324D2F
+	// Token: 0x170011FA RID: 4602
+	// (get) Token: 0x0600ADA6 RID: 44454 RVA: 0x00331F27 File Offset: 0x00330127
+	// (set) Token: 0x0600ADA7 RID: 44455 RVA: 0x00331F2F File Offset: 0x0033012F
 	public Action CallBack { get; set; }
 
-	// Token: 0x0600D992 RID: 55698 RVA: 0x00326B38 File Offset: 0x00324D38
+	// Token: 0x0600ADA8 RID: 44456 RVA: 0x00331F38 File Offset: 0x00330138
 	public FunctionButtonInfo(string spritePath, Func<bool> stateFunc, Action callBack)
 	{
 		this.SpritePath = spritePath;

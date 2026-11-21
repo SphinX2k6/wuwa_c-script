@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055CA RID: 21962
+	// Token: 0x020045A0 RID: 17824
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GridPathFinderDefine
 	{
-		// Token: 0x06037F98 RID: 229272 RVA: 0x00D428A4 File Offset: 0x00D40AA4
+		// Token: 0x0602CE96 RID: 183958 RVA: 0x00C905EC File Offset: 0x00C8E7EC
 		public static int CalculateHeuristic(EHeuristicFunction heuristicFunction, IPos p0, IPos p1)
 		{
 			int num = Math.Abs(p1.X - p0.X);
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x06037F99 RID: 229273 RVA: 0x00D42924 File Offset: 0x00D40B24
+		// Token: 0x0602CE97 RID: 183959 RVA: 0x00C9066C File Offset: 0x00C8E86C
 		public static List<int> BackTrace(Node node, bool includeStartNode, bool includeEndNode)
 		{
 			List<int> list = new List<int>();

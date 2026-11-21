@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002B11 RID: 11025
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002E2F RID: 11823
 	public class IShowTalk_TalkSequenceRow
 	{
-		// Token: 0x0600F15B RID: 61787 RVA: 0x0022FF65 File Offset: 0x0022E165
+		// Token: 0x060100AF RID: 65711 RVA: 0x0024E9FB File Offset: 0x0024CBFB
 		public static IShowTalk_TalkSequenceRow Create(IShowTalk_TalkSequenceRow? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004CFB RID: 19707
-		// (get) Token: 0x0600F15C RID: 61788 RVA: 0x0022FF84 File Offset: 0x0022E184
+		// Token: 0x170050FF RID: 20735
+		// (get) Token: 0x060100B0 RID: 65712 RVA: 0x0024EA1C File Offset: 0x0024CC1C
 		public virtual List<int> Items
 		{
 			get
@@ -44,13 +41,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040084BD RID: 33981
+		// Token: 0x04008C05 RID: 35845
 		private IShowTalk_TalkSequenceRow Instance;
 
-		// Token: 0x040084BE RID: 33982
+		// Token: 0x04008C06 RID: 35846
 		private List<int> _ItemsCache;
 
-		// Token: 0x040084BF RID: 33983
+		// Token: 0x04008C07 RID: 35847
 		private bool _ItemsInited;
 	}
 }

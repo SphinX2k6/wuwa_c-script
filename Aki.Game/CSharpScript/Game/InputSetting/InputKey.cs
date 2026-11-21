@@ -5,16 +5,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.InputSetting
 {
-	// Token: 0x02007002 RID: 28674
+	// Token: 0x02006183 RID: 24963
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InputKey
 	{
-		// Token: 0x06045C6C RID: 285804 RVA: 0x0115A38C File Offset: 0x0115858C
+		// Token: 0x0603BE22 RID: 245282 RVA: 0x01104790 File Offset: 0x01102990
 		public InputKey(string keyName)
 		{
 			this.KeyName = keyName;
-			this.Key = new FKey(new FName(keyName));
+			this.Key = new FKey
+			{
+				KeyName = new FName(keyName)
+			};
 			this.IsKeyboardKey = (UKismetInputLibrary.Key_IsKeyboardKey(this.Key) || keyName == EKey.Keyboard_Invalid);
 			this.IsModifierKey = UKismetInputLibrary.Key_IsModifierKey(this.Key);
 			this.IsGamepadKey = (UKismetInputLibrary.Key_IsGamepadKey(this.Key) || keyName == EKey.Gamepad_Invalid);
@@ -28,19 +31,19 @@ namespace CSharpScript.Game.InputSetting
 			this.IsPcPsTouchPadKey = (keyName == EKey.GenericUSBController_Button14);
 		}
 
-		// Token: 0x06045C6D RID: 285805 RVA: 0x0115A4AC File Offset: 0x011586AC
+		// Token: 0x0603BE23 RID: 245283 RVA: 0x011048B6 File Offset: 0x01102AB6
 		public string GetKeyName()
 		{
 			return this.KeyName;
 		}
 
-		// Token: 0x06045C6E RID: 285806 RVA: 0x0115A4B4 File Offset: 0x011586B4
+		// Token: 0x0603BE24 RID: 245284 RVA: 0x011048BE File Offset: 0x01102ABE
 		public FKey ToUeKey()
 		{
 			return this.Key;
 		}
 
-		// Token: 0x06045C6F RID: 285807 RVA: 0x0115A4BC File Offset: 0x011586BC
+		// Token: 0x0603BE25 RID: 245285 RVA: 0x011048C8 File Offset: 0x01102AC8
 		[NullableContext(0)]
 		public OneOf<GamepadKey, PcKey>? GetConfig()
 		{
@@ -68,7 +71,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045C70 RID: 285808 RVA: 0x0115A556 File Offset: 0x01158756
+		// Token: 0x0603BE26 RID: 245286 RVA: 0x01104962 File Offset: 0x01102B62
 		public string GetKeyIconPath()
 		{
 			if (this.IsKeyboardKey || this.IsMouseButton)
@@ -82,55 +85,55 @@ namespace CSharpScript.Game.InputSetting
 			return "";
 		}
 
-		// Token: 0x06045C71 RID: 285809 RVA: 0x0115A596 File Offset: 0x01158796
+		// Token: 0x0603BE27 RID: 245287 RVA: 0x011049A2 File Offset: 0x01102BA2
 		public bool IsInputKeyDown()
 		{
 			return Global.PlayerController.IsInputKeyDown(this.ToUeKey());
 		}
 
-		// Token: 0x06045C72 RID: 285810 RVA: 0x0115A5A8 File Offset: 0x011587A8
+		// Token: 0x0603BE28 RID: 245288 RVA: 0x011049B4 File Offset: 0x01102BB4
 		public float GetInputAnalogKeyState()
 		{
 			return Global.PlayerController.GetInputAnalogKeyState(this.ToUeKey());
 		}
 
-		// Token: 0x040247E8 RID: 149480
+		// Token: 0x0401FA9E RID: 129694
 		private readonly string KeyName = "";
 
-		// Token: 0x040247E9 RID: 149481
+		// Token: 0x0401FA9F RID: 129695
 		public readonly bool IsKeyboardKey;
 
-		// Token: 0x040247EA RID: 149482
+		// Token: 0x0401FAA0 RID: 129696
 		public readonly bool IsModifierKey;
 
-		// Token: 0x040247EB RID: 149483
+		// Token: 0x0401FAA1 RID: 129697
 		public readonly bool IsGamepadKey;
 
-		// Token: 0x040247EC RID: 149484
+		// Token: 0x0401FAA2 RID: 129698
 		public readonly bool IsPcPsTouchPadKey;
 
-		// Token: 0x040247ED RID: 149485
+		// Token: 0x0401FAA3 RID: 129699
 		public readonly bool IsMouseButton;
 
-		// Token: 0x040247EE RID: 149486
+		// Token: 0x0401FAA4 RID: 129700
 		public readonly bool IsDigital;
 
-		// Token: 0x040247EF RID: 149487
+		// Token: 0x0401FAA5 RID: 129701
 		public readonly bool IsAnalog;
 
-		// Token: 0x040247F0 RID: 149488
+		// Token: 0x0401FAA6 RID: 129702
 		public readonly bool IsButtonAxis;
 
-		// Token: 0x040247F1 RID: 149489
+		// Token: 0x0401FAA7 RID: 129703
 		public readonly bool IsAxis1D;
 
-		// Token: 0x040247F2 RID: 149490
+		// Token: 0x0401FAA8 RID: 129704
 		public readonly bool IsAxis2D;
 
-		// Token: 0x040247F3 RID: 149491
+		// Token: 0x0401FAA9 RID: 129705
 		public readonly bool IsAxis3D;
 
-		// Token: 0x040247F4 RID: 149492
+		// Token: 0x0401FAAA RID: 129706
 		[Nullable(2)]
 		private readonly FKey Key;
 	}

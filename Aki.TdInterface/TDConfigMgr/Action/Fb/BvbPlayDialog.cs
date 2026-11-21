@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A20 RID: 10784
+	// Token: 0x02002D0D RID: 11533
 	public class BvbPlayDialog : ActionParams
 	{
-		// Token: 0x0600EDB0 RID: 60848 RVA: 0x0022A316 File Offset: 0x00228516
-		[NullableContext(1)]
+		// Token: 0x0600FC48 RID: 64584 RVA: 0x00247CC9 File Offset: 0x00245EC9
 		public static BvbPlayDialog Create(IBvbPlayDialog? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B32 RID: 19250
-		// (get) Token: 0x0600EDB1 RID: 60849 RVA: 0x0022A335 File Offset: 0x00228535
+		// Token: 0x17004EDC RID: 20188
+		// (get) Token: 0x0600FC49 RID: 64585 RVA: 0x00247CE8 File Offset: 0x00245EE8
 		public virtual EBvbPlayDialogType DialogType
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040082D6 RID: 33494
+		// Token: 0x040089C9 RID: 35273
 		private IBvbPlayDialog Instance;
 	}
 }

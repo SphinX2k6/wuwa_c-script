@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x02000F6B RID: 3947
+// Token: 0x02000420 RID: 1056
 internal enum <DrinksRoleSelectItem>FBF4598A31DA1987DC36F16418BF695779EA42636FDF29638A2571110322288E2__EComponentDefine
 {
-	// Token: 0x04002DDA RID: 11738
+	// Token: 0x04002E73 RID: 11891
 	Toggle,
-	// Token: 0x04002DDB RID: 11739
+	// Token: 0x04002E74 RID: 11892
 	RoleIconTexture,
-	// Token: 0x04002DDC RID: 11740
+	// Token: 0x04002E75 RID: 11893
 	RedDotItem,
-	// Token: 0x04002DDD RID: 11741
+	// Token: 0x04002E76 RID: 11894
 	LockSprite,
-	// Token: 0x04002DDE RID: 11742
+	// Token: 0x04002E77 RID: 11895
 	FinishSprite,
-	// Token: 0x04002DDF RID: 11743
+	// Token: 0x04002E78 RID: 11896
 	PanelDrinkLock,
-	// Token: 0x04002DE0 RID: 11744
+	// Token: 0x04002E79 RID: 11897
 	PanelDrinkNormal
 }

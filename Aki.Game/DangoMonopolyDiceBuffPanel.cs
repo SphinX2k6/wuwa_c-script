@@ -6,10 +6,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001239 RID: 4665
+// Token: 0x020006ED RID: 1773
 public class DangoMonopolyDiceBuffPanel : UiPanelBase
 {
-	// Token: 0x06007E10 RID: 32272 RVA: 0x001AAEF4 File Offset: 0x001A90F4
+	// Token: 0x060051A7 RID: 20903 RVA: 0x001B3BB4 File Offset: 0x001B1DB4
 	[NullableContext(1)]
 	public UniTask Init(UUIItem parent)
 	{
@@ -22,7 +22,7 @@ public class DangoMonopolyDiceBuffPanel : UiPanelBase
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007E11 RID: 32273 RVA: 0x001AAF3F File Offset: 0x001A913F
+	// Token: 0x060051A8 RID: 20904 RVA: 0x001B3BFF File Offset: 0x001B1DFF
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,7 +31,7 @@ public class DangoMonopolyDiceBuffPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x06007E12 RID: 32274 RVA: 0x001AAF64 File Offset: 0x001A9164
+	// Token: 0x060051A9 RID: 20905 RVA: 0x001B3C24 File Offset: 0x001B1E24
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DangoMonopolyDiceBuffPanel.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -42,7 +42,7 @@ public class DangoMonopolyDiceBuffPanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007E13 RID: 32275 RVA: 0x001AAFA8 File Offset: 0x001A91A8
+	// Token: 0x060051AA RID: 20906 RVA: 0x001B3C68 File Offset: 0x001B1E68
 	public void UpdateShowType(EDangoMonopolyDiceBuffShowType showType)
 	{
 		this.SetActive(true);
@@ -55,7 +55,7 @@ public class DangoMonopolyDiceBuffPanel : UiPanelBase
 		extendToggle.SetToggleStateForce(EToggleState.ETT_Checked, false, false, false);
 	}
 
-	// Token: 0x06007E14 RID: 32276 RVA: 0x001AAFDC File Offset: 0x001A91DC
+	// Token: 0x060051AB RID: 20907 RVA: 0x001B3C9C File Offset: 0x001B1E9C
 	[NullableContext(1)]
 	public UniTask PlaySequence(string name)
 	{
@@ -68,18 +68,18 @@ public class DangoMonopolyDiceBuffPanel : UiPanelBase
 		return <PlaySequence>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0400397D RID: 14717
+	// Token: 0x04003A15 RID: 14869
 	[Nullable(2)]
 	public LevelSequencePlayer Sequence;
 
-	// Token: 0x0400397E RID: 14718
+	// Token: 0x04003A16 RID: 14870
 	[Nullable(2)]
 	public CustomPromise<bool> Promise;
 
-	// Token: 0x0200781F RID: 30751
+	// Token: 0x020069AA RID: 27050
 	private enum EChildType
 	{
-		// Token: 0x0402796B RID: 162155
+		// Token: 0x04022C9C RID: 142492
 		ToggleRoot
 	}
 }

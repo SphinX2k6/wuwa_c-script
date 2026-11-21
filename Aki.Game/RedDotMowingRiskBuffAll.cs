@@ -1,22 +1,22 @@
 ﻿using System;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x020033E1 RID: 13281
+// Token: 0x02002953 RID: 10579
 public class RedDotMowingRiskBuffAll : RedDotBase
 {
-	// Token: 0x0601CC53 RID: 117843 RVA: 0x00809D44 File Offset: 0x00807F44
+	// Token: 0x0601A94B RID: 108875 RVA: 0x00830308 File Offset: 0x0082E508
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.MowingRiskOnRefreshBuffAllRedDot, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CC54 RID: 117844 RVA: 0x00809D62 File Offset: 0x00807F62
+	// Token: 0x0601A94C RID: 108876 RVA: 0x00830326 File Offset: 0x0082E526
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.MowingRiskOnRefreshBuffAllRedDot, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CC55 RID: 117845 RVA: 0x00809D80 File Offset: 0x00807F80
+	// Token: 0x0601A94D RID: 108877 RVA: 0x00830344 File Offset: 0x0082E544
 	protected override bool OnCheck(int uId = 0)
 	{
 		return false;

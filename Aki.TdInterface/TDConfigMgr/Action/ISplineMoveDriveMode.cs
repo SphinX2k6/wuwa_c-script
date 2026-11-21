@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001EA1 RID: 7841
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020020D8 RID: 8408
 	public class ISplineMoveDriveMode
 	{
-		// Token: 0x0600A7BA RID: 42938 RVA: 0x0017AED0 File Offset: 0x001790D0
+		// Token: 0x0600B282 RID: 45698 RVA: 0x00190DB4 File Offset: 0x0018EFB4
 		private ISplineMoveDriveMode_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A7BB RID: 42939 RVA: 0x0017AF08 File Offset: 0x00179108
+		// Token: 0x0600B283 RID: 45699 RVA: 0x00190DEC File Offset: 0x0018EFEC
 		public static ISplineMoveDriveMode Create([Nullable(2)] ISplineMoveDriveMode instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A7BC RID: 42940 RVA: 0x0017AF1B File Offset: 0x0017911B
+		// Token: 0x0600B284 RID: 45700 RVA: 0x00190DFF File Offset: 0x0018EFFF
 		public static ISplineMoveDriveMode CreateFromSetValue([Nullable(2)] ISplineMoveDriveMode_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A7BD RID: 42941 RVA: 0x0017AF2E File Offset: 0x0017912E
+		// Token: 0x0600B285 RID: 45701 RVA: 0x00190E12 File Offset: 0x0018F012
 		public ISplineMoveDriveMode_SetValue ToSetValue()
 		{
 			return new ISplineMoveDriveMode_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003343 RID: 13123
-		// (get) Token: 0x0600A7BE RID: 42942 RVA: 0x0017AF41 File Offset: 0x00179141
-		// (set) Token: 0x0600A7BF RID: 42943 RVA: 0x0017AF6C File Offset: 0x0017916C
+		// Token: 0x1700360C RID: 13836
+		// (get) Token: 0x0600B286 RID: 45702 RVA: 0x00190E25 File Offset: 0x0018F025
+		// (set) Token: 0x0600B287 RID: 45703 RVA: 0x00190E50 File Offset: 0x0018F050
 		public virtual ESplineMoveDriveMode Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006400 RID: 25600
+		// Token: 0x040069EB RID: 27115
 		[Nullable(2)]
 		protected ISplineMoveDriveMode FbInstance;
 
-		// Token: 0x04006401 RID: 25601
+		// Token: 0x040069EC RID: 27116
 		[Nullable(2)]
 		protected ISplineMoveDriveMode_SetValue PocoInterface;
 	}

@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PermanentRogue
 {
-	// Token: 0x02005302 RID: 21250
+	// Token: 0x020042D2 RID: 17106
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RogueResActivitySubViewGeneralInfo : UiPanelBase
 	{
-		// Token: 0x060365E2 RID: 222690 RVA: 0x00CDCA04 File Offset: 0x00CDAC04
+		// Token: 0x0602B4DE RID: 177374 RVA: 0x00C2A3D4 File Offset: 0x00C285D4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			};
 		}
 
-		// Token: 0x060365E3 RID: 222691 RVA: 0x00CDCA74 File Offset: 0x00CDAC74
+		// Token: 0x0602B4DF RID: 177375 RVA: 0x00C2A444 File Offset: 0x00C28644
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RogueResActivitySubViewGeneralInfo.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060365E4 RID: 222692 RVA: 0x00CDCAB8 File Offset: 0x00CDACB8
+		// Token: 0x0602B4E0 RID: 177376 RVA: 0x00C2A488 File Offset: 0x00C28688
 		protected override void OnStart()
 		{
 			Activity? localConfig = this.ActivityBaseData.LocalConfig;
@@ -75,13 +75,13 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			this.OnRefreshView();
 		}
 
-		// Token: 0x060365E5 RID: 222693 RVA: 0x00CDCC27 File Offset: 0x00CDAE27
+		// Token: 0x0602B4E1 RID: 177377 RVA: 0x00C2A5F7 File Offset: 0x00C287F7
 		public void OnRefreshView()
 		{
 			this.RefreshFunction();
 		}
 
-		// Token: 0x060365E6 RID: 222694 RVA: 0x00CDCC30 File Offset: 0x00CDAE30
+		// Token: 0x0602B4E2 RID: 177378 RVA: 0x00C2A600 File Offset: 0x00C28800
 		public void RefreshFunction()
 		{
 			bool flag = this.ActivityBaseData.IsUnLock();
@@ -105,14 +105,14 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			}
 		}
 
-		// Token: 0x060365E7 RID: 222695 RVA: 0x00CDCC9F File Offset: 0x00CDAE9F
+		// Token: 0x0602B4E3 RID: 177379 RVA: 0x00C2A66F File Offset: 0x00C2886F
 		[NullableContext(1)]
 		public void SetData(ActivityBaseData data)
 		{
 			this.ActivityBaseData = data;
 		}
 
-		// Token: 0x060365E8 RID: 222696 RVA: 0x00CDCCA8 File Offset: 0x00CDAEA8
+		// Token: 0x0602B4E4 RID: 177380 RVA: 0x00C2A678 File Offset: 0x00C28878
 		[NullableContext(1)]
 		public void SetBtnText(string textId, params object[] args)
 		{
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			functionButton.SetLocalTextNew(textId, args);
 		}
 
-		// Token: 0x060365E9 RID: 222697 RVA: 0x00CDCCC6 File Offset: 0x00CDAEC6
+		// Token: 0x0602B4E5 RID: 177381 RVA: 0x00C2A696 File Offset: 0x00C28896
 		public void SetClickFunc([Nullable(new byte[]
 		{
 			1,
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			this.ClickFunc = clickFunc;
 		}
 
-		// Token: 0x060365EA RID: 222698 RVA: 0x00CDCCCF File Offset: 0x00CDAECF
+		// Token: 0x0602B4E6 RID: 177382 RVA: 0x00C2A69F File Offset: 0x00C2889F
 		private void FunctionExecute()
 		{
 			ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			});
 		}
 
-		// Token: 0x060365EB RID: 222699 RVA: 0x00CDCCED File Offset: 0x00CDAEED
+		// Token: 0x0602B4E7 RID: 177383 RVA: 0x00C2A6BD File Offset: 0x00C288BD
 		public void SetFunctionRedDotVisible(bool bVisible)
 		{
 			ActivityFunctionalTypeA functionalComponent = this.FunctionalComponent;
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			functionalComponent.SetFunctionRedDotVisible(bVisible);
 		}
 
-		// Token: 0x060365EC RID: 222700 RVA: 0x00CDCD00 File Offset: 0x00CDAF00
+		// Token: 0x0602B4E8 RID: 177384 RVA: 0x00C2A6D0 File Offset: 0x00C288D0
 		[NullableContext(1)]
 		public void SetRewardButtonFunction(Action buttonFunction)
 		{
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			functionalComponent.SetRewardButtonFunction(buttonFunction);
 		}
 
-		// Token: 0x060365ED RID: 222701 RVA: 0x00CDCD13 File Offset: 0x00CDAF13
+		// Token: 0x0602B4E9 RID: 177385 RVA: 0x00C2A6E3 File Offset: 0x00C288E3
 		[NullableContext(1)]
 		public void SetSubTitleTextById(string textId)
 		{
@@ -184,22 +184,22 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			this.TitleComponent.SetSubTitleByTextId(textId, Array.Empty<string>());
 		}
 
-		// Token: 0x060365EE RID: 222702 RVA: 0x00CDCD32 File Offset: 0x00CDAF32
+		// Token: 0x0602B4EA RID: 177386 RVA: 0x00C2A702 File Offset: 0x00C28902
 		public ActivityFunctionalTypeA GetFunctional()
 		{
 			return this.FunctionalComponent;
 		}
 
-		// Token: 0x0401CB77 RID: 117623
+		// Token: 0x040175AD RID: 95661
 		protected ActivityBaseData ActivityBaseData;
 
-		// Token: 0x0401CB78 RID: 117624
+		// Token: 0x040175AE RID: 95662
 		private ActivityTitleTypeA TitleComponent;
 
-		// Token: 0x0401CB79 RID: 117625
+		// Token: 0x040175AF RID: 95663
 		private ActivityDescriptionTypeA DescriptionComponent;
 
-		// Token: 0x0401CB7A RID: 117626
+		// Token: 0x040175B0 RID: 95664
 		[Nullable(new byte[]
 		{
 			2,
@@ -207,10 +207,10 @@ namespace CSharpScript.Game.Module.PermanentRogue
 		})]
 		private ActivityRewardList<CommonItemSmallItemGrid, TItem> RewardListComponent;
 
-		// Token: 0x0401CB7B RID: 117627
+		// Token: 0x040175B1 RID: 95665
 		private ActivityFunctionalTypeA FunctionalComponent;
 
-		// Token: 0x0401CB7C RID: 117628
+		// Token: 0x040175B2 RID: 95666
 		private Action<ActivityBaseData> ClickFunc;
 	}
 }

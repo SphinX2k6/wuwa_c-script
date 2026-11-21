@@ -5,17 +5,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 {
-	// Token: 0x0200685A RID: 26714
+	// Token: 0x020057AA RID: 22442
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class DragContext
 	{
-		// Token: 0x06042B3D RID: 273213 RVA: 0x010395BC File Offset: 0x010377BC
+		// Token: 0x06037692 RID: 226962 RVA: 0x00F7AB08 File Offset: 0x00F78D08
 		public void Start()
 		{
 		}
 
-		// Token: 0x06042B3E RID: 273214 RVA: 0x010395BE File Offset: 0x010377BE
+		// Token: 0x06037693 RID: 226963 RVA: 0x00F7AB0A File Offset: 0x00F78D0A
 		public void Stop()
 		{
 			this.DragLayer = null;
@@ -23,13 +23,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			this.HoveredItem = null;
 		}
 
-		// Token: 0x06042B3F RID: 273215 RVA: 0x010395D5 File Offset: 0x010377D5
+		// Token: 0x06037694 RID: 226964 RVA: 0x00F7AB21 File Offset: 0x00F78D21
 		public DangoBrawlSelection GetHoveredItem()
 		{
 			return this.HoveredItem;
 		}
 
-		// Token: 0x06042B40 RID: 273216 RVA: 0x010395DD File Offset: 0x010377DD
+		// Token: 0x06037695 RID: 226965 RVA: 0x00F7AB29 File Offset: 0x00F78D29
 		public bool IsHovered(EDragSourceKind source, int uid)
 		{
 			DangoBrawlSelection hoveredItem = this.HoveredItem;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			return false;
 		}
 
-		// Token: 0x06042B41 RID: 273217 RVA: 0x0103960C File Offset: 0x0103780C
+		// Token: 0x06037696 RID: 226966 RVA: 0x00F7AB58 File Offset: 0x00F78D58
 		public void SetHoveredItem(EDragSourceKind source, int uid)
 		{
 			if (this.IsHovered(source, uid))
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			EventSystem.Instance.Emit<int, EDragSourceKind>(EEventName.OnDangoBrawlItemHoveredChange, uid, source);
 		}
 
-		// Token: 0x06042B42 RID: 273218 RVA: 0x01039644 File Offset: 0x01037844
+		// Token: 0x06037697 RID: 226967 RVA: 0x00F7AB90 File Offset: 0x00F78D90
 		public void ClearHoveredItem()
 		{
 			if (this.HoveredItem == null)
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			EventSystem.Instance.Emit<int, EDragSourceKind>(EEventName.OnDangoBrawlItemHoveredChange, 0, source);
 		}
 
-		// Token: 0x06042B43 RID: 273219 RVA: 0x0103967F File Offset: 0x0103787F
+		// Token: 0x06037698 RID: 226968 RVA: 0x00F7ABCB File Offset: 0x00F78DCB
 		public void ClearHoveredItemIfMatch(EDragSourceKind source, int uid)
 		{
 			if (!this.IsHovered(source, uid))
@@ -79,13 +79,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			EventSystem.Instance.Emit<int, EDragSourceKind>(EEventName.OnDangoBrawlItemHoveredChange, 0, source);
 		}
 
-		// Token: 0x06042B44 RID: 273220 RVA: 0x010396A5 File Offset: 0x010378A5
+		// Token: 0x06037699 RID: 226969 RVA: 0x00F7ABF1 File Offset: 0x00F78DF1
 		public DangoBrawlSelection GetSelection()
 		{
 			return this.Selection;
 		}
 
-		// Token: 0x06042B45 RID: 273221 RVA: 0x010396AD File Offset: 0x010378AD
+		// Token: 0x0603769A RID: 226970 RVA: 0x00F7ABF9 File Offset: 0x00F78DF9
 		public bool IsSelected(EDragSourceKind source, int id)
 		{
 			DangoBrawlSelection selection = this.Selection;
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			return false;
 		}
 
-		// Token: 0x06042B46 RID: 273222 RVA: 0x010396DC File Offset: 0x010378DC
+		// Token: 0x0603769B RID: 226971 RVA: 0x00F7AC28 File Offset: 0x00F78E28
 		public void ToggleSelection(EDragSourceKind source, int id)
 		{
 			if (id < 0)
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			EventSystem.Instance.Emit(EEventName.OnDangoBrawlSelectionChanged);
 		}
 
-		// Token: 0x06042B47 RID: 273223 RVA: 0x01039728 File Offset: 0x01037928
+		// Token: 0x0603769C RID: 226972 RVA: 0x00F7AC74 File Offset: 0x00F78E74
 		public void SetSelection(EDragSourceKind source, int id)
 		{
 			if (id < 0)
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			EventSystem.Instance.Emit(EEventName.OnDangoBrawlSelectionChanged);
 		}
 
-		// Token: 0x06042B48 RID: 273224 RVA: 0x01039763 File Offset: 0x01037963
+		// Token: 0x0603769D RID: 226973 RVA: 0x00F7ACAF File Offset: 0x00F78EAF
 		public void ClearSelectionIfMatch(EDragSourceKind source, int id)
 		{
 			if (!this.IsSelected(source, id))
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			EventSystem.Instance.Emit(EEventName.OnDangoBrawlSelectionChanged);
 		}
 
-		// Token: 0x06042B49 RID: 273225 RVA: 0x01039787 File Offset: 0x01037987
+		// Token: 0x0603769E RID: 226974 RVA: 0x00F7ACD3 File Offset: 0x00F78ED3
 		public void ClearSelection()
 		{
 			if (this.Selection == null)
@@ -158,13 +158,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			EventSystem.Instance.Emit(EEventName.OnDangoBrawlSelectionChanged);
 		}
 
-		// Token: 0x04022B9C RID: 142236
+		// Token: 0x0401D3F9 RID: 119801
 		public UUIItem DragLayer;
 
-		// Token: 0x04022B9D RID: 142237
+		// Token: 0x0401D3FA RID: 119802
 		private DangoBrawlSelection HoveredItem;
 
-		// Token: 0x04022B9E RID: 142238
+		// Token: 0x0401D3FB RID: 119803
 		private DangoBrawlSelection Selection;
 	}
 }

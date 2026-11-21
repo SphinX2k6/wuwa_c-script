@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020013EB RID: 5099
+	// Token: 0x0200145E RID: 5214
 	[NetMessage(EMessageId.TrackMoonSettleResponse)]
 	public sealed class TrackMoonSettleResponse : IMessage<TrackMoonSettleResponse>, IMessage, IEquatable<TrackMoonSettleResponse>, IDeepCloneable<TrackMoonSettleResponse>, IBufferMessage
 	{
-		// Token: 0x0601B053 RID: 110675 RVA: 0x003E9962 File Offset: 0x003E7B62
+		// Token: 0x0601BADE RID: 113374 RVA: 0x00404C2E File Offset: 0x00402E2E
 		[NullableContext(1)]
 		public static TrackMoonSettleResponse Create()
 		{
 			return new TrackMoonSettleResponse();
 		}
 
-		// Token: 0x17005B0C RID: 23308
-		// (get) Token: 0x0601B054 RID: 110676 RVA: 0x003E9969 File Offset: 0x003E7B69
+		// Token: 0x17005DA1 RID: 23969
+		// (get) Token: 0x0601BADF RID: 113375 RVA: 0x00404C35 File Offset: 0x00402E35
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B0D RID: 23309
-		// (get) Token: 0x0601B055 RID: 110677 RVA: 0x003E996C File Offset: 0x003E7B6C
+		// Token: 0x17005DA2 RID: 23970
+		// (get) Token: 0x0601BAE0 RID: 113376 RVA: 0x00404C38 File Offset: 0x00402E38
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B056 RID: 110678 RVA: 0x003E9973 File Offset: 0x003E7B73
+		// Token: 0x0601BAE1 RID: 113377 RVA: 0x00404C3F File Offset: 0x00402E3F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrackMoonSettleResponse()
 		{
 		}
 
-		// Token: 0x0601B057 RID: 110679 RVA: 0x003E997C File Offset: 0x003E7B7C
+		// Token: 0x0601BAE2 RID: 113378 RVA: 0x00404C48 File Offset: 0x00402E48
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrackMoonSettleResponse(TrackMoonSettleResponse other) : this()
@@ -65,7 +65,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601B058 RID: 110680 RVA: 0x003E9A30 File Offset: 0x003E7C30
+		// Token: 0x0601BAE3 RID: 113379 RVA: 0x00404CFC File Offset: 0x00402EFC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TrackMoonSettleResponse Clone()
@@ -73,9 +73,9 @@ namespace Aki.Protocol
 			return new TrackMoonSettleResponse(this);
 		}
 
-		// Token: 0x17005B0E RID: 23310
-		// (get) Token: 0x0601B059 RID: 110681 RVA: 0x003E9A38 File Offset: 0x003E7C38
-		// (set) Token: 0x0601B05A RID: 110682 RVA: 0x003E9A40 File Offset: 0x003E7C40
+		// Token: 0x17005DA3 RID: 23971
+		// (get) Token: 0x0601BAE4 RID: 113380 RVA: 0x00404D04 File Offset: 0x00402F04
+		// (set) Token: 0x0601BAE5 RID: 113381 RVA: 0x00404D0C File Offset: 0x00402F0C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ErrorCode ErrorCode
@@ -90,9 +90,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B0F RID: 23311
-		// (get) Token: 0x0601B05B RID: 110683 RVA: 0x003E9A49 File Offset: 0x003E7C49
-		// (set) Token: 0x0601B05C RID: 110684 RVA: 0x003E9A51 File Offset: 0x003E7C51
+		// Token: 0x17005DA4 RID: 23972
+		// (get) Token: 0x0601BAE6 RID: 113382 RVA: 0x00404D15 File Offset: 0x00402F15
+		// (set) Token: 0x0601BAE7 RID: 113383 RVA: 0x00404D1D File Offset: 0x00402F1D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int PopularTotal
@@ -107,9 +107,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B10 RID: 23312
-		// (get) Token: 0x0601B05D RID: 110685 RVA: 0x003E9A5A File Offset: 0x003E7C5A
-		// (set) Token: 0x0601B05E RID: 110686 RVA: 0x003E9A62 File Offset: 0x003E7C62
+		// Token: 0x17005DA5 RID: 23973
+		// (get) Token: 0x0601BAE8 RID: 113384 RVA: 0x00404D26 File Offset: 0x00402F26
+		// (set) Token: 0x0601BAE9 RID: 113385 RVA: 0x00404D2E File Offset: 0x00402F2E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int GoldTotal
@@ -124,9 +124,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B11 RID: 23313
-		// (get) Token: 0x0601B05F RID: 110687 RVA: 0x003E9A6B File Offset: 0x003E7C6B
-		// (set) Token: 0x0601B060 RID: 110688 RVA: 0x003E9A73 File Offset: 0x003E7C73
+		// Token: 0x17005DA6 RID: 23974
+		// (get) Token: 0x0601BAEA RID: 113386 RVA: 0x00404D37 File Offset: 0x00402F37
+		// (set) Token: 0x0601BAEB RID: 113387 RVA: 0x00404D3F File Offset: 0x00402F3F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int WishTotal
@@ -141,9 +141,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B12 RID: 23314
-		// (get) Token: 0x0601B061 RID: 110689 RVA: 0x003E9A7C File Offset: 0x003E7C7C
-		// (set) Token: 0x0601B062 RID: 110690 RVA: 0x003E9A84 File Offset: 0x003E7C84
+		// Token: 0x17005DA7 RID: 23975
+		// (get) Token: 0x0601BAEC RID: 113388 RVA: 0x00404D48 File Offset: 0x00402F48
+		// (set) Token: 0x0601BAED RID: 113389 RVA: 0x00404D50 File Offset: 0x00402F50
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int EntrustDo
@@ -158,9 +158,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B13 RID: 23315
-		// (get) Token: 0x0601B063 RID: 110691 RVA: 0x003E9A8D File Offset: 0x003E7C8D
-		// (set) Token: 0x0601B064 RID: 110692 RVA: 0x003E9A95 File Offset: 0x003E7C95
+		// Token: 0x17005DA8 RID: 23976
+		// (get) Token: 0x0601BAEE RID: 113390 RVA: 0x00404D59 File Offset: 0x00402F59
+		// (set) Token: 0x0601BAEF RID: 113391 RVA: 0x00404D61 File Offset: 0x00402F61
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SettleInfo EntrustDoMost
@@ -175,9 +175,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B14 RID: 23316
-		// (get) Token: 0x0601B065 RID: 110693 RVA: 0x003E9A9E File Offset: 0x003E7C9E
-		// (set) Token: 0x0601B066 RID: 110694 RVA: 0x003E9AA6 File Offset: 0x003E7CA6
+		// Token: 0x17005DA9 RID: 23977
+		// (get) Token: 0x0601BAF0 RID: 113392 RVA: 0x00404D6A File Offset: 0x00402F6A
+		// (set) Token: 0x0601BAF1 RID: 113393 RVA: 0x00404D72 File Offset: 0x00402F72
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SettleInfo AlwaysRoleId
@@ -192,9 +192,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005B15 RID: 23317
-		// (get) Token: 0x0601B067 RID: 110695 RVA: 0x003E9AAF File Offset: 0x003E7CAF
-		// (set) Token: 0x0601B068 RID: 110696 RVA: 0x003E9AB7 File Offset: 0x003E7CB7
+		// Token: 0x17005DAA RID: 23978
+		// (get) Token: 0x0601BAF2 RID: 113394 RVA: 0x00404D7B File Offset: 0x00402F7B
+		// (set) Token: 0x0601BAF3 RID: 113395 RVA: 0x00404D83 File Offset: 0x00402F83
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SettleInfo MostLikeRole
@@ -209,7 +209,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B069 RID: 110697 RVA: 0x003E9AC0 File Offset: 0x003E7CC0
+		// Token: 0x0601BAF4 RID: 113396 RVA: 0x00404D8C File Offset: 0x00402F8C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -217,7 +217,7 @@ namespace Aki.Protocol
 			return this.Equals(other as TrackMoonSettleResponse);
 		}
 
-		// Token: 0x0601B06A RID: 110698 RVA: 0x003E9AD0 File Offset: 0x003E7CD0
+		// Token: 0x0601BAF5 RID: 113397 RVA: 0x00404D9C File Offset: 0x00402F9C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(TrackMoonSettleResponse other)
@@ -225,7 +225,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ErrorCode == other.ErrorCode && this.PopularTotal == other.PopularTotal && this.GoldTotal == other.GoldTotal && this.WishTotal == other.WishTotal && this.EntrustDo == other.EntrustDo && object.Equals(this.EntrustDoMost, other.EntrustDoMost) && object.Equals(this.AlwaysRoleId, other.AlwaysRoleId) && object.Equals(this.MostLikeRole, other.MostLikeRole) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601B06B RID: 110699 RVA: 0x003E9B88 File Offset: 0x003E7D88
+		// Token: 0x0601BAF6 RID: 113398 RVA: 0x00404E54 File Offset: 0x00403054
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -270,7 +270,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601B06C RID: 110700 RVA: 0x003E9C73 File Offset: 0x003E7E73
+		// Token: 0x0601BAF7 RID: 113399 RVA: 0x00404F3F File Offset: 0x0040313F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -278,7 +278,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601B06D RID: 110701 RVA: 0x003E9C80 File Offset: 0x003E7E80
+		// Token: 0x0601BAF8 RID: 113400 RVA: 0x00404F4C File Offset: 0x0040314C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -286,50 +286,50 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601B06E RID: 110702 RVA: 0x003E9C8C File Offset: 0x003E7E8C
+		// Token: 0x0601BAF9 RID: 113401 RVA: 0x00404F58 File Offset: 0x00403158
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.PopularTotal != 0)
-			{
-				output.WriteRawTag(8);
-				output.WriteInt32(this.PopularTotal);
-			}
-			if (this.alwaysRoleId_ != null)
-			{
-				output.WriteRawTag(18);
-				output.WriteMessage(this.AlwaysRoleId);
-			}
-			if (this.GoldTotal != 0)
-			{
-				output.WriteRawTag(48);
-				output.WriteInt32(this.GoldTotal);
-			}
-			if (this.WishTotal != 0)
-			{
-				output.WriteRawTag(64);
-				output.WriteInt32(this.WishTotal);
-			}
 			if (this.ErrorCode != ErrorCode.Success)
 			{
-				output.WriteRawTag(72);
+				output.WriteRawTag(8);
 				output.WriteEnum((int)this.ErrorCode);
 			}
 			if (this.mostLikeRole_ != null)
 			{
-				output.WriteRawTag(82);
+				output.WriteRawTag(18);
 				output.WriteMessage(this.MostLikeRole);
-			}
-			if (this.EntrustDo != 0)
-			{
-				output.WriteRawTag(96);
-				output.WriteInt32(this.EntrustDo);
 			}
 			if (this.entrustDoMost_ != null)
 			{
-				output.WriteRawTag(114);
+				output.WriteRawTag(26);
 				output.WriteMessage(this.EntrustDoMost);
+			}
+			if (this.EntrustDo != 0)
+			{
+				output.WriteRawTag(48);
+				output.WriteInt32(this.EntrustDo);
+			}
+			if (this.alwaysRoleId_ != null)
+			{
+				output.WriteRawTag(66);
+				output.WriteMessage(this.AlwaysRoleId);
+			}
+			if (this.WishTotal != 0)
+			{
+				output.WriteRawTag(72);
+				output.WriteInt32(this.WishTotal);
+			}
+			if (this.GoldTotal != 0)
+			{
+				output.WriteRawTag(88);
+				output.WriteInt32(this.GoldTotal);
+			}
+			if (this.PopularTotal != 0)
+			{
+				output.WriteRawTag(120);
+				output.WriteInt32(this.PopularTotal);
 			}
 			if (this._unknownFields != null)
 			{
@@ -337,7 +337,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601B06F RID: 110703 RVA: 0x003E9D8C File Offset: 0x003E7F8C
+		// Token: 0x0601BAFA RID: 113402 RVA: 0x00405058 File Offset: 0x00403258
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -382,7 +382,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601B070 RID: 110704 RVA: 0x003E9E74 File Offset: 0x003E8074
+		// Token: 0x0601BAFB RID: 113403 RVA: 0x00405140 File Offset: 0x00403340
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(TrackMoonSettleResponse other)
@@ -438,7 +438,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601B071 RID: 110705 RVA: 0x003E9F84 File Offset: 0x003E8184
+		// Token: 0x0601BAFC RID: 113404 RVA: 0x00405250 File Offset: 0x00403450
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -446,7 +446,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601B072 RID: 110706 RVA: 0x003E9F90 File Offset: 0x003E8190
+		// Token: 0x0601BAFD RID: 113405 RVA: 0x0040525C File Offset: 0x0040345C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -458,70 +458,70 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 64U)
+				if (num <= 48U)
 				{
 					if (num <= 18U)
 					{
 						if (num == 8U)
 						{
-							this.PopularTotal = input.ReadInt32();
+							this.ErrorCode = (ErrorCode)input.ReadEnum();
 							continue;
 						}
 						if (num == 18U)
 						{
-							if (this.alwaysRoleId_ == null)
+							if (this.mostLikeRole_ == null)
 							{
-								this.AlwaysRoleId = new SettleInfo();
+								this.MostLikeRole = new SettleInfo();
 							}
-							input.ReadMessage(this.AlwaysRoleId);
+							input.ReadMessage(this.MostLikeRole);
 							continue;
 						}
 					}
 					else
 					{
-						if (num == 48U)
+						if (num == 26U)
 						{
-							this.GoldTotal = input.ReadInt32();
+							if (this.entrustDoMost_ == null)
+							{
+								this.EntrustDoMost = new SettleInfo();
+							}
+							input.ReadMessage(this.EntrustDoMost);
 							continue;
 						}
-						if (num == 64U)
+						if (num == 48U)
 						{
-							this.WishTotal = input.ReadInt32();
+							this.EntrustDo = input.ReadInt32();
 							continue;
 						}
 					}
 				}
-				else if (num <= 82U)
+				else if (num <= 72U)
 				{
-					if (num == 72U)
+					if (num == 66U)
 					{
-						this.ErrorCode = (ErrorCode)input.ReadEnum();
+						if (this.alwaysRoleId_ == null)
+						{
+							this.AlwaysRoleId = new SettleInfo();
+						}
+						input.ReadMessage(this.AlwaysRoleId);
 						continue;
 					}
-					if (num == 82U)
+					if (num == 72U)
 					{
-						if (this.mostLikeRole_ == null)
-						{
-							this.MostLikeRole = new SettleInfo();
-						}
-						input.ReadMessage(this.MostLikeRole);
+						this.WishTotal = input.ReadInt32();
 						continue;
 					}
 				}
 				else
 				{
-					if (num == 96U)
+					if (num == 88U)
 					{
-						this.EntrustDo = input.ReadInt32();
+						this.GoldTotal = input.ReadInt32();
 						continue;
 					}
-					if (num == 114U)
+					if (num == 120U)
 					{
-						if (this.entrustDoMost_ == null)
-						{
-							this.EntrustDoMost = new SettleInfo();
-						}
-						input.ReadMessage(this.EntrustDoMost);
+						this.PopularTotal = input.ReadInt32();
 						continue;
 					}
 				}
@@ -529,55 +529,55 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04009C63 RID: 40035
+		// Token: 0x0400A0AA RID: 41130
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04009C64 RID: 40036
-		public const int ErrorCodeFieldNumber = 9;
+		// Token: 0x0400A0AB RID: 41131
+		public const int ErrorCodeFieldNumber = 1;
 
-		// Token: 0x04009C65 RID: 40037
+		// Token: 0x0400A0AC RID: 41132
 		private ErrorCode errorCode_;
 
-		// Token: 0x04009C66 RID: 40038
-		public const int PopularTotalFieldNumber = 1;
+		// Token: 0x0400A0AD RID: 41133
+		public const int PopularTotalFieldNumber = 15;
 
-		// Token: 0x04009C67 RID: 40039
+		// Token: 0x0400A0AE RID: 41134
 		private int popularTotal_;
 
-		// Token: 0x04009C68 RID: 40040
-		public const int GoldTotalFieldNumber = 6;
+		// Token: 0x0400A0AF RID: 41135
+		public const int GoldTotalFieldNumber = 11;
 
-		// Token: 0x04009C69 RID: 40041
+		// Token: 0x0400A0B0 RID: 41136
 		private int goldTotal_;
 
-		// Token: 0x04009C6A RID: 40042
-		public const int WishTotalFieldNumber = 8;
+		// Token: 0x0400A0B1 RID: 41137
+		public const int WishTotalFieldNumber = 9;
 
-		// Token: 0x04009C6B RID: 40043
+		// Token: 0x0400A0B2 RID: 41138
 		private int wishTotal_;
 
-		// Token: 0x04009C6C RID: 40044
-		public const int EntrustDoFieldNumber = 12;
+		// Token: 0x0400A0B3 RID: 41139
+		public const int EntrustDoFieldNumber = 6;
 
-		// Token: 0x04009C6D RID: 40045
+		// Token: 0x0400A0B4 RID: 41140
 		private int entrustDo_;
 
-		// Token: 0x04009C6E RID: 40046
-		public const int EntrustDoMostFieldNumber = 14;
+		// Token: 0x0400A0B5 RID: 41141
+		public const int EntrustDoMostFieldNumber = 3;
 
-		// Token: 0x04009C6F RID: 40047
+		// Token: 0x0400A0B6 RID: 41142
 		private SettleInfo entrustDoMost_;
 
-		// Token: 0x04009C70 RID: 40048
-		public const int AlwaysRoleIdFieldNumber = 2;
+		// Token: 0x0400A0B7 RID: 41143
+		public const int AlwaysRoleIdFieldNumber = 8;
 
-		// Token: 0x04009C71 RID: 40049
+		// Token: 0x0400A0B8 RID: 41144
 		private SettleInfo alwaysRoleId_;
 
-		// Token: 0x04009C72 RID: 40050
-		public const int MostLikeRoleFieldNumber = 10;
+		// Token: 0x0400A0B9 RID: 41145
+		public const int MostLikeRoleFieldNumber = 2;
 
-		// Token: 0x04009C73 RID: 40051
+		// Token: 0x0400A0BA RID: 41146
 		private SettleInfo mostLikeRole_;
 	}
 }

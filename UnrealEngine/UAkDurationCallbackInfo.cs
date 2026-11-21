@@ -6,31 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000200 RID: 512
+	// Token: 0x020000BF RID: 191
 	[UnrealObjectPath("/Script/AkAudio.AkDurationCallbackInfo")]
 	[UnrealStructLayout(88, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 88)]
 	public class UAkDurationCallbackInfo : UAkEventCallbackInfo, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06001E28 RID: 7720 RVA: 0x0002CB8E File Offset: 0x0002AD8E
+		// Token: 0x06000E33 RID: 3635 RVA: 0x000162E0 File Offset: 0x000144E0
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UAkDurationCallbackInfo._ClassPtr;
 		}
 
-		// Token: 0x06001E29 RID: 7721 RVA: 0x0002CB9C File Offset: 0x0002AD9C
+		// Token: 0x06000E34 RID: 3636 RVA: 0x000162EC File Offset: 0x000144EC
 		public UAkDurationCallbackInfo() : this(BuiltinUtils.AllocNativeUObject(UAkDurationCallbackInfo.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06001E2A RID: 7722 RVA: 0x0002CBC4 File Offset: 0x0002ADC4
+		// Token: 0x06000E35 RID: 3637 RVA: 0x00016314 File Offset: 0x00014514
 		[NullableContext(1)]
 		public UAkDurationCallbackInfo(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UAkDurationCallbackInfo.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700078C RID: 1932
-		// (get) Token: 0x06001E2B RID: 7723 RVA: 0x0002CBF7 File Offset: 0x0002ADF7
-		// (set) Token: 0x06001E2C RID: 7724 RVA: 0x0002CC07 File Offset: 0x0002AE07
+		// Token: 0x1700012F RID: 303
+		// (get) Token: 0x06000E36 RID: 3638 RVA: 0x00016347 File Offset: 0x00014547
+		// (set) Token: 0x06000E37 RID: 3639 RVA: 0x00016357 File Offset: 0x00014557
 		public unsafe float Duration
 		{
 			get
@@ -43,9 +43,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700078D RID: 1933
-		// (get) Token: 0x06001E2D RID: 7725 RVA: 0x0002CC18 File Offset: 0x0002AE18
-		// (set) Token: 0x06001E2E RID: 7726 RVA: 0x0002CC28 File Offset: 0x0002AE28
+		// Token: 0x17000130 RID: 304
+		// (get) Token: 0x06000E38 RID: 3640 RVA: 0x00016368 File Offset: 0x00014568
+		// (set) Token: 0x06000E39 RID: 3641 RVA: 0x00016378 File Offset: 0x00014578
 		public unsafe float EstimatedDuration
 		{
 			get
@@ -58,9 +58,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700078E RID: 1934
-		// (get) Token: 0x06001E2F RID: 7727 RVA: 0x0002CC39 File Offset: 0x0002AE39
-		// (set) Token: 0x06001E30 RID: 7728 RVA: 0x0002CC49 File Offset: 0x0002AE49
+		// Token: 0x17000131 RID: 305
+		// (get) Token: 0x06000E3A RID: 3642 RVA: 0x00016389 File Offset: 0x00014589
+		// (set) Token: 0x06000E3B RID: 3643 RVA: 0x00016399 File Offset: 0x00014599
 		public unsafe int AudioNodeID
 		{
 			get
@@ -73,9 +73,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700078F RID: 1935
-		// (get) Token: 0x06001E31 RID: 7729 RVA: 0x0002CC5A File Offset: 0x0002AE5A
-		// (set) Token: 0x06001E32 RID: 7730 RVA: 0x0002CC6A File Offset: 0x0002AE6A
+		// Token: 0x17000132 RID: 306
+		// (get) Token: 0x06000E3C RID: 3644 RVA: 0x000163AA File Offset: 0x000145AA
+		// (set) Token: 0x06000E3D RID: 3645 RVA: 0x000163BA File Offset: 0x000145BA
 		public unsafe int MediaID
 		{
 			get
@@ -88,9 +88,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17000790 RID: 1936
-		// (get) Token: 0x06001E33 RID: 7731 RVA: 0x0002CC7B File Offset: 0x0002AE7B
-		// (set) Token: 0x06001E34 RID: 7732 RVA: 0x0002CC8B File Offset: 0x0002AE8B
+		// Token: 0x17000133 RID: 307
+		// (get) Token: 0x06000E3E RID: 3646 RVA: 0x000163CB File Offset: 0x000145CB
+		// (set) Token: 0x06000E3F RID: 3647 RVA: 0x000163DB File Offset: 0x000145DB
 		public unsafe bool bStreaming
 		{
 			get
@@ -103,40 +103,40 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06001E35 RID: 7733 RVA: 0x0002CC9C File Offset: 0x0002AE9C
+		// Token: 0x06000E40 RID: 3648 RVA: 0x000163EC File Offset: 0x000145EC
 		static UAkDurationCallbackInfo()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/AkAudio.AkDurationCallbackInfo");
 		}
 
-		// Token: 0x06001E36 RID: 7734 RVA: 0x0002CCAA File Offset: 0x0002AEAA
+		// Token: 0x06000E41 RID: 3649 RVA: 0x000163FA File Offset: 0x000145FA
 		protected UAkDurationCallbackInfo(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040009FC RID: 2556
+		// Token: 0x040002BE RID: 702
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/AkAudio.AkDurationCallbackInfo";
 
-		// Token: 0x040009FD RID: 2557
+		// Token: 0x040002BF RID: 703
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040009FE RID: 2558
+		// Token: 0x040002C0 RID: 704
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040009FF RID: 2559
+		// Token: 0x040002C1 RID: 705
 		internal static int __PropertyOffset_Duration;
 
-		// Token: 0x04000A00 RID: 2560
+		// Token: 0x040002C2 RID: 706
 		internal static int __PropertyOffset_EstimatedDuration;
 
-		// Token: 0x04000A01 RID: 2561
+		// Token: 0x040002C3 RID: 707
 		internal static int __PropertyOffset_AudioNodeID;
 
-		// Token: 0x04000A02 RID: 2562
+		// Token: 0x040002C4 RID: 708
 		internal static int __PropertyOffset_MediaID;
 
-		// Token: 0x04000A03 RID: 2563
+		// Token: 0x040002C5 RID: 709
 		internal static int __PropertyOffset_bStreaming;
 	}
 }

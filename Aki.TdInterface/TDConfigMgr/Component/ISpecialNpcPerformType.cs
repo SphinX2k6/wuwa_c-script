@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006F6 RID: 1782
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000797 RID: 1943
 	public class ISpecialNpcPerformType
 	{
-		// Token: 0x06002660 RID: 9824 RVA: 0x00066B68 File Offset: 0x00064D68
+		// Token: 0x06002980 RID: 10624 RVA: 0x0006DBD8 File Offset: 0x0006BDD8
 		private ISpecialNpcPerformType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002661 RID: 9825 RVA: 0x00066BA0 File Offset: 0x00064DA0
+		// Token: 0x06002981 RID: 10625 RVA: 0x0006DC10 File Offset: 0x0006BE10
 		public static ISpecialNpcPerformType Create([Nullable(2)] ISpecialNpcPerformType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002662 RID: 9826 RVA: 0x00066BB3 File Offset: 0x00064DB3
+		// Token: 0x06002982 RID: 10626 RVA: 0x0006DC23 File Offset: 0x0006BE23
 		public static ISpecialNpcPerformType CreateFromSetValue([Nullable(2)] ISpecialNpcPerformType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002663 RID: 9827 RVA: 0x00066BC6 File Offset: 0x00064DC6
+		// Token: 0x06002983 RID: 10627 RVA: 0x0006DC36 File Offset: 0x0006BE36
 		public ISpecialNpcPerformType_SetValue ToSetValue()
 		{
 			return new ISpecialNpcPerformType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000A1E RID: 2590
-		// (get) Token: 0x06002664 RID: 9828 RVA: 0x00066BD9 File Offset: 0x00064DD9
-		// (set) Token: 0x06002665 RID: 9829 RVA: 0x00066C04 File Offset: 0x00064E04
+		// Token: 0x17000ADC RID: 2780
+		// (get) Token: 0x06002984 RID: 10628 RVA: 0x0006DC49 File Offset: 0x0006BE49
+		// (set) Token: 0x06002985 RID: 10629 RVA: 0x0006DC74 File Offset: 0x0006BE74
 		public virtual ESpecialNpcType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001A0E RID: 6670
+		// Token: 0x04001C0D RID: 7181
 		[Nullable(2)]
 		protected ISpecialNpcPerformType FbInstance;
 
-		// Token: 0x04001A0F RID: 6671
+		// Token: 0x04001C0E RID: 7182
 		[Nullable(2)]
 		protected ISpecialNpcPerformType_SetValue PocoInterface;
 	}

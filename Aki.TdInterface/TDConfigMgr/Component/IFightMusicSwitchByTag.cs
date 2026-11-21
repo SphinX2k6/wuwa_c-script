@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000380 RID: 896
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020003C9 RID: 969
 	public class IFightMusicSwitchByTag
 	{
-		// Token: 0x060011C7 RID: 4551 RVA: 0x0003B89C File Offset: 0x00039A9C
+		// Token: 0x0600130B RID: 4875 RVA: 0x0003EB80 File Offset: 0x0003CD80
 		private IFightMusicSwitchByTag_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060011C8 RID: 4552 RVA: 0x0003B8D4 File Offset: 0x00039AD4
+		// Token: 0x0600130C RID: 4876 RVA: 0x0003EBB8 File Offset: 0x0003CDB8
 		public static IFightMusicSwitchByTag Create([Nullable(2)] IFightMusicSwitchByTag instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060011C9 RID: 4553 RVA: 0x0003B8E7 File Offset: 0x00039AE7
+		// Token: 0x0600130D RID: 4877 RVA: 0x0003EBCB File Offset: 0x0003CDCB
 		public static IFightMusicSwitchByTag CreateFromSetValue([Nullable(2)] IFightMusicSwitchByTag_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060011CA RID: 4554 RVA: 0x0003B8FA File Offset: 0x00039AFA
+		// Token: 0x0600130E RID: 4878 RVA: 0x0003EBDE File Offset: 0x0003CDDE
 		public IFightMusicSwitchByTag_SetValue ToSetValue()
 		{
 			return new IFightMusicSwitchByTag_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000501 RID: 1281
-		// (get) Token: 0x060011CB RID: 4555 RVA: 0x0003B919 File Offset: 0x00039B19
-		// (set) Token: 0x060011CC RID: 4556 RVA: 0x0003B944 File Offset: 0x00039B44
+		// Token: 0x17000555 RID: 1365
+		// (get) Token: 0x0600130F RID: 4879 RVA: 0x0003EBFD File Offset: 0x0003CDFD
+		// (set) Token: 0x06001310 RID: 4880 RVA: 0x0003EC28 File Offset: 0x0003CE28
 		public virtual string FightMusic
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000502 RID: 1282
-		// (get) Token: 0x060011CD RID: 4557 RVA: 0x0003B952 File Offset: 0x00039B52
-		// (set) Token: 0x060011CE RID: 4558 RVA: 0x0003B979 File Offset: 0x00039B79
+		// Token: 0x17000556 RID: 1366
+		// (get) Token: 0x06001311 RID: 4881 RVA: 0x0003EC36 File Offset: 0x0003CE36
+		// (set) Token: 0x06001312 RID: 4882 RVA: 0x0003EC5D File Offset: 0x0003CE5D
 		[Nullable(2)]
 		public virtual string ActivateTag
 		{
@@ -110,11 +108,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000E7E RID: 3710
+		// Token: 0x04000F75 RID: 3957
 		[Nullable(2)]
 		protected IFightMusicSwitchByTag FbInstance;
 
-		// Token: 0x04000E7F RID: 3711
+		// Token: 0x04000F76 RID: 3958
 		[Nullable(2)]
 		protected IFightMusicSwitchByTag_SetValue PocoInterface;
 	}

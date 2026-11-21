@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Common.Event;
@@ -11,12 +10,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001821 RID: 6177
+// Token: 0x02000CDA RID: 3290
 [NullableContext(1)]
 [Nullable(0)]
 public class MultiSelectDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanelBase
 {
-	// Token: 0x0600B526 RID: 46374 RVA: 0x0028E3B8 File Offset: 0x0028C5B8
+	// Token: 0x06008911 RID: 35089 RVA: 0x00298AD8 File Offset: 0x00296CD8
 	public MultiSelectDropDown(UUIItem sourceItem, Func<UUIItem, T, DropDownItemBase<TData>> createDropDownItem, Func<UUIItem, MultiSelectTitleItemBase<TData>> createTitleItem)
 	{
 		this.SourceItem = sourceItem;
@@ -24,7 +23,7 @@ public class MultiSelectDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanel
 		this.CreateTitleItem = createTitleItem;
 	}
 
-	// Token: 0x0600B527 RID: 46375 RVA: 0x0028E414 File Offset: 0x0028C614
+	// Token: 0x06008912 RID: 35090 RVA: 0x00298B34 File Offset: 0x00296D34
 	public UniTask Init()
 	{
 		MultiSelectDropDown<TData, T>.<Init>d__22 <Init>d__;
@@ -35,7 +34,7 @@ public class MultiSelectDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanel
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600B528 RID: 46376 RVA: 0x0028E458 File Offset: 0x0028C658
+	// Token: 0x06008913 RID: 35091 RVA: 0x00298B78 File Offset: 0x00296D78
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -62,7 +61,7 @@ public class MultiSelectDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanel
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600B529 RID: 46377 RVA: 0x0028E564 File Offset: 0x0028C764
+	// Token: 0x06008914 RID: 35092 RVA: 0x00298C84 File Offset: 0x00296E84
 	private void ButtonClick()
 	{
 		UUIItem item = base.GetItem(1);
@@ -83,7 +82,7 @@ public class MultiSelectDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanel
 		EventSystem.Instance.Emit<bool>(EEventName.OnDropDownListVisibleChanged, true);
 	}
 
-	// Token: 0x0600B52A RID: 46378 RVA: 0x0028E5D0 File Offset: 0x0028C7D0
+	// Token: 0x06008915 RID: 35093 RVA: 0x00298CF0 File Offset: 0x00296EF0
 	protected override void OnStart()
 	{
 		this.Layout = new GenericLayoutNew<DropDownItemBase<TData>>(base.GetLayoutBase(2), new CSharpScript.Game.Module.Util.Layout.TLayoutRefresh<DropDownItemBase<TData>>(this.InitItem), base.GetItem(3));
@@ -92,7 +91,7 @@ public class MultiSelectDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanel
 		this.TitleItem = this.CreateTitleItem(base.GetItem(4));
 	}
 
-	// Token: 0x0600B52B RID: 46379 RVA: 0x0028E640 File Offset: 0x0028C840
+	// Token: 0x06008916 RID: 35094 RVA: 0x00298D60 File Offset: 0x00296F60
 	private LayoutItem<DropDownItemBase<TData>> InitItem(object data, UUIItem uiItem, int index)
 	{
 		DropDownItemBase<TData> dropDownItemBase = this.CreateDropDownItem(uiItem, (T)((object)data));
@@ -107,7 +106,7 @@ public class MultiSelectDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanel
 		};
 	}
 
-	// Token: 0x0600B52C RID: 46380 RVA: 0x0028E6B8 File Offset: 0x0028C8B8
+	// Token: 0x06008917 RID: 35095 RVA: 0x00298DD8 File Offset: 0x00296FD8
 	private void OnSelectChange(int selectedIndex)
 	{
 		if (this.SuppressCallback)
@@ -130,13 +129,13 @@ public class MultiSelectDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanel
 		this.UpdateTitle();
 	}
 
-	// Token: 0x0600B52D RID: 46381 RVA: 0x0028E71C File Offset: 0x0028C91C
+	// Token: 0x06008918 RID: 35096 RVA: 0x00298E3C File Offset: 0x0029703C
 	private bool CanExecuteFunction(int selectedIndex)
 	{
 		return true;
 	}
 
-	// Token: 0x0600B52E RID: 46382 RVA: 0x0028E71F File Offset: 0x0028C91F
+	// Token: 0x06008919 RID: 35097 RVA: 0x00298E3F File Offset: 0x0029703F
 	protected override void OnBeforeDestroy()
 	{
 		this.Layout.UnBindLateUpdate();
@@ -148,7 +147,7 @@ public class MultiSelectDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanel
 		this.TitleItem.Destroy(null);
 	}
 
-	// Token: 0x0600B52F RID: 46383 RVA: 0x0028E74C File Offset: 0x0028C94C
+	// Token: 0x0600891A RID: 35098 RVA: 0x00298E6C File Offset: 0x0029706C
 	public unsafe void InitScroll(IReadOnlyList<T> dataList, Func<T, TData> getDataFunction, [Nullable(2)] List<int> defaultIndices = null)
 	{
 		if (defaultIndices == null)
@@ -179,7 +178,7 @@ public class MultiSelectDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanel
 		this.UpdateTitle();
 	}
 
-	// Token: 0x0600B530 RID: 46384 RVA: 0x0028E82C File Offset: 0x0028CA2C
+	// Token: 0x0600891B RID: 35099 RVA: 0x00298F4C File Offset: 0x0029714C
 	public void RefreshAllDropDownItem()
 	{
 		if (this.DataList == null)
@@ -200,12 +199,12 @@ public class MultiSelectDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanel
 		this.UpdateTitle();
 	}
 
-	// Token: 0x0600B531 RID: 46385 RVA: 0x0028E8CC File Offset: 0x0028CACC
+	// Token: 0x0600891C RID: 35100 RVA: 0x00298FEC File Offset: 0x002971EC
 	private void HideDropList()
 	{
 		base.GetItem(1).SetUIActive(false);
 		this.HideMaskButton();
-		List<int> list = this.SelectedIndices.ToList<int>();
+		List<int> list = new List<int>(this.SelectedIndices);
 		list.Sort((int a, int b) => a - b);
 		Action<List<int>> onCloseCall = this.OnCloseCall;
 		if (onCloseCall == null)
@@ -215,7 +214,7 @@ public class MultiSelectDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanel
 		onCloseCall(list);
 	}
 
-	// Token: 0x0600B532 RID: 46386 RVA: 0x0028E930 File Offset: 0x0028CB30
+	// Token: 0x0600891D RID: 35101 RVA: 0x00299050 File Offset: 0x00297250
 	private UniTask ShowMaskButton()
 	{
 		MultiSelectDropDown<TData, T>.<ShowMaskButton>d__33 <ShowMaskButton>d__;
@@ -226,7 +225,7 @@ public class MultiSelectDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanel
 		return <ShowMaskButton>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600B533 RID: 46387 RVA: 0x0028E973 File Offset: 0x0028CB73
+	// Token: 0x0600891E RID: 35102 RVA: 0x00299093 File Offset: 0x00297293
 	private void HideMaskButton()
 	{
 		if (this.MaskButton == null)
@@ -237,7 +236,7 @@ public class MultiSelectDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanel
 		this.MaskButton.SetActive(false);
 	}
 
-	// Token: 0x0600B534 RID: 46388 RVA: 0x0028E998 File Offset: 0x0028CB98
+	// Token: 0x0600891F RID: 35103 RVA: 0x002990B8 File Offset: 0x002972B8
 	private void UpdateTitle()
 	{
 		List<TData> list = new List<TData>();
@@ -248,7 +247,7 @@ public class MultiSelectDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanel
 		this.TitleItem.ShowMultiSelectTitle(list);
 	}
 
-	// Token: 0x0600B535 RID: 46389 RVA: 0x0028EA14 File Offset: 0x0028CC14
+	// Token: 0x06008920 RID: 35104 RVA: 0x00299134 File Offset: 0x00297334
 	private void SetListShowBottom()
 	{
 		UUIItem item = base.GetItem(1);
@@ -258,7 +257,7 @@ public class MultiSelectDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanel
 		item.SetAnchorOffsetY(0f);
 	}
 
-	// Token: 0x0600B536 RID: 46390 RVA: 0x0028EA4E File Offset: 0x0028CC4E
+	// Token: 0x06008921 RID: 35105 RVA: 0x0029916E File Offset: 0x0029736E
 	private void SetListShowTop()
 	{
 		UUIItem item = base.GetItem(1);
@@ -268,7 +267,7 @@ public class MultiSelectDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanel
 		item.SetAnchorOffsetY(0f);
 	}
 
-	// Token: 0x0600B537 RID: 46391 RVA: 0x0028EA88 File Offset: 0x0028CC88
+	// Token: 0x06008922 RID: 35106 RVA: 0x002991A8 File Offset: 0x002973A8
 	private void SetBottomAutoSize(float listBottom, float screenBottom)
 	{
 		UUIItem item = base.GetItem(1);
@@ -280,7 +279,7 @@ public class MultiSelectDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanel
 		item.SetHeight(height);
 	}
 
-	// Token: 0x0600B538 RID: 46392 RVA: 0x0028EAD0 File Offset: 0x0028CCD0
+	// Token: 0x06008923 RID: 35107 RVA: 0x002991F0 File Offset: 0x002973F0
 	private void CalculateListPosition(float deltaTime)
 	{
 		if (this.OriginalWorldTrans == null)
@@ -336,13 +335,13 @@ public class MultiSelectDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanel
 		this.CalculateDirty = false;
 	}
 
-	// Token: 0x0600B539 RID: 46393 RVA: 0x0028EC8E File Offset: 0x0028CE8E
+	// Token: 0x06008924 RID: 35108 RVA: 0x002993AE File Offset: 0x002975AE
 	public IReadOnlySet<int> GetSelectedIndices()
 	{
 		return this.SelectedIndices;
 	}
 
-	// Token: 0x0600B53A RID: 46394 RVA: 0x0028EC98 File Offset: 0x0028CE98
+	// Token: 0x06008925 RID: 35109 RVA: 0x002993B8 File Offset: 0x002975B8
 	public void SetSelectedIndices(List<int> indices)
 	{
 		this.SuppressCallback = true;
@@ -368,7 +367,7 @@ public class MultiSelectDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanel
 		this.UpdateTitle();
 	}
 
-	// Token: 0x0600B53B RID: 46395 RVA: 0x0028ED80 File Offset: 0x0028CF80
+	// Token: 0x06008926 RID: 35110 RVA: 0x002994A0 File Offset: 0x002976A0
 	public void ToggleItem(int index, bool isChecked)
 	{
 		this.SuppressCallback = true;
@@ -389,7 +388,7 @@ public class MultiSelectDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanel
 		this.UpdateTitle();
 	}
 
-	// Token: 0x0600B53C RID: 46396 RVA: 0x0028EDDD File Offset: 0x0028CFDD
+	// Token: 0x06008927 RID: 35111 RVA: 0x002994FD File Offset: 0x002976FD
 	public void SetShowType(ECommonDropDownShowType showType)
 	{
 		if (this.ShowType == showType)
@@ -400,46 +399,46 @@ public class MultiSelectDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanel
 		this.CalculateDirty = true;
 	}
 
-	// Token: 0x0600B53D RID: 46397 RVA: 0x0028EDF7 File Offset: 0x0028CFF7
+	// Token: 0x06008928 RID: 35112 RVA: 0x00299517 File Offset: 0x00297717
 	public void SetOnCloseCall(Action<List<int>> onCloseCall)
 	{
 		this.OnCloseCall = onCloseCall;
 	}
 
-	// Token: 0x0600B53E RID: 46398 RVA: 0x0028EE00 File Offset: 0x0028D000
+	// Token: 0x06008929 RID: 35113 RVA: 0x00299520 File Offset: 0x00297720
 	public void SetOnItemToggleCall(Action<int, bool> onItemToggleCall)
 	{
 		this.OnItemToggleCall = onItemToggleCall;
 	}
 
-	// Token: 0x0600B53F RID: 46399 RVA: 0x0028EE09 File Offset: 0x0028D009
+	// Token: 0x0600892A RID: 35114 RVA: 0x00299529 File Offset: 0x00297729
 	public void SetOnOpenCall(Action onOpenCall)
 	{
 		this.OnOpenCall = onOpenCall;
 	}
 
-	// Token: 0x0600B540 RID: 46400 RVA: 0x0028EE12 File Offset: 0x0028D012
+	// Token: 0x0600892B RID: 35115 RVA: 0x00299532 File Offset: 0x00297732
 	public DropDownItemBase<TData> GetDropDownItemObject(int index)
 	{
 		return this.Layout.GetLayoutItemByIndex(index);
 	}
 
-	// Token: 0x0600B541 RID: 46401 RVA: 0x0028EE20 File Offset: 0x0028D020
+	// Token: 0x0600892C RID: 35116 RVA: 0x00299540 File Offset: 0x00297740
 	public DropDownItemBase<TData>[] GetDropDownItemList()
 	{
 		return this.Layout.GetLayoutItemList().ToArray();
 	}
 
-	// Token: 0x040051C3 RID: 20931
+	// Token: 0x0400526E RID: 21102
 	private UUIItem SourceItem;
 
-	// Token: 0x040051C4 RID: 20932
+	// Token: 0x0400526F RID: 21103
 	private Func<UUIItem, T, DropDownItemBase<TData>> CreateDropDownItem;
 
-	// Token: 0x040051C5 RID: 20933
+	// Token: 0x04005270 RID: 21104
 	private Func<UUIItem, MultiSelectTitleItemBase<TData>> CreateTitleItem;
 
-	// Token: 0x040051C6 RID: 20934
+	// Token: 0x04005271 RID: 21105
 	[Nullable(new byte[]
 	{
 		2,
@@ -448,7 +447,7 @@ public class MultiSelectDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanel
 	})]
 	private GenericLayoutNew<DropDownItemBase<TData>> Layout;
 
-	// Token: 0x040051C7 RID: 20935
+	// Token: 0x04005272 RID: 21106
 	[Nullable(new byte[]
 	{
 		2,
@@ -456,14 +455,14 @@ public class MultiSelectDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanel
 	})]
 	private IReadOnlyList<T> DataList;
 
-	// Token: 0x040051C8 RID: 20936
+	// Token: 0x04005273 RID: 21107
 	private readonly HashSet<int> SelectedIndices = new HashSet<int>();
 
-	// Token: 0x040051C9 RID: 20937
+	// Token: 0x04005274 RID: 21108
 	[Nullable(2)]
 	private DynamicMaskButton MaskButton;
 
-	// Token: 0x040051CA RID: 20938
+	// Token: 0x04005275 RID: 21109
 	[Nullable(new byte[]
 	{
 		2,
@@ -471,30 +470,30 @@ public class MultiSelectDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanel
 	})]
 	private Action<List<int>> OnCloseCall;
 
-	// Token: 0x040051CB RID: 20939
+	// Token: 0x04005276 RID: 21110
 	[Nullable(2)]
 	private Action<int, bool> OnItemToggleCall;
 
-	// Token: 0x040051CC RID: 20940
+	// Token: 0x04005277 RID: 21111
 	[Nullable(2)]
 	private Action OnOpenCall;
 
-	// Token: 0x040051CD RID: 20941
+	// Token: 0x04005278 RID: 21112
 	private ECommonDropDownShowType ShowType = ECommonDropDownShowType.Auto;
 
-	// Token: 0x040051CE RID: 20942
+	// Token: 0x04005279 RID: 21113
 	private bool CalculateDirty;
 
-	// Token: 0x040051CF RID: 20943
+	// Token: 0x0400527A RID: 21114
 	private readonly Transform SelfToCanvasTrans = Transform.Create();
 
-	// Token: 0x040051D0 RID: 20944
+	// Token: 0x0400527B RID: 21115
 	private readonly Vector ButtonBottomToCanvasPos = Vector.Create();
 
-	// Token: 0x040051D1 RID: 20945
+	// Token: 0x0400527C RID: 21116
 	private readonly Vector ListBottomInCanvasSpace = Vector.Create();
 
-	// Token: 0x040051D2 RID: 20946
+	// Token: 0x0400527D RID: 21117
 	[Nullable(new byte[]
 	{
 		2,
@@ -503,7 +502,7 @@ public class MultiSelectDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanel
 	})]
 	private Func<T, TData> GetDataFunction;
 
-	// Token: 0x040051D3 RID: 20947
+	// Token: 0x0400527E RID: 21118
 	[Nullable(new byte[]
 	{
 		2,
@@ -511,28 +510,28 @@ public class MultiSelectDropDown<[Nullable(2)] TData, [Nullable(2)] T> : UiPanel
 	})]
 	private MultiSelectTitleItemBase<TData> TitleItem;
 
-	// Token: 0x040051D4 RID: 20948
+	// Token: 0x0400527F RID: 21119
 	private FTransformDouble? OriginalWorldTrans;
 
-	// Token: 0x040051D5 RID: 20949
+	// Token: 0x04005280 RID: 21120
 	private bool SuppressCallback;
 
-	// Token: 0x040051D6 RID: 20950
+	// Token: 0x04005281 RID: 21121
 	private const float BOTTOM_OFFSET = 75f;
 
-	// Token: 0x02007E0C RID: 32268
+	// Token: 0x02006F92 RID: 28562
 	[NullableContext(0)]
 	private enum ECompDefine
 	{
-		// Token: 0x04029400 RID: 168960
+		// Token: 0x0402472B RID: 149291
 		Button,
-		// Token: 0x04029401 RID: 168961
+		// Token: 0x0402472C RID: 149292
 		ListRoot,
-		// Token: 0x04029402 RID: 168962
+		// Token: 0x0402472D RID: 149293
 		Layout,
-		// Token: 0x04029403 RID: 168963
+		// Token: 0x0402472E RID: 149294
 		LayoutItem,
-		// Token: 0x04029404 RID: 168964
+		// Token: 0x0402472F RID: 149295
 		Title
 	}
 }

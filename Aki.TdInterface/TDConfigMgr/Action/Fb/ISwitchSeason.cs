@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200289E RID: 10398
+	// Token: 0x02002B73 RID: 11123
 	public class ISwitchSeason : IClientSetSeasonStateConfig
 	{
-		// Token: 0x0600E631 RID: 58929 RVA: 0x0021D3B9 File Offset: 0x0021B5B9
-		[NullableContext(1)]
+		// Token: 0x0600F460 RID: 62560 RVA: 0x0023A339 File Offset: 0x00238539
 		public static ISwitchSeason Create(ISwitchSeason? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170046B7 RID: 18103
-		// (get) Token: 0x0600E632 RID: 58930 RVA: 0x0021D3D8 File Offset: 0x0021B5D8
+		// Token: 0x17004A28 RID: 18984
+		// (get) Token: 0x0600F461 RID: 62561 RVA: 0x0023A358 File Offset: 0x00238558
 		public override EClientSetSeasonStateType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046B8 RID: 18104
-		// (get) Token: 0x0600E633 RID: 58931 RVA: 0x0021D3E5 File Offset: 0x0021B5E5
+		// Token: 0x17004A29 RID: 18985
+		// (get) Token: 0x0600F462 RID: 62562 RVA: 0x0023A365 File Offset: 0x00238565
 		public virtual ESeason Season
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170046B9 RID: 18105
-		// (get) Token: 0x0600E634 RID: 58932 RVA: 0x0021D3F2 File Offset: 0x0021B5F2
+		// Token: 0x17004A2A RID: 18986
+		// (get) Token: 0x0600F463 RID: 62563 RVA: 0x0023A372 File Offset: 0x00238572
 		public virtual float TransitionSpeed
 		{
 			get
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007F44 RID: 32580
+		// Token: 0x04008603 RID: 34307
 		private ISwitchSeason Instance;
 	}
 }

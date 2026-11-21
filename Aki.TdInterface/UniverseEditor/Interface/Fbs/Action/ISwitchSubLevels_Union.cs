@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007271 RID: 29297
+	// Token: 0x02007A46 RID: 31302
 	public enum ISwitchSubLevels_Union : byte
 	{
-		// Token: 0x04011D73 RID: 73075
+		// Token: 0x04012D75 RID: 77173
 		NONE,
-		// Token: 0x04011D74 RID: 73076
+		// Token: 0x04012D76 RID: 77174
 		ISwitchSubLevels,
-		// Token: 0x04011D75 RID: 73077
+		// Token: 0x04012D77 RID: 77175
 		ISwitchSubLevelsDirectly,
-		// Token: 0x04011D76 RID: 73078
+		// Token: 0x04012D78 RID: 77176
 		IPreloadSubLevels,
-		// Token: 0x04011D77 RID: 73079
+		// Token: 0x04012D79 RID: 77177
 		ISwitchPermission
 	}
 }

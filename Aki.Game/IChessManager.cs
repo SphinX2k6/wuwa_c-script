@@ -2,20 +2,20 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020011CE RID: 4558
+// Token: 0x02000682 RID: 1666
 [NullableContext(1)]
 public interface IChessManager
 {
-	// Token: 0x06007970 RID: 31088
+	// Token: 0x06004D07 RID: 19719
 	ChessboardPoint CreateChessboardPoint();
 
-	// Token: 0x06007971 RID: 31089
+	// Token: 0x06004D08 RID: 19720
 	ChessItem CreateChessItem();
 
-	// Token: 0x06007972 RID: 31090
+	// Token: 0x06004D09 RID: 19721
 	[NullableContext(2)]
 	IChessAgent GetChessAgent(EChessAgentType type, EntityHandle entityHandle = null);
 
-	// Token: 0x06007973 RID: 31091
+	// Token: 0x06004D0A RID: 19722
 	void BatchTeleportItemsToPointSorted(List<IChessTransmitData> transmitDataList);
 }

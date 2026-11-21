@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Launcher.Platform.PlatformSdk
 {
-	// Token: 0x02000198 RID: 408
+	// Token: 0x0200019C RID: 412
 	public enum EPlayStaionScope
 	{
-		// Token: 0x040006ED RID: 1773
+		// Token: 0x04000728 RID: 1832
 		DeviceId,
-		// Token: 0x040006EE RID: 1774
+		// Token: 0x04000729 RID: 1833
 		Login
 	}
 }

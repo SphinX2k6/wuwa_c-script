@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200044D RID: 1101
+	// Token: 0x020004A6 RID: 1190
 	public class IIgnoreEntityIdsCollision_SetValue
 	{
-		// Token: 0x0400110E RID: 4366
-		[Nullable(1)]
+		// Token: 0x04001230 RID: 4656
 		public List<int> EntityIds;
 	}
 }

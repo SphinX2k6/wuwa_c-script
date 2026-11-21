@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006EB9 RID: 28345
+	// Token: 0x0200763D RID: 30269
 	public class IRestorePhantomFormationT
 	{
-		// Token: 0x1700D2FE RID: 54014
-		// (get) Token: 0x06032196 RID: 205206 RVA: 0x006C618E File Offset: 0x006C438E
-		// (set) Token: 0x06032197 RID: 205207 RVA: 0x006C6196 File Offset: 0x006C4396
+		// Token: 0x1700DE55 RID: 56917
+		// (get) Token: 0x060351D6 RID: 217558 RVA: 0x00721EC2 File Offset: 0x007200C2
+		// (set) Token: 0x060351D7 RID: 217559 RVA: 0x00721ECA File Offset: 0x007200CA
 		public int TeleportEntityId { get; set; }
 
-		// Token: 0x1700D2FF RID: 54015
-		// (get) Token: 0x06032198 RID: 205208 RVA: 0x006C619F File Offset: 0x006C439F
-		// (set) Token: 0x06032199 RID: 205209 RVA: 0x006C61A7 File Offset: 0x006C43A7
+		// Token: 0x1700DE56 RID: 56918
+		// (get) Token: 0x060351D8 RID: 217560 RVA: 0x00721ED3 File Offset: 0x007200D3
+		// (set) Token: 0x060351D9 RID: 217561 RVA: 0x00721EDB File Offset: 0x007200DB
 		public bool RetainPhantom { get; set; }
 
-		// Token: 0x1700D300 RID: 54016
-		// (get) Token: 0x0603219A RID: 205210 RVA: 0x006C61B0 File Offset: 0x006C43B0
-		// (set) Token: 0x0603219B RID: 205211 RVA: 0x006C61B8 File Offset: 0x006C43B8
+		// Token: 0x1700DE57 RID: 56919
+		// (get) Token: 0x060351DA RID: 217562 RVA: 0x00721EE4 File Offset: 0x007200E4
+		// (set) Token: 0x060351DB RID: 217563 RVA: 0x00721EEC File Offset: 0x007200EC
 		public byte NullMask { get; set; }
 
-		// Token: 0x0603219C RID: 205212 RVA: 0x006C61C1 File Offset: 0x006C43C1
+		// Token: 0x060351DC RID: 217564 RVA: 0x00721EF5 File Offset: 0x007200F5
 		public IRestorePhantomFormationT()
 		{
 			this.TeleportEntityId = 0;

@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200114E RID: 4430
+	// Token: 0x02001188 RID: 4488
 	public sealed class SceneFishCageInfo : IMessage<SceneFishCageInfo>, IMessage, IEquatable<SceneFishCageInfo>, IDeepCloneable<SceneFishCageInfo>, IBufferMessage
 	{
-		// Token: 0x060179DE RID: 96734 RVA: 0x0036DB89 File Offset: 0x0036BD89
+		// Token: 0x06017F7F RID: 98175 RVA: 0x0037CED5 File Offset: 0x0037B0D5
 		[NullableContext(1)]
 		public static SceneFishCageInfo Create()
 		{
 			return new SceneFishCageInfo();
 		}
 
-		// Token: 0x17004F42 RID: 20290
-		// (get) Token: 0x060179DF RID: 96735 RVA: 0x0036DB90 File Offset: 0x0036BD90
+		// Token: 0x170050AE RID: 20654
+		// (get) Token: 0x06017F80 RID: 98176 RVA: 0x0037CEDC File Offset: 0x0037B0DC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<SceneFishCageInfo> Parser
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004F43 RID: 20291
-		// (get) Token: 0x060179E0 RID: 96736 RVA: 0x0036DB97 File Offset: 0x0036BD97
+		// Token: 0x170050AF RID: 20655
+		// (get) Token: 0x06017F81 RID: 98177 RVA: 0x0037CEE3 File Offset: 0x0037B0E3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -42,8 +42,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004F44 RID: 20292
-		// (get) Token: 0x060179E1 RID: 96737 RVA: 0x0036DB9A File Offset: 0x0036BD9A
+		// Token: 0x170050B0 RID: 20656
+		// (get) Token: 0x06017F82 RID: 98178 RVA: 0x0037CEE6 File Offset: 0x0037B0E6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -54,14 +54,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060179E2 RID: 96738 RVA: 0x0036DBA1 File Offset: 0x0036BDA1
+		// Token: 0x06017F83 RID: 98179 RVA: 0x0037CEED File Offset: 0x0037B0ED
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SceneFishCageInfo()
 		{
 		}
 
-		// Token: 0x060179E3 RID: 96739 RVA: 0x0036DBB4 File Offset: 0x0036BDB4
+		// Token: 0x06017F84 RID: 98180 RVA: 0x0037CF00 File Offset: 0x0037B100
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SceneFishCageInfo(SceneFishCageInfo other) : this()
@@ -70,7 +70,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060179E4 RID: 96740 RVA: 0x0036DBDE File Offset: 0x0036BDDE
+		// Token: 0x06017F85 RID: 98181 RVA: 0x0037CF2A File Offset: 0x0037B12A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SceneFishCageInfo Clone()
@@ -78,8 +78,8 @@ namespace Aki.Protocol
 			return new SceneFishCageInfo(this);
 		}
 
-		// Token: 0x17004F45 RID: 20293
-		// (get) Token: 0x060179E5 RID: 96741 RVA: 0x0036DBE6 File Offset: 0x0036BDE6
+		// Token: 0x170050B1 RID: 20657
+		// (get) Token: 0x06017F86 RID: 98182 RVA: 0x0037CF32 File Offset: 0x0037B132
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<OneFishCage> Cages
@@ -90,7 +90,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060179E6 RID: 96742 RVA: 0x0036DBEE File Offset: 0x0036BDEE
+		// Token: 0x06017F87 RID: 98183 RVA: 0x0037CF3A File Offset: 0x0037B13A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -98,7 +98,7 @@ namespace Aki.Protocol
 			return this.Equals(other as SceneFishCageInfo);
 		}
 
-		// Token: 0x060179E7 RID: 96743 RVA: 0x0036DBFC File Offset: 0x0036BDFC
+		// Token: 0x06017F88 RID: 98184 RVA: 0x0037CF48 File Offset: 0x0037B148
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(SceneFishCageInfo other)
@@ -106,7 +106,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.cages_.Equals(other.cages_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060179E8 RID: 96744 RVA: 0x0036DC30 File Offset: 0x0036BE30
+		// Token: 0x06017F89 RID: 98185 RVA: 0x0037CF7C File Offset: 0x0037B17C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -120,7 +120,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060179E9 RID: 96745 RVA: 0x0036DC64 File Offset: 0x0036BE64
+		// Token: 0x06017F8A RID: 98186 RVA: 0x0037CFB0 File Offset: 0x0037B1B0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -128,7 +128,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060179EA RID: 96746 RVA: 0x0036DC71 File Offset: 0x0036BE71
+		// Token: 0x06017F8B RID: 98187 RVA: 0x0037CFBD File Offset: 0x0037B1BD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -136,7 +136,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060179EB RID: 96747 RVA: 0x0036DC7A File Offset: 0x0036BE7A
+		// Token: 0x06017F8C RID: 98188 RVA: 0x0037CFC6 File Offset: 0x0037B1C6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -148,7 +148,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060179EC RID: 96748 RVA: 0x0036DCA4 File Offset: 0x0036BEA4
+		// Token: 0x06017F8D RID: 98189 RVA: 0x0037CFF0 File Offset: 0x0037B1F0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -162,7 +162,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060179ED RID: 96749 RVA: 0x0036DCDD File Offset: 0x0036BEDD
+		// Token: 0x06017F8E RID: 98190 RVA: 0x0037D029 File Offset: 0x0037B229
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(SceneFishCageInfo other)
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060179EE RID: 96750 RVA: 0x0036DD0B File Offset: 0x0036BF0B
+		// Token: 0x06017F8F RID: 98191 RVA: 0x0037D057 File Offset: 0x0037B257
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -183,7 +183,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060179EF RID: 96751 RVA: 0x0036DD14 File Offset: 0x0036BF14
+		// Token: 0x06017F90 RID: 98192 RVA: 0x0037D060 File Offset: 0x0037B260
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -206,19 +206,19 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04008C33 RID: 35891
+		// Token: 0x04008EC6 RID: 36550
 		private static readonly MessageParser<SceneFishCageInfo> _parser = new MessageParser<SceneFishCageInfo>(() => new SceneFishCageInfo());
 
-		// Token: 0x04008C34 RID: 35892
+		// Token: 0x04008EC7 RID: 36551
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04008C35 RID: 35893
+		// Token: 0x04008EC8 RID: 36552
 		public const int CagesFieldNumber = 1;
 
-		// Token: 0x04008C36 RID: 35894
+		// Token: 0x04008EC9 RID: 36553
 		private static readonly FieldCodec<OneFishCage> _repeated_cages_codec = FieldCodec.ForMessage<OneFishCage>(10U, OneFishCage.Parser);
 
-		// Token: 0x04008C37 RID: 35895
+		// Token: 0x04008ECA RID: 36554
 		private readonly RepeatedField<OneFishCage> cages_ = new RepeatedField<OneFishCage>();
 	}
 }

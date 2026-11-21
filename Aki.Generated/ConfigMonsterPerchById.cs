@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000557 RID: 1367
+	// Token: 0x0200056D RID: 1389
 	public class ConfigMonsterPerchById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002017 RID: 8215 RVA: 0x0010EBB4 File Offset: 0x0010CDB4
+		// Token: 0x0600209B RID: 8347 RVA: 0x00115308 File Offset: 0x00113508
 		static ConfigMonsterPerchById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMonsterPerchById.CreateStaticDefaultValue), new Action(ConfigMonsterPerchById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002018 RID: 8216 RVA: 0x0010EBD4 File Offset: 0x0010CDD4
+		// Token: 0x0600209C RID: 8348 RVA: 0x00115328 File Offset: 0x00113528
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMonsterPerchById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002019 RID: 8217 RVA: 0x0010EC53 File Offset: 0x0010CE53
+		// Token: 0x0600209D RID: 8349 RVA: 0x001153A7 File Offset: 0x001135A7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMonsterPerchById.LogPair = null;
 			ConfigMonsterPerchById.HandleId = 0;
 		}
 
-		// Token: 0x0600201A RID: 8218 RVA: 0x0010EC61 File Offset: 0x0010CE61
+		// Token: 0x0600209E RID: 8350 RVA: 0x001153B5 File Offset: 0x001135B5
 		public static void Init()
 		{
 			ConfigMonsterPerchById.HandleId = ConfigCommon.InitDataStatement(ConfigMonsterPerchById.HandleId, "db_monster_info.db", "select BinData from `MonsterPerch` where Id=?");
 		}
 
-		// Token: 0x0600201B RID: 8219 RVA: 0x0010EC7C File Offset: 0x0010CE7C
+		// Token: 0x0600209F RID: 8351 RVA: 0x001153D0 File Offset: 0x001135D0
 		public static MonsterPerch? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigMonsterPerchById.HandleId, ConfigMonsterPerchById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new MonsterPerch?(rootAsMonsterPerch);
 		}
 
-		// Token: 0x04002545 RID: 9541
+		// Token: 0x040025DF RID: 9695
 		private const string DB = "db_monster_info.db";
 
-		// Token: 0x04002546 RID: 9542
+		// Token: 0x040025E0 RID: 9696
 		private const string FILE = "g.怪物信息.xlsx";
 
-		// Token: 0x04002547 RID: 9543
+		// Token: 0x040025E1 RID: 9697
 		private const string TABLE = "MonsterPerch";
 
-		// Token: 0x04002548 RID: 9544
+		// Token: 0x040025E2 RID: 9698
 		private const string COMMAND = "select BinData from `MonsterPerch` where Id=?";
 
-		// Token: 0x04002549 RID: 9545
+		// Token: 0x040025E3 RID: 9699
 		private const string KEY_PREFIX = "MonsterPerchById";
 
-		// Token: 0x0400254A RID: 9546
+		// Token: 0x040025E4 RID: 9700
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400254B RID: 9547
+		// Token: 0x040025E5 RID: 9701
 		private static int HandleId;
 	}
 }

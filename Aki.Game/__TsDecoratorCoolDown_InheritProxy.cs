@@ -3,21 +3,21 @@ using System.Runtime.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Utils;
 
-// Token: 0x020035BE RID: 13758
+// Token: 0x02002B33 RID: 11059
 public class __TsDecoratorCoolDown_InheritProxy : TsDecoratorCoolDown
 {
-	// Token: 0x0601E0C7 RID: 123079 RVA: 0x0087EFBC File Offset: 0x0087D1BC
+	// Token: 0x0601BDEF RID: 114159 RVA: 0x008A7050 File Offset: 0x008A5250
 	[NullableContext(1)]
 	public __TsDecoratorCoolDown_InheritProxy(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsDecoratorCoolDown.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601E0C8 RID: 123080 RVA: 0x0087EFEF File Offset: 0x0087D1EF
+	// Token: 0x0601BDF0 RID: 114160 RVA: 0x008A7083 File Offset: 0x008A5283
 	protected __TsDecoratorCoolDown_InheritProxy(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0601E0C9 RID: 123081 RVA: 0x0087EFF8 File Offset: 0x0087D1F8
+	// Token: 0x0601BDF1 RID: 114161 RVA: 0x008A708C File Offset: 0x008A528C
 	protected unsafe override void __CPPCALL_PerformConditionCheckAI_Implementation(UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);

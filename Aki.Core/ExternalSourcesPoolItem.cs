@@ -7,14 +7,14 @@ using UnrealEngine;
 [Nullable(0)]
 public class ExternalSourcesPoolItem
 {
-	// Token: 0x060000B9 RID: 185 RVA: 0x00006801 File Offset: 0x00004A01
+	// Token: 0x060000BB RID: 187 RVA: 0x00006579 File Offset: 0x00004779
 	public ExternalSourcesPoolItem(UAkExternalMediaAsset asset)
 	{
 		this.ExternalSources = asset;
 		this.UseTime = Time.Instance.Now;
 	}
 
-	// Token: 0x060000BA RID: 186 RVA: 0x00006820 File Offset: 0x00004A20
+	// Token: 0x060000BC RID: 188 RVA: 0x00006598 File Offset: 0x00004798
 	public void ClearData(string path)
 	{
 		if (this.ExternalSources != null)
@@ -23,10 +23,10 @@ public class ExternalSourcesPoolItem
 		}
 	}
 
-	// Token: 0x04000094 RID: 148
+	// Token: 0x04000095 RID: 149
 	public double UseTime;
 
-	// Token: 0x04000095 RID: 149
+	// Token: 0x04000096 RID: 150
 	[Nullable(2)]
 	private UAkExternalMediaAsset ExternalSources;
 }

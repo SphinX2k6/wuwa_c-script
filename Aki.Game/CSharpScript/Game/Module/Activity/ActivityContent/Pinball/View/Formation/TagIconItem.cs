@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Formation
 {
-	// Token: 0x0200636B RID: 25451
+	// Token: 0x020052E9 RID: 21225
 	public class TagIconItem : UiPanelBase
 	{
-		// Token: 0x06040064 RID: 262244 RVA: 0x00F7D148 File Offset: 0x00F7B348
+		// Token: 0x06034D25 RID: 216357 RVA: 0x00EC40A8 File Offset: 0x00EC22A8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Formati
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06040065 RID: 262245 RVA: 0x00F7D1B4 File Offset: 0x00F7B3B4
+		// Token: 0x06034D26 RID: 216358 RVA: 0x00EC4114 File Offset: 0x00EC2314
 		[NullableContext(1)]
 		public void RefreshPanel(string path, string color)
 		{
@@ -32,12 +32,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Formati
 			base.GetItem(0).SetColor(FColor.FromHex(color));
 		}
 
-		// Token: 0x0200C586 RID: 50566
+		// Token: 0x0200AF6D RID: 44909
 		private enum ETagIconItem
 		{
-			// Token: 0x0403B9EC RID: 244204
+			// Token: 0x0403634E RID: 222030
 			BgItem,
-			// Token: 0x0403B9ED RID: 244205
+			// Token: 0x0403634F RID: 222031
 			IconTexture
 		}
 	}

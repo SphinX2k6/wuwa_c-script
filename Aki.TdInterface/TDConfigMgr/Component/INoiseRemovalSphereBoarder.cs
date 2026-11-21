@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000552 RID: 1362
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020005B9 RID: 1465
 	public class INoiseRemovalSphereBoarder : INoiseRemovalBoarderBase
 	{
-		// Token: 0x06001BE0 RID: 7136 RVA: 0x00050404 File Offset: 0x0004E604
+		// Token: 0x06001DDC RID: 7644 RVA: 0x000551C0 File Offset: 0x000533C0
 		private INoiseRemovalSphereBoarder_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001BE1 RID: 7137 RVA: 0x0005043C File Offset: 0x0004E63C
+		// Token: 0x06001DDD RID: 7645 RVA: 0x000551F8 File Offset: 0x000533F8
 		public static INoiseRemovalSphereBoarder Create([Nullable(2)] INoiseRemovalSphereBoarder instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001BE2 RID: 7138 RVA: 0x0005044F File Offset: 0x0004E64F
+		// Token: 0x06001DDE RID: 7646 RVA: 0x0005520B File Offset: 0x0005340B
 		public static INoiseRemovalSphereBoarder CreateFromSetValue([Nullable(2)] INoiseRemovalSphereBoarder_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001BE3 RID: 7139 RVA: 0x00050462 File Offset: 0x0004E662
+		// Token: 0x06001DDF RID: 7647 RVA: 0x0005521E File Offset: 0x0005341E
 		public new INoiseRemovalSphereBoarder_SetValue ToSetValue()
 		{
 			return new INoiseRemovalSphereBoarder_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000754 RID: 1876
-		// (get) Token: 0x06001BE4 RID: 7140 RVA: 0x00050481 File Offset: 0x0004E681
-		// (set) Token: 0x06001BE5 RID: 7141 RVA: 0x000504AC File Offset: 0x0004E6AC
+		// Token: 0x170007D7 RID: 2007
+		// (get) Token: 0x06001DE0 RID: 7648 RVA: 0x0005523D File Offset: 0x0005343D
+		// (set) Token: 0x06001DE1 RID: 7649 RVA: 0x00055268 File Offset: 0x00053468
 		public override ENoiseRemovalBoarderShape Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000755 RID: 1877
-		// (get) Token: 0x06001BE6 RID: 7142 RVA: 0x000504BA File Offset: 0x0004E6BA
-		// (set) Token: 0x06001BE7 RID: 7143 RVA: 0x000504E9 File Offset: 0x0004E6E9
+		// Token: 0x170007D8 RID: 2008
+		// (get) Token: 0x06001DE2 RID: 7650 RVA: 0x00055276 File Offset: 0x00053476
+		// (set) Token: 0x06001DE3 RID: 7651 RVA: 0x000552A5 File Offset: 0x000534A5
 		public virtual float Radius
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001400 RID: 5120
+		// Token: 0x0400156A RID: 5482
 		[Nullable(2)]
 		protected new INoiseRemovalSphereBoarder FbInstance;
 
-		// Token: 0x04001401 RID: 5121
+		// Token: 0x0400156B RID: 5483
 		[Nullable(2)]
 		protected new INoiseRemovalSphereBoarder_SetValue PocoInterface;
 	}

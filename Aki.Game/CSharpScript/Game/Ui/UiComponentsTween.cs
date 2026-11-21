@@ -5,18 +5,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x0200462F RID: 17967
+	// Token: 0x02003559 RID: 13657
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UiComponentsTween
 	{
-		// Token: 0x0602E47A RID: 189562 RVA: 0x00AB2E17 File Offset: 0x00AB1017
+		// Token: 0x06022B8D RID: 142221 RVA: 0x009DFBA7 File Offset: 0x009DDDA7
 		public UiComponentsTween(UUIItem rootItem)
 		{
 			this.RootItem = rootItem;
 		}
 
-		// Token: 0x0602E47B RID: 189563 RVA: 0x00AB2E28 File Offset: 0x00AB1028
+		// Token: 0x06022B8E RID: 142222 RVA: 0x009DFBB8 File Offset: 0x009DDDB8
 		private void PlayViewTween(bool reverse = false)
 		{
 			float time = this.UiComponentsTweenData.Time;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E47C RID: 189564 RVA: 0x00AB2F1C File Offset: 0x00AB111C
+		// Token: 0x06022B8F RID: 142223 RVA: 0x009DFCAC File Offset: 0x009DDEAC
 		protected void CollectUnSafeItem()
 		{
 			if (this.UnSafeItemList != null)
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E47D RID: 189565 RVA: 0x00AB2FBE File Offset: 0x00AB11BE
+		// Token: 0x06022B90 RID: 142224 RVA: 0x009DFD4E File Offset: 0x009DDF4E
 		public void SetUiComponentsTweenData(UUIViewTweenParams tweenParams)
 		{
 			if (tweenParams == null)
@@ -85,20 +85,20 @@ namespace CSharpScript.Game.Ui
 			this.UiComponentsTweenData = new UiComponentsTweenData(tweenParams.GetTweenAlpha(), tweenParams.GetTweenSize(), tweenParams.GetTweenTime());
 		}
 
-		// Token: 0x0602E47E RID: 189566 RVA: 0x00AB2FE1 File Offset: 0x00AB11E1
+		// Token: 0x06022B91 RID: 142225 RVA: 0x009DFD71 File Offset: 0x009DDF71
 		public void PlayStartTween()
 		{
 			this.CollectUnSafeItem();
 			this.PlayViewTween(false);
 		}
 
-		// Token: 0x0602E47F RID: 189567 RVA: 0x00AB2FF0 File Offset: 0x00AB11F0
+		// Token: 0x06022B92 RID: 142226 RVA: 0x009DFD80 File Offset: 0x009DDF80
 		public void PlayCloseTween()
 		{
 			this.PlayViewTween(true);
 		}
 
-		// Token: 0x0602E480 RID: 189568 RVA: 0x00AB2FF9 File Offset: 0x00AB11F9
+		// Token: 0x06022B93 RID: 142227 RVA: 0x009DFD89 File Offset: 0x009DDF89
 		public void Destroy()
 		{
 			this.UiComponentsTweenData = null;
@@ -106,13 +106,13 @@ namespace CSharpScript.Game.Ui
 			this.UnSafeItemList = null;
 		}
 
-		// Token: 0x04018D68 RID: 101736
+		// Token: 0x040133B5 RID: 78773
 		private UiComponentsTweenData UiComponentsTweenData;
 
-		// Token: 0x04018D69 RID: 101737
+		// Token: 0x040133B6 RID: 78774
 		private UUIItem RootItem;
 
-		// Token: 0x04018D6A RID: 101738
+		// Token: 0x040133B7 RID: 78775
 		private List<UUIItem> UnSafeItemList;
 	}
 }

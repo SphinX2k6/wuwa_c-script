@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 {
-	// Token: 0x02006561 RID: 25953
+	// Token: 0x020054DF RID: 21727
 	internal class DifficultLineCrossItem : UiPanelBase
 	{
-		// Token: 0x06041096 RID: 266390 RVA: 0x00FC325C File Offset: 0x00FC145C
+		// Token: 0x06035D5B RID: 220507 RVA: 0x00F0A244 File Offset: 0x00F08444
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -35,12 +35,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06041097 RID: 266391 RVA: 0x00FC3344 File Offset: 0x00FC1544
+		// Token: 0x06035D5C RID: 220508 RVA: 0x00F0A32C File Offset: 0x00F0852C
 		protected override void OnStart()
 		{
 		}
 
-		// Token: 0x06041098 RID: 266392 RVA: 0x00FC3348 File Offset: 0x00FC1548
+		// Token: 0x06035D5D RID: 220509 RVA: 0x00F0A330 File Offset: 0x00F08530
 		private bool OnCanExecuteChange()
 		{
 			LineCrossDetailViewModel lineCrossDetailViewModel = this.LineCrossDetailViewModel;
@@ -53,14 +53,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			return true;
 		}
 
-		// Token: 0x06041099 RID: 266393 RVA: 0x00FC33A9 File Offset: 0x00FC15A9
+		// Token: 0x06035D5E RID: 220510 RVA: 0x00F0A391 File Offset: 0x00F08591
 		[NullableContext(1)]
 		public void SetModel(LineCrossDetailViewModel vm)
 		{
 			this.LineCrossDetailViewModel = vm;
 		}
 
-		// Token: 0x0604109A RID: 266394 RVA: 0x00FC33B2 File Offset: 0x00FC15B2
+		// Token: 0x06035D5F RID: 220511 RVA: 0x00F0A39A File Offset: 0x00F0859A
 		private void OnClickToggle(EToggleState toggleState)
 		{
 			LineCrossDetailViewModel lineCrossDetailViewModel = this.LineCrossDetailViewModel;
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			lineCrossDetailViewModel.OnSelectChallenge(this.Data.Value);
 		}
 
-		// Token: 0x0604109B RID: 266395 RVA: 0x00FC33D0 File Offset: 0x00FC15D0
+		// Token: 0x06035D60 RID: 220512 RVA: 0x00F0A3B8 File Offset: 0x00F085B8
 		public void Refresh(int data, int selectData)
 		{
 			this.Data = new int?(data);
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			item.SetUIActive(flag != null && flag.Value);
 		}
 
-		// Token: 0x0604109C RID: 266396 RVA: 0x00FC3498 File Offset: 0x00FC1698
+		// Token: 0x06035D61 RID: 220513 RVA: 0x00F0A480 File Offset: 0x00F08680
 		public void RefreshToggle(int data)
 		{
 			LineCrossDetailViewModel lineCrossDetailViewModel = this.LineCrossDetailViewModel;
@@ -117,26 +117,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			extendToggle3.CanExecuteChange.Bind(new Func<bool>(this.OnCanExecuteChange));
 		}
 
-		// Token: 0x04021E73 RID: 138867
+		// Token: 0x0401C7A4 RID: 116644
 		[Nullable(2)]
 		private LineCrossDetailViewModel LineCrossDetailViewModel;
 
-		// Token: 0x04021E74 RID: 138868
+		// Token: 0x0401C7A5 RID: 116645
 		private int? Data;
 
-		// Token: 0x0200C758 RID: 51032
+		// Token: 0x0200B13D RID: 45373
 		private class EDifficultItem
 		{
-			// Token: 0x0403C3A3 RID: 246691
+			// Token: 0x04036CF5 RID: 224501
 			public const int Toggle = 0;
 
-			// Token: 0x0403C3A4 RID: 246692
+			// Token: 0x04036CF6 RID: 224502
 			public const int Text = 1;
 
-			// Token: 0x0403C3A5 RID: 246693
+			// Token: 0x04036CF7 RID: 224503
 			public const int FinishItem = 2;
 
-			// Token: 0x0403C3A6 RID: 246694
+			// Token: 0x04036CF8 RID: 224504
 			public const int RedDot = 3;
 		}
 	}

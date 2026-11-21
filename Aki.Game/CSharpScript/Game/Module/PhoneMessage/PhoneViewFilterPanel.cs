@@ -8,17 +8,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhoneMessage
 {
-	// Token: 0x020050F3 RID: 20723
+	// Token: 0x020040C3 RID: 16579
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class PhoneViewFilterPanel : UiViewBase
 	{
-		// Token: 0x06034FC7 RID: 217031 RVA: 0x00C8CC94 File Offset: 0x00C8AE94
+		// Token: 0x06029EC0 RID: 171712 RVA: 0x00BD9F70 File Offset: 0x00BD8170
 		public PhoneViewFilterPanel(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06034FC8 RID: 217032 RVA: 0x00C8CCA8 File Offset: 0x00C8AEA8
+		// Token: 0x06029EC1 RID: 171713 RVA: 0x00BD9F84 File Offset: 0x00BD8184
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.PhoneMessage
 			};
 		}
 
-		// Token: 0x06034FC9 RID: 217033 RVA: 0x00C8CD6C File Offset: 0x00C8AF6C
+		// Token: 0x06029EC2 RID: 171714 RVA: 0x00BDA048 File Offset: 0x00BD8248
 		protected override void OnStart()
 		{
 			this.TempSelectedFilterIdSet = new HashSet<int>();
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.PhoneMessage
 			filterLayout.RefreshByDataAsync(list, false, null);
 		}
 
-		// Token: 0x06034FCA RID: 217034 RVA: 0x00C8CE74 File Offset: 0x00C8B074
+		// Token: 0x06029EC3 RID: 171715 RVA: 0x00BDA150 File Offset: 0x00BD8350
 		private PanelFilter CreateFilterItem()
 		{
 			PanelFilter panelFilter = new PanelFilter();
@@ -76,13 +76,13 @@ namespace CSharpScript.Game.Module.PhoneMessage
 			return panelFilter;
 		}
 
-		// Token: 0x06034FCB RID: 217035 RVA: 0x00C8CE9F File Offset: 0x00C8B09F
+		// Token: 0x06029EC4 RID: 171716 RVA: 0x00BDA17B File Offset: 0x00BD837B
 		private bool CheckIsTempFilterSelected(int filterId)
 		{
 			return this.TempSelectedFilterIdSet.Contains(filterId);
 		}
 
-		// Token: 0x06034FCC RID: 217036 RVA: 0x00C8CEB0 File Offset: 0x00C8B0B0
+		// Token: 0x06029EC5 RID: 171717 RVA: 0x00BDA18C File Offset: 0x00BD838C
 		private void OnBtnResetClick()
 		{
 			this.TempSelectedFilterIdSet.Clear();
@@ -105,14 +105,14 @@ namespace CSharpScript.Game.Module.PhoneMessage
 			filterLayout.RefreshByDataAsync(list, false, null);
 		}
 
-		// Token: 0x06034FCD RID: 217037 RVA: 0x00C8CF48 File Offset: 0x00C8B148
+		// Token: 0x06029EC6 RID: 171718 RVA: 0x00BDA224 File Offset: 0x00BD8424
 		private void OnBtnConfirmClick()
 		{
 			PhoneMsgModel.Instance.SetSelectedFilterIdSet(this.TempSelectedFilterIdSet);
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06034FCE RID: 217038 RVA: 0x00C8CF61 File Offset: 0x00C8B161
+		// Token: 0x06029EC7 RID: 171719 RVA: 0x00BDA23D File Offset: 0x00BD843D
 		private void OnFilterTogItemClick(int filterId, bool isSelected)
 		{
 			if (isSelected)
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.PhoneMessage
 			this.TempSelectedFilterIdSet.Remove(filterId);
 		}
 
-		// Token: 0x0401C365 RID: 115557
+		// Token: 0x04016D98 RID: 93592
 		[Nullable(new byte[]
 		{
 			2,
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.PhoneMessage
 		})]
 		private GenericLayout<PanelFilter, int> FilterLayout;
 
-		// Token: 0x0401C366 RID: 115558
+		// Token: 0x04016D99 RID: 93593
 		private HashSet<int> TempSelectedFilterIdSet = new HashSet<int>();
 	}
 }

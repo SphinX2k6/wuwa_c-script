@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006789 RID: 26505
+	// Token: 0x02006E09 RID: 28169
 	public struct IFadeBackgroundUiPrefabBlackScreenWhiteText : IFlatbufferObject
 	{
-		// Token: 0x1700C4B8 RID: 50360
-		// (get) Token: 0x0602E1C9 RID: 188873 RVA: 0x0064C8A4 File Offset: 0x0064AAA4
+		// Token: 0x1700CE6E RID: 52846
+		// (get) Token: 0x06030A0F RID: 199183 RVA: 0x00699FE8 File Offset: 0x006981E8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E1CA RID: 188874 RVA: 0x0064C8B1 File Offset: 0x0064AAB1
+		// Token: 0x06030A10 RID: 199184 RVA: 0x00699FF5 File Offset: 0x006981F5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602E1CB RID: 188875 RVA: 0x0064C8B8 File Offset: 0x0064AAB8
+		// Token: 0x06030A11 RID: 199185 RVA: 0x00699FFC File Offset: 0x006981FC
 		public static IFadeBackgroundUiPrefabBlackScreenWhiteText GetRootAsIFadeBackgroundUiPrefabBlackScreenWhiteText(ByteBuffer _bb)
 		{
 			return IFadeBackgroundUiPrefabBlackScreenWhiteText.GetRootAsIFadeBackgroundUiPrefabBlackScreenWhiteText(_bb, default(IFadeBackgroundUiPrefabBlackScreenWhiteText));
 		}
 
-		// Token: 0x0602E1CC RID: 188876 RVA: 0x0064C8D4 File Offset: 0x0064AAD4
+		// Token: 0x06030A12 RID: 199186 RVA: 0x0069A018 File Offset: 0x00698218
 		public static IFadeBackgroundUiPrefabBlackScreenWhiteText GetRootAsIFadeBackgroundUiPrefabBlackScreenWhiteText(ByteBuffer _bb, IFadeBackgroundUiPrefabBlackScreenWhiteText obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602E1CD RID: 188877 RVA: 0x0064C8F1 File Offset: 0x0064AAF1
+		// Token: 0x06030A13 RID: 199187 RVA: 0x0069A035 File Offset: 0x00698235
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602E1CE RID: 188878 RVA: 0x0064C900 File Offset: 0x0064AB00
+		// Token: 0x06030A14 RID: 199188 RVA: 0x0069A044 File Offset: 0x00698244
 		public IFadeBackgroundUiPrefabBlackScreenWhiteText __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C4B9 RID: 50361
-		// (get) Token: 0x0602E1CF RID: 188879 RVA: 0x0064C910 File Offset: 0x0064AB10
+		// Token: 0x1700CE6F RID: 52847
+		// (get) Token: 0x06030A15 RID: 199189 RVA: 0x0069A054 File Offset: 0x00698254
 		public EFadeBackgroundUiPrefabType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C4BA RID: 50362
-		// (get) Token: 0x0602E1D0 RID: 188880 RVA: 0x0064C94C File Offset: 0x0064AB4C
+		// Token: 0x1700CE70 RID: 52848
+		// (get) Token: 0x06030A16 RID: 199190 RVA: 0x0069A090 File Offset: 0x00698290
 		public EBlackScreenWhiteTextStartAnimName StartAnimName
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C4BB RID: 50363
-		// (get) Token: 0x0602E1D1 RID: 188881 RVA: 0x0064C988 File Offset: 0x0064AB88
+		// Token: 0x1700CE71 RID: 52849
+		// (get) Token: 0x06030A17 RID: 199191 RVA: 0x0069A0CC File Offset: 0x006982CC
 		public string Text
 		{
 			get
@@ -92,20 +92,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E1D2 RID: 188882 RVA: 0x0064C9BF File Offset: 0x0064ABBF
+		// Token: 0x06030A18 RID: 199192 RVA: 0x0069A103 File Offset: 0x00698303
 		public Span<byte> GetTextBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0602E1D3 RID: 188883 RVA: 0x0064C9CE File Offset: 0x0064ABCE
+		// Token: 0x06030A19 RID: 199193 RVA: 0x0069A112 File Offset: 0x00698312
 		public byte[] GetTextArray()
 		{
 			return this.__p.__vector_as_array<byte>(8);
 		}
 
-		// Token: 0x1700C4BC RID: 50364
-		// (get) Token: 0x0602E1D4 RID: 188884 RVA: 0x0064C9DC File Offset: 0x0064ABDC
+		// Token: 0x1700CE72 RID: 52850
+		// (get) Token: 0x06030A1A RID: 199194 RVA: 0x0069A120 File Offset: 0x00698320
 		public string AudioEvent
 		{
 			get
@@ -119,19 +119,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E1D5 RID: 188885 RVA: 0x0064CA14 File Offset: 0x0064AC14
+		// Token: 0x06030A1B RID: 199195 RVA: 0x0069A158 File Offset: 0x00698358
 		public Span<byte> GetAudioEventBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0602E1D6 RID: 188886 RVA: 0x0064CA24 File Offset: 0x0064AC24
+		// Token: 0x06030A1C RID: 199196 RVA: 0x0069A168 File Offset: 0x00698368
 		public byte[] GetAudioEventArray()
 		{
 			return this.__p.__vector_as_array<byte>(10);
 		}
 
-		// Token: 0x0602E1D7 RID: 188887 RVA: 0x0064CA33 File Offset: 0x0064AC33
+		// Token: 0x06030A1D RID: 199197 RVA: 0x0069A177 File Offset: 0x00698377
 		public static Offset<IFadeBackgroundUiPrefabBlackScreenWhiteText> CreateIFadeBackgroundUiPrefabBlackScreenWhiteText(FlatBufferBuilder builder, EFadeBackgroundUiPrefabType Type = EFadeBackgroundUiPrefabType.BlackScreenWhiteText, EBlackScreenWhiteTextStartAnimName StartAnimName = EBlackScreenWhiteTextStartAnimName.Start01, StringOffset TextOffset = default(StringOffset), StringOffset AudioEventOffset = default(StringOffset))
 		{
 			builder.StartTable(4);
@@ -142,43 +142,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFadeBackgroundUiPrefabBlackScreenWhiteText.EndIFadeBackgroundUiPrefabBlackScreenWhiteText(builder);
 		}
 
-		// Token: 0x0602E1D8 RID: 188888 RVA: 0x0064CA5F File Offset: 0x0064AC5F
+		// Token: 0x06030A1E RID: 199198 RVA: 0x0069A1A3 File Offset: 0x006983A3
 		public static void StartIFadeBackgroundUiPrefabBlackScreenWhiteText(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0602E1D9 RID: 188889 RVA: 0x0064CA68 File Offset: 0x0064AC68
+		// Token: 0x06030A1F RID: 199199 RVA: 0x0069A1AC File Offset: 0x006983AC
 		public static void AddType(FlatBufferBuilder builder, EFadeBackgroundUiPrefabType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602E1DA RID: 188890 RVA: 0x0064CA73 File Offset: 0x0064AC73
+		// Token: 0x06030A20 RID: 199200 RVA: 0x0069A1B7 File Offset: 0x006983B7
 		public static void AddStartAnimName(FlatBufferBuilder builder, EBlackScreenWhiteTextStartAnimName startAnimName)
 		{
 			builder.AddByte(1, (byte)startAnimName, 0);
 		}
 
-		// Token: 0x0602E1DB RID: 188891 RVA: 0x0064CA7E File Offset: 0x0064AC7E
+		// Token: 0x06030A21 RID: 199201 RVA: 0x0069A1C2 File Offset: 0x006983C2
 		public static void AddText(FlatBufferBuilder builder, StringOffset textOffset)
 		{
 			builder.AddOffset(2, textOffset.Value, 0);
 		}
 
-		// Token: 0x0602E1DC RID: 188892 RVA: 0x0064CA8E File Offset: 0x0064AC8E
+		// Token: 0x06030A22 RID: 199202 RVA: 0x0069A1D2 File Offset: 0x006983D2
 		public static void AddAudioEvent(FlatBufferBuilder builder, StringOffset audioEventOffset)
 		{
 			builder.AddOffset(3, audioEventOffset.Value, 0);
 		}
 
-		// Token: 0x0602E1DD RID: 188893 RVA: 0x0064CA9E File Offset: 0x0064AC9E
+		// Token: 0x06030A23 RID: 199203 RVA: 0x0069A1E2 File Offset: 0x006983E2
 		public static Offset<IFadeBackgroundUiPrefabBlackScreenWhiteText> EndIFadeBackgroundUiPrefabBlackScreenWhiteText(FlatBufferBuilder builder)
 		{
 			return new Offset<IFadeBackgroundUiPrefabBlackScreenWhiteText>(builder.EndTable());
 		}
 
-		// Token: 0x0602E1DE RID: 188894 RVA: 0x0064CAAC File Offset: 0x0064ACAC
+		// Token: 0x06030A24 RID: 199204 RVA: 0x0069A1F0 File Offset: 0x006983F0
 		public IFadeBackgroundUiPrefabBlackScreenWhiteTextT UnPack()
 		{
 			IFadeBackgroundUiPrefabBlackScreenWhiteTextT fadeBackgroundUiPrefabBlackScreenWhiteTextT = new IFadeBackgroundUiPrefabBlackScreenWhiteTextT();
@@ -186,7 +186,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return fadeBackgroundUiPrefabBlackScreenWhiteTextT;
 		}
 
-		// Token: 0x0602E1DF RID: 188895 RVA: 0x0064CAC7 File Offset: 0x0064ACC7
+		// Token: 0x06030A25 RID: 199205 RVA: 0x0069A20B File Offset: 0x0069840B
 		public void UnPackTo(IFadeBackgroundUiPrefabBlackScreenWhiteTextT _o)
 		{
 			_o.Type = this.Type;
@@ -195,7 +195,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.AudioEvent = this.AudioEvent;
 		}
 
-		// Token: 0x0602E1E0 RID: 188896 RVA: 0x0064CAFC File Offset: 0x0064ACFC
+		// Token: 0x06030A26 RID: 199206 RVA: 0x0069A240 File Offset: 0x00698440
 		public static Offset<IFadeBackgroundUiPrefabBlackScreenWhiteText> Pack(FlatBufferBuilder builder, IFadeBackgroundUiPrefabBlackScreenWhiteTextT _o)
 		{
 			if (_o == null)
@@ -207,7 +207,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFadeBackgroundUiPrefabBlackScreenWhiteText.CreateIFadeBackgroundUiPrefabBlackScreenWhiteText(builder, _o.Type, _o.StartAnimName, textOffset, audioEventOffset);
 		}
 
-		// Token: 0x04010E8D RID: 69261
+		// Token: 0x04011CBF RID: 72895
 		private Table __p;
 	}
 }

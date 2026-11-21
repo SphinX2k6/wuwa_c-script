@@ -1,15 +1,13 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001327 RID: 4903
+	// Token: 0x02001477 RID: 5239
 	public class IQuestScheduleTimeLeft : IQuestScheduleType
 	{
-		// Token: 0x0600707A RID: 28794 RVA: 0x0010F975 File Offset: 0x0010DB75
-		[NullableContext(1)]
+		// Token: 0x0600771A RID: 30490 RVA: 0x0011DEE1 File Offset: 0x0011C0E1
 		public static IQuestScheduleTimeLeft Create(IQuestScheduleTimeLeft? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170023FF RID: 9215
-		// (get) Token: 0x0600707B RID: 28795 RVA: 0x0010F994 File Offset: 0x0010DB94
+		// Token: 0x170025CE RID: 9678
+		// (get) Token: 0x0600771B RID: 30491 RVA: 0x0011DF00 File Offset: 0x0011C100
 		public override EQuestScheduleType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002400 RID: 9216
-		// (get) Token: 0x0600707C RID: 28796 RVA: 0x0010F9A1 File Offset: 0x0010DBA1
+		// Token: 0x170025CF RID: 9679
+		// (get) Token: 0x0600771C RID: 30492 RVA: 0x0011DF0D File Offset: 0x0011C10D
 		public virtual ETimerType TimerType
 		{
 			get
@@ -42,8 +40,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002401 RID: 9217
-		// (get) Token: 0x0600707D RID: 28797 RVA: 0x0010F9AE File Offset: 0x0010DBAE
+		// Token: 0x170025D0 RID: 9680
+		// (get) Token: 0x0600771D RID: 30493 RVA: 0x0011DF1A File Offset: 0x0011C11A
 		public virtual int TimeLeft
 		{
 			get
@@ -52,8 +50,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002402 RID: 9218
-		// (get) Token: 0x0600707E RID: 28798 RVA: 0x0010F9BB File Offset: 0x0010DBBB
+		// Token: 0x170025D1 RID: 9681
+		// (get) Token: 0x0600771E RID: 30494 RVA: 0x0011DF27 File Offset: 0x0011C127
 		public virtual ETimeLeftIconType IconType
 		{
 			get
@@ -62,8 +60,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002403 RID: 9219
-		// (get) Token: 0x0600707F RID: 28799 RVA: 0x0010F9C8 File Offset: 0x0010DBC8
+		// Token: 0x170025D2 RID: 9682
+		// (get) Token: 0x0600771F RID: 30495 RVA: 0x0011DF34 File Offset: 0x0011C134
 		public virtual bool? ShowTime
 		{
 			get
@@ -76,7 +74,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040040E3 RID: 16611
+		// Token: 0x0400445F RID: 17503
 		private IQuestScheduleTimeLeft Instance;
 	}
 }

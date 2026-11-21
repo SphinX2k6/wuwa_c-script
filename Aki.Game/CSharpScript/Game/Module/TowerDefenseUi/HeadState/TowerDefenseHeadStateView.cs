@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TowerDefenseUi.HeadState
 {
-	// Token: 0x02004B00 RID: 19200
+	// Token: 0x02003AA8 RID: 15016
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TowerDefenseHeadStateView : UiPanelBase
 	{
-		// Token: 0x06031B8D RID: 203661 RVA: 0x00B8C1D4 File Offset: 0x00B8A3D4
+		// Token: 0x0602691D RID: 157981 RVA: 0x00AD0230 File Offset: 0x00ACE430
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.TowerDefenseUi.HeadState
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06031B8E RID: 203662 RVA: 0x00B8C25E File Offset: 0x00B8A45E
+		// Token: 0x0602691E RID: 157982 RVA: 0x00AD02BA File Offset: 0x00ACE4BA
 		protected override void OnStart()
 		{
 			this.HpBarSprite = base.GetSprite(0);
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.TowerDefenseUi.HeadState
 			this.InitUvModifier();
 		}
 
-		// Token: 0x06031B8F RID: 203663 RVA: 0x00B8C290 File Offset: 0x00B8A490
+		// Token: 0x0602691F RID: 157983 RVA: 0x00AD02EC File Offset: 0x00ACE4EC
 		private void InitUvModifier()
 		{
 			foreach (UActorComponent uactorComponent in ULGUIBPLibrary.GetComponentsInChildrenWithHirerarchyIndex(this.RootActor, UUITextAdditionalUVModifier.StaticClass(), false))
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.TowerDefenseUi.HeadState
 			}
 		}
 
-		// Token: 0x06031B90 RID: 203664 RVA: 0x00B8C2F8 File Offset: 0x00B8A4F8
+		// Token: 0x06026920 RID: 157984 RVA: 0x00AD035C File Offset: 0x00ACE55C
 		public void Refresh(TowerDefenseHeadStateData headStateData, Vector rootWorldPos)
 		{
 			headStateData.Position.Subtraction(rootWorldPos, this.TmpVector);
@@ -90,33 +90,33 @@ namespace CSharpScript.Game.Module.TowerDefenseUi.HeadState
 			uuitextAdditionalUVModifier6.SetAdditionalUV(additionalUVChannel5, fvector2D2);
 		}
 
-		// Token: 0x0401A8D7 RID: 108759
+		// Token: 0x04015229 RID: 86569
 		[Nullable(2)]
 		private UUISprite HpBarSprite;
 
-		// Token: 0x0401A8D8 RID: 108760
+		// Token: 0x0401522A RID: 86570
 		[Nullable(2)]
 		private UUISprite HpBarBufferSprite;
 
-		// Token: 0x0401A8D9 RID: 108761
+		// Token: 0x0401522B RID: 86571
 		[Nullable(2)]
 		private UUISprite ShieldBarSprite;
 
-		// Token: 0x0401A8DA RID: 108762
+		// Token: 0x0401522C RID: 86572
 		private readonly List<UUITextAdditionalUVModifier> UvModifierList = new List<UUITextAdditionalUVModifier>();
 
-		// Token: 0x0401A8DB RID: 108763
+		// Token: 0x0401522D RID: 86573
 		private readonly Vector TmpVector = Vector.Create();
 
-		// Token: 0x0200AC8E RID: 44174
+		// Token: 0x020096AE RID: 38574
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x040346FF RID: 214783
+			// Token: 0x0402F0B0 RID: 192688
 			HpBarSprite,
-			// Token: 0x04034700 RID: 214784
+			// Token: 0x0402F0B1 RID: 192689
 			HpBarBufferSprite,
-			// Token: 0x04034701 RID: 214785
+			// Token: 0x0402F0B2 RID: 192690
 			ShieldBarSprite
 		}
 	}

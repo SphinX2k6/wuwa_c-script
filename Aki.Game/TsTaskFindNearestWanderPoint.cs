@@ -14,8 +14,8 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskFindNearestWanderPoint.TsTaskFindNearestWanderPoint_C")]
 public class TsTaskFindNearestWanderPoint : UBTTask_BlueprintBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x17000149 RID: 329
-	// (get) Token: 0x060007F1 RID: 2033 RVA: 0x000276F4 File Offset: 0x000258F4
+	// Token: 0x1700014B RID: 331
+	// (get) Token: 0x060007F5 RID: 2037 RVA: 0x000284E0 File Offset: 0x000266E0
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<int> PbDataIds
 	{
@@ -31,9 +31,9 @@ public class TsTaskFindNearestWanderPoint : UBTTask_BlueprintBase, IUnrealUObjec
 		}
 	}
 
-	// Token: 0x1700014A RID: 330
-	// (get) Token: 0x060007F2 RID: 2034 RVA: 0x0002772D File Offset: 0x0002592D
-	// (set) Token: 0x060007F3 RID: 2035 RVA: 0x00027741 File Offset: 0x00025941
+	// Token: 0x1700014C RID: 332
+	// (get) Token: 0x060007F6 RID: 2038 RVA: 0x00028519 File Offset: 0x00026719
+	// (set) Token: 0x060007F7 RID: 2039 RVA: 0x0002852D File Offset: 0x0002672D
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string ResultBlackboardKey
 	{
@@ -47,9 +47,9 @@ public class TsTaskFindNearestWanderPoint : UBTTask_BlueprintBase, IUnrealUObjec
 		}
 	}
 
-	// Token: 0x1700014B RID: 331
-	// (get) Token: 0x060007F4 RID: 2036 RVA: 0x00027756 File Offset: 0x00025956
-	// (set) Token: 0x060007F5 RID: 2037 RVA: 0x0002776A File Offset: 0x0002596A
+	// Token: 0x1700014D RID: 333
+	// (get) Token: 0x060007F8 RID: 2040 RVA: 0x00028542 File Offset: 0x00026742
+	// (set) Token: 0x060007F9 RID: 2041 RVA: 0x00028556 File Offset: 0x00026756
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string ResultIndexKey
 	{
@@ -63,9 +63,9 @@ public class TsTaskFindNearestWanderPoint : UBTTask_BlueprintBase, IUnrealUObjec
 		}
 	}
 
-	// Token: 0x1700014C RID: 332
-	// (get) Token: 0x060007F6 RID: 2038 RVA: 0x0002777F File Offset: 0x0002597F
-	// (set) Token: 0x060007F7 RID: 2039 RVA: 0x0002778F File Offset: 0x0002598F
+	// Token: 0x1700014E RID: 334
+	// (get) Token: 0x060007FA RID: 2042 RVA: 0x0002856B File Offset: 0x0002676B
+	// (set) Token: 0x060007FB RID: 2043 RVA: 0x0002857B File Offset: 0x0002677B
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float CheckDistance
 	{
@@ -79,9 +79,9 @@ public class TsTaskFindNearestWanderPoint : UBTTask_BlueprintBase, IUnrealUObjec
 		}
 	}
 
-	// Token: 0x1700014D RID: 333
-	// (get) Token: 0x060007F8 RID: 2040 RVA: 0x000277A0 File Offset: 0x000259A0
-	// (set) Token: 0x060007F9 RID: 2041 RVA: 0x000277B0 File Offset: 0x000259B0
+	// Token: 0x1700014F RID: 335
+	// (get) Token: 0x060007FC RID: 2044 RVA: 0x0002858C File Offset: 0x0002678C
+	// (set) Token: 0x060007FD RID: 2045 RVA: 0x0002859C File Offset: 0x0002679C
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool IsResetSearchedWanderPointCount
 	{
@@ -95,7 +95,7 @@ public class TsTaskFindNearestWanderPoint : UBTTask_BlueprintBase, IUnrealUObjec
 		}
 	}
 
-	// Token: 0x060007FA RID: 2042 RVA: 0x000277C4 File Offset: 0x000259C4
+	// Token: 0x060007FE RID: 2046 RVA: 0x000285B0 File Offset: 0x000267B0
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -113,30 +113,27 @@ public class TsTaskFindNearestWanderPoint : UBTTask_BlueprintBase, IUnrealUObjec
 		}
 	}
 
-	// Token: 0x060007FB RID: 2043 RVA: 0x00027850 File Offset: 0x00025A50
+	// Token: 0x060007FF RID: 2047 RVA: 0x0002863C File Offset: 0x0002683C
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveExecuteAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskFindNearestWanderPoint) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveExecuteAI"), TsTaskFindNearestWanderPoint.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			this.ReceiveExecuteAI_Implementation(ownerController, controlledPawn);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x060007FC RID: 2044 RVA: 0x000278EC File Offset: 0x00025AEC
+	// Token: 0x06000800 RID: 2048 RVA: 0x000286EC File Offset: 0x000268EC
 	[NullableContext(2)]
 	protected virtual void ReceiveExecuteAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -239,7 +236,7 @@ public class TsTaskFindNearestWanderPoint : UBTTask_BlueprintBase, IUnrealUObjec
 		base.FinishExecute(true);
 	}
 
-	// Token: 0x060007FD RID: 2045 RVA: 0x00027C2C File Offset: 0x00025E2C
+	// Token: 0x06000801 RID: 2049 RVA: 0x00028A2C File Offset: 0x00026C2C
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskFindNearestWanderPoint._ClassPtr == IntPtr.Zero)
@@ -249,22 +246,22 @@ public class TsTaskFindNearestWanderPoint : UBTTask_BlueprintBase, IUnrealUObjec
 		return TsTaskFindNearestWanderPoint._ClassPtr;
 	}
 
-	// Token: 0x060007FE RID: 2046 RVA: 0x00027C50 File Offset: 0x00025E50
+	// Token: 0x06000802 RID: 2050 RVA: 0x00028A50 File Offset: 0x00026C50
 	public TsTaskFindNearestWanderPoint() : this(BuiltinUtils.AllocNativeUObject(TsTaskFindNearestWanderPoint.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x060007FF RID: 2047 RVA: 0x00027C78 File Offset: 0x00025E78
+	// Token: 0x06000803 RID: 2051 RVA: 0x00028A78 File Offset: 0x00026C78
 	public TsTaskFindNearestWanderPoint(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskFindNearestWanderPoint.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06000800 RID: 2048 RVA: 0x00027CAB File Offset: 0x00025EAB
+	// Token: 0x06000804 RID: 2052 RVA: 0x00028AAB File Offset: 0x00026CAB
 	protected TsTaskFindNearestWanderPoint(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06000801 RID: 2049 RVA: 0x00027CEC File Offset: 0x00025EEC
+	// Token: 0x06000805 RID: 2053 RVA: 0x00028AEC File Offset: 0x00026CEC
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
@@ -273,55 +270,55 @@ public class TsTaskFindNearestWanderPoint : UBTTask_BlueprintBase, IUnrealUObjec
 		this.ReceiveExecuteAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x040005DF RID: 1503
+	// Token: 0x040005E3 RID: 1507
 	private bool IsInitTsVariables;
 
-	// Token: 0x040005E0 RID: 1504
+	// Token: 0x040005E4 RID: 1508
 	private Dictionary<int, int> TsPbDataIds = new Dictionary<int, int>();
 
-	// Token: 0x040005E1 RID: 1505
+	// Token: 0x040005E5 RID: 1509
 	private string TsResultBlackboardKey = "";
 
-	// Token: 0x040005E2 RID: 1506
+	// Token: 0x040005E6 RID: 1510
 	private string TsResultIndexKey = "";
 
-	// Token: 0x040005E3 RID: 1507
+	// Token: 0x040005E7 RID: 1511
 	private float TsCheckDistance;
 
-	// Token: 0x040005E4 RID: 1508
+	// Token: 0x040005E8 RID: 1512
 	private bool TsIsResetSearchedWanderPointCount;
 
-	// Token: 0x040005E5 RID: 1509
+	// Token: 0x040005E9 RID: 1513
 	private List<EntityHandle> EntityList = new List<EntityHandle>();
 
-	// Token: 0x040005E6 RID: 1510
+	// Token: 0x040005EA RID: 1514
 	private List<EntityHandle> TempEntityList = new List<EntityHandle>();
 
-	// Token: 0x040005E7 RID: 1511
+	// Token: 0x040005EB RID: 1515
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskFindNearestWanderPoint.TsTaskFindNearestWanderPoint_C";
 
-	// Token: 0x040005E8 RID: 1512
+	// Token: 0x040005EC RID: 1516
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x040005E9 RID: 1513
+	// Token: 0x040005ED RID: 1517
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x040005EA RID: 1514
+	// Token: 0x040005EE RID: 1518
 	private static int __PropertyOffset_PbDataIds;
 
-	// Token: 0x040005EB RID: 1515
+	// Token: 0x040005EF RID: 1519
 	[Nullable(2)]
 	private TArray<int> _PbDataIds;
 
-	// Token: 0x040005EC RID: 1516
+	// Token: 0x040005F0 RID: 1520
 	private static int __PropertyOffset_ResultBlackboardKey;
 
-	// Token: 0x040005ED RID: 1517
+	// Token: 0x040005F1 RID: 1521
 	private static int __PropertyOffset_ResultIndexKey;
 
-	// Token: 0x040005EE RID: 1518
+	// Token: 0x040005F2 RID: 1522
 	private static int __PropertyOffset_CheckDistance;
 
-	// Token: 0x040005EF RID: 1519
+	// Token: 0x040005F3 RID: 1523
 	private static int __PropertyOffset_IsResetSearchedWanderPointCount;
 }

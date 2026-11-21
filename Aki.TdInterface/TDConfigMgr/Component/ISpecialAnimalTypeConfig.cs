@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006F4 RID: 1780
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000795 RID: 1941
 	public class ISpecialAnimalTypeConfig
 	{
-		// Token: 0x06002658 RID: 9816 RVA: 0x00066AAC File Offset: 0x00064CAC
+		// Token: 0x06002978 RID: 10616 RVA: 0x0006DB1C File Offset: 0x0006BD1C
 		private ISpecialAnimalTypeConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002659 RID: 9817 RVA: 0x00066AE4 File Offset: 0x00064CE4
+		// Token: 0x06002979 RID: 10617 RVA: 0x0006DB54 File Offset: 0x0006BD54
 		public static ISpecialAnimalTypeConfig Create([Nullable(2)] ISpecialAnimalTypeConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600265A RID: 9818 RVA: 0x00066AF7 File Offset: 0x00064CF7
+		// Token: 0x0600297A RID: 10618 RVA: 0x0006DB67 File Offset: 0x0006BD67
 		public static ISpecialAnimalTypeConfig CreateFromSetValue([Nullable(2)] ISpecialAnimalTypeConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600265B RID: 9819 RVA: 0x00066B0A File Offset: 0x00064D0A
+		// Token: 0x0600297B RID: 10619 RVA: 0x0006DB7A File Offset: 0x0006BD7A
 		public ISpecialAnimalTypeConfig_SetValue ToSetValue()
 		{
 			return new ISpecialAnimalTypeConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000A1D RID: 2589
-		// (get) Token: 0x0600265C RID: 9820 RVA: 0x00066B1D File Offset: 0x00064D1D
-		// (set) Token: 0x0600265D RID: 9821 RVA: 0x00066B48 File Offset: 0x00064D48
+		// Token: 0x17000ADB RID: 2779
+		// (get) Token: 0x0600297C RID: 10620 RVA: 0x0006DB8D File Offset: 0x0006BD8D
+		// (set) Token: 0x0600297D RID: 10621 RVA: 0x0006DBB8 File Offset: 0x0006BDB8
 		public virtual ESpecialAnimalType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001A0B RID: 6667
+		// Token: 0x04001C0A RID: 7178
 		[Nullable(2)]
 		protected ISpecialAnimalTypeConfig FbInstance;
 
-		// Token: 0x04001A0C RID: 6668
+		// Token: 0x04001C0B RID: 7179
 		[Nullable(2)]
 		protected ISpecialAnimalTypeConfig_SetValue PocoInterface;
 	}

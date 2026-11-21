@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x02001C95 RID: 7317
+// Token: 0x02001154 RID: 4436
 public class GachaViewOpenData : IGachaViewOpenData
 {
-	// Token: 0x170011F7 RID: 4599
-	// (get) Token: 0x0600DCEC RID: 56556 RVA: 0x00338FAD File Offset: 0x003371AD
-	// (set) Token: 0x0600DCED RID: 56557 RVA: 0x00338FB5 File Offset: 0x003371B5
+	// Token: 0x1700121D RID: 4637
+	// (get) Token: 0x0600B102 RID: 45314 RVA: 0x003444F5 File Offset: 0x003426F5
+	// (set) Token: 0x0600B103 RID: 45315 RVA: 0x003444FD File Offset: 0x003426FD
 	public bool SkipOnLoadResourceFinish { get; set; }
 
-	// Token: 0x170011F8 RID: 4600
-	// (get) Token: 0x0600DCEE RID: 56558 RVA: 0x00338FBE File Offset: 0x003371BE
-	// (set) Token: 0x0600DCEF RID: 56559 RVA: 0x00338FC6 File Offset: 0x003371C6
+	// Token: 0x1700121E RID: 4638
+	// (get) Token: 0x0600B104 RID: 45316 RVA: 0x00344506 File Offset: 0x00342706
+	// (set) Token: 0x0600B105 RID: 45317 RVA: 0x0034450E File Offset: 0x0034270E
 	public bool ResultViewHideExtraReward { get; set; }
 
-	// Token: 0x170011F9 RID: 4601
-	// (get) Token: 0x0600DCF0 RID: 56560 RVA: 0x00338FCF File Offset: 0x003371CF
-	// (set) Token: 0x0600DCF1 RID: 56561 RVA: 0x00338FD7 File Offset: 0x003371D7
+	// Token: 0x1700121F RID: 4639
+	// (get) Token: 0x0600B106 RID: 45318 RVA: 0x00344517 File Offset: 0x00342717
+	// (set) Token: 0x0600B107 RID: 45319 RVA: 0x0034451F File Offset: 0x0034271F
 	public bool IsOnlyShowGold { get; set; }
 }

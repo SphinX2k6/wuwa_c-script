@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004007 RID: 16391
+	// Token: 0x02004448 RID: 17480
 	public enum IQuestPlayerHitStatisticsType_Union : byte
 	{
-		// Token: 0x0400BB1E RID: 47902
+		// Token: 0x0400C505 RID: 50437
 		NONE,
-		// Token: 0x0400BB1F RID: 47903
+		// Token: 0x0400C506 RID: 50438
 		IQuestPlayerHitStatisticsType,
-		// Token: 0x0400BB20 RID: 47904
+		// Token: 0x0400C507 RID: 50439
 		IQuestPlayerHitCount,
-		// Token: 0x0400BB21 RID: 47905
+		// Token: 0x0400C508 RID: 50440
 		IQuestPlayerBeDamage
 	}
 }

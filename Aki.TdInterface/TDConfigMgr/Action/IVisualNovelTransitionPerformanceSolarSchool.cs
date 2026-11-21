@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020AD RID: 8365
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002302 RID: 8962
 	public class IVisualNovelTransitionPerformanceSolarSchool : IVisualNovelTransitionPerformanceConfigBase
 	{
-		// Token: 0x0600B7F8 RID: 47096 RVA: 0x001AA080 File Offset: 0x001A8280
+		// Token: 0x0600C350 RID: 50000 RVA: 0x001C0CC8 File Offset: 0x001BEEC8
 		private IVisualNovelTransitionPerformanceSolarSchool_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B7F9 RID: 47097 RVA: 0x001AA0B8 File Offset: 0x001A82B8
+		// Token: 0x0600C351 RID: 50001 RVA: 0x001C0D00 File Offset: 0x001BEF00
 		public static IVisualNovelTransitionPerformanceSolarSchool Create([Nullable(2)] IVisualNovelTransitionPerformanceSolarSchool instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B7FA RID: 47098 RVA: 0x001AA0CB File Offset: 0x001A82CB
+		// Token: 0x0600C352 RID: 50002 RVA: 0x001C0D13 File Offset: 0x001BEF13
 		public static IVisualNovelTransitionPerformanceSolarSchool CreateFromSetValue([Nullable(2)] IVisualNovelTransitionPerformanceSolarSchool_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B7FB RID: 47099 RVA: 0x001AA0DE File Offset: 0x001A82DE
+		// Token: 0x0600C353 RID: 50003 RVA: 0x001C0D26 File Offset: 0x001BEF26
 		public new IVisualNovelTransitionPerformanceSolarSchool_SetValue ToSetValue()
 		{
 			return new IVisualNovelTransitionPerformanceSolarSchool_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003851 RID: 14417
-		// (get) Token: 0x0600B7FC RID: 47100 RVA: 0x001AA0FD File Offset: 0x001A82FD
-		// (set) Token: 0x0600B7FD RID: 47101 RVA: 0x001AA128 File Offset: 0x001A8328
+		// Token: 0x17003B35 RID: 15157
+		// (get) Token: 0x0600C354 RID: 50004 RVA: 0x001C0D45 File Offset: 0x001BEF45
+		// (set) Token: 0x0600C355 RID: 50005 RVA: 0x001C0D70 File Offset: 0x001BEF70
 		public override EVisualNovelSubType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003852 RID: 14418
-		// (get) Token: 0x0600B7FE RID: 47102 RVA: 0x001AA136 File Offset: 0x001A8336
-		// (set) Token: 0x0600B7FF RID: 47103 RVA: 0x001AA15D File Offset: 0x001A835D
+		// Token: 0x17003B36 RID: 15158
+		// (get) Token: 0x0600C356 RID: 50006 RVA: 0x001C0D7E File Offset: 0x001BEF7E
+		// (set) Token: 0x0600C357 RID: 50007 RVA: 0x001C0DA5 File Offset: 0x001BEFA5
 		public virtual IVisualNovelTransitionConfigBase TransitionConfig
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006E5A RID: 28250
+		// Token: 0x04007478 RID: 29816
 		[Nullable(2)]
 		protected new IVisualNovelTransitionPerformanceSolarSchool FbInstance;
 
-		// Token: 0x04006E5B RID: 28251
+		// Token: 0x04007479 RID: 29817
 		[Nullable(2)]
 		protected new IVisualNovelTransitionPerformanceSolarSchool_SetValue PocoInterface;
 	}

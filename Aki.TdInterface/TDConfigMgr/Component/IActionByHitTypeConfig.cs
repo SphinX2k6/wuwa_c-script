@@ -8,13 +8,13 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200019B RID: 411
+	// Token: 0x020001B2 RID: 434
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IActionByHitTypeConfig
 	{
-		// Token: 0x0600063A RID: 1594 RVA: 0x00022778 File Offset: 0x00020978
-		[NullableContext(1)]
+		// Token: 0x06000650 RID: 1616 RVA: 0x000233D8 File Offset: 0x000215D8
+		[NullableContext(0)]
 		private IActionByHitTypeConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -29,8 +29,8 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600063B RID: 1595 RVA: 0x000227B0 File Offset: 0x000209B0
-		[NullableContext(1)]
+		// Token: 0x06000651 RID: 1617 RVA: 0x00023410 File Offset: 0x00021610
+		[NullableContext(0)]
 		public static IActionByHitTypeConfig Create([Nullable(2)] IActionByHitTypeConfig instance)
 		{
 			if (instance == null)
@@ -43,8 +43,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600063C RID: 1596 RVA: 0x000227C3 File Offset: 0x000209C3
-		[NullableContext(1)]
+		// Token: 0x06000652 RID: 1618 RVA: 0x00023423 File Offset: 0x00021623
+		[NullableContext(0)]
 		public static IActionByHitTypeConfig CreateFromSetValue([Nullable(2)] IActionByHitTypeConfig_SetValue value)
 		{
 			if (value == null)
@@ -57,8 +57,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600063D RID: 1597 RVA: 0x000227D6 File Offset: 0x000209D6
-		[NullableContext(1)]
+		// Token: 0x06000653 RID: 1619 RVA: 0x00023436 File Offset: 0x00021636
+		[NullableContext(0)]
 		public IActionByHitTypeConfig_SetValue ToSetValue()
 		{
 			return new IActionByHitTypeConfig_SetValue
@@ -69,9 +69,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000212 RID: 530
-		// (get) Token: 0x0600063E RID: 1598 RVA: 0x00022801 File Offset: 0x00020A01
-		// (set) Token: 0x0600063F RID: 1599 RVA: 0x00022828 File Offset: 0x00020A28
+		// Token: 0x1700021A RID: 538
+		// (get) Token: 0x06000654 RID: 1620 RVA: 0x00023461 File Offset: 0x00021661
+		// (set) Token: 0x06000655 RID: 1621 RVA: 0x00023488 File Offset: 0x00021688
 		public virtual IHitBulletType HitBullets
 		{
 			get
@@ -93,9 +93,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000213 RID: 531
-		// (get) Token: 0x06000640 RID: 1600 RVA: 0x00022838 File Offset: 0x00020A38
-		// (set) Token: 0x06000641 RID: 1601 RVA: 0x00022899 File Offset: 0x00020A99
+		// Token: 0x1700021B RID: 539
+		// (get) Token: 0x06000656 RID: 1622 RVA: 0x00023498 File Offset: 0x00021698
+		// (set) Token: 0x06000657 RID: 1623 RVA: 0x000234F9 File Offset: 0x000216F9
 		public virtual IConditionGroup Condition
 		{
 			get
@@ -123,20 +123,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000214 RID: 532
-		// (get) Token: 0x06000642 RID: 1602 RVA: 0x000228B0 File Offset: 0x00020AB0
-		// (set) Token: 0x06000643 RID: 1603 RVA: 0x00022943 File Offset: 0x00020B43
+		// Token: 0x1700021C RID: 540
+		// (get) Token: 0x06000658 RID: 1624 RVA: 0x00023510 File Offset: 0x00021710
+		// (set) Token: 0x06000659 RID: 1625 RVA: 0x000235A3 File Offset: 0x000217A3
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> Actions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -167,7 +167,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -176,28 +176,28 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040007F4 RID: 2036
+		// Token: 0x0400084D RID: 2125
 		protected IActionByHitTypeConfig FbInstance;
 
-		// Token: 0x040007F5 RID: 2037
+		// Token: 0x0400084E RID: 2126
 		protected IActionByHitTypeConfig_SetValue PocoInterface;
 
-		// Token: 0x040007F6 RID: 2038
-		[Nullable(1)]
+		// Token: 0x0400084F RID: 2127
+		[Nullable(0)]
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x040007F7 RID: 2039
+		// Token: 0x04000850 RID: 2128
 		private bool _ConditionInited;
 
-		// Token: 0x040007F8 RID: 2040
+		// Token: 0x04000851 RID: 2129
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _ActionsCache;
 
-		// Token: 0x040007F9 RID: 2041
+		// Token: 0x04000852 RID: 2130
 		private bool _ActionsInited;
 	}
 }

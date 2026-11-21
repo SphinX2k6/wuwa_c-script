@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000267 RID: 615
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020002AA RID: 682
 	public class IConditionBubbleData
 	{
-		// Token: 0x06000B2B RID: 2859 RVA: 0x0002D438 File Offset: 0x0002B638
+		// Token: 0x06000C45 RID: 3141 RVA: 0x00030128 File Offset: 0x0002E328
 		private IConditionBubbleData_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000B2C RID: 2860 RVA: 0x0002D470 File Offset: 0x0002B670
+		// Token: 0x06000C46 RID: 3142 RVA: 0x00030160 File Offset: 0x0002E360
 		public static IConditionBubbleData Create([Nullable(2)] IConditionBubbleData instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000B2D RID: 2861 RVA: 0x0002D483 File Offset: 0x0002B683
+		// Token: 0x06000C47 RID: 3143 RVA: 0x00030173 File Offset: 0x0002E373
 		public static IConditionBubbleData CreateFromSetValue([Nullable(2)] IConditionBubbleData_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000B2E RID: 2862 RVA: 0x0002D496 File Offset: 0x0002B696
+		// Token: 0x06000C48 RID: 3144 RVA: 0x00030186 File Offset: 0x0002E386
 		public IConditionBubbleData_SetValue ToSetValue()
 		{
 			return new IConditionBubbleData_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000358 RID: 856
-		// (get) Token: 0x06000B2F RID: 2863 RVA: 0x0002D4B8 File Offset: 0x0002B6B8
-		// (set) Token: 0x06000B30 RID: 2864 RVA: 0x0002D519 File Offset: 0x0002B719
+		// Token: 0x170003A0 RID: 928
+		// (get) Token: 0x06000C49 RID: 3145 RVA: 0x000301A8 File Offset: 0x0002E3A8
+		// (set) Token: 0x06000C4A RID: 3146 RVA: 0x00030209 File Offset: 0x0002E409
 		[Nullable(2)]
 		public virtual IConditionGroup Condition
 		{
@@ -95,9 +93,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000359 RID: 857
-		// (get) Token: 0x06000B31 RID: 2865 RVA: 0x0002D530 File Offset: 0x0002B730
-		// (set) Token: 0x06000B32 RID: 2866 RVA: 0x0002D591 File Offset: 0x0002B791
+		// Token: 0x170003A1 RID: 929
+		// (get) Token: 0x06000C4B RID: 3147 RVA: 0x00030220 File Offset: 0x0002E420
+		// (set) Token: 0x06000C4C RID: 3148 RVA: 0x00030281 File Offset: 0x0002E481
 		public virtual IBubbleData Flow
 		{
 			get
@@ -125,24 +123,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000ADF RID: 2783
+		// Token: 0x04000BC0 RID: 3008
 		[Nullable(2)]
 		protected IConditionBubbleData FbInstance;
 
-		// Token: 0x04000AE0 RID: 2784
+		// Token: 0x04000BC1 RID: 3009
 		[Nullable(2)]
 		protected IConditionBubbleData_SetValue PocoInterface;
 
-		// Token: 0x04000AE1 RID: 2785
+		// Token: 0x04000BC2 RID: 3010
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x04000AE2 RID: 2786
+		// Token: 0x04000BC3 RID: 3011
 		private bool _ConditionInited;
 
-		// Token: 0x04000AE3 RID: 2787
+		// Token: 0x04000BC4 RID: 3012
 		private IBubbleData _FlowCache;
 
-		// Token: 0x04000AE4 RID: 2788
+		// Token: 0x04000BC5 RID: 3013
 		private bool _FlowInited;
 	}
 }

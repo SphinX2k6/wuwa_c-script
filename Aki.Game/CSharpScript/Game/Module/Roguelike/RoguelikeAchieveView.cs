@@ -11,18 +11,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DBA RID: 19898
+	// Token: 0x02003D83 RID: 15747
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RoguelikeAchieveView : UiViewBase
 	{
-		// Token: 0x060335EF RID: 210415 RVA: 0x00BFEB4D File Offset: 0x00BFCD4D
+		// Token: 0x0602845C RID: 164956 RVA: 0x00B4808D File Offset: 0x00B4628D
 		[NullableContext(1)]
 		public RoguelikeAchieveView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x060335F0 RID: 210416 RVA: 0x00BFEB58 File Offset: 0x00BFCD58
+		// Token: 0x0602845D RID: 164957 RVA: 0x00B48098 File Offset: 0x00B46298
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 11;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060335F1 RID: 210417 RVA: 0x00BFECF0 File Offset: 0x00BFCEF0
+		// Token: 0x0602845E RID: 164958 RVA: 0x00B48230 File Offset: 0x00B46430
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoguelikeAchieveView.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -65,31 +65,31 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060335F2 RID: 210418 RVA: 0x00BFED33 File Offset: 0x00BFCF33
+		// Token: 0x0602845F RID: 164959 RVA: 0x00B48273 File Offset: 0x00B46473
 		protected override void OnStart()
 		{
 			this.RefreshByViewModel();
 		}
 
-		// Token: 0x060335F3 RID: 210419 RVA: 0x00BFED3B File Offset: 0x00BFCF3B
+		// Token: 0x06028460 RID: 164960 RVA: 0x00B4827B File Offset: 0x00B4647B
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int>(EEventName.RoguelikeArchiveSaved, new Action<int>(this.OnArchiveSaved));
 		}
 
-		// Token: 0x060335F4 RID: 210420 RVA: 0x00BFED59 File Offset: 0x00BFCF59
+		// Token: 0x06028461 RID: 164961 RVA: 0x00B48299 File Offset: 0x00B46499
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<int>(EEventName.RoguelikeArchiveSaved, new Action<int>(this.OnArchiveSaved));
 		}
 
-		// Token: 0x060335F5 RID: 210421 RVA: 0x00BFED77 File Offset: 0x00BFCF77
+		// Token: 0x06028462 RID: 164962 RVA: 0x00B482B7 File Offset: 0x00B464B7
 		protected override void OnBeforeShow()
 		{
 			this.RefreshByViewModel();
 		}
 
-		// Token: 0x060335F6 RID: 210422 RVA: 0x00BFED80 File Offset: 0x00BFCF80
+		// Token: 0x06028463 RID: 164963 RVA: 0x00B482C0 File Offset: 0x00B464C0
 		private void OnBtnRecordSaveClick(int _)
 		{
 			RoguelikeAchieveSlotData selectedSlotData = this.Vm.SelectedSlotData;
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			});
 		}
 
-		// Token: 0x060335F7 RID: 210423 RVA: 0x00BFEDE0 File Offset: 0x00BFCFE0
+		// Token: 0x06028464 RID: 164964 RVA: 0x00B48320 File Offset: 0x00B46520
 		private void OnBtnOverwriteRecordSaveClick(int _)
 		{
 			RoguelikeAchieveView.<>c__DisplayClass19_0 CS$<>8__locals1 = new RoguelikeAchieveView.<>c__DisplayClass19_0();
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x060335F8 RID: 210424 RVA: 0x00BFEE4C File Offset: 0x00BFD04C
+		// Token: 0x06028465 RID: 164965 RVA: 0x00B4838C File Offset: 0x00B4658C
 		private void OnBtnConfirmLeaveClick(int _)
 		{
 			RoguelikeModel instance = RoguelikeModel.Instance;
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			base.CloseMe(null);
 		}
 
-		// Token: 0x060335F9 RID: 210425 RVA: 0x00BFEEB1 File Offset: 0x00BFD0B1
+		// Token: 0x06028466 RID: 164966 RVA: 0x00B483F1 File Offset: 0x00B465F1
 		private void OnArchiveSaved(int slotId)
 		{
 			this.Vm.TempArchiveSaved(slotId);
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.RefreshSelectedRoguelikeInfo();
 		}
 
-		// Token: 0x060335FA RID: 210426 RVA: 0x00BFEECC File Offset: 0x00BFD0CC
+		// Token: 0x06028467 RID: 164967 RVA: 0x00B4840C File Offset: 0x00B4660C
 		private void RefreshViewModel()
 		{
 			RoguelikeAchieveViewModel roguelikeAchieveViewModel = this.OpenParam as RoguelikeAchieveViewModel;
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.Vm = roguelikeAchieveViewModel;
 		}
 
-		// Token: 0x060335FB RID: 210427 RVA: 0x00BFEEF0 File Offset: 0x00BFD0F0
+		// Token: 0x06028468 RID: 164968 RVA: 0x00B48430 File Offset: 0x00B46630
 		private void RefreshByViewModel()
 		{
 			RoguelikeAchieveLeftItem leftPanel = this.LeftPanel;
@@ -173,7 +173,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.RefreshModeState();
 		}
 
-		// Token: 0x060335FC RID: 210428 RVA: 0x00BFEF0C File Offset: 0x00BFD10C
+		// Token: 0x06028469 RID: 164969 RVA: 0x00B4844C File Offset: 0x00B4664C
 		private void RefreshSelectedRoguelikeInfo()
 		{
 			RogueArchiveInfoData selectedArchiveInfoData = this.Vm.SelectedArchiveInfoData;
@@ -201,7 +201,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.RefreshModeState();
 		}
 
-		// Token: 0x060335FD RID: 210429 RVA: 0x00BFEF80 File Offset: 0x00BFD180
+		// Token: 0x0602846A RID: 164970 RVA: 0x00B484C0 File Offset: 0x00B466C0
 		private void RefreshModeState()
 		{
 			bool isArchiveMode = this.Vm.IsArchiveMode;
@@ -294,72 +294,72 @@ namespace CSharpScript.Game.Module.Roguelike
 			btnConfirmSaveItem3.SetLocalTextNew(textId, Array.Empty<object>());
 		}
 
-		// Token: 0x0401B47F RID: 111743
+		// Token: 0x04015E52 RID: 89682
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401B480 RID: 111744
+		// Token: 0x04015E53 RID: 89683
 		private RoguelikeAchieveLeftItem LeftPanel;
 
-		// Token: 0x0401B481 RID: 111745
+		// Token: 0x04015E54 RID: 89684
 		private ButtonItem BtnRecordSaveItem;
 
-		// Token: 0x0401B482 RID: 111746
+		// Token: 0x04015E55 RID: 89685
 		private RoguelikeAchieveTotalPanel TotalPanel;
 
-		// Token: 0x0401B483 RID: 111747
+		// Token: 0x04015E56 RID: 89686
 		private RoguelikeAchieveTokenPanel TokenPanel;
 
-		// Token: 0x0401B484 RID: 111748
+		// Token: 0x04015E57 RID: 89687
 		private RoguelikeAchieveSpecialPanel SpecialPanel;
 
-		// Token: 0x0401B485 RID: 111749
+		// Token: 0x04015E58 RID: 89688
 		private ButtonItem BtnConfirmLeaveItem;
 
-		// Token: 0x0401B486 RID: 111750
+		// Token: 0x04015E59 RID: 89689
 		private ButtonItem BtnConfirmSaveItem;
 
-		// Token: 0x0401B487 RID: 111751
+		// Token: 0x04015E5A RID: 89690
 		private RoguelikeAchieveEntryPanel EntryPanel;
 
-		// Token: 0x0401B488 RID: 111752
+		// Token: 0x04015E5B RID: 89691
 		[Nullable(1)]
 		private RoguelikeAchieveViewModel Vm;
 
-		// Token: 0x0200AF31 RID: 44849
+		// Token: 0x02009966 RID: 39270
 		[NullableContext(0)]
 		private class ERoguelikeAchieveViewComponents
 		{
-			// Token: 0x04035339 RID: 217913
+			// Token: 0x0402FD6E RID: 195950
 			public const int CaptionItem = 0;
 
-			// Token: 0x0403533A RID: 217914
+			// Token: 0x0402FD6F RID: 195951
 			public const int LeftItem = 1;
 
-			// Token: 0x0403533B RID: 217915
+			// Token: 0x0402FD70 RID: 195952
 			public const int PnlEmpty = 2;
 
-			// Token: 0x0403533C RID: 217916
+			// Token: 0x0402FD71 RID: 195953
 			public const int BtnRecordSave = 3;
 
-			// Token: 0x0403533D RID: 217917
+			// Token: 0x0402FD72 RID: 195954
 			public const int TotalPanel = 4;
 
-			// Token: 0x0403533E RID: 217918
+			// Token: 0x0402FD73 RID: 195955
 			public const int TokenPanel = 5;
 
-			// Token: 0x0403533F RID: 217919
+			// Token: 0x0402FD74 RID: 195956
 			public const int SpecialPanel = 6;
 
-			// Token: 0x04035340 RID: 217920
+			// Token: 0x0402FD75 RID: 195957
 			public const int BtnConfirmLeave = 7;
 
-			// Token: 0x04035341 RID: 217921
+			// Token: 0x0402FD76 RID: 195958
 			public const int BtnConfirmSave = 8;
 
-			// Token: 0x04035342 RID: 217922
+			// Token: 0x0402FD77 RID: 195959
 			public const int PnlBottomBtn = 9;
 
-			// Token: 0x04035343 RID: 217923
+			// Token: 0x0402FD78 RID: 195960
 			public const int EntryPanel = 10;
 		}
 	}

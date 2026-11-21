@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020011D8 RID: 4568
+	// Token: 0x0200130F RID: 4879
 	public struct ProAddEntry : IFlatbufferObject
 	{
-		// Token: 0x17003F13 RID: 16147
-		// (get) Token: 0x0600EB00 RID: 60160 RVA: 0x00349259 File Offset: 0x00347459
+		// Token: 0x1700427B RID: 17019
+		// (get) Token: 0x0600F879 RID: 63609 RVA: 0x00373F49 File Offset: 0x00372149
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600EB01 RID: 60161 RVA: 0x00349266 File Offset: 0x00347466
+		// Token: 0x0600F87A RID: 63610 RVA: 0x00373F56 File Offset: 0x00372156
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600EB02 RID: 60162 RVA: 0x00349270 File Offset: 0x00347470
+		// Token: 0x0600F87B RID: 63611 RVA: 0x00373F60 File Offset: 0x00372160
 		public static ProAddEntry GetRootAsProAddEntry(ByteBuffer _bb)
 		{
 			return ProAddEntry.GetRootAsProAddEntry(_bb, default(ProAddEntry));
 		}
 
-		// Token: 0x0600EB03 RID: 60163 RVA: 0x0034928C File Offset: 0x0034748C
+		// Token: 0x0600F87C RID: 63612 RVA: 0x00373F7C File Offset: 0x0037217C
 		public static ProAddEntry GetRootAsProAddEntry(ByteBuffer _bb, ProAddEntry obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600EB04 RID: 60164 RVA: 0x003492A9 File Offset: 0x003474A9
+		// Token: 0x0600F87D RID: 63613 RVA: 0x00373F99 File Offset: 0x00372199
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600EB05 RID: 60165 RVA: 0x003492B8 File Offset: 0x003474B8
+		// Token: 0x0600F87E RID: 63614 RVA: 0x00373FA8 File Offset: 0x003721A8
 		public ProAddEntry __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003F14 RID: 16148
-		// (get) Token: 0x0600EB06 RID: 60166 RVA: 0x003492C8 File Offset: 0x003474C8
+		// Token: 0x1700427C RID: 17020
+		// (get) Token: 0x0600F87F RID: 63615 RVA: 0x00373FB8 File Offset: 0x003721B8
 		public int ProId
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003F15 RID: 16149
-		// (get) Token: 0x0600EB07 RID: 60167 RVA: 0x00349304 File Offset: 0x00347504
+		// Token: 0x1700427D RID: 17021
+		// (get) Token: 0x0600F880 RID: 63616 RVA: 0x00373FF4 File Offset: 0x003721F4
 		public bool IsPer
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003F16 RID: 16150
-		// (get) Token: 0x0600EB08 RID: 60168 RVA: 0x00349344 File Offset: 0x00347544
+		// Token: 0x1700427E RID: 17022
+		// (get) Token: 0x0600F881 RID: 63617 RVA: 0x00374034 File Offset: 0x00372234
 		public int ProValue
 		{
 			get
@@ -88,7 +88,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04005346 RID: 21318
+		// Token: 0x0400598A RID: 22922
 		private Table __p;
 	}
 }

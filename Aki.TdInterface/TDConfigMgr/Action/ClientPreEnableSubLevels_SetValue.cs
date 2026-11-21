@@ -4,22 +4,20 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001502 RID: 5378
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200165D RID: 5725
 	public class ClientPreEnableSubLevels_SetValue
 	{
-		// Token: 0x040046D6 RID: 18134
+		// Token: 0x04004A75 RID: 19061
 		public List<string> EnableLevels;
 
-		// Token: 0x040046D7 RID: 18135
+		// Token: 0x04004A76 RID: 19062
 		public List<string> DisableLevels;
 
-		// Token: 0x040046D8 RID: 18136
+		// Token: 0x04004A77 RID: 19063
 		[Nullable(2)]
 		public IEnableSubLevelTransitionWithSceneCapture TransitionOption;
 
-		// Token: 0x040046D9 RID: 18137
+		// Token: 0x04004A78 RID: 19064
 		public bool? IsWaitForEnableComplete;
 	}
 }

@@ -3,25 +3,25 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020050FA RID: 20730
+	// Token: 0x0200565F RID: 22111
 	public class IDynamicSpawnMonsterComponentT
 	{
-		// Token: 0x170096FC RID: 38652
-		// (get) Token: 0x06021631 RID: 136753 RVA: 0x004A2DED File Offset: 0x004A0FED
-		// (set) Token: 0x06021632 RID: 136754 RVA: 0x004A2DF5 File Offset: 0x004A0FF5
+		// Token: 0x17009EE9 RID: 40681
+		// (get) Token: 0x06023585 RID: 144773 RVA: 0x004DCD79 File Offset: 0x004DAF79
+		// (set) Token: 0x06023586 RID: 144774 RVA: 0x004DCD81 File Offset: 0x004DAF81
 		public bool Disabled { get; set; }
 
-		// Token: 0x170096FD RID: 38653
-		// (get) Token: 0x06021633 RID: 136755 RVA: 0x004A2DFE File Offset: 0x004A0FFE
-		// (set) Token: 0x06021634 RID: 136756 RVA: 0x004A2E06 File Offset: 0x004A1006
+		// Token: 0x17009EEA RID: 40682
+		// (get) Token: 0x06023587 RID: 144775 RVA: 0x004DCD8A File Offset: 0x004DAF8A
+		// (set) Token: 0x06023588 RID: 144776 RVA: 0x004DCD92 File Offset: 0x004DAF92
 		public List<IConditionSpawnMonsterT> Group { get; set; }
 
-		// Token: 0x170096FE RID: 38654
-		// (get) Token: 0x06021635 RID: 136757 RVA: 0x004A2E0F File Offset: 0x004A100F
-		// (set) Token: 0x06021636 RID: 136758 RVA: 0x004A2E17 File Offset: 0x004A1017
+		// Token: 0x17009EEB RID: 40683
+		// (get) Token: 0x06023589 RID: 144777 RVA: 0x004DCD9B File Offset: 0x004DAF9B
+		// (set) Token: 0x0602358A RID: 144778 RVA: 0x004DCDA3 File Offset: 0x004DAFA3
 		public byte NullMask { get; set; }
 
-		// Token: 0x06021637 RID: 136759 RVA: 0x004A2E20 File Offset: 0x004A1020
+		// Token: 0x0602358B RID: 144779 RVA: 0x004DCDAC File Offset: 0x004DAFAC
 		public IDynamicSpawnMonsterComponentT()
 		{
 			this.Disabled = false;

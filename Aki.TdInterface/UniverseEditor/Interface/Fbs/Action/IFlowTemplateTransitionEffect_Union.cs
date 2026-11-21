@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200682E RID: 26670
+	// Token: 0x02006EB4 RID: 28340
 	public enum IFlowTemplateTransitionEffect_Union : byte
 	{
-		// Token: 0x04010F6E RID: 69486
+		// Token: 0x04011DA8 RID: 73128
 		NONE,
-		// Token: 0x04010F6F RID: 69487
+		// Token: 0x04011DA9 RID: 73129
 		IFlowTemplateTransitionEffect,
-		// Token: 0x04010F70 RID: 69488
+		// Token: 0x04011DAA RID: 73130
 		IFlowTemplateBlurTransitionEffect
 	}
 }

@@ -5,12 +5,12 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Mechanics
 {
-	// Token: 0x020064F0 RID: 25840
+	// Token: 0x0200546E RID: 21614
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class LevelMechanicProvider
 	{
-		// Token: 0x06040DAF RID: 265647 RVA: 0x00FB5AA4 File Offset: 0x00FB3CA4
+		// Token: 0x06035A73 RID: 219763 RVA: 0x00EFCAD4 File Offset: 0x00EFACD4
 		public unsafe static IReadOnlyList<LevelMechanic> GetLevelMechanics(int level)
 		{
 			List<LevelMechanic> list = new List<LevelMechanic>();
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return list;
 		}
 
-		// Token: 0x06040DB0 RID: 265648 RVA: 0x00FB5DE0 File Offset: 0x00FB3FE0
+		// Token: 0x06035A74 RID: 219764 RVA: 0x00EFCE10 File Offset: 0x00EFB010
 		private unsafe static RecycleSpecialPieceMechanic SelectEarliestRecycleMechanic(int level, [Nullable(2)] RecycleSpecialPieceMechanic current, RecycleSpecialPieceMechanic candidate)
 		{
 			if (current == null)
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			return recycleSpecialPieceMechanic;
 		}
 
-		// Token: 0x06040DB1 RID: 265649 RVA: 0x00FB5EF8 File Offset: 0x00FB40F8
+		// Token: 0x06035A75 RID: 219765 RVA: 0x00EFCF28 File Offset: 0x00EFB128
 		private static CellZone[] CreateGenerateZones(EPieceType targetType)
 		{
 			if (targetType == EPieceType.Charger)

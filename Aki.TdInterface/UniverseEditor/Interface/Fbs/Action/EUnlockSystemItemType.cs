@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200604D RID: 24653
+	// Token: 0x020066AE RID: 26286
 	public enum EUnlockSystemItemType : byte
 	{
-		// Token: 0x040101BD RID: 65981
+		// Token: 0x04010FB0 RID: 69552
 		CookSystem,
-		// Token: 0x040101BE RID: 65982
+		// Token: 0x04010FB1 RID: 69553
 		AtlasSystem,
-		// Token: 0x040101BF RID: 65983
+		// Token: 0x04010FB2 RID: 69554
 		AchievementSystem,
-		// Token: 0x040101C0 RID: 65984
+		// Token: 0x04010FB3 RID: 69555
 		PhotoMemoryCollect,
-		// Token: 0x040101C1 RID: 65985
+		// Token: 0x04010FB4 RID: 69556
 		DangoCollect
 	}
 }

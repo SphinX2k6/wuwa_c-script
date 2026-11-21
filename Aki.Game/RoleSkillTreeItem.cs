@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020028C4 RID: 10436
+// Token: 0x02001E3F RID: 7743
 [NullableContext(2)]
 [Nullable(0)]
 public class RoleSkillTreeItem : UiPanelBase
 {
-	// Token: 0x06015896 RID: 88214 RVA: 0x005707D0 File Offset: 0x0056E9D0
+	// Token: 0x06013296 RID: 78486 RVA: 0x0059B694 File Offset: 0x00599894
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -49,7 +49,7 @@ public class RoleSkillTreeItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06015897 RID: 88215 RVA: 0x00570960 File Offset: 0x0056EB60
+	// Token: 0x06013297 RID: 78487 RVA: 0x0059B824 File Offset: 0x00599A24
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RoleSkillTreeItem.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -60,7 +60,7 @@ public class RoleSkillTreeItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015898 RID: 88216 RVA: 0x005709A4 File Offset: 0x0056EBA4
+	// Token: 0x06013298 RID: 78488 RVA: 0x0059B868 File Offset: 0x00599A68
 	private UniTask InitChildComponents()
 	{
 		RoleSkillTreeItem.<InitChildComponents>d__12 <InitChildComponents>d__;
@@ -71,7 +71,7 @@ public class RoleSkillTreeItem : UiPanelBase
 		return <InitChildComponents>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015899 RID: 88217 RVA: 0x005709E8 File Offset: 0x0056EBE8
+	// Token: 0x06013299 RID: 78489 RVA: 0x0059B8AC File Offset: 0x00599AAC
 	public void Refresh()
 	{
 		RoleDataBase roleDataById = RoleModel.Instance.GetRoleDataById(this.RoleId, true);
@@ -79,7 +79,7 @@ public class RoleSkillTreeItem : UiPanelBase
 		this.RefreshSkillBranch();
 	}
 
-	// Token: 0x0601589A RID: 88218 RVA: 0x00570A1C File Offset: 0x0056EC1C
+	// Token: 0x0601329A RID: 78490 RVA: 0x0059B8E0 File Offset: 0x00599AE0
 	private UniTask InitInnerSkillAndOuterAttributeItemList()
 	{
 		RoleSkillTreeItem.<InitInnerSkillAndOuterAttributeItemList>d__14 <InitInnerSkillAndOuterAttributeItemList>d__;
@@ -90,7 +90,7 @@ public class RoleSkillTreeItem : UiPanelBase
 		return <InitInnerSkillAndOuterAttributeItemList>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601589B RID: 88219 RVA: 0x00570A60 File Offset: 0x0056EC60
+	// Token: 0x0601329B RID: 78491 RVA: 0x0059B924 File Offset: 0x00599B24
 	private UniTask InitBranchItem()
 	{
 		RoleSkillTreeItem.<InitBranchItem>d__15 <InitBranchItem>d__;
@@ -101,21 +101,21 @@ public class RoleSkillTreeItem : UiPanelBase
 		return <InitBranchItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601589C RID: 88220 RVA: 0x00570AA4 File Offset: 0x0056ECA4
+	// Token: 0x0601329C RID: 78492 RVA: 0x0059B968 File Offset: 0x00599B68
 	private void OnSkillInputButtonClick()
 	{
 		RoleDataBase roleDataById = RoleModel.Instance.GetRoleDataById(this.RoleId, true);
 		UiManager.Instance.OpenView(EUiViewName.RoleSkillInputView, roleDataById, null);
 	}
 
-	// Token: 0x0601589D RID: 88221 RVA: 0x00570AD4 File Offset: 0x0056ECD4
+	// Token: 0x0601329D RID: 78493 RVA: 0x0059B998 File Offset: 0x00599B98
 	public void UpdateRole(int roleId)
 	{
 		this.RoleId = roleId;
 		this.Refresh();
 	}
 
-	// Token: 0x0601589E RID: 88222 RVA: 0x00570AE3 File Offset: 0x0056ECE3
+	// Token: 0x0601329E RID: 78494 RVA: 0x0059B9A7 File Offset: 0x00599BA7
 	[NullableContext(1)]
 	public void SelectSkillItem(RoleSkillTreeSkillItemBase skillItem, bool bFireEvent = false)
 	{
@@ -133,7 +133,7 @@ public class RoleSkillTreeItem : UiPanelBase
 		this.CurSelectedSkillItem.SetToggleState(EToggleState.ETT_Checked, bFireEvent);
 	}
 
-	// Token: 0x0601589F RID: 88223 RVA: 0x00570B23 File Offset: 0x0056ED23
+	// Token: 0x0601329F RID: 78495 RVA: 0x0059B9E7 File Offset: 0x00599BE7
 	public void CancelToggleSelect()
 	{
 		RoleSkillTreeSkillItemBase curSelectedSkillItem = this.CurSelectedSkillItem;
@@ -144,19 +144,19 @@ public class RoleSkillTreeItem : UiPanelBase
 		this.CurSelectedSkillItem = null;
 	}
 
-	// Token: 0x060158A0 RID: 88224 RVA: 0x00570B3F File Offset: 0x0056ED3F
+	// Token: 0x060132A0 RID: 78496 RVA: 0x0059BA03 File Offset: 0x00599C03
 	public void OnSkillNodeLevelUp(int nodeId)
 	{
 		this.OnNodeLevelChange(nodeId);
 	}
 
-	// Token: 0x060158A1 RID: 88225 RVA: 0x00570B48 File Offset: 0x0056ED48
+	// Token: 0x060132A1 RID: 78497 RVA: 0x0059BA0C File Offset: 0x00599C0C
 	public void OnAddCommonItemList()
 	{
 		this.Refresh();
 	}
 
-	// Token: 0x060158A2 RID: 88226 RVA: 0x00570B50 File Offset: 0x0056ED50
+	// Token: 0x060132A2 RID: 78498 RVA: 0x0059BA14 File Offset: 0x00599C14
 	private void OnNodeLevelChange(int nodeId)
 	{
 		this.InnerPassiveSkillAndOuterPassiveSkillItem.OnNodeLevelChange(nodeId);
@@ -174,19 +174,19 @@ public class RoleSkillTreeItem : UiPanelBase
 		weakBreakSkillItem.OnNodeLevelChange(nodeId);
 	}
 
-	// Token: 0x060158A3 RID: 88227 RVA: 0x00570BA4 File Offset: 0x0056EDA4
+	// Token: 0x060132A3 RID: 78499 RVA: 0x0059BA68 File Offset: 0x00599C68
 	public void OnAttributeNodeActive(int nodeId)
 	{
 		this.OnNodeLevelChange(nodeId);
 	}
 
-	// Token: 0x060158A4 RID: 88228 RVA: 0x00570BAD File Offset: 0x0056EDAD
+	// Token: 0x060132A4 RID: 78500 RVA: 0x0059BA71 File Offset: 0x00599C71
 	public void SetSkillInputButtonVisible(bool bVisible)
 	{
 		base.GetButton(6).GetRootComponent().SetUIActive(bVisible);
 	}
 
-	// Token: 0x060158A5 RID: 88229 RVA: 0x00570BC4 File Offset: 0x0056EDC4
+	// Token: 0x060132A5 RID: 78501 RVA: 0x0059BA88 File Offset: 0x00599C88
 	[NullableContext(1)]
 	public void RefreshRole(IReadOnlyList<SkillTree> configList)
 	{
@@ -229,14 +229,14 @@ public class RoleSkillTreeItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060158A6 RID: 88230 RVA: 0x00570CDC File Offset: 0x0056EEDC
+	// Token: 0x060132A6 RID: 78502 RVA: 0x0059BBA0 File Offset: 0x00599DA0
 	[NullableContext(1)]
 	public void PlayItemSequence(string seq)
 	{
 		this.SequencePlayer.PlayOrReplaySequenceByName(seq, false, null);
 	}
 
-	// Token: 0x060158A7 RID: 88231 RVA: 0x00570D00 File Offset: 0x0056EF00
+	// Token: 0x060132A7 RID: 78503 RVA: 0x0059BBC4 File Offset: 0x00599DC4
 	[NullableContext(1)]
 	public UniTask PlayItemSequenceAsync(string seq)
 	{
@@ -249,7 +249,7 @@ public class RoleSkillTreeItem : UiPanelBase
 		return <PlayItemSequenceAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060158A8 RID: 88232 RVA: 0x00570D4C File Offset: 0x0056EF4C
+	// Token: 0x060132A8 RID: 78504 RVA: 0x0059BC10 File Offset: 0x00599E10
 	public RoleSkillTreeSkillItemBase GetSkillItemByIndex(int index)
 	{
 		if (this.WeakBreakSkillItem != null)
@@ -297,19 +297,19 @@ public class RoleSkillTreeItem : UiPanelBase
 		return null;
 	}
 
-	// Token: 0x060158A9 RID: 88233 RVA: 0x00570EC4 File Offset: 0x0056F0C4
+	// Token: 0x060132A9 RID: 78505 RVA: 0x0059BD88 File Offset: 0x00599F88
 	public RoleSkillTreeSkillItemBase GetCurrentSelectedSkillItem()
 	{
 		return this.CurSelectedSkillItem;
 	}
 
-	// Token: 0x060158AA RID: 88234 RVA: 0x00570ECC File Offset: 0x0056F0CC
+	// Token: 0x060132AA RID: 78506 RVA: 0x0059BD90 File Offset: 0x00599F90
 	private void RefreshSkillBranch()
 	{
 		this.RoleSkillBranchItem.Refresh(this.RoleId, this.EnableSwitchBranch);
 	}
 
-	// Token: 0x060158AB RID: 88235 RVA: 0x00570EE8 File Offset: 0x0056F0E8
+	// Token: 0x060132AB RID: 78507 RVA: 0x0059BDAC File Offset: 0x00599FAC
 	public void OnRoleSkillBranchChanged()
 	{
 		this.RefreshSkillBranch();
@@ -338,13 +338,13 @@ public class RoleSkillTreeItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060158AC RID: 88236 RVA: 0x00570F53 File Offset: 0x0056F153
+	// Token: 0x060132AC RID: 78508 RVA: 0x0059BE17 File Offset: 0x0059A017
 	public void SetEnableSwitchBranch(bool isEnable)
 	{
 		this.EnableSwitchBranch = isEnable;
 	}
 
-	// Token: 0x060158AD RID: 88237 RVA: 0x00570F5C File Offset: 0x0056F15C
+	// Token: 0x060132AD RID: 78509 RVA: 0x0059BE20 File Offset: 0x0059A020
 	public void RefreshAllShowTags()
 	{
 		foreach (RoleSkillTreeSkillItemBase roleSkillTreeSkillItemBase in this.InnerPassiveSkillAndOuterPassiveSkillItem.GetSkillNodeItems())
@@ -378,7 +378,7 @@ public class RoleSkillTreeItem : UiPanelBase
 		weakBreakSkillItem.RefreshShowTag();
 	}
 
-	// Token: 0x060158AE RID: 88238 RVA: 0x00571028 File Offset: 0x0056F228
+	// Token: 0x060132AE RID: 78510 RVA: 0x0059BEEC File Offset: 0x0059A0EC
 	public void SetSkillBranchVisible(ESkillBranchInvisibleReason reason, bool visible)
 	{
 		RoleSkillBranchItem roleSkillBranchItem = this.RoleSkillBranchItem;
@@ -389,7 +389,7 @@ public class RoleSkillTreeItem : UiPanelBase
 		roleSkillBranchItem.SetSkillBranchVisible(reason, visible);
 	}
 
-	// Token: 0x060158AF RID: 88239 RVA: 0x0057103D File Offset: 0x0056F23D
+	// Token: 0x060132AF RID: 78511 RVA: 0x0059BF01 File Offset: 0x0059A101
 	public void SetSkillBranchTipsVisible(bool visible)
 	{
 		RoleSkillBranchItem roleSkillBranchItem = this.RoleSkillBranchItem;
@@ -400,7 +400,7 @@ public class RoleSkillTreeItem : UiPanelBase
 		roleSkillBranchItem.SetSkillBranchTipsVisible(visible);
 	}
 
-	// Token: 0x060158B0 RID: 88240 RVA: 0x00571050 File Offset: 0x0056F250
+	// Token: 0x060132B0 RID: 78512 RVA: 0x0059BF14 File Offset: 0x0059A114
 	[NullableContext(1)]
 	[return: Nullable(new byte[]
 	{
@@ -438,13 +438,13 @@ public class RoleSkillTreeItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0400A077 RID: 41079
+	// Token: 0x0400A460 RID: 42080
 	private int RoleId;
 
-	// Token: 0x0400A078 RID: 41080
+	// Token: 0x0400A461 RID: 42081
 	private RoleSkillInnerPassiveSkillAndOuterPassiveSkillItem InnerPassiveSkillAndOuterPassiveSkillItem;
 
-	// Token: 0x0400A079 RID: 41081
+	// Token: 0x0400A462 RID: 42082
 	[Nullable(new byte[]
 	{
 		2,
@@ -452,45 +452,45 @@ public class RoleSkillTreeItem : UiPanelBase
 	})]
 	private RoleSkillInnerSkillAndOuterAttributeItem[] InnerSkillAndOuterAttributeItemList;
 
-	// Token: 0x0400A07A RID: 41082
+	// Token: 0x0400A463 RID: 42083
 	private RoleSkillOuterPassiveSkillItem OuterPassiveSkillItem;
 
-	// Token: 0x0400A07B RID: 41083
+	// Token: 0x0400A464 RID: 42084
 	private RoleSkillTreeSkillItemBase CurSelectedSkillItem;
 
-	// Token: 0x0400A07C RID: 41084
+	// Token: 0x0400A465 RID: 42085
 	private LevelSequencePlayer SequencePlayer;
 
-	// Token: 0x0400A07D RID: 41085
+	// Token: 0x0400A466 RID: 42086
 	private RoleSkillOuterPassiveSkillItem WeakBreakSkillItem;
 
-	// Token: 0x0400A07E RID: 41086
+	// Token: 0x0400A467 RID: 42087
 	private RoleSkillBranchItem RoleSkillBranchItem;
 
-	// Token: 0x0400A07F RID: 41087
+	// Token: 0x0400A468 RID: 42088
 	private bool EnableSwitchBranch;
 
-	// Token: 0x02008ED3 RID: 36563
+	// Token: 0x0200811B RID: 33051
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402E51F RID: 189727
+		// Token: 0x04029C1A RID: 171034
 		InnerPassiveSkillAndOuterPassiveSkillItem,
-		// Token: 0x0402E520 RID: 189728
+		// Token: 0x04029C1B RID: 171035
 		InnerSkillAndOuterAttributeItem1,
-		// Token: 0x0402E521 RID: 189729
+		// Token: 0x04029C1C RID: 171036
 		InnerSkillAndOuterAttributeItem2,
-		// Token: 0x0402E522 RID: 189730
+		// Token: 0x04029C1D RID: 171037
 		InnerSkillAndOuterAttributeItem3,
-		// Token: 0x0402E523 RID: 189731
+		// Token: 0x04029C1E RID: 171038
 		InnerSkillAndOuterAttributeItem4,
-		// Token: 0x0402E524 RID: 189732
+		// Token: 0x04029C1F RID: 171039
 		OuterPassiveSkillItem,
-		// Token: 0x0402E525 RID: 189733
+		// Token: 0x04029C20 RID: 171040
 		SkillInputButton,
-		// Token: 0x0402E526 RID: 189734
+		// Token: 0x04029C21 RID: 171041
 		WeakBreakSkillItem,
-		// Token: 0x0402E527 RID: 189735
+		// Token: 0x04029C22 RID: 171042
 		BranchItem
 	}
 }

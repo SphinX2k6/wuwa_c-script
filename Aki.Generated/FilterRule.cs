@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000C6E RID: 3182
+	// Token: 0x02000D52 RID: 3410
 	public struct FilterRule : IFlatbufferObject
 	{
-		// Token: 0x170010F3 RID: 4339
-		// (get) Token: 0x06006E42 RID: 28226 RVA: 0x0022E9F9 File Offset: 0x0022CBF9
+		// Token: 0x17001150 RID: 4432
+		// (get) Token: 0x0600744D RID: 29773 RVA: 0x0024DC19 File Offset: 0x0024BE19
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006E43 RID: 28227 RVA: 0x0022EA06 File Offset: 0x0022CC06
+		// Token: 0x0600744E RID: 29774 RVA: 0x0024DC26 File Offset: 0x0024BE26
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06006E44 RID: 28228 RVA: 0x0022EA10 File Offset: 0x0022CC10
+		// Token: 0x0600744F RID: 29775 RVA: 0x0024DC30 File Offset: 0x0024BE30
 		public static FilterRule GetRootAsFilterRule(ByteBuffer _bb)
 		{
 			return FilterRule.GetRootAsFilterRule(_bb, default(FilterRule));
 		}
 
-		// Token: 0x06006E45 RID: 28229 RVA: 0x0022EA2C File Offset: 0x0022CC2C
+		// Token: 0x06007450 RID: 29776 RVA: 0x0024DC4C File Offset: 0x0024BE4C
 		public static FilterRule GetRootAsFilterRule(ByteBuffer _bb, FilterRule obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06006E46 RID: 28230 RVA: 0x0022EA49 File Offset: 0x0022CC49
+		// Token: 0x06007451 RID: 29777 RVA: 0x0024DC69 File Offset: 0x0024BE69
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06006E47 RID: 28231 RVA: 0x0022EA58 File Offset: 0x0022CC58
+		// Token: 0x06007452 RID: 29778 RVA: 0x0024DC78 File Offset: 0x0024BE78
 		public FilterRule __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170010F4 RID: 4340
-		// (get) Token: 0x06006E48 RID: 28232 RVA: 0x0022EA68 File Offset: 0x0022CC68
+		// Token: 0x17001151 RID: 4433
+		// (get) Token: 0x06007453 RID: 29779 RVA: 0x0024DC88 File Offset: 0x0024BE88
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170010F5 RID: 4341
-		// (get) Token: 0x06006E49 RID: 28233 RVA: 0x0022EAA4 File Offset: 0x0022CCA4
+		// Token: 0x17001152 RID: 4434
+		// (get) Token: 0x06007454 RID: 29780 RVA: 0x0024DCC4 File Offset: 0x0024BEC4
 		public int FilterType
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170010F6 RID: 4342
-		// (get) Token: 0x06006E4A RID: 28234 RVA: 0x0022EAE0 File Offset: 0x0022CCE0
+		// Token: 0x17001153 RID: 4435
+		// (get) Token: 0x06007455 RID: 29781 RVA: 0x0024DD00 File Offset: 0x0024BF00
 		public string Title
 		{
 			get
@@ -94,19 +94,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006E4B RID: 28235 RVA: 0x0022EB17 File Offset: 0x0022CD17
+		// Token: 0x06007456 RID: 29782 RVA: 0x0024DD37 File Offset: 0x0024BF37
 		public Span<byte> GetTitleBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x06006E4C RID: 28236 RVA: 0x0022EB26 File Offset: 0x0022CD26
+		// Token: 0x06007457 RID: 29783 RVA: 0x0024DD46 File Offset: 0x0024BF46
 		public byte[] GetTitleArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x06006E4D RID: 28237 RVA: 0x0022EB40 File Offset: 0x0022CD40
+		// Token: 0x06007458 RID: 29784 RVA: 0x0024DD60 File Offset: 0x0024BF60
 		public int IdList(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -117,8 +117,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170010F7 RID: 4343
-		// (get) Token: 0x06006E4E RID: 28238 RVA: 0x0022EB80 File Offset: 0x0022CD80
+		// Token: 0x17001154 RID: 4436
+		// (get) Token: 0x06007459 RID: 29785 RVA: 0x0024DDA0 File Offset: 0x0024BFA0
 		public int IdListLength
 		{
 			get
@@ -132,20 +132,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006E4F RID: 28239 RVA: 0x0022EBAC File Offset: 0x0022CDAC
+		// Token: 0x0600745A RID: 29786 RVA: 0x0024DDCC File Offset: 0x0024BFCC
 		public Span<int> GetIdListBytes()
 		{
 			return this.__p.__vector_as_span<int>(10, 4);
 		}
 
-		// Token: 0x06006E50 RID: 28240 RVA: 0x0022EBBC File Offset: 0x0022CDBC
+		// Token: 0x0600745B RID: 29787 RVA: 0x0024DDDC File Offset: 0x0024BFDC
 		public int[] GetIdListArray()
 		{
 			return this.__p.__vector_as_array<int>(10) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x170010F8 RID: 4344
-		// (get) Token: 0x06006E51 RID: 28241 RVA: 0x0022EBD4 File Offset: 0x0022CDD4
+		// Token: 0x17001155 RID: 4437
+		// (get) Token: 0x0600745C RID: 29788 RVA: 0x0024DDF4 File Offset: 0x0024BFF4
 		public bool NeedChangeColor
 		{
 			get
@@ -155,25 +155,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006E52 RID: 28242 RVA: 0x0022EC14 File Offset: 0x0022CE14
+		// Token: 0x0600745D RID: 29789 RVA: 0x0024DE34 File Offset: 0x0024C034
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用IdListIter()或GetIdListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] IdList()
+		public int[] IdList()
 		{
-			FilterRule filterRule = this;
-			return filterRule.GetIdListArray() ?? Array.Empty<int>();
+			return this.GetIdListArray();
 		}
 
-		// Token: 0x06006E53 RID: 28243 RVA: 0x0022EC38 File Offset: 0x0022CE38
+		// Token: 0x0600745E RID: 29790 RVA: 0x0024DE3C File Offset: 0x0024C03C
 		[NullableContext(1)]
-		public readonly IEnumerable<int> IdListIter()
+		public IEnumerable<int> IdListIter()
 		{
 			FilterRule.<IdListIter>d__24 <IdListIter>d__ = new FilterRule.<IdListIter>d__24(-2);
 			<IdListIter>d__.<>3__<>4__this = this;
 			return <IdListIter>d__;
 		}
 
-		// Token: 0x04004CB9 RID: 19641
+		// Token: 0x0400529D RID: 21149
 		private Table __p;
 	}
 }

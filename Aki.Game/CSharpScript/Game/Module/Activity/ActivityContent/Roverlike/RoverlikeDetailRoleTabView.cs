@@ -12,10 +12,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x0200612B RID: 24875
+	// Token: 0x020050A9 RID: 20649
 	public class RoverlikeDetailRoleTabView : UiTabViewBase
 	{
-		// Token: 0x0603EE34 RID: 257588 RVA: 0x00F30A08 File Offset: 0x00F2EC08
+		// Token: 0x06033AF6 RID: 211702 RVA: 0x00E7781C File Offset: 0x00E75A1C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603EE35 RID: 257589 RVA: 0x00F30B18 File Offset: 0x00F2ED18
+		// Token: 0x06033AF7 RID: 211703 RVA: 0x00E7792C File Offset: 0x00E75B2C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoverlikeDetailRoleTabView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -50,14 +50,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603EE36 RID: 257590 RVA: 0x00F30B5C File Offset: 0x00F2ED5C
+		// Token: 0x06033AF8 RID: 211704 RVA: 0x00E77970 File Offset: 0x00E75B70
 		protected override void OnStart()
 		{
 			this.AttributeLayout = new GenericScrollViewNew<RoverlikeRoleAttributeItem, CSharpScript.Game.Module.Common.AttributeData>(base.GetScrollViewWithScrollbar(5), () => new RoverlikeRoleAttributeItem(), base.GetItem(6).GetOwner() as AUIBaseActor, false, null);
 			this.RefreshRoleInfo();
 		}
 
-		// Token: 0x0603EE37 RID: 257591 RVA: 0x00F30BB4 File Offset: 0x00F2EDB4
+		// Token: 0x06033AF9 RID: 211705 RVA: 0x00E779C8 File Offset: 0x00E75BC8
 		private void RefreshRoleInfo()
 		{
 			int mainRoleId = RoverlikeModel.Instance.GetMainRoleId();
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.RefreshLootCard();
 		}
 
-		// Token: 0x0603EE38 RID: 257592 RVA: 0x00F30C94 File Offset: 0x00F2EE94
+		// Token: 0x06033AFA RID: 211706 RVA: 0x00E77AA8 File Offset: 0x00E75CA8
 		private void RefreshAttributeList(int roleId)
 		{
 			RoleDataBase roleDataById = RoleModel.Instance.GetRoleDataById(roleId, true);
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.AttributeLayout.RefreshByData(list, null, true);
 		}
 
-		// Token: 0x0603EE39 RID: 257593 RVA: 0x00F30D70 File Offset: 0x00F2EF70
+		// Token: 0x06033AFB RID: 211707 RVA: 0x00E77B84 File Offset: 0x00E75D84
 		private void RefreshLootCard()
 		{
 			RoverlikeInstanceData instanceData = RoverlikeModel.Instance.InstanceData;
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EE3A RID: 257594 RVA: 0x00F30DEC File Offset: 0x00F2EFEC
+		// Token: 0x06033AFC RID: 211708 RVA: 0x00E77C00 File Offset: 0x00E75E00
 		private UniTask RefreshRoleSpineAsync()
 		{
 			RoverlikeDetailRoleTabView.<RefreshRoleSpineAsync>d__10 <RefreshRoleSpineAsync>d__;
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return <RefreshRoleSpineAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x04020D53 RID: 134483
+		// Token: 0x0401B680 RID: 112256
 		[Nullable(new byte[]
 		{
 			2,
@@ -160,30 +160,30 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		private GenericScrollViewNew<RoverlikeRoleAttributeItem, CSharpScript.Game.Module.Common.AttributeData> AttributeLayout;
 
-		// Token: 0x04020D54 RID: 134484
+		// Token: 0x0401B681 RID: 112257
 		[Nullable(2)]
 		private BigElementItem ElementIcon;
 
-		// Token: 0x04020D55 RID: 134485
+		// Token: 0x0401B682 RID: 112258
 		[Nullable(2)]
 		private RoverlikeLootCardItem LootCard;
 
-		// Token: 0x0200C386 RID: 50054
+		// Token: 0x0200AD6E RID: 44398
 		private enum EComponents
 		{
-			// Token: 0x0403B01E RID: 241694
+			// Token: 0x04035983 RID: 219523
 			SpineRole,
-			// Token: 0x0403B01F RID: 241695
+			// Token: 0x04035984 RID: 219524
 			PnlElementBigIcon,
-			// Token: 0x0403B020 RID: 241696
+			// Token: 0x04035985 RID: 219525
 			TxtAttributeLabel,
-			// Token: 0x0403B021 RID: 241697
+			// Token: 0x04035986 RID: 219526
 			TxtRoleName,
-			// Token: 0x0403B022 RID: 241698
+			// Token: 0x04035987 RID: 219527
 			ItemCardSpoils,
-			// Token: 0x0403B023 RID: 241699
+			// Token: 0x04035988 RID: 219528
 			AttributeLayout,
-			// Token: 0x0403B024 RID: 241700
+			// Token: 0x04035989 RID: 219529
 			AttributeItem
 		}
 	}

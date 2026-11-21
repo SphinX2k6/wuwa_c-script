@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025DB RID: 9691
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200289A RID: 10394
 	public class IMp4FrameEvent
 	{
-		// Token: 0x0600D9D5 RID: 55765 RVA: 0x00207B6C File Offset: 0x00205D6C
+		// Token: 0x0600E79D RID: 59293 RVA: 0x00224220 File Offset: 0x00222420
 		public static IMp4FrameEvent Create(IMp4FrameEvent? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003FE1 RID: 16353
-		// (get) Token: 0x0600D9D6 RID: 55766 RVA: 0x00207B8B File Offset: 0x00205D8B
+		// Token: 0x17004317 RID: 17175
+		// (get) Token: 0x0600E79E RID: 59294 RVA: 0x0022423F File Offset: 0x0022243F
 		public virtual float Second
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003FE2 RID: 16354
-		// (get) Token: 0x0600D9D7 RID: 55767 RVA: 0x00207B98 File Offset: 0x00205D98
+		// Token: 0x17004318 RID: 17176
+		// (get) Token: 0x0600E79F RID: 59295 RVA: 0x0022424C File Offset: 0x0022244C
 		public virtual List<ActionInfo> EventActions
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040078F7 RID: 30967
+		// Token: 0x04007F8E RID: 32654
 		private IMp4FrameEvent Instance;
 
-		// Token: 0x040078F8 RID: 30968
+		// Token: 0x04007F8F RID: 32655
 		private List<ActionInfo> _EventActionsCache;
 
-		// Token: 0x040078F9 RID: 30969
+		// Token: 0x04007F90 RID: 32656
 		private bool _EventActionsInited;
 	}
 }

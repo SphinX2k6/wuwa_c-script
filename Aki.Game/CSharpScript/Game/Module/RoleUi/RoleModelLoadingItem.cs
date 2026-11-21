@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleUi
 {
-	// Token: 0x02004CDA RID: 19674
+	// Token: 0x02003C8B RID: 15499
 	public class RoleModelLoadingItem : UiPanelBase
 	{
-		// Token: 0x06032C96 RID: 208022 RVA: 0x00BD5728 File Offset: 0x00BD3928
+		// Token: 0x06027A4A RID: 162378 RVA: 0x00B1A4C0 File Offset: 0x00B186C0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -22,19 +22,19 @@ namespace CSharpScript.Game.Module.RoleUi
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06032C97 RID: 208023 RVA: 0x00BD5770 File Offset: 0x00BD3970
+		// Token: 0x06027A4B RID: 162379 RVA: 0x00B1A508 File Offset: 0x00B18708
 		protected override void OnStart()
 		{
 			this.RefreshLoadingActive();
 		}
 
-		// Token: 0x06032C98 RID: 208024 RVA: 0x00BD5778 File Offset: 0x00BD3978
+		// Token: 0x06027A4C RID: 162380 RVA: 0x00B1A510 File Offset: 0x00B18710
 		protected override void OnBeforeDestroy()
 		{
 			this.ClearTimerHandle();
 		}
 
-		// Token: 0x06032C99 RID: 208025 RVA: 0x00BD5780 File Offset: 0x00BD3980
+		// Token: 0x06027A4D RID: 162381 RVA: 0x00B1A518 File Offset: 0x00B18718
 		private void ClearTimerHandle()
 		{
 			if (this.TimerHandle != null)
@@ -44,19 +44,19 @@ namespace CSharpScript.Game.Module.RoleUi
 			}
 		}
 
-		// Token: 0x06032C9A RID: 208026 RVA: 0x00BD57A2 File Offset: 0x00BD39A2
+		// Token: 0x06027A4E RID: 162382 RVA: 0x00B1A53A File Offset: 0x00B1873A
 		private void RefreshLoadingActive()
 		{
 			this.SetActive(this.CacheActiveState && this.IsOpen);
 		}
 
-		// Token: 0x06032C9B RID: 208027 RVA: 0x00BD57BB File Offset: 0x00BD39BB
+		// Token: 0x06027A4F RID: 162383 RVA: 0x00B1A553 File Offset: 0x00B18753
 		public void SetLoadingOpen(bool value)
 		{
 			this.IsOpen = value;
 		}
 
-		// Token: 0x06032C9C RID: 208028 RVA: 0x00BD57C4 File Offset: 0x00BD39C4
+		// Token: 0x06027A50 RID: 162384 RVA: 0x00B1A55C File Offset: 0x00B1875C
 		public void SetLoadingActive(bool value)
 		{
 			if (this.CacheActiveState == value)
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			this.RefreshLoadingActive();
 		}
 
-		// Token: 0x06032C9D RID: 208029 RVA: 0x00BD581B File Offset: 0x00BD3A1B
+		// Token: 0x06027A51 RID: 162385 RVA: 0x00B1A5B3 File Offset: 0x00B187B3
 		public void SetIconPosition(FVector2D position)
 		{
 			UUIItem item = base.GetItem(0);
@@ -88,20 +88,20 @@ namespace CSharpScript.Game.Module.RoleUi
 			item.SetAnchorOffset(position);
 		}
 
-		// Token: 0x0401B0A1 RID: 110753
+		// Token: 0x04015A02 RID: 88578
 		private bool CacheActiveState = true;
 
-		// Token: 0x0401B0A2 RID: 110754
+		// Token: 0x04015A03 RID: 88579
 		[Nullable(2)]
 		private TimerHandle TimerHandle;
 
-		// Token: 0x0401B0A3 RID: 110755
+		// Token: 0x04015A04 RID: 88580
 		private bool IsOpen = true;
 
-		// Token: 0x0200AE52 RID: 44626
+		// Token: 0x02009870 RID: 39024
 		private class EComponent
 		{
-			// Token: 0x04034EDF RID: 216799
+			// Token: 0x0402F884 RID: 194692
 			public const int IconItem = 0;
 		}
 	}

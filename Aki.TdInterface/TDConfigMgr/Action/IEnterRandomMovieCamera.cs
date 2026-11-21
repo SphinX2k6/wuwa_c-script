@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A04 RID: 6660
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001B97 RID: 7063
 	public class IEnterRandomMovieCamera : IEnterMovieCameraType
 	{
-		// Token: 0x06008EAF RID: 36527 RVA: 0x0014D978 File Offset: 0x0014BB78
+		// Token: 0x06009611 RID: 38417 RVA: 0x0015D7E8 File Offset: 0x0015B9E8
 		private IEnterRandomMovieCamera_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008EB0 RID: 36528 RVA: 0x0014D9B0 File Offset: 0x0014BBB0
+		// Token: 0x06009612 RID: 38418 RVA: 0x0015D820 File Offset: 0x0015BA20
 		public static IEnterRandomMovieCamera Create([Nullable(2)] IEnterRandomMovieCamera instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008EB1 RID: 36529 RVA: 0x0014D9C3 File Offset: 0x0014BBC3
+		// Token: 0x06009613 RID: 38419 RVA: 0x0015D833 File Offset: 0x0015BA33
 		public static IEnterRandomMovieCamera CreateFromSetValue([Nullable(2)] IEnterRandomMovieCamera_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008EB2 RID: 36530 RVA: 0x0014D9D6 File Offset: 0x0014BBD6
+		// Token: 0x06009614 RID: 38420 RVA: 0x0015D846 File Offset: 0x0015BA46
 		public new IEnterRandomMovieCamera_SetValue ToSetValue()
 		{
 			return new IEnterRandomMovieCamera_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002DA6 RID: 11686
-		// (get) Token: 0x06008EB3 RID: 36531 RVA: 0x0014D9F5 File Offset: 0x0014BBF5
-		// (set) Token: 0x06008EB4 RID: 36532 RVA: 0x0014DA20 File Offset: 0x0014BC20
+		// Token: 0x17002FB2 RID: 12210
+		// (get) Token: 0x06009615 RID: 38421 RVA: 0x0015D865 File Offset: 0x0015BA65
+		// (set) Token: 0x06009616 RID: 38422 RVA: 0x0015D890 File Offset: 0x0015BA90
 		public override EMovieCameraType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002DA7 RID: 11687
-		// (get) Token: 0x06008EB5 RID: 36533 RVA: 0x0014DA2E File Offset: 0x0014BC2E
-		// (set) Token: 0x06008EB6 RID: 36534 RVA: 0x0014DA55 File Offset: 0x0014BC55
+		// Token: 0x17002FB3 RID: 12211
+		// (get) Token: 0x06009617 RID: 38423 RVA: 0x0015D89E File Offset: 0x0015BA9E
+		// (set) Token: 0x06009618 RID: 38424 RVA: 0x0015D8C5 File Offset: 0x0015BAC5
 		public virtual List<string> RowNames
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005865 RID: 22629
+		// Token: 0x04005CC7 RID: 23751
 		[Nullable(2)]
 		protected new IEnterRandomMovieCamera FbInstance;
 
-		// Token: 0x04005866 RID: 22630
+		// Token: 0x04005CC8 RID: 23752
 		[Nullable(2)]
 		protected new IEnterRandomMovieCamera_SetValue PocoInterface;
 	}

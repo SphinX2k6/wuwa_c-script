@@ -9,10 +9,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020015A0 RID: 5536
+// Token: 0x02000A58 RID: 2648
 public class WheelTowerBuffGridItem : GridProxyAbstract<int>
 {
-	// Token: 0x06009D90 RID: 40336 RVA: 0x00223170 File Offset: 0x00221370
+	// Token: 0x0600716E RID: 29038 RVA: 0x0022CF20 File Offset: 0x0022B120
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -24,7 +24,7 @@ public class WheelTowerBuffGridItem : GridProxyAbstract<int>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009D91 RID: 40337 RVA: 0x002231B8 File Offset: 0x002213B8
+	// Token: 0x0600716F RID: 29039 RVA: 0x0022CF68 File Offset: 0x0022B168
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WheelTowerBuffGridItem.<OnBeforeStartAsync>d__2 <OnBeforeStartAsync>d__;
@@ -35,7 +35,7 @@ public class WheelTowerBuffGridItem : GridProxyAbstract<int>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009D92 RID: 40338 RVA: 0x002231FC File Offset: 0x002213FC
+	// Token: 0x06007170 RID: 29040 RVA: 0x0022CFAC File Offset: 0x0022B1AC
 	protected override void OnStart()
 	{
 		MediumItemGrid gridItem = this.GridItem;
@@ -51,7 +51,7 @@ public class WheelTowerBuffGridItem : GridProxyAbstract<int>
 		gridItem2.SetToggleInteractive(false);
 	}
 
-	// Token: 0x06009D93 RID: 40339 RVA: 0x0022324C File Offset: 0x0022144C
+	// Token: 0x06007171 RID: 29041 RVA: 0x0022CFFC File Offset: 0x0022B1FC
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		NewTowerBuff? buffConfigById = WheelTowerConfig.Instance.GetBuffConfigById(data);
@@ -73,7 +73,7 @@ public class WheelTowerBuffGridItem : GridProxyAbstract<int>
 		gridItem.Apply<PropMediumItemGrid>(parameters);
 	}
 
-	// Token: 0x04004579 RID: 17785
+	// Token: 0x0400461F RID: 17951
 	[Nullable(2)]
 	private MediumItemGrid GridItem;
 }

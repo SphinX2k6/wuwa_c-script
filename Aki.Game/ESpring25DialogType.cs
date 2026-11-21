@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200150D RID: 5389
+// Token: 0x020009C5 RID: 2501
 public enum ESpring25DialogType
 {
-	// Token: 0x04004396 RID: 17302
+	// Token: 0x0400443C RID: 17468
 	Left,
-	// Token: 0x04004397 RID: 17303
+	// Token: 0x0400443D RID: 17469
 	Right
 }

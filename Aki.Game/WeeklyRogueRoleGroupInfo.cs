@@ -2,24 +2,24 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002D60 RID: 11616
+// Token: 0x020022BA RID: 8890
 [NullableContext(2)]
 [Nullable(0)]
 public class WeeklyRogueRoleGroupInfo : IWeeklyRogueRoleGroupInfo
 {
-	// Token: 0x170020EB RID: 8427
-	// (get) Token: 0x060186D1 RID: 100049 RVA: 0x006387B8 File Offset: 0x006369B8
-	// (set) Token: 0x060186D2 RID: 100050 RVA: 0x006387C0 File Offset: 0x006369C0
+	// Token: 0x17002146 RID: 8518
+	// (get) Token: 0x06015F73 RID: 89971 RVA: 0x0065E7C8 File Offset: 0x0065C9C8
+	// (set) Token: 0x06015F74 RID: 89972 RVA: 0x0065E7D0 File Offset: 0x0065C9D0
 	public bool IsTitleType { get; set; }
 
-	// Token: 0x170020EC RID: 8428
-	// (get) Token: 0x060186D3 RID: 100051 RVA: 0x006387C9 File Offset: 0x006369C9
-	// (set) Token: 0x060186D4 RID: 100052 RVA: 0x006387D1 File Offset: 0x006369D1
+	// Token: 0x17002147 RID: 8519
+	// (get) Token: 0x06015F75 RID: 89973 RVA: 0x0065E7D9 File Offset: 0x0065C9D9
+	// (set) Token: 0x06015F76 RID: 89974 RVA: 0x0065E7E1 File Offset: 0x0065C9E1
 	public IWeeklyRogueRoleGroupTitleInfo TitleInfo { get; set; }
 
-	// Token: 0x170020ED RID: 8429
-	// (get) Token: 0x060186D5 RID: 100053 RVA: 0x006387DA File Offset: 0x006369DA
-	// (set) Token: 0x060186D6 RID: 100054 RVA: 0x006387E2 File Offset: 0x006369E2
+	// Token: 0x17002148 RID: 8520
+	// (get) Token: 0x06015F77 RID: 89975 RVA: 0x0065E7EA File Offset: 0x0065C9EA
+	// (set) Token: 0x06015F78 RID: 89976 RVA: 0x0065E7F2 File Offset: 0x0065C9F2
 	[Nullable(new byte[]
 	{
 		2,

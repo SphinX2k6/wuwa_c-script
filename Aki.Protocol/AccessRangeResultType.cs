@@ -3,31 +3,31 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001621 RID: 5665
+	// Token: 0x02001694 RID: 5780
 	public enum AccessRangeResultType
 	{
-		// Token: 0x0400C010 RID: 49168
+		// Token: 0x0400C50A RID: 50442
 		[OriginalName("Trigger")]
 		Trigger,
-		// Token: 0x0400C011 RID: 49169
+		// Token: 0x0400C50B RID: 50443
 		[OriginalName("Trample")]
 		Trample,
-		// Token: 0x0400C012 RID: 49170
+		// Token: 0x0400C50C RID: 50444
 		[OriginalName("DynamicPortal")]
 		DynamicPortal,
-		// Token: 0x0400C013 RID: 49171
+		// Token: 0x0400C50D RID: 50445
 		[OriginalName("EffectArea")]
 		EffectArea,
-		// Token: 0x0400C014 RID: 49172
+		// Token: 0x0400C50E RID: 50446
 		[OriginalName("AirPassage")]
 		AirPassage,
-		// Token: 0x0400C015 RID: 49173
+		// Token: 0x0400C50F RID: 50447
 		[OriginalName("Range")]
 		Range,
-		// Token: 0x0400C016 RID: 49174
+		// Token: 0x0400C510 RID: 50448
 		[OriginalName("GravityFlip")]
 		GravityFlip,
-		// Token: 0x0400C017 RID: 49175
+		// Token: 0x0400C511 RID: 50449
 		[OriginalName("RollBlock")]
 		RollBlock
 	}

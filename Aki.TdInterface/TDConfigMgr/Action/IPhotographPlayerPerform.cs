@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CF0 RID: 7408
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001EFF RID: 7935
 	public class IPhotographPlayerPerform
 	{
-		// Token: 0x06009EFB RID: 40699 RVA: 0x0016B600 File Offset: 0x00169800
+		// Token: 0x0600A8DB RID: 43227 RVA: 0x0017F860 File Offset: 0x0017DA60
 		private IPhotographPlayerPerform_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009EFC RID: 40700 RVA: 0x0016B638 File Offset: 0x00169838
+		// Token: 0x0600A8DC RID: 43228 RVA: 0x0017F898 File Offset: 0x0017DA98
 		public static IPhotographPlayerPerform Create([Nullable(2)] IPhotographPlayerPerform instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009EFD RID: 40701 RVA: 0x0016B64B File Offset: 0x0016984B
+		// Token: 0x0600A8DD RID: 43229 RVA: 0x0017F8AB File Offset: 0x0017DAAB
 		public static IPhotographPlayerPerform CreateFromSetValue([Nullable(2)] IPhotographPlayerPerform_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009EFE RID: 40702 RVA: 0x0016B65E File Offset: 0x0016985E
+		// Token: 0x0600A8DE RID: 43230 RVA: 0x0017F8BE File Offset: 0x0017DABE
 		public IPhotographPlayerPerform_SetValue ToSetValue()
 		{
 			return new IPhotographPlayerPerform_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700316C RID: 12652
-		// (get) Token: 0x06009EFF RID: 40703 RVA: 0x0016B680 File Offset: 0x00169880
-		// (set) Token: 0x06009F00 RID: 40704 RVA: 0x0016B6BA File Offset: 0x001698BA
+		// Token: 0x170033FD RID: 13309
+		// (get) Token: 0x0600A8DF RID: 43231 RVA: 0x0017F8E0 File Offset: 0x0017DAE0
+		// (set) Token: 0x0600A8E0 RID: 43232 RVA: 0x0017F91A File Offset: 0x0017DB1A
 		public virtual int? MontageId
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700316D RID: 12653
-		// (get) Token: 0x06009F01 RID: 40705 RVA: 0x0016B6C8 File Offset: 0x001698C8
-		// (set) Token: 0x06009F02 RID: 40706 RVA: 0x0016B702 File Offset: 0x00169902
+		// Token: 0x170033FE RID: 13310
+		// (get) Token: 0x0600A8E1 RID: 43233 RVA: 0x0017F928 File Offset: 0x0017DB28
+		// (set) Token: 0x0600A8E2 RID: 43234 RVA: 0x0017F962 File Offset: 0x0017DB62
 		public virtual int? FaceId
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006005 RID: 24581
+		// Token: 0x04006578 RID: 25976
 		[Nullable(2)]
 		protected IPhotographPlayerPerform FbInstance;
 
-		// Token: 0x04006006 RID: 24582
+		// Token: 0x04006579 RID: 25977
 		[Nullable(2)]
 		protected IPhotographPlayerPerform_SetValue PocoInterface;
 	}

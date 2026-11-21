@@ -5,10 +5,10 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020015BA RID: 5562
+// Token: 0x02000A72 RID: 2674
 internal class BossTagItem : GridProxyAbstract<int>
 {
-	// Token: 0x06009DD8 RID: 40408 RVA: 0x00224B98 File Offset: 0x00222D98
+	// Token: 0x060071B6 RID: 29110 RVA: 0x0022E948 File Offset: 0x0022CB48
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -24,13 +24,13 @@ internal class BossTagItem : GridProxyAbstract<int>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009DD9 RID: 40409 RVA: 0x00224C22 File Offset: 0x00222E22
+	// Token: 0x060071B7 RID: 29111 RVA: 0x0022E9D2 File Offset: 0x0022CBD2
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		this.RefreshByData(data);
 	}
 
-	// Token: 0x06009DDA RID: 40410 RVA: 0x00224C2C File Offset: 0x00222E2C
+	// Token: 0x060071B8 RID: 29112 RVA: 0x0022E9DC File Offset: 0x0022CBDC
 	public void RefreshByData(int data)
 	{
 		NewTowerTag? tagConfigByTagId = WheelTowerConfig.Instance.GetTagConfigByTagId(data);

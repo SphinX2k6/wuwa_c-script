@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004F20 RID: 20256
+	// Token: 0x02005452 RID: 21586
 	public class IBossStateViewStyle_UnionUnion
 	{
-		// Token: 0x170091E6 RID: 37350
-		// (get) Token: 0x0602008E RID: 131214 RVA: 0x004752D1 File Offset: 0x004734D1
-		// (set) Token: 0x0602008F RID: 131215 RVA: 0x004752D9 File Offset: 0x004734D9
+		// Token: 0x17009968 RID: 39272
+		// (get) Token: 0x06021DFE RID: 138750 RVA: 0x004AB665 File Offset: 0x004A9865
+		// (set) Token: 0x06021DFF RID: 138751 RVA: 0x004AB66D File Offset: 0x004A986D
 		public IBossStateViewStyle_Union Type { get; set; }
 
-		// Token: 0x170091E7 RID: 37351
-		// (get) Token: 0x06020090 RID: 131216 RVA: 0x004752E2 File Offset: 0x004734E2
-		// (set) Token: 0x06020091 RID: 131217 RVA: 0x004752EA File Offset: 0x004734EA
+		// Token: 0x17009969 RID: 39273
+		// (get) Token: 0x06021E00 RID: 138752 RVA: 0x004AB676 File Offset: 0x004A9876
+		// (set) Token: 0x06021E01 RID: 138753 RVA: 0x004AB67E File Offset: 0x004A987E
 		public object Value { get; set; }
 
-		// Token: 0x06020092 RID: 131218 RVA: 0x004752F3 File Offset: 0x004734F3
+		// Token: 0x06021E02 RID: 138754 RVA: 0x004AB687 File Offset: 0x004A9887
 		public IBossStateViewStyle_UnionUnion()
 		{
 			this.Type = IBossStateViewStyle_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06020093 RID: 131219 RVA: 0x00475309 File Offset: 0x00473509
+		// Token: 0x06021E03 RID: 138755 RVA: 0x004AB69D File Offset: 0x004A989D
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06020094 RID: 131220 RVA: 0x0047531B File Offset: 0x0047351B
+		// Token: 0x06021E04 RID: 138756 RVA: 0x004AB6AF File Offset: 0x004A98AF
 		public IBossStateViewStyleT AsIBossStateViewStyle()
 		{
 			return this.As<IBossStateViewStyleT>();
 		}
 
-		// Token: 0x06020095 RID: 131221 RVA: 0x00475323 File Offset: 0x00473523
+		// Token: 0x06021E05 RID: 138757 RVA: 0x004AB6B7 File Offset: 0x004A98B7
 		public static IBossStateViewStyle_UnionUnion FromIBossStateViewStyle(IBossStateViewStyleT _ibossstateviewstyle)
 		{
 			return new IBossStateViewStyle_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06020096 RID: 131222 RVA: 0x00475338 File Offset: 0x00473538
+		// Token: 0x06021E06 RID: 138758 RVA: 0x004AB6CC File Offset: 0x004A98CC
 		public IDoubleViewBossStateViewStyleT AsIDoubleViewBossStateViewStyle()
 		{
 			return this.As<IDoubleViewBossStateViewStyleT>();
 		}
 
-		// Token: 0x06020097 RID: 131223 RVA: 0x00475340 File Offset: 0x00473540
+		// Token: 0x06021E07 RID: 138759 RVA: 0x004AB6D4 File Offset: 0x004A98D4
 		public static IBossStateViewStyle_UnionUnion FromIDoubleViewBossStateViewStyle(IDoubleViewBossStateViewStyleT _idoubleviewbossstateviewstyle)
 		{
 			return new IBossStateViewStyle_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06020098 RID: 131224 RVA: 0x00475358 File Offset: 0x00473558
+		// Token: 0x06021E08 RID: 138760 RVA: 0x004AB6EC File Offset: 0x004A98EC
 		public static int Pack(FlatBufferBuilder builder, IBossStateViewStyle_UnionUnion _o)
 		{
 			IBossStateViewStyle_Union type = _o.Type;

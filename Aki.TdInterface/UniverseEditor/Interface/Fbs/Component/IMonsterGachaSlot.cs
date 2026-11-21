@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200557E RID: 21886
+	// Token: 0x02005B1C RID: 23324
 	public struct IMonsterGachaSlot : IFlatbufferObject
 	{
-		// Token: 0x1700A1C3 RID: 41411
-		// (get) Token: 0x060243B3 RID: 148403 RVA: 0x00500F8A File Offset: 0x004FF18A
+		// Token: 0x1700AA4B RID: 43595
+		// (get) Token: 0x060265C0 RID: 157120 RVA: 0x00541502 File Offset: 0x0053F702
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060243B4 RID: 148404 RVA: 0x00500F97 File Offset: 0x004FF197
+		// Token: 0x060265C1 RID: 157121 RVA: 0x0054150F File Offset: 0x0053F70F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060243B5 RID: 148405 RVA: 0x00500FA0 File Offset: 0x004FF1A0
+		// Token: 0x060265C2 RID: 157122 RVA: 0x00541518 File Offset: 0x0053F718
 		public static IMonsterGachaSlot GetRootAsIMonsterGachaSlot(ByteBuffer _bb)
 		{
 			return IMonsterGachaSlot.GetRootAsIMonsterGachaSlot(_bb, default(IMonsterGachaSlot));
 		}
 
-		// Token: 0x060243B6 RID: 148406 RVA: 0x00500FBC File Offset: 0x004FF1BC
+		// Token: 0x060265C3 RID: 157123 RVA: 0x00541534 File Offset: 0x0053F734
 		public static IMonsterGachaSlot GetRootAsIMonsterGachaSlot(ByteBuffer _bb, IMonsterGachaSlot obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060243B7 RID: 148407 RVA: 0x00500FD9 File Offset: 0x004FF1D9
+		// Token: 0x060265C4 RID: 157124 RVA: 0x00541551 File Offset: 0x0053F751
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060243B8 RID: 148408 RVA: 0x00500FE8 File Offset: 0x004FF1E8
+		// Token: 0x060265C5 RID: 157125 RVA: 0x00541560 File Offset: 0x0053F760
 		public IMonsterGachaSlot __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A1C4 RID: 41412
-		// (get) Token: 0x060243B9 RID: 148409 RVA: 0x00500FF8 File Offset: 0x004FF1F8
+		// Token: 0x1700AA4C RID: 43596
+		// (get) Token: 0x060265C6 RID: 157126 RVA: 0x00541570 File Offset: 0x0053F770
 		public IVectorInfo? Pos
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060243BA RID: 148410 RVA: 0x00501055 File Offset: 0x004FF255
+		// Token: 0x060265C7 RID: 157127 RVA: 0x005415CD File Offset: 0x0053F7CD
 		public static Offset<IMonsterGachaSlot> CreateIMonsterGachaSlot(FlatBufferBuilder builder, Offset<IVectorInfo> PosOffset = default(Offset<IVectorInfo>))
 		{
 			builder.StartTable(1);
@@ -71,25 +71,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IMonsterGachaSlot.EndIMonsterGachaSlot(builder);
 		}
 
-		// Token: 0x060243BB RID: 148411 RVA: 0x0050106B File Offset: 0x004FF26B
+		// Token: 0x060265C8 RID: 157128 RVA: 0x005415E3 File Offset: 0x0053F7E3
 		public static void StartIMonsterGachaSlot(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060243BC RID: 148412 RVA: 0x00501074 File Offset: 0x004FF274
+		// Token: 0x060265C9 RID: 157129 RVA: 0x005415EC File Offset: 0x0053F7EC
 		public static void AddPos(FlatBufferBuilder builder, Offset<IVectorInfo> posOffset)
 		{
 			builder.AddOffset(0, posOffset.Value, 0);
 		}
 
-		// Token: 0x060243BD RID: 148413 RVA: 0x00501084 File Offset: 0x004FF284
+		// Token: 0x060265CA RID: 157130 RVA: 0x005415FC File Offset: 0x0053F7FC
 		public static Offset<IMonsterGachaSlot> EndIMonsterGachaSlot(FlatBufferBuilder builder)
 		{
 			return new Offset<IMonsterGachaSlot>(builder.EndTable());
 		}
 
-		// Token: 0x060243BE RID: 148414 RVA: 0x00501094 File Offset: 0x004FF294
+		// Token: 0x060265CB RID: 157131 RVA: 0x0054160C File Offset: 0x0053F80C
 		public IMonsterGachaSlotT UnPack()
 		{
 			IMonsterGachaSlotT monsterGachaSlotT = new IMonsterGachaSlotT();
@@ -97,13 +97,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return monsterGachaSlotT;
 		}
 
-		// Token: 0x060243BF RID: 148415 RVA: 0x005010B0 File Offset: 0x004FF2B0
+		// Token: 0x060265CC RID: 157132 RVA: 0x00541628 File Offset: 0x0053F828
 		public void UnPackTo(IMonsterGachaSlotT _o)
 		{
 			_o.Pos = ((this.Pos != null) ? this.Pos.Value.UnPack() : null);
 		}
 
-		// Token: 0x060243C0 RID: 148416 RVA: 0x005010EC File Offset: 0x004FF2EC
+		// Token: 0x060265CD RID: 157133 RVA: 0x00541664 File Offset: 0x0053F864
 		public static Offset<IMonsterGachaSlot> Pack(FlatBufferBuilder builder, IMonsterGachaSlotT _o)
 		{
 			if (_o == null)
@@ -114,7 +114,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IMonsterGachaSlot.CreateIMonsterGachaSlot(builder, posOffset);
 		}
 
-		// Token: 0x0400E8AE RID: 59566
+		// Token: 0x0400F510 RID: 62736
 		private Table __p;
 	}
 }

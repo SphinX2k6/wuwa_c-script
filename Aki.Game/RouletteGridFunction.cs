@@ -2,10 +2,10 @@
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x0200292F RID: 10543
+// Token: 0x02001EAA RID: 7850
 public class RouletteGridFunction : RouletteGridBase
 {
-	// Token: 0x06015C19 RID: 89113 RVA: 0x0057CEA0 File Offset: 0x0057B0A0
+	// Token: 0x0601361E RID: 79390 RVA: 0x005A7EE0 File Offset: 0x005A60E0
 	protected override UniTask Init()
 	{
 		RouletteGridFunction.<Init>d__0 <Init>d__;
@@ -16,7 +16,7 @@ public class RouletteGridFunction : RouletteGridBase
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015C1A RID: 89114 RVA: 0x0057CEE3 File Offset: 0x0057B0E3
+	// Token: 0x0601361F RID: 79391 RVA: 0x005A7F23 File Offset: 0x005A6123
 	protected override void OnSelect(bool bSelect)
 	{
 		if (!bSelect)

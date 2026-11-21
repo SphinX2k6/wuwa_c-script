@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200215C RID: 8540
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020023BD RID: 9149
 	public class ResetEntity : ActionParams
 	{
-		// Token: 0x0600BBEA RID: 48106 RVA: 0x001B1968 File Offset: 0x001AFB68
+		// Token: 0x0600C778 RID: 51064 RVA: 0x001C8B1C File Offset: 0x001C6D1C
 		private ResetEntity_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BBEB RID: 48107 RVA: 0x001B19A0 File Offset: 0x001AFBA0
+		// Token: 0x0600C779 RID: 51065 RVA: 0x001C8B54 File Offset: 0x001C6D54
 		public static ResetEntity Create([Nullable(2)] ResetEntity instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BBEC RID: 48108 RVA: 0x001B19B3 File Offset: 0x001AFBB3
+		// Token: 0x0600C77A RID: 51066 RVA: 0x001C8B67 File Offset: 0x001C6D67
 		public static ResetEntity CreateFromSetValue([Nullable(2)] ResetEntity_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BBED RID: 48109 RVA: 0x001B19C6 File Offset: 0x001AFBC6
+		// Token: 0x0600C77B RID: 51067 RVA: 0x001C8B7A File Offset: 0x001C6D7A
 		public ResetEntity_SetValue ToSetValue()
 		{
 			return new ResetEntity_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003948 RID: 14664
-		// (get) Token: 0x0600BBEE RID: 48110 RVA: 0x001B19D9 File Offset: 0x001AFBD9
-		// (set) Token: 0x0600BBEF RID: 48111 RVA: 0x001B1A00 File Offset: 0x001AFC00
+		// Token: 0x17003C35 RID: 15413
+		// (get) Token: 0x0600C77C RID: 51068 RVA: 0x001C8B8D File Offset: 0x001C6D8D
+		// (set) Token: 0x0600C77D RID: 51069 RVA: 0x001C8BB4 File Offset: 0x001C6DB4
 		public virtual IResetEntityConfig ResetEntityConfig
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400704C RID: 28748
+		// Token: 0x04007681 RID: 30337
 		[Nullable(2)]
 		protected new ResetEntity FbInstance;
 
-		// Token: 0x0400704D RID: 28749
+		// Token: 0x04007682 RID: 30338
 		[Nullable(2)]
 		protected ResetEntity_SetValue PocoInterface;
 	}

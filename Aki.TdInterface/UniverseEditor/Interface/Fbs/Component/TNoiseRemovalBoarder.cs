@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C6C RID: 23660
+	// Token: 0x02006294 RID: 25236
 	public enum TNoiseRemovalBoarder : byte
 	{
-		// Token: 0x0400F4B8 RID: 62648
+		// Token: 0x040101EA RID: 66026
 		NONE,
-		// Token: 0x0400F4B9 RID: 62649
+		// Token: 0x040101EB RID: 66027
 		INoiseRemovalBoxBoarder,
-		// Token: 0x0400F4BA RID: 62650
+		// Token: 0x040101EC RID: 66028
 		INoiseRemovalSphereBoarder
 	}
 }

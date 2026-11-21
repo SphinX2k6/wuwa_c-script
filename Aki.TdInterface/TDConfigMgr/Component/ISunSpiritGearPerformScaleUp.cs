@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200073D RID: 1853
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020007DE RID: 2014
 	public class ISunSpiritGearPerformScaleUp : ISunSpiritGearPerformConfig
 	{
-		// Token: 0x060027F9 RID: 10233 RVA: 0x0006A124 File Offset: 0x00068324
+		// Token: 0x06002B1D RID: 11037 RVA: 0x000712CC File Offset: 0x0006F4CC
 		private ISunSpiritGearPerformScaleUp_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060027FA RID: 10234 RVA: 0x0006A15C File Offset: 0x0006835C
+		// Token: 0x06002B1E RID: 11038 RVA: 0x00071304 File Offset: 0x0006F504
 		public static ISunSpiritGearPerformScaleUp Create([Nullable(2)] ISunSpiritGearPerformScaleUp instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060027FB RID: 10235 RVA: 0x0006A16F File Offset: 0x0006836F
+		// Token: 0x06002B1F RID: 11039 RVA: 0x00071317 File Offset: 0x0006F517
 		public static ISunSpiritGearPerformScaleUp CreateFromSetValue([Nullable(2)] ISunSpiritGearPerformScaleUp_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060027FC RID: 10236 RVA: 0x0006A182 File Offset: 0x00068382
+		// Token: 0x06002B20 RID: 11040 RVA: 0x0007132A File Offset: 0x0006F52A
 		public new ISunSpiritGearPerformScaleUp_SetValue ToSetValue()
 		{
 			return new ISunSpiritGearPerformScaleUp_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000A81 RID: 2689
-		// (get) Token: 0x060027FD RID: 10237 RVA: 0x0006A1AD File Offset: 0x000683AD
-		// (set) Token: 0x060027FE RID: 10238 RVA: 0x0006A1D8 File Offset: 0x000683D8
+		// Token: 0x17000B41 RID: 2881
+		// (get) Token: 0x06002B21 RID: 11041 RVA: 0x00071355 File Offset: 0x0006F555
+		// (set) Token: 0x06002B22 RID: 11042 RVA: 0x00071380 File Offset: 0x0006F580
 		public override ESunSpiritGearPerformType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A82 RID: 2690
-		// (get) Token: 0x060027FF RID: 10239 RVA: 0x0006A1E6 File Offset: 0x000683E6
-		// (set) Token: 0x06002800 RID: 10240 RVA: 0x0006A215 File Offset: 0x00068415
+		// Token: 0x17000B42 RID: 2882
+		// (get) Token: 0x06002B23 RID: 11043 RVA: 0x0007138E File Offset: 0x0006F58E
+		// (set) Token: 0x06002B24 RID: 11044 RVA: 0x000713BD File Offset: 0x0006F5BD
 		public virtual float Scale
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A83 RID: 2691
-		// (get) Token: 0x06002801 RID: 10241 RVA: 0x0006A224 File Offset: 0x00068424
-		// (set) Token: 0x06002802 RID: 10242 RVA: 0x0006A285 File Offset: 0x00068485
+		// Token: 0x17000B43 RID: 2883
+		// (get) Token: 0x06002B25 RID: 11045 RVA: 0x000713CC File Offset: 0x0006F5CC
+		// (set) Token: 0x06002B26 RID: 11046 RVA: 0x0007142D File Offset: 0x0006F62D
 		[Nullable(2)]
 		public virtual IScaleUpSpiritPerformConfig ScaleUpPerformConfig
 		{
@@ -140,18 +138,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001AEB RID: 6891
+		// Token: 0x04001CF0 RID: 7408
 		[Nullable(2)]
 		protected new ISunSpiritGearPerformScaleUp FbInstance;
 
-		// Token: 0x04001AEC RID: 6892
+		// Token: 0x04001CF1 RID: 7409
 		[Nullable(2)]
 		protected new ISunSpiritGearPerformScaleUp_SetValue PocoInterface;
 
-		// Token: 0x04001AED RID: 6893
+		// Token: 0x04001CF2 RID: 7410
 		private IScaleUpSpiritPerformConfig _ScaleUpPerformConfigCache;
 
-		// Token: 0x04001AEE RID: 6894
+		// Token: 0x04001CF3 RID: 7411
 		private bool _ScaleUpPerformConfigInited;
 	}
 }

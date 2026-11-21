@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E03 RID: 19971
+	// Token: 0x02005310 RID: 21264
 	public enum ERenjuOrder : byte
 	{
-		// Token: 0x0400DAF3 RID: 56051
+		// Token: 0x0400E65C RID: 58972
 		Order0,
-		// Token: 0x0400DAF4 RID: 56052
+		// Token: 0x0400E65D RID: 58973
 		Order1
 	}
 }

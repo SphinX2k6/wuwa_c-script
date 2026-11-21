@@ -4,36 +4,36 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Launcher.DiffPatch.Data
 {
-	// Token: 0x02000231 RID: 561
+	// Token: 0x02000236 RID: 566
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class VideoVersionInfo : ResVersionInfo
 	{
-		// Token: 0x06000E4D RID: 3661 RVA: 0x0005569F File Offset: 0x0005389F
+		// Token: 0x06000E8E RID: 3726 RVA: 0x000581A7 File Offset: 0x000563A7
 		public VideoVersionInfo(bool hasContent) : base("video", "video", new Dictionary<string, string>())
 		{
 			this.hasContent = hasContent;
 		}
 
-		// Token: 0x06000E4E RID: 3662 RVA: 0x000556BD File Offset: 0x000538BD
+		// Token: 0x06000E8F RID: 3727 RVA: 0x000581C5 File Offset: 0x000563C5
 		public override void Init()
 		{
 		}
 
-		// Token: 0x06000E4F RID: 3663 RVA: 0x000556BF File Offset: 0x000538BF
+		// Token: 0x06000E90 RID: 3728 RVA: 0x000581C7 File Offset: 0x000563C7
 		public override string GetResType()
 		{
 			return "Video";
 		}
 
-		// Token: 0x06000E50 RID: 3664 RVA: 0x000556C6 File Offset: 0x000538C6
+		// Token: 0x06000E91 RID: 3729 RVA: 0x000581CE File Offset: 0x000563CE
 		public override bool HasContentOnRemote()
 		{
 			return this.hasContent;
 		}
 
-		// Token: 0x17000158 RID: 344
-		// (get) Token: 0x06000E51 RID: 3665 RVA: 0x000556CE File Offset: 0x000538CE
+		// Token: 0x1700015E RID: 350
+		// (get) Token: 0x06000E92 RID: 3730 RVA: 0x000581D6 File Offset: 0x000563D6
 		public override string ManifestHash
 		{
 			get
@@ -42,19 +42,19 @@ namespace CSharpScript.Launcher.DiffPatch.Data
 			}
 		}
 
-		// Token: 0x06000E52 RID: 3666 RVA: 0x000556D5 File Offset: 0x000538D5
+		// Token: 0x06000E93 RID: 3731 RVA: 0x000581DD File Offset: 0x000563DD
 		public override bool UpdateVersionRecord()
 		{
 			return true;
 		}
 
-		// Token: 0x06000E53 RID: 3667 RVA: 0x000556D8 File Offset: 0x000538D8
+		// Token: 0x06000E94 RID: 3732 RVA: 0x000581E0 File Offset: 0x000563E0
 		public override bool ClearVersionRecord()
 		{
 			return true;
 		}
 
-		// Token: 0x040008F7 RID: 2295
+		// Token: 0x04000939 RID: 2361
 		private readonly bool hasContent;
 	}
 }

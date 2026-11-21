@@ -9,55 +9,49 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 {
-	// Token: 0x020054DC RID: 21724
+	// Token: 0x020044AF RID: 17583
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DollGrabMachineMarkItem : ConfigMarkItem
 	{
-		// Token: 0x06037782 RID: 227202 RVA: 0x00D2CEE1 File Offset: 0x00D2B0E1
+		// Token: 0x0602C639 RID: 181817 RVA: 0x00C7AF81 File Offset: 0x00C79181
 		public DollGrabMachineMarkItem(int markId, MapMark markConfig, UUIItem parent, EMapType mapType, float markScale, ETrackSource trackSource = ETrackSource.MapMark) : base(markId, markConfig, parent, mapType, markScale, new ETrackSource?(trackSource))
 		{
 		}
 
-		// Token: 0x06037783 RID: 227203 RVA: 0x00D2CEF7 File Offset: 0x00D2B0F7
-		protected override void OnInitialize()
-		{
-			base.OnInitialize();
-			this.UpdateGamePlayState();
-		}
-
-		// Token: 0x06037784 RID: 227204 RVA: 0x00D2CF05 File Offset: 0x00D2B105
+		// Token: 0x0602C63A RID: 181818 RVA: 0x00C7AF97 File Offset: 0x00C79197
 		protected override EMarkItemViewType GetMarkItemViewType()
 		{
 			return EMarkItemViewType.DollGrabMachineMarkItemView;
 		}
 
-		// Token: 0x06037785 RID: 227205 RVA: 0x00D2CF09 File Offset: 0x00D2B109
+		// Token: 0x0602C63B RID: 181819 RVA: 0x00C7AF9B File Offset: 0x00C7919B
 		protected override MarkItemView CreateView()
 		{
 			return new DollGrabMachineMarkItemView(this);
 		}
 
-		// Token: 0x06037786 RID: 227206 RVA: 0x00D2CF14 File Offset: 0x00D2B114
+		// Token: 0x0602C63C RID: 181820 RVA: 0x00C7AFA4 File Offset: 0x00C791A4
 		public int GetEntityId()
 		{
-			if (this.MarkConfig == null)
+			if (base.MarkConfig == null)
 			{
 				return 0;
 			}
-			return this.MarkConfig.GetValueOrDefault().EntityConfigId;
+			MapMark? mapMark;
+			return mapMark.GetValueOrDefault().EntityConfigId;
 		}
 
-		// Token: 0x06037787 RID: 227207 RVA: 0x00D2CF40 File Offset: 0x00D2B140
-		protected void UpdateGamePlayState()
+		// Token: 0x0602C63D RID: 181821 RVA: 0x00C7AFD2 File Offset: 0x00C791D2
+		public override bool IsMarkDisabled()
 		{
-			int entityId = this.GetEntityId();
-			if (MapModel.Instance.IsMarkHideByServer(this.MapId, entityId))
-			{
-				base.MarkItemEntity.GamePlay.GamePlayState = EMarkGamePlayState.Hide;
-				return;
-			}
-			base.MarkItemEntity.GamePlay.GamePlayState = (DollGrabModel.Instance.IsDollGrabMachineDeliveryComplete(this.MapId, entityId) ? EMarkGamePlayState.Finish : EMarkGamePlayState.Processing);
+			return MapModel.Instance.IsMarkHideByServer(this.MapId, this.GetEntityId());
+		}
+
+		// Token: 0x0602C63E RID: 181822 RVA: 0x00C7AFEA File Offset: 0x00C791EA
+		protected override bool IsGamePlayFinishRaw()
+		{
+			return !this.IsMarkDisabled() && DollGrabModel.Instance.IsDollGrabMachineDeliveryComplete(this.MapId, this.GetEntityId());
 		}
 	}
 }

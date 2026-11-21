@@ -3,19 +3,19 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016E0 RID: 5856
+	// Token: 0x0200185C RID: 6236
 	[EnumExtensions]
 	public enum ETraceTracingGridType
 	{
-		// Token: 0x04004F32 RID: 20274
+		// Token: 0x0400535F RID: 21343
 		Block,
-		// Token: 0x04004F33 RID: 20275
+		// Token: 0x04005360 RID: 21344
 		Empty,
-		// Token: 0x04004F34 RID: 20276
+		// Token: 0x04005361 RID: 21345
 		Chess1,
-		// Token: 0x04004F35 RID: 20277
+		// Token: 0x04005362 RID: 21346
 		Chess2,
-		// Token: 0x04004F36 RID: 20278
+		// Token: 0x04005363 RID: 21347
 		Chess3
 	}
 }

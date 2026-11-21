@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020070BB RID: 28859
+	// Token: 0x02007887 RID: 30855
 	public struct ISheriffChangeCriminalIdentity : IFlatbufferObject
 	{
-		// Token: 0x1700D664 RID: 54884
-		// (get) Token: 0x060331D2 RID: 209362 RVA: 0x006E4AED File Offset: 0x006E2CED
+		// Token: 0x1700E247 RID: 57927
+		// (get) Token: 0x06036474 RID: 222324 RVA: 0x007450F9 File Offset: 0x007432F9
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060331D3 RID: 209363 RVA: 0x006E4AFA File Offset: 0x006E2CFA
+		// Token: 0x06036475 RID: 222325 RVA: 0x00745106 File Offset: 0x00743306
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060331D4 RID: 209364 RVA: 0x006E4B04 File Offset: 0x006E2D04
+		// Token: 0x06036476 RID: 222326 RVA: 0x00745110 File Offset: 0x00743310
 		public static ISheriffChangeCriminalIdentity GetRootAsISheriffChangeCriminalIdentity(ByteBuffer _bb)
 		{
 			return ISheriffChangeCriminalIdentity.GetRootAsISheriffChangeCriminalIdentity(_bb, default(ISheriffChangeCriminalIdentity));
 		}
 
-		// Token: 0x060331D5 RID: 209365 RVA: 0x006E4B20 File Offset: 0x006E2D20
+		// Token: 0x06036477 RID: 222327 RVA: 0x0074512C File Offset: 0x0074332C
 		public static ISheriffChangeCriminalIdentity GetRootAsISheriffChangeCriminalIdentity(ByteBuffer _bb, ISheriffChangeCriminalIdentity obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060331D6 RID: 209366 RVA: 0x006E4B3D File Offset: 0x006E2D3D
+		// Token: 0x06036478 RID: 222328 RVA: 0x00745149 File Offset: 0x00743349
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060331D7 RID: 209367 RVA: 0x006E4B4C File Offset: 0x006E2D4C
+		// Token: 0x06036479 RID: 222329 RVA: 0x00745158 File Offset: 0x00743358
 		public ISheriffChangeCriminalIdentity __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D665 RID: 54885
-		// (get) Token: 0x060331D8 RID: 209368 RVA: 0x006E4B5C File Offset: 0x006E2D5C
+		// Token: 0x1700E248 RID: 57928
+		// (get) Token: 0x0603647A RID: 222330 RVA: 0x00745168 File Offset: 0x00743368
 		public int CriminalId
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D666 RID: 54886
-		// (get) Token: 0x060331D9 RID: 209369 RVA: 0x006E4B98 File Offset: 0x006E2D98
+		// Token: 0x1700E249 RID: 57929
+		// (get) Token: 0x0603647B RID: 222331 RVA: 0x007451A4 File Offset: 0x007433A4
 		public int IdentityId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060331DA RID: 209370 RVA: 0x006E4BD4 File Offset: 0x006E2DD4
+		// Token: 0x0603647C RID: 222332 RVA: 0x007451E0 File Offset: 0x007433E0
 		public static Offset<ISheriffChangeCriminalIdentity> CreateISheriffChangeCriminalIdentity(FlatBufferBuilder builder, int CriminalId = 0, int IdentityId = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISheriffChangeCriminalIdentity.EndISheriffChangeCriminalIdentity(builder);
 		}
 
-		// Token: 0x060331DB RID: 209371 RVA: 0x006E4BF1 File Offset: 0x006E2DF1
+		// Token: 0x0603647D RID: 222333 RVA: 0x007451FD File Offset: 0x007433FD
 		public static void StartISheriffChangeCriminalIdentity(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060331DC RID: 209372 RVA: 0x006E4BFA File Offset: 0x006E2DFA
+		// Token: 0x0603647E RID: 222334 RVA: 0x00745206 File Offset: 0x00743406
 		public static void AddCriminalId(FlatBufferBuilder builder, int criminalId)
 		{
 			builder.AddInt(0, criminalId, 0);
 		}
 
-		// Token: 0x060331DD RID: 209373 RVA: 0x006E4C05 File Offset: 0x006E2E05
+		// Token: 0x0603647F RID: 222335 RVA: 0x00745211 File Offset: 0x00743411
 		public static void AddIdentityId(FlatBufferBuilder builder, int identityId)
 		{
 			builder.AddInt(1, identityId, 0);
 		}
 
-		// Token: 0x060331DE RID: 209374 RVA: 0x006E4C10 File Offset: 0x006E2E10
+		// Token: 0x06036480 RID: 222336 RVA: 0x0074521C File Offset: 0x0074341C
 		public static Offset<ISheriffChangeCriminalIdentity> EndISheriffChangeCriminalIdentity(FlatBufferBuilder builder)
 		{
 			return new Offset<ISheriffChangeCriminalIdentity>(builder.EndTable());
 		}
 
-		// Token: 0x060331DF RID: 209375 RVA: 0x006E4C20 File Offset: 0x006E2E20
+		// Token: 0x06036481 RID: 222337 RVA: 0x0074522C File Offset: 0x0074342C
 		public ISheriffChangeCriminalIdentityT UnPack()
 		{
 			ISheriffChangeCriminalIdentityT sheriffChangeCriminalIdentityT = new ISheriffChangeCriminalIdentityT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return sheriffChangeCriminalIdentityT;
 		}
 
-		// Token: 0x060331E0 RID: 209376 RVA: 0x006E4C3B File Offset: 0x006E2E3B
+		// Token: 0x06036482 RID: 222338 RVA: 0x00745247 File Offset: 0x00743447
 		public void UnPackTo(ISheriffChangeCriminalIdentityT _o)
 		{
 			_o.CriminalId = this.CriminalId;
 			_o.IdentityId = this.IdentityId;
 		}
 
-		// Token: 0x060331E1 RID: 209377 RVA: 0x006E4C58 File Offset: 0x006E2E58
+		// Token: 0x06036483 RID: 222339 RVA: 0x00745264 File Offset: 0x00743464
 		public static Offset<ISheriffChangeCriminalIdentity> Pack(FlatBufferBuilder builder, ISheriffChangeCriminalIdentityT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISheriffChangeCriminalIdentity.CreateISheriffChangeCriminalIdentity(builder, _o.CriminalId, _o.IdentityId);
 		}
 
-		// Token: 0x04011B2A RID: 72490
+		// Token: 0x04012B18 RID: 76568
 		private Table __p;
 	}
 }

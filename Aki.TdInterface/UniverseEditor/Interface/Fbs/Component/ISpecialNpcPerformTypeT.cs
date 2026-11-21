@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005972 RID: 22898
+	// Token: 0x02005F7F RID: 24447
 	public class ISpecialNpcPerformTypeT
 	{
-		// Token: 0x1700ABD6 RID: 43990
-		// (get) Token: 0x06026C2F RID: 158767 RVA: 0x005560F6 File Offset: 0x005542F6
-		// (set) Token: 0x06026C30 RID: 158768 RVA: 0x005560FE File Offset: 0x005542FE
+		// Token: 0x1700B50A RID: 46346
+		// (get) Token: 0x06029199 RID: 168345 RVA: 0x0059CD62 File Offset: 0x0059AF62
+		// (set) Token: 0x0602919A RID: 168346 RVA: 0x0059CD6A File Offset: 0x0059AF6A
 		public ESpecialNpcType Type { get; set; }
 
-		// Token: 0x06026C31 RID: 158769 RVA: 0x00556107 File Offset: 0x00554307
+		// Token: 0x0602919B RID: 168347 RVA: 0x0059CD73 File Offset: 0x0059AF73
 		public ISpecialNpcPerformTypeT()
 		{
 			this.Type = ESpecialNpcType.BaseRoleNpc;

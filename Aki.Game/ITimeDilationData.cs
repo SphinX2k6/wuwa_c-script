@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02003522 RID: 13602
+// Token: 0x02002A97 RID: 10903
 public interface ITimeDilationData
 {
-	// Token: 0x1700291B RID: 10523
-	// (get) Token: 0x0601DDC1 RID: 122305
-	// (set) Token: 0x0601DDC2 RID: 122306
+	// Token: 0x17002CB4 RID: 11444
+	// (get) Token: 0x0601BAE9 RID: 113385
+	// (set) Token: 0x0601BAEA RID: 113386
 	float TimeDilation { get; set; }
 }

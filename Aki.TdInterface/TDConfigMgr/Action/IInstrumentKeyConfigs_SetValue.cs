@@ -1,18 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B3E RID: 6974
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001CED RID: 7405
 	public class IInstrumentKeyConfigs_SetValue
 	{
-		// Token: 0x04005B59 RID: 23385
+		// Token: 0x04005FF7 RID: 24567
 		public List<IInstrumentKeyAttribute> Grids;
 
-		// Token: 0x04005B5A RID: 23386
+		// Token: 0x04005FF8 RID: 24568
 		public IInstrumentBoardSize BoardSize;
 	}
 }

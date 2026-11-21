@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020007AD RID: 1965
+	// Token: 0x02000799 RID: 1945
 	[NetMessage(EMessageId.HonamiStoryWeaponDressRequest)]
 	public sealed class HonamiStoryWeaponDressRequest : IMessage<HonamiStoryWeaponDressRequest>, IMessage, IEquatable<HonamiStoryWeaponDressRequest>, IDeepCloneable<HonamiStoryWeaponDressRequest>, IBufferMessage
 	{
-		// Token: 0x0600B107 RID: 45319 RVA: 0x001A85E6 File Offset: 0x001A67E6
+		// Token: 0x0600AFB1 RID: 44977 RVA: 0x001A5BBA File Offset: 0x001A3DBA
 		[NullableContext(1)]
 		public static HonamiStoryWeaponDressRequest Create()
 		{
 			return new HonamiStoryWeaponDressRequest();
 		}
 
-		// Token: 0x170023B7 RID: 9143
-		// (get) Token: 0x0600B108 RID: 45320 RVA: 0x001A85ED File Offset: 0x001A67ED
+		// Token: 0x1700236D RID: 9069
+		// (get) Token: 0x0600AFB2 RID: 44978 RVA: 0x001A5BC1 File Offset: 0x001A3DC1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170023B8 RID: 9144
-		// (get) Token: 0x0600B109 RID: 45321 RVA: 0x001A85F0 File Offset: 0x001A67F0
+		// Token: 0x1700236E RID: 9070
+		// (get) Token: 0x0600AFB3 RID: 44979 RVA: 0x001A5BC4 File Offset: 0x001A3DC4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600B10A RID: 45322 RVA: 0x001A85F7 File Offset: 0x001A67F7
+		// Token: 0x0600AFB4 RID: 44980 RVA: 0x001A5BCB File Offset: 0x001A3DCB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public HonamiStoryWeaponDressRequest()
 		{
 		}
 
-		// Token: 0x0600B10B RID: 45323 RVA: 0x001A85FF File Offset: 0x001A67FF
+		// Token: 0x0600AFB5 RID: 44981 RVA: 0x001A5BD3 File Offset: 0x001A3DD3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public HonamiStoryWeaponDressRequest(HonamiStoryWeaponDressRequest other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600B10C RID: 45324 RVA: 0x001A863C File Offset: 0x001A683C
+		// Token: 0x0600AFB6 RID: 44982 RVA: 0x001A5C10 File Offset: 0x001A3E10
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public HonamiStoryWeaponDressRequest Clone()
@@ -68,9 +68,9 @@ namespace Aki.Protocol
 			return new HonamiStoryWeaponDressRequest(this);
 		}
 
-		// Token: 0x170023B9 RID: 9145
-		// (get) Token: 0x0600B10D RID: 45325 RVA: 0x001A8644 File Offset: 0x001A6844
-		// (set) Token: 0x0600B10E RID: 45326 RVA: 0x001A864C File Offset: 0x001A684C
+		// Token: 0x1700236F RID: 9071
+		// (get) Token: 0x0600AFB7 RID: 44983 RVA: 0x001A5C18 File Offset: 0x001A3E18
+		// (set) Token: 0x0600AFB8 RID: 44984 RVA: 0x001A5C20 File Offset: 0x001A3E20
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int WeaponItemId
@@ -85,9 +85,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170023BA RID: 9146
-		// (get) Token: 0x0600B10F RID: 45327 RVA: 0x001A8655 File Offset: 0x001A6855
-		// (set) Token: 0x0600B110 RID: 45328 RVA: 0x001A865D File Offset: 0x001A685D
+		// Token: 0x17002370 RID: 9072
+		// (get) Token: 0x0600AFB9 RID: 44985 RVA: 0x001A5C29 File Offset: 0x001A3E29
+		// (set) Token: 0x0600AFBA RID: 44986 RVA: 0x001A5C31 File Offset: 0x001A3E31
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RackIndex
@@ -102,9 +102,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170023BB RID: 9147
-		// (get) Token: 0x0600B111 RID: 45329 RVA: 0x001A8666 File Offset: 0x001A6866
-		// (set) Token: 0x0600B112 RID: 45330 RVA: 0x001A866E File Offset: 0x001A686E
+		// Token: 0x17002371 RID: 9073
+		// (get) Token: 0x0600AFBB RID: 44987 RVA: 0x001A5C3A File Offset: 0x001A3E3A
+		// (set) Token: 0x0600AFBC RID: 44988 RVA: 0x001A5C42 File Offset: 0x001A3E42
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ActivityId
@@ -119,7 +119,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600B113 RID: 45331 RVA: 0x001A8677 File Offset: 0x001A6877
+		// Token: 0x0600AFBD RID: 44989 RVA: 0x001A5C4B File Offset: 0x001A3E4B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -127,7 +127,7 @@ namespace Aki.Protocol
 			return this.Equals(other as HonamiStoryWeaponDressRequest);
 		}
 
-		// Token: 0x0600B114 RID: 45332 RVA: 0x001A8688 File Offset: 0x001A6888
+		// Token: 0x0600AFBE RID: 44990 RVA: 0x001A5C5C File Offset: 0x001A3E5C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(HonamiStoryWeaponDressRequest other)
@@ -135,7 +135,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.WeaponItemId == other.WeaponItemId && this.RackIndex == other.RackIndex && this.ActivityId == other.ActivityId && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600B115 RID: 45333 RVA: 0x001A86E4 File Offset: 0x001A68E4
+		// Token: 0x0600AFBF RID: 44991 RVA: 0x001A5CB8 File Offset: 0x001A3EB8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -160,7 +160,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600B116 RID: 45334 RVA: 0x001A8755 File Offset: 0x001A6955
+		// Token: 0x0600AFC0 RID: 44992 RVA: 0x001A5D29 File Offset: 0x001A3F29
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -168,7 +168,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600B117 RID: 45335 RVA: 0x001A8762 File Offset: 0x001A6962
+		// Token: 0x0600AFC1 RID: 44993 RVA: 0x001A5D36 File Offset: 0x001A3F36
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -176,25 +176,25 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600B118 RID: 45336 RVA: 0x001A876C File Offset: 0x001A696C
+		// Token: 0x0600AFC2 RID: 44994 RVA: 0x001A5D40 File Offset: 0x001A3F40
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.ActivityId != 0)
+			if (this.WeaponItemId != 0)
 			{
-				output.WriteRawTag(16);
-				output.WriteInt32(this.ActivityId);
+				output.WriteRawTag(8);
+				output.WriteInt32(this.WeaponItemId);
 			}
 			if (this.RackIndex != 0)
 			{
-				output.WriteRawTag(32);
+				output.WriteRawTag(80);
 				output.WriteInt32(this.RackIndex);
 			}
-			if (this.WeaponItemId != 0)
+			if (this.ActivityId != 0)
 			{
-				output.WriteRawTag(40);
-				output.WriteInt32(this.WeaponItemId);
+				output.WriteRawTag(104);
+				output.WriteInt32(this.ActivityId);
 			}
 			if (this._unknownFields != null)
 			{
@@ -202,7 +202,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600B119 RID: 45337 RVA: 0x001A87E4 File Offset: 0x001A69E4
+		// Token: 0x0600AFC3 RID: 44995 RVA: 0x001A5DB4 File Offset: 0x001A3FB4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -227,7 +227,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600B11A RID: 45338 RVA: 0x001A8854 File Offset: 0x001A6A54
+		// Token: 0x0600AFC4 RID: 44996 RVA: 0x001A5E24 File Offset: 0x001A4024
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(HonamiStoryWeaponDressRequest other)
@@ -251,7 +251,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600B11B RID: 45339 RVA: 0x001A88B8 File Offset: 0x001A6AB8
+		// Token: 0x0600AFC5 RID: 44997 RVA: 0x001A5E88 File Offset: 0x001A4088
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -259,7 +259,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600B11C RID: 45340 RVA: 0x001A88C4 File Offset: 0x001A6AC4
+		// Token: 0x0600AFC6 RID: 44998 RVA: 0x001A5E94 File Offset: 0x001A4094
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -271,17 +271,17 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 16U)
+				if (num != 8U)
 				{
-					if (num != 32U)
+					if (num != 80U)
 					{
-						if (num != 40U)
+						if (num != 104U)
 						{
 							this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 						}
 						else
 						{
-							this.WeaponItemId = input.ReadInt32();
+							this.ActivityId = input.ReadInt32();
 						}
 					}
 					else
@@ -291,30 +291,30 @@ namespace Aki.Protocol
 				}
 				else
 				{
-					this.ActivityId = input.ReadInt32();
+					this.WeaponItemId = input.ReadInt32();
 				}
 			}
 		}
 
-		// Token: 0x04004F6A RID: 20330
+		// Token: 0x04004F63 RID: 20323
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04004F6B RID: 20331
-		public const int WeaponItemIdFieldNumber = 5;
+		// Token: 0x04004F64 RID: 20324
+		public const int WeaponItemIdFieldNumber = 1;
 
-		// Token: 0x04004F6C RID: 20332
+		// Token: 0x04004F65 RID: 20325
 		private int weaponItemId_;
 
-		// Token: 0x04004F6D RID: 20333
-		public const int RackIndexFieldNumber = 4;
+		// Token: 0x04004F66 RID: 20326
+		public const int RackIndexFieldNumber = 10;
 
-		// Token: 0x04004F6E RID: 20334
+		// Token: 0x04004F67 RID: 20327
 		private int rackIndex_;
 
-		// Token: 0x04004F6F RID: 20335
-		public const int ActivityIdFieldNumber = 2;
+		// Token: 0x04004F68 RID: 20328
+		public const int ActivityIdFieldNumber = 13;
 
-		// Token: 0x04004F70 RID: 20336
+		// Token: 0x04004F69 RID: 20329
 		private int activityId_;
 	}
 }

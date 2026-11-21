@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200016A RID: 362
+	// Token: 0x0200016D RID: 365
 	[NetMessage(EMessageId.BattlePassExpUpdateNotify)]
 	public sealed class BattlePassExpUpdateNotify : IMessage<BattlePassExpUpdateNotify>, IMessage, IEquatable<BattlePassExpUpdateNotify>, IDeepCloneable<BattlePassExpUpdateNotify>, IBufferMessage
 	{
-		// Token: 0x06002CDC RID: 11484 RVA: 0x0007471E File Offset: 0x0007291E
+		// Token: 0x06002D53 RID: 11603 RVA: 0x00075B52 File Offset: 0x00073D52
 		[NullableContext(1)]
 		public static BattlePassExpUpdateNotify Create()
 		{
 			return new BattlePassExpUpdateNotify();
 		}
 
-		// Token: 0x170006C7 RID: 1735
-		// (get) Token: 0x06002CDD RID: 11485 RVA: 0x00074725 File Offset: 0x00072925
+		// Token: 0x170006DB RID: 1755
+		// (get) Token: 0x06002D54 RID: 11604 RVA: 0x00075B59 File Offset: 0x00073D59
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170006C8 RID: 1736
-		// (get) Token: 0x06002CDE RID: 11486 RVA: 0x00074728 File Offset: 0x00072928
+		// Token: 0x170006DC RID: 1756
+		// (get) Token: 0x06002D55 RID: 11605 RVA: 0x00075B5C File Offset: 0x00073D5C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06002CDF RID: 11487 RVA: 0x0007472F File Offset: 0x0007292F
+		// Token: 0x06002D56 RID: 11606 RVA: 0x00075B63 File Offset: 0x00073D63
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BattlePassExpUpdateNotify()
 		{
 		}
 
-		// Token: 0x06002CE0 RID: 11488 RVA: 0x00074744 File Offset: 0x00072944
+		// Token: 0x06002D57 RID: 11607 RVA: 0x00075B78 File Offset: 0x00073D78
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BattlePassExpUpdateNotify(BattlePassExpUpdateNotify other) : this()
@@ -62,7 +62,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06002CE1 RID: 11489 RVA: 0x0007479D File Offset: 0x0007299D
+		// Token: 0x06002D58 RID: 11608 RVA: 0x00075BD1 File Offset: 0x00073DD1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BattlePassExpUpdateNotify Clone()
@@ -70,9 +70,9 @@ namespace Aki.Protocol
 			return new BattlePassExpUpdateNotify(this);
 		}
 
-		// Token: 0x170006C9 RID: 1737
-		// (get) Token: 0x06002CE2 RID: 11490 RVA: 0x000747A5 File Offset: 0x000729A5
-		// (set) Token: 0x06002CE3 RID: 11491 RVA: 0x000747AD File Offset: 0x000729AD
+		// Token: 0x170006DD RID: 1757
+		// (get) Token: 0x06002D59 RID: 11609 RVA: 0x00075BD9 File Offset: 0x00073DD9
+		// (set) Token: 0x06002D5A RID: 11610 RVA: 0x00075BE1 File Offset: 0x00073DE1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Level
@@ -87,9 +87,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170006CA RID: 1738
-		// (get) Token: 0x06002CE4 RID: 11492 RVA: 0x000747B6 File Offset: 0x000729B6
-		// (set) Token: 0x06002CE5 RID: 11493 RVA: 0x000747BE File Offset: 0x000729BE
+		// Token: 0x170006DE RID: 1758
+		// (get) Token: 0x06002D5B RID: 11611 RVA: 0x00075BEA File Offset: 0x00073DEA
+		// (set) Token: 0x06002D5C RID: 11612 RVA: 0x00075BF2 File Offset: 0x00073DF2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Exp
@@ -104,9 +104,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170006CB RID: 1739
-		// (get) Token: 0x06002CE6 RID: 11494 RVA: 0x000747C7 File Offset: 0x000729C7
-		// (set) Token: 0x06002CE7 RID: 11495 RVA: 0x000747CF File Offset: 0x000729CF
+		// Token: 0x170006DF RID: 1759
+		// (get) Token: 0x06002D5D RID: 11613 RVA: 0x00075BFB File Offset: 0x00073DFB
+		// (set) Token: 0x06002D5E RID: 11614 RVA: 0x00075C03 File Offset: 0x00073E03
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int WeeklyTotalExp
@@ -121,8 +121,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170006CC RID: 1740
-		// (get) Token: 0x06002CE8 RID: 11496 RVA: 0x000747D8 File Offset: 0x000729D8
+		// Token: 0x170006E0 RID: 1760
+		// (get) Token: 0x06002D5F RID: 11615 RVA: 0x00075C0C File Offset: 0x00073E0C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<PbBattlePassRecurringReward> RecurringRewards
@@ -133,7 +133,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06002CE9 RID: 11497 RVA: 0x000747E0 File Offset: 0x000729E0
+		// Token: 0x06002D60 RID: 11616 RVA: 0x00075C14 File Offset: 0x00073E14
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -141,7 +141,7 @@ namespace Aki.Protocol
 			return this.Equals(other as BattlePassExpUpdateNotify);
 		}
 
-		// Token: 0x06002CEA RID: 11498 RVA: 0x000747F0 File Offset: 0x000729F0
+		// Token: 0x06002D61 RID: 11617 RVA: 0x00075C24 File Offset: 0x00073E24
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(BattlePassExpUpdateNotify other)
@@ -149,7 +149,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.Level == other.Level && this.Exp == other.Exp && this.WeeklyTotalExp == other.WeeklyTotalExp && this.recurringRewards_.Equals(other.recurringRewards_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06002CEB RID: 11499 RVA: 0x00074860 File Offset: 0x00072A60
+		// Token: 0x06002D62 RID: 11618 RVA: 0x00075C94 File Offset: 0x00073E94
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06002CEC RID: 11500 RVA: 0x000748DF File Offset: 0x00072ADF
+		// Token: 0x06002D63 RID: 11619 RVA: 0x00075D13 File Offset: 0x00073F13
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -183,7 +183,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06002CED RID: 11501 RVA: 0x000748EC File Offset: 0x00072AEC
+		// Token: 0x06002D64 RID: 11620 RVA: 0x00075D20 File Offset: 0x00073F20
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -191,26 +191,26 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06002CEE RID: 11502 RVA: 0x000748F8 File Offset: 0x00072AF8
+		// Token: 0x06002D65 RID: 11621 RVA: 0x00075D2C File Offset: 0x00073F2C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			this.recurringRewards_.WriteTo(ref output, BattlePassExpUpdateNotify._repeated_recurringRewards_codec);
 			if (this.Exp != 0)
 			{
-				output.WriteRawTag(48);
+				output.WriteRawTag(56);
 				output.WriteInt32(this.Exp);
+			}
+			this.recurringRewards_.WriteTo(ref output, BattlePassExpUpdateNotify._repeated_recurringRewards_codec);
+			if (this.Level != 0)
+			{
+				output.WriteRawTag(88);
+				output.WriteInt32(this.Level);
 			}
 			if (this.WeeklyTotalExp != 0)
 			{
-				output.WriteRawTag(80);
-				output.WriteInt32(this.WeeklyTotalExp);
-			}
-			if (this.Level != 0)
-			{
 				output.WriteRawTag(104);
-				output.WriteInt32(this.Level);
+				output.WriteInt32(this.WeeklyTotalExp);
 			}
 			if (this._unknownFields != null)
 			{
@@ -218,7 +218,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06002CEF RID: 11503 RVA: 0x00074980 File Offset: 0x00072B80
+		// Token: 0x06002D66 RID: 11622 RVA: 0x00075DB4 File Offset: 0x00073FB4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -244,7 +244,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06002CF0 RID: 11504 RVA: 0x00074A04 File Offset: 0x00072C04
+		// Token: 0x06002D67 RID: 11623 RVA: 0x00075E38 File Offset: 0x00074038
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(BattlePassExpUpdateNotify other)
@@ -269,7 +269,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06002CF1 RID: 11505 RVA: 0x00074A79 File Offset: 0x00072C79
+		// Token: 0x06002D68 RID: 11624 RVA: 0x00075EAD File Offset: 0x000740AD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -277,7 +277,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06002CF2 RID: 11506 RVA: 0x00074A84 File Offset: 0x00072C84
+		// Token: 0x06002D69 RID: 11625 RVA: 0x00075EB8 File Offset: 0x000740B8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -289,29 +289,29 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 48U)
+				if (num <= 66U)
 				{
-					if (num == 26U)
-					{
-						this.recurringRewards_.AddEntriesFrom(ref input, BattlePassExpUpdateNotify._repeated_recurringRewards_codec);
-						continue;
-					}
-					if (num == 48U)
+					if (num == 56U)
 					{
 						this.Exp = input.ReadInt32();
+						continue;
+					}
+					if (num == 66U)
+					{
+						this.recurringRewards_.AddEntriesFrom(ref input, BattlePassExpUpdateNotify._repeated_recurringRewards_codec);
 						continue;
 					}
 				}
 				else
 				{
-					if (num == 80U)
+					if (num == 88U)
 					{
-						this.WeeklyTotalExp = input.ReadInt32();
+						this.Level = input.ReadInt32();
 						continue;
 					}
 					if (num == 104U)
 					{
-						this.Level = input.ReadInt32();
+						this.WeeklyTotalExp = input.ReadInt32();
 						continue;
 					}
 				}
@@ -319,34 +319,34 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04002813 RID: 10259
+		// Token: 0x04002887 RID: 10375
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04002814 RID: 10260
-		public const int LevelFieldNumber = 13;
+		// Token: 0x04002888 RID: 10376
+		public const int LevelFieldNumber = 11;
 
-		// Token: 0x04002815 RID: 10261
+		// Token: 0x04002889 RID: 10377
 		private int level_;
 
-		// Token: 0x04002816 RID: 10262
-		public const int ExpFieldNumber = 6;
+		// Token: 0x0400288A RID: 10378
+		public const int ExpFieldNumber = 7;
 
-		// Token: 0x04002817 RID: 10263
+		// Token: 0x0400288B RID: 10379
 		private int exp_;
 
-		// Token: 0x04002818 RID: 10264
-		public const int WeeklyTotalExpFieldNumber = 10;
+		// Token: 0x0400288C RID: 10380
+		public const int WeeklyTotalExpFieldNumber = 13;
 
-		// Token: 0x04002819 RID: 10265
+		// Token: 0x0400288D RID: 10381
 		private int weeklyTotalExp_;
 
-		// Token: 0x0400281A RID: 10266
-		public const int RecurringRewardsFieldNumber = 3;
+		// Token: 0x0400288E RID: 10382
+		public const int RecurringRewardsFieldNumber = 8;
 
-		// Token: 0x0400281B RID: 10267
-		private static readonly FieldCodec<PbBattlePassRecurringReward> _repeated_recurringRewards_codec = FieldCodec.ForMessage<PbBattlePassRecurringReward>(26U, PbBattlePassRecurringReward.Parser);
+		// Token: 0x0400288F RID: 10383
+		private static readonly FieldCodec<PbBattlePassRecurringReward> _repeated_recurringRewards_codec = FieldCodec.ForMessage<PbBattlePassRecurringReward>(66U, PbBattlePassRecurringReward.Parser);
 
-		// Token: 0x0400281C RID: 10268
+		// Token: 0x04002890 RID: 10384
 		private readonly RepeatedField<PbBattlePassRecurringReward> recurringRewards_ = new RepeatedField<PbBattlePassRecurringReward>();
 	}
 }

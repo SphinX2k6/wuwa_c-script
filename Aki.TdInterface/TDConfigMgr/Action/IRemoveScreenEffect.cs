@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DA0 RID: 7584
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001FB7 RID: 8119
 	public class IRemoveScreenEffect : IRemoveEffectBase
 	{
-		// Token: 0x0600A289 RID: 41609 RVA: 0x001719EC File Offset: 0x0016FBEC
+		// Token: 0x0600AC93 RID: 44179 RVA: 0x00186114 File Offset: 0x00184314
 		private IRemoveScreenEffect_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A28A RID: 41610 RVA: 0x00171A24 File Offset: 0x0016FC24
+		// Token: 0x0600AC94 RID: 44180 RVA: 0x0018614C File Offset: 0x0018434C
 		public static IRemoveScreenEffect Create([Nullable(2)] IRemoveScreenEffect instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A28B RID: 41611 RVA: 0x00171A37 File Offset: 0x0016FC37
+		// Token: 0x0600AC95 RID: 44181 RVA: 0x0018615F File Offset: 0x0018435F
 		public static IRemoveScreenEffect CreateFromSetValue([Nullable(2)] IRemoveScreenEffect_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A28C RID: 41612 RVA: 0x00171A4A File Offset: 0x0016FC4A
+		// Token: 0x0600AC96 RID: 44182 RVA: 0x00186172 File Offset: 0x00184372
 		public new IRemoveScreenEffect_SetValue ToSetValue()
 		{
 			return new IRemoveScreenEffect_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700322B RID: 12843
-		// (get) Token: 0x0600A28D RID: 41613 RVA: 0x00171A69 File Offset: 0x0016FC69
-		// (set) Token: 0x0600A28E RID: 41614 RVA: 0x00171A94 File Offset: 0x0016FC94
+		// Token: 0x170034C5 RID: 13509
+		// (get) Token: 0x0600AC97 RID: 44183 RVA: 0x00186191 File Offset: 0x00184391
+		// (set) Token: 0x0600AC98 RID: 44184 RVA: 0x001861BC File Offset: 0x001843BC
 		public override EEffectType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700322C RID: 12844
-		// (get) Token: 0x0600A28F RID: 41615 RVA: 0x00171AA2 File Offset: 0x0016FCA2
-		// (set) Token: 0x0600A290 RID: 41616 RVA: 0x00171ACD File Offset: 0x0016FCCD
+		// Token: 0x170034C6 RID: 13510
+		// (get) Token: 0x0600AC99 RID: 44185 RVA: 0x001861CA File Offset: 0x001843CA
+		// (set) Token: 0x0600AC9A RID: 44186 RVA: 0x001861F5 File Offset: 0x001843F5
 		public override string Path
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400619C RID: 24988
+		// Token: 0x04006724 RID: 26404
 		[Nullable(2)]
 		protected new IRemoveScreenEffect FbInstance;
 
-		// Token: 0x0400619D RID: 24989
+		// Token: 0x04006725 RID: 26405
 		[Nullable(2)]
 		protected new IRemoveScreenEffect_SetValue PocoInterface;
 	}

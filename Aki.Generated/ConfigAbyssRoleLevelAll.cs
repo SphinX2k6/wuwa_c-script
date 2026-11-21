@@ -9,13 +9,13 @@ namespace Aki.Config
 	// Token: 0x02000023 RID: 35
 	public class ConfigAbyssRoleLevelAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060000D2 RID: 210 RVA: 0x0005E79C File Offset: 0x0005C99C
+		// Token: 0x060000D2 RID: 210 RVA: 0x0006203C File Offset: 0x0006023C
 		static ConfigAbyssRoleLevelAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAbyssRoleLevelAll.CreateStaticDefaultValue), new Action(ConfigAbyssRoleLevelAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060000D3 RID: 211 RVA: 0x0005E7BC File Offset: 0x0005C9BC
+		// Token: 0x060000D3 RID: 211 RVA: 0x0006205C File Offset: 0x0006025C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAbyssRoleLevelAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060000D4 RID: 212 RVA: 0x0005E83B File Offset: 0x0005CA3B
+		// Token: 0x060000D4 RID: 212 RVA: 0x000620DB File Offset: 0x000602DB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAbyssRoleLevelAll.LogPair = null;
 			ConfigAbyssRoleLevelAll.HandleId = 0;
 		}
 
-		// Token: 0x060000D5 RID: 213 RVA: 0x0005E849 File Offset: 0x0005CA49
+		// Token: 0x060000D5 RID: 213 RVA: 0x000620E9 File Offset: 0x000602E9
 		public static void Init()
 		{
 			ConfigAbyssRoleLevelAll.HandleId = ConfigCommon.InitDataStatement(ConfigAbyssRoleLevelAll.HandleId, "db_dangoabysssuit.db", "select BinData from `AbyssRoleLevel`");
 		}
 
-		// Token: 0x060000D6 RID: 214 RVA: 0x0005E864 File Offset: 0x0005CA64
+		// Token: 0x060000D6 RID: 214 RVA: 0x00062104 File Offset: 0x00060304
 		[NullableContext(2)]
 		public static IReadOnlyList<AbyssRoleLevel> GetConfigList(bool useCache = true)
 		{

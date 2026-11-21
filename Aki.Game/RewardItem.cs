@@ -6,22 +6,22 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200132A RID: 4906
+// Token: 0x020007DE RID: 2014
 [NullableContext(2)]
 [Nullable(0)]
 public class RewardItem : UiPanelBase
 {
-	// Token: 0x06008832 RID: 34866 RVA: 0x001D0E36 File Offset: 0x001CF036
+	// Token: 0x06005BCD RID: 23501 RVA: 0x001D9CA2 File Offset: 0x001D7EA2
 	public RewardItem(int itemId)
 	{
 		this.ItemId = itemId;
 	}
 
-	// Token: 0x17000BA0 RID: 2976
-	// (get) Token: 0x06008833 RID: 34867 RVA: 0x001D0E45 File Offset: 0x001CF045
+	// Token: 0x17000BC0 RID: 3008
+	// (get) Token: 0x06005BCE RID: 23502 RVA: 0x001D9CB1 File Offset: 0x001D7EB1
 	protected int ItemId { get; }
 
-	// Token: 0x06008834 RID: 34868 RVA: 0x001D0E50 File Offset: 0x001CF050
+	// Token: 0x06005BCF RID: 23503 RVA: 0x001D9CBC File Offset: 0x001D7EBC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,7 +35,7 @@ public class RewardItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06008835 RID: 34869 RVA: 0x001D0EEC File Offset: 0x001CF0EC
+	// Token: 0x06005BD0 RID: 23504 RVA: 0x001D9D58 File Offset: 0x001D7F58
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RewardItem.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -46,7 +46,7 @@ public class RewardItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008836 RID: 34870 RVA: 0x001D0F30 File Offset: 0x001CF130
+	// Token: 0x06005BD1 RID: 23505 RVA: 0x001D9D9C File Offset: 0x001D7F9C
 	protected override void OnStart()
 	{
 		UUIText text = base.GetText(1);
@@ -68,7 +68,7 @@ public class RewardItem : UiPanelBase
 		this.CurrentValueDelegate = DelegateUtils.ToManualReleaseDelegate<FLTweenIntSetterDynamic>(new Action<int>(this.PlayCurrentValueAmount));
 	}
 
-	// Token: 0x06008837 RID: 34871 RVA: 0x001D0F94 File Offset: 0x001CF194
+	// Token: 0x06005BD2 RID: 23506 RVA: 0x001D9E00 File Offset: 0x001D8000
 	protected override void OnBeforeDestroy()
 	{
 		this.KillExpTweener();
@@ -82,7 +82,7 @@ public class RewardItem : UiPanelBase
 		sequencePlayer.Clear();
 	}
 
-	// Token: 0x06008838 RID: 34872 RVA: 0x001D0FC4 File Offset: 0x001CF1C4
+	// Token: 0x06005BD3 RID: 23507 RVA: 0x001D9E30 File Offset: 0x001D8030
 	protected void KillExpTweener()
 	{
 		if (this.ExpTweener != null)
@@ -92,7 +92,7 @@ public class RewardItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06008839 RID: 34873 RVA: 0x001D0FE1 File Offset: 0x001CF1E1
+	// Token: 0x06005BD4 RID: 23508 RVA: 0x001D9E4D File Offset: 0x001D804D
 	private void ShowLastValue()
 	{
 		UUIText text = base.GetText(1);
@@ -108,7 +108,7 @@ public class RewardItem : UiPanelBase
 		text2.SetText(this.CurrentValue.ToString(), true);
 	}
 
-	// Token: 0x0600883A RID: 34874 RVA: 0x001D1020 File Offset: 0x001CF220
+	// Token: 0x06005BD5 RID: 23509 RVA: 0x001D9E8C File Offset: 0x001D808C
 	public UniTask ShowAddValue()
 	{
 		RewardItem.<ShowAddValue>d__18 <ShowAddValue>d__;
@@ -119,7 +119,7 @@ public class RewardItem : UiPanelBase
 		return <ShowAddValue>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600883B RID: 34875 RVA: 0x001D1064 File Offset: 0x001CF264
+	// Token: 0x06005BD6 RID: 23510 RVA: 0x001D9ED0 File Offset: 0x001D80D0
 	private UniTask PlayAddAnimAndTween()
 	{
 		RewardItem.<PlayAddAnimAndTween>d__19 <PlayAddAnimAndTween>d__;
@@ -130,7 +130,7 @@ public class RewardItem : UiPanelBase
 		return <PlayAddAnimAndTween>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600883C RID: 34876 RVA: 0x001D10A8 File Offset: 0x001CF2A8
+	// Token: 0x06005BD7 RID: 23511 RVA: 0x001D9F14 File Offset: 0x001D8114
 	private void ShowRatio(bool isNeedRatio)
 	{
 		UUIItem item = base.GetItem(4);
@@ -150,7 +150,7 @@ public class RewardItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600883D RID: 34877 RVA: 0x001D10FD File Offset: 0x001CF2FD
+	// Token: 0x06005BD8 RID: 23512 RVA: 0x001D9F69 File Offset: 0x001D8169
 	private void PlayCurrentValueAmount(int value)
 	{
 		UUIText text = base.GetText(1);
@@ -161,7 +161,7 @@ public class RewardItem : UiPanelBase
 		text.SetText(value.ToString(), true);
 	}
 
-	// Token: 0x0600883E RID: 34878 RVA: 0x001D1118 File Offset: 0x001CF318
+	// Token: 0x06005BD9 RID: 23513 RVA: 0x001D9F84 File Offset: 0x001D8184
 	private void PlaySecondTween()
 	{
 		this.KillExpTweener();
@@ -177,7 +177,7 @@ public class RewardItem : UiPanelBase
 		}).Forget();
 	}
 
-	// Token: 0x0600883F RID: 34879 RVA: 0x001D1174 File Offset: 0x001CF374
+	// Token: 0x06005BDA RID: 23514 RVA: 0x001D9FE0 File Offset: 0x001D81E0
 	private void FinishCurrentValueAmount()
 	{
 		this.KillExpTweener();
@@ -199,7 +199,7 @@ public class RewardItem : UiPanelBase
 		sequencePlayer.PlayLevelSequenceByName("Addition02", false, null, false);
 	}
 
-	// Token: 0x06008840 RID: 34880 RVA: 0x001D11CD File Offset: 0x001CF3CD
+	// Token: 0x06005BDB RID: 23515 RVA: 0x001DA039 File Offset: 0x001D8239
 	public void UpdateItem(int addValue, int baseValue, bool isNeedRatio)
 	{
 		this.CurrentValue = addValue;
@@ -208,47 +208,47 @@ public class RewardItem : UiPanelBase
 		this.ShowRatio(isNeedRatio);
 	}
 
-	// Token: 0x04003CB8 RID: 15544
+	// Token: 0x04003D50 RID: 15696
 	private readonly int LastValue;
 
-	// Token: 0x04003CB9 RID: 15545
+	// Token: 0x04003D51 RID: 15697
 	private int BaseValue;
 
-	// Token: 0x04003CBA RID: 15546
+	// Token: 0x04003D52 RID: 15698
 	private int CurrentValue;
 
-	// Token: 0x04003CBB RID: 15547
+	// Token: 0x04003D53 RID: 15699
 	protected FLTweenIntSetterDynamic CurrentValueDelegate;
 
-	// Token: 0x04003CBC RID: 15548
+	// Token: 0x04003D54 RID: 15700
 	protected ULTweener ExpTweener;
 
-	// Token: 0x04003CBD RID: 15549
+	// Token: 0x04003D55 RID: 15701
 	private LevelSequencePlayer SequencePlayer;
 
-	// Token: 0x04003CBE RID: 15550
+	// Token: 0x04003D56 RID: 15702
 	private const int TWEEN_TIME = 1;
 
-	// Token: 0x0200797B RID: 31099
+	// Token: 0x02006B05 RID: 27397
 	[NullableContext(0)]
 	private static class ERewardItem
 	{
-		// Token: 0x0402800B RID: 163851
+		// Token: 0x04023338 RID: 144184
 		public const int Icon = 0;
 
-		// Token: 0x0402800C RID: 163852
+		// Token: 0x04023339 RID: 144185
 		public const int LastValue = 1;
 
-		// Token: 0x0402800D RID: 163853
+		// Token: 0x0402333A RID: 144186
 		public const int ChangeValue = 2;
 
-		// Token: 0x0402800E RID: 163854
+		// Token: 0x0402333B RID: 144187
 		public const int CurrentValue = 3;
 
-		// Token: 0x0402800F RID: 163855
+		// Token: 0x0402333C RID: 144188
 		public const int RatioItem = 4;
 
-		// Token: 0x04028010 RID: 163856
+		// Token: 0x0402333D RID: 144189
 		public const int Ratio = 5;
 	}
 }

@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x020020B5 RID: 8373
+// Token: 0x0200158C RID: 5516
 public class TeamCharacterLogData
 {
 }

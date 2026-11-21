@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000796 RID: 1942
+	// Token: 0x02000782 RID: 1922
 	[NetMessage(EMessageId.HonamiStoryPollutionUpdateNotify)]
 	public sealed class HonamiStoryPollutionUpdateNotify : IMessage<HonamiStoryPollutionUpdateNotify>, IMessage, IEquatable<HonamiStoryPollutionUpdateNotify>, IDeepCloneable<HonamiStoryPollutionUpdateNotify>, IBufferMessage
 	{
-		// Token: 0x0600AF34 RID: 44852 RVA: 0x001A4982 File Offset: 0x001A2B82
+		// Token: 0x0600ADDE RID: 44510 RVA: 0x001A1F5A File Offset: 0x001A015A
 		[NullableContext(1)]
 		public static HonamiStoryPollutionUpdateNotify Create()
 		{
 			return new HonamiStoryPollutionUpdateNotify();
 		}
 
-		// Token: 0x17002357 RID: 9047
-		// (get) Token: 0x0600AF35 RID: 44853 RVA: 0x001A4989 File Offset: 0x001A2B89
+		// Token: 0x1700230D RID: 8973
+		// (get) Token: 0x0600ADDF RID: 44511 RVA: 0x001A1F61 File Offset: 0x001A0161
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002358 RID: 9048
-		// (get) Token: 0x0600AF36 RID: 44854 RVA: 0x001A498C File Offset: 0x001A2B8C
+		// Token: 0x1700230E RID: 8974
+		// (get) Token: 0x0600ADE0 RID: 44512 RVA: 0x001A1F64 File Offset: 0x001A0164
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600AF37 RID: 44855 RVA: 0x001A4993 File Offset: 0x001A2B93
+		// Token: 0x0600ADE1 RID: 44513 RVA: 0x001A1F6B File Offset: 0x001A016B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public HonamiStoryPollutionUpdateNotify()
 		{
 		}
 
-		// Token: 0x0600AF38 RID: 44856 RVA: 0x001A499B File Offset: 0x001A2B9B
+		// Token: 0x0600ADE2 RID: 44514 RVA: 0x001A1F73 File Offset: 0x001A0173
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public HonamiStoryPollutionUpdateNotify(HonamiStoryPollutionUpdateNotify other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600AF39 RID: 44857 RVA: 0x001A49CC File Offset: 0x001A2BCC
+		// Token: 0x0600ADE3 RID: 44515 RVA: 0x001A1FA4 File Offset: 0x001A01A4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public HonamiStoryPollutionUpdateNotify Clone()
@@ -67,9 +67,9 @@ namespace Aki.Protocol
 			return new HonamiStoryPollutionUpdateNotify(this);
 		}
 
-		// Token: 0x17002359 RID: 9049
-		// (get) Token: 0x0600AF3A RID: 44858 RVA: 0x001A49D4 File Offset: 0x001A2BD4
-		// (set) Token: 0x0600AF3B RID: 44859 RVA: 0x001A49DC File Offset: 0x001A2BDC
+		// Token: 0x1700230F RID: 8975
+		// (get) Token: 0x0600ADE4 RID: 44516 RVA: 0x001A1FAC File Offset: 0x001A01AC
+		// (set) Token: 0x0600ADE5 RID: 44517 RVA: 0x001A1FB4 File Offset: 0x001A01B4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int PollutionLevel
@@ -84,9 +84,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700235A RID: 9050
-		// (get) Token: 0x0600AF3C RID: 44860 RVA: 0x001A49E5 File Offset: 0x001A2BE5
-		// (set) Token: 0x0600AF3D RID: 44861 RVA: 0x001A49ED File Offset: 0x001A2BED
+		// Token: 0x17002310 RID: 8976
+		// (get) Token: 0x0600ADE6 RID: 44518 RVA: 0x001A1FBD File Offset: 0x001A01BD
+		// (set) Token: 0x0600ADE7 RID: 44519 RVA: 0x001A1FC5 File Offset: 0x001A01C5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long PollutionStartTime
@@ -101,7 +101,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600AF3E RID: 44862 RVA: 0x001A49F6 File Offset: 0x001A2BF6
+		// Token: 0x0600ADE8 RID: 44520 RVA: 0x001A1FCE File Offset: 0x001A01CE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return this.Equals(other as HonamiStoryPollutionUpdateNotify);
 		}
 
-		// Token: 0x0600AF3F RID: 44863 RVA: 0x001A4A04 File Offset: 0x001A2C04
+		// Token: 0x0600ADE9 RID: 44521 RVA: 0x001A1FDC File Offset: 0x001A01DC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(HonamiStoryPollutionUpdateNotify other)
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.PollutionLevel == other.PollutionLevel && this.PollutionStartTime == other.PollutionStartTime && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600AF40 RID: 44864 RVA: 0x001A4A44 File Offset: 0x001A2C44
+		// Token: 0x0600ADEA RID: 44522 RVA: 0x001A201C File Offset: 0x001A021C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600AF41 RID: 44865 RVA: 0x001A4A9C File Offset: 0x001A2C9C
+		// Token: 0x0600ADEB RID: 44523 RVA: 0x001A2074 File Offset: 0x001A0274
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600AF42 RID: 44866 RVA: 0x001A4AA9 File Offset: 0x001A2CA9
+		// Token: 0x0600ADEC RID: 44524 RVA: 0x001A2081 File Offset: 0x001A0281
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -154,19 +154,19 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600AF43 RID: 44867 RVA: 0x001A4AB4 File Offset: 0x001A2CB4
+		// Token: 0x0600ADED RID: 44525 RVA: 0x001A208C File Offset: 0x001A028C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			if (this.PollutionStartTime != 0L)
 			{
-				output.WriteRawTag(72);
+				output.WriteRawTag(24);
 				output.WriteInt64(this.PollutionStartTime);
 			}
 			if (this.PollutionLevel != 0)
 			{
-				output.WriteRawTag(96);
+				output.WriteRawTag(40);
 				output.WriteInt32(this.PollutionLevel);
 			}
 			if (this._unknownFields != null)
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600AF44 RID: 44868 RVA: 0x001A4B10 File Offset: 0x001A2D10
+		// Token: 0x0600ADEE RID: 44526 RVA: 0x001A20E8 File Offset: 0x001A02E8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -196,7 +196,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600AF45 RID: 44869 RVA: 0x001A4B68 File Offset: 0x001A2D68
+		// Token: 0x0600ADEF RID: 44527 RVA: 0x001A2140 File Offset: 0x001A0340
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(HonamiStoryPollutionUpdateNotify other)
@@ -216,7 +216,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600AF46 RID: 44870 RVA: 0x001A4BB8 File Offset: 0x001A2DB8
+		// Token: 0x0600ADF0 RID: 44528 RVA: 0x001A2190 File Offset: 0x001A0390
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -224,7 +224,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600AF47 RID: 44871 RVA: 0x001A4BC4 File Offset: 0x001A2DC4
+		// Token: 0x0600ADF1 RID: 44529 RVA: 0x001A219C File Offset: 0x001A039C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -236,9 +236,9 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 72U)
+				if (num != 24U)
 				{
-					if (num != 96U)
+					if (num != 40U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
@@ -254,19 +254,19 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04004EE8 RID: 20200
+		// Token: 0x04004EE1 RID: 20193
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04004EE9 RID: 20201
-		public const int PollutionLevelFieldNumber = 12;
+		// Token: 0x04004EE2 RID: 20194
+		public const int PollutionLevelFieldNumber = 5;
 
-		// Token: 0x04004EEA RID: 20202
+		// Token: 0x04004EE3 RID: 20195
 		private int pollutionLevel_;
 
-		// Token: 0x04004EEB RID: 20203
-		public const int PollutionStartTimeFieldNumber = 9;
+		// Token: 0x04004EE4 RID: 20196
+		public const int PollutionStartTimeFieldNumber = 3;
 
-		// Token: 0x04004EEC RID: 20204
+		// Token: 0x04004EE5 RID: 20197
 		private long pollutionStartTime_;
 	}
 }

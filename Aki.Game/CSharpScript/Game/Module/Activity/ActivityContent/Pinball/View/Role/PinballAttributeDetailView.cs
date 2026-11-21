@@ -10,16 +10,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 {
-	// Token: 0x02006300 RID: 25344
+	// Token: 0x0200527E RID: 21118
 	public class PinballAttributeDetailView : UiViewBase
 	{
-		// Token: 0x0603FC66 RID: 261222 RVA: 0x00F6E43E File Offset: 0x00F6C63E
+		// Token: 0x06034927 RID: 215335 RVA: 0x00EB539A File Offset: 0x00EB359A
 		[NullableContext(1)]
 		public PinballAttributeDetailView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603FC67 RID: 261223 RVA: 0x00F6E448 File Offset: 0x00F6C648
+		// Token: 0x06034928 RID: 215336 RVA: 0x00EB53A4 File Offset: 0x00EB35A4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603FC68 RID: 261224 RVA: 0x00F6E4D4 File Offset: 0x00F6C6D4
+		// Token: 0x06034929 RID: 215337 RVA: 0x00EB5430 File Offset: 0x00EB3630
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PinballAttributeDetailView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -46,20 +46,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FC69 RID: 261225 RVA: 0x00F6E517 File Offset: 0x00F6C717
+		// Token: 0x0603492A RID: 215338 RVA: 0x00EB5473 File Offset: 0x00EB3673
 		[NullableContext(1)]
 		private PinballAttributeDetailItem CreateAttrItem()
 		{
 			return new PinballAttributeDetailItem();
 		}
 
-		// Token: 0x0603FC6A RID: 261226 RVA: 0x00F6E51E File Offset: 0x00F6C71E
+		// Token: 0x0603492B RID: 215339 RVA: 0x00EB547A File Offset: 0x00EB367A
 		private void OnCloseButtonClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0402149E RID: 136350
+		// Token: 0x0401BDCD RID: 114125
 		[Nullable(new byte[]
 		{
 			2,
@@ -67,11 +67,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 		})]
 		protected List<IPinballAttributeDetailItemData> AttributeDataList;
 
-		// Token: 0x0402149F RID: 136351
+		// Token: 0x0401BDCE RID: 114126
 		[Nullable(2)]
 		protected PopupCaptionItem CaptionItem;
 
-		// Token: 0x040214A0 RID: 136352
+		// Token: 0x0401BDCF RID: 114127
 		[Nullable(new byte[]
 		{
 			2,
@@ -80,14 +80,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 		})]
 		protected GenericScrollViewNew<PinballAttributeDetailItem, IPinballAttributeDetailItemData> AttrScrollView;
 
-		// Token: 0x0200C4F8 RID: 50424
+		// Token: 0x0200AEDF RID: 44767
 		private enum EComponent
 		{
-			// Token: 0x0403B716 RID: 243478
+			// Token: 0x04036078 RID: 221304
 			CaptionItem,
-			// Token: 0x0403B717 RID: 243479
+			// Token: 0x04036079 RID: 221305
 			AttrScrollView,
-			// Token: 0x0403B718 RID: 243480
+			// Token: 0x0403607A RID: 221306
 			AttrTemplateItem
 		}
 	}

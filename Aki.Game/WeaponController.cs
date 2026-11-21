@@ -15,13 +15,13 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x02002D03 RID: 11523
+// Token: 0x0200225D RID: 8797
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class WeaponController : UiControllerBase
 {
-	// Token: 0x060183AE RID: 99246 RVA: 0x0062AA60 File Offset: 0x00628C60
+	// Token: 0x06015C4F RID: 89167 RVA: 0x00650A58 File Offset: 0x0064EC58
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<WeaponItem, bool, bool>(EEventName.OnAddWeaponItem, new Action<WeaponItem, bool, bool>(this.OnAddWeaponItem));
@@ -29,7 +29,7 @@ public class WeaponController : UiControllerBase
 		EventSystem.Instance.Add<IReadOnlyList<int>>(EEventName.OnRemoveWeaponItem, new Action<IReadOnlyList<int>>(this.OnRemoveWeaponItem));
 	}
 
-	// Token: 0x060183AF RID: 99247 RVA: 0x0062AAC4 File Offset: 0x00628CC4
+	// Token: 0x06015C50 RID: 89168 RVA: 0x00650ABC File Offset: 0x0064ECBC
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove<WeaponItem, bool, bool>(EEventName.OnAddWeaponItem, new Action<WeaponItem, bool, bool>(this.OnAddWeaponItem));
@@ -37,7 +37,7 @@ public class WeaponController : UiControllerBase
 		EventSystem.Instance.Remove<IReadOnlyList<int>>(EEventName.OnRemoveWeaponItem, new Action<IReadOnlyList<int>>(this.OnRemoveWeaponItem));
 	}
 
-	// Token: 0x060183B0 RID: 99248 RVA: 0x0062AB28 File Offset: 0x00628D28
+	// Token: 0x06015C51 RID: 89169 RVA: 0x00650B20 File Offset: 0x0064ED20
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.EquipTakeOnNotify, delegate(IMessage msg, Net.CallbackStatus status)
@@ -73,26 +73,26 @@ public class WeaponController : UiControllerBase
 		});
 	}
 
-	// Token: 0x060183B1 RID: 99249 RVA: 0x0062AB93 File Offset: 0x00628D93
+	// Token: 0x06015C52 RID: 89170 RVA: 0x00650B8B File Offset: 0x0064ED8B
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.EquipTakeOnNotify);
 		Net.Instance.UnRegister(ENotifyMessageId.EntityEquipChangeNotify);
 	}
 
-	// Token: 0x060183B2 RID: 99250 RVA: 0x0062ABB5 File Offset: 0x00628DB5
+	// Token: 0x06015C53 RID: 89171 RVA: 0x00650BAD File Offset: 0x0064EDAD
 	private void OnAddWeaponItem(WeaponItem weaponItem, bool b, bool arg3)
 	{
 		WeaponModel.Instance.AddWeaponData(weaponItem);
 	}
 
-	// Token: 0x060183B3 RID: 99251 RVA: 0x0062ABC2 File Offset: 0x00628DC2
+	// Token: 0x06015C54 RID: 89172 RVA: 0x00650BBA File Offset: 0x0064EDBA
 	private void OnResponseWeaponItem(WeaponItem weaponItem)
 	{
 		WeaponModel.Instance.AddWeaponData(weaponItem);
 	}
 
-	// Token: 0x060183B4 RID: 99252 RVA: 0x0062ABD0 File Offset: 0x00628DD0
+	// Token: 0x06015C55 RID: 89173 RVA: 0x00650BC8 File Offset: 0x0064EDC8
 	private void OnRemoveWeaponItem(IReadOnlyList<int> uniqueIdList)
 	{
 		foreach (int incId in uniqueIdList)
@@ -101,7 +101,7 @@ public class WeaponController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060183B5 RID: 99253 RVA: 0x0062AC1C File Offset: 0x00628E1C
+	// Token: 0x06015C56 RID: 89174 RVA: 0x00650C14 File Offset: 0x0064EE14
 	public void SendPbWeaponLevelUpRequest(int incId, ISelectedData[] consumeList)
 	{
 		WeaponLevelUpRequest weaponLevelUpRequest = WeaponLevelUpRequest.Create();
@@ -126,11 +126,11 @@ public class WeaponController : UiControllerBase
 				WeaponModel.Instance.WeaponLevelUpResponse(weaponLevelUpResponse);
 				return;
 			}
-			ErrorCodeController.Instance.OpenErrorCodeTipView(weaponLevelUpResponse.ErrorCode, 21842, null, true, true);
+			ErrorCodeController.Instance.OpenErrorCodeTipView(weaponLevelUpResponse.ErrorCode, 17061, null, true, true);
 		}, 0);
 	}
 
-	// Token: 0x060183B6 RID: 99254 RVA: 0x0062ACB8 File Offset: 0x00628EB8
+	// Token: 0x06015C57 RID: 89175 RVA: 0x00650CB0 File Offset: 0x0064EEB0
 	public void SendPbWeaponBreachRequest(int incId, Action<int> callback)
 	{
 		WeaponBreachRequest weaponBreachRequest = WeaponBreachRequest.Create();
@@ -158,12 +158,12 @@ public class WeaponController : UiControllerBase
 			}
 			else
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(weaponBreachResponse.ErrorCode, 24159, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(weaponBreachResponse.ErrorCode, 26514, null, true, true);
 			}
 		}, 0);
 	}
 
-	// Token: 0x060183B7 RID: 99255 RVA: 0x0062AD08 File Offset: 0x00628F08
+	// Token: 0x06015C58 RID: 89176 RVA: 0x00650D00 File Offset: 0x0064EF00
 	public void SendPbResonUpRequest(int incId, WeaponConsumeItem[] consumeList)
 	{
 		if (RoleController.Instance.CheckCharacterInBattleTagAndShowTips(false))
@@ -188,11 +188,11 @@ public class WeaponController : UiControllerBase
 				EventSystem.Instance.Emit<int, int>(EEventName.WeaponResonanceSuccess, incId, lastLevel);
 				return;
 			}
-			ErrorCodeController.Instance.OpenErrorCodeTipView(weaponResonUpResponse.ErrorCode, 24490, null, true, true);
+			ErrorCodeController.Instance.OpenErrorCodeTipView(weaponResonUpResponse.ErrorCode, 21310, null, true, true);
 		}, 0);
 	}
 
-	// Token: 0x060183B8 RID: 99256 RVA: 0x0062AD88 File Offset: 0x00628F88
+	// Token: 0x06015C59 RID: 89177 RVA: 0x00650D80 File Offset: 0x0064EF80
 	public void SendPbEquipTakeOnRequest(int roleId, EquipPos pos, int equipIncId)
 	{
 		if (RoleController.Instance.CheckCharacterInBattleTagAndShowTips(true))
@@ -220,11 +220,11 @@ public class WeaponController : UiControllerBase
 				WeaponModel.Instance.WeaponRoleLoadEquip(equipTakeOnResponse.DataList);
 				return;
 			}
-			ErrorCodeController.Instance.OpenErrorCodeTipView(equipTakeOnResponse.ErrorCode, 28184, null, true, true);
+			ErrorCodeController.Instance.OpenErrorCodeTipView(equipTakeOnResponse.ErrorCode, 29980, null, true, true);
 		}, 0);
 	}
 
-	// Token: 0x060183B9 RID: 99257 RVA: 0x0062AE10 File Offset: 0x00629010
+	// Token: 0x06015C5A RID: 89178 RVA: 0x00650E08 File Offset: 0x0064F008
 	private static void LoadWeaponModelInCurrentObserver(int[] models, int[] modelsIndex, int transformId, string weaponCase, string scabbardCase, UiModelBase weaponModel, UiModelBase scabbardModel, bool needMeshStreaming = false, int? skinId = null)
 	{
 		WeaponController.<>c__DisplayClass11_0 CS$<>8__locals1 = new WeaponController.<>c__DisplayClass11_0();
@@ -315,7 +315,7 @@ public class WeaponController : UiControllerBase
 		CS$<>8__locals1.scabbardPromise.SetResult();
 	}
 
-	// Token: 0x060183BA RID: 99258 RVA: 0x0062B080 File Offset: 0x00629280
+	// Token: 0x06015C5B RID: 89179 RVA: 0x00651078 File Offset: 0x0064F278
 	private static void WeaponLoadCallBack(UiModelBase weaponModel, TWeaponModelTransform transformData, UiModelActorComponent weaponActorComponent)
 	{
 		UiModelUtil.Instance.SetVisible(weaponModel, true);
@@ -351,7 +351,7 @@ public class WeaponController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060183BB RID: 99259 RVA: 0x0062B190 File Offset: 0x00629390
+	// Token: 0x06015C5C RID: 89180 RVA: 0x00651188 File Offset: 0x0064F388
 	private static void ScabbardLoadCallBack(UiModelBase scabbardModel, TWeaponModelTransform transformData, string weaponCase)
 	{
 		UiModelUtil.Instance.SetVisible(scabbardModel, true);
@@ -390,7 +390,7 @@ public class WeaponController : UiControllerBase
 		actor.K2_SetActorRotation(rotator.ToUeRotator(), false);
 	}
 
-	// Token: 0x060183BC RID: 99260 RVA: 0x0062B2C8 File Offset: 0x006294C8
+	// Token: 0x06015C5D RID: 89181 RVA: 0x006512C0 File Offset: 0x0064F4C0
 	private static UniTask StartRotate(CustomPromise weaponPromise, CustomPromise scabbardPromise, UiModelBase weaponModel, TWeaponModelTransform transformData)
 	{
 		WeaponController.<StartRotate>d__14 <StartRotate>d__;
@@ -404,7 +404,7 @@ public class WeaponController : UiControllerBase
 		return <StartRotate>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060183BD RID: 99261 RVA: 0x0062B324 File Offset: 0x00629524
+	// Token: 0x06015C5E RID: 89182 RVA: 0x0065131C File Offset: 0x0064F51C
 	public void SelectedWeaponSkinChange(int incId, int skinId, SkeletalObserverHandle weaponObserver, SkeletalObserverHandle weaponScabbardObserver, bool needMeshStreaming = false)
 	{
 		if (skinId == -1)
@@ -417,7 +417,7 @@ public class WeaponController : UiControllerBase
 		WeaponController.LoadWeaponModelInCurrentObserver(weaponSkinConfig.Models(), weaponSkinConfig.ModelsIndex(), weaponSkinConfig.TransformId, "WeaponSkinCase", "WeaponSkinCase", weaponObserver.Model, weaponScabbardObserver.Model, needMeshStreaming, new int?(skinId));
 	}
 
-	// Token: 0x060183BE RID: 99262 RVA: 0x0062B3E0 File Offset: 0x006295E0
+	// Token: 0x06015C5F RID: 89183 RVA: 0x006513D8 File Offset: 0x0064F5D8
 	public void OnSelectedWeaponChange(WeaponDataBase weaponInstance, SkeletalObserverHandle weaponObserver, SkeletalObserverHandle weaponScabbardObserver, int skinId = -1, bool needMeshStreaming = false)
 	{
 		if (skinId == -1)
@@ -445,7 +445,7 @@ public class WeaponController : UiControllerBase
 		WeaponController.LoadWeaponModelInCurrentObserver(weaponInstance.GetModels(skinId), weaponInstance.GetModelsIndex(skinId), weaponInstance.GetTransformId(skinId), "WeaponCase", "WeaponScabbardCase", weaponObserver.Model, weaponScabbardObserver.Model, needMeshStreaming, (skinId != -1) ? new int?(skinId) : null);
 	}
 
-	// Token: 0x060183BF RID: 99263 RVA: 0x0062B48C File Offset: 0x0062968C
+	// Token: 0x06015C60 RID: 89184 RVA: 0x00651484 File Offset: 0x0064F684
 	public void PlayWeaponRenderingMaterial(string materialId, SkeletalObserverHandle weaponObserver, SkeletalObserverHandle weaponScabbardObserver = null)
 	{
 		UiModelUtil.Instance.SetRenderingMaterial(weaponObserver.Model, materialId);
@@ -455,13 +455,13 @@ public class WeaponController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060183C0 RID: 99264 RVA: 0x0062B4B5 File Offset: 0x006296B5
+	// Token: 0x06015C61 RID: 89185 RVA: 0x006514AD File Offset: 0x0064F6AD
 	public void ApplyWeaponLevelMaterial(USkinnedMeshComponent mesh, PD_WeaponLevelMaterialDatas_C data, int level = 0)
 	{
 		BP_CharacterRenderingFunctionLibrary_C.ApplyWeaponLevelMaterial(mesh, data, level, mesh);
 	}
 
-	// Token: 0x060183C1 RID: 99265 RVA: 0x0062B4C4 File Offset: 0x006296C4
+	// Token: 0x06015C62 RID: 89186 RVA: 0x006514BC File Offset: 0x0064F6BC
 	public UniTask LoadCharacterRenderingFunctionLibraryAsync()
 	{
 		WeaponController.<LoadCharacterRenderingFunctionLibraryAsync>d__19 <LoadCharacterRenderingFunctionLibraryAsync>d__;
@@ -471,7 +471,7 @@ public class WeaponController : UiControllerBase
 		return <LoadCharacterRenderingFunctionLibraryAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060183C2 RID: 99266 RVA: 0x0062B500 File Offset: 0x00629700
+	// Token: 0x06015C63 RID: 89187 RVA: 0x006514F8 File Offset: 0x0064F6F8
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -487,7 +487,7 @@ public class WeaponController : UiControllerBase
 		return <LoadWeaponLevelMaterialDataAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060183C3 RID: 99267 RVA: 0x0062B544 File Offset: 0x00629744
+	// Token: 0x06015C64 RID: 89188 RVA: 0x0065153C File Offset: 0x0064F73C
 	public void RoleFadeIn(TsUiSceneRoleActor roleActor, string curveId = "RoleFadeInCurve")
 	{
 		UiModelFadeComponent uiModelFadeComponent = roleActor.Model.CheckGetComponent<UiModelFadeComponent>();
@@ -499,7 +499,7 @@ public class WeaponController : UiControllerBase
 		uiModelFadeComponent.Fade(1f, 0f, (float)intConfig.Value, curveId, null);
 	}
 
-	// Token: 0x060183C4 RID: 99268 RVA: 0x0062B588 File Offset: 0x00629788
+	// Token: 0x06015C65 RID: 89189 RVA: 0x00651580 File Offset: 0x0064F780
 	public void RoleFadeOut(TsUiSceneRoleActor roleActor, string curveId = "RoleFadeOutCurve")
 	{
 		UiModelFadeComponent uiModelFadeComponent = roleActor.Model.CheckGetComponent<UiModelFadeComponent>();
@@ -511,8 +511,8 @@ public class WeaponController : UiControllerBase
 		uiModelFadeComponent.Fade(0f, 1f, (float)intConfig.Value, curveId, null);
 	}
 
-	// Token: 0x170020AA RID: 8362
-	// (get) Token: 0x060183C5 RID: 99269 RVA: 0x0062B5C9 File Offset: 0x006297C9
+	// Token: 0x17002105 RID: 8453
+	// (get) Token: 0x06015C66 RID: 89190 RVA: 0x006515C1 File Offset: 0x0064F7C1
 	public static WeaponController Instance
 	{
 		get
@@ -521,7 +521,7 @@ public class WeaponController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060183C6 RID: 99270 RVA: 0x0062B5D0 File Offset: 0x006297D0
+	// Token: 0x06015C67 RID: 89191 RVA: 0x006515C8 File Offset: 0x0064F7C8
 	public static WeaponController GetOrCreateInstance()
 	{
 		if (WeaponController._Instance == null)
@@ -531,7 +531,7 @@ public class WeaponController : UiControllerBase
 		return WeaponController._Instance;
 	}
 
-	// Token: 0x060183C7 RID: 99271 RVA: 0x0062B5E4 File Offset: 0x006297E4
+	// Token: 0x06015C68 RID: 89192 RVA: 0x006515DC File Offset: 0x0064F7DC
 	public static bool CreateInstance()
 	{
 		if (WeaponController._Instance != null)
@@ -542,24 +542,24 @@ public class WeaponController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x060183C8 RID: 99272 RVA: 0x0062B5FA File Offset: 0x006297FA
+	// Token: 0x06015C69 RID: 89193 RVA: 0x006515F2 File Offset: 0x0064F7F2
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060183C9 RID: 99273 RVA: 0x0062B5FC File Offset: 0x006297FC
+	// Token: 0x06015C6A RID: 89194 RVA: 0x006515F4 File Offset: 0x0064F7F4
 	public static void ResetStaticDefaultValue()
 	{
 		WeaponController._Instance = null;
 	}
 
-	// Token: 0x060183CA RID: 99274 RVA: 0x0062B604 File Offset: 0x00629804
+	// Token: 0x06015C6B RID: 89195 RVA: 0x006515FC File Offset: 0x0064F7FC
 	static WeaponController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(WeaponController.CreateStaticDefaultValue), new Action(WeaponController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400B40E RID: 46094
+	// Token: 0x0400B783 RID: 46979
 	[Nullable(2)]
 	private static WeaponController _Instance;
 }

@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001BF7 RID: 7159
+	// Token: 0x02001DE6 RID: 7654
 	public class IMonsterNpcInteract_SetValue
 	{
-		// Token: 0x04005D5B RID: 23899
+		// Token: 0x04006282 RID: 25218
 		public EExecClientBattleActionType Type;
 
-		// Token: 0x04005D5C RID: 23900
+		// Token: 0x04006283 RID: 25219
 		public int MonsterNpcEntityId;
 
-		// Token: 0x04005D5D RID: 23901
-		[Nullable(1)]
+		// Token: 0x04006284 RID: 25220
 		public IMonsterNpcInteractTriggerHook Config;
 	}
 }

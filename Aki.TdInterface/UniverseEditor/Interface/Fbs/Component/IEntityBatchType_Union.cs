@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005165 RID: 20837
+	// Token: 0x020056CA RID: 22218
 	public enum IEntityBatchType_Union : byte
 	{
-		// Token: 0x0400E20D RID: 57869
+		// Token: 0x0400EE0A RID: 60938
 		NONE,
-		// Token: 0x0400E20E RID: 57870
+		// Token: 0x0400EE0B RID: 60939
 		IEntityBatchType,
-		// Token: 0x0400E20F RID: 57871
+		// Token: 0x0400EE0C RID: 60940
 		IEntityListBatch
 	}
 }

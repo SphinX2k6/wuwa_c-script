@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x0200457B RID: 17787
+	// Token: 0x020049E3 RID: 18915
 	public struct IRollBlockGridQuantum : IFlatbufferObject
 	{
-		// Token: 0x17007E60 RID: 32352
-		// (get) Token: 0x0601ADB7 RID: 110007 RVA: 0x003D5582 File Offset: 0x003D3782
+		// Token: 0x170084A1 RID: 33953
+		// (get) Token: 0x0601C58C RID: 116108 RVA: 0x0040181E File Offset: 0x003FFA1E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601ADB8 RID: 110008 RVA: 0x003D558F File Offset: 0x003D378F
+		// Token: 0x0601C58D RID: 116109 RVA: 0x0040182B File Offset: 0x003FFA2B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601ADB9 RID: 110009 RVA: 0x003D5598 File Offset: 0x003D3798
+		// Token: 0x0601C58E RID: 116110 RVA: 0x00401834 File Offset: 0x003FFA34
 		public static IRollBlockGridQuantum GetRootAsIRollBlockGridQuantum(ByteBuffer _bb)
 		{
 			return IRollBlockGridQuantum.GetRootAsIRollBlockGridQuantum(_bb, default(IRollBlockGridQuantum));
 		}
 
-		// Token: 0x0601ADBA RID: 110010 RVA: 0x003D55B4 File Offset: 0x003D37B4
+		// Token: 0x0601C58F RID: 116111 RVA: 0x00401850 File Offset: 0x003FFA50
 		public static IRollBlockGridQuantum GetRootAsIRollBlockGridQuantum(ByteBuffer _bb, IRollBlockGridQuantum obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601ADBB RID: 110011 RVA: 0x003D55D1 File Offset: 0x003D37D1
+		// Token: 0x0601C590 RID: 116112 RVA: 0x0040186D File Offset: 0x003FFA6D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601ADBC RID: 110012 RVA: 0x003D55E0 File Offset: 0x003D37E0
+		// Token: 0x0601C591 RID: 116113 RVA: 0x0040187C File Offset: 0x003FFA7C
 		public IRollBlockGridQuantum __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007E61 RID: 32353
-		// (get) Token: 0x0601ADBD RID: 110013 RVA: 0x003D55F0 File Offset: 0x003D37F0
+		// Token: 0x170084A2 RID: 33954
+		// (get) Token: 0x0601C592 RID: 116114 RVA: 0x0040188C File Offset: 0x003FFA8C
 		public ERollBlockGridType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007E62 RID: 32354
-		// (get) Token: 0x0601ADBE RID: 110014 RVA: 0x003D562C File Offset: 0x003D382C
+		// Token: 0x170084A3 RID: 33955
+		// (get) Token: 0x0601C593 RID: 116115 RVA: 0x004018C8 File Offset: 0x003FFAC8
 		public TRollBlock BlockType
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601ADBF RID: 110015 RVA: 0x003D5668 File Offset: 0x003D3868
+		// Token: 0x0601C594 RID: 116116 RVA: 0x00401904 File Offset: 0x003FFB04
 		public TTable? Block<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -89,19 +89,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0601ADC0 RID: 110016 RVA: 0x003D56AC File Offset: 0x003D38AC
+		// Token: 0x0601C595 RID: 116117 RVA: 0x00401948 File Offset: 0x003FFB48
 		public IRollBlock1 BlockAsIRollBlock1()
 		{
 			return this.Block<IRollBlock1>().Value;
 		}
 
-		// Token: 0x0601ADC1 RID: 110017 RVA: 0x003D56C8 File Offset: 0x003D38C8
+		// Token: 0x0601C596 RID: 116118 RVA: 0x00401964 File Offset: 0x003FFB64
 		public IRollBlock2 BlockAsIRollBlock2()
 		{
 			return this.Block<IRollBlock2>().Value;
 		}
 
-		// Token: 0x0601ADC2 RID: 110018 RVA: 0x003D56E4 File Offset: 0x003D38E4
+		// Token: 0x0601C597 RID: 116119 RVA: 0x00401980 File Offset: 0x003FFB80
 		public TRollBlockItem ItemsType(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -112,8 +112,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return (TRollBlockItem)this.__p.bb.Get(this.__p.__vector(num) + j);
 		}
 
-		// Token: 0x17007E63 RID: 32355
-		// (get) Token: 0x0601ADC3 RID: 110019 RVA: 0x003D5724 File Offset: 0x003D3924
+		// Token: 0x170084A4 RID: 33956
+		// (get) Token: 0x0601C598 RID: 116120 RVA: 0x004019C0 File Offset: 0x003FFBC0
 		public int ItemsTypeLength
 		{
 			get
@@ -127,13 +127,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601ADC4 RID: 110020 RVA: 0x003D5750 File Offset: 0x003D3950
+		// Token: 0x0601C599 RID: 116121 RVA: 0x004019EC File Offset: 0x003FFBEC
 		public Span<TRollBlockItem> GetItemsTypeBytes()
 		{
 			return this.__p.__vector_as_span<TRollBlockItem>(10, 1);
 		}
 
-		// Token: 0x0601ADC5 RID: 110021 RVA: 0x003D5760 File Offset: 0x003D3960
+		// Token: 0x0601C59A RID: 116122 RVA: 0x004019FC File Offset: 0x003FFBFC
 		public TRollBlockItem[] GetItemsTypeArray()
 		{
 			int num = this.__p.__offset(10);
@@ -151,7 +151,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return array;
 		}
 
-		// Token: 0x0601ADC6 RID: 110022 RVA: 0x003D57CC File Offset: 0x003D39CC
+		// Token: 0x0601C59B RID: 116123 RVA: 0x00401A68 File Offset: 0x003FFC68
 		public TTable? Items<TTable>(int j) where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(12);
@@ -162,8 +162,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return new TTable?(this.__p.__union<TTable>(this.__p.__vector(num) + j * 4));
 		}
 
-		// Token: 0x17007E64 RID: 32356
-		// (get) Token: 0x0601ADC7 RID: 110023 RVA: 0x003D5814 File Offset: 0x003D3A14
+		// Token: 0x170084A5 RID: 33957
+		// (get) Token: 0x0601C59C RID: 116124 RVA: 0x00401AB0 File Offset: 0x003FFCB0
 		public int ItemsLength
 		{
 			get
@@ -177,8 +177,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007E65 RID: 32357
-		// (get) Token: 0x0601ADC8 RID: 110024 RVA: 0x003D5840 File Offset: 0x003D3A40
+		// Token: 0x170084A6 RID: 33958
+		// (get) Token: 0x0601C59D RID: 116125 RVA: 0x00401ADC File Offset: 0x003FFCDC
 		public byte NullMask
 		{
 			get
@@ -192,7 +192,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601ADC9 RID: 110025 RVA: 0x003D587D File Offset: 0x003D3A7D
+		// Token: 0x0601C59E RID: 116126 RVA: 0x00401B19 File Offset: 0x003FFD19
 		public static Offset<IRollBlockGridQuantum> CreateIRollBlockGridQuantum(FlatBufferBuilder builder, ERollBlockGridType Type = ERollBlockGridType.Empty, TRollBlock Block_type = TRollBlock.NONE, int BlockOffset = 0, VectorOffset Items_typeOffset = default(VectorOffset), VectorOffset ItemsOffset = default(VectorOffset), byte NullMask = 0)
 		{
 			builder.StartTable(6);
@@ -205,37 +205,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IRollBlockGridQuantum.EndIRollBlockGridQuantum(builder);
 		}
 
-		// Token: 0x0601ADCA RID: 110026 RVA: 0x003D58B9 File Offset: 0x003D3AB9
+		// Token: 0x0601C59F RID: 116127 RVA: 0x00401B55 File Offset: 0x003FFD55
 		public static void StartIRollBlockGridQuantum(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x0601ADCB RID: 110027 RVA: 0x003D58C2 File Offset: 0x003D3AC2
+		// Token: 0x0601C5A0 RID: 116128 RVA: 0x00401B5E File Offset: 0x003FFD5E
 		public static void AddType(FlatBufferBuilder builder, ERollBlockGridType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601ADCC RID: 110028 RVA: 0x003D58CD File Offset: 0x003D3ACD
+		// Token: 0x0601C5A1 RID: 116129 RVA: 0x00401B69 File Offset: 0x003FFD69
 		public static void AddBlockType(FlatBufferBuilder builder, TRollBlock blockType)
 		{
 			builder.AddByte(1, (byte)blockType, 0);
 		}
 
-		// Token: 0x0601ADCD RID: 110029 RVA: 0x003D58D8 File Offset: 0x003D3AD8
+		// Token: 0x0601C5A2 RID: 116130 RVA: 0x00401B74 File Offset: 0x003FFD74
 		public static void AddBlock(FlatBufferBuilder builder, int blockOffset)
 		{
 			builder.AddOffset(2, blockOffset, 0);
 		}
 
-		// Token: 0x0601ADCE RID: 110030 RVA: 0x003D58E3 File Offset: 0x003D3AE3
+		// Token: 0x0601C5A3 RID: 116131 RVA: 0x00401B7F File Offset: 0x003FFD7F
 		public static void AddItemsType(FlatBufferBuilder builder, VectorOffset itemsTypeOffset)
 		{
 			builder.AddOffset(3, itemsTypeOffset.Value, 0);
 		}
 
-		// Token: 0x0601ADCF RID: 110031 RVA: 0x003D58F4 File Offset: 0x003D3AF4
+		// Token: 0x0601C5A4 RID: 116132 RVA: 0x00401B90 File Offset: 0x003FFD90
 		public static VectorOffset CreateItemsTypeVector(FlatBufferBuilder builder, TRollBlockItem[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -246,7 +246,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601ADD0 RID: 110032 RVA: 0x003D592B File Offset: 0x003D3B2B
+		// Token: 0x0601C5A5 RID: 116133 RVA: 0x00401BC7 File Offset: 0x003FFDC7
 		public static VectorOffset CreateItemsTypeVectorBlock(FlatBufferBuilder builder, TRollBlockItem[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -254,7 +254,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601ADD1 RID: 110033 RVA: 0x003D5945 File Offset: 0x003D3B45
+		// Token: 0x0601C5A6 RID: 116134 RVA: 0x00401BE1 File Offset: 0x003FFDE1
 		public static VectorOffset CreateItemsTypeVectorBlock(FlatBufferBuilder builder, ArraySegment<TRollBlockItem> data)
 		{
 			builder.StartVector(1, data.Count, 1);
@@ -262,7 +262,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601ADD2 RID: 110034 RVA: 0x003D5963 File Offset: 0x003D3B63
+		// Token: 0x0601C5A7 RID: 116135 RVA: 0x00401BFF File Offset: 0x003FFDFF
 		public static VectorOffset CreateItemsTypeVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -270,19 +270,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601ADD3 RID: 110035 RVA: 0x003D597C File Offset: 0x003D3B7C
+		// Token: 0x0601C5A8 RID: 116136 RVA: 0x00401C18 File Offset: 0x003FFE18
 		public static void StartItemsTypeVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(1, numElems, 1);
 		}
 
-		// Token: 0x0601ADD4 RID: 110036 RVA: 0x003D5987 File Offset: 0x003D3B87
+		// Token: 0x0601C5A9 RID: 116137 RVA: 0x00401C23 File Offset: 0x003FFE23
 		public static void AddItems(FlatBufferBuilder builder, VectorOffset itemsOffset)
 		{
 			builder.AddOffset(4, itemsOffset.Value, 0);
 		}
 
-		// Token: 0x0601ADD5 RID: 110037 RVA: 0x003D5998 File Offset: 0x003D3B98
+		// Token: 0x0601C5AA RID: 116138 RVA: 0x00401C34 File Offset: 0x003FFE34
 		public static VectorOffset CreateItemsVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -293,7 +293,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601ADD6 RID: 110038 RVA: 0x003D59CF File Offset: 0x003D3BCF
+		// Token: 0x0601C5AB RID: 116139 RVA: 0x00401C6B File Offset: 0x003FFE6B
 		public static VectorOffset CreateItemsVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -301,7 +301,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601ADD7 RID: 110039 RVA: 0x003D59E9 File Offset: 0x003D3BE9
+		// Token: 0x0601C5AC RID: 116140 RVA: 0x00401C85 File Offset: 0x003FFE85
 		public static VectorOffset CreateItemsVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -309,7 +309,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601ADD8 RID: 110040 RVA: 0x003D5A07 File Offset: 0x003D3C07
+		// Token: 0x0601C5AD RID: 116141 RVA: 0x00401CA3 File Offset: 0x003FFEA3
 		public static VectorOffset CreateItemsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -317,25 +317,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601ADD9 RID: 110041 RVA: 0x003D5A20 File Offset: 0x003D3C20
+		// Token: 0x0601C5AE RID: 116142 RVA: 0x00401CBC File Offset: 0x003FFEBC
 		public static void StartItemsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601ADDA RID: 110042 RVA: 0x003D5A2B File Offset: 0x003D3C2B
+		// Token: 0x0601C5AF RID: 116143 RVA: 0x00401CC7 File Offset: 0x003FFEC7
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(5, nullMask, 0);
 		}
 
-		// Token: 0x0601ADDB RID: 110043 RVA: 0x003D5A36 File Offset: 0x003D3C36
+		// Token: 0x0601C5B0 RID: 116144 RVA: 0x00401CD2 File Offset: 0x003FFED2
 		public static Offset<IRollBlockGridQuantum> EndIRollBlockGridQuantum(FlatBufferBuilder builder)
 		{
 			return new Offset<IRollBlockGridQuantum>(builder.EndTable());
 		}
 
-		// Token: 0x0601ADDC RID: 110044 RVA: 0x003D5A44 File Offset: 0x003D3C44
+		// Token: 0x0601C5B1 RID: 116145 RVA: 0x00401CE0 File Offset: 0x003FFEE0
 		public IRollBlockGridQuantumT UnPack()
 		{
 			IRollBlockGridQuantumT rollBlockGridQuantumT = new IRollBlockGridQuantumT();
@@ -343,7 +343,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return rollBlockGridQuantumT;
 		}
 
-		// Token: 0x0601ADDD RID: 110045 RVA: 0x003D5A60 File Offset: 0x003D3C60
+		// Token: 0x0601C5B2 RID: 116146 RVA: 0x00401CFC File Offset: 0x003FFEFC
 		public void UnPackTo(IRollBlockGridQuantumT _o)
 		{
 			_o.Type = this.Type;
@@ -383,7 +383,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0601ADDE RID: 110046 RVA: 0x003D5C34 File Offset: 0x003D3E34
+		// Token: 0x0601C5B3 RID: 116147 RVA: 0x00401ED0 File Offset: 0x004000D0
 		public static Offset<IRollBlockGridQuantum> Pack(FlatBufferBuilder builder, IRollBlockGridQuantumT _o)
 		{
 			if (_o == null)
@@ -415,7 +415,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IRollBlockGridQuantum.CreateIRollBlockGridQuantum(builder, _o.Type, block_type, blockOffset, items_typeOffset, itemsOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400C62E RID: 50734
+		// Token: 0x0400D05D RID: 53341
 		private Table __p;
 	}
 }

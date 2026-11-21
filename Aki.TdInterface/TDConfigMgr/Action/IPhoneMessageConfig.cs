@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CE0 RID: 7392
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001EEF RID: 7919
 	public class IPhoneMessageConfig
 	{
-		// Token: 0x06009EAD RID: 40621 RVA: 0x0016ACC8 File Offset: 0x00168EC8
+		// Token: 0x0600A88D RID: 43149 RVA: 0x0017EF28 File Offset: 0x0017D128
 		private IPhoneMessageConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009EAE RID: 40622 RVA: 0x0016AD00 File Offset: 0x00168F00
+		// Token: 0x0600A88E RID: 43150 RVA: 0x0017EF60 File Offset: 0x0017D160
 		public static IPhoneMessageConfig Create([Nullable(2)] IPhoneMessageConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009EAF RID: 40623 RVA: 0x0016AD13 File Offset: 0x00168F13
+		// Token: 0x0600A88F RID: 43151 RVA: 0x0017EF73 File Offset: 0x0017D173
 		public static IPhoneMessageConfig CreateFromSetValue([Nullable(2)] IPhoneMessageConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009EB0 RID: 40624 RVA: 0x0016AD26 File Offset: 0x00168F26
+		// Token: 0x0600A890 RID: 43152 RVA: 0x0017EF86 File Offset: 0x0017D186
 		public IPhoneMessageConfig_SetValue ToSetValue()
 		{
 			return new IPhoneMessageConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700315D RID: 12637
-		// (get) Token: 0x06009EB1 RID: 40625 RVA: 0x0016AD3C File Offset: 0x00168F3C
-		// (set) Token: 0x06009EB2 RID: 40626 RVA: 0x0016AD76 File Offset: 0x00168F76
+		// Token: 0x170033EE RID: 13294
+		// (get) Token: 0x0600A891 RID: 43153 RVA: 0x0017EF9C File Offset: 0x0017D19C
+		// (set) Token: 0x0600A892 RID: 43154 RVA: 0x0017EFD6 File Offset: 0x0017D1D6
 		public virtual bool? IsJumpToFirstOption
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005FDC RID: 24540
+		// Token: 0x0400654F RID: 25935
 		[Nullable(2)]
 		protected IPhoneMessageConfig FbInstance;
 
-		// Token: 0x04005FDD RID: 24541
+		// Token: 0x04006550 RID: 25936
 		[Nullable(2)]
 		protected IPhoneMessageConfig_SetValue PocoInterface;
 	}

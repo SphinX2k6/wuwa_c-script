@@ -3,34 +3,34 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.BossPiling
 {
-	// Token: 0x02005C02 RID: 23554
+	// Token: 0x02004BE2 RID: 19426
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BossPilingLevelDescInfo : IBossPilingLevelDescInfo
 	{
-		// Token: 0x17008D90 RID: 36240
-		// (get) Token: 0x0603B87F RID: 243839 RVA: 0x00E32179 File Offset: 0x00E30379
-		// (set) Token: 0x0603B880 RID: 243840 RVA: 0x00E32181 File Offset: 0x00E30381
+		// Token: 0x17006162 RID: 24930
+		// (get) Token: 0x060307CA RID: 198602 RVA: 0x00D824B9 File Offset: 0x00D806B9
+		// (set) Token: 0x060307CB RID: 198603 RVA: 0x00D824C1 File Offset: 0x00D806C1
 		public bool IsFirstLevel { get; set; }
 
-		// Token: 0x17008D91 RID: 36241
-		// (get) Token: 0x0603B881 RID: 243841 RVA: 0x00E3218A File Offset: 0x00E3038A
-		// (set) Token: 0x0603B882 RID: 243842 RVA: 0x00E32192 File Offset: 0x00E30392
+		// Token: 0x17006163 RID: 24931
+		// (get) Token: 0x060307CC RID: 198604 RVA: 0x00D824CA File Offset: 0x00D806CA
+		// (set) Token: 0x060307CD RID: 198605 RVA: 0x00D824D2 File Offset: 0x00D806D2
 		public int LevelId { get; set; }
 
-		// Token: 0x17008D92 RID: 36242
-		// (get) Token: 0x0603B883 RID: 243843 RVA: 0x00E3219B File Offset: 0x00E3039B
-		// (set) Token: 0x0603B884 RID: 243844 RVA: 0x00E321A3 File Offset: 0x00E303A3
+		// Token: 0x17006164 RID: 24932
+		// (get) Token: 0x060307CE RID: 198606 RVA: 0x00D824DB File Offset: 0x00D806DB
+		// (set) Token: 0x060307CF RID: 198607 RVA: 0x00D824E3 File Offset: 0x00D806E3
 		public string LevelMechanism { get; set; }
 
-		// Token: 0x17008D93 RID: 36243
-		// (get) Token: 0x0603B885 RID: 243845 RVA: 0x00E321AC File Offset: 0x00E303AC
-		// (set) Token: 0x0603B886 RID: 243846 RVA: 0x00E321B4 File Offset: 0x00E303B4
+		// Token: 0x17006165 RID: 24933
+		// (get) Token: 0x060307D0 RID: 198608 RVA: 0x00D824EC File Offset: 0x00D806EC
+		// (set) Token: 0x060307D1 RID: 198609 RVA: 0x00D824F4 File Offset: 0x00D806F4
 		public string MonsterDesc { get; set; }
 
-		// Token: 0x17008D94 RID: 36244
-		// (get) Token: 0x0603B887 RID: 243847 RVA: 0x00E321BD File Offset: 0x00E303BD
-		// (set) Token: 0x0603B888 RID: 243848 RVA: 0x00E321C5 File Offset: 0x00E303C5
+		// Token: 0x17006166 RID: 24934
+		// (get) Token: 0x060307D2 RID: 198610 RVA: 0x00D824FD File Offset: 0x00D806FD
+		// (set) Token: 0x060307D3 RID: 198611 RVA: 0x00D82505 File Offset: 0x00D80705
 		public string LevelDesc { get; set; }
 	}
 }

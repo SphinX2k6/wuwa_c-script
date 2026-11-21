@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200039B RID: 923
+	// Token: 0x020003E4 RID: 996
 	public class IFixedStreamingSource_SetValue
 	{
-		// Token: 0x04000ED4 RID: 3796
+		// Token: 0x04000FCC RID: 4044
 		public EStreamingSourceMode Type;
 
-		// Token: 0x04000ED5 RID: 3797
-		[Nullable(1)]
+		// Token: 0x04000FCD RID: 4045
 		public IStreamingSourceConfig StreamingSourceConfig;
 	}
 }

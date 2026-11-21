@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 {
-	// Token: 0x020071DF RID: 29151
+	// Token: 0x02006294 RID: 25236
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneItemManipulableBoomerangCastState : SceneItemManipulableCastState
 	{
-		// Token: 0x060475A6 RID: 292262 RVA: 0x0122454C File Offset: 0x0122274C
+		// Token: 0x0603CEA8 RID: 249512 RVA: 0x0117E380 File Offset: 0x0117C580
 		public SceneItemManipulableBoomerangCastState(SceneItemManipulatableComponent sceneItem, [Nullable(new byte[]
 		{
 			0,
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			this.LifeTime = ((renderTrajectoryConfig != null) ? new float?(renderTrajectoryConfig.Time) : null).GetValueOrDefault();
 		}
 
-		// Token: 0x060475A7 RID: 292263 RVA: 0x012246A8 File Offset: 0x012228A8
+		// Token: 0x0603CEA9 RID: 249513 RVA: 0x0117E4DC File Offset: 0x0117C6DC
 		protected override void OnEnter()
 		{
 			base.OnEnter();
@@ -53,13 +53,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			this.SceneItem.ForceMoving = true;
 		}
 
-		// Token: 0x060475A8 RID: 292264 RVA: 0x0122470B File Offset: 0x0122290B
+		// Token: 0x0603CEAA RID: 249514 RVA: 0x0117E53F File Offset: 0x0117C73F
 		public void SetVelocityDirection(Vector dire)
 		{
 			this.VelocityDirection.DeepCopy(dire);
 		}
 
-		// Token: 0x060475A9 RID: 292265 RVA: 0x0122471C File Offset: 0x0122291C
+		// Token: 0x0603CEAB RID: 249515 RVA: 0x0117E550 File Offset: 0x0117C750
 		protected override void OnTick(float delta)
 		{
 			this.TempDelta += delta;
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			this.UpdateRotationAccordingToVelocity();
 		}
 
-		// Token: 0x060475AA RID: 292266 RVA: 0x0122476C File Offset: 0x0122296C
+		// Token: 0x0603CEAC RID: 249516 RVA: 0x0117E5A0 File Offset: 0x0117C7A0
 		protected override void UpdateLocation(float delta)
 		{
 			this.SimulationTimer += delta;
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			this.PrevLoc = slalomLocation;
 		}
 
-		// Token: 0x060475AB RID: 292267 RVA: 0x012247C8 File Offset: 0x012229C8
+		// Token: 0x0603CEAD RID: 249517 RVA: 0x0117E5FC File Offset: 0x0117C7FC
 		private Vector GetSlalomLocation(Vector startLoc, Vector velocityDirection, Vector upVector, float timeStep)
 		{
 			float num = this.RotateSpeed * timeStep;
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			return vector;
 		}
 
-		// Token: 0x060475AC RID: 292268 RVA: 0x012248F0 File Offset: 0x01222AF0
+		// Token: 0x0603CEAE RID: 249518 RVA: 0x0117E724 File Offset: 0x0117C924
 		public List<Vector> GetCastPath(Vector targetDirection, float? time = null)
 		{
 			List<Vector> list = new List<Vector>();
@@ -130,53 +130,53 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			return list;
 		}
 
-		// Token: 0x060475AD RID: 292269 RVA: 0x01224A12 File Offset: 0x01222C12
+		// Token: 0x0603CEAF RID: 249519 RVA: 0x0117E846 File Offset: 0x0117CA46
 		public override bool IsNoLockCasting()
 		{
 			return true;
 		}
 
-		// Token: 0x0402583C RID: 153660
+		// Token: 0x040204AB RID: 132267
 		private readonly float Velocity;
 
-		// Token: 0x0402583D RID: 153661
+		// Token: 0x040204AC RID: 132268
 		[Nullable(2)]
 		private readonly Vector VelocityDirection;
 
-		// Token: 0x0402583E RID: 153662
+		// Token: 0x040204AD RID: 132269
 		private readonly float RotateSpeed = 180f;
 
-		// Token: 0x0402583F RID: 153663
+		// Token: 0x040204AE RID: 132270
 		private readonly Vector UpVector = Vector.Create();
 
-		// Token: 0x04025840 RID: 153664
+		// Token: 0x040204AF RID: 132271
 		[Nullable(2)]
 		private readonly ICircumnutation BoomerangConfig;
 
-		// Token: 0x04025841 RID: 153665
+		// Token: 0x040204B0 RID: 132272
 		[Nullable(2)]
 		private UCurveFloat AngularVelocityCurve;
 
-		// Token: 0x04025842 RID: 153666
+		// Token: 0x040204B1 RID: 132273
 		[Nullable(2)]
 		private UCurveFloat VelocityCurve;
 
-		// Token: 0x04025843 RID: 153667
+		// Token: 0x040204B2 RID: 132274
 		private float SimulationTimer;
 
-		// Token: 0x04025844 RID: 153668
+		// Token: 0x040204B3 RID: 132275
 		private readonly float LifeTime;
 
-		// Token: 0x04025845 RID: 153669
+		// Token: 0x040204B4 RID: 132276
 		private readonly float TimeStepLimit = 0.033f;
 
-		// Token: 0x04025846 RID: 153670
+		// Token: 0x040204B5 RID: 132277
 		private Vector PrevLoc = Vector.Create();
 
-		// Token: 0x04025847 RID: 153671
+		// Token: 0x040204B6 RID: 132278
 		private Vector LastLoc = Vector.Create();
 
-		// Token: 0x04025848 RID: 153672
+		// Token: 0x040204B7 RID: 132279
 		private float TempDelta;
 	}
 }

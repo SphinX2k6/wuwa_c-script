@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A0E RID: 2574
+	// Token: 0x02000AE3 RID: 2787
 	public class ConfigTrackMoonMemoryAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003C68 RID: 15464 RVA: 0x001AF57C File Offset: 0x001AD77C
+		// Token: 0x06004166 RID: 16742 RVA: 0x001CE910 File Offset: 0x001CCB10
 		static ConfigTrackMoonMemoryAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigTrackMoonMemoryAll.CreateStaticDefaultValue), new Action(ConfigTrackMoonMemoryAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003C69 RID: 15465 RVA: 0x001AF59C File Offset: 0x001AD79C
+		// Token: 0x06004167 RID: 16743 RVA: 0x001CE930 File Offset: 0x001CCB30
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigTrackMoonMemoryAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003C6A RID: 15466 RVA: 0x001AF61B File Offset: 0x001AD81B
+		// Token: 0x06004168 RID: 16744 RVA: 0x001CE9AF File Offset: 0x001CCBAF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigTrackMoonMemoryAll.LogPair = null;
 			ConfigTrackMoonMemoryAll.HandleId = 0;
 		}
 
-		// Token: 0x06003C6B RID: 15467 RVA: 0x001AF629 File Offset: 0x001AD829
+		// Token: 0x06004169 RID: 16745 RVA: 0x001CE9BD File Offset: 0x001CCBBD
 		public static void Init()
 		{
 			ConfigTrackMoonMemoryAll.HandleId = ConfigCommon.InitDataStatement(ConfigTrackMoonMemoryAll.HandleId, "db_moonchasing.db", "select BinData from `TrackMoonMemory`");
 		}
 
-		// Token: 0x06003C6C RID: 15468 RVA: 0x001AF644 File Offset: 0x001AD844
+		// Token: 0x0600416A RID: 16746 RVA: 0x001CE9D8 File Offset: 0x001CCBD8
 		[NullableContext(2)]
 		public static IReadOnlyList<TrackMoonMemory> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04004648 RID: 17992
+		// Token: 0x04004C1B RID: 19483
 		private const string DB = "db_moonchasing.db";
 
-		// Token: 0x04004649 RID: 17993
+		// Token: 0x04004C1C RID: 19484
 		private const string FILE = "z.追月节.xlsx";
 
-		// Token: 0x0400464A RID: 17994
+		// Token: 0x04004C1D RID: 19485
 		private const string TABLE = "TrackMoonMemory";
 
-		// Token: 0x0400464B RID: 17995
+		// Token: 0x04004C1E RID: 19486
 		private const string COMMAND = "select BinData from `TrackMoonMemory`";
 
-		// Token: 0x0400464C RID: 17996
+		// Token: 0x04004C1F RID: 19487
 		private const string KEY_PREFIX = "TrackMoonMemoryAll";
 
-		// Token: 0x0400464D RID: 17997
+		// Token: 0x04004C20 RID: 19488
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400464E RID: 17998
+		// Token: 0x04004C21 RID: 19489
 		private static int HandleId;
 	}
 }

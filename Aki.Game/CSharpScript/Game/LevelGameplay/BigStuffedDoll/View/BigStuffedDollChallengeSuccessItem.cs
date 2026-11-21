@@ -4,10 +4,10 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 {
-	// Token: 0x02006F54 RID: 28500
+	// Token: 0x020060D5 RID: 24789
 	public class BigStuffedDollChallengeSuccessItem : UiPanelBase
 	{
-		// Token: 0x06045563 RID: 284003 RVA: 0x01128260 File Offset: 0x01126460
+		// Token: 0x0603B711 RID: 243473 RVA: 0x010D2040 File Offset: 0x010D0240
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			this.LevelSequencePlayer.BindSequenceCloseEvent(new TSequenceEndEvent(this.OnSequenceClose), false);
 		}
 
-		// Token: 0x06045564 RID: 284004 RVA: 0x01128291 File Offset: 0x01126491
+		// Token: 0x0603B712 RID: 243474 RVA: 0x010D2071 File Offset: 0x010D0271
 		protected override void OnBeforeDestroy()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -26,14 +26,14 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			this.LevelSequencePlayer = null;
 		}
 
-		// Token: 0x06045565 RID: 284005 RVA: 0x011282AC File Offset: 0x011264AC
+		// Token: 0x0603B713 RID: 243475 RVA: 0x010D208C File Offset: 0x010D028C
 		public void ShowTip()
 		{
 			base.ShowAsync();
 			this.LevelSequencePlayer.PlayLevelSequenceByName("Start", false, null, false);
 		}
 
-		// Token: 0x06045566 RID: 284006 RVA: 0x011282DC File Offset: 0x011264DC
+		// Token: 0x0603B714 RID: 243476 RVA: 0x010D20BC File Offset: 0x010D02BC
 		[NullableContext(1)]
 		private void OnSequenceClose(string sequenceName)
 		{
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll.View
 			}
 		}
 
-		// Token: 0x0402429E RID: 148126
+		// Token: 0x0401F553 RID: 128339
 		[Nullable(2)]
 		protected LevelSequencePlayer LevelSequencePlayer;
 	}

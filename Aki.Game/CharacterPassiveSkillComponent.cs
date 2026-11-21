@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -10,12 +9,12 @@ using CSharpScript.Utils;
 using UnrealEngine;
 using UnrealEngine.Extension;
 
-// Token: 0x02002ED3 RID: 11987
+// Token: 0x02002426 RID: 9254
 [NullableContext(1)]
 [Nullable(0)]
 public class CharacterPassiveSkillComponent : EntityComponent
 {
-	// Token: 0x060199B8 RID: 104888 RVA: 0x006A4F9C File Offset: 0x006A319C
+	// Token: 0x060172B2 RID: 94898 RVA: 0x006CB168 File Offset: 0x006C9368
 	protected override bool OnInit()
 	{
 		this.triggerComp = base.Entity.CheckGetComponent<CharacterTriggerComponent>();
@@ -32,13 +31,13 @@ public class CharacterPassiveSkillComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x060199B9 RID: 104889 RVA: 0x006A5020 File Offset: 0x006A3220
+	// Token: 0x060172B3 RID: 94899 RVA: 0x006CB1EC File Offset: 0x006C93EC
 	protected override bool OnStart()
 	{
 		return true;
 	}
 
-	// Token: 0x060199BA RID: 104890 RVA: 0x006A5024 File Offset: 0x006A3224
+	// Token: 0x060172B4 RID: 94900 RVA: 0x006CB1F0 File Offset: 0x006C93F0
 	protected override void OnActivate()
 	{
 		CreatureDataComponent component = base.Entity.GetComponent<CreatureDataComponent>();
@@ -68,7 +67,7 @@ public class CharacterPassiveSkillComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x060199BB RID: 104891 RVA: 0x006A50E4 File Offset: 0x006A32E4
+	// Token: 0x060172B5 RID: 94901 RVA: 0x006CB2B0 File Offset: 0x006C94B0
 	protected override bool OnClear()
 	{
 		bool result;
@@ -83,39 +82,41 @@ public class CharacterPassiveSkillComponent : EntityComponent
 		return result;
 	}
 
-	// Token: 0x060199BC RID: 104892 RVA: 0x006A5148 File Offset: 0x006A3348
+	// Token: 0x060172B6 RID: 94902 RVA: 0x006CB314 File Offset: 0x006C9514
 	protected override void OnTick(float delta)
 	{
 		this.LockMap.Clear();
 	}
 
-	// Token: 0x060199BD RID: 104893 RVA: 0x006A5155 File Offset: 0x006A3355
+	// Token: 0x060172B7 RID: 94903 RVA: 0x006CB324 File Offset: 0x006C9524
 	public PassiveSkillData[] GetAllPassiveSkills()
 	{
-		return this.SkillMap.Values.ToArray<PassiveSkillData>();
+		PassiveSkillData[] array = new PassiveSkillData[this.SkillMap.Count];
+		this.SkillMap.Values.CopyTo(array, 0);
+		return array;
 	}
 
-	// Token: 0x060199BE RID: 104894 RVA: 0x006A5167 File Offset: 0x006A3367
+	// Token: 0x060172B8 RID: 94904 RVA: 0x006CB355 File Offset: 0x006C9555
 	public bool HasSkill(long skillId)
 	{
 		return this.SkillMap.ContainsKey(skillId);
 	}
 
-	// Token: 0x060199BF RID: 104895 RVA: 0x006A5175 File Offset: 0x006A3375
+	// Token: 0x060172B9 RID: 94905 RVA: 0x006CB363 File Offset: 0x006C9563
 	[NullableContext(2)]
 	public PassiveSkillData GetSKill(long skillId)
 	{
 		return this.SkillMap.GetValueOrDefault(skillId);
 	}
 
-	// Token: 0x060199C0 RID: 104896 RVA: 0x006A5183 File Offset: 0x006A3383
+	// Token: 0x060172BA RID: 94906 RVA: 0x006CB371 File Offset: 0x006C9571
 	private bool IsPassiveSkillInCd(long skillId, int cdEntityId)
 	{
 		BaseSkillCdComponent baseSkillCdComponent = this.cdComp;
 		return baseSkillCdComponent != null && baseSkillCdComponent.IsPassiveSkillInCd(skillId, cdEntityId);
 	}
 
-	// Token: 0x060199C1 RID: 104897 RVA: 0x006A5198 File Offset: 0x006A3398
+	// Token: 0x060172BB RID: 94907 RVA: 0x006CB386 File Offset: 0x006C9586
 	private void StartPassiveCd(long skillId, int cdEntityId)
 	{
 		BaseSkillCdComponent baseSkillCdComponent = this.cdComp;
@@ -126,13 +127,13 @@ public class CharacterPassiveSkillComponent : EntityComponent
 		baseSkillCdComponent.StartPassiveCd(skillId, cdEntityId, -1f);
 	}
 
-	// Token: 0x060199C2 RID: 104898 RVA: 0x006A51B2 File Offset: 0x006A33B2
+	// Token: 0x060172BC RID: 94908 RVA: 0x006CB3A0 File Offset: 0x006C95A0
 	private PassiveSkill? GetPassiveSkillConfig(long skillId)
 	{
 		return ConfigPassiveSkillById.GetConfig(skillId, true);
 	}
 
-	// Token: 0x060199C3 RID: 104899 RVA: 0x006A51BC File Offset: 0x006A33BC
+	// Token: 0x060172BD RID: 94909 RVA: 0x006CB3AC File Offset: 0x006C95AC
 	[return: Nullable(2)]
 	private unsafe Entity GetEntityByKey(long skillId, string targetKey, [Nullable(new byte[]
 	{
@@ -176,7 +177,7 @@ public class CharacterPassiveSkillComponent : EntityComponent
 		return null;
 	}
 
-	// Token: 0x060199C4 RID: 104900 RVA: 0x006A5283 File Offset: 0x006A3483
+	// Token: 0x060172BE RID: 94910 RVA: 0x006CB473 File Offset: 0x006C9673
 	private int GetCdEntityId(PassiveSkill config, Entity cdEntity)
 	{
 		if (!config.IsShareAllCdSkill || config.CDType != "Owner")
@@ -186,7 +187,7 @@ public class CharacterPassiveSkillComponent : EntityComponent
 		return 0;
 	}
 
-	// Token: 0x060199C5 RID: 104901 RVA: 0x006A52AC File Offset: 0x006A34AC
+	// Token: 0x060172BF RID: 94911 RVA: 0x006CB49C File Offset: 0x006C969C
 	private static bool IsWhitelistSkill(long skillId)
 	{
 		for (int i = 0; i < CharacterPassiveSkillComponent.GlobalTriggerWhitelist.Length; i++)
@@ -199,19 +200,19 @@ public class CharacterPassiveSkillComponent : EntityComponent
 		return false;
 	}
 
-	// Token: 0x060199C6 RID: 104902 RVA: 0x006A52D8 File Offset: 0x006A34D8
+	// Token: 0x060172C0 RID: 94912 RVA: 0x006CB4C8 File Offset: 0x006C96C8
 	public bool CheckAddSkillHasAuthority(PassiveSkill config)
 	{
 		return this.buffComp.HasBuffAuthority() || config.ActionExecuteFlag == 2;
 	}
 
-	// Token: 0x060199C7 RID: 104903 RVA: 0x006A52F3 File Offset: 0x006A34F3
+	// Token: 0x060172C1 RID: 94913 RVA: 0x006CB4E3 File Offset: 0x006C96E3
 	public bool CheckSkillHasAuthority(PassiveSkill config)
 	{
 		return this.buffComp.HasBuffAuthority() || (Convert.ToInt32(config.ActionExecuteFlag) == 2 && this.actorComp.IsAutonomousProxy);
 	}
 
-	// Token: 0x060199C8 RID: 104904 RVA: 0x006A5324 File Offset: 0x006A3524
+	// Token: 0x060172C2 RID: 94914 RVA: 0x006CB514 File Offset: 0x006C9714
 	public unsafe bool LearnPassiveSkill(long skillId, AddPassiveSkillParam param)
 	{
 		PassiveSkill? config = this.GetPassiveSkillConfig(skillId);
@@ -323,7 +324,7 @@ public class CharacterPassiveSkillComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x060199C9 RID: 104905 RVA: 0x006A566C File Offset: 0x006A386C
+	// Token: 0x060172C3 RID: 94915 RVA: 0x006CB85C File Offset: 0x006C9A5C
 	public unsafe void ForgetPassiveSkill(long skillId, bool needBroadcast = false)
 	{
 		PassiveSkill? passiveSkillConfig = this.GetPassiveSkillConfig(skillId);
@@ -361,7 +362,7 @@ public class CharacterPassiveSkillComponent : EntityComponent
 		this.OnPassiveSkillRemoved(skillId, needBroadcast);
 	}
 
-	// Token: 0x060199CA RID: 104906 RVA: 0x006A57C4 File Offset: 0x006A39C4
+	// Token: 0x060172C4 RID: 94916 RVA: 0x006CB9B4 File Offset: 0x006C9BB4
 	public void SetPassiveSkillActive(long skillId, bool active)
 	{
 		PassiveSkillData passiveSkillData;
@@ -375,7 +376,7 @@ public class CharacterPassiveSkillComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x060199CB RID: 104907 RVA: 0x006A5800 File Offset: 0x006A3A00
+	// Token: 0x060172C5 RID: 94917 RVA: 0x006CB9F0 File Offset: 0x006C9BF0
 	protected List<SkillActionData> ParseActions(PassiveSkill config, long skillId)
 	{
 		List<SkillActionData> list = new List<SkillActionData>();
@@ -399,7 +400,7 @@ public class CharacterPassiveSkillComponent : EntityComponent
 		return list;
 	}
 
-	// Token: 0x060199CC RID: 104908 RVA: 0x006A5890 File Offset: 0x006A3A90
+	// Token: 0x060172C6 RID: 94918 RVA: 0x006CBA80 File Offset: 0x006C9C80
 	[NullableContext(2)]
 	protected SkillActionData ParseAction(PassiveSkill config, long skillId)
 	{
@@ -481,7 +482,7 @@ public class CharacterPassiveSkillComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x060199CD RID: 104909 RVA: 0x006A5BF0 File Offset: 0x006A3DF0
+	// Token: 0x060172C7 RID: 94919 RVA: 0x006CBDE0 File Offset: 0x006C9FE0
 	protected unsafe void ExecuteAction(long skillId, Entity targetEntity, int passiveCdEntityId, [Nullable(new byte[]
 	{
 		2,
@@ -694,7 +695,7 @@ public class CharacterPassiveSkillComponent : EntityComponent
 		this.LockMap.Remove(skillId);
 	}
 
-	// Token: 0x060199CE RID: 104910 RVA: 0x006A62B8 File Offset: 0x006A44B8
+	// Token: 0x060172C8 RID: 94920 RVA: 0x006CC4A8 File Offset: 0x006CA6A8
 	[NullableContext(2)]
 	protected void OnPassiveSkillAdded(long skillId, int handle, PassiveSkill config, AddPassiveSkillParam param = null)
 	{
@@ -719,7 +720,7 @@ public class CharacterPassiveSkillComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x060199CF RID: 104911 RVA: 0x006A6348 File Offset: 0x006A4548
+	// Token: 0x060172C9 RID: 94921 RVA: 0x006CC538 File Offset: 0x006CA738
 	protected void OnPassiveSkillRemoved(long skillId, bool needBroadcast)
 	{
 		if (needBroadcast)
@@ -728,7 +729,7 @@ public class CharacterPassiveSkillComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x060199D0 RID: 104912 RVA: 0x006A637C File Offset: 0x006A457C
+	// Token: 0x060172CA RID: 94922 RVA: 0x006CC56C File Offset: 0x006CA76C
 	[NullableContext(2)]
 	[CombatListen(ENotifyMessageId.PassiveSkillAddNotify, false, false)]
 	public static void PassiveSkillAddNotify(Entity entity, [Nullable(1)] PassiveSkillAddNotify data, CombatCommon combatCommon = null)
@@ -746,7 +747,7 @@ public class CharacterPassiveSkillComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x060199D1 RID: 104913 RVA: 0x006A63F8 File Offset: 0x006A45F8
+	// Token: 0x060172CB RID: 94923 RVA: 0x006CC5E8 File Offset: 0x006CA7E8
 	[NullableContext(2)]
 	[CombatListen(ENotifyMessageId.PassiveSkillRemoveNotify, false, false)]
 	public static void PassiveSkillRemoveNotify(Entity entity, [Nullable(1)] PassiveSkillRemoveNotify data, CombatCommon combatCommon = null)
@@ -761,7 +762,7 @@ public class CharacterPassiveSkillComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x060199D2 RID: 104914 RVA: 0x006A6458 File Offset: 0x006A4658
+	// Token: 0x060172CC RID: 94924 RVA: 0x006CC648 File Offset: 0x006CA848
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -769,103 +770,138 @@ public class CharacterPassiveSkillComponent : EntityComponent
 			return false;
 		}
 		CharacterPassiveSkillComponent characterPassiveSkillComponent = (CharacterPassiveSkillComponent)componentTemplate;
-		if (base.CanResetComponentProperty("triggerComp"))
+		if (characterPassiveSkillComponent.triggerComp == null)
 		{
-			if (characterPassiveSkillComponent.triggerComp == null)
-			{
-				this.triggerComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterTriggerComponent>(this.triggerComp), "triggerComp"))
-			{
-				return false;
-			}
+			this.triggerComp = null;
 		}
-		if (base.CanResetComponentProperty("buffComp"))
-		{
-			if (characterPassiveSkillComponent.buffComp == null)
-			{
-				this.buffComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterBuffComponent>(this.buffComp), "buffComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("cdComp"))
-		{
-			if (characterPassiveSkillComponent.cdComp == null)
-			{
-				this.cdComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseSkillCdComponent>(this.cdComp), "cdComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("actorComp"))
-		{
-			if (characterPassiveSkillComponent.actorComp == null)
-			{
-				this.actorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.actorComp), "actorComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("SkillMap") && characterPassiveSkillComponent.SkillMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<long, PassiveSkillData>>(this.SkillMap), "SkillMap"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.triggerComp), "triggerComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("Context"))
+		if (characterPassiveSkillComponent.buffComp == null)
 		{
-			if (characterPassiveSkillComponent.Context == null)
-			{
-				this.Context = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ContextParam>(this.Context), "Context"))
-			{
-				return false;
-			}
+			this.buffComp = null;
 		}
-		return !base.CanResetComponentProperty("LockMap") || characterPassiveSkillComponent.LockMap == null || base.CheckClearObject(EntityComponentSystem.ClearObject<long>(this.LockMap), "LockMap");
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.buffComp), "buffComp"))
+		{
+			return false;
+		}
+		if (characterPassiveSkillComponent.cdComp == null)
+		{
+			this.cdComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.cdComp), "cdComp"))
+		{
+			return false;
+		}
+		if (characterPassiveSkillComponent.actorComp == null)
+		{
+			this.actorComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.actorComp), "actorComp"))
+		{
+			return false;
+		}
+		if (characterPassiveSkillComponent.SkillMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.SkillMap), "SkillMap"))
+		{
+			return false;
+		}
+		if (characterPassiveSkillComponent.Context == null)
+		{
+			this.Context = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Context), "Context"))
+		{
+			return false;
+		}
+		return characterPassiveSkillComponent.LockMap == null || base.CheckClearObject(EntityComponentSystem.ClearObject<long>(this.LockMap), "LockMap");
 	}
 
-	// Token: 0x0400BFC0 RID: 49088
+	// Token: 0x1700241D RID: 9245
+	// (get) Token: 0x060172CD RID: 94925 RVA: 0x006CC783 File Offset: 0x006CA983
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700241E RID: 9246
+	// (get) Token: 0x060172CE RID: 94926 RVA: 0x006CC786 File Offset: 0x006CA986
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700241F RID: 9247
+	// (get) Token: 0x060172CF RID: 94927 RVA: 0x006CC789 File Offset: 0x006CA989
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002420 RID: 9248
+	// (get) Token: 0x060172D0 RID: 94928 RVA: 0x006CC78C File Offset: 0x006CA98C
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002421 RID: 9249
+	// (get) Token: 0x060172D1 RID: 94929 RVA: 0x006CC78F File Offset: 0x006CA98F
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400C35B RID: 50011
 	private const float DIVIDED_TEN_THOUSAND = 0.0001f;
 
-	// Token: 0x0400BFC1 RID: 49089
+	// Token: 0x0400C35C RID: 50012
 	private const string OwnerType = "Owner";
 
-	// Token: 0x0400BFC2 RID: 49090
+	// Token: 0x0400C35D RID: 50013
 	private const int ShareAllCdSkillEntityId = 0;
 
-	// Token: 0x0400BFC3 RID: 49091
+	// Token: 0x0400C35E RID: 50014
 	[StaticVariableRuleIgnore]
 	private static readonly long[] GlobalTriggerWhitelist = new long[]
 	{
 		1302101064L
 	};
 
-	// Token: 0x0400BFC4 RID: 49092
+	// Token: 0x0400C35F RID: 50015
 	private CharacterTriggerComponent triggerComp;
 
-	// Token: 0x0400BFC5 RID: 49093
+	// Token: 0x0400C360 RID: 50016
 	private CharacterBuffComponent buffComp;
 
-	// Token: 0x0400BFC6 RID: 49094
+	// Token: 0x0400C361 RID: 50017
 	[Nullable(2)]
 	private BaseSkillCdComponent cdComp;
 
-	// Token: 0x0400BFC7 RID: 49095
+	// Token: 0x0400C362 RID: 50018
 	private CharacterActorComponent actorComp;
 
-	// Token: 0x0400BFC8 RID: 49096
+	// Token: 0x0400C363 RID: 50019
 	private readonly Dictionary<long, PassiveSkillData> SkillMap = new Dictionary<long, PassiveSkillData>();
 
-	// Token: 0x0400BFC9 RID: 49097
+	// Token: 0x0400C364 RID: 50020
 	private ContextParam Context;
 
-	// Token: 0x0400BFCA RID: 49098
+	// Token: 0x0400C365 RID: 50021
 	private readonly HashSet<long> LockMap = new HashSet<long>();
 }

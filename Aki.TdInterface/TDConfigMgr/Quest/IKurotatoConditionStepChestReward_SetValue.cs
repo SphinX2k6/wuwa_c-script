@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000FDC RID: 4060
+	// Token: 0x02001108 RID: 4360
 	public class IKurotatoConditionStepChestReward_SetValue
 	{
-		// Token: 0x0400367C RID: 13948
+		// Token: 0x040039B4 RID: 14772
 		public EKurotatoConditionStep Type;
 	}
 }

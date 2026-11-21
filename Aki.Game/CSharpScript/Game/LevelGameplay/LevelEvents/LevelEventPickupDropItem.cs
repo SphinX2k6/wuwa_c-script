@@ -5,15 +5,15 @@ using CSharpScript.Game.Module.Reward;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B4A RID: 27466
+	// Token: 0x02005CC2 RID: 23746
 	public class LevelEventPickupDropItem : LevelEventBase
 	{
-		// Token: 0x0604419D RID: 278941 RVA: 0x010C1919 File Offset: 0x010BFB19
+		// Token: 0x0603A2EF RID: 238319 RVA: 0x0106B4B5 File Offset: 0x010696B5
 		public LevelEventPickupDropItem(int id) : base(id)
 		{
 		}
 
-		// Token: 0x0604419E RID: 278942 RVA: 0x010C1924 File Offset: 0x010BFB24
+		// Token: 0x0603A2F0 RID: 238320 RVA: 0x0106B4C0 File Offset: 0x010696C0
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x0604419F RID: 278943 RVA: 0x010C19A7 File Offset: 0x010BFBA7
+		// Token: 0x0603A2F1 RID: 238321 RVA: 0x0106B543 File Offset: 0x01069743
 		private void OnResponse(bool isSuccess)
 		{
 			base.FinishExecute(isSuccess, false, true);

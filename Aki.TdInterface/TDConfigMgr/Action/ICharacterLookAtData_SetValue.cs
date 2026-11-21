@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001881 RID: 6273
+	// Token: 0x02001A0C RID: 6668
 	public class ICharacterLookAtData_SetValue
 	{
-		// Token: 0x040054F0 RID: 21744
+		// Token: 0x0400593D RID: 22845
 		public ECharacterLookAt Type;
 	}
 }

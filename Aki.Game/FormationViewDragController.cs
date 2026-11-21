@@ -8,24 +8,24 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001BC2 RID: 7106
+// Token: 0x02001081 RID: 4225
 [NullableContext(1)]
 [Nullable(0)]
 public class FormationViewDragController : UiControllerBase
 {
-	// Token: 0x0600D3D6 RID: 54230 RVA: 0x0030B9F8 File Offset: 0x00309BF8
+	// Token: 0x0600A7E8 RID: 42984 RVA: 0x00316B44 File Offset: 0x00314D44
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<EInputControllerType, EInputControllerType>(EEventName.InputControllerChange, new Action<EInputControllerType, EInputControllerType>(this.InputControllerChange));
 	}
 
-	// Token: 0x0600D3D7 RID: 54231 RVA: 0x0030BA16 File Offset: 0x00309C16
+	// Token: 0x0600A7E9 RID: 42985 RVA: 0x00316B62 File Offset: 0x00314D62
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.InputControllerChange, new Action<EInputControllerType, EInputControllerType>(this.InputControllerChange));
 	}
 
-	// Token: 0x0600D3D8 RID: 54232 RVA: 0x0030BA34 File Offset: 0x00309C34
+	// Token: 0x0600A7EA RID: 42986 RVA: 0x00316B80 File Offset: 0x00314D80
 	private void InputControllerChange(EInputControllerType eInputControllerType, EInputControllerType inputControllerType)
 	{
 		Log.Instance.Info(ELogModule.Formation, ELogAuthor.SYB, "Formation-InputControllerChange", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -36,7 +36,7 @@ public class FormationViewDragController : UiControllerBase
 			{
 				this.CancelDrag();
 			}
-			else
+			else if (FormationViewDragController.DragData.DragItemPosition > 0 && FormationViewDragController.DragData.DragItemPosition <= FormationViewDragController.DragData.DraggableSlots.Count)
 			{
 				IDraggableSlot draggableSlot = FormationViewDragController.DragData.DraggableSlots[FormationViewDragController.DragData.DragItemPosition - 1];
 				if (draggableSlot != null)
@@ -48,7 +48,7 @@ public class FormationViewDragController : UiControllerBase
 		FormationViewDragController.IsGamepad = flag;
 	}
 
-	// Token: 0x0600D3D9 RID: 54233 RVA: 0x0030BAB2 File Offset: 0x00309CB2
+	// Token: 0x0600A7EB RID: 42987 RVA: 0x00316C26 File Offset: 0x00314E26
 	public static void InitDragData(FormationDragData data)
 	{
 		FormationViewDragController.DragData = data;
@@ -57,7 +57,7 @@ public class FormationViewDragController : UiControllerBase
 		FormationViewDragController.GamePadSelectModel = false;
 	}
 
-	// Token: 0x0600D3DA RID: 54234 RVA: 0x0030BAD5 File Offset: 0x00309CD5
+	// Token: 0x0600A7EC RID: 42988 RVA: 0x00316C49 File Offset: 0x00314E49
 	[NullableContext(2)]
 	public static void ClearDragData(FormationDragData owner = null)
 	{
@@ -73,7 +73,7 @@ public class FormationViewDragController : UiControllerBase
 		FormationViewDragController.DragData = null;
 	}
 
-	// Token: 0x0600D3DB RID: 54235 RVA: 0x0030BAF9 File Offset: 0x00309CF9
+	// Token: 0x0600A7ED RID: 42989 RVA: 0x00316C6D File Offset: 0x00314E6D
 	public static void AddCustomShieldHotKeyComponentSetData(int index)
 	{
 		FormationDragData dragData = FormationViewDragController.DragData;
@@ -84,7 +84,7 @@ public class FormationViewDragController : UiControllerBase
 		dragData.CustomShieldHotKeyComponentSet.Add(index);
 	}
 
-	// Token: 0x0600D3DC RID: 54236 RVA: 0x0030BB11 File Offset: 0x00309D11
+	// Token: 0x0600A7EE RID: 42990 RVA: 0x00316C85 File Offset: 0x00314E85
 	public static void SetCustomShield(bool active)
 	{
 		if (FormationViewDragController.DragData == null)
@@ -94,7 +94,7 @@ public class FormationViewDragController : UiControllerBase
 		UiNavigationModel.Instance.CustomShieldHotKeyComponent(FormationViewDragController.DragData.CustomShieldHotKeyComponentSet, active);
 	}
 
-	// Token: 0x0600D3DD RID: 54237 RVA: 0x0030BB30 File Offset: 0x00309D30
+	// Token: 0x0600A7EF RID: 42991 RVA: 0x00316CA4 File Offset: 0x00314EA4
 	[NullableContext(2)]
 	public static void OnFormationRoleViewPointDown(ULGUIPointerEventData eventData, int configId, int roleSkinId, int editPosition)
 	{
@@ -122,7 +122,7 @@ public class FormationViewDragController : UiControllerBase
 		FormationViewDragController.PrepareDragVisualsAndRefresh(dragData, configId, roleSkinId, editPosition, false).Forget();
 	}
 
-	// Token: 0x0600D3DE RID: 54238 RVA: 0x0030BBE0 File Offset: 0x00309DE0
+	// Token: 0x0600A7F0 RID: 42992 RVA: 0x00316D54 File Offset: 0x00314F54
 	public static void OnFormationRoleViewGamePadDown(UUIItem item, int configId, int roleSkinId, int editPosition)
 	{
 		FormationDragData dragData = FormationViewDragController.DragData;
@@ -142,14 +142,14 @@ public class FormationViewDragController : UiControllerBase
 		FormationViewDragController.PrepareDragVisualsAndRefresh(dragData, configId, roleSkinId, editPosition, true).Forget();
 	}
 
-	// Token: 0x0600D3DF RID: 54239 RVA: 0x0030BC56 File Offset: 0x00309E56
+	// Token: 0x0600A7F1 RID: 42993 RVA: 0x00316DCA File Offset: 0x00314FCA
 	public static bool CanFormationRoleViewStartDrag()
 	{
 		FormationDragData dragData = FormationViewDragController.DragData;
 		return ((dragData != null) ? dragData.DragRoleItem : null) != null;
 	}
 
-	// Token: 0x0600D3E0 RID: 54240 RVA: 0x0030BC6C File Offset: 0x00309E6C
+	// Token: 0x0600A7F2 RID: 42994 RVA: 0x00316DE0 File Offset: 0x00314FE0
 	public static void OnFormationRoleViewStartDrag()
 	{
 		FormationDragData dragData = FormationViewDragController.DragData;
@@ -175,7 +175,7 @@ public class FormationViewDragController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600D3E1 RID: 54241 RVA: 0x0030BD08 File Offset: 0x00309F08
+	// Token: 0x0600A7F3 RID: 42995 RVA: 0x00316E7C File Offset: 0x0031507C
 	[NullableContext(2)]
 	public static void OnFormationRoleViewMoveDrag(ULGUIPointerEventData eventData)
 	{
@@ -233,7 +233,7 @@ public class FormationViewDragController : UiControllerBase
 		FormationViewDragController.RefreshDragRoleItemState(dragData, !flag, hoverExchangeable);
 	}
 
-	// Token: 0x0600D3E2 RID: 54242 RVA: 0x0030BED8 File Offset: 0x0030A0D8
+	// Token: 0x0600A7F4 RID: 42996 RVA: 0x0031704C File Offset: 0x0031524C
 	public static void OnFormationRoleViewEndDrag(bool isCancel = false)
 	{
 		FormationDragData dragData = FormationViewDragController.DragData;
@@ -289,7 +289,7 @@ public class FormationViewDragController : UiControllerBase
 		exchangeRoleCallBack(num, dragItemPosition, valueOrDefault2, num2);
 	}
 
-	// Token: 0x0600D3E3 RID: 54243 RVA: 0x0030C088 File Offset: 0x0030A288
+	// Token: 0x0600A7F5 RID: 42997 RVA: 0x003171FC File Offset: 0x003153FC
 	public static void OnGamePadPress()
 	{
 		IDraggableSlot draggableSlot = (FormationViewDragController.DragData != null) ? FormationViewDragController.DragData.DraggableSlots[FormationViewDragController.DragData.DragItemPosition - 1] : null;
@@ -300,7 +300,7 @@ public class FormationViewDragController : UiControllerBase
 		draggableSlot.GamePadPress();
 	}
 
-	// Token: 0x0600D3E4 RID: 54244 RVA: 0x0030C0B9 File Offset: 0x0030A2B9
+	// Token: 0x0600A7F6 RID: 42998 RVA: 0x0031722D File Offset: 0x0031542D
 	public static void OnGamePadRelease()
 	{
 		IDraggableSlot draggableSlot = (FormationViewDragController.DragData != null) ? FormationViewDragController.DragData.DraggableSlots[FormationViewDragController.DragData.DragItemPosition - 1] : null;
@@ -311,7 +311,7 @@ public class FormationViewDragController : UiControllerBase
 		draggableSlot.GamePadRelease();
 	}
 
-	// Token: 0x0600D3E5 RID: 54245 RVA: 0x0030C0EC File Offset: 0x0030A2EC
+	// Token: 0x0600A7F7 RID: 42999 RVA: 0x00317260 File Offset: 0x00315460
 	public void DragConfirm()
 	{
 		FormationDragData dragData = FormationViewDragController.DragData;
@@ -324,7 +324,7 @@ public class FormationViewDragController : UiControllerBase
 		FormationViewDragController.SetGamePadSelectModel(false);
 	}
 
-	// Token: 0x0600D3E6 RID: 54246 RVA: 0x0030C140 File Offset: 0x0030A340
+	// Token: 0x0600A7F8 RID: 43000 RVA: 0x003172B4 File Offset: 0x003154B4
 	public void CancelDrag()
 	{
 		FormationDragData dragData = FormationViewDragController.DragData;
@@ -337,7 +337,7 @@ public class FormationViewDragController : UiControllerBase
 		FormationViewDragController.SetGamePadSelectModel(false);
 	}
 
-	// Token: 0x0600D3E7 RID: 54247 RVA: 0x0030C19C File Offset: 0x0030A39C
+	// Token: 0x0600A7F9 RID: 43001 RVA: 0x00317310 File Offset: 0x00315510
 	public static void SetGamePadSelectPosition(int position)
 	{
 		FormationDragData dragData = FormationViewDragController.DragData;
@@ -395,7 +395,7 @@ public class FormationViewDragController : UiControllerBase
 		FormationViewDragController.RefreshDragRoleItemState(dragData, position == dragData.DragItemPosition, hoverExchangeable);
 	}
 
-	// Token: 0x0600D3E8 RID: 54248 RVA: 0x0030C314 File Offset: 0x0030A514
+	// Token: 0x0600A7FA RID: 43002 RVA: 0x00317488 File Offset: 0x00315688
 	public static void SetGamePadSelectModel(bool isSelect)
 	{
 		FormationViewDragController.GamePadSelectModel = isSelect;
@@ -415,7 +415,7 @@ public class FormationViewDragController : UiControllerBase
 		UiNavigationModel.Instance.CustomShieldHotKeyComponent(dragData.CustomShieldHotKeyComponentSet, !FormationViewDragController.GamePadSelectModel);
 	}
 
-	// Token: 0x0600D3E9 RID: 54249 RVA: 0x0030C368 File Offset: 0x0030A568
+	// Token: 0x0600A7FB RID: 43003 RVA: 0x003174DC File Offset: 0x003156DC
 	public static bool GetDragItemUiActive()
 	{
 		FormationDragData dragData = FormationViewDragController.DragData;
@@ -433,7 +433,7 @@ public class FormationViewDragController : UiControllerBase
 		return flag2.GetValueOrDefault();
 	}
 
-	// Token: 0x0600D3EA RID: 54250 RVA: 0x0030C3B4 File Offset: 0x0030A5B4
+	// Token: 0x0600A7FC RID: 43004 RVA: 0x00317528 File Offset: 0x00315728
 	public static bool GetPositionInRange(UUIItem item)
 	{
 		FormationDragData dragData = FormationViewDragController.DragData;
@@ -449,7 +449,7 @@ public class FormationViewDragController : UiControllerBase
 		return lguispaceAbsolutePosition2.X >= lguispaceAbsolutePosition.X - num && lguispaceAbsolutePosition2.X <= lguispaceAbsolutePosition.X + num && lguispaceAbsolutePosition2.Y >= lguispaceAbsolutePosition.Y - num2 && lguispaceAbsolutePosition2.Y <= lguispaceAbsolutePosition.Y + num2;
 	}
 
-	// Token: 0x0600D3EB RID: 54251 RVA: 0x0030C454 File Offset: 0x0030A654
+	// Token: 0x0600A7FD RID: 43005 RVA: 0x003175C8 File Offset: 0x003157C8
 	private static UniTask PrepareDragVisualsAndRefresh(FormationDragData dragData, int configId, int roleSkinId, int editPosition, bool isGamepad)
 	{
 		FormationViewDragController.<PrepareDragVisualsAndRefresh>d__28 <PrepareDragVisualsAndRefresh>d__;
@@ -464,7 +464,7 @@ public class FormationViewDragController : UiControllerBase
 		return <PrepareDragVisualsAndRefresh>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D3EC RID: 54252 RVA: 0x0030C4B8 File Offset: 0x0030A6B8
+	// Token: 0x0600A7FE RID: 43006 RVA: 0x0031762C File Offset: 0x0031582C
 	private static void RefreshDragRoleItemState(FormationDragData dragData, bool notInOtherSlot, bool hoverExchangeable)
 	{
 		FormationRoleDragAvatarItem formationRoleDragAvatarItem = dragData.DragRoleItem as FormationRoleDragAvatarItem;
@@ -476,7 +476,7 @@ public class FormationViewDragController : UiControllerBase
 		formationRoleDragAvatarItem.SetBgLightState(hoverExchangeable);
 	}
 
-	// Token: 0x0600D3ED RID: 54253 RVA: 0x0030C4E4 File Offset: 0x0030A6E4
+	// Token: 0x0600A7FF RID: 43007 RVA: 0x00317658 File Offset: 0x00315858
 	private static void EndOtherSlotsDragItem(FormationDragData dragData, int exceptPosition)
 	{
 		for (int i = 0; i < dragData.DraggableSlots.Count; i++)
@@ -488,8 +488,8 @@ public class FormationViewDragController : UiControllerBase
 		}
 	}
 
-	// Token: 0x1700116C RID: 4460
-	// (get) Token: 0x0600D3EE RID: 54254 RVA: 0x0030C51E File Offset: 0x0030A71E
+	// Token: 0x17001191 RID: 4497
+	// (get) Token: 0x0600A800 RID: 43008 RVA: 0x00317692 File Offset: 0x00315892
 	public static FormationViewDragController Instance
 	{
 		get
@@ -498,7 +498,7 @@ public class FormationViewDragController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600D3EF RID: 54255 RVA: 0x0030C525 File Offset: 0x0030A725
+	// Token: 0x0600A801 RID: 43009 RVA: 0x00317699 File Offset: 0x00315899
 	public static FormationViewDragController GetOrCreateInstance()
 	{
 		if (FormationViewDragController._Instance == null)
@@ -508,7 +508,7 @@ public class FormationViewDragController : UiControllerBase
 		return FormationViewDragController._Instance;
 	}
 
-	// Token: 0x0600D3F0 RID: 54256 RVA: 0x0030C539 File Offset: 0x0030A739
+	// Token: 0x0600A802 RID: 43010 RVA: 0x003176AD File Offset: 0x003158AD
 	public static bool CreateInstance()
 	{
 		if (FormationViewDragController._Instance != null)
@@ -519,20 +519,20 @@ public class FormationViewDragController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0600D3F1 RID: 54257 RVA: 0x0030C54F File Offset: 0x0030A74F
+	// Token: 0x0600A803 RID: 43011 RVA: 0x003176C3 File Offset: 0x003158C3
 	public static void CreateStaticDefaultValue()
 	{
 		FormationViewDragController.OnCreateStaticDefaultValue();
 	}
 
-	// Token: 0x0600D3F2 RID: 54258 RVA: 0x0030C556 File Offset: 0x0030A756
+	// Token: 0x0600A804 RID: 43012 RVA: 0x003176CA File Offset: 0x003158CA
 	public static void ResetStaticDefaultValue()
 	{
 		FormationViewDragController._Instance = null;
 		FormationViewDragController.OnResetStaticDefaultValue();
 	}
 
-	// Token: 0x0600D3F3 RID: 54259 RVA: 0x0030C563 File Offset: 0x0030A763
+	// Token: 0x0600A805 RID: 43013 RVA: 0x003176D7 File Offset: 0x003158D7
 	private static void OnCreateStaticDefaultValue()
 	{
 		FormationViewDragController.DragData = null;
@@ -544,7 +544,7 @@ public class FormationViewDragController : UiControllerBase
 		FormationViewDragController.GamePadDragWorldPos = default(FVector);
 	}
 
-	// Token: 0x0600D3F4 RID: 54260 RVA: 0x0030C594 File Offset: 0x0030A794
+	// Token: 0x0600A806 RID: 43014 RVA: 0x00317708 File Offset: 0x00315908
 	private static void OnResetStaticDefaultValue()
 	{
 		FormationViewDragController.DragData = null;
@@ -556,35 +556,35 @@ public class FormationViewDragController : UiControllerBase
 		FormationViewDragController.GamePadDragWorldPos = default(FVector);
 	}
 
-	// Token: 0x0600D3F5 RID: 54261 RVA: 0x0030C5C5 File Offset: 0x0030A7C5
+	// Token: 0x0600A807 RID: 43015 RVA: 0x00317739 File Offset: 0x00315939
 	static FormationViewDragController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(FormationViewDragController.CreateStaticDefaultValue), new Action(FormationViewDragController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040060DA RID: 24794
+	// Token: 0x040061A9 RID: 25001
 	public static int DraggingIndex;
 
-	// Token: 0x040060DB RID: 24795
+	// Token: 0x040061AA RID: 25002
 	public static bool DragStartMoveFirstRelease;
 
-	// Token: 0x040060DC RID: 24796
+	// Token: 0x040061AB RID: 25003
 	public static bool GamePadSelectModel;
 
-	// Token: 0x040060DD RID: 24797
+	// Token: 0x040061AC RID: 25004
 	[Nullable(2)]
 	private static FormationDragData DragData;
 
-	// Token: 0x040060DE RID: 24798
+	// Token: 0x040061AD RID: 25005
 	private static bool IsGamepad;
 
-	// Token: 0x040060DF RID: 24799
+	// Token: 0x040061AE RID: 25006
 	private static int PendingSelectPosition;
 
-	// Token: 0x040060E0 RID: 24800
+	// Token: 0x040061AF RID: 25007
 	private static FVector GamePadDragWorldPos;
 
-	// Token: 0x040060E1 RID: 24801
+	// Token: 0x040061B0 RID: 25008
 	[Nullable(2)]
 	private static FormationViewDragController _Instance;
 }

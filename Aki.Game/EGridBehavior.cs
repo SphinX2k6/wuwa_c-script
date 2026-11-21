@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x02002928 RID: 10536
+// Token: 0x02001EA3 RID: 7843
 public enum EGridBehavior
 {
-	// Token: 0x0400A1F5 RID: 41461
+	// Token: 0x0400A5E0 RID: 42464
 	Forbidden,
-	// Token: 0x0400A1F6 RID: 41462
+	// Token: 0x0400A5E1 RID: 42465
 	Normal,
-	// Token: 0x0400A1F7 RID: 41463
+	// Token: 0x0400A5E2 RID: 42466
 	CanAdd,
-	// Token: 0x0400A1F8 RID: 41464
+	// Token: 0x0400A5E3 RID: 42467
 	Empty,
-	// Token: 0x0400A1F9 RID: 41465
+	// Token: 0x0400A5E4 RID: 42468
 	NotShow,
-	// Token: 0x0400A1FA RID: 41466
+	// Token: 0x0400A5E5 RID: 42469
 	Lock
 }

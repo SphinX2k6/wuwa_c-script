@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DEE RID: 7662
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002021 RID: 8225
 	public class ISeasonLoopConfig
 	{
-		// Token: 0x0600A3FD RID: 41981 RVA: 0x0017418C File Offset: 0x0017238C
+		// Token: 0x0600AEA5 RID: 44709 RVA: 0x00189B94 File Offset: 0x00187D94
 		private ISeasonLoopConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A3FE RID: 41982 RVA: 0x001741C4 File Offset: 0x001723C4
+		// Token: 0x0600AEA6 RID: 44710 RVA: 0x00189BCC File Offset: 0x00187DCC
 		public static ISeasonLoopConfig Create([Nullable(2)] ISeasonLoopConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A3FF RID: 41983 RVA: 0x001741D7 File Offset: 0x001723D7
+		// Token: 0x0600AEA7 RID: 44711 RVA: 0x00189BDF File Offset: 0x00187DDF
 		public static ISeasonLoopConfig CreateFromSetValue([Nullable(2)] ISeasonLoopConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A400 RID: 41984 RVA: 0x001741EA File Offset: 0x001723EA
+		// Token: 0x0600AEA8 RID: 44712 RVA: 0x00189BF2 File Offset: 0x00187DF2
 		public ISeasonLoopConfig_SetValue ToSetValue()
 		{
 			return new ISeasonLoopConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003270 RID: 12912
-		// (get) Token: 0x0600A401 RID: 41985 RVA: 0x00174209 File Offset: 0x00172409
-		// (set) Token: 0x0600A402 RID: 41986 RVA: 0x00174238 File Offset: 0x00172438
+		// Token: 0x1700352F RID: 13615
+		// (get) Token: 0x0600AEA9 RID: 44713 RVA: 0x00189C11 File Offset: 0x00187E11
+		// (set) Token: 0x0600AEAA RID: 44714 RVA: 0x00189C40 File Offset: 0x00187E40
 		public virtual float HoldTime
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003271 RID: 12913
-		// (get) Token: 0x0600A403 RID: 41987 RVA: 0x00174246 File Offset: 0x00172446
-		// (set) Token: 0x0600A404 RID: 41988 RVA: 0x00174275 File Offset: 0x00172475
+		// Token: 0x17003530 RID: 13616
+		// (get) Token: 0x0600AEAB RID: 44715 RVA: 0x00189C4E File Offset: 0x00187E4E
+		// (set) Token: 0x0600AEAC RID: 44716 RVA: 0x00189C7D File Offset: 0x00187E7D
 		public virtual float SwitchTime
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400623F RID: 25151
+		// Token: 0x04006816 RID: 26646
 		[Nullable(2)]
 		protected ISeasonLoopConfig FbInstance;
 
-		// Token: 0x04006240 RID: 25152
+		// Token: 0x04006817 RID: 26647
 		[Nullable(2)]
 		protected ISeasonLoopConfig_SetValue PocoInterface;
 	}

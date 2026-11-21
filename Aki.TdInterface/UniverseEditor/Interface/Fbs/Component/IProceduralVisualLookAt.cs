@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005799 RID: 22425
+	// Token: 0x02005DA0 RID: 23968
 	public struct IProceduralVisualLookAt : IFlatbufferObject
 	{
-		// Token: 0x1700A73D RID: 42813
-		// (get) Token: 0x06025993 RID: 154003 RVA: 0x0052F8E1 File Offset: 0x0052DAE1
+		// Token: 0x1700B061 RID: 45153
+		// (get) Token: 0x06027EB3 RID: 163507 RVA: 0x00575A6D File Offset: 0x00573C6D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025994 RID: 154004 RVA: 0x0052F8EE File Offset: 0x0052DAEE
+		// Token: 0x06027EB4 RID: 163508 RVA: 0x00575A7A File Offset: 0x00573C7A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06025995 RID: 154005 RVA: 0x0052F8F8 File Offset: 0x0052DAF8
+		// Token: 0x06027EB5 RID: 163509 RVA: 0x00575A84 File Offset: 0x00573C84
 		public static IProceduralVisualLookAt GetRootAsIProceduralVisualLookAt(ByteBuffer _bb)
 		{
 			return IProceduralVisualLookAt.GetRootAsIProceduralVisualLookAt(_bb, default(IProceduralVisualLookAt));
 		}
 
-		// Token: 0x06025996 RID: 154006 RVA: 0x0052F914 File Offset: 0x0052DB14
+		// Token: 0x06027EB6 RID: 163510 RVA: 0x00575AA0 File Offset: 0x00573CA0
 		public static IProceduralVisualLookAt GetRootAsIProceduralVisualLookAt(ByteBuffer _bb, IProceduralVisualLookAt obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06025997 RID: 154007 RVA: 0x0052F931 File Offset: 0x0052DB31
+		// Token: 0x06027EB7 RID: 163511 RVA: 0x00575ABD File Offset: 0x00573CBD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06025998 RID: 154008 RVA: 0x0052F940 File Offset: 0x0052DB40
+		// Token: 0x06027EB8 RID: 163512 RVA: 0x00575ACC File Offset: 0x00573CCC
 		public IProceduralVisualLookAt __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A73E RID: 42814
-		// (get) Token: 0x06025999 RID: 154009 RVA: 0x0052F950 File Offset: 0x0052DB50
+		// Token: 0x1700B062 RID: 45154
+		// (get) Token: 0x06027EB9 RID: 163513 RVA: 0x00575ADC File Offset: 0x00573CDC
 		public EProceduralVisualType Type
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A73F RID: 42815
-		// (get) Token: 0x0602599A RID: 154010 RVA: 0x0052F98C File Offset: 0x0052DB8C
+		// Token: 0x1700B063 RID: 45155
+		// (get) Token: 0x06027EBA RID: 163514 RVA: 0x00575B18 File Offset: 0x00573D18
 		public IConditionGroup? Condition
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A740 RID: 42816
-		// (get) Token: 0x0602599B RID: 154011 RVA: 0x0052F9EC File Offset: 0x0052DBEC
+		// Token: 0x1700B064 RID: 45156
+		// (get) Token: 0x06027EBB RID: 163515 RVA: 0x00575B78 File Offset: 0x00573D78
 		public TLookAtTarget TargetType
 		{
 			get
@@ -94,7 +94,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602599C RID: 154012 RVA: 0x0052FA28 File Offset: 0x0052DC28
+		// Token: 0x06027EBC RID: 163516 RVA: 0x00575BB4 File Offset: 0x00573DB4
 		public TTable? Target<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(10);
@@ -105,20 +105,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0602599D RID: 154013 RVA: 0x0052FA70 File Offset: 0x0052DC70
+		// Token: 0x06027EBD RID: 163517 RVA: 0x00575BFC File Offset: 0x00573DFC
 		public ILookAtTargetEntity TargetAsILookAtTargetEntity()
 		{
 			return this.Target<ILookAtTargetEntity>().Value;
 		}
 
-		// Token: 0x0602599E RID: 154014 RVA: 0x0052FA8C File Offset: 0x0052DC8C
+		// Token: 0x06027EBE RID: 163518 RVA: 0x00575C18 File Offset: 0x00573E18
 		public ILookAtTargetPlayer TargetAsILookAtTargetPlayer()
 		{
 			return this.Target<ILookAtTargetPlayer>().Value;
 		}
 
-		// Token: 0x1700A741 RID: 42817
-		// (get) Token: 0x0602599F RID: 154015 RVA: 0x0052FAA8 File Offset: 0x0052DCA8
+		// Token: 0x1700B065 RID: 45157
+		// (get) Token: 0x06027EBF RID: 163519 RVA: 0x00575C34 File Offset: 0x00573E34
 		public string RotateNode
 		{
 			get
@@ -132,20 +132,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060259A0 RID: 154016 RVA: 0x0052FAE0 File Offset: 0x0052DCE0
+		// Token: 0x06027EC0 RID: 163520 RVA: 0x00575C6C File Offset: 0x00573E6C
 		public Span<byte> GetRotateNodeBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x060259A1 RID: 154017 RVA: 0x0052FAF0 File Offset: 0x0052DCF0
+		// Token: 0x06027EC1 RID: 163521 RVA: 0x00575C7C File Offset: 0x00573E7C
 		public byte[] GetRotateNodeArray()
 		{
 			return this.__p.__vector_as_array<byte>(12);
 		}
 
-		// Token: 0x1700A742 RID: 42818
-		// (get) Token: 0x060259A2 RID: 154018 RVA: 0x0052FB00 File Offset: 0x0052DD00
+		// Token: 0x1700B066 RID: 45158
+		// (get) Token: 0x06027EC2 RID: 163522 RVA: 0x00575C8C File Offset: 0x00573E8C
 		public float MaxAngleSpeed
 		{
 			get
@@ -159,8 +159,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A743 RID: 42819
-		// (get) Token: 0x060259A3 RID: 154019 RVA: 0x0052FB44 File Offset: 0x0052DD44
+		// Token: 0x1700B067 RID: 45159
+		// (get) Token: 0x06027EC3 RID: 163523 RVA: 0x00575CD0 File Offset: 0x00573ED0
 		public ELookAtRotateMode RotateMode
 		{
 			get
@@ -174,8 +174,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A744 RID: 42820
-		// (get) Token: 0x060259A4 RID: 154020 RVA: 0x0052FB84 File Offset: 0x0052DD84
+		// Token: 0x1700B068 RID: 45160
+		// (get) Token: 0x06027EC4 RID: 163524 RVA: 0x00575D10 File Offset: 0x00573F10
 		public EWorldAxisType ForwardDirection
 		{
 			get
@@ -189,8 +189,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A745 RID: 42821
-		// (get) Token: 0x060259A5 RID: 154021 RVA: 0x0052FBC4 File Offset: 0x0052DDC4
+		// Token: 0x1700B069 RID: 45161
+		// (get) Token: 0x06027EC5 RID: 163525 RVA: 0x00575D50 File Offset: 0x00573F50
 		public ELookAtInvalidProcess InvalidProcess
 		{
 			get
@@ -204,8 +204,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A746 RID: 42822
-		// (get) Token: 0x060259A6 RID: 154022 RVA: 0x0052FC04 File Offset: 0x0052DE04
+		// Token: 0x1700B06A RID: 45162
+		// (get) Token: 0x06027EC6 RID: 163526 RVA: 0x00575D90 File Offset: 0x00573F90
 		public byte NullMask
 		{
 			get
@@ -219,7 +219,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060259A7 RID: 154023 RVA: 0x0052FC44 File Offset: 0x0052DE44
+		// Token: 0x06027EC7 RID: 163527 RVA: 0x00575DD0 File Offset: 0x00573FD0
 		public static Offset<IProceduralVisualLookAt> CreateIProceduralVisualLookAt(FlatBufferBuilder builder, EProceduralVisualType Type = EProceduralVisualType.LookAt, Offset<IConditionGroup> ConditionOffset = default(Offset<IConditionGroup>), TLookAtTarget Target_type = TLookAtTarget.NONE, int TargetOffset = 0, StringOffset RotateNodeOffset = default(StringOffset), float MaxAngleSpeed = 0f, ELookAtRotateMode RotateMode = ELookAtRotateMode.KeepInitialPitchRoll, EWorldAxisType ForwardDirection = EWorldAxisType.PositiveX, ELookAtInvalidProcess InvalidProcess = ELookAtInvalidProcess.Reset, byte NullMask = 0)
 		{
 			builder.StartTable(10);
@@ -236,79 +236,79 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IProceduralVisualLookAt.EndIProceduralVisualLookAt(builder);
 		}
 
-		// Token: 0x060259A8 RID: 154024 RVA: 0x0052FCAC File Offset: 0x0052DEAC
+		// Token: 0x06027EC8 RID: 163528 RVA: 0x00575E38 File Offset: 0x00574038
 		public static void StartIProceduralVisualLookAt(FlatBufferBuilder builder)
 		{
 			builder.StartTable(10);
 		}
 
-		// Token: 0x060259A9 RID: 154025 RVA: 0x0052FCB6 File Offset: 0x0052DEB6
+		// Token: 0x06027EC9 RID: 163529 RVA: 0x00575E42 File Offset: 0x00574042
 		public static void AddType(FlatBufferBuilder builder, EProceduralVisualType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060259AA RID: 154026 RVA: 0x0052FCC1 File Offset: 0x0052DEC1
+		// Token: 0x06027ECA RID: 163530 RVA: 0x00575E4D File Offset: 0x0057404D
 		public static void AddCondition(FlatBufferBuilder builder, Offset<IConditionGroup> conditionOffset)
 		{
 			builder.AddOffset(1, conditionOffset.Value, 0);
 		}
 
-		// Token: 0x060259AB RID: 154027 RVA: 0x0052FCD1 File Offset: 0x0052DED1
+		// Token: 0x06027ECB RID: 163531 RVA: 0x00575E5D File Offset: 0x0057405D
 		public static void AddTargetType(FlatBufferBuilder builder, TLookAtTarget targetType)
 		{
 			builder.AddByte(2, (byte)targetType, 0);
 		}
 
-		// Token: 0x060259AC RID: 154028 RVA: 0x0052FCDC File Offset: 0x0052DEDC
+		// Token: 0x06027ECC RID: 163532 RVA: 0x00575E68 File Offset: 0x00574068
 		public static void AddTarget(FlatBufferBuilder builder, int targetOffset)
 		{
 			builder.AddOffset(3, targetOffset, 0);
 		}
 
-		// Token: 0x060259AD RID: 154029 RVA: 0x0052FCE7 File Offset: 0x0052DEE7
+		// Token: 0x06027ECD RID: 163533 RVA: 0x00575E73 File Offset: 0x00574073
 		public static void AddRotateNode(FlatBufferBuilder builder, StringOffset rotateNodeOffset)
 		{
 			builder.AddOffset(4, rotateNodeOffset.Value, 0);
 		}
 
-		// Token: 0x060259AE RID: 154030 RVA: 0x0052FCF7 File Offset: 0x0052DEF7
+		// Token: 0x06027ECE RID: 163534 RVA: 0x00575E83 File Offset: 0x00574083
 		public static void AddMaxAngleSpeed(FlatBufferBuilder builder, float maxAngleSpeed)
 		{
 			builder.AddFloat(5, maxAngleSpeed, 0.0);
 		}
 
-		// Token: 0x060259AF RID: 154031 RVA: 0x0052FD0A File Offset: 0x0052DF0A
+		// Token: 0x06027ECF RID: 163535 RVA: 0x00575E96 File Offset: 0x00574096
 		public static void AddRotateMode(FlatBufferBuilder builder, ELookAtRotateMode rotateMode)
 		{
 			builder.AddByte(6, (byte)rotateMode, 0);
 		}
 
-		// Token: 0x060259B0 RID: 154032 RVA: 0x0052FD15 File Offset: 0x0052DF15
+		// Token: 0x06027ED0 RID: 163536 RVA: 0x00575EA1 File Offset: 0x005740A1
 		public static void AddForwardDirection(FlatBufferBuilder builder, EWorldAxisType forwardDirection)
 		{
 			builder.AddByte(7, (byte)forwardDirection, 0);
 		}
 
-		// Token: 0x060259B1 RID: 154033 RVA: 0x0052FD20 File Offset: 0x0052DF20
+		// Token: 0x06027ED1 RID: 163537 RVA: 0x00575EAC File Offset: 0x005740AC
 		public static void AddInvalidProcess(FlatBufferBuilder builder, ELookAtInvalidProcess invalidProcess)
 		{
 			builder.AddByte(8, (byte)invalidProcess, 0);
 		}
 
-		// Token: 0x060259B2 RID: 154034 RVA: 0x0052FD2B File Offset: 0x0052DF2B
+		// Token: 0x06027ED2 RID: 163538 RVA: 0x00575EB7 File Offset: 0x005740B7
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(9, nullMask, 0);
 		}
 
-		// Token: 0x060259B3 RID: 154035 RVA: 0x0052FD37 File Offset: 0x0052DF37
+		// Token: 0x06027ED3 RID: 163539 RVA: 0x00575EC3 File Offset: 0x005740C3
 		public static Offset<IProceduralVisualLookAt> EndIProceduralVisualLookAt(FlatBufferBuilder builder)
 		{
 			return new Offset<IProceduralVisualLookAt>(builder.EndTable());
 		}
 
-		// Token: 0x060259B4 RID: 154036 RVA: 0x0052FD44 File Offset: 0x0052DF44
+		// Token: 0x06027ED4 RID: 163540 RVA: 0x00575ED0 File Offset: 0x005740D0
 		public IProceduralVisualLookAtT UnPack()
 		{
 			IProceduralVisualLookAtT proceduralVisualLookAtT = new IProceduralVisualLookAtT();
@@ -316,7 +316,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return proceduralVisualLookAtT;
 		}
 
-		// Token: 0x060259B5 RID: 154037 RVA: 0x0052FD60 File Offset: 0x0052DF60
+		// Token: 0x06027ED5 RID: 163541 RVA: 0x00575EEC File Offset: 0x005740EC
 		public void UnPackTo(IProceduralVisualLookAtT _o)
 		{
 			_o.Type = this.Type;
@@ -343,7 +343,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x060259B6 RID: 154038 RVA: 0x0052FE8C File Offset: 0x0052E08C
+		// Token: 0x06027ED6 RID: 163542 RVA: 0x00576018 File Offset: 0x00574218
 		public static Offset<IProceduralVisualLookAt> Pack(FlatBufferBuilder builder, IProceduralVisualLookAtT _o)
 		{
 			if (_o == null)
@@ -357,7 +357,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IProceduralVisualLookAt.CreateIProceduralVisualLookAt(builder, _o.Type, conditionOffset, target_type, targetOffset, rotateNodeOffset, _o.MaxAngleSpeed, _o.RotateMode, _o.ForwardDirection, _o.InvalidProcess, _o.NullMask);
 		}
 
-		// Token: 0x0400EC4F RID: 60495
+		// Token: 0x0400F93A RID: 63802
 		private Table __p;
 	}
 }

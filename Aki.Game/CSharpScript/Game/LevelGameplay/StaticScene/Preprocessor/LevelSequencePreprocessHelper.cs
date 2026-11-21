@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.StaticScene.Preprocessor
 {
-	// Token: 0x02006A13 RID: 27155
+	// Token: 0x02005B70 RID: 23408
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelSequencePreprocessHelper : Singleton
 	{
-		// Token: 0x060438F2 RID: 276722 RVA: 0x01087754 File Offset: 0x01085954
+		// Token: 0x0603993E RID: 235838 RVA: 0x0102BD1C File Offset: 0x01029F1C
 		public void Apply(ULevelSequence sequence, [Nullable(2)] IFloatingSubtitleLanguageDiff operation)
 		{
 			if (operation == null)
@@ -30,8 +30,8 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene.Preprocessor
 			instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x170098AA RID: 39082
-		// (get) Token: 0x060438F3 RID: 276723 RVA: 0x010877AA File Offset: 0x010859AA
+		// Token: 0x17006D8F RID: 28047
+		// (get) Token: 0x0603993F RID: 235839 RVA: 0x0102BD72 File Offset: 0x01029F72
 		public static LevelSequencePreprocessHelper Instance
 		{
 			get
@@ -45,12 +45,12 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene.Preprocessor
 			}
 		}
 
-		// Token: 0x060438F4 RID: 276724 RVA: 0x010877CD File Offset: 0x010859CD
+		// Token: 0x06039940 RID: 235840 RVA: 0x0102BD95 File Offset: 0x01029F95
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060438F5 RID: 276725 RVA: 0x010877CF File Offset: 0x010859CF
+		// Token: 0x06039941 RID: 235841 RVA: 0x0102BD97 File Offset: 0x01029F97
 		public static void ResetStaticDefaultValue()
 		{
 			LevelSequencePreprocessHelper instance = LevelSequencePreprocessHelper._instance;
@@ -61,13 +61,13 @@ namespace CSharpScript.Game.LevelGamePlay.StaticScene.Preprocessor
 			LevelSequencePreprocessHelper._instance = null;
 		}
 
-		// Token: 0x060438F6 RID: 276726 RVA: 0x010877E8 File Offset: 0x010859E8
+		// Token: 0x06039942 RID: 235842 RVA: 0x0102BDB0 File Offset: 0x01029FB0
 		static LevelSequencePreprocessHelper()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LevelSequencePreprocessHelper.CreateStaticDefaultValue), new Action(LevelSequencePreprocessHelper.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0402346B RID: 144491
+		// Token: 0x0401E65D RID: 124509
 		[Nullable(2)]
 		private static LevelSequencePreprocessHelper _instance;
 	}

@@ -6,20 +6,20 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020008A3 RID: 2211
+	// Token: 0x0200018A RID: 394
 	[UnrealObjectPath("/Script/Engine.BasedMovementInfo")]
 	[UnrealStructLayout(56, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 56)]
 	public class FBasedMovementInfo : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x060078F5 RID: 30965 RVA: 0x000AD2EC File Offset: 0x000AB4EC
+		// Token: 0x060019B0 RID: 6576 RVA: 0x000269C6 File Offset: 0x00024BC6
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FBasedMovementInfo._ScriptStructPtr != 0) ? FBasedMovementInfo._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/Engine.BasedMovementInfo", ref FBasedMovementInfo._ScriptStructPtr);
 		}
 
-		// Token: 0x17001C8F RID: 7311
-		// (get) Token: 0x060078F6 RID: 30966 RVA: 0x000AD310 File Offset: 0x000AB510
-		// (set) Token: 0x060078F7 RID: 30967 RVA: 0x000AD324 File Offset: 0x000AB524
+		// Token: 0x170002ED RID: 749
+		// (get) Token: 0x060019B1 RID: 6577 RVA: 0x000269EA File Offset: 0x00024BEA
+		// (set) Token: 0x060019B2 RID: 6578 RVA: 0x000269FE File Offset: 0x00024BFE
 		[Nullable(2)]
 		public unsafe UPrimitiveComponent MovementBase
 		{
@@ -35,9 +35,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001C90 RID: 7312
-		// (get) Token: 0x060078F8 RID: 30968 RVA: 0x000AD339 File Offset: 0x000AB539
-		// (set) Token: 0x060078F9 RID: 30969 RVA: 0x000AD34D File Offset: 0x000AB54D
+		// Token: 0x170002EE RID: 750
+		// (get) Token: 0x060019B3 RID: 6579 RVA: 0x00026A13 File Offset: 0x00024C13
+		// (set) Token: 0x060019B4 RID: 6580 RVA: 0x00026A27 File Offset: 0x00024C27
 		public unsafe FName BoneName
 		{
 			get
@@ -50,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001C91 RID: 7313
-		// (get) Token: 0x060078FA RID: 30970 RVA: 0x000AD362 File Offset: 0x000AB562
-		// (set) Token: 0x060078FB RID: 30971 RVA: 0x000AD376 File Offset: 0x000AB576
+		// Token: 0x170002EF RID: 751
+		// (get) Token: 0x060019B5 RID: 6581 RVA: 0x00026A3C File Offset: 0x00024C3C
+		// (set) Token: 0x060019B6 RID: 6582 RVA: 0x00026A50 File Offset: 0x00024C50
 		public unsafe FVector_NetQuantize100 Location
 		{
 			get
@@ -65,9 +65,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001C92 RID: 7314
-		// (get) Token: 0x060078FC RID: 30972 RVA: 0x000AD38B File Offset: 0x000AB58B
-		// (set) Token: 0x060078FD RID: 30973 RVA: 0x000AD39F File Offset: 0x000AB59F
+		// Token: 0x170002F0 RID: 752
+		// (get) Token: 0x060019B7 RID: 6583 RVA: 0x00026A65 File Offset: 0x00024C65
+		// (set) Token: 0x060019B8 RID: 6584 RVA: 0x00026A79 File Offset: 0x00024C79
 		public unsafe FRotator Rotation
 		{
 			get
@@ -80,9 +80,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001C93 RID: 7315
-		// (get) Token: 0x060078FE RID: 30974 RVA: 0x000AD3B4 File Offset: 0x000AB5B4
-		// (set) Token: 0x060078FF RID: 30975 RVA: 0x000AD3C4 File Offset: 0x000AB5C4
+		// Token: 0x170002F1 RID: 753
+		// (get) Token: 0x060019B9 RID: 6585 RVA: 0x00026A8E File Offset: 0x00024C8E
+		// (set) Token: 0x060019BA RID: 6586 RVA: 0x00026A9E File Offset: 0x00024C9E
 		public unsafe bool bServerHasBaseComponent
 		{
 			get
@@ -95,9 +95,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001C94 RID: 7316
-		// (get) Token: 0x06007900 RID: 30976 RVA: 0x000AD3D5 File Offset: 0x000AB5D5
-		// (set) Token: 0x06007901 RID: 30977 RVA: 0x000AD3E5 File Offset: 0x000AB5E5
+		// Token: 0x170002F2 RID: 754
+		// (get) Token: 0x060019BB RID: 6587 RVA: 0x00026AAF File Offset: 0x00024CAF
+		// (set) Token: 0x060019BC RID: 6588 RVA: 0x00026ABF File Offset: 0x00024CBF
 		public unsafe bool bRelativeRotation
 		{
 			get
@@ -110,9 +110,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001C95 RID: 7317
-		// (get) Token: 0x06007902 RID: 30978 RVA: 0x000AD3F6 File Offset: 0x000AB5F6
-		// (set) Token: 0x06007903 RID: 30979 RVA: 0x000AD406 File Offset: 0x000AB606
+		// Token: 0x170002F3 RID: 755
+		// (get) Token: 0x060019BD RID: 6589 RVA: 0x00026AD0 File Offset: 0x00024CD0
+		// (set) Token: 0x060019BE RID: 6590 RVA: 0x00026AE0 File Offset: 0x00024CE0
 		public unsafe bool bServerHasVelocity
 		{
 			get
@@ -125,81 +125,68 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06007904 RID: 30980 RVA: 0x000AD417 File Offset: 0x000AB617
+		// Token: 0x060019BF RID: 6591 RVA: 0x00026AF1 File Offset: 0x00024CF1
 		public FBasedMovementInfo()
 		{
 		}
 
-		// Token: 0x06007905 RID: 30981 RVA: 0x000AD41F File Offset: 0x000AB61F
-		[NullableContext(1)]
-		public FBasedMovementInfo(UPrimitiveComponent MovementBase, FName BoneName, FVector_NetQuantize100 Location, FRotator Rotation, bool bServerHasBaseComponent, bool bRelativeRotation, bool bServerHasVelocity)
-		{
-			this.MovementBase = MovementBase;
-			this.BoneName = BoneName;
-			this.Location = Location;
-			this.Rotation = Rotation;
-			this.bServerHasBaseComponent = bServerHasBaseComponent;
-			this.bRelativeRotation = bRelativeRotation;
-			this.bServerHasVelocity = bServerHasVelocity;
-		}
-
-		// Token: 0x06007906 RID: 30982 RVA: 0x000AD45C File Offset: 0x000AB65C
+		// Token: 0x060019C0 RID: 6592 RVA: 0x00026AF9 File Offset: 0x00024CF9
 		protected override IntPtr GetUStructPtr()
 		{
 			return FBasedMovementInfo.StaticStruct();
 		}
 
-		// Token: 0x06007907 RID: 30983 RVA: 0x000AD468 File Offset: 0x000AB668
+		// Token: 0x060019C1 RID: 6593 RVA: 0x00026B05 File Offset: 0x00024D05
 		[NullableContext(2)]
 		public FBasedMovementInfo(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06007908 RID: 30984 RVA: 0x000AD472 File Offset: 0x000AB672
+		// Token: 0x060019C2 RID: 6594 RVA: 0x00026B0F File Offset: 0x00024D0F
 		public FBasedMovementInfo(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06007909 RID: 30985 RVA: 0x000AD47D File Offset: 0x000AB67D
+		// Token: 0x060019C3 RID: 6595 RVA: 0x00026B1A File Offset: 0x00024D1A
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FBasedMovementInfo(Pointer, false, true);
 		}
 
-		// Token: 0x0600790A RID: 30986 RVA: 0x000AD487 File Offset: 0x000AB687
+		// Token: 0x060019C4 RID: 6596 RVA: 0x00026B24 File Offset: 0x00024D24
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FBasedMovementInfo(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04003A18 RID: 14872
+		// Token: 0x04000832 RID: 2098
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/Engine.BasedMovementInfo";
 
-		// Token: 0x04003A19 RID: 14873
+		// Token: 0x04000833 RID: 2099
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04003A1A RID: 14874
+		// Token: 0x04000834 RID: 2100
 		internal static int __PropertyOffset_MovementBase;
 
-		// Token: 0x04003A1B RID: 14875
+		// Token: 0x04000835 RID: 2101
 		internal static int __PropertyOffset_BoneName;
 
-		// Token: 0x04003A1C RID: 14876
+		// Token: 0x04000836 RID: 2102
 		internal static int __PropertyOffset_Location;
 
-		// Token: 0x04003A1D RID: 14877
+		// Token: 0x04000837 RID: 2103
 		internal static int __PropertyOffset_Rotation;
 
-		// Token: 0x04003A1E RID: 14878
+		// Token: 0x04000838 RID: 2104
 		internal static int __PropertyOffset_bServerHasBaseComponent;
 
-		// Token: 0x04003A1F RID: 14879
+		// Token: 0x04000839 RID: 2105
 		internal static int __PropertyOffset_bRelativeRotation;
 
-		// Token: 0x04003A20 RID: 14880
+		// Token: 0x0400083A RID: 2106
 		internal static int __PropertyOffset_bServerHasVelocity;
 	}
 }

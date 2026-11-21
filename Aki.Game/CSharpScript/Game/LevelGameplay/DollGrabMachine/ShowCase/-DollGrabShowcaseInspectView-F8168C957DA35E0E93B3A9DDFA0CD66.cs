@@ -2,34 +2,34 @@
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.ShowCase
 {
-	// Token: 0x02006ED7 RID: 28375
+	// Token: 0x02006057 RID: 24663
 	internal enum <DollGrabShowcaseInspectView>F8168C957DA35E0E93B3A9DDFA0CD660C2BB26E65FA6744C90ADCD8F806007322__EComponentDefine
 	{
-		// Token: 0x04023FDF RID: 147423
+		// Token: 0x0401F292 RID: 127634
 		CaptionItem,
-		// Token: 0x04023FE0 RID: 147424
+		// Token: 0x0401F293 RID: 127635
 		ContentItem,
-		// Token: 0x04023FE1 RID: 147425
+		// Token: 0x0401F294 RID: 127636
 		PreviewItem,
-		// Token: 0x04023FE2 RID: 147426
+		// Token: 0x0401F295 RID: 127637
 		CollectItem,
-		// Token: 0x04023FE3 RID: 147427
+		// Token: 0x0401F296 RID: 127638
 		CollectCurText,
-		// Token: 0x04023FE4 RID: 147428
+		// Token: 0x0401F297 RID: 127639
 		CollectTotalText,
-		// Token: 0x04023FE5 RID: 147429
+		// Token: 0x0401F298 RID: 127640
 		RewardItem,
-		// Token: 0x04023FE6 RID: 147430
+		// Token: 0x0401F299 RID: 127641
 		RewardTargetText,
-		// Token: 0x04023FE7 RID: 147431
+		// Token: 0x0401F29A RID: 127642
 		RewardValueText,
-		// Token: 0x04023FE8 RID: 147432
+		// Token: 0x0401F29B RID: 127643
 		RewardCompleteItem,
-		// Token: 0x04023FE9 RID: 147433
+		// Token: 0x0401F29C RID: 127644
 		ActiveBtn,
-		// Token: 0x04023FEA RID: 147434
+		// Token: 0x0401F29D RID: 127645
 		DeActiveItem,
-		// Token: 0x04023FEB RID: 147435
+		// Token: 0x0401F29E RID: 127646
 		InteractRootItem
 	}
 }

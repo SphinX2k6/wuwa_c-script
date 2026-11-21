@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02002258 RID: 8792
+// Token: 0x0200173C RID: 5948
 public enum EMotorTechTaskType
 {
-	// Token: 0x04008292 RID: 33426
+	// Token: 0x040083D0 RID: 33744
 	Unknown,
-	// Token: 0x04008293 RID: 33427
+	// Token: 0x040083D1 RID: 33745
 	OnlyOnce,
-	// Token: 0x04008294 RID: 33428
+	// Token: 0x040083D2 RID: 33746
 	Limited,
-	// Token: 0x04008295 RID: 33429
+	// Token: 0x040083D3 RID: 33747
 	Loop
 }

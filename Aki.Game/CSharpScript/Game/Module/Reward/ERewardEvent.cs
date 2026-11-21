@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Reward
 {
-	// Token: 0x02004F0A RID: 20234
+	// Token: 0x02003ED3 RID: 16083
 	public enum ERewardEvent
 	{
-		// Token: 0x0401B944 RID: 112964
+		// Token: 0x04016317 RID: 90903
 		HandleItemReward,
-		// Token: 0x0401B945 RID: 112965
+		// Token: 0x04016318 RID: 90904
 		HandleAddFightDropInfo,
-		// Token: 0x0401B946 RID: 112966
+		// Token: 0x04016319 RID: 90905
 		HandleDeleteFightDropInfo
 	}
 }

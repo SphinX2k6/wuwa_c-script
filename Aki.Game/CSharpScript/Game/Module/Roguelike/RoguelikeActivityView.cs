@@ -16,18 +16,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E07 RID: 19975
+	// Token: 0x02003DD0 RID: 15824
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RoguelikeActivityView : UiTickViewBase
 	{
-		// Token: 0x06033895 RID: 211093 RVA: 0x00C0B3DF File Offset: 0x00C095DF
+		// Token: 0x06028700 RID: 165632 RVA: 0x00B548EA File Offset: 0x00B52AEA
 		[NullableContext(1)]
 		public RoguelikeActivityView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06033896 RID: 211094 RVA: 0x00C0B3F4 File Offset: 0x00C095F4
+		// Token: 0x06028701 RID: 165633 RVA: 0x00B54900 File Offset: 0x00B52B00
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 16;
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06033897 RID: 211095 RVA: 0x00C0B6B8 File Offset: 0x00C098B8
+		// Token: 0x06028702 RID: 165634 RVA: 0x00B54BC4 File Offset: 0x00B52DC4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoguelikeActivityView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033898 RID: 211096 RVA: 0x00C0B6FC File Offset: 0x00C098FC
+		// Token: 0x06028703 RID: 165635 RVA: 0x00B54C08 File Offset: 0x00B52E08
 		protected override void OnStart()
 		{
 			this.CaptionItem = new PopupCaptionItem(base.GetItem(0));
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			EventSystem.Instance.Add<int>(EEventName.RoguelikeArchiveSaved, new Action<int>(this.ClearTempAchieveInfo));
 		}
 
-		// Token: 0x06033899 RID: 211097 RVA: 0x00C0B7B4 File Offset: 0x00C099B4
+		// Token: 0x06028704 RID: 165636 RVA: 0x00B54CC0 File Offset: 0x00B52EC0
 		protected override void OnBeforeShow()
 		{
 			RedDotController.Instance.BindRedDot(ERedDotName.RogueSkillUnlock, base.GetItem(8), null, 0);
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}, 0);
 		}
 
-		// Token: 0x0603389A RID: 211098 RVA: 0x00C0B80D File Offset: 0x00C09A0D
+		// Token: 0x06028705 RID: 165637 RVA: 0x00B54D19 File Offset: 0x00B52F19
 		protected override void OnBeforeHide()
 		{
 			RedDotController.Instance.UnBindRedDot(ERedDotName.RogueSkillUnlock);
@@ -137,31 +137,31 @@ namespace CSharpScript.Game.Module.Roguelike
 			RedDotController.Instance.UnBindRedDot(ERedDotName.RoguelikeShop);
 		}
 
-		// Token: 0x0603389B RID: 211099 RVA: 0x00C0B833 File Offset: 0x00C09A33
+		// Token: 0x06028706 RID: 165638 RVA: 0x00B54D3F File Offset: 0x00B52F3F
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.RoguelikeCurrencyUpdate, new Action(this.RefreshUi));
 		}
 
-		// Token: 0x0603389C RID: 211100 RVA: 0x00C0B851 File Offset: 0x00C09A51
+		// Token: 0x06028707 RID: 165639 RVA: 0x00B54D5D File Offset: 0x00B52F5D
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.RoguelikeCurrencyUpdate, new Action(this.RefreshUi));
 		}
 
-		// Token: 0x0603389D RID: 211101 RVA: 0x00C0B86F File Offset: 0x00C09A6F
+		// Token: 0x06028708 RID: 165640 RVA: 0x00B54D7B File Offset: 0x00B52F7B
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove<int>(EEventName.RoguelikeArchiveSaved, new Action<int>(this.ClearTempAchieveInfo));
 		}
 
-		// Token: 0x0603389E RID: 211102 RVA: 0x00C0B88D File Offset: 0x00C09A8D
+		// Token: 0x06028709 RID: 165641 RVA: 0x00B54D99 File Offset: 0x00B52F99
 		protected override void OnTick(float delta)
 		{
 			this.RefreshRemainTime();
 		}
 
-		// Token: 0x0603389F RID: 211103 RVA: 0x00C0B898 File Offset: 0x00C09A98
+		// Token: 0x0602870A RID: 165642 RVA: 0x00B54DA4 File Offset: 0x00B52FA4
 		protected unsafe void OnBtnShop()
 		{
 			if (this.ActivityRogueData.GetRogueActivityState() == ERogueActivityState.Close)
@@ -193,7 +193,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			PayShopController.Instance.OpenPayShopView(payShopViewData, null);
 		}
 
-		// Token: 0x060338A0 RID: 211104 RVA: 0x00C0B968 File Offset: 0x00C09B68
+		// Token: 0x0602870B RID: 165643 RVA: 0x00B54E74 File Offset: 0x00B53074
 		protected void OnBtnSkillTreeClick()
 		{
 			if (this.ActivityRogueData.GetRogueActivityState() == ERogueActivityState.Close)
@@ -210,7 +210,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			RoguelikeController.Instance.OpenRoguelikeSkillView(rogueSeasonData.SeasonId);
 		}
 
-		// Token: 0x060338A1 RID: 211105 RVA: 0x00C0B9C0 File Offset: 0x00C09BC0
+		// Token: 0x0602870C RID: 165644 RVA: 0x00B54ECC File Offset: 0x00B530CC
 		protected void OnBtnDoorClick()
 		{
 			if (this.ActivityRogueData.GetRogueActivityState() == ERogueActivityState.Close)
@@ -231,7 +231,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			UiManager.Instance.OpenView(EUiViewName.RoguelikeAchievementView, null, null);
 		}
 
-		// Token: 0x060338A2 RID: 211106 RVA: 0x00C0BA3C File Offset: 0x00C09C3C
+		// Token: 0x0602870D RID: 165645 RVA: 0x00B54F48 File Offset: 0x00B53148
 		private void RefreshLastInfo()
 		{
 			RoguelikeLastInfo lastInfo = this.LastInfo;
@@ -251,7 +251,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			normalInstButton.SetProcessingState(processingState);
 		}
 
-		// Token: 0x060338A3 RID: 211107 RVA: 0x00C0BA98 File Offset: 0x00C09C98
+		// Token: 0x0602870E RID: 165646 RVA: 0x00B54FA4 File Offset: 0x00B531A4
 		private void RefreshBossChallengeButton()
 		{
 			RoguelikeChallengeButtonItem bossChallengeButton = this.BossChallengeButton;
@@ -262,7 +262,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			bossChallengeButton.SetTxtScore(this.ActivityRogueData.SeasonData.TowerTrialBestClearCount);
 		}
 
-		// Token: 0x060338A4 RID: 211108 RVA: 0x00C0BABC File Offset: 0x00C09CBC
+		// Token: 0x0602870F RID: 165647 RVA: 0x00B54FC8 File Offset: 0x00B531C8
 		private bool CheckTempAchieveExist()
 		{
 			if (this.TempAchieveInfo == null)
@@ -301,7 +301,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return true;
 		}
 
-		// Token: 0x060338A5 RID: 211109 RVA: 0x00C0BB4C File Offset: 0x00C09D4C
+		// Token: 0x06028710 RID: 165648 RVA: 0x00B55058 File Offset: 0x00B53258
 		private bool CheckLastInfoExist()
 		{
 			if (this.LastInfo == null || this.LastInfo.InstId == 0)
@@ -365,7 +365,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return true;
 		}
 
-		// Token: 0x060338A6 RID: 211110 RVA: 0x00C0BC48 File Offset: 0x00C09E48
+		// Token: 0x06028711 RID: 165649 RVA: 0x00B55154 File Offset: 0x00B53354
 		protected void OnBtnConfirmClick()
 		{
 			if (RoleController.Instance.IsInRoleTrial())
@@ -389,7 +389,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			RoguelikeController.Instance.EnterCurrentRogueEntrance();
 		}
 
-		// Token: 0x060338A7 RID: 211111 RVA: 0x00C0BCB8 File Offset: 0x00C09EB8
+		// Token: 0x06028712 RID: 165650 RVA: 0x00B551C4 File Offset: 0x00B533C4
 		protected void OnBtnBossChallengeClick()
 		{
 			if (RoleController.Instance.IsInRoleTrial())
@@ -417,20 +417,20 @@ namespace CSharpScript.Game.Module.Roguelike
 			RoguelikeController.Instance.OpenRoguelikeAchieveView(viewInfo).Forget();
 		}
 
-		// Token: 0x060338A8 RID: 211112 RVA: 0x00C0BD38 File Offset: 0x00C09F38
+		// Token: 0x06028713 RID: 165651 RVA: 0x00B55244 File Offset: 0x00B53444
 		private void ClearTempAchieveInfo(int slotId)
 		{
 			this.TempAchieveInfo = null;
 		}
 
-		// Token: 0x060338A9 RID: 211113 RVA: 0x00C0BD41 File Offset: 0x00C09F41
+		// Token: 0x06028714 RID: 165652 RVA: 0x00B5524D File Offset: 0x00B5344D
 		private void ClearLastInfo()
 		{
 			this.LastInfo = null;
 			this.RefreshLastInfo();
 		}
 
-		// Token: 0x060338AA RID: 211114 RVA: 0x00C0BD50 File Offset: 0x00C09F50
+		// Token: 0x06028715 RID: 165653 RVA: 0x00B5525C File Offset: 0x00B5345C
 		protected void RefreshUi()
 		{
 			ActivityRogueData activityRogueData = this.ActivityRogueData;
@@ -448,7 +448,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.RefreshRemainTime();
 		}
 
-		// Token: 0x060338AB RID: 211115 RVA: 0x00C0BDE4 File Offset: 0x00C09FE4
+		// Token: 0x06028716 RID: 165654 RVA: 0x00B552F0 File Offset: 0x00B534F0
 		protected void RefreshRemainTime()
 		{
 			UUIItem item = base.GetItem(13);
@@ -502,7 +502,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			LguiUtil.Instance.SetLocalText(text, "Rogue_Function_End_Tip", Array.Empty<object>());
 		}
 
-		// Token: 0x060338AC RID: 211116 RVA: 0x00C0BEF8 File Offset: 0x00C0A0F8
+		// Token: 0x06028717 RID: 165655 RVA: 0x00B55404 File Offset: 0x00B53604
 		private UniTask InitRequest()
 		{
 			RoguelikeActivityView.<InitRequest>d__32 <InitRequest>d__;
@@ -513,7 +513,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <InitRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060338AD RID: 211117 RVA: 0x00C0BF3C File Offset: 0x00C0A13C
+		// Token: 0x06028718 RID: 165656 RVA: 0x00B55448 File Offset: 0x00B53648
 		[NullableContext(1)]
 		private List<int> GetNewUnlockPhantomList(IReadOnlyList<int> unlockPhantomList)
 		{
@@ -531,81 +531,81 @@ namespace CSharpScript.Game.Module.Roguelike
 			return list;
 		}
 
-		// Token: 0x0401B571 RID: 111985
+		// Token: 0x04015F44 RID: 89924
 		protected PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401B572 RID: 111986
+		// Token: 0x04015F45 RID: 89925
 		private ActivityRogueData ActivityRogueData;
 
-		// Token: 0x0401B573 RID: 111987
+		// Token: 0x04015F46 RID: 89926
 		private RoguelikeBlackFlowerItem BlackFlowerComponent;
 
-		// Token: 0x0401B574 RID: 111988
+		// Token: 0x04015F47 RID: 89927
 		private RoguelikeChallengeButtonItem BossChallengeButton;
 
-		// Token: 0x0401B575 RID: 111989
+		// Token: 0x04015F48 RID: 89928
 		private RoguelikeActivityNormalInstButton NormalInstButton;
 
-		// Token: 0x0401B576 RID: 111990
+		// Token: 0x04015F49 RID: 89929
 		private RoguelikeLastInfo LastInfo;
 
-		// Token: 0x0401B577 RID: 111991
+		// Token: 0x04015F4A RID: 89930
 		private RogueArchiveInfo TempAchieveInfo;
 
-		// Token: 0x0401B578 RID: 111992
+		// Token: 0x04015F4B RID: 89931
 		[Nullable(1)]
 		private List<int> NewUnlockPhantomList = new List<int>();
 
-		// Token: 0x0200AF97 RID: 44951
+		// Token: 0x020099CC RID: 39372
 		[NullableContext(0)]
 		private class ERoguelikeActivityViewDefine
 		{
-			// Token: 0x040354F6 RID: 218358
+			// Token: 0x0402FF29 RID: 196393
 			public const int CaptionItem = 0;
 
-			// Token: 0x040354F7 RID: 218359
+			// Token: 0x0402FF2A RID: 196394
 			public const int TxtTitle = 1;
 
-			// Token: 0x040354F8 RID: 218360
+			// Token: 0x0402FF2B RID: 196395
 			public const int BtnSkillTree = 2;
 
-			// Token: 0x040354F9 RID: 218361
+			// Token: 0x0402FF2C RID: 196396
 			public const int BtnDoor = 3;
 
-			// Token: 0x040354FA RID: 218362
+			// Token: 0x0402FF2D RID: 196397
 			public const int BtnConfirm = 4;
 
-			// Token: 0x040354FB RID: 218363
+			// Token: 0x0402FF2E RID: 196398
 			public const int TexBg = 5;
 
-			// Token: 0x040354FC RID: 218364
+			// Token: 0x0402FF2F RID: 196399
 			public const int BtnRewardShop = 6;
 
-			// Token: 0x040354FD RID: 218365
+			// Token: 0x0402FF30 RID: 196400
 			public const int TxtRewardShopProgress = 7;
 
-			// Token: 0x040354FE RID: 218366
+			// Token: 0x0402FF31 RID: 196401
 			public const int SkillRedItem = 8;
 
-			// Token: 0x040354FF RID: 218367
+			// Token: 0x0402FF32 RID: 196402
 			public const int AchievementRedItem = 9;
 
-			// Token: 0x04035500 RID: 218368
+			// Token: 0x0402FF33 RID: 196403
 			public const int ShopRedItem = 10;
 
-			// Token: 0x04035501 RID: 218369
+			// Token: 0x0402FF34 RID: 196404
 			public const int TxtSubTitle = 11;
 
-			// Token: 0x04035502 RID: 218370
+			// Token: 0x0402FF35 RID: 196405
 			public const int ActivityTimeText = 12;
 
-			// Token: 0x04035503 RID: 218371
+			// Token: 0x0402FF36 RID: 196406
 			public const int ActivityEndItem = 13;
 
-			// Token: 0x04035504 RID: 218372
+			// Token: 0x0402FF37 RID: 196407
 			public const int BlackFlowerItem = 14;
 
-			// Token: 0x04035505 RID: 218373
+			// Token: 0x0402FF38 RID: 196408
 			public const int BtnBossChallenge = 15;
 		}
 	}

@@ -5,21 +5,21 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x020011AE RID: 4526
+	// Token: 0x02000293 RID: 659
 	[HasGetTypeHash]
 	[UnrealObjectPath("/Script/Engine.StreamingSourceShape")]
 	[UnrealStructLayout(44, 4, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 44)]
 	public class FStreamingSourceShape : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06010B0F RID: 68367 RVA: 0x0018836E File Offset: 0x0018656E
+		// Token: 0x060048E8 RID: 18664 RVA: 0x00066501 File Offset: 0x00064701
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FStreamingSourceShape._ScriptStructPtr != 0) ? FStreamingSourceShape._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/Engine.StreamingSourceShape", ref FStreamingSourceShape._ScriptStructPtr);
 		}
 
-		// Token: 0x17004133 RID: 16691
-		// (get) Token: 0x06010B10 RID: 68368 RVA: 0x00188392 File Offset: 0x00186592
-		// (set) Token: 0x06010B11 RID: 68369 RVA: 0x001883A2 File Offset: 0x001865A2
+		// Token: 0x17000DA4 RID: 3492
+		// (get) Token: 0x060048E9 RID: 18665 RVA: 0x00066525 File Offset: 0x00064725
+		// (set) Token: 0x060048EA RID: 18666 RVA: 0x00066535 File Offset: 0x00064735
 		public unsafe bool bUseGridLoadingRange
 		{
 			get
@@ -32,9 +32,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004134 RID: 16692
-		// (get) Token: 0x06010B12 RID: 68370 RVA: 0x001883B3 File Offset: 0x001865B3
-		// (set) Token: 0x06010B13 RID: 68371 RVA: 0x001883C3 File Offset: 0x001865C3
+		// Token: 0x17000DA5 RID: 3493
+		// (get) Token: 0x060048EB RID: 18667 RVA: 0x00066546 File Offset: 0x00064746
+		// (set) Token: 0x060048EC RID: 18668 RVA: 0x00066556 File Offset: 0x00064756
 		public unsafe float LoadingRangeScale
 		{
 			get
@@ -47,9 +47,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004135 RID: 16693
-		// (get) Token: 0x06010B14 RID: 68372 RVA: 0x001883D4 File Offset: 0x001865D4
-		// (set) Token: 0x06010B15 RID: 68373 RVA: 0x001883E4 File Offset: 0x001865E4
+		// Token: 0x17000DA6 RID: 3494
+		// (get) Token: 0x060048ED RID: 18669 RVA: 0x00066567 File Offset: 0x00064767
+		// (set) Token: 0x060048EE RID: 18670 RVA: 0x00066577 File Offset: 0x00064777
 		public unsafe float Radius
 		{
 			get
@@ -62,9 +62,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004136 RID: 16694
-		// (get) Token: 0x06010B16 RID: 68374 RVA: 0x001883F5 File Offset: 0x001865F5
-		// (set) Token: 0x06010B17 RID: 68375 RVA: 0x00188405 File Offset: 0x00186605
+		// Token: 0x17000DA7 RID: 3495
+		// (get) Token: 0x060048EF RID: 18671 RVA: 0x00066588 File Offset: 0x00064788
+		// (set) Token: 0x060048F0 RID: 18672 RVA: 0x00066598 File Offset: 0x00064798
 		public unsafe bool bIsSector
 		{
 			get
@@ -77,9 +77,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004137 RID: 16695
-		// (get) Token: 0x06010B18 RID: 68376 RVA: 0x00188416 File Offset: 0x00186616
-		// (set) Token: 0x06010B19 RID: 68377 RVA: 0x00188426 File Offset: 0x00186626
+		// Token: 0x17000DA8 RID: 3496
+		// (get) Token: 0x060048F1 RID: 18673 RVA: 0x000665A9 File Offset: 0x000647A9
+		// (set) Token: 0x060048F2 RID: 18674 RVA: 0x000665B9 File Offset: 0x000647B9
 		public unsafe float SectorAngle
 		{
 			get
@@ -92,9 +92,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004138 RID: 16696
-		// (get) Token: 0x06010B1A RID: 68378 RVA: 0x00188437 File Offset: 0x00186637
-		// (set) Token: 0x06010B1B RID: 68379 RVA: 0x0018844B File Offset: 0x0018664B
+		// Token: 0x17000DA9 RID: 3497
+		// (get) Token: 0x060048F3 RID: 18675 RVA: 0x000665CA File Offset: 0x000647CA
+		// (set) Token: 0x060048F4 RID: 18676 RVA: 0x000665DE File Offset: 0x000647DE
 		public unsafe FVector Location
 		{
 			get
@@ -107,9 +107,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17004139 RID: 16697
-		// (get) Token: 0x06010B1C RID: 68380 RVA: 0x00188460 File Offset: 0x00186660
-		// (set) Token: 0x06010B1D RID: 68381 RVA: 0x00188474 File Offset: 0x00186674
+		// Token: 0x17000DAA RID: 3498
+		// (get) Token: 0x060048F5 RID: 18677 RVA: 0x000665F3 File Offset: 0x000647F3
+		// (set) Token: 0x060048F6 RID: 18678 RVA: 0x00066607 File Offset: 0x00064807
 		public unsafe FRotator Rotation
 		{
 			get
@@ -122,80 +122,68 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06010B1E RID: 68382 RVA: 0x00188489 File Offset: 0x00186689
+		// Token: 0x060048F7 RID: 18679 RVA: 0x0006661C File Offset: 0x0006481C
 		public FStreamingSourceShape()
 		{
 		}
 
-		// Token: 0x06010B1F RID: 68383 RVA: 0x00188491 File Offset: 0x00186691
-		public FStreamingSourceShape(bool bUseGridLoadingRange, float LoadingRangeScale, float Radius, bool bIsSector, float SectorAngle, FVector Location, FRotator Rotation)
-		{
-			this.bUseGridLoadingRange = bUseGridLoadingRange;
-			this.LoadingRangeScale = LoadingRangeScale;
-			this.Radius = Radius;
-			this.bIsSector = bIsSector;
-			this.SectorAngle = SectorAngle;
-			this.Location = Location;
-			this.Rotation = Rotation;
-		}
-
-		// Token: 0x06010B20 RID: 68384 RVA: 0x001884CE File Offset: 0x001866CE
+		// Token: 0x060048F8 RID: 18680 RVA: 0x00066624 File Offset: 0x00064824
 		protected override IntPtr GetUStructPtr()
 		{
 			return FStreamingSourceShape.StaticStruct();
 		}
 
-		// Token: 0x06010B21 RID: 68385 RVA: 0x001884DA File Offset: 0x001866DA
+		// Token: 0x060048F9 RID: 18681 RVA: 0x00066630 File Offset: 0x00064830
 		[NullableContext(2)]
 		public FStreamingSourceShape(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06010B22 RID: 68386 RVA: 0x001884E4 File Offset: 0x001866E4
+		// Token: 0x060048FA RID: 18682 RVA: 0x0006663A File Offset: 0x0006483A
 		public FStreamingSourceShape(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06010B23 RID: 68387 RVA: 0x001884EF File Offset: 0x001866EF
+		// Token: 0x060048FB RID: 18683 RVA: 0x00066645 File Offset: 0x00064845
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FStreamingSourceShape(Pointer, false, true);
 		}
 
-		// Token: 0x06010B24 RID: 68388 RVA: 0x001884F9 File Offset: 0x001866F9
+		// Token: 0x060048FC RID: 18684 RVA: 0x0006664F File Offset: 0x0006484F
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FStreamingSourceShape(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04008ED7 RID: 36567
+		// Token: 0x04001C56 RID: 7254
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/Engine.StreamingSourceShape";
 
-		// Token: 0x04008ED8 RID: 36568
+		// Token: 0x04001C57 RID: 7255
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04008ED9 RID: 36569
+		// Token: 0x04001C58 RID: 7256
 		internal static int __PropertyOffset_bUseGridLoadingRange;
 
-		// Token: 0x04008EDA RID: 36570
+		// Token: 0x04001C59 RID: 7257
 		internal static int __PropertyOffset_LoadingRangeScale;
 
-		// Token: 0x04008EDB RID: 36571
+		// Token: 0x04001C5A RID: 7258
 		internal static int __PropertyOffset_Radius;
 
-		// Token: 0x04008EDC RID: 36572
+		// Token: 0x04001C5B RID: 7259
 		internal static int __PropertyOffset_bIsSector;
 
-		// Token: 0x04008EDD RID: 36573
+		// Token: 0x04001C5C RID: 7260
 		internal static int __PropertyOffset_SectorAngle;
 
-		// Token: 0x04008EDE RID: 36574
+		// Token: 0x04001C5D RID: 7261
 		internal static int __PropertyOffset_Location;
 
-		// Token: 0x04008EDF RID: 36575
+		// Token: 0x04001C5E RID: 7262
 		internal static int __PropertyOffset_Rotation;
 	}
 }

@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BAC RID: 2988
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000C7A RID: 3194
 	public class INpcHitShow
 	{
-		// Token: 0x0600448E RID: 17550 RVA: 0x000AE189 File Offset: 0x000AC389
+		// Token: 0x060048E7 RID: 18663 RVA: 0x000B824D File Offset: 0x000B644D
 		public static INpcHitShow Create(INpcHitShow? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170012F3 RID: 4851
-		// (get) Token: 0x0600448F RID: 17551 RVA: 0x000AE1A8 File Offset: 0x000AC3A8
+		// Token: 0x170013EE RID: 5102
+		// (get) Token: 0x060048E8 RID: 18664 RVA: 0x000B826C File Offset: 0x000B646C
 		public virtual string HitMontage
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170012F4 RID: 4852
-		// (get) Token: 0x06004490 RID: 17552 RVA: 0x000AE1B5 File Offset: 0x000AC3B5
+		// Token: 0x170013EF RID: 5103
+		// (get) Token: 0x060048E9 RID: 18665 RVA: 0x000B8279 File Offset: 0x000B6479
 		public virtual IBubbleIndex HitBubble
 		{
 			get
@@ -49,8 +47,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170012F5 RID: 4853
-		// (get) Token: 0x06004491 RID: 17553 RVA: 0x000AE1E9 File Offset: 0x000AC3E9
+		// Token: 0x170013F0 RID: 5104
+		// (get) Token: 0x060048EA RID: 18666 RVA: 0x000B82AD File Offset: 0x000B64AD
 		public virtual int BubbleRate
 		{
 			get
@@ -59,14 +57,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040026BD RID: 9917
+		// Token: 0x04002905 RID: 10501
 		private INpcHitShow Instance;
 
-		// Token: 0x040026BE RID: 9918
+		// Token: 0x04002906 RID: 10502
 		[Nullable(2)]
 		private IBubbleIndex _HitBubbleCache;
 
-		// Token: 0x040026BF RID: 9919
+		// Token: 0x04002907 RID: 10503
 		private bool _HitBubbleInited;
 	}
 }

@@ -8,13 +8,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 {
-	// Token: 0x020070B9 RID: 28857
+	// Token: 0x02006318 RID: 25368
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class CharacterRailSlideController : ControllerBase
 	{
-		// Token: 0x060465BF RID: 288191 RVA: 0x011A1EB0 File Offset: 0x011A00B0
+		// Token: 0x0603D669 RID: 251497 RVA: 0x011BF784 File Offset: 0x011BD984
 		public void SetEntityRail(int entityId, int railId)
 		{
 			int num;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 			this.TriggerFollowers(railId);
 		}
 
-		// Token: 0x060465C0 RID: 288192 RVA: 0x011A1F14 File Offset: 0x011A0114
+		// Token: 0x0603D66A RID: 251498 RVA: 0x011BF7E8 File Offset: 0x011BD9E8
 		public void RemoveEntityRail(int entityId)
 		{
 			int key;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 			}
 		}
 
-		// Token: 0x060465C1 RID: 288193 RVA: 0x011A1F60 File Offset: 0x011A0160
+		// Token: 0x0603D66B RID: 251499 RVA: 0x011BF834 File Offset: 0x011BDA34
 		public int? GetEntityRailId(int entityId)
 		{
 			int value;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 			return new int?(value);
 		}
 
-		// Token: 0x060465C2 RID: 288194 RVA: 0x011A1F90 File Offset: 0x011A0190
+		// Token: 0x0603D66C RID: 251500 RVA: 0x011BF864 File Offset: 0x011BDA64
 		public void AddRailFollower(int pbDataId, int railId, string followerDaPath, string daPath)
 		{
 			RailSlideFollowerParams railSlideFollowerParams = this.InitRailSlideFollowerParams(followerDaPath, pbDataId);
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 			}
 		}
 
-		// Token: 0x060465C3 RID: 288195 RVA: 0x011A20AC File Offset: 0x011A02AC
+		// Token: 0x0603D66D RID: 251501 RVA: 0x011BF980 File Offset: 0x011BDB80
 		private int GetRailActiveEntity(int railId)
 		{
 			int result;
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 			return result;
 		}
 
-		// Token: 0x060465C4 RID: 288196 RVA: 0x011A20CC File Offset: 0x011A02CC
+		// Token: 0x0603D66E RID: 251502 RVA: 0x011BF9A0 File Offset: 0x011BDBA0
 		private void TriggerFollowers(int railId)
 		{
 			List<CharacterRailSlideController.RailFollowerEntry> list;
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 			}
 		}
 
-		// Token: 0x060465C5 RID: 288197 RVA: 0x011A2268 File Offset: 0x011A0468
+		// Token: 0x0603D66F RID: 251503 RVA: 0x011BFB3C File Offset: 0x011BDD3C
 		private unsafe RailSlideFollowerParams InitRailSlideFollowerParams(string daPath, int pbDataId)
 		{
 			BP_RailSlideFollowerConfig_C bp_RailSlideFollowerConfig_C = ResourceSystem.Instance.Load<BP_RailSlideFollowerConfig_C>(daPath, "js_undefined");
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 			return new RailSlideFollowerParams(bp_RailSlideFollowerConfig_C);
 		}
 
-		// Token: 0x060465C6 RID: 288198 RVA: 0x011A22F8 File Offset: 0x011A04F8
+		// Token: 0x0603D670 RID: 251504 RVA: 0x011BFBCC File Offset: 0x011BDDCC
 		public float GetRailSlideFollowerDist(int pbDataId, int railId, float followerCurrentDist, float splineLength, float deltaMs)
 		{
 			CharacterRailSlideController.IActiveFollowerState activeFollowerState;
@@ -224,7 +224,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 			return num5;
 		}
 
-		// Token: 0x060465C7 RID: 288199 RVA: 0x011A23F4 File Offset: 0x011A05F4
+		// Token: 0x0603D671 RID: 251505 RVA: 0x011BFCC8 File Offset: 0x011BDEC8
 		public float GetFollowerTargetRad(int followerPbDataId, int railId, float followerCurrentRad, float followerRadius, float deltaMs, float effectiveMaxLinearVelocity)
 		{
 			CharacterRailSlideController.IActiveFollowerState activeFollowerState;
@@ -291,7 +291,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 			return num8;
 		}
 
-		// Token: 0x060465C8 RID: 288200 RVA: 0x011A25D0 File Offset: 0x011A07D0
+		// Token: 0x0603D672 RID: 251506 RVA: 0x011BFEA4 File Offset: 0x011BE0A4
 		private float StepFollowerApproach(float current, float target, float radius, float dt, float maxAngVel, float toleranceDist, CharacterRailSlideController.IActiveFollowerState activeData)
 		{
 			float value = target - current;
@@ -337,20 +337,20 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 			return current + num7;
 		}
 
-		// Token: 0x060465C9 RID: 288201 RVA: 0x011A26E6 File Offset: 0x011A08E6
+		// Token: 0x0603D673 RID: 251507 RVA: 0x011BFFBA File Offset: 0x011BE1BA
 		public void RemoveActiveFollower(int pbDataId)
 		{
 			this.ActiveFollowerMap.Remove(pbDataId);
 		}
 
-		// Token: 0x060465CA RID: 288202 RVA: 0x011A26F8 File Offset: 0x011A08F8
+		// Token: 0x0603D674 RID: 251508 RVA: 0x011BFFCC File Offset: 0x011BE1CC
 		public float CalcParabolicHeight(IJumpProjectileParams projectileParams, float rate)
 		{
 			float num = rate * projectileParams.Length;
 			return projectileParams.ProjectileA * num * num + projectileParams.ProjectileB * num;
 		}
 
-		// Token: 0x060465CB RID: 288203 RVA: 0x011A2724 File Offset: 0x011A0924
+		// Token: 0x0603D675 RID: 251509 RVA: 0x011BFFF8 File Offset: 0x011BE1F8
 		public IJumpProjectileParams CalcParabolicCoefficients(float h0, float linearDist, float splineLength, RailSlideParams config, float halfHeightOffset = 0f)
 		{
 			float num = (float)Math.Log10((double)Math.Max(1f, Math.Min((float)config.MaxJumpDistance, linearDist) * 0.01f)) * (float)config.MaxJumpHeight + (float)config.BaseJumpHeight + Math.Max(0f, h0) - halfHeightOffset;
@@ -368,7 +368,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 			};
 		}
 
-		// Token: 0x060465CC RID: 288204 RVA: 0x011A27EC File Offset: 0x011A09EC
+		// Token: 0x0603D676 RID: 251510 RVA: 0x011C00C0 File Offset: 0x011BE2C0
 		[return: Nullable(0)]
 		public ValueTuple<float, float> CalcEnterRailDistance(float horSpeed, float verSpeed, float startDist, float splineLength, Vector startLocation, Vector nearestPoint, Vector direction, Vector gravityDirect, float halfHeight)
 		{
@@ -390,7 +390,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 			return new ValueTuple<float, float>(num2, num);
 		}
 
-		// Token: 0x060465CD RID: 288205 RVA: 0x011A2868 File Offset: 0x011A0A68
+		// Token: 0x0603D677 RID: 251511 RVA: 0x011C013C File Offset: 0x011BE33C
 		public SplineCurve BuildTwoPointSplineCurve(Vector start, Vector end, Vector startTangent = null)
 		{
 			InterpCurvePointVector interpCurvePointVector = new InterpCurvePointVector((startTangent != null) ? global::EInterpCurveMode.CurveAutoClamped : global::EInterpCurveMode.Linear);
@@ -413,7 +413,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 			return splineCurve;
 		}
 
-		// Token: 0x060465CE RID: 288206 RVA: 0x011A28F4 File Offset: 0x011A0AF4
+		// Token: 0x0603D678 RID: 251512 RVA: 0x011C01C8 File Offset: 0x011BE3C8
 		[return: Nullable(0)]
 		public ValueTuple<float, float> CalcJumpOffsetWithCorrection(float startDist, float speed, RailSlideParams config, Vector startLocation, Vector nearestPoint, Vector direction, bool addBlendDistance, float splineLength)
 		{
@@ -436,7 +436,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 			return new ValueTuple<float, float>(num, item2);
 		}
 
-		// Token: 0x060465CF RID: 288207 RVA: 0x011A2960 File Offset: 0x011A0B60
+		// Token: 0x0603D679 RID: 251513 RVA: 0x011C0234 File Offset: 0x011BE434
 		private float CalcHorizontalLandingDistance(float horSpeed, float verSpeed, float height)
 		{
 			float num = Math.Max(0f, height);
@@ -444,7 +444,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 			return ((float)Math.Sqrt((double)(num2 * num2 + 2f * num * 0.0010204081f)) - num2) * horSpeed;
 		}
 
-		// Token: 0x060465D0 RID: 288208 RVA: 0x011A29A0 File Offset: 0x011A0BA0
+		// Token: 0x0603D67A RID: 251514 RVA: 0x011C0274 File Offset: 0x011BE474
 		[NullableContext(0)]
 		private ValueTuple<float, float> CalcJumpOffsetDistance(float startDist, float speed, [Nullable(1)] RailSlideParams config, bool addBlendDistance)
 		{
@@ -470,7 +470,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 			return new ValueTuple<float, float>(Math.Max(100f, num4), num3);
 		}
 
-		// Token: 0x060465D1 RID: 288209 RVA: 0x011A2A54 File Offset: 0x011A0C54
+		// Token: 0x0603D67B RID: 251515 RVA: 0x011C0328 File Offset: 0x011BE528
 		[return: Nullable(0)]
 		public ValueTuple<float, float> CalcSlopeAngle(Vector moveDirection, Vector gravityUp)
 		{
@@ -478,7 +478,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 			return new ValueTuple<float, float>(Math.Abs((float)Math.Acos((double)Math.Max(-1f, Math.Min(1f, num))) * 57.29578f - 90f), num);
 		}
 
-		// Token: 0x060465D2 RID: 288210 RVA: 0x011A2AA0 File Offset: 0x011A0CA0
+		// Token: 0x0603D67C RID: 251516 RVA: 0x011C0374 File Offset: 0x011BE574
 		[return: Nullable(0)]
 		public ValueTuple<float, float, float> DecomposeVelocity(Vector velocity, Vector tangentDirection, Vector gravityDirect, float fallbackHorSpeed)
 		{
@@ -492,7 +492,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 			return new ValueTuple<float, float, float>(obj2, num3, item);
 		}
 
-		// Token: 0x060465D3 RID: 288211 RVA: 0x011A2B0C File Offset: 0x011A0D0C
+		// Token: 0x0603D67D RID: 251517 RVA: 0x011C03E0 File Offset: 0x011BE5E0
 		public float CalcSpeedStep(float currentSpeed, float targetSpeed, float acceleration, float deltaMs, float slopeAngle, float maxSlopeAngle)
 		{
 			float num = Math.Min(slopeAngle, maxSlopeAngle) / maxSlopeAngle;
@@ -505,7 +505,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 			return targetSpeed;
 		}
 
-		// Token: 0x060465D4 RID: 288212 RVA: 0x011A2B74 File Offset: 0x011A0D74
+		// Token: 0x0603D67E RID: 251518 RVA: 0x011C0448 File Offset: 0x011BE648
 		public void StepDampedOscillator(IRailControlData data, float input, float deltaMs)
 		{
 			float num = deltaMs * 0.001f;
@@ -534,7 +534,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 			data.AngularVelocity = num7;
 		}
 
-		// Token: 0x060465D5 RID: 288213 RVA: 0x011A2CD8 File Offset: 0x011A0ED8
+		// Token: 0x0603D67F RID: 251519 RVA: 0x011C05AC File Offset: 0x011BE7AC
 		public void CalcCircularArcOffset(IRailControlData data, Vector outOffset, Rotator outRotator, Vector tmpVector)
 		{
 			float num = data.Rad * 57.29578f;
@@ -554,7 +554,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 			outOffset.SubtractionEqual(data.DefaultLocation);
 		}
 
-		// Token: 0x060465D6 RID: 288214 RVA: 0x011A2D82 File Offset: 0x011A0F82
+		// Token: 0x0603D680 RID: 251520 RVA: 0x011C0656 File Offset: 0x011BE856
 		public void DebugDrawSphere(bool debug, Vector location, FLinearColor color, float duration = 15f)
 		{
 			if (GlobalData.IsPlayInEditor && debug)
@@ -563,7 +563,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 			}
 		}
 
-		// Token: 0x060465D7 RID: 288215 RVA: 0x011A2DB2 File Offset: 0x011A0FB2
+		// Token: 0x0603D681 RID: 251521 RVA: 0x011C0686 File Offset: 0x011BE886
 		public void DebugDrawArrow(bool debug, Vector start, Vector end, FLinearColor color)
 		{
 			if (GlobalData.IsPlayInEditor && debug)
@@ -572,13 +572,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 			}
 		}
 
-		// Token: 0x060465D8 RID: 288216 RVA: 0x011A2DE8 File Offset: 0x011A0FE8
+		// Token: 0x0603D682 RID: 251522 RVA: 0x011C06BC File Offset: 0x011BE8BC
 		public void DebugDrawCurve(bool debug, SplineCurve curve, Vector outVector, FLinearColor color)
 		{
 		}
 
-		// Token: 0x17009C84 RID: 40068
-		// (get) Token: 0x060465D9 RID: 288217 RVA: 0x011A2DF5 File Offset: 0x011A0FF5
+		// Token: 0x17007478 RID: 29816
+		// (get) Token: 0x0603D683 RID: 251523 RVA: 0x011C06C9 File Offset: 0x011BE8C9
 		public static CharacterRailSlideController Instance
 		{
 			get
@@ -587,7 +587,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 			}
 		}
 
-		// Token: 0x060465DA RID: 288218 RVA: 0x011A2DFC File Offset: 0x011A0FFC
+		// Token: 0x0603D684 RID: 251524 RVA: 0x011C06D0 File Offset: 0x011BE8D0
 		public static CharacterRailSlideController GetOrCreateInstance()
 		{
 			if (CharacterRailSlideController._Instance == null)
@@ -597,7 +597,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 			return CharacterRailSlideController._Instance;
 		}
 
-		// Token: 0x060465DB RID: 288219 RVA: 0x011A2E10 File Offset: 0x011A1010
+		// Token: 0x0603D685 RID: 251525 RVA: 0x011C06E4 File Offset: 0x011BE8E4
 		public static bool CreateInstance()
 		{
 			if (CharacterRailSlideController._Instance != null)
@@ -608,145 +608,145 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Controller
 			return true;
 		}
 
-		// Token: 0x060465DC RID: 288220 RVA: 0x011A2E26 File Offset: 0x011A1026
+		// Token: 0x0603D686 RID: 251526 RVA: 0x011C06FA File Offset: 0x011BE8FA
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060465DD RID: 288221 RVA: 0x011A2E28 File Offset: 0x011A1028
+		// Token: 0x0603D687 RID: 251527 RVA: 0x011C06FC File Offset: 0x011BE8FC
 		public static void ResetStaticDefaultValue()
 		{
 			CharacterRailSlideController._Instance = null;
 		}
 
-		// Token: 0x060465DE RID: 288222 RVA: 0x011A2E30 File Offset: 0x011A1030
+		// Token: 0x0603D688 RID: 251528 RVA: 0x011C0704 File Offset: 0x011BE904
 		static CharacterRailSlideController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(CharacterRailSlideController.CreateStaticDefaultValue), new Action(CharacterRailSlideController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04024DD1 RID: 150993
+		// Token: 0x040208F8 RID: 133368
 		private const float MS_TO_SECOUND = 0.001f;
 
-		// Token: 0x04024DD2 RID: 150994
+		// Token: 0x040208F9 RID: 133369
 		private const float CENTIMETER_TO_METER = 0.01f;
 
-		// Token: 0x04024DD3 RID: 150995
+		// Token: 0x040208FA RID: 133370
 		private const float GRAVITY_ACCELERATION = 980f;
 
-		// Token: 0x04024DD4 RID: 150996
+		// Token: 0x040208FB RID: 133371
 		private const float GRAVITY_ACCELERATION_RECIPROCAL = 0.0010204081f;
 
-		// Token: 0x04024DD5 RID: 150997
+		// Token: 0x040208FC RID: 133372
 		private const float MIN_EFFECTIVE_RADIUS = 1f;
 
-		// Token: 0x04024DD6 RID: 150998
+		// Token: 0x040208FD RID: 133373
 		private const float FOLLOWER_TOLERANCE_DIST = 20f;
 
-		// Token: 0x04024DD7 RID: 150999
+		// Token: 0x040208FE RID: 133374
 		private const float SAFE_DISTANCE = 80f;
 
-		// Token: 0x04024DD8 RID: 151000
+		// Token: 0x040208FF RID: 133375
 		private const float DEBUG_DRAW_RADIUS = 20f;
 
-		// Token: 0x04024DD9 RID: 151001
+		// Token: 0x04020900 RID: 133376
 		private const float DEBUG_DRAW_DURATION = 15f;
 
-		// Token: 0x04024DDA RID: 151002
+		// Token: 0x04020901 RID: 133377
 		private const int DEBUG_DRAW_SEGMENTS = 10;
 
-		// Token: 0x04024DDB RID: 151003
+		// Token: 0x04020902 RID: 133378
 		private const float MIN_ENTER_RAIL_DISTANCE = 100f;
 
-		// Token: 0x04024DDC RID: 151004
+		// Token: 0x04020903 RID: 133379
 		private readonly Dictionary<int, int> EntityRailMap = new Dictionary<int, int>();
 
-		// Token: 0x04024DDD RID: 151005
+		// Token: 0x04020904 RID: 133380
 		private readonly Dictionary<int, int> RailToEntityMap = new Dictionary<int, int>();
 
-		// Token: 0x04024DDE RID: 151006
+		// Token: 0x04020905 RID: 133381
 		private readonly Dictionary<int, CharacterRailSlideController.IActiveFollowerState> ActiveFollowerMap = new Dictionary<int, CharacterRailSlideController.IActiveFollowerState>();
 
-		// Token: 0x04024DDF RID: 151007
+		// Token: 0x04020906 RID: 133382
 		private readonly Dictionary<int, List<CharacterRailSlideController.RailFollowerEntry>> RailFollowerMap = new Dictionary<int, List<CharacterRailSlideController.RailFollowerEntry>>();
 
-		// Token: 0x04024DE0 RID: 151008
+		// Token: 0x04020907 RID: 133383
 		[Nullable(2)]
 		private static CharacterRailSlideController _Instance;
 
-		// Token: 0x0200CE5D RID: 52829
+		// Token: 0x0200BB30 RID: 47920
 		private interface IActiveFollowerState
 		{
-			// Token: 0x1700A2BF RID: 41663
-			// (get) Token: 0x06051E6B RID: 335467
-			// (set) Token: 0x06051E6C RID: 335468
+			// Token: 0x17007A76 RID: 31350
+			// (get) Token: 0x060488D6 RID: 297174
+			// (set) Token: 0x060488D7 RID: 297175
 			RailSlideFollowerParams Params { get; set; }
 
-			// Token: 0x1700A2C0 RID: 41664
-			// (get) Token: 0x06051E6D RID: 335469
-			// (set) Token: 0x06051E6E RID: 335470
+			// Token: 0x17007A77 RID: 31351
+			// (get) Token: 0x060488D8 RID: 297176
+			// (set) Token: 0x060488D9 RID: 297177
 			float LastDist { get; set; }
 
-			// Token: 0x1700A2C1 RID: 41665
-			// (get) Token: 0x06051E6F RID: 335471
-			// (set) Token: 0x06051E70 RID: 335472
+			// Token: 0x17007A78 RID: 31352
+			// (get) Token: 0x060488DA RID: 297178
+			// (set) Token: 0x060488DB RID: 297179
 			bool CurrentSide { get; set; }
 
-			// Token: 0x1700A2C2 RID: 41666
-			// (get) Token: 0x06051E71 RID: 335473
-			// (set) Token: 0x06051E72 RID: 335474
+			// Token: 0x17007A79 RID: 31353
+			// (get) Token: 0x060488DC RID: 297180
+			// (set) Token: 0x060488DD RID: 297181
 			float RadVelocity { get; set; }
 
-			// Token: 0x1700A2C3 RID: 41667
-			// (get) Token: 0x06051E73 RID: 335475
-			// (set) Token: 0x06051E74 RID: 335476
+			// Token: 0x17007A7A RID: 31354
+			// (get) Token: 0x060488DE RID: 297182
+			// (set) Token: 0x060488DF RID: 297183
 			float SmoothedLeaderRad { get; set; }
 		}
 
-		// Token: 0x0200CE5E RID: 52830
+		// Token: 0x0200BB31 RID: 47921
 		[Nullable(0)]
 		private class ActiveFollowerState : CharacterRailSlideController.IActiveFollowerState
 		{
-			// Token: 0x1700A2C4 RID: 41668
-			// (get) Token: 0x06051E75 RID: 335477 RVA: 0x01641C45 File Offset: 0x0163FE45
-			// (set) Token: 0x06051E76 RID: 335478 RVA: 0x01641C4D File Offset: 0x0163FE4D
+			// Token: 0x17007A7B RID: 31355
+			// (get) Token: 0x060488E0 RID: 297184 RVA: 0x0161F652 File Offset: 0x0161D852
+			// (set) Token: 0x060488E1 RID: 297185 RVA: 0x0161F65A File Offset: 0x0161D85A
 			public RailSlideFollowerParams Params { get; set; }
 
-			// Token: 0x1700A2C5 RID: 41669
-			// (get) Token: 0x06051E77 RID: 335479 RVA: 0x01641C56 File Offset: 0x0163FE56
-			// (set) Token: 0x06051E78 RID: 335480 RVA: 0x01641C5E File Offset: 0x0163FE5E
+			// Token: 0x17007A7C RID: 31356
+			// (get) Token: 0x060488E2 RID: 297186 RVA: 0x0161F663 File Offset: 0x0161D863
+			// (set) Token: 0x060488E3 RID: 297187 RVA: 0x0161F66B File Offset: 0x0161D86B
 			public float LastDist { get; set; }
 
-			// Token: 0x1700A2C6 RID: 41670
-			// (get) Token: 0x06051E79 RID: 335481 RVA: 0x01641C67 File Offset: 0x0163FE67
-			// (set) Token: 0x06051E7A RID: 335482 RVA: 0x01641C6F File Offset: 0x0163FE6F
+			// Token: 0x17007A7D RID: 31357
+			// (get) Token: 0x060488E4 RID: 297188 RVA: 0x0161F674 File Offset: 0x0161D874
+			// (set) Token: 0x060488E5 RID: 297189 RVA: 0x0161F67C File Offset: 0x0161D87C
 			public bool CurrentSide { get; set; }
 
-			// Token: 0x1700A2C7 RID: 41671
-			// (get) Token: 0x06051E7B RID: 335483 RVA: 0x01641C78 File Offset: 0x0163FE78
-			// (set) Token: 0x06051E7C RID: 335484 RVA: 0x01641C80 File Offset: 0x0163FE80
+			// Token: 0x17007A7E RID: 31358
+			// (get) Token: 0x060488E6 RID: 297190 RVA: 0x0161F685 File Offset: 0x0161D885
+			// (set) Token: 0x060488E7 RID: 297191 RVA: 0x0161F68D File Offset: 0x0161D88D
 			public float RadVelocity { get; set; }
 
-			// Token: 0x1700A2C8 RID: 41672
-			// (get) Token: 0x06051E7D RID: 335485 RVA: 0x01641C89 File Offset: 0x0163FE89
-			// (set) Token: 0x06051E7E RID: 335486 RVA: 0x01641C91 File Offset: 0x0163FE91
+			// Token: 0x17007A7F RID: 31359
+			// (get) Token: 0x060488E8 RID: 297192 RVA: 0x0161F696 File Offset: 0x0161D896
+			// (set) Token: 0x060488E9 RID: 297193 RVA: 0x0161F69E File Offset: 0x0161D89E
 			public float SmoothedLeaderRad { get; set; }
 		}
 
-		// Token: 0x0200CE5F RID: 52831
+		// Token: 0x0200BB32 RID: 47922
 		[Nullable(0)]
 		private class RailFollowerEntry
 		{
-			// Token: 0x0403E219 RID: 254489
+			// Token: 0x04039949 RID: 235849
 			public int PbDataId;
 
-			// Token: 0x0403E21A RID: 254490
+			// Token: 0x0403994A RID: 235850
 			public RailSlideFollowerParams Params;
 
-			// Token: 0x0403E21B RID: 254491
+			// Token: 0x0403994B RID: 235851
 			public string DaPath;
 
-			// Token: 0x0403E21C RID: 254492
+			// Token: 0x0403994C RID: 235852
 			public int RailId;
 		}
 	}

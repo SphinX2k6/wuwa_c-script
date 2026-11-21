@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013E2 RID: 5090
+	// Token: 0x02001539 RID: 5433
 	public class ISurvivorsRougeConditionStepChestReward : ISurvivorsRougeConditionStepBase
 	{
-		// Token: 0x0600740B RID: 29707 RVA: 0x00115FFE File Offset: 0x001141FE
-		[NullableContext(1)]
+		// Token: 0x06007ACC RID: 31436 RVA: 0x001249E2 File Offset: 0x00122BE2
 		public static ISurvivorsRougeConditionStepChestReward Create(ISurvivorsRougeConditionStepChestReward? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700261A RID: 9754
-		// (get) Token: 0x0600740C RID: 29708 RVA: 0x0011601D File Offset: 0x0011421D
+		// Token: 0x170027FC RID: 10236
+		// (get) Token: 0x06007ACD RID: 31437 RVA: 0x00124A01 File Offset: 0x00122C01
 		public override ESurvivorsRougeConditionStep Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400432A RID: 17194
+		// Token: 0x040046BB RID: 18107
 		private ISurvivorsRougeConditionStepChestReward Instance;
 	}
 }

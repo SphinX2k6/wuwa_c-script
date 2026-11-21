@@ -6,30 +6,30 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Updater
 {
-	// Token: 0x020000A5 RID: 165
+	// Token: 0x020000A8 RID: 168
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CompositeResourceDiffUpdater : ResourceDiffUpdater
 	{
-		// Token: 0x060005A8 RID: 1448 RVA: 0x00032F60 File Offset: 0x00031160
+		// Token: 0x060005C0 RID: 1472 RVA: 0x000345F0 File Offset: 0x000327F0
 		public CompositeResourceDiffUpdater(string name, int priority) : base(name, priority, new List<ResPackageInfo>())
 		{
 			this.ViewInfoInternal = new ResourceUpdateViewAgent();
 		}
 
-		// Token: 0x060005A9 RID: 1449 RVA: 0x00032F85 File Offset: 0x00031185
+		// Token: 0x060005C1 RID: 1473 RVA: 0x00034615 File Offset: 0x00032815
 		public void AddChild(ResourceDiffUpdater child)
 		{
 			this.Children.Add(child);
 		}
 
-		// Token: 0x060005AA RID: 1450 RVA: 0x00032F93 File Offset: 0x00031193
+		// Token: 0x060005C2 RID: 1474 RVA: 0x00034623 File Offset: 0x00032823
 		public IReadOnlyList<ResourceDiffUpdater> GetChildren()
 		{
 			return this.Children;
 		}
 
-		// Token: 0x060005AB RID: 1451 RVA: 0x00032F9C File Offset: 0x0003119C
+		// Token: 0x060005C3 RID: 1475 RVA: 0x0003462C File Offset: 0x0003282C
 		public List<VideoResourceDiffUpdater> GetVideoUpdaters()
 		{
 			List<VideoResourceDiffUpdater> list = new List<VideoResourceDiffUpdater>();
@@ -44,7 +44,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Updater
 			return list;
 		}
 
-		// Token: 0x060005AC RID: 1452 RVA: 0x00033000 File Offset: 0x00031200
+		// Token: 0x060005C4 RID: 1476 RVA: 0x00034690 File Offset: 0x00032890
 		public new UniTask Init()
 		{
 			CompositeResourceDiffUpdater.<Init>d__5 <Init>d__;
@@ -55,7 +55,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Updater
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060005AD RID: 1453 RVA: 0x00033044 File Offset: 0x00031244
+		// Token: 0x060005C5 RID: 1477 RVA: 0x000346D4 File Offset: 0x000328D4
 		protected override UniTask AnalysisManifests()
 		{
 			CompositeResourceDiffUpdater.<AnalysisManifests>d__6 <AnalysisManifests>d__;
@@ -65,7 +65,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Updater
 			return <AnalysisManifests>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060005AE RID: 1454 RVA: 0x00033080 File Offset: 0x00031280
+		// Token: 0x060005C6 RID: 1478 RVA: 0x00034710 File Offset: 0x00032910
 		public override void CalculateSizeInfo()
 		{
 			foreach (ResourceDiffUpdater resourceDiffUpdater in this.Children)
@@ -75,7 +75,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Updater
 			this.SyncFromChildren();
 		}
 
-		// Token: 0x060005AF RID: 1455 RVA: 0x000330D8 File Offset: 0x000312D8
+		// Token: 0x060005C7 RID: 1479 RVA: 0x00034768 File Offset: 0x00032968
 		public override UniTask UpdateResourceProcedure()
 		{
 			CompositeResourceDiffUpdater.<UpdateResourceProcedure>d__8 <UpdateResourceProcedure>d__;
@@ -86,7 +86,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Updater
 			return <UpdateResourceProcedure>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060005B0 RID: 1456 RVA: 0x0003311C File Offset: 0x0003131C
+		// Token: 0x060005C8 RID: 1480 RVA: 0x000347AC File Offset: 0x000329AC
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -102,7 +102,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Updater
 			return <WrapTask>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060005B1 RID: 1457 RVA: 0x00033160 File Offset: 0x00031360
+		// Token: 0x060005C9 RID: 1481 RVA: 0x000347F0 File Offset: 0x000329F0
 		public override void Stop()
 		{
 			LauncherLog instance = LauncherLog.Instance;
@@ -116,7 +116,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Updater
 			this.UpdateStatus = EResDownloadStatus.Stop;
 		}
 
-		// Token: 0x060005B2 RID: 1458 RVA: 0x000331E0 File Offset: 0x000313E0
+		// Token: 0x060005CA RID: 1482 RVA: 0x00034870 File Offset: 0x00032A70
 		public override void Clear()
 		{
 			this.UpdateStatus = EResDownloadStatus.Cancel;
@@ -126,7 +126,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Updater
 			}
 		}
 
-		// Token: 0x060005B3 RID: 1459 RVA: 0x00033238 File Offset: 0x00031438
+		// Token: 0x060005CB RID: 1483 RVA: 0x000348C8 File Offset: 0x00032AC8
 		public override bool IsCompleteDownloaded()
 		{
 			using (List<ResourceDiffUpdater>.Enumerator enumerator = this.Children.GetEnumerator())
@@ -142,8 +142,8 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Updater
 			return true;
 		}
 
-		// Token: 0x170000CA RID: 202
-		// (get) Token: 0x060005B4 RID: 1460 RVA: 0x00033294 File Offset: 0x00031494
+		// Token: 0x170000CC RID: 204
+		// (get) Token: 0x060005CC RID: 1484 RVA: 0x00034924 File Offset: 0x00032B24
 		public new double SpendTime
 		{
 			get
@@ -164,8 +164,8 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Updater
 			}
 		}
 
-		// Token: 0x170000CB RID: 203
-		// (get) Token: 0x060005B5 RID: 1461 RVA: 0x00033314 File Offset: 0x00031514
+		// Token: 0x170000CD RID: 205
+		// (get) Token: 0x060005CD RID: 1485 RVA: 0x000349A4 File Offset: 0x00032BA4
 		[Nullable(2)]
 		public override ResourceUpdateViewAgent ViewInfo
 		{
@@ -177,7 +177,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Updater
 			}
 		}
 
-		// Token: 0x060005B6 RID: 1462 RVA: 0x00033324 File Offset: 0x00031524
+		// Token: 0x060005CE RID: 1486 RVA: 0x000349B4 File Offset: 0x00032BB4
 		private void SyncFromChildren()
 		{
 			long num = 0L;
@@ -251,7 +251,7 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Updater
 			}
 		}
 
-		// Token: 0x04000385 RID: 901
+		// Token: 0x040003B3 RID: 947
 		private readonly List<ResourceDiffUpdater> Children = new List<ResourceDiffUpdater>();
 	}
 }

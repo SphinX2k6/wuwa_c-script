@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009B0 RID: 2480
+	// Token: 0x02000A65 RID: 2661
 	public static class ENoiseRemovalColorExtensions
 	{
-		// Token: 0x06003749 RID: 14153 RVA: 0x0008FCC4 File Offset: 0x0008DEC4
+		// Token: 0x06003AD9 RID: 15065 RVA: 0x00097DB8 File Offset: 0x00095FB8
 		public static string ToEnumString(this ENoiseRemovalColor value)
 		{
 			string result;
@@ -36,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600374A RID: 14154 RVA: 0x0008FD30 File Offset: 0x0008DF30
+		// Token: 0x06003ADA RID: 15066 RVA: 0x00097E24 File Offset: 0x00096024
 		public static ENoiseRemovalColor FromString(string name)
 		{
 			ENoiseRemovalColor result;
@@ -47,7 +47,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600374B RID: 14155 RVA: 0x0008FD5C File Offset: 0x0008DF5C
+		// Token: 0x06003ADB RID: 15067 RVA: 0x00097E50 File Offset: 0x00096050
 		public static bool TryFromString(string name, out ENoiseRemovalColor value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -89,7 +89,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x0600374C RID: 14156 RVA: 0x0008FDE8 File Offset: 0x0008DFE8
+		// Token: 0x06003ADC RID: 15068 RVA: 0x00097EDC File Offset: 0x000960DC
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -103,7 +103,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600374D RID: 14157 RVA: 0x0008FE20 File Offset: 0x0008E020
+		// Token: 0x06003ADD RID: 15069 RVA: 0x00097F14 File Offset: 0x00096114
 		public static ENoiseRemovalColor[] GetValues()
 		{
 			return new ENoiseRemovalColor[]
@@ -117,7 +117,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600374E RID: 14158 RVA: 0x0008FE33 File Offset: 0x0008E033
+		// Token: 0x06003ADE RID: 15070 RVA: 0x00097F27 File Offset: 0x00096127
 		public static string[] GetNames()
 		{
 			return new string[]

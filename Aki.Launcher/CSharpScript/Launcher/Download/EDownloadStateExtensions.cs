@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Launcher.Download
 {
-	// Token: 0x02000202 RID: 514
+	// Token: 0x02000207 RID: 519
 	public static class EDownloadStateExtensions
 	{
-		// Token: 0x06000D36 RID: 3382 RVA: 0x0005000C File Offset: 0x0004E20C
+		// Token: 0x06000D77 RID: 3447 RVA: 0x00052AF8 File Offset: 0x00050CF8
 		public static string ToEnumString(this EDownloadState value)
 		{
 			string result;
@@ -45,7 +45,7 @@ namespace CSharpScript.Launcher.Download
 			return result;
 		}
 
-		// Token: 0x06000D37 RID: 3383 RVA: 0x0005009C File Offset: 0x0004E29C
+		// Token: 0x06000D78 RID: 3448 RVA: 0x00052B88 File Offset: 0x00050D88
 		public static EDownloadState FromString(string name)
 		{
 			EDownloadState result;
@@ -56,7 +56,7 @@ namespace CSharpScript.Launcher.Download
 			return result;
 		}
 
-		// Token: 0x06000D38 RID: 3384 RVA: 0x000500C8 File Offset: 0x0004E2C8
+		// Token: 0x06000D79 RID: 3449 RVA: 0x00052BB4 File Offset: 0x00050DB4
 		public static bool TryFromString(string name, out EDownloadState value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -144,7 +144,7 @@ namespace CSharpScript.Launcher.Download
 			return false;
 		}
 
-		// Token: 0x06000D39 RID: 3385 RVA: 0x0005020C File Offset: 0x0004E40C
+		// Token: 0x06000D7A RID: 3450 RVA: 0x00052CF8 File Offset: 0x00050EF8
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -161,7 +161,7 @@ namespace CSharpScript.Launcher.Download
 			};
 		}
 
-		// Token: 0x06000D3A RID: 3386 RVA: 0x00050268 File Offset: 0x0004E468
+		// Token: 0x06000D7B RID: 3451 RVA: 0x00052D54 File Offset: 0x00050F54
 		public static EDownloadState[] GetValues()
 		{
 			return new EDownloadState[]
@@ -178,7 +178,7 @@ namespace CSharpScript.Launcher.Download
 			};
 		}
 
-		// Token: 0x06000D3B RID: 3387 RVA: 0x0005027C File Offset: 0x0004E47C
+		// Token: 0x06000D7C RID: 3452 RVA: 0x00052D68 File Offset: 0x00050F68
 		public static string[] GetNames()
 		{
 			return new string[]

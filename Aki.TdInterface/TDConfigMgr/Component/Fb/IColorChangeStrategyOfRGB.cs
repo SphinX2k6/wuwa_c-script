@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C0A RID: 3082
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000CDA RID: 3290
 	public class IColorChangeStrategyOfRGB : IColorStrategyOfSplineEffectType
 	{
-		// Token: 0x060046C0 RID: 18112 RVA: 0x000B28C6 File Offset: 0x000B0AC6
+		// Token: 0x06004B23 RID: 19235 RVA: 0x000BCA92 File Offset: 0x000BAC92
 		public static IColorChangeStrategyOfRGB Create(IColorChangeStrategyOfRGB? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001469 RID: 5225
-		// (get) Token: 0x060046C1 RID: 18113 RVA: 0x000B28E5 File Offset: 0x000B0AE5
+		// Token: 0x1700156A RID: 5482
+		// (get) Token: 0x06004B24 RID: 19236 RVA: 0x000BCAB1 File Offset: 0x000BACB1
 		public override EColorChangeStrategyOfSplineEffect Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700146A RID: 5226
-		// (get) Token: 0x060046C2 RID: 18114 RVA: 0x000B28F2 File Offset: 0x000B0AF2
+		// Token: 0x1700156B RID: 5483
+		// (get) Token: 0x06004B25 RID: 19237 RVA: 0x000BCABE File Offset: 0x000BACBE
 		public virtual string BlueState
 		{
 			get
@@ -42,8 +39,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700146B RID: 5227
-		// (get) Token: 0x060046C3 RID: 18115 RVA: 0x000B28FF File Offset: 0x000B0AFF
+		// Token: 0x1700156C RID: 5484
+		// (get) Token: 0x06004B26 RID: 19238 RVA: 0x000BCACB File Offset: 0x000BACCB
 		public virtual string YellowState
 		{
 			get
@@ -52,8 +49,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700146C RID: 5228
-		// (get) Token: 0x060046C4 RID: 18116 RVA: 0x000B290C File Offset: 0x000B0B0C
+		// Token: 0x1700156D RID: 5485
+		// (get) Token: 0x06004B27 RID: 19239 RVA: 0x000BCAD8 File Offset: 0x000BACD8
 		public virtual string RedState
 		{
 			get
@@ -62,7 +59,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002839 RID: 10297
+		// Token: 0x04002A85 RID: 10885
 		private IColorChangeStrategyOfRGB Instance;
 	}
 }

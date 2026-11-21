@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -16,7 +15,7 @@ using CSharpScript.Game.Module.WorldMap;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020013AA RID: 5034
+// Token: 0x0200085E RID: 2142
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -25,7 +24,7 @@ using UnrealEngine;
 })]
 public class NewcomerJourneyTaskItem : GridProxyAbstract<NewcomerJourneyTaskData>
 {
-	// Token: 0x06008D58 RID: 36184 RVA: 0x001E6530 File Offset: 0x001E4730
+	// Token: 0x060060EE RID: 24814 RVA: 0x001EF164 File Offset: 0x001ED364
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -64,7 +63,7 @@ public class NewcomerJourneyTaskItem : GridProxyAbstract<NewcomerJourneyTaskData
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06008D59 RID: 36185 RVA: 0x001E6704 File Offset: 0x001E4904
+	// Token: 0x060060EF RID: 24815 RVA: 0x001EF338 File Offset: 0x001ED538
 	private void OnClickGoButton()
 	{
 		if (this.Data == null)
@@ -77,7 +76,7 @@ public class NewcomerJourneyTaskItem : GridProxyAbstract<NewcomerJourneyTaskData
 		}
 	}
 
-	// Token: 0x06008D5A RID: 36186 RVA: 0x001E672C File Offset: 0x001E492C
+	// Token: 0x060060F0 RID: 24816 RVA: 0x001EF360 File Offset: 0x001ED560
 	private void OnClickGetButton()
 	{
 		if (this.Data == null || this.ActivityData == null)
@@ -86,9 +85,15 @@ public class NewcomerJourneyTaskItem : GridProxyAbstract<NewcomerJourneyTaskData
 		}
 		if (this.Data.TaskData.Status == ConditionTaskState.ConditionTaskFinish)
 		{
-			List<int> list = (from task in this.ActivityData.GetChapterTaskList(this.Data.ChapterId)
-			where task.TaskData.Status == ConditionTaskState.ConditionTaskFinish
-			select task.TaskData.Id).ToList<int>();
+			List<NewcomerJourneyTaskData> chapterTaskList = this.ActivityData.GetChapterTaskList(this.Data.ChapterId);
+			List<int> list = new List<int>();
+			foreach (NewcomerJourneyTaskData newcomerJourneyTaskData in chapterTaskList)
+			{
+				if (newcomerJourneyTaskData.TaskData.Status == ConditionTaskState.ConditionTaskFinish)
+				{
+					list.Add(newcomerJourneyTaskData.TaskData.Id);
+				}
+			}
 			if (list.Count > 0)
 			{
 				ActivityNewcomerJourneyController.Instance.GetTaskReward(this.ActivityData.Id, list);
@@ -96,25 +101,25 @@ public class NewcomerJourneyTaskItem : GridProxyAbstract<NewcomerJourneyTaskData
 		}
 	}
 
-	// Token: 0x06008D5B RID: 36187 RVA: 0x001E67E5 File Offset: 0x001E49E5
+	// Token: 0x060060F1 RID: 24817 RVA: 0x001EF42C File Offset: 0x001ED62C
 	public void SetActivityData(ActivityNewcomerJourneyData data)
 	{
 		this.ActivityData = data;
 	}
 
-	// Token: 0x06008D5C RID: 36188 RVA: 0x001E67EE File Offset: 0x001E49EE
+	// Token: 0x060060F2 RID: 24818 RVA: 0x001EF435 File Offset: 0x001ED635
 	protected override void OnStart()
 	{
 		this.RewardScrollView = new GenericScrollViewNew<ActivitySmallItemGrid, IItemGridData>(base.GetScrollViewWithScrollbar(6), new Func<ActivitySmallItemGrid>(this.InitGridItem), null, false, null);
 	}
 
-	// Token: 0x06008D5D RID: 36189 RVA: 0x001E6811 File Offset: 0x001E4A11
+	// Token: 0x060060F3 RID: 24819 RVA: 0x001EF458 File Offset: 0x001ED658
 	private ActivitySmallItemGrid InitGridItem()
 	{
 		return new ActivitySmallItemGrid();
 	}
 
-	// Token: 0x06008D5E RID: 36190 RVA: 0x001E6818 File Offset: 0x001E4A18
+	// Token: 0x060060F4 RID: 24820 RVA: 0x001EF460 File Offset: 0x001ED660
 	public override void Refresh(NewcomerJourneyTaskData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -138,7 +143,7 @@ public class NewcomerJourneyTaskItem : GridProxyAbstract<NewcomerJourneyTaskData
 		this.RefreshTaskBgTexture(taskBgTexturePathByType);
 	}
 
-	// Token: 0x06008D5F RID: 36191 RVA: 0x001E6954 File Offset: 0x001E4B54
+	// Token: 0x060060F5 RID: 24821 RVA: 0x001EF59C File Offset: 0x001ED79C
 	private void RefreshReward(int dropId, bool hasClaimed)
 	{
 		List<TItem> dropPackagePreviewItemList = CSharpScript.Game.Module.Reward.RewardConfig.Instance.GetDropPackagePreviewItemList(dropId);
@@ -155,7 +160,7 @@ public class NewcomerJourneyTaskItem : GridProxyAbstract<NewcomerJourneyTaskData
 		this.RewardScrollView.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x06008D60 RID: 36192 RVA: 0x001E69D4 File Offset: 0x001E4BD4
+	// Token: 0x060060F6 RID: 24822 RVA: 0x001EF61C File Offset: 0x001ED81C
 	private void HandleJump()
 	{
 		NewcomerJourneyTaskData data = this.Data;
@@ -235,7 +240,7 @@ public class NewcomerJourneyTaskItem : GridProxyAbstract<NewcomerJourneyTaskData
 		}
 	}
 
-	// Token: 0x06008D61 RID: 36193 RVA: 0x001E6BE8 File Offset: 0x001E4DE8
+	// Token: 0x060060F7 RID: 24823 RVA: 0x001EF830 File Offset: 0x001EDA30
 	private void JumpToExploreAreaDetailView(int exploreType)
 	{
 		int worldMapLevelOneAreaId = MapUtil.GetWorldMapLevelOneAreaId();
@@ -258,7 +263,7 @@ public class NewcomerJourneyTaskItem : GridProxyAbstract<NewcomerJourneyTaskData
 		});
 	}
 
-	// Token: 0x06008D62 RID: 36194 RVA: 0x001E6C58 File Offset: 0x001E4E58
+	// Token: 0x060060F8 RID: 24824 RVA: 0x001EF8A0 File Offset: 0x001EDAA0
 	private void JumpToMissionByType(int questType)
 	{
 		foreach (QuestType questType2 in QuestNewConfig.Instance.GetQuesTypesByMainType(questType))
@@ -277,7 +282,7 @@ public class NewcomerJourneyTaskItem : GridProxyAbstract<NewcomerJourneyTaskData
 		}
 	}
 
-	// Token: 0x06008D63 RID: 36195 RVA: 0x001E6D20 File Offset: 0x001E4F20
+	// Token: 0x060060F9 RID: 24825 RVA: 0x001EF968 File Offset: 0x001EDB68
 	private void JumpToMapByMarkId(int markId)
 	{
 		MapConfig instance = MapConfig.Instance;
@@ -295,7 +300,7 @@ public class NewcomerJourneyTaskItem : GridProxyAbstract<NewcomerJourneyTaskData
 		WorldMapController.Instance.OpenView(EOpenMapType.Mouse, false, data, null);
 	}
 
-	// Token: 0x06008D64 RID: 36196 RVA: 0x001E6DA4 File Offset: 0x001E4FA4
+	// Token: 0x060060FA RID: 24826 RVA: 0x001EF9EC File Offset: 0x001EDBEC
 	private void JumpToNearestLockedTeleport(EMarkType markType)
 	{
 		if (markType != EMarkType.BigTeleport && markType != EMarkType.SmallTeleport)
@@ -315,7 +320,7 @@ public class NewcomerJourneyTaskItem : GridProxyAbstract<NewcomerJourneyTaskData
 			if (mapMark.ObjectType == (int)markType && MapModel.Instance.IsTeleportLocked(mapMark.MarkId))
 			{
 				global::Vector vector = global::Vector.Create();
-				MapUtil.GetConfigPosition(mapMark.EntityConfigId, vector, mapMark.RelativeDungeonId);
+				MapUtil.GetConfigPosition(mapMark.EntityConfigId, vector, mapMark.RelativeDungeonId, true);
 				double num3 = global::Vector.DistSquared(playerLocation, vector);
 				if (num > num3)
 				{
@@ -331,12 +336,12 @@ public class NewcomerJourneyTaskItem : GridProxyAbstract<NewcomerJourneyTaskData
 		this.JumpToMapByMarkId(num2);
 	}
 
-	// Token: 0x06008D65 RID: 36197 RVA: 0x001E6E80 File Offset: 0x001E5080
+	// Token: 0x060060FB RID: 24827 RVA: 0x001EFAC8 File Offset: 0x001EDCC8
 	private void ProcessDisposableChallengeTabOpen(int jumpParam)
 	{
 		if (AdventureGuideModel.Instance.CheckTargetDungeonTypeCanShow((EDungeonType)jumpParam))
 		{
-			AdventureGuideController.Instance.OpenGuideView(new EUiTabViewName?(EUiTabViewName.DisposableChallengeView), new int?(jumpParam), null);
+			AdventureGuideController.Instance.OpenGuideView(new EUiTabViewName?(EUiTabViewName.DisposableChallengeView), new int?(jumpParam), null, null);
 			return;
 		}
 		SecondaryGuideData? secondaryGuideData;
@@ -360,14 +365,14 @@ public class NewcomerJourneyTaskItem : GridProxyAbstract<NewcomerJourneyTaskData
 		GenericPromptController.Instance.ShowPromptByCode("NotOpen", Array.Empty<object>());
 	}
 
-	// Token: 0x06008D66 RID: 36198 RVA: 0x001E6F70 File Offset: 0x001E5170
+	// Token: 0x060060FC RID: 24828 RVA: 0x001EFBC0 File Offset: 0x001EDDC0
 	private string GetTaskBgTexturePathByType(int type)
 	{
 		string resourceId = (type == 2) ? "T_TaskBgB" : "T_TaskBg";
 		return UiResourceConfig.Instance.GetResourcePath(resourceId) ?? "";
 	}
 
-	// Token: 0x06008D67 RID: 36199 RVA: 0x001E6FA4 File Offset: 0x001E51A4
+	// Token: 0x060060FD RID: 24829 RVA: 0x001EFBF4 File Offset: 0x001EDDF4
 	private void RefreshTaskBgTexture(string path)
 	{
 		UUITexture texture = base.GetTexture(8);
@@ -378,21 +383,21 @@ public class NewcomerJourneyTaskItem : GridProxyAbstract<NewcomerJourneyTaskData
 		base.SetTextureByPath(path, texture, null, null);
 	}
 
-	// Token: 0x04003EC2 RID: 16066
+	// Token: 0x04003F5A RID: 16218
 	private const string NEWCOMER_JOURNEY_TASK_BG = "T_TaskBg";
 
-	// Token: 0x04003EC3 RID: 16067
+	// Token: 0x04003F5B RID: 16219
 	private const string NEWCOMER_JOURNEY_TASK_BG_B = "T_TaskBgB";
 
-	// Token: 0x04003EC4 RID: 16068
+	// Token: 0x04003F5C RID: 16220
 	[Nullable(2)]
 	private NewcomerJourneyTaskData Data;
 
-	// Token: 0x04003EC5 RID: 16069
+	// Token: 0x04003F5D RID: 16221
 	[Nullable(2)]
 	private ActivityNewcomerJourneyData ActivityData;
 
-	// Token: 0x04003EC6 RID: 16070
+	// Token: 0x04003F5E RID: 16222
 	[Nullable(new byte[]
 	{
 		2,
@@ -401,7 +406,7 @@ public class NewcomerJourneyTaskItem : GridProxyAbstract<NewcomerJourneyTaskData
 	})]
 	private GenericScrollViewNew<ActivitySmallItemGrid, IItemGridData> RewardScrollView;
 
-	// Token: 0x04003EC7 RID: 16071
+	// Token: 0x04003F5F RID: 16223
 	private readonly Dictionary<int, string> NoQuestDescMap = new Dictionary<int, string>
 	{
 		{
@@ -418,41 +423,41 @@ public class NewcomerJourneyTaskItem : GridProxyAbstract<NewcomerJourneyTaskData
 		}
 	};
 
-	// Token: 0x02007A1A RID: 31258
+	// Token: 0x02006BA1 RID: 27553
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x04028307 RID: 164615
+		// Token: 0x04023627 RID: 144935
 		public const int Button = 0;
 
-		// Token: 0x04028308 RID: 164616
+		// Token: 0x04023628 RID: 144936
 		public const int RedDotItem = 1;
 
-		// Token: 0x04028309 RID: 164617
+		// Token: 0x04023629 RID: 144937
 		public const int TaskNameText = 2;
 
-		// Token: 0x0402830A RID: 164618
+		// Token: 0x0402362A RID: 144938
 		public const int GoBtn = 3;
 
-		// Token: 0x0402830B RID: 164619
+		// Token: 0x0402362B RID: 144939
 		public const int GetBtn = 4;
 
-		// Token: 0x0402830C RID: 164620
+		// Token: 0x0402362C RID: 144940
 		public const int FinishItem = 5;
 
-		// Token: 0x0402830D RID: 164621
+		// Token: 0x0402362D RID: 144941
 		public const int RewardLayout = 6;
 
-		// Token: 0x0402830E RID: 164622
+		// Token: 0x0402362E RID: 144942
 		public const int RewardItem = 7;
 
-		// Token: 0x0402830F RID: 164623
+		// Token: 0x0402362F RID: 144943
 		public const int TaskBg = 8;
 
-		// Token: 0x04028310 RID: 164624
+		// Token: 0x04023630 RID: 144944
 		public const int SpecialTag = 9;
 
-		// Token: 0x04028311 RID: 164625
+		// Token: 0x04023631 RID: 144945
 		public const int TagText = 10;
 	}
 }

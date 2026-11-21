@@ -4,17 +4,17 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020049A8 RID: 18856
+	// Token: 0x02003922 RID: 14626
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaBattleCardTipsComponent : PhantomArenaBattleComponentBase
 	{
-		// Token: 0x06031173 RID: 201075 RVA: 0x00B643E8 File Offset: 0x00B625E8
+		// Token: 0x06025CA9 RID: 154793 RVA: 0x00A9F338 File Offset: 0x00A9D538
 		public PhantomArenaBattleCardTipsComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x06031174 RID: 201076 RVA: 0x00B643F4 File Offset: 0x00B625F4
+		// Token: 0x06025CAA RID: 154794 RVA: 0x00A9F344 File Offset: 0x00A9D544
 		protected override void OnPress(HotKeyMap _)
 		{
 			TsUiNavigationBehaviorListener currentNavigationFocusListener = UiNavigationNewController.Instance.GetCurrentNavigationFocusListener();
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06031175 RID: 201077 RVA: 0x00B64451 File Offset: 0x00B62651
+		// Token: 0x06025CAB RID: 154795 RVA: 0x00A9F3A1 File Offset: 0x00A9D5A1
 		protected override void OnRefreshSelfHotKeyStateImplement()
 		{
 			if (base.Proxy == null)
@@ -55,13 +55,13 @@ namespace CSharpScript.Game.Module.UiNavigation
 			base.SetVisibleMode(HotKeyViewDefine.ELogicMode.ListenerActive, true, false);
 		}
 
-		// Token: 0x06031176 RID: 201078 RVA: 0x00B6448A File Offset: 0x00B6268A
+		// Token: 0x06025CAC RID: 154796 RVA: 0x00A9F3DA File Offset: 0x00A9D5DA
 		protected override void OnRefreshSelfHotKeyStateIsMainInVisible()
 		{
 			base.SetVisibleMode(HotKeyViewDefine.ELogicMode.ListenerActive, true, false);
 		}
 
-		// Token: 0x06031177 RID: 201079 RVA: 0x00B64495 File Offset: 0x00B62695
+		// Token: 0x06025CAD RID: 154797 RVA: 0x00A9F3E5 File Offset: 0x00A9D5E5
 		protected void SwitchHandCardTips(NavigationSelectableBase navigationComponent)
 		{
 			NavigationPhantomArenaOwnHandToggle navigationPhantomArenaOwnHandToggle = navigationComponent as NavigationPhantomArenaOwnHandToggle;
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			navigationPhantomArenaOwnHandToggle.SwitchHandCardTips();
 		}
 
-		// Token: 0x06031178 RID: 201080 RVA: 0x00B644A7 File Offset: 0x00B626A7
+		// Token: 0x06025CAE RID: 154798 RVA: 0x00A9F3F7 File Offset: 0x00A9D5F7
 		protected void SwitchOwnBattleCardTips(NavigationSelectableBase navigationComponent)
 		{
 			NavigationPhantomArenaOwnBattleToggle navigationPhantomArenaOwnBattleToggle = navigationComponent as NavigationPhantomArenaOwnBattleToggle;
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			navigationPhantomArenaOwnBattleToggle.SwitchBattleCardTips();
 		}
 
-		// Token: 0x06031179 RID: 201081 RVA: 0x00B644B9 File Offset: 0x00B626B9
+		// Token: 0x06025CAF RID: 154799 RVA: 0x00A9F409 File Offset: 0x00A9D609
 		protected void SwitchOpponentBattleCardTips(NavigationSelectableBase navigationComponent)
 		{
 			NavigationPhantomArenaOpponentBattleToggle navigationPhantomArenaOpponentBattleToggle = navigationComponent as NavigationPhantomArenaOpponentBattleToggle;

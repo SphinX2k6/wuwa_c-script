@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002194 RID: 8596
+	// Token: 0x020023FD RID: 9213
 	public class ServerSetPlayerPos_SetValue
 	{
-		// Token: 0x040070B8 RID: 28856
-		[Nullable(1)]
+		// Token: 0x040076FA RID: 30458
 		public PosA Pos;
 	}
 }

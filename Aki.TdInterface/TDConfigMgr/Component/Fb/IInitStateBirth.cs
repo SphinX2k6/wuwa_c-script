@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A8A RID: 2698
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B54 RID: 2900
 	public class IInitStateBirth : IInitState
 	{
-		// Token: 0x06003E20 RID: 15904 RVA: 0x0009F2BA File Offset: 0x0009D4BA
+		// Token: 0x06004249 RID: 16969 RVA: 0x000A8872 File Offset: 0x000A6A72
 		public static IInitStateBirth Create(IInitStateBirth? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000EC9 RID: 3785
-		// (get) Token: 0x06003E21 RID: 15905 RVA: 0x0009F2D9 File Offset: 0x0009D4D9
+		// Token: 0x17000F9C RID: 3996
+		// (get) Token: 0x0600424A RID: 16970 RVA: 0x000A8891 File Offset: 0x000A6A91
 		public override EInitStateType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000ECA RID: 3786
-		// (get) Token: 0x06003E22 RID: 15906 RVA: 0x0009F2E6 File Offset: 0x0009D4E6
+		// Token: 0x17000F9D RID: 3997
+		// (get) Token: 0x0600424B RID: 16971 RVA: 0x000A889E File Offset: 0x000A6A9E
 		public virtual string BirthTag
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400229D RID: 8861
+		// Token: 0x040024B9 RID: 9401
 		private IInitStateBirth Instance;
 	}
 }

@@ -5,37 +5,37 @@ using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200043D RID: 1085
+	// Token: 0x02000496 RID: 1174
 	public class IHookInteractType_SetValue
 	{
-		// Token: 0x040010D8 RID: 4312
+		// Token: 0x040011FA RID: 4602
 		public EHookInteractType Type;
 
-		// Token: 0x040010D9 RID: 4313
+		// Token: 0x040011FB RID: 4603
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> HookActions;
 
-		// Token: 0x040010DA RID: 4314
+		// Token: 0x040011FC RID: 4604
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> ExitHookActions;
 
-		// Token: 0x040010DB RID: 4315
+		// Token: 0x040011FD RID: 4605
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<ActionInfo> FinishActions;
 
-		// Token: 0x040010DC RID: 4316
+		// Token: 0x040011FE RID: 4606
 		[Nullable(2)]
 		public IClientHookActionConfig ClientHookActionConfig;
 	}

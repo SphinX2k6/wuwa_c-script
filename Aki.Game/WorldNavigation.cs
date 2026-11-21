@@ -7,18 +7,18 @@ using CSharpScript.Game.Module.Map;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x020019D1 RID: 6609
+// Token: 0x02000E90 RID: 3728
 [NullableContext(1)]
 [Nullable(0)]
 public static class WorldNavigation
 {
-	// Token: 0x0600C106 RID: 49414 RVA: 0x002B89DF File Offset: 0x002B6BDF
+	// Token: 0x06009513 RID: 38163 RVA: 0x002C39AB File Offset: 0x002C1BAB
 	public static void SetEnableDebug(bool enable)
 	{
 		WorldNavigation.EnableDebug = enable;
 	}
 
-	// Token: 0x0600C107 RID: 49415 RVA: 0x002B89E8 File Offset: 0x002B6BE8
+	// Token: 0x06009514 RID: 38164 RVA: 0x002C39B4 File Offset: 0x002C1BB4
 	public static void FindPath(IWorldNavigationConfig config)
 	{
 		NavigationFindPathRequest navigationFindPathRequest = NavigationFindPathRequest.Create();
@@ -50,7 +50,7 @@ public static class WorldNavigation
 		}, 0);
 	}
 
-	// Token: 0x0600C108 RID: 49416 RVA: 0x002B8AD8 File Offset: 0x002B6CD8
+	// Token: 0x06009515 RID: 38165 RVA: 0x002C3AA4 File Offset: 0x002C1CA4
 	private static void DoFindPath([Nullable(2)] NavigationFindPathResponse data, IWorldNavigationConfig config)
 	{
 		List<MoveCharacterPoint> list = new List<MoveCharacterPoint>();
@@ -74,7 +74,7 @@ public static class WorldNavigation
 		}
 	}
 
-	// Token: 0x0600C109 RID: 49417 RVA: 0x002B8B68 File Offset: 0x002B6D68
+	// Token: 0x06009516 RID: 38166 RVA: 0x002C3B34 File Offset: 0x002C1D34
 	private static void GoNextPoint(IWorldNavigationConfig config, List<MoveCharacterPoint> movePointList, int startIndex, int endIndex)
 	{
 		List<MoveCharacterPoint> range;
@@ -112,7 +112,7 @@ public static class WorldNavigation
 		moveComponent.MoveAlongPath(config2, null);
 	}
 
-	// Token: 0x0600C10A RID: 49418 RVA: 0x002B8C38 File Offset: 0x002B6E38
+	// Token: 0x06009517 RID: 38167 RVA: 0x002C3C04 File Offset: 0x002C1E04
 	private static void CheckIsCloseEnoughToDest(IWorldNavigationConfig config)
 	{
 		if (config.DistanceThreshold != null && config.TryFindPathTimes != null)
@@ -152,7 +152,7 @@ public static class WorldNavigation
 		}
 	}
 
-	// Token: 0x0600C10B RID: 49419 RVA: 0x002B8D90 File Offset: 0x002B6F90
+	// Token: 0x06009518 RID: 38168 RVA: 0x002C3D5C File Offset: 0x002C1F5C
 	public static void TestFindPath(global::Vector worldPosition, TWorldNavigationCallback callback)
 	{
 		if (!WorldNavigation.EnableDebug)
@@ -200,7 +200,7 @@ public static class WorldNavigation
 		});
 	}
 
-	// Token: 0x0600C10C RID: 49420 RVA: 0x002B8E88 File Offset: 0x002B7088
+	// Token: 0x06009519 RID: 38169 RVA: 0x002C3E54 File Offset: 0x002C2054
 	private static void DrawNavigationPoint(List<global::Vector> posList)
 	{
 		int num = 30;
@@ -212,16 +212,16 @@ public static class WorldNavigation
 		}
 	}
 
-	// Token: 0x040056CA RID: 22218
+	// Token: 0x0400577C RID: 22396
 	private const int DEBUG_SPHERE_DEFAULT_RADIUS = 30;
 
-	// Token: 0x040056CB RID: 22219
+	// Token: 0x0400577D RID: 22397
 	private const int DEBUG_SPHERE_DEFAULT_SEGMENTS = 30;
 
-	// Token: 0x040056CC RID: 22220
+	// Token: 0x0400577E RID: 22398
 	private const int DEBUG_SPHERE_DEFAULT_DURATION = 180;
 
-	// Token: 0x040056CD RID: 22221
+	// Token: 0x0400577F RID: 22399
 	[StaticVariableRuleIgnore]
 	public static bool EnableDebug;
 }

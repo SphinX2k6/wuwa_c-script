@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.Activity
 {
-	// Token: 0x02005790 RID: 22416
+	// Token: 0x02004767 RID: 18279
 	public class KurotatoRewardButton : UiPanelBase
 	{
-		// Token: 0x06038F01 RID: 233217 RVA: 0x00D88928 File Offset: 0x00D86B28
+		// Token: 0x0602DE11 RID: 187921 RVA: 0x00CD7678 File Offset: 0x00CD5878
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -39,20 +39,20 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06038F02 RID: 233218 RVA: 0x00D88A52 File Offset: 0x00D86C52
+		// Token: 0x0602DE12 RID: 187922 RVA: 0x00CD77A2 File Offset: 0x00CD59A2
 		public void SetLimitTimeTextShow(bool isShow)
 		{
 			base.GetItem(5).SetUIActive(isShow);
 		}
 
-		// Token: 0x06038F03 RID: 233219 RVA: 0x00D88A61 File Offset: 0x00D86C61
+		// Token: 0x0602DE13 RID: 187923 RVA: 0x00CD77B1 File Offset: 0x00CD59B1
 		[NullableContext(1)]
 		public void SetLimitTimeText(string text)
 		{
 			base.GetText(4).SetText(text, true);
 		}
 
-		// Token: 0x06038F04 RID: 233220 RVA: 0x00D88A74 File Offset: 0x00D86C74
+		// Token: 0x0602DE14 RID: 187924 RVA: 0x00CD77C4 File Offset: 0x00CD59C4
 		public void SetProgressNumText(int curNum, int totalNum)
 		{
 			UUIText text = base.GetText(1);
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x06038F05 RID: 233221 RVA: 0x00D88ABC File Offset: 0x00D86CBC
+		// Token: 0x0602DE15 RID: 187925 RVA: 0x00CD780C File Offset: 0x00CD5A0C
 		public void SetRedDotShow(bool isShow)
 		{
 			UUIItem item = base.GetItem(2);
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			}
 		}
 
-		// Token: 0x06038F06 RID: 233222 RVA: 0x00D88ADB File Offset: 0x00D86CDB
+		// Token: 0x0602DE16 RID: 187926 RVA: 0x00CD782B File Offset: 0x00CD5A2B
 		private void OnClickBtn()
 		{
 			Action clickCallback = this.ClickCallback;
@@ -84,24 +84,24 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			clickCallback();
 		}
 
-		// Token: 0x0401DD85 RID: 122245
+		// Token: 0x0401881B RID: 100379
 		[Nullable(2)]
 		public Action ClickCallback;
 
-		// Token: 0x0200B9B8 RID: 47544
+		// Token: 0x0200A3CE RID: 41934
 		protected enum ERewardBtnComponent
 		{
-			// Token: 0x04038274 RID: 230004
+			// Token: 0x04032C65 RID: 207973
 			RootBtn,
-			// Token: 0x04038275 RID: 230005
+			// Token: 0x04032C66 RID: 207974
 			TxtNum,
-			// Token: 0x04038276 RID: 230006
+			// Token: 0x04032C67 RID: 207975
 			RedDot,
-			// Token: 0x04038277 RID: 230007
+			// Token: 0x04032C68 RID: 207976
 			TxtName,
-			// Token: 0x04038278 RID: 230008
+			// Token: 0x04032C69 RID: 207977
 			TxtTime,
-			// Token: 0x04038279 RID: 230009
+			// Token: 0x04032C6A RID: 207978
 			PanelTime
 		}
 	}

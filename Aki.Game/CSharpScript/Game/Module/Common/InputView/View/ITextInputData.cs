@@ -3,34 +3,34 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Common.InputView.View
 {
-	// Token: 0x02005B7B RID: 23419
+	// Token: 0x02004B5B RID: 19291
 	[NullableContext(1)]
 	public interface ITextInputData
 	{
-		// Token: 0x17008CB3 RID: 36019
-		// (get) Token: 0x0603B40C RID: 242700
-		// (set) Token: 0x0603B40D RID: 242701
+		// Token: 0x17006085 RID: 24709
+		// (get) Token: 0x06030359 RID: 197465
+		// (set) Token: 0x0603035A RID: 197466
 		TConfirm ConfirmFunc { get; set; }
 
-		// Token: 0x17008CB4 RID: 36020
-		// (get) Token: 0x0603B40E RID: 242702
-		// (set) Token: 0x0603B40F RID: 242703
+		// Token: 0x17006086 RID: 24710
+		// (get) Token: 0x0603035B RID: 197467
+		// (set) Token: 0x0603035C RID: 197468
 		TResult ResultFunc { get; set; }
 
-		// Token: 0x17008CB5 RID: 36021
-		// (get) Token: 0x0603B410 RID: 242704
-		// (set) Token: 0x0603B411 RID: 242705
+		// Token: 0x17006087 RID: 24711
+		// (get) Token: 0x0603035D RID: 197469
+		// (set) Token: 0x0603035E RID: 197470
 		string InputText { get; set; }
 
-		// Token: 0x17008CB6 RID: 36022
-		// (get) Token: 0x0603B412 RID: 242706
-		// (set) Token: 0x0603B413 RID: 242707
+		// Token: 0x17006088 RID: 24712
+		// (get) Token: 0x0603035F RID: 197471
+		// (set) Token: 0x06030360 RID: 197472
 		[Nullable(2)]
 		string DefaultText { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x17008CB7 RID: 36023
-		// (get) Token: 0x0603B414 RID: 242708
-		// (set) Token: 0x0603B415 RID: 242709
+		// Token: 0x17006089 RID: 24713
+		// (get) Token: 0x06030361 RID: 197473
+		// (set) Token: 0x06030362 RID: 197474
 		bool IsCheckNone { get; set; }
 	}
 }

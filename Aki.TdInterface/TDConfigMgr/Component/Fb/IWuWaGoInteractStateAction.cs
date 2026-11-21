@@ -1,17 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action.Fb;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E05 RID: 3589
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000F01 RID: 3841
 	public class IWuWaGoInteractStateAction
 	{
-		// Token: 0x06005143 RID: 20803 RVA: 0x000C882E File Offset: 0x000C6A2E
+		// Token: 0x0600566A RID: 22122 RVA: 0x000D40F6 File Offset: 0x000D22F6
 		public static IWuWaGoInteractStateAction Create(IWuWaGoInteractStateAction? instance)
 		{
 			if (instance == null)
@@ -24,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001AF6 RID: 6902
-		// (get) Token: 0x06005144 RID: 20804 RVA: 0x000C884D File Offset: 0x000C6A4D
+		// Token: 0x17001C63 RID: 7267
+		// (get) Token: 0x0600566B RID: 22123 RVA: 0x000D4115 File Offset: 0x000D2315
 		public virtual string EntityState
 		{
 			get
@@ -34,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AF7 RID: 6903
-		// (get) Token: 0x06005145 RID: 20805 RVA: 0x000C885C File Offset: 0x000C6A5C
+		// Token: 0x17001C64 RID: 7268
+		// (get) Token: 0x0600566C RID: 22124 RVA: 0x000D4124 File Offset: 0x000D2324
 		public virtual List<ActionInfo> ActionList
 		{
 			get
@@ -55,13 +52,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002EC4 RID: 11972
+		// Token: 0x0400318C RID: 12684
 		private IWuWaGoInteractStateAction Instance;
 
-		// Token: 0x04002EC5 RID: 11973
+		// Token: 0x0400318D RID: 12685
 		private List<ActionInfo> _ActionListCache;
 
-		// Token: 0x04002EC6 RID: 11974
+		// Token: 0x0400318E RID: 12686
 		private bool _ActionListInited;
 	}
 }

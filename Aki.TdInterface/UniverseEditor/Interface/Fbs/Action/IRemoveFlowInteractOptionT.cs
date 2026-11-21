@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006E4D RID: 28237
+	// Token: 0x020075CE RID: 30158
 	public class IRemoveFlowInteractOptionT
 	{
-		// Token: 0x1700D260 RID: 53856
-		// (get) Token: 0x06031E60 RID: 204384 RVA: 0x006C0835 File Offset: 0x006BEA35
-		// (set) Token: 0x06031E61 RID: 204385 RVA: 0x006C083D File Offset: 0x006BEA3D
+		// Token: 0x1700DDB2 RID: 56754
+		// (get) Token: 0x06034E88 RID: 216712 RVA: 0x0071C335 File Offset: 0x0071A535
+		// (set) Token: 0x06034E89 RID: 216713 RVA: 0x0071C33D File Offset: 0x0071A53D
 		public IFlowIndexT Flow { get; set; }
 
-		// Token: 0x1700D261 RID: 53857
-		// (get) Token: 0x06031E62 RID: 204386 RVA: 0x006C0846 File Offset: 0x006BEA46
-		// (set) Token: 0x06031E63 RID: 204387 RVA: 0x006C084E File Offset: 0x006BEA4E
+		// Token: 0x1700DDB3 RID: 56755
+		// (get) Token: 0x06034E8A RID: 216714 RVA: 0x0071C346 File Offset: 0x0071A546
+		// (set) Token: 0x06034E8B RID: 216715 RVA: 0x0071C34E File Offset: 0x0071A54E
 		public int EntityId { get; set; }
 
-		// Token: 0x1700D262 RID: 53858
-		// (get) Token: 0x06031E64 RID: 204388 RVA: 0x006C0857 File Offset: 0x006BEA57
-		// (set) Token: 0x06031E65 RID: 204389 RVA: 0x006C085F File Offset: 0x006BEA5F
+		// Token: 0x1700DDB4 RID: 56756
+		// (get) Token: 0x06034E8C RID: 216716 RVA: 0x0071C357 File Offset: 0x0071A557
+		// (set) Token: 0x06034E8D RID: 216717 RVA: 0x0071C35F File Offset: 0x0071A55F
 		public string InteractToken { get; set; }
 
-		// Token: 0x06031E66 RID: 204390 RVA: 0x006C0868 File Offset: 0x006BEA68
+		// Token: 0x06034E8E RID: 216718 RVA: 0x0071C368 File Offset: 0x0071A568
 		public IRemoveFlowInteractOptionT()
 		{
 			this.Flow = null;

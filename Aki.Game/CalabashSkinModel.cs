@@ -4,20 +4,20 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02002A41 RID: 10817
+// Token: 0x02001FBC RID: 8124
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class CalabashSkinModel : ModelBase
 {
-	// Token: 0x0601686A RID: 92266 RVA: 0x005B60E9 File Offset: 0x005B42E9
+	// Token: 0x0601428B RID: 82571 RVA: 0x005E2251 File Offset: 0x005E0451
 	protected override bool OnClear()
 	{
 		NewFlagModel.Instance.SaveNewFlagConfig(ELocalStoragePlayerKey.CalabashSkinRedDot);
 		return true;
 	}
 
-	// Token: 0x0601686B RID: 92267 RVA: 0x005B60FC File Offset: 0x005B42FC
+	// Token: 0x0601428C RID: 82572 RVA: 0x005E2264 File Offset: 0x005E0464
 	private bool TryAddCalabashSkinRedDot(int configId)
 	{
 		if (NewFlagModel.Instance.HasNewFlag(ELocalStoragePlayerKey.CalabashSkinRedDot, configId))
@@ -34,13 +34,13 @@ public class CalabashSkinModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601686C RID: 92268 RVA: 0x005B6164 File Offset: 0x005B4364
+	// Token: 0x0601428D RID: 82573 RVA: 0x005E22CC File Offset: 0x005E04CC
 	private void SetCurrentEquippedSkinId(int skinId)
 	{
 		this.CurrentEquippedSkinId = skinId;
 	}
 
-	// Token: 0x0601686D RID: 92269 RVA: 0x005B6170 File Offset: 0x005B4370
+	// Token: 0x0601428E RID: 82574 RVA: 0x005E22D8 File Offset: 0x005E04D8
 	private void SetUnLockSkinData(int[] skinIdList)
 	{
 		this.UnLockSkinSet.Clear();
@@ -50,7 +50,7 @@ public class CalabashSkinModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601686E RID: 92270 RVA: 0x005B61AC File Offset: 0x005B43AC
+	// Token: 0x0601428F RID: 82575 RVA: 0x005E2314 File Offset: 0x005E0514
 	public void RemoveCalabashSkinRedDot(int configId)
 	{
 		NewFlagModel.Instance.RemoveNewFlag(ELocalStoragePlayerKey.CalabashSkinRedDot, configId);
@@ -62,19 +62,19 @@ public class CalabashSkinModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601686F RID: 92271 RVA: 0x005B6202 File Offset: 0x005B4402
+	// Token: 0x06014290 RID: 82576 RVA: 0x005E236A File Offset: 0x005E056A
 	public int GetCurrentEquipSkinId()
 	{
 		return this.CurrentEquippedSkinId;
 	}
 
-	// Token: 0x06016870 RID: 92272 RVA: 0x005B620A File Offset: 0x005B440A
+	// Token: 0x06014291 RID: 82577 RVA: 0x005E2372 File Offset: 0x005E0572
 	public int GetSkinCountById(int skinId)
 	{
 		return (this.UnLockSkinSet.Contains(skinId) > false) ? 1 : 0;
 	}
 
-	// Token: 0x06016871 RID: 92273 RVA: 0x005B621C File Offset: 0x005B441C
+	// Token: 0x06014292 RID: 82578 RVA: 0x005E2384 File Offset: 0x005E0584
 	public unsafe void NotifyCalabashSkinData(int equipSkinId, int[] skinIdList)
 	{
 		this.SetCurrentEquippedSkinId(equipSkinId);
@@ -89,7 +89,7 @@ public class CalabashSkinModel : ModelBase
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 	}
 
-	// Token: 0x06016872 RID: 92274 RVA: 0x005B6294 File Offset: 0x005B4494
+	// Token: 0x06014293 RID: 82579 RVA: 0x005E23FC File Offset: 0x005E05FC
 	public void NotifyAddUnlockSkinData(int[] skinIdList)
 	{
 		foreach (int num in skinIdList)
@@ -105,7 +105,7 @@ public class CalabashSkinModel : ModelBase
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x06016873 RID: 92275 RVA: 0x005B62F4 File Offset: 0x005B44F4
+	// Token: 0x06014294 RID: 82580 RVA: 0x005E245C File Offset: 0x005E065C
 	public void NotifyCurrentEquippedSkinId(int skinId)
 	{
 		this.SetCurrentEquippedSkinId(skinId);
@@ -117,14 +117,14 @@ public class CalabashSkinModel : ModelBase
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x06016874 RID: 92276 RVA: 0x005B6338 File Offset: 0x005B4538
+	// Token: 0x06014295 RID: 82581 RVA: 0x005E24A0 File Offset: 0x005E06A0
 	public bool CheckCalabashSkinHasRedDotByRoleId(int roleId)
 	{
 		int? curSelectMainRoleId = RoleModel.Instance.GetCurSelectMainRoleId();
 		return (roleId == curSelectMainRoleId.GetValueOrDefault() & curSelectMainRoleId != null) && this.CheckCalabashSkinHasRedDot();
 	}
 
-	// Token: 0x06016875 RID: 92277 RVA: 0x005B636C File Offset: 0x005B456C
+	// Token: 0x06014296 RID: 82582 RVA: 0x005E24D4 File Offset: 0x005E06D4
 	public bool CheckCalabashSkinHasRedDot()
 	{
 		foreach (int value in this.UnLockSkinSet)
@@ -137,8 +137,8 @@ public class CalabashSkinModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x17001DE1 RID: 7649
-	// (get) Token: 0x06016876 RID: 92278 RVA: 0x005B63D0 File Offset: 0x005B45D0
+	// Token: 0x17001E39 RID: 7737
+	// (get) Token: 0x06014297 RID: 82583 RVA: 0x005E2538 File Offset: 0x005E0738
 	public static CalabashSkinModel Instance
 	{
 		get
@@ -147,7 +147,7 @@ public class CalabashSkinModel : ModelBase
 		}
 	}
 
-	// Token: 0x06016877 RID: 92279 RVA: 0x005B63D7 File Offset: 0x005B45D7
+	// Token: 0x06014298 RID: 82584 RVA: 0x005E253F File Offset: 0x005E073F
 	public static CalabashSkinModel GetOrCreateInstance()
 	{
 		if (CalabashSkinModel._Instance == null)
@@ -157,7 +157,7 @@ public class CalabashSkinModel : ModelBase
 		return CalabashSkinModel._Instance;
 	}
 
-	// Token: 0x06016878 RID: 92280 RVA: 0x005B63EB File Offset: 0x005B45EB
+	// Token: 0x06014299 RID: 82585 RVA: 0x005E2553 File Offset: 0x005E0753
 	public static bool CreateInstance()
 	{
 		if (CalabashSkinModel._Instance != null)
@@ -168,30 +168,30 @@ public class CalabashSkinModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06016879 RID: 92281 RVA: 0x005B6401 File Offset: 0x005B4601
+	// Token: 0x0601429A RID: 82586 RVA: 0x005E2569 File Offset: 0x005E0769
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601687A RID: 92282 RVA: 0x005B6403 File Offset: 0x005B4603
+	// Token: 0x0601429B RID: 82587 RVA: 0x005E256B File Offset: 0x005E076B
 	public static void ResetStaticDefaultValue()
 	{
 		CalabashSkinModel._Instance = null;
 	}
 
-	// Token: 0x0601687B RID: 92283 RVA: 0x005B640B File Offset: 0x005B460B
+	// Token: 0x0601429C RID: 82588 RVA: 0x005E2573 File Offset: 0x005E0773
 	static CalabashSkinModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CalabashSkinModel.CreateStaticDefaultValue), new Action(CalabashSkinModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400A749 RID: 42825
+	// Token: 0x0400AB4D RID: 43853
 	private readonly HashSet<int> UnLockSkinSet = new HashSet<int>();
 
-	// Token: 0x0400A74A RID: 42826
+	// Token: 0x0400AB4E RID: 43854
 	private int CurrentEquippedSkinId;
 
-	// Token: 0x0400A74B RID: 42827
+	// Token: 0x0400AB4F RID: 43855
 	[Nullable(2)]
 	private static CalabashSkinModel _Instance;
 }

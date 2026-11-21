@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B66 RID: 19302
+	// Token: 0x02003B0E RID: 15118
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TowerDefenseSettleButton : UiPanelBase
 	{
-		// Token: 0x06031F97 RID: 204695 RVA: 0x00B9942C File Offset: 0x00B9762C
+		// Token: 0x06026D26 RID: 159014 RVA: 0x00ADD668 File Offset: 0x00ADB868
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06031F98 RID: 204696 RVA: 0x00B99514 File Offset: 0x00B97714
+		// Token: 0x06026D27 RID: 159015 RVA: 0x00ADD750 File Offset: 0x00ADB950
 		public UniTask InitializeAsync(AActor rootActor, Action onClick)
 		{
 			TowerDefenseSettleButton.<InitializeAsync>d__2 <InitializeAsync>d__;
@@ -52,20 +52,20 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return <InitializeAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031F99 RID: 204697 RVA: 0x00B99567 File Offset: 0x00B97767
+		// Token: 0x06026D28 RID: 159016 RVA: 0x00ADD7A3 File Offset: 0x00ADB9A3
 		public void SetBtnTextById(string textId, params string[] args)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), textId, args);
 		}
 
-		// Token: 0x06031F9A RID: 204698 RVA: 0x00B9957C File Offset: 0x00B9777C
+		// Token: 0x06026D29 RID: 159017 RVA: 0x00ADD7B8 File Offset: 0x00ADB9B8
 		public void SetFloatText(string textId, params string[] args)
 		{
 			base.GetText(2).SetUIActive(true);
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(2), textId, args);
 		}
 
-		// Token: 0x06031F9B RID: 204699 RVA: 0x00B9959E File Offset: 0x00B9779E
+		// Token: 0x06026D2A RID: 159018 RVA: 0x00ADD7DA File Offset: 0x00ADB9DA
 		private void OnClickedButton()
 		{
 			Action onClickEvent = this.OnClickEvent;
@@ -76,24 +76,24 @@ namespace CSharpScript.Game.Module.TowerDefence
 			onClickEvent();
 		}
 
-		// Token: 0x0401AA44 RID: 109124
+		// Token: 0x04015396 RID: 86934
 		[Nullable(2)]
 		private Action OnClickEvent;
 
-		// Token: 0x0200ACFC RID: 44284
+		// Token: 0x0200971B RID: 38683
 		[NullableContext(0)]
 		private class ESettleButton
 		{
-			// Token: 0x040348F6 RID: 215286
+			// Token: 0x0402F29F RID: 193183
 			public const int ButtonText = 0;
 
-			// Token: 0x040348F7 RID: 215287
+			// Token: 0x0402F2A0 RID: 193184
 			public const int DescriptionItem = 1;
 
-			// Token: 0x040348F8 RID: 215288
+			// Token: 0x0402F2A1 RID: 193185
 			public const int DescriptionText = 2;
 
-			// Token: 0x040348F9 RID: 215289
+			// Token: 0x0402F2A2 RID: 193186
 			public const int Button = 3;
 		}
 	}

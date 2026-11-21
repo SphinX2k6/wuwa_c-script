@@ -4,30 +4,24 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
-using CSharpScript.Core.Common;
 using CSharpScript.Core.Config;
 using CSharpScript.Core.Framework;
 using UnrealEngine;
 
-// Token: 0x02002EA9 RID: 11945
+// Token: 0x020023FC RID: 9212
 [NullableContext(1)]
 [Nullable(0)]
 [TickController(0)]
 public class BuffController : ControllerBase
 {
-	// Token: 0x0601984D RID: 104525 RVA: 0x00697C67 File Offset: 0x00695E67
+	// Token: 0x06017133 RID: 94515 RVA: 0x006BDFCF File Offset: 0x006BC1CF
 	protected override bool OnInit()
 	{
 		this.PreloadAllBuffDefs();
-		if (Info.Instance.IsPlayInEditor)
-		{
-			this.ReloadCallback = new Action(this.OnConfigReload);
-			ConfigReloadHub.RegisterReloadCallback("db_buff.db", this.ReloadCallback);
-		}
 		return base.OnInit();
 	}
 
-	// Token: 0x0601984E RID: 104526 RVA: 0x00697CA4 File Offset: 0x00695EA4
+	// Token: 0x06017134 RID: 94516 RVA: 0x006BDFE0 File Offset: 0x006BC1E0
 	private void PreloadAllBuffDefs()
 	{
 		if (!UKuroStaticLibrary.IsLowMemoryDevice())
@@ -51,7 +45,7 @@ public class BuffController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601984F RID: 104527 RVA: 0x00697D54 File Offset: 0x00695F54
+	// Token: 0x06017135 RID: 94517 RVA: 0x006BE090 File Offset: 0x006BC290
 	public void OnConfigReload()
 	{
 		BuffModel.Instance.ClearAllDefs();
@@ -59,7 +53,7 @@ public class BuffController : ControllerBase
 		Log.Instance.Info(ELogModule.CombatInfo, ELogAuthor.GHY, "[热更][db_buff.db] 配置热更回调：已清空并重建解析后缓存", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x06019850 RID: 104528 RVA: 0x00697D90 File Offset: 0x00695F90
+	// Token: 0x06017136 RID: 94518 RVA: 0x006BE0CC File Offset: 0x006BC2CC
 	protected override bool OnClear()
 	{
 		if (this.ReloadCallback != null)
@@ -71,19 +65,19 @@ public class BuffController : ControllerBase
 		return base.OnClear();
 	}
 
-	// Token: 0x06019851 RID: 104529 RVA: 0x00697DC2 File Offset: 0x00695FC2
+	// Token: 0x06017137 RID: 94519 RVA: 0x006BE0FE File Offset: 0x006BC2FE
 	public void RegisterBuffComponent(BaseBuffComponent component)
 	{
 		this.ComponentsWithPendingCues.Add(component);
 	}
 
-	// Token: 0x06019852 RID: 104530 RVA: 0x00697DD1 File Offset: 0x00695FD1
+	// Token: 0x06017138 RID: 94520 RVA: 0x006BE10D File Offset: 0x006BC30D
 	public void UnregisterBuffComponent(BaseBuffComponent component)
 	{
 		this.ComponentsWithPendingCues.Remove(component);
 	}
 
-	// Token: 0x06019853 RID: 104531 RVA: 0x00697DE0 File Offset: 0x00695FE0
+	// Token: 0x06017139 RID: 94521 RVA: 0x006BE11C File Offset: 0x006BC31C
 	protected override void OnTick(float delta)
 	{
 		this.CueTimeLimit.ResetCost();
@@ -97,7 +91,7 @@ public class BuffController : ControllerBase
 		}
 	}
 
-	// Token: 0x06019854 RID: 104532 RVA: 0x00697E4C File Offset: 0x0069604C
+	// Token: 0x0601713A RID: 94522 RVA: 0x006BE188 File Offset: 0x006BC388
 	public unsafe void SetHandlePrefix(int prefix, int handleIdStart)
 	{
 		int num = 15;
@@ -118,7 +112,7 @@ public class BuffController : ControllerBase
 		instance2.LastHandle = Math.Max(handleIdStart, instance2.LastHandle);
 	}
 
-	// Token: 0x06019855 RID: 104533 RVA: 0x00697EE8 File Offset: 0x006960E8
+	// Token: 0x0601713B RID: 94523 RVA: 0x006BE224 File Offset: 0x006BC424
 	public int GenerateHandle()
 	{
 		BuffModel instance = BuffModel.Instance;
@@ -128,7 +122,7 @@ public class BuffController : ControllerBase
 		return (num & 268435455) + (instance.HandlePrefix & -268435456);
 	}
 
-	// Token: 0x06019856 RID: 104534 RVA: 0x00697F20 File Offset: 0x00696120
+	// Token: 0x0601713C RID: 94524 RVA: 0x006BE25C File Offset: 0x006BC45C
 	[NullableContext(2)]
 	public unsafe BuffDefinition GetBuffDefinition(long buffId, string reason = null)
 	{
@@ -157,7 +151,7 @@ public class BuffController : ControllerBase
 		return this.AddBuffRef(config.Value);
 	}
 
-	// Token: 0x06019857 RID: 104535 RVA: 0x00697FC8 File Offset: 0x006961C8
+	// Token: 0x0601713D RID: 94525 RVA: 0x006BE304 File Offset: 0x006BC504
 	[NullableContext(2)]
 	protected ExtraEffectParameters ParseExtraEffect(Buff buff, int index)
 	{
@@ -182,22 +176,12 @@ public class BuffController : ControllerBase
 		Type buffExecutionClass = ExtraEffectDefine.GetBuffExecutionClass((EExtraEffectId)buff.ExtraEffectID);
 		if (buffExecutionClass != null)
 		{
-			BuffExecution executionEffect = (BuffExecution)typeof(BuffExecution).GetMethod("Create").MakeGenericMethod(new Type[]
-			{
-				buffExecutionClass
-			}).Invoke(null, new object[]
-			{
-				buff.Id,
-				index,
-				requireAndLimits,
-				extraEffectParameters
-			});
-			extraEffectParameters.ExecutionEffect = executionEffect;
+			extraEffectParameters.ExecutionEffect = BuffExecution.Create(buffExecutionClass, buff.Id, index, requireAndLimits, extraEffectParameters);
 		}
 		return extraEffectParameters;
 	}
 
-	// Token: 0x06019858 RID: 104536 RVA: 0x00698158 File Offset: 0x00696358
+	// Token: 0x0601713E RID: 94526 RVA: 0x006BE450 File Offset: 0x006BC650
 	private static string[] GetStringArray(Buff buff, int length, [Nullable(new byte[]
 	{
 		1,
@@ -212,7 +196,7 @@ public class BuffController : ControllerBase
 		return array;
 	}
 
-	// Token: 0x06019859 RID: 104537 RVA: 0x0069818C File Offset: 0x0069638C
+	// Token: 0x0601713F RID: 94527 RVA: 0x006BE484 File Offset: 0x006BC684
 	private static float[] ConvertIntArrayToFloat([Nullable(2)] int[] intArray)
 	{
 		if (intArray == null)
@@ -227,7 +211,7 @@ public class BuffController : ControllerBase
 		return array;
 	}
 
-	// Token: 0x0601985A RID: 104538 RVA: 0x006981C4 File Offset: 0x006963C4
+	// Token: 0x06017140 RID: 94528 RVA: 0x006BE4BC File Offset: 0x006BC6BC
 	private List<Buff> GetEffectBuffs(Buff buff)
 	{
 		List<Buff> list = new List<Buff>
@@ -245,7 +229,7 @@ public class BuffController : ControllerBase
 		return list;
 	}
 
-	// Token: 0x0601985B RID: 104539 RVA: 0x00698218 File Offset: 0x00696418
+	// Token: 0x06017141 RID: 94529 RVA: 0x006BE510 File Offset: 0x006BC710
 	private List<Buff> GetAttributeBuffs(Buff buff)
 	{
 		List<Buff> list = new List<Buff>
@@ -263,21 +247,17 @@ public class BuffController : ControllerBase
 		return list;
 	}
 
-	// Token: 0x0601985C RID: 104540 RVA: 0x0069826A File Offset: 0x0069646A
+	// Token: 0x06017142 RID: 94530 RVA: 0x006BE562 File Offset: 0x006BC762
 	[Conditional("DEBUG")]
 	public void AssignDesc(BuffDefinition newRef, string desc)
 	{
 	}
 
-	// Token: 0x0601985D RID: 104541 RVA: 0x0069826C File Offset: 0x0069646C
+	// Token: 0x06017143 RID: 94531 RVA: 0x006BE564 File Offset: 0x006BC764
 	public unsafe BuffDefinition AddBuffRef(Buff buff)
 	{
 		BuffDefinition buffDefinition = new BuffDefinition();
 		buffDefinition.Id = new long?(buff.Id);
-		if (!Info.Instance.IsBuildShipping)
-		{
-			buffDefinition.Desc = "";
-		}
 		buffDefinition.StackLimitCount = buff.StackLimitCount;
 		buffDefinition.FormationPolicy = (EBuffFormationPolicy)buff.FormationPolicy;
 		buffDefinition.StackingType = (EBuffStackingType)buff.StackingType;
@@ -589,7 +569,7 @@ public class BuffController : ControllerBase
 								case EBuffActionType.InactiveBuffWhenVictimHasEveryTag:
 								case EBuffActionType.InactiveBuffWhenVictimNotHasSomeTag:
 								case EBuffActionType.InactiveBuffWhenVictimNotHasEveryTag:
-									goto IL_A17;
+									goto IL_A00;
 								case EBuffActionType.RemoveBuffWhenVictimHasSomeBuff:
 								case EBuffActionType.RemoveBuffWhenVictimHasEveryBuff:
 								case EBuffActionType.RemoveBuffWhenVictimNotHasSomeBuff:
@@ -598,7 +578,7 @@ public class BuffController : ControllerBase
 								case EBuffActionType.InactiveBuffWhenVictimHasEveryBuff:
 								case EBuffActionType.InactiveBuffWhenVictimNotHasSomeBuff:
 								case EBuffActionType.InactiveBuffWhenVictimNotHasEveryBuff:
-									goto IL_9A9;
+									goto IL_992;
 								case EBuffActionType.RemoveBuffWhenInstigatorDeadOrRemoved:
 									try
 									{
@@ -612,19 +592,19 @@ public class BuffController : ControllerBase
 											Type = ebuffActionType,
 											CustomParams = list19.ToArray()
 										});
-										goto IL_AFD;
+										goto IL_AE6;
 									}
 									catch (Exception e)
 									{
 										CombatLog.Instance.ErrorWithStack(CombatLog.EDebugModule.Buff, null, "BuffAction自定义参数解析失败", e, pairs);
-										goto IL_AFD;
+										goto IL_AE6;
 									}
 									break;
 								}
 								CombatLog.Instance.Error(CombatLog.EDebugModule.Buff, null, "BuffAction参数不合法", pairs);
-								goto IL_AFD;
+								goto IL_AE6;
 							}
-							IL_9A9:
+							IL_992:
 							try
 							{
 								List<long> list20 = new List<long>();
@@ -637,15 +617,15 @@ public class BuffController : ControllerBase
 									Type = ebuffActionType,
 									Buffs = list20.ToArray()
 								});
-								goto IL_AFD;
+								goto IL_AE6;
 							}
 							catch (Exception e2)
 							{
 								CombatLog.Instance.ErrorWithStack(CombatLog.EDebugModule.Buff, null, "BuffAction参数解析失败", e2, pairs);
-								goto IL_AFD;
+								goto IL_AE6;
 							}
 						}
-						IL_A17:
+						IL_A00:
 						List<int> list21 = new List<int>();
 						for (int num14 = 1; num14 < array3.Length; num14++)
 						{
@@ -666,7 +646,7 @@ public class BuffController : ControllerBase
 						});
 					}
 				}
-				IL_AFD:;
+				IL_AE6:;
 			}
 			buffDefinition.BuffAction = list18.ToArray();
 		}
@@ -729,7 +709,7 @@ public class BuffController : ControllerBase
 		return buffDefinition;
 	}
 
-	// Token: 0x0601985E RID: 104542 RVA: 0x00698F7C File Offset: 0x0069717C
+	// Token: 0x06017144 RID: 94532 RVA: 0x006BF260 File Offset: 0x006BD460
 	public BuffDefinition CreateDynamicBuffRef()
 	{
 		return new BuffDefinition
@@ -739,7 +719,7 @@ public class BuffController : ControllerBase
 		};
 	}
 
-	// Token: 0x0601985F RID: 104543 RVA: 0x00698F98 File Offset: 0x00697198
+	// Token: 0x06017145 RID: 94533 RVA: 0x006BF27C File Offset: 0x006BD47C
 	private unsafe bool CheckExtraEffectParams(Buff buff)
 	{
 		EExtraEffectId extraEffectID = (EExtraEffectId)buff.ExtraEffectID;
@@ -785,7 +765,7 @@ public class BuffController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06019860 RID: 104544 RVA: 0x006990CC File Offset: 0x006972CC
+	// Token: 0x06017146 RID: 94534 RVA: 0x006BF3B0 File Offset: 0x006BD5B0
 	public bool HasBuffEffects(IReadOnlyList<ExtraEffectParameters> effectInfos)
 	{
 		using (IEnumerator<ExtraEffectParameters> enumerator = effectInfos.GetEnumerator())
@@ -801,7 +781,7 @@ public class BuffController : ControllerBase
 		return false;
 	}
 
-	// Token: 0x06019861 RID: 104545 RVA: 0x00699128 File Offset: 0x00697328
+	// Token: 0x06017147 RID: 94535 RVA: 0x006BF40C File Offset: 0x006BD60C
 	public bool HasBuffPeriodExecutions(IReadOnlyList<ExtraEffectParameters> effectInfos)
 	{
 		foreach (ExtraEffectParameters extraEffectParameters in effectInfos)
@@ -814,7 +794,7 @@ public class BuffController : ControllerBase
 		return false;
 	}
 
-	// Token: 0x06019862 RID: 104546 RVA: 0x00699184 File Offset: 0x00697384
+	// Token: 0x06017148 RID: 94536 RVA: 0x006BF468 File Offset: 0x006BD668
 	public static long[] GetBuffIdsByGroup(int buffGroupId)
 	{
 		BuffGroup? config = ConfigBuffGroupById.GetConfig(buffGroupId, true);
@@ -825,8 +805,8 @@ public class BuffController : ControllerBase
 		return Array.Empty<long>();
 	}
 
-	// Token: 0x1700233E RID: 9022
-	// (get) Token: 0x06019863 RID: 104547 RVA: 0x006991B7 File Offset: 0x006973B7
+	// Token: 0x170023DA RID: 9178
+	// (get) Token: 0x06017149 RID: 94537 RVA: 0x006BF49B File Offset: 0x006BD69B
 	public static BuffController Instance
 	{
 		get
@@ -835,7 +815,7 @@ public class BuffController : ControllerBase
 		}
 	}
 
-	// Token: 0x06019864 RID: 104548 RVA: 0x006991BE File Offset: 0x006973BE
+	// Token: 0x0601714A RID: 94538 RVA: 0x006BF4A2 File Offset: 0x006BD6A2
 	public static BuffController GetOrCreateInstance()
 	{
 		if (BuffController._Instance == null)
@@ -845,7 +825,7 @@ public class BuffController : ControllerBase
 		return BuffController._Instance;
 	}
 
-	// Token: 0x06019865 RID: 104549 RVA: 0x006991D2 File Offset: 0x006973D2
+	// Token: 0x0601714B RID: 94539 RVA: 0x006BF4B6 File Offset: 0x006BD6B6
 	public static bool CreateInstance()
 	{
 		if (BuffController._Instance != null)
@@ -856,44 +836,44 @@ public class BuffController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06019866 RID: 104550 RVA: 0x006991E8 File Offset: 0x006973E8
+	// Token: 0x0601714C RID: 94540 RVA: 0x006BF4CC File Offset: 0x006BD6CC
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06019867 RID: 104551 RVA: 0x006991EA File Offset: 0x006973EA
+	// Token: 0x0601714D RID: 94541 RVA: 0x006BF4CE File Offset: 0x006BD6CE
 	public static void ResetStaticDefaultValue()
 	{
 		BuffController._Instance = null;
 	}
 
-	// Token: 0x06019868 RID: 104552 RVA: 0x006991F2 File Offset: 0x006973F2
+	// Token: 0x0601714E RID: 94542 RVA: 0x006BF4D6 File Offset: 0x006BD6D6
 	static BuffController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BuffController.CreateStaticDefaultValue), new Action(BuffController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400BE6D RID: 48749
+	// Token: 0x0400C208 RID: 49672
 	private const bool UseBuffConfigCache = true;
 
-	// Token: 0x0400BE6E RID: 48750
+	// Token: 0x0400C209 RID: 49673
 	private const string BuffDbName = "db_buff.db";
 
-	// Token: 0x0400BE6F RID: 48751
+	// Token: 0x0400C20A RID: 49674
 	private HashSet<BaseBuffComponent> ComponentsWithPendingCues = new HashSet<BaseBuffComponent>();
 
-	// Token: 0x0400BE70 RID: 48752
+	// Token: 0x0400C20B RID: 49675
 	[Nullable(2)]
 	private Action ReloadCallback;
 
-	// Token: 0x0400BE71 RID: 48753
+	// Token: 0x0400C20C RID: 49676
 	public TimeLimit CueTimeLimit = new TimeLimit(new long?(1000L));
 
-	// Token: 0x0400BE72 RID: 48754
+	// Token: 0x0400C20D RID: 49677
 	[StaticVariableRuleIgnore]
 	private static readonly Stat AddBuffRefStat = Stat.Create("BuffController.AddBuffRef", "", "");
 
-	// Token: 0x0400BE73 RID: 48755
+	// Token: 0x0400C20E RID: 49678
 	[Nullable(2)]
 	private static BuffController _Instance;
 }

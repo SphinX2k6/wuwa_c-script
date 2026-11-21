@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002F5C RID: 12124
+// Token: 0x020024B0 RID: 9392
 public enum EModifyCdType
 {
-	// Token: 0x0400C277 RID: 49783
+	// Token: 0x0400C620 RID: 50720
 	Add,
-	// Token: 0x0400C278 RID: 49784
+	// Token: 0x0400C621 RID: 50721
 	Multiply,
-	// Token: 0x0400C279 RID: 49785
+	// Token: 0x0400C622 RID: 50722
 	AddPerTenThousand
 }

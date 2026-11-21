@@ -4,12 +4,12 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Plot
 {
-	// Token: 0x02004FDC RID: 20444
+	// Token: 0x02003FA6 RID: 16294
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlotCameraTemplateConfig : ConfigBase
 	{
-		// Token: 0x06034513 RID: 214291 RVA: 0x00C49CA0 File Offset: 0x00C47EA0
+		// Token: 0x0602939C RID: 168860 RVA: 0x00B93CE8 File Offset: 0x00B91EE8
 		public FlowTemplateData? GetCameraTemplateConfig(int id)
 		{
 			FlowTemplateData? config = ConfigFlowTemplateDataById.GetConfig(id, false);
@@ -26,8 +26,8 @@ namespace CSharpScript.Game.Module.Plot
 			return new FlowTemplateData?(config.Value);
 		}
 
-		// Token: 0x17007FC0 RID: 32704
-		// (get) Token: 0x06034514 RID: 214292 RVA: 0x00C49D00 File Offset: 0x00C47F00
+		// Token: 0x17005374 RID: 21364
+		// (get) Token: 0x0602939D RID: 168861 RVA: 0x00B93D48 File Offset: 0x00B91F48
 		public static PlotCameraTemplateConfig Instance
 		{
 			get
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x06034515 RID: 214293 RVA: 0x00C49D07 File Offset: 0x00C47F07
+		// Token: 0x0602939E RID: 168862 RVA: 0x00B93D4F File Offset: 0x00B91F4F
 		public static PlotCameraTemplateConfig GetOrCreateInstance()
 		{
 			if (PlotCameraTemplateConfig._Instance == null)
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.Plot
 			return PlotCameraTemplateConfig._Instance;
 		}
 
-		// Token: 0x06034516 RID: 214294 RVA: 0x00C49D1B File Offset: 0x00C47F1B
+		// Token: 0x0602939F RID: 168863 RVA: 0x00B93D63 File Offset: 0x00B91F63
 		public static bool CreateInstance()
 		{
 			if (PlotCameraTemplateConfig._Instance != null)
@@ -57,24 +57,24 @@ namespace CSharpScript.Game.Module.Plot
 			return true;
 		}
 
-		// Token: 0x06034517 RID: 214295 RVA: 0x00C49D31 File Offset: 0x00C47F31
+		// Token: 0x060293A0 RID: 168864 RVA: 0x00B93D79 File Offset: 0x00B91F79
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06034518 RID: 214296 RVA: 0x00C49D33 File Offset: 0x00C47F33
+		// Token: 0x060293A1 RID: 168865 RVA: 0x00B93D7B File Offset: 0x00B91F7B
 		public static void ResetStaticDefaultValue()
 		{
 			PlotCameraTemplateConfig._Instance = null;
 		}
 
-		// Token: 0x06034519 RID: 214297 RVA: 0x00C49D3B File Offset: 0x00C47F3B
+		// Token: 0x060293A2 RID: 168866 RVA: 0x00B93D83 File Offset: 0x00B91F83
 		static PlotCameraTemplateConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(PlotCameraTemplateConfig.CreateStaticDefaultValue), new Action(PlotCameraTemplateConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401BD29 RID: 113961
+		// Token: 0x04016704 RID: 91908
 		[Nullable(2)]
 		private static PlotCameraTemplateConfig _Instance;
 	}

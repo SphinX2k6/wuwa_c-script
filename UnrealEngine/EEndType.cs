@@ -4,22 +4,22 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x020019C0 RID: 6592
+	// Token: 0x02000458 RID: 1112
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/KuroMath.EEndType")]
 	public enum EEndType : byte
 	{
-		// Token: 0x0400D3EF RID: 54255
+		// Token: 0x04002D91 RID: 11665
 		Polygon,
-		// Token: 0x0400D3F0 RID: 54256
+		// Token: 0x04002D92 RID: 11666
 		Joined,
-		// Token: 0x0400D3F1 RID: 54257
+		// Token: 0x04002D93 RID: 11667
 		Butt,
-		// Token: 0x0400D3F2 RID: 54258
+		// Token: 0x04002D94 RID: 11668
 		Square,
-		// Token: 0x0400D3F3 RID: 54259
+		// Token: 0x04002D95 RID: 11669
 		Round,
-		// Token: 0x0400D3F4 RID: 54260
+		// Token: 0x04002D96 RID: 11670
 		EEndType_MAX
 	}
 }

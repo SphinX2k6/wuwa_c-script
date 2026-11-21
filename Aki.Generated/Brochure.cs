@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000B4F RID: 2895
+	// Token: 0x02000C2F RID: 3119
 	public struct Brochure : IFlatbufferObject
 	{
-		// Token: 0x17000605 RID: 1541
-		// (get) Token: 0x06004FB4 RID: 20404 RVA: 0x001E8C48 File Offset: 0x001E6E48
+		// Token: 0x17000645 RID: 1605
+		// (get) Token: 0x06005576 RID: 21878 RVA: 0x00208D88 File Offset: 0x00206F88
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004FB5 RID: 20405 RVA: 0x001E8C55 File Offset: 0x001E6E55
+		// Token: 0x06005577 RID: 21879 RVA: 0x00208D95 File Offset: 0x00206F95
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06004FB6 RID: 20406 RVA: 0x001E8C5C File Offset: 0x001E6E5C
+		// Token: 0x06005578 RID: 21880 RVA: 0x00208D9C File Offset: 0x00206F9C
 		public static Brochure GetRootAsBrochure(ByteBuffer _bb)
 		{
 			return Brochure.GetRootAsBrochure(_bb, default(Brochure));
 		}
 
-		// Token: 0x06004FB7 RID: 20407 RVA: 0x001E8C78 File Offset: 0x001E6E78
+		// Token: 0x06005579 RID: 21881 RVA: 0x00208DB8 File Offset: 0x00206FB8
 		public static Brochure GetRootAsBrochure(ByteBuffer _bb, Brochure obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06004FB8 RID: 20408 RVA: 0x001E8C95 File Offset: 0x001E6E95
+		// Token: 0x0600557A RID: 21882 RVA: 0x00208DD5 File Offset: 0x00206FD5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06004FB9 RID: 20409 RVA: 0x001E8CA4 File Offset: 0x001E6EA4
+		// Token: 0x0600557B RID: 21883 RVA: 0x00208DE4 File Offset: 0x00206FE4
 		public Brochure __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000606 RID: 1542
-		// (get) Token: 0x06004FBA RID: 20410 RVA: 0x001E8CB4 File Offset: 0x001E6EB4
+		// Token: 0x17000646 RID: 1606
+		// (get) Token: 0x0600557C RID: 21884 RVA: 0x00208DF4 File Offset: 0x00206FF4
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000607 RID: 1543
-		// (get) Token: 0x06004FBB RID: 20411 RVA: 0x001E8CF0 File Offset: 0x001E6EF0
+		// Token: 0x17000647 RID: 1607
+		// (get) Token: 0x0600557D RID: 21885 RVA: 0x00208E30 File Offset: 0x00207030
 		public int ActivityId
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000608 RID: 1544
-		// (get) Token: 0x06004FBC RID: 20412 RVA: 0x001E8D2C File Offset: 0x001E6F2C
+		// Token: 0x17000648 RID: 1608
+		// (get) Token: 0x0600557E RID: 21886 RVA: 0x00208E6C File Offset: 0x0020706C
 		public int Type
 		{
 			get
@@ -94,8 +94,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000609 RID: 1545
-		// (get) Token: 0x06004FBD RID: 20413 RVA: 0x001E8D68 File Offset: 0x001E6F68
+		// Token: 0x17000649 RID: 1609
+		// (get) Token: 0x0600557F RID: 21887 RVA: 0x00208EA8 File Offset: 0x002070A8
 		public int ConditionGroup
 		{
 			get
@@ -109,7 +109,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004FBE RID: 20414 RVA: 0x001E8DA8 File Offset: 0x001E6FA8
+		// Token: 0x06005580 RID: 21888 RVA: 0x00208EE8 File Offset: 0x002070E8
 		public int BookItemIds(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -120,8 +120,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700060A RID: 1546
-		// (get) Token: 0x06004FBF RID: 20415 RVA: 0x001E8DE8 File Offset: 0x001E6FE8
+		// Token: 0x1700064A RID: 1610
+		// (get) Token: 0x06005581 RID: 21889 RVA: 0x00208F28 File Offset: 0x00207128
 		public int BookItemIdsLength
 		{
 			get
@@ -135,37 +135,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004FC0 RID: 20416 RVA: 0x001E8E14 File Offset: 0x001E7014
+		// Token: 0x06005582 RID: 21890 RVA: 0x00208F54 File Offset: 0x00207154
 		public Span<int> GetBookItemIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(12, 4);
 		}
 
-		// Token: 0x06004FC1 RID: 20417 RVA: 0x001E8E24 File Offset: 0x001E7024
+		// Token: 0x06005583 RID: 21891 RVA: 0x00208F64 File Offset: 0x00207164
 		public int[] GetBookItemIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(12) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06004FC2 RID: 20418 RVA: 0x001E8E3C File Offset: 0x001E703C
+		// Token: 0x06005584 RID: 21892 RVA: 0x00208F7C File Offset: 0x0020717C
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用BookItemIdsIter()或GetBookItemIdsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] BookItemIds()
+		public int[] BookItemIds()
 		{
-			Brochure brochure = this;
-			return brochure.GetBookItemIdsArray() ?? Array.Empty<int>();
+			return this.GetBookItemIdsArray();
 		}
 
-		// Token: 0x06004FC3 RID: 20419 RVA: 0x001E8E60 File Offset: 0x001E7060
+		// Token: 0x06005585 RID: 21893 RVA: 0x00208F84 File Offset: 0x00207184
 		[NullableContext(1)]
-		public readonly IEnumerable<int> BookItemIdsIter()
+		public IEnumerable<int> BookItemIdsIter()
 		{
 			Brochure.<BookItemIdsIter>d__22 <BookItemIdsIter>d__ = new Brochure.<BookItemIdsIter>d__22(-2);
 			<BookItemIdsIter>d__.<>3__<>4__this = this;
 			return <BookItemIdsIter>d__;
 		}
 
-		// Token: 0x04004B4A RID: 19274
+		// Token: 0x0400512A RID: 20778
 		private Table __p;
 	}
 }

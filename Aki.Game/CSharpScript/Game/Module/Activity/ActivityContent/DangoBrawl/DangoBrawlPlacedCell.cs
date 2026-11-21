@@ -2,13 +2,13 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067D8 RID: 26584
+	// Token: 0x02005728 RID: 22312
 	public struct DangoBrawlPlacedCell
 	{
-		// Token: 0x040228EC RID: 141548
+		// Token: 0x0401D149 RID: 119113
 		public PanelPos Pos;
 
-		// Token: 0x040228ED RID: 141549
+		// Token: 0x0401D14A RID: 119114
 		public int OwnerUid;
 	}
 }

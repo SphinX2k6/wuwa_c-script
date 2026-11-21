@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020025E7 RID: 9703
+// Token: 0x02001AD2 RID: 6866
 [NullableContext(1)]
 [Nullable(0)]
 public class PlatformDefine
 {
-	// Token: 0x06013BB2 RID: 80818 RVA: 0x004F2AA4 File Offset: 0x004F0CA4
+	// Token: 0x06011094 RID: 69780 RVA: 0x005017F0 File Offset: 0x004FF9F0
 	// Note: this type is marked as 'beforefieldinit'.
 	static PlatformDefine()
 	{
@@ -33,60 +33,60 @@ public class PlatformDefine
 		PlatformDefine.DeviceIdMap = dictionary;
 	}
 
-	// Token: 0x040094A0 RID: 38048
+	// Token: 0x040095F7 RID: 38391
 	private const string DualSenseWirelessController = "1356_3302";
 
-	// Token: 0x040094A1 RID: 38049
+	// Token: 0x040095F8 RID: 38392
 	private const string DualSenseEdgeWirelessController = "1356_3570";
 
-	// Token: 0x040094A2 RID: 38050
+	// Token: 0x040095F9 RID: 38393
 	private const string DualShock4_Cuhzct1x = "1356_1476";
 
-	// Token: 0x040094A3 RID: 38051
+	// Token: 0x040095FA RID: 38394
 	private const string DualShock4_Cuhzct2x = "1356_2508";
 
-	// Token: 0x040094A4 RID: 38052
+	// Token: 0x040095FB RID: 38395
 	private const string XboxController = "1118_2834";
 
-	// Token: 0x040094A5 RID: 38053
+	// Token: 0x040095FC RID: 38396
 	private const string XboxEliteSeriersController = "1118_2835";
 
-	// Token: 0x040094A6 RID: 38054
+	// Token: 0x040095FD RID: 38397
 	private const string XboxEliteSeries2Controller = "1118_2816";
 
-	// Token: 0x040094A7 RID: 38055
+	// Token: 0x040095FE RID: 38398
 	private const string XboxOneController2015 = "1118_733";
 
-	// Token: 0x040094A8 RID: 38056
+	// Token: 0x040095FF RID: 38399
 	private const string XboxOneWirelessController = "1118_736";
 
-	// Token: 0x040094A9 RID: 38057
+	// Token: 0x04009600 RID: 38400
 	private const string XboxOneEliteController = "1118_739";
 
-	// Token: 0x040094AA RID: 38058
+	// Token: 0x04009601 RID: 38401
 	private const string XboxOneController = "1118_746";
 
-	// Token: 0x040094AB RID: 38059
+	// Token: 0x04009602 RID: 38402
 	private const string XboxOneSController = "1118_765";
 
-	// Token: 0x040094AC RID: 38060
+	// Token: 0x04009603 RID: 38403
 	private const string XboxWirelessAdapterForWindows = "1118_766";
 
-	// Token: 0x040094AD RID: 38061
+	// Token: 0x04009604 RID: 38404
 	private const string BackboneOne = "13706_*";
 
-	// Token: 0x040094AE RID: 38062
+	// Token: 0x04009605 RID: 38405
 	private const string NsPro = "1406_8201";
 
-	// Token: 0x040094AF RID: 38063
+	// Token: 0x04009606 RID: 38406
 	private const string RazerDefault = "5426_*";
 
-	// Token: 0x040094B0 RID: 38064
+	// Token: 0x04009607 RID: 38407
 	private const string Razer_DualShock4 = "5426_4103";
 
-	// Token: 0x040094B1 RID: 38065
+	// Token: 0x04009608 RID: 38408
 	private const string RazerWolverineV2Pro = "5426_4112";
 
-	// Token: 0x040094B2 RID: 38066
+	// Token: 0x04009609 RID: 38409
 	public static readonly IReadOnlyDictionary<string, EInputControllerType> DeviceIdMap;
 }

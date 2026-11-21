@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F90 RID: 24464
+	// Token: 0x020065D7 RID: 26071
 	public enum EInteractUnlockType : byte
 	{
-		// Token: 0x0400FE1D RID: 65053
+		// Token: 0x04010BA7 RID: 68519
 		Sequence
 	}
 }

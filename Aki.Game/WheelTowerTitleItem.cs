@@ -4,10 +4,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200160A RID: 5642
+// Token: 0x02000AC2 RID: 2754
 public class WheelTowerTitleItem : UiPanelBase
 {
-	// Token: 0x06009EEA RID: 40682 RVA: 0x0022BF98 File Offset: 0x0022A198
+	// Token: 0x060072C8 RID: 29384 RVA: 0x00235DC8 File Offset: 0x00233FC8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -27,7 +27,7 @@ public class WheelTowerTitleItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009EEB RID: 40683 RVA: 0x0022C064 File Offset: 0x0022A264
+	// Token: 0x060072C9 RID: 29385 RVA: 0x00235E94 File Offset: 0x00234094
 	protected override void OnBeforeShow()
 	{
 		object openParam = this.OpenParam;

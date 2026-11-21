@@ -8,12 +8,12 @@ using CSharpScript.Game.Module.TowerDefenseEvent.Define;
 using CSharpScript.Game.Module.TowerDefenseEvent.Model;
 using UnrealEngine;
 
-// Token: 0x02002BC8 RID: 11208
+// Token: 0x02002143 RID: 8515
 [NullableContext(1)]
 [Nullable(0)]
 public class TowerDefenseEventEntityRedirectFilter : KscEntityRedirectFilter
 {
-	// Token: 0x0601746C RID: 95340 RVA: 0x005E97C8 File Offset: 0x005E79C8
+	// Token: 0x06014E9D RID: 85661 RVA: 0x00616360 File Offset: 0x00614560
 	protected unsafe override bool OnCreateEntity(EntityPb entityData, Dictionary<string, EntityComponentPb> componentDataMap)
 	{
 		ITowerDefenseEventCombatInfo towerDefenseEventCombatInfo = TowerDefenseEventEntityModelBuilder.Get(entityData, componentDataMap);
@@ -41,7 +41,7 @@ public class TowerDefenseEventEntityRedirectFilter : KscEntityRedirectFilter
 		return true;
 	}
 
-	// Token: 0x0601746D RID: 95341 RVA: 0x005E98B8 File Offset: 0x005E7AB8
+	// Token: 0x06014E9E RID: 85662 RVA: 0x00616450 File Offset: 0x00614650
 	private unsafe void CreateEntityFromModel(ITowerDefenseEventCombatInfo model)
 	{
 		ITowerDefenseEventCombatInfo towerDefenseEventCombatInfo = model;
@@ -79,7 +79,7 @@ public class TowerDefenseEventEntityRedirectFilter : KscEntityRedirectFilter
 		this.PendingEntities.Add(towerDefenseEventCombatInfo);
 	}
 
-	// Token: 0x0601746E RID: 95342 RVA: 0x005E99BC File Offset: 0x005E7BBC
+	// Token: 0x06014E9F RID: 85663 RVA: 0x00616554 File Offset: 0x00614754
 	protected override void OnInstantiateEntities()
 	{
 		foreach (ITowerDefenseEventCombatInfo model in this.PendingEntities)
@@ -89,7 +89,7 @@ public class TowerDefenseEventEntityRedirectFilter : KscEntityRedirectFilter
 		this.PendingEntities.Clear();
 	}
 
-	// Token: 0x0601746F RID: 95343 RVA: 0x005E9A1C File Offset: 0x005E7C1C
+	// Token: 0x06014EA0 RID: 85664 RVA: 0x006165B4 File Offset: 0x006147B4
 	private unsafe void InstantiateEntity(ITowerDefenseEventCombatInfo model)
 	{
 		AActor renderActor = null;
@@ -231,7 +231,7 @@ public class TowerDefenseEventEntityRedirectFilter : KscEntityRedirectFilter
 		});
 	}
 
-	// Token: 0x06017470 RID: 95344 RVA: 0x005EA014 File Offset: 0x005E8214
+	// Token: 0x06014EA1 RID: 85665 RVA: 0x00616BAC File Offset: 0x00614DAC
 	protected override bool OnRemoveEntity(int creatureDataId)
 	{
 		ITowerDefenseEventCombatInfo towerDefenseEventCombatInfo = TowerDefenseEventModel.Instance.RemoveEntity((long)creatureDataId);
@@ -243,7 +243,7 @@ public class TowerDefenseEventEntityRedirectFilter : KscEntityRedirectFilter
 		return true;
 	}
 
-	// Token: 0x06017471 RID: 95345 RVA: 0x005EA040 File Offset: 0x005E8240
+	// Token: 0x06014EA2 RID: 85666 RVA: 0x00616BD8 File Offset: 0x00614DD8
 	private void DestroyEntity(ITowerDefenseEventCombatInfo model)
 	{
 		ITowerDefenseEventTrapInfo towerDefenseEventTrapInfo = model as ITowerDefenseEventTrapInfo;
@@ -267,7 +267,7 @@ public class TowerDefenseEventEntityRedirectFilter : KscEntityRedirectFilter
 		}
 	}
 
-	// Token: 0x06017472 RID: 95346 RVA: 0x005EA0E0 File Offset: 0x005E82E0
+	// Token: 0x06014EA3 RID: 85667 RVA: 0x00616C78 File Offset: 0x00614E78
 	public override void Reset()
 	{
 		TowerDefenseEventModel.Instance.GetAllEntities(this.CachedAllEntities);
@@ -287,7 +287,7 @@ public class TowerDefenseEventEntityRedirectFilter : KscEntityRedirectFilter
 		this.PendingEntities.Clear();
 	}
 
-	// Token: 0x06017473 RID: 95347 RVA: 0x005EA1CC File Offset: 0x005E83CC
+	// Token: 0x06014EA4 RID: 85668 RVA: 0x00616D64 File Offset: 0x00614F64
 	public unsafe void UpdateEntity(TrapDefenseEntityDataChangeNotify data)
 	{
 		ITowerDefenseEventCombatInfo entity = TowerDefenseEventModel.Instance.GetEntity(MathUtils.Instance.LongToNumber(data.EntityId));
@@ -377,7 +377,7 @@ public class TowerDefenseEventEntityRedirectFilter : KscEntityRedirectFilter
 		}
 	}
 
-	// Token: 0x06017474 RID: 95348 RVA: 0x005EA3D8 File Offset: 0x005E85D8
+	// Token: 0x06014EA5 RID: 85669 RVA: 0x00616F70 File Offset: 0x00615170
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -397,7 +397,7 @@ public class TowerDefenseEventEntityRedirectFilter : KscEntityRedirectFilter
 		return null;
 	}
 
-	// Token: 0x06017475 RID: 95349 RVA: 0x005EA404 File Offset: 0x005E8604
+	// Token: 0x06014EA6 RID: 85670 RVA: 0x00616F9C File Offset: 0x0061519C
 	private Action<AKSC_Entity> OnLandFireCellCreate(ITowerDefenseEventCombatInfo model)
 	{
 		TowerDefenseEventEntityRedirectFilter.<>c__DisplayClass14_0 CS$<>8__locals1 = new TowerDefenseEventEntityRedirectFilter.<>c__DisplayClass14_0();
@@ -408,15 +408,15 @@ public class TowerDefenseEventEntityRedirectFilter : KscEntityRedirectFilter
 		return new Action<AKSC_Entity>(CS$<>8__locals1.<OnLandFireCellCreate>g__Callback|0);
 	}
 
-	// Token: 0x0400AE22 RID: 44578
+	// Token: 0x0400B227 RID: 45607
 	private static readonly Pool<TowerDefenseEventWorldEntityModel> WorldEntityPool = new Pool<TowerDefenseEventWorldEntityModel>(100, () => new TowerDefenseEventWorldEntityModel(), null);
 
-	// Token: 0x0400AE23 RID: 44579
+	// Token: 0x0400B228 RID: 45608
 	private readonly List<ITowerDefenseEventCombatInfo> PendingEntities = new List<ITowerDefenseEventCombatInfo>();
 
-	// Token: 0x0400AE24 RID: 44580
+	// Token: 0x0400B229 RID: 45609
 	private readonly List<ITowerDefenseEventCombatInfo> CachedAllEntities = new List<ITowerDefenseEventCombatInfo>();
 
-	// Token: 0x0400AE25 RID: 44581
+	// Token: 0x0400B22A RID: 45610
 	private readonly Dictionary<long, TowerDefenseEventWorldEntityModel> InitializedEntities = new Dictionary<long, TowerDefenseEventWorldEntityModel>();
 }

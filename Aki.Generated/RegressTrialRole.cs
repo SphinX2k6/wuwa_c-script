@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000FB5 RID: 4021
+	// Token: 0x0200109D RID: 4253
 	public struct RegressTrialRole : IFlatbufferObject
 	{
-		// Token: 0x17002DD4 RID: 11732
-		// (get) Token: 0x0600BB51 RID: 47953 RVA: 0x002DCB6D File Offset: 0x002DAD6D
+		// Token: 0x17002E4F RID: 11855
+		// (get) Token: 0x0600C19B RID: 49563 RVA: 0x002F92FD File Offset: 0x002F74FD
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BB52 RID: 47954 RVA: 0x002DCB7A File Offset: 0x002DAD7A
+		// Token: 0x0600C19C RID: 49564 RVA: 0x002F930A File Offset: 0x002F750A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600BB53 RID: 47955 RVA: 0x002DCB84 File Offset: 0x002DAD84
+		// Token: 0x0600C19D RID: 49565 RVA: 0x002F9314 File Offset: 0x002F7514
 		public static RegressTrialRole GetRootAsRegressTrialRole(ByteBuffer _bb)
 		{
 			return RegressTrialRole.GetRootAsRegressTrialRole(_bb, default(RegressTrialRole));
 		}
 
-		// Token: 0x0600BB54 RID: 47956 RVA: 0x002DCBA0 File Offset: 0x002DADA0
+		// Token: 0x0600C19E RID: 49566 RVA: 0x002F9330 File Offset: 0x002F7530
 		public static RegressTrialRole GetRootAsRegressTrialRole(ByteBuffer _bb, RegressTrialRole obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600BB55 RID: 47957 RVA: 0x002DCBBD File Offset: 0x002DADBD
+		// Token: 0x0600C19F RID: 49567 RVA: 0x002F934D File Offset: 0x002F754D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600BB56 RID: 47958 RVA: 0x002DCBCC File Offset: 0x002DADCC
+		// Token: 0x0600C1A0 RID: 49568 RVA: 0x002F935C File Offset: 0x002F755C
 		public RegressTrialRole __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002DD5 RID: 11733
-		// (get) Token: 0x0600BB57 RID: 47959 RVA: 0x002DCBDC File Offset: 0x002DADDC
+		// Token: 0x17002E50 RID: 11856
+		// (get) Token: 0x0600C1A1 RID: 49569 RVA: 0x002F936C File Offset: 0x002F756C
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002DD6 RID: 11734
-		// (get) Token: 0x0600BB58 RID: 47960 RVA: 0x002DCC18 File Offset: 0x002DAE18
+		// Token: 0x17002E51 RID: 11857
+		// (get) Token: 0x0600C1A2 RID: 49570 RVA: 0x002F93A8 File Offset: 0x002F75A8
 		public int ActivityId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002DD7 RID: 11735
-		// (get) Token: 0x0600BB59 RID: 47961 RVA: 0x002DCC54 File Offset: 0x002DAE54
+		// Token: 0x17002E52 RID: 11858
+		// (get) Token: 0x0600C1A3 RID: 49571 RVA: 0x002F93E4 File Offset: 0x002F75E4
 		public int ConditionGroup
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002DD8 RID: 11736
-		// (get) Token: 0x0600BB5A RID: 47962 RVA: 0x002DCC90 File Offset: 0x002DAE90
+		// Token: 0x17002E53 RID: 11859
+		// (get) Token: 0x0600C1A4 RID: 49572 RVA: 0x002F9420 File Offset: 0x002F7620
 		public int TrialRoleGroupId
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0400508E RID: 20622
+		// Token: 0x04005676 RID: 22134
 		private Table __p;
 	}
 }

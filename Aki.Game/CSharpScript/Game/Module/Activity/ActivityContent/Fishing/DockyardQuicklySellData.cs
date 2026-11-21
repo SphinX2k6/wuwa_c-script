@@ -5,10 +5,10 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x0200658F RID: 25999
+	// Token: 0x0200550D RID: 21773
 	public class DockyardQuicklySellData
 	{
-		// Token: 0x060412EA RID: 266986 RVA: 0x00FCD0B0 File Offset: 0x00FCB2B0
+		// Token: 0x06035FAF RID: 221103 RVA: 0x00F140C4 File Offset: 0x00F122C4
 		public DockyardQuicklySellData(int shapeId)
 		{
 			FishingGridItemShape fishingShapeConfig = FishingConfig.Instance.GetFishingShapeConfig(shapeId);
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x04021F2C RID: 139052
+		// Token: 0x0401C85D RID: 116829
 		[Nullable(1)]
 		public readonly List<List<int>> PosDataDoublyList = new List<List<int>>();
 	}

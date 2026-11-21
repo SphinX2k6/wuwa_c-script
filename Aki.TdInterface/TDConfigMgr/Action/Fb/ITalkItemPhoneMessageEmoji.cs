@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002555 RID: 9557
+	// Token: 0x020027FE RID: 10238
 	public class ITalkItemPhoneMessageEmoji : ITalkItemPhoneMessageBase
 	{
-		// Token: 0x0600D5C7 RID: 54727 RVA: 0x001FC142 File Offset: 0x001FA342
-		[NullableContext(1)]
+		// Token: 0x0600E331 RID: 58161 RVA: 0x00217D3E File Offset: 0x00215F3E
 		public static ITalkItemPhoneMessageEmoji Create(ITalkItemPhoneMessageEmoji? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003CDF RID: 15583
-		// (get) Token: 0x0600D5C8 RID: 54728 RVA: 0x001FC161 File Offset: 0x001FA361
+		// Token: 0x17003FE3 RID: 16355
+		// (get) Token: 0x0600E332 RID: 58162 RVA: 0x00217D5D File Offset: 0x00215F5D
 		public override EPhoneMessageType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003CE0 RID: 15584
-		// (get) Token: 0x0600D5C9 RID: 54729 RVA: 0x001FC16E File Offset: 0x001FA36E
+		// Token: 0x17003FE4 RID: 16356
+		// (get) Token: 0x0600E333 RID: 58163 RVA: 0x00217D6A File Offset: 0x00215F6A
 		public virtual int EmojiId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040075C3 RID: 30147
+		// Token: 0x04007C20 RID: 31776
 		private ITalkItemPhoneMessageEmoji Instance;
 	}
 }

@@ -6,16 +6,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.FlagChallenge
 {
-	// Token: 0x02005A43 RID: 23107
+	// Token: 0x02004A1F RID: 18975
 	public class FlagChallengeActivityRewardEntranceItem : UiPanelBase
 	{
-		// Token: 0x0603A9B4 RID: 240052 RVA: 0x00DF3204 File Offset: 0x00DF1404
+		// Token: 0x0602F8FD RID: 194813 RVA: 0x00D43788 File Offset: 0x00D41988
 		public FlagChallengeActivityRewardEntranceItem(int activityId)
 		{
 			this.ActivityId = activityId;
 		}
 
-		// Token: 0x0603A9B5 RID: 240053 RVA: 0x00DF3214 File Offset: 0x00DF1414
+		// Token: 0x0602F8FE RID: 194814 RVA: 0x00D43798 File Offset: 0x00D41998
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			};
 		}
 
-		// Token: 0x0603A9B6 RID: 240054 RVA: 0x00DF32A8 File Offset: 0x00DF14A8
+		// Token: 0x0602F8FF RID: 194815 RVA: 0x00D4382C File Offset: 0x00D41A2C
 		protected override void OnStart()
 		{
 			RedDotController.Instance.BindRedDot(ERedDotName.RedDotFlagChallengeActivityReward, base.GetItem(2), null, this.ActivityId);
@@ -39,27 +39,27 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			EventSystem.Instance.Add<int>(EEventName.OnFlagChallengeTaskUpdate, new Action<int>(this.OnTaskUpdate));
 		}
 
-		// Token: 0x0603A9B7 RID: 240055 RVA: 0x00DF32F4 File Offset: 0x00DF14F4
+		// Token: 0x0602F900 RID: 194816 RVA: 0x00D43878 File Offset: 0x00D41A78
 		protected override void OnBeforeDestroy()
 		{
 			RedDotController.Instance.UnBindGivenUi(ERedDotName.RedDotFlagChallengeActivityReward, base.GetItem(2), this.ActivityId);
 			EventSystem.Instance.Remove(EEventName.OnFlagChallengeTaskUpdate, new Action<int>(this.OnTaskUpdate));
 		}
 
-		// Token: 0x0603A9B8 RID: 240056 RVA: 0x00DF3330 File Offset: 0x00DF1530
+		// Token: 0x0602F901 RID: 194817 RVA: 0x00D438B4 File Offset: 0x00D41AB4
 		private void RefreshProgress()
 		{
 			FlagChallengeData flagChallengeData = FlagChallengeModel.Instance.GetFlagChallengeData(this.ActivityId);
 			base.GetText(3).SetText(flagChallengeData.GetTaskProgressText(), true);
 		}
 
-		// Token: 0x0603A9B9 RID: 240057 RVA: 0x00DF3361 File Offset: 0x00DF1561
+		// Token: 0x0602F902 RID: 194818 RVA: 0x00D438E5 File Offset: 0x00D41AE5
 		private void OnRewardBtnClick()
 		{
 			FlagChallengeController.Instance.OpenFlagChallengeTaskView(this.ActivityId);
 		}
 
-		// Token: 0x0603A9BA RID: 240058 RVA: 0x00DF3373 File Offset: 0x00DF1573
+		// Token: 0x0602F903 RID: 194819 RVA: 0x00D438F7 File Offset: 0x00D41AF7
 		private void OnTaskUpdate(int activityId)
 		{
 			if (activityId != this.ActivityId)
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			this.RefreshProgress();
 		}
 
-		// Token: 0x0401E87E RID: 125054
+		// Token: 0x04019325 RID: 103205
 		private int ActivityId;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000C3F RID: 3135
+	// Token: 0x02000D22 RID: 3362
 	public struct EquivConversion : IFlatbufferObject
 	{
-		// Token: 0x17000F6B RID: 3947
-		// (get) Token: 0x06006A44 RID: 27204 RVA: 0x0022570D File Offset: 0x0022390D
+		// Token: 0x17000FC4 RID: 4036
+		// (get) Token: 0x06007046 RID: 28742 RVA: 0x00244A55 File Offset: 0x00242C55
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006A45 RID: 27205 RVA: 0x0022571A File Offset: 0x0022391A
+		// Token: 0x06007047 RID: 28743 RVA: 0x00244A62 File Offset: 0x00242C62
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06006A46 RID: 27206 RVA: 0x00225724 File Offset: 0x00223924
+		// Token: 0x06007048 RID: 28744 RVA: 0x00244A6C File Offset: 0x00242C6C
 		public static EquivConversion GetRootAsEquivConversion(ByteBuffer _bb)
 		{
 			return EquivConversion.GetRootAsEquivConversion(_bb, default(EquivConversion));
 		}
 
-		// Token: 0x06006A47 RID: 27207 RVA: 0x00225740 File Offset: 0x00223940
+		// Token: 0x06007049 RID: 28745 RVA: 0x00244A88 File Offset: 0x00242C88
 		public static EquivConversion GetRootAsEquivConversion(ByteBuffer _bb, EquivConversion obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06006A48 RID: 27208 RVA: 0x0022575D File Offset: 0x0022395D
+		// Token: 0x0600704A RID: 28746 RVA: 0x00244AA5 File Offset: 0x00242CA5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06006A49 RID: 27209 RVA: 0x0022576C File Offset: 0x0022396C
+		// Token: 0x0600704B RID: 28747 RVA: 0x00244AB4 File Offset: 0x00242CB4
 		public EquivConversion __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000F6C RID: 3948
-		// (get) Token: 0x06006A4A RID: 27210 RVA: 0x0022577C File Offset: 0x0022397C
+		// Token: 0x17000FC5 RID: 4037
+		// (get) Token: 0x0600704C RID: 28748 RVA: 0x00244AC4 File Offset: 0x00242CC4
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000F6D RID: 3949
-		// (get) Token: 0x06006A4B RID: 27211 RVA: 0x002257B8 File Offset: 0x002239B8
+		// Token: 0x17000FC6 RID: 4038
+		// (get) Token: 0x0600704D RID: 28749 RVA: 0x00244B00 File Offset: 0x00242D00
 		public int DamageRatio
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004C7F RID: 19583
+		// Token: 0x04005262 RID: 21090
 		private Table __p;
 	}
 }

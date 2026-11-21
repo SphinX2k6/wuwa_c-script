@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022B3 RID: 8883
+	// Token: 0x02002522 RID: 9506
 	public static class EAvgVisualEffectExtensions
 	{
-		// Token: 0x0600C2A4 RID: 49828 RVA: 0x001C7170 File Offset: 0x001C5370
+		// Token: 0x0600CE73 RID: 52851 RVA: 0x001DEF78 File Offset: 0x001DD178
 		public static string ToEnumString(this EAvgVisualEffect value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C2A5 RID: 49829 RVA: 0x001C71B8 File Offset: 0x001C53B8
+		// Token: 0x0600CE74 RID: 52852 RVA: 0x001DEFC0 File Offset: 0x001DD1C0
 		public static EAvgVisualEffect FromString(string name)
 		{
 			EAvgVisualEffect result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C2A6 RID: 49830 RVA: 0x001C71E4 File Offset: 0x001C53E4
+		// Token: 0x0600CE75 RID: 52853 RVA: 0x001DEFEC File Offset: 0x001DD1EC
 		public static bool TryFromString(string name, out EAvgVisualEffect value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C2A7 RID: 49831 RVA: 0x001C723A File Offset: 0x001C543A
+		// Token: 0x0600CE76 RID: 52854 RVA: 0x001DF042 File Offset: 0x001DD242
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C2A8 RID: 49832 RVA: 0x001C725A File Offset: 0x001C545A
+		// Token: 0x0600CE77 RID: 52855 RVA: 0x001DF062 File Offset: 0x001DD262
 		public static EAvgVisualEffect[] GetValues()
 		{
 			return new EAvgVisualEffect[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C2A9 RID: 49833 RVA: 0x001C726A File Offset: 0x001C546A
+		// Token: 0x0600CE78 RID: 52856 RVA: 0x001DF072 File Offset: 0x001DD272
 		public static string[] GetNames()
 		{
 			return new string[]

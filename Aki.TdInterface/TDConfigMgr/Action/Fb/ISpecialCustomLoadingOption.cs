@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002695 RID: 9877
+	// Token: 0x02002958 RID: 10584
 	public class ISpecialCustomLoadingOption
 	{
-		// Token: 0x0600DD1D RID: 56605 RVA: 0x0020DC98 File Offset: 0x0020BE98
-		[NullableContext(1)]
+		// Token: 0x0600EAF4 RID: 60148 RVA: 0x0022A438 File Offset: 0x00228638
 		public static ISpecialCustomLoadingOption Create(ISpecialCustomLoadingOption? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170041B5 RID: 16821
-		// (get) Token: 0x0600DD1E RID: 56606 RVA: 0x0020DCB7 File Offset: 0x0020BEB7
+		// Token: 0x170044F2 RID: 17650
+		// (get) Token: 0x0600EAF5 RID: 60149 RVA: 0x0022A457 File Offset: 0x00228657
 		public virtual ESpecialCustomLoadingType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007ACF RID: 31439
+		// Token: 0x0400816C RID: 33132
 		private ISpecialCustomLoadingOption Instance;
 	}
 }

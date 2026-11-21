@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006E17 RID: 28183
+	// Token: 0x02007592 RID: 30098
 	public class IRecoverDurabilityT
 	{
-		// Token: 0x1700D211 RID: 53777
-		// (get) Token: 0x06031CBC RID: 203964 RVA: 0x006BDD3E File Offset: 0x006BBF3E
-		// (set) Token: 0x06031CBD RID: 203965 RVA: 0x006BDD46 File Offset: 0x006BBF46
+		// Token: 0x1700DD59 RID: 56665
+		// (get) Token: 0x06034CB8 RID: 216248 RVA: 0x00719426 File Offset: 0x00717626
+		// (set) Token: 0x06034CB9 RID: 216249 RVA: 0x0071942E File Offset: 0x0071762E
 		public int EntityId { get; set; }
 
-		// Token: 0x06031CBE RID: 203966 RVA: 0x006BDD4F File Offset: 0x006BBF4F
+		// Token: 0x06034CBA RID: 216250 RVA: 0x00719437 File Offset: 0x00717637
 		public IRecoverDurabilityT()
 		{
 			this.EntityId = 0;

@@ -6,44 +6,44 @@ using CSharpScript.Game.NewWorld.Character.Custom.Components;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006AEC RID: 27372
+	// Token: 0x02005C64 RID: 23652
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class LevelEventAddBuffClientPrePerformance : LevelEventBase
 	{
-		// Token: 0x06043FCB RID: 278475 RVA: 0x010ADDF4 File Offset: 0x010ABFF4
+		// Token: 0x0603A11D RID: 237853 RVA: 0x01057670 File Offset: 0x01055870
 		protected LevelEventAddBuffClientPrePerformance(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06043FCC RID: 278476
+		// Token: 0x0603A11E RID: 237854
 		[return: Nullable(2)]
 		protected abstract EntityHandle GetTargetEntity(TriggerContext context);
 
-		// Token: 0x06043FCD RID: 278477
+		// Token: 0x0603A11F RID: 237855
 		protected abstract List<long> GetBuffIds(ActionParams inParams);
 
-		// Token: 0x06043FCE RID: 278478 RVA: 0x010ADDFD File Offset: 0x010ABFFD
+		// Token: 0x0603A120 RID: 237856 RVA: 0x01057679 File Offset: 0x01055879
 		[return: Nullable(2)]
 		protected EntityHandle GetTriggerEntity(TriggerContext context)
 		{
 			return CreatureModel.Instance.GetEntityById(context.TriggerEntityId.Value);
 		}
 
-		// Token: 0x06043FCF RID: 278479 RVA: 0x010ADE14 File Offset: 0x010AC014
+		// Token: 0x0603A121 RID: 237857 RVA: 0x01057690 File Offset: 0x01055890
 		[return: Nullable(2)]
 		protected EntityHandle GetOtherEntity(TriggerContext context)
 		{
 			return CreatureModel.Instance.GetEntityById(context.OtherEntityId.Value);
 		}
 
-		// Token: 0x06043FD0 RID: 278480 RVA: 0x010ADE2B File Offset: 0x010AC02B
+		// Token: 0x0603A122 RID: 237858 RVA: 0x010576A7 File Offset: 0x010558A7
 		protected string GetDebugName()
 		{
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06043FD1 RID: 278481 RVA: 0x010ADE38 File Offset: 0x010AC038
+		// Token: 0x0603A123 RID: 237859 RVA: 0x010576B4 File Offset: 0x010558B4
 		protected unsafe long GetPreMessageId(EntityHandle entityHandle)
 		{
 			ClientTriggerComponent component = entityHandle.Entity.GetComponent<ClientTriggerComponent>();
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return component.ClientPrePerformancePreMessageId;
 		}
 
-		// Token: 0x06043FD2 RID: 278482 RVA: 0x010ADED0 File Offset: 0x010AC0D0
+		// Token: 0x0603A124 RID: 237860 RVA: 0x0105774C File Offset: 0x0105594C
 		public unsafe override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			if (!(context.Type != EGeneralContextType.Trigger))

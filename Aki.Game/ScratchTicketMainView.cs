@@ -11,17 +11,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020014F5 RID: 5365
+// Token: 0x020009AD RID: 2477
 [NullableContext(1)]
 [Nullable(0)]
 public class ScratchTicketMainView : UiTickViewBase
 {
-	// Token: 0x060098E7 RID: 39143 RVA: 0x00210EA8 File Offset: 0x0020F0A8
+	// Token: 0x06006CC1 RID: 27841 RVA: 0x0021AB98 File Offset: 0x00218D98
 	public ScratchTicketMainView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x060098E8 RID: 39144 RVA: 0x00210EE8 File Offset: 0x0020F0E8
+	// Token: 0x06006CC2 RID: 27842 RVA: 0x0021ABD8 File Offset: 0x00218DD8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 11;
@@ -53,7 +53,7 @@ public class ScratchTicketMainView : UiTickViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060098E9 RID: 39145 RVA: 0x00211080 File Offset: 0x0020F280
+	// Token: 0x06006CC3 RID: 27843 RVA: 0x0021AD70 File Offset: 0x00218F70
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ScratchTicketMainView.<OnBeforeStartAsync>d__15 <OnBeforeStartAsync>d__;
@@ -64,21 +64,21 @@ public class ScratchTicketMainView : UiTickViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060098EA RID: 39146 RVA: 0x002110C3 File Offset: 0x0020F2C3
+	// Token: 0x06006CC4 RID: 27844 RVA: 0x0021ADB3 File Offset: 0x00218FB3
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
 		EventSystem.Instance.Add(EEventName.OnScratchTicketConditionRefresh, new Action(this.OnScratchTicketConditionRefresh));
 	}
 
-	// Token: 0x060098EB RID: 39147 RVA: 0x002110FD File Offset: 0x0020F2FD
+	// Token: 0x06006CC5 RID: 27845 RVA: 0x0021ADED File Offset: 0x00218FED
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
 		EventSystem.Instance.Remove(EEventName.OnScratchTicketConditionRefresh, new Action(this.OnScratchTicketConditionRefresh));
 	}
 
-	// Token: 0x060098EC RID: 39148 RVA: 0x00211138 File Offset: 0x0020F338
+	// Token: 0x06006CC6 RID: 27846 RVA: 0x0021AE28 File Offset: 0x00219028
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -104,7 +104,7 @@ public class ScratchTicketMainView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x060098ED RID: 39149 RVA: 0x00211180 File Offset: 0x0020F380
+	// Token: 0x06006CC7 RID: 27847 RVA: 0x0021AE70 File Offset: 0x00219070
 	private UniTask InitRoundDataList()
 	{
 		ScratchTicketMainView.<InitRoundDataList>d__19 <InitRoundDataList>d__;
@@ -115,7 +115,7 @@ public class ScratchTicketMainView : UiTickViewBase
 		return <InitRoundDataList>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060098EE RID: 39150 RVA: 0x002111C4 File Offset: 0x0020F3C4
+	// Token: 0x06006CC8 RID: 27848 RVA: 0x0021AEB4 File Offset: 0x002190B4
 	private UniTask InitCellLayout()
 	{
 		ScratchTicketMainView.<InitCellLayout>d__20 <InitCellLayout>d__;
@@ -126,7 +126,7 @@ public class ScratchTicketMainView : UiTickViewBase
 		return <InitCellLayout>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060098EF RID: 39151 RVA: 0x00211208 File Offset: 0x0020F408
+	// Token: 0x06006CC9 RID: 27849 RVA: 0x0021AEF8 File Offset: 0x002190F8
 	private void ReSelectRoundTab()
 	{
 		int firstProgressRoundDataIndex = this.ScratchTicketData.GetFirstProgressRoundDataIndex();
@@ -137,7 +137,7 @@ public class ScratchTicketMainView : UiTickViewBase
 		this.TabLayout.GetLayoutItemByKey(firstProgressRoundDataIndex).SetSelect(true, true);
 	}
 
-	// Token: 0x060098F0 RID: 39152 RVA: 0x00211240 File Offset: 0x0020F440
+	// Token: 0x06006CCA RID: 27850 RVA: 0x0021AF30 File Offset: 0x00219130
 	private void RefreshCellLayout(ScratchTicketRoundData roundData)
 	{
 		List<ScratchTicketRoundResult> diagonalResult = roundData.GetDiagonalResultList();
@@ -165,7 +165,7 @@ public class ScratchTicketMainView : UiTickViewBase
 		this.RevealTimerHandle = TimerSystem.GameplayTimeInstance.Forever(action, 30f, 1f, null, null, true);
 	}
 
-	// Token: 0x060098F1 RID: 39153 RVA: 0x002112E8 File Offset: 0x0020F4E8
+	// Token: 0x06006CCB RID: 27851 RVA: 0x0021AFD8 File Offset: 0x002191D8
 	private void RefreshTipPanel()
 	{
 		if (this.ScratchTicketData.GetScratchCardActivityConfig() == null)
@@ -196,7 +196,7 @@ public class ScratchTicketMainView : UiTickViewBase
 		this.ConditionLayout.RefreshByData(conditionDataList, null, false);
 	}
 
-	// Token: 0x060098F2 RID: 39154 RVA: 0x00211454 File Offset: 0x0020F654
+	// Token: 0x06006CCC RID: 27852 RVA: 0x0021B144 File Offset: 0x00219344
 	private void RefreshTimerText()
 	{
 		double endOpenTime = (double)this.ScratchTicketData.EndOpenTime;
@@ -231,7 +231,7 @@ public class ScratchTicketMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060098F3 RID: 39155 RVA: 0x00211584 File Offset: 0x0020F784
+	// Token: 0x06006CCD RID: 27853 RVA: 0x0021B274 File Offset: 0x00219474
 	protected override void OnTick(float delta)
 	{
 		this.TickTime += delta;
@@ -242,7 +242,7 @@ public class ScratchTicketMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060098F4 RID: 39156 RVA: 0x002115D0 File Offset: 0x0020F7D0
+	// Token: 0x06006CCE RID: 27854 RVA: 0x0021B2C0 File Offset: 0x002194C0
 	protected override void OnBeforeHide()
 	{
 		UiLayer.Instance.SetShowMaskLayer(EUiViewName.ScratchTicketMainView, false);
@@ -250,7 +250,7 @@ public class ScratchTicketMainView : UiTickViewBase
 		this.ClearRevealTimer();
 	}
 
-	// Token: 0x060098F5 RID: 39157 RVA: 0x002115F3 File Offset: 0x0020F7F3
+	// Token: 0x06006CCF RID: 27855 RVA: 0x0021B2E3 File Offset: 0x002194E3
 	private void ClearTimer()
 	{
 		if (TimerSystem.GameplayTimeInstance.Has(this.TimerHandle))
@@ -260,7 +260,7 @@ public class ScratchTicketMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060098F6 RID: 39158 RVA: 0x0021161F File Offset: 0x0020F81F
+	// Token: 0x06006CD0 RID: 27856 RVA: 0x0021B30F File Offset: 0x0021950F
 	private void ClearRevealTimer()
 	{
 		if (TimerSystem.GameplayTimeInstance.Has(this.RevealTimerHandle))
@@ -270,7 +270,7 @@ public class ScratchTicketMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060098F7 RID: 39159 RVA: 0x0021164B File Offset: 0x0020F84B
+	// Token: 0x06006CD1 RID: 27857 RVA: 0x0021B33B File Offset: 0x0021953B
 	private void OnActivitySequenceEmitEvent(string param)
 	{
 		if (param == "Refresh")
@@ -280,7 +280,7 @@ public class ScratchTicketMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060098F8 RID: 39160 RVA: 0x00211674 File Offset: 0x0020F874
+	// Token: 0x06006CD2 RID: 27858 RVA: 0x0021B364 File Offset: 0x00219564
 	private void OnScratchTicketConditionRefresh()
 	{
 		List<ScratchTicketRoundData> roundDataList = this.ScratchTicketData.GetRoundDataList();
@@ -288,7 +288,7 @@ public class ScratchTicketMainView : UiTickViewBase
 		this.RefreshTipPanel();
 	}
 
-	// Token: 0x060098F9 RID: 39161 RVA: 0x002116A4 File Offset: 0x0020F8A4
+	// Token: 0x06006CD3 RID: 27859 RVA: 0x0021B394 File Offset: 0x00219594
 	private void OnClickRoundTabItem(ScratchTicketRoundData data, ScratchTicketTabItem item)
 	{
 		if (this.CurSelectRoundTabItem != null)
@@ -304,7 +304,7 @@ public class ScratchTicketMainView : UiTickViewBase
 		this.RefreshTipPanel();
 	}
 
-	// Token: 0x060098FA RID: 39162 RVA: 0x00211708 File Offset: 0x0020F908
+	// Token: 0x06006CD4 RID: 27860 RVA: 0x0021B3F8 File Offset: 0x002195F8
 	private void OnClickCellItem(ScratchTicketCellData data)
 	{
 		if (!data.IsLock())
@@ -325,7 +325,7 @@ public class ScratchTicketMainView : UiTickViewBase
 		ActivityScratchTicketController.Instance.SendScratchCardRewardRequest(id, data.Index, new Action<EScratchTicketRewardType, int, List<ScratchTicketRoundResult>, List<RewardItemData>>(this.OnScratchRewardRefresh));
 	}
 
-	// Token: 0x060098FB RID: 39163 RVA: 0x00211798 File Offset: 0x0020F998
+	// Token: 0x06006CD5 RID: 27861 RVA: 0x0021B488 File Offset: 0x00219688
 	private void OnScratchRewardRefresh(EScratchTicketRewardType rewardType, int roundId, List<ScratchTicketRoundResult> resultDataList, List<RewardItemData> rewardItemDataList)
 	{
 		if (roundId != this.CurSelectRoundData.Id)
@@ -386,7 +386,7 @@ public class ScratchTicketMainView : UiTickViewBase
 		this.TimerHandle = TimerSystem.GameplayTimeInstance.Forever(action2, 50f, 1f, null, null, true);
 	}
 
-	// Token: 0x060098FC RID: 39164 RVA: 0x002118D5 File Offset: 0x0020FAD5
+	// Token: 0x06006CD6 RID: 27862 RVA: 0x0021B5C5 File Offset: 0x002197C5
 	private void PlayShakeSequence()
 	{
 		TimerSystem.GameplayTimeInstance.Delay(delegate(float _)
@@ -395,7 +395,7 @@ public class ScratchTicketMainView : UiTickViewBase
 		}, 500f, null, null, true, 1f);
 	}
 
-	// Token: 0x060098FD RID: 39165 RVA: 0x002118FC File Offset: 0x0020FAFC
+	// Token: 0x06006CD7 RID: 27863 RVA: 0x0021B5EC File Offset: 0x002197EC
 	private void PlayTabSequence(ScratchTicketRoundData curRoundData, ScratchTicketRoundData lastRoundData)
 	{
 		int roundDataIndex = this.ScratchTicketData.GetRoundDataIndex(curRoundData);
@@ -417,7 +417,7 @@ public class ScratchTicketMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060098FE RID: 39166 RVA: 0x00211980 File Offset: 0x0020FB80
+	// Token: 0x06006CD8 RID: 27864 RVA: 0x0021B670 File Offset: 0x00219870
 	private void PlayFirstTabSequence(ScratchTicketRoundData curRoundData)
 	{
 		int roundDataIndex = this.ScratchTicketData.GetRoundDataIndex(curRoundData);
@@ -432,7 +432,7 @@ public class ScratchTicketMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060098FF RID: 39167 RVA: 0x002119C7 File Offset: 0x0020FBC7
+	// Token: 0x06006CD9 RID: 27865 RVA: 0x0021B6B7 File Offset: 0x002198B7
 	private void ShowRewardTip(EScratchTicketRewardType rewardType, List<RewardItemData> rewardItemDataList)
 	{
 		if (rewardType == EScratchTicketRewardType.Center)
@@ -444,7 +444,7 @@ public class ScratchTicketMainView : UiTickViewBase
 		ItemRewardController.Instance.OpenCommonRewardView(1009, rewardItemDataList, new Action(this.OnScratchRewardRefreshUi));
 	}
 
-	// Token: 0x06009900 RID: 39168 RVA: 0x002119FC File Offset: 0x0020FBFC
+	// Token: 0x06006CDA RID: 27866 RVA: 0x0021B6EC File Offset: 0x002198EC
 	private void OnScratchRewardRefreshUi()
 	{
 		if (this.CurSelectRoundData.GetRoundState() == EScratchTicketRoundState.Finish)
@@ -457,7 +457,7 @@ public class ScratchTicketMainView : UiTickViewBase
 		this.RefreshTipPanel();
 	}
 
-	// Token: 0x06009901 RID: 39169 RVA: 0x00211A40 File Offset: 0x0020FC40
+	// Token: 0x06006CDB RID: 27867 RVA: 0x0021B730 File Offset: 0x00219930
 	private void RefreshRoundReward(IScratchTicketRoundResult roundData)
 	{
 		if (roundData.RewardList.Count > 0)
@@ -470,7 +470,7 @@ public class ScratchTicketMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06009902 RID: 39170 RVA: 0x00211A94 File Offset: 0x0020FC94
+	// Token: 0x06006CDC RID: 27868 RVA: 0x0021B784 File Offset: 0x00219984
 	private void RefreshCellReward(List<ScratchTicketRewardResult> resultData)
 	{
 		foreach (ScratchTicketRewardResult scratchTicketRewardResult in resultData)
@@ -484,19 +484,19 @@ public class ScratchTicketMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06009903 RID: 39171 RVA: 0x00211B10 File Offset: 0x0020FD10
+	// Token: 0x06006CDD RID: 27869 RVA: 0x0021B800 File Offset: 0x00219A00
 	private void OnClickCloseBtn()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06009904 RID: 39172 RVA: 0x00211B19 File Offset: 0x0020FD19
+	// Token: 0x06006CDE RID: 27870 RVA: 0x0021B809 File Offset: 0x00219A09
 	private void OnClickHelpBtn()
 	{
 		HelpController.Instance.OpenHelpById(this.ScratchTicketData.GetHelpId());
 	}
 
-	// Token: 0x06009905 RID: 39173 RVA: 0x00211B30 File Offset: 0x0020FD30
+	// Token: 0x06006CDF RID: 27871 RVA: 0x0021B820 File Offset: 0x00219A20
 	private ScratchTicketTabItem CreateRoundTabItem()
 	{
 		ScratchTicketTabItem scratchTicketTabItem = new ScratchTicketTabItem();
@@ -504,7 +504,7 @@ public class ScratchTicketMainView : UiTickViewBase
 		return scratchTicketTabItem;
 	}
 
-	// Token: 0x06009906 RID: 39174 RVA: 0x00211B49 File Offset: 0x0020FD49
+	// Token: 0x06006CE0 RID: 27872 RVA: 0x0021B839 File Offset: 0x00219A39
 	private ScratchTicketCellItem CreateCellItem()
 	{
 		ScratchTicketCellItem scratchTicketCellItem = new ScratchTicketCellItem();
@@ -512,25 +512,25 @@ public class ScratchTicketMainView : UiTickViewBase
 		return scratchTicketCellItem;
 	}
 
-	// Token: 0x06009907 RID: 39175 RVA: 0x00211B62 File Offset: 0x0020FD62
+	// Token: 0x06006CE1 RID: 27873 RVA: 0x0021B852 File Offset: 0x00219A52
 	public ScratchTicketRewardItemGrid CreateRewardGridItem()
 	{
 		return new ScratchTicketRewardItemGrid();
 	}
 
-	// Token: 0x04004347 RID: 17223
+	// Token: 0x040043EC RID: 17388
 	[Nullable(2)]
 	private ActivityTitleTypeA TitleItem;
 
-	// Token: 0x04004348 RID: 17224
+	// Token: 0x040043ED RID: 17389
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04004349 RID: 17225
+	// Token: 0x040043EE RID: 17390
 	[Nullable(2)]
 	private ActivityFunctionalTypeA FunctionalItem;
 
-	// Token: 0x0400434A RID: 17226
+	// Token: 0x040043EF RID: 17391
 	[Nullable(new byte[]
 	{
 		2,
@@ -539,7 +539,7 @@ public class ScratchTicketMainView : UiTickViewBase
 	})]
 	private GenericLayout<ScratchTicketConditionItem, ScratchTicketConditionData> ConditionLayout;
 
-	// Token: 0x0400434B RID: 17227
+	// Token: 0x040043F0 RID: 17392
 	[Nullable(new byte[]
 	{
 		2,
@@ -548,7 +548,7 @@ public class ScratchTicketMainView : UiTickViewBase
 	})]
 	private GenericLayout<ScratchTicketTabItem, ScratchTicketRoundData> TabLayout;
 
-	// Token: 0x0400434C RID: 17228
+	// Token: 0x040043F1 RID: 17393
 	[Nullable(new byte[]
 	{
 		2,
@@ -557,7 +557,7 @@ public class ScratchTicketMainView : UiTickViewBase
 	})]
 	private GenericLayout<ScratchTicketCellItem, ScratchTicketCellData> CellLayout;
 
-	// Token: 0x0400434D RID: 17229
+	// Token: 0x040043F2 RID: 17394
 	[Nullable(new byte[]
 	{
 		2,
@@ -565,67 +565,67 @@ public class ScratchTicketMainView : UiTickViewBase
 	})]
 	private GenericLayout<ScratchTicketRewardItemGrid, TItem> RewardLayout;
 
-	// Token: 0x0400434E RID: 17230
+	// Token: 0x040043F3 RID: 17395
 	[Nullable(2)]
 	private ScratchTicketData ScratchTicketData;
 
-	// Token: 0x0400434F RID: 17231
+	// Token: 0x040043F4 RID: 17396
 	[Nullable(2)]
 	private ScratchTicketTabItem CurSelectRoundTabItem;
 
-	// Token: 0x04004350 RID: 17232
+	// Token: 0x040043F5 RID: 17397
 	[Nullable(2)]
 	private ScratchTicketRoundData CurSelectRoundData;
 
-	// Token: 0x04004351 RID: 17233
+	// Token: 0x040043F6 RID: 17398
 	[Nullable(2)]
 	private TimerHandle TimerHandle;
 
-	// Token: 0x04004352 RID: 17234
+	// Token: 0x040043F7 RID: 17399
 	[Nullable(2)]
 	private TimerHandle RevealTimerHandle;
 
-	// Token: 0x04004353 RID: 17235
+	// Token: 0x040043F8 RID: 17400
 	private float TickTime = (float)TimeUtil.Instance.InverseMillisecond;
 
-	// Token: 0x04004354 RID: 17236
+	// Token: 0x040043F9 RID: 17401
 	private readonly Func<ScratchTicketConditionItem> CreateConditionItem = () => new ScratchTicketConditionItem();
 
-	// Token: 0x02007B2A RID: 31530
+	// Token: 0x02006CB6 RID: 27830
 	[NullableContext(0)]
 	private class EComponent
 	{
-		// Token: 0x0402881C RID: 165916
+		// Token: 0x04023B5A RID: 146266
 		public const int TitleItem = 0;
 
-		// Token: 0x0402881D RID: 165917
+		// Token: 0x04023B5B RID: 146267
 		public const int FunctionItem = 1;
 
-		// Token: 0x0402881E RID: 165918
+		// Token: 0x04023B5C RID: 146268
 		public const int ScratchTicketRootItem = 2;
 
-		// Token: 0x0402881F RID: 165919
+		// Token: 0x04023B5D RID: 146269
 		public const int ScratchTicketConditionLayout = 3;
 
-		// Token: 0x04028820 RID: 165920
+		// Token: 0x04023B5E RID: 146270
 		public const int ScratchTicketTabLayout = 4;
 
-		// Token: 0x04028821 RID: 165921
+		// Token: 0x04023B5F RID: 146271
 		public const int ScratchTicketCellLayout = 5;
 
-		// Token: 0x04028822 RID: 165922
+		// Token: 0x04023B60 RID: 146272
 		public const int CaptionItem = 6;
 
-		// Token: 0x04028823 RID: 165923
+		// Token: 0x04023B61 RID: 146273
 		public const int RewardLayout = 7;
 
-		// Token: 0x04028824 RID: 165924
+		// Token: 0x04023B62 RID: 146274
 		public const int EmptyItem = 8;
 
-		// Token: 0x04028825 RID: 165925
+		// Token: 0x04023B63 RID: 146275
 		public const int RoundSprite = 9;
 
-		// Token: 0x04028826 RID: 165926
+		// Token: 0x04023B64 RID: 146276
 		public const int ScratchTicketConditionRoot = 10;
 	}
 }

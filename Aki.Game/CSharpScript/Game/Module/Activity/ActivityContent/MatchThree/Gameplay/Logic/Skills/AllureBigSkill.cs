@@ -4,34 +4,34 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Logic.Skills
 {
-	// Token: 0x02006502 RID: 25858
+	// Token: 0x02005480 RID: 21632
 	[NullableContext(2)]
 	[Nullable(0)]
 	public sealed class AllureBigSkill : ISkill
 	{
-		// Token: 0x06040E85 RID: 265861 RVA: 0x00FBB210 File Offset: 0x00FB9410
+		// Token: 0x06035B49 RID: 219977 RVA: 0x00F02240 File Offset: 0x00F00440
 		public AllureBigSkill(MatchThreeSkill cfg)
 		{
 		}
 
-		// Token: 0x1700950A RID: 38154
-		// (get) Token: 0x06040E86 RID: 265862 RVA: 0x00FBB27F File Offset: 0x00FB947F
+		// Token: 0x1700686C RID: 26732
+		// (get) Token: 0x06035B4A RID: 219978 RVA: 0x00F022AF File Offset: 0x00F004AF
 		public int Id { get; } = cfg.Id;
 
-		// Token: 0x1700950B RID: 38155
-		// (get) Token: 0x06040E87 RID: 265863 RVA: 0x00FBB287 File Offset: 0x00FB9487
+		// Token: 0x1700686D RID: 26733
+		// (get) Token: 0x06035B4B RID: 219979 RVA: 0x00F022B7 File Offset: 0x00F004B7
 		public int EnergyNode { get; } = cfg.Energy;
 
-		// Token: 0x1700950C RID: 38156
-		// (get) Token: 0x06040E88 RID: 265864 RVA: 0x00FBB28F File Offset: 0x00FB948F
+		// Token: 0x1700686E RID: 26734
+		// (get) Token: 0x06035B4C RID: 219980 RVA: 0x00F022BF File Offset: 0x00F004BF
 		public string Icon { get; } = cfg.Icon;
 
-		// Token: 0x1700950D RID: 38157
-		// (get) Token: 0x06040E89 RID: 265865 RVA: 0x00FBB297 File Offset: 0x00FB9497
+		// Token: 0x1700686F RID: 26735
+		// (get) Token: 0x06035B4D RID: 219981 RVA: 0x00F022C7 File Offset: 0x00F004C7
 		public string Name { get; } = cfg.Name;
 
-		// Token: 0x1700950E RID: 38158
-		// (get) Token: 0x06040E8A RID: 265866 RVA: 0x00FBB29F File Offset: 0x00FB949F
+		// Token: 0x17006870 RID: 26736
+		// (get) Token: 0x06035B4E RID: 219982 RVA: 0x00F022CF File Offset: 0x00F004CF
 		public ESkillCastEffect CastEffect
 		{
 			get
@@ -40,18 +40,18 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x06040E8B RID: 265867 RVA: 0x00FBB2A2 File Offset: 0x00FB94A2
+		// Token: 0x06035B4F RID: 219983 RVA: 0x00F022D2 File Offset: 0x00F004D2
 		[NullableContext(1)]
 		public void Release(ISkillContext ctx)
 		{
 			ctx.ApplyAllureUltimateRecolor(this.Id, this.SourceRanks, this.TargetRank);
 		}
 
-		// Token: 0x04021D61 RID: 138593
+		// Token: 0x0401C692 RID: 116370
 		[Nullable(1)]
 		private readonly int[] SourceRanks = cfg.GetParamsArray();
 
-		// Token: 0x04021D62 RID: 138594
+		// Token: 0x0401C693 RID: 116371
 		private readonly int TargetRank = (cfg.ExtraParamsLength > 0) ? cfg.ExtraParams(0) : 0;
 	}
 }

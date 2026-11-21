@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002038 RID: 8248
+	// Token: 0x02002281 RID: 8833
 	public class IVehicleEnteringPlayerTarget_SetValue
 	{
-		// Token: 0x04006D1A RID: 27930
+		// Token: 0x04007323 RID: 29475
 		public EVehicleEnteringTarget Type;
 
-		// Token: 0x04006D1B RID: 27931
+		// Token: 0x04007324 RID: 29476
 		public int? TargetVehicle;
 	}
 }

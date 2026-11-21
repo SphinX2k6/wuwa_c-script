@@ -7,25 +7,25 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 
-// Token: 0x02002054 RID: 8276
+// Token: 0x02001527 RID: 5415
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class LevelPlayReportController : UiControllerBase
 {
-	// Token: 0x06010438 RID: 66616 RVA: 0x003F72E0 File Offset: 0x003F54E0
+	// Token: 0x0600D89F RID: 55455 RVA: 0x004037D8 File Offset: 0x004019D8
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.LevelPlayGainRewardInfoNotify, new Action<IMessage, Net.CallbackStatus>(this.OnLevelPlayGainRewardInfoNotify));
 	}
 
-	// Token: 0x06010439 RID: 66617 RVA: 0x003F72FE File Offset: 0x003F54FE
+	// Token: 0x0600D8A0 RID: 55456 RVA: 0x004037F6 File Offset: 0x004019F6
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.LevelPlayGainRewardInfoNotify);
 	}
 
-	// Token: 0x0601043A RID: 66618 RVA: 0x003F7310 File Offset: 0x003F5510
+	// Token: 0x0600D8A1 RID: 55457 RVA: 0x00403808 File Offset: 0x00401A08
 	[NullableContext(0)]
 	public UniTask<bool> RequestSimpleTrackReportAsync()
 	{
@@ -36,7 +36,7 @@ public class LevelPlayReportController : UiControllerBase
 		return <RequestSimpleTrackReportAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601043B RID: 66619 RVA: 0x003F734C File Offset: 0x003F554C
+	// Token: 0x0600D8A2 RID: 55458 RVA: 0x00403844 File Offset: 0x00401A44
 	public UniTask CheckAndRequestLevelPlayVarAsync(int instId, int levelPlayId)
 	{
 		LevelPlayReportController.<CheckAndRequestLevelPlayVarAsync>d__3 <CheckAndRequestLevelPlayVarAsync>d__;
@@ -49,7 +49,7 @@ public class LevelPlayReportController : UiControllerBase
 		return <CheckAndRequestLevelPlayVarAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601043C RID: 66620 RVA: 0x003F73A0 File Offset: 0x003F55A0
+	// Token: 0x0600D8A3 RID: 55459 RVA: 0x00403898 File Offset: 0x00401A98
 	public UniTask RequestLevelPlayVarAsync(int instId, int levelPlayId)
 	{
 		LevelPlayReportController.<RequestLevelPlayVarAsync>d__4 <RequestLevelPlayVarAsync>d__;
@@ -61,7 +61,7 @@ public class LevelPlayReportController : UiControllerBase
 		return <RequestLevelPlayVarAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601043D RID: 66621 RVA: 0x003F73EC File Offset: 0x003F55EC
+	// Token: 0x0600D8A4 RID: 55460 RVA: 0x004038E4 File Offset: 0x00401AE4
 	public UniTask RequestPlayPointStateAsync(int areaId, int sceneId)
 	{
 		LevelPlayReportController.<RequestPlayPointStateAsync>d__5 <RequestPlayPointStateAsync>d__;
@@ -73,7 +73,7 @@ public class LevelPlayReportController : UiControllerBase
 		return <RequestPlayPointStateAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601043E RID: 66622 RVA: 0x003F7438 File Offset: 0x003F5638
+	// Token: 0x0600D8A5 RID: 55461 RVA: 0x00403930 File Offset: 0x00401B30
 	public UniTask RequestSingleLevelPlayStateListAsync(int instId, int levelPlayId)
 	{
 		LevelPlayReportController.<RequestSingleLevelPlayStateListAsync>d__6 <RequestSingleLevelPlayStateListAsync>d__;
@@ -86,7 +86,7 @@ public class LevelPlayReportController : UiControllerBase
 		return <RequestSingleLevelPlayStateListAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601043F RID: 66623 RVA: 0x003F748C File Offset: 0x003F568C
+	// Token: 0x0600D8A6 RID: 55462 RVA: 0x00403984 File Offset: 0x00401B84
 	public UniTask RequestLevelPlayStateListAsync(List<InstLevelPlayStateReq> requestList)
 	{
 		LevelPlayReportController.<RequestLevelPlayStateListAsync>d__7 <RequestLevelPlayStateListAsync>d__;
@@ -97,7 +97,7 @@ public class LevelPlayReportController : UiControllerBase
 		return <RequestLevelPlayStateListAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010440 RID: 66624 RVA: 0x003F74D0 File Offset: 0x003F56D0
+	// Token: 0x0600D8A7 RID: 55463 RVA: 0x004039C8 File Offset: 0x00401BC8
 	public UniTask RequestLevelPlayRewardsAsync(int instId, int levelPlayId)
 	{
 		LevelPlayReportController.<RequestLevelPlayRewardsAsync>d__8 <RequestLevelPlayRewardsAsync>d__;
@@ -109,7 +109,7 @@ public class LevelPlayReportController : UiControllerBase
 		return <RequestLevelPlayRewardsAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010441 RID: 66625 RVA: 0x003F751C File Offset: 0x003F571C
+	// Token: 0x0600D8A8 RID: 55464 RVA: 0x00403A14 File Offset: 0x00401C14
 	[NullableContext(2)]
 	private void OnLevelPlayGainRewardInfoNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -117,8 +117,8 @@ public class LevelPlayReportController : UiControllerBase
 		LevelPlayReportModel.Instance.UpdateLevelPlayRewardMsgByNotify(data);
 	}
 
-	// Token: 0x170013F6 RID: 5110
-	// (get) Token: 0x06010442 RID: 66626 RVA: 0x003F753B File Offset: 0x003F573B
+	// Token: 0x17001423 RID: 5155
+	// (get) Token: 0x0600D8A9 RID: 55465 RVA: 0x00403A33 File Offset: 0x00401C33
 	public static LevelPlayReportController Instance
 	{
 		get
@@ -127,7 +127,7 @@ public class LevelPlayReportController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06010443 RID: 66627 RVA: 0x003F7542 File Offset: 0x003F5742
+	// Token: 0x0600D8AA RID: 55466 RVA: 0x00403A3A File Offset: 0x00401C3A
 	public static LevelPlayReportController GetOrCreateInstance()
 	{
 		if (LevelPlayReportController._Instance == null)
@@ -137,7 +137,7 @@ public class LevelPlayReportController : UiControllerBase
 		return LevelPlayReportController._Instance;
 	}
 
-	// Token: 0x06010444 RID: 66628 RVA: 0x003F7556 File Offset: 0x003F5756
+	// Token: 0x0600D8AB RID: 55467 RVA: 0x00403A4E File Offset: 0x00401C4E
 	public static bool CreateInstance()
 	{
 		if (LevelPlayReportController._Instance != null)
@@ -148,24 +148,24 @@ public class LevelPlayReportController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06010445 RID: 66629 RVA: 0x003F756C File Offset: 0x003F576C
+	// Token: 0x0600D8AC RID: 55468 RVA: 0x00403A64 File Offset: 0x00401C64
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06010446 RID: 66630 RVA: 0x003F756E File Offset: 0x003F576E
+	// Token: 0x0600D8AD RID: 55469 RVA: 0x00403A66 File Offset: 0x00401C66
 	public static void ResetStaticDefaultValue()
 	{
 		LevelPlayReportController._Instance = null;
 	}
 
-	// Token: 0x06010447 RID: 66631 RVA: 0x003F7576 File Offset: 0x003F5776
+	// Token: 0x0600D8AE RID: 55470 RVA: 0x00403A6E File Offset: 0x00401C6E
 	static LevelPlayReportController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(LevelPlayReportController.CreateStaticDefaultValue), new Action(LevelPlayReportController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04007842 RID: 30786
+	// Token: 0x0400792B RID: 31019
 	[Nullable(2)]
 	private static LevelPlayReportController _Instance;
 }

@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 {
-	// Token: 0x020058AC RID: 22700
+	// Token: 0x02004884 RID: 18564
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class InstanceDungeonStartButtonItem : UiPanelBase
 	{
-		// Token: 0x06039BD0 RID: 236496 RVA: 0x00DB8D28 File Offset: 0x00DB6F28
+		// Token: 0x0602EAF3 RID: 191219 RVA: 0x00D07C40 File Offset: 0x00D05E40
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06039BD1 RID: 236497 RVA: 0x00DB8E38 File Offset: 0x00DB7038
+		// Token: 0x0602EAF4 RID: 191220 RVA: 0x00D07D50 File Offset: 0x00D05F50
 		public void RefreshItem(InstOnlineType instanceOnlineType)
 		{
 			this.SetActive(true);
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			}
 		}
 
-		// Token: 0x06039BD2 RID: 236498 RVA: 0x00DB8F01 File Offset: 0x00DB7101
+		// Token: 0x0602EAF5 RID: 191221 RVA: 0x00D07E19 File Offset: 0x00D06019
 		public void OnClickBtnSolo()
 		{
 			if (!this.GetIsAllowedClickBegin())
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			onClickBtnSoloCallBack();
 		}
 
-		// Token: 0x06039BD3 RID: 236499 RVA: 0x00DB8F36 File Offset: 0x00DB7136
+		// Token: 0x0602EAF6 RID: 191222 RVA: 0x00D07E4E File Offset: 0x00D0604E
 		private void OnClickBtnMultiple()
 		{
 			if (!this.GetIsAllowedClickBegin())
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			onClickBtnMultipleCallBack();
 		}
 
-		// Token: 0x06039BD4 RID: 236500 RVA: 0x00DB8F6B File Offset: 0x00DB716B
+		// Token: 0x0602EAF7 RID: 191223 RVA: 0x00D07E83 File Offset: 0x00D06083
 		private void OnClickBtnTeam()
 		{
 			if (!this.GetIsAllowedClickBegin())
@@ -133,36 +133,36 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			onClickBtnTeamCallBack();
 		}
 
-		// Token: 0x06039BD5 RID: 236501 RVA: 0x00DB8FA0 File Offset: 0x00DB71A0
+		// Token: 0x0602EAF8 RID: 191224 RVA: 0x00D07EB8 File Offset: 0x00D060B8
 		private bool GetIsAllowedClickBegin()
 		{
 			return this.NextCanClickButtonTime <= TimeUtil.Instance.GetServerTimeStamp();
 		}
 
-		// Token: 0x0401E279 RID: 123513
+		// Token: 0x04018D16 RID: 101654
 		private double NextCanClickButtonTime;
 
-		// Token: 0x0401E27A RID: 123514
+		// Token: 0x04018D17 RID: 101655
 		public Action OnClickBtnSoloCallBack;
 
-		// Token: 0x0401E27B RID: 123515
+		// Token: 0x04018D18 RID: 101656
 		public Action OnClickBtnMultipleCallBack;
 
-		// Token: 0x0401E27C RID: 123516
+		// Token: 0x04018D19 RID: 101657
 		public Action OnClickBtnTeamCallBack;
 
-		// Token: 0x0401E27D RID: 123517
+		// Token: 0x04018D1A RID: 101658
 		private const int CLICK_INSTANCE_BEGIN_BUTTON_CD = 500;
 
-		// Token: 0x0200BB13 RID: 47891
+		// Token: 0x0200A52C RID: 42284
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x04038839 RID: 231481
+			// Token: 0x0403323A RID: 209466
 			BtnMultiple,
-			// Token: 0x0403883A RID: 231482
+			// Token: 0x0403323B RID: 209467
 			BtnSolo,
-			// Token: 0x0403883B RID: 231483
+			// Token: 0x0403323C RID: 209468
 			BtnTeam
 		}
 	}

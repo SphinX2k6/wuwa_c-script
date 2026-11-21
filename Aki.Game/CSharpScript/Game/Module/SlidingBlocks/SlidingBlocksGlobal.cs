@@ -7,19 +7,19 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.SlidingBlocks
 {
-	// Token: 0x02004B7E RID: 19326
+	// Token: 0x02003B28 RID: 15144
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SlidingBlocksGlobal : IStaticVariableResetter
 	{
-		// Token: 0x06032153 RID: 205139 RVA: 0x00BA1293 File Offset: 0x00B9F493
+		// Token: 0x06026EE4 RID: 159460 RVA: 0x00AE5423 File Offset: 0x00AE3623
 		static SlidingBlocksGlobal()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SlidingBlocksGlobal.CreateStaticDefaultValue), new Action(SlidingBlocksGlobal.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x17007C3E RID: 31806
-		// (get) Token: 0x06032154 RID: 205140 RVA: 0x00BA12B4 File Offset: 0x00B9F4B4
+		// Token: 0x17004FE8 RID: 20456
+		// (get) Token: 0x06026EE5 RID: 159461 RVA: 0x00AE5444 File Offset: 0x00AE3644
 		public static Bp_Tetris_C Setting
 		{
 			get
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			}
 		}
 
-		// Token: 0x06032155 RID: 205141 RVA: 0x00BA12F0 File Offset: 0x00B9F4F0
+		// Token: 0x06026EE6 RID: 159462 RVA: 0x00AE5480 File Offset: 0x00AE3680
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -48,13 +48,13 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return <LoadSettingData>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032156 RID: 205142 RVA: 0x00BA132B File Offset: 0x00B9F52B
+		// Token: 0x06026EE7 RID: 159463 RVA: 0x00AE54BB File Offset: 0x00AE36BB
 		public static void ClearSettingData()
 		{
 			SlidingBlocksGlobal._settingDataAsset = null;
 		}
 
-		// Token: 0x06032157 RID: 205143 RVA: 0x00BA1334 File Offset: 0x00B9F534
+		// Token: 0x06026EE8 RID: 159464 RVA: 0x00AE54C4 File Offset: 0x00AE36C4
 		public static string GetMoveTrailEffectPath(ETetrisPlayMode mode)
 		{
 			string result = null;
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return result;
 		}
 
-		// Token: 0x06032158 RID: 205144 RVA: 0x00BA1394 File Offset: 0x00B9F594
+		// Token: 0x06026EE9 RID: 159465 RVA: 0x00AE5524 File Offset: 0x00AE3724
 		public static string GetLineClearEffectPath(ETetrisPlayMode mode)
 		{
 			string result = null;
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return result;
 		}
 
-		// Token: 0x06032159 RID: 205145 RVA: 0x00BA13F4 File Offset: 0x00B9F5F4
+		// Token: 0x06026EEA RID: 159466 RVA: 0x00AE5584 File Offset: 0x00AE3784
 		public static string GetTetrominoLockEffectPath(ETetrisPlayMode mode)
 		{
 			string result = null;
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return result;
 		}
 
-		// Token: 0x0603215A RID: 205146 RVA: 0x00BA1454 File Offset: 0x00B9F654
+		// Token: 0x06026EEB RID: 159467 RVA: 0x00AE55E4 File Offset: 0x00AE37E4
 		public static string GetTetrominoSpawnEffectPath(ETetrisPlayMode mode)
 		{
 			string result = null;
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return result;
 		}
 
-		// Token: 0x0603215B RID: 205147 RVA: 0x00BA14B4 File Offset: 0x00B9F6B4
+		// Token: 0x06026EEC RID: 159468 RVA: 0x00AE5644 File Offset: 0x00AE3844
 		public static string GetPlayerDeadEffectPath(ETetrisPlayMode mode)
 		{
 			string result = null;
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return result;
 		}
 
-		// Token: 0x0603215C RID: 205148 RVA: 0x00BA14F0 File Offset: 0x00B9F6F0
+		// Token: 0x06026EED RID: 159469 RVA: 0x00AE5680 File Offset: 0x00AE3880
 		public static string GetPlayerOutlineEffectPath(ETetrisPlayMode mode)
 		{
 			string result = null;
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return result;
 		}
 
-		// Token: 0x0603215D RID: 205149 RVA: 0x00BA1550 File Offset: 0x00B9F750
+		// Token: 0x06026EEE RID: 159470 RVA: 0x00AE56E0 File Offset: 0x00AE38E0
 		public static string GetDeadFailEffectPath(ETetrisPlayMode mode)
 		{
 			string result = null;
@@ -201,7 +201,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return result;
 		}
 
-		// Token: 0x0603215E RID: 205150 RVA: 0x00BA15B0 File Offset: 0x00B9F7B0
+		// Token: 0x06026EEF RID: 159471 RVA: 0x00AE5740 File Offset: 0x00AE3940
 		public static string GetMinoDestroyEffectPath(ETetrisPlayMode mode)
 		{
 			string result = null;
@@ -223,23 +223,23 @@ namespace CSharpScript.Game.Module.SlidingBlocks
 			return result;
 		}
 
-		// Token: 0x0603215F RID: 205151 RVA: 0x00BA160F File Offset: 0x00B9F80F
+		// Token: 0x06026EF0 RID: 159472 RVA: 0x00AE579F File Offset: 0x00AE399F
 		public static void CreateStaticDefaultValue()
 		{
 			SlidingBlocksGlobal._settingDataAsset = null;
 		}
 
-		// Token: 0x06032160 RID: 205152 RVA: 0x00BA1617 File Offset: 0x00B9F817
+		// Token: 0x06026EF1 RID: 159473 RVA: 0x00AE57A7 File Offset: 0x00AE39A7
 		public static void ResetStaticDefaultValue()
 		{
 			SlidingBlocksGlobal._settingDataAsset = null;
 		}
 
-		// Token: 0x0401AADE RID: 109278
+		// Token: 0x04015432 RID: 87090
 		[Nullable(1)]
 		private const string SETTING_DA_PATH = "/Game/Aki/Data/Gameplay/Tetris/DA_TetrisSetting.DA_TetrisSetting";
 
-		// Token: 0x0401AADF RID: 109279
+		// Token: 0x04015433 RID: 87091
 		private static Bp_Tetris_C _settingDataAsset;
 	}
 }

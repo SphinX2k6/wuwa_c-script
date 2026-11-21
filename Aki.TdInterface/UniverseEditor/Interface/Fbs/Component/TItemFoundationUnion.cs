@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C4F RID: 23631
+	// Token: 0x02006274 RID: 25204
 	public class TItemFoundationUnion
 	{
-		// Token: 0x1700B212 RID: 45586
-		// (get) Token: 0x06028825 RID: 165925 RVA: 0x005927E6 File Offset: 0x005909E6
-		// (set) Token: 0x06028826 RID: 165926 RVA: 0x005927EE File Offset: 0x005909EE
+		// Token: 0x1700BB64 RID: 47972
+		// (get) Token: 0x0602AE33 RID: 175667 RVA: 0x005DA9FE File Offset: 0x005D8BFE
+		// (set) Token: 0x0602AE34 RID: 175668 RVA: 0x005DAA06 File Offset: 0x005D8C06
 		public TItemFoundation Type { get; set; }
 
-		// Token: 0x1700B213 RID: 45587
-		// (get) Token: 0x06028827 RID: 165927 RVA: 0x005927F7 File Offset: 0x005909F7
-		// (set) Token: 0x06028828 RID: 165928 RVA: 0x005927FF File Offset: 0x005909FF
+		// Token: 0x1700BB65 RID: 47973
+		// (get) Token: 0x0602AE35 RID: 175669 RVA: 0x005DAA0F File Offset: 0x005D8C0F
+		// (set) Token: 0x0602AE36 RID: 175670 RVA: 0x005DAA17 File Offset: 0x005D8C17
 		public object Value { get; set; }
 
-		// Token: 0x06028829 RID: 165929 RVA: 0x00592808 File Offset: 0x00590A08
+		// Token: 0x0602AE37 RID: 175671 RVA: 0x005DAA20 File Offset: 0x005D8C20
 		public TItemFoundationUnion()
 		{
 			this.Type = TItemFoundation.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602882A RID: 165930 RVA: 0x0059281E File Offset: 0x00590A1E
+		// Token: 0x0602AE38 RID: 175672 RVA: 0x005DAA36 File Offset: 0x005D8C36
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602882B RID: 165931 RVA: 0x00592830 File Offset: 0x00590A30
+		// Token: 0x0602AE39 RID: 175673 RVA: 0x005DAA48 File Offset: 0x005D8C48
 		public IBuildingBlockFoundationT AsIBuildingBlockFoundation()
 		{
 			return this.As<IBuildingBlockFoundationT>();
 		}
 
-		// Token: 0x0602882C RID: 165932 RVA: 0x00592838 File Offset: 0x00590A38
+		// Token: 0x0602AE3A RID: 175674 RVA: 0x005DAA50 File Offset: 0x005D8C50
 		public static TItemFoundationUnion FromIBuildingBlockFoundation(IBuildingBlockFoundationT _ibuildingblockfoundation)
 		{
 			return new TItemFoundationUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602882D RID: 165933 RVA: 0x0059284D File Offset: 0x00590A4D
+		// Token: 0x0602AE3B RID: 175675 RVA: 0x005DAA65 File Offset: 0x005D8C65
 		public ICategoryMatchingFoundationT AsICategoryMatchingFoundation()
 		{
 			return this.As<ICategoryMatchingFoundationT>();
 		}
 
-		// Token: 0x0602882E RID: 165934 RVA: 0x00592855 File Offset: 0x00590A55
+		// Token: 0x0602AE3C RID: 175676 RVA: 0x005DAA6D File Offset: 0x005D8C6D
 		public static TItemFoundationUnion FromICategoryMatchingFoundation(ICategoryMatchingFoundationT _icategorymatchingfoundation)
 		{
 			return new TItemFoundationUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602882F RID: 165935 RVA: 0x0059286A File Offset: 0x00590A6A
+		// Token: 0x0602AE3D RID: 175677 RVA: 0x005DAA82 File Offset: 0x005D8C82
 		public IPulseDeviceFoundationT AsIPulseDeviceFoundation()
 		{
 			return this.As<IPulseDeviceFoundationT>();
 		}
 
-		// Token: 0x06028830 RID: 165936 RVA: 0x00592872 File Offset: 0x00590A72
+		// Token: 0x0602AE3E RID: 175678 RVA: 0x005DAA8A File Offset: 0x005D8C8A
 		public static TItemFoundationUnion FromIPulseDeviceFoundation(IPulseDeviceFoundationT _ipulsedevicefoundation)
 		{
 			return new TItemFoundationUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028831 RID: 165937 RVA: 0x00592887 File Offset: 0x00590A87
+		// Token: 0x0602AE3F RID: 175679 RVA: 0x005DAA9F File Offset: 0x005D8C9F
 		public IRangeAdsorptionFoundationT AsIRangeAdsorptionFoundation()
 		{
 			return this.As<IRangeAdsorptionFoundationT>();
 		}
 
-		// Token: 0x06028832 RID: 165938 RVA: 0x0059288F File Offset: 0x00590A8F
+		// Token: 0x0602AE40 RID: 175680 RVA: 0x005DAAA7 File Offset: 0x005D8CA7
 		public static TItemFoundationUnion FromIRangeAdsorptionFoundation(IRangeAdsorptionFoundationT _irangeadsorptionfoundation)
 		{
 			return new TItemFoundationUnion
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028833 RID: 165939 RVA: 0x005928A4 File Offset: 0x00590AA4
+		// Token: 0x0602AE41 RID: 175681 RVA: 0x005DAABC File Offset: 0x005D8CBC
 		public static int Pack(FlatBufferBuilder builder, TItemFoundationUnion _o)
 		{
 			switch (_o.Type)

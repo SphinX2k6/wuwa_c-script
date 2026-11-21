@@ -4,19 +4,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DFB RID: 19963
+	// Token: 0x02003DC4 RID: 15812
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RogueInfoViewModel
 	{
-		// Token: 0x0603383A RID: 211002 RVA: 0x00C09B21 File Offset: 0x00C07D21
+		// Token: 0x060286A5 RID: 165541 RVA: 0x00B53031 File Offset: 0x00B51231
 		public RogueInfoViewModel(RoguelikeInfo rogueInfoInternal)
 		{
 			this.RogueInfoInternal = rogueInfoInternal;
 		}
 
-		// Token: 0x17007EC6 RID: 32454
-		// (get) Token: 0x0603383B RID: 211003 RVA: 0x00C09B37 File Offset: 0x00C07D37
+		// Token: 0x17005276 RID: 21110
+		// (get) Token: 0x060286A6 RID: 165542 RVA: 0x00B53047 File Offset: 0x00B51247
 		public RoguelikeInfo RogueInfo
 		{
 			get
@@ -25,8 +25,8 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x17007EC7 RID: 32455
-		// (get) Token: 0x0603383C RID: 211004 RVA: 0x00C09B3F File Offset: 0x00C07D3F
+		// Token: 0x17005277 RID: 21111
+		// (get) Token: 0x060286A7 RID: 165543 RVA: 0x00B5304F File Offset: 0x00B5124F
 		public RogueGainEntry RoleEntry
 		{
 			get
@@ -35,8 +35,8 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x17007EC8 RID: 32456
-		// (get) Token: 0x0603383D RID: 211005 RVA: 0x00C09B4C File Offset: 0x00C07D4C
+		// Token: 0x17005278 RID: 21112
+		// (get) Token: 0x060286A8 RID: 165544 RVA: 0x00B5305C File Offset: 0x00B5125C
 		[Nullable(2)]
 		public RogueGainEntry PhantomEntry
 		{
@@ -47,8 +47,8 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x17007EC9 RID: 32457
-		// (get) Token: 0x0603383E RID: 211006 RVA: 0x00C09B59 File Offset: 0x00C07D59
+		// Token: 0x17005279 RID: 21113
+		// (get) Token: 0x060286A9 RID: 165545 RVA: 0x00B53069 File Offset: 0x00B51269
 		public List<RogueGainEntry> BuffEntryList
 		{
 			get
@@ -57,8 +57,8 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x17007ECA RID: 32458
-		// (get) Token: 0x0603383F RID: 211007 RVA: 0x00C09B66 File Offset: 0x00C07D66
+		// Token: 0x1700527A RID: 21114
+		// (get) Token: 0x060286AA RID: 165546 RVA: 0x00B53076 File Offset: 0x00B51276
 		public List<RogueGainEntry> SpecialEntryList
 		{
 			get
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x06033840 RID: 211008 RVA: 0x00C09B74 File Offset: 0x00C07D74
+		// Token: 0x060286AB RID: 165547 RVA: 0x00B53084 File Offset: 0x00B51284
 		public List<ElementInfo> GetElementInfoList()
 		{
 			List<ElementInfo> list = new List<ElementInfo>();
@@ -79,31 +79,31 @@ namespace CSharpScript.Game.Module.Roguelike
 			return list;
 		}
 
-		// Token: 0x06033841 RID: 211009 RVA: 0x00C09C02 File Offset: 0x00C07E02
+		// Token: 0x060286AC RID: 165548 RVA: 0x00B53112 File Offset: 0x00B51312
 		public bool IsBuffEntryEmpty()
 		{
 			return this.BuffEntryList.Count <= 0;
 		}
 
-		// Token: 0x06033842 RID: 211010 RVA: 0x00C09C15 File Offset: 0x00C07E15
+		// Token: 0x060286AD RID: 165549 RVA: 0x00B53125 File Offset: 0x00B51325
 		public bool IsSpecialEntryEmpty()
 		{
 			return this.SpecialEntryList.Count <= 0;
 		}
 
-		// Token: 0x06033843 RID: 211011 RVA: 0x00C09C28 File Offset: 0x00C07E28
+		// Token: 0x060286AE RID: 165550 RVA: 0x00B53138 File Offset: 0x00B51338
 		public List<AttrListScrollData> GetAttrList()
 		{
 			return this.RogueInfoInternal.GetShowAttrList();
 		}
 
-		// Token: 0x0401B557 RID: 111959
+		// Token: 0x04015F2A RID: 89898
 		public bool ShowCurrency = true;
 
-		// Token: 0x0401B558 RID: 111960
+		// Token: 0x04015F2B RID: 89899
 		public ERogueInfoViewPage DefaultPage;
 
-		// Token: 0x0401B559 RID: 111961
+		// Token: 0x04015F2C RID: 89900
 		private RoguelikeInfo RogueInfoInternal;
 	}
 }

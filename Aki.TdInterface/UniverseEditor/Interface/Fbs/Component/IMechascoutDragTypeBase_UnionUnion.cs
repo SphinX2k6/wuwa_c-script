@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005534 RID: 21812
+	// Token: 0x02005ABA RID: 23226
 	public class IMechascoutDragTypeBase_UnionUnion
 	{
-		// Token: 0x1700A10C RID: 41228
-		// (get) Token: 0x0602409B RID: 147611 RVA: 0x004FAA35 File Offset: 0x004F8C35
-		// (set) Token: 0x0602409C RID: 147612 RVA: 0x004FAA3D File Offset: 0x004F8C3D
+		// Token: 0x1700A946 RID: 43334
+		// (get) Token: 0x06026155 RID: 155989 RVA: 0x00537B59 File Offset: 0x00535D59
+		// (set) Token: 0x06026156 RID: 155990 RVA: 0x00537B61 File Offset: 0x00535D61
 		public IMechascoutDragTypeBase_Union Type { get; set; }
 
-		// Token: 0x1700A10D RID: 41229
-		// (get) Token: 0x0602409D RID: 147613 RVA: 0x004FAA46 File Offset: 0x004F8C46
-		// (set) Token: 0x0602409E RID: 147614 RVA: 0x004FAA4E File Offset: 0x004F8C4E
+		// Token: 0x1700A947 RID: 43335
+		// (get) Token: 0x06026157 RID: 155991 RVA: 0x00537B6A File Offset: 0x00535D6A
+		// (set) Token: 0x06026158 RID: 155992 RVA: 0x00537B72 File Offset: 0x00535D72
 		public object Value { get; set; }
 
-		// Token: 0x0602409F RID: 147615 RVA: 0x004FAA57 File Offset: 0x004F8C57
+		// Token: 0x06026159 RID: 155993 RVA: 0x00537B7B File Offset: 0x00535D7B
 		public IMechascoutDragTypeBase_UnionUnion()
 		{
 			this.Type = IMechascoutDragTypeBase_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060240A0 RID: 147616 RVA: 0x004FAA6D File Offset: 0x004F8C6D
+		// Token: 0x0602615A RID: 155994 RVA: 0x00537B91 File Offset: 0x00535D91
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060240A1 RID: 147617 RVA: 0x004FAA7F File Offset: 0x004F8C7F
+		// Token: 0x0602615B RID: 155995 RVA: 0x00537BA3 File Offset: 0x00535DA3
 		public IMechascoutDragTypeBaseT AsIMechascoutDragTypeBase()
 		{
 			return this.As<IMechascoutDragTypeBaseT>();
 		}
 
-		// Token: 0x060240A2 RID: 147618 RVA: 0x004FAA87 File Offset: 0x004F8C87
+		// Token: 0x0602615C RID: 155996 RVA: 0x00537BAB File Offset: 0x00535DAB
 		public static IMechascoutDragTypeBase_UnionUnion FromIMechascoutDragTypeBase(IMechascoutDragTypeBaseT _imechascoutdragtypebase)
 		{
 			return new IMechascoutDragTypeBase_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060240A3 RID: 147619 RVA: 0x004FAA9C File Offset: 0x004F8C9C
+		// Token: 0x0602615D RID: 155997 RVA: 0x00537BC0 File Offset: 0x00535DC0
 		public IMechascoutDragInstantT AsIMechascoutDragInstant()
 		{
 			return this.As<IMechascoutDragInstantT>();
 		}
 
-		// Token: 0x060240A4 RID: 147620 RVA: 0x004FAAA4 File Offset: 0x004F8CA4
+		// Token: 0x0602615E RID: 155998 RVA: 0x00537BC8 File Offset: 0x00535DC8
 		public static IMechascoutDragTypeBase_UnionUnion FromIMechascoutDragInstant(IMechascoutDragInstantT _imechascoutdraginstant)
 		{
 			return new IMechascoutDragTypeBase_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060240A5 RID: 147621 RVA: 0x004FAAB9 File Offset: 0x004F8CB9
+		// Token: 0x0602615F RID: 155999 RVA: 0x00537BDD File Offset: 0x00535DDD
 		public IMechascoutDragLongPressT AsIMechascoutDragLongPress()
 		{
 			return this.As<IMechascoutDragLongPressT>();
 		}
 
-		// Token: 0x060240A6 RID: 147622 RVA: 0x004FAAC1 File Offset: 0x004F8CC1
+		// Token: 0x06026160 RID: 156000 RVA: 0x00537BE5 File Offset: 0x00535DE5
 		public static IMechascoutDragTypeBase_UnionUnion FromIMechascoutDragLongPress(IMechascoutDragLongPressT _imechascoutdraglongpress)
 		{
 			return new IMechascoutDragTypeBase_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060240A7 RID: 147623 RVA: 0x004FAAD8 File Offset: 0x004F8CD8
+		// Token: 0x06026161 RID: 156001 RVA: 0x00537BFC File Offset: 0x00535DFC
 		public static int Pack(FlatBufferBuilder builder, IMechascoutDragTypeBase_UnionUnion _o)
 		{
 			switch (_o.Type)

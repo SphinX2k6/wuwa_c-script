@@ -7,14 +7,14 @@ using CSharpScript.Game.Effect;
 using CSharpScript.Game.NewWorld.Character.Common.Component;
 using UnrealEngine;
 
-// Token: 0x020030A1 RID: 12449
+// Token: 0x020025F8 RID: 9720
 [NullableContext(1)]
 [Nullable(0)]
 public class DangoPerformComponent : StackableChessComponent
 {
-	// Token: 0x170024A1 RID: 9377
-	// (get) Token: 0x0601AAB6 RID: 109238 RVA: 0x0072E144 File Offset: 0x0072C344
-	// (set) Token: 0x0601AAB7 RID: 109239 RVA: 0x0072E151 File Offset: 0x0072C351
+	// Token: 0x1700261C RID: 9756
+	// (get) Token: 0x060184BC RID: 99516 RVA: 0x0075372C File Offset: 0x0075192C
+	// (set) Token: 0x060184BD RID: 99517 RVA: 0x00753739 File Offset: 0x00751939
 	[Nullable(2)]
 	protected new BaseCharacterComponent ActorComp
 	{
@@ -30,7 +30,7 @@ public class DangoPerformComponent : StackableChessComponent
 		}
 	}
 
-	// Token: 0x0601AAB8 RID: 109240 RVA: 0x0072E15A File Offset: 0x0072C35A
+	// Token: 0x060184BE RID: 99518 RVA: 0x00753742 File Offset: 0x00751942
 	protected override bool OnStart()
 	{
 		if (!base.OnStart())
@@ -41,7 +41,7 @@ public class DangoPerformComponent : StackableChessComponent
 		return true;
 	}
 
-	// Token: 0x0601AAB9 RID: 109241 RVA: 0x0072E178 File Offset: 0x0072C378
+	// Token: 0x060184BF RID: 99519 RVA: 0x00753760 File Offset: 0x00751960
 	protected override void OnActivate()
 	{
 		CharacterAnimationComponent component = base.Entity.GetComponent<CharacterAnimationComponent>();
@@ -65,7 +65,7 @@ public class DangoPerformComponent : StackableChessComponent
 		}
 	}
 
-	// Token: 0x0601AABA RID: 109242 RVA: 0x0072E230 File Offset: 0x0072C430
+	// Token: 0x060184C0 RID: 99520 RVA: 0x00753818 File Offset: 0x00751A18
 	protected override void OnTick(float delta)
 	{
 		if (this.MoveState == DangoPerformComponent.EMoveState.Idle)
@@ -125,13 +125,13 @@ public class DangoPerformComponent : StackableChessComponent
 		this.ActorComp.SetActorLocationAndRotation(this.TempVector.ToUeVector(false), this.TempRotator.ToUeRotator(), "ChessMove", false, null);
 	}
 
-	// Token: 0x0601AABB RID: 109243 RVA: 0x0072E448 File Offset: 0x0072C648
+	// Token: 0x060184C1 RID: 99521 RVA: 0x00753A30 File Offset: 0x00751C30
 	private float GetPowerCurveValue(float key, float pow)
 	{
 		return 1f - (float)Math.Pow((double)Math.Abs(2f * key - 1f), (double)pow);
 	}
 
-	// Token: 0x0601AABC RID: 109244 RVA: 0x0072E46C File Offset: 0x0072C66C
+	// Token: 0x060184C2 RID: 99522 RVA: 0x00753A54 File Offset: 0x00751C54
 	[NullableContext(2)]
 	public override Vector GetStackableLocation()
 	{
@@ -148,7 +148,7 @@ public class DangoPerformComponent : StackableChessComponent
 		return this.TempVector;
 	}
 
-	// Token: 0x0601AABD RID: 109245 RVA: 0x0072E4FC File Offset: 0x0072C6FC
+	// Token: 0x060184C3 RID: 99523 RVA: 0x00753AE4 File Offset: 0x00751CE4
 	public override void OnPreviousMoveStateChange(IStackableChessAgent agent, bool isMoving, bool previousIsForward, bool isSameDirection)
 	{
 		if (!isMoving)
@@ -168,7 +168,7 @@ public class DangoPerformComponent : StackableChessComponent
 		this.StartJumpBackwardPerform(this.JumpHeight, this.JumpDistance);
 	}
 
-	// Token: 0x0601AABE RID: 109246 RVA: 0x0072E580 File Offset: 0x0072C780
+	// Token: 0x060184C4 RID: 99524 RVA: 0x00753B68 File Offset: 0x00751D68
 	public override void Move(Vector location, Rotator rotator, bool performIsForward, Action finishCallback)
 	{
 		BaseCharacterComponent actorComp = this.ActorComp;
@@ -208,7 +208,7 @@ public class DangoPerformComponent : StackableChessComponent
 		this.StartJumpBackwardPerform(this.JumpHeight, this.JumpDistance);
 	}
 
-	// Token: 0x0601AABF RID: 109247 RVA: 0x0072E6E4 File Offset: 0x0072C8E4
+	// Token: 0x060184C5 RID: 99525 RVA: 0x00753CCC File Offset: 0x00751ECC
 	public override void Teleport(Vector location, Rotator rotator)
 	{
 		if (this.ActorComp == null)
@@ -220,7 +220,7 @@ public class DangoPerformComponent : StackableChessComponent
 		this.ActorComp.SetActorLocationAndRotation(this.TempVector.ToUeVector(false), rotator.ToUeRotator(), "ChessTeleport", false, null);
 	}
 
-	// Token: 0x0601AAC0 RID: 109248 RVA: 0x0072E758 File Offset: 0x0072C958
+	// Token: 0x060184C6 RID: 99526 RVA: 0x00753D40 File Offset: 0x00751F40
 	private void MoveEnd()
 	{
 		this.MoveState = DangoPerformComponent.EMoveState.Idle;
@@ -239,7 +239,7 @@ public class DangoPerformComponent : StackableChessComponent
 		}, 100f, null, null, true, 1f);
 	}
 
-	// Token: 0x0601AAC1 RID: 109249 RVA: 0x0072E7B8 File Offset: 0x0072C9B8
+	// Token: 0x060184C7 RID: 99527 RVA: 0x00753DA0 File Offset: 0x00751FA0
 	public override bool IsPerformRecursion(int type)
 	{
 		EDangoPerformType type2;
@@ -258,7 +258,7 @@ public class DangoPerformComponent : StackableChessComponent
 		return edangoActionTargetType.GetValueOrDefault() == edangoActionTargetType2 & edangoActionTargetType != null;
 	}
 
-	// Token: 0x0601AAC2 RID: 109250 RVA: 0x0072E81C File Offset: 0x0072CA1C
+	// Token: 0x060184C8 RID: 99528 RVA: 0x00753E04 File Offset: 0x00752004
 	public override void Perform(int type, [Nullable(2)] Vector pointLocation, Action finishCallback)
 	{
 		DangoPerformConfig dangoPerformConfig = null;
@@ -327,7 +327,7 @@ public class DangoPerformComponent : StackableChessComponent
 		finishCallback();
 	}
 
-	// Token: 0x0601AAC3 RID: 109251 RVA: 0x0072EA0C File Offset: 0x0072CC0C
+	// Token: 0x060184C9 RID: 99529 RVA: 0x00753FF4 File Offset: 0x007521F4
 	public override void OnPreviousPerformStateChange(IStackableChessAgent agent, int type, bool isPerforming)
 	{
 		if (!isPerforming)
@@ -348,7 +348,7 @@ public class DangoPerformComponent : StackableChessComponent
 		}
 	}
 
-	// Token: 0x0601AAC4 RID: 109252 RVA: 0x0072EA5C File Offset: 0x0072CC5C
+	// Token: 0x060184CA RID: 99530 RVA: 0x00754044 File Offset: 0x00752244
 	private void StartJumpPerform(float jumpHeight, float jumpDistance)
 	{
 		UAnimInstance animInstance = this.AnimInstance;
@@ -358,7 +358,7 @@ public class DangoPerformComponent : StackableChessComponent
 		}
 	}
 
-	// Token: 0x0601AAC5 RID: 109253 RVA: 0x0072EA84 File Offset: 0x0072CC84
+	// Token: 0x060184CB RID: 99531 RVA: 0x0075406C File Offset: 0x0075226C
 	private void StartJumpBackwardPerform(float jumpHeight, float jumpDistance)
 	{
 		UAnimInstance animInstance = this.AnimInstance;
@@ -368,7 +368,7 @@ public class DangoPerformComponent : StackableChessComponent
 		}
 	}
 
-	// Token: 0x0601AAC6 RID: 109254 RVA: 0x0072EAAC File Offset: 0x0072CCAC
+	// Token: 0x060184CC RID: 99532 RVA: 0x00754094 File Offset: 0x00752294
 	private void StartActionPerform(EDangoActionPerformType type)
 	{
 		UAnimInstance animInstance = this.AnimInstance;
@@ -378,7 +378,7 @@ public class DangoPerformComponent : StackableChessComponent
 		}
 	}
 
-	// Token: 0x0601AAC7 RID: 109255 RVA: 0x0072EAD3 File Offset: 0x0072CCD3
+	// Token: 0x060184CD RID: 99533 RVA: 0x007540BB File Offset: 0x007522BB
 	private void ReturnStand()
 	{
 		UAnimInstance animInstance = this.AnimInstance;
@@ -388,7 +388,7 @@ public class DangoPerformComponent : StackableChessComponent
 		}
 	}
 
-	// Token: 0x0601AAC8 RID: 109256 RVA: 0x0072EAFC File Offset: 0x0072CCFC
+	// Token: 0x060184CE RID: 99534 RVA: 0x007540E4 File Offset: 0x007522E4
 	protected override FName? GetAttachSocketName()
 	{
 		DangoGlobalConfig config = DangoGlobalModel.Instance.Config;
@@ -399,7 +399,7 @@ public class DangoPerformComponent : StackableChessComponent
 		return config.AttachSocketName;
 	}
 
-	// Token: 0x0601AAC9 RID: 109257 RVA: 0x0072EB28 File Offset: 0x0072CD28
+	// Token: 0x060184CF RID: 99535 RVA: 0x00754110 File Offset: 0x00752310
 	private void SpawnEffect(Vector location, string effectPath, FName? socketName)
 	{
 		BaseCharacterComponent actorComp = this.ActorComp;
@@ -420,7 +420,7 @@ public class DangoPerformComponent : StackableChessComponent
 		}
 	}
 
-	// Token: 0x0601AACA RID: 109258 RVA: 0x0072EBD0 File Offset: 0x0072CDD0
+	// Token: 0x060184D0 RID: 99536 RVA: 0x007541B8 File Offset: 0x007523B8
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -428,120 +428,123 @@ public class DangoPerformComponent : StackableChessComponent
 			return false;
 		}
 		DangoPerformComponent dangoPerformComponent = (DangoPerformComponent)componentTemplate;
-		if (base.CanResetComponentProperty("AnimInstance"))
+		if (dangoPerformComponent.AnimInstance == null)
 		{
-			if (dangoPerformComponent.AnimInstance == null)
-			{
-				this.AnimInstance = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UAnimInstance>(this.AnimInstance), "AnimInstance"))
-			{
-				return false;
-			}
+			this.AnimInstance = null;
 		}
-		if (base.CanResetComponentProperty("IsBeginJump"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AnimInstance), "AnimInstance"))
 		{
-			this.IsBeginJump = dangoPerformComponent.IsBeginJump;
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsInterruptJump"))
+		this.IsBeginJump = dangoPerformComponent.IsBeginJump;
+		this.IsInterruptJump = dangoPerformComponent.IsInterruptJump;
+		this.JumpHeight = dangoPerformComponent.JumpHeight;
+		this.JumpDistance = dangoPerformComponent.JumpDistance;
+		this.MoveState = dangoPerformComponent.MoveState;
+		this.CurrentMoveTime = dangoPerformComponent.CurrentMoveTime;
+		this.SignOffsetRate = dangoPerformComponent.SignOffsetRate;
+		if (dangoPerformComponent.MoveFinishCallback == null)
 		{
-			this.IsInterruptJump = dangoPerformComponent.IsInterruptJump;
+			this.MoveFinishCallback = null;
 		}
-		if (base.CanResetComponentProperty("JumpHeight"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveFinishCallback), "MoveFinishCallback"))
 		{
-			this.JumpHeight = dangoPerformComponent.JumpHeight;
+			return false;
 		}
-		if (base.CanResetComponentProperty("JumpDistance"))
-		{
-			this.JumpDistance = dangoPerformComponent.JumpDistance;
-		}
-		if (base.CanResetComponentProperty("MoveState"))
-		{
-			this.MoveState = dangoPerformComponent.MoveState;
-		}
-		if (base.CanResetComponentProperty("CurrentMoveTime"))
-		{
-			this.CurrentMoveTime = dangoPerformComponent.CurrentMoveTime;
-		}
-		if (base.CanResetComponentProperty("SignOffsetRate"))
-		{
-			this.SignOffsetRate = dangoPerformComponent.SignOffsetRate;
-		}
-		if (base.CanResetComponentProperty("MoveFinishCallback"))
-		{
-			if (dangoPerformComponent.MoveFinishCallback == null)
-			{
-				this.MoveFinishCallback = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Action>(this.MoveFinishCallback), "MoveFinishCallback"))
-			{
-				return false;
-			}
-		}
-		return (!base.CanResetComponentProperty("MoveStartLocation") || dangoPerformComponent.MoveStartLocation == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.MoveStartLocation), "MoveStartLocation")) && (!base.CanResetComponentProperty("MoveTargetLocation") || dangoPerformComponent.MoveTargetLocation == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.MoveTargetLocation), "MoveTargetLocation")) && (!base.CanResetComponentProperty("MoveTargetRotator") || dangoPerformComponent.MoveTargetRotator == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Rotator>(this.MoveTargetRotator), "MoveTargetRotator")) && (!base.CanResetComponentProperty("TempVector") || dangoPerformComponent.TempVector == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TempVector), "TempVector")) && (!base.CanResetComponentProperty("TempRotator") || dangoPerformComponent.TempRotator == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Rotator>(this.TempRotator), "TempRotator"));
+		return (dangoPerformComponent.MoveStartLocation == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveStartLocation), "MoveStartLocation")) && (dangoPerformComponent.MoveTargetLocation == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveTargetLocation), "MoveTargetLocation")) && (dangoPerformComponent.MoveTargetRotator == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveTargetRotator), "MoveTargetRotator")) && (dangoPerformComponent.TempVector == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempVector), "TempVector")) && (dangoPerformComponent.TempRotator == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempRotator), "TempRotator"));
 	}
 
-	// Token: 0x0400CDB2 RID: 52658
+	// Token: 0x1700261D RID: 9757
+	// (get) Token: 0x060184D1 RID: 99537 RVA: 0x0075432C File Offset: 0x0075252C
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700261E RID: 9758
+	// (get) Token: 0x060184D2 RID: 99538 RVA: 0x0075432F File Offset: 0x0075252F
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700261F RID: 9759
+	// (get) Token: 0x060184D3 RID: 99539 RVA: 0x00754332 File Offset: 0x00752532
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400D195 RID: 53653
 	public const int STAND_DELAY_TIME = 100;
 
-	// Token: 0x0400CDB3 RID: 52659
+	// Token: 0x0400D196 RID: 53654
 	public const float SCALE_SIZE = 1.2f;
 
-	// Token: 0x0400CDB4 RID: 52660
+	// Token: 0x0400D197 RID: 53655
 	[Nullable(2)]
 	private UAnimInstance AnimInstance;
 
-	// Token: 0x0400CDB5 RID: 52661
+	// Token: 0x0400D198 RID: 53656
 	public bool IsBeginJump;
 
-	// Token: 0x0400CDB6 RID: 52662
+	// Token: 0x0400D199 RID: 53657
 	public bool IsInterruptJump;
 
-	// Token: 0x0400CDB7 RID: 52663
+	// Token: 0x0400D19A RID: 53658
 	public float JumpHeight;
 
-	// Token: 0x0400CDB8 RID: 52664
+	// Token: 0x0400D19B RID: 53659
 	public float JumpDistance;
 
-	// Token: 0x0400CDB9 RID: 52665
+	// Token: 0x0400D19C RID: 53660
 	private DangoPerformComponent.EMoveState MoveState;
 
-	// Token: 0x0400CDBA RID: 52666
+	// Token: 0x0400D19D RID: 53661
 	private float CurrentMoveTime;
 
-	// Token: 0x0400CDBB RID: 52667
+	// Token: 0x0400D19E RID: 53662
 	private float SignOffsetRate;
 
-	// Token: 0x0400CDBC RID: 52668
+	// Token: 0x0400D19F RID: 53663
 	[Nullable(2)]
 	private Action MoveFinishCallback;
 
-	// Token: 0x0400CDBD RID: 52669
+	// Token: 0x0400D1A0 RID: 53664
 	private readonly Vector MoveStartLocation = Vector.Create();
 
-	// Token: 0x0400CDBE RID: 52670
+	// Token: 0x0400D1A1 RID: 53665
 	private readonly Vector MoveTargetLocation = Vector.Create();
 
-	// Token: 0x0400CDBF RID: 52671
+	// Token: 0x0400D1A2 RID: 53666
 	private readonly Rotator MoveTargetRotator = Rotator.Create();
 
-	// Token: 0x0400CDC0 RID: 52672
+	// Token: 0x0400D1A3 RID: 53667
 	private readonly Vector TempVector = Vector.Create();
 
-	// Token: 0x0400CDC1 RID: 52673
+	// Token: 0x0400D1A4 RID: 53668
 	private readonly Rotator TempRotator = Rotator.Create();
 
-	// Token: 0x0200966B RID: 38507
+	// Token: 0x0200888C RID: 34956
 	[NullableContext(0)]
 	public enum EMoveState
 	{
-		// Token: 0x040303D8 RID: 197592
+		// Token: 0x0402BA65 RID: 178789
 		Idle,
-		// Token: 0x040303D9 RID: 197593
+		// Token: 0x0402BA66 RID: 178790
 		Starting,
-		// Token: 0x040303DA RID: 197594
+		// Token: 0x0402BA67 RID: 178791
 		Moving,
-		// Token: 0x040303DB RID: 197595
+		// Token: 0x0402BA68 RID: 178792
 		Recovering
 	}
 }

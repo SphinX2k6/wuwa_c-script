@@ -6,12 +6,12 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x0200347B RID: 13435
+// Token: 0x020029EF RID: 10735
 [UClass("/Game/Aki/TypeScript/Game/Render/Effect/Data/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Render/Effect/Data/EffectModelStaticMesh.EffectModelStaticMesh_C")]
 public class EffectModelStaticMesh : UEffectModelStaticMesh, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x0601D1F5 RID: 119285 RVA: 0x0081E188 File Offset: 0x0081C388
+	// Token: 0x0601AEFD RID: 110333 RVA: 0x00845488 File Offset: 0x00843688
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (EffectModelStaticMesh._ClassPtr == IntPtr.Zero)
@@ -21,29 +21,29 @@ public class EffectModelStaticMesh : UEffectModelStaticMesh, IUnrealUObject, IUn
 		return EffectModelStaticMesh._ClassPtr;
 	}
 
-	// Token: 0x0601D1F6 RID: 119286 RVA: 0x0081E1AC File Offset: 0x0081C3AC
+	// Token: 0x0601AEFE RID: 110334 RVA: 0x008454AC File Offset: 0x008436AC
 	public EffectModelStaticMesh() : this(BuiltinUtils.AllocNativeUObject(EffectModelStaticMesh.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0601D1F7 RID: 119287 RVA: 0x0081E1D4 File Offset: 0x0081C3D4
+	// Token: 0x0601AEFF RID: 110335 RVA: 0x008454D4 File Offset: 0x008436D4
 	[NullableContext(1)]
 	public EffectModelStaticMesh(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(EffectModelStaticMesh.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601D1F8 RID: 119288 RVA: 0x0081E207 File Offset: 0x0081C407
+	// Token: 0x0601AF00 RID: 110336 RVA: 0x00845507 File Offset: 0x00843707
 	protected EffectModelStaticMesh(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0400E558 RID: 58712
+	// Token: 0x0400EA10 RID: 59920
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Render/Effect/Data/EffectModelStaticMesh.EffectModelStaticMesh_C";
 
-	// Token: 0x0400E559 RID: 58713
+	// Token: 0x0400EA11 RID: 59921
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400E55A RID: 58714
+	// Token: 0x0400EA12 RID: 59922
 	private static IntPtr _ClassDefaultObjectPtr;
 }

@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006B12 RID: 27410
+	// Token: 0x02007249 RID: 29257
 	public struct IMotorCatapultParam : IFlatbufferObject
 	{
-		// Token: 0x1700CB91 RID: 52113
-		// (get) Token: 0x06030156 RID: 196950 RVA: 0x0068948B File Offset: 0x0068768B
+		// Token: 0x1700D660 RID: 54880
+		// (get) Token: 0x06032F2A RID: 208682 RVA: 0x006E0B43 File Offset: 0x006DED43
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030157 RID: 196951 RVA: 0x00689498 File Offset: 0x00687698
+		// Token: 0x06032F2B RID: 208683 RVA: 0x006E0B50 File Offset: 0x006DED50
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06030158 RID: 196952 RVA: 0x006894A0 File Offset: 0x006876A0
+		// Token: 0x06032F2C RID: 208684 RVA: 0x006E0B58 File Offset: 0x006DED58
 		public static IMotorCatapultParam GetRootAsIMotorCatapultParam(ByteBuffer _bb)
 		{
 			return IMotorCatapultParam.GetRootAsIMotorCatapultParam(_bb, default(IMotorCatapultParam));
 		}
 
-		// Token: 0x06030159 RID: 196953 RVA: 0x006894BC File Offset: 0x006876BC
+		// Token: 0x06032F2D RID: 208685 RVA: 0x006E0B74 File Offset: 0x006DED74
 		public static IMotorCatapultParam GetRootAsIMotorCatapultParam(ByteBuffer _bb, IMotorCatapultParam obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0603015A RID: 196954 RVA: 0x006894D9 File Offset: 0x006876D9
+		// Token: 0x06032F2E RID: 208686 RVA: 0x006E0B91 File Offset: 0x006DED91
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0603015B RID: 196955 RVA: 0x006894E8 File Offset: 0x006876E8
+		// Token: 0x06032F2F RID: 208687 RVA: 0x006E0BA0 File Offset: 0x006DEDA0
 		public IMotorCatapultParam __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CB92 RID: 52114
-		// (get) Token: 0x0603015C RID: 196956 RVA: 0x006894F8 File Offset: 0x006876F8
+		// Token: 0x1700D661 RID: 54881
+		// (get) Token: 0x06032F30 RID: 208688 RVA: 0x006E0BB0 File Offset: 0x006DEDB0
 		public IVectorInfo? P1
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CB93 RID: 52115
-		// (get) Token: 0x0603015D RID: 196957 RVA: 0x00689558 File Offset: 0x00687758
+		// Token: 0x1700D662 RID: 54882
+		// (get) Token: 0x06032F31 RID: 208689 RVA: 0x006E0C10 File Offset: 0x006DEE10
 		public IVectorInfo? P2
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CB94 RID: 52116
-		// (get) Token: 0x0603015E RID: 196958 RVA: 0x006895B8 File Offset: 0x006877B8
+		// Token: 0x1700D663 RID: 54883
+		// (get) Token: 0x06032F32 RID: 208690 RVA: 0x006E0C70 File Offset: 0x006DEE70
 		public float Gravity
 		{
 			get
@@ -93,8 +93,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CB95 RID: 52117
-		// (get) Token: 0x0603015F RID: 196959 RVA: 0x006895F8 File Offset: 0x006877F8
+		// Token: 0x1700D664 RID: 54884
+		// (get) Token: 0x06032F33 RID: 208691 RVA: 0x006E0CB0 File Offset: 0x006DEEB0
 		public float Time
 		{
 			get
@@ -108,8 +108,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CB96 RID: 52118
-		// (get) Token: 0x06030160 RID: 196960 RVA: 0x0068963C File Offset: 0x0068783C
+		// Token: 0x1700D665 RID: 54885
+		// (get) Token: 0x06032F34 RID: 208692 RVA: 0x006E0CF4 File Offset: 0x006DEEF4
 		public string MotionCurve
 		{
 			get
@@ -123,20 +123,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030161 RID: 196961 RVA: 0x00689674 File Offset: 0x00687874
+		// Token: 0x06032F35 RID: 208693 RVA: 0x006E0D2C File Offset: 0x006DEF2C
 		public Span<byte> GetMotionCurveBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x06030162 RID: 196962 RVA: 0x00689684 File Offset: 0x00687884
+		// Token: 0x06032F36 RID: 208694 RVA: 0x006E0D3C File Offset: 0x006DEF3C
 		public byte[] GetMotionCurveArray()
 		{
 			return this.__p.__vector_as_array<byte>(12);
 		}
 
-		// Token: 0x1700CB97 RID: 52119
-		// (get) Token: 0x06030163 RID: 196963 RVA: 0x00689694 File Offset: 0x00687894
+		// Token: 0x1700D666 RID: 54886
+		// (get) Token: 0x06032F37 RID: 208695 RVA: 0x006E0D4C File Offset: 0x006DEF4C
 		public IVectorInfo? P2Rot
 		{
 			get
@@ -150,8 +150,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CB98 RID: 52120
-		// (get) Token: 0x06030164 RID: 196964 RVA: 0x006896F4 File Offset: 0x006878F4
+		// Token: 0x1700D667 RID: 54887
+		// (get) Token: 0x06032F38 RID: 208696 RVA: 0x006E0DAC File Offset: 0x006DEFAC
 		public string P2RotCurve
 		{
 			get
@@ -165,20 +165,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030165 RID: 196965 RVA: 0x0068972C File Offset: 0x0068792C
+		// Token: 0x06032F39 RID: 208697 RVA: 0x006E0DE4 File Offset: 0x006DEFE4
 		public Span<byte> GetP2RotCurveBytes()
 		{
 			return this.__p.__vector_as_span<byte>(16, 1);
 		}
 
-		// Token: 0x06030166 RID: 196966 RVA: 0x0068973C File Offset: 0x0068793C
+		// Token: 0x06032F3A RID: 208698 RVA: 0x006E0DF4 File Offset: 0x006DEFF4
 		public byte[] GetP2RotCurveArray()
 		{
 			return this.__p.__vector_as_array<byte>(16);
 		}
 
-		// Token: 0x1700CB99 RID: 52121
-		// (get) Token: 0x06030167 RID: 196967 RVA: 0x0068974C File Offset: 0x0068794C
+		// Token: 0x1700D668 RID: 54888
+		// (get) Token: 0x06032F3B RID: 208699 RVA: 0x006E0E04 File Offset: 0x006DF004
 		public byte NullMask
 		{
 			get
@@ -192,7 +192,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030168 RID: 196968 RVA: 0x0068978C File Offset: 0x0068798C
+		// Token: 0x06032F3C RID: 208700 RVA: 0x006E0E44 File Offset: 0x006DF044
 		public static Offset<IMotorCatapultParam> CreateIMotorCatapultParam(FlatBufferBuilder builder, Offset<IVectorInfo> P1Offset = default(Offset<IVectorInfo>), Offset<IVectorInfo> P2Offset = default(Offset<IVectorInfo>), float Gravity = 0f, float Time = 0f, StringOffset MotionCurveOffset = default(StringOffset), Offset<IVectorInfo> P2RotOffset = default(Offset<IVectorInfo>), StringOffset P2RotCurveOffset = default(StringOffset), byte NullMask = 0)
 		{
 			builder.StartTable(8);
@@ -207,67 +207,67 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IMotorCatapultParam.EndIMotorCatapultParam(builder);
 		}
 
-		// Token: 0x06030169 RID: 196969 RVA: 0x006897E3 File Offset: 0x006879E3
+		// Token: 0x06032F3D RID: 208701 RVA: 0x006E0E9B File Offset: 0x006DF09B
 		public static void StartIMotorCatapultParam(FlatBufferBuilder builder)
 		{
 			builder.StartTable(8);
 		}
 
-		// Token: 0x0603016A RID: 196970 RVA: 0x006897EC File Offset: 0x006879EC
+		// Token: 0x06032F3E RID: 208702 RVA: 0x006E0EA4 File Offset: 0x006DF0A4
 		public static void AddP1(FlatBufferBuilder builder, Offset<IVectorInfo> p1Offset)
 		{
 			builder.AddOffset(0, p1Offset.Value, 0);
 		}
 
-		// Token: 0x0603016B RID: 196971 RVA: 0x006897FC File Offset: 0x006879FC
+		// Token: 0x06032F3F RID: 208703 RVA: 0x006E0EB4 File Offset: 0x006DF0B4
 		public static void AddP2(FlatBufferBuilder builder, Offset<IVectorInfo> p2Offset)
 		{
 			builder.AddOffset(1, p2Offset.Value, 0);
 		}
 
-		// Token: 0x0603016C RID: 196972 RVA: 0x0068980C File Offset: 0x00687A0C
+		// Token: 0x06032F40 RID: 208704 RVA: 0x006E0EC4 File Offset: 0x006DF0C4
 		public static void AddGravity(FlatBufferBuilder builder, float gravity)
 		{
 			builder.AddFloat(2, gravity, 0.0);
 		}
 
-		// Token: 0x0603016D RID: 196973 RVA: 0x0068981F File Offset: 0x00687A1F
+		// Token: 0x06032F41 RID: 208705 RVA: 0x006E0ED7 File Offset: 0x006DF0D7
 		public static void AddTime(FlatBufferBuilder builder, float time)
 		{
 			builder.AddFloat(3, time, 0.0);
 		}
 
-		// Token: 0x0603016E RID: 196974 RVA: 0x00689832 File Offset: 0x00687A32
+		// Token: 0x06032F42 RID: 208706 RVA: 0x006E0EEA File Offset: 0x006DF0EA
 		public static void AddMotionCurve(FlatBufferBuilder builder, StringOffset motionCurveOffset)
 		{
 			builder.AddOffset(4, motionCurveOffset.Value, 0);
 		}
 
-		// Token: 0x0603016F RID: 196975 RVA: 0x00689842 File Offset: 0x00687A42
+		// Token: 0x06032F43 RID: 208707 RVA: 0x006E0EFA File Offset: 0x006DF0FA
 		public static void AddP2Rot(FlatBufferBuilder builder, Offset<IVectorInfo> p2RotOffset)
 		{
 			builder.AddOffset(5, p2RotOffset.Value, 0);
 		}
 
-		// Token: 0x06030170 RID: 196976 RVA: 0x00689852 File Offset: 0x00687A52
+		// Token: 0x06032F44 RID: 208708 RVA: 0x006E0F0A File Offset: 0x006DF10A
 		public static void AddP2RotCurve(FlatBufferBuilder builder, StringOffset p2RotCurveOffset)
 		{
 			builder.AddOffset(6, p2RotCurveOffset.Value, 0);
 		}
 
-		// Token: 0x06030171 RID: 196977 RVA: 0x00689862 File Offset: 0x00687A62
+		// Token: 0x06032F45 RID: 208709 RVA: 0x006E0F1A File Offset: 0x006DF11A
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(7, nullMask, 0);
 		}
 
-		// Token: 0x06030172 RID: 196978 RVA: 0x0068986D File Offset: 0x00687A6D
+		// Token: 0x06032F46 RID: 208710 RVA: 0x006E0F25 File Offset: 0x006DF125
 		public static Offset<IMotorCatapultParam> EndIMotorCatapultParam(FlatBufferBuilder builder)
 		{
 			return new Offset<IMotorCatapultParam>(builder.EndTable());
 		}
 
-		// Token: 0x06030173 RID: 196979 RVA: 0x0068987C File Offset: 0x00687A7C
+		// Token: 0x06032F47 RID: 208711 RVA: 0x006E0F34 File Offset: 0x006DF134
 		public IMotorCatapultParamT UnPack()
 		{
 			IMotorCatapultParamT motorCatapultParamT = new IMotorCatapultParamT();
@@ -275,7 +275,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return motorCatapultParamT;
 		}
 
-		// Token: 0x06030174 RID: 196980 RVA: 0x00689898 File Offset: 0x00687A98
+		// Token: 0x06032F48 RID: 208712 RVA: 0x006E0F50 File Offset: 0x006DF150
 		public void UnPackTo(IMotorCatapultParamT _o)
 		{
 			_o.P1 = ((this.P1 != null) ? this.P1.Value.UnPack() : null);
@@ -288,7 +288,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06030175 RID: 196981 RVA: 0x00689970 File Offset: 0x00687B70
+		// Token: 0x06032F49 RID: 208713 RVA: 0x006E1028 File Offset: 0x006DF228
 		public static Offset<IMotorCatapultParam> Pack(FlatBufferBuilder builder, IMotorCatapultParamT _o)
 		{
 			if (_o == null)
@@ -303,7 +303,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IMotorCatapultParam.CreateIMotorCatapultParam(builder, p1Offset, p2Offset, _o.Gravity, _o.Time, motionCurveOffset, p2RotOffset, p2RotCurveOffset, _o.NullMask);
 		}
 
-		// Token: 0x0401138D RID: 70541
+		// Token: 0x040122A0 RID: 74400
 		private Table __p;
 	}
 }

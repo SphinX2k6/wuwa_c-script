@@ -3,30 +3,30 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena
 {
-	// Token: 0x02005117 RID: 20759
+	// Token: 0x020040E7 RID: 16615
 	[NullableContext(1)]
 	[Nullable(0)]
 	public readonly struct EPhantomArenaTextId : IEquatable<EPhantomArenaTextId>
 	{
-		// Token: 0x0603513C RID: 217404 RVA: 0x00C94073 File Offset: 0x00C92273
+		// Token: 0x0602A035 RID: 172085 RVA: 0x00BE1487 File Offset: 0x00BDF687
 		private EPhantomArenaTextId(string value)
 		{
 			this._Value = value;
 		}
 
-		// Token: 0x0603513D RID: 217405 RVA: 0x00C9407C File Offset: 0x00C9227C
+		// Token: 0x0602A036 RID: 172086 RVA: 0x00BE1490 File Offset: 0x00BDF690
 		public override string ToString()
 		{
 			return this._Value;
 		}
 
-		// Token: 0x0603513E RID: 217406 RVA: 0x00C94084 File Offset: 0x00C92284
+		// Token: 0x0602A037 RID: 172087 RVA: 0x00BE1498 File Offset: 0x00BDF698
 		public bool Equals(EPhantomArenaTextId other)
 		{
 			return this._Value == other._Value;
 		}
 
-		// Token: 0x0603513F RID: 217407 RVA: 0x00C94098 File Offset: 0x00C92298
+		// Token: 0x0602A038 RID: 172088 RVA: 0x00BE14AC File Offset: 0x00BDF6AC
 		[NullableContext(2)]
 		public override bool Equals(object obj)
 		{
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			return false;
 		}
 
-		// Token: 0x06035140 RID: 217408 RVA: 0x00C940BD File Offset: 0x00C922BD
+		// Token: 0x0602A039 RID: 172089 RVA: 0x00BE14D1 File Offset: 0x00BDF6D1
 		public override int GetHashCode()
 		{
 			string value = this._Value;
@@ -49,52 +49,52 @@ namespace CSharpScript.Game.Module.PhantomArena
 			return value.GetHashCode();
 		}
 
-		// Token: 0x06035141 RID: 217409 RVA: 0x00C940D0 File Offset: 0x00C922D0
+		// Token: 0x0602A03A RID: 172090 RVA: 0x00BE14E4 File Offset: 0x00BDF6E4
 		public static bool operator ==(EPhantomArenaTextId left, EPhantomArenaTextId right)
 		{
 			return left.Equals(right);
 		}
 
-		// Token: 0x06035142 RID: 217410 RVA: 0x00C940DA File Offset: 0x00C922DA
+		// Token: 0x0602A03B RID: 172091 RVA: 0x00BE14EE File Offset: 0x00BDF6EE
 		public static bool operator !=(EPhantomArenaTextId left, EPhantomArenaTextId right)
 		{
 			return !left.Equals(right);
 		}
 
-		// Token: 0x0401C45D RID: 115805
+		// Token: 0x04016E92 RID: 93842
 		private readonly string _Value;
 
-		// Token: 0x0401C45E RID: 115806
+		// Token: 0x04016E93 RID: 93843
 		public static readonly EPhantomArenaTextId TextExp = new EPhantomArenaTextId("PhantomBattle_1152");
 
-		// Token: 0x0401C45F RID: 115807
+		// Token: 0x04016E94 RID: 93844
 		public static readonly EPhantomArenaTextId TextEntranceTitle = new EPhantomArenaTextId("PhantomBattle_1151");
 
-		// Token: 0x0401C460 RID: 115808
+		// Token: 0x04016E95 RID: 93845
 		public static readonly EPhantomArenaTextId TextRewardProgress = new EPhantomArenaTextId("PhantomBattle_1153");
 
-		// Token: 0x0401C461 RID: 115809
+		// Token: 0x04016E96 RID: 93846
 		public static readonly EPhantomArenaTextId TextFirstPassRewardTitle = new EPhantomArenaTextId("PhantomBattle_1154");
 
-		// Token: 0x0401C462 RID: 115810
+		// Token: 0x04016E97 RID: 93847
 		public static readonly EPhantomArenaTextId TextReChallengeRewardTitle = new EPhantomArenaTextId("PhantomBattle_1155");
 
-		// Token: 0x0401C463 RID: 115811
+		// Token: 0x04016E98 RID: 93848
 		public static readonly EPhantomArenaTextId TextChallengeProgressNormal = new EPhantomArenaTextId("PhantomBattle_1159");
 
-		// Token: 0x0401C464 RID: 115812
+		// Token: 0x04016E99 RID: 93849
 		public static readonly EPhantomArenaTextId TextChallengeProgressSelect = new EPhantomArenaTextId("PhantomBattle_1160");
 
-		// Token: 0x0401C465 RID: 115813
+		// Token: 0x04016E9A RID: 93850
 		public static readonly EPhantomArenaTextId TextMysteryNpcName = new EPhantomArenaTextId("PhantomBattle_1164");
 
-		// Token: 0x0401C466 RID: 115814
+		// Token: 0x04016E9B RID: 93851
 		public static readonly EPhantomArenaTextId TextMysteryNpcDesc = new EPhantomArenaTextId("PhantomBattle_1165");
 
-		// Token: 0x0401C467 RID: 115815
+		// Token: 0x04016E9C RID: 93852
 		public static readonly EPhantomArenaTextId TextGuideQuestTip = new EPhantomArenaTextId("PhantomBattle_1182");
 
-		// Token: 0x0401C468 RID: 115816
+		// Token: 0x04016E9D RID: 93853
 		public static readonly EPhantomArenaTextId TextGotoQuest = new EPhantomArenaTextId("PhantomBattle_1183");
 	}
 }

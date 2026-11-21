@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 {
-	// Token: 0x02004703 RID: 18179
+	// Token: 0x02004B6B RID: 19307
 	public struct IRunningFlowInfo : IFlatbufferObject
 	{
-		// Token: 0x17008211 RID: 33297
-		// (get) Token: 0x0601BDD9 RID: 114137 RVA: 0x003F323F File Offset: 0x003F143F
+		// Token: 0x17008852 RID: 34898
+		// (get) Token: 0x0601D5AE RID: 120238 RVA: 0x0041F4DB File Offset: 0x0041D6DB
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 			}
 		}
 
-		// Token: 0x0601BDDA RID: 114138 RVA: 0x003F324C File Offset: 0x003F144C
+		// Token: 0x0601D5AF RID: 120239 RVA: 0x0041F4E8 File Offset: 0x0041D6E8
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601BDDB RID: 114139 RVA: 0x003F3254 File Offset: 0x003F1454
+		// Token: 0x0601D5B0 RID: 120240 RVA: 0x0041F4F0 File Offset: 0x0041D6F0
 		public static IRunningFlowInfo GetRootAsIRunningFlowInfo(ByteBuffer _bb)
 		{
 			return IRunningFlowInfo.GetRootAsIRunningFlowInfo(_bb, default(IRunningFlowInfo));
 		}
 
-		// Token: 0x0601BDDC RID: 114140 RVA: 0x003F3270 File Offset: 0x003F1470
+		// Token: 0x0601D5B1 RID: 120241 RVA: 0x0041F50C File Offset: 0x0041D70C
 		public static IRunningFlowInfo GetRootAsIRunningFlowInfo(ByteBuffer _bb, IRunningFlowInfo obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601BDDD RID: 114141 RVA: 0x003F328D File Offset: 0x003F148D
+		// Token: 0x0601D5B2 RID: 120242 RVA: 0x0041F529 File Offset: 0x0041D729
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601BDDE RID: 114142 RVA: 0x003F329C File Offset: 0x003F149C
+		// Token: 0x0601D5B3 RID: 120243 RVA: 0x0041F538 File Offset: 0x0041D738
 		public IRunningFlowInfo __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008212 RID: 33298
-		// (get) Token: 0x0601BDDF RID: 114143 RVA: 0x003F32AC File Offset: 0x003F14AC
+		// Token: 0x17008853 RID: 34899
+		// (get) Token: 0x0601D5B4 RID: 120244 RVA: 0x0041F548 File Offset: 0x0041D748
 		public bool IsPlaying
 		{
 			get
@@ -59,7 +59,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 			}
 		}
 
-		// Token: 0x0601BDE0 RID: 114144 RVA: 0x003F32EC File Offset: 0x003F14EC
+		// Token: 0x0601D5B5 RID: 120245 RVA: 0x0041F588 File Offset: 0x0041D788
 		public Record_Int_EActionState? ActionInfo(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -70,8 +70,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 			return new Record_Int_EActionState?(default(Record_Int_EActionState).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17008213 RID: 33299
-		// (get) Token: 0x0601BDE1 RID: 114145 RVA: 0x003F334C File Offset: 0x003F154C
+		// Token: 0x17008854 RID: 34900
+		// (get) Token: 0x0601D5B6 RID: 120246 RVA: 0x0041F5E8 File Offset: 0x0041D7E8
 		public int ActionInfoLength
 		{
 			get
@@ -85,7 +85,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 			}
 		}
 
-		// Token: 0x0601BDE2 RID: 114146 RVA: 0x003F3377 File Offset: 0x003F1577
+		// Token: 0x0601D5B7 RID: 120247 RVA: 0x0041F613 File Offset: 0x0041D813
 		public static Offset<IRunningFlowInfo> CreateIRunningFlowInfo(FlatBufferBuilder builder, bool IsPlaying = false, VectorOffset ActionInfoOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -94,25 +94,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 			return IRunningFlowInfo.EndIRunningFlowInfo(builder);
 		}
 
-		// Token: 0x0601BDE3 RID: 114147 RVA: 0x003F3394 File Offset: 0x003F1594
+		// Token: 0x0601D5B8 RID: 120248 RVA: 0x0041F630 File Offset: 0x0041D830
 		public static void StartIRunningFlowInfo(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601BDE4 RID: 114148 RVA: 0x003F339D File Offset: 0x003F159D
+		// Token: 0x0601D5B9 RID: 120249 RVA: 0x0041F639 File Offset: 0x0041D839
 		public static void AddIsPlaying(FlatBufferBuilder builder, bool isPlaying)
 		{
 			builder.AddBool(0, isPlaying, false);
 		}
 
-		// Token: 0x0601BDE5 RID: 114149 RVA: 0x003F33A8 File Offset: 0x003F15A8
+		// Token: 0x0601D5BA RID: 120250 RVA: 0x0041F644 File Offset: 0x0041D844
 		public static void AddActionInfo(FlatBufferBuilder builder, VectorOffset actionInfoOffset)
 		{
 			builder.AddOffset(1, actionInfoOffset.Value, 0);
 		}
 
-		// Token: 0x0601BDE6 RID: 114150 RVA: 0x003F33B8 File Offset: 0x003F15B8
+		// Token: 0x0601D5BB RID: 120251 RVA: 0x0041F654 File Offset: 0x0041D854
 		public static VectorOffset CreateActionInfoVector(FlatBufferBuilder builder, Offset<Record_Int_EActionState>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -123,7 +123,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601BDE7 RID: 114151 RVA: 0x003F33F8 File Offset: 0x003F15F8
+		// Token: 0x0601D5BC RID: 120252 RVA: 0x0041F694 File Offset: 0x0041D894
 		public static VectorOffset CreateActionInfoVectorBlock(FlatBufferBuilder builder, Offset<Record_Int_EActionState>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -131,7 +131,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601BDE8 RID: 114152 RVA: 0x003F3412 File Offset: 0x003F1612
+		// Token: 0x0601D5BD RID: 120253 RVA: 0x0041F6AE File Offset: 0x0041D8AE
 		public static VectorOffset CreateActionInfoVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<Record_Int_EActionState>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -139,7 +139,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601BDE9 RID: 114153 RVA: 0x003F3430 File Offset: 0x003F1630
+		// Token: 0x0601D5BE RID: 120254 RVA: 0x0041F6CC File Offset: 0x0041D8CC
 		public static VectorOffset CreateActionInfoVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -147,19 +147,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601BDEA RID: 114154 RVA: 0x003F3449 File Offset: 0x003F1649
+		// Token: 0x0601D5BF RID: 120255 RVA: 0x0041F6E5 File Offset: 0x0041D8E5
 		public static void StartActionInfoVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601BDEB RID: 114155 RVA: 0x003F3454 File Offset: 0x003F1654
+		// Token: 0x0601D5C0 RID: 120256 RVA: 0x0041F6F0 File Offset: 0x0041D8F0
 		public static Offset<IRunningFlowInfo> EndIRunningFlowInfo(FlatBufferBuilder builder)
 		{
 			return new Offset<IRunningFlowInfo>(builder.EndTable());
 		}
 
-		// Token: 0x0601BDEC RID: 114156 RVA: 0x003F3464 File Offset: 0x003F1664
+		// Token: 0x0601D5C1 RID: 120257 RVA: 0x0041F700 File Offset: 0x0041D900
 		public IRunningFlowInfoT UnPack()
 		{
 			IRunningFlowInfoT runningFlowInfoT = new IRunningFlowInfoT();
@@ -167,7 +167,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 			return runningFlowInfoT;
 		}
 
-		// Token: 0x0601BDED RID: 114157 RVA: 0x003F3480 File Offset: 0x003F1680
+		// Token: 0x0601D5C2 RID: 120258 RVA: 0x0041F71C File Offset: 0x0041D91C
 		public void UnPackTo(IRunningFlowInfoT _o)
 		{
 			_o.IsPlaying = this.IsPlaying;
@@ -178,7 +178,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 			}
 		}
 
-		// Token: 0x0601BDEE RID: 114158 RVA: 0x003F34EC File Offset: 0x003F16EC
+		// Token: 0x0601D5C3 RID: 120259 RVA: 0x0041F788 File Offset: 0x0041D988
 		public static Offset<IRunningFlowInfo> Pack(FlatBufferBuilder builder, IRunningFlowInfoT _o)
 		{
 			if (_o == null)
@@ -198,7 +198,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.GameStatusDefine
 			return IRunningFlowInfo.CreateIRunningFlowInfo(builder, _o.IsPlaying, actionInfoOffset);
 		}
 
-		// Token: 0x0400C9BC RID: 51644
+		// Token: 0x0400D3EB RID: 54251
 		private Table __p;
 	}
 }

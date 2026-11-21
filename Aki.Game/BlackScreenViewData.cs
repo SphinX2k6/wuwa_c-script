@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001712 RID: 5906
+// Token: 0x02000BCA RID: 3018
 public class BlackScreenViewData
 {
-	// Token: 0x0600A97F RID: 43391 RVA: 0x002626D8 File Offset: 0x002608D8
+	// Token: 0x06007D62 RID: 32098 RVA: 0x0026CC28 File Offset: 0x0026AE28
 	private void TriggerStateDelegate(BlackScreenViewData.EState state)
 	{
 		Action action;
@@ -15,20 +15,20 @@ public class BlackScreenViewData
 		}
 	}
 
-	// Token: 0x0600A980 RID: 43392 RVA: 0x002626FB File Offset: 0x002608FB
+	// Token: 0x06007D63 RID: 32099 RVA: 0x0026CC4B File Offset: 0x0026AE4B
 	[NullableContext(1)]
 	public void RegisterStateDelegate(BlackScreenViewData.EState state, Action @delegate)
 	{
 		this.StateDelegateMap[state] = @delegate;
 	}
 
-	// Token: 0x0600A981 RID: 43393 RVA: 0x0026270A File Offset: 0x0026090A
+	// Token: 0x06007D64 RID: 32100 RVA: 0x0026CC5A File Offset: 0x0026AE5A
 	public void TriggerCurrentStateDelegate()
 	{
 		this.TriggerStateDelegate(this.State);
 	}
 
-	// Token: 0x0600A982 RID: 43394 RVA: 0x00262718 File Offset: 0x00260918
+	// Token: 0x06007D65 RID: 32101 RVA: 0x0026CC68 File Offset: 0x0026AE68
 	public bool SwitchState(BlackScreenViewData.EState state)
 	{
 		if (this.State == state)
@@ -40,25 +40,25 @@ public class BlackScreenViewData
 		return true;
 	}
 
-	// Token: 0x04004D46 RID: 19782
+	// Token: 0x04004DEE RID: 19950
 	private BlackScreenViewData.EState State;
 
-	// Token: 0x04004D47 RID: 19783
+	// Token: 0x04004DEF RID: 19951
 	[Nullable(1)]
 	private readonly Dictionary<BlackScreenViewData.EState, Action> StateDelegateMap = new Dictionary<BlackScreenViewData.EState, Action>();
 
-	// Token: 0x02007CC5 RID: 31941
+	// Token: 0x02006E4A RID: 28234
 	public enum EState
 	{
-		// Token: 0x04028ECF RID: 167631
+		// Token: 0x040241F8 RID: 147960
 		None,
-		// Token: 0x04028ED0 RID: 167632
+		// Token: 0x040241F9 RID: 147961
 		ShowWithOutAnim,
-		// Token: 0x04028ED1 RID: 167633
+		// Token: 0x040241FA RID: 147962
 		Show,
-		// Token: 0x04028ED2 RID: 167634
+		// Token: 0x040241FB RID: 147963
 		HideWithOutAnim,
-		// Token: 0x04028ED3 RID: 167635
+		// Token: 0x040241FC RID: 147964
 		Hide
 	}
 }

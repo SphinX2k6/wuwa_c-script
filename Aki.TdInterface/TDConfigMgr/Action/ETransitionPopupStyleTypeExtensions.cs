@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002483 RID: 9347
+	// Token: 0x02002726 RID: 10022
 	public static class ETransitionPopupStyleTypeExtensions
 	{
-		// Token: 0x0600CACC RID: 51916 RVA: 0x001DD954 File Offset: 0x001DBB54
+		// Token: 0x0600D785 RID: 55173 RVA: 0x001F7B1C File Offset: 0x001F5D1C
 		public static string ToEnumString(this ETransitionPopupStyleType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CACD RID: 51917 RVA: 0x001DD99C File Offset: 0x001DBB9C
+		// Token: 0x0600D786 RID: 55174 RVA: 0x001F7B64 File Offset: 0x001F5D64
 		public static ETransitionPopupStyleType FromString(string name)
 		{
 			ETransitionPopupStyleType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CACE RID: 51918 RVA: 0x001DD9C8 File Offset: 0x001DBBC8
+		// Token: 0x0600D787 RID: 55175 RVA: 0x001F7B90 File Offset: 0x001F5D90
 		public static bool TryFromString(string name, out ETransitionPopupStyleType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600CACF RID: 51919 RVA: 0x001DDA1E File Offset: 0x001DBC1E
+		// Token: 0x0600D788 RID: 55176 RVA: 0x001F7BE6 File Offset: 0x001F5DE6
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CAD0 RID: 51920 RVA: 0x001DDA3E File Offset: 0x001DBC3E
+		// Token: 0x0600D789 RID: 55177 RVA: 0x001F7C06 File Offset: 0x001F5E06
 		public static ETransitionPopupStyleType[] GetValues()
 		{
 			return new ETransitionPopupStyleType[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CAD1 RID: 51921 RVA: 0x001DDA4E File Offset: 0x001DBC4E
+		// Token: 0x0600D78A RID: 55178 RVA: 0x001F7C16 File Offset: 0x001F5E16
 		public static string[] GetNames()
 		{
 			return new string[]

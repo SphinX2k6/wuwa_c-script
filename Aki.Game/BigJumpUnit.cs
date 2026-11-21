@@ -2,18 +2,18 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020030ED RID: 12525
+// Token: 0x02002645 RID: 9797
 [NullableContext(1)]
 [Nullable(0)]
 public class BigJumpUnit
 {
-	// Token: 0x0601AD7A RID: 109946 RVA: 0x007401A0 File Offset: 0x0073E3A0
+	// Token: 0x06018799 RID: 100249 RVA: 0x00765B8C File Offset: 0x00763D8C
 	public Rotator GetEndRotator()
 	{
 		return this.EndRotator;
 	}
 
-	// Token: 0x0601AD7B RID: 109947 RVA: 0x007401A8 File Offset: 0x0073E3A8
+	// Token: 0x0601879A RID: 100250 RVA: 0x00765B94 File Offset: 0x00763D94
 	public void SetAll(float time1, Vector startPoint, Vector middlePoint, Vector endPoint, string curvePath = "", float gravity2 = 1960f, [Nullable(2)] Rotator endRotator = null, [Nullable(2)] Vector gravityDirect = null, string rotatorCurve = "", [Nullable(2)] Quat startQuat = null)
 	{
 		this.TimeLength1 = time1;
@@ -49,13 +49,13 @@ public class BigJumpUnit
 		this.GravityDirect.DeepCopy(gravityDirect ?? Vector.DownVectorProxy);
 	}
 
-	// Token: 0x0601AD7C RID: 109948 RVA: 0x007402B2 File Offset: 0x0073E4B2
+	// Token: 0x0601879B RID: 100251 RVA: 0x00765C9E File Offset: 0x00763E9E
 	public void SetStartPoint(Vector startPoint)
 	{
 		this.StartPoint.DeepCopy(startPoint);
 	}
 
-	// Token: 0x0601AD7D RID: 109949 RVA: 0x007402C0 File Offset: 0x0073E4C0
+	// Token: 0x0601879C RID: 100252 RVA: 0x00765CAC File Offset: 0x00763EAC
 	public void Init()
 	{
 		this.EndPoint.Subtraction(this.MiddlePoint, BigJumpUnit.TmpVector);
@@ -103,7 +103,7 @@ public class BigJumpUnit
 		}
 	}
 
-	// Token: 0x0601AD7E RID: 109950 RVA: 0x007405A0 File Offset: 0x0073E7A0
+	// Token: 0x0601879D RID: 100253 RVA: 0x00765F8C File Offset: 0x0076418C
 	public override string ToString()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(54, 8);
@@ -126,8 +126,8 @@ public class BigJumpUnit
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x170024F1 RID: 9457
-	// (get) Token: 0x0601AD7F RID: 109951 RVA: 0x0074069F File Offset: 0x0073E89F
+	// Token: 0x1700267D RID: 9853
+	// (get) Token: 0x0601879E RID: 100254 RVA: 0x0076608B File Offset: 0x0076428B
 	public float RisingTime
 	{
 		get
@@ -136,8 +136,8 @@ public class BigJumpUnit
 		}
 	}
 
-	// Token: 0x170024F2 RID: 9458
-	// (get) Token: 0x0601AD80 RID: 109952 RVA: 0x007406A7 File Offset: 0x0073E8A7
+	// Token: 0x1700267E RID: 9854
+	// (get) Token: 0x0601879F RID: 100255 RVA: 0x00766093 File Offset: 0x00764293
 	public float TimeLength
 	{
 		get
@@ -146,7 +146,7 @@ public class BigJumpUnit
 		}
 	}
 
-	// Token: 0x0601AD81 RID: 109953 RVA: 0x007406B8 File Offset: 0x0073E8B8
+	// Token: 0x060187A0 RID: 100256 RVA: 0x007660A4 File Offset: 0x007642A4
 	public void GetLocation(float time, Vector output)
 	{
 		if (time < this.TimeLength1)
@@ -167,7 +167,7 @@ public class BigJumpUnit
 		output.AdditionEqual(this.MiddlePoint);
 	}
 
-	// Token: 0x0601AD82 RID: 109954 RVA: 0x007407DB File Offset: 0x0073E9DB
+	// Token: 0x060187A1 RID: 100257 RVA: 0x007661C7 File Offset: 0x007643C7
 	public void GetOffset(float time, float deltaTime, Vector output)
 	{
 		this.GetLocation(time, BigJumpUnit.TmpVector);
@@ -175,7 +175,7 @@ public class BigJumpUnit
 		output.SubtractionEqual(BigJumpUnit.TmpVector);
 	}
 
-	// Token: 0x0601AD83 RID: 109955 RVA: 0x00740800 File Offset: 0x0073EA00
+	// Token: 0x060187A2 RID: 100258 RVA: 0x007661EC File Offset: 0x007643EC
 	public void GetSpeed(float time, Vector output)
 	{
 		if (time < this.TimeLength1)
@@ -190,7 +190,7 @@ public class BigJumpUnit
 		GravityUtils.Instance.SetZnInGravity(this.GravityDirect, output, (double)(-(double)this.Gravity2 * num));
 	}
 
-	// Token: 0x0601AD84 RID: 109956 RVA: 0x00740880 File Offset: 0x0073EA80
+	// Token: 0x060187A3 RID: 100259 RVA: 0x0076626C File Offset: 0x0076446C
 	public void GetQuat(float time, Quat @out)
 	{
 		float num = time / this.TimeLength;
@@ -201,7 +201,7 @@ public class BigJumpUnit
 		Quat.Slerp(this.StartQuat, this.EndQuat, num, @out);
 	}
 
-	// Token: 0x0601AD85 RID: 109957 RVA: 0x007408C0 File Offset: 0x0073EAC0
+	// Token: 0x060187A4 RID: 100260 RVA: 0x007662AC File Offset: 0x007644AC
 	public void GetQuatOffset(float time, float deltaTime, Quat @out)
 	{
 		if (!this.GotEndQuat)
@@ -215,72 +215,72 @@ public class BigJumpUnit
 		BigJumpUnit.TmpQuat.Multiply(BigJumpUnit.TmpQuat2, @out);
 	}
 
-	// Token: 0x0400CF96 RID: 53142
+	// Token: 0x0400D387 RID: 54151
 	public const float DEFAULT_GRAVITY = 1960f;
 
-	// Token: 0x0400CF97 RID: 53143
+	// Token: 0x0400D388 RID: 54152
 	private float TimeLength1;
 
-	// Token: 0x0400CF98 RID: 53144
+	// Token: 0x0400D389 RID: 54153
 	private float TimeLength2;
 
-	// Token: 0x0400CF99 RID: 53145
+	// Token: 0x0400D38A RID: 54154
 	private readonly Vector StartPoint = Vector.Create();
 
-	// Token: 0x0400CF9A RID: 53146
+	// Token: 0x0400D38B RID: 54155
 	private readonly Vector MiddlePoint = Vector.Create();
 
-	// Token: 0x0400CF9B RID: 53147
+	// Token: 0x0400D38C RID: 54156
 	private readonly Vector EndPoint = Vector.Create();
 
-	// Token: 0x0400CF9C RID: 53148
+	// Token: 0x0400D38D RID: 54157
 	[Nullable(2)]
 	private UCurveFloat Curve;
 
-	// Token: 0x0400CF9D RID: 53149
+	// Token: 0x0400D38E RID: 54158
 	private float Gravity2;
 
-	// Token: 0x0400CF9E RID: 53150
+	// Token: 0x0400D38F RID: 54159
 	private Vector GravityDirect = Vector.Create(0.0, 0.0, -1.0);
 
-	// Token: 0x0400CF9F RID: 53151
+	// Token: 0x0400D390 RID: 54160
 	private readonly Vector Speed1 = Vector.Create();
 
-	// Token: 0x0400CFA0 RID: 53152
+	// Token: 0x0400D391 RID: 54161
 	private readonly Vector Speed2 = Vector.Create();
 
-	// Token: 0x0400CFA1 RID: 53153
+	// Token: 0x0400D392 RID: 54162
 	[StaticVariableRuleIgnore]
 	private static readonly Vector TmpVector = Vector.Create();
 
-	// Token: 0x0400CFA2 RID: 53154
+	// Token: 0x0400D393 RID: 54163
 	[StaticVariableRuleIgnore]
 	private static readonly Vector TmpVector2 = Vector.Create();
 
-	// Token: 0x0400CFA3 RID: 53155
+	// Token: 0x0400D394 RID: 54164
 	[StaticVariableRuleIgnore]
 	private static readonly Quat TmpQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400CFA4 RID: 53156
+	// Token: 0x0400D395 RID: 54165
 	[StaticVariableRuleIgnore]
 	private static readonly Quat TmpQuat2 = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400CFA5 RID: 53157
+	// Token: 0x0400D396 RID: 54166
 	private bool GotStartQuat;
 
-	// Token: 0x0400CFA6 RID: 53158
+	// Token: 0x0400D397 RID: 54167
 	private bool GotEndQuat;
 
-	// Token: 0x0400CFA7 RID: 53159
+	// Token: 0x0400D398 RID: 54168
 	private readonly Quat StartQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400CFA8 RID: 53160
+	// Token: 0x0400D399 RID: 54169
 	private readonly Quat EndQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400CFA9 RID: 53161
+	// Token: 0x0400D39A RID: 54170
 	private readonly Rotator EndRotator = Rotator.Create();
 
-	// Token: 0x0400CFAA RID: 53162
+	// Token: 0x0400D39B RID: 54171
 	[Nullable(2)]
 	private UCurveFloat RotatorCurve;
 }

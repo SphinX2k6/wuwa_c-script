@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002927 RID: 10535
+// Token: 0x02001EA2 RID: 7842
 [NullableContext(1)]
 [Nullable(0)]
 public class RouletteGridBase : UiPanelBase
 {
-	// Token: 0x06015BE8 RID: 89064 RVA: 0x0057C1E4 File Offset: 0x0057A3E4
+	// Token: 0x060135ED RID: 79341 RVA: 0x005A7224 File Offset: 0x005A5424
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,7 +32,7 @@ public class RouletteGridBase : UiPanelBase
 		};
 	}
 
-	// Token: 0x06015BE9 RID: 89065 RVA: 0x0057C308 File Offset: 0x0057A508
+	// Token: 0x060135EE RID: 79342 RVA: 0x005A7348 File Offset: 0x005A5548
 	protected override void OnStart()
 	{
 		this.IsIconTexture = false;
@@ -47,7 +47,7 @@ public class RouletteGridBase : UiPanelBase
 		this.SetRedDotVisible(false);
 	}
 
-	// Token: 0x06015BEA RID: 89066 RVA: 0x0057C38C File Offset: 0x0057A58C
+	// Token: 0x060135EF RID: 79343 RVA: 0x005A73CC File Offset: 0x005A55CC
 	protected override void OnBeforeDestroy()
 	{
 		this.UnBindRedDot();
@@ -60,19 +60,19 @@ public class RouletteGridBase : UiPanelBase
 		this.Toggle = null;
 	}
 
-	// Token: 0x06015BEB RID: 89067 RVA: 0x0057C3B8 File Offset: 0x0057A5B8
+	// Token: 0x060135F0 RID: 79344 RVA: 0x005A73F8 File Offset: 0x005A55F8
 	protected virtual UniTask Init()
 	{
 		return UniTask.CompletedTask;
 	}
 
-	// Token: 0x06015BEC RID: 89068 RVA: 0x0057C3BF File Offset: 0x0057A5BF
+	// Token: 0x060135F1 RID: 79345 RVA: 0x005A73FF File Offset: 0x005A55FF
 	public bool IsDataValid()
 	{
 		return this.Data != null && this.Data.Id != 0;
 	}
 
-	// Token: 0x06015BED RID: 89069 RVA: 0x0057C3DC File Offset: 0x0057A5DC
+	// Token: 0x060135F2 RID: 79346 RVA: 0x005A741C File Offset: 0x005A561C
 	public void RefreshGrid(RouletteData data)
 	{
 		this.Data = data;
@@ -89,7 +89,7 @@ public class RouletteGridBase : UiPanelBase
 		base.RunAsyncTask(task);
 	}
 
-	// Token: 0x06015BEE RID: 89070 RVA: 0x0057C418 File Offset: 0x0057A618
+	// Token: 0x060135F3 RID: 79347 RVA: 0x005A7458 File Offset: 0x005A5658
 	public void BindRedDot(ERedDotName redDotName, int uId = 0)
 	{
 		UUIItem item = base.GetItem(11);
@@ -105,7 +105,7 @@ public class RouletteGridBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x06015BEF RID: 89071 RVA: 0x0057C46C File Offset: 0x0057A66C
+	// Token: 0x060135F4 RID: 79348 RVA: 0x005A74AC File Offset: 0x005A56AC
 	public void UnBindRedDot()
 	{
 		if (this.RedDotName != null)
@@ -116,13 +116,13 @@ public class RouletteGridBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x06015BF0 RID: 89072 RVA: 0x0057C4B2 File Offset: 0x0057A6B2
+	// Token: 0x060135F5 RID: 79349 RVA: 0x005A74F2 File Offset: 0x005A56F2
 	public void SetRedDotVisible(bool bVisible)
 	{
 		base.GetItem(11).SetUIActive(bVisible);
 	}
 
-	// Token: 0x06015BF1 RID: 89073 RVA: 0x0057C4C4 File Offset: 0x0057A6C4
+	// Token: 0x060135F6 RID: 79350 RVA: 0x005A7504 File Offset: 0x005A5704
 	protected UUIItem GetIconItem(bool? isTexture = null)
 	{
 		if (isTexture ?? this.IsIconTexture)
@@ -132,7 +132,7 @@ public class RouletteGridBase : UiPanelBase
 		return base.GetUiExtendToggleSpriteTransition(5).RootUIComp.Get();
 	}
 
-	// Token: 0x06015BF2 RID: 89074 RVA: 0x0057C50C File Offset: 0x0057A70C
+	// Token: 0x060135F7 RID: 79351 RVA: 0x005A754C File Offset: 0x005A574C
 	protected UniTask LoadSpriteIcon(string path)
 	{
 		RouletteGridBase.<LoadSpriteIcon>d__14 <LoadSpriteIcon>d__;
@@ -144,7 +144,7 @@ public class RouletteGridBase : UiPanelBase
 		return <LoadSpriteIcon>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015BF3 RID: 89075 RVA: 0x0057C558 File Offset: 0x0057A758
+	// Token: 0x060135F8 RID: 79352 RVA: 0x005A7598 File Offset: 0x005A5798
 	protected UniTask LoadTextureIcon(string path)
 	{
 		RouletteGridBase.<LoadTextureIcon>d__15 <LoadTextureIcon>d__;
@@ -156,7 +156,7 @@ public class RouletteGridBase : UiPanelBase
 		return <LoadTextureIcon>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015BF4 RID: 89076 RVA: 0x0057C5A4 File Offset: 0x0057A7A4
+	// Token: 0x060135F9 RID: 79353 RVA: 0x005A75E4 File Offset: 0x005A57E4
 	protected UniTask LoadIconByItemId(int itemId)
 	{
 		RouletteGridBase.<LoadIconByItemId>d__16 <LoadIconByItemId>d__;
@@ -168,7 +168,7 @@ public class RouletteGridBase : UiPanelBase
 		return <LoadIconByItemId>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015BF5 RID: 89077 RVA: 0x0057C5F0 File Offset: 0x0057A7F0
+	// Token: 0x060135FA RID: 79354 RVA: 0x005A7630 File Offset: 0x005A5830
 	private void HideBeforeRefreshState()
 	{
 		base.GetItem(1).SetUIActive(false);
@@ -179,7 +179,7 @@ public class RouletteGridBase : UiPanelBase
 		this.GetIconItem(new bool?(false)).SetUIActive(false);
 	}
 
-	// Token: 0x06015BF6 RID: 89078 RVA: 0x0057C658 File Offset: 0x0057A858
+	// Token: 0x060135FB RID: 79355 RVA: 0x005A7698 File Offset: 0x005A5898
 	private void RefreshGridState()
 	{
 		if (this.Data == null)
@@ -210,25 +210,25 @@ public class RouletteGridBase : UiPanelBase
 		this.GetIconItem(new bool?(this.IsIconTexture)).SetUIActive(state == EGridBehavior.Normal || state == EGridBehavior.Forbidden || state == EGridBehavior.Lock);
 	}
 
-	// Token: 0x06015BF7 RID: 89079 RVA: 0x0057C768 File Offset: 0x0057A968
+	// Token: 0x060135FC RID: 79356 RVA: 0x005A77A8 File Offset: 0x005A59A8
 	public void SetGridEquipped(bool bSelect)
 	{
 		base.GetItem(3).SetUIActive(bSelect);
 	}
 
-	// Token: 0x06015BF8 RID: 89080 RVA: 0x0057C777 File Offset: 0x0057A977
+	// Token: 0x060135FD RID: 79357 RVA: 0x005A77B7 File Offset: 0x005A59B7
 	public void BindOnCanToggleExecuteChange(Func<RouletteData, EToggleState, bool> onItemClicked)
 	{
 		this.OnCanToggleClicked = onItemClicked;
 	}
 
-	// Token: 0x06015BF9 RID: 89081 RVA: 0x0057C780 File Offset: 0x0057A980
+	// Token: 0x060135FE RID: 79358 RVA: 0x005A77C0 File Offset: 0x005A59C0
 	private bool CanToggleExecuteChange()
 	{
 		return this.OnCanToggleClicked == null || this.Data == null || this.Toggle == null || this.OnCanToggleClicked(this.Data, this.Toggle.GetToggleState());
 	}
 
-	// Token: 0x06015BFA RID: 89082 RVA: 0x0057C7B8 File Offset: 0x0057A9B8
+	// Token: 0x060135FF RID: 79359 RVA: 0x005A77F8 File Offset: 0x005A59F8
 	private void SetRouletteGridSelectEvent(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked && this.Data != null)
@@ -237,52 +237,52 @@ public class RouletteGridBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x06015BFB RID: 89083 RVA: 0x0057C7DC File Offset: 0x0057A9DC
+	// Token: 0x06013600 RID: 79360 RVA: 0x005A781C File Offset: 0x005A5A1C
 	private void SetGridEmitEquipRing(EToggleState state)
 	{
 		this.SetGridEquipped(state == EToggleState.ETT_Checked);
 	}
 
-	// Token: 0x06015BFC RID: 89084 RVA: 0x0057C7E8 File Offset: 0x0057A9E8
+	// Token: 0x06013601 RID: 79361 RVA: 0x005A7828 File Offset: 0x005A5A28
 	public void AddToggleStateChangeEvent(Action<EToggleState> eventHandler)
 	{
 		this.Toggle.OnStateChange.Add(eventHandler);
 	}
 
-	// Token: 0x06015BFD RID: 89085 RVA: 0x0057C7FB File Offset: 0x0057A9FB
+	// Token: 0x06013602 RID: 79362 RVA: 0x005A783B File Offset: 0x005A5A3B
 	public void RemoveToggleStateChangeEvent(Action<EToggleState> eventHandler)
 	{
 		this.Toggle.OnStateChange.Remove(eventHandler);
 	}
 
-	// Token: 0x06015BFE RID: 89086 RVA: 0x0057C80E File Offset: 0x0057AA0E
+	// Token: 0x06013603 RID: 79363 RVA: 0x005A784E File Offset: 0x005A5A4E
 	public void SetGridToggleChangeEvent()
 	{
 		this.AddToggleStateChangeEvent(new Action<EToggleState>(this.SetRouletteGridSelectEvent));
 		this.AddToggleStateChangeEvent(new Action<EToggleState>(this.SetGridEmitEquipRing));
 	}
 
-	// Token: 0x06015BFF RID: 89087 RVA: 0x0057C834 File Offset: 0x0057AA34
+	// Token: 0x06013604 RID: 79364 RVA: 0x005A7874 File Offset: 0x005A5A74
 	public void RemoveGridToggleChangeEvent()
 	{
 		this.RemoveToggleStateChangeEvent(new Action<EToggleState>(this.SetRouletteGridSelectEvent));
 		this.RemoveToggleStateChangeEvent(new Action<EToggleState>(this.SetGridEmitEquipRing));
 	}
 
-	// Token: 0x06015C00 RID: 89088 RVA: 0x0057C85A File Offset: 0x0057AA5A
+	// Token: 0x06013605 RID: 79365 RVA: 0x005A789A File Offset: 0x005A5A9A
 	public void SetToggleSelfInteractive(bool bActive)
 	{
 		this.Toggle.SetSelfInteractive(bActive);
 	}
 
-	// Token: 0x06015C01 RID: 89089 RVA: 0x0057C868 File Offset: 0x0057AA68
+	// Token: 0x06013606 RID: 79366 RVA: 0x005A78A8 File Offset: 0x005A5AA8
 	public void SetGridToggleState(bool bSelect, bool bFireEvent = true)
 	{
 		EToggleState state = bSelect ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 		this.Toggle.SetToggleState(state, bFireEvent, false, false);
 	}
 
-	// Token: 0x06015C02 RID: 89090 RVA: 0x0057C88D File Offset: 0x0057AA8D
+	// Token: 0x06013607 RID: 79367 RVA: 0x005A78CD File Offset: 0x005A5ACD
 	public void SetGridToggleNavigation(bool bSelect)
 	{
 		if (bSelect)
@@ -291,32 +291,32 @@ public class RouletteGridBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x06015C03 RID: 89091 RVA: 0x0057C8A6 File Offset: 0x0057AAA6
+	// Token: 0x06013608 RID: 79368 RVA: 0x005A78E6 File Offset: 0x005A5AE6
 	public void SelectOnGrid(bool bSelect)
 	{
 		this.OnSelect(bSelect);
 	}
 
-	// Token: 0x06015C04 RID: 89092 RVA: 0x0057C8AF File Offset: 0x0057AAAF
+	// Token: 0x06013609 RID: 79369 RVA: 0x005A78EF File Offset: 0x005A5AEF
 	protected virtual void OnSelect(bool bSelect)
 	{
 	}
 
-	// Token: 0x0400A1EF RID: 41455
+	// Token: 0x0400A5DA RID: 42458
 	[Nullable(2)]
 	public RouletteData Data;
 
-	// Token: 0x0400A1F0 RID: 41456
+	// Token: 0x0400A5DB RID: 42459
 	[Nullable(2)]
 	protected UUIExtendToggle Toggle;
 
-	// Token: 0x0400A1F1 RID: 41457
+	// Token: 0x0400A5DC RID: 42460
 	protected bool IsIconTexture;
 
-	// Token: 0x0400A1F2 RID: 41458
+	// Token: 0x0400A5DD RID: 42461
 	private ERedDotName? RedDotName;
 
-	// Token: 0x0400A1F3 RID: 41459
+	// Token: 0x0400A5DE RID: 42462
 	[Nullable(new byte[]
 	{
 		2,

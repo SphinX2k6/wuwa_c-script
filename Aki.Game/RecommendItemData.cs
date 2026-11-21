@@ -2,27 +2,27 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020024AE RID: 9390
+// Token: 0x02001995 RID: 6549
 [NullableContext(1)]
 [Nullable(0)]
 public class RecommendItemData
 {
-	// Token: 0x04008DFA RID: 36346
+	// Token: 0x04008F44 RID: 36676
 	public int AttrId;
 
-	// Token: 0x04008DFB RID: 36347
+	// Token: 0x04008F45 RID: 36677
 	public int AddType;
 
-	// Token: 0x04008DFC RID: 36348
+	// Token: 0x04008F46 RID: 36678
 	public List<VisionSelectRecommendData> CurrentSelectArray = new List<VisionSelectRecommendData>();
 
-	// Token: 0x04008DFD RID: 36349
+	// Token: 0x04008F47 RID: 36679
 	public string UsageText = "";
 
-	// Token: 0x04008DFE RID: 36350
+	// Token: 0x04008F48 RID: 36680
 	public int Type;
 
-	// Token: 0x04008DFF RID: 36351
+	// Token: 0x04008F49 RID: 36681
 	[Nullable(new byte[]
 	{
 		2,

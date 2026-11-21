@@ -2,27 +2,27 @@
 
 namespace CSharpScript.Game.Module.MovieMode
 {
-	// Token: 0x0200538B RID: 21387
+	// Token: 0x0200436E RID: 17262
 	public interface IUiLayerSafeZone
 	{
-		// Token: 0x17008397 RID: 33687
-		// (get) Token: 0x06036A26 RID: 223782
-		// (set) Token: 0x06036A27 RID: 223783
+		// Token: 0x17005763 RID: 22371
+		// (get) Token: 0x0602B96C RID: 178540
+		// (set) Token: 0x0602B96D RID: 178541
 		float StretchLeft { get; set; }
 
-		// Token: 0x17008398 RID: 33688
-		// (get) Token: 0x06036A28 RID: 223784
-		// (set) Token: 0x06036A29 RID: 223785
+		// Token: 0x17005764 RID: 22372
+		// (get) Token: 0x0602B96E RID: 178542
+		// (set) Token: 0x0602B96F RID: 178543
 		float StretchRight { get; set; }
 
-		// Token: 0x17008399 RID: 33689
-		// (get) Token: 0x06036A2A RID: 223786
-		// (set) Token: 0x06036A2B RID: 223787
+		// Token: 0x17005765 RID: 22373
+		// (get) Token: 0x0602B970 RID: 178544
+		// (set) Token: 0x0602B971 RID: 178545
 		float StretchTop { get; set; }
 
-		// Token: 0x1700839A RID: 33690
-		// (get) Token: 0x06036A2C RID: 223788
-		// (set) Token: 0x06036A2D RID: 223789
+		// Token: 0x17005766 RID: 22374
+		// (get) Token: 0x0602B972 RID: 178546
+		// (set) Token: 0x0602B973 RID: 178547
 		float StretchBottom { get; set; }
 	}
 }

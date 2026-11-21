@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 {
-	// Token: 0x020051AE RID: 20910
+	// Token: 0x0200417E RID: 16766
 	[Nullable(new byte[]
 	{
 		0,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 	})]
 	public class CollectBadgeSkillItem : GridProxyAbstract<BadgeGroupSkillData>
 	{
-		// Token: 0x060358A6 RID: 219302 RVA: 0x00CAEC70 File Offset: 0x00CACE70
+		// Token: 0x0602A7A1 RID: 173985 RVA: 0x00BFC2AC File Offset: 0x00BFA4AC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			};
 		}
 
-		// Token: 0x060358A7 RID: 219303 RVA: 0x00CAECCC File Offset: 0x00CACECC
+		// Token: 0x0602A7A2 RID: 173986 RVA: 0x00BFC308 File Offset: 0x00BFA508
 		[NullableContext(1)]
 		public override void Refresh(BadgeGroupSkillData data, bool isSelected, int gridIndex)
 		{
@@ -50,26 +50,26 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.Collect
 			base.GetSprite(0).SetUIActive(flag);
 		}
 
-		// Token: 0x060358A8 RID: 219304 RVA: 0x00CAED9E File Offset: 0x00CACF9E
+		// Token: 0x0602A7A3 RID: 173987 RVA: 0x00BFC3DA File Offset: 0x00BFA5DA
 		public override void OnSelected(bool fireEvent)
 		{
 		}
 
-		// Token: 0x060358A9 RID: 219305 RVA: 0x00CAEDA0 File Offset: 0x00CACFA0
+		// Token: 0x0602A7A4 RID: 173988 RVA: 0x00BFC3DC File Offset: 0x00BFA5DC
 		public override void OnDeselected(bool fireEvent)
 		{
 		}
 
-		// Token: 0x0200B335 RID: 45877
+		// Token: 0x02009D6D RID: 40301
 		private static class EComponents
 		{
-			// Token: 0x04036503 RID: 222467
+			// Token: 0x04030F56 RID: 200534
 			public const int SpriteAll = 0;
 
-			// Token: 0x04036504 RID: 222468
+			// Token: 0x04030F57 RID: 200535
 			public const int TextName = 1;
 
-			// Token: 0x04036505 RID: 222469
+			// Token: 0x04030F58 RID: 200536
 			public const int TextDesc = 2;
 		}
 	}

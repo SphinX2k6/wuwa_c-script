@@ -6,50 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200242E RID: 9262
+	// Token: 0x02000789 RID: 1929
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/MovieScene.MovieSceneSequence")]
-	[UnrealStructLayout(104, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 104)]
+	[UnrealStructLayout(120, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 120)]
 	public class UMovieSceneSequence : UMovieSceneSignedObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06022B35 RID: 142133 RVA: 0x00335290 File Offset: 0x00333490
+		// Token: 0x0600A65E RID: 42590 RVA: 0x000F5D81 File Offset: 0x000F3F81
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UMovieSceneSequence._ClassPtr;
 		}
 
-		// Token: 0x06022B36 RID: 142134 RVA: 0x0033529C File Offset: 0x0033349C
+		// Token: 0x0600A65F RID: 42591 RVA: 0x000F5D90 File Offset: 0x000F3F90
 		public UMovieSceneSequence() : this(BuiltinUtils.AllocNativeUObject(UMovieSceneSequence.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06022B37 RID: 142135 RVA: 0x003352C4 File Offset: 0x003334C4
+		// Token: 0x0600A660 RID: 42592 RVA: 0x000F5DB8 File Offset: 0x000F3FB8
 		public UMovieSceneSequence(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UMovieSceneSequence.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17008580 RID: 34176
-		// (get) Token: 0x06022B38 RID: 142136 RVA: 0x003352F7 File Offset: 0x003334F7
-		// (set) Token: 0x06022B39 RID: 142137 RVA: 0x0033530B File Offset: 0x0033350B
-		[Nullable(2)]
-		public unsafe UMovieSceneCompiledData CompiledData
-		{
-			[NullableContext(2)]
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<UMovieSceneCompiledData>(base.NativePtr / (IntPtr)sizeof(void*) + UMovieSceneSequence.__PropertyOffset_CompiledData);
-			}
-			[NullableContext(2)]
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + UMovieSceneSequence.__PropertyOffset_CompiledData, value);
-			}
-		}
-
-		// Token: 0x17008581 RID: 34177
-		// (get) Token: 0x06022B3A RID: 142138 RVA: 0x00335320 File Offset: 0x00333520
-		// (set) Token: 0x06022B3B RID: 142139 RVA: 0x00335330 File Offset: 0x00333530
+		// Token: 0x17001EEB RID: 7915
+		// (get) Token: 0x0600A661 RID: 42593 RVA: 0x000F5DEB File Offset: 0x000F3FEB
+		// (set) Token: 0x0600A662 RID: 42594 RVA: 0x000F5DFB File Offset: 0x000F3FFB
 		public unsafe EMovieSceneCompletionMode DefaultCompletionMode
 		{
 			get
@@ -62,9 +44,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008582 RID: 34178
-		// (get) Token: 0x06022B3C RID: 142140 RVA: 0x00335341 File Offset: 0x00333541
-		// (set) Token: 0x06022B3D RID: 142141 RVA: 0x00335351 File Offset: 0x00333551
+		// Token: 0x17001EEC RID: 7916
+		// (get) Token: 0x0600A663 RID: 42595 RVA: 0x000F5E0C File Offset: 0x000F400C
+		// (set) Token: 0x0600A664 RID: 42596 RVA: 0x000F5E1C File Offset: 0x000F401C
 		public unsafe bool bParentContextsAreSignificant
 		{
 			get
@@ -77,9 +59,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008583 RID: 34179
-		// (get) Token: 0x06022B3E RID: 142142 RVA: 0x00335362 File Offset: 0x00333562
-		// (set) Token: 0x06022B3F RID: 142143 RVA: 0x00335372 File Offset: 0x00333572
+		// Token: 0x17001EED RID: 7917
+		// (get) Token: 0x0600A665 RID: 42597 RVA: 0x000F5E2D File Offset: 0x000F402D
+		// (set) Token: 0x0600A666 RID: 42598 RVA: 0x000F5E3D File Offset: 0x000F403D
 		public unsafe bool bPlayableDirectly
 		{
 			get
@@ -92,9 +74,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008584 RID: 34180
-		// (get) Token: 0x06022B40 RID: 142144 RVA: 0x00335383 File Offset: 0x00333583
-		// (set) Token: 0x06022B41 RID: 142145 RVA: 0x00335393 File Offset: 0x00333593
+		// Token: 0x17001EEE RID: 7918
+		// (get) Token: 0x0600A667 RID: 42599 RVA: 0x000F5E4E File Offset: 0x000F404E
+		// (set) Token: 0x0600A668 RID: 42600 RVA: 0x000F5E5E File Offset: 0x000F405E
 		public unsafe EMovieSceneSequenceFlags SequenceFlags
 		{
 			get
@@ -107,120 +89,117 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06022B42 RID: 142146 RVA: 0x003353A4 File Offset: 0x003335A4
+		// Token: 0x0600A669 RID: 42601 RVA: 0x000F5E6F File Offset: 0x000F406F
 		public bool HasMasterTrackTag(FName InTrackTagName, bool IncludeSubSequence)
 		{
 			return UMovieSceneSequence.__HasMasterTrackTag_Internal(base.NativePtr, InTrackTagName, IncludeSubSequence);
 		}
 
-		// Token: 0x06022B43 RID: 142147 RVA: 0x003353B3 File Offset: 0x003335B3
+		// Token: 0x0600A66A RID: 42602 RVA: 0x000F5E7E File Offset: 0x000F407E
 		public bool HasBindingTag(FName InBindingName, bool IncludeSubSequence)
 		{
 			return UMovieSceneSequence.__HasBindingTag_Internal(base.NativePtr, InBindingName, IncludeSubSequence);
 		}
 
-		// Token: 0x06022B44 RID: 142148 RVA: 0x003353C2 File Offset: 0x003335C2
+		// Token: 0x0600A66B RID: 42603 RVA: 0x000F5E8D File Offset: 0x000F408D
 		public TArray<UMovieSceneTrack> FindMasterTracksByTag(FName InTrackTagName)
 		{
 			return new TArray<UMovieSceneTrack>(UMovieSceneSequence.__FindMasterTracksByTag_Internal(base.NativePtr, InTrackTagName), null);
 		}
 
-		// Token: 0x06022B45 RID: 142149 RVA: 0x003353D6 File Offset: 0x003335D6
+		// Token: 0x0600A66C RID: 42604 RVA: 0x000F5EA1 File Offset: 0x000F40A1
 		public TArray<UMovieSceneTrack> FindMasterTracksByBothTags([Nullable(2)] TArray<FName> InTrackTagNames)
 		{
 			return new TArray<UMovieSceneTrack>(UMovieSceneSequence.__FindMasterTracksByBothTags_Internal(base.NativePtr, (InTrackTagNames ?? new TArray<FName>()).NativePtr), null);
 		}
 
-		// Token: 0x06022B46 RID: 142150 RVA: 0x003353F8 File Offset: 0x003335F8
+		// Token: 0x0600A66D RID: 42605 RVA: 0x000F5EC3 File Offset: 0x000F40C3
 		[NullableContext(2)]
 		public UMovieSceneTrack FindMasterTrackByTag(FName InTrackTagName)
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UMovieSceneTrack>(UMovieSceneSequence.__FindMasterTrackByTag_Internal(base.NativePtr, InTrackTagName));
 		}
 
-		// Token: 0x06022B47 RID: 142151 RVA: 0x0033540B File Offset: 0x0033360B
+		// Token: 0x0600A66E RID: 42606 RVA: 0x000F5ED6 File Offset: 0x000F40D6
 		public TArray<FMovieSceneObjectBindingID> FindBindingsByTag(FName InBindingName)
 		{
 			return new TArray<FMovieSceneObjectBindingID>(UMovieSceneSequence.__FindBindingsByTag_Internal(base.NativePtr, InBindingName), null);
 		}
 
-		// Token: 0x06022B48 RID: 142152 RVA: 0x0033541F File Offset: 0x0033361F
+		// Token: 0x0600A66F RID: 42607 RVA: 0x000F5EEA File Offset: 0x000F40EA
 		public TArray<FMovieSceneObjectBindingID> FindBindingsByBothTags([Nullable(2)] TArray<FName> InBindingNames)
 		{
 			return new TArray<FMovieSceneObjectBindingID>(UMovieSceneSequence.__FindBindingsByBothTags_Internal(base.NativePtr, (InBindingNames ?? new TArray<FName>()).NativePtr), null);
 		}
 
-		// Token: 0x06022B49 RID: 142153 RVA: 0x00335441 File Offset: 0x00333641
+		// Token: 0x0600A670 RID: 42608 RVA: 0x000F5F0C File Offset: 0x000F410C
 		public FMovieSceneObjectBindingID FindBindingByTag(FName InBindingName)
 		{
 			return new FMovieSceneObjectBindingID(UMovieSceneSequence.__FindBindingByTag_Internal(base.NativePtr, InBindingName), null);
 		}
 
-		// Token: 0x06022B4A RID: 142154
+		// Token: 0x0600A671 RID: 42609
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __HasMasterTrackTag_Internal(IntPtr @this, FName InTrackTagName, bool IncludeSubSequence);
 
-		// Token: 0x06022B4B RID: 142155
+		// Token: 0x0600A672 RID: 42610
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __HasBindingTag_Internal(IntPtr @this, FName InBindingName, bool IncludeSubSequence);
 
-		// Token: 0x06022B4C RID: 142156
+		// Token: 0x0600A673 RID: 42611
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __FindMasterTracksByTag_Internal(IntPtr @this, FName InTrackTagName);
 
-		// Token: 0x06022B4D RID: 142157
+		// Token: 0x0600A674 RID: 42612
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __FindMasterTracksByBothTags_Internal(IntPtr @this, IntPtr InTrackTagNames);
 
-		// Token: 0x06022B4E RID: 142158
+		// Token: 0x0600A675 RID: 42613
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __FindMasterTrackByTag_Internal(IntPtr @this, FName InTrackTagName);
 
-		// Token: 0x06022B4F RID: 142159
+		// Token: 0x0600A676 RID: 42614
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __FindBindingsByTag_Internal(IntPtr @this, FName InBindingName);
 
-		// Token: 0x06022B50 RID: 142160
+		// Token: 0x0600A677 RID: 42615
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __FindBindingsByBothTags_Internal(IntPtr @this, IntPtr InBindingNames);
 
-		// Token: 0x06022B51 RID: 142161
+		// Token: 0x0600A678 RID: 42616
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __FindBindingByTag_Internal(IntPtr @this, FName InBindingName);
 
-		// Token: 0x06022B52 RID: 142162 RVA: 0x00335455 File Offset: 0x00333655
+		// Token: 0x0600A679 RID: 42617 RVA: 0x000F5F20 File Offset: 0x000F4120
 		static UMovieSceneSequence()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/MovieScene.MovieSceneSequence");
 		}
 
-		// Token: 0x06022B53 RID: 142163 RVA: 0x00335463 File Offset: 0x00333663
+		// Token: 0x0600A67A RID: 42618 RVA: 0x000F5F2E File Offset: 0x000F412E
 		protected UMovieSceneSequence(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040128A1 RID: 75937
+		// Token: 0x04004753 RID: 18259
 		public new const string __ObjectPath = "/Script/MovieScene.MovieSceneSequence";
 
-		// Token: 0x040128A2 RID: 75938
+		// Token: 0x04004754 RID: 18260
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040128A3 RID: 75939
+		// Token: 0x04004755 RID: 18261
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040128A4 RID: 75940
-		internal static int __PropertyOffset_CompiledData;
-
-		// Token: 0x040128A5 RID: 75941
+		// Token: 0x04004756 RID: 18262
 		internal static int __PropertyOffset_DefaultCompletionMode;
 
-		// Token: 0x040128A6 RID: 75942
+		// Token: 0x04004757 RID: 18263
 		internal static int __PropertyOffset_bParentContextsAreSignificant;
 
-		// Token: 0x040128A7 RID: 75943
+		// Token: 0x04004758 RID: 18264
 		internal static int __PropertyOffset_bPlayableDirectly;
 
-		// Token: 0x040128A8 RID: 75944
+		// Token: 0x04004759 RID: 18265
 		internal static int __PropertyOffset_SequenceFlags;
 	}
 }

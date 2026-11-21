@@ -12,16 +12,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.DeadRevive
 {
-	// Token: 0x02005ACD RID: 23245
+	// Token: 0x02004AAE RID: 19118
 	public class ShareTimesReviveView : UiViewBase
 	{
-		// Token: 0x0603ADEA RID: 241130 RVA: 0x00E08FDA File Offset: 0x00E071DA
+		// Token: 0x0602FD5C RID: 195932 RVA: 0x00D59CBA File Offset: 0x00D57EBA
 		[NullableContext(1)]
 		public ShareTimesReviveView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603ADEB RID: 241131 RVA: 0x00E08FE4 File Offset: 0x00E071E4
+		// Token: 0x0602FD5D RID: 195933 RVA: 0x00D59CC4 File Offset: 0x00D57EC4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603ADEC RID: 241132 RVA: 0x00E09110 File Offset: 0x00E07310
+		// Token: 0x0602FD5E RID: 195934 RVA: 0x00D59DF0 File Offset: 0x00D57FF0
 		private void OnClickRevive()
 		{
 			if (!this.CanRevive())
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			DeadReviveController.Instance.TryReviveCurrentRoleByShare();
 		}
 
-		// Token: 0x0603ADED RID: 241133 RVA: 0x00E09128 File Offset: 0x00E07328
+		// Token: 0x0602FD5F RID: 195935 RVA: 0x00D59E08 File Offset: 0x00D58008
 		private void OnClickQuitBtn()
 		{
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.AbyssExit);
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x0603ADEE RID: 241134 RVA: 0x00E0917C File Offset: 0x00E0737C
+		// Token: 0x0602FD60 RID: 195936 RVA: 0x00D59E5C File Offset: 0x00D5805C
 		protected override void OnStart()
 		{
 			UUIText text = base.GetText(2);
@@ -100,27 +100,27 @@ namespace CSharpScript.Game.Module.DeadRevive
 			}
 		}
 
-		// Token: 0x0603ADEF RID: 241135 RVA: 0x00E0921A File Offset: 0x00E0741A
+		// Token: 0x0602FD61 RID: 195937 RVA: 0x00D59EFA File Offset: 0x00D580FA
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnShareReviveTimesChange, new Action(this.RefreshReviveView));
 			EventSystem.Instance.Add<long, float>(EEventName.OnRoleReviveCooldownChange, new Action<long, float>(this.OnRoleReviveCooldownChange));
 		}
 
-		// Token: 0x0603ADF0 RID: 241136 RVA: 0x00E09254 File Offset: 0x00E07454
+		// Token: 0x0602FD62 RID: 195938 RVA: 0x00D59F34 File Offset: 0x00D58134
 		protected override void OnBeforeShow()
 		{
 			this.RefreshReviveView();
 		}
 
-		// Token: 0x0603ADF1 RID: 241137 RVA: 0x00E0925C File Offset: 0x00E0745C
+		// Token: 0x0602FD63 RID: 195939 RVA: 0x00D59F3C File Offset: 0x00D5813C
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnShareReviveTimesChange, new Action(this.RefreshReviveView));
 			EventSystem.Instance.Remove(EEventName.OnRoleReviveCooldownChange, new Action<long, float>(this.OnRoleReviveCooldownChange));
 		}
 
-		// Token: 0x0603ADF2 RID: 241138 RVA: 0x00E09298 File Offset: 0x00E07498
+		// Token: 0x0602FD64 RID: 195940 RVA: 0x00D59F78 File Offset: 0x00D58178
 		private void RefreshReviveView()
 		{
 			int currentShareReviveTimes = DeadReviveModel.Instance.CurrentShareReviveTimes;
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.DeadRevive
 			base.GetButton(0).GetRootComponent().SetUIActive(this.CanRevive());
 		}
 
-		// Token: 0x0603ADF3 RID: 241139 RVA: 0x00E09374 File Offset: 0x00E07574
+		// Token: 0x0602FD65 RID: 195941 RVA: 0x00D5A054 File Offset: 0x00D58254
 		private void OnRoleReviveCooldownChange(long creatureDataId, float remainSeconds)
 		{
 			SceneTeamItem getCurrentTeamItem = SceneTeamModel.Instance.GetCurrentTeamItem;
@@ -162,34 +162,34 @@ namespace CSharpScript.Game.Module.DeadRevive
 			this.RefreshReviveView();
 		}
 
-		// Token: 0x0603ADF4 RID: 241140 RVA: 0x00E093C7 File Offset: 0x00E075C7
+		// Token: 0x0602FD66 RID: 195942 RVA: 0x00D5A0A7 File Offset: 0x00D582A7
 		private bool CanRevive()
 		{
 			return this.ReviveTimes > 0 && this.ReviveWaitSeconds <= 0f;
 		}
 
-		// Token: 0x0401EB95 RID: 125845
+		// Token: 0x04019651 RID: 104017
 		private float ReviveWaitSeconds;
 
-		// Token: 0x0401EB96 RID: 125846
+		// Token: 0x04019652 RID: 104018
 		private int ReviveTimes;
 
-		// Token: 0x0200BD1E RID: 48414
+		// Token: 0x0200A726 RID: 42790
 		private class EShareTimesReviveViewComponent
 		{
-			// Token: 0x040390A4 RID: 233636
+			// Token: 0x04033A6E RID: 211566
 			public const int ReviveBtn = 0;
 
-			// Token: 0x040390A5 RID: 233637
+			// Token: 0x04033A6F RID: 211567
 			public const int QuitButton = 1;
 
-			// Token: 0x040390A6 RID: 233638
+			// Token: 0x04033A70 RID: 211568
 			public const int ReviveTitle = 2;
 
-			// Token: 0x040390A7 RID: 233639
+			// Token: 0x04033A71 RID: 211569
 			public const int ReviveContent = 3;
 
-			// Token: 0x040390A8 RID: 233640
+			// Token: 0x04033A72 RID: 211570
 			public const int ReviveWaitTime = 4;
 		}
 	}

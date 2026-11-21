@@ -5,15 +5,15 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004994 RID: 18836
+	// Token: 0x0200390E RID: 14606
 	public class MaskComponent : HotKeyComponent
 	{
-		// Token: 0x06031127 RID: 200999 RVA: 0x00B637D6 File Offset: 0x00B619D6
+		// Token: 0x06025C5D RID: 154717 RVA: 0x00A9E726 File Offset: 0x00A9C926
 		public MaskComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x06031128 RID: 201000 RVA: 0x00B637E0 File Offset: 0x00B619E0
+		// Token: 0x06025C5E RID: 154718 RVA: 0x00A9E730 File Offset: 0x00A9C930
 		protected override void OnPress(HotKeyMap config)
 		{
 			UUIItem uuiitem = this.RootItem.GetRootCanvas().GetOwner().RootComponent as UUIItem;
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06031129 RID: 201001 RVA: 0x00B63820 File Offset: 0x00B61A20
+		// Token: 0x06025C5F RID: 154719 RVA: 0x00A9E770 File Offset: 0x00A9C970
 		[NullableContext(1)]
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{

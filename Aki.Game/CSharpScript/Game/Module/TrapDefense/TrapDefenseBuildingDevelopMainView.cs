@@ -13,17 +13,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004AE2 RID: 19170
+	// Token: 0x02003A8A RID: 14986
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseBuildingDevelopMainView : UiViewBase
 	{
-		// Token: 0x06031A6F RID: 203375 RVA: 0x00B8572C File Offset: 0x00B8392C
+		// Token: 0x060267FF RID: 157695 RVA: 0x00AC96E0 File Offset: 0x00AC78E0
 		public TrapDefenseBuildingDevelopMainView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06031A70 RID: 203376 RVA: 0x00B85784 File Offset: 0x00B83984
+		// Token: 0x06026800 RID: 157696 RVA: 0x00AC9738 File Offset: 0x00AC7938
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06031A71 RID: 203377 RVA: 0x00B85934 File Offset: 0x00B83B34
+		// Token: 0x06026801 RID: 157697 RVA: 0x00AC98E8 File Offset: 0x00AC7AE8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TrapDefenseBuildingDevelopMainView.<OnBeforeStartAsync>d__35 <OnBeforeStartAsync>d__;
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031A72 RID: 203378 RVA: 0x00B85978 File Offset: 0x00B83B78
+		// Token: 0x06026802 RID: 157698 RVA: 0x00AC992C File Offset: 0x00AC7B2C
 		protected override void OnStart()
 		{
 			this.ScrollView = new GenericScrollViewNew<TrapDefenseBuildingDevelopTypeItem, TrapDefenseBuildingTypeData>(base.GetScrollViewWithScrollbar(1), new Func<TrapDefenseBuildingDevelopTypeItem>(this.CreateItemGrid), null, false, null);
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			EventSystem.Instance.Emit<bool>(EEventName.TrapDefenseBuildingDevelopMainViewStart, this.IsInDungeon);
 		}
 
-		// Token: 0x06031A73 RID: 203379 RVA: 0x00B85C3C File Offset: 0x00B83E3C
+		// Token: 0x06026803 RID: 157699 RVA: 0x00AC9BF0 File Offset: 0x00AC7DF0
 		protected override void OnAfterShow()
 		{
 			foreach (CommonDragItemLogic<TrapDefenseBuildingDevelopDragDataItem, TrapDefenseBuildingDevelopItemData> commonDragItemLogic in this.BottomDragLogic)
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031A74 RID: 203380 RVA: 0x00B85CA0 File Offset: 0x00B83EA0
+		// Token: 0x06026804 RID: 157700 RVA: 0x00AC9C54 File Offset: 0x00AC7E54
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<TrapDefenseBuildingDevelopItemData>(EEventName.TrapDefenseBuildingDevelopSelectUpdate, new Action<TrapDefenseBuildingDevelopItemData>(this.OnClickItem));
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			EventSystem.Instance.Add(EEventName.TrapDefenseOnBranchUpdate, new Action(this.OnOrganNetUpdate));
 		}
 
-		// Token: 0x06031A75 RID: 203381 RVA: 0x00B85D90 File Offset: 0x00B83F90
+		// Token: 0x06026805 RID: 157701 RVA: 0x00AC9D44 File Offset: 0x00AC7F44
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<TrapDefenseBuildingDevelopItemData>(EEventName.TrapDefenseBuildingDevelopSelectUpdate, new Action<TrapDefenseBuildingDevelopItemData>(this.OnClickItem));
@@ -164,14 +164,14 @@ namespace CSharpScript.Game.Module.TrapDefense
 			EventSystem.Instance.Remove(EEventName.TrapDefenseOnBranchUpdate, new Action(this.OnOrganNetUpdate));
 		}
 
-		// Token: 0x06031A76 RID: 203382 RVA: 0x00B85E7D File Offset: 0x00B8407D
+		// Token: 0x06026806 RID: 157702 RVA: 0x00AC9E31 File Offset: 0x00AC8031
 		protected override void OnBeforeShow()
 		{
 			this.RefreshCurrency();
 			this.RefreshTabListAsync();
 		}
 
-		// Token: 0x06031A77 RID: 203383 RVA: 0x00B85E8C File Offset: 0x00B8408C
+		// Token: 0x06026807 RID: 157703 RVA: 0x00AC9E40 File Offset: 0x00AC8040
 		protected override void OnBeforeDestroy()
 		{
 			TrapDefenseModel.Instance.ViewModelBuildingDevelop.SetCurRecommendLevel(null);
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031A78 RID: 203384 RVA: 0x00B85EDC File Offset: 0x00B840DC
+		// Token: 0x06026808 RID: 157704 RVA: 0x00AC9E90 File Offset: 0x00AC8090
 		protected void InitTabComponent()
 		{
 			this.TabComponent = new TabComponentWithCaptionItem<CommonTabItem>(base.GetItem(0), new CommonTabComponentData<CommonTabItem>(new Func<UUIItem, int?, CommonTabItem>(this.ProxyCreate), new Action<int>(this.ToggleCallBack), new Func<int, CommonTabData>(this.GetCommonData)), new Action(this.OnCloseClicked), false);
@@ -199,7 +199,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			});
 		}
 
-		// Token: 0x06031A79 RID: 203385 RVA: 0x00B85F90 File Offset: 0x00B84190
+		// Token: 0x06026809 RID: 157705 RVA: 0x00AC9F44 File Offset: 0x00AC8144
 		protected UniTask InitDragItem()
 		{
 			TrapDefenseBuildingDevelopMainView.<InitDragItem>d__43 <InitDragItem>d__;
@@ -210,7 +210,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <InitDragItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031A7A RID: 203386 RVA: 0x00B85FD4 File Offset: 0x00B841D4
+		// Token: 0x0602680A RID: 157706 RVA: 0x00AC9F88 File Offset: 0x00AC8188
 		private void OnGridPointerDown(TrapDefenseBuildingDevelopTypeGridItem item, TrapDefenseBuildingDevelopItemData data)
 		{
 			if (!this.IsInDungeon)
@@ -234,7 +234,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.DragClickTick = TickSystem.Instance.Add(new Action<float>(this.OnDragTick), "TrapDefenseDevelopDragTick", ETickingGroup.TG_PrePhysics, true, 0, true).Id;
 		}
 
-		// Token: 0x06031A7B RID: 203387 RVA: 0x00B860A4 File Offset: 0x00B842A4
+		// Token: 0x0602680B RID: 157707 RVA: 0x00ACA058 File Offset: 0x00AC8258
 		private void OnGridPointerUp(TrapDefenseBuildingDevelopTypeGridItem item, TrapDefenseBuildingDevelopItemData data)
 		{
 			if (!this.IsInDungeon)
@@ -257,7 +257,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031A7C RID: 203388 RVA: 0x00B8610C File Offset: 0x00B8430C
+		// Token: 0x0602680C RID: 157708 RVA: 0x00ACA0C0 File Offset: 0x00AC82C0
 		private void RefreshLongPressItemPosition()
 		{
 			FVector? pointerEventDataPosition = LguiEventSystemManager.Instance.GetPointerEventDataPosition(0);
@@ -275,7 +275,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			item.SetLGUISpaceAbsolutePosition(fvector);
 		}
 
-		// Token: 0x06031A7D RID: 203389 RVA: 0x00B861D3 File Offset: 0x00B843D3
+		// Token: 0x0602680D RID: 157709 RVA: 0x00ACA187 File Offset: 0x00AC8387
 		private void ClearDragClickTick()
 		{
 			if (this.DragClickTick != -1)
@@ -285,7 +285,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031A7E RID: 203390 RVA: 0x00B861F6 File Offset: 0x00B843F6
+		// Token: 0x0602680E RID: 157710 RVA: 0x00ACA1AA File Offset: 0x00AC83AA
 		private void SetPressItemShowState(bool isShow)
 		{
 			UUIItem item = base.GetItem(7);
@@ -296,7 +296,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			item.SetUIActive(isShow);
 		}
 
-		// Token: 0x06031A7F RID: 203391 RVA: 0x00B8620A File Offset: 0x00B8440A
+		// Token: 0x0602680F RID: 157711 RVA: 0x00ACA1BE File Offset: 0x00AC83BE
 		private void SetPressItemAlpha(float alpha)
 		{
 			UUIItem item = base.GetItem(7);
@@ -307,7 +307,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.LongPressItemAlpha = alpha;
 		}
 
-		// Token: 0x06031A80 RID: 203392 RVA: 0x00B86226 File Offset: 0x00B84426
+		// Token: 0x06026810 RID: 157712 RVA: 0x00ACA1DA File Offset: 0x00AC83DA
 		private void SetBarAmount(float value)
 		{
 			UUISprite sprite = base.GetSprite(9);
@@ -318,7 +318,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			sprite.SetFillAmount(value);
 		}
 
-		// Token: 0x06031A81 RID: 203393 RVA: 0x00B8623C File Offset: 0x00B8443C
+		// Token: 0x06026811 RID: 157713 RVA: 0x00ACA1F0 File Offset: 0x00AC83F0
 		private void OnDragTick(float _)
 		{
 			if (!this.IsInDungeon)
@@ -374,7 +374,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.SetBarAmount(this.FillPressTime / this.LongPressTime);
 		}
 
-		// Token: 0x06031A82 RID: 203394 RVA: 0x00B863F4 File Offset: 0x00B845F4
+		// Token: 0x06026812 RID: 157714 RVA: 0x00ACA3A8 File Offset: 0x00AC85A8
 		private void CheckPointerItemMove(float _)
 		{
 			bool flag = LguiEventSystemManager.Instance.IsPressComponentIsValid(0);
@@ -395,7 +395,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031A83 RID: 203395 RVA: 0x00B86461 File Offset: 0x00B84661
+		// Token: 0x06026813 RID: 157715 RVA: 0x00ACA415 File Offset: 0x00AC8615
 		private void ClearCheckPointerUpTick()
 		{
 			if (this.CheckPointerUpTick != -1)
@@ -405,7 +405,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031A84 RID: 203396 RVA: 0x00B86484 File Offset: 0x00B84684
+		// Token: 0x06026814 RID: 157716 RVA: 0x00ACA438 File Offset: 0x00AC8638
 		protected void OnBeginDrag(int index)
 		{
 			foreach (CommonDragItemLogic<TrapDefenseBuildingDevelopDragDataItem, TrapDefenseBuildingDevelopItemData> commonDragItemLogic in this.BottomDragLogic)
@@ -423,7 +423,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.CurrentDragIndex = index;
 		}
 
-		// Token: 0x06031A85 RID: 203397 RVA: 0x00B86544 File Offset: 0x00B84744
+		// Token: 0x06026815 RID: 157717 RVA: 0x00ACA4F8 File Offset: 0x00AC86F8
 		protected void OnDragEndCallBack(TrapDefenseBuildingDevelopDragDataItem self, TrapDefenseBuildingDevelopDragDataItem target, bool _)
 		{
 			if (target == null)
@@ -459,7 +459,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			});
 		}
 
-		// Token: 0x06031A86 RID: 203398 RVA: 0x00B865E4 File Offset: 0x00B847E4
+		// Token: 0x06026816 RID: 157718 RVA: 0x00ACA598 File Offset: 0x00AC8798
 		private void OnMoveToScrollViewDragEndCallBack(int index, TrapDefenseBuildingDevelopItemData data)
 		{
 			this.PressTime = 0f;
@@ -476,7 +476,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			});
 		}
 
-		// Token: 0x06031A87 RID: 203399 RVA: 0x00B86658 File Offset: 0x00B84858
+		// Token: 0x06026817 RID: 157719 RVA: 0x00ACA60C File Offset: 0x00AC880C
 		protected void OnStartDragCallBack(int _)
 		{
 			base.GetItem(6).SetUIActive(true);
@@ -486,7 +486,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031A88 RID: 203400 RVA: 0x00B866B8 File Offset: 0x00B848B8
+		// Token: 0x06026818 RID: 157720 RVA: 0x00ACA66C File Offset: 0x00AC886C
 		protected void OnClickAndRefreshView(int index)
 		{
 			base.GetItem(6).SetUIActive(false);
@@ -497,7 +497,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.SetCurrentSelectBottomIndex(index);
 		}
 
-		// Token: 0x06031A89 RID: 203401 RVA: 0x00B866E8 File Offset: 0x00B848E8
+		// Token: 0x06026819 RID: 157721 RVA: 0x00ACA69C File Offset: 0x00AC889C
 		private void SetCurrentSelectBottomIndex(int index)
 		{
 			if (this.CurrentSelectedBottomIndex == index)
@@ -512,13 +512,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031A8A RID: 203402 RVA: 0x00B8674C File Offset: 0x00B8494C
+		// Token: 0x0602681A RID: 157722 RVA: 0x00ACA700 File Offset: 0x00AC8900
 		protected void OnClickFail(int index)
 		{
 			this.ResetPosition(true);
 		}
 
-		// Token: 0x06031A8B RID: 203403 RVA: 0x00B86758 File Offset: 0x00B84958
+		// Token: 0x0602681B RID: 157723 RVA: 0x00ACA70C File Offset: 0x00AC890C
 		private void ResetPosition(bool playBackToStartPositionAnimation = true)
 		{
 			foreach (CommonDragItemLogic<TrapDefenseBuildingDevelopDragDataItem, TrapDefenseBuildingDevelopItemData> commonDragItemLogic in this.BottomDragLogic)
@@ -533,7 +533,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			base.GetItem(6).SetUIActive(false);
 		}
 
-		// Token: 0x06031A8C RID: 203404 RVA: 0x00B86800 File Offset: 0x00B84A00
+		// Token: 0x0602681C RID: 157724 RVA: 0x00ACA7B4 File Offset: 0x00AC89B4
 		protected void UpdateDetail(TrapDefenseBuildingDevelopItemData data, bool needAnim = true)
 		{
 			if (needAnim)
@@ -543,7 +543,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.DetailInfo.UpdateDetail(data);
 		}
 
-		// Token: 0x06031A8D RID: 203405 RVA: 0x00B86820 File Offset: 0x00B84A20
+		// Token: 0x0602681D RID: 157725 RVA: 0x00ACA7D4 File Offset: 0x00AC89D4
 		private void RefreshCurrency()
 		{
 			TrapDefenseBaseConfig? activityConfig = TrapDefenseConfig.Instance.GetActivityConfig();
@@ -561,19 +561,19 @@ namespace CSharpScript.Game.Module.TrapDefense
 			costBtn.RefreshTemp(techPointItem, remainPoints.ToString());
 		}
 
-		// Token: 0x06031A8E RID: 203406 RVA: 0x00B86882 File Offset: 0x00B84A82
+		// Token: 0x0602681E RID: 157726 RVA: 0x00ACA836 File Offset: 0x00AC8A36
 		private void OnOrganNetUpdate()
 		{
 			this.UpdateDetail(this.CurSelectedData, true);
 		}
 
-		// Token: 0x06031A8F RID: 203407 RVA: 0x00B86891 File Offset: 0x00B84A91
+		// Token: 0x0602681F RID: 157727 RVA: 0x00ACA845 File Offset: 0x00AC8A45
 		private void OnCloseClicked()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06031A90 RID: 203408 RVA: 0x00B8689C File Offset: 0x00B84A9C
+		// Token: 0x06026820 RID: 157728 RVA: 0x00ACA850 File Offset: 0x00AC8A50
 		protected bool CanToggleChange(int index, bool? _)
 		{
 			if (Info.Instance.IsInGamepad())
@@ -594,13 +594,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return true;
 		}
 
-		// Token: 0x06031A91 RID: 203409 RVA: 0x00B86921 File Offset: 0x00B84B21
+		// Token: 0x06026821 RID: 157729 RVA: 0x00ACA8D5 File Offset: 0x00AC8AD5
 		private CommonTabItem ProxyCreate([Nullable(2)] UUIItem uiItem, int? index)
 		{
 			return new CommonTabItem();
 		}
 
-		// Token: 0x06031A92 RID: 203410 RVA: 0x00B86928 File Offset: 0x00B84B28
+		// Token: 0x06026822 RID: 157730 RVA: 0x00ACA8DC File Offset: 0x00AC8ADC
 		private void ToggleCallBack(int index)
 		{
 			this.LastClickTime = Time.Instance.Now;
@@ -698,14 +698,14 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.UpdateDetail(this.CurSelectedData, true);
 		}
 
-		// Token: 0x06031A93 RID: 203411 RVA: 0x00B86B20 File Offset: 0x00B84D20
+		// Token: 0x06026823 RID: 157731 RVA: 0x00ACAAD4 File Offset: 0x00AC8CD4
 		private CommonTabData GetCommonData(int index)
 		{
 			ITrapDefenseBuildingDevelopTabData trapDefenseBuildingDevelopTabData = this.TabDataList[index];
 			return new CommonTabData(trapDefenseBuildingDevelopTabData.Icon, new CommonTabTitleData(trapDefenseBuildingDevelopTabData.TabName, Array.Empty<object>()), null);
 		}
 
-		// Token: 0x06031A94 RID: 203412 RVA: 0x00B86B58 File Offset: 0x00B84D58
+		// Token: 0x06026824 RID: 157732 RVA: 0x00ACAB0C File Offset: 0x00AC8D0C
 		private void OnClickItem(TrapDefenseBuildingDevelopItemData data)
 		{
 			List<TrapDefenseBuildingDevelopTypeItem> scrollItemList = this.ScrollView.GetScrollItemList();
@@ -721,7 +721,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031A95 RID: 203413 RVA: 0x00B86BD4 File Offset: 0x00B84DD4
+		// Token: 0x06026825 RID: 157733 RVA: 0x00ACAB88 File Offset: 0x00AC8D88
 		private void OnBottomClick(TrapDefenseBuildingDevelopItemData data)
 		{
 			List<TrapDefenseBuildingDevelopTypeItem> scrollItemList = this.ScrollView.GetScrollItemList();
@@ -752,7 +752,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			tabComponent.SelectToggleByIndex(0, true);
 		}
 
-		// Token: 0x06031A96 RID: 203414 RVA: 0x00B86C90 File Offset: 0x00B84E90
+		// Token: 0x06026826 RID: 157734 RVA: 0x00ACAC44 File Offset: 0x00AC8E44
 		private void OnPreviewClick(TrapDefenseBuildingDevelopItemData data)
 		{
 			List<TrapDefenseBuildingDevelopTypeItem> scrollItemList = this.ScrollView.GetScrollItemList();
@@ -770,7 +770,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.UpdateDetail(data, false);
 		}
 
-		// Token: 0x06031A97 RID: 203415 RVA: 0x00B86D20 File Offset: 0x00B84F20
+		// Token: 0x06026827 RID: 157735 RVA: 0x00ACACD4 File Offset: 0x00AC8ED4
 		private void OnDataUpdate(TrapDefenseBuildingDevelopItemData data)
 		{
 			List<TrapDefenseBuildingTypeData> data2 = this.DataListMap[(ETrapDefenseBuildingDevelopTab)this.CurSelectIndex];
@@ -795,7 +795,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.UpdateDetail(data, true);
 		}
 
-		// Token: 0x06031A98 RID: 203416 RVA: 0x00B86DA8 File Offset: 0x00B84FA8
+		// Token: 0x06026828 RID: 157736 RVA: 0x00ACAD5C File Offset: 0x00AC8F5C
 		private void OnResetAll()
 		{
 			List<TrapDefenseBuildingTypeData> data = this.DataListMap[(ETrapDefenseBuildingDevelopTab)this.CurSelectIndex];
@@ -820,7 +820,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			button.RootUIComp.Get().SetUIActive(uiactive);
 		}
 
-		// Token: 0x06031A99 RID: 203417 RVA: 0x00B86E30 File Offset: 0x00B85030
+		// Token: 0x06026829 RID: 157737 RVA: 0x00ACADE4 File Offset: 0x00AC8FE4
 		private void OnUpdateSlot()
 		{
 			this.BottomItem.UpdateSlot();
@@ -836,7 +836,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.BottomItem.UpdateEquipTxt();
 		}
 
-		// Token: 0x06031A9A RID: 203418 RVA: 0x00B86EBC File Offset: 0x00B850BC
+		// Token: 0x0602682A RID: 157738 RVA: 0x00ACAE70 File Offset: 0x00AC9070
 		private TrapDefenseBuildingDevelopTypeItem CreateItemGrid()
 		{
 			return new TrapDefenseBuildingDevelopTypeItem
@@ -846,7 +846,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			};
 		}
 
-		// Token: 0x06031A9B RID: 203419 RVA: 0x00B86EE8 File Offset: 0x00B850E8
+		// Token: 0x0602682B RID: 157739 RVA: 0x00ACAE9C File Offset: 0x00AC909C
 		private void OnClickReset()
 		{
 			if (this.IsInDungeon)
@@ -861,7 +861,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x06031A9C RID: 203420 RVA: 0x00B86F40 File Offset: 0x00B85140
+		// Token: 0x0602682C RID: 157740 RVA: 0x00ACAEF4 File Offset: 0x00AC90F4
 		private UniTask RefreshTabListAsync()
 		{
 			TrapDefenseBuildingDevelopMainView.<RefreshTabListAsync>d__78 <RefreshTabListAsync>d__;
@@ -872,7 +872,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <RefreshTabListAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031A9D RID: 203421 RVA: 0x00B86F84 File Offset: 0x00B85184
+		// Token: 0x0602682D RID: 157741 RVA: 0x00ACAF38 File Offset: 0x00AC9138
 		private List<CommonTabItemData> GetTabItemData(List<ITrapDefenseBuildingDevelopTabData> tabData)
 		{
 			int count = tabData.Count;
@@ -892,7 +892,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return list;
 		}
 
-		// Token: 0x06031A9E RID: 203422 RVA: 0x00B86FE4 File Offset: 0x00B851E4
+		// Token: 0x0602682E RID: 157742 RVA: 0x00ACAF98 File Offset: 0x00AC9198
 		private void CreateTabListData()
 		{
 			List<List<TrapDefenseBuildingDevelopItemData>> haveList = TrapDefenseModel.Instance.ViewModelBuildingDevelop.GetHaveList();
@@ -927,7 +927,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.DataListMap[ETrapDefenseBuildingDevelopTab.Building] = list2;
 		}
 
-		// Token: 0x06031A9F RID: 203423 RVA: 0x00B870FC File Offset: 0x00B852FC
+		// Token: 0x0602682F RID: 157743 RVA: 0x00ACB0B0 File Offset: 0x00AC92B0
 		private void SetCurSelectedData(TrapDefenseBuildingDevelopItemData data)
 		{
 			this.CurSelectedData = data;
@@ -944,13 +944,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031AA0 RID: 203424 RVA: 0x00B8717C File Offset: 0x00B8537C
+		// Token: 0x06026830 RID: 157744 RVA: 0x00ACB130 File Offset: 0x00AC9330
 		private TrapDefenseBuildingDevelopDragDataItem CreateDragDataItem()
 		{
 			return new TrapDefenseBuildingDevelopDragDataItem();
 		}
 
-		// Token: 0x06031AA1 RID: 203425 RVA: 0x00B87184 File Offset: 0x00B85384
+		// Token: 0x06026831 RID: 157745 RVA: 0x00ACB138 File Offset: 0x00AC9338
 		public override UUIItem[] GetGuideUiItemAndUiItemForShowEx(string[] configParams)
 		{
 			if (configParams.Length == 0)
@@ -1001,134 +1001,134 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return null;
 		}
 
-		// Token: 0x0401A843 RID: 108611
+		// Token: 0x04015195 RID: 86421
 		internal const int INVALID_INDEX = 999;
 
-		// Token: 0x0401A844 RID: 108612
+		// Token: 0x04015196 RID: 86422
 		internal const int HELP_ID = 403;
 
-		// Token: 0x0401A845 RID: 108613
+		// Token: 0x04015197 RID: 86423
 		protected TabComponentWithCaptionItem<CommonTabItem> TabComponent;
 
-		// Token: 0x0401A846 RID: 108614
+		// Token: 0x04015198 RID: 86424
 		private CommonCurrencyItem CostBtn;
 
-		// Token: 0x0401A847 RID: 108615
+		// Token: 0x04015199 RID: 86425
 		protected GenericScrollViewNew<TrapDefenseBuildingDevelopTypeItem, TrapDefenseBuildingTypeData> ScrollView;
 
-		// Token: 0x0401A848 RID: 108616
+		// Token: 0x0401519A RID: 86426
 		protected TrapDefenseBuildingDevelopBottomItem BottomItem;
 
-		// Token: 0x0401A849 RID: 108617
+		// Token: 0x0401519B RID: 86427
 		private double LastClickTime;
 
-		// Token: 0x0401A84A RID: 108618
+		// Token: 0x0401519C RID: 86428
 		protected bool IsInDungeon;
 
-		// Token: 0x0401A84B RID: 108619
+		// Token: 0x0401519D RID: 86429
 		private int CurSelectIndex;
 
-		// Token: 0x0401A84C RID: 108620
+		// Token: 0x0401519E RID: 86430
 		private TrapDefenseBuildingDevelopItemData CurSelectedData;
 
-		// Token: 0x0401A84D RID: 108621
+		// Token: 0x0401519F RID: 86431
 		protected List<ITrapDefenseBuildingDevelopTabData> TabDataList = new List<ITrapDefenseBuildingDevelopTabData>();
 
-		// Token: 0x0401A84E RID: 108622
+		// Token: 0x040151A0 RID: 86432
 		protected Dictionary<ETrapDefenseBuildingDevelopTab, List<TrapDefenseBuildingTypeData>> DataListMap = new Dictionary<ETrapDefenseBuildingDevelopTab, List<TrapDefenseBuildingTypeData>>();
 
-		// Token: 0x0401A84F RID: 108623
+		// Token: 0x040151A1 RID: 86433
 		protected TrapDefenseBuildingDevelopDetailItem DetailInfo;
 
-		// Token: 0x0401A850 RID: 108624
+		// Token: 0x040151A2 RID: 86434
 		private float PressTime;
 
-		// Token: 0x0401A851 RID: 108625
+		// Token: 0x040151A3 RID: 86435
 		private float FillPressTime;
 
-		// Token: 0x0401A852 RID: 108626
+		// Token: 0x040151A4 RID: 86436
 		private bool CheckState;
 
-		// Token: 0x0401A853 RID: 108627
+		// Token: 0x040151A5 RID: 86437
 		private bool AfterLongPressState;
 
-		// Token: 0x0401A854 RID: 108628
+		// Token: 0x040151A6 RID: 86438
 		private float OnPressPositionX;
 
-		// Token: 0x0401A855 RID: 108629
+		// Token: 0x040151A7 RID: 86439
 		private float OnPressPositionY;
 
-		// Token: 0x0401A856 RID: 108630
+		// Token: 0x040151A8 RID: 86440
 		private float LongPressItemAlpha;
 
-		// Token: 0x0401A857 RID: 108631
+		// Token: 0x040151A9 RID: 86441
 		private int DragClickTick = -1;
 
-		// Token: 0x0401A858 RID: 108632
+		// Token: 0x040151AA RID: 86442
 		private int CheckPointerUpTick = -1;
 
-		// Token: 0x0401A859 RID: 108633
+		// Token: 0x040151AB RID: 86443
 		private float LongPressTime;
 
-		// Token: 0x0401A85A RID: 108634
+		// Token: 0x040151AC RID: 86444
 		private float BeforeLongPressTime;
 
-		// Token: 0x0401A85B RID: 108635
+		// Token: 0x040151AD RID: 86445
 		private float ScrollerMoveDistance;
 
-		// Token: 0x0401A85C RID: 108636
+		// Token: 0x040151AE RID: 86446
 		protected TrapDefenseBuildingDevelopNormalDragItem DragItem;
 
-		// Token: 0x0401A85D RID: 108637
+		// Token: 0x040151AF RID: 86447
 		protected List<TrapDefenseBuildingDevelopBottomInfoItem> BottomItemList = new List<TrapDefenseBuildingDevelopBottomInfoItem>();
 
-		// Token: 0x0401A85E RID: 108638
+		// Token: 0x040151B0 RID: 86448
 		private CommonDragItemLogic<TrapDefenseBuildingDevelopDragDataItem, TrapDefenseBuildingDevelopItemData> DragLogic;
 
-		// Token: 0x0401A85F RID: 108639
+		// Token: 0x040151B1 RID: 86449
 		private List<CommonDragItemLogic<TrapDefenseBuildingDevelopDragDataItem, TrapDefenseBuildingDevelopItemData>> BottomDragLogic = new List<CommonDragItemLogic<TrapDefenseBuildingDevelopDragDataItem, TrapDefenseBuildingDevelopItemData>>();
 
-		// Token: 0x0401A860 RID: 108640
+		// Token: 0x040151B2 RID: 86450
 		private TrapDefenseBuildingDevelopTypeGridItem CurrentPressItem;
 
-		// Token: 0x0401A861 RID: 108641
+		// Token: 0x040151B3 RID: 86451
 		protected int CurrentDragIndex = -1;
 
-		// Token: 0x0401A862 RID: 108642
+		// Token: 0x040151B4 RID: 86452
 		protected int CurrentSelectedBottomIndex;
 
-		// Token: 0x0200AC6B RID: 44139
+		// Token: 0x0200968B RID: 38539
 		[NullableContext(0)]
 		internal class EChildComponentType
 		{
-			// Token: 0x04034666 RID: 214630
+			// Token: 0x0402F017 RID: 192535
 			public const int CaptionItem = 0;
 
-			// Token: 0x04034667 RID: 214631
+			// Token: 0x0402F018 RID: 192536
 			public const int ItemScroll = 1;
 
-			// Token: 0x04034668 RID: 214632
+			// Token: 0x0402F019 RID: 192537
 			public const int PanelBuffItemGrid = 2;
 
-			// Token: 0x04034669 RID: 214633
+			// Token: 0x0402F01A RID: 192538
 			public const int BtnResetAll = 3;
 
-			// Token: 0x0403466A RID: 214634
+			// Token: 0x0402F01B RID: 192539
 			public const int PanelContentLayout = 4;
 
-			// Token: 0x0403466B RID: 214635
+			// Token: 0x0402F01C RID: 192540
 			public const int PanelBottomLayout = 5;
 
-			// Token: 0x0403466C RID: 214636
+			// Token: 0x0402F01D RID: 192541
 			public const int PanelDrag = 6;
 
-			// Token: 0x0403466D RID: 214637
+			// Token: 0x0402F01E RID: 192542
 			public const int PanelLongPress = 7;
 
-			// Token: 0x0403466E RID: 214638
+			// Token: 0x0402F01F RID: 192543
 			public const int PanelDragItem = 8;
 
-			// Token: 0x0403466F RID: 214639
+			// Token: 0x0402F020 RID: 192544
 			public const int SpriteBar = 9;
 		}
 	}

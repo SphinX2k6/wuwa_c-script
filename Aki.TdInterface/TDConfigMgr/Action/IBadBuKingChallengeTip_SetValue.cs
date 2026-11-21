@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020017F7 RID: 6135
+	// Token: 0x02001980 RID: 6528
 	public class IBadBuKingChallengeTip_SetValue
 	{
-		// Token: 0x04005389 RID: 21385
+		// Token: 0x040057D1 RID: 22481
 		public ECommonTipType Type;
 
-		// Token: 0x0400538A RID: 21386
-		[Nullable(1)]
+		// Token: 0x040057D2 RID: 22482
 		public string WarningText;
 	}
 }

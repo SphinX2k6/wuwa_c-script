@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003FB3 RID: 16307
+	// Token: 0x020043F4 RID: 17396
 	public struct IPreShowInfo : IFlatbufferObject
 	{
-		// Token: 0x170071E2 RID: 29154
-		// (get) Token: 0x06017500 RID: 95488 RVA: 0x0035C5A8 File Offset: 0x0035A7A8
+		// Token: 0x170077E0 RID: 30688
+		// (get) Token: 0x06018B8F RID: 101263 RVA: 0x003861C0 File Offset: 0x003843C0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017501 RID: 95489 RVA: 0x0035C5B5 File Offset: 0x0035A7B5
+		// Token: 0x06018B90 RID: 101264 RVA: 0x003861CD File Offset: 0x003843CD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06017502 RID: 95490 RVA: 0x0035C5BC File Offset: 0x0035A7BC
+		// Token: 0x06018B91 RID: 101265 RVA: 0x003861D4 File Offset: 0x003843D4
 		public static IPreShowInfo GetRootAsIPreShowInfo(ByteBuffer _bb)
 		{
 			return IPreShowInfo.GetRootAsIPreShowInfo(_bb, default(IPreShowInfo));
 		}
 
-		// Token: 0x06017503 RID: 95491 RVA: 0x0035C5D8 File Offset: 0x0035A7D8
+		// Token: 0x06018B92 RID: 101266 RVA: 0x003861F0 File Offset: 0x003843F0
 		public static IPreShowInfo GetRootAsIPreShowInfo(ByteBuffer _bb, IPreShowInfo obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06017504 RID: 95492 RVA: 0x0035C5F5 File Offset: 0x0035A7F5
+		// Token: 0x06018B93 RID: 101267 RVA: 0x0038620D File Offset: 0x0038440D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06017505 RID: 95493 RVA: 0x0035C604 File Offset: 0x0035A804
+		// Token: 0x06018B94 RID: 101268 RVA: 0x0038621C File Offset: 0x0038441C
 		public IPreShowInfo __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170071E3 RID: 29155
-		// (get) Token: 0x06017506 RID: 95494 RVA: 0x0035C614 File Offset: 0x0035A814
+		// Token: 0x170077E1 RID: 30689
+		// (get) Token: 0x06018B95 RID: 101269 RVA: 0x0038622C File Offset: 0x0038442C
 		public IAccessQuestCondition? PreShowCondition
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x170071E4 RID: 29156
-		// (get) Token: 0x06017507 RID: 95495 RVA: 0x0035C674 File Offset: 0x0035A874
+		// Token: 0x170077E2 RID: 30690
+		// (get) Token: 0x06018B96 RID: 101270 RVA: 0x0038628C File Offset: 0x0038448C
 		public string TidPreShowDesc
 		{
 			get
@@ -78,19 +78,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017508 RID: 95496 RVA: 0x0035C6AB File Offset: 0x0035A8AB
+		// Token: 0x06018B97 RID: 101271 RVA: 0x003862C3 File Offset: 0x003844C3
 		public Span<byte> GetTidPreShowDescBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06017509 RID: 95497 RVA: 0x0035C6BA File Offset: 0x0035A8BA
+		// Token: 0x06018B98 RID: 101272 RVA: 0x003862D2 File Offset: 0x003844D2
 		public byte[] GetTidPreShowDescArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x0601750A RID: 95498 RVA: 0x0035C6C8 File Offset: 0x0035A8C8
+		// Token: 0x06018B99 RID: 101273 RVA: 0x003862E0 File Offset: 0x003844E0
 		public static Offset<IPreShowInfo> CreateIPreShowInfo(FlatBufferBuilder builder, Offset<IAccessQuestCondition> PreShowConditionOffset = default(Offset<IAccessQuestCondition>), StringOffset TidPreShowDescOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -99,31 +99,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IPreShowInfo.EndIPreShowInfo(builder);
 		}
 
-		// Token: 0x0601750B RID: 95499 RVA: 0x0035C6E5 File Offset: 0x0035A8E5
+		// Token: 0x06018B9A RID: 101274 RVA: 0x003862FD File Offset: 0x003844FD
 		public static void StartIPreShowInfo(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601750C RID: 95500 RVA: 0x0035C6EE File Offset: 0x0035A8EE
+		// Token: 0x06018B9B RID: 101275 RVA: 0x00386306 File Offset: 0x00384506
 		public static void AddPreShowCondition(FlatBufferBuilder builder, Offset<IAccessQuestCondition> preShowConditionOffset)
 		{
 			builder.AddOffset(0, preShowConditionOffset.Value, 0);
 		}
 
-		// Token: 0x0601750D RID: 95501 RVA: 0x0035C6FE File Offset: 0x0035A8FE
+		// Token: 0x06018B9C RID: 101276 RVA: 0x00386316 File Offset: 0x00384516
 		public static void AddTidPreShowDesc(FlatBufferBuilder builder, StringOffset tidPreShowDescOffset)
 		{
 			builder.AddOffset(1, tidPreShowDescOffset.Value, 0);
 		}
 
-		// Token: 0x0601750E RID: 95502 RVA: 0x0035C70E File Offset: 0x0035A90E
+		// Token: 0x06018B9D RID: 101277 RVA: 0x00386326 File Offset: 0x00384526
 		public static Offset<IPreShowInfo> EndIPreShowInfo(FlatBufferBuilder builder)
 		{
 			return new Offset<IPreShowInfo>(builder.EndTable());
 		}
 
-		// Token: 0x0601750F RID: 95503 RVA: 0x0035C71C File Offset: 0x0035A91C
+		// Token: 0x06018B9E RID: 101278 RVA: 0x00386334 File Offset: 0x00384534
 		public IPreShowInfoT UnPack()
 		{
 			IPreShowInfoT preShowInfoT = new IPreShowInfoT();
@@ -131,14 +131,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return preShowInfoT;
 		}
 
-		// Token: 0x06017510 RID: 95504 RVA: 0x0035C738 File Offset: 0x0035A938
+		// Token: 0x06018B9F RID: 101279 RVA: 0x00386350 File Offset: 0x00384550
 		public void UnPackTo(IPreShowInfoT _o)
 		{
 			_o.PreShowCondition = ((this.PreShowCondition != null) ? this.PreShowCondition.Value.UnPack() : null);
 			_o.TidPreShowDesc = this.TidPreShowDesc;
 		}
 
-		// Token: 0x06017511 RID: 95505 RVA: 0x0035C780 File Offset: 0x0035A980
+		// Token: 0x06018BA0 RID: 101280 RVA: 0x00386398 File Offset: 0x00384598
 		public static Offset<IPreShowInfo> Pack(FlatBufferBuilder builder, IPreShowInfoT _o)
 		{
 			if (_o == null)
@@ -150,7 +150,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IPreShowInfo.CreateIPreShowInfo(builder, preShowConditionOffset, tidPreShowDescOffset);
 		}
 
-		// Token: 0x0400BA1F RID: 47647
+		// Token: 0x0400C404 RID: 50180
 		private Table __p;
 	}
 }

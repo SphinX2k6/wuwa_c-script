@@ -2,22 +2,22 @@
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.BossPiling;
 
-// Token: 0x0200336B RID: 13163
+// Token: 0x020028DD RID: 10461
 public class RedDotBossPilingReward : RedDotBase
 {
-	// Token: 0x0601CA34 RID: 117300 RVA: 0x00805B98 File Offset: 0x00803D98
+	// Token: 0x0601A72C RID: 108332 RVA: 0x0082C15C File Offset: 0x0082A35C
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.OnBossPilingReward, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CA35 RID: 117301 RVA: 0x00805BB6 File Offset: 0x00803DB6
+	// Token: 0x0601A72D RID: 108333 RVA: 0x0082C17A File Offset: 0x0082A37A
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.OnBossPilingReward, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601CA36 RID: 117302 RVA: 0x00805BD4 File Offset: 0x00803DD4
+	// Token: 0x0601A72E RID: 108334 RVA: 0x0082C198 File Offset: 0x0082A398
 	protected override bool OnCheck(int uId = 0)
 	{
 		BossPilingActivityData activityData = BossPilingModel.Instance.GetActivityData();

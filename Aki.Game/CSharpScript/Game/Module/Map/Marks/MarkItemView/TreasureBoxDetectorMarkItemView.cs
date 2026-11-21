@@ -6,23 +6,23 @@ using CSharpScript.Game.Module.Map.Marks.MarkItemView.Handles;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 {
-	// Token: 0x02005527 RID: 21799
+	// Token: 0x020044FA RID: 17658
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TreasureBoxDetectorMarkItemView : ServerMarkItemView
 	{
-		// Token: 0x06037A95 RID: 227989 RVA: 0x00D365D7 File Offset: 0x00D347D7
+		// Token: 0x0602C965 RID: 182629 RVA: 0x00C84303 File Offset: 0x00C82503
 		public TreasureBoxDetectorMarkItemView(TreasureBoxDetectorMarkItem holder) : base(holder)
 		{
 		}
 
-		// Token: 0x06037A96 RID: 227990 RVA: 0x00D365EB File Offset: 0x00D347EB
+		// Token: 0x0602C966 RID: 182630 RVA: 0x00C84317 File Offset: 0x00C82517
 		protected override void OnViewRefresh()
 		{
 			this.TreasureBoxDetectorItemRangeHandle.SetVisible(true);
 		}
 
-		// Token: 0x06037A97 RID: 227991 RVA: 0x00D365F9 File Offset: 0x00D347F9
+		// Token: 0x0602C967 RID: 182631 RVA: 0x00C84325 File Offset: 0x00C82525
 		protected override void CreateComponentHandles()
 		{
 			base.CreateComponentHandles();
@@ -30,13 +30,13 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			this.MarkItemComponentHandleMap[EMarkViewComponentType.Range] = this.TreasureBoxDetectorItemRangeHandle;
 		}
 
-		// Token: 0x06037A98 RID: 227992 RVA: 0x00D36625 File Offset: 0x00D34825
+		// Token: 0x0602C968 RID: 182632 RVA: 0x00C84351 File Offset: 0x00C82551
 		private TreasureBoxDetectorItemRangeHandle CreateDetectorRangeHandle(IMarkItemComponentContext markComponentContext)
 		{
 			return new TreasureBoxDetectorItemRangeHandle(markComponentContext);
 		}
 
-		// Token: 0x06037A99 RID: 227993 RVA: 0x00D36630 File Offset: 0x00D34830
+		// Token: 0x0602C969 RID: 182633 RVA: 0x00C8435C File Offset: 0x00C8255C
 		public override void SetScale(float scale)
 		{
 			if (!base.IsHolderValid())
@@ -53,10 +53,10 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			treasureBoxDetectorItemRangeHandle.UpdateRangeScale();
 		}
 
-		// Token: 0x0401D431 RID: 119857
+		// Token: 0x04017EB4 RID: 97972
 		private readonly Vector TempRangeScale = Vector.Create();
 
-		// Token: 0x0401D432 RID: 119858
+		// Token: 0x04017EB5 RID: 97973
 		private TreasureBoxDetectorItemRangeHandle TreasureBoxDetectorItemRangeHandle;
 	}
 }

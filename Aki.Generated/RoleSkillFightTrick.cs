@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02001059 RID: 4185
+	// Token: 0x02001141 RID: 4417
 	public struct RoleSkillFightTrick : IFlatbufferObject
 	{
-		// Token: 0x170032FD RID: 13053
-		// (get) Token: 0x0600C9FC RID: 51708 RVA: 0x002FDBF9 File Offset: 0x002FBDF9
+		// Token: 0x17003379 RID: 13177
+		// (get) Token: 0x0600D04C RID: 53324 RVA: 0x003198ED File Offset: 0x00317AED
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C9FD RID: 51709 RVA: 0x002FDC06 File Offset: 0x002FBE06
+		// Token: 0x0600D04D RID: 53325 RVA: 0x003198FA File Offset: 0x00317AFA
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600C9FE RID: 51710 RVA: 0x002FDC10 File Offset: 0x002FBE10
+		// Token: 0x0600D04E RID: 53326 RVA: 0x00319904 File Offset: 0x00317B04
 		public static RoleSkillFightTrick GetRootAsRoleSkillFightTrick(ByteBuffer _bb)
 		{
 			return RoleSkillFightTrick.GetRootAsRoleSkillFightTrick(_bb, default(RoleSkillFightTrick));
 		}
 
-		// Token: 0x0600C9FF RID: 51711 RVA: 0x002FDC2C File Offset: 0x002FBE2C
+		// Token: 0x0600D04F RID: 53327 RVA: 0x00319920 File Offset: 0x00317B20
 		public static RoleSkillFightTrick GetRootAsRoleSkillFightTrick(ByteBuffer _bb, RoleSkillFightTrick obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600CA00 RID: 51712 RVA: 0x002FDC49 File Offset: 0x002FBE49
+		// Token: 0x0600D050 RID: 53328 RVA: 0x0031993D File Offset: 0x00317B3D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600CA01 RID: 51713 RVA: 0x002FDC58 File Offset: 0x002FBE58
+		// Token: 0x0600D051 RID: 53329 RVA: 0x0031994C File Offset: 0x00317B4C
 		public RoleSkillFightTrick __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170032FE RID: 13054
-		// (get) Token: 0x0600CA02 RID: 51714 RVA: 0x002FDC68 File Offset: 0x002FBE68
+		// Token: 0x1700337A RID: 13178
+		// (get) Token: 0x0600D052 RID: 53330 RVA: 0x0031995C File Offset: 0x00317B5C
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170032FF RID: 13055
-		// (get) Token: 0x0600CA03 RID: 51715 RVA: 0x002FDCA4 File Offset: 0x002FBEA4
+		// Token: 0x1700337B RID: 13179
+		// (get) Token: 0x0600D053 RID: 53331 RVA: 0x00319998 File Offset: 0x00317B98
 		public int RoleId
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003300 RID: 13056
-		// (get) Token: 0x0600CA04 RID: 51716 RVA: 0x002FDCE0 File Offset: 0x002FBEE0
+		// Token: 0x1700337C RID: 13180
+		// (get) Token: 0x0600D054 RID: 53332 RVA: 0x003199D4 File Offset: 0x00317BD4
 		public string SkillTitle
 		{
 			get
@@ -94,19 +94,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600CA05 RID: 51717 RVA: 0x002FDD17 File Offset: 0x002FBF17
+		// Token: 0x0600D055 RID: 53333 RVA: 0x00319A0B File Offset: 0x00317C0B
 		public Span<byte> GetSkillTitleBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0600CA06 RID: 51718 RVA: 0x002FDD26 File Offset: 0x002FBF26
+		// Token: 0x0600D056 RID: 53334 RVA: 0x00319A1A File Offset: 0x00317C1A
 		public byte[] GetSkillTitleArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0600CA07 RID: 51719 RVA: 0x002FDD40 File Offset: 0x002FBF40
+		// Token: 0x0600D057 RID: 53335 RVA: 0x00319A34 File Offset: 0x00317C34
 		public int SkillDesc(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -117,8 +117,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17003301 RID: 13057
-		// (get) Token: 0x0600CA08 RID: 51720 RVA: 0x002FDD80 File Offset: 0x002FBF80
+		// Token: 0x1700337D RID: 13181
+		// (get) Token: 0x0600D058 RID: 53336 RVA: 0x00319A74 File Offset: 0x00317C74
 		public int SkillDescLength
 		{
 			get
@@ -132,20 +132,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600CA09 RID: 51721 RVA: 0x002FDDAC File Offset: 0x002FBFAC
+		// Token: 0x0600D059 RID: 53337 RVA: 0x00319AA0 File Offset: 0x00317CA0
 		public Span<int> GetSkillDescBytes()
 		{
 			return this.__p.__vector_as_span<int>(10, 4);
 		}
 
-		// Token: 0x0600CA0A RID: 51722 RVA: 0x002FDDBC File Offset: 0x002FBFBC
+		// Token: 0x0600D05A RID: 53338 RVA: 0x00319AB0 File Offset: 0x00317CB0
 		public int[] GetSkillDescArray()
 		{
 			return this.__p.__vector_as_array<int>(10) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17003302 RID: 13058
-		// (get) Token: 0x0600CA0B RID: 51723 RVA: 0x002FDDD4 File Offset: 0x002FBFD4
+		// Token: 0x1700337E RID: 13182
+		// (get) Token: 0x0600D05B RID: 53339 RVA: 0x00319AC8 File Offset: 0x00317CC8
 		public int Type
 		{
 			get
@@ -159,25 +159,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600CA0C RID: 51724 RVA: 0x002FDE14 File Offset: 0x002FC014
+		// Token: 0x0600D05C RID: 53340 RVA: 0x00319B05 File Offset: 0x00317D05
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用SkillDescIter()或GetSkillDescBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] SkillDesc()
+		public int[] SkillDesc()
 		{
-			RoleSkillFightTrick roleSkillFightTrick = this;
-			return roleSkillFightTrick.GetSkillDescArray() ?? Array.Empty<int>();
+			return this.GetSkillDescArray();
 		}
 
-		// Token: 0x0600CA0D RID: 51725 RVA: 0x002FDE38 File Offset: 0x002FC038
+		// Token: 0x0600D05D RID: 53341 RVA: 0x00319B0D File Offset: 0x00317D0D
 		[NullableContext(1)]
-		public readonly IEnumerable<int> SkillDescIter()
+		public IEnumerable<int> SkillDescIter()
 		{
 			RoleSkillFightTrick.<SkillDescIter>d__24 <SkillDescIter>d__ = new RoleSkillFightTrick.<SkillDescIter>d__24(-2);
 			<SkillDescIter>d__.<>3__<>4__this = this;
 			return <SkillDescIter>d__;
 		}
 
-		// Token: 0x0400515B RID: 20827
+		// Token: 0x04005743 RID: 22339
 		private Table __p;
 	}
 }

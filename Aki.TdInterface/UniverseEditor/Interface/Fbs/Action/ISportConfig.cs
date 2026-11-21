@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200719C RID: 29084
+	// Token: 0x02007971 RID: 31089
 	public struct ISportConfig : IFlatbufferObject
 	{
-		// Token: 0x1700D801 RID: 55297
-		// (get) Token: 0x0603390C RID: 211212 RVA: 0x006F1DFE File Offset: 0x006EFFFE
+		// Token: 0x1700E3F8 RID: 58360
+		// (get) Token: 0x06036C08 RID: 224264 RVA: 0x0075308E File Offset: 0x0075128E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603390D RID: 211213 RVA: 0x006F1E0B File Offset: 0x006F000B
+		// Token: 0x06036C09 RID: 224265 RVA: 0x0075309B File Offset: 0x0075129B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0603390E RID: 211214 RVA: 0x006F1E14 File Offset: 0x006F0014
+		// Token: 0x06036C0A RID: 224266 RVA: 0x007530A4 File Offset: 0x007512A4
 		public static ISportConfig GetRootAsISportConfig(ByteBuffer _bb)
 		{
 			return ISportConfig.GetRootAsISportConfig(_bb, default(ISportConfig));
 		}
 
-		// Token: 0x0603390F RID: 211215 RVA: 0x006F1E30 File Offset: 0x006F0030
+		// Token: 0x06036C0B RID: 224267 RVA: 0x007530C0 File Offset: 0x007512C0
 		public static ISportConfig GetRootAsISportConfig(ByteBuffer _bb, ISportConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06033910 RID: 211216 RVA: 0x006F1E4D File Offset: 0x006F004D
+		// Token: 0x06036C0C RID: 224268 RVA: 0x007530DD File Offset: 0x007512DD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06033911 RID: 211217 RVA: 0x006F1E5C File Offset: 0x006F005C
+		// Token: 0x06036C0D RID: 224269 RVA: 0x007530EC File Offset: 0x007512EC
 		public ISportConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D802 RID: 55298
-		// (get) Token: 0x06033912 RID: 211218 RVA: 0x006F1E6C File Offset: 0x006F006C
+		// Token: 0x1700E3F9 RID: 58361
+		// (get) Token: 0x06036C0E RID: 224270 RVA: 0x007530FC File Offset: 0x007512FC
 		public ESportStateType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033913 RID: 211219 RVA: 0x006F1EA8 File Offset: 0x006F00A8
+		// Token: 0x06036C0F RID: 224271 RVA: 0x00753138 File Offset: 0x00751338
 		public static Offset<ISportConfig> CreateISportConfig(FlatBufferBuilder builder, ESportStateType Type = ESportStateType.Slide)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISportConfig.EndISportConfig(builder);
 		}
 
-		// Token: 0x06033914 RID: 211220 RVA: 0x006F1EBE File Offset: 0x006F00BE
+		// Token: 0x06036C10 RID: 224272 RVA: 0x0075314E File Offset: 0x0075134E
 		public static void StartISportConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06033915 RID: 211221 RVA: 0x006F1EC7 File Offset: 0x006F00C7
+		// Token: 0x06036C11 RID: 224273 RVA: 0x00753157 File Offset: 0x00751357
 		public static void AddType(FlatBufferBuilder builder, ESportStateType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06033916 RID: 211222 RVA: 0x006F1ED2 File Offset: 0x006F00D2
+		// Token: 0x06036C12 RID: 224274 RVA: 0x00753162 File Offset: 0x00751362
 		public static Offset<ISportConfig> EndISportConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<ISportConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06033917 RID: 211223 RVA: 0x006F1EE0 File Offset: 0x006F00E0
+		// Token: 0x06036C13 RID: 224275 RVA: 0x00753170 File Offset: 0x00751370
 		public ISportConfigT UnPack()
 		{
 			ISportConfigT sportConfigT = new ISportConfigT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return sportConfigT;
 		}
 
-		// Token: 0x06033918 RID: 211224 RVA: 0x006F1EFB File Offset: 0x006F00FB
+		// Token: 0x06036C14 RID: 224276 RVA: 0x0075318B File Offset: 0x0075138B
 		public void UnPackTo(ISportConfigT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06033919 RID: 211225 RVA: 0x006F1F0C File Offset: 0x006F010C
+		// Token: 0x06036C15 RID: 224277 RVA: 0x0075319C File Offset: 0x0075139C
 		public static Offset<ISportConfig> Pack(FlatBufferBuilder builder, ISportConfigT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISportConfig.CreateISportConfig(builder, _o.Type);
 		}
 
-		// Token: 0x04011C5E RID: 72798
+		// Token: 0x04012C5E RID: 76894
 		private Table __p;
 	}
 }

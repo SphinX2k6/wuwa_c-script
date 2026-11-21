@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007686 RID: 30342
+	// Token: 0x02007E94 RID: 32404
 	public enum TCloseSplineMovePattern : byte
 	{
-		// Token: 0x0401267F RID: 75391
+		// Token: 0x040136CA RID: 79562
 		NONE,
-		// Token: 0x04012680 RID: 75392
+		// Token: 0x040136CB RID: 79563
 		ICloseAirPassageMove,
-		// Token: 0x04012681 RID: 75393
+		// Token: 0x040136CC RID: 79564
 		ICloseMotorcycleTrackMove,
-		// Token: 0x04012682 RID: 75394
+		// Token: 0x040136CD RID: 79565
 		IClosePathLineMove,
-		// Token: 0x04012683 RID: 75395
+		// Token: 0x040136CE RID: 79566
 		ICloseRacingTrackMove,
-		// Token: 0x04012684 RID: 75396
+		// Token: 0x040136CF RID: 79567
 		ICloseSlideTrackMove
 	}
 }

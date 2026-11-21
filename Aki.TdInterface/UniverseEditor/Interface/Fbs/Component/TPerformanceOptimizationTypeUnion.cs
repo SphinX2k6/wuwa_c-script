@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C82 RID: 23682
+	// Token: 0x020062B3 RID: 25267
 	public class TPerformanceOptimizationTypeUnion
 	{
-		// Token: 0x1700B234 RID: 45620
-		// (get) Token: 0x0602891D RID: 166173 RVA: 0x00593EA6 File Offset: 0x005920A6
-		// (set) Token: 0x0602891E RID: 166174 RVA: 0x00593EAE File Offset: 0x005920AE
+		// Token: 0x1700BB8E RID: 48014
+		// (get) Token: 0x0602AF63 RID: 175971 RVA: 0x005DC5DE File Offset: 0x005DA7DE
+		// (set) Token: 0x0602AF64 RID: 175972 RVA: 0x005DC5E6 File Offset: 0x005DA7E6
 		public TPerformanceOptimizationType Type { get; set; }
 
-		// Token: 0x1700B235 RID: 45621
-		// (get) Token: 0x0602891F RID: 166175 RVA: 0x00593EB7 File Offset: 0x005920B7
-		// (set) Token: 0x06028920 RID: 166176 RVA: 0x00593EBF File Offset: 0x005920BF
+		// Token: 0x1700BB8F RID: 48015
+		// (get) Token: 0x0602AF65 RID: 175973 RVA: 0x005DC5EF File Offset: 0x005DA7EF
+		// (set) Token: 0x0602AF66 RID: 175974 RVA: 0x005DC5F7 File Offset: 0x005DA7F7
 		public object Value { get; set; }
 
-		// Token: 0x06028921 RID: 166177 RVA: 0x00593EC8 File Offset: 0x005920C8
+		// Token: 0x0602AF67 RID: 175975 RVA: 0x005DC600 File Offset: 0x005DA800
 		public TPerformanceOptimizationTypeUnion()
 		{
 			this.Type = TPerformanceOptimizationType.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06028922 RID: 166178 RVA: 0x00593EDE File Offset: 0x005920DE
+		// Token: 0x0602AF68 RID: 175976 RVA: 0x005DC616 File Offset: 0x005DA816
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06028923 RID: 166179 RVA: 0x00593EF0 File Offset: 0x005920F0
+		// Token: 0x0602AF69 RID: 175977 RVA: 0x005DC628 File Offset: 0x005DA828
 		public IDamageTextOptimizationConfigT AsIDamageTextOptimizationConfig()
 		{
 			return this.As<IDamageTextOptimizationConfigT>();
 		}
 
-		// Token: 0x06028924 RID: 166180 RVA: 0x00593EF8 File Offset: 0x005920F8
+		// Token: 0x0602AF6A RID: 175978 RVA: 0x005DC630 File Offset: 0x005DA830
 		public static TPerformanceOptimizationTypeUnion FromIDamageTextOptimizationConfig(IDamageTextOptimizationConfigT _idamagetextoptimizationconfig)
 		{
 			return new TPerformanceOptimizationTypeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028925 RID: 166181 RVA: 0x00593F0D File Offset: 0x0059210D
+		// Token: 0x0602AF6B RID: 175979 RVA: 0x005DC645 File Offset: 0x005DA845
 		public IPlaneMovementOptimizationConfigT AsIPlaneMovementOptimizationConfig()
 		{
 			return this.As<IPlaneMovementOptimizationConfigT>();
 		}
 
-		// Token: 0x06028926 RID: 166182 RVA: 0x00593F15 File Offset: 0x00592115
+		// Token: 0x0602AF6C RID: 175980 RVA: 0x005DC64D File Offset: 0x005DA84D
 		public static TPerformanceOptimizationTypeUnion FromIPlaneMovementOptimizationConfig(IPlaneMovementOptimizationConfigT _iplanemovementoptimizationconfig)
 		{
 			return new TPerformanceOptimizationTypeUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028927 RID: 166183 RVA: 0x00593F2C File Offset: 0x0059212C
+		// Token: 0x0602AF6D RID: 175981 RVA: 0x005DC664 File Offset: 0x005DA864
 		public static int Pack(FlatBufferBuilder builder, TPerformanceOptimizationTypeUnion _o)
 		{
 			TPerformanceOptimizationType type = _o.Type;

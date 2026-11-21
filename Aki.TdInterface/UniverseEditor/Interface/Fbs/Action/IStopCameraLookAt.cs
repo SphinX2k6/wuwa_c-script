@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020071C9 RID: 29129
+	// Token: 0x0200799E RID: 31134
 	public struct IStopCameraLookAt : IFlatbufferObject
 	{
-		// Token: 0x1700D871 RID: 55409
-		// (get) Token: 0x06033ACC RID: 211660 RVA: 0x006F5648 File Offset: 0x006F3848
+		// Token: 0x1700E46A RID: 58474
+		// (get) Token: 0x06036DCE RID: 224718 RVA: 0x007569A8 File Offset: 0x00754BA8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,50 +16,50 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033ACD RID: 211661 RVA: 0x006F5655 File Offset: 0x006F3855
+		// Token: 0x06036DCF RID: 224719 RVA: 0x007569B5 File Offset: 0x00754BB5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06033ACE RID: 211662 RVA: 0x006F565C File Offset: 0x006F385C
+		// Token: 0x06036DD0 RID: 224720 RVA: 0x007569BC File Offset: 0x00754BBC
 		public static IStopCameraLookAt GetRootAsIStopCameraLookAt(ByteBuffer _bb)
 		{
 			return IStopCameraLookAt.GetRootAsIStopCameraLookAt(_bb, default(IStopCameraLookAt));
 		}
 
-		// Token: 0x06033ACF RID: 211663 RVA: 0x006F5678 File Offset: 0x006F3878
+		// Token: 0x06036DD1 RID: 224721 RVA: 0x007569D8 File Offset: 0x00754BD8
 		public static IStopCameraLookAt GetRootAsIStopCameraLookAt(ByteBuffer _bb, IStopCameraLookAt obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06033AD0 RID: 211664 RVA: 0x006F5695 File Offset: 0x006F3895
+		// Token: 0x06036DD2 RID: 224722 RVA: 0x007569F5 File Offset: 0x00754BF5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06033AD1 RID: 211665 RVA: 0x006F56A4 File Offset: 0x006F38A4
+		// Token: 0x06036DD3 RID: 224723 RVA: 0x00756A04 File Offset: 0x00754C04
 		public IStopCameraLookAt __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x06033AD2 RID: 211666 RVA: 0x006F56B4 File Offset: 0x006F38B4
+		// Token: 0x06036DD4 RID: 224724 RVA: 0x00756A14 File Offset: 0x00754C14
 		public static void StartIStopCameraLookAt(FlatBufferBuilder builder)
 		{
 			builder.StartTable(0);
 		}
 
-		// Token: 0x06033AD3 RID: 211667 RVA: 0x006F56BD File Offset: 0x006F38BD
+		// Token: 0x06036DD5 RID: 224725 RVA: 0x00756A1D File Offset: 0x00754C1D
 		public static Offset<IStopCameraLookAt> EndIStopCameraLookAt(FlatBufferBuilder builder)
 		{
 			return new Offset<IStopCameraLookAt>(builder.EndTable());
 		}
 
-		// Token: 0x06033AD4 RID: 211668 RVA: 0x006F56CC File Offset: 0x006F38CC
+		// Token: 0x06036DD6 RID: 224726 RVA: 0x00756A2C File Offset: 0x00754C2C
 		public IStopCameraLookAtT UnPack()
 		{
 			IStopCameraLookAtT stopCameraLookAtT = new IStopCameraLookAtT();
@@ -67,12 +67,12 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return stopCameraLookAtT;
 		}
 
-		// Token: 0x06033AD5 RID: 211669 RVA: 0x006F56E7 File Offset: 0x006F38E7
+		// Token: 0x06036DD7 RID: 224727 RVA: 0x00756A47 File Offset: 0x00754C47
 		public void UnPackTo(IStopCameraLookAtT _o)
 		{
 		}
 
-		// Token: 0x06033AD6 RID: 211670 RVA: 0x006F56EC File Offset: 0x006F38EC
+		// Token: 0x06036DD8 RID: 224728 RVA: 0x00756A4C File Offset: 0x00754C4C
 		public static Offset<IStopCameraLookAt> Pack(FlatBufferBuilder builder, IStopCameraLookAtT _o)
 		{
 			if (_o == null)
@@ -83,7 +83,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IStopCameraLookAt.EndIStopCameraLookAt(builder);
 		}
 
-		// Token: 0x04011CAD RID: 72877
+		// Token: 0x04012CAF RID: 76975
 		private Table __p;
 	}
 }

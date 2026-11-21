@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 
-// Token: 0x020026C3 RID: 9923
+// Token: 0x02001BAE RID: 7086
 [NullableContext(1)]
 [Nullable(0)]
 public static class DangoDungeonCommandFactory
 {
-	// Token: 0x060145A8 RID: 83368 RVA: 0x00526E89 File Offset: 0x00525089
+	// Token: 0x06011A8A RID: 72330 RVA: 0x00535BC1 File Offset: 0x00533DC1
 	public static RacingBetsCommandBase CreateRacingBetsInitDungeonCommand(List<RacingBetsDungeonDangoInfo> dangoInfoList, IReadOnlyList<RacingBetMapPoint> mapPointList, int seasonId)
 	{
 		RacingBetsInitDungeonCommand racingBetsInitDungeonCommand = new RacingBetsInitDungeonCommand();
@@ -17,13 +17,13 @@ public static class DangoDungeonCommandFactory
 		return racingBetsInitDungeonCommand;
 	}
 
-	// Token: 0x060145A9 RID: 83369 RVA: 0x00526E99 File Offset: 0x00525099
+	// Token: 0x06011A8B RID: 72331 RVA: 0x00535BD1 File Offset: 0x00533DD1
 	public static RacingBetsCommandBase CreateOpenRacingBetsGameplayView()
 	{
 		return new OpenRacingBetsGamePlayViewCommand();
 	}
 
-	// Token: 0x060145AA RID: 83370 RVA: 0x00526EA0 File Offset: 0x005250A0
+	// Token: 0x06011A8C RID: 72332 RVA: 0x00535BD8 File Offset: 0x00533DD8
 	public static RacingBetsCommandBase CreateOpenRacingBetsGamePlayPreviewView(bool canCameraInput = false)
 	{
 		OpenRacingBetsGamePlayPreviewViewCommand openRacingBetsGamePlayPreviewViewCommand = new OpenRacingBetsGamePlayPreviewViewCommand();
@@ -31,19 +31,19 @@ public static class DangoDungeonCommandFactory
 		return openRacingBetsGamePlayPreviewViewCommand;
 	}
 
-	// Token: 0x060145AB RID: 83371 RVA: 0x00526EAE File Offset: 0x005250AE
+	// Token: 0x06011A8D RID: 72333 RVA: 0x00535BE6 File Offset: 0x00533DE6
 	public static RacingBetsCommandBase CreateRacingBetsDungeonBeginCommand()
 	{
 		return new RacingBetsDungeonBeginCommand();
 	}
 
-	// Token: 0x060145AC RID: 83372 RVA: 0x00526EB5 File Offset: 0x005250B5
+	// Token: 0x06011A8E RID: 72334 RVA: 0x00535BED File Offset: 0x00533DED
 	public static RacingBetsCommandBase CreateRacingBetsRoundStartCommand()
 	{
 		return new RacingBetsRoundStartCommand();
 	}
 
-	// Token: 0x060145AD RID: 83373 RVA: 0x00526EBC File Offset: 0x005250BC
+	// Token: 0x06011A8F RID: 72335 RVA: 0x00535BF4 File Offset: 0x00533DF4
 	public static RacingBetsDangoRoundStartCommand CreateRacingBetsDangoRoundStartCommand(int dangoId)
 	{
 		RacingBetsDangoRoundStartCommand racingBetsDangoRoundStartCommand = new RacingBetsDangoRoundStartCommand();
@@ -51,7 +51,7 @@ public static class DangoDungeonCommandFactory
 		return racingBetsDangoRoundStartCommand;
 	}
 
-	// Token: 0x060145AE RID: 83374 RVA: 0x00526ECA File Offset: 0x005250CA
+	// Token: 0x06011A90 RID: 72336 RVA: 0x00535C02 File Offset: 0x00533E02
 	public static RacingBetsCommandBase CreateRacingBetsDiceCommand(int round, List<DangoIdToDiceNum> dangoDiceList)
 	{
 		RacingBetsDiceCommand racingBetsDiceCommand = new RacingBetsDiceCommand();
@@ -59,7 +59,7 @@ public static class DangoDungeonCommandFactory
 		return racingBetsDiceCommand;
 	}
 
-	// Token: 0x060145AF RID: 83375 RVA: 0x00526ED9 File Offset: 0x005250D9
+	// Token: 0x06011A91 RID: 72337 RVA: 0x00535C11 File Offset: 0x00533E11
 	public static RacingBetsCommandBase CreateRacingBetsSkillCommand(RacingBetsDangoActionSkill skillAction)
 	{
 		RacingBetsSkillCommand racingBetsSkillCommand = new RacingBetsSkillCommand();
@@ -67,7 +67,7 @@ public static class DangoDungeonCommandFactory
 		return racingBetsSkillCommand;
 	}
 
-	// Token: 0x060145B0 RID: 83376 RVA: 0x00526EE7 File Offset: 0x005250E7
+	// Token: 0x06011A92 RID: 72338 RVA: 0x00535C1F File Offset: 0x00533E1F
 	public static RacingBetsCommandBase CreateRacingBetsDangoMoveCommand(RacingBetsDangoActionMove moveAction)
 	{
 		RacingBetsDangoMoveCommand racingBetsDangoMoveCommand = new RacingBetsDangoMoveCommand();
@@ -75,7 +75,7 @@ public static class DangoDungeonCommandFactory
 		return racingBetsDangoMoveCommand;
 	}
 
-	// Token: 0x060145B1 RID: 83377 RVA: 0x00526EF5 File Offset: 0x005250F5
+	// Token: 0x06011A93 RID: 72339 RVA: 0x00535C2D File Offset: 0x00533E2D
 	public static RacingBetsCommandBase CreateRacingBetsDangoChangeHighCommand(RacingBetsDangoActionChangeHigh changeHighAction)
 	{
 		RacingBetsDangoChangeHighCommand racingBetsDangoChangeHighCommand = new RacingBetsDangoChangeHighCommand();
@@ -83,7 +83,7 @@ public static class DangoDungeonCommandFactory
 		return racingBetsDangoChangeHighCommand;
 	}
 
-	// Token: 0x060145B2 RID: 83378 RVA: 0x00526F03 File Offset: 0x00525103
+	// Token: 0x06011A94 RID: 72340 RVA: 0x00535C3B File Offset: 0x00533E3B
 	public static RacingBetsCommandBase CreateRacingBetsChangeDangoCameraBlendCommand(int dangoId)
 	{
 		RacingBetsChangeDangoCameraBlendCommand racingBetsChangeDangoCameraBlendCommand = new RacingBetsChangeDangoCameraBlendCommand();
@@ -91,7 +91,7 @@ public static class DangoDungeonCommandFactory
 		return racingBetsChangeDangoCameraBlendCommand;
 	}
 
-	// Token: 0x060145B3 RID: 83379 RVA: 0x00526F11 File Offset: 0x00525111
+	// Token: 0x06011A95 RID: 72341 RVA: 0x00535C49 File Offset: 0x00533E49
 	public static RacingBetsNextRoundRequestCommand CreateRacingBetsNextRoundRequestCommand(int activityId, int legMatchId, int roundId)
 	{
 		RacingBetsNextRoundRequestCommand racingBetsNextRoundRequestCommand = new RacingBetsNextRoundRequestCommand();
@@ -99,7 +99,7 @@ public static class DangoDungeonCommandFactory
 		return racingBetsNextRoundRequestCommand;
 	}
 
-	// Token: 0x060145B4 RID: 83380 RVA: 0x00526F21 File Offset: 0x00525121
+	// Token: 0x06011A96 RID: 72342 RVA: 0x00535C59 File Offset: 0x00533E59
 	public static OpenRacingBetsDungeonResultViewCommand CreateOpenRacingBetsDungeonResultView(RacingBetsLegMatchData legMatchData)
 	{
 		OpenRacingBetsDungeonResultViewCommand openRacingBetsDungeonResultViewCommand = new OpenRacingBetsDungeonResultViewCommand();
@@ -107,7 +107,7 @@ public static class DangoDungeonCommandFactory
 		return openRacingBetsDungeonResultViewCommand;
 	}
 
-	// Token: 0x060145B5 RID: 83381 RVA: 0x00526F2F File Offset: 0x0052512F
+	// Token: 0x06011A97 RID: 72343 RVA: 0x00535C67 File Offset: 0x00533E67
 	public static RacingBetsDangoDestinationCommand CreateRacingBetsDangoDestinationCommand(int dangoId)
 	{
 		RacingBetsDangoDestinationCommand racingBetsDangoDestinationCommand = new RacingBetsDangoDestinationCommand();
@@ -115,7 +115,7 @@ public static class DangoDungeonCommandFactory
 		return racingBetsDangoDestinationCommand;
 	}
 
-	// Token: 0x060145B6 RID: 83382 RVA: 0x00526F3D File Offset: 0x0052513D
+	// Token: 0x06011A98 RID: 72344 RVA: 0x00535C75 File Offset: 0x00533E75
 	public static RacingBetsDangoRankChangeCommand CreateRacingBetsDangoRankChangeCommand(List<int> rankList)
 	{
 		RacingBetsDangoRankChangeCommand racingBetsDangoRankChangeCommand = new RacingBetsDangoRankChangeCommand();
@@ -123,7 +123,7 @@ public static class DangoDungeonCommandFactory
 		return racingBetsDangoRankChangeCommand;
 	}
 
-	// Token: 0x060145B7 RID: 83383 RVA: 0x00526F4B File Offset: 0x0052514B
+	// Token: 0x06011A99 RID: 72345 RVA: 0x00535C83 File Offset: 0x00533E83
 	public static RacingBetsCommandBase CreateRacingBetsDangoTransmitCommand(RacingBetsDangoActionTransmit transmitAction)
 	{
 		RacingBetsDangoTransmitCommand racingBetsDangoTransmitCommand = new RacingBetsDangoTransmitCommand();
@@ -131,7 +131,7 @@ public static class DangoDungeonCommandFactory
 		return racingBetsDangoTransmitCommand;
 	}
 
-	// Token: 0x060145B8 RID: 83384 RVA: 0x00526F59 File Offset: 0x00525159
+	// Token: 0x06011A9A RID: 72346 RVA: 0x00535C91 File Offset: 0x00533E91
 	public static RacingBetsCommandBase CreateRacingBetsBlackHoleTransmitCommand(RacingBetsDangoActionBlackHoleTransmit transmitAction)
 	{
 		RacingBetsBlackHoleTransmitCommand racingBetsBlackHoleTransmitCommand = new RacingBetsBlackHoleTransmitCommand();
@@ -139,7 +139,7 @@ public static class DangoDungeonCommandFactory
 		return racingBetsBlackHoleTransmitCommand;
 	}
 
-	// Token: 0x060145B9 RID: 83385 RVA: 0x00526F67 File Offset: 0x00525167
+	// Token: 0x06011A9B RID: 72347 RVA: 0x00535C9F File Offset: 0x00533E9F
 	public static RacingBetsCommandBase CreateRacingBetsOrganEffectCommand(RacingBetsOrganEffect organEffectAction)
 	{
 		RacingBetsOrganEffectCommand racingBetsOrganEffectCommand = new RacingBetsOrganEffectCommand();

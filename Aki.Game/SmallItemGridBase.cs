@@ -1,31 +1,31 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200199F RID: 6559
+// Token: 0x02000E5C RID: 3676
 [NullableContext(2)]
 [Nullable(0)]
 public abstract class SmallItemGridBase : IMediumItemGridBase
 {
-	// Token: 0x17001004 RID: 4100
-	// (get) Token: 0x0600BF7E RID: 49022
+	// Token: 0x17001028 RID: 4136
+	// (get) Token: 0x06009386 RID: 37766
 	public abstract ESmallItemGridType Type { get; }
 
-	// Token: 0x040055E5 RID: 21989
+	// Token: 0x04005693 RID: 22163
 	public object Data;
 
-	// Token: 0x040055E6 RID: 21990
+	// Token: 0x04005694 RID: 22164
 	public int? SkinId;
 
-	// Token: 0x040055E7 RID: 21991
+	// Token: 0x04005695 RID: 22165
 	public bool? IsIconHide;
 
-	// Token: 0x040055E8 RID: 21992
+	// Token: 0x04005696 RID: 22166
 	public int? ItemConfigId;
 
-	// Token: 0x040055E9 RID: 21993
+	// Token: 0x04005697 RID: 22167
 	public string BottomTextId;
 
-	// Token: 0x040055EA RID: 21994
+	// Token: 0x04005698 RID: 22168
 	[Nullable(new byte[]
 	{
 		2,
@@ -33,54 +33,54 @@ public abstract class SmallItemGridBase : IMediumItemGridBase
 	})]
 	public object[] BottomTextParameter;
 
-	// Token: 0x040055EB RID: 21995
+	// Token: 0x04005699 RID: 22169
 	public string BottomText;
 
-	// Token: 0x040055EC RID: 21996
+	// Token: 0x0400569A RID: 22170
 	public string IconPath;
 
-	// Token: 0x040055ED RID: 21997
+	// Token: 0x0400569B RID: 22171
 	public bool? IsQualityHidden;
 
-	// Token: 0x040055EE RID: 21998
+	// Token: 0x0400569C RID: 22172
 	public string QualityIconResourceId;
 
-	// Token: 0x040055EF RID: 21999
+	// Token: 0x0400569D RID: 22173
 	public string QualityIcon;
 
-	// Token: 0x040055F0 RID: 22000
+	// Token: 0x0400569E RID: 22174
 	public int? QualityId;
 
-	// Token: 0x040055F1 RID: 22001
+	// Token: 0x0400569F RID: 22175
 	public CommonDefine.EQualityIconType? QualityType;
 
-	// Token: 0x040055F2 RID: 22002
+	// Token: 0x040056A0 RID: 22176
 	public bool? IsDisable;
 
-	// Token: 0x040055F3 RID: 22003
+	// Token: 0x040056A1 RID: 22177
 	public string TopRightTextId;
 
-	// Token: 0x040055F4 RID: 22004
+	// Token: 0x040056A2 RID: 22178
 	public object[] TopRightTextParameter;
 
-	// Token: 0x040055F5 RID: 22005
+	// Token: 0x040056A3 RID: 22179
 	public string TopRightText;
 
-	// Token: 0x040055F6 RID: 22006
+	// Token: 0x040056A4 RID: 22180
 	public string TopRightTextBgColor;
 
-	// Token: 0x040055F7 RID: 22007
+	// Token: 0x040056A5 RID: 22181
 	public string TopRightTextColor;
 
-	// Token: 0x040055F8 RID: 22008
+	// Token: 0x040056A6 RID: 22182
 	public string RightTopValue;
 
-	// Token: 0x040055F9 RID: 22009
+	// Token: 0x040056A7 RID: 22183
 	public bool? IsRedDotVisible;
 
-	// Token: 0x040055FA RID: 22010
+	// Token: 0x040056A8 RID: 22184
 	public bool? IsDoubleRewardVisible;
 
-	// Token: 0x040055FB RID: 22011
+	// Token: 0x040056A9 RID: 22185
 	public string SpriteIconPath;
 }

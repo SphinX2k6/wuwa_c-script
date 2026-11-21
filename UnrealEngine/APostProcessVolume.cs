@@ -6,41 +6,34 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001026 RID: 4134
+	// Token: 0x0200026A RID: 618
+	[NullableContext(1)]
+	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.PostProcessVolume")]
-	[UnrealStructLayout(3744, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 3744)]
-	public class APostProcessVolume : AVolume, IUnrealUObject, IUnrealObject, IInterface_PostProcessVolume, IUnrealNativeInterface, IUnrealInterface
+	[UnrealStructLayout(3792, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 3792)]
+	public class APostProcessVolume : AVolume, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0600E89C RID: 59548 RVA: 0x00159900 File Offset: 0x00157B00
+		// Token: 0x06003D5F RID: 15711 RVA: 0x000587E7 File Offset: 0x000569E7
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return APostProcessVolume._ClassPtr;
 		}
 
-		// Token: 0x0600E89D RID: 59549 RVA: 0x0015990C File Offset: 0x00157B0C
-		int IInterface_PostProcessVolume.InterfaceOffset()
-		{
-			return APostProcessVolume.__InterfaceOffset_IInterface_PostProcessVolume;
-		}
-
-		// Token: 0x0600E89E RID: 59550 RVA: 0x00159914 File Offset: 0x00157B14
+		// Token: 0x06003D60 RID: 15712 RVA: 0x000587F4 File Offset: 0x000569F4
 		public APostProcessVolume() : this(BuiltinUtils.AllocNativeUObject(APostProcessVolume.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0600E89F RID: 59551 RVA: 0x0015993C File Offset: 0x00157B3C
-		[NullableContext(1)]
+		// Token: 0x06003D61 RID: 15713 RVA: 0x0005881C File Offset: 0x00056A1C
 		public APostProcessVolume(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(APostProcessVolume.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17003851 RID: 14417
-		// (get) Token: 0x0600E8A0 RID: 59552 RVA: 0x00159970 File Offset: 0x00157B70
-		// (set) Token: 0x0600E8A1 RID: 59553 RVA: 0x001599A9 File Offset: 0x00157BA9
-		[Nullable(1)]
+		// Token: 0x17000B18 RID: 2840
+		// (get) Token: 0x06003D62 RID: 15714 RVA: 0x00058850 File Offset: 0x00056A50
+		// (set) Token: 0x06003D63 RID: 15715 RVA: 0x00058889 File Offset: 0x00056A89
 		public FPostProcessSettings Settings
 		{
-			[NullableContext(1)]
 			get
 			{
 				base.FastCheckIsValid();
@@ -51,16 +44,15 @@ namespace UnrealEngine
 				}
 				return result;
 			}
-			[NullableContext(1)]
 			set
 			{
 				UnrealReflectionUtils.CopyNativeStruct(FPostProcessSettings.StaticStruct(), base.NativePtr + (IntPtr)APostProcessVolume.__PropertyOffset_Settings, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17003852 RID: 14418
-		// (get) Token: 0x0600E8A2 RID: 59554 RVA: 0x001599CA File Offset: 0x00157BCA
-		// (set) Token: 0x0600E8A3 RID: 59555 RVA: 0x001599DA File Offset: 0x00157BDA
+		// Token: 0x17000B19 RID: 2841
+		// (get) Token: 0x06003D64 RID: 15716 RVA: 0x000588AA File Offset: 0x00056AAA
+		// (set) Token: 0x06003D65 RID: 15717 RVA: 0x000588BA File Offset: 0x00056ABA
 		public unsafe float Priority
 		{
 			get
@@ -73,9 +65,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003853 RID: 14419
-		// (get) Token: 0x0600E8A4 RID: 59556 RVA: 0x001599EB File Offset: 0x00157BEB
-		// (set) Token: 0x0600E8A5 RID: 59557 RVA: 0x001599FB File Offset: 0x00157BFB
+		// Token: 0x17000B1A RID: 2842
+		// (get) Token: 0x06003D66 RID: 15718 RVA: 0x000588CB File Offset: 0x00056ACB
+		// (set) Token: 0x06003D67 RID: 15719 RVA: 0x000588DB File Offset: 0x00056ADB
 		public unsafe float BlendRadius
 		{
 			get
@@ -88,9 +80,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003854 RID: 14420
-		// (get) Token: 0x0600E8A6 RID: 59558 RVA: 0x00159A0C File Offset: 0x00157C0C
-		// (set) Token: 0x0600E8A7 RID: 59559 RVA: 0x00159A1C File Offset: 0x00157C1C
+		// Token: 0x17000B1B RID: 2843
+		// (get) Token: 0x06003D68 RID: 15720 RVA: 0x000588EC File Offset: 0x00056AEC
+		// (set) Token: 0x06003D69 RID: 15721 RVA: 0x000588FC File Offset: 0x00056AFC
 		public unsafe float BlendWeight
 		{
 			get
@@ -103,9 +95,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003855 RID: 14421
-		// (get) Token: 0x0600E8A8 RID: 59560 RVA: 0x00159A2D File Offset: 0x00157C2D
-		// (set) Token: 0x0600E8A9 RID: 59561 RVA: 0x00159A46 File Offset: 0x00157C46
+		// Token: 0x17000B1C RID: 2844
+		// (get) Token: 0x06003D6A RID: 15722 RVA: 0x0005890D File Offset: 0x00056B0D
+		// (set) Token: 0x06003D6B RID: 15723 RVA: 0x00058926 File Offset: 0x00056B26
 		public unsafe bool bEnabled
 		{
 			get
@@ -118,9 +110,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003856 RID: 14422
-		// (get) Token: 0x0600E8AA RID: 59562 RVA: 0x00159A76 File Offset: 0x00157C76
-		// (set) Token: 0x0600E8AB RID: 59563 RVA: 0x00159A8F File Offset: 0x00157C8F
+		// Token: 0x17000B1D RID: 2845
+		// (get) Token: 0x06003D6C RID: 15724 RVA: 0x00058956 File Offset: 0x00056B56
+		// (set) Token: 0x06003D6D RID: 15725 RVA: 0x0005896F File Offset: 0x00056B6F
 		public unsafe bool bUnbound
 		{
 			get
@@ -133,9 +125,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003857 RID: 14423
-		// (get) Token: 0x0600E8AC RID: 59564 RVA: 0x00159ABF File Offset: 0x00157CBF
-		// (set) Token: 0x0600E8AD RID: 59565 RVA: 0x00159AD8 File Offset: 0x00157CD8
+		// Token: 0x17000B1E RID: 2846
+		// (get) Token: 0x06003D6E RID: 15726 RVA: 0x0005899F File Offset: 0x00056B9F
+		// (set) Token: 0x06003D6F RID: 15727 RVA: 0x000589B8 File Offset: 0x00056BB8
 		public unsafe bool bIsUISceneRendering
 		{
 			get
@@ -148,9 +140,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003858 RID: 14424
-		// (get) Token: 0x0600E8AE RID: 59566 RVA: 0x00159B08 File Offset: 0x00157D08
-		// (set) Token: 0x0600E8AF RID: 59567 RVA: 0x00159B21 File Offset: 0x00157D21
+		// Token: 0x17000B1F RID: 2847
+		// (get) Token: 0x06003D70 RID: 15728 RVA: 0x000589E8 File Offset: 0x00056BE8
+		// (set) Token: 0x06003D71 RID: 15729 RVA: 0x00058A01 File Offset: 0x00056C01
 		public unsafe bool bIsEffectVolume
 		{
 			get
@@ -163,9 +155,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003859 RID: 14425
-		// (get) Token: 0x0600E8B0 RID: 59568 RVA: 0x00159B51 File Offset: 0x00157D51
-		// (set) Token: 0x0600E8B1 RID: 59569 RVA: 0x00159B61 File Offset: 0x00157D61
+		// Token: 0x17000B20 RID: 2848
+		// (get) Token: 0x06003D72 RID: 15730 RVA: 0x00058A31 File Offset: 0x00056C31
+		// (set) Token: 0x06003D73 RID: 15731 RVA: 0x00058A41 File Offset: 0x00056C41
 		public unsafe int CustomCullFlag
 		{
 			get
@@ -178,83 +170,67 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600E8B2 RID: 59570 RVA: 0x00159B74 File Offset: 0x00157D74
-		[NullableContext(2)]
-		public void AddOrUpdateBlendable(IBlendableInterface InBlendableObject, float InWeight = 1f)
-		{
-			FScriptInterface fscriptInterface = new FScriptInterface(InBlendableObject, (InBlendableObject != null) ? InBlendableObject.InterfaceOffset() : 0);
-			APostProcessVolume.__AddOrUpdateBlendable_Internal(base.NativePtr, fscriptInterface, InWeight);
-		}
-
-		// Token: 0x0600E8B3 RID: 59571
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __AddOrUpdateBlendable_Internal(IntPtr @this, in FScriptInterface InBlendableObject, float InWeight);
-
-		// Token: 0x0600E8B4 RID: 59572 RVA: 0x00159BA3 File Offset: 0x00157DA3
+		// Token: 0x06003D74 RID: 15732 RVA: 0x00058A52 File Offset: 0x00056C52
 		static APostProcessVolume()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.PostProcessVolume");
 		}
 
-		// Token: 0x0600E8B5 RID: 59573 RVA: 0x00159BB1 File Offset: 0x00157DB1
+		// Token: 0x06003D75 RID: 15733 RVA: 0x00058A60 File Offset: 0x00056C60
 		protected APostProcessVolume(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04007E4A RID: 32330
-		internal static int __InterfaceOffset_IInterface_PostProcessVolume;
-
-		// Token: 0x04007E4B RID: 32331
-		[Nullable(1)]
+		// Token: 0x040017E9 RID: 6121
 		public new const string __ObjectPath = "/Script/Engine.PostProcessVolume";
 
-		// Token: 0x04007E4C RID: 32332
+		// Token: 0x040017EA RID: 6122
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04007E4D RID: 32333
+		// Token: 0x040017EB RID: 6123
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04007E4E RID: 32334
+		// Token: 0x040017EC RID: 6124
 		internal static int __PropertyOffset_Settings;
 
-		// Token: 0x04007E4F RID: 32335
+		// Token: 0x040017ED RID: 6125
 		[Nullable(2)]
 		private FPostProcessSettings _Settings;
 
-		// Token: 0x04007E50 RID: 32336
+		// Token: 0x040017EE RID: 6126
 		internal static int __PropertyOffset_Priority;
 
-		// Token: 0x04007E51 RID: 32337
+		// Token: 0x040017EF RID: 6127
 		internal static int __PropertyOffset_BlendRadius;
 
-		// Token: 0x04007E52 RID: 32338
+		// Token: 0x040017F0 RID: 6128
 		internal static int __PropertyOffset_BlendWeight;
 
-		// Token: 0x04007E53 RID: 32339
+		// Token: 0x040017F1 RID: 6129
 		internal static int __PropertyOffset_bEnabled;
 
-		// Token: 0x04007E54 RID: 32340
+		// Token: 0x040017F2 RID: 6130
 		internal static byte __PropertyMask_bEnabled;
 
-		// Token: 0x04007E55 RID: 32341
+		// Token: 0x040017F3 RID: 6131
 		internal static int __PropertyOffset_bUnbound;
 
-		// Token: 0x04007E56 RID: 32342
+		// Token: 0x040017F4 RID: 6132
 		internal static byte __PropertyMask_bUnbound;
 
-		// Token: 0x04007E57 RID: 32343
+		// Token: 0x040017F5 RID: 6133
 		internal static int __PropertyOffset_bIsUISceneRendering;
 
-		// Token: 0x04007E58 RID: 32344
+		// Token: 0x040017F6 RID: 6134
 		internal static byte __PropertyMask_bIsUISceneRendering;
 
-		// Token: 0x04007E59 RID: 32345
+		// Token: 0x040017F7 RID: 6135
 		internal static int __PropertyOffset_bIsEffectVolume;
 
-		// Token: 0x04007E5A RID: 32346
+		// Token: 0x040017F8 RID: 6136
 		internal static byte __PropertyMask_bIsEffectVolume;
 
-		// Token: 0x04007E5B RID: 32347
+		// Token: 0x040017F9 RID: 6137
 		internal static int __PropertyOffset_CustomCullFlag;
 	}
 }

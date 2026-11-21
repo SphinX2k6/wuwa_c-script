@@ -1,16 +1,13 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D6A RID: 3434
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E64 RID: 3684
 	public class IRenderFlowerBridge : IRenderSpecifiedRangeType
 	{
-		// Token: 0x06004E26 RID: 20006 RVA: 0x000C2092 File Offset: 0x000C0292
+		// Token: 0x06005342 RID: 21314 RVA: 0x000CD7D6 File Offset: 0x000CB9D6
 		public static IRenderFlowerBridge Create(IRenderFlowerBridge? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700190F RID: 6415
-		// (get) Token: 0x06004E27 RID: 20007 RVA: 0x000C20B1 File Offset: 0x000C02B1
+		// Token: 0x17001A75 RID: 6773
+		// (get) Token: 0x06005343 RID: 21315 RVA: 0x000CD7F5 File Offset: 0x000CB9F5
 		public override ERenderSpecifiedRangeType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001910 RID: 6416
-		// (get) Token: 0x06004E28 RID: 20008 RVA: 0x000C20BE File Offset: 0x000C02BE
+		// Token: 0x17001A76 RID: 6774
+		// (get) Token: 0x06005344 RID: 21316 RVA: 0x000CD802 File Offset: 0x000CBA02
 		public virtual int Radius
 		{
 			get
@@ -43,8 +40,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001911 RID: 6417
-		// (get) Token: 0x06004E29 RID: 20009 RVA: 0x000C20CB File Offset: 0x000C02CB
+		// Token: 0x17001A77 RID: 6775
+		// (get) Token: 0x06005345 RID: 21317 RVA: 0x000CD80F File Offset: 0x000CBA0F
 		public virtual ITargetEntityType CenterTarget
 		{
 			get
@@ -59,8 +56,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001912 RID: 6418
-		// (get) Token: 0x06004E2A RID: 20010 RVA: 0x000C20FA File Offset: 0x000C02FA
+		// Token: 0x17001A78 RID: 6776
+		// (get) Token: 0x06005346 RID: 21318 RVA: 0x000CD83E File Offset: 0x000CBA3E
 		public virtual string AkEvent
 		{
 			get
@@ -69,13 +66,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002CC9 RID: 11465
+		// Token: 0x04002F89 RID: 12169
 		private IRenderFlowerBridge Instance;
 
-		// Token: 0x04002CCA RID: 11466
+		// Token: 0x04002F8A RID: 12170
 		private ITargetEntityType _CenterTargetCache;
 
-		// Token: 0x04002CCB RID: 11467
+		// Token: 0x04002F8B RID: 12171
 		private bool _CenterTargetInited;
 	}
 }

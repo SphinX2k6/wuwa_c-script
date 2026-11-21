@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000802 RID: 2050
+	// Token: 0x020008A5 RID: 2213
 	public class IWuWaGoHintStepBase_SetValue
 	{
-		// Token: 0x04001D79 RID: 7545
+		// Token: 0x04001F85 RID: 8069
 		public EWuWaGoHintStepType Type;
 	}
 }

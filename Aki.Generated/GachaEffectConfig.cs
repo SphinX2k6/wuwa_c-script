@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000CDF RID: 3295
+	// Token: 0x02000DC3 RID: 3523
 	public struct GachaEffectConfig : IFlatbufferObject
 	{
-		// Token: 0x1700149C RID: 5276
-		// (get) Token: 0x06007808 RID: 30728 RVA: 0x00245A58 File Offset: 0x00243C58
+		// Token: 0x170014F9 RID: 5369
+		// (get) Token: 0x06007E13 RID: 32275 RVA: 0x002645D4 File Offset: 0x002627D4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007809 RID: 30729 RVA: 0x00245A65 File Offset: 0x00243C65
+		// Token: 0x06007E14 RID: 32276 RVA: 0x002645E1 File Offset: 0x002627E1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600780A RID: 30730 RVA: 0x00245A6C File Offset: 0x00243C6C
+		// Token: 0x06007E15 RID: 32277 RVA: 0x002645E8 File Offset: 0x002627E8
 		public static GachaEffectConfig GetRootAsGachaEffectConfig(ByteBuffer _bb)
 		{
 			return GachaEffectConfig.GetRootAsGachaEffectConfig(_bb, default(GachaEffectConfig));
 		}
 
-		// Token: 0x0600780B RID: 30731 RVA: 0x00245A88 File Offset: 0x00243C88
+		// Token: 0x06007E16 RID: 32278 RVA: 0x00264604 File Offset: 0x00262804
 		public static GachaEffectConfig GetRootAsGachaEffectConfig(ByteBuffer _bb, GachaEffectConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600780C RID: 30732 RVA: 0x00245AA5 File Offset: 0x00243CA5
+		// Token: 0x06007E17 RID: 32279 RVA: 0x00264621 File Offset: 0x00262821
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600780D RID: 30733 RVA: 0x00245AB4 File Offset: 0x00243CB4
+		// Token: 0x06007E18 RID: 32280 RVA: 0x00264630 File Offset: 0x00262830
 		public GachaEffectConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700149D RID: 5277
-		// (get) Token: 0x0600780E RID: 30734 RVA: 0x00245AC4 File Offset: 0x00243CC4
+		// Token: 0x170014FA RID: 5370
+		// (get) Token: 0x06007E19 RID: 32281 RVA: 0x00264640 File Offset: 0x00262840
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700149E RID: 5278
-		// (get) Token: 0x0600780F RID: 30735 RVA: 0x00245B00 File Offset: 0x00243D00
+		// Token: 0x170014FB RID: 5371
+		// (get) Token: 0x06007E1A RID: 32282 RVA: 0x0026467C File Offset: 0x0026287C
 		public int Times
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700149F RID: 5279
-		// (get) Token: 0x06007810 RID: 30736 RVA: 0x00245B3C File Offset: 0x00243D3C
+		// Token: 0x170014FC RID: 5372
+		// (get) Token: 0x06007E1B RID: 32283 RVA: 0x002646B8 File Offset: 0x002628B8
 		public int Quality
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170014A0 RID: 5280
-		// (get) Token: 0x06007811 RID: 30737 RVA: 0x00245B78 File Offset: 0x00243D78
+		// Token: 0x170014FD RID: 5373
+		// (get) Token: 0x06007E1C RID: 32284 RVA: 0x002646F4 File Offset: 0x002628F4
 		public string FinalShowSequencePath
 		{
 			get
@@ -107,20 +107,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007812 RID: 30738 RVA: 0x00245BB0 File Offset: 0x00243DB0
+		// Token: 0x06007E1D RID: 32285 RVA: 0x0026472C File Offset: 0x0026292C
 		public Span<byte> GetFinalShowSequencePathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x06007813 RID: 30739 RVA: 0x00245BC0 File Offset: 0x00243DC0
+		// Token: 0x06007E1E RID: 32286 RVA: 0x0026473C File Offset: 0x0026293C
 		public byte[] GetFinalShowSequencePathArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170014A1 RID: 5281
-		// (get) Token: 0x06007814 RID: 30740 RVA: 0x00245BD8 File Offset: 0x00243DD8
+		// Token: 0x170014FE RID: 5374
+		// (get) Token: 0x06007E1F RID: 32287 RVA: 0x00264754 File Offset: 0x00262954
 		public Color? DefaultColor
 		{
 			get
@@ -134,8 +134,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170014A2 RID: 5282
-		// (get) Token: 0x06007815 RID: 30741 RVA: 0x00245C38 File Offset: 0x00243E38
+		// Token: 0x170014FF RID: 5375
+		// (get) Token: 0x06007E20 RID: 32288 RVA: 0x002647B4 File Offset: 0x002629B4
 		public Color? FinalColor
 		{
 			get
@@ -149,8 +149,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170014A3 RID: 5283
-		// (get) Token: 0x06007816 RID: 30742 RVA: 0x00245C98 File Offset: 0x00243E98
+		// Token: 0x17001500 RID: 5376
+		// (get) Token: 0x06007E21 RID: 32289 RVA: 0x00264814 File Offset: 0x00262A14
 		public float DefaultProcess
 		{
 			get
@@ -164,8 +164,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170014A4 RID: 5284
-		// (get) Token: 0x06007817 RID: 30743 RVA: 0x00245CDC File Offset: 0x00243EDC
+		// Token: 0x17001501 RID: 5377
+		// (get) Token: 0x06007E22 RID: 32290 RVA: 0x00264858 File Offset: 0x00262A58
 		public float ChangeColorProcess
 		{
 			get
@@ -179,8 +179,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170014A5 RID: 5285
-		// (get) Token: 0x06007818 RID: 30744 RVA: 0x00245D20 File Offset: 0x00243F20
+		// Token: 0x17001502 RID: 5378
+		// (get) Token: 0x06007E23 RID: 32291 RVA: 0x0026489C File Offset: 0x00262A9C
 		public float CompleteChangeColorProcess
 		{
 			get
@@ -194,8 +194,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170014A6 RID: 5286
-		// (get) Token: 0x06007819 RID: 30745 RVA: 0x00245D64 File Offset: 0x00243F64
+		// Token: 0x17001503 RID: 5379
+		// (get) Token: 0x06007E24 RID: 32292 RVA: 0x002648E0 File Offset: 0x00262AE0
 		public float PlaySequenceProcess
 		{
 			get
@@ -209,8 +209,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170014A7 RID: 5287
-		// (get) Token: 0x0600781A RID: 30746 RVA: 0x00245DA8 File Offset: 0x00243FA8
+		// Token: 0x17001504 RID: 5380
+		// (get) Token: 0x06007E25 RID: 32293 RVA: 0x00264924 File Offset: 0x00262B24
 		public string SlideCurveAssetPath
 		{
 			get
@@ -224,19 +224,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600781B RID: 30747 RVA: 0x00245DE0 File Offset: 0x00243FE0
+		// Token: 0x06007E26 RID: 32294 RVA: 0x0026495C File Offset: 0x00262B5C
 		public Span<byte> GetSlideCurveAssetPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(24, 1);
 		}
 
-		// Token: 0x0600781C RID: 30748 RVA: 0x00245DF0 File Offset: 0x00243FF0
+		// Token: 0x06007E27 RID: 32295 RVA: 0x0026496C File Offset: 0x00262B6C
 		public byte[] GetSlideCurveAssetPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(24) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04004D50 RID: 19792
+		// Token: 0x04005334 RID: 21300
 		private Table __p;
 	}
 }

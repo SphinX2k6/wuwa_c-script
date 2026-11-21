@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002211 RID: 8721
+// Token: 0x020016F5 RID: 5877
 public class PreDownloadButtonItemA : UiPanelBase
 {
-	// Token: 0x06010FF6 RID: 69622 RVA: 0x00424D58 File Offset: 0x00422F58
+	// Token: 0x0600E48B RID: 58507 RVA: 0x004318EC File Offset: 0x0042FAEC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -33,10 +33,16 @@ public class PreDownloadButtonItemA : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06010FF7 RID: 69623 RVA: 0x00424E3C File Offset: 0x0042303C
+	// Token: 0x0600E48C RID: 58508 RVA: 0x004319CE File Offset: 0x0042FBCE
+	public bool CanShow(bool isLogin)
+	{
+		return isLogin && (PreDownloadModel.Instance.IsPreDownloadAvailable() || PreDownloadModel.Instance.IsComplete());
+	}
+
+	// Token: 0x0600E48D RID: 58509 RVA: 0x004319F0 File Offset: 0x0042FBF0
 	public void Refresh(bool isLogin = false)
 	{
-		if (!isLogin || (!PreDownloadModel.Instance.IsPreDownloadAvailable() && !PreDownloadModel.Instance.IsComplete()))
+		if (!this.CanShow(isLogin))
 		{
 			base.SetUiActive(false);
 			return;
@@ -46,7 +52,7 @@ public class PreDownloadButtonItemA : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), textStringId, Array.Empty<object>());
 	}
 
-	// Token: 0x06010FF8 RID: 69624 RVA: 0x00424EAC File Offset: 0x004230AC
+	// Token: 0x0600E48E RID: 58510 RVA: 0x00431A48 File Offset: 0x0042FC48
 	public void RefreshDot()
 	{
 		bool uiactive = PreDownloadModel.Instance.HasClickBtnCheck() && !PreDownloadModel.Instance.IsComplete();
@@ -64,23 +70,23 @@ public class PreDownloadButtonItemA : UiPanelBase
 		item2.SetUIActive(uiactive2);
 	}
 
-	// Token: 0x04008168 RID: 33128
+	// Token: 0x040082A6 RID: 33446
 	[Nullable(1)]
 	private readonly Action OnClickBtn = delegate()
 	{
 		PreDownloadController.Instance.OnPreDownloadBtnClick(true);
 	};
 
-	// Token: 0x02008747 RID: 34631
+	// Token: 0x020078D0 RID: 30928
 	private enum EComponentTypeA
 	{
-		// Token: 0x0402BF9D RID: 180125
+		// Token: 0x040272B5 RID: 160437
 		BtnItem,
-		// Token: 0x0402BF9E RID: 180126
+		// Token: 0x040272B6 RID: 160438
 		TxtName,
-		// Token: 0x0402BF9F RID: 180127
+		// Token: 0x040272B7 RID: 160439
 		RedDot,
-		// Token: 0x0402BFA0 RID: 180128
+		// Token: 0x040272B8 RID: 160440
 		GreenDot
 	}
 }

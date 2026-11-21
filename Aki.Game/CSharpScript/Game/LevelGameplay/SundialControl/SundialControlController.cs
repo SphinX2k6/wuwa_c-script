@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SundialControl
 {
-	// Token: 0x02006A06 RID: 27142
+	// Token: 0x02005B63 RID: 23395
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SundialControlController : UiControllerBase
 	{
-		// Token: 0x0604382D RID: 276525 RVA: 0x01082E9C File Offset: 0x0108109C
+		// Token: 0x06039879 RID: 235641 RVA: 0x010274C0 File Offset: 0x010256C0
 		public void GenerateModel(Action loadedCallback)
 		{
 			UObject world = GlobalData.World;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.LevelGamePlay.SundialControl
 			}
 		}
 
-		// Token: 0x0604382E RID: 276526 RVA: 0x01082F64 File Offset: 0x01081164
+		// Token: 0x0603987A RID: 235642 RVA: 0x01027588 File Offset: 0x01025788
 		private void SetupSceneInteractionWhenLoadCompleted(Action loadedCallback)
 		{
 			this.SceneInteractionInfo.MainActor.D_K2_SetActorLocation(SundialControlModel.Instance.TargetLocation, false, ref WorldGlobal.SweepHitResult, false);
@@ -45,21 +45,21 @@ namespace CSharpScript.Game.LevelGamePlay.SundialControl
 			this.SceneInteractionInfo.PlaySceneEffect(ESceneInteractionEffect.Effect3);
 		}
 
-		// Token: 0x0604382F RID: 276527 RVA: 0x01082FD1 File Offset: 0x010811D1
+		// Token: 0x0603987B RID: 235643 RVA: 0x010275F5 File Offset: 0x010257F5
 		protected override void OnAddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.OnSundialRingChangeShine, new Action<int, bool>(this.OnSundialRingChangeShine));
 			EventSystem.Instance.Add(EEventName.OnSundialRingSwitch, new Action<int>(this.OnSundialRingSwitch));
 		}
 
-		// Token: 0x06043830 RID: 276528 RVA: 0x0108300B File Offset: 0x0108120B
+		// Token: 0x0603987C RID: 235644 RVA: 0x0102762F File Offset: 0x0102582F
 		protected override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.OnSundialRingChangeShine, new Action<int, bool>(this.OnSundialRingChangeShine));
 			EventSystem.Instance.Remove(EEventName.OnSundialRingSwitch, new Action<int>(this.OnSundialRingSwitch));
 		}
 
-		// Token: 0x06043831 RID: 276529 RVA: 0x01083048 File Offset: 0x01081248
+		// Token: 0x0603987D RID: 235645 RVA: 0x0102766C File Offset: 0x0102586C
 		private void OnSundialRingChangeShine(int ring, bool isShine)
 		{
 			ESceneInteractionEffect? esceneInteractionEffect = null;
@@ -86,14 +86,14 @@ namespace CSharpScript.Game.LevelGamePlay.SundialControl
 			this.SceneInteractionInfo.EndSceneEffect(esceneInteractionEffect.Value);
 		}
 
-		// Token: 0x06043832 RID: 276530 RVA: 0x010830AA File Offset: 0x010812AA
+		// Token: 0x0603987E RID: 235646 RVA: 0x010276CE File Offset: 0x010258CE
 		private void OnSundialRingSwitch(int ring)
 		{
 			this.SceneInteractionInfo.EndSceneEffect((ring == 0) ? ESceneInteractionEffect.Effect4 : ESceneInteractionEffect.Effect3);
 			this.SceneInteractionInfo.PlaySceneEffect((ring == 0) ? ESceneInteractionEffect.Effect3 : ESceneInteractionEffect.Effect4);
 		}
 
-		// Token: 0x06043833 RID: 276531 RVA: 0x010830D0 File Offset: 0x010812D0
+		// Token: 0x0603987F RID: 235647 RVA: 0x010276F4 File Offset: 0x010258F4
 		public void DestroyModel()
 		{
 			if (this.SceneInteractionInfo != null)
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.LevelGamePlay.SundialControl
 			}
 		}
 
-		// Token: 0x06043834 RID: 276532 RVA: 0x010830F6 File Offset: 0x010812F6
+		// Token: 0x06039880 RID: 235648 RVA: 0x0102771A File Offset: 0x0102591A
 		public void SwitchCurrentRing()
 		{
 			if (this.IsRotating)
@@ -114,14 +114,14 @@ namespace CSharpScript.Game.LevelGamePlay.SundialControl
 			SundialControlModel.Instance.ChangeCurrentRingIndex(1);
 		}
 
-		// Token: 0x06043835 RID: 276533 RVA: 0x0108310C File Offset: 0x0108130C
+		// Token: 0x06039881 RID: 235649 RVA: 0x01027730 File Offset: 0x01025930
 		[NullableContext(2)]
 		public void SetOnFinishCallback(Action callback)
 		{
 			this.OnFinish = callback;
 		}
 
-		// Token: 0x06043836 RID: 276534 RVA: 0x01083115 File Offset: 0x01081315
+		// Token: 0x06039882 RID: 235650 RVA: 0x01027739 File Offset: 0x01025939
 		[NullableContext(2)]
 		public void StartRotate(Action callback)
 		{
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.LevelGamePlay.SundialControl
 			}
 		}
 
-		// Token: 0x06043837 RID: 276535 RVA: 0x01083138 File Offset: 0x01081338
+		// Token: 0x06039883 RID: 235651 RVA: 0x0102775C File Offset: 0x0102595C
 		protected override void OnTick(float delta)
 		{
 			if (this.IsRotating && SundialControlModel.Instance.RotateCurrentRing((double)delta))
@@ -148,13 +148,13 @@ namespace CSharpScript.Game.LevelGamePlay.SundialControl
 			}
 		}
 
-		// Token: 0x06043838 RID: 276536 RVA: 0x01083186 File Offset: 0x01081386
+		// Token: 0x06039884 RID: 235652 RVA: 0x010277AA File Offset: 0x010259AA
 		public void ResetAll()
 		{
 			SundialControlModel.Instance.ResetAll();
 		}
 
-		// Token: 0x06043839 RID: 276537 RVA: 0x01083194 File Offset: 0x01081394
+		// Token: 0x06039885 RID: 235653 RVA: 0x010277B8 File Offset: 0x010259B8
 		public void PlayFinishAnimation()
 		{
 			if (this.OnFinish != null)
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.LevelGamePlay.SundialControl
 			}, 100, "js_undefined");
 		}
 
-		// Token: 0x0604383A RID: 276538 RVA: 0x01083230 File Offset: 0x01081430
+		// Token: 0x06039886 RID: 235654 RVA: 0x01027854 File Offset: 0x01025A54
 		private void RequestFinish(string key = "MainQuest")
 		{
 			UiGamePlayRequest uiGamePlayRequest = UiGamePlayRequest.Create();
@@ -224,13 +224,13 @@ namespace CSharpScript.Game.LevelGamePlay.SundialControl
 			}, 0);
 		}
 
-		// Token: 0x0604383B RID: 276539 RVA: 0x01083281 File Offset: 0x01081481
+		// Token: 0x06039887 RID: 235655 RVA: 0x010278A5 File Offset: 0x01025AA5
 		public void UpdateViewTips()
 		{
 			SundialControlModel.Instance.UpdateTips();
 		}
 
-		// Token: 0x0604383C RID: 276540 RVA: 0x0108328D File Offset: 0x0108148D
+		// Token: 0x06039888 RID: 235656 RVA: 0x010278B1 File Offset: 0x01025AB1
 		[NullableContext(2)]
 		public AActor GetMainActor()
 		{
@@ -242,8 +242,8 @@ namespace CSharpScript.Game.LevelGamePlay.SundialControl
 			return sceneInteractionInfo.MainActor;
 		}
 
-		// Token: 0x1700988D RID: 39053
-		// (get) Token: 0x0604383D RID: 276541 RVA: 0x010832A0 File Offset: 0x010814A0
+		// Token: 0x17006D72 RID: 28018
+		// (get) Token: 0x06039889 RID: 235657 RVA: 0x010278C4 File Offset: 0x01025AC4
 		public static SundialControlController Instance
 		{
 			get
@@ -252,7 +252,7 @@ namespace CSharpScript.Game.LevelGamePlay.SundialControl
 			}
 		}
 
-		// Token: 0x0604383E RID: 276542 RVA: 0x010832A7 File Offset: 0x010814A7
+		// Token: 0x0603988A RID: 235658 RVA: 0x010278CB File Offset: 0x01025ACB
 		public static SundialControlController GetOrCreateInstance()
 		{
 			if (SundialControlController._Instance == null)
@@ -262,7 +262,7 @@ namespace CSharpScript.Game.LevelGamePlay.SundialControl
 			return SundialControlController._Instance;
 		}
 
-		// Token: 0x0604383F RID: 276543 RVA: 0x010832BB File Offset: 0x010814BB
+		// Token: 0x0603988B RID: 235659 RVA: 0x010278DF File Offset: 0x01025ADF
 		public static bool CreateInstance()
 		{
 			if (SundialControlController._Instance != null)
@@ -273,54 +273,54 @@ namespace CSharpScript.Game.LevelGamePlay.SundialControl
 			return true;
 		}
 
-		// Token: 0x06043840 RID: 276544 RVA: 0x010832D1 File Offset: 0x010814D1
+		// Token: 0x0603988C RID: 235660 RVA: 0x010278F5 File Offset: 0x01025AF5
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06043841 RID: 276545 RVA: 0x010832D3 File Offset: 0x010814D3
+		// Token: 0x0603988D RID: 235661 RVA: 0x010278F7 File Offset: 0x01025AF7
 		public static void ResetStaticDefaultValue()
 		{
 			SundialControlController._Instance = null;
 		}
 
-		// Token: 0x06043842 RID: 276546 RVA: 0x010832DB File Offset: 0x010814DB
+		// Token: 0x0603988E RID: 235662 RVA: 0x010278FF File Offset: 0x01025AFF
 		static SundialControlController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SundialControlController.CreateStaticDefaultValue), new Action(SundialControlController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040233DC RID: 144348
+		// Token: 0x0401E5CE RID: 124366
 		public const string SEQ_PATH = "/Game/Aki/Scene/InteractionLevel/Animation/Sundial/TPrefab_SM_Sundial_Finish.TPrefab_SM_Sundial_Finish";
 
-		// Token: 0x040233DD RID: 144349
+		// Token: 0x0401E5CF RID: 124367
 		public readonly FName leftTag = new FName("Left");
 
-		// Token: 0x040233DE RID: 144350
+		// Token: 0x0401E5D0 RID: 124368
 		public readonly FName rightTag = new FName("Right");
 
-		// Token: 0x040233DF RID: 144351
+		// Token: 0x0401E5D1 RID: 124369
 		public readonly FName rollTag = new FName("Roll");
 
-		// Token: 0x040233E0 RID: 144352
+		// Token: 0x0401E5D2 RID: 124370
 		public readonly FName decalTag = new FName("Decal");
 
-		// Token: 0x040233E1 RID: 144353
+		// Token: 0x0401E5D3 RID: 124371
 		[Nullable(2)]
 		private SceneInteractionLevel SceneInteractionInfo;
 
-		// Token: 0x040233E2 RID: 144354
+		// Token: 0x0401E5D4 RID: 124372
 		private bool IsRotating;
 
-		// Token: 0x040233E3 RID: 144355
+		// Token: 0x0401E5D5 RID: 124373
 		[Nullable(2)]
 		private Action StopRotationCallback;
 
-		// Token: 0x040233E4 RID: 144356
+		// Token: 0x0401E5D6 RID: 124374
 		[Nullable(2)]
 		private Action OnFinish;
 
-		// Token: 0x040233E5 RID: 144357
+		// Token: 0x0401E5D7 RID: 124375
 		[Nullable(2)]
 		private static SundialControlController _Instance;
 	}

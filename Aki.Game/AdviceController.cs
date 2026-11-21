@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -19,13 +18,13 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x020016BC RID: 5820
+// Token: 0x02000B74 RID: 2932
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class AdviceController : ControllerBase
 {
-	// Token: 0x0600A61F RID: 42527 RVA: 0x0025235D File Offset: 0x0025055D
+	// Token: 0x060079FF RID: 31231 RVA: 0x0025C76D File Offset: 0x0025A96D
 	protected override bool OnInit()
 	{
 		this.OnAddEvents();
@@ -33,7 +32,7 @@ public class AdviceController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0600A620 RID: 42528 RVA: 0x0025236C File Offset: 0x0025056C
+	// Token: 0x06007A00 RID: 31232 RVA: 0x0025C77C File Offset: 0x0025A97C
 	protected override bool OnClear()
 	{
 		this.OnRemoveEvents();
@@ -41,7 +40,7 @@ public class AdviceController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0600A621 RID: 42529 RVA: 0x0025237C File Offset: 0x0025057C
+	// Token: 0x06007A01 RID: 31233 RVA: 0x0025C78C File Offset: 0x0025A98C
 	protected void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.OnGetFriendInitData, new Action(this.RequestAdviceData));
@@ -51,7 +50,7 @@ public class AdviceController : ControllerBase
 		EventSystem.Instance.Add(EEventName.CrossDay, new Action(this.OnCrossDay));
 	}
 
-	// Token: 0x0600A622 RID: 42530 RVA: 0x00252418 File Offset: 0x00250618
+	// Token: 0x06007A02 RID: 31234 RVA: 0x0025C828 File Offset: 0x0025AA28
 	protected void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OnGetFriendInitData, new Action(this.RequestAdviceData));
@@ -61,7 +60,7 @@ public class AdviceController : ControllerBase
 		EventSystem.Instance.Remove(EEventName.CrossDay, new Action(this.OnCrossDay));
 	}
 
-	// Token: 0x0600A623 RID: 42531 RVA: 0x002524B4 File Offset: 0x002506B4
+	// Token: 0x06007A03 RID: 31235 RVA: 0x0025C8C4 File Offset: 0x0025AAC4
 	protected void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.AdviceContentUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnAdviceContentUpdateNotify));
@@ -70,7 +69,7 @@ public class AdviceController : ControllerBase
 		Net.Instance.Register(ENotifyMessageId.AdviceSettingNotify, new Action<IMessage, Net.CallbackStatus>(this.OnAdviceSettingNotify));
 	}
 
-	// Token: 0x0600A624 RID: 42532 RVA: 0x00252534 File Offset: 0x00250734
+	// Token: 0x06007A04 RID: 31236 RVA: 0x0025C944 File Offset: 0x0025AB44
 	protected void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.AdviceContentUpdateNotify);
@@ -79,7 +78,7 @@ public class AdviceController : ControllerBase
 		Net.Instance.UnRegister(ENotifyMessageId.AdviceUpdateNotify);
 	}
 
-	// Token: 0x0600A625 RID: 42533 RVA: 0x00252581 File Offset: 0x00250781
+	// Token: 0x06007A05 RID: 31237 RVA: 0x0025C991 File Offset: 0x0025AB91
 	private void OnWorldLevelUp()
 	{
 		if (UiManager.Instance.IsViewShow(EUiViewName.AdviceInfoView))
@@ -88,7 +87,7 @@ public class AdviceController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600A626 RID: 42534 RVA: 0x002525A4 File Offset: 0x002507A4
+	// Token: 0x06007A06 RID: 31238 RVA: 0x0025C9B4 File Offset: 0x0025ABB4
 	private void OnPlayerLevelChanged(int lastLevel, int currentLevel, int currentExp, int lastExp, int addExp, int currentMaxExp, int lastMaxExp)
 	{
 		if (UiManager.Instance.IsViewShow(EUiViewName.AdviceInfoView))
@@ -97,7 +96,7 @@ public class AdviceController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600A627 RID: 42535 RVA: 0x002525C8 File Offset: 0x002507C8
+	// Token: 0x06007A07 RID: 31239 RVA: 0x0025C9D8 File Offset: 0x0025ABD8
 	private void OnItemUse(int configId, int useCount)
 	{
 		ItemInfo? itemConfig = InventoryConfig.Instance.GetItemConfig(configId);
@@ -108,13 +107,13 @@ public class AdviceController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600A628 RID: 42536 RVA: 0x00252635 File Offset: 0x00250835
+	// Token: 0x06007A08 RID: 31240 RVA: 0x0025CA45 File Offset: 0x0025AC45
 	private void OnCrossDay()
 	{
 		AdviceModel.Instance.ResetVoteIds();
 	}
 
-	// Token: 0x0600A629 RID: 42537 RVA: 0x00252641 File Offset: 0x00250841
+	// Token: 0x06007A09 RID: 31241 RVA: 0x0025CA51 File Offset: 0x0025AC51
 	public void OpenAdviceConjunctionSelectView()
 	{
 		AdviceModel instance = AdviceModel.Instance;
@@ -123,7 +122,7 @@ public class AdviceController : ControllerBase
 		UiManager.Instance.OpenView(EUiViewName.AdviceWordView, null, null);
 	}
 
-	// Token: 0x0600A62A RID: 42538 RVA: 0x0025266C File Offset: 0x0025086C
+	// Token: 0x06007A0A RID: 31242 RVA: 0x0025CA7C File Offset: 0x0025AC7C
 	public void OpenAdviceWordSelectView(int wordIndex)
 	{
 		AdviceModel instance = AdviceModel.Instance;
@@ -144,7 +143,7 @@ public class AdviceController : ControllerBase
 		UiManager.Instance.OpenView(EUiViewName.AdviceSortWordView, null, null);
 	}
 
-	// Token: 0x0600A62B RID: 42539 RVA: 0x00252708 File Offset: 0x00250908
+	// Token: 0x06007A0B RID: 31243 RVA: 0x0025CB18 File Offset: 0x0025AD18
 	public void OpenAdviceSentenceSelectView()
 	{
 		AdviceModel instance = AdviceModel.Instance;
@@ -161,13 +160,13 @@ public class AdviceController : ControllerBase
 		UiManager.Instance.OpenView(EUiViewName.AdviceMutiSentenceSelectView, null, null);
 	}
 
-	// Token: 0x0600A62C RID: 42540 RVA: 0x0025276A File Offset: 0x0025096A
+	// Token: 0x06007A0C RID: 31244 RVA: 0x0025CB7A File Offset: 0x0025AD7A
 	public void OpenAdviceExpressionView()
 	{
 		UiManager.Instance.OpenView(EUiViewName.AdviceExpressionView, null, null);
 	}
 
-	// Token: 0x0600A62D RID: 42541 RVA: 0x00252780 File Offset: 0x00250980
+	// Token: 0x06007A0D RID: 31245 RVA: 0x0025CB90 File Offset: 0x0025AD90
 	public void OpenAdviceCreateView()
 	{
 		if (AdviceModel.Instance.GetCreateAdvicePreConditionState())
@@ -180,14 +179,14 @@ public class AdviceController : ControllerBase
 		GenericPromptController.Instance.ShowPromptByCode(createPreConditionFailText, Array.Empty<object>());
 	}
 
-	// Token: 0x0600A62E RID: 42542 RVA: 0x002527D0 File Offset: 0x002509D0
+	// Token: 0x06007A0E RID: 31246 RVA: 0x0025CBE0 File Offset: 0x0025ADE0
 	public void OpenAdviceView()
 	{
 		AdviceModel.Instance.AdviceViewShowId = null;
 		UiManager.Instance.OpenView(EUiViewName.AdviceView, null, null);
 	}
 
-	// Token: 0x0600A62F RID: 42543 RVA: 0x002527F4 File Offset: 0x002509F4
+	// Token: 0x06007A0F RID: 31247 RVA: 0x0025CC04 File Offset: 0x0025AE04
 	[NullableContext(0)]
 	public UniTask<bool> OpenAdviceInfoView(int entityId)
 	{
@@ -200,7 +199,7 @@ public class AdviceController : ControllerBase
 		return <OpenAdviceInfoView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A630 RID: 42544 RVA: 0x00252840 File Offset: 0x00250A40
+	// Token: 0x06007A10 RID: 31248 RVA: 0x0025CC50 File Offset: 0x0025AE50
 	private bool CheckEntityIfInBattle()
 	{
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -217,7 +216,7 @@ public class AdviceController : ControllerBase
 		return false;
 	}
 
-	// Token: 0x0600A631 RID: 42545 RVA: 0x002528A8 File Offset: 0x00250AA8
+	// Token: 0x06007A11 RID: 31249 RVA: 0x0025CCB8 File Offset: 0x0025AEB8
 	private void PlayMotionAnimation(int entityId)
 	{
 		Entity entity = EntitySystem.Instance.Get(entityId);
@@ -248,7 +247,7 @@ public class AdviceController : ControllerBase
 		component2.DoInteract();
 	}
 
-	// Token: 0x0600A632 RID: 42546 RVA: 0x0025291C File Offset: 0x00250B1C
+	// Token: 0x06007A12 RID: 31250 RVA: 0x0025CD2C File Offset: 0x0025AF2C
 	private void RequestAdviceData()
 	{
 		AdviceRequest message = AdviceRequest.Create();
@@ -257,7 +256,7 @@ public class AdviceController : ControllerBase
 			AdviceResponse adviceResponse = (AdviceResponse)msg;
 			if (adviceResponse == null || adviceResponse.ErrorCode > Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(adviceResponse.ErrorCode, 17200, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(adviceResponse.ErrorCode, 28955, null, true, true);
 				return;
 			}
 			if (adviceResponse != null)
@@ -267,7 +266,7 @@ public class AdviceController : ControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600A633 RID: 42547 RVA: 0x00252960 File Offset: 0x00250B60
+	// Token: 0x06007A13 RID: 31251 RVA: 0x0025CD70 File Offset: 0x0025AF70
 	public void RequestCreateAdvice(global::Vector position, global::Rotator rotator, AdviceContentData[] adviceContent, Action callback)
 	{
 		AdviceCreateRequest adviceCreateRequest = AdviceCreateRequest.Create();
@@ -293,7 +292,7 @@ public class AdviceController : ControllerBase
 			AdviceCreateResponse adviceCreateResponse = (AdviceCreateResponse)msg;
 			if (adviceCreateResponse == null || adviceCreateResponse.ErrorCode > Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(adviceCreateResponse.ErrorCode, 19595, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(adviceCreateResponse.ErrorCode, 19764, null, true, true);
 				return;
 			}
 			Action callback2 = callback;
@@ -309,7 +308,7 @@ public class AdviceController : ControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600A634 RID: 42548 RVA: 0x00252A38 File Offset: 0x00250C38
+	// Token: 0x06007A14 RID: 31252 RVA: 0x0025CE48 File Offset: 0x0025B048
 	public void RequestModifyAdvice(long id, AdviceContentData[] adviceContent)
 	{
 		AdviceModifyRequest adviceModifyRequest = AdviceModifyRequest.Create();
@@ -324,14 +323,14 @@ public class AdviceController : ControllerBase
 			AdviceModifyResponse adviceModifyResponse = (AdviceModifyResponse)msg;
 			if (adviceModifyResponse == null || adviceModifyResponse.ErrorCode > Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(adviceModifyResponse.ErrorCode, 25965, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(adviceModifyResponse.ErrorCode, 18162, null, true, true);
 				return;
 			}
 			AdviceModel.Instance.OnModifyAdvice(id, adviceContent);
 		}, 0);
 	}
 
-	// Token: 0x0600A635 RID: 42549 RVA: 0x00252AC4 File Offset: 0x00250CC4
+	// Token: 0x06007A15 RID: 31253 RVA: 0x0025CED4 File Offset: 0x0025B0D4
 	public void RequestDeleteAdvice(long id)
 	{
 		AdviceDeleteRequest adviceDeleteRequest = AdviceDeleteRequest.Create();
@@ -341,14 +340,14 @@ public class AdviceController : ControllerBase
 			AdviceDeleteResponse adviceDeleteResponse = (AdviceDeleteResponse)msg;
 			if (adviceDeleteResponse == null || adviceDeleteResponse.ErrorCode > Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(adviceDeleteResponse.ErrorCode, 28461, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(adviceDeleteResponse.ErrorCode, 28966, null, true, true);
 				return;
 			}
 			AdviceModel.Instance.OnDeleteAdvice(id);
 		}, 0);
 	}
 
-	// Token: 0x0600A636 RID: 42550 RVA: 0x00252B10 File Offset: 0x00250D10
+	// Token: 0x06007A16 RID: 31254 RVA: 0x0025CF20 File Offset: 0x0025B120
 	public void RequestVote(long entityId, long adviceId, PbAdviceVoteType type)
 	{
 		AdviceVoteRequest adviceVoteRequest = AdviceVoteRequest.Create();
@@ -359,7 +358,7 @@ public class AdviceController : ControllerBase
 			AdviceVoteResponse adviceVoteResponse = (AdviceVoteResponse)msg;
 			if (adviceVoteResponse == null || adviceVoteResponse.ErrorCode > Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(adviceVoteResponse.ErrorCode, 25631, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(adviceVoteResponse.ErrorCode, 18076, null, true, true);
 				EventSystem.Instance.Emit(EEventName.OnAdviceVoteNotify);
 				return;
 			}
@@ -367,7 +366,7 @@ public class AdviceController : ControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600A637 RID: 42551 RVA: 0x00252B68 File Offset: 0x00250D68
+	// Token: 0x06007A17 RID: 31255 RVA: 0x0025CF78 File Offset: 0x0025B178
 	[NullableContext(2)]
 	private void OnAdviceContentUpdateNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -386,11 +385,11 @@ public class AdviceController : ControllerBase
 			{
 				return;
 			}
-			adviceInfo.PhraseContent(adviceContentUpdateNotify.Contents.ToList<PbAdviceContent>());
+			adviceInfo.PhraseContent(new List<PbAdviceContent>(adviceContentUpdateNotify.Contents));
 		}
 	}
 
-	// Token: 0x0600A638 RID: 42552 RVA: 0x00252BC4 File Offset: 0x00250DC4
+	// Token: 0x06007A18 RID: 31256 RVA: 0x0025CFD4 File Offset: 0x0025B1D4
 	[NullableContext(2)]
 	private void OnAdviceVoteUpdateNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -412,7 +411,7 @@ public class AdviceController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600A639 RID: 42553 RVA: 0x00252C74 File Offset: 0x00250E74
+	// Token: 0x06007A19 RID: 31257 RVA: 0x0025D084 File Offset: 0x0025B284
 	[NullableContext(2)]
 	private void OnAdviceUpdateNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -420,7 +419,7 @@ public class AdviceController : ControllerBase
 		AdviceModel.Instance.OnAdviceUpdateNotify(response);
 	}
 
-	// Token: 0x0600A63A RID: 42554 RVA: 0x00252C94 File Offset: 0x00250E94
+	// Token: 0x06007A1A RID: 31258 RVA: 0x0025D0A4 File Offset: 0x0025B2A4
 	[NullableContext(2)]
 	private void OnAdviceSettingNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -428,7 +427,7 @@ public class AdviceController : ControllerBase
 		AdviceModel.Instance.SetAdviceShowSetting(adviceSettingNotify.IsShow);
 	}
 
-	// Token: 0x0600A63B RID: 42555 RVA: 0x00252CB8 File Offset: 0x00250EB8
+	// Token: 0x06007A1B RID: 31259 RVA: 0x0025D0C8 File Offset: 0x0025B2C8
 	public void RequestSetAdviceShowState(bool state)
 	{
 		AdviceSetRequest message = AdviceSetRequest.Create();
@@ -438,14 +437,14 @@ public class AdviceController : ControllerBase
 			AdviceSetResponse adviceSetResponse = (AdviceSetResponse)msg;
 			if (adviceSetResponse == null || adviceSetResponse.ErrorCode > Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(adviceSetResponse.ErrorCode, 27439, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(adviceSetResponse.ErrorCode, 20925, null, true, true);
 				return;
 			}
 			AdviceModel.Instance.SetAdviceShowSetting(message.IsShow);
 		}, 0);
 	}
 
-	// Token: 0x0600A63C RID: 42556 RVA: 0x00252D04 File Offset: 0x00250F04
+	// Token: 0x06007A1C RID: 31260 RVA: 0x0025D114 File Offset: 0x0025B314
 	public bool CheckInInValidArea()
 	{
 		IReadOnlyList<int> adviceCannotPutArea = AdviceConfig.Instance.GetAdviceCannotPutArea();
@@ -468,7 +467,7 @@ public class AdviceController : ControllerBase
 		return false;
 	}
 
-	// Token: 0x0600A63D RID: 42557 RVA: 0x00252D8C File Offset: 0x00250F8C
+	// Token: 0x06007A1D RID: 31261 RVA: 0x0025D19C File Offset: 0x0025B39C
 	public bool CheckBehindAdviceActor()
 	{
 		IReadOnlyList<EntityHandle> allEntities = CreatureModel.Instance.GetAllEntities();
@@ -515,7 +514,7 @@ public class AdviceController : ControllerBase
 		return false;
 	}
 
-	// Token: 0x0600A63E RID: 42558 RVA: 0x00252EA8 File Offset: 0x002510A8
+	// Token: 0x06007A1E RID: 31262 RVA: 0x0025D2B8 File Offset: 0x0025B4B8
 	public bool CheckIfStandAndInValidActor()
 	{
 		global::Vector vector = global::Vector.Create();
@@ -576,7 +575,7 @@ public class AdviceController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0600A63F RID: 42559 RVA: 0x00253044 File Offset: 0x00251244
+	// Token: 0x06007A1F RID: 31263 RVA: 0x0025D454 File Offset: 0x0025B654
 	private bool GetActorIfValidForAdvice(AActor hitActor)
 	{
 		if (hitActor != null && hitActor is IBPI_CreatureInterface_C)
@@ -591,8 +590,8 @@ public class AdviceController : ControllerBase
 		return entityHandle == null || !entityHandle.Valid;
 	}
 
-	// Token: 0x17000DEA RID: 3562
-	// (get) Token: 0x0600A640 RID: 42560 RVA: 0x002530B0 File Offset: 0x002512B0
+	// Token: 0x17000E0B RID: 3595
+	// (get) Token: 0x06007A20 RID: 31264 RVA: 0x0025D4C0 File Offset: 0x0025B6C0
 	public static AdviceController Instance
 	{
 		get
@@ -601,7 +600,7 @@ public class AdviceController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600A641 RID: 42561 RVA: 0x002530B7 File Offset: 0x002512B7
+	// Token: 0x06007A21 RID: 31265 RVA: 0x0025D4C7 File Offset: 0x0025B6C7
 	public static AdviceController GetOrCreateInstance()
 	{
 		if (AdviceController._Instance == null)
@@ -611,7 +610,7 @@ public class AdviceController : ControllerBase
 		return AdviceController._Instance;
 	}
 
-	// Token: 0x0600A642 RID: 42562 RVA: 0x002530CB File Offset: 0x002512CB
+	// Token: 0x06007A22 RID: 31266 RVA: 0x0025D4DB File Offset: 0x0025B6DB
 	public static bool CreateInstance()
 	{
 		if (AdviceController._Instance != null)
@@ -622,30 +621,30 @@ public class AdviceController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0600A643 RID: 42563 RVA: 0x002530E1 File Offset: 0x002512E1
+	// Token: 0x06007A23 RID: 31267 RVA: 0x0025D4F1 File Offset: 0x0025B6F1
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600A644 RID: 42564 RVA: 0x002530E3 File Offset: 0x002512E3
+	// Token: 0x06007A24 RID: 31268 RVA: 0x0025D4F3 File Offset: 0x0025B6F3
 	public static void ResetStaticDefaultValue()
 	{
 		AdviceController._Instance = null;
 	}
 
-	// Token: 0x0600A645 RID: 42565 RVA: 0x002530EB File Offset: 0x002512EB
+	// Token: 0x06007A25 RID: 31269 RVA: 0x0025D4FB File Offset: 0x0025B6FB
 	static AdviceController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(AdviceController.CreateStaticDefaultValue), new Action(AdviceController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04004B00 RID: 19200
+	// Token: 0x04004BA7 RID: 19367
 	public const int INFO_ADVICE_ITEM_TYPE = 20;
 
-	// Token: 0x04004B01 RID: 19201
+	// Token: 0x04004BA8 RID: 19368
 	private const string PROFILE_KEY = "Advice";
 
-	// Token: 0x04004B02 RID: 19202
+	// Token: 0x04004BA9 RID: 19369
 	[Nullable(2)]
 	private static AdviceController _Instance;
 }

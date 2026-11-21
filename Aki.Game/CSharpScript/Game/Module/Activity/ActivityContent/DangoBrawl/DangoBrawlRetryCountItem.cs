@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067FE RID: 26622
+	// Token: 0x0200574E RID: 22350
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 	})]
 	public class DangoBrawlRetryCountItem : GridProxyAbstract<DangoBrawlRetryCountInfo>
 	{
-		// Token: 0x06042671 RID: 271985 RVA: 0x0101FEF4 File Offset: 0x0101E0F4
+		// Token: 0x060371C6 RID: 225734 RVA: 0x00F61438 File Offset: 0x00F5F638
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -30,13 +30,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06042672 RID: 271986 RVA: 0x0101FF5D File Offset: 0x0101E15D
+		// Token: 0x060371C7 RID: 225735 RVA: 0x00F614A1 File Offset: 0x00F5F6A1
 		protected override void OnStart()
 		{
 			this.SeqPlayer = new LevelSequencePlayer(base.GetRootItem());
 		}
 
-		// Token: 0x06042673 RID: 271987 RVA: 0x0101FF70 File Offset: 0x0101E170
+		// Token: 0x060371C8 RID: 225736 RVA: 0x00F614B4 File Offset: 0x00F5F6B4
 		[NullableContext(1)]
 		public override void Refresh(DangoBrawlRetryCountInfo data, bool isSelected, int gridIndex)
 		{
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			base.GetSprite(1).SetUIActive(!hasRetry || data.NeedAnim);
 		}
 
-		// Token: 0x06042674 RID: 271988 RVA: 0x0101FFC0 File Offset: 0x0101E1C0
+		// Token: 0x060371C9 RID: 225737 RVA: 0x00F61504 File Offset: 0x00F5F704
 		public void PlayAnim()
 		{
 			if (this.Data == null || !this.Data.NeedAnim)
@@ -67,19 +67,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			seqPlayer2.PlayLevelSequenceByName("Lose", false, null, false);
 		}
 
-		// Token: 0x040229C4 RID: 141764
+		// Token: 0x0401D221 RID: 119329
 		private DangoBrawlRetryCountInfo Data;
 
-		// Token: 0x040229C5 RID: 141765
+		// Token: 0x0401D222 RID: 119330
 		private LevelSequencePlayer SeqPlayer;
 
-		// Token: 0x0200C96F RID: 51567
+		// Token: 0x0200B33C RID: 45884
 		[NullableContext(0)]
 		private enum EItemComponent
 		{
-			// Token: 0x0403CD3C RID: 249148
+			// Token: 0x04037629 RID: 226857
 			SprHeartEmpty,
-			// Token: 0x0403CD3D RID: 249149
+			// Token: 0x0403762A RID: 226858
 			SprHeartFull
 		}
 	}

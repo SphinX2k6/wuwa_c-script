@@ -8,13 +8,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020021AD RID: 8621
+// Token: 0x02001691 RID: 5777
 [NullableContext(1)]
 [Nullable(0)]
 public class LordGymLordEntranceSelectView : UiViewBase
 {
-	// Token: 0x17001550 RID: 5456
-	// (get) Token: 0x06010C4B RID: 68683 RVA: 0x00412C71 File Offset: 0x00410E71
+	// Token: 0x17001587 RID: 5511
+	// (get) Token: 0x0600E0DC RID: 57564 RVA: 0x0041F559 File Offset: 0x0041D759
 	protected virtual string ShopTextId
 	{
 		get
@@ -23,8 +23,8 @@ public class LordGymLordEntranceSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x17001551 RID: 5457
-	// (get) Token: 0x06010C4C RID: 68684 RVA: 0x00412C82 File Offset: 0x00410E82
+	// Token: 0x17001588 RID: 5512
+	// (get) Token: 0x0600E0DD RID: 57565 RVA: 0x0041F56A File Offset: 0x0041D76A
 	protected virtual string ConfirmTextId
 	{
 		get
@@ -33,8 +33,8 @@ public class LordGymLordEntranceSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x17001552 RID: 5458
-	// (get) Token: 0x06010C4D RID: 68685 RVA: 0x00412C89 File Offset: 0x00410E89
+	// Token: 0x17001589 RID: 5513
+	// (get) Token: 0x0600E0DE RID: 57566 RVA: 0x0041F571 File Offset: 0x0041D771
 	protected virtual int ShopTabIndex
 	{
 		get
@@ -43,12 +43,12 @@ public class LordGymLordEntranceSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x06010C4E RID: 68686 RVA: 0x00412C97 File Offset: 0x00410E97
+	// Token: 0x0600E0DF RID: 57567 RVA: 0x0041F57F File Offset: 0x0041D77F
 	public LordGymLordEntranceSelectView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06010C4F RID: 68687 RVA: 0x00412CA0 File Offset: 0x00410EA0
+	// Token: 0x0600E0E0 RID: 57568 RVA: 0x0041F588 File Offset: 0x0041D788
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -66,7 +66,7 @@ public class LordGymLordEntranceSelectView : UiViewBase
 		};
 	}
 
-	// Token: 0x06010C50 RID: 68688 RVA: 0x00412D60 File Offset: 0x00410F60
+	// Token: 0x0600E0E1 RID: 57569 RVA: 0x0041F648 File Offset: 0x0041D848
 	protected override UniTask OnBeforeStartAsync()
 	{
 		LordGymLordEntranceSelectView.<OnBeforeStartAsync>d__17 <OnBeforeStartAsync>d__;
@@ -77,7 +77,7 @@ public class LordGymLordEntranceSelectView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010C51 RID: 68689 RVA: 0x00412DA4 File Offset: 0x00410FA4
+	// Token: 0x0600E0E2 RID: 57570 RVA: 0x0041F68C File Offset: 0x0041D88C
 	protected virtual void InitSelect()
 	{
 		int index = 0;
@@ -102,12 +102,12 @@ public class LordGymLordEntranceSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x06010C52 RID: 68690 RVA: 0x00412E48 File Offset: 0x00411048
+	// Token: 0x0600E0E3 RID: 57571 RVA: 0x0041F730 File Offset: 0x0041D930
 	protected virtual void ReBuildLordEntranceList()
 	{
 	}
 
-	// Token: 0x06010C53 RID: 68691 RVA: 0x00412E4A File Offset: 0x0041104A
+	// Token: 0x0600E0E4 RID: 57572 RVA: 0x0041F732 File Offset: 0x0041D932
 	protected override void OnHandleLoadScene()
 	{
 		UiSceneManager.Instance.InitLordSkeletalHandle();
@@ -115,32 +115,32 @@ public class LordGymLordEntranceSelectView : UiViewBase
 		LordGymController.Instance.LoadLordModelByEntranceId(this.SelectedEntranceId, true, false);
 	}
 
-	// Token: 0x06010C54 RID: 68692 RVA: 0x00412E73 File Offset: 0x00411073
+	// Token: 0x0600E0E5 RID: 57573 RVA: 0x0041F75B File Offset: 0x0041D95B
 	protected override void OnHandleReleaseScene()
 	{
 		UiSceneManager.Instance.DestroyLordSkeletalHandle();
 	}
 
-	// Token: 0x06010C55 RID: 68693 RVA: 0x00412E7F File Offset: 0x0041107F
+	// Token: 0x0600E0E6 RID: 57574 RVA: 0x0041F767 File Offset: 0x0041D967
 	protected virtual void OnCloseBtnClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06010C56 RID: 68694 RVA: 0x00412E88 File Offset: 0x00411088
+	// Token: 0x0600E0E7 RID: 57575 RVA: 0x0041F770 File Offset: 0x0041D970
 	private void OnHelpBtnClick()
 	{
 		int helpId = ConfigLordGymEntranceSetById.GetConfig(this.EntranceSetId, true).Value.HelpId;
 		HelpController.Instance.OpenHelpById(helpId);
 	}
 
-	// Token: 0x06010C57 RID: 68695 RVA: 0x00412EBD File Offset: 0x004110BD
+	// Token: 0x0600E0E8 RID: 57576 RVA: 0x0041F7A5 File Offset: 0x0041D9A5
 	private LordGymLordEntranceItem CreateLordEntranceLoopItem()
 	{
 		return this.CreateItem();
 	}
 
-	// Token: 0x06010C58 RID: 68696 RVA: 0x00412EC5 File Offset: 0x004110C5
+	// Token: 0x0600E0E9 RID: 57577 RVA: 0x0041F7AD File Offset: 0x0041D9AD
 	protected virtual LordGymLordEntranceItem CreateItem()
 	{
 		return new LordGymLordEntranceItem
@@ -150,7 +150,7 @@ public class LordGymLordEntranceSelectView : UiViewBase
 		};
 	}
 
-	// Token: 0x06010C59 RID: 68697 RVA: 0x00412EF0 File Offset: 0x004110F0
+	// Token: 0x0600E0EA RID: 57578 RVA: 0x0041F7D8 File Offset: 0x0041D9D8
 	protected void OnLordEntranceToggleClick(int index)
 	{
 		if (!this.CanLordEntranceToggleChange(index))
@@ -160,7 +160,7 @@ public class LordGymLordEntranceSelectView : UiViewBase
 		this.SelectLordEntranceByIndex(index);
 	}
 
-	// Token: 0x06010C5A RID: 68698 RVA: 0x00412F03 File Offset: 0x00411103
+	// Token: 0x0600E0EB RID: 57579 RVA: 0x0041F7EB File Offset: 0x0041D9EB
 	public virtual void SelectLordEntranceByIndex(int index)
 	{
 		GenericScrollViewNew<LordGymLordEntranceItem, int> lordEntranceScrollView = this.LordEntranceScrollView;
@@ -176,7 +176,7 @@ public class LordGymLordEntranceSelectView : UiViewBase
 		this.OnLordEntranceSelect();
 	}
 
-	// Token: 0x06010C5B RID: 68699 RVA: 0x00412F3C File Offset: 0x0041113C
+	// Token: 0x0600E0EC RID: 57580 RVA: 0x0041F824 File Offset: 0x0041DA24
 	protected void ScrollEntranceIntoView(int index)
 	{
 		GenericScrollViewNew<LordGymLordEntranceItem, int> lordEntranceScrollView = this.LordEntranceScrollView;
@@ -187,13 +187,13 @@ public class LordGymLordEntranceSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x06010C5C RID: 68700 RVA: 0x00412F6E File Offset: 0x0041116E
+	// Token: 0x0600E0ED RID: 57581 RVA: 0x0041F856 File Offset: 0x0041DA56
 	private void OnLordEntranceSelect()
 	{
 		LordGymController.Instance.LoadLordModelByEntranceId(this.SelectedEntranceId, true, false);
 	}
 
-	// Token: 0x06010C5D RID: 68701 RVA: 0x00412F84 File Offset: 0x00411184
+	// Token: 0x0600E0EE RID: 57582 RVA: 0x0041F86C File Offset: 0x0041DA6C
 	public void RefreshLordGymCurrency()
 	{
 		ValueTuple<int, int> lordGymCurrencyRewardAndTotalCount = LordGymModel.Instance.GetLordGymCurrencyRewardAndTotalCount(this.EntranceSetId);
@@ -204,25 +204,25 @@ public class LordGymLordEntranceSelectView : UiViewBase
 		}));
 	}
 
-	// Token: 0x06010C5E RID: 68702 RVA: 0x00412FE0 File Offset: 0x004111E0
+	// Token: 0x0600E0EF RID: 57583 RVA: 0x0041F8C8 File Offset: 0x0041DAC8
 	protected bool CanLordEntranceToggleChange(int index)
 	{
 		return index != this.LordEntranceScrollView.GetGenericLayout().GetSelectedGridIndex();
 	}
 
-	// Token: 0x06010C5F RID: 68703 RVA: 0x00412FF8 File Offset: 0x004111F8
+	// Token: 0x0600E0F0 RID: 57584 RVA: 0x0041F8E0 File Offset: 0x0041DAE0
 	private void OnShopButtonClick()
 	{
 		PayShopController.Instance.OpenPayShopViewWithTab(PayShopDefine.EPayShopTabType.ActivityShop, this.ShopTabIndex);
 	}
 
-	// Token: 0x06010C60 RID: 68704 RVA: 0x0041300B File Offset: 0x0041120B
+	// Token: 0x0600E0F1 RID: 57585 RVA: 0x0041F8F3 File Offset: 0x0041DAF3
 	private void OnConfirmButtonClick(int _)
 	{
 		this.OpenSelectView();
 	}
 
-	// Token: 0x06010C61 RID: 68705 RVA: 0x00413014 File Offset: 0x00411214
+	// Token: 0x0600E0F2 RID: 57586 RVA: 0x0041F8FC File Offset: 0x0041DAFC
 	protected virtual void OpenSelectView()
 	{
 		LordGymDifficultySelectViewParam param = new LordGymDifficultySelectViewParam
@@ -234,11 +234,11 @@ public class LordGymLordEntranceSelectView : UiViewBase
 		UiManager.Instance.OpenView(EUiViewName.LordGymDifficultySelectView, param, null);
 	}
 
-	// Token: 0x04007F94 RID: 32660
+	// Token: 0x040080DB RID: 32987
 	[Nullable(2)]
 	protected PopupCaptionItem CaptionItem;
 
-	// Token: 0x04007F95 RID: 32661
+	// Token: 0x040080DC RID: 32988
 	[Nullable(new byte[]
 	{
 		2,
@@ -246,47 +246,47 @@ public class LordGymLordEntranceSelectView : UiViewBase
 	})]
 	protected GenericScrollViewNew<LordGymLordEntranceItem, int> LordEntranceScrollView;
 
-	// Token: 0x04007F96 RID: 32662
+	// Token: 0x040080DD RID: 32989
 	protected int EntranceSetId;
 
-	// Token: 0x04007F97 RID: 32663
+	// Token: 0x040080DE RID: 32990
 	protected int SelectedEntranceId;
 
-	// Token: 0x04007F98 RID: 32664
+	// Token: 0x040080DF RID: 32991
 	[Nullable(2)]
 	protected List<int> LordEntranceList;
 
-	// Token: 0x04007F99 RID: 32665
+	// Token: 0x040080E0 RID: 32992
 	[Nullable(2)]
 	protected ButtonItem ConfirmButtonItem;
 
-	// Token: 0x04007F9A RID: 32666
+	// Token: 0x040080E1 RID: 32993
 	[Nullable(2)]
 	private string _shopTextIdOverride;
 
-	// Token: 0x04007F9B RID: 32667
+	// Token: 0x040080E2 RID: 32994
 	private int? _shopTabIndexOverride;
 
-	// Token: 0x020086E2 RID: 34530
+	// Token: 0x0200786D RID: 30829
 	[NullableContext(0)]
 	private class EComponent
 	{
-		// Token: 0x0402BE31 RID: 179761
+		// Token: 0x04027152 RID: 160082
 		public const int CaptionItem = 0;
 
-		// Token: 0x0402BE32 RID: 179762
+		// Token: 0x04027153 RID: 160083
 		public const int LordEntranceScrollView = 1;
 
-		// Token: 0x0402BE33 RID: 179763
+		// Token: 0x04027154 RID: 160084
 		public const int LordEntranceLoopItem = 2;
 
-		// Token: 0x0402BE34 RID: 179764
+		// Token: 0x04027155 RID: 160085
 		public const int ShopButton = 3;
 
-		// Token: 0x0402BE35 RID: 179765
+		// Token: 0x04027156 RID: 160086
 		public const int ShopText = 4;
 
-		// Token: 0x0402BE36 RID: 179766
+		// Token: 0x04027157 RID: 160087
 		public const int ConfirmButton = 5;
 	}
 }

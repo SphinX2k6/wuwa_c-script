@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200561A RID: 22042
+	// Token: 0x02005BB8 RID: 23480
 	public struct INpcBumpShow : IFlatbufferObject
 	{
-		// Token: 0x1700A318 RID: 41752
-		// (get) Token: 0x0602494B RID: 149835 RVA: 0x0050C1A0 File Offset: 0x0050A3A0
+		// Token: 0x1700ABA0 RID: 43936
+		// (get) Token: 0x06026B5B RID: 158555 RVA: 0x0054C7B8 File Offset: 0x0054A9B8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602494C RID: 149836 RVA: 0x0050C1AD File Offset: 0x0050A3AD
+		// Token: 0x06026B5C RID: 158556 RVA: 0x0054C7C5 File Offset: 0x0054A9C5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602494D RID: 149837 RVA: 0x0050C1B4 File Offset: 0x0050A3B4
+		// Token: 0x06026B5D RID: 158557 RVA: 0x0054C7CC File Offset: 0x0054A9CC
 		public static INpcBumpShow GetRootAsINpcBumpShow(ByteBuffer _bb)
 		{
 			return INpcBumpShow.GetRootAsINpcBumpShow(_bb, default(INpcBumpShow));
 		}
 
-		// Token: 0x0602494E RID: 149838 RVA: 0x0050C1D0 File Offset: 0x0050A3D0
+		// Token: 0x06026B5E RID: 158558 RVA: 0x0054C7E8 File Offset: 0x0054A9E8
 		public static INpcBumpShow GetRootAsINpcBumpShow(ByteBuffer _bb, INpcBumpShow obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602494F RID: 149839 RVA: 0x0050C1ED File Offset: 0x0050A3ED
+		// Token: 0x06026B5F RID: 158559 RVA: 0x0054C805 File Offset: 0x0054AA05
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06024950 RID: 149840 RVA: 0x0050C1FC File Offset: 0x0050A3FC
+		// Token: 0x06026B60 RID: 158560 RVA: 0x0054C814 File Offset: 0x0054AA14
 		public INpcBumpShow __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A319 RID: 41753
-		// (get) Token: 0x06024951 RID: 149841 RVA: 0x0050C20C File Offset: 0x0050A40C
+		// Token: 0x1700ABA1 RID: 43937
+		// (get) Token: 0x06026B61 RID: 158561 RVA: 0x0054C824 File Offset: 0x0054AA24
 		public INpcPerformBubble? BumpBubble
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06024952 RID: 149842 RVA: 0x0050C269 File Offset: 0x0050A469
+		// Token: 0x06026B62 RID: 158562 RVA: 0x0054C881 File Offset: 0x0054AA81
 		public static Offset<INpcBumpShow> CreateINpcBumpShow(FlatBufferBuilder builder, Offset<INpcPerformBubble> BumpBubbleOffset = default(Offset<INpcPerformBubble>))
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return INpcBumpShow.EndINpcBumpShow(builder);
 		}
 
-		// Token: 0x06024953 RID: 149843 RVA: 0x0050C27F File Offset: 0x0050A47F
+		// Token: 0x06026B63 RID: 158563 RVA: 0x0054C897 File Offset: 0x0054AA97
 		public static void StartINpcBumpShow(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06024954 RID: 149844 RVA: 0x0050C288 File Offset: 0x0050A488
+		// Token: 0x06026B64 RID: 158564 RVA: 0x0054C8A0 File Offset: 0x0054AAA0
 		public static void AddBumpBubble(FlatBufferBuilder builder, Offset<INpcPerformBubble> bumpBubbleOffset)
 		{
 			builder.AddOffset(0, bumpBubbleOffset.Value, 0);
 		}
 
-		// Token: 0x06024955 RID: 149845 RVA: 0x0050C298 File Offset: 0x0050A498
+		// Token: 0x06026B65 RID: 158565 RVA: 0x0054C8B0 File Offset: 0x0054AAB0
 		public static Offset<INpcBumpShow> EndINpcBumpShow(FlatBufferBuilder builder)
 		{
 			return new Offset<INpcBumpShow>(builder.EndTable());
 		}
 
-		// Token: 0x06024956 RID: 149846 RVA: 0x0050C2A8 File Offset: 0x0050A4A8
+		// Token: 0x06026B66 RID: 158566 RVA: 0x0054C8C0 File Offset: 0x0054AAC0
 		public INpcBumpShowT UnPack()
 		{
 			INpcBumpShowT npcBumpShowT = new INpcBumpShowT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return npcBumpShowT;
 		}
 
-		// Token: 0x06024957 RID: 149847 RVA: 0x0050C2C4 File Offset: 0x0050A4C4
+		// Token: 0x06026B67 RID: 158567 RVA: 0x0054C8DC File Offset: 0x0054AADC
 		public void UnPackTo(INpcBumpShowT _o)
 		{
 			_o.BumpBubble = ((this.BumpBubble != null) ? this.BumpBubble.Value.UnPack() : null);
 		}
 
-		// Token: 0x06024958 RID: 149848 RVA: 0x0050C300 File Offset: 0x0050A500
+		// Token: 0x06026B68 RID: 158568 RVA: 0x0054C918 File Offset: 0x0054AB18
 		public static Offset<INpcBumpShow> Pack(FlatBufferBuilder builder, INpcBumpShowT _o)
 		{
 			if (_o == null)
@@ -113,7 +113,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return INpcBumpShow.CreateINpcBumpShow(builder, bumpBubbleOffset);
 		}
 
-		// Token: 0x0400E99E RID: 59806
+		// Token: 0x0400F601 RID: 62977
 		private Table __p;
 	}
 }

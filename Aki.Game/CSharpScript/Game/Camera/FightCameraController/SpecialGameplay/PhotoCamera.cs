@@ -12,23 +12,23 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 {
-	// Token: 0x02007301 RID: 29441
+	// Token: 0x02006484 RID: 25732
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PhotoCamera : ISpecialGameplayCamera, IPhotoCameraHost
 	{
-		// Token: 0x17009F62 RID: 40802
-		// (get) Token: 0x06048419 RID: 295961 RVA: 0x0129173E File Offset: 0x0128F93E
-		// (set) Token: 0x0604841A RID: 295962 RVA: 0x01291746 File Offset: 0x0128F946
+		// Token: 0x17007700 RID: 30464
+		// (get) Token: 0x0603E865 RID: 256101 RVA: 0x0123411A File Offset: 0x0123231A
+		// (set) Token: 0x0603E866 RID: 256102 RVA: 0x01234122 File Offset: 0x01232322
 		public bool IsDebugEnable { get; private set; }
 
-		// Token: 0x17009F63 RID: 40803
-		// (get) Token: 0x0604841B RID: 295963 RVA: 0x0129174F File Offset: 0x0128F94F
+		// Token: 0x17007701 RID: 30465
+		// (get) Token: 0x0603E867 RID: 256103 RVA: 0x0123412B File Offset: 0x0123232B
 		[Nullable(1)]
 		public VirtualPhotoCamera VirtualCamera { [NullableContext(1)] get; } = new VirtualPhotoCamera();
 
-		// Token: 0x17009F64 RID: 40804
-		// (get) Token: 0x0604841C RID: 295964 RVA: 0x01291757 File Offset: 0x0128F957
+		// Token: 0x17007702 RID: 30466
+		// (get) Token: 0x0603E868 RID: 256104 RVA: 0x01234133 File Offset: 0x01232333
 		public ACameraActor CameraActor
 		{
 			get
@@ -37,8 +37,8 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}
 		}
 
-		// Token: 0x17009F65 RID: 40805
-		// (get) Token: 0x0604841D RID: 295965 RVA: 0x0129175F File Offset: 0x0128F95F
+		// Token: 0x17007703 RID: 30467
+		// (get) Token: 0x0603E869 RID: 256105 RVA: 0x0123413B File Offset: 0x0123233B
 		public CameraModelInstance CameraModel
 		{
 			get
@@ -47,8 +47,8 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}
 		}
 
-		// Token: 0x17009F66 RID: 40806
-		// (get) Token: 0x0604841E RID: 295966 RVA: 0x01291767 File Offset: 0x0128F967
+		// Token: 0x17007704 RID: 30468
+		// (get) Token: 0x0603E86A RID: 256106 RVA: 0x01234143 File Offset: 0x01232343
 		public TsBaseCharacter Character
 		{
 			get
@@ -57,8 +57,8 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}
 		}
 
-		// Token: 0x17009F67 RID: 40807
-		// (get) Token: 0x0604841F RID: 295967 RVA: 0x0129176F File Offset: 0x0128F96F
+		// Token: 0x17007705 RID: 30469
+		// (get) Token: 0x0603E86B RID: 256107 RVA: 0x0123414B File Offset: 0x0123234B
 		public PhotoCameraType? DefaultMode
 		{
 			get
@@ -67,8 +67,8 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}
 		}
 
-		// Token: 0x17009F68 RID: 40808
-		// (get) Token: 0x06048420 RID: 295968 RVA: 0x01291777 File Offset: 0x0128F977
+		// Token: 0x17007706 RID: 30470
+		// (get) Token: 0x0603E86C RID: 256108 RVA: 0x01234153 File Offset: 0x01232353
 		public PhotoCameraType? CurrentMode
 		{
 			get
@@ -77,8 +77,8 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}
 		}
 
-		// Token: 0x17009F69 RID: 40809
-		// (get) Token: 0x06048421 RID: 295969 RVA: 0x0129177F File Offset: 0x0128F97F
+		// Token: 0x17007707 RID: 30471
+		// (get) Token: 0x0603E86D RID: 256109 RVA: 0x0123415B File Offset: 0x0123235B
 		public BP_PhotoCameraConfig_C CurrentConfig
 		{
 			get
@@ -87,8 +87,8 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}
 		}
 
-		// Token: 0x17009F6A RID: 40810
-		// (get) Token: 0x06048422 RID: 295970 RVA: 0x01291787 File Offset: 0x0128F987
+		// Token: 0x17007708 RID: 30472
+		// (get) Token: 0x0603E86E RID: 256110 RVA: 0x01234163 File Offset: 0x01232363
 		public PhotoCameraLensState PendingLens
 		{
 			get
@@ -97,8 +97,8 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}
 		}
 
-		// Token: 0x17009F6B RID: 40811
-		// (get) Token: 0x06048423 RID: 295971 RVA: 0x0129178F File Offset: 0x0128F98F
+		// Token: 0x17007709 RID: 30473
+		// (get) Token: 0x0603E86F RID: 256111 RVA: 0x0123416B File Offset: 0x0123236B
 		public PhotoCameraEntryPose InheritedEntryPose
 		{
 			get
@@ -107,8 +107,8 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}
 		}
 
-		// Token: 0x17009F6C RID: 40812
-		// (get) Token: 0x06048424 RID: 295972 RVA: 0x01291797 File Offset: 0x0128F997
+		// Token: 0x1700770A RID: 30474
+		// (get) Token: 0x0603E870 RID: 256112 RVA: 0x01234173 File Offset: 0x01232373
 		public bool IsInheritMode
 		{
 			get
@@ -118,8 +118,8 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}
 		}
 
-		// Token: 0x17009F6D RID: 40813
-		// (get) Token: 0x06048425 RID: 295973 RVA: 0x012917AF File Offset: 0x0128F9AF
+		// Token: 0x1700770B RID: 30475
+		// (get) Token: 0x0603E871 RID: 256113 RVA: 0x0123418B File Offset: 0x0123238B
 		public PhotoCameraType? InheritedFromMode
 		{
 			get
@@ -128,8 +128,8 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}
 		}
 
-		// Token: 0x17009F6E RID: 40814
-		// (get) Token: 0x06048426 RID: 295974 RVA: 0x012917B7 File Offset: 0x0128F9B7
+		// Token: 0x1700770C RID: 30476
+		// (get) Token: 0x0603E872 RID: 256114 RVA: 0x01234193 File Offset: 0x01232393
 		public global::Vector PendingInheritWorldLocation
 		{
 			get
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}
 		}
 
-		// Token: 0x06048427 RID: 295975 RVA: 0x012917C9 File Offset: 0x0128F9C9
+		// Token: 0x0603E873 RID: 256115 RVA: 0x012341A5 File Offset: 0x012323A5
 		[NullableContext(1)]
 		public void SetInheritedEntryPose(PhotoCameraEntryPose pose)
 		{
@@ -150,13 +150,13 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.HasPendingInheritWorldLocation = false;
 		}
 
-		// Token: 0x06048428 RID: 295976 RVA: 0x012917D9 File Offset: 0x0128F9D9
+		// Token: 0x0603E874 RID: 256116 RVA: 0x012341B5 File Offset: 0x012323B5
 		public void SetCharacter(TsBaseCharacter character)
 		{
 			this.CharacterInternal = character;
 		}
 
-		// Token: 0x06048429 RID: 295977 RVA: 0x012917E4 File Offset: 0x0128F9E4
+		// Token: 0x0603E875 RID: 256117 RVA: 0x012341C0 File Offset: 0x012323C0
 		public void ChangeCharacter(TsBaseCharacter character)
 		{
 			if (this.IsDestroyed || this.CharacterInternal == character)
@@ -166,6 +166,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.SetCharacterPhotoCameraInput(false);
 			this.SetCharacterInvertMoveForward(false);
 			this.SetCharacterInvertMoveRight(false);
+			this.SetCharacterCameraDirection(false);
 			this.CharacterInternal = character;
 			this.SetCharacterPhotoCameraInput(true);
 			if (this.CurrentModeInternal != null)
@@ -176,7 +177,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.RebuildConfigForCurrentBodyType();
 		}
 
-		// Token: 0x0604842A RID: 295978 RVA: 0x01291854 File Offset: 0x0128FA54
+		// Token: 0x0603E876 RID: 256118 RVA: 0x01234234 File Offset: 0x01232434
 		private void DispatchCharacterChanged(TsBaseCharacter character)
 		{
 			foreach (EPhotoCameraComponent key in this.TickOrder)
@@ -189,19 +190,19 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}
 		}
 
-		// Token: 0x0604842B RID: 295979 RVA: 0x01291891 File Offset: 0x0128FA91
+		// Token: 0x0603E877 RID: 256119 RVA: 0x01234271 File Offset: 0x01232471
 		public void SetPendingLens(PhotoCameraLensState lens)
 		{
 			this.PendingLensInternal = lens;
 		}
 
-		// Token: 0x0604842C RID: 295980 RVA: 0x0129189A File Offset: 0x0128FA9A
+		// Token: 0x0603E878 RID: 256120 RVA: 0x0123427A File Offset: 0x0123247A
 		public void SetDefaultMode(PhotoCameraType mode)
 		{
 			this.DefaultModeInternal = new PhotoCameraType?(mode);
 		}
 
-		// Token: 0x0604842D RID: 295981 RVA: 0x012918A8 File Offset: 0x0128FAA8
+		// Token: 0x0603E879 RID: 256121 RVA: 0x01234288 File Offset: 0x01232488
 		[NullableContext(0)]
 		[return: Nullable(2)]
 		public T GetComponent<T>(EPhotoCameraComponent id) where T : PhotoCameraComponentBase
@@ -214,14 +215,14 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			return photoCameraComponentBase as T;
 		}
 
-		// Token: 0x0604842E RID: 295982 RVA: 0x012918DA File Offset: 0x0128FADA
+		// Token: 0x0603E87A RID: 256122 RVA: 0x012342BA File Offset: 0x012324BA
 		public bool ToggleDebug()
 		{
 			this.IsDebugEnable = !this.IsDebugEnable;
 			return this.IsDebugEnable;
 		}
 
-		// Token: 0x0604842F RID: 295983 RVA: 0x012918F4 File Offset: 0x0128FAF4
+		// Token: 0x0603E87B RID: 256123 RVA: 0x012342D4 File Offset: 0x012324D4
 		[NullableContext(1)]
 		public void OnInit(ACameraActor camera, CameraModelInstance cameraModel)
 		{
@@ -248,7 +249,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}
 		}
 
-		// Token: 0x06048430 RID: 295984 RVA: 0x012919EC File Offset: 0x0128FBEC
+		// Token: 0x0603E87C RID: 256124 RVA: 0x012343CC File Offset: 0x012325CC
 		public void Update(float deltaTime)
 		{
 			foreach (EPhotoCameraComponent key in this.IsBlending ? this.BlendTickOrder : this.TickOrder)
@@ -266,7 +267,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}
 		}
 
-		// Token: 0x06048431 RID: 295985 RVA: 0x01291A54 File Offset: 0x0128FC54
+		// Token: 0x0603E87D RID: 256125 RVA: 0x01234434 File Offset: 0x01232634
 		public void OnDestroy()
 		{
 			this.IsDestroyed = true;
@@ -275,6 +276,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.SetCharacterPhotoCameraInput(false);
 			this.SetCharacterInvertMoveForward(false);
 			this.SetCharacterInvertMoveRight(false);
+			this.SetCharacterCameraDirection(false);
 			for (int i = this.TickOrder.Length - 1; i >= 0; i--)
 			{
 				PhotoCameraComponentBase photoCameraComponentBase;
@@ -313,7 +315,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.IsDebugEnable = false;
 		}
 
-		// Token: 0x06048432 RID: 295986 RVA: 0x01291B74 File Offset: 0x0128FD74
+		// Token: 0x0603E87E RID: 256126 RVA: 0x0123455C File Offset: 0x0123275C
 		[NullableContext(1)]
 		private void RegisterComponent(PhotoCameraComponentBase component)
 		{
@@ -322,14 +324,14 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			component.Init(this);
 		}
 
-		// Token: 0x06048433 RID: 295987 RVA: 0x01291BA4 File Offset: 0x0128FDA4
+		// Token: 0x0603E87F RID: 256127 RVA: 0x0123458C File Offset: 0x0123278C
 		private void EnableNearClip()
 		{
 			this.DisableNearClip();
 			this.NearClipId = CameraNearClipController.Instance.EnableAbsoluteNearClip(250, ConfigCommonParamById.GetFloatConfig("PhotoCameraNearClipPlane").GetValueOrDefault(2f));
 		}
 
-		// Token: 0x06048434 RID: 295988 RVA: 0x01291BE3 File Offset: 0x0128FDE3
+		// Token: 0x0603E880 RID: 256128 RVA: 0x012345CB File Offset: 0x012327CB
 		private void DisableNearClip()
 		{
 			if (this.NearClipId <= 0)
@@ -340,7 +342,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.NearClipId = 0;
 		}
 
-		// Token: 0x06048435 RID: 295989 RVA: 0x01291C06 File Offset: 0x0128FE06
+		// Token: 0x0603E881 RID: 256129 RVA: 0x012345EE File Offset: 0x012327EE
 		private void SetCharacterPhotoCameraInput(bool active)
 		{
 			TsBaseCharacter characterInternal = this.CharacterInternal;
@@ -361,7 +363,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			component.SetUseActorRelativeMoveInput(active);
 		}
 
-		// Token: 0x06048436 RID: 295990 RVA: 0x01291C2D File Offset: 0x0128FE2D
+		// Token: 0x0603E882 RID: 256130 RVA: 0x01234615 File Offset: 0x01232815
 		private void SetCharacterInvertMoveForward(bool invert)
 		{
 			TsBaseCharacter characterInternal = this.CharacterInternal;
@@ -382,7 +384,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			component.SetInvertMoveForward(invert);
 		}
 
-		// Token: 0x06048437 RID: 295991 RVA: 0x01291C54 File Offset: 0x0128FE54
+		// Token: 0x0603E883 RID: 256131 RVA: 0x0123463C File Offset: 0x0123283C
 		private void SetCharacterInvertMoveRight(bool invert)
 		{
 			TsBaseCharacter characterInternal = this.CharacterInternal;
@@ -403,7 +405,53 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			component.SetInvertMoveRight(invert);
 		}
 
-		// Token: 0x06048438 RID: 295992 RVA: 0x01291C7C File Offset: 0x0128FE7C
+		// Token: 0x0603E884 RID: 256132 RVA: 0x01234664 File Offset: 0x01232864
+		private void SetCharacterCameraDirection(bool active)
+		{
+			TsBaseCharacter characterInternal = this.CharacterInternal;
+			CharacterUnifiedStateComponent characterUnifiedStateComponent;
+			if (characterInternal == null)
+			{
+				characterUnifiedStateComponent = null;
+			}
+			else
+			{
+				Entity entityNoBlueprint = characterInternal.GetEntityNoBlueprint();
+				characterUnifiedStateComponent = ((entityNoBlueprint != null) ? entityNoBlueprint.GetComponent<CharacterUnifiedStateComponent>() : null);
+			}
+			CharacterUnifiedStateComponent characterUnifiedStateComponent2 = characterUnifiedStateComponent;
+			if (characterUnifiedStateComponent2 == null)
+			{
+				this.IsCameraDirectionApplied = false;
+				return;
+			}
+			if (active)
+			{
+				if (this.IsCameraDirectionApplied || characterUnifiedStateComponent2.DirectionState == ECharDirectionState.CameraDirection)
+				{
+					return;
+				}
+				this.PrevDirectionState = characterUnifiedStateComponent2.DirectionState;
+				characterUnifiedStateComponent2.SetDirectionState(ECharDirectionState.CameraDirection);
+				this.IsCameraDirectionApplied = true;
+				return;
+			}
+			else
+			{
+				if (!this.IsCameraDirectionApplied)
+				{
+					return;
+				}
+				this.IsCameraDirectionApplied = false;
+				if (characterUnifiedStateComponent2.DirectionState == ECharDirectionState.CameraDirection)
+				{
+					characterUnifiedStateComponent2.SetDirectionState(this.PrevDirectionState);
+				}
+				return;
+			}
+		}
+
+		// Token: 0x0603E885 RID: 256133 RVA: 0x012346F0 File Offset: 0x012328F0
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -411,16 +459,16 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 		})]
 		private UniTask<BP_PhotoCameraConfig_C> LoadConfig(PhotoCameraType mode)
 		{
-			PhotoCamera.<LoadConfig>d__72 <LoadConfig>d__;
+			PhotoCamera.<LoadConfig>d__75 <LoadConfig>d__;
 			<LoadConfig>d__.<>t__builder = AsyncUniTaskMethodBuilder<BP_PhotoCameraConfig_C>.Create();
 			<LoadConfig>d__.<>4__this = this;
 			<LoadConfig>d__.mode = mode;
 			<LoadConfig>d__.<>1__state = -1;
-			<LoadConfig>d__.<>t__builder.Start<PhotoCamera.<LoadConfig>d__72>(ref <LoadConfig>d__);
+			<LoadConfig>d__.<>t__builder.Start<PhotoCamera.<LoadConfig>d__75>(ref <LoadConfig>d__);
 			return <LoadConfig>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06048439 RID: 295993 RVA: 0x01291CC8 File Offset: 0x0128FEC8
+		// Token: 0x0603E886 RID: 256134 RVA: 0x0123473C File Offset: 0x0123293C
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -429,15 +477,15 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 		})]
 		private UniTask<BP_PhotoCameraConfig_C> LoadConfigByPath(string path)
 		{
-			PhotoCamera.<LoadConfigByPath>d__73 <LoadConfigByPath>d__;
+			PhotoCamera.<LoadConfigByPath>d__76 <LoadConfigByPath>d__;
 			<LoadConfigByPath>d__.<>t__builder = AsyncUniTaskMethodBuilder<BP_PhotoCameraConfig_C>.Create();
 			<LoadConfigByPath>d__.path = path;
 			<LoadConfigByPath>d__.<>1__state = -1;
-			<LoadConfigByPath>d__.<>t__builder.Start<PhotoCamera.<LoadConfigByPath>d__73>(ref <LoadConfigByPath>d__);
+			<LoadConfigByPath>d__.<>t__builder.Start<PhotoCamera.<LoadConfigByPath>d__76>(ref <LoadConfigByPath>d__);
 			return <LoadConfigByPath>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604843A RID: 295994 RVA: 0x01291D0C File Offset: 0x0128FF0C
+		// Token: 0x0603E887 RID: 256135 RVA: 0x01234780 File Offset: 0x01232980
 		[NullableContext(1)]
 		private static BP_PhotoCameraConfig_C CloneConfig(BP_PhotoCameraConfig_C source)
 		{
@@ -455,7 +503,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			return bp_PhotoCameraConfig_C;
 		}
 
-		// Token: 0x0604843B RID: 295995 RVA: 0x01291DA0 File Offset: 0x0128FFA0
+		// Token: 0x0603E888 RID: 256136 RVA: 0x01234814 File Offset: 0x01232A14
 		private EMorphType GetCurrentMorphType()
 		{
 			TsBaseCharacter characterInternal = this.CharacterInternal;
@@ -481,7 +529,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			return emorphType2.GetValueOrDefault();
 		}
 
-		// Token: 0x0604843C RID: 295996 RVA: 0x01291DFC File Offset: 0x0128FFFC
+		// Token: 0x0603E889 RID: 256137 RVA: 0x01234870 File Offset: 0x01232A70
 		private EPhotoCameraBodyType GetCurrentBodyType()
 		{
 			TsBaseCharacter characterInternal = this.CharacterInternal;
@@ -494,7 +542,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			return PhotoCameraUtil.GetBodyType(creatureDataComponent.GetRoleId(), this.GetCurrentMorphType());
 		}
 
-		// Token: 0x0604843D RID: 295997 RVA: 0x01291E40 File Offset: 0x01290040
+		// Token: 0x0603E88A RID: 256138 RVA: 0x012348B4 File Offset: 0x01232AB4
 		private void ApplyBodyTypeDelta(BP_PhotoCameraConfig_C target, BP_PhotoCameraConfig_C deltaSource)
 		{
 			if (target == null || deltaSource == null)
@@ -516,14 +564,14 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			PhotoCamera.ApplyMoveDelta(target.MoveConfig, sphotoCameraMorphDeltaConfig);
 		}
 
-		// Token: 0x0604843E RID: 295998 RVA: 0x01291EA0 File Offset: 0x012900A0
+		// Token: 0x0603E88B RID: 256139 RVA: 0x01234914 File Offset: 0x01232B14
 		private bool HasBodyTypeDelta(EPhotoCameraBodyType bodyType)
 		{
 			SPhotoCameraMorphDeltaConfig self;
 			return bodyType != EPhotoCameraBodyType.None && this.SourceConfigInternal != null && this.SourceConfigInternal.BodyTypeDeltaConfig.TryGetValue(bodyType, out self) && self != null;
 		}
 
-		// Token: 0x0604843F RID: 295999 RVA: 0x01291EE0 File Offset: 0x012900E0
+		// Token: 0x0603E88C RID: 256140 RVA: 0x01234954 File Offset: 0x01232B54
 		private void RebuildConfigForCurrentBodyType()
 		{
 			EPhotoCameraBodyType currentBodyType = this.GetCurrentBodyType();
@@ -551,7 +599,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			modeChangedCallback();
 		}
 
-		// Token: 0x06048440 RID: 296000 RVA: 0x01291F6C File Offset: 0x0129016C
+		// Token: 0x0603E88D RID: 256141 RVA: 0x012349E0 File Offset: 0x01232BE0
 		[NullableContext(1)]
 		private static void ApplyCommonDelta(SPhotoCameraCommonConfig common, SPhotoCameraMorphDeltaConfig delta, EPhotoCameraBodyType bodyType)
 		{
@@ -573,7 +621,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			common.InitRotation = new FVector(PhotoCamera.ClampInitAngle(fvector3.X, common.PitchRange, "Pitch", bodyType), PhotoCamera.ClampInitYaw(fvector3.Y, common.YawRange, bodyType), PhotoCamera.ClampInitAngle(fvector3.Z, common.RollRange, "Roll", bodyType));
 		}
 
-		// Token: 0x06048441 RID: 296001 RVA: 0x01292058 File Offset: 0x01290258
+		// Token: 0x0603E88E RID: 256142 RVA: 0x01234ACC File Offset: 0x01232CCC
 		[NullableContext(1)]
 		private static void ApplyMoveDelta(SPhotoCameraMoveConfig move, SPhotoCameraMorphDeltaConfig delta)
 		{
@@ -588,7 +636,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			move.UpAndDownDistanceRange = fvector2D + fvector2D2;
 		}
 
-		// Token: 0x06048442 RID: 296002 RVA: 0x012920BC File Offset: 0x012902BC
+		// Token: 0x0603E88F RID: 256143 RVA: 0x01234B30 File Offset: 0x01232D30
 		[NullableContext(1)]
 		private unsafe static float ClampInitAngle(float value, FVector2D range, string axis, EPhotoCameraBodyType bodyType)
 		{
@@ -610,7 +658,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			return num;
 		}
 
-		// Token: 0x06048443 RID: 296003 RVA: 0x012921C4 File Offset: 0x012903C4
+		// Token: 0x0603E890 RID: 256144 RVA: 0x01234C38 File Offset: 0x01232E38
 		private static float ClampInitYaw(float value, FVector2D range, EPhotoCameraBodyType bodyType)
 		{
 			if (MathUtils.Instance.IsNearlyEqual((double)(range.Y - range.X), 360.0, null))
@@ -620,7 +668,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			return PhotoCamera.ClampInitAngle(value, range, "Yaw", bodyType);
 		}
 
-		// Token: 0x06048444 RID: 296004 RVA: 0x0129220C File Offset: 0x0129040C
+		// Token: 0x0603E891 RID: 256145 RVA: 0x01234C80 File Offset: 0x01232E80
 		public void ResetToModeDefault()
 		{
 			if (this.IsDestroyed || this.SourceConfigInternal == null)
@@ -643,20 +691,20 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			modeChangedCallback();
 		}
 
-		// Token: 0x06048445 RID: 296005 RVA: 0x01292280 File Offset: 0x01290480
+		// Token: 0x0603E892 RID: 256146 RVA: 0x01234CF4 File Offset: 0x01232EF4
 		[NullableContext(0)]
 		public UniTask<bool> ApplyTemplate([Nullable(1)] string daPath)
 		{
-			PhotoCamera.<ApplyTemplate>d__85 <ApplyTemplate>d__;
+			PhotoCamera.<ApplyTemplate>d__88 <ApplyTemplate>d__;
 			<ApplyTemplate>d__.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
 			<ApplyTemplate>d__.<>4__this = this;
 			<ApplyTemplate>d__.daPath = daPath;
 			<ApplyTemplate>d__.<>1__state = -1;
-			<ApplyTemplate>d__.<>t__builder.Start<PhotoCamera.<ApplyTemplate>d__85>(ref <ApplyTemplate>d__);
+			<ApplyTemplate>d__.<>t__builder.Start<PhotoCamera.<ApplyTemplate>d__88>(ref <ApplyTemplate>d__);
 			return <ApplyTemplate>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06048446 RID: 296006 RVA: 0x012922CC File Offset: 0x012904CC
+		// Token: 0x0603E893 RID: 256147 RVA: 0x01234D40 File Offset: 0x01232F40
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -665,17 +713,17 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 		})]
 		private UniTask<BP_PhotoCameraConfig_C> OverrideSpecifiedConfigFromTemplate(string daPath, int? requestId = null)
 		{
-			PhotoCamera.<OverrideSpecifiedConfigFromTemplate>d__86 <OverrideSpecifiedConfigFromTemplate>d__;
+			PhotoCamera.<OverrideSpecifiedConfigFromTemplate>d__89 <OverrideSpecifiedConfigFromTemplate>d__;
 			<OverrideSpecifiedConfigFromTemplate>d__.<>t__builder = AsyncUniTaskMethodBuilder<BP_PhotoCameraConfig_C>.Create();
 			<OverrideSpecifiedConfigFromTemplate>d__.<>4__this = this;
 			<OverrideSpecifiedConfigFromTemplate>d__.daPath = daPath;
 			<OverrideSpecifiedConfigFromTemplate>d__.requestId = requestId;
 			<OverrideSpecifiedConfigFromTemplate>d__.<>1__state = -1;
-			<OverrideSpecifiedConfigFromTemplate>d__.<>t__builder.Start<PhotoCamera.<OverrideSpecifiedConfigFromTemplate>d__86>(ref <OverrideSpecifiedConfigFromTemplate>d__);
+			<OverrideSpecifiedConfigFromTemplate>d__.<>t__builder.Start<PhotoCamera.<OverrideSpecifiedConfigFromTemplate>d__89>(ref <OverrideSpecifiedConfigFromTemplate>d__);
 			return <OverrideSpecifiedConfigFromTemplate>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06048447 RID: 296007 RVA: 0x01292320 File Offset: 0x01290520
+		// Token: 0x0603E894 RID: 256148 RVA: 0x01234D94 File Offset: 0x01232F94
 		public void ApplyDefaultTemplate(PhotoCameraLensState lens)
 		{
 			if (this.IsDestroyed || this.SourceConfigInternal == null)
@@ -700,7 +748,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			modeChangedCallback();
 		}
 
-		// Token: 0x06048448 RID: 296008 RVA: 0x012923A0 File Offset: 0x012905A0
+		// Token: 0x0603E895 RID: 256149 RVA: 0x01234E14 File Offset: 0x01233014
 		public void ApplyDepthOfField(float? fStop = null, float? distance = null)
 		{
 			ACameraActor cameraActorInternal = this.CameraActorInternal;
@@ -731,7 +779,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}
 		}
 
-		// Token: 0x06048449 RID: 296009 RVA: 0x01292410 File Offset: 0x01290610
+		// Token: 0x0603E896 RID: 256150 RVA: 0x01234E84 File Offset: 0x01233084
 		public void ClearDepthOfField()
 		{
 			ACameraActor cameraActorInternal = this.CameraActorInternal;
@@ -754,7 +802,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			fpostProcessSettings2.bOverride_DepthOfFieldFocalDistance = false;
 		}
 
-		// Token: 0x0604844A RID: 296010 RVA: 0x01292454 File Offset: 0x01290654
+		// Token: 0x0603E897 RID: 256151 RVA: 0x01234EC8 File Offset: 0x012330C8
 		public void SetTiltRoll(float roll)
 		{
 			PhotoCameraLogicComponent component = this.GetComponent<PhotoCameraLogicComponent>(EPhotoCameraComponent.Logic);
@@ -765,7 +813,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			component.SetTiltRoll(roll);
 		}
 
-		// Token: 0x0604844B RID: 296011 RVA: 0x01292468 File Offset: 0x01290668
+		// Token: 0x0603E898 RID: 256152 RVA: 0x01234EDC File Offset: 0x012330DC
 		public void ResetTiltRoll()
 		{
 			PhotoCameraLogicComponent component = this.GetComponent<PhotoCameraLogicComponent>(EPhotoCameraComponent.Logic);
@@ -776,7 +824,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			component.ResetTiltRoll();
 		}
 
-		// Token: 0x0604844C RID: 296012 RVA: 0x0129247C File Offset: 0x0129067C
+		// Token: 0x0603E899 RID: 256153 RVA: 0x01234EF0 File Offset: 0x012330F0
 		[NullableContext(1)]
 		private void CaptureInheritWorldLocation(BP_PhotoCameraConfig_C config, PhotoCameraType? prev)
 		{
@@ -797,38 +845,38 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.HasPendingInheritWorldLocation = true;
 		}
 
-		// Token: 0x0604844D RID: 296013 RVA: 0x01292520 File Offset: 0x01290720
+		// Token: 0x0603E89A RID: 256154 RVA: 0x01234F94 File Offset: 0x01233194
 		[NullableContext(0)]
 		public UniTask<bool> SwitchMode(PhotoCameraType target, [Nullable(2)] string templateDaPath = null)
 		{
-			PhotoCamera.<SwitchMode>d__93 <SwitchMode>d__;
+			PhotoCamera.<SwitchMode>d__96 <SwitchMode>d__;
 			<SwitchMode>d__.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
 			<SwitchMode>d__.<>4__this = this;
 			<SwitchMode>d__.target = target;
 			<SwitchMode>d__.templateDaPath = templateDaPath;
 			<SwitchMode>d__.<>1__state = -1;
-			<SwitchMode>d__.<>t__builder.Start<PhotoCamera.<SwitchMode>d__93>(ref <SwitchMode>d__);
+			<SwitchMode>d__.<>t__builder.Start<PhotoCamera.<SwitchMode>d__96>(ref <SwitchMode>d__);
 			return <SwitchMode>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604844E RID: 296014 RVA: 0x01292574 File Offset: 0x01290774
+		// Token: 0x0603E89B RID: 256155 RVA: 0x01234FE8 File Offset: 0x012331E8
 		private UniTask WaitLeaveSitDown()
 		{
-			PhotoCamera.<WaitLeaveSitDown>d__94 <WaitLeaveSitDown>d__;
+			PhotoCamera.<WaitLeaveSitDown>d__97 <WaitLeaveSitDown>d__;
 			<WaitLeaveSitDown>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<WaitLeaveSitDown>d__.<>4__this = this;
 			<WaitLeaveSitDown>d__.<>1__state = -1;
-			<WaitLeaveSitDown>d__.<>t__builder.Start<PhotoCamera.<WaitLeaveSitDown>d__94>(ref <WaitLeaveSitDown>d__);
+			<WaitLeaveSitDown>d__.<>t__builder.Start<PhotoCamera.<WaitLeaveSitDown>d__97>(ref <WaitLeaveSitDown>d__);
 			return <WaitLeaveSitDown>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604844F RID: 296015 RVA: 0x012925B7 File Offset: 0x012907B7
+		// Token: 0x0603E89C RID: 256156 RVA: 0x0123502B File Offset: 0x0123322B
 		public void SetModeChangedCallback(Action callback)
 		{
 			this.ModeChangedCallback = callback;
 		}
 
-		// Token: 0x06048450 RID: 296016 RVA: 0x012925C0 File Offset: 0x012907C0
+		// Token: 0x0603E89D RID: 256157 RVA: 0x01235034 File Offset: 0x01233234
 		public void NotifyTiltRollChanged(float roll)
 		{
 			Action<float> onTiltRollChanged = this.OnTiltRollChanged;
@@ -839,7 +887,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			onTiltRollChanged(roll);
 		}
 
-		// Token: 0x06048451 RID: 296017 RVA: 0x012925D4 File Offset: 0x012907D4
+		// Token: 0x0603E89E RID: 256158 RVA: 0x01235048 File Offset: 0x01233248
 		private bool NeedBlend(PhotoCameraType? prev, PhotoCameraType next)
 		{
 			PhotoCameraType? photoCameraType = prev;
@@ -847,7 +895,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			return (photoCameraType.GetValueOrDefault() == photoCameraType2 & photoCameraType != null) && next == PhotoCameraType.Drone;
 		}
 
-		// Token: 0x06048452 RID: 296018 RVA: 0x01292600 File Offset: 0x01290800
+		// Token: 0x0603E89F RID: 256159 RVA: 0x01235074 File Offset: 0x01233274
 		private void DispatchModeChangeStart(PhotoCameraType? prev, PhotoCameraType target)
 		{
 			PhotoCameraComponentBase photoCameraComponentBase;
@@ -866,7 +914,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}
 		}
 
-		// Token: 0x06048453 RID: 296019 RVA: 0x01292664 File Offset: 0x01290864
+		// Token: 0x0603E8A0 RID: 256160 RVA: 0x012350D8 File Offset: 0x012332D8
 		private void DispatchModeChangeFinish(PhotoCameraType? prev, PhotoCameraType target)
 		{
 			foreach (EPhotoCameraComponent key in this.TickOrder)
@@ -879,91 +927,98 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}
 		}
 
-		// Token: 0x06048454 RID: 296020 RVA: 0x012926A2 File Offset: 0x012908A2
+		// Token: 0x0603E8A1 RID: 256161 RVA: 0x01235116 File Offset: 0x01233316
 		private void ApplyInputDistribute(PhotoCameraType target)
 		{
 			this.SetCharacterInvertMoveForward(target == PhotoCameraType.Selfie);
 			this.SetCharacterInvertMoveRight(target == PhotoCameraType.Selfie);
+			this.SetCharacterCameraDirection(target == PhotoCameraType.FirstPerson);
 			InputDistributeModel.Instance.RefreshInputDistributeTag();
 		}
 
-		// Token: 0x040262D5 RID: 156373
+		// Token: 0x040215C0 RID: 136640
 		private ACameraActor CameraActorInternal;
 
-		// Token: 0x040262D6 RID: 156374
+		// Token: 0x040215C1 RID: 136641
 		private CameraModelInstance CameraModelInternal;
 
-		// Token: 0x040262D7 RID: 156375
+		// Token: 0x040215C2 RID: 136642
 		private TsBaseCharacter CharacterInternal;
 
-		// Token: 0x040262D8 RID: 156376
+		// Token: 0x040215C3 RID: 136643
 		private PhotoCameraType? DefaultModeInternal;
 
-		// Token: 0x040262D9 RID: 156377
+		// Token: 0x040215C4 RID: 136644
 		private PhotoCameraLensState PendingLensInternal;
 
-		// Token: 0x040262DA RID: 156378
+		// Token: 0x040215C5 RID: 136645
 		private PhotoCameraEntryPose InheritedEntryPoseInternal;
 
-		// Token: 0x040262DB RID: 156379
+		// Token: 0x040215C6 RID: 136646
 		private PhotoCameraType? InheritedFromModeInternal;
 
-		// Token: 0x040262DC RID: 156380
+		// Token: 0x040215C7 RID: 136647
 		[Nullable(1)]
 		private readonly global::Vector PendingInheritWorldLocationInternal = global::Vector.Create();
 
-		// Token: 0x040262DD RID: 156381
+		// Token: 0x040215C8 RID: 136648
 		private bool HasPendingInheritWorldLocation;
 
-		// Token: 0x040262DE RID: 156382
+		// Token: 0x040215C9 RID: 136649
 		[Nullable(1)]
 		private readonly global::Vector InheritOffsetTmp = global::Vector.Create();
 
-		// Token: 0x040262DF RID: 156383
+		// Token: 0x040215CA RID: 136650
 		[Nullable(1)]
 		private readonly Quat InheritQuatTmp = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x040262E0 RID: 156384
+		// Token: 0x040215CB RID: 136651
 		private PhotoCameraType? CurrentModeInternal;
 
-		// Token: 0x040262E1 RID: 156385
+		// Token: 0x040215CC RID: 136652
 		private EPhotoCameraBodyType AppliedBodyType;
 
-		// Token: 0x040262E2 RID: 156386
+		// Token: 0x040215CD RID: 136653
 		private BP_PhotoCameraConfig_C SourceConfigInternal;
 
-		// Token: 0x040262E3 RID: 156387
+		// Token: 0x040215CE RID: 136654
 		private BP_PhotoCameraConfig_C CurrentConfigInternal;
 
-		// Token: 0x040262E4 RID: 156388
+		// Token: 0x040215CF RID: 136655
 		private bool IsModeLoading;
 
-		// Token: 0x040262E5 RID: 156389
+		// Token: 0x040215D0 RID: 136656
 		private bool IsDestroyed;
 
-		// Token: 0x040262E6 RID: 156390
+		// Token: 0x040215D1 RID: 136657
 		private bool IsBlending;
 
-		// Token: 0x040262E7 RID: 156391
+		// Token: 0x040215D2 RID: 136658
 		private int ConfigLoadRequestId;
 
-		// Token: 0x040262E8 RID: 156392
+		// Token: 0x040215D3 RID: 136659
 		private int NearClipId;
 
-		// Token: 0x040262E9 RID: 156393
+		// Token: 0x040215D4 RID: 136660
 		private Action ModeChangedCallback;
 
-		// Token: 0x040262EA RID: 156394
+		// Token: 0x040215D5 RID: 136661
+		private bool IsCameraDirectionApplied;
+
+		// Token: 0x040215D6 RID: 136662
+		private ECharDirectionState PrevDirectionState = ECharDirectionState.FaceDirection;
+
+		// Token: 0x040215D7 RID: 136663
 		public Action<float> OnTiltRollChanged;
 
-		// Token: 0x040262EB RID: 156395
+		// Token: 0x040215D8 RID: 136664
 		public Action<float, float> OnTemplateDepthOfFieldChanged;
 
-		// Token: 0x040262EE RID: 156398
+		// Token: 0x040215DB RID: 136667
 		[Nullable(1)]
 		private readonly Dictionary<EPhotoCameraComponent, PhotoCameraComponentBase> Components = new Dictionary<EPhotoCameraComponent, PhotoCameraComponentBase>();
 
-		// Token: 0x040262EF RID: 156399
+		// Token: 0x040215DC RID: 136668
 		[Nullable(1)]
 		private readonly EPhotoCameraComponent[] TickOrder = new EPhotoCameraComponent[]
 		{
@@ -976,7 +1031,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			EPhotoCameraComponent.Debug
 		};
 
-		// Token: 0x040262F0 RID: 156400
+		// Token: 0x040215DD RID: 136669
 		[Nullable(1)]
 		private readonly EPhotoCameraComponent[] BlendTickOrder = new EPhotoCameraComponent[]
 		{

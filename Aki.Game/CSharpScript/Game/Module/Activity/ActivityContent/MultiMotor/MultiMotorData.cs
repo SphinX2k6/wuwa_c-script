@@ -7,12 +7,12 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 {
-	// Token: 0x02006390 RID: 25488
+	// Token: 0x0200530E RID: 21262
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MultiMotorData : ActivityBaseData
 	{
-		// Token: 0x060401A7 RID: 262567 RVA: 0x00F839E4 File Offset: 0x00F81BE4
+		// Token: 0x06034E68 RID: 216680 RVA: 0x00ECA958 File Offset: 0x00EC8B58
 		protected override void PhraseEx(ActivityData data)
 		{
 			OnlineMotorActivityData onlineMotorActivityData = data.OnlineMotorActivityData;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			instance.OnMultiMotorDataInit();
 		}
 
-		// Token: 0x060401A8 RID: 262568 RVA: 0x00F83A78 File Offset: 0x00F81C78
+		// Token: 0x06034E69 RID: 216681 RVA: 0x00ECA9EC File Offset: 0x00EC8BEC
 		private void InitLevelData(IEnumerable<OnlineMotorLevelInfo> levelInfoList)
 		{
 			Dictionary<int, OnlineMotorLevelInfo> dictionary = new Dictionary<int, OnlineMotorLevelInfo>();
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		}
 
-		// Token: 0x060401A9 RID: 262569 RVA: 0x00F83BE8 File Offset: 0x00F81DE8
+		// Token: 0x06034E6A RID: 216682 RVA: 0x00ECAB5C File Offset: 0x00EC8D5C
 		private void InitTaskData(IEnumerable<OnlineMotorTask> levelTaskList, IEnumerable<OnlineMotorTask> globalTaskList)
 		{
 			foreach (OnlineMotorTask onlineMotorTask in levelTaskList)
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		}
 
-		// Token: 0x060401AA RID: 262570 RVA: 0x00F83D5C File Offset: 0x00F81F5C
+		// Token: 0x06034E6B RID: 216683 RVA: 0x00ECACD0 File Offset: 0x00EC8ED0
 		private void InitLevelUnlockTime(IEnumerable<OnlineMotorLevelUnLockTime> unlockTimes)
 		{
 			Dictionary<int, long> dictionary = new Dictionary<int, long>();
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		}
 
-		// Token: 0x060401AB RID: 262571 RVA: 0x00F83E10 File Offset: 0x00F82010
+		// Token: 0x06034E6C RID: 216684 RVA: 0x00ECAD84 File Offset: 0x00EC8F84
 		public void InitLevelRankData()
 		{
 			this.LevelBattleRankMap.Clear();
@@ -118,14 +118,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		}
 
-		// Token: 0x060401AC RID: 262572 RVA: 0x00F83E80 File Offset: 0x00F82080
+		// Token: 0x06034E6D RID: 216685 RVA: 0x00ECADF4 File Offset: 0x00EC8FF4
 		public List<MultiMotorLevelData> GetLevelDataList()
 		{
 			return new List<MultiMotorLevelData>(this.LevelDataMap.Values);
 		}
 
-		// Token: 0x17009355 RID: 37717
-		// (get) Token: 0x060401AD RID: 262573 RVA: 0x00F83E92 File Offset: 0x00F82092
+		// Token: 0x170066B7 RID: 26295
+		// (get) Token: 0x06034E6E RID: 216686 RVA: 0x00ECAE06 File Offset: 0x00EC9006
 		public int TotalLevelCount
 		{
 			get
@@ -134,8 +134,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		}
 
-		// Token: 0x17009356 RID: 37718
-		// (get) Token: 0x060401AE RID: 262574 RVA: 0x00F83EA0 File Offset: 0x00F820A0
+		// Token: 0x170066B8 RID: 26296
+		// (get) Token: 0x06034E6F RID: 216687 RVA: 0x00ECAE14 File Offset: 0x00EC9014
 		public int FinishedLevelCount
 		{
 			get
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		}
 
-		// Token: 0x060401AF RID: 262575 RVA: 0x00F83F04 File Offset: 0x00F82104
+		// Token: 0x06034E70 RID: 216688 RVA: 0x00ECAE78 File Offset: 0x00EC9078
 		public List<MultiMotorTaskData> GetGlobalTaskList()
 		{
 			List<MultiMotorTaskData> list = new List<MultiMotorTaskData>();
@@ -166,8 +166,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			return list;
 		}
 
-		// Token: 0x17009357 RID: 37719
-		// (get) Token: 0x060401B0 RID: 262576 RVA: 0x00F83F74 File Offset: 0x00F82174
+		// Token: 0x170066B9 RID: 26297
+		// (get) Token: 0x06034E71 RID: 216689 RVA: 0x00ECAEE8 File Offset: 0x00EC90E8
 		public bool HasGlobalRewardRedDot
 		{
 			get
@@ -186,8 +186,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		}
 
-		// Token: 0x17009358 RID: 37720
-		// (get) Token: 0x060401B1 RID: 262577 RVA: 0x00F83FD0 File Offset: 0x00F821D0
+		// Token: 0x170066BA RID: 26298
+		// (get) Token: 0x06034E72 RID: 216690 RVA: 0x00ECAF44 File Offset: 0x00EC9144
 		public bool HasAnyRewardRedDot
 		{
 			get
@@ -203,8 +203,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		}
 
-		// Token: 0x17009359 RID: 37721
-		// (get) Token: 0x060401B2 RID: 262578 RVA: 0x00F84038 File Offset: 0x00F82238
+		// Token: 0x170066BB RID: 26299
+		// (get) Token: 0x06034E73 RID: 216691 RVA: 0x00ECAFAC File Offset: 0x00EC91AC
 		public bool HasAnyLevelRedDot
 		{
 			get
@@ -220,13 +220,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		}
 
-		// Token: 0x060401B3 RID: 262579 RVA: 0x00F8409C File Offset: 0x00F8229C
+		// Token: 0x06034E74 RID: 216692 RVA: 0x00ECB010 File Offset: 0x00EC9210
 		public override bool GetExDataRedPointShowState()
 		{
 			return this.HasAnyRewardRedDot;
 		}
 
-		// Token: 0x060401B4 RID: 262580 RVA: 0x00F840A4 File Offset: 0x00F822A4
+		// Token: 0x06034E75 RID: 216693 RVA: 0x00ECB018 File Offset: 0x00EC9218
 		protected override bool GetExDataFinishShowState()
 		{
 			if (this.TaskDataMap.Count == 0)
@@ -243,13 +243,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			return true;
 		}
 
-		// Token: 0x04021656 RID: 136790
+		// Token: 0x0401BF85 RID: 114565
 		public readonly Dictionary<int, MultiMotorLevelData> LevelDataMap = new Dictionary<int, MultiMotorLevelData>();
 
-		// Token: 0x04021657 RID: 136791
+		// Token: 0x0401BF86 RID: 114566
 		public readonly Dictionary<int, int> LevelBattleRankMap = new Dictionary<int, int>();
 
-		// Token: 0x04021658 RID: 136792
+		// Token: 0x0401BF87 RID: 114567
 		public readonly Dictionary<int, MultiMotorTaskData> TaskDataMap = new Dictionary<int, MultiMotorTaskData>();
 	}
 }

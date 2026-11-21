@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029E6 RID: 10726
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002CD3 RID: 11475
 	public class IRemovePreloadResourceTrialCharacter : IRemovePreloadResourceCharacterType
 	{
-		// Token: 0x0600ECE4 RID: 60644 RVA: 0x002292DF File Offset: 0x002274DF
+		// Token: 0x0600FB7B RID: 64379 RVA: 0x00246C63 File Offset: 0x00244E63
 		public static IRemovePreloadResourceTrialCharacter Create(IRemovePreloadResourceTrialCharacter? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004ADA RID: 19162
-		// (get) Token: 0x0600ECE5 RID: 60645 RVA: 0x002292FE File Offset: 0x002274FE
+		// Token: 0x17004E83 RID: 20099
+		// (get) Token: 0x0600FB7C RID: 64380 RVA: 0x00246C82 File Offset: 0x00244E82
 		public override ERemovePreloadResourceObjectType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004ADB RID: 19163
-		// (get) Token: 0x0600ECE6 RID: 60646 RVA: 0x0022930C File Offset: 0x0022750C
+		// Token: 0x17004E84 RID: 20100
+		// (get) Token: 0x0600FB7D RID: 64381 RVA: 0x00246C90 File Offset: 0x00244E90
 		public virtual List<int> CharacterGroup
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008276 RID: 33398
+		// Token: 0x04008967 RID: 35175
 		private IRemovePreloadResourceTrialCharacter Instance;
 
-		// Token: 0x04008277 RID: 33399
+		// Token: 0x04008968 RID: 35176
 		private List<int> _CharacterGroupCache;
 
-		// Token: 0x04008278 RID: 33400
+		// Token: 0x04008969 RID: 35177
 		private bool _CharacterGroupInited;
 	}
 }

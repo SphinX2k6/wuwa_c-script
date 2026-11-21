@@ -7,45 +7,45 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using Google.Protobuf;
 
-// Token: 0x020012CB RID: 4811
+// Token: 0x0200077F RID: 1919
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class ActivityMapTravelController : ActivityControllerBase
 {
-	// Token: 0x0600845D RID: 33885 RVA: 0x001C2B67 File Offset: 0x001C0D67
+	// Token: 0x060057F8 RID: 22520 RVA: 0x001CB9C3 File Offset: 0x001C9BC3
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.MapTravelInfoUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnMapTravelInfoUpdateNotify));
 	}
 
-	// Token: 0x0600845E RID: 33886 RVA: 0x001C2B85 File Offset: 0x001C0D85
+	// Token: 0x060057F9 RID: 22521 RVA: 0x001CB9E1 File Offset: 0x001C9BE1
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.MapTravelInfoUpdateNotify);
 	}
 
-	// Token: 0x0600845F RID: 33887 RVA: 0x001C2B97 File Offset: 0x001C0D97
+	// Token: 0x060057FA RID: 22522 RVA: 0x001CB9F3 File Offset: 0x001C9BF3
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<int, QuestState, EQuestStatusUpdateReason>(EEventName.OnQuestStateChange, new Action<int, QuestState, EQuestStatusUpdateReason>(this.OnQuestStateChange));
 		EventSystem.Instance.Add<int, int>(EEventName.OnCommonItemCountAnyChange, new Action<int, int>(this.OnCommonItemCountAnyChange));
 	}
 
-	// Token: 0x06008460 RID: 33888 RVA: 0x001C2BD1 File Offset: 0x001C0DD1
+	// Token: 0x060057FB RID: 22523 RVA: 0x001CBA2D File Offset: 0x001C9C2D
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OnQuestStateChange, new Action<int, QuestState, EQuestStatusUpdateReason>(this.OnQuestStateChange));
 		EventSystem.Instance.Remove(EEventName.OnCommonItemCountAnyChange, new Action<int, int>(this.OnCommonItemCountAnyChange));
 	}
 
-	// Token: 0x06008461 RID: 33889 RVA: 0x001C2C0B File Offset: 0x001C0E0B
+	// Token: 0x060057FC RID: 22524 RVA: 0x001CBA67 File Offset: 0x001C9C67
 	protected override string OnGetActivityResource(ActivityBaseData data)
 	{
 		return "UiItem_TravelMapSubView";
 	}
 
-	// Token: 0x06008462 RID: 33890 RVA: 0x001C2C14 File Offset: 0x001C0E14
+	// Token: 0x060057FD RID: 22525 RVA: 0x001CBA70 File Offset: 0x001C9C70
 	private void OnQuestStateChange(int questId, QuestState state, EQuestStatusUpdateReason reason)
 	{
 		ActivityMapTravelData mapTravelData = this.GetMapTravelData();
@@ -59,7 +59,7 @@ public class ActivityMapTravelController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06008463 RID: 33891 RVA: 0x001C2C50 File Offset: 0x001C0E50
+	// Token: 0x060057FE RID: 22526 RVA: 0x001CBAAC File Offset: 0x001C9CAC
 	private void OnCommonItemCountAnyChange(int configId, int count)
 	{
 		ActivityMapTravelData mapTravelData = this.GetMapTravelData();
@@ -78,30 +78,30 @@ public class ActivityMapTravelController : ActivityControllerBase
 		this.TryOpenLevelTipsView(mapTravelData);
 	}
 
-	// Token: 0x06008464 RID: 33892 RVA: 0x001C2C9F File Offset: 0x001C0E9F
+	// Token: 0x060057FF RID: 22527 RVA: 0x001CBAFB File Offset: 0x001C9CFB
 	protected override void OnOpenView(ActivityBaseData data)
 	{
 	}
 
-	// Token: 0x06008465 RID: 33893 RVA: 0x001C2CA1 File Offset: 0x001C0EA1
+	// Token: 0x06005800 RID: 22528 RVA: 0x001CBAFD File Offset: 0x001C9CFD
 	protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 	{
 		return new ActivitySubViewMapTravel();
 	}
 
-	// Token: 0x06008466 RID: 33894 RVA: 0x001C2CA8 File Offset: 0x001C0EA8
+	// Token: 0x06005801 RID: 22529 RVA: 0x001CBB04 File Offset: 0x001C9D04
 	protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 	{
 		return new ActivityMapTravelData();
 	}
 
-	// Token: 0x06008467 RID: 33895 RVA: 0x001C2CAF File Offset: 0x001C0EAF
+	// Token: 0x06005802 RID: 22530 RVA: 0x001CBB0B File Offset: 0x001C9D0B
 	protected override bool OnGetIsOpeningActivityRelativeView()
 	{
 		return false;
 	}
 
-	// Token: 0x06008468 RID: 33896 RVA: 0x001C2CB4 File Offset: 0x001C0EB4
+	// Token: 0x06005803 RID: 22531 RVA: 0x001CBB10 File Offset: 0x001C9D10
 	[NullableContext(2)]
 	public ActivityMapTravelData GetMapTravelData()
 	{
@@ -114,7 +114,7 @@ public class ActivityMapTravelController : ActivityControllerBase
 		return result;
 	}
 
-	// Token: 0x06008469 RID: 33897 RVA: 0x001C2CE8 File Offset: 0x001C0EE8
+	// Token: 0x06005804 RID: 22532 RVA: 0x001CBB44 File Offset: 0x001C9D44
 	[NullableContext(2)]
 	private void OnMapTravelInfoUpdateNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -144,7 +144,7 @@ public class ActivityMapTravelController : ActivityControllerBase
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, mapTravelData.Id);
 	}
 
-	// Token: 0x0600846A RID: 33898 RVA: 0x001C2D84 File Offset: 0x001C0F84
+	// Token: 0x06005805 RID: 22533 RVA: 0x001CBBE0 File Offset: 0x001C9DE0
 	public void RequestMapTravelLevelUp(Action<bool> callback = null)
 	{
 		MapTravelLevelUpRequest message = MapTravelLevelUpRequest.Create();
@@ -163,7 +163,7 @@ public class ActivityMapTravelController : ActivityControllerBase
 			}
 			else if (mapTravelLevelUpResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(mapTravelLevelUpResponse.ErrorCode, 29440, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(mapTravelLevelUpResponse.ErrorCode, 26622, null, true, true);
 				Action<bool> callback3 = callback;
 				if (callback3 == null)
 				{
@@ -198,7 +198,7 @@ public class ActivityMapTravelController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600846B RID: 33899 RVA: 0x001C2DC8 File Offset: 0x001C0FC8
+	// Token: 0x06005806 RID: 22534 RVA: 0x001CBC24 File Offset: 0x001C9E24
 	public void RequestMultiMapTravelTaskReward(List<int> ids)
 	{
 		MulMapTravelTaskRewardRequest mulMapTravelTaskRewardRequest = MulMapTravelTaskRewardRequest.Create();
@@ -212,7 +212,7 @@ public class ActivityMapTravelController : ActivityControllerBase
 			}
 			if (mulMapTravelTaskRewardResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(mulMapTravelTaskRewardResponse.ErrorCode, 22477, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(mulMapTravelTaskRewardResponse.ErrorCode, 16436, null, true, true);
 				return;
 			}
 			ActivityMapTravelData mapTravelData = this.GetMapTravelData();
@@ -229,7 +229,7 @@ public class ActivityMapTravelController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600846C RID: 33900 RVA: 0x001C2E20 File Offset: 0x001C1020
+	// Token: 0x06005807 RID: 22535 RVA: 0x001CBC7C File Offset: 0x001C9E7C
 	public void RequestTakeTaskFinalReward()
 	{
 		MapTravelFullRewardRequest message = MapTravelFullRewardRequest.Create();
@@ -242,7 +242,7 @@ public class ActivityMapTravelController : ActivityControllerBase
 			}
 			if (mapTravelFullRewardResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(mapTravelFullRewardResponse.ErrorCode, 18919, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(mapTravelFullRewardResponse.ErrorCode, 18348, null, true, true);
 				return;
 			}
 			ActivityMapTravelData mapTravelData = this.GetMapTravelData();
@@ -256,7 +256,7 @@ public class ActivityMapTravelController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600846D RID: 33901 RVA: 0x001C2E50 File Offset: 0x001C1050
+	// Token: 0x06005808 RID: 22536 RVA: 0x001CBCAC File Offset: 0x001C9EAC
 	public void RequestMultiTakeSoarChallengeReward(List<int> rewardIds)
 	{
 		MulMapTravelSoarRewardRequest mulMapTravelSoarRewardRequest = MulMapTravelSoarRewardRequest.Create();
@@ -270,7 +270,7 @@ public class ActivityMapTravelController : ActivityControllerBase
 			}
 			if (mulMapTravelSoarRewardResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(mulMapTravelSoarRewardResponse.ErrorCode, 28256, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(mulMapTravelSoarRewardResponse.ErrorCode, 16779, null, true, true);
 				return;
 			}
 			ActivityMapTravelData mapTravelData = this.GetMapTravelData();
@@ -287,7 +287,7 @@ public class ActivityMapTravelController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600846E RID: 33902 RVA: 0x001C2EA5 File Offset: 0x001C10A5
+	// Token: 0x06005809 RID: 22537 RVA: 0x001CBD01 File Offset: 0x001C9F01
 	private void TryOpenLevelTipsView(ActivityMapTravelData data)
 	{
 		if (!UiManager.Instance.IsViewOpen(EUiViewName.TravelLevelTipsView))
@@ -296,13 +296,13 @@ public class ActivityMapTravelController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x0600846F RID: 33903 RVA: 0x001C2EC9 File Offset: 0x001C10C9
+	// Token: 0x0600580A RID: 22538 RVA: 0x001CBD25 File Offset: 0x001C9F25
 	public override void OnShowActivityFirstUnlockView(ActivityBaseData data)
 	{
 		UiManager.Instance.OpenView(EUiViewName.ActivityUnlockTipMapTravelView, null, null);
 	}
 
-	// Token: 0x06008470 RID: 33904 RVA: 0x001C2EDC File Offset: 0x001C10DC
+	// Token: 0x0600580B RID: 22539 RVA: 0x001CBD38 File Offset: 0x001C9F38
 	public void OpenSoarStrengthView(float changeValue)
 	{
 		float baseMax = FormationAttributeController.Instance.GetBaseMax(EFormationAttributeId.SoarStrength);
@@ -333,8 +333,8 @@ public class ActivityMapTravelController : ActivityControllerBase
 		RoleLevelUpSuccessController.Instance.OpenSuccessAttributeView(data, null);
 	}
 
-	// Token: 0x17000B47 RID: 2887
-	// (get) Token: 0x06008471 RID: 33905 RVA: 0x001C2FFB File Offset: 0x001C11FB
+	// Token: 0x17000B67 RID: 2919
+	// (get) Token: 0x0600580C RID: 22540 RVA: 0x001CBE57 File Offset: 0x001CA057
 	public static ActivityMapTravelController Instance
 	{
 		get
@@ -343,7 +343,7 @@ public class ActivityMapTravelController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06008472 RID: 33906 RVA: 0x001C3002 File Offset: 0x001C1202
+	// Token: 0x0600580D RID: 22541 RVA: 0x001CBE5E File Offset: 0x001CA05E
 	public static ActivityMapTravelController GetOrCreateInstance()
 	{
 		if (ActivityMapTravelController._Instance == null)
@@ -353,7 +353,7 @@ public class ActivityMapTravelController : ActivityControllerBase
 		return ActivityMapTravelController._Instance;
 	}
 
-	// Token: 0x06008473 RID: 33907 RVA: 0x001C3016 File Offset: 0x001C1216
+	// Token: 0x0600580E RID: 22542 RVA: 0x001CBE72 File Offset: 0x001CA072
 	public static bool CreateInstance()
 	{
 		if (ActivityMapTravelController._Instance != null)
@@ -364,24 +364,24 @@ public class ActivityMapTravelController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x06008474 RID: 33908 RVA: 0x001C302C File Offset: 0x001C122C
+	// Token: 0x0600580F RID: 22543 RVA: 0x001CBE88 File Offset: 0x001CA088
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06008475 RID: 33909 RVA: 0x001C302E File Offset: 0x001C122E
+	// Token: 0x06005810 RID: 22544 RVA: 0x001CBE8A File Offset: 0x001CA08A
 	public static void ResetStaticDefaultValue()
 	{
 		ActivityMapTravelController._Instance = null;
 	}
 
-	// Token: 0x06008476 RID: 33910 RVA: 0x001C3036 File Offset: 0x001C1236
+	// Token: 0x06005811 RID: 22545 RVA: 0x001CBE92 File Offset: 0x001CA092
 	static ActivityMapTravelController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActivityMapTravelController.CreateStaticDefaultValue), new Action(ActivityMapTravelController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04003B74 RID: 15220
+	// Token: 0x04003C0C RID: 15372
 	[Nullable(2)]
 	private static ActivityMapTravelController _Instance;
 }

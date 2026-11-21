@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020002EA RID: 746
+	// Token: 0x020002FF RID: 767
 	public class ConfigFishingReputationByLevel : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001181 RID: 4481 RVA: 0x000BC6F7 File Offset: 0x000BA8F7
+		// Token: 0x060011FF RID: 4607 RVA: 0x000C2C03 File Offset: 0x000C0E03
 		static ConfigFishingReputationByLevel()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigFishingReputationByLevel.CreateStaticDefaultValue), new Action(ConfigFishingReputationByLevel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001182 RID: 4482 RVA: 0x000BC718 File Offset: 0x000BA918
+		// Token: 0x06001200 RID: 4608 RVA: 0x000C2C24 File Offset: 0x000C0E24
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigFishingReputationByLevel.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001183 RID: 4483 RVA: 0x000BC797 File Offset: 0x000BA997
+		// Token: 0x06001201 RID: 4609 RVA: 0x000C2CA3 File Offset: 0x000C0EA3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigFishingReputationByLevel.LogPair = null;
 			ConfigFishingReputationByLevel.HandleId = 0;
 		}
 
-		// Token: 0x06001184 RID: 4484 RVA: 0x000BC7A5 File Offset: 0x000BA9A5
+		// Token: 0x06001202 RID: 4610 RVA: 0x000C2CB1 File Offset: 0x000C0EB1
 		public static void Init()
 		{
 			ConfigFishingReputationByLevel.HandleId = ConfigCommon.InitDataStatement(ConfigFishingReputationByLevel.HandleId, "db_fishing.db", "select BinData from `FishingReputation` where Level=?");
 		}
 
-		// Token: 0x06001185 RID: 4485 RVA: 0x000BC7C0 File Offset: 0x000BA9C0
+		// Token: 0x06001203 RID: 4611 RVA: 0x000C2CCC File Offset: 0x000C0ECC
 		public static FishingReputation? GetConfig(int p0Level, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigFishingReputationByLevel.HandleId, ConfigFishingReputationByLevel.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new FishingReputation?(rootAsFishingReputation);
 		}
 
-		// Token: 0x0400144A RID: 5194
+		// Token: 0x040014DD RID: 5341
 		private const string DB = "db_fishing.db";
 
-		// Token: 0x0400144B RID: 5195
+		// Token: 0x040014DE RID: 5342
 		private const string FILE = "b.捕鱼船坞.xlsx";
 
-		// Token: 0x0400144C RID: 5196
+		// Token: 0x040014DF RID: 5343
 		private const string TABLE = "FishingReputation";
 
-		// Token: 0x0400144D RID: 5197
+		// Token: 0x040014E0 RID: 5344
 		private const string COMMAND = "select BinData from `FishingReputation` where Level=?";
 
-		// Token: 0x0400144E RID: 5198
+		// Token: 0x040014E1 RID: 5345
 		private const string KEY_PREFIX = "FishingReputationByLevel";
 
-		// Token: 0x0400144F RID: 5199
+		// Token: 0x040014E2 RID: 5346
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001450 RID: 5200
+		// Token: 0x040014E3 RID: 5347
 		private static int HandleId;
 	}
 }

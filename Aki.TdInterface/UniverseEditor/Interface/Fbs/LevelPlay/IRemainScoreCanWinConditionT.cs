@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x0200453D RID: 17725
+	// Token: 0x020049A5 RID: 18853
 	public class IRemainScoreCanWinConditionT
 	{
-		// Token: 0x17007DB9 RID: 32185
-		// (get) Token: 0x0601AA99 RID: 109209 RVA: 0x003CDD32 File Offset: 0x003CBF32
-		// (set) Token: 0x0601AA9A RID: 109210 RVA: 0x003CDD3A File Offset: 0x003CBF3A
+		// Token: 0x170083FA RID: 33786
+		// (get) Token: 0x0601C26E RID: 115310 RVA: 0x003F9FCE File Offset: 0x003F81CE
+		// (set) Token: 0x0601C26F RID: 115311 RVA: 0x003F9FD6 File Offset: 0x003F81D6
 		public EDartSkillConditionType Type { get; set; }
 
-		// Token: 0x0601AA9B RID: 109211 RVA: 0x003CDD43 File Offset: 0x003CBF43
+		// Token: 0x0601C270 RID: 115312 RVA: 0x003F9FDF File Offset: 0x003F81DF
 		public IRemainScoreCanWinConditionT()
 		{
 			this.Type = EDartSkillConditionType.RemainScoreGe;

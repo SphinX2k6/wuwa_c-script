@@ -2,118 +2,118 @@
 
 namespace CSharpScript.Game.Module.WorldMap
 {
-	// Token: 0x02004788 RID: 18312
+	// Token: 0x020036B9 RID: 14009
 	public enum ESecondaryUiPanelChildComA
 	{
-		// Token: 0x04019D70 RID: 105840
+		// Token: 0x04014420 RID: 82976
 		Icon,
-		// Token: 0x04019D71 RID: 105841
+		// Token: 0x04014421 RID: 82977
 		Title,
-		// Token: 0x04019D72 RID: 105842
+		// Token: 0x04014422 RID: 82978
 		PnlArea,
-		// Token: 0x04019D73 RID: 105843
+		// Token: 0x04014423 RID: 82979
 		AreaText,
-		// Token: 0x04019D74 RID: 105844
+		// Token: 0x04014424 RID: 82980
 		Description,
-		// Token: 0x04019D75 RID: 105845
+		// Token: 0x04014425 RID: 82981
 		PnlListLayout,
-		// Token: 0x04019D76 RID: 105846
+		// Token: 0x04014426 RID: 82982
 		PnlList,
-		// Token: 0x04019D77 RID: 105847
+		// Token: 0x04014427 RID: 82983
 		PnlItemLayout,
-		// Token: 0x04019D78 RID: 105848
+		// Token: 0x04014428 RID: 82984
 		PnlReward,
-		// Token: 0x04019D79 RID: 105849
+		// Token: 0x04014429 RID: 82985
 		PnlRecommended,
-		// Token: 0x04019D7A RID: 105850
+		// Token: 0x0401442A RID: 82986
 		TxtRecommended,
-		// Token: 0x04019D7B RID: 105851
+		// Token: 0x0401442B RID: 82987
 		BtnConfirmA,
-		// Token: 0x04019D7C RID: 105852
+		// Token: 0x0401442C RID: 82988
 		PnlDisable,
-		// Token: 0x04019D7D RID: 105853
+		// Token: 0x0401442D RID: 82989
 		TxtCondition,
-		// Token: 0x04019D7E RID: 105854
+		// Token: 0x0401442E RID: 82990
 		PnlProgress,
-		// Token: 0x04019D7F RID: 105855
+		// Token: 0x0401442F RID: 82991
 		BtnQuestDetail,
-		// Token: 0x04019D80 RID: 105856
+		// Token: 0x04014430 RID: 82992
 		PnlDifficult,
-		// Token: 0x04019D81 RID: 105857
+		// Token: 0x04014431 RID: 82993
 		PnlVisionTips,
-		// Token: 0x04019D82 RID: 105858
+		// Token: 0x04014432 RID: 82994
 		BtnStrip,
-		// Token: 0x04019D83 RID: 105859
+		// Token: 0x04014433 RID: 82995
 		DoubleTip,
-		// Token: 0x04019D84 RID: 105860
+		// Token: 0x04014434 RID: 82996
 		DoubleTipTxt,
-		// Token: 0x04019D85 RID: 105861
+		// Token: 0x04014435 RID: 82997
 		DoubleLabel,
-		// Token: 0x04019D86 RID: 105862
+		// Token: 0x04014436 RID: 82998
 		AreaIcon,
-		// Token: 0x04019D87 RID: 105863
+		// Token: 0x04014437 RID: 82999
 		DownState,
-		// Token: 0x04019D88 RID: 105864
+		// Token: 0x04014438 RID: 83000
 		UpState,
-		// Token: 0x04019D89 RID: 105865
+		// Token: 0x04014439 RID: 83001
 		PnlGiftTips,
-		// Token: 0x04019D8A RID: 105866
+		// Token: 0x0401443A RID: 83002
 		PnlProgressTitle,
-		// Token: 0x04019D8B RID: 105867
+		// Token: 0x0401443B RID: 83003
 		PnlState,
-		// Token: 0x04019D8C RID: 105868
+		// Token: 0x0401443C RID: 83004
 		BtnSecTrack,
-		// Token: 0x04019D8D RID: 105869
+		// Token: 0x0401443D RID: 83005
 		BtnSecGo,
-		// Token: 0x04019D8E RID: 105870
+		// Token: 0x0401443E RID: 83006
 		TxtGiftDescript,
-		// Token: 0x04019D8F RID: 105871
+		// Token: 0x0401443F RID: 83007
 		PnlTrackActivatedTip,
-		// Token: 0x04019D90 RID: 105872
+		// Token: 0x04014440 RID: 83008
 		PnlTwo,
-		// Token: 0x04019D91 RID: 105873
+		// Token: 0x04014441 RID: 83009
 		PnlDifficultPnlList,
-		// Token: 0x04019D92 RID: 105874
+		// Token: 0x04014442 RID: 83010
 		SprBg,
-		// Token: 0x04019D93 RID: 105875
+		// Token: 0x04014443 RID: 83011
 		SprSign,
-		// Token: 0x04019D94 RID: 105876
+		// Token: 0x04014444 RID: 83012
 		TxtPnlProgressTitle,
-		// Token: 0x04019D95 RID: 105877
+		// Token: 0x04014445 RID: 83013
 		PanelTravelMap,
-		// Token: 0x04019D96 RID: 105878
+		// Token: 0x04014446 RID: 83014
 		TxtTravelMapDesc,
-		// Token: 0x04019D97 RID: 105879
+		// Token: 0x04014447 RID: 83015
 		BtnDelete,
-		// Token: 0x04019D98 RID: 105880
+		// Token: 0x04014448 RID: 83016
 		PnlItemALayout,
-		// Token: 0x04019D99 RID: 105881
+		// Token: 0x04014449 RID: 83017
 		PnlAReward,
-		// Token: 0x04019D9A RID: 105882
+		// Token: 0x0401444A RID: 83018
 		TxtDouble,
-		// Token: 0x04019D9B RID: 105883
+		// Token: 0x0401444B RID: 83019
 		PanelActiveTip,
-		// Token: 0x04019D9C RID: 105884
+		// Token: 0x0401444C RID: 83020
 		PanelTipButton,
-		// Token: 0x04019D9D RID: 105885
+		// Token: 0x0401444D RID: 83021
 		PanelMoraleDifficulty,
-		// Token: 0x04019D9E RID: 105886
+		// Token: 0x0401444E RID: 83022
 		TxtDifficulty,
-		// Token: 0x04019D9F RID: 105887
+		// Token: 0x0401444F RID: 83023
 		PnlNavTrackLayout,
-		// Token: 0x04019DA0 RID: 105888
+		// Token: 0x04014450 RID: 83024
 		PanelProgress,
-		// Token: 0x04019DA1 RID: 105889
+		// Token: 0x04014451 RID: 83025
 		TextProgressTitle,
-		// Token: 0x04019DA2 RID: 105890
+		// Token: 0x04014452 RID: 83026
 		TextProgressDes,
-		// Token: 0x04019DA3 RID: 105891
+		// Token: 0x04014453 RID: 83027
 		TextListDes,
-		// Token: 0x04019DA4 RID: 105892
+		// Token: 0x04014454 RID: 83028
 		PnlUp = 53,
-		// Token: 0x04019DA5 RID: 105893
+		// Token: 0x04014455 RID: 83029
 		PnlDown,
-		// Token: 0x04019DA6 RID: 105894
+		// Token: 0x04014456 RID: 83030
 		ScrollView
 	}
 }

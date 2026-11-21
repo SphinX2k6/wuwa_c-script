@@ -6,46 +6,29 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002556 RID: 9558
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x020007A5 RID: 1957
 	[UnrealObjectPath("/Script/Niagara.NiagaraDataChannelWriter")]
 	[UnrealStructLayout(72, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 72)]
 	public class UNiagaraDataChannelWriter : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06023824 RID: 145444 RVA: 0x00347D7B File Offset: 0x00345F7B
+		// Token: 0x0600AA05 RID: 43525 RVA: 0x000FAE31 File Offset: 0x000F9031
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UNiagaraDataChannelWriter._ClassPtr;
 		}
 
-		// Token: 0x06023825 RID: 145445 RVA: 0x00347D88 File Offset: 0x00345F88
+		// Token: 0x0600AA06 RID: 43526 RVA: 0x000FAE40 File Offset: 0x000F9040
 		public UNiagaraDataChannelWriter() : this(BuiltinUtils.AllocNativeUObject(UNiagaraDataChannelWriter.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06023826 RID: 145446 RVA: 0x00347DB0 File Offset: 0x00345FB0
+		// Token: 0x0600AA07 RID: 43527 RVA: 0x000FAE68 File Offset: 0x000F9068
 		[NullableContext(1)]
 		public UNiagaraDataChannelWriter(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UNiagaraDataChannelWriter.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17008850 RID: 34896
-		// (get) Token: 0x06023827 RID: 145447 RVA: 0x00347DE3 File Offset: 0x00345FE3
-		// (set) Token: 0x06023828 RID: 145448 RVA: 0x00347DF7 File Offset: 0x00345FF7
-		public unsafe UNiagaraDataChannelHandler Owner
-		{
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<UNiagaraDataChannelHandler>(base.NativePtr / (IntPtr)sizeof(void*) + UNiagaraDataChannelWriter.__PropertyOffset_Owner);
-			}
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + UNiagaraDataChannelWriter.__PropertyOffset_Owner, value);
-			}
-		}
-
-		// Token: 0x06023829 RID: 145449 RVA: 0x00347E0C File Offset: 0x0034600C
+		// Token: 0x0600AA08 RID: 43528 RVA: 0x000FAE9C File Offset: 0x000F909C
 		public unsafe void WriteVector4(FName VarName, int Index, FVector4 InData)
 		{
 			ref FVector4 ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -53,25 +36,19 @@ namespace UnrealEngine
 			UNiagaraDataChannelWriter.__WriteVector4_Internal(base.NativePtr, VarName, Index, ptr);
 		}
 
-		// Token: 0x0602382A RID: 145450 RVA: 0x00347E3E File Offset: 0x0034603E
+		// Token: 0x0600AA09 RID: 43529 RVA: 0x000FAECE File Offset: 0x000F90CE
 		public void WriteVector2D(FName VarName, int Index, FVector2D InData)
 		{
 			UNiagaraDataChannelWriter.__WriteVector2D_Internal(base.NativePtr, VarName, Index, InData);
 		}
 
-		// Token: 0x0602382B RID: 145451 RVA: 0x00347E4E File Offset: 0x0034604E
+		// Token: 0x0600AA0A RID: 43530 RVA: 0x000FAEDE File Offset: 0x000F90DE
 		public void WriteVector(FName VarName, int Index, FVector InData)
 		{
 			UNiagaraDataChannelWriter.__WriteVector_Internal(base.NativePtr, VarName, Index, InData);
 		}
 
-		// Token: 0x0602382C RID: 145452 RVA: 0x00347E5E File Offset: 0x0034605E
-		public void WriteSpawnInfo(FName VarName, int Index, FNiagaraSpawnInfo InData)
-		{
-			UNiagaraDataChannelWriter.__WriteSpawnInfo_Internal(base.NativePtr, VarName, Index, (InData ?? new FNiagaraSpawnInfo()).NativePtr);
-		}
-
-		// Token: 0x0602382D RID: 145453 RVA: 0x00347E7C File Offset: 0x0034607C
+		// Token: 0x0600AA0B RID: 43531 RVA: 0x000FAEF0 File Offset: 0x000F90F0
 		public unsafe void WriteQuat(FName VarName, int Index, FQuat InData)
 		{
 			ref FQuat ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)31] + 15UL & 18446744073709551600UL);
@@ -79,55 +56,49 @@ namespace UnrealEngine
 			UNiagaraDataChannelWriter.__WriteQuat_Internal(base.NativePtr, VarName, Index, ptr);
 		}
 
-		// Token: 0x0602382E RID: 145454 RVA: 0x00347EAE File Offset: 0x003460AE
+		// Token: 0x0600AA0C RID: 43532 RVA: 0x000FAF22 File Offset: 0x000F9122
 		public void WritePosition(FName VarName, int Index, FVector InData)
 		{
 			UNiagaraDataChannelWriter.__WritePosition_Internal(base.NativePtr, VarName, Index, InData);
 		}
 
-		// Token: 0x0602382F RID: 145455 RVA: 0x00347EBE File Offset: 0x003460BE
+		// Token: 0x0600AA0D RID: 43533 RVA: 0x000FAF32 File Offset: 0x000F9132
 		public void WriteLinearColor(FName VarName, int Index, FLinearColor InData)
 		{
 			UNiagaraDataChannelWriter.__WriteLinearColor_Internal(base.NativePtr, VarName, Index, InData);
 		}
 
-		// Token: 0x06023830 RID: 145456 RVA: 0x00347ECE File Offset: 0x003460CE
+		// Token: 0x0600AA0E RID: 43534 RVA: 0x000FAF42 File Offset: 0x000F9142
 		public void WriteInt(FName VarName, int Index, int InData)
 		{
 			UNiagaraDataChannelWriter.__WriteInt_Internal(base.NativePtr, VarName, Index, InData);
 		}
 
-		// Token: 0x06023831 RID: 145457 RVA: 0x00347EDE File Offset: 0x003460DE
-		public void WriteID(FName VarName, int Index, FNiagaraID InData)
-		{
-			UNiagaraDataChannelWriter.__WriteID_Internal(base.NativePtr, VarName, Index, (InData ?? new FNiagaraID()).NativePtr);
-		}
-
-		// Token: 0x06023832 RID: 145458 RVA: 0x00347EFC File Offset: 0x003460FC
+		// Token: 0x0600AA0F RID: 43535 RVA: 0x000FAF52 File Offset: 0x000F9152
 		public void WriteFloat(FName VarName, int Index, double InData)
 		{
 			UNiagaraDataChannelWriter.__WriteFloat_Internal(base.NativePtr, VarName, Index, InData);
 		}
 
-		// Token: 0x06023833 RID: 145459 RVA: 0x00347F0C File Offset: 0x0034610C
+		// Token: 0x0600AA10 RID: 43536 RVA: 0x000FAF62 File Offset: 0x000F9162
 		public void WriteEnum(FName VarName, int Index, byte InData)
 		{
 			UNiagaraDataChannelWriter.__WriteEnum_Internal(base.NativePtr, VarName, Index, InData);
 		}
 
-		// Token: 0x06023834 RID: 145460 RVA: 0x00347F1C File Offset: 0x0034611C
+		// Token: 0x0600AA11 RID: 43537 RVA: 0x000FAF72 File Offset: 0x000F9172
 		public void WriteBool(FName VarName, int Index, bool InData)
 		{
 			UNiagaraDataChannelWriter.__WriteBool_Internal(base.NativePtr, VarName, Index, InData);
 		}
 
-		// Token: 0x06023835 RID: 145461 RVA: 0x00347F2C File Offset: 0x0034612C
+		// Token: 0x0600AA12 RID: 43538 RVA: 0x000FAF82 File Offset: 0x000F9182
 		public int Num()
 		{
 			return UNiagaraDataChannelWriter.__Num_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06023836 RID: 145462 RVA: 0x00347F3C File Offset: 0x0034613C
+		// Token: 0x0600AA13 RID: 43539 RVA: 0x000FAF90 File Offset: 0x000F9190
 		[NullableContext(1)]
 		public unsafe bool InitWrite([Nullable(2)] FNiagaraDataChannelSearchParameters SearchParams, int Count, bool bVisibleToGame, bool bVisibleToCPU, bool bVisibleToGPU, string DebugSource)
 		{
@@ -137,84 +108,73 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x06023837 RID: 145463
+		// Token: 0x0600AA14 RID: 43540
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __WriteVector4_Internal(IntPtr @this, FName VarName, int Index, in FVector4 InData);
 
-		// Token: 0x06023838 RID: 145464
+		// Token: 0x0600AA15 RID: 43541
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __WriteVector2D_Internal(IntPtr @this, FName VarName, int Index, FVector2D InData);
 
-		// Token: 0x06023839 RID: 145465
+		// Token: 0x0600AA16 RID: 43542
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __WriteVector_Internal(IntPtr @this, FName VarName, int Index, FVector InData);
 
-		// Token: 0x0602383A RID: 145466
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __WriteSpawnInfo_Internal(IntPtr @this, FName VarName, int Index, IntPtr InData);
-
-		// Token: 0x0602383B RID: 145467
+		// Token: 0x0600AA17 RID: 43543
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __WriteQuat_Internal(IntPtr @this, FName VarName, int Index, in FQuat InData);
 
-		// Token: 0x0602383C RID: 145468
+		// Token: 0x0600AA18 RID: 43544
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __WritePosition_Internal(IntPtr @this, FName VarName, int Index, FVector InData);
 
-		// Token: 0x0602383D RID: 145469
+		// Token: 0x0600AA19 RID: 43545
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __WriteLinearColor_Internal(IntPtr @this, FName VarName, int Index, FLinearColor InData);
 
-		// Token: 0x0602383E RID: 145470
+		// Token: 0x0600AA1A RID: 43546
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __WriteInt_Internal(IntPtr @this, FName VarName, int Index, int InData);
 
-		// Token: 0x0602383F RID: 145471
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __WriteID_Internal(IntPtr @this, FName VarName, int Index, IntPtr InData);
-
-		// Token: 0x06023840 RID: 145472
+		// Token: 0x0600AA1B RID: 43547
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __WriteFloat_Internal(IntPtr @this, FName VarName, int Index, double InData);
 
-		// Token: 0x06023841 RID: 145473
+		// Token: 0x0600AA1C RID: 43548
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __WriteEnum_Internal(IntPtr @this, FName VarName, int Index, byte InData);
 
-		// Token: 0x06023842 RID: 145474
+		// Token: 0x0600AA1D RID: 43549
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __WriteBool_Internal(IntPtr @this, FName VarName, int Index, bool InData);
 
-		// Token: 0x06023843 RID: 145475
+		// Token: 0x0600AA1E RID: 43550
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __Num_Internal(IntPtr @this);
 
-		// Token: 0x06023844 RID: 145476
+		// Token: 0x0600AA1F RID: 43551
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __InitWrite_Internal(IntPtr @this, IntPtr SearchParams, int Count, bool bVisibleToGame, bool bVisibleToCPU, bool bVisibleToGPU, in FString DebugSource);
 
-		// Token: 0x06023845 RID: 145477 RVA: 0x00347F7C File Offset: 0x0034617C
+		// Token: 0x0600AA20 RID: 43552 RVA: 0x000FAFD0 File Offset: 0x000F91D0
 		static UNiagaraDataChannelWriter()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Niagara.NiagaraDataChannelWriter");
 		}
 
-		// Token: 0x06023846 RID: 145478 RVA: 0x00347F8A File Offset: 0x0034618A
+		// Token: 0x0600AA21 RID: 43553 RVA: 0x000FAFDE File Offset: 0x000F91DE
 		protected UNiagaraDataChannelWriter(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04013092 RID: 77970
+		// Token: 0x040048E5 RID: 18661
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Niagara.NiagaraDataChannelWriter";
 
-		// Token: 0x04013093 RID: 77971
+		// Token: 0x040048E6 RID: 18662
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04013094 RID: 77972
+		// Token: 0x040048E7 RID: 18663
 		private static IntPtr _ClassDefaultObjectPtr;
-
-		// Token: 0x04013095 RID: 77973
-		internal static int __PropertyOffset_Owner;
 	}
 }

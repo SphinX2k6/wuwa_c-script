@@ -6,11 +6,9 @@ using Aki.TDConfigMgr.Component.Fb;
 namespace Aki.TDConfigMgr.Component
 {
 	// Token: 0x0200004C RID: 76
-	[NullableContext(1)]
-	[Nullable(0)]
 	public class ConveyorBeltComponent : IComponentBase
 	{
-		// Token: 0x0600027C RID: 636 RVA: 0x000198D8 File Offset: 0x00017AD8
+		// Token: 0x06000280 RID: 640 RVA: 0x0001A24C File Offset: 0x0001844C
 		private ConveyorBeltComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600027D RID: 637 RVA: 0x00019910 File Offset: 0x00017B10
+		// Token: 0x06000281 RID: 641 RVA: 0x0001A284 File Offset: 0x00018484
 		public static ConveyorBeltComponent Create([Nullable(2)] ConveyorBeltComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600027E RID: 638 RVA: 0x00019923 File Offset: 0x00017B23
+		// Token: 0x06000282 RID: 642 RVA: 0x0001A297 File Offset: 0x00018497
 		public static ConveyorBeltComponent CreateFromSetValue([Nullable(2)] ConveyorBeltComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600027F RID: 639 RVA: 0x00019936 File Offset: 0x00017B36
+		// Token: 0x06000283 RID: 643 RVA: 0x0001A2AA File Offset: 0x000184AA
 		public new ConveyorBeltComponent_SetValue ToSetValue()
 		{
 			return new ConveyorBeltComponent_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170000DE RID: 222
-		// (get) Token: 0x06000280 RID: 640 RVA: 0x00019964 File Offset: 0x00017B64
-		// (set) Token: 0x06000281 RID: 641 RVA: 0x0001999E File Offset: 0x00017B9E
+		// Token: 0x170000E0 RID: 224
+		// (get) Token: 0x06000284 RID: 644 RVA: 0x0001A2D8 File Offset: 0x000184D8
+		// (set) Token: 0x06000285 RID: 645 RVA: 0x0001A312 File Offset: 0x00018512
 		public override bool? Disabled
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000DF RID: 223
-		// (get) Token: 0x06000282 RID: 642 RVA: 0x000199AC File Offset: 0x00017BAC
-		// (set) Token: 0x06000283 RID: 643 RVA: 0x000199D6 File Offset: 0x00017BD6
+		// Token: 0x170000E1 RID: 225
+		// (get) Token: 0x06000286 RID: 646 RVA: 0x0001A320 File Offset: 0x00018520
+		// (set) Token: 0x06000287 RID: 647 RVA: 0x0001A34A File Offset: 0x0001854A
 		public override bool? EdIsLocked
 		{
 			get
@@ -105,9 +103,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000E0 RID: 224
-		// (get) Token: 0x06000284 RID: 644 RVA: 0x000199E4 File Offset: 0x00017BE4
-		// (set) Token: 0x06000285 RID: 645 RVA: 0x00019A77 File Offset: 0x00017C77
+		// Token: 0x170000E2 RID: 226
+		// (get) Token: 0x06000288 RID: 648 RVA: 0x0001A358 File Offset: 0x00018558
+		// (set) Token: 0x06000289 RID: 649 RVA: 0x0001A3EB File Offset: 0x000185EB
 		public virtual List<IConveyorBeltState> StateGroups
 		{
 			get
@@ -143,18 +141,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400018D RID: 397
+		// Token: 0x04000192 RID: 402
 		[Nullable(2)]
 		protected new ConveyorBeltComponent FbInstance;
 
-		// Token: 0x0400018E RID: 398
+		// Token: 0x04000193 RID: 403
 		[Nullable(2)]
 		protected new ConveyorBeltComponent_SetValue PocoInterface;
 
-		// Token: 0x0400018F RID: 399
+		// Token: 0x04000194 RID: 404
 		private List<IConveyorBeltState> _StateGroupsCache;
 
-		// Token: 0x04000190 RID: 400
+		// Token: 0x04000195 RID: 405
 		private bool _StateGroupsInited;
 	}
 }

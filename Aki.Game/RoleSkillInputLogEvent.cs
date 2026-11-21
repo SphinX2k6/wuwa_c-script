@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200212C RID: 8492
+// Token: 0x02001604 RID: 5636
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleSkillInputLogEvent : PlayerCommonLogData
 {
-	// Token: 0x170014D2 RID: 5330
-	// (get) Token: 0x060109C0 RID: 68032 RVA: 0x0040BA10 File Offset: 0x00409C10
-	// (set) Token: 0x060109C1 RID: 68033 RVA: 0x0040BA18 File Offset: 0x00409C18
+	// Token: 0x17001500 RID: 5376
+	// (get) Token: 0x0600DE33 RID: 56883 RVA: 0x00418158 File Offset: 0x00416358
+	// (set) Token: 0x0600DE34 RID: 56884 RVA: 0x00418160 File Offset: 0x00416360
 	public override string event_id { get; set; } = "1901";
 }

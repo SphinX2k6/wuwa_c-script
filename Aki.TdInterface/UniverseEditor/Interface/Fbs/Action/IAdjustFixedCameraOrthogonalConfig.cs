@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200614F RID: 24911
+	// Token: 0x020067B4 RID: 26548
 	public struct IAdjustFixedCameraOrthogonalConfig : IFlatbufferObject
 	{
-		// Token: 0x1700B8C7 RID: 47303
-		// (get) Token: 0x0602AC2E RID: 175150 RVA: 0x005E51D4 File Offset: 0x005E33D4
+		// Token: 0x1700C237 RID: 49719
+		// (get) Token: 0x0602D327 RID: 185127 RVA: 0x0062F3B0 File Offset: 0x0062D5B0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602AC2F RID: 175151 RVA: 0x005E51E1 File Offset: 0x005E33E1
+		// Token: 0x0602D328 RID: 185128 RVA: 0x0062F3BD File Offset: 0x0062D5BD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602AC30 RID: 175152 RVA: 0x005E51E8 File Offset: 0x005E33E8
+		// Token: 0x0602D329 RID: 185129 RVA: 0x0062F3C4 File Offset: 0x0062D5C4
 		public static IAdjustFixedCameraOrthogonalConfig GetRootAsIAdjustFixedCameraOrthogonalConfig(ByteBuffer _bb)
 		{
 			return IAdjustFixedCameraOrthogonalConfig.GetRootAsIAdjustFixedCameraOrthogonalConfig(_bb, default(IAdjustFixedCameraOrthogonalConfig));
 		}
 
-		// Token: 0x0602AC31 RID: 175153 RVA: 0x005E5204 File Offset: 0x005E3404
+		// Token: 0x0602D32A RID: 185130 RVA: 0x0062F3E0 File Offset: 0x0062D5E0
 		public static IAdjustFixedCameraOrthogonalConfig GetRootAsIAdjustFixedCameraOrthogonalConfig(ByteBuffer _bb, IAdjustFixedCameraOrthogonalConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602AC32 RID: 175154 RVA: 0x005E5221 File Offset: 0x005E3421
+		// Token: 0x0602D32B RID: 185131 RVA: 0x0062F3FD File Offset: 0x0062D5FD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602AC33 RID: 175155 RVA: 0x005E5230 File Offset: 0x005E3430
+		// Token: 0x0602D32C RID: 185132 RVA: 0x0062F40C File Offset: 0x0062D60C
 		public IAdjustFixedCameraOrthogonalConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B8C8 RID: 47304
-		// (get) Token: 0x0602AC34 RID: 175156 RVA: 0x005E5240 File Offset: 0x005E3440
+		// Token: 0x1700C238 RID: 49720
+		// (get) Token: 0x0602D32D RID: 185133 RVA: 0x0062F41C File Offset: 0x0062D61C
 		public IVectorInfo? BasePoint
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B8C9 RID: 47305
-		// (get) Token: 0x0602AC35 RID: 175157 RVA: 0x005E52A0 File Offset: 0x005E34A0
+		// Token: 0x1700C239 RID: 49721
+		// (get) Token: 0x0602D32E RID: 185134 RVA: 0x0062F47C File Offset: 0x0062D67C
 		public float FadeInTime
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B8CA RID: 47306
-		// (get) Token: 0x0602AC36 RID: 175158 RVA: 0x005E52E0 File Offset: 0x005E34E0
+		// Token: 0x1700C23A RID: 49722
+		// (get) Token: 0x0602D32F RID: 185135 RVA: 0x0062F4BC File Offset: 0x0062D6BC
 		public float FadeOutTime
 		{
 			get
@@ -93,8 +93,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700B8CB RID: 47307
-		// (get) Token: 0x0602AC37 RID: 175159 RVA: 0x005E5320 File Offset: 0x005E3520
+		// Token: 0x1700C23B RID: 49723
+		// (get) Token: 0x0602D330 RID: 185136 RVA: 0x0062F4FC File Offset: 0x0062D6FC
 		public byte NullMask
 		{
 			get
@@ -108,7 +108,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602AC38 RID: 175160 RVA: 0x005E535D File Offset: 0x005E355D
+		// Token: 0x0602D331 RID: 185137 RVA: 0x0062F539 File Offset: 0x0062D739
 		public static Offset<IAdjustFixedCameraOrthogonalConfig> CreateIAdjustFixedCameraOrthogonalConfig(FlatBufferBuilder builder, Offset<IVectorInfo> BasePointOffset = default(Offset<IVectorInfo>), float FadeInTime = 0f, float FadeOutTime = 0f, byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -119,43 +119,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IAdjustFixedCameraOrthogonalConfig.EndIAdjustFixedCameraOrthogonalConfig(builder);
 		}
 
-		// Token: 0x0602AC39 RID: 175161 RVA: 0x005E5389 File Offset: 0x005E3589
+		// Token: 0x0602D332 RID: 185138 RVA: 0x0062F565 File Offset: 0x0062D765
 		public static void StartIAdjustFixedCameraOrthogonalConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0602AC3A RID: 175162 RVA: 0x005E5392 File Offset: 0x005E3592
+		// Token: 0x0602D333 RID: 185139 RVA: 0x0062F56E File Offset: 0x0062D76E
 		public static void AddBasePoint(FlatBufferBuilder builder, Offset<IVectorInfo> basePointOffset)
 		{
 			builder.AddOffset(0, basePointOffset.Value, 0);
 		}
 
-		// Token: 0x0602AC3B RID: 175163 RVA: 0x005E53A2 File Offset: 0x005E35A2
+		// Token: 0x0602D334 RID: 185140 RVA: 0x0062F57E File Offset: 0x0062D77E
 		public static void AddFadeInTime(FlatBufferBuilder builder, float fadeInTime)
 		{
 			builder.AddFloat(1, fadeInTime, 0.0);
 		}
 
-		// Token: 0x0602AC3C RID: 175164 RVA: 0x005E53B5 File Offset: 0x005E35B5
+		// Token: 0x0602D335 RID: 185141 RVA: 0x0062F591 File Offset: 0x0062D791
 		public static void AddFadeOutTime(FlatBufferBuilder builder, float fadeOutTime)
 		{
 			builder.AddFloat(2, fadeOutTime, 0.0);
 		}
 
-		// Token: 0x0602AC3D RID: 175165 RVA: 0x005E53C8 File Offset: 0x005E35C8
+		// Token: 0x0602D336 RID: 185142 RVA: 0x0062F5A4 File Offset: 0x0062D7A4
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x0602AC3E RID: 175166 RVA: 0x005E53D3 File Offset: 0x005E35D3
+		// Token: 0x0602D337 RID: 185143 RVA: 0x0062F5AF File Offset: 0x0062D7AF
 		public static Offset<IAdjustFixedCameraOrthogonalConfig> EndIAdjustFixedCameraOrthogonalConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IAdjustFixedCameraOrthogonalConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0602AC3F RID: 175167 RVA: 0x005E53E0 File Offset: 0x005E35E0
+		// Token: 0x0602D338 RID: 185144 RVA: 0x0062F5BC File Offset: 0x0062D7BC
 		public IAdjustFixedCameraOrthogonalConfigT UnPack()
 		{
 			IAdjustFixedCameraOrthogonalConfigT adjustFixedCameraOrthogonalConfigT = new IAdjustFixedCameraOrthogonalConfigT();
@@ -163,7 +163,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return adjustFixedCameraOrthogonalConfigT;
 		}
 
-		// Token: 0x0602AC40 RID: 175168 RVA: 0x005E53FC File Offset: 0x005E35FC
+		// Token: 0x0602D339 RID: 185145 RVA: 0x0062F5D8 File Offset: 0x0062D7D8
 		public void UnPackTo(IAdjustFixedCameraOrthogonalConfigT _o)
 		{
 			_o.BasePoint = ((this.BasePoint != null) ? this.BasePoint.Value.UnPack() : null);
@@ -172,7 +172,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602AC41 RID: 175169 RVA: 0x005E545C File Offset: 0x005E365C
+		// Token: 0x0602D33A RID: 185146 RVA: 0x0062F638 File Offset: 0x0062D838
 		public static Offset<IAdjustFixedCameraOrthogonalConfig> Pack(FlatBufferBuilder builder, IAdjustFixedCameraOrthogonalConfigT _o)
 		{
 			if (_o == null)
@@ -183,7 +183,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IAdjustFixedCameraOrthogonalConfig.CreateIAdjustFixedCameraOrthogonalConfig(builder, basePointOffset, _o.FadeInTime, _o.FadeOutTime, _o.NullMask);
 		}
 
-		// Token: 0x040105BE RID: 67006
+		// Token: 0x040113C5 RID: 70597
 		private Table __p;
 	}
 }

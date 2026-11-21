@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007641 RID: 30273
+	// Token: 0x02007E4F RID: 32335
 	public enum TAlertValueChangeSpeed : byte
 	{
-		// Token: 0x040125E5 RID: 75237
+		// Token: 0x0401362F RID: 79407
 		NONE,
-		// Token: 0x040125E6 RID: 75238
+		// Token: 0x04013630 RID: 79408
 		IAddOrSubAlertValueChangeSpeed,
-		// Token: 0x040125E7 RID: 75239
+		// Token: 0x04013631 RID: 79409
 		ICustomAlertValueChangeSpeed
 	}
 }

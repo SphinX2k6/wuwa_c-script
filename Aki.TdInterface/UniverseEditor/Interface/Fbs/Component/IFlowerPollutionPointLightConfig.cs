@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005282 RID: 21122
+	// Token: 0x020057EA RID: 22506
 	public struct IFlowerPollutionPointLightConfig : IFlatbufferObject
 	{
-		// Token: 0x17009AD8 RID: 39640
-		// (get) Token: 0x06022663 RID: 140899 RVA: 0x004C4CBF File Offset: 0x004C2EBF
+		// Token: 0x1700A2D6 RID: 41686
+		// (get) Token: 0x060245FD RID: 148989 RVA: 0x004FF82F File Offset: 0x004FDA2F
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,38 +17,38 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022664 RID: 140900 RVA: 0x004C4CCC File Offset: 0x004C2ECC
+		// Token: 0x060245FE RID: 148990 RVA: 0x004FF83C File Offset: 0x004FDA3C
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06022665 RID: 140901 RVA: 0x004C4CD4 File Offset: 0x004C2ED4
+		// Token: 0x060245FF RID: 148991 RVA: 0x004FF844 File Offset: 0x004FDA44
 		public static IFlowerPollutionPointLightConfig GetRootAsIFlowerPollutionPointLightConfig(ByteBuffer _bb)
 		{
 			return IFlowerPollutionPointLightConfig.GetRootAsIFlowerPollutionPointLightConfig(_bb, default(IFlowerPollutionPointLightConfig));
 		}
 
-		// Token: 0x06022666 RID: 140902 RVA: 0x004C4CF0 File Offset: 0x004C2EF0
+		// Token: 0x06024600 RID: 148992 RVA: 0x004FF860 File Offset: 0x004FDA60
 		public static IFlowerPollutionPointLightConfig GetRootAsIFlowerPollutionPointLightConfig(ByteBuffer _bb, IFlowerPollutionPointLightConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06022667 RID: 140903 RVA: 0x004C4D0D File Offset: 0x004C2F0D
+		// Token: 0x06024601 RID: 148993 RVA: 0x004FF87D File Offset: 0x004FDA7D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06022668 RID: 140904 RVA: 0x004C4D1C File Offset: 0x004C2F1C
+		// Token: 0x06024602 RID: 148994 RVA: 0x004FF88C File Offset: 0x004FDA8C
 		public IFlowerPollutionPointLightConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x06022669 RID: 140905 RVA: 0x004C4D2C File Offset: 0x004C2F2C
+		// Token: 0x06024603 RID: 148995 RVA: 0x004FF89C File Offset: 0x004FDA9C
 		public int PointLightEntityIds(int j)
 		{
 			int num = this.__p.__offset(4);
@@ -59,8 +59,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17009AD9 RID: 39641
-		// (get) Token: 0x0602266A RID: 140906 RVA: 0x004C4D6C File Offset: 0x004C2F6C
+		// Token: 0x1700A2D7 RID: 41687
+		// (get) Token: 0x06024604 RID: 148996 RVA: 0x004FF8DC File Offset: 0x004FDADC
 		public int PointLightEntityIdsLength
 		{
 			get
@@ -74,19 +74,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602266B RID: 140907 RVA: 0x004C4D97 File Offset: 0x004C2F97
+		// Token: 0x06024605 RID: 148997 RVA: 0x004FF907 File Offset: 0x004FDB07
 		public Span<int> GetPointLightEntityIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(4, 4);
 		}
 
-		// Token: 0x0602266C RID: 140908 RVA: 0x004C4DA6 File Offset: 0x004C2FA6
+		// Token: 0x06024606 RID: 148998 RVA: 0x004FF916 File Offset: 0x004FDB16
 		public int[] GetPointLightEntityIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(4);
 		}
 
-		// Token: 0x0602266D RID: 140909 RVA: 0x004C4DB4 File Offset: 0x004C2FB4
+		// Token: 0x06024607 RID: 148999 RVA: 0x004FF924 File Offset: 0x004FDB24
 		public IPointLightOperations? PointLightConfig(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -97,8 +97,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IPointLightOperations?(default(IPointLightOperations).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17009ADA RID: 39642
-		// (get) Token: 0x0602266E RID: 140910 RVA: 0x004C4E14 File Offset: 0x004C3014
+		// Token: 0x1700A2D8 RID: 41688
+		// (get) Token: 0x06024608 RID: 149000 RVA: 0x004FF984 File Offset: 0x004FDB84
 		public int PointLightConfigLength
 		{
 			get
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602266F RID: 140911 RVA: 0x004C4E3F File Offset: 0x004C303F
+		// Token: 0x06024609 RID: 149001 RVA: 0x004FF9AF File Offset: 0x004FDBAF
 		public static Offset<IFlowerPollutionPointLightConfig> CreateIFlowerPollutionPointLightConfig(FlatBufferBuilder builder, VectorOffset PointLightEntityIdsOffset = default(VectorOffset), VectorOffset PointLightConfigOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -121,19 +121,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFlowerPollutionPointLightConfig.EndIFlowerPollutionPointLightConfig(builder);
 		}
 
-		// Token: 0x06022670 RID: 140912 RVA: 0x004C4E5C File Offset: 0x004C305C
+		// Token: 0x0602460A RID: 149002 RVA: 0x004FF9CC File Offset: 0x004FDBCC
 		public static void StartIFlowerPollutionPointLightConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06022671 RID: 140913 RVA: 0x004C4E65 File Offset: 0x004C3065
+		// Token: 0x0602460B RID: 149003 RVA: 0x004FF9D5 File Offset: 0x004FDBD5
 		public static void AddPointLightEntityIds(FlatBufferBuilder builder, VectorOffset pointLightEntityIdsOffset)
 		{
 			builder.AddOffset(0, pointLightEntityIdsOffset.Value, 0);
 		}
 
-		// Token: 0x06022672 RID: 140914 RVA: 0x004C4E78 File Offset: 0x004C3078
+		// Token: 0x0602460C RID: 149004 RVA: 0x004FF9E8 File Offset: 0x004FDBE8
 		public static VectorOffset CreatePointLightEntityIdsVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022673 RID: 140915 RVA: 0x004C4EAF File Offset: 0x004C30AF
+		// Token: 0x0602460D RID: 149005 RVA: 0x004FFA1F File Offset: 0x004FDC1F
 		public static VectorOffset CreatePointLightEntityIdsVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -152,7 +152,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022674 RID: 140916 RVA: 0x004C4EC9 File Offset: 0x004C30C9
+		// Token: 0x0602460E RID: 149006 RVA: 0x004FFA39 File Offset: 0x004FDC39
 		public static VectorOffset CreatePointLightEntityIdsVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -160,7 +160,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022675 RID: 140917 RVA: 0x004C4EE7 File Offset: 0x004C30E7
+		// Token: 0x0602460F RID: 149007 RVA: 0x004FFA57 File Offset: 0x004FDC57
 		public static VectorOffset CreatePointLightEntityIdsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -168,19 +168,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022676 RID: 140918 RVA: 0x004C4F00 File Offset: 0x004C3100
+		// Token: 0x06024610 RID: 149008 RVA: 0x004FFA70 File Offset: 0x004FDC70
 		public static void StartPointLightEntityIdsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06022677 RID: 140919 RVA: 0x004C4F0B File Offset: 0x004C310B
+		// Token: 0x06024611 RID: 149009 RVA: 0x004FFA7B File Offset: 0x004FDC7B
 		public static void AddPointLightConfig(FlatBufferBuilder builder, VectorOffset pointLightConfigOffset)
 		{
 			builder.AddOffset(1, pointLightConfigOffset.Value, 0);
 		}
 
-		// Token: 0x06022678 RID: 140920 RVA: 0x004C4F1C File Offset: 0x004C311C
+		// Token: 0x06024612 RID: 149010 RVA: 0x004FFA8C File Offset: 0x004FDC8C
 		public static VectorOffset CreatePointLightConfigVector(FlatBufferBuilder builder, Offset<IPointLightOperations>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -191,7 +191,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06022679 RID: 140921 RVA: 0x004C4F5C File Offset: 0x004C315C
+		// Token: 0x06024613 RID: 149011 RVA: 0x004FFACC File Offset: 0x004FDCCC
 		public static VectorOffset CreatePointLightConfigVectorBlock(FlatBufferBuilder builder, Offset<IPointLightOperations>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -199,7 +199,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602267A RID: 140922 RVA: 0x004C4F76 File Offset: 0x004C3176
+		// Token: 0x06024614 RID: 149012 RVA: 0x004FFAE6 File Offset: 0x004FDCE6
 		public static VectorOffset CreatePointLightConfigVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IPointLightOperations>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -207,7 +207,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602267B RID: 140923 RVA: 0x004C4F94 File Offset: 0x004C3194
+		// Token: 0x06024615 RID: 149013 RVA: 0x004FFB04 File Offset: 0x004FDD04
 		public static VectorOffset CreatePointLightConfigVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -215,19 +215,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602267C RID: 140924 RVA: 0x004C4FAD File Offset: 0x004C31AD
+		// Token: 0x06024616 RID: 149014 RVA: 0x004FFB1D File Offset: 0x004FDD1D
 		public static void StartPointLightConfigVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0602267D RID: 140925 RVA: 0x004C4FB8 File Offset: 0x004C31B8
+		// Token: 0x06024617 RID: 149015 RVA: 0x004FFB28 File Offset: 0x004FDD28
 		public static Offset<IFlowerPollutionPointLightConfig> EndIFlowerPollutionPointLightConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IFlowerPollutionPointLightConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0602267E RID: 140926 RVA: 0x004C4FC8 File Offset: 0x004C31C8
+		// Token: 0x06024618 RID: 149016 RVA: 0x004FFB38 File Offset: 0x004FDD38
 		public IFlowerPollutionPointLightConfigT UnPack()
 		{
 			IFlowerPollutionPointLightConfigT flowerPollutionPointLightConfigT = new IFlowerPollutionPointLightConfigT();
@@ -235,7 +235,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return flowerPollutionPointLightConfigT;
 		}
 
-		// Token: 0x0602267F RID: 140927 RVA: 0x004C4FE4 File Offset: 0x004C31E4
+		// Token: 0x06024619 RID: 149017 RVA: 0x004FFB54 File Offset: 0x004FDD54
 		public void UnPackTo(IFlowerPollutionPointLightConfigT _o)
 		{
 			_o.PointLightEntityIds = new List<int>();
@@ -250,7 +250,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06022680 RID: 140928 RVA: 0x004C5074 File Offset: 0x004C3274
+		// Token: 0x0602461A RID: 149018 RVA: 0x004FFBE4 File Offset: 0x004FDDE4
 		public static Offset<IFlowerPollutionPointLightConfig> Pack(FlatBufferBuilder builder, IFlowerPollutionPointLightConfigT _o)
 		{
 			if (_o == null)
@@ -276,7 +276,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IFlowerPollutionPointLightConfig.CreateIFlowerPollutionPointLightConfig(builder, pointLightEntityIdsOffset, pointLightConfigOffset);
 		}
 
-		// Token: 0x0400E3E9 RID: 58345
+		// Token: 0x0400EFF0 RID: 61424
 		private Table __p;
 	}
 }

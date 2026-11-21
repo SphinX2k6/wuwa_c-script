@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020017FA RID: 6138
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001983 RID: 6531
 	public class IBasePos2
 	{
-		// Token: 0x060083D3 RID: 33747 RVA: 0x0013A80C File Offset: 0x00138A0C
+		// Token: 0x06008AEF RID: 35567 RVA: 0x00149EF4 File Offset: 0x001480F4
 		private IBasePos2_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060083D4 RID: 33748 RVA: 0x0013A844 File Offset: 0x00138A44
+		// Token: 0x06008AF0 RID: 35568 RVA: 0x00149F2C File Offset: 0x0014812C
 		public static IBasePos2 Create([Nullable(2)] IBasePos2 instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060083D5 RID: 33749 RVA: 0x0013A857 File Offset: 0x00138A57
+		// Token: 0x06008AF1 RID: 35569 RVA: 0x00149F3F File Offset: 0x0014813F
 		public static IBasePos2 CreateFromSetValue([Nullable(2)] IBasePos2_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060083D6 RID: 33750 RVA: 0x0013A86A File Offset: 0x00138A6A
+		// Token: 0x06008AF2 RID: 35570 RVA: 0x00149F52 File Offset: 0x00148152
 		public IBasePos2_SetValue ToSetValue()
 		{
 			return new IBasePos2_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002B47 RID: 11079
-		// (get) Token: 0x060083D7 RID: 33751 RVA: 0x0013A87D File Offset: 0x00138A7D
-		// (set) Token: 0x060083D8 RID: 33752 RVA: 0x0013A8A8 File Offset: 0x00138AA8
+		// Token: 0x17002D3F RID: 11583
+		// (get) Token: 0x06008AF3 RID: 35571 RVA: 0x00149F65 File Offset: 0x00148165
+		// (set) Token: 0x06008AF4 RID: 35572 RVA: 0x00149F90 File Offset: 0x00148190
 		public virtual EPos2 Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005390 RID: 21392
+		// Token: 0x040057D8 RID: 22488
 		[Nullable(2)]
 		protected IBasePos2 FbInstance;
 
-		// Token: 0x04005391 RID: 21393
+		// Token: 0x040057D9 RID: 22489
 		[Nullable(2)]
 		protected IBasePos2_SetValue PocoInterface;
 	}

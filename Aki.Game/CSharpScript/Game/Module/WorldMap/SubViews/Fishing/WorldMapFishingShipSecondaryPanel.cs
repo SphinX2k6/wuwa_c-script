@@ -11,18 +11,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.Fishing
 {
-	// Token: 0x02004826 RID: 18470
+	// Token: 0x02003757 RID: 14167
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WorldMapFishingShipSecondaryPanel : WorldMapSecondaryUiLayoutA
 	{
-		// Token: 0x06030596 RID: 198038 RVA: 0x00B391EF File Offset: 0x00B373EF
+		// Token: 0x06024D66 RID: 150886 RVA: 0x00A692BB File Offset: 0x00A674BB
 		public override string GetResourceId()
 		{
 			return "UiItem_GeneralPanel_Prefab";
 		}
 
-		// Token: 0x06030597 RID: 198039 RVA: 0x00B391F8 File Offset: 0x00B373F8
+		// Token: 0x06024D67 RID: 150887 RVA: 0x00A692C4 File Offset: 0x00A674C4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			WorldMapFishingShipSecondaryPanel.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Fishing
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030598 RID: 198040 RVA: 0x00B3923C File Offset: 0x00B3743C
+		// Token: 0x06024D68 RID: 150888 RVA: 0x00A69308 File Offset: 0x00A67508
 		protected override void SetupWorldMapSecondaryUiLayout()
 		{
 			base.SetupWorldMapSecondaryUiLayout();
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Fishing
 			panelListLayout.RootUIComp.Get().SetUIActive(false);
 		}
 
-		// Token: 0x06030599 RID: 198041 RVA: 0x00B39294 File Offset: 0x00B37494
+		// Token: 0x06024D69 RID: 150889 RVA: 0x00A69360 File Offset: 0x00A67560
 		protected override void OnShowWorldMapSecondaryUi(params object[] param)
 		{
 			if (param.Length != 0)
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Fishing
 			}
 		}
 
-		// Token: 0x0603059A RID: 198042 RVA: 0x00B392FC File Offset: 0x00B374FC
+		// Token: 0x06024D6A RID: 150890 RVA: 0x00A693C8 File Offset: 0x00A675C8
 		private void RefreshTipList()
 		{
 			List<IWorldMapSecondaryTipItemParam> data = new List<IWorldMapSecondaryTipItemParam>
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Fishing
 			this.WorldMapSecondaryTipList.RefreshByData(data);
 		}
 
-		// Token: 0x0603059B RID: 198043 RVA: 0x00B39328 File Offset: 0x00B37528
+		// Token: 0x06024D6B RID: 150891 RVA: 0x00A693F4 File Offset: 0x00A675F4
 		private IWorldMapSecondaryTipItemParam GetCapacityTipItemData()
 		{
 			int backpackUseSize = DockyardModel.Instance.BackpackUseSize;
@@ -109,20 +109,20 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Fishing
 			};
 		}
 
-		// Token: 0x0603059C RID: 198044 RVA: 0x00B3939D File Offset: 0x00B3759D
+		// Token: 0x06024D6C RID: 150892 RVA: 0x00A69469 File Offset: 0x00A67669
 		protected override void OnConfirmBtnClick(int index)
 		{
 			FishingController.Instance.FishingTeleportToBoat();
 		}
 
-		// Token: 0x0401A01B RID: 106523
+		// Token: 0x040146CF RID: 83663
 		private WorldMapSecondaryTipListPanel WorldMapSecondaryTipList;
 
-		// Token: 0x0200AAFC RID: 43772
+		// Token: 0x020094AB RID: 38059
 		[NullableContext(0)]
 		public static class EComponents
 		{
-			// Token: 0x04033F9E RID: 212894
+			// Token: 0x0402E71E RID: 190238
 			public const int FishingShip = 0;
 		}
 	}

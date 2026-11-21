@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004AB7 RID: 19127
+	// Token: 0x02004F86 RID: 20358
 	public struct ICheckJigsawType : IFlatbufferObject
 	{
-		// Token: 0x17008AA9 RID: 35497
-		// (get) Token: 0x0601E06A RID: 122986 RVA: 0x00436DBB File Offset: 0x00434FBB
+		// Token: 0x17009196 RID: 37270
+		// (get) Token: 0x0601FB53 RID: 129875 RVA: 0x004685DB File Offset: 0x004667DB
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E06B RID: 122987 RVA: 0x00436DC8 File Offset: 0x00434FC8
+		// Token: 0x0601FB54 RID: 129876 RVA: 0x004685E8 File Offset: 0x004667E8
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601E06C RID: 122988 RVA: 0x00436DD0 File Offset: 0x00434FD0
+		// Token: 0x0601FB55 RID: 129877 RVA: 0x004685F0 File Offset: 0x004667F0
 		public static ICheckJigsawType GetRootAsICheckJigsawType(ByteBuffer _bb)
 		{
 			return ICheckJigsawType.GetRootAsICheckJigsawType(_bb, default(ICheckJigsawType));
 		}
 
-		// Token: 0x0601E06D RID: 122989 RVA: 0x00436DEC File Offset: 0x00434FEC
+		// Token: 0x0601FB56 RID: 129878 RVA: 0x0046860C File Offset: 0x0046680C
 		public static ICheckJigsawType GetRootAsICheckJigsawType(ByteBuffer _bb, ICheckJigsawType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601E06E RID: 122990 RVA: 0x00436E09 File Offset: 0x00435009
+		// Token: 0x0601FB57 RID: 129879 RVA: 0x00468629 File Offset: 0x00466829
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601E06F RID: 122991 RVA: 0x00436E18 File Offset: 0x00435018
+		// Token: 0x0601FB58 RID: 129880 RVA: 0x00468638 File Offset: 0x00466838
 		public ICheckJigsawType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008AAA RID: 35498
-		// (get) Token: 0x0601E070 RID: 122992 RVA: 0x00436E28 File Offset: 0x00435028
+		// Token: 0x17009197 RID: 37271
+		// (get) Token: 0x0601FB59 RID: 129881 RVA: 0x00468648 File Offset: 0x00466848
 		public ECheckJigsawInfoType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E071 RID: 122993 RVA: 0x00436E64 File Offset: 0x00435064
+		// Token: 0x0601FB5A RID: 129882 RVA: 0x00468684 File Offset: 0x00466884
 		public static Offset<ICheckJigsawType> CreateICheckJigsawType(FlatBufferBuilder builder, ECheckJigsawInfoType Type = ECheckJigsawInfoType.CheckJigsawItemPlaceIndex)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckJigsawType.EndICheckJigsawType(builder);
 		}
 
-		// Token: 0x0601E072 RID: 122994 RVA: 0x00436E7A File Offset: 0x0043507A
+		// Token: 0x0601FB5B RID: 129883 RVA: 0x0046869A File Offset: 0x0046689A
 		public static void StartICheckJigsawType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0601E073 RID: 122995 RVA: 0x00436E83 File Offset: 0x00435083
+		// Token: 0x0601FB5C RID: 129884 RVA: 0x004686A3 File Offset: 0x004668A3
 		public static void AddType(FlatBufferBuilder builder, ECheckJigsawInfoType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601E074 RID: 122996 RVA: 0x00436E8E File Offset: 0x0043508E
+		// Token: 0x0601FB5D RID: 129885 RVA: 0x004686AE File Offset: 0x004668AE
 		public static Offset<ICheckJigsawType> EndICheckJigsawType(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckJigsawType>(builder.EndTable());
 		}
 
-		// Token: 0x0601E075 RID: 122997 RVA: 0x00436E9C File Offset: 0x0043509C
+		// Token: 0x0601FB5E RID: 129886 RVA: 0x004686BC File Offset: 0x004668BC
 		public ICheckJigsawTypeT UnPack()
 		{
 			ICheckJigsawTypeT checkJigsawTypeT = new ICheckJigsawTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkJigsawTypeT;
 		}
 
-		// Token: 0x0601E076 RID: 122998 RVA: 0x00436EB7 File Offset: 0x004350B7
+		// Token: 0x0601FB5F RID: 129887 RVA: 0x004686D7 File Offset: 0x004668D7
 		public void UnPackTo(ICheckJigsawTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0601E077 RID: 122999 RVA: 0x00436EC8 File Offset: 0x004350C8
+		// Token: 0x0601FB60 RID: 129888 RVA: 0x004686E8 File Offset: 0x004668E8
 		public static Offset<ICheckJigsawType> Pack(FlatBufferBuilder builder, ICheckJigsawTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckJigsawType.CreateICheckJigsawType(builder, _o.Type);
 		}
 
-		// Token: 0x0400D336 RID: 54070
+		// Token: 0x0400DE1B RID: 56859
 		private Table __p;
 	}
 }

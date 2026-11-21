@@ -11,13 +11,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Rewards
 {
-	// Token: 0x02006848 RID: 26696
+	// Token: 0x02005798 RID: 22424
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class DangoBrawlGiftItem : GridProxyAbstract<int>
 	{
-		// Token: 0x17009757 RID: 38743
-		// (get) Token: 0x06042A3B RID: 272955 RVA: 0x0103425A File Offset: 0x0103245A
+		// Token: 0x17006A98 RID: 27288
+		// (get) Token: 0x06037590 RID: 226704 RVA: 0x00F7577E File Offset: 0x00F7397E
 		private DangoBrawlOutGameData OutGameData
 		{
 			get
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Rew
 			}
 		}
 
-		// Token: 0x06042A3C RID: 272956 RVA: 0x0103426C File Offset: 0x0103246C
+		// Token: 0x06037591 RID: 226705 RVA: 0x00F75790 File Offset: 0x00F73990
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Rew
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06042A3D RID: 272957 RVA: 0x010342F8 File Offset: 0x010324F8
+		// Token: 0x06037592 RID: 226706 RVA: 0x00F7581C File Offset: 0x00F73A1C
 		protected override void OnStart()
 		{
 			this.ItemGridGrid = new SmallItemGrid();
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Rew
 			this.ItemGridGrid.BindOnExtendToggleClicked(new Action<MediumItemGridExtendCallback>(this.OnClickedGrid));
 		}
 
-		// Token: 0x06042A3E RID: 272958 RVA: 0x01034368 File Offset: 0x01032568
+		// Token: 0x06037593 RID: 226707 RVA: 0x00F7588C File Offset: 0x00F73A8C
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			this.ConfigId = data;
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Rew
 			this.RefreshGrid(value);
 		}
 
-		// Token: 0x06042A3F RID: 272959 RVA: 0x0103442C File Offset: 0x0103262C
+		// Token: 0x06037594 RID: 226708 RVA: 0x00F75950 File Offset: 0x00F73B50
 		private void RefreshGrid(DangoBrawlScoreReward config)
 		{
 			bool flag = this.OutGameData.IsScoreRewardCanReceived(config.Id);
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Rew
 			this.ItemGridGrid.SetLockBlackVisible(lockBlackVisible);
 		}
 
-		// Token: 0x06042A40 RID: 272960 RVA: 0x010344F8 File Offset: 0x010326F8
+		// Token: 0x06037595 RID: 226709 RVA: 0x00F75A1C File Offset: 0x00F73C1C
 		private void OnClickedGrid(MediumItemGridExtendCallback cb)
 		{
 			DangoBrawlScoreReward value = DangoBrawlConfig.Instance.GetScoreRewardConfigById(this.ConfigId).Value;
@@ -101,32 +101,32 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Views.Rew
 				ActivityDangoBrawlController.Instance.RequestDangoBrawlScoreReward(this.ReceiveCallback);
 				return;
 			}
-			ItemController.Instance.OpenItemTipsByItemId(this.ItemGrid.Value.ItemData.ItemId, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(this.ItemGrid.Value.ItemData.ItemId, true, null, false);
 		}
 
-		// Token: 0x04022B49 RID: 142153
+		// Token: 0x0401D3A6 RID: 119718
 		private int ConfigId;
 
-		// Token: 0x04022B4A RID: 142154
+		// Token: 0x0401D3A7 RID: 119719
 		[Nullable(2)]
 		private SmallItemGrid ItemGridGrid;
 
-		// Token: 0x04022B4B RID: 142155
+		// Token: 0x0401D3A8 RID: 119720
 		private TItem? ItemGrid;
 
-		// Token: 0x04022B4C RID: 142156
+		// Token: 0x0401D3A9 RID: 119721
 		[Nullable(2)]
 		public Action ReceiveCallback;
 
-		// Token: 0x0200CA0F RID: 51727
+		// Token: 0x0200B3DA RID: 46042
 		[NullableContext(0)]
 		private enum EGift
 		{
-			// Token: 0x0403D102 RID: 250114
+			// Token: 0x040379E9 RID: 227817
 			SpriteBackground,
-			// Token: 0x0403D103 RID: 250115
+			// Token: 0x040379EA RID: 227818
 			TextNum,
-			// Token: 0x0403D104 RID: 250116
+			// Token: 0x040379EB RID: 227819
 			ItemGrid
 		}
 	}

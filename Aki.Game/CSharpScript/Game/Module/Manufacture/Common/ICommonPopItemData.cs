@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.Module.Manufacture.Common
 {
-	// Token: 0x0200568F RID: 22159
+	// Token: 0x02004665 RID: 18021
 	public class ICommonPopItemData
 	{
-		// Token: 0x17008783 RID: 34691
-		// (get) Token: 0x0603862A RID: 230954 RVA: 0x00D62A89 File Offset: 0x00D60C89
-		// (set) Token: 0x0603862B RID: 230955 RVA: 0x00D62A91 File Offset: 0x00D60C91
+		// Token: 0x17005B4A RID: 23370
+		// (get) Token: 0x0602D527 RID: 185639 RVA: 0x00CB0BD9 File Offset: 0x00CAEDD9
+		// (set) Token: 0x0602D528 RID: 185640 RVA: 0x00CB0BE1 File Offset: 0x00CAEDE1
 		public int ItemId { get; set; }
 
-		// Token: 0x17008784 RID: 34692
-		// (get) Token: 0x0603862C RID: 230956 RVA: 0x00D62A9A File Offset: 0x00D60C9A
-		// (set) Token: 0x0603862D RID: 230957 RVA: 0x00D62AA2 File Offset: 0x00D60CA2
+		// Token: 0x17005B4B RID: 23371
+		// (get) Token: 0x0602D529 RID: 185641 RVA: 0x00CB0BEA File Offset: 0x00CAEDEA
+		// (set) Token: 0x0602D52A RID: 185642 RVA: 0x00CB0BF2 File Offset: 0x00CAEDF2
 		public int ItemNum { get; set; }
 	}
 }

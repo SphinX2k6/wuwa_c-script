@@ -7,18 +7,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02000FC5 RID: 4037
+// Token: 0x0200047A RID: 1146
 [NullableContext(2)]
 [Nullable(0)]
 public class FurnitureAreaSelectView : UiViewBase
 {
-	// Token: 0x06006768 RID: 26472 RVA: 0x00146ADC File Offset: 0x00144CDC
+	// Token: 0x06003B00 RID: 15104 RVA: 0x0014F3A0 File Offset: 0x0014D5A0
 	[NullableContext(1)]
 	public FurnitureAreaSelectView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06006769 RID: 26473 RVA: 0x00146B60 File Offset: 0x00144D60
+	// Token: 0x06003B01 RID: 15105 RVA: 0x0014F424 File Offset: 0x0014D624
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -62,7 +62,7 @@ public class FurnitureAreaSelectView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600676A RID: 26474 RVA: 0x00146E78 File Offset: 0x00145078
+	// Token: 0x06003B02 RID: 15106 RVA: 0x0014F73C File Offset: 0x0014D93C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FurnitureAreaSelectView.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -73,7 +73,7 @@ public class FurnitureAreaSelectView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600676B RID: 26475 RVA: 0x00146EBC File Offset: 0x001450BC
+	// Token: 0x06003B03 RID: 15107 RVA: 0x0014F780 File Offset: 0x0014D980
 	protected override void OnStart()
 	{
 		int num = (this.OpenParam is int) ? ((int)this.OpenParam) : 0;
@@ -111,7 +111,7 @@ public class FurnitureAreaSelectView : UiViewBase
 		this.RefreshFloorAreaRootItemShowState();
 	}
 
-	// Token: 0x0600676C RID: 26476 RVA: 0x00146FF8 File Offset: 0x001451F8
+	// Token: 0x06003B04 RID: 15108 RVA: 0x0014F8BC File Offset: 0x0014DABC
 	protected override void OnBeforeShow()
 	{
 		this.UpdateAreaItemData();
@@ -123,19 +123,19 @@ public class FurnitureAreaSelectView : UiViewBase
 		this.RefreshFloorRedDot();
 	}
 
-	// Token: 0x0600676D RID: 26477 RVA: 0x00147024 File Offset: 0x00145224
+	// Token: 0x06003B05 RID: 15109 RVA: 0x0014F8E8 File Offset: 0x0014DAE8
 	private void SetFloorSelectedData(int floorId)
 	{
 		this.CurSelectedFloorId = floorId;
 	}
 
-	// Token: 0x0600676E RID: 26478 RVA: 0x0014702D File Offset: 0x0014522D
+	// Token: 0x06003B06 RID: 15110 RVA: 0x0014F8F1 File Offset: 0x0014DAF1
 	private void SetAreaSelectedData(int areaId)
 	{
 		this.CurSelectedAreaId = areaId;
 	}
 
-	// Token: 0x0600676F RID: 26479 RVA: 0x00147038 File Offset: 0x00145238
+	// Token: 0x06003B07 RID: 15111 RVA: 0x0014F8FC File Offset: 0x0014DAFC
 	private void UpdateAreaItemData()
 	{
 		foreach (int num in this.FurnitureAreaSelectItemMap.Keys)
@@ -155,7 +155,7 @@ public class FurnitureAreaSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x06006770 RID: 26480 RVA: 0x001470C0 File Offset: 0x001452C0
+	// Token: 0x06003B08 RID: 15112 RVA: 0x0014F984 File Offset: 0x0014DB84
 	private void UpdateLevelItemData()
 	{
 		IFurnitureAtmosphereLevelData atmosphereLevelData = FurnitureModel.Instance.GetAtmosphereLevelData();
@@ -165,7 +165,7 @@ public class FurnitureAreaSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x06006771 RID: 26481 RVA: 0x001470E4 File Offset: 0x001452E4
+	// Token: 0x06003B09 RID: 15113 RVA: 0x0014F9A8 File Offset: 0x0014DBA8
 	private IFurnitureAreaSelectItemData BuildAreaItemData(int areaId)
 	{
 		FurnitureModel instance = FurnitureModel.Instance;
@@ -195,7 +195,7 @@ public class FurnitureAreaSelectView : UiViewBase
 		};
 	}
 
-	// Token: 0x06006772 RID: 26482 RVA: 0x001471E0 File Offset: 0x001453E0
+	// Token: 0x06003B0A RID: 15114 RVA: 0x0014FAA4 File Offset: 0x0014DCA4
 	public void RefreshAreaItem()
 	{
 		foreach (KeyValuePair<int, FurnitureAreaSelectItem> keyValuePair in this.FurnitureAreaSelectItemMap)
@@ -210,7 +210,7 @@ public class FurnitureAreaSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x06006773 RID: 26483 RVA: 0x00147254 File Offset: 0x00145454
+	// Token: 0x06003B0B RID: 15115 RVA: 0x0014FB18 File Offset: 0x0014DD18
 	public void RefreshFloorToggleState()
 	{
 		foreach (KeyValuePair<int, UUIExtendToggle> keyValuePair in this.FloorToggleMap)
@@ -220,14 +220,14 @@ public class FurnitureAreaSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x06006774 RID: 26484 RVA: 0x001472C8 File Offset: 0x001454C8
+	// Token: 0x06003B0C RID: 15116 RVA: 0x0014FB8C File Offset: 0x0014DD8C
 	public void RefreshFloorAreaRootItemShowState()
 	{
 		base.GetItem(4).SetUIActive(this.CurSelectedFloorId == 1);
 		base.GetItem(11).SetUIActive(this.CurSelectedFloorId == 2);
 	}
 
-	// Token: 0x06006775 RID: 26485 RVA: 0x001472F8 File Offset: 0x001454F8
+	// Token: 0x06003B0D RID: 15117 RVA: 0x0014FBBC File Offset: 0x0014DDBC
 	public void RefreshDetail()
 	{
 		SpringFestivalArea? furnitureAreaConfig = FurnitureConfig.Instance.GetFurnitureAreaConfig(this.CurSelectedAreaId);
@@ -274,7 +274,7 @@ public class FurnitureAreaSelectView : UiViewBase
 		base.GetItem(22).SetUIActive(flag);
 	}
 
-	// Token: 0x06006776 RID: 26486 RVA: 0x00147508 File Offset: 0x00145708
+	// Token: 0x06003B0E RID: 15118 RVA: 0x0014FDCC File Offset: 0x0014DFCC
 	public void PlayDetailSwitchAnimation()
 	{
 		LevelSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -285,7 +285,7 @@ public class FurnitureAreaSelectView : UiViewBase
 		sequencePlayer.PlayOrReplaySequenceByName("Switch01", false, null);
 	}
 
-	// Token: 0x06006777 RID: 26487 RVA: 0x00147534 File Offset: 0x00145734
+	// Token: 0x06003B0F RID: 15119 RVA: 0x0014FDF8 File Offset: 0x0014DFF8
 	private void RefreshLevelItem()
 	{
 		if (this.LevelItemData != null)
@@ -299,7 +299,7 @@ public class FurnitureAreaSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x06006778 RID: 26488 RVA: 0x00147554 File Offset: 0x00145754
+	// Token: 0x06003B10 RID: 15120 RVA: 0x0014FE18 File Offset: 0x0014E018
 	public void RefreshButton()
 	{
 		FurnitureModel instance = FurnitureModel.Instance;
@@ -317,7 +317,7 @@ public class FurnitureAreaSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x06006779 RID: 26489 RVA: 0x001475D8 File Offset: 0x001457D8
+	// Token: 0x06003B11 RID: 15121 RVA: 0x0014FE9C File Offset: 0x0014E09C
 	public void RefreshFirstFloorRedDot()
 	{
 		UUIItem item = base.GetItem(28);
@@ -325,7 +325,7 @@ public class FurnitureAreaSelectView : UiViewBase
 		item.SetUIActive(instance.CheckFurnitureFloorRedDot(1));
 	}
 
-	// Token: 0x0600677A RID: 26490 RVA: 0x00147600 File Offset: 0x00145800
+	// Token: 0x06003B12 RID: 15122 RVA: 0x0014FEC4 File Offset: 0x0014E0C4
 	public void RefreshSecondFloorRedDot()
 	{
 		UUIItem item = base.GetItem(29);
@@ -333,14 +333,14 @@ public class FurnitureAreaSelectView : UiViewBase
 		item.SetUIActive(instance.CheckFurnitureFloorRedDot(2));
 	}
 
-	// Token: 0x0600677B RID: 26491 RVA: 0x00147627 File Offset: 0x00145827
+	// Token: 0x06003B13 RID: 15123 RVA: 0x0014FEEB File Offset: 0x0014E0EB
 	public void RefreshFloorRedDot()
 	{
 		this.RefreshFirstFloorRedDot();
 		this.RefreshSecondFloorRedDot();
 	}
 
-	// Token: 0x0600677C RID: 26492 RVA: 0x00147638 File Offset: 0x00145838
+	// Token: 0x06003B14 RID: 15124 RVA: 0x0014FEFC File Offset: 0x0014E0FC
 	private void OnFloorToggleClick(int floorId)
 	{
 		int curSelectedFloorId = this.CurSelectedFloorId;
@@ -363,7 +363,7 @@ public class FurnitureAreaSelectView : UiViewBase
 		this.PlayFloorSwitchAnimation();
 	}
 
-	// Token: 0x0600677D RID: 26493 RVA: 0x0014769C File Offset: 0x0014589C
+	// Token: 0x06003B15 RID: 15125 RVA: 0x0014FF60 File Offset: 0x0014E160
 	private void PlayFloorSwitchAnimation()
 	{
 		LevelSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -374,7 +374,7 @@ public class FurnitureAreaSelectView : UiViewBase
 		sequencePlayer.PlayOrReplaySequenceByName("Switch", false, null);
 	}
 
-	// Token: 0x0600677E RID: 26494 RVA: 0x001476C8 File Offset: 0x001458C8
+	// Token: 0x06003B16 RID: 15126 RVA: 0x0014FF8C File Offset: 0x0014E18C
 	private void OnAreaItemClick(int areaId)
 	{
 		int curSelectedAreaId = this.CurSelectedAreaId;
@@ -424,13 +424,13 @@ public class FurnitureAreaSelectView : UiViewBase
 		this.PlayDetailSwitchAnimation();
 	}
 
-	// Token: 0x0600677F RID: 26495 RVA: 0x0014779E File Offset: 0x0014599E
+	// Token: 0x06003B17 RID: 15127 RVA: 0x00150062 File Offset: 0x0014E262
 	private void OnCloseClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06006780 RID: 26496 RVA: 0x001477A8 File Offset: 0x001459A8
+	// Token: 0x06003B18 RID: 15128 RVA: 0x0015006C File Offset: 0x0014E26C
 	private void OnConfirmButtonClick()
 	{
 		if (!FurnitureModel.Instance.GetAreaIsUnlock(this.CurSelectedAreaId))
@@ -445,61 +445,61 @@ public class FurnitureAreaSelectView : UiViewBase
 		UiManager.Instance.OpenView(EUiViewName.FurnitureDesignView, param, null);
 	}
 
-	// Token: 0x06006781 RID: 26497 RVA: 0x001477FB File Offset: 0x001459FB
+	// Token: 0x06003B19 RID: 15129 RVA: 0x001500BF File Offset: 0x0014E2BF
 	private void OnShopButtonClick()
 	{
 		FurnitureController.Instance.OpenFurnitureShopViewAsync(0);
 	}
 
-	// Token: 0x06006782 RID: 26498 RVA: 0x00147809 File Offset: 0x00145A09
+	// Token: 0x06003B1A RID: 15130 RVA: 0x001500CD File Offset: 0x0014E2CD
 	private void OnHandBookButtonClick()
 	{
 		UiManager.Instance.OpenView(EUiViewName.FurnitureHandBookView, null, null);
 	}
 
-	// Token: 0x06006783 RID: 26499 RVA: 0x0014781C File Offset: 0x00145A1C
+	// Token: 0x06003B1B RID: 15131 RVA: 0x001500E0 File Offset: 0x0014E2E0
 	private void OnLockTipButtonClick()
 	{
 		UiManager.Instance.OpenView(EUiViewName.SpringManorAtmosphereLevelView, null, null);
 	}
 
-	// Token: 0x04002EFE RID: 12030
+	// Token: 0x04002F97 RID: 12183
 	private int CurSelectedFloorId;
 
-	// Token: 0x04002EFF RID: 12031
+	// Token: 0x04002F98 RID: 12184
 	private int CurSelectedAreaId;
 
-	// Token: 0x04002F00 RID: 12032
+	// Token: 0x04002F99 RID: 12185
 	[Nullable(1)]
 	private readonly Dictionary<int, IFurnitureAreaSelectItemData> AreaItemDataMap = new Dictionary<int, IFurnitureAreaSelectItemData>();
 
-	// Token: 0x04002F01 RID: 12033
+	// Token: 0x04002F9A RID: 12186
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04002F02 RID: 12034
+	// Token: 0x04002F9B RID: 12187
 	private IFurnitureAtmosphereLevelData LevelItemData;
 
-	// Token: 0x04002F03 RID: 12035
+	// Token: 0x04002F9C RID: 12188
 	private FurnitureAtmosphereLevelItem LevelItem;
 
-	// Token: 0x04002F04 RID: 12036
+	// Token: 0x04002F9D RID: 12189
 	private FurnitureAreaFinishTipItem FinishTipItem;
 
-	// Token: 0x04002F05 RID: 12037
+	// Token: 0x04002F9E RID: 12190
 	private FurnitureAreaLockTipItem LockTipItem;
 
-	// Token: 0x04002F06 RID: 12038
+	// Token: 0x04002F9F RID: 12191
 	[Nullable(1)]
 	private readonly Dictionary<int, UUIExtendToggle> FloorToggleMap = new Dictionary<int, UUIExtendToggle>();
 
-	// Token: 0x04002F07 RID: 12039
+	// Token: 0x04002FA0 RID: 12192
 	[Nullable(1)]
 	private readonly Dictionary<int, FurnitureAreaSelectItem> FurnitureAreaSelectItemMap = new Dictionary<int, FurnitureAreaSelectItem>();
 
-	// Token: 0x04002F08 RID: 12040
+	// Token: 0x04002FA1 RID: 12193
 	private LevelSequencePlayer SequencePlayer;
 
-	// Token: 0x04002F09 RID: 12041
+	// Token: 0x04002FA2 RID: 12194
 	[Nullable(1)]
 	private readonly Dictionary<int, int> AreaItemBindMap = new Dictionary<int, int>
 	{

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
@@ -9,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Sheriff.View.Item
 {
-	// Token: 0x02004C73 RID: 19571
+	// Token: 0x02003C24 RID: 15396
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SheriffMainSelectCluePanel : UiTabViewBase
 	{
-		// Token: 0x06032956 RID: 207190 RVA: 0x00BCA7AC File Offset: 0x00BC89AC
+		// Token: 0x06027709 RID: 161545 RVA: 0x00B0F410 File Offset: 0x00B0D610
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 22;
@@ -75,7 +74,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06032957 RID: 207191 RVA: 0x00BCAAF8 File Offset: 0x00BC8CF8
+		// Token: 0x0602770A RID: 161546 RVA: 0x00B0F75C File Offset: 0x00B0D95C
 		protected override void OnStart()
 		{
 			this.Proxy = (this.ExtraParams as SheriffMainProxy);
@@ -88,7 +87,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			this.Proxy.OnClueHintStateChangeCallback = new Action(this.OnClueHintStateChangeCallback);
 		}
 
-		// Token: 0x06032958 RID: 207192 RVA: 0x00BCABE0 File Offset: 0x00BC8DE0
+		// Token: 0x0602770B RID: 161547 RVA: 0x00B0F844 File Offset: 0x00B0DA44
 		protected override void OnBeforeShow()
 		{
 			UiBehaviorLevelSequence uiViewSequence = this.UiViewSequence;
@@ -120,7 +119,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			this.RefreshCluePanel(true);
 		}
 
-		// Token: 0x06032959 RID: 207193 RVA: 0x00BCACD4 File Offset: 0x00BC8ED4
+		// Token: 0x0602770C RID: 161548 RVA: 0x00B0F938 File Offset: 0x00B0DB38
 		protected void CheckClueEnough()
 		{
 			SheriffAnomalyInfo anomalyInfo = this.Proxy.GetAnomalyInfo();
@@ -129,7 +128,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			base.GetItem(19).SetUIActive(!this.IsClueEnough);
 		}
 
-		// Token: 0x0603295A RID: 207194 RVA: 0x00BCAD3C File Offset: 0x00BC8F3C
+		// Token: 0x0602770D RID: 161549 RVA: 0x00B0F9A0 File Offset: 0x00B0DBA0
 		protected void RefreshQuestionTab()
 		{
 			int questionDataLength = this.Proxy.GetQuestionDataLength();
@@ -142,7 +141,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			this.QuestionTabLayout.RefreshByData(list.ToArray(), null, true);
 		}
 
-		// Token: 0x0603295B RID: 207195 RVA: 0x00BCAD94 File Offset: 0x00BC8F94
+		// Token: 0x0602770E RID: 161550 RVA: 0x00B0F9F8 File Offset: 0x00B0DBF8
 		protected void RefreshQuestionPanel()
 		{
 			int curQuestionIndex = this.Proxy.GetCurQuestionIndex();
@@ -265,10 +264,10 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			}
 		}
 
-		// Token: 0x0603295C RID: 207196 RVA: 0x00BCB11C File Offset: 0x00BC931C
+		// Token: 0x0602770F RID: 161551 RVA: 0x00B0FD80 File Offset: 0x00B0DF80
 		protected void RefreshSelectClueLayout()
 		{
-			List<int> list = this.CacheClueSet.ToList<int>();
+			List<int> list = new List<int>(this.CacheClueSet);
 			int realClueLength = list.Count;
 			int clueLength = this.Proxy.GetCurrentClueLength();
 			for (int i = list.Count; i < clueLength; i++)
@@ -286,7 +285,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			}, true);
 		}
 
-		// Token: 0x0603295D RID: 207197 RVA: 0x00BCB198 File Offset: 0x00BC9398
+		// Token: 0x06027710 RID: 161552 RVA: 0x00B0FDFC File Offset: 0x00B0DFFC
 		protected void RefreshCluePanel(bool needAnim = true)
 		{
 			SheriffAnomalyInfo anomalyInfo = this.Proxy.GetAnomalyInfo();
@@ -310,7 +309,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			this.ClueLayout.RefreshByData(list, null, needAnim);
 		}
 
-		// Token: 0x0603295E RID: 207198 RVA: 0x00BCB250 File Offset: 0x00BC9450
+		// Token: 0x06027711 RID: 161553 RVA: 0x00B0FEB4 File Offset: 0x00B0E0B4
 		private void OnClickBtnSkyEyeConfirm(int data)
 		{
 			int curQuestionIndex = this.Proxy.GetCurQuestionIndex();
@@ -333,10 +332,10 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			{
 				return;
 			}
-			this.Proxy.SetClueRecords(this.CurQuestionTabIndex, this.CacheClueSet.ToList<int>());
+			this.Proxy.SetClueRecords(this.CurQuestionTabIndex, new List<int>(this.CacheClueSet));
 		}
 
-		// Token: 0x0603295F RID: 207199 RVA: 0x00BCB2E3 File Offset: 0x00BC94E3
+		// Token: 0x06027712 RID: 161554 RVA: 0x00B0FF47 File Offset: 0x00B0E147
 		private SheriffQuestionTabItem CreateQuestionTabItem()
 		{
 			return new SheriffQuestionTabItem(this.Proxy)
@@ -346,13 +345,13 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			};
 		}
 
-		// Token: 0x06032960 RID: 207200 RVA: 0x00BCB314 File Offset: 0x00BC9514
+		// Token: 0x06027713 RID: 161555 RVA: 0x00B0FF78 File Offset: 0x00B0E178
 		private bool OnTabToggleCheck(int index)
 		{
 			return this.CurQuestionTabIndex == index;
 		}
 
-		// Token: 0x06032961 RID: 207201 RVA: 0x00BCB320 File Offset: 0x00BC9520
+		// Token: 0x06027714 RID: 161556 RVA: 0x00B0FF84 File Offset: 0x00B0E184
 		private void OnTabStateChangedCallback(int index)
 		{
 			this.CurQuestionTabIndex = index;
@@ -365,13 +364,13 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			this.RefreshCluePanel(true);
 		}
 
-		// Token: 0x06032962 RID: 207202 RVA: 0x00BCB36F File Offset: 0x00BC956F
+		// Token: 0x06027715 RID: 161557 RVA: 0x00B0FFD3 File Offset: 0x00B0E1D3
 		private SheriffSelectClueItem CreateSelectClueItem()
 		{
 			return new SheriffSelectClueItem();
 		}
 
-		// Token: 0x06032963 RID: 207203 RVA: 0x00BCB378 File Offset: 0x00BC9578
+		// Token: 0x06027716 RID: 161558 RVA: 0x00B0FFDC File Offset: 0x00B0E1DC
 		private SheriffClueItem CreateClueItem()
 		{
 			return new SheriffClueItem(this.Proxy)
@@ -383,7 +382,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			};
 		}
 
-		// Token: 0x06032964 RID: 207204 RVA: 0x00BCB3D8 File Offset: 0x00BC95D8
+		// Token: 0x06027717 RID: 161559 RVA: 0x00B1003C File Offset: 0x00B0E23C
 		private EToggleState OnClueToggleCheck(int id)
 		{
 			int curQuestionIndex = this.Proxy.GetCurQuestionIndex();
@@ -399,7 +398,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			return EToggleState.ETT_Checked;
 		}
 
-		// Token: 0x06032965 RID: 207205 RVA: 0x00BCB41C File Offset: 0x00BC961C
+		// Token: 0x06027718 RID: 161560 RVA: 0x00B10080 File Offset: 0x00B0E280
 		private unsafe void OnClueStateChangedCallback(int id, bool isSelected)
 		{
 			int currentClueLength = this.Proxy.GetCurrentClueLength();
@@ -464,7 +463,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			this.RefreshSelectClueLayout();
 		}
 
-		// Token: 0x06032966 RID: 207206 RVA: 0x00BCB610 File Offset: 0x00BC9810
+		// Token: 0x06027719 RID: 161561 RVA: 0x00B10274 File Offset: 0x00B0E474
 		private bool OnClueCheckCanChange(int id, EToggleState curState)
 		{
 			if (!this.OnClueCheckToggleEnable())
@@ -493,19 +492,19 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			return flag || flag2;
 		}
 
-		// Token: 0x06032967 RID: 207207 RVA: 0x00BCB6B2 File Offset: 0x00BC98B2
+		// Token: 0x0602771A RID: 161562 RVA: 0x00B10316 File Offset: 0x00B0E516
 		private bool OnClueCheckToggleEnable()
 		{
 			return this.CurQuestionTabIndex == this.Proxy.GetCurQuestionIndex();
 		}
 
-		// Token: 0x06032968 RID: 207208 RVA: 0x00BCB6C7 File Offset: 0x00BC98C7
+		// Token: 0x0602771B RID: 161563 RVA: 0x00B1032B File Offset: 0x00B0E52B
 		private void OnClueHintStateChangeCallback()
 		{
 			this.RefreshCluePanel(false);
 		}
 
-		// Token: 0x06032969 RID: 207209 RVA: 0x00BCB6D0 File Offset: 0x00BC98D0
+		// Token: 0x0602771C RID: 161564 RVA: 0x00B10334 File Offset: 0x00B0E534
 		private void OnClickedReplayDialog()
 		{
 			SheriffMainProxy proxy = this.Proxy;
@@ -516,7 +515,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			proxy.ReplaySelectClueDialog();
 		}
 
-		// Token: 0x0603296A RID: 207210 RVA: 0x00BCB6E4 File Offset: 0x00BC98E4
+		// Token: 0x0602771D RID: 161565 RVA: 0x00B10348 File Offset: 0x00B0E548
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -556,14 +555,14 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			};
 		}
 
-		// Token: 0x0401AEA9 RID: 110249
+		// Token: 0x04015806 RID: 88070
 		protected int CurQuestionTabIndex;
 
-		// Token: 0x0401AEAA RID: 110250
+		// Token: 0x04015807 RID: 88071
 		[Nullable(2)]
 		protected SheriffMainProxy Proxy;
 
-		// Token: 0x0401AEAB RID: 110251
+		// Token: 0x04015808 RID: 88072
 		[Nullable(new byte[]
 		{
 			2,
@@ -571,7 +570,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 		})]
 		private GenericLayout<SheriffQuestionTabItem, int> QuestionTabLayout;
 
-		// Token: 0x0401AEAC RID: 110252
+		// Token: 0x04015809 RID: 88073
 		[Nullable(new byte[]
 		{
 			2,
@@ -579,7 +578,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 		})]
 		private GenericLayout<SheriffSelectClueItem, int> SelectLayout;
 
-		// Token: 0x0401AEAD RID: 110253
+		// Token: 0x0401580A RID: 88074
 		[Nullable(new byte[]
 		{
 			2,
@@ -587,7 +586,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 		})]
 		private GenericLayout<SheriffSelectClueItem, int> SelectedLayout;
 
-		// Token: 0x0401AEAE RID: 110254
+		// Token: 0x0401580B RID: 88075
 		[Nullable(new byte[]
 		{
 			2,
@@ -595,87 +594,87 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 		})]
 		private GenericLayout<SheriffClueItem, int> ClueLayout;
 
-		// Token: 0x0401AEAF RID: 110255
+		// Token: 0x0401580C RID: 88076
 		[Nullable(2)]
 		private ButtonItem ConfirmBtn;
 
-		// Token: 0x0401AEB0 RID: 110256
+		// Token: 0x0401580D RID: 88077
 		protected List<int> AllClueIds = new List<int>();
 
-		// Token: 0x0401AEB1 RID: 110257
+		// Token: 0x0401580E RID: 88078
 		private readonly HashSet<int> CacheClueSet = new HashSet<int>();
 
-		// Token: 0x0401AEB2 RID: 110258
+		// Token: 0x0401580F RID: 88079
 		protected bool IsClueEnough = true;
 
-		// Token: 0x0200AE26 RID: 44582
+		// Token: 0x02009844 RID: 38980
 		[NullableContext(0)]
 		private static class EDefine
 		{
-			// Token: 0x04034E3B RID: 216635
+			// Token: 0x0402F7E0 RID: 194528
 			public const int PanelClue = 0;
 
-			// Token: 0x04034E3C RID: 216636
+			// Token: 0x0402F7E1 RID: 194529
 			public const int ToggleSkyEyeClue = 1;
 
-			// Token: 0x04034E3D RID: 216637
+			// Token: 0x0402F7E2 RID: 194530
 			public const int PanelTabQuestion = 2;
 
-			// Token: 0x04034E3E RID: 216638
+			// Token: 0x0402F7E3 RID: 194531
 			public const int ToggleClueTab = 3;
 
-			// Token: 0x04034E3F RID: 216639
+			// Token: 0x0402F7E4 RID: 194532
 			public const int PanelInfo = 4;
 
-			// Token: 0x04034E40 RID: 216640
+			// Token: 0x0402F7E5 RID: 194533
 			public const int TxtTitle = 5;
 
-			// Token: 0x04034E41 RID: 216641
+			// Token: 0x0402F7E6 RID: 194534
 			public const int TxtInfo = 6;
 
-			// Token: 0x04034E42 RID: 216642
+			// Token: 0x0402F7E7 RID: 194535
 			public const int PanelTips = 7;
 
-			// Token: 0x04034E43 RID: 216643
+			// Token: 0x0402F7E8 RID: 194536
 			public const int SpriteLock = 8;
 
-			// Token: 0x04034E44 RID: 216644
+			// Token: 0x0402F7E9 RID: 194537
 			public const int TexUnlock = 9;
 
-			// Token: 0x04034E45 RID: 216645
+			// Token: 0x0402F7EA RID: 194538
 			public const int TxtTipsTitle = 10;
 
-			// Token: 0x04034E46 RID: 216646
+			// Token: 0x0402F7EB RID: 194539
 			public const int PanelSelectClue = 11;
 
-			// Token: 0x04034E47 RID: 216647
+			// Token: 0x0402F7EC RID: 194540
 			public const int SelectClueLayout = 12;
 
-			// Token: 0x04034E48 RID: 216648
+			// Token: 0x0402F7ED RID: 194541
 			public const int SelectClueItem = 13;
 
-			// Token: 0x04034E49 RID: 216649
+			// Token: 0x0402F7EE RID: 194542
 			public const int TxtClueNum = 14;
 
-			// Token: 0x04034E4A RID: 216650
+			// Token: 0x0402F7EF RID: 194543
 			public const int PanelSelectedClue = 15;
 
-			// Token: 0x04034E4B RID: 216651
+			// Token: 0x0402F7F0 RID: 194544
 			public const int SelectedClueLayout = 16;
 
-			// Token: 0x04034E4C RID: 216652
+			// Token: 0x0402F7F1 RID: 194545
 			public const int SelectedClueItem = 17;
 
-			// Token: 0x04034E4D RID: 216653
+			// Token: 0x0402F7F2 RID: 194546
 			public const int BtnSkyEyeConfirm = 18;
 
-			// Token: 0x04034E4E RID: 216654
+			// Token: 0x0402F7F3 RID: 194547
 			public const int PanelNotEnoughTips = 19;
 
-			// Token: 0x04034E4F RID: 216655
+			// Token: 0x0402F7F4 RID: 194548
 			public const int TxtTips = 20;
 
-			// Token: 0x04034E50 RID: 216656
+			// Token: 0x0402F7F5 RID: 194549
 			public const int BtnPageArrow = 21;
 		}
 	}

@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004AAA RID: 19114
+	// Token: 0x02003A52 RID: 14930
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 	})]
 	public class TrapDefenseResultBdUnlockItem : GridProxyAbstract<ITrapDefenseResultUnlockInfo>
 	{
-		// Token: 0x06031867 RID: 202855 RVA: 0x00B7B8F0 File Offset: 0x00B79AF0
+		// Token: 0x060265F7 RID: 157175 RVA: 0x00ABF8A4 File Offset: 0x00ABDAA4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -52,13 +52,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06031868 RID: 202856 RVA: 0x00B7BA7E File Offset: 0x00B79C7E
+		// Token: 0x060265F8 RID: 157176 RVA: 0x00ABFA32 File Offset: 0x00ABDC32
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(base.GetItem(8));
 		}
 
-		// Token: 0x06031869 RID: 202857 RVA: 0x00B7BA94 File Offset: 0x00B79C94
+		// Token: 0x060265F9 RID: 157177 RVA: 0x00ABFA48 File Offset: 0x00ABDC48
 		public override void Refresh(ITrapDefenseResultUnlockInfo data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x0603186A RID: 202858 RVA: 0x00B7BC00 File Offset: 0x00B79E00
+		// Token: 0x060265FA RID: 157178 RVA: 0x00ABFBB4 File Offset: 0x00ABDDB4
 		private void SetProgress(TrapDefenseBdData bdData)
 		{
 			int currentActiveProgressNum = bdData.GetCurrentActiveProgressNum();
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.SetPurpleActive(true, new float?(value), new bool?(true));
 		}
 
-		// Token: 0x0603186B RID: 202859 RVA: 0x00B7BCF4 File Offset: 0x00B79EF4
+		// Token: 0x060265FB RID: 157179 RVA: 0x00ABFCA8 File Offset: 0x00ABDEA8
 		private void SetGoldActive(bool show, float? amount = null)
 		{
 			UUISprite sprite = base.GetSprite(1);
@@ -170,7 +170,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x0603186C RID: 202860 RVA: 0x00B7BD50 File Offset: 0x00B79F50
+		// Token: 0x060265FC RID: 157180 RVA: 0x00ABFD04 File Offset: 0x00ABDF04
 		private void SetPurpleActive(bool show, float? amount = null, bool? useColor = null)
 		{
 			UUISprite sprite = base.GetSprite(2);
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x0603186D RID: 202861 RVA: 0x00B7BDD0 File Offset: 0x00B79FD0
+		// Token: 0x060265FD RID: 157181 RVA: 0x00ABFD84 File Offset: 0x00ABDF84
 		private void OnClicked()
 		{
 			if (this.Data.Type == ETrapDefenseResultUnlockType.Organ)
@@ -206,7 +206,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			UiManager.Instance.OpenView(EUiViewName.TrapDefenseBuildingGangsInfoView, this.Data.Id, null);
 		}
 
-		// Token: 0x0603186E RID: 202862 RVA: 0x00B7BE00 File Offset: 0x00B7A000
+		// Token: 0x060265FE RID: 157182 RVA: 0x00ABFDB4 File Offset: 0x00ABDFB4
 		public void PlayUnlockAnim()
 		{
 			if (this.Data.Type != ETrapDefenseResultUnlockType.Bd)
@@ -216,44 +216,44 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.LevelSequencePlayer.PlayOrReplaySequenceByName("Unlock", false, null);
 		}
 
-		// Token: 0x0401A78F RID: 108431
+		// Token: 0x040150E1 RID: 86241
 		protected ITrapDefenseResultUnlockInfo Data;
 
-		// Token: 0x0401A790 RID: 108432
+		// Token: 0x040150E2 RID: 86242
 		protected TrapDefenseBuildingDevelopItemData OrganData;
 
-		// Token: 0x0401A791 RID: 108433
+		// Token: 0x040150E3 RID: 86243
 		protected LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200ABFD RID: 44029
+		// Token: 0x0200961D RID: 38429
 		[NullableContext(0)]
 		internal class EUnlockBd
 		{
-			// Token: 0x0403442D RID: 214061
+			// Token: 0x0402EDDE RID: 191966
 			public const int Btn = 0;
 
-			// Token: 0x0403442E RID: 214062
+			// Token: 0x0402EDDF RID: 191967
 			public const int SpriteBarGold = 1;
 
-			// Token: 0x0403442F RID: 214063
+			// Token: 0x0402EDE0 RID: 191968
 			public const int SpriteBarPurple = 2;
 
-			// Token: 0x04034430 RID: 214064
+			// Token: 0x0402EDE1 RID: 191969
 			public const int SpriteBgPurple = 3;
 
-			// Token: 0x04034431 RID: 214065
+			// Token: 0x0402EDE2 RID: 191970
 			public const int SpriteBgGold = 4;
 
-			// Token: 0x04034432 RID: 214066
+			// Token: 0x0402EDE3 RID: 191971
 			public const int TextureIcon = 5;
 
-			// Token: 0x04034433 RID: 214067
+			// Token: 0x0402EDE4 RID: 191972
 			public const int TxtNum = 6;
 
-			// Token: 0x04034434 RID: 214068
+			// Token: 0x0402EDE5 RID: 191973
 			public const int ItemFinish = 7;
 
-			// Token: 0x04034435 RID: 214069
+			// Token: 0x0402EDE6 RID: 191974
 			public const int UnlockItem = 8;
 		}
 	}

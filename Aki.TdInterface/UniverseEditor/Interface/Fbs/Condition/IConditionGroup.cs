@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004BE6 RID: 19430
+	// Token: 0x020050D3 RID: 20691
 	public struct IConditionGroup : IFlatbufferObject
 	{
-		// Token: 0x17008D1F RID: 36127
-		// (get) Token: 0x0601EBF7 RID: 125943 RVA: 0x0044C884 File Offset: 0x0044AA84
+		// Token: 0x17009443 RID: 37955
+		// (get) Token: 0x060207DD RID: 133085 RVA: 0x0047FAF0 File Offset: 0x0047DCF0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601EBF8 RID: 125944 RVA: 0x0044C891 File Offset: 0x0044AA91
+		// Token: 0x060207DE RID: 133086 RVA: 0x0047FAFD File Offset: 0x0047DCFD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601EBF9 RID: 125945 RVA: 0x0044C898 File Offset: 0x0044AA98
+		// Token: 0x060207DF RID: 133087 RVA: 0x0047FB04 File Offset: 0x0047DD04
 		public static IConditionGroup GetRootAsIConditionGroup(ByteBuffer _bb)
 		{
 			return IConditionGroup.GetRootAsIConditionGroup(_bb, default(IConditionGroup));
 		}
 
-		// Token: 0x0601EBFA RID: 125946 RVA: 0x0044C8B4 File Offset: 0x0044AAB4
+		// Token: 0x060207E0 RID: 133088 RVA: 0x0047FB20 File Offset: 0x0047DD20
 		public static IConditionGroup GetRootAsIConditionGroup(ByteBuffer _bb, IConditionGroup obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601EBFB RID: 125947 RVA: 0x0044C8D1 File Offset: 0x0044AAD1
+		// Token: 0x060207E1 RID: 133089 RVA: 0x0047FB3D File Offset: 0x0047DD3D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601EBFC RID: 125948 RVA: 0x0044C8E0 File Offset: 0x0044AAE0
+		// Token: 0x060207E2 RID: 133090 RVA: 0x0047FB4C File Offset: 0x0047DD4C
 		public IConditionGroup __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008D20 RID: 36128
-		// (get) Token: 0x0601EBFD RID: 125949 RVA: 0x0044C8F0 File Offset: 0x0044AAF0
+		// Token: 0x17009444 RID: 37956
+		// (get) Token: 0x060207E3 RID: 133091 RVA: 0x0047FB5C File Offset: 0x0047DD5C
 		public EConditionCount Type
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601EBFE RID: 125950 RVA: 0x0044C92C File Offset: 0x0044AB2C
+		// Token: 0x060207E4 RID: 133092 RVA: 0x0047FB98 File Offset: 0x0047DD98
 		public ICondition2_Union ConditionsType(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return (ICondition2_Union)this.__p.bb.Get(this.__p.__vector(num) + j);
 		}
 
-		// Token: 0x17008D21 RID: 36129
-		// (get) Token: 0x0601EBFF RID: 125951 RVA: 0x0044C96C File Offset: 0x0044AB6C
+		// Token: 0x17009445 RID: 37957
+		// (get) Token: 0x060207E5 RID: 133093 RVA: 0x0047FBD8 File Offset: 0x0047DDD8
 		public int ConditionsTypeLength
 		{
 			get
@@ -89,13 +89,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601EC00 RID: 125952 RVA: 0x0044C997 File Offset: 0x0044AB97
+		// Token: 0x060207E6 RID: 133094 RVA: 0x0047FC03 File Offset: 0x0047DE03
 		public Span<ICondition2_Union> GetConditionsTypeBytes()
 		{
 			return this.__p.__vector_as_span<ICondition2_Union>(6, 1);
 		}
 
-		// Token: 0x0601EC01 RID: 125953 RVA: 0x0044C9A8 File Offset: 0x0044ABA8
+		// Token: 0x060207E7 RID: 133095 RVA: 0x0047FC14 File Offset: 0x0047DE14
 		public ICondition2_Union[] GetConditionsTypeArray()
 		{
 			int num = this.__p.__offset(6);
@@ -113,7 +113,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return array;
 		}
 
-		// Token: 0x0601EC02 RID: 125954 RVA: 0x0044CA14 File Offset: 0x0044AC14
+		// Token: 0x060207E8 RID: 133096 RVA: 0x0047FC80 File Offset: 0x0047DE80
 		public TTable? Conditions<TTable>(int j) where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -124,8 +124,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return new TTable?(this.__p.__union<TTable>(this.__p.__vector(num) + j * 4));
 		}
 
-		// Token: 0x17008D22 RID: 36130
-		// (get) Token: 0x0601EC03 RID: 125955 RVA: 0x0044CA5C File Offset: 0x0044AC5C
+		// Token: 0x17009446 RID: 37958
+		// (get) Token: 0x060207E9 RID: 133097 RVA: 0x0047FCC8 File Offset: 0x0047DEC8
 		public int ConditionsLength
 		{
 			get
@@ -139,7 +139,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601EC04 RID: 125956 RVA: 0x0044CA87 File Offset: 0x0044AC87
+		// Token: 0x060207EA RID: 133098 RVA: 0x0047FCF3 File Offset: 0x0047DEF3
 		public static Offset<IConditionGroup> CreateIConditionGroup(FlatBufferBuilder builder, EConditionCount Type = EConditionCount.All, VectorOffset Conditions_typeOffset = default(VectorOffset), VectorOffset ConditionsOffset = default(VectorOffset))
 		{
 			builder.StartTable(3);
@@ -149,25 +149,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IConditionGroup.EndIConditionGroup(builder);
 		}
 
-		// Token: 0x0601EC05 RID: 125957 RVA: 0x0044CAAB File Offset: 0x0044ACAB
+		// Token: 0x060207EB RID: 133099 RVA: 0x0047FD17 File Offset: 0x0047DF17
 		public static void StartIConditionGroup(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601EC06 RID: 125958 RVA: 0x0044CAB4 File Offset: 0x0044ACB4
+		// Token: 0x060207EC RID: 133100 RVA: 0x0047FD20 File Offset: 0x0047DF20
 		public static void AddType(FlatBufferBuilder builder, EConditionCount type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601EC07 RID: 125959 RVA: 0x0044CABF File Offset: 0x0044ACBF
+		// Token: 0x060207ED RID: 133101 RVA: 0x0047FD2B File Offset: 0x0047DF2B
 		public static void AddConditionsType(FlatBufferBuilder builder, VectorOffset conditionsTypeOffset)
 		{
 			builder.AddOffset(1, conditionsTypeOffset.Value, 0);
 		}
 
-		// Token: 0x0601EC08 RID: 125960 RVA: 0x0044CAD0 File Offset: 0x0044ACD0
+		// Token: 0x060207EE RID: 133102 RVA: 0x0047FD3C File Offset: 0x0047DF3C
 		public static VectorOffset CreateConditionsTypeVector(FlatBufferBuilder builder, ICondition2_Union[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -178,7 +178,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601EC09 RID: 125961 RVA: 0x0044CB07 File Offset: 0x0044AD07
+		// Token: 0x060207EF RID: 133103 RVA: 0x0047FD73 File Offset: 0x0047DF73
 		public static VectorOffset CreateConditionsTypeVectorBlock(FlatBufferBuilder builder, ICondition2_Union[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -186,7 +186,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601EC0A RID: 125962 RVA: 0x0044CB21 File Offset: 0x0044AD21
+		// Token: 0x060207F0 RID: 133104 RVA: 0x0047FD8D File Offset: 0x0047DF8D
 		public static VectorOffset CreateConditionsTypeVectorBlock(FlatBufferBuilder builder, ArraySegment<ICondition2_Union> data)
 		{
 			builder.StartVector(1, data.Count, 1);
@@ -194,7 +194,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601EC0B RID: 125963 RVA: 0x0044CB3F File Offset: 0x0044AD3F
+		// Token: 0x060207F1 RID: 133105 RVA: 0x0047FDAB File Offset: 0x0047DFAB
 		public static VectorOffset CreateConditionsTypeVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -202,19 +202,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601EC0C RID: 125964 RVA: 0x0044CB58 File Offset: 0x0044AD58
+		// Token: 0x060207F2 RID: 133106 RVA: 0x0047FDC4 File Offset: 0x0047DFC4
 		public static void StartConditionsTypeVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(1, numElems, 1);
 		}
 
-		// Token: 0x0601EC0D RID: 125965 RVA: 0x0044CB63 File Offset: 0x0044AD63
+		// Token: 0x060207F3 RID: 133107 RVA: 0x0047FDCF File Offset: 0x0047DFCF
 		public static void AddConditions(FlatBufferBuilder builder, VectorOffset conditionsOffset)
 		{
 			builder.AddOffset(2, conditionsOffset.Value, 0);
 		}
 
-		// Token: 0x0601EC0E RID: 125966 RVA: 0x0044CB74 File Offset: 0x0044AD74
+		// Token: 0x060207F4 RID: 133108 RVA: 0x0047FDE0 File Offset: 0x0047DFE0
 		public static VectorOffset CreateConditionsVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -225,7 +225,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601EC0F RID: 125967 RVA: 0x0044CBAB File Offset: 0x0044ADAB
+		// Token: 0x060207F5 RID: 133109 RVA: 0x0047FE17 File Offset: 0x0047E017
 		public static VectorOffset CreateConditionsVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -233,7 +233,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601EC10 RID: 125968 RVA: 0x0044CBC5 File Offset: 0x0044ADC5
+		// Token: 0x060207F6 RID: 133110 RVA: 0x0047FE31 File Offset: 0x0047E031
 		public static VectorOffset CreateConditionsVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -241,7 +241,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601EC11 RID: 125969 RVA: 0x0044CBE3 File Offset: 0x0044ADE3
+		// Token: 0x060207F7 RID: 133111 RVA: 0x0047FE4F File Offset: 0x0047E04F
 		public static VectorOffset CreateConditionsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -249,19 +249,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601EC12 RID: 125970 RVA: 0x0044CBFC File Offset: 0x0044ADFC
+		// Token: 0x060207F8 RID: 133112 RVA: 0x0047FE68 File Offset: 0x0047E068
 		public static void StartConditionsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601EC13 RID: 125971 RVA: 0x0044CC07 File Offset: 0x0044AE07
+		// Token: 0x060207F9 RID: 133113 RVA: 0x0047FE73 File Offset: 0x0047E073
 		public static Offset<IConditionGroup> EndIConditionGroup(FlatBufferBuilder builder)
 		{
 			return new Offset<IConditionGroup>(builder.EndTable());
 		}
 
-		// Token: 0x0601EC14 RID: 125972 RVA: 0x0044CC14 File Offset: 0x0044AE14
+		// Token: 0x060207FA RID: 133114 RVA: 0x0047FE80 File Offset: 0x0047E080
 		public IConditionGroupT UnPack()
 		{
 			IConditionGroupT conditionGroupT = new IConditionGroupT();
@@ -269,7 +269,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return conditionGroupT;
 		}
 
-		// Token: 0x0601EC15 RID: 125973 RVA: 0x0044CC30 File Offset: 0x0044AE30
+		// Token: 0x060207FB RID: 133115 RVA: 0x0047FE9C File Offset: 0x0047E09C
 		public void UnPackTo(IConditionGroupT _o)
 		{
 			_o.Type = this.Type;
@@ -502,6 +502,12 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 				case ICondition2_Union.ICheckVehicleCondition:
 					condition2_UnionUnion.Value = ((this.Conditions<ICheckVehicleCondition>(i) != null) ? this.Conditions<ICheckVehicleCondition>(i).Value.UnPack() : null);
 					break;
+				case ICondition2_Union.ICheckMechState:
+					condition2_UnionUnion.Value = ((this.Conditions<ICheckMechState>(i) != null) ? this.Conditions<ICheckMechState>(i).Value.UnPack() : null);
+					break;
+				case ICondition2_Union.ICheckExploreSkillState:
+					condition2_UnionUnion.Value = ((this.Conditions<ICheckExploreSkillState>(i) != null) ? this.Conditions<ICheckExploreSkillState>(i).Value.UnPack() : null);
+					break;
 				case ICondition2_Union.ICompareAlertValue:
 					condition2_UnionUnion.Value = ((this.Conditions<ICompareAlertValue>(i) != null) ? this.Conditions<ICompareAlertValue>(i).Value.UnPack() : null);
 					break;
@@ -510,6 +516,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 					break;
 				case ICondition2_Union.ICheckCollectAnimalParts:
 					condition2_UnionUnion.Value = ((this.Conditions<ICheckCollectAnimalParts>(i) != null) ? this.Conditions<ICheckCollectAnimalParts>(i).Value.UnPack() : null);
+					break;
+				case ICondition2_Union.ICheckPreloadComplete:
+					condition2_UnionUnion.Value = ((this.Conditions<ICheckPreloadComplete>(i) != null) ? this.Conditions<ICheckPreloadComplete>(i).Value.UnPack() : null);
 					break;
 				case ICondition2_Union.ICheckFinishLoading:
 					condition2_UnionUnion.Value = ((this.Conditions<ICheckFinishLoading>(i) != null) ? this.Conditions<ICheckFinishLoading>(i).Value.UnPack() : null);
@@ -637,6 +646,12 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 				case ICondition2_Union.ICheckBvbActivityRank:
 					condition2_UnionUnion.Value = ((this.Conditions<ICheckBvbActivityRank>(i) != null) ? this.Conditions<ICheckBvbActivityRank>(i).Value.UnPack() : null);
 					break;
+				case ICondition2_Union.ICheckDiceGameChallengeState:
+					condition2_UnionUnion.Value = ((this.Conditions<ICheckDiceGameChallengeState>(i) != null) ? this.Conditions<ICheckDiceGameChallengeState>(i).Value.UnPack() : null);
+					break;
+				case ICondition2_Union.ICompareDiceGameRankLevel:
+					condition2_UnionUnion.Value = ((this.Conditions<ICompareDiceGameRankLevel>(i) != null) ? this.Conditions<ICompareDiceGameRankLevel>(i).Value.UnPack() : null);
+					break;
 				case ICondition2_Union.ICheckCollectedSunSpiritCount:
 					condition2_UnionUnion.Value = ((this.Conditions<ICheckCollectedSunSpiritCount>(i) != null) ? this.Conditions<ICheckCollectedSunSpiritCount>(i).Value.UnPack() : null);
 					break;
@@ -670,8 +685,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 				case ICondition2_Union.ICheckPlayerIsInMotorcycleCruise:
 					condition2_UnionUnion.Value = ((this.Conditions<ICheckPlayerIsInMotorcycleCruise>(i) != null) ? this.Conditions<ICheckPlayerIsInMotorcycleCruise>(i).Value.UnPack() : null);
 					break;
+				case ICondition2_Union.ICheckPlayerIsControlledByAi:
+					condition2_UnionUnion.Value = ((this.Conditions<ICheckPlayerIsControlledByAi>(i) != null) ? this.Conditions<ICheckPlayerIsControlledByAi>(i).Value.UnPack() : null);
+					break;
 				case ICondition2_Union.ICheckTetrisEndlessScore:
 					condition2_UnionUnion.Value = ((this.Conditions<ICheckTetrisEndlessScore>(i) != null) ? this.Conditions<ICheckTetrisEndlessScore>(i).Value.UnPack() : null);
+					break;
+				case ICondition2_Union.ICheckDartLevelComplete:
+					condition2_UnionUnion.Value = ((this.Conditions<ICheckDartLevelComplete>(i) != null) ? this.Conditions<ICheckDartLevelComplete>(i).Value.UnPack() : null);
 					break;
 				case ICondition2_Union.ICheckAtlasUnlocked:
 					condition2_UnionUnion.Value = ((this.Conditions<ICheckAtlasUnlocked>(i) != null) ? this.Conditions<ICheckAtlasUnlocked>(i).Value.UnPack() : null);
@@ -684,6 +705,12 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 					break;
 				case ICondition2_Union.ICheckIsInDollGrabGamePlay:
 					condition2_UnionUnion.Value = ((this.Conditions<ICheckIsInDollGrabGamePlay>(i) != null) ? this.Conditions<ICheckIsInDollGrabGamePlay>(i).Value.UnPack() : null);
+					break;
+				case ICondition2_Union.ICheckIsInDartGameplay:
+					condition2_UnionUnion.Value = ((this.Conditions<ICheckIsInDartGameplay>(i) != null) ? this.Conditions<ICheckIsInDartGameplay>(i).Value.UnPack() : null);
+					break;
+				case ICondition2_Union.ICheckIsInRideFlyingCarGameplay:
+					condition2_UnionUnion.Value = ((this.Conditions<ICheckIsInRideFlyingCarGameplay>(i) != null) ? this.Conditions<ICheckIsInRideFlyingCarGameplay>(i).Value.UnPack() : null);
 					break;
 				case ICondition2_Union.ICheckEntityPrefabPerformanceType:
 					condition2_UnionUnion.Value = ((this.Conditions<ICheckEntityPrefabPerformanceType>(i) != null) ? this.Conditions<ICheckEntityPrefabPerformanceType>(i).Value.UnPack() : null);
@@ -715,12 +742,21 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 				case ICondition2_Union.ICheckElementalWaterBoxStagnationSeq:
 					condition2_UnionUnion.Value = ((this.Conditions<ICheckElementalWaterBoxStagnationSeq>(i) != null) ? this.Conditions<ICheckElementalWaterBoxStagnationSeq>(i).Value.UnPack() : null);
 					break;
+				case ICondition2_Union.ICompareSeasonAndWeather:
+					condition2_UnionUnion.Value = ((this.Conditions<ICompareSeasonAndWeather>(i) != null) ? this.Conditions<ICompareSeasonAndWeather>(i).Value.UnPack() : null);
+					break;
+				case ICondition2_Union.ICheckIsSpecialWeatherUnlocked:
+					condition2_UnionUnion.Value = ((this.Conditions<ICheckIsSpecialWeatherUnlocked>(i) != null) ? this.Conditions<ICheckIsSpecialWeatherUnlocked>(i).Value.UnPack() : null);
+					break;
+				case ICondition2_Union.ICheckCollectiblesDetectionAllowed:
+					condition2_UnionUnion.Value = ((this.Conditions<ICheckCollectiblesDetectionAllowed>(i) != null) ? this.Conditions<ICheckCollectiblesDetectionAllowed>(i).Value.UnPack() : null);
+					break;
 				}
 				_o.Conditions.Add(condition2_UnionUnion);
 			}
 		}
 
-		// Token: 0x0601EC16 RID: 125974 RVA: 0x0044F0EC File Offset: 0x0044D2EC
+		// Token: 0x060207FC RID: 133116 RVA: 0x00482754 File Offset: 0x00480954
 		public static Offset<IConditionGroup> Pack(FlatBufferBuilder builder, IConditionGroupT _o)
 		{
 			if (_o == null)
@@ -750,7 +786,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IConditionGroup.CreateIConditionGroup(builder, _o.Type, conditions_typeOffset, conditionsOffset);
 		}
 
-		// Token: 0x0400D56F RID: 54639
+		// Token: 0x0400E086 RID: 57478
 		private Table __p;
 	}
 }

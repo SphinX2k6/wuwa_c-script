@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018BD RID: 6333
+	// Token: 0x02001A4C RID: 6732
 	public class IClientFollowShooterResetToPlayer_SetValue
 	{
-		// Token: 0x04005570 RID: 21872
+		// Token: 0x040059C4 RID: 22980
 		public EClientFollowShooterLeisureInteractType Type;
 	}
 }

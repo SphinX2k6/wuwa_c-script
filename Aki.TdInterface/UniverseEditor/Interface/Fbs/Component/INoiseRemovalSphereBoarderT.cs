@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200560C RID: 22028
+	// Token: 0x02005BAA RID: 23466
 	public class INoiseRemovalSphereBoarderT
 	{
-		// Token: 0x1700A303 RID: 41731
-		// (get) Token: 0x060248F1 RID: 149745 RVA: 0x0050B854 File Offset: 0x00509A54
-		// (set) Token: 0x060248F2 RID: 149746 RVA: 0x0050B85C File Offset: 0x00509A5C
+		// Token: 0x1700AB8B RID: 43915
+		// (get) Token: 0x06026B01 RID: 158465 RVA: 0x0054BE6C File Offset: 0x0054A06C
+		// (set) Token: 0x06026B02 RID: 158466 RVA: 0x0054BE74 File Offset: 0x0054A074
 		public ENoiseRemovalBoarderShape Type { get; set; }
 
-		// Token: 0x1700A304 RID: 41732
-		// (get) Token: 0x060248F3 RID: 149747 RVA: 0x0050B865 File Offset: 0x00509A65
-		// (set) Token: 0x060248F4 RID: 149748 RVA: 0x0050B86D File Offset: 0x00509A6D
+		// Token: 0x1700AB8C RID: 43916
+		// (get) Token: 0x06026B03 RID: 158467 RVA: 0x0054BE7D File Offset: 0x0054A07D
+		// (set) Token: 0x06026B04 RID: 158468 RVA: 0x0054BE85 File Offset: 0x0054A085
 		public float Radius { get; set; }
 
-		// Token: 0x060248F5 RID: 149749 RVA: 0x0050B876 File Offset: 0x00509A76
+		// Token: 0x06026B05 RID: 158469 RVA: 0x0054BE8E File Offset: 0x0054A08E
 		public INoiseRemovalSphereBoarderT()
 		{
 			this.Type = ENoiseRemovalBoarderShape.Box;

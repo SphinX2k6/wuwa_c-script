@@ -4,10 +4,10 @@ using CSharpScript.Game.NewWorld.Character.Common.Component.Explore;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x0200292D RID: 10541
+// Token: 0x02001EA8 RID: 7848
 public class RouletteGridExplore : RouletteGridBase
 {
-	// Token: 0x06015C0D RID: 89101 RVA: 0x0057CAA4 File Offset: 0x0057ACA4
+	// Token: 0x06013612 RID: 79378 RVA: 0x005A7AE4 File Offset: 0x005A5CE4
 	protected override UniTask Init()
 	{
 		RouletteGridExplore.<Init>d__0 <Init>d__;
@@ -18,7 +18,7 @@ public class RouletteGridExplore : RouletteGridBase
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015C0E RID: 89102 RVA: 0x0057CAE8 File Offset: 0x0057ACE8
+	// Token: 0x06013613 RID: 79379 RVA: 0x005A7B28 File Offset: 0x005A5D28
 	protected override void OnSelect(bool bSelect)
 	{
 		if (!bSelect)

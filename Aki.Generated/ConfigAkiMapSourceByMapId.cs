@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000094 RID: 148
+	// Token: 0x0200009C RID: 156
 	public class ConfigAkiMapSourceByMapId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000378 RID: 888 RVA: 0x0006D318 File Offset: 0x0006B518
+		// Token: 0x060003A8 RID: 936 RVA: 0x00071BCC File Offset: 0x0006FDCC
 		static ConfigAkiMapSourceByMapId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAkiMapSourceByMapId.CreateStaticDefaultValue), new Action(ConfigAkiMapSourceByMapId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000379 RID: 889 RVA: 0x0006D338 File Offset: 0x0006B538
+		// Token: 0x060003A9 RID: 937 RVA: 0x00071BEC File Offset: 0x0006FDEC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAkiMapSourceByMapId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600037A RID: 890 RVA: 0x0006D3B7 File Offset: 0x0006B5B7
+		// Token: 0x060003AA RID: 938 RVA: 0x00071C6B File Offset: 0x0006FE6B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAkiMapSourceByMapId.LogPair = null;
 			ConfigAkiMapSourceByMapId.HandleId = 0;
 		}
 
-		// Token: 0x0600037B RID: 891 RVA: 0x0006D3C5 File Offset: 0x0006B5C5
+		// Token: 0x060003AB RID: 939 RVA: 0x00071C79 File Offset: 0x0006FE79
 		public static void Init()
 		{
 			ConfigAkiMapSourceByMapId.HandleId = ConfigCommon.InitDataStatement(ConfigAkiMapSourceByMapId.HandleId, "db_instance_dungeon.db", "select BinData from `AkiMapSource` where MapId=?");
 		}
 
-		// Token: 0x0600037C RID: 892 RVA: 0x0006D3E0 File Offset: 0x0006B5E0
+		// Token: 0x060003AC RID: 940 RVA: 0x00071C94 File Offset: 0x0006FE94
 		public static AkiMapSource? GetConfig(int p0MapId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigAkiMapSourceByMapId.HandleId, ConfigAkiMapSourceByMapId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new AkiMapSource?(rootAsAkiMapSource);
 		}
 
-		// Token: 0x040003F0 RID: 1008
+		// Token: 0x04000428 RID: 1064
 		private const string DB = "db_instance_dungeon.db";
 
-		// Token: 0x040003F1 RID: 1009
+		// Token: 0x04000429 RID: 1065
 		private const string FILE = "f.副本.xlsx";
 
-		// Token: 0x040003F2 RID: 1010
+		// Token: 0x0400042A RID: 1066
 		private const string TABLE = "AkiMapSource";
 
-		// Token: 0x040003F3 RID: 1011
+		// Token: 0x0400042B RID: 1067
 		private const string COMMAND = "select BinData from `AkiMapSource` where MapId=?";
 
-		// Token: 0x040003F4 RID: 1012
+		// Token: 0x0400042C RID: 1068
 		private const string KEY_PREFIX = "AkiMapSourceByMapId";
 
-		// Token: 0x040003F5 RID: 1013
+		// Token: 0x0400042D RID: 1069
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040003F6 RID: 1014
+		// Token: 0x0400042E RID: 1070
 		private static int HandleId;
 	}
 }

@@ -1,23 +1,23 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002295 RID: 8853
+// Token: 0x02001779 RID: 6009
 [NullableContext(2)]
 [Nullable(0)]
 public class MotorcycleDiyEditOverviewOpenParam : IMotorcycleDiyEditOverviewOpenParam
 {
-	// Token: 0x1700160A RID: 5642
-	// (get) Token: 0x06011455 RID: 70741 RVA: 0x00436E1A File Offset: 0x0043501A
-	// (set) Token: 0x06011456 RID: 70742 RVA: 0x00436E22 File Offset: 0x00435022
+	// Token: 0x17001641 RID: 5697
+	// (get) Token: 0x0600E8EB RID: 59627 RVA: 0x00443A26 File Offset: 0x00441C26
+	// (set) Token: 0x0600E8EC RID: 59628 RVA: 0x00443A2E File Offset: 0x00441C2E
 	public int PartId { get; set; }
 
-	// Token: 0x1700160B RID: 5643
-	// (get) Token: 0x06011457 RID: 70743 RVA: 0x00436E2B File Offset: 0x0043502B
-	// (set) Token: 0x06011458 RID: 70744 RVA: 0x00436E33 File Offset: 0x00435033
+	// Token: 0x17001642 RID: 5698
+	// (get) Token: 0x0600E8ED RID: 59629 RVA: 0x00443A37 File Offset: 0x00441C37
+	// (set) Token: 0x0600E8EE RID: 59630 RVA: 0x00443A3F File Offset: 0x00441C3F
 	public MotorcycleDiyPresetData LocalPresetData { get; set; }
 
-	// Token: 0x1700160C RID: 5644
-	// (get) Token: 0x06011459 RID: 70745 RVA: 0x00436E3C File Offset: 0x0043503C
-	// (set) Token: 0x0601145A RID: 70746 RVA: 0x00436E44 File Offset: 0x00435044
+	// Token: 0x17001643 RID: 5699
+	// (get) Token: 0x0600E8EF RID: 59631 RVA: 0x00443A48 File Offset: 0x00441C48
+	// (set) Token: 0x0600E8F0 RID: 59632 RVA: 0x00443A50 File Offset: 0x00441C50
 	public Action<EOutlookType, bool> OnEditPresetChanged { get; set; }
 }

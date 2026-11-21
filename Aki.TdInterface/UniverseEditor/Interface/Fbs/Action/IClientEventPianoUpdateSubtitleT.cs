@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020063AA RID: 25514
+	// Token: 0x02006A1B RID: 27163
 	public class IClientEventPianoUpdateSubtitleT
 	{
-		// Token: 0x1700BE2F RID: 48687
-		// (get) Token: 0x0602C237 RID: 180791 RVA: 0x0060FC81 File Offset: 0x0060DE81
-		// (set) Token: 0x0602C238 RID: 180792 RVA: 0x0060FC89 File Offset: 0x0060DE89
+		// Token: 0x1700C7B3 RID: 51123
+		// (get) Token: 0x0602E999 RID: 190873 RVA: 0x0065ACB9 File Offset: 0x00658EB9
+		// (set) Token: 0x0602E99A RID: 190874 RVA: 0x0065ACC1 File Offset: 0x00658EC1
 		public EClientEventPianoEventType Type { get; set; }
 
-		// Token: 0x1700BE30 RID: 48688
-		// (get) Token: 0x0602C239 RID: 180793 RVA: 0x0060FC92 File Offset: 0x0060DE92
-		// (set) Token: 0x0602C23A RID: 180794 RVA: 0x0060FC9A File Offset: 0x0060DE9A
+		// Token: 0x1700C7B4 RID: 51124
+		// (get) Token: 0x0602E99B RID: 190875 RVA: 0x0065ACCA File Offset: 0x00658ECA
+		// (set) Token: 0x0602E99C RID: 190876 RVA: 0x0065ACD2 File Offset: 0x00658ED2
 		public IPlayFlowT Flow { get; set; }
 
-		// Token: 0x1700BE31 RID: 48689
-		// (get) Token: 0x0602C23B RID: 180795 RVA: 0x0060FCA3 File Offset: 0x0060DEA3
-		// (set) Token: 0x0602C23C RID: 180796 RVA: 0x0060FCAB File Offset: 0x0060DEAB
+		// Token: 0x1700C7B5 RID: 51125
+		// (get) Token: 0x0602E99D RID: 190877 RVA: 0x0065ACDB File Offset: 0x00658EDB
+		// (set) Token: 0x0602E99E RID: 190878 RVA: 0x0065ACE3 File Offset: 0x00658EE3
 		public bool DisableMove { get; set; }
 
-		// Token: 0x0602C23D RID: 180797 RVA: 0x0060FCB4 File Offset: 0x0060DEB4
+		// Token: 0x0602E99F RID: 190879 RVA: 0x0065ACEC File Offset: 0x00658EEC
 		public IClientEventPianoUpdateSubtitleT()
 		{
 			this.Type = EClientEventPianoEventType.UpdateSubtitle;

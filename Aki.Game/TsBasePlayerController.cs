@@ -10,16 +10,16 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02000258 RID: 600
+// Token: 0x0200025C RID: 604
 [NullableContext(1)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/Controller/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Controller/TsBasePlayerController.TsBasePlayerController_C")]
 public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x17000597 RID: 1431
-	// (get) Token: 0x06002484 RID: 9348 RVA: 0x000DE1BA File Offset: 0x000DC3BA
-	// (set) Token: 0x06002485 RID: 9349 RVA: 0x000DE1CE File Offset: 0x000DC3CE
+	// Token: 0x170005BE RID: 1470
+	// (get) Token: 0x0600253B RID: 9531 RVA: 0x000E45AE File Offset: 0x000E27AE
+	// (set) Token: 0x0600253C RID: 9532 RVA: 0x000E45C2 File Offset: 0x000E27C2
 	[Nullable(new byte[]
 	{
 		0,
@@ -48,8 +48,8 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x17000598 RID: 1432
-	// (get) Token: 0x06002486 RID: 9350 RVA: 0x000DE1E3 File Offset: 0x000DC3E3
+	// Token: 0x170005BF RID: 1471
+	// (get) Token: 0x0600253D RID: 9533 RVA: 0x000E45D7 File Offset: 0x000E27D7
 	[Nullable(new byte[]
 	{
 		0,
@@ -69,8 +69,8 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x17000599 RID: 1433
-	// (get) Token: 0x06002487 RID: 9351 RVA: 0x000DE1F8 File Offset: 0x000DC3F8
+	// Token: 0x170005C0 RID: 1472
+	// (get) Token: 0x0600253E RID: 9534 RVA: 0x000E45EC File Offset: 0x000E27EC
 	[UProperty(EPropertyFlags.CPF_None)]
 	private TMap<string, TsActionHandle> ActionHandleMap
 	{
@@ -86,8 +86,8 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x1700059A RID: 1434
-	// (get) Token: 0x06002488 RID: 9352 RVA: 0x000DE234 File Offset: 0x000DC434
+	// Token: 0x170005C1 RID: 1473
+	// (get) Token: 0x0600253F RID: 9535 RVA: 0x000E4628 File Offset: 0x000E2828
 	[UProperty(EPropertyFlags.CPF_None)]
 	private TMap<string, TsAxisHandle> AxisHandleMap
 	{
@@ -103,27 +103,21 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x06002489 RID: 9353 RVA: 0x000DE270 File Offset: 0x000DC470
+	// Token: 0x06002540 RID: 9536 RVA: 0x000E4664 File Offset: 0x000E2864
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe override void ReceiveSetupInputComponent()
+	public override void ReceiveSetupInputComponent()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveSetupInputComponent"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsBasePlayerController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveSetupInputComponent"), TsBasePlayerController.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.ReceiveSetupInputComponent_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0600248A RID: 9354 RVA: 0x000DE2E0 File Offset: 0x000DC4E0
+	// Token: 0x06002541 RID: 9537 RVA: 0x000E46BD File Offset: 0x000E28BD
 	protected virtual void ReceiveSetupInputComponent_Implementation()
 	{
 		this.InitInputHandle();
@@ -131,53 +125,41 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		this.OnSetupInputComponent();
 	}
 
-	// Token: 0x0600248B RID: 9355 RVA: 0x000DE2F4 File Offset: 0x000DC4F4
+	// Token: 0x06002542 RID: 9538 RVA: 0x000E46D4 File Offset: 0x000E28D4
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe override void ReceiveBeginPlay()
+	public override void ReceiveBeginPlay()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveBeginPlay"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsBasePlayerController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveBeginPlay"), TsBasePlayerController.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.ReceiveBeginPlay_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0600248C RID: 9356 RVA: 0x000DE364 File Offset: 0x000DC564
+	// Token: 0x06002543 RID: 9539 RVA: 0x000E472D File Offset: 0x000E292D
 	protected virtual void ReceiveBeginPlay_Implementation()
 	{
 		this.InitInputHandle();
 	}
 
-	// Token: 0x0600248D RID: 9357 RVA: 0x000DE36C File Offset: 0x000DC56C
+	// Token: 0x06002544 RID: 9540 RVA: 0x000E4738 File Offset: 0x000E2938
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe override void ReceiveDestroyed()
+	public override void ReceiveDestroyed()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveDestroyed"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsBasePlayerController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveDestroyed"), TsBasePlayerController.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.ReceiveDestroyed_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0600248E RID: 9358 RVA: 0x000DE3DC File Offset: 0x000DC5DC
+	// Token: 0x06002545 RID: 9541 RVA: 0x000E4794 File Offset: 0x000E2994
 	protected virtual void ReceiveDestroyed_Implementation()
 	{
 		if (!ObjectUtils.IsValid(this))
@@ -202,28 +184,25 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x0600248F RID: 9359 RVA: 0x000DE448 File Offset: 0x000DC648
+	// Token: 0x06002546 RID: 9542 RVA: 0x000E4800 File Offset: 0x000E2A00
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveTick(float deltaSeconds)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveTick"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		AActor.__ReceiveTick_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsBasePlayerController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveTick"), TsBasePlayerController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((AActor.__ReceiveTick_FunctionParams*)ptr + 15L / (long)sizeof(AActor.__ReceiveTick_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->DeltaSeconds = deltaSeconds;
+			this.ReceiveTick_Implementation(deltaSeconds);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		AActor.__ReceiveTick_FunctionParams* ptr = stackalloc AActor.__ReceiveTick_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(AActor.__ReceiveTick_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->DeltaSeconds = deltaSeconds;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06002490 RID: 9360 RVA: 0x000DE4BE File Offset: 0x000DC6BE
+	// Token: 0x06002547 RID: 9543 RVA: 0x000E488C File Offset: 0x000E2A8C
 	protected virtual void ReceiveTick_Implementation(float deltaSeconds)
 	{
 		PlayerInputHandle playerInputHandle = this.PlayerInputHandle;
@@ -234,53 +213,41 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		playerInputHandle.Tick(deltaSeconds);
 	}
 
-	// Token: 0x06002491 RID: 9361 RVA: 0x000DE4D4 File Offset: 0x000DC6D4
+	// Token: 0x06002548 RID: 9544 RVA: 0x000E48A0 File Offset: 0x000E2AA0
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe override void OnReceivedPlayer()
+	public override void OnReceivedPlayer()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("OnReceivedPlayer"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsBasePlayerController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("OnReceivedPlayer"), TsBasePlayerController.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.OnReceivedPlayer_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x06002492 RID: 9362 RVA: 0x000DE544 File Offset: 0x000DC744
+	// Token: 0x06002549 RID: 9545 RVA: 0x000E48F9 File Offset: 0x000E2AF9
 	protected virtual void OnReceivedPlayer_Implementation()
 	{
 		UKuroInputFunctionLibrary.ResetInputMode(this);
 	}
 
-	// Token: 0x06002493 RID: 9363 RVA: 0x000DE54C File Offset: 0x000DC74C
+	// Token: 0x0600254A RID: 9546 RVA: 0x000E4904 File Offset: 0x000E2B04
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void InitInputHandle()
+	public virtual void InitInputHandle()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("InitInputHandle"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsBasePlayerController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("InitInputHandle"), TsBasePlayerController.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.InitInputHandle_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x06002494 RID: 9364 RVA: 0x000DE5BC File Offset: 0x000DC7BC
+	// Token: 0x0600254B RID: 9547 RVA: 0x000E4960 File Offset: 0x000E2B60
 	protected void InitInputHandle_Implementation()
 	{
 		if (this.PlayerInputHandle != null)
@@ -301,27 +268,21 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x06002495 RID: 9365 RVA: 0x000DE634 File Offset: 0x000DC834
+	// Token: 0x0600254C RID: 9548 RVA: 0x000E49D8 File Offset: 0x000E2BD8
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void AddInputBinding()
+	public virtual void AddInputBinding()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("AddInputBinding"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsBasePlayerController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("AddInputBinding"), TsBasePlayerController.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.AddInputBinding_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x06002496 RID: 9366 RVA: 0x000DE6A4 File Offset: 0x000DC8A4
+	// Token: 0x0600254D RID: 9549 RVA: 0x000E4A34 File Offset: 0x000E2C34
 	protected void AddInputBinding_Implementation()
 	{
 		Log instance = Log.Instance;
@@ -336,27 +297,21 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		this.BindTouchHandle();
 	}
 
-	// Token: 0x06002497 RID: 9367 RVA: 0x000DE6F0 File Offset: 0x000DC8F0
+	// Token: 0x0600254E RID: 9550 RVA: 0x000E4A80 File Offset: 0x000E2C80
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void ClearInputBinding()
+	public virtual void ClearInputBinding()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ClearInputBinding"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsBasePlayerController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ClearInputBinding"), TsBasePlayerController.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.ClearInputBinding_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x06002498 RID: 9368 RVA: 0x000DE760 File Offset: 0x000DC960
+	// Token: 0x0600254F RID: 9551 RVA: 0x000E4ADC File Offset: 0x000E2CDC
 	protected void ClearInputBinding_Implementation()
 	{
 		Log instance = Log.Instance;
@@ -382,48 +337,48 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		this.OnInputAxisCallback = null;
 	}
 
-	// Token: 0x06002499 RID: 9369 RVA: 0x000DE7DC File Offset: 0x000DC9DC
+	// Token: 0x06002550 RID: 9552 RVA: 0x000E4B58 File Offset: 0x000E2D58
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	protected unsafe virtual void OnSetupInputComponent()
+	protected virtual void OnSetupInputComponent()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("OnSetupInputComponent"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsBasePlayerController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("OnSetupInputComponent"), TsBasePlayerController.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.OnSetupInputComponent_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0600249A RID: 9370 RVA: 0x000DE84C File Offset: 0x000DCA4C
+	// Token: 0x06002551 RID: 9553 RVA: 0x000E4BB1 File Offset: 0x000E2DB1
 	protected void OnSetupInputComponent_Implementation()
 	{
 		this.CurrentInputPosition = Vector2D.Create(0.0, 0.0);
 	}
 
-	// Token: 0x0600249B RID: 9371 RVA: 0x000DE86B File Offset: 0x000DCA6B
+	// Token: 0x06002552 RID: 9554 RVA: 0x000E4BD0 File Offset: 0x000E2DD0
 	protected virtual void BindActionHandle()
 	{
 	}
 
-	// Token: 0x0600249C RID: 9372 RVA: 0x000DE86D File Offset: 0x000DCA6D
+	// Token: 0x06002553 RID: 9555 RVA: 0x000E4BD2 File Offset: 0x000E2DD2
 	protected virtual void BindAxisHandle()
 	{
 	}
 
-	// Token: 0x0600249D RID: 9373 RVA: 0x000DE870 File Offset: 0x000DCA70
+	// Token: 0x06002554 RID: 9556 RVA: 0x000E4BD4 File Offset: 0x000E2DD4
 	protected virtual void BindKeyHandle()
 	{
 		if (!Info.Instance.UseFastInputCallback)
 		{
-			FInputChord finputChord = new FInputChord(new FKey(FNameUtil.GetDynamicFName("AnyKey") ?? FName.NAME_None), false, false, false, false);
+			FInputChord finputChord = new FInputChord
+			{
+				Key = new FKey
+				{
+					KeyName = FNameUtil.GetCheckDynamicFName("AnyKey")
+				}
+			};
 			EInputEvent keyEvent = EInputEvent.IE_Pressed;
 			FName fname = new FName("OnPressAnyKey");
 			base.AddKeyBinding(finputChord, keyEvent, this, fname);
@@ -440,27 +395,21 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		Log.Instance.Error(ELogModule.Input, ELogAuthor.WLJ, "BindKeyHandle Failed, TsKeyHandle is null", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x0600249E RID: 9374 RVA: 0x000DE91C File Offset: 0x000DCB1C
+	// Token: 0x06002555 RID: 9557 RVA: 0x000E4C70 File Offset: 0x000E2E70
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	protected unsafe virtual void BindTouchHandle()
+	protected virtual void BindTouchHandle()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("BindTouchHandle"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsBasePlayerController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("BindTouchHandle"), TsBasePlayerController.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.BindTouchHandle_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0600249F RID: 9375 RVA: 0x000DE98C File Offset: 0x000DCB8C
+	// Token: 0x06002556 RID: 9558 RVA: 0x000E4CCC File Offset: 0x000E2ECC
 	protected void BindTouchHandle_Implementation()
 	{
 		if (!Info.Instance.UseFastInputCallback)
@@ -484,127 +433,115 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		Log.Instance.Error(ELogModule.Input, ELogAuthor.WLJ, "BindKeyHandle Failed, TsTouchHandle is null", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x060024A0 RID: 9376 RVA: 0x000DEA15 File Offset: 0x000DCC15
+	// Token: 0x06002557 RID: 9559 RVA: 0x000E4D55 File Offset: 0x000E2F55
 	protected virtual void OnInputAction(string actionName, bool bPress, FKey key)
 	{
 		LogReportModel.GetOrCreateInstance().RecordOperateTime(false, "", 0.0);
 		this.PlayerInputHandle.InputAction(actionName, bPress, key);
 	}
 
-	// Token: 0x060024A1 RID: 9377 RVA: 0x000DEA3E File Offset: 0x000DCC3E
+	// Token: 0x06002558 RID: 9560 RVA: 0x000E4D7E File Offset: 0x000E2F7E
 	protected virtual void OnInputAxis(string axisName, float value, bool alwaysTick = false)
 	{
 		LogReportModel.GetOrCreateInstance().RecordOperateTime(true, axisName, (double)value);
 		this.PlayerInputHandle.InputAxis(axisName, value, alwaysTick);
 	}
 
-	// Token: 0x060024A2 RID: 9378 RVA: 0x000DEA5C File Offset: 0x000DCC5C
+	// Token: 0x06002559 RID: 9561 RVA: 0x000E4D9C File Offset: 0x000E2F9C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	protected unsafe virtual void OnTouchBegin(ETouchIndex touchIndex, FVector position)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("OnTouchBegin"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsBasePlayerController.__OnTouchBegin_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsBasePlayerController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("OnTouchBegin"), TsBasePlayerController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsBasePlayerController.__OnTouchBegin_FunctionParams*)ptr + 15L / (long)sizeof(TsBasePlayerController.__OnTouchBegin_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->touchIndex) = (byte)touchIndex;
-			ptr2->position = position;
+			this.OnTouchBegin_Implementation(touchIndex, position);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsBasePlayerController.__OnTouchBegin_FunctionParams* ptr = stackalloc TsBasePlayerController.__OnTouchBegin_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsBasePlayerController.__OnTouchBegin_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->touchIndex) = (byte)touchIndex;
+		ptr->position = position;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x060024A3 RID: 9379 RVA: 0x000DEADC File Offset: 0x000DCCDC
+	// Token: 0x0600255A RID: 9562 RVA: 0x000E4E33 File Offset: 0x000E3033
 	protected void OnTouchBegin_Implementation(ETouchIndex touchIndex, FVector position)
 	{
 		this.PlayerInputHandle.TouchBegin(touchIndex, position);
 		LogReportModel.GetOrCreateInstance().RecordOperateTime(false, "", 0.0);
 	}
 
-	// Token: 0x060024A4 RID: 9380 RVA: 0x000DEB04 File Offset: 0x000DCD04
+	// Token: 0x0600255B RID: 9563 RVA: 0x000E4E5C File Offset: 0x000E305C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	protected unsafe virtual void OnTouchEnd(ETouchIndex touchIndex, FVector position)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("OnTouchEnd"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsBasePlayerController.__OnTouchEnd_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsBasePlayerController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("OnTouchEnd"), TsBasePlayerController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsBasePlayerController.__OnTouchEnd_FunctionParams*)ptr + 15L / (long)sizeof(TsBasePlayerController.__OnTouchEnd_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->touchIndex) = (byte)touchIndex;
-			ptr2->position = position;
+			this.OnTouchEnd_Implementation(touchIndex, position);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsBasePlayerController.__OnTouchEnd_FunctionParams* ptr = stackalloc TsBasePlayerController.__OnTouchEnd_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsBasePlayerController.__OnTouchEnd_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->touchIndex) = (byte)touchIndex;
+		ptr->position = position;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x060024A5 RID: 9381 RVA: 0x000DEB84 File Offset: 0x000DCD84
+	// Token: 0x0600255C RID: 9564 RVA: 0x000E4EF3 File Offset: 0x000E30F3
 	protected void OnTouchEnd_Implementation(ETouchIndex touchIndex, FVector position)
 	{
 		this.PlayerInputHandle.TouchEnd(touchIndex, position);
 	}
 
-	// Token: 0x060024A6 RID: 9382 RVA: 0x000DEB94 File Offset: 0x000DCD94
+	// Token: 0x0600255D RID: 9565 RVA: 0x000E4F04 File Offset: 0x000E3104
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	protected unsafe virtual void OnTouchMove(ETouchIndex touchIndex, FVector position)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("OnTouchMove"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsBasePlayerController.__OnTouchMove_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsBasePlayerController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("OnTouchMove"), TsBasePlayerController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsBasePlayerController.__OnTouchMove_FunctionParams*)ptr + 15L / (long)sizeof(TsBasePlayerController.__OnTouchMove_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->touchIndex) = (byte)touchIndex;
-			ptr2->position = position;
+			this.OnTouchMove_Implementation(touchIndex, position);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsBasePlayerController.__OnTouchMove_FunctionParams* ptr = stackalloc TsBasePlayerController.__OnTouchMove_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsBasePlayerController.__OnTouchMove_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->touchIndex) = (byte)touchIndex;
+		ptr->position = position;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x060024A7 RID: 9383 RVA: 0x000DEC14 File Offset: 0x000DCE14
+	// Token: 0x0600255E RID: 9566 RVA: 0x000E4F9B File Offset: 0x000E319B
 	protected void OnTouchMove_Implementation(ETouchIndex touchIndex, FVector position)
 	{
 		this.PlayerInputHandle.TouchMove(touchIndex, position);
 	}
 
-	// Token: 0x060024A8 RID: 9384 RVA: 0x000DEC24 File Offset: 0x000DCE24
+	// Token: 0x0600255F RID: 9567 RVA: 0x000E4FAC File Offset: 0x000E31AC
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void OnPressAnyKey(FKey key)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("OnPressAnyKey"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsBasePlayerController.__OnPressAnyKey_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsBasePlayerController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("OnPressAnyKey"), TsBasePlayerController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsBasePlayerController.__OnPressAnyKey_FunctionParams*)ptr + 15L / (long)sizeof(TsBasePlayerController.__OnPressAnyKey_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			UnrealReflectionUtils.CopyNativeStruct(FKey.StaticStruct(), &ptr2->key, (key != null) ? key.NativePtr : ((IntPtr)0), 1, false);
+			this.OnPressAnyKey_Implementation(key);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsBasePlayerController.__OnPressAnyKey_FunctionParams* ptr = stackalloc TsBasePlayerController.__OnPressAnyKey_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsBasePlayerController.__OnPressAnyKey_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CopyNativeStruct(FKey.StaticStruct(), &ptr->key, (key != null) ? key.NativePtr : ((IntPtr)0), 1, false);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x060024A9 RID: 9385 RVA: 0x000DECB3 File Offset: 0x000DCEB3
+	// Token: 0x06002560 RID: 9568 RVA: 0x000E5051 File Offset: 0x000E3251
 	protected void OnPressAnyKey_Implementation(FKey key)
 	{
 		LogReportModel.GetOrCreateInstance().RecordOperateTime(false, "", 0.0);
@@ -612,34 +549,31 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		PlatformModel.GetOrCreateInstance().OnPressAnyKey(key);
 	}
 
-	// Token: 0x060024AA RID: 9386 RVA: 0x000DECE8 File Offset: 0x000DCEE8
+	// Token: 0x06002561 RID: 9569 RVA: 0x000E5084 File Offset: 0x000E3284
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void OnReleaseAnyKey(FKey key)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("OnReleaseAnyKey"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsBasePlayerController.__OnReleaseAnyKey_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsBasePlayerController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("OnReleaseAnyKey"), TsBasePlayerController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsBasePlayerController.__OnReleaseAnyKey_FunctionParams*)ptr + 15L / (long)sizeof(TsBasePlayerController.__OnReleaseAnyKey_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			UnrealReflectionUtils.CopyNativeStruct(FKey.StaticStruct(), &ptr2->key, (key != null) ? key.NativePtr : ((IntPtr)0), 1, false);
+			this.OnReleaseAnyKey_Implementation(key);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsBasePlayerController.__OnReleaseAnyKey_FunctionParams* ptr = stackalloc TsBasePlayerController.__OnReleaseAnyKey_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsBasePlayerController.__OnReleaseAnyKey_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CopyNativeStruct(FKey.StaticStruct(), &ptr->key, (key != null) ? key.NativePtr : ((IntPtr)0), 1, false);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x060024AB RID: 9387 RVA: 0x000DED77 File Offset: 0x000DCF77
+	// Token: 0x06002562 RID: 9570 RVA: 0x000E5129 File Offset: 0x000E3329
 	protected void OnReleaseAnyKey_Implementation(FKey key)
 	{
 		this.PlayerInputHandle.ReleaseAnyKey(key);
 	}
 
-	// Token: 0x060024AC RID: 9388 RVA: 0x000DED88 File Offset: 0x000DCF88
+	// Token: 0x06002563 RID: 9571 RVA: 0x000E5138 File Offset: 0x000E3338
 	protected void AddActionHandle(string actionName)
 	{
 		if (Info.Instance.UseFastInputCallback)
@@ -672,7 +606,7 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		tsActionHandle.AddActionBinding(actionName, this.OnInputActionCallback);
 	}
 
-	// Token: 0x060024AD RID: 9389 RVA: 0x000DEE38 File Offset: 0x000DD038
+	// Token: 0x06002564 RID: 9572 RVA: 0x000E51E8 File Offset: 0x000E33E8
 	[return: Nullable(2)]
 	protected virtual TsActionHandle NewActionHandle(string actionName)
 	{
@@ -692,28 +626,25 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		return tsActionHandle;
 	}
 
-	// Token: 0x060024AE RID: 9390 RVA: 0x000DEEA0 File Offset: 0x000DD0A0
+	// Token: 0x06002565 RID: 9573 RVA: 0x000E5250 File Offset: 0x000E3450
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	protected unsafe virtual void RemoveActionHandle(string actionName)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("RemoveActionHandle"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsBasePlayerController.__RemoveActionHandle_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsBasePlayerController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("RemoveActionHandle"), TsBasePlayerController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsBasePlayerController.__RemoveActionHandle_FunctionParams*)ptr + 15L / (long)sizeof(TsBasePlayerController.__RemoveActionHandle_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			FString.CopyFrom((void*)(&ptr2->actionName), actionName);
+			this.RemoveActionHandle_Implementation(actionName);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsBasePlayerController.__RemoveActionHandle_FunctionParams* ptr = stackalloc TsBasePlayerController.__RemoveActionHandle_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsBasePlayerController.__RemoveActionHandle_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		FString.CopyFrom((void*)(&ptr->actionName), actionName);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x060024AF RID: 9391 RVA: 0x000DEF1C File Offset: 0x000DD11C
+	// Token: 0x06002566 RID: 9574 RVA: 0x000E52E4 File Offset: 0x000E34E4
 	protected void RemoveActionHandle_Implementation(string actionName)
 	{
 		TsActionHandle actionHandle = this.GetActionHandle(actionName);
@@ -725,31 +656,27 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		this.ActionHandleMap.Remove(actionName);
 	}
 
-	// Token: 0x060024B0 RID: 9392 RVA: 0x000DEF48 File Offset: 0x000DD148
+	// Token: 0x06002567 RID: 9575 RVA: 0x000E5310 File Offset: 0x000E3510
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	[return: Nullable(2)]
 	protected unsafe virtual TsActionHandle GetActionHandle(string actionName)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetActionHandle"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsBasePlayerController.__GetActionHandle_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsBasePlayerController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetActionHandle"), TsBasePlayerController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsBasePlayerController.__GetActionHandle_FunctionParams*)ptr + 15L / (long)sizeof(TsBasePlayerController.__GetActionHandle_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			FString.CopyFrom((void*)(&ptr2->actionName), actionName);
+			return this.GetActionHandle_Implementation(actionName);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		TsActionHandle orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<TsActionHandle>(ptr2->__Result);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsBasePlayerController.__GetActionHandle_FunctionParams* ptr = stackalloc TsBasePlayerController.__GetActionHandle_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsBasePlayerController.__GetActionHandle_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		FString.CopyFrom((void*)(&ptr->actionName), actionName);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		TsActionHandle orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<TsActionHandle>(ptr->__Result);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return orCreateUObjectByNativePointer;
 	}
 
-	// Token: 0x060024B1 RID: 9393 RVA: 0x000DEFCF File Offset: 0x000DD1CF
+	// Token: 0x06002568 RID: 9576 RVA: 0x000E53AD File Offset: 0x000E35AD
 	[return: Nullable(2)]
 	protected TsActionHandle GetActionHandle_Implementation(string actionName)
 	{
@@ -761,7 +688,7 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		return actionHandleMap.Get(actionName);
 	}
 
-	// Token: 0x060024B2 RID: 9394 RVA: 0x000DEFE4 File Offset: 0x000DD1E4
+	// Token: 0x06002569 RID: 9577 RVA: 0x000E53C4 File Offset: 0x000E35C4
 	private void ClearActionHandle()
 	{
 		if (!Info.Instance.UseFastInputCallback)
@@ -791,7 +718,7 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		this.TsActionHandleMap.Clear();
 	}
 
-	// Token: 0x060024B3 RID: 9395 RVA: 0x000DF0C0 File Offset: 0x000DD2C0
+	// Token: 0x0600256A RID: 9578 RVA: 0x000E54A0 File Offset: 0x000E36A0
 	protected virtual void AddAxisHandle(string axisName)
 	{
 		if (Info.Instance.UseFastInputCallback)
@@ -827,7 +754,7 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		tsAxisHandle.AddAxisBinding(axisName, this.OnInputAxisCallback);
 	}
 
-	// Token: 0x060024B4 RID: 9396 RVA: 0x000DF170 File Offset: 0x000DD370
+	// Token: 0x0600256B RID: 9579 RVA: 0x000E5550 File Offset: 0x000E3750
 	[return: Nullable(2)]
 	protected virtual TsAxisHandle NewAxisHandle(string axisName)
 	{
@@ -847,28 +774,25 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		return tsAxisHandle;
 	}
 
-	// Token: 0x060024B5 RID: 9397 RVA: 0x000DF1D8 File Offset: 0x000DD3D8
+	// Token: 0x0600256C RID: 9580 RVA: 0x000E55B8 File Offset: 0x000E37B8
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	protected unsafe virtual void RemoveAxisHandle(string axisName)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("RemoveAxisHandle"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsBasePlayerController.__RemoveAxisHandle_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsBasePlayerController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("RemoveAxisHandle"), TsBasePlayerController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsBasePlayerController.__RemoveAxisHandle_FunctionParams*)ptr + 15L / (long)sizeof(TsBasePlayerController.__RemoveAxisHandle_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			FString.CopyFrom((void*)(&ptr2->axisName), axisName);
+			this.RemoveAxisHandle_Implementation(axisName);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsBasePlayerController.__RemoveAxisHandle_FunctionParams* ptr = stackalloc TsBasePlayerController.__RemoveAxisHandle_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsBasePlayerController.__RemoveAxisHandle_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		FString.CopyFrom((void*)(&ptr->axisName), axisName);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x060024B6 RID: 9398 RVA: 0x000DF254 File Offset: 0x000DD454
+	// Token: 0x0600256D RID: 9581 RVA: 0x000E564C File Offset: 0x000E384C
 	protected void RemoveAxisHandle_Implementation(string axisName)
 	{
 		TsAxisHandle axisHandle = this.GetAxisHandle(axisName);
@@ -880,31 +804,27 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		this.AxisHandleMap.Remove(axisName);
 	}
 
-	// Token: 0x060024B7 RID: 9399 RVA: 0x000DF280 File Offset: 0x000DD480
+	// Token: 0x0600256E RID: 9582 RVA: 0x000E5678 File Offset: 0x000E3878
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	[return: Nullable(2)]
 	protected unsafe virtual TsAxisHandle GetAxisHandle(string actionName)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetAxisHandle"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsBasePlayerController.__GetAxisHandle_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsBasePlayerController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetAxisHandle"), TsBasePlayerController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsBasePlayerController.__GetAxisHandle_FunctionParams*)ptr + 15L / (long)sizeof(TsBasePlayerController.__GetAxisHandle_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			FString.CopyFrom((void*)(&ptr2->actionName), actionName);
+			return this.GetAxisHandle_Implementation(actionName);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		TsAxisHandle orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<TsAxisHandle>(ptr2->__Result);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsBasePlayerController.__GetAxisHandle_FunctionParams* ptr = stackalloc TsBasePlayerController.__GetAxisHandle_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsBasePlayerController.__GetAxisHandle_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		FString.CopyFrom((void*)(&ptr->actionName), actionName);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		TsAxisHandle orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<TsAxisHandle>(ptr->__Result);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return orCreateUObjectByNativePointer;
 	}
 
-	// Token: 0x060024B8 RID: 9400 RVA: 0x000DF307 File Offset: 0x000DD507
+	// Token: 0x0600256F RID: 9583 RVA: 0x000E5715 File Offset: 0x000E3915
 	[return: Nullable(2)]
 	protected TsAxisHandle GetAxisHandle_Implementation(string actionName)
 	{
@@ -916,7 +836,7 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		return axisHandleMap.Get(actionName);
 	}
 
-	// Token: 0x060024B9 RID: 9401 RVA: 0x000DF31C File Offset: 0x000DD51C
+	// Token: 0x06002570 RID: 9584 RVA: 0x000E572C File Offset: 0x000E392C
 	private void ClearAxisHandle()
 	{
 		if (!Info.Instance.UseFastInputCallback)
@@ -946,7 +866,7 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		this.TsAxisHandleMap.Clear();
 	}
 
-	// Token: 0x060024BA RID: 9402 RVA: 0x000DF3F8 File Offset: 0x000DD5F8
+	// Token: 0x06002571 RID: 9585 RVA: 0x000E5808 File Offset: 0x000E3A08
 	[NullableContext(2)]
 	public virtual Vector2D GetInputPosition(int touchId = 0)
 	{
@@ -961,7 +881,7 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		return null;
 	}
 
-	// Token: 0x060024BB RID: 9403 RVA: 0x000DF424 File Offset: 0x000DD624
+	// Token: 0x06002572 RID: 9586 RVA: 0x000E5834 File Offset: 0x000E3A34
 	[NullableContext(2)]
 	public virtual Vector2D GetCursorPosition()
 	{
@@ -976,7 +896,7 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		return this.CurrentInputPosition;
 	}
 
-	// Token: 0x060024BC RID: 9404 RVA: 0x000DF46C File Offset: 0x000DD66C
+	// Token: 0x06002573 RID: 9587 RVA: 0x000E587C File Offset: 0x000E3A7C
 	[NullableContext(2)]
 	public virtual Vector2D GetTouchPosition(int touchId)
 	{
@@ -989,30 +909,26 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		return this.CurrentInputPosition;
 	}
 
-	// Token: 0x060024BD RID: 9405 RVA: 0x000DF4B4 File Offset: 0x000DD6B4
+	// Token: 0x06002574 RID: 9588 RVA: 0x000E58C4 File Offset: 0x000E3AC4
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual bool IsInTouch(float touchId)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("IsInTouch"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsBasePlayerController.__IsInTouch_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsBasePlayerController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("IsInTouch"), TsBasePlayerController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsBasePlayerController.__IsInTouch_FunctionParams*)ptr + 15L / (long)sizeof(TsBasePlayerController.__IsInTouch_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->touchId = touchId;
+			return this.IsInTouch_Implementation(touchId);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsBasePlayerController.__IsInTouch_FunctionParams* ptr = stackalloc TsBasePlayerController.__IsInTouch_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsBasePlayerController.__IsInTouch_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->touchId = touchId;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x060024BE RID: 9406 RVA: 0x000DF530 File Offset: 0x000DD730
+	// Token: 0x06002575 RID: 9589 RVA: 0x000E5958 File Offset: 0x000E3B58
 	protected bool IsInTouch_Implementation(float touchId)
 	{
 		float num = 0f;
@@ -1022,34 +938,31 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		return result;
 	}
 
-	// Token: 0x060024BF RID: 9407 RVA: 0x000DF55C File Offset: 0x000DD75C
+	// Token: 0x06002576 RID: 9590 RVA: 0x000E5984 File Offset: 0x000E3B84
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void SetIsPrintKeyName(bool bPrintKeyName)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetIsPrintKeyName"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsBasePlayerController.__SetIsPrintKeyName_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsBasePlayerController) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetIsPrintKeyName"), TsBasePlayerController.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsBasePlayerController.__SetIsPrintKeyName_FunctionParams*)ptr + 15L / (long)sizeof(TsBasePlayerController.__SetIsPrintKeyName_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->bPrintKeyName = bPrintKeyName;
+			this.SetIsPrintKeyName_Implementation(bPrintKeyName);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsBasePlayerController.__SetIsPrintKeyName_FunctionParams* ptr = stackalloc TsBasePlayerController.__SetIsPrintKeyName_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsBasePlayerController.__SetIsPrintKeyName_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->bPrintKeyName = bPrintKeyName;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x060024C0 RID: 9408 RVA: 0x000DF5D2 File Offset: 0x000DD7D2
+	// Token: 0x06002577 RID: 9591 RVA: 0x000E5A10 File Offset: 0x000E3C10
 	protected void SetIsPrintKeyName_Implementation(bool bPrintKeyName)
 	{
 		this.PlayerInputHandle.IsPrintKeyName = bPrintKeyName;
 	}
 
-	// Token: 0x060024C1 RID: 9409 RVA: 0x000DF5E0 File Offset: 0x000DD7E0
+	// Token: 0x06002578 RID: 9592 RVA: 0x000E5A1E File Offset: 0x000E3C1E
 	public virtual void SimulateTouch(ETouchIndex touchIndex, FVector position, bool isPress)
 	{
 		if (isPress)
@@ -1060,7 +973,7 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		this.PlayerInputHandle.TouchEnd(touchIndex, position);
 	}
 
-	// Token: 0x060024C2 RID: 9410 RVA: 0x000DF600 File Offset: 0x000DD800
+	// Token: 0x06002579 RID: 9593 RVA: 0x000E5A3E File Offset: 0x000E3C3E
 	public virtual void SetCustomAction(string keyName, string actionName)
 	{
 		PlayerInputHandle playerInputHandle = this.PlayerInputHandle;
@@ -1071,7 +984,7 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		playerInputHandle.SetCustomAction(keyName, actionName);
 	}
 
-	// Token: 0x060024C3 RID: 9411 RVA: 0x000DF614 File Offset: 0x000DD814
+	// Token: 0x0600257A RID: 9594 RVA: 0x000E5A52 File Offset: 0x000E3C52
 	public virtual void ResetAllCustomAction(string keyName)
 	{
 		PlayerInputHandle playerInputHandle = this.PlayerInputHandle;
@@ -1082,7 +995,7 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		playerInputHandle.ResetAllCustomAction(keyName);
 	}
 
-	// Token: 0x060024C4 RID: 9412 RVA: 0x000DF627 File Offset: 0x000DD827
+	// Token: 0x0600257B RID: 9595 RVA: 0x000E5A65 File Offset: 0x000E3C65
 	public virtual void ResetCustomAction(string keyName, string actionName)
 	{
 		PlayerInputHandle playerInputHandle = this.PlayerInputHandle;
@@ -1093,7 +1006,7 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		playerInputHandle.ResetCustomAction(keyName, actionName);
 	}
 
-	// Token: 0x060024C5 RID: 9413 RVA: 0x000DF63B File Offset: 0x000DD83B
+	// Token: 0x0600257C RID: 9596 RVA: 0x000E5A79 File Offset: 0x000E3C79
 	public virtual void SetActionEnable(string actionName, bool bEnable)
 	{
 		PlayerInputHandle playerInputHandle = this.PlayerInputHandle;
@@ -1104,7 +1017,7 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		playerInputHandle.SetActionEnable(actionName, bEnable);
 	}
 
-	// Token: 0x060024C6 RID: 9414 RVA: 0x000DF64F File Offset: 0x000DD84F
+	// Token: 0x0600257D RID: 9597 RVA: 0x000E5A8D File Offset: 0x000E3C8D
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -1120,7 +1033,7 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		return playerInputHandle.GetCurrentPlatformCustomActionKeyNameList(actionName);
 	}
 
-	// Token: 0x060024C7 RID: 9415 RVA: 0x000DF663 File Offset: 0x000DD863
+	// Token: 0x0600257E RID: 9598 RVA: 0x000E5AA1 File Offset: 0x000E3CA1
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsBasePlayerController._ClassPtr == IntPtr.Zero)
@@ -1130,83 +1043,83 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		return TsBasePlayerController._ClassPtr;
 	}
 
-	// Token: 0x060024C8 RID: 9416 RVA: 0x000DF688 File Offset: 0x000DD888
+	// Token: 0x0600257F RID: 9599 RVA: 0x000E5AC8 File Offset: 0x000E3CC8
 	public TsBasePlayerController() : this(BuiltinUtils.AllocNativeUObject(TsBasePlayerController.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x060024C9 RID: 9417 RVA: 0x000DF6B0 File Offset: 0x000DD8B0
+	// Token: 0x06002580 RID: 9600 RVA: 0x000E5AF0 File Offset: 0x000E3CF0
 	public TsBasePlayerController(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsBasePlayerController.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x060024CA RID: 9418 RVA: 0x000DF6E3 File Offset: 0x000DD8E3
+	// Token: 0x06002581 RID: 9601 RVA: 0x000E5B23 File Offset: 0x000E3D23
 	protected TsBasePlayerController(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x060024CB RID: 9419 RVA: 0x000DF6EC File Offset: 0x000DD8EC
+	// Token: 0x06002582 RID: 9602 RVA: 0x000E5B2C File Offset: 0x000E3D2C
 	protected virtual void __CPPCALL_ReceiveSetupInputComponent_Implementation()
 	{
 		this.ReceiveSetupInputComponent_Implementation();
 	}
 
-	// Token: 0x060024CC RID: 9420 RVA: 0x000DF6F4 File Offset: 0x000DD8F4
+	// Token: 0x06002583 RID: 9603 RVA: 0x000E5B34 File Offset: 0x000E3D34
 	protected virtual void __CPPCALL_ReceiveBeginPlay_Implementation()
 	{
 		this.ReceiveBeginPlay_Implementation();
 	}
 
-	// Token: 0x060024CD RID: 9421 RVA: 0x000DF6FC File Offset: 0x000DD8FC
+	// Token: 0x06002584 RID: 9604 RVA: 0x000E5B3C File Offset: 0x000E3D3C
 	protected virtual void __CPPCALL_ReceiveDestroyed_Implementation()
 	{
 		this.ReceiveDestroyed_Implementation();
 	}
 
-	// Token: 0x060024CE RID: 9422 RVA: 0x000DF704 File Offset: 0x000DD904
+	// Token: 0x06002585 RID: 9605 RVA: 0x000E5B44 File Offset: 0x000E3D44
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveTick_Implementation(AActor.__ReceiveTick_FunctionParams* __Params)
 	{
 		this.ReceiveTick_Implementation(__Params->DeltaSeconds);
 	}
 
-	// Token: 0x060024CF RID: 9423 RVA: 0x000DF712 File Offset: 0x000DD912
+	// Token: 0x06002586 RID: 9606 RVA: 0x000E5B52 File Offset: 0x000E3D52
 	protected virtual void __CPPCALL_OnReceivedPlayer_Implementation()
 	{
 		this.OnReceivedPlayer_Implementation();
 	}
 
-	// Token: 0x060024D0 RID: 9424 RVA: 0x000DF71A File Offset: 0x000DD91A
+	// Token: 0x06002587 RID: 9607 RVA: 0x000E5B5A File Offset: 0x000E3D5A
 	protected virtual void __CPPCALL_InitInputHandle_Implementation()
 	{
 		this.InitInputHandle_Implementation();
 	}
 
-	// Token: 0x060024D1 RID: 9425 RVA: 0x000DF722 File Offset: 0x000DD922
+	// Token: 0x06002588 RID: 9608 RVA: 0x000E5B62 File Offset: 0x000E3D62
 	protected virtual void __CPPCALL_AddInputBinding_Implementation()
 	{
 		this.AddInputBinding_Implementation();
 	}
 
-	// Token: 0x060024D2 RID: 9426 RVA: 0x000DF72A File Offset: 0x000DD92A
+	// Token: 0x06002589 RID: 9609 RVA: 0x000E5B6A File Offset: 0x000E3D6A
 	protected virtual void __CPPCALL_ClearInputBinding_Implementation()
 	{
 		this.ClearInputBinding_Implementation();
 	}
 
-	// Token: 0x060024D3 RID: 9427 RVA: 0x000DF732 File Offset: 0x000DD932
+	// Token: 0x0600258A RID: 9610 RVA: 0x000E5B72 File Offset: 0x000E3D72
 	protected virtual void __CPPCALL_OnSetupInputComponent_Implementation()
 	{
 		this.OnSetupInputComponent_Implementation();
 	}
 
-	// Token: 0x060024D4 RID: 9428 RVA: 0x000DF73A File Offset: 0x000DD93A
+	// Token: 0x0600258B RID: 9611 RVA: 0x000E5B7A File Offset: 0x000E3D7A
 	protected virtual void __CPPCALL_BindTouchHandle_Implementation()
 	{
 		this.BindTouchHandle_Implementation();
 	}
 
-	// Token: 0x060024D5 RID: 9429 RVA: 0x000DF744 File Offset: 0x000DD944
+	// Token: 0x0600258C RID: 9612 RVA: 0x000E5B84 File Offset: 0x000E3D84
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_OnTouchBegin_Implementation(TsBasePlayerController.__OnTouchBegin_FunctionParams* __Params)
 	{
@@ -1214,7 +1127,7 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		this.OnTouchBegin_Implementation(touchIndex, __Params->position);
 	}
 
-	// Token: 0x060024D6 RID: 9430 RVA: 0x000DF768 File Offset: 0x000DD968
+	// Token: 0x0600258D RID: 9613 RVA: 0x000E5BA8 File Offset: 0x000E3DA8
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_OnTouchEnd_Implementation(TsBasePlayerController.__OnTouchEnd_FunctionParams* __Params)
 	{
@@ -1222,7 +1135,7 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		this.OnTouchEnd_Implementation(touchIndex, __Params->position);
 	}
 
-	// Token: 0x060024D7 RID: 9431 RVA: 0x000DF78C File Offset: 0x000DD98C
+	// Token: 0x0600258E RID: 9614 RVA: 0x000E5BCC File Offset: 0x000E3DCC
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_OnTouchMove_Implementation(TsBasePlayerController.__OnTouchMove_FunctionParams* __Params)
 	{
@@ -1230,7 +1143,7 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		this.OnTouchMove_Implementation(touchIndex, __Params->position);
 	}
 
-	// Token: 0x060024D8 RID: 9432 RVA: 0x000DF7B0 File Offset: 0x000DD9B0
+	// Token: 0x0600258F RID: 9615 RVA: 0x000E5BF0 File Offset: 0x000E3DF0
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_OnPressAnyKey_Implementation(TsBasePlayerController.__OnPressAnyKey_FunctionParams* __Params)
 	{
@@ -1238,7 +1151,7 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		this.OnPressAnyKey_Implementation(key);
 	}
 
-	// Token: 0x060024D9 RID: 9433 RVA: 0x000DF7D4 File Offset: 0x000DD9D4
+	// Token: 0x06002590 RID: 9616 RVA: 0x000E5C14 File Offset: 0x000E3E14
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_OnReleaseAnyKey_Implementation(TsBasePlayerController.__OnReleaseAnyKey_FunctionParams* __Params)
 	{
@@ -1246,7 +1159,7 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		this.OnReleaseAnyKey_Implementation(key);
 	}
 
-	// Token: 0x060024DA RID: 9434 RVA: 0x000DF7F8 File Offset: 0x000DD9F8
+	// Token: 0x06002591 RID: 9617 RVA: 0x000E5C38 File Offset: 0x000E3E38
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_RemoveActionHandle_Implementation(TsBasePlayerController.__RemoveActionHandle_FunctionParams* __Params)
 	{
@@ -1254,7 +1167,7 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		this.RemoveActionHandle_Implementation(actionName);
 	}
 
-	// Token: 0x060024DB RID: 9435 RVA: 0x000DF81C File Offset: 0x000DDA1C
+	// Token: 0x06002592 RID: 9618 RVA: 0x000E5C5C File Offset: 0x000E3E5C
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_GetActionHandle_Implementation(TsBasePlayerController.__GetActionHandle_FunctionParams* __Params)
 	{
@@ -1264,7 +1177,7 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		ptr = ((actionHandle_Implementation != null) ? actionHandle_Implementation.NativePtr : ((IntPtr)0));
 	}
 
-	// Token: 0x060024DC RID: 9436 RVA: 0x000DF854 File Offset: 0x000DDA54
+	// Token: 0x06002593 RID: 9619 RVA: 0x000E5C94 File Offset: 0x000E3E94
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_RemoveAxisHandle_Implementation(TsBasePlayerController.__RemoveAxisHandle_FunctionParams* __Params)
 	{
@@ -1272,7 +1185,7 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		this.RemoveAxisHandle_Implementation(axisName);
 	}
 
-	// Token: 0x060024DD RID: 9437 RVA: 0x000DF878 File Offset: 0x000DDA78
+	// Token: 0x06002594 RID: 9620 RVA: 0x000E5CB8 File Offset: 0x000E3EB8
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_GetAxisHandle_Implementation(TsBasePlayerController.__GetAxisHandle_FunctionParams* __Params)
 	{
@@ -1282,21 +1195,21 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 		ptr = ((axisHandle_Implementation != null) ? axisHandle_Implementation.NativePtr : ((IntPtr)0));
 	}
 
-	// Token: 0x060024DE RID: 9438 RVA: 0x000DF8AE File Offset: 0x000DDAAE
+	// Token: 0x06002595 RID: 9621 RVA: 0x000E5CEE File Offset: 0x000E3EEE
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_IsInTouch_Implementation(TsBasePlayerController.__IsInTouch_FunctionParams* __Params)
 	{
 		__Params->__Result = this.IsInTouch_Implementation(__Params->touchId);
 	}
 
-	// Token: 0x060024DF RID: 9439 RVA: 0x000DF8C2 File Offset: 0x000DDAC2
+	// Token: 0x06002596 RID: 9622 RVA: 0x000E5D02 File Offset: 0x000E3F02
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_SetIsPrintKeyName_Implementation(TsBasePlayerController.__SetIsPrintKeyName_FunctionParams* __Params)
 	{
 		this.SetIsPrintKeyName_Implementation(__Params->bPrintKeyName);
 	}
 
-	// Token: 0x040023E3 RID: 9187
+	// Token: 0x04002461 RID: 9313
 	[Nullable(new byte[]
 	{
 		2,
@@ -1305,7 +1218,7 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 	})]
 	private Dictionary<string, TsPureActionHandle> TsActionHandleMap;
 
-	// Token: 0x040023E4 RID: 9188
+	// Token: 0x04002462 RID: 9314
 	[Nullable(new byte[]
 	{
 		2,
@@ -1314,11 +1227,11 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 	})]
 	private Dictionary<string, TsPureAxisHandle> TsAxisHandleMap;
 
-	// Token: 0x040023E5 RID: 9189
+	// Token: 0x04002463 RID: 9315
 	[Nullable(2)]
 	private Vector2D CurrentInputPosition;
 
-	// Token: 0x040023E6 RID: 9190
+	// Token: 0x04002464 RID: 9316
 	[Nullable(new byte[]
 	{
 		2,
@@ -1327,7 +1240,7 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 	})]
 	private Action<string, bool, FKey> OnInputActionCallback;
 
-	// Token: 0x040023E7 RID: 9191
+	// Token: 0x04002465 RID: 9317
 	[Nullable(new byte[]
 	{
 		2,
@@ -1335,7 +1248,7 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 	})]
 	private Action<string, float> OnInputAxisCallback;
 
-	// Token: 0x040023E8 RID: 9192
+	// Token: 0x04002466 RID: 9318
 	[Nullable(new byte[]
 	{
 		2,
@@ -1343,37 +1256,37 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 	})]
 	private Action<string, float, bool> OnInputAxisCallbackNew;
 
-	// Token: 0x040023E9 RID: 9193
+	// Token: 0x04002467 RID: 9319
 	[Nullable(2)]
 	private PlayerInputHandle PlayerInputHandle;
 
-	// Token: 0x040023EA RID: 9194
+	// Token: 0x04002468 RID: 9320
 	[Nullable(2)]
 	private TsPureKeyHandle TsKeyHandle;
 
-	// Token: 0x040023EB RID: 9195
+	// Token: 0x04002469 RID: 9321
 	[Nullable(2)]
 	private TsPureTouchHandle TsTouchHandle;
 
-	// Token: 0x040023EC RID: 9196
+	// Token: 0x0400246A RID: 9322
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Controller/TsBasePlayerController.TsBasePlayerController_C";
 
-	// Token: 0x040023ED RID: 9197
+	// Token: 0x0400246B RID: 9323
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x040023EE RID: 9198
+	// Token: 0x0400246C RID: 9324
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x040023EF RID: 9199
+	// Token: 0x0400246D RID: 9325
 	private static int __PropertyOffset_ActionHandleClass;
 
-	// Token: 0x040023F0 RID: 9200
+	// Token: 0x0400246E RID: 9326
 	private static int __PropertyOffset_AxisHandleClass;
 
-	// Token: 0x040023F1 RID: 9201
+	// Token: 0x0400246F RID: 9327
 	private static int __PropertyOffset_ActionHandleMap;
 
-	// Token: 0x040023F2 RID: 9202
+	// Token: 0x04002470 RID: 9328
 	[Nullable(new byte[]
 	{
 		2,
@@ -1382,10 +1295,10 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 	})]
 	private TMap<string, TsActionHandle> _ActionHandleMap;
 
-	// Token: 0x040023F3 RID: 9203
+	// Token: 0x04002471 RID: 9329
 	private static int __PropertyOffset_AxisHandleMap;
 
-	// Token: 0x040023F4 RID: 9204
+	// Token: 0x04002472 RID: 9330
 	[Nullable(new byte[]
 	{
 		2,
@@ -1394,147 +1307,147 @@ public class TsBasePlayerController : ABasePlayerController, IUnrealUObject, IUn
 	})]
 	private TMap<string, TsAxisHandle> _AxisHandleMap;
 
-	// Token: 0x02007446 RID: 29766
+	// Token: 0x020065D7 RID: 26071
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __OnTouchBegin_FunctionParams
 	{
-		// Token: 0x0402682E RID: 157742
+		// Token: 0x04021B6C RID: 138092
 		[FieldOffset(0)]
 		public byte touchIndex;
 
-		// Token: 0x0402682F RID: 157743
+		// Token: 0x04021B6D RID: 138093
 		[FieldOffset(4)]
 		public FVector position;
 	}
 
-	// Token: 0x02007447 RID: 29767
+	// Token: 0x020065D8 RID: 26072
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __OnTouchEnd_FunctionParams
 	{
-		// Token: 0x04026830 RID: 157744
+		// Token: 0x04021B6E RID: 138094
 		[FieldOffset(0)]
 		public byte touchIndex;
 
-		// Token: 0x04026831 RID: 157745
+		// Token: 0x04021B6F RID: 138095
 		[FieldOffset(4)]
 		public FVector position;
 	}
 
-	// Token: 0x02007448 RID: 29768
+	// Token: 0x020065D9 RID: 26073
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __OnTouchMove_FunctionParams
 	{
-		// Token: 0x04026832 RID: 157746
+		// Token: 0x04021B70 RID: 138096
 		[FieldOffset(0)]
 		public byte touchIndex;
 
-		// Token: 0x04026833 RID: 157747
+		// Token: 0x04021B71 RID: 138097
 		[FieldOffset(4)]
 		public FVector position;
 	}
 
-	// Token: 0x02007449 RID: 29769
+	// Token: 0x020065DA RID: 26074
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __OnPressAnyKey_FunctionParams
 	{
-		// Token: 0x04026834 RID: 157748
+		// Token: 0x04021B72 RID: 138098
 		[FieldOffset(0)]
 		public byte key;
 	}
 
-	// Token: 0x0200744A RID: 29770
+	// Token: 0x020065DB RID: 26075
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __OnReleaseAnyKey_FunctionParams
 	{
-		// Token: 0x04026835 RID: 157749
+		// Token: 0x04021B73 RID: 138099
 		[FieldOffset(0)]
 		public byte key;
 	}
 
-	// Token: 0x0200744B RID: 29771
+	// Token: 0x020065DC RID: 26076
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __RemoveActionHandle_FunctionParams
 	{
-		// Token: 0x04026836 RID: 157750
+		// Token: 0x04021B74 RID: 138100
 		[FieldOffset(0)]
 		public FString actionName;
 	}
 
-	// Token: 0x0200744C RID: 29772
+	// Token: 0x020065DD RID: 26077
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetActionHandle_FunctionParams
 	{
-		// Token: 0x04026837 RID: 157751
+		// Token: 0x04021B75 RID: 138101
 		[FieldOffset(0)]
 		public FString actionName;
 
-		// Token: 0x04026838 RID: 157752
+		// Token: 0x04021B76 RID: 138102
 		[FieldOffset(16)]
 		public IntPtr __Result;
 	}
 
-	// Token: 0x0200744D RID: 29773
+	// Token: 0x020065DE RID: 26078
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __RemoveAxisHandle_FunctionParams
 	{
-		// Token: 0x04026839 RID: 157753
+		// Token: 0x04021B77 RID: 138103
 		[FieldOffset(0)]
 		public FString axisName;
 	}
 
-	// Token: 0x0200744E RID: 29774
+	// Token: 0x020065DF RID: 26079
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetAxisHandle_FunctionParams
 	{
-		// Token: 0x0402683A RID: 157754
+		// Token: 0x04021B78 RID: 138104
 		[FieldOffset(0)]
 		public FString actionName;
 
-		// Token: 0x0402683B RID: 157755
+		// Token: 0x04021B79 RID: 138105
 		[FieldOffset(16)]
 		public IntPtr __Result;
 	}
 
-	// Token: 0x0200744F RID: 29775
+	// Token: 0x020065E0 RID: 26080
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __IsInTouch_FunctionParams
 	{
-		// Token: 0x0402683C RID: 157756
+		// Token: 0x04021B7A RID: 138106
 		[FieldOffset(0)]
 		public float touchId;
 
-		// Token: 0x0402683D RID: 157757
+		// Token: 0x04021B7B RID: 138107
 		[FieldOffset(4)]
 		public bool __Result;
 	}
 
-	// Token: 0x02007450 RID: 29776
+	// Token: 0x020065E1 RID: 26081
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 1)]
 	protected ref struct __SetIsPrintKeyName_FunctionParams
 	{
-		// Token: 0x0402683E RID: 157758
+		// Token: 0x04021B7C RID: 138108
 		[FieldOffset(0)]
 		public bool bPrintKeyName;
 	}

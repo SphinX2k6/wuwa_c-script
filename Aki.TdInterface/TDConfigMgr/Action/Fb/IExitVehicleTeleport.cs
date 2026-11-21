@@ -5,13 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029BE RID: 10686
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02002CAB RID: 11435
 	public class IExitVehicleTeleport : IExitVehicleType
 	{
-		// Token: 0x0600EC4B RID: 60491 RVA: 0x00228333 File Offset: 0x00226533
-		[NullableContext(1)]
+		// Token: 0x0600FAE2 RID: 64226 RVA: 0x00245CB7 File Offset: 0x00243EB7
 		public static IExitVehicleTeleport Create(IExitVehicleTeleport? instance)
 		{
 			if (instance == null)
@@ -24,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004A91 RID: 19089
-		// (get) Token: 0x0600EC4C RID: 60492 RVA: 0x00228352 File Offset: 0x00226552
+		// Token: 0x17004E3A RID: 20026
+		// (get) Token: 0x0600FAE3 RID: 64227 RVA: 0x00245CD6 File Offset: 0x00243ED6
 		public override EExitVehicleType Type
 		{
 			get
@@ -34,12 +31,10 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004A92 RID: 19090
-		// (get) Token: 0x0600EC4D RID: 60493 RVA: 0x0022835F File Offset: 0x0022655F
-		[Nullable(1)]
+		// Token: 0x17004E3B RID: 20027
+		// (get) Token: 0x0600FAE4 RID: 64228 RVA: 0x00245CE3 File Offset: 0x00243EE3
 		public virtual VectorInfo Pos
 		{
-			[NullableContext(1)]
 			get
 			{
 				if (this._PosInited)
@@ -52,10 +47,12 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004A93 RID: 19091
-		// (get) Token: 0x0600EC4E RID: 60494 RVA: 0x00228393 File Offset: 0x00226593
+		// Token: 0x17004E3C RID: 20028
+		// (get) Token: 0x0600FAE5 RID: 64229 RVA: 0x00245D17 File Offset: 0x00243F17
+		[Nullable(2)]
 		public virtual VectorInfo Rot
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this._RotInited)
@@ -68,19 +65,21 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008216 RID: 33302
+		// Token: 0x04008907 RID: 35079
 		private IExitVehicleTeleport Instance;
 
-		// Token: 0x04008217 RID: 33303
+		// Token: 0x04008908 RID: 35080
+		[Nullable(2)]
 		private VectorInfo _PosCache;
 
-		// Token: 0x04008218 RID: 33304
+		// Token: 0x04008909 RID: 35081
 		private bool _PosInited;
 
-		// Token: 0x04008219 RID: 33305
+		// Token: 0x0400890A RID: 35082
+		[Nullable(2)]
 		private VectorInfo _RotCache;
 
-		// Token: 0x0400821A RID: 33306
+		// Token: 0x0400890B RID: 35083
 		private bool _RotInited;
 	}
 }

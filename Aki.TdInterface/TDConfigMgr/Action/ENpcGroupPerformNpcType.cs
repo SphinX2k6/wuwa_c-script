@@ -3,15 +3,15 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001654 RID: 5716
+	// Token: 0x020017C2 RID: 6082
 	[EnumExtensions]
 	public enum ENpcGroupPerformNpcType
 	{
-		// Token: 0x04004C90 RID: 19600
+		// Token: 0x04005086 RID: 20614
 		LevelBCommonMale,
-		// Token: 0x04004C91 RID: 19601
+		// Token: 0x04005087 RID: 20615
 		LevelBCommonFemale,
-		// Token: 0x04004C92 RID: 19602
+		// Token: 0x04005088 RID: 20616
 		EcologyBear
 	}
 }

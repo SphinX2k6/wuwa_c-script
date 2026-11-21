@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004F61 RID: 20321
+	// Token: 0x02005490 RID: 21648
 	public struct ICategoryMatchingCondition : IFlatbufferObject
 	{
-		// Token: 0x170092B5 RID: 37557
-		// (get) Token: 0x06020399 RID: 131993 RVA: 0x0047BDFE File Offset: 0x00479FFE
+		// Token: 0x17009A2E RID: 39470
+		// (get) Token: 0x060220EB RID: 139499 RVA: 0x004B1DEE File Offset: 0x004AFFEE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602039A RID: 131994 RVA: 0x0047BE0B File Offset: 0x0047A00B
+		// Token: 0x060220EC RID: 139500 RVA: 0x004B1DFB File Offset: 0x004AFFFB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602039B RID: 131995 RVA: 0x0047BE14 File Offset: 0x0047A014
+		// Token: 0x060220ED RID: 139501 RVA: 0x004B1E04 File Offset: 0x004B0004
 		public static ICategoryMatchingCondition GetRootAsICategoryMatchingCondition(ByteBuffer _bb)
 		{
 			return ICategoryMatchingCondition.GetRootAsICategoryMatchingCondition(_bb, default(ICategoryMatchingCondition));
 		}
 
-		// Token: 0x0602039C RID: 131996 RVA: 0x0047BE30 File Offset: 0x0047A030
+		// Token: 0x060220EE RID: 139502 RVA: 0x004B1E20 File Offset: 0x004B0020
 		public static ICategoryMatchingCondition GetRootAsICategoryMatchingCondition(ByteBuffer _bb, ICategoryMatchingCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602039D RID: 131997 RVA: 0x0047BE4D File Offset: 0x0047A04D
+		// Token: 0x060220EF RID: 139503 RVA: 0x004B1E3D File Offset: 0x004B003D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602039E RID: 131998 RVA: 0x0047BE5C File Offset: 0x0047A05C
+		// Token: 0x060220F0 RID: 139504 RVA: 0x004B1E4C File Offset: 0x004B004C
 		public ICategoryMatchingCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170092B6 RID: 37558
-		// (get) Token: 0x0602039F RID: 131999 RVA: 0x0047BE6C File Offset: 0x0047A06C
+		// Token: 0x17009A2F RID: 39471
+		// (get) Token: 0x060220F1 RID: 139505 RVA: 0x004B1E5C File Offset: 0x004B005C
 		public IDynamicEntityMatch? EntityMatch
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170092B7 RID: 37559
-		// (get) Token: 0x060203A0 RID: 132000 RVA: 0x0047BECC File Offset: 0x0047A0CC
+		// Token: 0x17009A30 RID: 39472
+		// (get) Token: 0x060220F2 RID: 139506 RVA: 0x004B1EBC File Offset: 0x004B00BC
 		public string SelfState
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060203A1 RID: 132001 RVA: 0x0047BF03 File Offset: 0x0047A103
+		// Token: 0x060220F3 RID: 139507 RVA: 0x004B1EF3 File Offset: 0x004B00F3
 		public Span<byte> GetSelfStateBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x060203A2 RID: 132002 RVA: 0x0047BF12 File Offset: 0x0047A112
+		// Token: 0x060220F4 RID: 139508 RVA: 0x004B1F02 File Offset: 0x004B0102
 		public byte[] GetSelfStateArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x060203A3 RID: 132003 RVA: 0x0047BF20 File Offset: 0x0047A120
+		// Token: 0x060220F5 RID: 139509 RVA: 0x004B1F10 File Offset: 0x004B0110
 		public static Offset<ICategoryMatchingCondition> CreateICategoryMatchingCondition(FlatBufferBuilder builder, Offset<IDynamicEntityMatch> EntityMatchOffset = default(Offset<IDynamicEntityMatch>), StringOffset SelfStateOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -98,31 +98,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ICategoryMatchingCondition.EndICategoryMatchingCondition(builder);
 		}
 
-		// Token: 0x060203A4 RID: 132004 RVA: 0x0047BF3D File Offset: 0x0047A13D
+		// Token: 0x060220F6 RID: 139510 RVA: 0x004B1F2D File Offset: 0x004B012D
 		public static void StartICategoryMatchingCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060203A5 RID: 132005 RVA: 0x0047BF46 File Offset: 0x0047A146
+		// Token: 0x060220F7 RID: 139511 RVA: 0x004B1F36 File Offset: 0x004B0136
 		public static void AddEntityMatch(FlatBufferBuilder builder, Offset<IDynamicEntityMatch> entityMatchOffset)
 		{
 			builder.AddOffset(0, entityMatchOffset.Value, 0);
 		}
 
-		// Token: 0x060203A6 RID: 132006 RVA: 0x0047BF56 File Offset: 0x0047A156
+		// Token: 0x060220F8 RID: 139512 RVA: 0x004B1F46 File Offset: 0x004B0146
 		public static void AddSelfState(FlatBufferBuilder builder, StringOffset selfStateOffset)
 		{
 			builder.AddOffset(1, selfStateOffset.Value, 0);
 		}
 
-		// Token: 0x060203A7 RID: 132007 RVA: 0x0047BF66 File Offset: 0x0047A166
+		// Token: 0x060220F9 RID: 139513 RVA: 0x004B1F56 File Offset: 0x004B0156
 		public static Offset<ICategoryMatchingCondition> EndICategoryMatchingCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<ICategoryMatchingCondition>(builder.EndTable());
 		}
 
-		// Token: 0x060203A8 RID: 132008 RVA: 0x0047BF74 File Offset: 0x0047A174
+		// Token: 0x060220FA RID: 139514 RVA: 0x004B1F64 File Offset: 0x004B0164
 		public ICategoryMatchingConditionT UnPack()
 		{
 			ICategoryMatchingConditionT categoryMatchingConditionT = new ICategoryMatchingConditionT();
@@ -130,14 +130,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return categoryMatchingConditionT;
 		}
 
-		// Token: 0x060203A9 RID: 132009 RVA: 0x0047BF90 File Offset: 0x0047A190
+		// Token: 0x060220FB RID: 139515 RVA: 0x004B1F80 File Offset: 0x004B0180
 		public void UnPackTo(ICategoryMatchingConditionT _o)
 		{
 			_o.EntityMatch = ((this.EntityMatch != null) ? this.EntityMatch.Value.UnPack() : null);
 			_o.SelfState = this.SelfState;
 		}
 
-		// Token: 0x060203AA RID: 132010 RVA: 0x0047BFD8 File Offset: 0x0047A1D8
+		// Token: 0x060220FC RID: 139516 RVA: 0x004B1FC8 File Offset: 0x004B01C8
 		public static Offset<ICategoryMatchingCondition> Pack(FlatBufferBuilder builder, ICategoryMatchingConditionT _o)
 		{
 			if (_o == null)
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ICategoryMatchingCondition.CreateICategoryMatchingCondition(builder, entityMatchOffset, selfStateOffset);
 		}
 
-		// Token: 0x0400DDF2 RID: 56818
+		// Token: 0x0400E99C RID: 59804
 		private Table __p;
 	}
 }

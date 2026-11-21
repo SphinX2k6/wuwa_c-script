@@ -2,15 +2,15 @@
 
 namespace CSharpScript.Game.Module.RoleMorph.Handle
 {
-	// Token: 0x02004D6C RID: 19820
+	// Token: 0x02003D35 RID: 15669
 	public class RoleMorphHandleBase
 	{
-		// Token: 0x060333C4 RID: 209860 RVA: 0x00BF3115 File Offset: 0x00BF1315
+		// Token: 0x06028232 RID: 164402 RVA: 0x00B3C339 File Offset: 0x00B3A539
 		public virtual void BeginMorph()
 		{
 		}
 
-		// Token: 0x060333C5 RID: 209861 RVA: 0x00BF3117 File Offset: 0x00BF1317
+		// Token: 0x06028233 RID: 164403 RVA: 0x00B3C33B File Offset: 0x00B3A53B
 		public virtual void EndMorph()
 		{
 		}

@@ -7,18 +7,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.FilterSort.Sort.AttributeSort
 {
-	// Token: 0x02005B3C RID: 23356
+	// Token: 0x02004B1D RID: 19229
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class SortItem : UiPanelBase
 	{
-		// Token: 0x0603B224 RID: 242212 RVA: 0x00E19BA0 File Offset: 0x00E17DA0
+		// Token: 0x06030196 RID: 197014 RVA: 0x00D6A8B8 File Offset: 0x00D68AB8
 		public SortItem(UUIItem uiItem)
 		{
 			base.CreateThenShowByActor(uiItem.GetOwner(), null);
 		}
 
-		// Token: 0x0603B225 RID: 242213 RVA: 0x00E19BC8 File Offset: 0x00E17DC8
+		// Token: 0x06030197 RID: 197015 RVA: 0x00D6A8E0 File Offset: 0x00D68AE0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.FilterSort.Sort.AttributeSort
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B226 RID: 242214 RVA: 0x00E19CB0 File Offset: 0x00E17EB0
+		// Token: 0x06030198 RID: 197016 RVA: 0x00D6A9C8 File Offset: 0x00D68BC8
 		private void ToggleEvent(EToggleState state)
 		{
 			TSortItemToggleEventWithState toggleFunction = this.ToggleFunction;
@@ -54,32 +54,32 @@ namespace CSharpScript.Game.Module.FilterSort.Sort.AttributeSort
 			toggleFunction(state, this.RuleId, this.Name);
 		}
 
-		// Token: 0x0603B227 RID: 242215 RVA: 0x00E19CCF File Offset: 0x00E17ECF
+		// Token: 0x06030199 RID: 197017 RVA: 0x00D6A9E7 File Offset: 0x00D68BE7
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(1).CanExecuteChange.Bind(new Func<bool>(this.CanExecuteChange));
 		}
 
-		// Token: 0x0603B228 RID: 242216 RVA: 0x00E19CEE File Offset: 0x00E17EEE
+		// Token: 0x0603019A RID: 197018 RVA: 0x00D6AA06 File Offset: 0x00D68C06
 		private bool CanExecuteChange()
 		{
 			return base.GetExtendToggle(1).ToggleState == EToggleState.ETT_Checked || this.CanExecuteChangeInternal == null || this.CanExecuteChangeInternal();
 		}
 
-		// Token: 0x0603B229 RID: 242217 RVA: 0x00E19D16 File Offset: 0x00E17F16
+		// Token: 0x0603019B RID: 197019 RVA: 0x00D6AA2E File Offset: 0x00D68C2E
 		protected override void OnBeforeDestroy()
 		{
 			base.GetExtendToggle(1).CanExecuteChange.Unbind();
 		}
 
-		// Token: 0x0603B22A RID: 242218 RVA: 0x00E19D29 File Offset: 0x00E17F29
+		// Token: 0x0603019C RID: 197020 RVA: 0x00D6AA41 File Offset: 0x00D68C41
 		private void SetName()
 		{
 			this.Name = SortConfig.Instance.GetSortRuleName(this.RuleId, this.DataType);
 			base.GetText(0).SetText(this.Name, true);
 		}
 
-		// Token: 0x0603B22B RID: 242219 RVA: 0x00E19D5C File Offset: 0x00E17F5C
+		// Token: 0x0603019D RID: 197021 RVA: 0x00D6AA74 File Offset: 0x00D68C74
 		private void SetTexture()
 		{
 			int sortRuleAttributeId = SortConfig.Instance.GetSortRuleAttributeId(this.RuleId, this.DataType);
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.FilterSort.Sort.AttributeSort
 			uuiitem.SetChangeColor(bUseChangeColor, fcolor);
 		}
 
-		// Token: 0x0603B22C RID: 242220 RVA: 0x00E19DF4 File Offset: 0x00E17FF4
+		// Token: 0x0603019E RID: 197022 RVA: 0x00D6AB0C File Offset: 0x00D68D0C
 		private void SetToggleState(bool bSelected)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(1);
@@ -107,19 +107,19 @@ namespace CSharpScript.Game.Module.FilterSort.Sort.AttributeSort
 			extendToggle.SetToggleStateForce(state, false, false, false);
 		}
 
-		// Token: 0x0603B22D RID: 242221 RVA: 0x00E19E19 File Offset: 0x00E18019
+		// Token: 0x0603019F RID: 197023 RVA: 0x00D6AB31 File Offset: 0x00D68D31
 		public void SetToggleFunction(TSortItemToggleEventWithState toggleFunction)
 		{
 			this.ToggleFunction = toggleFunction;
 		}
 
-		// Token: 0x0603B22E RID: 242222 RVA: 0x00E19E22 File Offset: 0x00E18022
+		// Token: 0x060301A0 RID: 197024 RVA: 0x00D6AB3A File Offset: 0x00D68D3A
 		public void SetCanExecuteChange(TCanExecuteChangeSimple callback)
 		{
 			this.CanExecuteChangeInternal = callback;
 		}
 
-		// Token: 0x0603B22F RID: 242223 RVA: 0x00E19E2B File Offset: 0x00E1802B
+		// Token: 0x060301A1 RID: 197025 RVA: 0x00D6AB43 File Offset: 0x00D68D43
 		public void ShowSortItem(int ruleId, ESortDataType dataType, int sortIndex)
 		{
 			this.RuleId = ruleId;
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.FilterSort.Sort.AttributeSort
 			this.RefreshIndex(sortIndex);
 		}
 
-		// Token: 0x0603B230 RID: 242224 RVA: 0x00E19E58 File Offset: 0x00E18058
+		// Token: 0x060301A2 RID: 197026 RVA: 0x00D6AB70 File Offset: 0x00D68D70
 		public void RefreshIndex(int sortIndex)
 		{
 			UUIText text = base.GetText(3);
@@ -143,34 +143,34 @@ namespace CSharpScript.Game.Module.FilterSort.Sort.AttributeSort
 			text.SetText(sortIndex.ToString(), true);
 		}
 
-		// Token: 0x0401ED2D RID: 126253
+		// Token: 0x040197E9 RID: 104425
 		private int RuleId;
 
-		// Token: 0x0401ED2E RID: 126254
+		// Token: 0x040197EA RID: 104426
 		private string Name = "";
 
-		// Token: 0x0401ED2F RID: 126255
+		// Token: 0x040197EB RID: 104427
 		private ESortDataType DataType = ESortDataType.Role;
 
-		// Token: 0x0401ED30 RID: 126256
+		// Token: 0x040197EC RID: 104428
 		[Nullable(2)]
 		private TSortItemToggleEventWithState ToggleFunction;
 
-		// Token: 0x0401ED31 RID: 126257
+		// Token: 0x040197ED RID: 104429
 		[Nullable(2)]
 		private TCanExecuteChangeSimple CanExecuteChangeInternal;
 
-		// Token: 0x0200BD70 RID: 48496
+		// Token: 0x0200A779 RID: 42873
 		[NullableContext(0)]
 		private enum ESortItemDefine
 		{
-			// Token: 0x04039245 RID: 234053
+			// Token: 0x04033C11 RID: 211985
 			Name,
-			// Token: 0x04039246 RID: 234054
+			// Token: 0x04033C12 RID: 211986
 			Toggle,
-			// Token: 0x04039247 RID: 234055
+			// Token: 0x04033C13 RID: 211987
 			Icon,
-			// Token: 0x04039248 RID: 234056
+			// Token: 0x04033C14 RID: 211988
 			LimitNum
 		}
 	}

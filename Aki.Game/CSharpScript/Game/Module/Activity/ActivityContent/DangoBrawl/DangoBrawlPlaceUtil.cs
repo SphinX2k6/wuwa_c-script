@@ -4,19 +4,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067DC RID: 26588
+	// Token: 0x0200572C RID: 22316
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class DangoBrawlPlaceUtil
 	{
-		// Token: 0x06042356 RID: 271190 RVA: 0x0100F11C File Offset: 0x0100D31C
+		// Token: 0x06036EAC RID: 224940 RVA: 0x00F505EC File Offset: 0x00F4E7EC
 		public static EDangoBrawlPlaceMode EvaluateMode(DangoBrawlBackpackData bag, IDragVisual visual, PanelPos leftTop, EDangoBrawlRotate rotate)
 		{
 			DangoBrawlPlacementResult dangoBrawlPlacementResult;
 			return DangoBrawlPlaceUtil.EvaluateCore(bag, visual, leftTop, rotate, false, out dangoBrawlPlacementResult, false, false);
 		}
 
-		// Token: 0x06042357 RID: 271191 RVA: 0x0100F138 File Offset: 0x0100D338
+		// Token: 0x06036EAD RID: 224941 RVA: 0x00F50608 File Offset: 0x00F4E808
 		public static DangoBrawlPlacementResult EvaluatePlan(DangoBrawlBackpackData bag, IDragVisual visual, PanelPos leftTop, EDangoBrawlRotate rotate, bool followerBestEffort = false, bool skipFollowers = false)
 		{
 			DangoBrawlPlacementResult result;
@@ -24,14 +24,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return result;
 		}
 
-		// Token: 0x06042358 RID: 271192 RVA: 0x0100F158 File Offset: 0x0100D358
+		// Token: 0x06036EAE RID: 224942 RVA: 0x00F50628 File Offset: 0x00F4E828
 		public static EDangoBrawlPlaceMode EvaluatePrimaryMode(DangoBrawlBackpackData bag, IDragVisual visual, PanelPos leftTop, EDangoBrawlRotate rotate)
 		{
 			DangoBrawlPlacementResult dangoBrawlPlacementResult;
 			return DangoBrawlPlaceUtil.EvaluateCore(bag, visual, leftTop, rotate, false, out dangoBrawlPlacementResult, true, false);
 		}
 
-		// Token: 0x06042359 RID: 271193 RVA: 0x0100F174 File Offset: 0x0100D374
+		// Token: 0x06036EAF RID: 224943 RVA: 0x00F50644 File Offset: 0x00F4E844
 		private static EDangoBrawlPlaceMode EvaluateCore(DangoBrawlBackpackData bag, IDragVisual visual, PanelPos leftTop, EDangoBrawlRotate rotate, bool collectDetail, [Nullable(2)] out DangoBrawlPlacementResult result, bool skipFollowers = false, bool followerBestEffort = false)
 		{
 			result = (collectDetail ? new DangoBrawlPlacementResult() : null);
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return edangoBrawlPlaceMode;
 		}
 
-		// Token: 0x0604235A RID: 271194 RVA: 0x0100F508 File Offset: 0x0100D708
+		// Token: 0x06036EB0 RID: 224944 RVA: 0x00F509D8 File Offset: 0x00F4EBD8
 		[NullableContext(2)]
 		private static EDangoBrawlPlaceMode FinishMode(DangoBrawlPlacementResult result, EDangoBrawlPlaceMode mode)
 		{
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return mode;
 		}
 
-		// Token: 0x0604235B RID: 271195 RVA: 0x0100F51C File Offset: 0x0100D71C
+		// Token: 0x06036EB1 RID: 224945 RVA: 0x00F509EC File Offset: 0x00F4EBEC
 		private static DangoBrawlReplacedItem[] BuildReplacedItems(List<DangoBrawlBackpackItemData> evictions)
 		{
 			if (evictions.Count == 0)
@@ -181,7 +181,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return array;
 		}
 
-		// Token: 0x0604235C RID: 271196 RVA: 0x0100F59C File Offset: 0x0100D79C
+		// Token: 0x06036EB2 RID: 224946 RVA: 0x00F50A6C File Offset: 0x00F4EC6C
 		private static DangoBrawlPlacedCell[] CollectPlacedCells(DangoBrawlBackpackData bag, IDragVisual visual, PanelPos leftTop, EDangoBrawlRotate rotate, PanelPos[] draggingPos, [Nullable(2)] DangoBrawlBackpackItemData primaryItem)
 		{
 			List<DangoBrawlPlacedCell> list = new List<DangoBrawlPlacedCell>();
@@ -214,7 +214,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return list.ToArray();
 		}
 
-		// Token: 0x0604235D RID: 271197 RVA: 0x0100F700 File Offset: 0x0100D900
+		// Token: 0x06036EB3 RID: 224947 RVA: 0x00F50BD0 File Offset: 0x00F4EDD0
 		private static PanelPos[] AbsCells(PanelPos leftTop, PanelPos[] rels)
 		{
 			PanelPos[] array = new PanelPos[rels.Length];
@@ -225,7 +225,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return array;
 		}
 
-		// Token: 0x0604235E RID: 271198 RVA: 0x0100F758 File Offset: 0x0100D958
+		// Token: 0x06036EB4 RID: 224948 RVA: 0x00F50C28 File Offset: 0x00F4EE28
 		private static List<int> CollectExcludeUids(IDragVisual visual)
 		{
 			List<int> list = new List<int>();
@@ -246,7 +246,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return list;
 		}
 
-		// Token: 0x0604235F RID: 271199 RVA: 0x0100F7E8 File Offset: 0x0100D9E8
+		// Token: 0x06036EB5 RID: 224949 RVA: 0x00F50CB8 File Offset: 0x00F4EEB8
 		[return: TupleElementNames(new string[]
 		{
 			"Row",
@@ -267,7 +267,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return hashSet;
 		}
 
-		// Token: 0x06042360 RID: 271200 RVA: 0x0100F840 File Offset: 0x0100DA40
+		// Token: 0x06036EB6 RID: 224950 RVA: 0x00F50D10 File Offset: 0x00F4EF10
 		[NullableContext(2)]
 		private static PanelPos[] GetPrimaryPanelPosList([Nullable(1)] IDragVisual visual, EDangoBrawlRotate rotate, DangoBrawlBackpackItemData item)
 		{
@@ -282,7 +282,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return DangoBrawlUtil.RotatePanelPosList(visual.ConfigId, rotate);
 		}
 
-		// Token: 0x06042361 RID: 271201 RVA: 0x0100F884 File Offset: 0x0100DA84
+		// Token: 0x06036EB7 RID: 224951 RVA: 0x00F50D54 File Offset: 0x00F4EF54
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -374,7 +374,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return list;
 		}
 
-		// Token: 0x06042362 RID: 271202 RVA: 0x0100FAF0 File Offset: 0x0100DCF0
+		// Token: 0x06036EB8 RID: 224952 RVA: 0x00F50FC0 File Offset: 0x00F4F1C0
 		[return: TupleElementNames(new string[]
 		{
 			"Item",
@@ -445,7 +445,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return list;
 		}
 
-		// Token: 0x06042363 RID: 271203 RVA: 0x0100FCA5 File Offset: 0x0100DEA5
+		// Token: 0x06036EB9 RID: 224953 RVA: 0x00F51175 File Offset: 0x00F4F375
 		[CompilerGenerated]
 		internal static void <EvaluateCore>g__TryPush|3_0(DangoBrawlBackpackItemData it, ref DangoBrawlPlaceUtil.<>c__DisplayClass3_0 A_1)
 		{

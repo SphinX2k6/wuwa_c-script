@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x02004621 RID: 17953
+	// Token: 0x02004A89 RID: 19081
 	public class TTwoDimensionItemUnion
 	{
-		// Token: 0x17007F75 RID: 32629
-		// (get) Token: 0x0601B315 RID: 111381 RVA: 0x003DF678 File Offset: 0x003DD878
-		// (set) Token: 0x0601B316 RID: 111382 RVA: 0x003DF680 File Offset: 0x003DD880
+		// Token: 0x170085B6 RID: 34230
+		// (get) Token: 0x0601CAEA RID: 117482 RVA: 0x0040B914 File Offset: 0x00409B14
+		// (set) Token: 0x0601CAEB RID: 117483 RVA: 0x0040B91C File Offset: 0x00409B1C
 		public TTwoDimensionItem Type { get; set; }
 
-		// Token: 0x17007F76 RID: 32630
-		// (get) Token: 0x0601B317 RID: 111383 RVA: 0x003DF689 File Offset: 0x003DD889
-		// (set) Token: 0x0601B318 RID: 111384 RVA: 0x003DF691 File Offset: 0x003DD891
+		// Token: 0x170085B7 RID: 34231
+		// (get) Token: 0x0601CAEC RID: 117484 RVA: 0x0040B925 File Offset: 0x00409B25
+		// (set) Token: 0x0601CAED RID: 117485 RVA: 0x0040B92D File Offset: 0x00409B2D
 		public object Value { get; set; }
 
-		// Token: 0x0601B319 RID: 111385 RVA: 0x003DF69A File Offset: 0x003DD89A
+		// Token: 0x0601CAEE RID: 117486 RVA: 0x0040B936 File Offset: 0x00409B36
 		public TTwoDimensionItemUnion()
 		{
 			this.Type = TTwoDimensionItem.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601B31A RID: 111386 RVA: 0x003DF6B0 File Offset: 0x003DD8B0
+		// Token: 0x0601CAEF RID: 117487 RVA: 0x0040B94C File Offset: 0x00409B4C
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601B31B RID: 111387 RVA: 0x003DF6C2 File Offset: 0x003DD8C2
+		// Token: 0x0601CAF0 RID: 117488 RVA: 0x0040B95E File Offset: 0x00409B5E
 		public IDangoBrawlBagT AsIDangoBrawlBag()
 		{
 			return this.As<IDangoBrawlBagT>();
 		}
 
-		// Token: 0x0601B31C RID: 111388 RVA: 0x003DF6CA File Offset: 0x003DD8CA
+		// Token: 0x0601CAF1 RID: 117489 RVA: 0x0040B966 File Offset: 0x00409B66
 		public static TTwoDimensionItemUnion FromIDangoBrawlBag(IDangoBrawlBagT _idangobrawlbag)
 		{
 			return new TTwoDimensionItemUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601B31D RID: 111389 RVA: 0x003DF6DF File Offset: 0x003DD8DF
+		// Token: 0x0601CAF2 RID: 117490 RVA: 0x0040B97B File Offset: 0x00409B7B
 		public IDangoBrawlItemT AsIDangoBrawlItem()
 		{
 			return this.As<IDangoBrawlItemT>();
 		}
 
-		// Token: 0x0601B31E RID: 111390 RVA: 0x003DF6E7 File Offset: 0x003DD8E7
+		// Token: 0x0601CAF3 RID: 117491 RVA: 0x0040B983 File Offset: 0x00409B83
 		public static TTwoDimensionItemUnion FromIDangoBrawlItem(IDangoBrawlItemT _idangobrawlitem)
 		{
 			return new TTwoDimensionItemUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601B31F RID: 111391 RVA: 0x003DF6FC File Offset: 0x003DD8FC
+		// Token: 0x0601CAF4 RID: 117492 RVA: 0x0040B998 File Offset: 0x00409B98
 		public IMarbleCommonItemT AsIMarbleCommonItem()
 		{
 			return this.As<IMarbleCommonItemT>();
 		}
 
-		// Token: 0x0601B320 RID: 111392 RVA: 0x003DF704 File Offset: 0x003DD904
+		// Token: 0x0601CAF5 RID: 117493 RVA: 0x0040B9A0 File Offset: 0x00409BA0
 		public static TTwoDimensionItemUnion FromIMarbleCommonItem(IMarbleCommonItemT _imarblecommonitem)
 		{
 			return new TTwoDimensionItemUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601B321 RID: 111393 RVA: 0x003DF719 File Offset: 0x003DD919
+		// Token: 0x0601CAF6 RID: 117494 RVA: 0x0040B9B5 File Offset: 0x00409BB5
 		public IMarbleSpawnPointT AsIMarbleSpawnPoint()
 		{
 			return this.As<IMarbleSpawnPointT>();
 		}
 
-		// Token: 0x0601B322 RID: 111394 RVA: 0x003DF721 File Offset: 0x003DD921
+		// Token: 0x0601CAF7 RID: 117495 RVA: 0x0040B9BD File Offset: 0x00409BBD
 		public static TTwoDimensionItemUnion FromIMarbleSpawnPoint(IMarbleSpawnPointT _imarblespawnpoint)
 		{
 			return new TTwoDimensionItemUnion
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601B323 RID: 111395 RVA: 0x003DF738 File Offset: 0x003DD938
+		// Token: 0x0601CAF8 RID: 117496 RVA: 0x0040B9D4 File Offset: 0x00409BD4
 		public static int Pack(FlatBufferBuilder builder, TTwoDimensionItemUnion _o)
 		{
 			switch (_o.Type)

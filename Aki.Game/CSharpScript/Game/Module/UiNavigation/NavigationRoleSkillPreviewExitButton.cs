@@ -5,16 +5,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x0200492F RID: 18735
+	// Token: 0x020038A6 RID: 14502
 	public class NavigationRoleSkillPreviewExitButton : NavigationButton
 	{
-		// Token: 0x06030ECB RID: 200395 RVA: 0x00B5BB77 File Offset: 0x00B59D77
+		// Token: 0x060259F8 RID: 154104 RVA: 0x00A969E7 File Offset: 0x00A94BE7
 		[NullableContext(1)]
 		public NavigationRoleSkillPreviewExitButton(ULGUIBehaviour selectable, string type, List<string> paramList) : base(selectable, type, paramList)
 		{
 		}
 
-		// Token: 0x06030ECC RID: 200396 RVA: 0x00B5BB84 File Offset: 0x00B59D84
+		// Token: 0x060259F9 RID: 154105 RVA: 0x00A969F4 File Offset: 0x00A94BF4
 		protected override void OnButtonClick()
 		{
 			UiNavigationViewHandle currentViewHandle = UiNavigationViewManager.Instance.GetCurrentViewHandle();

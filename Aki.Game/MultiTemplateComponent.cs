@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002CDD RID: 11485
+// Token: 0x02002236 RID: 8758
 [NullableContext(1)]
 [Nullable(0)]
 public class MultiTemplateComponent : IGridPreserver
 {
-	// Token: 0x06018196 RID: 98710 RVA: 0x0062102C File Offset: 0x0061F22C
+	// Token: 0x06015A15 RID: 88597 RVA: 0x00646CA0 File Offset: 0x00644EA0
 	public MultiTemplateComponent(UUIItem rootItem, Dictionary<int, UUIItem> templateItems)
 	{
 		this.RootItem = rootItem;
@@ -29,7 +28,7 @@ public class MultiTemplateComponent : IGridPreserver
 		this.GridsController.RegisterAnimController();
 	}
 
-	// Token: 0x06018197 RID: 98711 RVA: 0x00621120 File Offset: 0x0061F320
+	// Token: 0x06015A16 RID: 88598 RVA: 0x00646D94 File Offset: 0x00644F94
 	public void RefreshByData(List<IMultiTemplateGridData> dataList, bool playGridAnim = false)
 	{
 		if (!this.CheckDataListValid(dataList))
@@ -37,7 +36,7 @@ public class MultiTemplateComponent : IGridPreserver
 			return;
 		}
 		this.RecycleAllItems();
-		this.DataList = dataList.ToList<IMultiTemplateGridData>();
+		this.DataList = new List<IMultiTemplateGridData>(dataList);
 		this.AllocateDisplayItems();
 		this.RefreshDirectly();
 		if (playGridAnim && this.GridsController != null)
@@ -46,7 +45,7 @@ public class MultiTemplateComponent : IGridPreserver
 		}
 	}
 
-	// Token: 0x06018198 RID: 98712 RVA: 0x00621174 File Offset: 0x0061F374
+	// Token: 0x06015A17 RID: 88599 RVA: 0x00646DE8 File Offset: 0x00644FE8
 	public bool AddItem(IMultiTemplateGridData data)
 	{
 		UUIItem uuiitem = this.AcquireItem(data);
@@ -65,7 +64,7 @@ public class MultiTemplateComponent : IGridPreserver
 		return true;
 	}
 
-	// Token: 0x06018199 RID: 98713 RVA: 0x006211DC File Offset: 0x0061F3DC
+	// Token: 0x06015A18 RID: 88600 RVA: 0x00646E50 File Offset: 0x00645050
 	public bool RemoveLastItem()
 	{
 		if (this.DisplayItems.Count == 0)
@@ -80,7 +79,7 @@ public class MultiTemplateComponent : IGridPreserver
 		return true;
 	}
 
-	// Token: 0x0601819A RID: 98714 RVA: 0x00621260 File Offset: 0x0061F460
+	// Token: 0x06015A19 RID: 88601 RVA: 0x00646ED4 File Offset: 0x006450D4
 	public unsafe void RefreshDirectly()
 	{
 		if (this.DisplayItems.Count != this.DataList.Count)
@@ -118,7 +117,7 @@ public class MultiTemplateComponent : IGridPreserver
 		}
 	}
 
-	// Token: 0x0601819B RID: 98715 RVA: 0x006213B0 File Offset: 0x0061F5B0
+	// Token: 0x06015A1A RID: 88602 RVA: 0x00647024 File Offset: 0x00645224
 	private void AllocateDisplayItems()
 	{
 		for (int i = 0; i < this.DataList.Count; i++)
@@ -136,7 +135,7 @@ public class MultiTemplateComponent : IGridPreserver
 		}
 	}
 
-	// Token: 0x0601819C RID: 98716 RVA: 0x00621414 File Offset: 0x0061F614
+	// Token: 0x06015A1B RID: 88603 RVA: 0x00647088 File Offset: 0x00645288
 	[return: Nullable(2)]
 	private UUIItem AcquireItem(IMultiTemplateGridData data)
 	{
@@ -160,7 +159,7 @@ public class MultiTemplateComponent : IGridPreserver
 		return uuiitem2;
 	}
 
-	// Token: 0x0601819D RID: 98717 RVA: 0x00621474 File Offset: 0x0061F674
+	// Token: 0x06015A1C RID: 88604 RVA: 0x006470E8 File Offset: 0x006452E8
 	private ISyncGridProxy EnsureProxy(UUIItem item, IMultiTemplateGridData data)
 	{
 		ISyncGridProxy syncGridProxy;
@@ -173,7 +172,7 @@ public class MultiTemplateComponent : IGridPreserver
 		return syncGridProxy;
 	}
 
-	// Token: 0x0601819E RID: 98718 RVA: 0x006214B4 File Offset: 0x0061F6B4
+	// Token: 0x06015A1D RID: 88605 RVA: 0x00647128 File Offset: 0x00645328
 	[NullableContext(2)]
 	private UUIItem PopItemFromPool(int templateIndex)
 	{
@@ -191,7 +190,7 @@ public class MultiTemplateComponent : IGridPreserver
 		return result;
 	}
 
-	// Token: 0x0601819F RID: 98719 RVA: 0x006214FC File Offset: 0x0061F6FC
+	// Token: 0x06015A1E RID: 88606 RVA: 0x00647170 File Offset: 0x00645370
 	[NullableContext(2)]
 	private UUIItem CreateItemByTemplateIndex(int templateIndex)
 	{
@@ -203,7 +202,7 @@ public class MultiTemplateComponent : IGridPreserver
 		return LguiUtil.Instance.CopyItem(item, this.RootItem);
 	}
 
-	// Token: 0x060181A0 RID: 98720 RVA: 0x0062152C File Offset: 0x0061F72C
+	// Token: 0x06015A1F RID: 88607 RVA: 0x006471A0 File Offset: 0x006453A0
 	private void RecycleAllItems()
 	{
 		if (this.DisplayItems.Count == 0)
@@ -217,7 +216,7 @@ public class MultiTemplateComponent : IGridPreserver
 		this.DisplayItems.Clear();
 	}
 
-	// Token: 0x060181A1 RID: 98721 RVA: 0x00621570 File Offset: 0x0061F770
+	// Token: 0x06015A20 RID: 88608 RVA: 0x006471E4 File Offset: 0x006453E4
 	private unsafe void RecycleItemByIndex(int displayIndex)
 	{
 		if (displayIndex < 0 || displayIndex >= this.DisplayItems.Count)
@@ -271,7 +270,7 @@ public class MultiTemplateComponent : IGridPreserver
 		syncGridProxy.Clear();
 	}
 
-	// Token: 0x060181A2 RID: 98722 RVA: 0x006216E0 File Offset: 0x0061F8E0
+	// Token: 0x06015A21 RID: 88609 RVA: 0x00647354 File Offset: 0x00645554
 	public unsafe bool CheckDataListValid(List<IMultiTemplateGridData> dataList)
 	{
 		for (int i = 0; i < dataList.Count; i++)
@@ -293,13 +292,13 @@ public class MultiTemplateComponent : IGridPreserver
 		return true;
 	}
 
-	// Token: 0x060181A3 RID: 98723 RVA: 0x00621782 File Offset: 0x0061F982
+	// Token: 0x06015A22 RID: 88610 RVA: 0x006473F6 File Offset: 0x006455F6
 	public List<UUIItem> GetDisplayItems()
 	{
 		return this.DisplayItems;
 	}
 
-	// Token: 0x060181A4 RID: 98724 RVA: 0x0062178A File Offset: 0x0061F98A
+	// Token: 0x06015A23 RID: 88611 RVA: 0x006473FE File Offset: 0x006455FE
 	[NullableContext(2)]
 	public UUIItem GetItemByDisplayIndex(int displayIndex)
 	{
@@ -310,7 +309,7 @@ public class MultiTemplateComponent : IGridPreserver
 		return this.DisplayItems[displayIndex];
 	}
 
-	// Token: 0x060181A5 RID: 98725 RVA: 0x006217AC File Offset: 0x0061F9AC
+	// Token: 0x06015A24 RID: 88612 RVA: 0x00647420 File Offset: 0x00645620
 	[NullableContext(2)]
 	public ISyncGridProxy GetProxyByDisplayIndex(int displayIndex)
 	{
@@ -327,7 +326,7 @@ public class MultiTemplateComponent : IGridPreserver
 		return null;
 	}
 
-	// Token: 0x060181A6 RID: 98726 RVA: 0x006217E0 File Offset: 0x0061F9E0
+	// Token: 0x06015A25 RID: 88613 RVA: 0x00647454 File Offset: 0x00645654
 	public unsafe int GetTemplateIndexByDisplayIndex(int displayIndex)
 	{
 		if (displayIndex < 0 || displayIndex >= this.DataList.Count)
@@ -345,31 +344,31 @@ public class MultiTemplateComponent : IGridPreserver
 		return this.DataList[displayIndex].GetTemplateIndex();
 	}
 
-	// Token: 0x060181A7 RID: 98727 RVA: 0x0062187C File Offset: 0x0061FA7C
+	// Token: 0x06015A26 RID: 88614 RVA: 0x006474F0 File Offset: 0x006456F0
 	public int GetDisplayGridNum()
 	{
 		return this.DisplayItems.Count;
 	}
 
-	// Token: 0x060181A8 RID: 98728 RVA: 0x00621889 File Offset: 0x0061FA89
+	// Token: 0x06015A27 RID: 88615 RVA: 0x006474FD File Offset: 0x006456FD
 	public int GetPreservedGridNum()
 	{
 		return this.DisplayItems.Count;
 	}
 
-	// Token: 0x060181A9 RID: 98729 RVA: 0x00621896 File Offset: 0x0061FA96
+	// Token: 0x06015A28 RID: 88616 RVA: 0x0064750A File Offset: 0x0064570A
 	public int GetDisplayGridStartIndex()
 	{
 		return 0;
 	}
 
-	// Token: 0x060181AA RID: 98730 RVA: 0x00621899 File Offset: 0x0061FA99
+	// Token: 0x06015A29 RID: 88617 RVA: 0x0064750D File Offset: 0x0064570D
 	public int GetDisplayGridEndIndex()
 	{
 		return this.GetDisplayGridNum() - 1;
 	}
 
-	// Token: 0x060181AB RID: 98731 RVA: 0x006218A3 File Offset: 0x0061FAA3
+	// Token: 0x06015A2A RID: 88618 RVA: 0x00647517 File Offset: 0x00645717
 	[NullableContext(2)]
 	public UUIItem GetGrid(int gridIndex)
 	{
@@ -380,7 +379,7 @@ public class MultiTemplateComponent : IGridPreserver
 		return this.DisplayItems[gridIndex];
 	}
 
-	// Token: 0x060181AC RID: 98732 RVA: 0x006218C5 File Offset: 0x0061FAC5
+	// Token: 0x06015A2B RID: 88619 RVA: 0x00647539 File Offset: 0x00645739
 	[NullableContext(2)]
 	public UUIItem GetGridByDisplayIndex(int displayIndex)
 	{
@@ -391,59 +390,59 @@ public class MultiTemplateComponent : IGridPreserver
 		return this.DisplayItems[displayIndex];
 	}
 
-	// Token: 0x060181AD RID: 98733 RVA: 0x006218E7 File Offset: 0x0061FAE7
+	// Token: 0x06015A2C RID: 88620 RVA: 0x0064755B File Offset: 0x0064575B
 	public float GetGridAnimationInterval()
 	{
 		return 0f;
 	}
 
-	// Token: 0x060181AE RID: 98734 RVA: 0x006218EE File Offset: 0x0061FAEE
+	// Token: 0x06015A2D RID: 88621 RVA: 0x00647562 File Offset: 0x00645762
 	public float GetGridAnimationStartTime()
 	{
 		return 0f;
 	}
 
-	// Token: 0x060181AF RID: 98735 RVA: 0x006218F5 File Offset: 0x0061FAF5
+	// Token: 0x06015A2E RID: 88622 RVA: 0x00647569 File Offset: 0x00645769
 	public void NotifyAnimationStart()
 	{
 	}
 
-	// Token: 0x060181B0 RID: 98736 RVA: 0x006218F7 File Offset: 0x0061FAF7
+	// Token: 0x06015A2F RID: 88623 RVA: 0x0064756B File Offset: 0x0064576B
 	public void NotifyAnimationEnd()
 	{
 	}
 
-	// Token: 0x060181B1 RID: 98737 RVA: 0x006218F9 File Offset: 0x0061FAF9
+	// Token: 0x06015A30 RID: 88624 RVA: 0x0064756D File Offset: 0x0064576D
 	[NullableContext(2)]
 	public UUIInturnAnimController GetUiAnimController()
 	{
 		return this.AnimControllerComponent;
 	}
 
-	// Token: 0x0400B349 RID: 45897
+	// Token: 0x0400B6B5 RID: 46773
 	[Nullable(2)]
 	private readonly UUIItem RootItem;
 
-	// Token: 0x0400B34A RID: 45898
+	// Token: 0x0400B6B6 RID: 46774
 	private List<IMultiTemplateGridData> DataList = new List<IMultiTemplateGridData>();
 
-	// Token: 0x0400B34B RID: 45899
+	// Token: 0x0400B6B7 RID: 46775
 	private readonly Dictionary<int, UUIItem> TemplateItems = new Dictionary<int, UUIItem>();
 
-	// Token: 0x0400B34C RID: 45900
+	// Token: 0x0400B6B8 RID: 46776
 	private readonly Dictionary<int, List<UUIItem>> PoolItems = new Dictionary<int, List<UUIItem>>();
 
-	// Token: 0x0400B34D RID: 45901
+	// Token: 0x0400B6B9 RID: 46777
 	private readonly Dictionary<UUIItem, ISyncGridProxy> ProxyItems = new Dictionary<UUIItem, ISyncGridProxy>();
 
-	// Token: 0x0400B34E RID: 45902
+	// Token: 0x0400B6BA RID: 46778
 	private readonly List<UUIItem> DisplayItems = new List<UUIItem>();
 
-	// Token: 0x0400B34F RID: 45903
+	// Token: 0x0400B6BB RID: 46779
 	[Nullable(2)]
 	private readonly GridAppearAnimationBase GridsController;
 
-	// Token: 0x0400B350 RID: 45904
+	// Token: 0x0400B6BC RID: 46780
 	[Nullable(2)]
 	private readonly UUIInturnAnimController AnimControllerComponent;
 }

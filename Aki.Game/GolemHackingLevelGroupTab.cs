@@ -9,7 +9,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001016 RID: 4118
+// Token: 0x020004CA RID: 1226
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -18,7 +18,7 @@ using UnrealEngine;
 })]
 public class GolemHackingLevelGroupTab : GridProxyAbstract<GolemHackingLevelGroupInfo>
 {
-	// Token: 0x060069B3 RID: 27059 RVA: 0x001521B8 File Offset: 0x001503B8
+	// Token: 0x06003D48 RID: 15688 RVA: 0x0015AAE0 File Offset: 0x00158CE0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 11;
@@ -57,13 +57,13 @@ public class GolemHackingLevelGroupTab : GridProxyAbstract<GolemHackingLevelGrou
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060069B4 RID: 27060 RVA: 0x0015238A File Offset: 0x0015058A
+	// Token: 0x06003D49 RID: 15689 RVA: 0x0015ACB2 File Offset: 0x00158EB2
 	protected override void OnStart()
 	{
 		this.SequencePlayer = new LevelSequencePlayer(base.GetRootItem());
 	}
 
-	// Token: 0x060069B5 RID: 27061 RVA: 0x001523A0 File Offset: 0x001505A0
+	// Token: 0x06003D4A RID: 15690 RVA: 0x0015ACC8 File Offset: 0x00158EC8
 	public override void Refresh(GolemHackingLevelGroupInfo data, bool isSelected, int gridIndex)
 	{
 		this.CurData = data;
@@ -142,7 +142,7 @@ public class GolemHackingLevelGroupTab : GridProxyAbstract<GolemHackingLevelGrou
 		this.DoAnimLogic();
 	}
 
-	// Token: 0x060069B6 RID: 27062 RVA: 0x0015257C File Offset: 0x0015077C
+	// Token: 0x06003D4B RID: 15691 RVA: 0x0015AEA4 File Offset: 0x001590A4
 	protected void DoAnimLogic()
 	{
 		LevelSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -188,7 +188,7 @@ public class GolemHackingLevelGroupTab : GridProxyAbstract<GolemHackingLevelGrou
 		}
 	}
 
-	// Token: 0x060069B7 RID: 27063 RVA: 0x00152654 File Offset: 0x00150854
+	// Token: 0x06003D4C RID: 15692 RVA: 0x0015AF7C File Offset: 0x0015917C
 	protected UniTask RefreshTexTransition(EGolemHackingGroupState curState)
 	{
 		GolemHackingLevelGroupTab.<RefreshTexTransition>d__9 <RefreshTexTransition>d__;
@@ -200,7 +200,7 @@ public class GolemHackingLevelGroupTab : GridProxyAbstract<GolemHackingLevelGrou
 		return <RefreshTexTransition>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060069B8 RID: 27064 RVA: 0x001526A0 File Offset: 0x001508A0
+	// Token: 0x06003D4D RID: 15693 RVA: 0x0015AFC8 File Offset: 0x001591C8
 	public void OnTick()
 	{
 		if (!this.NeedTick)
@@ -226,7 +226,7 @@ public class GolemHackingLevelGroupTab : GridProxyAbstract<GolemHackingLevelGrou
 		text.SetText(item2, true);
 	}
 
-	// Token: 0x060069B9 RID: 27065 RVA: 0x00152722 File Offset: 0x00150922
+	// Token: 0x06003D4E RID: 15694 RVA: 0x0015B04A File Offset: 0x0015924A
 	private void OnClicked()
 	{
 		Action<GolemHackingLevelGroupInfo, int> onClickedCallback = this.OnClickedCallback;
@@ -237,7 +237,7 @@ public class GolemHackingLevelGroupTab : GridProxyAbstract<GolemHackingLevelGrou
 		onClickedCallback(this.CurData, base.GridIndex);
 	}
 
-	// Token: 0x040030BE RID: 12478
+	// Token: 0x04003157 RID: 12631
 	[Nullable(new byte[]
 	{
 		2,
@@ -245,41 +245,41 @@ public class GolemHackingLevelGroupTab : GridProxyAbstract<GolemHackingLevelGrou
 	})]
 	public Action<GolemHackingLevelGroupInfo, int> OnClickedCallback;
 
-	// Token: 0x040030BF RID: 12479
+	// Token: 0x04003158 RID: 12632
 	public bool NeedTick;
 
-	// Token: 0x040030C0 RID: 12480
+	// Token: 0x04003159 RID: 12633
 	protected GolemHackingLevelGroupInfo CurData;
 
-	// Token: 0x040030C1 RID: 12481
+	// Token: 0x0400315A RID: 12634
 	[Nullable(2)]
 	protected LevelSequencePlayer SequencePlayer;
 
-	// Token: 0x02007610 RID: 30224
+	// Token: 0x020067A4 RID: 26532
 	[NullableContext(0)]
 	private enum EDefine
 	{
-		// Token: 0x0402700C RID: 159756
+		// Token: 0x04022357 RID: 140119
 		PanelTopLine,
-		// Token: 0x0402700D RID: 159757
+		// Token: 0x04022358 RID: 140120
 		PanelBottomLine,
-		// Token: 0x0402700E RID: 159758
+		// Token: 0x04022359 RID: 140121
 		Btn,
-		// Token: 0x0402700F RID: 159759
+		// Token: 0x0402235A RID: 140122
 		TexState,
-		// Token: 0x04027010 RID: 159760
+		// Token: 0x0402235B RID: 140123
 		TxtTitle,
-		// Token: 0x04027011 RID: 159761
+		// Token: 0x0402235C RID: 140124
 		ArtTxt,
-		// Token: 0x04027012 RID: 159762
+		// Token: 0x0402235D RID: 140125
 		TxtProgress,
-		// Token: 0x04027013 RID: 159763
+		// Token: 0x0402235E RID: 140126
 		PanelFinishedState,
-		// Token: 0x04027014 RID: 159764
+		// Token: 0x0402235F RID: 140127
 		PanelLockState,
-		// Token: 0x04027015 RID: 159765
+		// Token: 0x04022360 RID: 140128
 		TxtLockTips,
-		// Token: 0x04027016 RID: 159766
+		// Token: 0x04022361 RID: 140129
 		RedDot
 	}
 }

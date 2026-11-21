@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027B3 RID: 10163
+	// Token: 0x02002A86 RID: 10886
 	public class RestoreTrialCharacter : ActionParams
 	{
-		// Token: 0x0600E226 RID: 57894 RVA: 0x002169A2 File Offset: 0x00214BA2
-		[NullableContext(1)]
+		// Token: 0x0600F048 RID: 61512 RVA: 0x00233776 File Offset: 0x00231976
 		public static RestoreTrialCharacter Create(IRestoreTrialCharacter? instance)
 		{
 			if (instance == null)
@@ -21,7 +19,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x04007D6F RID: 32111
+		// Token: 0x04008426 RID: 33830
 		private IRestoreTrialCharacter Instance;
 	}
 }

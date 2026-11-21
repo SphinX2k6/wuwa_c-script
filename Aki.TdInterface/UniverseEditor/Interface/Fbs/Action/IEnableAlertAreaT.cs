@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006643 RID: 26179
+	// Token: 0x02006CB4 RID: 27828
 	public class IEnableAlertAreaT
 	{
-		// Token: 0x1700C284 RID: 49796
-		// (get) Token: 0x0602D793 RID: 186259 RVA: 0x0063A88B File Offset: 0x00638A8B
-		// (set) Token: 0x0602D794 RID: 186260 RVA: 0x0063A893 File Offset: 0x00638A93
+		// Token: 0x1700CC22 RID: 52258
+		// (get) Token: 0x0602FF64 RID: 196452 RVA: 0x006873F3 File Offset: 0x006855F3
+		// (set) Token: 0x0602FF65 RID: 196453 RVA: 0x006873FB File Offset: 0x006855FB
 		public EAlertSystemOption Type { get; set; }
 
-		// Token: 0x1700C285 RID: 49797
-		// (get) Token: 0x0602D795 RID: 186261 RVA: 0x0063A89C File Offset: 0x00638A9C
-		// (set) Token: 0x0602D796 RID: 186262 RVA: 0x0063A8A4 File Offset: 0x00638AA4
+		// Token: 0x1700CC23 RID: 52259
+		// (get) Token: 0x0602FF66 RID: 196454 RVA: 0x00687404 File Offset: 0x00685604
+		// (set) Token: 0x0602FF67 RID: 196455 RVA: 0x0068740C File Offset: 0x0068560C
 		public int AreaId { get; set; }
 
-		// Token: 0x1700C286 RID: 49798
-		// (get) Token: 0x0602D797 RID: 186263 RVA: 0x0063A8AD File Offset: 0x00638AAD
-		// (set) Token: 0x0602D798 RID: 186264 RVA: 0x0063A8B5 File Offset: 0x00638AB5
+		// Token: 0x1700CC24 RID: 52260
+		// (get) Token: 0x0602FF68 RID: 196456 RVA: 0x00687415 File Offset: 0x00685615
+		// (set) Token: 0x0602FF69 RID: 196457 RVA: 0x0068741D File Offset: 0x0068561D
 		public bool IsEnable { get; set; }
 
-		// Token: 0x1700C287 RID: 49799
-		// (get) Token: 0x0602D799 RID: 186265 RVA: 0x0063A8BE File Offset: 0x00638ABE
-		// (set) Token: 0x0602D79A RID: 186266 RVA: 0x0063A8C6 File Offset: 0x00638AC6
+		// Token: 0x1700CC25 RID: 52261
+		// (get) Token: 0x0602FF6A RID: 196458 RVA: 0x00687426 File Offset: 0x00685626
+		// (set) Token: 0x0602FF6B RID: 196459 RVA: 0x0068742E File Offset: 0x0068562E
 		public TDisableAlertConditionUnion AutoDisableCondition { get; set; }
 
-		// Token: 0x0602D79B RID: 186267 RVA: 0x0063A8CF File Offset: 0x00638ACF
+		// Token: 0x0602FF6C RID: 196460 RVA: 0x00687437 File Offset: 0x00685637
 		public IEnableAlertAreaT()
 		{
 			this.Type = EAlertSystemOption.EnableAlertArea;

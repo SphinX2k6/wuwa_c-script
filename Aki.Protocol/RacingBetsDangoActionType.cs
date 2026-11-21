@@ -3,28 +3,28 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200156B RID: 5483
+	// Token: 0x020015E1 RID: 5601
 	public enum RacingBetsDangoActionType
 	{
-		// Token: 0x0400A661 RID: 42593
+		// Token: 0x0400AAEE RID: 43758
 		[OriginalName("Move")]
 		Move,
-		// Token: 0x0400A662 RID: 42594
+		// Token: 0x0400AAEF RID: 43759
 		[OriginalName("Skill")]
 		Skill,
-		// Token: 0x0400A663 RID: 42595
+		// Token: 0x0400AAF0 RID: 43760
 		[OriginalName("Dice")]
 		Dice,
-		// Token: 0x0400A664 RID: 42596
+		// Token: 0x0400AAF1 RID: 43761
 		[OriginalName("ChangeHigh")]
 		ChangeHigh,
-		// Token: 0x0400A665 RID: 42597
+		// Token: 0x0400AAF2 RID: 43762
 		[OriginalName("DangoTransmit")]
 		DangoTransmit,
-		// Token: 0x0400A666 RID: 42598
+		// Token: 0x0400AAF3 RID: 43763
 		[OriginalName("Organ")]
 		Organ,
-		// Token: 0x0400A667 RID: 42599
+		// Token: 0x0400AAF4 RID: 43764
 		[OriginalName("DangoBlackHoleTransmit")]
 		DangoBlackHoleTransmit
 	}

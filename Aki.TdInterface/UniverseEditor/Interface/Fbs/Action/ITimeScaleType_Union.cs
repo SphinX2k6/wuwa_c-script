@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020073E8 RID: 29672
+	// Token: 0x02007BD2 RID: 31698
 	public enum ITimeScaleType_Union : byte
 	{
-		// Token: 0x04012240 RID: 74304
+		// Token: 0x0401325C RID: 78428
 		NONE,
-		// Token: 0x04012241 RID: 74305
+		// Token: 0x0401325D RID: 78429
 		ITimeScaleType,
-		// Token: 0x04012242 RID: 74306
+		// Token: 0x0401325E RID: 78430
 		ISetGlobalTimeScale
 	}
 }

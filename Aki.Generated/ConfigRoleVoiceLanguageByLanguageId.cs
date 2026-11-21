@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020008D6 RID: 2262
+	// Token: 0x02000921 RID: 2337
 	public class ConfigRoleVoiceLanguageByLanguageId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003517 RID: 13591 RVA: 0x0018570F File Offset: 0x0018390F
+		// Token: 0x060036D9 RID: 14041 RVA: 0x0019292F File Offset: 0x00190B2F
 		static ConfigRoleVoiceLanguageByLanguageId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRoleVoiceLanguageByLanguageId.CreateStaticDefaultValue), new Action(ConfigRoleVoiceLanguageByLanguageId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003518 RID: 13592 RVA: 0x00185730 File Offset: 0x00183930
+		// Token: 0x060036DA RID: 14042 RVA: 0x00192950 File Offset: 0x00190B50
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRoleVoiceLanguageByLanguageId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003519 RID: 13593 RVA: 0x001857AF File Offset: 0x001839AF
+		// Token: 0x060036DB RID: 14043 RVA: 0x001929CF File Offset: 0x00190BCF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRoleVoiceLanguageByLanguageId.LogPair = null;
 			ConfigRoleVoiceLanguageByLanguageId.HandleId = 0;
 		}
 
-		// Token: 0x0600351A RID: 13594 RVA: 0x001857BD File Offset: 0x001839BD
+		// Token: 0x060036DC RID: 14044 RVA: 0x001929DD File Offset: 0x00190BDD
 		public static void Init()
 		{
 			ConfigRoleVoiceLanguageByLanguageId.HandleId = ConfigCommon.InitDataStatement(ConfigRoleVoiceLanguageByLanguageId.HandleId, "db_menu.db", "select BinData from `RoleVoiceLanguage` where LanguageId=?");
 		}
 
-		// Token: 0x0600351B RID: 13595 RVA: 0x001857D8 File Offset: 0x001839D8
+		// Token: 0x060036DD RID: 14045 RVA: 0x001929F8 File Offset: 0x00190BF8
 		public static RoleVoiceLanguage? GetConfig(int p0LanguageId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRoleVoiceLanguageByLanguageId.HandleId, ConfigRoleVoiceLanguageByLanguageId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RoleVoiceLanguage?(rootAsRoleVoiceLanguage);
 		}
 
-		// Token: 0x04003DC0 RID: 15808
+		// Token: 0x04003FCD RID: 16333
 		private const string DB = "db_menu.db";
 
-		// Token: 0x04003DC1 RID: 15809
+		// Token: 0x04003FCE RID: 16334
 		private const string FILE = "s.设置系统.xlsx";
 
-		// Token: 0x04003DC2 RID: 15810
+		// Token: 0x04003FCF RID: 16335
 		private const string TABLE = "RoleVoiceLanguage";
 
-		// Token: 0x04003DC3 RID: 15811
+		// Token: 0x04003FD0 RID: 16336
 		private const string COMMAND = "select BinData from `RoleVoiceLanguage` where LanguageId=?";
 
-		// Token: 0x04003DC4 RID: 15812
+		// Token: 0x04003FD1 RID: 16337
 		private const string KEY_PREFIX = "RoleVoiceLanguageByLanguageId";
 
-		// Token: 0x04003DC5 RID: 15813
+		// Token: 0x04003FD2 RID: 16338
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003DC6 RID: 15814
+		// Token: 0x04003FD3 RID: 16339
 		private static int HandleId;
 	}
 }

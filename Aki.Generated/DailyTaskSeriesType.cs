@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000BB6 RID: 2998
+	// Token: 0x02000C98 RID: 3224
 	public struct DailyTaskSeriesType : IFlatbufferObject
 	{
-		// Token: 0x17000A10 RID: 2576
-		// (get) Token: 0x06005B2C RID: 23340 RVA: 0x00203891 File Offset: 0x00201A91
+		// Token: 0x17000A56 RID: 2646
+		// (get) Token: 0x06006105 RID: 24837 RVA: 0x0022351A File Offset: 0x0022171A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005B2D RID: 23341 RVA: 0x0020389E File Offset: 0x00201A9E
+		// Token: 0x06006106 RID: 24838 RVA: 0x00223527 File Offset: 0x00221727
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06005B2E RID: 23342 RVA: 0x002038A8 File Offset: 0x00201AA8
+		// Token: 0x06006107 RID: 24839 RVA: 0x00223530 File Offset: 0x00221730
 		public static DailyTaskSeriesType GetRootAsDailyTaskSeriesType(ByteBuffer _bb)
 		{
 			return DailyTaskSeriesType.GetRootAsDailyTaskSeriesType(_bb, default(DailyTaskSeriesType));
 		}
 
-		// Token: 0x06005B2F RID: 23343 RVA: 0x002038C4 File Offset: 0x00201AC4
+		// Token: 0x06006108 RID: 24840 RVA: 0x0022354C File Offset: 0x0022174C
 		public static DailyTaskSeriesType GetRootAsDailyTaskSeriesType(ByteBuffer _bb, DailyTaskSeriesType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06005B30 RID: 23344 RVA: 0x002038E1 File Offset: 0x00201AE1
+		// Token: 0x06006109 RID: 24841 RVA: 0x00223569 File Offset: 0x00221769
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06005B31 RID: 23345 RVA: 0x002038F0 File Offset: 0x00201AF0
+		// Token: 0x0600610A RID: 24842 RVA: 0x00223578 File Offset: 0x00221778
 		public DailyTaskSeriesType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000A11 RID: 2577
-		// (get) Token: 0x06005B32 RID: 23346 RVA: 0x00203900 File Offset: 0x00201B00
+		// Token: 0x17000A57 RID: 2647
+		// (get) Token: 0x0600610B RID: 24843 RVA: 0x00223588 File Offset: 0x00221788
 		public int SeriesType
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004BDA RID: 19418
+		// Token: 0x040051BC RID: 20924
 		private Table __p;
 	}
 }

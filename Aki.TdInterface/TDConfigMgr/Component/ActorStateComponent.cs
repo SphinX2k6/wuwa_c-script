@@ -5,11 +5,9 @@ using Aki.TDConfigMgr.Component.Fb;
 namespace Aki.TDConfigMgr.Component
 {
 	// Token: 0x02000011 RID: 17
-	[NullableContext(1)]
-	[Nullable(0)]
 	public class ActorStateComponent : IComponentBase
 	{
-		// Token: 0x06000034 RID: 52 RVA: 0x000141A0 File Offset: 0x000123A0
+		// Token: 0x06000034 RID: 52 RVA: 0x00014A4C File Offset: 0x00012C4C
 		private ActorStateComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000035 RID: 53 RVA: 0x000141D8 File Offset: 0x000123D8
+		// Token: 0x06000035 RID: 53 RVA: 0x00014A84 File Offset: 0x00012C84
 		public static ActorStateComponent Create([Nullable(2)] ActorStateComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000036 RID: 54 RVA: 0x000141EB File Offset: 0x000123EB
+		// Token: 0x06000036 RID: 54 RVA: 0x00014A97 File Offset: 0x00012C97
 		public static ActorStateComponent CreateFromSetValue([Nullable(2)] ActorStateComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000037 RID: 55 RVA: 0x000141FE File Offset: 0x000123FE
+		// Token: 0x06000037 RID: 55 RVA: 0x00014AAA File Offset: 0x00012CAA
 		public new ActorStateComponent_SetValue ToSetValue()
 		{
 			return new ActorStateComponent_SetValue
@@ -62,8 +60,8 @@ namespace Aki.TDConfigMgr.Component
 		}
 
 		// Token: 0x17000011 RID: 17
-		// (get) Token: 0x06000038 RID: 56 RVA: 0x0001422C File Offset: 0x0001242C
-		// (set) Token: 0x06000039 RID: 57 RVA: 0x00014266 File Offset: 0x00012466
+		// (get) Token: 0x06000038 RID: 56 RVA: 0x00014AD8 File Offset: 0x00012CD8
+		// (set) Token: 0x06000039 RID: 57 RVA: 0x00014B12 File Offset: 0x00012D12
 		public override bool? Disabled
 		{
 			get
@@ -86,8 +84,8 @@ namespace Aki.TDConfigMgr.Component
 		}
 
 		// Token: 0x17000012 RID: 18
-		// (get) Token: 0x0600003A RID: 58 RVA: 0x00014274 File Offset: 0x00012474
-		// (set) Token: 0x0600003B RID: 59 RVA: 0x0001429E File Offset: 0x0001249E
+		// (get) Token: 0x0600003A RID: 58 RVA: 0x00014B20 File Offset: 0x00012D20
+		// (set) Token: 0x0600003B RID: 59 RVA: 0x00014B4A File Offset: 0x00012D4A
 		public override bool? EdIsLocked
 		{
 			get
@@ -105,8 +103,8 @@ namespace Aki.TDConfigMgr.Component
 		}
 
 		// Token: 0x17000013 RID: 19
-		// (get) Token: 0x0600003C RID: 60 RVA: 0x000142AC File Offset: 0x000124AC
-		// (set) Token: 0x0600003D RID: 61 RVA: 0x000142D7 File Offset: 0x000124D7
+		// (get) Token: 0x0600003C RID: 60 RVA: 0x00014B58 File Offset: 0x00012D58
+		// (set) Token: 0x0600003D RID: 61 RVA: 0x00014B83 File Offset: 0x00012D83
 		public virtual string InitState
 		{
 			get
@@ -127,11 +125,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400002E RID: 46
+		// Token: 0x0400002F RID: 47
 		[Nullable(2)]
 		protected new ActorStateComponent FbInstance;
 
-		// Token: 0x0400002F RID: 47
+		// Token: 0x04000030 RID: 48
 		[Nullable(2)]
 		protected new ActorStateComponent_SetValue PocoInterface;
 	}

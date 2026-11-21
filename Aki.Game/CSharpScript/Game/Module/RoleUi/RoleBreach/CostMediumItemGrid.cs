@@ -5,7 +5,7 @@ using CSharpScript.Game.Module.Inventory;
 
 namespace CSharpScript.Game.Module.RoleUi.RoleBreach
 {
-	// Token: 0x02004D62 RID: 19810
+	// Token: 0x02003D2B RID: 15659
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -14,7 +14,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleBreach
 	})]
 	public class CostMediumItemGrid : LoopScrollMediumItemGrid<ISelectedData>
 	{
-		// Token: 0x0603337F RID: 209791 RVA: 0x00BF1C00 File Offset: 0x00BEFE00
+		// Token: 0x060281EC RID: 164332 RVA: 0x00B3ADBC File Offset: 0x00B38FBC
 		protected override void OnRefresh(ISelectedData data, bool isSelected, int gridIndex)
 		{
 			int itemId = data.ItemId;

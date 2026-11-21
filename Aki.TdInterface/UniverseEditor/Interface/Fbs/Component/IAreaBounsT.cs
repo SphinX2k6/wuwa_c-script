@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004EB7 RID: 20151
+	// Token: 0x020053E0 RID: 21472
 	public class IAreaBounsT
 	{
-		// Token: 0x17009093 RID: 37011
-		// (get) Token: 0x0601FBC4 RID: 129988 RVA: 0x0046AFD2 File Offset: 0x004691D2
-		// (set) Token: 0x0601FBC5 RID: 129989 RVA: 0x0046AFDA File Offset: 0x004691DA
+		// Token: 0x170097F4 RID: 38900
+		// (get) Token: 0x060218C5 RID: 137413 RVA: 0x004A044E File Offset: 0x0049E64E
+		// (set) Token: 0x060218C6 RID: 137414 RVA: 0x004A0456 File Offset: 0x0049E656
 		public EWorldLevelBonus Type { get; set; }
 
-		// Token: 0x0601FBC6 RID: 129990 RVA: 0x0046AFE3 File Offset: 0x004691E3
+		// Token: 0x060218C7 RID: 137415 RVA: 0x004A045F File Offset: 0x0049E65F
 		public IAreaBounsT()
 		{
 			this.Type = EWorldLevelBonus.WorldLevelTable;

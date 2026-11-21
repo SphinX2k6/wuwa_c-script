@@ -2,10 +2,10 @@
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02002B5D RID: 11101
+// Token: 0x020020D9 RID: 8409
 internal class CardScrollItem : SurvivorsRogueCardScrollItemBase<int>
 {
-	// Token: 0x06017042 RID: 94274 RVA: 0x005D81A4 File Offset: 0x005D63A4
+	// Token: 0x06014A73 RID: 84595 RVA: 0x00604D0C File Offset: 0x00602F0C
 	public override UniTask RefreshAsync(int weaponId, bool isSelected, int gridIndex)
 	{
 		CardScrollItem.<RefreshAsync>d__0 <RefreshAsync>d__;
@@ -17,7 +17,7 @@ internal class CardScrollItem : SurvivorsRogueCardScrollItemBase<int>
 		return <RefreshAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06017043 RID: 94275 RVA: 0x005D81EF File Offset: 0x005D63EF
+	// Token: 0x06014A74 RID: 84596 RVA: 0x00604D57 File Offset: 0x00602F57
 	protected override bool OnCanExecuteChange()
 	{
 		return false;

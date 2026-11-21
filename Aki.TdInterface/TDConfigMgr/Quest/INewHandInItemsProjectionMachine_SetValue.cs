@@ -2,16 +2,16 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200102A RID: 4138
+	// Token: 0x02001156 RID: 4438
 	public class INewHandInItemsProjectionMachine_SetValue
 	{
-		// Token: 0x04003787 RID: 14215
+		// Token: 0x04003AC2 RID: 15042
 		public ENewHandInItemsType Type;
 
-		// Token: 0x04003788 RID: 14216
+		// Token: 0x04003AC3 RID: 15043
 		public int EntityId;
 
-		// Token: 0x04003789 RID: 14217
+		// Token: 0x04003AC4 RID: 15044
 		public int ItemId;
 	}
 }

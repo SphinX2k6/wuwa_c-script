@@ -5,17 +5,17 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200265C RID: 9820
+// Token: 0x02001B47 RID: 6983
 [NullableContext(1)]
 [Nullable(0)]
 public class NewMissionTips : UiTickViewBase
 {
-	// Token: 0x0601417B RID: 82299 RVA: 0x00510A80 File Offset: 0x0050EC80
+	// Token: 0x0601165D RID: 71261 RVA: 0x0051F738 File Offset: 0x0051D938
 	public NewMissionTips(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0601417C RID: 82300 RVA: 0x00510AAC File Offset: 0x0050ECAC
+	// Token: 0x0601165E RID: 71262 RVA: 0x0051F764 File Offset: 0x0051D964
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -29,7 +29,7 @@ public class NewMissionTips : UiTickViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0601417D RID: 82301 RVA: 0x00510B18 File Offset: 0x0050ED18
+	// Token: 0x0601165F RID: 71263 RVA: 0x0051F7D0 File Offset: 0x0051D9D0
 	protected override void OnBeforeCreate()
 	{
 		base.OnBeforeCreate();
@@ -55,7 +55,7 @@ public class NewMissionTips : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0601417E RID: 82302 RVA: 0x00510BD4 File Offset: 0x0050EDD4
+	// Token: 0x06011660 RID: 71264 RVA: 0x0051F88C File Offset: 0x0051DA8C
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -74,7 +74,7 @@ public class NewMissionTips : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0601417F RID: 82303 RVA: 0x00510C50 File Offset: 0x0050EE50
+	// Token: 0x06011661 RID: 71265 RVA: 0x0051F908 File Offset: 0x0051DB08
 	private void UpdateQuestNameText()
 	{
 		string configTextByKey = PublicUtil.Instance.GetConfigTextByKey(this.QuestNameTid);
@@ -86,7 +86,7 @@ public class NewMissionTips : UiTickViewBase
 		text.SetText(configTextByKey, true);
 	}
 
-	// Token: 0x06014180 RID: 82304 RVA: 0x00510C84 File Offset: 0x0050EE84
+	// Token: 0x06011662 RID: 71266 RVA: 0x0051F93C File Offset: 0x0051DB3C
 	protected override void OnTick(float delta)
 	{
 		this.RemainTime = Math.Max(this.RemainTime - delta / 1000f * Time.Instance.TimeDilation, 0f);
@@ -96,33 +96,33 @@ public class NewMissionTips : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06014181 RID: 82305 RVA: 0x00510CD5 File Offset: 0x0050EED5
+	// Token: 0x06011663 RID: 71267 RVA: 0x0051F98D File Offset: 0x0051DB8D
 	private void CloseView()
 	{
 		this.CloseCalled = true;
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0400977B RID: 38779
+	// Token: 0x040098D3 RID: 39123
 	private string MarkIconPath = "";
 
-	// Token: 0x0400977C RID: 38780
+	// Token: 0x040098D4 RID: 39124
 	private string QuestNameTid = "";
 
-	// Token: 0x0400977D RID: 38781
+	// Token: 0x040098D5 RID: 39125
 	private float RemainTime = 5f;
 
-	// Token: 0x0400977E RID: 38782
+	// Token: 0x040098D6 RID: 39126
 	private bool CloseCalled;
 
-	// Token: 0x02008C97 RID: 35991
+	// Token: 0x02007E20 RID: 32288
 	[NullableContext(0)]
 	private class EChildComponent
 	{
-		// Token: 0x0402DA16 RID: 186902
+		// Token: 0x04028D2D RID: 167213
 		public const int QuestNameText = 0;
 
-		// Token: 0x0402DA17 RID: 186903
+		// Token: 0x04028D2E RID: 167214
 		public const int Icon = 1;
 	}
 }

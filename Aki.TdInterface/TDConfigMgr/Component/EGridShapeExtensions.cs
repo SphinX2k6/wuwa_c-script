@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000956 RID: 2390
+	// Token: 0x02000A09 RID: 2569
 	public static class EGridShapeExtensions
 	{
-		// Token: 0x060035B4 RID: 13748 RVA: 0x0008BFD0 File Offset: 0x0008A1D0
+		// Token: 0x0600393B RID: 14651 RVA: 0x00093F24 File Offset: 0x00092124
 		public static string ToEnumString(this EGridShape value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060035B5 RID: 13749 RVA: 0x0008C008 File Offset: 0x0008A208
+		// Token: 0x0600393C RID: 14652 RVA: 0x00093F5C File Offset: 0x0009215C
 		public static EGridShape FromString(string name)
 		{
 			EGridShape result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060035B6 RID: 13750 RVA: 0x0008C031 File Offset: 0x0008A231
+		// Token: 0x0600393D RID: 14653 RVA: 0x00093F85 File Offset: 0x00092185
 		public static bool TryFromString(string name, out EGridShape value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x060035B7 RID: 13751 RVA: 0x0008C06A File Offset: 0x0008A26A
+		// Token: 0x0600393E RID: 14654 RVA: 0x00093FBE File Offset: 0x000921BE
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060035B8 RID: 13752 RVA: 0x0008C082 File Offset: 0x0008A282
+		// Token: 0x0600393F RID: 14655 RVA: 0x00093FD6 File Offset: 0x000921D6
 		public static EGridShape[] GetValues()
 		{
 			return new EGridShape[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060035B9 RID: 13753 RVA: 0x0008C08E File Offset: 0x0008A28E
+		// Token: 0x06003940 RID: 14656 RVA: 0x00093FE2 File Offset: 0x000921E2
 		public static string[] GetNames()
 		{
 			return new string[]

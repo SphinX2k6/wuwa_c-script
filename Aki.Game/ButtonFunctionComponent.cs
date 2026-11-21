@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001C7B RID: 7291
+// Token: 0x0200113A RID: 4410
 public class ButtonFunctionComponent : UiPanelBase
 {
-	// Token: 0x0600DBE8 RID: 56296 RVA: 0x00332C98 File Offset: 0x00330E98
+	// Token: 0x0600AFFE RID: 45054 RVA: 0x0033E0F8 File Offset: 0x0033C2F8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -27,29 +27,29 @@ public class ButtonFunctionComponent : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600DBE9 RID: 56297 RVA: 0x00332D1D File Offset: 0x00330F1D
+	// Token: 0x0600AFFF RID: 45055 RVA: 0x0033E17D File Offset: 0x0033C37D
 	[NullableContext(1)]
 	public void SetFunction(Action callback)
 	{
 		this.CallBack = callback;
 	}
 
-	// Token: 0x0600DBEA RID: 56298 RVA: 0x00332D26 File Offset: 0x00330F26
+	// Token: 0x0600B000 RID: 45056 RVA: 0x0033E186 File Offset: 0x0033C386
 	private void OnButtonClick()
 	{
 		this.CallBack();
 	}
 
-	// Token: 0x040064E8 RID: 25832
+	// Token: 0x040065BA RID: 26042
 	[Nullable(1)]
 	private Action CallBack = delegate()
 	{
 	};
 
-	// Token: 0x02008239 RID: 33337
+	// Token: 0x020073C2 RID: 29634
 	private enum EComponent
 	{
-		// Token: 0x0402A7D0 RID: 174032
+		// Token: 0x04025AF6 RID: 154358
 		JumpBtn
 	}
 }

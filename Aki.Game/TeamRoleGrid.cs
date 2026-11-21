@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
@@ -8,22 +7,22 @@ using CSharpScript.Game.Module.MapRogue;
 using CSharpScript.Game.Module.Roguelike;
 using CSharpScript.Module.InstanceDungeon;
 
-// Token: 0x02002790 RID: 10128
+// Token: 0x02001C7B RID: 7291
 [NullableContext(2)]
 [Nullable(0)]
 public class TeamRoleGrid : TeamRoleGridBase
 {
-	// Token: 0x17001B20 RID: 6944
-	// (get) Token: 0x06014C7F RID: 85119 RVA: 0x00543670 File Offset: 0x00541870
-	// (set) Token: 0x06014C80 RID: 85120 RVA: 0x00543678 File Offset: 0x00541878
+	// Token: 0x17001B59 RID: 7001
+	// (get) Token: 0x0601216A RID: 74090 RVA: 0x00552754 File Offset: 0x00550954
+	// (set) Token: 0x0601216B RID: 74091 RVA: 0x0055275C File Offset: 0x0055095C
 	public override Func<int, bool> IsHighlightIndex { get; set; }
 
-	// Token: 0x17001B21 RID: 6945
-	// (get) Token: 0x06014C81 RID: 85121 RVA: 0x00543681 File Offset: 0x00541881
-	// (set) Token: 0x06014C82 RID: 85122 RVA: 0x00543689 File Offset: 0x00541889
+	// Token: 0x17001B5A RID: 7002
+	// (get) Token: 0x0601216C RID: 74092 RVA: 0x00552765 File Offset: 0x00550965
+	// (set) Token: 0x0601216D RID: 74093 RVA: 0x0055276D File Offset: 0x0055096D
 	public override Func<int, bool> IsShowGray { get; set; }
 
-	// Token: 0x06014C83 RID: 85123 RVA: 0x00543694 File Offset: 0x00541894
+	// Token: 0x0601216E RID: 74094 RVA: 0x00552778 File Offset: 0x00550978
 	[NullableContext(1)]
 	protected override void OnRefresh(RoleDataBase data, bool isSelected, int gridIndex)
 	{
@@ -47,9 +46,9 @@ public class TeamRoleGrid : TeamRoleGridBase
 			if (config != null)
 			{
 				int[] array = config.Value.RecommendRole();
-				value = (array != null && array.Contains(data.GetRoleId()));
+				value = (array != null && Array.IndexOf<int>(array, data.GetRoleId()) >= 0);
 				int[] array2 = config.Value.RecommendRoleBottom();
-				value2 = (array2 != null && array2.Contains(data.GetRoleId()));
+				value2 = (array2 != null && Array.IndexOf<int>(array2, data.GetRoleId()) >= 0);
 			}
 		}
 		List<int> otherHalfAreaRoleList = MowingTowerModel.Instance.OtherHalfAreaRoleList;
@@ -131,25 +130,25 @@ public class TeamRoleGrid : TeamRoleGridBase
 		this.SetSelected(bSelected, true);
 	}
 
-	// Token: 0x06014C84 RID: 85124 RVA: 0x00543AE7 File Offset: 0x00541CE7
+	// Token: 0x0601216F RID: 74095 RVA: 0x00552BD7 File Offset: 0x00550DD7
 	public override void OnForceSelected()
 	{
 		this.SetSelected(true, true);
 	}
 
-	// Token: 0x06014C85 RID: 85125 RVA: 0x00543AF1 File Offset: 0x00541CF1
+	// Token: 0x06012170 RID: 74096 RVA: 0x00552BE1 File Offset: 0x00550DE1
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetSelected(true, false);
 	}
 
-	// Token: 0x06014C86 RID: 85126 RVA: 0x00543AFB File Offset: 0x00541CFB
+	// Token: 0x06012171 RID: 74097 RVA: 0x00552BEB File Offset: 0x00550DEB
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetSelected(false, false);
 	}
 
-	// Token: 0x06014C87 RID: 85127 RVA: 0x00543B08 File Offset: 0x00541D08
+	// Token: 0x06012172 RID: 74098 RVA: 0x00552BF8 File Offset: 0x00550DF8
 	public void SetAddLevelComponent(int addLevel, bool isShow)
 	{
 		RoleDataBase roleDataBase = this.Data as RoleDataBase;

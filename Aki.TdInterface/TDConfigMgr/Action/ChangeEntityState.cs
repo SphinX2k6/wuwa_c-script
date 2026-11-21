@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014D0 RID: 5328
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001629 RID: 5673
 	public class ChangeEntityState : ActionParams
 	{
-		// Token: 0x0600794E RID: 31054 RVA: 0x001226A4 File Offset: 0x001208A4
+		// Token: 0x0600801B RID: 32795 RVA: 0x001312F0 File Offset: 0x0012F4F0
 		private ChangeEntityState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600794F RID: 31055 RVA: 0x001226DC File Offset: 0x001208DC
+		// Token: 0x0600801C RID: 32796 RVA: 0x00131328 File Offset: 0x0012F528
 		public static ChangeEntityState Create([Nullable(2)] ChangeEntityState instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007950 RID: 31056 RVA: 0x001226EF File Offset: 0x001208EF
+		// Token: 0x0600801D RID: 32797 RVA: 0x0013133B File Offset: 0x0012F53B
 		public static ChangeEntityState CreateFromSetValue([Nullable(2)] ChangeEntityState_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007951 RID: 31057 RVA: 0x00122702 File Offset: 0x00120902
+		// Token: 0x0600801E RID: 32798 RVA: 0x0013134E File Offset: 0x0012F54E
 		public ChangeEntityState_SetValue ToSetValue()
 		{
 			return new ChangeEntityState_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170028A5 RID: 10405
-		// (get) Token: 0x06007952 RID: 31058 RVA: 0x00122721 File Offset: 0x00120921
-		// (set) Token: 0x06007953 RID: 31059 RVA: 0x0012274C File Offset: 0x0012094C
+		// Token: 0x17002A8F RID: 10895
+		// (get) Token: 0x0600801F RID: 32799 RVA: 0x0013136D File Offset: 0x0012F56D
+		// (set) Token: 0x06008020 RID: 32800 RVA: 0x00131398 File Offset: 0x0012F598
 		public virtual EChangeEntityState Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170028A6 RID: 10406
-		// (get) Token: 0x06007954 RID: 31060 RVA: 0x0012275A File Offset: 0x0012095A
-		// (set) Token: 0x06007955 RID: 31061 RVA: 0x00122785 File Offset: 0x00120985
+		// Token: 0x17002A90 RID: 10896
+		// (get) Token: 0x06008021 RID: 32801 RVA: 0x001313A6 File Offset: 0x0012F5A6
+		// (set) Token: 0x06008022 RID: 32802 RVA: 0x001313D1 File Offset: 0x0012F5D1
 		public virtual int EntityId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004668 RID: 18024
+		// Token: 0x04004A03 RID: 18947
 		[Nullable(2)]
 		protected new ChangeEntityState FbInstance;
 
-		// Token: 0x04004669 RID: 18025
+		// Token: 0x04004A04 RID: 18948
 		[Nullable(2)]
 		protected ChangeEntityState_SetValue PocoInterface;
 	}

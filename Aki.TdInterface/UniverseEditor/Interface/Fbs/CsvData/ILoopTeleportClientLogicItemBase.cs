@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 {
-	// Token: 0x020048FF RID: 18687
+	// Token: 0x02004D9A RID: 19866
 	public struct ILoopTeleportClientLogicItemBase : IFlatbufferObject
 	{
-		// Token: 0x17008785 RID: 34693
-		// (get) Token: 0x0601D366 RID: 119654 RVA: 0x0041F368 File Offset: 0x0041D568
+		// Token: 0x17008E28 RID: 36392
+		// (get) Token: 0x0601ECFF RID: 126207 RVA: 0x0044EAC7 File Offset: 0x0044CCC7
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 			}
 		}
 
-		// Token: 0x0601D367 RID: 119655 RVA: 0x0041F375 File Offset: 0x0041D575
+		// Token: 0x0601ED00 RID: 126208 RVA: 0x0044EAD4 File Offset: 0x0044CCD4
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601D368 RID: 119656 RVA: 0x0041F37C File Offset: 0x0041D57C
+		// Token: 0x0601ED01 RID: 126209 RVA: 0x0044EADC File Offset: 0x0044CCDC
 		public static ILoopTeleportClientLogicItemBase GetRootAsILoopTeleportClientLogicItemBase(ByteBuffer _bb)
 		{
 			return ILoopTeleportClientLogicItemBase.GetRootAsILoopTeleportClientLogicItemBase(_bb, default(ILoopTeleportClientLogicItemBase));
 		}
 
-		// Token: 0x0601D369 RID: 119657 RVA: 0x0041F398 File Offset: 0x0041D598
+		// Token: 0x0601ED02 RID: 126210 RVA: 0x0044EAF8 File Offset: 0x0044CCF8
 		public static ILoopTeleportClientLogicItemBase GetRootAsILoopTeleportClientLogicItemBase(ByteBuffer _bb, ILoopTeleportClientLogicItemBase obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601D36A RID: 119658 RVA: 0x0041F3B5 File Offset: 0x0041D5B5
+		// Token: 0x0601ED03 RID: 126211 RVA: 0x0044EB15 File Offset: 0x0044CD15
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601D36B RID: 119659 RVA: 0x0041F3C4 File Offset: 0x0041D5C4
+		// Token: 0x0601ED04 RID: 126212 RVA: 0x0044EB24 File Offset: 0x0044CD24
 		public ILoopTeleportClientLogicItemBase __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008786 RID: 34694
-		// (get) Token: 0x0601D36C RID: 119660 RVA: 0x0041F3D4 File Offset: 0x0041D5D4
+		// Token: 0x17008E29 RID: 36393
+		// (get) Token: 0x0601ED05 RID: 126213 RVA: 0x0044EB34 File Offset: 0x0044CD34
 		public ELoopTeleportClientLogicType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 			}
 		}
 
-		// Token: 0x0601D36D RID: 119661 RVA: 0x0041F410 File Offset: 0x0041D610
+		// Token: 0x0601ED06 RID: 126214 RVA: 0x0044EB70 File Offset: 0x0044CD70
 		public static Offset<ILoopTeleportClientLogicItemBase> CreateILoopTeleportClientLogicItemBase(FlatBufferBuilder builder, ELoopTeleportClientLogicType Type = ELoopTeleportClientLogicType.PlayEffect)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 			return ILoopTeleportClientLogicItemBase.EndILoopTeleportClientLogicItemBase(builder);
 		}
 
-		// Token: 0x0601D36E RID: 119662 RVA: 0x0041F426 File Offset: 0x0041D626
+		// Token: 0x0601ED07 RID: 126215 RVA: 0x0044EB86 File Offset: 0x0044CD86
 		public static void StartILoopTeleportClientLogicItemBase(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0601D36F RID: 119663 RVA: 0x0041F42F File Offset: 0x0041D62F
+		// Token: 0x0601ED08 RID: 126216 RVA: 0x0044EB8F File Offset: 0x0044CD8F
 		public static void AddType(FlatBufferBuilder builder, ELoopTeleportClientLogicType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601D370 RID: 119664 RVA: 0x0041F43A File Offset: 0x0041D63A
+		// Token: 0x0601ED09 RID: 126217 RVA: 0x0044EB9A File Offset: 0x0044CD9A
 		public static Offset<ILoopTeleportClientLogicItemBase> EndILoopTeleportClientLogicItemBase(FlatBufferBuilder builder)
 		{
 			return new Offset<ILoopTeleportClientLogicItemBase>(builder.EndTable());
 		}
 
-		// Token: 0x0601D371 RID: 119665 RVA: 0x0041F448 File Offset: 0x0041D648
+		// Token: 0x0601ED0A RID: 126218 RVA: 0x0044EBA8 File Offset: 0x0044CDA8
 		public ILoopTeleportClientLogicItemBaseT UnPack()
 		{
 			ILoopTeleportClientLogicItemBaseT loopTeleportClientLogicItemBaseT = new ILoopTeleportClientLogicItemBaseT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 			return loopTeleportClientLogicItemBaseT;
 		}
 
-		// Token: 0x0601D372 RID: 119666 RVA: 0x0041F463 File Offset: 0x0041D663
+		// Token: 0x0601ED0B RID: 126219 RVA: 0x0044EBC3 File Offset: 0x0044CDC3
 		public void UnPackTo(ILoopTeleportClientLogicItemBaseT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0601D373 RID: 119667 RVA: 0x0041F474 File Offset: 0x0041D674
+		// Token: 0x0601ED0C RID: 126220 RVA: 0x0044EBD4 File Offset: 0x0044CDD4
 		public static Offset<ILoopTeleportClientLogicItemBase> Pack(FlatBufferBuilder builder, ILoopTeleportClientLogicItemBaseT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.CsvData
 			return ILoopTeleportClientLogicItemBase.CreateILoopTeleportClientLogicItemBase(builder, _o.Type);
 		}
 
-		// Token: 0x0400CF6D RID: 53101
+		// Token: 0x0400D9F8 RID: 55800
 		private Table __p;
 	}
 }

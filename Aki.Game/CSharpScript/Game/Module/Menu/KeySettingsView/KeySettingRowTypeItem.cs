@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.KeySettingsView
 {
-	// Token: 0x02005468 RID: 21608
+	// Token: 0x0200444B RID: 17483
 	public class KeySettingRowTypeItem : UiPanelBase
 	{
-		// Token: 0x06037270 RID: 225904 RVA: 0x00D12BE6 File Offset: 0x00D10DE6
+		// Token: 0x0602C1B9 RID: 180665 RVA: 0x00C61FFE File Offset: 0x00C601FE
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			};
 		}
 
-		// Token: 0x06037271 RID: 225905 RVA: 0x00D12C20 File Offset: 0x00D10E20
+		// Token: 0x0602C1BA RID: 180666 RVA: 0x00C62038 File Offset: 0x00C60238
 		[NullableContext(1)]
 		public void Refresh(KeySettingRowData keySettingRowData)
 		{
@@ -49,13 +49,13 @@ namespace CSharpScript.Game.Module.Menu.KeySettingsView
 			text.SetUIActive(true);
 		}
 
-		// Token: 0x0200B6E2 RID: 46818
+		// Token: 0x0200A11A RID: 41242
 		public class EChildType
 		{
-			// Token: 0x04037673 RID: 226931
+			// Token: 0x040320C8 RID: 205000
 			public const int TypeSprite = 0;
 
-			// Token: 0x04037674 RID: 226932
+			// Token: 0x040320C9 RID: 205001
 			public const int TypeNameText = 1;
 		}
 	}

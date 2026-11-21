@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A12 RID: 10770
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002CFF RID: 11519
 	public class IStopGuestUiAnimation : IGuestOperateUiAnimationType
 	{
-		// Token: 0x0600ED7E RID: 60798 RVA: 0x00229EB2 File Offset: 0x002280B2
+		// Token: 0x0600FC15 RID: 64533 RVA: 0x00247836 File Offset: 0x00245A36
 		public static IStopGuestUiAnimation Create(IStopGuestUiAnimation? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B1C RID: 19228
-		// (get) Token: 0x0600ED7F RID: 60799 RVA: 0x00229ED1 File Offset: 0x002280D1
+		// Token: 0x17004EC5 RID: 20165
+		// (get) Token: 0x0600FC16 RID: 64534 RVA: 0x00247855 File Offset: 0x00245A55
 		public override EGuestOperateUiAnimation Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004B1D RID: 19229
-		// (get) Token: 0x0600ED80 RID: 60800 RVA: 0x00229EDE File Offset: 0x002280DE
+		// Token: 0x17004EC6 RID: 20166
+		// (get) Token: 0x0600FC17 RID: 64535 RVA: 0x00247862 File Offset: 0x00245A62
 		public virtual IStopGuestCartethyia StopGuestUiAnimation
 		{
 			get
@@ -48,14 +46,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040082B8 RID: 33464
+		// Token: 0x040089A9 RID: 35241
 		private IStopGuestUiAnimation Instance;
 
-		// Token: 0x040082B9 RID: 33465
+		// Token: 0x040089AA RID: 35242
 		[Nullable(2)]
 		private IStopGuestCartethyia _StopGuestUiAnimationCache;
 
-		// Token: 0x040082BA RID: 33466
+		// Token: 0x040089AB RID: 35243
 		private bool _StopGuestUiAnimationInited;
 	}
 }

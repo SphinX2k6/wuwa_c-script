@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200258A RID: 9610
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002838 RID: 10296
 	public class IVisualNovelPerformanceTransition : IVisualNovelPerformanceBase
 	{
-		// Token: 0x0600D7AA RID: 55210 RVA: 0x00201D15 File Offset: 0x001FFF15
+		// Token: 0x0600E524 RID: 58660 RVA: 0x0021DA49 File Offset: 0x0021BC49
 		public static IVisualNovelPerformanceTransition Create(IVisualNovelPerformanceTransition? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003E58 RID: 15960
-		// (get) Token: 0x0600D7AB RID: 55211 RVA: 0x00201D34 File Offset: 0x001FFF34
+		// Token: 0x17004162 RID: 16738
+		// (get) Token: 0x0600E525 RID: 58661 RVA: 0x0021DA68 File Offset: 0x0021BC68
 		public override EVisualNovelPerformanceType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003E59 RID: 15961
-		// (get) Token: 0x0600D7AC RID: 55212 RVA: 0x00201D44 File Offset: 0x001FFF44
+		// Token: 0x17004163 RID: 16739
+		// (get) Token: 0x0600E526 RID: 58662 RVA: 0x0021DA78 File Offset: 0x0021BC78
 		public override float? StartTime
 		{
 			get
@@ -46,8 +44,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003E5A RID: 15962
-		// (get) Token: 0x0600D7AD RID: 55213 RVA: 0x00201D7A File Offset: 0x001FFF7A
+		// Token: 0x17004164 RID: 16740
+		// (get) Token: 0x0600E527 RID: 58663 RVA: 0x0021DAAE File Offset: 0x0021BCAE
 		public virtual IVisualNovelTransitionPerformanceSolarSchool TransitionPerformanceConfig
 		{
 			get
@@ -62,14 +60,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007754 RID: 30548
+		// Token: 0x04007DBA RID: 32186
 		private IVisualNovelPerformanceTransition Instance;
 
-		// Token: 0x04007755 RID: 30549
+		// Token: 0x04007DBB RID: 32187
 		[Nullable(2)]
 		private IVisualNovelTransitionPerformanceSolarSchool _TransitionPerformanceConfigCache;
 
-		// Token: 0x04007756 RID: 30550
+		// Token: 0x04007DBC RID: 32188
 		private bool _TransitionPerformanceConfigInited;
 	}
 }

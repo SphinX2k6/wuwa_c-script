@@ -13,34 +13,34 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020011E8 RID: 4584
+// Token: 0x0200069C RID: 1692
 [NullableContext(2)]
 [Nullable(0)]
 public class ActivitySubViewCollection : ActivitySubViewBase
 {
-	// Token: 0x17000A72 RID: 2674
-	// (get) Token: 0x06007A48 RID: 31304 RVA: 0x0019BF28 File Offset: 0x0019A128
-	// (set) Token: 0x06007A49 RID: 31305 RVA: 0x0019BF30 File Offset: 0x0019A130
+	// Token: 0x17000A92 RID: 2706
+	// (get) Token: 0x06004DDF RID: 19935 RVA: 0x001A4BD4 File Offset: 0x001A2DD4
+	// (set) Token: 0x06004DE0 RID: 19936 RVA: 0x001A4BDC File Offset: 0x001A2DDC
 	protected ActivityCollectionData ActivityData { get; set; }
 
-	// Token: 0x17000A73 RID: 2675
-	// (get) Token: 0x06007A4A RID: 31306 RVA: 0x0019BF39 File Offset: 0x0019A139
-	// (set) Token: 0x06007A4B RID: 31307 RVA: 0x0019BF41 File Offset: 0x0019A141
+	// Token: 0x17000A93 RID: 2707
+	// (get) Token: 0x06004DE1 RID: 19937 RVA: 0x001A4BE5 File Offset: 0x001A2DE5
+	// (set) Token: 0x06004DE2 RID: 19938 RVA: 0x001A4BED File Offset: 0x001A2DED
 	private ActivityTitleTypeA TitleComponent { get; set; }
 
-	// Token: 0x17000A74 RID: 2676
-	// (get) Token: 0x06007A4C RID: 31308 RVA: 0x0019BF4A File Offset: 0x0019A14A
-	// (set) Token: 0x06007A4D RID: 31309 RVA: 0x0019BF52 File Offset: 0x0019A152
+	// Token: 0x17000A94 RID: 2708
+	// (get) Token: 0x06004DE3 RID: 19939 RVA: 0x001A4BF6 File Offset: 0x001A2DF6
+	// (set) Token: 0x06004DE4 RID: 19940 RVA: 0x001A4BFE File Offset: 0x001A2DFE
 	private ActivityDescriptionTypeA DescriptionComponent { get; set; }
 
-	// Token: 0x17000A75 RID: 2677
-	// (get) Token: 0x06007A4E RID: 31310 RVA: 0x0019BF5B File Offset: 0x0019A15B
-	// (set) Token: 0x06007A4F RID: 31311 RVA: 0x0019BF63 File Offset: 0x0019A163
+	// Token: 0x17000A95 RID: 2709
+	// (get) Token: 0x06004DE5 RID: 19941 RVA: 0x001A4C07 File Offset: 0x001A2E07
+	// (set) Token: 0x06004DE6 RID: 19942 RVA: 0x001A4C0F File Offset: 0x001A2E0F
 	private ActivityProgressComponents ProgressComponent { get; set; }
 
-	// Token: 0x17000A76 RID: 2678
-	// (get) Token: 0x06007A50 RID: 31312 RVA: 0x0019BF6C File Offset: 0x0019A16C
-	// (set) Token: 0x06007A51 RID: 31313 RVA: 0x0019BF74 File Offset: 0x0019A174
+	// Token: 0x17000A96 RID: 2710
+	// (get) Token: 0x06004DE7 RID: 19943 RVA: 0x001A4C18 File Offset: 0x001A2E18
+	// (set) Token: 0x06004DE8 RID: 19944 RVA: 0x001A4C20 File Offset: 0x001A2E20
 	[Nullable(new byte[]
 	{
 		2,
@@ -56,22 +56,22 @@ public class ActivitySubViewCollection : ActivitySubViewBase
 		1
 	})] set; }
 
-	// Token: 0x17000A77 RID: 2679
-	// (get) Token: 0x06007A52 RID: 31314 RVA: 0x0019BF7D File Offset: 0x0019A17D
-	// (set) Token: 0x06007A53 RID: 31315 RVA: 0x0019BF85 File Offset: 0x0019A185
+	// Token: 0x17000A97 RID: 2711
+	// (get) Token: 0x06004DE9 RID: 19945 RVA: 0x001A4C29 File Offset: 0x001A2E29
+	// (set) Token: 0x06004DEA RID: 19946 RVA: 0x001A4C31 File Offset: 0x001A2E31
 	private ActivityFunctionalArea FunctionalComponent { get; set; }
 
-	// Token: 0x17000A78 RID: 2680
-	// (get) Token: 0x06007A54 RID: 31316 RVA: 0x0019BF8E File Offset: 0x0019A18E
-	// (set) Token: 0x06007A55 RID: 31317 RVA: 0x0019BF96 File Offset: 0x0019A196
+	// Token: 0x17000A98 RID: 2712
+	// (get) Token: 0x06004DEB RID: 19947 RVA: 0x001A4C3A File Offset: 0x001A2E3A
+	// (set) Token: 0x06004DEC RID: 19948 RVA: 0x001A4C42 File Offset: 0x001A2E42
 	private bool IsQuestLockTimeShow { get; set; }
 
-	// Token: 0x17000A79 RID: 2681
-	// (get) Token: 0x06007A56 RID: 31318 RVA: 0x0019BF9F File Offset: 0x0019A19F
-	// (set) Token: 0x06007A57 RID: 31319 RVA: 0x0019BFA7 File Offset: 0x0019A1A7
+	// Token: 0x17000A99 RID: 2713
+	// (get) Token: 0x06004DED RID: 19949 RVA: 0x001A4C4B File Offset: 0x001A2E4B
+	// (set) Token: 0x06004DEE RID: 19950 RVA: 0x001A4C53 File Offset: 0x001A2E53
 	private long QuestLockTime { get; set; }
 
-	// Token: 0x06007A58 RID: 31320 RVA: 0x0019BFB0 File Offset: 0x0019A1B0
+	// Token: 0x06004DEF RID: 19951 RVA: 0x001A4C5C File Offset: 0x001A2E5C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -93,13 +93,13 @@ public class ActivitySubViewCollection : ActivitySubViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06007A59 RID: 31321 RVA: 0x0019C09D File Offset: 0x0019A29D
+	// Token: 0x06004DF0 RID: 19952 RVA: 0x001A4D49 File Offset: 0x001A2F49
 	protected override void OnSetData()
 	{
 		this.ActivityData = (ActivityCollectionData)this.ActivityBaseData;
 	}
 
-	// Token: 0x06007A5A RID: 31322 RVA: 0x0019C0B0 File Offset: 0x0019A2B0
+	// Token: 0x06004DF1 RID: 19953 RVA: 0x001A4D5C File Offset: 0x001A2F5C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivitySubViewCollection.<OnBeforeStartAsync>d__35 <OnBeforeStartAsync>d__;
@@ -110,7 +110,7 @@ public class ActivitySubViewCollection : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007A5B RID: 31323 RVA: 0x0019C0F4 File Offset: 0x0019A2F4
+	// Token: 0x06004DF2 RID: 19954 RVA: 0x001A4DA0 File Offset: 0x001A2FA0
 	protected override void OnStart()
 	{
 		this.TitleComponent.SetActivityBaseData(this.ActivityData);
@@ -120,21 +120,21 @@ public class ActivitySubViewCollection : ActivitySubViewBase
 		this.OnRefreshView();
 	}
 
-	// Token: 0x06007A5C RID: 31324 RVA: 0x0019C140 File Offset: 0x0019A340
+	// Token: 0x06004DF3 RID: 19955 RVA: 0x001A4DEC File Offset: 0x001A2FEC
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int, QuestState, EQuestStatusUpdateReason>(EEventName.OnQuestStateChange, new Action<int, QuestState, EQuestStatusUpdateReason>(this.OnQuestStateChange));
 		EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 	}
 
-	// Token: 0x06007A5D RID: 31325 RVA: 0x0019C17A File Offset: 0x0019A37A
+	// Token: 0x06004DF4 RID: 19956 RVA: 0x001A4E26 File Offset: 0x001A3026
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnQuestStateChange, new Action<int, QuestState, EQuestStatusUpdateReason>(this.OnQuestStateChange));
 		EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 	}
 
-	// Token: 0x06007A5E RID: 31326 RVA: 0x0019C1B4 File Offset: 0x0019A3B4
+	// Token: 0x06004DF5 RID: 19957 RVA: 0x001A4E60 File Offset: 0x001A3060
 	private void OnRefreshCommonActivityRedDot(int id)
 	{
 		if (id == this.ActivityData.Id)
@@ -143,7 +143,7 @@ public class ActivitySubViewCollection : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06007A5F RID: 31327 RVA: 0x0019C1CC File Offset: 0x0019A3CC
+	// Token: 0x06004DF6 RID: 19958 RVA: 0x001A4E78 File Offset: 0x001A3078
 	private void OnQuestStateChange(int questId, QuestState state, EQuestStatusUpdateReason reason)
 	{
 		ICollectionQuestState collectionQuestState;
@@ -155,7 +155,7 @@ public class ActivitySubViewCollection : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06007A60 RID: 31328 RVA: 0x0019C200 File Offset: 0x0019A400
+	// Token: 0x06004DF7 RID: 19959 RVA: 0x001A4EAC File Offset: 0x001A30AC
 	protected override void OnRefreshView()
 	{
 		this.RefreshData();
@@ -166,7 +166,7 @@ public class ActivitySubViewCollection : ActivitySubViewBase
 		this.NewQuestCheck();
 	}
 
-	// Token: 0x06007A61 RID: 31329 RVA: 0x0019C228 File Offset: 0x0019A428
+	// Token: 0x06004DF8 RID: 19960 RVA: 0x001A4ED4 File Offset: 0x001A30D4
 	private void NewQuestCheck()
 	{
 		if (this.ActivityData.IsHasNewQuestRedDot())
@@ -176,19 +176,19 @@ public class ActivitySubViewCollection : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06007A62 RID: 31330 RVA: 0x0019C259 File Offset: 0x0019A459
+	// Token: 0x06004DF9 RID: 19961 RVA: 0x001A4F05 File Offset: 0x001A3105
 	protected override void OnTimer(float gap)
 	{
 		this.RefreshTimerText();
 	}
 
-	// Token: 0x06007A63 RID: 31331 RVA: 0x0019C261 File Offset: 0x0019A461
+	// Token: 0x06004DFA RID: 19962 RVA: 0x001A4F0D File Offset: 0x001A310D
 	private void RefreshData()
 	{
 		this.ActivityData.RefreshRewardData();
 	}
 
-	// Token: 0x06007A64 RID: 31332 RVA: 0x0019C270 File Offset: 0x0019A470
+	// Token: 0x06004DFB RID: 19963 RVA: 0x001A4F1C File Offset: 0x001A311C
 	private void RefreshTimerText()
 	{
 		ValueTuple<bool, string, long> timeVisibleAndRemainTime = this.GetTimeVisibleAndRemainTime();
@@ -213,7 +213,7 @@ public class ActivitySubViewCollection : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06007A65 RID: 31333 RVA: 0x0019C2E0 File Offset: 0x0019A4E0
+	// Token: 0x06004DFC RID: 19964 RVA: 0x001A4F8C File Offset: 0x001A318C
 	private void RefreshProgressComponent()
 	{
 		int item = this.ActivityData.GetCurrentProgress().Item1;
@@ -301,7 +301,7 @@ public class ActivitySubViewCollection : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06007A66 RID: 31334 RVA: 0x0019C4BC File Offset: 0x0019A6BC
+	// Token: 0x06004DFD RID: 19965 RVA: 0x001A5168 File Offset: 0x001A3368
 	[NullableContext(1)]
 	private string GetRemainQuestUnlockTime(long endTime)
 	{
@@ -312,7 +312,7 @@ public class ActivitySubViewCollection : ActivitySubViewBase
 		return ((countDownDataFormat != null) ? countDownDataFormat.CountDownText : null) ?? "";
 	}
 
-	// Token: 0x06007A67 RID: 31335 RVA: 0x0019C526 File Offset: 0x0019A726
+	// Token: 0x06004DFE RID: 19966 RVA: 0x001A51D2 File Offset: 0x001A33D2
 	[NullableContext(0)]
 	private ValueTuple<CommonDefine.ETimeType, CommonDefine.ETimeType> GetQuestLockTimeTypeData(double remainTime)
 	{
@@ -327,7 +327,7 @@ public class ActivitySubViewCollection : ActivitySubViewBase
 		return new ValueTuple<CommonDefine.ETimeType, CommonDefine.ETimeType>(CommonDefine.ETimeType.Minute, CommonDefine.ETimeType.Minute);
 	}
 
-	// Token: 0x06007A68 RID: 31336 RVA: 0x0019C558 File Offset: 0x0019A758
+	// Token: 0x06004DFF RID: 19967 RVA: 0x001A5204 File Offset: 0x001A3404
 	private void RefreshRewardComponent()
 	{
 		List<TItem> previewReward = this.ActivityData.GetPreviewReward(null);
@@ -336,7 +336,7 @@ public class ActivitySubViewCollection : ActivitySubViewBase
 		this.RewardListComponent.RefreshItemLayout(previewReward, null);
 	}
 
-	// Token: 0x06007A69 RID: 31337 RVA: 0x0019C5B4 File Offset: 0x0019A7B4
+	// Token: 0x06004E00 RID: 19968 RVA: 0x001A5260 File Offset: 0x001A3460
 	private void RefreshFunctionalComponent()
 	{
 		bool flag = this.ActivityData.IsUnLock();
@@ -359,7 +359,7 @@ public class ActivitySubViewCollection : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06007A6A RID: 31338 RVA: 0x0019C674 File Offset: 0x0019A874
+	// Token: 0x06004E01 RID: 19969 RVA: 0x001A5320 File Offset: 0x001A3520
 	private void RefreshRedDot()
 	{
 		bool rewardRedDotVisible = this.ActivityData.IsHasRewardRedPoint();
@@ -368,14 +368,14 @@ public class ActivitySubViewCollection : ActivitySubViewBase
 		this.FunctionalComponent.FunctionButton.SetRedDotVisible(redDotVisible);
 	}
 
-	// Token: 0x06007A6B RID: 31339 RVA: 0x0019C6B6 File Offset: 0x0019A8B6
+	// Token: 0x06004E02 RID: 19970 RVA: 0x001A5362 File Offset: 0x001A3562
 	[NullableContext(1)]
 	public override void PlaySubViewSequence(string name, bool blockClick = false)
 	{
 		this.RefreshBg();
 	}
 
-	// Token: 0x06007A6C RID: 31340 RVA: 0x0019C6C0 File Offset: 0x0019A8C0
+	// Token: 0x06004E03 RID: 19971 RVA: 0x001A536C File Offset: 0x001A356C
 	private void RefreshBg()
 	{
 		int item = this.ActivityData.GetCurrentProgress().Item1;
@@ -391,14 +391,14 @@ public class ActivitySubViewCollection : ActivitySubViewBase
 		this.LevelSequencePlayer.PlayLevelSequenceByName(text, false, null, false);
 	}
 
-	// Token: 0x06007A6D RID: 31341 RVA: 0x0019C73C File Offset: 0x0019A93C
+	// Token: 0x06004E04 RID: 19972 RVA: 0x001A53E8 File Offset: 0x001A35E8
 	private void OpenRewardPopUp()
 	{
 		IActivityRewardViewData allRewardQuestDataList = this.ActivityData.GetAllRewardQuestDataList();
 		UiManager.Instance.OpenView(EUiViewName.ActivityRewardPopUpView, allRewardQuestDataList, null);
 	}
 
-	// Token: 0x06007A6E RID: 31342 RVA: 0x0019C766 File Offset: 0x0019A966
+	// Token: 0x06004E05 RID: 19973 RVA: 0x001A5412 File Offset: 0x001A3612
 	private void JumpFunction()
 	{
 		ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -445,26 +445,26 @@ public class ActivitySubViewCollection : ActivitySubViewBase
 		});
 	}
 
-	// Token: 0x020077D0 RID: 30672
+	// Token: 0x0200695B RID: 26971
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x040277FF RID: 161791
+		// Token: 0x04022B31 RID: 142129
 		public const int TitleItem = 0;
 
-		// Token: 0x04027800 RID: 161792
+		// Token: 0x04022B32 RID: 142130
 		public const int DescriptionItem = 1;
 
-		// Token: 0x04027801 RID: 161793
+		// Token: 0x04022B33 RID: 142131
 		public const int ProgressItem = 2;
 
-		// Token: 0x04027802 RID: 161794
+		// Token: 0x04022B34 RID: 142132
 		public const int RewardListItem = 3;
 
-		// Token: 0x04027803 RID: 161795
+		// Token: 0x04022B35 RID: 142133
 		public const int FunctionArea = 4;
 
-		// Token: 0x04027804 RID: 161796
+		// Token: 0x04022B36 RID: 142134
 		public const int BgView = 5;
 	}
 }

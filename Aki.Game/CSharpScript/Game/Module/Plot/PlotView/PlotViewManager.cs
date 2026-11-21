@@ -10,15 +10,16 @@ using CSharpScript.Game.Module.Plot.TipsTalk;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
+using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.PlotView
 {
-	// Token: 0x0200506C RID: 20588
+	// Token: 0x0200403C RID: 16444
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlotViewManager
 	{
-		// Token: 0x06034BCB RID: 216011 RVA: 0x00C7A0CC File Offset: 0x00C782CC
+		// Token: 0x06029ABF RID: 170687 RVA: 0x00BC73D8 File Offset: 0x00BC55D8
 		public void RegisterEvent()
 		{
 			EventSystem.Instance.Add<EUiViewName, bool>(EEventName.PlotViewChange, new Action<EUiViewName, bool>(this.OnPlotViewChange));
@@ -29,7 +30,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			EventSystem.Instance.Add<bool>(EEventName.BattleUiSlowTimeVisibleChanged, new Action<bool>(this.OnBattleUiSlowTimeVisibleChanged));
 		}
 
-		// Token: 0x06034BCC RID: 216012 RVA: 0x00C7A178 File Offset: 0x00C78378
+		// Token: 0x06029AC0 RID: 170688 RVA: 0x00BC7484 File Offset: 0x00BC5684
 		public void UnRegisterEvent()
 		{
 			EventSystem.Instance.Remove<EUiViewName, bool>(EEventName.PlotViewChange, new Action<EUiViewName, bool>(this.OnPlotViewChange));
@@ -40,7 +41,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			EventSystem.Instance.Remove<bool>(EEventName.BattleUiSlowTimeVisibleChanged, new Action<bool>(this.OnBattleUiSlowTimeVisibleChanged));
 		}
 
-		// Token: 0x06034BCD RID: 216013 RVA: 0x00C7A224 File Offset: 0x00C78424
+		// Token: 0x06029AC1 RID: 170689 RVA: 0x00BC7530 File Offset: 0x00BC5730
 		private unsafe void OnPlotViewChange(EUiViewName name, bool isShow)
 		{
 			global::Log instance = global::Log.Instance;
@@ -76,24 +77,24 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x06034BCE RID: 216014 RVA: 0x00C7A337 File Offset: 0x00C78537
+		// Token: 0x06029AC2 RID: 170690 RVA: 0x00BC7643 File Offset: 0x00BC5843
 		public EUiViewName? GetCurrentViewName()
 		{
 			return this.CurrentView;
 		}
 
-		// Token: 0x06034BCF RID: 216015 RVA: 0x00C7A33F File Offset: 0x00C7853F
+		// Token: 0x06029AC3 RID: 170691 RVA: 0x00BC764B File Offset: 0x00BC584B
 		private void OnOpenView(EUiViewName viewName, int viewId)
 		{
 		}
 
-		// Token: 0x06034BD0 RID: 216016 RVA: 0x00C7A341 File Offset: 0x00C78541
+		// Token: 0x06029AC4 RID: 170692 RVA: 0x00BC764D File Offset: 0x00BC584D
 		private void OnCloseView(EUiViewName viewName, int viewId)
 		{
 			this.ViewCloseCheck(viewName);
 		}
 
-		// Token: 0x06034BD1 RID: 216017 RVA: 0x00C7A34C File Offset: 0x00C7854C
+		// Token: 0x06029AC5 RID: 170693 RVA: 0x00BC7658 File Offset: 0x00BC5858
 		private void OpenViewFail(EUiViewName viewName)
 		{
 			if (!this.ViewEnable || viewName != this.CurrentView)
@@ -113,7 +114,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.CheckPending();
 		}
 
-		// Token: 0x06034BD2 RID: 216018 RVA: 0x00C7A3FA File Offset: 0x00C785FA
+		// Token: 0x06029AC6 RID: 170694 RVA: 0x00BC7706 File Offset: 0x00BC5906
 		public void OnUpdateSubtitle(ITalkItem talkItem)
 		{
 			PlotModel.Instance.CurTalkItem = talkItem;
@@ -121,7 +122,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			FlowController.Instance.RecordTalkItem(talkItem);
 		}
 
-		// Token: 0x06034BD3 RID: 216019 RVA: 0x00C7A424 File Offset: 0x00C78624
+		// Token: 0x06029AC7 RID: 170695 RVA: 0x00BC7730 File Offset: 0x00BC5930
 		public bool UpdateTipsSubtitle(ITalkItem talkItem)
 		{
 			if (this.TipsView == null)
@@ -133,20 +134,20 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return true;
 		}
 
-		// Token: 0x06034BD4 RID: 216020 RVA: 0x00C7A444 File Offset: 0x00C78644
+		// Token: 0x06029AC8 RID: 170696 RVA: 0x00BC7750 File Offset: 0x00BC5950
 		public void OnSubmitSubtitle()
 		{
 			EventSystem.Instance.Emit<ITalkItem, bool>(EEventName.PlotShowTalk, PlotModel.Instance.CurTalkItem, false);
 			PlotModel.Instance.CurTalkItem = null;
 		}
 
-		// Token: 0x06034BD5 RID: 216021 RVA: 0x00C7A46C File Offset: 0x00C7866C
+		// Token: 0x06029AC9 RID: 170697 RVA: 0x00BC7778 File Offset: 0x00BC5978
 		public void OnShowOptions()
 		{
 			PlotModel.Instance.InOptions = true;
 		}
 
-		// Token: 0x06034BD6 RID: 216022 RVA: 0x00C7A47C File Offset: 0x00C7867C
+		// Token: 0x06029ACA RID: 170698 RVA: 0x00BC7788 File Offset: 0x00BC5988
 		public void UpdatePlotSubtitle(ITalkItem talkItem)
 		{
 			PlotViewManager.<>c__DisplayClass24_0 CS$<>8__locals1 = new PlotViewManager.<>c__DisplayClass24_0();
@@ -163,7 +164,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}, null).Forget<bool>();
 		}
 
-		// Token: 0x06034BD7 RID: 216023 RVA: 0x00C7A4BF File Offset: 0x00C786BF
+		// Token: 0x06029ACB RID: 170699 RVA: 0x00BC77CB File Offset: 0x00BC59CB
 		public void ShowPlotSubtitleOptions()
 		{
 			this.OnShowOptions();
@@ -177,7 +178,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}, null).Forget<bool>();
 		}
 
-		// Token: 0x06034BD8 RID: 216024 RVA: 0x00C7A4F8 File Offset: 0x00C786F8
+		// Token: 0x06029ACC RID: 170700 RVA: 0x00BC7804 File Offset: 0x00BC5A04
 		public void EmitPlotStartShowTalk(ShowTalk showTalk)
 		{
 			PlotViewManager.<>c__DisplayClass26_0 CS$<>8__locals1 = new PlotViewManager.<>c__DisplayClass26_0();
@@ -193,7 +194,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}, null).Forget<bool>();
 		}
 
-		// Token: 0x06034BD9 RID: 216025 RVA: 0x00C7A530 File Offset: 0x00C78730
+		// Token: 0x06029ACD RID: 170701 RVA: 0x00BC783C File Offset: 0x00BC5A3C
 		public void UpdatePortraitVisible(SetHeadIconVisible config, Action callback)
 		{
 			PlotViewManager.<>c__DisplayClass27_0 CS$<>8__locals1 = new PlotViewManager.<>c__DisplayClass27_0();
@@ -210,7 +211,30 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}, CS$<>8__locals1.callback).Forget<bool>();
 		}
 
-		// Token: 0x06034BDA RID: 216026 RVA: 0x00C7A574 File Offset: 0x00C78774
+		// Token: 0x06029ACE RID: 170702 RVA: 0x00BC7880 File Offset: 0x00BC5A80
+		public void StopPlotVoiceOnInterrupt(long ownerId)
+		{
+			if (!this.CheckOwner("StopPlotVoiceOnInterrupt", new long?(ownerId)))
+			{
+				return;
+			}
+			PlotConfig plotConfig = PlotModel.Instance.PlotConfig;
+			IPlotAudioConfig audioConfig = plotConfig.AudioConfig;
+			IPlotVoiceFadeOutOnInterrupt plotVoiceFadeOutOnInterrupt = (audioConfig != null) ? audioConfig.VoiceFadeOutOnInterrupt : null;
+			if (plotConfig.PlotLevel.GetValueOrDefault() == EPlotLevel.LevelD && plotVoiceFadeOutOnInterrupt != null)
+			{
+				PlotViewHud plotViewHud = this.GetCurrentView() as PlotViewHud;
+				if (plotViewHud != null)
+				{
+					int value = float.IsFinite(plotVoiceFadeOutOnInterrupt.FadeDuration) ? ((int)Math.Clamp((double)plotVoiceFadeOutOnInterrupt.FadeDuration, 0.0, 2147483647.0)) : 0;
+					EAudioFadeCurve value2 = (plotVoiceFadeOutOnInterrupt.FadeCurve != null) ? ((EAudioFadeCurve)plotVoiceFadeOutOnInterrupt.FadeCurve.Value) : EAudioFadeCurve.Linear;
+					plotViewHud.StopVoiceOnInterrupt(new ExecuteActionArgs(new int?(value), new EAudioFadeCurve?(value2), null));
+					return;
+				}
+			}
+		}
+
+		// Token: 0x06029ACF RID: 170703 RVA: 0x00BC794C File Offset: 0x00BC5B4C
 		public void ClearPlotSubtitle(long? ownerId = null)
 		{
 			if (!this.CheckOwner("ClearPlotSubtitle", ownerId))
@@ -219,18 +243,18 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 			this.RunWhenCurrentViewReady("ClearPlotSubtitle", delegate
 			{
-				PlotViewManager.<>c.<<ClearPlotSubtitle>b__28_0>d <<ClearPlotSubtitle>b__28_0>d;
-				<<ClearPlotSubtitle>b__28_0>d.<>t__builder = AsyncUniTaskMethodBuilder<object>.Create();
-				<<ClearPlotSubtitle>b__28_0>d.<>1__state = -1;
-				<<ClearPlotSubtitle>b__28_0>d.<>t__builder.Start<PlotViewManager.<>c.<<ClearPlotSubtitle>b__28_0>d>(ref <<ClearPlotSubtitle>b__28_0>d);
-				return <<ClearPlotSubtitle>b__28_0>d.<>t__builder.Task;
+				PlotViewManager.<>c.<<ClearPlotSubtitle>b__29_0>d <<ClearPlotSubtitle>b__29_0>d;
+				<<ClearPlotSubtitle>b__29_0>d.<>t__builder = AsyncUniTaskMethodBuilder<object>.Create();
+				<<ClearPlotSubtitle>b__29_0>d.<>1__state = -1;
+				<<ClearPlotSubtitle>b__29_0>d.<>t__builder.Start<PlotViewManager.<>c.<<ClearPlotSubtitle>b__29_0>d>(ref <<ClearPlotSubtitle>b__29_0>d);
+				return <<ClearPlotSubtitle>b__29_0>d.<>t__builder.Task;
 			}, null).Forget<bool>();
 		}
 
-		// Token: 0x06034BDB RID: 216027 RVA: 0x00C7A5C0 File Offset: 0x00C787C0
+		// Token: 0x06029AD0 RID: 170704 RVA: 0x00BC7998 File Offset: 0x00BC5B98
 		public void HidePlotUi(bool isHidden, long? ownerId = null)
 		{
-			PlotViewManager.<>c__DisplayClass29_0 CS$<>8__locals1 = new PlotViewManager.<>c__DisplayClass29_0();
+			PlotViewManager.<>c__DisplayClass30_0 CS$<>8__locals1 = new PlotViewManager.<>c__DisplayClass30_0();
 			CS$<>8__locals1.isHidden = isHidden;
 			if (!this.CheckOwner("HidePlotUi", ownerId))
 			{
@@ -238,174 +262,174 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 			this.RunWhenCurrentViewReady("HidePlotUi", delegate
 			{
-				PlotViewManager.<>c__DisplayClass29_0.<<HidePlotUi>b__0>d <<HidePlotUi>b__0>d;
+				PlotViewManager.<>c__DisplayClass30_0.<<HidePlotUi>b__0>d <<HidePlotUi>b__0>d;
 				<<HidePlotUi>b__0>d.<>t__builder = AsyncUniTaskMethodBuilder<object>.Create();
 				<<HidePlotUi>b__0>d.<>4__this = CS$<>8__locals1;
 				<<HidePlotUi>b__0>d.<>1__state = -1;
-				<<HidePlotUi>b__0>d.<>t__builder.Start<PlotViewManager.<>c__DisplayClass29_0.<<HidePlotUi>b__0>d>(ref <<HidePlotUi>b__0>d);
+				<<HidePlotUi>b__0>d.<>t__builder.Start<PlotViewManager.<>c__DisplayClass30_0.<<HidePlotUi>b__0>d>(ref <<HidePlotUi>b__0>d);
 				return <<HidePlotUi>b__0>d.<>t__builder.Task;
 			}, null).Forget<bool>();
 		}
 
-		// Token: 0x06034BDC RID: 216028 RVA: 0x00C7A608 File Offset: 0x00C78808
+		// Token: 0x06029AD1 RID: 170705 RVA: 0x00BC79E0 File Offset: 0x00BC5BE0
 		[NullableContext(2)]
 		public void PlotViewBgFadePhoto(bool isFadeIn, bool isFull, string path = null, Action callback = null)
 		{
-			PlotViewManager.<>c__DisplayClass30_0 CS$<>8__locals1 = new PlotViewManager.<>c__DisplayClass30_0();
+			PlotViewManager.<>c__DisplayClass31_0 CS$<>8__locals1 = new PlotViewManager.<>c__DisplayClass31_0();
 			CS$<>8__locals1.isFadeIn = isFadeIn;
 			CS$<>8__locals1.isFull = isFull;
 			CS$<>8__locals1.path = path;
 			CS$<>8__locals1.callback = callback;
 			this.RunWithPlotView("PlotViewBgFadePhoto", delegate(PlotView _)
 			{
-				PlotViewManager.<>c__DisplayClass30_0.<<PlotViewBgFadePhoto>b__0>d <<PlotViewBgFadePhoto>b__0>d;
+				PlotViewManager.<>c__DisplayClass31_0.<<PlotViewBgFadePhoto>b__0>d <<PlotViewBgFadePhoto>b__0>d;
 				<<PlotViewBgFadePhoto>b__0>d.<>t__builder = AsyncUniTaskMethodBuilder<object>.Create();
 				<<PlotViewBgFadePhoto>b__0>d.<>4__this = CS$<>8__locals1;
 				<<PlotViewBgFadePhoto>b__0>d.<>1__state = -1;
-				<<PlotViewBgFadePhoto>b__0>d.<>t__builder.Start<PlotViewManager.<>c__DisplayClass30_0.<<PlotViewBgFadePhoto>b__0>d>(ref <<PlotViewBgFadePhoto>b__0>d);
+				<<PlotViewBgFadePhoto>b__0>d.<>t__builder.Start<PlotViewManager.<>c__DisplayClass31_0.<<PlotViewBgFadePhoto>b__0>d>(ref <<PlotViewBgFadePhoto>b__0>d);
 				return <<PlotViewBgFadePhoto>b__0>d.<>t__builder.Task;
 			}, CS$<>8__locals1.callback).Forget<bool>();
 		}
 
-		// Token: 0x06034BDD RID: 216029 RVA: 0x00C7A65C File Offset: 0x00C7885C
+		// Token: 0x06029AD2 RID: 170706 RVA: 0x00BC7A34 File Offset: 0x00BC5C34
 		[NullableContext(2)]
 		public void PlotViewBgFadeBlackScreen(bool isFadeIn, Action callback = null)
 		{
-			PlotViewManager.<>c__DisplayClass31_0 CS$<>8__locals1 = new PlotViewManager.<>c__DisplayClass31_0();
+			PlotViewManager.<>c__DisplayClass32_0 CS$<>8__locals1 = new PlotViewManager.<>c__DisplayClass32_0();
 			CS$<>8__locals1.isFadeIn = isFadeIn;
 			CS$<>8__locals1.callback = callback;
 			this.RunWhenCurrentViewReady("PlotViewBgFadeBlackScreen", delegate
 			{
-				PlotViewManager.<>c__DisplayClass31_0.<<PlotViewBgFadeBlackScreen>b__0>d <<PlotViewBgFadeBlackScreen>b__0>d;
+				PlotViewManager.<>c__DisplayClass32_0.<<PlotViewBgFadeBlackScreen>b__0>d <<PlotViewBgFadeBlackScreen>b__0>d;
 				<<PlotViewBgFadeBlackScreen>b__0>d.<>t__builder = AsyncUniTaskMethodBuilder<object>.Create();
 				<<PlotViewBgFadeBlackScreen>b__0>d.<>4__this = CS$<>8__locals1;
 				<<PlotViewBgFadeBlackScreen>b__0>d.<>1__state = -1;
-				<<PlotViewBgFadeBlackScreen>b__0>d.<>t__builder.Start<PlotViewManager.<>c__DisplayClass31_0.<<PlotViewBgFadeBlackScreen>b__0>d>(ref <<PlotViewBgFadeBlackScreen>b__0>d);
+				<<PlotViewBgFadeBlackScreen>b__0>d.<>t__builder.Start<PlotViewManager.<>c__DisplayClass32_0.<<PlotViewBgFadeBlackScreen>b__0>d>(ref <<PlotViewBgFadeBlackScreen>b__0>d);
 				return <<PlotViewBgFadeBlackScreen>b__0>d.<>t__builder.Task;
 			}, CS$<>8__locals1.callback).Forget<bool>();
 		}
 
-		// Token: 0x06034BDE RID: 216030 RVA: 0x00C7A6A0 File Offset: 0x00C788A0
+		// Token: 0x06029AD3 RID: 170707 RVA: 0x00BC7A78 File Offset: 0x00BC5C78
 		public void PlotDoingTextShow(bool isShow)
 		{
-			PlotViewManager.<>c__DisplayClass32_0 CS$<>8__locals1 = new PlotViewManager.<>c__DisplayClass32_0();
+			PlotViewManager.<>c__DisplayClass33_0 CS$<>8__locals1 = new PlotViewManager.<>c__DisplayClass33_0();
 			CS$<>8__locals1.isShow = isShow;
 			this.RunWithPlotSubtitleViewChecked("PlotDoingTextShow", delegate
 			{
-				PlotViewManager.<>c__DisplayClass32_0.<<PlotDoingTextShow>b__0>d <<PlotDoingTextShow>b__0>d;
+				PlotViewManager.<>c__DisplayClass33_0.<<PlotDoingTextShow>b__0>d <<PlotDoingTextShow>b__0>d;
 				<<PlotDoingTextShow>b__0>d.<>t__builder = AsyncUniTaskMethodBuilder<object>.Create();
 				<<PlotDoingTextShow>b__0>d.<>4__this = CS$<>8__locals1;
 				<<PlotDoingTextShow>b__0>d.<>1__state = -1;
-				<<PlotDoingTextShow>b__0>d.<>t__builder.Start<PlotViewManager.<>c__DisplayClass32_0.<<PlotDoingTextShow>b__0>d>(ref <<PlotDoingTextShow>b__0>d);
+				<<PlotDoingTextShow>b__0>d.<>t__builder.Start<PlotViewManager.<>c__DisplayClass33_0.<<PlotDoingTextShow>b__0>d>(ref <<PlotDoingTextShow>b__0>d);
 				return <<PlotDoingTextShow>b__0>d.<>t__builder.Task;
 			}, null).Forget<bool>();
 		}
 
-		// Token: 0x06034BDF RID: 216031 RVA: 0x00C7A6D8 File Offset: 0x00C788D8
+		// Token: 0x06029AD4 RID: 170708 RVA: 0x00BC7AB0 File Offset: 0x00BC5CB0
 		[NullableContext(2)]
 		public void EnableInteractPlot(bool enable, bool? includeSubtitleButton = null, string reason = null)
 		{
-			PlotViewManager.<>c__DisplayClass33_0 CS$<>8__locals1 = new PlotViewManager.<>c__DisplayClass33_0();
+			PlotViewManager.<>c__DisplayClass34_0 CS$<>8__locals1 = new PlotViewManager.<>c__DisplayClass34_0();
 			CS$<>8__locals1.enable = enable;
 			CS$<>8__locals1.includeSubtitleButton = includeSubtitleButton;
 			CS$<>8__locals1.reason = reason;
 			this.RunWithPlotSubtitleViewChecked("EnableInteractPlot", delegate
 			{
-				PlotViewManager.<>c__DisplayClass33_0.<<EnableInteractPlot>b__0>d <<EnableInteractPlot>b__0>d;
+				PlotViewManager.<>c__DisplayClass34_0.<<EnableInteractPlot>b__0>d <<EnableInteractPlot>b__0>d;
 				<<EnableInteractPlot>b__0>d.<>t__builder = AsyncUniTaskMethodBuilder<object>.Create();
 				<<EnableInteractPlot>b__0>d.<>4__this = CS$<>8__locals1;
 				<<EnableInteractPlot>b__0>d.<>1__state = -1;
-				<<EnableInteractPlot>b__0>d.<>t__builder.Start<PlotViewManager.<>c__DisplayClass33_0.<<EnableInteractPlot>b__0>d>(ref <<EnableInteractPlot>b__0>d);
+				<<EnableInteractPlot>b__0>d.<>t__builder.Start<PlotViewManager.<>c__DisplayClass34_0.<<EnableInteractPlot>b__0>d>(ref <<EnableInteractPlot>b__0>d);
 				return <<EnableInteractPlot>b__0>d.<>t__builder.Task;
 			}, null).Forget<bool>();
 		}
 
-		// Token: 0x06034BE0 RID: 216032 RVA: 0x00C7A720 File Offset: 0x00C78920
+		// Token: 0x06029AD5 RID: 170709 RVA: 0x00BC7AF8 File Offset: 0x00BC5CF8
 		public void EnableSkipPlotByReason(bool enable, string reason)
 		{
-			PlotViewManager.<>c__DisplayClass34_0 CS$<>8__locals1 = new PlotViewManager.<>c__DisplayClass34_0();
+			PlotViewManager.<>c__DisplayClass35_0 CS$<>8__locals1 = new PlotViewManager.<>c__DisplayClass35_0();
 			CS$<>8__locals1.enable = enable;
 			CS$<>8__locals1.reason = reason;
 			this.RunWithPlotSubtitleViewChecked("EnableSkipPlotByReason", delegate
 			{
-				PlotViewManager.<>c__DisplayClass34_0.<<EnableSkipPlotByReason>b__0>d <<EnableSkipPlotByReason>b__0>d;
+				PlotViewManager.<>c__DisplayClass35_0.<<EnableSkipPlotByReason>b__0>d <<EnableSkipPlotByReason>b__0>d;
 				<<EnableSkipPlotByReason>b__0>d.<>t__builder = AsyncUniTaskMethodBuilder<object>.Create();
 				<<EnableSkipPlotByReason>b__0>d.<>4__this = CS$<>8__locals1;
 				<<EnableSkipPlotByReason>b__0>d.<>1__state = -1;
-				<<EnableSkipPlotByReason>b__0>d.<>t__builder.Start<PlotViewManager.<>c__DisplayClass34_0.<<EnableSkipPlotByReason>b__0>d>(ref <<EnableSkipPlotByReason>b__0>d);
+				<<EnableSkipPlotByReason>b__0>d.<>t__builder.Start<PlotViewManager.<>c__DisplayClass35_0.<<EnableSkipPlotByReason>b__0>d>(ref <<EnableSkipPlotByReason>b__0>d);
 				return <<EnableSkipPlotByReason>b__0>d.<>t__builder.Task;
 			}, null).Forget<bool>();
 		}
 
-		// Token: 0x06034BE1 RID: 216033 RVA: 0x00C7A760 File Offset: 0x00C78960
+		// Token: 0x06029AD6 RID: 170710 RVA: 0x00BC7B38 File Offset: 0x00BC5D38
 		public void UpdateSeqSubtitle(PlotSubtitleConfig subtitle)
 		{
-			PlotViewManager.<>c__DisplayClass35_0 CS$<>8__locals1 = new PlotViewManager.<>c__DisplayClass35_0();
+			PlotViewManager.<>c__DisplayClass36_0 CS$<>8__locals1 = new PlotViewManager.<>c__DisplayClass36_0();
 			CS$<>8__locals1.subtitle = subtitle;
 			this.RunWhenCurrentViewReady("UpdateSeqSubtitle", delegate
 			{
-				PlotViewManager.<>c__DisplayClass35_0.<<UpdateSeqSubtitle>b__0>d <<UpdateSeqSubtitle>b__0>d;
+				PlotViewManager.<>c__DisplayClass36_0.<<UpdateSeqSubtitle>b__0>d <<UpdateSeqSubtitle>b__0>d;
 				<<UpdateSeqSubtitle>b__0>d.<>t__builder = AsyncUniTaskMethodBuilder<object>.Create();
 				<<UpdateSeqSubtitle>b__0>d.<>4__this = CS$<>8__locals1;
 				<<UpdateSeqSubtitle>b__0>d.<>1__state = -1;
-				<<UpdateSeqSubtitle>b__0>d.<>t__builder.Start<PlotViewManager.<>c__DisplayClass35_0.<<UpdateSeqSubtitle>b__0>d>(ref <<UpdateSeqSubtitle>b__0>d);
+				<<UpdateSeqSubtitle>b__0>d.<>t__builder.Start<PlotViewManager.<>c__DisplayClass36_0.<<UpdateSeqSubtitle>b__0>d>(ref <<UpdateSeqSubtitle>b__0>d);
 				return <<UpdateSeqSubtitle>b__0>d.<>t__builder.Task;
 			}, null).Forget<bool>();
 		}
 
-		// Token: 0x06034BE2 RID: 216034 RVA: 0x00C7A798 File Offset: 0x00C78998
+		// Token: 0x06029AD7 RID: 170711 RVA: 0x00BC7B70 File Offset: 0x00BC5D70
 		public void HandleSeqSubtitleEnd(int id, bool isSkip)
 		{
-			PlotViewManager.<>c__DisplayClass36_0 CS$<>8__locals1 = new PlotViewManager.<>c__DisplayClass36_0();
+			PlotViewManager.<>c__DisplayClass37_0 CS$<>8__locals1 = new PlotViewManager.<>c__DisplayClass37_0();
 			CS$<>8__locals1.id = id;
 			CS$<>8__locals1.isSkip = isSkip;
 			this.RunWhenCurrentViewReady("HandleSeqSubtitleEnd", delegate
 			{
-				PlotViewManager.<>c__DisplayClass36_0.<<HandleSeqSubtitleEnd>b__0>d <<HandleSeqSubtitleEnd>b__0>d;
+				PlotViewManager.<>c__DisplayClass37_0.<<HandleSeqSubtitleEnd>b__0>d <<HandleSeqSubtitleEnd>b__0>d;
 				<<HandleSeqSubtitleEnd>b__0>d.<>t__builder = AsyncUniTaskMethodBuilder<object>.Create();
 				<<HandleSeqSubtitleEnd>b__0>d.<>4__this = CS$<>8__locals1;
 				<<HandleSeqSubtitleEnd>b__0>d.<>1__state = -1;
-				<<HandleSeqSubtitleEnd>b__0>d.<>t__builder.Start<PlotViewManager.<>c__DisplayClass36_0.<<HandleSeqSubtitleEnd>b__0>d>(ref <<HandleSeqSubtitleEnd>b__0>d);
+				<<HandleSeqSubtitleEnd>b__0>d.<>t__builder.Start<PlotViewManager.<>c__DisplayClass37_0.<<HandleSeqSubtitleEnd>b__0>d>(ref <<HandleSeqSubtitleEnd>b__0>d);
 				return <<HandleSeqSubtitleEnd>b__0>d.<>t__builder.Task;
 			}, null).Forget<bool>();
 		}
 
-		// Token: 0x06034BE3 RID: 216035 RVA: 0x00C7A7D8 File Offset: 0x00C789D8
+		// Token: 0x06029AD8 RID: 170712 RVA: 0x00BC7BB0 File Offset: 0x00BC5DB0
 		public void HandlePlotOptionSelected(int option)
 		{
-			PlotViewManager.<>c__DisplayClass37_0 CS$<>8__locals1 = new PlotViewManager.<>c__DisplayClass37_0();
+			PlotViewManager.<>c__DisplayClass38_0 CS$<>8__locals1 = new PlotViewManager.<>c__DisplayClass38_0();
 			CS$<>8__locals1.option = option;
 			this.RunWhenCurrentViewReady("HandlePlotOptionSelected", delegate
 			{
-				PlotViewManager.<>c__DisplayClass37_0.<<HandlePlotOptionSelected>b__0>d <<HandlePlotOptionSelected>b__0>d;
+				PlotViewManager.<>c__DisplayClass38_0.<<HandlePlotOptionSelected>b__0>d <<HandlePlotOptionSelected>b__0>d;
 				<<HandlePlotOptionSelected>b__0>d.<>t__builder = AsyncUniTaskMethodBuilder<object>.Create();
 				<<HandlePlotOptionSelected>b__0>d.<>4__this = CS$<>8__locals1;
 				<<HandlePlotOptionSelected>b__0>d.<>1__state = -1;
-				<<HandlePlotOptionSelected>b__0>d.<>t__builder.Start<PlotViewManager.<>c__DisplayClass37_0.<<HandlePlotOptionSelected>b__0>d>(ref <<HandlePlotOptionSelected>b__0>d);
+				<<HandlePlotOptionSelected>b__0>d.<>t__builder.Start<PlotViewManager.<>c__DisplayClass38_0.<<HandlePlotOptionSelected>b__0>d>(ref <<HandlePlotOptionSelected>b__0>d);
 				return <<HandlePlotOptionSelected>b__0>d.<>t__builder.Task;
 			}, null).Forget<bool>();
 		}
 
-		// Token: 0x06034BE4 RID: 216036 RVA: 0x00C7A80F File Offset: 0x00C78A0F
+		// Token: 0x06029AD9 RID: 170713 RVA: 0x00BC7BE7 File Offset: 0x00BC5DE7
 		public void HandleSubSequenceStop()
 		{
 			this.RunWhenCurrentViewReady("HandleSubSequenceStop", delegate
 			{
-				PlotViewManager.<>c.<<HandleSubSequenceStop>b__38_0>d <<HandleSubSequenceStop>b__38_0>d;
-				<<HandleSubSequenceStop>b__38_0>d.<>t__builder = AsyncUniTaskMethodBuilder<object>.Create();
-				<<HandleSubSequenceStop>b__38_0>d.<>1__state = -1;
-				<<HandleSubSequenceStop>b__38_0>d.<>t__builder.Start<PlotViewManager.<>c.<<HandleSubSequenceStop>b__38_0>d>(ref <<HandleSubSequenceStop>b__38_0>d);
-				return <<HandleSubSequenceStop>b__38_0>d.<>t__builder.Task;
+				PlotViewManager.<>c.<<HandleSubSequenceStop>b__39_0>d <<HandleSubSequenceStop>b__39_0>d;
+				<<HandleSubSequenceStop>b__39_0>d.<>t__builder = AsyncUniTaskMethodBuilder<object>.Create();
+				<<HandleSubSequenceStop>b__39_0>d.<>1__state = -1;
+				<<HandleSubSequenceStop>b__39_0>d.<>t__builder.Start<PlotViewManager.<>c.<<HandleSubSequenceStop>b__39_0>d>(ref <<HandleSubSequenceStop>b__39_0>d);
+				return <<HandleSubSequenceStop>b__39_0>d.<>t__builder.Task;
 			}, null).Forget<bool>();
 		}
 
-		// Token: 0x06034BE5 RID: 216037 RVA: 0x00C7A841 File Offset: 0x00C78A41
+		// Token: 0x06029ADA RID: 170714 RVA: 0x00BC7C19 File Offset: 0x00BC5E19
 		public void HangPlotViewHud(bool isHang)
 		{
 			EventSystem.Instance.Emit<bool>(EEventName.HangPlotViewHud, isHang);
 		}
 
-		// Token: 0x06034BE6 RID: 216038 RVA: 0x00C7A854 File Offset: 0x00C78A54
+		// Token: 0x06029ADB RID: 170715 RVA: 0x00BC7C2C File Offset: 0x00BC5E2C
 		[NullableContext(0)]
 		public UniTask<bool> RunWithPlotView([Nullable(1)] string name, [Nullable(new byte[]
 		{
@@ -415,41 +439,41 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			2
 		})] Func<PlotView, UniTask<object>> operation, [Nullable(2)] Action onCancel = null)
 		{
-			PlotViewManager.<>c__DisplayClass40_0 CS$<>8__locals1 = new PlotViewManager.<>c__DisplayClass40_0();
-			CS$<>8__locals1.<>4__this = this;
-			CS$<>8__locals1.name = name;
-			CS$<>8__locals1.operation = operation;
-			return this.RunWhenCurrentViewReady(CS$<>8__locals1.name, delegate
-			{
-				PlotViewManager.<>c__DisplayClass40_0.<<RunWithPlotView>b__0>d <<RunWithPlotView>b__0>d;
-				<<RunWithPlotView>b__0>d.<>t__builder = AsyncUniTaskMethodBuilder<object>.Create();
-				<<RunWithPlotView>b__0>d.<>4__this = CS$<>8__locals1;
-				<<RunWithPlotView>b__0>d.<>1__state = -1;
-				<<RunWithPlotView>b__0>d.<>t__builder.Start<PlotViewManager.<>c__DisplayClass40_0.<<RunWithPlotView>b__0>d>(ref <<RunWithPlotView>b__0>d);
-				return <<RunWithPlotView>b__0>d.<>t__builder.Task;
-			}, onCancel);
-		}
-
-		// Token: 0x06034BE7 RID: 216039 RVA: 0x00C7A898 File Offset: 0x00C78A98
-		[return: Nullable(0)]
-		public UniTask<bool> RunWithPlotSubtitleViewChecked(string name, PlotUiAsyncOperation operation, [Nullable(2)] Action onCancel = null)
-		{
 			PlotViewManager.<>c__DisplayClass41_0 CS$<>8__locals1 = new PlotViewManager.<>c__DisplayClass41_0();
 			CS$<>8__locals1.<>4__this = this;
 			CS$<>8__locals1.name = name;
 			CS$<>8__locals1.operation = operation;
 			return this.RunWhenCurrentViewReady(CS$<>8__locals1.name, delegate
 			{
-				PlotViewManager.<>c__DisplayClass41_0.<<RunWithPlotSubtitleViewChecked>b__0>d <<RunWithPlotSubtitleViewChecked>b__0>d;
+				PlotViewManager.<>c__DisplayClass41_0.<<RunWithPlotView>b__0>d <<RunWithPlotView>b__0>d;
+				<<RunWithPlotView>b__0>d.<>t__builder = AsyncUniTaskMethodBuilder<object>.Create();
+				<<RunWithPlotView>b__0>d.<>4__this = CS$<>8__locals1;
+				<<RunWithPlotView>b__0>d.<>1__state = -1;
+				<<RunWithPlotView>b__0>d.<>t__builder.Start<PlotViewManager.<>c__DisplayClass41_0.<<RunWithPlotView>b__0>d>(ref <<RunWithPlotView>b__0>d);
+				return <<RunWithPlotView>b__0>d.<>t__builder.Task;
+			}, onCancel);
+		}
+
+		// Token: 0x06029ADC RID: 170716 RVA: 0x00BC7C70 File Offset: 0x00BC5E70
+		[return: Nullable(0)]
+		public UniTask<bool> RunWithPlotSubtitleViewChecked(string name, PlotUiAsyncOperation operation, [Nullable(2)] Action onCancel = null)
+		{
+			PlotViewManager.<>c__DisplayClass42_0 CS$<>8__locals1 = new PlotViewManager.<>c__DisplayClass42_0();
+			CS$<>8__locals1.<>4__this = this;
+			CS$<>8__locals1.name = name;
+			CS$<>8__locals1.operation = operation;
+			return this.RunWhenCurrentViewReady(CS$<>8__locals1.name, delegate
+			{
+				PlotViewManager.<>c__DisplayClass42_0.<<RunWithPlotSubtitleViewChecked>b__0>d <<RunWithPlotSubtitleViewChecked>b__0>d;
 				<<RunWithPlotSubtitleViewChecked>b__0>d.<>t__builder = AsyncUniTaskMethodBuilder<object>.Create();
 				<<RunWithPlotSubtitleViewChecked>b__0>d.<>4__this = CS$<>8__locals1;
 				<<RunWithPlotSubtitleViewChecked>b__0>d.<>1__state = -1;
-				<<RunWithPlotSubtitleViewChecked>b__0>d.<>t__builder.Start<PlotViewManager.<>c__DisplayClass41_0.<<RunWithPlotSubtitleViewChecked>b__0>d>(ref <<RunWithPlotSubtitleViewChecked>b__0>d);
+				<<RunWithPlotSubtitleViewChecked>b__0>d.<>t__builder.Start<PlotViewManager.<>c__DisplayClass42_0.<<RunWithPlotSubtitleViewChecked>b__0>d>(ref <<RunWithPlotSubtitleViewChecked>b__0>d);
 				return <<RunWithPlotSubtitleViewChecked>b__0>d.<>t__builder.Task;
 			}, onCancel);
 		}
 
-		// Token: 0x06034BE8 RID: 216040 RVA: 0x00C7A8DC File Offset: 0x00C78ADC
+		// Token: 0x06029ADD RID: 170717 RVA: 0x00BC7CB4 File Offset: 0x00BC5EB4
 		[NullableContext(0)]
 		public UniTask<bool> RunWithPlotSubtitleView([Nullable(1)] string name, [Nullable(new byte[]
 		{
@@ -459,46 +483,46 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			2
 		})] Func<PlotSubtitleView, UniTask<object>> operation, [Nullable(2)] Action onCancel = null)
 		{
-			PlotViewManager.<>c__DisplayClass42_0 CS$<>8__locals1 = new PlotViewManager.<>c__DisplayClass42_0();
+			PlotViewManager.<>c__DisplayClass43_0 CS$<>8__locals1 = new PlotViewManager.<>c__DisplayClass43_0();
 			CS$<>8__locals1.<>4__this = this;
 			CS$<>8__locals1.name = name;
 			CS$<>8__locals1.operation = operation;
 			return this.RunWhenCurrentViewReady(CS$<>8__locals1.name, delegate
 			{
-				PlotViewManager.<>c__DisplayClass42_0.<<RunWithPlotSubtitleView>b__0>d <<RunWithPlotSubtitleView>b__0>d;
-				<<RunWithPlotSubtitleView>b__0>d.<>t__builder = AsyncUniTaskMethodBuilder<object>.Create();
-				<<RunWithPlotSubtitleView>b__0>d.<>4__this = CS$<>8__locals1;
-				<<RunWithPlotSubtitleView>b__0>d.<>1__state = -1;
-				<<RunWithPlotSubtitleView>b__0>d.<>t__builder.Start<PlotViewManager.<>c__DisplayClass42_0.<<RunWithPlotSubtitleView>b__0>d>(ref <<RunWithPlotSubtitleView>b__0>d);
-				return <<RunWithPlotSubtitleView>b__0>d.<>t__builder.Task;
-			}, onCancel);
-		}
-
-		// Token: 0x06034BE9 RID: 216041 RVA: 0x00C7A920 File Offset: 0x00C78B20
-		[return: Nullable(0)]
-		public UniTask<bool> RunWithPlotSubtitleView(string name, Func<PlotSubtitleView, UniTask> operation, [Nullable(2)] Action onCancel = null)
-		{
-			PlotViewManager.<>c__DisplayClass43_0 CS$<>8__locals1 = new PlotViewManager.<>c__DisplayClass43_0();
-			CS$<>8__locals1.operation = operation;
-			return this.RunWithPlotSubtitleView(name, delegate(PlotSubtitleView view)
-			{
 				PlotViewManager.<>c__DisplayClass43_0.<<RunWithPlotSubtitleView>b__0>d <<RunWithPlotSubtitleView>b__0>d;
 				<<RunWithPlotSubtitleView>b__0>d.<>t__builder = AsyncUniTaskMethodBuilder<object>.Create();
 				<<RunWithPlotSubtitleView>b__0>d.<>4__this = CS$<>8__locals1;
-				<<RunWithPlotSubtitleView>b__0>d.view = view;
 				<<RunWithPlotSubtitleView>b__0>d.<>1__state = -1;
 				<<RunWithPlotSubtitleView>b__0>d.<>t__builder.Start<PlotViewManager.<>c__DisplayClass43_0.<<RunWithPlotSubtitleView>b__0>d>(ref <<RunWithPlotSubtitleView>b__0>d);
 				return <<RunWithPlotSubtitleView>b__0>d.<>t__builder.Task;
 			}, onCancel);
 		}
 
-		// Token: 0x06034BEA RID: 216042 RVA: 0x00C7A94E File Offset: 0x00C78B4E
+		// Token: 0x06029ADE RID: 170718 RVA: 0x00BC7CF8 File Offset: 0x00BC5EF8
+		[return: Nullable(0)]
+		public UniTask<bool> RunWithPlotSubtitleView(string name, Func<PlotSubtitleView, UniTask> operation, [Nullable(2)] Action onCancel = null)
+		{
+			PlotViewManager.<>c__DisplayClass44_0 CS$<>8__locals1 = new PlotViewManager.<>c__DisplayClass44_0();
+			CS$<>8__locals1.operation = operation;
+			return this.RunWithPlotSubtitleView(name, delegate(PlotSubtitleView view)
+			{
+				PlotViewManager.<>c__DisplayClass44_0.<<RunWithPlotSubtitleView>b__0>d <<RunWithPlotSubtitleView>b__0>d;
+				<<RunWithPlotSubtitleView>b__0>d.<>t__builder = AsyncUniTaskMethodBuilder<object>.Create();
+				<<RunWithPlotSubtitleView>b__0>d.<>4__this = CS$<>8__locals1;
+				<<RunWithPlotSubtitleView>b__0>d.view = view;
+				<<RunWithPlotSubtitleView>b__0>d.<>1__state = -1;
+				<<RunWithPlotSubtitleView>b__0>d.<>t__builder.Start<PlotViewManager.<>c__DisplayClass44_0.<<RunWithPlotSubtitleView>b__0>d>(ref <<RunWithPlotSubtitleView>b__0>d);
+				return <<RunWithPlotSubtitleView>b__0>d.<>t__builder.Task;
+			}, onCancel);
+		}
+
+		// Token: 0x06029ADF RID: 170719 RVA: 0x00BC7D26 File Offset: 0x00BC5F26
 		public void OnSelectedOptions()
 		{
 			PlotModel.Instance.InOptions = false;
 		}
 
-		// Token: 0x06034BEB RID: 216043 RVA: 0x00C7A95C File Offset: 0x00C78B5C
+		// Token: 0x06029AE0 RID: 170720 RVA: 0x00BC7D34 File Offset: 0x00BC5F34
 		private void InterruptHud(bool isHang)
 		{
 			if (isHang)
@@ -513,7 +537,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.HangPlotViewHud(false);
 		}
 
-		// Token: 0x06034BEC RID: 216044 RVA: 0x00C7A9CC File Offset: 0x00C78BCC
+		// Token: 0x06029AE1 RID: 170721 RVA: 0x00BC7DA4 File Offset: 0x00BC5FA4
 		private void OnBattleUiSlowTimeVisibleChanged(bool visible)
 		{
 			if (this.GetCurrentViewName() == EUiViewName.PlotViewHUD)
@@ -527,7 +551,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			PlotModel.Instance.TranslucentHud = visible;
 		}
 
-		// Token: 0x06034BED RID: 216045 RVA: 0x00C7AA2C File Offset: 0x00C78C2C
+		// Token: 0x06029AE2 RID: 170722 RVA: 0x00BC7E04 File Offset: 0x00BC6004
 		private void ViewCloseCheck(EUiViewName viewName)
 		{
 			if (this.IsSwitching && this.SwitchFromView == viewName)
@@ -567,33 +591,33 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.CheckPending();
 		}
 
-		// Token: 0x06034BEE RID: 216046 RVA: 0x00C7AB75 File Offset: 0x00C78D75
+		// Token: 0x06029AE3 RID: 170723 RVA: 0x00BC7F4D File Offset: 0x00BC614D
 		[NullableContext(2)]
 		public void OpenPlotView(EUiViewName viewName, TCallback callback = null, UiParam uiParam = null, long? ownerId = null)
 		{
 			this.Open(viewName, uiParam, callback, ownerId);
 		}
 
-		// Token: 0x06034BEF RID: 216047 RVA: 0x00C7AB82 File Offset: 0x00C78D82
+		// Token: 0x06029AE4 RID: 170724 RVA: 0x00BC7F5A File Offset: 0x00BC615A
 		public void ClosePlotView(long? ownerId = null)
 		{
 			this.Close(ownerId);
 		}
 
-		// Token: 0x06034BF0 RID: 216048 RVA: 0x00C7AB8C File Offset: 0x00C78D8C
+		// Token: 0x06029AE5 RID: 170725 RVA: 0x00BC7F64 File Offset: 0x00BC6164
 		public UniTask OpenTipsView(EPromptStyle style, UiParam param)
 		{
-			PlotViewManager.<OpenTipsView>d__50 <OpenTipsView>d__;
+			PlotViewManager.<OpenTipsView>d__51 <OpenTipsView>d__;
 			<OpenTipsView>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<OpenTipsView>d__.<>4__this = this;
 			<OpenTipsView>d__.style = style;
 			<OpenTipsView>d__.param = param;
 			<OpenTipsView>d__.<>1__state = -1;
-			<OpenTipsView>d__.<>t__builder.Start<PlotViewManager.<OpenTipsView>d__50>(ref <OpenTipsView>d__);
+			<OpenTipsView>d__.<>t__builder.Start<PlotViewManager.<OpenTipsView>d__51>(ref <OpenTipsView>d__);
 			return <OpenTipsView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034BF1 RID: 216049 RVA: 0x00C7ABDF File Offset: 0x00C78DDF
+		// Token: 0x06029AE6 RID: 170726 RVA: 0x00BC7FB7 File Offset: 0x00BC61B7
 		public void CloseTipsView()
 		{
 			if (this.TipsView != null)
@@ -603,11 +627,11 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.TipsView = null;
 		}
 
-		// Token: 0x06034BF2 RID: 216050 RVA: 0x00C7AC00 File Offset: 0x00C78E00
+		// Token: 0x06029AE7 RID: 170727 RVA: 0x00BC7FD8 File Offset: 0x00BC61D8
 		[NullableContext(2)]
 		private unsafe void Open(EUiViewName viewName, UiParam param = null, TCallback callback = null, long? ownerId = null)
 		{
-			PlotViewManager.<>c__DisplayClass52_0 CS$<>8__locals1 = new PlotViewManager.<>c__DisplayClass52_0();
+			PlotViewManager.<>c__DisplayClass53_0 CS$<>8__locals1 = new PlotViewManager.<>c__DisplayClass53_0();
 			CS$<>8__locals1.param = param;
 			global::Log instance = global::Log.Instance;
 			ELogModule module = ELogModule.Plot;
@@ -631,11 +655,11 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 				}
 				this.RunWhenCurrentViewReady("UpdatePlotUiParam", delegate
 				{
-					PlotViewManager.<>c__DisplayClass52_0.<<Open>b__0>d <<Open>b__0>d;
+					PlotViewManager.<>c__DisplayClass53_0.<<Open>b__0>d <<Open>b__0>d;
 					<<Open>b__0>d.<>t__builder = AsyncUniTaskMethodBuilder<object>.Create();
 					<<Open>b__0>d.<>4__this = CS$<>8__locals1;
 					<<Open>b__0>d.<>1__state = -1;
-					<<Open>b__0>d.<>t__builder.Start<PlotViewManager.<>c__DisplayClass52_0.<<Open>b__0>d>(ref <<Open>b__0>d);
+					<<Open>b__0>d.<>t__builder.Start<PlotViewManager.<>c__DisplayClass53_0.<<Open>b__0>d>(ref <<Open>b__0>d);
 					return <<Open>b__0>d.<>t__builder.Task;
 				}, null).Forget<bool>();
 				global::Log.Instance.Info(ELogModule.Plot, ELogAuthor.FZX, "[PlotView] 重复打开", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -662,7 +686,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.OpenViewByName(viewName, CS$<>8__locals1.param);
 		}
 
-		// Token: 0x06034BF3 RID: 216051 RVA: 0x00C7ADBC File Offset: 0x00C78FBC
+		// Token: 0x06029AE8 RID: 170728 RVA: 0x00BC8194 File Offset: 0x00BC6394
 		[NullableContext(2)]
 		private unsafe void OpenBeforeClose(EUiViewName viewName, UiParam param = null, TCallback callback = null, long? ownerId = null)
 		{
@@ -692,7 +716,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.OpenViewByName(viewName, param);
 		}
 
-		// Token: 0x06034BF4 RID: 216052 RVA: 0x00C7AEAC File Offset: 0x00C790AC
+		// Token: 0x06029AE9 RID: 170729 RVA: 0x00BC8284 File Offset: 0x00BC6484
 		[NullableContext(2)]
 		private unsafe void OpenViewByName(EUiViewName viewName, UiParam param = null)
 		{
@@ -714,7 +738,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			UiManager.Instance.OpenViewByPlot(viewName, param, null);
 		}
 
-		// Token: 0x06034BF5 RID: 216053 RVA: 0x00C7AF34 File Offset: 0x00C79134
+		// Token: 0x06029AEA RID: 170730 RVA: 0x00BC830C File Offset: 0x00BC650C
 		private unsafe void Close(long? ownerId = null)
 		{
 			global::Log instance = global::Log.Instance;
@@ -753,7 +777,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			UiManager.Instance.CloseView(this.CurrentView.Value, null);
 		}
 
-		// Token: 0x06034BF6 RID: 216054 RVA: 0x00C7B069 File Offset: 0x00C79269
+		// Token: 0x06029AEB RID: 170731 RVA: 0x00BC8441 File Offset: 0x00BC6641
 		[NullableContext(2)]
 		public void WaitOpenCallback(TCallback callback = null)
 		{
@@ -774,7 +798,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			callback(true);
 		}
 
-		// Token: 0x06034BF7 RID: 216055 RVA: 0x00C7B09C File Offset: 0x00C7929C
+		// Token: 0x06029AEC RID: 170732 RVA: 0x00BC8474 File Offset: 0x00BC6674
 		[NullableContext(2)]
 		public void RemoveCallback(TCallback callback = null)
 		{
@@ -785,7 +809,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.Callbacks.Remove(callback);
 		}
 
-		// Token: 0x06034BF8 RID: 216056 RVA: 0x00C7B0B0 File Offset: 0x00C792B0
+		// Token: 0x06029AED RID: 170733 RVA: 0x00BC8488 File Offset: 0x00BC6688
 		private void DoCallback(bool result)
 		{
 			HashSet<TCallback> callbacks = this.Callbacks;
@@ -799,7 +823,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x06034BF9 RID: 216057 RVA: 0x00C7B114 File Offset: 0x00C79314
+		// Token: 0x06029AEE RID: 170734 RVA: 0x00BC84EC File Offset: 0x00BC66EC
 		private void CheckPending()
 		{
 			this.IsLock = false;
@@ -816,7 +840,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.Close((viewHandle != null) ? viewHandle.OwnerId : null);
 		}
 
-		// Token: 0x06034BFA RID: 216058 RVA: 0x00C7B196 File Offset: 0x00C79396
+		// Token: 0x06029AEF RID: 170735 RVA: 0x00BC856E File Offset: 0x00BC676E
 		private void ContinuePendingAfterSkip()
 		{
 			if (this.IsLock)
@@ -826,7 +850,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.CheckPending();
 		}
 
-		// Token: 0x06034BFB RID: 216059 RVA: 0x00C7B1A8 File Offset: 0x00C793A8
+		// Token: 0x06029AF0 RID: 170736 RVA: 0x00BC8580 File Offset: 0x00BC6780
 		private unsafe void AddPending(ViewHandle handle)
 		{
 			this.PendingHandle.Push(handle);
@@ -843,7 +867,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x06034BFC RID: 216060 RVA: 0x00C7B240 File Offset: 0x00C79440
+		// Token: 0x06029AF1 RID: 170737 RVA: 0x00BC8618 File Offset: 0x00BC6818
 		[return: Nullable(0)]
 		public unsafe UniTask<bool> RunWhenCurrentViewReady(string name, PlotUiAsyncOperation operation, [Nullable(2)] Action onCancel = null)
 		{
@@ -881,35 +905,35 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return customPromise.Promise;
 		}
 
-		// Token: 0x06034BFD RID: 216061 RVA: 0x00C7B338 File Offset: 0x00C79538
+		// Token: 0x06029AF2 RID: 170738 RVA: 0x00BC8710 File Offset: 0x00BC6910
 		private UniTask HandleCurrentViewShown()
 		{
-			PlotViewManager.<HandleCurrentViewShown>d__63 <HandleCurrentViewShown>d__;
+			PlotViewManager.<HandleCurrentViewShown>d__64 <HandleCurrentViewShown>d__;
 			<HandleCurrentViewShown>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<HandleCurrentViewShown>d__.<>4__this = this;
 			<HandleCurrentViewShown>d__.<>1__state = -1;
-			<HandleCurrentViewShown>d__.<>t__builder.Start<PlotViewManager.<HandleCurrentViewShown>d__63>(ref <HandleCurrentViewShown>d__);
+			<HandleCurrentViewShown>d__.<>t__builder.Start<PlotViewManager.<HandleCurrentViewShown>d__64>(ref <HandleCurrentViewShown>d__);
 			return <HandleCurrentViewShown>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034BFE RID: 216062 RVA: 0x00C7B37C File Offset: 0x00C7957C
+		// Token: 0x06029AF3 RID: 170739 RVA: 0x00BC8754 File Offset: 0x00BC6954
 		private UniTask HandleSwitchFromViewClosed()
 		{
-			PlotViewManager.<HandleSwitchFromViewClosed>d__64 <HandleSwitchFromViewClosed>d__;
+			PlotViewManager.<HandleSwitchFromViewClosed>d__65 <HandleSwitchFromViewClosed>d__;
 			<HandleSwitchFromViewClosed>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<HandleSwitchFromViewClosed>d__.<>4__this = this;
 			<HandleSwitchFromViewClosed>d__.<>1__state = -1;
-			<HandleSwitchFromViewClosed>d__.<>t__builder.Start<PlotViewManager.<HandleSwitchFromViewClosed>d__64>(ref <HandleSwitchFromViewClosed>d__);
+			<HandleSwitchFromViewClosed>d__.<>t__builder.Start<PlotViewManager.<HandleSwitchFromViewClosed>d__65>(ref <HandleSwitchFromViewClosed>d__);
 			return <HandleSwitchFromViewClosed>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034BFF RID: 216063 RVA: 0x00C7B3BF File Offset: 0x00C795BF
+		// Token: 0x06029AF4 RID: 170740 RVA: 0x00BC8797 File Offset: 0x00BC6997
 		private bool CanQueueViewOperation()
 		{
 			return this.CurrentView != null;
 		}
 
-		// Token: 0x06034C00 RID: 216064 RVA: 0x00C7B3CC File Offset: 0x00C795CC
+		// Token: 0x06029AF5 RID: 170741 RVA: 0x00BC87A4 File Offset: 0x00BC69A4
 		private unsafe bool CheckOwner(string operation, long? ownerId = null)
 		{
 			if (ownerId != null)
@@ -934,13 +958,13 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return true;
 		}
 
-		// Token: 0x06034C01 RID: 216065 RVA: 0x00C7B4AD File Offset: 0x00C796AD
+		// Token: 0x06029AF6 RID: 170742 RVA: 0x00BC8885 File Offset: 0x00BC6A85
 		private bool CanRunViewOperation()
 		{
 			return (!this.IsSwitching || this.SwitchFromView == null) && (this.ViewEnable && this.IsShowing) && this.GetCurrentView() != null;
 		}
 
-		// Token: 0x06034C02 RID: 216066 RVA: 0x00C7B4E1 File Offset: 0x00C796E1
+		// Token: 0x06029AF7 RID: 170743 RVA: 0x00BC88B9 File Offset: 0x00BC6AB9
 		[NullableContext(2)]
 		private object GetCurrentView()
 		{
@@ -951,40 +975,40 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return UiManager.Instance.GetViewByName(this.CurrentView.Value);
 		}
 
-		// Token: 0x06034C03 RID: 216067 RVA: 0x00C7B508 File Offset: 0x00C79708
+		// Token: 0x06029AF8 RID: 170744 RVA: 0x00BC88E0 File Offset: 0x00BC6AE0
 		private UniTask FlushPendingViewOperations()
 		{
-			PlotViewManager.<FlushPendingViewOperations>d__69 <FlushPendingViewOperations>d__;
+			PlotViewManager.<FlushPendingViewOperations>d__70 <FlushPendingViewOperations>d__;
 			<FlushPendingViewOperations>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<FlushPendingViewOperations>d__.<>4__this = this;
 			<FlushPendingViewOperations>d__.<>1__state = -1;
-			<FlushPendingViewOperations>d__.<>t__builder.Start<PlotViewManager.<FlushPendingViewOperations>d__69>(ref <FlushPendingViewOperations>d__);
+			<FlushPendingViewOperations>d__.<>t__builder.Start<PlotViewManager.<FlushPendingViewOperations>d__70>(ref <FlushPendingViewOperations>d__);
 			return <FlushPendingViewOperations>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034C04 RID: 216068 RVA: 0x00C7B54C File Offset: 0x00C7974C
+		// Token: 0x06029AF9 RID: 170745 RVA: 0x00BC8924 File Offset: 0x00BC6B24
 		private UniTask ExecuteNextPendingViewOperation()
 		{
-			PlotViewManager.<ExecuteNextPendingViewOperation>d__70 <ExecuteNextPendingViewOperation>d__;
+			PlotViewManager.<ExecuteNextPendingViewOperation>d__71 <ExecuteNextPendingViewOperation>d__;
 			<ExecuteNextPendingViewOperation>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<ExecuteNextPendingViewOperation>d__.<>4__this = this;
 			<ExecuteNextPendingViewOperation>d__.<>1__state = -1;
-			<ExecuteNextPendingViewOperation>d__.<>t__builder.Start<PlotViewManager.<ExecuteNextPendingViewOperation>d__70>(ref <ExecuteNextPendingViewOperation>d__);
+			<ExecuteNextPendingViewOperation>d__.<>t__builder.Start<PlotViewManager.<ExecuteNextPendingViewOperation>d__71>(ref <ExecuteNextPendingViewOperation>d__);
 			return <ExecuteNextPendingViewOperation>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034C05 RID: 216069 RVA: 0x00C7B590 File Offset: 0x00C79790
+		// Token: 0x06029AFA RID: 170746 RVA: 0x00BC8968 File Offset: 0x00BC6B68
 		private UniTask ExecuteViewOperation(PlotUiOperationHandle handle)
 		{
-			PlotViewManager.<ExecuteViewOperation>d__71 <ExecuteViewOperation>d__;
+			PlotViewManager.<ExecuteViewOperation>d__72 <ExecuteViewOperation>d__;
 			<ExecuteViewOperation>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<ExecuteViewOperation>d__.handle = handle;
 			<ExecuteViewOperation>d__.<>1__state = -1;
-			<ExecuteViewOperation>d__.<>t__builder.Start<PlotViewManager.<ExecuteViewOperation>d__71>(ref <ExecuteViewOperation>d__);
+			<ExecuteViewOperation>d__.<>t__builder.Start<PlotViewManager.<ExecuteViewOperation>d__72>(ref <ExecuteViewOperation>d__);
 			return <ExecuteViewOperation>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034C06 RID: 216070 RVA: 0x00C7B5D3 File Offset: 0x00C797D3
+		// Token: 0x06029AFB RID: 170747 RVA: 0x00BC89AB File Offset: 0x00BC6BAB
 		private void CancelPendingViewOperations()
 		{
 			while (this.PendingViewOperations.Count > 0)
@@ -994,7 +1018,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x06034C07 RID: 216071 RVA: 0x00C7B603 File Offset: 0x00C79803
+		// Token: 0x06029AFC RID: 170748 RVA: 0x00BC89DB File Offset: 0x00BC6BDB
 		private void CancelViewOperation(PlotUiOperationHandle handle)
 		{
 			Action onCancel = handle.OnCancel;
@@ -1005,7 +1029,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			handle.ResultPromise.SetResult(false);
 		}
 
-		// Token: 0x06034C08 RID: 216072 RVA: 0x00C7B622 File Offset: 0x00C79822
+		// Token: 0x06029AFD RID: 170749 RVA: 0x00BC89FA File Offset: 0x00BC6BFA
 		private void FinishSwitching()
 		{
 			this.IsSwitching = false;
@@ -1013,44 +1037,44 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.SwitchToView = null;
 		}
 
-		// Token: 0x0401C1BA RID: 115130
+		// Token: 0x04016BE5 RID: 93157
 		private EUiViewName? CurrentView;
 
-		// Token: 0x0401C1BB RID: 115131
+		// Token: 0x04016BE6 RID: 93158
 		private long? CurrentViewOwnerId;
 
-		// Token: 0x0401C1BC RID: 115132
+		// Token: 0x04016BE7 RID: 93159
 		private HashSet<TCallback> Callbacks = new HashSet<TCallback>();
 
-		// Token: 0x0401C1BD RID: 115133
+		// Token: 0x04016BE8 RID: 93160
 		private bool IsShowing;
 
-		// Token: 0x0401C1BE RID: 115134
+		// Token: 0x04016BE9 RID: 93161
 		private bool ViewEnable;
 
-		// Token: 0x0401C1BF RID: 115135
+		// Token: 0x04016BEA RID: 93162
 		private bool IsLock;
 
-		// Token: 0x0401C1C0 RID: 115136
+		// Token: 0x04016BEB RID: 93163
 		private readonly Queue<ViewHandle> PendingHandle = new Queue<ViewHandle>(4);
 
-		// Token: 0x0401C1C1 RID: 115137
+		// Token: 0x04016BEC RID: 93164
 		[Nullable(2)]
 		private PlotTipsViewBase TipsView;
 
-		// Token: 0x0401C1C2 RID: 115138
+		// Token: 0x04016BED RID: 93165
 		private readonly List<PlotUiOperationHandle> PendingViewOperations = new List<PlotUiOperationHandle>();
 
-		// Token: 0x0401C1C3 RID: 115139
+		// Token: 0x04016BEE RID: 93166
 		private bool IsFlushingViewOperation;
 
-		// Token: 0x0401C1C4 RID: 115140
+		// Token: 0x04016BEF RID: 93167
 		private EUiViewName? SwitchFromView;
 
-		// Token: 0x0401C1C5 RID: 115141
+		// Token: 0x04016BF0 RID: 93168
 		private EUiViewName? SwitchToView;
 
-		// Token: 0x0401C1C6 RID: 115142
+		// Token: 0x04016BF1 RID: 93169
 		private bool IsSwitching;
 	}
 }

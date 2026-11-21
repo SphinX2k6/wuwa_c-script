@@ -3,134 +3,134 @@ using CSharpScript.Core.Common;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 {
-	// Token: 0x020064C2 RID: 25794
+	// Token: 0x02005440 RID: 21568
 	[EnumExtensions]
 	public enum EMatchThreeResourceId
 	{
-		// Token: 0x04021B75 RID: 138101
+		// Token: 0x0401C4A6 RID: 115878
 		[EnumStringMember("UiItem_TileNor")]
 		TileNormal,
-		// Token: 0x04021B76 RID: 138102
+		// Token: 0x0401C4A7 RID: 115879
 		[EnumStringMember("UiItem_TileUltimate")]
 		TileUltimate,
-		// Token: 0x04021B77 RID: 138103
+		// Token: 0x0401C4A8 RID: 115880
 		[EnumStringMember("UiItem_TileSandglass")]
 		TileHourglass,
-		// Token: 0x04021B78 RID: 138104
+		// Token: 0x0401C4A9 RID: 115881
 		[EnumStringMember("UiItem_TileAbsorb")]
 		TileCharger,
-		// Token: 0x04021B79 RID: 138105
+		// Token: 0x0401C4AA RID: 115882
 		[EnumStringMember("UiItem_TileIce")]
 		TileIce,
-		// Token: 0x04021B7A RID: 138106
+		// Token: 0x0401C4AB RID: 115883
 		[EnumStringMember("UiItem_ItemArrowX")]
 		AdditionBomb,
-		// Token: 0x04021B7B RID: 138107
+		// Token: 0x0401C4AC RID: 115884
 		[EnumStringMember("UiItem_ItemArrowCross")]
 		AdditionCrossClear,
-		// Token: 0x04021B7C RID: 138108
+		// Token: 0x0401C4AD RID: 115885
 		[EnumStringMember("UiItem_ItemSkillChain")]
 		AdditionChain,
-		// Token: 0x04021B7D RID: 138109
+		// Token: 0x0401C4AE RID: 115886
 		[EnumStringMember("UiItem_ItemEffectUltimate")]
 		UltimateTrail,
-		// Token: 0x04021B7E RID: 138110
+		// Token: 0x0401C4AF RID: 115887
 		[EnumStringMember("UiItem_ItemEffectRemove")]
 		EnergyTrail,
-		// Token: 0x04021B7F RID: 138111
+		// Token: 0x0401C4B0 RID: 115888
 		[EnumStringMember("UiItem_ItemEffectXin")]
 		AllureTrail,
-		// Token: 0x04021B80 RID: 138112
+		// Token: 0x0401C4B1 RID: 115889
 		[EnumStringMember("UiItem_ItemEffectChain")]
 		ChainTrail,
-		// Token: 0x04021B81 RID: 138113
+		// Token: 0x0401C4B2 RID: 115890
 		[EnumStringMember("UiItem_ItemEffectChain_2")]
 		ChainDetonationTrail,
-		// Token: 0x04021B82 RID: 138114
+		// Token: 0x0401C4B3 RID: 115891
 		[EnumStringMember("UiItem_ItemEffectProp")]
 		MechanicTrail,
-		// Token: 0x04021B83 RID: 138115
+		// Token: 0x0401C4B4 RID: 115892
 		[EnumStringMember("UiItem_ItemEffectAbsorb")]
 		RecycleChargerTrail,
-		// Token: 0x04021B84 RID: 138116
+		// Token: 0x0401C4B5 RID: 115893
 		[EnumStringMember("UiItem_ItemEffectSandglass")]
 		RecycleHourglassTrail,
-		// Token: 0x04021B85 RID: 138117
+		// Token: 0x0401C4B6 RID: 115894
 		[EnumStringMember("Cure_CharacterX")]
 		SkillTrailCurveX,
-		// Token: 0x04021B86 RID: 138118
+		// Token: 0x0401C4B7 RID: 115895
 		[EnumStringMember("Cure_CharacterY")]
 		SkillTrailCurveY,
-		// Token: 0x04021B87 RID: 138119
+		// Token: 0x0401C4B8 RID: 115896
 		[EnumStringMember("Cure_CharacterX_2")]
 		SkillTrailCurveX2,
-		// Token: 0x04021B88 RID: 138120
+		// Token: 0x0401C4B9 RID: 115897
 		[EnumStringMember("Cure_CharacterY_2")]
 		SkillTrailCurveY2,
-		// Token: 0x04021B89 RID: 138121
+		// Token: 0x0401C4BA RID: 115898
 		[EnumStringMember("Cure_Xian")]
 		ChainSkillTrailCurve,
-		// Token: 0x04021B8A RID: 138122
+		// Token: 0x0401C4BB RID: 115899
 		[EnumStringMember("Cure_energyX")]
 		EnergyTrailCurveX,
-		// Token: 0x04021B8B RID: 138123
+		// Token: 0x0401C4BC RID: 115900
 		[EnumStringMember("Cure_energyY")]
 		EnergyTrailCurveY,
-		// Token: 0x04021B8C RID: 138124
+		// Token: 0x0401C4BD RID: 115901
 		[EnumStringMember("Cure_ItemX")]
 		MechanicTrailCurveX,
-		// Token: 0x04021B8D RID: 138125
+		// Token: 0x0401C4BE RID: 115902
 		[EnumStringMember("Cure_ItemY")]
 		MechanicTrailCurveY,
-		// Token: 0x04021B8E RID: 138126
+		// Token: 0x0401C4BF RID: 115903
 		[EnumStringMember("Cure_Array")]
 		FallCurve,
-		// Token: 0x04021B8F RID: 138127
+		// Token: 0x0401C4C0 RID: 115904
 		[EnumStringMember("UiItem_GamePlayTipsEnv")]
 		EnvTips,
-		// Token: 0x04021B90 RID: 138128
+		// Token: 0x0401C4C1 RID: 115905
 		[EnumStringMember("UiItem_GamePlayTipsSkill")]
 		SkillTips,
-		// Token: 0x04021B91 RID: 138129
+		// Token: 0x0401C4C2 RID: 115906
 		[EnumStringMember("UiItem_GamePlayScore")]
 		ScorePop,
-		// Token: 0x04021B92 RID: 138130
+		// Token: 0x0401C4C3 RID: 115907
 		[EnumStringMember("UiItem_GamePlayGrade")]
 		GradePop,
-		// Token: 0x04021B93 RID: 138131
+		// Token: 0x0401C4C4 RID: 115908
 		[EnumStringMember("SP_IconTileUltimate")]
 		IconTileUltimate,
-		// Token: 0x04021B94 RID: 138132
+		// Token: 0x0401C4C5 RID: 115909
 		[EnumStringMember("SP_IconTileSandglass")]
 		IconTileHourglass,
-		// Token: 0x04021B95 RID: 138133
+		// Token: 0x0401C4C6 RID: 115910
 		[EnumStringMember("SP_IconTileAbsorb")]
 		IconTileCharger,
-		// Token: 0x04021B96 RID: 138134
+		// Token: 0x0401C4C7 RID: 115911
 		[EnumStringMember("SP_IconIce")]
 		IconTileIce,
-		// Token: 0x04021B97 RID: 138135
+		// Token: 0x0401C4C8 RID: 115912
 		[EnumStringMember("SP_IconTile1")]
 		IconTileRed,
-		// Token: 0x04021B98 RID: 138136
+		// Token: 0x0401C4C9 RID: 115913
 		[EnumStringMember("SP_IconTile2")]
 		IconTileYellow,
-		// Token: 0x04021B99 RID: 138137
+		// Token: 0x0401C4CA RID: 115914
 		[EnumStringMember("SP_IconTile3")]
 		IconTileBlue,
-		// Token: 0x04021B9A RID: 138138
+		// Token: 0x0401C4CB RID: 115915
 		[EnumStringMember("SP_IconTile4")]
 		IconTileGreen,
-		// Token: 0x04021B9B RID: 138139
+		// Token: 0x0401C4CC RID: 115916
 		[EnumStringMember("SP_IconTile5")]
 		IconTilePurple,
-		// Token: 0x04021B9C RID: 138140
+		// Token: 0x0401C4CD RID: 115917
 		[EnumStringMember("SP_PointsIcon")]
 		IconScore,
-		// Token: 0x04021B9D RID: 138141
+		// Token: 0x0401C4CE RID: 115918
 		[EnumStringMember("SP_ProgressBarBgNor")]
 		ProgressBgNormal,
-		// Token: 0x04021B9E RID: 138142
+		// Token: 0x0401C4CF RID: 115919
 		[EnumStringMember("SP_ProgressBarBgSP")]
 		ProgressBgEndless
 	}

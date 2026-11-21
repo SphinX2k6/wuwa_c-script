@@ -10,17 +10,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001B7C RID: 7036
+// Token: 0x0200103B RID: 4155
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchWeeklyMainView : UiViewBase
 {
-	// Token: 0x0600D157 RID: 53591 RVA: 0x002FF427 File Offset: 0x002FD627
+	// Token: 0x0600A568 RID: 42344 RVA: 0x0030A4FF File Offset: 0x003086FF
 	public FloroRanchWeeklyMainView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0600D158 RID: 53592 RVA: 0x002FF448 File Offset: 0x002FD648
+	// Token: 0x0600A569 RID: 42345 RVA: 0x0030A520 File Offset: 0x00308720
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 24;
@@ -91,7 +91,7 @@ public class FloroRanchWeeklyMainView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D159 RID: 53593 RVA: 0x002FF840 File Offset: 0x002FDA40
+	// Token: 0x0600A56A RID: 42346 RVA: 0x0030A918 File Offset: 0x00308B18
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FloroRanchWeeklyMainView.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -102,14 +102,14 @@ public class FloroRanchWeeklyMainView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D15A RID: 53594 RVA: 0x002FF883 File Offset: 0x002FDA83
+	// Token: 0x0600A56B RID: 42347 RVA: 0x0030A95B File Offset: 0x00308B5B
 	protected override void OnBeforeDestroy()
 	{
 		TermExplanationController.Instance.UnRegisterTextHyperlink(base.GetText(16));
 		this.IsRequesting = false;
 	}
 
-	// Token: 0x0600D15B RID: 53595 RVA: 0x002FF8A0 File Offset: 0x002FDAA0
+	// Token: 0x0600A56C RID: 42348 RVA: 0x0030A978 File Offset: 0x00308B78
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<EFloroRanchActivityDataType, int>(EEventName.FloroRanchSkillChange, new Action<EFloroRanchActivityDataType, int>(this.OnSkillChange));
@@ -118,7 +118,7 @@ public class FloroRanchWeeklyMainView : UiViewBase
 		EventSystem.Instance.Add(EEventName.FloroRanchSubInsHistoryUpdate, new Action(this.OnSubInsHistoryUpdate));
 	}
 
-	// Token: 0x0600D15C RID: 53596 RVA: 0x002FF920 File Offset: 0x002FDB20
+	// Token: 0x0600A56D RID: 42349 RVA: 0x0030A9F8 File Offset: 0x00308BF8
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.FloroRanchSkillChange, new Action<EFloroRanchActivityDataType, int>(this.OnSkillChange));
@@ -127,7 +127,7 @@ public class FloroRanchWeeklyMainView : UiViewBase
 		EventSystem.Instance.Remove(EEventName.FloroRanchSubInsHistoryUpdate, new Action(this.OnSubInsHistoryUpdate));
 	}
 
-	// Token: 0x0600D15D RID: 53597 RVA: 0x002FF99D File Offset: 0x002FDB9D
+	// Token: 0x0600A56E RID: 42350 RVA: 0x0030AA75 File Offset: 0x00308C75
 	protected override void OnBeforeShow()
 	{
 		this.RefreshStartButton();
@@ -135,13 +135,13 @@ public class FloroRanchWeeklyMainView : UiViewBase
 		this.RefreshHistoryPanel();
 	}
 
-	// Token: 0x0600D15E RID: 53598 RVA: 0x002FF9B1 File Offset: 0x002FDBB1
+	// Token: 0x0600A56F RID: 42351 RVA: 0x0030AA89 File Offset: 0x00308C89
 	protected override void OnBeforeHide()
 	{
 		this.IsRequesting = false;
 	}
 
-	// Token: 0x0600D15F RID: 53599 RVA: 0x002FF9BA File Offset: 0x002FDBBA
+	// Token: 0x0600A570 RID: 42352 RVA: 0x0030AA92 File Offset: 0x00308C92
 	private FloroRanchHandBookSmallSlotItem CreateRecommendItem()
 	{
 		FloroRanchHandBookSmallSlotItem floroRanchHandBookSmallSlotItem = new FloroRanchHandBookSmallSlotItem();
@@ -150,7 +150,7 @@ public class FloroRanchWeeklyMainView : UiViewBase
 		return floroRanchHandBookSmallSlotItem;
 	}
 
-	// Token: 0x0600D160 RID: 53600 RVA: 0x002FF9DC File Offset: 0x002FDBDC
+	// Token: 0x0600A571 RID: 42353 RVA: 0x0030AAB4 File Offset: 0x00308CB4
 	private void OnRecommendItemClick(FloroRanchHandBookSmallSlotItem item)
 	{
 		int num = this.RecommendLayout.GetLayoutItemList().IndexOf(item);
@@ -171,13 +171,13 @@ public class FloroRanchWeeklyMainView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D161 RID: 53601 RVA: 0x002FFA9C File Offset: 0x002FDC9C
+	// Token: 0x0600A572 RID: 42354 RVA: 0x0030AB74 File Offset: 0x00308D74
 	private FloroRanchRaceItem CreateRaceItem()
 	{
 		return new FloroRanchRaceItem();
 	}
 
-	// Token: 0x0600D162 RID: 53602 RVA: 0x002FFAA4 File Offset: 0x002FDCA4
+	// Token: 0x0600A573 RID: 42355 RVA: 0x0030AB7C File Offset: 0x00308D7C
 	private UniTask RefreshRightInfoPanel()
 	{
 		FloroRanchWeeklyMainView.<RefreshRightInfoPanel>d__21 <RefreshRightInfoPanel>d__;
@@ -188,7 +188,7 @@ public class FloroRanchWeeklyMainView : UiViewBase
 		return <RefreshRightInfoPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D163 RID: 53603 RVA: 0x002FFAE8 File Offset: 0x002FDCE8
+	// Token: 0x0600A574 RID: 42356 RVA: 0x0030ABC0 File Offset: 0x00308DC0
 	private void RefreshHistoryPanel()
 	{
 		FloroRanchSubDungeonData floroRanchSubDungeonData = this.ActivityData.GetFloroRanchSubDungeonData(this.SubDungeonId);
@@ -207,7 +207,7 @@ public class FloroRanchWeeklyMainView : UiViewBase
 		item.SetUIActive(floroRanchSubDungeonData.HasHistory);
 	}
 
-	// Token: 0x0600D164 RID: 53604 RVA: 0x002FFB69 File Offset: 0x002FDD69
+	// Token: 0x0600A575 RID: 42357 RVA: 0x0030AC41 File Offset: 0x00308E41
 	private void RefreshSkillItem(int skillId)
 	{
 		this.SkillId = skillId;
@@ -219,7 +219,7 @@ public class FloroRanchWeeklyMainView : UiViewBase
 		skillItem.Refresh(skillId);
 	}
 
-	// Token: 0x0600D165 RID: 53605 RVA: 0x002FFB83 File Offset: 0x002FDD83
+	// Token: 0x0600A576 RID: 42358 RVA: 0x0030AC5B File Offset: 0x00308E5B
 	private void OnSkillChange(EFloroRanchActivityDataType activityDataType, int skillId)
 	{
 		if (activityDataType != EFloroRanchActivityDataType.Weekly)
@@ -229,7 +229,7 @@ public class FloroRanchWeeklyMainView : UiViewBase
 		this.RefreshSkillItem(skillId);
 	}
 
-	// Token: 0x0600D166 RID: 53606 RVA: 0x002FFB91 File Offset: 0x002FDD91
+	// Token: 0x0600A577 RID: 42359 RVA: 0x0030AC69 File Offset: 0x00308E69
 	private void OnSkillRedDotRefresh(EFloroRanchActivityDataType activityDataType)
 	{
 		if (activityDataType != EFloroRanchActivityDataType.Weekly)
@@ -244,7 +244,7 @@ public class FloroRanchWeeklyMainView : UiViewBase
 		skillItem.RefreshRedDot();
 	}
 
-	// Token: 0x0600D167 RID: 53607 RVA: 0x002FFBA8 File Offset: 0x002FDDA8
+	// Token: 0x0600A578 RID: 42360 RVA: 0x0030AC80 File Offset: 0x00308E80
 	private void OnFloroRanchSettlement()
 	{
 		this.RefreshStartButton();
@@ -252,13 +252,13 @@ public class FloroRanchWeeklyMainView : UiViewBase
 		this.RefreshHistoryPanel();
 	}
 
-	// Token: 0x0600D168 RID: 53608 RVA: 0x002FFBBC File Offset: 0x002FDDBC
+	// Token: 0x0600A579 RID: 42361 RVA: 0x0030AC94 File Offset: 0x00308E94
 	private void OnSubInsHistoryUpdate()
 	{
 		this.RefreshHistoryPanel();
 	}
 
-	// Token: 0x0600D169 RID: 53609 RVA: 0x002FFBC4 File Offset: 0x002FDDC4
+	// Token: 0x0600A57A RID: 42362 RVA: 0x0030AC9C File Offset: 0x00308E9C
 	private void RefreshStartButton()
 	{
 		bool flag = this.ActivityData.HasUnFinishedSubIns();
@@ -266,7 +266,7 @@ public class FloroRanchWeeklyMainView : UiViewBase
 		base.GetButton(11).RootUIComp.Get().SetUIActive(flag);
 	}
 
-	// Token: 0x0600D16A RID: 53610 RVA: 0x002FFC18 File Offset: 0x002FDE18
+	// Token: 0x0600A57B RID: 42363 RVA: 0x0030ACF0 File Offset: 0x00308EF0
 	private void RefreshWeeklyScore()
 	{
 		int weeklyCurrentScore = WeeklyChallengeModel.Instance.WeeklyCurrentScore;
@@ -286,7 +286,7 @@ public class FloroRanchWeeklyMainView : UiViewBase
 		base.GetText(22).SetUIActive(!flag);
 	}
 
-	// Token: 0x0600D16B RID: 53611 RVA: 0x002FFCD4 File Offset: 0x002FDED4
+	// Token: 0x0600A57C RID: 42364 RVA: 0x0030ADAC File Offset: 0x00308FAC
 	private void OnGameNewStart()
 	{
 		if (this.IsRequesting)
@@ -338,7 +338,7 @@ public class FloroRanchWeeklyMainView : UiViewBase
 		});
 	}
 
-	// Token: 0x0600D16C RID: 53612 RVA: 0x002FFDB8 File Offset: 0x002FDFB8
+	// Token: 0x0600A57D RID: 42365 RVA: 0x0030AE90 File Offset: 0x00309090
 	private void OnSaveBtnClick()
 	{
 		if (this.IsRequesting)
@@ -416,7 +416,7 @@ public class FloroRanchWeeklyMainView : UiViewBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x0600D16D RID: 53613 RVA: 0x002FFEAB File Offset: 0x002FE0AB
+	// Token: 0x0600A57E RID: 42366 RVA: 0x0030AF83 File Offset: 0x00309183
 	private void OnCloseBtnClick()
 	{
 		if (this.IsRequesting)
@@ -426,13 +426,13 @@ public class FloroRanchWeeklyMainView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600D16E RID: 53614 RVA: 0x002FFEBD File Offset: 0x002FE0BD
+	// Token: 0x0600A57F RID: 42367 RVA: 0x0030AF95 File Offset: 0x00309195
 	private void OnStartBtnClick()
 	{
 		this.OnGameNewStart();
 	}
 
-	// Token: 0x0600D16F RID: 53615 RVA: 0x002FFEC8 File Offset: 0x002FE0C8
+	// Token: 0x0600A580 RID: 42368 RVA: 0x0030AFA0 File Offset: 0x003091A0
 	private void OnArchiveBtnClick()
 	{
 		FloroRanchHandBookViewParam floroRanchHandBookViewParam = new FloroRanchHandBookViewParam
@@ -442,109 +442,109 @@ public class FloroRanchWeeklyMainView : UiViewBase
 		UiManager.Instance.OpenView(EUiViewName.FloroRanchHandBookView, floroRanchHandBookViewParam, null);
 	}
 
-	// Token: 0x04006014 RID: 24596
+	// Token: 0x040060E3 RID: 24803
 	[Nullable(2)]
 	private global::FloroRanchActivityData ActivityData;
 
-	// Token: 0x04006015 RID: 24597
+	// Token: 0x040060E4 RID: 24804
 	private int SubDungeonId;
 
-	// Token: 0x04006016 RID: 24598
+	// Token: 0x040060E5 RID: 24805
 	private int SkillId;
 
-	// Token: 0x04006017 RID: 24599
+	// Token: 0x040060E6 RID: 24806
 	private List<int> RaceIds = new List<int>();
 
-	// Token: 0x04006018 RID: 24600
+	// Token: 0x040060E7 RID: 24807
 	[Nullable(2)]
 	private FloroRanchSkillItem SkillItem;
 
-	// Token: 0x04006019 RID: 24601
+	// Token: 0x040060E8 RID: 24808
 	private GenericLayout<FloroRanchHandBookSmallSlotItem, FloroRanchUnlockDataBase> RecommendLayout;
 
-	// Token: 0x0400601A RID: 24602
+	// Token: 0x040060E9 RID: 24809
 	private readonly List<FloroRanchUnlockDataBase> RecommendUnlockDataList = new List<FloroRanchUnlockDataBase>();
 
-	// Token: 0x0400601B RID: 24603
+	// Token: 0x040060EA RID: 24810
 	private GenericLayout<FloroRanchRaceItem, FloroRanchSelectRaceData> RaceLayout;
 
-	// Token: 0x0400601C RID: 24604
+	// Token: 0x040060EB RID: 24811
 	private bool IsRequesting;
 
-	// Token: 0x020080FD RID: 33021
+	// Token: 0x0200728B RID: 29323
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x0402A178 RID: 172408
+		// Token: 0x040254AC RID: 152748
 		public const int TextTitle = 0;
 
-		// Token: 0x0402A179 RID: 172409
+		// Token: 0x040254AD RID: 152749
 		public const int BtnClose = 1;
 
-		// Token: 0x0402A17A RID: 172410
+		// Token: 0x040254AE RID: 152750
 		public const int BtnStart = 2;
 
-		// Token: 0x0402A17B RID: 172411
+		// Token: 0x040254AF RID: 152751
 		public const int ItemRightPanel = 3;
 
-		// Token: 0x0402A17C RID: 172412
+		// Token: 0x040254B0 RID: 152752
 		public const int ItemHistoryPanel = 4;
 
-		// Token: 0x0402A17D RID: 172413
+		// Token: 0x040254B1 RID: 152753
 		public const int TextHistoryDay = 5;
 
-		// Token: 0x0402A17E RID: 172414
+		// Token: 0x040254B2 RID: 152754
 		public const int TextHistoryCoin = 6;
 
-		// Token: 0x0402A17F RID: 172415
+		// Token: 0x040254B3 RID: 152755
 		public const int SpineRole = 7;
 
-		// Token: 0x0402A180 RID: 172416
+		// Token: 0x040254B4 RID: 152756
 		public const int ItemSKill = 8;
 
-		// Token: 0x0402A181 RID: 172417
+		// Token: 0x040254B5 RID: 152757
 		public const int ItemLockPanel = 9;
 
-		// Token: 0x0402A182 RID: 172418
+		// Token: 0x040254B6 RID: 152758
 		public const int ItemQuest = 10;
 
-		// Token: 0x0402A183 RID: 172419
+		// Token: 0x040254B7 RID: 152759
 		public const int BtnSave = 11;
 
-		// Token: 0x0402A184 RID: 172420
+		// Token: 0x040254B8 RID: 152760
 		public const int BtnArchive = 12;
 
-		// Token: 0x0402A185 RID: 172421
+		// Token: 0x040254B9 RID: 152761
 		public const int TextInsName = 13;
 
-		// Token: 0x0402A186 RID: 172422
+		// Token: 0x040254BA RID: 152762
 		public const int TextTarget = 14;
 
-		// Token: 0x0402A187 RID: 172423
+		// Token: 0x040254BB RID: 152763
 		public const int ItemDescRoot = 15;
 
-		// Token: 0x0402A188 RID: 172424
+		// Token: 0x040254BC RID: 152764
 		public const int TextDesc = 16;
 
-		// Token: 0x0402A189 RID: 172425
+		// Token: 0x040254BD RID: 152765
 		public const int GridLayoutRecommend = 17;
 
-		// Token: 0x0402A18A RID: 172426
+		// Token: 0x040254BE RID: 152766
 		public const int ItemRecommend = 18;
 
-		// Token: 0x0402A18B RID: 172427
+		// Token: 0x040254BF RID: 152767
 		public const int HorizontalLayoutRace = 19;
 
-		// Token: 0x0402A18C RID: 172428
+		// Token: 0x040254C0 RID: 152768
 		public const int ItemRace = 20;
 
-		// Token: 0x0402A18D RID: 172429
+		// Token: 0x040254C1 RID: 152769
 		public const int TextCurWeeklyScore = 21;
 
-		// Token: 0x0402A18E RID: 172430
+		// Token: 0x040254C2 RID: 152770
 		public const int TextMaxWeeklyScore = 22;
 
-		// Token: 0x0402A18F RID: 172431
+		// Token: 0x040254C3 RID: 152771
 		public const int TextWeekFinish = 23;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200653D RID: 25917
+	// Token: 0x02006BAE RID: 27566
 	public struct IDartInteractTypeBase : IFlatbufferObject
 	{
-		// Token: 0x1700C0A7 RID: 49319
-		// (get) Token: 0x0602CF62 RID: 184162 RVA: 0x0062C550 File Offset: 0x0062A750
+		// Token: 0x1700CA3E RID: 51774
+		// (get) Token: 0x0602F716 RID: 194326 RVA: 0x00678BFC File Offset: 0x00676DFC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602CF63 RID: 184163 RVA: 0x0062C55D File Offset: 0x0062A75D
+		// Token: 0x0602F717 RID: 194327 RVA: 0x00678C09 File Offset: 0x00676E09
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602CF64 RID: 184164 RVA: 0x0062C564 File Offset: 0x0062A764
+		// Token: 0x0602F718 RID: 194328 RVA: 0x00678C10 File Offset: 0x00676E10
 		public static IDartInteractTypeBase GetRootAsIDartInteractTypeBase(ByteBuffer _bb)
 		{
 			return IDartInteractTypeBase.GetRootAsIDartInteractTypeBase(_bb, default(IDartInteractTypeBase));
 		}
 
-		// Token: 0x0602CF65 RID: 184165 RVA: 0x0062C580 File Offset: 0x0062A780
+		// Token: 0x0602F719 RID: 194329 RVA: 0x00678C2C File Offset: 0x00676E2C
 		public static IDartInteractTypeBase GetRootAsIDartInteractTypeBase(ByteBuffer _bb, IDartInteractTypeBase obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602CF66 RID: 184166 RVA: 0x0062C59D File Offset: 0x0062A79D
+		// Token: 0x0602F71A RID: 194330 RVA: 0x00678C49 File Offset: 0x00676E49
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602CF67 RID: 184167 RVA: 0x0062C5AC File Offset: 0x0062A7AC
+		// Token: 0x0602F71B RID: 194331 RVA: 0x00678C58 File Offset: 0x00676E58
 		public IDartInteractTypeBase __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C0A8 RID: 49320
-		// (get) Token: 0x0602CF68 RID: 184168 RVA: 0x0062C5BC File Offset: 0x0062A7BC
+		// Token: 0x1700CA3F RID: 51775
+		// (get) Token: 0x0602F71C RID: 194332 RVA: 0x00678C68 File Offset: 0x00676E68
 		public EDartInteractType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602CF69 RID: 184169 RVA: 0x0062C5F8 File Offset: 0x0062A7F8
+		// Token: 0x0602F71D RID: 194333 RVA: 0x00678CA4 File Offset: 0x00676EA4
 		public static Offset<IDartInteractTypeBase> CreateIDartInteractTypeBase(FlatBufferBuilder builder, EDartInteractType Type = EDartInteractType.Machine)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IDartInteractTypeBase.EndIDartInteractTypeBase(builder);
 		}
 
-		// Token: 0x0602CF6A RID: 184170 RVA: 0x0062C60E File Offset: 0x0062A80E
+		// Token: 0x0602F71E RID: 194334 RVA: 0x00678CBA File Offset: 0x00676EBA
 		public static void StartIDartInteractTypeBase(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602CF6B RID: 184171 RVA: 0x0062C617 File Offset: 0x0062A817
+		// Token: 0x0602F71F RID: 194335 RVA: 0x00678CC3 File Offset: 0x00676EC3
 		public static void AddType(FlatBufferBuilder builder, EDartInteractType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602CF6C RID: 184172 RVA: 0x0062C622 File Offset: 0x0062A822
+		// Token: 0x0602F720 RID: 194336 RVA: 0x00678CCE File Offset: 0x00676ECE
 		public static Offset<IDartInteractTypeBase> EndIDartInteractTypeBase(FlatBufferBuilder builder)
 		{
 			return new Offset<IDartInteractTypeBase>(builder.EndTable());
 		}
 
-		// Token: 0x0602CF6D RID: 184173 RVA: 0x0062C630 File Offset: 0x0062A830
+		// Token: 0x0602F721 RID: 194337 RVA: 0x00678CDC File Offset: 0x00676EDC
 		public IDartInteractTypeBaseT UnPack()
 		{
 			IDartInteractTypeBaseT dartInteractTypeBaseT = new IDartInteractTypeBaseT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return dartInteractTypeBaseT;
 		}
 
-		// Token: 0x0602CF6E RID: 184174 RVA: 0x0062C64B File Offset: 0x0062A84B
+		// Token: 0x0602F722 RID: 194338 RVA: 0x00678CF7 File Offset: 0x00676EF7
 		public void UnPackTo(IDartInteractTypeBaseT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602CF6F RID: 184175 RVA: 0x0062C65C File Offset: 0x0062A85C
+		// Token: 0x0602F723 RID: 194339 RVA: 0x00678D08 File Offset: 0x00676F08
 		public static Offset<IDartInteractTypeBase> Pack(FlatBufferBuilder builder, IDartInteractTypeBaseT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IDartInteractTypeBase.CreateIDartInteractTypeBase(builder, _o.Type);
 		}
 
-		// Token: 0x04010B85 RID: 68485
+		// Token: 0x040119A1 RID: 72097
 		private Table __p;
 	}
 }

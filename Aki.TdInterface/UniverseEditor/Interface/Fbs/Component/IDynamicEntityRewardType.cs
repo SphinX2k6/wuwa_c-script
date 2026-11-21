@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020050DE RID: 20702
+	// Token: 0x02005643 RID: 22083
 	public struct IDynamicEntityRewardType : IFlatbufferObject
 	{
-		// Token: 0x170096B9 RID: 38585
-		// (get) Token: 0x06021535 RID: 136501 RVA: 0x004A0E53 File Offset: 0x0049F053
+		// Token: 0x17009EA6 RID: 40614
+		// (get) Token: 0x06023489 RID: 144521 RVA: 0x004DADDF File Offset: 0x004D8FDF
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021536 RID: 136502 RVA: 0x004A0E60 File Offset: 0x0049F060
+		// Token: 0x0602348A RID: 144522 RVA: 0x004DADEC File Offset: 0x004D8FEC
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06021537 RID: 136503 RVA: 0x004A0E68 File Offset: 0x0049F068
+		// Token: 0x0602348B RID: 144523 RVA: 0x004DADF4 File Offset: 0x004D8FF4
 		public static IDynamicEntityRewardType GetRootAsIDynamicEntityRewardType(ByteBuffer _bb)
 		{
 			return IDynamicEntityRewardType.GetRootAsIDynamicEntityRewardType(_bb, default(IDynamicEntityRewardType));
 		}
 
-		// Token: 0x06021538 RID: 136504 RVA: 0x004A0E84 File Offset: 0x0049F084
+		// Token: 0x0602348C RID: 144524 RVA: 0x004DAE10 File Offset: 0x004D9010
 		public static IDynamicEntityRewardType GetRootAsIDynamicEntityRewardType(ByteBuffer _bb, IDynamicEntityRewardType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06021539 RID: 136505 RVA: 0x004A0EA1 File Offset: 0x0049F0A1
+		// Token: 0x0602348D RID: 144525 RVA: 0x004DAE2D File Offset: 0x004D902D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602153A RID: 136506 RVA: 0x004A0EB0 File Offset: 0x0049F0B0
+		// Token: 0x0602348E RID: 144526 RVA: 0x004DAE3C File Offset: 0x004D903C
 		public IDynamicEntityRewardType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170096BA RID: 38586
-		// (get) Token: 0x0602153B RID: 136507 RVA: 0x004A0EC0 File Offset: 0x0049F0C0
+		// Token: 0x17009EA7 RID: 40615
+		// (get) Token: 0x0602348F RID: 144527 RVA: 0x004DAE4C File Offset: 0x004D904C
 		public EDynamicEntityRewardType Type
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602153C RID: 136508 RVA: 0x004A0EFC File Offset: 0x0049F0FC
+		// Token: 0x06023490 RID: 144528 RVA: 0x004DAE88 File Offset: 0x004D9088
 		public static Offset<IDynamicEntityRewardType> CreateIDynamicEntityRewardType(FlatBufferBuilder builder, EDynamicEntityRewardType Type = EDynamicEntityRewardType.Traffic)
 		{
 			builder.StartTable(1);
@@ -71,25 +71,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IDynamicEntityRewardType.EndIDynamicEntityRewardType(builder);
 		}
 
-		// Token: 0x0602153D RID: 136509 RVA: 0x004A0F12 File Offset: 0x0049F112
+		// Token: 0x06023491 RID: 144529 RVA: 0x004DAE9E File Offset: 0x004D909E
 		public static void StartIDynamicEntityRewardType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602153E RID: 136510 RVA: 0x004A0F1B File Offset: 0x0049F11B
+		// Token: 0x06023492 RID: 144530 RVA: 0x004DAEA7 File Offset: 0x004D90A7
 		public static void AddType(FlatBufferBuilder builder, EDynamicEntityRewardType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602153F RID: 136511 RVA: 0x004A0F26 File Offset: 0x0049F126
+		// Token: 0x06023493 RID: 144531 RVA: 0x004DAEB2 File Offset: 0x004D90B2
 		public static Offset<IDynamicEntityRewardType> EndIDynamicEntityRewardType(FlatBufferBuilder builder)
 		{
 			return new Offset<IDynamicEntityRewardType>(builder.EndTable());
 		}
 
-		// Token: 0x06021540 RID: 136512 RVA: 0x004A0F34 File Offset: 0x0049F134
+		// Token: 0x06023494 RID: 144532 RVA: 0x004DAEC0 File Offset: 0x004D90C0
 		public IDynamicEntityRewardTypeT UnPack()
 		{
 			IDynamicEntityRewardTypeT dynamicEntityRewardTypeT = new IDynamicEntityRewardTypeT();
@@ -97,13 +97,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return dynamicEntityRewardTypeT;
 		}
 
-		// Token: 0x06021541 RID: 136513 RVA: 0x004A0F4F File Offset: 0x0049F14F
+		// Token: 0x06023495 RID: 144533 RVA: 0x004DAEDB File Offset: 0x004D90DB
 		public void UnPackTo(IDynamicEntityRewardTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06021542 RID: 136514 RVA: 0x004A0F60 File Offset: 0x0049F160
+		// Token: 0x06023496 RID: 144534 RVA: 0x004DAEEC File Offset: 0x004D90EC
 		public static Offset<IDynamicEntityRewardType> Pack(FlatBufferBuilder builder, IDynamicEntityRewardTypeT _o)
 		{
 			if (_o == null)
@@ -113,7 +113,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IDynamicEntityRewardType.CreateIDynamicEntityRewardType(builder, _o.Type);
 		}
 
-		// Token: 0x0400E12E RID: 57646
+		// Token: 0x0400ED2B RID: 60715
 		private Table __p;
 	}
 }

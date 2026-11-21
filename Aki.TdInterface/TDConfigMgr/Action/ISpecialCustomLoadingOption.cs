@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E9B RID: 7835
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020020D2 RID: 8402
 	public class ISpecialCustomLoadingOption
 	{
-		// Token: 0x0600A79E RID: 42910 RVA: 0x0017AC18 File Offset: 0x00178E18
+		// Token: 0x0600B266 RID: 45670 RVA: 0x00190AFC File Offset: 0x0018ECFC
 		private ISpecialCustomLoadingOption_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A79F RID: 42911 RVA: 0x0017AC50 File Offset: 0x00178E50
+		// Token: 0x0600B267 RID: 45671 RVA: 0x00190B34 File Offset: 0x0018ED34
 		public static ISpecialCustomLoadingOption Create([Nullable(2)] ISpecialCustomLoadingOption instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A7A0 RID: 42912 RVA: 0x0017AC63 File Offset: 0x00178E63
+		// Token: 0x0600B268 RID: 45672 RVA: 0x00190B47 File Offset: 0x0018ED47
 		public static ISpecialCustomLoadingOption CreateFromSetValue([Nullable(2)] ISpecialCustomLoadingOption_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A7A1 RID: 42913 RVA: 0x0017AC76 File Offset: 0x00178E76
+		// Token: 0x0600B269 RID: 45673 RVA: 0x00190B5A File Offset: 0x0018ED5A
 		public ISpecialCustomLoadingOption_SetValue ToSetValue()
 		{
 			return new ISpecialCustomLoadingOption_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700333E RID: 13118
-		// (get) Token: 0x0600A7A2 RID: 42914 RVA: 0x0017AC89 File Offset: 0x00178E89
-		// (set) Token: 0x0600A7A3 RID: 42915 RVA: 0x0017ACB4 File Offset: 0x00178EB4
+		// Token: 0x17003607 RID: 13831
+		// (get) Token: 0x0600B26A RID: 45674 RVA: 0x00190B6D File Offset: 0x0018ED6D
+		// (set) Token: 0x0600B26B RID: 45675 RVA: 0x00190B98 File Offset: 0x0018ED98
 		public virtual ESpecialCustomLoadingType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040063F5 RID: 25589
+		// Token: 0x040069E0 RID: 27104
 		[Nullable(2)]
 		protected ISpecialCustomLoadingOption FbInstance;
 
-		// Token: 0x040063F6 RID: 25590
+		// Token: 0x040069E1 RID: 27105
 		[Nullable(2)]
 		protected ISpecialCustomLoadingOption_SetValue PocoInterface;
 	}

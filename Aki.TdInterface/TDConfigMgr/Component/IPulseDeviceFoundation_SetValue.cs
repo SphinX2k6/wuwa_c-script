@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000635 RID: 1589
+	// Token: 0x020006D2 RID: 1746
 	public class IPulseDeviceFoundation_SetValue
 	{
-		// Token: 0x040017A0 RID: 6048
+		// Token: 0x04001992 RID: 6546
 		public EItemFoundation Type;
 	}
 }

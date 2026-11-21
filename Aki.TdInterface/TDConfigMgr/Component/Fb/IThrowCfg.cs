@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B4F RID: 2895
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000C1D RID: 3101
 	public class IThrowCfg
 	{
-		// Token: 0x060042B4 RID: 17076 RVA: 0x000AA4C6 File Offset: 0x000A86C6
+		// Token: 0x0600470D RID: 18189 RVA: 0x000B458A File Offset: 0x000B278A
 		public static IThrowCfg Create(IThrowCfg? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170011D3 RID: 4563
-		// (get) Token: 0x060042B5 RID: 17077 RVA: 0x000AA4E5 File Offset: 0x000A86E5
+		// Token: 0x170012CE RID: 4814
+		// (get) Token: 0x0600470E RID: 18190 RVA: 0x000B45A9 File Offset: 0x000B27A9
 		public virtual IThrowMotion MotionConfig
 		{
 			get
@@ -38,13 +35,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002590 RID: 9616
+		// Token: 0x040027D8 RID: 10200
 		private IThrowCfg Instance;
 
-		// Token: 0x04002591 RID: 9617
+		// Token: 0x040027D9 RID: 10201
 		private IThrowMotion _MotionConfigCache;
 
-		// Token: 0x04002592 RID: 9618
+		// Token: 0x040027DA RID: 10202
 		private bool _MotionConfigInited;
 	}
 }

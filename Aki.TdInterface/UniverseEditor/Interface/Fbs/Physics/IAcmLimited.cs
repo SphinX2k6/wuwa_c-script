@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Physics
 {
-	// Token: 0x0200433F RID: 17215
+	// Token: 0x020047A1 RID: 18337
 	public struct IAcmLimited : IFlatbufferObject
 	{
-		// Token: 0x1700798D RID: 31117
-		// (get) Token: 0x06019859 RID: 104537 RVA: 0x003A7979 File Offset: 0x003A5B79
+		// Token: 0x17007FC2 RID: 32706
+		// (get) Token: 0x0601AFE7 RID: 110567 RVA: 0x003D33A1 File Offset: 0x003D15A1
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Physics
 			}
 		}
 
-		// Token: 0x0601985A RID: 104538 RVA: 0x003A7986 File Offset: 0x003A5B86
+		// Token: 0x0601AFE8 RID: 110568 RVA: 0x003D33AE File Offset: 0x003D15AE
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601985B RID: 104539 RVA: 0x003A7990 File Offset: 0x003A5B90
+		// Token: 0x0601AFE9 RID: 110569 RVA: 0x003D33B8 File Offset: 0x003D15B8
 		public static IAcmLimited GetRootAsIAcmLimited(ByteBuffer _bb)
 		{
 			return IAcmLimited.GetRootAsIAcmLimited(_bb, default(IAcmLimited));
 		}
 
-		// Token: 0x0601985C RID: 104540 RVA: 0x003A79AC File Offset: 0x003A5BAC
+		// Token: 0x0601AFEA RID: 110570 RVA: 0x003D33D4 File Offset: 0x003D15D4
 		public static IAcmLimited GetRootAsIAcmLimited(ByteBuffer _bb, IAcmLimited obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601985D RID: 104541 RVA: 0x003A79C9 File Offset: 0x003A5BC9
+		// Token: 0x0601AFEB RID: 110571 RVA: 0x003D33F1 File Offset: 0x003D15F1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601985E RID: 104542 RVA: 0x003A79D8 File Offset: 0x003A5BD8
+		// Token: 0x0601AFEC RID: 110572 RVA: 0x003D3400 File Offset: 0x003D1600
 		public IAcmLimited __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700798E RID: 31118
-		// (get) Token: 0x0601985F RID: 104543 RVA: 0x003A79E8 File Offset: 0x003A5BE8
+		// Token: 0x17007FC3 RID: 32707
+		// (get) Token: 0x0601AFED RID: 110573 RVA: 0x003D3410 File Offset: 0x003D1610
 		public EAngularConstraintMotion Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Physics
 			}
 		}
 
-		// Token: 0x1700798F RID: 31119
-		// (get) Token: 0x06019860 RID: 104544 RVA: 0x003A7A24 File Offset: 0x003A5C24
+		// Token: 0x17007FC4 RID: 32708
+		// (get) Token: 0x0601AFEE RID: 110574 RVA: 0x003D344C File Offset: 0x003D164C
 		public int LimitValue
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Physics
 			}
 		}
 
-		// Token: 0x06019861 RID: 104545 RVA: 0x003A7A60 File Offset: 0x003A5C60
+		// Token: 0x0601AFEF RID: 110575 RVA: 0x003D3488 File Offset: 0x003D1688
 		public static Offset<IAcmLimited> CreateIAcmLimited(FlatBufferBuilder builder, EAngularConstraintMotion Type = EAngularConstraintMotion.ACM_Free, int LimitValue = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Physics
 			return IAcmLimited.EndIAcmLimited(builder);
 		}
 
-		// Token: 0x06019862 RID: 104546 RVA: 0x003A7A7D File Offset: 0x003A5C7D
+		// Token: 0x0601AFF0 RID: 110576 RVA: 0x003D34A5 File Offset: 0x003D16A5
 		public static void StartIAcmLimited(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06019863 RID: 104547 RVA: 0x003A7A86 File Offset: 0x003A5C86
+		// Token: 0x0601AFF1 RID: 110577 RVA: 0x003D34AE File Offset: 0x003D16AE
 		public static void AddType(FlatBufferBuilder builder, EAngularConstraintMotion type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06019864 RID: 104548 RVA: 0x003A7A91 File Offset: 0x003A5C91
+		// Token: 0x0601AFF2 RID: 110578 RVA: 0x003D34B9 File Offset: 0x003D16B9
 		public static void AddLimitValue(FlatBufferBuilder builder, int limitValue)
 		{
 			builder.AddInt(1, limitValue, 0);
 		}
 
-		// Token: 0x06019865 RID: 104549 RVA: 0x003A7A9C File Offset: 0x003A5C9C
+		// Token: 0x0601AFF3 RID: 110579 RVA: 0x003D34C4 File Offset: 0x003D16C4
 		public static Offset<IAcmLimited> EndIAcmLimited(FlatBufferBuilder builder)
 		{
 			return new Offset<IAcmLimited>(builder.EndTable());
 		}
 
-		// Token: 0x06019866 RID: 104550 RVA: 0x003A7AAC File Offset: 0x003A5CAC
+		// Token: 0x0601AFF4 RID: 110580 RVA: 0x003D34D4 File Offset: 0x003D16D4
 		public IAcmLimitedT UnPack()
 		{
 			IAcmLimitedT acmLimitedT = new IAcmLimitedT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Physics
 			return acmLimitedT;
 		}
 
-		// Token: 0x06019867 RID: 104551 RVA: 0x003A7AC7 File Offset: 0x003A5CC7
+		// Token: 0x0601AFF5 RID: 110581 RVA: 0x003D34EF File Offset: 0x003D16EF
 		public void UnPackTo(IAcmLimitedT _o)
 		{
 			_o.Type = this.Type;
 			_o.LimitValue = this.LimitValue;
 		}
 
-		// Token: 0x06019868 RID: 104552 RVA: 0x003A7AE4 File Offset: 0x003A5CE4
+		// Token: 0x0601AFF6 RID: 110582 RVA: 0x003D350C File Offset: 0x003D170C
 		public static Offset<IAcmLimited> Pack(FlatBufferBuilder builder, IAcmLimitedT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Physics
 			return IAcmLimited.CreateIAcmLimited(builder, _o.Type, _o.LimitValue);
 		}
 
-		// Token: 0x0400C119 RID: 49433
+		// Token: 0x0400CB37 RID: 52023
 		private Table __p;
 	}
 }

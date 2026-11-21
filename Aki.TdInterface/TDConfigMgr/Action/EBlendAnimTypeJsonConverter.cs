@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022C2 RID: 8898
+	// Token: 0x02002531 RID: 9521
 	public class EBlendAnimTypeJsonConverter : JsonConverter<EBlendAnimType>
 	{
-		// Token: 0x0600C2E9 RID: 49897 RVA: 0x001C7A58 File Offset: 0x001C5C58
+		// Token: 0x0600CEB8 RID: 52920 RVA: 0x001DF860 File Offset: 0x001DDA60
 		public override EBlendAnimType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EBlendAnimTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C2EA RID: 49898 RVA: 0x001C7A7C File Offset: 0x001C5C7C
+		// Token: 0x0600CEB9 RID: 52921 RVA: 0x001DF884 File Offset: 0x001DDA84
 		public override void Write(Utf8JsonWriter writer, EBlendAnimType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

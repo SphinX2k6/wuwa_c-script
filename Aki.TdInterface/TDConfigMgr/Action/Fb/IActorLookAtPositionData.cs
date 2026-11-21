@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025A0 RID: 9632
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200284F RID: 10319
 	public class IActorLookAtPositionData : IActorLookAtLockable
 	{
-		// Token: 0x0600D8C6 RID: 55494 RVA: 0x00205B83 File Offset: 0x00203D83
+		// Token: 0x0600E640 RID: 58944 RVA: 0x00221857 File Offset: 0x0021FA57
 		public static IActorLookAtPositionData Create(IActorLookAtPositionData? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003F48 RID: 16200
-		// (get) Token: 0x0600D8C7 RID: 55495 RVA: 0x00205BA2 File Offset: 0x00203DA2
+		// Token: 0x17004250 RID: 16976
+		// (get) Token: 0x0600E641 RID: 58945 RVA: 0x00221876 File Offset: 0x0021FA76
 		public override EActorLookAtMode Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F49 RID: 16201
-		// (get) Token: 0x0600D8C8 RID: 55496 RVA: 0x00205BB0 File Offset: 0x00203DB0
+		// Token: 0x17004251 RID: 16977
+		// (get) Token: 0x0600E642 RID: 58946 RVA: 0x00221884 File Offset: 0x0021FA84
 		public override bool? Lock
 		{
 			get
@@ -47,8 +45,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F4A RID: 16202
-		// (get) Token: 0x0600D8C9 RID: 55497 RVA: 0x00205BE6 File Offset: 0x00203DE6
+		// Token: 0x17004252 RID: 16978
+		// (get) Token: 0x0600E643 RID: 58947 RVA: 0x002218BA File Offset: 0x0021FABA
 		public virtual VectorInfo Pos
 		{
 			get
@@ -63,14 +61,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007876 RID: 30838
+		// Token: 0x04007EDD RID: 32477
 		private IActorLookAtPositionData Instance;
 
-		// Token: 0x04007877 RID: 30839
+		// Token: 0x04007EDE RID: 32478
 		[Nullable(2)]
 		private VectorInfo _PosCache;
 
-		// Token: 0x04007878 RID: 30840
+		// Token: 0x04007EDF RID: 32479
 		private bool _PosInited;
 	}
 }

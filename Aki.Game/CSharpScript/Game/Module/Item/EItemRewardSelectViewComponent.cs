@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Item
 {
-	// Token: 0x0200581B RID: 22555
+	// Token: 0x020047F2 RID: 18418
 	internal enum EItemRewardSelectViewComponent
 	{
-		// Token: 0x0401DF86 RID: 122758
+		// Token: 0x04018A1D RID: 100893
 		BgPrefabRoot,
-		// Token: 0x0401DF87 RID: 122759
+		// Token: 0x04018A1E RID: 100894
 		SelectContent
 	}
 }

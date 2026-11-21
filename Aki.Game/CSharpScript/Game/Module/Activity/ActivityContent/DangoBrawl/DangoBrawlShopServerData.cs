@@ -5,13 +5,13 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067C1 RID: 26561
+	// Token: 0x02005711 RID: 22289
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class DangoBrawlShopServerData
 	{
-		// Token: 0x170096B4 RID: 38580
-		// (get) Token: 0x06042270 RID: 270960 RVA: 0x0100ABD8 File Offset: 0x01008DD8
+		// Token: 0x170069F5 RID: 27125
+		// (get) Token: 0x06036DC6 RID: 224710 RVA: 0x00F4BFBC File Offset: 0x00F4A1BC
 		public DangoBrawlShopInfo MyShopInfo
 		{
 			get
@@ -20,14 +20,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x06042271 RID: 270961 RVA: 0x0100ABE0 File Offset: 0x01008DE0
+		// Token: 0x06036DC7 RID: 224711 RVA: 0x00F4BFC4 File Offset: 0x00F4A1C4
 		[NullableContext(1)]
 		public void Init(DangoBrawlShopInfo val)
 		{
 			this.UpdateShopInfo(val);
 		}
 
-		// Token: 0x06042272 RID: 270962 RVA: 0x0100ABEC File Offset: 0x01008DEC
+		// Token: 0x06036DC8 RID: 224712 RVA: 0x00F4BFD0 File Offset: 0x00F4A1D0
 		[NullableContext(1)]
 		public void UpdateShopInfo(DangoBrawlShopInfo val)
 		{
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x06042273 RID: 270963 RVA: 0x0100AC5C File Offset: 0x01008E5C
+		// Token: 0x06036DC9 RID: 224713 RVA: 0x00F4C040 File Offset: 0x00F4A240
 		public DangoBrawlShopSlotInfo GetSlotInfo(int uid)
 		{
 			DangoBrawlShopSlotInfo result;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return result;
 		}
 
-		// Token: 0x06042274 RID: 270964 RVA: 0x0100AC7C File Offset: 0x01008E7C
+		// Token: 0x06036DCA RID: 224714 RVA: 0x00F4C060 File Offset: 0x00F4A260
 		public int GetSlotIndex(int uid)
 		{
 			DangoBrawlShopSlotInfo item;
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return this.ShopInfo.Slots.IndexOf(item);
 		}
 
-		// Token: 0x06042275 RID: 270965 RVA: 0x0100ACC4 File Offset: 0x01008EC4
+		// Token: 0x06036DCB RID: 224715 RVA: 0x00F4C0A8 File Offset: 0x00F4A2A8
 		public bool SetSlotLocked(int uid, bool locked)
 		{
 			DangoBrawlShopSlotInfo dangoBrawlShopSlotInfo;
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return true;
 		}
 
-		// Token: 0x06042276 RID: 270966 RVA: 0x0100ACEC File Offset: 0x01008EEC
+		// Token: 0x06036DCC RID: 224716 RVA: 0x00F4C0D0 File Offset: 0x00F4A2D0
 		public int RemoveSlot(int uid)
 		{
 			DangoBrawlShopSlotInfo dangoBrawlShopSlotInfo;
@@ -92,10 +92,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return slotIndex;
 		}
 
-		// Token: 0x0402289F RID: 141471
+		// Token: 0x0401D0FC RID: 119036
 		private DangoBrawlShopInfo ShopInfo;
 
-		// Token: 0x040228A0 RID: 141472
+		// Token: 0x0401D0FD RID: 119037
 		[Nullable(1)]
 		private readonly Dictionary<int, DangoBrawlShopSlotInfo> SlotMap = new Dictionary<int, DangoBrawlShopSlotInfo>();
 	}

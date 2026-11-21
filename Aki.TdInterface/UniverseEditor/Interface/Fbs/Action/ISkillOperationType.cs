@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007130 RID: 28976
+	// Token: 0x020078FC RID: 30972
 	public struct ISkillOperationType : IFlatbufferObject
 	{
-		// Token: 0x1700D75B RID: 55131
-		// (get) Token: 0x060335F3 RID: 210419 RVA: 0x006EC952 File Offset: 0x006EAB52
+		// Token: 0x1700E33E RID: 58174
+		// (get) Token: 0x06036895 RID: 223381 RVA: 0x0074CF5E File Offset: 0x0074B15E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060335F4 RID: 210420 RVA: 0x006EC95F File Offset: 0x006EAB5F
+		// Token: 0x06036896 RID: 223382 RVA: 0x0074CF6B File Offset: 0x0074B16B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060335F5 RID: 210421 RVA: 0x006EC968 File Offset: 0x006EAB68
+		// Token: 0x06036897 RID: 223383 RVA: 0x0074CF74 File Offset: 0x0074B174
 		public static ISkillOperationType GetRootAsISkillOperationType(ByteBuffer _bb)
 		{
 			return ISkillOperationType.GetRootAsISkillOperationType(_bb, default(ISkillOperationType));
 		}
 
-		// Token: 0x060335F6 RID: 210422 RVA: 0x006EC984 File Offset: 0x006EAB84
+		// Token: 0x06036898 RID: 223384 RVA: 0x0074CF90 File Offset: 0x0074B190
 		public static ISkillOperationType GetRootAsISkillOperationType(ByteBuffer _bb, ISkillOperationType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060335F7 RID: 210423 RVA: 0x006EC9A1 File Offset: 0x006EABA1
+		// Token: 0x06036899 RID: 223385 RVA: 0x0074CFAD File Offset: 0x0074B1AD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060335F8 RID: 210424 RVA: 0x006EC9B0 File Offset: 0x006EABB0
+		// Token: 0x0603689A RID: 223386 RVA: 0x0074CFBC File Offset: 0x0074B1BC
 		public ISkillOperationType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D75C RID: 55132
-		// (get) Token: 0x060335F9 RID: 210425 RVA: 0x006EC9C0 File Offset: 0x006EABC0
+		// Token: 0x1700E33F RID: 58175
+		// (get) Token: 0x0603689B RID: 223387 RVA: 0x0074CFCC File Offset: 0x0074B1CC
 		public ESkillOperationType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060335FA RID: 210426 RVA: 0x006EC9FC File Offset: 0x006EABFC
+		// Token: 0x0603689C RID: 223388 RVA: 0x0074D008 File Offset: 0x0074B208
 		public static Offset<ISkillOperationType> CreateISkillOperationType(FlatBufferBuilder builder, ESkillOperationType Type = ESkillOperationType.Enable)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISkillOperationType.EndISkillOperationType(builder);
 		}
 
-		// Token: 0x060335FB RID: 210427 RVA: 0x006ECA12 File Offset: 0x006EAC12
+		// Token: 0x0603689D RID: 223389 RVA: 0x0074D01E File Offset: 0x0074B21E
 		public static void StartISkillOperationType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060335FC RID: 210428 RVA: 0x006ECA1B File Offset: 0x006EAC1B
+		// Token: 0x0603689E RID: 223390 RVA: 0x0074D027 File Offset: 0x0074B227
 		public static void AddType(FlatBufferBuilder builder, ESkillOperationType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060335FD RID: 210429 RVA: 0x006ECA26 File Offset: 0x006EAC26
+		// Token: 0x0603689F RID: 223391 RVA: 0x0074D032 File Offset: 0x0074B232
 		public static Offset<ISkillOperationType> EndISkillOperationType(FlatBufferBuilder builder)
 		{
 			return new Offset<ISkillOperationType>(builder.EndTable());
 		}
 
-		// Token: 0x060335FE RID: 210430 RVA: 0x006ECA34 File Offset: 0x006EAC34
+		// Token: 0x060368A0 RID: 223392 RVA: 0x0074D040 File Offset: 0x0074B240
 		public ISkillOperationTypeT UnPack()
 		{
 			ISkillOperationTypeT skillOperationTypeT = new ISkillOperationTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return skillOperationTypeT;
 		}
 
-		// Token: 0x060335FF RID: 210431 RVA: 0x006ECA4F File Offset: 0x006EAC4F
+		// Token: 0x060368A1 RID: 223393 RVA: 0x0074D05B File Offset: 0x0074B25B
 		public void UnPackTo(ISkillOperationTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06033600 RID: 210432 RVA: 0x006ECA60 File Offset: 0x006EAC60
+		// Token: 0x060368A2 RID: 223394 RVA: 0x0074D06C File Offset: 0x0074B26C
 		public static Offset<ISkillOperationType> Pack(FlatBufferBuilder builder, ISkillOperationTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISkillOperationType.CreateISkillOperationType(builder, _o.Type);
 		}
 
-		// Token: 0x04011BC9 RID: 72649
+		// Token: 0x04012BB7 RID: 76727
 		private Table __p;
 	}
 }

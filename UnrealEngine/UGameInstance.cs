@@ -1,77 +1,37 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 using UnrealEngine.Interface;
 using UnrealEngine.Service;
 using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000BFA RID: 3066
+	// Token: 0x02000213 RID: 531
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.GameInstance")]
 	[UnrealStructLayout(448, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 448)]
 	public class UGameInstance : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06009752 RID: 38738 RVA: 0x000D7B69 File Offset: 0x000D5D69
+		// Token: 0x06002212 RID: 8722 RVA: 0x00031DB1 File Offset: 0x0002FFB1
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UGameInstance._ClassPtr;
 		}
 
-		// Token: 0x06009753 RID: 38739 RVA: 0x000D7B78 File Offset: 0x000D5D78
+		// Token: 0x06002213 RID: 8723 RVA: 0x00031DC0 File Offset: 0x0002FFC0
 		public UGameInstance() : this(BuiltinUtils.AllocNativeUObject(UGameInstance.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06009754 RID: 38740 RVA: 0x000D7BA0 File Offset: 0x000D5DA0
+		// Token: 0x06002214 RID: 8724 RVA: 0x00031DE8 File Offset: 0x0002FFE8
 		public UGameInstance(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UGameInstance.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17002445 RID: 9285
-		// (get) Token: 0x06009755 RID: 38741 RVA: 0x000D7BD4 File Offset: 0x000D5DD4
-		// (set) Token: 0x06009756 RID: 38742 RVA: 0x000D7C0D File Offset: 0x000D5E0D
-		public TArray<ULocalPlayer> LocalPlayers
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<ULocalPlayer> result;
-				if ((result = this._LocalPlayers) == null)
-				{
-					result = (this._LocalPlayers = new TArray<ULocalPlayer>(base.NativePtr + (IntPtr)UGameInstance.__PropertyOffset_LocalPlayers, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.LocalPlayers.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17002446 RID: 9286
-		// (get) Token: 0x06009757 RID: 38743 RVA: 0x000D7C1B File Offset: 0x000D5E1B
-		// (set) Token: 0x06009758 RID: 38744 RVA: 0x000D7C2F File Offset: 0x000D5E2F
-		[Nullable(2)]
-		public unsafe UOnlineSession OnlineSession
-		{
-			[NullableContext(2)]
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<UOnlineSession>(base.NativePtr / (IntPtr)sizeof(void*) + UGameInstance.__PropertyOffset_OnlineSession);
-			}
-			[NullableContext(2)]
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + UGameInstance.__PropertyOffset_OnlineSession, value);
-			}
-		}
-
-		// Token: 0x17002447 RID: 9287
-		// (get) Token: 0x06009759 RID: 38745 RVA: 0x000D7C44 File Offset: 0x000D5E44
-		// (set) Token: 0x0600975A RID: 38746 RVA: 0x000D7C7D File Offset: 0x000D5E7D
+		// Token: 0x170004CF RID: 1231
+		// (get) Token: 0x06002215 RID: 8725 RVA: 0x00031E1C File Offset: 0x0003001C
+		// (set) Token: 0x06002216 RID: 8726 RVA: 0x00031E55 File Offset: 0x00030055
 		public TArray<UObject> ReferencedObjects
 		{
 			get
@@ -90,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002448 RID: 9288
-		// (get) Token: 0x0600975B RID: 38747 RVA: 0x000D7C8C File Offset: 0x000D5E8C
-		// (set) Token: 0x0600975C RID: 38748 RVA: 0x000D7CC5 File Offset: 0x000D5EC5
+		// Token: 0x170004D0 RID: 1232
+		// (get) Token: 0x06002217 RID: 8727 RVA: 0x00031E64 File Offset: 0x00030064
+		// (set) Token: 0x06002218 RID: 8728 RVA: 0x00031E9D File Offset: 0x0003009D
 		public FOnPawnControllerChanged OnPawnControllerChangedDelegates
 		{
 			get
@@ -111,106 +71,70 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600975D RID: 38749 RVA: 0x000D7CE6 File Offset: 0x000D5EE6
+		// Token: 0x06002219 RID: 8729 RVA: 0x00031EBE File Offset: 0x000300BE
 		public virtual void ReceiveShutdown()
 		{
 			UGameInstance.__ReceiveShutdown_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600975E RID: 38750 RVA: 0x000D7CF3 File Offset: 0x000D5EF3
+		// Token: 0x0600221A RID: 8730 RVA: 0x00031ECB File Offset: 0x000300CB
 		public virtual void ReceiveInit()
 		{
 			UGameInstance.__ReceiveInit_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600975F RID: 38751 RVA: 0x000D7D00 File Offset: 0x000D5F00
-		public virtual void HandleTravelError(ETravelFailure FailureType)
-		{
-			UGameInstance.__HandleTravelError_Internal(base.NativePtr, FailureType);
-		}
-
-		// Token: 0x06009760 RID: 38752 RVA: 0x000D7D13 File Offset: 0x000D5F13
-		public virtual void HandleNetworkError(ENetworkFailure FailureType, bool bIsServer)
-		{
-			UGameInstance.__HandleNetworkError_Internal(base.NativePtr, FailureType, bIsServer);
-		}
-
-		// Token: 0x06009761 RID: 38753 RVA: 0x000D7D27 File Offset: 0x000D5F27
+		// Token: 0x0600221B RID: 8731 RVA: 0x00031ED8 File Offset: 0x000300D8
 		public void DebugRemovePlayer(int ControllerId)
 		{
 			UGameInstance.__DebugRemovePlayer_Internal(base.NativePtr, ControllerId);
 		}
 
-		// Token: 0x06009762 RID: 38754 RVA: 0x000D7D35 File Offset: 0x000D5F35
+		// Token: 0x0600221C RID: 8732 RVA: 0x00031EE6 File Offset: 0x000300E6
 		public void DebugCreatePlayer(int ControllerId)
 		{
 			UGameInstance.__DebugCreatePlayer_Internal(base.NativePtr, ControllerId);
 		}
 
-		// Token: 0x06009763 RID: 38755
+		// Token: 0x0600221D RID: 8733
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ReceiveShutdown_Internal(IntPtr @this);
 
-		// Token: 0x06009764 RID: 38756
+		// Token: 0x0600221E RID: 8734
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ReceiveInit_Internal(IntPtr @this);
 
-		// Token: 0x06009765 RID: 38757
-		[NullableContext(0)]
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __HandleTravelError_Internal(IntPtr @this, TEnumAsByte<ETravelFailure> FailureType);
-
-		// Token: 0x06009766 RID: 38758
-		[NullableContext(0)]
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __HandleNetworkError_Internal(IntPtr @this, TEnumAsByte<ENetworkFailure> FailureType, bool bIsServer);
-
-		// Token: 0x06009767 RID: 38759
+		// Token: 0x0600221F RID: 8735
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __DebugRemovePlayer_Internal(IntPtr @this, int ControllerId);
 
-		// Token: 0x06009768 RID: 38760
+		// Token: 0x06002220 RID: 8736
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __DebugCreatePlayer_Internal(IntPtr @this, int ControllerId);
 
-		// Token: 0x06009769 RID: 38761 RVA: 0x000D7D43 File Offset: 0x000D5F43
+		// Token: 0x06002221 RID: 8737 RVA: 0x00031EF4 File Offset: 0x000300F4
 		static UGameInstance()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.GameInstance");
 		}
 
-		// Token: 0x0600976A RID: 38762 RVA: 0x000D7D51 File Offset: 0x000D5F51
+		// Token: 0x06002222 RID: 8738 RVA: 0x00031F02 File Offset: 0x00030102
 		protected UGameInstance(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040054CA RID: 21706
+		// Token: 0x04000D54 RID: 3412
 		public new const string __ObjectPath = "/Script/Engine.GameInstance";
 
-		// Token: 0x040054CB RID: 21707
+		// Token: 0x04000D55 RID: 3413
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040054CC RID: 21708
+		// Token: 0x04000D56 RID: 3414
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040054CD RID: 21709
-		internal static int __PropertyOffset_LocalPlayers;
-
-		// Token: 0x040054CE RID: 21710
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<ULocalPlayer> _LocalPlayers;
-
-		// Token: 0x040054CF RID: 21711
-		internal static int __PropertyOffset_OnlineSession;
-
-		// Token: 0x040054D0 RID: 21712
+		// Token: 0x04000D57 RID: 3415
 		internal static int __PropertyOffset_ReferencedObjects;
 
-		// Token: 0x040054D1 RID: 21713
+		// Token: 0x04000D58 RID: 3416
 		[Nullable(new byte[]
 		{
 			2,
@@ -218,37 +142,11 @@ namespace UnrealEngine
 		})]
 		private TArray<UObject> _ReferencedObjects;
 
-		// Token: 0x040054D2 RID: 21714
+		// Token: 0x04000D59 RID: 3417
 		internal static int __PropertyOffset_OnPawnControllerChangedDelegates;
 
-		// Token: 0x040054D3 RID: 21715
+		// Token: 0x04000D5A RID: 3418
 		[Nullable(2)]
 		private FOnPawnControllerChanged _OnPawnControllerChangedDelegates;
-
-		// Token: 0x02002CFC RID: 11516
-		[NullableContext(0)]
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 1)]
-		protected ref struct __HandleTravelError_FunctionParams
-		{
-			// Token: 0x040166B5 RID: 91829
-			[FieldOffset(0)]
-			public TEnumAsByte<ETravelFailure> FailureType;
-		}
-
-		// Token: 0x02002CFD RID: 11517
-		[NullableContext(0)]
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 2)]
-		protected ref struct __HandleNetworkError_FunctionParams
-		{
-			// Token: 0x040166B6 RID: 91830
-			[FieldOffset(0)]
-			public TEnumAsByte<ENetworkFailure> FailureType;
-
-			// Token: 0x040166B7 RID: 91831
-			[FieldOffset(1)]
-			public bool bIsServer;
-		}
 	}
 }

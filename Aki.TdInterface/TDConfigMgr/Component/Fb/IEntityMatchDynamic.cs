@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D39 RID: 3385
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E33 RID: 3635
 	public class IEntityMatchDynamic : IEntityMatchConfig
 	{
-		// Token: 0x06004D36 RID: 19766 RVA: 0x000C021A File Offset: 0x000BE41A
+		// Token: 0x06005252 RID: 21074 RVA: 0x000CB95E File Offset: 0x000C9B5E
 		public static IEntityMatchDynamic Create(IEntityMatchDynamic? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001881 RID: 6273
-		// (get) Token: 0x06004D37 RID: 19767 RVA: 0x000C0239 File Offset: 0x000BE439
+		// Token: 0x170019E7 RID: 6631
+		// (get) Token: 0x06005253 RID: 21075 RVA: 0x000CB97D File Offset: 0x000C9B7D
 		public override EEntityMatchType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001882 RID: 6274
-		// (get) Token: 0x06004D38 RID: 19768 RVA: 0x000C0248 File Offset: 0x000BE448
+		// Token: 0x170019E8 RID: 6632
+		// (get) Token: 0x06005254 RID: 21076 RVA: 0x000CB98C File Offset: 0x000C9B8C
 		public virtual List<IDynamicEntityMatch> MatchEntity
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002C42 RID: 11330
+		// Token: 0x04002F02 RID: 12034
 		private IEntityMatchDynamic Instance;
 
-		// Token: 0x04002C43 RID: 11331
+		// Token: 0x04002F03 RID: 12035
 		private List<IDynamicEntityMatch> _MatchEntityCache;
 
-		// Token: 0x04002C44 RID: 11332
+		// Token: 0x04002F04 RID: 12036
 		private bool _MatchEntityInited;
 	}
 }

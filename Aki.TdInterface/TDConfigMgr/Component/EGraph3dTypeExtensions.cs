@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000954 RID: 2388
+	// Token: 0x02000A07 RID: 2567
 	public static class EGraph3dTypeExtensions
 	{
-		// Token: 0x060035AB RID: 13739 RVA: 0x0008BEF4 File Offset: 0x0008A0F4
+		// Token: 0x06003932 RID: 14642 RVA: 0x00093E48 File Offset: 0x00092048
 		public static string ToEnumString(this EGraph3dType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060035AC RID: 13740 RVA: 0x0008BF1C File Offset: 0x0008A11C
+		// Token: 0x06003933 RID: 14643 RVA: 0x00093E70 File Offset: 0x00092070
 		public static EGraph3dType FromString(string name)
 		{
 			EGraph3dType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060035AD RID: 13741 RVA: 0x0008BF45 File Offset: 0x0008A145
+		// Token: 0x06003934 RID: 14644 RVA: 0x00093E99 File Offset: 0x00092099
 		public static bool TryFromString(string name, out EGraph3dType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x060035AE RID: 13742 RVA: 0x0008BF6A File Offset: 0x0008A16A
+		// Token: 0x06003935 RID: 14645 RVA: 0x00093EBE File Offset: 0x000920BE
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060035AF RID: 13743 RVA: 0x0008BF7A File Offset: 0x0008A17A
+		// Token: 0x06003936 RID: 14646 RVA: 0x00093ECE File Offset: 0x000920CE
 		public static EGraph3dType[] GetValues()
 		{
 			return new EGraph3dType[1];
 		}
 
-		// Token: 0x060035B0 RID: 13744 RVA: 0x0008BF82 File Offset: 0x0008A182
+		// Token: 0x06003937 RID: 14647 RVA: 0x00093ED6 File Offset: 0x000920D6
 		public static string[] GetNames()
 		{
 			return new string[]

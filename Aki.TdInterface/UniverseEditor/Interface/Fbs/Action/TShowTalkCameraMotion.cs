@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200778C RID: 30604
+	// Token: 0x02007FC4 RID: 32708
 	public enum TShowTalkCameraMotion : byte
 	{
-		// Token: 0x04012942 RID: 76098
+		// Token: 0x040139F7 RID: 80375
 		NONE,
-		// Token: 0x04012943 RID: 76099
+		// Token: 0x040139F8 RID: 80376
 		IShowTalkCameraMotionPreset,
-		// Token: 0x04012944 RID: 76100
+		// Token: 0x040139F9 RID: 80377
 		IShowTalkCameraMotionTween
 	}
 }

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006DE RID: 1758
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200077F RID: 1919
 	public class ISlotShape
 	{
-		// Token: 0x060025E2 RID: 9698 RVA: 0x00065CC4 File Offset: 0x00063EC4
+		// Token: 0x06002902 RID: 10498 RVA: 0x0006CD34 File Offset: 0x0006AF34
 		private ISlotShape_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060025E3 RID: 9699 RVA: 0x00065CFC File Offset: 0x00063EFC
+		// Token: 0x06002903 RID: 10499 RVA: 0x0006CD6C File Offset: 0x0006AF6C
 		public static ISlotShape Create([Nullable(2)] ISlotShape instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060025E4 RID: 9700 RVA: 0x00065D0F File Offset: 0x00063F0F
+		// Token: 0x06002904 RID: 10500 RVA: 0x0006CD7F File Offset: 0x0006AF7F
 		public static ISlotShape CreateFromSetValue([Nullable(2)] ISlotShape_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060025E5 RID: 9701 RVA: 0x00065D22 File Offset: 0x00063F22
+		// Token: 0x06002905 RID: 10501 RVA: 0x0006CD92 File Offset: 0x0006AF92
 		public ISlotShape_SetValue ToSetValue()
 		{
 			return new ISlotShape_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000A03 RID: 2563
-		// (get) Token: 0x060025E6 RID: 9702 RVA: 0x00065D50 File Offset: 0x00063F50
-		// (set) Token: 0x060025E7 RID: 9703 RVA: 0x00065DB1 File Offset: 0x00063FB1
+		// Token: 0x17000AC1 RID: 2753
+		// (get) Token: 0x06002906 RID: 10502 RVA: 0x0006CDC0 File Offset: 0x0006AFC0
+		// (set) Token: 0x06002907 RID: 10503 RVA: 0x0006CE21 File Offset: 0x0006B021
 		public virtual VectorInfo Center
 		{
 			get
@@ -92,9 +90,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A04 RID: 2564
-		// (get) Token: 0x060025E8 RID: 9704 RVA: 0x00065DC8 File Offset: 0x00063FC8
-		// (set) Token: 0x060025E9 RID: 9705 RVA: 0x00065E29 File Offset: 0x00064029
+		// Token: 0x17000AC2 RID: 2754
+		// (get) Token: 0x06002908 RID: 10504 RVA: 0x0006CE38 File Offset: 0x0006B038
+		// (set) Token: 0x06002909 RID: 10505 RVA: 0x0006CE99 File Offset: 0x0006B099
 		public virtual VectorInfo Size
 		{
 			get
@@ -122,9 +120,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A05 RID: 2565
-		// (get) Token: 0x060025EA RID: 9706 RVA: 0x00065E40 File Offset: 0x00064040
-		// (set) Token: 0x060025EB RID: 9707 RVA: 0x00065EA1 File Offset: 0x000640A1
+		// Token: 0x17000AC3 RID: 2755
+		// (get) Token: 0x0600290A RID: 10506 RVA: 0x0006CEB0 File Offset: 0x0006B0B0
+		// (set) Token: 0x0600290B RID: 10507 RVA: 0x0006CF11 File Offset: 0x0006B111
 		[Nullable(2)]
 		public virtual VectorInfo Rotator
 		{
@@ -155,30 +153,30 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040019CD RID: 6605
+		// Token: 0x04001BCC RID: 7116
 		[Nullable(2)]
 		protected ISlotShape FbInstance;
 
-		// Token: 0x040019CE RID: 6606
+		// Token: 0x04001BCD RID: 7117
 		[Nullable(2)]
 		protected ISlotShape_SetValue PocoInterface;
 
-		// Token: 0x040019CF RID: 6607
+		// Token: 0x04001BCE RID: 7118
 		private VectorInfo _CenterCache;
 
-		// Token: 0x040019D0 RID: 6608
+		// Token: 0x04001BCF RID: 7119
 		private bool _CenterInited;
 
-		// Token: 0x040019D1 RID: 6609
+		// Token: 0x04001BD0 RID: 7120
 		private VectorInfo _SizeCache;
 
-		// Token: 0x040019D2 RID: 6610
+		// Token: 0x04001BD1 RID: 7121
 		private bool _SizeInited;
 
-		// Token: 0x040019D3 RID: 6611
+		// Token: 0x04001BD2 RID: 7122
 		private VectorInfo _RotatorCache;
 
-		// Token: 0x040019D4 RID: 6612
+		// Token: 0x04001BD3 RID: 7123
 		private bool _RotatorInited;
 	}
 }

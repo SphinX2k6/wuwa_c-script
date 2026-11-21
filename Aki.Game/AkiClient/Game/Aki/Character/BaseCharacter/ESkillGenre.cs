@@ -4,62 +4,42 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x020042DA RID: 17114
+	// Token: 0x0200332D RID: 13101
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/ESkillGenre.ESkillGenre")]
 	public enum ESkillGenre : byte
 	{
-		// Token: 0x040174AB RID: 95403
+		// Token: 0x0401217D RID: 74109
 		普攻0,
-		// Token: 0x040174AC RID: 95404
+		// Token: 0x0401217E RID: 74110
 		蓄力1,
-		// Token: 0x040174AD RID: 95405
+		// Token: 0x0401217F RID: 74111
 		E技能2,
-		// Token: 0x040174AE RID: 95406
+		// Token: 0x04012180 RID: 74112
 		大招3,
-		// Token: 0x040174AF RID: 95407
+		// Token: 0x04012181 RID: 74113
 		QTE4,
-		// Token: 0x040174B0 RID: 95408
+		// Token: 0x04012182 RID: 74114
 		极限闪避反击5,
-		// Token: 0x040174B1 RID: 95409
+		// Token: 0x04012183 RID: 74115
 		地面闪避6,
-		// Token: 0x040174B2 RID: 95410
+		// Token: 0x04012184 RID: 74116
 		极限闪避7,
-		// Token: 0x040174B3 RID: 95411
+		// Token: 0x04012185 RID: 74117
 		被动技能8,
-		// Token: 0x040174B4 RID: 95412
+		// Token: 0x04012186 RID: 74118
 		战斗幻象技9,
-		// Token: 0x040174B5 RID: 95413
+		// Token: 0x04012187 RID: 74119
 		探索幻象技10,
-		// Token: 0x040174B6 RID: 95414
+		// Token: 0x04012188 RID: 74120
 		空中闪避11,
-		// Token: 0x040174B7 RID: 95415
+		// Token: 0x04012189 RID: 74121
 		退场技12,
-		// Token: 0x040174B8 RID: 95416
+		// Token: 0x0401218A RID: 74122
 		破弱技能13,
-		// Token: 0x040174B9 RID: 95417
+		// Token: 0x0401218B RID: 74123
 		无类别,
-		// Token: 0x040174BA RID: 95418
-		玩法技能类型15,
-		// Token: 0x040174BB RID: 95419
-		玩法技能类型16,
-		// Token: 0x040174BC RID: 95420
-		玩法技能类型17,
-		// Token: 0x040174BD RID: 95421
-		玩法技能类型18,
-		// Token: 0x040174BE RID: 95422
-		玩法技能类型19,
-		// Token: 0x040174BF RID: 95423
-		玩法技能类型20,
-		// Token: 0x040174C0 RID: 95424
-		玩法技能类型21,
-		// Token: 0x040174C1 RID: 95425
-		玩法技能类型22,
-		// Token: 0x040174C2 RID: 95426
-		玩法技能类型23,
-		// Token: 0x040174C3 RID: 95427
-		玩法技能类型24,
-		// Token: 0x040174C4 RID: 95428
+		// Token: 0x0401218C RID: 74124
 		ESkillGenre_MAX
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008A3 RID: 2211
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000946 RID: 2374
 	public class SplineComponent : IComponentBase
 	{
-		// Token: 0x0600317F RID: 12671 RVA: 0x0007F248 File Offset: 0x0007D448
+		// Token: 0x060034BB RID: 13499 RVA: 0x00086730 File Offset: 0x00084930
 		private SplineComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003180 RID: 12672 RVA: 0x0007F280 File Offset: 0x0007D480
+		// Token: 0x060034BC RID: 13500 RVA: 0x00086768 File Offset: 0x00084968
 		public static SplineComponent Create([Nullable(2)] SplineComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003181 RID: 12673 RVA: 0x0007F293 File Offset: 0x0007D493
+		// Token: 0x060034BD RID: 13501 RVA: 0x0008677B File Offset: 0x0008497B
 		public static SplineComponent CreateFromSetValue([Nullable(2)] SplineComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003182 RID: 12674 RVA: 0x0007F2A6 File Offset: 0x0007D4A6
+		// Token: 0x060034BE RID: 13502 RVA: 0x0008678E File Offset: 0x0008498E
 		public new SplineComponent_SetValue ToSetValue()
 		{
 			return new SplineComponent_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000D2E RID: 3374
-		// (get) Token: 0x06003183 RID: 12675 RVA: 0x0007F2D4 File Offset: 0x0007D4D4
-		// (set) Token: 0x06003184 RID: 12676 RVA: 0x0007F30E File Offset: 0x0007D50E
+		// Token: 0x17000DF7 RID: 3575
+		// (get) Token: 0x060034BF RID: 13503 RVA: 0x000867BC File Offset: 0x000849BC
+		// (set) Token: 0x060034C0 RID: 13504 RVA: 0x000867F6 File Offset: 0x000849F6
 		public override bool? Disabled
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D2F RID: 3375
-		// (get) Token: 0x06003185 RID: 12677 RVA: 0x0007F31C File Offset: 0x0007D51C
-		// (set) Token: 0x06003186 RID: 12678 RVA: 0x0007F346 File Offset: 0x0007D546
+		// Token: 0x17000DF8 RID: 3576
+		// (get) Token: 0x060034C1 RID: 13505 RVA: 0x00086804 File Offset: 0x00084A04
+		// (set) Token: 0x060034C2 RID: 13506 RVA: 0x0008682E File Offset: 0x00084A2E
 		public override bool? EdIsLocked
 		{
 			get
@@ -104,9 +102,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D30 RID: 3376
-		// (get) Token: 0x06003187 RID: 12679 RVA: 0x0007F354 File Offset: 0x0007D554
-		// (set) Token: 0x06003188 RID: 12680 RVA: 0x0007F37B File Offset: 0x0007D57B
+		// Token: 0x17000DF9 RID: 3577
+		// (get) Token: 0x060034C3 RID: 13507 RVA: 0x0008683C File Offset: 0x00084A3C
+		// (set) Token: 0x060034C4 RID: 13508 RVA: 0x00086863 File Offset: 0x00084A63
 		public virtual ISplineType Option
 		{
 			get
@@ -128,11 +126,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04002082 RID: 8322
+		// Token: 0x04002294 RID: 8852
 		[Nullable(2)]
 		protected new SplineComponent FbInstance;
 
-		// Token: 0x04002083 RID: 8323
+		// Token: 0x04002295 RID: 8853
 		[Nullable(2)]
 		protected new SplineComponent_SetValue PocoInterface;
 	}

@@ -2,30 +2,30 @@
 
 namespace CSharpScript.Game.Module.Map.Mark
 {
-	// Token: 0x020054B9 RID: 21689
+	// Token: 0x0200449C RID: 17564
 	public enum EMarkViewComponentType
 	{
-		// Token: 0x0401D2F6 RID: 119542
+		// Token: 0x04017D92 RID: 97682
 		MarkView,
-		// Token: 0x0401D2F7 RID: 119543
+		// Token: 0x04017D93 RID: 97683
 		TopRightIcon,
-		// Token: 0x0401D2F8 RID: 119544
+		// Token: 0x04017D94 RID: 97684
 		Range,
-		// Token: 0x0401D2F9 RID: 119545
+		// Token: 0x04017D95 RID: 97685
 		Name,
-		// Token: 0x0401D2FA RID: 119546
+		// Token: 0x04017D96 RID: 97686
 		OutOfBound,
-		// Token: 0x0401D2FB RID: 119547
+		// Token: 0x04017D97 RID: 97687
 		Select,
-		// Token: 0x0401D2FC RID: 119548
+		// Token: 0x04017D98 RID: 97688
 		Track,
-		// Token: 0x0401D2FD RID: 119549
+		// Token: 0x04017D99 RID: 97689
 		ChildIcon,
-		// Token: 0x0401D2FE RID: 119550
+		// Token: 0x04017D9A RID: 97690
 		VerticalPointer,
-		// Token: 0x0401D2FF RID: 119551
+		// Token: 0x04017D9B RID: 97691
 		GravityReverse,
-		// Token: 0x0401D300 RID: 119552
+		// Token: 0x04017D9C RID: 97692
 		AutoPilotTrack
 	}
 }

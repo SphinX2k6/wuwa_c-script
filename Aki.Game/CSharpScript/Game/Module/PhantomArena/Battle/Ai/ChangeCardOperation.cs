@@ -7,23 +7,23 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.Ai
 {
-	// Token: 0x020052D8 RID: 21208
+	// Token: 0x020042A8 RID: 17064
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ChangeCardOperation : NpcAiOperation
 	{
-		// Token: 0x170082FD RID: 33533
-		// (get) Token: 0x06036466 RID: 222310 RVA: 0x00CD70BB File Offset: 0x00CD52BB
-		// (set) Token: 0x06036467 RID: 222311 RVA: 0x00CD70C3 File Offset: 0x00CD52C3
+		// Token: 0x170056BD RID: 22205
+		// (get) Token: 0x0602B361 RID: 176993 RVA: 0x00C247E3 File Offset: 0x00C229E3
+		// (set) Token: 0x0602B362 RID: 176994 RVA: 0x00C247EB File Offset: 0x00C229EB
 		public NpcPhantomBattleSlotInsteadInfo Info { get; private set; }
 
-		// Token: 0x06036468 RID: 222312 RVA: 0x00CD70CC File Offset: 0x00CD52CC
+		// Token: 0x0602B363 RID: 176995 RVA: 0x00C247F4 File Offset: 0x00C229F4
 		public ChangeCardOperation(NpcPhantomBattleSlotInsteadInfo info)
 		{
 			this.Info = info;
 		}
 
-		// Token: 0x06036469 RID: 222313 RVA: 0x00CD70DC File Offset: 0x00CD52DC
+		// Token: 0x0602B364 RID: 176996 RVA: 0x00C24804 File Offset: 0x00C22A04
 		public override UniTask ExecuteAiOperation(PhantomArenaBattleProxy proxy)
 		{
 			ChangeCardOperation.<ExecuteAiOperation>d__5 <ExecuteAiOperation>d__;

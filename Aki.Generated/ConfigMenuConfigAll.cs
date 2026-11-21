@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200053C RID: 1340
+	// Token: 0x02000552 RID: 1362
 	public class ConfigMenuConfigAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001F74 RID: 8052 RVA: 0x0010B20C File Offset: 0x0010940C
+		// Token: 0x06001FF8 RID: 8184 RVA: 0x00111960 File Offset: 0x0010FB60
 		static ConfigMenuConfigAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMenuConfigAll.CreateStaticDefaultValue), new Action(ConfigMenuConfigAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001F75 RID: 8053 RVA: 0x0010B22C File Offset: 0x0010942C
+		// Token: 0x06001FF9 RID: 8185 RVA: 0x00111980 File Offset: 0x0010FB80
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMenuConfigAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001F76 RID: 8054 RVA: 0x0010B2AB File Offset: 0x001094AB
+		// Token: 0x06001FFA RID: 8186 RVA: 0x001119FF File Offset: 0x0010FBFF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMenuConfigAll.LogPair = null;
 			ConfigMenuConfigAll.HandleId = 0;
 		}
 
-		// Token: 0x06001F77 RID: 8055 RVA: 0x0010B2B9 File Offset: 0x001094B9
+		// Token: 0x06001FFB RID: 8187 RVA: 0x00111A0D File Offset: 0x0010FC0D
 		public static void Init()
 		{
 			ConfigMenuConfigAll.HandleId = ConfigCommon.InitDataStatement(ConfigMenuConfigAll.HandleId, "db_menu.db", "select BinData from `MenuConfig`");
 		}
 
-		// Token: 0x06001F78 RID: 8056 RVA: 0x0010B2D4 File Offset: 0x001094D4
+		// Token: 0x06001FFC RID: 8188 RVA: 0x00111A28 File Offset: 0x0010FC28
 		[NullableContext(2)]
 		public static IReadOnlyList<MenuConfig> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04002488 RID: 9352
+		// Token: 0x04002522 RID: 9506
 		private const string DB = "db_menu.db";
 
-		// Token: 0x04002489 RID: 9353
+		// Token: 0x04002523 RID: 9507
 		private const string FILE = "s.设置系统.xlsx";
 
-		// Token: 0x0400248A RID: 9354
+		// Token: 0x04002524 RID: 9508
 		private const string TABLE = "MenuConfig";
 
-		// Token: 0x0400248B RID: 9355
+		// Token: 0x04002525 RID: 9509
 		private const string COMMAND = "select BinData from `MenuConfig`";
 
-		// Token: 0x0400248C RID: 9356
+		// Token: 0x04002526 RID: 9510
 		private const string KEY_PREFIX = "MenuConfigAll";
 
-		// Token: 0x0400248D RID: 9357
+		// Token: 0x04002527 RID: 9511
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400248E RID: 9358
+		// Token: 0x04002528 RID: 9512
 		private static int HandleId;
 	}
 }

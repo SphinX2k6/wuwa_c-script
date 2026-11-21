@@ -2,13 +2,13 @@
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.Guide
 {
-	// Token: 0x020052A6 RID: 21158
+	// Token: 0x02004276 RID: 17014
 	public interface IPhantomArenaGuideFunc
 	{
-		// Token: 0x06036253 RID: 221779
+		// Token: 0x0602B14E RID: 176462
 		void FinishCurrentGuide();
 
-		// Token: 0x06036254 RID: 221780
+		// Token: 0x0602B14F RID: 176463
 		void ExitCurrentGuide();
 	}
 }

@@ -6,12 +6,12 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001154 RID: 4436
+// Token: 0x02000608 RID: 1544
 [NullableContext(2)]
 [Nullable(0)]
 internal class DesRightBuffGridItem : GridProxyAbstract<int>
 {
-	// Token: 0x0600748B RID: 29835 RVA: 0x0017DEB0 File Offset: 0x0017C0B0
+	// Token: 0x06004822 RID: 18466 RVA: 0x001869FC File Offset: 0x00184BFC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -38,7 +38,7 @@ internal class DesRightBuffGridItem : GridProxyAbstract<int>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600748C RID: 29836 RVA: 0x0017DFB9 File Offset: 0x0017C1B9
+	// Token: 0x06004823 RID: 18467 RVA: 0x00186B05 File Offset: 0x00184D05
 	protected override void OnStart()
 	{
 		if (this.RootItem != null)
@@ -47,7 +47,7 @@ internal class DesRightBuffGridItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x0600748D RID: 29837 RVA: 0x0017DFD4 File Offset: 0x0017C1D4
+	// Token: 0x06004824 RID: 18468 RVA: 0x00186B20 File Offset: 0x00184D20
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		this.DeTermId = data;
@@ -79,7 +79,7 @@ internal class DesRightBuffGridItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x0600748E RID: 29838 RVA: 0x0017E090 File Offset: 0x0017C290
+	// Token: 0x06004825 RID: 18469 RVA: 0x00186BDC File Offset: 0x00184DDC
 	public void PlayStartSequence()
 	{
 		if (this.LevelSequencePlayer != null)
@@ -88,7 +88,7 @@ internal class DesRightBuffGridItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x0600748F RID: 29839 RVA: 0x0017E0C0 File Offset: 0x0017C2C0
+	// Token: 0x06004826 RID: 18470 RVA: 0x00186C0C File Offset: 0x00184E0C
 	public void PlayCloseSequence()
 	{
 		if (this.LevelSequencePlayer != null)
@@ -97,7 +97,7 @@ internal class DesRightBuffGridItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x06007490 RID: 29840 RVA: 0x0017E0EF File Offset: 0x0017C2EF
+	// Token: 0x06004827 RID: 18471 RVA: 0x00186C3B File Offset: 0x00184E3B
 	private void OnClickBtn()
 	{
 		Action<int> onClickCallBack = this.OnClickCallBack;
@@ -108,35 +108,35 @@ internal class DesRightBuffGridItem : GridProxyAbstract<int>
 		onClickCallBack(this.DeTermId);
 	}
 
-	// Token: 0x040035A3 RID: 13731
+	// Token: 0x0400363C RID: 13884
 	public int DeTermId;
 
-	// Token: 0x040035A4 RID: 13732
+	// Token: 0x0400363D RID: 13885
 	public Action<int> OnClickCallBack;
 
-	// Token: 0x040035A5 RID: 13733
+	// Token: 0x0400363E RID: 13886
 	public Action<int, bool> OnBuffStateChange;
 
-	// Token: 0x040035A6 RID: 13734
+	// Token: 0x0400363F RID: 13887
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x0200770F RID: 30479
+	// Token: 0x0200689E RID: 26782
 	[NullableContext(0)]
 	private class EBuffItemSubComponent
 	{
-		// Token: 0x04027469 RID: 160873
+		// Token: 0x040227AA RID: 141226
 		public const int BuffItemRoot = 0;
 
-		// Token: 0x0402746A RID: 160874
+		// Token: 0x040227AB RID: 141227
 		public const int TexBg = 1;
 
-		// Token: 0x0402746B RID: 160875
+		// Token: 0x040227AC RID: 141228
 		public const int TexIcon = 2;
 
-		// Token: 0x0402746C RID: 160876
+		// Token: 0x040227AD RID: 141229
 		public const int TxtDesc = 3;
 
-		// Token: 0x0402746D RID: 160877
+		// Token: 0x040227AE RID: 141230
 		public const int TxtNum = 4;
 	}
 }

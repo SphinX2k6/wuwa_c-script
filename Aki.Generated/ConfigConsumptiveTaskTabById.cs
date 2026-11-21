@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000199 RID: 409
+	// Token: 0x020001AB RID: 427
 	public class ConfigConsumptiveTaskTabById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000999 RID: 2457 RVA: 0x0008FC1C File Offset: 0x0008DE1C
+		// Token: 0x06000A05 RID: 2565 RVA: 0x00095B54 File Offset: 0x00093D54
 		static ConfigConsumptiveTaskTabById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigConsumptiveTaskTabById.CreateStaticDefaultValue), new Action(ConfigConsumptiveTaskTabById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600099A RID: 2458 RVA: 0x0008FC3C File Offset: 0x0008DE3C
+		// Token: 0x06000A06 RID: 2566 RVA: 0x00095B74 File Offset: 0x00093D74
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigConsumptiveTaskTabById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600099B RID: 2459 RVA: 0x0008FCBB File Offset: 0x0008DEBB
+		// Token: 0x06000A07 RID: 2567 RVA: 0x00095BF3 File Offset: 0x00093DF3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigConsumptiveTaskTabById.LogPair = null;
 			ConfigConsumptiveTaskTabById.HandleId = 0;
 		}
 
-		// Token: 0x0600099C RID: 2460 RVA: 0x0008FCC9 File Offset: 0x0008DEC9
+		// Token: 0x06000A08 RID: 2568 RVA: 0x00095C01 File Offset: 0x00093E01
 		public static void Init()
 		{
 			ConfigConsumptiveTaskTabById.HandleId = ConfigCommon.InitDataStatement(ConfigConsumptiveTaskTabById.HandleId, "db_consumptiveactivity.db", "select BinData from `ConsumptiveTaskTab` where Id=?");
 		}
 
-		// Token: 0x0600099D RID: 2461 RVA: 0x0008FCE4 File Offset: 0x0008DEE4
+		// Token: 0x06000A09 RID: 2569 RVA: 0x00095C1C File Offset: 0x00093E1C
 		public static ConsumptiveTaskTab? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigConsumptiveTaskTabById.HandleId, ConfigConsumptiveTaskTabById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new ConsumptiveTaskTab?(rootAsConsumptiveTaskTab);
 		}
 
-		// Token: 0x04000B13 RID: 2835
+		// Token: 0x04000B91 RID: 2961
 		private const string DB = "db_consumptiveactivity.db";
 
-		// Token: 0x04000B14 RID: 2836
+		// Token: 0x04000B92 RID: 2962
 		private const string FILE = "l.累消活动.xlsx";
 
-		// Token: 0x04000B15 RID: 2837
+		// Token: 0x04000B93 RID: 2963
 		private const string TABLE = "ConsumptiveTaskTab";
 
-		// Token: 0x04000B16 RID: 2838
+		// Token: 0x04000B94 RID: 2964
 		private const string COMMAND = "select BinData from `ConsumptiveTaskTab` where Id=?";
 
-		// Token: 0x04000B17 RID: 2839
+		// Token: 0x04000B95 RID: 2965
 		private const string KEY_PREFIX = "ConsumptiveTaskTabById";
 
-		// Token: 0x04000B18 RID: 2840
+		// Token: 0x04000B96 RID: 2966
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000B19 RID: 2841
+		// Token: 0x04000B97 RID: 2967
 		private static int HandleId;
 	}
 }

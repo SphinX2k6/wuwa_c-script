@@ -3,24 +3,24 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 {
-	// Token: 0x020063BC RID: 25532
+	// Token: 0x0200533A RID: 21306
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MowingBuffGridGroupData : IMowingBuffGridGroupData
 	{
-		// Token: 0x170093AE RID: 37806
-		// (get) Token: 0x060403B9 RID: 263097 RVA: 0x00F8B734 File Offset: 0x00F89934
-		// (set) Token: 0x060403BA RID: 263098 RVA: 0x00F8B73C File Offset: 0x00F8993C
+		// Token: 0x17006710 RID: 26384
+		// (get) Token: 0x0603507A RID: 217210 RVA: 0x00ED26CC File Offset: 0x00ED08CC
+		// (set) Token: 0x0603507B RID: 217211 RVA: 0x00ED26D4 File Offset: 0x00ED08D4
 		public string GroupNameTextId { get; set; }
 
-		// Token: 0x170093AF RID: 37807
-		// (get) Token: 0x060403BB RID: 263099 RVA: 0x00F8B745 File Offset: 0x00F89945
-		// (set) Token: 0x060403BC RID: 263100 RVA: 0x00F8B74D File Offset: 0x00F8994D
+		// Token: 0x17006711 RID: 26385
+		// (get) Token: 0x0603507C RID: 217212 RVA: 0x00ED26DD File Offset: 0x00ED08DD
+		// (set) Token: 0x0603507D RID: 217213 RVA: 0x00ED26E5 File Offset: 0x00ED08E5
 		public bool ShowUnlockText { get; set; }
 
-		// Token: 0x170093B0 RID: 37808
-		// (get) Token: 0x060403BD RID: 263101 RVA: 0x00F8B756 File Offset: 0x00F89956
-		// (set) Token: 0x060403BE RID: 263102 RVA: 0x00F8B75E File Offset: 0x00F8995E
+		// Token: 0x17006712 RID: 26386
+		// (get) Token: 0x0603507E RID: 217214 RVA: 0x00ED26EE File Offset: 0x00ED08EE
+		// (set) Token: 0x0603507F RID: 217215 RVA: 0x00ED26F6 File Offset: 0x00ED08F6
 		public IMowingBuffGridItemData[] BuffItemList { get; set; }
 	}
 }

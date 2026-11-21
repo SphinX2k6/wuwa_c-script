@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200242A RID: 9258
+	// Token: 0x020026CB RID: 9931
 	public class ESplineMovePatternJsonConverter : JsonConverter<ESplineMovePattern>
 	{
-		// Token: 0x0600C93D RID: 51517 RVA: 0x001D77E8 File Offset: 0x001D59E8
+		// Token: 0x0600D5ED RID: 54765 RVA: 0x001F163C File Offset: 0x001EF83C
 		public override ESplineMovePattern Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return ESplineMovePatternExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C93E RID: 51518 RVA: 0x001D780C File Offset: 0x001D5A0C
+		// Token: 0x0600D5EE RID: 54766 RVA: 0x001F1660 File Offset: 0x001EF860
 		public override void Write(Utf8JsonWriter writer, ESplineMovePattern value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

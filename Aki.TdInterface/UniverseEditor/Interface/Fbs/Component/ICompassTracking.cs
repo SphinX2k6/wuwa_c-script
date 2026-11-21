@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004FD6 RID: 20438
+	// Token: 0x02005535 RID: 21813
 	public struct ICompassTracking : IFlatbufferObject
 	{
-		// Token: 0x1700940F RID: 37903
-		// (get) Token: 0x060208D5 RID: 133333 RVA: 0x00486E6E File Offset: 0x0048506E
+		// Token: 0x17009BF0 RID: 39920
+		// (get) Token: 0x060227F1 RID: 141297 RVA: 0x004C082E File Offset: 0x004BEA2E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060208D6 RID: 133334 RVA: 0x00486E7B File Offset: 0x0048507B
+		// Token: 0x060227F2 RID: 141298 RVA: 0x004C083B File Offset: 0x004BEA3B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060208D7 RID: 133335 RVA: 0x00486E84 File Offset: 0x00485084
+		// Token: 0x060227F3 RID: 141299 RVA: 0x004C0844 File Offset: 0x004BEA44
 		public static ICompassTracking GetRootAsICompassTracking(ByteBuffer _bb)
 		{
 			return ICompassTracking.GetRootAsICompassTracking(_bb, default(ICompassTracking));
 		}
 
-		// Token: 0x060208D8 RID: 133336 RVA: 0x00486EA0 File Offset: 0x004850A0
+		// Token: 0x060227F4 RID: 141300 RVA: 0x004C0860 File Offset: 0x004BEA60
 		public static ICompassTracking GetRootAsICompassTracking(ByteBuffer _bb, ICompassTracking obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060208D9 RID: 133337 RVA: 0x00486EBD File Offset: 0x004850BD
+		// Token: 0x060227F5 RID: 141301 RVA: 0x004C087D File Offset: 0x004BEA7D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060208DA RID: 133338 RVA: 0x00486ECC File Offset: 0x004850CC
+		// Token: 0x060227F6 RID: 141302 RVA: 0x004C088C File Offset: 0x004BEA8C
 		public ICompassTracking __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009410 RID: 37904
-		// (get) Token: 0x060208DB RID: 133339 RVA: 0x00486EDC File Offset: 0x004850DC
+		// Token: 0x17009BF1 RID: 39921
+		// (get) Token: 0x060227F7 RID: 141303 RVA: 0x004C089C File Offset: 0x004BEA9C
 		public ENearbyTrackingType Type
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009411 RID: 37905
-		// (get) Token: 0x060208DC RID: 133340 RVA: 0x00486F18 File Offset: 0x00485118
+		// Token: 0x17009BF2 RID: 39922
+		// (get) Token: 0x060227F8 RID: 141304 RVA: 0x004C08D8 File Offset: 0x004BEAD8
 		public int ShowRange
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009412 RID: 37906
-		// (get) Token: 0x060208DD RID: 133341 RVA: 0x00486F54 File Offset: 0x00485154
+		// Token: 0x17009BF3 RID: 39923
+		// (get) Token: 0x060227F9 RID: 141305 RVA: 0x004C0914 File Offset: 0x004BEB14
 		public int HideRange
 		{
 			get
@@ -94,8 +94,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009413 RID: 37907
-		// (get) Token: 0x060208DE RID: 133342 RVA: 0x00486F90 File Offset: 0x00485190
+		// Token: 0x17009BF4 RID: 39924
+		// (get) Token: 0x060227FA RID: 141306 RVA: 0x004C0950 File Offset: 0x004BEB50
 		public IIconNearByTrackingConfig? IconTrackingConfig
 		{
 			get
@@ -109,7 +109,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060208DF RID: 133343 RVA: 0x00486FF0 File Offset: 0x004851F0
+		// Token: 0x060227FB RID: 141307 RVA: 0x004C09B0 File Offset: 0x004BEBB0
 		public EVehicleType VehicleTypes(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -120,8 +120,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return (EVehicleType)this.__p.bb.Get(this.__p.__vector(num) + j);
 		}
 
-		// Token: 0x17009414 RID: 37908
-		// (get) Token: 0x060208E0 RID: 133344 RVA: 0x00487030 File Offset: 0x00485230
+		// Token: 0x17009BF5 RID: 39925
+		// (get) Token: 0x060227FC RID: 141308 RVA: 0x004C09F0 File Offset: 0x004BEBF0
 		public int VehicleTypesLength
 		{
 			get
@@ -135,13 +135,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060208E1 RID: 133345 RVA: 0x0048705C File Offset: 0x0048525C
+		// Token: 0x060227FD RID: 141309 RVA: 0x004C0A1C File Offset: 0x004BEC1C
 		public Span<EVehicleType> GetVehicleTypesBytes()
 		{
 			return this.__p.__vector_as_span<EVehicleType>(12, 1);
 		}
 
-		// Token: 0x060208E2 RID: 133346 RVA: 0x0048706C File Offset: 0x0048526C
+		// Token: 0x060227FE RID: 141310 RVA: 0x004C0A2C File Offset: 0x004BEC2C
 		public EVehicleType[] GetVehicleTypesArray()
 		{
 			int num = this.__p.__offset(12);
@@ -159,8 +159,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return array;
 		}
 
-		// Token: 0x17009415 RID: 37909
-		// (get) Token: 0x060208E3 RID: 133347 RVA: 0x004870D8 File Offset: 0x004852D8
+		// Token: 0x17009BF6 RID: 39926
+		// (get) Token: 0x060227FF RID: 141311 RVA: 0x004C0A98 File Offset: 0x004BEC98
 		public byte NullMask
 		{
 			get
@@ -174,7 +174,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060208E4 RID: 133348 RVA: 0x00487115 File Offset: 0x00485315
+		// Token: 0x06022800 RID: 141312 RVA: 0x004C0AD5 File Offset: 0x004BECD5
 		public static Offset<ICompassTracking> CreateICompassTracking(FlatBufferBuilder builder, ENearbyTrackingType Type = ENearbyTrackingType.Icon, int ShowRange = 0, int HideRange = 0, Offset<IIconNearByTrackingConfig> IconTrackingConfigOffset = default(Offset<IIconNearByTrackingConfig>), VectorOffset VehicleTypesOffset = default(VectorOffset), byte NullMask = 0)
 		{
 			builder.StartTable(6);
@@ -187,43 +187,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ICompassTracking.EndICompassTracking(builder);
 		}
 
-		// Token: 0x060208E5 RID: 133349 RVA: 0x00487151 File Offset: 0x00485351
+		// Token: 0x06022801 RID: 141313 RVA: 0x004C0B11 File Offset: 0x004BED11
 		public static void StartICompassTracking(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x060208E6 RID: 133350 RVA: 0x0048715A File Offset: 0x0048535A
+		// Token: 0x06022802 RID: 141314 RVA: 0x004C0B1A File Offset: 0x004BED1A
 		public static void AddType(FlatBufferBuilder builder, ENearbyTrackingType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060208E7 RID: 133351 RVA: 0x00487165 File Offset: 0x00485365
+		// Token: 0x06022803 RID: 141315 RVA: 0x004C0B25 File Offset: 0x004BED25
 		public static void AddShowRange(FlatBufferBuilder builder, int showRange)
 		{
 			builder.AddInt(1, showRange, 0);
 		}
 
-		// Token: 0x060208E8 RID: 133352 RVA: 0x00487170 File Offset: 0x00485370
+		// Token: 0x06022804 RID: 141316 RVA: 0x004C0B30 File Offset: 0x004BED30
 		public static void AddHideRange(FlatBufferBuilder builder, int hideRange)
 		{
 			builder.AddInt(2, hideRange, 0);
 		}
 
-		// Token: 0x060208E9 RID: 133353 RVA: 0x0048717B File Offset: 0x0048537B
+		// Token: 0x06022805 RID: 141317 RVA: 0x004C0B3B File Offset: 0x004BED3B
 		public static void AddIconTrackingConfig(FlatBufferBuilder builder, Offset<IIconNearByTrackingConfig> iconTrackingConfigOffset)
 		{
 			builder.AddOffset(3, iconTrackingConfigOffset.Value, 0);
 		}
 
-		// Token: 0x060208EA RID: 133354 RVA: 0x0048718B File Offset: 0x0048538B
+		// Token: 0x06022806 RID: 141318 RVA: 0x004C0B4B File Offset: 0x004BED4B
 		public static void AddVehicleTypes(FlatBufferBuilder builder, VectorOffset vehicleTypesOffset)
 		{
 			builder.AddOffset(4, vehicleTypesOffset.Value, 0);
 		}
 
-		// Token: 0x060208EB RID: 133355 RVA: 0x0048719C File Offset: 0x0048539C
+		// Token: 0x06022807 RID: 141319 RVA: 0x004C0B5C File Offset: 0x004BED5C
 		public static VectorOffset CreateVehicleTypesVector(FlatBufferBuilder builder, EVehicleType[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -234,7 +234,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060208EC RID: 133356 RVA: 0x004871D3 File Offset: 0x004853D3
+		// Token: 0x06022808 RID: 141320 RVA: 0x004C0B93 File Offset: 0x004BED93
 		public static VectorOffset CreateVehicleTypesVectorBlock(FlatBufferBuilder builder, EVehicleType[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -242,7 +242,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060208ED RID: 133357 RVA: 0x004871ED File Offset: 0x004853ED
+		// Token: 0x06022809 RID: 141321 RVA: 0x004C0BAD File Offset: 0x004BEDAD
 		public static VectorOffset CreateVehicleTypesVectorBlock(FlatBufferBuilder builder, ArraySegment<EVehicleType> data)
 		{
 			builder.StartVector(1, data.Count, 1);
@@ -250,7 +250,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060208EE RID: 133358 RVA: 0x0048720B File Offset: 0x0048540B
+		// Token: 0x0602280A RID: 141322 RVA: 0x004C0BCB File Offset: 0x004BEDCB
 		public static VectorOffset CreateVehicleTypesVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -258,25 +258,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x060208EF RID: 133359 RVA: 0x00487224 File Offset: 0x00485424
+		// Token: 0x0602280B RID: 141323 RVA: 0x004C0BE4 File Offset: 0x004BEDE4
 		public static void StartVehicleTypesVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(1, numElems, 1);
 		}
 
-		// Token: 0x060208F0 RID: 133360 RVA: 0x0048722F File Offset: 0x0048542F
+		// Token: 0x0602280C RID: 141324 RVA: 0x004C0BEF File Offset: 0x004BEDEF
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(5, nullMask, 0);
 		}
 
-		// Token: 0x060208F1 RID: 133361 RVA: 0x0048723A File Offset: 0x0048543A
+		// Token: 0x0602280D RID: 141325 RVA: 0x004C0BFA File Offset: 0x004BEDFA
 		public static Offset<ICompassTracking> EndICompassTracking(FlatBufferBuilder builder)
 		{
 			return new Offset<ICompassTracking>(builder.EndTable());
 		}
 
-		// Token: 0x060208F2 RID: 133362 RVA: 0x00487248 File Offset: 0x00485448
+		// Token: 0x0602280E RID: 141326 RVA: 0x004C0C08 File Offset: 0x004BEE08
 		public ICompassTrackingT UnPack()
 		{
 			ICompassTrackingT compassTrackingT = new ICompassTrackingT();
@@ -284,7 +284,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return compassTrackingT;
 		}
 
-		// Token: 0x060208F3 RID: 133363 RVA: 0x00487264 File Offset: 0x00485464
+		// Token: 0x0602280F RID: 141327 RVA: 0x004C0C24 File Offset: 0x004BEE24
 		public void UnPackTo(ICompassTrackingT _o)
 		{
 			_o.Type = this.Type;
@@ -299,7 +299,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x060208F4 RID: 133364 RVA: 0x00487300 File Offset: 0x00485500
+		// Token: 0x06022810 RID: 141328 RVA: 0x004C0CC0 File Offset: 0x004BEEC0
 		public static Offset<ICompassTracking> Pack(FlatBufferBuilder builder, ICompassTrackingT _o)
 		{
 			if (_o == null)
@@ -316,7 +316,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ICompassTracking.CreateICompassTracking(builder, _o.Type, _o.ShowRange, _o.HideRange, iconTrackingConfigOffset, vehicleTypesOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400DEC1 RID: 57025
+		// Token: 0x0400EAB5 RID: 60085
 		private Table __p;
 	}
 }

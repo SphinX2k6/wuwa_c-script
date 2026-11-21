@@ -10,17 +10,17 @@ using CSharpScript.Game.Ui;
 using CSharpScript.Game.Utils;
 using UnrealEngine;
 
-// Token: 0x0200226C RID: 8812
+// Token: 0x02001750 RID: 5968
 [NullableContext(1)]
 [Nullable(0)]
 public class MotorcycleLevelUpView : UiViewBase
 {
-	// Token: 0x06011332 RID: 70450 RVA: 0x004314C4 File Offset: 0x0042F6C4
+	// Token: 0x0600E7C8 RID: 59336 RVA: 0x0043E0D0 File Offset: 0x0043C2D0
 	public MotorcycleLevelUpView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06011333 RID: 70451 RVA: 0x004314FC File Offset: 0x0042F6FC
+	// Token: 0x0600E7C9 RID: 59337 RVA: 0x0043E108 File Offset: 0x0043C308
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ public class MotorcycleLevelUpView : UiViewBase
 		};
 	}
 
-	// Token: 0x06011334 RID: 70452 RVA: 0x00431584 File Offset: 0x0042F784
+	// Token: 0x0600E7CA RID: 59338 RVA: 0x0043E190 File Offset: 0x0043C390
 	protected override void OnStart()
 	{
 		ILevelUpViewViedData cacheData = MotorcycleDevelopModel.Instance.GetCacheData();
@@ -72,7 +72,7 @@ public class MotorcycleLevelUpView : UiViewBase
 		}
 	}
 
-	// Token: 0x06011335 RID: 70453 RVA: 0x0043173E File Offset: 0x0042F93E
+	// Token: 0x0600E7CB RID: 59339 RVA: 0x0043E34A File Offset: 0x0043C54A
 	private void LevelUpTryCloseMe()
 	{
 		if (this.IsLevelUpAnimeDown && this.ShowingExp >= this.TargetExp)
@@ -81,7 +81,7 @@ public class MotorcycleLevelUpView : UiViewBase
 		}
 	}
 
-	// Token: 0x06011336 RID: 70454 RVA: 0x0043175C File Offset: 0x0042F95C
+	// Token: 0x0600E7CC RID: 59340 RVA: 0x0043E368 File Offset: 0x0043C568
 	private void TryCloseMe()
 	{
 		if (this.IsInClosing)
@@ -92,7 +92,7 @@ public class MotorcycleLevelUpView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06011337 RID: 70455 RVA: 0x00431775 File Offset: 0x0042F975
+	// Token: 0x0600E7CD RID: 59341 RVA: 0x0043E381 File Offset: 0x0043C581
 	protected override void OnBeforeShow()
 	{
 		if (this.IsLevelUp)
@@ -101,7 +101,7 @@ public class MotorcycleLevelUpView : UiViewBase
 		}
 	}
 
-	// Token: 0x06011338 RID: 70456 RVA: 0x00431785 File Offset: 0x0042F985
+	// Token: 0x0600E7CE RID: 59342 RVA: 0x0043E391 File Offset: 0x0043C591
 	protected override void OnAfterShow()
 	{
 		if (this.IsExpUp)
@@ -110,8 +110,8 @@ public class MotorcycleLevelUpView : UiViewBase
 		}
 	}
 
-	// Token: 0x170015F0 RID: 5616
-	// (get) Token: 0x06011339 RID: 70457 RVA: 0x004317B8 File Offset: 0x0042F9B8
+	// Token: 0x17001627 RID: 5671
+	// (get) Token: 0x0600E7CF RID: 59343 RVA: 0x0043E3C4 File Offset: 0x0043C5C4
 	private bool GetIsOverLoop
 	{
 		get
@@ -120,7 +120,7 @@ public class MotorcycleLevelUpView : UiViewBase
 		}
 	}
 
-	// Token: 0x0601133A RID: 70458 RVA: 0x004317D8 File Offset: 0x0042F9D8
+	// Token: 0x0600E7D0 RID: 59344 RVA: 0x0043E3E4 File Offset: 0x0043C5E4
 	private void RefreshExp()
 	{
 		if (this.AnimePlayer != null && !this.IsOverLoop && this.GetIsOverLoop)
@@ -148,7 +148,7 @@ public class MotorcycleLevelUpView : UiViewBase
 		}
 	}
 
-	// Token: 0x0601133B RID: 70459 RVA: 0x004318E4 File Offset: 0x0042FAE4
+	// Token: 0x0600E7D1 RID: 59345 RVA: 0x0043E4F0 File Offset: 0x0043C6F0
 	private void BarExpAnime(float delta)
 	{
 		this.ShowingExp += this.AddExp * delta;
@@ -161,7 +161,7 @@ public class MotorcycleLevelUpView : UiViewBase
 		this.RefreshExp();
 	}
 
-	// Token: 0x0601133C RID: 70460 RVA: 0x0043193D File Offset: 0x0042FB3D
+	// Token: 0x0600E7D2 RID: 59346 RVA: 0x0043E549 File Offset: 0x0043C749
 	protected override void OnBeforeDestroy()
 	{
 		if (this.AnimePlayer != null && TimerSystem.GameplayTimeInstance.Has(this.AnimePlayer))
@@ -171,25 +171,25 @@ public class MotorcycleLevelUpView : UiViewBase
 		this.RecycleEffect();
 	}
 
-	// Token: 0x0601133D RID: 70461 RVA: 0x00431970 File Offset: 0x0042FB70
+	// Token: 0x0600E7D3 RID: 59347 RVA: 0x0043E57C File Offset: 0x0043C77C
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<PlotInfo>(EEventName.PlotNetworkStart, new Action<PlotInfo>(this.OnSequenceNetworkStart));
 	}
 
-	// Token: 0x0601133E RID: 70462 RVA: 0x0043198E File Offset: 0x0042FB8E
+	// Token: 0x0600E7D4 RID: 59348 RVA: 0x0043E59A File Offset: 0x0043C79A
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.PlotNetworkStart, new Action<PlotInfo>(this.OnSequenceNetworkStart));
 	}
 
-	// Token: 0x0601133F RID: 70463 RVA: 0x004319AC File Offset: 0x0042FBAC
+	// Token: 0x0600E7D5 RID: 59349 RVA: 0x0043E5B8 File Offset: 0x0043C7B8
 	private void OnSequenceNetworkStart(PlotInfo plotInfo)
 	{
 		this.TryCloseMe();
 	}
 
-	// Token: 0x06011340 RID: 70464 RVA: 0x004319B4 File Offset: 0x0042FBB4
+	// Token: 0x0600E7D6 RID: 59350 RVA: 0x0043E5C0 File Offset: 0x0043C7C0
 	private void PlayLevelUpEffect()
 	{
 		if (Global.BaseCharacter == null)
@@ -220,7 +220,7 @@ public class MotorcycleLevelUpView : UiViewBase
 		}
 	}
 
-	// Token: 0x06011341 RID: 70465 RVA: 0x00431A6C File Offset: 0x0042FC6C
+	// Token: 0x0600E7D7 RID: 59351 RVA: 0x0043E678 File Offset: 0x0043C878
 	private void RecycleEffect()
 	{
 		if (EffectSystem.Instance.IsValid(this.EffectHandle))
@@ -230,72 +230,72 @@ public class MotorcycleLevelUpView : UiViewBase
 		}
 	}
 
-	// Token: 0x040082E4 RID: 33508
+	// Token: 0x04008422 RID: 33826
 	private int EffectHandle;
 
-	// Token: 0x040082E5 RID: 33509
+	// Token: 0x04008423 RID: 33827
 	private bool IsLevelUp;
 
-	// Token: 0x040082E6 RID: 33510
+	// Token: 0x04008424 RID: 33828
 	private bool IsExpUp;
 
-	// Token: 0x040082E7 RID: 33511
+	// Token: 0x04008425 RID: 33829
 	private bool IsOverLevel;
 
-	// Token: 0x040082E8 RID: 33512
+	// Token: 0x04008426 RID: 33830
 	private bool IsOverLoop;
 
-	// Token: 0x040082E9 RID: 33513
+	// Token: 0x04008427 RID: 33831
 	private float ShowingExp;
 
-	// Token: 0x040082EA RID: 33514
+	// Token: 0x04008428 RID: 33832
 	private float PreMaxExp;
 
-	// Token: 0x040082EB RID: 33515
+	// Token: 0x04008429 RID: 33833
 	private float TargetExp;
 
-	// Token: 0x040082EC RID: 33516
+	// Token: 0x0400842A RID: 33834
 	private float CurMaxExp;
 
-	// Token: 0x040082ED RID: 33517
+	// Token: 0x0400842B RID: 33835
 	private float AddExp;
 
-	// Token: 0x040082EE RID: 33518
+	// Token: 0x0400842C RID: 33836
 	private int CurrentLevel;
 
-	// Token: 0x040082EF RID: 33519
+	// Token: 0x0400842D RID: 33837
 	private bool IsLevelUpAnimeDown;
 
-	// Token: 0x040082F0 RID: 33520
+	// Token: 0x0400842E RID: 33838
 	[Nullable(2)]
 	private TimerHandle AnimePlayer;
 
-	// Token: 0x040082F1 RID: 33521
+	// Token: 0x0400842F RID: 33839
 	private bool IsInClosing;
 
-	// Token: 0x040082F2 RID: 33522
+	// Token: 0x04008430 RID: 33840
 	private readonly int AnimeTime = ConfigCommonParamById.GetIntConfig("ExpDisplayTime").Value;
 
-	// Token: 0x040082F3 RID: 33523
+	// Token: 0x04008431 RID: 33841
 	private readonly Rotator CurrentRotator = Rotator.Create();
 
-	// Token: 0x02008798 RID: 34712
+	// Token: 0x02007921 RID: 31009
 	[NullableContext(0)]
 	private class EChildType
 	{
-		// Token: 0x0402C126 RID: 180518
+		// Token: 0x0402743E RID: 160830
 		public const int LevelTxt = 0;
 
-		// Token: 0x0402C127 RID: 180519
+		// Token: 0x0402743F RID: 160831
 		public const int BarExp = 1;
 
-		// Token: 0x0402C128 RID: 180520
+		// Token: 0x04027440 RID: 160832
 		public const int ArrowItem = 2;
 
-		// Token: 0x0402C129 RID: 180521
+		// Token: 0x04027441 RID: 160833
 		public const int ExpUpItem = 3;
 
-		// Token: 0x0402C12A RID: 180522
+		// Token: 0x04027442 RID: 160834
 		public const int LevelUpItem = 4;
 	}
 }

@@ -10,19 +10,19 @@ using CSharpScript.Game.Module.Map.MapDefine;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200265F RID: 9823
+// Token: 0x02001B4A RID: 6986
 [NullableContext(1)]
 [Nullable(0)]
 public class QuestItem : UiPanelBase
 {
-	// Token: 0x06014195 RID: 82325 RVA: 0x00511330 File Offset: 0x0050F530
+	// Token: 0x06011677 RID: 71287 RVA: 0x0051FFE8 File Offset: 0x0051E1E8
 	[NullableContext(2)]
 	public QuestItem(TQuestItemSelectHandle toggleSelectHandle)
 	{
 		this.ToggleSelectHandle = toggleSelectHandle;
 	}
 
-	// Token: 0x06014196 RID: 82326 RVA: 0x00511340 File Offset: 0x0050F540
+	// Token: 0x06011678 RID: 71288 RVA: 0x0051FFF8 File Offset: 0x0051E1F8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 17;
@@ -66,7 +66,7 @@ public class QuestItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06014197 RID: 82327 RVA: 0x005115A4 File Offset: 0x0050F7A4
+	// Token: 0x06011679 RID: 71289 RVA: 0x0052025C File Offset: 0x0051E45C
 	protected override void OnStart()
 	{
 		this.ToggleSpriteComponent = (base.GetItem(7).GetOwner().GetComponentByClass(UUIExtendToggleSpriteTransition.StaticClass()) as UUIExtendToggleSpriteTransition);
@@ -80,7 +80,7 @@ public class QuestItem : UiPanelBase
 		extendToggle.SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x06014198 RID: 82328 RVA: 0x0051161C File Offset: 0x0050F81C
+	// Token: 0x0601167A RID: 71290 RVA: 0x005202D4 File Offset: 0x0051E4D4
 	public void OnTick(float delta)
 	{
 		if (this.QuestId == 0)
@@ -95,7 +95,7 @@ public class QuestItem : UiPanelBase
 		this.TickTime += delta;
 	}
 
-	// Token: 0x06014199 RID: 82329 RVA: 0x0051166C File Offset: 0x0050F86C
+	// Token: 0x0601167B RID: 71291 RVA: 0x00520324 File Offset: 0x0051E524
 	public void UpdateItem(int inQuestId, int inQuestType)
 	{
 		this.QuestId = inQuestId;
@@ -132,7 +132,7 @@ public class QuestItem : UiPanelBase
 		RedDotController.Instance.BindRedDot(ERedDotName.QuestViewItem, base.GetItem(6), null, this.QuestId);
 	}
 
-	// Token: 0x0601419A RID: 82330 RVA: 0x0051176A File Offset: 0x0050F96A
+	// Token: 0x0601167C RID: 71292 RVA: 0x00520422 File Offset: 0x0051E622
 	public void SetActiveItem(bool value)
 	{
 		this.SetActive(value);
@@ -142,7 +142,7 @@ public class QuestItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0601419B RID: 82331 RVA: 0x00511784 File Offset: 0x0050F984
+	// Token: 0x0601167D RID: 71293 RVA: 0x0052043C File Offset: 0x0051E63C
 	private void SetColorSprite(TQuest quest)
 	{
 		string questTypeColor = QuestNewConfig.Instance.GetQuestTypeColor((int)quest.Type);
@@ -156,7 +156,7 @@ public class QuestItem : UiPanelBase
 		sprite.SetColor(FColor.FromHex(questTypeColor));
 	}
 
-	// Token: 0x0601419C RID: 82332 RVA: 0x005117D0 File Offset: 0x0050F9D0
+	// Token: 0x0601167E RID: 71294 RVA: 0x00520488 File Offset: 0x0051E688
 	private void SetCircleSprite(TQuest quest)
 	{
 		UUISprite sprite = base.GetSprite(15);
@@ -175,7 +175,7 @@ public class QuestItem : UiPanelBase
 		sprite.SetColor(FColor.FromHex(questMainTypeCircleColor));
 	}
 
-	// Token: 0x0601419D RID: 82333 RVA: 0x00511834 File Offset: 0x0050FA34
+	// Token: 0x0601167F RID: 71295 RVA: 0x005204EC File Offset: 0x0051E6EC
 	private void SetLockIcon()
 	{
 		string questLockIconPath = QuestNewModel.Instance.GetQuestLockIconPath(this.QuestId);
@@ -197,13 +197,13 @@ public class QuestItem : UiPanelBase
 		sprite.SetUIActive(true);
 	}
 
-	// Token: 0x0601419E RID: 82334 RVA: 0x005118D0 File Offset: 0x0050FAD0
+	// Token: 0x06011680 RID: 71296 RVA: 0x00520588 File Offset: 0x0051E788
 	private void SetTrackIcon(global::Quest quest)
 	{
 		this.SetSpriteByPath(QuestNewConfig.Instance.GetQuestTypeMark(quest.QuestMarkId), base.GetSprite(0), false, null, null);
 	}
 
-	// Token: 0x0601419F RID: 82335 RVA: 0x00511908 File Offset: 0x0050FB08
+	// Token: 0x06011681 RID: 71297 RVA: 0x005205C0 File Offset: 0x0051E7C0
 	private void SetTrackBgSprite()
 	{
 		UUISprite sprite = base.GetSprite(16);
@@ -223,7 +223,7 @@ public class QuestItem : UiPanelBase
 		sprite.SetColor(FColor.FromHex(questMainTypeTrackBgColor));
 	}
 
-	// Token: 0x060141A0 RID: 82336 RVA: 0x00511970 File Offset: 0x0050FB70
+	// Token: 0x06011682 RID: 71298 RVA: 0x00520628 File Offset: 0x0051E828
 	public void UpdateTrackIconActive()
 	{
 		EToggleState toggleState = base.GetExtendToggle(4).ToggleState;
@@ -236,7 +236,7 @@ public class QuestItem : UiPanelBase
 		this.SetTrackBgSprite();
 	}
 
-	// Token: 0x060141A1 RID: 82337 RVA: 0x005119E0 File Offset: 0x0050FBE0
+	// Token: 0x06011683 RID: 71299 RVA: 0x00520698 File Offset: 0x0051E898
 	private void UpdateToggle()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(4);
@@ -244,7 +244,7 @@ public class QuestItem : UiPanelBase
 		extendToggle.OnStateChange.Add(new Action<EToggleState>(this.OnToggleStateChange));
 	}
 
-	// Token: 0x060141A2 RID: 82338 RVA: 0x00511A0A File Offset: 0x0050FC0A
+	// Token: 0x06011684 RID: 71300 RVA: 0x005206C2 File Offset: 0x0051E8C2
 	private void OnToggleStateChange(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -253,13 +253,13 @@ public class QuestItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060141A3 RID: 82339 RVA: 0x00511A21 File Offset: 0x0050FC21
+	// Token: 0x06011685 RID: 71301 RVA: 0x005206D9 File Offset: 0x0051E8D9
 	private void UpdateQuestName(global::Quest quest)
 	{
 		base.GetText(2).SetText(quest.Name, true);
 	}
 
-	// Token: 0x060141A4 RID: 82340 RVA: 0x00511A38 File Offset: 0x0050FC38
+	// Token: 0x06011686 RID: 71302 RVA: 0x005206F0 File Offset: 0x0051E8F0
 	private void UpdateDistance(global::Quest quest)
 	{
 		UUIText text = base.GetText(3);
@@ -305,7 +305,7 @@ public class QuestItem : UiPanelBase
 		text.SetUIActive(false);
 	}
 
-	// Token: 0x060141A5 RID: 82341 RVA: 0x00511B54 File Offset: 0x0050FD54
+	// Token: 0x06011687 RID: 71303 RVA: 0x0052080C File Offset: 0x0051EA0C
 	public void UpdateFunctionIcon(global::Quest quest)
 	{
 		UUITexture texture = base.GetTexture(8);
@@ -346,7 +346,7 @@ public class QuestItem : UiPanelBase
 		sprite.SetUIActive(false);
 	}
 
-	// Token: 0x060141A6 RID: 82342 RVA: 0x00511C84 File Offset: 0x0050FE84
+	// Token: 0x06011688 RID: 71304 RVA: 0x0052093C File Offset: 0x0051EB3C
 	private void SetConditionText(global::Quest quest)
 	{
 		QuestNewModel instance = QuestNewModel.Instance;
@@ -421,7 +421,7 @@ public class QuestItem : UiPanelBase
 		text.SetUIActive(false);
 	}
 
-	// Token: 0x060141A7 RID: 82343 RVA: 0x00511EE4 File Offset: 0x005100E4
+	// Token: 0x06011689 RID: 71305 RVA: 0x00520B9C File Offset: 0x0051ED9C
 	private void UpdateCountDownText(int questId, bool bSendEvent)
 	{
 		if (!this.IsNeedCountDown)
@@ -488,7 +488,7 @@ public class QuestItem : UiPanelBase
 		text.SetText(activityGuideQuestRemainTimeText, true);
 	}
 
-	// Token: 0x060141A8 RID: 82344 RVA: 0x0051202C File Offset: 0x0051022C
+	// Token: 0x0601168A RID: 71306 RVA: 0x00520CE4 File Offset: 0x0051EEE4
 	private unsafe void SetQuestTag(global::Quest quest)
 	{
 		QuestItem.<>c__DisplayClass29_0 CS$<>8__locals1 = new QuestItem.<>c__DisplayClass29_0();
@@ -539,7 +539,7 @@ public class QuestItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060141A9 RID: 82345 RVA: 0x00512190 File Offset: 0x00510390
+	// Token: 0x0601168B RID: 71307 RVA: 0x00520E48 File Offset: 0x0051F048
 	private bool IsOnlineDisabledByQuestId(int questId)
 	{
 		IReadOnlyDictionary<DisableOnlineSource, EDisableOnlineType> onlineDisabledSource = OnlineModel.Instance.GetOnlineDisabledSource();
@@ -561,7 +561,7 @@ public class QuestItem : UiPanelBase
 		return false;
 	}
 
-	// Token: 0x060141AA RID: 82346 RVA: 0x0051220C File Offset: 0x0051040C
+	// Token: 0x0601168C RID: 71308 RVA: 0x00520EC4 File Offset: 0x0051F0C4
 	public void SetSelected(bool value)
 	{
 		EToggleState state = value ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
@@ -573,7 +573,7 @@ public class QuestItem : UiPanelBase
 		this.RefreshYellowItemShowState(state);
 	}
 
-	// Token: 0x060141AB RID: 82347 RVA: 0x00512244 File Offset: 0x00510444
+	// Token: 0x0601168D RID: 71309 RVA: 0x00520EFC File Offset: 0x0051F0FC
 	private void RefreshYellowItemShowState(EToggleState state)
 	{
 		UUIItem item = base.GetItem(7);
@@ -608,7 +608,7 @@ public class QuestItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060141AC RID: 82348 RVA: 0x005122D8 File Offset: 0x005104D8
+	// Token: 0x0601168E RID: 71310 RVA: 0x00520F90 File Offset: 0x0051F190
 	public void SetNotAllowNoneSelect()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(4);
@@ -620,105 +620,105 @@ public class QuestItem : UiPanelBase
 		uuiitem.SetRaycastTarget(extendToggle.ToggleState != EToggleState.ETT_Checked);
 	}
 
-	// Token: 0x060141AD RID: 82349 RVA: 0x00512311 File Offset: 0x00510511
+	// Token: 0x0601168F RID: 71311 RVA: 0x00520FC9 File Offset: 0x0051F1C9
 	private void ClickHandle()
 	{
 		EventSystem.Instance.Emit<int, bool>(EEventName.UpdateQuestDetails, this.QuestId, true);
 	}
 
-	// Token: 0x060141AE RID: 82350 RVA: 0x0051232A File Offset: 0x0051052A
+	// Token: 0x06011690 RID: 71312 RVA: 0x00520FE2 File Offset: 0x0051F1E2
 	public UUIItem GetTaskToggleItem()
 	{
 		return base.GetExtendToggle(4).RootUIComp;
 	}
 
-	// Token: 0x060141AF RID: 82351 RVA: 0x0051233D File Offset: 0x0051053D
+	// Token: 0x06011691 RID: 71313 RVA: 0x00520FF5 File Offset: 0x0051F1F5
 	protected override void OnBeforeDestroy()
 	{
 	}
 
-	// Token: 0x04009782 RID: 38786
+	// Token: 0x040098DA RID: 39130
 	private const int TICK_INTERVAL = 1000;
 
-	// Token: 0x04009783 RID: 38787
+	// Token: 0x040098DB RID: 39131
 	private const int ONLINE_LIMIT_TAG_ID = 9;
 
-	// Token: 0x04009784 RID: 38788
+	// Token: 0x040098DC RID: 39132
 	public int QuestId;
 
-	// Token: 0x04009785 RID: 38789
+	// Token: 0x040098DD RID: 39133
 	public long TreeId;
 
-	// Token: 0x04009786 RID: 38790
+	// Token: 0x040098DE RID: 39134
 	public int QuestType;
 
-	// Token: 0x04009787 RID: 38791
+	// Token: 0x040098DF RID: 39135
 	private bool IsNeedCountDown;
 
-	// Token: 0x04009788 RID: 38792
+	// Token: 0x040098E0 RID: 39136
 	private float TickTime;
 
-	// Token: 0x04009789 RID: 38793
+	// Token: 0x040098E1 RID: 39137
 	[Nullable(2)]
 	private readonly TQuestItemSelectHandle ToggleSelectHandle;
 
-	// Token: 0x0400978A RID: 38794
+	// Token: 0x040098E2 RID: 39138
 	[Nullable(2)]
 	private UUIExtendToggleSpriteTransition ToggleSpriteComponent;
 
-	// Token: 0x02008C9A RID: 35994
+	// Token: 0x02007E23 RID: 32291
 	[NullableContext(0)]
 	private class EQuestItemComponent
 	{
-		// Token: 0x0402DA24 RID: 186916
+		// Token: 0x04028D3B RID: 167227
 		public const int TrackIcon = 0;
 
-		// Token: 0x0402DA25 RID: 186917
+		// Token: 0x04028D3C RID: 167228
 		public const int LockIcon = 1;
 
-		// Token: 0x0402DA26 RID: 186918
+		// Token: 0x04028D3D RID: 167229
 		public const int QuestNameText1 = 2;
 
-		// Token: 0x0402DA27 RID: 186919
+		// Token: 0x04028D3E RID: 167230
 		public const int QuestDistanceText1 = 3;
 
-		// Token: 0x0402DA28 RID: 186920
+		// Token: 0x04028D3F RID: 167231
 		public const int Toggle = 4;
 
-		// Token: 0x0402DA29 RID: 186921
+		// Token: 0x04028D40 RID: 167232
 		public const int ColorSprite = 5;
 
-		// Token: 0x0402DA2A RID: 186922
+		// Token: 0x04028D41 RID: 167233
 		public const int RedDot = 6;
 
-		// Token: 0x0402DA2B RID: 186923
+		// Token: 0x04028D42 RID: 167234
 		public const int YellowDot = 7;
 
-		// Token: 0x0402DA2C RID: 186924
+		// Token: 0x04028D43 RID: 167235
 		public const int FunctionIcon = 8;
 
-		// Token: 0x0402DA2D RID: 186925
+		// Token: 0x04028D44 RID: 167236
 		public const int FunctionSpriteIcon = 9;
 
-		// Token: 0x0402DA2E RID: 186926
+		// Token: 0x04028D45 RID: 167237
 		public const int ConditionText = 10;
 
-		// Token: 0x0402DA2F RID: 186927
+		// Token: 0x04028D46 RID: 167238
 		public const int QuestTagRoot = 11;
 
-		// Token: 0x0402DA30 RID: 186928
+		// Token: 0x04028D47 RID: 167239
 		public const int QuestTagBgSprite = 12;
 
-		// Token: 0x0402DA31 RID: 186929
+		// Token: 0x04028D48 RID: 167240
 		public const int QuestTagText = 13;
 
-		// Token: 0x0402DA32 RID: 186930
+		// Token: 0x04028D49 RID: 167241
 		public const int FocusModeSprite = 14;
 
-		// Token: 0x0402DA33 RID: 186931
+		// Token: 0x04028D4A RID: 167242
 		public const int CircleSprite = 15;
 
-		// Token: 0x0402DA34 RID: 186932
+		// Token: 0x04028D4B RID: 167243
 		public const int TrackBgSprite = 16;
 	}
 }

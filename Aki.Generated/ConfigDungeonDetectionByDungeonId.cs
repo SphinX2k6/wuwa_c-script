@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000242 RID: 578
+	// Token: 0x02000256 RID: 598
 	public class ConfigDungeonDetectionByDungeonId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000D90 RID: 3472 RVA: 0x000A630F File Offset: 0x000A450F
+		// Token: 0x06000E08 RID: 3592 RVA: 0x000AC5D3 File Offset: 0x000AA7D3
 		static ConfigDungeonDetectionByDungeonId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDungeonDetectionByDungeonId.CreateStaticDefaultValue), new Action(ConfigDungeonDetectionByDungeonId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000D91 RID: 3473 RVA: 0x000A6330 File Offset: 0x000A4530
+		// Token: 0x06000E09 RID: 3593 RVA: 0x000AC5F4 File Offset: 0x000AA7F4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDungeonDetectionByDungeonId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000D92 RID: 3474 RVA: 0x000A63AF File Offset: 0x000A45AF
+		// Token: 0x06000E0A RID: 3594 RVA: 0x000AC673 File Offset: 0x000AA873
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDungeonDetectionByDungeonId.LogPair = null;
 			ConfigDungeonDetectionByDungeonId.HandleId = 0;
 		}
 
-		// Token: 0x06000D93 RID: 3475 RVA: 0x000A63BD File Offset: 0x000A45BD
+		// Token: 0x06000E0B RID: 3595 RVA: 0x000AC681 File Offset: 0x000AA881
 		public static void Init()
 		{
 			ConfigDungeonDetectionByDungeonId.HandleId = ConfigCommon.InitDataStatement(ConfigDungeonDetectionByDungeonId.HandleId, "db_adventure_detect.db", "select BinData from `DungeonDetection` where DungeonId=?");
 		}
 
-		// Token: 0x06000D94 RID: 3476 RVA: 0x000A63D8 File Offset: 0x000A45D8
+		// Token: 0x06000E0C RID: 3596 RVA: 0x000AC69C File Offset: 0x000AA89C
 		public static DungeonDetection? GetConfig(int p0DungeonId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigDungeonDetectionByDungeonId.HandleId, ConfigDungeonDetectionByDungeonId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new DungeonDetection?(rootAsDungeonDetection);
 		}
 
-		// Token: 0x04000FB2 RID: 4018
+		// Token: 0x0400103E RID: 4158
 		private const string DB = "db_adventure_detect.db";
 
-		// Token: 0x04000FB3 RID: 4019
+		// Token: 0x0400103F RID: 4159
 		private const string FILE = "k.开拓探测.xlsx";
 
-		// Token: 0x04000FB4 RID: 4020
+		// Token: 0x04001040 RID: 4160
 		private const string TABLE = "DungeonDetection";
 
-		// Token: 0x04000FB5 RID: 4021
+		// Token: 0x04001041 RID: 4161
 		private const string COMMAND = "select BinData from `DungeonDetection` where DungeonId=?";
 
-		// Token: 0x04000FB6 RID: 4022
+		// Token: 0x04001042 RID: 4162
 		private const string KEY_PREFIX = "DungeonDetectionByDungeonId";
 
-		// Token: 0x04000FB7 RID: 4023
+		// Token: 0x04001043 RID: 4163
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000FB8 RID: 4024
+		// Token: 0x04001044 RID: 4164
 		private static int HandleId;
 	}
 }

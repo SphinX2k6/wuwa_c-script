@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
@@ -7,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DF0 RID: 24048
+	// Token: 0x02004DD5 RID: 19925
 	public class SpecialEnergyBarLuoselaSlot : SpecialEnergyBarSlot
 	{
-		// Token: 0x0603D21D RID: 250397 RVA: 0x00EB8054 File Offset: 0x00EB6254
+		// Token: 0x060321AC RID: 205228 RVA: 0x00E09594 File Offset: 0x00E07794
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -24,7 +23,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D21E RID: 250398 RVA: 0x00EB80BC File Offset: 0x00EB62BC
+		// Token: 0x060321AD RID: 205229 RVA: 0x00E095FC File Offset: 0x00E077FC
 		[NullableContext(1)]
 		protected override UniTask InitSlotItem(UUIItem slotItem)
 		{
@@ -37,21 +36,11 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitSlotItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D21F RID: 250399 RVA: 0x00EB8108 File Offset: 0x00EB6308
+		// Token: 0x060321AE RID: 205230 RVA: 0x00E09648 File Offset: 0x00E07848
 		public void SwitchPointColor(bool enhanced)
 		{
-			SpecialEnergyBarInfo config = this.Config;
-			string text;
-			if (config == null)
-			{
-				text = null;
-			}
-			else
-			{
-				string[] pointColorList = config.PointColorList;
-				text = ((pointColorList != null) ? pointColorList.ElementAtOrDefault((enhanced > false) ? 1 : 0) : null);
-			}
-			FColor fcolor = FColor.FromHex(text ?? "ffffff");
+			int num = (enhanced > false) ? 1 : 0;
+			FColor fcolor = FColor.FromHex((this.Config != null && num < this.Config.PointColorList.Length) ? this.Config.PointColorList[num] : "ffffff");
 			FLinearColor flinearColor = FLinearColor.FromSRGBColor(fcolor);
 			foreach (SpecialEnergyBarSlotItem specialEnergyBarSlotItem in this.SlotItemList)
 			{
@@ -61,7 +50,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D220 RID: 250400 RVA: 0x00EB81A4 File Offset: 0x00EB63A4
+		// Token: 0x060321AF RID: 205231 RVA: 0x00E096EC File Offset: 0x00E078EC
 		[NullableContext(2)]
 		public void SwitchKeyItem(SpecialEnergyBarInfo cfg)
 		{
@@ -82,7 +71,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D221 RID: 250401 RVA: 0x00EB81E0 File Offset: 0x00EB63E0
+		// Token: 0x060321B0 RID: 205232 RVA: 0x00E09728 File Offset: 0x00E07928
 		public void SetSlotUlt(bool b)
 		{
 			if (this.IsUlt == b)
@@ -101,16 +90,16 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshBarPercent(false);
 		}
 
-		// Token: 0x0603D222 RID: 250402 RVA: 0x00EB8244 File Offset: 0x00EB6444
+		// Token: 0x060321B1 RID: 205233 RVA: 0x00E0978C File Offset: 0x00E0798C
 		public void SetSlotPoint(int pointIndex)
 		{
 			this.PointIndex = pointIndex;
 		}
 
-		// Token: 0x0401FDDE RID: 130526
+		// Token: 0x0401A8A5 RID: 108709
 		private bool IsUlt;
 
-		// Token: 0x0401FDDF RID: 130527
+		// Token: 0x0401A8A6 RID: 108710
 		private int PointIndex;
 	}
 }

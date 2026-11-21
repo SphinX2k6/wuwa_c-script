@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001838 RID: 6200
+	// Token: 0x02000383 RID: 899
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/KuroFauxPhysics.ETrackMethod")]
 	public enum ETrackMethod : byte
 	{
-		// Token: 0x0400C6DA RID: 50906
+		// Token: 0x0400258B RID: 9611
 		Prediction,
-		// Token: 0x0400C6DB RID: 50907
+		// Token: 0x0400258C RID: 9612
 		SolvingEquations,
-		// Token: 0x0400C6DC RID: 50908
+		// Token: 0x0400258D RID: 9613
 		Custom,
-		// Token: 0x0400C6DD RID: 50909
+		// Token: 0x0400258E RID: 9614
 		ETrackMethod_MAX
 	}
 }

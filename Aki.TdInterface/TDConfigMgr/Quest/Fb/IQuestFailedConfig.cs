@@ -1,15 +1,13 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200143F RID: 5183
+	// Token: 0x02001597 RID: 5527
 	public class IQuestFailedConfig
 	{
-		// Token: 0x060075DD RID: 30173 RVA: 0x0011989E File Offset: 0x00117A9E
-		[NullableContext(1)]
+		// Token: 0x06007CA4 RID: 31908 RVA: 0x001282F9 File Offset: 0x001264F9
 		public static IQuestFailedConfig Create(IQuestFailedConfig? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002732 RID: 10034
-		// (get) Token: 0x060075DE RID: 30174 RVA: 0x001198C0 File Offset: 0x00117AC0
+		// Token: 0x17002918 RID: 10520
+		// (get) Token: 0x06007CA5 RID: 31909 RVA: 0x00128318 File Offset: 0x00126518
 		public virtual EOnlineParticipateRule? OnlineParticipateRule
 		{
 			get
@@ -36,7 +34,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400445F RID: 17503
+		// Token: 0x040047F3 RID: 18419
 		private IQuestFailedConfig Instance;
 	}
 }

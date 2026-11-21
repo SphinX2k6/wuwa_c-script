@@ -4,10 +4,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Util
 {
-	// Token: 0x02006850 RID: 26704
+	// Token: 0x020057A0 RID: 22432
 	public class DangoBrawlBattleUtil
 	{
-		// Token: 0x06042AAF RID: 273071 RVA: 0x01036C28 File Offset: 0x01034E28
+		// Token: 0x06037604 RID: 226820 RVA: 0x00F78174 File Offset: 0x00F76374
 		[NullableContext(1)]
 		public static void ShowUiDamageText(int uiDamageConfigId, UUIItem targetUiItem, bool isSelf, int value, bool isCrit, bool isCure, FVector2D? offset = null)
 		{

@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020003AB RID: 939
+	// Token: 0x020003C1 RID: 961
 	public class ConfigGongduolaPassengerVoiceConfigByRoleIdAndTriggerType : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001609 RID: 5641 RVA: 0x000D6138 File Offset: 0x000D4338
+		// Token: 0x0600168D RID: 5773 RVA: 0x000DC88C File Offset: 0x000DAA8C
 		static ConfigGongduolaPassengerVoiceConfigByRoleIdAndTriggerType()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigGongduolaPassengerVoiceConfigByRoleIdAndTriggerType.CreateStaticDefaultValue), new Action(ConfigGongduolaPassengerVoiceConfigByRoleIdAndTriggerType.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600160A RID: 5642 RVA: 0x000D6158 File Offset: 0x000D4358
+		// Token: 0x0600168E RID: 5774 RVA: 0x000DC8AC File Offset: 0x000DAAAC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigGongduolaPassengerVoiceConfigByRoleIdAndTriggerType.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600160B RID: 5643 RVA: 0x000D61D7 File Offset: 0x000D43D7
+		// Token: 0x0600168F RID: 5775 RVA: 0x000DC92B File Offset: 0x000DAB2B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigGongduolaPassengerVoiceConfigByRoleIdAndTriggerType.LogPair = null;
 			ConfigGongduolaPassengerVoiceConfigByRoleIdAndTriggerType.HandleId = 0;
 		}
 
-		// Token: 0x0600160C RID: 5644 RVA: 0x000D61E5 File Offset: 0x000D43E5
+		// Token: 0x06001690 RID: 5776 RVA: 0x000DC939 File Offset: 0x000DAB39
 		public static void Init()
 		{
 			ConfigGongduolaPassengerVoiceConfigByRoleIdAndTriggerType.HandleId = ConfigCommon.InitDataStatement(ConfigGongduolaPassengerVoiceConfigByRoleIdAndTriggerType.HandleId, "db_gongduolapassengervoiceconfig.db", "select BinData from `GongduolaPassengerVoiceConfig` where RoleId=? And TriggerType=?");
 		}
 
-		// Token: 0x0600160D RID: 5645 RVA: 0x000D6200 File Offset: 0x000D4400
+		// Token: 0x06001691 RID: 5777 RVA: 0x000DC954 File Offset: 0x000DAB54
 		[NullableContext(2)]
 		public static IReadOnlyList<GongduolaPassengerVoiceConfig> GetConfigList(int p0RoleId, int p1TriggerType, bool useCache = true)
 		{
@@ -99,22 +99,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04001991 RID: 6545
+		// Token: 0x04001A2B RID: 6699
 		private const string DB = "db_gongduolapassengervoiceconfig.db";
 
-		// Token: 0x04001992 RID: 6546
+		// Token: 0x04001A2C RID: 6700
 		private const string FILE = "k.可视化编辑/c.Csv/g.贡多拉共乘角色语音配置/*.csv*";
 
-		// Token: 0x04001993 RID: 6547
+		// Token: 0x04001A2D RID: 6701
 		private const string TABLE = "GongduolaPassengerVoiceConfig";
 
-		// Token: 0x04001994 RID: 6548
+		// Token: 0x04001A2E RID: 6702
 		private const string COMMAND = "select BinData from `GongduolaPassengerVoiceConfig` where RoleId=? And TriggerType=?";
 
-		// Token: 0x04001995 RID: 6549
+		// Token: 0x04001A2F RID: 6703
 		private const string KEY_PREFIX = "GongduolaPassengerVoiceConfigByRoleIdAndTriggerType";
 
-		// Token: 0x04001996 RID: 6550
+		// Token: 0x04001A30 RID: 6704
 		[Nullable(new byte[]
 		{
 			2,
@@ -124,7 +124,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001997 RID: 6551
+		// Token: 0x04001A31 RID: 6705
 		private static int HandleId;
 	}
 }

@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D04 RID: 23812
+	// Token: 0x02004CE6 RID: 19686
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class BossBuffNumItem : BattleVisibleChildView
 	{
-		// Token: 0x0603C4E1 RID: 247009 RVA: 0x00E71858 File Offset: 0x00E6FA58
+		// Token: 0x0603143A RID: 201786 RVA: 0x00DC1EC0 File Offset: 0x00DC00C0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C4E2 RID: 247010 RVA: 0x00E718A0 File Offset: 0x00E6FAA0
+		// Token: 0x0603143B RID: 201787 RVA: 0x00DC1F08 File Offset: 0x00DC0108
 		protected override void OnStart()
 		{
 			base.InitChildType(EBattleUiChild.RoleState);
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SequencePlayer = new LevelSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x0603C4E3 RID: 247011 RVA: 0x00E718C8 File Offset: 0x00E6FAC8
+		// Token: 0x0603143C RID: 201788 RVA: 0x00DC1F30 File Offset: 0x00DC0130
 		protected override void OnBeforeDestroy()
 		{
 			this.Buff = null;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.OnBeforeDestroy();
 		}
 
-		// Token: 0x0603C4E4 RID: 247012 RVA: 0x00E71908 File Offset: 0x00E6FB08
+		// Token: 0x0603143D RID: 201789 RVA: 0x00DC1F70 File Offset: 0x00DC0170
 		public override void Reset()
 		{
 			this.Buff = null;
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.Reset();
 		}
 
-		// Token: 0x0603C4E5 RID: 247013 RVA: 0x00E7196E File Offset: 0x00E6FB6E
+		// Token: 0x0603143E RID: 201790 RVA: 0x00DC1FD6 File Offset: 0x00DC01D6
 		public void SetBuffFinder([Nullable(new byte[]
 		{
 			1,
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BuffFinder = finder;
 		}
 
-		// Token: 0x0603C4E6 RID: 247014 RVA: 0x00E71977 File Offset: 0x00E6FB77
+		// Token: 0x0603143F RID: 201791 RVA: 0x00DC1FDF File Offset: 0x00DC01DF
 		public void OnCueChanged(int handleId, int entityId, EBossBuffNumMode mode, bool isAdd)
 		{
 			if (isAdd)
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshDisplay();
 		}
 
-		// Token: 0x0603C4E7 RID: 247015 RVA: 0x00E71996 File Offset: 0x00E6FB96
+		// Token: 0x06031440 RID: 201792 RVA: 0x00DC1FFE File Offset: 0x00DC01FE
 		public void Tick(float delta)
 		{
 			if (this.Buff == null)
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshStackCount();
 		}
 
-		// Token: 0x0603C4E8 RID: 247016 RVA: 0x00E719B8 File Offset: 0x00E6FBB8
+		// Token: 0x06031441 RID: 201793 RVA: 0x00DC2020 File Offset: 0x00DC0220
 		private void AddCue(int handleId, int entityId, EBossBuffNumMode mode)
 		{
 			if (mode == EBossBuffNumMode.PresenceMode)
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C4E9 RID: 247017 RVA: 0x00E71B80 File Offset: 0x00E6FD80
+		// Token: 0x06031442 RID: 201794 RVA: 0x00DC21E8 File Offset: 0x00DC03E8
 		private void RemoveCue(int handleId, EBossBuffNumMode mode)
 		{
 			if (mode == EBossBuffNumMode.PresenceMode)
@@ -231,7 +231,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C4EA RID: 247018 RVA: 0x00E71D60 File Offset: 0x00E6FF60
+		// Token: 0x06031443 RID: 201795 RVA: 0x00DC23C8 File Offset: 0x00DC05C8
 		private void RefreshDisplay()
 		{
 			BossBuffNumItem.CueInfo? stackCue = this.StackCue;
@@ -256,7 +256,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.PlaySequence("Start");
 		}
 
-		// Token: 0x0603C4EB RID: 247019 RVA: 0x00E71E00 File Offset: 0x00E70000
+		// Token: 0x06031444 RID: 201796 RVA: 0x00DC2468 File Offset: 0x00DC0668
 		private void TryResolvePendingBuff()
 		{
 			BossBuffNumItem.CueInfo? stackCue = this.StackCue;
@@ -275,7 +275,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C4EC RID: 247020 RVA: 0x00E71E84 File Offset: 0x00E70084
+		// Token: 0x06031445 RID: 201797 RVA: 0x00DC24EC File Offset: 0x00DC06EC
 		[NullableContext(1)]
 		private void ApplyBuffDisplay(IActiveBuff buff)
 		{
@@ -298,7 +298,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ShowBattleVisibleChildView(false);
 		}
 
-		// Token: 0x0603C4ED RID: 247021 RVA: 0x00E71EF7 File Offset: 0x00E700F7
+		// Token: 0x06031446 RID: 201798 RVA: 0x00DC255F File Offset: 0x00DC075F
 		private void Deactivate()
 		{
 			this.Buff = null;
@@ -311,7 +311,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.HideBattleVisibleChildView();
 		}
 
-		// Token: 0x0603C4EE RID: 247022 RVA: 0x00E71F28 File Offset: 0x00E70128
+		// Token: 0x06031447 RID: 201799 RVA: 0x00DC2590 File Offset: 0x00DC0790
 		private void SetNumText(int num)
 		{
 			if (this.NumText != null)
@@ -320,7 +320,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C4EF RID: 247023 RVA: 0x00E71F50 File Offset: 0x00E70150
+		// Token: 0x06031448 RID: 201800 RVA: 0x00DC25B8 File Offset: 0x00DC07B8
 		private void RefreshStackCount()
 		{
 			if (this.Buff == null)
@@ -334,7 +334,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C4F0 RID: 247024 RVA: 0x00E71F88 File Offset: 0x00E70188
+		// Token: 0x06031449 RID: 201801 RVA: 0x00DC25F0 File Offset: 0x00DC07F0
 		private void ApplyNumChange(int oldNum, int newNum)
 		{
 			this.SetNumText(newNum);
@@ -364,7 +364,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C4F1 RID: 247025 RVA: 0x00E72010 File Offset: 0x00E70210
+		// Token: 0x0603144A RID: 201802 RVA: 0x00DC2678 File Offset: 0x00DC0878
 		private void PlayStatusTransition(EStatusPanel from, EStatusPanel to)
 		{
 			string statusTransitionSequence = BossBuffNumItem.GetStatusTransitionSequence(from, to);
@@ -401,7 +401,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.PlaySequence(statusTransitionSequence);
 		}
 
-		// Token: 0x0603C4F2 RID: 247026 RVA: 0x00E720E3 File Offset: 0x00E702E3
+		// Token: 0x0603144B RID: 201803 RVA: 0x00DC274B File Offset: 0x00DC094B
 		private static string GetStatusTransitionSequence(EStatusPanel from, EStatusPanel to)
 		{
 			if (from == EStatusPanel.Inactive && to == EStatusPanel.Active)
@@ -419,7 +419,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return null;
 		}
 
-		// Token: 0x0603C4F3 RID: 247027 RVA: 0x00E7210E File Offset: 0x00E7030E
+		// Token: 0x0603144C RID: 201804 RVA: 0x00DC2776 File Offset: 0x00DC0976
 		private static EStatusPanel CalculateStatusPanel(int num, int maxStack)
 		{
 			if (num >= maxStack && maxStack > 0)
@@ -433,7 +433,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return EStatusPanel.Inactive;
 		}
 
-		// Token: 0x0603C4F4 RID: 247028 RVA: 0x00E72124 File Offset: 0x00E70324
+		// Token: 0x0603144D RID: 201805 RVA: 0x00DC278C File Offset: 0x00DC098C
 		[NullableContext(1)]
 		private void PlaySequence(string sequenceName)
 		{
@@ -445,59 +445,59 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			sequencePlayer.PlayLevelSequenceByName(sequenceName, false, null, false);
 		}
 
-		// Token: 0x0401F6BA RID: 128698
+		// Token: 0x0401A173 RID: 106867
 		private UUIText NumText;
 
-		// Token: 0x0401F6BB RID: 128699
+		// Token: 0x0401A174 RID: 106868
 		private IActiveBuff Buff;
 
-		// Token: 0x0401F6BC RID: 128700
+		// Token: 0x0401A175 RID: 106869
 		private int CurrentNum;
 
-		// Token: 0x0401F6BD RID: 128701
+		// Token: 0x0401A176 RID: 106870
 		private EStatusPanel CurrentStatusPanel = EStatusPanel.None;
 
-		// Token: 0x0401F6BE RID: 128702
+		// Token: 0x0401A177 RID: 106871
 		private EBossBuffNumMode Mode;
 
-		// Token: 0x0401F6BF RID: 128703
+		// Token: 0x0401A178 RID: 106872
 		private Func<int, int, IActiveBuff> BuffFinder;
 
-		// Token: 0x0401F6C0 RID: 128704
+		// Token: 0x0401A179 RID: 106873
 		private LevelSequencePlayer SequencePlayer;
 
-		// Token: 0x0401F6C1 RID: 128705
+		// Token: 0x0401A17A RID: 106874
 		private string LastStatusSequence;
 
-		// Token: 0x0401F6C2 RID: 128706
+		// Token: 0x0401A17B RID: 106875
 		private BossBuffNumItem.CueInfo? PresenceCue;
 
-		// Token: 0x0401F6C3 RID: 128707
+		// Token: 0x0401A17C RID: 106876
 		private BossBuffNumItem.CueInfo? StackCue;
 
-		// Token: 0x0200BF77 RID: 49015
+		// Token: 0x0200A97D RID: 43389
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x04039BD3 RID: 236499
+			// Token: 0x04034595 RID: 214421
 			NumText
 		}
 
-		// Token: 0x0200BF78 RID: 49016
+		// Token: 0x0200A97E RID: 43390
 		[NullableContext(0)]
 		private readonly struct CueInfo
 		{
-			// Token: 0x060501E3 RID: 328163 RVA: 0x0157E65E File Offset: 0x0157C85E
+			// Token: 0x06046726 RID: 288550 RVA: 0x015379F6 File Offset: 0x01535BF6
 			public CueInfo(int entityId, int handleId)
 			{
 				this.EntityId = entityId;
 				this.HandleId = handleId;
 			}
 
-			// Token: 0x04039BD4 RID: 236500
+			// Token: 0x04034596 RID: 214422
 			public readonly int EntityId;
 
-			// Token: 0x04039BD5 RID: 236501
+			// Token: 0x04034597 RID: 214423
 			public readonly int HandleId;
 		}
 	}

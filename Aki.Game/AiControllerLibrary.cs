@@ -12,13 +12,13 @@ using UnrealEngine.Extension;
 [Nullable(0)]
 public class AiControllerLibrary : IStaticVariableResetter
 {
-	// Token: 0x06000D28 RID: 3368 RVA: 0x000472A9 File Offset: 0x000454A9
+	// Token: 0x06000D2E RID: 3374 RVA: 0x00047E45 File Offset: 0x00046045
 	static AiControllerLibrary()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(AiControllerLibrary.CreateStaticDefaultValue), new Action(AiControllerLibrary.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06000D29 RID: 3369 RVA: 0x000472C8 File Offset: 0x000454C8
+	// Token: 0x06000D2F RID: 3375 RVA: 0x00047E64 File Offset: 0x00046064
 	public static void CreateStaticDefaultValue()
 	{
 		AiControllerLibrary.defaultBlockHalfExtent = new FVectorDouble(1.0, 1.0, 500.0);
@@ -26,7 +26,7 @@ public class AiControllerLibrary : IStaticVariableResetter
 		AiControllerLibrary.TempVector2 = Vector.Create();
 	}
 
-	// Token: 0x06000D2A RID: 3370 RVA: 0x00047303 File Offset: 0x00045503
+	// Token: 0x06000D30 RID: 3376 RVA: 0x00047E9F File Offset: 0x0004609F
 	public static void ResetStaticDefaultValue()
 	{
 		AiControllerLibrary.defaultBlockHalfExtent = FVectorDouble.ZeroVector;
@@ -34,7 +34,7 @@ public class AiControllerLibrary : IStaticVariableResetter
 		AiControllerLibrary.TempVector2 = null;
 	}
 
-	// Token: 0x06000D2B RID: 3371 RVA: 0x0004731C File Offset: 0x0004551C
+	// Token: 0x06000D31 RID: 3377 RVA: 0x00047EB8 File Offset: 0x000460B8
 	private static ANavigationData GetNavDataVer35OpenHarmonyBugFix(UObject aiController)
 	{
 		if (Info.Instance.PlatformType == ESourcePlatformType.OpenHarmony && GameModeModel.Instance.MapId == 909)
@@ -60,7 +60,7 @@ public class AiControllerLibrary : IStaticVariableResetter
 		return null;
 	}
 
-	// Token: 0x06000D2C RID: 3372 RVA: 0x000473EC File Offset: 0x000455EC
+	// Token: 0x06000D32 RID: 3378 RVA: 0x00047F88 File Offset: 0x00046188
 	public static bool NavigationFindPath(UObject aiController, FVectorDouble from, FVectorDouble to, [Nullable(new byte[]
 	{
 		2,
@@ -134,7 +134,7 @@ public class AiControllerLibrary : IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x06000D2D RID: 3373 RVA: 0x0004758C File Offset: 0x0004578C
+	// Token: 0x06000D33 RID: 3379 RVA: 0x00048128 File Offset: 0x00046328
 	public static double GetPathLength(FVectorDouble origin, List<Vector> result)
 	{
 		if (result.Count == 0)
@@ -151,7 +151,7 @@ public class AiControllerLibrary : IStaticVariableResetter
 		return num;
 	}
 
-	// Token: 0x06000D2E RID: 3374 RVA: 0x00047600 File Offset: 0x00045800
+	// Token: 0x06000D34 RID: 3380 RVA: 0x0004819C File Offset: 0x0004639C
 	public static bool NavigationBlock(AAIController tsAi, Vector from, Vector to, bool returnFalseOnUnNav = true)
 	{
 		TsAiController tsAiController = tsAi as TsAiController;
@@ -191,7 +191,7 @@ public class AiControllerLibrary : IStaticVariableResetter
 		return !UNavigationSystemV1.D_IsStraightReachable(tsAi, fvectorDouble, fvectorDouble3, navDataVer35OpenHarmonyBugFix, default(TSubclassOf<UNavigationQueryFilter>), AiControllerLibrary.defaultBlockHalfExtent);
 	}
 
-	// Token: 0x06000D2F RID: 3375 RVA: 0x000476BC File Offset: 0x000458BC
+	// Token: 0x06000D35 RID: 3381 RVA: 0x00048258 File Offset: 0x00046458
 	public static bool NavigationBlockDirection(AAIController tsAi, Vector from, Vector direct, float length = 100f, bool returnFalseOnUnNav = true)
 	{
 		EMovementMode emovementMode = tsAi.Character.CharacterMovement.MovementMode;
@@ -204,15 +204,15 @@ public class AiControllerLibrary : IStaticVariableResetter
 		return AiControllerLibrary.NavigationBlock(tsAi, from, AiControllerLibrary.TempVector, returnFalseOnUnNav);
 	}
 
-	// Token: 0x06000D30 RID: 3376 RVA: 0x00047711 File Offset: 0x00045911
-	public static bool NavigationBlockDirectionE(AAIController tsAi, Vector from, Vector forward, global::EMoveDirection direct, float length = 100f, bool returnFalseOnUnNav = true)
+	// Token: 0x06000D36 RID: 3382 RVA: 0x000482AD File Offset: 0x000464AD
+	public static bool NavigationBlockDirectionE(AAIController tsAi, Vector from, Vector forward, EMoveDirection direct, float length = 100f, bool returnFalseOnUnNav = true)
 	{
 		AiControllerLibrary.GetDirectionVector(tsAi, forward, direct, AiControllerLibrary.TempVector2);
 		return AiControllerLibrary.NavigationBlockDirection(tsAi, from, AiControllerLibrary.TempVector2, length, returnFalseOnUnNav);
 	}
 
-	// Token: 0x06000D31 RID: 3377 RVA: 0x00047730 File Offset: 0x00045930
-	public static void GetDirectionVector(AAIController tsAi, Vector forwardDirect, global::EMoveDirection moveDir, Vector outVector)
+	// Token: 0x06000D37 RID: 3383 RVA: 0x000482CC File Offset: 0x000464CC
+	public static void GetDirectionVector(AAIController tsAi, Vector forwardDirect, EMoveDirection moveDir, Vector outVector)
 	{
 		outVector.DeepCopy(forwardDirect);
 		TsAiController tsAiController = tsAi as TsAiController;
@@ -238,17 +238,17 @@ public class AiControllerLibrary : IStaticVariableResetter
 		{
 			switch (moveDir)
 			{
-			case global::EMoveDirection.Forward:
+			case EMoveDirection.Forward:
 				break;
-			case global::EMoveDirection.Backward:
+			case EMoveDirection.Backward:
 				outVector.UnaryNegation(outVector);
 				return;
-			case global::EMoveDirection.Right:
+			case EMoveDirection.Right:
 				Vector.CrossProduct(tsAiController.AiController.CharActorComp.MoveComp.GravityUp, forwardDirect, AiControllerLibrary.TempVector);
 				AiControllerLibrary.TempVector.Normalize(9.99999993922529E-09);
 				outVector.DeepCopy(AiControllerLibrary.TempVector);
 				return;
-			case global::EMoveDirection.Left:
+			case EMoveDirection.Left:
 				Vector.CrossProduct(forwardDirect, tsAiController.AiController.CharActorComp.MoveComp.GravityUp, AiControllerLibrary.TempVector);
 				AiControllerLibrary.TempVector.Normalize(9.99999993922529E-09);
 				outVector.DeepCopy(AiControllerLibrary.TempVector);
@@ -260,15 +260,15 @@ public class AiControllerLibrary : IStaticVariableResetter
 		}
 		switch (moveDir)
 		{
-		case global::EMoveDirection.Forward:
+		case EMoveDirection.Forward:
 			break;
-		case global::EMoveDirection.Backward:
+		case EMoveDirection.Backward:
 			outVector.UnaryNegation(outVector);
 			return;
-		case global::EMoveDirection.Right:
+		case EMoveDirection.Right:
 			outVector.Set(-outVector.Y, outVector.X, 0.0);
 			return;
-		case global::EMoveDirection.Left:
+		case EMoveDirection.Left:
 			outVector.Set(outVector.Y, -outVector.X, 0.0);
 			break;
 		default:
@@ -276,7 +276,7 @@ public class AiControllerLibrary : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06000D32 RID: 3378 RVA: 0x00047888 File Offset: 0x00045A88
+	// Token: 0x06000D38 RID: 3384 RVA: 0x00048424 File Offset: 0x00046624
 	public static void TurnToTarget(CharacterActorComponent actorComp, Vector targetLocation, float turnSpeed, bool containZ = false, float minTurnTimeSeconds = 0f)
 	{
 		targetLocation.Subtraction(actorComp.ActorLocationProxy, AiControllerLibrary.TempVector);
@@ -290,7 +290,7 @@ public class AiControllerLibrary : IStaticVariableResetter
 		actorComp.SetOverrideTurnSpeed(new float?(turnSpeed));
 	}
 
-	// Token: 0x06000D33 RID: 3379 RVA: 0x000478F4 File Offset: 0x00045AF4
+	// Token: 0x06000D39 RID: 3385 RVA: 0x00048490 File Offset: 0x00046690
 	public static void TurnToDirect(CharacterActorComponent actorComp, Vector direct, float turnSpeed, bool containZ = false, float minTurnTimeSeconds = 0f)
 	{
 		AiControllerLibrary.TempVector.DeepCopy(direct);
@@ -304,7 +304,7 @@ public class AiControllerLibrary : IStaticVariableResetter
 		actorComp.SetOverrideTurnSpeed(new float?(turnSpeed));
 	}
 
-	// Token: 0x06000D34 RID: 3380 RVA: 0x00047958 File Offset: 0x00045B58
+	// Token: 0x06000D3A RID: 3386 RVA: 0x000484F4 File Offset: 0x000466F4
 	public static void ClearInput(TsAiController tsAiController)
 	{
 		if (tsAiController == null)
@@ -319,7 +319,7 @@ public class AiControllerLibrary : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06000D35 RID: 3381 RVA: 0x00047990 File Offset: 0x00045B90
+	// Token: 0x06000D3B RID: 3387 RVA: 0x0004852C File Offset: 0x0004672C
 	public static void ClearInputForAiController(AiController aiController)
 	{
 		if (aiController == null)
@@ -333,8 +333,8 @@ public class AiControllerLibrary : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06000D36 RID: 3382 RVA: 0x000479BC File Offset: 0x00045BBC
-	public static bool AllyOnPath(AiController aiController, Vector forward, float allyDetect, global::EMoveDirection moveDirection)
+	// Token: 0x06000D3C RID: 3388 RVA: 0x00048558 File Offset: 0x00046758
+	public static bool AllyOnPath(AiController aiController, Vector forward, float allyDetect, EMoveDirection moveDirection)
 	{
 		CharacterActorComponent charActorComp = aiController.CharActorComp;
 		Vector actorLocationProxy = charActorComp.ActorLocationProxy;
@@ -364,11 +364,11 @@ public class AiControllerLibrary : IStaticVariableResetter
 						float num2 = scaledRadius + characterActorComponentById.ScaledRadius;
 						double num3 = Vector.DotProduct(tempVector2, forward);
 						double num4 = Vector.DotProduct(tempVector2, tempVector);
-						if (Math.Abs(num3) < (double)num2 && num4 < (double)allyDetect && num4 > (double)(-(double)allyDetect) && moveDirection == ((num4 > 0.0) ? global::EMoveDirection.Right : global::EMoveDirection.Left))
+						if (Math.Abs(num3) < (double)num2 && num4 < (double)allyDetect && num4 > (double)(-(double)allyDetect) && moveDirection == ((num4 > 0.0) ? EMoveDirection.Right : EMoveDirection.Left))
 						{
 							return true;
 						}
-						if (Math.Abs(num4) < (double)num2 && num3 < (double)allyDetect && num3 > (double)(-(double)allyDetect) && moveDirection == ((num3 > 0.0) ? global::EMoveDirection.Forward : global::EMoveDirection.Backward))
+						if (Math.Abs(num4) < (double)num2 && num3 < (double)allyDetect && num3 > (double)(-(double)allyDetect) && moveDirection == ((num3 > 0.0) ? EMoveDirection.Forward : EMoveDirection.Backward))
 						{
 							return true;
 						}
@@ -379,8 +379,8 @@ public class AiControllerLibrary : IStaticVariableResetter
 		return false;
 	}
 
-	// Token: 0x06000D37 RID: 3383 RVA: 0x00047B80 File Offset: 0x00045D80
-	public static void AllyBlockDirections(AiController aiController, Vector forward, float allyDetect, HashSet<global::EMoveDirection> result)
+	// Token: 0x06000D3D RID: 3389 RVA: 0x0004871C File Offset: 0x0004691C
+	public static void AllyBlockDirections(AiController aiController, Vector forward, float allyDetect, HashSet<EMoveDirection> result)
 	{
 		if (aiController.AiPerception == null)
 		{
@@ -415,18 +415,18 @@ public class AiControllerLibrary : IStaticVariableResetter
 					double num3 = Vector.DotProduct(tempVector2, tempVector);
 					if (Math.Abs(num2) < (double)num && num3 < (double)allyDetect && num3 > (double)(-(double)allyDetect))
 					{
-						result.Add((num3 > 0.0) ? global::EMoveDirection.Right : global::EMoveDirection.Left);
+						result.Add((num3 > 0.0) ? EMoveDirection.Right : EMoveDirection.Left);
 					}
 					if (Math.Abs(num3) < (double)num && num2 < (double)allyDetect && num2 > (double)(-(double)allyDetect))
 					{
-						result.Add((num2 > 0.0) ? global::EMoveDirection.Forward : global::EMoveDirection.Backward);
+						result.Add((num2 > 0.0) ? EMoveDirection.Forward : EMoveDirection.Backward);
 					}
 				}
 			}
 		}
 	}
 
-	// Token: 0x06000D38 RID: 3384 RVA: 0x00047D38 File Offset: 0x00045F38
+	// Token: 0x06000D3E RID: 3390 RVA: 0x000488D4 File Offset: 0x00046AD4
 	public static Vector GetLocationFromEntity(Entity entity)
 	{
 		BaseActorComponent baseActorComponent = (entity != null) ? entity.GetComponent<BaseActorComponent>() : null;
@@ -443,7 +443,7 @@ public class AiControllerLibrary : IStaticVariableResetter
 		return Vector.ZeroVectorProxy;
 	}
 
-	// Token: 0x06000D39 RID: 3385 RVA: 0x00047D94 File Offset: 0x00045F94
+	// Token: 0x06000D3F RID: 3391 RVA: 0x00048930 File Offset: 0x00046B30
 	public static bool InTeamArea(AiController ai, AiAreaMemberData areaMemberData, float rate = 1f)
 	{
 		Vector actorLocationProxy = ai.CharActorComp.ActorLocationProxy;
@@ -465,7 +465,7 @@ public class AiControllerLibrary : IStaticVariableResetter
 		return num2 >= MathUtils.Instance.Square((double)(areaMemberData.DistanceCenter - areaMemberData.MaxDistanceOffset * rate)) && num2 <= MathUtils.Instance.Square((double)(areaMemberData.DistanceCenter + areaMemberData.MaxDistanceOffset * rate));
 	}
 
-	// Token: 0x06000D3A RID: 3386 RVA: 0x00047EA4 File Offset: 0x000460A4
+	// Token: 0x06000D40 RID: 3392 RVA: 0x00048A40 File Offset: 0x00046C40
 	public static void InputNearestDirection(CharacterActorComponent actorComp, Vector targetVector, Quat cacheQuat, Vector cacheVec, float turnSpeed, bool useNearestDirection = false, [Nullable(2)] Vector faceDirection = null)
 	{
 		if (faceDirection != null)
@@ -490,9 +490,9 @@ public class AiControllerLibrary : IStaticVariableResetter
 				instance.LookRotationForwardFirst(targetVector, vector ?? Vector.UpVectorProxy, cacheQuat);
 				cacheQuat.Inverse(cacheQuat);
 				cacheQuat.RotateVector(faceDirection, cacheVec);
-				global::EMoveDirection emoveDirection = AiControllerLibrary.CalculateRelativeDirection(cacheVec, actorComp.WanderDirectionType, useNearestDirection);
+				EMoveDirection emoveDirection = AiControllerLibrary.CalculateRelativeDirection(cacheVec, actorComp.WanderDirectionType, useNearestDirection);
 				Vector nearestDirection = actorComp.GetNearestDirection(targetVector, emoveDirection);
-				if (emoveDirection != global::EMoveDirection.Forward && emoveDirection != global::EMoveDirection.Backward)
+				if (emoveDirection != EMoveDirection.Forward && emoveDirection != EMoveDirection.Backward)
 				{
 					nearestDirection.UnaryNegation(nearestDirection);
 				}
@@ -505,40 +505,40 @@ public class AiControllerLibrary : IStaticVariableResetter
 		{
 			actorComp.ActorQuatProxy.Inverse(cacheQuat);
 			cacheQuat.RotateVector(targetVector, cacheVec);
-			global::EMoveDirection directionType = AiControllerLibrary.CalculateRelativeDirection(cacheVec, actorComp.WanderDirectionType, useNearestDirection);
+			EMoveDirection directionType = AiControllerLibrary.CalculateRelativeDirection(cacheVec, actorComp.WanderDirectionType, useNearestDirection);
 			Vector direct = ((useNearestDirection || actorComp.WanderDirectionType == EWanderDirectionType.LR) && actorComp.WanderDirectionType != EWanderDirectionType.FBLR) ? actorComp.GetNearestDirection(targetVector, directionType) : targetVector;
 			AiControllerLibrary.TurnToDirect(actorComp, direct, turnSpeed, false, 0f);
 		}
 		actorComp.InputWanderDirection(targetVector, cacheVec);
 	}
 
-	// Token: 0x06000D3B RID: 3387 RVA: 0x00047FB4 File Offset: 0x000461B4
-	private static global::EMoveDirection CalculateRelativeDirection(Vector relativeVector, EWanderDirectionType directionType, bool useNearestDirection)
+	// Token: 0x06000D41 RID: 3393 RVA: 0x00048B50 File Offset: 0x00046D50
+	private static EMoveDirection CalculateRelativeDirection(Vector relativeVector, EWanderDirectionType directionType, bool useNearestDirection)
 	{
-		global::EMoveDirection result = global::EMoveDirection.Forward;
+		EMoveDirection result = EMoveDirection.Forward;
 		if (directionType == EWanderDirectionType.FBLR && useNearestDirection)
 		{
 			if (Math.Abs(relativeVector.X) > Math.Abs(relativeVector.Y))
 			{
-				result = ((relativeVector.X < 0.0) ? global::EMoveDirection.Backward : global::EMoveDirection.Forward);
+				result = ((relativeVector.X < 0.0) ? EMoveDirection.Backward : EMoveDirection.Forward);
 			}
 			else
 			{
-				result = ((relativeVector.Y < 0.0) ? global::EMoveDirection.Left : global::EMoveDirection.Right);
+				result = ((relativeVector.Y < 0.0) ? EMoveDirection.Left : EMoveDirection.Right);
 			}
 		}
 		else if (directionType == EWanderDirectionType.FB)
 		{
-			result = ((relativeVector.X < 0.0) ? global::EMoveDirection.Backward : global::EMoveDirection.Forward);
+			result = ((relativeVector.X < 0.0) ? EMoveDirection.Backward : EMoveDirection.Forward);
 		}
 		else if (directionType == EWanderDirectionType.LR)
 		{
-			result = ((relativeVector.Y < 0.0) ? global::EMoveDirection.Left : global::EMoveDirection.Right);
+			result = ((relativeVector.Y < 0.0) ? EMoveDirection.Left : EMoveDirection.Right);
 		}
 		return result;
 	}
 
-	// Token: 0x06000D3C RID: 3388 RVA: 0x0004804C File Offset: 0x0004624C
+	// Token: 0x06000D42 RID: 3394 RVA: 0x00048BE8 File Offset: 0x00046DE8
 	public static bool GlobalSamplePoint(RangeEntityInfo rangeInfo, Vector outVec)
 	{
 		ETriggerShape shape = rangeInfo.Shape;
@@ -559,7 +559,7 @@ public class AiControllerLibrary : IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x06000D3D RID: 3389 RVA: 0x000480A8 File Offset: 0x000462A8
+	// Token: 0x06000D43 RID: 3395 RVA: 0x00048C44 File Offset: 0x00046E44
 	protected static void RandomPointInBox(Vector bounds, Transform transform, Vector outVec)
 	{
 		if (bounds.GetMin() < 0.0)
@@ -574,7 +574,7 @@ public class AiControllerLibrary : IStaticVariableResetter
 		transform.TransformPositionNoScale(tmpVector, outVec);
 	}
 
-	// Token: 0x06000D3E RID: 3390 RVA: 0x00048126 File Offset: 0x00046326
+	// Token: 0x06000D44 RID: 3396 RVA: 0x00048CC2 File Offset: 0x00046EC2
 	protected static void RandomPointInSphere(float radius, Vector offset, Vector outVec)
 	{
 		if (radius < 0f)
@@ -585,7 +585,7 @@ public class AiControllerLibrary : IStaticVariableResetter
 		outVec.AdditionEqual(offset);
 	}
 
-	// Token: 0x06000D3F RID: 3391 RVA: 0x0004815C File Offset: 0x0004635C
+	// Token: 0x06000D45 RID: 3397 RVA: 0x00048CF8 File Offset: 0x00046EF8
 	protected static void RandomPointInSphereFan(float inner, float outer, float minTheta, float maxTheta, float minPhi, float maxPhi, Vector outVec)
 	{
 		outVec.Reset();
@@ -601,27 +601,27 @@ public class AiControllerLibrary : IStaticVariableResetter
 		outVec.Z = (double)((float)((double)num * Math.Sin(randomRange) * Math.Sin(randomRange2)));
 	}
 
-	// Token: 0x04000A88 RID: 2696
+	// Token: 0x04000A90 RID: 2704
 	private const float PI = 3.1416f;
 
-	// Token: 0x04000A89 RID: 2697
+	// Token: 0x04000A91 RID: 2705
 	private const float MIN_NAVIGATION_FINAL_DIST_SQUARD = 10000f;
 
-	// Token: 0x04000A8A RID: 2698
+	// Token: 0x04000A92 RID: 2706
 	private const float MIN_NAVIGATION_FINAL_HEIGHt = 200f;
 
-	// Token: 0x04000A8B RID: 2699
+	// Token: 0x04000A93 RID: 2707
 	private const float DEFAULT_NAVIGATION_BLOCK_LENGTH = 100f;
 
-	// Token: 0x04000A8C RID: 2700
+	// Token: 0x04000A94 RID: 2708
 	private static FVectorDouble defaultBlockHalfExtent;
 
-	// Token: 0x04000A8D RID: 2701
+	// Token: 0x04000A95 RID: 2709
 	private static Vector TempVector;
 
-	// Token: 0x04000A8E RID: 2702
+	// Token: 0x04000A96 RID: 2710
 	private static Vector TempVector2;
 
-	// Token: 0x04000A8F RID: 2703
+	// Token: 0x04000A97 RID: 2711
 	private const int BUG_FIX_3_5_PATCH_RLG_MAP_ID = 909;
 }

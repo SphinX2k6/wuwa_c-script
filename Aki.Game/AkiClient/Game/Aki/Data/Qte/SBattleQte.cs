@@ -6,52 +6,52 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Data.Qte
 {
-	// Token: 0x02003ED2 RID: 16082
+	// Token: 0x02003197 RID: 12695
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Data/Qte/SBattleQte.SBattleQte")]
 	[UnrealStructLayout(56, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 56)]
 	public class SBattleQte : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06028A6C RID: 166508 RVA: 0x009B1520 File Offset: 0x009AF720
+		// Token: 0x0601F4A1 RID: 128161 RVA: 0x0092A741 File Offset: 0x00928941
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SBattleQte._ScriptStructPtr != 0) ? SBattleQte._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Data/Qte/SBattleQte.SBattleQte", ref SBattleQte._ScriptStructPtr);
 		}
 
-		// Token: 0x17005EEB RID: 24299
-		// (get) Token: 0x06028A6D RID: 166509 RVA: 0x009B1544 File Offset: 0x009AF744
-		// (set) Token: 0x06028A6E RID: 166510 RVA: 0x009B1554 File Offset: 0x009AF754
+		// Token: 0x17003877 RID: 14455
+		// (get) Token: 0x0601F4A2 RID: 128162 RVA: 0x0092A765 File Offset: 0x00928965
+		// (set) Token: 0x0601F4A3 RID: 128163 RVA: 0x0092A775 File Offset: 0x00928975
 		public unsafe int QteId
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SBattleQte.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)SBattleQte.__PropertyOffset_QteId);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SBattleQte.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)SBattleQte.__PropertyOffset_QteId) = value;
 			}
 		}
 
-		// Token: 0x17005EEC RID: 24300
-		// (get) Token: 0x06028A6F RID: 166511 RVA: 0x009B1565 File Offset: 0x009AF765
-		// (set) Token: 0x06028A70 RID: 166512 RVA: 0x009B1579 File Offset: 0x009AF779
+		// Token: 0x17003878 RID: 14456
+		// (get) Token: 0x0601F4A4 RID: 128164 RVA: 0x0092A786 File Offset: 0x00928986
+		// (set) Token: 0x0601F4A5 RID: 128165 RVA: 0x0092A79A File Offset: 0x0092899A
 		public unsafe string Desc
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SBattleQte.__PropertyOffset_1)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SBattleQte.__PropertyOffset_Desc)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SBattleQte.__PropertyOffset_1)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SBattleQte.__PropertyOffset_Desc)), value);
 			}
 		}
 
-		// Token: 0x17005EED RID: 24301
-		// (get) Token: 0x06028A71 RID: 166513 RVA: 0x009B1590 File Offset: 0x009AF790
-		// (set) Token: 0x06028A72 RID: 166514 RVA: 0x009B15D3 File Offset: 0x009AF7D3
+		// Token: 0x17003879 RID: 14457
+		// (get) Token: 0x0601F4A6 RID: 128166 RVA: 0x0092A7B0 File Offset: 0x009289B0
+		// (set) Token: 0x0601F4A7 RID: 128167 RVA: 0x0092A7F3 File Offset: 0x009289F3
 		public TArray<SBattleQteAction> SuccessActions
 		{
 			get
@@ -60,7 +60,7 @@ namespace AkiClient.Game.Aki.Data.Qte
 				TArray<SBattleQteAction> result;
 				if ((result = this._SuccessActions) == null)
 				{
-					result = (this._SuccessActions = new TArray<SBattleQteAction>(base.NativePtr + (IntPtr)SBattleQte.__PropertyOffset_2, base.MemoryOwner ?? this));
+					result = (this._SuccessActions = new TArray<SBattleQteAction>(base.NativePtr + (IntPtr)SBattleQte.__PropertyOffset_SuccessActions, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -70,9 +70,9 @@ namespace AkiClient.Game.Aki.Data.Qte
 			}
 		}
 
-		// Token: 0x17005EEE RID: 24302
-		// (get) Token: 0x06028A73 RID: 166515 RVA: 0x009B15E4 File Offset: 0x009AF7E4
-		// (set) Token: 0x06028A74 RID: 166516 RVA: 0x009B1627 File Offset: 0x009AF827
+		// Token: 0x1700387A RID: 14458
+		// (get) Token: 0x0601F4A8 RID: 128168 RVA: 0x0092A804 File Offset: 0x00928A04
+		// (set) Token: 0x0601F4A9 RID: 128169 RVA: 0x0092A847 File Offset: 0x00928A47
 		public TArray<SBattleQteAction> FailActions
 		{
 			get
@@ -81,7 +81,7 @@ namespace AkiClient.Game.Aki.Data.Qte
 				TArray<SBattleQteAction> result;
 				if ((result = this._FailActions) == null)
 				{
-					result = (this._FailActions = new TArray<SBattleQteAction>(base.NativePtr + (IntPtr)SBattleQte.__PropertyOffset_3, base.MemoryOwner ?? this));
+					result = (this._FailActions = new TArray<SBattleQteAction>(base.NativePtr + (IntPtr)SBattleQte.__PropertyOffset_FailActions, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -91,65 +91,56 @@ namespace AkiClient.Game.Aki.Data.Qte
 			}
 		}
 
-		// Token: 0x06028A75 RID: 166517 RVA: 0x009B1635 File Offset: 0x009AF835
+		// Token: 0x0601F4AA RID: 128170 RVA: 0x0092A855 File Offset: 0x00928A55
 		public SBattleQte()
 		{
 		}
 
-		// Token: 0x06028A76 RID: 166518 RVA: 0x009B163D File Offset: 0x009AF83D
-		public SBattleQte(int QteId, string Desc, TArray<SBattleQteAction> SuccessActions, TArray<SBattleQteAction> FailActions)
-		{
-			this.QteId = QteId;
-			this.Desc = Desc;
-			this.SuccessActions = SuccessActions;
-			this.FailActions = FailActions;
-		}
-
-		// Token: 0x06028A77 RID: 166519 RVA: 0x009B1662 File Offset: 0x009AF862
+		// Token: 0x0601F4AB RID: 128171 RVA: 0x0092A85D File Offset: 0x00928A5D
 		protected override IntPtr GetUStructPtr()
 		{
 			return SBattleQte.StaticStruct();
 		}
 
-		// Token: 0x06028A78 RID: 166520 RVA: 0x009B166E File Offset: 0x009AF86E
+		// Token: 0x0601F4AC RID: 128172 RVA: 0x0092A869 File Offset: 0x00928A69
 		[NullableContext(2)]
 		public SBattleQte(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06028A79 RID: 166521 RVA: 0x009B1678 File Offset: 0x009AF878
+		// Token: 0x0601F4AD RID: 128173 RVA: 0x0092A873 File Offset: 0x00928A73
 		public SBattleQte(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06028A7A RID: 166522 RVA: 0x009B1683 File Offset: 0x009AF883
+		// Token: 0x0601F4AE RID: 128174 RVA: 0x0092A87E File Offset: 0x00928A7E
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SBattleQte(Pointer, false, true);
 		}
 
-		// Token: 0x06028A7B RID: 166523 RVA: 0x009B168D File Offset: 0x009AF88D
+		// Token: 0x0601F4AF RID: 128175 RVA: 0x0092A888 File Offset: 0x00928A88
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SBattleQte(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04014C74 RID: 85108
+		// Token: 0x04010C5B RID: 68699
 		public const string __ObjectPath = "/Game/Aki/Data/Qte/SBattleQte.SBattleQte";
 
-		// Token: 0x04014C75 RID: 85109
+		// Token: 0x04010C5C RID: 68700
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04014C76 RID: 85110
-		internal static int __PropertyOffset_0;
+		// Token: 0x04010C5D RID: 68701
+		internal static int __PropertyOffset_QteId;
 
-		// Token: 0x04014C77 RID: 85111
-		internal static int __PropertyOffset_1;
+		// Token: 0x04010C5E RID: 68702
+		internal static int __PropertyOffset_Desc;
 
-		// Token: 0x04014C78 RID: 85112
-		internal static int __PropertyOffset_2;
+		// Token: 0x04010C5F RID: 68703
+		internal static int __PropertyOffset_SuccessActions;
 
-		// Token: 0x04014C79 RID: 85113
+		// Token: 0x04010C60 RID: 68704
 		[Nullable(new byte[]
 		{
 			2,
@@ -157,10 +148,10 @@ namespace AkiClient.Game.Aki.Data.Qte
 		})]
 		private TArray<SBattleQteAction> _SuccessActions;
 
-		// Token: 0x04014C7A RID: 85114
-		internal static int __PropertyOffset_3;
+		// Token: 0x04010C61 RID: 68705
+		internal static int __PropertyOffset_FailActions;
 
-		// Token: 0x04014C7B RID: 85115
+		// Token: 0x04010C62 RID: 68706
 		[Nullable(new byte[]
 		{
 			2,

@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000710 RID: 1808
+	// Token: 0x020007B1 RID: 1969
 	public class IStateElementalEnableConfig_SetValue
 	{
-		// Token: 0x04001A4E RID: 6734
-		[Nullable(1)]
+		// Token: 0x04001C4D RID: 7245
 		public string State;
 
-		// Token: 0x04001A4F RID: 6735
+		// Token: 0x04001C4E RID: 7246
 		public bool ElementalEnable;
 	}
 }

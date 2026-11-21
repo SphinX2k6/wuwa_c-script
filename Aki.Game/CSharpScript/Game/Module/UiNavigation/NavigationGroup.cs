@@ -6,26 +6,26 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020048F6 RID: 18678
+	// Token: 0x0200386D RID: 14445
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class NavigationGroup
 	{
-		// Token: 0x06030D68 RID: 200040 RVA: 0x00B57833 File Offset: 0x00B55A33
+		// Token: 0x06025895 RID: 153749 RVA: 0x00A926A3 File Offset: 0x00A908A3
 		public void AddListener(TsUiNavigationBehaviorListener value)
 		{
 			this.ListenerListInternal.Add(value);
 			this.IsListenerListDirty = true;
 		}
 
-		// Token: 0x06030D69 RID: 200041 RVA: 0x00B57848 File Offset: 0x00B55A48
+		// Token: 0x06025896 RID: 153750 RVA: 0x00A926B8 File Offset: 0x00A908B8
 		public void RemoveListenerByIndex(int index)
 		{
 			this.ListenerListInternal.RemoveAt(index);
 		}
 
-		// Token: 0x170079A5 RID: 31141
-		// (get) Token: 0x06030D6A RID: 200042 RVA: 0x00B57856 File Offset: 0x00B55A56
+		// Token: 0x17004D0D RID: 19725
+		// (get) Token: 0x06025897 RID: 153751 RVA: 0x00A926C6 File Offset: 0x00A908C6
 		public List<TsUiNavigationBehaviorListener> ListenerList
 		{
 			get
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030D6B RID: 200043 RVA: 0x00B57874 File Offset: 0x00B55A74
+		// Token: 0x06025898 RID: 153752 RVA: 0x00A926E4 File Offset: 0x00A908E4
 		private void SortListenerListByFlattenHierarchyIndex()
 		{
 			TArray<UUIItem> tarray = new TArray<UUIItem>();
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030D6C RID: 200044 RVA: 0x00B57970 File Offset: 0x00B55B70
+		// Token: 0x06025899 RID: 153753 RVA: 0x00A927E0 File Offset: 0x00A909E0
 		private Dictionary<TsUiNavigationBehaviorListener, int> BuildHierarchyRankMap(IReadOnlyList<TsUiNavigationBehaviorListener> listenerList)
 		{
 			Dictionary<TsUiNavigationBehaviorListener, int> dictionary = new Dictionary<TsUiNavigationBehaviorListener, int>();
@@ -98,8 +98,8 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return dictionary;
 		}
 
-		// Token: 0x170079A6 RID: 31142
-		// (get) Token: 0x06030D6D RID: 200045 RVA: 0x00B579A8 File Offset: 0x00B55BA8
+		// Token: 0x17004D0E RID: 19726
+		// (get) Token: 0x0602589A RID: 153754 RVA: 0x00A92818 File Offset: 0x00A90A18
 		public List<TsUiNavigationBehaviorListener> LoopScrollSortListenerList
 		{
 			get
@@ -132,8 +132,8 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x170079A7 RID: 31143
-		// (get) Token: 0x06030D6E RID: 200046 RVA: 0x00B579E8 File Offset: 0x00B55BE8
+		// Token: 0x17004D0F RID: 19727
+		// (get) Token: 0x0602589B RID: 153755 RVA: 0x00A92858 File Offset: 0x00A90A58
 		public List<TsUiNavigationBehaviorListener> MultiTemplateScrollSortListenerList
 		{
 			get
@@ -166,8 +166,8 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x170079A8 RID: 31144
-		// (get) Token: 0x06030D6F RID: 200047 RVA: 0x00B57A28 File Offset: 0x00B55C28
+		// Token: 0x17004D10 RID: 19728
+		// (get) Token: 0x0602589C RID: 153756 RVA: 0x00A92898 File Offset: 0x00A90A98
 		public List<TsUiNavigationBehaviorListener> ActiveListenerList
 		{
 			get
@@ -188,7 +188,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030D70 RID: 200048 RVA: 0x00B57A70 File Offset: 0x00B55C70
+		// Token: 0x0602589D RID: 153757 RVA: 0x00A928E0 File Offset: 0x00A90AE0
 		[NullableContext(2)]
 		[return: Nullable(1)]
 		public List<TsUiNavigationBehaviorListener> GetOppositeListenerListByListener(AActor srcScrollViewActor, AActor layoutViewActor)
@@ -212,7 +212,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return list;
 		}
 
-		// Token: 0x06030D71 RID: 200049 RVA: 0x00B57AEC File Offset: 0x00B55CEC
+		// Token: 0x0602589E RID: 153758 RVA: 0x00A9295C File Offset: 0x00A90B5C
 		public NavigationGroup(SNavigationGroup config)
 		{
 			this.Config = config;
@@ -233,8 +233,8 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x170079A9 RID: 31145
-		// (get) Token: 0x06030D72 RID: 200050 RVA: 0x00B57B89 File Offset: 0x00B55D89
+		// Token: 0x17004D11 RID: 19729
+		// (get) Token: 0x0602589F RID: 153759 RVA: 0x00A929F9 File Offset: 0x00A90BF9
 		public bool AllowNavigationInSelfDynamic
 		{
 			get
@@ -243,9 +243,9 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x170079AA RID: 31146
-		// (get) Token: 0x06030D73 RID: 200051 RVA: 0x00B57B96 File Offset: 0x00B55D96
-		// (set) Token: 0x06030D74 RID: 200052 RVA: 0x00B57B9E File Offset: 0x00B55D9E
+		// Token: 0x17004D12 RID: 19730
+		// (get) Token: 0x060258A0 RID: 153760 RVA: 0x00A92A06 File Offset: 0x00A90C06
+		// (set) Token: 0x060258A1 RID: 153761 RVA: 0x00A92A0E File Offset: 0x00A90C0E
 		[Nullable(2)]
 		public TsUiNavigationBehaviorListener DefaultListener
 		{
@@ -261,8 +261,8 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x170079AB RID: 31147
-		// (get) Token: 0x06030D75 RID: 200053 RVA: 0x00B57BA7 File Offset: 0x00B55DA7
+		// Token: 0x17004D13 RID: 19731
+		// (get) Token: 0x060258A2 RID: 153762 RVA: 0x00A92A17 File Offset: 0x00A90C17
 		public string GroupName
 		{
 			get
@@ -271,8 +271,8 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x170079AC RID: 31148
-		// (get) Token: 0x06030D76 RID: 200054 RVA: 0x00B57BB4 File Offset: 0x00B55DB4
+		// Token: 0x17004D14 RID: 19732
+		// (get) Token: 0x060258A3 RID: 153763 RVA: 0x00A92A24 File Offset: 0x00A90C24
 		public TMap<string, string> GroupNameMap
 		{
 			get
@@ -281,8 +281,8 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x170079AD RID: 31149
-		// (get) Token: 0x06030D77 RID: 200055 RVA: 0x00B57BC1 File Offset: 0x00B55DC1
+		// Token: 0x17004D15 RID: 19733
+		// (get) Token: 0x060258A4 RID: 153764 RVA: 0x00A92A31 File Offset: 0x00A90C31
 		public int GroupType
 		{
 			get
@@ -291,8 +291,8 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x170079AE RID: 31150
-		// (get) Token: 0x06030D78 RID: 200056 RVA: 0x00B57BCE File Offset: 0x00B55DCE
+		// Token: 0x17004D16 RID: 19734
+		// (get) Token: 0x060258A5 RID: 153765 RVA: 0x00A92A3E File Offset: 0x00A90C3E
 		public UINavigationPriorityMode HorizontalPriorityMode
 		{
 			get
@@ -301,8 +301,8 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x170079AF RID: 31151
-		// (get) Token: 0x06030D79 RID: 200057 RVA: 0x00B57BDB File Offset: 0x00B55DDB
+		// Token: 0x17004D17 RID: 19735
+		// (get) Token: 0x060258A6 RID: 153766 RVA: 0x00A92A4B File Offset: 0x00A90C4B
 		public UINavigationWrapMode HorizontalWrapMode
 		{
 			get
@@ -311,8 +311,8 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x170079B0 RID: 31152
-		// (get) Token: 0x06030D7A RID: 200058 RVA: 0x00B57BE8 File Offset: 0x00B55DE8
+		// Token: 0x17004D18 RID: 19736
+		// (get) Token: 0x060258A7 RID: 153767 RVA: 0x00A92A58 File Offset: 0x00A90C58
 		public string InsideGroupName
 		{
 			get
@@ -321,8 +321,8 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x170079B1 RID: 31153
-		// (get) Token: 0x06030D7B RID: 200059 RVA: 0x00B57BF5 File Offset: 0x00B55DF5
+		// Token: 0x17004D19 RID: 19737
+		// (get) Token: 0x060258A8 RID: 153768 RVA: 0x00A92A65 File Offset: 0x00A90C65
 		public HashSet<string> InsideGroupNameSet
 		{
 			get
@@ -331,9 +331,9 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x170079B2 RID: 31154
-		// (get) Token: 0x06030D7C RID: 200060 RVA: 0x00B57BFD File Offset: 0x00B55DFD
-		// (set) Token: 0x06030D7D RID: 200061 RVA: 0x00B57C05 File Offset: 0x00B55E05
+		// Token: 0x17004D1A RID: 19738
+		// (get) Token: 0x060258A9 RID: 153769 RVA: 0x00A92A6D File Offset: 0x00A90C6D
+		// (set) Token: 0x060258AA RID: 153770 RVA: 0x00A92A75 File Offset: 0x00A90C75
 		[Nullable(2)]
 		public TsUiNavigationBehaviorListener LastSelectListener
 		{
@@ -349,8 +349,8 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x170079B3 RID: 31155
-		// (get) Token: 0x06030D7E RID: 200062 RVA: 0x00B57C0E File Offset: 0x00B55E0E
+		// Token: 0x17004D1B RID: 19739
+		// (get) Token: 0x060258AB RID: 153771 RVA: 0x00A92A7E File Offset: 0x00A90C7E
 		public string NextGroupName
 		{
 			get
@@ -359,9 +359,9 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x170079B4 RID: 31156
-		// (get) Token: 0x06030D7F RID: 200063 RVA: 0x00B57C1B File Offset: 0x00B55E1B
-		// (set) Token: 0x06030D80 RID: 200064 RVA: 0x00B57C28 File Offset: 0x00B55E28
+		// Token: 0x17004D1C RID: 19740
+		// (get) Token: 0x060258AC RID: 153772 RVA: 0x00A92A8B File Offset: 0x00A90C8B
+		// (set) Token: 0x060258AD RID: 153773 RVA: 0x00A92A98 File Offset: 0x00A90C98
 		public string PrevGroupName
 		{
 			get
@@ -374,8 +374,8 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x170079B5 RID: 31157
-		// (get) Token: 0x06030D81 RID: 200065 RVA: 0x00B57C36 File Offset: 0x00B55E36
+		// Token: 0x17004D1D RID: 19741
+		// (get) Token: 0x060258AE RID: 153774 RVA: 0x00A92AA6 File Offset: 0x00A90CA6
 		public bool RefreshNavigation
 		{
 			get
@@ -384,8 +384,8 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x170079B6 RID: 31158
-		// (get) Token: 0x06030D82 RID: 200066 RVA: 0x00B57C43 File Offset: 0x00B55E43
+		// Token: 0x17004D1E RID: 19742
+		// (get) Token: 0x060258AF RID: 153775 RVA: 0x00A92AB3 File Offset: 0x00A90CB3
 		public bool SelectableMemory
 		{
 			get
@@ -394,8 +394,8 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x170079B7 RID: 31159
-		// (get) Token: 0x06030D83 RID: 200067 RVA: 0x00B57C50 File Offset: 0x00B55E50
+		// Token: 0x17004D1F RID: 19743
+		// (get) Token: 0x060258B0 RID: 153776 RVA: 0x00A92AC0 File Offset: 0x00A90CC0
 		public bool SuitableListenerByNoDynamic
 		{
 			get
@@ -404,8 +404,8 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x170079B8 RID: 31160
-		// (get) Token: 0x06030D84 RID: 200068 RVA: 0x00B57C5D File Offset: 0x00B55E5D
+		// Token: 0x17004D20 RID: 19744
+		// (get) Token: 0x060258B1 RID: 153777 RVA: 0x00A92ACD File Offset: 0x00A90CCD
 		public UINavigationPriorityMode VerticalPriorityMode
 		{
 			get
@@ -414,8 +414,8 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x170079B9 RID: 31161
-		// (get) Token: 0x06030D85 RID: 200069 RVA: 0x00B57C6A File Offset: 0x00B55E6A
+		// Token: 0x17004D21 RID: 19745
+		// (get) Token: 0x060258B2 RID: 153778 RVA: 0x00A92ADA File Offset: 0x00A90CDA
 		public UINavigationWrapMode VerticalWrapMode
 		{
 			get
@@ -424,8 +424,8 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x170079BA RID: 31162
-		// (get) Token: 0x06030D86 RID: 200070 RVA: 0x00B57C77 File Offset: 0x00B55E77
+		// Token: 0x17004D22 RID: 19746
+		// (get) Token: 0x060258B3 RID: 153779 RVA: 0x00A92AE7 File Offset: 0x00A90CE7
 		public bool SlideToLeftOrTop
 		{
 			get
@@ -434,8 +434,8 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x170079BB RID: 31163
-		// (get) Token: 0x06030D87 RID: 200071 RVA: 0x00B57C84 File Offset: 0x00B55E84
+		// Token: 0x17004D23 RID: 19747
+		// (get) Token: 0x060258B4 RID: 153780 RVA: 0x00A92AF4 File Offset: 0x00A90CF4
 		public bool SlideToRightOrDown
 		{
 			get
@@ -444,8 +444,8 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x170079BC RID: 31164
-		// (get) Token: 0x06030D88 RID: 200072 RVA: 0x00B57C91 File Offset: 0x00B55E91
+		// Token: 0x17004D24 RID: 19748
+		// (get) Token: 0x060258B5 RID: 153781 RVA: 0x00A92B01 File Offset: 0x00A90D01
 		public bool WaitScrollAnimation
 		{
 			get
@@ -454,24 +454,24 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x0401A3A8 RID: 107432
+		// Token: 0x04014C1B RID: 85019
 		private readonly SNavigationGroup Config;
 
-		// Token: 0x0401A3A9 RID: 107433
+		// Token: 0x04014C1C RID: 85020
 		private readonly HashSet<string> InsideGroupNameSetInternal = new HashSet<string>();
 
-		// Token: 0x0401A3AA RID: 107434
+		// Token: 0x04014C1D RID: 85021
 		[Nullable(2)]
 		private TsUiNavigationBehaviorListener DefaultListenerInternal;
 
-		// Token: 0x0401A3AB RID: 107435
+		// Token: 0x04014C1E RID: 85022
 		[Nullable(2)]
 		private TsUiNavigationBehaviorListener LastListenerInternal;
 
-		// Token: 0x0401A3AC RID: 107436
+		// Token: 0x04014C1F RID: 85023
 		private bool IsListenerListDirty;
 
-		// Token: 0x0401A3AD RID: 107437
+		// Token: 0x04014C20 RID: 85024
 		private readonly List<TsUiNavigationBehaviorListener> ListenerListInternal = new List<TsUiNavigationBehaviorListener>();
 	}
 }

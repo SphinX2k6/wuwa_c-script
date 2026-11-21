@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001575 RID: 5493
+// Token: 0x02000A2D RID: 2605
 public class VersionPreheatQuestDetailRoleItem : UiPanelBase
 {
-	// Token: 0x06009D1C RID: 40220 RVA: 0x0022062C File Offset: 0x0021E82C
+	// Token: 0x060070FA RID: 28922 RVA: 0x0022A3DC File Offset: 0x002285DC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -20,17 +20,17 @@ public class VersionPreheatQuestDetailRoleItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009D1D RID: 40221 RVA: 0x00220674 File Offset: 0x0021E874
+	// Token: 0x060070FB RID: 28923 RVA: 0x0022A424 File Offset: 0x00228624
 	[NullableContext(1)]
 	public void RefreshExternal(string iconPath)
 	{
 		base.SetTextureByPath(iconPath, base.GetTexture(0), null, null);
 	}
 
-	// Token: 0x02007BA6 RID: 31654
+	// Token: 0x02006D31 RID: 27953
 	private class ERoleComponent
 	{
-		// Token: 0x04028A73 RID: 166515
+		// Token: 0x04023DAE RID: 146862
 		public const int RoleIconTexture = 0;
 	}
 }

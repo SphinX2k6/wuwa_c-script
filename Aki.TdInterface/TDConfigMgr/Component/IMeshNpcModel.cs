@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004F4 RID: 1268
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000555 RID: 1365
 	public class IMeshNpcModel : INpcModelConfig
 	{
-		// Token: 0x060019D4 RID: 6612 RVA: 0x0004C090 File Offset: 0x0004A290
+		// Token: 0x06001BB6 RID: 7094 RVA: 0x00050BD4 File Offset: 0x0004EDD4
 		private IMeshNpcModel_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060019D5 RID: 6613 RVA: 0x0004C0C8 File Offset: 0x0004A2C8
+		// Token: 0x06001BB7 RID: 7095 RVA: 0x00050C0C File Offset: 0x0004EE0C
 		public static IMeshNpcModel Create([Nullable(2)] IMeshNpcModel instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060019D6 RID: 6614 RVA: 0x0004C0DB File Offset: 0x0004A2DB
+		// Token: 0x06001BB8 RID: 7096 RVA: 0x00050C1F File Offset: 0x0004EE1F
 		public static IMeshNpcModel CreateFromSetValue([Nullable(2)] IMeshNpcModel_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060019D7 RID: 6615 RVA: 0x0004C0EE File Offset: 0x0004A2EE
+		// Token: 0x06001BB9 RID: 7097 RVA: 0x00050C32 File Offset: 0x0004EE32
 		public new IMeshNpcModel_SetValue ToSetValue()
 		{
 			return new IMeshNpcModel_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170006DB RID: 1755
-		// (get) Token: 0x060019D8 RID: 6616 RVA: 0x0004C10D File Offset: 0x0004A30D
-		// (set) Token: 0x060019D9 RID: 6617 RVA: 0x0004C138 File Offset: 0x0004A338
+		// Token: 0x1700075A RID: 1882
+		// (get) Token: 0x06001BBA RID: 7098 RVA: 0x00050C51 File Offset: 0x0004EE51
+		// (set) Token: 0x06001BBB RID: 7099 RVA: 0x00050C7C File Offset: 0x0004EE7C
 		public override ENpcModelType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170006DC RID: 1756
-		// (get) Token: 0x060019DA RID: 6618 RVA: 0x0004C146 File Offset: 0x0004A346
-		// (set) Token: 0x060019DB RID: 6619 RVA: 0x0004C171 File Offset: 0x0004A371
+		// Token: 0x1700075B RID: 1883
+		// (get) Token: 0x06001BBC RID: 7100 RVA: 0x00050C8A File Offset: 0x0004EE8A
+		// (set) Token: 0x06001BBD RID: 7101 RVA: 0x00050CB5 File Offset: 0x0004EEB5
 		public virtual string Mesh
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040012E3 RID: 4835
+		// Token: 0x04001443 RID: 5187
 		[Nullable(2)]
 		protected new IMeshNpcModel FbInstance;
 
-		// Token: 0x040012E4 RID: 4836
+		// Token: 0x04001444 RID: 5188
 		[Nullable(2)]
 		protected new IMeshNpcModel_SetValue PocoInterface;
 	}

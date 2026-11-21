@@ -10,14 +10,14 @@ using CSharpScript.Game.NewWorld.Pawn.Component;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x02001E5E RID: 7774
+// Token: 0x02001320 RID: 4896
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class HoldingHandsController : ControllerBase
 {
-	// Token: 0x1700128A RID: 4746
-	// (get) Token: 0x0600EC6C RID: 60524 RVA: 0x0038283A File Offset: 0x00380A3A
+	// Token: 0x170012B4 RID: 4788
+	// (get) Token: 0x0600C08B RID: 49291 RVA: 0x0038E4E6 File Offset: 0x0038C6E6
 	[Nullable(2)]
 	public HoldingHandsModel Model
 	{
@@ -28,27 +28,27 @@ public class HoldingHandsController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600EC6D RID: 60525 RVA: 0x00382841 File Offset: 0x00380A41
+	// Token: 0x0600C08C RID: 49292 RVA: 0x0038E4ED File Offset: 0x0038C6ED
 	protected override bool OnInit()
 	{
 		Net.Instance.Register(ENotifyMessageId.StopHoldHandNotify, new Action<IMessage, Net.CallbackStatus>(this.OnStopHoldHandNotify));
 		return true;
 	}
 
-	// Token: 0x0600EC6E RID: 60526 RVA: 0x00382860 File Offset: 0x00380A60
+	// Token: 0x0600C08D RID: 49293 RVA: 0x0038E50C File Offset: 0x0038C70C
 	protected override bool OnClear()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.StopHoldHandNotify);
 		return true;
 	}
 
-	// Token: 0x0600EC6F RID: 60527 RVA: 0x00382873 File Offset: 0x00380A73
+	// Token: 0x0600C08E RID: 49294 RVA: 0x0038E51F File Offset: 0x0038C71F
 	public void TickPriority2(double deltaTime)
 	{
 		this.TickBindings(deltaTime);
 	}
 
-	// Token: 0x0600EC70 RID: 60528 RVA: 0x0038287C File Offset: 0x00380A7C
+	// Token: 0x0600C08F RID: 49295 RVA: 0x0038E528 File Offset: 0x0038C728
 	private unsafe void TickBindings(double deltaTime)
 	{
 		if (this.Model == null)
@@ -115,7 +115,7 @@ public class HoldingHandsController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600EC71 RID: 60529 RVA: 0x00382B84 File Offset: 0x00380D84
+	// Token: 0x0600C090 RID: 49296 RVA: 0x0038E830 File Offset: 0x0038CA30
 	private void AddInvitation(string key, CharacterHoldingHandsComponent leader, CharacterHoldingHandsComponent follower, EHandType leaderHandType)
 	{
 		Invitation invitation = new Invitation();
@@ -134,7 +134,7 @@ public class HoldingHandsController : ControllerBase
 		invitation.Follower.TryAddEvents();
 	}
 
-	// Token: 0x0600EC72 RID: 60530 RVA: 0x00382BF0 File Offset: 0x00380DF0
+	// Token: 0x0600C091 RID: 49297 RVA: 0x0038E89C File Offset: 0x0038CA9C
 	public unsafe Binding AddBinding(string key, CharacterHoldingHandsComponent leader, CharacterHoldingHandsComponent follower, EHandType leaderHandType, bool invitation = false, bool slowDamping = false)
 	{
 		Log instance = Log.Instance;
@@ -185,7 +185,7 @@ public class HoldingHandsController : ControllerBase
 		return binding;
 	}
 
-	// Token: 0x0600EC73 RID: 60531 RVA: 0x00382DE4 File Offset: 0x00380FE4
+	// Token: 0x0600C092 RID: 49298 RVA: 0x0038EA90 File Offset: 0x0038CC90
 	private void DeleteRelation(string key, bool lerp = false)
 	{
 		HoldingHandsModel model = this.Model;
@@ -211,7 +211,7 @@ public class HoldingHandsController : ControllerBase
 		model2.DeleteRelation(key);
 	}
 
-	// Token: 0x0600EC74 RID: 60532 RVA: 0x00382E4C File Offset: 0x0038104C
+	// Token: 0x0600C093 RID: 49299 RVA: 0x0038EAF8 File Offset: 0x0038CCF8
 	public unsafe void RequestHoldHands(string key, EntityHandle leaderHandle, EntityHandle followerHandle, EHandType leaderHandType, bool? waitAnim, bool waitServer = true, string reason = "")
 	{
 		Log instance = Log.Instance;
@@ -282,7 +282,7 @@ public class HoldingHandsController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600EC75 RID: 60533 RVA: 0x00383110 File Offset: 0x00381310
+	// Token: 0x0600C094 RID: 49300 RVA: 0x0038EDBC File Offset: 0x0038CFBC
 	public void RequestInvitation(string key, CharacterHoldingHandsComponent leaderComp, CharacterHoldingHandsComponent followerComp, EHandType leaderHandType, bool waitServer = true)
 	{
 		if (leaderComp.IsSitDown())
@@ -321,7 +321,7 @@ public class HoldingHandsController : ControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600EC76 RID: 60534 RVA: 0x0038320C File Offset: 0x0038140C
+	// Token: 0x0600C095 RID: 49301 RVA: 0x0038EEB8 File Offset: 0x0038D0B8
 	public void RequestAddBinding(string key, CharacterHoldingHandsComponent leaderComp, CharacterHoldingHandsComponent followerComp, EHandType leaderHandType, bool teleport, bool waitServer = true)
 	{
 		Action onSuccess = delegate()
@@ -383,7 +383,7 @@ public class HoldingHandsController : ControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600EC77 RID: 60535 RVA: 0x003832D4 File Offset: 0x003814D4
+	// Token: 0x0600C096 RID: 49302 RVA: 0x0038EF80 File Offset: 0x0038D180
 	public unsafe void RequestReleaseHands(string key, string reason = "", bool lerp = false, bool sendRequest = true)
 	{
 		HoldingHandsModel model = this.Model;
@@ -436,7 +436,7 @@ public class HoldingHandsController : ControllerBase
 		instance3.Info(module2, author2, message3, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 5));
 	}
 
-	// Token: 0x0600EC78 RID: 60536 RVA: 0x003834B0 File Offset: 0x003816B0
+	// Token: 0x0600C097 RID: 49303 RVA: 0x0038F15C File Offset: 0x0038D35C
 	private HoldHandRequest CreateRequest(CharacterHoldingHandsComponent leaderComp, CharacterHoldingHandsComponent followerComp, EHandType leaderHandType, bool isHold)
 	{
 		HoldHandRequest holdHandRequest = HoldHandRequest.Create();
@@ -449,7 +449,7 @@ public class HoldingHandsController : ControllerBase
 		return holdHandRequest;
 	}
 
-	// Token: 0x0600EC79 RID: 60537 RVA: 0x00383514 File Offset: 0x00381714
+	// Token: 0x0600C098 RID: 49304 RVA: 0x0038F1C0 File Offset: 0x0038D3C0
 	[NullableContext(2)]
 	private void OnStopHoldHandNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -487,7 +487,7 @@ public class HoldingHandsController : ControllerBase
 		characterHoldingHandsComponent.ReleaseAllHands("Notify", false, false);
 	}
 
-	// Token: 0x0600EC7A RID: 60538 RVA: 0x0038360C File Offset: 0x0038180C
+	// Token: 0x0600C099 RID: 49305 RVA: 0x0038F2B8 File Offset: 0x0038D4B8
 	public unsafe void SitOnCharCheckHoldHands(Entity leader, BaseActorComponent sceneItem)
 	{
 		CharacterHoldingHandsComponent component = leader.GetComponent<CharacterHoldingHandsComponent>();
@@ -506,13 +506,12 @@ public class HoldingHandsController : ControllerBase
 		IEntityData pbEntityInitData = sceneItem.CreatureData.GetPbEntityInitData();
 		Dictionary<EConfigComponent, IComponentBase> dictionary = (pbEntityInitData != null) ? pbEntityInitData.ComponentsData : null;
 		int pbDataId = sceneItem.CreatureData.GetPbDataId();
-		IEntityOwnerInfo entityOwner = CreatureModel.Instance.GetEntityOwner(GameModeModel.Instance.MapConfig.MapId, pbDataId, true);
-		int num = 0;
-		if (entityOwner != null && entityOwner != null && entityOwner.Type == EEntityOwnerType.Entity)
+		IEntityOwnerEntity entityOwnerEntity = CreatureModel.Instance.GetChildEntityOwner(GameModeModel.Instance.MapConfig.MapId, pbDataId);
+		if (entityOwnerEntity == null)
 		{
-			IEntityOwnerEntity entityOwnerEntity = entityOwner as IEntityOwnerEntity;
-			num = ((entityOwnerEntity != null) ? entityOwnerEntity.EntityId : 0);
+			entityOwnerEntity = (CreatureModel.Instance.GetEntityOwner(GameModeModel.Instance.MapConfig.MapId, pbDataId, EEntityOwnerType.Entity) as IEntityOwnerEntity);
 		}
+		int num = (entityOwnerEntity != null) ? entityOwnerEntity.EntityId : 0;
 		IEntityData entityData = null;
 		if (num != 0)
 		{
@@ -597,7 +596,7 @@ public class HoldingHandsController : ControllerBase
 		instance2.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 	}
 
-	// Token: 0x0600EC7B RID: 60539 RVA: 0x003839E0 File Offset: 0x00381BE0
+	// Token: 0x0600C09A RID: 49306 RVA: 0x0038F69C File Offset: 0x0038D89C
 	private void FollowerSitOnChairAction(CharacterHoldingHandsComponent leaderComp, int chairId, CharacterHoldingHandsComponent followerComp)
 	{
 		CreatureModel.Instance.GetEntitiesWithPbDataId(chairId, ref this.EntityHandles);
@@ -664,7 +663,7 @@ public class HoldingHandsController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600EC7C RID: 60540 RVA: 0x00383B2E File Offset: 0x00381D2E
+	// Token: 0x0600C09B RID: 49307 RVA: 0x0038F7EA File Offset: 0x0038D9EA
 	public void ForceNoLerpNextUpdate(EntityHandle entityHandle)
 	{
 		WorldEntity entity = entityHandle.Entity;
@@ -676,7 +675,7 @@ public class HoldingHandsController : ControllerBase
 		characterHoldingHandsComponent.SetBindingsNoLerp();
 	}
 
-	// Token: 0x0600EC7D RID: 60541 RVA: 0x00383B4C File Offset: 0x00381D4C
+	// Token: 0x0600C09C RID: 49308 RVA: 0x0038F808 File Offset: 0x0038DA08
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -702,8 +701,8 @@ public class HoldingHandsController : ControllerBase
 		return list;
 	}
 
-	// Token: 0x1700128B RID: 4747
-	// (get) Token: 0x0600EC7E RID: 60542 RVA: 0x00383BC7 File Offset: 0x00381DC7
+	// Token: 0x170012B5 RID: 4789
+	// (get) Token: 0x0600C09D RID: 49309 RVA: 0x0038F883 File Offset: 0x0038DA83
 	public static HoldingHandsController Instance
 	{
 		get
@@ -712,7 +711,7 @@ public class HoldingHandsController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600EC7F RID: 60543 RVA: 0x00383BCE File Offset: 0x00381DCE
+	// Token: 0x0600C09E RID: 49310 RVA: 0x0038F88A File Offset: 0x0038DA8A
 	public static HoldingHandsController GetOrCreateInstance()
 	{
 		if (HoldingHandsController._Instance == null)
@@ -722,7 +721,7 @@ public class HoldingHandsController : ControllerBase
 		return HoldingHandsController._Instance;
 	}
 
-	// Token: 0x0600EC80 RID: 60544 RVA: 0x00383BE2 File Offset: 0x00381DE2
+	// Token: 0x0600C09F RID: 49311 RVA: 0x0038F89E File Offset: 0x0038DA9E
 	public static bool CreateInstance()
 	{
 		if (HoldingHandsController._Instance != null)
@@ -733,27 +732,27 @@ public class HoldingHandsController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0600EC81 RID: 60545 RVA: 0x00383BF8 File Offset: 0x00381DF8
+	// Token: 0x0600C0A0 RID: 49312 RVA: 0x0038F8B4 File Offset: 0x0038DAB4
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600EC82 RID: 60546 RVA: 0x00383BFA File Offset: 0x00381DFA
+	// Token: 0x0600C0A1 RID: 49313 RVA: 0x0038F8B6 File Offset: 0x0038DAB6
 	public static void ResetStaticDefaultValue()
 	{
 		HoldingHandsController._Instance = null;
 	}
 
-	// Token: 0x0600EC83 RID: 60547 RVA: 0x00383C02 File Offset: 0x00381E02
+	// Token: 0x0600C0A2 RID: 49314 RVA: 0x0038F8BE File Offset: 0x0038DABE
 	static HoldingHandsController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(HoldingHandsController.CreateStaticDefaultValue), new Action(HoldingHandsController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04006DA0 RID: 28064
+	// Token: 0x04006E81 RID: 28289
 	private List<EntityHandle> EntityHandles = new List<EntityHandle>();
 
-	// Token: 0x04006DA1 RID: 28065
+	// Token: 0x04006E82 RID: 28290
 	[Nullable(2)]
 	private static HoldingHandsController _Instance;
 }

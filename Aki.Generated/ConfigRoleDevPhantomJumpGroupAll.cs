@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200089A RID: 2202
+	// Token: 0x020008B6 RID: 2230
 	public class ConfigRoleDevPhantomJumpGroupAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060033AE RID: 13230 RVA: 0x0017D7BC File Offset: 0x0017B9BC
+		// Token: 0x06003456 RID: 13398 RVA: 0x00184AA4 File Offset: 0x00182CA4
 		static ConfigRoleDevPhantomJumpGroupAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRoleDevPhantomJumpGroupAll.CreateStaticDefaultValue), new Action(ConfigRoleDevPhantomJumpGroupAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060033AF RID: 13231 RVA: 0x0017D7DC File Offset: 0x0017B9DC
+		// Token: 0x06003457 RID: 13399 RVA: 0x00184AC4 File Offset: 0x00182CC4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRoleDevPhantomJumpGroupAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060033B0 RID: 13232 RVA: 0x0017D85B File Offset: 0x0017BA5B
+		// Token: 0x06003458 RID: 13400 RVA: 0x00184B43 File Offset: 0x00182D43
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRoleDevPhantomJumpGroupAll.LogPair = null;
 			ConfigRoleDevPhantomJumpGroupAll.HandleId = 0;
 		}
 
-		// Token: 0x060033B1 RID: 13233 RVA: 0x0017D869 File Offset: 0x0017BA69
+		// Token: 0x06003459 RID: 13401 RVA: 0x00184B51 File Offset: 0x00182D51
 		public static void Init()
 		{
 			ConfigRoleDevPhantomJumpGroupAll.HandleId = ConfigCommon.InitDataStatement(ConfigRoleDevPhantomJumpGroupAll.HandleId, "db_roledev.db", "select BinData from `RoleDevPhantomJumpGroup`");
 		}
 
-		// Token: 0x060033B2 RID: 13234 RVA: 0x0017D884 File Offset: 0x0017BA84
+		// Token: 0x0600345A RID: 13402 RVA: 0x00184B6C File Offset: 0x00182D6C
 		[NullableContext(2)]
 		public static IReadOnlyList<RoleDevPhantomJumpGroup> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04003C1C RID: 15388
+		// Token: 0x04003CE0 RID: 15584
 		private const string DB = "db_roledev.db";
 
-		// Token: 0x04003C1D RID: 15389
+		// Token: 0x04003CE1 RID: 15585
 		private const string FILE = "g.共鸣者培养计划.xlsx";
 
-		// Token: 0x04003C1E RID: 15390
+		// Token: 0x04003CE2 RID: 15586
 		private const string TABLE = "RoleDevPhantomJumpGroup";
 
-		// Token: 0x04003C1F RID: 15391
+		// Token: 0x04003CE3 RID: 15587
 		private const string COMMAND = "select BinData from `RoleDevPhantomJumpGroup`";
 
-		// Token: 0x04003C20 RID: 15392
+		// Token: 0x04003CE4 RID: 15588
 		private const string KEY_PREFIX = "RoleDevPhantomJumpGroupAll";
 
-		// Token: 0x04003C21 RID: 15393
+		// Token: 0x04003CE5 RID: 15589
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003C22 RID: 15394
+		// Token: 0x04003CE6 RID: 15590
 		private static int HandleId;
 	}
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020007D5 RID: 2005
+	// Token: 0x020007F1 RID: 2033
 	public class ConfigRegressQuestById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002F10 RID: 12048 RVA: 0x001633AF File Offset: 0x001615AF
+		// Token: 0x06002FB8 RID: 12216 RVA: 0x0016A697 File Offset: 0x00168897
 		static ConfigRegressQuestById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRegressQuestById.CreateStaticDefaultValue), new Action(ConfigRegressQuestById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002F11 RID: 12049 RVA: 0x001633D0 File Offset: 0x001615D0
+		// Token: 0x06002FB9 RID: 12217 RVA: 0x0016A6B8 File Offset: 0x001688B8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRegressQuestById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002F12 RID: 12050 RVA: 0x0016344F File Offset: 0x0016164F
+		// Token: 0x06002FBA RID: 12218 RVA: 0x0016A737 File Offset: 0x00168937
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRegressQuestById.LogPair = null;
 			ConfigRegressQuestById.HandleId = 0;
 		}
 
-		// Token: 0x06002F13 RID: 12051 RVA: 0x0016345D File Offset: 0x0016165D
+		// Token: 0x06002FBB RID: 12219 RVA: 0x0016A745 File Offset: 0x00168945
 		public static void Init()
 		{
 			ConfigRegressQuestById.HandleId = ConfigCommon.InitDataStatement(ConfigRegressQuestById.HandleId, "db_regressactivity.db", "select BinData from `RegressQuest` where Id=?");
 		}
 
-		// Token: 0x06002F14 RID: 12052 RVA: 0x00163478 File Offset: 0x00161678
+		// Token: 0x06002FBC RID: 12220 RVA: 0x0016A760 File Offset: 0x00168960
 		public static RegressQuest? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRegressQuestById.HandleId, ConfigRegressQuestById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RegressQuest?(rootAsRegressQuest);
 		}
 
-		// Token: 0x040036B9 RID: 14009
+		// Token: 0x0400377D RID: 14205
 		private const string DB = "db_regressactivity.db";
 
-		// Token: 0x040036BA RID: 14010
+		// Token: 0x0400377E RID: 14206
 		private const string FILE = "h.回流活动(新).xlsx";
 
-		// Token: 0x040036BB RID: 14011
+		// Token: 0x0400377F RID: 14207
 		private const string TABLE = "RegressQuest";
 
-		// Token: 0x040036BC RID: 14012
+		// Token: 0x04003780 RID: 14208
 		private const string COMMAND = "select BinData from `RegressQuest` where Id=?";
 
-		// Token: 0x040036BD RID: 14013
+		// Token: 0x04003781 RID: 14209
 		private const string KEY_PREFIX = "RegressQuestById";
 
-		// Token: 0x040036BE RID: 14014
+		// Token: 0x04003782 RID: 14210
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040036BF RID: 14015
+		// Token: 0x04003783 RID: 14211
 		private static int HandleId;
 	}
 }

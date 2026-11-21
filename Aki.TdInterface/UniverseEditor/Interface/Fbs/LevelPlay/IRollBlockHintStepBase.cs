@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x02004581 RID: 17793
+	// Token: 0x020049E9 RID: 18921
 	public struct IRollBlockHintStepBase : IFlatbufferObject
 	{
-		// Token: 0x17007E6F RID: 32367
-		// (get) Token: 0x0601AE01 RID: 110081 RVA: 0x003D605D File Offset: 0x003D425D
+		// Token: 0x170084B0 RID: 33968
+		// (get) Token: 0x0601C5D6 RID: 116182 RVA: 0x004022F9 File Offset: 0x004004F9
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601AE02 RID: 110082 RVA: 0x003D606A File Offset: 0x003D426A
+		// Token: 0x0601C5D7 RID: 116183 RVA: 0x00402306 File Offset: 0x00400506
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601AE03 RID: 110083 RVA: 0x003D6074 File Offset: 0x003D4274
+		// Token: 0x0601C5D8 RID: 116184 RVA: 0x00402310 File Offset: 0x00400510
 		public static IRollBlockHintStepBase GetRootAsIRollBlockHintStepBase(ByteBuffer _bb)
 		{
 			return IRollBlockHintStepBase.GetRootAsIRollBlockHintStepBase(_bb, default(IRollBlockHintStepBase));
 		}
 
-		// Token: 0x0601AE04 RID: 110084 RVA: 0x003D6090 File Offset: 0x003D4290
+		// Token: 0x0601C5D9 RID: 116185 RVA: 0x0040232C File Offset: 0x0040052C
 		public static IRollBlockHintStepBase GetRootAsIRollBlockHintStepBase(ByteBuffer _bb, IRollBlockHintStepBase obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601AE05 RID: 110085 RVA: 0x003D60AD File Offset: 0x003D42AD
+		// Token: 0x0601C5DA RID: 116186 RVA: 0x00402349 File Offset: 0x00400549
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601AE06 RID: 110086 RVA: 0x003D60BC File Offset: 0x003D42BC
+		// Token: 0x0601C5DB RID: 116187 RVA: 0x00402358 File Offset: 0x00400558
 		public IRollBlockHintStepBase __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007E70 RID: 32368
-		// (get) Token: 0x0601AE07 RID: 110087 RVA: 0x003D60CC File Offset: 0x003D42CC
+		// Token: 0x170084B1 RID: 33969
+		// (get) Token: 0x0601C5DC RID: 116188 RVA: 0x00402368 File Offset: 0x00400568
 		public ERollBlockHintStepType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601AE08 RID: 110088 RVA: 0x003D6108 File Offset: 0x003D4308
+		// Token: 0x0601C5DD RID: 116189 RVA: 0x004023A4 File Offset: 0x004005A4
 		public static Offset<IRollBlockHintStepBase> CreateIRollBlockHintStepBase(FlatBufferBuilder builder, ERollBlockHintStepType Type = ERollBlockHintStepType.Roll)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IRollBlockHintStepBase.EndIRollBlockHintStepBase(builder);
 		}
 
-		// Token: 0x0601AE09 RID: 110089 RVA: 0x003D611E File Offset: 0x003D431E
+		// Token: 0x0601C5DE RID: 116190 RVA: 0x004023BA File Offset: 0x004005BA
 		public static void StartIRollBlockHintStepBase(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0601AE0A RID: 110090 RVA: 0x003D6127 File Offset: 0x003D4327
+		// Token: 0x0601C5DF RID: 116191 RVA: 0x004023C3 File Offset: 0x004005C3
 		public static void AddType(FlatBufferBuilder builder, ERollBlockHintStepType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601AE0B RID: 110091 RVA: 0x003D6132 File Offset: 0x003D4332
+		// Token: 0x0601C5E0 RID: 116192 RVA: 0x004023CE File Offset: 0x004005CE
 		public static Offset<IRollBlockHintStepBase> EndIRollBlockHintStepBase(FlatBufferBuilder builder)
 		{
 			return new Offset<IRollBlockHintStepBase>(builder.EndTable());
 		}
 
-		// Token: 0x0601AE0C RID: 110092 RVA: 0x003D6140 File Offset: 0x003D4340
+		// Token: 0x0601C5E1 RID: 116193 RVA: 0x004023DC File Offset: 0x004005DC
 		public IRollBlockHintStepBaseT UnPack()
 		{
 			IRollBlockHintStepBaseT rollBlockHintStepBaseT = new IRollBlockHintStepBaseT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return rollBlockHintStepBaseT;
 		}
 
-		// Token: 0x0601AE0D RID: 110093 RVA: 0x003D615B File Offset: 0x003D435B
+		// Token: 0x0601C5E2 RID: 116194 RVA: 0x004023F7 File Offset: 0x004005F7
 		public void UnPackTo(IRollBlockHintStepBaseT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0601AE0E RID: 110094 RVA: 0x003D616C File Offset: 0x003D436C
+		// Token: 0x0601C5E3 RID: 116195 RVA: 0x00402408 File Offset: 0x00400608
 		public static Offset<IRollBlockHintStepBase> Pack(FlatBufferBuilder builder, IRollBlockHintStepBaseT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return IRollBlockHintStepBase.CreateIRollBlockHintStepBase(builder, _o.Type);
 		}
 
-		// Token: 0x0400C636 RID: 50742
+		// Token: 0x0400D065 RID: 53349
 		private Table __p;
 	}
 }

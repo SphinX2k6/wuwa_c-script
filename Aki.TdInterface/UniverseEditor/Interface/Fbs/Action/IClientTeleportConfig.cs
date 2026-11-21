@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020063F7 RID: 25591
+	// Token: 0x02006A77 RID: 27255
 	public struct IClientTeleportConfig : IFlatbufferObject
 	{
-		// Token: 0x1700BE93 RID: 48787
-		// (get) Token: 0x0602C455 RID: 181333 RVA: 0x006137E8 File Offset: 0x006119E8
+		// Token: 0x1700C82D RID: 51245
+		// (get) Token: 0x0602EC2B RID: 191531 RVA: 0x0065F674 File Offset: 0x0065D874
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602C456 RID: 181334 RVA: 0x006137F5 File Offset: 0x006119F5
+		// Token: 0x0602EC2C RID: 191532 RVA: 0x0065F681 File Offset: 0x0065D881
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602C457 RID: 181335 RVA: 0x006137FC File Offset: 0x006119FC
+		// Token: 0x0602EC2D RID: 191533 RVA: 0x0065F688 File Offset: 0x0065D888
 		public static IClientTeleportConfig GetRootAsIClientTeleportConfig(ByteBuffer _bb)
 		{
 			return IClientTeleportConfig.GetRootAsIClientTeleportConfig(_bb, default(IClientTeleportConfig));
 		}
 
-		// Token: 0x0602C458 RID: 181336 RVA: 0x00613818 File Offset: 0x00611A18
+		// Token: 0x0602EC2E RID: 191534 RVA: 0x0065F6A4 File Offset: 0x0065D8A4
 		public static IClientTeleportConfig GetRootAsIClientTeleportConfig(ByteBuffer _bb, IClientTeleportConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602C459 RID: 181337 RVA: 0x00613835 File Offset: 0x00611A35
+		// Token: 0x0602EC2F RID: 191535 RVA: 0x0065F6C1 File Offset: 0x0065D8C1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602C45A RID: 181338 RVA: 0x00613844 File Offset: 0x00611A44
+		// Token: 0x0602EC30 RID: 191536 RVA: 0x0065F6D0 File Offset: 0x0065D8D0
 		public IClientTeleportConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BE94 RID: 48788
-		// (get) Token: 0x0602C45B RID: 181339 RVA: 0x00613854 File Offset: 0x00611A54
+		// Token: 0x1700C82E RID: 51246
+		// (get) Token: 0x0602EC31 RID: 191537 RVA: 0x0065F6E0 File Offset: 0x0065D8E0
 		public EClientTeleportType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602C45C RID: 181340 RVA: 0x00613890 File Offset: 0x00611A90
+		// Token: 0x0602EC32 RID: 191538 RVA: 0x0065F71C File Offset: 0x0065D91C
 		public static Offset<IClientTeleportConfig> CreateIClientTeleportConfig(FlatBufferBuilder builder, EClientTeleportType Type = EClientTeleportType.RelativeEntityPos)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IClientTeleportConfig.EndIClientTeleportConfig(builder);
 		}
 
-		// Token: 0x0602C45D RID: 181341 RVA: 0x006138A6 File Offset: 0x00611AA6
+		// Token: 0x0602EC33 RID: 191539 RVA: 0x0065F732 File Offset: 0x0065D932
 		public static void StartIClientTeleportConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602C45E RID: 181342 RVA: 0x006138AF File Offset: 0x00611AAF
+		// Token: 0x0602EC34 RID: 191540 RVA: 0x0065F73B File Offset: 0x0065D93B
 		public static void AddType(FlatBufferBuilder builder, EClientTeleportType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602C45F RID: 181343 RVA: 0x006138BA File Offset: 0x00611ABA
+		// Token: 0x0602EC35 RID: 191541 RVA: 0x0065F746 File Offset: 0x0065D946
 		public static Offset<IClientTeleportConfig> EndIClientTeleportConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IClientTeleportConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0602C460 RID: 181344 RVA: 0x006138C8 File Offset: 0x00611AC8
+		// Token: 0x0602EC36 RID: 191542 RVA: 0x0065F754 File Offset: 0x0065D954
 		public IClientTeleportConfigT UnPack()
 		{
 			IClientTeleportConfigT clientTeleportConfigT = new IClientTeleportConfigT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return clientTeleportConfigT;
 		}
 
-		// Token: 0x0602C461 RID: 181345 RVA: 0x006138E3 File Offset: 0x00611AE3
+		// Token: 0x0602EC37 RID: 191543 RVA: 0x0065F76F File Offset: 0x0065D96F
 		public void UnPackTo(IClientTeleportConfigT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602C462 RID: 181346 RVA: 0x006138F4 File Offset: 0x00611AF4
+		// Token: 0x0602EC38 RID: 191544 RVA: 0x0065F780 File Offset: 0x0065D980
 		public static Offset<IClientTeleportConfig> Pack(FlatBufferBuilder builder, IClientTeleportConfigT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IClientTeleportConfig.CreateIClientTeleportConfig(builder, _o.Type);
 		}
 
-		// Token: 0x040109DF RID: 68063
+		// Token: 0x04011805 RID: 71685
 		private Table __p;
 	}
 }

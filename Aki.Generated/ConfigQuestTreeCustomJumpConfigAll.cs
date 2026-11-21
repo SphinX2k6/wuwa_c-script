@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200078E RID: 1934
+	// Token: 0x020007A8 RID: 1960
 	public class ConfigQuestTreeCustomJumpConfigAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002D66 RID: 11622 RVA: 0x00159C38 File Offset: 0x00157E38
+		// Token: 0x06002E02 RID: 11778 RVA: 0x00160B44 File Offset: 0x0015ED44
 		static ConfigQuestTreeCustomJumpConfigAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigQuestTreeCustomJumpConfigAll.CreateStaticDefaultValue), new Action(ConfigQuestTreeCustomJumpConfigAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002D67 RID: 11623 RVA: 0x00159C58 File Offset: 0x00157E58
+		// Token: 0x06002E03 RID: 11779 RVA: 0x00160B64 File Offset: 0x0015ED64
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigQuestTreeCustomJumpConfigAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002D68 RID: 11624 RVA: 0x00159CD7 File Offset: 0x00157ED7
+		// Token: 0x06002E04 RID: 11780 RVA: 0x00160BE3 File Offset: 0x0015EDE3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigQuestTreeCustomJumpConfigAll.LogPair = null;
 			ConfigQuestTreeCustomJumpConfigAll.HandleId = 0;
 		}
 
-		// Token: 0x06002D69 RID: 11625 RVA: 0x00159CE5 File Offset: 0x00157EE5
+		// Token: 0x06002E05 RID: 11781 RVA: 0x00160BF1 File Offset: 0x0015EDF1
 		public static void Init()
 		{
 			ConfigQuestTreeCustomJumpConfigAll.HandleId = ConfigCommon.InitDataStatement(ConfigQuestTreeCustomJumpConfigAll.HandleId, "db_questtreecustomjumpconfig.db", "select BinData from `QuestTreeCustomJumpConfig`");
 		}
 
-		// Token: 0x06002D6A RID: 11626 RVA: 0x00159D00 File Offset: 0x00157F00
+		// Token: 0x06002E06 RID: 11782 RVA: 0x00160C0C File Offset: 0x0015EE0C
 		[NullableContext(2)]
 		public static IReadOnlyList<QuestTreeCustomJumpConfig> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040034C8 RID: 13512
+		// Token: 0x0400357E RID: 13694
 		private const string DB = "db_questtreecustomjumpconfig.db";
 
-		// Token: 0x040034C9 RID: 13513
+		// Token: 0x0400357F RID: 13695
 		private const string FILE = "k.可视化编辑/c.Csv/r.任务树定制跳转/*.csv*";
 
-		// Token: 0x040034CA RID: 13514
+		// Token: 0x04003580 RID: 13696
 		private const string TABLE = "QuestTreeCustomJumpConfig";
 
-		// Token: 0x040034CB RID: 13515
+		// Token: 0x04003581 RID: 13697
 		private const string COMMAND = "select BinData from `QuestTreeCustomJumpConfig`";
 
-		// Token: 0x040034CC RID: 13516
+		// Token: 0x04003582 RID: 13698
 		private const string KEY_PREFIX = "QuestTreeCustomJumpConfigAll";
 
-		// Token: 0x040034CD RID: 13517
+		// Token: 0x04003583 RID: 13699
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040034CE RID: 13518
+		// Token: 0x04003584 RID: 13700
 		private static int HandleId;
 	}
 }

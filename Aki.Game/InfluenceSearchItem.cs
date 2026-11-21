@@ -7,17 +7,17 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001F8B RID: 8075
+// Token: 0x0200144D RID: 5197
 internal class InfluenceSearchItem : UiPanelBase
 {
-	// Token: 0x0600FA9B RID: 64155 RVA: 0x003CB998 File Offset: 0x003C9B98
+	// Token: 0x0600CEBA RID: 52922 RVA: 0x003D74D0 File Offset: 0x003D56D0
 	[NullableContext(1)]
 	public InfluenceSearchItem(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x0600FA9C RID: 64156 RVA: 0x003CB9B0 File Offset: 0x003C9BB0
+	// Token: 0x0600CEBB RID: 52923 RVA: 0x003D74E8 File Offset: 0x003D56E8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -50,20 +50,20 @@ internal class InfluenceSearchItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600FA9D RID: 64157 RVA: 0x003CBB1C File Offset: 0x003C9D1C
+	// Token: 0x0600CEBC RID: 52924 RVA: 0x003D7654 File Offset: 0x003D5854
 	private void ButtonClick()
 	{
 		EventSystem.Instance.Emit<int, int>(EEventName.SearchInfluence, this.InfluenceId, this.CountryId);
 		UiManager.Instance.CloseView(EUiViewName.InfluenceSearchView, null);
 	}
 
-	// Token: 0x0600FA9E RID: 64158 RVA: 0x003CBB4A File Offset: 0x003C9D4A
+	// Token: 0x0600CEBD RID: 52925 RVA: 0x003D7682 File Offset: 0x003D5882
 	protected override void OnBeforeDestroy()
 	{
 		RedDotController.Instance.UnBindRedDot(ERedDotName.InfluenceReward);
 	}
 
-	// Token: 0x0600FA9F RID: 64159 RVA: 0x003CBB58 File Offset: 0x003C9D58
+	// Token: 0x0600CEBE RID: 52926 RVA: 0x003D7690 File Offset: 0x003D5890
 	public void UpdateItem(int influenceId, int countryId)
 	{
 		this.InfluenceId = influenceId;
@@ -86,7 +86,7 @@ internal class InfluenceSearchItem : UiPanelBase
 		this.BindRedDot(influenceInstance.Id);
 	}
 
-	// Token: 0x0600FAA0 RID: 64160 RVA: 0x003CBC29 File Offset: 0x003C9E29
+	// Token: 0x0600CEBF RID: 52927 RVA: 0x003D7761 File Offset: 0x003D5961
 	private void UpdateState(EInfluenceRelation relation)
 	{
 		base.GetItem(3).SetUIActive(relation == EInfluenceRelation.Neutral);
@@ -94,36 +94,36 @@ internal class InfluenceSearchItem : UiPanelBase
 		base.GetItem(5).SetUIActive(relation == EInfluenceRelation.Belong);
 	}
 
-	// Token: 0x0600FAA1 RID: 64161 RVA: 0x003CBC5B File Offset: 0x003C9E5B
+	// Token: 0x0600CEC0 RID: 52928 RVA: 0x003D7793 File Offset: 0x003D5993
 	private void BindRedDot(int influenceId)
 	{
 		RedDotController.Instance.BindRedDot(ERedDotName.InfluenceReward, base.GetItem(6), null, influenceId);
 	}
 
-	// Token: 0x040074B2 RID: 29874
+	// Token: 0x04007593 RID: 30099
 	private int CountryId;
 
-	// Token: 0x040074B3 RID: 29875
+	// Token: 0x04007594 RID: 30100
 	private int InfluenceId;
 
-	// Token: 0x02008575 RID: 34165
+	// Token: 0x020076FA RID: 30458
 	private enum EInfluenceSearchItem
 	{
-		// Token: 0x0402B747 RID: 177991
+		// Token: 0x04026A6A RID: 158314
 		Texture,
-		// Token: 0x0402B748 RID: 177992
+		// Token: 0x04026A6B RID: 158315
 		Name,
-		// Token: 0x0402B749 RID: 177993
+		// Token: 0x04026A6C RID: 158316
 		Area,
-		// Token: 0x0402B74A RID: 177994
+		// Token: 0x04026A6D RID: 158317
 		Neutral,
-		// Token: 0x0402B74B RID: 177995
+		// Token: 0x04026A6E RID: 158318
 		Hostility,
-		// Token: 0x0402B74C RID: 177996
+		// Token: 0x04026A6F RID: 158319
 		Belong,
-		// Token: 0x0402B74D RID: 177997
+		// Token: 0x04026A70 RID: 158320
 		RedDot,
-		// Token: 0x0402B74E RID: 177998
+		// Token: 0x04026A71 RID: 158321
 		Button
 	}
 }

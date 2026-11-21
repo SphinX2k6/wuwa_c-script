@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x020046A3 RID: 18083
+	// Token: 0x02004B0B RID: 19211
 	public class ISkipToLevelPlayNodeT
 	{
-		// Token: 0x1700806E RID: 32878
-		// (get) Token: 0x0601B787 RID: 112519 RVA: 0x003E6954 File Offset: 0x003E4B54
-		// (set) Token: 0x0601B788 RID: 112520 RVA: 0x003E695C File Offset: 0x003E4B5C
+		// Token: 0x170086AF RID: 34479
+		// (get) Token: 0x0601CF5C RID: 118620 RVA: 0x00412BF0 File Offset: 0x00410DF0
+		// (set) Token: 0x0601CF5D RID: 118621 RVA: 0x00412BF8 File Offset: 0x00410DF8
 		public EGmCommand Type { get; set; }
 
-		// Token: 0x1700806F RID: 32879
-		// (get) Token: 0x0601B789 RID: 112521 RVA: 0x003E6965 File Offset: 0x003E4B65
-		// (set) Token: 0x0601B78A RID: 112522 RVA: 0x003E696D File Offset: 0x003E4B6D
+		// Token: 0x170086B0 RID: 34480
+		// (get) Token: 0x0601CF5E RID: 118622 RVA: 0x00412C01 File Offset: 0x00410E01
+		// (set) Token: 0x0601CF5F RID: 118623 RVA: 0x00412C09 File Offset: 0x00410E09
 		public int LevelPlayId { get; set; }
 
-		// Token: 0x17008070 RID: 32880
-		// (get) Token: 0x0601B78B RID: 112523 RVA: 0x003E6976 File Offset: 0x003E4B76
-		// (set) Token: 0x0601B78C RID: 112524 RVA: 0x003E697E File Offset: 0x003E4B7E
+		// Token: 0x170086B1 RID: 34481
+		// (get) Token: 0x0601CF60 RID: 118624 RVA: 0x00412C12 File Offset: 0x00410E12
+		// (set) Token: 0x0601CF61 RID: 118625 RVA: 0x00412C1A File Offset: 0x00410E1A
 		public int ChildQuestId { get; set; }
 
-		// Token: 0x17008071 RID: 32881
-		// (get) Token: 0x0601B78D RID: 112525 RVA: 0x003E6987 File Offset: 0x003E4B87
-		// (set) Token: 0x0601B78E RID: 112526 RVA: 0x003E698F File Offset: 0x003E4B8F
+		// Token: 0x170086B2 RID: 34482
+		// (get) Token: 0x0601CF62 RID: 118626 RVA: 0x00412C23 File Offset: 0x00410E23
+		// (set) Token: 0x0601CF63 RID: 118627 RVA: 0x00412C2B File Offset: 0x00410E2B
 		public bool IsTeleport { get; set; }
 
-		// Token: 0x0601B78F RID: 112527 RVA: 0x003E6998 File Offset: 0x003E4B98
+		// Token: 0x0601CF64 RID: 118628 RVA: 0x00412C34 File Offset: 0x00410E34
 		public ISkipToLevelPlayNodeT()
 		{
 			this.Type = EGmCommand.SkipToLevelPlayNode;

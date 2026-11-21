@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x02001659 RID: 5721
+// Token: 0x02000B11 RID: 2833
 public class ConflictInfo : IConflictInfo
 {
-	// Token: 0x17000D92 RID: 3474
-	// (get) Token: 0x0600A0D8 RID: 41176 RVA: 0x00237665 File Offset: 0x00235865
-	// (set) Token: 0x0600A0D9 RID: 41177 RVA: 0x0023766D File Offset: 0x0023586D
+	// Token: 0x17000DB3 RID: 3507
+	// (get) Token: 0x060074B6 RID: 29878 RVA: 0x00241501 File Offset: 0x0023F701
+	// (set) Token: 0x060074B7 RID: 29879 RVA: 0x00241509 File Offset: 0x0023F709
 	public int RoleId { get; set; }
 
-	// Token: 0x17000D93 RID: 3475
-	// (get) Token: 0x0600A0DA RID: 41178 RVA: 0x00237676 File Offset: 0x00235876
-	// (set) Token: 0x0600A0DB RID: 41179 RVA: 0x0023767E File Offset: 0x0023587E
+	// Token: 0x17000DB4 RID: 3508
+	// (get) Token: 0x060074B8 RID: 29880 RVA: 0x00241512 File Offset: 0x0023F712
+	// (set) Token: 0x060074B9 RID: 29881 RVA: 0x0024151A File Offset: 0x0023F71A
 	public bool WeaponConflict { get; set; }
 
-	// Token: 0x17000D94 RID: 3476
-	// (get) Token: 0x0600A0DC RID: 41180 RVA: 0x00237687 File Offset: 0x00235887
-	// (set) Token: 0x0600A0DD RID: 41181 RVA: 0x0023768F File Offset: 0x0023588F
+	// Token: 0x17000DB5 RID: 3509
+	// (get) Token: 0x060074BA RID: 29882 RVA: 0x00241523 File Offset: 0x0023F723
+	// (set) Token: 0x060074BB RID: 29883 RVA: 0x0024152B File Offset: 0x0023F72B
 	public bool PhantomConflict { get; set; }
 }

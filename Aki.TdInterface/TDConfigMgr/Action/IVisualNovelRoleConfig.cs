@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020A1 RID: 8353
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020022F2 RID: 8946
 	public class IVisualNovelRoleConfig
 	{
-		// Token: 0x0600B7BA RID: 47034 RVA: 0x001A99DC File Offset: 0x001A7BDC
+		// Token: 0x0600C2FE RID: 49918 RVA: 0x001C0408 File Offset: 0x001BE608
 		private IVisualNovelRoleConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B7BB RID: 47035 RVA: 0x001A9A14 File Offset: 0x001A7C14
+		// Token: 0x0600C2FF RID: 49919 RVA: 0x001C0440 File Offset: 0x001BE640
 		public static IVisualNovelRoleConfig Create([Nullable(2)] IVisualNovelRoleConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B7BC RID: 47036 RVA: 0x001A9A27 File Offset: 0x001A7C27
+		// Token: 0x0600C300 RID: 49920 RVA: 0x001C0453 File Offset: 0x001BE653
 		public static IVisualNovelRoleConfig CreateFromSetValue([Nullable(2)] IVisualNovelRoleConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B7BD RID: 47037 RVA: 0x001A9A3A File Offset: 0x001A7C3A
+		// Token: 0x0600C301 RID: 49921 RVA: 0x001C0468 File Offset: 0x001BE668
 		public IVisualNovelRoleConfig_SetValue ToSetValue()
 		{
 			return new IVisualNovelRoleConfig_SetValue
@@ -58,13 +56,14 @@ namespace Aki.TDConfigMgr.Action
 				Expression = this.Expression,
 				VisualEffect = this.VisualEffect,
 				HideAvatar = this.HideAvatar,
-				HidePortrait = this.HidePortrait
+				HidePortrait = this.HidePortrait,
+				CustomLayer = this.CustomLayer
 			};
 		}
 
-		// Token: 0x17003844 RID: 14404
-		// (get) Token: 0x0600B7BE RID: 47038 RVA: 0x001A9A74 File Offset: 0x001A7C74
-		// (set) Token: 0x0600B7BF RID: 47039 RVA: 0x001A9AAE File Offset: 0x001A7CAE
+		// Token: 0x17003B24 RID: 15140
+		// (get) Token: 0x0600C302 RID: 49922 RVA: 0x001C04B8 File Offset: 0x001BE6B8
+		// (set) Token: 0x0600C303 RID: 49923 RVA: 0x001C04F2 File Offset: 0x001BE6F2
 		public virtual int? Expression
 		{
 			get
@@ -86,9 +85,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003845 RID: 14405
-		// (get) Token: 0x0600B7C0 RID: 47040 RVA: 0x001A9ABC File Offset: 0x001A7CBC
-		// (set) Token: 0x0600B7C1 RID: 47041 RVA: 0x001A9AF6 File Offset: 0x001A7CF6
+		// Token: 0x17003B25 RID: 15141
+		// (get) Token: 0x0600C304 RID: 49924 RVA: 0x001C0500 File Offset: 0x001BE700
+		// (set) Token: 0x0600C305 RID: 49925 RVA: 0x001C053A File Offset: 0x001BE73A
 		public virtual EAvgVisualEffect? VisualEffect
 		{
 			get
@@ -110,9 +109,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003846 RID: 14406
-		// (get) Token: 0x0600B7C2 RID: 47042 RVA: 0x001A9B04 File Offset: 0x001A7D04
-		// (set) Token: 0x0600B7C3 RID: 47043 RVA: 0x001A9B3E File Offset: 0x001A7D3E
+		// Token: 0x17003B26 RID: 15142
+		// (get) Token: 0x0600C306 RID: 49926 RVA: 0x001C0548 File Offset: 0x001BE748
+		// (set) Token: 0x0600C307 RID: 49927 RVA: 0x001C0582 File Offset: 0x001BE782
 		public virtual bool? HideAvatar
 		{
 			get
@@ -134,9 +133,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003847 RID: 14407
-		// (get) Token: 0x0600B7C4 RID: 47044 RVA: 0x001A9B4C File Offset: 0x001A7D4C
-		// (set) Token: 0x0600B7C5 RID: 47045 RVA: 0x001A9B86 File Offset: 0x001A7D86
+		// Token: 0x17003B27 RID: 15143
+		// (get) Token: 0x0600C308 RID: 49928 RVA: 0x001C0590 File Offset: 0x001BE790
+		// (set) Token: 0x0600C309 RID: 49929 RVA: 0x001C05CA File Offset: 0x001BE7CA
 		public virtual bool? HidePortrait
 		{
 			get
@@ -158,11 +157,35 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006E41 RID: 28225
+		// Token: 0x17003B28 RID: 15144
+		// (get) Token: 0x0600C30A RID: 49930 RVA: 0x001C05D8 File Offset: 0x001BE7D8
+		// (set) Token: 0x0600C30B RID: 49931 RVA: 0x001C0612 File Offset: 0x001BE812
+		public virtual int? CustomLayer
+		{
+			get
+			{
+				if (this.FbInstance != null)
+				{
+					return this.FbInstance.CustomLayer;
+				}
+				IVisualNovelRoleConfig_SetValue pocoInterface = this.PocoInterface;
+				if (pocoInterface == null)
+				{
+					return null;
+				}
+				return pocoInterface.CustomLayer;
+			}
+			set
+			{
+				this.GetOrCreatePoco().CustomLayer = value;
+			}
+		}
+
+		// Token: 0x04007457 RID: 29783
 		[Nullable(2)]
 		protected IVisualNovelRoleConfig FbInstance;
 
-		// Token: 0x04006E42 RID: 28226
+		// Token: 0x04007458 RID: 29784
 		[Nullable(2)]
 		protected IVisualNovelRoleConfig_SetValue PocoInterface;
 	}

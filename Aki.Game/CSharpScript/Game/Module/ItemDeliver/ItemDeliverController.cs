@@ -14,13 +14,13 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.ItemDeliver
 {
-	// Token: 0x02005812 RID: 22546
+	// Token: 0x020047E9 RID: 18409
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class ItemDeliverController : UiControllerBase
 	{
-		// Token: 0x060394E4 RID: 234724 RVA: 0x00D973D0 File Offset: 0x00D955D0
+		// Token: 0x0602E3F8 RID: 189432 RVA: 0x00CE6260 File Offset: 0x00CE4460
 		public void HandInItemRequest(GeneralContext context, List<PbHandInItem> handInItem, [Nullable(2)] Action<bool> onResponseCallback = null)
 		{
 			if (context.Type.GetValueOrDefault() != EGeneralContextType.GeneralLogicTree)
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.ItemDeliver
 			}
 		}
 
-		// Token: 0x060394E5 RID: 234725 RVA: 0x00D974B4 File Offset: 0x00D956B4
+		// Token: 0x0602E3F9 RID: 189433 RVA: 0x00CE6344 File Offset: 0x00CE4544
 		public void ItemUseRequest(GeneralContext context, int itemConfigId, int itemCount, [Nullable(2)] Action<bool> onResponseCallback = null)
 		{
 			if (context.Type.GetValueOrDefault() == EGeneralContextType.Entity)
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Module.ItemDeliver
 			onResponseCallback2(false);
 		}
 
-		// Token: 0x060394E6 RID: 234726 RVA: 0x00D97540 File Offset: 0x00D95740
+		// Token: 0x0602E3FA RID: 189434 RVA: 0x00CE63D0 File Offset: 0x00CE45D0
 		[NullableContext(0)]
 		public UniTask<bool> OpenItemDeliverView([Nullable(1)] DeliverData itemDeliverData)
 		{
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.Module.ItemDeliver
 			return <OpenItemDeliverView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060394E7 RID: 234727 RVA: 0x00D97584 File Offset: 0x00D95784
+		// Token: 0x0602E3FB RID: 189435 RVA: 0x00CE6414 File Offset: 0x00CE4614
 		[NullableContext(2)]
 		[return: Nullable(0)]
 		public UniTask<bool> OpenItemDeliverViewByHandInItem([Nullable(1)] List<IHandInItem> items, [Nullable(1)] string npcName, string titleTextId = null, string descriptionTextId = null, GeneralContext content = null)
@@ -170,7 +170,7 @@ namespace CSharpScript.Game.Module.ItemDeliver
 			return <OpenItemDeliverViewByHandInItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060394E8 RID: 234728 RVA: 0x00D975F4 File Offset: 0x00D957F4
+		// Token: 0x0602E3FC RID: 189436 RVA: 0x00CE6484 File Offset: 0x00CE4684
 		[NullableContext(2)]
 		public void OpenItemDeliverViewByHandInGroup([Nullable(1)] IHandInGroup handInGroup, [Nullable(1)] string npcName, string titleTextId = null, string descriptionTextId = null, GeneralContext content = null)
 		{
@@ -220,8 +220,8 @@ namespace CSharpScript.Game.Module.ItemDeliver
 			this.OpenItemDeliverView(deliverData);
 		}
 
-		// Token: 0x17008A27 RID: 35367
-		// (get) Token: 0x060394E9 RID: 234729 RVA: 0x00D97760 File Offset: 0x00D95960
+		// Token: 0x17005DF1 RID: 24049
+		// (get) Token: 0x0602E3FD RID: 189437 RVA: 0x00CE65F0 File Offset: 0x00CE47F0
 		public static ItemDeliverController Instance
 		{
 			get
@@ -230,7 +230,7 @@ namespace CSharpScript.Game.Module.ItemDeliver
 			}
 		}
 
-		// Token: 0x060394EA RID: 234730 RVA: 0x00D97767 File Offset: 0x00D95967
+		// Token: 0x0602E3FE RID: 189438 RVA: 0x00CE65F7 File Offset: 0x00CE47F7
 		public static ItemDeliverController GetOrCreateInstance()
 		{
 			if (ItemDeliverController._Instance == null)
@@ -240,7 +240,7 @@ namespace CSharpScript.Game.Module.ItemDeliver
 			return ItemDeliverController._Instance;
 		}
 
-		// Token: 0x060394EB RID: 234731 RVA: 0x00D9777B File Offset: 0x00D9597B
+		// Token: 0x0602E3FF RID: 189439 RVA: 0x00CE660B File Offset: 0x00CE480B
 		public static bool CreateInstance()
 		{
 			if (ItemDeliverController._Instance != null)
@@ -251,24 +251,24 @@ namespace CSharpScript.Game.Module.ItemDeliver
 			return true;
 		}
 
-		// Token: 0x060394EC RID: 234732 RVA: 0x00D97791 File Offset: 0x00D95991
+		// Token: 0x0602E400 RID: 189440 RVA: 0x00CE6621 File Offset: 0x00CE4821
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060394ED RID: 234733 RVA: 0x00D97793 File Offset: 0x00D95993
+		// Token: 0x0602E401 RID: 189441 RVA: 0x00CE6623 File Offset: 0x00CE4823
 		public static void ResetStaticDefaultValue()
 		{
 			ItemDeliverController._Instance = null;
 		}
 
-		// Token: 0x060394EE RID: 234734 RVA: 0x00D9779B File Offset: 0x00D9599B
+		// Token: 0x0602E402 RID: 189442 RVA: 0x00CE662B File Offset: 0x00CE482B
 		static ItemDeliverController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ItemDeliverController.CreateStaticDefaultValue), new Action(ItemDeliverController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401DF75 RID: 122741
+		// Token: 0x04018A0C RID: 100876
 		[Nullable(2)]
 		private static ItemDeliverController _Instance;
 	}

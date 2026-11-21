@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 {
-	// Token: 0x02005EA2 RID: 24226
+	// Token: 0x020064E5 RID: 25829
 	public struct ICommonBtAlwaysFalseDecorator : IFlatbufferObject
 	{
-		// Token: 0x1700B509 RID: 46345
-		// (get) Token: 0x06029806 RID: 169990 RVA: 0x005AFC38 File Offset: 0x005ADE38
+		// Token: 0x1700BE74 RID: 48756
+		// (get) Token: 0x0602BEAE RID: 179886 RVA: 0x005F8BDC File Offset: 0x005F6DDC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			}
 		}
 
-		// Token: 0x06029807 RID: 169991 RVA: 0x005AFC45 File Offset: 0x005ADE45
+		// Token: 0x0602BEAF RID: 179887 RVA: 0x005F8BE9 File Offset: 0x005F6DE9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06029808 RID: 169992 RVA: 0x005AFC4C File Offset: 0x005ADE4C
+		// Token: 0x0602BEB0 RID: 179888 RVA: 0x005F8BF0 File Offset: 0x005F6DF0
 		public static ICommonBtAlwaysFalseDecorator GetRootAsICommonBtAlwaysFalseDecorator(ByteBuffer _bb)
 		{
 			return ICommonBtAlwaysFalseDecorator.GetRootAsICommonBtAlwaysFalseDecorator(_bb, default(ICommonBtAlwaysFalseDecorator));
 		}
 
-		// Token: 0x06029809 RID: 169993 RVA: 0x005AFC68 File Offset: 0x005ADE68
+		// Token: 0x0602BEB1 RID: 179889 RVA: 0x005F8C0C File Offset: 0x005F6E0C
 		public static ICommonBtAlwaysFalseDecorator GetRootAsICommonBtAlwaysFalseDecorator(ByteBuffer _bb, ICommonBtAlwaysFalseDecorator obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602980A RID: 169994 RVA: 0x005AFC85 File Offset: 0x005ADE85
+		// Token: 0x0602BEB2 RID: 179890 RVA: 0x005F8C29 File Offset: 0x005F6E29
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602980B RID: 169995 RVA: 0x005AFC94 File Offset: 0x005ADE94
+		// Token: 0x0602BEB3 RID: 179891 RVA: 0x005F8C38 File Offset: 0x005F6E38
 		public ICommonBtAlwaysFalseDecorator __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B50A RID: 46346
-		// (get) Token: 0x0602980C RID: 169996 RVA: 0x005AFCA4 File Offset: 0x005ADEA4
+		// Token: 0x1700BE75 RID: 48757
+		// (get) Token: 0x0602BEB4 RID: 179892 RVA: 0x005F8C48 File Offset: 0x005F6E48
 		public ECommonBtDecoratorType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			}
 		}
 
-		// Token: 0x0602980D RID: 169997 RVA: 0x005AFCE0 File Offset: 0x005ADEE0
+		// Token: 0x0602BEB5 RID: 179893 RVA: 0x005F8C84 File Offset: 0x005F6E84
 		public static Offset<ICommonBtAlwaysFalseDecorator> CreateICommonBtAlwaysFalseDecorator(FlatBufferBuilder builder, ECommonBtDecoratorType Type = ECommonBtDecoratorType.Condition)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			return ICommonBtAlwaysFalseDecorator.EndICommonBtAlwaysFalseDecorator(builder);
 		}
 
-		// Token: 0x0602980E RID: 169998 RVA: 0x005AFCF6 File Offset: 0x005ADEF6
+		// Token: 0x0602BEB6 RID: 179894 RVA: 0x005F8C9A File Offset: 0x005F6E9A
 		public static void StartICommonBtAlwaysFalseDecorator(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602980F RID: 169999 RVA: 0x005AFCFF File Offset: 0x005ADEFF
+		// Token: 0x0602BEB7 RID: 179895 RVA: 0x005F8CA3 File Offset: 0x005F6EA3
 		public static void AddType(FlatBufferBuilder builder, ECommonBtDecoratorType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06029810 RID: 170000 RVA: 0x005AFD0A File Offset: 0x005ADF0A
+		// Token: 0x0602BEB8 RID: 179896 RVA: 0x005F8CAE File Offset: 0x005F6EAE
 		public static Offset<ICommonBtAlwaysFalseDecorator> EndICommonBtAlwaysFalseDecorator(FlatBufferBuilder builder)
 		{
 			return new Offset<ICommonBtAlwaysFalseDecorator>(builder.EndTable());
 		}
 
-		// Token: 0x06029811 RID: 170001 RVA: 0x005AFD18 File Offset: 0x005ADF18
+		// Token: 0x0602BEB9 RID: 179897 RVA: 0x005F8CBC File Offset: 0x005F6EBC
 		public ICommonBtAlwaysFalseDecoratorT UnPack()
 		{
 			ICommonBtAlwaysFalseDecoratorT commonBtAlwaysFalseDecoratorT = new ICommonBtAlwaysFalseDecoratorT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			return commonBtAlwaysFalseDecoratorT;
 		}
 
-		// Token: 0x06029812 RID: 170002 RVA: 0x005AFD33 File Offset: 0x005ADF33
+		// Token: 0x0602BEBA RID: 179898 RVA: 0x005F8CD7 File Offset: 0x005F6ED7
 		public void UnPackTo(ICommonBtAlwaysFalseDecoratorT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06029813 RID: 170003 RVA: 0x005AFD44 File Offset: 0x005ADF44
+		// Token: 0x0602BEBB RID: 179899 RVA: 0x005F8CE8 File Offset: 0x005F6EE8
 		public static Offset<ICommonBtAlwaysFalseDecorator> Pack(FlatBufferBuilder builder, ICommonBtAlwaysFalseDecoratorT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 			return ICommonBtAlwaysFalseDecorator.CreateICommonBtAlwaysFalseDecorator(builder, _o.Type);
 		}
 
-		// Token: 0x0400F912 RID: 63762
+		// Token: 0x04010675 RID: 67189
 		private Table __p;
 	}
 }

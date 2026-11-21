@@ -11,19 +11,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlement
 {
-	// Token: 0x020062F7 RID: 25335
+	// Token: 0x02005275 RID: 21109
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PinballSettleResultView : UiViewBase, IPinballSettleResultViewContext
 	{
-		// Token: 0x0603FC08 RID: 261128 RVA: 0x00F6CA5C File Offset: 0x00F6AC5C
+		// Token: 0x060348C9 RID: 215241 RVA: 0x00EB39B8 File Offset: 0x00EB1BB8
 		[NullableContext(1)]
 		public PinballSettleResultView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x170092B2 RID: 37554
-		// (get) Token: 0x0603FC09 RID: 261129 RVA: 0x00F6CA65 File Offset: 0x00F6AC65
+		// Token: 0x17006614 RID: 26132
+		// (get) Token: 0x060348CA RID: 215242 RVA: 0x00EB39C1 File Offset: 0x00EB1BC1
 		public new IPinballSettleResultViewParam OpenParam
 		{
 			get
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			}
 		}
 
-		// Token: 0x0603FC0A RID: 261130 RVA: 0x00F6CA74 File Offset: 0x00F6AC74
+		// Token: 0x060348CB RID: 215243 RVA: 0x00EB39D0 File Offset: 0x00EB1BD0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 22;
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603FC0B RID: 261131 RVA: 0x00F6CDE0 File Offset: 0x00F6AFE0
+		// Token: 0x060348CC RID: 215244 RVA: 0x00EB3D3C File Offset: 0x00EB1F3C
 		protected override void OnBeforeCreate()
 		{
 			switch (this.OpenParam.LevelType)
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			this.Strategy.Context = this;
 		}
 
-		// Token: 0x0603FC0C RID: 261132 RVA: 0x00F6CE54 File Offset: 0x00F6B054
+		// Token: 0x060348CD RID: 215245 RVA: 0x00EB3DB0 File Offset: 0x00EB1FB0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PinballSettleResultView.<OnBeforeStartAsync>d__16 <OnBeforeStartAsync>d__;
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FC0D RID: 261133 RVA: 0x00F6CE98 File Offset: 0x00F6B098
+		// Token: 0x060348CE RID: 215246 RVA: 0x00EB3DF4 File Offset: 0x00EB1FF4
 		private UniTask InitButtons()
 		{
 			PinballSettleResultView.<InitButtons>d__17 <InitButtons>d__;
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			return <InitButtons>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FC0E RID: 261134 RVA: 0x00F6CEDC File Offset: 0x00F6B0DC
+		// Token: 0x060348CF RID: 215247 RVA: 0x00EB3E38 File Offset: 0x00EB2038
 		private UniTask InitRewardView()
 		{
 			PinballSettleResultView.<InitRewardView>d__18 <InitRewardView>d__;
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			return <InitRewardView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FC0F RID: 261135 RVA: 0x00F6CF20 File Offset: 0x00F6B120
+		// Token: 0x060348D0 RID: 215248 RVA: 0x00EB3E7C File Offset: 0x00EB207C
 		private UniTask InitProgressRewardView()
 		{
 			PinballSettleResultView.<InitProgressRewardView>d__19 <InitProgressRewardView>d__;
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			return <InitProgressRewardView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FC10 RID: 261136 RVA: 0x00F6CF64 File Offset: 0x00F6B164
+		// Token: 0x060348D1 RID: 215249 RVA: 0x00EB3EC0 File Offset: 0x00EB20C0
 		private UniTask InitDialogView()
 		{
 			PinballSettleResultView.<InitDialogView>d__20 <InitDialogView>d__;
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			return <InitDialogView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FC11 RID: 261137 RVA: 0x00F6CFA8 File Offset: 0x00F6B1A8
+		// Token: 0x060348D2 RID: 215250 RVA: 0x00EB3F04 File Offset: 0x00EB2104
 		private UniTask InitFailTipsView()
 		{
 			PinballSettleResultView.<InitFailTipsView>d__21 <InitFailTipsView>d__;
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			return <InitFailTipsView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FC12 RID: 261138 RVA: 0x00F6CFEC File Offset: 0x00F6B1EC
+		// Token: 0x060348D3 RID: 215251 RVA: 0x00EB3F48 File Offset: 0x00EB2148
 		private UniTask InitUnlockTipsView()
 		{
 			PinballSettleResultView.<InitUnlockTipsView>d__22 <InitUnlockTipsView>d__;
@@ -193,7 +193,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			return <InitUnlockTipsView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FC13 RID: 261139 RVA: 0x00F6D030 File Offset: 0x00F6B230
+		// Token: 0x060348D4 RID: 215252 RVA: 0x00EB3F8C File Offset: 0x00EB218C
 		protected override void OnStart()
 		{
 			this.UiViewSequence.StartSequenceName = (this.OpenParam.IsWin ? "Victory_In" : "Failure_In");
@@ -205,13 +205,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			AudioSystem.Instance.PostEvent("stop_dungeon_huodong_danzhu_boss");
 		}
 
-		// Token: 0x0603FC14 RID: 261140 RVA: 0x00F6D0B7 File Offset: 0x00F6B2B7
+		// Token: 0x060348D5 RID: 215253 RVA: 0x00EB4013 File Offset: 0x00EB2213
 		protected override void OnDestroy()
 		{
 			this.UnBindRedDot();
 		}
 
-		// Token: 0x0603FC15 RID: 261141 RVA: 0x00F6D0C0 File Offset: 0x00F6B2C0
+		// Token: 0x060348D6 RID: 215254 RVA: 0x00EB401C File Offset: 0x00EB221C
 		protected void RefreshTitle()
 		{
 			PinballSettleResultStrategyBase pinballSettleResultStrategyBase = this.Strategy as PinballSettleResultStrategyBase;
@@ -237,7 +237,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			item2.SetUIActive(!this.OpenParam.IsWin);
 		}
 
-		// Token: 0x0603FC16 RID: 261142 RVA: 0x00F6D158 File Offset: 0x00F6B358
+		// Token: 0x060348D7 RID: 215255 RVA: 0x00EB40B4 File Offset: 0x00EB22B4
 		private void InitStarLayout()
 		{
 			this.StarLayout = new GenericLayout<PinballStarItemView, bool>(base.GetHorizontalLayout(6), () => new PinballStarItemView(), null, false, true);
@@ -249,7 +249,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			item.SetUIActive(false);
 		}
 
-		// Token: 0x0603FC17 RID: 261143 RVA: 0x00F6D1AB File Offset: 0x00F6B3AB
+		// Token: 0x060348D8 RID: 215256 RVA: 0x00EB4107 File Offset: 0x00EB2307
 		protected void RefreshStarLayout()
 		{
 			IPinballSettleResultStrategy strategy = this.Strategy;
@@ -260,7 +260,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			strategy.RefreshStarLayout();
 		}
 
-		// Token: 0x0603FC18 RID: 261144 RVA: 0x00F6D1C0 File Offset: 0x00F6B3C0
+		// Token: 0x060348D9 RID: 215257 RVA: 0x00EB411C File Offset: 0x00EB231C
 		protected void RefreshDamageLayout()
 		{
 			this.DamageLayout = new GenericLayout<DamageLayoutItemView, IDamageLayoutItemData>(base.GetVerticalLayout(8), () => new DamageLayoutItemView(), null, false, true);
@@ -283,7 +283,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			this.DamageLayout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x0603FC19 RID: 261145 RVA: 0x00F6D2BC File Offset: 0x00F6B4BC
+		// Token: 0x060348DA RID: 215258 RVA: 0x00EB4218 File Offset: 0x00EB2418
 		protected UniTask RefreshRole()
 		{
 			PinballSettleResultView.<RefreshRole>d__29 <RefreshRole>d__;
@@ -294,7 +294,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			return <RefreshRole>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FC1A RID: 261146 RVA: 0x00F6D2FF File Offset: 0x00F6B4FF
+		// Token: 0x060348DB RID: 215259 RVA: 0x00EB425B File Offset: 0x00EB245B
 		private void RefreshViewState()
 		{
 			this.RefreshTitle();
@@ -309,7 +309,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			this.RefreshFormationToggle();
 		}
 
-		// Token: 0x0603FC1B RID: 261147 RVA: 0x00F6D340 File Offset: 0x00F6B540
+		// Token: 0x060348DC RID: 215260 RVA: 0x00EB429C File Offset: 0x00EB249C
 		private void RefreshFormationToggle()
 		{
 			if (this.OpenParam.IsWin)
@@ -341,7 +341,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			}
 		}
 
-		// Token: 0x0603FC1C RID: 261148 RVA: 0x00F6D3D0 File Offset: 0x00F6B5D0
+		// Token: 0x060348DD RID: 215261 RVA: 0x00EB432C File Offset: 0x00EB252C
 		protected void RefreshButtons()
 		{
 			IPinballSettleResultStrategy strategy = this.Strategy;
@@ -371,7 +371,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			uuiitem2.SetUIActive(this.ShouldShowFunctionBtn(EFunctionType.PinballRole));
 		}
 
-		// Token: 0x0603FC1D RID: 261149 RVA: 0x00F6D44C File Offset: 0x00F6B64C
+		// Token: 0x060348DE RID: 215262 RVA: 0x00EB43A8 File Offset: 0x00EB25A8
 		private bool ShouldShowFunctionBtn(EFunctionType functionType)
 		{
 			if (!FunctionModel.Instance.IsOpen(functionType))
@@ -422,7 +422,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			return this.OpenParam.LevelId != num2 || !this.OpenParam.IsFirstPass;
 		}
 
-		// Token: 0x0603FC1E RID: 261150 RVA: 0x00F6D5E2 File Offset: 0x00F6B7E2
+		// Token: 0x060348DF RID: 215263 RVA: 0x00EB453E File Offset: 0x00EB273E
 		protected void RefreshRewards()
 		{
 			IPinballSettleResultStrategy strategy = this.Strategy;
@@ -433,7 +433,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			strategy.RefreshRewards();
 		}
 
-		// Token: 0x0603FC1F RID: 261151 RVA: 0x00F6D5F4 File Offset: 0x00F6B7F4
+		// Token: 0x060348E0 RID: 215264 RVA: 0x00EB4550 File Offset: 0x00EB2750
 		protected void RefreshProgressRewards()
 		{
 			IPinballSettleResultStrategy strategy = this.Strategy;
@@ -444,7 +444,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			strategy.RefreshProgressRewards();
 		}
 
-		// Token: 0x0603FC20 RID: 261152 RVA: 0x00F6D608 File Offset: 0x00F6B808
+		// Token: 0x060348E1 RID: 215265 RVA: 0x00EB4564 File Offset: 0x00EB2764
 		protected void RefreshFailTips()
 		{
 			IPinballSettleResultStrategy strategy = this.Strategy;
@@ -482,7 +482,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			failTipsView2.SetUiActive(true);
 		}
 
-		// Token: 0x0603FC21 RID: 261153 RVA: 0x00F6D6DC File Offset: 0x00F6B8DC
+		// Token: 0x060348E2 RID: 215266 RVA: 0x00EB4638 File Offset: 0x00EB2838
 		protected void RefreshDialog()
 		{
 			IPinballSettleResultStrategy strategy = this.Strategy;
@@ -540,7 +540,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			dialogView2.SetUiActive(true);
 		}
 
-		// Token: 0x0603FC22 RID: 261154 RVA: 0x00F6D82E File Offset: 0x00F6BA2E
+		// Token: 0x060348E3 RID: 215267 RVA: 0x00EB478A File Offset: 0x00EB298A
 		protected void RefreshUnlockTips()
 		{
 			IPinballSettleResultStrategy strategy = this.Strategy;
@@ -551,7 +551,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			strategy.RefreshUnlockTips();
 		}
 
-		// Token: 0x0603FC23 RID: 261155 RVA: 0x00F6D840 File Offset: 0x00F6BA40
+		// Token: 0x060348E4 RID: 215268 RVA: 0x00EB479C File Offset: 0x00EB299C
 		private void BindRedDot()
 		{
 			UUIItem item = base.GetItem(20);
@@ -562,25 +562,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			RedDotController.Instance.BindRedDot(ERedDotName.RedDotPinballRoleFunction, base.GetItem(21), null, 0);
 		}
 
-		// Token: 0x0603FC24 RID: 261156 RVA: 0x00F6D86F File Offset: 0x00F6BA6F
+		// Token: 0x060348E5 RID: 215269 RVA: 0x00EB47CB File Offset: 0x00EB29CB
 		private void UnBindRedDot()
 		{
 			RedDotController.Instance.UnBindGivenUi(ERedDotName.RedDotPinballRoleFunction, base.GetItem(21), 0);
 		}
 
-		// Token: 0x0603FC25 RID: 261157 RVA: 0x00F6D889 File Offset: 0x00F6BA89
+		// Token: 0x060348E6 RID: 215270 RVA: 0x00EB47E5 File Offset: 0x00EB29E5
 		private void OnClickBtnShop()
 		{
 			UiManager.Instance.OpenView(EUiViewName.PinballShopView, null, null);
 		}
 
-		// Token: 0x0603FC26 RID: 261158 RVA: 0x00F6D89C File Offset: 0x00F6BA9C
+		// Token: 0x060348E7 RID: 215271 RVA: 0x00EB47F8 File Offset: 0x00EB29F8
 		private void OnClickBtnRole()
 		{
 			UiManager.Instance.OpenView(EUiViewName.PinballRoleView, null, null);
 		}
 
-		// Token: 0x0603FC27 RID: 261159 RVA: 0x00F6D8AF File Offset: 0x00F6BAAF
+		// Token: 0x060348E8 RID: 215272 RVA: 0x00EB480B File Offset: 0x00EB2A0B
 		public void BindRestartButton()
 		{
 			ButtonItem btnLeft = this.BtnLeft;
@@ -599,7 +599,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			});
 		}
 
-		// Token: 0x0603FC28 RID: 261160 RVA: 0x00F6D8E8 File Offset: 0x00F6BAE8
+		// Token: 0x060348E9 RID: 215273 RVA: 0x00EB4844 File Offset: 0x00EB2A44
 		public void BindNextButton()
 		{
 			ButtonItem btnRight = this.BtnRight;
@@ -618,7 +618,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			});
 		}
 
-		// Token: 0x0603FC29 RID: 261161 RVA: 0x00F6D921 File Offset: 0x00F6BB21
+		// Token: 0x060348EA RID: 215274 RVA: 0x00EB487D File Offset: 0x00EB2A7D
 		public void BindBackButton()
 		{
 			ButtonItem btnRight = this.BtnRight;
@@ -637,7 +637,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			});
 		}
 
-		// Token: 0x0603FC2A RID: 261162 RVA: 0x00F6D95A File Offset: 0x00F6BB5A
+		// Token: 0x060348EB RID: 215275 RVA: 0x00EB48B6 File Offset: 0x00EB2AB6
 		private void OnClickBtnRestart()
 		{
 			IPinballSettleResultStrategy strategy = this.Strategy;
@@ -651,7 +651,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			});
 		}
 
-		// Token: 0x0603FC2B RID: 261163 RVA: 0x00F6D978 File Offset: 0x00F6BB78
+		// Token: 0x060348EC RID: 215276 RVA: 0x00EB48D4 File Offset: 0x00EB2AD4
 		private void OnClickBtnNext()
 		{
 			IPinballSettleResultStrategy strategy = this.Strategy;
@@ -665,7 +665,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			});
 		}
 
-		// Token: 0x0603FC2C RID: 261164 RVA: 0x00F6D996 File Offset: 0x00F6BB96
+		// Token: 0x060348ED RID: 215277 RVA: 0x00EB48F2 File Offset: 0x00EB2AF2
 		private void OnClickBtnBack()
 		{
 			IPinballSettleResultStrategy strategy = this.Strategy;
@@ -679,7 +679,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			});
 		}
 
-		// Token: 0x0603FC2D RID: 261165 RVA: 0x00F6D9B4 File Offset: 0x00F6BBB4
+		// Token: 0x060348EE RID: 215278 RVA: 0x00EB4910 File Offset: 0x00EB2B10
 		[NullableContext(1)]
 		public void ShowStarLayout(bool[] starInfo)
 		{
@@ -696,14 +696,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			starLayout.RefreshByData(starInfo, null, false);
 		}
 
-		// Token: 0x0603FC2E RID: 261166 RVA: 0x00F6D9DC File Offset: 0x00F6BBDC
+		// Token: 0x060348EF RID: 215279 RVA: 0x00EB4938 File Offset: 0x00EB2B38
 		public bool GetNeedAdjustFormation()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(18);
 			return extendToggle != null && extendToggle.GetToggleState() == EToggleState.ETT_Checked;
 		}
 
-		// Token: 0x0603FC2F RID: 261167 RVA: 0x00F6D9F4 File Offset: 0x00F6BBF4
+		// Token: 0x060348F0 RID: 215280 RVA: 0x00EB4950 File Offset: 0x00EB2B50
 		[NullableContext(1)]
 		public void ShowRewards(List<TItem> rewardList)
 		{
@@ -720,7 +720,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			rewardView2.ShowRewardList(rewardList);
 		}
 
-		// Token: 0x0603FC30 RID: 261168 RVA: 0x00F6DA19 File Offset: 0x00F6BC19
+		// Token: 0x060348F1 RID: 215281 RVA: 0x00EB4975 File Offset: 0x00EB2B75
 		public void ShowRewardsGot()
 		{
 			PinballSettleRewardView rewardView = this.RewardView;
@@ -736,7 +736,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			rewardView2.ShowRewardGot();
 		}
 
-		// Token: 0x0603FC31 RID: 261169 RVA: 0x00F6DA3D File Offset: 0x00F6BC3D
+		// Token: 0x060348F2 RID: 215282 RVA: 0x00EB4999 File Offset: 0x00EB2B99
 		[NullableContext(1)]
 		public void ShowProgressRewardList(int score, int[] scoreLevel, int[] scoreLevelDropId)
 		{
@@ -753,7 +753,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			progressRewardView2.ShowProgressRewardList(score, scoreLevel, scoreLevelDropId);
 		}
 
-		// Token: 0x0603FC32 RID: 261170 RVA: 0x00F6DA64 File Offset: 0x00F6BC64
+		// Token: 0x060348F3 RID: 215283 RVA: 0x00EB49C0 File Offset: 0x00EB2BC0
 		[NullableContext(1)]
 		public void ShowSuccessTips(string successTitle)
 		{
@@ -771,14 +771,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			item2.SetUIActive(false);
 		}
 
-		// Token: 0x0603FC33 RID: 261171 RVA: 0x00F6DAB0 File Offset: 0x00F6BCB0
+		// Token: 0x060348F4 RID: 215284 RVA: 0x00EB4A0C File Offset: 0x00EB2C0C
 		[NullableContext(1)]
 		public IPinballSettleResultViewParam GetOpenParam()
 		{
 			return this.OpenParam;
 		}
 
-		// Token: 0x0402148A RID: 136330
+		// Token: 0x0401BDB9 RID: 114105
 		[Nullable(new byte[]
 		{
 			2,
@@ -786,7 +786,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 		})]
 		protected GenericLayout<PinballStarItemView, bool> StarLayout;
 
-		// Token: 0x0402148B RID: 136331
+		// Token: 0x0401BDBA RID: 114106
 		[Nullable(new byte[]
 		{
 			2,
@@ -795,77 +795,77 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 		})]
 		protected GenericLayout<DamageLayoutItemView, IDamageLayoutItemData> DamageLayout;
 
-		// Token: 0x0402148C RID: 136332
+		// Token: 0x0401BDBB RID: 114107
 		protected ButtonItem BtnLeft;
 
-		// Token: 0x0402148D RID: 136333
+		// Token: 0x0401BDBC RID: 114108
 		protected ButtonItem BtnRight;
 
-		// Token: 0x0402148E RID: 136334
+		// Token: 0x0401BDBD RID: 114109
 		protected PinballSettleDialogView DialogView;
 
-		// Token: 0x0402148F RID: 136335
+		// Token: 0x0401BDBE RID: 114110
 		protected PinballSettleRewardView RewardView;
 
-		// Token: 0x04021490 RID: 136336
+		// Token: 0x0401BDBF RID: 114111
 		protected PinballSettleProgressRewardView ProgressRewardView;
 
-		// Token: 0x04021491 RID: 136337
+		// Token: 0x0401BDC0 RID: 114112
 		protected PinballSettleFailTipsView FailTipsView;
 
-		// Token: 0x04021492 RID: 136338
+		// Token: 0x0401BDC1 RID: 114113
 		protected PinballSettleUnlockTipsView UnlockTipsView;
 
-		// Token: 0x04021493 RID: 136339
+		// Token: 0x0401BDC2 RID: 114114
 		protected IPinballSettleResultStrategy Strategy;
 
-		// Token: 0x0200C4E9 RID: 50409
+		// Token: 0x0200AED0 RID: 44752
 		[NullableContext(0)]
 		private enum EPinballSettleResultComponent
 		{
-			// Token: 0x0403B6C0 RID: 243392
+			// Token: 0x04036022 RID: 221218
 			SpineRole,
-			// Token: 0x0403B6C1 RID: 243393
+			// Token: 0x04036023 RID: 221219
 			SpineRoleShadow,
-			// Token: 0x0403B6C2 RID: 243394
+			// Token: 0x04036024 RID: 221220
 			BtnShop,
-			// Token: 0x0403B6C3 RID: 243395
+			// Token: 0x04036025 RID: 221221
 			BtnRole,
-			// Token: 0x0403B6C4 RID: 243396
+			// Token: 0x04036026 RID: 221222
 			FormationToggleItem,
-			// Token: 0x0403B6C5 RID: 243397
+			// Token: 0x04036027 RID: 221223
 			PnlDialog,
-			// Token: 0x0403B6C6 RID: 243398
+			// Token: 0x04036028 RID: 221224
 			StarLayout,
-			// Token: 0x0403B6C7 RID: 243399
+			// Token: 0x04036029 RID: 221225
 			StarLayoutItem,
-			// Token: 0x0403B6C8 RID: 243400
+			// Token: 0x0403602A RID: 221226
 			DamageLayout,
-			// Token: 0x0403B6C9 RID: 243401
+			// Token: 0x0403602B RID: 221227
 			DamageLayoutItem,
-			// Token: 0x0403B6CA RID: 243402
+			// Token: 0x0403602C RID: 221228
 			PnlReward,
-			// Token: 0x0403B6CB RID: 243403
+			// Token: 0x0403602D RID: 221229
 			PnlProgressRward,
-			// Token: 0x0403B6CC RID: 243404
+			// Token: 0x0403602E RID: 221230
 			PnlTips,
-			// Token: 0x0403B6CD RID: 243405
+			// Token: 0x0403602F RID: 221231
 			PnlUnlockTips,
-			// Token: 0x0403B6CE RID: 243406
+			// Token: 0x04036030 RID: 221232
 			BtnLeft,
-			// Token: 0x0403B6CF RID: 243407
+			// Token: 0x04036031 RID: 221233
 			BtnRight,
-			// Token: 0x0403B6D0 RID: 243408
+			// Token: 0x04036032 RID: 221234
 			TitleSuccess,
-			// Token: 0x0403B6D1 RID: 243409
+			// Token: 0x04036033 RID: 221235
 			TitleFail,
-			// Token: 0x0403B6D2 RID: 243410
+			// Token: 0x04036034 RID: 221236
 			FormationToggle,
-			// Token: 0x0403B6D3 RID: 243411
+			// Token: 0x04036035 RID: 221237
 			TitleSuccessText,
-			// Token: 0x0403B6D4 RID: 243412
+			// Token: 0x04036036 RID: 221238
 			BtnShopRedDot,
-			// Token: 0x0403B6D5 RID: 243413
+			// Token: 0x04036037 RID: 221239
 			BtnRoleRedDot
 		}
 	}

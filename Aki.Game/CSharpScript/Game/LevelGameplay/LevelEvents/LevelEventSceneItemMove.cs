@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B68 RID: 27496
+	// Token: 0x02005CE0 RID: 23776
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventSceneItemMove : LevelEventBase
 	{
-		// Token: 0x06044204 RID: 279044 RVA: 0x010C52EF File Offset: 0x010C34EF
+		// Token: 0x0603A356 RID: 238422 RVA: 0x0106EEBF File Offset: 0x0106D0BF
 		public LevelEventSceneItemMove(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044205 RID: 279045 RVA: 0x010C52F8 File Offset: 0x010C34F8
+		// Token: 0x0603A357 RID: 238423 RVA: 0x0106EEC8 File Offset: 0x0106D0C8
 		protected override void ExecuteInGm(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			if (inParams == null)
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x06044206 RID: 279046 RVA: 0x010C5650 File Offset: 0x010C3850
+		// Token: 0x0603A358 RID: 238424 RVA: 0x0106F220 File Offset: 0x0106D420
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			if (inParams == null)
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.CreateWaitEntityTask(this.Params.EntityId);
 		}
 
-		// Token: 0x06044207 RID: 279047 RVA: 0x010C56A4 File Offset: 0x010C38A4
+		// Token: 0x0603A359 RID: 238425 RVA: 0x0106F274 File Offset: 0x0106D474
 		protected override void ExecuteWhenEntitiesReady()
 		{
 			if (this.Params == null)
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x06044208 RID: 279048 RVA: 0x010C5790 File Offset: 0x010C3990
+		// Token: 0x0603A35A RID: 238426 RVA: 0x0106F360 File Offset: 0x0106D560
 		private void HandleMoveToPoint(MoveSceneItem @params, EntityHandle handle)
 		{
 			IMoveToPoint moveToPoint = @params.MoveConfig as IMoveToPoint;
@@ -191,7 +191,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.StartMoveToPoint(@params, vector, moveToPoint.MoveMotion, handle);
 		}
 
-		// Token: 0x06044209 RID: 279049 RVA: 0x010C57D0 File Offset: 0x010C39D0
+		// Token: 0x0603A35B RID: 238427 RVA: 0x0106F3A0 File Offset: 0x0106D5A0
 		private void HandleMoveToRelativePosition(MoveSceneItem @params, EntityHandle handle)
 		{
 			IMoveToRelativePosition moveToRelativePosition = @params.MoveConfig as IMoveToRelativePosition;
@@ -247,7 +247,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.StartMoveToPoint(@params, vector, moveToRelativePosition.MoveMotion, handle);
 		}
 
-		// Token: 0x0604420A RID: 279050 RVA: 0x010C5A64 File Offset: 0x010C3C64
+		// Token: 0x0603A35C RID: 238428 RVA: 0x0106F634 File Offset: 0x0106D834
 		private void HandleCycleMoveToPoints(MoveSceneItem @params, EntityHandle handle)
 		{
 			ICycleMoveToPoints cycleMoveToPoints = @params.MoveConfig as ICycleMoveToPoints;
@@ -282,7 +282,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.SceneItemMoveComp.AddStopMoveCallbackWithEntity(new Action<Entity>(this.FinishActionCallback));
 		}
 
-		// Token: 0x0604420B RID: 279051 RVA: 0x010C5BA0 File Offset: 0x010C3DA0
+		// Token: 0x0603A35D RID: 238429 RVA: 0x0106F770 File Offset: 0x0106D970
 		private void HandleMoveToEntity(MoveSceneItem @params, EntityHandle handle)
 		{
 			IMoveToEntity moveToEntity = @params.MoveConfig as IMoveToEntity;
@@ -309,7 +309,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.StartMoveToPoint(@params, vector, moveToEntity.MoveMotion, handle);
 		}
 
-		// Token: 0x0604420C RID: 279052 RVA: 0x010C5C48 File Offset: 0x010C3E48
+		// Token: 0x0603A35E RID: 238430 RVA: 0x0106F818 File Offset: 0x0106DA18
 		private void StartMoveToPoint(MoveSceneItem @params, IVector endPoint, [Nullable(2)] ISceneItemMoveMotionType motion, EntityHandle handle)
 		{
 			SceneItemMoveComponent sceneItemMoveComp = this.SceneItemMoveComp;
@@ -353,14 +353,14 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.SceneItemMoveComp.AddStopMoveCallbackWithEntity(new Action<Entity>(this.FinishActionCallback));
 		}
 
-		// Token: 0x0604420D RID: 279053 RVA: 0x010C5D7F File Offset: 0x010C3F7F
+		// Token: 0x0603A35F RID: 238431 RVA: 0x0106F94F File Offset: 0x0106DB4F
 		protected override void OnReset()
 		{
 			this.SceneItemMoveComp = null;
 			this.Params = null;
 		}
 
-		// Token: 0x0604420E RID: 279054 RVA: 0x010C5D90 File Offset: 0x010C3F90
+		// Token: 0x0603A360 RID: 238432 RVA: 0x0106F960 File Offset: 0x0106DB60
 		private void FinishActionCallback(Entity entity)
 		{
 			SceneItemMoveComponent sceneItemMoveComp = this.SceneItemMoveComp;
@@ -379,11 +379,11 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x04023942 RID: 145730
+		// Token: 0x0401EBE4 RID: 125924
 		[Nullable(2)]
 		private MoveSceneItem Params;
 
-		// Token: 0x04023943 RID: 145731
+		// Token: 0x0401EBE5 RID: 125925
 		[Nullable(2)]
 		private SceneItemMoveComponent SceneItemMoveComp;
 	}

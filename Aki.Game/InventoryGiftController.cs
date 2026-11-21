@@ -8,13 +8,13 @@ using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Ui;
 using Google.Protobuf;
 
-// Token: 0x02001FAE RID: 8110
+// Token: 0x02001470 RID: 5232
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class InventoryGiftController : UiControllerBase
 {
-	// Token: 0x0600FCB4 RID: 64692 RVA: 0x003D5F14 File Offset: 0x003D4114
+	// Token: 0x0600D0DA RID: 53466 RVA: 0x003E18C8 File Offset: 0x003DFAC8
 	[NullableContext(2)]
 	public void SendItemGiftUseRequest(int configId, int count, int[] selectedId)
 	{
@@ -44,7 +44,7 @@ public class InventoryGiftController : UiControllerBase
 			}
 			if (itemGiftUseResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(itemGiftUseResponse.ErrorCode, 17290, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(itemGiftUseResponse.ErrorCode, 25639, null, true, true);
 				return;
 			}
 			if (UiManager.Instance.IsViewShow(EUiViewName.InventoryGiftView))
@@ -66,7 +66,7 @@ public class InventoryGiftController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600FCB5 RID: 64693 RVA: 0x003D5FC4 File Offset: 0x003D41C4
+	// Token: 0x0600D0DB RID: 53467 RVA: 0x003E1978 File Offset: 0x003DFB78
 	public void SendGiftPackPreviewRequest(int itemId, GiftPackage giftConfig, int? selectedId, int selectedCount = 1)
 	{
 		GiftPackPreviewRequest giftPackPreviewRequest = GiftPackPreviewRequest.Create();
@@ -96,7 +96,7 @@ public class InventoryGiftController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600FCB6 RID: 64694 RVA: 0x003D6028 File Offset: 0x003D4228
+	// Token: 0x0600D0DC RID: 53468 RVA: 0x003E19DC File Offset: 0x003DFBDC
 	public void ShowAcquireView(AcquireData acquireData)
 	{
 		InventoryModel.Instance.SetAcquireData(acquireData);
@@ -108,7 +108,7 @@ public class InventoryGiftController : UiControllerBase
 		UiManager.Instance.OpenView(EUiViewName.AcquireView, acquireData, null);
 	}
 
-	// Token: 0x0600FCB7 RID: 64695 RVA: 0x003D6074 File Offset: 0x003D4274
+	// Token: 0x0600D0DD RID: 53469 RVA: 0x003E1A28 File Offset: 0x003DFC28
 	public void ShowRewardViewWithCountAndId(int rewardId, int rewardCount)
 	{
 		AcquireData acquireData = new AcquireData();
@@ -120,7 +120,7 @@ public class InventoryGiftController : UiControllerBase
 		this.ShowAcquireView(acquireData);
 	}
 
-	// Token: 0x0600FCB8 RID: 64696 RVA: 0x003D60B8 File Offset: 0x003D42B8
+	// Token: 0x0600D0DE RID: 53470 RVA: 0x003E1A6C File Offset: 0x003DFC6C
 	public void ShowRewardViewWithList(List<TItem> rewardList)
 	{
 		AcquireData acquireData = new AcquireData();
@@ -129,7 +129,7 @@ public class InventoryGiftController : UiControllerBase
 		this.ShowAcquireView(acquireData);
 	}
 
-	// Token: 0x0600FCB9 RID: 64697 RVA: 0x003D60E0 File Offset: 0x003D42E0
+	// Token: 0x0600D0DF RID: 53471 RVA: 0x003E1A94 File Offset: 0x003DFC94
 	public void CloseAcquireView()
 	{
 		if (!UiManager.Instance.IsViewShow(EUiViewName.AcquireView))
@@ -139,19 +139,19 @@ public class InventoryGiftController : UiControllerBase
 		UiManager.Instance.CloseView(EUiViewName.AcquireView, null);
 	}
 
-	// Token: 0x0600FCBA RID: 64698 RVA: 0x003D6104 File Offset: 0x003D4304
+	// Token: 0x0600D0E0 RID: 53472 RVA: 0x003E1AB8 File Offset: 0x003DFCB8
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.ItemGiftUseNotify, new Action<IMessage, Net.CallbackStatus>(this.ItemGiftUseNotify));
 	}
 
-	// Token: 0x0600FCBB RID: 64699 RVA: 0x003D6122 File Offset: 0x003D4322
+	// Token: 0x0600D0E1 RID: 53473 RVA: 0x003E1AD6 File Offset: 0x003DFCD6
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.ItemGiftUseNotify);
 	}
 
-	// Token: 0x0600FCBC RID: 64700 RVA: 0x003D6134 File Offset: 0x003D4334
+	// Token: 0x0600D0E2 RID: 53474 RVA: 0x003E1AE8 File Offset: 0x003DFCE8
 	[NullableContext(2)]
 	public void ItemGiftUseNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -180,8 +180,8 @@ public class InventoryGiftController : UiControllerBase
 		}
 	}
 
-	// Token: 0x17001356 RID: 4950
-	// (get) Token: 0x0600FCBD RID: 64701 RVA: 0x003D61FF File Offset: 0x003D43FF
+	// Token: 0x17001382 RID: 4994
+	// (get) Token: 0x0600D0E3 RID: 53475 RVA: 0x003E1BB3 File Offset: 0x003DFDB3
 	public static InventoryGiftController Instance
 	{
 		get
@@ -190,7 +190,7 @@ public class InventoryGiftController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600FCBE RID: 64702 RVA: 0x003D6206 File Offset: 0x003D4406
+	// Token: 0x0600D0E4 RID: 53476 RVA: 0x003E1BBA File Offset: 0x003DFDBA
 	public static InventoryGiftController GetOrCreateInstance()
 	{
 		if (InventoryGiftController._Instance == null)
@@ -200,7 +200,7 @@ public class InventoryGiftController : UiControllerBase
 		return InventoryGiftController._Instance;
 	}
 
-	// Token: 0x0600FCBF RID: 64703 RVA: 0x003D621A File Offset: 0x003D441A
+	// Token: 0x0600D0E5 RID: 53477 RVA: 0x003E1BCE File Offset: 0x003DFDCE
 	public static bool CreateInstance()
 	{
 		if (InventoryGiftController._Instance != null)
@@ -211,24 +211,24 @@ public class InventoryGiftController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0600FCC0 RID: 64704 RVA: 0x003D6230 File Offset: 0x003D4430
+	// Token: 0x0600D0E6 RID: 53478 RVA: 0x003E1BE4 File Offset: 0x003DFDE4
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600FCC1 RID: 64705 RVA: 0x003D6232 File Offset: 0x003D4432
+	// Token: 0x0600D0E7 RID: 53479 RVA: 0x003E1BE6 File Offset: 0x003DFDE6
 	public static void ResetStaticDefaultValue()
 	{
 		InventoryGiftController._Instance = null;
 	}
 
-	// Token: 0x0600FCC2 RID: 64706 RVA: 0x003D623A File Offset: 0x003D443A
+	// Token: 0x0600D0E8 RID: 53480 RVA: 0x003E1BEE File Offset: 0x003DFDEE
 	static InventoryGiftController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(InventoryGiftController.CreateStaticDefaultValue), new Action(InventoryGiftController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04007569 RID: 30057
+	// Token: 0x0400764B RID: 30283
 	[Nullable(2)]
 	private static InventoryGiftController _Instance;
 }

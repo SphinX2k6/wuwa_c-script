@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -12,19 +11,19 @@ using CSharpScript.Game.Module.ItemReward;
 using CSharpScript.Game.Module.PayShop;
 using CSharpScript.Game.Module.Roguelike;
 
-// Token: 0x0200277C RID: 10108
+// Token: 0x02001C67 RID: 7271
 [NullableContext(2)]
 [Nullable(0)]
 [Model(0)]
 public class RoguelikeModel : ModelBase
 {
-	// Token: 0x06014BA2 RID: 84898 RVA: 0x0053EE88 File Offset: 0x0053D088
+	// Token: 0x06012085 RID: 73861 RVA: 0x0054DD08 File Offset: 0x0054BF08
 	protected override bool OnInit()
 	{
 		return true;
 	}
 
-	// Token: 0x06014BA3 RID: 84899 RVA: 0x0053EE8B File Offset: 0x0053D08B
+	// Token: 0x06012086 RID: 73862 RVA: 0x0054DD0B File Offset: 0x0054BF0B
 	protected override bool OnClear()
 	{
 		this.RoguelikeChooseDataMap.Clear();
@@ -32,9 +31,9 @@ public class RoguelikeModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x17001B14 RID: 6932
-	// (get) Token: 0x06014BA4 RID: 84900 RVA: 0x0053EEA0 File Offset: 0x0053D0A0
-	// (set) Token: 0x06014BA5 RID: 84901 RVA: 0x0053EEA8 File Offset: 0x0053D0A8
+	// Token: 0x17001B4D RID: 6989
+	// (get) Token: 0x06012087 RID: 73863 RVA: 0x0054DD20 File Offset: 0x0054BF20
+	// (set) Token: 0x06012088 RID: 73864 RVA: 0x0054DD28 File Offset: 0x0054BF28
 	public List<int> EditFormationRoleList
 	{
 		get
@@ -47,9 +46,9 @@ public class RoguelikeModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001B15 RID: 6933
-	// (get) Token: 0x06014BA6 RID: 84902 RVA: 0x0053EEB1 File Offset: 0x0053D0B1
-	// (set) Token: 0x06014BA7 RID: 84903 RVA: 0x0053EEB9 File Offset: 0x0053D0B9
+	// Token: 0x17001B4E RID: 6990
+	// (get) Token: 0x06012089 RID: 73865 RVA: 0x0054DD31 File Offset: 0x0054BF31
+	// (set) Token: 0x0601208A RID: 73866 RVA: 0x0054DD39 File Offset: 0x0054BF39
 	public int CurIndex
 	{
 		get
@@ -62,9 +61,9 @@ public class RoguelikeModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001B16 RID: 6934
-	// (get) Token: 0x06014BA8 RID: 84904 RVA: 0x0053EEC2 File Offset: 0x0053D0C2
-	// (set) Token: 0x06014BA9 RID: 84905 RVA: 0x0053EECA File Offset: 0x0053D0CA
+	// Token: 0x17001B4F RID: 6991
+	// (get) Token: 0x0601208B RID: 73867 RVA: 0x0054DD42 File Offset: 0x0054BF42
+	// (set) Token: 0x0601208C RID: 73868 RVA: 0x0054DD4A File Offset: 0x0054BF4A
 	public CSharpScript.Game.Module.Roguelike.RogueGainEntry CurrentRogueGainEntry
 	{
 		get
@@ -77,9 +76,9 @@ public class RoguelikeModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001B17 RID: 6935
-	// (get) Token: 0x06014BAA RID: 84906 RVA: 0x0053EED3 File Offset: 0x0053D0D3
-	// (set) Token: 0x06014BAB RID: 84907 RVA: 0x0053EEDB File Offset: 0x0053D0DB
+	// Token: 0x17001B50 RID: 6992
+	// (get) Token: 0x0601208D RID: 73869 RVA: 0x0054DD53 File Offset: 0x0054BF53
+	// (set) Token: 0x0601208E RID: 73870 RVA: 0x0054DD5B File Offset: 0x0054BF5B
 	public RoguelikeInfo RogueInfo
 	{
 		get
@@ -92,9 +91,9 @@ public class RoguelikeModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001B18 RID: 6936
-	// (get) Token: 0x06014BAC RID: 84908 RVA: 0x0053EEE4 File Offset: 0x0053D0E4
-	// (set) Token: 0x06014BAD RID: 84909 RVA: 0x0053EEEC File Offset: 0x0053D0EC
+	// Token: 0x17001B51 RID: 6993
+	// (get) Token: 0x0601208F RID: 73871 RVA: 0x0054DD64 File Offset: 0x0054BF64
+	// (set) Token: 0x06012090 RID: 73872 RVA: 0x0054DD6C File Offset: 0x0054BF6C
 	public int CurRoomCount
 	{
 		get
@@ -107,9 +106,9 @@ public class RoguelikeModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001B19 RID: 6937
-	// (get) Token: 0x06014BAE RID: 84910 RVA: 0x0053EEF5 File Offset: 0x0053D0F5
-	// (set) Token: 0x06014BAF RID: 84911 RVA: 0x0053EEFD File Offset: 0x0053D0FD
+	// Token: 0x17001B52 RID: 6994
+	// (get) Token: 0x06012091 RID: 73873 RVA: 0x0054DD75 File Offset: 0x0054BF75
+	// (set) Token: 0x06012092 RID: 73874 RVA: 0x0054DD7D File Offset: 0x0054BF7D
 	public int TotalRoomCount
 	{
 		get
@@ -122,9 +121,9 @@ public class RoguelikeModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001B1A RID: 6938
-	// (get) Token: 0x06014BB0 RID: 84912 RVA: 0x0053EF06 File Offset: 0x0053D106
-	// (set) Token: 0x06014BB1 RID: 84913 RVA: 0x0053EF0E File Offset: 0x0053D10E
+	// Token: 0x17001B53 RID: 6995
+	// (get) Token: 0x06012093 RID: 73875 RVA: 0x0054DD86 File Offset: 0x0054BF86
+	// (set) Token: 0x06012094 RID: 73876 RVA: 0x0054DD8E File Offset: 0x0054BF8E
 	public RoguelikeRoomType? CurRoomType
 	{
 		get
@@ -137,9 +136,9 @@ public class RoguelikeModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001B1B RID: 6939
-	// (get) Token: 0x06014BB2 RID: 84914 RVA: 0x0053EF17 File Offset: 0x0053D117
-	// (set) Token: 0x06014BB3 RID: 84915 RVA: 0x0053EF24 File Offset: 0x0053D124
+	// Token: 0x17001B54 RID: 6996
+	// (get) Token: 0x06012095 RID: 73877 RVA: 0x0054DD97 File Offset: 0x0054BF97
+	// (set) Token: 0x06012096 RID: 73878 RVA: 0x0054DDA4 File Offset: 0x0054BFA4
 	[Nullable(1)]
 	public string CurRoomMusicState
 	{
@@ -155,8 +154,8 @@ public class RoguelikeModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001B1C RID: 6940
-	// (get) Token: 0x06014BB4 RID: 84916 RVA: 0x0053EF3B File Offset: 0x0053D13B
+	// Token: 0x17001B55 RID: 6997
+	// (get) Token: 0x06012097 RID: 73879 RVA: 0x0054DDBB File Offset: 0x0054BFBB
 	[Nullable(1)]
 	public Dictionary<int, int> RoguelikeCurrencyDictMap
 	{
@@ -167,7 +166,7 @@ public class RoguelikeModel : ModelBase
 		}
 	}
 
-	// Token: 0x06014BB5 RID: 84917 RVA: 0x0053EF44 File Offset: 0x0053D144
+	// Token: 0x06012098 RID: 73880 RVA: 0x0054DDC4 File Offset: 0x0054BFC4
 	public RoleDataBase GetRoguelikeRoleData(int rogueRoleId)
 	{
 		RogueCharacter? rogueCharacterConfig = RoguelikeConfig.Instance.GetRogueCharacterConfig(rogueRoleId);
@@ -194,13 +193,13 @@ public class RoguelikeModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06014BB6 RID: 84918 RVA: 0x0053EFB5 File Offset: 0x0053D1B5
+	// Token: 0x06012099 RID: 73881 RVA: 0x0054DE35 File Offset: 0x0054C035
 	public void SetRoguelikeCurrency(int id, int count)
 	{
 		this.RoguelikeCurrencyDict[id] = count;
 	}
 
-	// Token: 0x06014BB7 RID: 84919 RVA: 0x0053EFC4 File Offset: 0x0053D1C4
+	// Token: 0x0601209A RID: 73882 RVA: 0x0054DE44 File Offset: 0x0054C044
 	public void UpdateRoguelikeCurrency(int id, int addCount)
 	{
 		int roguelikeCurrency = this.GetRoguelikeCurrency(id);
@@ -208,7 +207,7 @@ public class RoguelikeModel : ModelBase
 		EventSystem.Instance.Emit<int>(EEventName.OnPlayerCurrencyChange, id);
 	}
 
-	// Token: 0x06014BB8 RID: 84920 RVA: 0x0053EFFC File Offset: 0x0053D1FC
+	// Token: 0x0601209B RID: 73883 RVA: 0x0054DE7C File Offset: 0x0054C07C
 	public int GetRoguelikeCurrency(int currencyId)
 	{
 		int result;
@@ -219,7 +218,7 @@ public class RoguelikeModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x06014BB9 RID: 84921 RVA: 0x0053F01C File Offset: 0x0053D21C
+	// Token: 0x0601209C RID: 73884 RVA: 0x0054DE9C File Offset: 0x0054C09C
 	public int GetRoguelikeInventoryCurrency(int currencyId)
 	{
 		if (currencyId == 80100000 && WeeklyRogueModel.Instance.CheckIsInWeeklyRogue())
@@ -234,7 +233,7 @@ public class RoguelikeModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x06014BBA RID: 84922 RVA: 0x0053F05C File Offset: 0x0053D25C
+	// Token: 0x0601209D RID: 73885 RVA: 0x0054DEDC File Offset: 0x0054C0DC
 	public void UpdateDescModel(bool isSimple)
 	{
 		EDescModel descMode = isSimple ? EDescModel.SIMPLE : EDescModel.DETAIL;
@@ -242,13 +241,13 @@ public class RoguelikeModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.RoguelikeDataUpdate);
 	}
 
-	// Token: 0x06014BBB RID: 84923 RVA: 0x0053F088 File Offset: 0x0053D288
+	// Token: 0x0601209E RID: 73886 RVA: 0x0054DF08 File Offset: 0x0054C108
 	public EDescModel GetDescModel()
 	{
 		return this.DescMode;
 	}
 
-	// Token: 0x06014BBC RID: 84924 RVA: 0x0053F090 File Offset: 0x0053D290
+	// Token: 0x0601209F RID: 73887 RVA: 0x0054DF10 File Offset: 0x0054C110
 	public RoguelikeEntranceViewModel GetEntranceViewModel()
 	{
 		if (this.EntranceViewModel == null)
@@ -258,13 +257,13 @@ public class RoguelikeModel : ModelBase
 		return this.EntranceViewModel;
 	}
 
-	// Token: 0x06014BBD RID: 84925 RVA: 0x0053F0AB File Offset: 0x0053D2AB
+	// Token: 0x060120A0 RID: 73888 RVA: 0x0054DF2B File Offset: 0x0054C12B
 	public void ClearEntranceViewModel()
 	{
 		this.EntranceViewModel = null;
 	}
 
-	// Token: 0x06014BBE RID: 84926 RVA: 0x0053F0B4 File Offset: 0x0053D2B4
+	// Token: 0x060120A1 RID: 73889 RVA: 0x0054DF34 File Offset: 0x0054C134
 	[NullableContext(1)]
 	public void SetRoguelikeChooseData(IReadOnlyList<Aki.Protocol.RoguelikeChooseData> roguelikeChooseData)
 	{
@@ -274,7 +273,7 @@ public class RoguelikeModel : ModelBase
 		}
 	}
 
-	// Token: 0x06014BBF RID: 84927 RVA: 0x0053F10C File Offset: 0x0053D30C
+	// Token: 0x060120A2 RID: 73890 RVA: 0x0054DF8C File Offset: 0x0054C18C
 	public CSharpScript.Game.Module.Roguelike.RoguelikeChooseData GetRoguelikeChooseDataById(int bindId)
 	{
 		CSharpScript.Game.Module.Roguelike.RoguelikeChooseData result;
@@ -282,7 +281,7 @@ public class RoguelikeModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x06014BC0 RID: 84928 RVA: 0x0053F12C File Offset: 0x0053D32C
+	// Token: 0x060120A3 RID: 73891 RVA: 0x0054DFAC File Offset: 0x0054C1AC
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -346,7 +345,7 @@ public class RoguelikeModel : ModelBase
 		return new ValueTuple<List<CSharpScript.Game.Module.Roguelike.ElementInfo>, Dictionary<EElementType, CSharpScript.Game.Module.Roguelike.ElementInfo>>(list, dictionary2);
 	}
 
-	// Token: 0x06014BC1 RID: 84929 RVA: 0x0053F2E4 File Offset: 0x0053D4E4
+	// Token: 0x060120A4 RID: 73892 RVA: 0x0054E164 File Offset: 0x0054C364
 	public bool CheckInRoguelike()
 	{
 		DreamLinkData currentActivityData = DreamLinkController.Instance.GetCurrentActivityData();
@@ -354,22 +353,22 @@ public class RoguelikeModel : ModelBase
 		return (currentActivityData == null || !currentActivityData.IsDreamLinkInst(CreatureModel.Instance.GetInstanceId())) && InstanceDungeonConfig.Instance.GetConfig(CreatureModel.Instance.GetInstanceId()) != null && instanceDungeon.GetValueOrDefault().InstSubType == 15 && GameModeController.Instance.IsInInstance();
 	}
 
-	// Token: 0x06014BC2 RID: 84930 RVA: 0x0053F358 File Offset: 0x0053D558
+	// Token: 0x060120A5 RID: 73893 RVA: 0x0054E1D8 File Offset: 0x0054C3D8
 	public bool CheckInRoguelikeOnly()
 	{
 		InstanceDungeon? instanceDungeon;
 		return InstanceDungeonConfig.Instance.GetConfig(CreatureModel.Instance.GetInstanceId()) != null && instanceDungeon.GetValueOrDefault().InstSubType == 15 && GameModeController.Instance.IsInInstance();
 	}
 
-	// Token: 0x06014BC3 RID: 84931 RVA: 0x0053F3A8 File Offset: 0x0053D5A8
+	// Token: 0x060120A6 RID: 73894 RVA: 0x0054E228 File Offset: 0x0054C428
 	public bool CheckIsGuideDungeon()
 	{
 		InstanceDungeon? instanceDungeon = GameModeModel.Instance.InstanceDungeon;
 		RogueParam? paramConfigBySeasonId = this.GetParamConfigBySeasonId(null);
-		return paramConfigBySeasonId != null && instanceDungeon != null && paramConfigBySeasonId.Value.GuideInstArrayLength > 0 && paramConfigBySeasonId.Value.GuideInstArray().Contains(instanceDungeon.Value.Id);
+		return paramConfigBySeasonId != null && instanceDungeon != null && paramConfigBySeasonId.Value.GuideInstArrayLength > 0 && Array.IndexOf<int>(paramConfigBySeasonId.Value.GuideInstArray(), instanceDungeon.Value.Id) >= 0;
 	}
 
-	// Token: 0x06014BC4 RID: 84932 RVA: 0x0053F41C File Offset: 0x0053D61C
+	// Token: 0x060120A7 RID: 73895 RVA: 0x0054E2A2 File Offset: 0x0054C4A2
 	public RoguelikeTalentTreeViewModel GetTalentTreeViewModel()
 	{
 		if (this.TalentTreeViewModel == null)
@@ -379,14 +378,14 @@ public class RoguelikeModel : ModelBase
 		return this.TalentTreeViewModel;
 	}
 
-	// Token: 0x06014BC5 RID: 84933 RVA: 0x0053F437 File Offset: 0x0053D637
+	// Token: 0x060120A8 RID: 73896 RVA: 0x0054E2BD File Offset: 0x0054C4BD
 	public void ClearTalentTreeViewModel()
 	{
 		this.TalentTreeViewModel = null;
 	}
 
-	// Token: 0x17001B1D RID: 6941
-	// (get) Token: 0x06014BC6 RID: 84934 RVA: 0x0053F440 File Offset: 0x0053D640
+	// Token: 0x17001B56 RID: 6998
+	// (get) Token: 0x060120A9 RID: 73897 RVA: 0x0054E2C6 File Offset: 0x0054C4C6
 	[Nullable(1)]
 	public Dictionary<int, int> RoguelikeSkillDataMap
 	{
@@ -397,7 +396,7 @@ public class RoguelikeModel : ModelBase
 		}
 	}
 
-	// Token: 0x06014BC7 RID: 84935 RVA: 0x0053F448 File Offset: 0x0053D648
+	// Token: 0x060120AA RID: 73898 RVA: 0x0054E2CE File Offset: 0x0054C4CE
 	public void SetRoguelikeSkillData(int skillId, int skillLevel)
 	{
 		this.RoguelikeSkillData[skillId] = skillLevel;
@@ -409,7 +408,7 @@ public class RoguelikeModel : ModelBase
 		talentTreeViewModel.RefreshLineTypeMap();
 	}
 
-	// Token: 0x06014BC8 RID: 84936 RVA: 0x0053F468 File Offset: 0x0053D668
+	// Token: 0x060120AB RID: 73899 RVA: 0x0054E2F0 File Offset: 0x0054C4F0
 	public bool CheckHasCanUnlockSkill()
 	{
 		RogueParam? paramConfigBySeasonId = this.GetParamConfigBySeasonId(null);
@@ -436,7 +435,7 @@ public class RoguelikeModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x06014BC9 RID: 84937 RVA: 0x0053F538 File Offset: 0x0053D738
+	// Token: 0x060120AC RID: 73900 RVA: 0x0054E3C0 File Offset: 0x0054C5C0
 	public bool CheckRoguelikeShopRedDot()
 	{
 		ActivityRogueData currentActivityData = ActivityRogueController.Instance.GetCurrentActivityData();
@@ -469,27 +468,27 @@ public class RoguelikeModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x06014BCA RID: 84938 RVA: 0x0053F624 File Offset: 0x0053D824
+	// Token: 0x060120AD RID: 73901 RVA: 0x0054E4AC File Offset: 0x0054C6AC
 	public bool HasBlackFlowerExchanged(int dungeonId)
 	{
 		RogueParam? paramConfigBySeasonId = this.GetParamConfigBySeasonId(null);
-		return paramConfigBySeasonId != null && paramConfigBySeasonId.Value.BlackFlowerInstList().Contains(dungeonId);
+		return paramConfigBySeasonId != null && Array.IndexOf<int>(paramConfigBySeasonId.Value.BlackFlowerInstList(), dungeonId) >= 0;
 	}
 
-	// Token: 0x06014BCB RID: 84939 RVA: 0x0053F664 File Offset: 0x0053D864
+	// Token: 0x060120AE RID: 73902 RVA: 0x0054E4F0 File Offset: 0x0054C6F0
 	public bool HasBlackFlowerDrop()
 	{
 		RogueParam? paramConfigBySeasonId = this.GetParamConfigBySeasonId(null);
 		return paramConfigBySeasonId != null && paramConfigBySeasonId.Value.BlackFlowerDropId != 0;
 	}
 
-	// Token: 0x06014BCC RID: 84940 RVA: 0x0053F69E File Offset: 0x0053D89E
+	// Token: 0x060120AF RID: 73903 RVA: 0x0054E52A File Offset: 0x0054C72A
 	public bool HasBossChallengeMode()
 	{
 		return this.GetBossChallengeInstId() != 0;
 	}
 
-	// Token: 0x06014BCD RID: 84941 RVA: 0x0053F6AC File Offset: 0x0053D8AC
+	// Token: 0x060120B0 RID: 73904 RVA: 0x0054E538 File Offset: 0x0054C738
 	public int GetBossChallengeInstId()
 	{
 		ActivityRogueData currentActivityData = ActivityRogueController.Instance.GetCurrentActivityData();
@@ -506,7 +505,7 @@ public class RoguelikeModel : ModelBase
 		return rogueSeasonConfigById.GetValueOrDefault().ChallengeInstanceId;
 	}
 
-	// Token: 0x06014BCE RID: 84942 RVA: 0x0053F700 File Offset: 0x0053D900
+	// Token: 0x060120B1 RID: 73905 RVA: 0x0054E58C File Offset: 0x0054C78C
 	[NullableContext(1)]
 	private List<PayShopGoods> GetPayShopFirstTabGoods(int shopId)
 	{
@@ -514,13 +513,13 @@ public class RoguelikeModel : ModelBase
 		return PayShopModel.Instance.GetPayShopTabData((PayShopDefine.EPayShopTabType)shopId, payShopFirstTabId, false);
 	}
 
-	// Token: 0x06014BCF RID: 84943 RVA: 0x0053F726 File Offset: 0x0053D926
+	// Token: 0x060120B2 RID: 73906 RVA: 0x0054E5B2 File Offset: 0x0054C7B2
 	public bool GetMapNoteShowState()
 	{
 		return false;
 	}
 
-	// Token: 0x06014BD0 RID: 84944 RVA: 0x0053F72C File Offset: 0x0053D92C
+	// Token: 0x060120B3 RID: 73907 RVA: 0x0054E5B8 File Offset: 0x0054C7B8
 	public void RecordRoguelikeShopRedDot()
 	{
 		ActivityRogueData currentActivityData = ActivityRogueController.Instance.GetCurrentActivityData();
@@ -551,7 +550,7 @@ public class RoguelikeModel : ModelBase
 		}
 	}
 
-	// Token: 0x06014BD1 RID: 84945 RVA: 0x0053F830 File Offset: 0x0053DA30
+	// Token: 0x060120B4 RID: 73908 RVA: 0x0054E6BC File Offset: 0x0054C8BC
 	public bool GetRoguelikeAchievementRedDot()
 	{
 		ActivityRogueData currentActivityData = ActivityRogueController.Instance.GetCurrentActivityData();
@@ -564,13 +563,13 @@ public class RoguelikeModel : ModelBase
 		return AchievementModel.Instance.GetCategoryRedPointState(rogueSeasonConfigById.Value.Achievement);
 	}
 
-	// Token: 0x06014BD2 RID: 84946 RVA: 0x0053F888 File Offset: 0x0053DA88
+	// Token: 0x060120B5 RID: 73909 RVA: 0x0054E714 File Offset: 0x0054C914
 	public bool CheckRogueIsOpen()
 	{
 		return FunctionModel.Instance.IsOpen(EFunctionType.Roguelike) && ActivityRogueController.Instance.GetCurrentActivityData() != null && ActivityRogueController.Instance.GetCurrentActivityData().GetRogueActivityState() != ERogueActivityState.Close;
 	}
 
-	// Token: 0x06014BD3 RID: 84947 RVA: 0x0053F8C0 File Offset: 0x0053DAC0
+	// Token: 0x060120B6 RID: 73910 RVA: 0x0054E74C File Offset: 0x0054C94C
 	public RogueParam? GetParamConfigBySeasonId(int? seasonId = null)
 	{
 		if (seasonId != null && seasonId.GetValueOrDefault() != 0)
@@ -588,8 +587,8 @@ public class RoguelikeModel : ModelBase
 		return RoguelikeConfig.Instance.GetRogueParamConfig(1);
 	}
 
-	// Token: 0x17001B1E RID: 6942
-	// (get) Token: 0x06014BD4 RID: 84948 RVA: 0x0053F95B File Offset: 0x0053DB5B
+	// Token: 0x17001B57 RID: 6999
+	// (get) Token: 0x060120B7 RID: 73911 RVA: 0x0054E7E7 File Offset: 0x0054C9E7
 	[Nullable(1)]
 	public static RoguelikeModel Instance
 	{
@@ -600,7 +599,7 @@ public class RoguelikeModel : ModelBase
 		}
 	}
 
-	// Token: 0x06014BD5 RID: 84949 RVA: 0x0053F962 File Offset: 0x0053DB62
+	// Token: 0x060120B8 RID: 73912 RVA: 0x0054E7EE File Offset: 0x0054C9EE
 	[NullableContext(1)]
 	public static RoguelikeModel GetOrCreateInstance()
 	{
@@ -611,7 +610,7 @@ public class RoguelikeModel : ModelBase
 		return RoguelikeModel._Instance;
 	}
 
-	// Token: 0x06014BD6 RID: 84950 RVA: 0x0053F976 File Offset: 0x0053DB76
+	// Token: 0x060120B9 RID: 73913 RVA: 0x0054E802 File Offset: 0x0054CA02
 	public static bool CreateInstance()
 	{
 		if (RoguelikeModel._Instance != null)
@@ -622,67 +621,67 @@ public class RoguelikeModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06014BD7 RID: 84951 RVA: 0x0053F98C File Offset: 0x0053DB8C
+	// Token: 0x060120BA RID: 73914 RVA: 0x0054E818 File Offset: 0x0054CA18
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06014BD8 RID: 84952 RVA: 0x0053F98E File Offset: 0x0053DB8E
+	// Token: 0x060120BB RID: 73915 RVA: 0x0054E81A File Offset: 0x0054CA1A
 	public static void ResetStaticDefaultValue()
 	{
 		RoguelikeModel._Instance = null;
 	}
 
-	// Token: 0x06014BD9 RID: 84953 RVA: 0x0053F996 File Offset: 0x0053DB96
+	// Token: 0x060120BC RID: 73916 RVA: 0x0054E822 File Offset: 0x0054CA22
 	static RoguelikeModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(RoguelikeModel.CreateStaticDefaultValue), new Action(RoguelikeModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04009BEC RID: 39916
+	// Token: 0x04009D44 RID: 40260
 	private RoguelikeInfo RogueInfoInternal;
 
-	// Token: 0x04009BED RID: 39917
+	// Token: 0x04009D45 RID: 40261
 	public RogueChallengeModeType? RogueModeType;
 
-	// Token: 0x04009BEE RID: 39918
+	// Token: 0x04009D46 RID: 40262
 	private int CurIndexInternal;
 
-	// Token: 0x04009BEF RID: 39919
+	// Token: 0x04009D47 RID: 40263
 	private CSharpScript.Game.Module.Roguelike.RogueGainEntry CurrentRogueGainEntryInternal;
 
-	// Token: 0x04009BF0 RID: 39920
+	// Token: 0x04009D48 RID: 40264
 	private int CurRoomCountInternal;
 
-	// Token: 0x04009BF1 RID: 39921
+	// Token: 0x04009D49 RID: 40265
 	private int TotalRoomCountInternal;
 
-	// Token: 0x04009BF2 RID: 39922
+	// Token: 0x04009D4A RID: 40266
 	private RoguelikeRoomType? CurRoomTypeInternal;
 
-	// Token: 0x04009BF3 RID: 39923
+	// Token: 0x04009D4B RID: 40267
 	[Nullable(1)]
 	private readonly StateRef CurRoomMusicStateInternal = new StateRef("game_rogue_room_type", "none");
 
-	// Token: 0x04009BF4 RID: 39924
+	// Token: 0x04009D4C RID: 40268
 	private List<int> EditFormationRoleListInternal;
 
-	// Token: 0x04009BF5 RID: 39925
+	// Token: 0x04009D4D RID: 40269
 	[Nullable(1)]
 	private readonly Dictionary<int, CSharpScript.Game.Module.Roguelike.RoguelikeChooseData> RoguelikeChooseDataMap = new Dictionary<int, CSharpScript.Game.Module.Roguelike.RoguelikeChooseData>();
 
-	// Token: 0x04009BF6 RID: 39926
+	// Token: 0x04009D4E RID: 40270
 	[Nullable(1)]
 	private readonly Dictionary<int, int> RoguelikeSkillData = new Dictionary<int, int>();
 
-	// Token: 0x04009BF7 RID: 39927
+	// Token: 0x04009D4F RID: 40271
 	[Nullable(1)]
 	private readonly Dictionary<int, int> RoguelikeCurrencyDict = new Dictionary<int, int>();
 
-	// Token: 0x04009BF8 RID: 39928
+	// Token: 0x04009D50 RID: 40272
 	public long? TempCountdown;
 
-	// Token: 0x04009BF9 RID: 39929
+	// Token: 0x04009D51 RID: 40273
 	[Nullable(new byte[]
 	{
 		2,
@@ -690,32 +689,32 @@ public class RoguelikeModel : ModelBase
 	})]
 	public List<RewardItemData> ShowRewardList;
 
-	// Token: 0x04009BFA RID: 39930
+	// Token: 0x04009D52 RID: 40274
 	public int? CurDungeonId;
 
-	// Token: 0x04009BFB RID: 39931
+	// Token: 0x04009D53 RID: 40275
 	private EDescModel DescMode;
 
-	// Token: 0x04009BFC RID: 39932
+	// Token: 0x04009D54 RID: 40276
 	[Nullable(1)]
 	public List<int> SelectRoleViewShowRoleList = new List<int>();
 
-	// Token: 0x04009BFD RID: 39933
+	// Token: 0x04009D55 RID: 40277
 	[Nullable(1)]
 	public List<int> SelectRoleViewRecommendRoleList = new List<int>();
 
-	// Token: 0x04009BFE RID: 39934
+	// Token: 0x04009D56 RID: 40278
 	public int? CurRoomId;
 
-	// Token: 0x04009BFF RID: 39935
+	// Token: 0x04009D57 RID: 40279
 	public string CurRoomTypeId;
 
-	// Token: 0x04009C00 RID: 39936
+	// Token: 0x04009D58 RID: 40280
 	private RoguelikeEntranceViewModel EntranceViewModel;
 
-	// Token: 0x04009C01 RID: 39937
+	// Token: 0x04009D59 RID: 40281
 	private RoguelikeTalentTreeViewModel TalentTreeViewModel;
 
-	// Token: 0x04009C02 RID: 39938
+	// Token: 0x04009D5A RID: 40282
 	private static RoguelikeModel _Instance;
 }

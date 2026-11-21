@@ -4,49 +4,49 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 {
-	// Token: 0x0200632F RID: 25391
+	// Token: 0x020052AD RID: 21165
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PinballMainButtonConfig : IPinballMainButtonConfig
 	{
-		// Token: 0x17009302 RID: 37634
-		// (get) Token: 0x0603FE0C RID: 261644 RVA: 0x00F743DF File Offset: 0x00F725DF
-		// (set) Token: 0x0603FE0D RID: 261645 RVA: 0x00F743E7 File Offset: 0x00F725E7
+		// Token: 0x17006664 RID: 26212
+		// (get) Token: 0x06034ACD RID: 215757 RVA: 0x00EBB33B File Offset: 0x00EB953B
+		// (set) Token: 0x06034ACE RID: 215758 RVA: 0x00EBB343 File Offset: 0x00EB9543
 		public EPinballMainButtonFunctionType Type { get; set; }
 
-		// Token: 0x17009303 RID: 37635
-		// (get) Token: 0x0603FE0E RID: 261646 RVA: 0x00F743F0 File Offset: 0x00F725F0
-		// (set) Token: 0x0603FE0F RID: 261647 RVA: 0x00F743F8 File Offset: 0x00F725F8
+		// Token: 0x17006665 RID: 26213
+		// (get) Token: 0x06034ACF RID: 215759 RVA: 0x00EBB34C File Offset: 0x00EB954C
+		// (set) Token: 0x06034AD0 RID: 215760 RVA: 0x00EBB354 File Offset: 0x00EB9554
 		public int UiRegisterId { get; set; }
 
-		// Token: 0x17009304 RID: 37636
-		// (get) Token: 0x0603FE10 RID: 261648 RVA: 0x00F74401 File Offset: 0x00F72601
-		// (set) Token: 0x0603FE11 RID: 261649 RVA: 0x00F74409 File Offset: 0x00F72609
+		// Token: 0x17006666 RID: 26214
+		// (get) Token: 0x06034AD1 RID: 215761 RVA: 0x00EBB35D File Offset: 0x00EB955D
+		// (set) Token: 0x06034AD2 RID: 215762 RVA: 0x00EBB365 File Offset: 0x00EB9565
 		public int? FunctionId { get; set; }
 
-		// Token: 0x17009305 RID: 37637
-		// (get) Token: 0x0603FE12 RID: 261650 RVA: 0x00F74412 File Offset: 0x00F72612
-		// (set) Token: 0x0603FE13 RID: 261651 RVA: 0x00F7441A File Offset: 0x00F7261A
+		// Token: 0x17006667 RID: 26215
+		// (get) Token: 0x06034AD3 RID: 215763 RVA: 0x00EBB36E File Offset: 0x00EB956E
+		// (set) Token: 0x06034AD4 RID: 215764 RVA: 0x00EBB376 File Offset: 0x00EB9576
 		public ERedDotName? RedDotName { get; set; }
 
-		// Token: 0x17009306 RID: 37638
-		// (get) Token: 0x0603FE14 RID: 261652 RVA: 0x00F74423 File Offset: 0x00F72623
-		// (set) Token: 0x0603FE15 RID: 261653 RVA: 0x00F7442B File Offset: 0x00F7262B
+		// Token: 0x17006668 RID: 26216
+		// (get) Token: 0x06034AD5 RID: 215765 RVA: 0x00EBB37F File Offset: 0x00EB957F
+		// (set) Token: 0x06034AD6 RID: 215766 RVA: 0x00EBB387 File Offset: 0x00EB9587
 		public Func<bool> ShowRedDot { get; set; }
 
-		// Token: 0x17009307 RID: 37639
-		// (get) Token: 0x0603FE16 RID: 261654 RVA: 0x00F74434 File Offset: 0x00F72634
-		// (set) Token: 0x0603FE17 RID: 261655 RVA: 0x00F7443C File Offset: 0x00F7263C
+		// Token: 0x17006669 RID: 26217
+		// (get) Token: 0x06034AD7 RID: 215767 RVA: 0x00EBB390 File Offset: 0x00EB9590
+		// (set) Token: 0x06034AD8 RID: 215768 RVA: 0x00EBB398 File Offset: 0x00EB9598
 		public Action<UUIText> SetTextCallback { get; set; }
 
-		// Token: 0x17009308 RID: 37640
-		// (get) Token: 0x0603FE18 RID: 261656 RVA: 0x00F74445 File Offset: 0x00F72645
-		// (set) Token: 0x0603FE19 RID: 261657 RVA: 0x00F7444D File Offset: 0x00F7264D
+		// Token: 0x1700666A RID: 26218
+		// (get) Token: 0x06034AD9 RID: 215769 RVA: 0x00EBB3A1 File Offset: 0x00EB95A1
+		// (set) Token: 0x06034ADA RID: 215770 RVA: 0x00EBB3A9 File Offset: 0x00EB95A9
 		public Action OnClickCallback { get; set; }
 
-		// Token: 0x17009309 RID: 37641
-		// (get) Token: 0x0603FE1A RID: 261658 RVA: 0x00F74456 File Offset: 0x00F72656
-		// (set) Token: 0x0603FE1B RID: 261659 RVA: 0x00F7445E File Offset: 0x00F7265E
+		// Token: 0x1700666B RID: 26219
+		// (get) Token: 0x06034ADB RID: 215771 RVA: 0x00EBB3B2 File Offset: 0x00EB95B2
+		// (set) Token: 0x06034ADC RID: 215772 RVA: 0x00EBB3BA File Offset: 0x00EB95BA
 		public Func<bool> ShowCallback { get; set; }
 	}
 }

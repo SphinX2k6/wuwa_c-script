@@ -6,22 +6,22 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001F07 RID: 7943
+	// Token: 0x02000614 RID: 1556
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroUtility.ProductData")]
 	[UnrealStructLayout(144, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 144)]
 	public class FProductData : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0601E254 RID: 123476 RVA: 0x002CD116 File Offset: 0x002CB316
+		// Token: 0x06008893 RID: 34963 RVA: 0x000CE092 File Offset: 0x000CC292
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FProductData._ScriptStructPtr != 0) ? FProductData._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroUtility.ProductData", ref FProductData._ScriptStructPtr);
 		}
 
-		// Token: 0x170077C6 RID: 30662
-		// (get) Token: 0x0601E255 RID: 123477 RVA: 0x002CD13A File Offset: 0x002CB33A
-		// (set) Token: 0x0601E256 RID: 123478 RVA: 0x002CD14E File Offset: 0x002CB34E
+		// Token: 0x17001978 RID: 6520
+		// (get) Token: 0x06008894 RID: 34964 RVA: 0x000CE0B6 File Offset: 0x000CC2B6
+		// (set) Token: 0x06008895 RID: 34965 RVA: 0x000CE0CA File Offset: 0x000CC2CA
 		public unsafe string id
 		{
 			get
@@ -34,9 +34,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170077C7 RID: 30663
-		// (get) Token: 0x0601E257 RID: 123479 RVA: 0x002CD163 File Offset: 0x002CB363
-		// (set) Token: 0x0601E258 RID: 123480 RVA: 0x002CD177 File Offset: 0x002CB377
+		// Token: 0x17001979 RID: 6521
+		// (get) Token: 0x06008896 RID: 34966 RVA: 0x000CE0DF File Offset: 0x000CC2DF
+		// (set) Token: 0x06008897 RID: 34967 RVA: 0x000CE0F3 File Offset: 0x000CC2F3
 		public unsafe string type
 		{
 			get
@@ -49,9 +49,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170077C8 RID: 30664
-		// (get) Token: 0x0601E259 RID: 123481 RVA: 0x002CD18C File Offset: 0x002CB38C
-		// (set) Token: 0x0601E25A RID: 123482 RVA: 0x002CD19C File Offset: 0x002CB39C
+		// Token: 0x1700197A RID: 6522
+		// (get) Token: 0x06008898 RID: 34968 RVA: 0x000CE108 File Offset: 0x000CC308
+		// (set) Token: 0x06008899 RID: 34969 RVA: 0x000CE118 File Offset: 0x000CC318
 		public unsafe int price
 		{
 			get
@@ -64,9 +64,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170077C9 RID: 30665
-		// (get) Token: 0x0601E25B RID: 123483 RVA: 0x002CD1B0 File Offset: 0x002CB3B0
-		// (set) Token: 0x0601E25C RID: 123484 RVA: 0x002CD1F3 File Offset: 0x002CB3F3
+		// Token: 0x1700197B RID: 6523
+		// (get) Token: 0x0600889A RID: 34970 RVA: 0x000CE12C File Offset: 0x000CC32C
+		// (set) Token: 0x0600889B RID: 34971 RVA: 0x000CE16F File Offset: 0x000CC36F
 		public unsafe FText displayPrice
 		{
 			get
@@ -85,9 +85,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170077CA RID: 30666
-		// (get) Token: 0x0601E25D RID: 123485 RVA: 0x002CD210 File Offset: 0x002CB410
-		// (set) Token: 0x0601E25E RID: 123486 RVA: 0x002CD253 File Offset: 0x002CB453
+		// Token: 0x1700197C RID: 6524
+		// (get) Token: 0x0600889C RID: 34972 RVA: 0x000CE18C File Offset: 0x000CC38C
+		// (set) Token: 0x0600889D RID: 34973 RVA: 0x000CE1CF File Offset: 0x000CC3CF
 		public unsafe FText description
 		{
 			get
@@ -106,9 +106,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170077CB RID: 30667
-		// (get) Token: 0x0601E25F RID: 123487 RVA: 0x002CD270 File Offset: 0x002CB470
-		// (set) Token: 0x0601E260 RID: 123488 RVA: 0x002CD2B3 File Offset: 0x002CB4B3
+		// Token: 0x1700197D RID: 6525
+		// (get) Token: 0x0600889E RID: 34974 RVA: 0x000CE1EC File Offset: 0x000CC3EC
+		// (set) Token: 0x0600889F RID: 34975 RVA: 0x000CE22F File Offset: 0x000CC42F
 		public unsafe FText displayName
 		{
 			get
@@ -127,9 +127,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170077CC RID: 30668
-		// (get) Token: 0x0601E261 RID: 123489 RVA: 0x002CD2D0 File Offset: 0x002CB4D0
-		// (set) Token: 0x0601E262 RID: 123490 RVA: 0x002CD313 File Offset: 0x002CB513
+		// Token: 0x1700197E RID: 6526
+		// (get) Token: 0x060088A0 RID: 34976 RVA: 0x000CE24C File Offset: 0x000CC44C
+		// (set) Token: 0x060088A1 RID: 34977 RVA: 0x000CE28F File Offset: 0x000CC48F
 		public unsafe FText label
 		{
 			get
@@ -148,9 +148,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170077CD RID: 30669
-		// (get) Token: 0x0601E263 RID: 123491 RVA: 0x002CD330 File Offset: 0x002CB530
-		// (set) Token: 0x0601E264 RID: 123492 RVA: 0x002CD373 File Offset: 0x002CB573
+		// Token: 0x1700197F RID: 6527
+		// (get) Token: 0x060088A2 RID: 34978 RVA: 0x000CE2AC File Offset: 0x000CC4AC
+		// (set) Token: 0x060088A3 RID: 34979 RVA: 0x000CE2EF File Offset: 0x000CC4EF
 		public FDateTime endData
 		{
 			get
@@ -169,100 +169,87 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601E265 RID: 123493 RVA: 0x002CD394 File Offset: 0x002CB594
+		// Token: 0x060088A4 RID: 34980 RVA: 0x000CE310 File Offset: 0x000CC510
 		public FProductData()
 		{
 		}
 
-		// Token: 0x0601E266 RID: 123494 RVA: 0x002CD39C File Offset: 0x002CB59C
-		public FProductData(string id, string type, int price, FText displayPrice, FText description, FText displayName, FText label, FDateTime endData)
-		{
-			this.id = id;
-			this.type = type;
-			this.price = price;
-			this.displayPrice = displayPrice;
-			this.description = description;
-			this.displayName = displayName;
-			this.label = label;
-			this.endData = endData;
-		}
-
-		// Token: 0x0601E267 RID: 123495 RVA: 0x002CD3EC File Offset: 0x002CB5EC
+		// Token: 0x060088A5 RID: 34981 RVA: 0x000CE318 File Offset: 0x000CC518
 		protected override IntPtr GetUStructPtr()
 		{
 			return FProductData.StaticStruct();
 		}
 
-		// Token: 0x0601E268 RID: 123496 RVA: 0x002CD3F8 File Offset: 0x002CB5F8
+		// Token: 0x060088A6 RID: 34982 RVA: 0x000CE324 File Offset: 0x000CC524
 		[NullableContext(2)]
 		public FProductData(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601E269 RID: 123497 RVA: 0x002CD402 File Offset: 0x002CB602
+		// Token: 0x060088A7 RID: 34983 RVA: 0x000CE32E File Offset: 0x000CC52E
 		public FProductData(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601E26A RID: 123498 RVA: 0x002CD40D File Offset: 0x002CB60D
+		// Token: 0x060088A8 RID: 34984 RVA: 0x000CE339 File Offset: 0x000CC539
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FProductData(Pointer, false, true);
 		}
 
-		// Token: 0x0601E26B RID: 123499 RVA: 0x002CD417 File Offset: 0x002CB617
+		// Token: 0x060088A9 RID: 34985 RVA: 0x000CE343 File Offset: 0x000CC543
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FProductData(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04010476 RID: 66678
+		// Token: 0x04003B48 RID: 15176
 		public const string __ObjectPath = "/Script/KuroUtility.ProductData";
 
-		// Token: 0x04010477 RID: 66679
+		// Token: 0x04003B49 RID: 15177
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04010478 RID: 66680
+		// Token: 0x04003B4A RID: 15178
 		internal static int __PropertyOffset_id;
 
-		// Token: 0x04010479 RID: 66681
+		// Token: 0x04003B4B RID: 15179
 		internal static int __PropertyOffset_type;
 
-		// Token: 0x0401047A RID: 66682
+		// Token: 0x04003B4C RID: 15180
 		internal static int __PropertyOffset_price;
 
-		// Token: 0x0401047B RID: 66683
+		// Token: 0x04003B4D RID: 15181
 		internal static int __PropertyOffset_displayPrice;
 
-		// Token: 0x0401047C RID: 66684
+		// Token: 0x04003B4E RID: 15182
 		[Nullable(2)]
 		private FText _displayPrice;
 
-		// Token: 0x0401047D RID: 66685
+		// Token: 0x04003B4F RID: 15183
 		internal static int __PropertyOffset_description;
 
-		// Token: 0x0401047E RID: 66686
+		// Token: 0x04003B50 RID: 15184
 		[Nullable(2)]
 		private FText _description;
 
-		// Token: 0x0401047F RID: 66687
+		// Token: 0x04003B51 RID: 15185
 		internal static int __PropertyOffset_displayName;
 
-		// Token: 0x04010480 RID: 66688
+		// Token: 0x04003B52 RID: 15186
 		[Nullable(2)]
 		private FText _displayName;
 
-		// Token: 0x04010481 RID: 66689
+		// Token: 0x04003B53 RID: 15187
 		internal static int __PropertyOffset_label;
 
-		// Token: 0x04010482 RID: 66690
+		// Token: 0x04003B54 RID: 15188
 		[Nullable(2)]
 		private FText _label;
 
-		// Token: 0x04010483 RID: 66691
+		// Token: 0x04003B55 RID: 15189
 		internal static int __PropertyOffset_endData;
 
-		// Token: 0x04010484 RID: 66692
+		// Token: 0x04003B56 RID: 15190
 		[Nullable(2)]
 		private FDateTime _endData;
 	}

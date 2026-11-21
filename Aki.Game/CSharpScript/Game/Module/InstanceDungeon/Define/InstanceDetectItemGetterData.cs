@@ -3,24 +3,24 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.Define
 {
-	// Token: 0x020058C5 RID: 22725
+	// Token: 0x0200489D RID: 18589
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class InstanceDetectItemGetterData : IInstanceDetectItemGetterData
 	{
-		// Token: 0x17008AA9 RID: 35497
-		// (get) Token: 0x06039C46 RID: 236614 RVA: 0x00DBA1F5 File Offset: 0x00DB83F5
-		// (set) Token: 0x06039C47 RID: 236615 RVA: 0x00DBA1FD File Offset: 0x00DB83FD
+		// Token: 0x17005E75 RID: 24181
+		// (get) Token: 0x0602EB69 RID: 191337 RVA: 0x00D0910D File Offset: 0x00D0730D
+		// (set) Token: 0x0602EB6A RID: 191338 RVA: 0x00D09115 File Offset: 0x00D07315
 		public TInstanceSubtitleTextIdGetter SubtitleTextIdGetter { get; set; }
 
-		// Token: 0x17008AAA RID: 35498
-		// (get) Token: 0x06039C48 RID: 236616 RVA: 0x00DBA206 File Offset: 0x00DB8406
-		// (set) Token: 0x06039C49 RID: 236617 RVA: 0x00DBA20E File Offset: 0x00DB840E
+		// Token: 0x17005E76 RID: 24182
+		// (get) Token: 0x0602EB6B RID: 191339 RVA: 0x00D0911E File Offset: 0x00D0731E
+		// (set) Token: 0x0602EB6C RID: 191340 RVA: 0x00D09126 File Offset: 0x00D07326
 		public TInstanceSubtitleArgsGetter SubtitleArgsGetter { get; set; }
 
-		// Token: 0x17008AAB RID: 35499
-		// (get) Token: 0x06039C4A RID: 236618 RVA: 0x00DBA217 File Offset: 0x00DB8417
-		// (set) Token: 0x06039C4B RID: 236619 RVA: 0x00DBA21F File Offset: 0x00DB841F
+		// Token: 0x17005E77 RID: 24183
+		// (get) Token: 0x0602EB6D RID: 191341 RVA: 0x00D0912F File Offset: 0x00D0732F
+		// (set) Token: 0x0602EB6E RID: 191342 RVA: 0x00D09137 File Offset: 0x00D07337
 		public TInstanceCheckFinishedGetter CheckFinishedGetter { get; set; }
 	}
 }

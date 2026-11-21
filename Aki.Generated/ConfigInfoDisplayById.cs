@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200041E RID: 1054
+	// Token: 0x02000434 RID: 1076
 	public class ConfigInfoDisplayById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060018BD RID: 6333 RVA: 0x000E5918 File Offset: 0x000E3B18
+		// Token: 0x06001941 RID: 6465 RVA: 0x000EC06C File Offset: 0x000EA26C
 		static ConfigInfoDisplayById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigInfoDisplayById.CreateStaticDefaultValue), new Action(ConfigInfoDisplayById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060018BE RID: 6334 RVA: 0x000E5938 File Offset: 0x000E3B38
+		// Token: 0x06001942 RID: 6466 RVA: 0x000EC08C File Offset: 0x000EA28C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigInfoDisplayById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060018BF RID: 6335 RVA: 0x000E59B7 File Offset: 0x000E3BB7
+		// Token: 0x06001943 RID: 6467 RVA: 0x000EC10B File Offset: 0x000EA30B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigInfoDisplayById.LogPair = null;
 			ConfigInfoDisplayById.HandleId = 0;
 		}
 
-		// Token: 0x060018C0 RID: 6336 RVA: 0x000E59C5 File Offset: 0x000E3BC5
+		// Token: 0x06001944 RID: 6468 RVA: 0x000EC119 File Offset: 0x000EA319
 		public static void Init()
 		{
 			ConfigInfoDisplayById.HandleId = ConfigCommon.InitDataStatement(ConfigInfoDisplayById.HandleId, "db_infodisplay.db", "select BinData from `InfoDisplay` where Id=?");
 		}
 
-		// Token: 0x060018C1 RID: 6337 RVA: 0x000E59E0 File Offset: 0x000E3BE0
+		// Token: 0x06001945 RID: 6469 RVA: 0x000EC134 File Offset: 0x000EA334
 		public static InfoDisplay? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigInfoDisplayById.HandleId, ConfigInfoDisplayById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new InfoDisplay?(rootAsInfoDisplay);
 		}
 
-		// Token: 0x04001CB6 RID: 7350
+		// Token: 0x04001D50 RID: 7504
 		private const string DB = "db_infodisplay.db";
 
-		// Token: 0x04001CB7 RID: 7351
+		// Token: 0x04001D51 RID: 7505
 		private const string FILE = "x.信息展示.xlsx";
 
-		// Token: 0x04001CB8 RID: 7352
+		// Token: 0x04001D52 RID: 7506
 		private const string TABLE = "InfoDisplay";
 
-		// Token: 0x04001CB9 RID: 7353
+		// Token: 0x04001D53 RID: 7507
 		private const string COMMAND = "select BinData from `InfoDisplay` where Id=?";
 
-		// Token: 0x04001CBA RID: 7354
+		// Token: 0x04001D54 RID: 7508
 		private const string KEY_PREFIX = "InfoDisplayById";
 
-		// Token: 0x04001CBB RID: 7355
+		// Token: 0x04001D55 RID: 7509
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001CBC RID: 7356
+		// Token: 0x04001D56 RID: 7510
 		private static int HandleId;
 	}
 }

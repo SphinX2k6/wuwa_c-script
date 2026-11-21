@@ -4,26 +4,26 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x02006965 RID: 26981
+	// Token: 0x02005AC1 RID: 23233
 	public class ActionMoveToLocation : ActionParams
 	{
-		// Token: 0x04022FEB RID: 143339
+		// Token: 0x0401E1D5 RID: 123349
 		[Nullable(2)]
 		public Vector ToLocation;
 
-		// Token: 0x04022FEC RID: 143340
+		// Token: 0x0401E1D6 RID: 123350
 		public int MoveState;
 
-		// Token: 0x04022FED RID: 143341
+		// Token: 0x0401E1D7 RID: 123351
 		public bool IsNavigation;
 
-		// Token: 0x04022FEE RID: 143342
+		// Token: 0x0401E1D8 RID: 123352
 		public bool IsFly;
 
-		// Token: 0x04022FEF RID: 143343
+		// Token: 0x0401E1D9 RID: 123353
 		public bool DebugMode;
 
-		// Token: 0x04022FF0 RID: 143344
+		// Token: 0x0401E1DA RID: 123354
 		public float MoveSpeed;
 	}
 }

@@ -12,8 +12,8 @@ using UnrealEngine.Utils;
 public class TsDecoratorInGazeAwareness : UBTDecorator_BlueprintBase, IUnrealUObject, IUnrealObject
 {
 	// Token: 0x17000067 RID: 103
-	// (get) Token: 0x0600029C RID: 668 RVA: 0x0000C4CB File Offset: 0x0000A6CB
-	// (set) Token: 0x0600029D RID: 669 RVA: 0x0000C4DB File Offset: 0x0000A6DB
+	// (get) Token: 0x0600029C RID: 668 RVA: 0x0000CA43 File Offset: 0x0000AC43
+	// (set) Token: 0x0600029D RID: 669 RVA: 0x0000CA53 File Offset: 0x0000AC53
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float GazeTime
 	{
@@ -27,7 +27,7 @@ public class TsDecoratorInGazeAwareness : UBTDecorator_BlueprintBase, IUnrealUOb
 		}
 	}
 
-	// Token: 0x0600029E RID: 670 RVA: 0x0000C4EC File Offset: 0x0000A6EC
+	// Token: 0x0600029E RID: 670 RVA: 0x0000CA64 File Offset: 0x0000AC64
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -37,32 +37,28 @@ public class TsDecoratorInGazeAwareness : UBTDecorator_BlueprintBase, IUnrealUOb
 		}
 	}
 
-	// Token: 0x0600029F RID: 671 RVA: 0x0000C520 File Offset: 0x0000A720
+	// Token: 0x0600029F RID: 671 RVA: 0x0000CA98 File Offset: 0x0000AC98
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool PerformConditionCheckAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("PerformConditionCheckAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsDecoratorInGazeAwareness) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("PerformConditionCheckAI"), TsDecoratorInGazeAwareness.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			return this.PerformConditionCheckAI_Implementation(ownerController, controlledPawn);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams* ptr = stackalloc UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x060002A0 RID: 672 RVA: 0x0000C5C0 File Offset: 0x0000A7C0
+	// Token: 0x060002A0 RID: 672 RVA: 0x0000CB50 File Offset: 0x0000AD50
 	[NullableContext(2)]
 	protected virtual bool PerformConditionCheckAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -88,7 +84,7 @@ public class TsDecoratorInGazeAwareness : UBTDecorator_BlueprintBase, IUnrealUOb
 		return instance2 != null && instance2.CheckGazeAwarenessByEntityId(charActorComp.Entity.Id, this.TsGazeTime);
 	}
 
-	// Token: 0x060002A1 RID: 673 RVA: 0x0000C65C File Offset: 0x0000A85C
+	// Token: 0x060002A1 RID: 673 RVA: 0x0000CBEC File Offset: 0x0000ADEC
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsDecoratorInGazeAwareness._ClassPtr == IntPtr.Zero)
@@ -98,23 +94,23 @@ public class TsDecoratorInGazeAwareness : UBTDecorator_BlueprintBase, IUnrealUOb
 		return TsDecoratorInGazeAwareness._ClassPtr;
 	}
 
-	// Token: 0x060002A2 RID: 674 RVA: 0x0000C680 File Offset: 0x0000A880
+	// Token: 0x060002A2 RID: 674 RVA: 0x0000CC10 File Offset: 0x0000AE10
 	public TsDecoratorInGazeAwareness() : this(BuiltinUtils.AllocNativeUObject(TsDecoratorInGazeAwareness.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x060002A3 RID: 675 RVA: 0x0000C6A8 File Offset: 0x0000A8A8
+	// Token: 0x060002A3 RID: 675 RVA: 0x0000CC38 File Offset: 0x0000AE38
 	[NullableContext(1)]
 	public TsDecoratorInGazeAwareness(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsDecoratorInGazeAwareness.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x060002A4 RID: 676 RVA: 0x0000C6DB File Offset: 0x0000A8DB
+	// Token: 0x060002A4 RID: 676 RVA: 0x0000CC6B File Offset: 0x0000AE6B
 	protected TsDecoratorInGazeAwareness(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x060002A5 RID: 677 RVA: 0x0000C6E4 File Offset: 0x0000A8E4
+	// Token: 0x060002A5 RID: 677 RVA: 0x0000CC74 File Offset: 0x0000AE74
 	protected unsafe virtual void __CPPCALL_PerformConditionCheckAI_Implementation(UBTDecorator_BlueprintBase.__PerformConditionCheckAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);

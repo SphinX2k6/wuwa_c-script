@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A5D RID: 10845
+	// Token: 0x02002D4A RID: 11594
 	public class IPlayerInitiator : INpcGroupPerformInitiatorType
 	{
-		// Token: 0x0600EE8D RID: 61069 RVA: 0x0022B787 File Offset: 0x00229987
-		[NullableContext(1)]
+		// Token: 0x0600FD25 RID: 64805 RVA: 0x0024913B File Offset: 0x0024733B
 		public static IPlayerInitiator Create(IPlayerInitiator? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B95 RID: 19349
-		// (get) Token: 0x0600EE8E RID: 61070 RVA: 0x0022B7A6 File Offset: 0x002299A6
+		// Token: 0x17004F3F RID: 20287
+		// (get) Token: 0x0600FD26 RID: 64806 RVA: 0x0024915A File Offset: 0x0024735A
 		public override ENpcGroupPerformInitiatorType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400833D RID: 33597
+		// Token: 0x04008A30 RID: 35376
 		private IPlayerInitiator Instance;
 	}
 }

@@ -4,12 +4,12 @@ using AkiClient.Game.Aki.Data.Entity.Struct;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x02002CA4 RID: 11428
+// Token: 0x020021FD RID: 8701
 [NullableContext(2)]
 [Nullable(0)]
 public class UiMotorRoleComponent : UiModelComponentBase, IUiModelVisible
 {
-	// Token: 0x06017E21 RID: 97825 RVA: 0x00612350 File Offset: 0x00610550
+	// Token: 0x06015695 RID: 87701 RVA: 0x00637ED4 File Offset: 0x006360D4
 	protected override void OnInit()
 	{
 		this.RoleActor = UiSceneManager.Instance.InitRoleSystemRoleActor(EUiModelUseWay.RoleOnMotor);
@@ -18,14 +18,14 @@ public class UiMotorRoleComponent : UiModelComponentBase, IUiModelVisible
 		this.SetActive(false);
 	}
 
-	// Token: 0x06017E22 RID: 97826 RVA: 0x006123A4 File Offset: 0x006105A4
+	// Token: 0x06015696 RID: 87702 RVA: 0x00637F28 File Offset: 0x00636128
 	protected override void OnStart()
 	{
 		EventSystem.Instance.AddWithTarget(base.Owner, EEventName.OnUiModelLoadComplete, new Action(this.OnMotorMeshLoadComplete));
 		EventSystem.Instance.AddWithTarget(base.Owner, EEventName.BeforeUiModelLoadStart, new Action(this.OnMotorModelStartLoad));
 	}
 
-	// Token: 0x06017E23 RID: 97827 RVA: 0x006123F8 File Offset: 0x006105F8
+	// Token: 0x06015697 RID: 87703 RVA: 0x00637F7C File Offset: 0x0063617C
 	protected override void OnEnd()
 	{
 		EventSystem.Instance.RemoveWithTarget(base.Owner, EEventName.OnUiModelLoadComplete, new Action(this.OnMotorMeshLoadComplete));
@@ -34,7 +34,7 @@ public class UiMotorRoleComponent : UiModelComponentBase, IUiModelVisible
 		UiSceneManager.Instance.DestroyRoleSystemRoleActor(this.RoleActor);
 	}
 
-	// Token: 0x06017E24 RID: 97828 RVA: 0x00612460 File Offset: 0x00610660
+	// Token: 0x06015698 RID: 87704 RVA: 0x00637FE4 File Offset: 0x006361E4
 	public void OnModelVisibleChange(bool visible)
 	{
 		if (this.ModelDataComponent.GetModelLoadState() != EUiModelLoadState.LoadComplete)
@@ -45,13 +45,13 @@ public class UiMotorRoleComponent : UiModelComponentBase, IUiModelVisible
 		this.SetActive(visible);
 	}
 
-	// Token: 0x06017E25 RID: 97829 RVA: 0x0061247F File Offset: 0x0061067F
+	// Token: 0x06015699 RID: 87705 RVA: 0x00638003 File Offset: 0x00636203
 	private void OnMotorModelStartLoad()
 	{
 		this.Refresh();
 	}
 
-	// Token: 0x06017E26 RID: 97830 RVA: 0x00612488 File Offset: 0x00610688
+	// Token: 0x0601569A RID: 87706 RVA: 0x0063800C File Offset: 0x0063620C
 	public void Refresh()
 	{
 		UiModelBase model = this.RoleActor.Model;
@@ -116,7 +116,7 @@ public class UiMotorRoleComponent : UiModelComponentBase, IUiModelVisible
 		});
 	}
 
-	// Token: 0x06017E27 RID: 97831 RVA: 0x006124FC File Offset: 0x006106FC
+	// Token: 0x0601569B RID: 87707 RVA: 0x00638080 File Offset: 0x00636280
 	public void SetActive(bool isActive)
 	{
 		if ((isActive && this.CurState == EMotorShowState.Showing) || (!isActive && this.CurState == EMotorShowState.Hidden))
@@ -142,14 +142,14 @@ public class UiMotorRoleComponent : UiModelComponentBase, IUiModelVisible
 		this.CurState = (isActive ? EMotorShowState.Showing : EMotorShowState.Hidden);
 	}
 
-	// Token: 0x06017E28 RID: 97832 RVA: 0x0061255A File Offset: 0x0061075A
+	// Token: 0x0601569C RID: 87708 RVA: 0x006380DE File Offset: 0x006362DE
 	public void OnMotorMeshLoadComplete()
 	{
 		this.ExecuteAttachRoleToMotor();
 		this.SetActive(this.ModelDataComponent.GetModelLoadState() == EUiModelLoadState.LoadComplete);
 	}
 
-	// Token: 0x06017E29 RID: 97833 RVA: 0x00612578 File Offset: 0x00610778
+	// Token: 0x0601569D RID: 87709 RVA: 0x006380FC File Offset: 0x006362FC
 	private void ExecuteAttachRoleToMotor()
 	{
 		UiModelActorComponent uiModelActorComponent = base.Owner.CheckGetComponent<UiModelActorComponent>();
@@ -187,7 +187,7 @@ public class UiMotorRoleComponent : UiModelComponentBase, IUiModelVisible
 		}
 	}
 
-	// Token: 0x06017E2A RID: 97834 RVA: 0x00612658 File Offset: 0x00610858
+	// Token: 0x0601569E RID: 87710 RVA: 0x006381DC File Offset: 0x006363DC
 	[NullableContext(1)]
 	private void LoadAnimByAnimPath(string standAnim, Action<UAnimationAsset> finishCallBack)
 	{
@@ -207,7 +207,7 @@ public class UiMotorRoleComponent : UiModelComponentBase, IUiModelVisible
 		}, 100, "Ui.UiSceneModel");
 	}
 
-	// Token: 0x06017E2B RID: 97835 RVA: 0x006126A2 File Offset: 0x006108A2
+	// Token: 0x0601569F RID: 87711 RVA: 0x00638226 File Offset: 0x00636426
 	private void CancelAnimLoad()
 	{
 		if (this.AnimHandleId != UiModelResourcesManager.Instance.InvalidValue)
@@ -217,21 +217,21 @@ public class UiMotorRoleComponent : UiModelComponentBase, IUiModelVisible
 		}
 	}
 
-	// Token: 0x0400B20D RID: 45581
+	// Token: 0x0400B578 RID: 46456
 	private TsUiSceneRoleActor RoleActor;
 
-	// Token: 0x0400B20E RID: 45582
+	// Token: 0x0400B579 RID: 46457
 	private UiRoleDataComponent RoleDataComponent;
 
-	// Token: 0x0400B20F RID: 45583
+	// Token: 0x0400B57A RID: 46458
 	private UiModelDataComponent ModelDataComponent;
 
-	// Token: 0x0400B210 RID: 45584
+	// Token: 0x0400B57B RID: 46459
 	private readonly FName SocketName = new FName("SeatProp01");
 
-	// Token: 0x0400B211 RID: 45585
+	// Token: 0x0400B57C RID: 46460
 	private int AnimHandleId = UiModelResourcesManager.Instance.InvalidValue;
 
-	// Token: 0x0400B212 RID: 45586
+	// Token: 0x0400B57D RID: 46461
 	private EMotorShowState CurState;
 }

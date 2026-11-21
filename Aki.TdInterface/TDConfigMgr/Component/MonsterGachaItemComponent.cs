@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200083B RID: 2107
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020008DE RID: 2270
 	public class MonsterGachaItemComponent : IComponentBase
 	{
-		// Token: 0x06002E29 RID: 11817 RVA: 0x00077720 File Offset: 0x00075920
+		// Token: 0x0600315F RID: 12639 RVA: 0x0007EB44 File Offset: 0x0007CD44
 		private MonsterGachaItemComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002E2A RID: 11818 RVA: 0x00077758 File Offset: 0x00075958
+		// Token: 0x06003160 RID: 12640 RVA: 0x0007EB7C File Offset: 0x0007CD7C
 		public static MonsterGachaItemComponent Create([Nullable(2)] MonsterGachaItemComponent instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002E2B RID: 11819 RVA: 0x0007776B File Offset: 0x0007596B
+		// Token: 0x06003161 RID: 12641 RVA: 0x0007EB8F File Offset: 0x0007CD8F
 		public static MonsterGachaItemComponent CreateFromSetValue([Nullable(2)] MonsterGachaItemComponent_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002E2C RID: 11820 RVA: 0x00077780 File Offset: 0x00075980
+		// Token: 0x06003162 RID: 12642 RVA: 0x0007EBA4 File Offset: 0x0007CDA4
 		public new MonsterGachaItemComponent_SetValue ToSetValue()
 		{
 			return new MonsterGachaItemComponent_SetValue
@@ -65,9 +63,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000C1F RID: 3103
-		// (get) Token: 0x06002E2D RID: 11821 RVA: 0x000777D0 File Offset: 0x000759D0
-		// (set) Token: 0x06002E2E RID: 11822 RVA: 0x0007780A File Offset: 0x00075A0A
+		// Token: 0x17000CE5 RID: 3301
+		// (get) Token: 0x06003163 RID: 12643 RVA: 0x0007EBF4 File Offset: 0x0007CDF4
+		// (set) Token: 0x06003164 RID: 12644 RVA: 0x0007EC2E File Offset: 0x0007CE2E
 		public override bool? Disabled
 		{
 			get
@@ -89,9 +87,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C20 RID: 3104
-		// (get) Token: 0x06002E2F RID: 11823 RVA: 0x00077818 File Offset: 0x00075A18
-		// (set) Token: 0x06002E30 RID: 11824 RVA: 0x00077842 File Offset: 0x00075A42
+		// Token: 0x17000CE6 RID: 3302
+		// (get) Token: 0x06003165 RID: 12645 RVA: 0x0007EC3C File Offset: 0x0007CE3C
+		// (set) Token: 0x06003166 RID: 12646 RVA: 0x0007EC66 File Offset: 0x0007CE66
 		public override bool? EdIsLocked
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C21 RID: 3105
-		// (get) Token: 0x06002E31 RID: 11825 RVA: 0x00077850 File Offset: 0x00075A50
-		// (set) Token: 0x06002E32 RID: 11826 RVA: 0x0007787B File Offset: 0x00075A7B
+		// Token: 0x17000CE7 RID: 3303
+		// (get) Token: 0x06003167 RID: 12647 RVA: 0x0007EC74 File Offset: 0x0007CE74
+		// (set) Token: 0x06003168 RID: 12648 RVA: 0x0007EC9F File Offset: 0x0007CE9F
 		public virtual string MaterialDataPath
 		{
 			get
@@ -131,9 +129,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C22 RID: 3106
-		// (get) Token: 0x06002E33 RID: 11827 RVA: 0x00077889 File Offset: 0x00075A89
-		// (set) Token: 0x06002E34 RID: 11828 RVA: 0x000778B4 File Offset: 0x00075AB4
+		// Token: 0x17000CE8 RID: 3304
+		// (get) Token: 0x06003169 RID: 12649 RVA: 0x0007ECAD File Offset: 0x0007CEAD
+		// (set) Token: 0x0600316A RID: 12650 RVA: 0x0007ECD8 File Offset: 0x0007CED8
 		public virtual EMonsterMatchType MonsterType
 		{
 			get
@@ -154,9 +152,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C23 RID: 3107
-		// (get) Token: 0x06002E35 RID: 11829 RVA: 0x000778C2 File Offset: 0x00075AC2
-		// (set) Token: 0x06002E36 RID: 11830 RVA: 0x000778E9 File Offset: 0x00075AE9
+		// Token: 0x17000CE9 RID: 3305
+		// (get) Token: 0x0600316B RID: 12651 RVA: 0x0007ECE6 File Offset: 0x0007CEE6
+		// (set) Token: 0x0600316C RID: 12652 RVA: 0x0007ED0D File Offset: 0x0007CF0D
 		public virtual List<int> MonsterEntityIds
 		{
 			get
@@ -178,11 +176,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001E83 RID: 7811
+		// Token: 0x04002092 RID: 8338
 		[Nullable(2)]
 		protected new MonsterGachaItemComponent FbInstance;
 
-		// Token: 0x04001E84 RID: 7812
+		// Token: 0x04002093 RID: 8339
 		[Nullable(2)]
 		protected new MonsterGachaItemComponent_SetValue PocoInterface;
 	}

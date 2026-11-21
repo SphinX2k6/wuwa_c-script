@@ -7,7 +7,7 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200003E RID: 62
+	// Token: 0x02000023 RID: 35
 	[HasGetTypeHash]
 	[UnrealBlittableStruct(UnrealReflectionPropertyTypeCode.UnrealBlittableStruct)]
 	[UnrealStructLayout(24, 4, UnrealReflectionPropertyTypeCode.UnrealBlittableStruct, PropertiesSize = 24)]
@@ -15,27 +15,27 @@ namespace UnrealEngine
 	[StructLayout(LayoutKind.Explicit, Pack = 4, Size = 24)]
 	public struct FTwoVectors : IEquatable<FTwoVectors>, IEqualityOperators<FTwoVectors, FTwoVectors, bool>, IUnrealScriptStruct
 	{
-		// Token: 0x060005AB RID: 1451 RVA: 0x0000CE0A File Offset: 0x0000B00A
+		// Token: 0x06000530 RID: 1328 RVA: 0x00009676 File Offset: 0x00007876
 		public FTwoVectors(in FVector in1, in FVector in2)
 		{
 			this.v1 = in1;
 			this.v2 = in2;
 		}
 
-		// Token: 0x060005AC RID: 1452 RVA: 0x0000CE24 File Offset: 0x0000B024
+		// Token: 0x06000531 RID: 1329 RVA: 0x00009690 File Offset: 0x00007890
 		public FTwoVectors()
 		{
 			this.v1 = default(FVector);
 			this.v2 = default(FVector);
 		}
 
-		// Token: 0x060005AD RID: 1453 RVA: 0x0000CE3E File Offset: 0x0000B03E
+		// Token: 0x06000532 RID: 1330 RVA: 0x000096AA File Offset: 0x000078AA
 		public static FTwoVectors operator *(float scale, in FTwoVectors v)
 		{
 			return v * scale;
 		}
 
-		// Token: 0x060005AE RID: 1454 RVA: 0x0000CE48 File Offset: 0x0000B048
+		// Token: 0x06000533 RID: 1331 RVA: 0x000096B4 File Offset: 0x000078B4
 		public static FTwoVectors operator -(in FTwoVectors v)
 		{
 			FVector fvector = -v.v1;
@@ -43,19 +43,19 @@ namespace UnrealEngine
 			return new FTwoVectors(ref fvector, ref fvector2);
 		}
 
-		// Token: 0x060005AF RID: 1455 RVA: 0x0000CE76 File Offset: 0x0000B076
+		// Token: 0x06000534 RID: 1332 RVA: 0x000096E2 File Offset: 0x000078E2
 		public static bool operator ==(FTwoVectors a, FTwoVectors b)
 		{
 			return a.v1 == b.v1 && a.v2 == b.v2;
 		}
 
-		// Token: 0x060005B0 RID: 1456 RVA: 0x0000CE9E File Offset: 0x0000B09E
+		// Token: 0x06000535 RID: 1333 RVA: 0x0000970A File Offset: 0x0000790A
 		public static bool operator !=(FTwoVectors a, FTwoVectors b)
 		{
 			return a.v1 != b.v1 || a.v2 != b.v2;
 		}
 
-		// Token: 0x060005B1 RID: 1457 RVA: 0x0000CEC8 File Offset: 0x0000B0C8
+		// Token: 0x06000536 RID: 1334 RVA: 0x00009734 File Offset: 0x00007934
 		[NullableContext(1)]
 		public override readonly string ToString()
 		{
@@ -68,13 +68,13 @@ namespace UnrealEngine
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x060005B2 RID: 1458 RVA: 0x0000CF24 File Offset: 0x0000B124
+		// Token: 0x06000537 RID: 1335 RVA: 0x00009790 File Offset: 0x00007990
 		public readonly bool Equals(FTwoVectors other)
 		{
 			return this == other;
 		}
 
-		// Token: 0x060005B3 RID: 1459 RVA: 0x0000CF34 File Offset: 0x0000B134
+		// Token: 0x06000538 RID: 1336 RVA: 0x000097A0 File Offset: 0x000079A0
 		[NullableContext(2)]
 		public override readonly bool Equals(object obj)
 		{
@@ -86,13 +86,13 @@ namespace UnrealEngine
 			return false;
 		}
 
-		// Token: 0x060005B4 RID: 1460 RVA: 0x0000CF5E File Offset: 0x0000B15E
+		// Token: 0x06000539 RID: 1337 RVA: 0x000097CA File Offset: 0x000079CA
 		public override readonly int GetHashCode()
 		{
 			return HashCode.Combine<FVector, FVector>(this.v1, this.v2);
 		}
 
-		// Token: 0x17000015 RID: 21
+		// Token: 0x17000014 RID: 20
 		public float this[int index]
 		{
 			readonly get
@@ -151,43 +151,43 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060005B7 RID: 1463
+		// Token: 0x0600053C RID: 1340
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTwoVectors Internal_Add(in FTwoVectors a, in FTwoVectors b);
 
-		// Token: 0x060005B8 RID: 1464
+		// Token: 0x0600053D RID: 1341
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTwoVectors Internal_Sub(in FTwoVectors a, in FTwoVectors b);
 
-		// Token: 0x060005B9 RID: 1465
+		// Token: 0x0600053E RID: 1342
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTwoVectors Internal_Mul(in FTwoVectors a, in FTwoVectors b);
 
-		// Token: 0x060005BA RID: 1466
+		// Token: 0x0600053F RID: 1343
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTwoVectors Internal_MulFloat(in FTwoVectors a, float b);
 
-		// Token: 0x060005BB RID: 1467
+		// Token: 0x06000540 RID: 1344
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTwoVectors Internal_Div(in FTwoVectors a, in FTwoVectors b);
 
-		// Token: 0x060005BC RID: 1468
+		// Token: 0x06000541 RID: 1345
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTwoVectors Internal_DivFloat(in FTwoVectors a, float b);
 
-		// Token: 0x060005BD RID: 1469
+		// Token: 0x06000542 RID: 1346
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool Internal_Equals(in FTwoVectors a, in FTwoVectors b, float tolerance = 0.0001f);
 
-		// Token: 0x060005BE RID: 1470
+		// Token: 0x06000543 RID: 1347
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float Internal_GetMax(in FTwoVectors a);
 
-		// Token: 0x060005BF RID: 1471
+		// Token: 0x06000544 RID: 1348
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float Internal_GetMin(in FTwoVectors a);
 
-		// Token: 0x060005C0 RID: 1472 RVA: 0x0000D07C File Offset: 0x0000B27C
+		// Token: 0x06000545 RID: 1349 RVA: 0x000098E8 File Offset: 0x00007AE8
 		public unsafe static FTwoVectors operator +(in FTwoVectors a, in FTwoVectors b)
 		{
 			fixed (FTwoVectors* ptr = &a)
@@ -199,7 +199,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060005C1 RID: 1473 RVA: 0x0000D098 File Offset: 0x0000B298
+		// Token: 0x06000546 RID: 1350 RVA: 0x00009904 File Offset: 0x00007B04
 		public unsafe static FTwoVectors operator -(in FTwoVectors a, in FTwoVectors b)
 		{
 			fixed (FTwoVectors* ptr = &a)
@@ -211,7 +211,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060005C2 RID: 1474 RVA: 0x0000D0B4 File Offset: 0x0000B2B4
+		// Token: 0x06000547 RID: 1351 RVA: 0x00009920 File Offset: 0x00007B20
 		public unsafe static FTwoVectors operator *(in FTwoVectors a, in FTwoVectors b)
 		{
 			fixed (FTwoVectors* ptr = &a)
@@ -223,7 +223,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060005C3 RID: 1475 RVA: 0x0000D0D0 File Offset: 0x0000B2D0
+		// Token: 0x06000548 RID: 1352 RVA: 0x0000993C File Offset: 0x00007B3C
 		public unsafe static FTwoVectors operator *(in FTwoVectors a, float b)
 		{
 			fixed (FTwoVectors* ptr = &a)
@@ -232,7 +232,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060005C4 RID: 1476 RVA: 0x0000D0E8 File Offset: 0x0000B2E8
+		// Token: 0x06000549 RID: 1353 RVA: 0x00009954 File Offset: 0x00007B54
 		public unsafe static FTwoVectors operator /(in FTwoVectors a, in FTwoVectors b)
 		{
 			fixed (FTwoVectors* ptr = &a)
@@ -244,7 +244,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060005C5 RID: 1477 RVA: 0x0000D104 File Offset: 0x0000B304
+		// Token: 0x0600054A RID: 1354 RVA: 0x00009970 File Offset: 0x00007B70
 		public unsafe static FTwoVectors operator /(in FTwoVectors a, float b)
 		{
 			fixed (FTwoVectors* ptr = &a)
@@ -253,7 +253,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060005C6 RID: 1478 RVA: 0x0000D11C File Offset: 0x0000B31C
+		// Token: 0x0600054B RID: 1355 RVA: 0x00009988 File Offset: 0x00007B88
 		public unsafe readonly bool Equals(in FTwoVectors b, float tolerance = 0.0001f)
 		{
 			fixed (FTwoVectors* ptr = &this)
@@ -265,7 +265,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060005C7 RID: 1479 RVA: 0x0000D13C File Offset: 0x0000B33C
+		// Token: 0x0600054C RID: 1356 RVA: 0x000099A8 File Offset: 0x00007BA8
 		public unsafe readonly float GetMax()
 		{
 			fixed (FTwoVectors* ptr = &this)
@@ -274,7 +274,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060005C8 RID: 1480 RVA: 0x0000D154 File Offset: 0x0000B354
+		// Token: 0x0600054D RID: 1357 RVA: 0x000099C0 File Offset: 0x00007BC0
 		public unsafe readonly float GetMin()
 		{
 			fixed (FTwoVectors* ptr = &this)
@@ -283,24 +283,24 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060005C9 RID: 1481 RVA: 0x0000D16B File Offset: 0x0000B36B
+		// Token: 0x0600054E RID: 1358 RVA: 0x000099D7 File Offset: 0x00007BD7
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FTwoVectors._ScriptStructPtr != 0) ? FTwoVectors._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/CoreUObject.TwoVectors", ref FTwoVectors._ScriptStructPtr);
 		}
 
-		// Token: 0x04000101 RID: 257
+		// Token: 0x040000BA RID: 186
 		[FieldOffset(0)]
 		public FVector v1;
 
-		// Token: 0x04000102 RID: 258
+		// Token: 0x040000BB RID: 187
 		[FieldOffset(12)]
 		public FVector v2;
 
-		// Token: 0x04000103 RID: 259
+		// Token: 0x040000BC RID: 188
 		public const string __ObjectPath = "/Script/CoreUObject.TwoVectors";
 
-		// Token: 0x04000104 RID: 260
+		// Token: 0x040000BD RID: 189
 		private static IntPtr _ScriptStructPtr;
 	}
 }

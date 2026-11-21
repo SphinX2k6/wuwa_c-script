@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023F2 RID: 9202
+	// Token: 0x02002689 RID: 9865
 	public class EResetPresentationTypeJsonConverter : JsonConverter<EResetPresentationType>
 	{
-		// Token: 0x0600C841 RID: 51265 RVA: 0x001D500C File Offset: 0x001D320C
+		// Token: 0x0600D4C4 RID: 54468 RVA: 0x001EE7B8 File Offset: 0x001EC9B8
 		public override EResetPresentationType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EResetPresentationTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C842 RID: 51266 RVA: 0x001D5030 File Offset: 0x001D3230
+		// Token: 0x0600D4C5 RID: 54469 RVA: 0x001EE7DC File Offset: 0x001EC9DC
 		public override void Write(Utf8JsonWriter writer, EResetPresentationType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

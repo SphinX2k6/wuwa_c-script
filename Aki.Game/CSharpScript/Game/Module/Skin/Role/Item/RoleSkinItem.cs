@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Skin.Role.Item
 {
-	// Token: 0x02004BF7 RID: 19447
+	// Token: 0x02003BA8 RID: 15272
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -15,13 +15,13 @@ namespace CSharpScript.Game.Module.Skin.Role.Item
 	})]
 	public class RoleSkinItem : AutoAttachItem<RoleSkinData>, IStaticVariableResetter
 	{
-		// Token: 0x0603249F RID: 205983 RVA: 0x00BAF24A File Offset: 0x00BAD44A
+		// Token: 0x06027245 RID: 160325 RVA: 0x00AF384A File Offset: 0x00AF1A4A
 		static RoleSkinItem()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(RoleSkinItem.CreateStaticDefaultValue), new Action(RoleSkinItem.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060324A0 RID: 205984 RVA: 0x00BAF269 File Offset: 0x00BAD469
+		// Token: 0x06027246 RID: 160326 RVA: 0x00AF3869 File Offset: 0x00AF1A69
 		public static void CreateStaticDefaultValue()
 		{
 			RoleSkinItem.OffsetCurve = null;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Skin.Role.Item
 			RoleSkinItem.AlphaCurve = null;
 		}
 
-		// Token: 0x060324A1 RID: 205985 RVA: 0x00BAF27D File Offset: 0x00BAD47D
+		// Token: 0x06027247 RID: 160327 RVA: 0x00AF387D File Offset: 0x00AF1A7D
 		public static void ResetStaticDefaultValue()
 		{
 			RoleSkinItem.OffsetCurve = null;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Skin.Role.Item
 			RoleSkinItem.AlphaCurve = null;
 		}
 
-		// Token: 0x060324A2 RID: 205986 RVA: 0x00BAF294 File Offset: 0x00BAD494
+		// Token: 0x06027248 RID: 160328 RVA: 0x00AF3894 File Offset: 0x00AF1A94
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Skin.Role.Item
 			};
 		}
 
-		// Token: 0x060324A3 RID: 205987 RVA: 0x00BAF438 File Offset: 0x00BAD638
+		// Token: 0x06027249 RID: 160329 RVA: 0x00AF3A38 File Offset: 0x00AF1C38
 		[NullableContext(1)]
 		protected override void OnRefreshItem(RoleSkinData data)
 		{
@@ -94,14 +94,14 @@ namespace CSharpScript.Game.Module.Skin.Role.Item
 			this.RefreshEffectItem(flag);
 		}
 
-		// Token: 0x060324A4 RID: 205988 RVA: 0x00BAF563 File Offset: 0x00BAD763
+		// Token: 0x0602724A RID: 160330 RVA: 0x00AF3B63 File Offset: 0x00AF1D63
 		private void RefreshEffectItem(bool hasSuit)
 		{
 			base.GetItem(14).SetUIActive(hasSuit);
 			base.GetItem(13).SetUIActive(hasSuit);
 		}
 
-		// Token: 0x060324A5 RID: 205989 RVA: 0x00BAF581 File Offset: 0x00BAD781
+		// Token: 0x0602724B RID: 160331 RVA: 0x00AF3B81 File Offset: 0x00AF1D81
 		public override void OnSelect()
 		{
 			this.OnSelectedItem();
@@ -110,14 +110,14 @@ namespace CSharpScript.Game.Module.Skin.Role.Item
 			base.GetItem(15).SetUIActive(false);
 		}
 
-		// Token: 0x060324A6 RID: 205990 RVA: 0x00BAF5B3 File Offset: 0x00BAD7B3
+		// Token: 0x0602724C RID: 160332 RVA: 0x00AF3BB3 File Offset: 0x00AF1DB3
 		protected override void OnUnSelect()
 		{
 			base.GetItem(12).SetUIActive(false);
 			base.GetItem(11).SetUIActive(true);
 		}
 
-		// Token: 0x060324A7 RID: 205991 RVA: 0x00BAF5D1 File Offset: 0x00BAD7D1
+		// Token: 0x0602724D RID: 160333 RVA: 0x00AF3BD1 File Offset: 0x00AF1DD1
 		private void OnSelectedItem()
 		{
 			Action<int> buttonFunction = this.ButtonFunction;
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.Module.Skin.Role.Item
 			buttonFunction(this.CurrentShowItemIndex);
 		}
 
-		// Token: 0x060324A8 RID: 205992 RVA: 0x00BAF5EC File Offset: 0x00BAD7EC
+		// Token: 0x0602724E RID: 160334 RVA: 0x00AF3BEC File Offset: 0x00AF1DEC
 		protected override void OnMoveItem()
 		{
 			float currentMovePercentage = base.GetCurrentMovePercentage();
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.Skin.Role.Item
 			this.RefreshHierarchyIndex(currentMovePercentage);
 		}
 
-		// Token: 0x060324A9 RID: 205993 RVA: 0x00BAF61C File Offset: 0x00BAD81C
+		// Token: 0x0602724F RID: 160335 RVA: 0x00AF3C1C File Offset: 0x00AF1E1C
 		private void RefreshScaleByCurve(float percentage)
 		{
 			float floatValue = RoleSkinItem.ScaleCurve.GetFloatValue(percentage);
@@ -146,14 +146,14 @@ namespace CSharpScript.Game.Module.Skin.Role.Item
 			this.RootItem.SetUIItemScale(uiitemScale);
 		}
 
-		// Token: 0x060324AA RID: 205994 RVA: 0x00BAF64C File Offset: 0x00BAD84C
+		// Token: 0x06027250 RID: 160336 RVA: 0x00AF3C4C File Offset: 0x00AF1E4C
 		private void RefreshAlphaByCurve(float percentage)
 		{
 			float floatValue = RoleSkinItem.AlphaCurve.GetFloatValue(percentage);
 			this.RootItem.SetUIItemAlpha(floatValue);
 		}
 
-		// Token: 0x060324AB RID: 205995 RVA: 0x00BAF674 File Offset: 0x00BAD874
+		// Token: 0x06027251 RID: 160337 RVA: 0x00AF3C74 File Offset: 0x00AF1E74
 		private void RefreshOffset(float percentage)
 		{
 			float floatValue = RoleSkinItem.OffsetCurve.GetFloatValue(percentage);
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Module.Skin.Role.Item
 			}
 		}
 
-		// Token: 0x060324AC RID: 205996 RVA: 0x00BAF6DC File Offset: 0x00BAD8DC
+		// Token: 0x06027252 RID: 160338 RVA: 0x00AF3CDC File Offset: 0x00AF1EDC
 		private void RefreshHierarchyIndex(float percentage)
 		{
 			int num = 2;
@@ -197,73 +197,73 @@ namespace CSharpScript.Game.Module.Skin.Role.Item
 			}
 		}
 
-		// Token: 0x060324AD RID: 205997 RVA: 0x00BAF71B File Offset: 0x00BAD91B
+		// Token: 0x06027253 RID: 160339 RVA: 0x00AF3D1B File Offset: 0x00AF1F1B
 		public RoleSkinItem() : base(null)
 		{
 		}
 
-		// Token: 0x0401ABEE RID: 109550
+		// Token: 0x04015548 RID: 87368
 		public Action<int> ButtonFunction;
 
-		// Token: 0x0401ABEF RID: 109551
+		// Token: 0x04015549 RID: 87369
 		public static UCurveFloat OffsetCurve;
 
-		// Token: 0x0401ABF0 RID: 109552
+		// Token: 0x0401554A RID: 87370
 		public static UCurveFloat ScaleCurve;
 
-		// Token: 0x0401ABF1 RID: 109553
+		// Token: 0x0401554B RID: 87371
 		public static UCurveFloat AlphaCurve;
 
-		// Token: 0x0401ABF2 RID: 109554
+		// Token: 0x0401554C RID: 87372
 		private const float INDEXQUARTER = 0.25f;
 
-		// Token: 0x0401ABF3 RID: 109555
+		// Token: 0x0401554D RID: 87373
 		private const float INDEXHALF = 0.5f;
 
-		// Token: 0x0401ABF4 RID: 109556
+		// Token: 0x0401554E RID: 87374
 		private const float INDEXTHREEQUARTER = 0.75f;
 
-		// Token: 0x0401ABF5 RID: 109557
+		// Token: 0x0401554F RID: 87375
 		private const int MAXHIERARCHYINDEX = 2;
 
-		// Token: 0x0401ABF6 RID: 109558
+		// Token: 0x04015550 RID: 87376
 		private const int MINHIERARCHYINDEX = 1;
 
-		// Token: 0x0200ADEF RID: 44527
+		// Token: 0x0200980E RID: 38926
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x04034D3E RID: 216382
+			// Token: 0x0402F6E5 RID: 194277
 			Button,
-			// Token: 0x04034D3F RID: 216383
+			// Token: 0x0402F6E6 RID: 194278
 			QualityTextureBg,
-			// Token: 0x04034D40 RID: 216384
+			// Token: 0x0402F6E7 RID: 194279
 			RoleTexture,
-			// Token: 0x04034D41 RID: 216385
+			// Token: 0x0402F6E8 RID: 194280
 			QualityTexture,
-			// Token: 0x04034D42 RID: 216386
+			// Token: 0x0402F6E9 RID: 194281
 			WeaponRootItem,
-			// Token: 0x04034D43 RID: 216387
+			// Token: 0x0402F6EA RID: 194282
 			WeaponTexture,
-			// Token: 0x04034D44 RID: 216388
+			// Token: 0x0402F6EB RID: 194283
 			WearItem,
-			// Token: 0x04034D45 RID: 216389
+			// Token: 0x0402F6EC RID: 194284
 			LockItem,
-			// Token: 0x04034D46 RID: 216390
+			// Token: 0x0402F6ED RID: 194285
 			MaskLeft,
-			// Token: 0x04034D47 RID: 216391
+			// Token: 0x0402F6EE RID: 194286
 			MaskRight,
-			// Token: 0x04034D48 RID: 216392
+			// Token: 0x0402F6EF RID: 194287
 			WeaponQualityTexture,
-			// Token: 0x04034D49 RID: 216393
+			// Token: 0x0402F6F0 RID: 194288
 			TextureMask,
-			// Token: 0x04034D4A RID: 216394
+			// Token: 0x0402F6F1 RID: 194289
 			TextureRoleSelect,
-			// Token: 0x04034D4B RID: 216395
+			// Token: 0x0402F6F2 RID: 194290
 			EffectBItem,
-			// Token: 0x04034D4C RID: 216396
+			// Token: 0x0402F6F3 RID: 194291
 			EffectAItem,
-			// Token: 0x04034D4D RID: 216397
+			// Token: 0x0402F6F4 RID: 194292
 			NewItem
 		}
 	}

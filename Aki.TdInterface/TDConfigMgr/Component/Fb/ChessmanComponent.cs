@@ -6,11 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D35 RID: 3381
+	// Token: 0x02000E2F RID: 3631
 	public class ChessmanComponent : IComponentBase
 	{
-		// Token: 0x06004D25 RID: 19749 RVA: 0x000BFFA6 File Offset: 0x000BE1A6
-		[NullableContext(1)]
+		// Token: 0x06005241 RID: 21057 RVA: 0x000CB6EA File Offset: 0x000C98EA
 		public static ChessmanComponent Create(IChessmanComponent? instance)
 		{
 			if (instance == null)
@@ -23,8 +22,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001878 RID: 6264
-		// (get) Token: 0x06004D26 RID: 19750 RVA: 0x000BFFC8 File Offset: 0x000BE1C8
+		// Token: 0x170019DE RID: 6622
+		// (get) Token: 0x06005242 RID: 21058 RVA: 0x000CB70C File Offset: 0x000C990C
 		public override bool? Disabled
 		{
 			get
@@ -37,8 +36,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001879 RID: 6265
-		// (get) Token: 0x06004D27 RID: 19751 RVA: 0x000C0000 File Offset: 0x000BE200
+		// Token: 0x170019DF RID: 6623
+		// (get) Token: 0x06005243 RID: 21059 RVA: 0x000CB744 File Offset: 0x000C9944
 		public override bool? EdIsLocked
 		{
 			get
@@ -47,19 +46,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700187A RID: 6266
-		// (get) Token: 0x06004D28 RID: 19752 RVA: 0x000C0018 File Offset: 0x000BE218
+		// Token: 0x170019E0 RID: 6624
+		// (get) Token: 0x06005244 RID: 21060 RVA: 0x000CB75C File Offset: 0x000C995C
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> StartMovingActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -82,19 +81,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700187B RID: 6267
-		// (get) Token: 0x06004D29 RID: 19753 RVA: 0x000C0094 File Offset: 0x000BE294
+		// Token: 0x170019E1 RID: 6625
+		// (get) Token: 0x06005245 RID: 21061 RVA: 0x000CB7D8 File Offset: 0x000C99D8
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> EndMovingActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -117,29 +116,29 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002C38 RID: 11320
+		// Token: 0x04002EF8 RID: 12024
 		private IChessmanComponent Instance;
 
-		// Token: 0x04002C39 RID: 11321
+		// Token: 0x04002EF9 RID: 12025
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _StartMovingActionsCache;
 
-		// Token: 0x04002C3A RID: 11322
+		// Token: 0x04002EFA RID: 12026
 		private bool _StartMovingActionsInited;
 
-		// Token: 0x04002C3B RID: 11323
+		// Token: 0x04002EFB RID: 12027
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _EndMovingActionsCache;
 
-		// Token: 0x04002C3C RID: 11324
+		// Token: 0x04002EFC RID: 12028
 		private bool _EndMovingActionsInited;
 	}
 }

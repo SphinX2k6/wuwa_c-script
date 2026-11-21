@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002907 RID: 10503
+	// Token: 0x02002BE3 RID: 11235
 	public class ILevelSequenceTransitionType
 	{
-		// Token: 0x0600E92A RID: 59690 RVA: 0x00223180 File Offset: 0x00221380
-		[NullableContext(1)]
+		// Token: 0x0600F77B RID: 63355 RVA: 0x002404A0 File Offset: 0x0023E6A0
 		public static ILevelSequenceTransitionType Create(ILevelSequenceTransitionType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170048DE RID: 18654
-		// (get) Token: 0x0600E92B RID: 59691 RVA: 0x0022319F File Offset: 0x0022139F
+		// Token: 0x17004C63 RID: 19555
+		// (get) Token: 0x0600F77C RID: 63356 RVA: 0x002404BF File Offset: 0x0023E6BF
 		public virtual ELevelSequenceTransition Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170048DF RID: 18655
-		// (get) Token: 0x0600E92C RID: 59692 RVA: 0x002231AC File Offset: 0x002213AC
+		// Token: 0x17004C64 RID: 19556
+		// (get) Token: 0x0600F77D RID: 63357 RVA: 0x002404CC File Offset: 0x0023E6CC
 		public virtual float? Duration
 		{
 			get
@@ -45,7 +43,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040080B9 RID: 32953
+		// Token: 0x04008787 RID: 34695
 		private ILevelSequenceTransitionType Instance;
 	}
 }

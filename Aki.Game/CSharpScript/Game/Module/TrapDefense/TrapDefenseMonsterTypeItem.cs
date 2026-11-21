@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004AC2 RID: 19138
+	// Token: 0x02003A6A RID: 14954
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 	})]
 	public class TrapDefenseMonsterTypeItem : GridProxyAbstract<TrapDefenseMonsterTypeData>
 	{
-		// Token: 0x06031944 RID: 203076 RVA: 0x00B7F0F8 File Offset: 0x00B7D2F8
+		// Token: 0x060266D4 RID: 157396 RVA: 0x00AC30AC File Offset: 0x00AC12AC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06031945 RID: 203077 RVA: 0x00B7F1A4 File Offset: 0x00B7D3A4
+		// Token: 0x060266D5 RID: 157397 RVA: 0x00AC3158 File Offset: 0x00AC1358
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TrapDefenseMonsterTypeItem.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031946 RID: 203078 RVA: 0x00B7F1E8 File Offset: 0x00B7D3E8
+		// Token: 0x060266D6 RID: 157398 RVA: 0x00AC319C File Offset: 0x00AC139C
 		public override UniTask RefreshAsync(TrapDefenseMonsterTypeData data, bool isSelected, int gridIndex)
 		{
 			TrapDefenseMonsterTypeItem.<RefreshAsync>d__9 <RefreshAsync>d__;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <RefreshAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031947 RID: 203079 RVA: 0x00B7F233 File Offset: 0x00B7D433
+		// Token: 0x060266D7 RID: 157399 RVA: 0x00AC31E7 File Offset: 0x00AC13E7
 		public TrapDefenseMonsterItem CreateItemMonster()
 		{
 			return new TrapDefenseMonsterItem(false)
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			};
 		}
 
-		// Token: 0x06031948 RID: 203080 RVA: 0x00B7F24D File Offset: 0x00B7D44D
+		// Token: 0x060266D8 RID: 157400 RVA: 0x00AC3201 File Offset: 0x00AC1401
 		public override void OnSelected(bool isSelected)
 		{
 			if (!this.IsFireForBuffClick)
@@ -77,13 +77,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031949 RID: 203081 RVA: 0x00B7F26F File Offset: 0x00B7D46F
+		// Token: 0x060266D9 RID: 157401 RVA: 0x00AC3223 File Offset: 0x00AC1423
 		public override void OnDeselected(bool isSelected)
 		{
 			this.LayoutMonster.DeselectCurrentGridProxy();
 		}
 
-		// Token: 0x0603194A RID: 203082 RVA: 0x00B7F27C File Offset: 0x00B7D47C
+		// Token: 0x060266DA RID: 157402 RVA: 0x00AC3230 File Offset: 0x00AC1430
 		private void OnSelectMonsterItem(TrapDefenseMonsterData data)
 		{
 			this.IsFireForBuffClick = true;
@@ -100,38 +100,38 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.IsFireForBuffClick = false;
 		}
 
-		// Token: 0x0401A7D2 RID: 108498
+		// Token: 0x04015124 RID: 86308
 		public TrapDefenseMonsterTypeData ItemData;
 
-		// Token: 0x0401A7D3 RID: 108499
+		// Token: 0x04015125 RID: 86309
 		public Action<TrapDefenseMonsterTypeData> ClickCallBack;
 
-		// Token: 0x0401A7D4 RID: 108500
+		// Token: 0x04015126 RID: 86310
 		public Action<TrapDefenseMonsterData> OnSelectMonsterCallBack;
 
-		// Token: 0x0401A7D5 RID: 108501
+		// Token: 0x04015127 RID: 86311
 		public GenericLayout<TrapDefenseMonsterItem, TrapDefenseMonsterData> LayoutMonster;
 
-		// Token: 0x0401A7D6 RID: 108502
+		// Token: 0x04015128 RID: 86312
 		public int LastSelectMonsterIndex = -1;
 
-		// Token: 0x0401A7D7 RID: 108503
+		// Token: 0x04015129 RID: 86313
 		public bool IsFireForBuffClick;
 
-		// Token: 0x0200AC29 RID: 44073
+		// Token: 0x02009649 RID: 38473
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x04034504 RID: 214276
+			// Token: 0x0402EEB5 RID: 192181
 			public const int SpriteIconType = 0;
 
-			// Token: 0x04034505 RID: 214277
+			// Token: 0x0402EEB6 RID: 192182
 			public const int TextNameType = 1;
 
-			// Token: 0x04034506 RID: 214278
+			// Token: 0x0402EEB7 RID: 192183
 			public const int LayoutMonster = 2;
 
-			// Token: 0x04034507 RID: 214279
+			// Token: 0x0402EEB8 RID: 192184
 			public const int ItemMonster = 3;
 		}
 	}

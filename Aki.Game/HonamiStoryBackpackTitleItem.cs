@@ -6,16 +6,16 @@ using CSharpScript.Game.Module.HonamiStory;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001E9B RID: 7835
+// Token: 0x0200135D RID: 4957
 public class HonamiStoryBackpackTitleItem : UiPanelBase
 {
-	// Token: 0x0600F094 RID: 61588 RVA: 0x0039BD56 File Offset: 0x00399F56
+	// Token: 0x0600C4B3 RID: 50355 RVA: 0x003A7912 File Offset: 0x003A5B12
 	public HonamiStoryBackpackTitleItem(EHonamiStoryBackpackType backpackType)
 	{
 		this.Backpack = HonamiStoryDefine.Instance.HonamiBackpackTypeMap[backpackType];
 	}
 
-	// Token: 0x0600F095 RID: 61589 RVA: 0x0039BD7C File Offset: 0x00399F7C
+	// Token: 0x0600C4B4 RID: 50356 RVA: 0x003A7938 File Offset: 0x003A5B38
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -31,7 +31,7 @@ public class HonamiStoryBackpackTitleItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F096 RID: 61590 RVA: 0x0039BE08 File Offset: 0x0039A008
+	// Token: 0x0600C4B5 RID: 50357 RVA: 0x003A79C4 File Offset: 0x003A5BC4
 	protected override void OnStart()
 	{
 		string text;
@@ -73,7 +73,7 @@ public class HonamiStoryBackpackTitleItem : UiPanelBase
 		this.Refresh();
 	}
 
-	// Token: 0x0600F097 RID: 61591 RVA: 0x0039BEE0 File Offset: 0x0039A0E0
+	// Token: 0x0600C4B6 RID: 50358 RVA: 0x003A7A9C File Offset: 0x003A5C9C
 	public void Refresh()
 	{
 		HonamiStoryBackpackData backPackData = HonamiStoryModel.Instance.GetBackPackData((int)this.Backpack, false);
@@ -100,17 +100,17 @@ public class HonamiStoryBackpackTitleItem : UiPanelBase
 		text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 	}
 
-	// Token: 0x04006F52 RID: 28498
+	// Token: 0x04007033 RID: 28723
 	protected EHonamiStoryBackpack Backpack = EHonamiStoryBackpack.Inventory;
 
-	// Token: 0x02008463 RID: 33891
+	// Token: 0x020075E8 RID: 30184
 	private enum EItem
 	{
-		// Token: 0x0402B178 RID: 176504
+		// Token: 0x0402649C RID: 156828
 		Sprite,
-		// Token: 0x0402B179 RID: 176505
+		// Token: 0x0402649D RID: 156829
 		TxtName,
-		// Token: 0x0402B17A RID: 176506
+		// Token: 0x0402649E RID: 156830
 		TxtNum
 	}
 }

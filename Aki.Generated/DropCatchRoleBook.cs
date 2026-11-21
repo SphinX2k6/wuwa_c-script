@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000C10 RID: 3088
+	// Token: 0x02000CF2 RID: 3314
 	public struct DropCatchRoleBook : IFlatbufferObject
 	{
-		// Token: 0x17000DE8 RID: 3560
-		// (get) Token: 0x060065EA RID: 26090 RVA: 0x0021C2B5 File Offset: 0x0021A4B5
+		// Token: 0x17000E34 RID: 3636
+		// (get) Token: 0x06006BC9 RID: 27593 RVA: 0x0023B58C File Offset: 0x0023978C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060065EB RID: 26091 RVA: 0x0021C2C2 File Offset: 0x0021A4C2
+		// Token: 0x06006BCA RID: 27594 RVA: 0x0023B599 File Offset: 0x00239799
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060065EC RID: 26092 RVA: 0x0021C2CC File Offset: 0x0021A4CC
+		// Token: 0x06006BCB RID: 27595 RVA: 0x0023B5A0 File Offset: 0x002397A0
 		public static DropCatchRoleBook GetRootAsDropCatchRoleBook(ByteBuffer _bb)
 		{
 			return DropCatchRoleBook.GetRootAsDropCatchRoleBook(_bb, default(DropCatchRoleBook));
 		}
 
-		// Token: 0x060065ED RID: 26093 RVA: 0x0021C2E8 File Offset: 0x0021A4E8
+		// Token: 0x06006BCC RID: 27596 RVA: 0x0023B5BC File Offset: 0x002397BC
 		public static DropCatchRoleBook GetRootAsDropCatchRoleBook(ByteBuffer _bb, DropCatchRoleBook obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060065EE RID: 26094 RVA: 0x0021C305 File Offset: 0x0021A505
+		// Token: 0x06006BCD RID: 27597 RVA: 0x0023B5D9 File Offset: 0x002397D9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060065EF RID: 26095 RVA: 0x0021C314 File Offset: 0x0021A514
+		// Token: 0x06006BCE RID: 27598 RVA: 0x0023B5E8 File Offset: 0x002397E8
 		public DropCatchRoleBook __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000DE9 RID: 3561
-		// (get) Token: 0x060065F0 RID: 26096 RVA: 0x0021C324 File Offset: 0x0021A524
+		// Token: 0x17000E35 RID: 3637
+		// (get) Token: 0x06006BCF RID: 27599 RVA: 0x0023B5F8 File Offset: 0x002397F8
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000DEA RID: 3562
-		// (get) Token: 0x060065F1 RID: 26097 RVA: 0x0021C360 File Offset: 0x0021A560
+		// Token: 0x17000E36 RID: 3638
+		// (get) Token: 0x06006BD0 RID: 27600 RVA: 0x0023B634 File Offset: 0x00239834
 		public int RoleId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004C4D RID: 19533
+		// Token: 0x0400522F RID: 21039
 		private Table __p;
 	}
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Common.Event;
@@ -10,17 +9,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001A30 RID: 6704
+// Token: 0x02000EEF RID: 3823
 [NullableContext(1)]
 [Nullable(0)]
 public class DangoAbyssCommonRewardView : UiViewBase
 {
-	// Token: 0x0600C528 RID: 50472 RVA: 0x002CB814 File Offset: 0x002C9A14
+	// Token: 0x06009938 RID: 39224 RVA: 0x002D6934 File Offset: 0x002D4B34
 	public DangoAbyssCommonRewardView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600C529 RID: 50473 RVA: 0x002CB830 File Offset: 0x002C9A30
+	// Token: 0x06009939 RID: 39225 RVA: 0x002D6950 File Offset: 0x002D4B50
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -49,31 +48,31 @@ public class DangoAbyssCommonRewardView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600C52A RID: 50474 RVA: 0x002CB95A File Offset: 0x002C9B5A
-	public override bool GetLoopAudioEventSwitch()
+	// Token: 0x0600993A RID: 39226 RVA: 0x002D6A7A File Offset: 0x002D4C7A
+	public override bool GetBgmSwitch()
 	{
 		return !DangoAbyssModel.Instance.CheckIfInSmallWorldInstance();
 	}
 
-	// Token: 0x0600C52B RID: 50475 RVA: 0x002CB969 File Offset: 0x002C9B69
+	// Token: 0x0600993B RID: 39227 RVA: 0x002D6A89 File Offset: 0x002D4C89
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnAbyssRewardStateUpdate, new Action(this.OnAbyssRewardStateUpdate));
 	}
 
-	// Token: 0x0600C52C RID: 50476 RVA: 0x002CB987 File Offset: 0x002C9B87
+	// Token: 0x0600993C RID: 39228 RVA: 0x002D6AA7 File Offset: 0x002D4CA7
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnAbyssRewardStateUpdate, new Action(this.OnAbyssRewardStateUpdate));
 	}
 
-	// Token: 0x0600C52D RID: 50477 RVA: 0x002CB9A5 File Offset: 0x002C9BA5
+	// Token: 0x0600993D RID: 39229 RVA: 0x002D6AC5 File Offset: 0x002D4CC5
 	private void OnCloseBtnClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600C52E RID: 50478 RVA: 0x002CB9B0 File Offset: 0x002C9BB0
+	// Token: 0x0600993E RID: 39230 RVA: 0x002D6AD0 File Offset: 0x002D4CD0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DangoAbyssCommonRewardView.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -84,7 +83,7 @@ public class DangoAbyssCommonRewardView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C52F RID: 50479 RVA: 0x002CB9F4 File Offset: 0x002C9BF4
+	// Token: 0x0600993F RID: 39231 RVA: 0x002D6B14 File Offset: 0x002D4D14
 	protected override void OnStart()
 	{
 		this.CurrentData = (this.OpenParam as DangoAbyssRewardViewData);
@@ -100,14 +99,14 @@ public class DangoAbyssCommonRewardView : UiViewBase
 		this.LoopScrollView = new LoopScrollView<DangoAbyssRewardItem, IActivityRewardData>(base.GetLoopScrollViewComponent(3), base.GetItem(5).GetOwner() as AUIBaseActor, new Func<DangoAbyssRewardItem>(this.CreateLoopItem), false);
 	}
 
-	// Token: 0x0600C530 RID: 50480 RVA: 0x002CBA81 File Offset: 0x002C9C81
+	// Token: 0x06009940 RID: 39232 RVA: 0x002D6BA1 File Offset: 0x002D4DA1
 	private void OnAbyssRewardStateUpdate()
 	{
 		this.RefreshRewardLayout();
 		EventSystem.Instance.Emit<int>(EEventName.RefreshActivityTab, this.CurrentData.Data.Id);
 	}
 
-	// Token: 0x0600C531 RID: 50481 RVA: 0x002CBAAC File Offset: 0x002C9CAC
+	// Token: 0x06009941 RID: 39233 RVA: 0x002D6BCC File Offset: 0x002D4DCC
 	private void RefreshRewardLayout()
 	{
 		foreach (TabItem tabItem in this.TabItemList)
@@ -115,10 +114,10 @@ public class DangoAbyssCommonRewardView : UiViewBase
 			tabItem.RefreshRedDot();
 		}
 		IActivityRewardData[] taskActivityRewardDataList = this.CurrentData.Data.GetTaskActivityRewardDataList(2, this.CurrentTabId);
-		this.LoopScrollView.RefreshByData(taskActivityRewardDataList.ToList<IActivityRewardData>(), false, null, true);
+		this.LoopScrollView.RefreshByData(taskActivityRewardDataList, false, null, true);
 	}
 
-	// Token: 0x0600C532 RID: 50482 RVA: 0x002CBB28 File Offset: 0x002C9D28
+	// Token: 0x06009942 RID: 39234 RVA: 0x002D6C44 File Offset: 0x002D4E44
 	private void RefreshTabLayout()
 	{
 		int[] rewardTypeTabList = this.CurrentData.Data.GetRewardTypeTabList(2);
@@ -140,7 +139,7 @@ public class DangoAbyssCommonRewardView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600C533 RID: 50483 RVA: 0x002CBBDB File Offset: 0x002C9DDB
+	// Token: 0x06009943 RID: 39235 RVA: 0x002D6CF7 File Offset: 0x002D4EF7
 	private void OnClickTab(int tabId)
 	{
 		this.CurrentTabId = tabId;
@@ -148,13 +147,13 @@ public class DangoAbyssCommonRewardView : UiViewBase
 		this.RefreshTabLayout();
 	}
 
-	// Token: 0x0600C534 RID: 50484 RVA: 0x002CBBF0 File Offset: 0x002C9DF0
+	// Token: 0x06009944 RID: 39236 RVA: 0x002D6D0C File Offset: 0x002D4F0C
 	private DangoAbyssRewardItem CreateLoopItem()
 	{
 		return new DangoAbyssRewardItem();
 	}
 
-	// Token: 0x0600C535 RID: 50485 RVA: 0x002CBBF7 File Offset: 0x002C9DF7
+	// Token: 0x06009945 RID: 39237 RVA: 0x002D6D13 File Offset: 0x002D4F13
 	protected override void OnBeforeShow()
 	{
 		this.CurrentTabId = ((this.CurrentData.Data.GetRewardTypeTabList(2).Length != 0) ? this.CurrentData.Data.GetRewardTypeTabList(2)[0] : 1);
@@ -162,14 +161,14 @@ public class DangoAbyssCommonRewardView : UiViewBase
 		this.RefreshTabLayout();
 	}
 
-	// Token: 0x04005AE1 RID: 23265
+	// Token: 0x04005BB0 RID: 23472
 	private int CurrentTabId = 1;
 
-	// Token: 0x04005AE2 RID: 23266
+	// Token: 0x04005BB1 RID: 23473
 	[Nullable(2)]
 	private DangoAbyssRewardViewData CurrentData;
 
-	// Token: 0x04005AE3 RID: 23267
+	// Token: 0x04005BB2 RID: 23474
 	[Nullable(new byte[]
 	{
 		2,
@@ -178,37 +177,37 @@ public class DangoAbyssCommonRewardView : UiViewBase
 	})]
 	protected LoopScrollView<DangoAbyssRewardItem, IActivityRewardData> LoopScrollView;
 
-	// Token: 0x04005AE4 RID: 23268
+	// Token: 0x04005BB3 RID: 23475
 	[Nullable(2)]
 	private TabItem TabItem1;
 
-	// Token: 0x04005AE5 RID: 23269
+	// Token: 0x04005BB4 RID: 23476
 	[Nullable(2)]
 	private TabItem TabItem2;
 
-	// Token: 0x04005AE6 RID: 23270
+	// Token: 0x04005BB5 RID: 23477
 	private readonly List<TabItem> TabItemList = new List<TabItem>();
 
-	// Token: 0x02007F77 RID: 32631
+	// Token: 0x02007106 RID: 28934
 	[NullableContext(0)]
 	private class EComponent
 	{
-		// Token: 0x040299C5 RID: 170437
+		// Token: 0x04024D02 RID: 150786
 		public const int BtnClose = 0;
 
-		// Token: 0x040299C6 RID: 170438
+		// Token: 0x04024D03 RID: 150787
 		public const int TabItem1 = 1;
 
-		// Token: 0x040299C7 RID: 170439
+		// Token: 0x04024D04 RID: 150788
 		public const int TabItem2 = 2;
 
-		// Token: 0x040299C8 RID: 170440
+		// Token: 0x04024D05 RID: 150789
 		public const int LoopScroller = 3;
 
-		// Token: 0x040299C9 RID: 170441
+		// Token: 0x04024D06 RID: 150790
 		public const int TabLayout = 4;
 
-		// Token: 0x040299CA RID: 170442
+		// Token: 0x04024D07 RID: 150791
 		public const int ScrollerItem = 5;
 	}
 }

@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Map.MapDefine
 {
-	// Token: 0x02005569 RID: 21865
+	// Token: 0x0200453C RID: 17724
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class OccupationData
 	{
-		// Token: 0x0401D4E6 RID: 120038
+		// Token: 0x04017F6F RID: 98159
 		public string Type;
 
-		// Token: 0x0401D4E7 RID: 120039
+		// Token: 0x04017F70 RID: 98160
 		public int[] LevelPlayIds;
 
-		// Token: 0x0401D4E8 RID: 120040
+		// Token: 0x04017F71 RID: 98161
 		public int[] AssociatedEntities;
 	}
 }

@@ -3,15 +3,15 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006E41 RID: 28225
+	// Token: 0x020075BF RID: 30143
 	public class IRemoveBuffToTriggeredEntityT
 	{
-		// Token: 0x1700D251 RID: 53841
-		// (get) Token: 0x06031E12 RID: 204306 RVA: 0x006C0029 File Offset: 0x006BE229
-		// (set) Token: 0x06031E13 RID: 204307 RVA: 0x006C0031 File Offset: 0x006BE231
+		// Token: 0x1700DDA0 RID: 56736
+		// (get) Token: 0x06034E28 RID: 216616 RVA: 0x0071B9B1 File Offset: 0x00719BB1
+		// (set) Token: 0x06034E29 RID: 216617 RVA: 0x0071B9B9 File Offset: 0x00719BB9
 		public List<long> BuffIds { get; set; }
 
-		// Token: 0x06031E14 RID: 204308 RVA: 0x006C003A File Offset: 0x006BE23A
+		// Token: 0x06034E2A RID: 216618 RVA: 0x0071B9C2 File Offset: 0x00719BC2
 		public IRemoveBuffToTriggeredEntityT()
 		{
 			this.BuffIds = null;

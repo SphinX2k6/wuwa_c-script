@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003ECD RID: 16077
+	// Token: 0x0200430B RID: 17163
 	public class IKillSingleMonsterT
 	{
-		// Token: 0x17006FA2 RID: 28578
-		// (get) Token: 0x06016BD7 RID: 93143 RVA: 0x00348830 File Offset: 0x00346A30
-		// (set) Token: 0x06016BD8 RID: 93144 RVA: 0x00348838 File Offset: 0x00346A38
+		// Token: 0x17007591 RID: 30097
+		// (get) Token: 0x0601822E RID: 98862 RVA: 0x003719FC File Offset: 0x0036FBFC
+		// (set) Token: 0x0601822F RID: 98863 RVA: 0x00371A04 File Offset: 0x0036FC04
 		public int EntityId { get; set; }
 
-		// Token: 0x17006FA3 RID: 28579
-		// (get) Token: 0x06016BD9 RID: 93145 RVA: 0x00348841 File Offset: 0x00346A41
-		// (set) Token: 0x06016BDA RID: 93146 RVA: 0x00348849 File Offset: 0x00346A49
+		// Token: 0x17007592 RID: 30098
+		// (get) Token: 0x06018230 RID: 98864 RVA: 0x00371A0D File Offset: 0x0036FC0D
+		// (set) Token: 0x06018231 RID: 98865 RVA: 0x00371A15 File Offset: 0x0036FC15
 		public int AddTime { get; set; }
 
-		// Token: 0x06016BDB RID: 93147 RVA: 0x00348852 File Offset: 0x00346A52
+		// Token: 0x06018232 RID: 98866 RVA: 0x00371A1E File Offset: 0x0036FC1E
 		public IKillSingleMonsterT()
 		{
 			this.EntityId = 0;

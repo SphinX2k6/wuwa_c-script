@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006835 RID: 26677
+	// Token: 0x02006EBB RID: 28347
 	public class IFlyingFeatherScanEffectT
 	{
-		// Token: 0x1700C62C RID: 50732
-		// (get) Token: 0x0602E82F RID: 190511 RVA: 0x00658C3C File Offset: 0x00656E3C
-		// (set) Token: 0x0602E830 RID: 190512 RVA: 0x00658C44 File Offset: 0x00656E44
+		// Token: 0x1700CFF0 RID: 53232
+		// (get) Token: 0x060310B7 RID: 200887 RVA: 0x006A6B7C File Offset: 0x006A4D7C
+		// (set) Token: 0x060310B8 RID: 200888 RVA: 0x006A6B84 File Offset: 0x006A4D84
 		public ESpecificScanType Type { get; set; }
 
-		// Token: 0x1700C62D RID: 50733
-		// (get) Token: 0x0602E831 RID: 190513 RVA: 0x00658C4D File Offset: 0x00656E4D
-		// (set) Token: 0x0602E832 RID: 190514 RVA: 0x00658C55 File Offset: 0x00656E55
+		// Token: 0x1700CFF1 RID: 53233
+		// (get) Token: 0x060310B9 RID: 200889 RVA: 0x006A6B8D File Offset: 0x006A4D8D
+		// (set) Token: 0x060310BA RID: 200890 RVA: 0x006A6B95 File Offset: 0x006A4D95
 		public int TriggerPosEntityId { get; set; }
 
-		// Token: 0x0602E833 RID: 190515 RVA: 0x00658C5E File Offset: 0x00656E5E
+		// Token: 0x060310BB RID: 200891 RVA: 0x006A6B9E File Offset: 0x006A4D9E
 		public IFlyingFeatherScanEffectT()
 		{
 			this.Type = ESpecificScanType.None;

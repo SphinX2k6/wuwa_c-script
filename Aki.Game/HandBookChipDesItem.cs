@@ -5,12 +5,12 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001DD7 RID: 7639
+// Token: 0x02001299 RID: 4761
 [NullableContext(2)]
 [Nullable(0)]
 public class HandBookChipDesItem : UiPanelBase
 {
-	// Token: 0x0600E87F RID: 59519 RVA: 0x003702B0 File Offset: 0x0036E4B0
+	// Token: 0x0600BC9E RID: 48286 RVA: 0x0037BF9C File Offset: 0x0037A19C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,13 +28,13 @@ public class HandBookChipDesItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600E880 RID: 59520 RVA: 0x0037036F File Offset: 0x0036E56F
+	// Token: 0x0600BC9F RID: 48287 RVA: 0x0037C05B File Offset: 0x0037A25B
 	protected override void OnStart()
 	{
 		this.Toggle = base.GetExtendToggle(0);
 	}
 
-	// Token: 0x0600E881 RID: 59521 RVA: 0x0037037E File Offset: 0x0036E57E
+	// Token: 0x0600BCA0 RID: 48288 RVA: 0x0037C06A File Offset: 0x0037A26A
 	private void OnToggleClicked(EToggleState state)
 	{
 		if (this.OnChildToggleCallback != null && state == EToggleState.ETT_Checked)
@@ -43,7 +43,7 @@ public class HandBookChipDesItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600E882 RID: 59522 RVA: 0x003703A8 File Offset: 0x0036E5A8
+	// Token: 0x0600BCA1 RID: 48289 RVA: 0x0037C094 File Offset: 0x0037A294
 	public void Refresh(int data, bool isSelect)
 	{
 		ChipHandBook? chipHandBookConfig = HandBookConfig.Instance.GetChipHandBookConfig(data);
@@ -79,14 +79,14 @@ public class HandBookChipDesItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600E883 RID: 59523 RVA: 0x003704B7 File Offset: 0x0036E6B7
+	// Token: 0x0600BCA2 RID: 48290 RVA: 0x0037C1A3 File Offset: 0x0037A3A3
 	[NullableContext(1)]
 	public void BindChildToggleCallback(TChildChipToggleFunction toggleFunction)
 	{
 		this.OnChildToggleCallback = toggleFunction;
 	}
 
-	// Token: 0x0600E884 RID: 59524 RVA: 0x003704C0 File Offset: 0x0036E6C0
+	// Token: 0x0600BCA3 RID: 48291 RVA: 0x0037C1AC File Offset: 0x0037A3AC
 	public void RefreshNewState()
 	{
 		if (this.ChipConfig == null)
@@ -98,15 +98,15 @@ public class HandBookChipDesItem : UiPanelBase
 		base.GetItem(4).SetUIActive(uiactive);
 	}
 
-	// Token: 0x04006B8F RID: 27535
+	// Token: 0x04006C70 RID: 27760
 	private TChildChipToggleFunction OnChildToggleCallback;
 
-	// Token: 0x04006B90 RID: 27536
+	// Token: 0x04006C71 RID: 27761
 	private ChipHandBook? ChipConfig;
 
-	// Token: 0x04006B91 RID: 27537
+	// Token: 0x04006C72 RID: 27762
 	private bool IsLock;
 
-	// Token: 0x04006B92 RID: 27538
+	// Token: 0x04006C73 RID: 27763
 	private UUIExtendToggle Toggle;
 }

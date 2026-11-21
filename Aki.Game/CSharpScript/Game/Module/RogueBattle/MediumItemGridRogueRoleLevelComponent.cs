@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E79 RID: 20089
+	// Token: 0x02003E42 RID: 15938
 	public class MediumItemGridRogueRoleLevelComponent : MediumItemGridComponent
 	{
-		// Token: 0x06033B2A RID: 211754 RVA: 0x00C1B84C File Offset: 0x00C19A4C
+		// Token: 0x06028995 RID: 166293 RVA: 0x00B64D70 File Offset: 0x00B62F70
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -22,14 +22,14 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033B2B RID: 211755 RVA: 0x00C1B8BC File Offset: 0x00C19ABC
+		// Token: 0x06028996 RID: 166294 RVA: 0x00B64DE0 File Offset: 0x00B62FE0
 		[NullableContext(1)]
 		protected override string GetResourceId()
 		{
 			return "UiItem_ItemRoleInfo";
 		}
 
-		// Token: 0x06033B2C RID: 211756 RVA: 0x00C1B8C4 File Offset: 0x00C19AC4
+		// Token: 0x06028997 RID: 166295 RVA: 0x00B64DE8 File Offset: 0x00B62FE8
 		[NullableContext(2)]
 		protected override void OnRefresh(object data = null)
 		{

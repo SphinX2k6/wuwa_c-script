@@ -4,16 +4,16 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001064 RID: 4196
+// Token: 0x02000518 RID: 1304
 public class GuessJokerFloatTipsView : UiViewBase
 {
-	// Token: 0x06006BD9 RID: 27609 RVA: 0x0015B62C File Offset: 0x0015982C
+	// Token: 0x06003F6E RID: 16238 RVA: 0x00163F74 File Offset: 0x00162174
 	[NullableContext(1)]
 	public GuessJokerFloatTipsView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06006BDA RID: 27610 RVA: 0x0015B635 File Offset: 0x00159835
+	// Token: 0x06003F6F RID: 16239 RVA: 0x00163F7D File Offset: 0x0016217D
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -22,7 +22,7 @@ public class GuessJokerFloatTipsView : UiViewBase
 		};
 	}
 
-	// Token: 0x06006BDB RID: 27611 RVA: 0x0015B658 File Offset: 0x00159858
+	// Token: 0x06003F70 RID: 16240 RVA: 0x00163FA0 File Offset: 0x001621A0
 	protected override void OnStart()
 	{
 		this.Data = (this.OpenParam as IGuessJokerTipsData);
@@ -52,7 +52,7 @@ public class GuessJokerFloatTipsView : UiViewBase
 		}, false);
 	}
 
-	// Token: 0x040031E7 RID: 12775
+	// Token: 0x04003280 RID: 12928
 	[Nullable(2)]
 	protected IGuessJokerTipsData Data;
 }

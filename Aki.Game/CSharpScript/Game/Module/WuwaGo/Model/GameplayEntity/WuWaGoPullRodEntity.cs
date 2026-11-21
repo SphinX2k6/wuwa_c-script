@@ -1,23 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Component;
 using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WuwaGo.Model.GameplayEntity
 {
-	// Token: 0x02004750 RID: 18256
+	// Token: 0x02003681 RID: 13953
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WuWaGoPullRodEntity : WuWaGoGameplayEntityBase
 	{
-		// Token: 0x0602FB5B RID: 195419 RVA: 0x00B0DA11 File Offset: 0x00B0BC11
+		// Token: 0x06024325 RID: 148261 RVA: 0x00A3D9F1 File Offset: 0x00A3BBF1
 		public WuWaGoPullRodEntity(int pbDataId, Vector coordinate, Rotator rotator, IWuWaGoPullRod config) : base(EWuWaGoEntityType.PullRod, pbDataId, coordinate, rotator)
 		{
 		}
 
-		// Token: 0x0602FB5C RID: 195420 RVA: 0x00B0DA2C File Offset: 0x00B0BC2C
+		// Token: 0x06024326 RID: 148262 RVA: 0x00A3DA0C File Offset: 0x00A3BC0C
 		public IPullRodInteractResult Interact()
 		{
 			EGameplayEntityState state = base.State;
@@ -31,43 +30,48 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.GameplayEntity
 			};
 		}
 
-		// Token: 0x0602FB5D RID: 195421 RVA: 0x00B0DA76 File Offset: 0x00B0BC76
+		// Token: 0x06024327 RID: 148263 RVA: 0x00A3DA56 File Offset: 0x00A3BC56
 		[NullableContext(2)]
 		public IWuWaGoInteractStateAction GetActionByState()
 		{
 			return this.GetActionByState(base.State);
 		}
 
-		// Token: 0x0602FB5E RID: 195422 RVA: 0x00B0DA84 File Offset: 0x00B0BC84
+		// Token: 0x06024328 RID: 148264 RVA: 0x00A3DA64 File Offset: 0x00A3BC64
 		[NullableContext(2)]
 		public IWuWaGoInteractStateAction GetActionByState(EGameplayEntityState state)
 		{
-			return this.InteractConfig.FirstOrDefault(delegate(IWuWaGoInteractStateAction config)
+			for (int i = 0; i < this.InteractConfig.Count; i++)
 			{
+				IWuWaGoInteractStateAction wuWaGoInteractStateAction = this.InteractConfig[i];
 				EGameplayEntityState egameplayEntityState;
-				return EGameplayEntityStateExtensions.TryFromString(config.EntityState, out egameplayEntityState) && egameplayEntityState == state;
-			});
+				if (EGameplayEntityStateExtensions.TryFromString(wuWaGoInteractStateAction.EntityState, out egameplayEntityState) && egameplayEntityState == state)
+				{
+					return wuWaGoInteractStateAction;
+				}
+			}
+			return null;
 		}
 
-		// Token: 0x0602FB5F RID: 195423 RVA: 0x00B0DAB5 File Offset: 0x00B0BCB5
+		// Token: 0x06024329 RID: 148265 RVA: 0x00A3DAAA File Offset: 0x00A3BCAA
 		public override void RestoreInitialStateForGameOver()
 		{
 			base.RestoreInitialStateWithStateChanged();
 		}
 
-		// Token: 0x0602FB60 RID: 195424 RVA: 0x00B0DABD File Offset: 0x00B0BCBD
+		// Token: 0x0602432A RID: 148266 RVA: 0x00A3DAB2 File Offset: 0x00A3BCB2
 		public override IRollbackCapture CaptureRollback()
 		{
 			return new PullRodRollbackCapture(this);
 		}
 
-		// Token: 0x0602FB61 RID: 195425 RVA: 0x00B0DAC5 File Offset: 0x00B0BCC5
+		// Token: 0x0602432B RID: 148267 RVA: 0x00A3DABA File Offset: 0x00A3BCBA
 		public void SyncPresentationForRollback()
 		{
 			base.SwitchSceneItemStateByGameplayEntityState(base.State, false, true);
 		}
 
-		// Token: 0x0602FB62 RID: 195426 RVA: 0x00B0DAD8 File Offset: 0x00B0BCD8
+		// Token: 0x0602432C RID: 148268 RVA: 0x00A3DACC File Offset: 0x00A3BCCC
 		[NullableContext(2)]
 		public Vector GetFacingTargetWorldPosition()
 		{
@@ -93,13 +97,13 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.GameplayEntity
 			return Vector.Create(aactor2.D_K2_GetActorLocation());
 		}
 
-		// Token: 0x0602FB63 RID: 195427 RVA: 0x00B0DB84 File Offset: 0x00B0BD84
+		// Token: 0x0602432D RID: 148269 RVA: 0x00A3DB78 File Offset: 0x00A3BD78
 		protected override void OnStateChanged(EGameplayEntityState newState)
 		{
 			base.SwitchSceneItemStateByGameplayEntityState(newState, true, false);
 		}
 
-		// Token: 0x04019C07 RID: 105479
+		// Token: 0x040142B7 RID: 82615
 		public readonly IReadOnlyList<IWuWaGoInteractStateAction> InteractConfig = config.InteractConfig;
 	}
 }

@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x02004507 RID: 17671
+	// Token: 0x0200496F RID: 18799
 	public class ILevelPlayMarkT
 	{
-		// Token: 0x17007D49 RID: 32073
-		// (get) Token: 0x0601A8C1 RID: 108737 RVA: 0x003CA857 File Offset: 0x003C8A57
-		// (set) Token: 0x0601A8C2 RID: 108738 RVA: 0x003CA85F File Offset: 0x003C8A5F
+		// Token: 0x1700838A RID: 33674
+		// (get) Token: 0x0601C096 RID: 114838 RVA: 0x003F6AF3 File Offset: 0x003F4CF3
+		// (set) Token: 0x0601C097 RID: 114839 RVA: 0x003F6AFB File Offset: 0x003F4CFB
 		public int MarkId { get; set; }
 
-		// Token: 0x17007D4A RID: 32074
-		// (get) Token: 0x0601A8C3 RID: 108739 RVA: 0x003CA868 File Offset: 0x003C8A68
-		// (set) Token: 0x0601A8C4 RID: 108740 RVA: 0x003CA870 File Offset: 0x003C8A70
+		// Token: 0x1700838B RID: 33675
+		// (get) Token: 0x0601C098 RID: 114840 RVA: 0x003F6B04 File Offset: 0x003F4D04
+		// (set) Token: 0x0601C099 RID: 114841 RVA: 0x003F6B0C File Offset: 0x003F4D0C
 		public string MapBgPath { get; set; }
 
-		// Token: 0x0601A8C5 RID: 108741 RVA: 0x003CA879 File Offset: 0x003C8A79
+		// Token: 0x0601C09A RID: 114842 RVA: 0x003F6B15 File Offset: 0x003F4D15
 		public ILevelPlayMarkT()
 		{
 			this.MarkId = 0;

@@ -4,10 +4,10 @@ using UnrealEngine.Service;
 
 namespace Aki.Common.ConsoleManagerGenerate
 {
-	// Token: 0x0200001B RID: 27
+	// Token: 0x0200001C RID: 28
 	public static class ConsoleRegister
 	{
-		// Token: 0x060000C8 RID: 200 RVA: 0x0000B1D0 File Offset: 0x000093D0
+		// Token: 0x06000135 RID: 309 RVA: 0x0000E99C File Offset: 0x0000CB9C
 		[ModuleInitializer]
 		public static void RegisterAll()
 		{

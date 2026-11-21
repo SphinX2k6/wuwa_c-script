@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029AE RID: 10670
+	// Token: 0x02002C9B RID: 11419
 	public class ExecRiskHarvestEffect : ActionParams
 	{
-		// Token: 0x0600EC11 RID: 60433 RVA: 0x00227E33 File Offset: 0x00226033
-		[NullableContext(1)]
+		// Token: 0x0600FAA8 RID: 64168 RVA: 0x002457B8 File Offset: 0x002439B8
 		public static ExecRiskHarvestEffect Create(IExecRiskHarvestEffect? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004A77 RID: 19063
-		// (get) Token: 0x0600EC12 RID: 60434 RVA: 0x00227E52 File Offset: 0x00226052
+		// Token: 0x17004E20 RID: 20000
+		// (get) Token: 0x0600FAA9 RID: 64169 RVA: 0x002457D7 File Offset: 0x002439D7
 		public virtual int Id
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008200 RID: 33280
+		// Token: 0x040088F1 RID: 35057
 		private IExecRiskHarvestEffect Instance;
 	}
 }

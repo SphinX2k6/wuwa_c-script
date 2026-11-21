@@ -7,14 +7,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter.StateMachine
 {
-	// Token: 0x0200438E RID: 17294
+	// Token: 0x020033AE RID: 13230
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/StateMachine/BP_SM_TaskBeHitMontage.BP_SM_TaskBeHitMontage_C")]
 	[UnrealStructLayout(152, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 152)]
 	public class BP_SM_TaskBeHitMontage_C : UASMTask, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602CCBC RID: 183484 RVA: 0x00A28D99 File Offset: 0x00A26F99
+		// Token: 0x060218D2 RID: 137426 RVA: 0x00963AF4 File Offset: 0x00961CF4
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_SM_TaskBeHitMontage_C._ClassPtr == IntPtr.Zero)
@@ -24,34 +24,34 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter.StateMachine
 			return BP_SM_TaskBeHitMontage_C._ClassPtr;
 		}
 
-		// Token: 0x0602CCBD RID: 183485 RVA: 0x00A28DC0 File Offset: 0x00A26FC0
+		// Token: 0x060218D3 RID: 137427 RVA: 0x00963B18 File Offset: 0x00961D18
 		public BP_SM_TaskBeHitMontage_C() : this(BuiltinUtils.AllocNativeUObject(BP_SM_TaskBeHitMontage_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602CCBE RID: 183486 RVA: 0x00A28DE8 File Offset: 0x00A26FE8
+		// Token: 0x060218D4 RID: 137428 RVA: 0x00963B40 File Offset: 0x00961D40
 		public BP_SM_TaskBeHitMontage_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_SM_TaskBeHitMontage_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170070D9 RID: 28889
-		// (get) Token: 0x0602CCBF RID: 183487 RVA: 0x00A28E1B File Offset: 0x00A2701B
-		// (set) Token: 0x0602CCC0 RID: 183488 RVA: 0x00A28E2F File Offset: 0x00A2702F
+		// Token: 0x170044DA RID: 17626
+		// (get) Token: 0x060218D5 RID: 137429 RVA: 0x00963B73 File Offset: 0x00961D73
+		// (set) Token: 0x060218D6 RID: 137430 RVA: 0x00963B87 File Offset: 0x00961D87
 		public unsafe string DefaultAnim
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)BP_SM_TaskBeHitMontage_C.__PropertyOffset_0)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)BP_SM_TaskBeHitMontage_C.__PropertyOffset_DefaultAnim)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)BP_SM_TaskBeHitMontage_C.__PropertyOffset_0)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)BP_SM_TaskBeHitMontage_C.__PropertyOffset_DefaultAnim)), value);
 			}
 		}
 
-		// Token: 0x170070DA RID: 28890
-		// (get) Token: 0x0602CCC1 RID: 183489 RVA: 0x00A28E44 File Offset: 0x00A27044
-		// (set) Token: 0x0602CCC2 RID: 183490 RVA: 0x00A28E7D File Offset: 0x00A2707D
+		// Token: 0x170044DB RID: 17627
+		// (get) Token: 0x060218D7 RID: 137431 RVA: 0x00963B9C File Offset: 0x00961D9C
+		// (set) Token: 0x060218D8 RID: 137432 RVA: 0x00963BD5 File Offset: 0x00961DD5
 		[Nullable(new byte[]
 		{
 			1,
@@ -72,7 +72,7 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter.StateMachine
 				TMap<TEnumAsByte<EHitAnim>, string> result;
 				if ((result = this._HitAnim) == null)
 				{
-					result = (this._HitAnim = new TMap<TEnumAsByte<EHitAnim>, string>(base.NativePtr + (IntPtr)BP_SM_TaskBeHitMontage_C.__PropertyOffset_1, this));
+					result = (this._HitAnim = new TMap<TEnumAsByte<EHitAnim>, string>(base.NativePtr + (IntPtr)BP_SM_TaskBeHitMontage_C.__PropertyOffset_HitAnim, this));
 				}
 				return result;
 			}
@@ -88,57 +88,57 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter.StateMachine
 			}
 		}
 
-		// Token: 0x170070DB RID: 28891
-		// (get) Token: 0x0602CCC3 RID: 183491 RVA: 0x00A28E8B File Offset: 0x00A2708B
-		// (set) Token: 0x0602CCC4 RID: 183492 RVA: 0x00A28E9B File Offset: 0x00A2709B
+		// Token: 0x170044DC RID: 17628
+		// (get) Token: 0x060218D9 RID: 137433 RVA: 0x00963BE3 File Offset: 0x00961DE3
+		// (set) Token: 0x060218DA RID: 137434 RVA: 0x00963BF3 File Offset: 0x00961DF3
 		public unsafe bool 允许打断
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SM_TaskBeHitMontage_C.__PropertyOffset_2) != 0;
+				return *(base.NativePtr + (IntPtr)BP_SM_TaskBeHitMontage_C.__PropertyOffset_允许打断) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SM_TaskBeHitMontage_C.__PropertyOffset_2) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_SM_TaskBeHitMontage_C.__PropertyOffset_允许打断) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170070DC RID: 28892
-		// (get) Token: 0x0602CCC5 RID: 183493 RVA: 0x00A28EAC File Offset: 0x00A270AC
-		// (set) Token: 0x0602CCC6 RID: 183494 RVA: 0x00A28EBC File Offset: 0x00A270BC
+		// Token: 0x170044DD RID: 17629
+		// (get) Token: 0x060218DB RID: 137435 RVA: 0x00963C04 File Offset: 0x00961E04
+		// (set) Token: 0x060218DC RID: 137436 RVA: 0x00963C14 File Offset: 0x00961E14
 		public unsafe int BlendInTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SM_TaskBeHitMontage_C.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)BP_SM_TaskBeHitMontage_C.__PropertyOffset_BlendInTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SM_TaskBeHitMontage_C.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)BP_SM_TaskBeHitMontage_C.__PropertyOffset_BlendInTime) = value;
 			}
 		}
 
-		// Token: 0x0602CCC7 RID: 183495 RVA: 0x00A28ECD File Offset: 0x00A270CD
+		// Token: 0x060218DD RID: 137437 RVA: 0x00963C25 File Offset: 0x00961E25
 		protected BP_SM_TaskBeHitMontage_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04017A18 RID: 96792
+		// Token: 0x04012593 RID: 75155
 		public new const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/StateMachine/BP_SM_TaskBeHitMontage.BP_SM_TaskBeHitMontage_C";
 
-		// Token: 0x04017A19 RID: 96793
+		// Token: 0x04012594 RID: 75156
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04017A1A RID: 96794
+		// Token: 0x04012595 RID: 75157
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04017A1B RID: 96795
-		internal static int __PropertyOffset_0;
+		// Token: 0x04012596 RID: 75158
+		internal static int __PropertyOffset_DefaultAnim;
 
-		// Token: 0x04017A1C RID: 96796
-		internal static int __PropertyOffset_1;
+		// Token: 0x04012597 RID: 75159
+		internal static int __PropertyOffset_HitAnim;
 
-		// Token: 0x04017A1D RID: 96797
+		// Token: 0x04012598 RID: 75160
 		[Nullable(new byte[]
 		{
 			2,
@@ -147,10 +147,10 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter.StateMachine
 		})]
 		private TMap<TEnumAsByte<EHitAnim>, string> _HitAnim;
 
-		// Token: 0x04017A1E RID: 96798
-		internal static int __PropertyOffset_2;
+		// Token: 0x04012599 RID: 75161
+		internal static int __PropertyOffset_允许打断;
 
-		// Token: 0x04017A1F RID: 96799
-		internal static int __PropertyOffset_3;
+		// Token: 0x0401259A RID: 75162
+		internal static int __PropertyOffset_BlendInTime;
 	}
 }

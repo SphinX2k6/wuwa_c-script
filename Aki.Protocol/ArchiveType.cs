@@ -3,22 +3,22 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020015E9 RID: 5609
+	// Token: 0x0200165B RID: 5723
 	public enum ArchiveType
 	{
-		// Token: 0x0400BDE4 RID: 48612
+		// Token: 0x0400C2D8 RID: 49880
 		[OriginalName("NoneArchive")]
 		NoneArchive,
-		// Token: 0x0400BDE5 RID: 48613
+		// Token: 0x0400C2D9 RID: 49881
 		[OriginalName("NormalArchive")]
 		NormalArchive,
-		// Token: 0x0400BDE6 RID: 48614
+		// Token: 0x0400C2DA RID: 49882
 		[OriginalName("OverdueVersion")]
 		OverdueVersion,
-		// Token: 0x0400BDE7 RID: 48615
+		// Token: 0x0400C2DB RID: 49883
 		[OriginalName("OverdueTime")]
 		OverdueTime,
-		// Token: 0x0400BDE8 RID: 48616
+		// Token: 0x0400C2DC RID: 49884
 		[OriginalName("OverdueChangeSex")]
 		OverdueChangeSex
 	}

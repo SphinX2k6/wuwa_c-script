@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007526 RID: 29990
+	// Token: 0x02007D1C RID: 32028
 	public struct IVehicleNewSplineStopTarget : IFlatbufferObject
 	{
-		// Token: 0x1700E395 RID: 58261
-		// (get) Token: 0x060368EC RID: 223468 RVA: 0x00769A28 File Offset: 0x00767C28
+		// Token: 0x1700EFBF RID: 61375
+		// (get) Token: 0x06039D02 RID: 236802 RVA: 0x007CCCD0 File Offset: 0x007CAED0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060368ED RID: 223469 RVA: 0x00769A35 File Offset: 0x00767C35
+		// Token: 0x06039D03 RID: 236803 RVA: 0x007CCCDD File Offset: 0x007CAEDD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060368EE RID: 223470 RVA: 0x00769A3C File Offset: 0x00767C3C
+		// Token: 0x06039D04 RID: 236804 RVA: 0x007CCCE4 File Offset: 0x007CAEE4
 		public static IVehicleNewSplineStopTarget GetRootAsIVehicleNewSplineStopTarget(ByteBuffer _bb)
 		{
 			return IVehicleNewSplineStopTarget.GetRootAsIVehicleNewSplineStopTarget(_bb, default(IVehicleNewSplineStopTarget));
 		}
 
-		// Token: 0x060368EF RID: 223471 RVA: 0x00769A58 File Offset: 0x00767C58
+		// Token: 0x06039D05 RID: 236805 RVA: 0x007CCD00 File Offset: 0x007CAF00
 		public static IVehicleNewSplineStopTarget GetRootAsIVehicleNewSplineStopTarget(ByteBuffer _bb, IVehicleNewSplineStopTarget obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060368F0 RID: 223472 RVA: 0x00769A75 File Offset: 0x00767C75
+		// Token: 0x06039D06 RID: 236806 RVA: 0x007CCD1D File Offset: 0x007CAF1D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060368F1 RID: 223473 RVA: 0x00769A84 File Offset: 0x00767C84
+		// Token: 0x06039D07 RID: 236807 RVA: 0x007CCD2C File Offset: 0x007CAF2C
 		public IVehicleNewSplineStopTarget __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E396 RID: 58262
-		// (get) Token: 0x060368F2 RID: 223474 RVA: 0x00769A94 File Offset: 0x00767C94
+		// Token: 0x1700EFC0 RID: 61376
+		// (get) Token: 0x06039D08 RID: 236808 RVA: 0x007CCD3C File Offset: 0x007CAF3C
 		public ENewSplineMoveTargetType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E397 RID: 58263
-		// (get) Token: 0x060368F3 RID: 223475 RVA: 0x00769AD0 File Offset: 0x00767CD0
+		// Token: 0x1700EFC1 RID: 61377
+		// (get) Token: 0x06039D09 RID: 236809 RVA: 0x007CCD78 File Offset: 0x007CAF78
 		public TTargetVehicle TargetVehicleType
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060368F4 RID: 223476 RVA: 0x00769B0C File Offset: 0x00767D0C
+		// Token: 0x06039D0A RID: 236810 RVA: 0x007CCDB4 File Offset: 0x007CAFB4
 		public TTable? TargetVehicle<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -88,49 +88,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x060368F5 RID: 223477 RVA: 0x00769B50 File Offset: 0x00767D50
+		// Token: 0x06039D0B RID: 236811 RVA: 0x007CCDF8 File Offset: 0x007CAFF8
 		public IAppointedVehicle TargetVehicleAsIAppointedVehicle()
 		{
 			return this.TargetVehicle<IAppointedVehicle>().Value;
 		}
 
-		// Token: 0x060368F6 RID: 223478 RVA: 0x00769B6C File Offset: 0x00767D6C
+		// Token: 0x06039D0C RID: 236812 RVA: 0x007CCE14 File Offset: 0x007CB014
 		public ICurrentVehicle TargetVehicleAsICurrentVehicle()
 		{
 			return this.TargetVehicle<ICurrentVehicle>().Value;
 		}
 
-		// Token: 0x060368F7 RID: 223479 RVA: 0x00769B88 File Offset: 0x00767D88
+		// Token: 0x06039D0D RID: 236813 RVA: 0x007CCE30 File Offset: 0x007CB030
 		public IFishingBoatVehicle TargetVehicleAsIFishingBoatVehicle()
 		{
 			return this.TargetVehicle<IFishingBoatVehicle>().Value;
 		}
 
-		// Token: 0x060368F8 RID: 223480 RVA: 0x00769BA4 File Offset: 0x00767DA4
+		// Token: 0x06039D0E RID: 236814 RVA: 0x007CCE4C File Offset: 0x007CB04C
 		public ISelfVehicle TargetVehicleAsISelfVehicle()
 		{
 			return this.TargetVehicle<ISelfVehicle>().Value;
 		}
 
-		// Token: 0x060368F9 RID: 223481 RVA: 0x00769BC0 File Offset: 0x00767DC0
+		// Token: 0x06039D0F RID: 236815 RVA: 0x007CCE68 File Offset: 0x007CB068
 		public ITriggeredVehicle TargetVehicleAsITriggeredVehicle()
 		{
 			return this.TargetVehicle<ITriggeredVehicle>().Value;
 		}
 
-		// Token: 0x060368FA RID: 223482 RVA: 0x00769BDC File Offset: 0x00767DDC
+		// Token: 0x06039D10 RID: 236816 RVA: 0x007CCE84 File Offset: 0x007CB084
 		public IVehiclePlayerMotor TargetVehicleAsIVehiclePlayerMotor()
 		{
 			return this.TargetVehicle<IVehiclePlayerMotor>().Value;
 		}
 
-		// Token: 0x060368FB RID: 223483 RVA: 0x00769BF8 File Offset: 0x00767DF8
+		// Token: 0x06039D11 RID: 236817 RVA: 0x007CCEA0 File Offset: 0x007CB0A0
 		public IVehicleTeam TargetVehicleAsIVehicleTeam()
 		{
 			return this.TargetVehicle<IVehicleTeam>().Value;
 		}
 
-		// Token: 0x060368FC RID: 223484 RVA: 0x00769C13 File Offset: 0x00767E13
+		// Token: 0x06039D12 RID: 236818 RVA: 0x007CCEBB File Offset: 0x007CB0BB
 		public static Offset<IVehicleNewSplineStopTarget> CreateIVehicleNewSplineStopTarget(FlatBufferBuilder builder, ENewSplineMoveTargetType Type = ENewSplineMoveTargetType.Player, TTargetVehicle TargetVehicle_type = TTargetVehicle.NONE, int TargetVehicleOffset = 0)
 		{
 			builder.StartTable(3);
@@ -140,37 +140,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IVehicleNewSplineStopTarget.EndIVehicleNewSplineStopTarget(builder);
 		}
 
-		// Token: 0x060368FD RID: 223485 RVA: 0x00769C37 File Offset: 0x00767E37
+		// Token: 0x06039D13 RID: 236819 RVA: 0x007CCEDF File Offset: 0x007CB0DF
 		public static void StartIVehicleNewSplineStopTarget(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x060368FE RID: 223486 RVA: 0x00769C40 File Offset: 0x00767E40
+		// Token: 0x06039D14 RID: 236820 RVA: 0x007CCEE8 File Offset: 0x007CB0E8
 		public static void AddType(FlatBufferBuilder builder, ENewSplineMoveTargetType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060368FF RID: 223487 RVA: 0x00769C4B File Offset: 0x00767E4B
+		// Token: 0x06039D15 RID: 236821 RVA: 0x007CCEF3 File Offset: 0x007CB0F3
 		public static void AddTargetVehicleType(FlatBufferBuilder builder, TTargetVehicle targetVehicleType)
 		{
 			builder.AddByte(1, (byte)targetVehicleType, 0);
 		}
 
-		// Token: 0x06036900 RID: 223488 RVA: 0x00769C56 File Offset: 0x00767E56
+		// Token: 0x06039D16 RID: 236822 RVA: 0x007CCEFE File Offset: 0x007CB0FE
 		public static void AddTargetVehicle(FlatBufferBuilder builder, int targetVehicleOffset)
 		{
 			builder.AddOffset(2, targetVehicleOffset, 0);
 		}
 
-		// Token: 0x06036901 RID: 223489 RVA: 0x00769C61 File Offset: 0x00767E61
+		// Token: 0x06039D17 RID: 236823 RVA: 0x007CCF09 File Offset: 0x007CB109
 		public static Offset<IVehicleNewSplineStopTarget> EndIVehicleNewSplineStopTarget(FlatBufferBuilder builder)
 		{
 			return new Offset<IVehicleNewSplineStopTarget>(builder.EndTable());
 		}
 
-		// Token: 0x06036902 RID: 223490 RVA: 0x00769C70 File Offset: 0x00767E70
+		// Token: 0x06039D18 RID: 236824 RVA: 0x007CCF18 File Offset: 0x007CB118
 		public IVehicleNewSplineStopTargetT UnPack()
 		{
 			IVehicleNewSplineStopTargetT vehicleNewSplineStopTargetT = new IVehicleNewSplineStopTargetT();
@@ -178,7 +178,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return vehicleNewSplineStopTargetT;
 		}
 
-		// Token: 0x06036903 RID: 223491 RVA: 0x00769C8C File Offset: 0x00767E8C
+		// Token: 0x06039D19 RID: 236825 RVA: 0x007CCF34 File Offset: 0x007CB134
 		public void UnPackTo(IVehicleNewSplineStopTargetT _o)
 		{
 			_o.Type = this.Type;
@@ -212,7 +212,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036904 RID: 223492 RVA: 0x00769E70 File Offset: 0x00768070
+		// Token: 0x06039D1A RID: 236826 RVA: 0x007CD118 File Offset: 0x007CB318
 		public static Offset<IVehicleNewSplineStopTarget> Pack(FlatBufferBuilder builder, IVehicleNewSplineStopTargetT _o)
 		{
 			if (_o == null)
@@ -224,7 +224,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IVehicleNewSplineStopTarget.CreateIVehicleNewSplineStopTarget(builder, _o.Type, targetVehicle_type, targetVehicleOffset);
 		}
 
-		// Token: 0x04012418 RID: 74776
+		// Token: 0x04013449 RID: 78921
 		private Table __p;
 	}
 }

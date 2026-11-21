@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E6B RID: 20075
+	// Token: 0x02003E34 RID: 15924
 	public class RougeBattleAttributeBuffItem : GridProxyAbstract<int>
 	{
-		// Token: 0x06033B03 RID: 211715 RVA: 0x00C1AAF0 File Offset: 0x00C18CF0
+		// Token: 0x0602896E RID: 166254 RVA: 0x00B64018 File Offset: 0x00B62218
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033B04 RID: 211716 RVA: 0x00C1AC50 File Offset: 0x00C18E50
+		// Token: 0x0602896F RID: 166255 RVA: 0x00B64178 File Offset: 0x00B62378
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			this.BuffId = data;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			this.SetSpriteByPath(RogueBattleConfig.Instance.GetRogueResCharacterBuff(this.BuffId).Value.AffixIcon, base.GetSprite(9), false, null, null);
 		}
 
-		// Token: 0x06033B05 RID: 211717 RVA: 0x00C1ACB1 File Offset: 0x00C18EB1
+		// Token: 0x06028970 RID: 166256 RVA: 0x00B641D9 File Offset: 0x00B623D9
 		private void OnClick(EToggleState state)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(11);
@@ -62,10 +62,10 @@ namespace CSharpScript.Game.Module.RogueBattle
 			onClickCall(this.BuffId);
 		}
 
-		// Token: 0x0401B6D0 RID: 112336
+		// Token: 0x040160A3 RID: 90275
 		private int BuffId;
 
-		// Token: 0x0401B6D1 RID: 112337
+		// Token: 0x040160A4 RID: 90276
 		[Nullable(2)]
 		public Action<int> OnClickCall;
 	}

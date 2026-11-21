@@ -5,11 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200253D RID: 9533
+	// Token: 0x020027E4 RID: 10212
 	public class ITalkEffectStop : ITalkEffectActionType
 	{
-		// Token: 0x0600D472 RID: 54386 RVA: 0x001F7246 File Offset: 0x001F5446
-		[NullableContext(1)]
+		// Token: 0x0600E1D2 RID: 57810 RVA: 0x00212CA6 File Offset: 0x00210EA6
 		public static ITalkEffectStop Create(ITalkEffectStop? instance)
 		{
 			if (instance == null)
@@ -22,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003BBA RID: 15290
-		// (get) Token: 0x0600D473 RID: 54387 RVA: 0x001F7265 File Offset: 0x001F5465
+		// Token: 0x17003EB8 RID: 16056
+		// (get) Token: 0x0600E1D3 RID: 57811 RVA: 0x00212CC5 File Offset: 0x00210EC5
 		public override ETalkEffectActionType Type
 		{
 			get
@@ -32,19 +31,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003BBB RID: 15291
-		// (get) Token: 0x0600D474 RID: 54388 RVA: 0x001F7274 File Offset: 0x001F5474
+		// Token: 0x17003EB9 RID: 16057
+		// (get) Token: 0x0600E1D4 RID: 57812 RVA: 0x00212CD4 File Offset: 0x00210ED4
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<string> EffectKeys
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -67,8 +66,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003BBC RID: 15292
-		// (get) Token: 0x0600D475 RID: 54389 RVA: 0x001F72EC File Offset: 0x001F54EC
+		// Token: 0x17003EBA RID: 16058
+		// (get) Token: 0x0600E1D5 RID: 57813 RVA: 0x00212D4C File Offset: 0x00210F4C
 		public virtual float? DelayTime
 		{
 			get
@@ -81,8 +80,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003BBD RID: 15293
-		// (get) Token: 0x0600D476 RID: 54390 RVA: 0x001F7324 File Offset: 0x001F5524
+		// Token: 0x17003EBB RID: 16059
+		// (get) Token: 0x0600E1D6 RID: 57814 RVA: 0x00212D84 File Offset: 0x00210F84
 		public virtual bool? ImmediatelyDestroy
 		{
 			get
@@ -95,18 +94,18 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400745D RID: 29789
+		// Token: 0x04007AB2 RID: 31410
 		private ITalkEffectStop Instance;
 
-		// Token: 0x0400745E RID: 29790
+		// Token: 0x04007AB3 RID: 31411
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<string> _EffectKeysCache;
 
-		// Token: 0x0400745F RID: 29791
+		// Token: 0x04007AB4 RID: 31412
 		private bool _EffectKeysInited;
 	}
 }

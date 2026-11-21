@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020011FE RID: 4606
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200133A RID: 4922
 	public class IVisionSystemQuestDoIdentify : IVisionSystemQuestBase
 	{
-		// Token: 0x0600688A RID: 26762 RVA: 0x000F9930 File Offset: 0x000F7B30
+		// Token: 0x06006ECB RID: 28363 RVA: 0x0010723C File Offset: 0x0010543C
 		private IVisionSystemQuestDoIdentify_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600688B RID: 26763 RVA: 0x000F9968 File Offset: 0x000F7B68
+		// Token: 0x06006ECC RID: 28364 RVA: 0x00107274 File Offset: 0x00105474
 		public static IVisionSystemQuestDoIdentify Create([Nullable(2)] IVisionSystemQuestDoIdentify instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600688C RID: 26764 RVA: 0x000F997B File Offset: 0x000F7B7B
+		// Token: 0x06006ECD RID: 28365 RVA: 0x00107287 File Offset: 0x00105487
 		public static IVisionSystemQuestDoIdentify CreateFromSetValue([Nullable(2)] IVisionSystemQuestDoIdentify_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600688D RID: 26765 RVA: 0x000F998E File Offset: 0x000F7B8E
+		// Token: 0x06006ECE RID: 28366 RVA: 0x0010729A File Offset: 0x0010549A
 		public new IVisionSystemQuestDoIdentify_SetValue ToSetValue()
 		{
 			return new IVisionSystemQuestDoIdentify_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x170021CD RID: 8653
-		// (get) Token: 0x0600688E RID: 26766 RVA: 0x000F99A1 File Offset: 0x000F7BA1
-		// (set) Token: 0x0600688F RID: 26767 RVA: 0x000F99CC File Offset: 0x000F7BCC
+		// Token: 0x1700238E RID: 9102
+		// (get) Token: 0x06006ECF RID: 28367 RVA: 0x001072AD File Offset: 0x001054AD
+		// (set) Token: 0x06006ED0 RID: 28368 RVA: 0x001072D8 File Offset: 0x001054D8
 		public override EVisionSystemQuestType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003E96 RID: 16022
+		// Token: 0x04004204 RID: 16900
 		[Nullable(2)]
 		protected new IVisionSystemQuestDoIdentify FbInstance;
 
-		// Token: 0x04003E97 RID: 16023
+		// Token: 0x04004205 RID: 16901
 		[Nullable(2)]
 		protected new IVisionSystemQuestDoIdentify_SetValue PocoInterface;
 	}

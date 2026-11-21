@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E2A RID: 3626
+	// Token: 0x02000F26 RID: 3878
 	public class IWaterStagnationActorConfig
 	{
-		// Token: 0x060051FC RID: 20988 RVA: 0x000CA06E File Offset: 0x000C826E
-		[NullableContext(1)]
+		// Token: 0x06005723 RID: 22307 RVA: 0x000D5936 File Offset: 0x000D3B36
 		public static IWaterStagnationActorConfig Create(IWaterStagnationActorConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001B65 RID: 7013
-		// (get) Token: 0x060051FD RID: 20989 RVA: 0x000CA08D File Offset: 0x000C828D
+		// Token: 0x17001CD2 RID: 7378
+		// (get) Token: 0x06005724 RID: 22308 RVA: 0x000D5955 File Offset: 0x000D3B55
 		public virtual int SeqRefEntity
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002F39 RID: 12089
+		// Token: 0x04003201 RID: 12801
 		private IWaterStagnationActorConfig Instance;
 	}
 }

@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Guide.StepInfo
 {
-	// Token: 0x02004609 RID: 17929
+	// Token: 0x02003532 RID: 13618
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -12,7 +12,7 @@ namespace CSharpScript.Game.Guide.StepInfo
 	})]
 	public class BreakState : StateBase<GuideStepInfo, EGuideStepState>
 	{
-		// Token: 0x0602E391 RID: 189329 RVA: 0x00AB0039 File Offset: 0x00AAE239
+		// Token: 0x06022A86 RID: 141958 RVA: 0x009DC72D File Offset: 0x009DA92D
 		public BreakState(GuideStepInfo owner, EGuideStepState state, [Nullable(new byte[]
 		{
 			2,
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Guide.StepInfo
 		{
 		}
 
-		// Token: 0x0602E392 RID: 189330 RVA: 0x00AB0044 File Offset: 0x00AAE244
+		// Token: 0x06022A87 RID: 141959 RVA: 0x009DC738 File Offset: 0x009DA938
 		protected override void OnEnter(EGuideStepState? lastState)
 		{
 			if (this.Owner.Config.ContentType == 4)

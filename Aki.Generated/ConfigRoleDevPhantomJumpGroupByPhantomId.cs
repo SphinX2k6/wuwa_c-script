@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200089B RID: 2203
+	// Token: 0x020008B7 RID: 2231
 	public class ConfigRoleDevPhantomJumpGroupByPhantomId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060033B4 RID: 13236 RVA: 0x0017D94F File Offset: 0x0017BB4F
+		// Token: 0x0600345C RID: 13404 RVA: 0x00184C37 File Offset: 0x00182E37
 		static ConfigRoleDevPhantomJumpGroupByPhantomId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRoleDevPhantomJumpGroupByPhantomId.CreateStaticDefaultValue), new Action(ConfigRoleDevPhantomJumpGroupByPhantomId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060033B5 RID: 13237 RVA: 0x0017D970 File Offset: 0x0017BB70
+		// Token: 0x0600345D RID: 13405 RVA: 0x00184C58 File Offset: 0x00182E58
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRoleDevPhantomJumpGroupByPhantomId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060033B6 RID: 13238 RVA: 0x0017D9EF File Offset: 0x0017BBEF
+		// Token: 0x0600345E RID: 13406 RVA: 0x00184CD7 File Offset: 0x00182ED7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRoleDevPhantomJumpGroupByPhantomId.LogPair = null;
 			ConfigRoleDevPhantomJumpGroupByPhantomId.HandleId = 0;
 		}
 
-		// Token: 0x060033B7 RID: 13239 RVA: 0x0017D9FD File Offset: 0x0017BBFD
+		// Token: 0x0600345F RID: 13407 RVA: 0x00184CE5 File Offset: 0x00182EE5
 		public static void Init()
 		{
 			ConfigRoleDevPhantomJumpGroupByPhantomId.HandleId = ConfigCommon.InitDataStatement(ConfigRoleDevPhantomJumpGroupByPhantomId.HandleId, "db_roledev.db", "select BinData from `RoleDevPhantomJumpGroup` where PhantomId=?");
 		}
 
-		// Token: 0x060033B8 RID: 13240 RVA: 0x0017DA18 File Offset: 0x0017BC18
+		// Token: 0x06003460 RID: 13408 RVA: 0x00184D00 File Offset: 0x00182F00
 		public static RoleDevPhantomJumpGroup? GetConfig(int p0PhantomId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRoleDevPhantomJumpGroupByPhantomId.HandleId, ConfigRoleDevPhantomJumpGroupByPhantomId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RoleDevPhantomJumpGroup?(rootAsRoleDevPhantomJumpGroup);
 		}
 
-		// Token: 0x04003C23 RID: 15395
+		// Token: 0x04003CE7 RID: 15591
 		private const string DB = "db_roledev.db";
 
-		// Token: 0x04003C24 RID: 15396
+		// Token: 0x04003CE8 RID: 15592
 		private const string FILE = "g.共鸣者培养计划.xlsx";
 
-		// Token: 0x04003C25 RID: 15397
+		// Token: 0x04003CE9 RID: 15593
 		private const string TABLE = "RoleDevPhantomJumpGroup";
 
-		// Token: 0x04003C26 RID: 15398
+		// Token: 0x04003CEA RID: 15594
 		private const string COMMAND = "select BinData from `RoleDevPhantomJumpGroup` where PhantomId=?";
 
-		// Token: 0x04003C27 RID: 15399
+		// Token: 0x04003CEB RID: 15595
 		private const string KEY_PREFIX = "RoleDevPhantomJumpGroupByPhantomId";
 
-		// Token: 0x04003C28 RID: 15400
+		// Token: 0x04003CEC RID: 15596
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003C29 RID: 15401
+		// Token: 0x04003CED RID: 15597
 		private static int HandleId;
 	}
 }

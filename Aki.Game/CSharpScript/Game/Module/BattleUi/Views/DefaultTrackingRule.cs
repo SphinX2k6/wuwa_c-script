@@ -5,13 +5,13 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CC3 RID: 23747
+	// Token: 0x02004CA5 RID: 19621
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DefaultTrackingRule : TrackingDisplayRuleBase
 	{
-		// Token: 0x17008DF5 RID: 36341
-		// (get) Token: 0x0603C0C5 RID: 245957 RVA: 0x00E5C894 File Offset: 0x00E5AA94
+		// Token: 0x170061C7 RID: 25031
+		// (get) Token: 0x0603101A RID: 200730 RVA: 0x00DACFA8 File Offset: 0x00DAB1A8
 		public override EMissionRuleId Id
 		{
 			get
@@ -20,8 +20,8 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x17008DF6 RID: 36342
-		// (get) Token: 0x0603C0C6 RID: 245958 RVA: 0x00E5C897 File Offset: 0x00E5AA97
+		// Token: 0x170061C8 RID: 25032
+		// (get) Token: 0x0603101B RID: 200731 RVA: 0x00DACFAB File Offset: 0x00DAB1AB
 		public override bool Enabled
 		{
 			get
@@ -30,8 +30,8 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x17008DF7 RID: 36343
-		// (get) Token: 0x0603C0C7 RID: 245959 RVA: 0x00E5C89A File Offset: 0x00E5AA9A
+		// Token: 0x170061C9 RID: 25033
+		// (get) Token: 0x0603101C RID: 200732 RVA: 0x00DACFAE File Offset: 0x00DAB1AE
 		public override int Priority
 		{
 			get
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C0C8 RID: 245960 RVA: 0x00E5C8A0 File Offset: 0x00E5AAA0
+		// Token: 0x0603101D RID: 200733 RVA: 0x00DACFB4 File Offset: 0x00DAB1B4
 		public override EMissionItemView? CustomTypeCheck(IMissionItemViewShowData showData, ETreeTextExpressReason? reason = null)
 		{
 			EMissionItemView? result = null;
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return result;
 		}
 
-		// Token: 0x0603C0C9 RID: 245961 RVA: 0x00E5C93D File Offset: 0x00E5AB3D
+		// Token: 0x0603101E RID: 200734 RVA: 0x00DAD051 File Offset: 0x00DAB251
 		public override void SortShowData(List<IMissionItemViewShowData> showData)
 		{
 			showData.Sort(delegate(IMissionItemViewShowData a, IMissionItemViewShowData b)

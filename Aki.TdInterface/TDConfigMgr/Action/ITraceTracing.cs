@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FD6 RID: 8150
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200221D RID: 8733
 	public class ITraceTracing : IUiGame
 	{
-		// Token: 0x0600B34C RID: 45900 RVA: 0x001A1720 File Offset: 0x0019F920
+		// Token: 0x0600BE62 RID: 48738 RVA: 0x001B7C8C File Offset: 0x001B5E8C
 		private ITraceTracing_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B34D RID: 45901 RVA: 0x001A1758 File Offset: 0x0019F958
+		// Token: 0x0600BE63 RID: 48739 RVA: 0x001B7CC4 File Offset: 0x001B5EC4
 		public static ITraceTracing Create([Nullable(2)] ITraceTracing instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B34E RID: 45902 RVA: 0x001A176B File Offset: 0x0019F96B
+		// Token: 0x0600BE64 RID: 48740 RVA: 0x001B7CD7 File Offset: 0x001B5ED7
 		public static ITraceTracing CreateFromSetValue([Nullable(2)] ITraceTracing_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B34F RID: 45903 RVA: 0x001A1780 File Offset: 0x0019F980
+		// Token: 0x0600BE65 RID: 48741 RVA: 0x001B7CEC File Offset: 0x001B5EEC
 		public new ITraceTracing_SetValue ToSetValue()
 		{
 			return new ITraceTracing_SetValue
@@ -65,9 +63,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700373D RID: 14141
-		// (get) Token: 0x0600B350 RID: 45904 RVA: 0x001A17DA File Offset: 0x0019F9DA
-		// (set) Token: 0x0600B351 RID: 45905 RVA: 0x001A1805 File Offset: 0x0019FA05
+		// Token: 0x17003A15 RID: 14869
+		// (get) Token: 0x0600BE66 RID: 48742 RVA: 0x001B7D46 File Offset: 0x001B5F46
+		// (set) Token: 0x0600BE67 RID: 48743 RVA: 0x001B7D71 File Offset: 0x001B5F71
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -88,9 +86,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700373E RID: 14142
-		// (get) Token: 0x0600B352 RID: 45906 RVA: 0x001A1813 File Offset: 0x0019FA13
-		// (set) Token: 0x0600B353 RID: 45907 RVA: 0x001A183E File Offset: 0x0019FA3E
+		// Token: 0x17003A16 RID: 14870
+		// (get) Token: 0x0600BE68 RID: 48744 RVA: 0x001B7D7F File Offset: 0x001B5F7F
+		// (set) Token: 0x0600BE69 RID: 48745 RVA: 0x001B7DAA File Offset: 0x001B5FAA
 		public virtual ETraceTracingImageType ImageResourceType
 		{
 			get
@@ -111,9 +109,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700373F RID: 14143
-		// (get) Token: 0x0600B354 RID: 45908 RVA: 0x001A184C File Offset: 0x0019FA4C
-		// (set) Token: 0x0600B355 RID: 45909 RVA: 0x001A18AD File Offset: 0x0019FAAD
+		// Token: 0x17003A17 RID: 14871
+		// (get) Token: 0x0600BE6A RID: 48746 RVA: 0x001B7DB8 File Offset: 0x001B5FB8
+		// (set) Token: 0x0600BE6B RID: 48747 RVA: 0x001B7E19 File Offset: 0x001B6019
 		public virtual ITraceTracingGridBoard BoardConfig
 		{
 			get
@@ -141,9 +139,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003740 RID: 14144
-		// (get) Token: 0x0600B356 RID: 45910 RVA: 0x001A18C2 File Offset: 0x0019FAC2
-		// (set) Token: 0x0600B357 RID: 45911 RVA: 0x001A18ED File Offset: 0x0019FAED
+		// Token: 0x17003A18 RID: 14872
+		// (get) Token: 0x0600BE6C RID: 48748 RVA: 0x001B7E2E File Offset: 0x001B602E
+		// (set) Token: 0x0600BE6D RID: 48749 RVA: 0x001B7E59 File Offset: 0x001B6059
 		public virtual int StepLimit
 		{
 			get
@@ -164,20 +162,20 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003741 RID: 14145
-		// (get) Token: 0x0600B358 RID: 45912 RVA: 0x001A18FC File Offset: 0x0019FAFC
-		// (set) Token: 0x0600B359 RID: 45913 RVA: 0x001A198F File Offset: 0x0019FB8F
+		// Token: 0x17003A19 RID: 14873
+		// (get) Token: 0x0600BE6E RID: 48750 RVA: 0x001B7E68 File Offset: 0x001B6068
+		// (set) Token: 0x0600BE6F RID: 48751 RVA: 0x001B7EFB File Offset: 0x001B60FB
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ITraceTracingMaxStepRewardRuleItem> MaxStepRewardRule
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -208,7 +206,7 @@ namespace Aki.TDConfigMgr.Action
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -217,9 +215,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003742 RID: 14146
-		// (get) Token: 0x0600B35A RID: 45914 RVA: 0x001A19A4 File Offset: 0x0019FBA4
-		// (set) Token: 0x0600B35B RID: 45915 RVA: 0x001A19DE File Offset: 0x0019FBDE
+		// Token: 0x17003A1A RID: 14874
+		// (get) Token: 0x0600BE70 RID: 48752 RVA: 0x001B7F10 File Offset: 0x001B6110
+		// (set) Token: 0x0600BE71 RID: 48753 RVA: 0x001B7F4A File Offset: 0x001B614A
 		public virtual bool? RemainUiAfterCompletion
 		{
 			get
@@ -241,29 +239,29 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006C2C RID: 27692
+		// Token: 0x0400722E RID: 29230
 		[Nullable(2)]
 		protected new ITraceTracing FbInstance;
 
-		// Token: 0x04006C2D RID: 27693
+		// Token: 0x0400722F RID: 29231
 		[Nullable(2)]
 		protected new ITraceTracing_SetValue PocoInterface;
 
-		// Token: 0x04006C2E RID: 27694
+		// Token: 0x04007230 RID: 29232
 		private ITraceTracingGridBoard _BoardConfigCache;
 
-		// Token: 0x04006C2F RID: 27695
+		// Token: 0x04007231 RID: 29233
 		private bool _BoardConfigInited;
 
-		// Token: 0x04006C30 RID: 27696
+		// Token: 0x04007232 RID: 29234
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ITraceTracingMaxStepRewardRuleItem> _MaxStepRewardRuleCache;
 
-		// Token: 0x04006C31 RID: 27697
+		// Token: 0x04007233 RID: 29235
 		private bool _MaxStepRewardRuleInited;
 	}
 }

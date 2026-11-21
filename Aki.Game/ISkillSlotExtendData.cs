@@ -1,45 +1,45 @@
 ﻿using System;
 
-// Token: 0x020027EF RID: 10223
+// Token: 0x02001D6A RID: 7530
 public interface ISkillSlotExtendData
 {
-	// Token: 0x17001B91 RID: 7057
-	// (get) Token: 0x06014FC7 RID: 85959
-	// (set) Token: 0x06014FC8 RID: 85960
+	// Token: 0x17001BE9 RID: 7145
+	// (get) Token: 0x060129C7 RID: 76231
+	// (set) Token: 0x060129C8 RID: 76232
 	int RoleId { get; set; }
 
-	// Token: 0x17001B92 RID: 7058
-	// (get) Token: 0x06014FC9 RID: 85961
-	// (set) Token: 0x06014FCA RID: 85962
+	// Token: 0x17001BEA RID: 7146
+	// (get) Token: 0x060129C9 RID: 76233
+	// (set) Token: 0x060129CA RID: 76234
 	int SkillNodeId { get; set; }
 
-	// Token: 0x17001B93 RID: 7059
-	// (get) Token: 0x06014FCB RID: 85963
-	// (set) Token: 0x06014FCC RID: 85964
+	// Token: 0x17001BEB RID: 7147
+	// (get) Token: 0x060129CB RID: 76235
+	// (set) Token: 0x060129CC RID: 76236
 	int IconId { get; set; }
 
-	// Token: 0x17001B94 RID: 7060
-	// (get) Token: 0x06014FCD RID: 85965
-	// (set) Token: 0x06014FCE RID: 85966
+	// Token: 0x17001BEC RID: 7148
+	// (get) Token: 0x060129CD RID: 76237
+	// (set) Token: 0x060129CE RID: 76238
 	int CurrentLevel { get; set; }
 
-	// Token: 0x17001B95 RID: 7061
-	// (get) Token: 0x06014FCF RID: 85967
-	// (set) Token: 0x06014FD0 RID: 85968
+	// Token: 0x17001BED RID: 7149
+	// (get) Token: 0x060129CF RID: 76239
+	// (set) Token: 0x060129D0 RID: 76240
 	int NormalTargetLevel { get; set; }
 
-	// Token: 0x17001B96 RID: 7062
-	// (get) Token: 0x06014FD1 RID: 85969
-	// (set) Token: 0x06014FD2 RID: 85970
+	// Token: 0x17001BEE RID: 7150
+	// (get) Token: 0x060129D1 RID: 76241
+	// (set) Token: 0x060129D2 RID: 76242
 	int PerfectTargetLevel { get; set; }
 
-	// Token: 0x17001B97 RID: 7063
-	// (get) Token: 0x06014FD3 RID: 85971
-	// (set) Token: 0x06014FD4 RID: 85972
+	// Token: 0x17001BEF RID: 7151
+	// (get) Token: 0x060129D3 RID: 76243
+	// (set) Token: 0x060129D4 RID: 76244
 	ESkillType SkillType { get; set; }
 
-	// Token: 0x17001B98 RID: 7064
-	// (get) Token: 0x06014FD5 RID: 85973
-	// (set) Token: 0x06014FD6 RID: 85974
+	// Token: 0x17001BF0 RID: 7152
+	// (get) Token: 0x060129D5 RID: 76245
+	// (set) Token: 0x060129D6 RID: 76246
 	int NodeIndex { get; set; }
 }

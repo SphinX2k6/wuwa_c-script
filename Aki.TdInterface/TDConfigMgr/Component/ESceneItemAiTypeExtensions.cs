@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000A00 RID: 2560
+	// Token: 0x02000AC5 RID: 2757
 	public static class ESceneItemAiTypeExtensions
 	{
-		// Token: 0x060038B1 RID: 14513 RVA: 0x00092AA4 File Offset: 0x00090CA4
+		// Token: 0x06003C89 RID: 15497 RVA: 0x0009B394 File Offset: 0x00099594
 		public static string ToEnumString(this ESceneItemAiType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060038B2 RID: 14514 RVA: 0x00092ACC File Offset: 0x00090CCC
+		// Token: 0x06003C8A RID: 15498 RVA: 0x0009B3BC File Offset: 0x000995BC
 		public static ESceneItemAiType FromString(string name)
 		{
 			ESceneItemAiType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060038B3 RID: 14515 RVA: 0x00092AF5 File Offset: 0x00090CF5
+		// Token: 0x06003C8B RID: 15499 RVA: 0x0009B3E5 File Offset: 0x000995E5
 		public static bool TryFromString(string name, out ESceneItemAiType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x060038B4 RID: 14516 RVA: 0x00092B1A File Offset: 0x00090D1A
+		// Token: 0x06003C8C RID: 15500 RVA: 0x0009B40A File Offset: 0x0009960A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060038B5 RID: 14517 RVA: 0x00092B2A File Offset: 0x00090D2A
+		// Token: 0x06003C8D RID: 15501 RVA: 0x0009B41A File Offset: 0x0009961A
 		public static ESceneItemAiType[] GetValues()
 		{
 			return new ESceneItemAiType[1];
 		}
 
-		// Token: 0x060038B6 RID: 14518 RVA: 0x00092B32 File Offset: 0x00090D32
+		// Token: 0x06003C8E RID: 15502 RVA: 0x0009B422 File Offset: 0x00099622
 		public static string[] GetNames()
 		{
 			return new string[]

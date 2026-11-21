@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016B3 RID: 5811
+	// Token: 0x0200182D RID: 6189
 	public enum ESubPlotModeType
 	{
-		// Token: 0x04004DFF RID: 19967
+		// Token: 0x0400521E RID: 21022
 		PromptWithProfilePic
 	}
 }

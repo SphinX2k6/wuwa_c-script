@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
 
-// Token: 0x02003320 RID: 13088
+// Token: 0x02002892 RID: 10386
 public class AssetElementBundleBase
 {
-	// Token: 0x17002787 RID: 10119
-	// (get) Token: 0x0601C824 RID: 116772 RVA: 0x007FF50E File Offset: 0x007FD70E
-	// (set) Token: 0x0601C825 RID: 116773 RVA: 0x007FF516 File Offset: 0x007FD716
+	// Token: 0x17002B24 RID: 11044
+	// (get) Token: 0x0601A51D RID: 107805 RVA: 0x00825A7A File Offset: 0x00823C7A
+	// (set) Token: 0x0601A51E RID: 107806 RVA: 0x00825A82 File Offset: 0x00823C82
 	public ELoadResultType LoadState
 	{
 		get
@@ -21,7 +21,7 @@ public class AssetElementBundleBase
 		}
 	}
 
-	// Token: 0x0601C826 RID: 116774 RVA: 0x007FF51F File Offset: 0x007FD71F
+	// Token: 0x0601A51F RID: 107807 RVA: 0x00825A8B File Offset: 0x00823C8B
 	[NullableContext(1)]
 	public void AddCallback(Action<ELoadResultType> callback)
 	{
@@ -36,7 +36,7 @@ public class AssetElementBundleBase
 		this.Callbacks.Add(callback);
 	}
 
-	// Token: 0x0601C827 RID: 116775 RVA: 0x007FF544 File Offset: 0x007FD744
+	// Token: 0x0601A520 RID: 107808 RVA: 0x00825AB0 File Offset: 0x00823CB0
 	public void DoCallback(ELoadResultType result)
 	{
 		if (this.Callbacks == null || this.Callbacks.Count == 0)
@@ -50,13 +50,13 @@ public class AssetElementBundleBase
 		this.Callbacks = null;
 	}
 
-	// Token: 0x0601C828 RID: 116776 RVA: 0x007FF5B4 File Offset: 0x007FD7B4
+	// Token: 0x0601A521 RID: 107809 RVA: 0x00825B20 File Offset: 0x00823D20
 	public void ClearCallback()
 	{
 		this.Callbacks = null;
 	}
 
-	// Token: 0x0601C829 RID: 116777 RVA: 0x007FF5BD File Offset: 0x007FD7BD
+	// Token: 0x0601A522 RID: 107810 RVA: 0x00825B29 File Offset: 0x00823D29
 	public virtual void Clear()
 	{
 		if (this.Callbacks != null)
@@ -67,15 +67,15 @@ public class AssetElementBundleBase
 		this.IsDestroy = true;
 	}
 
-	// Token: 0x0601C82A RID: 116778 RVA: 0x007FF5DC File Offset: 0x007FD7DC
+	// Token: 0x0601A523 RID: 107811 RVA: 0x00825B48 File Offset: 0x00823D48
 	public virtual void PrintDebugInfo()
 	{
 	}
 
-	// Token: 0x0400E280 RID: 57984
+	// Token: 0x0400E731 RID: 59185
 	public UniTask<ELoadResultType>? Promise;
 
-	// Token: 0x0400E281 RID: 57985
+	// Token: 0x0400E732 RID: 59186
 	[Nullable(new byte[]
 	{
 		2,
@@ -83,12 +83,12 @@ public class AssetElementBundleBase
 	})]
 	public List<Action<ELoadResultType>> Callbacks;
 
-	// Token: 0x0400E282 RID: 57986
+	// Token: 0x0400E733 RID: 59187
 	public ResourceSystem.EResourceLoadPriority LoadPriority = ResourceSystem.EResourceLoadPriority.Default;
 
-	// Token: 0x0400E283 RID: 57987
+	// Token: 0x0400E734 RID: 59188
 	protected ELoadResultType LoadStateInternal;
 
-	// Token: 0x0400E284 RID: 57988
+	// Token: 0x0400E735 RID: 59189
 	public bool IsDestroy;
 }

@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Audio
 {
-	// Token: 0x02005E8D RID: 24205
+	// Token: 0x02004E72 RID: 20082
 	public enum ERoleAudioPriorityType
 	{
-		// Token: 0x04020213 RID: 131603
+		// Token: 0x0401ACDA RID: 109786
 		PlayerControl,
-		// Token: 0x04020214 RID: 131604
+		// Token: 0x0401ACDB RID: 109787
 		PlayerBackstage,
-		// Token: 0x04020215 RID: 131605
+		// Token: 0x0401ACDC RID: 109788
 		OtherControl
 	}
 }

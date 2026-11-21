@@ -8,41 +8,41 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View
 {
-	// Token: 0x02006DE6 RID: 28134
+	// Token: 0x02005F65 RID: 24421
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class ItemInspectViewBase : UiTickViewBase
 	{
-		// Token: 0x06044A10 RID: 281104 RVA: 0x010EFD6D File Offset: 0x010EDF6D
+		// Token: 0x0603AB74 RID: 240500 RVA: 0x01099FB9 File Offset: 0x010981B9
 		protected ItemInspectViewBase(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06044A11 RID: 281105 RVA: 0x010EFD8C File Offset: 0x010EDF8C
+		// Token: 0x0603AB75 RID: 240501 RVA: 0x01099FD8 File Offset: 0x010981D8
 		public void ExecuteModifyTipText(string text, Action onFinish)
 		{
 			onFinish();
 		}
 
-		// Token: 0x06044A12 RID: 281106 RVA: 0x010EFD94 File Offset: 0x010EDF94
+		// Token: 0x0603AB76 RID: 240502 RVA: 0x01099FE0 File Offset: 0x010981E0
 		public virtual void ExecuteTriggerDialogues(ITriggerDialogues @params, Action onFinish)
 		{
 			onFinish();
 		}
 
-		// Token: 0x06044A13 RID: 281107 RVA: 0x010EFD9C File Offset: 0x010EDF9C
+		// Token: 0x0603AB77 RID: 240503 RVA: 0x01099FE8 File Offset: 0x010981E8
 		public virtual void ExecuteTriggerVoiceDialogues(ITriggerVoiceDialogues @params, Action onFinish)
 		{
 			onFinish();
 		}
 
-		// Token: 0x06044A14 RID: 281108 RVA: 0x010EFDA4 File Offset: 0x010EDFA4
+		// Token: 0x0603AB78 RID: 240504 RVA: 0x01099FF0 File Offset: 0x010981F0
 		protected override void OnTick(float delta)
 		{
 			ItemInspectController.Instance.UpdateItemInspect(delta);
 		}
 
-		// Token: 0x06044A15 RID: 281109 RVA: 0x010EFDB1 File Offset: 0x010EDFB1
+		// Token: 0x0603AB79 RID: 240505 RVA: 0x01099FFD File Offset: 0x010981FD
 		protected void InitDrag(UUIDraggableComponent dragComponent)
 		{
 			this.DragComponent = dragComponent;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View
 			ItemInspectModel.Instance.OnDragInteractSuccess = new Action<int>(this.OnDragSuccessCallback);
 		}
 
-		// Token: 0x06044A16 RID: 281110 RVA: 0x010EFDE0 File Offset: 0x010EDFE0
+		// Token: 0x0603AB7A RID: 240506 RVA: 0x0109A02C File Offset: 0x0109822C
 		protected void ClearDrag()
 		{
 			this.RemoveInputEventListener();
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View
 			ItemInspectModel.Instance.OnDragInteractSuccess = null;
 		}
 
-		// Token: 0x06044A17 RID: 281111 RVA: 0x010EFE3A File Offset: 0x010EE03A
+		// Token: 0x0603AB7B RID: 240507 RVA: 0x0109A086 File Offset: 0x01098286
 		protected void SetInputEnable(bool enable)
 		{
 			this.IsInputEnable = enable;
@@ -75,13 +75,13 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View
 			}
 		}
 
-		// Token: 0x06044A18 RID: 281112 RVA: 0x010EFE4C File Offset: 0x010EE04C
+		// Token: 0x0603AB7C RID: 240508 RVA: 0x0109A098 File Offset: 0x01098298
 		protected bool IsInteractingItem()
 		{
 			return this.IsInputBegin;
 		}
 
-		// Token: 0x06044A19 RID: 281113 RVA: 0x010EFE54 File Offset: 0x010EE054
+		// Token: 0x0603AB7D RID: 240509 RVA: 0x0109A0A0 File Offset: 0x010982A0
 		protected virtual void HandleDragInteractSuccess(int tagId)
 		{
 			ItemInspectController.Instance.InteractPoint(tagId, delegate
@@ -89,13 +89,13 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View
 			});
 		}
 
-		// Token: 0x06044A1A RID: 281114 RVA: 0x010EFE80 File Offset: 0x010EE080
+		// Token: 0x0603AB7E RID: 240510 RVA: 0x0109A0CC File Offset: 0x010982CC
 		private void OnDragSuccessCallback(int tagId)
 		{
 			this.HandleDragInteractSuccess(tagId);
 		}
 
-		// Token: 0x06044A1B RID: 281115 RVA: 0x010EFE8C File Offset: 0x010EE08C
+		// Token: 0x0603AB7F RID: 240511 RVA: 0x0109A0D8 File Offset: 0x010982D8
 		private void AddInputEventListener()
 		{
 			UUIDraggableComponent dragComponent = this.DragComponent;
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View
 			EventSystem.Instance.Add<EInputControllerType, EInputControllerType>(EEventName.InputControllerChange, new Action<EInputControllerType, EInputControllerType>(this.OnInputControllerChange));
 		}
 
-		// Token: 0x06044A1C RID: 281116 RVA: 0x010EFF68 File Offset: 0x010EE168
+		// Token: 0x0603AB80 RID: 240512 RVA: 0x0109A1B4 File Offset: 0x010983B4
 		private void RemoveInputEventListener()
 		{
 			UUIDraggableComponent dragComponent = this.DragComponent;
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View
 			EventSystem.Instance.Remove<EInputControllerType, EInputControllerType>(EEventName.InputControllerChange, new Action<EInputControllerType, EInputControllerType>(this.OnInputControllerChange));
 		}
 
-		// Token: 0x06044A1D RID: 281117 RVA: 0x010EFFEC File Offset: 0x010EE1EC
+		// Token: 0x0603AB81 RID: 240513 RVA: 0x0109A238 File Offset: 0x01098438
 		[NullableContext(2)]
 		private void OnPointerDownCallBack(ULGUIPointerEventData eventData)
 		{
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View
 			}
 		}
 
-		// Token: 0x06044A1E RID: 281118 RVA: 0x010F0040 File Offset: 0x010EE240
+		// Token: 0x0603AB82 RID: 240514 RVA: 0x0109A28C File Offset: 0x0109848C
 		[NullableContext(2)]
 		private void OnPointerBeginCallBack(ULGUIPointerEventData eventData)
 		{
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View
 			this.TempInput.Y = (double)localPointInPlane.Y;
 		}
 
-		// Token: 0x06044A1F RID: 281119 RVA: 0x010F00C0 File Offset: 0x010EE2C0
+		// Token: 0x0603AB83 RID: 240515 RVA: 0x0109A30C File Offset: 0x0109850C
 		[NullableContext(2)]
 		private void OnPointerDragCallBack(ULGUIPointerEventData eventData)
 		{
@@ -194,7 +194,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View
 			this.TempInput.Y = (double)localPointInPlane.Y;
 		}
 
-		// Token: 0x06044A20 RID: 281120 RVA: 0x010F017C File Offset: 0x010EE37C
+		// Token: 0x0603AB84 RID: 240516 RVA: 0x0109A3C8 File Offset: 0x010985C8
 		[NullableContext(2)]
 		private void OnPointerEndCallBack(ULGUIPointerEventData eventData)
 		{
@@ -205,14 +205,14 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View
 			this.InputEnd();
 		}
 
-		// Token: 0x06044A21 RID: 281121 RVA: 0x010F0199 File Offset: 0x010EE399
+		// Token: 0x0603AB85 RID: 240517 RVA: 0x0109A3E5 File Offset: 0x010985E5
 		private void OnInputControllerChange(EInputControllerType _, EInputControllerType __)
 		{
 			this.InputEnd();
 			this.SetGamepadInputEnable(Info.Instance.IsInGamepad());
 		}
 
-		// Token: 0x06044A22 RID: 281122 RVA: 0x010F01B4 File Offset: 0x010EE3B4
+		// Token: 0x0603AB86 RID: 240518 RVA: 0x0109A400 File Offset: 0x01098600
 		private void SetGamepadInputEnable(bool enable)
 		{
 			if (enable)
@@ -237,7 +237,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View
 			}
 		}
 
-		// Token: 0x06044A23 RID: 281123 RVA: 0x010F02BB File Offset: 0x010EE4BB
+		// Token: 0x0603AB87 RID: 240519 RVA: 0x0109A507 File Offset: 0x01098707
 		private void OnInputUiLookUp(string axisName, float value, InputIdentification inputIdentification)
 		{
 			if (!Info.Instance.IsInGamepad())
@@ -252,7 +252,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View
 			this.GamepadInputChange();
 		}
 
-		// Token: 0x06044A24 RID: 281124 RVA: 0x010F02E2 File Offset: 0x010EE4E2
+		// Token: 0x0603AB88 RID: 240520 RVA: 0x0109A52E File Offset: 0x0109872E
 		private void OnInputUiTurn(string axisName, float value, InputIdentification inputIdentification)
 		{
 			if (!Info.Instance.IsInGamepad())
@@ -267,7 +267,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View
 			this.GamepadInputChange();
 		}
 
-		// Token: 0x06044A25 RID: 281125 RVA: 0x010F0309 File Offset: 0x010EE509
+		// Token: 0x0603AB89 RID: 240521 RVA: 0x0109A555 File Offset: 0x01098755
 		private void OnInputUiMoveRight(string axisName, float value, InputIdentification inputIdentification)
 		{
 			if (!Info.Instance.IsInGamepad())
@@ -278,7 +278,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View
 			this.ForwardDragStickInput();
 		}
 
-		// Token: 0x06044A26 RID: 281126 RVA: 0x010F032B File Offset: 0x010EE52B
+		// Token: 0x0603AB8A RID: 240522 RVA: 0x0109A577 File Offset: 0x01098777
 		private void OnInputUiMoveForward(string axisName, float value, InputIdentification inputIdentification)
 		{
 			if (!Info.Instance.IsInGamepad())
@@ -289,7 +289,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View
 			this.ForwardDragStickInput();
 		}
 
-		// Token: 0x06044A27 RID: 281127 RVA: 0x010F0350 File Offset: 0x010EE550
+		// Token: 0x0603AB8B RID: 240523 RVA: 0x0109A59C File Offset: 0x0109879C
 		private void ForwardDragStickInput()
 		{
 			if (this.IsInputEnable && ItemInspectController.Instance.IsCurrentStageDragInteraction())
@@ -300,7 +300,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View
 			ItemInspectController.Instance.ReceiveDragGamepadInput(0.0, 0.0);
 		}
 
-		// Token: 0x06044A28 RID: 281128 RVA: 0x010F03B4 File Offset: 0x010EE5B4
+		// Token: 0x0603AB8C RID: 240524 RVA: 0x0109A600 File Offset: 0x01098800
 		private void GamepadInputChange()
 		{
 			if (ItemInspectController.Instance.IsCurrentStageDragInteraction())
@@ -317,7 +317,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View
 			this.ReceiveInput(this.TempInput, true);
 		}
 
-		// Token: 0x06044A29 RID: 281129 RVA: 0x010F041C File Offset: 0x010EE61C
+		// Token: 0x0603AB8D RID: 240525 RVA: 0x0109A668 File Offset: 0x01098868
 		private void ReceiveInput(Vector2D inputDirect, bool isGamePad)
 		{
 			if (this.IsInputEnable)
@@ -327,7 +327,7 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View
 			}
 		}
 
-		// Token: 0x06044A2A RID: 281130 RVA: 0x010F0439 File Offset: 0x010EE639
+		// Token: 0x0603AB8E RID: 240526 RVA: 0x0109A685 File Offset: 0x01098885
 		private void InputEnd()
 		{
 			this.IsInputBegin = false;
@@ -336,29 +336,29 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.View
 			ItemInspectController.Instance.EndDragInteraction();
 		}
 
-		// Token: 0x04023B37 RID: 146231
+		// Token: 0x0401EDD9 RID: 126425
 		private readonly Vector2D TempInput = Vector2D.Create();
 
-		// Token: 0x04023B38 RID: 146232
+		// Token: 0x0401EDDA RID: 126426
 		[Nullable(2)]
 		private UUIDraggableComponent DragComponent;
 
-		// Token: 0x04023B39 RID: 146233
+		// Token: 0x0401EDDB RID: 126427
 		private bool IsInputEnable;
 
-		// Token: 0x04023B3A RID: 146234
+		// Token: 0x0401EDDC RID: 126428
 		private bool IsInputBegin;
 
-		// Token: 0x04023B3B RID: 146235
+		// Token: 0x0401EDDD RID: 126429
 		private bool HasBindGamepadInput;
 
-		// Token: 0x04023B3C RID: 146236
+		// Token: 0x0401EDDE RID: 126430
 		private float LookUpValue;
 
-		// Token: 0x04023B3D RID: 146237
+		// Token: 0x0401EDDF RID: 126431
 		private float TurnValue;
 
-		// Token: 0x04023B3E RID: 146238
+		// Token: 0x0401EDE0 RID: 126432
 		private readonly Vector2D DragStickInput = Vector2D.Create();
 	}
 }

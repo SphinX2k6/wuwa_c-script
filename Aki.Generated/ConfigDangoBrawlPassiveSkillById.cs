@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020001D7 RID: 471
+	// Token: 0x020001E9 RID: 489
 	public class ConfigDangoBrawlPassiveSkillById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000B0D RID: 2829 RVA: 0x00098094 File Offset: 0x00096294
+		// Token: 0x06000B79 RID: 2937 RVA: 0x0009DFCC File Offset: 0x0009C1CC
 		static ConfigDangoBrawlPassiveSkillById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDangoBrawlPassiveSkillById.CreateStaticDefaultValue), new Action(ConfigDangoBrawlPassiveSkillById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000B0E RID: 2830 RVA: 0x000980B4 File Offset: 0x000962B4
+		// Token: 0x06000B7A RID: 2938 RVA: 0x0009DFEC File Offset: 0x0009C1EC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDangoBrawlPassiveSkillById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000B0F RID: 2831 RVA: 0x00098133 File Offset: 0x00096333
+		// Token: 0x06000B7B RID: 2939 RVA: 0x0009E06B File Offset: 0x0009C26B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDangoBrawlPassiveSkillById.LogPair = null;
 			ConfigDangoBrawlPassiveSkillById.HandleId = 0;
 		}
 
-		// Token: 0x06000B10 RID: 2832 RVA: 0x00098141 File Offset: 0x00096341
+		// Token: 0x06000B7C RID: 2940 RVA: 0x0009E079 File Offset: 0x0009C279
 		public static void Init()
 		{
 			ConfigDangoBrawlPassiveSkillById.HandleId = ConfigCommon.InitDataStatement(ConfigDangoBrawlPassiveSkillById.HandleId, "db_dangobrawl.db", "select BinData from `DangoBrawlPassiveSkill` where Id=?");
 		}
 
-		// Token: 0x06000B11 RID: 2833 RVA: 0x0009815C File Offset: 0x0009635C
+		// Token: 0x06000B7D RID: 2941 RVA: 0x0009E094 File Offset: 0x0009C294
 		public static DangoBrawlPassiveSkill? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigDangoBrawlPassiveSkillById.HandleId, ConfigDangoBrawlPassiveSkillById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new DangoBrawlPassiveSkill?(rootAsDangoBrawlPassiveSkill);
 		}
 
-		// Token: 0x04000CC5 RID: 3269
+		// Token: 0x04000D43 RID: 3395
 		private const string DB = "db_dangobrawl.db";
 
-		// Token: 0x04000CC6 RID: 3270
+		// Token: 0x04000D44 RID: 3396
 		private const string FILE = "t.团子乱斗战斗.xlsx";
 
-		// Token: 0x04000CC7 RID: 3271
+		// Token: 0x04000D45 RID: 3397
 		private const string TABLE = "DangoBrawlPassiveSkill";
 
-		// Token: 0x04000CC8 RID: 3272
+		// Token: 0x04000D46 RID: 3398
 		private const string COMMAND = "select BinData from `DangoBrawlPassiveSkill` where Id=?";
 
-		// Token: 0x04000CC9 RID: 3273
+		// Token: 0x04000D47 RID: 3399
 		private const string KEY_PREFIX = "DangoBrawlPassiveSkillById";
 
-		// Token: 0x04000CCA RID: 3274
+		// Token: 0x04000D48 RID: 3400
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000CCB RID: 3275
+		// Token: 0x04000D49 RID: 3401
 		private static int HandleId;
 	}
 }

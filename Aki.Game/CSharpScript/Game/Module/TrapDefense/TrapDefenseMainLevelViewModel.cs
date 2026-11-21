@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A87 RID: 19079
+	// Token: 0x02003A2F RID: 14895
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseMainLevelViewModel
 	{
-		// Token: 0x0603174E RID: 202574 RVA: 0x00B76746 File Offset: 0x00B74946
+		// Token: 0x060264DE RID: 156894 RVA: 0x00ABA6FA File Offset: 0x00AB88FA
 		public static TrapDefenseMainLevelViewModel Create(TrapDefenseModel model)
 		{
 			return new TrapDefenseMainLevelViewModel
@@ -17,46 +17,46 @@ namespace CSharpScript.Game.Module.TrapDefense
 			};
 		}
 
-		// Token: 0x0603174F RID: 202575 RVA: 0x00B76754 File Offset: 0x00B74954
+		// Token: 0x060264DF RID: 156895 RVA: 0x00ABA708 File Offset: 0x00AB8908
 		private TrapDefenseMainLevelViewModel()
 		{
 		}
 
-		// Token: 0x06031750 RID: 202576 RVA: 0x00B7675C File Offset: 0x00B7495C
+		// Token: 0x060264E0 RID: 156896 RVA: 0x00ABA710 File Offset: 0x00AB8910
 		public void OnViewClose()
 		{
 		}
 
-		// Token: 0x06031751 RID: 202577 RVA: 0x00B7675E File Offset: 0x00B7495E
+		// Token: 0x060264E1 RID: 156897 RVA: 0x00ABA712 File Offset: 0x00AB8912
 		public void SetJumpDifficulty(ETrapDefenseDifficultyLevel? difficulty)
 		{
 			this.JumpDifficulty = difficulty;
 		}
 
-		// Token: 0x06031752 RID: 202578 RVA: 0x00B76768 File Offset: 0x00B74968
+		// Token: 0x060264E2 RID: 156898 RVA: 0x00ABA71C File Offset: 0x00AB891C
 		public void SetJumpLevelData(int? id)
 		{
 			TrapDefenseLevelData trapDefenseLevelData;
 			this.JumpLevelData = (this.Model.LevelDataFromIdMap.TryGetValue(id.GetValueOrDefault(), out trapDefenseLevelData) ? trapDefenseLevelData : null);
 		}
 
-		// Token: 0x06031753 RID: 202579 RVA: 0x00B7679A File Offset: 0x00B7499A
+		// Token: 0x060264E3 RID: 156899 RVA: 0x00ABA74E File Offset: 0x00AB894E
 		public void SetIsInstance(bool isInstance)
 		{
 			this.IsInstance = isInstance;
 		}
 
-		// Token: 0x0401A725 RID: 108325
+		// Token: 0x04015077 RID: 86135
 		public TrapDefenseModel Model;
 
-		// Token: 0x0401A726 RID: 108326
+		// Token: 0x04015078 RID: 86136
 		public ETrapDefenseDifficultyLevel? JumpDifficulty;
 
-		// Token: 0x0401A727 RID: 108327
+		// Token: 0x04015079 RID: 86137
 		[Nullable(2)]
 		public TrapDefenseLevelData JumpLevelData;
 
-		// Token: 0x0401A728 RID: 108328
+		// Token: 0x0401507A RID: 86138
 		public bool IsInstance;
 	}
 }

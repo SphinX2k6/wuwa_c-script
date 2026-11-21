@@ -2,18 +2,18 @@
 
 namespace CSharpScript.Game.Module.QuickTimeAction
 {
-	// Token: 0x02004F2E RID: 20270
+	// Token: 0x02003EF7 RID: 16119
 	public enum EQtaState
 	{
-		// Token: 0x0401B9DF RID: 113119
+		// Token: 0x040163B4 RID: 91060
 		Pending,
-		// Token: 0x0401B9E0 RID: 113120
+		// Token: 0x040163B5 RID: 91061
 		PendingEnd,
-		// Token: 0x0401B9E1 RID: 113121
+		// Token: 0x040163B6 RID: 91062
 		PendingSuccess,
-		// Token: 0x0401B9E2 RID: 113122
+		// Token: 0x040163B7 RID: 91063
 		Ended,
-		// Token: 0x0401B9E3 RID: 113123
+		// Token: 0x040163B8 RID: 91064
 		Invalid
 	}
 }

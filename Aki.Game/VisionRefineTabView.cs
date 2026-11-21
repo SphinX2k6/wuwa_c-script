@@ -11,14 +11,14 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200177A RID: 6010
+// Token: 0x02000C33 RID: 3123
 [NullableContext(1)]
 [Nullable(0)]
 public class VisionRefineTabView : UiTabViewBase
 {
-	// Token: 0x17000E7A RID: 3706
-	// (get) Token: 0x0600AE48 RID: 44616 RVA: 0x002744AC File Offset: 0x002726AC
-	// (set) Token: 0x0600AE49 RID: 44617 RVA: 0x0027451C File Offset: 0x0027271C
+	// Token: 0x17000E9D RID: 3741
+	// (get) Token: 0x0600822F RID: 33327 RVA: 0x0027E970 File Offset: 0x0027CB70
+	// (set) Token: 0x06008230 RID: 33328 RVA: 0x0027E9E0 File Offset: 0x0027CBE0
 	[Nullable(2)]
 	private IRefineAttrItemData SelectMainAttribute
 	{
@@ -65,8 +65,8 @@ public class VisionRefineTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x17000E7B RID: 3707
-	// (get) Token: 0x0600AE4A RID: 44618 RVA: 0x0027459D File Offset: 0x0027279D
+	// Token: 0x17000E9E RID: 3742
+	// (get) Token: 0x06008231 RID: 33329 RVA: 0x0027EA61 File Offset: 0x0027CC61
 	[Nullable(2)]
 	private PhantomItemData SelectedVision
 	{
@@ -86,8 +86,8 @@ public class VisionRefineTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x17000E7C RID: 3708
-	// (get) Token: 0x0600AE4B RID: 44619 RVA: 0x002745BC File Offset: 0x002727BC
+	// Token: 0x17000E9F RID: 3743
+	// (get) Token: 0x06008232 RID: 33330 RVA: 0x0027EA80 File Offset: 0x0027CC80
 	[Nullable(new byte[]
 	{
 		2,
@@ -120,8 +120,8 @@ public class VisionRefineTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x17000E7D RID: 3709
-	// (get) Token: 0x0600AE4C RID: 44620 RVA: 0x002745F3 File Offset: 0x002727F3
+	// Token: 0x17000EA0 RID: 3744
+	// (get) Token: 0x06008233 RID: 33331 RVA: 0x0027EAB7 File Offset: 0x0027CCB7
 	[Nullable(2)]
 	private IVisionRefineTabViewParam ExtraParamsExactly
 	{
@@ -136,7 +136,7 @@ public class VisionRefineTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AE4D RID: 44621 RVA: 0x0027460C File Offset: 0x0027280C
+	// Token: 0x06008234 RID: 33332 RVA: 0x0027EAD0 File Offset: 0x0027CCD0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -175,7 +175,7 @@ public class VisionRefineTabView : UiTabViewBase
 		};
 	}
 
-	// Token: 0x0600AE4E RID: 44622 RVA: 0x002748B0 File Offset: 0x00272AB0
+	// Token: 0x06008235 RID: 33333 RVA: 0x0027ED74 File Offset: 0x0027CF74
 	protected override UniTask OnBeforeStartAsync()
 	{
 		VisionRefineTabView.<OnBeforeStartAsync>d__30 <OnBeforeStartAsync>d__;
@@ -186,7 +186,7 @@ public class VisionRefineTabView : UiTabViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600AE4F RID: 44623 RVA: 0x002748F4 File Offset: 0x00272AF4
+	// Token: 0x06008236 RID: 33334 RVA: 0x0027EDB8 File Offset: 0x0027CFB8
 	private UniTask InitMainSlotItemAsync()
 	{
 		VisionRefineTabView.<InitMainSlotItemAsync>d__31 <InitMainSlotItemAsync>d__;
@@ -197,7 +197,7 @@ public class VisionRefineTabView : UiTabViewBase
 		return <InitMainSlotItemAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600AE50 RID: 44624 RVA: 0x00274938 File Offset: 0x00272B38
+	// Token: 0x06008237 RID: 33335 RVA: 0x0027EDFC File Offset: 0x0027CFFC
 	private UniTask InitSubSlotItemAsync()
 	{
 		VisionRefineTabView.<InitSubSlotItemAsync>d__32 <InitSubSlotItemAsync>d__;
@@ -208,7 +208,7 @@ public class VisionRefineTabView : UiTabViewBase
 		return <InitSubSlotItemAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600AE51 RID: 44625 RVA: 0x0027497C File Offset: 0x00272B7C
+	// Token: 0x06008238 RID: 33336 RVA: 0x0027EE40 File Offset: 0x0027D040
 	private UniTask InitChoosePanelAsync()
 	{
 		VisionRefineTabView.<InitChoosePanelAsync>d__33 <InitChoosePanelAsync>d__;
@@ -219,7 +219,7 @@ public class VisionRefineTabView : UiTabViewBase
 		return <InitChoosePanelAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600AE52 RID: 44626 RVA: 0x002749C0 File Offset: 0x00272BC0
+	// Token: 0x06008239 RID: 33337 RVA: 0x0027EE84 File Offset: 0x0027D084
 	private UniTask InitSingleAttributePanelAsync()
 	{
 		VisionRefineTabView.<InitSingleAttributePanelAsync>d__34 <InitSingleAttributePanelAsync>d__;
@@ -230,7 +230,7 @@ public class VisionRefineTabView : UiTabViewBase
 		return <InitSingleAttributePanelAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600AE53 RID: 44627 RVA: 0x00274A04 File Offset: 0x00272C04
+	// Token: 0x0600823A RID: 33338 RVA: 0x0027EEC8 File Offset: 0x0027D0C8
 	private UniTask InitMultiAttributePanelAsync()
 	{
 		VisionRefineTabView.<InitMultiAttributePanelAsync>d__35 <InitMultiAttributePanelAsync>d__;
@@ -241,7 +241,7 @@ public class VisionRefineTabView : UiTabViewBase
 		return <InitMultiAttributePanelAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600AE54 RID: 44628 RVA: 0x00274A48 File Offset: 0x00272C48
+	// Token: 0x0600823B RID: 33339 RVA: 0x0027EF0C File Offset: 0x0027D10C
 	private UniTask InitCostItemAsync()
 	{
 		VisionRefineTabView.<InitCostItemAsync>d__36 <InitCostItemAsync>d__;
@@ -252,7 +252,7 @@ public class VisionRefineTabView : UiTabViewBase
 		return <InitCostItemAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600AE55 RID: 44629 RVA: 0x00274A8C File Offset: 0x00272C8C
+	// Token: 0x0600823C RID: 33340 RVA: 0x0027EF50 File Offset: 0x0027D150
 	private UniTask InitUpLeftTabAsync()
 	{
 		VisionRefineTabView.<InitUpLeftTabAsync>d__37 <InitUpLeftTabAsync>d__;
@@ -263,7 +263,7 @@ public class VisionRefineTabView : UiTabViewBase
 		return <InitUpLeftTabAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600AE56 RID: 44630 RVA: 0x00274AD0 File Offset: 0x00272CD0
+	// Token: 0x0600823D RID: 33341 RVA: 0x0027EF94 File Offset: 0x0027D194
 	private UniTask InitSubVerticalAsync()
 	{
 		VisionRefineTabView.<InitSubVerticalAsync>d__38 <InitSubVerticalAsync>d__;
@@ -274,7 +274,7 @@ public class VisionRefineTabView : UiTabViewBase
 		return <InitSubVerticalAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600AE57 RID: 44631 RVA: 0x00274B14 File Offset: 0x00272D14
+	// Token: 0x0600823E RID: 33342 RVA: 0x0027EFD8 File Offset: 0x0027D1D8
 	private UniTask LoadRefineSubUpperVertAsync()
 	{
 		VisionRefineTabView.<LoadRefineSubUpperVertAsync>d__39 <LoadRefineSubUpperVertAsync>d__;
@@ -285,7 +285,7 @@ public class VisionRefineTabView : UiTabViewBase
 		return <LoadRefineSubUpperVertAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600AE58 RID: 44632 RVA: 0x00274B58 File Offset: 0x00272D58
+	// Token: 0x0600823F RID: 33343 RVA: 0x0027F01C File Offset: 0x0027D21C
 	private UniTask InitRefineMainGridAsync()
 	{
 		VisionRefineTabView.<InitRefineMainGridAsync>d__40 <InitRefineMainGridAsync>d__;
@@ -296,7 +296,7 @@ public class VisionRefineTabView : UiTabViewBase
 		return <InitRefineMainGridAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600AE59 RID: 44633 RVA: 0x00274B9C File Offset: 0x00272D9C
+	// Token: 0x06008240 RID: 33344 RVA: 0x0027F060 File Offset: 0x0027D260
 	private UniTask InitInvalidTipsAsync()
 	{
 		VisionRefineTabView.<InitInvalidTipsAsync>d__41 <InitInvalidTipsAsync>d__;
@@ -307,19 +307,19 @@ public class VisionRefineTabView : UiTabViewBase
 		return <InitInvalidTipsAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600AE5A RID: 44634 RVA: 0x00274BDF File Offset: 0x00272DDF
+	// Token: 0x06008241 RID: 33345 RVA: 0x0027F0A3 File Offset: 0x0027D2A3
 	private VisionRefineMaterialItem InitMaterialItem()
 	{
 		return new VisionRefineMaterialItem();
 	}
 
-	// Token: 0x0600AE5B RID: 44635 RVA: 0x00274BE6 File Offset: 0x00272DE6
+	// Token: 0x06008242 RID: 33346 RVA: 0x0027F0AA File Offset: 0x0027D2AA
 	private VisionRefineRefineTab InitUpLeftTabItem()
 	{
 		return new VisionRefineRefineTab();
 	}
 
-	// Token: 0x0600AE5C RID: 44636 RVA: 0x00274BED File Offset: 0x00272DED
+	// Token: 0x06008243 RID: 33347 RVA: 0x0027F0B1 File Offset: 0x0027D2B1
 	private VisionRefineAttributeItem InitSingleVerticalItem()
 	{
 		return new VisionRefineAttributeItem
@@ -329,7 +329,7 @@ public class VisionRefineTabView : UiTabViewBase
 		};
 	}
 
-	// Token: 0x0600AE5D RID: 44637 RVA: 0x00274C18 File Offset: 0x00272E18
+	// Token: 0x06008244 RID: 33348 RVA: 0x0027F0DC File Offset: 0x0027D2DC
 	private VisionRefineSlotItem InitRefineMainGridItem()
 	{
 		return new VisionRefineSlotItem(new Action<bool, int>(this.OnClickRefineMainGrid))
@@ -339,7 +339,7 @@ public class VisionRefineTabView : UiTabViewBase
 		};
 	}
 
-	// Token: 0x0600AE5E RID: 44638 RVA: 0x00274C50 File Offset: 0x00272E50
+	// Token: 0x06008245 RID: 33349 RVA: 0x0027F114 File Offset: 0x0027D314
 	protected override void OnStart()
 	{
 		this.SetCaptionItem(false, null);
@@ -354,7 +354,7 @@ public class VisionRefineTabView : UiTabViewBase
 		this.ClearSelectMainAttribute();
 	}
 
-	// Token: 0x0600AE5F RID: 44639 RVA: 0x00274CB8 File Offset: 0x00272EB8
+	// Token: 0x06008246 RID: 33350 RVA: 0x0027F17C File Offset: 0x0027D37C
 	protected override void AddEventListener()
 	{
 		EventSystem.Instance.Add<PhantomPolishResponse>(EEventName.OnVisionRefineResult, new Action<PhantomPolishResponse>(this.OnResponseVisionRefine));
@@ -365,7 +365,7 @@ public class VisionRefineTabView : UiTabViewBase
 		EventSystem.Instance.Add<int, int>(EEventName.OnPhantomStackMerge, new Action<int, int>(this.OnPhantomStackMerge));
 	}
 
-	// Token: 0x0600AE60 RID: 44640 RVA: 0x00274D70 File Offset: 0x00272F70
+	// Token: 0x06008247 RID: 33351 RVA: 0x0027F234 File Offset: 0x0027D434
 	private void OnPhantomStackMerge(int mergedIncrId, int representativeIncrId)
 	{
 		VisionRefineChoosePanel choosePanel = this.ChoosePanel;
@@ -384,7 +384,7 @@ public class VisionRefineTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AE61 RID: 44641 RVA: 0x00274DC4 File Offset: 0x00272FC4
+	// Token: 0x06008248 RID: 33352 RVA: 0x0027F288 File Offset: 0x0027D488
 	protected override void OnShowUiTabViewFromToggle()
 	{
 		if (this.ExtraParamsExactly == null)
@@ -424,7 +424,7 @@ public class VisionRefineTabView : UiTabViewBase
 		this.SetViewState(extraParamsExactly.ViewState, true);
 	}
 
-	// Token: 0x0600AE62 RID: 44642 RVA: 0x00274ECA File Offset: 0x002730CA
+	// Token: 0x06008249 RID: 33353 RVA: 0x0027F38E File Offset: 0x0027D58E
 	protected override void OnBeforeShow()
 	{
 		this.HasInitChoosePanel = false;
@@ -441,13 +441,13 @@ public class VisionRefineTabView : UiTabViewBase
 		this.RefreshCostItemList();
 	}
 
-	// Token: 0x0600AE63 RID: 44643 RVA: 0x00274EFF File Offset: 0x002730FF
+	// Token: 0x0600824A RID: 33354 RVA: 0x0027F3C3 File Offset: 0x0027D5C3
 	protected override void OnAfterShow()
 	{
 		PhantomBattleModel.Instance.RecordVisionRefineRedDot(false);
 	}
 
-	// Token: 0x0600AE64 RID: 44644 RVA: 0x00274F0C File Offset: 0x0027310C
+	// Token: 0x0600824B RID: 33355 RVA: 0x0027F3D0 File Offset: 0x0027D5D0
 	protected override void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove<PhantomPolishResponse>(EEventName.OnVisionRefineResult, new Action<PhantomPolishResponse>(this.OnResponseVisionRefine));
@@ -458,7 +458,7 @@ public class VisionRefineTabView : UiTabViewBase
 		EventSystem.Instance.Remove(EEventName.OnPhantomStackMerge, new Action<int, int>(this.OnPhantomStackMerge));
 	}
 
-	// Token: 0x0600AE65 RID: 44645 RVA: 0x00274FC4 File Offset: 0x002731C4
+	// Token: 0x0600824C RID: 33356 RVA: 0x0027F488 File Offset: 0x0027D688
 	private void RefreshChoosePanel()
 	{
 		if (this.ExtraParamsExactly != null && this.ExtraParamsExactly.IsSingleMode.GetValueOrDefault())
@@ -470,7 +470,7 @@ public class VisionRefineTabView : UiTabViewBase
 		this.ChoosePanel.RefreshList(phantomItemDataList);
 	}
 
-	// Token: 0x0600AE66 RID: 44646 RVA: 0x00275010 File Offset: 0x00273210
+	// Token: 0x0600824D RID: 33357 RVA: 0x0027F4D4 File Offset: 0x0027D6D4
 	private void SetViewState(ERefineViewState newState, bool force = false)
 	{
 		ERefineViewState? stateView = this.StateView;
@@ -534,7 +534,7 @@ public class VisionRefineTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AE67 RID: 44647 RVA: 0x00275158 File Offset: 0x00273358
+	// Token: 0x0600824E RID: 33358 RVA: 0x0027F61C File Offset: 0x0027D81C
 	private void ShowChooseState(ERefineViewState oldState)
 	{
 		if (!this.HasInitChoosePanel)
@@ -556,7 +556,7 @@ public class VisionRefineTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AE68 RID: 44648 RVA: 0x00275210 File Offset: 0x00273410
+	// Token: 0x0600824F RID: 33359 RVA: 0x0027F6D4 File Offset: 0x0027D8D4
 	private void ShowRootState(ERefineViewState oldState)
 	{
 		if (oldState == ERefineViewState.Choose)
@@ -575,7 +575,7 @@ public class VisionRefineTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AE69 RID: 44649 RVA: 0x002752CC File Offset: 0x002734CC
+	// Token: 0x06008250 RID: 33360 RVA: 0x0027F790 File Offset: 0x0027D990
 	private void ShowAttributeState(ERefineViewState oldState)
 	{
 		this.SetCaptionItem(true, new bool?(oldState == ERefineViewState.Root));
@@ -593,7 +593,7 @@ public class VisionRefineTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AE6A RID: 44650 RVA: 0x00275374 File Offset: 0x00273574
+	// Token: 0x06008251 RID: 33361 RVA: 0x0027F838 File Offset: 0x0027DA38
 	private void RefreshSlotInteractive()
 	{
 		bool btnInteractive = true;
@@ -608,7 +608,7 @@ public class VisionRefineTabView : UiTabViewBase
 		((this.CurrentRefineType == EVisionRefineRefineType.Main) ? this.RefineMainSlotItem : this.RefineSubSlotItem).SetBtnInteractive(btnInteractive);
 	}
 
-	// Token: 0x0600AE6B RID: 44651 RVA: 0x002753CD File Offset: 0x002735CD
+	// Token: 0x06008252 RID: 33362 RVA: 0x0027F891 File Offset: 0x0027DA91
 	private void RefreshSlotPanel()
 	{
 		this.RefreshSlotPanelMain();
@@ -617,7 +617,7 @@ public class VisionRefineTabView : UiTabViewBase
 		this.RefreshCurrency();
 	}
 
-	// Token: 0x0600AE6C RID: 44652 RVA: 0x002753E8 File Offset: 0x002735E8
+	// Token: 0x06008253 RID: 33363 RVA: 0x0027F8AC File Offset: 0x0027DAAC
 	private void RefreshCurrency()
 	{
 		if (this.ExtraParamsExactly != null && this.ExtraParamsExactly.IsSingleMode.GetValueOrDefault())
@@ -649,7 +649,7 @@ public class VisionRefineTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AE6D RID: 44653 RVA: 0x00275464 File Offset: 0x00273664
+	// Token: 0x06008254 RID: 33364 RVA: 0x0027F928 File Offset: 0x0027DB28
 	private List<int> BuildItemListForCurrency()
 	{
 		List<int> list = new List<int>();
@@ -689,7 +689,7 @@ public class VisionRefineTabView : UiTabViewBase
 		return list;
 	}
 
-	// Token: 0x0600AE6E RID: 44654 RVA: 0x0027553C File Offset: 0x0027373C
+	// Token: 0x06008255 RID: 33365 RVA: 0x0027FA00 File Offset: 0x0027DC00
 	private void RefreshInvalidTip()
 	{
 		if (this.CurrentRefineType == EVisionRefineRefineType.Main)
@@ -703,7 +703,7 @@ public class VisionRefineTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AE6F RID: 44655 RVA: 0x0027555C File Offset: 0x0027375C
+	// Token: 0x06008256 RID: 33366 RVA: 0x0027FA20 File Offset: 0x0027DC20
 	private void RefreshInvalidTipMain()
 	{
 		VisionRefineChoosePanel choosePanel = this.ChoosePanel;
@@ -775,7 +775,7 @@ public class VisionRefineTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AE70 RID: 44656 RVA: 0x002756A8 File Offset: 0x002738A8
+	// Token: 0x06008257 RID: 33367 RVA: 0x0027FB6C File Offset: 0x0027DD6C
 	private void RefreshInvalidTipSub()
 	{
 		if (this.SelectedVision != null)
@@ -819,7 +819,7 @@ public class VisionRefineTabView : UiTabViewBase
 		button2.RootUIComp.Get().SetUIActive(true);
 	}
 
-	// Token: 0x0600AE71 RID: 44657 RVA: 0x00275774 File Offset: 0x00273974
+	// Token: 0x06008258 RID: 33368 RVA: 0x0027FC38 File Offset: 0x0027DE38
 	private void RefreshSlotPanelMain()
 	{
 		if (this.CurrentRefineType == EVisionRefineRefineType.Main)
@@ -849,7 +849,7 @@ public class VisionRefineTabView : UiTabViewBase
 		refineMainSingleAttributePanel.SetActive(false);
 	}
 
-	// Token: 0x0600AE72 RID: 44658 RVA: 0x002757E4 File Offset: 0x002739E4
+	// Token: 0x06008259 RID: 33369 RVA: 0x0027FCA8 File Offset: 0x0027DEA8
 	private void RefreshMainViewStates()
 	{
 		UUIItem item = base.GetItem(21);
@@ -878,7 +878,7 @@ public class VisionRefineTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AE73 RID: 44659 RVA: 0x0027587C File Offset: 0x00273A7C
+	// Token: 0x0600825A RID: 33370 RVA: 0x0027FD40 File Offset: 0x0027DF40
 	private void RefreshMainSingleAttributePanel()
 	{
 		bool flag = this.StateView.GetValueOrDefault() == ERefineViewState.Attribute && this.ExtraParamsExactly != null;
@@ -917,7 +917,7 @@ public class VisionRefineTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AE74 RID: 44660 RVA: 0x0027593C File Offset: 0x00273B3C
+	// Token: 0x0600825B RID: 33371 RVA: 0x0027FE00 File Offset: 0x0027E000
 	private void RefreshMainGrid()
 	{
 		GenericLayout<VisionRefineSlotItem, VisionRefineSlotItemData> refineMainGrid = this.RefineMainGrid;
@@ -963,7 +963,7 @@ public class VisionRefineTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AE75 RID: 44661 RVA: 0x00275A84 File Offset: 0x00273C84
+	// Token: 0x0600825C RID: 33372 RVA: 0x0027FF48 File Offset: 0x0027E148
 	private void RefreshMainSlotItem()
 	{
 		this.RefreshSlotInteractive();
@@ -976,7 +976,7 @@ public class VisionRefineTabView : UiTabViewBase
 		this.RefreshSlotItem(null, true);
 	}
 
-	// Token: 0x0600AE76 RID: 44662 RVA: 0x00275AD4 File Offset: 0x00273CD4
+	// Token: 0x0600825D RID: 33373 RVA: 0x0027FF98 File Offset: 0x0027E198
 	private void RefreshMainMaterial()
 	{
 		UUIItem item = base.GetItem(3);
@@ -1040,7 +1040,7 @@ public class VisionRefineTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AE77 RID: 44663 RVA: 0x00275C78 File Offset: 0x00273E78
+	// Token: 0x0600825E RID: 33374 RVA: 0x0028013C File Offset: 0x0027E33C
 	private void RefreshSlotPanelSub()
 	{
 		if (this.CurrentRefineType == EVisionRefineRefineType.Sub)
@@ -1064,7 +1064,7 @@ public class VisionRefineTabView : UiTabViewBase
 		item2.SetUIActive(false);
 	}
 
-	// Token: 0x0600AE78 RID: 44664 RVA: 0x00275CD0 File Offset: 0x00273ED0
+	// Token: 0x0600825F RID: 33375 RVA: 0x00280194 File Offset: 0x0027E394
 	private void RefreshMaterialPanel()
 	{
 		ERefineViewState? stateView = this.StateView;
@@ -1118,7 +1118,7 @@ public class VisionRefineTabView : UiTabViewBase
 		item4.SetUIActive(false);
 	}
 
-	// Token: 0x0600AE79 RID: 44665 RVA: 0x00275E18 File Offset: 0x00274018
+	// Token: 0x06008260 RID: 33376 RVA: 0x002802DC File Offset: 0x0027E4DC
 	private void RefreshSubAttributePanel()
 	{
 		bool flag = this.StateView.GetValueOrDefault() == ERefineViewState.Choose || this.SelectedVision != null;
@@ -1152,7 +1152,7 @@ public class VisionRefineTabView : UiTabViewBase
 		item2.SetUIActive(flag && this.StateView.GetValueOrDefault() != ERefineViewState.Attribute);
 	}
 
-	// Token: 0x0600AE7A RID: 44666 RVA: 0x00275EC8 File Offset: 0x002740C8
+	// Token: 0x06008261 RID: 33377 RVA: 0x0028038C File Offset: 0x0027E58C
 	private void RefreshSubSlot()
 	{
 		if (this.SelectedVision != null)
@@ -1167,7 +1167,7 @@ public class VisionRefineTabView : UiTabViewBase
 		this.RefreshCostItemList();
 	}
 
-	// Token: 0x0600AE7B RID: 44667 RVA: 0x00275F18 File Offset: 0x00274118
+	// Token: 0x06008262 RID: 33378 RVA: 0x002803DC File Offset: 0x0027E5DC
 	private void RefreshSlotItem(int? uid, bool isConfirm)
 	{
 		VisionRefineSlotItem visionRefineSlotItem = (this.CurrentRefineType == EVisionRefineRefineType.Main) ? this.RefineMainSlotItem : this.RefineSubSlotItem;
@@ -1181,7 +1181,7 @@ public class VisionRefineTabView : UiTabViewBase
 		visionRefineSlotItem.RefreshByData(phantomItemData, isConfirm, phantomDataBase.GetCost());
 	}
 
-	// Token: 0x0600AE7C RID: 44668 RVA: 0x00275F80 File Offset: 0x00274180
+	// Token: 0x06008263 RID: 33379 RVA: 0x00280444 File Offset: 0x0027E644
 	private void RefreshCost(Dictionary<int, int> materialCost)
 	{
 		if (materialCost.Count == 1)
@@ -1203,7 +1203,7 @@ public class VisionRefineTabView : UiTabViewBase
 		Log.Instance.Error(ELogModule.Calabash, ELogAuthor.CB, "检查数据重构的材料消耗配置，目前只展示一个材料消耗", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x0600AE7D RID: 44669 RVA: 0x00276010 File Offset: 0x00274210
+	// Token: 0x06008264 RID: 33380 RVA: 0x002804D4 File Offset: 0x0027E6D4
 	private void OnSequenceTabStart(string sequenceName)
 	{
 		if (sequenceName == "Start".ToString() || sequenceName == "ShowView".ToString() || sequenceName == "Sle".ToString())
@@ -1212,7 +1212,7 @@ public class VisionRefineTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AE7E RID: 44670 RVA: 0x00276068 File Offset: 0x00274268
+	// Token: 0x06008265 RID: 33381 RVA: 0x0028052C File Offset: 0x0027E72C
 	private void OnSequenceTabFinish(string sequenceName)
 	{
 		if (sequenceName == "Start".ToString() || sequenceName == "ShowView".ToString() || sequenceName == "Sle".ToString())
@@ -1221,21 +1221,21 @@ public class VisionRefineTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AE7F RID: 44671 RVA: 0x002760C0 File Offset: 0x002742C0
+	// Token: 0x06008266 RID: 33382 RVA: 0x00280584 File Offset: 0x0027E784
 	private void OnSequenceHideFinish(string _)
 	{
 		this.ChoosePanel.SetActive(false);
 		this.ChoosePanel.UiViewSequence.RemoveSequenceFinishEvent("SwitchB", new Action<string>(this.OnSequenceHideFinish));
 	}
 
-	// Token: 0x0600AE80 RID: 44672 RVA: 0x002760EF File Offset: 0x002742EF
+	// Token: 0x06008267 RID: 33383 RVA: 0x002805B3 File Offset: 0x0027E7B3
 	private void OnSequenceConfirmFinish(string _)
 	{
 		this.ChoosePanel.SetActive(false);
 		this.UiViewSequence.RemoveSequenceFinishEvent("SwitchB_1", new Action<string>(this.OnSequenceConfirmFinish));
 	}
 
-	// Token: 0x0600AE81 RID: 44673 RVA: 0x00276119 File Offset: 0x00274319
+	// Token: 0x06008268 RID: 33384 RVA: 0x002805DD File Offset: 0x0027E7DD
 	[NullableContext(2)]
 	private void OnChangeSelection(PhantomItemData selectedData)
 	{
@@ -1243,7 +1243,7 @@ public class VisionRefineTabView : UiTabViewBase
 		this.RefreshSlotPanel();
 	}
 
-	// Token: 0x0600AE82 RID: 44674 RVA: 0x0027612C File Offset: 0x0027432C
+	// Token: 0x06008269 RID: 33385 RVA: 0x002805F0 File Offset: 0x0027E7F0
 	private void OnChangeMultiSelection([Nullable(new byte[]
 	{
 		2,
@@ -1253,7 +1253,7 @@ public class VisionRefineTabView : UiTabViewBase
 		this.RefreshSlotPanel();
 	}
 
-	// Token: 0x0600AE83 RID: 44675 RVA: 0x00276134 File Offset: 0x00274334
+	// Token: 0x0600826A RID: 33386 RVA: 0x002805F8 File Offset: 0x0027E7F8
 	public bool OnClickCloseRoot()
 	{
 		if (this.StateView.GetValueOrDefault() == ERefineViewState.Attribute)
@@ -1264,7 +1264,7 @@ public class VisionRefineTabView : UiTabViewBase
 		return false;
 	}
 
-	// Token: 0x0600AE84 RID: 44676 RVA: 0x0027614F File Offset: 0x0027434F
+	// Token: 0x0600826B RID: 33387 RVA: 0x00280613 File Offset: 0x0027E813
 	[NullableContext(2)]
 	private void OnClickConfirm(IRefineAttrItemData data)
 	{
@@ -1273,7 +1273,7 @@ public class VisionRefineTabView : UiTabViewBase
 		this.RefreshChoosePanel();
 	}
 
-	// Token: 0x0600AE85 RID: 44677 RVA: 0x00276164 File Offset: 0x00274364
+	// Token: 0x0600826C RID: 33388 RVA: 0x00280628 File Offset: 0x0027E828
 	private int[] GetSelectedPropItemIdList()
 	{
 		List<int> list = new List<int>();
@@ -1289,14 +1289,14 @@ public class VisionRefineTabView : UiTabViewBase
 		return list.ToArray();
 	}
 
-	// Token: 0x0600AE86 RID: 44678 RVA: 0x002761F0 File Offset: 0x002743F0
+	// Token: 0x0600826D RID: 33389 RVA: 0x002806B4 File Offset: 0x0027E8B4
 	private void OnCostTabChangeCallback()
 	{
 		this.RefineMainMultiAttributePanel.RefreshItemSwitch(null);
 		this.RefreshSlotPanel();
 	}
 
-	// Token: 0x0600AE87 RID: 44679 RVA: 0x00276204 File Offset: 0x00274404
+	// Token: 0x0600826E RID: 33390 RVA: 0x002806C8 File Offset: 0x0027E8C8
 	private int? OnGetMainPropItemIdCallback()
 	{
 		IRefineAttrItemData selectMainAttribute = this.SelectMainAttribute;
@@ -1307,20 +1307,20 @@ public class VisionRefineTabView : UiTabViewBase
 		return new int?(selectMainAttribute.PropItemId);
 	}
 
-	// Token: 0x0600AE88 RID: 44680 RVA: 0x0027622F File Offset: 0x0027442F
+	// Token: 0x0600826F RID: 33391 RVA: 0x002806F3 File Offset: 0x0027E8F3
 	private bool OnIsShouldElementItemDownCallback()
 	{
 		return true;
 	}
 
-	// Token: 0x0600AE89 RID: 44681 RVA: 0x00276234 File Offset: 0x00274434
+	// Token: 0x06008270 RID: 33392 RVA: 0x002806F8 File Offset: 0x0027E8F8
 	private void OnClickTip()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.VisionRefineMaterialHint);
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x0600AE8A RID: 44682 RVA: 0x00276258 File Offset: 0x00274458
+	// Token: 0x06008271 RID: 33393 RVA: 0x0028071C File Offset: 0x0027E91C
 	private void OnClickRefine()
 	{
 		VisionRefineChoosePanel choosePanel = this.ChoosePanel;
@@ -1339,7 +1339,7 @@ public class VisionRefineTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AE8B RID: 44683 RVA: 0x0027628C File Offset: 0x0027448C
+	// Token: 0x06008272 RID: 33394 RVA: 0x00280750 File Offset: 0x0027E950
 	private void HandleMainRefine()
 	{
 		if (this.ExtraParamsExactly != null && this.ExtraParamsExactly.IsSingleMode.GetValueOrDefault())
@@ -1394,7 +1394,7 @@ public class VisionRefineTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AE8C RID: 44684 RVA: 0x00276410 File Offset: 0x00274610
+	// Token: 0x06008273 RID: 33395 RVA: 0x002808D4 File Offset: 0x0027EAD4
 	private void HandleSubRefine()
 	{
 		if (this.SelectedVision == null)
@@ -1454,7 +1454,7 @@ public class VisionRefineTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AE8D RID: 44685 RVA: 0x00276570 File Offset: 0x00274770
+	// Token: 0x06008274 RID: 33396 RVA: 0x00280A34 File Offset: 0x0027EC34
 	private void OnClickRefineMainDelete()
 	{
 		VisionRefineChoosePanel choosePanel = this.ChoosePanel;
@@ -1472,7 +1472,7 @@ public class VisionRefineTabView : UiTabViewBase
 		this.RefreshChoosePanel();
 	}
 
-	// Token: 0x0600AE8E RID: 44686 RVA: 0x002765A8 File Offset: 0x002747A8
+	// Token: 0x06008275 RID: 33397 RVA: 0x00280A6C File Offset: 0x0027EC6C
 	private void OnClickRefineSubSlot(bool isAddVision, int _1)
 	{
 		if (isAddVision && this.StateView.GetValueOrDefault() == ERefineViewState.Choose)
@@ -1489,7 +1489,7 @@ public class VisionRefineTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AE8F RID: 44687 RVA: 0x002765E0 File Offset: 0x002747E0
+	// Token: 0x06008276 RID: 33398 RVA: 0x00280AA4 File Offset: 0x0027ECA4
 	private void OnClickRefineMainSlot(bool _0, int _1)
 	{
 		if (this.StateView.GetValueOrDefault() != ERefineViewState.Choose)
@@ -1498,7 +1498,7 @@ public class VisionRefineTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AE90 RID: 44688 RVA: 0x002765F8 File Offset: 0x002747F8
+	// Token: 0x06008277 RID: 33399 RVA: 0x00280ABC File Offset: 0x0027ECBC
 	private void OnClickRefineMainGrid(bool isAddVision, int gridIndex)
 	{
 		VisionRefineChoosePanel choosePanel = this.ChoosePanel;
@@ -1526,7 +1526,7 @@ public class VisionRefineTabView : UiTabViewBase
 		choosePanel3.ShowTipsComponent(null);
 	}
 
-	// Token: 0x0600AE91 RID: 44689 RVA: 0x00276678 File Offset: 0x00274878
+	// Token: 0x06008278 RID: 33400 RVA: 0x00280B3C File Offset: 0x0027ED3C
 	private List<int> BuildSelectedUnitIncIdList([Nullable(new byte[]
 	{
 		2,
@@ -1549,13 +1549,13 @@ public class VisionRefineTabView : UiTabViewBase
 		return list;
 	}
 
-	// Token: 0x0600AE92 RID: 44690 RVA: 0x002766F0 File Offset: 0x002748F0
+	// Token: 0x06008279 RID: 33401 RVA: 0x00280BB4 File Offset: 0x0027EDB4
 	private void OnClickCloseChoosePanel()
 	{
 		this.SetViewState(ERefineViewState.Root, false);
 	}
 
-	// Token: 0x0600AE93 RID: 44691 RVA: 0x002766FC File Offset: 0x002748FC
+	// Token: 0x0600827A RID: 33402 RVA: 0x00280BC0 File Offset: 0x0027EDC0
 	private void OnClickAttributeSelect()
 	{
 		if (this.ChoosePanel == null)
@@ -1630,7 +1630,7 @@ public class VisionRefineTabView : UiTabViewBase
 		UiManager.Instance.OpenView(EUiViewName.VisionRefineAttributeSelectView, param, null);
 	}
 
-	// Token: 0x0600AE94 RID: 44692 RVA: 0x002768D4 File Offset: 0x00274AD4
+	// Token: 0x0600827B RID: 33403 RVA: 0x00280D98 File Offset: 0x0027EF98
 	private bool OnClickSubAttributeSelected(int index)
 	{
 		VisionRefineChoosePanel choosePanel = this.ChoosePanel;
@@ -1652,7 +1652,7 @@ public class VisionRefineTabView : UiTabViewBase
 		return true;
 	}
 
-	// Token: 0x0600AE95 RID: 44693 RVA: 0x00276948 File Offset: 0x00274B48
+	// Token: 0x0600827C RID: 33404 RVA: 0x00280E0C File Offset: 0x0027F00C
 	private bool OnClickSubAttributeDeselected(int index)
 	{
 		VisionRefineChoosePanel choosePanel = this.ChoosePanel;
@@ -1673,7 +1673,7 @@ public class VisionRefineTabView : UiTabViewBase
 		return true;
 	}
 
-	// Token: 0x0600AE96 RID: 44694 RVA: 0x002769A4 File Offset: 0x00274BA4
+	// Token: 0x0600827D RID: 33405 RVA: 0x00280E68 File Offset: 0x0027F068
 	private void OnClickCancel()
 	{
 		if (this.StateView.GetValueOrDefault() != ERefineViewState.Choose)
@@ -1682,7 +1682,7 @@ public class VisionRefineTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AE97 RID: 44695 RVA: 0x002769BC File Offset: 0x00274BBC
+	// Token: 0x0600827E RID: 33406 RVA: 0x00280E80 File Offset: 0x0027F080
 	private void OnItemFuncValueChange(int uniqueId)
 	{
 		VisionRefineChoosePanel choosePanel = this.ChoosePanel;
@@ -1693,7 +1693,7 @@ public class VisionRefineTabView : UiTabViewBase
 		this.RefreshSlotPanel();
 	}
 
-	// Token: 0x0600AE98 RID: 44696 RVA: 0x002769D8 File Offset: 0x00274BD8
+	// Token: 0x0600827F RID: 33407 RVA: 0x00280E9C File Offset: 0x0027F09C
 	private void OnResponseVisionRefine(PhantomPolishResponse response)
 	{
 		VisionRefineResultViewParam visionRefineResultViewParam = new VisionRefineResultViewParam();
@@ -1736,7 +1736,7 @@ public class VisionRefineTabView : UiTabViewBase
 		});
 	}
 
-	// Token: 0x0600AE99 RID: 44697 RVA: 0x00276A74 File Offset: 0x00274C74
+	// Token: 0x06008280 RID: 33408 RVA: 0x00280F38 File Offset: 0x0027F138
 	private void OnCloseResultView(bool result)
 	{
 		if (!result)
@@ -1749,7 +1749,7 @@ public class VisionRefineTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AE9A RID: 44698 RVA: 0x00276AB4 File Offset: 0x00274CB4
+	// Token: 0x06008281 RID: 33409 RVA: 0x00280F78 File Offset: 0x0027F178
 	private void OnVisionRefineBatchMainResult(PhantomBatchPolishResponse response)
 	{
 		VisionRefineResultViewParam visionRefineResultViewParam = new VisionRefineResultViewParam();
@@ -1775,7 +1775,7 @@ public class VisionRefineTabView : UiTabViewBase
 		});
 	}
 
-	// Token: 0x0600AE9B RID: 44699 RVA: 0x00276B20 File Offset: 0x00274D20
+	// Token: 0x06008282 RID: 33410 RVA: 0x00280FE4 File Offset: 0x0027F1E4
 	private void OnVisionRefineSubPreviewResult(PhantomVicePolishResponse response)
 	{
 		VisionRefineTabView.<>c__DisplayClass107_0 CS$<>8__locals1 = new VisionRefineTabView.<>c__DisplayClass107_0();
@@ -1819,7 +1819,7 @@ public class VisionRefineTabView : UiTabViewBase
 		UiManager.Instance.OpenView(EUiViewName.VisionRefineSubResultView, visionRefineBatchResultViewData, null);
 	}
 
-	// Token: 0x0600AE9C RID: 44700 RVA: 0x00276BED File Offset: 0x00274DED
+	// Token: 0x06008283 RID: 33411 RVA: 0x002810B1 File Offset: 0x0027F2B1
 	private void OnVisionRefineSubResult(PhantomVicePolishAckResponse response, bool ack)
 	{
 		if (ack)
@@ -1828,7 +1828,7 @@ public class VisionRefineTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AE9D RID: 44701 RVA: 0x00276C00 File Offset: 0x00274E00
+	// Token: 0x06008284 RID: 33412 RVA: 0x002810C4 File Offset: 0x0027F2C4
 	private bool CheckMaterial()
 	{
 		if (this.CurrentRefineType == EVisionRefineRefineType.Main)
@@ -1867,7 +1867,7 @@ public class VisionRefineTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AE9E RID: 44702 RVA: 0x00276CA3 File Offset: 0x00274EA3
+	// Token: 0x06008285 RID: 33413 RVA: 0x00281167 File Offset: 0x0027F367
 	private bool CheckAttribute()
 	{
 		if (this.SelectMainAttribute == null)
@@ -1878,7 +1878,7 @@ public class VisionRefineTabView : UiTabViewBase
 		return true;
 	}
 
-	// Token: 0x0600AE9F RID: 44703 RVA: 0x00276CC4 File Offset: 0x00274EC4
+	// Token: 0x06008286 RID: 33414 RVA: 0x00281188 File Offset: 0x0027F388
 	private void SetCaptionItem(bool active, bool? activeSequence = null)
 	{
 		if (base.GetItem(7).bIsUIActive == active)
@@ -1906,7 +1906,7 @@ public class VisionRefineTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AEA0 RID: 44704 RVA: 0x00276D80 File Offset: 0x00274F80
+	// Token: 0x06008287 RID: 33415 RVA: 0x00281244 File Offset: 0x0027F444
 	private List<VisionRefineRefineTabData> BuildUpLeftTabData()
 	{
 		List<VisionRefineRefineTabData> list = new List<VisionRefineRefineTabData>();
@@ -1938,7 +1938,7 @@ public class VisionRefineTabView : UiTabViewBase
 		return list;
 	}
 
-	// Token: 0x0600AEA1 RID: 44705 RVA: 0x00276E60 File Offset: 0x00275060
+	// Token: 0x06008288 RID: 33416 RVA: 0x00281324 File Offset: 0x0027F524
 	private void RefreshCostItemList()
 	{
 		CalabashRootView calabashRootView = UiManager.Instance.GetViewByName(EUiViewName.CalabashRootView) as CalabashRootView;
@@ -1949,7 +1949,7 @@ public class VisionRefineTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AEA2 RID: 44706 RVA: 0x00276EB8 File Offset: 0x002750B8
+	// Token: 0x06008289 RID: 33417 RVA: 0x0028137C File Offset: 0x0027F57C
 	private void OnClickRefreshRefineTab(EVisionRefineRefineType current)
 	{
 		if (this.UpLeftTab == null)
@@ -1969,7 +1969,7 @@ public class VisionRefineTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AEA3 RID: 44707 RVA: 0x00276F2C File Offset: 0x0027512C
+	// Token: 0x0600828A RID: 33418 RVA: 0x002813F0 File Offset: 0x0027F5F0
 	private List<VisionRefineAttributeItemData> BuildRefineSubVerticalData()
 	{
 		List<VisionRefineAttributeItemData> list = new List<VisionRefineAttributeItemData>();
@@ -2015,7 +2015,7 @@ public class VisionRefineTabView : UiTabViewBase
 		return list;
 	}
 
-	// Token: 0x0600AEA4 RID: 44708 RVA: 0x002770E8 File Offset: 0x002752E8
+	// Token: 0x0600828B RID: 33419 RVA: 0x002815AC File Offset: 0x0027F7AC
 	private VisionRefineAttributeItemData[] BuildRefineSubVerticalLeftData()
 	{
 		CalabashController instance = CalabashController.Instance;
@@ -2026,7 +2026,7 @@ public class VisionRefineTabView : UiTabViewBase
 		return instance.BuildRefineSubVerticalLeftDataByUid(uid, selectLockedSubProp, (extraParamsExactly != null) ? extraParamsExactly.RecommendRefineSubList : null);
 	}
 
-	// Token: 0x0600AEA5 RID: 44709 RVA: 0x00277138 File Offset: 0x00275338
+	// Token: 0x0600828C RID: 33420 RVA: 0x002815FC File Offset: 0x0027F7FC
 	private VisionRefineAttributeItemData[] BuildRefineSubVerticalRightData(PhantomVicePolishResponse response)
 	{
 		List<Aki.Protocol.PhantomPropInfo> list = new List<Aki.Protocol.PhantomPropInfo>(response.PhantomSubProp);
@@ -2039,7 +2039,7 @@ public class VisionRefineTabView : UiTabViewBase
 		return instance.BuildRefineSubVerticalRightDataByUid(uid, unAckInfo, selectLockedSubProp, (extraParamsExactly != null) ? extraParamsExactly.RecommendRefineSubList : null);
 	}
 
-	// Token: 0x0600AEA6 RID: 44710 RVA: 0x00277194 File Offset: 0x00275394
+	// Token: 0x0600828D RID: 33421 RVA: 0x00281658 File Offset: 0x0027F858
 	private List<VisionRefineSlotItemData> BuildRefineMainGridData()
 	{
 		List<VisionRefineSlotItemData> list = new List<VisionRefineSlotItemData>();
@@ -2050,7 +2050,7 @@ public class VisionRefineTabView : UiTabViewBase
 		return list;
 	}
 
-	// Token: 0x0600AEA7 RID: 44711 RVA: 0x002771C0 File Offset: 0x002753C0
+	// Token: 0x0600828E RID: 33422 RVA: 0x00281684 File Offset: 0x0027F884
 	private List<VisionRefineAttributeItemData> BuildRefineMainVerticalData()
 	{
 		List<VisionRefineAttributeItemData> list = new List<VisionRefineAttributeItemData>();
@@ -2080,14 +2080,14 @@ public class VisionRefineTabView : UiTabViewBase
 		return list;
 	}
 
-	// Token: 0x0600AEA8 RID: 44712 RVA: 0x002772D4 File Offset: 0x002754D4
+	// Token: 0x0600828F RID: 33423 RVA: 0x00281798 File Offset: 0x0027F998
 	private void ClearSelectMainAttribute()
 	{
 		this.SelectMainAttributeInternalSingle = null;
 		this.SelectMainAttributeInternalMulti.Clear();
 	}
 
-	// Token: 0x0600AEA9 RID: 44713 RVA: 0x002772E8 File Offset: 0x002754E8
+	// Token: 0x06008290 RID: 33424 RVA: 0x002817AC File Offset: 0x0027F9AC
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -2112,31 +2112,31 @@ public class VisionRefineTabView : UiTabViewBase
 		};
 	}
 
-	// Token: 0x04004F39 RID: 20281
+	// Token: 0x04004FE3 RID: 20451
 	[Nullable(2)]
 	private VisionRefineSlotItem RefineMainSlotItem;
 
-	// Token: 0x04004F3A RID: 20282
+	// Token: 0x04004FE4 RID: 20452
 	[Nullable(2)]
 	private VisionRefineSlotItem RefineSubSlotItem;
 
-	// Token: 0x04004F3B RID: 20283
+	// Token: 0x04004FE5 RID: 20453
 	[Nullable(2)]
 	private VisionRefineChoosePanel ChoosePanel;
 
-	// Token: 0x04004F3C RID: 20284
+	// Token: 0x04004FE6 RID: 20454
 	[Nullable(2)]
 	private VisionRefineAttributePanelLite RefineMainSingleAttributePanel;
 
-	// Token: 0x04004F3D RID: 20285
+	// Token: 0x04004FE7 RID: 20455
 	[Nullable(2)]
 	private VisionRefineAttributePanelLite RefineMainMultiAttributePanel;
 
-	// Token: 0x04004F3E RID: 20286
+	// Token: 0x04004FE8 RID: 20456
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04004F3F RID: 20287
+	// Token: 0x04004FE9 RID: 20457
 	[Nullable(new byte[]
 	{
 		2,
@@ -2145,30 +2145,30 @@ public class VisionRefineTabView : UiTabViewBase
 	})]
 	private GenericLayout<VisionRefineMaterialItem, ISelectedData> MaterialLayout;
 
-	// Token: 0x04004F40 RID: 20288
+	// Token: 0x04004FEA RID: 20458
 	private ERefineViewState? StateView;
 
-	// Token: 0x04004F41 RID: 20289
+	// Token: 0x04004FEB RID: 20459
 	[Nullable(2)]
 	private IRefineAttrItemData SelectMainAttributeInternalSingle;
 
-	// Token: 0x04004F42 RID: 20290
+	// Token: 0x04004FEC RID: 20460
 	private readonly Dictionary<EVisionRefineCostType, IRefineAttrItemData> SelectMainAttributeInternalMulti = new Dictionary<EVisionRefineCostType, IRefineAttrItemData>();
 
-	// Token: 0x04004F43 RID: 20291
+	// Token: 0x04004FED RID: 20461
 	private readonly HashSet<int> SelectLockedSubProp = new HashSet<int>();
 
-	// Token: 0x04004F44 RID: 20292
+	// Token: 0x04004FEE RID: 20462
 	private bool HasInitChoosePanel;
 
-	// Token: 0x04004F45 RID: 20293
+	// Token: 0x04004FEF RID: 20463
 	[Nullable(2)]
 	private VisionRefineCostItem CostItem;
 
-	// Token: 0x04004F46 RID: 20294
+	// Token: 0x04004FF0 RID: 20464
 	private EVisionRefineRefineType CurrentRefineType;
 
-	// Token: 0x04004F47 RID: 20295
+	// Token: 0x04004FF1 RID: 20465
 	[Nullable(new byte[]
 	{
 		2,
@@ -2177,7 +2177,7 @@ public class VisionRefineTabView : UiTabViewBase
 	})]
 	private GenericLayout<VisionRefineRefineTab, VisionRefineRefineTabData> UpLeftTab;
 
-	// Token: 0x04004F48 RID: 20296
+	// Token: 0x04004FF2 RID: 20466
 	[Nullable(new byte[]
 	{
 		2,
@@ -2186,7 +2186,7 @@ public class VisionRefineTabView : UiTabViewBase
 	})]
 	private GenericLayout<VisionRefineAttributeItem, VisionRefineAttributeItemData> RefineSubVertical;
 
-	// Token: 0x04004F49 RID: 20297
+	// Token: 0x04004FF3 RID: 20467
 	[Nullable(new byte[]
 	{
 		2,
@@ -2195,11 +2195,11 @@ public class VisionRefineTabView : UiTabViewBase
 	})]
 	private GenericLayout<VisionRefineSlotItem, VisionRefineSlotItemData> RefineMainGrid;
 
-	// Token: 0x04004F4A RID: 20298
+	// Token: 0x04004FF4 RID: 20468
 	[Nullable(2)]
 	private VisionRefineInvalidTips InvalidTips;
 
-	// Token: 0x04004F4B RID: 20299
+	// Token: 0x04004FF5 RID: 20469
 	[Nullable(new byte[]
 	{
 		2,
@@ -2208,59 +2208,59 @@ public class VisionRefineTabView : UiTabViewBase
 	})]
 	private GenericLayout<VisionRefineMainAttributeItem, VisionRefineAttributeItemData> RefineSubUpperVert;
 
-	// Token: 0x02007D70 RID: 32112
+	// Token: 0x02006EF6 RID: 28406
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x04029140 RID: 168256
+		// Token: 0x0402446B RID: 148587
 		RootChoosePanel,
-		// Token: 0x04029141 RID: 168257
+		// Token: 0x0402446C RID: 148588
 		ItemRefineSlot,
-		// Token: 0x04029142 RID: 168258
+		// Token: 0x0402446D RID: 148589
 		BtnRefine,
-		// Token: 0x04029143 RID: 168259
+		// Token: 0x0402446E RID: 148590
 		PanelMaterial,
-		// Token: 0x04029144 RID: 168260
+		// Token: 0x0402446F RID: 148591
 		PanelRefineMainMultiAttribute,
-		// Token: 0x04029145 RID: 168261
+		// Token: 0x04024470 RID: 148592
 		BtnTip,
-		// Token: 0x04029146 RID: 168262
+		// Token: 0x04024471 RID: 148593
 		LayoutMaterial,
-		// Token: 0x04029147 RID: 168263
+		// Token: 0x04024472 RID: 148594
 		ItemCaption,
-		// Token: 0x04029148 RID: 168264
+		// Token: 0x04024473 RID: 148595
 		CostItem,
-		// Token: 0x04029149 RID: 168265
+		// Token: 0x04024474 RID: 148596
 		UpLeftTabRoot,
-		// Token: 0x0402914A RID: 168266
+		// Token: 0x04024475 RID: 148597
 		UpLeftTabItem,
-		// Token: 0x0402914B RID: 168267
+		// Token: 0x04024476 RID: 148598
 		RefineSubRoot,
-		// Token: 0x0402914C RID: 168268
+		// Token: 0x04024477 RID: 148599
 		RefineSubInfo,
-		// Token: 0x0402914D RID: 168269
+		// Token: 0x04024478 RID: 148600
 		RefineSubVertical,
-		// Token: 0x0402914E RID: 168270
+		// Token: 0x04024479 RID: 148601
 		RefineSubVerticalToggle,
-		// Token: 0x0402914F RID: 168271
+		// Token: 0x0402447A RID: 148602
 		RefineMainRoot2,
-		// Token: 0x04029150 RID: 168272
+		// Token: 0x0402447B RID: 148603
 		RefineMainGrid,
-		// Token: 0x04029151 RID: 168273
+		// Token: 0x0402447C RID: 148604
 		RefineMainGridItem,
-		// Token: 0x04029152 RID: 168274
+		// Token: 0x0402447D RID: 148605
 		RefineMainInfo,
-		// Token: 0x04029153 RID: 168275
+		// Token: 0x0402447E RID: 148606
 		RefineMainDeleteButton,
-		// Token: 0x04029154 RID: 168276
+		// Token: 0x0402447F RID: 148607
 		RefineInvalidTipsItem,
-		// Token: 0x04029155 RID: 168277
+		// Token: 0x04024480 RID: 148608
 		RefineMainRoot1,
-		// Token: 0x04029156 RID: 168278
+		// Token: 0x04024481 RID: 148609
 		RefineMainSlot,
-		// Token: 0x04029157 RID: 168279
+		// Token: 0x04024482 RID: 148610
 		PanelRefineMainSingleAttribute,
-		// Token: 0x04029158 RID: 168280
+		// Token: 0x04024483 RID: 148611
 		RefineSubUpperVert
 	}
 }

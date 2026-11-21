@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020024CF RID: 9423
+	// Token: 0x02002774 RID: 10100
 	public class IActionFunctionalConfigItem
 	{
-		// Token: 0x0600D279 RID: 53881 RVA: 0x001F3A46 File Offset: 0x001F1C46
-		[NullableContext(1)]
+		// Token: 0x0600DFCE RID: 57294 RVA: 0x0020F2A2 File Offset: 0x0020D4A2
 		public static IActionFunctionalConfigItem Create(IActionFunctionalConfigItem? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003A9D RID: 15005
-		// (get) Token: 0x0600D27A RID: 53882 RVA: 0x001F3A68 File Offset: 0x001F1C68
+		// Token: 0x17003D94 RID: 15764
+		// (get) Token: 0x0600DFCF RID: 57295 RVA: 0x0020F2C4 File Offset: 0x0020D4C4
 		public virtual EOnlineParticipateRule? OnlineParticipateRule
 		{
 			get
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003A9E RID: 15006
-		// (get) Token: 0x0600D27B RID: 53883 RVA: 0x001F3AA0 File Offset: 0x001F1CA0
+		// Token: 0x17003D95 RID: 15765
+		// (get) Token: 0x0600DFD0 RID: 57296 RVA: 0x0020F2FC File Offset: 0x0020D4FC
 		public virtual bool? IsDetectScreenOccupation
 		{
 			get
@@ -49,8 +47,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003A9F RID: 15007
-		// (get) Token: 0x0600D27C RID: 53884 RVA: 0x001F3AD8 File Offset: 0x001F1CD8
+		// Token: 0x17003D96 RID: 15766
+		// (get) Token: 0x0600DFD1 RID: 57297 RVA: 0x0020F334 File Offset: 0x0020D534
 		public virtual bool? IsWithResultOnly
 		{
 			get
@@ -63,8 +61,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003AA0 RID: 15008
-		// (get) Token: 0x0600D27D RID: 53885 RVA: 0x001F3B10 File Offset: 0x001F1D10
+		// Token: 0x17003D97 RID: 15767
+		// (get) Token: 0x0600DFD2 RID: 57298 RVA: 0x0020F36C File Offset: 0x0020D56C
 		public virtual bool? IsOperatePlayer
 		{
 			get
@@ -77,7 +75,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007379 RID: 29561
+		// Token: 0x040079C6 RID: 31174
 		private IActionFunctionalConfigItem Instance;
 	}
 }

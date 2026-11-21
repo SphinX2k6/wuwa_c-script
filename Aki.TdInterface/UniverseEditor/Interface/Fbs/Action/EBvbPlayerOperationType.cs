@@ -2,28 +2,28 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F2B RID: 24363
+	// Token: 0x0200656F RID: 25967
 	public enum EBvbPlayerOperationType : byte
 	{
-		// Token: 0x0400FC57 RID: 64599
+		// Token: 0x040109CD RID: 68045
 		BvbDeploy,
-		// Token: 0x0400FC58 RID: 64600
+		// Token: 0x040109CE RID: 68046
 		BvbEvolution,
-		// Token: 0x0400FC59 RID: 64601
+		// Token: 0x040109CF RID: 68047
 		BvbChangeHandCard,
-		// Token: 0x0400FC5A RID: 64602
+		// Token: 0x040109D0 RID: 68048
 		BvbChangeBoardCard,
-		// Token: 0x0400FC5B RID: 64603
+		// Token: 0x040109D1 RID: 68049
 		BvbRecycleHandCard,
-		// Token: 0x0400FC5C RID: 64604
+		// Token: 0x040109D2 RID: 68050
 		BvbRecycleBoardCard,
-		// Token: 0x0400FC5D RID: 64605
+		// Token: 0x040109D3 RID: 68051
 		BvbEndTurn,
-		// Token: 0x0400FC5E RID: 64606
+		// Token: 0x040109D4 RID: 68052
 		BvbUseItemCardSkill,
-		// Token: 0x0400FC5F RID: 64607
+		// Token: 0x040109D5 RID: 68053
 		BvbUseFieldCardSkill,
-		// Token: 0x0400FC60 RID: 64608
+		// Token: 0x040109D6 RID: 68054
 		BvbSelectCard
 	}
 }

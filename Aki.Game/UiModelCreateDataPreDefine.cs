@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002C6E RID: 11374
+// Token: 0x020021C7 RID: 8647
 public class UiModelCreateDataPreDefine : IStaticVariableResetter
 {
-	// Token: 0x06017C22 RID: 97314 RVA: 0x0060A6C1 File Offset: 0x006088C1
+	// Token: 0x06015494 RID: 87188 RVA: 0x00630169 File Offset: 0x0062E369
 	static UiModelCreateDataPreDefine()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(UiModelCreateDataPreDefine.CreateStaticDefaultValue), new Action(UiModelCreateDataPreDefine.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06017C23 RID: 97315 RVA: 0x0060A6E0 File Offset: 0x006088E0
+	// Token: 0x06015495 RID: 87189 RVA: 0x00630188 File Offset: 0x0062E388
 	[NullableContext(1)]
 	public static Dictionary<EUiModelUseWay, UiModelCreateData> GetUiModelCreateDataPreDefine()
 	{
@@ -407,18 +407,18 @@ public class UiModelCreateDataPreDefine : IStaticVariableResetter
 		return UiModelCreateDataPreDefine.uiModelCreateDataPreDefine;
 	}
 
-	// Token: 0x06017C24 RID: 97316 RVA: 0x0060B8F5 File Offset: 0x00609AF5
+	// Token: 0x06015496 RID: 87190 RVA: 0x0063139D File Offset: 0x0062F59D
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06017C25 RID: 97317 RVA: 0x0060B8F7 File Offset: 0x00609AF7
+	// Token: 0x06015497 RID: 87191 RVA: 0x0063139F File Offset: 0x0062F59F
 	public static void ResetStaticDefaultValue()
 	{
 		UiModelCreateDataPreDefine.uiModelCreateDataPreDefine = null;
 	}
 
-	// Token: 0x0400B119 RID: 45337
+	// Token: 0x0400B484 RID: 46212
 	[Nullable(new byte[]
 	{
 		2,

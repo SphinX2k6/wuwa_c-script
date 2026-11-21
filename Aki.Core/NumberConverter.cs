@@ -8,7 +8,7 @@ using System.Text.Json.Serialization;
 [Nullable(0)]
 public class NumberConverter : JsonConverter<Number>
 {
-	// Token: 0x0600017E RID: 382 RVA: 0x0000A1B4 File Offset: 0x000083B4
+	// Token: 0x06000180 RID: 384 RVA: 0x00009E98 File Offset: 0x00008098
 	public override Number Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler;
@@ -37,7 +37,7 @@ public class NumberConverter : JsonConverter<Number>
 		throw new JsonException(defaultInterpolatedStringHandler.ToStringAndClear());
 	}
 
-	// Token: 0x0600017F RID: 383 RVA: 0x0000A264 File Offset: 0x00008464
+	// Token: 0x06000181 RID: 385 RVA: 0x00009F48 File Offset: 0x00008148
 	public override void Write(Utf8JsonWriter writer, Number value, JsonSerializerOptions options)
 	{
 		if (value.IsInt())

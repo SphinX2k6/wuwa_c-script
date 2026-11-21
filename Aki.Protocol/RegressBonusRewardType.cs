@@ -3,16 +3,16 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001626 RID: 5670
+	// Token: 0x02001699 RID: 5785
 	public enum RegressBonusRewardType
 	{
-		// Token: 0x0400C027 RID: 49191
+		// Token: 0x0400C521 RID: 50465
 		[OriginalName("Free")]
 		Free,
-		// Token: 0x0400C028 RID: 49192
+		// Token: 0x0400C522 RID: 50466
 		[OriginalName("Pay")]
 		Pay,
-		// Token: 0x0400C029 RID: 49193
+		// Token: 0x0400C523 RID: 50467
 		[OriginalName("Both")]
 		Both
 	}

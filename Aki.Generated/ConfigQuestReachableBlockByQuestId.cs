@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200077A RID: 1914
+	// Token: 0x02000794 RID: 1940
 	public class ConfigQuestReachableBlockByQuestId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002CED RID: 11501 RVA: 0x0015722B File Offset: 0x0015542B
+		// Token: 0x06002D89 RID: 11657 RVA: 0x0015E137 File Offset: 0x0015C337
 		static ConfigQuestReachableBlockByQuestId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigQuestReachableBlockByQuestId.CreateStaticDefaultValue), new Action(ConfigQuestReachableBlockByQuestId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002CEE RID: 11502 RVA: 0x0015724C File Offset: 0x0015544C
+		// Token: 0x06002D8A RID: 11658 RVA: 0x0015E158 File Offset: 0x0015C358
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigQuestReachableBlockByQuestId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002CEF RID: 11503 RVA: 0x001572CB File Offset: 0x001554CB
+		// Token: 0x06002D8B RID: 11659 RVA: 0x0015E1D7 File Offset: 0x0015C3D7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigQuestReachableBlockByQuestId.LogPair = null;
 			ConfigQuestReachableBlockByQuestId.HandleId = 0;
 		}
 
-		// Token: 0x06002CF0 RID: 11504 RVA: 0x001572D9 File Offset: 0x001554D9
+		// Token: 0x06002D8C RID: 11660 RVA: 0x0015E1E5 File Offset: 0x0015C3E5
 		public static void Init()
 		{
 			ConfigQuestReachableBlockByQuestId.HandleId = ConfigCommon.InitDataStatement(ConfigQuestReachableBlockByQuestId.HandleId, "db_questreachableblock.db", "select BinData from `QuestReachableBlock` where QuestId=?");
 		}
 
-		// Token: 0x06002CF1 RID: 11505 RVA: 0x001572F4 File Offset: 0x001554F4
+		// Token: 0x06002D8D RID: 11661 RVA: 0x0015E200 File Offset: 0x0015C400
 		public static QuestReachableBlock? GetConfig(int p0QuestId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigQuestReachableBlockByQuestId.HandleId, ConfigQuestReachableBlockByQuestId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new QuestReachableBlock?(rootAsQuestReachableBlock);
 		}
 
-		// Token: 0x0400343C RID: 13372
+		// Token: 0x040034F2 RID: 13554
 		private const string DB = "db_questreachableblock.db";
 
-		// Token: 0x0400343D RID: 13373
+		// Token: 0x040034F3 RID: 13555
 		private const string FILE = "UniverseEditor/QuestRefMapBlockConfig/QuestReachableBlock.csv";
 
-		// Token: 0x0400343E RID: 13374
+		// Token: 0x040034F4 RID: 13556
 		private const string TABLE = "QuestReachableBlock";
 
-		// Token: 0x0400343F RID: 13375
+		// Token: 0x040034F5 RID: 13557
 		private const string COMMAND = "select BinData from `QuestReachableBlock` where QuestId=?";
 
-		// Token: 0x04003440 RID: 13376
+		// Token: 0x040034F6 RID: 13558
 		private const string KEY_PREFIX = "QuestReachableBlockByQuestId";
 
-		// Token: 0x04003441 RID: 13377
+		// Token: 0x040034F7 RID: 13559
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003442 RID: 13378
+		// Token: 0x040034F8 RID: 13560
 		private static int HandleId;
 	}
 }

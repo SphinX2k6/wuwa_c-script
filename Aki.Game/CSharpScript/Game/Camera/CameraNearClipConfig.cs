@@ -3,29 +3,29 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072C3 RID: 29379
+	// Token: 0x02006445 RID: 25669
 	public class CameraNearClipConfig : IStaticVariableResetter
 	{
-		// Token: 0x06048124 RID: 295204 RVA: 0x0127AE4D File Offset: 0x0127904D
+		// Token: 0x0603E518 RID: 255256 RVA: 0x0121D1E5 File Offset: 0x0121B3E5
 		static CameraNearClipConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(CameraNearClipConfig.CreateStaticDefaultValue), new Action(CameraNearClipConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06048125 RID: 295205 RVA: 0x0127AE6C File Offset: 0x0127906C
+		// Token: 0x0603E519 RID: 255257 RVA: 0x0121D204 File Offset: 0x0121B404
 		public CameraNearClipConfig(int priority)
 		{
 			this.Priority = priority;
 			this.Id = ++CameraNearClipConfig._instanceId;
 		}
 
-		// Token: 0x06048126 RID: 295206 RVA: 0x0127AE8E File Offset: 0x0127908E
+		// Token: 0x0603E51A RID: 255258 RVA: 0x0121D226 File Offset: 0x0121B426
 		public bool IsValid()
 		{
 			return true;
 		}
 
-		// Token: 0x06048127 RID: 295207 RVA: 0x0127AE91 File Offset: 0x01279091
+		// Token: 0x0603E51B RID: 255259 RVA: 0x0121D229 File Offset: 0x0121B429
 		public int SetRelativeNearClip(ECameraRelativeNearClipTargetType targetType, float distance)
 		{
 			this.Type = ECameraNearClipType.Relative;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Camera
 			return this.Id;
 		}
 
-		// Token: 0x06048128 RID: 295208 RVA: 0x0127AEAD File Offset: 0x012790AD
+		// Token: 0x0603E51C RID: 255260 RVA: 0x0121D245 File Offset: 0x0121B445
 		public int SetAbsoluteNearClip(float distance)
 		{
 			this.Type = ECameraNearClipType.Absolute;
@@ -41,35 +41,35 @@ namespace CSharpScript.Game.Camera
 			return this.Id;
 		}
 
-		// Token: 0x06048129 RID: 295209 RVA: 0x0127AEC8 File Offset: 0x012790C8
+		// Token: 0x0603E51D RID: 255261 RVA: 0x0121D260 File Offset: 0x0121B460
 		public static void CreateStaticDefaultValue()
 		{
 			CameraNearClipConfig._instanceId = 0;
 		}
 
-		// Token: 0x0604812A RID: 295210 RVA: 0x0127AED0 File Offset: 0x012790D0
+		// Token: 0x0603E51E RID: 255262 RVA: 0x0121D268 File Offset: 0x0121B468
 		public static void ResetStaticDefaultValue()
 		{
 			CameraNearClipConfig._instanceId = 0;
 		}
 
-		// Token: 0x04026064 RID: 155748
+		// Token: 0x04021344 RID: 136004
 		private static int _instanceId;
 
-		// Token: 0x04026065 RID: 155749
+		// Token: 0x04021345 RID: 136005
 		public readonly int Id;
 
-		// Token: 0x04026066 RID: 155750
+		// Token: 0x04021346 RID: 136006
 		public bool MarkDelete;
 
-		// Token: 0x04026067 RID: 155751
+		// Token: 0x04021347 RID: 136007
 		public ECameraNearClipType Type;
 
-		// Token: 0x04026068 RID: 155752
+		// Token: 0x04021348 RID: 136008
 		[Nullable(2)]
 		public CameraBaseNearClipConfig CameraBaseNearClip;
 
-		// Token: 0x04026069 RID: 155753
+		// Token: 0x04021349 RID: 136009
 		public readonly int Priority;
 	}
 }

@@ -6,34 +6,34 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000D01 RID: 3329
+	// Token: 0x0200022D RID: 557
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.KuroPerfHeatmapLibrary")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 48)]
 	public class UKuroPerfHeatmapLibrary : UBlueprintFunctionLibrary, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0600B13E RID: 45374 RVA: 0x000FBA92 File Offset: 0x000F9C92
+		// Token: 0x06002D01 RID: 11521 RVA: 0x0003F931 File Offset: 0x0003DB31
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroPerfHeatmapLibrary._ClassPtr;
 		}
 
-		// Token: 0x0600B13F RID: 45375 RVA: 0x000FBAA0 File Offset: 0x000F9CA0
+		// Token: 0x06002D02 RID: 11522 RVA: 0x0003F940 File Offset: 0x0003DB40
 		public UKuroPerfHeatmapLibrary() : this(BuiltinUtils.AllocNativeUObject(UKuroPerfHeatmapLibrary.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0600B140 RID: 45376 RVA: 0x000FBAC8 File Offset: 0x000F9CC8
+		// Token: 0x06002D03 RID: 11523 RVA: 0x0003F968 File Offset: 0x0003DB68
 		public UKuroPerfHeatmapLibrary(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroPerfHeatmapLibrary.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x0600B141 RID: 45377
+		// Token: 0x06002D04 RID: 11524
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void WaitForRenderAssetsStreamingFinished();
 
-		// Token: 0x0600B142 RID: 45378 RVA: 0x000FBAFB File Offset: 0x000F9CFB
+		// Token: 0x06002D05 RID: 11525 RVA: 0x0003F99B File Offset: 0x0003DB9B
 		public static TArray<bool> TestCameraIntersectSceneComponent([Nullable(2)] UCameraComponent Camera, [Nullable(new byte[]
 		{
 			2,
@@ -43,7 +43,7 @@ namespace UnrealEngine
 			return new TArray<bool>(UKuroPerfHeatmapLibrary.__TestCameraIntersectSceneComponent_Internal((Camera != null) ? Camera.NativePtr : IntPtr.Zero, (SceneComponents ?? new TArray<USceneComponent>()).NativePtr), null);
 		}
 
-		// Token: 0x0600B143 RID: 45379 RVA: 0x000FBB28 File Offset: 0x000F9D28
+		// Token: 0x06002D06 RID: 11526 RVA: 0x0003F9C8 File Offset: 0x0003DBC8
 		public static TArray<bool> TestBoxIntersectSceneComponent(FBox Box, [Nullable(new byte[]
 		{
 			2,
@@ -53,11 +53,11 @@ namespace UnrealEngine
 			return new TArray<bool>(UKuroPerfHeatmapLibrary.__TestBoxIntersectSceneComponent_Internal(Box, (SceneComponents ?? new TArray<USceneComponent>()).NativePtr), null);
 		}
 
-		// Token: 0x0600B144 RID: 45380
+		// Token: 0x06002D07 RID: 11527
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void SetPreviewES3();
 
-		// Token: 0x0600B145 RID: 45381 RVA: 0x000FBB48 File Offset: 0x000F9D48
+		// Token: 0x06002D08 RID: 11528 RVA: 0x0003F9E8 File Offset: 0x0003DBE8
 		public unsafe static bool SaveFile(string Content, string Path)
 		{
 			FString fstring = FString.AllocTemp(Content);
@@ -68,36 +68,36 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0600B146 RID: 45382
+		// Token: 0x06002D09 RID: 11529
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool IsShaderCompiling();
 
-		// Token: 0x0600B147 RID: 45383
+		// Token: 0x06002D0A RID: 11530
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern bool IsCapturingFinished();
 
-		// Token: 0x0600B148 RID: 45384
+		// Token: 0x06002D0B RID: 11531
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float GetStatIncMax(FName StatName);
 
-		// Token: 0x0600B149 RID: 45385
+		// Token: 0x06002D0C RID: 11532
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern float GetStatIncAverage(FName StatName);
 
-		// Token: 0x0600B14A RID: 45386 RVA: 0x000FBB7E File Offset: 0x000F9D7E
+		// Token: 0x06002D0D RID: 11533 RVA: 0x0003FA1E File Offset: 0x0003DC1E
 		public static TArray<FName> GetStatGroupNames(FName GroupName)
 		{
 			return new TArray<FName>(UKuroPerfHeatmapLibrary.__GetStatGroupNames_Internal(GroupName), null);
 		}
 
-		// Token: 0x0600B14B RID: 45387 RVA: 0x000FBB8C File Offset: 0x000F9D8C
+		// Token: 0x06002D0E RID: 11534 RVA: 0x0003FA2C File Offset: 0x0003DC2C
 		[NullableContext(2)]
 		public static int GetNumTrianglesOfStaticMesh(UStaticMesh StaticMesh, int LOD)
 		{
 			return UKuroPerfHeatmapLibrary.__GetNumTrianglesOfStaticMesh_Internal((StaticMesh != null) ? StaticMesh.NativePtr : IntPtr.Zero, LOD);
 		}
 
-		// Token: 0x0600B14C RID: 45388 RVA: 0x000FBBA4 File Offset: 0x000F9DA4
+		// Token: 0x06002D0F RID: 11535 RVA: 0x0003FA44 File Offset: 0x0003DC44
 		public unsafe static UClassStackOnlyPtr FindClassByName(string Name)
 		{
 			FString fstring = FString.AllocTemp(Name);
@@ -106,66 +106,66 @@ namespace UnrealEngine
 			return ptr;
 		}
 
-		// Token: 0x0600B14D RID: 45389 RVA: 0x000FBBCD File Offset: 0x000F9DCD
+		// Token: 0x06002D10 RID: 11536 RVA: 0x0003FA6D File Offset: 0x0003DC6D
 		public static FKuroFrameStatsCaptureResult EndCaptureFrameStats()
 		{
 			return new FKuroFrameStatsCaptureResult(UKuroPerfHeatmapLibrary.__EndCaptureFrameStats_Internal(), null);
 		}
 
-		// Token: 0x0600B14E RID: 45390
+		// Token: 0x06002D11 RID: 11537
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void BeginCaptureFrameStatsMode(int NumFrames, int DelayFrames, EKuroFrameStatsCaptureMode Mode);
 
-		// Token: 0x0600B14F RID: 45391
+		// Token: 0x06002D12 RID: 11538
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void BeginCaptureFrameStats(int NumFrames, int DelayFrames);
 
-		// Token: 0x0600B150 RID: 45392
+		// Token: 0x06002D13 RID: 11539
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __TestCameraIntersectSceneComponent_Internal(IntPtr Camera, IntPtr SceneComponents);
 
-		// Token: 0x0600B151 RID: 45393
+		// Token: 0x06002D14 RID: 11540
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __TestBoxIntersectSceneComponent_Internal(FBox Box, IntPtr SceneComponents);
 
-		// Token: 0x0600B152 RID: 45394
+		// Token: 0x06002D15 RID: 11541
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __SaveFile_Internal(in FString Content, in FString Path);
 
-		// Token: 0x0600B153 RID: 45395
+		// Token: 0x06002D16 RID: 11542
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetStatGroupNames_Internal(FName GroupName);
 
-		// Token: 0x0600B154 RID: 45396
+		// Token: 0x06002D17 RID: 11543
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetNumTrianglesOfStaticMesh_Internal(IntPtr StaticMesh, int LOD);
 
-		// Token: 0x0600B155 RID: 45397
+		// Token: 0x06002D18 RID: 11544
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __FindClassByName_Internal(in FString Name);
 
-		// Token: 0x0600B156 RID: 45398
+		// Token: 0x06002D19 RID: 11545
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __EndCaptureFrameStats_Internal();
 
-		// Token: 0x0600B157 RID: 45399 RVA: 0x000FBBDA File Offset: 0x000F9DDA
+		// Token: 0x06002D1A RID: 11546 RVA: 0x0003FA7A File Offset: 0x0003DC7A
 		static UKuroPerfHeatmapLibrary()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.KuroPerfHeatmapLibrary");
 		}
 
-		// Token: 0x0600B158 RID: 45400 RVA: 0x000FBBE8 File Offset: 0x000F9DE8
+		// Token: 0x06002D1B RID: 11547 RVA: 0x0003FA88 File Offset: 0x0003DC88
 		protected UKuroPerfHeatmapLibrary(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04005CDB RID: 23771
+		// Token: 0x04000E4C RID: 3660
 		public new const string __ObjectPath = "/Script/Engine.KuroPerfHeatmapLibrary";
 
-		// Token: 0x04005CDC RID: 23772
+		// Token: 0x04000E4D RID: 3661
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04005CDD RID: 23773
+		// Token: 0x04000E4E RID: 3662
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

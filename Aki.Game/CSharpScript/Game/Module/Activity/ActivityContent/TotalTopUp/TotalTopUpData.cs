@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text.Json;
 using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
@@ -10,12 +8,12 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 {
-	// Token: 0x02005F87 RID: 24455
+	// Token: 0x02004F6E RID: 20334
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TotalTopUpData : ActivityBaseData
 	{
-		// Token: 0x0603E10B RID: 254219 RVA: 0x00EFBD1C File Offset: 0x00EF9F1C
+		// Token: 0x060330A5 RID: 209061 RVA: 0x00E4D9E8 File Offset: 0x00E4BBE8
 		protected unsafe override void PhraseEx(ActivityData data)
 		{
 			TotalTopUpActivityInfo totalTopUpActivityInfo = (data != null) ? data.TotalTopUpActivityInfo : null;
@@ -26,15 +24,15 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			string message = "活动数据Phrase";
 			<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
 			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("Score", totalTopUpActivityInfo.Score);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("Json", JsonSerializer.Serialize<TotalTopUpActivityInfo>(totalTopUpActivityInfo, null));
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("Json", totalTopUpActivityInfo);
 			TotalTopUpUtil.Debug(message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 			this.ProgressData.SetScore(totalTopUpActivityInfo.Score);
-			this.UpdateReward(totalTopUpActivityInfo.TotalTopUpRewardInfos.ToList<TotalTopUpRewardInfo>());
+			this.UpdateReward(totalTopUpActivityInfo.TotalTopUpRewardInfos);
 			EventSystem.Instance.Emit<int>(EEventName.ActivityViewRefreshCurrent, base.Id);
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 		}
 
-		// Token: 0x0603E10C RID: 254220 RVA: 0x00EFBDE4 File Offset: 0x00EF9FE4
+		// Token: 0x060330A6 RID: 209062 RVA: 0x00E4DAA4 File Offset: 0x00E4BCA4
 		public void InitData(TotalTopUpActivityInfo info, int activityId)
 		{
 			RepeatedField<TotalTopUpRewardInfo> repeatedField = (info != null) ? info.TotalTopUpRewardInfos : null;
@@ -106,8 +104,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 		}
 
-		// Token: 0x0603E10D RID: 254221 RVA: 0x00EFC174 File Offset: 0x00EFA374
-		public void UpdateReward(List<TotalTopUpRewardInfo> rewardInfoList)
+		// Token: 0x060330A7 RID: 209063 RVA: 0x00E4DE34 File Offset: 0x00E4C034
+		public void UpdateReward(IEnumerable<TotalTopUpRewardInfo> rewardInfoList)
 		{
 			TotalTopUpUtil.Debug("更新奖励状态", default(ReadOnlySpan<ValueTuple<string, object>>));
 			foreach (TotalTopUpRewardInfo totalTopUpRewardInfo in rewardInfoList)
@@ -127,8 +125,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 		}
 
-		// Token: 0x0603E10E RID: 254222 RVA: 0x00EFC230 File Offset: 0x00EFA430
-		public void UpdateGoodsScore(List<TotalTopUpScoreInfo> infoList)
+		// Token: 0x060330A8 RID: 209064 RVA: 0x00E4DEEC File Offset: 0x00E4C0EC
+		public void UpdateGoodsScore(IEnumerable<TotalTopUpScoreInfo> infoList)
 		{
 			this.GoodsScoreMap.Clear();
 			this.RechargeItemMap.Clear();
@@ -179,8 +177,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			TotalTopUpUtil.Debug(message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
 		}
 
-		// Token: 0x17008FE2 RID: 36834
-		// (get) Token: 0x0603E10F RID: 254223 RVA: 0x00EFC448 File Offset: 0x00EFA648
+		// Token: 0x170063B4 RID: 25524
+		// (get) Token: 0x060330A9 RID: 209065 RVA: 0x00E4E100 File Offset: 0x00E4C300
 		public override bool RedPointShowState
 		{
 			get
@@ -199,7 +197,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			}
 		}
 
-		// Token: 0x0603E110 RID: 254224 RVA: 0x00EFC4A4 File Offset: 0x00EFA6A4
+		// Token: 0x060330AA RID: 209066 RVA: 0x00E4E15C File Offset: 0x00E4C35C
 		private static List<int> SortRewardItemIds(Dictionary<int, int> itemMap, int[] order)
 		{
 			List<int> list = new List<int>();
@@ -228,28 +226,28 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return list;
 		}
 
-		// Token: 0x0402067F RID: 132735
+		// Token: 0x0401B151 RID: 110929
 		public readonly List<TotalTopUpRewardData> RewardDataList = new List<TotalTopUpRewardData>();
 
-		// Token: 0x04020680 RID: 132736
+		// Token: 0x0401B152 RID: 110930
 		public readonly Dictionary<int, TotalTopUpRewardData> RewardDataMap = new Dictionary<int, TotalTopUpRewardData>();
 
-		// Token: 0x04020681 RID: 132737
+		// Token: 0x0401B153 RID: 110931
 		public readonly TotalTopUpProgressData ProgressData = new TotalTopUpProgressData();
 
-		// Token: 0x04020682 RID: 132738
+		// Token: 0x0401B154 RID: 110932
 		public readonly Dictionary<int, int> GoodsScoreMap = new Dictionary<int, int>();
 
-		// Token: 0x04020683 RID: 132739
+		// Token: 0x0401B155 RID: 110933
 		public readonly Dictionary<int, int> RechargeItemMap = new Dictionary<int, int>();
 
-		// Token: 0x04020684 RID: 132740
+		// Token: 0x0401B156 RID: 110934
 		public TotalTopUpPageViewModel PageViewModel = new TotalTopUpPageViewModel();
 
-		// Token: 0x04020685 RID: 132741
+		// Token: 0x0401B157 RID: 110935
 		public TotalTopUpViewConfig? ViewConfig;
 
-		// Token: 0x04020686 RID: 132742
+		// Token: 0x0401B158 RID: 110936
 		public bool HasRequestedScoreInfo;
 	}
 }

@@ -8,13 +8,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001D1D RID: 7453
+// Token: 0x020011DF RID: 4575
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsRogueFightInfoPanel : UiPanelBase
 {
-	// Token: 0x17001218 RID: 4632
-	// (get) Token: 0x0600E16C RID: 57708 RVA: 0x0034E780 File Offset: 0x0034C980
+	// Token: 0x17001242 RID: 4674
+	// (get) Token: 0x0600B589 RID: 46473 RVA: 0x0035A1B0 File Offset: 0x003583B0
 	private float ComboDurationTime
 	{
 		get
@@ -27,7 +27,7 @@ public class SurvivorsRogueFightInfoPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600E16D RID: 57709 RVA: 0x0034E79C File Offset: 0x0034C99C
+	// Token: 0x0600B58A RID: 46474 RVA: 0x0035A1CC File Offset: 0x003583CC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -51,19 +51,19 @@ public class SurvivorsRogueFightInfoPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600E16E RID: 57710 RVA: 0x0034E8E3 File Offset: 0x0034CAE3
+	// Token: 0x0600B58B RID: 46475 RVA: 0x0035A313 File Offset: 0x00358513
 	private void OnQuitButtonClicked()
 	{
 		SurvivorsRogueController.Instance.OpenLeaveInstanceView();
 	}
 
-	// Token: 0x0600E16F RID: 57711 RVA: 0x0034E8EF File Offset: 0x0034CAEF
+	// Token: 0x0600B58C RID: 46476 RVA: 0x0035A31F File Offset: 0x0035851F
 	private void OnSettingButtonClicked()
 	{
 		UiManager.Instance.OpenView(EUiViewName.MenuView, null, null);
 	}
 
-	// Token: 0x0600E170 RID: 57712 RVA: 0x0034E904 File Offset: 0x0034CB04
+	// Token: 0x0600B58D RID: 46477 RVA: 0x0035A334 File Offset: 0x00358534
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SurvivorsRogueFightInfoPanel.<OnBeforeStartAsync>d__28 <OnBeforeStartAsync>d__;
@@ -74,7 +74,7 @@ public class SurvivorsRogueFightInfoPanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E171 RID: 57713 RVA: 0x0034E948 File Offset: 0x0034CB48
+	// Token: 0x0600B58E RID: 46478 RVA: 0x0035A378 File Offset: 0x00358578
 	protected unsafe override void OnStart()
 	{
 		this.ComboArea = base.GetItem(9);
@@ -145,7 +145,7 @@ public class SurvivorsRogueFightInfoPanel : UiPanelBase
 		this.ChestCollectionItem.SetUiActive(false);
 	}
 
-	// Token: 0x0600E172 RID: 57714 RVA: 0x0034EB30 File Offset: 0x0034CD30
+	// Token: 0x0600B58F RID: 46479 RVA: 0x0035A560 File Offset: 0x00358760
 	protected override void OnBeforeShow()
 	{
 		SurvivorsRogueBattleData battleData = SurvivorsRogueModel.Instance.BattleData;
@@ -154,13 +154,13 @@ public class SurvivorsRogueFightInfoPanel : UiPanelBase
 		this.TickEnabled = true;
 	}
 
-	// Token: 0x0600E173 RID: 57715 RVA: 0x0034EB69 File Offset: 0x0034CD69
+	// Token: 0x0600B590 RID: 46480 RVA: 0x0035A599 File Offset: 0x00358799
 	protected override void OnBeforeHide()
 	{
 		this.TickEnabled = false;
 	}
 
-	// Token: 0x0600E174 RID: 57716 RVA: 0x0034EB74 File Offset: 0x0034CD74
+	// Token: 0x0600B591 RID: 46481 RVA: 0x0035A5A4 File Offset: 0x003587A4
 	public unsafe void OnTick(float delta)
 	{
 		if (!this.TickEnabled || !this.NeedTick)
@@ -197,14 +197,14 @@ public class SurvivorsRogueFightInfoPanel : UiPanelBase
 		this.SetComboRemainTimeBarPercent(this.RemainTime / this.ComboDurationTime);
 	}
 
-	// Token: 0x0600E175 RID: 57717 RVA: 0x0034ECB6 File Offset: 0x0034CEB6
+	// Token: 0x0600B592 RID: 46482 RVA: 0x0035A6E6 File Offset: 0x003588E6
 	public void ResetFightInfo()
 	{
 		this.RefreshComboNum(0);
 		this.RefreshPositiveArea(0);
 	}
 
-	// Token: 0x0600E176 RID: 57718 RVA: 0x0034ECC8 File Offset: 0x0034CEC8
+	// Token: 0x0600B593 RID: 46483 RVA: 0x0035A6F8 File Offset: 0x003588F8
 	public void RefreshComboNum(int comboNum)
 	{
 		Log instance = Log.Instance;
@@ -233,7 +233,7 @@ public class SurvivorsRogueFightInfoPanel : UiPanelBase
 		this.UpdateComboDurationInfo(comboNum);
 	}
 
-	// Token: 0x0600E177 RID: 57719 RVA: 0x0034ED8C File Offset: 0x0034CF8C
+	// Token: 0x0600B594 RID: 46484 RVA: 0x0035A7BC File Offset: 0x003589BC
 	private unsafe void UpdateComboDurationInfo(int comboNum)
 	{
 		SurvivorsRogueModel instance = SurvivorsRogueModel.Instance;
@@ -270,7 +270,7 @@ public class SurvivorsRogueFightInfoPanel : UiPanelBase
 		this.ApplyComboDuration(num, (float)comboDurationArray[num], (float)instance.ComboDurationAdditionCfg[num], (float)comboTimerFreezeTimeCfg[num]);
 	}
 
-	// Token: 0x0600E178 RID: 57720 RVA: 0x0034EECC File Offset: 0x0034D0CC
+	// Token: 0x0600B595 RID: 46485 RVA: 0x0035A8FC File Offset: 0x00358AFC
 	private unsafe void ApplyComboDuration(int level, float baseDuration, float extraDuration, float freezeTime)
 	{
 		this.ComboAnimHandle[level]();
@@ -295,20 +295,20 @@ public class SurvivorsRogueFightInfoPanel : UiPanelBase
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray6<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 6));
 	}
 
-	// Token: 0x0600E179 RID: 57721 RVA: 0x0034F024 File Offset: 0x0034D224
+	// Token: 0x0600B596 RID: 46486 RVA: 0x0035AA54 File Offset: 0x00358C54
 	public void RefreshCurrencyNum(int currencyNum, bool playSequence = true)
 	{
 		bool efficiencyEnhance = SurvivorsRogueModel.Instance.BattleData.GetGoldGainEfficiency() > 0;
 		this.CurrencyCollectionItem.Refresh(currencyNum, efficiencyEnhance, playSequence);
 	}
 
-	// Token: 0x0600E17A RID: 57722 RVA: 0x0034F052 File Offset: 0x0034D252
+	// Token: 0x0600B597 RID: 46487 RVA: 0x0035AA82 File Offset: 0x00358C82
 	public void RefreshChestNum(int chestNum, bool playSequence = true)
 	{
 		this.ChestCollectionItem.Refresh(chestNum, false, playSequence);
 	}
 
-	// Token: 0x0600E17B RID: 57723 RVA: 0x0034F064 File Offset: 0x0034D264
+	// Token: 0x0600B598 RID: 46488 RVA: 0x0035AA94 File Offset: 0x00358C94
 	public void SetChestActive(bool active)
 	{
 		this.ChestCollectionItem.SetUiActive(active);
@@ -316,7 +316,7 @@ public class SurvivorsRogueFightInfoPanel : UiPanelBase
 		this.ComboPlayer.PlayOrReplaySequenceByName("Start", false, null);
 	}
 
-	// Token: 0x0600E17C RID: 57724 RVA: 0x0034F0A4 File Offset: 0x0034D2A4
+	// Token: 0x0600B599 RID: 46489 RVA: 0x0035AAD4 File Offset: 0x00358CD4
 	public unsafe void SetComboAreaActive(bool active, bool playSequence = true)
 	{
 		Log instance = Log.Instance;
@@ -349,7 +349,7 @@ public class SurvivorsRogueFightInfoPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600E17D RID: 57725 RVA: 0x0034F184 File Offset: 0x0034D384
+	// Token: 0x0600B59A RID: 46490 RVA: 0x0035ABB4 File Offset: 0x00358DB4
 	public unsafe void SetPositiveAreaActive(bool active, bool playSequence = true)
 	{
 		Log instance = Log.Instance;
@@ -379,7 +379,7 @@ public class SurvivorsRogueFightInfoPanel : UiPanelBase
 		EventSystem.Instance.Emit<bool>(EEventName.SurvivorsRogueComboBuffShow, active);
 	}
 
-	// Token: 0x0600E17E RID: 57726 RVA: 0x0034F280 File Offset: 0x0034D480
+	// Token: 0x0600B59B RID: 46491 RVA: 0x0035ACB0 File Offset: 0x00358EB0
 	public void RefreshPositiveArea(int value)
 	{
 		Log instance = Log.Instance;
@@ -394,7 +394,7 @@ public class SurvivorsRogueFightInfoPanel : UiPanelBase
 		this.CurPositiveEffectActive = flag;
 	}
 
-	// Token: 0x0600E17F RID: 57727 RVA: 0x0034F309 File Offset: 0x0034D509
+	// Token: 0x0600B59C RID: 46492 RVA: 0x0035AD39 File Offset: 0x00358F39
 	private void SetComboRemainTimeBarPercent(float percent)
 	{
 		if (this.ComboRemainTimeBarSprite.bIsUIActive)
@@ -403,49 +403,49 @@ public class SurvivorsRogueFightInfoPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0400682F RID: 26671
+	// Token: 0x0400690E RID: 26894
 	private const int DEFAULT_COMBO_DURATION_TIME = 5000;
 
-	// Token: 0x04006830 RID: 26672
+	// Token: 0x0400690F RID: 26895
 	private SurvivorsRogueCollectionItem CurrencyCollectionItem;
 
-	// Token: 0x04006831 RID: 26673
+	// Token: 0x04006910 RID: 26896
 	private LevelSequencePlayer CurrencyEfficiencyEnhancePlayer;
 
-	// Token: 0x04006832 RID: 26674
+	// Token: 0x04006911 RID: 26897
 	private SurvivorsRogueCollectionItem ChestCollectionItem;
 
-	// Token: 0x04006833 RID: 26675
+	// Token: 0x04006912 RID: 26898
 	private UUIItem ComboArea;
 
-	// Token: 0x04006834 RID: 26676
+	// Token: 0x04006913 RID: 26899
 	private LevelSequencePlayer ComboPlayer;
 
-	// Token: 0x04006835 RID: 26677
+	// Token: 0x04006914 RID: 26900
 	private UUIItem PositiveArea;
 
-	// Token: 0x04006836 RID: 26678
+	// Token: 0x04006915 RID: 26901
 	private LevelSequencePlayer PositiveAreaPlayer;
 
-	// Token: 0x04006837 RID: 26679
+	// Token: 0x04006916 RID: 26902
 	private UUIArtText ComboNumText;
 
-	// Token: 0x04006838 RID: 26680
+	// Token: 0x04006917 RID: 26903
 	private UUISprite ComboRemainTimeBarSprite;
 
-	// Token: 0x04006839 RID: 26681
+	// Token: 0x04006918 RID: 26904
 	private UUITexture PositiveIcon;
 
-	// Token: 0x0400683A RID: 26682
+	// Token: 0x04006919 RID: 26905
 	private UUIText PositiveText;
 
-	// Token: 0x0400683B RID: 26683
+	// Token: 0x0400691A RID: 26906
 	private UUISprite PositiveArrow;
 
-	// Token: 0x0400683C RID: 26684
+	// Token: 0x0400691B RID: 26907
 	private float ComboDurationTimeInternal;
 
-	// Token: 0x0400683D RID: 26685
+	// Token: 0x0400691C RID: 26908
 	[Nullable(new byte[]
 	{
 		2,
@@ -453,62 +453,62 @@ public class SurvivorsRogueFightInfoPanel : UiPanelBase
 	})]
 	private List<Action> ComboAnimHandle;
 
-	// Token: 0x0400683E RID: 26686
+	// Token: 0x0400691D RID: 26909
 	private float RemainTime;
 
-	// Token: 0x0400683F RID: 26687
+	// Token: 0x0400691E RID: 26910
 	private float FreezeTime;
 
-	// Token: 0x04006840 RID: 26688
+	// Token: 0x0400691F RID: 26911
 	private int LastComboLevelIndex;
 
-	// Token: 0x04006841 RID: 26689
+	// Token: 0x04006920 RID: 26912
 	private bool NeedTick;
 
-	// Token: 0x04006842 RID: 26690
+	// Token: 0x04006921 RID: 26913
 	private bool TickEnabled;
 
-	// Token: 0x04006843 RID: 26691
+	// Token: 0x04006922 RID: 26914
 	private int CurComboNum;
 
-	// Token: 0x04006844 RID: 26692
+	// Token: 0x04006923 RID: 26915
 	private bool CurPositiveEffectActive;
 
-	// Token: 0x02008315 RID: 33557
+	// Token: 0x0200749E RID: 29854
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x0402AC08 RID: 175112
+		// Token: 0x04025F30 RID: 155440
 		public const int QuitButton = 0;
 
-		// Token: 0x0402AC09 RID: 175113
+		// Token: 0x04025F31 RID: 155441
 		public const int CurrencyItem = 1;
 
-		// Token: 0x0402AC0A RID: 175114
+		// Token: 0x04025F32 RID: 155442
 		public const int ChestItem = 2;
 
-		// Token: 0x0402AC0B RID: 175115
+		// Token: 0x04025F33 RID: 155443
 		public const int ComboRemainTimeBar = 3;
 
-		// Token: 0x0402AC0C RID: 175116
+		// Token: 0x04025F34 RID: 155444
 		public const int ComboNum = 4;
 
-		// Token: 0x0402AC0D RID: 175117
+		// Token: 0x04025F35 RID: 155445
 		public const int PositiveIcon = 5;
 
-		// Token: 0x0402AC0E RID: 175118
+		// Token: 0x04025F36 RID: 155446
 		public const int PositiveText = 6;
 
-		// Token: 0x0402AC0F RID: 175119
+		// Token: 0x04025F37 RID: 155447
 		public const int PositiveTip = 7;
 
-		// Token: 0x0402AC10 RID: 175120
+		// Token: 0x04025F38 RID: 155448
 		public const int SettingButton = 8;
 
-		// Token: 0x0402AC11 RID: 175121
+		// Token: 0x04025F39 RID: 155449
 		public const int ComboArea = 9;
 
-		// Token: 0x0402AC12 RID: 175122
+		// Token: 0x04025F3A RID: 155450
 		public const int PositiveArea = 10;
 	}
 }

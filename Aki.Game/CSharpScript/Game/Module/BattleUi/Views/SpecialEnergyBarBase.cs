@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E1B RID: 24091
+	// Token: 0x02004E00 RID: 19968
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SpecialEnergyBarBase : UiPanelBase
 	{
-		// Token: 0x0603D42E RID: 250926 RVA: 0x00EC3734 File Offset: 0x00EC1934
+		// Token: 0x060323BD RID: 205757 RVA: 0x00E14C94 File Offset: 0x00E12E94
 		public virtual UniTask InitByPathAsync(UUIItem parentItem, string prefabPath)
 		{
 			SpecialEnergyBarBase.<InitByPathAsync>d__21 <InitByPathAsync>d__;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitByPathAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D42F RID: 250927 RVA: 0x00EC3788 File Offset: 0x00EC1988
+		// Token: 0x060323BE RID: 205758 RVA: 0x00E14CE8 File Offset: 0x00E12EE8
 		public UniTask InitByActorAsync(AActor actor)
 		{
 			SpecialEnergyBarBase.<InitByActorAsync>d__22 <InitByActorAsync>d__;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitByActorAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D430 RID: 250928 RVA: 0x00EC37D4 File Offset: 0x00EC19D4
+		// Token: 0x060323BF RID: 205759 RVA: 0x00E14D34 File Offset: 0x00E12F34
 		public void InitData([Nullable(2)] BattleUiRoleData roleData, SpecialEnergyBarInfo config, bool needInitKeyItem = true)
 		{
 			this.NeedInitKeyItem = needInitKeyItem;
@@ -65,33 +65,33 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.InitKeyEnableTag();
 		}
 
-		// Token: 0x0603D431 RID: 250929 RVA: 0x00EC389A File Offset: 0x00EC1A9A
+		// Token: 0x060323C0 RID: 205760 RVA: 0x00E14DFA File Offset: 0x00E12FFA
 		protected virtual void OnInitData()
 		{
 		}
 
-		// Token: 0x0603D432 RID: 250930 RVA: 0x00EC389C File Offset: 0x00EC1A9C
+		// Token: 0x060323C1 RID: 205761 RVA: 0x00E14DFC File Offset: 0x00E12FFC
 		protected virtual void AddEvents()
 		{
 			this.ListenForAttributeChanged(this.AttributeId, new Action<EAttributeType, float, float>(this.AttributeChanged));
 			this.ListenForAttributeChanged(this.MaxAttributeId, new Action<EAttributeType, float, float>(this.MaxAttributeChanged));
 		}
 
-		// Token: 0x0603D433 RID: 250931 RVA: 0x00EC38CE File Offset: 0x00EC1ACE
+		// Token: 0x060323C2 RID: 205762 RVA: 0x00E14E2E File Offset: 0x00E1302E
 		protected virtual void RemoveEvents()
 		{
 			this.RemoveListenAttributeChanged(this.AttributeId, new Action<EAttributeType, float, float>(this.AttributeChanged));
 			this.RemoveListenAttributeChanged(this.MaxAttributeId, new Action<EAttributeType, float, float>(this.MaxAttributeChanged));
 		}
 
-		// Token: 0x0603D434 RID: 250932 RVA: 0x00EC3900 File Offset: 0x00EC1B00
+		// Token: 0x060323C3 RID: 205763 RVA: 0x00E14E60 File Offset: 0x00E13060
 		public void SetVisible(bool bVisible, int type = 0)
 		{
 			this.VisibleState = VisibleStateUtil.SetVisible(this.VisibleState, bVisible, type);
 			this.RefreshVisible();
 		}
 
-		// Token: 0x0603D435 RID: 250933 RVA: 0x00EC391C File Offset: 0x00EC1B1C
+		// Token: 0x060323C4 RID: 205764 RVA: 0x00E14E7C File Offset: 0x00E1307C
 		protected virtual void RefreshVisible()
 		{
 			if (base.InAsyncLoading() || base.IsRegister || base.IsCreateOrCreating)
@@ -112,14 +112,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D436 RID: 250934 RVA: 0x00EC396C File Offset: 0x00EC1B6C
+		// Token: 0x060323C5 RID: 205765 RVA: 0x00E14ECC File Offset: 0x00E130CC
 		protected override bool DestroyOverride()
 		{
 			this.Destroyed = true;
 			return false;
 		}
 
-		// Token: 0x0603D437 RID: 250935 RVA: 0x00EC3978 File Offset: 0x00EC1B78
+		// Token: 0x060323C6 RID: 205766 RVA: 0x00E14ED8 File Offset: 0x00E130D8
 		protected override void OnBeforeDestroy()
 		{
 			if (!base.InAsyncLoading())
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BuffComponent = null;
 		}
 
-		// Token: 0x0603D438 RID: 250936 RVA: 0x00EC3A60 File Offset: 0x00EC1C60
+		// Token: 0x060323C7 RID: 205767 RVA: 0x00E14FC0 File Offset: 0x00E131C0
 		public int? GetEntityId()
 		{
 			BattleUiRoleData roleData = this.RoleData;
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return new int?(entityHandle.Id);
 		}
 
-		// Token: 0x0603D439 RID: 250937 RVA: 0x00EC3A9E File Offset: 0x00EC1C9E
+		// Token: 0x060323C8 RID: 205768 RVA: 0x00E14FFE File Offset: 0x00E131FE
 		public virtual void Tick(float delta)
 		{
 			if (this.PercentMachine.Update(delta))
@@ -185,38 +185,38 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D43A RID: 250938 RVA: 0x00EC3AB4 File Offset: 0x00EC1CB4
+		// Token: 0x060323C9 RID: 205769 RVA: 0x00E15014 File Offset: 0x00E13214
 		private void AttributeChanged(EAttributeType attributeId, float newValue, float oldValue)
 		{
 			this.OnAttributeChanged();
 		}
 
-		// Token: 0x0603D43B RID: 250939 RVA: 0x00EC3ABC File Offset: 0x00EC1CBC
+		// Token: 0x060323CA RID: 205770 RVA: 0x00E1501C File Offset: 0x00E1321C
 		private void MaxAttributeChanged(EAttributeType attributeId, float newValue, float oldValue)
 		{
 			this.OnMaxAttributeChanged();
 		}
 
-		// Token: 0x0603D43C RID: 250940 RVA: 0x00EC3AC4 File Offset: 0x00EC1CC4
+		// Token: 0x060323CB RID: 205771 RVA: 0x00E15024 File Offset: 0x00E13224
 		protected virtual void OnAttributeChanged()
 		{
 			this.PercentMachine.SetTargetPercent(this.GetTargetAttributePercent());
 			this.OnBarPercentChanged();
 		}
 
-		// Token: 0x0603D43D RID: 250941 RVA: 0x00EC3ADD File Offset: 0x00EC1CDD
+		// Token: 0x060323CC RID: 205772 RVA: 0x00E1503D File Offset: 0x00E1323D
 		protected virtual void OnMaxAttributeChanged()
 		{
 			this.PercentMachine.SetTargetPercent(this.GetTargetAttributePercent());
 			this.OnBarPercentChanged();
 		}
 
-		// Token: 0x0603D43E RID: 250942 RVA: 0x00EC3AF6 File Offset: 0x00EC1CF6
+		// Token: 0x060323CD RID: 205773 RVA: 0x00E15056 File Offset: 0x00E13256
 		protected virtual void OnBarPercentChanged()
 		{
 		}
 
-		// Token: 0x0603D43F RID: 250943 RVA: 0x00EC3AF8 File Offset: 0x00EC1CF8
+		// Token: 0x060323CE RID: 205774 RVA: 0x00E15058 File Offset: 0x00E13258
 		protected void ListenForAttributeChanged(EAttributeType attributeId, Action<EAttributeType, float, float> onAttributeChanged)
 		{
 			if (attributeId <= EAttributeType.None)
@@ -233,7 +233,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AttributeChangedCallbackMap[attributeId] = onAttributeChanged;
 		}
 
-		// Token: 0x0603D440 RID: 250944 RVA: 0x00EC3B38 File Offset: 0x00EC1D38
+		// Token: 0x060323CF RID: 205775 RVA: 0x00E15098 File Offset: 0x00E13298
 		protected void RemoveListenAttributeChanged(EAttributeType attributeId, Action<EAttributeType, float, float> onAttributeChanged)
 		{
 			if (attributeId <= EAttributeType.None)
@@ -249,7 +249,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AttributeChangedCallbackMap.Remove(attributeId);
 		}
 
-		// Token: 0x0603D441 RID: 250945 RVA: 0x00EC3B6C File Offset: 0x00EC1D6C
+		// Token: 0x060323D0 RID: 205776 RVA: 0x00E150CC File Offset: 0x00E132CC
 		private void ClearAllAttributeChangedCallback()
 		{
 			BaseAttributeComponent attributeComponent = this.AttributeComponent;
@@ -269,7 +269,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AttributeChangedCallbackMap.Clear();
 		}
 
-		// Token: 0x0603D442 RID: 250946 RVA: 0x00EC3BEC File Offset: 0x00EC1DEC
+		// Token: 0x060323D1 RID: 205777 RVA: 0x00E1514C File Offset: 0x00E1334C
 		protected void ListenForTagCountChanged(int tagId, BaseTagComponent.TTagChangedCallback onTagCountChange)
 		{
 			BaseTagComponent tagComponent = this.TagComponent;
@@ -280,7 +280,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D443 RID: 250947 RVA: 0x00EC3C20 File Offset: 0x00EC1E20
+		// Token: 0x060323D2 RID: 205778 RVA: 0x00E15180 File Offset: 0x00E13380
 		protected void ClearAllTagCountChangedCallback()
 		{
 			foreach (ITagTask tagTask in this.TagTaskList)
@@ -290,7 +290,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TagTaskList.Clear();
 		}
 
-		// Token: 0x0603D444 RID: 250948 RVA: 0x00EC3C7C File Offset: 0x00EC1E7C
+		// Token: 0x060323D3 RID: 205779 RVA: 0x00E151DC File Offset: 0x00E133DC
 		protected void ListenForTagAddOrRemoveChanged(int tagId, BaseTagComponent.TTagSwitchedCallback onTagChange)
 		{
 			BaseTagComponent tagComponent = this.TagComponent;
@@ -301,13 +301,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D445 RID: 250949 RVA: 0x00EC3CB3 File Offset: 0x00EC1EB3
+		// Token: 0x060323D4 RID: 205780 RVA: 0x00E15213 File Offset: 0x00E13413
 		protected int GetBuffCountByBuffId(long buffId)
 		{
 			return this.BuffComponent.GetBuffTotalStackById(buffId, false);
 		}
 
-		// Token: 0x0603D446 RID: 250950 RVA: 0x00EC3CC4 File Offset: 0x00EC1EC4
+		// Token: 0x060323D5 RID: 205781 RVA: 0x00E15224 File Offset: 0x00E13424
 		protected UniTask LoadEffects()
 		{
 			SpecialEnergyBarBase.<LoadEffects>d__45 <LoadEffects>d__;
@@ -318,7 +318,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <LoadEffects>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D447 RID: 250951 RVA: 0x00EC3D08 File Offset: 0x00EC1F08
+		// Token: 0x060323D6 RID: 205782 RVA: 0x00E15268 File Offset: 0x00E13468
 		private UniTask LoadNiagara(string path, int index, [Nullable(new byte[]
 		{
 			1,
@@ -335,7 +335,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <LoadNiagara>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D448 RID: 250952 RVA: 0x00EC3D5C File Offset: 0x00EC1F5C
+		// Token: 0x060323D7 RID: 205783 RVA: 0x00E152BC File Offset: 0x00E134BC
 		protected virtual UniTask InitKeyItem(UUIItem keyItemContainer)
 		{
 			SpecialEnergyBarBase.<InitKeyItem>d__47 <InitKeyItem>d__;
@@ -347,7 +347,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitKeyItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D449 RID: 250953 RVA: 0x00EC3DA8 File Offset: 0x00EC1FA8
+		// Token: 0x060323D8 RID: 205784 RVA: 0x00E15308 File Offset: 0x00E13508
 		protected UniTask InitNumItem(UUIItem keyItemContainer)
 		{
 			SpecialEnergyBarBase.<InitNumItem>d__48 <InitNumItem>d__;
@@ -359,7 +359,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitNumItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D44A RID: 250954 RVA: 0x00EC3DF4 File Offset: 0x00EC1FF4
+		// Token: 0x060323D9 RID: 205785 RVA: 0x00E15354 File Offset: 0x00E13554
 		protected void InitKeyEnableTag()
 		{
 			int keyEnableTagId = this.Config.KeyEnableTagId;
@@ -371,7 +371,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D44B RID: 250955 RVA: 0x00EC3E3C File Offset: 0x00EC203C
+		// Token: 0x060323DA RID: 205786 RVA: 0x00E1539C File Offset: 0x00E1359C
 		protected float GetTargetAttributePercent()
 		{
 			if (this.AttributeComponent == null)
@@ -388,40 +388,40 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return result;
 		}
 
-		// Token: 0x0603D44C RID: 250956 RVA: 0x00EC3E8E File Offset: 0x00EC208E
+		// Token: 0x060323DB RID: 205787 RVA: 0x00E153EE File Offset: 0x00E135EE
 		protected virtual bool GetKeyEnable()
 		{
 			return this.PercentMachine.GetCurPercent() >= this.Config.DisableKeyOnPercent && (this.Config.KeyEnableTagId == 0 || this.HasKeyEnableTag);
 		}
 
-		// Token: 0x0603D44D RID: 250957 RVA: 0x00EC3EC2 File Offset: 0x00EC20C2
+		// Token: 0x060323DC RID: 205788 RVA: 0x00E15422 File Offset: 0x00E13622
 		protected void OnKeyEnableTagChanged(int tagId, bool tagExist)
 		{
 			this.HasKeyEnableTag = tagExist;
 			this.OnKeyEnableChanged();
 		}
 
-		// Token: 0x0603D44E RID: 250958 RVA: 0x00EC3ED1 File Offset: 0x00EC20D1
+		// Token: 0x060323DD RID: 205789 RVA: 0x00E15431 File Offset: 0x00E13631
 		protected virtual void OnKeyEnableChanged()
 		{
 		}
 
-		// Token: 0x0603D44F RID: 250959 RVA: 0x00EC3ED3 File Offset: 0x00EC20D3
+		// Token: 0x060323DE RID: 205790 RVA: 0x00E15433 File Offset: 0x00E13633
 		public virtual void OnChangeVisibleByTagChange(bool visible)
 		{
 		}
 
-		// Token: 0x0603D450 RID: 250960 RVA: 0x00EC3ED5 File Offset: 0x00EC20D5
+		// Token: 0x060323DF RID: 205791 RVA: 0x00E15435 File Offset: 0x00E13635
 		public virtual void ReplaceFullEffect(UNiagaraSystem niagara)
 		{
 		}
 
-		// Token: 0x0603D451 RID: 250961 RVA: 0x00EC3ED7 File Offset: 0x00EC20D7
+		// Token: 0x060323E0 RID: 205792 RVA: 0x00E15437 File Offset: 0x00E13637
 		public virtual void RevertFullEffect()
 		{
 		}
 
-		// Token: 0x0603D452 RID: 250962 RVA: 0x00EC3ED9 File Offset: 0x00EC20D9
+		// Token: 0x060323E1 RID: 205793 RVA: 0x00E15439 File Offset: 0x00E13639
 		protected void InitTweenAnim(int componentType)
 		{
 			if (this.TweenAnimPlayer == null)
@@ -431,7 +431,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TweenAnimPlayer.InitTweenAnim(componentType, base.GetItem(componentType), false);
 		}
 
-		// Token: 0x0603D453 RID: 250963 RVA: 0x00EC3F02 File Offset: 0x00EC2102
+		// Token: 0x060323E2 RID: 205794 RVA: 0x00E15462 File Offset: 0x00E13662
 		protected void PlayTweenAnim(int componentType)
 		{
 			BattleUiTweenAnimPlayer tweenAnimPlayer = this.TweenAnimPlayer;
@@ -442,7 +442,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			tweenAnimPlayer.PlayTweenAnim(componentType);
 		}
 
-		// Token: 0x0603D454 RID: 250964 RVA: 0x00EC3F15 File Offset: 0x00EC2115
+		// Token: 0x060323E3 RID: 205795 RVA: 0x00E15475 File Offset: 0x00E13675
 		protected void StopTweenAnim(int componentType)
 		{
 			BattleUiTweenAnimPlayer tweenAnimPlayer = this.TweenAnimPlayer;
@@ -453,7 +453,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			tweenAnimPlayer.StopTweenAnim(componentType);
 		}
 
-		// Token: 0x0603D455 RID: 250965 RVA: 0x00EC3F28 File Offset: 0x00EC2128
+		// Token: 0x060323E4 RID: 205796 RVA: 0x00E15488 File Offset: 0x00E13688
 		protected virtual void ClearAllTweenAnim()
 		{
 			BattleUiTweenAnimPlayer tweenAnimPlayer = this.TweenAnimPlayer;
@@ -464,7 +464,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			tweenAnimPlayer.Clear(false);
 		}
 
-		// Token: 0x0603D456 RID: 250966 RVA: 0x00EC3F3B File Offset: 0x00EC213B
+		// Token: 0x060323E5 RID: 205797 RVA: 0x00E1549B File Offset: 0x00E1369B
 		protected void SetTweenTimeScale(int componentType, float timeScale)
 		{
 			BattleUiTweenAnimPlayer tweenAnimPlayer = this.TweenAnimPlayer;
@@ -475,45 +475,45 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			tweenAnimPlayer.SetTweenTimeScale(componentType, timeScale);
 		}
 
-		// Token: 0x0401FF24 RID: 130852
+		// Token: 0x0401A9EB RID: 109035
 		protected bool Destroyed;
 
-		// Token: 0x0401FF25 RID: 130853
+		// Token: 0x0401A9EC RID: 109036
 		protected string PrefabPath = string.Empty;
 
-		// Token: 0x0401FF26 RID: 130854
+		// Token: 0x0401A9ED RID: 109037
 		[Nullable(2)]
 		protected BattleUiRoleData RoleData;
 
-		// Token: 0x0401FF27 RID: 130855
+		// Token: 0x0401A9EE RID: 109038
 		[Nullable(2)]
 		protected SpecialEnergyBarInfo Config;
 
-		// Token: 0x0401FF28 RID: 130856
+		// Token: 0x0401A9EF RID: 109039
 		protected EAttributeType AttributeId;
 
-		// Token: 0x0401FF29 RID: 130857
+		// Token: 0x0401A9F0 RID: 109040
 		protected EAttributeType MaxAttributeId;
 
-		// Token: 0x0401FF2A RID: 130858
+		// Token: 0x0401A9F1 RID: 109041
 		[Nullable(2)]
 		protected BaseAttributeComponent AttributeComponent;
 
-		// Token: 0x0401FF2B RID: 130859
+		// Token: 0x0401A9F2 RID: 109042
 		[Nullable(2)]
 		protected BaseTagComponent TagComponent;
 
-		// Token: 0x0401FF2C RID: 130860
+		// Token: 0x0401A9F3 RID: 109043
 		[Nullable(2)]
 		protected CharacterBuffComponent BuffComponent;
 
-		// Token: 0x0401FF2D RID: 130861
+		// Token: 0x0401A9F4 RID: 109044
 		protected readonly List<ITagTask> TagTaskList = new List<ITagTask>();
 
-		// Token: 0x0401FF2E RID: 130862
+		// Token: 0x0401A9F5 RID: 109045
 		protected bool HasKeyEnableTag;
 
-		// Token: 0x0401FF2F RID: 130863
+		// Token: 0x0401A9F6 RID: 109046
 		[Nullable(new byte[]
 		{
 			1,
@@ -521,34 +521,34 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 		})]
 		protected readonly List<UNiagaraSystem> NiagaraList = new List<UNiagaraSystem>();
 
-		// Token: 0x0401FF30 RID: 130864
+		// Token: 0x0401A9F7 RID: 109047
 		protected bool NeedInitKeyItem = true;
 
-		// Token: 0x0401FF31 RID: 130865
+		// Token: 0x0401A9F8 RID: 109048
 		[Nullable(2)]
 		protected SpecialEnergyBarKeyItem KeyItem;
 
-		// Token: 0x0401FF32 RID: 130866
+		// Token: 0x0401A9F9 RID: 109049
 		protected readonly List<SpecialEnergyBarKeyItem> ExtraKeyItemList = new List<SpecialEnergyBarKeyItem>();
 
-		// Token: 0x0401FF33 RID: 130867
+		// Token: 0x0401A9FA RID: 109050
 		protected bool NeedInitNumItem;
 
-		// Token: 0x0401FF34 RID: 130868
+		// Token: 0x0401A9FB RID: 109051
 		[Nullable(2)]
 		protected SpecialEnergyBarNumItem NumItem;
 
-		// Token: 0x0401FF35 RID: 130869
+		// Token: 0x0401A9FC RID: 109052
 		protected readonly SpecialEnergyBarPercentMachine PercentMachine = new SpecialEnergyBarPercentMachine();
 
-		// Token: 0x0401FF36 RID: 130870
+		// Token: 0x0401A9FD RID: 109053
 		[Nullable(2)]
 		protected BattleUiTweenAnimPlayer TweenAnimPlayer;
 
-		// Token: 0x0401FF37 RID: 130871
+		// Token: 0x0401A9FE RID: 109054
 		private readonly Dictionary<EAttributeType, Action<EAttributeType, float, float>> AttributeChangedCallbackMap = new Dictionary<EAttributeType, Action<EAttributeType, float, float>>();
 
-		// Token: 0x0401FF38 RID: 130872
+		// Token: 0x0401A9FF RID: 109055
 		protected int VisibleState;
 	}
 }

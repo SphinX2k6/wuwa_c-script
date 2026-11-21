@@ -2,13 +2,13 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 {
-	// Token: 0x020066B4 RID: 26292
+	// Token: 0x02005604 RID: 22020
 	public class IDropCatchGameplayRoleViewParams
 	{
-		// Token: 0x0402240C RID: 140300
+		// Token: 0x0401CC65 RID: 117861
 		public int RoleId;
 
-		// Token: 0x0402240D RID: 140301
+		// Token: 0x0401CC66 RID: 117862
 		public bool? NeedFx;
 	}
 }

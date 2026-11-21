@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MusicalInstrument
 {
-	// Token: 0x0200536C RID: 21356
+	// Token: 0x0200434F RID: 17231
 	public class GuqinKeyItem : MusicalInstrumentKeyItem
 	{
-		// Token: 0x06036917 RID: 223511 RVA: 0x00CEC1C4 File Offset: 0x00CEA3C4
+		// Token: 0x0602B85D RID: 178269 RVA: 0x00C3B050 File Offset: 0x00C39250
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06036918 RID: 223512 RVA: 0x00CEC2B4 File Offset: 0x00CEA4B4
+		// Token: 0x0602B85E RID: 178270 RVA: 0x00C3B140 File Offset: 0x00C39340
 		protected override void OnStart()
 		{
 			UUIButtonComponent button = base.GetButton(0);
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			this.LevelSequencePlayer = new UiSequencePlayer(base.GetButton(0).RootUIComp);
 		}
 
-		// Token: 0x06036919 RID: 223513 RVA: 0x00CEC300 File Offset: 0x00CEA500
+		// Token: 0x0602B85F RID: 178271 RVA: 0x00C3B18C File Offset: 0x00C3938C
 		protected override void OnBeforeDestroy()
 		{
 			UUIButtonComponent button = base.GetButton(0);
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			button.OnPointDownCallBack.Unbind();
 		}
 
-		// Token: 0x0603691A RID: 223514 RVA: 0x00CEC318 File Offset: 0x00CEA518
+		// Token: 0x0602B860 RID: 178272 RVA: 0x00C3B1A4 File Offset: 0x00C393A4
 		public void RefreshMode(EZitherAudioType audioType)
 		{
 			UUIItem item = base.GetItem(1);
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			item2.SetUIActive(audioType == EZitherAudioType.OverTone);
 		}
 
-		// Token: 0x0603691B RID: 223515 RVA: 0x00CEC345 File Offset: 0x00CEA545
+		// Token: 0x0602B861 RID: 178273 RVA: 0x00C3B1D1 File Offset: 0x00C393D1
 		public override void OnQteFocus(bool isFocus)
 		{
 			UUIItem item = base.GetItem(8);
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			item.SetUIActive(isFocus);
 		}
 
-		// Token: 0x0603691C RID: 223516 RVA: 0x00CEC35C File Offset: 0x00CEA55C
+		// Token: 0x0602B862 RID: 178274 RVA: 0x00C3B1E8 File Offset: 0x00C393E8
 		public override void OnQtePerformance(bool success)
 		{
 			UiSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			levelSequencePlayer2.PlayOrReplaySequenceByName(success ? "Right" : "Wrong", false, null);
 		}
 
-		// Token: 0x0603691D RID: 223517 RVA: 0x00CEC3A8 File Offset: 0x00CEA5A8
+		// Token: 0x0602B863 RID: 178275 RVA: 0x00C3B234 File Offset: 0x00C39434
 		private void OnPointerDown()
 		{
 			Action<int, int> onPointerDownCallback = this.OnPointerDownCallback;
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			levelSequencePlayer.PlayOrReplaySequenceByName("Aftermath", false, null);
 		}
 
-		// Token: 0x0603691E RID: 223518 RVA: 0x00CEC3F1 File Offset: 0x00CEA5F1
+		// Token: 0x0602B864 RID: 178276 RVA: 0x00C3B27D File Offset: 0x00C3947D
 		public void SetInteractive(bool isInteractive)
 		{
 			UUIButtonComponent button = base.GetButton(0);
@@ -124,30 +124,30 @@ namespace CSharpScript.Game.Module.MusicalInstrument
 			button.SetSelfInteractive(isInteractive);
 		}
 
-		// Token: 0x0401CD87 RID: 118151
+		// Token: 0x0401781D RID: 96285
 		[Nullable(2)]
 		private UiSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200B5E7 RID: 46567
+		// Token: 0x0200A01E RID: 40990
 		private enum EGuqinKeyItemComponent
 		{
-			// Token: 0x0403719B RID: 225691
+			// Token: 0x04031BEE RID: 203758
 			Button,
-			// Token: 0x0403719C RID: 225692
+			// Token: 0x04031BEF RID: 203759
 			PnlFundamentalTone,
-			// Token: 0x0403719D RID: 225693
+			// Token: 0x04031BF0 RID: 203760
 			PnlOverTone,
-			// Token: 0x0403719E RID: 225694
+			// Token: 0x04031BF1 RID: 203761
 			SprPoint,
-			// Token: 0x0403719F RID: 225695
+			// Token: 0x04031BF2 RID: 203762
 			SprNum,
-			// Token: 0x040371A0 RID: 225696
+			// Token: 0x04031BF3 RID: 203763
 			TextNote,
-			// Token: 0x040371A1 RID: 225697
+			// Token: 0x04031BF4 RID: 203764
 			PnlErrorState,
-			// Token: 0x040371A2 RID: 225698
+			// Token: 0x04031BF5 RID: 203765
 			PnlSuccessState,
-			// Token: 0x040371A3 RID: 225699
+			// Token: 0x04031BF6 RID: 203766
 			PnlQte
 		}
 	}

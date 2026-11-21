@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005FF1 RID: 24561
+	// Token: 0x0200664F RID: 26191
 	public enum ESeason : byte
 	{
-		// Token: 0x0400FFB7 RID: 65463
+		// Token: 0x04010D94 RID: 69012
 		Spring,
-		// Token: 0x0400FFB8 RID: 65464
+		// Token: 0x04010D95 RID: 69013
 		Summer,
-		// Token: 0x0400FFB9 RID: 65465
+		// Token: 0x04010D96 RID: 69014
 		Autumn,
-		// Token: 0x0400FFBA RID: 65466
+		// Token: 0x04010D97 RID: 69015
 		Winter
 	}
 }

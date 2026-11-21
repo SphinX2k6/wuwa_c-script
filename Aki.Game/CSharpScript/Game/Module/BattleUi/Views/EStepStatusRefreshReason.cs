@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D73 RID: 23923
+	// Token: 0x02004D55 RID: 19797
 	public enum EStepStatusRefreshReason
 	{
-		// Token: 0x0401FA32 RID: 129586
+		// Token: 0x0401A4EA RID: 107754
 		Reset,
-		// Token: 0x0401FA33 RID: 129587
+		// Token: 0x0401A4EB RID: 107755
 		Init,
-		// Token: 0x0401FA34 RID: 129588
+		// Token: 0x0401A4EC RID: 107756
 		ConfigRefresh,
-		// Token: 0x0401FA35 RID: 129589
+		// Token: 0x0401A4ED RID: 107757
 		StatusChange
 	}
 }

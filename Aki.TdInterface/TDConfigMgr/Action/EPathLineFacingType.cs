@@ -2,12 +2,12 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200166A RID: 5738
+	// Token: 0x020017DB RID: 6107
 	public enum EPathLineFacingType
 	{
-		// Token: 0x04004CD9 RID: 19673
+		// Token: 0x040050D9 RID: 20697
 		Current,
-		// Token: 0x04004CDA RID: 19674
+		// Token: 0x040050DA RID: 20698
 		Custom
 	}
 }

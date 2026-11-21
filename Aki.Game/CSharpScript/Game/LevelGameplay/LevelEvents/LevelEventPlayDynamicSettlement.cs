@@ -13,24 +13,24 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B4D RID: 27469
+	// Token: 0x02005CC5 RID: 23749
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class LevelEventPlayDynamicSettlement : LevelEventBase
 	{
-		// Token: 0x060441A4 RID: 278948 RVA: 0x010C1D21 File Offset: 0x010BFF21
+		// Token: 0x0603A2F6 RID: 238326 RVA: 0x0106B8D5 File Offset: 0x01069AD5
 		public LevelEventPlayDynamicSettlement(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060441A5 RID: 278949 RVA: 0x010C1D3C File Offset: 0x010BFF3C
+		// Token: 0x0603A2F7 RID: 238327 RVA: 0x0106B8F0 File Offset: 0x01069AF0
 		[NullableContext(1)]
 		protected override void ExecuteInGm(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x060441A6 RID: 278950 RVA: 0x010C1D48 File Offset: 0x010BFF48
+		// Token: 0x0603A2F8 RID: 238328 RVA: 0x0106B8FC File Offset: 0x01069AFC
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.PlayBattleSettlement();
 		}
 
-		// Token: 0x060441A7 RID: 278951 RVA: 0x010C1E44 File Offset: 0x010C0044
+		// Token: 0x0603A2F9 RID: 238329 RVA: 0x0106B9F8 File Offset: 0x01069BF8
 		private void OnActiveBattleView()
 		{
 			if (!this.IsWaitBattleView)
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.PlayBattleSettlement();
 		}
 
-		// Token: 0x060441A8 RID: 278952 RVA: 0x010C1EA8 File Offset: 0x010C00A8
+		// Token: 0x0603A2FA RID: 238330 RVA: 0x0106BA5C File Offset: 0x01069C5C
 		private void OnDisActiveBattleView()
 		{
 			if (this.IsWaitBattleView)
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x060441A9 RID: 278953 RVA: 0x010C1F08 File Offset: 0x010C0108
+		// Token: 0x0603A2FB RID: 238331 RVA: 0x0106BABC File Offset: 0x01069CBC
 		private void PlayBattleSettlement()
 		{
 			BattleUiModel.Instance.ChildViewData.HideBattleView(EBattleUiVisibleReason.LevelEvent, new EBattleUiChild[]
@@ -173,7 +173,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x060441AA RID: 278954 RVA: 0x010C20AC File Offset: 0x010C02AC
+		// Token: 0x0603A2FC RID: 238332 RVA: 0x0106BC60 File Offset: 0x01069E60
 		private void HandleTimeScale(UCurveFloat curve)
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -214,7 +214,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x060441AB RID: 278955 RVA: 0x010C2208 File Offset: 0x010C0408
+		// Token: 0x0603A2FD RID: 238333 RVA: 0x0106BDBC File Offset: 0x01069FBC
 		private void HandleEntityTimeScale(EntityHandle entityHandle, [Nullable(1)] global::Vector centerLocation, int radius, int priority, float timeDilation, UCurveFloat curve, float duration)
 		{
 			if (entityHandle == null || !entityHandle.Valid)
@@ -244,7 +244,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x060441AC RID: 278956 RVA: 0x010C22C3 File Offset: 0x010C04C3
+		// Token: 0x0603A2FE RID: 238334 RVA: 0x0106BE77 File Offset: 0x0106A077
 		private void OnOpenView(EUiViewName viewName, int viewId)
 		{
 			if (viewName != EUiViewName.FlySettlementView)
@@ -255,7 +255,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.OnTimerEnd();
 		}
 
-		// Token: 0x060441AD RID: 278957 RVA: 0x010C22F4 File Offset: 0x010C04F4
+		// Token: 0x0603A2FF RID: 238335 RVA: 0x0106BEA8 File Offset: 0x0106A0A8
 		private void OpenTimer()
 		{
 			float interval = ConfigCommonParamById.GetFloatConfig("BattleSettlementTime").Value * (float)TimeUtil.Instance.InverseMillisecond;
@@ -267,7 +267,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}, interval, null, null, true, 1f);
 		}
 
-		// Token: 0x060441AE RID: 278958 RVA: 0x010C2348 File Offset: 0x010C0548
+		// Token: 0x0603A300 RID: 238336 RVA: 0x0106BEFC File Offset: 0x0106A0FC
 		private void OnTimerEnd()
 		{
 			BattleUiModel.Instance.ChildViewData.ShowBattleView(EBattleUiVisibleReason.LevelEvent, 2);
@@ -291,7 +291,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			EventSystem.Instance.Emit<bool>(EEventName.BattleSettlementStateChanged, false);
 		}
 
-		// Token: 0x060441AF RID: 278959 RVA: 0x010C2410 File Offset: 0x010C0610
+		// Token: 0x0603A301 RID: 238337 RVA: 0x0106BFC4 File Offset: 0x0106A1C4
 		public override void Release()
 		{
 			base.Release();
@@ -309,29 +309,29 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x04023922 RID: 145698
+		// Token: 0x0401EBC4 RID: 125892
 		private TimerHandle Timer;
 
-		// Token: 0x04023923 RID: 145699
+		// Token: 0x0401EBC5 RID: 125893
 		[Nullable(1)]
 		private readonly Dictionary<EntityHandle, int> EntityTimeScaleMap = new Dictionary<EntityHandle, int>();
 
-		// Token: 0x04023924 RID: 145700
+		// Token: 0x0401EBC6 RID: 125894
 		private bool IsWaitBattleView = true;
 
-		// Token: 0x04023925 RID: 145701
+		// Token: 0x0401EBC7 RID: 125895
 		private int ScreenEffectCueId;
 
-		// Token: 0x04023926 RID: 145702
+		// Token: 0x0401EBC8 RID: 125896
 		private int ScreenEffectCueHandleId;
 
-		// Token: 0x04023927 RID: 145703
+		// Token: 0x0401EBC9 RID: 125897
 		private BaseGameplayCueComponent CueComp;
 
-		// Token: 0x04023928 RID: 145704
+		// Token: 0x0401EBCA RID: 125898
 		private EDynamicSettlementType SettlementType;
 
-		// Token: 0x04023929 RID: 145705
+		// Token: 0x0401EBCB RID: 125899
 		private EBattleSettlementBgmType? BgmType;
 	}
 }

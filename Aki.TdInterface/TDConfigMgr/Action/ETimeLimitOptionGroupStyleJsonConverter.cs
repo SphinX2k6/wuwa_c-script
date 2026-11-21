@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002470 RID: 9328
+	// Token: 0x02002711 RID: 10001
 	public class ETimeLimitOptionGroupStyleJsonConverter : JsonConverter<ETimeLimitOptionGroupStyle>
 	{
-		// Token: 0x0600CA78 RID: 51832 RVA: 0x001DCD48 File Offset: 0x001DAF48
+		// Token: 0x0600D728 RID: 55080 RVA: 0x001F6DFC File Offset: 0x001F4FFC
 		public override ETimeLimitOptionGroupStyle Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return ETimeLimitOptionGroupStyleExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600CA79 RID: 51833 RVA: 0x001DCD6C File Offset: 0x001DAF6C
+		// Token: 0x0600D729 RID: 55081 RVA: 0x001F6E20 File Offset: 0x001F5020
 		public override void Write(Utf8JsonWriter writer, ETimeLimitOptionGroupStyle value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

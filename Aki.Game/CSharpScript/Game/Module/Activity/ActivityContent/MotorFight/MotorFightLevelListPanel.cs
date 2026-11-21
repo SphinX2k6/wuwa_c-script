@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 {
-	// Token: 0x02006415 RID: 25621
+	// Token: 0x02005393 RID: 21395
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 	})]
 	public class MotorFightLevelListPanel : GridProxyAbstract<List<MotorFightLevelData>>
 	{
-		// Token: 0x06040706 RID: 263942 RVA: 0x00F97094 File Offset: 0x00F95294
+		// Token: 0x060353C7 RID: 218055 RVA: 0x00EDE034 File Offset: 0x00EDC234
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -31,13 +31,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06040707 RID: 263943 RVA: 0x00F970DC File Offset: 0x00F952DC
+		// Token: 0x060353C8 RID: 218056 RVA: 0x00EDE07C File Offset: 0x00EDC27C
 		protected override void OnStart()
 		{
 			this.LevelLayout = new GenericLayout<MotorFightLevelItem, MotorFightLevelData>(base.GetVerticalLayout(0), new Func<MotorFightLevelItem>(this.CreateMotorFightLevelItem), null, false, true);
 		}
 
-		// Token: 0x06040708 RID: 263944 RVA: 0x00F97100 File Offset: 0x00F95300
+		// Token: 0x060353C9 RID: 218057 RVA: 0x00EDE0A0 File Offset: 0x00EDC2A0
 		public override UniTask RefreshAsync(List<MotorFightLevelData> dataList, bool isSelected, int gridIndex)
 		{
 			MotorFightLevelListPanel.<RefreshAsync>d__4 <RefreshAsync>d__;
@@ -49,20 +49,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return <RefreshAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040709 RID: 263945 RVA: 0x00F9714B File Offset: 0x00F9534B
+		// Token: 0x060353CA RID: 218058 RVA: 0x00EDE0EB File Offset: 0x00EDC2EB
 		private MotorFightLevelItem CreateMotorFightLevelItem()
 		{
 			return new MotorFightLevelItem();
 		}
 
-		// Token: 0x0604070A RID: 263946 RVA: 0x00F97152 File Offset: 0x00F95352
+		// Token: 0x060353CB RID: 218059 RVA: 0x00EDE0F2 File Offset: 0x00EDC2F2
 		[NullableContext(2)]
 		public UUIItem GuideGetLevelItem(int index)
 		{
 			return this.LevelLayout.GetItemByIndex(index);
 		}
 
-		// Token: 0x0604070B RID: 263947 RVA: 0x00F97160 File Offset: 0x00F95360
+		// Token: 0x060353CC RID: 218060 RVA: 0x00EDE100 File Offset: 0x00EDC300
 		[NullableContext(2)]
 		public UUIItem GetLevelNavigationItem()
 		{
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return layoutItemByIndex.GetNavigationItem();
 		}
 
-		// Token: 0x0402180F RID: 137231
+		// Token: 0x0401C13E RID: 115006
 		[Nullable(new byte[]
 		{
 			2,
@@ -93,11 +93,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 		})]
 		private GenericLayout<MotorFightLevelItem, MotorFightLevelData> LevelLayout;
 
-		// Token: 0x0200C639 RID: 50745
+		// Token: 0x0200B020 RID: 45088
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x0403BD89 RID: 245129
+			// Token: 0x040366E6 RID: 222950
 			public const int LayoutLevel = 0;
 		}
 	}

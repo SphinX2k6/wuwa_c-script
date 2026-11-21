@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000DD1 RID: 3537
+	// Token: 0x02000EB6 RID: 3766
 	public struct LinkPreload : IFlatbufferObject
 	{
-		// Token: 0x17001D21 RID: 7457
-		// (get) Token: 0x06008ED7 RID: 36567 RVA: 0x00279786 File Offset: 0x00277986
+		// Token: 0x17001D85 RID: 7557
+		// (get) Token: 0x060094F3 RID: 38131 RVA: 0x00297B7E File Offset: 0x00295D7E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008ED8 RID: 36568 RVA: 0x00279793 File Offset: 0x00277993
+		// Token: 0x060094F4 RID: 38132 RVA: 0x00297B8B File Offset: 0x00295D8B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06008ED9 RID: 36569 RVA: 0x0027979C File Offset: 0x0027799C
+		// Token: 0x060094F5 RID: 38133 RVA: 0x00297B94 File Offset: 0x00295D94
 		public static LinkPreload GetRootAsLinkPreload(ByteBuffer _bb)
 		{
 			return LinkPreload.GetRootAsLinkPreload(_bb, default(LinkPreload));
 		}
 
-		// Token: 0x06008EDA RID: 36570 RVA: 0x002797B8 File Offset: 0x002779B8
+		// Token: 0x060094F6 RID: 38134 RVA: 0x00297BB0 File Offset: 0x00295DB0
 		public static LinkPreload GetRootAsLinkPreload(ByteBuffer _bb, LinkPreload obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06008EDB RID: 36571 RVA: 0x002797D5 File Offset: 0x002779D5
+		// Token: 0x060094F7 RID: 38135 RVA: 0x00297BCD File Offset: 0x00295DCD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06008EDC RID: 36572 RVA: 0x002797E4 File Offset: 0x002779E4
+		// Token: 0x060094F8 RID: 38136 RVA: 0x00297BDC File Offset: 0x00295DDC
 		public LinkPreload __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001D22 RID: 7458
-		// (get) Token: 0x06008EDD RID: 36573 RVA: 0x002797F4 File Offset: 0x002779F4
+		// Token: 0x17001D86 RID: 7558
+		// (get) Token: 0x060094F9 RID: 38137 RVA: 0x00297BEC File Offset: 0x00295DEC
 		public int Id
 		{
 			get
@@ -64,7 +64,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008EDE RID: 36574 RVA: 0x00279830 File Offset: 0x00277A30
+		// Token: 0x060094FA RID: 38138 RVA: 0x00297C28 File Offset: 0x00295E28
 		public int RoleIdList(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -75,8 +75,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17001D23 RID: 7459
-		// (get) Token: 0x06008EDF RID: 36575 RVA: 0x00279870 File Offset: 0x00277A70
+		// Token: 0x17001D87 RID: 7559
+		// (get) Token: 0x060094FB RID: 38139 RVA: 0x00297C68 File Offset: 0x00295E68
 		public int RoleIdListLength
 		{
 			get
@@ -90,37 +90,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008EE0 RID: 36576 RVA: 0x0027989B File Offset: 0x00277A9B
+		// Token: 0x060094FC RID: 38140 RVA: 0x00297C93 File Offset: 0x00295E93
 		public Span<int> GetRoleIdListBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x06008EE1 RID: 36577 RVA: 0x002798AA File Offset: 0x00277AAA
+		// Token: 0x060094FD RID: 38141 RVA: 0x00297CA2 File Offset: 0x00295EA2
 		public int[] GetRoleIdListArray()
 		{
 			return this.__p.__vector_as_array<int>(6) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06008EE2 RID: 36578 RVA: 0x002798C4 File Offset: 0x00277AC4
+		// Token: 0x060094FE RID: 38142 RVA: 0x00297CB9 File Offset: 0x00295EB9
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用RoleIdListIter()或GetRoleIdListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] RoleIdList()
+		public int[] RoleIdList()
 		{
-			LinkPreload linkPreload = this;
-			return linkPreload.GetRoleIdListArray() ?? Array.Empty<int>();
+			return this.GetRoleIdListArray();
 		}
 
-		// Token: 0x06008EE3 RID: 36579 RVA: 0x002798E8 File Offset: 0x00277AE8
+		// Token: 0x060094FF RID: 38143 RVA: 0x00297CC1 File Offset: 0x00295EC1
 		[NullableContext(1)]
-		public readonly IEnumerable<int> RoleIdListIter()
+		public IEnumerable<int> RoleIdListIter()
 		{
 			LinkPreload.<RoleIdListIter>d__16 <RoleIdListIter>d__ = new LinkPreload.<RoleIdListIter>d__16(-2);
 			<RoleIdListIter>d__.<>3__<>4__this = this;
 			return <RoleIdListIter>d__;
 		}
 
-		// Token: 0x04004E6B RID: 20075
+		// Token: 0x04005450 RID: 21584
 		private Table __p;
 	}
 }

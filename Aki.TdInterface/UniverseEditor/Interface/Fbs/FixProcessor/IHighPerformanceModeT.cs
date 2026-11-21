@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.FixProcessor
 {
-	// Token: 0x02004761 RID: 18273
+	// Token: 0x02004BC9 RID: 19401
 	public class IHighPerformanceModeT
 	{
-		// Token: 0x1700831A RID: 33562
-		// (get) Token: 0x0601C21B RID: 115227 RVA: 0x003FC492 File Offset: 0x003FA692
-		// (set) Token: 0x0601C21C RID: 115228 RVA: 0x003FC49A File Offset: 0x003FA69A
+		// Token: 0x1700895B RID: 35163
+		// (get) Token: 0x0601D9F0 RID: 121328 RVA: 0x0042872E File Offset: 0x0042692E
+		// (set) Token: 0x0601D9F1 RID: 121329 RVA: 0x00428736 File Offset: 0x00426936
 		public EPerformanceMode Type { get; set; }
 
-		// Token: 0x0601C21D RID: 115229 RVA: 0x003FC4A3 File Offset: 0x003FA6A3
+		// Token: 0x0601D9F2 RID: 121330 RVA: 0x0042873F File Offset: 0x0042693F
 		public IHighPerformanceModeT()
 		{
 			this.Type = EPerformanceMode.High;

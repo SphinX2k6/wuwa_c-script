@@ -7,17 +7,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DFE RID: 19966
+	// Token: 0x02003DC7 RID: 15815
 	public class RogueInfoViewShopDiscount : MediumItemGridComponent
 	{
-		// Token: 0x0603384E RID: 211022 RVA: 0x00C09DBA File Offset: 0x00C07FBA
+		// Token: 0x060286B9 RID: 165561 RVA: 0x00B532CA File Offset: 0x00B514CA
 		[NullableContext(1)]
 		protected override string GetResourceId()
 		{
 			return "UiItem_ItemDiscount";
 		}
 
-		// Token: 0x0603384F RID: 211023 RVA: 0x00C09DC4 File Offset: 0x00C07FC4
+		// Token: 0x060286BA RID: 165562 RVA: 0x00B532D4 File Offset: 0x00B514D4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06033850 RID: 211024 RVA: 0x00C09E30 File Offset: 0x00C08030
+		// Token: 0x060286BB RID: 165563 RVA: 0x00B53340 File Offset: 0x00B51540
 		[NullableContext(2)]
 		protected override void OnRefresh(object param = null)
 		{
@@ -59,13 +59,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x0200AF8B RID: 44939
+		// Token: 0x020099C0 RID: 39360
 		private class ERogueInfoViewShopDiscountDefine
 		{
-			// Token: 0x040354C7 RID: 218311
+			// Token: 0x0402FEFA RID: 196346
 			public const int TexIcon = 0;
 
-			// Token: 0x040354C8 RID: 218312
+			// Token: 0x0402FEFB RID: 196347
 			public const int TxtPrice = 1;
 		}
 	}

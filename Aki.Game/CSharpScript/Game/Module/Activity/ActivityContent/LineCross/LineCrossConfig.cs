@@ -4,38 +4,38 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 {
-	// Token: 0x0200655D RID: 25949
+	// Token: 0x020054DB RID: 21723
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Config(0)]
 	public class LineCrossConfig : ConfigBase
 	{
-		// Token: 0x06041072 RID: 266354 RVA: 0x00FC2CCB File Offset: 0x00FC0ECB
+		// Token: 0x06035D37 RID: 220471 RVA: 0x00F09CB3 File Offset: 0x00F07EB3
 		public LineCrossEntrance? GetLineCrossEntranceById(int id)
 		{
 			return ConfigLineCrossEntranceById.GetConfig(id, true);
 		}
 
-		// Token: 0x06041073 RID: 266355 RVA: 0x00FC2CD4 File Offset: 0x00FC0ED4
+		// Token: 0x06035D38 RID: 220472 RVA: 0x00F09CBC File Offset: 0x00F07EBC
 		public LineCrossGroup? GetLineCrossGroupByGroupId(int groupId)
 		{
 			return ConfigLineCrossGroupByGroupId.GetConfig(groupId, true);
 		}
 
-		// Token: 0x06041074 RID: 266356 RVA: 0x00FC2CDD File Offset: 0x00FC0EDD
+		// Token: 0x06035D39 RID: 220473 RVA: 0x00F09CC5 File Offset: 0x00F07EC5
 		public LineCrossChallenge? GetLineCrossChallengeById(int id)
 		{
 			return ConfigLineCrossChallengeById.GetConfig(id, true);
 		}
 
-		// Token: 0x06041075 RID: 266357 RVA: 0x00FC2CE6 File Offset: 0x00FC0EE6
+		// Token: 0x06035D3A RID: 220474 RVA: 0x00F09CCE File Offset: 0x00F07ECE
 		public LineCrossActivity? GetLineCrossActivityById(int id)
 		{
 			return ConfigLineCrossActivityByActivityId.GetConfig(id, true);
 		}
 
-		// Token: 0x17009542 RID: 38210
-		// (get) Token: 0x06041076 RID: 266358 RVA: 0x00FC2CEF File Offset: 0x00FC0EEF
+		// Token: 0x170068A4 RID: 26788
+		// (get) Token: 0x06035D3B RID: 220475 RVA: 0x00F09CD7 File Offset: 0x00F07ED7
 		public static LineCrossConfig Instance
 		{
 			get
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			}
 		}
 
-		// Token: 0x06041077 RID: 266359 RVA: 0x00FC2CF6 File Offset: 0x00FC0EF6
+		// Token: 0x06035D3C RID: 220476 RVA: 0x00F09CDE File Offset: 0x00F07EDE
 		public static LineCrossConfig GetOrCreateInstance()
 		{
 			if (LineCrossConfig._Instance == null)
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			return LineCrossConfig._Instance;
 		}
 
-		// Token: 0x06041078 RID: 266360 RVA: 0x00FC2D0A File Offset: 0x00FC0F0A
+		// Token: 0x06035D3D RID: 220477 RVA: 0x00F09CF2 File Offset: 0x00F07EF2
 		public static bool CreateInstance()
 		{
 			if (LineCrossConfig._Instance != null)
@@ -65,24 +65,24 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			return true;
 		}
 
-		// Token: 0x06041079 RID: 266361 RVA: 0x00FC2D20 File Offset: 0x00FC0F20
+		// Token: 0x06035D3E RID: 220478 RVA: 0x00F09D08 File Offset: 0x00F07F08
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0604107A RID: 266362 RVA: 0x00FC2D22 File Offset: 0x00FC0F22
+		// Token: 0x06035D3F RID: 220479 RVA: 0x00F09D0A File Offset: 0x00F07F0A
 		public static void ResetStaticDefaultValue()
 		{
 			LineCrossConfig._Instance = null;
 		}
 
-		// Token: 0x0604107B RID: 266363 RVA: 0x00FC2D2A File Offset: 0x00FC0F2A
+		// Token: 0x06035D40 RID: 220480 RVA: 0x00F09D12 File Offset: 0x00F07F12
 		static LineCrossConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LineCrossConfig.CreateStaticDefaultValue), new Action(LineCrossConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04021E63 RID: 138851
+		// Token: 0x0401C794 RID: 116628
 		[Nullable(2)]
 		private static LineCrossConfig _Instance;
 	}

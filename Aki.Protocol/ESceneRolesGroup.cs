@@ -3,31 +3,31 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001645 RID: 5701
+	// Token: 0x020016BC RID: 5820
 	public enum ESceneRolesGroup
 	{
-		// Token: 0x0400C0D7 RID: 49367
+		// Token: 0x0400C5E2 RID: 50658
 		[OriginalName("GroupNone")]
 		GroupNone,
-		// Token: 0x0400C0D8 RID: 49368
+		// Token: 0x0400C5E3 RID: 50659
 		[OriginalName("Battle")]
 		Battle,
-		// Token: 0x0400C0D9 RID: 49369
+		// Token: 0x0400C5E4 RID: 50660
 		[OriginalName("Phantom")]
 		Phantom,
-		// Token: 0x0400C0DA RID: 49370
+		// Token: 0x0400C5E5 RID: 50661
 		[OriginalName("Plot")]
 		Plot,
-		// Token: 0x0400C0DB RID: 49371
+		// Token: 0x0400C5E6 RID: 50662
 		[OriginalName("Moto")]
 		Moto,
-		// Token: 0x0400C0DC RID: 49372
+		// Token: 0x0400C5E7 RID: 50663
 		[OriginalName("PianoPlaying")]
 		PianoPlaying,
-		// Token: 0x0400C0DD RID: 49373
+		// Token: 0x0400C5E8 RID: 50664
 		[OriginalName("SelfPortrait")]
 		SelfPortrait,
-		// Token: 0x0400C0DE RID: 49374
+		// Token: 0x0400C5E9 RID: 50665
 		[OriginalName("RoleGroupMax")]
 		RoleGroupMax
 	}

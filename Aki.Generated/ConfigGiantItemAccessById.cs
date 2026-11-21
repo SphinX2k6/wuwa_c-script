@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000394 RID: 916
+	// Token: 0x020003AA RID: 938
 	public class ConfigGiantItemAccessById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600157E RID: 5502 RVA: 0x000D3147 File Offset: 0x000D1347
+		// Token: 0x06001602 RID: 5634 RVA: 0x000D989B File Offset: 0x000D7A9B
 		static ConfigGiantItemAccessById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigGiantItemAccessById.CreateStaticDefaultValue), new Action(ConfigGiantItemAccessById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600157F RID: 5503 RVA: 0x000D3168 File Offset: 0x000D1368
+		// Token: 0x06001603 RID: 5635 RVA: 0x000D98BC File Offset: 0x000D7ABC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigGiantItemAccessById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001580 RID: 5504 RVA: 0x000D31E7 File Offset: 0x000D13E7
+		// Token: 0x06001604 RID: 5636 RVA: 0x000D993B File Offset: 0x000D7B3B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigGiantItemAccessById.LogPair = null;
 			ConfigGiantItemAccessById.HandleId = 0;
 		}
 
-		// Token: 0x06001581 RID: 5505 RVA: 0x000D31F5 File Offset: 0x000D13F5
+		// Token: 0x06001605 RID: 5637 RVA: 0x000D9949 File Offset: 0x000D7B49
 		public static void Init()
 		{
 			ConfigGiantItemAccessById.HandleId = ConfigCommon.InitDataStatement(ConfigGiantItemAccessById.HandleId, "db_giant.db", "select BinData from `GiantItemAccess` where Id=?");
 		}
 
-		// Token: 0x06001582 RID: 5506 RVA: 0x000D3210 File Offset: 0x000D1410
+		// Token: 0x06001606 RID: 5638 RVA: 0x000D9964 File Offset: 0x000D7B64
 		public static GiantItemAccess? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigGiantItemAccessById.HandleId, ConfigGiantItemAccessById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new GiantItemAccess?(rootAsGiantItemAccess);
 		}
 
-		// Token: 0x040018F0 RID: 6384
+		// Token: 0x0400198A RID: 6538
 		private const string DB = "db_giant.db";
 
-		// Token: 0x040018F1 RID: 6385
+		// Token: 0x0400198B RID: 6539
 		private const string FILE = "j.巨人信物.xlsx";
 
-		// Token: 0x040018F2 RID: 6386
+		// Token: 0x0400198C RID: 6540
 		private const string TABLE = "GiantItemAccess";
 
-		// Token: 0x040018F3 RID: 6387
+		// Token: 0x0400198D RID: 6541
 		private const string COMMAND = "select BinData from `GiantItemAccess` where Id=?";
 
-		// Token: 0x040018F4 RID: 6388
+		// Token: 0x0400198E RID: 6542
 		private const string KEY_PREFIX = "GiantItemAccessById";
 
-		// Token: 0x040018F5 RID: 6389
+		// Token: 0x0400198F RID: 6543
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040018F6 RID: 6390
+		// Token: 0x04001990 RID: 6544
 		private static int HandleId;
 	}
 }

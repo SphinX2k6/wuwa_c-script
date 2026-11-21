@@ -3,13 +3,13 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using Google.Protobuf;
 
-// Token: 0x0200222D RID: 8749
+// Token: 0x02001711 RID: 5905
 [NullableContext(2)]
 [Nullable(0)]
 [Controller(0)]
 public class MotionController : ControllerBase
 {
-	// Token: 0x0601110D RID: 69901 RVA: 0x004290F9 File Offset: 0x004272F9
+	// Token: 0x0600E5A3 RID: 58787 RVA: 0x00435C9D File Offset: 0x00433E9D
 	protected override bool OnInit()
 	{
 		this.OnAddEvents();
@@ -17,7 +17,7 @@ public class MotionController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601110E RID: 69902 RVA: 0x00429108 File Offset: 0x00427308
+	// Token: 0x0600E5A4 RID: 58788 RVA: 0x00435CAC File Offset: 0x00433EAC
 	protected override bool OnClear()
 	{
 		this.OnRemoveEvents();
@@ -25,17 +25,17 @@ public class MotionController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601110F RID: 69903 RVA: 0x00429117 File Offset: 0x00427317
+	// Token: 0x0600E5A5 RID: 58789 RVA: 0x00435CBB File Offset: 0x00433EBB
 	protected void OnAddEvents()
 	{
 	}
 
-	// Token: 0x06011110 RID: 69904 RVA: 0x00429119 File Offset: 0x00427319
+	// Token: 0x0600E5A6 RID: 58790 RVA: 0x00435CBD File Offset: 0x00433EBD
 	protected void OnRemoveEvents()
 	{
 	}
 
-	// Token: 0x06011111 RID: 69905 RVA: 0x0042911C File Offset: 0x0042731C
+	// Token: 0x0600E5A7 RID: 58791 RVA: 0x00435CC0 File Offset: 0x00433EC0
 	protected void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.RoleMotionNewCanUnLockNotify, new Action<IMessage, Net.CallbackStatus>(this.OnRoleMotionNewCanUnLockNotify));
@@ -44,7 +44,7 @@ public class MotionController : ControllerBase
 		Net.Instance.Register(ENotifyMessageId.RoleMotionFinishConditionNotify, new Action<IMessage, Net.CallbackStatus>(this.OnRoleMotionFinishConditionNotify));
 	}
 
-	// Token: 0x06011112 RID: 69906 RVA: 0x0042919C File Offset: 0x0042739C
+	// Token: 0x0600E5A8 RID: 58792 RVA: 0x00435D40 File Offset: 0x00433F40
 	protected void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.RoleMotionNewCanUnLockNotify);
@@ -53,7 +53,7 @@ public class MotionController : ControllerBase
 		Net.Instance.UnRegister(ENotifyMessageId.RoleMotionFinishConditionNotify);
 	}
 
-	// Token: 0x06011113 RID: 69907 RVA: 0x004291EC File Offset: 0x004273EC
+	// Token: 0x0600E5A9 RID: 58793 RVA: 0x00435D90 File Offset: 0x00433F90
 	public void RequestUnlockMotion(int roleId, int motionId)
 	{
 		RoleMotionUnLockRequest roleMotionUnLockRequest = RoleMotionUnLockRequest.Create();
@@ -68,43 +68,43 @@ public class MotionController : ControllerBase
 			}
 			if (roleMotionUnLockResponse.ErrCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(roleMotionUnLockResponse.ErrCode, 28146, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(roleMotionUnLockResponse.ErrCode, 24424, null, true, true);
 				return;
 			}
 			MotionModel.Instance.OnMotionUnlock(roleMotionUnLockResponse.RoleId, roleMotionUnLockResponse.UnLockId);
 		}, 0);
 	}
 
-	// Token: 0x06011114 RID: 69908 RVA: 0x00429240 File Offset: 0x00427440
+	// Token: 0x0600E5AA RID: 58794 RVA: 0x00435DE4 File Offset: 0x00433FE4
 	private void OnRoleMotionNewCanUnLockNotify(IMessage msg, Net.CallbackStatus _)
 	{
 		RoleMotionNewCanUnLockNotify roleMotionNewCanUnLockNotify = (RoleMotionNewCanUnLockNotify)msg;
 		MotionModel.Instance.OnNewMotionCanUnlock(roleMotionNewCanUnLockNotify.RoleId, roleMotionNewCanUnLockNotify.CanUnLockId);
 	}
 
-	// Token: 0x06011115 RID: 69909 RVA: 0x0042926C File Offset: 0x0042746C
+	// Token: 0x0600E5AB RID: 58795 RVA: 0x00435E10 File Offset: 0x00434010
 	private void OnRoleMotionActiveNotify(IMessage msg, Net.CallbackStatus _)
 	{
 		RoleMotionActiveNotify message = (RoleMotionActiveNotify)msg;
 		MotionModel.Instance.OnRoleMotionActive(message);
 	}
 
-	// Token: 0x06011116 RID: 69910 RVA: 0x0042928C File Offset: 0x0042748C
+	// Token: 0x0600E5AC RID: 58796 RVA: 0x00435E30 File Offset: 0x00434030
 	private void OnRoleMotionListNotify(IMessage msg, Net.CallbackStatus _)
 	{
 		RoleMotionListNotify message = (RoleMotionListNotify)msg;
 		MotionModel.Instance.OnGetAllRoleMotionInfo(message);
 	}
 
-	// Token: 0x06011117 RID: 69911 RVA: 0x004292AC File Offset: 0x004274AC
+	// Token: 0x0600E5AD RID: 58797 RVA: 0x00435E50 File Offset: 0x00434050
 	private void OnRoleMotionFinishConditionNotify(IMessage msg, Net.CallbackStatus _)
 	{
 		RoleMotionFinishConditionNotify message = (RoleMotionFinishConditionNotify)msg;
 		MotionModel.Instance.OnMotionFinishCondition(message);
 	}
 
-	// Token: 0x170015AC RID: 5548
-	// (get) Token: 0x06011118 RID: 69912 RVA: 0x004292CB File Offset: 0x004274CB
+	// Token: 0x170015E3 RID: 5603
+	// (get) Token: 0x0600E5AE RID: 58798 RVA: 0x00435E6F File Offset: 0x0043406F
 	[Nullable(1)]
 	public static MotionController Instance
 	{
@@ -115,7 +115,7 @@ public class MotionController : ControllerBase
 		}
 	}
 
-	// Token: 0x06011119 RID: 69913 RVA: 0x004292D2 File Offset: 0x004274D2
+	// Token: 0x0600E5AF RID: 58799 RVA: 0x00435E76 File Offset: 0x00434076
 	[NullableContext(1)]
 	public static MotionController GetOrCreateInstance()
 	{
@@ -126,7 +126,7 @@ public class MotionController : ControllerBase
 		return MotionController._Instance;
 	}
 
-	// Token: 0x0601111A RID: 69914 RVA: 0x004292E6 File Offset: 0x004274E6
+	// Token: 0x0600E5B0 RID: 58800 RVA: 0x00435E8A File Offset: 0x0043408A
 	public static bool CreateInstance()
 	{
 		if (MotionController._Instance != null)
@@ -137,23 +137,23 @@ public class MotionController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601111B RID: 69915 RVA: 0x004292FC File Offset: 0x004274FC
+	// Token: 0x0600E5B1 RID: 58801 RVA: 0x00435EA0 File Offset: 0x004340A0
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601111C RID: 69916 RVA: 0x004292FE File Offset: 0x004274FE
+	// Token: 0x0600E5B2 RID: 58802 RVA: 0x00435EA2 File Offset: 0x004340A2
 	public static void ResetStaticDefaultValue()
 	{
 		MotionController._Instance = null;
 	}
 
-	// Token: 0x0601111D RID: 69917 RVA: 0x00429306 File Offset: 0x00427506
+	// Token: 0x0600E5B3 RID: 58803 RVA: 0x00435EAA File Offset: 0x004340AA
 	static MotionController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(MotionController.CreateStaticDefaultValue), new Action(MotionController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04008212 RID: 33298
+	// Token: 0x04008350 RID: 33616
 	private static MotionController _Instance;
 }

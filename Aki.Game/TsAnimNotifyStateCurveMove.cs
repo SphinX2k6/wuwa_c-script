@@ -19,9 +19,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AnimNotifyState/TsAnimNotifyStateCurveMove.TsAnimNotifyStateCurveMove_C")]
 public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170002D9 RID: 729
-	// (get) Token: 0x060011A9 RID: 4521 RVA: 0x000634FC File Offset: 0x000616FC
-	// (set) Token: 0x060011AA RID: 4522 RVA: 0x0006350C File Offset: 0x0006170C
+	// Token: 0x170002DC RID: 732
+	// (get) Token: 0x060011AF RID: 4527 RVA: 0x00064C14 File Offset: 0x00062E14
+	// (set) Token: 0x060011B0 RID: 4528 RVA: 0x00064C24 File Offset: 0x00062E24
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool DebugMode
 	{
@@ -35,9 +35,9 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x170002DA RID: 730
-	// (get) Token: 0x060011AB RID: 4523 RVA: 0x00063520 File Offset: 0x00061720
-	// (set) Token: 0x060011AC RID: 4524 RVA: 0x00063559 File Offset: 0x00061759
+	// Token: 0x170002DD RID: 733
+	// (get) Token: 0x060011B1 RID: 4529 RVA: 0x00064C38 File Offset: 0x00062E38
+	// (set) Token: 0x060011B2 RID: 4530 RVA: 0x00064C71 File Offset: 0x00062E71
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<SSkillBehaviorCondition> 技能条件
 	{
@@ -57,9 +57,9 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x170002DB RID: 731
-	// (get) Token: 0x060011AD RID: 4525 RVA: 0x00063567 File Offset: 0x00061767
-	// (set) Token: 0x060011AE RID: 4526 RVA: 0x0006357B File Offset: 0x0006177B
+	// Token: 0x170002DE RID: 734
+	// (get) Token: 0x060011B3 RID: 4531 RVA: 0x00064C7F File Offset: 0x00062E7F
+	// (set) Token: 0x060011B4 RID: 4532 RVA: 0x00064C93 File Offset: 0x00062E93
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FName 技能条件公式
 	{
@@ -73,9 +73,9 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x170002DC RID: 732
-	// (get) Token: 0x060011AF RID: 4527 RVA: 0x00063590 File Offset: 0x00061790
-	// (set) Token: 0x060011B0 RID: 4528 RVA: 0x000635A0 File Offset: 0x000617A0
+	// Token: 0x170002DF RID: 735
+	// (get) Token: 0x060011B5 RID: 4533 RVA: 0x00064CA8 File Offset: 0x00062EA8
+	// (set) Token: 0x060011B6 RID: 4534 RVA: 0x00064CB8 File Offset: 0x00062EB8
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool 无视障碍阻挡
 	{
@@ -89,9 +89,9 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x170002DD RID: 733
-	// (get) Token: 0x060011B1 RID: 4529 RVA: 0x000635B4 File Offset: 0x000617B4
-	// (set) Token: 0x060011B2 RID: 4530 RVA: 0x000635ED File Offset: 0x000617ED
+	// Token: 0x170002E0 RID: 736
+	// (get) Token: 0x060011B7 RID: 4535 RVA: 0x00064CCC File Offset: 0x00062ECC
+	// (set) Token: 0x060011B8 RID: 4536 RVA: 0x00064D05 File Offset: 0x00062F05
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FSoftObjectPath 运动轨迹曲线
 	{
@@ -111,9 +111,9 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x170002DE RID: 734
-	// (get) Token: 0x060011B3 RID: 4531 RVA: 0x00063615 File Offset: 0x00061815
-	// (set) Token: 0x060011B4 RID: 4532 RVA: 0x00063625 File Offset: 0x00061825
+	// Token: 0x170002E1 RID: 737
+	// (get) Token: 0x060011B9 RID: 4537 RVA: 0x00064D2D File Offset: 0x00062F2D
+	// (set) Token: 0x060011BA RID: 4538 RVA: 0x00064D3D File Offset: 0x00062F3D
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool 持续更新目标位置
 	{
@@ -127,9 +127,9 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x170002DF RID: 735
-	// (get) Token: 0x060011B5 RID: 4533 RVA: 0x00063636 File Offset: 0x00061836
-	// (set) Token: 0x060011B6 RID: 4534 RVA: 0x00063646 File Offset: 0x00061846
+	// Token: 0x170002E2 RID: 738
+	// (get) Token: 0x060011BB RID: 4539 RVA: 0x00064D4E File Offset: 0x00062F4E
+	// (set) Token: 0x060011BC RID: 4540 RVA: 0x00064D5E File Offset: 0x00062F5E
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe EPositionDatumTarget 位置基准目标
 	{
@@ -143,9 +143,9 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x170002E0 RID: 736
-	// (get) Token: 0x060011B7 RID: 4535 RVA: 0x00063657 File Offset: 0x00061857
-	// (set) Token: 0x060011B8 RID: 4536 RVA: 0x0006366B File Offset: 0x0006186B
+	// Token: 0x170002E3 RID: 739
+	// (get) Token: 0x060011BD RID: 4541 RVA: 0x00064D6F File Offset: 0x00062F6F
+	// (set) Token: 0x060011BE RID: 4542 RVA: 0x00064D83 File Offset: 0x00062F83
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FName 基于目标骨骼位置
 	{
@@ -159,9 +159,9 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x170002E1 RID: 737
-	// (get) Token: 0x060011B9 RID: 4537 RVA: 0x00063680 File Offset: 0x00061880
-	// (set) Token: 0x060011BA RID: 4538 RVA: 0x00063694 File Offset: 0x00061894
+	// Token: 0x170002E4 RID: 740
+	// (get) Token: 0x060011BF RID: 4543 RVA: 0x00064D98 File Offset: 0x00062F98
+	// (set) Token: 0x060011C0 RID: 4544 RVA: 0x00064DAC File Offset: 0x00062FAC
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FName 目标参数
 	{
@@ -175,9 +175,9 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x170002E2 RID: 738
-	// (get) Token: 0x060011BB RID: 4539 RVA: 0x000636A9 File Offset: 0x000618A9
-	// (set) Token: 0x060011BC RID: 4540 RVA: 0x000636B9 File Offset: 0x000618B9
+	// Token: 0x170002E5 RID: 741
+	// (get) Token: 0x060011C1 RID: 4545 RVA: 0x00064DC1 File Offset: 0x00062FC1
+	// (set) Token: 0x060011C2 RID: 4546 RVA: 0x00064DD1 File Offset: 0x00062FD1
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe ECurveMoveTargetBlackboardType 目标参数类型
 	{
@@ -191,9 +191,9 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x170002E3 RID: 739
-	// (get) Token: 0x060011BD RID: 4541 RVA: 0x000636CA File Offset: 0x000618CA
-	// (set) Token: 0x060011BE RID: 4542 RVA: 0x000636DA File Offset: 0x000618DA
+	// Token: 0x170002E6 RID: 742
+	// (get) Token: 0x060011C3 RID: 4547 RVA: 0x00064DE2 File Offset: 0x00062FE2
+	// (set) Token: 0x060011C4 RID: 4548 RVA: 0x00064DF2 File Offset: 0x00062FF2
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe EOffsetDirectionDatum 偏移方向基准
 	{
@@ -207,9 +207,9 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x170002E4 RID: 740
-	// (get) Token: 0x060011BF RID: 4543 RVA: 0x000636EB File Offset: 0x000618EB
-	// (set) Token: 0x060011C0 RID: 4544 RVA: 0x000636FB File Offset: 0x000618FB
+	// Token: 0x170002E7 RID: 743
+	// (get) Token: 0x060011C5 RID: 4549 RVA: 0x00064E03 File Offset: 0x00063003
+	// (set) Token: 0x060011C6 RID: 4550 RVA: 0x00064E13 File Offset: 0x00063013
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool 偏移基准消除重力分量
 	{
@@ -223,9 +223,9 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x170002E5 RID: 741
-	// (get) Token: 0x060011C1 RID: 4545 RVA: 0x0006370C File Offset: 0x0006190C
-	// (set) Token: 0x060011C2 RID: 4546 RVA: 0x00063720 File Offset: 0x00061920
+	// Token: 0x170002E8 RID: 744
+	// (get) Token: 0x060011C7 RID: 4551 RVA: 0x00064E24 File Offset: 0x00063024
+	// (set) Token: 0x060011C8 RID: 4552 RVA: 0x00064E38 File Offset: 0x00063038
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FVector 目标位置偏移
 	{
@@ -239,9 +239,9 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x170002E6 RID: 742
-	// (get) Token: 0x060011C3 RID: 4547 RVA: 0x00063735 File Offset: 0x00061935
-	// (set) Token: 0x060011C4 RID: 4548 RVA: 0x00063745 File Offset: 0x00061945
+	// Token: 0x170002E9 RID: 745
+	// (get) Token: 0x060011C9 RID: 4553 RVA: 0x00064E4D File Offset: 0x0006304D
+	// (set) Token: 0x060011CA RID: 4554 RVA: 0x00064E5D File Offset: 0x0006305D
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool 位置修正
 	{
@@ -255,9 +255,9 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x170002E7 RID: 743
-	// (get) Token: 0x060011C5 RID: 4549 RVA: 0x00063758 File Offset: 0x00061958
-	// (set) Token: 0x060011C6 RID: 4550 RVA: 0x00063791 File Offset: 0x00061991
+	// Token: 0x170002EA RID: 746
+	// (get) Token: 0x060011CB RID: 4555 RVA: 0x00064E70 File Offset: 0x00063070
+	// (set) Token: 0x060011CC RID: 4556 RVA: 0x00064EA9 File Offset: 0x000630A9
 	[UProperty(EPropertyFlags.CPF_None)]
 	public SSkillBehaviorAction 位置修正配置
 	{
@@ -277,9 +277,9 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x170002E8 RID: 744
-	// (get) Token: 0x060011C7 RID: 4551 RVA: 0x000637B9 File Offset: 0x000619B9
-	// (set) Token: 0x060011C8 RID: 4552 RVA: 0x000637CD File Offset: 0x000619CD
+	// Token: 0x170002EB RID: 747
+	// (get) Token: 0x060011CD RID: 4557 RVA: 0x00064ED1 File Offset: 0x000630D1
+	// (set) Token: 0x060011CE RID: 4558 RVA: 0x00064EE5 File Offset: 0x000630E5
 	[Nullable(2)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe UCurveFloat 运动位置曲线
@@ -296,9 +296,9 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x170002E9 RID: 745
-	// (get) Token: 0x060011C9 RID: 4553 RVA: 0x000637E2 File Offset: 0x000619E2
-	// (set) Token: 0x060011CA RID: 4554 RVA: 0x000637F2 File Offset: 0x000619F2
+	// Token: 0x170002EC RID: 748
+	// (get) Token: 0x060011CF RID: 4559 RVA: 0x00064EFA File Offset: 0x000630FA
+	// (set) Token: 0x060011D0 RID: 4560 RVA: 0x00064F0A File Offset: 0x0006310A
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe EMovementProcessDirection 运动过程朝向
 	{
@@ -312,9 +312,9 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x170002EA RID: 746
-	// (get) Token: 0x060011CB RID: 4555 RVA: 0x00063803 File Offset: 0x00061A03
-	// (set) Token: 0x060011CC RID: 4556 RVA: 0x00063813 File Offset: 0x00061A13
+	// Token: 0x170002ED RID: 749
+	// (get) Token: 0x060011D1 RID: 4561 RVA: 0x00064F1B File Offset: 0x0006311B
+	// (set) Token: 0x060011D2 RID: 4562 RVA: 0x00064F2B File Offset: 0x0006312B
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool 自动更新运动轨迹曲线关键点
 	{
@@ -328,9 +328,9 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x170002EB RID: 747
-	// (get) Token: 0x060011CD RID: 4557 RVA: 0x00063824 File Offset: 0x00061A24
-	// (set) Token: 0x060011CE RID: 4558 RVA: 0x0006385D File Offset: 0x00061A5D
+	// Token: 0x170002EE RID: 750
+	// (get) Token: 0x060011D3 RID: 4563 RVA: 0x00064F3C File Offset: 0x0006313C
+	// (set) Token: 0x060011D4 RID: 4564 RVA: 0x00064F75 File Offset: 0x00063175
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<FSplinePoint> 运动轨迹曲线关键点
 	{
@@ -350,9 +350,9 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x170002EC RID: 748
-	// (get) Token: 0x060011CF RID: 4559 RVA: 0x0006386C File Offset: 0x00061A6C
-	// (set) Token: 0x060011D0 RID: 4560 RVA: 0x000638A5 File Offset: 0x00061AA5
+	// Token: 0x170002EF RID: 751
+	// (get) Token: 0x060011D5 RID: 4565 RVA: 0x00064F84 File Offset: 0x00063184
+	// (set) Token: 0x060011D6 RID: 4566 RVA: 0x00064FBD File Offset: 0x000631BD
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<FInterpCurvePointFloat> 运动轨迹曲线插值ReparamTable
 	{
@@ -372,9 +372,9 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x170002ED RID: 749
-	// (get) Token: 0x060011D1 RID: 4561 RVA: 0x000638B3 File Offset: 0x00061AB3
-	// (set) Token: 0x060011D2 RID: 4562 RVA: 0x000638C3 File Offset: 0x00061AC3
+	// Token: 0x170002F0 RID: 752
+	// (get) Token: 0x060011D7 RID: 4567 RVA: 0x00064FCB File Offset: 0x000631CB
+	// (set) Token: 0x060011D8 RID: 4568 RVA: 0x00064FDB File Offset: 0x000631DB
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool 终点贴地检测
 	{
@@ -388,9 +388,9 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x170002EE RID: 750
-	// (get) Token: 0x060011D3 RID: 4563 RVA: 0x000638D4 File Offset: 0x00061AD4
-	// (set) Token: 0x060011D4 RID: 4564 RVA: 0x000638E4 File Offset: 0x00061AE4
+	// Token: 0x170002F1 RID: 753
+	// (get) Token: 0x060011D9 RID: 4569 RVA: 0x00064FEC File Offset: 0x000631EC
+	// (set) Token: 0x060011DA RID: 4570 RVA: 0x00064FFC File Offset: 0x000631FC
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float 终点贴地检测距离
 	{
@@ -404,9 +404,9 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x170002EF RID: 751
-	// (get) Token: 0x060011D5 RID: 4565 RVA: 0x000638F5 File Offset: 0x00061AF5
-	// (set) Token: 0x060011D6 RID: 4566 RVA: 0x00063905 File Offset: 0x00061B05
+	// Token: 0x170002F2 RID: 754
+	// (get) Token: 0x060011DB RID: 4571 RVA: 0x0006500D File Offset: 0x0006320D
+	// (set) Token: 0x060011DC RID: 4572 RVA: 0x0006501D File Offset: 0x0006321D
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float 最大位移距离
 	{
@@ -420,9 +420,9 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x170002F0 RID: 752
-	// (get) Token: 0x060011D7 RID: 4567 RVA: 0x00063916 File Offset: 0x00061B16
-	// (set) Token: 0x060011D8 RID: 4568 RVA: 0x00063926 File Offset: 0x00061B26
+	// Token: 0x170002F3 RID: 755
+	// (get) Token: 0x060011DD RID: 4573 RVA: 0x0006502E File Offset: 0x0006322E
+	// (set) Token: 0x060011DE RID: 4574 RVA: 0x0006503E File Offset: 0x0006323E
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float 最大移动速度
 	{
@@ -436,12 +436,12 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x060011D9 RID: 4569 RVA: 0x00063937 File Offset: 0x00061B37
+	// Token: 0x060011DF RID: 4575 RVA: 0x0006504F File Offset: 0x0006324F
 	private void EditorUpdateSplineCurve()
 	{
 	}
 
-	// Token: 0x060011DA RID: 4570 RVA: 0x0006393C File Offset: 0x00061B3C
+	// Token: 0x060011E0 RID: 4576 RVA: 0x00065054 File Offset: 0x00063254
 	private void Initialize()
 	{
 		this.SkillBehaviorCondition = this.技能条件;
@@ -479,7 +479,7 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		this.TargetPositionOffset = global::Vector.Create(this.目标位置偏移);
 	}
 
-	// Token: 0x060011DB RID: 4571 RVA: 0x00063ACC File Offset: 0x00061CCC
+	// Token: 0x060011E1 RID: 4577 RVA: 0x000651E4 File Offset: 0x000633E4
 	private void InitCacheVariable()
 	{
 		if (this.InitCacheVar)
@@ -499,7 +499,7 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		this.ParamPool = new List<CurveMoveParams>();
 	}
 
-	// Token: 0x060011DC RID: 4572 RVA: 0x00063BA0 File Offset: 0x00061DA0
+	// Token: 0x060011E2 RID: 4578 RVA: 0x000652B8 File Offset: 0x000634B8
 	[return: Nullable(2)]
 	private CurveMoveParams InitCharacterParam(CharacterActorComponent actorComp, double totalDuration)
 	{
@@ -553,7 +553,7 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		return curveMoveParams;
 	}
 
-	// Token: 0x060011DD RID: 4573 RVA: 0x00063DB8 File Offset: 0x00061FB8
+	// Token: 0x060011E3 RID: 4579 RVA: 0x000654D0 File Offset: 0x000636D0
 	private bool CheckUseCondition(TsBaseCharacter owner)
 	{
 		TArray<SSkillBehaviorCondition> skillBehaviorCondition = this.SkillBehaviorCondition;
@@ -584,33 +584,29 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		return true;
 	}
 
-	// Token: 0x060011DE RID: 4574 RVA: 0x00063E78 File Offset: 0x00062078
+	// Token: 0x060011E4 RID: 4580 RVA: 0x00065590 File Offset: 0x00063790
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_NotifyBegin(USkeletalMeshComponent meshComp, UAnimSequenceBase animation, float totalDuration)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_NotifyBegin"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyStateCurveMove) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_NotifyBegin"), TsAnimNotifyStateCurveMove.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
-			*(&ptr2->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
-			ptr2->TotalDuration = totalDuration;
+			return this.K2_NotifyBegin_Implementation(meshComp, animation, totalDuration);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams* ptr = stackalloc UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
+		*(&ptr->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+		ptr->TotalDuration = totalDuration;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x060011DF RID: 4575 RVA: 0x00063F20 File Offset: 0x00062120
+	// Token: 0x060011E5 RID: 4581 RVA: 0x00065650 File Offset: 0x00063850
 	[NullableContext(2)]
 	protected unsafe virtual bool K2_NotifyBegin_Implementation(USkeletalMeshComponent meshComp, UAnimSequenceBase animation, float totalDuration)
 	{
@@ -692,33 +688,29 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		return true;
 	}
 
-	// Token: 0x060011E0 RID: 4576 RVA: 0x0006418C File Offset: 0x0006238C
+	// Token: 0x060011E6 RID: 4582 RVA: 0x000658BC File Offset: 0x00063ABC
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_NotifyTick(USkeletalMeshComponent meshComp, UAnimSequenceBase animation, float frameDeltaTime)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_NotifyTick"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotifyState.__K2_NotifyTick_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyStateCurveMove) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_NotifyTick"), TsAnimNotifyStateCurveMove.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotifyState.__K2_NotifyTick_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyTick_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
-			*(&ptr2->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
-			ptr2->FrameDeltaTime = frameDeltaTime;
+			return this.K2_NotifyTick_Implementation(meshComp, animation, frameDeltaTime);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotifyState.__K2_NotifyTick_FunctionParams* ptr = stackalloc UKuroAnimNotifyState.__K2_NotifyTick_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyTick_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
+		*(&ptr->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+		ptr->FrameDeltaTime = frameDeltaTime;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x060011E1 RID: 4577 RVA: 0x00064234 File Offset: 0x00062434
+	// Token: 0x060011E7 RID: 4583 RVA: 0x0006597C File Offset: 0x00063B7C
 	[NullableContext(2)]
 	protected virtual bool K2_NotifyTick_Implementation(USkeletalMeshComponent meshComp, UAnimSequenceBase animation, float frameDeltaTime)
 	{
@@ -777,32 +769,28 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		return false;
 	}
 
-	// Token: 0x060011E2 RID: 4578 RVA: 0x000643DC File Offset: 0x000625DC
+	// Token: 0x060011E8 RID: 4584 RVA: 0x00065B24 File Offset: 0x00063D24
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_NotifyEnd(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_NotifyEnd"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyStateCurveMove) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_NotifyEnd"), TsAnimNotifyStateCurveMove.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
-			*(&ptr2->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+			return this.K2_NotifyEnd_Implementation(meshComp, animation);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams* ptr = stackalloc UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
+		*(&ptr->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x060011E3 RID: 4579 RVA: 0x0006447C File Offset: 0x0006267C
+	// Token: 0x060011E9 RID: 4585 RVA: 0x00065BDC File Offset: 0x00063DDC
 	[NullableContext(2)]
 	protected virtual bool K2_NotifyEnd_Implementation(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
@@ -841,7 +829,7 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		return true;
 	}
 
-	// Token: 0x060011E4 RID: 4580 RVA: 0x00064584 File Offset: 0x00062784
+	// Token: 0x060011EA RID: 4586 RVA: 0x00065CE4 File Offset: 0x00063EE4
 	private unsafe bool InitSplineTransform(CurveMoveParams @params)
 	{
 		SplineCurve splineCurves = this.SplineCurves;
@@ -921,7 +909,7 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		return false;
 	}
 
-	// Token: 0x060011E5 RID: 4581 RVA: 0x00064944 File Offset: 0x00062B44
+	// Token: 0x060011EB RID: 4587 RVA: 0x000660A4 File Offset: 0x000642A4
 	private unsafe void GetTargetPos(CurveMoveParams @params, global::Vector outVector)
 	{
 		if (this.TargetParamType == ECurveMoveTargetBlackboardType.LocationVector)
@@ -1037,7 +1025,7 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x060011E6 RID: 4582 RVA: 0x00064D50 File Offset: 0x00062F50
+	// Token: 0x060011EC RID: 4588 RVA: 0x000664B0 File Offset: 0x000646B0
 	private bool DetectFloor(CharacterActorComponent actor, global::Vector @out)
 	{
 		UTraceSphereElement actorTrace = TraceElementModel.Instance.GetActorTrace();
@@ -1076,7 +1064,7 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		return false;
 	}
 
-	// Token: 0x060011E7 RID: 4583 RVA: 0x00064ED0 File Offset: 0x000630D0
+	// Token: 0x060011ED RID: 4589 RVA: 0x00066630 File Offset: 0x00064830
 	private void PositionCorrection(CurveMoveParams @params, global::Vector targetPos, global::Vector outPos)
 	{
 		if (!this.MakePositionCorrection || this.PositionCorrectionConfig == null || this.PositionCorrectionConfig.ActionType != ESkillBehaviorActionType.设置位置)
@@ -1292,7 +1280,7 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		bool debugMode4 = this.DebugMode;
 	}
 
-	// Token: 0x060011E8 RID: 4584 RVA: 0x00065560 File Offset: 0x00063760
+	// Token: 0x060011EE RID: 4590 RVA: 0x00066CC0 File Offset: 0x00064EC0
 	private unsafe double GetTowardVector(CurveMoveParams @params, global::Vector outVector)
 	{
 		if (this.MakePositionCorrection && this.PositionCorrectionConfig != null)
@@ -1340,7 +1328,7 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		return num4;
 	}
 
-	// Token: 0x060011E9 RID: 4585 RVA: 0x00065768 File Offset: 0x00063968
+	// Token: 0x060011EF RID: 4591 RVA: 0x00066EC8 File Offset: 0x000650C8
 	private unsafe double GetRate(double delta, CurveMoveParams @params)
 	{
 		double num = @params.NowTime + delta;
@@ -1372,7 +1360,7 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		return num2;
 	}
 
-	// Token: 0x060011EA RID: 4586 RVA: 0x00065858 File Offset: 0x00063A58
+	// Token: 0x060011F0 RID: 4592 RVA: 0x00066FB8 File Offset: 0x000651B8
 	private unsafe void MoveToTarget(double delta, CurveMoveParams @params)
 	{
 		@params.TargetPos.DeepCopy(@params.LastTargetPos);
@@ -1485,7 +1473,7 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x060011EB RID: 4587 RVA: 0x00065CF0 File Offset: 0x00063EF0
+	// Token: 0x060011F1 RID: 4593 RVA: 0x00067450 File Offset: 0x00065650
 	private unsafe void MoveToTargetAlongSpline(double delta, CurveMoveParams @params)
 	{
 		@params.TargetPos.DeepCopy(@params.LastTargetPos);
@@ -1613,41 +1601,37 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x060011EC RID: 4588 RVA: 0x000661DA File Offset: 0x000643DA
+	// Token: 0x060011F2 RID: 4594 RVA: 0x0006793A File Offset: 0x00065B3A
 	private void DebugDraw(FVectorDouble location, FLinearColor color, float radius = 30f, int duration = 5)
 	{
 		UKismetSystemLibrary.D_DrawDebugSphere(GlobalData.World, location, radius, 10, new FLinearColor?(color), (float)duration, 0f);
 	}
 
-	// Token: 0x060011ED RID: 4589 RVA: 0x000661F8 File Offset: 0x000643F8
+	// Token: 0x060011F3 RID: 4595 RVA: 0x00067958 File Offset: 0x00065B58
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override string GetNotifyName()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetNotifyName"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UAnimNotifyState.__GetNotifyName_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyStateCurveMove) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetNotifyName"), TsAnimNotifyStateCurveMove.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UAnimNotifyState.__GetNotifyName_FunctionParams*)ptr + 15L / (long)sizeof(UAnimNotifyState.__GetNotifyName_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.GetNotifyName_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		string result = FString.ToString((void*)(&ptr2->__Result));
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UAnimNotifyState.__GetNotifyName_FunctionParams* ptr = stackalloc UAnimNotifyState.__GetNotifyName_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UAnimNotifyState.__GetNotifyName_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		string result = FString.ToString((void*)(&ptr->__Result));
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return result;
 	}
 
-	// Token: 0x060011EE RID: 4590 RVA: 0x00066273 File Offset: 0x00064473
+	// Token: 0x060011F4 RID: 4596 RVA: 0x000679E8 File Offset: 0x00065BE8
 	protected override string GetNotifyName_Implementation()
 	{
 		return "曲线定点位移";
 	}
 
-	// Token: 0x060011EF RID: 4591 RVA: 0x0006627A File Offset: 0x0006447A
+	// Token: 0x060011F5 RID: 4597 RVA: 0x000679EF File Offset: 0x00065BEF
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsAnimNotifyStateCurveMove._ClassPtr == IntPtr.Zero)
@@ -1657,22 +1641,22 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		return TsAnimNotifyStateCurveMove._ClassPtr;
 	}
 
-	// Token: 0x060011F0 RID: 4592 RVA: 0x000662A0 File Offset: 0x000644A0
+	// Token: 0x060011F6 RID: 4598 RVA: 0x00067A14 File Offset: 0x00065C14
 	public TsAnimNotifyStateCurveMove() : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyStateCurveMove.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x060011F1 RID: 4593 RVA: 0x000662C8 File Offset: 0x000644C8
+	// Token: 0x060011F7 RID: 4599 RVA: 0x00067A3C File Offset: 0x00065C3C
 	public TsAnimNotifyStateCurveMove(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyStateCurveMove.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x060011F2 RID: 4594 RVA: 0x000662FC File Offset: 0x000644FC
+	// Token: 0x060011F8 RID: 4600 RVA: 0x00067A70 File Offset: 0x00065C70
 	protected TsAnimNotifyStateCurveMove(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x060011F3 RID: 4595 RVA: 0x00066354 File Offset: 0x00064554
+	// Token: 0x060011F9 RID: 4601 RVA: 0x00067AC8 File Offset: 0x00065CC8
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_K2_NotifyBegin_Implementation(UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams* __Params)
 	{
@@ -1681,7 +1665,7 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		__Params->__Result = this.K2_NotifyBegin_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->TotalDuration);
 	}
 
-	// Token: 0x060011F4 RID: 4596 RVA: 0x00066390 File Offset: 0x00064590
+	// Token: 0x060011FA RID: 4602 RVA: 0x00067B04 File Offset: 0x00065D04
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_K2_NotifyTick_Implementation(UKuroAnimNotifyState.__K2_NotifyTick_FunctionParams* __Params)
 	{
@@ -1690,7 +1674,7 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		__Params->__Result = this.K2_NotifyTick_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->FrameDeltaTime);
 	}
 
-	// Token: 0x060011F5 RID: 4597 RVA: 0x000663CC File Offset: 0x000645CC
+	// Token: 0x060011FB RID: 4603 RVA: 0x00067B40 File Offset: 0x00065D40
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_K2_NotifyEnd_Implementation(UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams* __Params)
 	{
@@ -1699,14 +1683,14 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		__Params->__Result = this.K2_NotifyEnd_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x060011F6 RID: 4598 RVA: 0x000663FF File Offset: 0x000645FF
+	// Token: 0x060011FC RID: 4604 RVA: 0x00067B73 File Offset: 0x00065D73
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_GetNotifyName_Implementation(UAnimNotifyState.__GetNotifyName_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), this.GetNotifyName_Implementation());
 	}
 
-	// Token: 0x04000D39 RID: 3385
+	// Token: 0x04000D41 RID: 3393
 	[Nullable(new byte[]
 	{
 		2,
@@ -1714,103 +1698,103 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 	})]
 	public TArray<SSkillBehaviorCondition> SkillBehaviorCondition;
 
-	// Token: 0x04000D3A RID: 3386
+	// Token: 0x04000D42 RID: 3394
 	public string SkillBehaviorConditionFormula = "";
 
-	// Token: 0x04000D3B RID: 3387
-	public bool IgnoreObstacle;
-
-	// Token: 0x04000D3C RID: 3388
-	[Nullable(2)]
-	public SplineCurve SplineCurves;
-
-	// Token: 0x04000D3D RID: 3389
-	public bool ContinuallyUpdateTargetPosition;
-
-	// Token: 0x04000D3E RID: 3390
-	public EPositionDatumTarget PositionDatumTarget;
-
-	// Token: 0x04000D3F RID: 3391
-	public string TargetSocketPosition = "None";
-
-	// Token: 0x04000D40 RID: 3392
-	public string TargetParam = "None";
-
-	// Token: 0x04000D41 RID: 3393
-	public ECurveMoveTargetBlackboardType TargetParamType;
-
-	// Token: 0x04000D42 RID: 3394
-	public EOffsetDirectionDatum OffsetDirectionDatum;
-
 	// Token: 0x04000D43 RID: 3395
-	public bool ProjectionGravityDirection;
+	public bool IgnoreObstacle;
 
 	// Token: 0x04000D44 RID: 3396
 	[Nullable(2)]
-	public global::Vector TargetPositionOffset;
+	public SplineCurve SplineCurves;
 
 	// Token: 0x04000D45 RID: 3397
-	public bool MakePositionCorrection;
+	public bool ContinuallyUpdateTargetPosition;
 
 	// Token: 0x04000D46 RID: 3398
-	[Nullable(2)]
-	public SSkillBehaviorAction PositionCorrectionConfig;
+	public EPositionDatumTarget PositionDatumTarget;
 
 	// Token: 0x04000D47 RID: 3399
-	[Nullable(2)]
-	public UCurveFloat MovementPositionCurve;
+	public string TargetSocketPosition = "None";
 
 	// Token: 0x04000D48 RID: 3400
-	public EMovementProcessDirection MovementProcessDirection;
+	public string TargetParam = "None";
 
 	// Token: 0x04000D49 RID: 3401
-	public bool EndLocationDetection;
+	public ECurveMoveTargetBlackboardType TargetParamType;
 
 	// Token: 0x04000D4A RID: 3402
-	public float EndLocationDetectionDist = 1000f;
+	public EOffsetDirectionDatum OffsetDirectionDatum;
 
 	// Token: 0x04000D4B RID: 3403
-	public float MaxMoveDistance = 3000f;
+	public bool ProjectionGravityDirection;
 
 	// Token: 0x04000D4C RID: 3404
-	public float MaxMoveSpeed = -1f;
+	[Nullable(2)]
+	public global::Vector TargetPositionOffset;
 
 	// Token: 0x04000D4D RID: 3405
-	[Nullable(2)]
-	private global::Vector TmpVector;
+	public bool MakePositionCorrection;
 
 	// Token: 0x04000D4E RID: 3406
 	[Nullable(2)]
-	private global::Vector TmpVector2;
+	public SSkillBehaviorAction PositionCorrectionConfig;
 
 	// Token: 0x04000D4F RID: 3407
 	[Nullable(2)]
-	private global::Vector TmpVector3;
+	public UCurveFloat MovementPositionCurve;
 
 	// Token: 0x04000D50 RID: 3408
+	public EMovementProcessDirection MovementProcessDirection;
+
+	// Token: 0x04000D51 RID: 3409
+	public bool EndLocationDetection;
+
+	// Token: 0x04000D52 RID: 3410
+	public float EndLocationDetectionDist = 1000f;
+
+	// Token: 0x04000D53 RID: 3411
+	public float MaxMoveDistance = 3000f;
+
+	// Token: 0x04000D54 RID: 3412
+	public float MaxMoveSpeed = -1f;
+
+	// Token: 0x04000D55 RID: 3413
+	[Nullable(2)]
+	private global::Vector TmpVector;
+
+	// Token: 0x04000D56 RID: 3414
+	[Nullable(2)]
+	private global::Vector TmpVector2;
+
+	// Token: 0x04000D57 RID: 3415
+	[Nullable(2)]
+	private global::Vector TmpVector3;
+
+	// Token: 0x04000D58 RID: 3416
 	[Nullable(2)]
 	private global::Vector TmpVector4;
 
-	// Token: 0x04000D51 RID: 3409
+	// Token: 0x04000D59 RID: 3417
 	[Nullable(2)]
 	private global::Rotator TmpRotator;
 
-	// Token: 0x04000D52 RID: 3410
+	// Token: 0x04000D5A RID: 3418
 	[Nullable(2)]
 	private Quat TmpQuat;
 
-	// Token: 0x04000D53 RID: 3411
+	// Token: 0x04000D5B RID: 3419
 	[Nullable(2)]
 	private Quat TmpQuat2;
 
-	// Token: 0x04000D54 RID: 3412
+	// Token: 0x04000D5C RID: 3420
 	[Nullable(2)]
 	private global::Transform TmpTransform;
 
-	// Token: 0x04000D55 RID: 3413
+	// Token: 0x04000D5D RID: 3421
 	private bool InitCacheVar;
 
-	// Token: 0x04000D56 RID: 3414
+	// Token: 0x04000D5E RID: 3422
 	[Nullable(new byte[]
 	{
 		2,
@@ -1818,7 +1802,7 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 	})]
 	private List<CurveMoveParams> ParamPool;
 
-	// Token: 0x04000D57 RID: 3415
+	// Token: 0x04000D5F RID: 3423
 	[Nullable(new byte[]
 	{
 		2,
@@ -1826,7 +1810,7 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 	})]
 	private Dictionary<int, CurveMoveParams> ParamMap;
 
-	// Token: 0x04000D58 RID: 3416
+	// Token: 0x04000D60 RID: 3424
 	[StaticVariableRuleIgnore]
 	public static readonly int[] angles = new int[]
 	{
@@ -1836,49 +1820,49 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 		180
 	};
 
-	// Token: 0x04000D59 RID: 3417
+	// Token: 0x04000D61 RID: 3425
 	private const float MIN_MOVE_DISTANCE = 50f;
 
-	// Token: 0x04000D5A RID: 3418
+	// Token: 0x04000D62 RID: 3426
 	private const float MIN_MOVE_DISTANCE_SQUARED = 2500f;
 
-	// Token: 0x04000D5B RID: 3419
+	// Token: 0x04000D63 RID: 3427
 	private const float MIN_UPDATE_SPLINE_LENGTH = 100f;
 
-	// Token: 0x04000D5C RID: 3420
+	// Token: 0x04000D64 RID: 3428
 	private const float MIN_UPDATE_SPLINE_LENGTH_SQUARED = 10000f;
 
-	// Token: 0x04000D5D RID: 3421
+	// Token: 0x04000D65 RID: 3429
 	private const string PROFILE_KEY = "TsAnimNotifyStateCurveMove";
 
-	// Token: 0x04000D5E RID: 3422
+	// Token: 0x04000D66 RID: 3430
 	private const float INVALID_LAST_LOCATION_THRESHOLD_SQUARED = 1000000f;
 
-	// Token: 0x04000D5F RID: 3423
+	// Token: 0x04000D67 RID: 3431
 	private const float DEBUG_RADIUS = 30f;
 
-	// Token: 0x04000D60 RID: 3424
+	// Token: 0x04000D68 RID: 3432
 	private const int DEBUG_DURATION = 5;
 
-	// Token: 0x04000D61 RID: 3425
+	// Token: 0x04000D69 RID: 3433
 	private const int DEBUG_SEGMENTS = 10;
 
-	// Token: 0x04000D62 RID: 3426
+	// Token: 0x04000D6A RID: 3434
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AnimNotifyState/TsAnimNotifyStateCurveMove.TsAnimNotifyStateCurveMove_C";
 
-	// Token: 0x04000D63 RID: 3427
+	// Token: 0x04000D6B RID: 3435
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04000D64 RID: 3428
+	// Token: 0x04000D6C RID: 3436
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x04000D65 RID: 3429
+	// Token: 0x04000D6D RID: 3437
 	private static int __PropertyOffset_DebugMode;
 
-	// Token: 0x04000D66 RID: 3430
+	// Token: 0x04000D6E RID: 3438
 	private static int __PropertyOffset_技能条件;
 
-	// Token: 0x04000D67 RID: 3431
+	// Token: 0x04000D6F RID: 3439
 	[Nullable(new byte[]
 	{
 		2,
@@ -1886,66 +1870,66 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 	})]
 	private TArray<SSkillBehaviorCondition> _技能条件;
 
-	// Token: 0x04000D68 RID: 3432
+	// Token: 0x04000D70 RID: 3440
 	private static int __PropertyOffset_技能条件公式;
 
-	// Token: 0x04000D69 RID: 3433
+	// Token: 0x04000D71 RID: 3441
 	private static int __PropertyOffset_无视障碍阻挡;
 
-	// Token: 0x04000D6A RID: 3434
+	// Token: 0x04000D72 RID: 3442
 	private static int __PropertyOffset_运动轨迹曲线;
 
-	// Token: 0x04000D6B RID: 3435
+	// Token: 0x04000D73 RID: 3443
 	[Nullable(2)]
 	private FSoftObjectPath _运动轨迹曲线;
 
-	// Token: 0x04000D6C RID: 3436
+	// Token: 0x04000D74 RID: 3444
 	private static int __PropertyOffset_持续更新目标位置;
 
-	// Token: 0x04000D6D RID: 3437
+	// Token: 0x04000D75 RID: 3445
 	private static int __PropertyOffset_位置基准目标;
 
-	// Token: 0x04000D6E RID: 3438
+	// Token: 0x04000D76 RID: 3446
 	private static int __PropertyOffset_基于目标骨骼位置;
 
-	// Token: 0x04000D6F RID: 3439
+	// Token: 0x04000D77 RID: 3447
 	private static int __PropertyOffset_目标参数;
 
-	// Token: 0x04000D70 RID: 3440
+	// Token: 0x04000D78 RID: 3448
 	private static int __PropertyOffset_目标参数类型;
 
-	// Token: 0x04000D71 RID: 3441
+	// Token: 0x04000D79 RID: 3449
 	private static int __PropertyOffset_偏移方向基准;
 
-	// Token: 0x04000D72 RID: 3442
+	// Token: 0x04000D7A RID: 3450
 	private static int __PropertyOffset_偏移基准消除重力分量;
 
-	// Token: 0x04000D73 RID: 3443
+	// Token: 0x04000D7B RID: 3451
 	private static int __PropertyOffset_目标位置偏移;
 
-	// Token: 0x04000D74 RID: 3444
+	// Token: 0x04000D7C RID: 3452
 	private static int __PropertyOffset_位置修正;
 
-	// Token: 0x04000D75 RID: 3445
+	// Token: 0x04000D7D RID: 3453
 	private static int __PropertyOffset_位置修正配置;
 
-	// Token: 0x04000D76 RID: 3446
+	// Token: 0x04000D7E RID: 3454
 	[Nullable(2)]
 	private SSkillBehaviorAction _位置修正配置;
 
-	// Token: 0x04000D77 RID: 3447
+	// Token: 0x04000D7F RID: 3455
 	private static int __PropertyOffset_运动位置曲线;
 
-	// Token: 0x04000D78 RID: 3448
+	// Token: 0x04000D80 RID: 3456
 	private static int __PropertyOffset_运动过程朝向;
 
-	// Token: 0x04000D79 RID: 3449
+	// Token: 0x04000D81 RID: 3457
 	private static int __PropertyOffset_自动更新运动轨迹曲线关键点;
 
-	// Token: 0x04000D7A RID: 3450
+	// Token: 0x04000D82 RID: 3458
 	private static int __PropertyOffset_运动轨迹曲线关键点;
 
-	// Token: 0x04000D7B RID: 3451
+	// Token: 0x04000D83 RID: 3459
 	[Nullable(new byte[]
 	{
 		2,
@@ -1953,22 +1937,22 @@ public class TsAnimNotifyStateCurveMove : TsAnimNotifyStateBase, IUnrealUObject,
 	})]
 	private TArray<FSplinePoint> _运动轨迹曲线关键点;
 
-	// Token: 0x04000D7C RID: 3452
+	// Token: 0x04000D84 RID: 3460
 	private static int __PropertyOffset_运动轨迹曲线插值ReparamTable;
 
-	// Token: 0x04000D7D RID: 3453
+	// Token: 0x04000D85 RID: 3461
 	[Nullable(2)]
 	private TArray<FInterpCurvePointFloat> _运动轨迹曲线插值ReparamTable;
 
-	// Token: 0x04000D7E RID: 3454
+	// Token: 0x04000D86 RID: 3462
 	private static int __PropertyOffset_终点贴地检测;
 
-	// Token: 0x04000D7F RID: 3455
+	// Token: 0x04000D87 RID: 3463
 	private static int __PropertyOffset_终点贴地检测距离;
 
-	// Token: 0x04000D80 RID: 3456
+	// Token: 0x04000D88 RID: 3464
 	private static int __PropertyOffset_最大位移距离;
 
-	// Token: 0x04000D81 RID: 3457
+	// Token: 0x04000D89 RID: 3465
 	private static int __PropertyOffset_最大移动速度;
 }

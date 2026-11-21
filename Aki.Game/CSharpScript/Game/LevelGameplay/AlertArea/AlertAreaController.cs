@@ -5,13 +5,13 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.LevelGamePlay.AlertArea
 {
-	// Token: 0x02006F61 RID: 28513
+	// Token: 0x020060E2 RID: 24802
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class AlertAreaController : ControllerBase
 	{
-		// Token: 0x060455CD RID: 284109 RVA: 0x0112B7EC File Offset: 0x011299EC
+		// Token: 0x0603B77B RID: 243579 RVA: 0x010D55CC File Offset: 0x010D37CC
 		protected override bool OnClear()
 		{
 			List<int> list = new List<int>();
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.LevelGamePlay.AlertArea
 			return true;
 		}
 
-		// Token: 0x060455CE RID: 284110 RVA: 0x0112B898 File Offset: 0x01129A98
+		// Token: 0x0603B77C RID: 243580 RVA: 0x010D5678 File Offset: 0x010D3878
 		public void UpdateAlertDataByServerNotify(AlertAreaNotify notify)
 		{
 			AlertAreaModel instance = AlertAreaModel.Instance;
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.LevelGamePlay.AlertArea
 			}
 		}
 
-		// Token: 0x060455CF RID: 284111 RVA: 0x0112BA00 File Offset: 0x01129C00
+		// Token: 0x0603B77D RID: 243581 RVA: 0x010D57E0 File Offset: 0x010D39E0
 		public void EnableAlertValueProgressTimer(int areaId, float deltaVal, int interval)
 		{
 			this.DisableAlertValueProgressTimer(areaId);
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.LevelGamePlay.AlertArea
 			this.AlertValueProgressTimerHandle[areaId] = value;
 		}
 
-		// Token: 0x060455D0 RID: 284112 RVA: 0x0112BA68 File Offset: 0x01129C68
+		// Token: 0x0603B77E RID: 243582 RVA: 0x010D5848 File Offset: 0x010D3A48
 		public void DisableAlertValueProgressTimer(int areaId)
 		{
 			TimerHandle timerHandle;
@@ -94,8 +94,8 @@ namespace CSharpScript.Game.LevelGamePlay.AlertArea
 			}
 		}
 
-		// Token: 0x17009B5F RID: 39775
-		// (get) Token: 0x060455D1 RID: 284113 RVA: 0x0112BAAE File Offset: 0x01129CAE
+		// Token: 0x1700709E RID: 28830
+		// (get) Token: 0x0603B77F RID: 243583 RVA: 0x010D588E File Offset: 0x010D3A8E
 		public static AlertAreaController Instance
 		{
 			get
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.LevelGamePlay.AlertArea
 			}
 		}
 
-		// Token: 0x060455D2 RID: 284114 RVA: 0x0112BAB5 File Offset: 0x01129CB5
+		// Token: 0x0603B780 RID: 243584 RVA: 0x010D5895 File Offset: 0x010D3A95
 		public static AlertAreaController GetOrCreateInstance()
 		{
 			if (AlertAreaController._Instance == null)
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.LevelGamePlay.AlertArea
 			return AlertAreaController._Instance;
 		}
 
-		// Token: 0x060455D3 RID: 284115 RVA: 0x0112BAC9 File Offset: 0x01129CC9
+		// Token: 0x0603B781 RID: 243585 RVA: 0x010D58A9 File Offset: 0x010D3AA9
 		public static bool CreateInstance()
 		{
 			if (AlertAreaController._Instance != null)
@@ -125,27 +125,27 @@ namespace CSharpScript.Game.LevelGamePlay.AlertArea
 			return true;
 		}
 
-		// Token: 0x060455D4 RID: 284116 RVA: 0x0112BADF File Offset: 0x01129CDF
+		// Token: 0x0603B782 RID: 243586 RVA: 0x010D58BF File Offset: 0x010D3ABF
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060455D5 RID: 284117 RVA: 0x0112BAE1 File Offset: 0x01129CE1
+		// Token: 0x0603B783 RID: 243587 RVA: 0x010D58C1 File Offset: 0x010D3AC1
 		public static void ResetStaticDefaultValue()
 		{
 			AlertAreaController._Instance = null;
 		}
 
-		// Token: 0x060455D6 RID: 284118 RVA: 0x0112BAE9 File Offset: 0x01129CE9
+		// Token: 0x0603B784 RID: 243588 RVA: 0x010D58C9 File Offset: 0x010D3AC9
 		static AlertAreaController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(AlertAreaController.CreateStaticDefaultValue), new Action(AlertAreaController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040242FC RID: 148220
+		// Token: 0x0401F5B1 RID: 128433
 		private const int ALERT_VAL_PROGRESS_INTERVAL = 1000;
 
-		// Token: 0x040242FD RID: 148221
+		// Token: 0x0401F5B2 RID: 128434
 		[Nullable(new byte[]
 		{
 			1,
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.LevelGamePlay.AlertArea
 		})]
 		private readonly Dictionary<int, TimerHandle> AlertValueProgressTimerHandle = new Dictionary<int, TimerHandle>();
 
-		// Token: 0x040242FE RID: 148222
+		// Token: 0x0401F5B3 RID: 128435
 		[Nullable(2)]
 		private static AlertAreaController _Instance;
 	}

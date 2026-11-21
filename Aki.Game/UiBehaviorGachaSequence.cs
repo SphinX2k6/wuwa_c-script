@@ -13,12 +13,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200349D RID: 13469
+// Token: 0x02002A11 RID: 10769
 [NullableContext(1)]
 [Nullable(0)]
 public class UiBehaviorGachaSequence : IUiBehavior
 {
-	// Token: 0x0601D509 RID: 120073 RVA: 0x0082C1E4 File Offset: 0x0082A3E4
+	// Token: 0x0601B206 RID: 111110 RVA: 0x00853294 File Offset: 0x00851494
 	public UniTask OnUiCreateAsync()
 	{
 		UiBehaviorGachaSequence.<OnUiCreateAsync>d__8 <OnUiCreateAsync>d__;
@@ -28,8 +28,8 @@ public class UiBehaviorGachaSequence : IUiBehavior
 		return <OnUiCreateAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601D50A RID: 120074 RVA: 0x0082C220 File Offset: 0x0082A420
-	public void OnAfterUiStart()
+	// Token: 0x0601B207 RID: 111111 RVA: 0x008532D0 File Offset: 0x008514D0
+	public void OnUiStart()
 	{
 		this.NeedProcessSkyBlending = (UKismetSystemLibrary.GetConsoleVariableIntValue("r.SkyBlending.AllowSettingLerpPerFrame") == 0);
 		if (this.NeedProcessSkyBlending)
@@ -51,36 +51,36 @@ public class UiBehaviorGachaSequence : IUiBehavior
 		MenuController.Instance.CloseAllFilter();
 	}
 
-	// Token: 0x0601D50B RID: 120075 RVA: 0x0082C2A6 File Offset: 0x0082A4A6
-	public void OnAfterUiShow()
+	// Token: 0x0601B208 RID: 111112 RVA: 0x00853356 File Offset: 0x00851556
+	public void OnUiShow()
 	{
 	}
 
-	// Token: 0x0601D50C RID: 120076 RVA: 0x0082C2A8 File Offset: 0x0082A4A8
-	public void OnBeforeUiHide()
+	// Token: 0x0601B209 RID: 111113 RVA: 0x00853358 File Offset: 0x00851558
+	public void OnUiHide()
 	{
 	}
 
-	// Token: 0x0601D50D RID: 120077 RVA: 0x0082C2AA File Offset: 0x0082A4AA
+	// Token: 0x0601B20A RID: 111114 RVA: 0x0085335A File Offset: 0x0085155A
 	public void BindUpdateInteractBp(BP_UpdateInteract_C bp)
 	{
 		this.UpdateInteractBp = bp;
 		this.UpdateInteractBp.SetTickableWhenPaused(true);
 	}
 
-	// Token: 0x0601D50E RID: 120078 RVA: 0x0082C2BF File Offset: 0x0082A4BF
+	// Token: 0x0601B20B RID: 111115 RVA: 0x0085336F File Offset: 0x0085156F
 	public void BindSceneSequenceCamera(AActor camera)
 	{
 		this.SceneSequenceCamera = camera;
 	}
 
-	// Token: 0x0601D50F RID: 120079 RVA: 0x0082C2C8 File Offset: 0x0082A4C8
+	// Token: 0x0601B20C RID: 111116 RVA: 0x00853378 File Offset: 0x00851578
 	public void BindEmptySequenceCamera(AActor camera)
 	{
 		this.SceneEmptyCamera = camera;
 	}
 
-	// Token: 0x0601D510 RID: 120080 RVA: 0x0082C2D4 File Offset: 0x0082A4D4
+	// Token: 0x0601B20D RID: 111117 RVA: 0x00853384 File Offset: 0x00851584
 	public UniTask PreloadLevelSequenceList(List<int> roleIdList)
 	{
 		UiBehaviorGachaSequence.<PreloadLevelSequenceList>d__15 <PreloadLevelSequenceList>d__;
@@ -92,7 +92,7 @@ public class UiBehaviorGachaSequence : IUiBehavior
 		return <PreloadLevelSequenceList>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601D511 RID: 120081 RVA: 0x0082C320 File Offset: 0x0082A520
+	// Token: 0x0601B20E RID: 111118 RVA: 0x008533D0 File Offset: 0x008515D0
 	public UniTask PreLoadLevelSequence(int roleId)
 	{
 		UiBehaviorGachaSequence.<PreLoadLevelSequence>d__16 <PreLoadLevelSequence>d__;
@@ -104,7 +104,7 @@ public class UiBehaviorGachaSequence : IUiBehavior
 		return <PreLoadLevelSequence>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601D512 RID: 120082 RVA: 0x0082C36C File Offset: 0x0082A56C
+	// Token: 0x0601B20F RID: 111119 RVA: 0x0085341C File Offset: 0x0085161C
 	public void PlayRoleSequence(int roleId, int releaseRoleIdAfterPlay = 0)
 	{
 		if (roleId <= 0)
@@ -171,7 +171,7 @@ public class UiBehaviorGachaSequence : IUiBehavior
 		}
 	}
 
-	// Token: 0x0601D513 RID: 120083 RVA: 0x0082C488 File Offset: 0x0082A688
+	// Token: 0x0601B210 RID: 111120 RVA: 0x00853538 File Offset: 0x00851738
 	private void StartPlaySequence(int roleId, ALevelSequenceActor sequenceActor)
 	{
 		if (this.SceneSequenceCamera == null)
@@ -228,12 +228,23 @@ public class UiBehaviorGachaSequence : IUiBehavior
 			return;
 		}
 		FFrameTime time = this.RoleShowSequence.GetStartTime().Time;
-		this.RoleShowSequence.SetPlaybackPosition(new FMovieSceneSequencePlaybackParams(time, 0f, "", EMovieScenePositionType.Frame, EUpdatePositionMethod.Jump));
-		this.RoleShowSequence.PlayTo(new FMovieSceneSequencePlaybackParams(time, 0f, "A", EMovieScenePositionType.MarkedFrame, EUpdatePositionMethod.Play));
+		this.RoleShowSequence.SetPlaybackPosition(new FMovieSceneSequencePlaybackParams
+		{
+			Frame = time,
+			PositionType = EMovieScenePositionType.Frame,
+			UpdateMethod = EUpdatePositionMethod.Jump
+		});
+		this.RoleShowSequence.PlayToWithEventSweep(new FMovieSceneSequencePlaybackParams
+		{
+			Frame = time,
+			MarkedFrame = "A",
+			PositionType = EMovieScenePositionType.MarkedFrame,
+			UpdateMethod = EUpdatePositionMethod.Play
+		});
 		PersonalUtil.ApplyTickableWhenPausedOnRuntimeBindings(sequenceActor, true);
 	}
 
-	// Token: 0x0601D514 RID: 120084 RVA: 0x0082C6B8 File Offset: 0x0082A8B8
+	// Token: 0x0601B211 RID: 111121 RVA: 0x00853784 File Offset: 0x00851984
 	public void PlayEmptySequence()
 	{
 		if (this.SceneEmptyCamera == null)
@@ -250,7 +261,7 @@ public class UiBehaviorGachaSequence : IUiBehavior
 		CameraController.Instance.SetViewTarget(this.SceneEmptyCamera, "RoleNewJoinView.SceneEmptyCamera", 0f, EViewTargetBlendFunction.VTBlend_Linear, 0f, null, null, "MainCamera", null, null);
 	}
 
-	// Token: 0x0601D515 RID: 120085 RVA: 0x0082C73C File Offset: 0x0082A93C
+	// Token: 0x0601B212 RID: 111122 RVA: 0x00853808 File Offset: 0x00851A08
 	public void StopCurrentSequence()
 	{
 		if (this.RoleShowSequence != null)
@@ -261,7 +272,7 @@ public class UiBehaviorGachaSequence : IUiBehavior
 		}
 	}
 
-	// Token: 0x0601D516 RID: 120086 RVA: 0x0082C770 File Offset: 0x0082A970
+	// Token: 0x0601B213 RID: 111123 RVA: 0x0085383C File Offset: 0x00851A3C
 	public void SetSequencePlayBackSetting(int roleId, FMovieSceneSequencePlaybackSettings setting)
 	{
 		ALevelSequenceActor alevelSequenceActor;
@@ -278,7 +289,7 @@ public class UiBehaviorGachaSequence : IUiBehavior
 		alevelSequenceActor.PlaybackSettings = setting;
 	}
 
-	// Token: 0x0601D517 RID: 120087 RVA: 0x0082C7C4 File Offset: 0x0082A9C4
+	// Token: 0x0601B214 RID: 111124 RVA: 0x00853890 File Offset: 0x00851A90
 	public void ReleaseLevelSequenceActor(int roleId)
 	{
 		ALevelSequenceActor alevelSequenceActor;
@@ -301,8 +312,8 @@ public class UiBehaviorGachaSequence : IUiBehavior
 		}
 	}
 
-	// Token: 0x0601D518 RID: 120088 RVA: 0x0082C844 File Offset: 0x0082AA44
-	public void OnBeforeDestroy()
+	// Token: 0x0601B215 RID: 111125 RVA: 0x00853910 File Offset: 0x00851B10
+	public void OnDestroy()
 	{
 		this.StopCurrentSequence();
 		BP_UpdateInteract_C updateInteractBp = this.UpdateInteractBp;
@@ -348,29 +359,29 @@ public class UiBehaviorGachaSequence : IUiBehavior
 		MenuController.Instance.OpenAllFilter();
 	}
 
-	// Token: 0x0400E701 RID: 59137
+	// Token: 0x0400EBB5 RID: 60341
 	private bool NeedProcessSkyBlending;
 
-	// Token: 0x0400E702 RID: 59138
+	// Token: 0x0400EBB6 RID: 60342
 	private int OriginDepthOfFieldQuality;
 
-	// Token: 0x0400E703 RID: 59139
+	// Token: 0x0400EBB7 RID: 60343
 	[Nullable(2)]
 	public ULevelSequencePlayer RoleShowSequence;
 
-	// Token: 0x0400E704 RID: 59140
+	// Token: 0x0400EBB8 RID: 60344
 	[Nullable(2)]
 	private BP_UpdateInteract_C UpdateInteractBp;
 
-	// Token: 0x0400E705 RID: 59141
+	// Token: 0x0400EBB9 RID: 60345
 	[Nullable(2)]
 	private AActor SceneEmptyCamera;
 
-	// Token: 0x0400E706 RID: 59142
+	// Token: 0x0400EBBA RID: 60346
 	[Nullable(2)]
 	private AActor SceneSequenceCamera;
 
-	// Token: 0x0400E707 RID: 59143
+	// Token: 0x0400EBBB RID: 60347
 	[Nullable(new byte[]
 	{
 		1,
@@ -378,6 +389,6 @@ public class UiBehaviorGachaSequence : IUiBehavior
 	})]
 	private readonly Dictionary<int, ALevelSequenceActor> LevelSequenceActorCache = new Dictionary<int, ALevelSequenceActor>();
 
-	// Token: 0x0400E708 RID: 59144
+	// Token: 0x0400EBBC RID: 60348
 	private readonly Dictionary<int, int> MeshStreamTaskMap = new Dictionary<int, int>();
 }

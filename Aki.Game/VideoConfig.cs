@@ -4,25 +4,25 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.Plot;
 
-// Token: 0x02002CE7 RID: 11495
+// Token: 0x02002240 RID: 8768
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class VideoConfig : ConfigBase
 {
-	// Token: 0x060181F9 RID: 98809 RVA: 0x006223CA File Offset: 0x006205CA
+	// Token: 0x06015A78 RID: 88696 RVA: 0x0064803E File Offset: 0x0064623E
 	protected override bool OnInit()
 	{
 		return true;
 	}
 
-	// Token: 0x060181FA RID: 98810 RVA: 0x006223CD File Offset: 0x006205CD
+	// Token: 0x06015A79 RID: 88697 RVA: 0x00648041 File Offset: 0x00646241
 	protected override bool OnClear()
 	{
 		return true;
 	}
 
-	// Token: 0x060181FB RID: 98811 RVA: 0x006223D0 File Offset: 0x006205D0
+	// Token: 0x06015A7A RID: 88698 RVA: 0x00648044 File Offset: 0x00646244
 	public VideoData? GetVideoData(string videoName)
 	{
 		EPlayerGender eplayerGender = PlayerInfoModel.Instance.GetPlayerGender();
@@ -43,7 +43,7 @@ public class VideoConfig : ConfigBase
 		return config;
 	}
 
-	// Token: 0x060181FC RID: 98812 RVA: 0x0062242C File Offset: 0x0062062C
+	// Token: 0x06015A7B RID: 88699 RVA: 0x006480A0 File Offset: 0x006462A0
 	public IReadOnlyList<VideoSubtitle> GetVideoCaptions(string videoName, string language)
 	{
 		IReadOnlyList<VideoCaption> configList = ConfigVideoCaptionByCgName.GetConfigList(videoName, true);
@@ -116,7 +116,7 @@ public class VideoConfig : ConfigBase
 		return list;
 	}
 
-	// Token: 0x060181FD RID: 98813 RVA: 0x0062265C File Offset: 0x0062085C
+	// Token: 0x06015A7C RID: 88700 RVA: 0x006482D0 File Offset: 0x006464D0
 	public IReadOnlyList<VideoQteConfig> GetVideoQte(string videoName, string language)
 	{
 		IReadOnlyList<VideoQte> configList = ConfigVideoQteByCgName.GetConfigList(videoName, true);
@@ -183,14 +183,14 @@ public class VideoConfig : ConfigBase
 		return list;
 	}
 
-	// Token: 0x060181FE RID: 98814 RVA: 0x0062280C File Offset: 0x00620A0C
+	// Token: 0x06015A7D RID: 88701 RVA: 0x00648480 File Offset: 0x00646680
 	public string GetVideoCaptionText(VideoSubtitle videoCaption)
 	{
 		string localTextNew = ConfigMultiTextLang.GetLocalTextNew(videoCaption.CaptionText, null);
 		return PlotModel.Instance.PlotTextReplacer.Replace(localTextNew, false) ?? string.Empty;
 	}
 
-	// Token: 0x060181FF RID: 98815 RVA: 0x00622840 File Offset: 0x00620A40
+	// Token: 0x06015A7E RID: 88702 RVA: 0x006484B4 File Offset: 0x006466B4
 	public IReadOnlyList<VideoSound> GetVideoSounds(string videoName)
 	{
 		IReadOnlyList<VideoSound> configList = ConfigVideoSoundByCgNameAndGirlOrBoy.GetConfigList(videoName, 2, true);
@@ -216,8 +216,8 @@ public class VideoConfig : ConfigBase
 		return configList;
 	}
 
-	// Token: 0x17002084 RID: 8324
-	// (get) Token: 0x06018200 RID: 98816 RVA: 0x006228B7 File Offset: 0x00620AB7
+	// Token: 0x170020D7 RID: 8407
+	// (get) Token: 0x06015A7F RID: 88703 RVA: 0x0064852B File Offset: 0x0064672B
 	public static VideoConfig Instance
 	{
 		get
@@ -226,7 +226,7 @@ public class VideoConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x06018201 RID: 98817 RVA: 0x006228BE File Offset: 0x00620ABE
+	// Token: 0x06015A80 RID: 88704 RVA: 0x00648532 File Offset: 0x00646732
 	public static VideoConfig GetOrCreateInstance()
 	{
 		if (VideoConfig._Instance == null)
@@ -236,7 +236,7 @@ public class VideoConfig : ConfigBase
 		return VideoConfig._Instance;
 	}
 
-	// Token: 0x06018202 RID: 98818 RVA: 0x006228D2 File Offset: 0x00620AD2
+	// Token: 0x06015A81 RID: 88705 RVA: 0x00648546 File Offset: 0x00646746
 	public static bool CreateInstance()
 	{
 		if (VideoConfig._Instance != null)
@@ -247,24 +247,24 @@ public class VideoConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x06018203 RID: 98819 RVA: 0x006228E8 File Offset: 0x00620AE8
+	// Token: 0x06015A82 RID: 88706 RVA: 0x0064855C File Offset: 0x0064675C
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06018204 RID: 98820 RVA: 0x006228EA File Offset: 0x00620AEA
+	// Token: 0x06015A83 RID: 88707 RVA: 0x0064855E File Offset: 0x0064675E
 	public static void ResetStaticDefaultValue()
 	{
 		VideoConfig._Instance = null;
 	}
 
-	// Token: 0x06018205 RID: 98821 RVA: 0x006228F2 File Offset: 0x00620AF2
+	// Token: 0x06015A84 RID: 88708 RVA: 0x00648566 File Offset: 0x00646766
 	static VideoConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(VideoConfig.CreateStaticDefaultValue), new Action(VideoConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400B366 RID: 45926
+	// Token: 0x0400B6D2 RID: 46802
 	[Nullable(2)]
 	private static VideoConfig _Instance;
 }

@@ -4,12 +4,12 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Plot
 {
-	// Token: 0x02005001 RID: 20481
+	// Token: 0x02003FCB RID: 16331
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlotMontageConfig : ConfigBase
 	{
-		// Token: 0x06034668 RID: 214632 RVA: 0x00C52040 File Offset: 0x00C50240
+		// Token: 0x060294F5 RID: 169205 RVA: 0x00B9BDC4 File Offset: 0x00B99FC4
 		public MontageData? GetPlotMontageConfig(int id)
 		{
 			MontageData? config = ConfigMontageDataById.GetConfig(id, false);
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Plot
 			return config;
 		}
 
-		// Token: 0x06034669 RID: 214633 RVA: 0x00C52098 File Offset: 0x00C50298
+		// Token: 0x060294F6 RID: 169206 RVA: 0x00B9BE1C File Offset: 0x00B9A01C
 		public AbpMontageData? GetPlotAbpMontageConfig(int id)
 		{
 			AbpMontageData? config = ConfigAbpMontageDataById.GetConfig(id, false);
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.Plot
 			return config;
 		}
 
-		// Token: 0x0603466A RID: 214634 RVA: 0x00C520F0 File Offset: 0x00C502F0
+		// Token: 0x060294F7 RID: 169207 RVA: 0x00B9BE74 File Offset: 0x00B9A074
 		public OverlayAbpMontageData? GetOverlayAbpMontageConfig(int id)
 		{
 			OverlayAbpMontageData? config = ConfigOverlayAbpMontageDataById.GetConfig(id, false);
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Plot
 			return config;
 		}
 
-		// Token: 0x0603466B RID: 214635 RVA: 0x00C52148 File Offset: 0x00C50348
+		// Token: 0x060294F8 RID: 169208 RVA: 0x00B9BECC File Offset: 0x00B9A0CC
 		public AbpState? GetAbpStateConfig(string path)
 		{
 			AbpState? config = ConfigAbpStateByAbp.GetConfig(path, true);
@@ -77,8 +77,8 @@ namespace CSharpScript.Game.Module.Plot
 			return config;
 		}
 
-		// Token: 0x17007FE8 RID: 32744
-		// (get) Token: 0x0603466C RID: 214636 RVA: 0x00C52198 File Offset: 0x00C50398
+		// Token: 0x1700539D RID: 21405
+		// (get) Token: 0x060294F9 RID: 169209 RVA: 0x00B9BF1C File Offset: 0x00B9A11C
 		public static PlotMontageConfig Instance
 		{
 			get
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x0603466D RID: 214637 RVA: 0x00C5219F File Offset: 0x00C5039F
+		// Token: 0x060294FA RID: 169210 RVA: 0x00B9BF23 File Offset: 0x00B9A123
 		public static PlotMontageConfig GetOrCreateInstance()
 		{
 			if (PlotMontageConfig._Instance == null)
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.Plot
 			return PlotMontageConfig._Instance;
 		}
 
-		// Token: 0x0603466E RID: 214638 RVA: 0x00C521B3 File Offset: 0x00C503B3
+		// Token: 0x060294FB RID: 169211 RVA: 0x00B9BF37 File Offset: 0x00B9A137
 		public static bool CreateInstance()
 		{
 			if (PlotMontageConfig._Instance != null)
@@ -108,24 +108,24 @@ namespace CSharpScript.Game.Module.Plot
 			return true;
 		}
 
-		// Token: 0x0603466F RID: 214639 RVA: 0x00C521C9 File Offset: 0x00C503C9
+		// Token: 0x060294FC RID: 169212 RVA: 0x00B9BF4D File Offset: 0x00B9A14D
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06034670 RID: 214640 RVA: 0x00C521CB File Offset: 0x00C503CB
+		// Token: 0x060294FD RID: 169213 RVA: 0x00B9BF4F File Offset: 0x00B9A14F
 		public static void ResetStaticDefaultValue()
 		{
 			PlotMontageConfig._Instance = null;
 		}
 
-		// Token: 0x06034671 RID: 214641 RVA: 0x00C521D3 File Offset: 0x00C503D3
+		// Token: 0x060294FE RID: 169214 RVA: 0x00B9BF57 File Offset: 0x00B9A157
 		static PlotMontageConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(PlotMontageConfig.CreateStaticDefaultValue), new Action(PlotMontageConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401BE7B RID: 114299
+		// Token: 0x04016858 RID: 92248
 		[Nullable(2)]
 		private static PlotMontageConfig _Instance;
 	}

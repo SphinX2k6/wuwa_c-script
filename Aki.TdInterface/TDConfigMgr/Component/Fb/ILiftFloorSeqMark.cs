@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C6A RID: 3178
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D49 RID: 3401
 	public class ILiftFloorSeqMark
 	{
-		// Token: 0x060048DA RID: 18650 RVA: 0x000B6E8D File Offset: 0x000B508D
+		// Token: 0x06004D79 RID: 19833 RVA: 0x000C1691 File Offset: 0x000BF891
 		public static ILiftFloorSeqMark Create(ILiftFloorSeqMark? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170015C3 RID: 5571
-		// (get) Token: 0x060048DB RID: 18651 RVA: 0x000B6EAC File Offset: 0x000B50AC
+		// Token: 0x170016E2 RID: 5858
+		// (get) Token: 0x06004D7A RID: 19834 RVA: 0x000C16B0 File Offset: 0x000BF8B0
 		public virtual int Floor
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015C4 RID: 5572
-		// (get) Token: 0x060048DC RID: 18652 RVA: 0x000B6EB9 File Offset: 0x000B50B9
+		// Token: 0x170016E3 RID: 5859
+		// (get) Token: 0x06004D7B RID: 19835 RVA: 0x000C16BD File Offset: 0x000BF8BD
 		public virtual string Mark
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002989 RID: 10633
+		// Token: 0x04002BF6 RID: 11254
 		private ILiftFloorSeqMark Instance;
 	}
 }

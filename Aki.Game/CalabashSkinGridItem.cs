@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Skin;
 
-// Token: 0x02002A40 RID: 10816
+// Token: 0x02001FBB RID: 8123
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -12,7 +12,7 @@ using CSharpScript.Game.Module.Skin;
 })]
 public class CalabashSkinGridItem : LoopScrollSmallItemGrid<CalabashSkinData>
 {
-	// Token: 0x06016865 RID: 92261 RVA: 0x005B5F94 File Offset: 0x005B4194
+	// Token: 0x06014286 RID: 82566 RVA: 0x005E20FC File Offset: 0x005E02FC
 	public override void OnSelected(bool fireEvent)
 	{
 		if (fireEvent)
@@ -27,13 +27,13 @@ public class CalabashSkinGridItem : LoopScrollSmallItemGrid<CalabashSkinData>
 		}
 	}
 
-	// Token: 0x06016866 RID: 92262 RVA: 0x005B5FDC File Offset: 0x005B41DC
+	// Token: 0x06014287 RID: 82567 RVA: 0x005E2144 File Offset: 0x005E0344
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetSelected(false, true);
 	}
 
-	// Token: 0x06016867 RID: 92263 RVA: 0x005B5FE8 File Offset: 0x005B41E8
+	// Token: 0x06014288 RID: 82568 RVA: 0x005E2150 File Offset: 0x005E0350
 	protected override void OnRefresh(CalabashSkinData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -56,7 +56,7 @@ public class CalabashSkinGridItem : LoopScrollSmallItemGrid<CalabashSkinData>
 		}
 	}
 
-	// Token: 0x06016868 RID: 92264 RVA: 0x005B60BC File Offset: 0x005B42BC
+	// Token: 0x06014289 RID: 82569 RVA: 0x005E2224 File Offset: 0x005E0424
 	public void RefreshVisible()
 	{
 		CalabashSkinData calabashSkinData = this.Data as CalabashSkinData;

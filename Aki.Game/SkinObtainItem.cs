@@ -7,7 +7,7 @@ using CSharpScript.Game.Module.SkipInterface;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002A39 RID: 10809
+// Token: 0x02001FB4 RID: 8116
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class SkinObtainItem : GridProxyAbstract<ISkinSkipData>
 {
-	// Token: 0x06016822 RID: 92194 RVA: 0x005B4DC4 File Offset: 0x005B2FC4
+	// Token: 0x06014244 RID: 82500 RVA: 0x005E0F7C File Offset: 0x005DF17C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -43,7 +43,7 @@ public class SkinObtainItem : GridProxyAbstract<ISkinSkipData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06016823 RID: 92195 RVA: 0x005B4ECD File Offset: 0x005B30CD
+	// Token: 0x06014245 RID: 82501 RVA: 0x005E1085 File Offset: 0x005DF285
 	private void OnClick()
 	{
 		if (this.Data.Type == ESkinSkipType.CanJump)
@@ -52,11 +52,16 @@ public class SkinObtainItem : GridProxyAbstract<ISkinSkipData>
 		}
 	}
 
-	// Token: 0x06016824 RID: 92196 RVA: 0x005B4F00 File Offset: 0x005B3100
+	// Token: 0x06014246 RID: 82502 RVA: 0x005E10B8 File Offset: 0x005DF2B8
 	public override void Refresh(ISkinSkipData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
 		bool flag = this.Data.Type == ESkinSkipType.CanJump;
+		UUIButtonComponent button = base.GetButton(0);
+		if (button != null)
+		{
+			button.SetSelfInteractive(flag);
+		}
 		UUIItem item = base.GetItem(1);
 		if (item != null)
 		{
@@ -71,22 +76,22 @@ public class SkinObtainItem : GridProxyAbstract<ISkinSkipData>
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(4), this.Data.Text, Array.Empty<object>());
 	}
 
-	// Token: 0x0400A711 RID: 42769
+	// Token: 0x0400AB15 RID: 43797
 	private ISkinSkipData Data;
 
-	// Token: 0x02009080 RID: 36992
+	// Token: 0x020082C7 RID: 33479
 	[NullableContext(0)]
 	private enum EComponentDefine
 	{
-		// Token: 0x0402ED51 RID: 191825
+		// Token: 0x0402A44B RID: 173131
 		Button,
-		// Token: 0x0402ED52 RID: 191826
+		// Token: 0x0402A44C RID: 173132
 		UnlockItem,
-		// Token: 0x0402ED53 RID: 191827
+		// Token: 0x0402A44D RID: 173133
 		LockItem,
-		// Token: 0x0402ED54 RID: 191828
+		// Token: 0x0402A44E RID: 173134
 		Name,
-		// Token: 0x0402ED55 RID: 191829
+		// Token: 0x0402A44F RID: 173135
 		LockName
 	}
 }

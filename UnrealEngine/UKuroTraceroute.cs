@@ -6,29 +6,29 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001A00 RID: 6656
+	// Token: 0x02000483 RID: 1155
 	[UnrealObjectPath("/Script/KuroNetwork.KuroTraceroute")]
 	[UnrealStructLayout(64, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 64)]
 	public class UKuroTraceroute : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06018ADA RID: 101082 RVA: 0x0024646B File Offset: 0x0024466B
+		// Token: 0x06006D24 RID: 27940 RVA: 0x0009F76A File Offset: 0x0009D96A
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroTraceroute._ClassPtr;
 		}
 
-		// Token: 0x06018ADB RID: 101083 RVA: 0x00246478 File Offset: 0x00244678
+		// Token: 0x06006D25 RID: 27941 RVA: 0x0009F778 File Offset: 0x0009D978
 		public UKuroTraceroute() : this(BuiltinUtils.AllocNativeUObject(UKuroTraceroute.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06018ADC RID: 101084 RVA: 0x002464A0 File Offset: 0x002446A0
+		// Token: 0x06006D26 RID: 27942 RVA: 0x0009F7A0 File Offset: 0x0009D9A0
 		[NullableContext(1)]
 		public UKuroTraceroute(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroTraceroute.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x06018ADD RID: 101085 RVA: 0x002464D4 File Offset: 0x002446D4
+		// Token: 0x06006D27 RID: 27943 RVA: 0x0009F7D4 File Offset: 0x0009D9D4
 		[NullableContext(1)]
 		public unsafe void Traceroute(string Target, [Nullable(2)] FTracerouteDelegate Callback)
 		{
@@ -37,39 +37,39 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x06018ADE RID: 101086 RVA: 0x0024650B File Offset: 0x0024470B
+		// Token: 0x06006D28 RID: 27944 RVA: 0x0009F80B File Offset: 0x0009DA0B
 		public void Abort()
 		{
 			UKuroTraceroute.__Abort_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06018ADF RID: 101087
+		// Token: 0x06006D29 RID: 27945
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __Traceroute_Internal(IntPtr @this, in FString Target, IntPtr Callback);
 
-		// Token: 0x06018AE0 RID: 101088
+		// Token: 0x06006D2A RID: 27946
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __Abort_Internal(IntPtr @this);
 
-		// Token: 0x06018AE1 RID: 101089 RVA: 0x00246518 File Offset: 0x00244718
+		// Token: 0x06006D2B RID: 27947 RVA: 0x0009F818 File Offset: 0x0009DA18
 		static UKuroTraceroute()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroNetwork.KuroTraceroute");
 		}
 
-		// Token: 0x06018AE2 RID: 101090 RVA: 0x00246526 File Offset: 0x00244726
+		// Token: 0x06006D2C RID: 27948 RVA: 0x0009F826 File Offset: 0x0009DA26
 		protected UKuroTraceroute(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400D550 RID: 54608
+		// Token: 0x04002E9A RID: 11930
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroNetwork.KuroTraceroute";
 
-		// Token: 0x0400D551 RID: 54609
+		// Token: 0x04002E9B RID: 11931
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400D552 RID: 54610
+		// Token: 0x04002E9C RID: 11932
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

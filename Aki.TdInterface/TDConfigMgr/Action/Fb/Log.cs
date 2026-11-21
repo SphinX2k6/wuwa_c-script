@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020024F1 RID: 9457
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002797 RID: 10135
 	public class Log : ActionParams
 	{
-		// Token: 0x0600D332 RID: 54066 RVA: 0x001F5299 File Offset: 0x001F3499
+		// Token: 0x0600E08E RID: 57486 RVA: 0x00210C91 File Offset: 0x0020EE91
 		public static Log Create(ILog? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003B12 RID: 15122
-		// (get) Token: 0x0600D333 RID: 54067 RVA: 0x001F52B8 File Offset: 0x001F34B8
+		// Token: 0x17003E0E RID: 15886
+		// (get) Token: 0x0600E08F RID: 57487 RVA: 0x00210CB0 File Offset: 0x0020EEB0
 		public virtual string Level
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003B13 RID: 15123
-		// (get) Token: 0x0600D334 RID: 54068 RVA: 0x001F52C5 File Offset: 0x001F34C5
+		// Token: 0x17003E0F RID: 15887
+		// (get) Token: 0x0600E090 RID: 57488 RVA: 0x00210CBD File Offset: 0x0020EEBD
 		public virtual string Content
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040073CF RID: 29647
+		// Token: 0x04007A21 RID: 31265
 		private ILog Instance;
 	}
 }

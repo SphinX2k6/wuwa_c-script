@@ -3,31 +3,31 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A36 RID: 18998
+	// Token: 0x020039DE RID: 14814
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class TrapMapComponentBase
 	{
-		// Token: 0x06031530 RID: 202032 RVA: 0x00B71204 File Offset: 0x00B6F404
+		// Token: 0x060262C0 RID: 156352 RVA: 0x00AB5178 File Offset: 0x00AB3378
 		public TrapMapComponentBase(TrapMapEntity parent)
 		{
 			this.Parent = parent;
 		}
 
-		// Token: 0x17007A34 RID: 31284
-		// (get) Token: 0x06031531 RID: 202033 RVA: 0x00B71213 File Offset: 0x00B6F413
+		// Token: 0x17004DE1 RID: 19937
+		// (get) Token: 0x060262C1 RID: 156353 RVA: 0x00AB5187 File Offset: 0x00AB3387
 		public TrapMapEntity Parent { get; }
 
-		// Token: 0x06031532 RID: 202034 RVA: 0x00B7121B File Offset: 0x00B6F41B
+		// Token: 0x060262C2 RID: 156354 RVA: 0x00AB518F File Offset: 0x00AB338F
 		public static int GenComponentId()
 		{
 			TrapMapComponentBase.IncId++;
 			return TrapMapComponentBase.IncId;
 		}
 
-		// Token: 0x17007A35 RID: 31285
-		// (get) Token: 0x06031533 RID: 202035 RVA: 0x00B7122E File Offset: 0x00B6F42E
-		// (set) Token: 0x06031534 RID: 202036 RVA: 0x00B71249 File Offset: 0x00B6F449
+		// Token: 0x17004DE2 RID: 19938
+		// (get) Token: 0x060262C3 RID: 156355 RVA: 0x00AB51A2 File Offset: 0x00AB33A2
+		// (set) Token: 0x060262C4 RID: 156356 RVA: 0x00AB51BD File Offset: 0x00AB33BD
 		public int ComponentId
 		{
 			get
@@ -44,9 +44,9 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x17007A36 RID: 31286
-		// (get) Token: 0x06031535 RID: 202037 RVA: 0x00B71252 File Offset: 0x00B6F452
-		// (set) Token: 0x06031536 RID: 202038 RVA: 0x00B7125A File Offset: 0x00B6F45A
+		// Token: 0x17004DE3 RID: 19939
+		// (get) Token: 0x060262C5 RID: 156357 RVA: 0x00AB51C6 File Offset: 0x00AB33C6
+		// (set) Token: 0x060262C6 RID: 156358 RVA: 0x00AB51CE File Offset: 0x00AB33CE
 		public bool Enable
 		{
 			get
@@ -70,9 +70,9 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x17007A37 RID: 31287
-		// (get) Token: 0x06031537 RID: 202039 RVA: 0x00B71288 File Offset: 0x00B6F488
-		// (set) Token: 0x06031538 RID: 202040 RVA: 0x00B71290 File Offset: 0x00B6F490
+		// Token: 0x17004DE4 RID: 19940
+		// (get) Token: 0x060262C7 RID: 156359 RVA: 0x00AB51FC File Offset: 0x00AB33FC
+		// (set) Token: 0x060262C8 RID: 156360 RVA: 0x00AB5204 File Offset: 0x00AB3404
 		public bool EnableTick
 		{
 			get
@@ -85,30 +85,30 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031539 RID: 202041 RVA: 0x00B71299 File Offset: 0x00B6F499
+		// Token: 0x060262C9 RID: 156361 RVA: 0x00AB520D File Offset: 0x00AB340D
 		public void Init()
 		{
 			this.FirstEnable = true;
 			this.OnInit();
 		}
 
-		// Token: 0x0603153A RID: 202042 RVA: 0x00B712A8 File Offset: 0x00B6F4A8
+		// Token: 0x060262CA RID: 156362 RVA: 0x00AB521C File Offset: 0x00AB341C
 		public void Add()
 		{
 			this.OnAdd();
 		}
 
-		// Token: 0x0603153B RID: 202043 RVA: 0x00B712B0 File Offset: 0x00B6F4B0
+		// Token: 0x060262CB RID: 156363 RVA: 0x00AB5224 File Offset: 0x00AB3424
 		public void Remove()
 		{
 			this.OnRemove();
 		}
 
-		// Token: 0x17007A38 RID: 31288
-		// (get) Token: 0x0603153C RID: 202044
+		// Token: 0x17004DE5 RID: 19941
+		// (get) Token: 0x060262CC RID: 156364
 		public abstract ETrapDefenseMapComponent ComponentType { get; }
 
-		// Token: 0x0603153D RID: 202045 RVA: 0x00B712B8 File Offset: 0x00B6F4B8
+		// Token: 0x060262CD RID: 156365 RVA: 0x00AB522C File Offset: 0x00AB342C
 		public void Tick(float delta)
 		{
 			if (this.Enable && this.EnableTick)
@@ -117,55 +117,55 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x0603153E RID: 202046 RVA: 0x00B712D1 File Offset: 0x00B6F4D1
+		// Token: 0x060262CE RID: 156366 RVA: 0x00AB5245 File Offset: 0x00AB3445
 		protected virtual void OnAdd()
 		{
 		}
 
-		// Token: 0x0603153F RID: 202047 RVA: 0x00B712D3 File Offset: 0x00B6F4D3
+		// Token: 0x060262CF RID: 156367 RVA: 0x00AB5247 File Offset: 0x00AB3447
 		protected virtual void OnStart()
 		{
 		}
 
-		// Token: 0x06031540 RID: 202048 RVA: 0x00B712D5 File Offset: 0x00B6F4D5
+		// Token: 0x060262D0 RID: 156368 RVA: 0x00AB5249 File Offset: 0x00AB3449
 		protected virtual void OnEnable()
 		{
 		}
 
-		// Token: 0x06031541 RID: 202049 RVA: 0x00B712D7 File Offset: 0x00B6F4D7
+		// Token: 0x060262D1 RID: 156369 RVA: 0x00AB524B File Offset: 0x00AB344B
 		protected virtual void OnTick(float delta)
 		{
 		}
 
-		// Token: 0x06031542 RID: 202050 RVA: 0x00B712D9 File Offset: 0x00B6F4D9
+		// Token: 0x060262D2 RID: 156370 RVA: 0x00AB524D File Offset: 0x00AB344D
 		protected virtual void OnDisable()
 		{
 		}
 
-		// Token: 0x06031543 RID: 202051 RVA: 0x00B712DB File Offset: 0x00B6F4DB
+		// Token: 0x060262D3 RID: 156371 RVA: 0x00AB524F File Offset: 0x00AB344F
 		protected virtual void OnRemove()
 		{
 		}
 
-		// Token: 0x06031544 RID: 202052 RVA: 0x00B712DD File Offset: 0x00B6F4DD
+		// Token: 0x060262D4 RID: 156372 RVA: 0x00AB5251 File Offset: 0x00AB3451
 		protected virtual void OnInit()
 		{
 		}
 
-		// Token: 0x0401A5C2 RID: 107970
+		// Token: 0x04014F14 RID: 85780
 		[StaticVariableRuleIgnore]
 		private static int IncId;
 
-		// Token: 0x0401A5C3 RID: 107971
+		// Token: 0x04014F15 RID: 85781
 		private bool EnableInner;
 
-		// Token: 0x0401A5C4 RID: 107972
+		// Token: 0x04014F16 RID: 85782
 		private bool FirstEnable;
 
-		// Token: 0x0401A5C5 RID: 107973
+		// Token: 0x04014F17 RID: 85783
 		private bool EnableTickInner;
 
-		// Token: 0x0401A5C7 RID: 107975
+		// Token: 0x04014F19 RID: 85785
 		private int ComponentIdInternal;
 	}
 }

@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200181F RID: 6175
+	// Token: 0x020019AA RID: 6570
 	public class IBubbleIndex_SetValue
 	{
-		// Token: 0x040053DA RID: 21466
-		[Nullable(1)]
+		// Token: 0x04005826 RID: 22566
 		public string FlowListName;
 
-		// Token: 0x040053DB RID: 21467
+		// Token: 0x04005827 RID: 22567
 		public int FlowId;
 
-		// Token: 0x040053DC RID: 21468
+		// Token: 0x04005828 RID: 22568
 		public int? StateId;
 	}
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -16,19 +15,19 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.PhantomArena
 {
-	// Token: 0x02005105 RID: 20741
+	// Token: 0x020040D5 RID: 16597
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class PhantomArenaController : ActivityControllerBase
 	{
-		// Token: 0x060350F8 RID: 217336 RVA: 0x00C9285B File Offset: 0x00C90A5B
+		// Token: 0x06029FF1 RID: 172017 RVA: 0x00BDFC5F File Offset: 0x00BDDE5F
 		protected override bool OnGetIsOpeningActivityRelativeView()
 		{
 			return false;
 		}
 
-		// Token: 0x060350F9 RID: 217337 RVA: 0x00C92860 File Offset: 0x00C90A60
+		// Token: 0x06029FF2 RID: 172018 RVA: 0x00BDFC64 File Offset: 0x00BDDE64
 		protected override void OnOpenView(ActivityBaseData data)
 		{
 			if (!data.GetPreGuideQuestFinishState())
@@ -39,7 +38,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			PhantomArenaBattleController.OpenPhantomArenaMapEntrance(null, null);
 		}
 
-		// Token: 0x060350FA RID: 217338 RVA: 0x00C928A8 File Offset: 0x00C90AA8
+		// Token: 0x06029FF3 RID: 172019 RVA: 0x00BDFCAC File Offset: 0x00BDDEAC
 		[NullableContext(0)]
 		protected override UniTask<bool> OnOpenSubView(EUiViewName viewName, int activityId)
 		{
@@ -52,25 +51,25 @@ namespace CSharpScript.Game.Module.PhantomArena
 			return <OnOpenSubView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060350FB RID: 217339 RVA: 0x00C928F3 File Offset: 0x00C90AF3
+		// Token: 0x06029FF4 RID: 172020 RVA: 0x00BDFCF7 File Offset: 0x00BDDEF7
 		protected override string OnGetActivityResource(ActivityBaseData data)
 		{
 			return "UiItem_SoundRemnantArenaMain";
 		}
 
-		// Token: 0x060350FC RID: 217340 RVA: 0x00C928FA File Offset: 0x00C90AFA
+		// Token: 0x06029FF5 RID: 172021 RVA: 0x00BDFCFE File Offset: 0x00BDDEFE
 		protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 		{
 			return new PhantomArenaSubView();
 		}
 
-		// Token: 0x060350FD RID: 217341 RVA: 0x00C92901 File Offset: 0x00C90B01
+		// Token: 0x06029FF6 RID: 172022 RVA: 0x00BDFD05 File Offset: 0x00BDDF05
 		protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 		{
 			return new PhantomArenaActivityData();
 		}
 
-		// Token: 0x060350FE RID: 217342 RVA: 0x00C92908 File Offset: 0x00C90B08
+		// Token: 0x06029FF7 RID: 172023 RVA: 0x00BDFD0C File Offset: 0x00BDDF0C
 		protected override void OnRegisterNetEvent()
 		{
 			if (PhantomArenaController.Instance.NetRegistered)
@@ -89,7 +88,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			PhantomArenaController.Instance.NetRegistered = true;
 		}
 
-		// Token: 0x060350FF RID: 217343 RVA: 0x00C92A2C File Offset: 0x00C90C2C
+		// Token: 0x06029FF8 RID: 172024 RVA: 0x00BDFE30 File Offset: 0x00BDE030
 		protected override void OnUnRegisterNetEvent()
 		{
 			if (!PhantomArenaController.Instance.NetRegistered)
@@ -108,7 +107,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			PhantomArenaController.Instance.NetRegistered = false;
 		}
 
-		// Token: 0x06035100 RID: 217344 RVA: 0x00C92AE1 File Offset: 0x00C90CE1
+		// Token: 0x06029FF9 RID: 172025 RVA: 0x00BDFEE5 File Offset: 0x00BDE0E5
 		protected override void OnAddEvents()
 		{
 			if (PhantomArenaController.Instance.EventsRegistered)
@@ -119,7 +118,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			PhantomArenaController.Instance.EventsRegistered = true;
 		}
 
-		// Token: 0x06035101 RID: 217345 RVA: 0x00C92B17 File Offset: 0x00C90D17
+		// Token: 0x06029FFA RID: 172026 RVA: 0x00BDFF1B File Offset: 0x00BDE11B
 		protected override void OnRemoveEvents()
 		{
 			if (!PhantomArenaController.Instance.EventsRegistered)
@@ -130,19 +129,19 @@ namespace CSharpScript.Game.Module.PhantomArena
 			PhantomArenaController.Instance.EventsRegistered = false;
 		}
 
-		// Token: 0x06035102 RID: 217346 RVA: 0x00C92B4D File Offset: 0x00C90D4D
+		// Token: 0x06029FFB RID: 172027 RVA: 0x00BDFF51 File Offset: 0x00BDE151
 		private void OnWorldDone()
 		{
 			PhantomArenaController.Instance.PostUnlockView();
 		}
 
-		// Token: 0x06035103 RID: 217347 RVA: 0x00C92B5C File Offset: 0x00C90D5C
+		// Token: 0x06029FFC RID: 172028 RVA: 0x00BDFF60 File Offset: 0x00BDE160
 		public override void OnShowActivityFirstUnlockView(ActivityBaseData data)
 		{
 			GenericPromptController.Instance.ShowPromptByItsType<object>(EPromptSubViewType.PhantomArenaOpen, null, null, null, null, null, null, null, null, false, null);
 		}
 
-		// Token: 0x06035104 RID: 217348 RVA: 0x00C92B90 File Offset: 0x00C90D90
+		// Token: 0x06029FFD RID: 172029 RVA: 0x00BDFF94 File Offset: 0x00BDE194
 		[NullableContext(2)]
 		private void OnChallengeInfoUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -154,7 +153,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			PhantomArenaModel.Instance.UpdateChallengeInfoByNotify(phantomBattleChallengeInfoUpdateNotify);
 		}
 
-		// Token: 0x06035105 RID: 217349 RVA: 0x00C92BB4 File Offset: 0x00C90DB4
+		// Token: 0x06029FFE RID: 172030 RVA: 0x00BDFFB8 File Offset: 0x00BDE1B8
 		[NullableContext(2)]
 		private void OnChallengeUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -173,12 +172,12 @@ namespace CSharpScript.Game.Module.PhantomArena
 				PhantomArenaActivityData permanentPhantomArenaActivityData = PhantomArenaModel.Instance.GetPermanentPhantomArenaActivityData();
 				if (permanentPhantomArenaActivityData != null)
 				{
-					permanentPhantomArenaActivityData.UpdateChallengeFinishConditions(phantomBattleChallengeInfo.PhantomBattleChallengeId, phantomBattleChallengeInfo.FinishConditions.ToList<int>());
+					permanentPhantomArenaActivityData.UpdateChallengeFinishConditions(phantomBattleChallengeInfo.PhantomBattleChallengeId, phantomBattleChallengeInfo.FinishConditions);
 				}
 			}
 		}
 
-		// Token: 0x06035106 RID: 217350 RVA: 0x00C92C60 File Offset: 0x00C90E60
+		// Token: 0x06029FFF RID: 172031 RVA: 0x00BE0060 File Offset: 0x00BDE260
 		[NullableContext(2)]
 		private void OnMasterInfoNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -190,7 +189,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			PhantomArenaModel.Instance.UpdateMasterInfoByNotify(phantomBattleMasterInfoNotify);
 		}
 
-		// Token: 0x06035107 RID: 217351 RVA: 0x00C92C84 File Offset: 0x00C90E84
+		// Token: 0x0602A000 RID: 172032 RVA: 0x00BE0084 File Offset: 0x00BDE284
 		[NullableContext(2)]
 		private void OnBadgeInfoUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -210,7 +209,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			}
 		}
 
-		// Token: 0x06035108 RID: 217352 RVA: 0x00C92D0C File Offset: 0x00C90F0C
+		// Token: 0x0602A001 RID: 172033 RVA: 0x00BE010C File Offset: 0x00BDE30C
 		[NullableContext(2)]
 		private void OnBadgeRewardInfoUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -222,7 +221,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			PhantomArenaModel.Instance.UpdateBadgeRewardByNotify(phantomBattleBadgeRewardInfoUpdateNotify);
 		}
 
-		// Token: 0x06035109 RID: 217353 RVA: 0x00C92D30 File Offset: 0x00C90F30
+		// Token: 0x0602A002 RID: 172034 RVA: 0x00BE0130 File Offset: 0x00BDE330
 		[NullableContext(2)]
 		private void OnCardRewardInfoUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -234,7 +233,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			PhantomArenaModel.Instance.UpdateCardRewardByNotify(phantomBattleCardRewardInfoUpdateNotify);
 		}
 
-		// Token: 0x0603510A RID: 217354 RVA: 0x00C92D54 File Offset: 0x00C90F54
+		// Token: 0x0602A003 RID: 172035 RVA: 0x00BE0154 File Offset: 0x00BDE354
 		[NullableContext(2)]
 		private void OnRoleInfoUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -260,7 +259,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			}
 		}
 
-		// Token: 0x0603510B RID: 217355 RVA: 0x00C92E10 File Offset: 0x00C91010
+		// Token: 0x0602A004 RID: 172036 RVA: 0x00BE0210 File Offset: 0x00BDE410
 		public bool CheckInPhantomArenaDungeon()
 		{
 			if (GameModeController.Instance.IsInInstance())
@@ -272,7 +271,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			return false;
 		}
 
-		// Token: 0x0603510C RID: 217356 RVA: 0x00C92E60 File Offset: 0x00C91060
+		// Token: 0x0602A005 RID: 172037 RVA: 0x00BE0260 File Offset: 0x00BDE460
 		[NullableContext(2)]
 		private void OnCardInfoUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -304,7 +303,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			PhantomArenaController.Instance.PostUnlockView();
 		}
 
-		// Token: 0x0603510D RID: 217357 RVA: 0x00C92F34 File Offset: 0x00C91134
+		// Token: 0x0602A006 RID: 172038 RVA: 0x00BE0334 File Offset: 0x00BDE534
 		[NullableContext(2)]
 		private void OnTaskInfoUpdateNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -316,7 +315,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			PhantomArenaModel.Instance.UpdateTaskInfo(phantomBattleTaskInfoNotify);
 		}
 
-		// Token: 0x0603510E RID: 217358 RVA: 0x00C92F58 File Offset: 0x00C91158
+		// Token: 0x0602A007 RID: 172039 RVA: 0x00BE0358 File Offset: 0x00BDE558
 		public void TaskRewardRequest(int taskId)
 		{
 			PhantomBattleTaskRewardRequest phantomBattleTaskRewardRequest = PhantomBattleTaskRewardRequest.Create();
@@ -330,7 +329,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 				}
 				if (phantomBattleTaskRewardResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(phantomBattleTaskRewardResponse.ErrorCode, 23918, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(phantomBattleTaskRewardResponse.ErrorCode, 24417, null, true, true);
 					return;
 				}
 				PhantomArenaModel.Instance.UpdateTaskByIds(new List<int>
@@ -340,7 +339,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			}, 0);
 		}
 
-		// Token: 0x0603510F RID: 217359 RVA: 0x00C92FA4 File Offset: 0x00C911A4
+		// Token: 0x0602A008 RID: 172040 RVA: 0x00BE03A4 File Offset: 0x00BDE5A4
 		public void TaskAllRewardRequest(int taskId)
 		{
 			PhantomBattleTask? taskConfigById = PhantomArenaConfig.Instance.GetTaskConfigById(taskId);
@@ -360,14 +359,14 @@ namespace CSharpScript.Game.Module.PhantomArena
 				}
 				if (phantomBattleRepeatedTaskRewardResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(phantomBattleRepeatedTaskRewardResponse.ErrorCode, 29535, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(phantomBattleRepeatedTaskRewardResponse.ErrorCode, 16815, null, true, true);
 					return;
 				}
 				PhantomArenaModel.Instance.UpdateTaskByIds(taskIds);
 			}, 0);
 		}
 
-		// Token: 0x06035110 RID: 217360 RVA: 0x00C93030 File Offset: 0x00C91230
+		// Token: 0x0602A009 RID: 172041 RVA: 0x00BE0430 File Offset: 0x00BDE630
 		public void MasterLevelMultiRewardRequest(int[] levelConfigIds, int activityId)
 		{
 			MulPhantomBattleMasterLevelRewardRequest mulPhantomBattleMasterLevelRewardRequest = MulPhantomBattleMasterLevelRewardRequest.Create();
@@ -382,14 +381,14 @@ namespace CSharpScript.Game.Module.PhantomArena
 				}
 				if (mulPhantomBattleMasterLevelRewardResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(mulPhantomBattleMasterLevelRewardResponse.ErrorCode, 21948, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(mulPhantomBattleMasterLevelRewardResponse.ErrorCode, 15639, null, true, true);
 					return;
 				}
-				PhantomArenaModel.Instance.UpdateMasterLevelByConfigIds(levelConfigIds.ToList<int>(), activityId);
+				PhantomArenaModel.Instance.UpdateMasterLevelByConfigIds(levelConfigIds, activityId);
 			}, 0);
 		}
 
-		// Token: 0x06035111 RID: 217361 RVA: 0x00C93094 File Offset: 0x00C91294
+		// Token: 0x0602A00A RID: 172042 RVA: 0x00BE0494 File Offset: 0x00BDE694
 		public void BadgeRewardRequest(int[] rewardIds, int activityId)
 		{
 			PhantomBattleBadgeRewardRequest phantomBattleBadgeRewardRequest = PhantomBattleBadgeRewardRequest.Create();
@@ -404,14 +403,14 @@ namespace CSharpScript.Game.Module.PhantomArena
 				}
 				if (phantomBattleBadgeRewardResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(phantomBattleBadgeRewardResponse.ErrorCode, 23918, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(phantomBattleBadgeRewardResponse.ErrorCode, 24417, null, true, true);
 					return;
 				}
-				PhantomArenaModel.Instance.UpdateBadgeRewardByIds(rewardIds.ToList<int>());
+				PhantomArenaModel.Instance.UpdateBadgeRewardByIds(new List<int>(rewardIds));
 			}, 0);
 		}
 
-		// Token: 0x06035112 RID: 217362 RVA: 0x00C930EC File Offset: 0x00C912EC
+		// Token: 0x0602A00B RID: 172043 RVA: 0x00BE04EC File Offset: 0x00BDE6EC
 		[NullableContext(2)]
 		public void CardOutLookUpRequest(int cardId, Action<int> successCallBack = null)
 		{
@@ -426,7 +425,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 				}
 				if (phantomBattleCardOutLookUpResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(phantomBattleCardOutLookUpResponse.ErrorCode, 21447, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(phantomBattleCardOutLookUpResponse.ErrorCode, 26978, null, true, true);
 					return;
 				}
 				PhantomArenaModel.Instance.OnCardOutlookUnlock(cardId);
@@ -441,7 +440,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			}, 0);
 		}
 
-		// Token: 0x06035113 RID: 217363 RVA: 0x00C9313C File Offset: 0x00C9133C
+		// Token: 0x0602A00C RID: 172044 RVA: 0x00BE053C File Offset: 0x00BDE73C
 		public void CardRewardRequest(int[] rewardIds, int activityId)
 		{
 			PhantomBattleCardRewardRequest phantomBattleCardRewardRequest = PhantomBattleCardRewardRequest.Create();
@@ -456,14 +455,14 @@ namespace CSharpScript.Game.Module.PhantomArena
 				}
 				if (phantomBattleCardRewardResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(phantomBattleCardRewardResponse.ErrorCode, 23918, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(phantomBattleCardRewardResponse.ErrorCode, 24417, null, true, true);
 					return;
 				}
-				PhantomArenaModel.Instance.UpdateCardRewardByIds(rewardIds.ToList<int>());
+				PhantomArenaModel.Instance.UpdateCardRewardByIds(new List<int>(rewardIds));
 			}, 0);
 		}
 
-		// Token: 0x06035114 RID: 217364 RVA: 0x00C93194 File Offset: 0x00C91394
+		// Token: 0x0602A00D RID: 172045 RVA: 0x00BE0594 File Offset: 0x00BDE794
 		[NullableContext(2)]
 		public void RoleRewardRequest(int cardRoleId, Action<int> successCallBack = null)
 		{
@@ -478,7 +477,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 				}
 				if (phantomBattleRoleRewardResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(phantomBattleRoleRewardResponse.ErrorCode, 21447, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(phantomBattleRoleRewardResponse.ErrorCode, 26978, null, true, true);
 					return;
 				}
 				PhantomArenaModel.Instance.OnRoleReward(cardRoleId);
@@ -491,7 +490,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			}, 0);
 		}
 
-		// Token: 0x06035115 RID: 217365 RVA: 0x00C931E4 File Offset: 0x00C913E4
+		// Token: 0x0602A00E RID: 172046 RVA: 0x00BE05E4 File Offset: 0x00BDE7E4
 		public void CardGroupAddRequest(string name, int[] cardIdList, int activityId, [Nullable(2)] Action<int> successCallBack = null)
 		{
 			PhantomBattleCardGroupAddRequest phantomBattleCardGroupAddRequest = PhantomBattleCardGroupAddRequest.Create();
@@ -507,7 +506,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 				}
 				if (phantomBattleCardGroupAddResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(phantomBattleCardGroupAddResponse.ErrorCode, 17478, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(phantomBattleCardGroupAddResponse.ErrorCode, 16063, null, true, true);
 					return;
 				}
 				if (phantomBattleCardGroupAddResponse.PhantomBattleCardGroupInfo == null)
@@ -526,7 +525,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			}, 0);
 		}
 
-		// Token: 0x06035116 RID: 217366 RVA: 0x00C93248 File Offset: 0x00C91448
+		// Token: 0x0602A00F RID: 172047 RVA: 0x00BE0648 File Offset: 0x00BDE848
 		[NullableContext(2)]
 		public void CardGroupDeleteRequest(int deckServerId, int activityId, Action<int> successCallBack = null)
 		{
@@ -542,7 +541,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 				}
 				if (phantomBattleCardGroupDeleteResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(phantomBattleCardGroupDeleteResponse.ErrorCode, 29932, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(phantomBattleCardGroupDeleteResponse.ErrorCode, 25229, null, true, true);
 					return;
 				}
 				PhantomArenaModel.Instance.UpdateDeckList(phantomBattleCardGroupDeleteResponse.PhantomBattleCardGroupInfo, activityId);
@@ -556,7 +555,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			}, 0);
 		}
 
-		// Token: 0x06035117 RID: 217367 RVA: 0x00C932AC File Offset: 0x00C914AC
+		// Token: 0x0602A010 RID: 172048 RVA: 0x00BE06AC File Offset: 0x00BDE8AC
 		public void CardGroupUpdateRequest(int deckServerId, int[] cardIds, int activityId, [Nullable(2)] Action<int> successCallBack = null)
 		{
 			PhantomBattleCardGroupUpdateRequest phantomBattleCardGroupUpdateRequest = PhantomBattleCardGroupUpdateRequest.Create();
@@ -572,7 +571,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 				}
 				if (phantomBattleCardGroupUpdateResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(phantomBattleCardGroupUpdateResponse.ErrorCode, 26320, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(phantomBattleCardGroupUpdateResponse.ErrorCode, 19388, null, true, true);
 					return;
 				}
 				Aki.Protocol.PhantomBattleCardGroupInfo phantomBattleCardGroupInfo = phantomBattleCardGroupUpdateResponse.PhantomBattleCardGroupInfo;
@@ -591,7 +590,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			}, 0);
 		}
 
-		// Token: 0x06035118 RID: 217368 RVA: 0x00C9331C File Offset: 0x00C9151C
+		// Token: 0x0602A011 RID: 172049 RVA: 0x00BE071C File Offset: 0x00BDE91C
 		[NullableContext(0)]
 		public UniTask<Aki.Protocol.ErrorCode> CardGroupNameRequest([Nullable(1)] string newName, int deckServerId, int activityId)
 		{
@@ -605,7 +604,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			return <CardGroupNameRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035119 RID: 217369 RVA: 0x00C93370 File Offset: 0x00C91570
+		// Token: 0x0602A012 RID: 172050 RVA: 0x00BE0770 File Offset: 0x00BDE970
 		[NullableContext(2)]
 		public void CardUnlockRequest(int cardId, Action<int> successCallBack = null)
 		{
@@ -620,7 +619,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 				}
 				if (phantomBattleCardUnlockResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(phantomBattleCardUnlockResponse.ErrorCode, 16683, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(phantomBattleCardUnlockResponse.ErrorCode, 23550, null, true, true);
 					return;
 				}
 				Action<int> successCallBack2 = successCallBack;
@@ -632,7 +631,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			}, 0);
 		}
 
-		// Token: 0x0603511A RID: 217370 RVA: 0x00C933C0 File Offset: 0x00C915C0
+		// Token: 0x0602A013 RID: 172051 RVA: 0x00BE07C0 File Offset: 0x00BDE9C0
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -648,7 +647,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			return <ReChallengeRequestAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603511B RID: 217371 RVA: 0x00C93404 File Offset: 0x00C91604
+		// Token: 0x0602A014 RID: 172052 RVA: 0x00BE0804 File Offset: 0x00BDEA04
 		public bool PostUnlockView()
 		{
 			if (UiManager.Instance.IsViewOpen(EUiViewName.PhantomArenaRoleUnlockView) || UiManager.Instance.IsViewOpen(EUiViewName.PhantomArenaBadgeUnlockView) || UiManager.Instance.IsViewOpen(EUiViewName.PhantomArenaCardsRewardView) || UiManager.Instance.IsViewOpen(EUiViewName.PhantomArenaCardOutlookRewardView))
@@ -694,7 +693,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			return true;
 		}
 
-		// Token: 0x0603511C RID: 217372 RVA: 0x00C93566 File Offset: 0x00C91766
+		// Token: 0x0602A015 RID: 172053 RVA: 0x00BE0966 File Offset: 0x00BDEB66
 		public void OpenPhantomArenaConfirmBoxView(ConfirmBoxDataNew data, bool isNew = false)
 		{
 			data.CustomPopType = new EUiBehaviourPopType?(EUiBehaviourPopType.PhantomArenaSmall);
@@ -709,7 +708,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(data);
 		}
 
-		// Token: 0x0603511D RID: 217373 RVA: 0x00C9359C File Offset: 0x00C9179C
+		// Token: 0x0602A016 RID: 172054 RVA: 0x00BE099C File Offset: 0x00BDEB9C
 		public void UpdateCardDetailLockState(UpdateCardDetailLockStateContext context)
 		{
 			if (context.IsUnLocked)
@@ -756,7 +755,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			}));
 		}
 
-		// Token: 0x0603511E RID: 217374 RVA: 0x00C93794 File Offset: 0x00C91994
+		// Token: 0x0602A017 RID: 172055 RVA: 0x00BE0B94 File Offset: 0x00BDED94
 		public void ReportDeckUpdate(PhantomArenaReportDeckUpdateContext context)
 		{
 			PhantomArenaDeckUpdateEvent phantomArenaDeckUpdateEvent = new PhantomArenaDeckUpdateEvent();
@@ -782,7 +781,9 @@ namespace CSharpScript.Game.Module.PhantomArena
 					phantomArenaReportCardInfo.CardIdList.Add(cardId);
 				}
 			}
-			phantomArenaDeckUpdateEvent.o_deck_info = dictionary.Values.ToArray<PhantomArenaReportCardInfo>();
+			PhantomArenaReportCardInfo[] array = new PhantomArenaReportCardInfo[dictionary.Count];
+			dictionary.Values.CopyTo(array, 0);
+			phantomArenaDeckUpdateEvent.o_deck_info = array;
 			phantomArenaDeckUpdateEvent.i_build_id = context.LastQuicklyBuildId;
 			List<string> list = new List<string>();
 			foreach (KeyValuePair<int, int> keyValuePair in context.QuicklyBuildDeckUseTimes)
@@ -805,7 +806,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			LogReportController.Instance.LogReport(phantomArenaDeckUpdateEvent);
 		}
 
-		// Token: 0x0603511F RID: 217375 RVA: 0x00C93974 File Offset: 0x00C91B74
+		// Token: 0x0602A018 RID: 172056 RVA: 0x00BE0D88 File Offset: 0x00BDEF88
 		public void OpenDeckBuilderCardInfoViewWithoutOutlookTab(int cardId)
 		{
 			DeckBuilderCardInfoViewData param = new DeckBuilderCardInfoViewData
@@ -816,7 +817,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			UiManager.Instance.OpenView(EUiViewName.DeckBuilderCardInfoView, param, null);
 		}
 
-		// Token: 0x06035120 RID: 217376 RVA: 0x00C939A8 File Offset: 0x00C91BA8
+		// Token: 0x0602A019 RID: 172057 RVA: 0x00BE0DBC File Offset: 0x00BDEFBC
 		public void RequestCheckCardSkillUnlock(DeckInfo deckInfo, Action<PhantomBattleCheckCardSkillUnlockResponse> callback)
 		{
 			if (deckInfo.GetFieldCardSlot() == null)
@@ -835,7 +836,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 				}
 				if (phantomBattleCheckCardSkillUnlockResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(phantomBattleCheckCardSkillUnlockResponse.ErrorCode, 18934, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(phantomBattleCheckCardSkillUnlockResponse.ErrorCode, 22143, null, true, true);
 					return;
 				}
 				deckInfo.SetFieldCardConditionProgress(phantomBattleCheckCardSkillUnlockResponse.CurNum, phantomBattleCheckCardSkillUnlockResponse.TargetNum);
@@ -843,7 +844,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			}, 0);
 		}
 
-		// Token: 0x06035121 RID: 217377 RVA: 0x00C93A14 File Offset: 0x00C91C14
+		// Token: 0x0602A01A RID: 172058 RVA: 0x00BE0E28 File Offset: 0x00BDF028
 		public void CreateTempActivityData()
 		{
 			ActivityData activityData = ActivityData.Create();
@@ -856,8 +857,8 @@ namespace CSharpScript.Game.Module.PhantomArena
 			});
 		}
 
-		// Token: 0x1700809D RID: 32925
-		// (get) Token: 0x06035122 RID: 217378 RVA: 0x00C93A59 File Offset: 0x00C91C59
+		// Token: 0x1700545D RID: 21597
+		// (get) Token: 0x0602A01B RID: 172059 RVA: 0x00BE0E6D File Offset: 0x00BDF06D
 		public static PhantomArenaController Instance
 		{
 			get
@@ -866,7 +867,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			}
 		}
 
-		// Token: 0x06035123 RID: 217379 RVA: 0x00C93A60 File Offset: 0x00C91C60
+		// Token: 0x0602A01C RID: 172060 RVA: 0x00BE0E74 File Offset: 0x00BDF074
 		public static PhantomArenaController GetOrCreateInstance()
 		{
 			if (PhantomArenaController._Instance == null)
@@ -876,7 +877,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			return PhantomArenaController._Instance;
 		}
 
-		// Token: 0x06035124 RID: 217380 RVA: 0x00C93A74 File Offset: 0x00C91C74
+		// Token: 0x0602A01D RID: 172061 RVA: 0x00BE0E88 File Offset: 0x00BDF088
 		public static bool CreateInstance()
 		{
 			if (PhantomArenaController._Instance != null)
@@ -887,33 +888,33 @@ namespace CSharpScript.Game.Module.PhantomArena
 			return true;
 		}
 
-		// Token: 0x06035125 RID: 217381 RVA: 0x00C93A8A File Offset: 0x00C91C8A
+		// Token: 0x0602A01E RID: 172062 RVA: 0x00BE0E9E File Offset: 0x00BDF09E
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06035126 RID: 217382 RVA: 0x00C93A8C File Offset: 0x00C91C8C
+		// Token: 0x0602A01F RID: 172063 RVA: 0x00BE0EA0 File Offset: 0x00BDF0A0
 		public static void ResetStaticDefaultValue()
 		{
 			PhantomArenaController._Instance = null;
 		}
 
-		// Token: 0x06035127 RID: 217383 RVA: 0x00C93A94 File Offset: 0x00C91C94
+		// Token: 0x0602A020 RID: 172064 RVA: 0x00BE0EA8 File Offset: 0x00BDF0A8
 		static PhantomArenaController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(PhantomArenaController.CreateStaticDefaultValue), new Action(PhantomArenaController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401C3B1 RID: 115633
+		// Token: 0x04016DE4 RID: 93668
 		private bool EventsRegistered;
 
-		// Token: 0x0401C3B2 RID: 115634
+		// Token: 0x04016DE5 RID: 93669
 		private bool NetRegistered;
 
-		// Token: 0x0401C3B3 RID: 115635
+		// Token: 0x04016DE6 RID: 93670
 		private int OpenEntranceViewActivityId;
 
-		// Token: 0x0401C3B4 RID: 115636
+		// Token: 0x04016DE7 RID: 93671
 		[Nullable(2)]
 		private static PhantomArenaController _Instance;
 	}

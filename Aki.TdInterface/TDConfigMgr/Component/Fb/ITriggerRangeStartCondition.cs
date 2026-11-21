@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B79 RID: 2937
+	// Token: 0x02000C47 RID: 3143
 	public class ITriggerRangeStartCondition : ISpawnMonsterStartCondition
 	{
-		// Token: 0x060043A7 RID: 17319 RVA: 0x000AC57F File Offset: 0x000AA77F
-		[NullableContext(1)]
+		// Token: 0x06004800 RID: 18432 RVA: 0x000B6643 File Offset: 0x000B4843
 		public static ITriggerRangeStartCondition Create(ITriggerRangeStartCondition? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001272 RID: 4722
-		// (get) Token: 0x060043A8 RID: 17320 RVA: 0x000AC59E File Offset: 0x000AA79E
+		// Token: 0x1700136D RID: 4973
+		// (get) Token: 0x06004801 RID: 18433 RVA: 0x000B6662 File Offset: 0x000B4862
 		public override ESpawnMonsterStartCondition Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001273 RID: 4723
-		// (get) Token: 0x060043A9 RID: 17321 RVA: 0x000AC5AB File Offset: 0x000AA7AB
+		// Token: 0x1700136E RID: 4974
+		// (get) Token: 0x06004802 RID: 18434 RVA: 0x000B666F File Offset: 0x000B486F
 		public virtual int Range
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400262A RID: 9770
+		// Token: 0x04002872 RID: 10354
 		private ITriggerRangeStartCondition Instance;
 	}
 }

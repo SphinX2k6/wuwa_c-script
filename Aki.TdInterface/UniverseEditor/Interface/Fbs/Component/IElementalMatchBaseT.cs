@@ -3,15 +3,15 @@ using Aki.UniverseEditor.Interface.Fbs.Common;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005133 RID: 20787
+	// Token: 0x02005698 RID: 22168
 	public class IElementalMatchBaseT
 	{
-		// Token: 0x17009789 RID: 38793
-		// (get) Token: 0x0602187C RID: 137340 RVA: 0x004A7D66 File Offset: 0x004A5F66
-		// (set) Token: 0x0602187D RID: 137341 RVA: 0x004A7D6E File Offset: 0x004A5F6E
+		// Token: 0x17009F76 RID: 40822
+		// (get) Token: 0x060237D0 RID: 145360 RVA: 0x004E1CF2 File Offset: 0x004DFEF2
+		// (set) Token: 0x060237D1 RID: 145361 RVA: 0x004E1CFA File Offset: 0x004DFEFA
 		public EElementalType Type { get; set; }
 
-		// Token: 0x0602187E RID: 137342 RVA: 0x004A7D77 File Offset: 0x004A5F77
+		// Token: 0x060237D2 RID: 145362 RVA: 0x004E1D03 File Offset: 0x004DFF03
 		public IElementalMatchBaseT()
 		{
 			this.Type = EElementalType.Fire;

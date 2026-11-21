@@ -13,10 +13,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Components
 {
-	// Token: 0x020062A4 RID: 25252
+	// Token: 0x02005222 RID: 21026
 	public class PrizeDrawingQuestItem : UiPanelBase
 	{
-		// Token: 0x0603F880 RID: 260224 RVA: 0x00F5CF50 File Offset: 0x00F5B150
+		// Token: 0x06034541 RID: 214337 RVA: 0x00EA3EAC File Offset: 0x00EA20AC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603F881 RID: 260225 RVA: 0x00F5D0BC File Offset: 0x00F5B2BC
+		// Token: 0x06034542 RID: 214338 RVA: 0x00EA4018 File Offset: 0x00EA2218
 		private void OnClickSkip()
 		{
 			UiManager.Instance.OpenView(EUiViewName.QuestView, this.CachedQuestId, null);
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			this.RefreshRedDot();
 		}
 
-		// Token: 0x0603F882 RID: 260226 RVA: 0x00F5D0F0 File Offset: 0x00F5B2F0
+		// Token: 0x06034543 RID: 214339 RVA: 0x00EA404C File Offset: 0x00EA224C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PrizeDrawingQuestItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F883 RID: 260227 RVA: 0x00F5D134 File Offset: 0x00F5B334
+		// Token: 0x06034544 RID: 214340 RVA: 0x00EA4090 File Offset: 0x00EA2290
 		public void RefreshFinishState(bool isFinished)
 		{
 			UUIItem item = base.GetItem(5);
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			item3.SetUIActive(isFinished);
 		}
 
-		// Token: 0x0603F884 RID: 260228 RVA: 0x00F5D199 File Offset: 0x00F5B399
+		// Token: 0x06034545 RID: 214341 RVA: 0x00EA40F5 File Offset: 0x00EA22F5
 		public void RefreshByQuestId(int questId, int currentProgress, int targetProgress)
 		{
 			this.CachedQuestId = questId;
@@ -101,14 +101,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			this.RefreshRedDot();
 		}
 
-		// Token: 0x0603F885 RID: 260229 RVA: 0x00F5D1C8 File Offset: 0x00F5B3C8
+		// Token: 0x06034546 RID: 214342 RVA: 0x00EA4124 File Offset: 0x00EA2324
 		private void RefreshQuestName(int questId)
 		{
 			IQuest questConfig = QuestNewModel.Instance.GetQuestConfig(questId);
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), questConfig.TidName, Array.Empty<object>());
 		}
 
-		// Token: 0x0603F886 RID: 260230 RVA: 0x00F5D200 File Offset: 0x00F5B400
+		// Token: 0x06034547 RID: 214343 RVA: 0x00EA415C File Offset: 0x00EA235C
 		private void RefreshSkipButton(int questId)
 		{
 			bool flag = QuestNewModel.Instance.CheckQuestFinished(questId);
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			item.SetUIActive(flag);
 		}
 
-		// Token: 0x0603F887 RID: 260231 RVA: 0x00F5D250 File Offset: 0x00F5B450
+		// Token: 0x06034548 RID: 214344 RVA: 0x00EA41AC File Offset: 0x00EA23AC
 		private void RefreshRewardPreview(int questId)
 		{
 			List<TItem> displayRewardCommonInfoFromQuestConfig = QuestNewModel.Instance.GetDisplayRewardCommonInfoFromQuestConfig(questId);
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			this.CachedPreviewRewardItemId = itemId;
 		}
 
-		// Token: 0x0603F888 RID: 260232 RVA: 0x00F5D2E6 File Offset: 0x00F5B4E6
+		// Token: 0x06034549 RID: 214345 RVA: 0x00EA4242 File Offset: 0x00EA2442
 		private void RefreshProgress(int currentProgress, int totalProgress)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), "Ichiban_Kuji_Progress_Task", new <>z__ReadOnlyArray<object>(new object[]
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			}));
 		}
 
-		// Token: 0x0603F889 RID: 260233 RVA: 0x00F5D31C File Offset: 0x00F5B51C
+		// Token: 0x0603454A RID: 214346 RVA: 0x00EA4278 File Offset: 0x00EA2478
 		private void RefreshRedDot()
 		{
 			bool flag = ActivityPrizeDrawingController.Instance.ActivityData.IsCurQuestReaded();
@@ -172,44 +172,44 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			item.SetUIActive(!flag);
 		}
 
-		// Token: 0x0603F88A RID: 260234 RVA: 0x00F5D34E File Offset: 0x00F5B54E
+		// Token: 0x0603454B RID: 214347 RVA: 0x00EA42AA File Offset: 0x00EA24AA
 		[NullableContext(1)]
 		private void OnClickReward(MediumItemGridExtendCallback callbackParameter)
 		{
 			if (this.CachedPreviewRewardItemId != -1)
 			{
-				ItemController.Instance.OpenItemTipsByItemId(this.CachedPreviewRewardItemId, true, null);
+				ItemController.Instance.OpenItemTipsByItemId(this.CachedPreviewRewardItemId, true, null, false);
 			}
 		}
 
-		// Token: 0x04021362 RID: 136034
+		// Token: 0x0401BC91 RID: 113809
 		private int CachedQuestId = -1;
 
-		// Token: 0x04021363 RID: 136035
+		// Token: 0x0401BC92 RID: 113810
 		private int CachedPreviewRewardItemId = -1;
 
-		// Token: 0x04021364 RID: 136036
+		// Token: 0x0401BC93 RID: 113811
 		[Nullable(2)]
 		private SmallItemGrid PreviewItemGrid;
 
-		// Token: 0x0200C484 RID: 50308
+		// Token: 0x0200AE6B RID: 44651
 		private enum EComp
 		{
-			// Token: 0x0403B4B2 RID: 242866
+			// Token: 0x04035E14 RID: 220692
 			TxtName,
-			// Token: 0x0403B4B3 RID: 242867
+			// Token: 0x04035E15 RID: 220693
 			TxtProgress,
-			// Token: 0x0403B4B4 RID: 242868
+			// Token: 0x04035E16 RID: 220694
 			ItemGrid,
-			// Token: 0x0403B4B5 RID: 242869
+			// Token: 0x04035E17 RID: 220695
 			BtnSkip,
-			// Token: 0x0403B4B6 RID: 242870
+			// Token: 0x04035E18 RID: 220696
 			PnlNormal,
-			// Token: 0x0403B4B7 RID: 242871
+			// Token: 0x04035E19 RID: 220697
 			PnlFinish,
-			// Token: 0x0403B4B8 RID: 242872
+			// Token: 0x04035E1A RID: 220698
 			PnlChecked,
-			// Token: 0x0403B4B9 RID: 242873
+			// Token: 0x04035E1B RID: 220699
 			RedDot
 		}
 	}

@@ -5,13 +5,13 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006A0 RID: 1696
+	// Token: 0x02000741 RID: 1857
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ISceneItemAiType
 	{
-		// Token: 0x06002456 RID: 9302 RVA: 0x00062824 File Offset: 0x00060A24
-		[NullableContext(1)]
+		// Token: 0x06002772 RID: 10098 RVA: 0x000697EC File Offset: 0x000679EC
+		[NullableContext(0)]
 		private ISceneItemAiType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +26,8 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002457 RID: 9303 RVA: 0x0006285C File Offset: 0x00060A5C
-		[NullableContext(1)]
+		// Token: 0x06002773 RID: 10099 RVA: 0x00069824 File Offset: 0x00067A24
+		[NullableContext(0)]
 		public static ISceneItemAiType Create([Nullable(2)] ISceneItemAiType instance)
 		{
 			if (instance == null)
@@ -40,8 +40,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002458 RID: 9304 RVA: 0x0006286F File Offset: 0x00060A6F
-		[NullableContext(1)]
+		// Token: 0x06002774 RID: 10100 RVA: 0x00069837 File Offset: 0x00067A37
+		[NullableContext(0)]
 		public static ISceneItemAiType CreateFromSetValue([Nullable(2)] ISceneItemAiType_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +54,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002459 RID: 9305 RVA: 0x00062882 File Offset: 0x00060A82
-		[NullableContext(1)]
+		// Token: 0x06002775 RID: 10101 RVA: 0x0006984A File Offset: 0x00067A4A
+		[NullableContext(0)]
 		public ISceneItemAiType_SetValue ToSetValue()
 		{
 			return new ISceneItemAiType_SetValue
@@ -67,9 +67,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700099A RID: 2458
-		// (get) Token: 0x0600245A RID: 9306 RVA: 0x000628B9 File Offset: 0x00060AB9
-		// (set) Token: 0x0600245B RID: 9307 RVA: 0x000628E4 File Offset: 0x00060AE4
+		// Token: 0x17000A56 RID: 2646
+		// (get) Token: 0x06002776 RID: 10102 RVA: 0x00069881 File Offset: 0x00067A81
+		// (set) Token: 0x06002777 RID: 10103 RVA: 0x000698AC File Offset: 0x00067AAC
 		public virtual ESceneItemAiType Type
 		{
 			get
@@ -90,9 +90,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700099B RID: 2459
-		// (get) Token: 0x0600245C RID: 9308 RVA: 0x000628F4 File Offset: 0x00060AF4
-		// (set) Token: 0x0600245D RID: 9309 RVA: 0x00062955 File Offset: 0x00060B55
+		// Token: 0x17000A57 RID: 2647
+		// (get) Token: 0x06002778 RID: 10104 RVA: 0x000698BC File Offset: 0x00067ABC
+		// (set) Token: 0x06002779 RID: 10105 RVA: 0x0006991D File Offset: 0x00067B1D
 		public virtual IConditionGroup EnableCondition
 		{
 			get
@@ -120,9 +120,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700099C RID: 2460
-		// (get) Token: 0x0600245E RID: 9310 RVA: 0x0006296C File Offset: 0x00060B6C
-		// (set) Token: 0x0600245F RID: 9311 RVA: 0x000629CD File Offset: 0x00060BCD
+		// Token: 0x17000A58 RID: 2648
+		// (get) Token: 0x0600277A RID: 10106 RVA: 0x00069934 File Offset: 0x00067B34
+		// (set) Token: 0x0600277B RID: 10107 RVA: 0x00069995 File Offset: 0x00067B95
 		public virtual IConditionGroup DisableCondition
 		{
 			get
@@ -150,9 +150,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700099D RID: 2461
-		// (get) Token: 0x06002460 RID: 9312 RVA: 0x000629E2 File Offset: 0x00060BE2
-		// (set) Token: 0x06002461 RID: 9313 RVA: 0x00062A0D File Offset: 0x00060C0D
+		// Token: 0x17000A59 RID: 2649
+		// (get) Token: 0x0600277C RID: 10108 RVA: 0x000699AA File Offset: 0x00067BAA
+		// (set) Token: 0x0600277D RID: 10109 RVA: 0x000699D5 File Offset: 0x00067BD5
 		public virtual bool HideWhenDisable
 		{
 			get
@@ -169,24 +169,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040018F2 RID: 6386
+		// Token: 0x04001AEF RID: 6895
 		protected ISceneItemAiType FbInstance;
 
-		// Token: 0x040018F3 RID: 6387
+		// Token: 0x04001AF0 RID: 6896
 		protected ISceneItemAiType_SetValue PocoInterface;
 
-		// Token: 0x040018F4 RID: 6388
-		[Nullable(1)]
+		// Token: 0x04001AF1 RID: 6897
+		[Nullable(0)]
 		private IConditionGroup _EnableConditionCache;
 
-		// Token: 0x040018F5 RID: 6389
+		// Token: 0x04001AF2 RID: 6898
 		private bool _EnableConditionInited;
 
-		// Token: 0x040018F6 RID: 6390
-		[Nullable(1)]
+		// Token: 0x04001AF3 RID: 6899
+		[Nullable(0)]
 		private IConditionGroup _DisableConditionCache;
 
-		// Token: 0x040018F7 RID: 6391
+		// Token: 0x04001AF4 RID: 6900
 		private bool _DisableConditionInited;
 	}
 }

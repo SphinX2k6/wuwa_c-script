@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F54 RID: 3924
+	// Token: 0x0200107E RID: 4222
 	public class IEnterDungeon_SetValue
 	{
-		// Token: 0x040034CA RID: 13514
+		// Token: 0x040037FB RID: 14331
 		public EDungeonConditionType Type;
 	}
 }

@@ -5,10 +5,10 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.RoleMorph.Handle
 {
-	// Token: 0x02004D6D RID: 19821
+	// Token: 0x02003D36 RID: 15670
 	public class RoleMorphLiuLiDaoLingHandle : RoleMorphHandleBase
 	{
-		// Token: 0x060333C7 RID: 209863 RVA: 0x00BF3121 File Offset: 0x00BF1321
+		// Token: 0x06028235 RID: 164405 RVA: 0x00B3C345 File Offset: 0x00B3A545
 		public override void BeginMorph()
 		{
 			BattleUiChildViewData childViewData = BattleUiModel.Instance.ChildViewData;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.RoleMorph.Handle
 			}, false, true, 0);
 		}
 
-		// Token: 0x060333C8 RID: 209864 RVA: 0x00BF3158 File Offset: 0x00BF1358
+		// Token: 0x06028236 RID: 164406 RVA: 0x00B3C37C File Offset: 0x00B3A57C
 		public override void EndMorph()
 		{
 			if (UiManager.Instance.IsViewOpen(EUiViewName.LiuLiDaoLingView))

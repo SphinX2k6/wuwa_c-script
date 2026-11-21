@@ -8,7 +8,7 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000095 RID: 149
+	// Token: 0x0200007A RID: 122
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealBlittableStruct(UnrealReflectionPropertyTypeCode.Subclass)]
@@ -16,25 +16,25 @@ namespace UnrealEngine
 	[StructLayout(LayoutKind.Sequential, Pack = 8)]
 	public readonly struct TSubclassOf<[Nullable(0)] T> : IEquatable<TSubclassOf<T>>, IEqualityOperators<TSubclassOf<T>, TSubclassOf<T>, bool> where T : IUnrealUObject
 	{
-		// Token: 0x06001021 RID: 4129 RVA: 0x0001851F File Offset: 0x0001671F
+		// Token: 0x06000BB4 RID: 2996 RVA: 0x00013243 File Offset: 0x00011443
 		public TSubclassOf(IntPtr From)
 		{
 			this._NativePtr = From;
 		}
 
-		// Token: 0x06001022 RID: 4130 RVA: 0x00018528 File Offset: 0x00016728
+		// Token: 0x06000BB5 RID: 2997 RVA: 0x0001324C File Offset: 0x0001144C
 		public TSubclassOf(UClassStackOnlyPtr From)
 		{
 			this._NativePtr = From.NativePtr;
 		}
 
-		// Token: 0x06001023 RID: 4131 RVA: 0x00018537 File Offset: 0x00016737
+		// Token: 0x06000BB6 RID: 2998 RVA: 0x0001325B File Offset: 0x0001145B
 		public TSubclassOf(UClass From)
 		{
 			this._NativePtr = ((From != null) ? From._NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06001024 RID: 4132 RVA: 0x0001854F File Offset: 0x0001674F
+		// Token: 0x06000BB7 RID: 2999 RVA: 0x00013273 File Offset: 0x00011473
 		[NullableContext(0)]
 		[return: Nullable(new byte[]
 		{
@@ -46,19 +46,19 @@ namespace UnrealEngine
 			return new TSubclassOf<TResult>(this._NativePtr);
 		}
 
-		// Token: 0x06001025 RID: 4133 RVA: 0x0001855C File Offset: 0x0001675C
+		// Token: 0x06000BB8 RID: 3000 RVA: 0x00013280 File Offset: 0x00011480
 		public UClassStackOnlyPtr Get()
 		{
 			return UClass.IsChildOf(this._NativePtr, IUnrealUObject.StaticClass()) ? this._NativePtr : IntPtr.Zero;
 		}
 
-		// Token: 0x06001026 RID: 4134 RVA: 0x00018590 File Offset: 0x00016790
+		// Token: 0x06000BB9 RID: 3001 RVA: 0x000132B4 File Offset: 0x000114B4
 		public bool IsValid()
 		{
 			return this.Get().IsValid();
 		}
 
-		// Token: 0x06001027 RID: 4135 RVA: 0x000185AB File Offset: 0x000167AB
+		// Token: 0x06000BBA RID: 3002 RVA: 0x000132CF File Offset: 0x000114CF
 		public bool Equals([Nullable(new byte[]
 		{
 			0,
@@ -68,7 +68,7 @@ namespace UnrealEngine
 			return this == Other;
 		}
 
-		// Token: 0x06001028 RID: 4136 RVA: 0x000185BC File Offset: 0x000167BC
+		// Token: 0x06000BBB RID: 3003 RVA: 0x000132E0 File Offset: 0x000114E0
 		public override bool Equals(object Obj)
 		{
 			if (Obj is TSubclassOf<T>)
@@ -79,13 +79,13 @@ namespace UnrealEngine
 			return false;
 		}
 
-		// Token: 0x06001029 RID: 4137 RVA: 0x000185E6 File Offset: 0x000167E6
+		// Token: 0x06000BBC RID: 3004 RVA: 0x0001330A File Offset: 0x0001150A
 		public override int GetHashCode()
 		{
 			return this._NativePtr.GetHashCode();
 		}
 
-		// Token: 0x0600102A RID: 4138 RVA: 0x000185F3 File Offset: 0x000167F3
+		// Token: 0x06000BBD RID: 3005 RVA: 0x00013317 File Offset: 0x00011517
 		public static bool operator ==([Nullable(new byte[]
 		{
 			0,
@@ -99,7 +99,7 @@ namespace UnrealEngine
 			return A._NativePtr == B._NativePtr;
 		}
 
-		// Token: 0x0600102B RID: 4139 RVA: 0x00018603 File Offset: 0x00016803
+		// Token: 0x06000BBE RID: 3006 RVA: 0x00013327 File Offset: 0x00011527
 		public static bool operator !=([Nullable(new byte[]
 		{
 			0,
@@ -113,7 +113,7 @@ namespace UnrealEngine
 			return !(A == B);
 		}
 
-		// Token: 0x0600102C RID: 4140 RVA: 0x0001860F File Offset: 0x0001680F
+		// Token: 0x06000BBF RID: 3007 RVA: 0x00013333 File Offset: 0x00011533
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -124,7 +124,7 @@ namespace UnrealEngine
 			return new TSubclassOf<T>(ClassPtr);
 		}
 
-		// Token: 0x0600102D RID: 4141 RVA: 0x00018617 File Offset: 0x00016817
+		// Token: 0x06000BC0 RID: 3008 RVA: 0x0001333B File Offset: 0x0001153B
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -135,7 +135,7 @@ namespace UnrealEngine
 			return new TSubclassOf<T>(ClassPtr);
 		}
 
-		// Token: 0x0600102E RID: 4142 RVA: 0x0001861F File Offset: 0x0001681F
+		// Token: 0x06000BC1 RID: 3009 RVA: 0x00013343 File Offset: 0x00011543
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -146,7 +146,7 @@ namespace UnrealEngine
 			return new TSubclassOf<T>(ClassPtr);
 		}
 
-		// Token: 0x0600102F RID: 4143 RVA: 0x00018627 File Offset: 0x00016827
+		// Token: 0x06000BC2 RID: 3010 RVA: 0x0001334B File Offset: 0x0001154B
 		public static implicit operator UClassStackOnlyPtr([Nullable(new byte[]
 		{
 			0,
@@ -156,45 +156,45 @@ namespace UnrealEngine
 			return Class.Get();
 		}
 
-		// Token: 0x06001030 RID: 4144 RVA: 0x00018630 File Offset: 0x00016830
+		// Token: 0x06000BC3 RID: 3011 RVA: 0x00013354 File Offset: 0x00011554
 		public bool IsChildOf(UClassStackOnlyPtr B)
 		{
 			return UClass.IsChildOf(this, B);
 		}
 
-		// Token: 0x06001031 RID: 4145 RVA: 0x00018643 File Offset: 0x00016843
+		// Token: 0x06000BC4 RID: 3012 RVA: 0x00013367 File Offset: 0x00011567
 		public bool IsA(UClassStackOnlyPtr B)
 		{
 			return UClass.IsA(this, B);
 		}
 
-		// Token: 0x06001032 RID: 4146 RVA: 0x00018656 File Offset: 0x00016856
+		// Token: 0x06000BC5 RID: 3013 RVA: 0x0001337A File Offset: 0x0001157A
 		public FName GetFName()
 		{
 			return UClass.GetFName(this);
 		}
 
-		// Token: 0x06001033 RID: 4147 RVA: 0x00018668 File Offset: 0x00016868
+		// Token: 0x06000BC6 RID: 3014 RVA: 0x0001338C File Offset: 0x0001158C
 		[NullableContext(1)]
 		public string GetName()
 		{
 			return UClass.GetName(this);
 		}
 
-		// Token: 0x06001034 RID: 4148 RVA: 0x0001867A File Offset: 0x0001687A
+		// Token: 0x06000BC7 RID: 3015 RVA: 0x0001339E File Offset: 0x0001159E
 		[NullableContext(1)]
 		public string GetPathName()
 		{
 			return UClass.GetPathName(this);
 		}
 
-		// Token: 0x06001035 RID: 4149 RVA: 0x0001868C File Offset: 0x0001688C
+		// Token: 0x06000BC8 RID: 3016 RVA: 0x000133B0 File Offset: 0x000115B0
 		public UClass ToUClass()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UClass>(this._NativePtr);
 		}
 
-		// Token: 0x040001FB RID: 507
+		// Token: 0x040001B4 RID: 436
 		public readonly IntPtr _NativePtr;
 	}
 }

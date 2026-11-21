@@ -5,10 +5,10 @@ using CSharpScript.Game.Module.Personal;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020022EB RID: 8939
+// Token: 0x020017CF RID: 6095
 public class OnlineChallengePlayerStateItem : GridProxyAbstract<int>
 {
-	// Token: 0x060119D0 RID: 72144 RVA: 0x0045194C File Offset: 0x0044FB4C
+	// Token: 0x0600EE68 RID: 61032 RVA: 0x0045E618 File Offset: 0x0045C818
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -26,7 +26,7 @@ public class OnlineChallengePlayerStateItem : GridProxyAbstract<int>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060119D1 RID: 72145 RVA: 0x004519F8 File Offset: 0x0044FBF8
+	// Token: 0x0600EE69 RID: 61033 RVA: 0x0045E6C4 File Offset: 0x0045C8C4
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		this.PlayerId = data;
@@ -51,7 +51,7 @@ public class OnlineChallengePlayerStateItem : GridProxyAbstract<int>
 		this.SetTeamPlayerSprite(this.PlayerId, continuingChallengeConfirmState.Value);
 	}
 
-	// Token: 0x060119D2 RID: 72146 RVA: 0x00451ABC File Offset: 0x0044FCBC
+	// Token: 0x0600EE6A RID: 61034 RVA: 0x0045E788 File Offset: 0x0045C988
 	public void SetTeamPlayerSprite(int playerId, EContinuingChallenge state)
 	{
 		if (this.PlayerId != playerId)
@@ -110,19 +110,19 @@ public class OnlineChallengePlayerStateItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x040085B4 RID: 34228
+	// Token: 0x040086F2 RID: 34546
 	private int PlayerId = -1;
 
-	// Token: 0x02008861 RID: 34913
+	// Token: 0x020079E5 RID: 31205
 	private enum EOnlineChallengePlayerStateItem
 	{
-		// Token: 0x0402C507 RID: 181511
+		// Token: 0x04027809 RID: 161801
 		PlayHeadTexture,
-		// Token: 0x0402C508 RID: 181512
+		// Token: 0x0402780A RID: 161802
 		PlayerNameText,
-		// Token: 0x0402C509 RID: 181513
+		// Token: 0x0402780B RID: 161803
 		AcceptItem,
-		// Token: 0x0402C50A RID: 181514
+		// Token: 0x0402780C RID: 161804
 		PendingItem
 	}
 }

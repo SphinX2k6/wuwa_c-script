@@ -4,30 +4,30 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CFD RID: 23805
+	// Token: 0x02004CDF RID: 19679
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class Code54 : CodeNBase
 	{
-		// Token: 0x0603C4B9 RID: 246969 RVA: 0x00E70538 File Offset: 0x00E6E738
+		// Token: 0x06031412 RID: 201746 RVA: 0x00DC0BA0 File Offset: 0x00DBEDA0
 		public override Dictionary<string, int[]> GetCodeTable()
 		{
 			return Code54.CodeTable;
 		}
 
-		// Token: 0x0603C4BA RID: 246970 RVA: 0x00E7053F File Offset: 0x00E6E73F
+		// Token: 0x06031413 RID: 201747 RVA: 0x00DC0BA7 File Offset: 0x00DBEDA7
 		public override int SingleCodeLength()
 		{
 			return 5;
 		}
 
-		// Token: 0x0603C4BB RID: 246971 RVA: 0x00E70542 File Offset: 0x00E6E742
+		// Token: 0x06031414 RID: 201748 RVA: 0x00DC0BAA File Offset: 0x00DBEDAA
 		public override int SupportCharCount()
 		{
 			return 52;
 		}
 
-		// Token: 0x0603C4BD RID: 246973 RVA: 0x00E70550 File Offset: 0x00E6E750
+		// Token: 0x06031416 RID: 201750 RVA: 0x00DC0BB8 File Offset: 0x00DBEDB8
 		// Note: this type is marked as 'beforefieldinit'.
 		static Code54()
 		{
@@ -401,7 +401,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			Code54.CodeTable = dictionary;
 		}
 
-		// Token: 0x0401F698 RID: 128664
+		// Token: 0x0401A151 RID: 106833
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<string, int[]> CodeTable;
 	}

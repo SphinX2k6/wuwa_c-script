@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 {
-	// Token: 0x02005030 RID: 20528
+	// Token: 0x02003FFB RID: 16379
 	public class FlowAssistant : SeqBaseAssistant
 	{
-		// Token: 0x060348A1 RID: 215201 RVA: 0x00C64704 File Offset: 0x00C62904
+		// Token: 0x0602974E RID: 169806 RVA: 0x00BB0140 File Offset: 0x00BAE340
 		[NullableContext(2)]
 		public override void PreAllPlay(Action<bool> callback = null)
 		{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			this.Model.NextIndex = 0;
 		}
 
-		// Token: 0x060348A2 RID: 215202 RVA: 0x00C6475C File Offset: 0x00C6295C
+		// Token: 0x0602974F RID: 169807 RVA: 0x00BB0198 File Offset: 0x00BAE398
 		public override void PreEachPlay()
 		{
 			this.Model.NextIndex++;
@@ -28,14 +28,14 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			}
 		}
 
-		// Token: 0x060348A3 RID: 215203 RVA: 0x00C647B2 File Offset: 0x00C629B2
+		// Token: 0x06029750 RID: 169808 RVA: 0x00BB01EE File Offset: 0x00BAE3EE
 		public override void EachStop()
 		{
 			this.Model.LastIndex = this.Model.SubSeqIndex;
 			this.Model.SubSeqIndex = this.Model.NextIndex;
 		}
 
-		// Token: 0x060348A4 RID: 215204 RVA: 0x00C647E0 File Offset: 0x00C629E0
+		// Token: 0x06029751 RID: 169809 RVA: 0x00BB021C File Offset: 0x00BAE41C
 		public void SetNextSequenceIndex(int index)
 		{
 			this.Model.NextIndex = index;

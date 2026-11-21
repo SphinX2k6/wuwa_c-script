@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DA7 RID: 3495
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000EA3 RID: 3747
 	public class IAnsEvent : ISceneItemSeqEventCbType
 	{
-		// Token: 0x06004F6B RID: 20331 RVA: 0x000C4BAA File Offset: 0x000C2DAA
+		// Token: 0x06005490 RID: 21648 RVA: 0x000D03FA File Offset: 0x000CE5FA
 		public static IAnsEvent Create(IAnsEvent? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170019DA RID: 6618
-		// (get) Token: 0x06004F6C RID: 20332 RVA: 0x000C4BC9 File Offset: 0x000C2DC9
+		// Token: 0x17001B45 RID: 6981
+		// (get) Token: 0x06005491 RID: 21649 RVA: 0x000D0419 File Offset: 0x000CE619
 		public override ESceneItemSeqEventCbType Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170019DB RID: 6619
-		// (get) Token: 0x06004F6D RID: 20333 RVA: 0x000C4BD6 File Offset: 0x000C2DD6
+		// Token: 0x17001B46 RID: 6982
+		// (get) Token: 0x06005492 RID: 21650 RVA: 0x000D0426 File Offset: 0x000CE626
 		public override string EventName
 		{
 			get
@@ -43,8 +41,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170019DC RID: 6620
-		// (get) Token: 0x06004F6E RID: 20334 RVA: 0x000C4BE3 File Offset: 0x000C2DE3
+		// Token: 0x17001B47 RID: 6983
+		// (get) Token: 0x06005493 RID: 21651 RVA: 0x000D0433 File Offset: 0x000CE633
 		public override ActionInfo Action
 		{
 			get
@@ -59,8 +57,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170019DD RID: 6621
-		// (get) Token: 0x06004F6F RID: 20335 RVA: 0x000C4C17 File Offset: 0x000C2E17
+		// Token: 0x17001B48 RID: 6984
+		// (get) Token: 0x06005494 RID: 21652 RVA: 0x000D0467 File Offset: 0x000CE667
 		public virtual float Duration
 		{
 			get
@@ -69,14 +67,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002D92 RID: 11666
+		// Token: 0x04003058 RID: 12376
 		private IAnsEvent Instance;
 
-		// Token: 0x04002D93 RID: 11667
+		// Token: 0x04003059 RID: 12377
 		[Nullable(2)]
 		private ActionInfo _ActionCache;
 
-		// Token: 0x04002D94 RID: 11668
+		// Token: 0x0400305A RID: 12378
 		private bool _ActionInited;
 	}
 }

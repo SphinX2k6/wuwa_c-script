@@ -5,11 +5,9 @@ using Aki.TDConfigMgr.Component.Fb;
 namespace Aki.TDConfigMgr.Component
 {
 	// Token: 0x0200004A RID: 74
-	[NullableContext(1)]
-	[Nullable(0)]
 	public class ConnectorComponent : IComponentBase
 	{
-		// Token: 0x06000270 RID: 624 RVA: 0x00019784 File Offset: 0x00017984
+		// Token: 0x06000274 RID: 628 RVA: 0x0001A0F8 File Offset: 0x000182F8
 		private ConnectorComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000271 RID: 625 RVA: 0x000197BC File Offset: 0x000179BC
+		// Token: 0x06000275 RID: 629 RVA: 0x0001A130 File Offset: 0x00018330
 		public static ConnectorComponent Create([Nullable(2)] ConnectorComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000272 RID: 626 RVA: 0x000197CF File Offset: 0x000179CF
+		// Token: 0x06000276 RID: 630 RVA: 0x0001A143 File Offset: 0x00018343
 		public static ConnectorComponent CreateFromSetValue([Nullable(2)] ConnectorComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000273 RID: 627 RVA: 0x000197E2 File Offset: 0x000179E2
+		// Token: 0x06000277 RID: 631 RVA: 0x0001A156 File Offset: 0x00018356
 		public new ConnectorComponent_SetValue ToSetValue()
 		{
 			return new ConnectorComponent_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170000DB RID: 219
-		// (get) Token: 0x06000274 RID: 628 RVA: 0x00019810 File Offset: 0x00017A10
-		// (set) Token: 0x06000275 RID: 629 RVA: 0x0001984A File Offset: 0x00017A4A
+		// Token: 0x170000DD RID: 221
+		// (get) Token: 0x06000278 RID: 632 RVA: 0x0001A184 File Offset: 0x00018384
+		// (set) Token: 0x06000279 RID: 633 RVA: 0x0001A1BE File Offset: 0x000183BE
 		public override bool? Disabled
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000DC RID: 220
-		// (get) Token: 0x06000276 RID: 630 RVA: 0x00019858 File Offset: 0x00017A58
-		// (set) Token: 0x06000277 RID: 631 RVA: 0x00019882 File Offset: 0x00017A82
+		// Token: 0x170000DE RID: 222
+		// (get) Token: 0x0600027A RID: 634 RVA: 0x0001A1CC File Offset: 0x000183CC
+		// (set) Token: 0x0600027B RID: 635 RVA: 0x0001A1F6 File Offset: 0x000183F6
 		public override bool? EdIsLocked
 		{
 			get
@@ -104,9 +102,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000DD RID: 221
-		// (get) Token: 0x06000278 RID: 632 RVA: 0x00019890 File Offset: 0x00017A90
-		// (set) Token: 0x06000279 RID: 633 RVA: 0x000198B7 File Offset: 0x00017AB7
+		// Token: 0x170000DF RID: 223
+		// (get) Token: 0x0600027C RID: 636 RVA: 0x0001A204 File Offset: 0x00018404
+		// (set) Token: 0x0600027D RID: 637 RVA: 0x0001A22B File Offset: 0x0001842B
 		public virtual IConnectorLogicType LogicType
 		{
 			get
@@ -128,11 +126,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000188 RID: 392
+		// Token: 0x0400018D RID: 397
 		[Nullable(2)]
 		protected new ConnectorComponent FbInstance;
 
-		// Token: 0x04000189 RID: 393
+		// Token: 0x0400018E RID: 398
 		[Nullable(2)]
 		protected new ConnectorComponent_SetValue PocoInterface;
 	}

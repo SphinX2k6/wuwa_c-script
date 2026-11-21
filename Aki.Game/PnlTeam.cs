@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.HonamiStory;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001ECB RID: 7883
+// Token: 0x0200138D RID: 5005
 public class PnlTeam : UiPanelBase
 {
-	// Token: 0x0600F26B RID: 62059 RVA: 0x003A6D2C File Offset: 0x003A4F2C
+	// Token: 0x0600C68A RID: 50826 RVA: 0x003B282C File Offset: 0x003B0A2C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -38,14 +38,14 @@ public class PnlTeam : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600F26C RID: 62060 RVA: 0x003A6E56 File Offset: 0x003A5056
+	// Token: 0x0600C68B RID: 50827 RVA: 0x003B2956 File Offset: 0x003B0B56
 	protected override void OnStart()
 	{
 		this.InitBoxList();
 		this.RefreshView();
 	}
 
-	// Token: 0x0600F26D RID: 62061 RVA: 0x003A6E64 File Offset: 0x003A5064
+	// Token: 0x0600C68C RID: 50828 RVA: 0x003B2964 File Offset: 0x003B0B64
 	private void InitBoxList()
 	{
 		UUIItem item = base.GetItem(3);
@@ -67,7 +67,7 @@ public class PnlTeam : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600F26E RID: 62062 RVA: 0x003A6EC8 File Offset: 0x003A50C8
+	// Token: 0x0600C68D RID: 50829 RVA: 0x003B29C8 File Offset: 0x003B0BC8
 	public void RefreshView()
 	{
 		int powerLevel = HonamiStoryModel.Instance.GetPlayerData().PowerLevel;
@@ -93,13 +93,13 @@ public class PnlTeam : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600F26F RID: 62063 RVA: 0x003A6F72 File Offset: 0x003A5172
+	// Token: 0x0600C68E RID: 50830 RVA: 0x003B2A72 File Offset: 0x003B0C72
 	private void OnTeamBtnClick()
 	{
 		HonamiStoryController.Instance.OpenHonamiStoryBag();
 	}
 
-	// Token: 0x0400704D RID: 28749
+	// Token: 0x0400712E RID: 28974
 	[Nullable(1)]
 	private readonly List<PnlHeadBox> HeadBoxItemList = new List<PnlHeadBox>();
 }

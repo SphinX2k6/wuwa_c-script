@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005FB3 RID: 24499
+	// Token: 0x02006605 RID: 26117
 	public enum EMoveMotion : byte
 	{
-		// Token: 0x0400FED1 RID: 65233
+		// Token: 0x04010C89 RID: 68745
 		UniformMotion,
-		// Token: 0x0400FED2 RID: 65234
+		// Token: 0x04010C8A RID: 68746
 		VariableMotion
 	}
 }

@@ -16,18 +16,18 @@ using CSharpScript.Game.NewWorld.Common.Component;
 using CSharpScript.Game.Render;
 using UnrealEngine;
 
-// Token: 0x02003130 RID: 12592
+// Token: 0x0200268C RID: 9868
 [NullableContext(2)]
 [Nullable(0)]
 public class ScanComponent : EntityComponent, IStaticVariableResetter
 {
-	// Token: 0x0601B0EE RID: 110830 RVA: 0x00758D15 File Offset: 0x00756F15
+	// Token: 0x06018B53 RID: 101203 RVA: 0x0077F1C5 File Offset: 0x0077D3C5
 	static ScanComponent()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ScanComponent.CreateStaticDefaultValue), new Action(ScanComponent.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601B0EF RID: 110831 RVA: 0x00758D34 File Offset: 0x00756F34
+	// Token: 0x06018B54 RID: 101204 RVA: 0x0077F1E4 File Offset: 0x0077D3E4
 	private void InitBaseInfo()
 	{
 		if (ScanComponent.ScanMaxDistanceSquaredCm == -1f)
@@ -47,7 +47,7 @@ public class ScanComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601B0F0 RID: 110832 RVA: 0x00758DB4 File Offset: 0x00756FB4
+	// Token: 0x06018B55 RID: 101205 RVA: 0x0077F264 File Offset: 0x0077D464
 	protected override bool OnStart()
 	{
 		this.InitBaseInfo();
@@ -111,7 +111,7 @@ public class ScanComponent : EntityComponent, IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x0601B0F1 RID: 110833 RVA: 0x00759014 File Offset: 0x00757214
+	// Token: 0x06018B56 RID: 101206 RVA: 0x0077F4C4 File Offset: 0x0077D6C4
 	protected override bool OnEnd()
 	{
 		foreach (KeyValuePair<string, TimerManageContainer> keyValuePair in this.TimerManageContainersMap)
@@ -140,7 +140,7 @@ public class ScanComponent : EntityComponent, IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x0601B0F2 RID: 110834 RVA: 0x0075910C File Offset: 0x0075730C
+	// Token: 0x06018B57 RID: 101207 RVA: 0x0077F5BC File Offset: 0x0077D7BC
 	protected override void OnTick(float delta)
 	{
 		if (this.CreatureData.IsConcealed && !this.IsShow && this.CanActive)
@@ -175,7 +175,7 @@ public class ScanComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601B0F3 RID: 110835 RVA: 0x007591CB File Offset: 0x007573CB
+	// Token: 0x06018B58 RID: 101208 RVA: 0x0077F67B File Offset: 0x0077D87B
 	private void OnLeaveLogicRange()
 	{
 		if (!this.IsOutOfDetectRange)
@@ -185,7 +185,7 @@ public class ScanComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601B0F4 RID: 110836 RVA: 0x007591E4 File Offset: 0x007573E4
+	// Token: 0x06018B59 RID: 101209 RVA: 0x0077F694 File Offset: 0x0077D894
 	private float? DetectPlayerDistanceSquared()
 	{
 		if (this.ActorComponent == null)
@@ -206,7 +206,7 @@ public class ScanComponent : EntityComponent, IStaticVariableResetter
 		return new float?((float)global::Vector.DistSquared(actorLocationProxy, actorLocationProxy2));
 	}
 
-	// Token: 0x0601B0F5 RID: 110837 RVA: 0x0075924C File Offset: 0x0075744C
+	// Token: 0x06018B5A RID: 101210 RVA: 0x0077F6FC File Offset: 0x0077D8FC
 	private void ChangeVoicePrintEffect()
 	{
 		if (!this.CreatureData.IsConcealed)
@@ -245,13 +245,13 @@ public class ScanComponent : EntityComponent, IStaticVariableResetter
 		sureEffectActor.RootComponent.K2_SetWorldRotation(global::Rotator.ZeroRotator, false, ref WorldGlobal.SweepHitResult, false);
 	}
 
-	// Token: 0x0601B0F6 RID: 110838 RVA: 0x007593AF File Offset: 0x007575AF
+	// Token: 0x06018B5B RID: 101211 RVA: 0x0077F85F File Offset: 0x0077DA5F
 	public IScanCompositeResult GetScanComposite()
 	{
 		return this.ScanComposite;
 	}
 
-	// Token: 0x0601B0F7 RID: 110839 RVA: 0x007593B8 File Offset: 0x007575B8
+	// Token: 0x06018B5C RID: 101212 RVA: 0x0077F868 File Offset: 0x0077DA68
 	public unsafe void StartProcess(int scanType)
 	{
 		if (!this.CanActive)
@@ -377,7 +377,7 @@ public class ScanComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601B0F8 RID: 110840 RVA: 0x0075970C File Offset: 0x0075790C
+	// Token: 0x06018B5D RID: 101213 RVA: 0x0077FBBC File Offset: 0x0077DDBC
 	private void CancelEntityConcealState()
 	{
 		if (this.CreatureData.IsConcealed)
@@ -412,7 +412,7 @@ public class ScanComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601B0F9 RID: 110841 RVA: 0x00759868 File Offset: 0x00757A68
+	// Token: 0x06018B5E RID: 101214 RVA: 0x0077FD18 File Offset: 0x0077DF18
 	[NullableContext(1)]
 	private bool SetActorDataRecursively(AActor actor, bool isFirst = false)
 	{
@@ -556,7 +556,7 @@ public class ScanComponent : EntityComponent, IStaticVariableResetter
 		return flag;
 	}
 
-	// Token: 0x0601B0FA RID: 110842 RVA: 0x00759B10 File Offset: 0x00757D10
+	// Token: 0x06018B5F RID: 101215 RVA: 0x0077FFC0 File Offset: 0x0077E1C0
 	private unsafe void ShowInteractionEffect()
 	{
 		Entity entity = base.Entity;
@@ -657,7 +657,7 @@ public class ScanComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601B0FB RID: 110843 RVA: 0x00759C1C File Offset: 0x00757E1C
+	// Token: 0x06018B60 RID: 101216 RVA: 0x007800CC File Offset: 0x0077E2CC
 	private unsafe void IconProcess()
 	{
 		using (List<GamePlayScan>.Enumerator enumerator = this.ScanComposite.ScanInfos.GetEnumerator())
@@ -698,7 +698,7 @@ public class ScanComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601B0FC RID: 110844 RVA: 0x00759D4C File Offset: 0x00757F4C
+	// Token: 0x06018B61 RID: 101217 RVA: 0x007801FC File Offset: 0x0077E3FC
 	private void PostScanAudioEvent()
 	{
 		string text = (this.ScanCompositeConfig != null) ? this.ScanCompositeConfig.GetValueOrDefault().ScanAudioEvent : null;
@@ -710,7 +710,7 @@ public class ScanComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601B0FD RID: 110845 RVA: 0x00759DB0 File Offset: 0x00757FB0
+	// Token: 0x06018B62 RID: 101218 RVA: 0x00780260 File Offset: 0x0077E460
 	private unsafe void EffectProcess()
 	{
 		if (this.ActorComponent == null)
@@ -786,7 +786,7 @@ public class ScanComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601B0FE RID: 110846 RVA: 0x0075A018 File Offset: 0x00758218
+	// Token: 0x06018B63 RID: 101219 RVA: 0x007804C8 File Offset: 0x0077E6C8
 	private unsafe void TrackEffectProcess()
 	{
 		ScanComponent.<>c__DisplayClass41_0 CS$<>8__locals1 = new ScanComponent.<>c__DisplayClass41_0();
@@ -911,7 +911,7 @@ public class ScanComponent : EntityComponent, IStaticVariableResetter
 		this.TimerManageContainersMap[CS$<>8__locals1.key] = timerManageContainer;
 	}
 
-	// Token: 0x0601B0FF RID: 110847 RVA: 0x0075A318 File Offset: 0x00758518
+	// Token: 0x06018B64 RID: 101220 RVA: 0x007807C8 File Offset: 0x0077E9C8
 	[NullableContext(1)]
 	private UMeshComponent GetMesh()
 	{
@@ -925,7 +925,7 @@ public class ScanComponent : EntityComponent, IStaticVariableResetter
 		return ((aactor != null) ? aactor.GetComponentByClass(USkeletalMeshComponent.StaticClass()) : null) as USkeletalMeshComponent;
 	}
 
-	// Token: 0x0601B100 RID: 110848 RVA: 0x0075A37C File Offset: 0x0075857C
+	// Token: 0x06018B65 RID: 101221 RVA: 0x0078082C File Offset: 0x0077EA2C
 	[NullableContext(1)]
 	private void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle handle)
 	{
@@ -950,7 +950,7 @@ public class ScanComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601B101 RID: 110849 RVA: 0x0075A448 File Offset: 0x00758648
+	// Token: 0x06018B66 RID: 101222 RVA: 0x007808F8 File Offset: 0x0077EAF8
 	private void AddActiveGroupEntity()
 	{
 		if (this.ActiveGroupEntity != null)
@@ -973,7 +973,7 @@ public class ScanComponent : EntityComponent, IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601B102 RID: 110850 RVA: 0x0075A4DC File Offset: 0x007586DC
+	// Token: 0x06018B67 RID: 101223 RVA: 0x0078098C File Offset: 0x0077EB8C
 	private unsafe void GroupEntityListenProcess()
 	{
 		if (!EventSystem.Instance.Has(EEventName.RemoveEntity, new Action<ERemoveEntityType, EntityHandle>(this.OnRemoveEntity)))
@@ -1008,7 +1008,7 @@ public class ScanComponent : EntityComponent, IStaticVariableResetter
 		this.TimerManageContainersMap[key] = timerManageContainer;
 	}
 
-	// Token: 0x0601B103 RID: 110851 RVA: 0x0075A5C3 File Offset: 0x007587C3
+	// Token: 0x06018B68 RID: 101224 RVA: 0x00780A73 File Offset: 0x0077EC73
 	public static void CreateStaticDefaultValue()
 	{
 		ScanComponent.EnableLog = false;
@@ -1017,7 +1017,7 @@ public class ScanComponent : EntityComponent, IStaticVariableResetter
 		ScanComponent.ScanDetectConcealedDistanceSquaredCm = -1f;
 	}
 
-	// Token: 0x0601B104 RID: 110852 RVA: 0x0075A5E9 File Offset: 0x007587E9
+	// Token: 0x06018B69 RID: 101225 RVA: 0x00780A99 File Offset: 0x0077EC99
 	public static void ResetStaticDefaultValue()
 	{
 		ScanComponent.EnableLog = false;
@@ -1026,7 +1026,7 @@ public class ScanComponent : EntityComponent, IStaticVariableResetter
 		ScanComponent.ScanDetectConcealedDistanceSquaredCm = 0f;
 	}
 
-	// Token: 0x0601B105 RID: 110853 RVA: 0x0075A610 File Offset: 0x00758810
+	// Token: 0x06018B6A RID: 101226 RVA: 0x00780AC0 File Offset: 0x0077ECC0
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -1035,215 +1035,188 @@ public class ScanComponent : EntityComponent, IStaticVariableResetter
 			return false;
 		}
 		ScanComponent scanComponent = (ScanComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ActorComponent"))
+		if (scanComponent.ActorComponent == null)
 		{
-			if (scanComponent.ActorComponent == null)
-			{
-				this.ActorComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.ActorComponent), "ActorComponent"))
-			{
-				return false;
-			}
+			this.ActorComponent = null;
 		}
-		if (base.CanResetComponentProperty("CreatureData"))
-		{
-			if (scanComponent.CreatureData == null)
-			{
-				this.CreatureData = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureData), "CreatureData"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("PawnSensoryInfo"))
-		{
-			if (scanComponent.PawnSensoryInfo == null)
-			{
-				this.PawnSensoryInfo = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PawnSensoryInfoComponent>(this.PawnSensoryInfo), "PawnSensoryInfo"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("ShowIcon"))
-		{
-			this.ShowIcon = scanComponent.ShowIcon;
-		}
-		if (base.CanResetComponentProperty("ShowEffect"))
-		{
-			this.ShowEffect = scanComponent.ShowEffect;
-		}
-		if (base.CanResetComponentProperty("InteractionEffectHandles") && scanComponent.InteractionEffectHandles != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<int>>(this.InteractionEffectHandles), "InteractionEffectHandles"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComponent), "ActorComponent"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("MonsterMaterialControllerHandle"))
+		if (scanComponent.CreatureData == null)
 		{
-			this.MonsterMaterialControllerHandle = scanComponent.MonsterMaterialControllerHandle;
+			this.CreatureData = null;
 		}
-		if (base.CanResetComponentProperty("HasInteractionCharacterEffect"))
-		{
-			this.HasInteractionCharacterEffect = scanComponent.HasInteractionCharacterEffect;
-		}
-		if (base.CanResetComponentProperty("InteractionEffectHandlesNum"))
-		{
-			this.InteractionEffectHandlesNum = scanComponent.InteractionEffectHandlesNum;
-		}
-		if (base.CanResetComponentProperty("ConcealVoicePrintEffectHandle"))
-		{
-			this.ConcealVoicePrintEffectHandle = scanComponent.ConcealVoicePrintEffectHandle;
-		}
-		if (base.CanResetComponentProperty("IsShow"))
-		{
-			this.IsShow = scanComponent.IsShow;
-		}
-		if (base.CanResetComponentProperty("CanActive"))
-		{
-			this.CanActive = scanComponent.CanActive;
-		}
-		if (base.CanResetComponentProperty("ScanComposite"))
-		{
-			if (scanComponent.ScanComposite == null)
-			{
-				this.ScanComposite = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<IScanCompositeResult>(this.ScanComposite), "ScanComposite"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("ScanCompositeConfig"))
-		{
-			this.ScanCompositeConfig = scanComponent.ScanCompositeConfig;
-		}
-		if (base.CanResetComponentProperty("HasAddLeaveLogicRangeEvent"))
-		{
-			this.HasAddLeaveLogicRangeEvent = scanComponent.HasAddLeaveLogicRangeEvent;
-		}
-		if (base.CanResetComponentProperty("DistanceWithPlayerCm"))
-		{
-			this.DistanceWithPlayerCm = scanComponent.DistanceWithPlayerCm;
-		}
-		if (base.CanResetComponentProperty("IsOutOfDetectRange"))
-		{
-			this.IsOutOfDetectRange = scanComponent.IsOutOfDetectRange;
-		}
-		if (base.CanResetComponentProperty("TimerManageContainersMap") && scanComponent.TimerManageContainersMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, TimerManageContainer>>(this.TimerManageContainersMap), "TimerManageContainersMap"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureData), "CreatureData"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("GroupEntity"))
+		if (scanComponent.PawnSensoryInfo == null)
 		{
-			if (scanComponent.GroupEntity == null)
-			{
-				this.GroupEntity = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<IList<int>>(this.GroupEntity), "GroupEntity"))
-			{
-				return false;
-			}
+			this.PawnSensoryInfo = null;
 		}
-		if (base.CanResetComponentProperty("ActiveGroupEntity"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PawnSensoryInfo), "PawnSensoryInfo"))
 		{
-			if (scanComponent.ActiveGroupEntity == null)
-			{
-				this.ActiveGroupEntity = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<int[]>(this.ActiveGroupEntity), "ActiveGroupEntity"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("SpecificScanType"))
+		this.ShowIcon = scanComponent.ShowIcon;
+		this.ShowEffect = scanComponent.ShowEffect;
+		if (scanComponent.InteractionEffectHandles != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.InteractionEffectHandles), "InteractionEffectHandles"))
 		{
-			this.SpecificScanType = scanComponent.SpecificScanType;
+			return false;
 		}
+		this.MonsterMaterialControllerHandle = scanComponent.MonsterMaterialControllerHandle;
+		this.HasInteractionCharacterEffect = scanComponent.HasInteractionCharacterEffect;
+		this.InteractionEffectHandlesNum = scanComponent.InteractionEffectHandlesNum;
+		this.ConcealVoicePrintEffectHandle = scanComponent.ConcealVoicePrintEffectHandle;
+		this.IsShow = scanComponent.IsShow;
+		this.CanActive = scanComponent.CanActive;
+		if (scanComponent.ScanComposite == null)
+		{
+			this.ScanComposite = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ScanComposite), "ScanComposite"))
+		{
+			return false;
+		}
+		this.ScanCompositeConfig = scanComponent.ScanCompositeConfig;
+		this.HasAddLeaveLogicRangeEvent = scanComponent.HasAddLeaveLogicRangeEvent;
+		this.DistanceWithPlayerCm = scanComponent.DistanceWithPlayerCm;
+		this.IsOutOfDetectRange = scanComponent.IsOutOfDetectRange;
+		if (scanComponent.TimerManageContainersMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TimerManageContainersMap), "TimerManageContainersMap"))
+		{
+			return false;
+		}
+		if (scanComponent.GroupEntity == null)
+		{
+			this.GroupEntity = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.GroupEntity), "GroupEntity"))
+		{
+			return false;
+		}
+		if (scanComponent.ActiveGroupEntity == null)
+		{
+			this.ActiveGroupEntity = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActiveGroupEntity), "ActiveGroupEntity"))
+		{
+			return false;
+		}
+		this.SpecificScanType = scanComponent.SpecificScanType;
 		return true;
 	}
 
-	// Token: 0x0400D26E RID: 53870
+	// Token: 0x1700271E RID: 10014
+	// (get) Token: 0x06018B6B RID: 101227 RVA: 0x00780CC2 File Offset: 0x0077EEC2
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700271F RID: 10015
+	// (get) Token: 0x06018B6C RID: 101228 RVA: 0x00780CC5 File Offset: 0x0077EEC5
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002720 RID: 10016
+	// (get) Token: 0x06018B6D RID: 101229 RVA: 0x00780CC8 File Offset: 0x0077EEC8
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400D698 RID: 54936
 	public static bool EnableLog;
 
-	// Token: 0x0400D26F RID: 53871
+	// Token: 0x0400D699 RID: 54937
 	private static float ScanMaxDistanceSquaredCm;
 
-	// Token: 0x0400D270 RID: 53872
+	// Token: 0x0400D69A RID: 54938
 	private static float ScanShowInteractionEffectMaxDistanceSquaredCm;
 
-	// Token: 0x0400D271 RID: 53873
+	// Token: 0x0400D69B RID: 54939
 	private static float ScanDetectConcealedDistanceSquaredCm;
 
-	// Token: 0x0400D272 RID: 53874
+	// Token: 0x0400D69C RID: 54940
 	private BaseActorComponent ActorComponent;
 
-	// Token: 0x0400D273 RID: 53875
+	// Token: 0x0400D69D RID: 54941
 	private CreatureDataComponent CreatureData;
 
-	// Token: 0x0400D274 RID: 53876
+	// Token: 0x0400D69E RID: 54942
 	private PawnSensoryInfoComponent PawnSensoryInfo;
 
-	// Token: 0x0400D275 RID: 53877
+	// Token: 0x0400D69F RID: 54943
 	private bool ShowIcon;
 
-	// Token: 0x0400D276 RID: 53878
+	// Token: 0x0400D6A0 RID: 54944
 	private bool ShowEffect;
 
-	// Token: 0x0400D277 RID: 53879
+	// Token: 0x0400D6A1 RID: 54945
 	[Nullable(1)]
 	private readonly List<int> InteractionEffectHandles = new List<int>();
 
-	// Token: 0x0400D278 RID: 53880
+	// Token: 0x0400D6A2 RID: 54946
 	private int MonsterMaterialControllerHandle = -1;
 
-	// Token: 0x0400D279 RID: 53881
+	// Token: 0x0400D6A3 RID: 54947
 	private bool HasInteractionCharacterEffect;
 
-	// Token: 0x0400D27A RID: 53882
+	// Token: 0x0400D6A4 RID: 54948
 	private int InteractionEffectHandlesNum;
 
-	// Token: 0x0400D27B RID: 53883
+	// Token: 0x0400D6A5 RID: 54949
 	private int ConcealVoicePrintEffectHandle;
 
-	// Token: 0x0400D27C RID: 53884
+	// Token: 0x0400D6A6 RID: 54950
 	private bool IsShow;
 
-	// Token: 0x0400D27D RID: 53885
+	// Token: 0x0400D6A7 RID: 54951
 	private bool CanActive;
 
-	// Token: 0x0400D27E RID: 53886
+	// Token: 0x0400D6A8 RID: 54952
 	private IScanCompositeResult ScanComposite;
 
-	// Token: 0x0400D27F RID: 53887
+	// Token: 0x0400D6A9 RID: 54953
 	private GamePlayScanComposite? ScanCompositeConfig;
 
-	// Token: 0x0400D280 RID: 53888
+	// Token: 0x0400D6AA RID: 54954
 	private bool HasAddLeaveLogicRangeEvent;
 
-	// Token: 0x0400D281 RID: 53889
+	// Token: 0x0400D6AB RID: 54955
 	private float DistanceWithPlayerCm;
 
-	// Token: 0x0400D282 RID: 53890
+	// Token: 0x0400D6AC RID: 54956
 	private bool IsOutOfDetectRange;
 
-	// Token: 0x0400D283 RID: 53891
+	// Token: 0x0400D6AD RID: 54957
 	[Nullable(1)]
 	private readonly Dictionary<string, TimerManageContainer> TimerManageContainersMap = new Dictionary<string, TimerManageContainer>();
 
-	// Token: 0x0400D284 RID: 53892
+	// Token: 0x0400D6AE RID: 54958
 	private IList<int> GroupEntity;
 
-	// Token: 0x0400D285 RID: 53893
+	// Token: 0x0400D6AF RID: 54959
 	private int[] ActiveGroupEntity;
 
-	// Token: 0x0400D286 RID: 53894
+	// Token: 0x0400D6B0 RID: 54960
 	private int? SpecificScanType;
 
-	// Token: 0x0400D287 RID: 53895
+	// Token: 0x0400D6B1 RID: 54961
 	private const int M_TO_CM = 100;
 
-	// Token: 0x0400D288 RID: 53896
+	// Token: 0x0400D6B2 RID: 54962
 	private const int SECONDS_TO_MILLISECONDS = 1000;
 }

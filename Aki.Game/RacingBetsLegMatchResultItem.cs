@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002718 RID: 10008
+// Token: 0x02001C03 RID: 7171
 [Nullable(new byte[]
 {
 	0,
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class RacingBetsLegMatchResultItem : GridProxyAbstract<IRacingBetsLegMatchResultData>
 {
-	// Token: 0x06014830 RID: 84016 RVA: 0x0052E090 File Offset: 0x0052C290
+	// Token: 0x06011D12 RID: 72978 RVA: 0x0053CDAC File Offset: 0x0053AFAC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -37,7 +37,7 @@ public class RacingBetsLegMatchResultItem : GridProxyAbstract<IRacingBetsLegMatc
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06014831 RID: 84017 RVA: 0x0052E1A0 File Offset: 0x0052C3A0
+	// Token: 0x06011D13 RID: 72979 RVA: 0x0053CEBC File Offset: 0x0053B0BC
 	[NullableContext(1)]
 	public override void Refresh(IRacingBetsLegMatchResultData data, bool isSelected, int gridIndex)
 	{
@@ -92,22 +92,22 @@ public class RacingBetsLegMatchResultItem : GridProxyAbstract<IRacingBetsLegMatc
 		}
 	}
 
-	// Token: 0x02008D6D RID: 36205
+	// Token: 0x02007EF6 RID: 32502
 	private enum EComponent
 	{
-		// Token: 0x0402DE38 RID: 187960
+		// Token: 0x0402914F RID: 168271
 		RankText,
-		// Token: 0x0402DE39 RID: 187961
+		// Token: 0x04029150 RID: 168272
 		HeadTexture,
-		// Token: 0x0402DE3A RID: 187962
+		// Token: 0x04029151 RID: 168273
 		NameText,
-		// Token: 0x0402DE3B RID: 187963
+		// Token: 0x04029152 RID: 168274
 		AdvancedItem,
-		// Token: 0x0402DE3C RID: 187964
+		// Token: 0x04029153 RID: 168275
 		AdvancedText,
-		// Token: 0x0402DE3D RID: 187965
+		// Token: 0x04029154 RID: 168276
 		LoseItem,
-		// Token: 0x0402DE3E RID: 187966
+		// Token: 0x04029155 RID: 168277
 		LoseText
 	}
 }

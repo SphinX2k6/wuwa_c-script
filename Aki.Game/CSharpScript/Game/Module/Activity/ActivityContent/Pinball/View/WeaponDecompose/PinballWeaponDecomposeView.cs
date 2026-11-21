@@ -15,17 +15,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.WeaponDecompose
 {
-	// Token: 0x020062E9 RID: 25321
+	// Token: 0x02005267 RID: 21095
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballWeaponDecomposeView : UiViewBase
 	{
-		// Token: 0x0603FB5A RID: 260954 RVA: 0x00F6A0F4 File Offset: 0x00F682F4
+		// Token: 0x0603481B RID: 215067 RVA: 0x00EB1051 File Offset: 0x00EAF251
 		public PinballWeaponDecomposeView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603FB5B RID: 260955 RVA: 0x00F6A128 File Offset: 0x00F68328
+		// Token: 0x0603481C RID: 215068 RVA: 0x00EB1084 File Offset: 0x00EAF284
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 12;
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.WeaponD
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603FB5C RID: 260956 RVA: 0x00F6A320 File Offset: 0x00F68520
+		// Token: 0x0603481D RID: 215069 RVA: 0x00EB127C File Offset: 0x00EAF47C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PinballWeaponDecomposeView.<OnBeforeStartAsync>d__15 <OnBeforeStartAsync>d__;
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.WeaponD
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FB5D RID: 260957 RVA: 0x00F6A363 File Offset: 0x00F68563
+		// Token: 0x0603481E RID: 215070 RVA: 0x00EB12BF File Offset: 0x00EAF4BF
 		protected override void OnStart()
 		{
 			this.InitScroll();
@@ -93,13 +93,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.WeaponD
 			extendToggle.SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0603FB5E RID: 260958 RVA: 0x00F6A39F File Offset: 0x00F6859F
+		// Token: 0x0603481F RID: 215071 RVA: 0x00EB12FB File Offset: 0x00EAF4FB
 		private void InitScroll()
 		{
 			this.LoopScroll = new LoopScrollView<PinballItemWeaponGridView, PinballWeaponData>(base.GetLoopScrollViewComponent(1), base.GetItem(2).GetOwner() as AUIBaseActor, new Func<PinballItemWeaponGridView>(this.CreateGrid), false);
 		}
 
-		// Token: 0x0603FB5F RID: 260959 RVA: 0x00F6A3D4 File Offset: 0x00F685D4
+		// Token: 0x06034820 RID: 215072 RVA: 0x00EB1330 File Offset: 0x00EAF530
 		private PinballItemWeaponGridView CreateGrid()
 		{
 			PinballItemWeaponGridView pinballItemWeaponGridView = new PinballItemWeaponGridView();
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.WeaponD
 			return pinballItemWeaponGridView;
 		}
 
-		// Token: 0x0603FB60 RID: 260960 RVA: 0x00F6A440 File Offset: 0x00F68640
+		// Token: 0x06034821 RID: 215073 RVA: 0x00EB139C File Offset: 0x00EAF59C
 		protected override void OnBeforeShow()
 		{
 			this.RefreshList();
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.WeaponD
 			this.RefreshPreviewItemAsync().Forget();
 		}
 
-		// Token: 0x0603FB61 RID: 260961 RVA: 0x00F6A45C File Offset: 0x00F6865C
+		// Token: 0x06034822 RID: 215074 RVA: 0x00EB13B8 File Offset: 0x00EAF5B8
 		private void RefreshList()
 		{
 			List<PinballWeaponData> allWeaponDataList = PinballModel.Instance.GetAllWeaponDataList();
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.WeaponD
 			filterSortEntrance.UpdateData(EFilterSortGroupId.PinballWeaponDecompose, allWeaponDataList, Array.Empty<object>());
 		}
 
-		// Token: 0x0603FB62 RID: 260962 RVA: 0x00F6A4B3 File Offset: 0x00F686B3
+		// Token: 0x06034823 RID: 215075 RVA: 0x00EB140F File Offset: 0x00EAF60F
 		private void OnFilterSortRefresh(List<PinballWeaponData> list)
 		{
 			this.DataList = list;
@@ -147,19 +147,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.WeaponD
 			loopScroll.RefreshByData(this.DataList, false, null, true);
 		}
 
-		// Token: 0x0603FB63 RID: 260963 RVA: 0x00F6A4D5 File Offset: 0x00F686D5
+		// Token: 0x06034824 RID: 215076 RVA: 0x00EB1431 File Offset: 0x00EAF631
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int, bool>(EEventName.OnPinballWeaponLockChanged, new Action<int, bool>(this.OnPinballWeaponLockChanged));
 		}
 
-		// Token: 0x0603FB64 RID: 260964 RVA: 0x00F6A4F3 File Offset: 0x00F686F3
+		// Token: 0x06034825 RID: 215077 RVA: 0x00EB144F File Offset: 0x00EAF64F
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<int, bool>(EEventName.OnPinballWeaponLockChanged, new Action<int, bool>(this.OnPinballWeaponLockChanged));
 		}
 
-		// Token: 0x0603FB65 RID: 260965 RVA: 0x00F6A514 File Offset: 0x00F68714
+		// Token: 0x06034826 RID: 215078 RVA: 0x00EB1470 File Offset: 0x00EAF670
 		private void OnClickAllSelectToggle(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.WeaponD
 			this.RefreshPreviewItemAsync().Forget();
 		}
 
-		// Token: 0x0603FB66 RID: 260966 RVA: 0x00F6A5A8 File Offset: 0x00F687A8
+		// Token: 0x06034827 RID: 215079 RVA: 0x00EB1504 File Offset: 0x00EAF704
 		private UniTask RefreshPreviewItemAsync()
 		{
 			PinballWeaponDecomposeView.<RefreshPreviewItemAsync>d__25 <RefreshPreviewItemAsync>d__;
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.WeaponD
 			return <RefreshPreviewItemAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FB67 RID: 260967 RVA: 0x00F6A5EC File Offset: 0x00F687EC
+		// Token: 0x06034828 RID: 215080 RVA: 0x00EB1548 File Offset: 0x00EAF748
 		private void RefreshWeaponInfo()
 		{
 			if (this.CurrentSelectedIncId == -1)
@@ -264,7 +264,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.WeaponD
 			}
 		}
 
-		// Token: 0x0603FB68 RID: 260968 RVA: 0x00F6A6DC File Offset: 0x00F688DC
+		// Token: 0x06034829 RID: 215081 RVA: 0x00EB1638 File Offset: 0x00EAF838
 		private void OnClickBtnConfirm()
 		{
 			if (this.Selection.Count <= 0)
@@ -275,7 +275,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.WeaponD
 			this.RequestWeaponDecomposeAsync().Forget();
 		}
 
-		// Token: 0x0603FB69 RID: 260969 RVA: 0x00F6A70C File Offset: 0x00F6890C
+		// Token: 0x0603482A RID: 215082 RVA: 0x00EB1668 File Offset: 0x00EAF868
 		private UniTask RequestWeaponDecomposeAsync()
 		{
 			PinballWeaponDecomposeView.<RequestWeaponDecomposeAsync>d__28 <RequestWeaponDecomposeAsync>d__;
@@ -286,7 +286,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.WeaponD
 			return <RequestWeaponDecomposeAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FB6A RID: 260970 RVA: 0x00F6A750 File Offset: 0x00F68950
+		// Token: 0x0603482B RID: 215083 RVA: 0x00EB16AC File Offset: 0x00EAF8AC
 		private void OnPinballWeaponLockChanged(int incId, bool bLock)
 		{
 			if (bLock)
@@ -310,14 +310,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.WeaponD
 			this.RefreshPreviewItemAsync().Forget();
 		}
 
-		// Token: 0x0603FB6B RID: 260971 RVA: 0x00F6A7B4 File Offset: 0x00F689B4
+		// Token: 0x0603482C RID: 215084 RVA: 0x00EB1710 File Offset: 0x00EAF910
 		protected bool OnCanExecuteChange(IPinballItemToggleCallback callbackParameter)
 		{
 			int incId = ((IPinballItemDataWeapon)callbackParameter.Data).IncId;
 			return this.CanAddItem(incId, true);
 		}
 
-		// Token: 0x0603FB6C RID: 260972 RVA: 0x00F6A7DC File Offset: 0x00F689DC
+		// Token: 0x0603482D RID: 215085 RVA: 0x00EB1738 File Offset: 0x00EAF938
 		protected bool AddFunction(IPinballItemToggleCallback @params)
 		{
 			int incId = ((IPinballItemDataWeapon)@params.Data).IncId;
@@ -327,7 +327,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.WeaponD
 			return true;
 		}
 
-		// Token: 0x0603FB6D RID: 260973 RVA: 0x00F6A820 File Offset: 0x00F68A20
+		// Token: 0x0603482E RID: 215086 RVA: 0x00EB177C File Offset: 0x00EAF97C
 		private void ShowCurrentSelectedWeaponInfo(IPinballItemToggleCallback @params)
 		{
 			this.CurrentSelectedIncId = ((IPinballItemDataWeapon)@params.Data).IncId;
@@ -335,7 +335,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.WeaponD
 			base.PlayOrReplaySequence("Switch", false, null);
 		}
 
-		// Token: 0x0603FB6E RID: 260974 RVA: 0x00F6A860 File Offset: 0x00F68A60
+		// Token: 0x0603482F RID: 215087 RVA: 0x00EB17BC File Offset: 0x00EAF9BC
 		protected bool ReduceFunction(IPinballItemButtonCallback callbackParameter)
 		{
 			int incId = ((IPinballItemDataWeapon)callbackParameter.Data).IncId;
@@ -359,7 +359,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.WeaponD
 			return true;
 		}
 
-		// Token: 0x0603FB6F RID: 260975 RVA: 0x00F6A8E4 File Offset: 0x00F68AE4
+		// Token: 0x06034830 RID: 215088 RVA: 0x00EB1840 File Offset: 0x00EAFA40
 		private bool CanAddItem(int incId, bool isShowTip)
 		{
 			PinballWeaponData weaponDataByIncId = PinballModel.Instance.GetWeaponDataByIncId(incId);
@@ -400,7 +400,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.WeaponD
 			return true;
 		}
 
-		// Token: 0x0603FB70 RID: 260976 RVA: 0x00F6A9A0 File Offset: 0x00F68BA0
+		// Token: 0x06034831 RID: 215089 RVA: 0x00EB18FC File Offset: 0x00EAFAFC
 		private void AddSelection(int incId)
 		{
 			PinballWeaponData weaponDataByIncId = PinballModel.Instance.GetWeaponDataByIncId(incId);
@@ -412,7 +412,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.WeaponD
 			this.Selection.Add(incId);
 		}
 
-		// Token: 0x0603FB71 RID: 260977 RVA: 0x00F6A9D4 File Offset: 0x00F68BD4
+		// Token: 0x06034832 RID: 215090 RVA: 0x00EB1930 File Offset: 0x00EAFB30
 		private void RemoveSelection(int incId)
 		{
 			PinballWeaponData weaponDataByIncId = PinballModel.Instance.GetWeaponDataByIncId(incId);
@@ -424,7 +424,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.WeaponD
 			this.Selection.Remove(incId);
 		}
 
-		// Token: 0x0603FB72 RID: 260978 RVA: 0x00F6AA08 File Offset: 0x00F68C08
+		// Token: 0x06034833 RID: 215091 RVA: 0x00EB1964 File Offset: 0x00EAFB64
 		private void ClearSelection()
 		{
 			foreach (int incId in this.Selection)
@@ -438,93 +438,93 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.WeaponD
 			this.Selection.Clear();
 		}
 
-		// Token: 0x0603FB73 RID: 260979 RVA: 0x00F6AA78 File Offset: 0x00F68C78
+		// Token: 0x06034834 RID: 215092 RVA: 0x00EB19D4 File Offset: 0x00EAFBD4
 		private void OnPreviewItemExtendToggleClicked(IPinballItemToggleCallback callbackParameter)
 		{
-			ItemController.Instance.OpenItemTipsByItemId(this.PreviewItemData.ItemData.ItemId, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(this.PreviewItemData.ItemData.ItemId, true, null, false);
 		}
 
-		// Token: 0x0603FB74 RID: 260980 RVA: 0x00F6AA96 File Offset: 0x00F68C96
+		// Token: 0x06034835 RID: 215093 RVA: 0x00EB19F3 File Offset: 0x00EAFBF3
 		private bool OnPreviewItemCanExecuteChange(IPinballItemToggleCallback callbackParameter)
 		{
 			return false;
 		}
 
-		// Token: 0x0603FB75 RID: 260981 RVA: 0x00F6AA99 File Offset: 0x00F68C99
+		// Token: 0x06034836 RID: 215094 RVA: 0x00EB19F6 File Offset: 0x00EAFBF6
 		private void OnCloseBtnClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603FB76 RID: 260982 RVA: 0x00F6AAA2 File Offset: 0x00F68CA2
+		// Token: 0x06034837 RID: 215095 RVA: 0x00EB19FF File Offset: 0x00EAFBFF
 		protected override void OnBeforeDestroy()
 		{
 			this.ClearSelection();
 		}
 
-		// Token: 0x0402146B RID: 136299
+		// Token: 0x0401BD9A RID: 114074
 		private int CurrentSelectedIncId = -1;
 
-		// Token: 0x0402146C RID: 136300
+		// Token: 0x0401BD9B RID: 114075
 		private readonly HashSet<int> Selection = new HashSet<int>();
 
-		// Token: 0x0402146D RID: 136301
+		// Token: 0x0401BD9C RID: 114076
 		private List<PinballWeaponData> DataList;
 
-		// Token: 0x0402146E RID: 136302
+		// Token: 0x0401BD9D RID: 114077
 		private LoopScrollView<PinballItemWeaponGridView, PinballWeaponData> LoopScroll;
 
-		// Token: 0x0402146F RID: 136303
+		// Token: 0x0401BD9E RID: 114078
 		private FilterSortEntrance<PinballWeaponData> FilterSortEntrance;
 
-		// Token: 0x04021470 RID: 136304
+		// Token: 0x0401BD9F RID: 114079
 		private PinballItemView PreviewItemView;
 
-		// Token: 0x04021471 RID: 136305
+		// Token: 0x0401BDA0 RID: 114080
 		private TItem PreviewItemData = new TItem(new InventoryDefine.GetItemData(89500002, 0), 0);
 
-		// Token: 0x04021472 RID: 136306
+		// Token: 0x0401BDA1 RID: 114081
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04021473 RID: 136307
+		// Token: 0x0401BDA2 RID: 114082
 		private ButtonItem BtnConfirm;
 
-		// Token: 0x04021474 RID: 136308
+		// Token: 0x0401BDA3 RID: 114083
 		private PinballWeaponTipsTopView TipsTopView;
 
-		// Token: 0x04021475 RID: 136309
+		// Token: 0x0401BDA4 RID: 114084
 		private PinballWeaponAttrView AttrView;
 
-		// Token: 0x04021476 RID: 136310
+		// Token: 0x0401BDA5 RID: 114085
 		private const int MAX_SELECT_COUNT = 1000;
 
-		// Token: 0x0200C4D8 RID: 50392
+		// Token: 0x0200AEBF RID: 44735
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403B66A RID: 243306
+			// Token: 0x04035FCC RID: 221132
 			Caption,
-			// Token: 0x0403B66B RID: 243307
+			// Token: 0x04035FCD RID: 221133
 			LoopScroll,
-			// Token: 0x0403B66C RID: 243308
+			// Token: 0x04035FCE RID: 221134
 			LoopScrollItem,
-			// Token: 0x0403B66D RID: 243309
+			// Token: 0x04035FCF RID: 221135
 			SortFilter,
-			// Token: 0x0403B66E RID: 243310
+			// Token: 0x04035FD0 RID: 221136
 			PnlWeapon,
-			// Token: 0x0403B66F RID: 243311
+			// Token: 0x04035FD1 RID: 221137
 			TextEmptyTips,
-			// Token: 0x0403B670 RID: 243312
+			// Token: 0x04035FD2 RID: 221138
 			PnlWeaponAttr,
-			// Token: 0x0403B671 RID: 243313
+			// Token: 0x04035FD3 RID: 221139
 			PreviewItem,
-			// Token: 0x0403B672 RID: 243314
+			// Token: 0x04035FD4 RID: 221140
 			TextSelectedCount,
-			// Token: 0x0403B673 RID: 243315
+			// Token: 0x04035FD5 RID: 221141
 			BtnConfirm,
-			// Token: 0x0403B674 RID: 243316
+			// Token: 0x04035FD6 RID: 221142
 			AllSelectToggle,
-			// Token: 0x0403B675 RID: 243317
+			// Token: 0x04035FD7 RID: 221143
 			TextWeaponCount
 		}
 	}

@@ -4,13 +4,13 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x020060DB RID: 24795
+	// Token: 0x02005059 RID: 20569
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoverlikeGainEntry
 	{
-		// Token: 0x17009129 RID: 37161
-		// (get) Token: 0x0603EAF4 RID: 256756 RVA: 0x00F23C63 File Offset: 0x00F21E63
+		// Token: 0x1700648B RID: 25739
+		// (get) Token: 0x060337B8 RID: 210872 RVA: 0x00E6AA53 File Offset: 0x00E68C53
 		public int ItemRemainingRooms
 		{
 			get
@@ -23,12 +23,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EAF5 RID: 256757 RVA: 0x00F23C76 File Offset: 0x00F21E76
+		// Token: 0x060337B9 RID: 210873 RVA: 0x00E6AA66 File Offset: 0x00E68C66
 		public RoverlikeGainEntry()
 		{
 		}
 
-		// Token: 0x0603EAF6 RID: 256758 RVA: 0x00F23C7E File Offset: 0x00F21E7E
+		// Token: 0x060337BA RID: 210874 RVA: 0x00E6AA6E File Offset: 0x00E68C6E
 		public RoverlikeGainEntry(RoverRogueGainEntry proto)
 		{
 			this.Type = proto.Type;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ItemRemainingRoomsInternal = proto.ItemRemainingRooms;
 		}
 
-		// Token: 0x0603EAF7 RID: 256759 RVA: 0x00F23CB6 File Offset: 0x00F21EB6
+		// Token: 0x060337BB RID: 210875 RVA: 0x00E6AAA6 File Offset: 0x00E68CA6
 		public static RoverlikeGainEntry Create(RoverRogueGainDataType type, int configId)
 		{
 			return new RoverlikeGainEntry
@@ -47,16 +47,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			};
 		}
 
-		// Token: 0x04020C4D RID: 134221
+		// Token: 0x0401B57A RID: 111994
 		public RoverRogueGainDataType Type;
 
-		// Token: 0x04020C4E RID: 134222
+		// Token: 0x0401B57B RID: 111995
 		public int ConfigId;
 
-		// Token: 0x04020C4F RID: 134223
+		// Token: 0x0401B57C RID: 111996
 		public int IncId;
 
-		// Token: 0x04020C50 RID: 134224
+		// Token: 0x0401B57D RID: 111997
 		protected int ItemRemainingRoomsInternal;
 	}
 }

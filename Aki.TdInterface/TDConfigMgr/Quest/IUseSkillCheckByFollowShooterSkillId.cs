@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020011E4 RID: 4580
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001320 RID: 4896
 	public class IUseSkillCheckByFollowShooterSkillId : IUseSkillCheckBase
 	{
-		// Token: 0x06006802 RID: 26626 RVA: 0x000F8A74 File Offset: 0x000F6C74
+		// Token: 0x06006E43 RID: 28227 RVA: 0x00106380 File Offset: 0x00104580
 		private IUseSkillCheckByFollowShooterSkillId_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006803 RID: 26627 RVA: 0x000F8AAC File Offset: 0x000F6CAC
+		// Token: 0x06006E44 RID: 28228 RVA: 0x001063B8 File Offset: 0x001045B8
 		public static IUseSkillCheckByFollowShooterSkillId Create([Nullable(2)] IUseSkillCheckByFollowShooterSkillId instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006804 RID: 26628 RVA: 0x000F8ABF File Offset: 0x000F6CBF
+		// Token: 0x06006E45 RID: 28229 RVA: 0x001063CB File Offset: 0x001045CB
 		public static IUseSkillCheckByFollowShooterSkillId CreateFromSetValue([Nullable(2)] IUseSkillCheckByFollowShooterSkillId_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006805 RID: 26629 RVA: 0x000F8AD2 File Offset: 0x000F6CD2
+		// Token: 0x06006E46 RID: 28230 RVA: 0x001063DE File Offset: 0x001045DE
 		public new IUseSkillCheckByFollowShooterSkillId_SetValue ToSetValue()
 		{
 			return new IUseSkillCheckByFollowShooterSkillId_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x170021B0 RID: 8624
-		// (get) Token: 0x06006806 RID: 26630 RVA: 0x000F8AF1 File Offset: 0x000F6CF1
-		// (set) Token: 0x06006807 RID: 26631 RVA: 0x000F8B1C File Offset: 0x000F6D1C
+		// Token: 0x17002371 RID: 9073
+		// (get) Token: 0x06006E47 RID: 28231 RVA: 0x001063FD File Offset: 0x001045FD
+		// (set) Token: 0x06006E48 RID: 28232 RVA: 0x00106428 File Offset: 0x00104628
 		public override EUseSkillCheckType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170021B1 RID: 8625
-		// (get) Token: 0x06006808 RID: 26632 RVA: 0x000F8B2A File Offset: 0x000F6D2A
-		// (set) Token: 0x06006809 RID: 26633 RVA: 0x000F8B55 File Offset: 0x000F6D55
+		// Token: 0x17002372 RID: 9074
+		// (get) Token: 0x06006E49 RID: 28233 RVA: 0x00106436 File Offset: 0x00104636
+		// (set) Token: 0x06006E4A RID: 28234 RVA: 0x00106461 File Offset: 0x00104661
 		public virtual int SkillId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003E59 RID: 15961
+		// Token: 0x040041C7 RID: 16839
 		[Nullable(2)]
 		protected new IUseSkillCheckByFollowShooterSkillId FbInstance;
 
-		// Token: 0x04003E5A RID: 15962
+		// Token: 0x040041C8 RID: 16840
 		[Nullable(2)]
 		protected new IUseSkillCheckByFollowShooterSkillId_SetValue PocoInterface;
 	}

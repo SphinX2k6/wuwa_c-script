@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004188 RID: 16776
+	// Token: 0x020045DB RID: 17883
 	public class ITakePhoto2SequenceConditionT
 	{
-		// Token: 0x170076ED RID: 30445
-		// (get) Token: 0x06018AC1 RID: 101057 RVA: 0x0038DBCD File Offset: 0x0038BDCD
-		// (set) Token: 0x06018AC2 RID: 101058 RVA: 0x0038DBD5 File Offset: 0x0038BDD5
+		// Token: 0x17007D14 RID: 32020
+		// (get) Token: 0x0601A1F7 RID: 106999 RVA: 0x003B8D61 File Offset: 0x003B6F61
+		// (set) Token: 0x0601A1F8 RID: 107000 RVA: 0x003B8D69 File Offset: 0x003B6F69
 		public string SequencePath { get; set; }
 
-		// Token: 0x06018AC3 RID: 101059 RVA: 0x0038DBDE File Offset: 0x0038BDDE
+		// Token: 0x0601A1F9 RID: 107001 RVA: 0x003B8D72 File Offset: 0x003B6F72
 		public ITakePhoto2SequenceConditionT()
 		{
 			this.SequencePath = null;

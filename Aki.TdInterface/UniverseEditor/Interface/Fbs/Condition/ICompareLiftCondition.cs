@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004BB0 RID: 19376
+	// Token: 0x0200509A RID: 20634
 	public struct ICompareLiftCondition : IFlatbufferObject
 	{
-		// Token: 0x17008CA9 RID: 36009
-		// (get) Token: 0x0601E8EE RID: 125166 RVA: 0x00446576 File Offset: 0x00444776
+		// Token: 0x170093C2 RID: 37826
+		// (get) Token: 0x0602049A RID: 132250 RVA: 0x004790DA File Offset: 0x004772DA
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E8EF RID: 125167 RVA: 0x00446583 File Offset: 0x00444783
+		// Token: 0x0602049B RID: 132251 RVA: 0x004790E7 File Offset: 0x004772E7
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601E8F0 RID: 125168 RVA: 0x0044658C File Offset: 0x0044478C
+		// Token: 0x0602049C RID: 132252 RVA: 0x004790F0 File Offset: 0x004772F0
 		public static ICompareLiftCondition GetRootAsICompareLiftCondition(ByteBuffer _bb)
 		{
 			return ICompareLiftCondition.GetRootAsICompareLiftCondition(_bb, default(ICompareLiftCondition));
 		}
 
-		// Token: 0x0601E8F1 RID: 125169 RVA: 0x004465A8 File Offset: 0x004447A8
+		// Token: 0x0602049D RID: 132253 RVA: 0x0047910C File Offset: 0x0047730C
 		public static ICompareLiftCondition GetRootAsICompareLiftCondition(ByteBuffer _bb, ICompareLiftCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601E8F2 RID: 125170 RVA: 0x004465C5 File Offset: 0x004447C5
+		// Token: 0x0602049E RID: 132254 RVA: 0x00479129 File Offset: 0x00477329
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601E8F3 RID: 125171 RVA: 0x004465D4 File Offset: 0x004447D4
+		// Token: 0x0602049F RID: 132255 RVA: 0x00479138 File Offset: 0x00477338
 		public ICompareLiftCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008CAA RID: 36010
-		// (get) Token: 0x0601E8F4 RID: 125172 RVA: 0x004465E4 File Offset: 0x004447E4
+		// Token: 0x170093C3 RID: 37827
+		// (get) Token: 0x060204A0 RID: 132256 RVA: 0x00479148 File Offset: 0x00477348
 		public ECondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008CAB RID: 36011
-		// (get) Token: 0x0601E8F5 RID: 125173 RVA: 0x00446620 File Offset: 0x00444820
+		// Token: 0x170093C4 RID: 37828
+		// (get) Token: 0x060204A1 RID: 132257 RVA: 0x00479184 File Offset: 0x00477384
 		public bool IsSelf
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008CAC RID: 36012
-		// (get) Token: 0x0601E8F6 RID: 125174 RVA: 0x00446660 File Offset: 0x00444860
+		// Token: 0x170093C5 RID: 37829
+		// (get) Token: 0x060204A2 RID: 132258 RVA: 0x004791C4 File Offset: 0x004773C4
 		public int EntityId
 		{
 			get
@@ -88,8 +88,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008CAD RID: 36013
-		// (get) Token: 0x0601E8F7 RID: 125175 RVA: 0x0044669C File Offset: 0x0044489C
+		// Token: 0x170093C6 RID: 37830
+		// (get) Token: 0x060204A3 RID: 132259 RVA: 0x00479200 File Offset: 0x00477400
 		public ECompare Compare
 		{
 			get
@@ -103,8 +103,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008CAE RID: 36014
-		// (get) Token: 0x0601E8F8 RID: 125176 RVA: 0x004466DC File Offset: 0x004448DC
+		// Token: 0x170093C7 RID: 37831
+		// (get) Token: 0x060204A4 RID: 132260 RVA: 0x00479240 File Offset: 0x00477440
 		public int Location
 		{
 			get
@@ -118,8 +118,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008CAF RID: 36015
-		// (get) Token: 0x0601E8F9 RID: 125177 RVA: 0x0044671C File Offset: 0x0044491C
+		// Token: 0x170093C8 RID: 37832
+		// (get) Token: 0x060204A5 RID: 132261 RVA: 0x00479280 File Offset: 0x00477480
 		public byte NullMask
 		{
 			get
@@ -133,7 +133,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E8FA RID: 125178 RVA: 0x00446759 File Offset: 0x00444959
+		// Token: 0x060204A6 RID: 132262 RVA: 0x004792BD File Offset: 0x004774BD
 		public static Offset<ICompareLiftCondition> CreateICompareLiftCondition(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, bool IsSelf = false, int EntityId = 0, ECompare Compare = ECompare.Eq, int Location = 0, byte NullMask = 0)
 		{
 			builder.StartTable(6);
@@ -146,55 +146,55 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICompareLiftCondition.EndICompareLiftCondition(builder);
 		}
 
-		// Token: 0x0601E8FB RID: 125179 RVA: 0x00446795 File Offset: 0x00444995
+		// Token: 0x060204A7 RID: 132263 RVA: 0x004792F9 File Offset: 0x004774F9
 		public static void StartICompareLiftCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x0601E8FC RID: 125180 RVA: 0x0044679E File Offset: 0x0044499E
+		// Token: 0x060204A8 RID: 132264 RVA: 0x00479302 File Offset: 0x00477502
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601E8FD RID: 125181 RVA: 0x004467A9 File Offset: 0x004449A9
+		// Token: 0x060204A9 RID: 132265 RVA: 0x0047930D File Offset: 0x0047750D
 		public static void AddIsSelf(FlatBufferBuilder builder, bool isSelf)
 		{
 			builder.AddBool(1, isSelf, false);
 		}
 
-		// Token: 0x0601E8FE RID: 125182 RVA: 0x004467B4 File Offset: 0x004449B4
+		// Token: 0x060204AA RID: 132266 RVA: 0x00479318 File Offset: 0x00477518
 		public static void AddEntityId(FlatBufferBuilder builder, int entityId)
 		{
 			builder.AddInt(2, entityId, 0);
 		}
 
-		// Token: 0x0601E8FF RID: 125183 RVA: 0x004467BF File Offset: 0x004449BF
+		// Token: 0x060204AB RID: 132267 RVA: 0x00479323 File Offset: 0x00477523
 		public static void AddCompare(FlatBufferBuilder builder, ECompare compare)
 		{
 			builder.AddByte(3, (byte)compare, 0);
 		}
 
-		// Token: 0x0601E900 RID: 125184 RVA: 0x004467CA File Offset: 0x004449CA
+		// Token: 0x060204AC RID: 132268 RVA: 0x0047932E File Offset: 0x0047752E
 		public static void AddLocation(FlatBufferBuilder builder, int location)
 		{
 			builder.AddInt(4, location, 0);
 		}
 
-		// Token: 0x0601E901 RID: 125185 RVA: 0x004467D5 File Offset: 0x004449D5
+		// Token: 0x060204AD RID: 132269 RVA: 0x00479339 File Offset: 0x00477539
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(5, nullMask, 0);
 		}
 
-		// Token: 0x0601E902 RID: 125186 RVA: 0x004467E0 File Offset: 0x004449E0
+		// Token: 0x060204AE RID: 132270 RVA: 0x00479344 File Offset: 0x00477544
 		public static Offset<ICompareLiftCondition> EndICompareLiftCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<ICompareLiftCondition>(builder.EndTable());
 		}
 
-		// Token: 0x0601E903 RID: 125187 RVA: 0x004467F0 File Offset: 0x004449F0
+		// Token: 0x060204AF RID: 132271 RVA: 0x00479354 File Offset: 0x00477554
 		public ICompareLiftConditionT UnPack()
 		{
 			ICompareLiftConditionT compareLiftConditionT = new ICompareLiftConditionT();
@@ -202,7 +202,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return compareLiftConditionT;
 		}
 
-		// Token: 0x0601E904 RID: 125188 RVA: 0x0044680C File Offset: 0x00444A0C
+		// Token: 0x060204B0 RID: 132272 RVA: 0x00479370 File Offset: 0x00477570
 		public void UnPackTo(ICompareLiftConditionT _o)
 		{
 			_o.Type = this.Type;
@@ -213,7 +213,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0601E905 RID: 125189 RVA: 0x00446864 File Offset: 0x00444A64
+		// Token: 0x060204B1 RID: 132273 RVA: 0x004793C8 File Offset: 0x004775C8
 		public static Offset<ICompareLiftCondition> Pack(FlatBufferBuilder builder, ICompareLiftConditionT _o)
 		{
 			if (_o == null)
@@ -223,7 +223,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICompareLiftCondition.CreateICompareLiftCondition(builder, _o.Type, _o.IsSelf, _o.EntityId, _o.Compare, _o.Location, _o.NullMask);
 		}
 
-		// Token: 0x0400D492 RID: 54418
+		// Token: 0x0400DF97 RID: 57239
 		private Table __p;
 	}
 }

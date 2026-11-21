@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027D8 RID: 10200
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002AAB RID: 10923
 	public class IMotorCatapult : ILeisureInteractType
 	{
-		// Token: 0x0600E2B7 RID: 58039 RVA: 0x002176EE File Offset: 0x002158EE
+		// Token: 0x0600F0DB RID: 61659 RVA: 0x00234522 File Offset: 0x00232722
 		public static IMotorCatapult Create(IMotorCatapult? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170044C9 RID: 17609
-		// (get) Token: 0x0600E2B8 RID: 58040 RVA: 0x0021770D File Offset: 0x0021590D
+		// Token: 0x17004833 RID: 18483
+		// (get) Token: 0x0600F0DC RID: 61660 RVA: 0x00234541 File Offset: 0x00232741
 		public override ELeisureInteract Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170044CA RID: 17610
-		// (get) Token: 0x0600E2B9 RID: 58041 RVA: 0x0021771A File Offset: 0x0021591A
+		// Token: 0x17004834 RID: 18484
+		// (get) Token: 0x0600F0DD RID: 61661 RVA: 0x0023454E File Offset: 0x0023274E
 		public virtual IMotorCatapultParam Param
 		{
 			get
@@ -48,8 +46,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170044CB RID: 17611
-		// (get) Token: 0x0600E2BA RID: 58042 RVA: 0x00217750 File Offset: 0x00215950
+		// Token: 0x17004835 RID: 18485
+		// (get) Token: 0x0600F0DE RID: 61662 RVA: 0x00234584 File Offset: 0x00232784
 		public virtual EMotorCatapultSkillType? SkillType
 		{
 			get
@@ -62,14 +60,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007DAA RID: 32170
+		// Token: 0x04008465 RID: 33893
 		private IMotorCatapult Instance;
 
-		// Token: 0x04007DAB RID: 32171
+		// Token: 0x04008466 RID: 33894
 		[Nullable(2)]
 		private IMotorCatapultParam _ParamCache;
 
-		// Token: 0x04007DAC RID: 32172
+		// Token: 0x04008467 RID: 33895
 		private bool _ParamInited;
 	}
 }

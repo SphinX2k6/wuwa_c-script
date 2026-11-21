@@ -5,13 +5,13 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200083D RID: 2109
+	// Token: 0x020008E0 RID: 2272
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MotorSlideComponent : IComponentBase
 	{
-		// Token: 0x06002E39 RID: 11833 RVA: 0x00077908 File Offset: 0x00075B08
-		[NullableContext(1)]
+		// Token: 0x0600316F RID: 12655 RVA: 0x0007ED2C File Offset: 0x0007CF2C
+		[NullableContext(0)]
 		private MotorSlideComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +26,8 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002E3A RID: 11834 RVA: 0x00077940 File Offset: 0x00075B40
-		[NullableContext(1)]
+		// Token: 0x06003170 RID: 12656 RVA: 0x0007ED64 File Offset: 0x0007CF64
+		[NullableContext(0)]
 		public static MotorSlideComponent Create([Nullable(2)] MotorSlideComponent instance)
 		{
 			if (instance == null)
@@ -40,8 +40,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002E3B RID: 11835 RVA: 0x00077953 File Offset: 0x00075B53
-		[NullableContext(1)]
+		// Token: 0x06003171 RID: 12657 RVA: 0x0007ED77 File Offset: 0x0007CF77
+		[NullableContext(0)]
 		public static MotorSlideComponent CreateFromSetValue([Nullable(2)] MotorSlideComponent_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +54,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002E3C RID: 11836 RVA: 0x00077968 File Offset: 0x00075B68
-		[NullableContext(1)]
+		// Token: 0x06003172 RID: 12658 RVA: 0x0007ED8C File Offset: 0x0007CF8C
+		[NullableContext(0)]
 		public new MotorSlideComponent_SetValue ToSetValue()
 		{
 			return new MotorSlideComponent_SetValue
@@ -68,9 +68,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000C24 RID: 3108
-		// (get) Token: 0x06002E3D RID: 11837 RVA: 0x000779B8 File Offset: 0x00075BB8
-		// (set) Token: 0x06002E3E RID: 11838 RVA: 0x000779F2 File Offset: 0x00075BF2
+		// Token: 0x17000CEA RID: 3306
+		// (get) Token: 0x06003173 RID: 12659 RVA: 0x0007EDDC File Offset: 0x0007CFDC
+		// (set) Token: 0x06003174 RID: 12660 RVA: 0x0007EE16 File Offset: 0x0007D016
 		public override bool? Disabled
 		{
 			get
@@ -92,9 +92,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C25 RID: 3109
-		// (get) Token: 0x06002E3F RID: 11839 RVA: 0x00077A00 File Offset: 0x00075C00
-		// (set) Token: 0x06002E40 RID: 11840 RVA: 0x00077A2A File Offset: 0x00075C2A
+		// Token: 0x17000CEB RID: 3307
+		// (get) Token: 0x06003175 RID: 12661 RVA: 0x0007EE24 File Offset: 0x0007D024
+		// (set) Token: 0x06003176 RID: 12662 RVA: 0x0007EE4E File Offset: 0x0007D04E
 		public override bool? EdIsLocked
 		{
 			get
@@ -111,9 +111,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C26 RID: 3110
-		// (get) Token: 0x06002E41 RID: 11841 RVA: 0x00077A38 File Offset: 0x00075C38
-		// (set) Token: 0x06002E42 RID: 11842 RVA: 0x00077A99 File Offset: 0x00075C99
+		// Token: 0x17000CEC RID: 3308
+		// (get) Token: 0x06003177 RID: 12663 RVA: 0x0007EE5C File Offset: 0x0007D05C
+		// (set) Token: 0x06003178 RID: 12664 RVA: 0x0007EEBD File Offset: 0x0007D0BD
 		public virtual IConditionGroup EnableConditions
 		{
 			get
@@ -141,9 +141,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C27 RID: 3111
-		// (get) Token: 0x06002E43 RID: 11843 RVA: 0x00077AB0 File Offset: 0x00075CB0
-		// (set) Token: 0x06002E44 RID: 11844 RVA: 0x00077AEA File Offset: 0x00075CEA
+		// Token: 0x17000CED RID: 3309
+		// (get) Token: 0x06003179 RID: 12665 RVA: 0x0007EED4 File Offset: 0x0007D0D4
+		// (set) Token: 0x0600317A RID: 12666 RVA: 0x0007EF0E File Offset: 0x0007D10E
 		public virtual float? MaxAngle
 		{
 			get
@@ -165,9 +165,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C28 RID: 3112
-		// (get) Token: 0x06002E45 RID: 11845 RVA: 0x00077AF8 File Offset: 0x00075CF8
-		// (set) Token: 0x06002E46 RID: 11846 RVA: 0x00077B1F File Offset: 0x00075D1F
+		// Token: 0x17000CEE RID: 3310
+		// (get) Token: 0x0600317B RID: 12667 RVA: 0x0007EF1C File Offset: 0x0007D11C
+		// (set) Token: 0x0600317C RID: 12668 RVA: 0x0007EF43 File Offset: 0x0007D143
 		public virtual string MotorSlideDtName
 		{
 			get
@@ -189,17 +189,17 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001E8A RID: 7818
+		// Token: 0x04002099 RID: 8345
 		protected new MotorSlideComponent FbInstance;
 
-		// Token: 0x04001E8B RID: 7819
+		// Token: 0x0400209A RID: 8346
 		protected new MotorSlideComponent_SetValue PocoInterface;
 
-		// Token: 0x04001E8C RID: 7820
-		[Nullable(1)]
+		// Token: 0x0400209B RID: 8347
+		[Nullable(0)]
 		private IConditionGroup _EnableConditionsCache;
 
-		// Token: 0x04001E8D RID: 7821
+		// Token: 0x0400209C RID: 8348
 		private bool _EnableConditionsInited;
 	}
 }

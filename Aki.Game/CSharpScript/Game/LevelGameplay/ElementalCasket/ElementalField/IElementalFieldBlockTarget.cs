@@ -4,12 +4,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 {
-	// Token: 0x02006EA3 RID: 28323
+	// Token: 0x02006023 RID: 24611
 	public interface IElementalFieldBlockTarget
 	{
-		// Token: 0x17009A79 RID: 39545
-		// (get) Token: 0x06045029 RID: 282665
-		// (set) Token: 0x0604502A RID: 282666
+		// Token: 0x17006FB0 RID: 28592
+		// (get) Token: 0x0603B1CA RID: 242122
+		// (set) Token: 0x0603B1CB RID: 242123
 		[Nullable(new byte[]
 		{
 			1,
@@ -25,9 +25,9 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			2
 		})] set; }
 
-		// Token: 0x17009A7A RID: 39546
-		// (get) Token: 0x0604502B RID: 282667
-		// (set) Token: 0x0604502C RID: 282668
+		// Token: 0x17006FB1 RID: 28593
+		// (get) Token: 0x0603B1CC RID: 242124
+		// (set) Token: 0x0603B1CD RID: 242125
 		ECollisionChannel TargetChannel { get; set; }
 	}
 }

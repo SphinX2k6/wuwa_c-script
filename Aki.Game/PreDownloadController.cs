@@ -6,35 +6,35 @@ using CSharpScript.Launcher;
 using CSharpScript.Launcher.Define;
 using CSharpScript.Launcher.PreDownload;
 
-// Token: 0x02002213 RID: 8723
+// Token: 0x020016F7 RID: 5879
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class PreDownloadController : UiControllerBase
 {
-	// Token: 0x06010FFE RID: 69630 RVA: 0x00425029 File Offset: 0x00423229
+	// Token: 0x0600E494 RID: 58516 RVA: 0x00431BC5 File Offset: 0x0042FDC5
 	protected override bool OnInit()
 	{
 		return true;
 	}
 
-	// Token: 0x06010FFF RID: 69631 RVA: 0x0042502C File Offset: 0x0042322C
+	// Token: 0x0600E495 RID: 58517 RVA: 0x00431BC8 File Offset: 0x0042FDC8
 	protected override bool OnClear()
 	{
 		return true;
 	}
 
-	// Token: 0x06011000 RID: 69632 RVA: 0x0042502F File Offset: 0x0042322F
+	// Token: 0x0600E496 RID: 58518 RVA: 0x00431BCB File Offset: 0x0042FDCB
 	protected override void OnAddEvents()
 	{
 	}
 
-	// Token: 0x06011001 RID: 69633 RVA: 0x00425031 File Offset: 0x00423231
+	// Token: 0x0600E497 RID: 58519 RVA: 0x00431BCD File Offset: 0x0042FDCD
 	protected override void OnRemoveEvents()
 	{
 	}
 
-	// Token: 0x06011002 RID: 69634 RVA: 0x00425034 File Offset: 0x00423234
+	// Token: 0x0600E498 RID: 58520 RVA: 0x00431BD0 File Offset: 0x0042FDD0
 	public void OnPreDownloadBtnClick(bool fromLogin)
 	{
 		if (PreDownloadManager.Get().IsComplete())
@@ -52,7 +52,7 @@ public class PreDownloadController : UiControllerBase
 		this.OpenPreDownloadView();
 	}
 
-	// Token: 0x06011003 RID: 69635 RVA: 0x00425094 File Offset: 0x00423294
+	// Token: 0x0600E499 RID: 58521 RVA: 0x00431C30 File Offset: 0x0042FE30
 	private void OpenPreDownloadConfirmBox()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.PreDownloadConfirmBox);
@@ -68,7 +68,7 @@ public class PreDownloadController : UiControllerBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x06011004 RID: 69636 RVA: 0x0042512C File Offset: 0x0042332C
+	// Token: 0x0600E49A RID: 58522 RVA: 0x00431CC8 File Offset: 0x0042FEC8
 	private void OpenPreDownloadView()
 	{
 		if (RemoteInfo.Instance.PreVerConfig != null)
@@ -79,7 +79,7 @@ public class PreDownloadController : UiControllerBase
 		UiManager.Instance.OpenView(EUiViewName.PreDownloadView, null, null);
 	}
 
-	// Token: 0x06011005 RID: 69637 RVA: 0x00425172 File Offset: 0x00423372
+	// Token: 0x0600E49B RID: 58523 RVA: 0x00431D0E File Offset: 0x0042FF0E
 	public void ClosePreDownloadView()
 	{
 		UiManager.Instance.CloseView(EUiViewName.PreDownloadView, null);
@@ -89,7 +89,7 @@ public class PreDownloadController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06011006 RID: 69638 RVA: 0x0042519C File Offset: 0x0042339C
+	// Token: 0x0600E49C RID: 58524 RVA: 0x00431D38 File Offset: 0x0042FF38
 	public void OnCellNetTypeChanged()
 	{
 		if (UiManager.Instance.IsViewShow(EUiViewName.PreDownloadView))
@@ -112,7 +112,7 @@ public class PreDownloadController : UiControllerBase
 		ScrollingTipsController.Instance.ShowTipsByTextId("PreDownload_ChangeCellNet", Array.Empty<object>());
 	}
 
-	// Token: 0x06011007 RID: 69639 RVA: 0x0042523C File Offset: 0x0042343C
+	// Token: 0x0600E49D RID: 58525 RVA: 0x00431DD8 File Offset: 0x0042FFD8
 	public string GetLocalText(string textTableId, params string[] args)
 	{
 		string hotPatchText = LauncherConfigLib.Instance.GetHotPatchText(textTableId);
@@ -137,8 +137,8 @@ public class PreDownloadController : UiControllerBase
 		return text;
 	}
 
-	// Token: 0x170015A6 RID: 5542
-	// (get) Token: 0x06011008 RID: 69640 RVA: 0x004252B7 File Offset: 0x004234B7
+	// Token: 0x170015DD RID: 5597
+	// (get) Token: 0x0600E49E RID: 58526 RVA: 0x00431E53 File Offset: 0x00430053
 	public static PreDownloadController Instance
 	{
 		get
@@ -147,7 +147,7 @@ public class PreDownloadController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06011009 RID: 69641 RVA: 0x004252BE File Offset: 0x004234BE
+	// Token: 0x0600E49F RID: 58527 RVA: 0x00431E5A File Offset: 0x0043005A
 	public static PreDownloadController GetOrCreateInstance()
 	{
 		if (PreDownloadController._Instance == null)
@@ -157,7 +157,7 @@ public class PreDownloadController : UiControllerBase
 		return PreDownloadController._Instance;
 	}
 
-	// Token: 0x0601100A RID: 69642 RVA: 0x004252D2 File Offset: 0x004234D2
+	// Token: 0x0600E4A0 RID: 58528 RVA: 0x00431E6E File Offset: 0x0043006E
 	public static bool CreateInstance()
 	{
 		if (PreDownloadController._Instance != null)
@@ -168,24 +168,24 @@ public class PreDownloadController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0601100B RID: 69643 RVA: 0x004252E8 File Offset: 0x004234E8
+	// Token: 0x0600E4A1 RID: 58529 RVA: 0x00431E84 File Offset: 0x00430084
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601100C RID: 69644 RVA: 0x004252EA File Offset: 0x004234EA
+	// Token: 0x0600E4A2 RID: 58530 RVA: 0x00431E86 File Offset: 0x00430086
 	public static void ResetStaticDefaultValue()
 	{
 		PreDownloadController._Instance = null;
 	}
 
-	// Token: 0x0601100D RID: 69645 RVA: 0x004252F2 File Offset: 0x004234F2
+	// Token: 0x0600E4A3 RID: 58531 RVA: 0x00431E8E File Offset: 0x0043008E
 	static PreDownloadController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PreDownloadController.CreateStaticDefaultValue), new Action(PreDownloadController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04008169 RID: 33129
+	// Token: 0x040082A7 RID: 33447
 	[Nullable(2)]
 	private static PreDownloadController _Instance;
 }

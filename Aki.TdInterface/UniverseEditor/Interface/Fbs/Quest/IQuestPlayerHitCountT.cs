@@ -3,35 +3,35 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003FFF RID: 16383
+	// Token: 0x02004440 RID: 17472
 	public class IQuestPlayerHitCountT
 	{
-		// Token: 0x17007320 RID: 29472
-		// (get) Token: 0x06017A31 RID: 96817 RVA: 0x00368EDA File Offset: 0x003670DA
-		// (set) Token: 0x06017A32 RID: 96818 RVA: 0x00368EE2 File Offset: 0x003670E2
+		// Token: 0x17007922 RID: 31010
+		// (get) Token: 0x060190CA RID: 102602 RVA: 0x00392CCE File Offset: 0x00390ECE
+		// (set) Token: 0x060190CB RID: 102603 RVA: 0x00392CD6 File Offset: 0x00390ED6
 		public EPlayerHitStatisticsType Type { get; set; }
 
-		// Token: 0x17007321 RID: 29473
-		// (get) Token: 0x06017A33 RID: 96819 RVA: 0x00368EEB File Offset: 0x003670EB
-		// (set) Token: 0x06017A34 RID: 96820 RVA: 0x00368EF3 File Offset: 0x003670F3
+		// Token: 0x17007923 RID: 31011
+		// (get) Token: 0x060190CC RID: 102604 RVA: 0x00392CDF File Offset: 0x00390EDF
+		// (set) Token: 0x060190CD RID: 102605 RVA: 0x00392CE7 File Offset: 0x00390EE7
 		public float Cd { get; set; }
 
-		// Token: 0x17007322 RID: 29474
-		// (get) Token: 0x06017A35 RID: 96821 RVA: 0x00368EFC File Offset: 0x003670FC
-		// (set) Token: 0x06017A36 RID: 96822 RVA: 0x00368F04 File Offset: 0x00367104
+		// Token: 0x17007924 RID: 31012
+		// (get) Token: 0x060190CE RID: 102606 RVA: 0x00392CF0 File Offset: 0x00390EF0
+		// (set) Token: 0x060190CF RID: 102607 RVA: 0x00392CF8 File Offset: 0x00390EF8
 		public List<int> EntityIds { get; set; }
 
-		// Token: 0x17007323 RID: 29475
-		// (get) Token: 0x06017A37 RID: 96823 RVA: 0x00368F0D File Offset: 0x0036710D
-		// (set) Token: 0x06017A38 RID: 96824 RVA: 0x00368F15 File Offset: 0x00367115
+		// Token: 0x17007925 RID: 31013
+		// (get) Token: 0x060190D0 RID: 102608 RVA: 0x00392D01 File Offset: 0x00390F01
+		// (set) Token: 0x060190D1 RID: 102609 RVA: 0x00392D09 File Offset: 0x00390F09
 		public List<int> SkillIds { get; set; }
 
-		// Token: 0x17007324 RID: 29476
-		// (get) Token: 0x06017A39 RID: 96825 RVA: 0x00368F1E File Offset: 0x0036711E
-		// (set) Token: 0x06017A3A RID: 96826 RVA: 0x00368F26 File Offset: 0x00367126
+		// Token: 0x17007926 RID: 31014
+		// (get) Token: 0x060190D2 RID: 102610 RVA: 0x00392D12 File Offset: 0x00390F12
+		// (set) Token: 0x060190D3 RID: 102611 RVA: 0x00392D1A File Offset: 0x00390F1A
 		public byte NullMask { get; set; }
 
-		// Token: 0x06017A3B RID: 96827 RVA: 0x00368F2F File Offset: 0x0036712F
+		// Token: 0x060190D4 RID: 102612 RVA: 0x00392D23 File Offset: 0x00390F23
 		public IQuestPlayerHitCountT()
 		{
 			this.Type = EPlayerHitStatisticsType.HitCount;

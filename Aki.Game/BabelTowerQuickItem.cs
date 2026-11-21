@@ -7,22 +7,22 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001156 RID: 4438
+// Token: 0x0200060A RID: 1546
 public class BabelTowerQuickItem : UiPanelBase
 {
-	// Token: 0x060074BA RID: 29882 RVA: 0x0017F3D4 File Offset: 0x0017D5D4
+	// Token: 0x06004851 RID: 18513 RVA: 0x00187F20 File Offset: 0x00186120
 	public int GetSelectedQuickIndex()
 	{
 		return this.SelectedQuickIndex;
 	}
 
-	// Token: 0x060074BB RID: 29883 RVA: 0x0017F3DC File Offset: 0x0017D5DC
+	// Token: 0x06004852 RID: 18514 RVA: 0x00187F28 File Offset: 0x00186128
 	public int GetPrevSelectedQuickIndex()
 	{
 		return this.PrevSelectedQuickIndex;
 	}
 
-	// Token: 0x060074BC RID: 29884 RVA: 0x0017F3E4 File Offset: 0x0017D5E4
+	// Token: 0x06004853 RID: 18515 RVA: 0x00187F30 File Offset: 0x00186130
 	[NullableContext(2)]
 	public UUIItem GetFirstQuickItem()
 	{
@@ -38,7 +38,7 @@ public class BabelTowerQuickItem : UiPanelBase
 		return quickOptionItem.GetRootItem();
 	}
 
-	// Token: 0x060074BD RID: 29885 RVA: 0x0017F408 File Offset: 0x0017D608
+	// Token: 0x06004854 RID: 18516 RVA: 0x00187F54 File Offset: 0x00186154
 	[NullableContext(1)]
 	public void BindLateUpdate(Action<float> callBack)
 	{
@@ -50,7 +50,7 @@ public class BabelTowerQuickItem : UiPanelBase
 		quickLoopScroll.BindLateUpdate(callBack);
 	}
 
-	// Token: 0x060074BE RID: 29886 RVA: 0x0017F41B File Offset: 0x0017D61B
+	// Token: 0x06004855 RID: 18517 RVA: 0x00187F67 File Offset: 0x00186167
 	public void UnBindLateUpdate()
 	{
 		LoopScrollView<QuickOptionItem, BabelTowerQuick> quickLoopScroll = this.QuickLoopScroll;
@@ -61,7 +61,7 @@ public class BabelTowerQuickItem : UiPanelBase
 		quickLoopScroll.UnBindLateUpdate();
 	}
 
-	// Token: 0x060074BF RID: 29887 RVA: 0x0017F430 File Offset: 0x0017D630
+	// Token: 0x06004856 RID: 18518 RVA: 0x00187F7C File Offset: 0x0018617C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -81,7 +81,7 @@ public class BabelTowerQuickItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060074C0 RID: 29888 RVA: 0x0017F4FC File Offset: 0x0017D6FC
+	// Token: 0x06004857 RID: 18519 RVA: 0x00188048 File Offset: 0x00186248
 	protected override void OnStart()
 	{
 		UUILoopScrollViewComponent loopScrollViewComponent = base.GetLoopScrollViewComponent(1);
@@ -98,14 +98,14 @@ public class BabelTowerQuickItem : UiPanelBase
 		this.QuickLoopScroll = new LoopScrollView<QuickOptionItem, BabelTowerQuick>(loopScrollViewComponent, auibaseActor, new Func<QuickOptionItem>(this.InitQuickOptionItem), false);
 	}
 
-	// Token: 0x060074C1 RID: 29889 RVA: 0x0017F54C File Offset: 0x0017D74C
+	// Token: 0x06004858 RID: 18520 RVA: 0x00188098 File Offset: 0x00186298
 	public void SetLevelId(int levelId)
 	{
 		this.InstId = BabelTowerConfig.Instance.GetBabelTowerLevelConfig(levelId).InstId;
 		this.RefreshQuickList();
 	}
 
-	// Token: 0x060074C2 RID: 29890 RVA: 0x0017F578 File Offset: 0x0017D778
+	// Token: 0x06004859 RID: 18521 RVA: 0x001880C4 File Offset: 0x001862C4
 	[NullableContext(1)]
 	private QuickOptionItem InitQuickOptionItem()
 	{
@@ -115,7 +115,7 @@ public class BabelTowerQuickItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x060074C3 RID: 29891 RVA: 0x0017F594 File Offset: 0x0017D794
+	// Token: 0x0600485A RID: 18522 RVA: 0x001880E0 File Offset: 0x001862E0
 	private void OnQuickOptionClickHandlerWithIndex(BabelTowerQuick quickConfig, int index)
 	{
 		if (this.SelectedQuickIndex >= 0 && this.SelectedQuickIndex != index)
@@ -139,7 +139,7 @@ public class BabelTowerQuickItem : UiPanelBase
 		onQuickSelectApplied(quickConfig);
 	}
 
-	// Token: 0x060074C4 RID: 29892 RVA: 0x0017F618 File Offset: 0x0017D818
+	// Token: 0x0600485B RID: 18523 RVA: 0x00188164 File Offset: 0x00186364
 	public void RefreshQuickList()
 	{
 		IReadOnlyList<BabelTowerQuick> babelTowerQuickByInstId = BabelTowerConfig.Instance.GetBabelTowerQuickByInstId(this.InstId);
@@ -175,7 +175,7 @@ public class BabelTowerQuickItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060074C5 RID: 29893 RVA: 0x0017F69C File Offset: 0x0017D89C
+	// Token: 0x0600485C RID: 18524 RVA: 0x001881E8 File Offset: 0x001863E8
 	public void RefreshQuickListWithSelection()
 	{
 		if (this.SelectedQuickIndex < 0)
@@ -191,7 +191,7 @@ public class BabelTowerQuickItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060074C6 RID: 29894 RVA: 0x0017F704 File Offset: 0x0017D904
+	// Token: 0x0600485D RID: 18525 RVA: 0x00188250 File Offset: 0x00186450
 	public void ClearSelection()
 	{
 		if (this.SelectedQuickIndex >= 0)
@@ -215,7 +215,7 @@ public class BabelTowerQuickItem : UiPanelBase
 		onQuickSelectCleared();
 	}
 
-	// Token: 0x060074C7 RID: 29895 RVA: 0x0017F77C File Offset: 0x0017D97C
+	// Token: 0x0600485E RID: 18526 RVA: 0x001882C8 File Offset: 0x001864C8
 	public void ClearSelectionWithoutCallback()
 	{
 		if (this.SelectedQuickIndex >= 0)
@@ -232,7 +232,7 @@ public class BabelTowerQuickItem : UiPanelBase
 		this.SelectedQuickIndex = -1;
 	}
 
-	// Token: 0x060074C8 RID: 29896 RVA: 0x0017F7D8 File Offset: 0x0017D9D8
+	// Token: 0x0600485F RID: 18527 RVA: 0x00188324 File Offset: 0x00186524
 	public void PlayContentAnimController()
 	{
 		LoopScrollView<QuickOptionItem, BabelTowerQuick> quickLoopScroll = this.QuickLoopScroll;
@@ -243,7 +243,7 @@ public class BabelTowerQuickItem : UiPanelBase
 		quickLoopScroll.ResetGridController();
 	}
 
-	// Token: 0x040035AE RID: 13742
+	// Token: 0x04003647 RID: 13895
 	[Nullable(new byte[]
 	{
 		2,
@@ -251,61 +251,61 @@ public class BabelTowerQuickItem : UiPanelBase
 	})]
 	private LoopScrollView<QuickOptionItem, BabelTowerQuick> QuickLoopScroll;
 
-	// Token: 0x040035AF RID: 13743
+	// Token: 0x04003648 RID: 13896
 	private int InstId;
 
-	// Token: 0x040035B0 RID: 13744
+	// Token: 0x04003649 RID: 13897
 	private int SelectedQuickIndex = -1;
 
-	// Token: 0x040035B1 RID: 13745
+	// Token: 0x0400364A RID: 13898
 	private int PrevSelectedQuickIndex = -1;
 
-	// Token: 0x040035B2 RID: 13746
+	// Token: 0x0400364B RID: 13899
 	[Nullable(2)]
 	public Action<BabelTowerQuick> OnQuickSelectApplied;
 
-	// Token: 0x040035B3 RID: 13747
+	// Token: 0x0400364C RID: 13900
 	[Nullable(2)]
 	public Action OnQuickSelectCleared;
 
-	// Token: 0x02007713 RID: 30483
+	// Token: 0x020068A2 RID: 26786
 	private class EComponentDefine
 	{
-		// Token: 0x0402747B RID: 160891
+		// Token: 0x040227BC RID: 141244
 		public const int TopTextColor = 0;
 
-		// Token: 0x0402747C RID: 160892
+		// Token: 0x040227BD RID: 141245
 		public const int BuffScroll = 1;
 
-		// Token: 0x0402747D RID: 160893
+		// Token: 0x040227BE RID: 141246
 		public const int BuffItem = 2;
 
-		// Token: 0x0402747E RID: 160894
+		// Token: 0x040227BF RID: 141247
 		public const int BuffTips = 3;
 
-		// Token: 0x0402747F RID: 160895
+		// Token: 0x040227C0 RID: 141248
 		public const int TitleName = 4;
 	}
 
-	// Token: 0x02007714 RID: 30484
+	// Token: 0x020068A3 RID: 26787
 	private class EBuffItemSubComponent
 	{
-		// Token: 0x04027480 RID: 160896
+		// Token: 0x040227C1 RID: 141249
 		public const int QuickItem = 0;
 
-		// Token: 0x04027481 RID: 160897
+		// Token: 0x040227C2 RID: 141250
 		public const int ColorSprite = 1;
 
-		// Token: 0x04027482 RID: 160898
+		// Token: 0x040227C3 RID: 141251
 		public const int TitleText = 2;
 
-		// Token: 0x04027483 RID: 160899
+		// Token: 0x040227C4 RID: 141252
 		public const int DescText = 3;
 
-		// Token: 0x04027484 RID: 160900
+		// Token: 0x040227C5 RID: 141253
 		public const int DeLevelArt = 4;
 
-		// Token: 0x04027485 RID: 160901
+		// Token: 0x040227C6 RID: 141254
 		public const int LockItem = 5;
 	}
 }

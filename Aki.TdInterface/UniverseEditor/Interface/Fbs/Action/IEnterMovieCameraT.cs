@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020066AC RID: 26284
+	// Token: 0x02006D26 RID: 27942
 	public class IEnterMovieCameraT
 	{
-		// Token: 0x1700C34F RID: 49999
-		// (get) Token: 0x0602DB08 RID: 187144 RVA: 0x00640641 File Offset: 0x0063E841
-		// (set) Token: 0x0602DB09 RID: 187145 RVA: 0x00640649 File Offset: 0x0063E849
+		// Token: 0x1700CD00 RID: 52480
+		// (get) Token: 0x06030325 RID: 197413 RVA: 0x0068D8F5 File Offset: 0x0068BAF5
+		// (set) Token: 0x06030326 RID: 197414 RVA: 0x0068D8FD File Offset: 0x0068BAFD
 		public TEnterMovieCameraTypeUnion MovieCameraConfig { get; set; }
 
-		// Token: 0x0602DB0A RID: 187146 RVA: 0x00640652 File Offset: 0x0063E852
+		// Token: 0x06030327 RID: 197415 RVA: 0x0068D906 File Offset: 0x0068BB06
 		public IEnterMovieCameraT()
 		{
 			this.MovieCameraConfig = null;

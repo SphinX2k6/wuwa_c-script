@@ -5,10 +5,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005729 RID: 22313
+	// Token: 0x02005D30 RID: 23856
 	public static class IPetalGrabRoleMotionInteractVerify
 	{
-		// Token: 0x0602556D RID: 152941 RVA: 0x00526DB8 File Offset: 0x00524FB8
+		// Token: 0x06027A8D RID: 162445 RVA: 0x0056CEF4 File Offset: 0x0056B0F4
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			if (verifier.VerifyTableStart(tablePos) && verifier.VerifyField(tablePos, 4, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 6, 1UL, 1UL, false))
@@ -27,24 +27,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 					{
 						verifyAction2 = (IPetalGrabRoleMotionInteractVerify.<>O.<1>__Verify = new VerifyTableAction(IPetalGrabEventVerify.Verify));
 					}
-					if (verifier.VerifyVectorOfTables(tablePos, offsetId2, verifyAction2, false) && verifier.VerifyField(tablePos, 12, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 14, 1UL, 1UL, false))
+					if (verifier.VerifyVectorOfTables(tablePos, offsetId2, verifyAction2, false) && verifier.VerifyField(tablePos, 12, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 14, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 16, 1UL, 1UL, false))
 					{
-						return verifier.VerifyTableEnd(tablePos);
+						short typeIdVOffset = 16;
+						short valueVOffset = 18;
+						VerifyUnionAction verifyAction3;
+						if ((verifyAction3 = IPetalGrabRoleMotionInteractVerify.<>O.<2>__Verify) == null)
+						{
+							verifyAction3 = (IPetalGrabRoleMotionInteractVerify.<>O.<2>__Verify = new VerifyUnionAction(TSplineMovePatternVerify.Verify));
+						}
+						if (verifier.VerifyUnion(tablePos, typeIdVOffset, valueVOffset, verifyAction3, false) && verifier.VerifyField(tablePos, 20, 1UL, 1UL, false))
+						{
+							return verifier.VerifyTableEnd(tablePos);
+						}
 					}
 				}
 			}
 			return false;
 		}
 
-		// Token: 0x02007BD3 RID: 31699
+		// Token: 0x02008441 RID: 33857
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0401368E RID: 79502
+			// Token: 0x0401472D RID: 83757
 			public static VerifyTableAction <0>__Verify;
 
-			// Token: 0x0401368F RID: 79503
+			// Token: 0x0401472E RID: 83758
 			public static VerifyTableAction <1>__Verify;
+
+			// Token: 0x0401472F RID: 83759
+			public static VerifyUnionAction <2>__Verify;
 		}
 	}
 }

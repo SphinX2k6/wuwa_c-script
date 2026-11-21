@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D1D RID: 3357
+	// Token: 0x02000E17 RID: 3607
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IConnectorPointToPointPathAdvance : IConnectorLogicType
 	{
-		// Token: 0x06004C9F RID: 19615 RVA: 0x000BED8B File Offset: 0x000BCF8B
-		[NullableContext(1)]
+		// Token: 0x060051B9 RID: 20921 RVA: 0x000CA45F File Offset: 0x000C865F
+		[NullableContext(0)]
 		public static IConnectorPointToPointPathAdvance Create(IConnectorPointToPointPathAdvance? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001822 RID: 6178
-		// (get) Token: 0x06004CA0 RID: 19616 RVA: 0x000BEDAA File Offset: 0x000BCFAA
+		// Token: 0x17001986 RID: 6534
+		// (get) Token: 0x060051BA RID: 20922 RVA: 0x000CA47E File Offset: 0x000C867E
 		public override EConnectorLogicType Type
 		{
 			get
@@ -33,12 +33,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001823 RID: 6179
-		// (get) Token: 0x06004CA1 RID: 19617 RVA: 0x000BEDB7 File Offset: 0x000BCFB7
-		[Nullable(1)]
+		// Token: 0x17001987 RID: 6535
+		// (get) Token: 0x060051BB RID: 20923 RVA: 0x000CA48B File Offset: 0x000C868B
+		[Nullable(0)]
 		public override IConnectorEffectConfig EffectConfig
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._EffectConfigInited)
@@ -51,8 +51,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001824 RID: 6180
-		// (get) Token: 0x06004CA2 RID: 19618 RVA: 0x000BEDEB File Offset: 0x000BCFEB
+		// Token: 0x17001988 RID: 6536
+		// (get) Token: 0x060051BC RID: 20924 RVA: 0x000CA4BF File Offset: 0x000C86BF
 		public virtual IConnectorPathAdvanceInitiator Initiator
 		{
 			get
@@ -67,8 +67,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001825 RID: 6181
-		// (get) Token: 0x06004CA3 RID: 19619 RVA: 0x000BEE1F File Offset: 0x000BD01F
+		// Token: 0x17001989 RID: 6537
+		// (get) Token: 0x060051BD RID: 20925 RVA: 0x000CA4F3 File Offset: 0x000C86F3
 		public virtual IConnectorPathAdvanceReceiver Receiver
 		{
 			get
@@ -83,25 +83,25 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002BDA RID: 11226
+		// Token: 0x04002E9A RID: 11930
 		private IConnectorPointToPointPathAdvance Instance;
 
-		// Token: 0x04002BDB RID: 11227
+		// Token: 0x04002E9B RID: 11931
 		private IConnectorEffectConfig _EffectConfigCache;
 
-		// Token: 0x04002BDC RID: 11228
+		// Token: 0x04002E9C RID: 11932
 		private bool _EffectConfigInited;
 
-		// Token: 0x04002BDD RID: 11229
+		// Token: 0x04002E9D RID: 11933
 		private IConnectorPathAdvanceInitiator _InitiatorCache;
 
-		// Token: 0x04002BDE RID: 11230
+		// Token: 0x04002E9E RID: 11934
 		private bool _InitiatorInited;
 
-		// Token: 0x04002BDF RID: 11231
+		// Token: 0x04002E9F RID: 11935
 		private IConnectorPathAdvanceReceiver _ReceiverCache;
 
-		// Token: 0x04002BE0 RID: 11232
+		// Token: 0x04002EA0 RID: 11936
 		private bool _ReceiverInited;
 	}
 }

@@ -8,10 +8,10 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020015F3 RID: 5619
+// Token: 0x02000AAB RID: 2731
 public class WheelTowerStrShowPanel : UiPanelBase
 {
-	// Token: 0x06009E98 RID: 40600 RVA: 0x0022A1E4 File Offset: 0x002283E4
+	// Token: 0x06007276 RID: 29302 RVA: 0x00233FBC File Offset: 0x002321BC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -38,7 +38,7 @@ public class WheelTowerStrShowPanel : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009E99 RID: 40601 RVA: 0x0022A2F0 File Offset: 0x002284F0
+	// Token: 0x06007277 RID: 29303 RVA: 0x002340C8 File Offset: 0x002322C8
 	protected override void OnStart()
 	{
 		this.Scroll = new GenericScrollViewNew<StrItem, WheelTowerStrItemData>(base.GetScrollViewWithScrollbar(0), () => new StrItem(), null, false, null);
@@ -50,7 +50,7 @@ public class WheelTowerStrShowPanel : UiPanelBase
 		text.SetText(WheelTowerModel.Instance.GetTowerConfig().DefaultCostEnergy.ToString(), true);
 	}
 
-	// Token: 0x06009E9A RID: 40602 RVA: 0x0022A360 File Offset: 0x00228560
+	// Token: 0x06007278 RID: 29304 RVA: 0x00234138 File Offset: 0x00232338
 	public void Refresh()
 	{
 		List<WheelTowerStrItemData> list = new List<WheelTowerStrItemData>();
@@ -79,7 +79,7 @@ public class WheelTowerStrShowPanel : UiPanelBase
 		scroll.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x06009E9B RID: 40603 RVA: 0x0022A440 File Offset: 0x00228640
+	// Token: 0x06007279 RID: 29305 RVA: 0x00234218 File Offset: 0x00232418
 	public void SetNullState(bool nullState)
 	{
 		UUIItem item = base.GetItem(2);
@@ -100,7 +100,7 @@ public class WheelTowerStrShowPanel : UiPanelBase
 		uuiitem.SetUIActive(!nullState);
 	}
 
-	// Token: 0x06009E9C RID: 40604 RVA: 0x0022A487 File Offset: 0x00228687
+	// Token: 0x0600727A RID: 29306 RVA: 0x0023425F File Offset: 0x0023245F
 	private void ButtonClick()
 	{
 		Action onClickConfirm = this.OnClickConfirm;
@@ -111,11 +111,11 @@ public class WheelTowerStrShowPanel : UiPanelBase
 		onClickConfirm();
 	}
 
-	// Token: 0x040046E2 RID: 18146
+	// Token: 0x04004788 RID: 18312
 	[Nullable(2)]
 	public Action OnClickConfirm;
 
-	// Token: 0x040046E3 RID: 18147
+	// Token: 0x04004789 RID: 18313
 	[Nullable(new byte[]
 	{
 		2,

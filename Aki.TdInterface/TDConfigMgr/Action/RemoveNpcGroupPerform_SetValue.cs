@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002151 RID: 8529
+	// Token: 0x020023B2 RID: 9138
 	public class RemoveNpcGroupPerform_SetValue
 	{
-		// Token: 0x04007036 RID: 28726
-		[Nullable(1)]
+		// Token: 0x0400766B RID: 30315
 		public string Key;
 	}
 }

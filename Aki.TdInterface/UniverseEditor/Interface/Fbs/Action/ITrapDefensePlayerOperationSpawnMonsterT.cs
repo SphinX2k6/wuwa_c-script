@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007464 RID: 29796
+	// Token: 0x02007C57 RID: 31831
 	public class ITrapDefensePlayerOperationSpawnMonsterT
 	{
-		// Token: 0x1700E22D RID: 57901
-		// (get) Token: 0x06036224 RID: 221732 RVA: 0x0075C516 File Offset: 0x0075A716
-		// (set) Token: 0x06036225 RID: 221733 RVA: 0x0075C51E File Offset: 0x0075A71E
+		// Token: 0x1700EE4A RID: 61002
+		// (get) Token: 0x0603960D RID: 235021 RVA: 0x007BF242 File Offset: 0x007BD442
+		// (set) Token: 0x0603960E RID: 235022 RVA: 0x007BF24A File Offset: 0x007BD44A
 		public ETrapDefensePlayerOperationType Type { get; set; }
 
-		// Token: 0x06036226 RID: 221734 RVA: 0x0075C527 File Offset: 0x0075A727
+		// Token: 0x0603960F RID: 235023 RVA: 0x007BF253 File Offset: 0x007BD453
 		public ITrapDefensePlayerOperationSpawnMonsterT()
 		{
 			this.Type = ETrapDefensePlayerOperationType.SpawnMonster;

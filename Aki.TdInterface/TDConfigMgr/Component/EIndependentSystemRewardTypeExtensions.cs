@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200096A RID: 2410
+	// Token: 0x02000A1D RID: 2589
 	public static class EIndependentSystemRewardTypeExtensions
 	{
-		// Token: 0x0600360E RID: 13838 RVA: 0x0008D21C File Offset: 0x0008B41C
+		// Token: 0x06003995 RID: 14741 RVA: 0x00095188 File Offset: 0x00093388
 		public static string ToEnumString(this EIndependentSystemRewardType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600360F RID: 13839 RVA: 0x0008D244 File Offset: 0x0008B444
+		// Token: 0x06003996 RID: 14742 RVA: 0x000951B0 File Offset: 0x000933B0
 		public static EIndependentSystemRewardType FromString(string name)
 		{
 			EIndependentSystemRewardType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003610 RID: 13840 RVA: 0x0008D26D File Offset: 0x0008B46D
+		// Token: 0x06003997 RID: 14743 RVA: 0x000951D9 File Offset: 0x000933D9
 		public static bool TryFromString(string name, out EIndependentSystemRewardType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x06003611 RID: 13841 RVA: 0x0008D292 File Offset: 0x0008B492
+		// Token: 0x06003998 RID: 14744 RVA: 0x000951FE File Offset: 0x000933FE
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003612 RID: 13842 RVA: 0x0008D2A2 File Offset: 0x0008B4A2
+		// Token: 0x06003999 RID: 14745 RVA: 0x0009520E File Offset: 0x0009340E
 		public static EIndependentSystemRewardType[] GetValues()
 		{
 			return new EIndependentSystemRewardType[1];
 		}
 
-		// Token: 0x06003613 RID: 13843 RVA: 0x0008D2AA File Offset: 0x0008B4AA
+		// Token: 0x0600399A RID: 14746 RVA: 0x00095216 File Offset: 0x00093416
 		public static string[] GetNames()
 		{
 			return new string[]

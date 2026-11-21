@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003A68 RID: 14952
+	// Token: 0x02003E43 RID: 15939
 	public static class IBvbMaxRoundVerify
 	{
-		// Token: 0x06014450 RID: 83024 RVA: 0x002F5F86 File Offset: 0x002F4186
+		// Token: 0x0601576C RID: 87916 RVA: 0x00319172 File Offset: 0x00317372
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			return verifier.VerifyTableStart(tablePos) && verifier.VerifyField(tablePos, 4, 1UL, 1UL, false) && verifier.VerifyTableEnd(tablePos);

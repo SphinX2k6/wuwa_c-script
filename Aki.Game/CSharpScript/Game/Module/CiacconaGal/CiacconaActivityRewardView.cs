@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -13,17 +12,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BF6 RID: 23542
+	// Token: 0x02004BD6 RID: 19414
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CiacconaActivityRewardView : UiTickViewBase
 	{
-		// Token: 0x0603B7EE RID: 243694 RVA: 0x00E306F4 File Offset: 0x00E2E8F4
+		// Token: 0x06030739 RID: 198457 RVA: 0x00D80A00 File Offset: 0x00D7EC00
 		public CiacconaActivityRewardView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603B7EF RID: 243695 RVA: 0x00E30700 File Offset: 0x00E2E900
+		// Token: 0x0603073A RID: 198458 RVA: 0x00D80A0C File Offset: 0x00D7EC0C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -45,7 +44,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603B7F0 RID: 243696 RVA: 0x00E307F0 File Offset: 0x00E2E9F0
+		// Token: 0x0603073B RID: 198459 RVA: 0x00D80AFC File Offset: 0x00D7ECFC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			CiacconaActivityRewardView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -56,7 +55,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B7F1 RID: 243697 RVA: 0x00E30834 File Offset: 0x00E2EA34
+		// Token: 0x0603073C RID: 198460 RVA: 0x00D80B40 File Offset: 0x00D7ED40
 		protected override void OnStart()
 		{
 			this.ScrollView = new GenericScrollViewNew<CiacconaActivityRewardItem, CiacconaGalRewardData>(base.GetScrollViewWithScrollbar(3), new Func<CiacconaActivityRewardItem>(this.CreateItem), null, false, null);
@@ -69,26 +68,26 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			EventSystem.Instance.Add(EEventName.OnCiacconaRewardDataUpdate, new Action(this.OnDataUpdate));
 		}
 
-		// Token: 0x0603B7F2 RID: 243698 RVA: 0x00E30895 File Offset: 0x00E2EA95
+		// Token: 0x0603073D RID: 198461 RVA: 0x00D80BA1 File Offset: 0x00D7EDA1
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove(EEventName.OnCiacconaRewardDataUpdate, new Action(this.OnDataUpdate));
 		}
 
-		// Token: 0x0603B7F3 RID: 243699 RVA: 0x00E308B3 File Offset: 0x00E2EAB3
+		// Token: 0x0603073E RID: 198462 RVA: 0x00D80BBF File Offset: 0x00D7EDBF
 		protected override void OnTick(float _)
 		{
 			this.RefreshTimeStr();
 		}
 
-		// Token: 0x0603B7F4 RID: 243700 RVA: 0x00E308BC File Offset: 0x00E2EABC
+		// Token: 0x0603073F RID: 198463 RVA: 0x00D80BC8 File Offset: 0x00D7EDC8
 		private void Refresh()
 		{
 			CiacconaGalRewardData[] allRewardDataByActivityId = CiacconaGalModel.Instance.GetAllRewardDataByActivityId(this.ActivityData.Id);
 			GenericScrollViewNew<CiacconaActivityRewardItem, CiacconaGalRewardData> scrollView = this.ScrollView;
 			if (scrollView != null)
 			{
-				scrollView.RefreshByData(allRewardDataByActivityId.ToList<CiacconaGalRewardData>(), null, false);
+				scrollView.RefreshByData(allRewardDataByActivityId, null, false);
 			}
 			ValueTuple<int, int> progressRewardProgress = CiacconaGalModel.Instance.GetProgressRewardProgress();
 			int item = progressRewardProgress.Item1;
@@ -102,7 +101,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			base.GetSprite(2).fillAmount = (float)item * 1f / (float)((item2 == 0) ? 1 : item2);
 		}
 
-		// Token: 0x0603B7F5 RID: 243701 RVA: 0x00E30968 File Offset: 0x00E2EB68
+		// Token: 0x06030740 RID: 198464 RVA: 0x00D80C6C File Offset: 0x00D7EE6C
 		private void RefreshTimeStr()
 		{
 			string localTextNew = ConfigMultiTextLang.GetLocalTextNew("Xkjsx_Rewards_Timeless", null);
@@ -116,47 +115,47 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			text.SetText(newText, true);
 		}
 
-		// Token: 0x0603B7F6 RID: 243702 RVA: 0x00E309AB File Offset: 0x00E2EBAB
+		// Token: 0x06030741 RID: 198465 RVA: 0x00D80CAF File Offset: 0x00D7EEAF
 		private CiacconaActivityRewardItem CreateItem()
 		{
 			return new CiacconaActivityRewardItem();
 		}
 
-		// Token: 0x0603B7F7 RID: 243703 RVA: 0x00E309B2 File Offset: 0x00E2EBB2
+		// Token: 0x06030742 RID: 198466 RVA: 0x00D80CB6 File Offset: 0x00D7EEB6
 		private void OnDataUpdate()
 		{
 			this.Refresh();
 		}
 
-		// Token: 0x0401EFE8 RID: 126952
+		// Token: 0x04019A99 RID: 105113
 		private PopupCaptionItem ItemCaption;
 
-		// Token: 0x0401EFE9 RID: 126953
+		// Token: 0x04019A9A RID: 105114
 		private GenericScrollViewNew<CiacconaActivityRewardItem, CiacconaGalRewardData> ScrollView;
 
-		// Token: 0x0401EFEA RID: 126954
+		// Token: 0x04019A9B RID: 105115
 		private CiacconaGalActivityData ActivityData;
 
-		// Token: 0x0200BDE0 RID: 48608
+		// Token: 0x0200A7E8 RID: 42984
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x04039408 RID: 234504
+			// Token: 0x04033DCB RID: 212427
 			public const int ItemCaption = 0;
 
-			// Token: 0x04039409 RID: 234505
+			// Token: 0x04033DCC RID: 212428
 			public const int TextNum = 1;
 
-			// Token: 0x0403940A RID: 234506
+			// Token: 0x04033DCD RID: 212429
 			public const int SpriteProgress = 2;
 
-			// Token: 0x0403940B RID: 234507
+			// Token: 0x04033DCE RID: 212430
 			public const int ScrollView = 3;
 
-			// Token: 0x0403940C RID: 234508
+			// Token: 0x04033DCF RID: 212431
 			public const int ItemTask = 4;
 
-			// Token: 0x0403940D RID: 234509
+			// Token: 0x04033DD0 RID: 212432
 			public const int TextTime = 5;
 		}
 	}

@@ -6,16 +6,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DDF RID: 24031
+	// Token: 0x02004DC3 RID: 19907
 	public class SpecialEnergyBarJingRanSlot : SpecialEnergyBarSlot
 	{
-		// Token: 0x0603D161 RID: 250209 RVA: 0x00EB2F5B File Offset: 0x00EB115B
+		// Token: 0x060320D8 RID: 205016 RVA: 0x00E03E4F File Offset: 0x00E0204F
 		public void MarkStateChange()
 		{
 			this.IsWaitingStateChange = false;
 		}
 
-		// Token: 0x0603D162 RID: 250210 RVA: 0x00EB2F64 File Offset: 0x00EB1164
+		// Token: 0x060320D9 RID: 205017 RVA: 0x00E03E58 File Offset: 0x00E02058
 		public void SetStrengthState(bool isStrength)
 		{
 			if (this.IsInStrengthState == isStrength)
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.SetUseEffectMode(this.IsInStrengthState ? EUseEffectMode.EnergyDecreaseSegment : EUseEffectMode.Default);
 		}
 
-		// Token: 0x0603D163 RID: 250211 RVA: 0x00EB2F90 File Offset: 0x00EB1190
+		// Token: 0x060320DA RID: 205018 RVA: 0x00E03E84 File Offset: 0x00E02084
 		[NullableContext(1)]
 		protected override UniTask InitSlotItem(UUIItem slotItem)
 		{
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitSlotItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D164 RID: 250212 RVA: 0x00EB2FDC File Offset: 0x00EB11DC
+		// Token: 0x060320DB RID: 205019 RVA: 0x00E03ED0 File Offset: 0x00E020D0
 		protected override void OnStart()
 		{
 			this.OverrideColor = true;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.OnStart();
 		}
 
-		// Token: 0x0603D165 RID: 250213 RVA: 0x00EB302C File Offset: 0x00EB122C
+		// Token: 0x060320DC RID: 205020 RVA: 0x00E03F20 File Offset: 0x00E02120
 		[NullableContext(1)]
 		private void SetItemStyle(int index, string barColor, string pointColor)
 		{
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			specialEnergyBarSlotItem2.SetPointColor(fcolor);
 		}
 
-		// Token: 0x0603D166 RID: 250214 RVA: 0x00EB3070 File Offset: 0x00EB1270
+		// Token: 0x060320DD RID: 205021 RVA: 0x00E03F64 File Offset: 0x00E02164
 		protected override void OnInitData()
 		{
 			base.OnInitData();
@@ -75,21 +75,21 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ConsumeTime = ((config2 != null) ? config2.ExtraFloatParams[1] : SpecialEnergyBarJingRanSlot.DEFAULT_CONSUME_TIME);
 		}
 
-		// Token: 0x0603D167 RID: 250215 RVA: 0x00EB30DF File Offset: 0x00EB12DF
+		// Token: 0x060320DE RID: 205022 RVA: 0x00E03FD3 File Offset: 0x00E021D3
 		protected override void OnAttributeChanged()
 		{
 			this.CurrentPercent = base.GetTargetAttributePercent();
 			this.OnBarPercentChanged();
 		}
 
-		// Token: 0x0603D168 RID: 250216 RVA: 0x00EB30F3 File Offset: 0x00EB12F3
+		// Token: 0x060320DF RID: 205023 RVA: 0x00E03FE7 File Offset: 0x00E021E7
 		protected override void OnMaxAttributeChanged()
 		{
 			this.CurrentPercent = base.GetTargetAttributePercent();
 			this.OnBarPercentChanged();
 		}
 
-		// Token: 0x0603D169 RID: 250217 RVA: 0x00EB3108 File Offset: 0x00EB1308
+		// Token: 0x060320E0 RID: 205024 RVA: 0x00E03FFC File Offset: 0x00E021FC
 		private float CalcConsumeEnergyLength(int slotIndex)
 		{
 			float currentPercent = this.CurrentPercent;
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return (num2 - num) * (float)this.SlotNum;
 		}
 
-		// Token: 0x0603D16A RID: 250218 RVA: 0x00EB3158 File Offset: 0x00EB1358
+		// Token: 0x060320E1 RID: 205025 RVA: 0x00E0404C File Offset: 0x00E0224C
 		private void SetAllItemAlpha(float alpha)
 		{
 			for (int i = 0; i < this.SlotItemList.Count; i++)
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D16B RID: 250219 RVA: 0x00EB31A8 File Offset: 0x00EB13A8
+		// Token: 0x060320E2 RID: 205026 RVA: 0x00E0409C File Offset: 0x00E0229C
 		public override void Tick(float delta)
 		{
 			base.Tick(delta);
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D16C RID: 250220 RVA: 0x00EB31F8 File Offset: 0x00EB13F8
+		// Token: 0x060320E3 RID: 205027 RVA: 0x00E040EC File Offset: 0x00E022EC
 		protected override void RefreshBarPercent(bool isStart = false)
 		{
 			if (this.IsPlayingConsumeAnim() && this.IsInStrengthState)
@@ -195,7 +195,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BarPercent = currentPercent;
 		}
 
-		// Token: 0x0603D16D RID: 250221 RVA: 0x00EB3344 File Offset: 0x00EB1544
+		// Token: 0x060320E4 RID: 205028 RVA: 0x00E04238 File Offset: 0x00E02438
 		private void UpdateConsume(float delta)
 		{
 			if (this.RemainingConsumeTime <= 0f)
@@ -210,7 +210,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D16E RID: 250222 RVA: 0x00EB33BC File Offset: 0x00EB15BC
+		// Token: 0x060320E5 RID: 205029 RVA: 0x00E042B0 File Offset: 0x00E024B0
 		private void UpdateFadeOut(float delta)
 		{
 			if (this.RemainingFadeOutTime <= 0f)
@@ -225,7 +225,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D16F RID: 250223 RVA: 0x00EB3434 File Offset: 0x00EB1634
+		// Token: 0x060320E6 RID: 205030 RVA: 0x00E04328 File Offset: 0x00E02528
 		private void UpdateWaitingTime(float delta)
 		{
 			if (!this.IsWaitingStateChange)
@@ -239,13 +239,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D170 RID: 250224 RVA: 0x00EB346E File Offset: 0x00EB166E
+		// Token: 0x060320E7 RID: 205031 RVA: 0x00E04362 File Offset: 0x00E02562
 		protected override bool GetKeyEnable()
 		{
 			return this.IsKeyEnable;
 		}
 
-		// Token: 0x0603D171 RID: 250225 RVA: 0x00EB3478 File Offset: 0x00EB1678
+		// Token: 0x060320E8 RID: 205032 RVA: 0x00E0436C File Offset: 0x00E0256C
 		private void SetConsumeEffectActive(bool active)
 		{
 			if (this.IsConsumeEffectActive == active)
@@ -263,7 +263,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.IsConsumeEffectActive = active;
 		}
 
-		// Token: 0x0603D172 RID: 250226 RVA: 0x00EB34C9 File Offset: 0x00EB16C9
+		// Token: 0x060320E9 RID: 205033 RVA: 0x00E043BD File Offset: 0x00E025BD
 		public void SetKeyEnable(bool enable)
 		{
 			this.IsKeyEnable = enable;
@@ -275,58 +275,58 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshBarPercent(false);
 		}
 
-		// Token: 0x0603D173 RID: 250227 RVA: 0x00EB34EC File Offset: 0x00EB16EC
+		// Token: 0x060320EA RID: 205034 RVA: 0x00E043E0 File Offset: 0x00E025E0
 		public bool IsPlayingConsumeAnim()
 		{
 			return this.RemainingFadeOutTime > 0f || this.RemainingConsumeTime > 0f || this.IsWaitingStateChange;
 		}
 
-		// Token: 0x0401FD4F RID: 130383
+		// Token: 0x0401A80C RID: 108556
 		private bool IsKeyEnable;
 
-		// Token: 0x0401FD50 RID: 130384
+		// Token: 0x0401A80D RID: 108557
 		private float CurrentPercent;
 
-		// Token: 0x0401FD51 RID: 130385
+		// Token: 0x0401A80E RID: 108558
 		private float BarPercent;
 
-		// Token: 0x0401FD52 RID: 130386
+		// Token: 0x0401A80F RID: 108559
 		private float FadeOutTime;
 
-		// Token: 0x0401FD53 RID: 130387
+		// Token: 0x0401A810 RID: 108560
 		private float ConsumeTime;
 
-		// Token: 0x0401FD54 RID: 130388
+		// Token: 0x0401A811 RID: 108561
 		private float RemainingFadeOutTime;
 
-		// Token: 0x0401FD55 RID: 130389
+		// Token: 0x0401A812 RID: 108562
 		private float RemainingConsumeTime;
 
-		// Token: 0x0401FD56 RID: 130390
+		// Token: 0x0401A813 RID: 108563
 		private static readonly float BaseBgEffectLength = 0.4f;
 
-		// Token: 0x0401FD57 RID: 130391
+		// Token: 0x0401A814 RID: 108564
 		private bool IsConsumeEffectActive;
 
-		// Token: 0x0401FD58 RID: 130392
+		// Token: 0x0401A815 RID: 108565
 		private float WaitingTime;
 
-		// Token: 0x0401FD59 RID: 130393
+		// Token: 0x0401A816 RID: 108566
 		private bool IsInStrengthState;
 
-		// Token: 0x0401FD5A RID: 130394
+		// Token: 0x0401A817 RID: 108567
 		private bool IsWaitingStateChange;
 
-		// Token: 0x0401FD5B RID: 130395
+		// Token: 0x0401A818 RID: 108568
 		private static readonly float DEFAULT_FADE_OUT_TIME = 1.2f;
 
-		// Token: 0x0401FD5C RID: 130396
+		// Token: 0x0401A819 RID: 108569
 		private static readonly float DEFAULT_CONSUME_TIME = 0.5f;
 
-		// Token: 0x0200C105 RID: 49413
+		// Token: 0x0200AB0E RID: 43790
 		private class SpecialEnergyBarJingRanSlotItem : SpecialEnergyBarSlotItem
 		{
-			// Token: 0x060503EF RID: 328687 RVA: 0x0158FACC File Offset: 0x0158DCCC
+			// Token: 0x06046936 RID: 289078 RVA: 0x015490E0 File Offset: 0x015472E0
 			protected override void OnStart()
 			{
 				base.OnStart();
@@ -337,7 +337,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 				this.InitConsumeEffectOffsetX = base.GetUiNiagara(9).GetAnchorOffsetX();
 			}
 
-			// Token: 0x060503F0 RID: 328688 RVA: 0x0158FB28 File Offset: 0x0158DD28
+			// Token: 0x06046937 RID: 289079 RVA: 0x0154913C File Offset: 0x0154733C
 			protected override void OnRegisterComponent()
 			{
 				base.OnRegisterComponent();
@@ -345,19 +345,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 				this.ComponentRegisterInfos.Add(new ValueTuple<int, Type>(10, typeof(UUINiagara)));
 			}
 
-			// Token: 0x060503F1 RID: 328689 RVA: 0x0158FB68 File Offset: 0x0158DD68
+			// Token: 0x06046938 RID: 289080 RVA: 0x0154917C File Offset: 0x0154737C
 			public void UpdateConsumePercent(float percent)
 			{
 				base.GetUiNiagara(9).SetNiagaraVarFloat("Dissolve", percent);
 			}
 
-			// Token: 0x060503F2 RID: 328690 RVA: 0x0158FB7D File Offset: 0x0158DD7D
+			// Token: 0x06046939 RID: 289081 RVA: 0x01549191 File Offset: 0x01547391
 			public void UpdateTextEffectPercent(float percent)
 			{
 				base.GetUiNiagara(10).SetNiagaraVarFloat("Dissolve", percent);
 			}
 
-			// Token: 0x060503F3 RID: 328691 RVA: 0x0158FB92 File Offset: 0x0158DD92
+			// Token: 0x0604693A RID: 289082 RVA: 0x015491A6 File Offset: 0x015473A6
 			public void SetConsumeEffectActive(bool active)
 			{
 				if (this.IsConsumeEffectActive == active)
@@ -369,7 +369,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 				this.IsConsumeEffectActive = active;
 			}
 
-			// Token: 0x060503F4 RID: 328692 RVA: 0x0158FBC0 File Offset: 0x0158DDC0
+			// Token: 0x0604693B RID: 289083 RVA: 0x015491D4 File Offset: 0x015473D4
 			public void SetConsumeEffectOffsetX(float percent)
 			{
 				float num = percent;
@@ -390,7 +390,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 				uiNiagara.SetAnchorOffsetX(this.InitConsumeEffectOffsetX + width * num);
 			}
 
-			// Token: 0x060503F5 RID: 328693 RVA: 0x0158FC14 File Offset: 0x0158DE14
+			// Token: 0x0604693C RID: 289084 RVA: 0x01549228 File Offset: 0x01547428
 			public void EnableFullEffect(bool enable)
 			{
 				bool? isFullEffectEnable = this.IsFullEffectEnable;
@@ -410,7 +410,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 				this.State = 3;
 			}
 
-			// Token: 0x060503F6 RID: 328694 RVA: 0x0158FCC2 File Offset: 0x0158DEC2
+			// Token: 0x0604693D RID: 289085 RVA: 0x015492D6 File Offset: 0x015474D6
 			public void SetFullEffectAlpha(float alpha)
 			{
 				base.GetUiNiagara(3).SetAlpha(alpha);
@@ -418,39 +418,39 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 				base.GetUiNiagara(10).SetAlpha(alpha);
 			}
 
-			// Token: 0x060503F7 RID: 328695 RVA: 0x0158FCEC File Offset: 0x0158DEEC
+			// Token: 0x0604693E RID: 289086 RVA: 0x01549300 File Offset: 0x01547500
 			public void SetConsumeEffectAlpha(float alpha)
 			{
 				base.GetUiNiagara(9).SetAlpha(alpha);
 			}
 
-			// Token: 0x0403A441 RID: 238657
+			// Token: 0x04034E13 RID: 216595
 			private float InitConsumeEffectOffsetX;
 
-			// Token: 0x0403A442 RID: 238658
+			// Token: 0x04034E14 RID: 216596
 			private bool IsConsumeEffectActive;
 
-			// Token: 0x0403A443 RID: 238659
+			// Token: 0x04034E15 RID: 216597
 			private bool? IsFullEffectEnable;
 
-			// Token: 0x0200D191 RID: 53649
+			// Token: 0x0200BD6F RID: 48495
 			private enum ESlotItemChildType
 			{
-				// Token: 0x0403EE30 RID: 257584
+				// Token: 0x0403A278 RID: 238200
 				BgSprite,
-				// Token: 0x0403EE31 RID: 257585
+				// Token: 0x0403A279 RID: 238201
 				BarSprite,
-				// Token: 0x0403EE32 RID: 257586
+				// Token: 0x0403A27A RID: 238202
 				PointBgSprite = 7,
-				// Token: 0x0403EE33 RID: 257587
+				// Token: 0x0403A27B RID: 238203
 				PointFgSprite,
-				// Token: 0x0403EE34 RID: 257588
+				// Token: 0x0403A27C RID: 238204
 				FullEffect = 3,
-				// Token: 0x0403EE35 RID: 257589
+				// Token: 0x0403A27D RID: 238205
 				FullBgEffect,
-				// Token: 0x0403EE36 RID: 257590
+				// Token: 0x0403A27E RID: 238206
 				ConsumeEffect = 9,
-				// Token: 0x0403EE37 RID: 257591
+				// Token: 0x0403A27F RID: 238207
 				TextEffect
 			}
 		}

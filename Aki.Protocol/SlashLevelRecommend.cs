@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001256 RID: 4694
+	// Token: 0x02001293 RID: 4755
 	public sealed class SlashLevelRecommend : IMessage<SlashLevelRecommend>, IMessage, IEquatable<SlashLevelRecommend>, IDeepCloneable<SlashLevelRecommend>, IBufferMessage
 	{
-		// Token: 0x0601902B RID: 102443 RVA: 0x003A3A41 File Offset: 0x003A1C41
+		// Token: 0x06019615 RID: 103957 RVA: 0x003B3991 File Offset: 0x003B1B91
 		[NullableContext(1)]
 		public static SlashLevelRecommend Create()
 		{
 			return new SlashLevelRecommend();
 		}
 
-		// Token: 0x1700545A RID: 21594
-		// (get) Token: 0x0601902C RID: 102444 RVA: 0x003A3A48 File Offset: 0x003A1C48
+		// Token: 0x170055D9 RID: 21977
+		// (get) Token: 0x06019616 RID: 103958 RVA: 0x003B3998 File Offset: 0x003B1B98
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<SlashLevelRecommend> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700545B RID: 21595
-		// (get) Token: 0x0601902D RID: 102445 RVA: 0x003A3A4F File Offset: 0x003A1C4F
+		// Token: 0x170055DA RID: 21978
+		// (get) Token: 0x06019617 RID: 103959 RVA: 0x003B399F File Offset: 0x003B1B9F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700545C RID: 21596
-		// (get) Token: 0x0601902E RID: 102446 RVA: 0x003A3A52 File Offset: 0x003A1C52
+		// Token: 0x170055DB RID: 21979
+		// (get) Token: 0x06019618 RID: 103960 RVA: 0x003B39A2 File Offset: 0x003B1BA2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601902F RID: 102447 RVA: 0x003A3A59 File Offset: 0x003A1C59
+		// Token: 0x06019619 RID: 103961 RVA: 0x003B39A9 File Offset: 0x003B1BA9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SlashLevelRecommend()
 		{
 		}
 
-		// Token: 0x06019030 RID: 102448 RVA: 0x003A3A64 File Offset: 0x003A1C64
+		// Token: 0x0601961A RID: 103962 RVA: 0x003B39B4 File Offset: 0x003B1BB4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SlashLevelRecommend(SlashLevelRecommend other) : this()
@@ -71,7 +71,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06019031 RID: 102449 RVA: 0x003A3ACC File Offset: 0x003A1CCC
+		// Token: 0x0601961B RID: 103963 RVA: 0x003B3A1C File Offset: 0x003B1C1C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SlashLevelRecommend Clone()
@@ -79,9 +79,9 @@ namespace Aki.Protocol
 			return new SlashLevelRecommend(this);
 		}
 
-		// Token: 0x1700545D RID: 21597
-		// (get) Token: 0x06019032 RID: 102450 RVA: 0x003A3AD4 File Offset: 0x003A1CD4
-		// (set) Token: 0x06019033 RID: 102451 RVA: 0x003A3ADC File Offset: 0x003A1CDC
+		// Token: 0x170055DC RID: 21980
+		// (get) Token: 0x0601961C RID: 103964 RVA: 0x003B3A24 File Offset: 0x003B1C24
+		// (set) Token: 0x0601961D RID: 103965 RVA: 0x003B3A2C File Offset: 0x003B1C2C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BattleFormation FormationFirst
@@ -96,9 +96,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700545E RID: 21598
-		// (get) Token: 0x06019034 RID: 102452 RVA: 0x003A3AE5 File Offset: 0x003A1CE5
-		// (set) Token: 0x06019035 RID: 102453 RVA: 0x003A3AED File Offset: 0x003A1CED
+		// Token: 0x170055DD RID: 21981
+		// (get) Token: 0x0601961E RID: 103966 RVA: 0x003B3A35 File Offset: 0x003B1C35
+		// (set) Token: 0x0601961F RID: 103967 RVA: 0x003B3A3D File Offset: 0x003B1C3D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BattleFormation FormationSecond
@@ -113,9 +113,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700545F RID: 21599
-		// (get) Token: 0x06019036 RID: 102454 RVA: 0x003A3AF6 File Offset: 0x003A1CF6
-		// (set) Token: 0x06019037 RID: 102455 RVA: 0x003A3AFE File Offset: 0x003A1CFE
+		// Token: 0x170055DE RID: 21982
+		// (get) Token: 0x06019620 RID: 103968 RVA: 0x003B3A46 File Offset: 0x003B1C46
+		// (set) Token: 0x06019621 RID: 103969 RVA: 0x003B3A4E File Offset: 0x003B1C4E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Usage
@@ -130,7 +130,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06019038 RID: 102456 RVA: 0x003A3B07 File Offset: 0x003A1D07
+		// Token: 0x06019622 RID: 103970 RVA: 0x003B3A57 File Offset: 0x003B1C57
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return this.Equals(other as SlashLevelRecommend);
 		}
 
-		// Token: 0x06019039 RID: 102457 RVA: 0x003A3B18 File Offset: 0x003A1D18
+		// Token: 0x06019623 RID: 103971 RVA: 0x003B3A68 File Offset: 0x003B1C68
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(SlashLevelRecommend other)
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (object.Equals(this.FormationFirst, other.FormationFirst) && object.Equals(this.FormationSecond, other.FormationSecond) && this.Usage == other.Usage && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601903A RID: 102458 RVA: 0x003A3B7C File Offset: 0x003A1D7C
+		// Token: 0x06019624 RID: 103972 RVA: 0x003B3ACC File Offset: 0x003B1CCC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -171,7 +171,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601903B RID: 102459 RVA: 0x003A3BE7 File Offset: 0x003A1DE7
+		// Token: 0x06019625 RID: 103973 RVA: 0x003B3B37 File Offset: 0x003B1D37
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -179,7 +179,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601903C RID: 102460 RVA: 0x003A3BF4 File Offset: 0x003A1DF4
+		// Token: 0x06019626 RID: 103974 RVA: 0x003B3B44 File Offset: 0x003B1D44
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -187,7 +187,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601903D RID: 102461 RVA: 0x003A3C00 File Offset: 0x003A1E00
+		// Token: 0x06019627 RID: 103975 RVA: 0x003B3B50 File Offset: 0x003B1D50
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -213,7 +213,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601903E RID: 102462 RVA: 0x003A3C78 File Offset: 0x003A1E78
+		// Token: 0x06019628 RID: 103976 RVA: 0x003B3BC8 File Offset: 0x003B1DC8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -238,7 +238,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601903F RID: 102463 RVA: 0x003A3CE8 File Offset: 0x003A1EE8
+		// Token: 0x06019629 RID: 103977 RVA: 0x003B3C38 File Offset: 0x003B1E38
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(SlashLevelRecommend other)
@@ -270,7 +270,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06019040 RID: 102464 RVA: 0x003A3D7C File Offset: 0x003A1F7C
+		// Token: 0x0601962A RID: 103978 RVA: 0x003B3CCC File Offset: 0x003B1ECC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -278,7 +278,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06019041 RID: 102465 RVA: 0x003A3D88 File Offset: 0x003A1F88
+		// Token: 0x0601962B RID: 103979 RVA: 0x003B3CD8 File Offset: 0x003B1ED8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -323,28 +323,28 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04009367 RID: 37735
+		// Token: 0x04009619 RID: 38425
 		private static readonly MessageParser<SlashLevelRecommend> _parser = new MessageParser<SlashLevelRecommend>(() => new SlashLevelRecommend());
 
-		// Token: 0x04009368 RID: 37736
+		// Token: 0x0400961A RID: 38426
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04009369 RID: 37737
+		// Token: 0x0400961B RID: 38427
 		public const int FormationFirstFieldNumber = 1;
 
-		// Token: 0x0400936A RID: 37738
+		// Token: 0x0400961C RID: 38428
 		private BattleFormation formationFirst_;
 
-		// Token: 0x0400936B RID: 37739
+		// Token: 0x0400961D RID: 38429
 		public const int FormationSecondFieldNumber = 2;
 
-		// Token: 0x0400936C RID: 37740
+		// Token: 0x0400961E RID: 38430
 		private BattleFormation formationSecond_;
 
-		// Token: 0x0400936D RID: 37741
+		// Token: 0x0400961F RID: 38431
 		public const int UsageFieldNumber = 3;
 
-		// Token: 0x0400936E RID: 37742
+		// Token: 0x04009620 RID: 38432
 		private int usage_;
 	}
 }

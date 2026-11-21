@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002137 RID: 8503
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002398 RID: 9112
 	public class ReignsAddBuff : ActionParams
 	{
-		// Token: 0x0600BB44 RID: 47940 RVA: 0x001B087C File Offset: 0x001AEA7C
+		// Token: 0x0600C6D2 RID: 50898 RVA: 0x001C7A30 File Offset: 0x001C5C30
 		private ReignsAddBuff_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BB45 RID: 47941 RVA: 0x001B08B4 File Offset: 0x001AEAB4
+		// Token: 0x0600C6D3 RID: 50899 RVA: 0x001C7A68 File Offset: 0x001C5C68
 		public static ReignsAddBuff Create([Nullable(2)] ReignsAddBuff instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BB46 RID: 47942 RVA: 0x001B08C7 File Offset: 0x001AEAC7
+		// Token: 0x0600C6D4 RID: 50900 RVA: 0x001C7A7B File Offset: 0x001C5C7B
 		public static ReignsAddBuff CreateFromSetValue([Nullable(2)] ReignsAddBuff_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BB47 RID: 47943 RVA: 0x001B08DA File Offset: 0x001AEADA
+		// Token: 0x0600C6D5 RID: 50901 RVA: 0x001C7A8E File Offset: 0x001C5C8E
 		public ReignsAddBuff_SetValue ToSetValue()
 		{
 			return new ReignsAddBuff_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700392C RID: 14636
-		// (get) Token: 0x0600BB48 RID: 47944 RVA: 0x001B08ED File Offset: 0x001AEAED
-		// (set) Token: 0x0600BB49 RID: 47945 RVA: 0x001B0918 File Offset: 0x001AEB18
+		// Token: 0x17003C19 RID: 15385
+		// (get) Token: 0x0600C6D6 RID: 50902 RVA: 0x001C7AA1 File Offset: 0x001C5CA1
+		// (set) Token: 0x0600C6D7 RID: 50903 RVA: 0x001C7ACC File Offset: 0x001C5CCC
 		public virtual int BuffId
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04007005 RID: 28677
+		// Token: 0x0400763A RID: 30266
 		[Nullable(2)]
 		protected new ReignsAddBuff FbInstance;
 
-		// Token: 0x04007006 RID: 28678
+		// Token: 0x0400763B RID: 30267
 		[Nullable(2)]
 		protected ReignsAddBuff_SetValue PocoInterface;
 	}

@@ -7,16 +7,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020029D3 RID: 10707
+// Token: 0x02001F4E RID: 8014
 public class ShipTowerShowBuffView : UiTickViewBase
 {
-	// Token: 0x06016300 RID: 90880 RVA: 0x0059CA0D File Offset: 0x0059AC0D
+	// Token: 0x06013D06 RID: 81158 RVA: 0x005C79C5 File Offset: 0x005C5BC5
 	[NullableContext(1)]
 	public ShipTowerShowBuffView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06016301 RID: 90881 RVA: 0x0059CA24 File Offset: 0x0059AC24
+	// Token: 0x06013D07 RID: 81159 RVA: 0x005C79DC File Offset: 0x005C5BDC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,13 +32,13 @@ public class ShipTowerShowBuffView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x06016302 RID: 90882 RVA: 0x0059CAB7 File Offset: 0x0059ACB7
+	// Token: 0x06013D08 RID: 81160 RVA: 0x005C7A6F File Offset: 0x005C5C6F
 	private void InitDataParam()
 	{
 		this.ShowBuffIdList = ShipTowerModel.Instance.ShowBuffIdList;
 	}
 
-	// Token: 0x06016303 RID: 90883 RVA: 0x0059CACC File Offset: 0x0059ACCC
+	// Token: 0x06013D09 RID: 81161 RVA: 0x005C7A84 File Offset: 0x005C5C84
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ShipTowerShowBuffView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -49,13 +49,13 @@ public class ShipTowerShowBuffView : UiTickViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016304 RID: 90884 RVA: 0x0059CB0F File Offset: 0x0059AD0F
+	// Token: 0x06013D0A RID: 81162 RVA: 0x005C7AC7 File Offset: 0x005C5CC7
 	protected override void OnBeforeShow()
 	{
 		this.UpdateData();
 	}
 
-	// Token: 0x06016305 RID: 90885 RVA: 0x0059CB18 File Offset: 0x0059AD18
+	// Token: 0x06013D0B RID: 81163 RVA: 0x005C7AD0 File Offset: 0x005C5CD0
 	private void UpdateData()
 	{
 		int num = 0;
@@ -94,7 +94,7 @@ public class ShipTowerShowBuffView : UiTickViewBase
 		});
 	}
 
-	// Token: 0x06016306 RID: 90886 RVA: 0x0059CBDF File Offset: 0x0059ADDF
+	// Token: 0x06013D0C RID: 81164 RVA: 0x005C7B97 File Offset: 0x005C5D97
 	protected override void OnTick(float delta)
 	{
 		if (this.TipCountDown <= 0f)
@@ -108,7 +108,7 @@ public class ShipTowerShowBuffView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06016307 RID: 90887 RVA: 0x0059CC10 File Offset: 0x0059AE10
+	// Token: 0x06013D0D RID: 81165 RVA: 0x005C7BC8 File Offset: 0x005C5DC8
 	protected void CloseViewOrShowNextData()
 	{
 		if (this.ShowBuffIdList.Count > 0)
@@ -119,7 +119,7 @@ public class ShipTowerShowBuffView : UiTickViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06016308 RID: 90888 RVA: 0x0059CC34 File Offset: 0x0059AE34
+	// Token: 0x06013D0E RID: 81166 RVA: 0x005C7BEC File Offset: 0x005C5DEC
 	private UniTask ShowNextBuff()
 	{
 		ShipTowerShowBuffView.<ShowNextBuff>d__13 <ShowNextBuff>d__;
@@ -130,39 +130,39 @@ public class ShipTowerShowBuffView : UiTickViewBase
 		return <ShowNextBuff>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016309 RID: 90889 RVA: 0x0059CC77 File Offset: 0x0059AE77
+	// Token: 0x06013D0F RID: 81167 RVA: 0x005C7C2F File Offset: 0x005C5E2F
 	private void OnClickBtnRoot()
 	{
 		EventSystem.Instance.Emit(EEventName.OpenActivityViewShipTower);
 	}
 
-	// Token: 0x0400A52F RID: 42287
+	// Token: 0x0400A919 RID: 43289
 	[Nullable(2)]
 	private SmallItemGrid ItemGrid;
 
-	// Token: 0x0400A530 RID: 42288
+	// Token: 0x0400A91A RID: 43290
 	private float TipCountDown;
 
-	// Token: 0x0400A531 RID: 42289
+	// Token: 0x0400A91B RID: 43291
 	[Nullable(1)]
 	private List<int> ShowBuffIdList = new List<int>();
 
-	// Token: 0x0400A532 RID: 42290
+	// Token: 0x0400A91C RID: 43292
 	public int? CurBuffId;
 
-	// Token: 0x02008FFB RID: 36859
+	// Token: 0x02008242 RID: 33346
 	private static class EChildType
 	{
-		// Token: 0x0402E9F6 RID: 190966
+		// Token: 0x0402A0EE RID: 172270
 		public const int ItemGrid = 0;
 
-		// Token: 0x0402E9F7 RID: 190967
+		// Token: 0x0402A0EF RID: 172271
 		public const int TxtName = 1;
 
-		// Token: 0x0402E9F8 RID: 190968
+		// Token: 0x0402A0F0 RID: 172272
 		public const int TxtDesc = 2;
 
-		// Token: 0x0402E9F9 RID: 190969
+		// Token: 0x0402A0F1 RID: 172273
 		public const int BtnRoot = 3;
 	}
 }

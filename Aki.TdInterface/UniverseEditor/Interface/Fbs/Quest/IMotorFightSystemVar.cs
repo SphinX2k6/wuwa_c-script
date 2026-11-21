@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003F47 RID: 16199
+	// Token: 0x02004385 RID: 17285
 	public struct IMotorFightSystemVar : IFlatbufferObject
 	{
-		// Token: 0x170070A6 RID: 28838
-		// (get) Token: 0x0601706D RID: 94317 RVA: 0x003520AC File Offset: 0x003502AC
+		// Token: 0x17007697 RID: 30359
+		// (get) Token: 0x060186CF RID: 100047 RVA: 0x0037B520 File Offset: 0x00379720
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601706E RID: 94318 RVA: 0x003520B9 File Offset: 0x003502B9
+		// Token: 0x060186D0 RID: 100048 RVA: 0x0037B52D File Offset: 0x0037972D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601706F RID: 94319 RVA: 0x003520C0 File Offset: 0x003502C0
+		// Token: 0x060186D1 RID: 100049 RVA: 0x0037B534 File Offset: 0x00379734
 		public static IMotorFightSystemVar GetRootAsIMotorFightSystemVar(ByteBuffer _bb)
 		{
 			return IMotorFightSystemVar.GetRootAsIMotorFightSystemVar(_bb, default(IMotorFightSystemVar));
 		}
 
-		// Token: 0x06017070 RID: 94320 RVA: 0x003520DC File Offset: 0x003502DC
+		// Token: 0x060186D2 RID: 100050 RVA: 0x0037B550 File Offset: 0x00379750
 		public static IMotorFightSystemVar GetRootAsIMotorFightSystemVar(ByteBuffer _bb, IMotorFightSystemVar obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06017071 RID: 94321 RVA: 0x003520F9 File Offset: 0x003502F9
+		// Token: 0x060186D3 RID: 100051 RVA: 0x0037B56D File Offset: 0x0037976D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06017072 RID: 94322 RVA: 0x00352108 File Offset: 0x00350308
+		// Token: 0x060186D4 RID: 100052 RVA: 0x0037B57C File Offset: 0x0037977C
 		public IMotorFightSystemVar __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170070A7 RID: 28839
-		// (get) Token: 0x06017073 RID: 94323 RVA: 0x00352118 File Offset: 0x00350318
+		// Token: 0x17007698 RID: 30360
+		// (get) Token: 0x060186D5 RID: 100053 RVA: 0x0037B58C File Offset: 0x0037978C
 		public EMotorFightSystemVar VarType
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x170070A8 RID: 28840
-		// (get) Token: 0x06017074 RID: 94324 RVA: 0x00352154 File Offset: 0x00350354
+		// Token: 0x17007699 RID: 30361
+		// (get) Token: 0x060186D6 RID: 100054 RVA: 0x0037B5C8 File Offset: 0x003797C8
 		public TVarRef VarRefType
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017075 RID: 94325 RVA: 0x00352190 File Offset: 0x00350390
+		// Token: 0x060186D7 RID: 100055 RVA: 0x0037B604 File Offset: 0x00379804
 		public TTable? VarRef<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -89,37 +89,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06017076 RID: 94326 RVA: 0x003521D4 File Offset: 0x003503D4
+		// Token: 0x060186D8 RID: 100056 RVA: 0x0037B648 File Offset: 0x00379848
 		public IConstVarRef VarRefAsIConstVarRef()
 		{
 			return this.VarRef<IConstVarRef>().Value;
 		}
 
-		// Token: 0x06017077 RID: 94327 RVA: 0x003521F0 File Offset: 0x003503F0
+		// Token: 0x060186D9 RID: 100057 RVA: 0x0037B664 File Offset: 0x00379864
 		public IGlobalVarRef VarRefAsIGlobalVarRef()
 		{
 			return this.VarRef<IGlobalVarRef>().Value;
 		}
 
-		// Token: 0x06017078 RID: 94328 RVA: 0x0035220C File Offset: 0x0035040C
+		// Token: 0x060186DA RID: 100058 RVA: 0x0037B680 File Offset: 0x00379880
 		public IOtherVarRef VarRefAsIOtherVarRef()
 		{
 			return this.VarRef<IOtherVarRef>().Value;
 		}
 
-		// Token: 0x06017079 RID: 94329 RVA: 0x00352228 File Offset: 0x00350428
+		// Token: 0x060186DB RID: 100059 RVA: 0x0037B69C File Offset: 0x0037989C
 		public ISelfVarRef VarRefAsISelfVarRef()
 		{
 			return this.VarRef<ISelfVarRef>().Value;
 		}
 
-		// Token: 0x0601707A RID: 94330 RVA: 0x00352244 File Offset: 0x00350444
+		// Token: 0x060186DC RID: 100060 RVA: 0x0037B6B8 File Offset: 0x003798B8
 		public ISystemVarRef VarRefAsISystemVarRef()
 		{
 			return this.VarRef<ISystemVarRef>().Value;
 		}
 
-		// Token: 0x0601707B RID: 94331 RVA: 0x0035225F File Offset: 0x0035045F
+		// Token: 0x060186DD RID: 100061 RVA: 0x0037B6D3 File Offset: 0x003798D3
 		public static Offset<IMotorFightSystemVar> CreateIMotorFightSystemVar(FlatBufferBuilder builder, EMotorFightSystemVar VarType = EMotorFightSystemVar.LevelProgress, TVarRef VarRef_type = TVarRef.NONE, int VarRefOffset = 0)
 		{
 			builder.StartTable(3);
@@ -129,37 +129,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IMotorFightSystemVar.EndIMotorFightSystemVar(builder);
 		}
 
-		// Token: 0x0601707C RID: 94332 RVA: 0x00352283 File Offset: 0x00350483
+		// Token: 0x060186DE RID: 100062 RVA: 0x0037B6F7 File Offset: 0x003798F7
 		public static void StartIMotorFightSystemVar(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601707D RID: 94333 RVA: 0x0035228C File Offset: 0x0035048C
+		// Token: 0x060186DF RID: 100063 RVA: 0x0037B700 File Offset: 0x00379900
 		public static void AddVarType(FlatBufferBuilder builder, EMotorFightSystemVar varType)
 		{
 			builder.AddByte(0, (byte)varType, 0);
 		}
 
-		// Token: 0x0601707E RID: 94334 RVA: 0x00352297 File Offset: 0x00350497
+		// Token: 0x060186E0 RID: 100064 RVA: 0x0037B70B File Offset: 0x0037990B
 		public static void AddVarRefType(FlatBufferBuilder builder, TVarRef varRefType)
 		{
 			builder.AddByte(1, (byte)varRefType, 0);
 		}
 
-		// Token: 0x0601707F RID: 94335 RVA: 0x003522A2 File Offset: 0x003504A2
+		// Token: 0x060186E1 RID: 100065 RVA: 0x0037B716 File Offset: 0x00379916
 		public static void AddVarRef(FlatBufferBuilder builder, int varRefOffset)
 		{
 			builder.AddOffset(2, varRefOffset, 0);
 		}
 
-		// Token: 0x06017080 RID: 94336 RVA: 0x003522AD File Offset: 0x003504AD
+		// Token: 0x060186E2 RID: 100066 RVA: 0x0037B721 File Offset: 0x00379921
 		public static Offset<IMotorFightSystemVar> EndIMotorFightSystemVar(FlatBufferBuilder builder)
 		{
 			return new Offset<IMotorFightSystemVar>(builder.EndTable());
 		}
 
-		// Token: 0x06017081 RID: 94337 RVA: 0x003522BC File Offset: 0x003504BC
+		// Token: 0x060186E3 RID: 100067 RVA: 0x0037B730 File Offset: 0x00379930
 		public IMotorFightSystemVarT UnPack()
 		{
 			IMotorFightSystemVarT motorFightSystemVarT = new IMotorFightSystemVarT();
@@ -167,7 +167,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return motorFightSystemVarT;
 		}
 
-		// Token: 0x06017082 RID: 94338 RVA: 0x003522D8 File Offset: 0x003504D8
+		// Token: 0x060186E4 RID: 100068 RVA: 0x0037B74C File Offset: 0x0037994C
 		public void UnPackTo(IMotorFightSystemVarT _o)
 		{
 			_o.VarType = this.VarType;
@@ -195,7 +195,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017083 RID: 94339 RVA: 0x00352444 File Offset: 0x00350644
+		// Token: 0x060186E5 RID: 100069 RVA: 0x0037B8B8 File Offset: 0x00379AB8
 		public static Offset<IMotorFightSystemVar> Pack(FlatBufferBuilder builder, IMotorFightSystemVarT _o)
 		{
 			if (_o == null)
@@ -207,7 +207,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IMotorFightSystemVar.CreateIMotorFightSystemVar(builder, _o.VarType, varRef_type, varRefOffset);
 		}
 
-		// Token: 0x0400B957 RID: 47447
+		// Token: 0x0400C335 RID: 49973
 		private Table __p;
 	}
 }

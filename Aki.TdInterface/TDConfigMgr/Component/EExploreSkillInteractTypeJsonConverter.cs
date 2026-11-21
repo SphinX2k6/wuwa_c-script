@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200093F RID: 2367
+	// Token: 0x020009EC RID: 2540
 	public class EExploreSkillInteractTypeJsonConverter : JsonConverter<EExploreSkillInteractType>
 	{
-		// Token: 0x0600354E RID: 13646 RVA: 0x0008B508 File Offset: 0x00089708
+		// Token: 0x060038BA RID: 14522 RVA: 0x000930E4 File Offset: 0x000912E4
 		public override EExploreSkillInteractType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return EExploreSkillInteractTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600354F RID: 13647 RVA: 0x0008B52C File Offset: 0x0008972C
+		// Token: 0x060038BB RID: 14523 RVA: 0x00093108 File Offset: 0x00091308
 		public override void Write(Utf8JsonWriter writer, EExploreSkillInteractType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

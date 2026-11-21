@@ -8,17 +8,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200146D RID: 5229
+// Token: 0x02000921 RID: 2337
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityRegressMainView : UiViewBase
 {
-	// Token: 0x06009391 RID: 37777 RVA: 0x001FB70D File Offset: 0x001F990D
+	// Token: 0x06006726 RID: 26406 RVA: 0x00204515 File Offset: 0x00202715
 	public ActivityRegressMainView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06009392 RID: 37778 RVA: 0x001FB738 File Offset: 0x001F9938
+	// Token: 0x06006727 RID: 26407 RVA: 0x00204540 File Offset: 0x00202740
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,7 +32,7 @@ public class ActivityRegressMainView : UiViewBase
 		};
 	}
 
-	// Token: 0x06009393 RID: 37779 RVA: 0x001FB7D4 File Offset: 0x001F99D4
+	// Token: 0x06006728 RID: 26408 RVA: 0x002045DC File Offset: 0x002027DC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivityRegressMainView.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -43,7 +43,7 @@ public class ActivityRegressMainView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009394 RID: 37780 RVA: 0x001FB818 File Offset: 0x001F9A18
+	// Token: 0x06006729 RID: 26409 RVA: 0x00204620 File Offset: 0x00202820
 	protected override void OnBeforeShow()
 	{
 		ActivityRegressMainSubViewBase activityRegressMainSubViewBase;
@@ -62,7 +62,7 @@ public class ActivityRegressMainView : UiViewBase
 		this.RefreshTime();
 	}
 
-	// Token: 0x06009395 RID: 37781 RVA: 0x001FB8C0 File Offset: 0x001F9AC0
+	// Token: 0x0600672A RID: 26410 RVA: 0x002046C8 File Offset: 0x002028C8
 	private void RefreshTime()
 	{
 		ActivityBaseData activityData = this.ActivityData;
@@ -75,13 +75,13 @@ public class ActivityRegressMainView : UiViewBase
 		base.GetText(5).SetText(remainTimeText, true);
 	}
 
-	// Token: 0x06009396 RID: 37782 RVA: 0x001FB916 File Offset: 0x001F9B16
+	// Token: 0x0600672B RID: 26411 RVA: 0x0020471E File Offset: 0x0020291E
 	private void OnTimerRefresh(float _)
 	{
 		this.RefreshTime();
 	}
 
-	// Token: 0x06009397 RID: 37783 RVA: 0x001FB91E File Offset: 0x001F9B1E
+	// Token: 0x0600672C RID: 26412 RVA: 0x00204726 File Offset: 0x00202926
 	private void ClearTimer()
 	{
 		if (this.RefreshTimer != null && TimerSystem.Instance.Has(this.RefreshTimer))
@@ -91,7 +91,7 @@ public class ActivityRegressMainView : UiViewBase
 		}
 	}
 
-	// Token: 0x06009398 RID: 37784 RVA: 0x001FB954 File Offset: 0x001F9B54
+	// Token: 0x0600672D RID: 26413 RVA: 0x0020475C File Offset: 0x0020295C
 	protected override void OnAfterHide()
 	{
 		this.ClearTimer();
@@ -102,7 +102,7 @@ public class ActivityRegressMainView : UiViewBase
 		}
 	}
 
-	// Token: 0x06009399 RID: 37785 RVA: 0x001FB998 File Offset: 0x001F9B98
+	// Token: 0x0600672E RID: 26414 RVA: 0x002047A0 File Offset: 0x002029A0
 	protected override void OnBeforeDestroy()
 	{
 		this.CloseAllSubUi();
@@ -117,19 +117,19 @@ public class ActivityRegressMainView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600939A RID: 37786 RVA: 0x001FBA18 File Offset: 0x001F9C18
+	// Token: 0x0600672F RID: 26415 RVA: 0x00204820 File Offset: 0x00202A20
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.RecallActivityInfoUpdate, new Action(this.OnActivityUpdate));
 	}
 
-	// Token: 0x0600939B RID: 37787 RVA: 0x001FBA36 File Offset: 0x001F9C36
+	// Token: 0x06006730 RID: 26416 RVA: 0x0020483E File Offset: 0x00202A3E
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.RecallActivityInfoUpdate, new Action(this.OnActivityUpdate));
 	}
 
-	// Token: 0x0600939C RID: 37788 RVA: 0x001FBA54 File Offset: 0x001F9C54
+	// Token: 0x06006731 RID: 26417 RVA: 0x0020485C File Offset: 0x00202A5C
 	private UniTask OpenSubUi(EActivityMainSubViewNewType viewType, int subTabIndex)
 	{
 		ActivityRegressMainView.<OpenSubUi>d__22 <OpenSubUi>d__;
@@ -142,7 +142,7 @@ public class ActivityRegressMainView : UiViewBase
 		return <OpenSubUi>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600939D RID: 37789 RVA: 0x001FBAA8 File Offset: 0x001F9CA8
+	// Token: 0x06006732 RID: 26418 RVA: 0x002048B0 File Offset: 0x00202AB0
 	private UniTask HideSubUi(EActivityMainSubViewNewType viewType)
 	{
 		ActivityRegressMainView.<HideSubUi>d__23 <HideSubUi>d__;
@@ -154,7 +154,7 @@ public class ActivityRegressMainView : UiViewBase
 		return <HideSubUi>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600939E RID: 37790 RVA: 0x001FBAF4 File Offset: 0x001F9CF4
+	// Token: 0x06006733 RID: 26419 RVA: 0x002048FC File Offset: 0x00202AFC
 	private void CloseAllSubUi()
 	{
 		foreach (KeyValuePair<EActivityMainSubViewNewType, ActivityRegressMainSubViewBase> keyValuePair in this.SubViewMap)
@@ -166,7 +166,7 @@ public class ActivityRegressMainView : UiViewBase
 		this.SubViewMap.Clear();
 	}
 
-	// Token: 0x0600939F RID: 37791 RVA: 0x001FBB64 File Offset: 0x001F9D64
+	// Token: 0x06006734 RID: 26420 RVA: 0x0020496C File Offset: 0x00202B6C
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -183,7 +183,7 @@ public class ActivityRegressMainView : UiViewBase
 		return <CreateSubUi>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060093A0 RID: 37792 RVA: 0x001FBBB0 File Offset: 0x001F9DB0
+	// Token: 0x06006735 RID: 26421 RVA: 0x002049B8 File Offset: 0x00202BB8
 	private UniTask ChangeSubUi(EActivityMainSubViewNewType subViewType, int subTabIndex = 0)
 	{
 		ActivityRegressMainView.<ChangeSubUi>d__26 <ChangeSubUi>d__;
@@ -196,7 +196,7 @@ public class ActivityRegressMainView : UiViewBase
 		return <ChangeSubUi>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060093A1 RID: 37793 RVA: 0x001FBC04 File Offset: 0x001F9E04
+	// Token: 0x06006736 RID: 26422 RVA: 0x00204A0C File Offset: 0x00202C0C
 	private void UpdateTitle()
 	{
 		string text = null;
@@ -213,7 +213,7 @@ public class ActivityRegressMainView : UiViewBase
 		base.GetItem(4).SetUIActive(this.CurrentSubViewType.GetValueOrDefault() != EActivityMainSubViewNewType.Sign);
 	}
 
-	// Token: 0x060093A2 RID: 37794 RVA: 0x001FBC7C File Offset: 0x001F9E7C
+	// Token: 0x06006737 RID: 26423 RVA: 0x00204A84 File Offset: 0x00202C84
 	[NullableContext(2)]
 	private string GetTypeTitleIconPath(EActivityMainSubViewNewType type)
 	{
@@ -238,7 +238,7 @@ public class ActivityRegressMainView : UiViewBase
 		}
 	}
 
-	// Token: 0x060093A3 RID: 37795 RVA: 0x001FBCD8 File Offset: 0x001F9ED8
+	// Token: 0x06006738 RID: 26424 RVA: 0x00204AE0 File Offset: 0x00202CE0
 	[NullableContext(2)]
 	private string GetTypeTitle(EActivityMainSubViewNewType type)
 	{
@@ -263,7 +263,7 @@ public class ActivityRegressMainView : UiViewBase
 		}
 	}
 
-	// Token: 0x060093A4 RID: 37796 RVA: 0x001FBD34 File Offset: 0x001F9F34
+	// Token: 0x06006739 RID: 26425 RVA: 0x00204B3C File Offset: 0x00202D3C
 	[NullableContext(2)]
 	private string GetTitleIconPath()
 	{
@@ -291,13 +291,13 @@ public class ActivityRegressMainView : UiViewBase
 		return null;
 	}
 
-	// Token: 0x060093A5 RID: 37797 RVA: 0x001FBDA8 File Offset: 0x001F9FA8
+	// Token: 0x0600673A RID: 26426 RVA: 0x00204BB0 File Offset: 0x00202DB0
 	private void OnActivityUpdate()
 	{
 		this.RefreshView();
 	}
 
-	// Token: 0x060093A6 RID: 37798 RVA: 0x001FBDB0 File Offset: 0x001F9FB0
+	// Token: 0x0600673B RID: 26427 RVA: 0x00204BB8 File Offset: 0x00202DB8
 	private void RefreshView()
 	{
 		ActivityRegressMainSubViewBase activityRegressMainSubViewBase;
@@ -307,7 +307,7 @@ public class ActivityRegressMainView : UiViewBase
 		}
 	}
 
-	// Token: 0x060093A7 RID: 37799 RVA: 0x001FBDEC File Offset: 0x001F9FEC
+	// Token: 0x0600673C RID: 26428 RVA: 0x00204BF4 File Offset: 0x00202DF4
 	private UniTask CreateTabs()
 	{
 		ActivityRegressMainView.<CreateTabs>d__33 <CreateTabs>d__;
@@ -318,7 +318,7 @@ public class ActivityRegressMainView : UiViewBase
 		return <CreateTabs>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060093A8 RID: 37800 RVA: 0x001FBE30 File Offset: 0x001FA030
+	// Token: 0x0600673D RID: 26429 RVA: 0x00204C38 File Offset: 0x00202E38
 	private UniTask RefreshTabs()
 	{
 		ActivityRegressMainView.<RefreshTabs>d__34 <RefreshTabs>d__;
@@ -329,13 +329,13 @@ public class ActivityRegressMainView : UiViewBase
 		return <RefreshTabs>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060093A9 RID: 37801 RVA: 0x001FBE73 File Offset: 0x001FA073
+	// Token: 0x0600673E RID: 26430 RVA: 0x00204C7B File Offset: 0x00202E7B
 	private ActivityRegressTabItemPanel ProxyCreateTabItem([Nullable(2)] UUIItem uiItem, int? index)
 	{
 		return new ActivityRegressTabItemPanel();
 	}
 
-	// Token: 0x060093AA RID: 37802 RVA: 0x001FBE7A File Offset: 0x001FA07A
+	// Token: 0x0600673F RID: 26431 RVA: 0x00204C82 File Offset: 0x00202E82
 	private void OnTabSelected(int index)
 	{
 		if (this.IgnoreFireEvent)
@@ -347,7 +347,7 @@ public class ActivityRegressMainView : UiViewBase
 		this.ChangeSubUi(this.TabTypeList[index], 0).Forget();
 	}
 
-	// Token: 0x060093AB RID: 37803 RVA: 0x001FBEB4 File Offset: 0x001FA0B4
+	// Token: 0x06006740 RID: 26432 RVA: 0x00204CBC File Offset: 0x00202EBC
 	private CommonTabData GetCommonData(int index)
 	{
 		EActivityMainSubViewNewType type = this.TabTypeList[index];
@@ -356,7 +356,7 @@ public class ActivityRegressMainView : UiViewBase
 		return new CommonTabData((typeTitleIconPath != null) ? UiResourceConfig.Instance.GetResourcePath(typeTitleIconPath) : "", new CommonTabTitleData(textId, Array.Empty<object>()), null);
 	}
 
-	// Token: 0x060093AC RID: 37804 RVA: 0x001FBF10 File Offset: 0x001FA110
+	// Token: 0x06006741 RID: 26433 RVA: 0x00204D18 File Offset: 0x00202F18
 	protected bool CanToggleChange(int index, bool? _)
 	{
 		if (Info.Instance.IsInGamepad())
@@ -367,62 +367,62 @@ public class ActivityRegressMainView : UiViewBase
 		return this.LastClickTime == 0.0 || Time.Instance.Now - this.LastClickTime >= (double)num;
 	}
 
-	// Token: 0x04004189 RID: 16777
+	// Token: 0x04004221 RID: 16929
 	private const int TAB_CD = 600;
 
-	// Token: 0x0400418A RID: 16778
+	// Token: 0x04004222 RID: 16930
 	[Nullable(2)]
 	private ActivityBaseData ActivityData;
 
-	// Token: 0x0400418B RID: 16779
+	// Token: 0x04004223 RID: 16931
 	private EActivityRegressMainViewOpenDataType OpenType;
 
-	// Token: 0x0400418C RID: 16780
+	// Token: 0x04004224 RID: 16932
 	[Nullable(2)]
 	private TimerHandle RefreshTimer;
 
-	// Token: 0x0400418D RID: 16781
+	// Token: 0x04004225 RID: 16933
 	private readonly Dictionary<EActivityMainSubViewNewType, ActivityRegressMainSubViewBase> SubViewMap = new Dictionary<EActivityMainSubViewNewType, ActivityRegressMainSubViewBase>();
 
-	// Token: 0x0400418E RID: 16782
+	// Token: 0x04004226 RID: 16934
 	private EActivityMainSubViewNewType? CurrentSubViewType;
 
-	// Token: 0x0400418F RID: 16783
+	// Token: 0x04004227 RID: 16935
 	[Nullable(2)]
 	private ActivityRegressMainCaptionListPanel CaptionTabComponent;
 
-	// Token: 0x04004190 RID: 16784
+	// Token: 0x04004228 RID: 16936
 	private List<EActivityMainSubViewNewType> TabTypeList = new List<EActivityMainSubViewNewType>();
 
-	// Token: 0x04004191 RID: 16785
+	// Token: 0x04004229 RID: 16937
 	private bool IgnoreFireEvent;
 
-	// Token: 0x04004192 RID: 16786
+	// Token: 0x0400422A RID: 16938
 	private string RemainTimeText = "";
 
-	// Token: 0x04004193 RID: 16787
+	// Token: 0x0400422B RID: 16939
 	private double LastClickTime;
 
-	// Token: 0x02007A91 RID: 31377
+	// Token: 0x02006C15 RID: 27669
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x0402853B RID: 165179
+		// Token: 0x04023855 RID: 145493
 		public const int CaptionNameList = 0;
 
-		// Token: 0x0402853C RID: 165180
+		// Token: 0x04023856 RID: 145494
 		public const int Bg = 1;
 
-		// Token: 0x0402853D RID: 165181
+		// Token: 0x04023857 RID: 145495
 		public const int SubViewRoot = 2;
 
-		// Token: 0x0402853E RID: 165182
+		// Token: 0x04023858 RID: 145496
 		public const int Bg2 = 3;
 
-		// Token: 0x0402853F RID: 165183
+		// Token: 0x04023859 RID: 145497
 		public const int TimeItem = 4;
 
-		// Token: 0x04028540 RID: 165184
+		// Token: 0x0402385A RID: 145498
 		public const int TimeText = 5;
 	}
 }

@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200068E RID: 1678
+	// Token: 0x020006A6 RID: 1702
 	public class ConfigPhantomDirectRefiningAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002764 RID: 10084 RVA: 0x00138794 File Offset: 0x00136994
+		// Token: 0x060027F4 RID: 10228 RVA: 0x0013F210 File Offset: 0x0013D410
 		static ConfigPhantomDirectRefiningAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPhantomDirectRefiningAll.CreateStaticDefaultValue), new Action(ConfigPhantomDirectRefiningAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002765 RID: 10085 RVA: 0x001387B4 File Offset: 0x001369B4
+		// Token: 0x060027F5 RID: 10229 RVA: 0x0013F230 File Offset: 0x0013D430
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPhantomDirectRefiningAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002766 RID: 10086 RVA: 0x00138833 File Offset: 0x00136A33
+		// Token: 0x060027F6 RID: 10230 RVA: 0x0013F2AF File Offset: 0x0013D4AF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPhantomDirectRefiningAll.LogPair = null;
 			ConfigPhantomDirectRefiningAll.HandleId = 0;
 		}
 
-		// Token: 0x06002767 RID: 10087 RVA: 0x00138841 File Offset: 0x00136A41
+		// Token: 0x060027F7 RID: 10231 RVA: 0x0013F2BD File Offset: 0x0013D4BD
 		public static void Init()
 		{
 			ConfigPhantomDirectRefiningAll.HandleId = ConfigCommon.InitDataStatement(ConfigPhantomDirectRefiningAll.HandleId, "db_calabash.db", "select BinData from `PhantomDirectRefining`");
 		}
 
-		// Token: 0x06002768 RID: 10088 RVA: 0x0013885C File Offset: 0x00136A5C
+		// Token: 0x060027F8 RID: 10232 RVA: 0x0013F2D8 File Offset: 0x0013D4D8
 		[NullableContext(2)]
 		public static IReadOnlyList<PhantomDirectRefining> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04002DC8 RID: 11720
+		// Token: 0x04002E70 RID: 11888
 		private const string DB = "db_calabash.db";
 
-		// Token: 0x04002DC9 RID: 11721
+		// Token: 0x04002E71 RID: 11889
 		private const string FILE = "h.葫芦.xlsx";
 
-		// Token: 0x04002DCA RID: 11722
+		// Token: 0x04002E72 RID: 11890
 		private const string TABLE = "PhantomDirectRefining";
 
-		// Token: 0x04002DCB RID: 11723
+		// Token: 0x04002E73 RID: 11891
 		private const string COMMAND = "select BinData from `PhantomDirectRefining`";
 
-		// Token: 0x04002DCC RID: 11724
+		// Token: 0x04002E74 RID: 11892
 		private const string KEY_PREFIX = "PhantomDirectRefiningAll";
 
-		// Token: 0x04002DCD RID: 11725
+		// Token: 0x04002E75 RID: 11893
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002DCE RID: 11726
+		// Token: 0x04002E76 RID: 11894
 		private static int HandleId;
 	}
 }

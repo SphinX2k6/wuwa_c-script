@@ -15,13 +15,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleTrial
 {
-	// Token: 0x020061B3 RID: 25011
+	// Token: 0x02005131 RID: 20785
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ActivitySubViewRoleTrial : ActivitySubViewBase
 	{
-		// Token: 0x1700920E RID: 37390
-		// (get) Token: 0x0603F299 RID: 258713 RVA: 0x00F42227 File Offset: 0x00F40427
+		// Token: 0x17006570 RID: 25968
+		// (get) Token: 0x06033F59 RID: 212825 RVA: 0x00E890F3 File Offset: 0x00E872F3
 		protected new ActivityRoleTrialData ActivityBaseData
 		{
 			get
@@ -30,24 +30,24 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleTrial
 			}
 		}
 
-		// Token: 0x1700920F RID: 37391
-		// (get) Token: 0x0603F29A RID: 258714 RVA: 0x00F42234 File Offset: 0x00F40434
-		// (set) Token: 0x0603F29B RID: 258715 RVA: 0x00F4223C File Offset: 0x00F4043C
+		// Token: 0x17006571 RID: 25969
+		// (get) Token: 0x06033F5A RID: 212826 RVA: 0x00E89100 File Offset: 0x00E87300
+		// (set) Token: 0x06033F5B RID: 212827 RVA: 0x00E89108 File Offset: 0x00E87308
 		private ActivityTitleTypeA TitleComponent { get; set; }
 
-		// Token: 0x17009210 RID: 37392
-		// (get) Token: 0x0603F29C RID: 258716 RVA: 0x00F42245 File Offset: 0x00F40445
-		// (set) Token: 0x0603F29D RID: 258717 RVA: 0x00F4224D File Offset: 0x00F4044D
+		// Token: 0x17006572 RID: 25970
+		// (get) Token: 0x06033F5C RID: 212828 RVA: 0x00E89111 File Offset: 0x00E87311
+		// (set) Token: 0x06033F5D RID: 212829 RVA: 0x00E89119 File Offset: 0x00E87319
 		private ActivityDescriptionTypeB DescriptionComponent { get; set; }
 
-		// Token: 0x17009211 RID: 37393
-		// (get) Token: 0x0603F29E RID: 258718 RVA: 0x00F42256 File Offset: 0x00F40456
-		// (set) Token: 0x0603F29F RID: 258719 RVA: 0x00F4225E File Offset: 0x00F4045E
+		// Token: 0x17006573 RID: 25971
+		// (get) Token: 0x06033F5E RID: 212830 RVA: 0x00E89122 File Offset: 0x00E87322
+		// (set) Token: 0x06033F5F RID: 212831 RVA: 0x00E8912A File Offset: 0x00E8732A
 		private ActivityRoleDescribeComponent RoleDescribeComponent { get; set; }
 
-		// Token: 0x17009212 RID: 37394
-		// (get) Token: 0x0603F2A0 RID: 258720 RVA: 0x00F42267 File Offset: 0x00F40467
-		// (set) Token: 0x0603F2A1 RID: 258721 RVA: 0x00F4226F File Offset: 0x00F4046F
+		// Token: 0x17006574 RID: 25972
+		// (get) Token: 0x06033F60 RID: 212832 RVA: 0x00E89133 File Offset: 0x00E87333
+		// (set) Token: 0x06033F61 RID: 212833 RVA: 0x00E8913B File Offset: 0x00E8733B
 		[Nullable(new byte[]
 		{
 			2,
@@ -66,22 +66,22 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleTrial
 			1
 		})] set; }
 
-		// Token: 0x17009213 RID: 37395
-		// (get) Token: 0x0603F2A2 RID: 258722 RVA: 0x00F42278 File Offset: 0x00F40478
-		// (set) Token: 0x0603F2A3 RID: 258723 RVA: 0x00F42280 File Offset: 0x00F40480
+		// Token: 0x17006575 RID: 25973
+		// (get) Token: 0x06033F62 RID: 212834 RVA: 0x00E89144 File Offset: 0x00E87344
+		// (set) Token: 0x06033F63 RID: 212835 RVA: 0x00E8914C File Offset: 0x00E8734C
 		private ActivityFunctionalTypeA FunctionalComponent { get; set; }
 
-		// Token: 0x17009214 RID: 37396
-		// (get) Token: 0x0603F2A4 RID: 258724 RVA: 0x00F42289 File Offset: 0x00F40489
-		// (set) Token: 0x0603F2A5 RID: 258725 RVA: 0x00F42291 File Offset: 0x00F40491
+		// Token: 0x17006576 RID: 25974
+		// (get) Token: 0x06033F64 RID: 212836 RVA: 0x00E89155 File Offset: 0x00E87355
+		// (set) Token: 0x06033F65 RID: 212837 RVA: 0x00E8915D File Offset: 0x00E8735D
 		protected int CurrentRoleId { get; set; }
 
-		// Token: 0x17009215 RID: 37397
-		// (get) Token: 0x0603F2A6 RID: 258726 RVA: 0x00F4229A File Offset: 0x00F4049A
-		// (set) Token: 0x0603F2A7 RID: 258727 RVA: 0x00F422A2 File Offset: 0x00F404A2
+		// Token: 0x17006577 RID: 25975
+		// (get) Token: 0x06033F66 RID: 212838 RVA: 0x00E89166 File Offset: 0x00E87366
+		// (set) Token: 0x06033F67 RID: 212839 RVA: 0x00E8916E File Offset: 0x00E8736E
 		private LevelSequencePlayer LevelSequenceSwitchPlayer { get; set; }
 
-		// Token: 0x0603F2A8 RID: 258728 RVA: 0x00F422AC File Offset: 0x00F404AC
+		// Token: 0x06033F68 RID: 212840 RVA: 0x00E89178 File Offset: 0x00E87378
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 27;
@@ -164,12 +164,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleTrial
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603F2A9 RID: 258729 RVA: 0x00F42776 File Offset: 0x00F40976
+		// Token: 0x06033F69 RID: 212841 RVA: 0x00E89642 File Offset: 0x00E87842
 		protected override void OnSetData()
 		{
 		}
 
-		// Token: 0x0603F2AA RID: 258730 RVA: 0x00F42778 File Offset: 0x00F40978
+		// Token: 0x06033F6A RID: 212842 RVA: 0x00E89644 File Offset: 0x00E87844
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ActivitySubViewRoleTrial.<OnBeforeStartAsync>d__41 <OnBeforeStartAsync>d__;
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleTrial
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F2AB RID: 258731 RVA: 0x00F427BC File Offset: 0x00F409BC
+		// Token: 0x06033F6B RID: 212843 RVA: 0x00E89688 File Offset: 0x00E87888
 		protected override void OnStart()
 		{
 			Activity? localConfig = this.ActivityBaseData.LocalConfig;
@@ -219,7 +219,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleTrial
 			}, false);
 		}
 
-		// Token: 0x0603F2AC RID: 258732 RVA: 0x00F4296C File Offset: 0x00F40B6C
+		// Token: 0x06033F6C RID: 212844 RVA: 0x00E89838 File Offset: 0x00E87A38
 		private void RefreshScrollWidth(int roleCount)
 		{
 			ULGUIBehaviour scrollViewWithScrollbar = base.GetScrollViewWithScrollbar(20);
@@ -228,7 +228,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleTrial
 			scrollViewWithScrollbar.RootUIComp.Get().SetWidth(width);
 		}
 
-		// Token: 0x0603F2AD RID: 258733 RVA: 0x00F429C0 File Offset: 0x00F40BC0
+		// Token: 0x06033F6D RID: 212845 RVA: 0x00E8988C File Offset: 0x00E87A8C
 		protected override void OnBeforeShow()
 		{
 			this.RoleScroll.BindScrollValueChange(delegate(FVector2D progress)
@@ -257,21 +257,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleTrial
 			this.HasSelectedNewRole = false;
 		}
 
-		// Token: 0x0603F2AE RID: 258734 RVA: 0x00F42A7C File Offset: 0x00F40C7C
+		// Token: 0x06033F6E RID: 212846 RVA: 0x00E89948 File Offset: 0x00E87B48
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnStateChange));
 			EventSystem.Instance.Add<int>(EEventName.OnTrialRoleDataChanged, new Action<int>(this.OnStateChange));
 		}
 
-		// Token: 0x0603F2AF RID: 258735 RVA: 0x00F42AB6 File Offset: 0x00F40CB6
+		// Token: 0x06033F6F RID: 212847 RVA: 0x00E89982 File Offset: 0x00E87B82
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnStateChange));
 			EventSystem.Instance.Remove(EEventName.OnTrialRoleDataChanged, new Action<int>(this.OnStateChange));
 		}
 
-		// Token: 0x0603F2B0 RID: 258736 RVA: 0x00F42AF0 File Offset: 0x00F40CF0
+		// Token: 0x06033F70 RID: 212848 RVA: 0x00E899BC File Offset: 0x00E87BBC
 		protected override void OnBeforeHide()
 		{
 			if (!this.ActivityBaseData.IsRoleInstanceOn())
@@ -280,7 +280,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleTrial
 			}
 		}
 
-		// Token: 0x0603F2B1 RID: 258737 RVA: 0x00F42B0B File Offset: 0x00F40D0B
+		// Token: 0x06033F71 RID: 212849 RVA: 0x00E899D7 File Offset: 0x00E87BD7
 		protected override void OnBeforeDestroy()
 		{
 			if (!this.ActivityBaseData.IsRoleInstanceOn())
@@ -296,7 +296,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleTrial
 			levelSequenceSwitchPlayer.Clear();
 		}
 
-		// Token: 0x0603F2B2 RID: 258738 RVA: 0x00F42B40 File Offset: 0x00F40D40
+		// Token: 0x06033F72 RID: 212850 RVA: 0x00E89A0C File Offset: 0x00E87C0C
 		protected override void OnRefreshView()
 		{
 			this.RefreshCondition();
@@ -310,7 +310,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleTrial
 			this.PlaySwitchSequence();
 		}
 
-		// Token: 0x0603F2B3 RID: 258739 RVA: 0x00F42B90 File Offset: 0x00F40D90
+		// Token: 0x06033F73 RID: 212851 RVA: 0x00E89A5C File Offset: 0x00E87C5C
 		private void RefreshCondition()
 		{
 			bool flag = this.ActivityBaseData.IsUnLock();
@@ -322,13 +322,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleTrial
 			}
 		}
 
-		// Token: 0x0603F2B4 RID: 258740 RVA: 0x00F42BED File Offset: 0x00F40DED
+		// Token: 0x06033F74 RID: 212852 RVA: 0x00E89AB9 File Offset: 0x00E87CB9
 		protected override void OnTimer(float gap)
 		{
 			this.RefreshTimerText();
 		}
 
-		// Token: 0x0603F2B5 RID: 258741 RVA: 0x00F42BF8 File Offset: 0x00F40DF8
+		// Token: 0x06033F75 RID: 212853 RVA: 0x00E89AC4 File Offset: 0x00E87CC4
 		private void RefreshTimerText()
 		{
 			ValueTuple<bool, string, long> timeVisibleAndRemainTime = this.GetTimeVisibleAndRemainTime();
@@ -341,7 +341,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleTrial
 			}
 		}
 
-		// Token: 0x0603F2B6 RID: 258742 RVA: 0x00F42C38 File Offset: 0x00F40E38
+		// Token: 0x06033F76 RID: 212854 RVA: 0x00E89B04 File Offset: 0x00E87D04
 		private void OnStateChange(int id)
 		{
 			if (id != this.ActivityBaseData.Id)
@@ -365,7 +365,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleTrial
 			}, false);
 		}
 
-		// Token: 0x0603F2B7 RID: 258743 RVA: 0x00F42CD4 File Offset: 0x00F40ED4
+		// Token: 0x06033F77 RID: 212855 RVA: 0x00E89BA0 File Offset: 0x00E87DA0
 		private void OnRoleScrollValueChange()
 		{
 			bool flag = false;
@@ -394,7 +394,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleTrial
 			this.NewButtonPair.Item2.SetUIActive(uiactive2);
 		}
 
-		// Token: 0x0603F2B8 RID: 258744 RVA: 0x00F42E58 File Offset: 0x00F41058
+		// Token: 0x06033F78 RID: 212856 RVA: 0x00E89D24 File Offset: 0x00E87F24
 		private void RefreshIndexPair()
 		{
 			List<int> list = new List<int>();
@@ -434,7 +434,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleTrial
 			this.NewItemPair = null;
 		}
 
-		// Token: 0x0603F2B9 RID: 258745 RVA: 0x00F42F54 File Offset: 0x00F41154
+		// Token: 0x06033F79 RID: 212857 RVA: 0x00E89E20 File Offset: 0x00E88020
 		private void MarkRoleIdAsOld(int roleId)
 		{
 			if (this.ActivityBaseData.GetIsNewByRoleId(roleId))
@@ -450,14 +450,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleTrial
 			}
 		}
 
-		// Token: 0x0603F2BA RID: 258746 RVA: 0x00F42FBF File Offset: 0x00F411BF
+		// Token: 0x06033F7A RID: 212858 RVA: 0x00E89E8B File Offset: 0x00E8808B
 		private void SetRoleId(int roleId)
 		{
 			this.CurrentRoleId = roleId;
 			this.ActivityBaseData.CurrentRoleId = roleId;
 		}
 
-		// Token: 0x0603F2BB RID: 258747 RVA: 0x00F42FD4 File Offset: 0x00F411D4
+		// Token: 0x06033F7B RID: 212859 RVA: 0x00E89EA0 File Offset: 0x00E880A0
 		private void RefreshRole(int roleId)
 		{
 			this.SetRoleId(roleId);
@@ -515,7 +515,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleTrial
 			this.RefreshReward(roleId);
 		}
 
-		// Token: 0x0603F2BC RID: 258748 RVA: 0x00F43264 File Offset: 0x00F41464
+		// Token: 0x06033F7C RID: 212860 RVA: 0x00E8A130 File Offset: 0x00E88330
 		private void PlaySwitchSequence()
 		{
 			if (this.LevelSequenceSwitchPlayer.GetCurrentSequence() == "Switch")
@@ -526,7 +526,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleTrial
 			this.LevelSequenceSwitchPlayer.PlayLevelSequenceByName("Switch", false, null, false);
 		}
 
-		// Token: 0x0603F2BD RID: 258749 RVA: 0x00F432B4 File Offset: 0x00F414B4
+		// Token: 0x06033F7D RID: 212861 RVA: 0x00E8A180 File Offset: 0x00E88380
 		private void RefreshUiConfigPerformance(int uiConfigId)
 		{
 			RoleTrialUiConfig? roleTrialUiConfigById = ActivityRoleTrialConfig.Instance.GetRoleTrialUiConfigById(uiConfigId);
@@ -537,7 +537,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleTrial
 			base.GetTexture(18).SetColor(FColor.FromHex(((roleTrialUiConfigById != null) ? roleTrialUiConfigById.GetValueOrDefault().Color5 : null) ?? ""));
 		}
 
-		// Token: 0x0603F2BE RID: 258750 RVA: 0x00F433DC File Offset: 0x00F415DC
+		// Token: 0x06033F7E RID: 212862 RVA: 0x00E8A2A8 File Offset: 0x00E884A8
 		private void RefreshReward(int roleId)
 		{
 			List<IItemGridData> rewardDataByRoleId = this.ActivityBaseData.GetRewardDataByRoleId(roleId);
@@ -552,7 +552,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleTrial
 			base.GetButton(11).RootUIComp.Get().SetUIActive(rewardStateByRoleId == ERoleTrialRewardState.FinishedAndUnClaimed);
 		}
 
-		// Token: 0x0603F2BF RID: 258751 RVA: 0x00F43478 File Offset: 0x00F41678
+		// Token: 0x06033F7F RID: 212863 RVA: 0x00E8A344 File Offset: 0x00E88544
 		private void SelectRoleToggle(int roleId)
 		{
 			int num = this.ActivityBaseData.RoleIdList.IndexOf(roleId);
@@ -567,7 +567,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleTrial
 			}
 		}
 
-		// Token: 0x0603F2C0 RID: 258752 RVA: 0x00F434B4 File Offset: 0x00F416B4
+		// Token: 0x06033F80 RID: 212864 RVA: 0x00E8A380 File Offset: 0x00E88580
 		private void MarkSelectRoleToggle(int roleId, bool fireEvent)
 		{
 			List<int> roleIdList = this.ActivityBaseData.RoleIdList;
@@ -593,14 +593,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleTrial
 			}
 		}
 
-		// Token: 0x0603F2C1 RID: 258753 RVA: 0x00F4351C File Offset: 0x00F4171C
+		// Token: 0x06033F81 RID: 212865 RVA: 0x00E8A3E8 File Offset: 0x00E885E8
 		[NullableContext(1)]
 		private ActivitySmallItemGrid InitGridItem()
 		{
 			return new ActivitySmallItemGrid();
 		}
 
-		// Token: 0x0603F2C2 RID: 258754 RVA: 0x00F43523 File Offset: 0x00F41723
+		// Token: 0x06033F82 RID: 212866 RVA: 0x00E8A3EF File Offset: 0x00E885EF
 		[NullableContext(1)]
 		private RoleItem InitRoleItem()
 		{
@@ -610,7 +610,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleTrial
 			};
 		}
 
-		// Token: 0x0603F2C3 RID: 258755 RVA: 0x00F43544 File Offset: 0x00F41744
+		// Token: 0x06033F83 RID: 212867 RVA: 0x00E8A410 File Offset: 0x00E88610
 		private void ToggleCallBack(int roleId, bool state)
 		{
 			int index = this.ActivityBaseData.RoleIdList.IndexOf(this.CurrentRoleId);
@@ -626,7 +626,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleTrial
 			this.PlaySwitchSequence();
 		}
 
-		// Token: 0x0603F2C4 RID: 258756 RVA: 0x00F435A4 File Offset: 0x00F417A4
+		// Token: 0x06033F84 RID: 212868 RVA: 0x00E8A470 File Offset: 0x00E88670
 		private void ButtonRolePreviewClick()
 		{
 			RoleTrialInfo? roleTrialInfoConfigByRoleId = ActivityRoleTrialConfig.Instance.GetRoleTrialInfoConfigByRoleId(this.CurrentRoleId);
@@ -638,13 +638,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleTrial
 			});
 		}
 
-		// Token: 0x0603F2C5 RID: 258757 RVA: 0x00F4360D File Offset: 0x00F4180D
+		// Token: 0x06033F85 RID: 212869 RVA: 0x00E8A4D9 File Offset: 0x00E886D9
 		private void ButtonRewardClaimedClick()
 		{
 			ActivityRoleTrialController.Instance.RequestRoleInstanceReward(this.CurrentRoleId, this.ActivityBaseData.Id);
 		}
 
-		// Token: 0x0603F2C6 RID: 258758 RVA: 0x00F4362A File Offset: 0x00F4182A
+		// Token: 0x06033F86 RID: 212870 RVA: 0x00E8A4F6 File Offset: 0x00E886F6
 		private void ButtonInstanceEnterClick()
 		{
 			ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -670,7 +670,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleTrial
 			});
 		}
 
-		// Token: 0x0603F2C7 RID: 258759 RVA: 0x00F43648 File Offset: 0x00F41848
+		// Token: 0x06033F87 RID: 212871 RVA: 0x00E8A514 File Offset: 0x00E88714
 		private void ButtonSkipGachaClick()
 		{
 			RoleTrialInfo? roleTrialInfoConfigByRoleId = ActivityRoleTrialConfig.Instance.GetRoleTrialInfoConfigByRoleId(this.CurrentRoleId);
@@ -682,7 +682,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleTrial
 			GachaController.Instance.OpenGachaView(roleTrialInfoConfigByRoleId.Value.GachaId);
 		}
 
-		// Token: 0x0603F2C8 RID: 258760 RVA: 0x00F436AF File Offset: 0x00F418AF
+		// Token: 0x06033F88 RID: 212872 RVA: 0x00E8A57B File Offset: 0x00E8877B
 		private void ButtonRedPointLeftClick()
 		{
 			if (this.RedDotItemPair != null && this.RedDotItemPair.Item1.IsValid())
@@ -691,7 +691,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleTrial
 			}
 		}
 
-		// Token: 0x0603F2C9 RID: 258761 RVA: 0x00F436E2 File Offset: 0x00F418E2
+		// Token: 0x06033F89 RID: 212873 RVA: 0x00E8A5AE File Offset: 0x00E887AE
 		private void ButtonRedPointRightClick()
 		{
 			if (this.RedDotItemPair != null && this.RedDotItemPair.Item2.IsValid())
@@ -700,7 +700,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleTrial
 			}
 		}
 
-		// Token: 0x0603F2CA RID: 258762 RVA: 0x00F43714 File Offset: 0x00F41914
+		// Token: 0x06033F8A RID: 212874 RVA: 0x00E8A5E0 File Offset: 0x00E887E0
 		private void ButtonNewPointLeftClick()
 		{
 			if (this.NewItemPair != null && this.NewItemPair.Item1.IsValid())
@@ -709,7 +709,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleTrial
 			}
 		}
 
-		// Token: 0x0603F2CB RID: 258763 RVA: 0x00F43747 File Offset: 0x00F41947
+		// Token: 0x06033F8B RID: 212875 RVA: 0x00E8A613 File Offset: 0x00E88813
 		private void ButtonNewPointRightClick()
 		{
 			if (this.NewItemPair != null && this.NewItemPair.Item2.IsValid())
@@ -718,118 +718,118 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoleTrial
 			}
 		}
 
-		// Token: 0x04020EC6 RID: 134854
+		// Token: 0x0401B7F3 RID: 112627
 		public float SCROLL_TOLERANCE = 0.1f;
 
-		// Token: 0x04020ECC RID: 134860
+		// Token: 0x0401B7F9 RID: 112633
 		[Nullable(1)]
 		private GenericScrollViewNew<RoleItem, int> RoleScroll;
 
-		// Token: 0x04020ECD RID: 134861
+		// Token: 0x0401B7FA RID: 112634
 		protected float ScrollDefaultWidth;
 
-		// Token: 0x04020ECE RID: 134862
+		// Token: 0x0401B7FB RID: 112635
 		[Nullable(1)]
 		private Tuple<UUIItem, UUIItem> RedDotItemPair;
 
-		// Token: 0x04020ECF RID: 134863
+		// Token: 0x0401B7FC RID: 112636
 		[Nullable(1)]
 		private Tuple<UUIItem, UUIItem> NewItemPair;
 
-		// Token: 0x04020ED0 RID: 134864
+		// Token: 0x0401B7FD RID: 112637
 		[Nullable(1)]
 		private Tuple<UUIItem, UUIItem> RedDotButtonPair;
 
-		// Token: 0x04020ED1 RID: 134865
+		// Token: 0x0401B7FE RID: 112638
 		[Nullable(1)]
 		private Tuple<UUIItem, UUIItem> NewButtonPair;
 
-		// Token: 0x04020ED2 RID: 134866
+		// Token: 0x0401B7FF RID: 112639
 		private bool HasSelectedNewRole;
 
-		// Token: 0x0200C3FF RID: 50175
+		// Token: 0x0200ADE6 RID: 44518
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403B26F RID: 242287
+			// Token: 0x04035BD0 RID: 220112
 			public const int TexInfluence = 0;
 
-			// Token: 0x0403B270 RID: 242288
+			// Token: 0x04035BD1 RID: 220113
 			public const int TexRoleSpine = 1;
 
-			// Token: 0x0403B271 RID: 242289
+			// Token: 0x04035BD2 RID: 220114
 			public const int PanelRole = 2;
 
-			// Token: 0x0403B272 RID: 242290
+			// Token: 0x04035BD3 RID: 220115
 			public const int TitleItem = 3;
 
-			// Token: 0x0403B273 RID: 242291
+			// Token: 0x04035BD4 RID: 220116
 			public const int DescriptionItem = 4;
 
-			// Token: 0x0403B274 RID: 242292
+			// Token: 0x04035BD5 RID: 220117
 			public const int RoleAttribute = 5;
 
-			// Token: 0x0403B275 RID: 242293
+			// Token: 0x04035BD6 RID: 220118
 			public const int BtnRolePreview = 6;
 
-			// Token: 0x0403B276 RID: 242294
+			// Token: 0x04035BD7 RID: 220119
 			public const int RewardListItem = 7;
 
-			// Token: 0x0403B277 RID: 242295
+			// Token: 0x04035BD8 RID: 220120
 			public const int FunctionArea = 8;
 
-			// Token: 0x0403B278 RID: 242296
+			// Token: 0x04035BD9 RID: 220121
 			public const int PanelDone = 9;
 
-			// Token: 0x0403B279 RID: 242297
+			// Token: 0x04035BDA RID: 220122
 			public const int PanelOngoing = 10;
 
-			// Token: 0x0403B27A RID: 242298
+			// Token: 0x04035BDB RID: 220123
 			public const int BtnReward = 11;
 
-			// Token: 0x0403B27B RID: 242299
+			// Token: 0x04035BDC RID: 220124
 			public const int TexRoleBackground1 = 12;
 
-			// Token: 0x0403B27C RID: 242300
+			// Token: 0x04035BDD RID: 220125
 			public const int TexRoleBackground2 = 13;
 
-			// Token: 0x0403B27D RID: 242301
+			// Token: 0x04035BDE RID: 220126
 			public const int TexColor1 = 14;
 
-			// Token: 0x0403B27E RID: 242302
+			// Token: 0x04035BDF RID: 220127
 			public const int TexColor2 = 15;
 
-			// Token: 0x0403B27F RID: 242303
+			// Token: 0x04035BE0 RID: 220128
 			public const int TexColor3 = 16;
 
-			// Token: 0x0403B280 RID: 242304
+			// Token: 0x04035BE1 RID: 220129
 			public const int TexColor4 = 17;
 
-			// Token: 0x0403B281 RID: 242305
+			// Token: 0x04035BE2 RID: 220130
 			public const int TexColor5 = 18;
 
-			// Token: 0x0403B282 RID: 242306
+			// Token: 0x04035BE3 RID: 220131
 			public const int SkipGachaButton = 19;
 
-			// Token: 0x0403B283 RID: 242307
+			// Token: 0x04035BE4 RID: 220132
 			public const int ScrollView = 20;
 
-			// Token: 0x0403B284 RID: 242308
+			// Token: 0x04035BE5 RID: 220133
 			public const int LayoutRoleItem = 21;
 
-			// Token: 0x0403B285 RID: 242309
+			// Token: 0x04035BE6 RID: 220134
 			public const int RoleSpineItem = 22;
 
-			// Token: 0x0403B286 RID: 242310
+			// Token: 0x04035BE7 RID: 220135
 			public const int BtnRedPointL = 23;
 
-			// Token: 0x0403B287 RID: 242311
+			// Token: 0x04035BE8 RID: 220136
 			public const int BtnRedPointR = 24;
 
-			// Token: 0x0403B288 RID: 242312
+			// Token: 0x04035BE9 RID: 220137
 			public const int BtnNewPointL = 25;
 
-			// Token: 0x0403B289 RID: 242313
+			// Token: 0x04035BEA RID: 220138
 			public const int BtnNewPointR = 26;
 		}
 	}

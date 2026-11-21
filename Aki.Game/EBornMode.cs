@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02003504 RID: 13572
+// Token: 0x02002A79 RID: 10873
 public enum EBornMode
 {
-	// Token: 0x0400E98A RID: 59786
+	// Token: 0x0400EE45 RID: 60997
 	PlayLocationCurrentCameraLocation,
-	// Token: 0x0400E98B RID: 59787
+	// Token: 0x0400EE46 RID: 60998
 	PlayLocationDefaultPlayerStart
 }

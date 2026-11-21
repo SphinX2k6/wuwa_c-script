@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000385 RID: 901
+	// Token: 0x0200039B RID: 923
 	public class ConfigGenericPromptTypesByTypeId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001524 RID: 5412 RVA: 0x000D126D File Offset: 0x000CF46D
+		// Token: 0x060015A8 RID: 5544 RVA: 0x000D79C1 File Offset: 0x000D5BC1
 		static ConfigGenericPromptTypesByTypeId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigGenericPromptTypesByTypeId.CreateStaticDefaultValue), new Action(ConfigGenericPromptTypesByTypeId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001525 RID: 5413 RVA: 0x000D128C File Offset: 0x000CF48C
+		// Token: 0x060015A9 RID: 5545 RVA: 0x000D79E0 File Offset: 0x000D5BE0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigGenericPromptTypesByTypeId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001526 RID: 5414 RVA: 0x000D130B File Offset: 0x000CF50B
+		// Token: 0x060015AA RID: 5546 RVA: 0x000D7A5F File Offset: 0x000D5C5F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigGenericPromptTypesByTypeId.LogPair = null;
 			ConfigGenericPromptTypesByTypeId.HandleId = 0;
 		}
 
-		// Token: 0x06001527 RID: 5415 RVA: 0x000D1319 File Offset: 0x000CF519
+		// Token: 0x060015AB RID: 5547 RVA: 0x000D7A6D File Offset: 0x000D5C6D
 		public static void Init()
 		{
 			ConfigGenericPromptTypesByTypeId.HandleId = ConfigCommon.InitDataStatement(ConfigGenericPromptTypesByTypeId.HandleId, "db_generic_tips.db", "select BinData from `GenericPromptTypes` where TypeId=?");
 		}
 
-		// Token: 0x06001528 RID: 5416 RVA: 0x000D1334 File Offset: 0x000CF534
+		// Token: 0x060015AC RID: 5548 RVA: 0x000D7A88 File Offset: 0x000D5C88
 		public static GenericPromptTypes? GetConfig(int p0TypeId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigGenericPromptTypesByTypeId.HandleId, ConfigGenericPromptTypesByTypeId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new GenericPromptTypes?(rootAsGenericPromptTypes);
 		}
 
-		// Token: 0x04001887 RID: 6279
+		// Token: 0x04001921 RID: 6433
 		private const string DB = "db_generic_tips.db";
 
-		// Token: 0x04001888 RID: 6280
+		// Token: 0x04001922 RID: 6434
 		private const string FILE = "t.通用提示.xlsx";
 
-		// Token: 0x04001889 RID: 6281
+		// Token: 0x04001923 RID: 6435
 		private const string TABLE = "GenericPromptTypes";
 
-		// Token: 0x0400188A RID: 6282
+		// Token: 0x04001924 RID: 6436
 		private const string COMMAND = "select BinData from `GenericPromptTypes` where TypeId=?";
 
-		// Token: 0x0400188B RID: 6283
+		// Token: 0x04001925 RID: 6437
 		private const string KEY_PREFIX = "GenericPromptTypesByTypeId";
 
-		// Token: 0x0400188C RID: 6284
+		// Token: 0x04001926 RID: 6438
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400188D RID: 6285
+		// Token: 0x04001927 RID: 6439
 		private static int HandleId;
 	}
 }

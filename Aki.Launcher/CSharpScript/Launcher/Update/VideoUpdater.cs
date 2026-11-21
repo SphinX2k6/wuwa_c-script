@@ -13,12 +13,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Update
 {
-	// Token: 0x0200009B RID: 155
+	// Token: 0x0200009E RID: 158
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class VideoUpdater
 	{
-		// Token: 0x06000562 RID: 1378 RVA: 0x000316BB File Offset: 0x0002F8BB
+		// Token: 0x06000579 RID: 1401 RVA: 0x00032C23 File Offset: 0x00030E23
 		public void Init(VideoUpdateUiEvent uiEvent)
 		{
 			this.UpdateView = new ResourceUpdateViewAgent();
@@ -28,7 +28,7 @@ namespace CSharpScript.Launcher.Update
 			}
 		}
 
-		// Token: 0x06000563 RID: 1379 RVA: 0x000316D8 File Offset: 0x0002F8D8
+		// Token: 0x0600057A RID: 1402 RVA: 0x00032C40 File Offset: 0x00030E40
 		[NullableContext(0)]
 		public UniTask<bool> Update(EVideoResSizeType videoResSizeType, [Nullable(1)] IResourceUpdateView updateViewImplement)
 		{
@@ -42,7 +42,7 @@ namespace CSharpScript.Launcher.Update
 			return <Update>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000564 RID: 1380 RVA: 0x0003172C File Offset: 0x0002F92C
+		// Token: 0x0600057B RID: 1403 RVA: 0x00032C94 File Offset: 0x00030E94
 		[NullableContext(1)]
 		public void SetCustomDownloadList(List<string> toDoList)
 		{
@@ -53,7 +53,7 @@ namespace CSharpScript.Launcher.Update
 			this.ToDoList = toDoList;
 		}
 
-		// Token: 0x06000565 RID: 1381 RVA: 0x00031764 File Offset: 0x0002F964
+		// Token: 0x0600057C RID: 1404 RVA: 0x00032CCC File Offset: 0x00030ECC
 		[NullableContext(0)]
 		public ValueTuple<bool, long> DoesSavedDirHaveEnoughSpace()
 		{
@@ -68,45 +68,45 @@ namespace CSharpScript.Launcher.Update
 			return new ValueTuple<bool, long>(true, 0L);
 		}
 
-		// Token: 0x06000566 RID: 1382 RVA: 0x000317CE File Offset: 0x0002F9CE
+		// Token: 0x0600057D RID: 1405 RVA: 0x00032D36 File Offset: 0x00030F36
 		public EVideoDownloadStatus GetDownLoadState()
 		{
 			return this.Status;
 		}
 
-		// Token: 0x06000567 RID: 1383 RVA: 0x000317D6 File Offset: 0x0002F9D6
+		// Token: 0x0600057E RID: 1406 RVA: 0x00032D3E File Offset: 0x00030F3E
 		public void SetDownLoadStateChangeCallBack(Action<EVideoDownloadStatus> callback)
 		{
 			this.OnUpdateStateChange = callback;
 		}
 
-		// Token: 0x06000568 RID: 1384 RVA: 0x000317DF File Offset: 0x0002F9DF
+		// Token: 0x0600057F RID: 1407 RVA: 0x00032D47 File Offset: 0x00030F47
 		public void SetDownLoadFailedCallBack(Action<bool> callback)
 		{
 			this.OnDownloadFailed = callback;
 		}
 
-		// Token: 0x06000569 RID: 1385 RVA: 0x000317E8 File Offset: 0x0002F9E8
+		// Token: 0x06000580 RID: 1408 RVA: 0x00032D50 File Offset: 0x00030F50
 		public void SetDownloadFinishCallBack(Action<EVideoResSizeType> callback)
 		{
 			this.OnDownloadFinish = callback;
 		}
 
-		// Token: 0x0600056A RID: 1386 RVA: 0x000317F4 File Offset: 0x0002F9F4
+		// Token: 0x06000581 RID: 1409 RVA: 0x00032D5C File Offset: 0x00030F5C
 		[NullableContext(0)]
 		public ValueTuple<long, long, long, long> GetDownLoadProgress()
 		{
 			return new ValueTuple<long, long, long, long>(this.UpdateView.ReceiveSize + this.AllSize, this.UpdateView.CurProgress + this.AllSize - this.UpdateView.TotalProgress, this.AllSize, this.UpdateView.DownloadSpeed);
 		}
 
-		// Token: 0x0600056B RID: 1387 RVA: 0x00031847 File Offset: 0x0002FA47
+		// Token: 0x06000582 RID: 1410 RVA: 0x00032DAF File Offset: 0x00030FAF
 		[NullableContext(0)]
 		public ValueTuple<double, double, double, bool> GetReportLogData()
 		{
 			return new ValueTuple<double, double, double, bool>((double)this.UpdateView.DownloadSpeedMax / 1048576.0, this.DownloadSizeMB, this.SpendTime, this.UpdateView.HasShowNotEnoughSpace);
 		}
 
-		// Token: 0x0600056C RID: 1388 RVA: 0x0003187B File Offset: 0x0002FA7B
+		// Token: 0x06000583 RID: 1411 RVA: 0x00032DE3 File Offset: 0x00030FE3
 		public void ResetDownLoadProgress()
 		{
 			this.AllSize = 0L;
@@ -116,7 +116,7 @@ namespace CSharpScript.Launcher.Update
 			this.UpdateView.DownloadSpeed = 0L;
 		}
 
-		// Token: 0x0600056D RID: 1389 RVA: 0x000318B9 File Offset: 0x0002FAB9
+		// Token: 0x06000584 RID: 1412 RVA: 0x00032E21 File Offset: 0x00031021
 		public void SetDownLoadProgress(long curProgress, long totalProgress)
 		{
 			this.UpdateView.CurProgress = curProgress;
@@ -124,14 +124,14 @@ namespace CSharpScript.Launcher.Update
 			this.AllSize = totalProgress;
 		}
 
-		// Token: 0x0600056E RID: 1390 RVA: 0x000318DA File Offset: 0x0002FADA
+		// Token: 0x06000585 RID: 1413 RVA: 0x00032E42 File Offset: 0x00031042
 		public void ResetDownLoadState()
 		{
 			this.Status = EVideoDownloadStatus.None;
 			this.ResetDownLoadProgress();
 		}
 
-		// Token: 0x0600056F RID: 1391 RVA: 0x000318EC File Offset: 0x0002FAEC
+		// Token: 0x06000586 RID: 1414 RVA: 0x00032E54 File Offset: 0x00031054
 		public void Pause()
 		{
 			LauncherLog.Instance.Info("VideoDown Pause", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -147,7 +147,7 @@ namespace CSharpScript.Launcher.Update
 			}
 		}
 
-		// Token: 0x06000570 RID: 1392 RVA: 0x00031944 File Offset: 0x0002FB44
+		// Token: 0x06000587 RID: 1415 RVA: 0x00032EAC File Offset: 0x000310AC
 		public void CancelDownload()
 		{
 			LauncherLog.Instance.Info("Cancel Video Downloading.", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -183,7 +183,7 @@ namespace CSharpScript.Launcher.Update
 			}
 		}
 
-		// Token: 0x06000571 RID: 1393 RVA: 0x00031A40 File Offset: 0x0002FC40
+		// Token: 0x06000588 RID: 1416 RVA: 0x00032FA8 File Offset: 0x000311A8
 		public unsafe void UpdateDeviceSave(EVideoResSizeType videoResSizeType)
 		{
 			if (this.Status == EVideoDownloadStatus.Done)
@@ -225,44 +225,44 @@ namespace CSharpScript.Launcher.Update
 			}
 		}
 
-		// Token: 0x04000353 RID: 851
+		// Token: 0x04000381 RID: 897
 		private EVideoDownloadStatus Status;
 
-		// Token: 0x04000354 RID: 852
+		// Token: 0x04000382 RID: 898
 		private Action<EVideoDownloadStatus> OnUpdateStateChange;
 
-		// Token: 0x04000355 RID: 853
+		// Token: 0x04000383 RID: 899
 		private Action<bool> OnDownloadFailed;
 
-		// Token: 0x04000356 RID: 854
+		// Token: 0x04000384 RID: 900
 		private Action<EVideoResSizeType> OnDownloadFinish;
 
-		// Token: 0x04000357 RID: 855
+		// Token: 0x04000385 RID: 901
 		public UrlPrefixDownload Downloader;
 
-		// Token: 0x04000358 RID: 856
+		// Token: 0x04000386 RID: 902
 		public DiffUpdate DiffUpdater;
 
-		// Token: 0x04000359 RID: 857
+		// Token: 0x04000387 RID: 903
 		public ResPackageInfo DiffResInfo;
 
-		// Token: 0x0400035A RID: 858
+		// Token: 0x04000388 RID: 904
 		public ResourceUpdateViewAgent UpdateView;
 
-		// Token: 0x0400035B RID: 859
+		// Token: 0x04000389 RID: 905
 		[Nullable(1)]
 		public List<string> ToDoList = new List<string>();
 
-		// Token: 0x0400035C RID: 860
+		// Token: 0x0400038A RID: 906
 		public EVideoResSizeType TodoResSizeType;
 
-		// Token: 0x0400035D RID: 861
+		// Token: 0x0400038B RID: 907
 		private long AllSize;
 
-		// Token: 0x0400035E RID: 862
+		// Token: 0x0400038C RID: 908
 		private double DownloadSizeMB;
 
-		// Token: 0x0400035F RID: 863
+		// Token: 0x0400038D RID: 909
 		private double SpendTime;
 	}
 }

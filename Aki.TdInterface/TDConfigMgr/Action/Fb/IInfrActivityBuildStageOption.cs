@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002653 RID: 9811
+	// Token: 0x02002917 RID: 10519
 	public class IInfrActivityBuildStageOption
 	{
-		// Token: 0x0600DBFF RID: 56319 RVA: 0x0020BEB1 File Offset: 0x0020A0B1
-		[NullableContext(1)]
+		// Token: 0x0600E9DB RID: 59867 RVA: 0x00228789 File Offset: 0x00226989
 		public static IInfrActivityBuildStageOption Create(IInfrActivityBuildStageOption? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700411B RID: 16667
-		// (get) Token: 0x0600DC00 RID: 56320 RVA: 0x0020BED0 File Offset: 0x0020A0D0
+		// Token: 0x1700445B RID: 17499
+		// (get) Token: 0x0600E9DC RID: 59868 RVA: 0x002287A8 File Offset: 0x002269A8
 		public virtual EInfrActivityBuildStageType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007A4F RID: 31311
+		// Token: 0x040080F1 RID: 33009
 		private IInfrActivityBuildStageOption Instance;
 	}
 }

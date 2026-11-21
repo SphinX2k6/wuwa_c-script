@@ -9,18 +9,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BED RID: 23533
+	// Token: 0x02004BCD RID: 19405
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CiacconaGalChapterView : UiViewBase
 	{
-		// Token: 0x0603B7AD RID: 243629 RVA: 0x00E2F510 File Offset: 0x00E2D710
+		// Token: 0x060306F8 RID: 198392 RVA: 0x00D7F820 File Offset: 0x00D7DA20
 		[NullableContext(1)]
 		public CiacconaGalChapterView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603B7AE RID: 243630 RVA: 0x00E2F51C File Offset: 0x00E2D71C
+		// Token: 0x060306F9 RID: 198393 RVA: 0x00D7F82C File Offset: 0x00D7DA2C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603B7AF RID: 243631 RVA: 0x00E2F5E8 File Offset: 0x00E2D7E8
+		// Token: 0x060306FA RID: 198394 RVA: 0x00D7F8F8 File Offset: 0x00D7DAF8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			CiacconaGalChapterView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B7B0 RID: 243632 RVA: 0x00E2F62C File Offset: 0x00E2D82C
+		// Token: 0x060306FB RID: 198395 RVA: 0x00D7F93C File Offset: 0x00D7DB3C
 		private void OnResultOrInitPanelBtnClick()
 		{
 			if (!this.ChapterData.IsFinished)
@@ -67,41 +67,41 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			seqPlayer.PlayLevelSequenceByName("Switch", false, null, false);
 		}
 
-		// Token: 0x0401EFCC RID: 126924
+		// Token: 0x04019A7D RID: 105085
 		private CiacconaGalChapterData ChapterData;
 
-		// Token: 0x0401EFCD RID: 126925
+		// Token: 0x04019A7E RID: 105086
 		private CiacconaGalChapterResultOrInitPanel ResultOrInitPanel;
 
-		// Token: 0x0401EFCE RID: 126926
+		// Token: 0x04019A7F RID: 105087
 		private CiacconaGalChapterRestartPanel RestartPanel;
 
-		// Token: 0x0401EFCF RID: 126927
+		// Token: 0x04019A80 RID: 105088
 		private PopupCaptionItem Caption;
 
-		// Token: 0x0401EFD0 RID: 126928
+		// Token: 0x04019A81 RID: 105089
 		private CiacconaTitleInspirationItem CiacconaTitleItem;
 
-		// Token: 0x0401EFD1 RID: 126929
+		// Token: 0x04019A82 RID: 105090
 		private LevelSequencePlayer SeqPlayer;
 
-		// Token: 0x0200BDD2 RID: 48594
+		// Token: 0x0200A7DA RID: 42970
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x040393C6 RID: 234438
+			// Token: 0x04033D89 RID: 212361
 			public const int BtnMask = 0;
 
-			// Token: 0x040393C7 RID: 234439
+			// Token: 0x04033D8A RID: 212362
 			public const int ItemCaption = 1;
 
-			// Token: 0x040393C8 RID: 234440
+			// Token: 0x04033D8B RID: 212363
 			public const int TextureChapterBg = 2;
 
-			// Token: 0x040393C9 RID: 234441
+			// Token: 0x04033D8C RID: 212364
 			public const int ItemResultOrInitPanel = 3;
 
-			// Token: 0x040393CA RID: 234442
+			// Token: 0x04033D8D RID: 212365
 			public const int ItemRestartPanel = 4;
 		}
 	}

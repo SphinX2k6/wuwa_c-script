@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004EC3 RID: 20163
+	// Token: 0x02003E8C RID: 16012
 	public interface IRogueBattleRoleBondInfo
 	{
-		// Token: 0x17007EE7 RID: 32487
-		// (get) Token: 0x06033C5D RID: 212061
-		// (set) Token: 0x06033C5E RID: 212062
+		// Token: 0x17005297 RID: 21143
+		// (get) Token: 0x06028AC8 RID: 166600
+		// (set) Token: 0x06028AC9 RID: 166601
 		int Id { get; set; }
 
-		// Token: 0x17007EE8 RID: 32488
-		// (get) Token: 0x06033C5F RID: 212063
-		// (set) Token: 0x06033C60 RID: 212064
+		// Token: 0x17005298 RID: 21144
+		// (get) Token: 0x06028ACA RID: 166602
+		// (set) Token: 0x06028ACB RID: 166603
 		int AddStar { get; set; }
 	}
 }

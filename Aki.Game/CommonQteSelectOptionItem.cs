@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200261A RID: 9754
+// Token: 0x02001B05 RID: 6917
 [NullableContext(1)]
 [Nullable(0)]
 public class CommonQteSelectOptionItem : UiPanelBase
 {
-	// Token: 0x06013EE0 RID: 81632 RVA: 0x005027C6 File Offset: 0x005009C6
+	// Token: 0x060113C2 RID: 70594 RVA: 0x0051168A File Offset: 0x0050F88A
 	public void Init(int index, SCommonQteButton config, CommonQteSelectOptionPanel parent)
 	{
 		this.Index = index;
@@ -22,7 +22,7 @@ public class CommonQteSelectOptionItem : UiPanelBase
 		this.ParentItem = parent;
 	}
 
-	// Token: 0x06013EE1 RID: 81633 RVA: 0x005027E0 File Offset: 0x005009E0
+	// Token: 0x060113C3 RID: 70595 RVA: 0x005116A4 File Offset: 0x0050F8A4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -38,7 +38,7 @@ public class CommonQteSelectOptionItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06013EE2 RID: 81634 RVA: 0x00502878 File Offset: 0x00500A78
+	// Token: 0x060113C4 RID: 70596 RVA: 0x0051173C File Offset: 0x0050F93C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		CommonQteSelectOptionItem.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -49,7 +49,7 @@ public class CommonQteSelectOptionItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013EE3 RID: 81635 RVA: 0x005028BC File Offset: 0x00500ABC
+	// Token: 0x060113C5 RID: 70597 RVA: 0x00511780 File Offset: 0x0050F980
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -82,7 +82,7 @@ public class CommonQteSelectOptionItem : UiPanelBase
 		this.LevelSequencePlayer.BindSequenceCloseEvent(new TSequenceEndEvent(this.OnSequenceEndEvent), false);
 	}
 
-	// Token: 0x06013EE4 RID: 81636 RVA: 0x00502958 File Offset: 0x00500B58
+	// Token: 0x060113C6 RID: 70598 RVA: 0x0051181C File Offset: 0x0050FA1C
 	protected override void OnBeforeDestroy()
 	{
 		base.OnBeforeDestroy();
@@ -103,7 +103,7 @@ public class CommonQteSelectOptionItem : UiPanelBase
 		this.ParentItem = null;
 	}
 
-	// Token: 0x06013EE5 RID: 81637 RVA: 0x005029B8 File Offset: 0x00500BB8
+	// Token: 0x060113C7 RID: 70599 RVA: 0x0051187C File Offset: 0x0050FA7C
 	public void SetQteContext(CommonQteContextBase context)
 	{
 		CommonQteSelectOptionContext commonQteSelectOptionContext = context as CommonQteSelectOptionContext;
@@ -137,7 +137,7 @@ public class CommonQteSelectOptionItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06013EE6 RID: 81638 RVA: 0x00502A60 File Offset: 0x00500C60
+	// Token: 0x060113C8 RID: 70600 RVA: 0x00511924 File Offset: 0x0050FB24
 	public void PlayQteStart()
 	{
 		this.OnSequenceEndEvent("Start");
@@ -145,7 +145,7 @@ public class CommonQteSelectOptionItem : UiPanelBase
 		base.SetUiActive(true);
 	}
 
-	// Token: 0x06013EE7 RID: 81639 RVA: 0x00502A7C File Offset: 0x00500C7C
+	// Token: 0x060113C9 RID: 70601 RVA: 0x00511940 File Offset: 0x0050FB40
 	public void PlayQteEnd()
 	{
 		InputMultiKeyItem keyItem = this.KeyItem;
@@ -175,7 +175,7 @@ public class CommonQteSelectOptionItem : UiPanelBase
 		this.UnbindAction();
 	}
 
-	// Token: 0x06013EE8 RID: 81640 RVA: 0x00502B1C File Offset: 0x00500D1C
+	// Token: 0x060113CA RID: 70602 RVA: 0x005119E0 File Offset: 0x0050FBE0
 	private void OnSequenceEndEvent(string sequenceName)
 	{
 		if (sequenceName == "Start")
@@ -207,7 +207,7 @@ public class CommonQteSelectOptionItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06013EE9 RID: 81641 RVA: 0x00502BA0 File Offset: 0x00500DA0
+	// Token: 0x060113CB RID: 70603 RVA: 0x00511A64 File Offset: 0x0050FC64
 	private void BindAction()
 	{
 		if (this.HasBindAction)
@@ -225,7 +225,7 @@ public class CommonQteSelectOptionItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06013EEA RID: 81642 RVA: 0x00502C14 File Offset: 0x00500E14
+	// Token: 0x060113CC RID: 70604 RVA: 0x00511AD8 File Offset: 0x0050FCD8
 	private void UnbindAction()
 	{
 		if (!this.HasBindAction)
@@ -243,7 +243,7 @@ public class CommonQteSelectOptionItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06013EEB RID: 81643 RVA: 0x00502C86 File Offset: 0x00500E86
+	// Token: 0x060113CD RID: 70605 RVA: 0x00511B4A File Offset: 0x0050FD4A
 	private void OnInputCallback(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 	{
 		CommonQteSelectOptionPanel parentItem = this.ParentItem;
@@ -254,7 +254,7 @@ public class CommonQteSelectOptionItem : UiPanelBase
 		this.OnInput(actionType);
 	}
 
-	// Token: 0x06013EEC RID: 81644 RVA: 0x00502CA8 File Offset: 0x00500EA8
+	// Token: 0x060113CE RID: 70606 RVA: 0x00511B6C File Offset: 0x0050FD6C
 	private void OnInputInteract(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 	{
 		if (Info.Instance.IsInGamepad())
@@ -292,7 +292,7 @@ public class CommonQteSelectOptionItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06013EED RID: 81645 RVA: 0x00502D55 File Offset: 0x00500F55
+	// Token: 0x060113CF RID: 70607 RVA: 0x00511C19 File Offset: 0x0050FE19
 	public void OnPress()
 	{
 		CommonQteSelectOptionPanel parentItem = this.ParentItem;
@@ -303,7 +303,7 @@ public class CommonQteSelectOptionItem : UiPanelBase
 		this.OnInput(InputDistributeDefine.EActionType.Press);
 	}
 
-	// Token: 0x06013EEE RID: 81646 RVA: 0x00502D78 File Offset: 0x00500F78
+	// Token: 0x060113D0 RID: 70608 RVA: 0x00511C3C File Offset: 0x0050FE3C
 	private void OnInput(InputDistributeDefine.EActionType actionType)
 	{
 		if (this.CommonQteContext != null && this.CommonQteContext.IsActive() && this.CommonQteContext.IsPending() && actionType == InputDistributeDefine.EActionType.Press)
@@ -313,19 +313,19 @@ public class CommonQteSelectOptionItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06013EEF RID: 81647 RVA: 0x00502DC6 File Offset: 0x00500FC6
+	// Token: 0x060113D1 RID: 70609 RVA: 0x00511C8A File Offset: 0x0050FE8A
 	public void OnQtePause()
 	{
 		this.UnbindAction();
 	}
 
-	// Token: 0x06013EF0 RID: 81648 RVA: 0x00502DCE File Offset: 0x00500FCE
+	// Token: 0x060113D2 RID: 70610 RVA: 0x00511C92 File Offset: 0x0050FE92
 	public void OnQteResume()
 	{
 		this.BindAction();
 	}
 
-	// Token: 0x06013EF1 RID: 81649 RVA: 0x00502DD8 File Offset: 0x00500FD8
+	// Token: 0x060113D3 RID: 70611 RVA: 0x00511C9C File Offset: 0x0050FE9C
 	public void RefreshUiOffset()
 	{
 		SCommonQteButton uiConfig = this.UiConfig;
@@ -345,7 +345,7 @@ public class CommonQteSelectOptionItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06013EF2 RID: 81650 RVA: 0x00502E28 File Offset: 0x00501028
+	// Token: 0x060113D4 RID: 70612 RVA: 0x00511CEC File Offset: 0x0050FEEC
 	public void SetAnchorOffsetX(float offset)
 	{
 		UUIItem item = base.GetItem(3);
@@ -356,52 +356,52 @@ public class CommonQteSelectOptionItem : UiPanelBase
 		item.SetAnchorOffsetX(offset);
 	}
 
-	// Token: 0x04009633 RID: 38451
+	// Token: 0x0400978A RID: 38794
 	private int Index = -1;
 
-	// Token: 0x04009634 RID: 38452
+	// Token: 0x0400978B RID: 38795
 	private string QteAction = "";
 
-	// Token: 0x04009635 RID: 38453
+	// Token: 0x0400978C RID: 38796
 	private bool HasBindAction;
 
-	// Token: 0x04009636 RID: 38454
+	// Token: 0x0400978D RID: 38797
 	[Nullable(2)]
 	private CommonQteSelectOptionContext CommonQteContext;
 
-	// Token: 0x04009637 RID: 38455
+	// Token: 0x0400978E RID: 38798
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x04009638 RID: 38456
+	// Token: 0x0400978F RID: 38799
 	[Nullable(2)]
 	private SCommonQteButton UiConfig;
 
-	// Token: 0x04009639 RID: 38457
+	// Token: 0x04009790 RID: 38800
 	[Nullable(2)]
 	private CommonQteSelectOptionPanel ParentItem;
 
-	// Token: 0x0400963A RID: 38458
+	// Token: 0x04009791 RID: 38801
 	[Nullable(2)]
 	private UUIExtendToggle ToggleMain;
 
-	// Token: 0x0400963B RID: 38459
+	// Token: 0x04009792 RID: 38802
 	[Nullable(2)]
 	private InputMultiKeyItem KeyItem;
 
-	// Token: 0x02008C63 RID: 35939
+	// Token: 0x02007DEC RID: 32236
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402D91C RID: 186652
+		// Token: 0x04028C33 RID: 166963
 		MainItem,
-		// Token: 0x0402D91D RID: 186653
+		// Token: 0x04028C34 RID: 166964
 		RaycastItem,
-		// Token: 0x0402D91E RID: 186654
+		// Token: 0x04028C35 RID: 166965
 		OptionText,
-		// Token: 0x0402D91F RID: 186655
+		// Token: 0x04028C36 RID: 166966
 		OffsetItem,
-		// Token: 0x0402D920 RID: 186656
+		// Token: 0x04028C37 RID: 166967
 		KeyItem
 	}
 }

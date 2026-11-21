@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Module.Util;
@@ -11,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E4D RID: 20045
+	// Token: 0x02003E16 RID: 15894
 	public class RogueBattleElementPanel : UiPanelBase
 	{
-		// Token: 0x06033AAD RID: 211629 RVA: 0x00C18D0C File Offset: 0x00C16F0C
+		// Token: 0x06028918 RID: 166168 RVA: 0x00B62234 File Offset: 0x00B60434
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +32,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033AAE RID: 211630 RVA: 0x00C18DE3 File Offset: 0x00C16FE3
+		// Token: 0x06028919 RID: 166169 RVA: 0x00B6230B File Offset: 0x00B6050B
 		private void ToggleElementInfo(EToggleState state)
 		{
 			if (state != EToggleState.ETT_UnChecked)
@@ -60,14 +59,14 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x06033AAF RID: 211631 RVA: 0x00C18E0F File Offset: 0x00C1700F
+		// Token: 0x0602891A RID: 166170 RVA: 0x00B62337 File Offset: 0x00B60537
 		[NullableContext(1)]
 		private RogueBattleTokenElementWithCount CreateElementItem()
 		{
 			return new RogueBattleTokenElementWithCount();
 		}
 
-		// Token: 0x06033AB0 RID: 211632 RVA: 0x00C18E18 File Offset: 0x00C17018
+		// Token: 0x0602891B RID: 166171 RVA: 0x00B62340 File Offset: 0x00B60540
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RogueBattleElementPanel.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -78,7 +77,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033AB1 RID: 211633 RVA: 0x00C18E5C File Offset: 0x00C1705C
+		// Token: 0x0602891C RID: 166172 RVA: 0x00B62384 File Offset: 0x00B60584
 		public void UpdateElementLayout([Nullable(new byte[]
 		{
 			2,
@@ -87,8 +86,8 @@ namespace CSharpScript.Game.Module.RogueBattle
 		{
 			RogueBattleElementPanel.<>c__DisplayClass6_0 CS$<>8__locals1 = new RogueBattleElementPanel.<>c__DisplayClass6_0();
 			CS$<>8__locals1.<>4__this = this;
-			ElementUnit[] source = ((addElement != null) ? addElement.ToArray() : null) ?? Array.Empty<ElementUnit>();
-			CS$<>8__locals1.elementInfos = RogueBattleModel.Instance.GetTotalElementInfo(source.ToList<ElementUnit>());
+			ElementUnit[] collection = ((addElement != null) ? addElement.ToArray() : null) ?? Array.Empty<ElementUnit>();
+			CS$<>8__locals1.elementInfos = RogueBattleModel.Instance.GetTotalElementInfo(new List<ElementUnit>(collection));
 			UiAsyncTask task = new UiAsyncTask("RogueBattleElementPanel.UpdateElementLayout", delegate()
 			{
 				RogueBattleElementPanel.<>c__DisplayClass6_0.<<UpdateElementLayout>b__0>d <<UpdateElementLayout>b__0>d;
@@ -106,11 +105,11 @@ namespace CSharpScript.Game.Module.RogueBattle
 			base.RunAsyncTask(task);
 		}
 
-		// Token: 0x0401B666 RID: 112230
+		// Token: 0x04016039 RID: 90169
 		[Nullable(2)]
 		public RogueBattleElementTipPanel TipPanel;
 
-		// Token: 0x0401B667 RID: 112231
+		// Token: 0x0401603A RID: 90170
 		[Nullable(new byte[]
 		{
 			2,

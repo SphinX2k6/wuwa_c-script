@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020011E8 RID: 4584
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001324 RID: 4900
 	public class IUseSkillCheckBySkillId : IUseSkillCheckBase
 	{
-		// Token: 0x06006816 RID: 26646 RVA: 0x000F8C74 File Offset: 0x000F6E74
+		// Token: 0x06006E57 RID: 28247 RVA: 0x00106580 File Offset: 0x00104780
 		private IUseSkillCheckBySkillId_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006817 RID: 26647 RVA: 0x000F8CAC File Offset: 0x000F6EAC
+		// Token: 0x06006E58 RID: 28248 RVA: 0x001065B8 File Offset: 0x001047B8
 		public static IUseSkillCheckBySkillId Create([Nullable(2)] IUseSkillCheckBySkillId instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006818 RID: 26648 RVA: 0x000F8CBF File Offset: 0x000F6EBF
+		// Token: 0x06006E59 RID: 28249 RVA: 0x001065CB File Offset: 0x001047CB
 		public static IUseSkillCheckBySkillId CreateFromSetValue([Nullable(2)] IUseSkillCheckBySkillId_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006819 RID: 26649 RVA: 0x000F8CD2 File Offset: 0x000F6ED2
+		// Token: 0x06006E5A RID: 28250 RVA: 0x001065DE File Offset: 0x001047DE
 		public new IUseSkillCheckBySkillId_SetValue ToSetValue()
 		{
 			return new IUseSkillCheckBySkillId_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x170021B4 RID: 8628
-		// (get) Token: 0x0600681A RID: 26650 RVA: 0x000F8CF1 File Offset: 0x000F6EF1
-		// (set) Token: 0x0600681B RID: 26651 RVA: 0x000F8D1C File Offset: 0x000F6F1C
+		// Token: 0x17002375 RID: 9077
+		// (get) Token: 0x06006E5B RID: 28251 RVA: 0x001065FD File Offset: 0x001047FD
+		// (set) Token: 0x06006E5C RID: 28252 RVA: 0x00106628 File Offset: 0x00104828
 		public override EUseSkillCheckType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170021B5 RID: 8629
-		// (get) Token: 0x0600681C RID: 26652 RVA: 0x000F8D2A File Offset: 0x000F6F2A
-		// (set) Token: 0x0600681D RID: 26653 RVA: 0x000F8D55 File Offset: 0x000F6F55
+		// Token: 0x17002376 RID: 9078
+		// (get) Token: 0x06006E5D RID: 28253 RVA: 0x00106636 File Offset: 0x00104836
+		// (set) Token: 0x06006E5E RID: 28254 RVA: 0x00106661 File Offset: 0x00104861
 		public virtual int SkillId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003E61 RID: 15969
+		// Token: 0x040041CF RID: 16847
 		[Nullable(2)]
 		protected new IUseSkillCheckBySkillId FbInstance;
 
-		// Token: 0x04003E62 RID: 15970
+		// Token: 0x040041D0 RID: 16848
 		[Nullable(2)]
 		protected new IUseSkillCheckBySkillId_SetValue PocoInterface;
 	}

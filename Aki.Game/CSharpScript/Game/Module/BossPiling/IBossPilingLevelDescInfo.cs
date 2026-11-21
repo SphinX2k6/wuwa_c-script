@@ -3,33 +3,33 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.BossPiling
 {
-	// Token: 0x02005C01 RID: 23553
+	// Token: 0x02004BE1 RID: 19425
 	[NullableContext(1)]
 	public interface IBossPilingLevelDescInfo
 	{
-		// Token: 0x17008D8B RID: 36235
-		// (get) Token: 0x0603B875 RID: 243829
-		// (set) Token: 0x0603B876 RID: 243830
+		// Token: 0x1700615D RID: 24925
+		// (get) Token: 0x060307C0 RID: 198592
+		// (set) Token: 0x060307C1 RID: 198593
 		bool IsFirstLevel { get; set; }
 
-		// Token: 0x17008D8C RID: 36236
-		// (get) Token: 0x0603B877 RID: 243831
-		// (set) Token: 0x0603B878 RID: 243832
+		// Token: 0x1700615E RID: 24926
+		// (get) Token: 0x060307C2 RID: 198594
+		// (set) Token: 0x060307C3 RID: 198595
 		int LevelId { get; set; }
 
-		// Token: 0x17008D8D RID: 36237
-		// (get) Token: 0x0603B879 RID: 243833
-		// (set) Token: 0x0603B87A RID: 243834
+		// Token: 0x1700615F RID: 24927
+		// (get) Token: 0x060307C4 RID: 198596
+		// (set) Token: 0x060307C5 RID: 198597
 		string LevelMechanism { get; set; }
 
-		// Token: 0x17008D8E RID: 36238
-		// (get) Token: 0x0603B87B RID: 243835
-		// (set) Token: 0x0603B87C RID: 243836
+		// Token: 0x17006160 RID: 24928
+		// (get) Token: 0x060307C6 RID: 198598
+		// (set) Token: 0x060307C7 RID: 198599
 		string MonsterDesc { get; set; }
 
-		// Token: 0x17008D8F RID: 36239
-		// (get) Token: 0x0603B87D RID: 243837
-		// (set) Token: 0x0603B87E RID: 243838
+		// Token: 0x17006161 RID: 24929
+		// (get) Token: 0x060307C8 RID: 198600
+		// (set) Token: 0x060307C9 RID: 198601
 		string LevelDesc { get; set; }
 	}
 }

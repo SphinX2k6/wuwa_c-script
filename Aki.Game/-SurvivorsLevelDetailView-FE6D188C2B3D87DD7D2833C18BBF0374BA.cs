@@ -1,72 +1,72 @@
 ﻿using System;
 
-// Token: 0x02002B3C RID: 11068
+// Token: 0x020020B8 RID: 8376
 internal enum <SurvivorsLevelDetailView>FE6D188C2B3D87DD7D2833C18BBF0374BAECB58F4BBBC46C24D048BE1533D47DD__EComp
 {
-	// Token: 0x0400AB0A RID: 43786
+	// Token: 0x0400AF10 RID: 44816
 	BgEasy,
-	// Token: 0x0400AB0B RID: 43787
+	// Token: 0x0400AF11 RID: 44817
 	BgNormal,
-	// Token: 0x0400AB0C RID: 43788
+	// Token: 0x0400AF12 RID: 44818
 	BgHard,
-	// Token: 0x0400AB0D RID: 43789
+	// Token: 0x0400AF13 RID: 44819
 	BgEndless,
-	// Token: 0x0400AB0E RID: 43790
+	// Token: 0x0400AF14 RID: 44820
 	TxtTitle,
-	// Token: 0x0400AB0F RID: 43791
+	// Token: 0x0400AF15 RID: 44821
 	TagEasy,
-	// Token: 0x0400AB10 RID: 43792
+	// Token: 0x0400AF16 RID: 44822
 	TxtEasy,
-	// Token: 0x0400AB11 RID: 43793
+	// Token: 0x0400AF17 RID: 44823
 	TagNormal,
-	// Token: 0x0400AB12 RID: 43794
+	// Token: 0x0400AF18 RID: 44824
 	TxtNormal,
-	// Token: 0x0400AB13 RID: 43795
+	// Token: 0x0400AF19 RID: 44825
 	TagHard,
-	// Token: 0x0400AB14 RID: 43796
+	// Token: 0x0400AF1A RID: 44826
 	TxtHard,
-	// Token: 0x0400AB15 RID: 43797
+	// Token: 0x0400AF1B RID: 44827
 	TagEndless,
-	// Token: 0x0400AB16 RID: 43798
+	// Token: 0x0400AF1C RID: 44828
 	TxtEndless,
-	// Token: 0x0400AB17 RID: 43799
+	// Token: 0x0400AF1D RID: 44829
 	TxtTarget,
-	// Token: 0x0400AB18 RID: 43800
+	// Token: 0x0400AF1E RID: 44830
 	TxtDesc,
-	// Token: 0x0400AB19 RID: 43801
+	// Token: 0x0400AF1F RID: 44831
 	TogEndless,
-	// Token: 0x0400AB1A RID: 43802
+	// Token: 0x0400AF20 RID: 44832
 	TxtTogEndless,
-	// Token: 0x0400AB1B RID: 43803
+	// Token: 0x0400AF21 RID: 44833
 	RewardPreviewRoot,
-	// Token: 0x0400AB1C RID: 43804
+	// Token: 0x0400AF22 RID: 44834
 	RewardPreviewEntry,
-	// Token: 0x0400AB1D RID: 43805
+	// Token: 0x0400AF23 RID: 44835
 	BottomArea,
-	// Token: 0x0400AB1E RID: 43806
+	// Token: 0x0400AF24 RID: 44836
 	TxtLB,
-	// Token: 0x0400AB1F RID: 43807
+	// Token: 0x0400AF25 RID: 44837
 	RoleIcon,
-	// Token: 0x0400AB20 RID: 43808
+	// Token: 0x0400AF26 RID: 44838
 	WeaponScroll,
-	// Token: 0x0400AB21 RID: 43809
+	// Token: 0x0400AF27 RID: 44839
 	WeaponItemRoot,
-	// Token: 0x0400AB22 RID: 43810
+	// Token: 0x0400AF28 RID: 44840
 	WeaponItemEntry,
-	// Token: 0x0400AB23 RID: 43811
+	// Token: 0x0400AF29 RID: 44841
 	CaptionItem,
-	// Token: 0x0400AB24 RID: 43812
+	// Token: 0x0400AF2A RID: 44842
 	RewardPreviewItem,
-	// Token: 0x0400AB25 RID: 43813
+	// Token: 0x0400AF2B RID: 44843
 	TexLock,
-	// Token: 0x0400AB26 RID: 43814
+	// Token: 0x0400AF2C RID: 44844
 	TexBg,
-	// Token: 0x0400AB27 RID: 43815
+	// Token: 0x0400AF2D RID: 44845
 	RewardScroll,
-	// Token: 0x0400AB28 RID: 43816
+	// Token: 0x0400AF2E RID: 44846
 	TxtRewardTitle,
-	// Token: 0x0400AB29 RID: 43817
+	// Token: 0x0400AF2F RID: 44847
 	PnlLBTitle,
-	// Token: 0x0400AB2A RID: 43818
+	// Token: 0x0400AF30 RID: 44848
 	PnlEndlessTog
 }

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006AE3 RID: 27363
+	// Token: 0x0200721A RID: 29210
 	public class IMonsterNpcInteractConfigBaseT
 	{
-		// Token: 0x1700CB01 RID: 51969
-		// (get) Token: 0x0602FF6E RID: 196462 RVA: 0x00685B02 File Offset: 0x00683D02
-		// (set) Token: 0x0602FF6F RID: 196463 RVA: 0x00685B0A File Offset: 0x00683D0A
+		// Token: 0x1700D5D0 RID: 54736
+		// (get) Token: 0x06032D42 RID: 208194 RVA: 0x006DD1BA File Offset: 0x006DB3BA
+		// (set) Token: 0x06032D43 RID: 208195 RVA: 0x006DD1C2 File Offset: 0x006DB3C2
 		public EMonsterNpcInteractType Type { get; set; }
 
-		// Token: 0x0602FF70 RID: 196464 RVA: 0x00685B13 File Offset: 0x00683D13
+		// Token: 0x06032D44 RID: 208196 RVA: 0x006DD1CB File Offset: 0x006DB3CB
 		public IMonsterNpcInteractConfigBaseT()
 		{
 			this.Type = EMonsterNpcInteractType.TriggerHook;

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001AD4 RID: 6868
+	// Token: 0x02001C7B RID: 7291
 	public class IGetUp_SetValue
 	{
-		// Token: 0x04005A84 RID: 23172
+		// Token: 0x04005F0E RID: 24334
 		public ELeisureInteract Type;
 	}
 }

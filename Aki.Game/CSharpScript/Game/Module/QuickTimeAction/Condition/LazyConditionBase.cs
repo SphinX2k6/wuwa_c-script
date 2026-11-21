@@ -8,12 +8,12 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.QuickTimeAction.Condition
 {
-	// Token: 0x02004F4E RID: 20302
+	// Token: 0x02003F17 RID: 16151
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LazyConditionBase
 	{
-		// Token: 0x060340ED RID: 213229 RVA: 0x00C3533C File Offset: 0x00C3353C
+		// Token: 0x06028F5B RID: 167771 RVA: 0x00B7EADC File Offset: 0x00B7CCDC
 		public LazyConditionBase(TLazyConditionResultCallback callback)
 		{
 			if (callback == null)
@@ -24,14 +24,14 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Condition
 			this.ResultCallback = callback;
 		}
 
-		// Token: 0x060340EE RID: 213230 RVA: 0x00C353C3 File Offset: 0x00C335C3
+		// Token: 0x06028F5C RID: 167772 RVA: 0x00B7EB63 File Offset: 0x00B7CD63
 		public void SetParam(BaseTagComponent tagComp, BaseAttributeComponent attributeComp)
 		{
 			this.TagComp = tagComp;
 			this.AttributeComp = attributeComp;
 		}
 
-		// Token: 0x060340EF RID: 213231 RVA: 0x00C353D3 File Offset: 0x00C335D3
+		// Token: 0x06028F5D RID: 167773 RVA: 0x00B7EB73 File Offset: 0x00B7CD73
 		[NullableContext(2)]
 		public void SetParamWithEntity(Entity entity = null)
 		{
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Condition
 			}
 		}
 
-		// Token: 0x060340F0 RID: 213232 RVA: 0x00C353F8 File Offset: 0x00C335F8
+		// Token: 0x06028F5E RID: 167774 RVA: 0x00B7EB98 File Offset: 0x00B7CD98
 		[NullableContext(2)]
 		public void SetCondition(CfgLazyConditionGroup inCondition = null, bool immediatelyCheck = true)
 		{
@@ -205,7 +205,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Condition
 			}
 		}
 
-		// Token: 0x060340F1 RID: 213233 RVA: 0x00C35958 File Offset: 0x00C33B58
+		// Token: 0x06028F5F RID: 167775 RVA: 0x00B7F0F8 File Offset: 0x00B7D2F8
 		public void ForceCheckOnce()
 		{
 			if (this.ResultCallback != null)
@@ -230,7 +230,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Condition
 			}
 		}
 
-		// Token: 0x060340F2 RID: 213234 RVA: 0x00C35A18 File Offset: 0x00C33C18
+		// Token: 0x06028F60 RID: 167776 RVA: 0x00B7F1B8 File Offset: 0x00B7D3B8
 		protected void ConditionTag(int index, CfgLazyConditionForTag condition, IEnumerable<int> tagIds)
 		{
 			bool flag = condition.AnyTag ? this.TagComp.HasAnyTag(tagIds) : this.TagComp.HasAllTag(tagIds);
@@ -239,7 +239,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Condition
 			this.UpdateResult();
 		}
 
-		// Token: 0x060340F3 RID: 213235 RVA: 0x00C35A6C File Offset: 0x00C33C6C
+		// Token: 0x06028F61 RID: 167777 RVA: 0x00B7F20C File Offset: 0x00B7D40C
 		protected void ConditionAttribute(int index, CfgLazyConditionForAttribute condition)
 		{
 			float currentValue = this.AttributeComp.GetCurrentValue((EAttributeType)condition.AttributeId1);
@@ -250,7 +250,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Condition
 			this.UpdateResult();
 		}
 
-		// Token: 0x060340F4 RID: 213236 RVA: 0x00C35B04 File Offset: 0x00C33D04
+		// Token: 0x06028F62 RID: 167778 RVA: 0x00B7F2A4 File Offset: 0x00B7D4A4
 		protected void ConditionInput(int index, CfgLazyConditionForInput condition, InputDistributeDefine.EActionType? actionType)
 		{
 			bool flag = false;
@@ -284,7 +284,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Condition
 			this.UpdateResult();
 		}
 
-		// Token: 0x060340F5 RID: 213237 RVA: 0x00C35BB4 File Offset: 0x00C33DB4
+		// Token: 0x06028F63 RID: 167779 RVA: 0x00B7F354 File Offset: 0x00B7D554
 		protected void ConditionCheckEvent(int index)
 		{
 			bool value = true;
@@ -292,7 +292,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Condition
 			this.UpdateResult();
 		}
 
-		// Token: 0x060340F6 RID: 213238 RVA: 0x00C35BD6 File Offset: 0x00C33DD6
+		// Token: 0x06028F64 RID: 167780 RVA: 0x00B7F376 File Offset: 0x00B7D576
 		private void OnRoleDead()
 		{
 			TLazyConditionResultCallback resultCallback = this.ResultCallback;
@@ -303,7 +303,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Condition
 			resultCallback(false, this.ConditionPayloadId);
 		}
 
-		// Token: 0x060340F7 RID: 213239 RVA: 0x00C35BF0 File Offset: 0x00C33DF0
+		// Token: 0x06028F65 RID: 167781 RVA: 0x00B7F390 File Offset: 0x00B7D590
 		private void OnCharSkillEnd(int entityId, int skillId)
 		{
 			int index;
@@ -313,7 +313,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Condition
 			}
 		}
 
-		// Token: 0x060340F8 RID: 213240 RVA: 0x00C35C14 File Offset: 0x00C33E14
+		// Token: 0x06028F66 RID: 167782 RVA: 0x00B7F3B4 File Offset: 0x00B7D5B4
 		private void OnCameraModeChanged(ECustomCameraMode newMode, ECustomCameraMode? oldMode, string cameraName)
 		{
 			if (cameraName != "MainCamera")
@@ -327,7 +327,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Condition
 			}
 		}
 
-		// Token: 0x060340F9 RID: 213241 RVA: 0x00C35C48 File Offset: 0x00C33E48
+		// Token: 0x06028F67 RID: 167783 RVA: 0x00B7F3E8 File Offset: 0x00B7D5E8
 		private bool CalcResult()
 		{
 			if (string.IsNullOrEmpty(this.ConditionFormula))
@@ -358,7 +358,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Condition
 			return this.BooleanListSolver.EvaluateByConditions(this.ConditionResultList.ToArray());
 		}
 
-		// Token: 0x060340FA RID: 213242 RVA: 0x00C35D2C File Offset: 0x00C33F2C
+		// Token: 0x06028F68 RID: 167784 RVA: 0x00B7F4CC File Offset: 0x00B7D6CC
 		protected void UpdateResult()
 		{
 			bool flag = this.CalcResult();
@@ -374,7 +374,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Condition
 			}
 		}
 
-		// Token: 0x060340FB RID: 213243 RVA: 0x00C35D6C File Offset: 0x00C33F6C
+		// Token: 0x06028F69 RID: 167785 RVA: 0x00B7F50C File Offset: 0x00B7D70C
 		public void Clear()
 		{
 			foreach (ITagTask tagTask in this.TagTaskList)
@@ -416,50 +416,50 @@ namespace CSharpScript.Game.Module.QuickTimeAction.Condition
 			this.ConditionResultList.Clear();
 		}
 
-		// Token: 0x0401BA67 RID: 113255
+		// Token: 0x0401643C RID: 91196
 		[Nullable(2)]
 		protected BaseTagComponent TagComp;
 
-		// Token: 0x0401BA68 RID: 113256
+		// Token: 0x0401643D RID: 91197
 		[Nullable(2)]
 		protected BaseAttributeComponent AttributeComp;
 
-		// Token: 0x0401BA69 RID: 113257
+		// Token: 0x0401643E RID: 91198
 		[Nullable(2)]
 		protected Entity Entity;
 
-		// Token: 0x0401BA6A RID: 113258
+		// Token: 0x0401643F RID: 91199
 		private readonly List<ITagTask> TagTaskList = new List<ITagTask>();
 
-		// Token: 0x0401BA6B RID: 113259
+		// Token: 0x04016440 RID: 91200
 		private readonly List<AttributeListenerHandle> AttributeListenerHandles = new List<AttributeListenerHandle>();
 
-		// Token: 0x0401BA6C RID: 113260
+		// Token: 0x04016441 RID: 91201
 		private readonly List<InputListenerHandle> InputListenerHandles = new List<InputListenerHandle>();
 
-		// Token: 0x0401BA6D RID: 113261
+		// Token: 0x04016442 RID: 91202
 		private readonly Dictionary<ELazyConditionEventName, int> EntityEventToIndexMap = new Dictionary<ELazyConditionEventName, int>();
 
-		// Token: 0x0401BA6E RID: 113262
+		// Token: 0x04016443 RID: 91203
 		private readonly List<CfgLazyConditionBase> LazyConditionList = new List<CfgLazyConditionBase>();
 
-		// Token: 0x0401BA6F RID: 113263
+		// Token: 0x04016444 RID: 91204
 		protected string ConditionFormula = string.Empty;
 
-		// Token: 0x0401BA70 RID: 113264
+		// Token: 0x04016445 RID: 91205
 		protected int ConditionPayloadId;
 
-		// Token: 0x0401BA71 RID: 113265
+		// Token: 0x04016446 RID: 91206
 		[Nullable(2)]
 		private readonly TLazyConditionResultCallback ResultCallback;
 
-		// Token: 0x0401BA72 RID: 113266
+		// Token: 0x04016447 RID: 91207
 		protected readonly List<bool> ConditionResultList = new List<bool>();
 
-		// Token: 0x0401BA73 RID: 113267
+		// Token: 0x04016448 RID: 91208
 		protected bool CurrentResult;
 
-		// Token: 0x0401BA74 RID: 113268
+		// Token: 0x04016449 RID: 91209
 		[Nullable(2)]
 		protected ConditionArray BooleanListSolver;
 	}

@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002779 RID: 10105
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A4B RID: 10827
 	public class StartFlowTemplate : ActionParams
 	{
-		// Token: 0x0600E100 RID: 57600 RVA: 0x00213DF6 File Offset: 0x00211FF6
+		// Token: 0x0600EF1E RID: 61214 RVA: 0x00230B8A File Offset: 0x0022ED8A
 		public static StartFlowTemplate Create(IStartFlowTemplate? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170043D0 RID: 17360
-		// (get) Token: 0x0600E101 RID: 57601 RVA: 0x00213E15 File Offset: 0x00212015
+		// Token: 0x17004736 RID: 18230
+		// (get) Token: 0x0600EF1F RID: 61215 RVA: 0x00230BA9 File Offset: 0x0022EDA9
 		public virtual IFlowTemplateMode TemplateMode
 		{
 			get
@@ -39,8 +37,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043D1 RID: 17361
-		// (get) Token: 0x0600E102 RID: 57602 RVA: 0x00213E49 File Offset: 0x00212049
+		// Token: 0x17004737 RID: 18231
+		// (get) Token: 0x0600EF20 RID: 61216 RVA: 0x00230BDD File Offset: 0x0022EDDD
 		public virtual PosA TargetPos
 		{
 			get
@@ -55,8 +53,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043D2 RID: 17362
-		// (get) Token: 0x0600E103 RID: 57603 RVA: 0x00213E80 File Offset: 0x00212080
+		// Token: 0x17004738 RID: 18232
+		// (get) Token: 0x0600EF21 RID: 61217 RVA: 0x00230C14 File Offset: 0x0022EE14
 		public virtual List<int> ActorIdArray
 		{
 			get
@@ -76,8 +74,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043D3 RID: 17363
-		// (get) Token: 0x0600E104 RID: 57604 RVA: 0x00213EE4 File Offset: 0x002120E4
+		// Token: 0x17004739 RID: 18233
+		// (get) Token: 0x0600EF22 RID: 61218 RVA: 0x00230C78 File Offset: 0x0022EE78
 		[Nullable(2)]
 		public virtual List<int> TalkerIds
 		{
@@ -103,34 +101,34 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C97 RID: 31895
+		// Token: 0x0400834D RID: 33613
 		private IStartFlowTemplate Instance;
 
-		// Token: 0x04007C98 RID: 31896
+		// Token: 0x0400834E RID: 33614
 		[Nullable(2)]
 		private IFlowTemplateMode _TemplateModeCache;
 
-		// Token: 0x04007C99 RID: 31897
+		// Token: 0x0400834F RID: 33615
 		private bool _TemplateModeInited;
 
-		// Token: 0x04007C9A RID: 31898
+		// Token: 0x04008350 RID: 33616
 		[Nullable(2)]
 		private PosA _TargetPosCache;
 
-		// Token: 0x04007C9B RID: 31899
+		// Token: 0x04008351 RID: 33617
 		private bool _TargetPosInited;
 
-		// Token: 0x04007C9C RID: 31900
+		// Token: 0x04008352 RID: 33618
 		private List<int> _ActorIdArrayCache;
 
-		// Token: 0x04007C9D RID: 31901
+		// Token: 0x04008353 RID: 33619
 		private bool _ActorIdArrayInited;
 
-		// Token: 0x04007C9E RID: 31902
+		// Token: 0x04008354 RID: 33620
 		[Nullable(2)]
 		private List<int> _TalkerIdsCache;
 
-		// Token: 0x04007C9F RID: 31903
+		// Token: 0x04008355 RID: 33621
 		private bool _TalkerIdsInited;
 	}
 }

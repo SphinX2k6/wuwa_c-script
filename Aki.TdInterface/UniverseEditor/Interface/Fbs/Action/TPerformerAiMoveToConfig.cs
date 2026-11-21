@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007749 RID: 30537
+	// Token: 0x02007F72 RID: 32626
 	public enum TPerformerAiMoveToConfig : byte
 	{
-		// Token: 0x0401289A RID: 75930
+		// Token: 0x04013930 RID: 80176
 		NONE,
-		// Token: 0x0401289B RID: 75931
+		// Token: 0x04013931 RID: 80177
 		IPerformerAiMoveToEntity,
-		// Token: 0x0401289C RID: 75932
+		// Token: 0x04013932 RID: 80178
 		IPerformerAiMoveToPlayer,
-		// Token: 0x0401289D RID: 75933
+		// Token: 0x04013933 RID: 80179
 		IPerformerAiMoveToPosition
 	}
 }

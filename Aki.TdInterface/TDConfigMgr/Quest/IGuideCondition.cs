@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000FA9 RID: 4009
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020010D3 RID: 4307
 	public class IGuideCondition : IQuestCondition
 	{
-		// Token: 0x06005950 RID: 22864 RVA: 0x000D9A54 File Offset: 0x000D7C54
+		// Token: 0x06005F26 RID: 24358 RVA: 0x000E6514 File Offset: 0x000E4714
 		private IGuideCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005951 RID: 22865 RVA: 0x000D9A8C File Offset: 0x000D7C8C
+		// Token: 0x06005F27 RID: 24359 RVA: 0x000E654C File Offset: 0x000E474C
 		public static IGuideCondition Create([Nullable(2)] IGuideCondition instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005952 RID: 22866 RVA: 0x000D9A9F File Offset: 0x000D7C9F
+		// Token: 0x06005F28 RID: 24360 RVA: 0x000E655F File Offset: 0x000E475F
 		public static IGuideCondition CreateFromSetValue([Nullable(2)] IGuideCondition_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005953 RID: 22867 RVA: 0x000D9AB2 File Offset: 0x000D7CB2
+		// Token: 0x06005F29 RID: 24361 RVA: 0x000E6572 File Offset: 0x000E4772
 		public new IGuideCondition_SetValue ToSetValue()
 		{
 			return new IGuideCondition_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001DAC RID: 7596
-		// (get) Token: 0x06005954 RID: 22868 RVA: 0x000D9ADD File Offset: 0x000D7CDD
-		// (set) Token: 0x06005955 RID: 22869 RVA: 0x000D9B08 File Offset: 0x000D7D08
+		// Token: 0x17001F53 RID: 8019
+		// (get) Token: 0x06005F2A RID: 24362 RVA: 0x000E659D File Offset: 0x000E479D
+		// (set) Token: 0x06005F2B RID: 24363 RVA: 0x000E65C8 File Offset: 0x000E47C8
 		public override EChildQuest Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001DAD RID: 7597
-		// (get) Token: 0x06005956 RID: 22870 RVA: 0x000D9B18 File Offset: 0x000D7D18
-		// (set) Token: 0x06005957 RID: 22871 RVA: 0x000D9B79 File Offset: 0x000D7D79
+		// Token: 0x17001F54 RID: 8020
+		// (get) Token: 0x06005F2C RID: 24364 RVA: 0x000E65D8 File Offset: 0x000E47D8
+		// (set) Token: 0x06005F2D RID: 24365 RVA: 0x000E6639 File Offset: 0x000E4839
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -118,9 +116,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001DAE RID: 7598
-		// (get) Token: 0x06005958 RID: 22872 RVA: 0x000D9B8E File Offset: 0x000D7D8E
-		// (set) Token: 0x06005959 RID: 22873 RVA: 0x000D9BB9 File Offset: 0x000D7DB9
+		// Token: 0x17001F55 RID: 8021
+		// (get) Token: 0x06005F2E RID: 24366 RVA: 0x000E664E File Offset: 0x000E484E
+		// (set) Token: 0x06005F2F RID: 24367 RVA: 0x000E6679 File Offset: 0x000E4879
 		public virtual int GuideGroupId
 		{
 			get
@@ -141,18 +139,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040035E9 RID: 13801
+		// Token: 0x0400391B RID: 14619
 		[Nullable(2)]
 		protected new IGuideCondition FbInstance;
 
-		// Token: 0x040035EA RID: 13802
+		// Token: 0x0400391C RID: 14620
 		[Nullable(2)]
 		protected new IGuideCondition_SetValue PocoInterface;
 
-		// Token: 0x040035EB RID: 13803
+		// Token: 0x0400391D RID: 14621
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x040035EC RID: 13804
+		// Token: 0x0400391E RID: 14622
 		private bool _PreConditionsInited;
 	}
 }

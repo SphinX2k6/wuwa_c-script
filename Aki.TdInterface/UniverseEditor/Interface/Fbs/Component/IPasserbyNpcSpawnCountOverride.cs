@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020056DD RID: 22237
+	// Token: 0x02005CC9 RID: 23753
 	public struct IPasserbyNpcSpawnCountOverride : IFlatbufferObject
 	{
-		// Token: 0x1700A583 RID: 42371
-		// (get) Token: 0x0602526A RID: 152170 RVA: 0x00520DA3 File Offset: 0x0051EFA3
+		// Token: 0x1700AE81 RID: 44673
+		// (get) Token: 0x060276BB RID: 161467 RVA: 0x0056555F File Offset: 0x0056375F
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602526B RID: 152171 RVA: 0x00520DB0 File Offset: 0x0051EFB0
+		// Token: 0x060276BC RID: 161468 RVA: 0x0056556C File Offset: 0x0056376C
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602526C RID: 152172 RVA: 0x00520DB8 File Offset: 0x0051EFB8
+		// Token: 0x060276BD RID: 161469 RVA: 0x00565574 File Offset: 0x00563774
 		public static IPasserbyNpcSpawnCountOverride GetRootAsIPasserbyNpcSpawnCountOverride(ByteBuffer _bb)
 		{
 			return IPasserbyNpcSpawnCountOverride.GetRootAsIPasserbyNpcSpawnCountOverride(_bb, default(IPasserbyNpcSpawnCountOverride));
 		}
 
-		// Token: 0x0602526D RID: 152173 RVA: 0x00520DD4 File Offset: 0x0051EFD4
+		// Token: 0x060276BE RID: 161470 RVA: 0x00565590 File Offset: 0x00563790
 		public static IPasserbyNpcSpawnCountOverride GetRootAsIPasserbyNpcSpawnCountOverride(ByteBuffer _bb, IPasserbyNpcSpawnCountOverride obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602526E RID: 152174 RVA: 0x00520DF1 File Offset: 0x0051EFF1
+		// Token: 0x060276BF RID: 161471 RVA: 0x005655AD File Offset: 0x005637AD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602526F RID: 152175 RVA: 0x00520E00 File Offset: 0x0051F000
+		// Token: 0x060276C0 RID: 161472 RVA: 0x005655BC File Offset: 0x005637BC
 		public IPasserbyNpcSpawnCountOverride __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A584 RID: 42372
-		// (get) Token: 0x06025270 RID: 152176 RVA: 0x00520E10 File Offset: 0x0051F010
+		// Token: 0x1700AE82 RID: 44674
+		// (get) Token: 0x060276C1 RID: 161473 RVA: 0x005655CC File Offset: 0x005637CC
 		public int PcSpawnCount
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A585 RID: 42373
-		// (get) Token: 0x06025271 RID: 152177 RVA: 0x00520E4C File Offset: 0x0051F04C
+		// Token: 0x1700AE83 RID: 44675
+		// (get) Token: 0x060276C2 RID: 161474 RVA: 0x00565608 File Offset: 0x00563808
 		public int MobileSpawnCount
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A586 RID: 42374
-		// (get) Token: 0x06025272 RID: 152178 RVA: 0x00520E88 File Offset: 0x0051F088
+		// Token: 0x1700AE84 RID: 44676
+		// (get) Token: 0x060276C3 RID: 161475 RVA: 0x00565644 File Offset: 0x00563844
 		public byte NullMask
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025273 RID: 152179 RVA: 0x00520EC4 File Offset: 0x0051F0C4
+		// Token: 0x060276C4 RID: 161476 RVA: 0x00565680 File Offset: 0x00563880
 		public static Offset<IPasserbyNpcSpawnCountOverride> CreateIPasserbyNpcSpawnCountOverride(FlatBufferBuilder builder, int PcSpawnCount = 0, int MobileSpawnCount = 0, byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IPasserbyNpcSpawnCountOverride.EndIPasserbyNpcSpawnCountOverride(builder);
 		}
 
-		// Token: 0x06025274 RID: 152180 RVA: 0x00520EE8 File Offset: 0x0051F0E8
+		// Token: 0x060276C5 RID: 161477 RVA: 0x005656A4 File Offset: 0x005638A4
 		public static void StartIPasserbyNpcSpawnCountOverride(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06025275 RID: 152181 RVA: 0x00520EF1 File Offset: 0x0051F0F1
+		// Token: 0x060276C6 RID: 161478 RVA: 0x005656AD File Offset: 0x005638AD
 		public static void AddPcSpawnCount(FlatBufferBuilder builder, int pcSpawnCount)
 		{
 			builder.AddInt(0, pcSpawnCount, 0);
 		}
 
-		// Token: 0x06025276 RID: 152182 RVA: 0x00520EFC File Offset: 0x0051F0FC
+		// Token: 0x060276C7 RID: 161479 RVA: 0x005656B8 File Offset: 0x005638B8
 		public static void AddMobileSpawnCount(FlatBufferBuilder builder, int mobileSpawnCount)
 		{
 			builder.AddInt(1, mobileSpawnCount, 0);
 		}
 
-		// Token: 0x06025277 RID: 152183 RVA: 0x00520F07 File Offset: 0x0051F107
+		// Token: 0x060276C8 RID: 161480 RVA: 0x005656C3 File Offset: 0x005638C3
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x06025278 RID: 152184 RVA: 0x00520F12 File Offset: 0x0051F112
+		// Token: 0x060276C9 RID: 161481 RVA: 0x005656CE File Offset: 0x005638CE
 		public static Offset<IPasserbyNpcSpawnCountOverride> EndIPasserbyNpcSpawnCountOverride(FlatBufferBuilder builder)
 		{
 			return new Offset<IPasserbyNpcSpawnCountOverride>(builder.EndTable());
 		}
 
-		// Token: 0x06025279 RID: 152185 RVA: 0x00520F20 File Offset: 0x0051F120
+		// Token: 0x060276CA RID: 161482 RVA: 0x005656DC File Offset: 0x005638DC
 		public IPasserbyNpcSpawnCountOverrideT UnPack()
 		{
 			IPasserbyNpcSpawnCountOverrideT passerbyNpcSpawnCountOverrideT = new IPasserbyNpcSpawnCountOverrideT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return passerbyNpcSpawnCountOverrideT;
 		}
 
-		// Token: 0x0602527A RID: 152186 RVA: 0x00520F3B File Offset: 0x0051F13B
+		// Token: 0x060276CB RID: 161483 RVA: 0x005656F7 File Offset: 0x005638F7
 		public void UnPackTo(IPasserbyNpcSpawnCountOverrideT _o)
 		{
 			_o.PcSpawnCount = this.PcSpawnCount;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602527B RID: 152187 RVA: 0x00520F64 File Offset: 0x0051F164
+		// Token: 0x060276CC RID: 161484 RVA: 0x00565720 File Offset: 0x00563920
 		public static Offset<IPasserbyNpcSpawnCountOverride> Pack(FlatBufferBuilder builder, IPasserbyNpcSpawnCountOverrideT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IPasserbyNpcSpawnCountOverride.CreateIPasserbyNpcSpawnCountOverride(builder, _o.PcSpawnCount, _o.MobileSpawnCount, _o.NullMask);
 		}
 
-		// Token: 0x0400EB28 RID: 60200
+		// Token: 0x0400F7F2 RID: 63474
 		private Table __p;
 	}
 }

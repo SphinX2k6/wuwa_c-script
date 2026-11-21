@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020062D5 RID: 25301
+	// Token: 0x02006946 RID: 26950
 	public struct IChangeElementalBoxStatePlayerTarget : IFlatbufferObject
 	{
-		// Token: 0x1700BCDD RID: 48349
-		// (get) Token: 0x0602BBBF RID: 179135 RVA: 0x0060494C File Offset: 0x00602B4C
+		// Token: 0x1700C667 RID: 50791
+		// (get) Token: 0x0602E328 RID: 189224 RVA: 0x0064F958 File Offset: 0x0064DB58
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602BBC0 RID: 179136 RVA: 0x00604959 File Offset: 0x00602B59
+		// Token: 0x0602E329 RID: 189225 RVA: 0x0064F965 File Offset: 0x0064DB65
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602BBC1 RID: 179137 RVA: 0x00604960 File Offset: 0x00602B60
+		// Token: 0x0602E32A RID: 189226 RVA: 0x0064F96C File Offset: 0x0064DB6C
 		public static IChangeElementalBoxStatePlayerTarget GetRootAsIChangeElementalBoxStatePlayerTarget(ByteBuffer _bb)
 		{
 			return IChangeElementalBoxStatePlayerTarget.GetRootAsIChangeElementalBoxStatePlayerTarget(_bb, default(IChangeElementalBoxStatePlayerTarget));
 		}
 
-		// Token: 0x0602BBC2 RID: 179138 RVA: 0x0060497C File Offset: 0x00602B7C
+		// Token: 0x0602E32B RID: 189227 RVA: 0x0064F988 File Offset: 0x0064DB88
 		public static IChangeElementalBoxStatePlayerTarget GetRootAsIChangeElementalBoxStatePlayerTarget(ByteBuffer _bb, IChangeElementalBoxStatePlayerTarget obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602BBC3 RID: 179139 RVA: 0x00604999 File Offset: 0x00602B99
+		// Token: 0x0602E32C RID: 189228 RVA: 0x0064F9A5 File Offset: 0x0064DBA5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602BBC4 RID: 179140 RVA: 0x006049A8 File Offset: 0x00602BA8
+		// Token: 0x0602E32D RID: 189229 RVA: 0x0064F9B4 File Offset: 0x0064DBB4
 		public IChangeElementalBoxStatePlayerTarget __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BCDE RID: 48350
-		// (get) Token: 0x0602BBC5 RID: 179141 RVA: 0x006049B8 File Offset: 0x00602BB8
+		// Token: 0x1700C668 RID: 50792
+		// (get) Token: 0x0602E32E RID: 189230 RVA: 0x0064F9C4 File Offset: 0x0064DBC4
 		public EChangeElementalBoxStateTargetType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602BBC6 RID: 179142 RVA: 0x006049F4 File Offset: 0x00602BF4
+		// Token: 0x0602E32F RID: 189231 RVA: 0x0064FA00 File Offset: 0x0064DC00
 		public static Offset<IChangeElementalBoxStatePlayerTarget> CreateIChangeElementalBoxStatePlayerTarget(FlatBufferBuilder builder, EChangeElementalBoxStateTargetType Type = EChangeElementalBoxStateTargetType.Player)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IChangeElementalBoxStatePlayerTarget.EndIChangeElementalBoxStatePlayerTarget(builder);
 		}
 
-		// Token: 0x0602BBC7 RID: 179143 RVA: 0x00604A0A File Offset: 0x00602C0A
+		// Token: 0x0602E330 RID: 189232 RVA: 0x0064FA16 File Offset: 0x0064DC16
 		public static void StartIChangeElementalBoxStatePlayerTarget(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602BBC8 RID: 179144 RVA: 0x00604A13 File Offset: 0x00602C13
+		// Token: 0x0602E331 RID: 189233 RVA: 0x0064FA1F File Offset: 0x0064DC1F
 		public static void AddType(FlatBufferBuilder builder, EChangeElementalBoxStateTargetType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602BBC9 RID: 179145 RVA: 0x00604A1E File Offset: 0x00602C1E
+		// Token: 0x0602E332 RID: 189234 RVA: 0x0064FA2A File Offset: 0x0064DC2A
 		public static Offset<IChangeElementalBoxStatePlayerTarget> EndIChangeElementalBoxStatePlayerTarget(FlatBufferBuilder builder)
 		{
 			return new Offset<IChangeElementalBoxStatePlayerTarget>(builder.EndTable());
 		}
 
-		// Token: 0x0602BBCA RID: 179146 RVA: 0x00604A2C File Offset: 0x00602C2C
+		// Token: 0x0602E333 RID: 189235 RVA: 0x0064FA38 File Offset: 0x0064DC38
 		public IChangeElementalBoxStatePlayerTargetT UnPack()
 		{
 			IChangeElementalBoxStatePlayerTargetT changeElementalBoxStatePlayerTargetT = new IChangeElementalBoxStatePlayerTargetT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return changeElementalBoxStatePlayerTargetT;
 		}
 
-		// Token: 0x0602BBCB RID: 179147 RVA: 0x00604A47 File Offset: 0x00602C47
+		// Token: 0x0602E334 RID: 189236 RVA: 0x0064FA53 File Offset: 0x0064DC53
 		public void UnPackTo(IChangeElementalBoxStatePlayerTargetT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602BBCC RID: 179148 RVA: 0x00604A58 File Offset: 0x00602C58
+		// Token: 0x0602E335 RID: 189237 RVA: 0x0064FA64 File Offset: 0x0064DC64
 		public static Offset<IChangeElementalBoxStatePlayerTarget> Pack(FlatBufferBuilder builder, IChangeElementalBoxStatePlayerTargetT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IChangeElementalBoxStatePlayerTarget.CreateIChangeElementalBoxStatePlayerTarget(builder, _o.Type);
 		}
 
-		// Token: 0x0401087D RID: 67709
+		// Token: 0x04011693 RID: 71315
 		private Table __p;
 	}
 }

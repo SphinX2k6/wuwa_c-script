@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001E67 RID: 7783
+// Token: 0x02001329 RID: 4905
 [NullableContext(1)]
 [Nullable(0)]
 public class IkTarget
 {
-	// Token: 0x0600EC98 RID: 60568 RVA: 0x00383FC4 File Offset: 0x003821C4
+	// Token: 0x0600C0B7 RID: 49335 RVA: 0x0038FC80 File Offset: 0x0038DE80
 	[NullableContext(2)]
 	public IkTarget(Vector location = null, Quat rotation = null, double? alpha = null)
 	{
@@ -16,7 +16,7 @@ public class IkTarget
 		this.Alpha = alpha.GetValueOrDefault();
 	}
 
-	// Token: 0x0600EC99 RID: 60569 RVA: 0x00384088 File Offset: 0x00382288
+	// Token: 0x0600C0B8 RID: 49336 RVA: 0x0038FD44 File Offset: 0x0038DF44
 	[NullableContext(2)]
 	public bool Equals(IkTarget inB)
 	{
@@ -27,7 +27,7 @@ public class IkTarget
 		return this.Alpha == 0.0;
 	}
 
-	// Token: 0x0600EC9A RID: 60570 RVA: 0x003840F0 File Offset: 0x003822F0
+	// Token: 0x0600C0B9 RID: 49337 RVA: 0x0038FDAC File Offset: 0x0038DFAC
 	[NullableContext(2)]
 	public void DeepCopy(IkTarget other)
 	{
@@ -41,7 +41,7 @@ public class IkTarget
 		this.Alpha = 0.0;
 	}
 
-	// Token: 0x0600EC9B RID: 60571 RVA: 0x0038413E File Offset: 0x0038233E
+	// Token: 0x0600C0BA RID: 49338 RVA: 0x0038FDFA File Offset: 0x0038DFFA
 	public FIKTarget ToUeIkTarget()
 	{
 		FIKTarget cacheUeIkTarget = this.CacheUeIkTarget;
@@ -51,15 +51,15 @@ public class IkTarget
 		return cacheUeIkTarget;
 	}
 
-	// Token: 0x04006DEC RID: 28140
+	// Token: 0x04006ECD RID: 28365
 	public Vector Location = Vector.Create();
 
-	// Token: 0x04006DED RID: 28141
+	// Token: 0x04006ECE RID: 28366
 	public Quat Rotation = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x04006DEE RID: 28142
+	// Token: 0x04006ECF RID: 28367
 	public double Alpha;
 
-	// Token: 0x04006DEF RID: 28143
+	// Token: 0x04006ED0 RID: 28368
 	private readonly FIKTarget CacheUeIkTarget = new FIKTarget();
 }

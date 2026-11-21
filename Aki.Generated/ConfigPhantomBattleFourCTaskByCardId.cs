@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000678 RID: 1656
+	// Token: 0x02000690 RID: 1680
 	public class ConfigPhantomBattleFourCTaskByCardId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060026E0 RID: 9952 RVA: 0x00135874 File Offset: 0x00133A74
+		// Token: 0x06002770 RID: 10096 RVA: 0x0013C2F0 File Offset: 0x0013A4F0
 		static ConfigPhantomBattleFourCTaskByCardId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPhantomBattleFourCTaskByCardId.CreateStaticDefaultValue), new Action(ConfigPhantomBattleFourCTaskByCardId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060026E1 RID: 9953 RVA: 0x00135894 File Offset: 0x00133A94
+		// Token: 0x06002771 RID: 10097 RVA: 0x0013C310 File Offset: 0x0013A510
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPhantomBattleFourCTaskByCardId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060026E2 RID: 9954 RVA: 0x00135913 File Offset: 0x00133B13
+		// Token: 0x06002772 RID: 10098 RVA: 0x0013C38F File Offset: 0x0013A58F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPhantomBattleFourCTaskByCardId.LogPair = null;
 			ConfigPhantomBattleFourCTaskByCardId.HandleId = 0;
 		}
 
-		// Token: 0x060026E3 RID: 9955 RVA: 0x00135921 File Offset: 0x00133B21
+		// Token: 0x06002773 RID: 10099 RVA: 0x0013C39D File Offset: 0x0013A59D
 		public static void Init()
 		{
 			ConfigPhantomBattleFourCTaskByCardId.HandleId = ConfigCommon.InitDataStatement(ConfigPhantomBattleFourCTaskByCardId.HandleId, "db_phantombattle.db", "select BinData from `PhantomBattleFourCTask` where CardId=?");
 		}
 
-		// Token: 0x060026E4 RID: 9956 RVA: 0x0013593C File Offset: 0x00133B3C
+		// Token: 0x06002774 RID: 10100 RVA: 0x0013C3B8 File Offset: 0x0013A5B8
 		public static PhantomBattleFourCTask? GetConfig(int p0CardId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPhantomBattleFourCTaskByCardId.HandleId, ConfigPhantomBattleFourCTaskByCardId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PhantomBattleFourCTask?(rootAsPhantomBattleFourCTask);
 		}
 
-		// Token: 0x04002D2E RID: 11566
+		// Token: 0x04002DD6 RID: 11734
 		private const string DB = "db_phantombattle.db";
 
-		// Token: 0x04002D2F RID: 11567
+		// Token: 0x04002DD7 RID: 11735
 		private const string FILE = "s.声骸大作战战斗.xlsx";
 
-		// Token: 0x04002D30 RID: 11568
+		// Token: 0x04002DD8 RID: 11736
 		private const string TABLE = "PhantomBattleFourCTask";
 
-		// Token: 0x04002D31 RID: 11569
+		// Token: 0x04002DD9 RID: 11737
 		private const string COMMAND = "select BinData from `PhantomBattleFourCTask` where CardId=?";
 
-		// Token: 0x04002D32 RID: 11570
+		// Token: 0x04002DDA RID: 11738
 		private const string KEY_PREFIX = "PhantomBattleFourCTaskByCardId";
 
-		// Token: 0x04002D33 RID: 11571
+		// Token: 0x04002DDB RID: 11739
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002D34 RID: 11572
+		// Token: 0x04002DDC RID: 11740
 		private static int HandleId;
 	}
 }

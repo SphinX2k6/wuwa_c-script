@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006D74 RID: 28020
+	// Token: 0x02005EF3 RID: 24307
 	public class LevelConditionQuestStepState : LevelConditionBase
 	{
-		// Token: 0x0604478E RID: 280462 RVA: 0x010E2E60 File Offset: 0x010E1060
+		// Token: 0x0603A8F2 RID: 239858 RVA: 0x0108D044 File Offset: 0x0108B244
 		[NullableContext(1)]
 		public override bool Check(Condition inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			}
 		}
 
-		// Token: 0x0604478F RID: 280463 RVA: 0x010E3004 File Offset: 0x010E1204
+		// Token: 0x0603A8F3 RID: 239859 RVA: 0x0108D1E8 File Offset: 0x0108B3E8
 		[NullableContext(1)]
 		public override bool CheckNew(ICondition2 inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{
@@ -122,18 +122,18 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return flag;
 		}
 
-		// Token: 0x0200CCA1 RID: 52385
+		// Token: 0x0200B891 RID: 47249
 		private enum EQuestStepState
 		{
-			// Token: 0x0403DB7E RID: 252798
+			// Token: 0x04038FA0 RID: 233376
 			NotAccept,
-			// Token: 0x0403DB7F RID: 252799
+			// Token: 0x04038FA1 RID: 233377
 			CanAccept,
-			// Token: 0x0403DB80 RID: 252800
+			// Token: 0x04038FA2 RID: 233378
 			Progressing,
-			// Token: 0x0403DB81 RID: 252801
+			// Token: 0x04038FA3 RID: 233379
 			CanFinish,
-			// Token: 0x0403DB82 RID: 252802
+			// Token: 0x04038FA4 RID: 233380
 			Finished
 		}
 	}

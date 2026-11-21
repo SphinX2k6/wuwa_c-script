@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020011C7 RID: 4551
+	// Token: 0x020012FD RID: 4861
 	public struct FloatRange : IFlatbufferObject
 	{
-		// Token: 0x17003EE3 RID: 16099
-		// (get) Token: 0x0600EA6D RID: 60013 RVA: 0x0034808D File Offset: 0x0034628D
+		// Token: 0x17004248 RID: 16968
+		// (get) Token: 0x0600F7DE RID: 63454 RVA: 0x00372CFA File Offset: 0x00370EFA
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600EA6E RID: 60014 RVA: 0x0034809A File Offset: 0x0034629A
+		// Token: 0x0600F7DF RID: 63455 RVA: 0x00372D07 File Offset: 0x00370F07
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600EA6F RID: 60015 RVA: 0x003480A4 File Offset: 0x003462A4
+		// Token: 0x0600F7E0 RID: 63456 RVA: 0x00372D10 File Offset: 0x00370F10
 		public static FloatRange GetRootAsFloatRange(ByteBuffer _bb)
 		{
 			return FloatRange.GetRootAsFloatRange(_bb, default(FloatRange));
 		}
 
-		// Token: 0x0600EA70 RID: 60016 RVA: 0x003480C0 File Offset: 0x003462C0
+		// Token: 0x0600F7E1 RID: 63457 RVA: 0x00372D2C File Offset: 0x00370F2C
 		public static FloatRange GetRootAsFloatRange(ByteBuffer _bb, FloatRange obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600EA71 RID: 60017 RVA: 0x003480DD File Offset: 0x003462DD
+		// Token: 0x0600F7E2 RID: 63458 RVA: 0x00372D49 File Offset: 0x00370F49
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600EA72 RID: 60018 RVA: 0x003480EC File Offset: 0x003462EC
+		// Token: 0x0600F7E3 RID: 63459 RVA: 0x00372D58 File Offset: 0x00370F58
 		public FloatRange __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003EE4 RID: 16100
-		// (get) Token: 0x0600EA73 RID: 60019 RVA: 0x003480FC File Offset: 0x003462FC
+		// Token: 0x17004249 RID: 16969
+		// (get) Token: 0x0600F7E4 RID: 63460 RVA: 0x00372D68 File Offset: 0x00370F68
 		public float Min
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003EE5 RID: 16101
-		// (get) Token: 0x0600EA74 RID: 60020 RVA: 0x0034813C File Offset: 0x0034633C
+		// Token: 0x1700424A RID: 16970
+		// (get) Token: 0x0600F7E5 RID: 63461 RVA: 0x00372DA8 File Offset: 0x00370FA8
 		public float Max
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0400532A RID: 21290
+		// Token: 0x0400596D RID: 22893
 		private Table __p;
 	}
 }

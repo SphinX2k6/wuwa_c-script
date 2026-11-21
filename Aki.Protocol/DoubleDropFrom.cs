@@ -3,16 +3,16 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020015EB RID: 5611
+	// Token: 0x0200165D RID: 5725
 	public enum DoubleDropFrom
 	{
-		// Token: 0x0400BDED RID: 48621
+		// Token: 0x0400C2E1 RID: 49889
 		[OriginalName("UnDefineDouble")]
 		UnDefineDouble,
-		// Token: 0x0400BDEE RID: 48622
+		// Token: 0x0400C2E2 RID: 49890
 		[OriginalName("DoubleActivity")]
 		DoubleActivity,
-		// Token: 0x0400BDEF RID: 48623
+		// Token: 0x0400C2E3 RID: 49891
 		[OriginalName("FromRegress")]
 		FromRegress
 	}

@@ -7,17 +7,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 {
-	// Token: 0x02004CF0 RID: 19696
+	// Token: 0x02003CA2 RID: 15522
 	internal class RoleVisionFetterDescScrollerItem : UiPanelBase
 	{
-		// Token: 0x06032E04 RID: 208388 RVA: 0x00BDBD3C File Offset: 0x00BD9F3C
+		// Token: 0x06027BDF RID: 162783 RVA: 0x00B21644 File Offset: 0x00B1F844
 		[NullableContext(1)]
 		public RoleVisionFetterDescScrollerItem(UUIItem uiItem)
 		{
 			base.CreateThenShowByActor(uiItem.GetOwner(), null);
 		}
 
-		// Token: 0x06032E05 RID: 208389 RVA: 0x00BDBD51 File Offset: 0x00BD9F51
+		// Token: 0x06027BE0 RID: 162784 RVA: 0x00B21659 File Offset: 0x00B1F859
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.RoleUi.TabView.VisionSubView
 			};
 		}
 
-		// Token: 0x06032E06 RID: 208390 RVA: 0x00BDBD8A File Offset: 0x00BD9F8A
+		// Token: 0x06027BE1 RID: 162785 RVA: 0x00B21692 File Offset: 0x00B1F892
 		public void Update(PhantomFetter data)
 		{
 			base.GetText(0).ShowTextNew(data.Name);

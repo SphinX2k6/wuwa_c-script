@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02001724 RID: 5924
+// Token: 0x02000BDC RID: 3036
 public interface ICalabashCollectViewData
 {
-	// Token: 0x17000E14 RID: 3604
-	// (get) Token: 0x0600AB2E RID: 43822
-	// (set) Token: 0x0600AB2F RID: 43823
+	// Token: 0x17000E35 RID: 3637
+	// (get) Token: 0x06007F10 RID: 32528
+	// (set) Token: 0x06007F11 RID: 32529
 	int MonsterId { get; set; }
 
-	// Token: 0x17000E15 RID: 3605
-	// (get) Token: 0x0600AB30 RID: 43824
-	// (set) Token: 0x0600AB31 RID: 43825
+	// Token: 0x17000E36 RID: 3638
+	// (get) Token: 0x06007F12 RID: 32530
+	// (set) Token: 0x06007F13 RID: 32531
 	bool? OnlyShow { get; set; }
 }

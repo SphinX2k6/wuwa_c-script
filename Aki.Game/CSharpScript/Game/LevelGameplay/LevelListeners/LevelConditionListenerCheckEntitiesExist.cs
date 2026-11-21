@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 {
-	// Token: 0x02006ADB RID: 27355
+	// Token: 0x02005C53 RID: 23635
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelConditionListenerCheckEntitiesExist : LevelListenerBase
 	{
-		// Token: 0x06043F62 RID: 278370 RVA: 0x010AB3E4 File Offset: 0x010A95E4
+		// Token: 0x0603A0B4 RID: 237748 RVA: 0x01054C5C File Offset: 0x01052E5C
 		private void AddEntityEventHandle(EAddEntityType _1, EntityHandle handle, [Nullable(2)] AActor _3)
 		{
 			if (!this.IsRelevantEntity((handle != null) ? new int?(handle.PbDataId) : null))
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			}));
 		}
 
-		// Token: 0x06043F63 RID: 278371 RVA: 0x010AB444 File Offset: 0x010A9644
+		// Token: 0x0603A0B5 RID: 237749 RVA: 0x01054CBC File Offset: 0x01052EBC
 		private void RemoveEntityEventHandle(ERemoveEntityType _1, EntityHandle handle)
 		{
 			if (!this.IsRelevantEntity((handle != null) ? new int?(handle.PbDataId) : null))
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			}));
 		}
 
-		// Token: 0x06043F64 RID: 278372 RVA: 0x010AB4A0 File Offset: 0x010A96A0
+		// Token: 0x0603A0B6 RID: 237750 RVA: 0x01054D18 File Offset: 0x01052F18
 		protected unsafe override void OnListen(object listeningInfo, TListenerCallbackFunc callback, [Nullable(2)] GeneralContext context = null, params object[] otherParams)
 		{
 			ICheckEntitiesExist checkEntitiesExist = listeningInfo as ICheckEntitiesExist;
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			}
 		}
 
-		// Token: 0x06043F65 RID: 278373 RVA: 0x010AB670 File Offset: 0x010A9870
+		// Token: 0x0603A0B7 RID: 237751 RVA: 0x01054EE8 File Offset: 0x010530E8
 		protected override void OnUnListen()
 		{
 			Log instance = Log.Instance;
@@ -112,13 +112,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			}
 		}
 
-		// Token: 0x06043F66 RID: 278374 RVA: 0x010AB737 File Offset: 0x010A9937
+		// Token: 0x0603A0B8 RID: 237752 RVA: 0x01054FAF File Offset: 0x010531AF
 		private bool IsRelevantEntity(int? pbDataId)
 		{
 			return pbDataId != null && this.EntityExistCache.ContainsKey(pbDataId.Value);
 		}
 
-		// Token: 0x06043F67 RID: 278375 RVA: 0x010AB758 File Offset: 0x010A9958
+		// Token: 0x0603A0B9 RID: 237753 RVA: 0x01054FD0 File Offset: 0x010531D0
 		private unsafe void OnEntityStateChanged(int pbDataId, bool newExist, ClientEventContext context)
 		{
 			bool flag;
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			callback(context, Array.Empty<object>());
 		}
 
-		// Token: 0x06043F68 RID: 278376 RVA: 0x010AB8D4 File Offset: 0x010A9AD4
+		// Token: 0x0603A0BA RID: 237754 RVA: 0x0105514C File Offset: 0x0105334C
 		private bool EvaluateConditionWithCache(ICheckEntitiesExist conditionInfo, int overridePbDataId, bool overrideExist)
 		{
 			foreach (int num in conditionInfo.EntityIds)
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			return true;
 		}
 
-		// Token: 0x0402385D RID: 145501
+		// Token: 0x0401EAFF RID: 125695
 		private readonly Dictionary<int, bool> EntityExistCache = new Dictionary<int, bool>();
 	}
 }

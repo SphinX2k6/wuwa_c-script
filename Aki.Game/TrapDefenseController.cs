@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -15,11 +14,11 @@ using Google.Protobuf;
 using Google.Protobuf.Collections;
 using UnrealEngine;
 
-// Token: 0x02002C19 RID: 11289
+// Token: 0x02002194 RID: 8596
 [Controller(0)]
 public class TrapDefenseController : UiControllerBase
 {
-	// Token: 0x060177CE RID: 96206 RVA: 0x005F8FA8 File Offset: 0x005F71A8
+	// Token: 0x06015200 RID: 86528 RVA: 0x006259C8 File Offset: 0x00623BC8
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.TrapDefenseSystemInfoNotify, new Action<IMessage, Net.CallbackStatus>(this.OnTrapDefenseSystemInfoNotify));
@@ -61,19 +60,19 @@ public class TrapDefenseController : UiControllerBase
 		Net.Instance.Register(ENotifyMessageId.TrapDefenseSystemInfoUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnTrapDefenseSystemInfoUpdateNotify));
 	}
 
-	// Token: 0x060177CF RID: 96207 RVA: 0x005F9106 File Offset: 0x005F7306
+	// Token: 0x06015201 RID: 86529 RVA: 0x00625B26 File Offset: 0x00623D26
 	protected override void OnAddOpenViewCheckFunction()
 	{
 		UiManager.Instance.AddOpenViewCheckFunction(EUiViewName.TrapDefenseBuildingDevelopMainView, new Func<EUiViewName, object, bool>(this.CanOpenDevelopView), "TrapDefenseController.CanOpenDevelopView");
 	}
 
-	// Token: 0x060177D0 RID: 96208 RVA: 0x005F9128 File Offset: 0x005F7328
+	// Token: 0x06015202 RID: 86530 RVA: 0x00625B48 File Offset: 0x00623D48
 	protected override void OnRemoveOpenViewCheckFunction()
 	{
 		UiManager.Instance.RemoveOpenViewCheckFunction(EUiViewName.TrapDefenseBuildingDevelopMainView, new Func<EUiViewName, object, bool>(this.CanOpenDevelopView));
 	}
 
-	// Token: 0x060177D1 RID: 96209 RVA: 0x005F9148 File Offset: 0x005F7348
+	// Token: 0x06015203 RID: 86531 RVA: 0x00625B68 File Offset: 0x00623D68
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.TrapDefenseSystemInfoNotify);
@@ -87,21 +86,21 @@ public class TrapDefenseController : UiControllerBase
 		Net.Instance.UnRegister(ENotifyMessageId.TrapDefenseSystemInfoUpdateNotify);
 	}
 
-	// Token: 0x060177D2 RID: 96210 RVA: 0x005F91E5 File Offset: 0x005F73E5
+	// Token: 0x06015204 RID: 86532 RVA: 0x00625C05 File Offset: 0x00623E05
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<int, int>(EEventName.OnInstanceChange, new Action<int, int>(this.OnInstanceChange));
 		EventSystem.Instance.Add(EEventName.TrapDefenseInventoryDataUpdate, new Action(this.OnTrapDefenseInventoryDataUpdate));
 	}
 
-	// Token: 0x060177D3 RID: 96211 RVA: 0x005F921F File Offset: 0x005F741F
+	// Token: 0x06015205 RID: 86533 RVA: 0x00625C3F File Offset: 0x00623E3F
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove<int, int>(EEventName.OnInstanceChange, new Action<int, int>(this.OnInstanceChange));
 		EventSystem.Instance.Remove(EEventName.TrapDefenseInventoryDataUpdate, new Action(this.OnTrapDefenseInventoryDataUpdate));
 	}
 
-	// Token: 0x060177D4 RID: 96212 RVA: 0x005F925C File Offset: 0x005F745C
+	// Token: 0x06015206 RID: 86534 RVA: 0x00625C7C File Offset: 0x00623E7C
 	public void RequestTrapDefenseUseItem(int itemId)
 	{
 		TrapDefenseUseItemRequest trapDefenseUseItemRequest = TrapDefenseUseItemRequest.Create();
@@ -125,7 +124,7 @@ public class TrapDefenseController : UiControllerBase
 			}
 			if (trapDefenseUseItemResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(trapDefenseUseItemResponse.ErrorCode, 27014, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(trapDefenseUseItemResponse.ErrorCode, 28819, null, true, true);
 				return;
 			}
 			TrapDefenseModel instance2 = TrapDefenseModel.Instance;
@@ -143,7 +142,7 @@ public class TrapDefenseController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x060177D5 RID: 96213 RVA: 0x005F92A8 File Offset: 0x005F74A8
+	// Token: 0x06015207 RID: 86535 RVA: 0x00625CC8 File Offset: 0x00623EC8
 	[NullableContext(2)]
 	private void OnTrapDefenseItemUpdateNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -156,14 +155,14 @@ public class TrapDefenseController : UiControllerBase
 		instance.BattleInventoryData.UpdateItemData(trapDefenseItemUpdateNotify.ItemDatas);
 	}
 
-	// Token: 0x060177D6 RID: 96214 RVA: 0x005F92D6 File Offset: 0x005F74D6
+	// Token: 0x06015208 RID: 86536 RVA: 0x00625CF6 File Offset: 0x00623EF6
 	[NullableContext(2)]
 	private bool CanOpenDevelopView(EUiViewName viewName, object param)
 	{
 		return !((ITrapDefenseDevelopOpenParam)param).IsInDungeon || TrapDefenseModel.Instance.BattleData.IsCanBuildMachine;
 	}
 
-	// Token: 0x060177D7 RID: 96215 RVA: 0x005F92F8 File Offset: 0x005F74F8
+	// Token: 0x06015209 RID: 86537 RVA: 0x00625D18 File Offset: 0x00623F18
 	[NullableContext(2)]
 	public void OpenOrganDevelop(bool isInDungeon, UiViewBase parentView, int index = 0, TrapDefenseLevelData levelData = null)
 	{
@@ -182,7 +181,7 @@ public class TrapDefenseController : UiControllerBase
 		});
 	}
 
-	// Token: 0x060177D8 RID: 96216 RVA: 0x005F934C File Offset: 0x005F754C
+	// Token: 0x0601520A RID: 86538 RVA: 0x00625D6C File Offset: 0x00623F6C
 	[NullableContext(2)]
 	private void OnTrapDefenseDevelopInfoUpdateNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -190,7 +189,7 @@ public class TrapDefenseController : UiControllerBase
 		TrapDefenseModel.Instance.ViewModelBuildingDevelop.UpdateDevelopInfo(data);
 	}
 
-	// Token: 0x060177D9 RID: 96217 RVA: 0x005F9370 File Offset: 0x005F7570
+	// Token: 0x0601520B RID: 86539 RVA: 0x00625D90 File Offset: 0x00623F90
 	[NullableContext(1)]
 	public void OpenDefenseChallengeResultView(TrapDefenseChallengeResultNotify data, bool needShowViewAnim)
 	{
@@ -203,7 +202,7 @@ public class TrapDefenseController : UiControllerBase
 		UiManager.Instance.OpenView(EUiViewName.TrapDefenseResultView, param, null);
 	}
 
-	// Token: 0x060177DA RID: 96218 RVA: 0x005F93BC File Offset: 0x005F75BC
+	// Token: 0x0601520C RID: 86540 RVA: 0x00625DDC File Offset: 0x00623FDC
 	[NullableContext(2)]
 	private void OnTrapDefenseChallengeResultNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -216,7 +215,7 @@ public class TrapDefenseController : UiControllerBase
 		this.OpenDefenseChallengeResultView(trapDefenseChallengeResultNotify, false);
 	}
 
-	// Token: 0x060177DB RID: 96219 RVA: 0x005F93E8 File Offset: 0x005F75E8
+	// Token: 0x0601520D RID: 86541 RVA: 0x00625E08 File Offset: 0x00624008
 	public void RequestTrapDefenseDevelopReset()
 	{
 		TrapDefenseDevelopResetRequest trapDefenseDevelopResetRequest = TrapDefenseDevelopResetRequest.Create();
@@ -226,7 +225,7 @@ public class TrapDefenseController : UiControllerBase
 			TrapDefenseDevelopResetResponse trapDefenseDevelopResetResponse = (TrapDefenseDevelopResetResponse)msg;
 			if (trapDefenseDevelopResetResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(trapDefenseDevelopResetResponse.ErrorCode, 17328, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(trapDefenseDevelopResetResponse.ErrorCode, 24446, null, true, true);
 				return;
 			}
 			ScrollingTipsController.Instance.ShowTipsByTextId("TrapDefense_Building_Reset_Text", Array.Empty<object>());
@@ -235,7 +234,7 @@ public class TrapDefenseController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x060177DC RID: 96220 RVA: 0x005F943C File Offset: 0x005F763C
+	// Token: 0x0601520E RID: 86542 RVA: 0x00625E5C File Offset: 0x0062405C
 	public void RequestTrapDefenseDevelopLevelUp(int id)
 	{
 		ITrapDefenseMachineIdInfo trapDefenseMachineIdInfo = TrapDefenseModel.Instance.DecomposeMachineId(id);
@@ -255,7 +254,7 @@ public class TrapDefenseController : UiControllerBase
 		this.RequestTrapDefenseBuildingLevelUp(trapDefenseMachineIdInfo.DataType, newId);
 	}
 
-	// Token: 0x060177DD RID: 96221 RVA: 0x005F94C0 File Offset: 0x005F76C0
+	// Token: 0x0601520F RID: 86543 RVA: 0x00625EE0 File Offset: 0x006240E0
 	private void RequestTrapDefenseBuildingLevelUp(int typeId, int newId)
 	{
 		TrapDefenseBuildingLevelUpRequest trapDefenseBuildingLevelUpRequest = TrapDefenseBuildingLevelUpRequest.Create();
@@ -265,7 +264,7 @@ public class TrapDefenseController : UiControllerBase
 			TrapDefenseBuildingLevelUpResponse trapDefenseBuildingLevelUpResponse = (TrapDefenseBuildingLevelUpResponse)msg;
 			if (trapDefenseBuildingLevelUpResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(trapDefenseBuildingLevelUpResponse.ErrorCode, 28185, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(trapDefenseBuildingLevelUpResponse.ErrorCode, 21393, null, true, true);
 				return;
 			}
 			TrapDefenseModel.Instance.ViewModelBuildingDevelop.OnItemUpdate(newId);
@@ -273,7 +272,7 @@ public class TrapDefenseController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x060177DE RID: 96222 RVA: 0x005F9504 File Offset: 0x005F7704
+	// Token: 0x06015210 RID: 86544 RVA: 0x00625F24 File Offset: 0x00624124
 	private void RequestTrapDefenseAuxiliaryLevelUp(int typeId, int newId)
 	{
 		TrapDefenseAuxiliaryLevelUpRequest trapDefenseAuxiliaryLevelUpRequest = TrapDefenseAuxiliaryLevelUpRequest.Create();
@@ -283,7 +282,7 @@ public class TrapDefenseController : UiControllerBase
 			TrapDefenseAuxiliaryLevelUpResponse trapDefenseAuxiliaryLevelUpResponse = (TrapDefenseAuxiliaryLevelUpResponse)msg;
 			if (trapDefenseAuxiliaryLevelUpResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(trapDefenseAuxiliaryLevelUpResponse.ErrorCode, 18673, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(trapDefenseAuxiliaryLevelUpResponse.ErrorCode, 24981, null, true, true);
 				return;
 			}
 			TrapDefenseModel.Instance.ViewModelBuildingDevelop.OnItemUpdate(newId);
@@ -291,7 +290,7 @@ public class TrapDefenseController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x060177DF RID: 96223 RVA: 0x005F9548 File Offset: 0x005F7748
+	// Token: 0x06015211 RID: 86545 RVA: 0x00625F68 File Offset: 0x00624168
 	public void RequestTrapDefenseDevelopResetOne(int id)
 	{
 		ITrapDefenseMachineIdInfo trapDefenseMachineIdInfo = TrapDefenseModel.Instance.DecomposeMachineId(id);
@@ -311,7 +310,7 @@ public class TrapDefenseController : UiControllerBase
 		this.RequestTrapDefenseBuildingReset(trapDefenseMachineIdInfo.DataType, newId);
 	}
 
-	// Token: 0x060177E0 RID: 96224 RVA: 0x005F95C0 File Offset: 0x005F77C0
+	// Token: 0x06015212 RID: 86546 RVA: 0x00625FE0 File Offset: 0x006241E0
 	private void RequestTrapDefenseBuildingReset(int typeId, int newId)
 	{
 		TrapDefenseBuildingResetRequest trapDefenseBuildingResetRequest = TrapDefenseBuildingResetRequest.Create();
@@ -321,7 +320,7 @@ public class TrapDefenseController : UiControllerBase
 			TrapDefenseBuildingResetResponse trapDefenseBuildingResetResponse = (TrapDefenseBuildingResetResponse)msg;
 			if (trapDefenseBuildingResetResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(trapDefenseBuildingResetResponse.ErrorCode, 18053, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(trapDefenseBuildingResetResponse.ErrorCode, 20421, null, true, true);
 				return;
 			}
 			ScrollingTipsController.Instance.ShowTipsByTextId("TrapDefense_Building_Reset_Text", Array.Empty<object>());
@@ -329,7 +328,7 @@ public class TrapDefenseController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x060177E1 RID: 96225 RVA: 0x005F9604 File Offset: 0x005F7804
+	// Token: 0x06015213 RID: 86547 RVA: 0x00626024 File Offset: 0x00624224
 	private void RequestTrapDefenseAuxiliaryReset(int typeId, int newId)
 	{
 		TrapDefenseAuxiliaryResetRequest trapDefenseAuxiliaryResetRequest = TrapDefenseAuxiliaryResetRequest.Create();
@@ -339,7 +338,7 @@ public class TrapDefenseController : UiControllerBase
 			TrapDefenseAuxiliaryResetResponse trapDefenseAuxiliaryResetResponse = (TrapDefenseAuxiliaryResetResponse)msg;
 			if (trapDefenseAuxiliaryResetResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(trapDefenseAuxiliaryResetResponse.ErrorCode, 26880, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(trapDefenseAuxiliaryResetResponse.ErrorCode, 29607, null, true, true);
 				return;
 			}
 			ScrollingTipsController.Instance.ShowTipsByTextId("TrapDefense_Building_Reset_Text", Array.Empty<object>());
@@ -347,7 +346,7 @@ public class TrapDefenseController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x060177E2 RID: 96226 RVA: 0x005F9648 File Offset: 0x005F7848
+	// Token: 0x06015214 RID: 86548 RVA: 0x00626068 File Offset: 0x00624268
 	public UniTask<bool> RequestTrapDefenseDevelopBranch(int id)
 	{
 		TrapDefenseController.<RequestTrapDefenseDevelopBranch>d__22 <RequestTrapDefenseDevelopBranch>d__;
@@ -359,7 +358,7 @@ public class TrapDefenseController : UiControllerBase
 		return <RequestTrapDefenseDevelopBranch>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060177E3 RID: 96227 RVA: 0x005F9694 File Offset: 0x005F7894
+	// Token: 0x06015215 RID: 86549 RVA: 0x006260B4 File Offset: 0x006242B4
 	private UniTask<bool> RequestTrapDefenseBuildingBranch(int typeId, int branch, int newId)
 	{
 		TrapDefenseController.<RequestTrapDefenseBuildingBranch>d__23 <RequestTrapDefenseBuildingBranch>d__;
@@ -372,7 +371,7 @@ public class TrapDefenseController : UiControllerBase
 		return <RequestTrapDefenseBuildingBranch>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060177E4 RID: 96228 RVA: 0x005F96E8 File Offset: 0x005F78E8
+	// Token: 0x06015216 RID: 86550 RVA: 0x00626108 File Offset: 0x00624308
 	private UniTask<bool> RequestTrapDefenseAuxiliaryBranch(int typeId, int branch, int newId)
 	{
 		TrapDefenseController.<RequestTrapDefenseAuxiliaryBranch>d__24 <RequestTrapDefenseAuxiliaryBranch>d__;
@@ -385,7 +384,7 @@ public class TrapDefenseController : UiControllerBase
 		return <RequestTrapDefenseAuxiliaryBranch>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060177E5 RID: 96229 RVA: 0x005F973C File Offset: 0x005F793C
+	// Token: 0x06015217 RID: 86551 RVA: 0x0062615C File Offset: 0x0062435C
 	[NullableContext(2)]
 	private void OnMonsterConsecutiveKillsNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -399,7 +398,7 @@ public class TrapDefenseController : UiControllerBase
 		TrapDefenseModel.Instance.BattleData.SetComboNum(trapDefenseMonsterConsecutiveKillsNotify.ConsecutiveKillCount);
 	}
 
-	// Token: 0x060177E6 RID: 96230 RVA: 0x005F979C File Offset: 0x005F799C
+	// Token: 0x06015218 RID: 86552 RVA: 0x006261BC File Offset: 0x006243BC
 	[NullableContext(2)]
 	private void OnSpawnMonsterWaveEndNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -413,13 +412,13 @@ public class TrapDefenseController : UiControllerBase
 		this.StartRoundTips((float)trapDefenseSpawnMonsterWaveEndNotify.CountdownSecond);
 	}
 
-	// Token: 0x060177E7 RID: 96231 RVA: 0x005F97F2 File Offset: 0x005F79F2
+	// Token: 0x06015219 RID: 86553 RVA: 0x00626212 File Offset: 0x00624412
 	public void OpenPauseView()
 	{
 		UiManager.Instance.OpenView(EUiViewName.TrapDefensePauseView, null, null);
 	}
 
-	// Token: 0x060177E8 RID: 96232 RVA: 0x005F9808 File Offset: 0x005F7A08
+	// Token: 0x0601521A RID: 86554 RVA: 0x00626228 File Offset: 0x00624428
 	[NullableContext(2)]
 	public void OpenTrapDefenseShopOpenTips(Action callback = null)
 	{
@@ -430,7 +429,7 @@ public class TrapDefenseController : UiControllerBase
 		UiManager.Instance.OpenView(EUiViewName.TrapDefenseEventShopOpenTips, param, null);
 	}
 
-	// Token: 0x060177E9 RID: 96233 RVA: 0x005F9834 File Offset: 0x005F7A34
+	// Token: 0x0601521B RID: 86555 RVA: 0x00626254 File Offset: 0x00624454
 	public UniTask<bool> OpenTrapDefenseTerrainChangeTips([Nullable(2)] Action callback = null)
 	{
 		TrapDefenseController.<OpenTrapDefenseTerrainChangeTips>d__29 <OpenTrapDefenseTerrainChangeTips>d__;
@@ -441,7 +440,7 @@ public class TrapDefenseController : UiControllerBase
 		return <OpenTrapDefenseTerrainChangeTips>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060177EA RID: 96234 RVA: 0x005F9878 File Offset: 0x005F7A78
+	// Token: 0x0601521C RID: 86556 RVA: 0x00626298 File Offset: 0x00624498
 	public UniTask<bool> OpenTrapDefenseBossComingTips([Nullable(2)] Action callback = null)
 	{
 		TrapDefenseController.<OpenTrapDefenseBossComingTips>d__30 <OpenTrapDefenseBossComingTips>d__;
@@ -452,7 +451,7 @@ public class TrapDefenseController : UiControllerBase
 		return <OpenTrapDefenseBossComingTips>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060177EB RID: 96235 RVA: 0x005F98BC File Offset: 0x005F7ABC
+	// Token: 0x0601521D RID: 86557 RVA: 0x006262DC File Offset: 0x006244DC
 	[NullableContext(2)]
 	public void OpenTrapDefenseRoundTips(int round, Action callback = null)
 	{
@@ -464,7 +463,7 @@ public class TrapDefenseController : UiControllerBase
 		UiManager.Instance.OpenView(EUiViewName.TrapDefenseRoundTips, param, null);
 	}
 
-	// Token: 0x060177EC RID: 96236 RVA: 0x005F98F0 File Offset: 0x005F7AF0
+	// Token: 0x0601521E RID: 86558 RVA: 0x00626310 File Offset: 0x00624510
 	[NullableContext(2)]
 	public void OpenTrapDefenseCountDownTips(float countDownTime, Action callback = null)
 	{
@@ -476,7 +475,7 @@ public class TrapDefenseController : UiControllerBase
 		UiManager.Instance.OpenView(EUiViewName.TrapDefenseCountDownTips, param, null);
 	}
 
-	// Token: 0x060177ED RID: 96237 RVA: 0x005F9924 File Offset: 0x005F7B24
+	// Token: 0x0601521F RID: 86559 RVA: 0x00626344 File Offset: 0x00624544
 	private UniTask StartChallengeCountDown(float countDownTime)
 	{
 		TrapDefenseController.<StartChallengeCountDown>d__33 <StartChallengeCountDown>d__;
@@ -488,7 +487,7 @@ public class TrapDefenseController : UiControllerBase
 		return <StartChallengeCountDown>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060177EE RID: 96238 RVA: 0x005F9970 File Offset: 0x005F7B70
+	// Token: 0x06015220 RID: 86560 RVA: 0x00626390 File Offset: 0x00624590
 	private UniTask StartChallengeBatchTips()
 	{
 		TrapDefenseController.<StartChallengeBatchTips>d__34 <StartChallengeBatchTips>d__;
@@ -499,7 +498,7 @@ public class TrapDefenseController : UiControllerBase
 		return <StartChallengeBatchTips>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060177EF RID: 96239 RVA: 0x005F99B4 File Offset: 0x005F7BB4
+	// Token: 0x06015221 RID: 86561 RVA: 0x006263D4 File Offset: 0x006245D4
 	private UniTask StartRoundTips(float countDownTime)
 	{
 		TrapDefenseController.<StartRoundTips>d__35 <StartRoundTips>d__;
@@ -511,7 +510,7 @@ public class TrapDefenseController : UiControllerBase
 		return <StartRoundTips>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060177F0 RID: 96240 RVA: 0x005F9A00 File Offset: 0x005F7C00
+	// Token: 0x06015222 RID: 86562 RVA: 0x00626420 File Offset: 0x00624620
 	public UniTask StartChallengeRoundTips()
 	{
 		TrapDefenseController.<StartChallengeRoundTips>d__36 <StartChallengeRoundTips>d__;
@@ -522,7 +521,7 @@ public class TrapDefenseController : UiControllerBase
 		return <StartChallengeRoundTips>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060177F1 RID: 96241 RVA: 0x005F9A44 File Offset: 0x005F7C44
+	// Token: 0x06015223 RID: 86563 RVA: 0x00626464 File Offset: 0x00624664
 	public void RefreshTrapDefenseMainView()
 	{
 		UiViewBase viewByName = UiManager.Instance.GetViewByName(EUiViewName.CommonGameMainView);
@@ -537,7 +536,7 @@ public class TrapDefenseController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060177F2 RID: 96242 RVA: 0x005F9A7C File Offset: 0x005F7C7C
+	// Token: 0x06015224 RID: 86564 RVA: 0x0062649C File Offset: 0x0062469C
 	[NullableContext(2)]
 	private void OnTrapDefenseSystemInfoNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -545,14 +544,12 @@ public class TrapDefenseController : UiControllerBase
 		TrapDefenseModel instance = TrapDefenseModel.Instance;
 		if (instance != null)
 		{
-			instance.BattleData.SetBehaviorTreeVar(trapDefenseSystemInfoNotify.VariableKeyNames.ToDictionary<string, string>());
+			instance.BattleData.SetBehaviorTreeVar(new Dictionary<string, string>(trapDefenseSystemInfoNotify.VariableKeyNames));
 		}
 		TrapDefenseModel instance2 = TrapDefenseModel.Instance;
 		if (instance2 != null)
 		{
-			TrapDefenseBattleData battleData = instance2.BattleData;
-			TrapDefenseTechParam techParams = trapDefenseSystemInfoNotify.TechParams;
-			battleData.SetTechParamMapVar((techParams != null) ? techParams.Params.ToDictionary<int, int>() : null);
+			instance2.BattleData.SetTechParamMapVar((trapDefenseSystemInfoNotify.TechParams == null) ? null : new Dictionary<int, int>(trapDefenseSystemInfoNotify.TechParams.Params));
 		}
 		TrapDefenseModel instance3 = TrapDefenseModel.Instance;
 		if (instance3 != null)
@@ -571,7 +568,7 @@ public class TrapDefenseController : UiControllerBase
 		EventSystem.Instance.Emit(EEventName.TrapDefenseOnSystemInfoNotify);
 	}
 
-	// Token: 0x060177F3 RID: 96243 RVA: 0x005F9B34 File Offset: 0x005F7D34
+	// Token: 0x06015225 RID: 86565 RVA: 0x00626558 File Offset: 0x00624758
 	public UniTask<bool> RequestBdBuffSelect(int id)
 	{
 		TrapDefenseController.<RequestBdBuffSelect>d__39 <RequestBdBuffSelect>d__;
@@ -582,7 +579,7 @@ public class TrapDefenseController : UiControllerBase
 		return <RequestBdBuffSelect>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060177F4 RID: 96244 RVA: 0x005F9B78 File Offset: 0x005F7D78
+	// Token: 0x06015226 RID: 86566 RVA: 0x0062659C File Offset: 0x0062479C
 	public UniTask<bool> RequestBdBuffRefresh()
 	{
 		TrapDefenseController.<RequestBdBuffRefresh>d__40 <RequestBdBuffRefresh>d__;
@@ -592,7 +589,7 @@ public class TrapDefenseController : UiControllerBase
 		return <RequestBdBuffRefresh>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060177F5 RID: 96245 RVA: 0x005F9BB4 File Offset: 0x005F7DB4
+	// Token: 0x06015227 RID: 86567 RVA: 0x006265D8 File Offset: 0x006247D8
 	public UniTask<bool> RequestChallenge([Nullable(1)] TrapDefenseLevelData data, bool fromSaveStar = false)
 	{
 		TrapDefenseController.<RequestChallenge>d__41 <RequestChallenge>d__;
@@ -604,7 +601,7 @@ public class TrapDefenseController : UiControllerBase
 		return <RequestChallenge>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060177F6 RID: 96246 RVA: 0x005F9C00 File Offset: 0x005F7E00
+	// Token: 0x06015228 RID: 86568 RVA: 0x00626624 File Offset: 0x00624824
 	public UniTask<bool> RequestTrapDefenseChallengeQuit(bool needSettle)
 	{
 		TrapDefenseController.<RequestTrapDefenseChallengeQuit>d__42 <RequestTrapDefenseChallengeQuit>d__;
@@ -615,7 +612,7 @@ public class TrapDefenseController : UiControllerBase
 		return <RequestTrapDefenseChallengeQuit>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060177F7 RID: 96247 RVA: 0x005F9C44 File Offset: 0x005F7E44
+	// Token: 0x06015229 RID: 86569 RVA: 0x00626668 File Offset: 0x00624868
 	public UniTask<bool> RequestTrapDefenseSlotUpdate([Nullable(1)] List<TrapDefenseSlot> slotList)
 	{
 		TrapDefenseController.<RequestTrapDefenseSlotUpdate>d__43 <RequestTrapDefenseSlotUpdate>d__;
@@ -626,7 +623,7 @@ public class TrapDefenseController : UiControllerBase
 		return <RequestTrapDefenseSlotUpdate>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060177F8 RID: 96248 RVA: 0x005F9C88 File Offset: 0x005F7E88
+	// Token: 0x0601522A RID: 86570 RVA: 0x006266AC File Offset: 0x006248AC
 	public UniTask<int> RequestTrapDefenseCurChallengeInfo()
 	{
 		TrapDefenseController.<RequestTrapDefenseCurChallengeInfo>d__44 <RequestTrapDefenseCurChallengeInfo>d__;
@@ -636,7 +633,7 @@ public class TrapDefenseController : UiControllerBase
 		return <RequestTrapDefenseCurChallengeInfo>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060177F9 RID: 96249 RVA: 0x005F9CC4 File Offset: 0x005F7EC4
+	// Token: 0x0601522B RID: 86571 RVA: 0x006266E8 File Offset: 0x006248E8
 	[NullableContext(2)]
 	private void OnTrapDefenseSystemInfoUpdateNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -644,7 +641,7 @@ public class TrapDefenseController : UiControllerBase
 		TrapDefenseModel.Instance.ViewModelBuildingDevelop.UploadSlotChangeByNotify(new List<TrapDefenseSlot>(slots));
 	}
 
-	// Token: 0x060177FA RID: 96250 RVA: 0x005F9CF4 File Offset: 0x005F7EF4
+	// Token: 0x0601522C RID: 86572 RVA: 0x00626718 File Offset: 0x00624918
 	public UniTask<bool> RequestTrapDefenseRewardClaim([Nullable(1)] IReadOnlyList<int> ids)
 	{
 		TrapDefenseController.<RequestTrapDefenseRewardClaim>d__46 <RequestTrapDefenseRewardClaim>d__;
@@ -655,7 +652,7 @@ public class TrapDefenseController : UiControllerBase
 		return <RequestTrapDefenseRewardClaim>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060177FB RID: 96251 RVA: 0x005F9D38 File Offset: 0x005F7F38
+	// Token: 0x0601522D RID: 86573 RVA: 0x0062675C File Offset: 0x0062495C
 	public UniTask<bool> RequestTrapDefenseSpecialRewardClaim(int id)
 	{
 		TrapDefenseController.<RequestTrapDefenseSpecialRewardClaim>d__47 <RequestTrapDefenseSpecialRewardClaim>d__;
@@ -666,7 +663,7 @@ public class TrapDefenseController : UiControllerBase
 		return <RequestTrapDefenseSpecialRewardClaim>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060177FC RID: 96252 RVA: 0x005F9D7C File Offset: 0x005F7F7C
+	// Token: 0x0601522E RID: 86574 RVA: 0x006267A0 File Offset: 0x006249A0
 	public UniTask<bool> RequestTrapDefenseTechUnlock(int id)
 	{
 		TrapDefenseController.<RequestTrapDefenseTechUnlock>d__48 <RequestTrapDefenseTechUnlock>d__;
@@ -677,7 +674,7 @@ public class TrapDefenseController : UiControllerBase
 		return <RequestTrapDefenseTechUnlock>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060177FD RID: 96253 RVA: 0x005F9DC0 File Offset: 0x005F7FC0
+	// Token: 0x0601522F RID: 86575 RVA: 0x006267E4 File Offset: 0x006249E4
 	public UniTask<bool> RequestTrapDefenseShopRefresh()
 	{
 		TrapDefenseController.<RequestTrapDefenseShopRefresh>d__49 <RequestTrapDefenseShopRefresh>d__;
@@ -687,7 +684,7 @@ public class TrapDefenseController : UiControllerBase
 		return <RequestTrapDefenseShopRefresh>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060177FE RID: 96254 RVA: 0x005F9DFC File Offset: 0x005F7FFC
+	// Token: 0x06015230 RID: 86576 RVA: 0x00626820 File Offset: 0x00624A20
 	public UniTask<bool> RequestTrapDefenseShopPurchase(int id, ETrapDefenseShopGoodsType type, int count = 1)
 	{
 		TrapDefenseController.<RequestTrapDefenseShopPurchase>d__50 <RequestTrapDefenseShopPurchase>d__;
@@ -700,7 +697,7 @@ public class TrapDefenseController : UiControllerBase
 		return <RequestTrapDefenseShopPurchase>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060177FF RID: 96255 RVA: 0x005F9E50 File Offset: 0x005F8050
+	// Token: 0x06015231 RID: 86577 RVA: 0x00626874 File Offset: 0x00624A74
 	public void UpdateEnemyPositions()
 	{
 		FKSC_MiniMapContext[] entityPositions = KuroSimpleCombatController.Instance.GetEntityPositions();
@@ -711,14 +708,14 @@ public class TrapDefenseController : UiControllerBase
 		TrapDefenseModel.Instance.MapData.UpdateEnemyPositions(new List<FKSC_MiniMapContext>(entityPositions));
 	}
 
-	// Token: 0x06017800 RID: 96256 RVA: 0x005F9E81 File Offset: 0x005F8081
+	// Token: 0x06015232 RID: 86578 RVA: 0x006268A5 File Offset: 0x00624AA5
 	public void ChangeMap(int mapId)
 	{
 		TrapDefenseModel.Instance.MapData.ChangeMap(mapId);
 		EventSystem.Instance.Emit<int>(EEventName.TrapDefenseMapChanged, mapId);
 	}
 
-	// Token: 0x06017801 RID: 96257 RVA: 0x005F9EA4 File Offset: 0x005F80A4
+	// Token: 0x06015233 RID: 86579 RVA: 0x006268C8 File Offset: 0x00624AC8
 	private void OnInstanceChange(int lastInstanceId, int newInstanceId)
 	{
 		InstanceDungeon? config = InstanceDungeonConfig.Instance.GetConfig(newInstanceId);
@@ -730,14 +727,14 @@ public class TrapDefenseController : UiControllerBase
 		SkillButtonUiController.Instance.RemoveEventInterface(TrapDefenseModel.Instance.BattleData);
 	}
 
-	// Token: 0x06017802 RID: 96258 RVA: 0x005F9F02 File Offset: 0x005F8102
+	// Token: 0x06015234 RID: 86580 RVA: 0x00626926 File Offset: 0x00624B26
 	private void OnTrapDefenseInventoryDataUpdate()
 	{
 		TrapDefenseModel.Instance.BattleData.RefreshExploreSkillData();
 	}
 
-	// Token: 0x17001FB3 RID: 8115
-	// (get) Token: 0x06017803 RID: 96259 RVA: 0x005F9F13 File Offset: 0x005F8113
+	// Token: 0x1700200B RID: 8203
+	// (get) Token: 0x06015235 RID: 86581 RVA: 0x00626937 File Offset: 0x00624B37
 	[Nullable(1)]
 	public static TrapDefenseController Instance
 	{
@@ -748,7 +745,7 @@ public class TrapDefenseController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06017804 RID: 96260 RVA: 0x005F9F1A File Offset: 0x005F811A
+	// Token: 0x06015236 RID: 86582 RVA: 0x0062693E File Offset: 0x00624B3E
 	[NullableContext(1)]
 	public static TrapDefenseController GetOrCreateInstance()
 	{
@@ -759,7 +756,7 @@ public class TrapDefenseController : UiControllerBase
 		return TrapDefenseController._Instance;
 	}
 
-	// Token: 0x06017805 RID: 96261 RVA: 0x005F9F2E File Offset: 0x005F812E
+	// Token: 0x06015237 RID: 86583 RVA: 0x00626952 File Offset: 0x00624B52
 	public static bool CreateInstance()
 	{
 		if (TrapDefenseController._Instance != null)
@@ -770,31 +767,31 @@ public class TrapDefenseController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06017806 RID: 96262 RVA: 0x005F9F44 File Offset: 0x005F8144
+	// Token: 0x06015238 RID: 86584 RVA: 0x00626968 File Offset: 0x00624B68
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06017807 RID: 96263 RVA: 0x005F9F46 File Offset: 0x005F8146
+	// Token: 0x06015239 RID: 86585 RVA: 0x0062696A File Offset: 0x00624B6A
 	public static void ResetStaticDefaultValue()
 	{
 		TrapDefenseController._Instance = null;
 	}
 
-	// Token: 0x06017808 RID: 96264 RVA: 0x005F9F4E File Offset: 0x005F814E
+	// Token: 0x0601523A RID: 86586 RVA: 0x00626972 File Offset: 0x00624B72
 	static TrapDefenseController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TrapDefenseController.CreateStaticDefaultValue), new Action(TrapDefenseController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400AF74 RID: 44916
+	// Token: 0x0400B379 RID: 45945
 	[Nullable(2)]
 	public TrapDefenseChallengeResultNotify ResultNotifyCache;
 
-	// Token: 0x0400AF75 RID: 44917
+	// Token: 0x0400B37A RID: 45946
 	public bool IsActivityInited;
 
-	// Token: 0x0400AF76 RID: 44918
+	// Token: 0x0400B37B RID: 45947
 	[Nullable(2)]
 	private static TrapDefenseController _Instance;
 }

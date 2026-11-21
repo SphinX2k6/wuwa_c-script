@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200252F RID: 9519
+	// Token: 0x020027D6 RID: 10198
 	public class IActorFxEmoteStopSubType
 	{
-		// Token: 0x0600D434 RID: 54324 RVA: 0x001F6BAD File Offset: 0x001F4DAD
-		[NullableContext(1)]
+		// Token: 0x0600E194 RID: 57748 RVA: 0x0021260D File Offset: 0x0021080D
 		public static IActorFxEmoteStopSubType Create(IActorFxEmoteStopSubType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003B98 RID: 15256
-		// (get) Token: 0x0600D435 RID: 54325 RVA: 0x001F6BCC File Offset: 0x001F4DCC
+		// Token: 0x17003E96 RID: 16022
+		// (get) Token: 0x0600E195 RID: 57749 RVA: 0x0021262C File Offset: 0x0021082C
 		public virtual EActorFxEmoteStopSubType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007441 RID: 29761
+		// Token: 0x04007A96 RID: 31382
 		private IActorFxEmoteStopSubType Instance;
 	}
 }

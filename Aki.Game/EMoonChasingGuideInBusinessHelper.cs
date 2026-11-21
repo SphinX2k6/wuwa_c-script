@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001350 RID: 4944
+// Token: 0x02000804 RID: 2052
 [NullableContext(1)]
 [Nullable(0)]
 public static class EMoonChasingGuideInBusinessHelper
 {
-	// Token: 0x04003D6B RID: 15723
+	// Token: 0x04003E03 RID: 15875
 	public const string Helper = "Helper";
 
-	// Token: 0x04003D6C RID: 15724
+	// Token: 0x04003E04 RID: 15876
 	public const string HelperFirst = "HelperFirst";
 
-	// Token: 0x04003D6D RID: 15725
+	// Token: 0x04003E05 RID: 15877
 	public const string Interactive = "Interactive";
 }

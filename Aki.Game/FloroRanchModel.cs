@@ -5,13 +5,13 @@ using Aki.Config;
 using CSharpScript.Game.Common;
 using CSharpScript.Game.Module.FloroRanch;
 
-// Token: 0x02001B40 RID: 6976
+// Token: 0x02000FFF RID: 4095
 [NullableContext(1)]
 [Nullable(0)]
-[Model(0)]
+[Model(1)]
 public class FloroRanchModel : ModelBase
 {
-	// Token: 0x0600CF18 RID: 53016 RVA: 0x002F2F30 File Offset: 0x002F1130
+	// Token: 0x0600A329 RID: 41769 RVA: 0x002FE008 File Offset: 0x002FC208
 	public void SetActivityData(EFloroRanchActivityDataType activityType, FloroRanchActivityData activityData)
 	{
 		if (this.ActivityDataMap.ContainsKey(activityType))
@@ -27,7 +27,7 @@ public class FloroRanchModel : ModelBase
 		this.ActivityDataMap[activityType] = activityData;
 	}
 
-	// Token: 0x0600CF19 RID: 53017 RVA: 0x002F2F88 File Offset: 0x002F1188
+	// Token: 0x0600A32A RID: 41770 RVA: 0x002FE060 File Offset: 0x002FC260
 	[NullableContext(2)]
 	public FloroRanchActivityData GetActivityData(EFloroRanchActivityDataType activityType = EFloroRanchActivityDataType.Normal, bool bShowLog = true)
 	{
@@ -41,7 +41,7 @@ public class FloroRanchModel : ModelBase
 		return floroRanchActivityData;
 	}
 
-	// Token: 0x0600CF1A RID: 53018 RVA: 0x002F2FD0 File Offset: 0x002F11D0
+	// Token: 0x0600A32B RID: 41771 RVA: 0x002FE0A8 File Offset: 0x002FC2A8
 	private void InitFloroRanchRarity()
 	{
 		this.FloroRanchRarityMap.Clear();
@@ -52,7 +52,7 @@ public class FloroRanchModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600CF1B RID: 53019 RVA: 0x002F3040 File Offset: 0x002F1240
+	// Token: 0x0600A32C RID: 41772 RVA: 0x002FE118 File Offset: 0x002FC318
 	[NullableContext(2)]
 	public FloroRanchRarityData GetFloroRanchRarity(int id)
 	{
@@ -74,7 +74,7 @@ public class FloroRanchModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0600CF1C RID: 53020 RVA: 0x002F30A4 File Offset: 0x002F12A4
+	// Token: 0x0600A32D RID: 41773 RVA: 0x002FE17C File Offset: 0x002FC37C
 	private void InitFloroRanchTerrain()
 	{
 		this.FloroRanchTerrainMap.Clear();
@@ -85,7 +85,7 @@ public class FloroRanchModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600CF1D RID: 53021 RVA: 0x002F3114 File Offset: 0x002F1314
+	// Token: 0x0600A32E RID: 41774 RVA: 0x002FE1EC File Offset: 0x002FC3EC
 	[NullableContext(2)]
 	public FloroRanchTerrainData GetFloroRanchTerrain(int id)
 	{
@@ -107,7 +107,7 @@ public class FloroRanchModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0600CF1E RID: 53022 RVA: 0x002F3178 File Offset: 0x002F1378
+	// Token: 0x0600A32F RID: 41775 RVA: 0x002FE250 File Offset: 0x002FC450
 	private void InitFloroRanchAudio()
 	{
 		this.FloroRanchAudioMap.Clear();
@@ -130,7 +130,7 @@ public class FloroRanchModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600CF1F RID: 53023 RVA: 0x002F3234 File Offset: 0x002F1434
+	// Token: 0x0600A330 RID: 41776 RVA: 0x002FE30C File Offset: 0x002FC50C
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -151,7 +151,7 @@ public class FloroRanchModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0600CF20 RID: 53024 RVA: 0x002F3274 File Offset: 0x002F1474
+	// Token: 0x0600A331 RID: 41777 RVA: 0x002FE34C File Offset: 0x002FC54C
 	[NullableContext(2)]
 	public unsafe FloroRanchAudioData GetFloroRanchRandomAudioDataByType(EFloroRanchAudioType type, EFloroRanchCharacterType characterType = EFloroRanchCharacterType.Floro)
 	{
@@ -175,7 +175,7 @@ public class FloroRanchModel : ModelBase
 		return ObjectUtils.GetRandomArrayItem<FloroRanchAudioData>(floroRanchAudioListForCharacterAndType);
 	}
 
-	// Token: 0x0600CF21 RID: 53025 RVA: 0x002F3318 File Offset: 0x002F1518
+	// Token: 0x0600A332 RID: 41778 RVA: 0x002FE3F0 File Offset: 0x002FC5F0
 	private void InitFloroRanchCardGroup()
 	{
 		this.FloroRanchCardGroupMap.Clear();
@@ -186,7 +186,7 @@ public class FloroRanchModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600CF22 RID: 53026 RVA: 0x002F3388 File Offset: 0x002F1588
+	// Token: 0x0600A333 RID: 41779 RVA: 0x002FE460 File Offset: 0x002FC660
 	[NullableContext(2)]
 	public FloroRanchCardGroupData GetFloroRanchCardGroup(int id)
 	{
@@ -208,7 +208,7 @@ public class FloroRanchModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0600CF23 RID: 53027 RVA: 0x002F33EC File Offset: 0x002F15EC
+	// Token: 0x0600A334 RID: 41780 RVA: 0x002FE4C4 File Offset: 0x002FC6C4
 	private void InitFloroRanchCurrency()
 	{
 		this.FloroRanchCurrencyMap.Clear();
@@ -219,7 +219,7 @@ public class FloroRanchModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600CF24 RID: 53028 RVA: 0x002F345C File Offset: 0x002F165C
+	// Token: 0x0600A335 RID: 41781 RVA: 0x002FE534 File Offset: 0x002FC734
 	[NullableContext(2)]
 	public FloroRanchCurrencyConfigData GetFloroRanchCurrencyConfig(ECurrencyType currencyType)
 	{
@@ -241,7 +241,7 @@ public class FloroRanchModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0600CF25 RID: 53029 RVA: 0x002F34C0 File Offset: 0x002F16C0
+	// Token: 0x0600A336 RID: 41782 RVA: 0x002FE598 File Offset: 0x002FC798
 	private void InitFloroRanchCardData()
 	{
 		this.FloroRanchCardDataMap.Clear();
@@ -262,7 +262,7 @@ public class FloroRanchModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600CF26 RID: 53030 RVA: 0x002F357C File Offset: 0x002F177C
+	// Token: 0x0600A337 RID: 41783 RVA: 0x002FE654 File Offset: 0x002FC854
 	[NullableContext(2)]
 	public FloroRanchCardData GetFloroRanchCardData(int id)
 	{
@@ -284,7 +284,7 @@ public class FloroRanchModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0600CF27 RID: 53031 RVA: 0x002F35E0 File Offset: 0x002F17E0
+	// Token: 0x0600A338 RID: 41784 RVA: 0x002FE6B8 File Offset: 0x002FC8B8
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -301,7 +301,7 @@ public class FloroRanchModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0600CF28 RID: 53032 RVA: 0x002F3611 File Offset: 0x002F1811
+	// Token: 0x0600A339 RID: 41785 RVA: 0x002FE6E9 File Offset: 0x002FC8E9
 	public Dictionary<int, FloroRanchCardData> GetFloroRanchCardDataMap()
 	{
 		if (this.FloroRanchCardDataMap.Count <= 0)
@@ -311,7 +311,7 @@ public class FloroRanchModel : ModelBase
 		return this.FloroRanchCardDataMap;
 	}
 
-	// Token: 0x0600CF29 RID: 53033 RVA: 0x002F3630 File Offset: 0x002F1830
+	// Token: 0x0600A33A RID: 41786 RVA: 0x002FE708 File Offset: 0x002FC908
 	private void InitFloroRanchToyData()
 	{
 		this.FloroRanchToyDataMap.Clear();
@@ -322,7 +322,7 @@ public class FloroRanchModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600CF2A RID: 53034 RVA: 0x002F36A0 File Offset: 0x002F18A0
+	// Token: 0x0600A33B RID: 41787 RVA: 0x002FE778 File Offset: 0x002FC978
 	[NullableContext(2)]
 	public FloroRanchToyData GetFloroRanchToyData(int id)
 	{
@@ -344,7 +344,7 @@ public class FloroRanchModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0600CF2B RID: 53035 RVA: 0x002F3703 File Offset: 0x002F1903
+	// Token: 0x0600A33C RID: 41788 RVA: 0x002FE7DB File Offset: 0x002FC9DB
 	public Dictionary<int, FloroRanchToyData> GetFloroRanchToyDataMap()
 	{
 		if (this.FloroRanchToyDataMap.Count <= 0)
@@ -354,7 +354,7 @@ public class FloroRanchModel : ModelBase
 		return this.FloroRanchToyDataMap;
 	}
 
-	// Token: 0x0600CF2C RID: 53036 RVA: 0x002F3720 File Offset: 0x002F1920
+	// Token: 0x0600A33D RID: 41789 RVA: 0x002FE7F8 File Offset: 0x002FC9F8
 	private void InitFloroRanchSkillData()
 	{
 		this.FloroRanchSkillDataMap.Clear();
@@ -365,7 +365,7 @@ public class FloroRanchModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600CF2D RID: 53037 RVA: 0x002F3790 File Offset: 0x002F1990
+	// Token: 0x0600A33E RID: 41790 RVA: 0x002FE868 File Offset: 0x002FCA68
 	[NullableContext(2)]
 	public FloroRanchSkillData GetFloroRanchSkillData(int id)
 	{
@@ -387,7 +387,7 @@ public class FloroRanchModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0600CF2E RID: 53038 RVA: 0x002F37F4 File Offset: 0x002F19F4
+	// Token: 0x0600A33F RID: 41791 RVA: 0x002FE8CC File Offset: 0x002FCACC
 	public List<FloroRanchSkillData> GetFloroRanchSkillDataList()
 	{
 		if (this.FloroRanchSkillDataMap.Count <= 0)
@@ -399,7 +399,7 @@ public class FloroRanchModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600CF2F RID: 53039 RVA: 0x002F384C File Offset: 0x002F1A4C
+	// Token: 0x0600A340 RID: 41792 RVA: 0x002FE924 File Offset: 0x002FCB24
 	private void InitFloroRanchRaceData()
 	{
 		this.FloroRanchRaceDataMap.Clear();
@@ -412,7 +412,7 @@ public class FloroRanchModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600CF30 RID: 53040 RVA: 0x002F38CC File Offset: 0x002F1ACC
+	// Token: 0x0600A341 RID: 41793 RVA: 0x002FE9A4 File Offset: 0x002FCBA4
 	[NullableContext(2)]
 	public FloroRanchRaceData GetFloroRanchRaceData(int id)
 	{
@@ -434,7 +434,7 @@ public class FloroRanchModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x0600CF31 RID: 53041 RVA: 0x002F3930 File Offset: 0x002F1B30
+	// Token: 0x0600A342 RID: 41794 RVA: 0x002FEA08 File Offset: 0x002FCC08
 	public List<FloroRanchRaceData> GetFloroRanchRaceDataList(bool isIncludeCommonRace = false)
 	{
 		if (this.FloroRanchRaceDataMap.Count <= 0)
@@ -463,7 +463,7 @@ public class FloroRanchModel : ModelBase
 		return this.FloroRanchRaceDataListIncludeCommon;
 	}
 
-	// Token: 0x0600CF32 RID: 53042 RVA: 0x002F3A44 File Offset: 0x002F1C44
+	// Token: 0x0600A343 RID: 41795 RVA: 0x002FEB1C File Offset: 0x002FCD1C
 	public Dictionary<int, FloroRanchRaceData> GetFloroRanchRaceDataMap()
 	{
 		if (this.FloroRanchRaceDataMap.Count <= 0)
@@ -473,7 +473,7 @@ public class FloroRanchModel : ModelBase
 		return this.FloroRanchRaceDataMap;
 	}
 
-	// Token: 0x0600CF33 RID: 53043 RVA: 0x002F3A60 File Offset: 0x002F1C60
+	// Token: 0x0600A344 RID: 41796 RVA: 0x002FEB38 File Offset: 0x002FCD38
 	public List<FloroRanchTaskTab> GetTaskTabList()
 	{
 		List<FloroRanchTaskTab> list = new List<FloroRanchTaskTab>(FloroRanchConfig.Instance.GetFloroRanchTaskTabConfigList());
@@ -481,7 +481,7 @@ public class FloroRanchModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600CF34 RID: 53044 RVA: 0x002F3A96 File Offset: 0x002F1C96
+	// Token: 0x0600A345 RID: 41797 RVA: 0x002FEB6E File Offset: 0x002FCD6E
 	public string GetCoinText(long coinNum)
 	{
 		if (coinNum <= (long)this.MaxCoinNum)
@@ -491,7 +491,7 @@ public class FloroRanchModel : ModelBase
 		return coinNum.ToString("0.00e+0");
 	}
 
-	// Token: 0x0600CF35 RID: 53045 RVA: 0x002F3AB8 File Offset: 0x002F1CB8
+	// Token: 0x0600A346 RID: 41798 RVA: 0x002FEB90 File Offset: 0x002FCD90
 	public EFloroRanchActivityDataType GetActivityDataType(int activityId)
 	{
 		if (activityId == 0)
@@ -512,7 +512,7 @@ public class FloroRanchModel : ModelBase
 		return (EFloroRanchActivityDataType)floroRanchActivityConfig.Value.ActivityType;
 	}
 
-	// Token: 0x0600CF36 RID: 53046 RVA: 0x002F3B1F File Offset: 0x002F1D1F
+	// Token: 0x0600A347 RID: 41799 RVA: 0x002FEBF7 File Offset: 0x002FCDF7
 	public ELocalStoragePlayerKey GetSkillStorageKeyByActivityType(EFloroRanchActivityDataType activityType)
 	{
 		if (activityType == EFloroRanchActivityDataType.Weekly)
@@ -522,8 +522,8 @@ public class FloroRanchModel : ModelBase
 		return ELocalStoragePlayerKey.FloroRanchSkillId;
 	}
 
-	// Token: 0x1700114B RID: 4427
-	// (get) Token: 0x0600CF37 RID: 53047 RVA: 0x002F3B30 File Offset: 0x002F1D30
+	// Token: 0x17001170 RID: 4464
+	// (get) Token: 0x0600A348 RID: 41800 RVA: 0x002FEC08 File Offset: 0x002FCE08
 	public static FloroRanchModel Instance
 	{
 		get
@@ -532,7 +532,7 @@ public class FloroRanchModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600CF38 RID: 53048 RVA: 0x002F3B37 File Offset: 0x002F1D37
+	// Token: 0x0600A349 RID: 41801 RVA: 0x002FEC0F File Offset: 0x002FCE0F
 	public static FloroRanchModel GetOrCreateInstance()
 	{
 		if (FloroRanchModel._Instance == null)
@@ -542,7 +542,7 @@ public class FloroRanchModel : ModelBase
 		return FloroRanchModel._Instance;
 	}
 
-	// Token: 0x0600CF39 RID: 53049 RVA: 0x002F3B4B File Offset: 0x002F1D4B
+	// Token: 0x0600A34A RID: 41802 RVA: 0x002FEC23 File Offset: 0x002FCE23
 	public static bool CreateInstance()
 	{
 		if (FloroRanchModel._Instance != null)
@@ -553,57 +553,57 @@ public class FloroRanchModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600CF3A RID: 53050 RVA: 0x002F3B61 File Offset: 0x002F1D61
+	// Token: 0x0600A34B RID: 41803 RVA: 0x002FEC39 File Offset: 0x002FCE39
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600CF3B RID: 53051 RVA: 0x002F3B63 File Offset: 0x002F1D63
+	// Token: 0x0600A34C RID: 41804 RVA: 0x002FEC3B File Offset: 0x002FCE3B
 	public static void ResetStaticDefaultValue()
 	{
 		FloroRanchModel._Instance = null;
 	}
 
-	// Token: 0x0600CF3C RID: 53052 RVA: 0x002F3B6B File Offset: 0x002F1D6B
+	// Token: 0x0600A34D RID: 41805 RVA: 0x002FEC43 File Offset: 0x002FCE43
 	static FloroRanchModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(FloroRanchModel.CreateStaticDefaultValue), new Action(FloroRanchModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04005F44 RID: 24388
+	// Token: 0x04006013 RID: 24595
 	private readonly Dictionary<EFloroRanchActivityDataType, FloroRanchActivityData> ActivityDataMap = new Dictionary<EFloroRanchActivityDataType, FloroRanchActivityData>();
 
-	// Token: 0x04005F45 RID: 24389
+	// Token: 0x04006014 RID: 24596
 	private readonly Dictionary<int, FloroRanchRarityData> FloroRanchRarityMap = new Dictionary<int, FloroRanchRarityData>();
 
-	// Token: 0x04005F46 RID: 24390
+	// Token: 0x04006015 RID: 24597
 	private readonly Dictionary<int, FloroRanchTerrainData> FloroRanchTerrainMap = new Dictionary<int, FloroRanchTerrainData>();
 
-	// Token: 0x04005F47 RID: 24391
+	// Token: 0x04006016 RID: 24598
 	private readonly Dictionary<EFloroRanchCharacterType, Dictionary<EFloroRanchAudioType, List<FloroRanchAudioData>>> FloroRanchAudioMap = new Dictionary<EFloroRanchCharacterType, Dictionary<EFloroRanchAudioType, List<FloroRanchAudioData>>>();
 
-	// Token: 0x04005F48 RID: 24392
+	// Token: 0x04006017 RID: 24599
 	private readonly Dictionary<int, FloroRanchCardGroupData> FloroRanchCardGroupMap = new Dictionary<int, FloroRanchCardGroupData>();
 
-	// Token: 0x04005F49 RID: 24393
+	// Token: 0x04006018 RID: 24600
 	private readonly Dictionary<int, FloroRanchCurrencyConfigData> FloroRanchCurrencyMap = new Dictionary<int, FloroRanchCurrencyConfigData>();
 
-	// Token: 0x04005F4A RID: 24394
+	// Token: 0x04006019 RID: 24601
 	private readonly Dictionary<int, FloroRanchCardData> FloroRanchCardDataMap = new Dictionary<int, FloroRanchCardData>();
 
-	// Token: 0x04005F4B RID: 24395
+	// Token: 0x0400601A RID: 24602
 	private readonly Dictionary<int, List<FloroRanchCardData>> FloroRanchRaceToCardDataMap = new Dictionary<int, List<FloroRanchCardData>>();
 
-	// Token: 0x04005F4C RID: 24396
+	// Token: 0x0400601B RID: 24603
 	private readonly Dictionary<int, FloroRanchToyData> FloroRanchToyDataMap = new Dictionary<int, FloroRanchToyData>();
 
-	// Token: 0x04005F4D RID: 24397
+	// Token: 0x0400601C RID: 24604
 	private readonly Dictionary<int, FloroRanchSkillData> FloroRanchSkillDataMap = new Dictionary<int, FloroRanchSkillData>();
 
-	// Token: 0x04005F4E RID: 24398
+	// Token: 0x0400601D RID: 24605
 	private readonly Dictionary<int, FloroRanchRaceData> FloroRanchRaceDataMap = new Dictionary<int, FloroRanchRaceData>();
 
-	// Token: 0x04005F4F RID: 24399
+	// Token: 0x0400601E RID: 24606
 	[Nullable(new byte[]
 	{
 		2,
@@ -611,7 +611,7 @@ public class FloroRanchModel : ModelBase
 	})]
 	private List<FloroRanchRaceData> FloroRanchRaceDataList;
 
-	// Token: 0x04005F50 RID: 24400
+	// Token: 0x0400601F RID: 24607
 	[Nullable(new byte[]
 	{
 		2,
@@ -619,10 +619,10 @@ public class FloroRanchModel : ModelBase
 	})]
 	private List<FloroRanchRaceData> FloroRanchRaceDataListIncludeCommon;
 
-	// Token: 0x04005F51 RID: 24401
+	// Token: 0x04006020 RID: 24608
 	private readonly int MaxCoinNum = 100000;
 
-	// Token: 0x04005F52 RID: 24402
+	// Token: 0x04006021 RID: 24609
 	[Nullable(2)]
 	private static FloroRanchModel _Instance;
 }

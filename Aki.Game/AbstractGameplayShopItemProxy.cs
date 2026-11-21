@@ -1,76 +1,76 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200233C RID: 9020
+// Token: 0x02001821 RID: 6177
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class AbstractGameplayShopItemProxy : AbstractGameplayShopBaseItemProxy, IGameplayShopItemProxy, IGameplayShopItemBaseProxy
 {
-	// Token: 0x170016F2 RID: 5874
-	// (get) Token: 0x06011E05 RID: 73221 RVA: 0x004663E9 File Offset: 0x004645E9
-	// (set) Token: 0x06011E06 RID: 73222 RVA: 0x004663F1 File Offset: 0x004645F1
+	// Token: 0x1700172C RID: 5932
+	// (get) Token: 0x0600F2B5 RID: 62133 RVA: 0x004734B1 File Offset: 0x004716B1
+	// (set) Token: 0x0600F2B6 RID: 62134 RVA: 0x004734B9 File Offset: 0x004716B9
 	public GameplayShopTextData DiscountTextData { get; set; } = new GameplayShopTextData();
 
-	// Token: 0x170016F3 RID: 5875
-	// (get) Token: 0x06011E07 RID: 73223 RVA: 0x004663FA File Offset: 0x004645FA
-	// (set) Token: 0x06011E08 RID: 73224 RVA: 0x00466402 File Offset: 0x00464602
+	// Token: 0x1700172D RID: 5933
+	// (get) Token: 0x0600F2B7 RID: 62135 RVA: 0x004734C2 File Offset: 0x004716C2
+	// (set) Token: 0x0600F2B8 RID: 62136 RVA: 0x004734CA File Offset: 0x004716CA
 	public bool DiscountItemVisible { get; set; }
 
-	// Token: 0x170016F4 RID: 5876
-	// (get) Token: 0x06011E09 RID: 73225 RVA: 0x0046640B File Offset: 0x0046460B
-	// (set) Token: 0x06011E0A RID: 73226 RVA: 0x00466413 File Offset: 0x00464613
+	// Token: 0x1700172E RID: 5934
+	// (get) Token: 0x0600F2B9 RID: 62137 RVA: 0x004734D3 File Offset: 0x004716D3
+	// (set) Token: 0x0600F2BA RID: 62138 RVA: 0x004734DB File Offset: 0x004716DB
 	public GameplayShopTextData LabelTextData { get; set; } = new GameplayShopTextData();
 
-	// Token: 0x170016F5 RID: 5877
-	// (get) Token: 0x06011E0B RID: 73227 RVA: 0x0046641C File Offset: 0x0046461C
-	// (set) Token: 0x06011E0C RID: 73228 RVA: 0x00466424 File Offset: 0x00464624
+	// Token: 0x1700172F RID: 5935
+	// (get) Token: 0x0600F2BB RID: 62139 RVA: 0x004734E4 File Offset: 0x004716E4
+	// (set) Token: 0x0600F2BC RID: 62140 RVA: 0x004734EC File Offset: 0x004716EC
 	public bool LabelVisible { get; set; }
 
-	// Token: 0x170016F6 RID: 5878
-	// (get) Token: 0x06011E0D RID: 73229 RVA: 0x0046642D File Offset: 0x0046462D
-	// (set) Token: 0x06011E0E RID: 73230 RVA: 0x00466435 File Offset: 0x00464635
+	// Token: 0x17001730 RID: 5936
+	// (get) Token: 0x0600F2BD RID: 62141 RVA: 0x004734F5 File Offset: 0x004716F5
+	// (set) Token: 0x0600F2BE RID: 62142 RVA: 0x004734FD File Offset: 0x004716FD
 	public GameplayShopTextData LeftTimeTextData { get; set; } = new GameplayShopTextData();
 
-	// Token: 0x170016F7 RID: 5879
-	// (get) Token: 0x06011E0F RID: 73231 RVA: 0x0046643E File Offset: 0x0046463E
-	// (set) Token: 0x06011E10 RID: 73232 RVA: 0x00466446 File Offset: 0x00464646
+	// Token: 0x17001731 RID: 5937
+	// (get) Token: 0x0600F2BF RID: 62143 RVA: 0x00473506 File Offset: 0x00471706
+	// (set) Token: 0x0600F2C0 RID: 62144 RVA: 0x0047350E File Offset: 0x0047170E
 	public bool LeftTimeItemVisible { get; set; }
 
-	// Token: 0x170016F8 RID: 5880
-	// (get) Token: 0x06011E11 RID: 73233 RVA: 0x0046644F File Offset: 0x0046464F
-	// (set) Token: 0x06011E12 RID: 73234 RVA: 0x00466457 File Offset: 0x00464657
+	// Token: 0x17001732 RID: 5938
+	// (get) Token: 0x0600F2C1 RID: 62145 RVA: 0x00473517 File Offset: 0x00471717
+	// (set) Token: 0x0600F2C2 RID: 62146 RVA: 0x0047351F File Offset: 0x0047171F
 	public GameplayShopTextData ReSellTextData { get; set; } = new GameplayShopTextData();
 
-	// Token: 0x170016F9 RID: 5881
-	// (get) Token: 0x06011E13 RID: 73235 RVA: 0x00466460 File Offset: 0x00464660
-	// (set) Token: 0x06011E14 RID: 73236 RVA: 0x00466468 File Offset: 0x00464668
+	// Token: 0x17001733 RID: 5939
+	// (get) Token: 0x0600F2C3 RID: 62147 RVA: 0x00473528 File Offset: 0x00471728
+	// (set) Token: 0x0600F2C4 RID: 62148 RVA: 0x00473530 File Offset: 0x00471730
 	public bool ReSellItemVisible { get; set; }
 
-	// Token: 0x170016FA RID: 5882
-	// (get) Token: 0x06011E15 RID: 73237 RVA: 0x00466471 File Offset: 0x00464671
-	// (set) Token: 0x06011E16 RID: 73238 RVA: 0x00466479 File Offset: 0x00464679
+	// Token: 0x17001734 RID: 5940
+	// (get) Token: 0x0600F2C5 RID: 62149 RVA: 0x00473539 File Offset: 0x00471739
+	// (set) Token: 0x0600F2C6 RID: 62150 RVA: 0x00473541 File Offset: 0x00471741
 	public GameplayShopTextData SoldOutTextData { get; set; } = new GameplayShopTextData();
 
-	// Token: 0x170016FB RID: 5883
-	// (get) Token: 0x06011E17 RID: 73239 RVA: 0x00466482 File Offset: 0x00464682
-	// (set) Token: 0x06011E18 RID: 73240 RVA: 0x0046648A File Offset: 0x0046468A
+	// Token: 0x17001735 RID: 5941
+	// (get) Token: 0x0600F2C7 RID: 62151 RVA: 0x0047354A File Offset: 0x0047174A
+	// (set) Token: 0x0600F2C8 RID: 62152 RVA: 0x00473552 File Offset: 0x00471752
 	public bool SoldOutItemVisible { get; set; }
 
-	// Token: 0x170016FC RID: 5884
-	// (get) Token: 0x06011E19 RID: 73241 RVA: 0x00466493 File Offset: 0x00464693
-	// (set) Token: 0x06011E1A RID: 73242 RVA: 0x0046649B File Offset: 0x0046469B
+	// Token: 0x17001736 RID: 5942
+	// (get) Token: 0x0600F2C9 RID: 62153 RVA: 0x0047355B File Offset: 0x0047175B
+	// (set) Token: 0x0600F2CA RID: 62154 RVA: 0x00473563 File Offset: 0x00471763
 	public GameplayShopTextData LockTextData { get; set; } = new GameplayShopTextData();
 
-	// Token: 0x170016FD RID: 5885
-	// (get) Token: 0x06011E1B RID: 73243 RVA: 0x004664A4 File Offset: 0x004646A4
-	// (set) Token: 0x06011E1C RID: 73244 RVA: 0x004664AC File Offset: 0x004646AC
+	// Token: 0x17001737 RID: 5943
+	// (get) Token: 0x0600F2CB RID: 62155 RVA: 0x0047356C File Offset: 0x0047176C
+	// (set) Token: 0x0600F2CC RID: 62156 RVA: 0x00473574 File Offset: 0x00471774
 	public bool LockItemVisible { get; set; }
 
-	// Token: 0x170016FE RID: 5886
-	// (get) Token: 0x06011E1D RID: 73245 RVA: 0x004664B5 File Offset: 0x004646B5
-	// (set) Token: 0x06011E1E RID: 73246 RVA: 0x004664BD File Offset: 0x004646BD
+	// Token: 0x17001738 RID: 5944
+	// (get) Token: 0x0600F2CD RID: 62157 RVA: 0x0047357D File Offset: 0x0047177D
+	// (set) Token: 0x0600F2CE RID: 62158 RVA: 0x00473585 File Offset: 0x00471785
 	public bool TagNewItemVisible { get; set; }
 
-	// Token: 0x06011E1F RID: 73247
+	// Token: 0x0600F2CF RID: 62159
 	public abstract void OnBuyButtonClick();
 }

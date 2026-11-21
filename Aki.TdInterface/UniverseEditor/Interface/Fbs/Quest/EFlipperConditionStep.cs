@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003C9E RID: 15518
+	// Token: 0x020040B2 RID: 16562
 	public enum EFlipperConditionStep : byte
 	{
-		// Token: 0x0400B3D0 RID: 46032
+		// Token: 0x0400BD72 RID: 48498
 		Fight
 	}
 }

@@ -8,14 +8,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 {
-	// Token: 0x020072F7 RID: 29431
+	// Token: 0x0200647A RID: 25722
 	[NullableContext(1)]
 	[Nullable(0)]
 	[RegisterPhotoCameraComponent(EPhotoCameraComponent.Blend)]
 	public class PhotoCameraBlendComponent : PhotoCameraComponentBase
 	{
-		// Token: 0x17009F5E RID: 40798
-		// (get) Token: 0x06048377 RID: 295799 RVA: 0x0128CA73 File Offset: 0x0128AC73
+		// Token: 0x170076FC RID: 30460
+		// (get) Token: 0x0603E7C3 RID: 255939 RVA: 0x0122F427 File Offset: 0x0122D627
 		public bool IsBlending
 		{
 			get
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}
 		}
 
-		// Token: 0x06048378 RID: 295800 RVA: 0x0128CA80 File Offset: 0x0128AC80
+		// Token: 0x0603E7C4 RID: 255940 RVA: 0x0122F434 File Offset: 0x0122D634
 		public void CaptureStart()
 		{
 			VirtualPhotoCamera virtualCamera = this.Host.VirtualCamera;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.ComputeDelta(this.TmpReal, virtualCamera.WorldLocation, this.StartCenter, this.StartDelta);
 		}
 
-		// Token: 0x06048379 RID: 295801 RVA: 0x0128CB28 File Offset: 0x0128AD28
+		// Token: 0x0603E7C5 RID: 255941 RVA: 0x0122F4DC File Offset: 0x0122D6DC
 		public UniTask Blend()
 		{
 			PhotoCameraBlendComponent.<Blend>d__31 <Blend>d__;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			return <Blend>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604837A RID: 295802 RVA: 0x0128CB6C File Offset: 0x0128AD6C
+		// Token: 0x0603E7C6 RID: 255942 RVA: 0x0122F520 File Offset: 0x0122D720
 		protected override void OnTick(float deltaTime)
 		{
 			if (this.Pending == null)
@@ -92,13 +92,13 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}
 		}
 
-		// Token: 0x0604837B RID: 295803 RVA: 0x0128CDAD File Offset: 0x0128AFAD
+		// Token: 0x0603E7C7 RID: 255943 RVA: 0x0122F761 File Offset: 0x0122D961
 		protected override void OnDestroy()
 		{
 			this.BlendFinish();
 		}
 
-		// Token: 0x0604837C RID: 295804 RVA: 0x0128CDB8 File Offset: 0x0128AFB8
+		// Token: 0x0603E7C8 RID: 255944 RVA: 0x0122F76C File Offset: 0x0122D96C
 		private void LookAtQuat(global::Vector from, global::Vector to, Quat @out)
 		{
 			Rotator tmpRotator = this.TmpRotator;
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.TmpRotator.Quaternion(@out);
 		}
 
-		// Token: 0x0604837D RID: 295805 RVA: 0x0128CDF9 File Offset: 0x0128AFF9
+		// Token: 0x0603E7C9 RID: 255945 RVA: 0x0122F7AD File Offset: 0x0122D9AD
 		private void ComputeDelta(Quat real, global::Vector camPos, global::Vector center, Quat @out)
 		{
 			this.LookAtQuat(camPos, center, this.TmpLookAt);
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			real.Multiply(this.TmpInverse, @out);
 		}
 
-		// Token: 0x0604837E RID: 295806 RVA: 0x0128CE28 File Offset: 0x0128B028
+		// Token: 0x0603E7CA RID: 255946 RVA: 0x0122F7DC File Offset: 0x0122D9DC
 		private void BlendFinish()
 		{
 			if (this.Pending == null)
@@ -130,88 +130,88 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			pending.SetResult();
 		}
 
-		// Token: 0x04026257 RID: 156247
+		// Token: 0x04021542 RID: 136514
 		private const float MODE_BLEND_TIME = 2f;
 
-		// Token: 0x04026258 RID: 156248
+		// Token: 0x04021543 RID: 136515
 		private const bool DOLLY_ZOOM = true;
 
-		// Token: 0x04026259 RID: 156249
+		// Token: 0x04021544 RID: 136516
 		private const float DEFAULT_DOLLY_CONVERGE_POWER = 2f;
 
-		// Token: 0x0402625A RID: 156250
+		// Token: 0x04021545 RID: 136517
 		private float Elapsed;
 
-		// Token: 0x0402625B RID: 156251
+		// Token: 0x04021546 RID: 136518
 		private float Duration;
 
-		// Token: 0x0402625C RID: 156252
+		// Token: 0x04021547 RID: 136519
 		private readonly global::Vector StartCenter = global::Vector.Create();
 
-		// Token: 0x0402625D RID: 156253
+		// Token: 0x04021548 RID: 136520
 		private readonly global::Vector EndCenter = global::Vector.Create();
 
-		// Token: 0x0402625E RID: 156254
+		// Token: 0x04021549 RID: 136521
 		private readonly global::Vector StartDir = global::Vector.Create();
 
-		// Token: 0x0402625F RID: 156255
+		// Token: 0x0402154A RID: 136522
 		private float StartRadius;
 
-		// Token: 0x04026260 RID: 156256
+		// Token: 0x0402154B RID: 136523
 		private float StartFov;
 
-		// Token: 0x04026261 RID: 156257
+		// Token: 0x0402154C RID: 136524
 		private readonly global::Vector EndDir = global::Vector.Create();
 
-		// Token: 0x04026262 RID: 156258
+		// Token: 0x0402154D RID: 136525
 		private float EndRadius;
 
-		// Token: 0x04026263 RID: 156259
+		// Token: 0x0402154E RID: 136526
 		private float EndFov;
 
-		// Token: 0x04026264 RID: 156260
+		// Token: 0x0402154F RID: 136527
 		private float DollyConstant;
 
-		// Token: 0x04026265 RID: 156261
+		// Token: 0x04021550 RID: 136528
 		private readonly Quat StartDelta = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x04026266 RID: 156262
+		// Token: 0x04021551 RID: 136529
 		private readonly Quat EndDelta = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x04026267 RID: 156263
+		// Token: 0x04021552 RID: 136530
 		private readonly global::Vector TmpCenter = global::Vector.Create();
 
-		// Token: 0x04026268 RID: 156264
+		// Token: 0x04021553 RID: 136531
 		private readonly global::Vector TmpDir = global::Vector.Create();
 
-		// Token: 0x04026269 RID: 156265
+		// Token: 0x04021554 RID: 136532
 		private readonly global::Vector TmpLocation = global::Vector.Create();
 
-		// Token: 0x0402626A RID: 156266
+		// Token: 0x04021555 RID: 136533
 		private readonly Quat StartToEndQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x0402626B RID: 156267
+		// Token: 0x04021556 RID: 136534
 		private readonly Quat TmpQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x0402626C RID: 156268
+		// Token: 0x04021557 RID: 136535
 		private readonly Quat TmpLookAt = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x0402626D RID: 156269
+		// Token: 0x04021558 RID: 136536
 		private readonly Quat TmpInverse = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x0402626E RID: 156270
+		// Token: 0x04021559 RID: 136537
 		private readonly Quat TmpDelta = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x0402626F RID: 156271
+		// Token: 0x0402155A RID: 136538
 		private readonly Quat TmpReal = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x04026270 RID: 156272
+		// Token: 0x0402155B RID: 136539
 		private readonly Quat TmpFinal = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x04026271 RID: 156273
+		// Token: 0x0402155C RID: 136540
 		private readonly Rotator TmpRotator = Rotator.Create();
 
-		// Token: 0x04026272 RID: 156274
+		// Token: 0x0402155D RID: 136541
 		[Nullable(2)]
 		private CustomPromise Pending;
 	}

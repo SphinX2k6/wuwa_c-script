@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
 using CSharpScript.Core.Common;
@@ -9,18 +8,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020020A5 RID: 8357
+// Token: 0x0200157C RID: 5500
 [NullableContext(1)]
 [Nullable(0)]
 public class LoginUdpDelay : IStaticVariableResetter
 {
-	// Token: 0x060107CE RID: 67534 RVA: 0x00406E40 File Offset: 0x00405040
+	// Token: 0x0600DC3C RID: 56380 RVA: 0x00413454 File Offset: 0x00411654
 	static LoginUdpDelay()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(LoginUdpDelay.CreateStaticDefaultValue), new Action(LoginUdpDelay.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x060107CF RID: 67535 RVA: 0x00406E5F File Offset: 0x0040505F
+	// Token: 0x0600DC3D RID: 56381 RVA: 0x00413473 File Offset: 0x00411673
 	public static void CreateStaticDefaultValue()
 	{
 		LoginUdpDelay.ClientIp = "anonymous";
@@ -28,9 +27,10 @@ public class LoginUdpDelay : IStaticVariableResetter
 		LoginUdpDelay.UdpProbe = new List<ValueTuple<string, IUdpProbe>>();
 	}
 
-	// Token: 0x060107D0 RID: 67536 RVA: 0x00406E7F File Offset: 0x0040507F
+	// Token: 0x0600DC3E RID: 56382 RVA: 0x00413494 File Offset: 0x00411694
 	public static void ResetStaticDefaultValue()
 	{
+		LoginUdpDelay.ProbeState = new ValueTuple<bool, int>(LoginUdpDelay.ProbeState.Item1, LoginUdpDelay.ProbeState.Item2 + 1);
 		LoginUdpDelay.ClientIp = "anonymous";
 		LoginUdpDelay.TraceId = "";
 		LoginUdpDelay.UdpRegionCfg = null;
@@ -38,13 +38,13 @@ public class LoginUdpDelay : IStaticVariableResetter
 		LoginUdpDelay.UdpProbe = null;
 	}
 
-	// Token: 0x060107D1 RID: 67537 RVA: 0x00406EA7 File Offset: 0x004050A7
+	// Token: 0x0600DC3F RID: 56383 RVA: 0x004134E7 File Offset: 0x004116E7
 	private static bool IsIPv4(string address)
 	{
 		return new Regex("^(25[0-5]|2[0-4]\\d|1\\d{2}|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d{2}|[1-9]?\\d)){3}$").IsMatch(address);
 	}
 
-	// Token: 0x060107D2 RID: 67538 RVA: 0x00406EBC File Offset: 0x004050BC
+	// Token: 0x0600DC40 RID: 56384 RVA: 0x004134FC File Offset: 0x004116FC
 	private static bool IsIPv6(string address)
 	{
 		if (string.IsNullOrEmpty(address))
@@ -67,9 +67,21 @@ public class LoginUdpDelay : IStaticVariableResetter
 		string text2 = (array.Length > 1) ? array[1] : null;
 		string[] array2 = (!string.IsNullOrEmpty(text)) ? text.Split(':', StringSplitOptions.None) : new string[0];
 		string[] array3 = (!string.IsNullOrEmpty(text2)) ? text2.Split(':', StringSplitOptions.None) : new string[0];
-		if (!array2.All(new Func<string, bool>(LoginUdpDelay.<IsIPv6>g__IsValidBlock|13_0)) || !array3.All(new Func<string, bool>(LoginUdpDelay.<IsIPv6>g__IsValidBlock|13_0)))
+		string[] array4 = array2;
+		for (int i = 0; i < array4.Length; i++)
 		{
-			return false;
+			if (!LoginUdpDelay.<IsIPv6>g__IsValidBlock|14_0(array4[i]))
+			{
+				return false;
+			}
+		}
+		array4 = array3;
+		for (int i = 0; i < array4.Length; i++)
+		{
+			if (!LoginUdpDelay.<IsIPv6>g__IsValidBlock|14_0(array4[i]))
+			{
+				return false;
+			}
 		}
 		int num = array2.Length + array3.Length;
 		if (text2 != null)
@@ -79,13 +91,13 @@ public class LoginUdpDelay : IStaticVariableResetter
 		return num == 8;
 	}
 
-	// Token: 0x060107D3 RID: 67539 RVA: 0x00406F89 File Offset: 0x00405189
+	// Token: 0x0600DC41 RID: 56385 RVA: 0x004135E7 File Offset: 0x004117E7
 	private static bool IsDomain(string address)
 	{
 		return new Regex("^(?=.{1,253}$)(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\\.)+[a-zA-Z]{2,63}$").IsMatch(address);
 	}
 
-	// Token: 0x060107D4 RID: 67540 RVA: 0x00406F9B File Offset: 0x0040519B
+	// Token: 0x0600DC42 RID: 56386 RVA: 0x004135F9 File Offset: 0x004117F9
 	private static LoginUdpDelay.AddressType GetAddressType(string address)
 	{
 		address = address.Trim();
@@ -108,7 +120,7 @@ public class LoginUdpDelay : IStaticVariableResetter
 		return LoginUdpDelay.AddressType.Unknown;
 	}
 
-	// Token: 0x060107D5 RID: 67541 RVA: 0x00406FD0 File Offset: 0x004051D0
+	// Token: 0x0600DC43 RID: 56387 RVA: 0x0041362C File Offset: 0x0041182C
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -117,15 +129,15 @@ public class LoginUdpDelay : IStaticVariableResetter
 	})]
 	private static UniTask<TArray<string>> GetDomianIp(string address)
 	{
-		LoginUdpDelay.<GetDomianIp>d__16 <GetDomianIp>d__;
+		LoginUdpDelay.<GetDomianIp>d__17 <GetDomianIp>d__;
 		<GetDomianIp>d__.<>t__builder = AsyncUniTaskMethodBuilder<TArray<string>>.Create();
 		<GetDomianIp>d__.address = address;
 		<GetDomianIp>d__.<>1__state = -1;
-		<GetDomianIp>d__.<>t__builder.Start<LoginUdpDelay.<GetDomianIp>d__16>(ref <GetDomianIp>d__);
+		<GetDomianIp>d__.<>t__builder.Start<LoginUdpDelay.<GetDomianIp>d__17>(ref <GetDomianIp>d__);
 		return <GetDomianIp>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060107D6 RID: 67542 RVA: 0x00407014 File Offset: 0x00405214
+	// Token: 0x0600DC44 RID: 56388 RVA: 0x00413670 File Offset: 0x00411870
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -136,52 +148,54 @@ public class LoginUdpDelay : IStaticVariableResetter
 	})]
 	private static UniTask<List<ValueTuple<string, IUdpProbe>>> GetIP(List<IUdpProbe> address)
 	{
-		LoginUdpDelay.<GetIP>d__17 <GetIP>d__;
+		LoginUdpDelay.<GetIP>d__18 <GetIP>d__;
 		<GetIP>d__.<>t__builder = AsyncUniTaskMethodBuilder<List<ValueTuple<string, IUdpProbe>>>.Create();
 		<GetIP>d__.address = address;
 		<GetIP>d__.<>1__state = -1;
-		<GetIP>d__.<>t__builder.Start<LoginUdpDelay.<GetIP>d__17>(ref <GetIP>d__);
+		<GetIP>d__.<>t__builder.Start<LoginUdpDelay.<GetIP>d__18>(ref <GetIP>d__);
 		return <GetIP>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060107D7 RID: 67543 RVA: 0x00407058 File Offset: 0x00405258
+	// Token: 0x0600DC45 RID: 56389 RVA: 0x004136B4 File Offset: 0x004118B4
 	public static UniTask Start()
 	{
-		LoginUdpDelay.<Start>d__18 <Start>d__;
+		LoginUdpDelay.<Start>d__19 <Start>d__;
 		<Start>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<Start>d__.<>1__state = -1;
-		<Start>d__.<>t__builder.Start<LoginUdpDelay.<Start>d__18>(ref <Start>d__);
+		<Start>d__.<>t__builder.Start<LoginUdpDelay.<Start>d__19>(ref <Start>d__);
 		return <Start>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060107D8 RID: 67544 RVA: 0x00407094 File Offset: 0x00405294
-	private static UniTask InitClientIp()
+	// Token: 0x0600DC46 RID: 56390 RVA: 0x004136F0 File Offset: 0x004118F0
+	private static UniTask InitClientIp(int probeVersion)
 	{
-		LoginUdpDelay.<InitClientIp>d__19 <InitClientIp>d__;
+		LoginUdpDelay.<InitClientIp>d__20 <InitClientIp>d__;
 		<InitClientIp>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
+		<InitClientIp>d__.probeVersion = probeVersion;
 		<InitClientIp>d__.<>1__state = -1;
-		<InitClientIp>d__.<>t__builder.Start<LoginUdpDelay.<InitClientIp>d__19>(ref <InitClientIp>d__);
+		<InitClientIp>d__.<>t__builder.Start<LoginUdpDelay.<InitClientIp>d__20>(ref <InitClientIp>d__);
 		return <InitClientIp>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060107D9 RID: 67545 RVA: 0x004070D0 File Offset: 0x004052D0
-	private static UniTask InitProbeInfo()
+	// Token: 0x0600DC47 RID: 56391 RVA: 0x00413734 File Offset: 0x00411934
+	private static UniTask InitProbeInfo(int probeVersion)
 	{
-		LoginUdpDelay.<InitProbeInfo>d__20 <InitProbeInfo>d__;
+		LoginUdpDelay.<InitProbeInfo>d__21 <InitProbeInfo>d__;
 		<InitProbeInfo>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
+		<InitProbeInfo>d__.probeVersion = probeVersion;
 		<InitProbeInfo>d__.<>1__state = -1;
-		<InitProbeInfo>d__.<>t__builder.Start<LoginUdpDelay.<InitProbeInfo>d__20>(ref <InitProbeInfo>d__);
+		<InitProbeInfo>d__.<>t__builder.Start<LoginUdpDelay.<InitProbeInfo>d__21>(ref <InitProbeInfo>d__);
 		return <InitProbeInfo>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060107DA RID: 67546 RVA: 0x0040710C File Offset: 0x0040530C
+	// Token: 0x0600DC48 RID: 56392 RVA: 0x00413778 File Offset: 0x00411978
 	private static void InitTraceId()
 	{
 		SdkLoginConfig sdkLoginConfig = LoginModel.Instance.GetSdkLoginConfig();
 		LoginUdpDelay.TraceId = (((sdkLoginConfig != null) ? sdkLoginConfig.Uid : null) ?? "") + "_" + UKismetGuidLibrary.NewGuid().ToString();
 	}
 
-	// Token: 0x060107DB RID: 67547 RVA: 0x0040715A File Offset: 0x0040535A
+	// Token: 0x0600DC49 RID: 56393 RVA: 0x004137C6 File Offset: 0x004119C6
 	private static string GenUdpPayload(long ts)
 	{
 		return Json.Encode(new LoginUdpDelay.Payload
@@ -192,58 +206,54 @@ public class LoginUdpDelay : IStaticVariableResetter
 		}, null);
 	}
 
-	// Token: 0x060107DC RID: 67548 RVA: 0x00407184 File Offset: 0x00405384
-	private static void SetTimer()
+	// Token: 0x0600DC4A RID: 56394 RVA: 0x004137F0 File Offset: 0x004119F0
+	private static void SetTimer(int probeVersion)
 	{
-		if (LoginUdpDelay.UdpRegionCfg == null)
+		if (probeVersion != LoginUdpDelay.ProbeState.Item2)
 		{
 			return;
 		}
-		if (!LoginUdpDelay.UdpRegionCfg.ProbeOpen)
+		if (LoginUdpDelay.UdpRegionCfg == null || !LoginUdpDelay.UdpRegionCfg.ProbeOpen)
 		{
 			return;
-		}
-		if (LoginUdpDelay.TimerId != null)
-		{
-			TimerSystem.RealTimeInstance.Remove(LoginUdpDelay.TimerId);
-			LoginUdpDelay.TimerId = null;
 		}
 		TTimerAction ttimerAction = delegate(float _)
 		{
-			using (List<ValueTuple<string, IUdpProbe>>.Enumerator enumerator = LoginUdpDelay.UdpProbe.GetEnumerator())
-			{
-				while (enumerator.MoveNext())
-				{
-					LoginUdpDelay.<>c__DisplayClass24_0 CS$<>8__locals1 = new LoginUdpDelay.<>c__DisplayClass24_0();
-					CS$<>8__locals1.srvInfo = enumerator.Current;
-					CS$<>8__locals1.sendTs = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
-					string message = LoginUdpDelay.GenUdpPayload(CS$<>8__locals1.sendTs);
-					UKuroUdp.SendUdpMessage(CS$<>8__locals1.srvInfo.Item2.ip, CS$<>8__locals1.srvInfo.Item2.port, message, 512, DelegateUtils.ToManualReleaseDelegate<FUdpDelegate>(new Action<bool, string>(CS$<>8__locals1.<SetTimer>g__udpCallback|1)));
-				}
-			}
+			LoginUdpDelay.ProbeRoundAsync(probeVersion).Forget();
 		};
 		ttimerAction(0f);
 		LoginUdpDelay.TimerId = TimerSystem.RealTimeInstance.Forever(ttimerAction, (float)(LoginUdpDelay.UdpRegionCfg.ProbeInterval * 1000), 1f, null, null, false);
 	}
 
-	// Token: 0x060107DE RID: 67550 RVA: 0x0040721F File Offset: 0x0040541F
+	// Token: 0x0600DC4B RID: 56395 RVA: 0x00413874 File Offset: 0x00411A74
+	private static UniTask ProbeRoundAsync(int probeVersion)
+	{
+		LoginUdpDelay.<ProbeRoundAsync>d__26 <ProbeRoundAsync>d__;
+		<ProbeRoundAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
+		<ProbeRoundAsync>d__.probeVersion = probeVersion;
+		<ProbeRoundAsync>d__.<>1__state = -1;
+		<ProbeRoundAsync>d__.<>t__builder.Start<LoginUdpDelay.<ProbeRoundAsync>d__26>(ref <ProbeRoundAsync>d__);
+		return <ProbeRoundAsync>d__.<>t__builder.Task;
+	}
+
+	// Token: 0x0600DC4D RID: 56397 RVA: 0x004138BF File Offset: 0x00411ABF
 	[CompilerGenerated]
-	internal static bool <IsIPv6>g__IsValidBlock|13_0(string s)
+	internal static bool <IsIPv6>g__IsValidBlock|14_0(string s)
 	{
 		return s.Length > 0 && Regex.IsMatch(s, "^[0-9a-fA-F]{1,4}$");
 	}
 
-	// Token: 0x040079F4 RID: 31220
+	// Token: 0x04007AF2 RID: 31474
 	private static string ClientIp;
 
-	// Token: 0x040079F5 RID: 31221
+	// Token: 0x04007AF3 RID: 31475
 	private static string TraceId;
 
-	// Token: 0x040079F6 RID: 31222
+	// Token: 0x04007AF4 RID: 31476
 	[Nullable(2)]
 	private static IUdpRegion UdpRegionCfg;
 
-	// Token: 0x040079F7 RID: 31223
+	// Token: 0x04007AF5 RID: 31477
 	[Nullable(new byte[]
 	{
 		2,
@@ -253,54 +263,63 @@ public class LoginUdpDelay : IStaticVariableResetter
 	})]
 	private static List<ValueTuple<string, IUdpProbe>> UdpProbe;
 
-	// Token: 0x040079F8 RID: 31224
+	// Token: 0x04007AF6 RID: 31478
 	[Nullable(2)]
 	private static TimerHandle TimerId;
 
-	// Token: 0x040079F9 RID: 31225
+	// Token: 0x04007AF7 RID: 31479
+	[TupleElementNames(new string[]
+	{
+		"RoundRunning",
+		"Version"
+	})]
+	[Nullable(0)]
+	private static ValueTuple<bool, int> ProbeState;
+
+	// Token: 0x04007AF8 RID: 31480
 	private const string CLIENT_IP_KEY = "clientIp";
 
-	// Token: 0x040079FA RID: 31226
+	// Token: 0x04007AF9 RID: 31481
 	private const int TEST_PORT = 5500;
 
-	// Token: 0x040079FB RID: 31227
+	// Token: 0x04007AFA RID: 31482
 	private const string REPORT_KEY = "UDP_PROBE";
 
-	// Token: 0x02008693 RID: 34451
+	// Token: 0x0200781C RID: 30748
 	[NullableContext(0)]
 	public enum AddressType
 	{
-		// Token: 0x0402BC91 RID: 179345
+		// Token: 0x04026FA6 RID: 159654
 		IPv4,
-		// Token: 0x0402BC92 RID: 179346
+		// Token: 0x04026FA7 RID: 159655
 		IPv6,
-		// Token: 0x0402BC93 RID: 179347
+		// Token: 0x04026FA8 RID: 159656
 		Domain,
-		// Token: 0x0402BC94 RID: 179348
+		// Token: 0x04026FA9 RID: 159657
 		Unknown
 	}
 
-	// Token: 0x02008694 RID: 34452
+	// Token: 0x0200781D RID: 30749
 	[Nullable(0)]
 	[RequiredMember]
 	public class Payload
 	{
-		// Token: 0x0604A990 RID: 305552 RVA: 0x0137B61E File Offset: 0x0137981E
+		// Token: 0x06040D8B RID: 265611 RVA: 0x0131EB1E File Offset: 0x0131CD1E
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public Payload()
 		{
 		}
 
-		// Token: 0x0402BC95 RID: 179349
+		// Token: 0x04026FAA RID: 159658
 		[RequiredMember]
 		public string traceId;
 
-		// Token: 0x0402BC96 RID: 179350
+		// Token: 0x04026FAB RID: 159659
 		[RequiredMember]
 		public string clientIp;
 
-		// Token: 0x0402BC97 RID: 179351
+		// Token: 0x04026FAC RID: 159660
 		[RequiredMember]
 		public long timestamp;
 	}

@@ -13,12 +13,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 {
-	// Token: 0x02006915 RID: 26901
+	// Token: 0x02005865 RID: 22629
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AnniversaryActivitySubView : ActivitySubViewBase
 	{
-		// Token: 0x0604315B RID: 274779 RVA: 0x010586F0 File Offset: 0x010568F0
+		// Token: 0x06037CB3 RID: 228531 RVA: 0x00F99D1C File Offset: 0x00F97F1C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			};
 		}
 
-		// Token: 0x0604315C RID: 274780 RVA: 0x010589DC File Offset: 0x01056BDC
+		// Token: 0x06037CB4 RID: 228532 RVA: 0x00F9A008 File Offset: 0x00F98208
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnAnniversaryActivityRewardUpdate, new Action(this.RefreshAnniversaryActivityReward));
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			EventSystem.Instance.Add(EEventName.CrossDay, new Action(this.RefreshCrossDay));
 		}
 
-		// Token: 0x0604315D RID: 274781 RVA: 0x01058A5C File Offset: 0x01056C5C
+		// Token: 0x06037CB5 RID: 228533 RVA: 0x00F9A088 File Offset: 0x00F98288
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnAnniversaryActivityRewardUpdate, new Action(this.RefreshAnniversaryActivityReward));
@@ -78,20 +78,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			EventSystem.Instance.Remove(EEventName.CrossDay, new Action(this.RefreshCrossDay));
 		}
 
-		// Token: 0x0604315E RID: 274782 RVA: 0x01058AD9 File Offset: 0x01056CD9
+		// Token: 0x06037CB6 RID: 228534 RVA: 0x00F9A105 File Offset: 0x00F98305
 		protected override void OnSetData()
 		{
 			this.AnniversaryData = (this.ActivityBaseData as AnniversaryActivityData);
 			AnniversaryActivityController.Instance.SetCheckedOpenActivity(false);
 		}
 
-		// Token: 0x0604315F RID: 274783 RVA: 0x01058AF7 File Offset: 0x01056CF7
+		// Token: 0x06037CB7 RID: 228535 RVA: 0x00F9A123 File Offset: 0x00F98323
 		protected override void OnStart()
 		{
 			this.RefreshTitleDeco();
 		}
 
-		// Token: 0x06043160 RID: 274784 RVA: 0x01058B00 File Offset: 0x01056D00
+		// Token: 0x06037CB8 RID: 228536 RVA: 0x00F9A12C File Offset: 0x00F9832C
 		protected override UniTask OnBeforeShowSelfAsync()
 		{
 			AnniversaryActivitySubView.<OnBeforeShowSelfAsync>d__23 <OnBeforeShowSelfAsync>d__;
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			return <OnBeforeShowSelfAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06043161 RID: 274785 RVA: 0x01058B44 File Offset: 0x01056D44
+		// Token: 0x06037CB9 RID: 228537 RVA: 0x00F9A170 File Offset: 0x00F98370
 		protected override UniTask OnBeforeHideSelfAsync()
 		{
 			AnniversaryActivitySubView.<OnBeforeHideSelfAsync>d__24 <OnBeforeHideSelfAsync>d__;
@@ -113,13 +113,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			return <OnBeforeHideSelfAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06043162 RID: 274786 RVA: 0x01058B87 File Offset: 0x01056D87
+		// Token: 0x06037CBA RID: 228538 RVA: 0x00F9A1B3 File Offset: 0x00F983B3
 		protected override void OnBeforeDestroy()
 		{
 			this.WorldProgressTextTween.Destroy();
 		}
 
-		// Token: 0x06043163 RID: 274787 RVA: 0x01058B94 File Offset: 0x01056D94
+		// Token: 0x06037CBB RID: 228539 RVA: 0x00F9A1C0 File Offset: 0x00F983C0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			AnniversaryActivitySubView.<OnBeforeStartAsync>d__26 <OnBeforeStartAsync>d__;
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06043164 RID: 274788 RVA: 0x01058BD8 File Offset: 0x01056DD8
+		// Token: 0x06037CBC RID: 228540 RVA: 0x00F9A204 File Offset: 0x00F98404
 		protected override void OnSequenceStart(string sequenceName)
 		{
 			if (sequenceName != "Start")
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			}
 		}
 
-		// Token: 0x06043165 RID: 274789 RVA: 0x01058C7C File Offset: 0x01056E7C
+		// Token: 0x06037CBD RID: 228541 RVA: 0x00F9A2A8 File Offset: 0x00F984A8
 		protected override void OnSequenceClose(string sequenceName)
 		{
 			if (sequenceName != "Start")
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			this.TryPlayPendingWorldProgressTextTween();
 		}
 
-		// Token: 0x06043166 RID: 274790 RVA: 0x01058C99 File Offset: 0x01056E99
+		// Token: 0x06037CBE RID: 228542 RVA: 0x00F9A2C5 File Offset: 0x00F984C5
 		private AnniversaryPersonalRewardItem CreateRewardItem()
 		{
 			AnniversaryPersonalRewardItem anniversaryPersonalRewardItem = new AnniversaryPersonalRewardItem();
@@ -172,13 +172,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			return anniversaryPersonalRewardItem;
 		}
 
-		// Token: 0x06043167 RID: 274791 RVA: 0x01058CB2 File Offset: 0x01056EB2
+		// Token: 0x06037CBF RID: 228543 RVA: 0x00F9A2DE File Offset: 0x00F984DE
 		private AnniversaryEnterRewardProgressItem CreateTaskItem()
 		{
 			return new AnniversaryEnterRewardProgressItem();
 		}
 
-		// Token: 0x06043168 RID: 274792 RVA: 0x01058CBC File Offset: 0x01056EBC
+		// Token: 0x06037CC0 RID: 228544 RVA: 0x00F9A2E8 File Offset: 0x00F984E8
 		private UniTask InitActivityEnterItemsAsync(int subId, int compId)
 		{
 			AnniversaryActivitySubView.<InitActivityEnterItemsAsync>d__31 <InitActivityEnterItemsAsync>d__;
@@ -191,7 +191,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			return <InitActivityEnterItemsAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06043169 RID: 274793 RVA: 0x01058D10 File Offset: 0x01056F10
+		// Token: 0x06037CC1 RID: 228545 RVA: 0x00F9A33C File Offset: 0x00F9853C
 		private AnniversaryActivityEnterItem GetAnniversaryActivityEnterItem(int subId)
 		{
 			switch (subId)
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			}
 		}
 
-		// Token: 0x0604316A RID: 274794 RVA: 0x01058D58 File Offset: 0x01056F58
+		// Token: 0x06037CC2 RID: 228546 RVA: 0x00F9A384 File Offset: 0x00F98584
 		private UniTask InitAnniversaryWorldRewardItemsAsync(int cfgId, int compId)
 		{
 			AnniversaryActivitySubView.<InitAnniversaryWorldRewardItemsAsync>d__33 <InitAnniversaryWorldRewardItemsAsync>d__;
@@ -222,7 +222,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			return <InitAnniversaryWorldRewardItemsAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604316B RID: 274795 RVA: 0x01058DAC File Offset: 0x01056FAC
+		// Token: 0x06037CC3 RID: 228547 RVA: 0x00F9A3D8 File Offset: 0x00F985D8
 		private UniTask InitPersonRewardItemAsync()
 		{
 			AnniversaryActivitySubView.<InitPersonRewardItemAsync>d__34 <InitPersonRewardItemAsync>d__;
@@ -233,7 +233,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			return <InitPersonRewardItemAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604316C RID: 274796 RVA: 0x01058DEF File Offset: 0x01056FEF
+		// Token: 0x06037CC4 RID: 228548 RVA: 0x00F9A41B File Offset: 0x00F9861B
 		protected override void OnRefreshView()
 		{
 			if (this.AnniversaryData == null)
@@ -248,7 +248,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			this.RefreshSubActivityButtons();
 		}
 
-		// Token: 0x0604316D RID: 274797 RVA: 0x01058E20 File Offset: 0x01057020
+		// Token: 0x06037CC5 RID: 228549 RVA: 0x00F9A44C File Offset: 0x00F9864C
 		private void RefreshTitleDeco()
 		{
 			string packageLanguage = LanguageSystem.Instance.PackageLanguage;
@@ -268,14 +268,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			base.TrySetTextureByPath(resourcePath, base.GetTexture(0), null, null);
 		}
 
-		// Token: 0x0604316E RID: 274798 RVA: 0x01058E8C File Offset: 0x0105708C
+		// Token: 0x06037CC6 RID: 228550 RVA: 0x00F9A4B8 File Offset: 0x00F986B8
 		protected override void OnTimer(float gap)
 		{
 			this.RefreshActivityTime();
 			this.RefreshSubActivityTips();
 		}
 
-		// Token: 0x0604316F RID: 274799 RVA: 0x01058E9C File Offset: 0x0105709C
+		// Token: 0x06037CC7 RID: 228551 RVA: 0x00F9A4C8 File Offset: 0x00F986C8
 		private void OnClickRewardItem(int cfgId)
 		{
 			if (this.AnniversaryData == null)
@@ -295,7 +295,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			this.OpenRewardPreviewView(personProgressCurveById.Value.MotorPreviewId, personProgressCurveById.Value.DropId);
 		}
 
-		// Token: 0x06043170 RID: 274800 RVA: 0x01058F0C File Offset: 0x0105710C
+		// Token: 0x06037CC8 RID: 228552 RVA: 0x00F9A538 File Offset: 0x00F98738
 		private void OpenDropRewardItemTips(int dropId)
 		{
 			Dictionary<int, int> dropPackagePreview = CSharpScript.Game.Module.Reward.RewardConfig.Instance.GetDropPackagePreview(dropId);
@@ -316,13 +316,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 					}
 					else
 					{
-						ItemController.Instance.OpenItemTipsByItemId(key, true, null);
+						ItemController.Instance.OpenItemTipsByItemId(key, true, null, false);
 					}
 				}
 			}
 		}
 
-		// Token: 0x06043171 RID: 274801 RVA: 0x01058FBC File Offset: 0x010571BC
+		// Token: 0x06037CC9 RID: 228553 RVA: 0x00F9A5E8 File Offset: 0x00F987E8
 		private void RefreshActivityTime()
 		{
 			if (this.ActivityBaseData == null)
@@ -341,20 +341,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			text.SetText(item2, true);
 		}
 
-		// Token: 0x06043172 RID: 274802 RVA: 0x0105900B File Offset: 0x0105720B
+		// Token: 0x06037CCA RID: 228554 RVA: 0x00F9A637 File Offset: 0x00F98837
 		private void BindWorldProgressTextTween()
 		{
 			this.WorldProgressTextTween.BindUpdateTween(new Action<float>(this.OnWorldProgressTextTweenUpdate));
 			this.WorldProgressTextTween.BindCompleteTween(new Action(this.OnWorldProgressTextTweenComplete));
 		}
 
-		// Token: 0x06043173 RID: 274803 RVA: 0x0105903B File Offset: 0x0105723B
+		// Token: 0x06037CCB RID: 228555 RVA: 0x00F9A667 File Offset: 0x00F98867
 		private void OnWorldProgressTextTweenUpdate(float value)
 		{
 			this.SetWorldProgressTextPercentRaw(value);
 		}
 
-		// Token: 0x06043174 RID: 274804 RVA: 0x01059044 File Offset: 0x01057244
+		// Token: 0x06037CCC RID: 228556 RVA: 0x00F9A670 File Offset: 0x00F98870
 		private void OnWorldProgressTextTweenComplete()
 		{
 			AnniversaryActivityData anniversaryData = this.AnniversaryData;
@@ -365,7 +365,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			anniversaryData.MarkWorldProgressNumberTweenPlayedToday();
 		}
 
-		// Token: 0x06043175 RID: 274805 RVA: 0x01059058 File Offset: 0x01057258
+		// Token: 0x06037CCD RID: 228557 RVA: 0x00F9A684 File Offset: 0x00F98884
 		private void SetWorldProgressTextPercentRaw(float percentRaw)
 		{
 			UUIText text = base.GetText(2);
@@ -377,7 +377,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			text.SetText(str + "%", true);
 		}
 
-		// Token: 0x06043176 RID: 274806 RVA: 0x01059098 File Offset: 0x01057298
+		// Token: 0x06037CCE RID: 228558 RVA: 0x00F9A6C4 File Offset: 0x00F988C4
 		private float GetPreviousWorldProgressPercent(int worldProgressId)
 		{
 			if (worldProgressId <= 0)
@@ -402,7 +402,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			return (float)num2;
 		}
 
-		// Token: 0x06043177 RID: 274807 RVA: 0x01059124 File Offset: 0x01057324
+		// Token: 0x06037CCF RID: 228559 RVA: 0x00F9A750 File Offset: 0x00F98950
 		private void TryPlayPendingWorldProgressTextTween()
 		{
 			if (this.PendingWorldProgressTextTween == null || !this.WorldProgressStartSequenceClosed)
@@ -426,7 +426,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			this.WorldProgressTextTween.PlayTween(item2, item3, 1.25f, null);
 		}
 
-		// Token: 0x06043178 RID: 274808 RVA: 0x010591C8 File Offset: 0x010573C8
+		// Token: 0x06037CD0 RID: 228560 RVA: 0x00F9A7F4 File Offset: 0x00F989F4
 		private void RefreshWorldProgress()
 		{
 			if (this.AnniversaryData == null)
@@ -497,7 +497,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			}
 		}
 
-		// Token: 0x06043179 RID: 274809 RVA: 0x0105937C File Offset: 0x0105757C
+		// Token: 0x06037CD1 RID: 228561 RVA: 0x00F9A9A8 File Offset: 0x00F98BA8
 		private void RefreshPersonalProgress()
 		{
 			AnniversaryActivityData anniversaryData = this.AnniversaryData;
@@ -510,7 +510,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			text.SetText(num.ToString(), true);
 		}
 
-		// Token: 0x0604317A RID: 274810 RVA: 0x010593B8 File Offset: 0x010575B8
+		// Token: 0x06037CD2 RID: 228562 RVA: 0x00F9A9E4 File Offset: 0x00F98BE4
 		private void RefreshWorldProgressRewards()
 		{
 			if (this.AnniversaryData == null)
@@ -536,7 +536,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			}
 		}
 
-		// Token: 0x0604317B RID: 274811 RVA: 0x0105947C File Offset: 0x0105767C
+		// Token: 0x06037CD3 RID: 228563 RVA: 0x00F9AAA8 File Offset: 0x00F98CA8
 		private void RefreshPersonalRewards()
 		{
 			if (this.AnniversaryData == null)
@@ -608,7 +608,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			personalRewardLayout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x0604317C RID: 274812 RVA: 0x010595EC File Offset: 0x010577EC
+		// Token: 0x06037CD4 RID: 228564 RVA: 0x00F9AC18 File Offset: 0x00F98E18
 		private void RefreshSubActivityButtons()
 		{
 			if (this.AnniversaryData == null)
@@ -625,7 +625,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			}
 		}
 
-		// Token: 0x0604317D RID: 274813 RVA: 0x01059664 File Offset: 0x01057864
+		// Token: 0x06037CD5 RID: 228565 RVA: 0x00F9AC90 File Offset: 0x00F98E90
 		private void RefreshSubActivityTips()
 		{
 			if (this.AnniversaryData == null)
@@ -642,7 +642,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			}
 		}
 
-		// Token: 0x0604317E RID: 274814 RVA: 0x010596CC File Offset: 0x010578CC
+		// Token: 0x06037CD6 RID: 228566 RVA: 0x00F9ACF8 File Offset: 0x00F98EF8
 		private void OnClickTimeMachine()
 		{
 			ActivityBaseData activityById = ActivityModel.Instance.GetActivityById(108400002);
@@ -654,14 +654,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			ActivityController.Instance.OpenActivityById(108400002, EActivityViewOpenType.Other, null, null);
 		}
 
-		// Token: 0x0604317F RID: 274815 RVA: 0x0105971C File Offset: 0x0105791C
+		// Token: 0x06037CD7 RID: 228567 RVA: 0x00F9AD48 File Offset: 0x00F98F48
 		private void OnClickPersonalRewardDisplay()
 		{
 			this.ShowRewardProgressDisplay = !this.ShowRewardProgressDisplay;
 			this.SetVisibleRewardProgressDisplay(this.ShowRewardProgressDisplay);
 		}
 
-		// Token: 0x06043180 RID: 274816 RVA: 0x0105973C File Offset: 0x0105793C
+		// Token: 0x06037CD8 RID: 228568 RVA: 0x00F9AD68 File Offset: 0x00F98F68
 		private void SetVisibleRewardProgressDisplay(bool visible)
 		{
 			UUIItem item = base.GetItem(23);
@@ -685,7 +685,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			}
 		}
 
-		// Token: 0x06043181 RID: 274817 RVA: 0x010597A0 File Offset: 0x010579A0
+		// Token: 0x06037CD9 RID: 228569 RVA: 0x00F9ADCC File Offset: 0x00F98FCC
 		private void RefreshCrossDay()
 		{
 			if (this.AnniversaryData != null && !this.AnniversaryData.IsPreviousProgressFull() && !this.AnniversaryData.IsCurrentProgressFull())
@@ -699,7 +699,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			this.RefreshPersonalProgress();
 		}
 
-		// Token: 0x06043182 RID: 274818 RVA: 0x010597F2 File Offset: 0x010579F2
+		// Token: 0x06037CDA RID: 228570 RVA: 0x00F9AE1E File Offset: 0x00F9901E
 		private void RefreshAnniversaryActivityReward()
 		{
 			this.RefreshWorldProgressRewards();
@@ -707,13 +707,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			this.RefreshPersonalProgress();
 		}
 
-		// Token: 0x06043183 RID: 274819 RVA: 0x01059806 File Offset: 0x01057A06
+		// Token: 0x06037CDB RID: 228571 RVA: 0x00F9AE32 File Offset: 0x00F99032
 		private void OnCommonItemCountAnyChange(int configId, int count)
 		{
 			this.RefreshAnniversaryActivityReward();
 		}
 
-		// Token: 0x06043184 RID: 274820 RVA: 0x01059810 File Offset: 0x01057A10
+		// Token: 0x06037CDC RID: 228572 RVA: 0x00F9AE3C File Offset: 0x00F9903C
 		private void OnRefreshActivityRedDot(int id)
 		{
 			if (id == 108400002)
@@ -740,7 +740,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			}
 		}
 
-		// Token: 0x06043185 RID: 274821 RVA: 0x010598BC File Offset: 0x01057ABC
+		// Token: 0x06037CDD RID: 228573 RVA: 0x00F9AEE8 File Offset: 0x00F990E8
 		private void ClickWorldRewardItem(int id)
 		{
 			AnniversaryActivityData anniversaryData = this.AnniversaryData;
@@ -763,7 +763,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			}
 		}
 
-		// Token: 0x06043186 RID: 274822 RVA: 0x0105993A File Offset: 0x01057B3A
+		// Token: 0x06037CDE RID: 228574 RVA: 0x00F9AF66 File Offset: 0x00F99166
 		private void OpenRewardPreviewView(int motorPreviewId, int dropId)
 		{
 			if (motorPreviewId <= 0)
@@ -782,7 +782,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			instance.OpenMotorGeneralPreviewView(motorPreviewId);
 		}
 
-		// Token: 0x06043187 RID: 274823 RVA: 0x0105995C File Offset: 0x01057B5C
+		// Token: 0x06037CDF RID: 228575 RVA: 0x00F9AF88 File Offset: 0x00F99188
 		private void ClickSubEnter(EAnniversarySubId id)
 		{
 			if (this.AnniversaryData == null)
@@ -808,7 +808,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			targetSubActivityData.FirstClickOpenView();
 		}
 
-		// Token: 0x06043188 RID: 274824 RVA: 0x010599C4 File Offset: 0x01057BC4
+		// Token: 0x06037CE0 RID: 228576 RVA: 0x00F9AFF0 File Offset: 0x00F991F0
 		private void RefreshTaskItemLayout()
 		{
 			if (this.AnniversaryData == null)
@@ -832,7 +832,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			rewardProgressItemLayout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x06043189 RID: 274825 RVA: 0x01059A18 File Offset: 0x01057C18
+		// Token: 0x06037CE1 RID: 228577 RVA: 0x00F9B044 File Offset: 0x00F99244
 		private void RefreshTimeMachineRedDot()
 		{
 			ActivityBaseData activityById = ActivityModel.Instance.GetActivityById(108400002);
@@ -844,41 +844,41 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			item.SetUIActive(activityById != null && activityById.RedPointShowState);
 		}
 
-		// Token: 0x04022EB9 RID: 143033
+		// Token: 0x0401D715 RID: 120597
 		private const int MAX_WORLD_REWARD_COUNT = 3;
 
-		// Token: 0x04022EBA RID: 143034
+		// Token: 0x0401D716 RID: 120598
 		private const int MAX_SUB_ACTIVITY_ENTER_COUNT = 4;
 
-		// Token: 0x04022EBB RID: 143035
+		// Token: 0x0401D717 RID: 120599
 		private const string LOOP_ANNIVERSARY_ACTIVITY_BGM = "map_huodong_2ndanni_main";
 
-		// Token: 0x04022EBC RID: 143036
+		// Token: 0x0401D718 RID: 120600
 		private const float WORLD_PROGRESS_TEXT_TWEEN_DURATION = 1.25f;
 
-		// Token: 0x04022EBD RID: 143037
+		// Token: 0x0401D719 RID: 120601
 		[Nullable(2)]
 		protected AnniversaryActivityData AnniversaryData;
 
-		// Token: 0x04022EBE RID: 143038
+		// Token: 0x0401D71A RID: 120602
 		private readonly List<AnniversaryWorldRewardItem> WorldRewardItems = new List<AnniversaryWorldRewardItem>();
 
-		// Token: 0x04022EBF RID: 143039
+		// Token: 0x0401D71B RID: 120603
 		private readonly Dictionary<EAnniversarySubId, AnniversaryActivityEnterItem> ActivityEnterItemMap = new Dictionary<EAnniversarySubId, AnniversaryActivityEnterItem>();
 
-		// Token: 0x04022EC0 RID: 143040
+		// Token: 0x0401D71C RID: 120604
 		private readonly FName ParameterName = new FName("percent");
 
-		// Token: 0x04022EC1 RID: 143041
+		// Token: 0x0401D71D RID: 120605
 		private readonly FRotator OpenRotation = new FRotator(0f, 180f, 0f);
 
-		// Token: 0x04022EC2 RID: 143042
+		// Token: 0x0401D71E RID: 120606
 		private readonly FRotator CloseRotation = new FRotator(0f, 0f, 0f);
 
-		// Token: 0x04022EC3 RID: 143043
+		// Token: 0x0401D71F RID: 120607
 		private bool ShowRewardProgressDisplay;
 
-		// Token: 0x04022EC4 RID: 143044
+		// Token: 0x0401D720 RID: 120608
 		[Nullable(new byte[]
 		{
 			2,
@@ -887,7 +887,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 		})]
 		private GenericLayout<AnniversaryPersonalRewardItem, AnniversaryPersonalRewardItemData> PersonalRewardLayout;
 
-		// Token: 0x04022EC5 RID: 143045
+		// Token: 0x0401D721 RID: 120609
 		[Nullable(new byte[]
 		{
 			2,
@@ -896,17 +896,17 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 		})]
 		private GenericLayout<AnniversaryEnterRewardProgressItem, AnniversarySubActivityDataBase> RewardProgressItemLayout;
 
-		// Token: 0x04022EC6 RID: 143046
+		// Token: 0x0401D722 RID: 120610
 		[Nullable(2)]
 		private AnniversaryPersonalRewardItem LastPersonalRewardDisplay;
 
-		// Token: 0x04022EC7 RID: 143047
+		// Token: 0x0401D723 RID: 120611
 		private readonly LguiFloatTween WorldProgressTextTween = new LguiFloatTween();
 
-		// Token: 0x04022EC8 RID: 143048
+		// Token: 0x0401D724 RID: 120612
 		private bool WorldProgressStartSequenceClosed;
 
-		// Token: 0x04022EC9 RID: 143049
+		// Token: 0x0401D725 RID: 120613
 		[TupleElementNames(new string[]
 		{
 			"StartPercent",
@@ -915,7 +915,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 		[Nullable(0)]
 		private ValueTuple<float, float>? PendingWorldProgressTextTween;
 
-		// Token: 0x04022ECA RID: 143050
+		// Token: 0x0401D726 RID: 120614
 		private int LoopBgmHandle;
 	}
 }

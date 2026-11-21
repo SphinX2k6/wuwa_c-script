@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x02006065 RID: 24677
+	// Token: 0x02004FE3 RID: 20451
 	public enum ESpringManorQuestState
 	{
-		// Token: 0x040209F4 RID: 133620
+		// Token: 0x0401B321 RID: 111393
 		Lock,
-		// Token: 0x040209F5 RID: 133621
+		// Token: 0x0401B322 RID: 111394
 		UnTrack,
-		// Token: 0x040209F6 RID: 133622
+		// Token: 0x0401B323 RID: 111395
 		Track
 	}
 }

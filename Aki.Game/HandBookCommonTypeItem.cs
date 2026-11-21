@@ -6,7 +6,7 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Module.Util.Layout;
 using UnrealEngine;
 
-// Token: 0x02001DEA RID: 7658
+// Token: 0x020012AC RID: 4780
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class HandBookCommonTypeItem : GridProxyAbstract<HandBookCommonItemData[]>
 {
-	// Token: 0x0600E924 RID: 59684 RVA: 0x00373551 File Offset: 0x00371751
+	// Token: 0x0600BD43 RID: 48451 RVA: 0x0037F259 File Offset: 0x0037D459
 	[NullableContext(2)]
 	public void Initialize(UUIItem uiItem = null)
 	{
@@ -26,7 +26,7 @@ public class HandBookCommonTypeItem : GridProxyAbstract<HandBookCommonItemData[]
 		}
 	}
 
-	// Token: 0x0600E925 RID: 59685 RVA: 0x00373562 File Offset: 0x00371762
+	// Token: 0x0600BD44 RID: 48452 RVA: 0x0037F26A File Offset: 0x0037D46A
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,7 +36,7 @@ public class HandBookCommonTypeItem : GridProxyAbstract<HandBookCommonItemData[]
 		};
 	}
 
-	// Token: 0x0600E926 RID: 59686 RVA: 0x0037359C File Offset: 0x0037179C
+	// Token: 0x0600BD45 RID: 48453 RVA: 0x0037F2A4 File Offset: 0x0037D4A4
 	public void InitGridLayout()
 	{
 		if (this.GridLayout != null)
@@ -49,7 +49,7 @@ public class HandBookCommonTypeItem : GridProxyAbstract<HandBookCommonItemData[]
 		this.GridLayout.RebuildLayoutByDataNew<HandBookCommonItemData>(this.HandBookCommonItemDataList, null);
 	}
 
-	// Token: 0x0600E927 RID: 59687 RVA: 0x00373607 File Offset: 0x00371807
+	// Token: 0x0600BD46 RID: 48454 RVA: 0x0037F30F File Offset: 0x0037D50F
 	public void InitTitle()
 	{
 		if (this.HandBookCommonItemDataList.Length == 0)
@@ -59,7 +59,7 @@ public class HandBookCommonTypeItem : GridProxyAbstract<HandBookCommonItemData[]
 		base.GetText(0).SetText(this.HandBookCommonItemDataList[0].Title, true);
 	}
 
-	// Token: 0x0600E928 RID: 59688 RVA: 0x00373630 File Offset: 0x00371830
+	// Token: 0x0600BD47 RID: 48455 RVA: 0x0037F338 File Offset: 0x0037D538
 	private ILayoutItem<HandBookCommonItem> InitHandBookCommonItem(object handBookCommonItemData, UUIItem uiItem, int index)
 	{
 		HandBookCommonItem handBookCommonItem = new HandBookCommonItem();
@@ -74,7 +74,7 @@ public class HandBookCommonTypeItem : GridProxyAbstract<HandBookCommonItemData[]
 		};
 	}
 
-	// Token: 0x0600E929 RID: 59689 RVA: 0x00373693 File Offset: 0x00371893
+	// Token: 0x0600BD48 RID: 48456 RVA: 0x0037F39B File Offset: 0x0037D59B
 	[NullableContext(2)]
 	public HandBookCommonItem SetToggleChecked()
 	{
@@ -88,7 +88,7 @@ public class HandBookCommonTypeItem : GridProxyAbstract<HandBookCommonItemData[]
 		return null;
 	}
 
-	// Token: 0x0600E92A RID: 59690 RVA: 0x003736C0 File Offset: 0x003718C0
+	// Token: 0x0600BD49 RID: 48457 RVA: 0x0037F3C8 File Offset: 0x0037D5C8
 	public void ResetAllToggleState()
 	{
 		int count = this.HandBookCommonItemList.Count;
@@ -98,7 +98,7 @@ public class HandBookCommonTypeItem : GridProxyAbstract<HandBookCommonItemData[]
 		}
 	}
 
-	// Token: 0x0600E92B RID: 59691 RVA: 0x003736F8 File Offset: 0x003718F8
+	// Token: 0x0600BD4A RID: 48458 RVA: 0x0037F400 File Offset: 0x0037D600
 	protected void OnToggleClick(MediumItemGridExtendCallback callbackParameter)
 	{
 		HandBookCommonItemData handBookCommonItemData = callbackParameter.Data as HandBookCommonItemData;
@@ -109,7 +109,7 @@ public class HandBookCommonTypeItem : GridProxyAbstract<HandBookCommonItemData[]
 		}
 	}
 
-	// Token: 0x0600E92C RID: 59692 RVA: 0x0037372D File Offset: 0x0037192D
+	// Token: 0x0600BD4B RID: 48459 RVA: 0x0037F435 File Offset: 0x0037D635
 	public override void Refresh(HandBookCommonItemData[] dataList, bool isSelected, int gridIndex)
 	{
 		this.GirdIndex = gridIndex;
@@ -118,25 +118,25 @@ public class HandBookCommonTypeItem : GridProxyAbstract<HandBookCommonItemData[]
 		this.InitTitle();
 	}
 
-	// Token: 0x0600E92D RID: 59693 RVA: 0x00373749 File Offset: 0x00371949
+	// Token: 0x0600BD4C RID: 48460 RVA: 0x0037F451 File Offset: 0x0037D651
 	public int GetGirdIndex()
 	{
 		return this.GirdIndex;
 	}
 
-	// Token: 0x0600E92E RID: 59694 RVA: 0x00373751 File Offset: 0x00371951
+	// Token: 0x0600BD4D RID: 48461 RVA: 0x0037F459 File Offset: 0x0037D659
 	public List<HandBookCommonItem> GetHandBookCommonItemList()
 	{
 		return this.HandBookCommonItemList;
 	}
 
-	// Token: 0x0600E92F RID: 59695 RVA: 0x00373759 File Offset: 0x00371959
+	// Token: 0x0600BD4E RID: 48462 RVA: 0x0037F461 File Offset: 0x0037D661
 	public void BindToggleCallback(THandBookToggleFunction toggleFunction)
 	{
 		this.OnToggleCallback = toggleFunction;
 	}
 
-	// Token: 0x0600E930 RID: 59696 RVA: 0x00373762 File Offset: 0x00371962
+	// Token: 0x0600BD4F RID: 48463 RVA: 0x0037F46A File Offset: 0x0037D66A
 	protected override void OnBeforeDestroy()
 	{
 		if (this.GridLayout != null)
@@ -146,13 +146,13 @@ public class HandBookCommonTypeItem : GridProxyAbstract<HandBookCommonItemData[]
 		}
 	}
 
-	// Token: 0x04006C0F RID: 27663
+	// Token: 0x04006CF0 RID: 27888
 	protected HandBookCommonItemData[] HandBookCommonItemDataList;
 
-	// Token: 0x04006C10 RID: 27664
+	// Token: 0x04006CF1 RID: 27889
 	protected List<HandBookCommonItem> HandBookCommonItemList;
 
-	// Token: 0x04006C11 RID: 27665
+	// Token: 0x04006CF2 RID: 27890
 	[Nullable(new byte[]
 	{
 		2,
@@ -160,10 +160,10 @@ public class HandBookCommonTypeItem : GridProxyAbstract<HandBookCommonItemData[]
 	})]
 	private GenericLayoutNew<HandBookCommonItem> GridLayout;
 
-	// Token: 0x04006C12 RID: 27666
+	// Token: 0x04006CF3 RID: 27891
 	[Nullable(2)]
 	private THandBookToggleFunction OnToggleCallback;
 
-	// Token: 0x04006C13 RID: 27667
+	// Token: 0x04006CF4 RID: 27892
 	private int GirdIndex;
 }

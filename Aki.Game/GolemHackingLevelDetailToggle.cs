@@ -7,16 +7,16 @@ using CSharpScript.Core.Common;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200100A RID: 4106
+// Token: 0x020004BE RID: 1214
 public class GolemHackingLevelDetailToggle : UiPanelBase
 {
-	// Token: 0x06006951 RID: 26961 RVA: 0x00150011 File Offset: 0x0014E211
+	// Token: 0x06003CE6 RID: 15590 RVA: 0x00158939 File Offset: 0x00156B39
 	public GolemHackingLevelDetailToggle(int levelId)
 	{
 		this.LevelId = levelId;
 	}
 
-	// Token: 0x06006952 RID: 26962 RVA: 0x00150020 File Offset: 0x0014E220
+	// Token: 0x06003CE7 RID: 15591 RVA: 0x00158948 File Offset: 0x00156B48
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -32,7 +32,7 @@ public class GolemHackingLevelDetailToggle : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06006953 RID: 26963 RVA: 0x001500AA File Offset: 0x0014E2AA
+	// Token: 0x06003CE8 RID: 15592 RVA: 0x001589D2 File Offset: 0x00156BD2
 	protected override void OnStart()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -43,7 +43,7 @@ public class GolemHackingLevelDetailToggle : UiPanelBase
 		extendToggle.OnStateChange.Add(new Action<EToggleState>(this.OnToggleStateChange));
 	}
 
-	// Token: 0x06006954 RID: 26964 RVA: 0x001500CE File Offset: 0x0014E2CE
+	// Token: 0x06003CE9 RID: 15593 RVA: 0x001589F6 File Offset: 0x00156BF6
 	protected override void OnBeforeDestroy()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -59,7 +59,7 @@ public class GolemHackingLevelDetailToggle : UiPanelBase
 		extendToggle2.OnStateChange.Clear();
 	}
 
-	// Token: 0x06006955 RID: 26965 RVA: 0x001500FD File Offset: 0x0014E2FD
+	// Token: 0x06003CEA RID: 15594 RVA: 0x00158A25 File Offset: 0x00156C25
 	public void SetSelected(bool selected)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -70,7 +70,7 @@ public class GolemHackingLevelDetailToggle : UiPanelBase
 		extendToggle.SetToggleState(selected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, true, false, false);
 	}
 
-	// Token: 0x06006956 RID: 26966 RVA: 0x0015011C File Offset: 0x0014E31C
+	// Token: 0x06003CEB RID: 15595 RVA: 0x00158A44 File Offset: 0x00156C44
 	public void SetFocusGamepad()
 	{
 		UUIItem toggle = base.GetExtendToggle(0).RootUIComp.Get();
@@ -83,7 +83,7 @@ public class GolemHackingLevelDetailToggle : UiPanelBase
 		}
 	}
 
-	// Token: 0x06006957 RID: 26967 RVA: 0x00150170 File Offset: 0x0014E370
+	// Token: 0x06003CEC RID: 15596 RVA: 0x00158A98 File Offset: 0x00156C98
 	public virtual bool RefreshState(bool needAnim = false)
 	{
 		GolemHackingActivityData activityData = GolemHackingController.Instance.GetActivityData();
@@ -101,7 +101,7 @@ public class GolemHackingLevelDetailToggle : UiPanelBase
 		return flag;
 	}
 
-	// Token: 0x06006958 RID: 26968 RVA: 0x001501CF File Offset: 0x0014E3CF
+	// Token: 0x06003CED RID: 15597 RVA: 0x00158AF7 File Offset: 0x00156CF7
 	private void OnToggleStateChange(EToggleState state)
 	{
 		if (state != EToggleState.ETT_Checked)
@@ -116,13 +116,13 @@ public class GolemHackingLevelDetailToggle : UiPanelBase
 		onClickedCallback(this.LevelId, this.IsHard);
 	}
 
-	// Token: 0x0400308B RID: 12427
+	// Token: 0x04003124 RID: 12580
 	[Nullable(2)]
 	public Action<int, bool> OnClickedCallback;
 
-	// Token: 0x0400308C RID: 12428
+	// Token: 0x04003125 RID: 12581
 	protected bool IsHard;
 
-	// Token: 0x0400308D RID: 12429
+	// Token: 0x04003126 RID: 12582
 	public int LevelId;
 }

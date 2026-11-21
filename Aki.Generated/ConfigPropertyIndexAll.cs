@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000764 RID: 1892
+	// Token: 0x0200077E RID: 1918
 	public class ConfigPropertyIndexAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002C69 RID: 11369 RVA: 0x001544D4 File Offset: 0x001526D4
+		// Token: 0x06002D05 RID: 11525 RVA: 0x0015B3E0 File Offset: 0x001595E0
 		static ConfigPropertyIndexAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPropertyIndexAll.CreateStaticDefaultValue), new Action(ConfigPropertyIndexAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002C6A RID: 11370 RVA: 0x001544F4 File Offset: 0x001526F4
+		// Token: 0x06002D06 RID: 11526 RVA: 0x0015B400 File Offset: 0x00159600
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPropertyIndexAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002C6B RID: 11371 RVA: 0x00154573 File Offset: 0x00152773
+		// Token: 0x06002D07 RID: 11527 RVA: 0x0015B47F File Offset: 0x0015967F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPropertyIndexAll.LogPair = null;
 			ConfigPropertyIndexAll.HandleId = 0;
 		}
 
-		// Token: 0x06002C6C RID: 11372 RVA: 0x00154581 File Offset: 0x00152781
+		// Token: 0x06002D08 RID: 11528 RVA: 0x0015B48D File Offset: 0x0015968D
 		public static void Init()
 		{
 			ConfigPropertyIndexAll.HandleId = ConfigCommon.InitDataStatement(ConfigPropertyIndexAll.HandleId, "db_property.db", "select BinData from `PropertyIndex`");
 		}
 
-		// Token: 0x06002C6D RID: 11373 RVA: 0x0015459C File Offset: 0x0015279C
+		// Token: 0x06002D09 RID: 11529 RVA: 0x0015B4A8 File Offset: 0x001596A8
 		[NullableContext(2)]
 		public static IReadOnlyList<PropertyIndex> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040033A2 RID: 13218
+		// Token: 0x04003458 RID: 13400
 		private const string DB = "db_property.db";
 
-		// Token: 0x040033A3 RID: 13219
+		// Token: 0x04003459 RID: 13401
 		private const string FILE = "s.属性.xlsx";
 
-		// Token: 0x040033A4 RID: 13220
+		// Token: 0x0400345A RID: 13402
 		private const string TABLE = "PropertyIndex";
 
-		// Token: 0x040033A5 RID: 13221
+		// Token: 0x0400345B RID: 13403
 		private const string COMMAND = "select BinData from `PropertyIndex`";
 
-		// Token: 0x040033A6 RID: 13222
+		// Token: 0x0400345C RID: 13404
 		private const string KEY_PREFIX = "PropertyIndexAll";
 
-		// Token: 0x040033A7 RID: 13223
+		// Token: 0x0400345D RID: 13405
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040033A8 RID: 13224
+		// Token: 0x0400345E RID: 13406
 		private static int HandleId;
 	}
 }

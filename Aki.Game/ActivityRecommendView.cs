@@ -7,18 +7,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200109A RID: 4250
+// Token: 0x0200054E RID: 1358
 [NullableContext(2)]
 [Nullable(0)]
 public class ActivityRecommendView : UiViewBase
 {
-	// Token: 0x06006EB0 RID: 28336 RVA: 0x00169DA0 File Offset: 0x00167FA0
+	// Token: 0x06004246 RID: 16966 RVA: 0x00172700 File Offset: 0x00170900
 	[NullableContext(1)]
 	public ActivityRecommendView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x06006EB1 RID: 28337 RVA: 0x00169DAC File Offset: 0x00167FAC
+	// Token: 0x06004247 RID: 16967 RVA: 0x0017270C File Offset: 0x0017090C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,7 +30,7 @@ public class ActivityRecommendView : UiViewBase
 		};
 	}
 
-	// Token: 0x06006EB2 RID: 28338 RVA: 0x00169E1C File Offset: 0x0016801C
+	// Token: 0x06004248 RID: 16968 RVA: 0x0017277C File Offset: 0x0017097C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivityRecommendView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -41,7 +41,7 @@ public class ActivityRecommendView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06006EB3 RID: 28339 RVA: 0x00169E60 File Offset: 0x00168060
+	// Token: 0x06004249 RID: 16969 RVA: 0x001727C0 File Offset: 0x001709C0
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -50,7 +50,7 @@ public class ActivityRecommendView : UiViewBase
 		this.RecommendItemScrollView = new GenericLayout<ActivityRecommendItem, int>(base.GetVerticalLayout(2), new Func<ActivityRecommendItem>(this.InitItem), null, false, true);
 	}
 
-	// Token: 0x06006EB4 RID: 28340 RVA: 0x00169EC0 File Offset: 0x001680C0
+	// Token: 0x0600424A RID: 16970 RVA: 0x00172820 File Offset: 0x00170A20
 	protected override void OnBeforeShow()
 	{
 		base.OnBeforeShow();
@@ -73,7 +73,7 @@ public class ActivityRecommendView : UiViewBase
 		base.GetItem(3).SetUIActive(uiactive);
 	}
 
-	// Token: 0x06006EB5 RID: 28341 RVA: 0x00169F33 File Offset: 0x00168133
+	// Token: 0x0600424B RID: 16971 RVA: 0x00172893 File Offset: 0x00170A93
 	protected override void OnBeforeDestroy()
 	{
 		PopupCaptionItem captionItem = this.CaptionItem;
@@ -84,7 +84,7 @@ public class ActivityRecommendView : UiViewBase
 		this.CaptionItem = null;
 	}
 
-	// Token: 0x06006EB6 RID: 28342 RVA: 0x00169F4E File Offset: 0x0016814E
+	// Token: 0x0600424C RID: 16972 RVA: 0x001728AE File Offset: 0x00170AAE
 	[NullableContext(1)]
 	private ActivityRecommendItem InitItem()
 	{
@@ -93,22 +93,22 @@ public class ActivityRecommendView : UiViewBase
 		return activityRecommendItem;
 	}
 
-	// Token: 0x06006EB7 RID: 28343 RVA: 0x00169F61 File Offset: 0x00168161
+	// Token: 0x0600424D RID: 16973 RVA: 0x001728C1 File Offset: 0x00170AC1
 	private void OnBackButtonClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0400335A RID: 13146
+	// Token: 0x040033F3 RID: 13299
 	private ActivityRecommendViewModel Vm;
 
-	// Token: 0x0400335B RID: 13147
+	// Token: 0x040033F4 RID: 13300
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x0400335C RID: 13148
+	// Token: 0x040033F5 RID: 13301
 	private ActivityRecommendItem MainQuestItem;
 
-	// Token: 0x0400335D RID: 13149
+	// Token: 0x040033F6 RID: 13302
 	[Nullable(new byte[]
 	{
 		2,

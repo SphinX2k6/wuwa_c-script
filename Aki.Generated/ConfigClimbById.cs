@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000174 RID: 372
+	// Token: 0x02000184 RID: 388
 	public class ConfigClimbById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060008B9 RID: 2233 RVA: 0x0008AC30 File Offset: 0x00088E30
+		// Token: 0x06000919 RID: 2329 RVA: 0x0009078C File Offset: 0x0008E98C
 		static ConfigClimbById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigClimbById.CreateStaticDefaultValue), new Action(ConfigClimbById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060008BA RID: 2234 RVA: 0x0008AC50 File Offset: 0x00088E50
+		// Token: 0x0600091A RID: 2330 RVA: 0x000907AC File Offset: 0x0008E9AC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigClimbById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060008BB RID: 2235 RVA: 0x0008ACCF File Offset: 0x00088ECF
+		// Token: 0x0600091B RID: 2331 RVA: 0x0009082B File Offset: 0x0008EA2B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigClimbById.LogPair = null;
 			ConfigClimbById.HandleId = 0;
 		}
 
-		// Token: 0x060008BC RID: 2236 RVA: 0x0008ACDD File Offset: 0x00088EDD
+		// Token: 0x0600091C RID: 2332 RVA: 0x00090839 File Offset: 0x0008EA39
 		public static void Init()
 		{
 			ConfigClimbById.HandleId = ConfigCommon.InitDataStatement(ConfigClimbById.HandleId, "db_climb.db", "select BinData from `Climb` where Id=?");
 		}
 
-		// Token: 0x060008BD RID: 2237 RVA: 0x0008ACF8 File Offset: 0x00088EF8
+		// Token: 0x0600091D RID: 2333 RVA: 0x00090854 File Offset: 0x0008EA54
 		public static Climb? GetConfig(string p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigClimbById.HandleId, ConfigClimbById.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new Climb?(rootAsClimb);
 		}
 
-		// Token: 0x04000A10 RID: 2576
+		// Token: 0x04000A80 RID: 2688
 		private const string DB = "db_climb.db";
 
-		// Token: 0x04000A11 RID: 2577
+		// Token: 0x04000A81 RID: 2689
 		private const string FILE = "p.攀爬.xlsx";
 
-		// Token: 0x04000A12 RID: 2578
+		// Token: 0x04000A82 RID: 2690
 		private const string TABLE = "Climb";
 
-		// Token: 0x04000A13 RID: 2579
+		// Token: 0x04000A83 RID: 2691
 		private const string COMMAND = "select BinData from `Climb` where Id=?";
 
-		// Token: 0x04000A14 RID: 2580
+		// Token: 0x04000A84 RID: 2692
 		private const string KEY_PREFIX = "ClimbById";
 
-		// Token: 0x04000A15 RID: 2581
+		// Token: 0x04000A85 RID: 2693
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000A16 RID: 2582
+		// Token: 0x04000A86 RID: 2694
 		private static int HandleId;
 	}
 }

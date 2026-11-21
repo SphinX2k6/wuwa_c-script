@@ -10,7 +10,7 @@ using UnrealEngine;
 [Nullable(0)]
 public class AudioEventPool
 {
-	// Token: 0x0600008F RID: 143 RVA: 0x00005AE4 File Offset: 0x00003CE4
+	// Token: 0x0600008F RID: 143 RVA: 0x000057E0 File Offset: 0x000039E0
 	public void PreloadAudioEvent(string @event)
 	{
 		if (string.IsNullOrEmpty(@event))
@@ -41,7 +41,7 @@ public class AudioEventPool
 		}, 100, "js_undefined");
 	}
 
-	// Token: 0x06000090 RID: 144 RVA: 0x00005B62 File Offset: 0x00003D62
+	// Token: 0x06000090 RID: 144 RVA: 0x0000585E File Offset: 0x00003A5E
 	public void ReleaseAudioEvent(string @event)
 	{
 		if (string.IsNullOrEmpty(@event))
@@ -51,7 +51,7 @@ public class AudioEventPool
 		this.PreloadAudioEventMap.Remove(@event);
 	}
 
-	// Token: 0x06000091 RID: 145 RVA: 0x00005B7C File Offset: 0x00003D7C
+	// Token: 0x06000091 RID: 145 RVA: 0x00005878 File Offset: 0x00003A78
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -68,7 +68,7 @@ public class AudioEventPool
 		return <GetAudioEvent>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06000092 RID: 146 RVA: 0x00005BC8 File Offset: 0x00003DC8
+	// Token: 0x06000092 RID: 146 RVA: 0x000058C4 File Offset: 0x00003AC4
 	public void Tick(float delta)
 	{
 		if (!this.IsInCacheClear)

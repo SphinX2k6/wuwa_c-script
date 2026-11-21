@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002A13 RID: 10771
+// Token: 0x02001F8E RID: 8078
 public class SignalLineItem : SignalItemBase
 {
-	// Token: 0x060165BA RID: 91578 RVA: 0x005A8A8A File Offset: 0x005A6C8A
+	// Token: 0x06013FC1 RID: 81857 RVA: 0x005D3A62 File Offset: 0x005D1C62
 	public SignalLineItem(ESignalType type, float rootHalfWidth, int startDecisionSize, int endDecisionSize) : base(type, rootHalfWidth, startDecisionSize, endDecisionSize)
 	{
 	}
 
-	// Token: 0x060165BB RID: 91579 RVA: 0x005A8A97 File Offset: 0x005A6C97
+	// Token: 0x06013FC2 RID: 81858 RVA: 0x005D3A6F File Offset: 0x005D1C6F
 	[NullableContext(1)]
 	public void Init(UUIItem uiItem, float offsetX)
 	{
@@ -20,7 +20,7 @@ public class SignalLineItem : SignalItemBase
 		this.RootItem.SetAnchorOffsetX(offsetX);
 	}
 
-	// Token: 0x060165BC RID: 91580 RVA: 0x005A8AC3 File Offset: 0x005A6CC3
+	// Token: 0x06013FC3 RID: 81859 RVA: 0x005D3A9B File Offset: 0x005D1C9B
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,21 +30,21 @@ public class SignalLineItem : SignalItemBase
 		};
 	}
 
-	// Token: 0x060165BD RID: 91581 RVA: 0x005A8AFC File Offset: 0x005A6CFC
+	// Token: 0x06013FC4 RID: 81860 RVA: 0x005D3AD4 File Offset: 0x005D1CD4
 	protected override void OnStart()
 	{
 		this.GrayLine = base.GetSprite(0);
 		this.HighlightLine = base.GetSprite(1);
 	}
 
-	// Token: 0x060165BE RID: 91582 RVA: 0x005A8B18 File Offset: 0x005A6D18
+	// Token: 0x06013FC5 RID: 81861 RVA: 0x005D3AF0 File Offset: 0x005D1CF0
 	public void AddWidth(float width)
 	{
 		this.Width += width;
 		this.RootItem.SetWidth(this.Width);
 	}
 
-	// Token: 0x060165BF RID: 91583 RVA: 0x005A8B39 File Offset: 0x005A6D39
+	// Token: 0x06013FC6 RID: 81862 RVA: 0x005D3B11 File Offset: 0x005D1D11
 	protected override void OnReset()
 	{
 		this.GrayLine.SetUIActive(true);
@@ -52,7 +52,7 @@ public class SignalLineItem : SignalItemBase
 		this.HighlightLine.SetUIActive(true);
 	}
 
-	// Token: 0x060165C0 RID: 91584 RVA: 0x005A8B64 File Offset: 0x005A6D64
+	// Token: 0x06013FC7 RID: 81863 RVA: 0x005D3B3C File Offset: 0x005D1D3C
 	public override void InitByGameplayType(ESignalGameplayType type)
 	{
 		base.InitByGameplayType(type);
@@ -66,7 +66,7 @@ public class SignalLineItem : SignalItemBase
 		base.Reset();
 	}
 
-	// Token: 0x060165C1 RID: 91585 RVA: 0x005A8BC0 File Offset: 0x005A6DC0
+	// Token: 0x06013FC8 RID: 81864 RVA: 0x005D3B98 File Offset: 0x005D1D98
 	protected override bool OnUpdate()
 	{
 		if (!base.OnUpdate())
@@ -91,28 +91,28 @@ public class SignalLineItem : SignalItemBase
 		return true;
 	}
 
-	// Token: 0x060165C2 RID: 91586 RVA: 0x005A8C30 File Offset: 0x005A6E30
+	// Token: 0x06013FC9 RID: 81865 RVA: 0x005D3C08 File Offset: 0x005D1E08
 	public override float GetProgress()
 	{
 		float num = (float)(-(float)this.DecisionShowSize) / 2f;
 		return MathCommon.Clamp((this.CurrentRelativeX - num) / this.RootItem.GetWidth(), 0f, 1f);
 	}
 
-	// Token: 0x0400A66D RID: 42605
+	// Token: 0x0400AA57 RID: 43607
 	[Nullable(2)]
 	private UUISprite GrayLine;
 
-	// Token: 0x0400A66E RID: 42606
+	// Token: 0x0400AA58 RID: 43608
 	[Nullable(2)]
 	private UUISprite HighlightLine;
 
-	// Token: 0x02009052 RID: 36946
+	// Token: 0x02008299 RID: 33433
 	private static class EChildComponent
 	{
-		// Token: 0x0402EBB7 RID: 191415
+		// Token: 0x0402A2AF RID: 172719
 		public const int GrayLine = 0;
 
-		// Token: 0x0402EBB8 RID: 191416
+		// Token: 0x0402A2B0 RID: 172720
 		public const int HighlightLine = 1;
 	}
 }

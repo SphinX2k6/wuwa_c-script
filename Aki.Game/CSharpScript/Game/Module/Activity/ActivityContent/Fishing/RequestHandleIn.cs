@@ -5,43 +5,43 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065F2 RID: 26098
+	// Token: 0x02005570 RID: 21872
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RequestHandleIn : IRequestHandleIn
 	{
-		// Token: 0x170095B4 RID: 38324
-		// (get) Token: 0x060416B8 RID: 267960 RVA: 0x00FD9939 File Offset: 0x00FD7B39
-		// (set) Token: 0x060416B9 RID: 267961 RVA: 0x00FD9941 File Offset: 0x00FD7B41
+		// Token: 0x17006916 RID: 26902
+		// (get) Token: 0x0603637D RID: 222077 RVA: 0x00F209B9 File Offset: 0x00F1EBB9
+		// (set) Token: 0x0603637E RID: 222078 RVA: 0x00F209C1 File Offset: 0x00F1EBC1
 		public int InteractId { get; set; }
 
-		// Token: 0x170095B5 RID: 38325
-		// (get) Token: 0x060416BA RID: 267962 RVA: 0x00FD994A File Offset: 0x00FD7B4A
-		// (set) Token: 0x060416BB RID: 267963 RVA: 0x00FD9952 File Offset: 0x00FD7B52
+		// Token: 0x17006917 RID: 26903
+		// (get) Token: 0x0603637F RID: 222079 RVA: 0x00F209CA File Offset: 0x00F1EBCA
+		// (set) Token: 0x06036380 RID: 222080 RVA: 0x00F209D2 File Offset: 0x00F1EBD2
 		public List<FishingItemInfo> LeftDataList { get; set; }
 
-		// Token: 0x170095B6 RID: 38326
-		// (get) Token: 0x060416BC RID: 267964 RVA: 0x00FD995B File Offset: 0x00FD7B5B
-		// (set) Token: 0x060416BD RID: 267965 RVA: 0x00FD9963 File Offset: 0x00FD7B63
+		// Token: 0x17006918 RID: 26904
+		// (get) Token: 0x06036381 RID: 222081 RVA: 0x00F209DB File Offset: 0x00F1EBDB
+		// (set) Token: 0x06036382 RID: 222082 RVA: 0x00F209E3 File Offset: 0x00F1EBE3
 		public List<FishingItemInfo> RightDataList { get; set; }
 
-		// Token: 0x170095B7 RID: 38327
-		// (get) Token: 0x060416BE RID: 267966 RVA: 0x00FD996C File Offset: 0x00FD7B6C
-		// (set) Token: 0x060416BF RID: 267967 RVA: 0x00FD9974 File Offset: 0x00FD7B74
+		// Token: 0x17006919 RID: 26905
+		// (get) Token: 0x06036383 RID: 222083 RVA: 0x00F209EC File Offset: 0x00F1EBEC
+		// (set) Token: 0x06036384 RID: 222084 RVA: 0x00F209F4 File Offset: 0x00F1EBF4
 		public int? RemoveIncId { get; set; }
 
-		// Token: 0x170095B8 RID: 38328
-		// (get) Token: 0x060416C0 RID: 267968 RVA: 0x00FD997D File Offset: 0x00FD7B7D
-		// (set) Token: 0x060416C1 RID: 267969 RVA: 0x00FD9985 File Offset: 0x00FD7B85
+		// Token: 0x1700691A RID: 26906
+		// (get) Token: 0x06036385 RID: 222085 RVA: 0x00F209FD File Offset: 0x00F1EBFD
+		// (set) Token: 0x06036386 RID: 222086 RVA: 0x00F20A05 File Offset: 0x00F1EC05
 		public int ActionIncId { get; set; }
 
-		// Token: 0x170095B9 RID: 38329
-		// (get) Token: 0x060416C2 RID: 267970 RVA: 0x00FD998E File Offset: 0x00FD7B8E
-		// (set) Token: 0x060416C3 RID: 267971 RVA: 0x00FD9996 File Offset: 0x00FD7B96
+		// Token: 0x1700691B RID: 26907
+		// (get) Token: 0x06036387 RID: 222087 RVA: 0x00F20A0E File Offset: 0x00F1EC0E
+		// (set) Token: 0x06036388 RID: 222088 RVA: 0x00F20A16 File Offset: 0x00F1EC16
 		[Nullable(2)]
 		public Action<bool, bool> Callback { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x060416C4 RID: 267972 RVA: 0x00FD999F File Offset: 0x00FD7B9F
+		// Token: 0x06036389 RID: 222089 RVA: 0x00F20A1F File Offset: 0x00F1EC1F
 		public RequestHandleIn()
 		{
 			this.LeftDataList = new List<FishingItemInfo>();

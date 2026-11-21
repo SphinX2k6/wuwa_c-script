@@ -7,14 +7,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter.StateMachine
 {
-	// Token: 0x0200436D RID: 17261
+	// Token: 0x0200338E RID: 13198
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/StateMachine/BP_SM_BindStateDeathMontageByTag.BP_SM_BindStateDeathMontageByTag_C")]
 	[UnrealStructLayout(80, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 80)]
 	public class BP_SM_BindStateDeathMontageByTag_C : UASMBindState, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602CBC8 RID: 183240 RVA: 0x00A27352 File Offset: 0x00A25552
+		// Token: 0x060217E6 RID: 137190 RVA: 0x009621A6 File Offset: 0x009603A6
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_SM_BindStateDeathMontageByTag_C._ClassPtr == IntPtr.Zero)
@@ -24,19 +24,19 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter.StateMachine
 			return BP_SM_BindStateDeathMontageByTag_C._ClassPtr;
 		}
 
-		// Token: 0x0602CBC9 RID: 183241 RVA: 0x00A27378 File Offset: 0x00A25578
+		// Token: 0x060217E7 RID: 137191 RVA: 0x009621CC File Offset: 0x009603CC
 		public BP_SM_BindStateDeathMontageByTag_C() : this(BuiltinUtils.AllocNativeUObject(BP_SM_BindStateDeathMontageByTag_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602CBCA RID: 183242 RVA: 0x00A273A0 File Offset: 0x00A255A0
+		// Token: 0x060217E8 RID: 137192 RVA: 0x009621F4 File Offset: 0x009603F4
 		public BP_SM_BindStateDeathMontageByTag_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_SM_BindStateDeathMontageByTag_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170070A2 RID: 28834
-		// (get) Token: 0x0602CBCB RID: 183243 RVA: 0x00A273D4 File Offset: 0x00A255D4
-		// (set) Token: 0x0602CBCC RID: 183244 RVA: 0x00A2740D File Offset: 0x00A2560D
+		// Token: 0x170044A4 RID: 17572
+		// (get) Token: 0x060217E9 RID: 137193 RVA: 0x00962228 File Offset: 0x00960428
+		// (set) Token: 0x060217EA RID: 137194 RVA: 0x00962261 File Offset: 0x00960461
 		public TArray<FGameplayTag> MontageTags
 		{
 			get
@@ -45,7 +45,7 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter.StateMachine
 				TArray<FGameplayTag> result;
 				if ((result = this._MontageTags) == null)
 				{
-					result = (this._MontageTags = new TArray<FGameplayTag>(base.NativePtr + (IntPtr)BP_SM_BindStateDeathMontageByTag_C.__PropertyOffset_0, this));
+					result = (this._MontageTags = new TArray<FGameplayTag>(base.NativePtr + (IntPtr)BP_SM_BindStateDeathMontageByTag_C.__PropertyOffset_MontageTags, this));
 				}
 				return result;
 			}
@@ -55,9 +55,9 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter.StateMachine
 			}
 		}
 
-		// Token: 0x170070A3 RID: 28835
-		// (get) Token: 0x0602CBCD RID: 183245 RVA: 0x00A2741C File Offset: 0x00A2561C
-		// (set) Token: 0x0602CBCE RID: 183246 RVA: 0x00A27455 File Offset: 0x00A25655
+		// Token: 0x170044A5 RID: 17573
+		// (get) Token: 0x060217EB RID: 137195 RVA: 0x00962270 File Offset: 0x00960470
+		// (set) Token: 0x060217EC RID: 137196 RVA: 0x009622A9 File Offset: 0x009604A9
 		public TArray<string> TagMontageNames
 		{
 			get
@@ -66,7 +66,7 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter.StateMachine
 				TArray<string> result;
 				if ((result = this._TagMontageNames) == null)
 				{
-					result = (this._TagMontageNames = new TArray<string>(base.NativePtr + (IntPtr)BP_SM_BindStateDeathMontageByTag_C.__PropertyOffset_1, this));
+					result = (this._TagMontageNames = new TArray<string>(base.NativePtr + (IntPtr)BP_SM_BindStateDeathMontageByTag_C.__PropertyOffset_TagMontageNames, this));
 				}
 				return result;
 			}
@@ -76,31 +76,31 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter.StateMachine
 			}
 		}
 
-		// Token: 0x0602CBCF RID: 183247 RVA: 0x00A27463 File Offset: 0x00A25663
+		// Token: 0x060217ED RID: 137197 RVA: 0x009622B7 File Offset: 0x009604B7
 		protected BP_SM_BindStateDeathMontageByTag_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04017979 RID: 96633
+		// Token: 0x040124FA RID: 75002
 		public new const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/StateMachine/BP_SM_BindStateDeathMontageByTag.BP_SM_BindStateDeathMontageByTag_C";
 
-		// Token: 0x0401797A RID: 96634
+		// Token: 0x040124FB RID: 75003
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401797B RID: 96635
+		// Token: 0x040124FC RID: 75004
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401797C RID: 96636
-		internal static int __PropertyOffset_0;
+		// Token: 0x040124FD RID: 75005
+		internal static int __PropertyOffset_MontageTags;
 
-		// Token: 0x0401797D RID: 96637
+		// Token: 0x040124FE RID: 75006
 		[Nullable(2)]
 		private TArray<FGameplayTag> _MontageTags;
 
-		// Token: 0x0401797E RID: 96638
-		internal static int __PropertyOffset_1;
+		// Token: 0x040124FF RID: 75007
+		internal static int __PropertyOffset_TagMontageNames;
 
-		// Token: 0x0401797F RID: 96639
+		// Token: 0x04012500 RID: 75008
 		[Nullable(new byte[]
 		{
 			2,

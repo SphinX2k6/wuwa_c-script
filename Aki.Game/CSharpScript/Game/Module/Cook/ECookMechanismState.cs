@@ -3,30 +3,30 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Cook
 {
-	// Token: 0x02005AF6 RID: 23286
+	// Token: 0x02004AD7 RID: 19159
 	[NullableContext(1)]
 	[Nullable(0)]
 	public readonly struct ECookMechanismState : IEquatable<ECookMechanismState>
 	{
-		// Token: 0x0603AF25 RID: 241445 RVA: 0x00E0E17E File Offset: 0x00E0C37E
+		// Token: 0x0602FE97 RID: 196247 RVA: 0x00D5EE72 File Offset: 0x00D5D072
 		private ECookMechanismState(string value)
 		{
 			this._Value = value;
 		}
 
-		// Token: 0x0603AF26 RID: 241446 RVA: 0x00E0E187 File Offset: 0x00E0C387
+		// Token: 0x0602FE98 RID: 196248 RVA: 0x00D5EE7B File Offset: 0x00D5D07B
 		public override string ToString()
 		{
 			return this._Value;
 		}
 
-		// Token: 0x0603AF27 RID: 241447 RVA: 0x00E0E18F File Offset: 0x00E0C38F
+		// Token: 0x0602FE99 RID: 196249 RVA: 0x00D5EE83 File Offset: 0x00D5D083
 		public bool Equals(ECookMechanismState other)
 		{
 			return this._Value == other._Value;
 		}
 
-		// Token: 0x0603AF28 RID: 241448 RVA: 0x00E0E1A4 File Offset: 0x00E0C3A4
+		// Token: 0x0602FE9A RID: 196250 RVA: 0x00D5EE98 File Offset: 0x00D5D098
 		public override bool Equals(object obj)
 		{
 			if (obj is ECookMechanismState)
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Cook
 			return false;
 		}
 
-		// Token: 0x0603AF29 RID: 241449 RVA: 0x00E0E1C9 File Offset: 0x00E0C3C9
+		// Token: 0x0602FE9B RID: 196251 RVA: 0x00D5EEBD File Offset: 0x00D5D0BD
 		public override int GetHashCode()
 		{
 			string value = this._Value;
@@ -48,28 +48,28 @@ namespace CSharpScript.Game.Module.Cook
 			return value.GetHashCode();
 		}
 
-		// Token: 0x0603AF2A RID: 241450 RVA: 0x00E0E1DC File Offset: 0x00E0C3DC
+		// Token: 0x0602FE9C RID: 196252 RVA: 0x00D5EED0 File Offset: 0x00D5D0D0
 		public static bool operator ==(ECookMechanismState left, ECookMechanismState right)
 		{
 			return left.Equals(right);
 		}
 
-		// Token: 0x0603AF2B RID: 241451 RVA: 0x00E0E1E6 File Offset: 0x00E0C3E6
+		// Token: 0x0602FE9D RID: 196253 RVA: 0x00D5EEDA File Offset: 0x00D5D0DA
 		public static bool operator !=(ECookMechanismState left, ECookMechanismState right)
 		{
 			return !left.Equals(right);
 		}
 
-		// Token: 0x0401EC43 RID: 126019
+		// Token: 0x040196FF RID: 104191
 		private readonly string _Value;
 
-		// Token: 0x0401EC44 RID: 126020
+		// Token: 0x04019700 RID: 104192
 		public static readonly ECookMechanismState CookDone = new ECookMechanismState("finishcook");
 
-		// Token: 0x0401EC45 RID: 126021
+		// Token: 0x04019701 RID: 104193
 		public static readonly ECookMechanismState CloseUi = new ECookMechanismState("endcook");
 
-		// Token: 0x0401EC46 RID: 126022
+		// Token: 0x04019702 RID: 104194
 		public static readonly ECookMechanismState EnterUi = new ECookMechanismState("opencook");
 	}
 }

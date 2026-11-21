@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A91 RID: 19089
+	// Token: 0x02003A39 RID: 14905
 	public class TrapDefenseBuildingDevelopNormalDragItem : UiPanelBase
 	{
-		// Token: 0x060317AC RID: 202668 RVA: 0x00B77E40 File Offset: 0x00B76040
+		// Token: 0x0602653C RID: 156988 RVA: 0x00ABBDF4 File Offset: 0x00AB9FF4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060317AD RID: 202669 RVA: 0x00B77ECC File Offset: 0x00B760CC
+		// Token: 0x0602653D RID: 156989 RVA: 0x00ABBE80 File Offset: 0x00ABA080
 		[NullableContext(1)]
 		public void UpdateItem(TrapDefenseBuildingDevelopItemData data)
 		{
@@ -39,23 +39,23 @@ namespace CSharpScript.Game.Module.TrapDefense
 			text.SetUIActive(false);
 		}
 
-		// Token: 0x060317AE RID: 202670 RVA: 0x00B77F08 File Offset: 0x00B76108
+		// Token: 0x0602653E RID: 156990 RVA: 0x00ABBEBC File Offset: 0x00ABA0BC
 		[NullableContext(1)]
 		public UUIDraggableComponent GetDraggableComp()
 		{
 			return base.GetDraggable(1);
 		}
 
-		// Token: 0x0200ABE3 RID: 44003
+		// Token: 0x02009603 RID: 38403
 		private class ENormalDrag
 		{
-			// Token: 0x040343C1 RID: 213953
+			// Token: 0x0402ED72 RID: 191858
 			public const int Icon = 0;
 
-			// Token: 0x040343C2 RID: 213954
+			// Token: 0x0402ED73 RID: 191859
 			public const int Draggable = 1;
 
-			// Token: 0x040343C3 RID: 213955
+			// Token: 0x0402ED74 RID: 191860
 			public const int Cost = 2;
 		}
 	}

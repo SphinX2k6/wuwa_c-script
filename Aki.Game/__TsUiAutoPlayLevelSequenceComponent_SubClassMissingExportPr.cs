@@ -3,16 +3,16 @@ using System.Runtime.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Utils;
 
-// Token: 0x020038D3 RID: 14547
+// Token: 0x02002E4C RID: 11852
 public class __TsUiAutoPlayLevelSequenceComponent_SubClassMissingExportProxy : __TsUiAutoPlayLevelSequenceComponent_InheritProxy
 {
-	// Token: 0x0601EAFC RID: 125692 RVA: 0x0089764C File Offset: 0x0089584C
+	// Token: 0x0601C7B5 RID: 116661 RVA: 0x008BBB68 File Offset: 0x008B9D68
 	[NullableContext(1)]
 	protected __TsUiAutoPlayLevelSequenceComponent_SubClassMissingExportProxy(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsUiAutoPlayLevelSequenceComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601EAFD RID: 125693 RVA: 0x0089767F File Offset: 0x0089587F
+	// Token: 0x0601C7B6 RID: 116662 RVA: 0x008BBB9B File Offset: 0x008B9D9B
 	protected __TsUiAutoPlayLevelSequenceComponent_SubClassMissingExportProxy(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}

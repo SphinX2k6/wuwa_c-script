@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C2E RID: 7214
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001E25 RID: 7717
 	public class IMotorSpeedUpConfig : IMotorParamsChangeConfig
 	{
-		// Token: 0x06009AC7 RID: 39623 RVA: 0x00163D3C File Offset: 0x00161F3C
+		// Token: 0x0600A41F RID: 42015 RVA: 0x0017707C File Offset: 0x0017527C
 		private IMotorSpeedUpConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009AC8 RID: 39624 RVA: 0x00163D74 File Offset: 0x00161F74
+		// Token: 0x0600A420 RID: 42016 RVA: 0x001770B4 File Offset: 0x001752B4
 		public static IMotorSpeedUpConfig Create([Nullable(2)] IMotorSpeedUpConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009AC9 RID: 39625 RVA: 0x00163D87 File Offset: 0x00161F87
+		// Token: 0x0600A421 RID: 42017 RVA: 0x001770C7 File Offset: 0x001752C7
 		public static IMotorSpeedUpConfig CreateFromSetValue([Nullable(2)] IMotorSpeedUpConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009ACA RID: 39626 RVA: 0x00163D9A File Offset: 0x00161F9A
+		// Token: 0x0600A422 RID: 42018 RVA: 0x001770DA File Offset: 0x001752DA
 		public new IMotorSpeedUpConfig_SetValue ToSetValue()
 		{
 			return new IMotorSpeedUpConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003075 RID: 12405
-		// (get) Token: 0x06009ACB RID: 39627 RVA: 0x00163DB9 File Offset: 0x00161FB9
-		// (set) Token: 0x06009ACC RID: 39628 RVA: 0x00163DE4 File Offset: 0x00161FE4
+		// Token: 0x170032E6 RID: 13030
+		// (get) Token: 0x0600A423 RID: 42019 RVA: 0x001770F9 File Offset: 0x001752F9
+		// (set) Token: 0x0600A424 RID: 42020 RVA: 0x00177124 File Offset: 0x00175324
 		public override EMotorParamsChangeType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003076 RID: 12406
-		// (get) Token: 0x06009ACD RID: 39629 RVA: 0x00163DF2 File Offset: 0x00161FF2
-		// (set) Token: 0x06009ACE RID: 39630 RVA: 0x00163E1D File Offset: 0x0016201D
+		// Token: 0x170032E7 RID: 13031
+		// (get) Token: 0x0600A425 RID: 42021 RVA: 0x00177132 File Offset: 0x00175332
+		// (set) Token: 0x0600A426 RID: 42022 RVA: 0x0017715D File Offset: 0x0017535D
 		public virtual EMotorSpeedUpConfigTag SpeedUpTagId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005E18 RID: 24088
+		// Token: 0x0400634F RID: 25423
 		[Nullable(2)]
 		protected new IMotorSpeedUpConfig FbInstance;
 
-		// Token: 0x04005E19 RID: 24089
+		// Token: 0x04006350 RID: 25424
 		[Nullable(2)]
 		protected new IMotorSpeedUpConfig_SetValue PocoInterface;
 	}

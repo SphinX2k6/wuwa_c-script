@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 {
-	// Token: 0x02006324 RID: 25380
+	// Token: 0x020052A2 RID: 21154
 	public class PinballPlotSelectionItem : UiPanelBase
 	{
-		// Token: 0x0603FD77 RID: 261495 RVA: 0x00F71C58 File Offset: 0x00F6FE58
+		// Token: 0x06034A38 RID: 215608 RVA: 0x00EB8BB4 File Offset: 0x00EB6DB4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603FD78 RID: 261496 RVA: 0x00F71D00 File Offset: 0x00F6FF00
+		// Token: 0x06034A39 RID: 215609 RVA: 0x00EB8C5C File Offset: 0x00EB6E5C
 		[NullableContext(1)]
 		public void Refresh(IPinballPlotSelectionItemData data)
 		{
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			base.GetText(1).SetText(newText, true);
 		}
 
-		// Token: 0x0603FD79 RID: 261497 RVA: 0x00F71D33 File Offset: 0x00F6FF33
+		// Token: 0x06034A3A RID: 215610 RVA: 0x00EB8C8F File Offset: 0x00EB6E8F
 		private void OnOptionButtonClick()
 		{
 			if (this.Data == null)
@@ -50,16 +50,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			this.Data.OptionDelegate(this.Data.OptionIndex);
 		}
 
-		// Token: 0x040214FC RID: 136444
+		// Token: 0x0401BE2B RID: 114219
 		[Nullable(2)]
 		private IPinballPlotSelectionItemData Data;
 
-		// Token: 0x0200C51B RID: 50459
+		// Token: 0x0200AF02 RID: 44802
 		private enum EComponent
 		{
-			// Token: 0x0403B7C2 RID: 243650
+			// Token: 0x04036124 RID: 221476
 			OptionButton,
-			// Token: 0x0403B7C3 RID: 243651
+			// Token: 0x04036125 RID: 221477
 			OptionTitleText
 		}
 	}

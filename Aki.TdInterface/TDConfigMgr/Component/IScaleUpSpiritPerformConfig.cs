@@ -4,13 +4,13 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000694 RID: 1684
+	// Token: 0x02000735 RID: 1845
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IScaleUpSpiritPerformConfig
 	{
-		// Token: 0x06002412 RID: 9234 RVA: 0x00061FB8 File Offset: 0x000601B8
-		[NullableContext(1)]
+		// Token: 0x0600272E RID: 10030 RVA: 0x00068F80 File Offset: 0x00067180
+		[NullableContext(0)]
 		private IScaleUpSpiritPerformConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002413 RID: 9235 RVA: 0x00061FF0 File Offset: 0x000601F0
-		[NullableContext(1)]
+		// Token: 0x0600272F RID: 10031 RVA: 0x00068FB8 File Offset: 0x000671B8
+		[NullableContext(0)]
 		public static IScaleUpSpiritPerformConfig Create([Nullable(2)] IScaleUpSpiritPerformConfig instance)
 		{
 			if (instance == null)
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002414 RID: 9236 RVA: 0x00062003 File Offset: 0x00060203
-		[NullableContext(1)]
+		// Token: 0x06002730 RID: 10032 RVA: 0x00068FCB File Offset: 0x000671CB
+		[NullableContext(0)]
 		public static IScaleUpSpiritPerformConfig CreateFromSetValue([Nullable(2)] IScaleUpSpiritPerformConfig_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +53,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002415 RID: 9237 RVA: 0x00062016 File Offset: 0x00060216
-		[NullableContext(1)]
+		// Token: 0x06002731 RID: 10033 RVA: 0x00068FDE File Offset: 0x000671DE
+		[NullableContext(0)]
 		public IScaleUpSpiritPerformConfig_SetValue ToSetValue()
 		{
 			return new IScaleUpSpiritPerformConfig_SetValue
@@ -66,9 +66,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700098A RID: 2442
-		// (get) Token: 0x06002416 RID: 9238 RVA: 0x00062050 File Offset: 0x00060250
-		// (set) Token: 0x06002417 RID: 9239 RVA: 0x0006208A File Offset: 0x0006028A
+		// Token: 0x17000A46 RID: 2630
+		// (get) Token: 0x06002732 RID: 10034 RVA: 0x00069018 File Offset: 0x00067218
+		// (set) Token: 0x06002733 RID: 10035 RVA: 0x00069052 File Offset: 0x00067252
 		public virtual bool? IsInitHide
 		{
 			get
@@ -90,9 +90,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700098B RID: 2443
-		// (get) Token: 0x06002418 RID: 9240 RVA: 0x00062098 File Offset: 0x00060298
-		// (set) Token: 0x06002419 RID: 9241 RVA: 0x000620BF File Offset: 0x000602BF
+		// Token: 0x17000A47 RID: 2631
+		// (get) Token: 0x06002734 RID: 10036 RVA: 0x00069060 File Offset: 0x00067260
+		// (set) Token: 0x06002735 RID: 10037 RVA: 0x00069087 File Offset: 0x00067287
 		public virtual string AppearEffectDa
 		{
 			get
@@ -114,9 +114,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700098C RID: 2444
-		// (get) Token: 0x0600241A RID: 9242 RVA: 0x000620CD File Offset: 0x000602CD
-		// (set) Token: 0x0600241B RID: 9243 RVA: 0x000620F4 File Offset: 0x000602F4
+		// Token: 0x17000A48 RID: 2632
+		// (get) Token: 0x06002736 RID: 10038 RVA: 0x00069095 File Offset: 0x00067295
+		// (set) Token: 0x06002737 RID: 10039 RVA: 0x000690BC File Offset: 0x000672BC
 		public virtual string ScaleUpEffectDa
 		{
 			get
@@ -138,9 +138,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700098D RID: 2445
-		// (get) Token: 0x0600241C RID: 9244 RVA: 0x00062104 File Offset: 0x00060304
-		// (set) Token: 0x0600241D RID: 9245 RVA: 0x0006213E File Offset: 0x0006033E
+		// Token: 0x17000A49 RID: 2633
+		// (get) Token: 0x06002738 RID: 10040 RVA: 0x000690CC File Offset: 0x000672CC
+		// (set) Token: 0x06002739 RID: 10041 RVA: 0x00069106 File Offset: 0x00067306
 		public virtual int? ScaleUpPerformTag
 		{
 			get
@@ -162,10 +162,10 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040018CE RID: 6350
+		// Token: 0x04001ACB RID: 6859
 		protected IScaleUpSpiritPerformConfig FbInstance;
 
-		// Token: 0x040018CF RID: 6351
+		// Token: 0x04001ACC RID: 6860
 		protected IScaleUpSpiritPerformConfig_SetValue PocoInterface;
 	}
 }

@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020049EE RID: 18926
+	// Token: 0x02003968 RID: 14696
 	public class HotKeyTypeCreator
 	{
-		// Token: 0x06031258 RID: 201304 RVA: 0x00B66814 File Offset: 0x00B64A14
+		// Token: 0x06025D8E RID: 155022 RVA: 0x00AA17D0 File Offset: 0x00A9F9D0
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{

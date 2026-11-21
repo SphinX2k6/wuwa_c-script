@@ -4,19 +4,19 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.Reward;
 
-// Token: 0x02001AF6 RID: 6902
+// Token: 0x02000FB5 RID: 4021
 public class FloroRanchMilestoneData
 {
-	// Token: 0x0600CCE4 RID: 52452 RVA: 0x002EC687 File Offset: 0x002EA887
+	// Token: 0x0600A0F5 RID: 41205 RVA: 0x002F7773 File Offset: 0x002F5973
 	public FloroRanchMilestoneData(FloroRanchReward config)
 	{
 		this.Config = config;
 		this.RewardList = CSharpScript.Game.Module.Reward.RewardConfig.Instance.GetDropPackagePreviewItemList(config.DropId);
 	}
 
-	// Token: 0x170010EB RID: 4331
-	// (get) Token: 0x0600CCE6 RID: 52454 RVA: 0x002EC6C1 File Offset: 0x002EA8C1
-	// (set) Token: 0x0600CCE5 RID: 52453 RVA: 0x002EC6B8 File Offset: 0x002EA8B8
+	// Token: 0x17001110 RID: 4368
+	// (get) Token: 0x0600A0F7 RID: 41207 RVA: 0x002F77AD File Offset: 0x002F59AD
+	// (set) Token: 0x0600A0F6 RID: 41206 RVA: 0x002F77A4 File Offset: 0x002F59A4
 	public bool IsReceive
 	{
 		get
@@ -29,9 +29,9 @@ public class FloroRanchMilestoneData
 		}
 	}
 
-	// Token: 0x170010EC RID: 4332
-	// (get) Token: 0x0600CCE8 RID: 52456 RVA: 0x002EC6D2 File Offset: 0x002EA8D2
-	// (set) Token: 0x0600CCE7 RID: 52455 RVA: 0x002EC6C9 File Offset: 0x002EA8C9
+	// Token: 0x17001111 RID: 4369
+	// (get) Token: 0x0600A0F9 RID: 41209 RVA: 0x002F77BE File Offset: 0x002F59BE
+	// (set) Token: 0x0600A0F8 RID: 41208 RVA: 0x002F77B5 File Offset: 0x002F59B5
 	public bool IsFinished
 	{
 		get
@@ -44,8 +44,8 @@ public class FloroRanchMilestoneData
 		}
 	}
 
-	// Token: 0x170010ED RID: 4333
-	// (get) Token: 0x0600CCE9 RID: 52457 RVA: 0x002EC6DA File Offset: 0x002EA8DA
+	// Token: 0x17001112 RID: 4370
+	// (get) Token: 0x0600A0FA RID: 41210 RVA: 0x002F77C6 File Offset: 0x002F59C6
 	public bool IsReceivable
 	{
 		get
@@ -54,8 +54,8 @@ public class FloroRanchMilestoneData
 		}
 	}
 
-	// Token: 0x170010EE RID: 4334
-	// (get) Token: 0x0600CCEA RID: 52458 RVA: 0x002EC6F0 File Offset: 0x002EA8F0
+	// Token: 0x17001113 RID: 4371
+	// (get) Token: 0x0600A0FB RID: 41211 RVA: 0x002F77DC File Offset: 0x002F59DC
 	public int Id
 	{
 		get
@@ -64,8 +64,8 @@ public class FloroRanchMilestoneData
 		}
 	}
 
-	// Token: 0x170010EF RID: 4335
-	// (get) Token: 0x0600CCEB RID: 52459 RVA: 0x002EC70C File Offset: 0x002EA90C
+	// Token: 0x17001114 RID: 4372
+	// (get) Token: 0x0600A0FC RID: 41212 RVA: 0x002F77F8 File Offset: 0x002F59F8
 	public int Goal
 	{
 		get
@@ -74,16 +74,16 @@ public class FloroRanchMilestoneData
 		}
 	}
 
-	// Token: 0x04005E0C RID: 24076
+	// Token: 0x04005EDB RID: 24283
 	private readonly FloroRanchReward Config;
 
-	// Token: 0x04005E0D RID: 24077
+	// Token: 0x04005EDC RID: 24284
 	private bool IsReceiveInternal;
 
-	// Token: 0x04005E0E RID: 24078
+	// Token: 0x04005EDD RID: 24285
 	private bool IsFinishedInterval;
 
-	// Token: 0x04005E0F RID: 24079
+	// Token: 0x04005EDE RID: 24286
 	[Nullable(1)]
 	public List<TItem> RewardList = new List<TItem>();
 }

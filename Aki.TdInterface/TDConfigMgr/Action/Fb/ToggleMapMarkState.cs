@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200295F RID: 10591
+	// Token: 0x02002C44 RID: 11332
 	public class ToggleMapMarkState : ActionParams
 	{
-		// Token: 0x0600EAD0 RID: 60112 RVA: 0x00226124 File Offset: 0x00224324
-		[NullableContext(1)]
+		// Token: 0x0600F946 RID: 63814 RVA: 0x002437DC File Offset: 0x002419DC
 		public static ToggleMapMarkState Create(IToggleMapMarkState? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170049D4 RID: 18900
-		// (get) Token: 0x0600EAD1 RID: 60113 RVA: 0x00226143 File Offset: 0x00224343
+		// Token: 0x17004D6C RID: 19820
+		// (get) Token: 0x0600F947 RID: 63815 RVA: 0x002437FB File Offset: 0x002419FB
 		public virtual EMapMarkState Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008167 RID: 33127
+		// Token: 0x04008848 RID: 34888
 		private IToggleMapMarkState Instance;
 	}
 }

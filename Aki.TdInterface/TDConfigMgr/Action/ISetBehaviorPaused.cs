@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E1A RID: 7706
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200204D RID: 8269
 	public class ISetBehaviorPaused
 	{
-		// Token: 0x0600A4D7 RID: 42199 RVA: 0x00175B14 File Offset: 0x00173D14
+		// Token: 0x0600AF7F RID: 44927 RVA: 0x0018B51C File Offset: 0x0018971C
 		private ISetBehaviorPaused_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A4D8 RID: 42200 RVA: 0x00175B4C File Offset: 0x00173D4C
+		// Token: 0x0600AF80 RID: 44928 RVA: 0x0018B554 File Offset: 0x00189754
 		public static ISetBehaviorPaused Create([Nullable(2)] ISetBehaviorPaused instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A4D9 RID: 42201 RVA: 0x00175B5F File Offset: 0x00173D5F
+		// Token: 0x0600AF81 RID: 44929 RVA: 0x0018B567 File Offset: 0x00189767
 		public static ISetBehaviorPaused CreateFromSetValue([Nullable(2)] ISetBehaviorPaused_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A4DA RID: 42202 RVA: 0x00175B72 File Offset: 0x00173D72
+		// Token: 0x0600AF82 RID: 44930 RVA: 0x0018B57A File Offset: 0x0018977A
 		public ISetBehaviorPaused_SetValue ToSetValue()
 		{
 			return new ISetBehaviorPaused_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700329B RID: 12955
-		// (get) Token: 0x0600A4DB RID: 42203 RVA: 0x00175B85 File Offset: 0x00173D85
-		// (set) Token: 0x0600A4DC RID: 42204 RVA: 0x00175BB0 File Offset: 0x00173DB0
+		// Token: 0x1700355A RID: 13658
+		// (get) Token: 0x0600AF83 RID: 44931 RVA: 0x0018B58D File Offset: 0x0018978D
+		// (set) Token: 0x0600AF84 RID: 44932 RVA: 0x0018B5B8 File Offset: 0x001897B8
 		public virtual bool IsPaused
 		{
 			get
@@ -78,11 +76,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040062A8 RID: 25256
+		// Token: 0x0400687F RID: 26751
 		[Nullable(2)]
 		protected ISetBehaviorPaused FbInstance;
 
-		// Token: 0x040062A9 RID: 25257
+		// Token: 0x04006880 RID: 26752
 		[Nullable(2)]
 		protected ISetBehaviorPaused_SetValue PocoInterface;
 	}

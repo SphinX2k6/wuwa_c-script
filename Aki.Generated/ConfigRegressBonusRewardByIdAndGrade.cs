@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020007CB RID: 1995
+	// Token: 0x020007E7 RID: 2023
 	public class ConfigRegressBonusRewardByIdAndGrade : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002ED4 RID: 11988 RVA: 0x00161F17 File Offset: 0x00160117
+		// Token: 0x06002F7C RID: 12156 RVA: 0x001691FF File Offset: 0x001673FF
 		static ConfigRegressBonusRewardByIdAndGrade()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRegressBonusRewardByIdAndGrade.CreateStaticDefaultValue), new Action(ConfigRegressBonusRewardByIdAndGrade.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002ED5 RID: 11989 RVA: 0x00161F38 File Offset: 0x00160138
+		// Token: 0x06002F7D RID: 12157 RVA: 0x00169220 File Offset: 0x00167420
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRegressBonusRewardByIdAndGrade.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002ED6 RID: 11990 RVA: 0x00161FB7 File Offset: 0x001601B7
+		// Token: 0x06002F7E RID: 12158 RVA: 0x0016929F File Offset: 0x0016749F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRegressBonusRewardByIdAndGrade.LogPair = null;
 			ConfigRegressBonusRewardByIdAndGrade.HandleId = 0;
 		}
 
-		// Token: 0x06002ED7 RID: 11991 RVA: 0x00161FC5 File Offset: 0x001601C5
+		// Token: 0x06002F7F RID: 12159 RVA: 0x001692AD File Offset: 0x001674AD
 		public static void Init()
 		{
 			ConfigRegressBonusRewardByIdAndGrade.HandleId = ConfigCommon.InitDataStatement(ConfigRegressBonusRewardByIdAndGrade.HandleId, "db_regressactivity.db", "select BinData from `RegressBonusReward` where Id=? And Grade=?");
 		}
 
-		// Token: 0x06002ED8 RID: 11992 RVA: 0x00161FE0 File Offset: 0x001601E0
+		// Token: 0x06002F80 RID: 12160 RVA: 0x001692C8 File Offset: 0x001674C8
 		public static RegressBonusReward? GetConfig(int p0Id, int p1Grade, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRegressBonusRewardByIdAndGrade.HandleId, ConfigRegressBonusRewardByIdAndGrade.LogPair))
@@ -93,22 +93,22 @@ namespace Aki.Config
 			return new RegressBonusReward?(rootAsRegressBonusReward);
 		}
 
-		// Token: 0x04003673 RID: 13939
+		// Token: 0x04003737 RID: 14135
 		private const string DB = "db_regressactivity.db";
 
-		// Token: 0x04003674 RID: 13940
+		// Token: 0x04003738 RID: 14136
 		private const string FILE = "h.回流活动(新).xlsx";
 
-		// Token: 0x04003675 RID: 13941
+		// Token: 0x04003739 RID: 14137
 		private const string TABLE = "RegressBonusReward";
 
-		// Token: 0x04003676 RID: 13942
+		// Token: 0x0400373A RID: 14138
 		private const string COMMAND = "select BinData from `RegressBonusReward` where Id=? And Grade=?";
 
-		// Token: 0x04003677 RID: 13943
+		// Token: 0x0400373B RID: 14139
 		private const string KEY_PREFIX = "RegressBonusRewardByIdAndGrade";
 
-		// Token: 0x04003678 RID: 13944
+		// Token: 0x0400373C RID: 14140
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,7 +118,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003679 RID: 13945
+		// Token: 0x0400373D RID: 14141
 		private static int HandleId;
 	}
 }

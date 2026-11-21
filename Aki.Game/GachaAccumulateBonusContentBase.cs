@@ -3,19 +3,19 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 
-// Token: 0x02001C60 RID: 7264
+// Token: 0x0200111F RID: 4383
 public abstract class GachaAccumulateBonusContentBase : UiPanelBase
 {
-	// Token: 0x0600DB15 RID: 56085
+	// Token: 0x0600AF2B RID: 44843
 	public abstract void RefreshView(int accumulateId);
 
-	// Token: 0x0600DB16 RID: 56086
+	// Token: 0x0600AF2C RID: 44844
 	public abstract UniTask PlayStartSequence();
 
-	// Token: 0x0600DB17 RID: 56087
+	// Token: 0x0600AF2D RID: 44845
 	public abstract UniTask PlayCloseSequence();
 
-	// Token: 0x0600DB18 RID: 56088
+	// Token: 0x0600AF2E RID: 44846
 	[NullableContext(1)]
 	public abstract void SetOnClickBackButtonCallBack(Action callback);
 }

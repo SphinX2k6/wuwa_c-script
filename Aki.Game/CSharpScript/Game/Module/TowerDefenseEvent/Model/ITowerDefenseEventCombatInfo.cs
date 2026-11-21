@@ -4,75 +4,75 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.TowerDefenseEvent.Model
 {
-	// Token: 0x02004B05 RID: 19205
+	// Token: 0x02003AAD RID: 15021
 	[NullableContext(2)]
 	public interface ITowerDefenseEventCombatInfo
 	{
-		// Token: 0x17007B06 RID: 31494
-		// (get) Token: 0x06031BE6 RID: 203750
-		// (set) Token: 0x06031BE7 RID: 203751
+		// Token: 0x17004EB3 RID: 20147
+		// (get) Token: 0x06026976 RID: 158070
+		// (set) Token: 0x06026977 RID: 158071
 		long Uid { get; set; }
 
-		// Token: 0x17007B07 RID: 31495
-		// (get) Token: 0x06031BE8 RID: 203752
-		// (set) Token: 0x06031BE9 RID: 203753
+		// Token: 0x17004EB4 RID: 20148
+		// (get) Token: 0x06026978 RID: 158072
+		// (set) Token: 0x06026979 RID: 158073
 		long OwnerId { get; set; }
 
-		// Token: 0x17007B08 RID: 31496
-		// (get) Token: 0x06031BEA RID: 203754
-		// (set) Token: 0x06031BEB RID: 203755
+		// Token: 0x17004EB5 RID: 20149
+		// (get) Token: 0x0602697A RID: 158074
+		// (set) Token: 0x0602697B RID: 158075
 		int TemplateId { get; set; }
 
-		// Token: 0x17007B09 RID: 31497
-		// (get) Token: 0x06031BEC RID: 203756
-		// (set) Token: 0x06031BED RID: 203757
+		// Token: 0x17004EB6 RID: 20150
+		// (get) Token: 0x0602697C RID: 158076
+		// (set) Token: 0x0602697D RID: 158077
 		int CombatId { get; set; }
 
-		// Token: 0x17007B0A RID: 31498
-		// (get) Token: 0x06031BEE RID: 203758
-		// (set) Token: 0x06031BEF RID: 203759
+		// Token: 0x17004EB7 RID: 20151
+		// (get) Token: 0x0602697E RID: 158078
+		// (set) Token: 0x0602697F RID: 158079
 		int SubTypeId { get; set; }
 
-		// Token: 0x17007B0B RID: 31499
-		// (get) Token: 0x06031BF0 RID: 203760
-		// (set) Token: 0x06031BF1 RID: 203761
+		// Token: 0x17004EB8 RID: 20152
+		// (get) Token: 0x06026980 RID: 158080
+		// (set) Token: 0x06026981 RID: 158081
 		string PrefabPath { get; set; }
 
-		// Token: 0x17007B0C RID: 31500
-		// (get) Token: 0x06031BF2 RID: 203762
-		// (set) Token: 0x06031BF3 RID: 203763
+		// Token: 0x17004EB9 RID: 20153
+		// (get) Token: 0x06026982 RID: 158082
+		// (set) Token: 0x06026983 RID: 158083
 		string AssetPath { get; set; }
 
-		// Token: 0x17007B0D RID: 31501
-		// (get) Token: 0x06031BF4 RID: 203764
-		// (set) Token: 0x06031BF5 RID: 203765
+		// Token: 0x17004EBA RID: 20154
+		// (get) Token: 0x06026984 RID: 158084
+		// (set) Token: 0x06026985 RID: 158085
 		int PropertyId { get; set; }
 
-		// Token: 0x17007B0E RID: 31502
-		// (get) Token: 0x06031BF6 RID: 203766
-		// (set) Token: 0x06031BF7 RID: 203767
+		// Token: 0x17004EBB RID: 20155
+		// (get) Token: 0x06026986 RID: 158086
+		// (set) Token: 0x06026987 RID: 158087
 		int? SplineId { get; set; }
 
-		// Token: 0x17007B0F RID: 31503
-		// (get) Token: 0x06031BF8 RID: 203768
-		// (set) Token: 0x06031BF9 RID: 203769
+		// Token: 0x17004EBC RID: 20156
+		// (get) Token: 0x06026988 RID: 158088
+		// (set) Token: 0x06026989 RID: 158089
 		Dictionary<int, int> BuffIdLayers { get; set; }
 
-		// Token: 0x17007B10 RID: 31504
-		// (get) Token: 0x06031BFA RID: 203770
-		// (set) Token: 0x06031BFB RID: 203771
+		// Token: 0x17004EBD RID: 20157
+		// (get) Token: 0x0602698A RID: 158090
+		// (set) Token: 0x0602698B RID: 158091
 		[Nullable(1)]
 		Vector Position { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-		// Token: 0x17007B11 RID: 31505
-		// (get) Token: 0x06031BFC RID: 203772
-		// (set) Token: 0x06031BFD RID: 203773
+		// Token: 0x17004EBE RID: 20158
+		// (get) Token: 0x0602698C RID: 158092
+		// (set) Token: 0x0602698D RID: 158093
 		[Nullable(1)]
 		Rotator Rotation { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-		// Token: 0x17007B12 RID: 31506
-		// (get) Token: 0x06031BFE RID: 203774
-		// (set) Token: 0x06031BFF RID: 203775
+		// Token: 0x17004EBF RID: 20159
+		// (get) Token: 0x0602698E RID: 158094
+		// (set) Token: 0x0602698F RID: 158095
 		[Nullable(new byte[]
 		{
 			2,
@@ -88,20 +88,20 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent.Model
 			1
 		})] set; }
 
-		// Token: 0x06031C00 RID: 203776
+		// Token: 0x06026990 RID: 158096
 		[NullableContext(1)]
 		void Update(ITowerDefenseEventCombatInfo other);
 
-		// Token: 0x06031C01 RID: 203777
+		// Token: 0x06026991 RID: 158097
 		bool IsValid();
 
-		// Token: 0x06031C02 RID: 203778
+		// Token: 0x06026992 RID: 158098
 		void Reset();
 
-		// Token: 0x06031C03 RID: 203779
+		// Token: 0x06026993 RID: 158099
 		void Release();
 
-		// Token: 0x06031C04 RID: 203780
+		// Token: 0x06026994 RID: 158100
 		[NullableContext(1)]
 		ITowerDefenseEventCombatInfo Clone();
 	}

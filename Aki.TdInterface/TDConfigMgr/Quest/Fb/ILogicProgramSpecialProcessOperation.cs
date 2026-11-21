@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020012F4 RID: 4852
+	// Token: 0x02001444 RID: 5188
 	public class ILogicProgramSpecialProcessOperation
 	{
-		// Token: 0x06006EB4 RID: 28340 RVA: 0x0010B628 File Offset: 0x00109828
-		[NullableContext(1)]
+		// Token: 0x06007554 RID: 30036 RVA: 0x00119B93 File Offset: 0x00117D93
 		public static ILogicProgramSpecialProcessOperation Create(ILogicProgramSpecialProcessOperation? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700229F RID: 8863
-		// (get) Token: 0x06006EB5 RID: 28341 RVA: 0x0010B647 File Offset: 0x00109847
+		// Token: 0x1700246E RID: 9326
+		// (get) Token: 0x06007555 RID: 30037 RVA: 0x00119BB2 File Offset: 0x00117DB2
 		public virtual ELogicProgramSpecialProcess Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04003F74 RID: 16244
+		// Token: 0x040042F0 RID: 17136
 		private ILogicProgramSpecialProcessOperation Instance;
 	}
 }

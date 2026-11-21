@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.DropDownLogic
 {
-	// Token: 0x02005472 RID: 21618
+	// Token: 0x02004455 RID: 17493
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ResourceStandardLogic : DropDownLogicBase
 	{
-		// Token: 0x060372C8 RID: 225992 RVA: 0x00D15DA8 File Offset: 0x00D13FA8
+		// Token: 0x0602C211 RID: 180753 RVA: 0x00C65200 File Offset: 0x00C63400
 		public override IReadOnlyList<object> GetDropDownDataList()
 		{
 			List<ResourceStandardDropDownData> list = new List<ResourceStandardDropDownData>();
@@ -31,18 +31,18 @@ namespace CSharpScript.Game.Module.Menu.DropDownLogic
 			return list;
 		}
 
-		// Token: 0x060372C9 RID: 225993 RVA: 0x00D15E0E File Offset: 0x00D1400E
+		// Token: 0x0602C212 RID: 180754 RVA: 0x00C65266 File Offset: 0x00C63466
 		public override TableTextArgNew GetDataTextId(object data, MenuData menuData)
 		{
 			return new TableTextArgNew(((ResourceStandardDropDownData)data).TextId, Array.Empty<object>());
 		}
 
-		// Token: 0x060372CA RID: 225994 RVA: 0x00D15E25 File Offset: 0x00D14025
+		// Token: 0x0602C213 RID: 180755 RVA: 0x00C6527D File Offset: 0x00C6347D
 		public override void TriggerSelectChange(object data, MenuData menuData)
 		{
 		}
 
-		// Token: 0x060372CB RID: 225995 RVA: 0x00D15E28 File Offset: 0x00D14028
+		// Token: 0x0602C214 RID: 180756 RVA: 0x00C65280 File Offset: 0x00C63480
 		public override bool CanSelectChange(int curIndex, int newIndex, MenuData menuData)
 		{
 			if (curIndex == newIndex)
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.Menu.DropDownLogic
 			return false;
 		}
 
-		// Token: 0x060372CC RID: 225996 RVA: 0x00D15EA0 File Offset: 0x00D140A0
+		// Token: 0x0602C215 RID: 180757 RVA: 0x00C652F8 File Offset: 0x00C634F8
 		public override int GetDefaultIndex(MenuData menuData)
 		{
 			ETier targetConfig = (ETier)MenuController.Instance.GetTargetConfig(menuData.FunctionId);

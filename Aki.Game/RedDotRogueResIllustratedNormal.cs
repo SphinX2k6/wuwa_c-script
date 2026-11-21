@@ -2,30 +2,30 @@
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.PermanentRogue;
 
-// Token: 0x02003414 RID: 13332
+// Token: 0x02002986 RID: 10630
 public class RedDotRogueResIllustratedNormal : RedDotBase
 {
-	// Token: 0x0601CD45 RID: 118085 RVA: 0x0080B9CC File Offset: 0x00809BCC
+	// Token: 0x0601AA3D RID: 109117 RVA: 0x00831F90 File Offset: 0x00830190
 	protected override ERedDotName? OnGetParentName()
 	{
 		return new ERedDotName?(ERedDotName.RogueResIllustrated);
 	}
 
-	// Token: 0x0601CD46 RID: 118086 RVA: 0x0080B9D8 File Offset: 0x00809BD8
+	// Token: 0x0601AA3E RID: 109118 RVA: 0x00831F9C File Offset: 0x0083019C
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.PermanentRogueRewardUpdate, new Action(base.EventCheck));
 		EventSystem.Instance.Add<int>(EEventName.PermanentRogueSeasonRedDotUpdate, new Action<int>(base.EventCheckWithUid));
 	}
 
-	// Token: 0x0601CD47 RID: 118087 RVA: 0x0080BA12 File Offset: 0x00809C12
+	// Token: 0x0601AA3F RID: 109119 RVA: 0x00831FD6 File Offset: 0x008301D6
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.PermanentRogueRewardUpdate, new Action(base.EventCheck));
 		EventSystem.Instance.Remove<int>(EEventName.PermanentRogueSeasonRedDotUpdate, new Action<int>(base.EventCheckWithUid));
 	}
 
-	// Token: 0x0601CD48 RID: 118088 RVA: 0x0080BA4C File Offset: 0x00809C4C
+	// Token: 0x0601AA40 RID: 109120 RVA: 0x00832010 File Offset: 0x00830210
 	protected override bool OnCheck(int uId = 0)
 	{
 		return ActivityPermanentRogueModel.Instance.GetHaveNormalAward(uId);

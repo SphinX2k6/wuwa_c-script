@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Morale
 {
-	// Token: 0x020053B9 RID: 21433
+	// Token: 0x0200439C RID: 17308
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Morale
 	})]
 	public class MoraleScoreProgressRewardItem : GridProxyAbstract<MoraleProgressRewardData>
 	{
-		// Token: 0x06036C3B RID: 224315 RVA: 0x00CF6330 File Offset: 0x00CF4530
+		// Token: 0x0602BB81 RID: 179073 RVA: 0x00C453D8 File Offset: 0x00C435D8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MoraleScoreProgressRewardItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Morale
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036C3C RID: 224316 RVA: 0x00CF6373 File Offset: 0x00CF4573
+		// Token: 0x0602BB82 RID: 179074 RVA: 0x00C4541B File Offset: 0x00C4361B
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.Morale
 			};
 		}
 
-		// Token: 0x06036C3D RID: 224317 RVA: 0x00CF63AC File Offset: 0x00CF45AC
+		// Token: 0x0602BB83 RID: 179075 RVA: 0x00C45454 File Offset: 0x00C43654
 		public override void Refresh(MoraleProgressRewardData data, bool isSelected, int gridIndex)
 		{
 			this.ItemData = data;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.Morale
 			this.RewardItem.Apply<PropSmallItemGrid>(parameters);
 		}
 
-		// Token: 0x06036C3E RID: 224318 RVA: 0x00CF6442 File Offset: 0x00CF4642
+		// Token: 0x0602BB84 RID: 179076 RVA: 0x00C454EA File Offset: 0x00C436EA
 		public string GetCountStr()
 		{
 			if (this.ItemData.ItemNum > 0)
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Morale
 			return "";
 		}
 
-		// Token: 0x06036C3F RID: 224319 RVA: 0x00CF6468 File Offset: 0x00CF4668
+		// Token: 0x0602BB85 RID: 179077 RVA: 0x00C45510 File Offset: 0x00C43710
 		private void OnClickReward(MediumItemGridExtendCallback _)
 		{
 			Action<MoraleProgressRewardData> clickCallBack = this.ClickCallBack;
@@ -76,13 +76,13 @@ namespace CSharpScript.Game.Module.Morale
 			clickCallBack(this.ItemData);
 		}
 
-		// Token: 0x0401CE77 RID: 118391
+		// Token: 0x0401790F RID: 96527
 		public MoraleProgressRewardData ItemData;
 
-		// Token: 0x0401CE78 RID: 118392
+		// Token: 0x04017910 RID: 96528
 		public SmallItemGrid RewardItem;
 
-		// Token: 0x0401CE79 RID: 118393
+		// Token: 0x04017911 RID: 96529
 		[Nullable(new byte[]
 		{
 			2,
@@ -90,14 +90,14 @@ namespace CSharpScript.Game.Module.Morale
 		})]
 		public Action<MoraleProgressRewardData> ClickCallBack;
 
-		// Token: 0x0200B659 RID: 46681
+		// Token: 0x0200A091 RID: 41105
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x040373E3 RID: 226275
+			// Token: 0x04031E38 RID: 204344
 			public const int ItemSelf = 0;
 
-			// Token: 0x040373E4 RID: 226276
+			// Token: 0x04031E39 RID: 204345
 			public const int ItemReward = 1;
 		}
 	}

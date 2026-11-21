@@ -2,16 +2,16 @@
 
 namespace ActivityBeginnerBook
 {
-	// Token: 0x020044DF RID: 17631
+	// Token: 0x02002F6C RID: 12140
 	public enum ESourceType
 	{
-		// Token: 0x040184A3 RID: 99491
+		// Token: 0x0400F24B RID: 62027
 		Role,
-		// Token: 0x040184A4 RID: 99492
+		// Token: 0x0400F24C RID: 62028
 		Weapon,
-		// Token: 0x040184A5 RID: 99493
+		// Token: 0x0400F24D RID: 62029
 		Phantom,
-		// Token: 0x040184A6 RID: 99494
+		// Token: 0x0400F24E RID: 62030
 		Item
 	}
 }

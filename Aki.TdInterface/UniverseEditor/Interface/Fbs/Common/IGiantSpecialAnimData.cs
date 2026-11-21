@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005DCD RID: 24013
+	// Token: 0x0200640A RID: 25610
 	public struct IGiantSpecialAnimData : IFlatbufferObject
 	{
-		// Token: 0x1700B3C1 RID: 46017
-		// (get) Token: 0x06029190 RID: 168336 RVA: 0x005A41C4 File Offset: 0x005A23C4
+		// Token: 0x1700BD27 RID: 48423
+		// (get) Token: 0x0602B81A RID: 178202 RVA: 0x005ECEF4 File Offset: 0x005EB0F4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06029191 RID: 168337 RVA: 0x005A41D1 File Offset: 0x005A23D1
+		// Token: 0x0602B81B RID: 178203 RVA: 0x005ECF01 File Offset: 0x005EB101
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06029192 RID: 168338 RVA: 0x005A41D8 File Offset: 0x005A23D8
+		// Token: 0x0602B81C RID: 178204 RVA: 0x005ECF08 File Offset: 0x005EB108
 		public static IGiantSpecialAnimData GetRootAsIGiantSpecialAnimData(ByteBuffer _bb)
 		{
 			return IGiantSpecialAnimData.GetRootAsIGiantSpecialAnimData(_bb, default(IGiantSpecialAnimData));
 		}
 
-		// Token: 0x06029193 RID: 168339 RVA: 0x005A41F4 File Offset: 0x005A23F4
+		// Token: 0x0602B81D RID: 178205 RVA: 0x005ECF24 File Offset: 0x005EB124
 		public static IGiantSpecialAnimData GetRootAsIGiantSpecialAnimData(ByteBuffer _bb, IGiantSpecialAnimData obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06029194 RID: 168340 RVA: 0x005A4211 File Offset: 0x005A2411
+		// Token: 0x0602B81E RID: 178206 RVA: 0x005ECF41 File Offset: 0x005EB141
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06029195 RID: 168341 RVA: 0x005A4220 File Offset: 0x005A2420
+		// Token: 0x0602B81F RID: 178207 RVA: 0x005ECF50 File Offset: 0x005EB150
 		public IGiantSpecialAnimData __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B3C2 RID: 46018
-		// (get) Token: 0x06029196 RID: 168342 RVA: 0x005A4230 File Offset: 0x005A2430
+		// Token: 0x1700BD28 RID: 48424
+		// (get) Token: 0x0602B820 RID: 178208 RVA: 0x005ECF60 File Offset: 0x005EB160
 		public EGiantAnimationType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x1700B3C3 RID: 46019
-		// (get) Token: 0x06029197 RID: 168343 RVA: 0x005A426C File Offset: 0x005A246C
+		// Token: 0x1700BD29 RID: 48425
+		// (get) Token: 0x0602B821 RID: 178209 RVA: 0x005ECF9C File Offset: 0x005EB19C
 		public string MontagePath
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x06029198 RID: 168344 RVA: 0x005A42A3 File Offset: 0x005A24A3
+		// Token: 0x0602B822 RID: 178210 RVA: 0x005ECFD3 File Offset: 0x005EB1D3
 		public Span<byte> GetMontagePathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06029199 RID: 168345 RVA: 0x005A42B2 File Offset: 0x005A24B2
+		// Token: 0x0602B823 RID: 178211 RVA: 0x005ECFE2 File Offset: 0x005EB1E2
 		public byte[] GetMontagePathArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x1700B3C4 RID: 46020
-		// (get) Token: 0x0602919A RID: 168346 RVA: 0x005A42C0 File Offset: 0x005A24C0
+		// Token: 0x1700BD2A RID: 48426
+		// (get) Token: 0x0602B824 RID: 178212 RVA: 0x005ECFF0 File Offset: 0x005EB1F0
 		public bool IsCanBeInterrupt
 		{
 			get
@@ -100,8 +100,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x1700B3C5 RID: 46021
-		// (get) Token: 0x0602919B RID: 168347 RVA: 0x005A4300 File Offset: 0x005A2500
+		// Token: 0x1700BD2B RID: 48427
+		// (get) Token: 0x0602B825 RID: 178213 RVA: 0x005ED030 File Offset: 0x005EB230
 		public byte NullMask
 		{
 			get
@@ -115,7 +115,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x0602919C RID: 168348 RVA: 0x005A433D File Offset: 0x005A253D
+		// Token: 0x0602B826 RID: 178214 RVA: 0x005ED06D File Offset: 0x005EB26D
 		public static Offset<IGiantSpecialAnimData> CreateIGiantSpecialAnimData(FlatBufferBuilder builder, EGiantAnimationType Type = EGiantAnimationType.Idle, StringOffset MontagePathOffset = default(StringOffset), bool IsCanBeInterrupt = false, byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -126,43 +126,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IGiantSpecialAnimData.EndIGiantSpecialAnimData(builder);
 		}
 
-		// Token: 0x0602919D RID: 168349 RVA: 0x005A4369 File Offset: 0x005A2569
+		// Token: 0x0602B827 RID: 178215 RVA: 0x005ED099 File Offset: 0x005EB299
 		public static void StartIGiantSpecialAnimData(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0602919E RID: 168350 RVA: 0x005A4372 File Offset: 0x005A2572
+		// Token: 0x0602B828 RID: 178216 RVA: 0x005ED0A2 File Offset: 0x005EB2A2
 		public static void AddType(FlatBufferBuilder builder, EGiantAnimationType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602919F RID: 168351 RVA: 0x005A437D File Offset: 0x005A257D
+		// Token: 0x0602B829 RID: 178217 RVA: 0x005ED0AD File Offset: 0x005EB2AD
 		public static void AddMontagePath(FlatBufferBuilder builder, StringOffset montagePathOffset)
 		{
 			builder.AddOffset(1, montagePathOffset.Value, 0);
 		}
 
-		// Token: 0x060291A0 RID: 168352 RVA: 0x005A438D File Offset: 0x005A258D
+		// Token: 0x0602B82A RID: 178218 RVA: 0x005ED0BD File Offset: 0x005EB2BD
 		public static void AddIsCanBeInterrupt(FlatBufferBuilder builder, bool isCanBeInterrupt)
 		{
 			builder.AddBool(2, isCanBeInterrupt, false);
 		}
 
-		// Token: 0x060291A1 RID: 168353 RVA: 0x005A4398 File Offset: 0x005A2598
+		// Token: 0x0602B82B RID: 178219 RVA: 0x005ED0C8 File Offset: 0x005EB2C8
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x060291A2 RID: 168354 RVA: 0x005A43A3 File Offset: 0x005A25A3
+		// Token: 0x0602B82C RID: 178220 RVA: 0x005ED0D3 File Offset: 0x005EB2D3
 		public static Offset<IGiantSpecialAnimData> EndIGiantSpecialAnimData(FlatBufferBuilder builder)
 		{
 			return new Offset<IGiantSpecialAnimData>(builder.EndTable());
 		}
 
-		// Token: 0x060291A3 RID: 168355 RVA: 0x005A43B0 File Offset: 0x005A25B0
+		// Token: 0x0602B82D RID: 178221 RVA: 0x005ED0E0 File Offset: 0x005EB2E0
 		public IGiantSpecialAnimDataT UnPack()
 		{
 			IGiantSpecialAnimDataT giantSpecialAnimDataT = new IGiantSpecialAnimDataT();
@@ -170,7 +170,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return giantSpecialAnimDataT;
 		}
 
-		// Token: 0x060291A4 RID: 168356 RVA: 0x005A43CB File Offset: 0x005A25CB
+		// Token: 0x0602B82E RID: 178222 RVA: 0x005ED0FB File Offset: 0x005EB2FB
 		public void UnPackTo(IGiantSpecialAnimDataT _o)
 		{
 			_o.Type = this.Type;
@@ -179,7 +179,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x060291A5 RID: 168357 RVA: 0x005A4400 File Offset: 0x005A2600
+		// Token: 0x0602B82F RID: 178223 RVA: 0x005ED130 File Offset: 0x005EB330
 		public static Offset<IGiantSpecialAnimData> Pack(FlatBufferBuilder builder, IGiantSpecialAnimDataT _o)
 		{
 			if (_o == null)
@@ -190,7 +190,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IGiantSpecialAnimData.CreateIGiantSpecialAnimData(builder, _o.Type, montagePathOffset, _o.IsCanBeInterrupt, _o.NullMask);
 		}
 
-		// Token: 0x0400F7B1 RID: 63409
+		// Token: 0x0401050C RID: 66828
 		private Table __p;
 	}
 }

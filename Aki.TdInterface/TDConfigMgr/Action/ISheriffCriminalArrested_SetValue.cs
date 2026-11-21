@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E53 RID: 7763
+	// Token: 0x02002088 RID: 8328
 	public class ISheriffCriminalArrested_SetValue
 	{
-		// Token: 0x04006340 RID: 25408
+		// Token: 0x04006924 RID: 26916
 		public ECommonTipType Type;
 
-		// Token: 0x04006341 RID: 25409
+		// Token: 0x04006925 RID: 26917
 		public int Id;
 	}
 }

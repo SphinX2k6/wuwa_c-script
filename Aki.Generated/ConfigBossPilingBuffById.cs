@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000105 RID: 261
+	// Token: 0x02000114 RID: 276
 	public class ConfigBossPilingBuffById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600061F RID: 1567 RVA: 0x0007C430 File Offset: 0x0007A630
+		// Token: 0x06000679 RID: 1657 RVA: 0x00081D94 File Offset: 0x0007FF94
 		static ConfigBossPilingBuffById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigBossPilingBuffById.CreateStaticDefaultValue), new Action(ConfigBossPilingBuffById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000620 RID: 1568 RVA: 0x0007C450 File Offset: 0x0007A650
+		// Token: 0x0600067A RID: 1658 RVA: 0x00081DB4 File Offset: 0x0007FFB4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigBossPilingBuffById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000621 RID: 1569 RVA: 0x0007C4CF File Offset: 0x0007A6CF
+		// Token: 0x0600067B RID: 1659 RVA: 0x00081E33 File Offset: 0x00080033
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigBossPilingBuffById.LogPair = null;
 			ConfigBossPilingBuffById.HandleId = 0;
 		}
 
-		// Token: 0x06000622 RID: 1570 RVA: 0x0007C4DD File Offset: 0x0007A6DD
+		// Token: 0x0600067C RID: 1660 RVA: 0x00081E41 File Offset: 0x00080041
 		public static void Init()
 		{
 			ConfigBossPilingBuffById.HandleId = ConfigCommon.InitDataStatement(ConfigBossPilingBuffById.HandleId, "db_bosspiling.db", "select BinData from `BossPilingBuff` where Id=?");
 		}
 
-		// Token: 0x06000623 RID: 1571 RVA: 0x0007C4F8 File Offset: 0x0007A6F8
+		// Token: 0x0600067D RID: 1661 RVA: 0x00081E5C File Offset: 0x0008005C
 		public static BossPilingBuff? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigBossPilingBuffById.HandleId, ConfigBossPilingBuffById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new BossPilingBuff?(rootAsBossPilingBuff);
 		}
 
-		// Token: 0x04000707 RID: 1799
+		// Token: 0x04000770 RID: 1904
 		private const string DB = "db_bosspiling.db";
 
-		// Token: 0x04000708 RID: 1800
+		// Token: 0x04000771 RID: 1905
 		private const string FILE = "b.Boss打桩活动.xlsx";
 
-		// Token: 0x04000709 RID: 1801
+		// Token: 0x04000772 RID: 1906
 		private const string TABLE = "BossPilingBuff";
 
-		// Token: 0x0400070A RID: 1802
+		// Token: 0x04000773 RID: 1907
 		private const string COMMAND = "select BinData from `BossPilingBuff` where Id=?";
 
-		// Token: 0x0400070B RID: 1803
+		// Token: 0x04000774 RID: 1908
 		private const string KEY_PREFIX = "BossPilingBuffById";
 
-		// Token: 0x0400070C RID: 1804
+		// Token: 0x04000775 RID: 1909
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400070D RID: 1805
+		// Token: 0x04000776 RID: 1910
 		private static int HandleId;
 	}
 }

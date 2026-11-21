@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008D4 RID: 2260
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000979 RID: 2425
 	public class UndergroundComponent : IComponentBase
 	{
-		// Token: 0x0600331D RID: 13085 RVA: 0x00083114 File Offset: 0x00081314
+		// Token: 0x06003665 RID: 13925 RVA: 0x0008A750 File Offset: 0x00088950
 		private UndergroundComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600331E RID: 13086 RVA: 0x0008314C File Offset: 0x0008134C
+		// Token: 0x06003666 RID: 13926 RVA: 0x0008A788 File Offset: 0x00088988
 		public static UndergroundComponent Create([Nullable(2)] UndergroundComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600331F RID: 13087 RVA: 0x0008315F File Offset: 0x0008135F
+		// Token: 0x06003667 RID: 13927 RVA: 0x0008A79B File Offset: 0x0008899B
 		public static UndergroundComponent CreateFromSetValue([Nullable(2)] UndergroundComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003320 RID: 13088 RVA: 0x00083174 File Offset: 0x00081374
+		// Token: 0x06003668 RID: 13928 RVA: 0x0008A7B0 File Offset: 0x000889B0
 		public new UndergroundComponent_SetValue ToSetValue()
 		{
 			return new UndergroundComponent_SetValue
@@ -65,9 +63,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000DB8 RID: 3512
-		// (get) Token: 0x06003321 RID: 13089 RVA: 0x000831D0 File Offset: 0x000813D0
-		// (set) Token: 0x06003322 RID: 13090 RVA: 0x0008320A File Offset: 0x0008140A
+		// Token: 0x17000E84 RID: 3716
+		// (get) Token: 0x06003669 RID: 13929 RVA: 0x0008A80C File Offset: 0x00088A0C
+		// (set) Token: 0x0600366A RID: 13930 RVA: 0x0008A846 File Offset: 0x00088A46
 		public override bool? Disabled
 		{
 			get
@@ -89,9 +87,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000DB9 RID: 3513
-		// (get) Token: 0x06003323 RID: 13091 RVA: 0x00083218 File Offset: 0x00081418
-		// (set) Token: 0x06003324 RID: 13092 RVA: 0x00083242 File Offset: 0x00081442
+		// Token: 0x17000E85 RID: 3717
+		// (get) Token: 0x0600366B RID: 13931 RVA: 0x0008A854 File Offset: 0x00088A54
+		// (set) Token: 0x0600366C RID: 13932 RVA: 0x0008A87E File Offset: 0x00088A7E
 		public override bool? EdIsLocked
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000DBA RID: 3514
-		// (get) Token: 0x06003325 RID: 13093 RVA: 0x00083250 File Offset: 0x00081450
-		// (set) Token: 0x06003326 RID: 13094 RVA: 0x0008327B File Offset: 0x0008147B
+		// Token: 0x17000E86 RID: 3718
+		// (get) Token: 0x0600366D RID: 13933 RVA: 0x0008A88C File Offset: 0x00088A8C
+		// (set) Token: 0x0600366E RID: 13934 RVA: 0x0008A8B7 File Offset: 0x00088AB7
 		public virtual int TestState
 		{
 			get
@@ -131,9 +129,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000DBB RID: 3515
-		// (get) Token: 0x06003327 RID: 13095 RVA: 0x00083289 File Offset: 0x00081489
-		// (set) Token: 0x06003328 RID: 13096 RVA: 0x000832B4 File Offset: 0x000814B4
+		// Token: 0x17000E87 RID: 3719
+		// (get) Token: 0x0600366F RID: 13935 RVA: 0x0008A8C5 File Offset: 0x00088AC5
+		// (set) Token: 0x06003670 RID: 13936 RVA: 0x0008A8F0 File Offset: 0x00088AF0
 		public virtual bool IsRestartPlayer
 		{
 			get
@@ -150,9 +148,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000DBC RID: 3516
-		// (get) Token: 0x06003329 RID: 13097 RVA: 0x000832C2 File Offset: 0x000814C2
-		// (set) Token: 0x0600332A RID: 13098 RVA: 0x000832E9 File Offset: 0x000814E9
+		// Token: 0x17000E88 RID: 3720
+		// (get) Token: 0x06003671 RID: 13937 RVA: 0x0008A8FE File Offset: 0x00088AFE
+		// (set) Token: 0x06003672 RID: 13938 RVA: 0x0008A925 File Offset: 0x00088B25
 		public virtual List<string> DestroyTag
 		{
 			get
@@ -174,9 +172,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000DBD RID: 3517
-		// (get) Token: 0x0600332B RID: 13099 RVA: 0x000832F8 File Offset: 0x000814F8
-		// (set) Token: 0x0600332C RID: 13100 RVA: 0x0008338B File Offset: 0x0008158B
+		// Token: 0x17000E89 RID: 3721
+		// (get) Token: 0x06003673 RID: 13939 RVA: 0x0008A934 File Offset: 0x00088B34
+		// (set) Token: 0x06003674 RID: 13940 RVA: 0x0008A9C7 File Offset: 0x00088BC7
 		public virtual List<IUndergroundStateInfo> StateInfo
 		{
 			get
@@ -212,18 +210,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400218B RID: 8587
+		// Token: 0x040023A2 RID: 9122
 		[Nullable(2)]
 		protected new UndergroundComponent FbInstance;
 
-		// Token: 0x0400218C RID: 8588
+		// Token: 0x040023A3 RID: 9123
 		[Nullable(2)]
 		protected new UndergroundComponent_SetValue PocoInterface;
 
-		// Token: 0x0400218D RID: 8589
+		// Token: 0x040023A4 RID: 9124
 		private List<IUndergroundStateInfo> _StateInfoCache;
 
-		// Token: 0x0400218E RID: 8590
+		// Token: 0x040023A5 RID: 9125
 		private bool _StateInfoInited;
 	}
 }

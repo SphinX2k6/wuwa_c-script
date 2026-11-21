@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200013F RID: 319
+	// Token: 0x02000152 RID: 338
 	[EnumExtensions]
 	public enum ESpawnMonsterPreCondition
 	{
-		// Token: 0x04000633 RID: 1587
+		// Token: 0x04000677 RID: 1655
 		DependOnPreceding
 	}
 }

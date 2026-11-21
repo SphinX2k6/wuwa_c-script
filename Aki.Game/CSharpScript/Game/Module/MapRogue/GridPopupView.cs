@@ -11,18 +11,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x0200563A RID: 22074
+	// Token: 0x02004610 RID: 17936
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GridPopupView : UiPanelBase
 	{
-		// Token: 0x060381F8 RID: 229880 RVA: 0x00D4B563 File Offset: 0x00D49763
+		// Token: 0x0602D0F6 RID: 184566 RVA: 0x00C992AB File Offset: 0x00C974AB
 		public GridPopupView(GridPopupViewModelBase vm)
 		{
 			this.Vm = vm;
 		}
 
-		// Token: 0x060381F9 RID: 229881 RVA: 0x00D4B580 File Offset: 0x00D49780
+		// Token: 0x0602D0F7 RID: 184567 RVA: 0x00C992C8 File Offset: 0x00C974C8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x060381FA RID: 229882 RVA: 0x00D4B69C File Offset: 0x00D4989C
+		// Token: 0x0602D0F8 RID: 184568 RVA: 0x00C993E4 File Offset: 0x00C975E4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			GridPopupView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -55,27 +55,27 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060381FB RID: 229883 RVA: 0x00D4B6DF File Offset: 0x00D498DF
+		// Token: 0x0602D0F9 RID: 184569 RVA: 0x00C99427 File Offset: 0x00C97627
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 			EventSystem.Instance.Emit<bool>(EEventName.RogueMapEventDetailOpenOrClose, true);
 		}
 
-		// Token: 0x060381FC RID: 229884 RVA: 0x00D4B703 File Offset: 0x00D49903
+		// Token: 0x0602D0FA RID: 184570 RVA: 0x00C9944B File Offset: 0x00C9764B
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Emit<bool>(EEventName.RogueMapEventDetailOpenOrClose, false);
 		}
 
-		// Token: 0x060381FD RID: 229885 RVA: 0x00D4B718 File Offset: 0x00D49918
+		// Token: 0x0602D0FB RID: 184571 RVA: 0x00C99460 File Offset: 0x00C97660
 		protected override void OnBeforeShow()
 		{
 			this.Refresh();
 			base.GetButton(8).RootUIComp.Get().SetUIActive(true);
 		}
 
-		// Token: 0x060381FE RID: 229886 RVA: 0x00D4B748 File Offset: 0x00D49948
+		// Token: 0x0602D0FC RID: 184572 RVA: 0x00C99490 File Offset: 0x00C97690
 		protected override UniTask OnShowAsyncImplementImplement()
 		{
 			GridPopupView.<OnShowAsyncImplementImplement>d__12 <OnShowAsyncImplementImplement>d__;
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <OnShowAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060381FF RID: 229887 RVA: 0x00D4B78C File Offset: 0x00D4998C
+		// Token: 0x0602D0FD RID: 184573 RVA: 0x00C994D4 File Offset: 0x00C976D4
 		protected override UniTask OnHideAsyncImplementImplement()
 		{
 			GridPopupView.<OnHideAsyncImplementImplement>d__13 <OnHideAsyncImplementImplement>d__;
@@ -97,14 +97,14 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <OnHideAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038200 RID: 229888 RVA: 0x00D4B7CF File Offset: 0x00D499CF
+		// Token: 0x0602D0FE RID: 184574 RVA: 0x00C99517 File Offset: 0x00C97717
 		public void Refresh()
 		{
 			this.OnRefreshCommon();
 			this.OnRefreshComponent();
 		}
 
-		// Token: 0x06038201 RID: 229889 RVA: 0x00D4B7E0 File Offset: 0x00D499E0
+		// Token: 0x0602D0FF RID: 184575 RVA: 0x00C99528 File Offset: 0x00C97728
 		protected void OnRefreshCommon()
 		{
 			UUISprite sprite = base.GetSprite(1);
@@ -161,19 +161,19 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x06038202 RID: 229890 RVA: 0x00D4B9CE File Offset: 0x00D49BCE
+		// Token: 0x0602D100 RID: 184576 RVA: 0x00C99716 File Offset: 0x00C97916
 		private void OnClickedBtnDetail()
 		{
 			this.Vm.GetBtnDetailFunc();
 		}
 
-		// Token: 0x06038203 RID: 229891 RVA: 0x00D4B9DB File Offset: 0x00D49BDB
+		// Token: 0x0602D101 RID: 184577 RVA: 0x00C99723 File Offset: 0x00C97923
 		private void OnClickedClose()
 		{
 			this.Vm.OnClickedClose();
 		}
 
-		// Token: 0x06038204 RID: 229892 RVA: 0x00D4B9E8 File Offset: 0x00D49BE8
+		// Token: 0x0602D102 RID: 184578 RVA: 0x00C99730 File Offset: 0x00C97930
 		private void OnClickedMask()
 		{
 			if (this.Vm.IsEnd)
@@ -206,7 +206,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.Vm.OnClickedClose();
 		}
 
-		// Token: 0x06038205 RID: 229893 RVA: 0x00D4BAA9 File Offset: 0x00D49CA9
+		// Token: 0x0602D103 RID: 184579 RVA: 0x00C997F1 File Offset: 0x00C979F1
 		protected void OnRefreshComponent()
 		{
 			this.Vm.RefreshTop();
@@ -214,25 +214,25 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.Vm.RefreshFunctional();
 		}
 
-		// Token: 0x06038206 RID: 229894 RVA: 0x00D4BACC File Offset: 0x00D49CCC
+		// Token: 0x0602D104 RID: 184580 RVA: 0x00C99814 File Offset: 0x00C97A14
 		public UUIItem GetPanelTop()
 		{
 			return base.GetItem(5);
 		}
 
-		// Token: 0x06038207 RID: 229895 RVA: 0x00D4BAD5 File Offset: 0x00D49CD5
+		// Token: 0x0602D105 RID: 184581 RVA: 0x00C9981D File Offset: 0x00C97A1D
 		public UUIItem GetPanelBottom()
 		{
 			return base.GetItem(6);
 		}
 
-		// Token: 0x06038208 RID: 229896 RVA: 0x00D4BADE File Offset: 0x00D49CDE
+		// Token: 0x0602D106 RID: 184582 RVA: 0x00C99826 File Offset: 0x00C97A26
 		public UUIItem GetPanelFunctional()
 		{
 			return base.GetItem(7);
 		}
 
-		// Token: 0x06038209 RID: 229897 RVA: 0x00D4BAE8 File Offset: 0x00D49CE8
+		// Token: 0x0602D107 RID: 184583 RVA: 0x00C99830 File Offset: 0x00C97A30
 		[NullableContext(2)]
 		private UniTask InitComponentDescription(UUIItem parentItem = null)
 		{
@@ -245,7 +245,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <InitComponentDescription>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603820A RID: 229898 RVA: 0x00D4BB34 File Offset: 0x00D49D34
+		// Token: 0x0602D108 RID: 184584 RVA: 0x00C9987C File Offset: 0x00C97A7C
 		[NullableContext(2)]
 		private UniTask InitConditionBar(UUIItem parentItem = null)
 		{
@@ -258,7 +258,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <InitConditionBar>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603820B RID: 229899 RVA: 0x00D4BB80 File Offset: 0x00D49D80
+		// Token: 0x0602D109 RID: 184585 RVA: 0x00C998C8 File Offset: 0x00C97AC8
 		[NullableContext(2)]
 		[return: Nullable(new byte[]
 		{
@@ -276,7 +276,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <InitComponentButton>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603820C RID: 229900 RVA: 0x00D4BBCC File Offset: 0x00D49DCC
+		// Token: 0x0602D10A RID: 184586 RVA: 0x00C99914 File Offset: 0x00C97B14
 		[NullableContext(2)]
 		[return: Nullable(new byte[]
 		{
@@ -294,7 +294,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <InitRecommendTip>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603820D RID: 229901 RVA: 0x00D4BC18 File Offset: 0x00D49E18
+		// Token: 0x0602D10B RID: 184587 RVA: 0x00C99960 File Offset: 0x00C97B60
 		[NullableContext(2)]
 		[return: Nullable(new byte[]
 		{
@@ -312,7 +312,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <InitInfoList>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603820E RID: 229902 RVA: 0x00D4BC64 File Offset: 0x00D49E64
+		// Token: 0x0602D10C RID: 184588 RVA: 0x00C999AC File Offset: 0x00C97BAC
 		[NullableContext(2)]
 		[return: Nullable(new byte[]
 		{
@@ -330,7 +330,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <InitEventCost>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603820F RID: 229903 RVA: 0x00D4BCB0 File Offset: 0x00D49EB0
+		// Token: 0x0602D10D RID: 184589 RVA: 0x00C999F8 File Offset: 0x00C97BF8
 		[NullableContext(2)]
 		[return: Nullable(new byte[]
 		{
@@ -348,7 +348,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <InitRewardList>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038210 RID: 229904 RVA: 0x00D4BCFB File Offset: 0x00D49EFB
+		// Token: 0x0602D10E RID: 184590 RVA: 0x00C99A43 File Offset: 0x00C97C43
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -363,24 +363,24 @@ namespace CSharpScript.Game.Module.MapRogue
 			return this.Vm.GetGuideUiItemAndUiItemForShowEx(configParams);
 		}
 
-		// Token: 0x0401D872 RID: 120946
+		// Token: 0x040182FD RID: 99069
 		[Nullable(2)]
 		protected LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401D873 RID: 120947
+		// Token: 0x040182FE RID: 99070
 		[Nullable(2)]
 		protected PopupTypeRightItem UiBgItem;
 
-		// Token: 0x0401D874 RID: 120948
+		// Token: 0x040182FF RID: 99071
 		protected PopupComponentDescription Description;
 
-		// Token: 0x0401D875 RID: 120949
+		// Token: 0x04018300 RID: 99072
 		public PopupComponentConditionBar ConditionBar;
 
-		// Token: 0x0401D876 RID: 120950
+		// Token: 0x04018301 RID: 99073
 		private readonly Vector2D TempVector2D = Vector2D.Create();
 
-		// Token: 0x0401D877 RID: 120951
+		// Token: 0x04018302 RID: 99074
 		protected GridPopupViewModelBase Vm;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004CEE RID: 19694
+	// Token: 0x020051EA RID: 20970
 	public struct ITargetEntityInvisible : IFlatbufferObject
 	{
-		// Token: 0x17008EE9 RID: 36585
-		// (get) Token: 0x0601F416 RID: 128022 RVA: 0x0045C912 File Offset: 0x0045AB12
+		// Token: 0x17009622 RID: 38434
+		// (get) Token: 0x0602105B RID: 135259 RVA: 0x00490862 File Offset: 0x0048EA62
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601F417 RID: 128023 RVA: 0x0045C91F File Offset: 0x0045AB1F
+		// Token: 0x0602105C RID: 135260 RVA: 0x0049086F File Offset: 0x0048EA6F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601F418 RID: 128024 RVA: 0x0045C928 File Offset: 0x0045AB28
+		// Token: 0x0602105D RID: 135261 RVA: 0x00490878 File Offset: 0x0048EA78
 		public static ITargetEntityInvisible GetRootAsITargetEntityInvisible(ByteBuffer _bb)
 		{
 			return ITargetEntityInvisible.GetRootAsITargetEntityInvisible(_bb, default(ITargetEntityInvisible));
 		}
 
-		// Token: 0x0601F419 RID: 128025 RVA: 0x0045C944 File Offset: 0x0045AB44
+		// Token: 0x0602105E RID: 135262 RVA: 0x00490894 File Offset: 0x0048EA94
 		public static ITargetEntityInvisible GetRootAsITargetEntityInvisible(ByteBuffer _bb, ITargetEntityInvisible obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601F41A RID: 128026 RVA: 0x0045C961 File Offset: 0x0045AB61
+		// Token: 0x0602105F RID: 135263 RVA: 0x004908B1 File Offset: 0x0048EAB1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601F41B RID: 128027 RVA: 0x0045C970 File Offset: 0x0045AB70
+		// Token: 0x06021060 RID: 135264 RVA: 0x004908C0 File Offset: 0x0048EAC0
 		public ITargetEntityInvisible __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008EEA RID: 36586
-		// (get) Token: 0x0601F41C RID: 128028 RVA: 0x0045C980 File Offset: 0x0045AB80
+		// Token: 0x17009623 RID: 38435
+		// (get) Token: 0x06021061 RID: 135265 RVA: 0x004908D0 File Offset: 0x0048EAD0
 		public EVisibleCondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008EEB RID: 36587
-		// (get) Token: 0x0601F41D RID: 128029 RVA: 0x0045C9BC File Offset: 0x0045ABBC
+		// Token: 0x17009624 RID: 38436
+		// (get) Token: 0x06021062 RID: 135266 RVA: 0x0049090C File Offset: 0x0048EB0C
 		public ECompare Compare
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008EEC RID: 36588
-		// (get) Token: 0x0601F41E RID: 128030 RVA: 0x0045C9F8 File Offset: 0x0045ABF8
+		// Token: 0x17009625 RID: 38437
+		// (get) Token: 0x06021063 RID: 135267 RVA: 0x00490948 File Offset: 0x0048EB48
 		public int EntityId
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601F41F RID: 128031 RVA: 0x0045CA34 File Offset: 0x0045AC34
+		// Token: 0x06021064 RID: 135268 RVA: 0x00490984 File Offset: 0x0048EB84
 		public static Offset<ITargetEntityInvisible> CreateITargetEntityInvisible(FlatBufferBuilder builder, EVisibleCondition Type = EVisibleCondition.Weather, ECompare Compare = ECompare.Eq, int EntityId = 0)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ITargetEntityInvisible.EndITargetEntityInvisible(builder);
 		}
 
-		// Token: 0x0601F420 RID: 128032 RVA: 0x0045CA58 File Offset: 0x0045AC58
+		// Token: 0x06021065 RID: 135269 RVA: 0x004909A8 File Offset: 0x0048EBA8
 		public static void StartITargetEntityInvisible(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601F421 RID: 128033 RVA: 0x0045CA61 File Offset: 0x0045AC61
+		// Token: 0x06021066 RID: 135270 RVA: 0x004909B1 File Offset: 0x0048EBB1
 		public static void AddType(FlatBufferBuilder builder, EVisibleCondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601F422 RID: 128034 RVA: 0x0045CA6C File Offset: 0x0045AC6C
+		// Token: 0x06021067 RID: 135271 RVA: 0x004909BC File Offset: 0x0048EBBC
 		public static void AddCompare(FlatBufferBuilder builder, ECompare compare)
 		{
 			builder.AddByte(1, (byte)compare, 0);
 		}
 
-		// Token: 0x0601F423 RID: 128035 RVA: 0x0045CA77 File Offset: 0x0045AC77
+		// Token: 0x06021068 RID: 135272 RVA: 0x004909C7 File Offset: 0x0048EBC7
 		public static void AddEntityId(FlatBufferBuilder builder, int entityId)
 		{
 			builder.AddInt(2, entityId, 0);
 		}
 
-		// Token: 0x0601F424 RID: 128036 RVA: 0x0045CA82 File Offset: 0x0045AC82
+		// Token: 0x06021069 RID: 135273 RVA: 0x004909D2 File Offset: 0x0048EBD2
 		public static Offset<ITargetEntityInvisible> EndITargetEntityInvisible(FlatBufferBuilder builder)
 		{
 			return new Offset<ITargetEntityInvisible>(builder.EndTable());
 		}
 
-		// Token: 0x0601F425 RID: 128037 RVA: 0x0045CA90 File Offset: 0x0045AC90
+		// Token: 0x0602106A RID: 135274 RVA: 0x004909E0 File Offset: 0x0048EBE0
 		public ITargetEntityInvisibleT UnPack()
 		{
 			ITargetEntityInvisibleT targetEntityInvisibleT = new ITargetEntityInvisibleT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return targetEntityInvisibleT;
 		}
 
-		// Token: 0x0601F426 RID: 128038 RVA: 0x0045CAAB File Offset: 0x0045ACAB
+		// Token: 0x0602106B RID: 135275 RVA: 0x004909FB File Offset: 0x0048EBFB
 		public void UnPackTo(ITargetEntityInvisibleT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.EntityId = this.EntityId;
 		}
 
-		// Token: 0x0601F427 RID: 128039 RVA: 0x0045CAD4 File Offset: 0x0045ACD4
+		// Token: 0x0602106C RID: 135276 RVA: 0x00490A24 File Offset: 0x0048EC24
 		public static Offset<ITargetEntityInvisible> Pack(FlatBufferBuilder builder, ITargetEntityInvisibleT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ITargetEntityInvisible.CreateITargetEntityInvisible(builder, _o.Type, _o.Compare, _o.EntityId);
 		}
 
-		// Token: 0x0400D6C3 RID: 54979
+		// Token: 0x0400E1F0 RID: 57840
 		private Table __p;
 	}
 }

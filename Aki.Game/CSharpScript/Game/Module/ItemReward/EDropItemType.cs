@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x020057ED RID: 22509
+	// Token: 0x020047C4 RID: 18372
 	public enum EDropItemType
 	{
-		// Token: 0x0401DEF6 RID: 122614
+		// Token: 0x0401898D RID: 100749
 		Normal,
-		// Token: 0x0401DEF7 RID: 122615
+		// Token: 0x0401898E RID: 100750
 		Activity,
-		// Token: 0x0401DEF8 RID: 122616
+		// Token: 0x0401898F RID: 100751
 		MultiTimeExchange
 	}
 }

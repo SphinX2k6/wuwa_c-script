@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045CE RID: 17870
+	// Token: 0x020034F6 RID: 13558
 	public enum EEffectLifeTimeType
 	{
-		// Token: 0x04018AE8 RID: 101096
+		// Token: 0x04013123 RID: 78115
 		Auto,
-		// Token: 0x04018AE9 RID: 101097
+		// Token: 0x04013124 RID: 78116
 		AlwaysLoop,
-		// Token: 0x04018AEA RID: 101098
+		// Token: 0x04013125 RID: 78117
 		PlayOnce,
-		// Token: 0x04018AEB RID: 101099
+		// Token: 0x04013126 RID: 78118
 		Manual
 	}
 }

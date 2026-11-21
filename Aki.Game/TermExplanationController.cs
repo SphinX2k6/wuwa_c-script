@@ -3,20 +3,19 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
 using Aki.Config;
-using CSharpScript.Core.Common;
 using CSharpScript.Core.Framework;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002B9C RID: 11164
+// Token: 0x02002118 RID: 8472
 [NullableContext(1)]
 [Nullable(0)]
 [TickController(0)]
 public class TermExplanationController : ControllerBase
 {
-	// Token: 0x17001F29 RID: 7977
-	// (get) Token: 0x06017208 RID: 94728 RVA: 0x005DCC01 File Offset: 0x005DAE01
+	// Token: 0x17001F81 RID: 8065
+	// (get) Token: 0x06014C39 RID: 85049 RVA: 0x006097E1 File Offset: 0x006079E1
 	protected override bool IsTickEvenPausedInternal
 	{
 		get
@@ -25,7 +24,7 @@ public class TermExplanationController : ControllerBase
 		}
 	}
 
-	// Token: 0x06017209 RID: 94729 RVA: 0x005DCC04 File Offset: 0x005DAE04
+	// Token: 0x06014C3A RID: 85050 RVA: 0x006097E4 File Offset: 0x006079E4
 	protected override bool OnInit()
 	{
 		EventSystem.Instance.Add(EEventName.OnTermExplanationViewClosed, new Action(this.OnTermExplanationViewClosed));
@@ -35,7 +34,7 @@ public class TermExplanationController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601720A RID: 94730 RVA: 0x005DCC84 File Offset: 0x005DAE84
+	// Token: 0x06014C3B RID: 85051 RVA: 0x00609864 File Offset: 0x00607A64
 	protected override bool OnClear()
 	{
 		foreach (KeyValuePair<int, TermTextRegistryHandle> keyValuePair in this.RegistryMap)
@@ -55,7 +54,7 @@ public class TermExplanationController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601720B RID: 94731 RVA: 0x005DCD8C File Offset: 0x005DAF8C
+	// Token: 0x06014C3C RID: 85052 RVA: 0x0060996C File Offset: 0x00607B6C
 	protected override void OnTick(float delta)
 	{
 		bool flag = false;
@@ -95,13 +94,13 @@ public class TermExplanationController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601720C RID: 94732 RVA: 0x005DCED4 File Offset: 0x005DB0D4
+	// Token: 0x06014C3D RID: 85053 RVA: 0x00609AB4 File Offset: 0x00607CB4
 	public int RegisterTextHyperlinkByParam(ITermExplanationRegistryParam param)
 	{
 		return this.RegisterTextHyperlink(param.UiText, param.ViewType, param.ReportType, (param.AttachDirection != null) ? param.AttachDirection.Value : ETermExplanationViewAttachDirection.None, param.AttachItem, param.OnDisableClick, param.CustomOffset, (param.Group != null) ? param.Group.Value : ETermExplanationGroup.Default, (param.Priority != null) ? param.Priority.Value : 0, (param.Style != null) ? param.Style.Value : ETermExplanationViewStyle.Default);
 	}
 
-	// Token: 0x0601720D RID: 94733 RVA: 0x005DCF90 File Offset: 0x005DB190
+	// Token: 0x06014C3E RID: 85054 RVA: 0x00609B70 File Offset: 0x00607D70
 	[NullableContext(2)]
 	public int RegisterTextHyperlink([Nullable(1)] UUIText uiText, ETermExplanationViewType type, ETermExplanationReportType reportType, ETermExplanationViewAttachDirection attachDir = ETermExplanationViewAttachDirection.None, UUIItem attachItem = null, Action onDisableClick = null, [Nullable(0)] ValueTuple<float, float>? customOffset = null, ETermExplanationGroup group = ETermExplanationGroup.Default, int priority = 0, ETermExplanationViewStyle style = ETermExplanationViewStyle.Default)
 	{
@@ -151,7 +150,7 @@ public class TermExplanationController : ControllerBase
 		return this.RegistryId;
 	}
 
-	// Token: 0x0601720E RID: 94734 RVA: 0x005DD190 File Offset: 0x005DB390
+	// Token: 0x06014C3F RID: 85055 RVA: 0x00609D70 File Offset: 0x00607F70
 	public void UnRegisterTextHyperlink(UUIText uiText)
 	{
 		int idByUiText = this.GetIdByUiText(uiText);
@@ -163,7 +162,7 @@ public class TermExplanationController : ControllerBase
 		this.UnRegisterTextHyperlinkById(idByUiText);
 	}
 
-	// Token: 0x0601720F RID: 94735 RVA: 0x005DD1D0 File Offset: 0x005DB3D0
+	// Token: 0x06014C40 RID: 85056 RVA: 0x00609DB0 File Offset: 0x00607FB0
 	public void UnRegisterTextHyperlinkById(int id)
 	{
 		TermTextRegistryHandle termTextRegistryHandle;
@@ -183,7 +182,7 @@ public class TermExplanationController : ControllerBase
 		this.HandlePool.Put(termTextRegistryHandle);
 	}
 
-	// Token: 0x06017210 RID: 94736 RVA: 0x005DD24C File Offset: 0x005DB44C
+	// Token: 0x06014C41 RID: 85057 RVA: 0x00609E2C File Offset: 0x0060802C
 	public void SetEnableHyperLink(UUIText uiText, bool enable)
 	{
 		int idByUiText = this.GetIdByUiText(uiText);
@@ -195,7 +194,7 @@ public class TermExplanationController : ControllerBase
 		this.SetEnableHyperLinkById(idByUiText, enable);
 	}
 
-	// Token: 0x06017211 RID: 94737 RVA: 0x005DD28C File Offset: 0x005DB48C
+	// Token: 0x06014C42 RID: 85058 RVA: 0x00609E6C File Offset: 0x0060806C
 	public void SetEnableHyperLinkById(int id, bool enable)
 	{
 		TermTextRegistryHandle termTextRegistryHandle;
@@ -216,7 +215,7 @@ public class TermExplanationController : ControllerBase
 		termTextRegistryHandle.SetEnable(enable);
 	}
 
-	// Token: 0x06017212 RID: 94738 RVA: 0x005DD2EC File Offset: 0x005DB4EC
+	// Token: 0x06014C43 RID: 85059 RVA: 0x00609ECC File Offset: 0x006080CC
 	public bool OpenTermExplanationView(UUIText uiText)
 	{
 		int idByUiText = this.GetIdByUiText(uiText);
@@ -250,7 +249,7 @@ public class TermExplanationController : ControllerBase
 		return this.OpenTermExplanationViewImp(handle, list[0]);
 	}
 
-	// Token: 0x06017213 RID: 94739 RVA: 0x005DD3BC File Offset: 0x005DB5BC
+	// Token: 0x06014C44 RID: 85060 RVA: 0x00609F9C File Offset: 0x0060819C
 	public void OpenTermExplanationViewDirectly()
 	{
 		List<string> list = new List<string>();
@@ -292,7 +291,7 @@ public class TermExplanationController : ControllerBase
 		UiManager.Instance.OpenView(termViewName, param, null);
 	}
 
-	// Token: 0x06017214 RID: 94740 RVA: 0x005DD544 File Offset: 0x005DB744
+	// Token: 0x06014C45 RID: 85061 RVA: 0x0060A124 File Offset: 0x00608324
 	public bool HasAnyTermInCurrentTexts()
 	{
 		foreach (KeyValuePair<int, TermTextRegistryHandle> keyValuePair in this.RegistryMap)
@@ -306,13 +305,13 @@ public class TermExplanationController : ControllerBase
 		return false;
 	}
 
-	// Token: 0x06017215 RID: 94741 RVA: 0x005DD5F4 File Offset: 0x005DB7F4
+	// Token: 0x06014C46 RID: 85062 RVA: 0x0060A1D4 File Offset: 0x006083D4
 	public bool IsUiTextRegistered(UUIText uiText)
 	{
 		return this.GetIdByUiText(uiText) != 0;
 	}
 
-	// Token: 0x06017216 RID: 94742 RVA: 0x005DD600 File Offset: 0x005DB800
+	// Token: 0x06014C47 RID: 85063 RVA: 0x0060A1E0 File Offset: 0x006083E0
 	private void OnAddGroup(ETermExplanationGroup inGroup)
 	{
 		int num = -1;
@@ -334,7 +333,7 @@ public class TermExplanationController : ControllerBase
 		this.GroupList.Add(new ValueTuple<ETermExplanationGroup, int>(inGroup, item));
 	}
 
-	// Token: 0x06017217 RID: 94743 RVA: 0x005DD688 File Offset: 0x005DB888
+	// Token: 0x06014C48 RID: 85064 RVA: 0x0060A268 File Offset: 0x00608468
 	private void OnRemoveGroup(ETermExplanationGroup inGroup)
 	{
 		int num = -1;
@@ -371,7 +370,7 @@ public class TermExplanationController : ControllerBase
 		}
 	}
 
-	// Token: 0x06017218 RID: 94744 RVA: 0x005DD754 File Offset: 0x005DB954
+	// Token: 0x06014C49 RID: 85065 RVA: 0x0060A334 File Offset: 0x00608534
 	private void UseGroup(ETermExplanationGroup inGroup)
 	{
 		int num = -1;
@@ -399,7 +398,7 @@ public class TermExplanationController : ControllerBase
 		this.GroupList.Add(item);
 	}
 
-	// Token: 0x06017219 RID: 94745 RVA: 0x005DD7F4 File Offset: 0x005DB9F4
+	// Token: 0x06014C4A RID: 85066 RVA: 0x0060A3D4 File Offset: 0x006085D4
 	private List<TermTextRegistryHandle> GetHandlesByGroup(ETermExplanationGroup group, bool checkVisible = true)
 	{
 		List<TermTextRegistryHandle> list = new List<TermTextRegistryHandle>();
@@ -423,7 +422,7 @@ public class TermExplanationController : ControllerBase
 		return list;
 	}
 
-	// Token: 0x0601721A RID: 94746 RVA: 0x005DD8AC File Offset: 0x005DBAAC
+	// Token: 0x06014C4B RID: 85067 RVA: 0x0060A48C File Offset: 0x0060868C
 	private int GetIdByUiText(UUIText uiText)
 	{
 		foreach (KeyValuePair<int, TermTextRegistryHandle> keyValuePair in this.RegistryMap)
@@ -436,7 +435,7 @@ public class TermExplanationController : ControllerBase
 		return 0;
 	}
 
-	// Token: 0x0601721B RID: 94747 RVA: 0x005DD914 File Offset: 0x005DBB14
+	// Token: 0x06014C4C RID: 85068 RVA: 0x0060A4F4 File Offset: 0x006086F4
 	private bool OpenTermExplanationViewImp(TermTextRegistryHandle handle, string hyperLinkId)
 	{
 		if (handle.ReportType != null)
@@ -464,7 +463,7 @@ public class TermExplanationController : ControllerBase
 		{
 			foreach (string text in this.ParseText2HyperLinkList(termTextRegistryHandle.UiText.text, false))
 			{
-				if (this.IsHyperLinkValid(text) || !Info.Instance.IsBuildShipping)
+				if (this.IsHyperLinkValid(text))
 				{
 					list.Add(text);
 				}
@@ -480,7 +479,7 @@ public class TermExplanationController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601721C RID: 94748 RVA: 0x005DDA80 File Offset: 0x005DBC80
+	// Token: 0x06014C4D RID: 85069 RVA: 0x0060A654 File Offset: 0x00608854
 	private List<string> ParseText2HyperLinkList(string text, bool unique = true)
 	{
 		MatchCollection matchCollection = new Regex("href\\s*=\\s*([\"]?)([^\"'\\s>]+)\\1", RegexOptions.IgnoreCase).Matches(text);
@@ -500,7 +499,7 @@ public class TermExplanationController : ControllerBase
 		return new List<string>(new HashSet<string>(list));
 	}
 
-	// Token: 0x0601721D RID: 94749 RVA: 0x005DDB2C File Offset: 0x005DBD2C
+	// Token: 0x06014C4E RID: 85070 RVA: 0x0060A700 File Offset: 0x00608900
 	private void OnViewOpen(TermTextRegistryHandle handle)
 	{
 		if (handle.AttachDir == ETermExplanationViewAttachDirection.None)
@@ -518,7 +517,7 @@ public class TermExplanationController : ControllerBase
 		this.HandleOffset(handle);
 	}
 
-	// Token: 0x0601721E RID: 94750 RVA: 0x005DDB60 File Offset: 0x005DBD60
+	// Token: 0x06014C4F RID: 85071 RVA: 0x0060A734 File Offset: 0x00608934
 	private bool IsHyperLinkValid(string hyperLink)
 	{
 		int p0Id;
@@ -545,7 +544,7 @@ public class TermExplanationController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601721F RID: 94751 RVA: 0x005DDBE4 File Offset: 0x005DBDE4
+	// Token: 0x06014C50 RID: 85072 RVA: 0x0060A7B8 File Offset: 0x006089B8
 	private void HandleSideViewAttach(TermTextRegistryHandle handle)
 	{
 		TermExplanationView termExplanationView = UiManager.Instance.GetView(handle.ViewId) as TermExplanationView;
@@ -572,7 +571,7 @@ public class TermExplanationController : ControllerBase
 		uuiitem.SetLGUISpaceAbsolutePosition(fvector);
 	}
 
-	// Token: 0x06017220 RID: 94752 RVA: 0x005DDCEC File Offset: 0x005DBEEC
+	// Token: 0x06014C51 RID: 85073 RVA: 0x0060A8C0 File Offset: 0x00608AC0
 	private void HandleCenterViewAttach(TermTextRegistryHandle handle)
 	{
 		TermExplanationView termExplanationView = UiManager.Instance.GetView(handle.ViewId) as TermExplanationView;
@@ -599,7 +598,7 @@ public class TermExplanationController : ControllerBase
 		parentAsUIItem.SetLGUISpaceAbsolutePosition(fvector);
 	}
 
-	// Token: 0x06017221 RID: 94753 RVA: 0x005DDDFC File Offset: 0x005DBFFC
+	// Token: 0x06014C52 RID: 85074 RVA: 0x0060A9D0 File Offset: 0x00608BD0
 	private void HandleOffset(TermTextRegistryHandle handle)
 	{
 		TermExplanationView termExplanationView = UiManager.Instance.GetView(handle.ViewId) as TermExplanationView;
@@ -613,7 +612,7 @@ public class TermExplanationController : ControllerBase
 		tipItem.SetLGUISpaceAbsolutePosition(fvector);
 	}
 
-	// Token: 0x06017222 RID: 94754 RVA: 0x005DDE68 File Offset: 0x005DC068
+	// Token: 0x06014C53 RID: 85075 RVA: 0x0060AA3C File Offset: 0x00608C3C
 	private EUiViewName GetTermViewName(TermTextRegistryHandle handle)
 	{
 		ETermExplanationViewType type = handle.Type;
@@ -633,7 +632,7 @@ public class TermExplanationController : ControllerBase
 		return (EUiViewName)((type == ETermExplanationViewType.Center) ? value.CenterView : value.SideView);
 	}
 
-	// Token: 0x06017223 RID: 94755 RVA: 0x005DDEF0 File Offset: 0x005DC0F0
+	// Token: 0x06014C54 RID: 85076 RVA: 0x0060AAC4 File Offset: 0x00608CC4
 	private void ReportEnterViewWithTerms(ETermExplanationReportType type)
 	{
 		EnterViewWithTermsEvent enterViewWithTermsEvent = new EnterViewWithTermsEvent();
@@ -641,7 +640,7 @@ public class TermExplanationController : ControllerBase
 		LogReportController.Instance.LogReport(enterViewWithTermsEvent);
 	}
 
-	// Token: 0x06017224 RID: 94756 RVA: 0x005DDF18 File Offset: 0x005DC118
+	// Token: 0x06014C55 RID: 85077 RVA: 0x0060AAEC File Offset: 0x00608CEC
 	private void ReportClickTermExplanation(ETermExplanationReportType type)
 	{
 		ClickTermExplanationEvent clickTermExplanationEvent = new ClickTermExplanationEvent();
@@ -649,7 +648,7 @@ public class TermExplanationController : ControllerBase
 		LogReportController.Instance.LogReport(clickTermExplanationEvent);
 	}
 
-	// Token: 0x06017225 RID: 94757 RVA: 0x005DDF40 File Offset: 0x005DC140
+	// Token: 0x06014C56 RID: 85078 RVA: 0x0060AB14 File Offset: 0x00608D14
 	private void OnTextChange(IReadOnlyList<int> changeList)
 	{
 		foreach (int key in changeList)
@@ -662,7 +661,7 @@ public class TermExplanationController : ControllerBase
 		}
 	}
 
-	// Token: 0x06017226 RID: 94758 RVA: 0x005DDFBC File Offset: 0x005DC1BC
+	// Token: 0x06014C57 RID: 85079 RVA: 0x0060AB90 File Offset: 0x00608D90
 	private void OnTermExplanationViewClosed()
 	{
 		foreach (KeyValuePair<int, TermTextRegistryHandle> keyValuePair in this.RegistryMap)
@@ -676,7 +675,7 @@ public class TermExplanationController : ControllerBase
 		}
 	}
 
-	// Token: 0x06017227 RID: 94759 RVA: 0x005DE040 File Offset: 0x005DC240
+	// Token: 0x06014C58 RID: 85080 RVA: 0x0060AC14 File Offset: 0x00608E14
 	private void OnTermExplanationViewBeforeStart(int viewId)
 	{
 		if (this.UsingHandle == null)
@@ -700,7 +699,7 @@ public class TermExplanationController : ControllerBase
 		this.OnViewOpen(this.UsingHandle);
 	}
 
-	// Token: 0x06017228 RID: 94760 RVA: 0x005DE0A9 File Offset: 0x005DC2A9
+	// Token: 0x06014C59 RID: 85081 RVA: 0x0060AC7D File Offset: 0x00608E7D
 	private void OnResetToBattleView()
 	{
 		UiManager.Instance.CloseView(EUiViewName.TermExplanationSideView, null);
@@ -708,8 +707,8 @@ public class TermExplanationController : ControllerBase
 		UiManager.Instance.CloseView(EUiViewName.FloroRanchTermExplanationCenterView, null);
 	}
 
-	// Token: 0x17001F2A RID: 7978
-	// (get) Token: 0x06017229 RID: 94761 RVA: 0x005DE0DB File Offset: 0x005DC2DB
+	// Token: 0x17001F82 RID: 8066
+	// (get) Token: 0x06014C5A RID: 85082 RVA: 0x0060ACAF File Offset: 0x00608EAF
 	public static TermExplanationController Instance
 	{
 		get
@@ -718,7 +717,7 @@ public class TermExplanationController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601722A RID: 94762 RVA: 0x005DE0E2 File Offset: 0x005DC2E2
+	// Token: 0x06014C5B RID: 85083 RVA: 0x0060ACB6 File Offset: 0x00608EB6
 	public static TermExplanationController GetOrCreateInstance()
 	{
 		if (TermExplanationController._Instance == null)
@@ -728,7 +727,7 @@ public class TermExplanationController : ControllerBase
 		return TermExplanationController._Instance;
 	}
 
-	// Token: 0x0601722B RID: 94763 RVA: 0x005DE0F6 File Offset: 0x005DC2F6
+	// Token: 0x06014C5C RID: 85084 RVA: 0x0060ACCA File Offset: 0x00608ECA
 	public static bool CreateInstance()
 	{
 		if (TermExplanationController._Instance != null)
@@ -739,37 +738,37 @@ public class TermExplanationController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601722C RID: 94764 RVA: 0x005DE10C File Offset: 0x005DC30C
+	// Token: 0x06014C5D RID: 85085 RVA: 0x0060ACE0 File Offset: 0x00608EE0
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601722D RID: 94765 RVA: 0x005DE10E File Offset: 0x005DC30E
+	// Token: 0x06014C5E RID: 85086 RVA: 0x0060ACE2 File Offset: 0x00608EE2
 	public static void ResetStaticDefaultValue()
 	{
 		TermExplanationController._Instance = null;
 	}
 
-	// Token: 0x0601722E RID: 94766 RVA: 0x005DE116 File Offset: 0x005DC316
+	// Token: 0x06014C5F RID: 85087 RVA: 0x0060ACEA File Offset: 0x00608EEA
 	static TermExplanationController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TermExplanationController.CreateStaticDefaultValue), new Action(TermExplanationController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400ACFF RID: 44287
+	// Token: 0x0400B106 RID: 45318
 	private const int POOL_CAPACITY = 5;
 
-	// Token: 0x0400AD00 RID: 44288
+	// Token: 0x0400B107 RID: 45319
 	private int RegistryId;
 
-	// Token: 0x0400AD01 RID: 44289
+	// Token: 0x0400B108 RID: 45320
 	[Nullable(2)]
 	private TermTextRegistryHandle UsingHandle;
 
-	// Token: 0x0400AD02 RID: 44290
+	// Token: 0x0400B109 RID: 45321
 	private ETermExplanationGroup CurGroup;
 
-	// Token: 0x0400AD03 RID: 44291
+	// Token: 0x0400B10A RID: 45322
 	[Nullable(new byte[]
 	{
 		1,
@@ -777,7 +776,7 @@ public class TermExplanationController : ControllerBase
 	})]
 	private readonly List<ValueTuple<ETermExplanationGroup, int>> GroupList = new List<ValueTuple<ETermExplanationGroup, int>>();
 
-	// Token: 0x0400AD04 RID: 44292
+	// Token: 0x0400B10B RID: 45323
 	private readonly Dictionary<ETermExplanationViewType, EUiViewName> Type2ViewName = new Dictionary<ETermExplanationViewType, EUiViewName>
 	{
 		{
@@ -790,16 +789,16 @@ public class TermExplanationController : ControllerBase
 		}
 	};
 
-	// Token: 0x0400AD05 RID: 44293
+	// Token: 0x0400B10C RID: 45324
 	private readonly Dictionary<int, TermTextRegistryHandle> RegistryMap = new Dictionary<int, TermTextRegistryHandle>();
 
-	// Token: 0x0400AD06 RID: 44294
+	// Token: 0x0400B10D RID: 45325
 	private readonly Pool<TermTextRegistryHandle> HandlePool = new Pool<TermTextRegistryHandle>(5, () => new TermTextRegistryHandle(), delegate(TermTextRegistryHandle handle)
 	{
 		handle.Clear();
 	});
 
-	// Token: 0x0400AD07 RID: 44295
+	// Token: 0x0400B10E RID: 45326
 	[Nullable(2)]
 	private static TermExplanationController _Instance;
 }

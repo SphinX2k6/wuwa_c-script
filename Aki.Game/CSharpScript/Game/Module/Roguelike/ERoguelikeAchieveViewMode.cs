@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DBB RID: 19899
+	// Token: 0x02003D84 RID: 15748
 	public enum ERoguelikeAchieveViewMode
 	{
-		// Token: 0x0401B48A RID: 111754
+		// Token: 0x04015E5D RID: 89693
 		Archive,
-		// Token: 0x0401B48B RID: 111755
+		// Token: 0x04015E5E RID: 89694
 		UseArchive
 	}
 }

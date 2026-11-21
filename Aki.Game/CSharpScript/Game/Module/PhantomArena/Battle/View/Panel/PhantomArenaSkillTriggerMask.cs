@@ -9,14 +9,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 {
-	// Token: 0x0200525F RID: 21087
+	// Token: 0x0200422F RID: 16943
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaSkillTriggerMask : UiPanelBase, IAreaCanvas
 	{
-		// Token: 0x17008263 RID: 33379
-		// (get) Token: 0x06035E7B RID: 220795 RVA: 0x00CC1919 File Offset: 0x00CBFB19
-		// (set) Token: 0x06035E7C RID: 220796 RVA: 0x00CC1921 File Offset: 0x00CBFB21
+		// Token: 0x17005623 RID: 22051
+		// (get) Token: 0x0602AD76 RID: 175478 RVA: 0x00C0EFA9 File Offset: 0x00C0D1A9
+		// (set) Token: 0x0602AD77 RID: 175479 RVA: 0x00C0EFB1 File Offset: 0x00C0D1B1
 		public bool IsInSkillInteract
 		{
 			get
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			}
 		}
 
-		// Token: 0x06035E7D RID: 220797 RVA: 0x00CC1934 File Offset: 0x00CBFB34
+		// Token: 0x0602AD78 RID: 175480 RVA: 0x00C0EFC4 File Offset: 0x00C0D1C4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			};
 		}
 
-		// Token: 0x06035E7E RID: 220798 RVA: 0x00CC1A21 File Offset: 0x00CBFC21
+		// Token: 0x0602AD79 RID: 175481 RVA: 0x00C0F0B1 File Offset: 0x00C0D2B1
 		private void OnConfirmClick()
 		{
 			ISkillInteractMainUiInteract uiInteract = this.UiInteract;
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			uiInteract.ReceiveClickData(ESkillInteractMainUiInteractType.ConfirmBtn, new object[0]);
 		}
 
-		// Token: 0x06035E7F RID: 220799 RVA: 0x00CC1A3B File Offset: 0x00CBFC3B
+		// Token: 0x0602AD7A RID: 175482 RVA: 0x00C0F0CB File Offset: 0x00C0D2CB
 		private void OnCancelClick()
 		{
 			ISkillInteractMainUiInteract uiInteract = this.UiInteract;
@@ -72,13 +72,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			uiInteract.ReceiveClickData(ESkillInteractMainUiInteractType.CancelBtn, new object[0]);
 		}
 
-		// Token: 0x06035E80 RID: 220800 RVA: 0x00CC1A55 File Offset: 0x00CBFC55
+		// Token: 0x0602AD7B RID: 175483 RVA: 0x00C0F0E5 File Offset: 0x00C0D2E5
 		protected override void OnStart()
 		{
 			this.ViewProxy.CanvasManager.AddAreaCanvas(this);
 		}
 
-		// Token: 0x06035E81 RID: 220801 RVA: 0x00CC1A68 File Offset: 0x00CBFC68
+		// Token: 0x0602AD7C RID: 175484 RVA: 0x00C0F0F8 File Offset: 0x00C0D2F8
 		public void ShowTriggerMask(int? skillId)
 		{
 			UUIItem item = base.GetItem(1);
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			this.IsInSkillInteract = true;
 		}
 
-		// Token: 0x06035E82 RID: 220802 RVA: 0x00CC1A91 File Offset: 0x00CBFC91
+		// Token: 0x0602AD7D RID: 175485 RVA: 0x00C0F121 File Offset: 0x00C0D321
 		public void RefreshTips(int selectNum, int allNum)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(5), "PhantomBattle_1068", new <>z__ReadOnlyArray<object>(new object[]
@@ -101,14 +101,14 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			}));
 		}
 
-		// Token: 0x06035E83 RID: 220803 RVA: 0x00CC1ACF File Offset: 0x00CBFCCF
+		// Token: 0x0602AD7E RID: 175486 RVA: 0x00C0F15F File Offset: 0x00C0D35F
 		public void RefreshSkill(string skillName, string skillDesc, string[] paramsList)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(2), skillName, Array.Empty<object>());
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(3), skillDesc, paramsList);
 		}
 
-		// Token: 0x06035E84 RID: 220804 RVA: 0x00CC1AFC File Offset: 0x00CBFCFC
+		// Token: 0x0602AD7F RID: 175487 RVA: 0x00C0F18C File Offset: 0x00C0D38C
 		public void RefreshCancelBtnActive(bool isPassive)
 		{
 			UUIButtonComponent button = base.GetButton(6);
@@ -119,75 +119,75 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			button.RootUIComp.Get().SetUIActive(!isPassive);
 		}
 
-		// Token: 0x06035E85 RID: 220805 RVA: 0x00CC1B2B File Offset: 0x00CBFD2B
+		// Token: 0x0602AD80 RID: 175488 RVA: 0x00C0F1BB File Offset: 0x00C0D3BB
 		public void HideTriggerMask()
 		{
 			this.SetActive(false);
 			this.IsInSkillInteract = false;
 		}
 
-		// Token: 0x06035E86 RID: 220806 RVA: 0x00CC1B3B File Offset: 0x00CBFD3B
+		// Token: 0x0602AD81 RID: 175489 RVA: 0x00C0F1CB File Offset: 0x00C0D3CB
 		public void RegisterViewProxy(PhantomArenaBattleProxy proxy)
 		{
 			this.ViewProxy = proxy;
 		}
 
-		// Token: 0x06035E87 RID: 220807 RVA: 0x00CC1B44 File Offset: 0x00CBFD44
+		// Token: 0x0602AD82 RID: 175490 RVA: 0x00C0F1D4 File Offset: 0x00C0D3D4
 		public bool CheckCanvasSortOrder(List<EPhantomArenaInteractTag> tagList, ISkillTriggerInfo skillTriggerInfo)
 		{
 			return true;
 		}
 
-		// Token: 0x06035E88 RID: 220808 RVA: 0x00CC1B47 File Offset: 0x00CBFD47
+		// Token: 0x0602AD83 RID: 175491 RVA: 0x00C0F1D7 File Offset: 0x00C0D3D7
 		public void HandleSortOrder()
 		{
 		}
 
-		// Token: 0x06035E89 RID: 220809 RVA: 0x00CC1B49 File Offset: 0x00CBFD49
+		// Token: 0x0602AD84 RID: 175492 RVA: 0x00C0F1D9 File Offset: 0x00C0D3D9
 		public void CancelSortOrder()
 		{
 		}
 
-		// Token: 0x06035E8A RID: 220810 RVA: 0x00CC1B4B File Offset: 0x00CBFD4B
+		// Token: 0x0602AD85 RID: 175493 RVA: 0x00C0F1DB File Offset: 0x00C0D3DB
 		[NullableContext(2)]
 		public void ReceiveUiInteract(ISkillInteractMainUiInteract uiInteract)
 		{
 			this.UiInteract = uiInteract;
 		}
 
-		// Token: 0x0401C8EE RID: 116974
+		// Token: 0x04017323 RID: 95011
 		[Nullable(2)]
 		private ISkillInteractMainUiInteract UiInteract;
 
-		// Token: 0x0401C8EF RID: 116975
+		// Token: 0x04017324 RID: 95012
 		private PhantomArenaBattleProxy ViewProxy;
 
-		// Token: 0x0401C8F0 RID: 116976
+		// Token: 0x04017325 RID: 95013
 		private bool IsInSkillInteractInternal;
 
-		// Token: 0x0200B439 RID: 46137
+		// Token: 0x02009E71 RID: 40561
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x040369AE RID: 223662
+			// Token: 0x04031401 RID: 201729
 			public const int ConfirmBtn = 0;
 
-			// Token: 0x040369AF RID: 223663
+			// Token: 0x04031402 RID: 201730
 			public const int SkillItem = 1;
 
-			// Token: 0x040369B0 RID: 223664
+			// Token: 0x04031403 RID: 201731
 			public const int SkillName = 2;
 
-			// Token: 0x040369B1 RID: 223665
+			// Token: 0x04031404 RID: 201732
 			public const int SkillDesc = 3;
 
-			// Token: 0x040369B2 RID: 223666
+			// Token: 0x04031405 RID: 201733
 			public const int TipsItem = 4;
 
-			// Token: 0x040369B3 RID: 223667
+			// Token: 0x04031406 RID: 201734
 			public const int Tips = 5;
 
-			// Token: 0x040369B4 RID: 223668
+			// Token: 0x04031407 RID: 201735
 			public const int CancelBtn = 6;
 		}
 	}

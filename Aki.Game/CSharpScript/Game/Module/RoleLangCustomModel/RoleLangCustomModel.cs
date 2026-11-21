@@ -19,13 +19,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleLangCustomModel
 {
-	// Token: 0x02004D79 RID: 19833
+	// Token: 0x02003D42 RID: 15682
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class RoleLangCustomModel : ModelBase
 	{
-		// Token: 0x06033402 RID: 209922 RVA: 0x00BF3306 File Offset: 0x00BF1506
+		// Token: 0x06028270 RID: 164464 RVA: 0x00B3C52A File Offset: 0x00B3A72A
 		protected override bool OnInit()
 		{
 			this.UpdateManager = new RoleLangCustomUpdateManager();
@@ -33,20 +33,20 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			return true;
 		}
 
-		// Token: 0x06033403 RID: 209923 RVA: 0x00BF331F File Offset: 0x00BF151F
+		// Token: 0x06028271 RID: 164465 RVA: 0x00B3C543 File Offset: 0x00B3A743
 		protected override bool OnClear()
 		{
 			this.UpdateManager.Clear();
 			return true;
 		}
 
-		// Token: 0x06033404 RID: 209924 RVA: 0x00BF332D File Offset: 0x00BF152D
+		// Token: 0x06028272 RID: 164466 RVA: 0x00B3C551 File Offset: 0x00B3A751
 		public RoleLangCustomUpdateManager GetUpdateManager()
 		{
 			return this.UpdateManager;
 		}
 
-		// Token: 0x06033405 RID: 209925 RVA: 0x00BF3338 File Offset: 0x00BF1538
+		// Token: 0x06028273 RID: 164467 RVA: 0x00B3C55C File Offset: 0x00B3A75C
 		public bool CheckPackageAudioDownloading(int audioType)
 		{
 			string audioCodeById = GameSettingsManager.Instance.GetAudioCodeById(audioType);
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			return updater != null && updater.IsDownloading;
 		}
 
-		// Token: 0x06033406 RID: 209926 RVA: 0x00BF3374 File Offset: 0x00BF1574
+		// Token: 0x06028274 RID: 164468 RVA: 0x00B3C598 File Offset: 0x00B3A798
 		public List<RoleInstance> GetRoleList()
 		{
 			List<RoleInstance> list = new List<RoleInstance>();
@@ -72,25 +72,25 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			return list;
 		}
 
-		// Token: 0x06033407 RID: 209927 RVA: 0x00BF33C3 File Offset: 0x00BF15C3
+		// Token: 0x06028275 RID: 164469 RVA: 0x00B3C5E7 File Offset: 0x00B3A7E7
 		public bool GetCanSetCustom()
 		{
 			return this.CanSetCustom;
 		}
 
-		// Token: 0x06033408 RID: 209928 RVA: 0x00BF33CB File Offset: 0x00BF15CB
+		// Token: 0x06028276 RID: 164470 RVA: 0x00B3C5EF File Offset: 0x00B3A7EF
 		public bool GetStartLoadingInited()
 		{
 			return this.StartLoadingInited;
 		}
 
-		// Token: 0x06033409 RID: 209929 RVA: 0x00BF33D3 File Offset: 0x00BF15D3
+		// Token: 0x06028277 RID: 164471 RVA: 0x00B3C5F7 File Offset: 0x00B3A7F7
 		public bool NeedDeleteButton()
 		{
 			return ResourceDiffUpdaterManager.Instance.VoiceModule.IsVoiceDownloadEnable() && GameSettingsManager.Instance.IsValid(EFunction.VOICEPACKMANAGER, true);
 		}
 
-		// Token: 0x0603340A RID: 209930 RVA: 0x00BF33F8 File Offset: 0x00BF15F8
+		// Token: 0x06028278 RID: 164472 RVA: 0x00B3C61C File Offset: 0x00B3A81C
 		public unsafe void CheckAndApplyPlayerVoiceAll()
 		{
 			bool global = LocalStorage.GetGlobal<bool>(ELocalStorageGlobalKey.RoleLangCustomNeedCover, false);
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			}
 		}
 
-		// Token: 0x0603340B RID: 209931 RVA: 0x00BF3718 File Offset: 0x00BF1918
+		// Token: 0x06028279 RID: 164473 RVA: 0x00B3C93C File Offset: 0x00B3AB3C
 		private Dictionary<int, int> CleanLegacyRoleVoiceMap(Dictionary<int, int> roleMap)
 		{
 			bool flag = false;
@@ -185,13 +185,13 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			return dictionary;
 		}
 
-		// Token: 0x0603340C RID: 209932 RVA: 0x00BF37D0 File Offset: 0x00BF19D0
+		// Token: 0x0602827A RID: 164474 RVA: 0x00B3C9F4 File Offset: 0x00B3ABF4
 		public bool CheckAudioPackageValid(IRoleLangCustomLangPackageInfo info)
 		{
 			return !UKuroLauncherLibrary.NeedHotPatch() || !ResourceDiffUpdaterManager.Instance.VoiceModule.IsVoiceDownloadEnable() || this.UpdateManager.GetDownloadStatus(info) == ELanguageDownloadStatus.Done;
 		}
 
-		// Token: 0x0603340D RID: 209933 RVA: 0x00BF37FC File Offset: 0x00BF19FC
+		// Token: 0x0602827B RID: 164475 RVA: 0x00B3CA20 File Offset: 0x00B3AC20
 		public unsafe void ApplyPlayerVoiceAll()
 		{
 			string packageAudio = LanguageSystem.Instance.PackageAudio;
@@ -277,8 +277,8 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			this.SystemSettingLogReport(num, ERoleLangLogReportType.Player, needCoverAllPlayer);
 		}
 
-		// Token: 0x0603340E RID: 209934 RVA: 0x00BF3BD4 File Offset: 0x00BF1DD4
-		public void GetServerVoiceData(List<RoleVoice> serverData)
+		// Token: 0x0602827C RID: 164476 RVA: 0x00B3CDF8 File Offset: 0x00B3AFF8
+		public void GetServerVoiceData(IEnumerable<RoleVoice> serverData)
 		{
 			this.ServerVoiceData.Clear();
 			foreach (RoleVoice roleVoice in serverData)
@@ -288,7 +288,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			this.HasCheckServer = true;
 		}
 
-		// Token: 0x0603340F RID: 209935 RVA: 0x00BF3C44 File Offset: 0x00BF1E44
+		// Token: 0x0602827D RID: 164477 RVA: 0x00B3CE64 File Offset: 0x00B3B064
 		public bool CheckServerVoiceDataSame(bool fromSettingAll = false)
 		{
 			if (this.HasConfirm || (this.HasCheckServer && this.ServerVoiceData.Count == 0))
@@ -362,7 +362,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			return false;
 		}
 
-		// Token: 0x06033410 RID: 209936 RVA: 0x00BF3DFC File Offset: 0x00BF1FFC
+		// Token: 0x0602827E RID: 164478 RVA: 0x00B3D01C File Offset: 0x00B3B21C
 		public List<IRoleLangCustomLangPackageInfo> CheckNoResourceInfo()
 		{
 			List<IRoleLangCustomLangPackageInfo> list = new List<IRoleLangCustomLangPackageInfo>();
@@ -392,7 +392,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			return list;
 		}
 
-		// Token: 0x06033411 RID: 209937 RVA: 0x00BF3EFC File Offset: 0x00BF20FC
+		// Token: 0x0602827F RID: 164479 RVA: 0x00B3D11C File Offset: 0x00B3B31C
 		protected int GetRealId(int roleId)
 		{
 			int result = roleId;
@@ -403,7 +403,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			return result;
 		}
 
-		// Token: 0x06033412 RID: 209938 RVA: 0x00BF3F38 File Offset: 0x00BF2138
+		// Token: 0x06028280 RID: 164480 RVA: 0x00B3D158 File Offset: 0x00B3B358
 		protected int GetRoleIdByRealId(int realRoleId)
 		{
 			if (realRoleId != 0 && realRoleId != 1)
@@ -413,7 +413,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			return RoleConfig.Instance.GetMainRoleByGender((LoginDefine.ELoginSex)realRoleId)[0].Id;
 		}
 
-		// Token: 0x06033413 RID: 209939 RVA: 0x00BF3F6C File Offset: 0x00BF216C
+		// Token: 0x06028281 RID: 164481 RVA: 0x00B3D18C File Offset: 0x00B3B38C
 		public void OnClickedConfirmClose()
 		{
 			this.HasConfirm = true;
@@ -457,7 +457,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			}).Forget();
 		}
 
-		// Token: 0x06033414 RID: 209940 RVA: 0x00BF4118 File Offset: 0x00BF2318
+		// Token: 0x06028282 RID: 164482 RVA: 0x00B3D338 File Offset: 0x00B3B538
 		public void OnClickedConfirmConfirm()
 		{
 			this.HasConfirm = true;
@@ -497,7 +497,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			EventSystem.Instance.Emit<int>(EEventName.RoleLangCustomRefresh, -1);
 		}
 
-		// Token: 0x06033415 RID: 209941 RVA: 0x00BF4294 File Offset: 0x00BF2494
+		// Token: 0x06028283 RID: 164483 RVA: 0x00B3D4B4 File Offset: 0x00B3B6B4
 		public UniTask RequestServerVoiceData()
 		{
 			RoleLangCustomModel.<RequestServerVoiceData>d__29 <RequestServerVoiceData>d__;
@@ -508,7 +508,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			return <RequestServerVoiceData>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033416 RID: 209942 RVA: 0x00BF42D8 File Offset: 0x00BF24D8
+		// Token: 0x06028284 RID: 164484 RVA: 0x00B3D4F8 File Offset: 0x00B3B6F8
 		public void ApplyPlayerVoice(int roleId, bool cover = false)
 		{
 			if (StringUtils.IsBlank(RoleConfig.Instance.GetRoleLangStateGroup(roleId)))
@@ -550,7 +550,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			this.SetPlayerVoice(playerVoice2);
 		}
 
-		// Token: 0x06033417 RID: 209943 RVA: 0x00BF43B0 File Offset: 0x00BF25B0
+		// Token: 0x06028285 RID: 164485 RVA: 0x00B3D5D0 File Offset: 0x00B3B7D0
 		public unsafe void SetPlayerVoice(IRoleLangSetVoiceParam param)
 		{
 			int roleId = param.RoleId;
@@ -610,7 +610,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			EventSystem.Instance.Emit<int>(EEventName.RoleLangCustomRefresh, roleId);
 		}
 
-		// Token: 0x06033418 RID: 209944 RVA: 0x00BF4560 File Offset: 0x00BF2760
+		// Token: 0x06028286 RID: 164486 RVA: 0x00B3D780 File Offset: 0x00B3B980
 		public void MarkRoleNeedCustom(int roleId)
 		{
 			HashSet<int> hashSet = LocalStorage.GetPlayer<HashSet<int>>(ELocalStoragePlayerKey.RoleLangCustomRecord, null) ?? new HashSet<int>();
@@ -621,7 +621,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			serverStorageSet.Add(realId);
 		}
 
-		// Token: 0x06033419 RID: 209945 RVA: 0x00BF45B8 File Offset: 0x00BF27B8
+		// Token: 0x06028287 RID: 164487 RVA: 0x00B3D7D8 File Offset: 0x00B3B9D8
 		public void RemoveRoleMark(int roleId)
 		{
 			HashSet<int> hashSet = LocalStorage.GetPlayer<HashSet<int>>(ELocalStoragePlayerKey.RoleLangCustomRecord, null) ?? new HashSet<int>();
@@ -634,20 +634,20 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			}
 		}
 
-		// Token: 0x0603341A RID: 209946 RVA: 0x00BF4615 File Offset: 0x00BF2815
+		// Token: 0x06028288 RID: 164488 RVA: 0x00B3D835 File Offset: 0x00B3BA35
 		public bool CheckIsMark(int roleId)
 		{
 			return (LocalStorage.GetPlayer<HashSet<int>>(ELocalStoragePlayerKey.RoleLangCustomRecord, null) ?? new HashSet<int>()).Contains(this.GetRealId(roleId));
 		}
 
-		// Token: 0x0603341B RID: 209947 RVA: 0x00BF4637 File Offset: 0x00BF2837
+		// Token: 0x06028289 RID: 164489 RVA: 0x00B3D857 File Offset: 0x00B3BA57
 		public void ClearAllMark()
 		{
 			LocalStorage.SetPlayer<HashSet<int>>(ELocalStoragePlayerKey.RoleLangCustomRecord, new HashSet<int>());
 			(ServerStorageModel.Instance.Get(EClientStorageSystemIdType.RoleLangCustomRecord) as ServerStorageSet).Overwrite(new HashSet<int>());
 		}
 
-		// Token: 0x0603341C RID: 209948 RVA: 0x00BF4664 File Offset: 0x00BF2864
+		// Token: 0x0602828A RID: 164490 RVA: 0x00B3D884 File Offset: 0x00B3BA84
 		public int GetRoleLangType(int roleId)
 		{
 			if (StringUtils.IsBlank(RoleConfig.Instance.GetRoleLangStateGroup(roleId)))
@@ -664,7 +664,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			return num;
 		}
 
-		// Token: 0x0603341D RID: 209949 RVA: 0x00BF46E4 File Offset: 0x00BF28E4
+		// Token: 0x0602828B RID: 164491 RVA: 0x00B3D904 File Offset: 0x00B3BB04
 		public UniTask UploadAllPlayerVoiceLanguage()
 		{
 			RoleLangCustomModel.<UploadAllPlayerVoiceLanguage>d__37 <UploadAllPlayerVoiceLanguage>d__;
@@ -674,7 +674,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			return <UploadAllPlayerVoiceLanguage>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603341E RID: 209950 RVA: 0x00BF471F File Offset: 0x00BF291F
+		// Token: 0x0602828C RID: 164492 RVA: 0x00B3D93F File Offset: 0x00B3BB3F
 		public ELanguageDownloadStatus GetDownloadStatus(IRoleLangCustomLangPackageInfo info)
 		{
 			if (!UKuroLauncherLibrary.NeedHotPatch() || !ResourceDiffUpdaterManager.Instance.VoiceModule.IsVoiceDownloadEnable())
@@ -684,7 +684,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			return this.UpdateManager.GetDownloadStatus(info);
 		}
 
-		// Token: 0x0603341F RID: 209951 RVA: 0x00BF4747 File Offset: 0x00BF2947
+		// Token: 0x0602828D RID: 164493 RVA: 0x00B3D967 File Offset: 0x00B3BB67
 		public List<int> GetDownloadProgress(int roleId, int langType)
 		{
 			return this.UpdateManager.GetDownloadProgress(new RoleLangCustomLangPackageInfo
@@ -694,43 +694,43 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			});
 		}
 
-		// Token: 0x06033420 RID: 209952 RVA: 0x00BF4767 File Offset: 0x00BF2967
+		// Token: 0x0602828E RID: 164494 RVA: 0x00B3D987 File Offset: 0x00B3BB87
 		public void StartDownloading(IRoleLangCustomLangPackageInfo info)
 		{
 			this.UpdateManager.StartDownload(info);
 		}
 
-		// Token: 0x06033421 RID: 209953 RVA: 0x00BF4776 File Offset: 0x00BF2976
+		// Token: 0x0602828F RID: 164495 RVA: 0x00B3D996 File Offset: 0x00B3BB96
 		public void PauseDownloading(IRoleLangCustomLangPackageInfo info)
 		{
 			this.UpdateManager.PauseDownload(info);
 		}
 
-		// Token: 0x06033422 RID: 209954 RVA: 0x00BF4784 File Offset: 0x00BF2984
+		// Token: 0x06028290 RID: 164496 RVA: 0x00B3D9A4 File Offset: 0x00B3BBA4
 		public void StartDownloadingList(List<IRoleLangCustomLangPackageInfo> infoList)
 		{
 			this.UpdateManager.StartDownloadList(infoList);
 		}
 
-		// Token: 0x06033423 RID: 209955 RVA: 0x00BF4793 File Offset: 0x00BF2993
+		// Token: 0x06028291 RID: 164497 RVA: 0x00B3D9B3 File Offset: 0x00B3BBB3
 		public void PauseDownloadingList()
 		{
 			this.UpdateManager.PauseDownloadList();
 		}
 
-		// Token: 0x06033424 RID: 209956 RVA: 0x00BF47A0 File Offset: 0x00BF29A0
+		// Token: 0x06028292 RID: 164498 RVA: 0x00B3D9C0 File Offset: 0x00B3BBC0
 		public bool IsListDownloading()
 		{
 			return this.UpdateManager.IsListDownloading();
 		}
 
-		// Token: 0x06033425 RID: 209957 RVA: 0x00BF47AD File Offset: 0x00BF29AD
+		// Token: 0x06028293 RID: 164499 RVA: 0x00B3D9CD File Offset: 0x00B3BBCD
 		public void DeletePackageList(List<IRoleLangCustomLangPackageInfo> infoList)
 		{
 			this.UpdateManager.DeletePackageList(infoList);
 		}
 
-		// Token: 0x06033426 RID: 209958 RVA: 0x00BF47BC File Offset: 0x00BF29BC
+		// Token: 0x06028294 RID: 164500 RVA: 0x00B3D9DC File Offset: 0x00B3BBDC
 		public bool CheckSpaceEnough(IRoleLangCustomLangPackageInfo info)
 		{
 			string packageName = this.UpdateManager.GetPackageName(info);
@@ -749,7 +749,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			return num2 >= num3 + 10485760L;
 		}
 
-		// Token: 0x06033427 RID: 209959 RVA: 0x00BF4818 File Offset: 0x00BF2A18
+		// Token: 0x06028295 RID: 164501 RVA: 0x00B3DA38 File Offset: 0x00B3BC38
 		public int PlayVoiceOnSetVoice(int roleId)
 		{
 			RoleDataBase roleDataById = RoleModel.Instance.GetRoleDataById(roleId, true);
@@ -757,7 +757,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			return AudioSystem.Instance.PostEvent(roleConfig.Value.JoinTeamEvent);
 		}
 
-		// Token: 0x06033428 RID: 209960 RVA: 0x00BF485C File Offset: 0x00BF2A5C
+		// Token: 0x06028296 RID: 164502 RVA: 0x00B3DA7C File Offset: 0x00B3BC7C
 		public void SystemSettingLogReport(int lang, ERoleLangLogReportType type, bool isAll)
 		{
 			RoleLangCustomSettingEvent roleLangCustomSettingEvent = new RoleLangCustomSettingEvent();
@@ -767,8 +767,8 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			LogReportController.Instance.LogReport(roleLangCustomSettingEvent);
 		}
 
-		// Token: 0x17007E7F RID: 32383
-		// (get) Token: 0x06033429 RID: 209961 RVA: 0x00BF4895 File Offset: 0x00BF2A95
+		// Token: 0x1700522F RID: 21039
+		// (get) Token: 0x06028297 RID: 164503 RVA: 0x00B3DAB5 File Offset: 0x00B3BCB5
 		public static RoleLangCustomModel Instance
 		{
 			get
@@ -777,7 +777,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			}
 		}
 
-		// Token: 0x0603342A RID: 209962 RVA: 0x00BF489C File Offset: 0x00BF2A9C
+		// Token: 0x06028298 RID: 164504 RVA: 0x00B3DABC File Offset: 0x00B3BCBC
 		public static RoleLangCustomModel GetOrCreateInstance()
 		{
 			if (RoleLangCustomModel._Instance == null)
@@ -787,7 +787,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			return RoleLangCustomModel._Instance;
 		}
 
-		// Token: 0x0603342B RID: 209963 RVA: 0x00BF48B0 File Offset: 0x00BF2AB0
+		// Token: 0x06028299 RID: 164505 RVA: 0x00B3DAD0 File Offset: 0x00B3BCD0
 		public static bool CreateInstance()
 		{
 			if (RoleLangCustomModel._Instance != null)
@@ -798,54 +798,54 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel
 			return true;
 		}
 
-		// Token: 0x0603342C RID: 209964 RVA: 0x00BF48C6 File Offset: 0x00BF2AC6
+		// Token: 0x0602829A RID: 164506 RVA: 0x00B3DAE6 File Offset: 0x00B3BCE6
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603342D RID: 209965 RVA: 0x00BF48C8 File Offset: 0x00BF2AC8
+		// Token: 0x0602829B RID: 164507 RVA: 0x00B3DAE8 File Offset: 0x00B3BCE8
 		public static void ResetStaticDefaultValue()
 		{
 			RoleLangCustomModel._Instance = null;
 		}
 
-		// Token: 0x0603342E RID: 209966 RVA: 0x00BF48D0 File Offset: 0x00BF2AD0
+		// Token: 0x0602829C RID: 164508 RVA: 0x00B3DAF0 File Offset: 0x00B3BCF0
 		static RoleLangCustomModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(RoleLangCustomModel.CreateStaticDefaultValue), new Action(RoleLangCustomModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401B339 RID: 111417
+		// Token: 0x04015D0B RID: 89355
 		public int RoleViewRoleId;
 
-		// Token: 0x0401B33A RID: 111418
+		// Token: 0x04015D0C RID: 89356
 		public bool CanSetCustom;
 
-		// Token: 0x0401B33B RID: 111419
+		// Token: 0x04015D0D RID: 89357
 		public bool NeedCoverAllPlayer;
 
-		// Token: 0x0401B33C RID: 111420
+		// Token: 0x04015D0E RID: 89358
 		private bool StartLoadingInited;
 
-		// Token: 0x0401B33D RID: 111421
+		// Token: 0x04015D0F RID: 89359
 		private readonly Dictionary<int, int> ServerVoiceData = new Dictionary<int, int>();
 
-		// Token: 0x0401B33E RID: 111422
+		// Token: 0x04015D10 RID: 89360
 		private bool HasCheckServer;
 
-		// Token: 0x0401B33F RID: 111423
+		// Token: 0x04015D11 RID: 89361
 		private bool HasConfirm;
 
-		// Token: 0x0401B340 RID: 111424
+		// Token: 0x04015D12 RID: 89362
 		private RoleLangCustomUpdateManager UpdateManager;
 
-		// Token: 0x0401B341 RID: 111425
+		// Token: 0x04015D13 RID: 89363
 		private readonly UiMask ConfirmViewMask = new UiMask();
 
-		// Token: 0x0401B342 RID: 111426
+		// Token: 0x04015D14 RID: 89364
 		private const string ConfirmMaskTag = "RoleLangNetConfirmPop";
 
-		// Token: 0x0401B343 RID: 111427
+		// Token: 0x04015D15 RID: 89365
 		[Nullable(2)]
 		private static RoleLangCustomModel _Instance;
 	}

@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200154A RID: 5450
+// Token: 0x02000A02 RID: 2562
 public class ActivityDescriptionTypeB : UiPanelBase
 {
-	// Token: 0x06009BC2 RID: 39874 RVA: 0x0021B900 File Offset: 0x00219B00
+	// Token: 0x06006FA0 RID: 28576 RVA: 0x002256B0 File Offset: 0x002238B0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -20,30 +20,30 @@ public class ActivityDescriptionTypeB : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009BC3 RID: 39875 RVA: 0x0021B948 File Offset: 0x00219B48
+	// Token: 0x06006FA1 RID: 28577 RVA: 0x002256F8 File Offset: 0x002238F8
 	[NullableContext(1)]
 	public void SetContentByTextId(string textId, params string[] args)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(0), textId, args);
 	}
 
-	// Token: 0x06009BC4 RID: 39876 RVA: 0x0021B95D File Offset: 0x00219B5D
+	// Token: 0x06006FA2 RID: 28578 RVA: 0x0022570D File Offset: 0x0022390D
 	[NullableContext(1)]
 	public void SetContentByText(string text)
 	{
 		base.GetText(0).SetText(text, true);
 	}
 
-	// Token: 0x06009BC5 RID: 39877 RVA: 0x0021B96D File Offset: 0x00219B6D
+	// Token: 0x06006FA3 RID: 28579 RVA: 0x0022571D File Offset: 0x0022391D
 	public void SetContentVisible(bool bVisible)
 	{
 		base.GetText(0).SetUIActive(bVisible);
 	}
 
-	// Token: 0x02007B7F RID: 31615
+	// Token: 0x02006D0A RID: 27914
 	private class EComponents
 	{
-		// Token: 0x040289A4 RID: 166308
+		// Token: 0x04023CDF RID: 146655
 		public const int TextContent = 0;
 	}
 }

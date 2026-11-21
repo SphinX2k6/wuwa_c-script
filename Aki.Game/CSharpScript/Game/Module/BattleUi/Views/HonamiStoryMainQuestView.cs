@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D58 RID: 23896
+	// Token: 0x02004D3A RID: 19770
 	public class HonamiStoryMainQuestView : HonamiStoryViewBase
 	{
-		// Token: 0x0603CAA8 RID: 248488 RVA: 0x00E8FD04 File Offset: 0x00E8DF04
+		// Token: 0x06031A01 RID: 203265 RVA: 0x00DE04B8 File Offset: 0x00DDE6B8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603CAA9 RID: 248489 RVA: 0x00E8FE58 File Offset: 0x00E8E058
+		// Token: 0x06031A02 RID: 203266 RVA: 0x00DE060C File Offset: 0x00DDE80C
 		protected override void OnInitData()
 		{
 			this.HpTextType = 2;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.HideFunctionType = new EFunctionType?(EFunctionType.HonamiStoryLifeSupport);
 		}
 
-		// Token: 0x0603CAAA RID: 248490 RVA: 0x00E8FEA5 File Offset: 0x00E8E0A5
+		// Token: 0x06031A03 RID: 203267 RVA: 0x00DE0659 File Offset: 0x00DDE859
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -55,14 +55,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetSlider(6).SetValue(this.DangerPercent, true);
 		}
 
-		// Token: 0x0603CAAB RID: 248491 RVA: 0x00E8FED3 File Offset: 0x00E8E0D3
+		// Token: 0x06031A04 RID: 203268 RVA: 0x00DE0687 File Offset: 0x00DDE887
 		protected override void OnRefreshAttribute(float percent, EHpStateType state)
 		{
 			base.GetSprite(0).SetFillAmount(percent);
 			base.GetSprite(1).SetFillAmount(percent);
 		}
 
-		// Token: 0x0603CAAC RID: 248492 RVA: 0x00E8FEF0 File Offset: 0x00E8E0F0
+		// Token: 0x06031A05 RID: 203269 RVA: 0x00DE06A4 File Offset: 0x00DDE8A4
 		protected override void OnRefreshState(EHpStateType state)
 		{
 			bool flag = state == EHpStateType.Normal;
@@ -73,26 +73,26 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetSprite(1).SetColor(color);
 		}
 
-		// Token: 0x0200C009 RID: 49161
+		// Token: 0x0200AA0F RID: 43535
 		private enum EComponentType
 		{
-			// Token: 0x04039F27 RID: 237351
+			// Token: 0x040348E9 RID: 215273
 			BarLeft,
-			// Token: 0x04039F28 RID: 237352
+			// Token: 0x040348EA RID: 215274
 			BarRight,
-			// Token: 0x04039F29 RID: 237353
+			// Token: 0x040348EB RID: 215275
 			HpText,
-			// Token: 0x04039F2A RID: 237354
+			// Token: 0x040348EC RID: 215276
 			NormalItem,
-			// Token: 0x04039F2B RID: 237355
+			// Token: 0x040348ED RID: 215277
 			DangerItem,
-			// Token: 0x04039F2C RID: 237356
+			// Token: 0x040348EE RID: 215278
 			SliderLeft,
-			// Token: 0x04039F2D RID: 237357
+			// Token: 0x040348EF RID: 215279
 			SliderRight,
-			// Token: 0x04039F2E RID: 237358
+			// Token: 0x040348F0 RID: 215280
 			InTween,
-			// Token: 0x04039F2F RID: 237359
+			// Token: 0x040348F1 RID: 215281
 			OutTween
 		}
 	}

@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065AA RID: 26026
+	// Token: 0x02005528 RID: 21800
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DockyardInteractPanelModel
 	{
-		// Token: 0x1700957C RID: 38268
-		// (get) Token: 0x0604141A RID: 267290 RVA: 0x00FD0538 File Offset: 0x00FCE738
+		// Token: 0x170068DE RID: 26846
+		// (get) Token: 0x060360DF RID: 221407 RVA: 0x00F1753C File Offset: 0x00F1573C
 		[Nullable(2)]
 		public DockyardItemBlock InSelectItemBlock
 		{
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x0604141B RID: 267291 RVA: 0x00FD054C File Offset: 0x00FCE74C
+		// Token: 0x060360E0 RID: 221408 RVA: 0x00F17550 File Offset: 0x00F15750
 		private void InitGridData()
 		{
 			for (int i = 0; i < 3; i++)
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x0604141C RID: 267292 RVA: 0x00FD05C7 File Offset: 0x00FCE7C7
+		// Token: 0x060360E1 RID: 221409 RVA: 0x00F175CB File Offset: 0x00F157CB
 		private DockyardInteractItemBlockData CreateItemBlock(DockyardItemBlockOriginalData data, int rowIndex, int colIndex, int rotate)
 		{
 			return new DockyardInteractItemBlockData(data)
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			};
 		}
 
-		// Token: 0x0604141D RID: 267293 RVA: 0x00FD05F0 File Offset: 0x00FCE7F0
+		// Token: 0x060360E2 RID: 221410 RVA: 0x00F175F4 File Offset: 0x00F157F4
 		private void InitShowItemMap()
 		{
 			Dictionary<int, DockyardItemBlockOriginalData> dataMapByInteract = FishingModel.Instance.GetDataMapByInteract(this.ConfigId);
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x0604141E RID: 267294 RVA: 0x00FD0690 File Offset: 0x00FCE890
+		// Token: 0x060360E3 RID: 221411 RVA: 0x00F17694 File Offset: 0x00F15894
 		public void InitPanel(DockyardInteractPanel panel)
 		{
 			this.Panel = panel;
@@ -78,31 +78,31 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.InitGridData();
 		}
 
-		// Token: 0x0604141F RID: 267295 RVA: 0x00FD06A5 File Offset: 0x00FCE8A5
+		// Token: 0x060360E4 RID: 221412 RVA: 0x00F176A9 File Offset: 0x00F158A9
 		public void RegisterViewModel(DockyardInteractViewModel viewModel)
 		{
 			this.ViewModel = viewModel;
 		}
 
-		// Token: 0x06041420 RID: 267296 RVA: 0x00FD06AE File Offset: 0x00FCE8AE
+		// Token: 0x060360E5 RID: 221413 RVA: 0x00F176B2 File Offset: 0x00F158B2
 		public void RegisterBackpackPanel(DockyardBackpackPanelModelBase backpackPanel)
 		{
 			this.BackpackPanelModel = (DockyardInteractBackpackPanelModel)backpackPanel;
 		}
 
-		// Token: 0x06041421 RID: 267297 RVA: 0x00FD06BC File Offset: 0x00FCE8BC
+		// Token: 0x060360E6 RID: 221414 RVA: 0x00F176C0 File Offset: 0x00F158C0
 		public DockyardInteractGridData GetInteractGridData(IPanelPos pos)
 		{
 			return this.GridDataMap[pos];
 		}
 
-		// Token: 0x06041422 RID: 267298 RVA: 0x00FD06CA File Offset: 0x00FCE8CA
+		// Token: 0x060360E7 RID: 221415 RVA: 0x00F176CE File Offset: 0x00F158CE
 		public IPanelPos GetInteractPosByPos(int rowIndex, int colIndex)
 		{
 			return this.PosDataDoublyList[rowIndex][colIndex];
 		}
 
-		// Token: 0x06041423 RID: 267299 RVA: 0x00FD06E0 File Offset: 0x00FCE8E0
+		// Token: 0x060360E8 RID: 221416 RVA: 0x00F176E4 File Offset: 0x00F158E4
 		public void Tick(float deltaTime)
 		{
 			if (!this.BackpackPanelModel.IsOutOfRange)
@@ -129,19 +129,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.LastCanTickState = this.BackpackPanelModel.IsOutOfRange;
 		}
 
-		// Token: 0x06041424 RID: 267300 RVA: 0x00FD0788 File Offset: 0x00FCE988
+		// Token: 0x060360E9 RID: 221417 RVA: 0x00F1778C File Offset: 0x00F1598C
 		public bool CanConfirm()
 		{
 			return this.IsAllMatch;
 		}
 
-		// Token: 0x06041425 RID: 267301 RVA: 0x00FD0790 File Offset: 0x00FCE990
+		// Token: 0x060360EA RID: 221418 RVA: 0x00F17794 File Offset: 0x00F15994
 		public bool IsOverlap()
 		{
 			return this.IsOverlapAnother;
 		}
 
-		// Token: 0x06041426 RID: 267302 RVA: 0x00FD0798 File Offset: 0x00FCE998
+		// Token: 0x060360EB RID: 221419 RVA: 0x00F1779C File Offset: 0x00F1599C
 		public void DragClick(DockyardItemBlockOriginalData oldData, IPanelPos startPos)
 		{
 			if (!this.CanClick(oldData.IncId))
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.BackpackPanelModel.WareHouseItemDragBegin(dataByInteract);
 		}
 
-		// Token: 0x06041427 RID: 267303 RVA: 0x00FD080C File Offset: 0x00FCEA0C
+		// Token: 0x060360EC RID: 221420 RVA: 0x00F17810 File Offset: 0x00F15A10
 		public void DragBegin(DockyardItemBlockOriginalData oldData, IPanelPos startPos)
 		{
 			if (!this.CanClick(oldData.IncId))
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.BackpackPanelModel.WareHouseItemDragBegin(dataByInteract);
 		}
 
-		// Token: 0x06041428 RID: 267304 RVA: 0x00FD0890 File Offset: 0x00FCEA90
+		// Token: 0x060360ED RID: 221421 RVA: 0x00F17894 File Offset: 0x00F15A94
 		public void ChangeShowItemData()
 		{
 			DockyardItemBlockData data = this.InSelectItemBlock.GetData();
@@ -192,13 +192,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x06041429 RID: 267305 RVA: 0x00FD0935 File Offset: 0x00FCEB35
+		// Token: 0x060360EE RID: 221422 RVA: 0x00F17939 File Offset: 0x00F15B39
 		public void ShowScrollingTips()
 		{
 			ScrollingTipsController.Instance.ShowTipsByTextId("Fishing_MatchFail", Array.Empty<object>());
 		}
 
-		// Token: 0x0604142A RID: 267306 RVA: 0x00FD094C File Offset: 0x00FCEB4C
+		// Token: 0x060360EF RID: 221423 RVA: 0x00F17950 File Offset: 0x00F15B50
 		[NullableContext(2)]
 		private DockyardInteractItemBlockData GetOldData(int itemId, int rotateType)
 		{
@@ -212,68 +212,68 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return null;
 		}
 
-		// Token: 0x0604142B RID: 267307 RVA: 0x00FD09EC File Offset: 0x00FCEBEC
+		// Token: 0x060360F0 RID: 221424 RVA: 0x00F179F0 File Offset: 0x00F15BF0
 		private bool CanClick(int id)
 		{
 			return this.BackpackPanelModel.IsWareHouseItemCanClick(id);
 		}
 
-		// Token: 0x04021F88 RID: 139144
+		// Token: 0x0401C8B9 RID: 116921
 		public int ConfigId;
 
-		// Token: 0x04021F89 RID: 139145
+		// Token: 0x0401C8BA RID: 116922
 		public DockyardInteractPanel Panel;
 
-		// Token: 0x04021F8A RID: 139146
+		// Token: 0x0401C8BB RID: 116923
 		public bool IsOutOfRange = true;
 
-		// Token: 0x04021F8B RID: 139147
+		// Token: 0x0401C8BC RID: 116924
 		public bool IsAllMatch;
 
-		// Token: 0x04021F8C RID: 139148
+		// Token: 0x0401C8BD RID: 116925
 		public bool IsOverlapAnother;
 
-		// Token: 0x04021F8D RID: 139149
+		// Token: 0x0401C8BE RID: 116926
 		private readonly List<List<IPanelPos>> PosDataDoublyList = new List<List<IPanelPos>>();
 
-		// Token: 0x04021F8E RID: 139150
+		// Token: 0x0401C8BF RID: 116927
 		public readonly List<IPanelPos> PosDataList = new List<IPanelPos>();
 
-		// Token: 0x04021F8F RID: 139151
+		// Token: 0x0401C8C0 RID: 116928
 		private readonly Dictionary<IPanelPos, DockyardInteractGridData> GridDataMap = new Dictionary<IPanelPos, DockyardInteractGridData>();
 
-		// Token: 0x04021F90 RID: 139152
+		// Token: 0x0401C8C1 RID: 116929
 		public bool LastCanTickState;
 
-		// Token: 0x04021F91 RID: 139153
+		// Token: 0x0401C8C2 RID: 116930
 		[Nullable(2)]
 		protected DockyardInteractViewModel ViewModel;
 
-		// Token: 0x04021F92 RID: 139154
+		// Token: 0x0401C8C3 RID: 116931
 		public DockyardInteractBackpackPanelModel BackpackPanelModel;
 
-		// Token: 0x04021F93 RID: 139155
+		// Token: 0x0401C8C4 RID: 116932
 		public Dictionary<int, DockyardInteractItemBlockData> ShowItemMap = new Dictionary<int, DockyardInteractItemBlockData>();
 
-		// Token: 0x04021F94 RID: 139156
+		// Token: 0x0401C8C5 RID: 116933
 		public IPanelPos MatchPos = new DockyardInteractPanelModel.PanelPos
 		{
 			RowIndex = -1,
 			ColIndex = -1
 		};
 
-		// Token: 0x0200C7AA RID: 51114
+		// Token: 0x0200B18F RID: 45455
 		[NullableContext(0)]
 		private class PanelPos : IPanelPos
 		{
-			// Token: 0x1700A28E RID: 41614
-			// (get) Token: 0x06050FE1 RID: 331745 RVA: 0x015E5E86 File Offset: 0x015E4086
-			// (set) Token: 0x06050FE2 RID: 331746 RVA: 0x015E5E8E File Offset: 0x015E408E
+			// Token: 0x17007A2B RID: 31275
+			// (get) Token: 0x060474B6 RID: 292022 RVA: 0x0159DD1E File Offset: 0x0159BF1E
+			// (set) Token: 0x060474B7 RID: 292023 RVA: 0x0159DD26 File Offset: 0x0159BF26
 			public int RowIndex { get; set; }
 
-			// Token: 0x1700A28F RID: 41615
-			// (get) Token: 0x06050FE3 RID: 331747 RVA: 0x015E5E97 File Offset: 0x015E4097
-			// (set) Token: 0x06050FE4 RID: 331748 RVA: 0x015E5E9F File Offset: 0x015E409F
+			// Token: 0x17007A2C RID: 31276
+			// (get) Token: 0x060474B8 RID: 292024 RVA: 0x0159DD2F File Offset: 0x0159BF2F
+			// (set) Token: 0x060474B9 RID: 292025 RVA: 0x0159DD37 File Offset: 0x0159BF37
 			public int ColIndex { get; set; }
 		}
 	}

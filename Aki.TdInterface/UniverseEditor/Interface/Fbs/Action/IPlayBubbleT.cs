@@ -2,45 +2,45 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006CD6 RID: 27862
+	// Token: 0x02007449 RID: 29769
 	public class IPlayBubbleT
 	{
-		// Token: 0x1700CF72 RID: 53106
-		// (get) Token: 0x060311C3 RID: 201155 RVA: 0x006A9FC5 File Offset: 0x006A81C5
-		// (set) Token: 0x060311C4 RID: 201156 RVA: 0x006A9FCD File Offset: 0x006A81CD
+		// Token: 0x1700DAAC RID: 55980
+		// (get) Token: 0x06034188 RID: 213384 RVA: 0x00705081 File Offset: 0x00703281
+		// (set) Token: 0x06034189 RID: 213385 RVA: 0x00705089 File Offset: 0x00703289
 		public int EntityId { get; set; }
 
-		// Token: 0x1700CF73 RID: 53107
-		// (get) Token: 0x060311C5 RID: 201157 RVA: 0x006A9FD6 File Offset: 0x006A81D6
-		// (set) Token: 0x060311C6 RID: 201158 RVA: 0x006A9FDE File Offset: 0x006A81DE
+		// Token: 0x1700DAAD RID: 55981
+		// (get) Token: 0x0603418A RID: 213386 RVA: 0x00705092 File Offset: 0x00703292
+		// (set) Token: 0x0603418B RID: 213387 RVA: 0x0070509A File Offset: 0x0070329A
 		public IBubbleIndexT Flow { get; set; }
 
-		// Token: 0x1700CF74 RID: 53108
-		// (get) Token: 0x060311C7 RID: 201159 RVA: 0x006A9FE7 File Offset: 0x006A81E7
-		// (set) Token: 0x060311C8 RID: 201160 RVA: 0x006A9FEF File Offset: 0x006A81EF
+		// Token: 0x1700DAAE RID: 55982
+		// (get) Token: 0x0603418C RID: 213388 RVA: 0x007050A3 File Offset: 0x007032A3
+		// (set) Token: 0x0603418D RID: 213389 RVA: 0x007050AB File Offset: 0x007032AB
 		public bool IsRangeFollowEntity { get; set; }
 
-		// Token: 0x1700CF75 RID: 53109
-		// (get) Token: 0x060311C9 RID: 201161 RVA: 0x006A9FF8 File Offset: 0x006A81F8
-		// (set) Token: 0x060311CA RID: 201162 RVA: 0x006AA000 File Offset: 0x006A8200
+		// Token: 0x1700DAAF RID: 55983
+		// (get) Token: 0x0603418E RID: 213390 RVA: 0x007050B4 File Offset: 0x007032B4
+		// (set) Token: 0x0603418F RID: 213391 RVA: 0x007050BC File Offset: 0x007032BC
 		public bool IsAudioOccludedByScene { get; set; }
 
-		// Token: 0x1700CF76 RID: 53110
-		// (get) Token: 0x060311CB RID: 201163 RVA: 0x006AA009 File Offset: 0x006A8209
-		// (set) Token: 0x060311CC RID: 201164 RVA: 0x006AA011 File Offset: 0x006A8211
+		// Token: 0x1700DAB0 RID: 55984
+		// (get) Token: 0x06034190 RID: 213392 RVA: 0x007050C5 File Offset: 0x007032C5
+		// (set) Token: 0x06034191 RID: 213393 RVA: 0x007050CD File Offset: 0x007032CD
 		public IBubbleRangeCylinderConfigT TriggerCylinderConfig { get; set; }
 
-		// Token: 0x1700CF77 RID: 53111
-		// (get) Token: 0x060311CD RID: 201165 RVA: 0x006AA01A File Offset: 0x006A821A
-		// (set) Token: 0x060311CE RID: 201166 RVA: 0x006AA022 File Offset: 0x006A8222
+		// Token: 0x1700DAB1 RID: 55985
+		// (get) Token: 0x06034192 RID: 213394 RVA: 0x007050D6 File Offset: 0x007032D6
+		// (set) Token: 0x06034193 RID: 213395 RVA: 0x007050DE File Offset: 0x007032DE
 		public bool IsPlayMouthAnim { get; set; }
 
-		// Token: 0x1700CF78 RID: 53112
-		// (get) Token: 0x060311CF RID: 201167 RVA: 0x006AA02B File Offset: 0x006A822B
-		// (set) Token: 0x060311D0 RID: 201168 RVA: 0x006AA033 File Offset: 0x006A8233
+		// Token: 0x1700DAB2 RID: 55986
+		// (get) Token: 0x06034194 RID: 213396 RVA: 0x007050E7 File Offset: 0x007032E7
+		// (set) Token: 0x06034195 RID: 213397 RVA: 0x007050EF File Offset: 0x007032EF
 		public byte NullMask { get; set; }
 
-		// Token: 0x060311D1 RID: 201169 RVA: 0x006AA03C File Offset: 0x006A823C
+		// Token: 0x06034196 RID: 213398 RVA: 0x007050F8 File Offset: 0x007032F8
 		public IPlayBubbleT()
 		{
 			this.EntityId = 0;

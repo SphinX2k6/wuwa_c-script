@@ -2,29 +2,29 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002A9A RID: 10906
+// Token: 0x02002016 RID: 8214
 [NullableContext(2)]
 [Nullable(0)]
 public class SubPackageDownLoadMobileClearData : ISubPackageDownLoadMobileClearData
 {
-	// Token: 0x17001E3D RID: 7741
-	// (get) Token: 0x06016B33 RID: 92979 RVA: 0x005C091E File Offset: 0x005BEB1E
-	// (set) Token: 0x06016B34 RID: 92980 RVA: 0x005C0926 File Offset: 0x005BEB26
+	// Token: 0x17001E95 RID: 7829
+	// (get) Token: 0x0601455D RID: 83293 RVA: 0x005ECF2E File Offset: 0x005EB12E
+	// (set) Token: 0x0601455E RID: 83294 RVA: 0x005ECF36 File Offset: 0x005EB136
 	public int TitleId { get; set; }
 
-	// Token: 0x17001E3E RID: 7742
-	// (get) Token: 0x06016B35 RID: 92981 RVA: 0x005C092F File Offset: 0x005BEB2F
-	// (set) Token: 0x06016B36 RID: 92982 RVA: 0x005C0937 File Offset: 0x005BEB37
+	// Token: 0x17001E96 RID: 7830
+	// (get) Token: 0x0601455F RID: 83295 RVA: 0x005ECF3F File Offset: 0x005EB13F
+	// (set) Token: 0x06014560 RID: 83296 RVA: 0x005ECF47 File Offset: 0x005EB147
 	public List<int> SceneIdList { get; set; } = new List<int>();
 
-	// Token: 0x17001E3F RID: 7743
-	// (get) Token: 0x06016B37 RID: 92983 RVA: 0x005C0940 File Offset: 0x005BEB40
-	// (set) Token: 0x06016B38 RID: 92984 RVA: 0x005C0948 File Offset: 0x005BEB48
+	// Token: 0x17001E97 RID: 7831
+	// (get) Token: 0x06014561 RID: 83297 RVA: 0x005ECF50 File Offset: 0x005EB150
+	// (set) Token: 0x06014562 RID: 83298 RVA: 0x005ECF58 File Offset: 0x005EB158
 	public bool? HaveVideoCanClear { get; set; }
 
-	// Token: 0x17001E40 RID: 7744
-	// (get) Token: 0x06016B39 RID: 92985 RVA: 0x005C0951 File Offset: 0x005BEB51
-	// (set) Token: 0x06016B3A RID: 92986 RVA: 0x005C0959 File Offset: 0x005BEB59
+	// Token: 0x17001E98 RID: 7832
+	// (get) Token: 0x06014563 RID: 83299 RVA: 0x005ECF61 File Offset: 0x005EB161
+	// (set) Token: 0x06014564 RID: 83300 RVA: 0x005ECF69 File Offset: 0x005EB169
 	[Nullable(new byte[]
 	{
 		2,

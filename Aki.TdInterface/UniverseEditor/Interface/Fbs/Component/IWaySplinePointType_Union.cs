@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005B62 RID: 23394
+	// Token: 0x02006178 RID: 24952
 	public enum IWaySplinePointType_Union : byte
 	{
-		// Token: 0x0400F2AD RID: 62125
+		// Token: 0x0400FFB3 RID: 65459
 		NONE,
-		// Token: 0x0400F2AE RID: 62126
+		// Token: 0x0400FFB4 RID: 65460
 		IWaySplinePointType,
-		// Token: 0x0400F2AF RID: 62127
+		// Token: 0x0400FFB5 RID: 65461
 		IWaySplineCommonPoint,
-		// Token: 0x0400F2B0 RID: 62128
+		// Token: 0x0400FFB6 RID: 65462
 		IWaySplineStartPoint
 	}
 }

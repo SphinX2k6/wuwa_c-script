@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x02004600 RID: 17920
+	// Token: 0x02004A68 RID: 19048
 	public class TDartSkillConditionUnion
 	{
-		// Token: 0x17007F5F RID: 32607
-		// (get) Token: 0x0601B251 RID: 111185 RVA: 0x003DE2EC File Offset: 0x003DC4EC
-		// (set) Token: 0x0601B252 RID: 111186 RVA: 0x003DE2F4 File Offset: 0x003DC4F4
+		// Token: 0x170085A0 RID: 34208
+		// (get) Token: 0x0601CA26 RID: 117286 RVA: 0x0040A588 File Offset: 0x00408788
+		// (set) Token: 0x0601CA27 RID: 117287 RVA: 0x0040A590 File Offset: 0x00408790
 		public TDartSkillCondition Type { get; set; }
 
-		// Token: 0x17007F60 RID: 32608
-		// (get) Token: 0x0601B253 RID: 111187 RVA: 0x003DE2FD File Offset: 0x003DC4FD
-		// (set) Token: 0x0601B254 RID: 111188 RVA: 0x003DE305 File Offset: 0x003DC505
+		// Token: 0x170085A1 RID: 34209
+		// (get) Token: 0x0601CA28 RID: 117288 RVA: 0x0040A599 File Offset: 0x00408799
+		// (set) Token: 0x0601CA29 RID: 117289 RVA: 0x0040A5A1 File Offset: 0x004087A1
 		public object Value { get; set; }
 
-		// Token: 0x0601B255 RID: 111189 RVA: 0x003DE30E File Offset: 0x003DC50E
+		// Token: 0x0601CA2A RID: 117290 RVA: 0x0040A5AA File Offset: 0x004087AA
 		public TDartSkillConditionUnion()
 		{
 			this.Type = TDartSkillCondition.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601B256 RID: 111190 RVA: 0x003DE324 File Offset: 0x003DC524
+		// Token: 0x0601CA2B RID: 117291 RVA: 0x0040A5C0 File Offset: 0x004087C0
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601B257 RID: 111191 RVA: 0x003DE336 File Offset: 0x003DC536
+		// Token: 0x0601CA2C RID: 117292 RVA: 0x0040A5D2 File Offset: 0x004087D2
 		public IBehindScoreGeConditionT AsIBehindScoreGeCondition()
 		{
 			return this.As<IBehindScoreGeConditionT>();
 		}
 
-		// Token: 0x0601B258 RID: 111192 RVA: 0x003DE33E File Offset: 0x003DC53E
+		// Token: 0x0601CA2D RID: 117293 RVA: 0x0040A5DA File Offset: 0x004087DA
 		public static TDartSkillConditionUnion FromIBehindScoreGeCondition(IBehindScoreGeConditionT _ibehindscoregecondition)
 		{
 			return new TDartSkillConditionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601B259 RID: 111193 RVA: 0x003DE353 File Offset: 0x003DC553
+		// Token: 0x0601CA2E RID: 117294 RVA: 0x0040A5EF File Offset: 0x004087EF
 		public IBehindScoreLeConditionT AsIBehindScoreLeCondition()
 		{
 			return this.As<IBehindScoreLeConditionT>();
 		}
 
-		// Token: 0x0601B25A RID: 111194 RVA: 0x003DE35B File Offset: 0x003DC55B
+		// Token: 0x0601CA2F RID: 117295 RVA: 0x0040A5F7 File Offset: 0x004087F7
 		public static TDartSkillConditionUnion FromIBehindScoreLeCondition(IBehindScoreLeConditionT _ibehindscorelecondition)
 		{
 			return new TDartSkillConditionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601B25B RID: 111195 RVA: 0x003DE370 File Offset: 0x003DC570
+		// Token: 0x0601CA30 RID: 117296 RVA: 0x0040A60C File Offset: 0x0040880C
 		public IFirstRoundsConditionT AsIFirstRoundsCondition()
 		{
 			return this.As<IFirstRoundsConditionT>();
 		}
 
-		// Token: 0x0601B25C RID: 111196 RVA: 0x003DE378 File Offset: 0x003DC578
+		// Token: 0x0601CA31 RID: 117297 RVA: 0x0040A614 File Offset: 0x00408814
 		public static TDartSkillConditionUnion FromIFirstRoundsCondition(IFirstRoundsConditionT _ifirstroundscondition)
 		{
 			return new TDartSkillConditionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601B25D RID: 111197 RVA: 0x003DE38D File Offset: 0x003DC58D
+		// Token: 0x0601CA32 RID: 117298 RVA: 0x0040A629 File Offset: 0x00408829
 		public IRemainScoreCanWinConditionT AsIRemainScoreCanWinCondition()
 		{
 			return this.As<IRemainScoreCanWinConditionT>();
 		}
 
-		// Token: 0x0601B25E RID: 111198 RVA: 0x003DE395 File Offset: 0x003DC595
+		// Token: 0x0601CA33 RID: 117299 RVA: 0x0040A631 File Offset: 0x00408831
 		public static TDartSkillConditionUnion FromIRemainScoreCanWinCondition(IRemainScoreCanWinConditionT _iremainscorecanwincondition)
 		{
 			return new TDartSkillConditionUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601B25F RID: 111199 RVA: 0x003DE3AA File Offset: 0x003DC5AA
+		// Token: 0x0601CA34 RID: 117300 RVA: 0x0040A646 File Offset: 0x00408846
 		public IRemainScoreGeConditionT AsIRemainScoreGeCondition()
 		{
 			return this.As<IRemainScoreGeConditionT>();
 		}
 
-		// Token: 0x0601B260 RID: 111200 RVA: 0x003DE3B2 File Offset: 0x003DC5B2
+		// Token: 0x0601CA35 RID: 117301 RVA: 0x0040A64E File Offset: 0x0040884E
 		public static TDartSkillConditionUnion FromIRemainScoreGeCondition(IRemainScoreGeConditionT _iremainscoregecondition)
 		{
 			return new TDartSkillConditionUnion
@@ -109,13 +109,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601B261 RID: 111201 RVA: 0x003DE3C7 File Offset: 0x003DC5C7
+		// Token: 0x0601CA36 RID: 117302 RVA: 0x0040A663 File Offset: 0x00408863
 		public IRemainScoreLeConditionT AsIRemainScoreLeCondition()
 		{
 			return this.As<IRemainScoreLeConditionT>();
 		}
 
-		// Token: 0x0601B262 RID: 111202 RVA: 0x003DE3CF File Offset: 0x003DC5CF
+		// Token: 0x0601CA37 RID: 117303 RVA: 0x0040A66B File Offset: 0x0040886B
 		public static TDartSkillConditionUnion FromIRemainScoreLeCondition(IRemainScoreLeConditionT _iremainscorelecondition)
 		{
 			return new TDartSkillConditionUnion
@@ -125,13 +125,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601B263 RID: 111203 RVA: 0x003DE3E4 File Offset: 0x003DC5E4
+		// Token: 0x0601CA38 RID: 117304 RVA: 0x0040A680 File Offset: 0x00408880
 		public IRoundIndexConditionT AsIRoundIndexCondition()
 		{
 			return this.As<IRoundIndexConditionT>();
 		}
 
-		// Token: 0x0601B264 RID: 111204 RVA: 0x003DE3EC File Offset: 0x003DC5EC
+		// Token: 0x0601CA39 RID: 117305 RVA: 0x0040A688 File Offset: 0x00408888
 		public static TDartSkillConditionUnion FromIRoundIndexCondition(IRoundIndexConditionT _iroundindexcondition)
 		{
 			return new TDartSkillConditionUnion
@@ -141,7 +141,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601B265 RID: 111205 RVA: 0x003DE404 File Offset: 0x003DC604
+		// Token: 0x0601CA3A RID: 117306 RVA: 0x0040A6A0 File Offset: 0x004088A0
 		public static int Pack(FlatBufferBuilder builder, TDartSkillConditionUnion _o)
 		{
 			switch (_o.Type)

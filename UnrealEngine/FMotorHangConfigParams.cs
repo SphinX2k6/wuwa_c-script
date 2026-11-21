@@ -6,22 +6,22 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001F34 RID: 7988
+	// Token: 0x02000636 RID: 1590
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroVehicle.MotorHangConfigParams")]
 	[UnrealStructLayout(72, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 72)]
 	public class FMotorHangConfigParams : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0601E64F RID: 124495 RVA: 0x002D2C67 File Offset: 0x002D0E67
+		// Token: 0x06008B95 RID: 35733 RVA: 0x000D20D6 File Offset: 0x000D02D6
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FMotorHangConfigParams._ScriptStructPtr != 0) ? FMotorHangConfigParams._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroVehicle.MotorHangConfigParams", ref FMotorHangConfigParams._ScriptStructPtr);
 		}
 
-		// Token: 0x170078E0 RID: 30944
-		// (get) Token: 0x0601E650 RID: 124496 RVA: 0x002D2C8B File Offset: 0x002D0E8B
-		// (set) Token: 0x0601E651 RID: 124497 RVA: 0x002D2C9B File Offset: 0x002D0E9B
+		// Token: 0x17001A4B RID: 6731
+		// (get) Token: 0x06008B96 RID: 35734 RVA: 0x000D20FA File Offset: 0x000D02FA
+		// (set) Token: 0x06008B97 RID: 35735 RVA: 0x000D210A File Offset: 0x000D030A
 		public unsafe float MaxDist
 		{
 			get
@@ -34,9 +34,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170078E1 RID: 30945
-		// (get) Token: 0x0601E652 RID: 124498 RVA: 0x002D2CAC File Offset: 0x002D0EAC
-		// (set) Token: 0x0601E653 RID: 124499 RVA: 0x002D2CBC File Offset: 0x002D0EBC
+		// Token: 0x17001A4C RID: 6732
+		// (get) Token: 0x06008B98 RID: 35736 RVA: 0x000D211B File Offset: 0x000D031B
+		// (set) Token: 0x06008B99 RID: 35737 RVA: 0x000D212B File Offset: 0x000D032B
 		public unsafe float GPerCm
 		{
 			get
@@ -49,9 +49,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170078E2 RID: 30946
-		// (get) Token: 0x0601E654 RID: 124500 RVA: 0x002D2CD0 File Offset: 0x002D0ED0
-		// (set) Token: 0x0601E655 RID: 124501 RVA: 0x002D2D13 File Offset: 0x002D0F13
+		// Token: 0x17001A4D RID: 6733
+		// (get) Token: 0x06008B9A RID: 35738 RVA: 0x000D213C File Offset: 0x000D033C
+		// (set) Token: 0x06008B9B RID: 35739 RVA: 0x000D217F File Offset: 0x000D037F
 		public FMotorFloatRange Damping
 		{
 			get
@@ -70,9 +70,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170078E3 RID: 30947
-		// (get) Token: 0x0601E656 RID: 124502 RVA: 0x002D2D34 File Offset: 0x002D0F34
-		// (set) Token: 0x0601E657 RID: 124503 RVA: 0x002D2D77 File Offset: 0x002D0F77
+		// Token: 0x17001A4E RID: 6734
+		// (get) Token: 0x06008B9C RID: 35740 RVA: 0x000D21A0 File Offset: 0x000D03A0
+		// (set) Token: 0x06008B9D RID: 35741 RVA: 0x000D21E3 File Offset: 0x000D03E3
 		public FMotorFloatRange RotateDamping
 		{
 			get
@@ -91,24 +91,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170078E4 RID: 30948
-		// (get) Token: 0x0601E658 RID: 124504 RVA: 0x002D2D98 File Offset: 0x002D0F98
-		// (set) Token: 0x0601E659 RID: 124505 RVA: 0x002D2DA8 File Offset: 0x002D0FA8
-		public unsafe EHangLimitType LimitType
-		{
-			get
-			{
-				return (EHangLimitType)(*(base.NativePtr + (IntPtr)FMotorHangConfigParams.__PropertyOffset_LimitType));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)FMotorHangConfigParams.__PropertyOffset_LimitType) = (byte)value;
-			}
-		}
-
-		// Token: 0x170078E5 RID: 30949
-		// (get) Token: 0x0601E65A RID: 124506 RVA: 0x002D2DB9 File Offset: 0x002D0FB9
-		// (set) Token: 0x0601E65B RID: 124507 RVA: 0x002D2DCD File Offset: 0x002D0FCD
+		// Token: 0x17001A4F RID: 6735
+		// (get) Token: 0x06008B9E RID: 35742 RVA: 0x000D2204 File Offset: 0x000D0404
+		// (set) Token: 0x06008B9F RID: 35743 RVA: 0x000D2218 File Offset: 0x000D0418
 		public unsafe FVector LimitDirect
 		{
 			get
@@ -121,81 +106,67 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601E65C RID: 124508 RVA: 0x002D2DE2 File Offset: 0x002D0FE2
+		// Token: 0x06008BA0 RID: 35744 RVA: 0x000D222D File Offset: 0x000D042D
 		public FMotorHangConfigParams()
 		{
 		}
 
-		// Token: 0x0601E65D RID: 124509 RVA: 0x002D2DEA File Offset: 0x002D0FEA
-		public FMotorHangConfigParams(float MaxDist, float GPerCm, FMotorFloatRange Damping, FMotorFloatRange RotateDamping, EHangLimitType LimitType, FVector LimitDirect)
-		{
-			this.MaxDist = MaxDist;
-			this.GPerCm = GPerCm;
-			this.Damping = Damping;
-			this.RotateDamping = RotateDamping;
-			this.LimitType = LimitType;
-			this.LimitDirect = LimitDirect;
-		}
-
-		// Token: 0x0601E65E RID: 124510 RVA: 0x002D2E1F File Offset: 0x002D101F
+		// Token: 0x06008BA1 RID: 35745 RVA: 0x000D2235 File Offset: 0x000D0435
 		protected override IntPtr GetUStructPtr()
 		{
 			return FMotorHangConfigParams.StaticStruct();
 		}
 
-		// Token: 0x0601E65F RID: 124511 RVA: 0x002D2E2B File Offset: 0x002D102B
+		// Token: 0x06008BA2 RID: 35746 RVA: 0x000D2241 File Offset: 0x000D0441
 		[NullableContext(2)]
 		public FMotorHangConfigParams(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601E660 RID: 124512 RVA: 0x002D2E35 File Offset: 0x002D1035
+		// Token: 0x06008BA3 RID: 35747 RVA: 0x000D224B File Offset: 0x000D044B
 		public FMotorHangConfigParams(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601E661 RID: 124513 RVA: 0x002D2E40 File Offset: 0x002D1040
+		// Token: 0x06008BA4 RID: 35748 RVA: 0x000D2256 File Offset: 0x000D0456
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FMotorHangConfigParams(Pointer, false, true);
 		}
 
-		// Token: 0x0601E662 RID: 124514 RVA: 0x002D2E4A File Offset: 0x002D104A
+		// Token: 0x06008BA5 RID: 35749 RVA: 0x000D2260 File Offset: 0x000D0460
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FMotorHangConfigParams(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04010650 RID: 67152
+		// Token: 0x04003CA5 RID: 15525
 		public const string __ObjectPath = "/Script/KuroVehicle.MotorHangConfigParams";
 
-		// Token: 0x04010651 RID: 67153
+		// Token: 0x04003CA6 RID: 15526
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04010652 RID: 67154
+		// Token: 0x04003CA7 RID: 15527
 		internal static int __PropertyOffset_MaxDist;
 
-		// Token: 0x04010653 RID: 67155
+		// Token: 0x04003CA8 RID: 15528
 		internal static int __PropertyOffset_GPerCm;
 
-		// Token: 0x04010654 RID: 67156
+		// Token: 0x04003CA9 RID: 15529
 		internal static int __PropertyOffset_Damping;
 
-		// Token: 0x04010655 RID: 67157
+		// Token: 0x04003CAA RID: 15530
 		[Nullable(2)]
 		private FMotorFloatRange _Damping;
 
-		// Token: 0x04010656 RID: 67158
+		// Token: 0x04003CAB RID: 15531
 		internal static int __PropertyOffset_RotateDamping;
 
-		// Token: 0x04010657 RID: 67159
+		// Token: 0x04003CAC RID: 15532
 		[Nullable(2)]
 		private FMotorFloatRange _RotateDamping;
 
-		// Token: 0x04010658 RID: 67160
-		internal static int __PropertyOffset_LimitType;
-
-		// Token: 0x04010659 RID: 67161
+		// Token: 0x04003CAD RID: 15533
 		internal static int __PropertyOffset_LimitDirect;
 	}
 }

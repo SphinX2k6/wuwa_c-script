@@ -3,34 +3,34 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B32 RID: 19250
+	// Token: 0x02003ADA RID: 15066
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TowerDefensePhantomIconItemData : ITowerDefensePhantomIconItemData
 	{
-		// Token: 0x17007B74 RID: 31604
-		// (get) Token: 0x06031DA4 RID: 204196 RVA: 0x00B9270C File Offset: 0x00B9090C
-		// (set) Token: 0x06031DA5 RID: 204197 RVA: 0x00B92714 File Offset: 0x00B90914
+		// Token: 0x17004F21 RID: 20257
+		// (get) Token: 0x06026B34 RID: 158516 RVA: 0x00AD6770 File Offset: 0x00AD4970
+		// (set) Token: 0x06026B35 RID: 158517 RVA: 0x00AD6778 File Offset: 0x00AD4978
 		public int ConfigId { get; set; }
 
-		// Token: 0x17007B75 RID: 31605
-		// (get) Token: 0x06031DA6 RID: 204198 RVA: 0x00B9271D File Offset: 0x00B9091D
-		// (set) Token: 0x06031DA7 RID: 204199 RVA: 0x00B92725 File Offset: 0x00B90925
+		// Token: 0x17004F22 RID: 20258
+		// (get) Token: 0x06026B36 RID: 158518 RVA: 0x00AD6781 File Offset: 0x00AD4981
+		// (set) Token: 0x06026B37 RID: 158519 RVA: 0x00AD6789 File Offset: 0x00AD4989
 		public string HexColorPath { get; set; }
 
-		// Token: 0x17007B76 RID: 31606
-		// (get) Token: 0x06031DA8 RID: 204200 RVA: 0x00B9272E File Offset: 0x00B9092E
-		// (set) Token: 0x06031DA9 RID: 204201 RVA: 0x00B92736 File Offset: 0x00B90936
+		// Token: 0x17004F23 RID: 20259
+		// (get) Token: 0x06026B38 RID: 158520 RVA: 0x00AD6792 File Offset: 0x00AD4992
+		// (set) Token: 0x06026B39 RID: 158521 RVA: 0x00AD679A File Offset: 0x00AD499A
 		public bool IsLocked { get; set; }
 
-		// Token: 0x17007B77 RID: 31607
-		// (get) Token: 0x06031DAA RID: 204202 RVA: 0x00B9273F File Offset: 0x00B9093F
-		// (set) Token: 0x06031DAB RID: 204203 RVA: 0x00B92747 File Offset: 0x00B90947
+		// Token: 0x17004F24 RID: 20260
+		// (get) Token: 0x06026B3A RID: 158522 RVA: 0x00AD67A3 File Offset: 0x00AD49A3
+		// (set) Token: 0x06026B3B RID: 158523 RVA: 0x00AD67AB File Offset: 0x00AD49AB
 		public bool IsChosen { get; set; }
 
-		// Token: 0x17007B78 RID: 31608
-		// (get) Token: 0x06031DAC RID: 204204 RVA: 0x00B92750 File Offset: 0x00B90950
-		// (set) Token: 0x06031DAD RID: 204205 RVA: 0x00B92758 File Offset: 0x00B90958
+		// Token: 0x17004F25 RID: 20261
+		// (get) Token: 0x06026B3C RID: 158524 RVA: 0x00AD67B4 File Offset: 0x00AD49B4
+		// (set) Token: 0x06026B3D RID: 158525 RVA: 0x00AD67BC File Offset: 0x00AD49BC
 		public bool IsOccupied { get; set; }
 	}
 }

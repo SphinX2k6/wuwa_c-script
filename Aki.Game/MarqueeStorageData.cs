@@ -1,17 +1,17 @@
 ﻿using System;
 
-// Token: 0x02002202 RID: 8706
+// Token: 0x020016E6 RID: 5862
 public class MarqueeStorageData
 {
-	// Token: 0x06010ED6 RID: 69334 RVA: 0x0041E5CE File Offset: 0x0041C7CE
+	// Token: 0x0600E369 RID: 58217 RVA: 0x0042AF72 File Offset: 0x00429172
 	public MarqueeStorageData(double endTime)
 	{
 		this.EndTime = endTime;
 	}
 
-	// Token: 0x040080BC RID: 32956
+	// Token: 0x040081FA RID: 33274
 	public int ScrollingTime;
 
-	// Token: 0x040080BD RID: 32957
+	// Token: 0x040081FB RID: 33275
 	public double EndTime;
 }

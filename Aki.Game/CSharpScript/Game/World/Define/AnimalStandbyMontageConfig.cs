@@ -7,27 +7,27 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.World.Define
 {
-	// Token: 0x0200452F RID: 17711
+	// Token: 0x02003454 RID: 13396
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Config(0)]
 	public class AnimalStandbyMontageConfig : ConfigBase
 	{
-		// Token: 0x0602DC00 RID: 187392 RVA: 0x00A82EB8 File Offset: 0x00A810B8
+		// Token: 0x060222C8 RID: 139976 RVA: 0x009AE11D File Offset: 0x009AC31D
 		protected override bool OnInit()
 		{
 			this.ConfigDataMap = new Dictionary<string, List<AnimalStandbyMontage>>();
 			return true;
 		}
 
-		// Token: 0x0602DC01 RID: 187393 RVA: 0x00A82EC6 File Offset: 0x00A810C6
+		// Token: 0x060222C9 RID: 139977 RVA: 0x009AE12B File Offset: 0x009AC32B
 		protected override bool OnClear()
 		{
 			this.ConfigDataMap = null;
 			return true;
 		}
 
-		// Token: 0x0602DC02 RID: 187394 RVA: 0x00A82ED0 File Offset: 0x00A810D0
+		// Token: 0x060222CA RID: 139978 RVA: 0x009AE138 File Offset: 0x009AC338
 		private bool GetAnimalStandbyMontageConfig(string bpPath, List<AnimalStandbyMontage> @out)
 		{
 			IReadOnlyList<AnimalStandbyMontage> configList = ConfigAnimalStandbyMontageByBp.GetConfigList(bpPath, false);
@@ -43,41 +43,28 @@ namespace CSharpScript.Game.World.Define
 			return true;
 		}
 
-		// Token: 0x0602DC03 RID: 187395 RVA: 0x00A82F2C File Offset: 0x00A8112C
+		// Token: 0x060222CB RID: 139979 RVA: 0x009AE194 File Offset: 0x009AC394
 		[return: Nullable(2)]
 		public List<AnimalStandbyMontage> GetAnimalStandbyMontageData(string bpPath)
 		{
-			if (PublicUtil.Instance.UseDbConfig())
+			if (!this.ConfigDataMap.ContainsKey(bpPath))
 			{
-				if (!this.ConfigDataMap.ContainsKey(bpPath))
-				{
-					List<AnimalStandbyMontage> list = new List<AnimalStandbyMontage>();
-					if (!this.GetAnimalStandbyMontageConfig(bpPath, list))
-					{
-						return null;
-					}
-					this.ConfigDataMap.Add(bpPath, list);
-				}
-				List<AnimalStandbyMontage> valueOrDefault = this.ConfigDataMap.GetValueOrDefault(bpPath);
-				if (valueOrDefault == null)
+				List<AnimalStandbyMontage> list = new List<AnimalStandbyMontage>();
+				if (!this.GetAnimalStandbyMontageConfig(bpPath, list))
 				{
 					return null;
 				}
-				return valueOrDefault;
+				this.ConfigDataMap.Add(bpPath, list);
 			}
-			else
+			List<AnimalStandbyMontage> valueOrDefault = this.ConfigDataMap.GetValueOrDefault(bpPath);
+			if (valueOrDefault == null)
 			{
-				this.ParseConfigFromJsonFile();
-				List<AnimalStandbyMontage> valueOrDefault2 = this.ConfigDataMap.GetValueOrDefault(bpPath);
-				if (valueOrDefault2 == null)
-				{
-					return null;
-				}
-				return valueOrDefault2;
+				return null;
 			}
+			return valueOrDefault;
 		}
 
-		// Token: 0x0602DC04 RID: 187396 RVA: 0x00A82FA0 File Offset: 0x00A811A0
+		// Token: 0x060222CC RID: 139980 RVA: 0x009AE1E4 File Offset: 0x009AC3E4
 		private void ParseConfigFromJsonFile()
 		{
 			string configPath = PublicUtil.Instance.GetConfigPath("../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/AnimalStandbyTag.json");
@@ -115,8 +102,8 @@ namespace CSharpScript.Game.World.Define
 			}
 		}
 
-		// Token: 0x1700751B RID: 29979
-		// (get) Token: 0x0602DC05 RID: 187397 RVA: 0x00A83097 File Offset: 0x00A81297
+		// Token: 0x170047CE RID: 18382
+		// (get) Token: 0x060222CD RID: 139981 RVA: 0x009AE2DB File Offset: 0x009AC4DB
 		public static AnimalStandbyMontageConfig Instance
 		{
 			get
@@ -125,7 +112,7 @@ namespace CSharpScript.Game.World.Define
 			}
 		}
 
-		// Token: 0x0602DC06 RID: 187398 RVA: 0x00A8309E File Offset: 0x00A8129E
+		// Token: 0x060222CE RID: 139982 RVA: 0x009AE2E2 File Offset: 0x009AC4E2
 		public static AnimalStandbyMontageConfig GetOrCreateInstance()
 		{
 			if (AnimalStandbyMontageConfig._Instance == null)
@@ -135,7 +122,7 @@ namespace CSharpScript.Game.World.Define
 			return AnimalStandbyMontageConfig._Instance;
 		}
 
-		// Token: 0x0602DC07 RID: 187399 RVA: 0x00A830B2 File Offset: 0x00A812B2
+		// Token: 0x060222CF RID: 139983 RVA: 0x009AE2F6 File Offset: 0x009AC4F6
 		public static bool CreateInstance()
 		{
 			if (AnimalStandbyMontageConfig._Instance != null)
@@ -146,24 +133,24 @@ namespace CSharpScript.Game.World.Define
 			return true;
 		}
 
-		// Token: 0x0602DC08 RID: 187400 RVA: 0x00A830C8 File Offset: 0x00A812C8
+		// Token: 0x060222D0 RID: 139984 RVA: 0x009AE30C File Offset: 0x009AC50C
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602DC09 RID: 187401 RVA: 0x00A830CA File Offset: 0x00A812CA
+		// Token: 0x060222D1 RID: 139985 RVA: 0x009AE30E File Offset: 0x009AC50E
 		public static void ResetStaticDefaultValue()
 		{
 			AnimalStandbyMontageConfig._Instance = null;
 		}
 
-		// Token: 0x0602DC0A RID: 187402 RVA: 0x00A830D2 File Offset: 0x00A812D2
+		// Token: 0x060222D2 RID: 139986 RVA: 0x009AE316 File Offset: 0x009AC516
 		static AnimalStandbyMontageConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(AnimalStandbyMontageConfig.CreateStaticDefaultValue), new Action(AnimalStandbyMontageConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040186CE RID: 100046
+		// Token: 0x04012CF3 RID: 77043
 		[Nullable(new byte[]
 		{
 			2,
@@ -172,7 +159,7 @@ namespace CSharpScript.Game.World.Define
 		})]
 		private Dictionary<string, List<AnimalStandbyMontage>> ConfigDataMap;
 
-		// Token: 0x040186CF RID: 100047
+		// Token: 0x04012CF4 RID: 77044
 		[Nullable(2)]
 		private static AnimalStandbyMontageConfig _Instance;
 	}

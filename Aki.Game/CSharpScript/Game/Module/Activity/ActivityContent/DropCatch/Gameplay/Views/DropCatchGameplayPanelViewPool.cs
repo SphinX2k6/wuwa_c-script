@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.Views
 {
-	// Token: 0x02006710 RID: 26384
+	// Token: 0x02005660 RID: 22112
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class DropCatchGameplayPanelViewPool<[Nullable(0)] T> where T : DropCatchGameplayPoolPanelBase
 	{
-		// Token: 0x06041E66 RID: 269926 RVA: 0x00FFC3F6 File Offset: 0x00FFA5F6
+		// Token: 0x060369B2 RID: 223666 RVA: 0x00F3D7C2 File Offset: 0x00F3B9C2
 		public void Init([Nullable(new byte[]
 		{
 			1,
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			this.CreateFn = createFn;
 		}
 
-		// Token: 0x06041E67 RID: 269927 RVA: 0x00FFC400 File Offset: 0x00FFA600
+		// Token: 0x060369B3 RID: 223667 RVA: 0x00F3D7CC File Offset: 0x00F3B9CC
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			return <GetAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06041E68 RID: 269928 RVA: 0x00FFC443 File Offset: 0x00FFA643
+		// Token: 0x060369B4 RID: 223668 RVA: 0x00F3D80F File Offset: 0x00F3BA0F
 		public void Recycle(T view)
 		{
 			if (!this.Active.Contains(view))
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			this.Pool.Add(view);
 		}
 
-		// Token: 0x06041E69 RID: 269929 RVA: 0x00FFC47C File Offset: 0x00FFA67C
+		// Token: 0x060369B5 RID: 223669 RVA: 0x00F3D848 File Offset: 0x00F3BA48
 		public void RecycleAll()
 		{
 			foreach (T t in this.Active)
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			this.Active.Clear();
 		}
 
-		// Token: 0x06041E6A RID: 269930 RVA: 0x00FFC4EC File Offset: 0x00FFA6EC
+		// Token: 0x060369B6 RID: 223670 RVA: 0x00F3D8B8 File Offset: 0x00F3BAB8
 		public void DestroyAll()
 		{
 			foreach (T t in this.Active)
@@ -76,13 +76,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			this.Pool.Clear();
 		}
 
-		// Token: 0x04022575 RID: 140661
+		// Token: 0x0401CDCE RID: 118222
 		private readonly List<T> Pool = new List<T>();
 
-		// Token: 0x04022576 RID: 140662
+		// Token: 0x0401CDCF RID: 118223
 		private readonly HashSet<T> Active = new HashSet<T>();
 
-		// Token: 0x04022577 RID: 140663
+		// Token: 0x0401CDD0 RID: 118224
 		[Nullable(new byte[]
 		{
 			1,

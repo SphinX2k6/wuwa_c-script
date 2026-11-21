@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003A8A RID: 14986
+	// Token: 0x02003E65 RID: 15973
 	public struct ICommonHostToTargetDistance : IFlatbufferObject
 	{
-		// Token: 0x170066A4 RID: 26276
-		// (get) Token: 0x06014527 RID: 83239 RVA: 0x002F7244 File Offset: 0x002F5444
+		// Token: 0x17006BD4 RID: 27604
+		// (get) Token: 0x06015843 RID: 88131 RVA: 0x0031A430 File Offset: 0x00318630
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x06014528 RID: 83240 RVA: 0x002F7251 File Offset: 0x002F5451
+		// Token: 0x06015844 RID: 88132 RVA: 0x0031A43D File Offset: 0x0031863D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06014529 RID: 83241 RVA: 0x002F7258 File Offset: 0x002F5458
+		// Token: 0x06015845 RID: 88133 RVA: 0x0031A444 File Offset: 0x00318644
 		public static ICommonHostToTargetDistance GetRootAsICommonHostToTargetDistance(ByteBuffer _bb)
 		{
 			return ICommonHostToTargetDistance.GetRootAsICommonHostToTargetDistance(_bb, default(ICommonHostToTargetDistance));
 		}
 
-		// Token: 0x0601452A RID: 83242 RVA: 0x002F7274 File Offset: 0x002F5474
+		// Token: 0x06015846 RID: 88134 RVA: 0x0031A460 File Offset: 0x00318660
 		public static ICommonHostToTargetDistance GetRootAsICommonHostToTargetDistance(ByteBuffer _bb, ICommonHostToTargetDistance obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601452B RID: 83243 RVA: 0x002F7291 File Offset: 0x002F5491
+		// Token: 0x06015847 RID: 88135 RVA: 0x0031A47D File Offset: 0x0031867D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601452C RID: 83244 RVA: 0x002F72A0 File Offset: 0x002F54A0
+		// Token: 0x06015848 RID: 88136 RVA: 0x0031A48C File Offset: 0x0031868C
 		public ICommonHostToTargetDistance __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170066A5 RID: 26277
-		// (get) Token: 0x0601452D RID: 83245 RVA: 0x002F72B0 File Offset: 0x002F54B0
+		// Token: 0x17006BD5 RID: 27605
+		// (get) Token: 0x06015849 RID: 88137 RVA: 0x0031A49C File Offset: 0x0031869C
 		public ESystemVarName Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x170066A6 RID: 26278
-		// (get) Token: 0x0601452E RID: 83246 RVA: 0x002F72EC File Offset: 0x002F54EC
+		// Token: 0x17006BD6 RID: 27606
+		// (get) Token: 0x0601584A RID: 88138 RVA: 0x0031A4D8 File Offset: 0x003186D8
 		public IPosA? Pos
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x170066A7 RID: 26279
-		// (get) Token: 0x0601452F RID: 83247 RVA: 0x002F734C File Offset: 0x002F554C
+		// Token: 0x17006BD7 RID: 27607
+		// (get) Token: 0x0601584B RID: 88139 RVA: 0x0031A538 File Offset: 0x00318738
 		public EDistanceMeasureMode DistanceMeasureMode
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x06014530 RID: 83248 RVA: 0x002F7388 File Offset: 0x002F5588
+		// Token: 0x0601584C RID: 88140 RVA: 0x0031A574 File Offset: 0x00318774
 		public static Offset<ICommonHostToTargetDistance> CreateICommonHostToTargetDistance(FlatBufferBuilder builder, ESystemVarName Type = ESystemVarName.CommonHotFixVar, Offset<IPosA> PosOffset = default(Offset<IPosA>), EDistanceMeasureMode DistanceMeasureMode = EDistanceMeasureMode.Horizontal)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return ICommonHostToTargetDistance.EndICommonHostToTargetDistance(builder);
 		}
 
-		// Token: 0x06014531 RID: 83249 RVA: 0x002F73AC File Offset: 0x002F55AC
+		// Token: 0x0601584D RID: 88141 RVA: 0x0031A598 File Offset: 0x00318798
 		public static void StartICommonHostToTargetDistance(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06014532 RID: 83250 RVA: 0x002F73B5 File Offset: 0x002F55B5
+		// Token: 0x0601584E RID: 88142 RVA: 0x0031A5A1 File Offset: 0x003187A1
 		public static void AddType(FlatBufferBuilder builder, ESystemVarName type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06014533 RID: 83251 RVA: 0x002F73C0 File Offset: 0x002F55C0
+		// Token: 0x0601584F RID: 88143 RVA: 0x0031A5AC File Offset: 0x003187AC
 		public static void AddPos(FlatBufferBuilder builder, Offset<IPosA> posOffset)
 		{
 			builder.AddOffset(1, posOffset.Value, 0);
 		}
 
-		// Token: 0x06014534 RID: 83252 RVA: 0x002F73D0 File Offset: 0x002F55D0
+		// Token: 0x06015850 RID: 88144 RVA: 0x0031A5BC File Offset: 0x003187BC
 		public static void AddDistanceMeasureMode(FlatBufferBuilder builder, EDistanceMeasureMode distanceMeasureMode)
 		{
 			builder.AddByte(2, (byte)distanceMeasureMode, 0);
 		}
 
-		// Token: 0x06014535 RID: 83253 RVA: 0x002F73DB File Offset: 0x002F55DB
+		// Token: 0x06015851 RID: 88145 RVA: 0x0031A5C7 File Offset: 0x003187C7
 		public static Offset<ICommonHostToTargetDistance> EndICommonHostToTargetDistance(FlatBufferBuilder builder)
 		{
 			return new Offset<ICommonHostToTargetDistance>(builder.EndTable());
 		}
 
-		// Token: 0x06014536 RID: 83254 RVA: 0x002F73E8 File Offset: 0x002F55E8
+		// Token: 0x06015852 RID: 88146 RVA: 0x0031A5D4 File Offset: 0x003187D4
 		public ICommonHostToTargetDistanceT UnPack()
 		{
 			ICommonHostToTargetDistanceT commonHostToTargetDistanceT = new ICommonHostToTargetDistanceT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return commonHostToTargetDistanceT;
 		}
 
-		// Token: 0x06014537 RID: 83255 RVA: 0x002F7404 File Offset: 0x002F5604
+		// Token: 0x06015853 RID: 88147 RVA: 0x0031A5F0 File Offset: 0x003187F0
 		public void UnPackTo(ICommonHostToTargetDistanceT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			_o.DistanceMeasureMode = this.DistanceMeasureMode;
 		}
 
-		// Token: 0x06014538 RID: 83256 RVA: 0x002F7458 File Offset: 0x002F5658
+		// Token: 0x06015854 RID: 88148 RVA: 0x0031A644 File Offset: 0x00318844
 		public static Offset<ICommonHostToTargetDistance> Pack(FlatBufferBuilder builder, ICommonHostToTargetDistanceT _o)
 		{
 			if (_o == null)
@@ -159,7 +159,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return ICommonHostToTargetDistance.CreateICommonHostToTargetDistance(builder, _o.Type, posOffset, _o.DistanceMeasureMode);
 		}
 
-		// Token: 0x0400AF06 RID: 44806
+		// Token: 0x0400B828 RID: 47144
 		private Table __p;
 	}
 }

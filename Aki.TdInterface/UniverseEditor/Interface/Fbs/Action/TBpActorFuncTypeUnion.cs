@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200764E RID: 30286
+	// Token: 0x02007E5C RID: 32348
 	public class TBpActorFuncTypeUnion
 	{
-		// Token: 0x1700E5C7 RID: 58823
-		// (get) Token: 0x06037248 RID: 225864 RVA: 0x0077A0C6 File Offset: 0x007782C6
-		// (set) Token: 0x06037249 RID: 225865 RVA: 0x0077A0CE File Offset: 0x007782CE
+		// Token: 0x1700F205 RID: 61957
+		// (get) Token: 0x0603A6ED RID: 239341 RVA: 0x007DE1C2 File Offset: 0x007DC3C2
+		// (set) Token: 0x0603A6EE RID: 239342 RVA: 0x007DE1CA File Offset: 0x007DC3CA
 		public TBpActorFuncType Type { get; set; }
 
-		// Token: 0x1700E5C8 RID: 58824
-		// (get) Token: 0x0603724A RID: 225866 RVA: 0x0077A0D7 File Offset: 0x007782D7
-		// (set) Token: 0x0603724B RID: 225867 RVA: 0x0077A0DF File Offset: 0x007782DF
+		// Token: 0x1700F206 RID: 61958
+		// (get) Token: 0x0603A6EF RID: 239343 RVA: 0x007DE1D3 File Offset: 0x007DC3D3
+		// (set) Token: 0x0603A6F0 RID: 239344 RVA: 0x007DE1DB File Offset: 0x007DC3DB
 		public object Value { get; set; }
 
-		// Token: 0x0603724C RID: 225868 RVA: 0x0077A0E8 File Offset: 0x007782E8
+		// Token: 0x0603A6F1 RID: 239345 RVA: 0x007DE1E4 File Offset: 0x007DC3E4
 		public TBpActorFuncTypeUnion()
 		{
 			this.Type = TBpActorFuncType.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0603724D RID: 225869 RVA: 0x0077A0FE File Offset: 0x007782FE
+		// Token: 0x0603A6F2 RID: 239346 RVA: 0x007DE1FA File Offset: 0x007DC3FA
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0603724E RID: 225870 RVA: 0x0077A110 File Offset: 0x00778310
+		// Token: 0x0603A6F3 RID: 239347 RVA: 0x007DE20C File Offset: 0x007DC40C
 		public IBrokenBridgeEffectInMobileBpActorFuncT AsIBrokenBridgeEffectInMobileBpActorFunc()
 		{
 			return this.As<IBrokenBridgeEffectInMobileBpActorFuncT>();
 		}
 
-		// Token: 0x0603724F RID: 225871 RVA: 0x0077A118 File Offset: 0x00778318
+		// Token: 0x0603A6F4 RID: 239348 RVA: 0x007DE214 File Offset: 0x007DC414
 		public static TBpActorFuncTypeUnion FromIBrokenBridgeEffectInMobileBpActorFunc(IBrokenBridgeEffectInMobileBpActorFuncT _ibrokenbridgeeffectinmobilebpactorfunc)
 		{
 			return new TBpActorFuncTypeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037250 RID: 225872 RVA: 0x0077A12D File Offset: 0x0077832D
+		// Token: 0x0603A6F5 RID: 239349 RVA: 0x007DE229 File Offset: 0x007DC429
 		public ICarPaintChangeBpActorFuncT AsICarPaintChangeBpActorFunc()
 		{
 			return this.As<ICarPaintChangeBpActorFuncT>();
 		}
 
-		// Token: 0x06037251 RID: 225873 RVA: 0x0077A135 File Offset: 0x00778335
+		// Token: 0x0603A6F6 RID: 239350 RVA: 0x007DE231 File Offset: 0x007DC431
 		public static TBpActorFuncTypeUnion FromICarPaintChangeBpActorFunc(ICarPaintChangeBpActorFuncT _icarpaintchangebpactorfunc)
 		{
 			return new TBpActorFuncTypeUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037252 RID: 225874 RVA: 0x0077A14C File Offset: 0x0077834C
+		// Token: 0x0603A6F7 RID: 239351 RVA: 0x007DE248 File Offset: 0x007DC448
 		public static int Pack(FlatBufferBuilder builder, TBpActorFuncTypeUnion _o)
 		{
 			TBpActorFuncType type = _o.Type;

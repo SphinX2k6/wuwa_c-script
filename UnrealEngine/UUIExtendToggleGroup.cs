@@ -6,41 +6,34 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002168 RID: 8552
+	// Token: 0x02000700 RID: 1792
+	[NullableContext(1)]
+	[Nullable(0)]
 	[UnrealObjectPath("/Script/LGUI.UIExtendToggleGroup")]
 	[UnrealStructLayout(272, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 272)]
-	public class UUIExtendToggleGroup : UActorComponent, IUnrealUObject, IUnrealObject, ILGUIPointerEnterExitInterface, IUnrealNativeInterface, IUnrealInterface
+	public class UUIExtendToggleGroup : UActorComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06020488 RID: 132232 RVA: 0x002FF1A4 File Offset: 0x002FD3A4
+		// Token: 0x060098BD RID: 39101 RVA: 0x000E60F8 File Offset: 0x000E42F8
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UUIExtendToggleGroup._ClassPtr;
 		}
 
-		// Token: 0x06020489 RID: 132233 RVA: 0x002FF1B0 File Offset: 0x002FD3B0
-		int ILGUIPointerEnterExitInterface.InterfaceOffset()
-		{
-			return UUIExtendToggleGroup.__InterfaceOffset_ILGUIPointerEnterExitInterface;
-		}
-
-		// Token: 0x0602048A RID: 132234 RVA: 0x002FF1B8 File Offset: 0x002FD3B8
+		// Token: 0x060098BE RID: 39102 RVA: 0x000E6104 File Offset: 0x000E4304
 		public UUIExtendToggleGroup() : this(BuiltinUtils.AllocNativeUObject(UUIExtendToggleGroup.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602048B RID: 132235 RVA: 0x002FF1E0 File Offset: 0x002FD3E0
-		[NullableContext(1)]
+		// Token: 0x060098BF RID: 39103 RVA: 0x000E612C File Offset: 0x000E432C
 		public UUIExtendToggleGroup(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UUIExtendToggleGroup.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17007E8E RID: 32398
-		// (get) Token: 0x0602048C RID: 132236 RVA: 0x002FF214 File Offset: 0x002FD414
-		// (set) Token: 0x0602048D RID: 132237 RVA: 0x002FF24D File Offset: 0x002FD44D
-		[Nullable(1)]
+		// Token: 0x17001C66 RID: 7270
+		// (get) Token: 0x060098C0 RID: 39104 RVA: 0x000E6160 File Offset: 0x000E4360
+		// (set) Token: 0x060098C1 RID: 39105 RVA: 0x000E6199 File Offset: 0x000E4399
 		public FOnToggleGroupActivationChanged OnToggleGroupActivationChanged
 		{
-			[NullableContext(1)]
 			get
 			{
 				base.FastCheckIsValid();
@@ -51,16 +44,15 @@ namespace UnrealEngine
 				}
 				return result;
 			}
-			[NullableContext(1)]
 			set
 			{
 				FMulticastScriptDelegate.NativeCopy(base.NativePtr + (IntPtr)UUIExtendToggleGroup.__PropertyOffset_OnToggleGroupActivationChanged, (value != null) ? value.NativePtr : ((IntPtr)0));
 			}
 		}
 
-		// Token: 0x17007E8F RID: 32399
-		// (get) Token: 0x0602048E RID: 132238 RVA: 0x002FF26E File Offset: 0x002FD46E
-		// (set) Token: 0x0602048F RID: 132239 RVA: 0x002FF27E File Offset: 0x002FD47E
+		// Token: 0x17001C67 RID: 7271
+		// (get) Token: 0x060098C2 RID: 39106 RVA: 0x000E61BA File Offset: 0x000E43BA
+		// (set) Token: 0x060098C3 RID: 39107 RVA: 0x000E61CA File Offset: 0x000E43CA
 		public unsafe bool bGroupToggleOnSelect
 		{
 			get
@@ -73,9 +65,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007E90 RID: 32400
-		// (get) Token: 0x06020490 RID: 132240 RVA: 0x002FF290 File Offset: 0x002FD490
-		// (set) Token: 0x06020491 RID: 132241 RVA: 0x002FF2C9 File Offset: 0x002FD4C9
+		// Token: 0x17001C68 RID: 7272
+		// (get) Token: 0x060098C4 RID: 39108 RVA: 0x000E61DC File Offset: 0x000E43DC
+		// (set) Token: 0x060098C5 RID: 39109 RVA: 0x000E6215 File Offset: 0x000E4415
 		[Nullable(new byte[]
 		{
 			1,
@@ -112,9 +104,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007E91 RID: 32401
-		// (get) Token: 0x06020492 RID: 132242 RVA: 0x002FF2D7 File Offset: 0x002FD4D7
-		// (set) Token: 0x06020493 RID: 132243 RVA: 0x002FF2E7 File Offset: 0x002FD4E7
+		// Token: 0x17001C69 RID: 7273
+		// (get) Token: 0x060098C6 RID: 39110 RVA: 0x000E6223 File Offset: 0x000E4423
+		// (set) Token: 0x060098C7 RID: 39111 RVA: 0x000E6233 File Offset: 0x000E4433
 		public unsafe bool bAllowNoneSelect
 		{
 			get
@@ -127,9 +119,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007E92 RID: 32402
-		// (get) Token: 0x06020494 RID: 132244 RVA: 0x002FF2F8 File Offset: 0x002FD4F8
-		// (set) Token: 0x06020495 RID: 132245 RVA: 0x002FF308 File Offset: 0x002FD508
+		// Token: 0x17001C6A RID: 7274
+		// (get) Token: 0x060098C8 RID: 39112 RVA: 0x000E6244 File Offset: 0x000E4444
+		// (set) Token: 0x060098C9 RID: 39113 RVA: 0x000E6254 File Offset: 0x000E4454
 		public unsafe bool bEnable
 		{
 			get
@@ -142,36 +134,36 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06020496 RID: 132246
+		// Token: 0x060098CA RID: 39114
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void UnBindOnExtendToggleGroupActive();
 
-		// Token: 0x06020497 RID: 132247 RVA: 0x002FF319 File Offset: 0x002FD519
+		// Token: 0x060098CB RID: 39115 RVA: 0x000E6265 File Offset: 0x000E4465
 		public void SetGroupEnable(bool bInEnable)
 		{
 			UUIExtendToggleGroup.__SetGroupEnable_Internal(base.NativePtr, bInEnable);
 		}
 
-		// Token: 0x06020498 RID: 132248 RVA: 0x002FF327 File Offset: 0x002FD527
+		// Token: 0x060098CC RID: 39116 RVA: 0x000E6273 File Offset: 0x000E4473
 		public void SetAllowNoneSelect(bool bAllowNoneSelection)
 		{
 			UUIExtendToggleGroup.__SetAllowNoneSelect_Internal(base.NativePtr, bAllowNoneSelection);
 		}
 
-		// Token: 0x06020499 RID: 132249 RVA: 0x002FF335 File Offset: 0x002FD535
+		// Token: 0x060098CD RID: 39117 RVA: 0x000E6281 File Offset: 0x000E4481
 		[NullableContext(2)]
 		public UUIExtendToggle GetCurSelection()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UUIExtendToggle>(UUIExtendToggleGroup.__GetCurSelection_Internal(base.NativePtr));
 		}
 
-		// Token: 0x0602049A RID: 132250 RVA: 0x002FF347 File Offset: 0x002FD547
+		// Token: 0x060098CE RID: 39118 RVA: 0x000E6293 File Offset: 0x000E4493
 		public bool GetAllowNoneSelect()
 		{
 			return UUIExtendToggleGroup.__GetAllowNoneSelect_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0602049B RID: 132251 RVA: 0x002FF354 File Offset: 0x002FD554
+		// Token: 0x060098CF RID: 39119 RVA: 0x000E62A0 File Offset: 0x000E44A0
 		[NullableContext(2)]
 		public static void BindOnExtendToggleGroupActive(in FUIExtendToggleGroupActive Delegate)
 		{
@@ -179,64 +171,60 @@ namespace UnrealEngine
 			UUIExtendToggleGroup.__BindOnExtendToggleGroupActive_Internal((fuiextendToggleGroupActive != null) ? fuiextendToggleGroupActive.NativePtr : ((IntPtr)0));
 		}
 
-		// Token: 0x0602049C RID: 132252
+		// Token: 0x060098D0 RID: 39120
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetGroupEnable_Internal(IntPtr @this, bool bInEnable);
 
-		// Token: 0x0602049D RID: 132253
+		// Token: 0x060098D1 RID: 39121
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetAllowNoneSelect_Internal(IntPtr @this, bool bAllowNoneSelection);
 
-		// Token: 0x0602049E RID: 132254
+		// Token: 0x060098D2 RID: 39122
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetCurSelection_Internal(IntPtr @this);
 
-		// Token: 0x0602049F RID: 132255
+		// Token: 0x060098D3 RID: 39123
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetAllowNoneSelect_Internal(IntPtr @this);
 
-		// Token: 0x060204A0 RID: 132256
+		// Token: 0x060098D4 RID: 39124
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __BindOnExtendToggleGroupActive_Internal(IntPtr Delegate);
 
-		// Token: 0x060204A1 RID: 132257 RVA: 0x002FF36A File Offset: 0x002FD56A
+		// Token: 0x060098D5 RID: 39125 RVA: 0x000E62B6 File Offset: 0x000E44B6
 		static UUIExtendToggleGroup()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LGUI.UIExtendToggleGroup");
 		}
 
-		// Token: 0x060204A2 RID: 132258 RVA: 0x002FF378 File Offset: 0x002FD578
+		// Token: 0x060098D6 RID: 39126 RVA: 0x000E62C4 File Offset: 0x000E44C4
 		protected UUIExtendToggleGroup(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04011589 RID: 71049
-		internal static int __InterfaceOffset_ILGUIPointerEnterExitInterface;
-
-		// Token: 0x0401158A RID: 71050
-		[Nullable(1)]
+		// Token: 0x04004267 RID: 16999
 		public new const string __ObjectPath = "/Script/LGUI.UIExtendToggleGroup";
 
-		// Token: 0x0401158B RID: 71051
+		// Token: 0x04004268 RID: 17000
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401158C RID: 71052
+		// Token: 0x04004269 RID: 17001
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401158D RID: 71053
+		// Token: 0x0400426A RID: 17002
 		internal static int __PropertyOffset_OnToggleGroupActivationChanged;
 
-		// Token: 0x0401158E RID: 71054
+		// Token: 0x0400426B RID: 17003
 		[Nullable(2)]
 		private FOnToggleGroupActivationChanged _OnToggleGroupActivationChanged;
 
-		// Token: 0x0401158F RID: 71055
+		// Token: 0x0400426C RID: 17004
 		internal static int __PropertyOffset_bGroupToggleOnSelect;
 
-		// Token: 0x04011590 RID: 71056
+		// Token: 0x0400426D RID: 17005
 		internal static int __PropertyOffset_ToggleCollection;
 
-		// Token: 0x04011591 RID: 71057
+		// Token: 0x0400426E RID: 17006
 		[Nullable(new byte[]
 		{
 			2,
@@ -245,10 +233,10 @@ namespace UnrealEngine
 		})]
 		private TArray<TWeakObjectPtr<UUIExtendToggle>> _ToggleCollection;
 
-		// Token: 0x04011592 RID: 71058
+		// Token: 0x0400426F RID: 17007
 		internal static int __PropertyOffset_bAllowNoneSelect;
 
-		// Token: 0x04011593 RID: 71059
+		// Token: 0x04004270 RID: 17008
 		internal static int __PropertyOffset_bEnable;
 	}
 }

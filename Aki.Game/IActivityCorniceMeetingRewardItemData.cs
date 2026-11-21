@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020011F6 RID: 4598
+// Token: 0x020006AA RID: 1706
 [NullableContext(1)]
 public interface IActivityCorniceMeetingRewardItemData
 {
-	// Token: 0x17000A7F RID: 2687
-	// (get) Token: 0x06007AEA RID: 31466
-	// (set) Token: 0x06007AEB RID: 31467
+	// Token: 0x17000A9F RID: 2719
+	// (get) Token: 0x06004E80 RID: 20096
+	// (set) Token: 0x06004E81 RID: 20097
 	int RewardId { get; set; }
 
-	// Token: 0x17000A80 RID: 2688
-	// (get) Token: 0x06007AEC RID: 31468
-	// (set) Token: 0x06007AED RID: 31469
+	// Token: 0x17000AA0 RID: 2720
+	// (get) Token: 0x06004E82 RID: 20098
+	// (set) Token: 0x06004E83 RID: 20099
 	Action OnClickFinishBtnCb { get; set; }
 }

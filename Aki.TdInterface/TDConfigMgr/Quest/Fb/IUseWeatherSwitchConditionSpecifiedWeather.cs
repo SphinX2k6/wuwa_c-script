@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200140F RID: 5135
+	// Token: 0x02001566 RID: 5478
 	public class IUseWeatherSwitchConditionSpecifiedWeather : IUseWeatherSwitchConditionBase
 	{
-		// Token: 0x060074C1 RID: 29889 RVA: 0x00117230 File Offset: 0x00115430
-		[NullableContext(1)]
+		// Token: 0x06007B82 RID: 31618 RVA: 0x00125C14 File Offset: 0x00123E14
 		public static IUseWeatherSwitchConditionSpecifiedWeather Create(IUseWeatherSwitchConditionSpecifiedWeather? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002676 RID: 9846
-		// (get) Token: 0x060074C2 RID: 29890 RVA: 0x0011724F File Offset: 0x0011544F
+		// Token: 0x17002858 RID: 10328
+		// (get) Token: 0x06007B83 RID: 31619 RVA: 0x00125C33 File Offset: 0x00123E33
 		public override EUseWeatherSwitchCheckType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002677 RID: 9847
-		// (get) Token: 0x060074C3 RID: 29891 RVA: 0x0011725C File Offset: 0x0011545C
+		// Token: 0x17002859 RID: 10329
+		// (get) Token: 0x06007B84 RID: 31620 RVA: 0x00125C40 File Offset: 0x00123E40
 		public virtual int WeatherSwitchId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004399 RID: 17305
+		// Token: 0x0400472A RID: 18218
 		private IUseWeatherSwitchConditionSpecifiedWeather Instance;
 	}
 }

@@ -11,18 +11,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 {
-	// Token: 0x02006A48 RID: 27208
+	// Token: 0x02005BA5 RID: 23461
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SignalDeviceGuideView : UiViewBase
 	{
-		// Token: 0x06043ABC RID: 277180 RVA: 0x0108E0EC File Offset: 0x0108C2EC
+		// Token: 0x06039B0A RID: 236298 RVA: 0x010328F4 File Offset: 0x01030AF4
 		[NullableContext(1)]
 		public SignalDeviceGuideView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06043ABD RID: 277181 RVA: 0x0108E0FC File Offset: 0x0108C2FC
+		// Token: 0x06039B0B RID: 236299 RVA: 0x01032904 File Offset: 0x01030B04
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 			};
 		}
 
-		// Token: 0x06043ABE RID: 277182 RVA: 0x0108E2A0 File Offset: 0x0108C4A0
+		// Token: 0x06039B0C RID: 236300 RVA: 0x01032AA8 File Offset: 0x01030CA8
 		private void PrePage()
 		{
 			if (this.MoveTween == null && this.NowPage > 0)
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 			}
 		}
 
-		// Token: 0x06043ABF RID: 277183 RVA: 0x0108E37C File Offset: 0x0108C57C
+		// Token: 0x06039B0D RID: 236301 RVA: 0x01032B84 File Offset: 0x01030D84
 		private void NextPage()
 		{
 			if (this.MoveTween == null && this.NowPage < this.PageArray.Length - 1)
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 			}
 		}
 
-		// Token: 0x06043AC0 RID: 277184 RVA: 0x0108E460 File Offset: 0x0108C660
+		// Token: 0x06039B0E RID: 236302 RVA: 0x01032C68 File Offset: 0x01030E68
 		protected override void OnBeforeDestroy()
 		{
 			if (this.PageDotLayout != null)
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 			}
 		}
 
-		// Token: 0x06043AC1 RID: 277185 RVA: 0x0108E4D0 File Offset: 0x0108C6D0
+		// Token: 0x06039B0F RID: 236303 RVA: 0x01032CD8 File Offset: 0x01030ED8
 		[NullableContext(1)]
 		private ILayoutItem<TutorialPageItem> InitDetail(object p, UUIItem uiItem, int index)
 		{
@@ -126,13 +126,13 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 			};
 		}
 
-		// Token: 0x06043AC2 RID: 277186 RVA: 0x0108E50C File Offset: 0x0108C70C
+		// Token: 0x06039B10 RID: 236304 RVA: 0x01032D14 File Offset: 0x01030F14
 		private void PlayAtOnce()
 		{
 			this.UiViewSequence.PlaySequence("StartAtOnce", false, null);
 		}
 
-		// Token: 0x06043AC3 RID: 277187 RVA: 0x0108E534 File Offset: 0x0108C734
+		// Token: 0x06039B11 RID: 236305 RVA: 0x01032D3C File Offset: 0x01030F3C
 		private void InitLastPanel()
 		{
 			if (this.LastShowPanel == null)
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 			this.LastShowPanel.PlayAnime(false);
 		}
 
-		// Token: 0x06043AC4 RID: 277188 RVA: 0x0108E594 File Offset: 0x0108C794
+		// Token: 0x06039B12 RID: 236306 RVA: 0x01032D9C File Offset: 0x01030F9C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SignalDeviceGuideView.<OnBeforeStartAsync>d__17 <OnBeforeStartAsync>d__;
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06043AC5 RID: 277189 RVA: 0x0108E5D8 File Offset: 0x0108C7D8
+		// Token: 0x06039B13 RID: 236307 RVA: 0x01032DE0 File Offset: 0x01030FE0
 		protected override void OnStart()
 		{
 			this.PageDotLayout = new GenericLayoutNew<TutorialPageItem>(base.GetHorizontalLayout(5), new CSharpScript.Game.Module.Util.Layout.TLayoutRefresh<TutorialPageItem>(this.InitDetail), base.GetItem(6));
@@ -178,13 +178,13 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 			this.RefreshView(0);
 		}
 
-		// Token: 0x06043AC6 RID: 277190 RVA: 0x0108E6DD File Offset: 0x0108C8DD
+		// Token: 0x06039B14 RID: 236308 RVA: 0x01032EE5 File Offset: 0x010310E5
 		protected override void OnBeforeShow()
 		{
 			this.PlayAtOnce();
 		}
 
-		// Token: 0x06043AC7 RID: 277191 RVA: 0x0108E6E8 File Offset: 0x0108C8E8
+		// Token: 0x06039B15 RID: 236309 RVA: 0x01032EF0 File Offset: 0x010310F0
 		private void RefreshView(int index)
 		{
 			if (this.PageArray.Length > 1)
@@ -205,28 +205,28 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 			this.CurrentShowPanel.RefreshPage(guideTutorialPage2);
 		}
 
-		// Token: 0x06043AC8 RID: 277192 RVA: 0x0108E7CE File Offset: 0x0108C9CE
+		// Token: 0x06039B16 RID: 236310 RVA: 0x01032FD6 File Offset: 0x010311D6
 		private void OnCloseClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0402353E RID: 144702
+		// Token: 0x0401E730 RID: 124720
 		public const float TWEEN_TIME = 0.3f;
 
-		// Token: 0x0402353F RID: 144703
+		// Token: 0x0401E731 RID: 124721
 		public const int GUIDE_ID = 34033;
 
-		// Token: 0x04023540 RID: 144704
+		// Token: 0x0401E732 RID: 124722
 		public bool IsPopView = true;
 
-		// Token: 0x04023541 RID: 144705
+		// Token: 0x0401E733 RID: 124723
 		private int[] PageArray;
 
-		// Token: 0x04023542 RID: 144706
+		// Token: 0x0401E734 RID: 124724
 		private int NowPage;
 
-		// Token: 0x04023543 RID: 144707
+		// Token: 0x0401E735 RID: 124725
 		[Nullable(new byte[]
 		{
 			2,
@@ -234,13 +234,13 @@ namespace CSharpScript.Game.LevelGamePlay.SignalDeviceControl
 		})]
 		private GenericLayoutNew<TutorialPageItem> PageDotLayout;
 
-		// Token: 0x04023544 RID: 144708
+		// Token: 0x0401E736 RID: 124726
 		private GuideTutorialPagePanel CurrentShowPanel;
 
-		// Token: 0x04023545 RID: 144709
+		// Token: 0x0401E737 RID: 124727
 		private GuideTutorialPagePanel LastShowPanel;
 
-		// Token: 0x04023546 RID: 144710
+		// Token: 0x0401E738 RID: 124728
 		private ULTweener MoveTween;
 	}
 }

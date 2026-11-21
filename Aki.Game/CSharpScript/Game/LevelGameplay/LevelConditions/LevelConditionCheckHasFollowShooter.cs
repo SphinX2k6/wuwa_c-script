@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006CA4 RID: 27812
+	// Token: 0x02005E1E RID: 24094
 	public class LevelConditionCheckHasFollowShooter : LevelConditionBase
 	{
-		// Token: 0x060445DA RID: 280026 RVA: 0x010DBD80 File Offset: 0x010D9F80
+		// Token: 0x0603A734 RID: 239412 RVA: 0x01085D2C File Offset: 0x01083F2C
 		[NullableContext(1)]
 		public override bool CheckNew(ICondition2 inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{

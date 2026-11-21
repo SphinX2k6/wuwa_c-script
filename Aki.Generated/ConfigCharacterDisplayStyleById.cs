@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000143 RID: 323
+	// Token: 0x02000152 RID: 338
 	public class ConfigCharacterDisplayStyleById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000793 RID: 1939 RVA: 0x00084898 File Offset: 0x00082A98
+		// Token: 0x060007ED RID: 2029 RVA: 0x0008A1FC File Offset: 0x000883FC
 		static ConfigCharacterDisplayStyleById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigCharacterDisplayStyleById.CreateStaticDefaultValue), new Action(ConfigCharacterDisplayStyleById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000794 RID: 1940 RVA: 0x000848B8 File Offset: 0x00082AB8
+		// Token: 0x060007EE RID: 2030 RVA: 0x0008A21C File Offset: 0x0008841C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigCharacterDisplayStyleById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000795 RID: 1941 RVA: 0x00084937 File Offset: 0x00082B37
+		// Token: 0x060007EF RID: 2031 RVA: 0x0008A29B File Offset: 0x0008849B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigCharacterDisplayStyleById.LogPair = null;
 			ConfigCharacterDisplayStyleById.HandleId = 0;
 		}
 
-		// Token: 0x06000796 RID: 1942 RVA: 0x00084945 File Offset: 0x00082B45
+		// Token: 0x060007F0 RID: 2032 RVA: 0x0008A2A9 File Offset: 0x000884A9
 		public static void Init()
 		{
 			ConfigCharacterDisplayStyleById.HandleId = ConfigCommon.InitDataStatement(ConfigCharacterDisplayStyleById.HandleId, "db_characterdisplaystyle.db", "select BinData from `CharacterDisplayStyle` where Id=?");
 		}
 
-		// Token: 0x06000797 RID: 1943 RVA: 0x00084960 File Offset: 0x00082B60
+		// Token: 0x060007F1 RID: 2033 RVA: 0x0008A2C4 File Offset: 0x000884C4
 		public static CharacterDisplayStyle? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigCharacterDisplayStyleById.HandleId, ConfigCharacterDisplayStyleById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new CharacterDisplayStyle?(rootAsCharacterDisplayStyle);
 		}
 
-		// Token: 0x040008B9 RID: 2233
+		// Token: 0x04000922 RID: 2338
 		private const string DB = "db_characterdisplaystyle.db";
 
-		// Token: 0x040008BA RID: 2234
+		// Token: 0x04000923 RID: 2339
 		private const string FILE = "k.可视化编辑/c.Csv/j.角色展示样式/*.csv*";
 
-		// Token: 0x040008BB RID: 2235
+		// Token: 0x04000924 RID: 2340
 		private const string TABLE = "CharacterDisplayStyle";
 
-		// Token: 0x040008BC RID: 2236
+		// Token: 0x04000925 RID: 2341
 		private const string COMMAND = "select BinData from `CharacterDisplayStyle` where Id=?";
 
-		// Token: 0x040008BD RID: 2237
+		// Token: 0x04000926 RID: 2342
 		private const string KEY_PREFIX = "CharacterDisplayStyleById";
 
-		// Token: 0x040008BE RID: 2238
+		// Token: 0x04000927 RID: 2343
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040008BF RID: 2239
+		// Token: 0x04000928 RID: 2344
 		private static int HandleId;
 	}
 }

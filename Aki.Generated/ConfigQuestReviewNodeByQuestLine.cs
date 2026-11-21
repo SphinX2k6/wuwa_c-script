@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000783 RID: 1923
+	// Token: 0x0200079D RID: 1949
 	public class ConfigQuestReviewNodeByQuestLine : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002D23 RID: 11555 RVA: 0x001583E4 File Offset: 0x001565E4
+		// Token: 0x06002DBF RID: 11711 RVA: 0x0015F2F0 File Offset: 0x0015D4F0
 		static ConfigQuestReviewNodeByQuestLine()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigQuestReviewNodeByQuestLine.CreateStaticDefaultValue), new Action(ConfigQuestReviewNodeByQuestLine.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002D24 RID: 11556 RVA: 0x00158404 File Offset: 0x00156604
+		// Token: 0x06002DC0 RID: 11712 RVA: 0x0015F310 File Offset: 0x0015D510
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigQuestReviewNodeByQuestLine.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002D25 RID: 11557 RVA: 0x00158483 File Offset: 0x00156683
+		// Token: 0x06002DC1 RID: 11713 RVA: 0x0015F38F File Offset: 0x0015D58F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigQuestReviewNodeByQuestLine.LogPair = null;
 			ConfigQuestReviewNodeByQuestLine.HandleId = 0;
 		}
 
-		// Token: 0x06002D26 RID: 11558 RVA: 0x00158491 File Offset: 0x00156691
+		// Token: 0x06002DC2 RID: 11714 RVA: 0x0015F39D File Offset: 0x0015D59D
 		public static void Init()
 		{
 			ConfigQuestReviewNodeByQuestLine.HandleId = ConfigCommon.InitDataStatement(ConfigQuestReviewNodeByQuestLine.HandleId, "db_questreview.db", "select BinData from `QuestReviewNode` where QuestLine=?");
 		}
 
-		// Token: 0x06002D27 RID: 11559 RVA: 0x001584AC File Offset: 0x001566AC
+		// Token: 0x06002DC3 RID: 11715 RVA: 0x0015F3B8 File Offset: 0x0015D5B8
 		[NullableContext(2)]
 		public static IReadOnlyList<QuestReviewNode> GetConfigList(int p0QuestLine, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x0400347B RID: 13435
+		// Token: 0x04003531 RID: 13617
 		private const string DB = "db_questreview.db";
 
-		// Token: 0x0400347C RID: 13436
+		// Token: 0x04003532 RID: 13618
 		private const string FILE = "j.剧情历程.xlsx";
 
-		// Token: 0x0400347D RID: 13437
+		// Token: 0x04003533 RID: 13619
 		private const string TABLE = "QuestReviewNode";
 
-		// Token: 0x0400347E RID: 13438
+		// Token: 0x04003534 RID: 13620
 		private const string COMMAND = "select BinData from `QuestReviewNode` where QuestLine=?";
 
-		// Token: 0x0400347F RID: 13439
+		// Token: 0x04003535 RID: 13621
 		private const string KEY_PREFIX = "QuestReviewNodeByQuestLine";
 
-		// Token: 0x04003480 RID: 13440
+		// Token: 0x04003536 RID: 13622
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003481 RID: 13441
+		// Token: 0x04003537 RID: 13623
 		private static int HandleId;
 	}
 }

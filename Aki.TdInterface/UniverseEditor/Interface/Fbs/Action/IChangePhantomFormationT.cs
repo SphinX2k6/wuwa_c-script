@@ -3,35 +3,35 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006318 RID: 25368
+	// Token: 0x02006989 RID: 27017
 	public class IChangePhantomFormationT
 	{
-		// Token: 0x1700BD60 RID: 48480
-		// (get) Token: 0x0602BE0B RID: 179723 RVA: 0x006088ED File Offset: 0x00606AED
-		// (set) Token: 0x0602BE0C RID: 179724 RVA: 0x006088F5 File Offset: 0x00606AF5
+		// Token: 0x1700C6EA RID: 50922
+		// (get) Token: 0x0602E574 RID: 189812 RVA: 0x006538F9 File Offset: 0x00651AF9
+		// (set) Token: 0x0602E575 RID: 189813 RVA: 0x00653901 File Offset: 0x00651B01
 		public int FormationId { get; set; }
 
-		// Token: 0x1700BD61 RID: 48481
-		// (get) Token: 0x0602BE0D RID: 179725 RVA: 0x006088FE File Offset: 0x00606AFE
-		// (set) Token: 0x0602BE0E RID: 179726 RVA: 0x00608906 File Offset: 0x00606B06
+		// Token: 0x1700C6EB RID: 50923
+		// (get) Token: 0x0602E576 RID: 189814 RVA: 0x0065390A File Offset: 0x00651B0A
+		// (set) Token: 0x0602E577 RID: 189815 RVA: 0x00653912 File Offset: 0x00651B12
 		public bool RetainRole { get; set; }
 
-		// Token: 0x1700BD62 RID: 48482
-		// (get) Token: 0x0602BE0F RID: 179727 RVA: 0x0060890F File Offset: 0x00606B0F
-		// (set) Token: 0x0602BE10 RID: 179728 RVA: 0x00608917 File Offset: 0x00606B17
+		// Token: 0x1700C6EC RID: 50924
+		// (get) Token: 0x0602E578 RID: 189816 RVA: 0x0065391B File Offset: 0x00651B1B
+		// (set) Token: 0x0602E579 RID: 189817 RVA: 0x00653923 File Offset: 0x00651B23
 		public int TeleportEntityId { get; set; }
 
-		// Token: 0x1700BD63 RID: 48483
-		// (get) Token: 0x0602BE11 RID: 179729 RVA: 0x00608920 File Offset: 0x00606B20
-		// (set) Token: 0x0602BE12 RID: 179730 RVA: 0x00608928 File Offset: 0x00606B28
+		// Token: 0x1700C6ED RID: 50925
+		// (get) Token: 0x0602E57A RID: 189818 RVA: 0x0065392C File Offset: 0x00651B2C
+		// (set) Token: 0x0602E57B RID: 189819 RVA: 0x00653934 File Offset: 0x00651B34
 		public List<long> AppendBuffIds { get; set; }
 
-		// Token: 0x1700BD64 RID: 48484
-		// (get) Token: 0x0602BE13 RID: 179731 RVA: 0x00608931 File Offset: 0x00606B31
-		// (set) Token: 0x0602BE14 RID: 179732 RVA: 0x00608939 File Offset: 0x00606B39
+		// Token: 0x1700C6EE RID: 50926
+		// (get) Token: 0x0602E57C RID: 189820 RVA: 0x0065393D File Offset: 0x00651B3D
+		// (set) Token: 0x0602E57D RID: 189821 RVA: 0x00653945 File Offset: 0x00651B45
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602BE15 RID: 179733 RVA: 0x00608942 File Offset: 0x00606B42
+		// Token: 0x0602E57E RID: 189822 RVA: 0x0065394E File Offset: 0x00651B4E
 		public IChangePhantomFormationT()
 		{
 			this.FormationId = 0;

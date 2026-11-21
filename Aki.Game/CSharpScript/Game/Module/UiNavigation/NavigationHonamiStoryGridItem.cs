@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x0200490F RID: 18703
+	// Token: 0x02003886 RID: 14470
 	public class NavigationHonamiStoryGridItem : NavigationButton
 	{
-		// Token: 0x06030E2C RID: 200236 RVA: 0x00B5A367 File Offset: 0x00B58567
+		// Token: 0x06025959 RID: 153945 RVA: 0x00A951D7 File Offset: 0x00A933D7
 		[NullableContext(1)]
 		public NavigationHonamiStoryGridItem(ULGUIBehaviour selectable, string type, List<string> paramList) : base(selectable, type, paramList)
 		{

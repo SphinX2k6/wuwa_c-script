@@ -7,16 +7,16 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02002DFD RID: 11773
+// Token: 0x02002358 RID: 9048
 [NullableContext(1)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/LogicDataRebound.LogicDataRebound_C")]
 public class LogicDataRebound : LogicDataBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x17002204 RID: 8708
-	// (get) Token: 0x06018BD5 RID: 101333 RVA: 0x00658E70 File Offset: 0x00657070
-	// (set) Token: 0x06018BD6 RID: 101334 RVA: 0x00658EA9 File Offset: 0x006570A9
+	// Token: 0x17002268 RID: 8808
+	// (get) Token: 0x0601648A RID: 91274 RVA: 0x0067EEF4 File Offset: 0x0067D0F4
+	// (set) Token: 0x0601648B RID: 91275 RVA: 0x0067EF2D File Offset: 0x0067D12D
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<string> BulletRowName
 	{
@@ -36,9 +36,9 @@ public class LogicDataRebound : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x17002205 RID: 8709
-	// (get) Token: 0x06018BD7 RID: 101335 RVA: 0x00658EB8 File Offset: 0x006570B8
-	// (set) Token: 0x06018BD8 RID: 101336 RVA: 0x00658EF1 File Offset: 0x006570F1
+	// Token: 0x17002269 RID: 8809
+	// (get) Token: 0x0601648C RID: 91276 RVA: 0x0067EF3C File Offset: 0x0067D13C
+	// (set) Token: 0x0601648D RID: 91277 RVA: 0x0067EF75 File Offset: 0x0067D175
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TSoftObjectPtr<UEffectModelBase> EffectRebound
 	{
@@ -58,9 +58,9 @@ public class LogicDataRebound : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x17002206 RID: 8710
-	// (get) Token: 0x06018BD9 RID: 101337 RVA: 0x00658F16 File Offset: 0x00657116
-	// (set) Token: 0x06018BDA RID: 101338 RVA: 0x00658F2A File Offset: 0x0065712A
+	// Token: 0x1700226A RID: 8810
+	// (get) Token: 0x0601648E RID: 91278 RVA: 0x0067EF9A File Offset: 0x0067D19A
+	// (set) Token: 0x0601648F RID: 91279 RVA: 0x0067EFAE File Offset: 0x0067D1AE
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FVector PositionOffset
 	{
@@ -74,9 +74,9 @@ public class LogicDataRebound : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x17002207 RID: 8711
-	// (get) Token: 0x06018BDB RID: 101339 RVA: 0x00658F3F File Offset: 0x0065713F
-	// (set) Token: 0x06018BDC RID: 101340 RVA: 0x00658F53 File Offset: 0x00657153
+	// Token: 0x1700226B RID: 8811
+	// (get) Token: 0x06016490 RID: 91280 RVA: 0x0067EFC3 File Offset: 0x0067D1C3
+	// (set) Token: 0x06016491 RID: 91281 RVA: 0x0067EFD7 File Offset: 0x0067D1D7
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FRotator RotationOffset
 	{
@@ -90,9 +90,9 @@ public class LogicDataRebound : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x17002208 RID: 8712
-	// (get) Token: 0x06018BDD RID: 101341 RVA: 0x00658F68 File Offset: 0x00657168
-	// (set) Token: 0x06018BDE RID: 101342 RVA: 0x00658FA1 File Offset: 0x006571A1
+	// Token: 0x1700226C RID: 8812
+	// (get) Token: 0x06016492 RID: 91282 RVA: 0x0067EFEC File Offset: 0x0067D1EC
+	// (set) Token: 0x06016493 RID: 91283 RVA: 0x0067F025 File Offset: 0x0067D225
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TSoftClassPtr<UCameraShakeBase> ScreenShake
 	{
@@ -112,9 +112,9 @@ public class LogicDataRebound : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x17002209 RID: 8713
-	// (get) Token: 0x06018BDF RID: 101343 RVA: 0x00658FC8 File Offset: 0x006571C8
-	// (set) Token: 0x06018BE0 RID: 101344 RVA: 0x00659001 File Offset: 0x00657201
+	// Token: 0x1700226D RID: 8813
+	// (get) Token: 0x06016494 RID: 91284 RVA: 0x0067F04C File Offset: 0x0067D24C
+	// (set) Token: 0x06016495 RID: 91285 RVA: 0x0067F085 File Offset: 0x0067D285
 	[UProperty(EPropertyFlags.CPF_None)]
 	public SCounterAttackCamera CameraModified
 	{
@@ -134,9 +134,9 @@ public class LogicDataRebound : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x1700220A RID: 8714
-	// (get) Token: 0x06018BE1 RID: 101345 RVA: 0x00659029 File Offset: 0x00657229
-	// (set) Token: 0x06018BE2 RID: 101346 RVA: 0x00659039 File Offset: 0x00657239
+	// Token: 0x1700226E RID: 8814
+	// (get) Token: 0x06016496 RID: 91286 RVA: 0x0067F0AD File Offset: 0x0067D2AD
+	// (set) Token: 0x06016497 RID: 91287 RVA: 0x0067F0BD File Offset: 0x0067D2BD
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int ReboundBitMask
 	{
@@ -150,9 +150,9 @@ public class LogicDataRebound : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x1700220B RID: 8715
-	// (get) Token: 0x06018BE3 RID: 101347 RVA: 0x0065904A File Offset: 0x0065724A
-	// (set) Token: 0x06018BE4 RID: 101348 RVA: 0x0065905A File Offset: 0x0065725A
+	// Token: 0x1700226F RID: 8815
+	// (get) Token: 0x06016498 RID: 91288 RVA: 0x0067F0CE File Offset: 0x0067D2CE
+	// (set) Token: 0x06016499 RID: 91289 RVA: 0x0067F0DE File Offset: 0x0067D2DE
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool DestroyOtherBullet
 	{
@@ -166,7 +166,7 @@ public class LogicDataRebound : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x06018BE5 RID: 101349 RVA: 0x0065906B File Offset: 0x0065726B
+	// Token: 0x0601649A RID: 91290 RVA: 0x0067F0EF File Offset: 0x0067D2EF
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (LogicDataRebound._ClassPtr == IntPtr.Zero)
@@ -176,34 +176,34 @@ public class LogicDataRebound : LogicDataBase, IUnrealUObject, IUnrealObject
 		return LogicDataRebound._ClassPtr;
 	}
 
-	// Token: 0x06018BE6 RID: 101350 RVA: 0x00659090 File Offset: 0x00657290
+	// Token: 0x0601649B RID: 91291 RVA: 0x0067F114 File Offset: 0x0067D314
 	public LogicDataRebound() : this(BuiltinUtils.AllocNativeUObject(LogicDataRebound.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06018BE7 RID: 101351 RVA: 0x006590B8 File Offset: 0x006572B8
+	// Token: 0x0601649C RID: 91292 RVA: 0x0067F13C File Offset: 0x0067D33C
 	public LogicDataRebound(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(LogicDataRebound.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06018BE8 RID: 101352 RVA: 0x006590EB File Offset: 0x006572EB
+	// Token: 0x0601649D RID: 91293 RVA: 0x0067F16F File Offset: 0x0067D36F
 	protected LogicDataRebound(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0400B89C RID: 47260
+	// Token: 0x0400BC22 RID: 48162
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/LogicDataRebound.LogicDataRebound_C";
 
-	// Token: 0x0400B89D RID: 47261
+	// Token: 0x0400BC23 RID: 48163
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400B89E RID: 47262
+	// Token: 0x0400BC24 RID: 48164
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400B89F RID: 47263
+	// Token: 0x0400BC25 RID: 48165
 	private static int __PropertyOffset_BulletRowName;
 
-	// Token: 0x0400B8A0 RID: 47264
+	// Token: 0x0400BC26 RID: 48166
 	[Nullable(new byte[]
 	{
 		2,
@@ -211,10 +211,10 @@ public class LogicDataRebound : LogicDataBase, IUnrealUObject, IUnrealObject
 	})]
 	private TArray<string> _BulletRowName;
 
-	// Token: 0x0400B8A1 RID: 47265
+	// Token: 0x0400BC27 RID: 48167
 	private static int __PropertyOffset_EffectRebound;
 
-	// Token: 0x0400B8A2 RID: 47266
+	// Token: 0x0400BC28 RID: 48168
 	[Nullable(new byte[]
 	{
 		2,
@@ -222,16 +222,16 @@ public class LogicDataRebound : LogicDataBase, IUnrealUObject, IUnrealObject
 	})]
 	private TSoftObjectPtr<UEffectModelBase> _EffectRebound;
 
-	// Token: 0x0400B8A3 RID: 47267
+	// Token: 0x0400BC29 RID: 48169
 	private static int __PropertyOffset_PositionOffset;
 
-	// Token: 0x0400B8A4 RID: 47268
+	// Token: 0x0400BC2A RID: 48170
 	private static int __PropertyOffset_RotationOffset;
 
-	// Token: 0x0400B8A5 RID: 47269
+	// Token: 0x0400BC2B RID: 48171
 	private static int __PropertyOffset_ScreenShake;
 
-	// Token: 0x0400B8A6 RID: 47270
+	// Token: 0x0400BC2C RID: 48172
 	[Nullable(new byte[]
 	{
 		2,
@@ -239,16 +239,16 @@ public class LogicDataRebound : LogicDataBase, IUnrealUObject, IUnrealObject
 	})]
 	private TSoftClassPtr<UCameraShakeBase> _ScreenShake;
 
-	// Token: 0x0400B8A7 RID: 47271
+	// Token: 0x0400BC2D RID: 48173
 	private static int __PropertyOffset_CameraModified;
 
-	// Token: 0x0400B8A8 RID: 47272
+	// Token: 0x0400BC2E RID: 48174
 	[Nullable(2)]
 	private SCounterAttackCamera _CameraModified;
 
-	// Token: 0x0400B8A9 RID: 47273
+	// Token: 0x0400BC2F RID: 48175
 	private static int __PropertyOffset_ReboundBitMask;
 
-	// Token: 0x0400B8AA RID: 47274
+	// Token: 0x0400BC30 RID: 48176
 	private static int __PropertyOffset_DestroyOtherBullet;
 }

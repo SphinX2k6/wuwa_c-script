@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Gamepad
 {
-	// Token: 0x020059F1 RID: 23025
+	// Token: 0x020049CC RID: 18892
 	public enum EHitFeedbackType
 	{
-		// Token: 0x0401E6C3 RID: 124611
+		// Token: 0x04019165 RID: 102757
 		FK,
-		// Token: 0x0401E6C4 RID: 124612
+		// Token: 0x04019166 RID: 102758
 		Light,
-		// Token: 0x0401E6C5 RID: 124613
+		// Token: 0x04019167 RID: 102759
 		Heavy
 	}
 }

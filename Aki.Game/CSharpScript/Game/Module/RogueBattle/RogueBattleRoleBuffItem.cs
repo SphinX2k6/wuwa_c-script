@@ -10,7 +10,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E8C RID: 20108
+	// Token: 0x02003E55 RID: 15957
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 	})]
 	public class RogueBattleRoleBuffItem : GridProxyAbstract<RogueResGainData>
 	{
-		// Token: 0x06033B70 RID: 211824 RVA: 0x00C1D07C File Offset: 0x00C1B27C
+		// Token: 0x060289DB RID: 166363 RVA: 0x00B66598 File Offset: 0x00B64798
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -38,19 +38,19 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033B71 RID: 211825 RVA: 0x00C1D153 File Offset: 0x00C1B353
+		// Token: 0x060289DC RID: 166364 RVA: 0x00B6666F File Offset: 0x00B6486F
 		protected override void OnBeforeShow()
 		{
 			EventSystem.Instance.Add(EEventName.RogueBattleDescModeChange, new Action(this.RefreshDescText));
 		}
 
-		// Token: 0x06033B72 RID: 211826 RVA: 0x00C1D171 File Offset: 0x00C1B371
+		// Token: 0x060289DD RID: 166365 RVA: 0x00B6668D File Offset: 0x00B6488D
 		protected override void OnBeforeHide()
 		{
 			EventSystem.Instance.Remove(EEventName.RogueBattleDescModeChange, new Action(this.RefreshDescText));
 		}
 
-		// Token: 0x06033B73 RID: 211827 RVA: 0x00C1D18F File Offset: 0x00C1B38F
+		// Token: 0x060289DE RID: 166366 RVA: 0x00B666AB File Offset: 0x00B648AB
 		private void OnClickExtendToggle(EToggleState state)
 		{
 			Action<int> onSelectCallback = this.OnSelectCallback;
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			onSelectCallback(base.GridIndex);
 		}
 
-		// Token: 0x06033B74 RID: 211828 RVA: 0x00C1D1A7 File Offset: 0x00C1B3A7
+		// Token: 0x060289DF RID: 166367 RVA: 0x00B666C3 File Offset: 0x00B648C3
 		private void OnClickBtnDetail()
 		{
 			Action<int> onClickBtnDetailCallback = this.OnClickBtnDetailCallback;
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			onClickBtnDetailCallback(base.GridIndex);
 		}
 
-		// Token: 0x06033B75 RID: 211829 RVA: 0x00C1D1C0 File Offset: 0x00C1B3C0
+		// Token: 0x060289E0 RID: 166368 RVA: 0x00B666DC File Offset: 0x00B648DC
 		[NullableContext(1)]
 		public override void Refresh(RogueResGainData data, bool isSelected, int gridIndex)
 		{
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			base.GetItem(4).SetUIActive(data.RogueResRoleBuff.IsNew);
 		}
 
-		// Token: 0x06033B76 RID: 211830 RVA: 0x00C1D278 File Offset: 0x00C1B478
+		// Token: 0x060289E1 RID: 166369 RVA: 0x00B66794 File Offset: 0x00B64994
 		private void RefreshDescText()
 		{
 			if (this.Data == null)
@@ -115,19 +115,19 @@ namespace CSharpScript.Game.Module.RogueBattle
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), rogueResCharacterBuff.Value.AffixDesc, rogueResCharacterBuff.Value.AffixDescParam());
 		}
 
-		// Token: 0x06033B77 RID: 211831 RVA: 0x00C1D314 File Offset: 0x00C1B514
+		// Token: 0x060289E2 RID: 166370 RVA: 0x00B66830 File Offset: 0x00B64A30
 		public override void OnSelected(bool fireEvent)
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_Checked, false, false, false);
 		}
 
-		// Token: 0x06033B78 RID: 211832 RVA: 0x00C1D327 File Offset: 0x00C1B527
+		// Token: 0x060289E3 RID: 166371 RVA: 0x00B66843 File Offset: 0x00B64A43
 		public override void OnDeselected(bool fireEvent)
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x06033B79 RID: 211833 RVA: 0x00C1D33C File Offset: 0x00C1B53C
+		// Token: 0x060289E4 RID: 166372 RVA: 0x00B66858 File Offset: 0x00B64A58
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -156,13 +156,13 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x0401B74E RID: 112462
+		// Token: 0x04016121 RID: 90401
 		private RogueResGainData Data;
 
-		// Token: 0x0401B74F RID: 112463
+		// Token: 0x04016122 RID: 90402
 		public Action<int> OnSelectCallback;
 
-		// Token: 0x0401B750 RID: 112464
+		// Token: 0x04016123 RID: 90403
 		public Action<int> OnClickBtnDetailCallback;
 	}
 }

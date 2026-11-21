@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020015F9 RID: 5625
+	// Token: 0x0200175B RID: 5979
 	[EnumExtensions]
 	public enum EHookTriggerType
 	{
-		// Token: 0x04004B1A RID: 19226
+		// Token: 0x04004EE0 RID: 20192
 		Motor
 	}
 }

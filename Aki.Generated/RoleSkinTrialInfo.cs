@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200105F RID: 4191
+	// Token: 0x02001147 RID: 4423
 	public struct RoleSkinTrialInfo : IFlatbufferObject
 	{
-		// Token: 0x17003361 RID: 13153
-		// (get) Token: 0x0600CB30 RID: 52016 RVA: 0x00300535 File Offset: 0x002FE735
+		// Token: 0x170033DE RID: 13278
+		// (get) Token: 0x0600D187 RID: 53639 RVA: 0x0031C92E File Offset: 0x0031AB2E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600CB31 RID: 52017 RVA: 0x00300542 File Offset: 0x002FE742
+		// Token: 0x0600D188 RID: 53640 RVA: 0x0031C93B File Offset: 0x0031AB3B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600CB32 RID: 52018 RVA: 0x0030054C File Offset: 0x002FE74C
+		// Token: 0x0600D189 RID: 53641 RVA: 0x0031C944 File Offset: 0x0031AB44
 		public static RoleSkinTrialInfo GetRootAsRoleSkinTrialInfo(ByteBuffer _bb)
 		{
 			return RoleSkinTrialInfo.GetRootAsRoleSkinTrialInfo(_bb, default(RoleSkinTrialInfo));
 		}
 
-		// Token: 0x0600CB33 RID: 52019 RVA: 0x00300568 File Offset: 0x002FE768
+		// Token: 0x0600D18A RID: 53642 RVA: 0x0031C960 File Offset: 0x0031AB60
 		public static RoleSkinTrialInfo GetRootAsRoleSkinTrialInfo(ByteBuffer _bb, RoleSkinTrialInfo obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600CB34 RID: 52020 RVA: 0x00300585 File Offset: 0x002FE785
+		// Token: 0x0600D18B RID: 53643 RVA: 0x0031C97D File Offset: 0x0031AB7D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600CB35 RID: 52021 RVA: 0x00300594 File Offset: 0x002FE794
+		// Token: 0x0600D18C RID: 53644 RVA: 0x0031C98C File Offset: 0x0031AB8C
 		public RoleSkinTrialInfo __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003362 RID: 13154
-		// (get) Token: 0x0600CB36 RID: 52022 RVA: 0x003005A4 File Offset: 0x002FE7A4
+		// Token: 0x170033DF RID: 13279
+		// (get) Token: 0x0600D18D RID: 53645 RVA: 0x0031C99C File Offset: 0x0031AB9C
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003363 RID: 13155
-		// (get) Token: 0x0600CB37 RID: 52023 RVA: 0x003005E0 File Offset: 0x002FE7E0
+		// Token: 0x170033E0 RID: 13280
+		// (get) Token: 0x0600D18E RID: 53646 RVA: 0x0031C9D8 File Offset: 0x0031ABD8
 		public int RoleId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003364 RID: 13156
-		// (get) Token: 0x0600CB38 RID: 52024 RVA: 0x0030061C File Offset: 0x002FE81C
+		// Token: 0x170033E1 RID: 13281
+		// (get) Token: 0x0600D18F RID: 53647 RVA: 0x0031CA14 File Offset: 0x0031AC14
 		public int TrialRoleId
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003365 RID: 13157
-		// (get) Token: 0x0600CB39 RID: 52025 RVA: 0x00300658 File Offset: 0x002FE858
+		// Token: 0x170033E2 RID: 13282
+		// (get) Token: 0x0600D190 RID: 53648 RVA: 0x0031CA50 File Offset: 0x0031AC50
 		public int PreviewSkinId
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003366 RID: 13158
-		// (get) Token: 0x0600CB3A RID: 52026 RVA: 0x00300698 File Offset: 0x002FE898
+		// Token: 0x170033E3 RID: 13283
+		// (get) Token: 0x0600D191 RID: 53649 RVA: 0x0031CA90 File Offset: 0x0031AC90
 		public int InstanceId
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003367 RID: 13159
-		// (get) Token: 0x0600CB3B RID: 52027 RVA: 0x003006D8 File Offset: 0x002FE8D8
+		// Token: 0x170033E4 RID: 13284
+		// (get) Token: 0x0600D192 RID: 53650 RVA: 0x0031CAD0 File Offset: 0x0031ACD0
 		public int AccessId
 		{
 			get
@@ -137,8 +137,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003368 RID: 13160
-		// (get) Token: 0x0600CB3C RID: 52028 RVA: 0x00300718 File Offset: 0x002FE918
+		// Token: 0x170033E5 RID: 13285
+		// (get) Token: 0x0600D193 RID: 53651 RVA: 0x0031CB10 File Offset: 0x0031AD10
 		public int DropId
 		{
 			get
@@ -152,8 +152,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003369 RID: 13161
-		// (get) Token: 0x0600CB3D RID: 52029 RVA: 0x00300758 File Offset: 0x002FE958
+		// Token: 0x170033E6 RID: 13286
+		// (get) Token: 0x0600D194 RID: 53652 RVA: 0x0031CB50 File Offset: 0x0031AD50
 		public string RoleIcon
 		{
 			get
@@ -167,20 +167,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600CB3E RID: 52030 RVA: 0x00300790 File Offset: 0x002FE990
+		// Token: 0x0600D195 RID: 53653 RVA: 0x0031CB88 File Offset: 0x0031AD88
 		public Span<byte> GetRoleIconBytes()
 		{
 			return this.__p.__vector_as_span<byte>(18, 1);
 		}
 
-		// Token: 0x0600CB3F RID: 52031 RVA: 0x003007A0 File Offset: 0x002FE9A0
+		// Token: 0x0600D196 RID: 53654 RVA: 0x0031CB98 File Offset: 0x0031AD98
 		public byte[] GetRoleIconArray()
 		{
 			return this.__p.__vector_as_array<byte>(18) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700336A RID: 13162
-		// (get) Token: 0x0600CB40 RID: 52032 RVA: 0x003007B8 File Offset: 0x002FE9B8
+		// Token: 0x170033E7 RID: 13287
+		// (get) Token: 0x0600D197 RID: 53655 RVA: 0x0031CBB0 File Offset: 0x0031ADB0
 		public string Introduction
 		{
 			get
@@ -194,20 +194,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600CB41 RID: 52033 RVA: 0x003007F0 File Offset: 0x002FE9F0
+		// Token: 0x0600D198 RID: 53656 RVA: 0x0031CBE8 File Offset: 0x0031ADE8
 		public Span<byte> GetIntroductionBytes()
 		{
 			return this.__p.__vector_as_span<byte>(20, 1);
 		}
 
-		// Token: 0x0600CB42 RID: 52034 RVA: 0x00300800 File Offset: 0x002FEA00
+		// Token: 0x0600D199 RID: 53657 RVA: 0x0031CBF8 File Offset: 0x0031ADF8
 		public byte[] GetIntroductionArray()
 		{
 			return this.__p.__vector_as_array<byte>(20) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700336B RID: 13163
-		// (get) Token: 0x0600CB43 RID: 52035 RVA: 0x00300818 File Offset: 0x002FEA18
+		// Token: 0x170033E8 RID: 13288
+		// (get) Token: 0x0600D19A RID: 53658 RVA: 0x0031CC10 File Offset: 0x0031AE10
 		public int UiConfigId
 		{
 			get
@@ -221,7 +221,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04005163 RID: 20835
+		// Token: 0x0400574B RID: 22347
 		private Table __p;
 	}
 }

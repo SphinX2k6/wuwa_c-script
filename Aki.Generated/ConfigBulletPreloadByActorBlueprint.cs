@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200012E RID: 302
+	// Token: 0x0200013D RID: 317
 	public class ConfigBulletPreloadByActorBlueprint : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000715 RID: 1813 RVA: 0x00081BA5 File Offset: 0x0007FDA5
+		// Token: 0x0600076F RID: 1903 RVA: 0x00087509 File Offset: 0x00085709
 		static ConfigBulletPreloadByActorBlueprint()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigBulletPreloadByActorBlueprint.CreateStaticDefaultValue), new Action(ConfigBulletPreloadByActorBlueprint.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000716 RID: 1814 RVA: 0x00081BC4 File Offset: 0x0007FDC4
+		// Token: 0x06000770 RID: 1904 RVA: 0x00087528 File Offset: 0x00085728
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigBulletPreloadByActorBlueprint.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000717 RID: 1815 RVA: 0x00081C43 File Offset: 0x0007FE43
+		// Token: 0x06000771 RID: 1905 RVA: 0x000875A7 File Offset: 0x000857A7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigBulletPreloadByActorBlueprint.LogPair = null;
 			ConfigBulletPreloadByActorBlueprint.HandleId = 0;
 		}
 
-		// Token: 0x06000718 RID: 1816 RVA: 0x00081C51 File Offset: 0x0007FE51
+		// Token: 0x06000772 RID: 1906 RVA: 0x000875B5 File Offset: 0x000857B5
 		public static void Init()
 		{
 			ConfigBulletPreloadByActorBlueprint.HandleId = ConfigCommon.InitDataStatement(ConfigBulletPreloadByActorBlueprint.HandleId, "db_bullet_preload.db", "select BinData from `BulletPreload` where ActorBlueprint=?");
 		}
 
-		// Token: 0x06000719 RID: 1817 RVA: 0x00081C6C File Offset: 0x0007FE6C
+		// Token: 0x06000773 RID: 1907 RVA: 0x000875D0 File Offset: 0x000857D0
 		[return: Nullable(2)]
 		public static IReadOnlyList<BulletPreload> GetConfigList(string p0ActorBlueprint, bool useCache = true)
 		{
@@ -86,22 +86,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04000826 RID: 2086
+		// Token: 0x0400088F RID: 2191
 		private const string DB = "db_bullet_preload.db";
 
-		// Token: 0x04000827 RID: 2087
+		// Token: 0x04000890 RID: 2192
 		private const string FILE = "Preload/BulletPreload.csv";
 
-		// Token: 0x04000828 RID: 2088
+		// Token: 0x04000891 RID: 2193
 		private const string TABLE = "BulletPreload";
 
-		// Token: 0x04000829 RID: 2089
+		// Token: 0x04000892 RID: 2194
 		private const string COMMAND = "select BinData from `BulletPreload` where ActorBlueprint=?";
 
-		// Token: 0x0400082A RID: 2090
+		// Token: 0x04000893 RID: 2195
 		private const string KEY_PREFIX = "BulletPreloadByActorBlueprint";
 
-		// Token: 0x0400082B RID: 2091
+		// Token: 0x04000894 RID: 2196
 		[Nullable(new byte[]
 		{
 			2,
@@ -111,7 +111,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400082C RID: 2092
+		// Token: 0x04000895 RID: 2197
 		private static int HandleId;
 	}
 }

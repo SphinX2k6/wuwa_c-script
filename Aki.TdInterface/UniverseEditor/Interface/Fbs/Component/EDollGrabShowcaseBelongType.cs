@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004D8D RID: 19853
+	// Token: 0x0200528E RID: 21134
 	public enum EDollGrabShowcaseBelongType : byte
 	{
-		// Token: 0x0400D944 RID: 55620
+		// Token: 0x0400E488 RID: 58504
 		LandOfXuanfang
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F4D RID: 8013
+	// Token: 0x02002186 RID: 8582
 	public class ITalkItemPhoneMessageBase_SetValue
 	{
-		// Token: 0x040068CD RID: 26829
+		// Token: 0x04006EBC RID: 28348
 		public EPhoneMessageType Type;
 	}
 }

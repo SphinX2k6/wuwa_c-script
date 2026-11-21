@@ -3,25 +3,25 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006466 RID: 25702
+	// Token: 0x02006ACE RID: 27342
 	public class ICommonBtOverrideT
 	{
-		// Token: 0x1700BF46 RID: 48966
-		// (get) Token: 0x0602C7B8 RID: 182200 RVA: 0x00619A90 File Offset: 0x00617C90
-		// (set) Token: 0x0602C7B9 RID: 182201 RVA: 0x00619A98 File Offset: 0x00617C98
+		// Token: 0x1700C8C8 RID: 51400
+		// (get) Token: 0x0602EEFD RID: 192253 RVA: 0x00664B5C File Offset: 0x00662D5C
+		// (set) Token: 0x0602EEFE RID: 192254 RVA: 0x00664B64 File Offset: 0x00662D64
 		public int CommonBtId { get; set; }
 
-		// Token: 0x1700BF47 RID: 48967
-		// (get) Token: 0x0602C7BA RID: 182202 RVA: 0x00619AA1 File Offset: 0x00617CA1
-		// (set) Token: 0x0602C7BB RID: 182203 RVA: 0x00619AA9 File Offset: 0x00617CA9
+		// Token: 0x1700C8C9 RID: 51401
+		// (get) Token: 0x0602EEFF RID: 192255 RVA: 0x00664B6D File Offset: 0x00662D6D
+		// (set) Token: 0x0602EF00 RID: 192256 RVA: 0x00664B75 File Offset: 0x00662D75
 		public List<ICommonBtPlaceholderT> OverridePlaceholders { get; set; }
 
-		// Token: 0x1700BF48 RID: 48968
-		// (get) Token: 0x0602C7BC RID: 182204 RVA: 0x00619AB2 File Offset: 0x00617CB2
-		// (set) Token: 0x0602C7BD RID: 182205 RVA: 0x00619ABA File Offset: 0x00617CBA
+		// Token: 0x1700C8CA RID: 51402
+		// (get) Token: 0x0602EF01 RID: 192257 RVA: 0x00664B7E File Offset: 0x00662D7E
+		// (set) Token: 0x0602EF02 RID: 192258 RVA: 0x00664B86 File Offset: 0x00662D86
 		public List<ICommonBtClientOverrideDataT> ClientOverrideData { get; set; }
 
-		// Token: 0x0602C7BE RID: 182206 RVA: 0x00619AC3 File Offset: 0x00617CC3
+		// Token: 0x0602EF03 RID: 192259 RVA: 0x00664B8F File Offset: 0x00662D8F
 		public ICommonBtOverrideT()
 		{
 			this.CommonBtId = 0;

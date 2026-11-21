@@ -3,30 +3,30 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004287 RID: 17031
+	// Token: 0x020046E3 RID: 18147
 	public class IWaitUntilLevelSequenceReachMarkT
 	{
-		// Token: 0x170078EE RID: 30958
-		// (get) Token: 0x0601939C RID: 103324 RVA: 0x0039FC27 File Offset: 0x0039DE27
-		// (set) Token: 0x0601939D RID: 103325 RVA: 0x0039FC2F File Offset: 0x0039DE2F
+		// Token: 0x17007F1F RID: 32543
+		// (get) Token: 0x0601AB08 RID: 109320 RVA: 0x003CB2FF File Offset: 0x003C94FF
+		// (set) Token: 0x0601AB09 RID: 109321 RVA: 0x003CB307 File Offset: 0x003C9507
 		public EChildQuest Type { get; set; }
 
-		// Token: 0x170078EF RID: 30959
-		// (get) Token: 0x0601939E RID: 103326 RVA: 0x0039FC38 File Offset: 0x0039DE38
-		// (set) Token: 0x0601939F RID: 103327 RVA: 0x0039FC40 File Offset: 0x0039DE40
+		// Token: 0x17007F20 RID: 32544
+		// (get) Token: 0x0601AB0A RID: 109322 RVA: 0x003CB310 File Offset: 0x003C9510
+		// (set) Token: 0x0601AB0B RID: 109323 RVA: 0x003CB318 File Offset: 0x003C9518
 		public IConditionGroupT PreConditions { get; set; }
 
-		// Token: 0x170078F0 RID: 30960
-		// (get) Token: 0x060193A0 RID: 103328 RVA: 0x0039FC49 File Offset: 0x0039DE49
-		// (set) Token: 0x060193A1 RID: 103329 RVA: 0x0039FC51 File Offset: 0x0039DE51
+		// Token: 0x17007F21 RID: 32545
+		// (get) Token: 0x0601AB0C RID: 109324 RVA: 0x003CB321 File Offset: 0x003C9521
+		// (set) Token: 0x0601AB0D RID: 109325 RVA: 0x003CB329 File Offset: 0x003C9529
 		public int EntityId { get; set; }
 
-		// Token: 0x170078F1 RID: 30961
-		// (get) Token: 0x060193A2 RID: 103330 RVA: 0x0039FC5A File Offset: 0x0039DE5A
-		// (set) Token: 0x060193A3 RID: 103331 RVA: 0x0039FC62 File Offset: 0x0039DE62
+		// Token: 0x17007F22 RID: 32546
+		// (get) Token: 0x0601AB0E RID: 109326 RVA: 0x003CB332 File Offset: 0x003C9532
+		// (set) Token: 0x0601AB0F RID: 109327 RVA: 0x003CB33A File Offset: 0x003C953A
 		public string Mark { get; set; }
 
-		// Token: 0x060193A4 RID: 103332 RVA: 0x0039FC6B File Offset: 0x0039DE6B
+		// Token: 0x0601AB10 RID: 109328 RVA: 0x003CB343 File Offset: 0x003C9543
 		public IWaitUntilLevelSequenceReachMarkT()
 		{
 			this.Type = EChildQuest.DoInteract;

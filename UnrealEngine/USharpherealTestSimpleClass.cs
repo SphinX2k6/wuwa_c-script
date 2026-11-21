@@ -6,43 +6,43 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002738 RID: 10040
+	// Token: 0x020007ED RID: 2029
 	[UnrealObjectPath("/Script/SharpherealTest.SharpherealTestSimpleClass")]
 	[UnrealStructLayout(96, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 96)]
 	public class USharpherealTestSimpleClass : UObject, IUnrealUObject, IUnrealObject, ISharpherealTestInterface, IUnrealNativeInterface, IUnrealInterface, ISharpherealTestInterface2
 	{
-		// Token: 0x060252B9 RID: 152249 RVA: 0x0037108E File Offset: 0x0036F28E
+		// Token: 0x0600ADA9 RID: 44457 RVA: 0x00101071 File Offset: 0x000FF271
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return USharpherealTestSimpleClass._ClassPtr;
 		}
 
-		// Token: 0x060252BA RID: 152250 RVA: 0x0037109A File Offset: 0x0036F29A
+		// Token: 0x0600ADAA RID: 44458 RVA: 0x0010107D File Offset: 0x000FF27D
 		int ISharpherealTestInterface.InterfaceOffset()
 		{
 			return USharpherealTestSimpleClass.__InterfaceOffset_ISharpherealTestInterface;
 		}
 
-		// Token: 0x060252BB RID: 152251 RVA: 0x003710A1 File Offset: 0x0036F2A1
+		// Token: 0x0600ADAB RID: 44459 RVA: 0x00101084 File Offset: 0x000FF284
 		int ISharpherealTestInterface2.InterfaceOffset()
 		{
 			return USharpherealTestSimpleClass.__InterfaceOffset_ISharpherealTestInterface2;
 		}
 
-		// Token: 0x060252BC RID: 152252 RVA: 0x003710A8 File Offset: 0x0036F2A8
+		// Token: 0x0600ADAC RID: 44460 RVA: 0x0010108C File Offset: 0x000FF28C
 		public USharpherealTestSimpleClass() : this(BuiltinUtils.AllocNativeUObject(USharpherealTestSimpleClass.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060252BD RID: 152253 RVA: 0x003710D0 File Offset: 0x0036F2D0
+		// Token: 0x0600ADAD RID: 44461 RVA: 0x001010B4 File Offset: 0x000FF2B4
 		[NullableContext(1)]
 		public USharpherealTestSimpleClass(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(USharpherealTestSimpleClass.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17008F67 RID: 36711
-		// (get) Token: 0x060252BE RID: 152254 RVA: 0x00371103 File Offset: 0x0036F303
-		// (set) Token: 0x060252BF RID: 152255 RVA: 0x00371117 File Offset: 0x0036F317
+		// Token: 0x17002050 RID: 8272
+		// (get) Token: 0x0600ADAE RID: 44462 RVA: 0x001010E7 File Offset: 0x000FF2E7
+		// (set) Token: 0x0600ADAF RID: 44463 RVA: 0x001010FB File Offset: 0x000FF2FB
 		public unsafe FVector Vector
 		{
 			get
@@ -55,9 +55,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F68 RID: 36712
-		// (get) Token: 0x060252C0 RID: 152256 RVA: 0x0037112C File Offset: 0x0036F32C
-		// (set) Token: 0x060252C1 RID: 152257 RVA: 0x00371140 File Offset: 0x0036F340
+		// Token: 0x17002051 RID: 8273
+		// (get) Token: 0x0600ADB0 RID: 44464 RVA: 0x00101110 File Offset: 0x000FF310
+		// (set) Token: 0x0600ADB1 RID: 44465 RVA: 0x00101124 File Offset: 0x000FF324
 		[Nullable(1)]
 		public unsafe string String
 		{
@@ -73,37 +73,37 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060252C2 RID: 152258 RVA: 0x00371155 File Offset: 0x0036F355
+		// Token: 0x0600ADB2 RID: 44466 RVA: 0x00101139 File Offset: 0x000FF339
 		static USharpherealTestSimpleClass()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/SharpherealTest.SharpherealTestSimpleClass");
 		}
 
-		// Token: 0x060252C3 RID: 152259 RVA: 0x00371163 File Offset: 0x0036F363
+		// Token: 0x0600ADB3 RID: 44467 RVA: 0x00101147 File Offset: 0x000FF347
 		protected USharpherealTestSimpleClass(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04014088 RID: 82056
+		// Token: 0x04004AEB RID: 19179
 		internal static int __InterfaceOffset_ISharpherealTestInterface;
 
-		// Token: 0x04014089 RID: 82057
+		// Token: 0x04004AEC RID: 19180
 		internal static int __InterfaceOffset_ISharpherealTestInterface2;
 
-		// Token: 0x0401408A RID: 82058
+		// Token: 0x04004AED RID: 19181
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/SharpherealTest.SharpherealTestSimpleClass";
 
-		// Token: 0x0401408B RID: 82059
+		// Token: 0x04004AEE RID: 19182
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401408C RID: 82060
+		// Token: 0x04004AEF RID: 19183
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401408D RID: 82061
+		// Token: 0x04004AF0 RID: 19184
 		internal static int __PropertyOffset_Vector;
 
-		// Token: 0x0401408E RID: 82062
+		// Token: 0x04004AF1 RID: 19185
 		internal static int __PropertyOffset_String;
 	}
 }

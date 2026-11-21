@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001D9 RID: 473
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000200 RID: 512
 	public class IAudioPointNearbyTracking : INearbyTracking
 	{
-		// Token: 0x06000796 RID: 1942 RVA: 0x000252C4 File Offset: 0x000234C4
+		// Token: 0x06000804 RID: 2052 RVA: 0x000269A4 File Offset: 0x00024BA4
 		private IAudioPointNearbyTracking_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000797 RID: 1943 RVA: 0x000252FC File Offset: 0x000234FC
+		// Token: 0x06000805 RID: 2053 RVA: 0x000269DC File Offset: 0x00024BDC
 		public static IAudioPointNearbyTracking Create([Nullable(2)] IAudioPointNearbyTracking instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000798 RID: 1944 RVA: 0x0002530F File Offset: 0x0002350F
+		// Token: 0x06000806 RID: 2054 RVA: 0x000269EF File Offset: 0x00024BEF
 		public static IAudioPointNearbyTracking CreateFromSetValue([Nullable(2)] IAudioPointNearbyTracking_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000799 RID: 1945 RVA: 0x00025322 File Offset: 0x00023522
+		// Token: 0x06000807 RID: 2055 RVA: 0x00026A02 File Offset: 0x00024C02
 		public new IAudioPointNearbyTracking_SetValue ToSetValue()
 		{
 			return new IAudioPointNearbyTracking_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000263 RID: 611
-		// (get) Token: 0x0600079A RID: 1946 RVA: 0x00025359 File Offset: 0x00023559
-		// (set) Token: 0x0600079B RID: 1947 RVA: 0x00025384 File Offset: 0x00023584
+		// Token: 0x1700027F RID: 639
+		// (get) Token: 0x06000808 RID: 2056 RVA: 0x00026A39 File Offset: 0x00024C39
+		// (set) Token: 0x06000809 RID: 2057 RVA: 0x00026A64 File Offset: 0x00024C64
 		public override ENearbyTrackingType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000264 RID: 612
-		// (get) Token: 0x0600079C RID: 1948 RVA: 0x00025392 File Offset: 0x00023592
-		// (set) Token: 0x0600079D RID: 1949 RVA: 0x000253BD File Offset: 0x000235BD
+		// Token: 0x17000280 RID: 640
+		// (get) Token: 0x0600080A RID: 2058 RVA: 0x00026A72 File Offset: 0x00024C72
+		// (set) Token: 0x0600080B RID: 2059 RVA: 0x00026A9D File Offset: 0x00024C9D
 		public virtual int NearRadius
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000265 RID: 613
-		// (get) Token: 0x0600079E RID: 1950 RVA: 0x000253CB File Offset: 0x000235CB
-		// (set) Token: 0x0600079F RID: 1951 RVA: 0x000253F6 File Offset: 0x000235F6
+		// Token: 0x17000281 RID: 641
+		// (get) Token: 0x0600080C RID: 2060 RVA: 0x00026AAB File Offset: 0x00024CAB
+		// (set) Token: 0x0600080D RID: 2061 RVA: 0x00026AD6 File Offset: 0x00024CD6
 		public virtual int MiddleRadius
 		{
 			get
@@ -131,9 +129,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000266 RID: 614
-		// (get) Token: 0x060007A0 RID: 1952 RVA: 0x00025404 File Offset: 0x00023604
-		// (set) Token: 0x060007A1 RID: 1953 RVA: 0x0002542F File Offset: 0x0002362F
+		// Token: 0x17000282 RID: 642
+		// (get) Token: 0x0600080E RID: 2062 RVA: 0x00026AE4 File Offset: 0x00024CE4
+		// (set) Token: 0x0600080F RID: 2063 RVA: 0x00026B0F File Offset: 0x00024D0F
 		public virtual int FarRadius
 		{
 			get
@@ -154,11 +152,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040008B1 RID: 2225
+		// Token: 0x04000938 RID: 2360
 		[Nullable(2)]
 		protected new IAudioPointNearbyTracking FbInstance;
 
-		// Token: 0x040008B2 RID: 2226
+		// Token: 0x04000939 RID: 2361
 		[Nullable(2)]
 		protected new IAudioPointNearbyTracking_SetValue PocoInterface;
 	}

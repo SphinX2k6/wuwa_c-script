@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200081D RID: 2077
+	// Token: 0x02000839 RID: 2105
 	public class ConfigRogueBossInstanceById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060030C0 RID: 12480 RVA: 0x0016CDF8 File Offset: 0x0016AFF8
+		// Token: 0x06003168 RID: 12648 RVA: 0x001740E0 File Offset: 0x001722E0
 		static ConfigRogueBossInstanceById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRogueBossInstanceById.CreateStaticDefaultValue), new Action(ConfigRogueBossInstanceById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060030C1 RID: 12481 RVA: 0x0016CE18 File Offset: 0x0016B018
+		// Token: 0x06003169 RID: 12649 RVA: 0x00174100 File Offset: 0x00172300
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRogueBossInstanceById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060030C2 RID: 12482 RVA: 0x0016CE97 File Offset: 0x0016B097
+		// Token: 0x0600316A RID: 12650 RVA: 0x0017417F File Offset: 0x0017237F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRogueBossInstanceById.LogPair = null;
 			ConfigRogueBossInstanceById.HandleId = 0;
 		}
 
-		// Token: 0x060030C3 RID: 12483 RVA: 0x0016CEA5 File Offset: 0x0016B0A5
+		// Token: 0x0600316B RID: 12651 RVA: 0x0017418D File Offset: 0x0017238D
 		public static void Init()
 		{
 			ConfigRogueBossInstanceById.HandleId = ConfigCommon.InitDataStatement(ConfigRogueBossInstanceById.HandleId, "db_dreamlink.db", "select BinData from `RogueBossInstance` where Id=?");
 		}
 
-		// Token: 0x060030C4 RID: 12484 RVA: 0x0016CEC0 File Offset: 0x0016B0C0
+		// Token: 0x0600316C RID: 12652 RVA: 0x001741A8 File Offset: 0x001723A8
 		public static RogueBossInstance? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRogueBossInstanceById.HandleId, ConfigRogueBossInstanceById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RogueBossInstance?(rootAsRogueBossInstance);
 		}
 
-		// Token: 0x040038B1 RID: 14513
+		// Token: 0x04003975 RID: 14709
 		private const string DB = "db_dreamlink.db";
 
-		// Token: 0x040038B2 RID: 14514
+		// Token: 0x04003976 RID: 14710
 		private const string FILE = "m.梦境链接活动.xlsx";
 
-		// Token: 0x040038B3 RID: 14515
+		// Token: 0x04003977 RID: 14711
 		private const string TABLE = "RogueBossInstance";
 
-		// Token: 0x040038B4 RID: 14516
+		// Token: 0x04003978 RID: 14712
 		private const string COMMAND = "select BinData from `RogueBossInstance` where Id=?";
 
-		// Token: 0x040038B5 RID: 14517
+		// Token: 0x04003979 RID: 14713
 		private const string KEY_PREFIX = "RogueBossInstanceById";
 
-		// Token: 0x040038B6 RID: 14518
+		// Token: 0x0400397A RID: 14714
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040038B7 RID: 14519
+		// Token: 0x0400397B RID: 14715
 		private static int HandleId;
 	}
 }

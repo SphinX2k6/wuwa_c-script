@@ -4,10 +4,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.SyncBlock
 {
-	// Token: 0x02003B86 RID: 15238
+	// Token: 0x02003F8E RID: 16270
 	public static class ISyncBlockGroupVerify
 	{
-		// Token: 0x06014E14 RID: 85524 RVA: 0x00307D38 File Offset: 0x00305F38
+		// Token: 0x060162DE RID: 90846 RVA: 0x0032E2D0 File Offset: 0x0032C4D0
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			if (verifier.VerifyTableStart(tablePos) && verifier.VerifyString(tablePos, 4, false))
@@ -26,11 +26,11 @@ namespace Aki.UniverseEditor.Interface.Fbs.SyncBlock
 			return false;
 		}
 
-		// Token: 0x0200788C RID: 30860
+		// Token: 0x020080CF RID: 32975
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040130F5 RID: 78069
+			// Token: 0x04014150 RID: 82256
 			public static VerifyTableAction <0>__Verify;
 		}
 	}

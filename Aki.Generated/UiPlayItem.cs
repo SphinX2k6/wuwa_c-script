@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02001185 RID: 4485
+	// Token: 0x020012BB RID: 4795
 	public struct UiPlayItem : IFlatbufferObject
 	{
-		// Token: 0x17003D3D RID: 15677
-		// (get) Token: 0x0600E64C RID: 58956 RVA: 0x0033EC68 File Offset: 0x0033CE68
+		// Token: 0x170040A1 RID: 16545
+		// (get) Token: 0x0600F3BA RID: 62394 RVA: 0x00369A60 File Offset: 0x00367C60
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E64D RID: 58957 RVA: 0x0033EC75 File Offset: 0x0033CE75
+		// Token: 0x0600F3BB RID: 62395 RVA: 0x00369A6D File Offset: 0x00367C6D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600E64E RID: 58958 RVA: 0x0033EC7C File Offset: 0x0033CE7C
+		// Token: 0x0600F3BC RID: 62396 RVA: 0x00369A74 File Offset: 0x00367C74
 		public static UiPlayItem GetRootAsUiPlayItem(ByteBuffer _bb)
 		{
 			return UiPlayItem.GetRootAsUiPlayItem(_bb, default(UiPlayItem));
 		}
 
-		// Token: 0x0600E64F RID: 58959 RVA: 0x0033EC98 File Offset: 0x0033CE98
+		// Token: 0x0600F3BD RID: 62397 RVA: 0x00369A90 File Offset: 0x00367C90
 		public static UiPlayItem GetRootAsUiPlayItem(ByteBuffer _bb, UiPlayItem obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600E650 RID: 58960 RVA: 0x0033ECB5 File Offset: 0x0033CEB5
+		// Token: 0x0600F3BE RID: 62398 RVA: 0x00369AAD File Offset: 0x00367CAD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600E651 RID: 58961 RVA: 0x0033ECC4 File Offset: 0x0033CEC4
+		// Token: 0x0600F3BF RID: 62399 RVA: 0x00369ABC File Offset: 0x00367CBC
 		public UiPlayItem __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003D3E RID: 15678
-		// (get) Token: 0x0600E652 RID: 58962 RVA: 0x0033ECD4 File Offset: 0x0033CED4
+		// Token: 0x170040A2 RID: 16546
+		// (get) Token: 0x0600F3C0 RID: 62400 RVA: 0x00369ACC File Offset: 0x00367CCC
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003D3F RID: 15679
-		// (get) Token: 0x0600E653 RID: 58963 RVA: 0x0033ED10 File Offset: 0x0033CF10
+		// Token: 0x170040A3 RID: 16547
+		// (get) Token: 0x0600F3C1 RID: 62401 RVA: 0x00369B08 File Offset: 0x00367D08
 		public string Type
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E654 RID: 58964 RVA: 0x0033ED47 File Offset: 0x0033CF47
+		// Token: 0x0600F3C2 RID: 62402 RVA: 0x00369B3F File Offset: 0x00367D3F
 		public Span<byte> GetTypeBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0600E655 RID: 58965 RVA: 0x0033ED56 File Offset: 0x0033CF56
+		// Token: 0x0600F3C3 RID: 62403 RVA: 0x00369B4E File Offset: 0x00367D4E
 		public byte[] GetTypeArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17003D40 RID: 15680
-		// (get) Token: 0x0600E656 RID: 58966 RVA: 0x0033ED70 File Offset: 0x0033CF70
+		// Token: 0x170040A4 RID: 16548
+		// (get) Token: 0x0600F3C4 RID: 62404 RVA: 0x00369B68 File Offset: 0x00367D68
 		public string UiPlayKey
 		{
 			get
@@ -104,20 +104,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E657 RID: 58967 RVA: 0x0033EDA7 File Offset: 0x0033CFA7
+		// Token: 0x0600F3C5 RID: 62405 RVA: 0x00369B9F File Offset: 0x00367D9F
 		public Span<byte> GetUiPlayKeyBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0600E658 RID: 58968 RVA: 0x0033EDB6 File Offset: 0x0033CFB6
+		// Token: 0x0600F3C6 RID: 62406 RVA: 0x00369BAE File Offset: 0x00367DAE
 		public byte[] GetUiPlayKeyArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17003D41 RID: 15681
-		// (get) Token: 0x0600E659 RID: 58969 RVA: 0x0033EDD0 File Offset: 0x0033CFD0
+		// Token: 0x170040A5 RID: 16549
+		// (get) Token: 0x0600F3C7 RID: 62407 RVA: 0x00369BC8 File Offset: 0x00367DC8
 		public int FinishItem
 		{
 			get
@@ -131,7 +131,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x040052CE RID: 21198
+		// Token: 0x04005911 RID: 22801
 		private Table __p;
 	}
 }

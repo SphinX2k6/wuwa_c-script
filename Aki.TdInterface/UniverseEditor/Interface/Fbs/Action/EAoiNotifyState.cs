@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F15 RID: 24341
+	// Token: 0x02006558 RID: 25944
 	public enum EAoiNotifyState : byte
 	{
-		// Token: 0x0400FBFB RID: 64507
+		// Token: 0x0401096E RID: 67950
 		Open,
-		// Token: 0x0400FBFC RID: 64508
+		// Token: 0x0401096F RID: 67951
 		Close
 	}
 }

@@ -10,12 +10,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001F42 RID: 8002
+// Token: 0x02001404 RID: 5124
 [NullableContext(2)]
 [Nullable(0)]
 public class AiMiSiHudUnit : HudUnitBase
 {
-	// Token: 0x0600F735 RID: 63285 RVA: 0x003BB934 File Offset: 0x003B9B34
+	// Token: 0x0600CB54 RID: 52052 RVA: 0x003C7420 File Offset: 0x003C5620
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 51;
@@ -127,7 +127,7 @@ public class AiMiSiHudUnit : HudUnitBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F736 RID: 63286 RVA: 0x003BC01C File Offset: 0x003BA21C
+	// Token: 0x0600CB55 RID: 52053 RVA: 0x003C7B08 File Offset: 0x003C5D08
 	protected override UniTask OnBeforeStartAsync()
 	{
 		AiMiSiHudUnit.<OnBeforeStartAsync>d__58 <OnBeforeStartAsync>d__;
@@ -138,7 +138,7 @@ public class AiMiSiHudUnit : HudUnitBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F737 RID: 63287 RVA: 0x003BC060 File Offset: 0x003BA260
+	// Token: 0x0600CB56 RID: 52054 RVA: 0x003C7B4C File Offset: 0x003C5D4C
 	protected override void OnStart()
 	{
 		base.InitTweenAnim(17);
@@ -196,7 +196,7 @@ public class AiMiSiHudUnit : HudUnitBase
 		this.RefreshRotateMachineSpeed();
 	}
 
-	// Token: 0x0600F738 RID: 63288 RVA: 0x003BC328 File Offset: 0x003BA528
+	// Token: 0x0600CB57 RID: 52055 RVA: 0x003C7E14 File Offset: 0x003C6014
 	protected override UniTask OnBeforeHideAsync()
 	{
 		AiMiSiHudUnit.<OnBeforeHideAsync>d__60 <OnBeforeHideAsync>d__;
@@ -207,7 +207,7 @@ public class AiMiSiHudUnit : HudUnitBase
 		return <OnBeforeHideAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F739 RID: 63289 RVA: 0x003BC36B File Offset: 0x003BA56B
+	// Token: 0x0600CB58 RID: 52056 RVA: 0x003C7E57 File Offset: 0x003C6057
 	private void OnCloseAnimTimerEnd(float delta)
 	{
 		this.CloseTimer = null;
@@ -215,7 +215,7 @@ public class AiMiSiHudUnit : HudUnitBase
 		this.Promise = null;
 	}
 
-	// Token: 0x0600F73A RID: 63290 RVA: 0x003BC388 File Offset: 0x003BA588
+	// Token: 0x0600CB59 RID: 52057 RVA: 0x003C7E74 File Offset: 0x003C6074
 	protected override void OnBeforeDestroy()
 	{
 		this.StopTweenAnim(32);
@@ -236,7 +236,7 @@ public class AiMiSiHudUnit : HudUnitBase
 		this.KeyItemList.Clear();
 	}
 
-	// Token: 0x0600F73B RID: 63291 RVA: 0x003BC434 File Offset: 0x003BA634
+	// Token: 0x0600CB5A RID: 52058 RVA: 0x003C7F20 File Offset: 0x003C6120
 	public void RefreshKeyNode()
 	{
 		UUIItem item = base.GetItem(45);
@@ -261,7 +261,7 @@ public class AiMiSiHudUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F73C RID: 63292 RVA: 0x003BC4AC File Offset: 0x003BA6AC
+	// Token: 0x0600CB5B RID: 52059 RVA: 0x003C7F98 File Offset: 0x003C6198
 	[NullableContext(1)]
 	private UniTask InitKeyItem(UUIItem parentItem, string actionName)
 	{
@@ -275,7 +275,7 @@ public class AiMiSiHudUnit : HudUnitBase
 		return <InitKeyItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F73D RID: 63293 RVA: 0x003BC500 File Offset: 0x003BA700
+	// Token: 0x0600CB5C RID: 52060 RVA: 0x003C7FEC File Offset: 0x003C61EC
 	public void RefreshRotateMachineSpeed()
 	{
 		if (Info.Instance.IsInTouch())
@@ -286,7 +286,7 @@ public class AiMiSiHudUnit : HudUnitBase
 		this.RotateMachine.YawSpeedMin = (double)ConfigCommonParamById.GetFloatConfig("AimisiHudCameraRotateMinSpeed").Value;
 	}
 
-	// Token: 0x0600F73E RID: 63294 RVA: 0x003BC556 File Offset: 0x003BA756
+	// Token: 0x0600CB5D RID: 52061 RVA: 0x003C8042 File Offset: 0x003C6242
 	[NullableContext(1)]
 	public void InitData(AiMiSiHudData data)
 	{
@@ -294,14 +294,14 @@ public class AiMiSiHudUnit : HudUnitBase
 		this.RefreshAll(true);
 	}
 
-	// Token: 0x0600F73F RID: 63295 RVA: 0x003BC566 File Offset: 0x003BA766
+	// Token: 0x0600CB5E RID: 52062 RVA: 0x003C8052 File Offset: 0x003C6252
 	public void SetTargetVisible(bool visible)
 	{
 		this.TargetVisible = visible;
 		base.SetVisible(visible, 0);
 	}
 
-	// Token: 0x0600F740 RID: 63296 RVA: 0x003BC577 File Offset: 0x003BA777
+	// Token: 0x0600CB5F RID: 52063 RVA: 0x003C8063 File Offset: 0x003C6263
 	public override void SetActive(bool visibility)
 	{
 		if (visibility && !this.TargetVisible)
@@ -311,13 +311,13 @@ public class AiMiSiHudUnit : HudUnitBase
 		base.SetActive(visibility);
 	}
 
-	// Token: 0x0600F741 RID: 63297 RVA: 0x003BC58C File Offset: 0x003BA78C
+	// Token: 0x0600CB60 RID: 52064 RVA: 0x003C8078 File Offset: 0x003C6278
 	public void MarkDataDirty()
 	{
 		this.DataDirty = true;
 	}
 
-	// Token: 0x0600F742 RID: 63298 RVA: 0x003BC595 File Offset: 0x003BA795
+	// Token: 0x0600CB61 RID: 52065 RVA: 0x003C8081 File Offset: 0x003C6281
 	public void SetEnduranceProgress(float progress)
 	{
 		this.EnduranceProgress = progress;
@@ -329,7 +329,7 @@ public class AiMiSiHudUnit : HudUnitBase
 		this.RefreshEnduranceVisible();
 	}
 
-	// Token: 0x0600F743 RID: 63299 RVA: 0x003BC5B6 File Offset: 0x003BA7B6
+	// Token: 0x0600CB62 RID: 52066 RVA: 0x003C80A2 File Offset: 0x003C62A2
 	private void RefreshEnduranceVisible()
 	{
 		if (!this.MechanismNodeVisible)
@@ -345,7 +345,7 @@ public class AiMiSiHudUnit : HudUnitBase
 		this.SetEnduranceVisible(false, false);
 	}
 
-	// Token: 0x0600F744 RID: 63300 RVA: 0x003BC5E8 File Offset: 0x003BA7E8
+	// Token: 0x0600CB63 RID: 52067 RVA: 0x003C80D4 File Offset: 0x003C62D4
 	private void SetEnduranceVisible(bool bVisible, bool immediately = false)
 	{
 		if (this.EnduranceVisible == bVisible && this.TargetEnduranceVisible == bVisible)
@@ -393,7 +393,7 @@ public class AiMiSiHudUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F745 RID: 63301 RVA: 0x003BC693 File Offset: 0x003BA893
+	// Token: 0x0600CB64 RID: 52068 RVA: 0x003C817F File Offset: 0x003C637F
 	private void StopDelayHideEnduranceTimer()
 	{
 		if (this.DelayHideEnduranceTimer != null)
@@ -406,7 +406,7 @@ public class AiMiSiHudUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F746 RID: 63302 RVA: 0x003BC6C8 File Offset: 0x003BA8C8
+	// Token: 0x0600CB65 RID: 52069 RVA: 0x003C81B4 File Offset: 0x003C63B4
 	public override void Tick(float delta)
 	{
 		base.Tick(delta);
@@ -447,7 +447,7 @@ public class AiMiSiHudUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F747 RID: 63303 RVA: 0x003BC7AC File Offset: 0x003BA9AC
+	// Token: 0x0600CB66 RID: 52070 RVA: 0x003C8298 File Offset: 0x003C6498
 	private void RefreshAll(bool isInit = false)
 	{
 		bool flag = this.Data.IsJoint || this.Data.IsSpecialJoint;
@@ -539,7 +539,7 @@ public class AiMiSiHudUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F748 RID: 63304 RVA: 0x003BCA14 File Offset: 0x003BAC14
+	// Token: 0x0600CB67 RID: 52071 RVA: 0x003C8500 File Offset: 0x003C6700
 	private void RefreshMechanismNode(bool isInit = false)
 	{
 		if (this.MechanismNodeVisible)
@@ -559,7 +559,7 @@ public class AiMiSiHudUnit : HudUnitBase
 		this.RefreshEnduranceVisible();
 	}
 
-	// Token: 0x0600F749 RID: 63305 RVA: 0x003BCA53 File Offset: 0x003BAC53
+	// Token: 0x0600CB68 RID: 52072 RVA: 0x003C853F File Offset: 0x003C673F
 	private void RefreshJointNode(bool isInit = false)
 	{
 		if (this.JointNodeVisible)
@@ -576,19 +576,19 @@ public class AiMiSiHudUnit : HudUnitBase
 		this.PlayTweenAnim(21);
 	}
 
-	// Token: 0x0600F74A RID: 63306 RVA: 0x003BCA82 File Offset: 0x003BAC82
+	// Token: 0x0600CB69 RID: 52073 RVA: 0x003C856E File Offset: 0x003C676E
 	private void RefreshNoJointNode()
 	{
 		this.LeftItem1.SetUIActive(this.NoJointNodeVisible);
 		this.RightItem1.SetUIActive(this.NoJointNodeVisible);
 	}
 
-	// Token: 0x0600F74B RID: 63307 RVA: 0x003BCAA6 File Offset: 0x003BACA6
+	// Token: 0x0600CB6A RID: 52074 RVA: 0x003C8592 File Offset: 0x003C6792
 	private void RefreshJointBgNode()
 	{
 	}
 
-	// Token: 0x0600F74C RID: 63308 RVA: 0x003BCAA8 File Offset: 0x003BACA8
+	// Token: 0x0600CB6B RID: 52075 RVA: 0x003C8594 File Offset: 0x003C6794
 	private void RefreshSpecialJointNode()
 	{
 		if (this.SpecialJointNodeVisible)
@@ -597,7 +597,7 @@ public class AiMiSiHudUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F74D RID: 63309 RVA: 0x003BCABA File Offset: 0x003BACBA
+	// Token: 0x0600CB6C RID: 52076 RVA: 0x003C85A6 File Offset: 0x003C67A6
 	private void RefreshSprint(bool isInit = false)
 	{
 		if (this.SprintVisible)
@@ -614,7 +614,7 @@ public class AiMiSiHudUnit : HudUnitBase
 		this.PlayTweenAnim(48);
 	}
 
-	// Token: 0x0600F74E RID: 63310 RVA: 0x003BCAEC File Offset: 0x003BACEC
+	// Token: 0x0600CB6D RID: 52077 RVA: 0x003C85D8 File Offset: 0x003C67D8
 	private void RefreshOutNode(bool isInit = false)
 	{
 		if (this.OutNodeVisible)
@@ -631,7 +631,7 @@ public class AiMiSiHudUnit : HudUnitBase
 		this.BottomItem.SetUIActive(this.OutNodeVisible);
 	}
 
-	// Token: 0x0600F74F RID: 63311 RVA: 0x003BCB48 File Offset: 0x003BAD48
+	// Token: 0x0600CB6E RID: 52078 RVA: 0x003C8634 File Offset: 0x003C6834
 	private void RefreshCamera()
 	{
 		if (this.Data.InFight && !this.RotateAnimInFight)
@@ -655,7 +655,7 @@ public class AiMiSiHudUnit : HudUnitBase
 		this.SetAnchorRoll(0f);
 	}
 
-	// Token: 0x0600F750 RID: 63312 RVA: 0x003BCC00 File Offset: 0x003BAE00
+	// Token: 0x0600CB6F RID: 52079 RVA: 0x003C86EC File Offset: 0x003C68EC
 	private void SetAnchorRoll(float roll)
 	{
 		if (roll == 0f && this.AnchorRotation.Roll != 0f)
@@ -671,7 +671,7 @@ public class AiMiSiHudUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F751 RID: 63313 RVA: 0x003BCC70 File Offset: 0x003BAE70
+	// Token: 0x0600CB70 RID: 52080 RVA: 0x003C875C File Offset: 0x003C695C
 	private void RefreshRotateAnim(float delta)
 	{
 		double yaw;
@@ -694,7 +694,7 @@ public class AiMiSiHudUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F752 RID: 63314 RVA: 0x003BCD04 File Offset: 0x003BAF04
+	// Token: 0x0600CB71 RID: 52081 RVA: 0x003C87F0 File Offset: 0x003C69F0
 	private void RefreshLocation()
 	{
 		TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -733,7 +733,7 @@ public class AiMiSiHudUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F753 RID: 63315 RVA: 0x003BCDD8 File Offset: 0x003BAFD8
+	// Token: 0x0600CB72 RID: 52082 RVA: 0x003C88C4 File Offset: 0x003C6AC4
 	private void RefreshLocalTime()
 	{
 		DateTime now = DateTime.Now;
@@ -746,7 +746,7 @@ public class AiMiSiHudUnit : HudUnitBase
 		base.GetArtText(14).SetText(text);
 	}
 
-	// Token: 0x0600F754 RID: 63316 RVA: 0x003BCE50 File Offset: 0x003BB050
+	// Token: 0x0600CB73 RID: 52083 RVA: 0x003C893C File Offset: 0x003C6B3C
 	private void RefreshAltimeterUpDownAnim()
 	{
 		TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -803,7 +803,7 @@ public class AiMiSiHudUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F755 RID: 63317 RVA: 0x003BCF28 File Offset: 0x003BB128
+	// Token: 0x0600CB74 RID: 52084 RVA: 0x003C8A14 File Offset: 0x003C6C14
 	public void RefreshModeIcon()
 	{
 		if (this.Data == null)
@@ -820,7 +820,7 @@ public class AiMiSiHudUnit : HudUnitBase
 		base.GetItem(16).SetAlpha(1f);
 	}
 
-	// Token: 0x0600F756 RID: 63318 RVA: 0x003BCF94 File Offset: 0x003BB194
+	// Token: 0x0600CB75 RID: 52085 RVA: 0x003C8A80 File Offset: 0x003C6C80
 	public void RefreshInAir(bool isInit = false)
 	{
 		if (this.AirNodeVisible)
@@ -837,7 +837,7 @@ public class AiMiSiHudUnit : HudUnitBase
 		this.PlayTweenAnim(34);
 	}
 
-	// Token: 0x0600F757 RID: 63319 RVA: 0x003BCFC3 File Offset: 0x003BB1C3
+	// Token: 0x0600CB76 RID: 52086 RVA: 0x003C8AAF File Offset: 0x003C6CAF
 	public void RefreshUltraBuff(bool isInit = false)
 	{
 		if (this.UltraBuffVisible)
@@ -854,7 +854,7 @@ public class AiMiSiHudUnit : HudUnitBase
 		this.PlayTweenAnim(27);
 	}
 
-	// Token: 0x0600F758 RID: 63320 RVA: 0x003BCFF2 File Offset: 0x003BB1F2
+	// Token: 0x0600CB77 RID: 52087 RVA: 0x003C8ADE File Offset: 0x003C6CDE
 	private void RefreshExhaustAnim(bool isInit = false)
 	{
 		if (this.PlayExhaustAnim)
@@ -871,13 +871,13 @@ public class AiMiSiHudUnit : HudUnitBase
 		this.PlayTweenAnim(50);
 	}
 
-	// Token: 0x0600F759 RID: 63321 RVA: 0x003BD021 File Offset: 0x003BB221
+	// Token: 0x0600CB78 RID: 52088 RVA: 0x003C8B0D File Offset: 0x003C6D0D
 	public void OnHurt()
 	{
 		this.PlayTweenAnim(35);
 	}
 
-	// Token: 0x0600F75A RID: 63322 RVA: 0x003BD02C File Offset: 0x003BB22C
+	// Token: 0x0600CB79 RID: 52089 RVA: 0x003C8B18 File Offset: 0x003C6D18
 	public void SetHpPercent(float percent)
 	{
 		bool flag = percent <= 0.2f;
@@ -896,7 +896,7 @@ public class AiMiSiHudUnit : HudUnitBase
 		this.PlayTweenAnim(37);
 	}
 
-	// Token: 0x0600F75B RID: 63323 RVA: 0x003BD07C File Offset: 0x003BB27C
+	// Token: 0x0600CB7A RID: 52090 RVA: 0x003C8B68 File Offset: 0x003C6D68
 	private void RefreshHorizonAnim()
 	{
 		if (!this.JointBgNodeVisible)
@@ -914,7 +914,7 @@ public class AiMiSiHudUnit : HudUnitBase
 		this.TexTopScale.SetCustomMaterialScalarParameter(this.NameSliderX, num);
 	}
 
-	// Token: 0x0600F75C RID: 63324 RVA: 0x003BD110 File Offset: 0x003BB310
+	// Token: 0x0600CB7B RID: 52091 RVA: 0x003C8BFC File Offset: 0x003C6DFC
 	private void RefreshAltimeterAnim()
 	{
 		float num = (float)Math.Round(this.AltimeterZ) % this.AltimeterScaleSpeed / this.AltimeterScaleSpeed;
@@ -926,299 +926,299 @@ public class AiMiSiHudUnit : HudUnitBase
 		this.TexAltimeterScale.SetCustomMaterialScalarParameter(this.NameSliderY, num);
 	}
 
-	// Token: 0x0600F75D RID: 63325 RVA: 0x003BD16B File Offset: 0x003BB36B
+	// Token: 0x0600CB7C RID: 52092 RVA: 0x003C8C57 File Offset: 0x003C6E57
 	protected new void PlayTweenAnim(int componentType)
 	{
 		base.PlayTweenAnim(componentType);
 	}
 
-	// Token: 0x0600F75E RID: 63326 RVA: 0x003BD174 File Offset: 0x003BB374
+	// Token: 0x0600CB7D RID: 52093 RVA: 0x003C8C60 File Offset: 0x003C6E60
 	protected new void StopTweenAnim(int componentType)
 	{
 		base.StopTweenAnim(componentType);
 	}
 
-	// Token: 0x04007276 RID: 29302
+	// Token: 0x04007357 RID: 29527
 	private const int CLOSE_ANIM_TIME = 100;
 
-	// Token: 0x04007277 RID: 29303
+	// Token: 0x04007358 RID: 29528
 	private bool TargetVisible;
 
-	// Token: 0x04007278 RID: 29304
+	// Token: 0x04007359 RID: 29529
 	private AiMiSiHudData Data;
 
-	// Token: 0x04007279 RID: 29305
+	// Token: 0x0400735A RID: 29530
 	private bool DataDirty;
 
-	// Token: 0x0400727A RID: 29306
+	// Token: 0x0400735B RID: 29531
 	private bool MechanismNodeVisible;
 
-	// Token: 0x0400727B RID: 29307
+	// Token: 0x0400735C RID: 29532
 	private bool JointNodeVisible;
 
-	// Token: 0x0400727C RID: 29308
+	// Token: 0x0400735D RID: 29533
 	private bool NoJointNodeVisible;
 
-	// Token: 0x0400727D RID: 29309
+	// Token: 0x0400735E RID: 29534
 	private bool JointBgNodeVisible;
 
-	// Token: 0x0400727E RID: 29310
+	// Token: 0x0400735F RID: 29535
 	private bool SpecialJointNodeVisible;
 
-	// Token: 0x0400727F RID: 29311
+	// Token: 0x04007360 RID: 29536
 	private bool SprintVisible;
 
-	// Token: 0x04007280 RID: 29312
+	// Token: 0x04007361 RID: 29537
 	private bool OutNodeVisible;
 
-	// Token: 0x04007281 RID: 29313
+	// Token: 0x04007362 RID: 29538
 	private bool AirNodeVisible;
 
-	// Token: 0x04007282 RID: 29314
+	// Token: 0x04007363 RID: 29539
 	private bool UltraBuffVisible;
 
-	// Token: 0x04007283 RID: 29315
+	// Token: 0x04007364 RID: 29540
 	private bool PlayExhaustAnim;
 
-	// Token: 0x04007284 RID: 29316
+	// Token: 0x04007365 RID: 29541
 	private TimerHandle CloseTimer;
 
-	// Token: 0x04007285 RID: 29317
+	// Token: 0x04007366 RID: 29542
 	private CustomPromise Promise;
 
-	// Token: 0x04007286 RID: 29318
+	// Token: 0x04007367 RID: 29543
 	private UUIItem EnduranceItem;
 
-	// Token: 0x04007287 RID: 29319
+	// Token: 0x04007368 RID: 29544
 	private UUISprite EnduranceBarSprite;
 
-	// Token: 0x04007288 RID: 29320
+	// Token: 0x04007369 RID: 29545
 	private float EnduranceProgress;
 
-	// Token: 0x04007289 RID: 29321
+	// Token: 0x0400736A RID: 29546
 	private bool EnduranceVisible;
 
-	// Token: 0x0400728A RID: 29322
+	// Token: 0x0400736B RID: 29547
 	private bool TargetEnduranceVisible;
 
-	// Token: 0x0400728B RID: 29323
+	// Token: 0x0400736C RID: 29548
 	private TimerHandle DelayHideEnduranceTimer;
 
-	// Token: 0x0400728C RID: 29324
+	// Token: 0x0400736D RID: 29549
 	private UUIItem TopItem;
 
-	// Token: 0x0400728D RID: 29325
+	// Token: 0x0400736E RID: 29550
 	private UUIItem BottomItem;
 
-	// Token: 0x0400728E RID: 29326
+	// Token: 0x0400736F RID: 29551
 	private UUIItem LeftItem1;
 
-	// Token: 0x0400728F RID: 29327
+	// Token: 0x04007370 RID: 29552
 	private UUIItem RightItem1;
 
-	// Token: 0x04007290 RID: 29328
+	// Token: 0x04007371 RID: 29553
 	private UUITexture TexAltimeterScale;
 
-	// Token: 0x04007291 RID: 29329
+	// Token: 0x04007372 RID: 29554
 	private UUITexture TexHorizonScaleL;
 
-	// Token: 0x04007292 RID: 29330
+	// Token: 0x04007373 RID: 29555
 	private UUITexture TexHorizonScaleR;
 
-	// Token: 0x04007293 RID: 29331
+	// Token: 0x04007374 RID: 29556
 	private UUITexture TexTopScale;
 
-	// Token: 0x04007294 RID: 29332
+	// Token: 0x04007375 RID: 29557
 	[Nullable(1)]
 	private readonly List<UUIItem> AnchorItemList = new List<UUIItem>();
 
-	// Token: 0x04007295 RID: 29333
+	// Token: 0x04007376 RID: 29558
 	private float PitchUpMin = 10f;
 
-	// Token: 0x04007296 RID: 29334
+	// Token: 0x04007377 RID: 29559
 	private float PitchUpMax = 30f;
 
-	// Token: 0x04007297 RID: 29335
+	// Token: 0x04007378 RID: 29560
 	private float PitchDownMin = -40f;
 
-	// Token: 0x04007298 RID: 29336
+	// Token: 0x04007379 RID: 29561
 	private float PitchDownMax = -20f;
 
-	// Token: 0x04007299 RID: 29337
+	// Token: 0x0400737A RID: 29562
 	private float HorizonScaleSpeed = 90f;
 
-	// Token: 0x0400729A RID: 29338
+	// Token: 0x0400737B RID: 29563
 	private float AltimeterScaleSpeed = 100f;
 
-	// Token: 0x0400729B RID: 29339
+	// Token: 0x0400737C RID: 29564
 	private float MaxPitch = 15f;
 
-	// Token: 0x0400729C RID: 29340
+	// Token: 0x0400737D RID: 29565
 	private float MaxRoll = 15f;
 
-	// Token: 0x0400729D RID: 29341
+	// Token: 0x0400737E RID: 29566
 	private int PlayerLocationX;
 
-	// Token: 0x0400729E RID: 29342
+	// Token: 0x0400737F RID: 29567
 	private int PlayerLocationY;
 
-	// Token: 0x0400729F RID: 29343
+	// Token: 0x04007380 RID: 29568
 	private int PlayerLocationZ;
 
-	// Token: 0x040072A0 RID: 29344
+	// Token: 0x04007381 RID: 29569
 	private double AltimeterZ;
 
-	// Token: 0x040072A1 RID: 29345
+	// Token: 0x04007382 RID: 29570
 	private bool IsInitAltimeterZ;
 
-	// Token: 0x040072A2 RID: 29346
+	// Token: 0x04007383 RID: 29571
 	private bool LowHp;
 
-	// Token: 0x040072A3 RID: 29347
+	// Token: 0x04007384 RID: 29572
 	private int UpDownState;
 
-	// Token: 0x040072A4 RID: 29348
+	// Token: 0x04007385 RID: 29573
 	private bool IsInitKey;
 
-	// Token: 0x040072A5 RID: 29349
+	// Token: 0x04007386 RID: 29574
 	[Nullable(1)]
 	private readonly List<InputMultiKeyItem> KeyItemList = new List<InputMultiKeyItem>();
 
-	// Token: 0x040072A6 RID: 29350
+	// Token: 0x04007387 RID: 29575
 	[Nullable(1)]
 	private readonly AiMiSiHudUnitRotateMachine RotateMachine = new AiMiSiHudUnitRotateMachine();
 
-	// Token: 0x040072A7 RID: 29351
+	// Token: 0x04007388 RID: 29576
 	[Nullable(1)]
 	private readonly Rotator AnchorRotation = Rotator.Create(0f, 0f, 0f);
 
-	// Token: 0x040072A8 RID: 29352
+	// Token: 0x04007389 RID: 29577
 	private bool AnchorRotationDirty;
 
-	// Token: 0x040072A9 RID: 29353
+	// Token: 0x0400738A RID: 29578
 	private bool RotateAnimInFight;
 
-	// Token: 0x040072AA RID: 29354
+	// Token: 0x0400738B RID: 29579
 	private float ValueSliderX;
 
-	// Token: 0x040072AB RID: 29355
+	// Token: 0x0400738C RID: 29580
 	private float ValueSliderY;
 
-	// Token: 0x040072AC RID: 29356
+	// Token: 0x0400738D RID: 29581
 	private readonly FName NameSliderX = FNameUtil.GetDynamicFName("SliderX").Value;
 
-	// Token: 0x040072AD RID: 29357
+	// Token: 0x0400738E RID: 29582
 	private readonly FName NameSliderY = FNameUtil.GetDynamicFName("SliderY").Value;
 
-	// Token: 0x02008530 RID: 34096
+	// Token: 0x020076B5 RID: 30389
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402B58B RID: 177547
+		// Token: 0x040268AF RID: 157871
 		EnduranceItem,
-		// Token: 0x0402B58C RID: 177548
+		// Token: 0x040268B0 RID: 157872
 		EnduranceBarSprite,
-		// Token: 0x0402B58D RID: 177549
+		// Token: 0x040268B1 RID: 157873
 		TopItem,
-		// Token: 0x0402B58E RID: 177550
+		// Token: 0x040268B2 RID: 157874
 		BottomItem,
-		// Token: 0x0402B58F RID: 177551
+		// Token: 0x040268B3 RID: 157875
 		LeftItem1,
-		// Token: 0x0402B590 RID: 177552
+		// Token: 0x040268B4 RID: 157876
 		LeftItem2,
-		// Token: 0x0402B591 RID: 177553
+		// Token: 0x040268B5 RID: 157877
 		LeftRedItem,
-		// Token: 0x0402B592 RID: 177554
+		// Token: 0x040268B6 RID: 157878
 		RightItem1,
-		// Token: 0x0402B593 RID: 177555
+		// Token: 0x040268B7 RID: 157879
 		RightItem2,
-		// Token: 0x0402B594 RID: 177556
+		// Token: 0x040268B8 RID: 157880
 		RightRedItem,
-		// Token: 0x0402B595 RID: 177557
+		// Token: 0x040268B9 RID: 157881
 		MidItem,
-		// Token: 0x0402B596 RID: 177558
+		// Token: 0x040268BA RID: 157882
 		ArtTextPosX,
-		// Token: 0x0402B597 RID: 177559
+		// Token: 0x040268BB RID: 157883
 		ArtTextPosY,
-		// Token: 0x0402B598 RID: 177560
+		// Token: 0x040268BC RID: 157884
 		ArtTextPosZ,
-		// Token: 0x0402B599 RID: 177561
+		// Token: 0x040268BD RID: 157885
 		ArtTextTime,
-		// Token: 0x0402B59A RID: 177562
+		// Token: 0x040268BE RID: 157886
 		LeftModeItem,
-		// Token: 0x0402B59B RID: 177563
+		// Token: 0x040268BF RID: 157887
 		RightModeItem,
-		// Token: 0x0402B59C RID: 177564
+		// Token: 0x040268C0 RID: 157888
 		AniDefaultSet,
-		// Token: 0x0402B59D RID: 177565
+		// Token: 0x040268C1 RID: 157889
 		AniPilotSet,
-		// Token: 0x0402B59E RID: 177566
+		// Token: 0x040268C2 RID: 157890
 		AniAssaultIn,
-		// Token: 0x0402B59F RID: 177567
+		// Token: 0x040268C3 RID: 157891
 		AniAssaultExIn,
-		// Token: 0x0402B5A0 RID: 177568
+		// Token: 0x040268C4 RID: 157892
 		AniAssaultOut,
-		// Token: 0x0402B5A1 RID: 177569
+		// Token: 0x040268C5 RID: 157893
 		AniPilotIn,
-		// Token: 0x0402B5A2 RID: 177570
+		// Token: 0x040268C6 RID: 157894
 		AniDisEngage,
-		// Token: 0x0402B5A3 RID: 177571
+		// Token: 0x040268C7 RID: 157895
 		AniEngage,
-		// Token: 0x0402B5A4 RID: 177572
+		// Token: 0x040268C8 RID: 157896
 		AniPilotOut,
-		// Token: 0x0402B5A5 RID: 177573
+		// Token: 0x040268C9 RID: 157897
 		AniBuffIn,
-		// Token: 0x0402B5A6 RID: 177574
+		// Token: 0x040268CA RID: 157898
 		AniBuffOut,
-		// Token: 0x0402B5A7 RID: 177575
+		// Token: 0x040268CB RID: 157899
 		AniSprintBarIn,
-		// Token: 0x0402B5A8 RID: 177576
+		// Token: 0x040268CC RID: 157900
 		AniSprintBarOut,
-		// Token: 0x0402B5A9 RID: 177577
+		// Token: 0x040268CD RID: 157901
 		AniAltimeterIn,
-		// Token: 0x0402B5AA RID: 177578
+		// Token: 0x040268CE RID: 157902
 		AniAltimeterSet,
-		// Token: 0x0402B5AB RID: 177579
+		// Token: 0x040268CF RID: 157903
 		AniAltimeterUp,
-		// Token: 0x0402B5AC RID: 177580
+		// Token: 0x040268D0 RID: 157904
 		AniAltimeterDown,
-		// Token: 0x0402B5AD RID: 177581
+		// Token: 0x040268D1 RID: 157905
 		AniAltimeterOut,
-		// Token: 0x0402B5AE RID: 177582
+		// Token: 0x040268D2 RID: 157906
 		AniHurt,
-		// Token: 0x0402B5AF RID: 177583
+		// Token: 0x040268D3 RID: 157907
 		AniWarningIn,
-		// Token: 0x0402B5B0 RID: 177584
+		// Token: 0x040268D4 RID: 157908
 		AniWarningOut,
-		// Token: 0x0402B5B1 RID: 177585
+		// Token: 0x040268D5 RID: 157909
 		TexAltimeterScale,
-		// Token: 0x0402B5B2 RID: 177586
+		// Token: 0x040268D6 RID: 157910
 		TexHorizonScaleL,
-		// Token: 0x0402B5B3 RID: 177587
+		// Token: 0x040268D7 RID: 157911
 		TexHorizonScaleR,
-		// Token: 0x0402B5B4 RID: 177588
+		// Token: 0x040268D8 RID: 157912
 		TexTopScale,
-		// Token: 0x0402B5B5 RID: 177589
+		// Token: 0x040268D9 RID: 157913
 		AnchorItem1,
-		// Token: 0x0402B5B6 RID: 177590
+		// Token: 0x040268DA RID: 157914
 		AniEnduranceIn,
-		// Token: 0x0402B5B7 RID: 177591
+		// Token: 0x040268DB RID: 157915
 		AniEnduranceOut,
-		// Token: 0x0402B5B8 RID: 177592
+		// Token: 0x040268DC RID: 157916
 		KeyNode1,
-		// Token: 0x0402B5B9 RID: 177593
+		// Token: 0x040268DD RID: 157917
 		KeyNode2,
-		// Token: 0x0402B5BA RID: 177594
+		// Token: 0x040268DE RID: 157918
 		AniSprintIn,
-		// Token: 0x0402B5BB RID: 177595
+		// Token: 0x040268DF RID: 157919
 		AniSprintOut,
-		// Token: 0x0402B5BC RID: 177596
+		// Token: 0x040268E0 RID: 157920
 		AniExhaustIn,
-		// Token: 0x0402B5BD RID: 177597
+		// Token: 0x040268E1 RID: 157921
 		AniExhaustOut,
-		// Token: 0x0402B5BE RID: 177598
+		// Token: 0x040268E2 RID: 157922
 		AnchorItem2,
-		// Token: 0x0402B5BF RID: 177599
+		// Token: 0x040268E3 RID: 157923
 		AnchorItem3
 	}
 }

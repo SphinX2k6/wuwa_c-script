@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E2D RID: 3629
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000F29 RID: 3881
 	public class ElementalEffectComponent : IComponentBase
 	{
-		// Token: 0x06005208 RID: 21000 RVA: 0x000CA182 File Offset: 0x000C8382
+		// Token: 0x0600572F RID: 22319 RVA: 0x000D5A4A File Offset: 0x000D3C4A
 		public static ElementalEffectComponent Create(IElementalEffectComponent? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001B6B RID: 7019
-		// (get) Token: 0x06005209 RID: 21001 RVA: 0x000CA1A4 File Offset: 0x000C83A4
+		// Token: 0x17001CD8 RID: 7384
+		// (get) Token: 0x06005730 RID: 22320 RVA: 0x000D5A6C File Offset: 0x000D3C6C
 		public override bool? Disabled
 		{
 			get
@@ -37,8 +35,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B6C RID: 7020
-		// (get) Token: 0x0600520A RID: 21002 RVA: 0x000CA1DC File Offset: 0x000C83DC
+		// Token: 0x17001CD9 RID: 7385
+		// (get) Token: 0x06005731 RID: 22321 RVA: 0x000D5AA4 File Offset: 0x000D3CA4
 		public override bool? EdIsLocked
 		{
 			get
@@ -47,8 +45,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B6D RID: 7021
-		// (get) Token: 0x0600520B RID: 21003 RVA: 0x000CA1F2 File Offset: 0x000C83F2
+		// Token: 0x17001CDA RID: 7386
+		// (get) Token: 0x06005732 RID: 22322 RVA: 0x000D5ABA File Offset: 0x000D3CBA
 		public virtual IElementalMatchBase MatchConfig
 		{
 			get
@@ -63,8 +61,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B6E RID: 7022
-		// (get) Token: 0x0600520C RID: 21004 RVA: 0x000CA221 File Offset: 0x000C8421
+		// Token: 0x17001CDB RID: 7387
+		// (get) Token: 0x06005733 RID: 22323 RVA: 0x000D5AE9 File Offset: 0x000D3CE9
 		public virtual IElementalRangeTypeBase Range
 		{
 			get
@@ -79,19 +77,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B6F RID: 7023
-		// (get) Token: 0x0600520D RID: 21005 RVA: 0x000CA250 File Offset: 0x000C8450
+		// Token: 0x17001CDC RID: 7388
+		// (get) Token: 0x06005734 RID: 22324 RVA: 0x000D5B18 File Offset: 0x000D3D18
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IElementalMatchActions> OnActiveEffectActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -114,19 +112,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B70 RID: 7024
-		// (get) Token: 0x0600520E RID: 21006 RVA: 0x000CA2CC File Offset: 0x000C84CC
+		// Token: 0x17001CDD RID: 7389
+		// (get) Token: 0x06005735 RID: 22325 RVA: 0x000D5B94 File Offset: 0x000D3D94
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IElementalMatchActions> OnLoseEffectActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -149,41 +147,41 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002F3E RID: 12094
+		// Token: 0x04003206 RID: 12806
 		private IElementalEffectComponent Instance;
 
-		// Token: 0x04002F3F RID: 12095
+		// Token: 0x04003207 RID: 12807
 		private IElementalMatchBase _MatchConfigCache;
 
-		// Token: 0x04002F40 RID: 12096
+		// Token: 0x04003208 RID: 12808
 		private bool _MatchConfigInited;
 
-		// Token: 0x04002F41 RID: 12097
+		// Token: 0x04003209 RID: 12809
 		private IElementalRangeTypeBase _RangeCache;
 
-		// Token: 0x04002F42 RID: 12098
+		// Token: 0x0400320A RID: 12810
 		private bool _RangeInited;
 
-		// Token: 0x04002F43 RID: 12099
+		// Token: 0x0400320B RID: 12811
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IElementalMatchActions> _OnActiveEffectActionsCache;
 
-		// Token: 0x04002F44 RID: 12100
+		// Token: 0x0400320C RID: 12812
 		private bool _OnActiveEffectActionsInited;
 
-		// Token: 0x04002F45 RID: 12101
+		// Token: 0x0400320D RID: 12813
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IElementalMatchActions> _OnLoseEffectActionsCache;
 
-		// Token: 0x04002F46 RID: 12102
+		// Token: 0x0400320E RID: 12814
 		private bool _OnLoseEffectActionsInited;
 	}
 }

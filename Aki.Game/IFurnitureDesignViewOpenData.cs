@@ -1,13 +1,13 @@
 ﻿using System;
 
-// Token: 0x02000F86 RID: 3974
+// Token: 0x0200043B RID: 1083
 public interface IFurnitureDesignViewOpenData
 {
-	// Token: 0x170007E2 RID: 2018
-	// (get) Token: 0x060065F9 RID: 26105
+	// Token: 0x17000804 RID: 2052
+	// (get) Token: 0x06003991 RID: 14737
 	int MapId { get; }
 
-	// Token: 0x170007E3 RID: 2019
-	// (get) Token: 0x060065FA RID: 26106
+	// Token: 0x17000805 RID: 2053
+	// (get) Token: 0x06003992 RID: 14738
 	int ToSelectAreaId { get; }
 }

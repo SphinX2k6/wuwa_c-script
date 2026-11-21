@@ -13,9 +13,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskRandomFloat.TsTaskRandomFloat_C")]
 public class TsTaskRandomFloat : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170001D7 RID: 471
-	// (get) Token: 0x06000A49 RID: 2633 RVA: 0x000335F3 File Offset: 0x000317F3
-	// (set) Token: 0x06000A4A RID: 2634 RVA: 0x00033603 File Offset: 0x00031803
+	// Token: 0x170001DA RID: 474
+	// (get) Token: 0x06000A4F RID: 2639 RVA: 0x00034783 File Offset: 0x00032983
+	// (set) Token: 0x06000A50 RID: 2640 RVA: 0x00034793 File Offset: 0x00032993
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float Min
 	{
@@ -29,9 +29,9 @@ public class TsTaskRandomFloat : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x170001D8 RID: 472
-	// (get) Token: 0x06000A4B RID: 2635 RVA: 0x00033614 File Offset: 0x00031814
-	// (set) Token: 0x06000A4C RID: 2636 RVA: 0x00033624 File Offset: 0x00031824
+	// Token: 0x170001DB RID: 475
+	// (get) Token: 0x06000A51 RID: 2641 RVA: 0x000347A4 File Offset: 0x000329A4
+	// (set) Token: 0x06000A52 RID: 2642 RVA: 0x000347B4 File Offset: 0x000329B4
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float Max
 	{
@@ -45,9 +45,9 @@ public class TsTaskRandomFloat : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x170001D9 RID: 473
-	// (get) Token: 0x06000A4D RID: 2637 RVA: 0x00033635 File Offset: 0x00031835
-	// (set) Token: 0x06000A4E RID: 2638 RVA: 0x00033649 File Offset: 0x00031849
+	// Token: 0x170001DC RID: 476
+	// (get) Token: 0x06000A53 RID: 2643 RVA: 0x000347C5 File Offset: 0x000329C5
+	// (set) Token: 0x06000A54 RID: 2644 RVA: 0x000347D9 File Offset: 0x000329D9
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string BlackboardKeyWriteTo
 	{
@@ -61,7 +61,7 @@ public class TsTaskRandomFloat : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x06000A4F RID: 2639 RVA: 0x0003365E File Offset: 0x0003185E
+	// Token: 0x06000A55 RID: 2645 RVA: 0x000347EE File Offset: 0x000329EE
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -73,31 +73,28 @@ public class TsTaskRandomFloat : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x06000A50 RID: 2640 RVA: 0x0003369C File Offset: 0x0003189C
+	// Token: 0x06000A56 RID: 2646 RVA: 0x0003482C File Offset: 0x00032A2C
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveTickAI(AAIController ownerController, APawn controlledPawn, float deltaSeconds)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveTickAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskRandomFloat) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveTickAI"), TsTaskRandomFloat.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
-			ptr2->DeltaSeconds = deltaSeconds;
+			this.ReceiveTickAI_Implementation(ownerController, controlledPawn, deltaSeconds);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		ptr->DeltaSeconds = deltaSeconds;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000A51 RID: 2641 RVA: 0x0003373C File Offset: 0x0003193C
+	// Token: 0x06000A57 RID: 2647 RVA: 0x000348E4 File Offset: 0x00032AE4
 	[NullableContext(2)]
 	protected virtual void ReceiveTickAI_Implementation(AAIController ownerController, APawn controlledPawn, float deltaSeconds)
 	{
@@ -119,7 +116,7 @@ public class TsTaskRandomFloat : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		base.FinishExecute(true);
 	}
 
-	// Token: 0x06000A52 RID: 2642 RVA: 0x000337E0 File Offset: 0x000319E0
+	// Token: 0x06000A58 RID: 2648 RVA: 0x00034988 File Offset: 0x00032B88
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskRandomFloat._ClassPtr == IntPtr.Zero)
@@ -129,22 +126,22 @@ public class TsTaskRandomFloat : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		return TsTaskRandomFloat._ClassPtr;
 	}
 
-	// Token: 0x06000A53 RID: 2643 RVA: 0x00033804 File Offset: 0x00031A04
+	// Token: 0x06000A59 RID: 2649 RVA: 0x000349AC File Offset: 0x00032BAC
 	public TsTaskRandomFloat() : this(BuiltinUtils.AllocNativeUObject(TsTaskRandomFloat.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06000A54 RID: 2644 RVA: 0x0003382C File Offset: 0x00031A2C
+	// Token: 0x06000A5A RID: 2650 RVA: 0x000349D4 File Offset: 0x00032BD4
 	public TsTaskRandomFloat(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskRandomFloat.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06000A55 RID: 2645 RVA: 0x0003385F File Offset: 0x00031A5F
+	// Token: 0x06000A5B RID: 2651 RVA: 0x00034A07 File Offset: 0x00032C07
 	protected TsTaskRandomFloat(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06000A56 RID: 2646 RVA: 0x00033874 File Offset: 0x00031A74
+	// Token: 0x06000A5C RID: 2652 RVA: 0x00034A1C File Offset: 0x00032C1C
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveTickAI_Implementation(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* __Params)
 	{
@@ -153,33 +150,33 @@ public class TsTaskRandomFloat : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		this.ReceiveTickAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->DeltaSeconds);
 	}
 
-	// Token: 0x040007F1 RID: 2033
+	// Token: 0x040007F9 RID: 2041
 	private bool IsInitTsVariables;
 
-	// Token: 0x040007F2 RID: 2034
+	// Token: 0x040007FA RID: 2042
 	private float TsMin;
 
-	// Token: 0x040007F3 RID: 2035
+	// Token: 0x040007FB RID: 2043
 	private float TsMax;
 
-	// Token: 0x040007F4 RID: 2036
+	// Token: 0x040007FC RID: 2044
 	private string TsBlackboardKeyWriteTo = "";
 
-	// Token: 0x040007F5 RID: 2037
+	// Token: 0x040007FD RID: 2045
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskRandomFloat.TsTaskRandomFloat_C";
 
-	// Token: 0x040007F6 RID: 2038
+	// Token: 0x040007FE RID: 2046
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x040007F7 RID: 2039
+	// Token: 0x040007FF RID: 2047
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x040007F8 RID: 2040
+	// Token: 0x04000800 RID: 2048
 	private static int __PropertyOffset_Min;
 
-	// Token: 0x040007F9 RID: 2041
+	// Token: 0x04000801 RID: 2049
 	private static int __PropertyOffset_Max;
 
-	// Token: 0x040007FA RID: 2042
+	// Token: 0x04000802 RID: 2050
 	private static int __PropertyOffset_BlackboardKeyWriteTo;
 }

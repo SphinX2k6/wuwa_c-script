@@ -2,32 +2,32 @@
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B3D RID: 19261
+	// Token: 0x02003AE5 RID: 15077
 	public interface ITowerDefensePhantomDataOwner
 	{
-		// Token: 0x17007BB7 RID: 31671
-		// (get) Token: 0x06031E30 RID: 204336
-		// (set) Token: 0x06031E31 RID: 204337
+		// Token: 0x17004F64 RID: 20324
+		// (get) Token: 0x06026BC0 RID: 158656
+		// (set) Token: 0x06026BC1 RID: 158657
 		long PlayerId { get; set; }
 
-		// Token: 0x17007BB8 RID: 31672
-		// (get) Token: 0x06031E32 RID: 204338
-		// (set) Token: 0x06031E33 RID: 204339
+		// Token: 0x17004F65 RID: 20325
+		// (get) Token: 0x06026BC2 RID: 158658
+		// (set) Token: 0x06026BC3 RID: 158659
 		bool IsSelf { get; set; }
 
-		// Token: 0x17007BB9 RID: 31673
-		// (get) Token: 0x06031E34 RID: 204340
-		// (set) Token: 0x06031E35 RID: 204341
+		// Token: 0x17004F66 RID: 20326
+		// (get) Token: 0x06026BC4 RID: 158660
+		// (set) Token: 0x06026BC5 RID: 158661
 		int RoleCfgId { get; set; }
 
-		// Token: 0x17007BBA RID: 31674
-		// (get) Token: 0x06031E36 RID: 204342
-		// (set) Token: 0x06031E37 RID: 204343
+		// Token: 0x17004F67 RID: 20327
+		// (get) Token: 0x06026BC6 RID: 158662
+		// (set) Token: 0x06026BC7 RID: 158663
 		int RoleSkinId { get; set; }
 
-		// Token: 0x17007BBB RID: 31675
-		// (get) Token: 0x06031E38 RID: 204344
-		// (set) Token: 0x06031E39 RID: 204345
+		// Token: 0x17004F68 RID: 20328
+		// (get) Token: 0x06026BC8 RID: 158664
+		// (set) Token: 0x06026BC9 RID: 158665
 		int PhantomId { get; set; }
 	}
 }

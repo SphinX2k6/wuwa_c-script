@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001DB RID: 475
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000202 RID: 514
 	public class IAudioRangeConfig
 	{
-		// Token: 0x060007A4 RID: 1956 RVA: 0x00025450 File Offset: 0x00023650
+		// Token: 0x06000812 RID: 2066 RVA: 0x00026B30 File Offset: 0x00024D30
 		private IAudioRangeConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060007A5 RID: 1957 RVA: 0x00025488 File Offset: 0x00023688
+		// Token: 0x06000813 RID: 2067 RVA: 0x00026B68 File Offset: 0x00024D68
 		public static IAudioRangeConfig Create([Nullable(2)] IAudioRangeConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060007A6 RID: 1958 RVA: 0x0002549B File Offset: 0x0002369B
+		// Token: 0x06000814 RID: 2068 RVA: 0x00026B7B File Offset: 0x00024D7B
 		public static IAudioRangeConfig CreateFromSetValue([Nullable(2)] IAudioRangeConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060007A7 RID: 1959 RVA: 0x000254AE File Offset: 0x000236AE
+		// Token: 0x06000815 RID: 2069 RVA: 0x00026B8E File Offset: 0x00024D8E
 		public IAudioRangeConfig_SetValue ToSetValue()
 		{
 			return new IAudioRangeConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000267 RID: 615
-		// (get) Token: 0x060007A8 RID: 1960 RVA: 0x000254C1 File Offset: 0x000236C1
-		// (set) Token: 0x060007A9 RID: 1961 RVA: 0x000254EC File Offset: 0x000236EC
+		// Token: 0x17000283 RID: 643
+		// (get) Token: 0x06000816 RID: 2070 RVA: 0x00026BA1 File Offset: 0x00024DA1
+		// (set) Token: 0x06000817 RID: 2071 RVA: 0x00026BCC File Offset: 0x00024DCC
 		public virtual string LeaveAkEvent
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040008B7 RID: 2231
+		// Token: 0x0400093E RID: 2366
 		[Nullable(2)]
 		protected IAudioRangeConfig FbInstance;
 
-		// Token: 0x040008B8 RID: 2232
+		// Token: 0x0400093F RID: 2367
 		[Nullable(2)]
 		protected IAudioRangeConfig_SetValue PocoInterface;
 	}

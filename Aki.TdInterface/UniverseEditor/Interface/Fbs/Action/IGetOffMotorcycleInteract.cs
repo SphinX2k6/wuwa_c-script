@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006885 RID: 26757
+	// Token: 0x02006F26 RID: 28454
 	public struct IGetOffMotorcycleInteract : IFlatbufferObject
 	{
-		// Token: 0x1700C6B6 RID: 50870
-		// (get) Token: 0x0602EAA7 RID: 191143 RVA: 0x0065D0E2 File Offset: 0x0065B2E2
+		// Token: 0x1700D09C RID: 53404
+		// (get) Token: 0x060313E1 RID: 201697 RVA: 0x006AC162 File Offset: 0x006AA362
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602EAA8 RID: 191144 RVA: 0x0065D0EF File Offset: 0x0065B2EF
+		// Token: 0x060313E2 RID: 201698 RVA: 0x006AC16F File Offset: 0x006AA36F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602EAA9 RID: 191145 RVA: 0x0065D0F8 File Offset: 0x0065B2F8
+		// Token: 0x060313E3 RID: 201699 RVA: 0x006AC178 File Offset: 0x006AA378
 		public static IGetOffMotorcycleInteract GetRootAsIGetOffMotorcycleInteract(ByteBuffer _bb)
 		{
 			return IGetOffMotorcycleInteract.GetRootAsIGetOffMotorcycleInteract(_bb, default(IGetOffMotorcycleInteract));
 		}
 
-		// Token: 0x0602EAAA RID: 191146 RVA: 0x0065D114 File Offset: 0x0065B314
+		// Token: 0x060313E4 RID: 201700 RVA: 0x006AC194 File Offset: 0x006AA394
 		public static IGetOffMotorcycleInteract GetRootAsIGetOffMotorcycleInteract(ByteBuffer _bb, IGetOffMotorcycleInteract obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602EAAB RID: 191147 RVA: 0x0065D131 File Offset: 0x0065B331
+		// Token: 0x060313E5 RID: 201701 RVA: 0x006AC1B1 File Offset: 0x006AA3B1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602EAAC RID: 191148 RVA: 0x0065D140 File Offset: 0x0065B340
+		// Token: 0x060313E6 RID: 201702 RVA: 0x006AC1C0 File Offset: 0x006AA3C0
 		public IGetOffMotorcycleInteract __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C6B7 RID: 50871
-		// (get) Token: 0x0602EAAD RID: 191149 RVA: 0x0065D150 File Offset: 0x0065B350
+		// Token: 0x1700D09D RID: 53405
+		// (get) Token: 0x060313E7 RID: 201703 RVA: 0x006AC1D0 File Offset: 0x006AA3D0
 		public ELeisureInteract Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602EAAE RID: 191150 RVA: 0x0065D18C File Offset: 0x0065B38C
+		// Token: 0x060313E8 RID: 201704 RVA: 0x006AC20C File Offset: 0x006AA40C
 		public static Offset<IGetOffMotorcycleInteract> CreateIGetOffMotorcycleInteract(FlatBufferBuilder builder, ELeisureInteract Type = ELeisureInteract.CustomSkill)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IGetOffMotorcycleInteract.EndIGetOffMotorcycleInteract(builder);
 		}
 
-		// Token: 0x0602EAAF RID: 191151 RVA: 0x0065D1A2 File Offset: 0x0065B3A2
+		// Token: 0x060313E9 RID: 201705 RVA: 0x006AC222 File Offset: 0x006AA422
 		public static void StartIGetOffMotorcycleInteract(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602EAB0 RID: 191152 RVA: 0x0065D1AB File Offset: 0x0065B3AB
+		// Token: 0x060313EA RID: 201706 RVA: 0x006AC22B File Offset: 0x006AA42B
 		public static void AddType(FlatBufferBuilder builder, ELeisureInteract type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602EAB1 RID: 191153 RVA: 0x0065D1B6 File Offset: 0x0065B3B6
+		// Token: 0x060313EB RID: 201707 RVA: 0x006AC236 File Offset: 0x006AA436
 		public static Offset<IGetOffMotorcycleInteract> EndIGetOffMotorcycleInteract(FlatBufferBuilder builder)
 		{
 			return new Offset<IGetOffMotorcycleInteract>(builder.EndTable());
 		}
 
-		// Token: 0x0602EAB2 RID: 191154 RVA: 0x0065D1C4 File Offset: 0x0065B3C4
+		// Token: 0x060313EC RID: 201708 RVA: 0x006AC244 File Offset: 0x006AA444
 		public IGetOffMotorcycleInteractT UnPack()
 		{
 			IGetOffMotorcycleInteractT getOffMotorcycleInteractT = new IGetOffMotorcycleInteractT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return getOffMotorcycleInteractT;
 		}
 
-		// Token: 0x0602EAB3 RID: 191155 RVA: 0x0065D1DF File Offset: 0x0065B3DF
+		// Token: 0x060313ED RID: 201709 RVA: 0x006AC25F File Offset: 0x006AA45F
 		public void UnPackTo(IGetOffMotorcycleInteractT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602EAB4 RID: 191156 RVA: 0x0065D1F0 File Offset: 0x0065B3F0
+		// Token: 0x060313EE RID: 201710 RVA: 0x006AC270 File Offset: 0x006AA470
 		public static Offset<IGetOffMotorcycleInteract> Pack(FlatBufferBuilder builder, IGetOffMotorcycleInteractT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IGetOffMotorcycleInteract.CreateIGetOffMotorcycleInteract(builder, _o.Type);
 		}
 
-		// Token: 0x04010FDB RID: 69595
+		// Token: 0x04011E30 RID: 73264
 		private Table __p;
 	}
 }

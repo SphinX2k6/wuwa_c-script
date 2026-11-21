@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006EC2 RID: 28354
+	// Token: 0x02007646 RID: 30278
 	public class IResumeGiantDeliveryRewardPopupT
 	{
-		// Token: 0x1700D309 RID: 54025
-		// (get) Token: 0x060321D1 RID: 205265 RVA: 0x006C670A File Offset: 0x006C490A
-		// (set) Token: 0x060321D2 RID: 205266 RVA: 0x006C6712 File Offset: 0x006C4912
+		// Token: 0x1700DE60 RID: 56928
+		// (get) Token: 0x06035211 RID: 217617 RVA: 0x0072243E File Offset: 0x0072063E
+		// (set) Token: 0x06035212 RID: 217618 RVA: 0x00722446 File Offset: 0x00720646
 		public ESystemType Type { get; set; }
 
-		// Token: 0x060321D3 RID: 205267 RVA: 0x006C671B File Offset: 0x006C491B
+		// Token: 0x06035213 RID: 217619 RVA: 0x0072244F File Offset: 0x0072064F
 		public IResumeGiantDeliveryRewardPopupT()
 		{
 			this.Type = ESystemType.Shop;

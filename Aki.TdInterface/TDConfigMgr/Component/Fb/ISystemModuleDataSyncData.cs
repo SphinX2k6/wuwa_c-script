@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DD1 RID: 3537
+	// Token: 0x02000ECD RID: 3789
 	public class ISystemModuleDataSyncData
 	{
-		// Token: 0x06005046 RID: 20550 RVA: 0x000C667F File Offset: 0x000C487F
-		[NullableContext(1)]
+		// Token: 0x0600556B RID: 21867 RVA: 0x000D1ECF File Offset: 0x000D00CF
 		public static ISystemModuleDataSyncData Create(ISystemModuleDataSyncData? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001A61 RID: 6753
-		// (get) Token: 0x06005047 RID: 20551 RVA: 0x000C669E File Offset: 0x000C489E
+		// Token: 0x17001BCC RID: 7116
+		// (get) Token: 0x0600556C RID: 21868 RVA: 0x000D1EEE File Offset: 0x000D00EE
 		public virtual ESyncDataSystemType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002E12 RID: 11794
+		// Token: 0x040030D8 RID: 12504
 		private ISystemModuleDataSyncData Instance;
 	}
 }

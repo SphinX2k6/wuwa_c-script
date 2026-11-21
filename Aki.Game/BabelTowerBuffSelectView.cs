@@ -10,17 +10,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001117 RID: 4375
+// Token: 0x020005CB RID: 1483
 [NullableContext(1)]
 [Nullable(0)]
 public class BabelTowerBuffSelectView : UiViewBase
 {
-	// Token: 0x06007274 RID: 29300 RVA: 0x00176FA4 File Offset: 0x001751A4
+	// Token: 0x0600460A RID: 17930 RVA: 0x0017F960 File Offset: 0x0017DB60
 	public BabelTowerBuffSelectView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06007275 RID: 29301 RVA: 0x00176FB8 File Offset: 0x001751B8
+	// Token: 0x0600460B RID: 17931 RVA: 0x0017F974 File Offset: 0x0017DB74
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 11;
@@ -59,19 +59,19 @@ public class BabelTowerBuffSelectView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06007276 RID: 29302 RVA: 0x0017718A File Offset: 0x0017538A
+	// Token: 0x0600460C RID: 17932 RVA: 0x0017FB46 File Offset: 0x0017DD46
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.BabelTowerRefreshLevelInfo, new Action(this.BabelTowerRefreshLevelInfo));
 	}
 
-	// Token: 0x06007277 RID: 29303 RVA: 0x001771A8 File Offset: 0x001753A8
+	// Token: 0x0600460D RID: 17933 RVA: 0x0017FB64 File Offset: 0x0017DD64
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.BabelTowerRefreshLevelInfo, new Action(this.BabelTowerRefreshLevelInfo));
 	}
 
-	// Token: 0x06007278 RID: 29304 RVA: 0x001771C8 File Offset: 0x001753C8
+	// Token: 0x0600460E RID: 17934 RVA: 0x0017FB84 File Offset: 0x0017DD84
 	protected override UniTask OnBeforeStartAsync()
 	{
 		BabelTowerBuffSelectView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -82,7 +82,7 @@ public class BabelTowerBuffSelectView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007279 RID: 29305 RVA: 0x0017720C File Offset: 0x0017540C
+	// Token: 0x0600460F RID: 17935 RVA: 0x0017FBC8 File Offset: 0x0017DDC8
 	protected override void OnStart()
 	{
 		this.BabelTowerBuffSelectViewInfo = (this.OpenParam as IBabelTowerBuffSelectViewInfo);
@@ -126,7 +126,7 @@ public class BabelTowerBuffSelectView : UiViewBase
 		uuiinturnAnimController.Play("", -1, false);
 	}
 
-	// Token: 0x0600727A RID: 29306 RVA: 0x001772F8 File Offset: 0x001754F8
+	// Token: 0x06004610 RID: 17936 RVA: 0x0017FCB4 File Offset: 0x0017DEB4
 	private void RefreshView(int buffId)
 	{
 		base.GetItem(4).SetUIActive(false);
@@ -167,7 +167,7 @@ public class BabelTowerBuffSelectView : UiViewBase
 		levelLayout.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x0600727B RID: 29307 RVA: 0x00177408 File Offset: 0x00175608
+	// Token: 0x06004611 RID: 17937 RVA: 0x0017FDC4 File Offset: 0x0017DFC4
 	private void OnClickConfirmBtn()
 	{
 		foreach (int buffId in this.BabelTowerBuffSelectViewInfo.CurrentSelectBuffList)
@@ -193,7 +193,7 @@ public class BabelTowerBuffSelectView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600727C RID: 29308 RVA: 0x001774C4 File Offset: 0x001756C4
+	// Token: 0x06004612 RID: 17938 RVA: 0x0017FE80 File Offset: 0x0017E080
 	private BabelTowerBuffSelectItem InitItem()
 	{
 		BabelTowerBuffSelectItem babelTowerBuffSelectItem = new BabelTowerBuffSelectItem();
@@ -204,13 +204,13 @@ public class BabelTowerBuffSelectView : UiViewBase
 		return babelTowerBuffSelectItem;
 	}
 
-	// Token: 0x0600727D RID: 29309 RVA: 0x0017751A File Offset: 0x0017571A
+	// Token: 0x06004613 RID: 17939 RVA: 0x0017FED6 File Offset: 0x0017E0D6
 	private BabelTowerBuffSelectViewLevelItem InitLevelItem()
 	{
 		return new BabelTowerBuffSelectViewLevelItem();
 	}
 
-	// Token: 0x0600727E RID: 29310 RVA: 0x00177524 File Offset: 0x00175724
+	// Token: 0x06004614 RID: 17940 RVA: 0x0017FEE0 File Offset: 0x0017E0E0
 	private bool CanClickItem(int buffId)
 	{
 		if (this.BabelTowerBuffSelectViewInfo.MaxSelectBuffCount == 1)
@@ -226,7 +226,7 @@ public class BabelTowerBuffSelectView : UiViewBase
 		return true;
 	}
 
-	// Token: 0x0600727F RID: 29311 RVA: 0x0017757C File Offset: 0x0017577C
+	// Token: 0x06004615 RID: 17941 RVA: 0x0017FF38 File Offset: 0x0017E138
 	private void OnClickBuffItem(int buffId)
 	{
 		IBabelTowerBuffSelectViewInfo babelTowerBuffSelectViewInfo = this.BabelTowerBuffSelectViewInfo;
@@ -256,7 +256,7 @@ public class BabelTowerBuffSelectView : UiViewBase
 		this.RefreshView(buffId);
 	}
 
-	// Token: 0x06007280 RID: 29312 RVA: 0x0017762C File Offset: 0x0017582C
+	// Token: 0x06004616 RID: 17942 RVA: 0x0017FFE8 File Offset: 0x0017E1E8
 	private void OnCancelClickBuffItem(int buffId)
 	{
 		IBabelTowerBuffSelectViewInfo babelTowerBuffSelectViewInfo = this.BabelTowerBuffSelectViewInfo;
@@ -285,7 +285,7 @@ public class BabelTowerBuffSelectView : UiViewBase
 		this.RefreshView(buffId);
 	}
 
-	// Token: 0x06007281 RID: 29313 RVA: 0x00177698 File Offset: 0x00175898
+	// Token: 0x06004617 RID: 17943 RVA: 0x00180054 File Offset: 0x0017E254
 	private EBabelTowerBuffState GetBuffState(int buffId)
 	{
 		foreach (IBabelTowerBuffInfo babelTowerBuffInfo in this.BabelTowerBuffSelectViewInfo.AllBuffList)
@@ -298,7 +298,7 @@ public class BabelTowerBuffSelectView : UiViewBase
 		return EBabelTowerBuffState.Normal;
 	}
 
-	// Token: 0x06007282 RID: 29314 RVA: 0x00177700 File Offset: 0x00175900
+	// Token: 0x06004618 RID: 17944 RVA: 0x001800BC File Offset: 0x0017E2BC
 	private void BabelTowerRefreshLevelInfo()
 	{
 		BabelTowerLevel babelTowerLevelConfig = BabelTowerConfig.Instance.GetBabelTowerLevelConfig(this.BabelTowerBuffSelectViewInfo.LevelId);
@@ -376,11 +376,11 @@ public class BabelTowerBuffSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x040034FF RID: 13567
+	// Token: 0x04003598 RID: 13720
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04003500 RID: 13568
+	// Token: 0x04003599 RID: 13721
 	[Nullable(new byte[]
 	{
 		2,
@@ -389,7 +389,7 @@ public class BabelTowerBuffSelectView : UiViewBase
 	})]
 	private LoopScrollView<BabelTowerBuffSelectItem, IBabelTowerBuffInfo> LoopScrollView;
 
-	// Token: 0x04003501 RID: 13569
+	// Token: 0x0400359A RID: 13722
 	[Nullable(new byte[]
 	{
 		2,
@@ -398,48 +398,48 @@ public class BabelTowerBuffSelectView : UiViewBase
 	})]
 	private GenericLayout<BabelTowerBuffSelectViewLevelItem, IBabelTowerBuffSelectViewLevelItemData> LevelLayout;
 
-	// Token: 0x04003502 RID: 13570
+	// Token: 0x0400359B RID: 13723
 	[Nullable(2)]
 	private IBabelTowerBuffSelectViewInfo BabelTowerBuffSelectViewInfo;
 
-	// Token: 0x04003503 RID: 13571
+	// Token: 0x0400359C RID: 13724
 	private readonly List<BabelTowerBuffSelectItem> BuffItemList = new List<BabelTowerBuffSelectItem>();
 
-	// Token: 0x020076DB RID: 30427
+	// Token: 0x0200686F RID: 26735
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x04027389 RID: 160649
+		// Token: 0x040226D2 RID: 141010
 		public const int CaptionItem = 0;
 
-		// Token: 0x0402738A RID: 160650
+		// Token: 0x040226D3 RID: 141011
 		public const int LoopScrollView = 1;
 
-		// Token: 0x0402738B RID: 160651
+		// Token: 0x040226D4 RID: 141012
 		public const int LoopScrollItem = 2;
 
-		// Token: 0x0402738C RID: 160652
+		// Token: 0x040226D5 RID: 141013
 		public const int ConfirmBtn = 3;
 
-		// Token: 0x0402738D RID: 160653
+		// Token: 0x040226D6 RID: 141014
 		public const int EmptyItem = 4;
 
-		// Token: 0x0402738E RID: 160654
+		// Token: 0x040226D7 RID: 141015
 		public const int NotEmptyItem = 5;
 
-		// Token: 0x0402738F RID: 160655
+		// Token: 0x040226D8 RID: 141016
 		public const int BuffNameText = 6;
 
-		// Token: 0x04027390 RID: 160656
+		// Token: 0x040226D9 RID: 141017
 		public const int InfoTitleText = 7;
 
-		// Token: 0x04027391 RID: 160657
+		// Token: 0x040226DA RID: 141018
 		public const int DesText = 8;
 
-		// Token: 0x04027392 RID: 160658
+		// Token: 0x040226DB RID: 141019
 		public const int LevelLayout = 9;
 
-		// Token: 0x04027393 RID: 160659
+		// Token: 0x040226DC RID: 141020
 		public const int LevelItem = 10;
 	}
 }

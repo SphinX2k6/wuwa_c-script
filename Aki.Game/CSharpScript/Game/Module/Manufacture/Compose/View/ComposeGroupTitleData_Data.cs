@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Manufacture.Compose.View
 {
-	// Token: 0x02005666 RID: 22118
+	// Token: 0x0200463C RID: 17980
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ComposeGroupTitleData_Data
 	{
-		// Token: 0x0401D95F RID: 121183
+		// Token: 0x040183EA RID: 99306
 		public string TitleTextId;
 
-		// Token: 0x0401D960 RID: 121184
+		// Token: 0x040183EB RID: 99307
 		public string TitleParam;
 
-		// Token: 0x0401D961 RID: 121185
+		// Token: 0x040183EC RID: 99308
 		public bool IsEmpty;
 	}
 }

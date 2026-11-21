@@ -8,18 +8,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 {
-	// Token: 0x020054DF RID: 21727
+	// Token: 0x020044B2 RID: 17586
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DynamicEntityMarkItem : DynamicConfigMarkItem
 	{
-		// Token: 0x060377A0 RID: 227232 RVA: 0x00D2D4D5 File Offset: 0x00D2B6D5
+		// Token: 0x0602C65B RID: 181851 RVA: 0x00C7B5C1 File Offset: 0x00C797C1
 		public DynamicEntityMarkItem(int markId, DynamicMapMark markConfig, UUIItem parent, TTrackTarget trackTarget, EMapType mapType, float markScale) : base(markId, markConfig, parent, mapType, markScale, ETrackSource.MapMark)
 		{
 			base.TrackTarget = trackTarget;
 		}
 
-		// Token: 0x060377A1 RID: 227233 RVA: 0x00D2D4F0 File Offset: 0x00D2B6F0
+		// Token: 0x0602C65C RID: 181852 RVA: 0x00C7B5DC File Offset: 0x00C797DC
 		protected override void OnInitialize()
 		{
 			if (this.MarkConfig != null && this.MarkConfig.Value.Scale != 0f)
@@ -30,20 +30,20 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItem
 			this.UpdateVisibleRelativeState();
 		}
 
-		// Token: 0x060377A2 RID: 227234 RVA: 0x00D2D549 File Offset: 0x00D2B749
+		// Token: 0x0602C65D RID: 181853 RVA: 0x00C7B635 File Offset: 0x00C79835
 		protected override EMarkItemViewType GetMarkItemViewType()
 		{
 			return EMarkItemViewType.DynamicEntityMarkItemView;
 		}
 
-		// Token: 0x060377A3 RID: 227235 RVA: 0x00D2D54C File Offset: 0x00D2B74C
+		// Token: 0x0602C65E RID: 181854 RVA: 0x00C7B638 File Offset: 0x00C79838
 		[PreserveBaseOverrides]
 		protected new virtual DynamicEntityMarkItemView CreateView()
 		{
 			return new DynamicEntityMarkItemView(this);
 		}
 
-		// Token: 0x060377A4 RID: 227236 RVA: 0x00D2D554 File Offset: 0x00D2B754
+		// Token: 0x0602C65F RID: 181855 RVA: 0x00C7B640 File Offset: 0x00C79840
 		public override bool CheckCanShowView()
 		{
 			if (!(base.TrackTarget is TTrackTarget_Int))

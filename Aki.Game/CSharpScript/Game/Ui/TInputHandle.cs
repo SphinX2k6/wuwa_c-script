@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004679 RID: 18041
-	// (Invoke) Token: 0x0602E8FB RID: 190715
+	// Token: 0x020035AA RID: 13738
+	// (Invoke) Token: 0x06023045 RID: 143429
 	public delegate void TInputHandle<[Nullable(2)] T>(string name, T value, InputIdentification inputIdentification);
 }

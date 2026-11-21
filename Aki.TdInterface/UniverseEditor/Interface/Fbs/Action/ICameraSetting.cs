@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200629F RID: 25247
+	// Token: 0x02006910 RID: 26896
 	public struct ICameraSetting : IFlatbufferObject
 	{
-		// Token: 0x1700BC71 RID: 48241
-		// (get) Token: 0x0602B9E9 RID: 178665 RVA: 0x006013FB File Offset: 0x005FF5FB
+		// Token: 0x1700C5F9 RID: 50681
+		// (get) Token: 0x0602E14A RID: 188746 RVA: 0x0064C203 File Offset: 0x0064A403
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602B9EA RID: 178666 RVA: 0x00601408 File Offset: 0x005FF608
+		// Token: 0x0602E14B RID: 188747 RVA: 0x0064C210 File Offset: 0x0064A410
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602B9EB RID: 178667 RVA: 0x00601410 File Offset: 0x005FF610
+		// Token: 0x0602E14C RID: 188748 RVA: 0x0064C218 File Offset: 0x0064A418
 		public static ICameraSetting GetRootAsICameraSetting(ByteBuffer _bb)
 		{
 			return ICameraSetting.GetRootAsICameraSetting(_bb, default(ICameraSetting));
 		}
 
-		// Token: 0x0602B9EC RID: 178668 RVA: 0x0060142C File Offset: 0x005FF62C
+		// Token: 0x0602E14D RID: 188749 RVA: 0x0064C234 File Offset: 0x0064A434
 		public static ICameraSetting GetRootAsICameraSetting(ByteBuffer _bb, ICameraSetting obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602B9ED RID: 178669 RVA: 0x00601449 File Offset: 0x005FF649
+		// Token: 0x0602E14E RID: 188750 RVA: 0x0064C251 File Offset: 0x0064A451
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602B9EE RID: 178670 RVA: 0x00601458 File Offset: 0x005FF658
+		// Token: 0x0602E14F RID: 188751 RVA: 0x0064C260 File Offset: 0x0064A460
 		public ICameraSetting __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BC72 RID: 48242
-		// (get) Token: 0x0602B9EF RID: 178671 RVA: 0x00601468 File Offset: 0x005FF668
+		// Token: 0x1700C5FA RID: 50682
+		// (get) Token: 0x0602E150 RID: 188752 RVA: 0x0064C270 File Offset: 0x0064A470
 		public float Aperture
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BC73 RID: 48243
-		// (get) Token: 0x0602B9F0 RID: 178672 RVA: 0x006014A8 File Offset: 0x005FF6A8
+		// Token: 0x1700C5FB RID: 50683
+		// (get) Token: 0x0602E151 RID: 188753 RVA: 0x0064C2B0 File Offset: 0x0064A4B0
 		public float FocalLength
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BC74 RID: 48244
-		// (get) Token: 0x0602B9F1 RID: 178673 RVA: 0x006014E8 File Offset: 0x005FF6E8
+		// Token: 0x1700C5FC RID: 50684
+		// (get) Token: 0x0602E152 RID: 188754 RVA: 0x0064C2F0 File Offset: 0x0064A4F0
 		public float FocusDistance
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BC75 RID: 48245
-		// (get) Token: 0x0602B9F2 RID: 178674 RVA: 0x00601528 File Offset: 0x005FF728
+		// Token: 0x1700C5FD RID: 50685
+		// (get) Token: 0x0602E153 RID: 188755 RVA: 0x0064C330 File Offset: 0x0064A530
 		public float FocalRegion
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BC76 RID: 48246
-		// (get) Token: 0x0602B9F3 RID: 178675 RVA: 0x0060156C File Offset: 0x005FF76C
+		// Token: 0x1700C5FE RID: 50686
+		// (get) Token: 0x0602E154 RID: 188756 RVA: 0x0064C374 File Offset: 0x0064A574
 		public float Fov
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BC77 RID: 48247
-		// (get) Token: 0x0602B9F4 RID: 178676 RVA: 0x006015B0 File Offset: 0x005FF7B0
+		// Token: 0x1700C5FF RID: 50687
+		// (get) Token: 0x0602E155 RID: 188757 RVA: 0x0064C3B8 File Offset: 0x0064A5B8
 		public byte NullMask
 		{
 			get
@@ -137,7 +137,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602B9F5 RID: 178677 RVA: 0x006015ED File Offset: 0x005FF7ED
+		// Token: 0x0602E156 RID: 188758 RVA: 0x0064C3F5 File Offset: 0x0064A5F5
 		public static Offset<ICameraSetting> CreateICameraSetting(FlatBufferBuilder builder, float Aperture = 0f, float FocalLength = 0f, float FocusDistance = 0f, float FocalRegion = 0f, float Fov = 0f, byte NullMask = 0)
 		{
 			builder.StartTable(6);
@@ -150,55 +150,55 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ICameraSetting.EndICameraSetting(builder);
 		}
 
-		// Token: 0x0602B9F6 RID: 178678 RVA: 0x00601629 File Offset: 0x005FF829
+		// Token: 0x0602E157 RID: 188759 RVA: 0x0064C431 File Offset: 0x0064A631
 		public static void StartICameraSetting(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x0602B9F7 RID: 178679 RVA: 0x00601632 File Offset: 0x005FF832
+		// Token: 0x0602E158 RID: 188760 RVA: 0x0064C43A File Offset: 0x0064A63A
 		public static void AddAperture(FlatBufferBuilder builder, float aperture)
 		{
 			builder.AddFloat(0, aperture, 0.0);
 		}
 
-		// Token: 0x0602B9F8 RID: 178680 RVA: 0x00601645 File Offset: 0x005FF845
+		// Token: 0x0602E159 RID: 188761 RVA: 0x0064C44D File Offset: 0x0064A64D
 		public static void AddFocalLength(FlatBufferBuilder builder, float focalLength)
 		{
 			builder.AddFloat(1, focalLength, 0.0);
 		}
 
-		// Token: 0x0602B9F9 RID: 178681 RVA: 0x00601658 File Offset: 0x005FF858
+		// Token: 0x0602E15A RID: 188762 RVA: 0x0064C460 File Offset: 0x0064A660
 		public static void AddFocusDistance(FlatBufferBuilder builder, float focusDistance)
 		{
 			builder.AddFloat(2, focusDistance, 0.0);
 		}
 
-		// Token: 0x0602B9FA RID: 178682 RVA: 0x0060166B File Offset: 0x005FF86B
+		// Token: 0x0602E15B RID: 188763 RVA: 0x0064C473 File Offset: 0x0064A673
 		public static void AddFocalRegion(FlatBufferBuilder builder, float focalRegion)
 		{
 			builder.AddFloat(3, focalRegion, 0.0);
 		}
 
-		// Token: 0x0602B9FB RID: 178683 RVA: 0x0060167E File Offset: 0x005FF87E
+		// Token: 0x0602E15C RID: 188764 RVA: 0x0064C486 File Offset: 0x0064A686
 		public static void AddFov(FlatBufferBuilder builder, float fov)
 		{
 			builder.AddFloat(4, fov, 0.0);
 		}
 
-		// Token: 0x0602B9FC RID: 178684 RVA: 0x00601691 File Offset: 0x005FF891
+		// Token: 0x0602E15D RID: 188765 RVA: 0x0064C499 File Offset: 0x0064A699
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(5, nullMask, 0);
 		}
 
-		// Token: 0x0602B9FD RID: 178685 RVA: 0x0060169C File Offset: 0x005FF89C
+		// Token: 0x0602E15E RID: 188766 RVA: 0x0064C4A4 File Offset: 0x0064A6A4
 		public static Offset<ICameraSetting> EndICameraSetting(FlatBufferBuilder builder)
 		{
 			return new Offset<ICameraSetting>(builder.EndTable());
 		}
 
-		// Token: 0x0602B9FE RID: 178686 RVA: 0x006016AC File Offset: 0x005FF8AC
+		// Token: 0x0602E15F RID: 188767 RVA: 0x0064C4B4 File Offset: 0x0064A6B4
 		public ICameraSettingT UnPack()
 		{
 			ICameraSettingT cameraSettingT = new ICameraSettingT();
@@ -206,7 +206,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return cameraSettingT;
 		}
 
-		// Token: 0x0602B9FF RID: 178687 RVA: 0x006016C8 File Offset: 0x005FF8C8
+		// Token: 0x0602E160 RID: 188768 RVA: 0x0064C4D0 File Offset: 0x0064A6D0
 		public void UnPackTo(ICameraSettingT _o)
 		{
 			_o.Aperture = this.Aperture;
@@ -217,7 +217,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602BA00 RID: 178688 RVA: 0x00601720 File Offset: 0x005FF920
+		// Token: 0x0602E161 RID: 188769 RVA: 0x0064C528 File Offset: 0x0064A728
 		public static Offset<ICameraSetting> Pack(FlatBufferBuilder builder, ICameraSettingT _o)
 		{
 			if (_o == null)
@@ -227,7 +227,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ICameraSetting.CreateICameraSetting(builder, _o.Aperture, _o.FocalLength, _o.FocusDistance, _o.FocalRegion, _o.Fov, _o.NullMask);
 		}
 
-		// Token: 0x04010832 RID: 67634
+		// Token: 0x04011647 RID: 71239
 		private Table __p;
 	}
 }

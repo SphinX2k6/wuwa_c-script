@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D59 RID: 23897
+	// Token: 0x02004D3B RID: 19771
 	public class HonamiStoryMonsterLevelItem : StateExtraItemBase
 	{
-		// Token: 0x0603CAAE RID: 248494 RVA: 0x00E8FF58 File Offset: 0x00E8E158
+		// Token: 0x06031A07 RID: 203271 RVA: 0x00DE070C File Offset: 0x00DDE90C
 		[NullableContext(1)]
 		protected override void OnInitExtraParams(ExtraItemParams param)
 		{
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CAAF RID: 248495 RVA: 0x00E90064 File Offset: 0x00E8E264
+		// Token: 0x06031A08 RID: 203272 RVA: 0x00DE0818 File Offset: 0x00DDEA18
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -62,27 +62,27 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603CAB0 RID: 248496 RVA: 0x00E9010F File Offset: 0x00E8E30F
+		// Token: 0x06031A09 RID: 203273 RVA: 0x00DE08C3 File Offset: 0x00DDEAC3
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove(EEventName.OnHonamiStoryPowerLevelUpdate, new Action<int, int>(this.OnRefreshPlayerLevel));
 			EventSystem.Instance.Remove(EEventName.OnHonamiStoryPollutionUpdate, new Action<int>(this.OnRefreshPollutionLevel));
 		}
 
-		// Token: 0x0603CAB1 RID: 248497 RVA: 0x00E9014C File Offset: 0x00E8E34C
+		// Token: 0x06031A0A RID: 203274 RVA: 0x00DE0900 File Offset: 0x00DDEB00
 		private void OnRefreshPollutionLevel(int monsterEnhanceLevel)
 		{
 			int newLevel = this.OriginLevel + monsterEnhanceLevel + HonamiStoryModel.Instance.MonsterBaseEnhanceLevel;
 			this.RefreshLevel(newLevel, this.PlayerLevel, false);
 		}
 
-		// Token: 0x0603CAB2 RID: 248498 RVA: 0x00E9017B File Offset: 0x00E8E37B
+		// Token: 0x06031A0B RID: 203275 RVA: 0x00DE092F File Offset: 0x00DDEB2F
 		private void OnRefreshPlayerLevel(int oldValue, int newValue)
 		{
 			this.RefreshLevel(this.CurrentLevel, newValue, false);
 		}
 
-		// Token: 0x0603CAB3 RID: 248499 RVA: 0x00E9018C File Offset: 0x00E8E38C
+		// Token: 0x06031A0C RID: 203276 RVA: 0x00DE0940 File Offset: 0x00DDEB40
 		private void RefreshLevel(int newLevel, int playerLevel, bool isInit = false)
 		{
 			this.PlayerLevel = playerLevel;
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CAB4 RID: 248500 RVA: 0x00E901EC File Offset: 0x00E8E3EC
+		// Token: 0x06031A0D RID: 203277 RVA: 0x00DE09A0 File Offset: 0x00DDEBA0
 		private void RefreshLevelState(HonamiStoryMonsterLevelItem.ELevelStateType state)
 		{
 			string hexStr = "#a5f3cbff";
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetSprite(3).SetColor(color);
 		}
 
-		// Token: 0x0603CAB5 RID: 248501 RVA: 0x00E90268 File Offset: 0x00E8E468
+		// Token: 0x06031A0E RID: 203278 RVA: 0x00DE0A1C File Offset: 0x00DDEC1C
 		private HonamiStoryMonsterLevelItem.ELevelStateType GetLevelState(int newLevel, int playerLevel)
 		{
 			int num = playerLevel - newLevel;
@@ -136,39 +136,39 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return HonamiStoryMonsterLevelItem.ELevelStateType.Normal;
 		}
 
-		// Token: 0x0401F99C RID: 129436
+		// Token: 0x0401A455 RID: 107605
 		private int OriginLevel;
 
-		// Token: 0x0401F99D RID: 129437
+		// Token: 0x0401A456 RID: 107606
 		private int PlayerLevel;
 
-		// Token: 0x0401F99E RID: 129438
+		// Token: 0x0401A457 RID: 107607
 		private int CurrentLevel;
 
-		// Token: 0x0401F99F RID: 129439
+		// Token: 0x0401A458 RID: 107608
 		private HonamiStoryMonsterLevelItem.ELevelStateType CurrentState;
 
-		// Token: 0x0200C00A RID: 49162
+		// Token: 0x0200AA10 RID: 43536
 		private enum ELevelStateType
 		{
-			// Token: 0x04039F31 RID: 237361
+			// Token: 0x040348F3 RID: 215283
 			Safe,
-			// Token: 0x04039F32 RID: 237362
+			// Token: 0x040348F4 RID: 215284
 			Normal,
-			// Token: 0x04039F33 RID: 237363
+			// Token: 0x040348F5 RID: 215285
 			Danger
 		}
 
-		// Token: 0x0200C00B RID: 49163
+		// Token: 0x0200AA11 RID: 43537
 		private enum EComponentType
 		{
-			// Token: 0x04039F35 RID: 237365
+			// Token: 0x040348F7 RID: 215287
 			LevelText,
-			// Token: 0x04039F36 RID: 237366
+			// Token: 0x040348F8 RID: 215288
 			LevelBgSprite,
-			// Token: 0x04039F37 RID: 237367
+			// Token: 0x040348F9 RID: 215289
 			LevelIconSprite,
-			// Token: 0x04039F38 RID: 237368
+			// Token: 0x040348FA RID: 215290
 			LevelCircleSprite
 		}
 	}

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200045C RID: 1116
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020004B5 RID: 1205
 	public class IInhaledChangeSelfState : IInhaledPerResultType
 	{
-		// Token: 0x0600168D RID: 5773 RVA: 0x00045760 File Offset: 0x00043960
+		// Token: 0x06001827 RID: 6183 RVA: 0x000494A8 File Offset: 0x000476A8
 		private IInhaledChangeSelfState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600168E RID: 5774 RVA: 0x00045798 File Offset: 0x00043998
+		// Token: 0x06001828 RID: 6184 RVA: 0x000494E0 File Offset: 0x000476E0
 		public static IInhaledChangeSelfState Create([Nullable(2)] IInhaledChangeSelfState instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600168F RID: 5775 RVA: 0x000457AB File Offset: 0x000439AB
+		// Token: 0x06001829 RID: 6185 RVA: 0x000494F3 File Offset: 0x000476F3
 		public static IInhaledChangeSelfState CreateFromSetValue([Nullable(2)] IInhaledChangeSelfState_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001690 RID: 5776 RVA: 0x000457BE File Offset: 0x000439BE
+		// Token: 0x0600182A RID: 6186 RVA: 0x00049506 File Offset: 0x00047706
 		public new IInhaledChangeSelfState_SetValue ToSetValue()
 		{
 			return new IInhaledChangeSelfState_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700061A RID: 1562
-		// (get) Token: 0x06001691 RID: 5777 RVA: 0x000457DD File Offset: 0x000439DD
-		// (set) Token: 0x06001692 RID: 5778 RVA: 0x00045808 File Offset: 0x00043A08
+		// Token: 0x17000681 RID: 1665
+		// (get) Token: 0x0600182B RID: 6187 RVA: 0x00049525 File Offset: 0x00047725
+		// (set) Token: 0x0600182C RID: 6188 RVA: 0x00049550 File Offset: 0x00047750
 		public override EInhaledPerResultType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700061B RID: 1563
-		// (get) Token: 0x06001693 RID: 5779 RVA: 0x00045816 File Offset: 0x00043A16
-		// (set) Token: 0x06001694 RID: 5780 RVA: 0x00045841 File Offset: 0x00043A41
+		// Token: 0x17000682 RID: 1666
+		// (get) Token: 0x0600182D RID: 6189 RVA: 0x0004955E File Offset: 0x0004775E
+		// (set) Token: 0x0600182E RID: 6190 RVA: 0x00049589 File Offset: 0x00047789
 		public virtual string ChangeSelfState
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400112D RID: 4397
+		// Token: 0x0400124F RID: 4687
 		[Nullable(2)]
 		protected new IInhaledChangeSelfState FbInstance;
 
-		// Token: 0x0400112E RID: 4398
+		// Token: 0x04001250 RID: 4688
 		[Nullable(2)]
 		protected new IInhaledChangeSelfState_SetValue PocoInterface;
 	}

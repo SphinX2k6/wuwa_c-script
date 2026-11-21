@@ -11,18 +11,19 @@ using CSharpScript.Game.LevelGamePlay;
 using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Item;
 using CSharpScript.Game.Module.RoleUi;
+using CSharpScript.Game.Module.RoleUi.RoleDevelop;
 using CSharpScript.Game.Ui;
 using Google.Protobuf.Collections;
 using UnrealEngine;
 
-// Token: 0x02002897 RID: 10391
+// Token: 0x02001E12 RID: 7698
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class RoleModel : ModelBase
 {
-	// Token: 0x17001CBE RID: 7358
-	// (get) Token: 0x0601564C RID: 87628 RVA: 0x00564CCB File Offset: 0x00562ECB
+	// Token: 0x17001D16 RID: 7446
+	// (get) Token: 0x0601304A RID: 77898 RVA: 0x0058FA27 File Offset: 0x0058DC27
 	public bool IsInGamePlayRoleEdit
 	{
 		get
@@ -31,8 +32,8 @@ public class RoleModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001CBF RID: 7359
-	// (get) Token: 0x0601564D RID: 87629 RVA: 0x00564CD6 File Offset: 0x00562ED6
+	// Token: 0x17001D17 RID: 7447
+	// (get) Token: 0x0601304B RID: 77899 RVA: 0x0058FA32 File Offset: 0x0058DC32
 	public ESkillBranchCacheType RoleSkillBranchCacheType
 	{
 		get
@@ -41,9 +42,9 @@ public class RoleModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001CC0 RID: 7360
-	// (get) Token: 0x0601564E RID: 87630 RVA: 0x00564CDE File Offset: 0x00562EDE
-	// (set) Token: 0x0601564F RID: 87631 RVA: 0x00564CE6 File Offset: 0x00562EE6
+	// Token: 0x17001D18 RID: 7448
+	// (get) Token: 0x0601304C RID: 77900 RVA: 0x0058FA3A File Offset: 0x0058DC3A
+	// (set) Token: 0x0601304D RID: 77901 RVA: 0x0058FA42 File Offset: 0x0058DC42
 	public bool IsInRoleTrial
 	{
 		get
@@ -62,13 +63,13 @@ public class RoleModel : ModelBase
 		}
 	}
 
-	// Token: 0x06015650 RID: 87632 RVA: 0x00564D1C File Offset: 0x00562F1C
+	// Token: 0x0601304E RID: 77902 RVA: 0x0058FA78 File Offset: 0x0058DC78
 	public void SetCanUseSpecialTrialRole(bool value)
 	{
 		this.CanUseSpecialTrialRoleInternal = value;
 	}
 
-	// Token: 0x06015651 RID: 87633 RVA: 0x00564D28 File Offset: 0x00562F28
+	// Token: 0x0601304F RID: 77903 RVA: 0x0058FA84 File Offset: 0x0058DC84
 	public bool CanUseSpecialTrialRole(int? instanceId = null)
 	{
 		if (GameModeModel.Instance.IsMulti)
@@ -81,7 +82,7 @@ public class RoleModel : ModelBase
 		return (num2 == null || this.IsDungeonCanUseSpecialTrialRole(num2.Value)) && this.CanUseSpecialTrialRoleInternal;
 	}
 
-	// Token: 0x06015652 RID: 87634 RVA: 0x00564DA8 File Offset: 0x00562FA8
+	// Token: 0x06013050 RID: 77904 RVA: 0x0058FB04 File Offset: 0x0058DD04
 	public bool IsDungeonCanUseSpecialTrialRole(int instanceId)
 	{
 		InstanceDungeon? config = InstanceDungeonConfig.Instance.GetConfig(instanceId);
@@ -93,14 +94,14 @@ public class RoleModel : ModelBase
 		return intArrayConfig != null && intArrayConfig.IndexOf(config.Value.InstSubType) >= 0;
 	}
 
-	// Token: 0x06015653 RID: 87635 RVA: 0x00564DF7 File Offset: 0x00562FF7
+	// Token: 0x06013051 RID: 77905 RVA: 0x0058FB53 File Offset: 0x0058DD53
 	protected override bool OnInit()
 	{
 		EventSystem.Instance.Add<EntityHandle, EntityHandle>(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.OnChangeRole));
 		return true;
 	}
 
-	// Token: 0x06015654 RID: 87636 RVA: 0x00564E18 File Offset: 0x00563018
+	// Token: 0x06013052 RID: 77906 RVA: 0x0058FB74 File Offset: 0x0058DD74
 	public List<RoleDataBase> GetAllConfigRoleDataList()
 	{
 		List<RoleDataBase> list = new List<RoleDataBase>();
@@ -128,7 +129,7 @@ public class RoleModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06015655 RID: 87637 RVA: 0x00564F04 File Offset: 0x00563104
+	// Token: 0x06013053 RID: 77907 RVA: 0x0058FC60 File Offset: 0x0058DE60
 	public List<int> GetAllConfigRoleIdList()
 	{
 		List<int> list = new List<int>();
@@ -152,13 +153,13 @@ public class RoleModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06015656 RID: 87638 RVA: 0x00564FDC File Offset: 0x005631DC
+	// Token: 0x06013054 RID: 77908 RVA: 0x0058FD38 File Offset: 0x0058DF38
 	public void SortRoleDataList(List<RoleDataBase> resultList)
 	{
 		resultList.Sort(new Comparison<RoleDataBase>(this.SortByFormationLevelQuality));
 	}
 
-	// Token: 0x06015657 RID: 87639 RVA: 0x00564FF0 File Offset: 0x005631F0
+	// Token: 0x06013055 RID: 77909 RVA: 0x0058FD4C File Offset: 0x0058DF4C
 	private void SortRoleIdList(List<int> roleIdList)
 	{
 		roleIdList.Sort(delegate(int a, int b)
@@ -173,7 +174,7 @@ public class RoleModel : ModelBase
 		});
 	}
 
-	// Token: 0x06015658 RID: 87640 RVA: 0x00565004 File Offset: 0x00563204
+	// Token: 0x06013056 RID: 77910 RVA: 0x0058FD60 File Offset: 0x0058DF60
 	private int SortByFormationLevelQuality(RoleDataBase a, RoleDataBase b)
 	{
 		int num = this.SortFormation(a, b);
@@ -189,7 +190,7 @@ public class RoleModel : ModelBase
 		return this.SortQuality(a, b);
 	}
 
-	// Token: 0x06015659 RID: 87641 RVA: 0x00565038 File Offset: 0x00563238
+	// Token: 0x06013057 RID: 77911 RVA: 0x0058FD94 File Offset: 0x0058DF94
 	private int SortFormation(RoleDataBase a, RoleDataBase b)
 	{
 		int num = -1;
@@ -223,7 +224,7 @@ public class RoleModel : ModelBase
 		return num - num2;
 	}
 
-	// Token: 0x0601565A RID: 87642 RVA: 0x005650F4 File Offset: 0x005632F4
+	// Token: 0x06013058 RID: 77912 RVA: 0x0058FE50 File Offset: 0x0058E050
 	private int SortLevel(RoleDataBase a, RoleDataBase b)
 	{
 		RoleLevelData levelData = a.GetLevelData();
@@ -239,7 +240,7 @@ public class RoleModel : ModelBase
 		return 0;
 	}
 
-	// Token: 0x0601565B RID: 87643 RVA: 0x00565148 File Offset: 0x00563348
+	// Token: 0x06013059 RID: 77913 RVA: 0x0058FEA4 File Offset: 0x0058E0A4
 	private int SortQuality(RoleDataBase a, RoleDataBase b)
 	{
 		int qualityId = a.GetRoleConfig().QualityId;
@@ -251,7 +252,7 @@ public class RoleModel : ModelBase
 		return 0;
 	}
 
-	// Token: 0x0601565C RID: 87644 RVA: 0x0056517C File Offset: 0x0056337C
+	// Token: 0x0601305A RID: 77914 RVA: 0x0058FED8 File Offset: 0x0058E0D8
 	[NullableContext(2)]
 	public RoleDataBase GetRoleDataByIdOrCreateDefault(int roleId)
 	{
@@ -267,7 +268,7 @@ public class RoleModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0601565D RID: 87645 RVA: 0x005651B8 File Offset: 0x005633B8
+	// Token: 0x0601305B RID: 77915 RVA: 0x0058FF14 File Offset: 0x0058E114
 	protected override bool OnClear()
 	{
 		EventSystem.Instance.Remove(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.OnChangeRole));
@@ -275,33 +276,33 @@ public class RoleModel : ModelBase
 		this.IsInRoleTrial = false;
 		this.RoleTrialShowMap.Clear();
 		this.RoleInstanceMap.Clear();
+		this.MainRoleIdMap.Clear();
 		this.RoleRobotDataMap.Clear();
 		this.RoleCommonRobotDataMap.Clear();
 		this.RoleSpecialRobotDataMap.Clear();
 		return true;
 	}
 
-	// Token: 0x0601565E RID: 87646 RVA: 0x00565230 File Offset: 0x00563430
+	// Token: 0x0601305C RID: 77916 RVA: 0x0058FF94 File Offset: 0x0058E194
 	public void UpdateRoleInfoByServerData(roleInfo[] roleDataList)
 	{
 		foreach (roleInfo roleInfo in roleDataList)
 		{
 			this.UpdateRoleInfo(roleInfo);
+			EventSystem.Instance.Emit<int>(EEventName.RoleInfoUpdate, roleInfo.RoleId);
 		}
-		EventSystem.Instance.Emit(EEventName.RoleInfoUpdate);
 	}
 
-	// Token: 0x0601565F RID: 87647 RVA: 0x00565268 File Offset: 0x00563468
+	// Token: 0x0601305D RID: 77917 RVA: 0x0058FFD2 File Offset: 0x0058E1D2
 	public void RoleChange(int sourceRoleId, roleInfo roleInfo)
 	{
 		this.RoleInstanceMap.Remove(sourceRoleId);
 		this.UpdateRoleInfo(roleInfo);
-		this.UpdateMainRoleMap(roleInfo.RoleId);
 		EventSystem.Instance.Emit<int>(EEventName.RoleSystemDeleteRole, sourceRoleId);
 		EventSystem.Instance.Emit<int>(EEventName.RoleSystemChangeRole, roleInfo.RoleId);
 	}
 
-	// Token: 0x06015660 RID: 87648 RVA: 0x005652BC File Offset: 0x005634BC
+	// Token: 0x0601305E RID: 77918 RVA: 0x00590010 File Offset: 0x0058E210
 	public void UpdateRoleInfo(roleInfo roleInfo)
 	{
 		RoleInstance roleInstance = null;
@@ -316,12 +317,13 @@ public class RoleModel : ModelBase
 		}
 		if (this.IsMainRole(roleInfo.RoleId))
 		{
+			this.UpdateMainRoleMap(roleInfo.RoleId);
 			EventSystem.Instance.Emit<EFunction>(EEventName.RefreshMenuSetting, EFunction.GENDERSETTING);
 		}
 		roleInstance.RefreshRoleInfo(roleInfo);
 	}
 
-	// Token: 0x06015661 RID: 87649 RVA: 0x00565338 File Offset: 0x00563538
+	// Token: 0x0601305F RID: 77919 RVA: 0x00590098 File Offset: 0x0058E298
 	public void UpdateMainRoleMap(int newMainRoleId)
 	{
 		foreach (int key in this.GetMainRoleSet())
@@ -330,7 +332,7 @@ public class RoleModel : ModelBase
 		}
 	}
 
-	// Token: 0x06015662 RID: 87650 RVA: 0x00565394 File Offset: 0x00563594
+	// Token: 0x06013060 RID: 77920 RVA: 0x005900F4 File Offset: 0x0058E2F4
 	public void RoleLevelUp(int roleId, int exp, int level)
 	{
 		RoleInstance roleInstanceById = this.GetRoleInstanceById(roleId);
@@ -341,14 +343,14 @@ public class RoleModel : ModelBase
 			levelData.SetLevel(level);
 			levelData.SetExp(exp);
 		}
-		EventSystem.Instance.Emit(EEventName.RoleInfoUpdate);
+		EventSystem.Instance.Emit<int>(EEventName.RoleInfoUpdate, roleId);
 		if (level2 < level)
 		{
 			EventSystem.Instance.Emit<int, int, int>(EEventName.RoleLevelUp, roleId, exp, level);
 		}
 	}
 
-	// Token: 0x06015663 RID: 87651 RVA: 0x005653F0 File Offset: 0x005635F0
+	// Token: 0x06013061 RID: 77921 RVA: 0x00590150 File Offset: 0x0058E350
 	public void RoleLevelUpReceiveItem(Dictionary<int, int> itemMap)
 	{
 		List<TItem> list = new List<TItem>();
@@ -365,7 +367,7 @@ public class RoleModel : ModelBase
 		EventSystem.Instance.Emit<IReadOnlyList<TItem>>(EEventName.RoleLevelUpReceiveItem, list);
 	}
 
-	// Token: 0x06015664 RID: 87652 RVA: 0x00565488 File Offset: 0x00563688
+	// Token: 0x06013062 RID: 77922 RVA: 0x005901E8 File Offset: 0x0058E3E8
 	public void RoleBreakUp(int roleId, int breakLevel)
 	{
 		RoleInstance roleInstanceById = this.GetRoleInstanceById(roleId);
@@ -373,11 +375,11 @@ public class RoleModel : ModelBase
 		{
 			roleInstanceById.GetLevelData().SetBreachLevel(breakLevel);
 		}
-		EventSystem.Instance.Emit(EEventName.RoleInfoUpdate);
+		EventSystem.Instance.Emit<int>(EEventName.RoleInfoUpdate, roleId);
 		EventSystem.Instance.Emit<int, int>(EEventName.RoleBreakUp, roleId, breakLevel);
 	}
 
-	// Token: 0x06015665 RID: 87653 RVA: 0x005654D0 File Offset: 0x005636D0
+	// Token: 0x06013063 RID: 77923 RVA: 0x00590230 File Offset: 0x0058E430
 	public void RoleSkillLevelUp(int roleId, ArrayIntInt skillInfo)
 	{
 		RoleInstance roleInstanceById = this.GetRoleInstanceById(roleId);
@@ -388,7 +390,7 @@ public class RoleModel : ModelBase
 		EventSystem.Instance.Emit<int, ArrayIntInt>(EEventName.RoleSkillLevelUp, roleId, skillInfo);
 	}
 
-	// Token: 0x06015666 RID: 87654 RVA: 0x0056550C File Offset: 0x0056370C
+	// Token: 0x06013064 RID: 77924 RVA: 0x0059026C File Offset: 0x0058E46C
 	public void RoleNameUpdate(int roleId, string name)
 	{
 		RoleInstance roleInstanceById = this.GetRoleInstanceById(roleId);
@@ -399,7 +401,7 @@ public class RoleModel : ModelBase
 		}
 	}
 
-	// Token: 0x06015667 RID: 87655 RVA: 0x0056553C File Offset: 0x0056373C
+	// Token: 0x06013065 RID: 77925 RVA: 0x0059029C File Offset: 0x0058E49C
 	public void RoleAttrUpdate(int roleId, ArrayIntInt[] baseAttr, ArrayIntInt[] addAttr)
 	{
 		RoleInstance roleInstanceById = this.GetRoleInstanceById(roleId);
@@ -409,13 +411,13 @@ public class RoleModel : ModelBase
 		}
 	}
 
-	// Token: 0x06015668 RID: 87656 RVA: 0x0056555C File Offset: 0x0056375C
+	// Token: 0x06013066 RID: 77926 RVA: 0x005902BC File Offset: 0x0058E4BC
 	public void RoleResonanceLockFinish(PbRoleResonLockFinishNotify notify)
 	{
 		this.RoleInstanceMap[notify.RoleId].GetResonanceData().SetResonanceLock(notify.ResonId);
 	}
 
-	// Token: 0x06015669 RID: 87657 RVA: 0x0056557F File Offset: 0x0056377F
+	// Token: 0x06013067 RID: 77927 RVA: 0x005902DF File Offset: 0x0058E4DF
 	public RoleViewAgent GetRoleViewAgent(ERoleAgentType agentType)
 	{
 		if (agentType == ERoleAgentType.Preview)
@@ -429,9 +431,9 @@ public class RoleModel : ModelBase
 		return new RoleNewJoinAgent();
 	}
 
-	// Token: 0x17001CC1 RID: 7361
-	// (get) Token: 0x0601566A RID: 87658 RVA: 0x0056559C File Offset: 0x0056379C
-	// (set) Token: 0x0601566B RID: 87659 RVA: 0x005655A4 File Offset: 0x005637A4
+	// Token: 0x17001D19 RID: 7449
+	// (get) Token: 0x06013068 RID: 77928 RVA: 0x005902FC File Offset: 0x0058E4FC
+	// (set) Token: 0x06013069 RID: 77929 RVA: 0x00590304 File Offset: 0x0058E504
 	public bool IsShowMultiSkillDesc
 	{
 		get
@@ -444,9 +446,9 @@ public class RoleModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001CC2 RID: 7362
-	// (get) Token: 0x0601566C RID: 87660 RVA: 0x005655AD File Offset: 0x005637AD
-	// (set) Token: 0x0601566D RID: 87661 RVA: 0x005655B7 File Offset: 0x005637B7
+	// Token: 0x17001D1A RID: 7450
+	// (get) Token: 0x0601306A RID: 77930 RVA: 0x0059030D File Offset: 0x0058E50D
+	// (set) Token: 0x0601306B RID: 77931 RVA: 0x00590317 File Offset: 0x0058E517
 	public bool IsShowSkillResume
 	{
 		get
@@ -459,9 +461,9 @@ public class RoleModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001CC3 RID: 7363
-	// (get) Token: 0x0601566E RID: 87662 RVA: 0x005655C2 File Offset: 0x005637C2
-	// (set) Token: 0x0601566F RID: 87663 RVA: 0x005655CC File Offset: 0x005637CC
+	// Token: 0x17001D1B RID: 7451
+	// (get) Token: 0x0601306C RID: 77932 RVA: 0x00590322 File Offset: 0x0058E522
+	// (set) Token: 0x0601306D RID: 77933 RVA: 0x0059032C File Offset: 0x0058E52C
 	public bool IsShowSkillShowTag
 	{
 		get
@@ -474,13 +476,13 @@ public class RoleModel : ModelBase
 		}
 	}
 
-	// Token: 0x06015670 RID: 87664 RVA: 0x005655D7 File Offset: 0x005637D7
+	// Token: 0x0601306E RID: 77934 RVA: 0x00590337 File Offset: 0x0058E537
 	public bool IsSkillShowTagUnlocked()
 	{
 		return FunctionModel.Instance.IsOpen(EFunctionType.RoleDev);
 	}
 
-	// Token: 0x06015671 RID: 87665 RVA: 0x005655E8 File Offset: 0x005637E8
+	// Token: 0x0601306F RID: 77935 RVA: 0x00590348 File Offset: 0x0058E548
 	public ERoleSkillDescType GetRoleSkillDescType()
 	{
 		if (GameModeModel.Instance.IsMulti)
@@ -490,11 +492,11 @@ public class RoleModel : ModelBase
 		return ERoleSkillDescType.ResumeDesc;
 	}
 
-	// Token: 0x06015672 RID: 87666 RVA: 0x005655FC File Offset: 0x005637FC
+	// Token: 0x06013070 RID: 77936 RVA: 0x0059035C File Offset: 0x0058E55C
 	public RoleInstance[] GetRoleList()
 	{
 		List<int> list = new List<int>(this.RoleInstanceMap.Keys);
-		this.SortRoleList(list);
+		this.SortRoleList(list, null);
 		List<RoleInstance> list2 = new List<RoleInstance>();
 		foreach (int key in list)
 		{
@@ -507,11 +509,11 @@ public class RoleModel : ModelBase
 		return list2.ToArray();
 	}
 
-	// Token: 0x06015673 RID: 87667 RVA: 0x00565690 File Offset: 0x00563890
+	// Token: 0x06013071 RID: 77937 RVA: 0x005903F4 File Offset: 0x0058E5F4
 	public RoleInstance[] GetRoleListWithoutMainRole()
 	{
 		List<int> list = new List<int>(this.RoleInstanceMap.Keys);
-		this.SortRoleList(list);
+		this.SortRoleList(list, null);
 		List<RoleInstance> list2 = new List<RoleInstance>();
 		foreach (int num in list)
 		{
@@ -524,7 +526,7 @@ public class RoleModel : ModelBase
 		return list2.ToArray();
 	}
 
-	// Token: 0x06015674 RID: 87668 RVA: 0x00565730 File Offset: 0x00563930
+	// Token: 0x06013072 RID: 77938 RVA: 0x00590494 File Offset: 0x0058E694
 	public List<RoleDataBase> GetRoleDataList(bool includeRobots = false)
 	{
 		List<RoleDataBase> list = new List<RoleDataBase>();
@@ -551,7 +553,7 @@ public class RoleModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06015675 RID: 87669 RVA: 0x00565834 File Offset: 0x00563A34
+	// Token: 0x06013073 RID: 77939 RVA: 0x00590598 File Offset: 0x0058E798
 	public Dictionary<int, RoleDataBase> GetRoleDataMap(bool includeRobots = false)
 	{
 		Dictionary<int, RoleInstance> roleMap = this.GetRoleMap();
@@ -580,31 +582,31 @@ public class RoleModel : ModelBase
 		return dictionary2;
 	}
 
-	// Token: 0x06015676 RID: 87670 RVA: 0x0056595C File Offset: 0x00563B5C
+	// Token: 0x06013074 RID: 77940 RVA: 0x005906C0 File Offset: 0x0058E8C0
 	public Dictionary<int, RoleInstance> GetRoleMap()
 	{
 		return this.RoleInstanceMap;
 	}
 
-	// Token: 0x06015677 RID: 87671 RVA: 0x00565964 File Offset: 0x00563B64
+	// Token: 0x06013075 RID: 77941 RVA: 0x005906C8 File Offset: 0x0058E8C8
 	public Dictionary<int, RoleRobotData> GetRoleRobotMap()
 	{
 		return this.RoleRobotDataMap;
 	}
 
-	// Token: 0x06015678 RID: 87672 RVA: 0x0056596C File Offset: 0x00563B6C
+	// Token: 0x06013076 RID: 77942 RVA: 0x005906D0 File Offset: 0x0058E8D0
 	public Dictionary<int, RoleRobotData> GetCommonRoleRobotMap()
 	{
 		return this.RoleCommonRobotDataMap;
 	}
 
-	// Token: 0x06015679 RID: 87673 RVA: 0x00565974 File Offset: 0x00563B74
+	// Token: 0x06013077 RID: 77943 RVA: 0x005906D8 File Offset: 0x0058E8D8
 	public Dictionary<int, RoleSpecialRobotData> GetRoleFormationRobotMap()
 	{
 		return this.RoleSpecialRobotDataMap;
 	}
 
-	// Token: 0x0601567A RID: 87674 RVA: 0x0056597C File Offset: 0x00563B7C
+	// Token: 0x06013078 RID: 77944 RVA: 0x005906E0 File Offset: 0x0058E8E0
 	public int? GetBattleTeamFirstRoleId()
 	{
 		SceneTeamItem getCurrentTeamItem = SceneTeamModel.Instance.GetCurrentTeamItem;
@@ -615,7 +617,7 @@ public class RoleModel : ModelBase
 		return new int?(getCurrentTeamItem.GetConfigId);
 	}
 
-	// Token: 0x0601567B RID: 87675 RVA: 0x005659AC File Offset: 0x00563BAC
+	// Token: 0x06013079 RID: 77945 RVA: 0x00590710 File Offset: 0x0058E910
 	private int CompareByCondition(int a, int b)
 	{
 		int num = -1;
@@ -651,9 +653,14 @@ public class RoleModel : ModelBase
 		return this.DefaultSortFunc(roleDataById, roleDataById2);
 	}
 
-	// Token: 0x0601567C RID: 87676 RVA: 0x00565A78 File Offset: 0x00563C78
-	private void SortRoleList(List<int> roleIdList)
+	// Token: 0x0601307A RID: 77946 RVA: 0x005907DC File Offset: 0x0058E9DC
+	private void SortRoleList(List<int> roleIdList, [Nullable(2)] Comparison<int> customCompare = null)
 	{
+		if (customCompare != null)
+		{
+			roleIdList.Sort(customCompare);
+			return;
+		}
 		roleIdList.Sort(delegate(int a, int b)
 		{
 			int num = -1;
@@ -690,7 +697,31 @@ public class RoleModel : ModelBase
 		});
 	}
 
-	// Token: 0x0601567D RID: 87677 RVA: 0x00565A8C File Offset: 0x00563C8C
+	// Token: 0x0601307B RID: 77947 RVA: 0x005907FC File Offset: 0x0058E9FC
+	public int CompareForMainView(int a, int b)
+	{
+		RoleModel.<>c__DisplayClass73_0 CS$<>8__locals1;
+		CS$<>8__locals1.<>4__this = this;
+		CS$<>8__locals1.myItems = SceneTeamModel.Instance.GetTeamItems(true);
+		CS$<>8__locals1.devTargetRoleId = RoleDevelopModel.Instance.DevTargetRoleId;
+		int num2;
+		int num = this.<CompareForMainView>g__GetTier|73_0(a, out num2, ref CS$<>8__locals1);
+		int num4;
+		int num3 = this.<CompareForMainView>g__GetTier|73_0(b, out num4, ref CS$<>8__locals1);
+		if (num != num3)
+		{
+			return num - num3;
+		}
+		if (num == 0)
+		{
+			return num2 - num4;
+		}
+		RoleDataBase roleDataById = this.GetRoleDataById(a, true);
+		RoleDataBase roleDataById2 = this.GetRoleDataById(b, true);
+		return this.DefaultSortFunc(roleDataById, roleDataById2);
+	}
+
+	// Token: 0x0601307C RID: 77948 RVA: 0x0059087C File Offset: 0x0058EA7C
 	public int DefaultSortFunc(RoleDataBase a, RoleDataBase b)
 	{
 		RoleLevelData levelData = a.GetLevelData();
@@ -710,7 +741,7 @@ public class RoleModel : ModelBase
 		return 0;
 	}
 
-	// Token: 0x0601567E RID: 87678 RVA: 0x00565B3C File Offset: 0x00563D3C
+	// Token: 0x0601307D RID: 77949 RVA: 0x0059092C File Offset: 0x0058EB2C
 	[NullableContext(2)]
 	public RoleDataBase GetRoleDataById(int id, bool isSelf = true)
 	{
@@ -741,7 +772,7 @@ public class RoleModel : ModelBase
 		return roleDataBase;
 	}
 
-	// Token: 0x0601567F RID: 87679 RVA: 0x00565BC8 File Offset: 0x00563DC8
+	// Token: 0x0601307E RID: 77950 RVA: 0x005909B8 File Offset: 0x0058EBB8
 	public int? GetNewMainRoleId(int oldMainRoleId)
 	{
 		if (this.MainRoleIdMap.ContainsKey(oldMainRoleId))
@@ -751,7 +782,7 @@ public class RoleModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06015680 RID: 87680 RVA: 0x00565C00 File Offset: 0x00563E00
+	// Token: 0x0601307F RID: 77951 RVA: 0x005909F0 File Offset: 0x0058EBF0
 	[NullableContext(2)]
 	public RoleDataBase GetRoleDataByTrialRoleId(int trialRoleId)
 	{
@@ -777,7 +808,7 @@ public class RoleModel : ModelBase
 		return roleDataBase;
 	}
 
-	// Token: 0x06015681 RID: 87681 RVA: 0x00565C54 File Offset: 0x00563E54
+	// Token: 0x06013080 RID: 77952 RVA: 0x00590A44 File Offset: 0x0058EC44
 	public RoleRobotData GetRoleRobotData(int id)
 	{
 		RoleRobotData roleRobotData = null;
@@ -802,10 +833,10 @@ public class RoleModel : ModelBase
 		return roleRobotData;
 	}
 
-	// Token: 0x06015682 RID: 87682 RVA: 0x00565CC8 File Offset: 0x00563EC8
+	// Token: 0x06013081 RID: 77953 RVA: 0x00590AB8 File Offset: 0x0058ECB8
 	public bool HasAnyTrialRole()
 	{
-		using (List<int>.Enumerator enumerator = this.GetRoleSystemRoleList(false).GetEnumerator())
+		using (List<int>.Enumerator enumerator = this.GetRoleSystemRoleList(false, null).GetEnumerator())
 		{
 			while (enumerator.MoveNext())
 			{
@@ -818,7 +849,7 @@ public class RoleModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x06015683 RID: 87683 RVA: 0x00565D24 File Offset: 0x00563F24
+	// Token: 0x06013082 RID: 77954 RVA: 0x00590B14 File Offset: 0x0058ED14
 	[NullableContext(2)]
 	public RoleInstance GetRoleInstanceById(int id)
 	{
@@ -829,7 +860,7 @@ public class RoleModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06015684 RID: 87684 RVA: 0x00565D44 File Offset: 0x00563F44
+	// Token: 0x06013083 RID: 77955 RVA: 0x00590B34 File Offset: 0x0058ED34
 	public string GetRoleName(int roleId, int? playerId = null)
 	{
 		RoleDataBase roleDataById = RoleModel.Instance.GetRoleDataById(roleId, true);
@@ -840,7 +871,7 @@ public class RoleModel : ModelBase
 		return ConfigMultiTextLang.GetLocalTextNew(RoleConfig.Instance.GetRoleConfig(roleId).Value.Name, null);
 	}
 
-	// Token: 0x06015685 RID: 87685 RVA: 0x00565D8C File Offset: 0x00563F8C
+	// Token: 0x06013084 RID: 77956 RVA: 0x00590B7C File Offset: 0x0058ED7C
 	private int SimulateAutoAddExpItem(int needExp, ISelectedData[] sourceList, Func<ISelectedData, int> getExp)
 	{
 		int num = 0;
@@ -852,7 +883,7 @@ public class RoleModel : ModelBase
 		return num;
 	}
 
-	// Token: 0x06015686 RID: 87686 RVA: 0x00565DD0 File Offset: 0x00563FD0
+	// Token: 0x06013085 RID: 77957 RVA: 0x00590BC0 File Offset: 0x0058EDC0
 	public ISelectedData[] GetExpItemInInventory()
 	{
 		List<ISelectedData> list = new List<ISelectedData>();
@@ -870,7 +901,7 @@ public class RoleModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x06015687 RID: 87687 RVA: 0x00565E4C File Offset: 0x0056404C
+	// Token: 0x06013086 RID: 77958 RVA: 0x00590C3C File Offset: 0x0058EE3C
 	public int GetSelectLevelUpItemNeedMoney(int roleId)
 	{
 		RoleInstance roleInstanceById = this.GetRoleInstanceById(roleId);
@@ -885,14 +916,14 @@ public class RoleModel : ModelBase
 		return this.GetMoneyToLevelUp(exp);
 	}
 
-	// Token: 0x06015688 RID: 87688 RVA: 0x00565E9C File Offset: 0x0056409C
+	// Token: 0x06013087 RID: 77959 RVA: 0x00590C8C File Offset: 0x0058EE8C
 	public int GetMoneyToLevelUp(int exp)
 	{
 		int value = ConfigCommonParamById.GetIntConfig("ExpConversionCount").Value;
 		return (int)Math.Ceiling((double)(exp * value) / 1000.0);
 	}
 
-	// Token: 0x06015689 RID: 87689 RVA: 0x00565ED0 File Offset: 0x005640D0
+	// Token: 0x06013088 RID: 77960 RVA: 0x00590CC0 File Offset: 0x0058EEC0
 	public bool GetHasEnoughMoneyLevelUp(int roleId)
 	{
 		int selectLevelUpItemNeedMoney = this.GetSelectLevelUpItemNeedMoney(roleId);
@@ -900,7 +931,7 @@ public class RoleModel : ModelBase
 		return selectLevelUpItemNeedMoney <= playerMoney;
 	}
 
-	// Token: 0x0601568A RID: 87690 RVA: 0x00565EF8 File Offset: 0x005640F8
+	// Token: 0x06013089 RID: 77961 RVA: 0x00590CE8 File Offset: 0x0058EEE8
 	public bool GetSelectHasEnoughItemToLevelUp(int roleId)
 	{
 		RoleInstance roleInstanceById = this.GetRoleInstanceById(roleId);
@@ -919,7 +950,7 @@ public class RoleModel : ModelBase
 		return num >= levelUpNeedExp;
 	}
 
-	// Token: 0x0601568B RID: 87691 RVA: 0x00565F84 File Offset: 0x00564184
+	// Token: 0x0601308A RID: 77962 RVA: 0x00590D74 File Offset: 0x0058EF74
 	public ERoleBreachState GetRoleBreachState(int roleId)
 	{
 		RoleLevelData levelData = this.GetRoleInstanceById(roleId).GetLevelData();
@@ -949,14 +980,14 @@ public class RoleModel : ModelBase
 		return ERoleBreachState.CanBreach;
 	}
 
-	// Token: 0x0601568C RID: 87692 RVA: 0x00566074 File Offset: 0x00564274
+	// Token: 0x0601308B RID: 77963 RVA: 0x00590E64 File Offset: 0x0058F064
 	public bool GetRoleNeedBreakUp(int roleId)
 	{
 		RoleInstance roleInstanceById = this.GetRoleInstanceById(roleId);
 		return roleInstanceById != null && roleInstanceById.GetLevelData().GetRoleNeedBreakUp();
 	}
 
-	// Token: 0x0601568D RID: 87693 RVA: 0x0056609C File Offset: 0x0056429C
+	// Token: 0x0601308C RID: 77964 RVA: 0x00590E8C File Offset: 0x0058F08C
 	public ItemInfo[] GetRoleCostExpList()
 	{
 		List<ItemInfo> list = new List<ItemInfo>();
@@ -975,13 +1006,13 @@ public class RoleModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x0601568E RID: 87694 RVA: 0x00566120 File Offset: 0x00564320
+	// Token: 0x0601308D RID: 77965 RVA: 0x00590F10 File Offset: 0x0058F110
 	public int? GetRoleExpItemExp(int itemId)
 	{
 		return RoleConfig.Instance.GetRoleExpItemExp(itemId);
 	}
 
-	// Token: 0x0601568F RID: 87695 RVA: 0x00566130 File Offset: 0x00564330
+	// Token: 0x0601308E RID: 77966 RVA: 0x00590F20 File Offset: 0x0058F120
 	public RoleInstance[] GetAllRoleList()
 	{
 		List<RoleInstance> list = new List<RoleInstance>();
@@ -992,11 +1023,11 @@ public class RoleModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x06015690 RID: 87696 RVA: 0x00566198 File Offset: 0x00564398
-	public List<int> GetRoleIdList()
+	// Token: 0x0601308F RID: 77967 RVA: 0x00590F88 File Offset: 0x0058F188
+	public List<int> GetRoleIdList([Nullable(2)] Comparison<int> customCompare = null)
 	{
 		List<int> list = new List<int>(this.RoleInstanceMap.Keys);
-		this.SortRoleList(list);
+		this.SortRoleList(list, customCompare);
 		List<int> list2 = new List<int>();
 		foreach (int num in list)
 		{
@@ -1008,7 +1039,7 @@ public class RoleModel : ModelBase
 		return list2;
 	}
 
-	// Token: 0x06015691 RID: 87697 RVA: 0x00566224 File Offset: 0x00564424
+	// Token: 0x06013090 RID: 77968 RVA: 0x00591014 File Offset: 0x0058F214
 	public RoleInstance[] GetOfficialRoleList()
 	{
 		List<RoleInstance> list = new List<RoleInstance>();
@@ -1023,7 +1054,7 @@ public class RoleModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x06015692 RID: 87698 RVA: 0x005662A8 File Offset: 0x005644A8
+	// Token: 0x06013091 RID: 77969 RVA: 0x00591098 File Offset: 0x0058F298
 	public UiDynamicTab[] GetRoleTabList()
 	{
 		List<UiDynamicTab> viewTabList = DynamicTabConfig.Instance.GetViewTabList(EUiViewName.RoleRootView);
@@ -1040,7 +1071,7 @@ public class RoleModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x06015693 RID: 87699 RVA: 0x00566310 File Offset: 0x00564510
+	// Token: 0x06013092 RID: 77970 RVA: 0x00591100 File Offset: 0x0058F300
 	public UiDynamicTab[] GetNormalRoleTabList()
 	{
 		UiDynamicTab[] roleTabList = this.GetRoleTabList();
@@ -1055,14 +1086,14 @@ public class RoleModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x06015694 RID: 87700 RVA: 0x005663E4 File Offset: 0x005645E4
+	// Token: 0x06013093 RID: 77971 RVA: 0x005911D4 File Offset: 0x0058F3D4
 	public bool IsTrialRoleShowFullTab(int trialRoleId)
 	{
 		bool flag;
 		return !this.RoleTrialShowMap.TryGetValue(trialRoleId, out flag) || flag;
 	}
 
-	// Token: 0x06015695 RID: 87701 RVA: 0x00566404 File Offset: 0x00564604
+	// Token: 0x06013094 RID: 77972 RVA: 0x005911F4 File Offset: 0x0058F3F4
 	public UiDynamicTab[] GetTrialRoleTabList(int trialRoleId)
 	{
 		UiDynamicTab[] roleTabList = this.GetRoleTabList();
@@ -1078,7 +1109,7 @@ public class RoleModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x06015696 RID: 87702 RVA: 0x005664CC File Offset: 0x005646CC
+	// Token: 0x06013095 RID: 77973 RVA: 0x005912BC File Offset: 0x0058F4BC
 	public UiDynamicTab[] GetSpecialTrialRoleTabList(int trialRoleId)
 	{
 		UiDynamicTab[] roleTabList = this.GetRoleTabList();
@@ -1098,7 +1129,7 @@ public class RoleModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x06015697 RID: 87703 RVA: 0x005665A8 File Offset: 0x005647A8
+	// Token: 0x06013096 RID: 77974 RVA: 0x00591398 File Offset: 0x0058F598
 	public UiDynamicTab[] GetPreviewRoleTabList()
 	{
 		UiDynamicTab[] roleTabList = this.GetRoleTabList();
@@ -1113,7 +1144,7 @@ public class RoleModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x06015698 RID: 87704 RVA: 0x00566630 File Offset: 0x00564830
+	// Token: 0x06013097 RID: 77975 RVA: 0x00591420 File Offset: 0x0058F620
 	public UiDynamicTab[] GetRoleTabListByUiParam(ERoleSystemMode roleMode, int trialRoleId = 0)
 	{
 		switch (roleMode)
@@ -1132,7 +1163,7 @@ public class RoleModel : ModelBase
 		}
 	}
 
-	// Token: 0x06015699 RID: 87705 RVA: 0x00566680 File Offset: 0x00564880
+	// Token: 0x06013098 RID: 77976 RVA: 0x00591470 File Offset: 0x0058F670
 	public bool RedDotRoleSelectionListCondition()
 	{
 		HashSet<int> newFlagSet = NewFlagModel.Instance.GetNewFlagSet(ELocalStoragePlayerKey.RoleDataItem);
@@ -1150,7 +1181,7 @@ public class RoleModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0601569A RID: 87706 RVA: 0x005666CC File Offset: 0x005648CC
+	// Token: 0x06013099 RID: 77977 RVA: 0x005914BC File Offset: 0x0058F6BC
 	public bool RedDotRoleSystemRoleListCondition(int roleId)
 	{
 		bool flag = false;
@@ -1177,34 +1208,34 @@ public class RoleModel : ModelBase
 		return this.RedDotResonanceTabCondition(roleId) || VisionRecommendModel.Instance.CheckVisionOneKeyEquipRedDot(roleId);
 	}
 
-	// Token: 0x0601569B RID: 87707 RVA: 0x0056675C File Offset: 0x0056495C
+	// Token: 0x0601309A RID: 77978 RVA: 0x0059154C File Offset: 0x0058F74C
 	public bool RedDotAttributeTabLevelUpCondition(int roleId)
 	{
 		RoleDataBase roleDataById = this.GetRoleDataById(roleId, true);
 		return roleDataById != null && !roleDataById.IsTrialRole() && !roleDataById.GetLevelData().GetRoleIsMaxLevel() && (this.GetSelectHasEnoughItemToLevelUp(roleId) && this.GetHasEnoughMoneyLevelUp(roleId));
 	}
 
-	// Token: 0x0601569C RID: 87708 RVA: 0x005667A4 File Offset: 0x005649A4
+	// Token: 0x0601309B RID: 77979 RVA: 0x00591594 File Offset: 0x0058F794
 	public bool RedDotAttributeTabBreakUpCondition(int roleId)
 	{
 		RoleDataBase roleDataById = this.GetRoleDataById(roleId, true);
 		return roleDataById != null && !roleDataById.IsTrialRole() && roleDataById.GetLevelData().GetRoleNeedBreakUp() && this.RedDotAttributeTabBreachCondition(roleDataById);
 	}
 
-	// Token: 0x0601569D RID: 87709 RVA: 0x005667E0 File Offset: 0x005649E0
+	// Token: 0x0601309C RID: 77980 RVA: 0x005915D0 File Offset: 0x0058F7D0
 	public bool RedDotFavorItemActiveCondition(int roleId)
 	{
 		RoleDataBase roleDataById = this.GetRoleDataById(roleId, true);
 		return !roleDataById.IsTrialRole() && roleDataById.GetFavorData().IsExistCanUnlockFavorItem();
 	}
 
-	// Token: 0x0601569E RID: 87710 RVA: 0x0056680B File Offset: 0x00564A0B
+	// Token: 0x0601309D RID: 77981 RVA: 0x005915FB File Offset: 0x0058F7FB
 	private bool RedDotAttributeTabBreachCondition(RoleDataBase roleInstance)
 	{
 		return roleInstance.GetLevelData().IsEnoughBreachConsume();
 	}
 
-	// Token: 0x0601569F RID: 87711 RVA: 0x00566818 File Offset: 0x00564A18
+	// Token: 0x0601309E RID: 77982 RVA: 0x00591608 File Offset: 0x0058F808
 	public bool RedDotResonanceTabCondition(int roleId)
 	{
 		RoleInstance roleInstanceById = RoleModel.Instance.GetRoleInstanceById(roleId);
@@ -1228,13 +1259,13 @@ public class RoleModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060156A0 RID: 87712 RVA: 0x005668D0 File Offset: 0x00564AD0
+	// Token: 0x0601309F RID: 77983 RVA: 0x005916C0 File Offset: 0x0058F8C0
 	public bool RedDotCondition()
 	{
 		return this.RedDotResonanceCondition() || this.RedDotRoleSkinCondition() || this.RedDotRoleOrnamentCondition();
 	}
 
-	// Token: 0x060156A1 RID: 87713 RVA: 0x005668EC File Offset: 0x00564AEC
+	// Token: 0x060130A0 RID: 77984 RVA: 0x005916DC File Offset: 0x0058F8DC
 	public bool RedDotResonanceCondition()
 	{
 		foreach (RoleInstance roleInstance in this.GetAllRoleList())
@@ -1247,7 +1278,7 @@ public class RoleModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x060156A2 RID: 87714 RVA: 0x00566924 File Offset: 0x00564B24
+	// Token: 0x060130A1 RID: 77985 RVA: 0x00591714 File Offset: 0x0058F914
 	public bool RedDotRoleSkinCondition()
 	{
 		foreach (RoleInstance roleInstance in this.GetAllRoleList())
@@ -1260,7 +1291,7 @@ public class RoleModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x060156A3 RID: 87715 RVA: 0x00566960 File Offset: 0x00564B60
+	// Token: 0x060130A2 RID: 77986 RVA: 0x00591750 File Offset: 0x0058F950
 	public bool RedDotResonanceTabHoleCondition(int roleId, int groupIndex)
 	{
 		RoleInstance roleInstanceById = RoleModel.Instance.GetRoleInstanceById(roleId);
@@ -1288,7 +1319,7 @@ public class RoleModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x060156A4 RID: 87716 RVA: 0x00566A08 File Offset: 0x00564C08
+	// Token: 0x060130A3 RID: 77987 RVA: 0x005917F8 File Offset: 0x0058F9F8
 	public ERoleResonanceNodeState GetRoleResonanceState(RoleDataBase roleInstance, int GroupIndex)
 	{
 		int resonantChainGroupIndex = roleInstance.GetResonanceData().GetResonantChainGroupIndex();
@@ -1303,13 +1334,13 @@ public class RoleModel : ModelBase
 		return ERoleResonanceNodeState.NeedFrontActivated;
 	}
 
-	// Token: 0x060156A5 RID: 87717 RVA: 0x00566A30 File Offset: 0x00564C30
+	// Token: 0x060130A4 RID: 77988 RVA: 0x00591820 File Offset: 0x0058FA20
 	public int GetRoleResonanceGroupIndex(RoleDataBase roleInstance)
 	{
 		return roleInstance.GetResonanceData().GetResonantChainGroupIndex();
 	}
 
-	// Token: 0x060156A6 RID: 87718 RVA: 0x00566A40 File Offset: 0x00564C40
+	// Token: 0x060130A5 RID: 77989 RVA: 0x00591830 File Offset: 0x0058FA30
 	[return: Nullable(2)]
 	public List<ResonantChain> GetRoleResonanceConfigList(RoleDataBase roleInstance)
 	{
@@ -1318,8 +1349,8 @@ public class RoleModel : ModelBase
 		return RoleResonanceConfig.Instance.GetRoleResonanceList(resonantChainGroupId);
 	}
 
-	// Token: 0x17001CC4 RID: 7364
-	// (get) Token: 0x060156A7 RID: 87719 RVA: 0x00566A7B File Offset: 0x00564C7B
+	// Token: 0x17001D1C RID: 7452
+	// (get) Token: 0x060130A6 RID: 77990 RVA: 0x0059186B File Offset: 0x0058FA6B
 	public RoleSkillResponseData RoleSkillResponseData
 	{
 		get
@@ -1332,14 +1363,14 @@ public class RoleModel : ModelBase
 		}
 	}
 
-	// Token: 0x060156A8 RID: 87720 RVA: 0x00566A98 File Offset: 0x00564C98
+	// Token: 0x060130A7 RID: 77991 RVA: 0x00591888 File Offset: 0x0058FA88
 	public global::SkillEffect GetCurRoleSkillViewDataLocal(int roleId, int skillGroupId)
 	{
 		int skillLevel = this.GetRoleDataById(roleId, true).GetSkillData().GetSkillLevel(skillGroupId);
 		return this.GetRoleSkillEffect(skillGroupId, skillLevel);
 	}
 
-	// Token: 0x060156A9 RID: 87721 RVA: 0x00566AC4 File Offset: 0x00564CC4
+	// Token: 0x060130A8 RID: 77992 RVA: 0x005918B4 File Offset: 0x0058FAB4
 	public global::SkillEffect GetNextRoleSkillViewDataLocal(int roleId, int skillGroupId)
 	{
 		int skillLevel = this.GetRoleDataById(roleId, true).GetSkillData().GetSkillLevel(skillGroupId);
@@ -1348,7 +1379,7 @@ public class RoleModel : ModelBase
 		return this.GetRoleSkillEffect(skillGroupId, skillLevel2);
 	}
 
-	// Token: 0x060156AA RID: 87722 RVA: 0x00566B18 File Offset: 0x00564D18
+	// Token: 0x060130A9 RID: 77993 RVA: 0x00591908 File Offset: 0x0058FB08
 	public global::SkillEffect GetRoleSkillEffect(int skillGroupId, int skillLevel)
 	{
 		global::SkillEffect skillEffect = new global::SkillEffect();
@@ -1385,14 +1416,14 @@ public class RoleModel : ModelBase
 		return skillEffect;
 	}
 
-	// Token: 0x060156AB RID: 87723 RVA: 0x00566C9C File Offset: 0x00564E9C
+	// Token: 0x060130AA RID: 77994 RVA: 0x00591A8C File Offset: 0x0058FC8C
 	[NullableContext(2)]
 	public void UpdateRoleSkillViewData(global::SkillEffect skillEffectList, global::SkillEffect nextSkillEffectList, int skillId)
 	{
 		this.RoleSkillResponseData.UpdateRoleSkillViewResponse(skillEffectList, nextSkillEffectList, skillId);
 	}
 
-	// Token: 0x060156AC RID: 87724 RVA: 0x00566CAC File Offset: 0x00564EAC
+	// Token: 0x060130AB RID: 77995 RVA: 0x00591A9C File Offset: 0x0058FC9C
 	public void UpdateRoleSkillNodeData(int roleId, ArraySkillNode[] skillNodeState)
 	{
 		RoleInstance roleInstanceById = RoleModel.Instance.GetRoleInstanceById(roleId);
@@ -1417,13 +1448,13 @@ public class RoleModel : ModelBase
 		skillData.SetSkillNodeStateData(dictionary);
 	}
 
-	// Token: 0x060156AD RID: 87725 RVA: 0x00566D25 File Offset: 0x00564F25
+	// Token: 0x060130AC RID: 77996 RVA: 0x00591B15 File Offset: 0x0058FD15
 	public int GetUpgradeSkillIdIfUpgraded(int skillId, int roleDataId)
 	{
 		return this.GetRoleDataById(roleDataId, true).GetSkillData().GetSkillIdAfterUpgrade(skillId);
 	}
 
-	// Token: 0x060156AE RID: 87726 RVA: 0x00566D3C File Offset: 0x00564F3C
+	// Token: 0x060130AD RID: 77997 RVA: 0x00591B2C File Offset: 0x0058FD2C
 	public void UpdateRoleFavorData(RoleFavor[] favorList)
 	{
 		int num = favorList.Length;
@@ -1433,7 +1464,7 @@ public class RoleModel : ModelBase
 		}
 	}
 
-	// Token: 0x060156AF RID: 87727 RVA: 0x00566D64 File Offset: 0x00564F64
+	// Token: 0x060130AE RID: 77998 RVA: 0x00591B54 File Offset: 0x0058FD54
 	public void UpdateRoleFavorCondition(Dictionary<int, ConditionInfo> conditionMap)
 	{
 		foreach (KeyValuePair<int, ConditionInfo> keyValuePair in conditionMap)
@@ -1444,7 +1475,7 @@ public class RoleModel : ModelBase
 		}
 	}
 
-	// Token: 0x060156B0 RID: 87728 RVA: 0x00566DC8 File Offset: 0x00564FC8
+	// Token: 0x060130AF RID: 77999 RVA: 0x00591BB8 File Offset: 0x0058FDB8
 	public void UpdateRoleFavorDataSingle(RoleFavor roleFavor)
 	{
 		int roleId = roleFavor.RoleId;
@@ -1471,7 +1502,7 @@ public class RoleModel : ModelBase
 		EventSystem.Instance.Emit<int>(EEventName.UpdateRoleFavorData, roleId);
 	}
 
-	// Token: 0x060156B1 RID: 87729 RVA: 0x00566E68 File Offset: 0x00565068
+	// Token: 0x060130B0 RID: 78000 RVA: 0x00591C58 File Offset: 0x0058FE58
 	public void UpdateRoleFavorNewCanUnLockId(RoleFavorNewCanUnLockNotify info)
 	{
 		int roleId = info.RoleId;
@@ -1483,7 +1514,7 @@ public class RoleModel : ModelBase
 		roleInstanceById.GetFavorData().UpdateCanUnlockId(info.ItemType, info.CanUnLockId);
 	}
 
-	// Token: 0x060156B2 RID: 87730 RVA: 0x00566EA4 File Offset: 0x005650A4
+	// Token: 0x060130B1 RID: 78001 RVA: 0x00591C94 File Offset: 0x0058FE94
 	public void UpdateRoleFavorLevelAndExp(RoleFavorLevelUpdateNotify info)
 	{
 		int roleId = info.RoleId;
@@ -1492,7 +1523,7 @@ public class RoleModel : ModelBase
 		favorData.SetFavorExp(info.Exp);
 	}
 
-	// Token: 0x060156B3 RID: 87731 RVA: 0x00566EE0 File Offset: 0x005650E0
+	// Token: 0x060130B2 RID: 78002 RVA: 0x00591CD0 File Offset: 0x0058FED0
 	public void UpdateRoleSkinInfo(int roleId, int skinId)
 	{
 		RoleInstance roleInstanceById = RoleModel.Instance.GetRoleInstanceById(roleId);
@@ -1509,7 +1540,7 @@ public class RoleModel : ModelBase
 		roleInstanceById.SetRoleSkinId(skinId);
 	}
 
-	// Token: 0x060156B4 RID: 87732 RVA: 0x00566F30 File Offset: 0x00565130
+	// Token: 0x060130B3 RID: 78003 RVA: 0x00591D20 File Offset: 0x0058FF20
 	public void UpdateRoleBackgroundMusicEnabled(int roleDataId, bool enabled)
 	{
 		RoleInstance roleInstanceById = RoleModel.Instance.GetRoleInstanceById(roleDataId);
@@ -1526,23 +1557,23 @@ public class RoleModel : ModelBase
 		roleInstanceById.SetBackgroundMusicEnabled(enabled);
 	}
 
-	// Token: 0x060156B5 RID: 87733 RVA: 0x00566F80 File Offset: 0x00565180
+	// Token: 0x060130B4 RID: 78004 RVA: 0x00591D70 File Offset: 0x0058FF70
 	public bool GetRoleBackgroundMusicEnabled(int roleDataId)
 	{
 		RoleInstance roleInstanceById = RoleModel.Instance.GetRoleInstanceById(roleDataId);
 		return roleInstanceById == null || roleInstanceById.GetBackgroundMusicEnabled();
 	}
 
-	// Token: 0x060156B6 RID: 87734 RVA: 0x00566FA4 File Offset: 0x005651A4
-	public List<int> GetRoleSystemRoleList(bool includeRobots = false)
+	// Token: 0x060130B5 RID: 78005 RVA: 0x00591D94 File Offset: 0x0058FF94
+	public List<int> GetRoleSystemRoleList(bool includeRobots = false, [Nullable(2)] Comparison<int> customCompare = null)
 	{
 		if (DangoAbyssModel.Instance.CheckIfInSmallWorldInstance())
 		{
-			return this.GetRoleIdList();
+			return this.GetRoleIdList(customCompare);
 		}
 		if (GameModeModel.Instance.IsMulti)
 		{
-			return this.GetRoleIdList();
+			return this.GetRoleIdList(customCompare);
 		}
 		List<SceneTeamItem> teamItems = SceneTeamModel.Instance.GetTeamItems(false);
 		List<int> list = new List<int>();
@@ -1571,21 +1602,21 @@ public class RoleModel : ModelBase
 			{
 				this.MergeSpecialRoleIdList(list2);
 			}
-			this.SortRoleList(list2);
+			this.SortRoleList(list2, customCompare);
 			return list2;
 		}
-		List<int> roleIdList = this.GetRoleIdList();
+		List<int> roleIdList = this.GetRoleIdList(customCompare);
 		if (includeRobots)
 		{
 			List<int> list3 = new List<int>(roleIdList);
 			this.MergeSpecialRoleIdList(list3);
-			this.SortRoleList(list3);
+			this.SortRoleList(list3, customCompare);
 			return list3;
 		}
 		return roleIdList;
 	}
 
-	// Token: 0x060156B7 RID: 87735 RVA: 0x0056710C File Offset: 0x0056530C
+	// Token: 0x060130B6 RID: 78006 RVA: 0x00591F00 File Offset: 0x00590100
 	private void MergeSpecialRoleIdList(List<int> roleList)
 	{
 		foreach (RoleSpecialRobotData roleSpecialRobotData in this.RoleSpecialRobotDataMap.Values)
@@ -1601,7 +1632,7 @@ public class RoleModel : ModelBase
 		}
 	}
 
-	// Token: 0x060156B8 RID: 87736 RVA: 0x0056717C File Offset: 0x0056537C
+	// Token: 0x060130B7 RID: 78007 RVA: 0x00591F70 File Offset: 0x00590170
 	public int GetRoleListHighestLevel()
 	{
 		int num = -1;
@@ -1625,7 +1656,7 @@ public class RoleModel : ModelBase
 		return num;
 	}
 
-	// Token: 0x060156B9 RID: 87737 RVA: 0x00567268 File Offset: 0x00565468
+	// Token: 0x060130B8 RID: 78008 RVA: 0x0059205C File Offset: 0x0059025C
 	public void UpdateCanChangeRoleIdList(int[] roleIds)
 	{
 		List<int> list = new List<int>(this.CanChangeRoleIdList);
@@ -1636,25 +1667,25 @@ public class RoleModel : ModelBase
 		this.CanChangeRoleIdList = list.ToArray();
 	}
 
-	// Token: 0x060156BA RID: 87738 RVA: 0x005672A8 File Offset: 0x005654A8
+	// Token: 0x060130B9 RID: 78009 RVA: 0x0059209C File Offset: 0x0059029C
 	public int[] GetCanChangeRoleIdList()
 	{
 		return this.CanChangeRoleIdList;
 	}
 
-	// Token: 0x060156BB RID: 87739 RVA: 0x005672B0 File Offset: 0x005654B0
+	// Token: 0x060130BA RID: 78010 RVA: 0x005920A4 File Offset: 0x005902A4
 	public bool IsMainRole(int roleId)
 	{
 		return this.GetMainRoleSet().Contains(roleId);
 	}
 
-	// Token: 0x060156BC RID: 87740 RVA: 0x005672BE File Offset: 0x005654BE
+	// Token: 0x060130BB RID: 78011 RVA: 0x005920B2 File Offset: 0x005902B2
 	public bool IsLightMainRole(int roleId)
 	{
 		return this.GetLightMainRoleSet().Contains(roleId);
 	}
 
-	// Token: 0x060156BD RID: 87741 RVA: 0x005672CC File Offset: 0x005654CC
+	// Token: 0x060130BC RID: 78012 RVA: 0x005920C0 File Offset: 0x005902C0
 	private HashSet<int> GetMainRoleSet()
 	{
 		if (this.MainRoleIdSet.Count == 0)
@@ -1664,7 +1695,7 @@ public class RoleModel : ModelBase
 		return this.MainRoleIdSet;
 	}
 
-	// Token: 0x060156BE RID: 87742 RVA: 0x005672E7 File Offset: 0x005654E7
+	// Token: 0x060130BD RID: 78013 RVA: 0x005920DB File Offset: 0x005902DB
 	private HashSet<int> GetLightMainRoleSet()
 	{
 		if (this.LightMainRoleIdSet.Count == 0)
@@ -1674,7 +1705,7 @@ public class RoleModel : ModelBase
 		return this.LightMainRoleIdSet;
 	}
 
-	// Token: 0x060156BF RID: 87743 RVA: 0x00567304 File Offset: 0x00565504
+	// Token: 0x060130BE RID: 78014 RVA: 0x005920F8 File Offset: 0x005902F8
 	private void InitMainRoleIdSet()
 	{
 		IReadOnlyList<MainRoleConfig> allMainRoleConfig = RoleConfig.Instance.GetAllMainRoleConfig();
@@ -1686,7 +1717,7 @@ public class RoleModel : ModelBase
 		}
 	}
 
-	// Token: 0x060156C0 RID: 87744 RVA: 0x0056734C File Offset: 0x0056554C
+	// Token: 0x060130BF RID: 78015 RVA: 0x00592140 File Offset: 0x00590340
 	private void InitLightMainRoleIdSet()
 	{
 		foreach (int item in ConfigCommonParamById.GetIntArrayConfig("LightMainRoleIdList"))
@@ -1695,7 +1726,7 @@ public class RoleModel : ModelBase
 		}
 	}
 
-	// Token: 0x060156C1 RID: 87745 RVA: 0x005673A4 File Offset: 0x005655A4
+	// Token: 0x060130C0 RID: 78016 RVA: 0x00592198 File Offset: 0x00590398
 	public int? GetCurSelectMainRoleId()
 	{
 		foreach (int num in this.GetMainRoleSet())
@@ -1708,7 +1739,7 @@ public class RoleModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x060156C2 RID: 87746 RVA: 0x00567414 File Offset: 0x00565614
+	// Token: 0x060130C1 RID: 78017 RVA: 0x00592208 File Offset: 0x00590408
 	[NullableContext(2)]
 	public RoleInstance GetCurSelectMainRoleInstance()
 	{
@@ -1722,7 +1753,7 @@ public class RoleModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x060156C3 RID: 87747 RVA: 0x00567480 File Offset: 0x00565680
+	// Token: 0x060130C2 RID: 78018 RVA: 0x00592274 File Offset: 0x00590474
 	public bool IsHasRole(int roleId)
 	{
 		if (!this.IsMainRole(roleId))
@@ -1739,7 +1770,7 @@ public class RoleModel : ModelBase
 		return roleConfig != null && roleConfig2 != null && roleConfig.Value.ElementId == roleConfig2.Value.ElementId;
 	}
 
-	// Token: 0x060156C4 RID: 87748 RVA: 0x00567508 File Offset: 0x00565708
+	// Token: 0x060130C3 RID: 78019 RVA: 0x005922FC File Offset: 0x005904FC
 	public MainRoleConfig? GetCorrectMainRoleConfig(int roleId)
 	{
 		if (!this.IsMainRole(roleId))
@@ -1778,7 +1809,7 @@ public class RoleModel : ModelBase
 		return new MainRoleConfig?(mainRoleById.Value);
 	}
 
-	// Token: 0x060156C5 RID: 87749 RVA: 0x0056762C File Offset: 0x0056582C
+	// Token: 0x060130C4 RID: 78020 RVA: 0x00592420 File Offset: 0x00590620
 	public int GetRoleLevelUpExp(int roleId, int level)
 	{
 		RoleInfo? roleConfig = RoleConfig.Instance.GetRoleConfig(roleId);
@@ -1790,7 +1821,7 @@ public class RoleModel : ModelBase
 		return 1;
 	}
 
-	// Token: 0x060156C6 RID: 87750 RVA: 0x0056767C File Offset: 0x0056587C
+	// Token: 0x060130C5 RID: 78021 RVA: 0x00592470 File Offset: 0x00590670
 	public Dictionary<int, int> CalculateExpBackItem(int overExp)
 	{
 		IReadOnlyList<RoleExpItem> roleExpItemList = RoleConfig.Instance.GetRoleExpItemList();
@@ -1810,7 +1841,7 @@ public class RoleModel : ModelBase
 		return dictionary;
 	}
 
-	// Token: 0x060156C7 RID: 87751 RVA: 0x005676F4 File Offset: 0x005658F4
+	// Token: 0x060130C6 RID: 78022 RVA: 0x005924E8 File Offset: 0x005906E8
 	public int GetBaseAttributeById(int roleId, EAttributeType attributeId)
 	{
 		BaseProperty? config = ConfigBasePropertyById.GetConfig(RoleConfig.Instance.GetRoleConfig(roleId).Value.PropertyId, true);
@@ -1829,7 +1860,7 @@ public class RoleModel : ModelBase
 		return config.Value.Def;
 	}
 
-	// Token: 0x060156C8 RID: 87752 RVA: 0x00567764 File Offset: 0x00565964
+	// Token: 0x060130C7 RID: 78023 RVA: 0x00592558 File Offset: 0x00590758
 	public float GetAttributeRadioByLevel(EAttributeType attributeId, int level, int breachLevel)
 	{
 		RolePropertyGrowth? config = ConfigRolePropertyGrowthByLevelAndBreachLevel.GetConfig(level, breachLevel, true);
@@ -1848,7 +1879,7 @@ public class RoleModel : ModelBase
 		return (float)config.Value.DefRatio;
 	}
 
-	// Token: 0x060156C9 RID: 87753 RVA: 0x005677C4 File Offset: 0x005659C4
+	// Token: 0x060130C8 RID: 78024 RVA: 0x005925B8 File Offset: 0x005907B8
 	public int GetAttributeByLevel(int roleId, EAttributeType attributeId, int level, int breachLevel)
 	{
 		float baseAttributeById = (float)this.GetBaseAttributeById(roleId, attributeId);
@@ -1856,14 +1887,14 @@ public class RoleModel : ModelBase
 		return (int)Math.Floor((double)(baseAttributeById * attributeRadioByLevel * 0.0001f));
 	}
 
-	// Token: 0x060156CA RID: 87754 RVA: 0x005677F4 File Offset: 0x005659F4
+	// Token: 0x060130C9 RID: 78025 RVA: 0x005925E8 File Offset: 0x005907E8
 	public int GetAddAttrLevelUp(int roleId, int srcLevel, int srcBreachLevel, int tarLevel, int tarBreachLevel, int attributeId)
 	{
 		int attributeByLevel = this.GetAttributeByLevel(roleId, (EAttributeType)attributeId, srcLevel, srcBreachLevel);
 		return this.GetAttributeByLevel(roleId, (EAttributeType)attributeId, tarLevel, tarBreachLevel) - attributeByLevel;
 	}
 
-	// Token: 0x060156CB RID: 87755 RVA: 0x0056781C File Offset: 0x00565A1C
+	// Token: 0x060130CA RID: 78026 RVA: 0x00592610 File Offset: 0x00590810
 	public int GetRoleSkillTreeNodeLevel(int roleId, int skillNodeId)
 	{
 		SkillTree? skillTreeNode = RoleSkillConfig.Instance.GetSkillTreeNode(skillNodeId);
@@ -1879,13 +1910,13 @@ public class RoleModel : ModelBase
 		return this.GetRoleSkillTreeNodeLevelByConfig(roleDataBase, skillTreeNode.Value);
 	}
 
-	// Token: 0x060156CC RID: 87756 RVA: 0x00567862 File Offset: 0x00565A62
+	// Token: 0x060130CB RID: 78027 RVA: 0x00592656 File Offset: 0x00590856
 	public int GetRoleSkillTreeNodeLevelByConfig(RoleDataBase roleInstance, SkillTree config)
 	{
 		return roleInstance.GetSkillData().GetSkillNodeLevel(config);
 	}
 
-	// Token: 0x060156CD RID: 87757 RVA: 0x00567870 File Offset: 0x00565A70
+	// Token: 0x060130CC RID: 78028 RVA: 0x00592664 File Offset: 0x00590864
 	public ESkillTreeNodeState? GetRoleSkillTreeNodeState(int roleId, int skillNodeId)
 	{
 		if (skillNodeId <= 0)
@@ -1905,20 +1936,20 @@ public class RoleModel : ModelBase
 		return new ESkillTreeNodeState?(roleDataBase.GetSkillData().GetSkillTreeNodeState(skillTreeNode.Value, roleId));
 	}
 
-	// Token: 0x060156CE RID: 87758 RVA: 0x005678D8 File Offset: 0x00565AD8
+	// Token: 0x060130CD RID: 78029 RVA: 0x005926CC File Offset: 0x005908CC
 	public bool GetRoleSkillTreeNodeConsumeSatisfied(int roleId, int skillNodeId)
 	{
 		RoleInstance roleInstanceById = this.GetRoleInstanceById(roleId);
 		return roleInstanceById != null && roleInstanceById.GetSkillData().IsSkillTreeNodeConsumeSatisfied(skillNodeId);
 	}
 
-	// Token: 0x060156CF RID: 87759 RVA: 0x00567900 File Offset: 0x00565B00
+	// Token: 0x060130CE RID: 78030 RVA: 0x005926F4 File Offset: 0x005908F4
 	public string GetSkillAttributeNameByOneSkillEffect(global::OneSkillEffect effect)
 	{
 		return RoleSkillConfig.Instance.GetRoleSkillDescriptionConfigById(effect.Id).Value.AttributeName;
 	}
 
-	// Token: 0x060156D0 RID: 87760 RVA: 0x00567930 File Offset: 0x00565B30
+	// Token: 0x060130CF RID: 78031 RVA: 0x00592724 File Offset: 0x00590924
 	public string GetSkillAttributeDescriptionByOneSkillEffect(global::OneSkillEffect effect)
 	{
 		SkillDescription? roleSkillDescriptionConfigById = RoleSkillConfig.Instance.GetRoleSkillDescriptionConfigById(effect.Id);
@@ -1945,7 +1976,7 @@ public class RoleModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x060156D1 RID: 87761 RVA: 0x00567A08 File Offset: 0x00565C08
+	// Token: 0x060130D0 RID: 78032 RVA: 0x005927FC File Offset: 0x005909FC
 	public Dictionary<int, int[]> GetResonantItemRoleMap()
 	{
 		if (this.ResonantItemRoleMapInternal != null)
@@ -2004,22 +2035,13 @@ public class RoleModel : ModelBase
 		return this.ResonantItemRoleMapInternal;
 	}
 
-	// Token: 0x060156D2 RID: 87762 RVA: 0x00567BFC File Offset: 0x00565DFC
+	// Token: 0x060130D1 RID: 78033 RVA: 0x005929F0 File Offset: 0x00590BF0
 	[NullableContext(2)]
 	public int[] GetResonantItemRoleId(int itemId)
 	{
 		ItemInfo? itemConfig = InventoryConfig.Instance.GetItemConfig(itemId);
-		bool flag;
-		if (itemConfig == null)
-		{
-			flag = true;
-		}
-		else
-		{
-			int[] array = itemConfig.GetValueOrDefault().ShowTypes();
-			flag = !((array != null) ? new bool?(array.Contains(30)) : null).GetValueOrDefault();
-		}
-		if (flag)
+		int[] array = (itemConfig != null) ? itemConfig.GetValueOrDefault().ShowTypes() : null;
+		if (array == null || Array.IndexOf<int>(array, 30) < 0)
 		{
 			return null;
 		}
@@ -2032,14 +2054,14 @@ public class RoleModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x060156D3 RID: 87763 RVA: 0x00567C7C File Offset: 0x00565E7C
+	// Token: 0x060130D2 RID: 78034 RVA: 0x00592A58 File Offset: 0x00590C58
 	public bool CheckRoleResonantIfMax(int roleId)
 	{
 		RoleInstance roleInstanceById = this.GetRoleInstanceById(roleId);
 		return roleInstanceById != null && this.GetRoleResonanceGroupIndex(roleInstanceById) >= RoleResonanceConfig.Instance.GetResonanceMaxLevel();
 	}
 
-	// Token: 0x060156D4 RID: 87764 RVA: 0x00567CAC File Offset: 0x00565EAC
+	// Token: 0x060130D3 RID: 78035 RVA: 0x00592A88 File Offset: 0x00590C88
 	public int GetRoleLeftResonantCount(int roleId)
 	{
 		RoleInstance roleInstanceById = this.GetRoleInstanceById(roleId);
@@ -2051,7 +2073,7 @@ public class RoleModel : ModelBase
 		return RoleResonanceConfig.Instance.GetResonanceMaxLevel() - roleResonanceGroupIndex;
 	}
 
-	// Token: 0x060156D5 RID: 87765 RVA: 0x00567CDC File Offset: 0x00565EDC
+	// Token: 0x060130D4 RID: 78036 RVA: 0x00592AB8 File Offset: 0x00590CB8
 	public int GetRoleLeftResonantCountWithInventoryItem(int roleId)
 	{
 		RoleInstance roleInstanceById = this.GetRoleInstanceById(roleId);
@@ -2069,7 +2091,7 @@ public class RoleModel : ModelBase
 		return RoleResonanceConfig.Instance.GetResonanceMaxLevel() - roleResonanceGroupIndex - num;
 	}
 
-	// Token: 0x060156D6 RID: 87766 RVA: 0x00567D6C File Offset: 0x00565F6C
+	// Token: 0x060130D5 RID: 78037 RVA: 0x00592B48 File Offset: 0x00590D48
 	public List<TItem> GetResonantItemConvertItemResult(int itemId)
 	{
 		int[] resonantItemRoleId = RoleModel.Instance.GetResonantItemRoleId(itemId);
@@ -2116,13 +2138,13 @@ public class RoleModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x060156D7 RID: 87767 RVA: 0x00567EBE File Offset: 0x005660BE
+	// Token: 0x060130D6 RID: 78038 RVA: 0x00592C9A File Offset: 0x00590E9A
 	public bool InUltraSkill()
 	{
 		return this.InUltraSkillInternal;
 	}
 
-	// Token: 0x060156D8 RID: 87768 RVA: 0x00567EC8 File Offset: 0x005660C8
+	// Token: 0x060130D7 RID: 78039 RVA: 0x00592CA4 File Offset: 0x00590EA4
 	private void OnChangeRole(EntityHandle newEntityHandle, [Nullable(2)] EntityHandle oldEntityHandle)
 	{
 		if (oldEntityHandle != null)
@@ -2143,7 +2165,7 @@ public class RoleModel : ModelBase
 		}
 	}
 
-	// Token: 0x060156D9 RID: 87769 RVA: 0x00567F84 File Offset: 0x00566184
+	// Token: 0x060130D8 RID: 78040 RVA: 0x00592D60 File Offset: 0x00590F60
 	private void OnUltraTagChange(int tagId, bool tagExist)
 	{
 		if (tagId != GameplayTagDefine.EGameplayTagId["角色.Common.技能通用标识.大招"])
@@ -2154,7 +2176,7 @@ public class RoleModel : ModelBase
 		EventSystem.Instance.Emit<bool>(EEventName.OnEnterOrExitUltraSkill, tagExist);
 	}
 
-	// Token: 0x060156DA RID: 87770 RVA: 0x00567FB1 File Offset: 0x005661B1
+	// Token: 0x060130D9 RID: 78041 RVA: 0x00592D8D File Offset: 0x00590F8D
 	public int[] GetRoleTagByRoleInfo(RoleInfo roleInfo)
 	{
 		if (this.ClientCheckRoleIsUpgradeLightMainRole(roleInfo.Id))
@@ -2164,7 +2186,7 @@ public class RoleModel : ModelBase
 		return roleInfo.GetTagArray();
 	}
 
-	// Token: 0x060156DB RID: 87771 RVA: 0x00567FDC File Offset: 0x005661DC
+	// Token: 0x060130DA RID: 78042 RVA: 0x00592DB8 File Offset: 0x00590FB8
 	public bool ClientCheckRoleIsUpgradeLightMainRole(int roleId)
 	{
 		if (!this.IsLightMainRole(roleId))
@@ -2175,13 +2197,13 @@ public class RoleModel : ModelBase
 		return LevelGeneralController.Instance.CheckCondition(intConfig.Value.ToString(), null, false, Array.Empty<object>());
 	}
 
-	// Token: 0x060156DC RID: 87772 RVA: 0x0056801F File Offset: 0x0056621F
+	// Token: 0x060130DB RID: 78043 RVA: 0x00592DFB File Offset: 0x00590FFB
 	public int[] GetRoleBranchIdList(int roleId)
 	{
 		return RoleConfig.Instance.GetRoleBranchIds(roleId);
 	}
 
-	// Token: 0x060156DD RID: 87773 RVA: 0x0056802C File Offset: 0x0056622C
+	// Token: 0x060130DC RID: 78044 RVA: 0x00592E08 File Offset: 0x00591008
 	public int GetRoleCurrentBranchId(int roleId)
 	{
 		if (!this.IsRoleHasBranch(roleId))
@@ -2196,19 +2218,19 @@ public class RoleModel : ModelBase
 		return this.GetRoleDefaultBranchId(roleId);
 	}
 
-	// Token: 0x060156DE RID: 87774 RVA: 0x0056805D File Offset: 0x0056625D
+	// Token: 0x060130DD RID: 78045 RVA: 0x00592E39 File Offset: 0x00591039
 	public int GetRoleBranchIdByIndex(int roleId, int index)
 	{
 		return this.GetRoleBranchIdList(roleId)[index];
 	}
 
-	// Token: 0x060156DF RID: 87775 RVA: 0x00568068 File Offset: 0x00566268
+	// Token: 0x060130DE RID: 78046 RVA: 0x00592E44 File Offset: 0x00591044
 	public int GetRoleDefaultBranchId(int roleId)
 	{
 		return RoleConfig.Instance.GetRoleDefaultBranch(roleId);
 	}
 
-	// Token: 0x060156E0 RID: 87776 RVA: 0x00568078 File Offset: 0x00566278
+	// Token: 0x060130DF RID: 78047 RVA: 0x00592E54 File Offset: 0x00591054
 	public int GetRoleCurrentBranchIndex(int roleId)
 	{
 		int[] roleBranchIdList = this.GetRoleBranchIdList(roleId);
@@ -2216,14 +2238,14 @@ public class RoleModel : ModelBase
 		return Array.FindIndex<int>(roleBranchIdList, (int id) => skillBranch == id);
 	}
 
-	// Token: 0x060156E1 RID: 87777 RVA: 0x005680B0 File Offset: 0x005662B0
+	// Token: 0x060130E0 RID: 78048 RVA: 0x00592E8C File Offset: 0x0059108C
 	public int GetRoleOppositeBranchId(int roleId)
 	{
 		int roleCurrentBranchIndex = this.GetRoleCurrentBranchIndex(roleId);
 		return this.GetRoleBranchIdByIndex(roleId, (roleCurrentBranchIndex == 0) ? 1 : 0);
 	}
 
-	// Token: 0x060156E2 RID: 87778 RVA: 0x005680D0 File Offset: 0x005662D0
+	// Token: 0x060130E1 RID: 78049 RVA: 0x00592EAC File Offset: 0x005910AC
 	public int GetRoleDefaultBranchIndex(int roleId)
 	{
 		int[] roleBranchIdList = this.GetRoleBranchIdList(roleId);
@@ -2231,14 +2253,14 @@ public class RoleModel : ModelBase
 		return Array.FindIndex<int>(roleBranchIdList, (int id) => skillBranch == id);
 	}
 
-	// Token: 0x060156E3 RID: 87779 RVA: 0x00568108 File Offset: 0x00566308
+	// Token: 0x060130E2 RID: 78050 RVA: 0x00592EE4 File Offset: 0x005910E4
 	public bool IsSkillNodeHasBranch(int nodeId)
 	{
 		int[] skillNodeBranchIdList = this.GetSkillNodeBranchIdList(nodeId);
 		return skillNodeBranchIdList != null && skillNodeBranchIdList.Length == 2;
 	}
 
-	// Token: 0x060156E4 RID: 87780 RVA: 0x00568128 File Offset: 0x00566328
+	// Token: 0x060130E3 RID: 78051 RVA: 0x00592F04 File Offset: 0x00591104
 	public bool IsInHideSkillBranchInstSubTypeList(int instSubType)
 	{
 		IReadOnlyList<int> readOnlyList = ConfigCommonParamById.GetIntArrayConfig("HideSkillBranchInstSubTypeList") ?? Array.Empty<int>();
@@ -2252,26 +2274,26 @@ public class RoleModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x060156E5 RID: 87781 RVA: 0x00568168 File Offset: 0x00566368
+	// Token: 0x060130E4 RID: 78052 RVA: 0x00592F44 File Offset: 0x00591144
 	public int GetSkillNodeCurrentBranchId(int roleId, int nodeId)
 	{
 		int roleCurrentBranchIndex = this.GetRoleCurrentBranchIndex(roleId);
 		return RoleConfig.Instance.GetSkillNodeBranchIds(nodeId)[roleCurrentBranchIndex];
 	}
 
-	// Token: 0x060156E6 RID: 87782 RVA: 0x0056818A File Offset: 0x0056638A
+	// Token: 0x060130E5 RID: 78053 RVA: 0x00592F66 File Offset: 0x00591166
 	public int[] GetSkillNodeBranchIdList(int nodeId)
 	{
 		return RoleConfig.Instance.GetSkillNodeBranchIds(nodeId);
 	}
 
-	// Token: 0x060156E7 RID: 87783 RVA: 0x00568197 File Offset: 0x00566397
+	// Token: 0x060130E6 RID: 78054 RVA: 0x00592F73 File Offset: 0x00591173
 	public void SetRoleBranch(int roleId, int skillBranch)
 	{
 		this.RoleSkillBranchMap[roleId] = skillBranch;
 	}
 
-	// Token: 0x060156E8 RID: 87784 RVA: 0x005681A8 File Offset: 0x005663A8
+	// Token: 0x060130E7 RID: 78055 RVA: 0x00592F84 File Offset: 0x00591184
 	public bool IsRoleHasBranch(int roleId)
 	{
 		if (roleId == 0)
@@ -2282,7 +2304,7 @@ public class RoleModel : ModelBase
 		return roleBranchIdList != null && roleBranchIdList.Length == 2;
 	}
 
-	// Token: 0x060156E9 RID: 87785 RVA: 0x005681CD File Offset: 0x005663CD
+	// Token: 0x060130E8 RID: 78056 RVA: 0x00592FA9 File Offset: 0x005911A9
 	public bool CheckCanSwitchRoleBranch(bool showTips = false)
 	{
 		if (RoleController.Instance.CheckCharacterInBattleTag(true))
@@ -2296,25 +2318,25 @@ public class RoleModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060156EA RID: 87786 RVA: 0x005681F6 File Offset: 0x005663F6
+	// Token: 0x060130E9 RID: 78057 RVA: 0x00592FD2 File Offset: 0x005911D2
 	public bool IsRoleOwned(int roleId)
 	{
 		return this.RoleInstanceMap.ContainsKey(roleId);
 	}
 
-	// Token: 0x060156EB RID: 87787 RVA: 0x00568204 File Offset: 0x00566404
+	// Token: 0x060130EA RID: 78058 RVA: 0x00592FE0 File Offset: 0x005911E0
 	public int GetRoleBranchIndexById(int roleId, int skillBranchId)
 	{
 		return Array.FindIndex<int>(this.GetRoleBranchIdList(roleId), (int id) => skillBranchId == id);
 	}
 
-	// Token: 0x060156EC RID: 87788 RVA: 0x00568236 File Offset: 0x00566436
+	// Token: 0x060130EB RID: 78059 RVA: 0x00593012 File Offset: 0x00591212
 	public void StartGamePlayRoleEdit(ESkillBranchCacheType gamePlayType)
 	{
 		this.RoleSkillBranchCacheTypeInternal = gamePlayType;
 	}
 
-	// Token: 0x060156ED RID: 87789 RVA: 0x00568240 File Offset: 0x00566440
+	// Token: 0x060130EC RID: 78060 RVA: 0x0059301C File Offset: 0x0059121C
 	public void ClearGamePlayRoleEdit(ESkillBranchCacheType gamePlayType)
 	{
 		Dictionary<int, int> dictionary2;
@@ -2329,13 +2351,13 @@ public class RoleModel : ModelBase
 		}
 	}
 
-	// Token: 0x060156EE RID: 87790 RVA: 0x0056827B File Offset: 0x0056647B
+	// Token: 0x060130ED RID: 78061 RVA: 0x00593057 File Offset: 0x00591257
 	public void StartRecordRoleSkillBranchChangeRequest()
 	{
 		this.IsRecordRoleSkillBranchChangeRequset = true;
 	}
 
-	// Token: 0x060156EF RID: 87791 RVA: 0x00568284 File Offset: 0x00566484
+	// Token: 0x060130EE RID: 78062 RVA: 0x00593060 File Offset: 0x00591260
 	public void AddRoleSkillBranchChangeRequestRecord(int roleId)
 	{
 		if (this.IsRecordRoleSkillBranchChangeRequset)
@@ -2344,7 +2366,7 @@ public class RoleModel : ModelBase
 		}
 	}
 
-	// Token: 0x060156F0 RID: 87792 RVA: 0x0056829B File Offset: 0x0056649B
+	// Token: 0x060130EF RID: 78063 RVA: 0x00593077 File Offset: 0x00591277
 	public List<int> StopRecordRoleSkillBranchChangeRequest()
 	{
 		List<int> result = new List<int>(this.RoleSkillBranchChangeRequsetRecord);
@@ -2353,13 +2375,13 @@ public class RoleModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x060156F1 RID: 87793 RVA: 0x005682BA File Offset: 0x005664BA
+	// Token: 0x060130F0 RID: 78064 RVA: 0x00593096 File Offset: 0x00591296
 	public bool RedDotRoleOrnamentCondition()
 	{
 		return RoleOrnamentModel.Instance.CheckNewlyAcquiredOrnamentInMainView();
 	}
 
-	// Token: 0x060156F2 RID: 87794 RVA: 0x005682C8 File Offset: 0x005664C8
+	// Token: 0x060130F1 RID: 78065 RVA: 0x005930A4 File Offset: 0x005912A4
 	public void SetRoleSkillBranchGamePlayCache(int roleId, int branchId, ESkillBranchCacheType gamePlayType)
 	{
 		if (branchId == 0 || roleId == 0)
@@ -2376,13 +2398,13 @@ public class RoleModel : ModelBase
 		dictionary[roleId] = branchId;
 	}
 
-	// Token: 0x060156F3 RID: 87795 RVA: 0x0056830F File Offset: 0x0056650F
+	// Token: 0x060130F2 RID: 78066 RVA: 0x005930EB File Offset: 0x005912EB
 	public int GetRoleSkillBranchIdInCurrentGamePlay(int roleId)
 	{
 		return this.GetRoleSkillBranchIdInGamePlay(roleId, this.RoleSkillBranchCacheTypeInternal);
 	}
 
-	// Token: 0x060156F4 RID: 87796 RVA: 0x00568320 File Offset: 0x00566520
+	// Token: 0x060130F3 RID: 78067 RVA: 0x005930FC File Offset: 0x005912FC
 	public int GetRoleSkillBranchIdInGamePlay(int roleId, ESkillBranchCacheType gamePlayType)
 	{
 		if (roleId <= 0 || !this.IsRoleHasBranch(roleId))
@@ -2400,13 +2422,13 @@ public class RoleModel : ModelBase
 		return num.Value;
 	}
 
-	// Token: 0x060156F5 RID: 87797 RVA: 0x0056838E File Offset: 0x0056658E
+	// Token: 0x060130F4 RID: 78068 RVA: 0x0059316A File Offset: 0x0059136A
 	public int GetRoleSkillBranchIndexInCurrentGamePlay(int roleId)
 	{
 		return this.GetRoleSkillBranchIndexInGamePlay(roleId, this.RoleSkillBranchCacheTypeInternal);
 	}
 
-	// Token: 0x060156F6 RID: 87798 RVA: 0x005683A0 File Offset: 0x005665A0
+	// Token: 0x060130F5 RID: 78069 RVA: 0x0059317C File Offset: 0x0059137C
 	public int GetRoleSkillBranchIndexInGamePlay(int roleId, ESkillBranchCacheType gamePlayType)
 	{
 		int branchId = this.GetRoleSkillBranchIdInGamePlay(roleId, gamePlayType);
@@ -2417,8 +2439,8 @@ public class RoleModel : ModelBase
 		return Array.FindIndex<int>(this.GetRoleBranchIdList(roleId), (int id) => branchId == id);
 	}
 
-	// Token: 0x17001CC5 RID: 7365
-	// (get) Token: 0x060156F7 RID: 87799 RVA: 0x005683E3 File Offset: 0x005665E3
+	// Token: 0x17001D1D RID: 7453
+	// (get) Token: 0x060130F6 RID: 78070 RVA: 0x005931BF File Offset: 0x005913BF
 	public static RoleModel Instance
 	{
 		get
@@ -2427,7 +2449,7 @@ public class RoleModel : ModelBase
 		}
 	}
 
-	// Token: 0x060156F8 RID: 87800 RVA: 0x005683EA File Offset: 0x005665EA
+	// Token: 0x060130F7 RID: 78071 RVA: 0x005931C6 File Offset: 0x005913C6
 	public static RoleModel GetOrCreateInstance()
 	{
 		if (RoleModel._Instance == null)
@@ -2437,7 +2459,7 @@ public class RoleModel : ModelBase
 		return RoleModel._Instance;
 	}
 
-	// Token: 0x060156F9 RID: 87801 RVA: 0x005683FE File Offset: 0x005665FE
+	// Token: 0x060130F8 RID: 78072 RVA: 0x005931DA File Offset: 0x005913DA
 	public static bool CreateInstance()
 	{
 		if (RoleModel._Instance != null)
@@ -2448,48 +2470,73 @@ public class RoleModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060156FA RID: 87802 RVA: 0x00568414 File Offset: 0x00566614
+	// Token: 0x060130F9 RID: 78073 RVA: 0x005931F0 File Offset: 0x005913F0
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060156FB RID: 87803 RVA: 0x00568416 File Offset: 0x00566616
+	// Token: 0x060130FA RID: 78074 RVA: 0x005931F2 File Offset: 0x005913F2
 	public static void ResetStaticDefaultValue()
 	{
 		RoleModel._Instance = null;
 	}
 
-	// Token: 0x060156FC RID: 87804 RVA: 0x0056841E File Offset: 0x0056661E
+	// Token: 0x060130FB RID: 78075 RVA: 0x005931FA File Offset: 0x005913FA
 	static RoleModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(RoleModel.CreateStaticDefaultValue), new Action(RoleModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04009FCB RID: 40907
+	// Token: 0x06013100 RID: 78080 RVA: 0x005933C8 File Offset: 0x005915C8
+	[CompilerGenerated]
+	private int <CompareForMainView>g__GetTier|73_0(int roleId, out int teamIndex, ref RoleModel.<>c__DisplayClass73_0 A_3)
+	{
+		teamIndex = -1;
+		for (int i = 0; i < A_3.myItems.Count; i++)
+		{
+			if (A_3.myItems[i].GetConfigId == roleId)
+			{
+				teamIndex = i;
+				return 0;
+			}
+		}
+		if (A_3.devTargetRoleId > 0 && roleId == A_3.devTargetRoleId)
+		{
+			return 1;
+		}
+		RoleDataBase roleDataById = this.GetRoleDataById(roleId, true);
+		if (roleDataById != null && roleDataById.GetIsNew())
+		{
+			return 2;
+		}
+		return 3;
+	}
+
+	// Token: 0x0400A3B4 RID: 41908
 	private readonly Dictionary<int, RoleInstance> RoleInstanceMap = new Dictionary<int, RoleInstance>();
 
-	// Token: 0x04009FCC RID: 40908
+	// Token: 0x0400A3B5 RID: 41909
 	private readonly Dictionary<int, RoleRobotData> RoleRobotDataMap = new Dictionary<int, RoleRobotData>();
 
-	// Token: 0x04009FCD RID: 40909
+	// Token: 0x0400A3B6 RID: 41910
 	private readonly Dictionary<int, RoleRobotData> RoleCommonRobotDataMap = new Dictionary<int, RoleRobotData>();
 
-	// Token: 0x04009FCE RID: 40910
+	// Token: 0x0400A3B7 RID: 41911
 	private readonly Dictionary<int, RoleSpecialRobotData> RoleSpecialRobotDataMap = new Dictionary<int, RoleSpecialRobotData>();
 
-	// Token: 0x04009FCF RID: 40911
+	// Token: 0x0400A3B8 RID: 41912
 	private readonly HashSet<int> MainRoleIdSet = new HashSet<int>();
 
-	// Token: 0x04009FD0 RID: 40912
+	// Token: 0x0400A3B9 RID: 41913
 	private readonly HashSet<int> LightMainRoleIdSet = new HashSet<int>();
 
-	// Token: 0x04009FD1 RID: 40913
+	// Token: 0x0400A3BA RID: 41914
 	private readonly Dictionary<int, int> MainRoleIdMap = new Dictionary<int, int>();
 
-	// Token: 0x04009FD2 RID: 40914
+	// Token: 0x0400A3BB RID: 41915
 	private bool IsShowMultiSkillDescInternal;
 
-	// Token: 0x04009FD3 RID: 40915
+	// Token: 0x0400A3BC RID: 41916
 	[Nullable(new byte[]
 	{
 		2,
@@ -2497,44 +2544,44 @@ public class RoleModel : ModelBase
 	})]
 	private Dictionary<int, int[]> ResonantItemRoleMapInternal;
 
-	// Token: 0x04009FD4 RID: 40916
+	// Token: 0x0400A3BD RID: 41917
 	private bool IsInRoleTrialInternal;
 
-	// Token: 0x04009FD5 RID: 40917
+	// Token: 0x0400A3BE RID: 41918
 	public HashSet<int> RoleTrialIdList = new HashSet<int>();
 
-	// Token: 0x04009FD6 RID: 40918
+	// Token: 0x0400A3BF RID: 41919
 	public Dictionary<int, bool> RoleTrialShowMap = new Dictionary<int, bool>();
 
-	// Token: 0x04009FD7 RID: 40919
+	// Token: 0x0400A3C0 RID: 41920
 	private bool CanUseSpecialTrialRoleInternal = true;
 
-	// Token: 0x04009FD8 RID: 40920
+	// Token: 0x0400A3C1 RID: 41921
 	private readonly Dictionary<int, int> RoleSkillBranchMap = new Dictionary<int, int>();
 
-	// Token: 0x04009FD9 RID: 40921
+	// Token: 0x0400A3C2 RID: 41922
 	private readonly Dictionary<ESkillBranchCacheType, Dictionary<int, int>> RoleSkillBranchGamePlayCacheMap = new Dictionary<ESkillBranchCacheType, Dictionary<int, int>>();
 
-	// Token: 0x04009FDA RID: 40922
+	// Token: 0x0400A3C3 RID: 41923
 	private ESkillBranchCacheType RoleSkillBranchCacheTypeInternal;
 
-	// Token: 0x04009FDB RID: 40923
+	// Token: 0x0400A3C4 RID: 41924
 	private readonly HashSet<int> RoleSkillBranchChangeRequsetRecord = new HashSet<int>();
 
-	// Token: 0x04009FDC RID: 40924
+	// Token: 0x0400A3C5 RID: 41925
 	private bool IsRecordRoleSkillBranchChangeRequset;
 
-	// Token: 0x04009FDD RID: 40925
+	// Token: 0x0400A3C6 RID: 41926
 	[Nullable(2)]
 	private RoleSkillResponseData RoleSkillResponseDataInternal;
 
-	// Token: 0x04009FDE RID: 40926
+	// Token: 0x0400A3C7 RID: 41927
 	private int[] CanChangeRoleIdList = new int[0];
 
-	// Token: 0x04009FDF RID: 40927
+	// Token: 0x0400A3C8 RID: 41928
 	private bool InUltraSkillInternal;
 
-	// Token: 0x04009FE0 RID: 40928
+	// Token: 0x0400A3C9 RID: 41929
 	[Nullable(2)]
 	private static RoleModel _Instance;
 }

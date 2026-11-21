@@ -5,24 +5,24 @@ using AkiClient.Game.Aki.Character.BaseCharacter.Camera;
 using CSharpScript.Core.Common;
 using CSharpScript.Game.Camera;
 
-// Token: 0x0200021F RID: 543
+// Token: 0x02000223 RID: 547
 [NullableContext(1)]
 [Nullable(0)]
-[GeneratePropertyAccessMethod(true)]
+[GeneratePropertyAccessMethod(true, true, null)]
 public class CameraSidestepController : CameraControllerBase, ICanGetConfigMapValue
 {
-	// Token: 0x06002144 RID: 8516 RVA: 0x000BE658 File Offset: 0x000BC858
+	// Token: 0x060021F2 RID: 8690 RVA: 0x000C5978 File Offset: 0x000C3B78
 	public CameraSidestepController(FightCameraLogicComponent camera) : base(camera)
 	{
 	}
 
-	// Token: 0x06002145 RID: 8517 RVA: 0x000BE6CF File Offset: 0x000BC8CF
+	// Token: 0x060021F3 RID: 8691 RVA: 0x000C59EF File Offset: 0x000C3BEF
 	public override string Name()
 	{
 		return "SidestepController";
 	}
 
-	// Token: 0x06002146 RID: 8518 RVA: 0x000BE6D8 File Offset: 0x000BC8D8
+	// Token: 0x060021F4 RID: 8692 RVA: 0x000C59F8 File Offset: 0x000C3BF8
 	protected override void OnInit()
 	{
 		base.SetConfigMap(EFightCameraSidestep.旋转角速度插值速率, "YawInterpSpeed");
@@ -43,7 +43,7 @@ public class CameraSidestepController : CameraControllerBase, ICanGetConfigMapVa
 		base.RegisterPairConfigKey(EFightCameraSidestep.移动输入恢复臂长最小速度, EFightCameraSidestep.移动输入恢复臂长最大速度, true);
 	}
 
-	// Token: 0x06002147 RID: 8519 RVA: 0x000BE804 File Offset: 0x000BCA04
+	// Token: 0x060021F5 RID: 8693 RVA: 0x000C5B24 File Offset: 0x000C3D24
 	protected override void UpdateInternal(float deltaTime)
 	{
 		if (!base.CameraModel.IsEnableSidestepCamera)
@@ -64,7 +64,7 @@ public class CameraSidestepController : CameraControllerBase, ICanGetConfigMapVa
 		this.RecoverArmLength((double)deltaTime);
 	}
 
-	// Token: 0x06002148 RID: 8520 RVA: 0x000BE860 File Offset: 0x000BCA60
+	// Token: 0x060021F6 RID: 8694 RVA: 0x000C5B80 File Offset: 0x000C3D80
 	private void UpdateCameraInfo(double deltaTime)
 	{
 		this.Camera.GetCameraTargetRotator(this.TempRotator);
@@ -84,7 +84,7 @@ public class CameraSidestepController : CameraControllerBase, ICanGetConfigMapVa
 		this.YawSpeed = MathUtils.Instance.InterpTo(this.YawSpeed, this.MaxYawSpeed, deltaTime, this.YawInterpSpeed);
 	}
 
-	// Token: 0x06002149 RID: 8521 RVA: 0x000BE978 File Offset: 0x000BCB78
+	// Token: 0x060021F7 RID: 8695 RVA: 0x000C5C98 File Offset: 0x000C3E98
 	private void UpdateInternalSidestep(double deltaTime)
 	{
 		double num = this.CameraFacing.SineAngle2D(this.CharacterFacing, 9.999999747378752E-05) * deltaTime * this.YawSpeed;
@@ -100,7 +100,7 @@ public class CameraSidestepController : CameraControllerBase, ICanGetConfigMapVa
 		this.Camera.IsModifiedArmRotationYaw = true;
 	}
 
-	// Token: 0x0600214A RID: 8522 RVA: 0x000BEA14 File Offset: 0x000BCC14
+	// Token: 0x060021F8 RID: 8696 RVA: 0x000C5D34 File Offset: 0x000C3F34
 	private void UpdateInternalSlope(double deltaTime)
 	{
 		if (this.MoveDuration < this.MoveDurationThreshold)
@@ -174,7 +174,7 @@ public class CameraSidestepController : CameraControllerBase, ICanGetConfigMapVa
 		this.Camera.IsModifiedArmRotationPitch = true;
 	}
 
-	// Token: 0x0600214B RID: 8523 RVA: 0x000BEC88 File Offset: 0x000BCE88
+	// Token: 0x060021F9 RID: 8697 RVA: 0x000C5FA8 File Offset: 0x000C41A8
 	protected bool IsCharacterMoving()
 	{
 		if (this.Camera.Character == null)
@@ -198,7 +198,7 @@ public class CameraSidestepController : CameraControllerBase, ICanGetConfigMapVa
 		return component != null && component.Valid && component.Speed > 70f;
 	}
 
-	// Token: 0x0600214C RID: 8524 RVA: 0x000BED5C File Offset: 0x000BCF5C
+	// Token: 0x060021FA RID: 8698 RVA: 0x000C607C File Offset: 0x000C427C
 	private unsafe void RecoverArmLength(double deltaTime)
 	{
 		TsBaseCharacter character = this.Camera.Character;
@@ -252,13 +252,13 @@ public class CameraSidestepController : CameraControllerBase, ICanGetConfigMapVa
 		}
 	}
 
-	// Token: 0x0600214D RID: 8525 RVA: 0x000BF004 File Offset: 0x000BD204
+	// Token: 0x060021FB RID: 8699 RVA: 0x000C6324 File Offset: 0x000C4524
 	public override string GetConfigMapValue(int key)
 	{
 		return base.GetConfigMapValue(key);
 	}
 
-	// Token: 0x0600214E RID: 8526 RVA: 0x000BF010 File Offset: 0x000BD210
+	// Token: 0x060021FC RID: 8700 RVA: 0x000C6330 File Offset: 0x000C4530
 	[NullableContext(0)]
 	public override bool TryGetMember(string key, out object value)
 	{
@@ -506,7 +506,7 @@ public class CameraSidestepController : CameraControllerBase, ICanGetConfigMapVa
 		return base.TryGetMember(key, out value);
 	}
 
-	// Token: 0x0600214F RID: 8527 RVA: 0x000BF500 File Offset: 0x000BD700
+	// Token: 0x060021FD RID: 8701 RVA: 0x000C6820 File Offset: 0x000C4A20
 	[NullableContext(0)]
 	public override void SetMember(string key, object value)
 	{
@@ -1081,7 +1081,7 @@ public class CameraSidestepController : CameraControllerBase, ICanGetConfigMapVa
 		base.SetMember(key, value);
 	}
 
-	// Token: 0x06002150 RID: 8528 RVA: 0x000BFF03 File Offset: 0x000BE103
+	// Token: 0x060021FE RID: 8702 RVA: 0x000C7223 File Offset: 0x000C5423
 	[NullableContext(0)]
 	public override IEnumerable<ValueTuple<string, object>> MemberIter()
 	{
@@ -1090,79 +1090,79 @@ public class CameraSidestepController : CameraControllerBase, ICanGetConfigMapVa
 		return <MemberIter>d__;
 	}
 
-	// Token: 0x040015DC RID: 5596
+	// Token: 0x0400161E RID: 5662
 	public double YawInterpSpeed;
 
-	// Token: 0x040015DD RID: 5597
+	// Token: 0x0400161F RID: 5663
 	public double PitchInterpSpeed;
 
-	// Token: 0x040015DE RID: 5598
+	// Token: 0x04001620 RID: 5664
 	public double PitchAccelerate;
 
-	// Token: 0x040015DF RID: 5599
+	// Token: 0x04001621 RID: 5665
 	private double PitchSpeed;
 
-	// Token: 0x040015E0 RID: 5600
+	// Token: 0x04001622 RID: 5666
 	public double PitchOffset;
 
-	// Token: 0x040015E1 RID: 5601
+	// Token: 0x04001623 RID: 5667
 	public double MaxYawSpeed;
 
-	// Token: 0x040015E2 RID: 5602
+	// Token: 0x04001624 RID: 5668
 	public double MaxPitch;
 
-	// Token: 0x040015E3 RID: 5603
+	// Token: 0x04001625 RID: 5669
 	public double MinPitch;
 
-	// Token: 0x040015E4 RID: 5604
+	// Token: 0x04001626 RID: 5670
 	public double MoveDurationThreshold = 1.0;
 
-	// Token: 0x040015E5 RID: 5605
+	// Token: 0x04001627 RID: 5671
 	private double YawSpeed;
 
-	// Token: 0x040015E6 RID: 5606
+	// Token: 0x04001628 RID: 5672
 	private double MoveDuration;
 
-	// Token: 0x040015E7 RID: 5607
+	// Token: 0x04001629 RID: 5673
 	public double InputRecoverArmLengthMin;
 
-	// Token: 0x040015E8 RID: 5608
+	// Token: 0x0400162A RID: 5674
 	public double InputRecoverArmLengthMax;
 
-	// Token: 0x040015E9 RID: 5609
+	// Token: 0x0400162B RID: 5675
 	public double InputRecoverArmLengthSpeedMin;
 
-	// Token: 0x040015EA RID: 5610
+	// Token: 0x0400162C RID: 5676
 	public double InputRecoverArmLengthSpeedMax;
 
-	// Token: 0x040015EB RID: 5611
+	// Token: 0x0400162D RID: 5677
 	public double InputRecoverArmLengthLimit;
 
-	// Token: 0x040015EC RID: 5612
+	// Token: 0x0400162E RID: 5678
 	[Nullable(2)]
 	public CurveBase InputRecoverArmLengthCurve;
 
-	// Token: 0x040015ED RID: 5613
+	// Token: 0x0400162F RID: 5679
 	private readonly Vector CameraFacing = Vector.Create();
 
-	// Token: 0x040015EE RID: 5614
+	// Token: 0x04001630 RID: 5680
 	private readonly Vector CharacterFacing = Vector.Create();
 
-	// Token: 0x040015EF RID: 5615
+	// Token: 0x04001631 RID: 5681
 	private readonly Vector GravityUp = Vector.Create();
 
-	// Token: 0x040015F0 RID: 5616
+	// Token: 0x04001632 RID: 5682
 	private readonly Vector MoveNormal = Vector.Create();
 
-	// Token: 0x040015F1 RID: 5617
+	// Token: 0x04001633 RID: 5683
 	private readonly Rotator TempRotator = Rotator.Create();
 
-	// Token: 0x040015F2 RID: 5618
+	// Token: 0x04001634 RID: 5684
 	private readonly Rotator TempRotator2 = Rotator.Create();
 
-	// Token: 0x040015F3 RID: 5619
+	// Token: 0x04001635 RID: 5685
 	private readonly Vector TempVector = Vector.Create();
 
-	// Token: 0x040015F4 RID: 5620
+	// Token: 0x04001636 RID: 5686
 	private bool EnableDebugZoomModifier = true;
 }

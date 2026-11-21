@@ -11,12 +11,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200146F RID: 5231
+// Token: 0x02000923 RID: 2339
 [NullableContext(2)]
 [Nullable(0)]
 public class ActivityRegressAreaActivityInfoPanel : UiPanelBase
 {
-	// Token: 0x06009407 RID: 37895 RVA: 0x001FE6DC File Offset: 0x001FC8DC
+	// Token: 0x0600679C RID: 26524 RVA: 0x00207640 File Offset: 0x00205840
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -34,7 +34,7 @@ public class ActivityRegressAreaActivityInfoPanel : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009408 RID: 37896 RVA: 0x001FE788 File Offset: 0x001FC988
+	// Token: 0x0600679D RID: 26525 RVA: 0x002076EC File Offset: 0x002058EC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivityRegressAreaActivityInfoPanel.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -45,7 +45,7 @@ public class ActivityRegressAreaActivityInfoPanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009409 RID: 37897 RVA: 0x001FE7CC File Offset: 0x001FC9CC
+	// Token: 0x0600679E RID: 26526 RVA: 0x00207730 File Offset: 0x00205930
 	protected override void OnStart()
 	{
 		this.ActivityBottom.FunctionButton.SetFunction(new Action(this.OnGotoAreaBtnClick));
@@ -54,7 +54,7 @@ public class ActivityRegressAreaActivityInfoPanel : UiPanelBase
 		this.ActivityTitlePanel.SetTimeTextVisible(false);
 	}
 
-	// Token: 0x0600940A RID: 37898 RVA: 0x001FE837 File Offset: 0x001FCA37
+	// Token: 0x0600679F RID: 26527 RVA: 0x0020779B File Offset: 0x0020599B
 	public void RefreshByData(RegressBase config)
 	{
 		this.Config = new RegressBase?(config);
@@ -63,13 +63,13 @@ public class ActivityRegressAreaActivityInfoPanel : UiPanelBase
 		this.RefreshReward();
 	}
 
-	// Token: 0x0600940B RID: 37899 RVA: 0x001FE858 File Offset: 0x001FCA58
+	// Token: 0x060067A0 RID: 26528 RVA: 0x002077BC File Offset: 0x002059BC
 	private void RefreshTitle()
 	{
 		this.ActivityTitlePanel.SetTitleByTextId(this.Config.Value.Title, Array.Empty<string>());
 	}
 
-	// Token: 0x0600940C RID: 37900 RVA: 0x001FE888 File Offset: 0x001FCA88
+	// Token: 0x060067A1 RID: 26529 RVA: 0x002077EC File Offset: 0x002059EC
 	private void RefreshDesc()
 	{
 		string subTitle = this.Config.Value.SubTitle;
@@ -83,12 +83,12 @@ public class ActivityRegressAreaActivityInfoPanel : UiPanelBase
 		this.ActivityDescPanel.SetContentByTextId(description, Array.Empty<string>());
 	}
 
-	// Token: 0x0600940D RID: 37901 RVA: 0x001FE8F8 File Offset: 0x001FCAF8
+	// Token: 0x060067A2 RID: 26530 RVA: 0x0020785C File Offset: 0x00205A5C
 	private void RefreshReward()
 	{
 	}
 
-	// Token: 0x0600940E RID: 37902 RVA: 0x001FE8FC File Offset: 0x001FCAFC
+	// Token: 0x060067A3 RID: 26531 RVA: 0x00207860 File Offset: 0x00205A60
 	private void OnGotoAreaBtnClick()
 	{
 		ActivityRegressHelper.ReportRecallLog1024(EReportLogEventType.NewArea, 0);
@@ -102,16 +102,16 @@ public class ActivityRegressAreaActivityInfoPanel : UiPanelBase
 		MapController.Instance.OpenMapViewAndFocusMark((EMarkType)value.ObjectType, markId, null, false, 1f);
 	}
 
-	// Token: 0x040041A9 RID: 16809
+	// Token: 0x04004241 RID: 16961
 	private RegressBase? Config;
 
-	// Token: 0x040041AA RID: 16810
+	// Token: 0x04004242 RID: 16962
 	private ActivityTitleTypeA ActivityTitlePanel;
 
-	// Token: 0x040041AB RID: 16811
+	// Token: 0x04004243 RID: 16963
 	private ActivityDescriptionTypeB ActivityDescPanel;
 
-	// Token: 0x040041AC RID: 16812
+	// Token: 0x04004244 RID: 16964
 	[Nullable(new byte[]
 	{
 		2,
@@ -119,20 +119,20 @@ public class ActivityRegressAreaActivityInfoPanel : UiPanelBase
 	})]
 	private ActivityRewardList<CommonItemSmallItemGrid, TItem> ActivityRewardListPanel;
 
-	// Token: 0x040041AD RID: 16813
+	// Token: 0x04004245 RID: 16965
 	private ActivityFunctionalTypeA ActivityBottom;
 
-	// Token: 0x02007A9C RID: 31388
+	// Token: 0x02006C20 RID: 27680
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x04028573 RID: 165235
+		// Token: 0x0402388D RID: 145549
 		ComActivityTitle,
-		// Token: 0x04028574 RID: 165236
+		// Token: 0x0402388E RID: 145550
 		ComActivityDesc,
-		// Token: 0x04028575 RID: 165237
+		// Token: 0x0402388F RID: 145551
 		ComActivityReward,
-		// Token: 0x04028576 RID: 165238
+		// Token: 0x04023890 RID: 145552
 		ComActivityBottom
 	}
 }

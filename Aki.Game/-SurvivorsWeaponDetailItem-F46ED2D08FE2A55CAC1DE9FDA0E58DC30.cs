@@ -1,38 +1,38 @@
 ﻿using System;
 
-// Token: 0x02002B0F RID: 11023
+// Token: 0x0200208B RID: 8331
 internal enum <SurvivorsWeaponDetailItem>F46ED2D08FE2A55CAC1DE9FDA0E58DC306B95B2D56BA31EBA9CF2E20B6DE11063__EComp
 {
-	// Token: 0x0400AA3A RID: 43578
+	// Token: 0x0400AE40 RID: 44608
 	SprRB1,
-	// Token: 0x0400AA3B RID: 43579
+	// Token: 0x0400AE41 RID: 44609
 	SprRB2,
-	// Token: 0x0400AA3C RID: 43580
+	// Token: 0x0400AE42 RID: 44610
 	SprLT1,
-	// Token: 0x0400AA3D RID: 43581
+	// Token: 0x0400AE43 RID: 44611
 	TexTop,
-	// Token: 0x0400AA3E RID: 43582
+	// Token: 0x0400AE44 RID: 44612
 	SprTopLine,
-	// Token: 0x0400AA3F RID: 43583
+	// Token: 0x0400AE45 RID: 44613
 	SprBtmLine,
-	// Token: 0x0400AA40 RID: 43584
+	// Token: 0x0400AE46 RID: 44614
 	TxtTitle,
-	// Token: 0x0400AA41 RID: 43585
+	// Token: 0x0400AE47 RID: 44615
 	SprIconBg,
-	// Token: 0x0400AA42 RID: 43586
+	// Token: 0x0400AE48 RID: 44616
 	TexIcon,
-	// Token: 0x0400AA43 RID: 43587
+	// Token: 0x0400AE49 RID: 44617
 	GridItemLayout,
-	// Token: 0x0400AA44 RID: 43588
+	// Token: 0x0400AE4A RID: 44618
 	GridItem,
-	// Token: 0x0400AA45 RID: 43589
+	// Token: 0x0400AE4B RID: 44619
 	TxtDesc,
-	// Token: 0x0400AA46 RID: 43590
+	// Token: 0x0400AE4C RID: 44620
 	PnlCur,
-	// Token: 0x0400AA47 RID: 43591
+	// Token: 0x0400AE4D RID: 44621
 	TxtCur,
-	// Token: 0x0400AA48 RID: 43592
+	// Token: 0x0400AE4E RID: 44622
 	PnlLock,
-	// Token: 0x0400AA49 RID: 43593
+	// Token: 0x0400AE4F RID: 44623
 	TexCurEffect
 }

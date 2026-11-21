@@ -3,25 +3,25 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200704A RID: 28746
+	// Token: 0x02007816 RID: 30742
 	public class ISetPieceStateT
 	{
-		// Token: 0x1700D585 RID: 54661
-		// (get) Token: 0x06032DED RID: 208365 RVA: 0x006DCA45 File Offset: 0x006DAC45
-		// (set) Token: 0x06032DEE RID: 208366 RVA: 0x006DCA4D File Offset: 0x006DAC4D
+		// Token: 0x1700E166 RID: 57702
+		// (get) Token: 0x0603608A RID: 221322 RVA: 0x0073CF6D File Offset: 0x0073B16D
+		// (set) Token: 0x0603608B RID: 221323 RVA: 0x0073CF75 File Offset: 0x0073B175
 		public ESetJigsawFoundationType Type { get; set; }
 
-		// Token: 0x1700D586 RID: 54662
-		// (get) Token: 0x06032DEF RID: 208367 RVA: 0x006DCA56 File Offset: 0x006DAC56
-		// (set) Token: 0x06032DF0 RID: 208368 RVA: 0x006DCA5E File Offset: 0x006DAC5E
+		// Token: 0x1700E167 RID: 57703
+		// (get) Token: 0x0603608C RID: 221324 RVA: 0x0073CF7E File Offset: 0x0073B17E
+		// (set) Token: 0x0603608D RID: 221325 RVA: 0x0073CF86 File Offset: 0x0073B186
 		public int EntityId { get; set; }
 
-		// Token: 0x1700D587 RID: 54663
-		// (get) Token: 0x06032DF1 RID: 208369 RVA: 0x006DCA67 File Offset: 0x006DAC67
-		// (set) Token: 0x06032DF2 RID: 208370 RVA: 0x006DCA6F File Offset: 0x006DAC6F
+		// Token: 0x1700E168 RID: 57704
+		// (get) Token: 0x0603608E RID: 221326 RVA: 0x0073CF8F File Offset: 0x0073B18F
+		// (set) Token: 0x0603608F RID: 221327 RVA: 0x0073CF97 File Offset: 0x0073B197
 		public List<IJigsawPieceT> PieceState { get; set; }
 
-		// Token: 0x06032DF3 RID: 208371 RVA: 0x006DCA78 File Offset: 0x006DAC78
+		// Token: 0x06036090 RID: 221328 RVA: 0x0073CFA0 File Offset: 0x0073B1A0
 		public ISetPieceStateT()
 		{
 			this.Type = ESetJigsawFoundationType.SetPieceState;

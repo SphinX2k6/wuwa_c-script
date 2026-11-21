@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200101A RID: 4122
+	// Token: 0x02001146 RID: 4422
 	public class IMonsterPointEntityConfig_SetValue
 	{
-		// Token: 0x0400375E RID: 14174
+		// Token: 0x04003A99 RID: 15001
 		public int EntityId;
 
-		// Token: 0x0400375F RID: 14175
+		// Token: 0x04003A9A RID: 15002
 		public int Point;
 	}
 }

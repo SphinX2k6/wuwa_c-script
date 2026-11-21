@@ -11,9 +11,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskAddBuffToSelf.TsTaskAddBuffToSelf_C")]
 public class TsTaskAddBuffToSelf : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170000F7 RID: 247
-	// (get) Token: 0x06000638 RID: 1592 RVA: 0x0001F3E1 File Offset: 0x0001D5E1
-	// (set) Token: 0x06000639 RID: 1593 RVA: 0x0001F3F1 File Offset: 0x0001D5F1
+	// Token: 0x170000F9 RID: 249
+	// (get) Token: 0x0600063C RID: 1596 RVA: 0x00020039 File Offset: 0x0001E239
+	// (set) Token: 0x0600063D RID: 1597 RVA: 0x00020049 File Offset: 0x0001E249
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe long BuffId
 	{
@@ -27,7 +27,7 @@ public class TsTaskAddBuffToSelf : TsTaskAbortImmediatelyBase, IUnrealUObject, I
 		}
 	}
 
-	// Token: 0x0600063A RID: 1594 RVA: 0x0001F402 File Offset: 0x0001D602
+	// Token: 0x0600063E RID: 1598 RVA: 0x0002005A File Offset: 0x0001E25A
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -37,30 +37,27 @@ public class TsTaskAddBuffToSelf : TsTaskAbortImmediatelyBase, IUnrealUObject, I
 		}
 	}
 
-	// Token: 0x0600063B RID: 1595 RVA: 0x0001F42C File Offset: 0x0001D62C
+	// Token: 0x0600063F RID: 1599 RVA: 0x00020084 File Offset: 0x0001E284
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveExecuteAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskAddBuffToSelf) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveExecuteAI"), TsTaskAddBuffToSelf.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			this.ReceiveExecuteAI_Implementation(ownerController, controlledPawn);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0600063C RID: 1596 RVA: 0x0001F4C8 File Offset: 0x0001D6C8
+	// Token: 0x06000640 RID: 1600 RVA: 0x00020134 File Offset: 0x0001E334
 	[NullableContext(2)]
 	protected virtual void ReceiveExecuteAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -104,7 +101,7 @@ public class TsTaskAddBuffToSelf : TsTaskAbortImmediatelyBase, IUnrealUObject, I
 		base.FinishExecute(false);
 	}
 
-	// Token: 0x0600063D RID: 1597 RVA: 0x0001F5EB File Offset: 0x0001D7EB
+	// Token: 0x06000641 RID: 1601 RVA: 0x00020257 File Offset: 0x0001E457
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskAddBuffToSelf._ClassPtr == IntPtr.Zero)
@@ -114,23 +111,23 @@ public class TsTaskAddBuffToSelf : TsTaskAbortImmediatelyBase, IUnrealUObject, I
 		return TsTaskAddBuffToSelf._ClassPtr;
 	}
 
-	// Token: 0x0600063E RID: 1598 RVA: 0x0001F610 File Offset: 0x0001D810
+	// Token: 0x06000642 RID: 1602 RVA: 0x0002027C File Offset: 0x0001E47C
 	public TsTaskAddBuffToSelf() : this(BuiltinUtils.AllocNativeUObject(TsTaskAddBuffToSelf.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0600063F RID: 1599 RVA: 0x0001F638 File Offset: 0x0001D838
+	// Token: 0x06000643 RID: 1603 RVA: 0x000202A4 File Offset: 0x0001E4A4
 	[NullableContext(1)]
 	public TsTaskAddBuffToSelf(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskAddBuffToSelf.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06000640 RID: 1600 RVA: 0x0001F66B File Offset: 0x0001D86B
+	// Token: 0x06000644 RID: 1604 RVA: 0x000202D7 File Offset: 0x0001E4D7
 	protected TsTaskAddBuffToSelf(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06000641 RID: 1601 RVA: 0x0001F674 File Offset: 0x0001D874
+	// Token: 0x06000645 RID: 1605 RVA: 0x000202E0 File Offset: 0x0001E4E0
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);
@@ -138,22 +135,22 @@ public class TsTaskAddBuffToSelf : TsTaskAbortImmediatelyBase, IUnrealUObject, I
 		this.ReceiveExecuteAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x04000487 RID: 1159
+	// Token: 0x0400048B RID: 1163
 	private bool IsInitTsVariables;
 
-	// Token: 0x04000488 RID: 1160
+	// Token: 0x0400048C RID: 1164
 	private long? TsBuffId;
 
-	// Token: 0x04000489 RID: 1161
+	// Token: 0x0400048D RID: 1165
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskAddBuffToSelf.TsTaskAddBuffToSelf_C";
 
-	// Token: 0x0400048A RID: 1162
+	// Token: 0x0400048E RID: 1166
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400048B RID: 1163
+	// Token: 0x0400048F RID: 1167
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400048C RID: 1164
+	// Token: 0x04000490 RID: 1168
 	private static int __PropertyOffset_BuffId;
 }

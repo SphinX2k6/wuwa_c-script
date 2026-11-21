@@ -1,39 +1,39 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001A82 RID: 6786
+// Token: 0x02000F41 RID: 3905
 [NullableContext(1)]
 public interface ICdnServerAddress
 {
-	// Token: 0x17001066 RID: 4198
-	// (get) Token: 0x0600C7FE RID: 51198
+	// Token: 0x1700108B RID: 4235
+	// (get) Token: 0x06009C0E RID: 39950
 	string GachaDetailServerAddressPrefix { get; }
 
-	// Token: 0x17001067 RID: 4199
-	// (get) Token: 0x0600C7FF RID: 51199
+	// Token: 0x1700108C RID: 4236
+	// (get) Token: 0x06009C0F RID: 39951
 	string GachaDetailServerId { get; }
 
-	// Token: 0x17001068 RID: 4200
-	// (get) Token: 0x0600C800 RID: 51200
+	// Token: 0x1700108D RID: 4237
+	// (get) Token: 0x06009C10 RID: 39952
 	string GachaRecordServerAddressPrefix { get; }
 
-	// Token: 0x17001069 RID: 4201
-	// (get) Token: 0x0600C801 RID: 51201
+	// Token: 0x1700108E RID: 4238
+	// (get) Token: 0x06009C11 RID: 39953
 	string GachaRecordServerId { get; }
 
-	// Token: 0x1700106A RID: 4202
-	// (get) Token: 0x0600C802 RID: 51202
+	// Token: 0x1700108F RID: 4239
+	// (get) Token: 0x06009C12 RID: 39954
 	string NoticeServerPrefixAddress { get; }
 
-	// Token: 0x1700106B RID: 4203
-	// (get) Token: 0x0600C803 RID: 51203
+	// Token: 0x17001090 RID: 4240
+	// (get) Token: 0x06009C13 RID: 39955
 	string MarqueeServerId { get; }
 
-	// Token: 0x1700106C RID: 4204
-	// (get) Token: 0x0600C804 RID: 51204
+	// Token: 0x17001091 RID: 4241
+	// (get) Token: 0x06009C14 RID: 39956
 	string GachaInfoServerPrefixAddress { get; }
 
-	// Token: 0x1700106D RID: 4205
-	// (get) Token: 0x0600C805 RID: 51205
+	// Token: 0x17001092 RID: 4242
+	// (get) Token: 0x06009C15 RID: 39957
 	string GachaInfoServerId { get; }
 }

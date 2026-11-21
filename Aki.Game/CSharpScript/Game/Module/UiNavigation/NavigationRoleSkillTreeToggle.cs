@@ -7,31 +7,31 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004932 RID: 18738
+	// Token: 0x020038A9 RID: 14505
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class NavigationRoleSkillTreeToggle : NavigationToggle
 	{
-		// Token: 0x06030ED1 RID: 200401 RVA: 0x00B5BC7E File Offset: 0x00B59E7E
+		// Token: 0x060259FE RID: 154110 RVA: 0x00A96AEE File Offset: 0x00A94CEE
 		public NavigationRoleSkillTreeToggle(ULGUIBehaviour selectable, string type, List<string> paramList) : base(selectable, type, paramList)
 		{
 		}
 
-		// Token: 0x06030ED2 RID: 200402 RVA: 0x00B5BC89 File Offset: 0x00B59E89
+		// Token: 0x060259FF RID: 154111 RVA: 0x00A96AF9 File Offset: 0x00A94CF9
 		protected override void OnInit()
 		{
 			base.OnInit();
 			EventSystem.Instance.Add<EUiTabViewName, int>(EEventName.SelectRoleTabOutside, new Action<EUiTabViewName, int>(this.HandleSkillTreeToggleState));
 		}
 
-		// Token: 0x06030ED3 RID: 200403 RVA: 0x00B5BCAD File Offset: 0x00B59EAD
+		// Token: 0x06025A00 RID: 154112 RVA: 0x00A96B1D File Offset: 0x00A94D1D
 		protected override void OnClear()
 		{
 			base.OnClear();
 			EventSystem.Instance.Remove(EEventName.SelectRoleTabOutside, new Action<EUiTabViewName, int>(this.HandleSkillTreeToggleState));
 		}
 
-		// Token: 0x06030ED4 RID: 200404 RVA: 0x00B5BCD1 File Offset: 0x00B59ED1
+		// Token: 0x06025A01 RID: 154113 RVA: 0x00A96B41 File Offset: 0x00A94D41
 		private void HandleSkillTreeToggleState(EUiTabViewName eUiTabViewName, int i)
 		{
 			UUIExtendToggle uuiextendToggle = this.Selectable as UUIExtendToggle;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			uuiextendToggle.bToggleOnSelect = false;
 		}
 
-		// Token: 0x06030ED5 RID: 200405 RVA: 0x00B5BCF4 File Offset: 0x00B59EF4
+		// Token: 0x06025A02 RID: 154114 RVA: 0x00A96B64 File Offset: 0x00A94D64
 		protected override void OnToggleClick(EToggleState state)
 		{
 			RoleSkillPanelHandle roleSkillPanelHandle = this.PanelHandle as RoleSkillPanelHandle;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030ED6 RID: 200406 RVA: 0x00B5BD3C File Offset: 0x00B59F3C
+		// Token: 0x06025A03 RID: 154115 RVA: 0x00A96BAC File Offset: 0x00A94DAC
 		protected override bool OnHandlePointerSelectInheritance(ULGUIPointerEventData eventData)
 		{
 			if (this.NeedSkipSetToggle)
@@ -69,13 +69,13 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return true;
 		}
 
-		// Token: 0x06030ED7 RID: 200407 RVA: 0x00B5BD50 File Offset: 0x00B59F50
+		// Token: 0x06025A04 RID: 154116 RVA: 0x00A96BC0 File Offset: 0x00A94DC0
 		protected override bool OnCheckFindNavigationBefore()
 		{
 			return !(this.PanelHandle as RoleSkillPanelHandle).IsInPreview;
 		}
 
-		// Token: 0x0401A3E4 RID: 107492
+		// Token: 0x04014C57 RID: 85079
 		private bool NeedSkipSetToggle;
 	}
 }

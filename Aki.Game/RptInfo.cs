@@ -1,53 +1,53 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002091 RID: 8337
+// Token: 0x02001565 RID: 5477
 [NullableContext(1)]
 [Nullable(0)]
 public class RptInfo
 {
-	// Token: 0x04007938 RID: 31032
+	// Token: 0x04007A2F RID: 31279
 	public string Pid = string.Empty;
 
-	// Token: 0x04007939 RID: 31033
+	// Token: 0x04007A30 RID: 31280
 	public string Bid = string.Empty;
 
-	// Token: 0x0400793A RID: 31034
+	// Token: 0x04007A31 RID: 31281
 	public string Uid = string.Empty;
 
-	// Token: 0x0400793B RID: 31035
+	// Token: 0x04007A32 RID: 31282
 	public string PlayerId = string.Empty;
 
-	// Token: 0x0400793C RID: 31036
+	// Token: 0x04007A33 RID: 31283
 	public string Mac = string.Empty;
 
-	// Token: 0x0400793D RID: 31037
+	// Token: 0x04007A34 RID: 31284
 	public string Plat = string.Empty;
 
-	// Token: 0x0400793E RID: 31038
+	// Token: 0x04007A35 RID: 31285
 	public string Extra = string.Empty;
 
-	// Token: 0x0400793F RID: 31039
+	// Token: 0x04007A36 RID: 31286
 	public string IpLocal = string.Empty;
 
-	// Token: 0x04007940 RID: 31040
+	// Token: 0x04007A37 RID: 31287
 	public string IpServer = string.Empty;
 
-	// Token: 0x04007941 RID: 31041
+	// Token: 0x04007A38 RID: 31288
 	public string Cpu = string.Empty;
 
-	// Token: 0x04007942 RID: 31042
+	// Token: 0x04007A39 RID: 31289
 	public string Motherboard = string.Empty;
 
-	// Token: 0x04007943 RID: 31043
+	// Token: 0x04007A3A RID: 31290
 	public string Gpu = string.Empty;
 
-	// Token: 0x04007944 RID: 31044
+	// Token: 0x04007A3B RID: 31291
 	public string DeviceId = string.Empty;
 
-	// Token: 0x04007945 RID: 31045
+	// Token: 0x04007A3C RID: 31292
 	public string DiskNo = string.Empty;
 
-	// Token: 0x04007946 RID: 31046
+	// Token: 0x04007A3D RID: 31293
 	public string SysUUID = string.Empty;
 }

@@ -4,18 +4,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046DB RID: 18139
+	// Token: 0x0200360B RID: 13835
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UiResourceHandle
 	{
-		// Token: 0x0602ECA2 RID: 191650 RVA: 0x00AD5557 File Offset: 0x00AD3757
+		// Token: 0x060233DC RID: 144348 RVA: 0x00A02FFB File Offset: 0x00A011FB
 		public UiResourceHandle(UObject obj)
 		{
 			this.Object = obj;
 		}
 
-		// Token: 0x0602ECA3 RID: 191651 RVA: 0x00AD556D File Offset: 0x00AD376D
+		// Token: 0x060233DD RID: 144349 RVA: 0x00A03011 File Offset: 0x00A01211
 		public void CancelResource()
 		{
 			if (this.ResourceId != -1)
@@ -24,10 +24,10 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0401974B RID: 104267
+		// Token: 0x04013DE9 RID: 81385
 		public UObject Object;
 
-		// Token: 0x0401974C RID: 104268
+		// Token: 0x04013DEA RID: 81386
 		public int ResourceId = -1;
 	}
 }

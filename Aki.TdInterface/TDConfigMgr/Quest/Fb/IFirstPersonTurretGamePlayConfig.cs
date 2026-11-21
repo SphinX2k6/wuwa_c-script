@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020012D8 RID: 4824
+	// Token: 0x0200141E RID: 5150
 	public class IFirstPersonTurretGamePlayConfig : ISpecialGamePlayConfig
 	{
-		// Token: 0x06006E40 RID: 28224 RVA: 0x0010A972 File Offset: 0x00108B72
-		[NullableContext(1)]
+		// Token: 0x060074BE RID: 29886 RVA: 0x00118C02 File Offset: 0x00116E02
 		public static IFirstPersonTurretGamePlayConfig Create(IFirstPersonTurretGamePlayConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002263 RID: 8803
-		// (get) Token: 0x06006E41 RID: 28225 RVA: 0x0010A991 File Offset: 0x00108B91
+		// Token: 0x17002424 RID: 9252
+		// (get) Token: 0x060074BF RID: 29887 RVA: 0x00118C21 File Offset: 0x00116E21
 		public override ESpecialGamePlayConfigType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04003F2E RID: 16174
+		// Token: 0x0400429C RID: 17052
 		private IFirstPersonTurretGamePlayConfig Instance;
 	}
 }

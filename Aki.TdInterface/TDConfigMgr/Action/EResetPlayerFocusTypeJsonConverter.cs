@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023EE RID: 9198
+	// Token: 0x02002685 RID: 9861
 	public class EResetPlayerFocusTypeJsonConverter : JsonConverter<EResetPlayerFocusType>
 	{
-		// Token: 0x0600C82F RID: 51247 RVA: 0x001D4E1C File Offset: 0x001D301C
+		// Token: 0x0600D4B2 RID: 54450 RVA: 0x001EE5C8 File Offset: 0x001EC7C8
 		public override EResetPlayerFocusType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EResetPlayerFocusTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C830 RID: 51248 RVA: 0x001D4E40 File Offset: 0x001D3040
+		// Token: 0x0600D4B3 RID: 54451 RVA: 0x001EE5EC File Offset: 0x001EC7EC
 		public override void Write(Utf8JsonWriter writer, EResetPlayerFocusType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

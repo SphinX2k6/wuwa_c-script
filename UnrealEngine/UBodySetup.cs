@@ -6,53 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020008CF RID: 2255
+	// Token: 0x02000194 RID: 404
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.BodySetup")]
 	[UnrealStructLayout(800, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 800)]
 	public class UBodySetup : UBodySetupCore, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06007C07 RID: 31751 RVA: 0x000B1E18 File Offset: 0x000B0018
+		// Token: 0x06001B12 RID: 6930 RVA: 0x0002845D File Offset: 0x0002665D
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UBodySetup._ClassPtr;
 		}
 
-		// Token: 0x06007C08 RID: 31752 RVA: 0x000B1E24 File Offset: 0x000B0024
+		// Token: 0x06001B13 RID: 6931 RVA: 0x0002846C File Offset: 0x0002666C
 		public UBodySetup() : this(BuiltinUtils.AllocNativeUObject(UBodySetup.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06007C09 RID: 31753 RVA: 0x000B1E4C File Offset: 0x000B004C
+		// Token: 0x06001B14 RID: 6932 RVA: 0x00028494 File Offset: 0x00026694
 		public UBodySetup(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UBodySetup.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17001D2A RID: 7466
-		// (get) Token: 0x06007C0A RID: 31754 RVA: 0x000B1E80 File Offset: 0x000B0080
-		// (set) Token: 0x06007C0B RID: 31755 RVA: 0x000B1EB9 File Offset: 0x000B00B9
-		public FKAggregateGeom AggGeom
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FKAggregateGeom result;
-				if ((result = this._AggGeom) == null)
-				{
-					result = (this._AggGeom = new FKAggregateGeom(base.NativePtr + (IntPtr)UBodySetup.__PropertyOffset_AggGeom, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FKAggregateGeom.StaticStruct(), base.NativePtr + (IntPtr)UBodySetup.__PropertyOffset_AggGeom, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x17001D2B RID: 7467
-		// (get) Token: 0x06007C0C RID: 31756 RVA: 0x000B1EDA File Offset: 0x000B00DA
-		// (set) Token: 0x06007C0D RID: 31757 RVA: 0x000B1EF3 File Offset: 0x000B00F3
+		// Token: 0x1700032F RID: 815
+		// (get) Token: 0x06001B15 RID: 6933 RVA: 0x000284C7 File Offset: 0x000266C7
+		// (set) Token: 0x06001B16 RID: 6934 RVA: 0x000284E0 File Offset: 0x000266E0
 		public unsafe bool bAlwaysFullAnimWeight_DEPRECATED
 		{
 			get
@@ -65,9 +44,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001D2C RID: 7468
-		// (get) Token: 0x06007C0E RID: 31758 RVA: 0x000B1F23 File Offset: 0x000B0123
-		// (set) Token: 0x06007C0F RID: 31759 RVA: 0x000B1F3C File Offset: 0x000B013C
+		// Token: 0x17000330 RID: 816
+		// (get) Token: 0x06001B17 RID: 6935 RVA: 0x00028510 File Offset: 0x00026710
+		// (set) Token: 0x06001B18 RID: 6936 RVA: 0x00028529 File Offset: 0x00026729
 		public unsafe bool bConsiderForBounds
 		{
 			get
@@ -80,9 +59,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001D2D RID: 7469
-		// (get) Token: 0x06007C10 RID: 31760 RVA: 0x000B1F6C File Offset: 0x000B016C
-		// (set) Token: 0x06007C11 RID: 31761 RVA: 0x000B1F85 File Offset: 0x000B0185
+		// Token: 0x17000331 RID: 817
+		// (get) Token: 0x06001B19 RID: 6937 RVA: 0x00028559 File Offset: 0x00026759
+		// (set) Token: 0x06001B1A RID: 6938 RVA: 0x00028572 File Offset: 0x00026772
 		public unsafe bool bMeshCollideAll
 		{
 			get
@@ -95,9 +74,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001D2E RID: 7470
-		// (get) Token: 0x06007C12 RID: 31762 RVA: 0x000B1FB5 File Offset: 0x000B01B5
-		// (set) Token: 0x06007C13 RID: 31763 RVA: 0x000B1FCE File Offset: 0x000B01CE
+		// Token: 0x17000332 RID: 818
+		// (get) Token: 0x06001B1B RID: 6939 RVA: 0x000285A2 File Offset: 0x000267A2
+		// (set) Token: 0x06001B1C RID: 6940 RVA: 0x000285BB File Offset: 0x000267BB
 		public unsafe bool bDoubleSidedGeometry
 		{
 			get
@@ -110,9 +89,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001D2F RID: 7471
-		// (get) Token: 0x06007C14 RID: 31764 RVA: 0x000B1FFE File Offset: 0x000B01FE
-		// (set) Token: 0x06007C15 RID: 31765 RVA: 0x000B2017 File Offset: 0x000B0217
+		// Token: 0x17000333 RID: 819
+		// (get) Token: 0x06001B1D RID: 6941 RVA: 0x000285EB File Offset: 0x000267EB
+		// (set) Token: 0x06001B1E RID: 6942 RVA: 0x00028604 File Offset: 0x00026804
 		public unsafe bool bGenerateNonMirroredCollision
 		{
 			get
@@ -125,9 +104,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001D30 RID: 7472
-		// (get) Token: 0x06007C16 RID: 31766 RVA: 0x000B2047 File Offset: 0x000B0247
-		// (set) Token: 0x06007C17 RID: 31767 RVA: 0x000B2060 File Offset: 0x000B0260
+		// Token: 0x17000334 RID: 820
+		// (get) Token: 0x06001B1F RID: 6943 RVA: 0x00028634 File Offset: 0x00026834
+		// (set) Token: 0x06001B20 RID: 6944 RVA: 0x0002864D File Offset: 0x0002684D
 		public unsafe bool bSharedCookedData
 		{
 			get
@@ -140,9 +119,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001D31 RID: 7473
-		// (get) Token: 0x06007C18 RID: 31768 RVA: 0x000B2090 File Offset: 0x000B0290
-		// (set) Token: 0x06007C19 RID: 31769 RVA: 0x000B20A9 File Offset: 0x000B02A9
+		// Token: 0x17000335 RID: 821
+		// (get) Token: 0x06001B21 RID: 6945 RVA: 0x0002867D File Offset: 0x0002687D
+		// (set) Token: 0x06001B22 RID: 6946 RVA: 0x00028696 File Offset: 0x00026896
 		public unsafe bool bGenerateMirroredCollision
 		{
 			get
@@ -155,9 +134,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001D32 RID: 7474
-		// (get) Token: 0x06007C1A RID: 31770 RVA: 0x000B20D9 File Offset: 0x000B02D9
-		// (set) Token: 0x06007C1B RID: 31771 RVA: 0x000B20F2 File Offset: 0x000B02F2
+		// Token: 0x17000336 RID: 822
+		// (get) Token: 0x06001B23 RID: 6947 RVA: 0x000286C6 File Offset: 0x000268C6
+		// (set) Token: 0x06001B24 RID: 6948 RVA: 0x000286DF File Offset: 0x000268DF
 		public unsafe bool bSupportUVsAndFaceRemap
 		{
 			get
@@ -170,9 +149,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001D33 RID: 7475
-		// (get) Token: 0x06007C1C RID: 31772 RVA: 0x000B2122 File Offset: 0x000B0322
-		// (set) Token: 0x06007C1D RID: 31773 RVA: 0x000B2136 File Offset: 0x000B0336
+		// Token: 0x17000337 RID: 823
+		// (get) Token: 0x06001B25 RID: 6949 RVA: 0x0002870F File Offset: 0x0002690F
+		// (set) Token: 0x06001B26 RID: 6950 RVA: 0x00028723 File Offset: 0x00026923
 		[Nullable(2)]
 		public unsafe UPhysicalMaterial PhysMaterial
 		{
@@ -188,30 +167,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001D34 RID: 7476
-		// (get) Token: 0x06007C1E RID: 31774 RVA: 0x000B214C File Offset: 0x000B034C
-		// (set) Token: 0x06007C1F RID: 31775 RVA: 0x000B2185 File Offset: 0x000B0385
-		public FWalkableSlopeOverride WalkableSlopeOverride
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FWalkableSlopeOverride result;
-				if ((result = this._WalkableSlopeOverride) == null)
-				{
-					result = (this._WalkableSlopeOverride = new FWalkableSlopeOverride(base.NativePtr + (IntPtr)UBodySetup.__PropertyOffset_WalkableSlopeOverride, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FWalkableSlopeOverride.StaticStruct(), base.NativePtr + (IntPtr)UBodySetup.__PropertyOffset_WalkableSlopeOverride, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x17001D35 RID: 7477
-		// (get) Token: 0x06007C20 RID: 31776 RVA: 0x000B21A8 File Offset: 0x000B03A8
-		// (set) Token: 0x06007C21 RID: 31777 RVA: 0x000B21E1 File Offset: 0x000B03E1
+		// Token: 0x17000338 RID: 824
+		// (get) Token: 0x06001B27 RID: 6951 RVA: 0x00028738 File Offset: 0x00026938
+		// (set) Token: 0x06001B28 RID: 6952 RVA: 0x00028771 File Offset: 0x00026971
 		public FBodyInstance DefaultInstance
 		{
 			get
@@ -230,9 +188,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001D36 RID: 7478
-		// (get) Token: 0x06007C22 RID: 31778 RVA: 0x000B2202 File Offset: 0x000B0402
-		// (set) Token: 0x06007C23 RID: 31779 RVA: 0x000B2216 File Offset: 0x000B0416
+		// Token: 0x17000339 RID: 825
+		// (get) Token: 0x06001B29 RID: 6953 RVA: 0x00028792 File Offset: 0x00026992
+		// (set) Token: 0x06001B2A RID: 6954 RVA: 0x000287A6 File Offset: 0x000269A6
 		public unsafe FVector BuildScale3D
 		{
 			get
@@ -245,99 +203,85 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06007C24 RID: 31780 RVA: 0x000B222B File Offset: 0x000B042B
+		// Token: 0x06001B2B RID: 6955 RVA: 0x000287BB File Offset: 0x000269BB
 		static UBodySetup()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.BodySetup");
 		}
 
-		// Token: 0x06007C25 RID: 31781 RVA: 0x000B2239 File Offset: 0x000B0439
+		// Token: 0x06001B2C RID: 6956 RVA: 0x000287C9 File Offset: 0x000269C9
 		protected UBodySetup(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04003B6D RID: 15213
+		// Token: 0x040008A9 RID: 2217
 		public new const string __ObjectPath = "/Script/Engine.BodySetup";
 
-		// Token: 0x04003B6E RID: 15214
+		// Token: 0x040008AA RID: 2218
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04003B6F RID: 15215
+		// Token: 0x040008AB RID: 2219
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04003B70 RID: 15216
-		internal static int __PropertyOffset_AggGeom;
-
-		// Token: 0x04003B71 RID: 15217
-		[Nullable(2)]
-		private FKAggregateGeom _AggGeom;
-
-		// Token: 0x04003B72 RID: 15218
+		// Token: 0x040008AC RID: 2220
 		internal static int __PropertyOffset_bAlwaysFullAnimWeight_DEPRECATED;
 
-		// Token: 0x04003B73 RID: 15219
+		// Token: 0x040008AD RID: 2221
 		internal static byte __PropertyMask_bAlwaysFullAnimWeight_DEPRECATED;
 
-		// Token: 0x04003B74 RID: 15220
+		// Token: 0x040008AE RID: 2222
 		internal static int __PropertyOffset_bConsiderForBounds;
 
-		// Token: 0x04003B75 RID: 15221
+		// Token: 0x040008AF RID: 2223
 		internal static byte __PropertyMask_bConsiderForBounds;
 
-		// Token: 0x04003B76 RID: 15222
+		// Token: 0x040008B0 RID: 2224
 		internal static int __PropertyOffset_bMeshCollideAll;
 
-		// Token: 0x04003B77 RID: 15223
+		// Token: 0x040008B1 RID: 2225
 		internal static byte __PropertyMask_bMeshCollideAll;
 
-		// Token: 0x04003B78 RID: 15224
+		// Token: 0x040008B2 RID: 2226
 		internal static int __PropertyOffset_bDoubleSidedGeometry;
 
-		// Token: 0x04003B79 RID: 15225
+		// Token: 0x040008B3 RID: 2227
 		internal static byte __PropertyMask_bDoubleSidedGeometry;
 
-		// Token: 0x04003B7A RID: 15226
+		// Token: 0x040008B4 RID: 2228
 		internal static int __PropertyOffset_bGenerateNonMirroredCollision;
 
-		// Token: 0x04003B7B RID: 15227
+		// Token: 0x040008B5 RID: 2229
 		internal static byte __PropertyMask_bGenerateNonMirroredCollision;
 
-		// Token: 0x04003B7C RID: 15228
+		// Token: 0x040008B6 RID: 2230
 		internal static int __PropertyOffset_bSharedCookedData;
 
-		// Token: 0x04003B7D RID: 15229
+		// Token: 0x040008B7 RID: 2231
 		internal static byte __PropertyMask_bSharedCookedData;
 
-		// Token: 0x04003B7E RID: 15230
+		// Token: 0x040008B8 RID: 2232
 		internal static int __PropertyOffset_bGenerateMirroredCollision;
 
-		// Token: 0x04003B7F RID: 15231
+		// Token: 0x040008B9 RID: 2233
 		internal static byte __PropertyMask_bGenerateMirroredCollision;
 
-		// Token: 0x04003B80 RID: 15232
+		// Token: 0x040008BA RID: 2234
 		internal static int __PropertyOffset_bSupportUVsAndFaceRemap;
 
-		// Token: 0x04003B81 RID: 15233
+		// Token: 0x040008BB RID: 2235
 		internal static byte __PropertyMask_bSupportUVsAndFaceRemap;
 
-		// Token: 0x04003B82 RID: 15234
+		// Token: 0x040008BC RID: 2236
 		internal static int __PropertyOffset_PhysMaterial;
 
-		// Token: 0x04003B83 RID: 15235
-		internal static int __PropertyOffset_WalkableSlopeOverride;
-
-		// Token: 0x04003B84 RID: 15236
-		[Nullable(2)]
-		private FWalkableSlopeOverride _WalkableSlopeOverride;
-
-		// Token: 0x04003B85 RID: 15237
+		// Token: 0x040008BD RID: 2237
 		internal static int __PropertyOffset_DefaultInstance;
 
-		// Token: 0x04003B86 RID: 15238
+		// Token: 0x040008BE RID: 2238
 		[Nullable(2)]
 		private FBodyInstance _DefaultInstance;
 
-		// Token: 0x04003B87 RID: 15239
+		// Token: 0x040008BF RID: 2239
 		internal static int __PropertyOffset_BuildScale3D;
 	}
 }

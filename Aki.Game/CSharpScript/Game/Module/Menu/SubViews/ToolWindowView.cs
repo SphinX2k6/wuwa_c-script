@@ -8,18 +8,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.SubViews
 {
-	// Token: 0x02005434 RID: 21556
+	// Token: 0x02004417 RID: 17431
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ToolWindowView : UiViewBase
 	{
-		// Token: 0x060370CE RID: 225486 RVA: 0x00D0B885 File Offset: 0x00D09A85
+		// Token: 0x0602C017 RID: 180247 RVA: 0x00C5ACA5 File Offset: 0x00C58EA5
 		[NullableContext(1)]
 		public ToolWindowView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x060370CF RID: 225487 RVA: 0x00D0B890 File Offset: 0x00D09A90
+		// Token: 0x0602C018 RID: 180248 RVA: 0x00C5ACB0 File Offset: 0x00C58EB0
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			};
 		}
 
-		// Token: 0x060370D0 RID: 225488 RVA: 0x00D0B918 File Offset: 0x00D09B18
+		// Token: 0x0602C019 RID: 180249 RVA: 0x00C5AD38 File Offset: 0x00C58F38
 		protected override void OnStart()
 		{
 			base.GetText(0).ShowTextNew("PrefabTextItem_HotfixTool_Text");
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			}
 		}
 
-		// Token: 0x060370D1 RID: 225489 RVA: 0x00D0BB28 File Offset: 0x00D09D28
+		// Token: 0x0602C01A RID: 180250 RVA: 0x00C5AF48 File Offset: 0x00C59148
 		private void OpenLogUpload()
 		{
 			LogUploadOpenParam param = new LogUploadOpenParam
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			UiManager.Instance.OpenView(EUiViewName.LogUploadView, param, null);
 		}
 
-		// Token: 0x060370D2 RID: 225490 RVA: 0x00D0BB64 File Offset: 0x00D09D64
+		// Token: 0x0602C01B RID: 180251 RVA: 0x00C5AF84 File Offset: 0x00C59184
 		private void FixPatch()
 		{
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.ClearHotPatchConfirm);
@@ -99,19 +99,19 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x060370D3 RID: 225491 RVA: 0x00D0BBA0 File Offset: 0x00D09DA0
+		// Token: 0x0602C01C RID: 180252 RVA: 0x00C5AFC0 File Offset: 0x00C591C0
 		private void NetworkDetection()
 		{
 			UiManager.Instance.OpenView(EUiViewName.NetworkDetectionView, null, null);
 		}
 
-		// Token: 0x060370D4 RID: 225492 RVA: 0x00D0BBB3 File Offset: 0x00D09DB3
+		// Token: 0x0602C01D RID: 180253 RVA: 0x00C5AFD3 File Offset: 0x00C591D3
 		private void OnClickVulkan()
 		{
 			UiManager.Instance.OpenView(EUiViewName.VulkanSetView, null, null);
 		}
 
-		// Token: 0x060370D9 RID: 225497 RVA: 0x00D0BC00 File Offset: 0x00D09E00
+		// Token: 0x0602C022 RID: 180258 RVA: 0x00C5B020 File Offset: 0x00C59220
 		[CompilerGenerated]
 		internal static void <FixPatch>g__ConfirmCallback|8_0()
 		{
@@ -127,16 +127,16 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x0401D0C9 RID: 118985
+		// Token: 0x04017B62 RID: 97122
 		private ToolWindowButtonItem ButtonLogUpload;
 
-		// Token: 0x0401D0CA RID: 118986
+		// Token: 0x04017B63 RID: 97123
 		private ToolWindowButtonItem ButtonFixPatch;
 
-		// Token: 0x0401D0CB RID: 118987
+		// Token: 0x04017B64 RID: 97124
 		private ToolWindowButtonItem ButtonNetworkDetection;
 
-		// Token: 0x0401D0CC RID: 118988
+		// Token: 0x04017B65 RID: 97125
 		private ToolWindowButtonItem ButtonVulkan;
 	}
 }

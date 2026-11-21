@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200772E RID: 30510
+	// Token: 0x02007F57 RID: 32599
 	public enum TMoveSceneItem : byte
 	{
-		// Token: 0x04012854 RID: 75860
+		// Token: 0x040138E9 RID: 80105
 		NONE,
-		// Token: 0x04012855 RID: 75861
+		// Token: 0x040138EA RID: 80106
 		ICycleMoveToPoints,
-		// Token: 0x04012856 RID: 75862
+		// Token: 0x040138EB RID: 80107
 		IMoveToEntity,
-		// Token: 0x04012857 RID: 75863
+		// Token: 0x040138EC RID: 80108
 		IMoveToPoint,
-		// Token: 0x04012858 RID: 75864
+		// Token: 0x040138ED RID: 80109
 		IMoveToRelativePosition
 	}
 }

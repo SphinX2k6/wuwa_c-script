@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
-using CSharpScript.Core.Common;
 
-// Token: 0x02002DE2 RID: 11746
+// Token: 0x0200233D RID: 9021
 [NullableContext(2)]
 [Nullable(0)]
 public class BulletLog
 {
-	// Token: 0x06018A7D RID: 100989 RVA: 0x00652067 File Offset: 0x00650267
+	// Token: 0x0601632A RID: 90922 RVA: 0x006781A3 File Offset: 0x006763A3
 	public static void Debug(bool gasDebug, ELogAuthor author, Entity owner, [Nullable(1)] string message, BulletInfo bulletInfo, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 	{
 		0,
@@ -20,7 +19,7 @@ public class BulletLog
 		BulletLog.LogImpl(gasDebug, ELogLevel.Debug, author, owner, message, bulletInfo, pairs);
 	}
 
-	// Token: 0x06018A7E RID: 100990 RVA: 0x00652077 File Offset: 0x00650277
+	// Token: 0x0601632B RID: 90923 RVA: 0x006781B3 File Offset: 0x006763B3
 	public static void Info(bool gasDebug, ELogAuthor author, Entity owner, [Nullable(1)] string message, BulletInfo bulletInfo, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 	{
 		0,
@@ -32,7 +31,7 @@ public class BulletLog
 		BulletLog.LogImpl(gasDebug, ELogLevel.Info, author, owner, message, bulletInfo, pairs);
 	}
 
-	// Token: 0x06018A7F RID: 100991 RVA: 0x00652087 File Offset: 0x00650287
+	// Token: 0x0601632C RID: 90924 RVA: 0x006781C3 File Offset: 0x006763C3
 	public static void Warn(bool gasDebug, ELogAuthor author, Entity owner, [Nullable(1)] string message, BulletInfo bulletInfo, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 	{
 		0,
@@ -44,7 +43,7 @@ public class BulletLog
 		BulletLog.LogImpl(gasDebug, ELogLevel.Warn, author, owner, message, bulletInfo, pairs);
 	}
 
-	// Token: 0x06018A80 RID: 100992 RVA: 0x00652097 File Offset: 0x00650297
+	// Token: 0x0601632D RID: 90925 RVA: 0x006781D3 File Offset: 0x006763D3
 	public static void Error(bool gasDebug, ELogAuthor author, Entity owner, [Nullable(1)] string message, BulletInfo bulletInfo, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 	{
 		0,
@@ -56,7 +55,7 @@ public class BulletLog
 		BulletLog.LogImpl(gasDebug, ELogLevel.Error, author, owner, message, bulletInfo, pairs);
 	}
 
-	// Token: 0x06018A81 RID: 100993 RVA: 0x006520A8 File Offset: 0x006502A8
+	// Token: 0x0601632E RID: 90926 RVA: 0x006781E4 File Offset: 0x006763E4
 	private static void LogImpl(bool gasDebug, ELogLevel logLevel, ELogAuthor author, Entity owner, [Nullable(1)] string message, BulletInfo bulletInfo, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 	{
 		0,
@@ -99,24 +98,14 @@ public class BulletLog
 			defaultInterpolatedStringHandler.AppendFormatted<int?>((bulletHandleById != null) ? new int?(bulletHandleById.HandleId) : null);
 			array4[num4] = new ValueTuple<string, object>(item3, defaultInterpolatedStringHandler.ToStringAndClear());
 			ReadOnlySpan<ValueTuple<string, object>> pairs2 = new ReadOnlySpan<ValueTuple<string, object>>(array);
-			if (gasDebug && owner != null && CSharpScript.Core.Common.Info.Instance.IsPlayInEditor)
+			if (gasDebug)
 			{
-				CharacterGasDebugComponent component = owner.GetComponent<CharacterGasDebugComponent>();
-				if (component != null && component.Valid)
-				{
-					component.AddBulletDebugLogString(message, pairs2);
-				}
 			}
 			Log.Instance.LogWithLevel(logLevel, ELogModule.Bullet, author, message, pairs2);
 			return;
 		}
-		if (gasDebug && owner != null && CSharpScript.Core.Common.Info.Instance.IsPlayInEditor)
+		if (gasDebug)
 		{
-			CharacterGasDebugComponent component2 = owner.GetComponent<CharacterGasDebugComponent>();
-			if (component2 != null && component2.Valid)
-			{
-				component2.AddBulletDebugLogString(message, pairs);
-			}
 		}
 		Log.Instance.LogWithLevel(logLevel, ELogModule.Bullet, author, message, pairs);
 	}

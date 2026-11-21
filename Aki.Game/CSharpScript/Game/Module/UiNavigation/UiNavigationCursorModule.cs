@@ -6,18 +6,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004939 RID: 18745
+	// Token: 0x020038B0 RID: 14512
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UiNavigationCursorModule
 	{
-		// Token: 0x06030EE9 RID: 200425 RVA: 0x00B5C16E File Offset: 0x00B5A36E
+		// Token: 0x06025A16 RID: 154134 RVA: 0x00A96FDE File Offset: 0x00A951DE
 		public UiNavigationCursorModule(SNavigationCursor cursor)
 		{
 			this.Cursor = cursor;
 		}
 
-		// Token: 0x06030EEA RID: 200426 RVA: 0x00B5C180 File Offset: 0x00B5A380
+		// Token: 0x06025A17 RID: 154135 RVA: 0x00A96FF0 File Offset: 0x00A951F0
 		public FVector2D GetCursorOffset()
 		{
 			switch (this.Cursor.OffsetType)
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030EEB RID: 200427 RVA: 0x00B5C208 File Offset: 0x00B5A408
+		// Token: 0x06025A18 RID: 154136 RVA: 0x00A97078 File Offset: 0x00A95278
 		public int GetCursorRotation()
 		{
 			if (this.Cursor.OffsetType == ECursorOffsetType.Left)
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return 0;
 		}
 
-		// Token: 0x06030EEC RID: 200428 RVA: 0x00B5C288 File Offset: 0x00B5A488
+		// Token: 0x06025A19 RID: 154137 RVA: 0x00A970F8 File Offset: 0x00A952F8
 		public FVector2D GetBoundOffset()
 		{
 			switch (this.Cursor.OffsetType)
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x0401A3E5 RID: 107493
+		// Token: 0x04014C58 RID: 85080
 		private readonly SNavigationCursor Cursor;
 	}
 }

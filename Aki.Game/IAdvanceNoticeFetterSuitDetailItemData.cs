@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020010CB RID: 4299
+// Token: 0x0200057F RID: 1407
 [NullableContext(1)]
 public interface IAdvanceNoticeFetterSuitDetailItemData
 {
-	// Token: 0x1700097E RID: 2430
-	// (get) Token: 0x06007004 RID: 28676
+	// Token: 0x1700099E RID: 2462
+	// (get) Token: 0x0600439A RID: 17306
 	TableTextArgNew TitleTextData { get; }
 
-	// Token: 0x1700097F RID: 2431
-	// (get) Token: 0x06007005 RID: 28677
+	// Token: 0x1700099F RID: 2463
+	// (get) Token: 0x0600439B RID: 17307
 	TableTextArgNew DescTextData { get; }
 }

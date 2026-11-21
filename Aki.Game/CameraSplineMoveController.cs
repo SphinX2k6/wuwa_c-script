@@ -7,30 +7,30 @@ using CSharpScript.Game.Camera;
 using CSharpScript.Game.LevelGamePlay.Common;
 using UnrealEngine;
 
-// Token: 0x02000221 RID: 545
+// Token: 0x02000225 RID: 549
 [NullableContext(1)]
 [Nullable(0)]
-[GeneratePropertyAccessMethod(true)]
+[GeneratePropertyAccessMethod(true, true, null)]
 public class CameraSplineMoveController : CameraControllerBase, ICanGetConfigMapValue
 {
-	// Token: 0x0600215F RID: 8543 RVA: 0x000C0205 File Offset: 0x000BE405
+	// Token: 0x0600220D RID: 8717 RVA: 0x000C7525 File Offset: 0x000C5725
 	public CameraSplineMoveController(FightCameraLogicComponent camera) : base(camera)
 	{
 	}
 
-	// Token: 0x06002160 RID: 8544 RVA: 0x000C0245 File Offset: 0x000BE445
+	// Token: 0x0600220E RID: 8718 RVA: 0x000C7565 File Offset: 0x000C5765
 	public override string Name()
 	{
 		return "SplineMoveController";
 	}
 
-	// Token: 0x06002161 RID: 8545 RVA: 0x000C024C File Offset: 0x000BE44C
+	// Token: 0x0600220F RID: 8719 RVA: 0x000C756C File Offset: 0x000C576C
 	protected override void OnInit()
 	{
 		base.Lock(this);
 	}
 
-	// Token: 0x06002162 RID: 8546 RVA: 0x000C0258 File Offset: 0x000BE458
+	// Token: 0x06002210 RID: 8720 RVA: 0x000C7578 File Offset: 0x000C5778
 	public void ApplyCameraSpline(int splineId, float yawAngle, float pitchAngle, float fadeInTime, bool? isSyncRoll, float? rollAngle = 0f)
 	{
 		int? splineId2 = this.SplineId;
@@ -47,7 +47,7 @@ public class CameraSplineMoveController : CameraControllerBase, ICanGetConfigMap
 		this.ApplyCameraSplineInternal(splineId, spline, yawAngle, pitchAngle, fadeInTime, isSyncRoll, rollAngle);
 	}
 
-	// Token: 0x06002163 RID: 8547 RVA: 0x000C02FC File Offset: 0x000BE4FC
+	// Token: 0x06002211 RID: 8721 RVA: 0x000C761C File Offset: 0x000C581C
 	[NullableContext(2)]
 	public void ApplyCameraSplineInternal(int splineId, USplineComponent spline, float yawAngle, float pitchAngle, float fadeInTime, bool? isSyncRoll, float? rollAngle = 0f)
 	{
@@ -71,7 +71,7 @@ public class CameraSplineMoveController : CameraControllerBase, ICanGetConfigMap
 		this.StartRotator.DeepCopy(this.Camera.CameraRotationInGravity);
 	}
 
-	// Token: 0x06002164 RID: 8548 RVA: 0x000C03F4 File Offset: 0x000BE5F4
+	// Token: 0x06002212 RID: 8722 RVA: 0x000C7714 File Offset: 0x000C5914
 	public void EndCameraSpline()
 	{
 		if (this.SplineId == null)
@@ -85,7 +85,7 @@ public class CameraSplineMoveController : CameraControllerBase, ICanGetConfigMap
 		base.Lock(this);
 	}
 
-	// Token: 0x06002165 RID: 8549 RVA: 0x000C045C File Offset: 0x000BE65C
+	// Token: 0x06002213 RID: 8723 RVA: 0x000C777C File Offset: 0x000C597C
 	protected override void OnEnable()
 	{
 		this.Camera.CameraAdjustController.Lock(this);
@@ -95,7 +95,7 @@ public class CameraSplineMoveController : CameraControllerBase, ICanGetConfigMap
 		this.Camera.CameraModifyController.Lock(this);
 	}
 
-	// Token: 0x06002166 RID: 8550 RVA: 0x000C04C0 File Offset: 0x000BE6C0
+	// Token: 0x06002214 RID: 8724 RVA: 0x000C77E0 File Offset: 0x000C59E0
 	protected override void OnDisable()
 	{
 		this.Camera.CameraAdjustController.Unlock(this);
@@ -109,7 +109,7 @@ public class CameraSplineMoveController : CameraControllerBase, ICanGetConfigMap
 		}
 	}
 
-	// Token: 0x06002167 RID: 8551 RVA: 0x000C0530 File Offset: 0x000BE730
+	// Token: 0x06002215 RID: 8725 RVA: 0x000C7850 File Offset: 0x000C5A50
 	private void StartRollFadeOut()
 	{
 		this.CurrentFadeOut = 0f;
@@ -117,7 +117,7 @@ public class CameraSplineMoveController : CameraControllerBase, ICanGetConfigMap
 		this.IsRollFadeOut = true;
 	}
 
-	// Token: 0x06002168 RID: 8552 RVA: 0x000C0560 File Offset: 0x000BE760
+	// Token: 0x06002216 RID: 8726 RVA: 0x000C7880 File Offset: 0x000C5A80
 	private void UpdateRollFadeOut(float deltaTime)
 	{
 		if (!this.IsRollFadeOut)
@@ -140,7 +140,7 @@ public class CameraSplineMoveController : CameraControllerBase, ICanGetConfigMap
 		this.CheckAndApplyRollSuppression();
 	}
 
-	// Token: 0x06002169 RID: 8553 RVA: 0x000C0658 File Offset: 0x000BE858
+	// Token: 0x06002217 RID: 8727 RVA: 0x000C7978 File Offset: 0x000C5B78
 	protected unsafe override void UpdateInternal(float deltaTime)
 	{
 		if (this.Spline == null || Global.BaseCharacter == null)
@@ -193,13 +193,13 @@ public class CameraSplineMoveController : CameraControllerBase, ICanGetConfigMap
 		}
 	}
 
-	// Token: 0x0600216A RID: 8554 RVA: 0x000C089D File Offset: 0x000BEA9D
+	// Token: 0x06002218 RID: 8728 RVA: 0x000C7BBD File Offset: 0x000C5DBD
 	protected override void UpdateDeactivateInternal(float deltaTime)
 	{
 		this.UpdateRollFadeOut(deltaTime);
 	}
 
-	// Token: 0x0600216B RID: 8555 RVA: 0x000C08A8 File Offset: 0x000BEAA8
+	// Token: 0x06002219 RID: 8729 RVA: 0x000C7BC8 File Offset: 0x000C5DC8
 	private void CheckAndApplyRollSuppression()
 	{
 		this.IsModifyingRoll = !MathUtils.Instance.IsNearlyZero((double)CameraUtility.GetRollInGravity(this.Camera.DesiredCamera.ArmRotation), null);
@@ -211,13 +211,13 @@ public class CameraSplineMoveController : CameraControllerBase, ICanGetConfigMap
 		this.Camera.ClearSuppressClearRoll(ESuppressClearRollFlag.SplineMove);
 	}
 
-	// Token: 0x0600216C RID: 8556 RVA: 0x000C0908 File Offset: 0x000BEB08
+	// Token: 0x0600221A RID: 8730 RVA: 0x000C7C28 File Offset: 0x000C5E28
 	public override string GetConfigMapValue(int key)
 	{
 		return base.GetConfigMapValue(key);
 	}
 
-	// Token: 0x0600216D RID: 8557 RVA: 0x000C0914 File Offset: 0x000BEB14
+	// Token: 0x0600221B RID: 8731 RVA: 0x000C7C34 File Offset: 0x000C5E34
 	[NullableContext(0)]
 	public override bool TryGetMember(string key, out object value)
 	{
@@ -397,7 +397,7 @@ public class CameraSplineMoveController : CameraControllerBase, ICanGetConfigMap
 		return base.TryGetMember(key, out value);
 	}
 
-	// Token: 0x0600216E RID: 8558 RVA: 0x000C0C8C File Offset: 0x000BEE8C
+	// Token: 0x0600221C RID: 8732 RVA: 0x000C7FAC File Offset: 0x000C61AC
 	[NullableContext(0)]
 	public override void SetMember(string key, object value)
 	{
@@ -691,7 +691,7 @@ public class CameraSplineMoveController : CameraControllerBase, ICanGetConfigMap
 		base.SetMember(key, value);
 	}
 
-	// Token: 0x0600216F RID: 8559 RVA: 0x000C11A3 File Offset: 0x000BF3A3
+	// Token: 0x0600221D RID: 8733 RVA: 0x000C84C3 File Offset: 0x000C66C3
 	[NullableContext(0)]
 	public override IEnumerable<ValueTuple<string, object>> MemberIter()
 	{
@@ -700,61 +700,61 @@ public class CameraSplineMoveController : CameraControllerBase, ICanGetConfigMap
 		return <MemberIter>d__;
 	}
 
-	// Token: 0x040015F8 RID: 5624
+	// Token: 0x0400163A RID: 5690
 	protected float YawAngle;
 
-	// Token: 0x040015F9 RID: 5625
+	// Token: 0x0400163B RID: 5691
 	protected float PitchAngle;
 
-	// Token: 0x040015FA RID: 5626
+	// Token: 0x0400163C RID: 5692
 	protected float RollAngle;
 
-	// Token: 0x040015FB RID: 5627
+	// Token: 0x0400163D RID: 5693
 	protected float FadeInTime;
 
-	// Token: 0x040015FC RID: 5628
+	// Token: 0x0400163E RID: 5694
 	protected int? SplineId;
 
-	// Token: 0x040015FD RID: 5629
+	// Token: 0x0400163F RID: 5695
 	[Nullable(2)]
 	protected USplineComponent Spline;
 
-	// Token: 0x040015FE RID: 5630
+	// Token: 0x04001640 RID: 5696
 	protected bool? IsSyncRoll;
 
-	// Token: 0x040015FF RID: 5631
+	// Token: 0x04001641 RID: 5697
 	private bool IsModifyingRoll;
 
-	// Token: 0x04001600 RID: 5632
+	// Token: 0x04001642 RID: 5698
 	private const float ROLL_FADE_OUT_TIME = 0.1f;
 
-	// Token: 0x04001601 RID: 5633
+	// Token: 0x04001643 RID: 5699
 	private readonly bool IsDebugSyncRoll;
 
-	// Token: 0x04001602 RID: 5634
+	// Token: 0x04001644 RID: 5700
 	private readonly Rotator StartRotator = Rotator.Create();
 
-	// Token: 0x04001603 RID: 5635
+	// Token: 0x04001645 RID: 5701
 	private readonly Vector SplineDirect = Vector.Create();
 
-	// Token: 0x04001604 RID: 5636
+	// Token: 0x04001646 RID: 5702
 	private readonly Vector SplineUp = Vector.Create();
 
-	// Token: 0x04001605 RID: 5637
+	// Token: 0x04001647 RID: 5703
 	private float CurrentFadeIn;
 
-	// Token: 0x04001606 RID: 5638
+	// Token: 0x04001648 RID: 5704
 	private float CurrentFadeOut;
 
-	// Token: 0x04001607 RID: 5639
+	// Token: 0x04001649 RID: 5705
 	private float RollFadeOutStart;
 
-	// Token: 0x04001608 RID: 5640
+	// Token: 0x0400164A RID: 5706
 	private bool IsRollFadeOut;
 
-	// Token: 0x04001609 RID: 5641
+	// Token: 0x0400164B RID: 5707
 	private readonly Rotator TmpRotator = Rotator.Create();
 
-	// Token: 0x0400160A RID: 5642
+	// Token: 0x0400164C RID: 5708
 	private readonly Rotator TmpRotator2 = Rotator.Create();
 }

@@ -8,11 +8,9 @@ using Aki.TDConfigMgr.Component.Fb;
 namespace Aki.TDConfigMgr.Component
 {
 	// Token: 0x0200001F RID: 31
-	[NullableContext(1)]
-	[Nullable(0)]
 	public class AirWallSpawnerComponent : IComponentBase
 	{
-		// Token: 0x060000A0 RID: 160 RVA: 0x00014FD8 File Offset: 0x000131D8
+		// Token: 0x060000A0 RID: 160 RVA: 0x00015884 File Offset: 0x00013A84
 		private AirWallSpawnerComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,7 +25,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060000A1 RID: 161 RVA: 0x00015010 File Offset: 0x00013210
+		// Token: 0x060000A1 RID: 161 RVA: 0x000158BC File Offset: 0x00013ABC
 		public static AirWallSpawnerComponent Create([Nullable(2)] AirWallSpawnerComponent instance)
 		{
 			if (instance == null)
@@ -40,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060000A2 RID: 162 RVA: 0x00015023 File Offset: 0x00013223
+		// Token: 0x060000A2 RID: 162 RVA: 0x000158CF File Offset: 0x00013ACF
 		public static AirWallSpawnerComponent CreateFromSetValue([Nullable(2)] AirWallSpawnerComponent_SetValue value)
 		{
 			if (value == null)
@@ -53,7 +51,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060000A3 RID: 163 RVA: 0x00015038 File Offset: 0x00013238
+		// Token: 0x060000A3 RID: 163 RVA: 0x000158E4 File Offset: 0x00013AE4
 		public new AirWallSpawnerComponent_SetValue ToSetValue()
 		{
 			return new AirWallSpawnerComponent_SetValue
@@ -67,13 +65,14 @@ namespace Aki.TDConfigMgr.Component
 				BiasDirection = this.BiasDirection,
 				IsExtend = this.IsExtend,
 				HasCover = this.HasCover,
-				WallActorsRef = this.WallActorsRef
+				WallActorsRef = this.WallActorsRef,
+				SpawnMode = this.SpawnMode
 			};
 		}
 
 		// Token: 0x17000032 RID: 50
-		// (get) Token: 0x060000A4 RID: 164 RVA: 0x000150C4 File Offset: 0x000132C4
-		// (set) Token: 0x060000A5 RID: 165 RVA: 0x000150FE File Offset: 0x000132FE
+		// (get) Token: 0x060000A4 RID: 164 RVA: 0x0001597C File Offset: 0x00013B7C
+		// (set) Token: 0x060000A5 RID: 165 RVA: 0x000159B6 File Offset: 0x00013BB6
 		public override bool? Disabled
 		{
 			get
@@ -96,8 +95,8 @@ namespace Aki.TDConfigMgr.Component
 		}
 
 		// Token: 0x17000033 RID: 51
-		// (get) Token: 0x060000A6 RID: 166 RVA: 0x0001510C File Offset: 0x0001330C
-		// (set) Token: 0x060000A7 RID: 167 RVA: 0x00015136 File Offset: 0x00013336
+		// (get) Token: 0x060000A6 RID: 166 RVA: 0x000159C4 File Offset: 0x00013BC4
+		// (set) Token: 0x060000A7 RID: 167 RVA: 0x000159EE File Offset: 0x00013BEE
 		public override bool? EdIsLocked
 		{
 			get
@@ -115,8 +114,8 @@ namespace Aki.TDConfigMgr.Component
 		}
 
 		// Token: 0x17000034 RID: 52
-		// (get) Token: 0x060000A8 RID: 168 RVA: 0x00015144 File Offset: 0x00013344
-		// (set) Token: 0x060000A9 RID: 169 RVA: 0x0001516F File Offset: 0x0001336F
+		// (get) Token: 0x060000A8 RID: 168 RVA: 0x000159FC File Offset: 0x00013BFC
+		// (set) Token: 0x060000A9 RID: 169 RVA: 0x00015A27 File Offset: 0x00013C27
 		public virtual int SplineEntity
 		{
 			get
@@ -138,8 +137,8 @@ namespace Aki.TDConfigMgr.Component
 		}
 
 		// Token: 0x17000035 RID: 53
-		// (get) Token: 0x060000AA RID: 170 RVA: 0x0001517D File Offset: 0x0001337D
-		// (set) Token: 0x060000AB RID: 171 RVA: 0x000151A8 File Offset: 0x000133A8
+		// (get) Token: 0x060000AA RID: 170 RVA: 0x00015A35 File Offset: 0x00013C35
+		// (set) Token: 0x060000AB RID: 171 RVA: 0x00015A60 File Offset: 0x00013C60
 		public virtual string WallName
 		{
 			get
@@ -161,8 +160,8 @@ namespace Aki.TDConfigMgr.Component
 		}
 
 		// Token: 0x17000036 RID: 54
-		// (get) Token: 0x060000AC RID: 172 RVA: 0x000151B6 File Offset: 0x000133B6
-		// (set) Token: 0x060000AD RID: 173 RVA: 0x000151E5 File Offset: 0x000133E5
+		// (get) Token: 0x060000AC RID: 172 RVA: 0x00015A6E File Offset: 0x00013C6E
+		// (set) Token: 0x060000AD RID: 173 RVA: 0x00015A9D File Offset: 0x00013C9D
 		public virtual float Thickness
 		{
 			get
@@ -184,8 +183,8 @@ namespace Aki.TDConfigMgr.Component
 		}
 
 		// Token: 0x17000037 RID: 55
-		// (get) Token: 0x060000AE RID: 174 RVA: 0x000151F3 File Offset: 0x000133F3
-		// (set) Token: 0x060000AF RID: 175 RVA: 0x00015222 File Offset: 0x00013422
+		// (get) Token: 0x060000AE RID: 174 RVA: 0x00015AAB File Offset: 0x00013CAB
+		// (set) Token: 0x060000AF RID: 175 RVA: 0x00015ADA File Offset: 0x00013CDA
 		public virtual float Height
 		{
 			get
@@ -207,8 +206,8 @@ namespace Aki.TDConfigMgr.Component
 		}
 
 		// Token: 0x17000038 RID: 56
-		// (get) Token: 0x060000B0 RID: 176 RVA: 0x00015230 File Offset: 0x00013430
-		// (set) Token: 0x060000B1 RID: 177 RVA: 0x0001525B File Offset: 0x0001345B
+		// (get) Token: 0x060000B0 RID: 176 RVA: 0x00015AE8 File Offset: 0x00013CE8
+		// (set) Token: 0x060000B1 RID: 177 RVA: 0x00015B13 File Offset: 0x00013D13
 		public virtual EBiasDirection BiasDirection
 		{
 			get
@@ -230,8 +229,8 @@ namespace Aki.TDConfigMgr.Component
 		}
 
 		// Token: 0x17000039 RID: 57
-		// (get) Token: 0x060000B2 RID: 178 RVA: 0x0001526C File Offset: 0x0001346C
-		// (set) Token: 0x060000B3 RID: 179 RVA: 0x000152A6 File Offset: 0x000134A6
+		// (get) Token: 0x060000B2 RID: 178 RVA: 0x00015B24 File Offset: 0x00013D24
+		// (set) Token: 0x060000B3 RID: 179 RVA: 0x00015B5E File Offset: 0x00013D5E
 		public virtual bool? IsExtend
 		{
 			get
@@ -254,8 +253,8 @@ namespace Aki.TDConfigMgr.Component
 		}
 
 		// Token: 0x1700003A RID: 58
-		// (get) Token: 0x060000B4 RID: 180 RVA: 0x000152B4 File Offset: 0x000134B4
-		// (set) Token: 0x060000B5 RID: 181 RVA: 0x000152DF File Offset: 0x000134DF
+		// (get) Token: 0x060000B4 RID: 180 RVA: 0x00015B6C File Offset: 0x00013D6C
+		// (set) Token: 0x060000B5 RID: 181 RVA: 0x00015B97 File Offset: 0x00013D97
 		public virtual bool HasCover
 		{
 			get
@@ -273,8 +272,8 @@ namespace Aki.TDConfigMgr.Component
 		}
 
 		// Token: 0x1700003B RID: 59
-		// (get) Token: 0x060000B6 RID: 182 RVA: 0x000152F0 File Offset: 0x000134F0
-		// (set) Token: 0x060000B7 RID: 183 RVA: 0x00015383 File Offset: 0x00013583
+		// (get) Token: 0x060000B6 RID: 182 RVA: 0x00015BA8 File Offset: 0x00013DA8
+		// (set) Token: 0x060000B7 RID: 183 RVA: 0x00015C3B File Offset: 0x00013E3B
 		public virtual List<Aki.TDConfigMgr.AutoGenerated.IActor.IActorRef> WallActorsRef
 		{
 			get
@@ -310,18 +309,57 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000067 RID: 103
+		// Token: 0x1700003C RID: 60
+		// (get) Token: 0x060000B8 RID: 184 RVA: 0x00015C50 File Offset: 0x00013E50
+		// (set) Token: 0x060000B9 RID: 185 RVA: 0x00015CB1 File Offset: 0x00013EB1
 		[Nullable(2)]
-		protected new AirWallSpawnerComponent FbInstance;
+		public virtual IAirWallWholeSpawnMode SpawnMode
+		{
+			[NullableContext(2)]
+			get
+			{
+				if (this._SpawnModeInited)
+				{
+					return this._SpawnModeCache;
+				}
+				this._SpawnModeInited = true;
+				if (this.FbInstance != null)
+				{
+					this._SpawnModeCache = IAirWallWholeSpawnMode.Create(this.FbInstance.SpawnMode);
+				}
+				else
+				{
+					AirWallSpawnerComponent_SetValue pocoInterface = this.PocoInterface;
+					this._SpawnModeCache = ((pocoInterface != null) ? pocoInterface.SpawnMode : null);
+				}
+				return this._SpawnModeCache;
+			}
+			[NullableContext(2)]
+			set
+			{
+				this.GetOrCreatePoco().SpawnMode = value;
+				this._SpawnModeInited = false;
+			}
+		}
 
 		// Token: 0x04000068 RID: 104
 		[Nullable(2)]
-		protected new AirWallSpawnerComponent_SetValue PocoInterface;
+		protected new AirWallSpawnerComponent FbInstance;
 
 		// Token: 0x04000069 RID: 105
-		private List<Aki.TDConfigMgr.AutoGenerated.IActor.IActorRef> _WallActorsRefCache;
+		[Nullable(2)]
+		protected new AirWallSpawnerComponent_SetValue PocoInterface;
 
 		// Token: 0x0400006A RID: 106
+		private List<Aki.TDConfigMgr.AutoGenerated.IActor.IActorRef> _WallActorsRefCache;
+
+		// Token: 0x0400006B RID: 107
 		private bool _WallActorsRefInited;
+
+		// Token: 0x0400006C RID: 108
+		private IAirWallWholeSpawnMode _SpawnModeCache;
+
+		// Token: 0x0400006D RID: 109
+		private bool _SpawnModeInited;
 	}
 }

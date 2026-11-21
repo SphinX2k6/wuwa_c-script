@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006D5D RID: 27997
+	// Token: 0x020074D8 RID: 29912
 	public class IPlotModeUiStyleLevelDT
 	{
-		// Token: 0x1700D0C7 RID: 53447
-		// (get) Token: 0x060316F0 RID: 202480 RVA: 0x006B3E73 File Offset: 0x006B2073
-		// (set) Token: 0x060316F1 RID: 202481 RVA: 0x006B3E7B File Offset: 0x006B207B
+		// Token: 0x1700DC0F RID: 56335
+		// (get) Token: 0x060346EC RID: 214764 RVA: 0x0070F55B File Offset: 0x0070D75B
+		// (set) Token: 0x060346ED RID: 214765 RVA: 0x0070F563 File Offset: 0x0070D763
 		public EPlotModeUiStyleType Type { get; set; }
 
-		// Token: 0x1700D0C8 RID: 53448
-		// (get) Token: 0x060316F2 RID: 202482 RVA: 0x006B3E84 File Offset: 0x006B2084
-		// (set) Token: 0x060316F3 RID: 202483 RVA: 0x006B3E8C File Offset: 0x006B208C
+		// Token: 0x1700DC10 RID: 56336
+		// (get) Token: 0x060346EE RID: 214766 RVA: 0x0070F56C File Offset: 0x0070D76C
+		// (set) Token: 0x060346EF RID: 214767 RVA: 0x0070F574 File Offset: 0x0070D774
 		public TUiStyleOfLevelDUnion UiStyle { get; set; }
 
-		// Token: 0x060316F4 RID: 202484 RVA: 0x006B3E95 File Offset: 0x006B2095
+		// Token: 0x060346F0 RID: 214768 RVA: 0x0070F57D File Offset: 0x0070D77D
 		public IPlotModeUiStyleLevelDT()
 		{
 			this.Type = EPlotModeUiStyleType.LevelD;

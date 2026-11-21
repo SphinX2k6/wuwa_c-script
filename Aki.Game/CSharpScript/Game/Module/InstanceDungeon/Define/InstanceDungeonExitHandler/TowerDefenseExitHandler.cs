@@ -8,16 +8,16 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.Define.InstanceDungeonExitHandler
 {
-	// Token: 0x020058FB RID: 22779
+	// Token: 0x020048D4 RID: 18644
 	public class TowerDefenseExitHandler : InstanceDungeonExitHandlerBase
 	{
-		// Token: 0x06039D3F RID: 236863 RVA: 0x00DBC4BF File Offset: 0x00DBA6BF
+		// Token: 0x0602EC65 RID: 191589 RVA: 0x00D0B48B File Offset: 0x00D0968B
 		public override bool Checker()
 		{
 			return TowerDefenseController.Instance.CheckInInstanceDungeon();
 		}
 
-		// Token: 0x06039D40 RID: 236864 RVA: 0x00DBC4CC File Offset: 0x00DBA6CC
+		// Token: 0x0602EC66 RID: 191590 RVA: 0x00D0B498 File Offset: 0x00D09698
 		[NullableContext(2)]
 		public unsafe override void HandleExit(InstanceDungeonExitHandlerData data)
 		{

@@ -3,22 +3,22 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 {
-	// Token: 0x02006301 RID: 25345
+	// Token: 0x0200527F RID: 21119
 	public interface IPinballAttributeItemData
 	{
-		// Token: 0x170092BE RID: 37566
-		// (get) Token: 0x0603FC6B RID: 261227
-		// (set) Token: 0x0603FC6C RID: 261228
+		// Token: 0x17006620 RID: 26144
+		// (get) Token: 0x0603492C RID: 215340
+		// (set) Token: 0x0603492D RID: 215341
 		bool IsBgShow { get; set; }
 
-		// Token: 0x170092BF RID: 37567
-		// (get) Token: 0x0603FC6D RID: 261229
-		// (set) Token: 0x0603FC6E RID: 261230
+		// Token: 0x17006621 RID: 26145
+		// (get) Token: 0x0603492E RID: 215342
+		// (set) Token: 0x0603492F RID: 215343
 		PinballPropertyIndex AttributeConfig { get; set; }
 
-		// Token: 0x170092C0 RID: 37568
-		// (get) Token: 0x0603FC6F RID: 261231
-		// (set) Token: 0x0603FC70 RID: 261232
+		// Token: 0x17006622 RID: 26146
+		// (get) Token: 0x06034930 RID: 215344
+		// (set) Token: 0x06034931 RID: 215345
 		int AttributeValue { get; set; }
 	}
 }

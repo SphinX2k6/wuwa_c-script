@@ -3,27 +3,27 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000EAC RID: 3756
+	// Token: 0x02000FC2 RID: 4034
 	[EnumExtensions]
 	public enum ETrapDefenseSystemVarType
 	{
-		// Token: 0x04003218 RID: 12824
+		// Token: 0x04003525 RID: 13605
 		Health,
-		// Token: 0x04003219 RID: 12825
+		// Token: 0x04003526 RID: 13606
 		Gold,
-		// Token: 0x0400321A RID: 12826
+		// Token: 0x04003527 RID: 13607
 		MaxBatch,
-		// Token: 0x0400321B RID: 12827
+		// Token: 0x04003528 RID: 13608
 		Batch,
-		// Token: 0x0400321C RID: 12828
+		// Token: 0x04003529 RID: 13609
 		TrapCount,
-		// Token: 0x0400321D RID: 12829
+		// Token: 0x0400352A RID: 13610
 		MaxTrapCount,
-		// Token: 0x0400321E RID: 12830
+		// Token: 0x0400352B RID: 13611
 		EnemyRemain,
-		// Token: 0x0400321F RID: 12831
+		// Token: 0x0400352C RID: 13612
 		MapChangeCount,
-		// Token: 0x04003220 RID: 12832
+		// Token: 0x0400352D RID: 13613
 		SpawnMonsterStepCompleteCount
 	}
 }

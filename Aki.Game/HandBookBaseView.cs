@@ -8,12 +8,12 @@ using CSharpScript.Game.Module.Util.Layout;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001DE6 RID: 7654
+// Token: 0x020012A8 RID: 4776
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class HandBookBaseView : UiViewBase
 {
-	// Token: 0x0600E8F3 RID: 59635 RVA: 0x00372720 File Offset: 0x00370920
+	// Token: 0x0600BD12 RID: 48402 RVA: 0x0037E428 File Offset: 0x0037C628
 	public HandBookBaseView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 		this.TabList = new List<CommonTabData>();
@@ -26,7 +26,7 @@ public abstract class HandBookBaseView : UiViewBase
 		this.PhantomDataList = new List<HandBookCommonItemData>();
 	}
 
-	// Token: 0x0600E8F4 RID: 59636 RVA: 0x0037278C File Offset: 0x0037098C
+	// Token: 0x0600BD13 RID: 48403 RVA: 0x0037E494 File Offset: 0x0037C694
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -65,7 +65,7 @@ public abstract class HandBookBaseView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600E8F5 RID: 59637 RVA: 0x00372A2C File Offset: 0x00370C2C
+	// Token: 0x0600BD14 RID: 48404 RVA: 0x0037E734 File Offset: 0x0037C934
 	protected void SetDefaultState()
 	{
 		base.GetItem(0).SetUIActive(false);
@@ -92,7 +92,7 @@ public abstract class HandBookBaseView : UiViewBase
 		base.GetItem(26).SetUIActive(false);
 	}
 
-	// Token: 0x0600E8F6 RID: 59638 RVA: 0x00372BC0 File Offset: 0x00370DC0
+	// Token: 0x0600BD15 RID: 48405 RVA: 0x0037E8C8 File Offset: 0x0037CAC8
 	protected void InitTabComponent(List<CommonTabData> tabList)
 	{
 		base.GetItem(26).SetUIActive(true);
@@ -109,10 +109,10 @@ public abstract class HandBookBaseView : UiViewBase
 		this.TabComponent.SelectToggleByIndex(0, false, true);
 	}
 
-	// Token: 0x0600E8F7 RID: 59639
+	// Token: 0x0600BD16 RID: 48406
 	public abstract List<CommonTabItemData> GetTabItemData(List<CommonTabData> tabData);
 
-	// Token: 0x0600E8F8 RID: 59640 RVA: 0x00372C54 File Offset: 0x00370E54
+	// Token: 0x0600BD17 RID: 48407 RVA: 0x0037E95C File Offset: 0x0037CB5C
 	protected void InitCommonTabTitle(string iconPath, CommonTabTitleData titleData)
 	{
 		UUIItem item = base.GetItem(2);
@@ -122,7 +122,7 @@ public abstract class HandBookBaseView : UiViewBase
 		this.CommonTabTitle.UpdateTitle(titleData);
 	}
 
-	// Token: 0x0600E8F9 RID: 59641 RVA: 0x00372C94 File Offset: 0x00370E94
+	// Token: 0x0600BD18 RID: 48408 RVA: 0x0037E99C File Offset: 0x0037CB9C
 	protected void UpdateTitle(CommonTabTitleData titleData)
 	{
 		if (this.CommonTabTitle == null)
@@ -132,18 +132,18 @@ public abstract class HandBookBaseView : UiViewBase
 		this.CommonTabTitle.UpdateTitle(titleData);
 	}
 
-	// Token: 0x0600E8FA RID: 59642 RVA: 0x00372CAB File Offset: 0x00370EAB
+	// Token: 0x0600BD19 RID: 48409 RVA: 0x0037E9B3 File Offset: 0x0037CBB3
 	public void SetTabToggleCallBack(Action<int> toggleCallBack)
 	{
 		this.OnToggleCallBack = toggleCallBack;
 	}
 
-	// Token: 0x0600E8FB RID: 59643 RVA: 0x00372CB4 File Offset: 0x00370EB4
+	// Token: 0x0600BD1A RID: 48410 RVA: 0x0037E9BC File Offset: 0x0037CBBC
 	protected virtual void OnPhantomToggleClick(HandBookCommonItemData handBookCommonItemData, int girdIndex)
 	{
 	}
 
-	// Token: 0x0600E8FC RID: 59644 RVA: 0x00372CB6 File Offset: 0x00370EB6
+	// Token: 0x0600BD1B RID: 48411 RVA: 0x0037E9BE File Offset: 0x0037CBBE
 	private void ToggleCallBack(int index)
 	{
 		if (this.OnToggleCallBack != null)
@@ -152,13 +152,13 @@ public abstract class HandBookBaseView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600E8FD RID: 59645 RVA: 0x00372CCC File Offset: 0x00370ECC
+	// Token: 0x0600BD1C RID: 48412 RVA: 0x0037E9D4 File Offset: 0x0037CBD4
 	protected virtual CommonTabItem TabItemProxyCreate([Nullable(2)] UUIItem uiItem, int? index)
 	{
 		return new CommonTabItem();
 	}
 
-	// Token: 0x0600E8FE RID: 59646 RVA: 0x00372CD4 File Offset: 0x00370ED4
+	// Token: 0x0600BD1D RID: 48413 RVA: 0x0037E9DC File Offset: 0x0037CBDC
 	public void InitScrollViewByCommonItem(List<HandBookCommonItemData> handBookCommonItemDataList)
 	{
 		this.HandBookCommonItemDataList = handBookCommonItemDataList;
@@ -188,7 +188,7 @@ public abstract class HandBookBaseView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600E8FF RID: 59647 RVA: 0x00372DD0 File Offset: 0x00370FD0
+	// Token: 0x0600BD1E RID: 48414 RVA: 0x0037EAD8 File Offset: 0x0037CCD8
 	public void InitScrollViewByFetterItem(List<PhantomFetter> phantomFetterDataList)
 	{
 		this.PhantomFetterDataList = phantomFetterDataList;
@@ -212,7 +212,7 @@ public abstract class HandBookBaseView : UiViewBase
 		this.ScrollViewFetter.RefreshAllGridProxies();
 	}
 
-	// Token: 0x0600E900 RID: 59648 RVA: 0x00372E98 File Offset: 0x00371098
+	// Token: 0x0600BD1F RID: 48415 RVA: 0x0037EBA0 File Offset: 0x0037CDA0
 	public void InitScrollViewByCommonTypeItem(List<List<HandBookCommonItemData>> handBookCommonTypeItemDataList)
 	{
 		this.HandBookCommonTypeItemDataList = handBookCommonTypeItemDataList;
@@ -225,19 +225,19 @@ public abstract class HandBookBaseView : UiViewBase
 		this.ScrollViewCommonType.RefreshByData<List<HandBookCommonItemData>>(this.HandBookCommonTypeItemDataList, null);
 	}
 
-	// Token: 0x0600E901 RID: 59649 RVA: 0x00372F03 File Offset: 0x00371103
+	// Token: 0x0600BD20 RID: 48416 RVA: 0x0037EC0B File Offset: 0x0037CE0B
 	protected virtual HandBookCommonItem InitHandBookCommonItem()
 	{
 		return new HandBookCommonItem();
 	}
 
-	// Token: 0x0600E902 RID: 59650 RVA: 0x00372F0A File Offset: 0x0037110A
+	// Token: 0x0600BD21 RID: 48417 RVA: 0x0037EC12 File Offset: 0x0037CE12
 	protected virtual HandBookFetterItem InitHandBookFetterItem()
 	{
 		return new HandBookFetterItem();
 	}
 
-	// Token: 0x0600E903 RID: 59651 RVA: 0x00372F14 File Offset: 0x00371114
+	// Token: 0x0600BD22 RID: 48418 RVA: 0x0037EC1C File Offset: 0x0037CE1C
 	protected ILayoutItem<HandBookCommonTypeItem> InitHandBookCommonTypeItem(object data, UUIItem uiItem, int index)
 	{
 		HandBookCommonTypeItem handBookCommonTypeItem = new HandBookCommonTypeItem();
@@ -249,19 +249,19 @@ public abstract class HandBookBaseView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600E904 RID: 59652 RVA: 0x00372F46 File Offset: 0x00371146
+	// Token: 0x0600BD23 RID: 48419 RVA: 0x0037EC4E File Offset: 0x0037CE4E
 	private PhantomFetter GetPhantomFetterData(int gridIndex)
 	{
 		return this.PhantomFetterDataList[gridIndex];
 	}
 
-	// Token: 0x0600E905 RID: 59653 RVA: 0x00372F54 File Offset: 0x00371154
+	// Token: 0x0600BD24 RID: 48420 RVA: 0x0037EC5C File Offset: 0x0037CE5C
 	private HandBookCommonItemData GetHandBookCommonItemData(int gridIndex)
 	{
 		return this.HandBookCommonItemDataList[gridIndex];
 	}
 
-	// Token: 0x0600E906 RID: 59654 RVA: 0x00372F62 File Offset: 0x00371162
+	// Token: 0x0600BD25 RID: 48421 RVA: 0x0037EC6A File Offset: 0x0037CE6A
 	protected void SetNameText(string name)
 	{
 		UUIText text = base.GetText(9);
@@ -269,7 +269,7 @@ public abstract class HandBookBaseView : UiViewBase
 		text.SetText(name, true);
 	}
 
-	// Token: 0x0600E907 RID: 59655 RVA: 0x00372F7A File Offset: 0x0037117A
+	// Token: 0x0600BD26 RID: 48422 RVA: 0x0037EC82 File Offset: 0x0037CE82
 	protected void SetTypeText(string type)
 	{
 		UUIText text = base.GetText(10);
@@ -277,7 +277,7 @@ public abstract class HandBookBaseView : UiViewBase
 		text.SetText(type, true);
 	}
 
-	// Token: 0x0600E908 RID: 59656 RVA: 0x00372F92 File Offset: 0x00371192
+	// Token: 0x0600BD27 RID: 48423 RVA: 0x0037EC9A File Offset: 0x0037CE9A
 	protected void SetDescribeText(string describe)
 	{
 		UUIText text = base.GetText(11);
@@ -285,7 +285,7 @@ public abstract class HandBookBaseView : UiViewBase
 		text.SetText(describe, true);
 	}
 
-	// Token: 0x0600E909 RID: 59657 RVA: 0x00372FAC File Offset: 0x003711AC
+	// Token: 0x0600BD28 RID: 48424 RVA: 0x0037ECB4 File Offset: 0x0037CEB4
 	protected void InitInfoItemLayout(List<string> infoList)
 	{
 		this.InfoTextList = infoList;
@@ -304,7 +304,7 @@ public abstract class HandBookBaseView : UiViewBase
 		this.InfoItemLayout.RebuildLayoutByDataNew<string>(this.InfoTextList, null);
 	}
 
-	// Token: 0x0600E90A RID: 59658 RVA: 0x00373028 File Offset: 0x00371228
+	// Token: 0x0600BD29 RID: 48425 RVA: 0x0037ED30 File Offset: 0x0037CF30
 	protected void InitStarItemLayout(int starCount)
 	{
 		this.StarCount = starCount;
@@ -317,7 +317,7 @@ public abstract class HandBookBaseView : UiViewBase
 		this.StarItemLayout.RebuildLayoutByDataNew<int>(null, new int?(this.StarCount));
 	}
 
-	// Token: 0x0600E90B RID: 59659 RVA: 0x00373088 File Offset: 0x00371288
+	// Token: 0x0600BD2A RID: 48426 RVA: 0x0037ED90 File Offset: 0x0037CF90
 	protected void InitContentItemLayout(List<HandBookContentItemData> contentTextList)
 	{
 		this.ContentTextList = contentTextList;
@@ -336,7 +336,7 @@ public abstract class HandBookBaseView : UiViewBase
 		this.ContentItemLayout.RebuildLayoutByDataNew<HandBookContentItemData>(this.ContentTextList, null);
 	}
 
-	// Token: 0x0600E90C RID: 59660 RVA: 0x00373104 File Offset: 0x00371304
+	// Token: 0x0600BD2B RID: 48427 RVA: 0x0037EE0C File Offset: 0x0037D00C
 	protected void InitAttributeLayout(List<CSharpScript.Game.Module.Common.AttributeData> attributeList)
 	{
 		base.GetVerticalLayout(19).RootUIComp.Get().SetUIActive(true);
@@ -344,7 +344,7 @@ public abstract class HandBookBaseView : UiViewBase
 		this.AttributeLayout.RefreshByData(this.AttributeList, null, false);
 	}
 
-	// Token: 0x0600E90D RID: 59661 RVA: 0x00373148 File Offset: 0x00371348
+	// Token: 0x0600BD2C RID: 48428 RVA: 0x0037EE50 File Offset: 0x0037D050
 	protected void InitHandBookPhantomLayout(List<HandBookCommonItemData> handBookCommonItemData)
 	{
 		UUIVerticalLayout verticalLayout = base.GetVerticalLayout(18);
@@ -357,7 +357,7 @@ public abstract class HandBookBaseView : UiViewBase
 		this.HandBookPhantomLayout.RebuildLayoutByDataNew<HandBookCommonItemData>(this.PhantomDataList, null);
 	}
 
-	// Token: 0x0600E90E RID: 59662 RVA: 0x003731B8 File Offset: 0x003713B8
+	// Token: 0x0600BD2D RID: 48429 RVA: 0x0037EEC0 File Offset: 0x0037D0C0
 	protected virtual ILayoutItem<HandBookPhantomItem> InitHandBookPhantom(object data, UUIItem uiItem, int index)
 	{
 		HandBookPhantomItem handBookPhantomItem = new HandBookPhantomItem();
@@ -370,7 +370,7 @@ public abstract class HandBookBaseView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600E90F RID: 59663 RVA: 0x00373204 File Offset: 0x00371404
+	// Token: 0x0600BD2E RID: 48430 RVA: 0x0037EF0C File Offset: 0x0037D10C
 	protected void SetDateText(string time)
 	{
 		UUIText text = base.GetText(17);
@@ -378,7 +378,7 @@ public abstract class HandBookBaseView : UiViewBase
 		LguiUtil.Instance.SetLocalText(text, "HandBookGet", new <>z__ReadOnlySingleElementList<object>(time));
 	}
 
-	// Token: 0x0600E910 RID: 59664 RVA: 0x00373238 File Offset: 0x00371438
+	// Token: 0x0600BD2F RID: 48431 RVA: 0x0037EF40 File Offset: 0x0037D140
 	protected void SetCollectText(int curCount, int totalCount)
 	{
 		base.GetText(23).SetUIActive(true);
@@ -389,34 +389,34 @@ public abstract class HandBookBaseView : UiViewBase
 		}));
 	}
 
-	// Token: 0x0600E911 RID: 59665 RVA: 0x00373287 File Offset: 0x00371487
+	// Token: 0x0600BD30 RID: 48432 RVA: 0x0037EF8F File Offset: 0x0037D18F
 	protected void SetOwnText(int count)
 	{
 		base.GetText(17).SetUIActive(true);
 		LguiUtil.Instance.SetLocalText(base.GetText(17), "HandBookItemHaveNum", new <>z__ReadOnlySingleElementList<object>(count));
 	}
 
-	// Token: 0x0600E912 RID: 59666 RVA: 0x003732B9 File Offset: 0x003714B9
+	// Token: 0x0600BD31 RID: 48433 RVA: 0x0037EFC1 File Offset: 0x0037D1C1
 	protected void SetKillText(int count)
 	{
 		base.GetText(17).SetUIActive(true);
 		LguiUtil.Instance.SetLocalText(base.GetText(17), "KillCount", new <>z__ReadOnlySingleElementList<object>(count));
 	}
 
-	// Token: 0x0600E913 RID: 59667 RVA: 0x003732EB File Offset: 0x003714EB
+	// Token: 0x0600BD32 RID: 48434 RVA: 0x0037EFF3 File Offset: 0x0037D1F3
 	protected void SetLockState(bool isLock)
 	{
 		base.GetItem(21).SetUIActive(isLock);
 		base.GetItem(20).SetUIActive(!isLock);
 	}
 
-	// Token: 0x0600E914 RID: 59668 RVA: 0x0037330C File Offset: 0x0037150C
+	// Token: 0x0600BD33 RID: 48435 RVA: 0x0037F014 File Offset: 0x0037D214
 	protected void SetLockText(string lockDesc)
 	{
 		base.GetText(24).SetText(lockDesc, true);
 	}
 
-	// Token: 0x0600E915 RID: 59669 RVA: 0x00373320 File Offset: 0x00371520
+	// Token: 0x0600BD34 RID: 48436 RVA: 0x0037F028 File Offset: 0x0037D228
 	protected void SetItemTexture(string path)
 	{
 		UUITexture texture = base.GetTexture(25);
@@ -424,23 +424,23 @@ public abstract class HandBookBaseView : UiViewBase
 		base.SetTextureByPath(path, texture, null, null);
 	}
 
-	// Token: 0x0600E916 RID: 59670 RVA: 0x0037334F File Offset: 0x0037154F
+	// Token: 0x0600BD35 RID: 48437 RVA: 0x0037F057 File Offset: 0x0037D257
 	protected override void OnStart()
 	{
 	}
 
-	// Token: 0x0600E917 RID: 59671 RVA: 0x00373351 File Offset: 0x00371551
+	// Token: 0x0600BD36 RID: 48438 RVA: 0x0037F059 File Offset: 0x0037D259
 	protected override void OnAfterShow()
 	{
 	}
 
-	// Token: 0x0600E918 RID: 59672 RVA: 0x00373353 File Offset: 0x00371553
+	// Token: 0x0600BD37 RID: 48439 RVA: 0x0037F05B File Offset: 0x0037D25B
 	protected void CloseClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600E919 RID: 59673 RVA: 0x0037335C File Offset: 0x0037155C
+	// Token: 0x0600BD38 RID: 48440 RVA: 0x0037F064 File Offset: 0x0037D264
 	protected override void OnBeforeDestroy()
 	{
 		if (this.ScrollViewCommon != null)
@@ -497,7 +497,7 @@ public abstract class HandBookBaseView : UiViewBase
 		this.StarCount = 0;
 	}
 
-	// Token: 0x04006BF7 RID: 27639
+	// Token: 0x04006CD8 RID: 27864
 	[Nullable(new byte[]
 	{
 		2,
@@ -505,31 +505,31 @@ public abstract class HandBookBaseView : UiViewBase
 	})]
 	protected TabComponent<CommonTabItem> TabComponent;
 
-	// Token: 0x04006BF8 RID: 27640
+	// Token: 0x04006CD9 RID: 27865
 	protected List<CommonTabData> TabList;
 
-	// Token: 0x04006BF9 RID: 27641
+	// Token: 0x04006CDA RID: 27866
 	[Nullable(2)]
 	protected Action<int> OnToggleCallBack;
 
-	// Token: 0x04006BFA RID: 27642
+	// Token: 0x04006CDB RID: 27867
 	[Nullable(2)]
 	protected Action<PhantomItem> OnPhantomToggleCallBack;
 
-	// Token: 0x04006BFB RID: 27643
+	// Token: 0x04006CDC RID: 27868
 	[Nullable(2)]
 	protected CommonTabTitle CommonTabTitle;
 
-	// Token: 0x04006BFC RID: 27644
+	// Token: 0x04006CDD RID: 27869
 	protected List<HandBookCommonItemData> HandBookCommonItemDataList;
 
-	// Token: 0x04006BFD RID: 27645
+	// Token: 0x04006CDE RID: 27870
 	protected List<PhantomFetter> PhantomFetterDataList;
 
-	// Token: 0x04006BFE RID: 27646
+	// Token: 0x04006CDF RID: 27871
 	protected List<List<HandBookCommonItemData>> HandBookCommonTypeItemDataList;
 
-	// Token: 0x04006BFF RID: 27647
+	// Token: 0x04006CE0 RID: 27872
 	[Nullable(new byte[]
 	{
 		2,
@@ -538,7 +538,7 @@ public abstract class HandBookBaseView : UiViewBase
 	})]
 	protected LoopScrollView<HandBookCommonItem, HandBookCommonItemData> ScrollViewCommon;
 
-	// Token: 0x04006C00 RID: 27648
+	// Token: 0x04006CE1 RID: 27873
 	[Nullable(new byte[]
 	{
 		2,
@@ -546,7 +546,7 @@ public abstract class HandBookBaseView : UiViewBase
 	})]
 	protected LoopScrollView<HandBookFetterItem, PhantomFetter> ScrollViewFetter;
 
-	// Token: 0x04006C01 RID: 27649
+	// Token: 0x04006CE2 RID: 27874
 	[Nullable(new byte[]
 	{
 		2,
@@ -554,7 +554,7 @@ public abstract class HandBookBaseView : UiViewBase
 	})]
 	protected GenericScrollView<HandBookCommonTypeItem> ScrollViewCommonType;
 
-	// Token: 0x04006C02 RID: 27650
+	// Token: 0x04006CE3 RID: 27875
 	[Nullable(new byte[]
 	{
 		2,
@@ -562,7 +562,7 @@ public abstract class HandBookBaseView : UiViewBase
 	})]
 	protected GenericLayoutNew<HandBookInfoTextItem> InfoItemLayout;
 
-	// Token: 0x04006C03 RID: 27651
+	// Token: 0x04006CE4 RID: 27876
 	[Nullable(new byte[]
 	{
 		2,
@@ -570,7 +570,7 @@ public abstract class HandBookBaseView : UiViewBase
 	})]
 	protected GenericLayoutNew<HandBookContentItem> ContentItemLayout;
 
-	// Token: 0x04006C04 RID: 27652
+	// Token: 0x04006CE5 RID: 27877
 	[Nullable(new byte[]
 	{
 		2,
@@ -578,7 +578,7 @@ public abstract class HandBookBaseView : UiViewBase
 	})]
 	protected GenericLayoutNew<UiPanelBase> StarItemLayout;
 
-	// Token: 0x04006C05 RID: 27653
+	// Token: 0x04006CE6 RID: 27878
 	[Nullable(new byte[]
 	{
 		2,
@@ -586,7 +586,7 @@ public abstract class HandBookBaseView : UiViewBase
 	})]
 	protected GenericLayoutNew<HandBookPhantomItem> HandBookPhantomLayout;
 
-	// Token: 0x04006C06 RID: 27654
+	// Token: 0x04006CE7 RID: 27879
 	[Nullable(new byte[]
 	{
 		2,
@@ -595,26 +595,26 @@ public abstract class HandBookBaseView : UiViewBase
 	})]
 	protected GenericLayout<AttributeItem, CSharpScript.Game.Module.Common.AttributeData> AttributeLayout;
 
-	// Token: 0x04006C07 RID: 27655
+	// Token: 0x04006CE8 RID: 27880
 	protected List<string> InfoTextList;
 
-	// Token: 0x04006C08 RID: 27656
+	// Token: 0x04006CE9 RID: 27881
 	protected List<HandBookContentItemData> ContentTextList;
 
-	// Token: 0x04006C09 RID: 27657
+	// Token: 0x04006CEA RID: 27882
 	protected List<CSharpScript.Game.Module.Common.AttributeData> AttributeList;
 
-	// Token: 0x04006C0A RID: 27658
+	// Token: 0x04006CEB RID: 27883
 	protected List<HandBookCommonItemData> PhantomDataList;
 
-	// Token: 0x04006C0B RID: 27659
+	// Token: 0x04006CEC RID: 27884
 	protected int StarCount;
 
-	// Token: 0x020083BB RID: 33723
+	// Token: 0x02007540 RID: 30016
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x0402AE5F RID: 175711
+		// Token: 0x04026182 RID: 156034
 		[Nullable(new byte[]
 		{
 			0,
@@ -622,7 +622,7 @@ public abstract class HandBookBaseView : UiViewBase
 		})]
 		public static CSharpScript.Game.Module.Util.Layout.TLayoutRefresh<HandBookInfoTextItem> <0>__InitInfoItem;
 
-		// Token: 0x0402AE60 RID: 175712
+		// Token: 0x04026183 RID: 156035
 		[Nullable(new byte[]
 		{
 			0,

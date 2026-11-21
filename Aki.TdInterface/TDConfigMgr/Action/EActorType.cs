@@ -3,47 +3,47 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200157F RID: 5503
+	// Token: 0x020016DD RID: 5853
 	[EnumExtensions]
 	public enum EActorType
 	{
-		// Token: 0x04004914 RID: 18708
+		// Token: 0x04004CC3 RID: 19651
 		MeshActor,
-		// Token: 0x04004915 RID: 18709
+		// Token: 0x04004CC4 RID: 19652
 		SoundActor,
-		// Token: 0x04004916 RID: 18710
+		// Token: 0x04004CC5 RID: 19653
 		EffectActor,
-		// Token: 0x04004917 RID: 18711
+		// Token: 0x04004CC6 RID: 19654
 		TriggerVolume,
-		// Token: 0x04004918 RID: 18712
+		// Token: 0x04004CC7 RID: 19655
 		WorldPartitionTriggerVolumeWrapper,
-		// Token: 0x04004919 RID: 18713
+		// Token: 0x04004CC8 RID: 19656
 		LightsGroup,
-		// Token: 0x0400491A RID: 18714
+		// Token: 0x04004CC9 RID: 19657
 		PPVolume,
-		// Token: 0x0400491B RID: 18715
+		// Token: 0x04004CCA RID: 19658
 		CullDistanceVolume,
-		// Token: 0x0400491C RID: 18716
+		// Token: 0x04004CCB RID: 19659
 		Skybox,
-		// Token: 0x0400491D RID: 18717
+		// Token: 0x04004CCC RID: 19660
 		FloatingActor,
-		// Token: 0x0400491E RID: 18718
+		// Token: 0x04004CCD RID: 19661
 		GpuNpc,
-		// Token: 0x0400491F RID: 18719
+		// Token: 0x04004CCE RID: 19662
 		ToonDepth,
-		// Token: 0x04004920 RID: 18720
+		// Token: 0x04004CCF RID: 19663
 		DecalActor,
-		// Token: 0x04004921 RID: 18721
+		// Token: 0x04004CD0 RID: 19664
 		NvClothPlacement,
-		// Token: 0x04004922 RID: 18722
+		// Token: 0x04004CD1 RID: 19665
 		PhysicalActor,
-		// Token: 0x04004923 RID: 18723
+		// Token: 0x04004CD2 RID: 19666
 		SmartLightActor,
-		// Token: 0x04004924 RID: 18724
+		// Token: 0x04004CD3 RID: 19667
 		MediaPlayer,
-		// Token: 0x04004925 RID: 18725
+		// Token: 0x04004CD4 RID: 19668
 		KuroAttachGroupActor,
-		// Token: 0x04004926 RID: 18726
+		// Token: 0x04004CD5 RID: 19669
 		LoopTeleportVolume
 	}
 }

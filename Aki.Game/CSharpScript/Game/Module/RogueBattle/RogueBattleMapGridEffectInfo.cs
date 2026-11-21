@@ -3,29 +3,29 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004ED9 RID: 20185
+	// Token: 0x02003EA2 RID: 16034
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RogueBattleMapGridEffectInfo : IRogueBattleMapGridEffectInfo
 	{
-		// Token: 0x17007F29 RID: 32553
-		// (get) Token: 0x06033CEB RID: 212203 RVA: 0x00C21114 File Offset: 0x00C1F314
-		// (set) Token: 0x06033CEC RID: 212204 RVA: 0x00C2111C File Offset: 0x00C1F31C
+		// Token: 0x170052D9 RID: 21209
+		// (get) Token: 0x06028B56 RID: 166742 RVA: 0x00B6A62C File Offset: 0x00B6882C
+		// (set) Token: 0x06028B57 RID: 166743 RVA: 0x00B6A634 File Offset: 0x00B68834
 		public string TagKey { get; set; } = string.Empty;
 
-		// Token: 0x17007F2A RID: 32554
-		// (get) Token: 0x06033CED RID: 212205 RVA: 0x00C21125 File Offset: 0x00C1F325
-		// (set) Token: 0x06033CEE RID: 212206 RVA: 0x00C2112D File Offset: 0x00C1F32D
+		// Token: 0x170052DA RID: 21210
+		// (get) Token: 0x06028B58 RID: 166744 RVA: 0x00B6A63D File Offset: 0x00B6883D
+		// (set) Token: 0x06028B59 RID: 166745 RVA: 0x00B6A645 File Offset: 0x00B68845
 		public int Count { get; set; }
 
-		// Token: 0x17007F2B RID: 32555
-		// (get) Token: 0x06033CEF RID: 212207 RVA: 0x00C21136 File Offset: 0x00C1F336
-		// (set) Token: 0x06033CF0 RID: 212208 RVA: 0x00C2113E File Offset: 0x00C1F33E
+		// Token: 0x170052DB RID: 21211
+		// (get) Token: 0x06028B5A RID: 166746 RVA: 0x00B6A64E File Offset: 0x00B6884E
+		// (set) Token: 0x06028B5B RID: 166747 RVA: 0x00B6A656 File Offset: 0x00B68856
 		public bool IsRatio { get; set; }
 
-		// Token: 0x17007F2C RID: 32556
-		// (get) Token: 0x06033CF1 RID: 212209 RVA: 0x00C21147 File Offset: 0x00C1F347
-		// (set) Token: 0x06033CF2 RID: 212210 RVA: 0x00C2114F File Offset: 0x00C1F34F
+		// Token: 0x170052DC RID: 21212
+		// (get) Token: 0x06028B5C RID: 166748 RVA: 0x00B6A65F File Offset: 0x00B6885F
+		// (set) Token: 0x06028B5D RID: 166749 RVA: 0x00B6A667 File Offset: 0x00B68867
 		public string Icon { get; set; } = string.Empty;
 	}
 }

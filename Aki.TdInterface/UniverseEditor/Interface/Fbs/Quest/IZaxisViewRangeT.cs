@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020042B1 RID: 17073
+	// Token: 0x0200470D RID: 18189
 	public class IZaxisViewRangeT
 	{
-		// Token: 0x1700792A RID: 31018
-		// (get) Token: 0x060194C5 RID: 103621 RVA: 0x003A1C1A File Offset: 0x0039FE1A
-		// (set) Token: 0x060194C6 RID: 103622 RVA: 0x003A1C22 File Offset: 0x0039FE22
+		// Token: 0x17007F5B RID: 32603
+		// (get) Token: 0x0601AC31 RID: 109617 RVA: 0x003CD2F2 File Offset: 0x003CB4F2
+		// (set) Token: 0x0601AC32 RID: 109618 RVA: 0x003CD2FA File Offset: 0x003CB4FA
 		public int Up { get; set; }
 
-		// Token: 0x1700792B RID: 31019
-		// (get) Token: 0x060194C7 RID: 103623 RVA: 0x003A1C2B File Offset: 0x0039FE2B
-		// (set) Token: 0x060194C8 RID: 103624 RVA: 0x003A1C33 File Offset: 0x0039FE33
+		// Token: 0x17007F5C RID: 32604
+		// (get) Token: 0x0601AC33 RID: 109619 RVA: 0x003CD303 File Offset: 0x003CB503
+		// (set) Token: 0x0601AC34 RID: 109620 RVA: 0x003CD30B File Offset: 0x003CB50B
 		public int Down { get; set; }
 
-		// Token: 0x1700792C RID: 31020
-		// (get) Token: 0x060194C9 RID: 103625 RVA: 0x003A1C3C File Offset: 0x0039FE3C
-		// (set) Token: 0x060194CA RID: 103626 RVA: 0x003A1C44 File Offset: 0x0039FE44
+		// Token: 0x17007F5D RID: 32605
+		// (get) Token: 0x0601AC35 RID: 109621 RVA: 0x003CD314 File Offset: 0x003CB514
+		// (set) Token: 0x0601AC36 RID: 109622 RVA: 0x003CD31C File Offset: 0x003CB51C
 		public byte NullMask { get; set; }
 
-		// Token: 0x060194CB RID: 103627 RVA: 0x003A1C4D File Offset: 0x0039FE4D
+		// Token: 0x0601AC37 RID: 109623 RVA: 0x003CD325 File Offset: 0x003CB525
 		public IZaxisViewRangeT()
 		{
 			this.Up = 0;

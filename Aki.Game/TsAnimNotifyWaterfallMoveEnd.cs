@@ -6,74 +6,66 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x020001E4 RID: 484
+// Token: 0x020001E8 RID: 488
 [UClass("/Game/Aki/TypeScript/Game/AnimNotify/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AnimNotify/TsAnimNotifyWaterfallMoveEnd.TsAnimNotifyWaterfallMoveEnd_C")]
 public class TsAnimNotifyWaterfallMoveEnd : TsAnimNotifyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x06001E38 RID: 7736 RVA: 0x000971F8 File Offset: 0x000953F8
+	// Token: 0x06001ED5 RID: 7893 RVA: 0x0009E26C File Offset: 0x0009C46C
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_Notify(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_Notify"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotify.__K2_Notify_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyWaterfallMoveEnd) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_Notify"), TsAnimNotifyWaterfallMoveEnd.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotify.__K2_Notify_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotify.__K2_Notify_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
-			*(&ptr2->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+			return this.K2_Notify_Implementation(meshComp, animation);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotify.__K2_Notify_FunctionParams* ptr = stackalloc UKuroAnimNotify.__K2_Notify_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotify.__K2_Notify_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
+		*(&ptr->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x06001E39 RID: 7737 RVA: 0x00097297 File Offset: 0x00095497
+	// Token: 0x06001ED6 RID: 7894 RVA: 0x0009E322 File Offset: 0x0009C522
 	[NullableContext(2)]
 	protected virtual bool K2_Notify_Implementation(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
 		return true;
 	}
 
-	// Token: 0x06001E3A RID: 7738 RVA: 0x0009729C File Offset: 0x0009549C
+	// Token: 0x06001ED7 RID: 7895 RVA: 0x0009E328 File Offset: 0x0009C528
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override string GetNotifyName()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetNotifyName"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UAnimNotify.__GetNotifyName_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyWaterfallMoveEnd) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetNotifyName"), TsAnimNotifyWaterfallMoveEnd.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UAnimNotify.__GetNotifyName_FunctionParams*)ptr + 15L / (long)sizeof(UAnimNotify.__GetNotifyName_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.GetNotifyName_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		string result = FString.ToString((void*)(&ptr2->__Result));
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UAnimNotify.__GetNotifyName_FunctionParams* ptr = stackalloc UAnimNotify.__GetNotifyName_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UAnimNotify.__GetNotifyName_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		string result = FString.ToString((void*)(&ptr->__Result));
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return result;
 	}
 
-	// Token: 0x06001E3B RID: 7739 RVA: 0x00097317 File Offset: 0x00095517
+	// Token: 0x06001ED8 RID: 7896 RVA: 0x0009E3B8 File Offset: 0x0009C5B8
 	[NullableContext(1)]
 	protected override string GetNotifyName_Implementation()
 	{
 		return "攀瀑结束(已废弃)";
 	}
 
-	// Token: 0x06001E3C RID: 7740 RVA: 0x0009731E File Offset: 0x0009551E
+	// Token: 0x06001ED9 RID: 7897 RVA: 0x0009E3BF File Offset: 0x0009C5BF
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsAnimNotifyWaterfallMoveEnd._ClassPtr == IntPtr.Zero)
@@ -83,23 +75,23 @@ public class TsAnimNotifyWaterfallMoveEnd : TsAnimNotifyBase, IUnrealUObject, IU
 		return TsAnimNotifyWaterfallMoveEnd._ClassPtr;
 	}
 
-	// Token: 0x06001E3D RID: 7741 RVA: 0x00097344 File Offset: 0x00095544
+	// Token: 0x06001EDA RID: 7898 RVA: 0x0009E3E4 File Offset: 0x0009C5E4
 	public TsAnimNotifyWaterfallMoveEnd() : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyWaterfallMoveEnd.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06001E3E RID: 7742 RVA: 0x0009736C File Offset: 0x0009556C
+	// Token: 0x06001EDB RID: 7899 RVA: 0x0009E40C File Offset: 0x0009C60C
 	[NullableContext(1)]
 	public TsAnimNotifyWaterfallMoveEnd(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyWaterfallMoveEnd.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06001E3F RID: 7743 RVA: 0x0009739F File Offset: 0x0009559F
+	// Token: 0x06001EDC RID: 7900 RVA: 0x0009E43F File Offset: 0x0009C63F
 	protected TsAnimNotifyWaterfallMoveEnd(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06001E40 RID: 7744 RVA: 0x000973A8 File Offset: 0x000955A8
+	// Token: 0x06001EDD RID: 7901 RVA: 0x0009E448 File Offset: 0x0009C648
 	protected unsafe virtual void __CPPCALL_K2_Notify_Implementation(UKuroAnimNotify.__K2_Notify_FunctionParams* __Params)
 	{
 		USkeletalMeshComponent orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(__Params->MeshComp);
@@ -107,19 +99,19 @@ public class TsAnimNotifyWaterfallMoveEnd : TsAnimNotifyBase, IUnrealUObject, IU
 		__Params->__Result = this.K2_Notify_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x06001E41 RID: 7745 RVA: 0x000973DB File Offset: 0x000955DB
+	// Token: 0x06001EDE RID: 7902 RVA: 0x0009E47B File Offset: 0x0009C67B
 	protected unsafe virtual void __CPPCALL_GetNotifyName_Implementation(UAnimNotify.__GetNotifyName_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), this.GetNotifyName_Implementation());
 	}
 
-	// Token: 0x040012AB RID: 4779
+	// Token: 0x040012EE RID: 4846
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AnimNotify/TsAnimNotifyWaterfallMoveEnd.TsAnimNotifyWaterfallMoveEnd_C";
 
-	// Token: 0x040012AC RID: 4780
+	// Token: 0x040012EF RID: 4847
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x040012AD RID: 4781
+	// Token: 0x040012F0 RID: 4848
 	private static IntPtr _ClassDefaultObjectPtr;
 }

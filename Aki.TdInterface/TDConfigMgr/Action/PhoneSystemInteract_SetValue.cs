@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002102 RID: 8450
+	// Token: 0x02002363 RID: 9059
 	public class PhoneSystemInteract_SetValue
 	{
-		// Token: 0x04006F4E RID: 28494
-		[Nullable(1)]
+		// Token: 0x04007582 RID: 30082
 		public IPhoneSystemInteractBase InteractType;
 	}
 }

@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 {
-	// Token: 0x02006465 RID: 25701
+	// Token: 0x020053E3 RID: 21475
 	internal class WishingItem : UiPanelBase
 	{
-		// Token: 0x0604096C RID: 264556 RVA: 0x00FA2220 File Offset: 0x00FA0420
+		// Token: 0x0603562D RID: 218669 RVA: 0x00EE919C File Offset: 0x00EE739C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0604096D RID: 264557 RVA: 0x00FA22CC File Offset: 0x00FA04CC
+		// Token: 0x0603562E RID: 218670 RVA: 0x00EE9248 File Offset: 0x00EE7448
 		public void RefreshItem(int moonId)
 		{
 			PhaseOfMoon? phaseOfMoonById = MoonSignInConfig.Instance.GetPhaseOfMoonById(moonId);
@@ -42,19 +42,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			base.SetTextureByPath(phaseOfMoonById.Value.Texture, base.GetTexture(5), null, null);
 		}
 
-		// Token: 0x0200C68F RID: 50831
+		// Token: 0x0200B075 RID: 45173
 		private class EWishingItemDefine
 		{
-			// Token: 0x0403BF12 RID: 245522
+			// Token: 0x0403686D RID: 223341
 			public const int DesText1 = 0;
 
-			// Token: 0x0403BF13 RID: 245523
+			// Token: 0x0403686E RID: 223342
 			public const int DesText2 = 1;
 
-			// Token: 0x0403BF14 RID: 245524
+			// Token: 0x0403686F RID: 223343
 			public const int DesText3 = 2;
 
-			// Token: 0x0403BF15 RID: 245525
+			// Token: 0x04036870 RID: 223344
 			public const int MoonTexture = 5;
 		}
 	}

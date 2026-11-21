@@ -6,19 +6,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DA8 RID: 23976
+	// Token: 0x02004D8A RID: 19850
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PartStatePanel
 	{
-		// Token: 0x0603CE1B RID: 249371 RVA: 0x00E9FFDA File Offset: 0x00E9E1DA
+		// Token: 0x06031D78 RID: 204152 RVA: 0x00DF0892 File Offset: 0x00DEEA92
 		public void InitializePartStatePanel()
 		{
 			this.AddEvents();
 			this.InitializeExistingEntities();
 		}
 
-		// Token: 0x0603CE1C RID: 249372 RVA: 0x00E9FFE8 File Offset: 0x00E9E1E8
+		// Token: 0x06031D79 RID: 204153 RVA: 0x00DF08A0 File Offset: 0x00DEEAA0
 		private void InitializeExistingEntities()
 		{
 			IReadOnlyList<EntityHandle> allEntities = CreatureModel.Instance.GetAllEntities();
@@ -35,26 +35,26 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CE1D RID: 249373 RVA: 0x00EA004C File Offset: 0x00E9E24C
+		// Token: 0x06031D7A RID: 204154 RVA: 0x00DF0904 File Offset: 0x00DEEB04
 		public void ResetPartStatePanel()
 		{
 			this.DestroyAllParStates();
 			this.RemoveEvents();
 		}
 
-		// Token: 0x0603CE1E RID: 249374 RVA: 0x00EA005A File Offset: 0x00E9E25A
+		// Token: 0x06031D7B RID: 204155 RVA: 0x00DF0912 File Offset: 0x00DEEB12
 		private void AddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.OnSetPartStateVisible, new Action<int, FName?, bool>(this.OnSetPartStateVisible));
 		}
 
-		// Token: 0x0603CE1F RID: 249375 RVA: 0x00EA0078 File Offset: 0x00E9E278
+		// Token: 0x06031D7C RID: 204156 RVA: 0x00DF0930 File Offset: 0x00DEEB30
 		private void RemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.OnSetPartStateVisible, new Action<int, FName?, bool>(this.OnSetPartStateVisible));
 		}
 
-		// Token: 0x0603CE20 RID: 249376 RVA: 0x00EA0098 File Offset: 0x00E9E298
+		// Token: 0x06031D7D RID: 204157 RVA: 0x00DF0950 File Offset: 0x00DEEB50
 		private void OnSetPartStateVisible(int entityId, FName? boneName, bool bVisible)
 		{
 			Entity entity = EntitySystem.Instance.Get(entityId);
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CE21 RID: 249377 RVA: 0x00EA0148 File Offset: 0x00E9E348
+		// Token: 0x06031D7E RID: 204158 RVA: 0x00DF0A00 File Offset: 0x00DEEC00
 		public void OnCreateEntity(Entity entity)
 		{
 			if (entity == null)
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CE22 RID: 249378 RVA: 0x00EA0200 File Offset: 0x00E9E400
+		// Token: 0x06031D7F RID: 204159 RVA: 0x00DF0AB8 File Offset: 0x00DEECB8
 		[NullableContext(2)]
 		public void ActivatePartStateByRole(Entity entity)
 		{
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CE23 RID: 249379 RVA: 0x00EA0240 File Offset: 0x00E9E440
+		// Token: 0x06031D80 RID: 204160 RVA: 0x00DF0AF8 File Offset: 0x00DEECF8
 		public void ActivatePartState(Entity entity, CharacterPart partInfo)
 		{
 			PartState partState = this.GetPartState(entity.Id, partInfo.Index);
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.NewPartState(entity, partInfo);
 		}
 
-		// Token: 0x0603CE24 RID: 249380 RVA: 0x00EA0278 File Offset: 0x00E9E478
+		// Token: 0x06031D81 RID: 204161 RVA: 0x00DF0B30 File Offset: 0x00DEED30
 		public void DestroyAllParStates()
 		{
 			foreach (Dictionary<int, PartState> dictionary in this.PartStateGroupMap.Values)
@@ -190,7 +190,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.PartStateGroupMap.Clear();
 		}
 
-		// Token: 0x0603CE25 RID: 249381 RVA: 0x00EA0314 File Offset: 0x00E9E514
+		// Token: 0x06031D82 RID: 204162 RVA: 0x00DF0BCC File Offset: 0x00DEEDCC
 		public void DestroyPartStateFromRole(Entity entity)
 		{
 			int id = entity.Id;
@@ -206,7 +206,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.PartStateGroupMap[id].Clear();
 		}
 
-		// Token: 0x0603CE26 RID: 249382 RVA: 0x00EA0384 File Offset: 0x00E9E584
+		// Token: 0x06031D83 RID: 204163 RVA: 0x00DF0C3C File Offset: 0x00DEEE3C
 		public void DestroyPartState(int entityId, int partIndex)
 		{
 			PartState partState = this.GetPartState(entityId, partIndex);
@@ -222,7 +222,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CE27 RID: 249383 RVA: 0x00EA03C0 File Offset: 0x00E9E5C0
+		// Token: 0x06031D84 RID: 204164 RVA: 0x00DF0C78 File Offset: 0x00DEEE78
 		public void Tick(float delta)
 		{
 			foreach (Dictionary<int, PartState> dictionary in this.PartStateGroupMap.Values)
@@ -234,7 +234,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CE28 RID: 249384 RVA: 0x00EA0450 File Offset: 0x00E9E650
+		// Token: 0x06031D85 RID: 204165 RVA: 0x00DF0D08 File Offset: 0x00DEEF08
 		private PartState NewPartState(Entity entity, CharacterPart partInfo)
 		{
 			int id = entity.Id;
@@ -249,7 +249,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return partState;
 		}
 
-		// Token: 0x0603CE29 RID: 249385 RVA: 0x00EA04A0 File Offset: 0x00E9E6A0
+		// Token: 0x06031D86 RID: 204166 RVA: 0x00DF0D58 File Offset: 0x00DEEF58
 		[NullableContext(2)]
 		public PartState GetPartState(int entityId, int partIndex)
 		{
@@ -261,7 +261,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return dictionary.GetValueOrDefault(partIndex);
 		}
 
-		// Token: 0x0603CE2A RID: 249386 RVA: 0x00EA04C6 File Offset: 0x00E9E6C6
+		// Token: 0x06031D87 RID: 204167 RVA: 0x00DF0D7E File Offset: 0x00DEEF7E
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -272,10 +272,10 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return this.PartStateGroupMap.GetValueOrDefault(entityId);
 		}
 
-		// Token: 0x0401FB6E RID: 129902
+		// Token: 0x0401A626 RID: 108070
 		private readonly Dictionary<int, Dictionary<int, PartState>> PartStateGroupMap = new Dictionary<int, Dictionary<int, PartState>>();
 
-		// Token: 0x0401FB6F RID: 129903
+		// Token: 0x0401A627 RID: 108071
 		[StaticVariableRuleIgnore]
 		private static readonly Stat BattleViewTickStatsObject = Stat.Create("[BattleView]PartStatePanelTick", "", "");
 	}

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000768 RID: 1896
+	// Token: 0x02000782 RID: 1922
 	public class ConfigPsFeedbackById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002C81 RID: 11393 RVA: 0x00154C8B File Offset: 0x00152E8B
+		// Token: 0x06002D1D RID: 11549 RVA: 0x0015BB97 File Offset: 0x00159D97
 		static ConfigPsFeedbackById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPsFeedbackById.CreateStaticDefaultValue), new Action(ConfigPsFeedbackById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002C82 RID: 11394 RVA: 0x00154CAC File Offset: 0x00152EAC
+		// Token: 0x06002D1E RID: 11550 RVA: 0x0015BBB8 File Offset: 0x00159DB8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPsFeedbackById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002C83 RID: 11395 RVA: 0x00154D2B File Offset: 0x00152F2B
+		// Token: 0x06002D1F RID: 11551 RVA: 0x0015BC37 File Offset: 0x00159E37
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPsFeedbackById.LogPair = null;
 			ConfigPsFeedbackById.HandleId = 0;
 		}
 
-		// Token: 0x06002C84 RID: 11396 RVA: 0x00154D39 File Offset: 0x00152F39
+		// Token: 0x06002D20 RID: 11552 RVA: 0x0015BC45 File Offset: 0x00159E45
 		public static void Init()
 		{
 			ConfigPsFeedbackById.HandleId = ConfigCommon.InitDataStatement(ConfigPsFeedbackById.HandleId, "db_input_settings.db", "select BinData from `PsFeedback` where Id=?");
 		}
 
-		// Token: 0x06002C85 RID: 11397 RVA: 0x00154D54 File Offset: 0x00152F54
+		// Token: 0x06002D21 RID: 11553 RVA: 0x0015BC60 File Offset: 0x00159E60
 		public static PsFeedback? GetConfig(string p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPsFeedbackById.HandleId, ConfigPsFeedbackById.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new PsFeedback?(rootAsPsFeedback);
 		}
 
-		// Token: 0x040033BE RID: 13246
+		// Token: 0x04003474 RID: 13428
 		private const string DB = "db_input_settings.db";
 
-		// Token: 0x040033BF RID: 13247
+		// Token: 0x04003475 RID: 13429
 		private const string FILE = "s.输入配置.xlsx";
 
-		// Token: 0x040033C0 RID: 13248
+		// Token: 0x04003476 RID: 13430
 		private const string TABLE = "PsFeedback";
 
-		// Token: 0x040033C1 RID: 13249
+		// Token: 0x04003477 RID: 13431
 		private const string COMMAND = "select BinData from `PsFeedback` where Id=?";
 
-		// Token: 0x040033C2 RID: 13250
+		// Token: 0x04003478 RID: 13432
 		private const string KEY_PREFIX = "PsFeedbackById";
 
-		// Token: 0x040033C3 RID: 13251
+		// Token: 0x04003479 RID: 13433
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040033C4 RID: 13252
+		// Token: 0x0400347A RID: 13434
 		private static int HandleId;
 	}
 }

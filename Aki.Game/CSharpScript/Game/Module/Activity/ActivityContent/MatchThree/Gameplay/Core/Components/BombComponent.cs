@@ -3,15 +3,15 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Core.Components
 {
-	// Token: 0x0200652D RID: 25901
+	// Token: 0x020054AB RID: 21675
 	public sealed class BombComponent : IPieceComponent, IClearBehavior
 	{
-		// Token: 0x06040F0D RID: 265997 RVA: 0x00FBCAA1 File Offset: 0x00FBACA1
+		// Token: 0x06035BD2 RID: 220114 RVA: 0x00F03AE5 File Offset: 0x00F01CE5
 		public BombComponent(int rows, int cols)
 		{
 		}
 
-		// Token: 0x06040F0E RID: 265998 RVA: 0x00FBCAB8 File Offset: 0x00FBACB8
+		// Token: 0x06035BD3 RID: 220115 RVA: 0x00F03AFC File Offset: 0x00F01CFC
 		[NullableContext(1)]
 		public void OnCleared(IDispatchContext sink, Piece self, GridPosition pos, EPieceType? source)
 		{
@@ -30,11 +30,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x04021DFA RID: 138746
+		// Token: 0x0401C72B RID: 116523
 		[CompilerGenerated]
 		private int <rows>P = rows;
 
-		// Token: 0x04021DFB RID: 138747
+		// Token: 0x0401C72C RID: 116524
 		[CompilerGenerated]
 		private int <cols>P = cols;
 	}

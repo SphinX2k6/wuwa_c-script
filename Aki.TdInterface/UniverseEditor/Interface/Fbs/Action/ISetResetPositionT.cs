@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007068 RID: 28776
+	// Token: 0x02007834 RID: 30772
 	public class ISetResetPositionT
 	{
-		// Token: 0x1700D5E3 RID: 54755
-		// (get) Token: 0x06032F3C RID: 208700 RVA: 0x006DFAC2 File Offset: 0x006DDCC2
-		// (set) Token: 0x06032F3D RID: 208701 RVA: 0x006DFACA File Offset: 0x006DDCCA
+		// Token: 0x1700E1C6 RID: 57798
+		// (get) Token: 0x060361DD RID: 221661 RVA: 0x00740076 File Offset: 0x0073E276
+		// (set) Token: 0x060361DE RID: 221662 RVA: 0x0074007E File Offset: 0x0073E27E
 		public ESetTeleControlType Type { get; set; }
 
-		// Token: 0x1700D5E4 RID: 54756
-		// (get) Token: 0x06032F3E RID: 208702 RVA: 0x006DFAD3 File Offset: 0x006DDCD3
-		// (set) Token: 0x06032F3F RID: 208703 RVA: 0x006DFADB File Offset: 0x006DDCDB
+		// Token: 0x1700E1C7 RID: 57799
+		// (get) Token: 0x060361DF RID: 221663 RVA: 0x00740087 File Offset: 0x0073E287
+		// (set) Token: 0x060361E0 RID: 221664 RVA: 0x0074008F File Offset: 0x0073E28F
 		public int EntityId { get; set; }
 
-		// Token: 0x1700D5E5 RID: 54757
-		// (get) Token: 0x06032F40 RID: 208704 RVA: 0x006DFAE4 File Offset: 0x006DDCE4
-		// (set) Token: 0x06032F41 RID: 208705 RVA: 0x006DFAEC File Offset: 0x006DDCEC
+		// Token: 0x1700E1C8 RID: 57800
+		// (get) Token: 0x060361E1 RID: 221665 RVA: 0x00740098 File Offset: 0x0073E298
+		// (set) Token: 0x060361E2 RID: 221666 RVA: 0x007400A0 File Offset: 0x0073E2A0
 		public int PositionEntityId { get; set; }
 
-		// Token: 0x06032F42 RID: 208706 RVA: 0x006DFAF5 File Offset: 0x006DDCF5
+		// Token: 0x060361E3 RID: 221667 RVA: 0x007400A9 File Offset: 0x0073E2A9
 		public ISetResetPositionT()
 		{
 			this.Type = ESetTeleControlType.OpenGravity;

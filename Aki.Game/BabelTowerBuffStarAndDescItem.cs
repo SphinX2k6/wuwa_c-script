@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200111D RID: 4381
+// Token: 0x020005D1 RID: 1489
 public class BabelTowerBuffStarAndDescItem : UiPanelBase
 {
-	// Token: 0x060072A3 RID: 29347 RVA: 0x001784C0 File Offset: 0x001766C0
+	// Token: 0x06004639 RID: 17977 RVA: 0x00180E7C File Offset: 0x0017F07C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -22,7 +22,7 @@ public class BabelTowerBuffStarAndDescItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060072A4 RID: 29348 RVA: 0x00178529 File Offset: 0x00176729
+	// Token: 0x0600463A RID: 17978 RVA: 0x00180EE5 File Offset: 0x0017F0E5
 	[NullableContext(1)]
 	public void Refresh(string starText, bool showStar, string descTextId)
 	{
@@ -34,13 +34,13 @@ public class BabelTowerBuffStarAndDescItem : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), descTextId, Array.Empty<object>());
 	}
 
-	// Token: 0x020076E4 RID: 30436
+	// Token: 0x02006878 RID: 26744
 	private class EComponents
 	{
-		// Token: 0x040273B7 RID: 160695
+		// Token: 0x04022700 RID: 141056
 		public const int StarNumText = 0;
 
-		// Token: 0x040273B8 RID: 160696
+		// Token: 0x04022701 RID: 141057
 		public const int DescText = 1;
 	}
 }

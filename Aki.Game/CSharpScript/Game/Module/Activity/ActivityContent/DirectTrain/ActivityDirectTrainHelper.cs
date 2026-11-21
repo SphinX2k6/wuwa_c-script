@@ -12,31 +12,31 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain
 {
-	// Token: 0x02006741 RID: 26433
+	// Token: 0x02005691 RID: 22161
 	public class ActivityDirectTrainHelper : IStaticVariableResetter
 	{
-		// Token: 0x06041F92 RID: 270226 RVA: 0x01000CE2 File Offset: 0x00FFEEE2
+		// Token: 0x06036ADE RID: 223966 RVA: 0x00F42092 File Offset: 0x00F40292
 		static ActivityDirectTrainHelper()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ActivityDirectTrainHelper.CreateStaticDefaultValue), new Action(ActivityDirectTrainHelper.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06041F93 RID: 270227 RVA: 0x01000D01 File Offset: 0x00FFEF01
+		// Token: 0x06036ADF RID: 223967 RVA: 0x00F420B1 File Offset: 0x00F402B1
 		public static void CreateStaticDefaultValue()
 		{
 			ActivityDirectTrainHelper.DirectTrainStartConditionMap = new Dictionary<EDirectTrainStartCondition, bool>();
 			ActivityDirectTrainHelper.IsProOpen = false;
 		}
 
-		// Token: 0x06041F94 RID: 270228 RVA: 0x01000D13 File Offset: 0x00FFEF13
+		// Token: 0x06036AE0 RID: 223968 RVA: 0x00F420C3 File Offset: 0x00F402C3
 		public static void ResetStaticDefaultValue()
 		{
 			ActivityDirectTrainHelper.DirectTrainStartConditionMap = null;
 			ActivityDirectTrainHelper.IsProOpen = false;
 		}
 
-		// Token: 0x1700965F RID: 38495
-		// (get) Token: 0x06041F95 RID: 270229 RVA: 0x01000D24 File Offset: 0x00FFEF24
+		// Token: 0x1700699E RID: 27038
+		// (get) Token: 0x06036AE1 RID: 223969 RVA: 0x00F420D4 File Offset: 0x00F402D4
 		public static bool IsInValidInstance
 		{
 			get
@@ -60,14 +60,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain
 			}
 		}
 
-		// Token: 0x06041F96 RID: 270230 RVA: 0x01000D9C File Offset: 0x00FFEF9C
+		// Token: 0x06036AE2 RID: 223970 RVA: 0x00F4214C File Offset: 0x00F4034C
 		public static bool IsGetActivityRewards(int actId)
 		{
 			int skipQuestId = ActivityDirectTrainModel.Instance.GetSkipQuestId(actId);
 			return QuestNewModel.Instance.CheckQuestFinished(skipQuestId);
 		}
 
-		// Token: 0x06041F97 RID: 270231 RVA: 0x01000DC0 File Offset: 0x00FFEFC0
+		// Token: 0x06036AE3 RID: 223971 RVA: 0x00F42170 File Offset: 0x00F40370
 		public static int? GetRecommendQuestLinkId(int activityId)
 		{
 			int[] recommendQuestLinkListArray = ActivityDirectTrainConfig.Instance.GetDirectTrainActivityConfById(activityId).Value.GetRecommendQuestLinkListArray();
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain
 			return null;
 		}
 
-		// Token: 0x06041F98 RID: 270232 RVA: 0x01000E84 File Offset: 0x00FFF084
+		// Token: 0x06036AE4 RID: 223972 RVA: 0x00F42234 File Offset: 0x00F40434
 		public static UniTask TryOpenPro(bool isByTask = true)
 		{
 			ActivityDirectTrainHelper.<TryOpenPro>d__9 <TryOpenPro>d__;
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain
 			return <TryOpenPro>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06041F99 RID: 270233 RVA: 0x01000EC8 File Offset: 0x00FFF0C8
+		// Token: 0x06036AE5 RID: 223973 RVA: 0x00F42278 File Offset: 0x00F40478
 		private static int ResolveProTargetActivityId()
 		{
 			foreach (int num in DirectTrainModel.Instance.GetAllProSubActivityCaches().Keys)
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain
 			return 0;
 		}
 
-		// Token: 0x06041F9A RID: 270234 RVA: 0x01000F48 File Offset: 0x00FFF148
+		// Token: 0x06036AE6 RID: 223974 RVA: 0x00F422F8 File Offset: 0x00F404F8
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain
 			return <RequestDirectTrainInfoBeforeActivityOpen>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06041F9B RID: 270235 RVA: 0x01000F84 File Offset: 0x00FFF184
+		// Token: 0x06036AE7 RID: 223975 RVA: 0x00F42334 File Offset: 0x00F40534
 		[NullableContext(1)]
 		public static void RequestThroughTrain(int actId, TActivityDirectTrainCallBack callBack)
 		{
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain
 			}, 0);
 		}
 
-		// Token: 0x06041F9C RID: 270236 RVA: 0x01000FD8 File Offset: 0x00FFF1D8
+		// Token: 0x06036AE8 RID: 223976 RVA: 0x00F42388 File Offset: 0x00F40588
 		public static UniTask RequestThroughTrainFinishViewAsync(int actId)
 		{
 			ActivityDirectTrainHelper.<RequestThroughTrainFinishViewAsync>d__13 <RequestThroughTrainFinishViewAsync>d__;
@@ -177,18 +177,18 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain
 			return <RequestThroughTrainFinishViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06041F9D RID: 270237 RVA: 0x0100101B File Offset: 0x00FFF21B
+		// Token: 0x06036AE9 RID: 223977 RVA: 0x00F423CB File Offset: 0x00F405CB
 		public static void EmitEventsForOther(bool active)
 		{
 			EventSystem.Instance.Emit<bool>(EEventName.OnActivityDirectTrainProSetActive, active);
 			EventSystem.Instance.Emit<int>(EEventName.ActivityDirectTrainRedDotUpdate, 0);
 		}
 
-		// Token: 0x040225EA RID: 140778
+		// Token: 0x0401CE43 RID: 118339
 		[Nullable(2)]
 		public static Dictionary<EDirectTrainStartCondition, bool> DirectTrainStartConditionMap;
 
-		// Token: 0x040225EB RID: 140779
+		// Token: 0x0401CE44 RID: 118340
 		public static bool IsProOpen;
 	}
 }

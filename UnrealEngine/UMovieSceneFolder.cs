@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200240B RID: 9227
+	// Token: 0x02000780 RID: 1920
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/MovieScene.MovieSceneFolder")]
 	[UnrealStructLayout(136, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 136)]
 	public class UMovieSceneFolder : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060229B8 RID: 141752 RVA: 0x00332EEE File Offset: 0x003310EE
+		// Token: 0x0600A5CD RID: 42445 RVA: 0x000F4D98 File Offset: 0x000F2F98
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UMovieSceneFolder._ClassPtr;
 		}
 
-		// Token: 0x060229B9 RID: 141753 RVA: 0x00332EFC File Offset: 0x003310FC
+		// Token: 0x0600A5CE RID: 42446 RVA: 0x000F4DA4 File Offset: 0x000F2FA4
 		public UMovieSceneFolder() : this(BuiltinUtils.AllocNativeUObject(UMovieSceneFolder.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060229BA RID: 141754 RVA: 0x00332F24 File Offset: 0x00331124
+		// Token: 0x0600A5CF RID: 42447 RVA: 0x000F4DCC File Offset: 0x000F2FCC
 		public UMovieSceneFolder(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UMovieSceneFolder.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700853A RID: 34106
-		// (get) Token: 0x060229BB RID: 141755 RVA: 0x00332F57 File Offset: 0x00331157
-		// (set) Token: 0x060229BC RID: 141756 RVA: 0x00332F6B File Offset: 0x0033116B
+		// Token: 0x17001EC6 RID: 7878
+		// (get) Token: 0x0600A5D0 RID: 42448 RVA: 0x000F4DFF File Offset: 0x000F2FFF
+		// (set) Token: 0x0600A5D1 RID: 42449 RVA: 0x000F4E13 File Offset: 0x000F3013
 		public unsafe FName FolderName
 		{
 			get
@@ -44,9 +44,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700853B RID: 34107
-		// (get) Token: 0x060229BD RID: 141757 RVA: 0x00332F80 File Offset: 0x00331180
-		// (set) Token: 0x060229BE RID: 141758 RVA: 0x00332FB9 File Offset: 0x003311B9
+		// Token: 0x17001EC7 RID: 7879
+		// (get) Token: 0x0600A5D2 RID: 42450 RVA: 0x000F4E28 File Offset: 0x000F3028
+		// (set) Token: 0x0600A5D3 RID: 42451 RVA: 0x000F4E61 File Offset: 0x000F3061
 		public TArray<UMovieSceneFolder> ChildFolders
 		{
 			get
@@ -65,9 +65,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700853C RID: 34108
-		// (get) Token: 0x060229BF RID: 141759 RVA: 0x00332FC8 File Offset: 0x003311C8
-		// (set) Token: 0x060229C0 RID: 141760 RVA: 0x00333001 File Offset: 0x00331201
+		// Token: 0x17001EC8 RID: 7880
+		// (get) Token: 0x0600A5D4 RID: 42452 RVA: 0x000F4E70 File Offset: 0x000F3070
+		// (set) Token: 0x0600A5D5 RID: 42453 RVA: 0x000F4EA9 File Offset: 0x000F30A9
 		public TArray<UMovieSceneTrack> ChildMasterTracks
 		{
 			get
@@ -86,9 +86,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700853D RID: 34109
-		// (get) Token: 0x060229C1 RID: 141761 RVA: 0x00333010 File Offset: 0x00331210
-		// (set) Token: 0x060229C2 RID: 141762 RVA: 0x00333049 File Offset: 0x00331249
+		// Token: 0x17001EC9 RID: 7881
+		// (get) Token: 0x0600A5D6 RID: 42454 RVA: 0x000F4EB8 File Offset: 0x000F30B8
+		// (set) Token: 0x0600A5D7 RID: 42455 RVA: 0x000F4EF1 File Offset: 0x000F30F1
 		public TArray<string> ChildObjectBindingStrings
 		{
 			get
@@ -107,33 +107,33 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060229C3 RID: 141763 RVA: 0x00333057 File Offset: 0x00331257
+		// Token: 0x0600A5D8 RID: 42456 RVA: 0x000F4EFF File Offset: 0x000F30FF
 		static UMovieSceneFolder()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/MovieScene.MovieSceneFolder");
 		}
 
-		// Token: 0x060229C4 RID: 141764 RVA: 0x00333065 File Offset: 0x00331265
+		// Token: 0x0600A5D9 RID: 42457 RVA: 0x000F4F0D File Offset: 0x000F310D
 		protected UMovieSceneFolder(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040127E1 RID: 75745
+		// Token: 0x040046FA RID: 18170
 		public new const string __ObjectPath = "/Script/MovieScene.MovieSceneFolder";
 
-		// Token: 0x040127E2 RID: 75746
+		// Token: 0x040046FB RID: 18171
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040127E3 RID: 75747
+		// Token: 0x040046FC RID: 18172
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040127E4 RID: 75748
+		// Token: 0x040046FD RID: 18173
 		internal static int __PropertyOffset_FolderName;
 
-		// Token: 0x040127E5 RID: 75749
+		// Token: 0x040046FE RID: 18174
 		internal static int __PropertyOffset_ChildFolders;
 
-		// Token: 0x040127E6 RID: 75750
+		// Token: 0x040046FF RID: 18175
 		[Nullable(new byte[]
 		{
 			2,
@@ -141,10 +141,10 @@ namespace UnrealEngine
 		})]
 		private TArray<UMovieSceneFolder> _ChildFolders;
 
-		// Token: 0x040127E7 RID: 75751
+		// Token: 0x04004700 RID: 18176
 		internal static int __PropertyOffset_ChildMasterTracks;
 
-		// Token: 0x040127E8 RID: 75752
+		// Token: 0x04004701 RID: 18177
 		[Nullable(new byte[]
 		{
 			2,
@@ -152,10 +152,10 @@ namespace UnrealEngine
 		})]
 		private TArray<UMovieSceneTrack> _ChildMasterTracks;
 
-		// Token: 0x040127E9 RID: 75753
+		// Token: 0x04004702 RID: 18178
 		internal static int __PropertyOffset_ChildObjectBindingStrings;
 
-		// Token: 0x040127EA RID: 75754
+		// Token: 0x04004703 RID: 18179
 		[Nullable(new byte[]
 		{
 			2,

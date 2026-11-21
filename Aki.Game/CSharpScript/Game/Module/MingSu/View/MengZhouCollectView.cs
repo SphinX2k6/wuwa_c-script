@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MingSu.View
 {
-	// Token: 0x020053DF RID: 21471
+	// Token: 0x020043C2 RID: 17346
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MengZhouCollectView : CollectItemViewBase
 	{
-		// Token: 0x06036E19 RID: 224793 RVA: 0x00D00094 File Offset: 0x00CFE294
+		// Token: 0x0602BD60 RID: 179552 RVA: 0x00C4F168 File Offset: 0x00C4D368
 		public MengZhouCollectView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06036E1A RID: 224794 RVA: 0x00D000A0 File Offset: 0x00CFE2A0
+		// Token: 0x0602BD61 RID: 179553 RVA: 0x00C4F174 File Offset: 0x00C4D374
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.MingSu.View
 			};
 		}
 
-		// Token: 0x06036E1B RID: 224795 RVA: 0x00D002BC File Offset: 0x00CFE4BC
+		// Token: 0x0602BD62 RID: 179554 RVA: 0x00C4F390 File Offset: 0x00C4D590
 		protected override void OnBegined()
 		{
 			UUIItem item = base.GetItem(5);
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.MingSu.View
 			this.Refresh();
 		}
 
-		// Token: 0x06036E1C RID: 224796 RVA: 0x00D0033D File Offset: 0x00CFE53D
+		// Token: 0x0602BD63 RID: 179555 RVA: 0x00C4F411 File Offset: 0x00C4D611
 		protected override void OnEnded()
 		{
 			this.RewardItemScrollView = null;
@@ -75,27 +75,27 @@ namespace CSharpScript.Game.Module.MingSu.View
 			EventSystem.Instance.Emit(EEventName.OnExitNpcInteract);
 		}
 
-		// Token: 0x06036E1D RID: 224797 RVA: 0x00D0035D File Offset: 0x00CFE55D
+		// Token: 0x0602BD64 RID: 179556 RVA: 0x00C4F431 File Offset: 0x00C4D631
 		protected override void OnUpdateDragonPoolView()
 		{
 			this.JumpNextLevel();
 		}
 
-		// Token: 0x06036E1E RID: 224798 RVA: 0x00D00365 File Offset: 0x00CFE565
+		// Token: 0x0602BD65 RID: 179557 RVA: 0x00C4F439 File Offset: 0x00C4D639
 		protected override void OnSubmitItemLevelUp()
 		{
 			this.SetActive(false);
 			EventSystem.Instance.Emit<bool>(EEventName.HangPlotViewHud, true);
 		}
 
-		// Token: 0x06036E1F RID: 224799 RVA: 0x00D0037F File Offset: 0x00CFE57F
+		// Token: 0x0602BD66 RID: 179558 RVA: 0x00C4F453 File Offset: 0x00C4D653
 		protected override void OnSubmitItemLevelMax()
 		{
 			this.SetActive(false);
 			EventSystem.Instance.Emit<bool>(EEventName.HangPlotViewHud, true);
 		}
 
-		// Token: 0x06036E20 RID: 224800 RVA: 0x00D00399 File Offset: 0x00CFE599
+		// Token: 0x0602BD67 RID: 179559 RVA: 0x00C4F46D File Offset: 0x00C4D66D
 		protected override void OnLevelUpSequenceFinished()
 		{
 			this.SetActive(true);
@@ -103,13 +103,13 @@ namespace CSharpScript.Game.Module.MingSu.View
 			EventSystem.Instance.Emit<bool>(EEventName.HangPlotViewHud, false);
 		}
 
-		// Token: 0x06036E21 RID: 224801 RVA: 0x00D003BA File Offset: 0x00CFE5BA
+		// Token: 0x0602BD68 RID: 179560 RVA: 0x00C4F48E File Offset: 0x00C4D68E
 		protected override void OnLevelMaxSequenceFinished()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06036E22 RID: 224802 RVA: 0x00D003C4 File Offset: 0x00CFE5C4
+		// Token: 0x0602BD69 RID: 179561 RVA: 0x00C4F498 File Offset: 0x00C4D698
 		protected override void OnSubmitItemLevelUpSequencePlayFail()
 		{
 			Log.Instance.Info(ELogModule.NPC, ELogAuthor.BB, "[CollectionItemDisplay]当交付等级提升Sequence播放失败时，重新显示提交道具界面", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -118,13 +118,13 @@ namespace CSharpScript.Game.Module.MingSu.View
 			EventSystem.Instance.Emit<bool>(EEventName.HangPlotViewHud, false);
 		}
 
-		// Token: 0x06036E23 RID: 224803 RVA: 0x00D0040F File Offset: 0x00CFE60F
+		// Token: 0x0602BD6A RID: 179562 RVA: 0x00C4F4E3 File Offset: 0x00C4D6E3
 		protected override void OnCollectItemCountChanged(int count)
 		{
 			this.RefreshCountText();
 		}
 
-		// Token: 0x06036E24 RID: 224804 RVA: 0x00D00418 File Offset: 0x00CFE618
+		// Token: 0x0602BD6B RID: 179563 RVA: 0x00C4F4EC File Offset: 0x00C4D6EC
 		protected override void OnCloseRewardView()
 		{
 			Log.Instance.Info(ELogModule.NPC, ELogAuthor.BB, "[CollectionItemDisplay]当关闭了交付奖励结算界面时，重新显示提交道具界面", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.Module.MingSu.View
 			EventSystem.Instance.Emit<bool>(EEventName.HangPlotViewHud, false);
 		}
 
-		// Token: 0x06036E25 RID: 224805 RVA: 0x00D00463 File Offset: 0x00CFE663
+		// Token: 0x0602BD6C RID: 179564 RVA: 0x00C4F537 File Offset: 0x00C4D737
 		private CollectSmallItemGrid OnCreateRewardItem()
 		{
 			CollectSmallItemGrid collectSmallItemGrid = new CollectSmallItemGrid();
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.Module.MingSu.View
 			return collectSmallItemGrid;
 		}
 
-		// Token: 0x06036E26 RID: 224806 RVA: 0x00D004A4 File Offset: 0x00CFE6A4
+		// Token: 0x0602BD6D RID: 179565 RVA: 0x00C4F578 File Offset: 0x00C4D778
 		private void OnExtendToggleRelease(MediumItemGridExtendCallback callbackParameter)
 		{
 			if (!callbackParameter.MediumItemGrid.IsHover)
@@ -152,25 +152,25 @@ namespace CSharpScript.Game.Module.MingSu.View
 			IRewardItemData rewardItemData = callbackParameter.Data as IRewardItemData;
 			if (((rewardItemData != null) ? rewardItemData.ItemInfo : null) != null)
 			{
-				ItemController.Instance.OpenItemTipsByItemId(rewardItemData.ItemInfo.Id, true, null);
+				ItemController.Instance.OpenItemTipsByItemId(rewardItemData.ItemInfo.Id, true, null, false);
 			}
 		}
 
-		// Token: 0x06036E27 RID: 224807 RVA: 0x00D004F0 File Offset: 0x00CFE6F0
+		// Token: 0x0602BD6E RID: 179566 RVA: 0x00C4F5C5 File Offset: 0x00C4D7C5
 		private void OnClickedLeftButton()
 		{
 			this.CurrentShowLevel--;
 			this.Refresh();
 		}
 
-		// Token: 0x06036E28 RID: 224808 RVA: 0x00D00506 File Offset: 0x00CFE706
+		// Token: 0x0602BD6F RID: 179567 RVA: 0x00C4F5DB File Offset: 0x00C4D7DB
 		private void OnClickedRightButton()
 		{
 			this.CurrentShowLevel++;
 			this.Refresh();
 		}
 
-		// Token: 0x06036E29 RID: 224809 RVA: 0x00D0051C File Offset: 0x00CFE71C
+		// Token: 0x0602BD70 RID: 179568 RVA: 0x00C4F5F4 File Offset: 0x00C4D7F4
 		private unsafe void OnClickedConfirmButton()
 		{
 			if (this.IsInLevelUpDisplay)
@@ -220,19 +220,19 @@ namespace CSharpScript.Game.Module.MingSu.View
 			EventSystem.Instance.Emit(EEventName.OnSubmitItemFail);
 		}
 
-		// Token: 0x06036E2A RID: 224810 RVA: 0x00D006DD File Offset: 0x00CFE8DD
+		// Token: 0x0602BD71 RID: 179569 RVA: 0x00C4F7B5 File Offset: 0x00C4D9B5
 		private void OnClickedItemButton()
 		{
-			ItemController.Instance.OpenItemTipsByItemId(this.CollectItemConfigId, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(this.CollectItemConfigId, true, null, false);
 		}
 
-		// Token: 0x06036E2B RID: 224811 RVA: 0x00D006F1 File Offset: 0x00CFE8F1
+		// Token: 0x0602BD72 RID: 179570 RVA: 0x00C4F7CA File Offset: 0x00C4D9CA
 		private void OnClickedCloseButton()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06036E2C RID: 224812 RVA: 0x00D006FC File Offset: 0x00CFE8FC
+		// Token: 0x0602BD73 RID: 179571 RVA: 0x00C4F7D4 File Offset: 0x00C4D9D4
 		private void JumpNextLevel()
 		{
 			int targetDragonPoolMaxLevelById = MingSuModel.Instance.GetTargetDragonPoolMaxLevelById(this.PoolConfigId);
@@ -241,7 +241,7 @@ namespace CSharpScript.Game.Module.MingSu.View
 			this.Refresh();
 		}
 
-		// Token: 0x06036E2D RID: 224813 RVA: 0x00D00740 File Offset: 0x00CFE940
+		// Token: 0x0602BD74 RID: 179572 RVA: 0x00C4F818 File Offset: 0x00C4DA18
 		private void Refresh()
 		{
 			this.RefreshShowLevel(this.CurrentShowLevel);
@@ -254,7 +254,7 @@ namespace CSharpScript.Game.Module.MingSu.View
 			this.RefreshItemIcon();
 		}
 
-		// Token: 0x06036E2E RID: 224814 RVA: 0x00D00778 File Offset: 0x00CFE978
+		// Token: 0x0602BD75 RID: 179573 RVA: 0x00C4F850 File Offset: 0x00C4DA50
 		private void RefreshItemIcon()
 		{
 			UUITexture texture = base.GetTexture(14);
@@ -271,7 +271,7 @@ namespace CSharpScript.Game.Module.MingSu.View
 			}
 		}
 
-		// Token: 0x06036E2F RID: 224815 RVA: 0x00D00808 File Offset: 0x00CFEA08
+		// Token: 0x0602BD76 RID: 179574 RVA: 0x00C4F8E0 File Offset: 0x00C4DAE0
 		private void RefreshShowLevel(int level)
 		{
 			UUIText text = base.GetText(3);
@@ -285,7 +285,7 @@ namespace CSharpScript.Game.Module.MingSu.View
 			MingSuModel.Instance.CurrentPreviewLevel = this.CurrentShowLevel;
 		}
 
-		// Token: 0x06036E30 RID: 224816 RVA: 0x00D0087C File Offset: 0x00CFEA7C
+		// Token: 0x0602BD77 RID: 179575 RVA: 0x00C4F954 File Offset: 0x00C4DB54
 		private void RefreshLeftRightBtnState()
 		{
 			UUIItem uuiitem = base.GetButton(0).RootUIComp.Get();
@@ -306,7 +306,7 @@ namespace CSharpScript.Game.Module.MingSu.View
 			uuiitem.SetUIActive(true);
 		}
 
-		// Token: 0x06036E31 RID: 224817 RVA: 0x00D00900 File Offset: 0x00CFEB00
+		// Token: 0x0602BD78 RID: 179576 RVA: 0x00C4F9D8 File Offset: 0x00C4DBD8
 		private void RefreshProgressBar()
 		{
 			MingSuModel instance = MingSuModel.Instance;
@@ -349,14 +349,14 @@ namespace CSharpScript.Game.Module.MingSu.View
 			}
 		}
 
-		// Token: 0x06036E32 RID: 224818 RVA: 0x00D00A88 File Offset: 0x00CFEC88
+		// Token: 0x0602BD79 RID: 179577 RVA: 0x00C4FB60 File Offset: 0x00C4DD60
 		private void RefreshReward()
 		{
 			List<IRewardItemData> targetDragonPoolLevelRewardById = MingSuModel.Instance.GetTargetDragonPoolLevelRewardById(this.PoolConfigId, this.CurrentShowLevel - 1);
 			this.RewardItemScrollView.RefreshByData(targetDragonPoolLevelRewardById, null, false);
 		}
 
-		// Token: 0x06036E33 RID: 224819 RVA: 0x00D00ABC File Offset: 0x00CFECBC
+		// Token: 0x0602BD7A RID: 179578 RVA: 0x00C4FB94 File Offset: 0x00C4DD94
 		private void RefreshCostItem()
 		{
 			UUIText text = base.GetText(6);
@@ -388,7 +388,7 @@ namespace CSharpScript.Game.Module.MingSu.View
 			}
 		}
 
-		// Token: 0x06036E34 RID: 224820 RVA: 0x00D00B6C File Offset: 0x00CFED6C
+		// Token: 0x0602BD7B RID: 179579 RVA: 0x00C4FC44 File Offset: 0x00C4DE44
 		private void RefreshConfirmButton()
 		{
 			UUIText text = base.GetText(8);
@@ -407,17 +407,17 @@ namespace CSharpScript.Game.Module.MingSu.View
 			}
 		}
 
-		// Token: 0x06036E35 RID: 224821 RVA: 0x00D00C00 File Offset: 0x00CFEE00
+		// Token: 0x0602BD7C RID: 179580 RVA: 0x00C4FCD8 File Offset: 0x00C4DED8
 		private void RefreshCountText()
 		{
 			int itemCountByConfigId = InventoryModel.Instance.GetItemCountByConfigId(this.CollectItemConfigId, 0);
 			base.GetText(10).SetText(itemCountByConfigId.ToString(), true);
 		}
 
-		// Token: 0x0401CF62 RID: 118626
+		// Token: 0x040179FA RID: 96762
 		private MingSuDefine.EMingSuShowState CurrentShowState;
 
-		// Token: 0x0401CF63 RID: 118627
+		// Token: 0x040179FB RID: 96763
 		[Nullable(new byte[]
 		{
 			2,
@@ -426,11 +426,11 @@ namespace CSharpScript.Game.Module.MingSu.View
 		})]
 		private GenericLayout<CollectSmallItemGrid, IRewardItemData> RewardItemScrollView;
 
-		// Token: 0x0401CF64 RID: 118628
+		// Token: 0x040179FC RID: 96764
 		[Nullable(2)]
 		private UUISprite ProgressBarSprite;
 
-		// Token: 0x0401CF65 RID: 118629
+		// Token: 0x040179FD RID: 96765
 		private bool IsInLevelUpDisplay;
 	}
 }

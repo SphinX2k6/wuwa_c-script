@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020076AE RID: 30382
+	// Token: 0x02007EB9 RID: 32441
 	public class TEffectPos2Union
 	{
-		// Token: 0x1700E60D RID: 58893
-		// (get) Token: 0x06037452 RID: 226386 RVA: 0x0077D5F6 File Offset: 0x0077B7F6
-		// (set) Token: 0x06037453 RID: 226387 RVA: 0x0077D5FE File Offset: 0x0077B7FE
+		// Token: 0x1700F249 RID: 62025
+		// (get) Token: 0x0603A8F5 RID: 239861 RVA: 0x007E174A File Offset: 0x007DF94A
+		// (set) Token: 0x0603A8F6 RID: 239862 RVA: 0x007E1752 File Offset: 0x007DF952
 		public TEffectPos2 Type { get; set; }
 
-		// Token: 0x1700E60E RID: 58894
-		// (get) Token: 0x06037454 RID: 226388 RVA: 0x0077D607 File Offset: 0x0077B807
-		// (set) Token: 0x06037455 RID: 226389 RVA: 0x0077D60F File Offset: 0x0077B80F
+		// Token: 0x1700F24A RID: 62026
+		// (get) Token: 0x0603A8F7 RID: 239863 RVA: 0x007E175B File Offset: 0x007DF95B
+		// (set) Token: 0x0603A8F8 RID: 239864 RVA: 0x007E1763 File Offset: 0x007DF963
 		public object Value { get; set; }
 
-		// Token: 0x06037456 RID: 226390 RVA: 0x0077D618 File Offset: 0x0077B818
+		// Token: 0x0603A8F9 RID: 239865 RVA: 0x007E176C File Offset: 0x007DF96C
 		public TEffectPos2Union()
 		{
 			this.Type = TEffectPos2.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06037457 RID: 226391 RVA: 0x0077D62E File Offset: 0x0077B82E
+		// Token: 0x0603A8FA RID: 239866 RVA: 0x007E1782 File Offset: 0x007DF982
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06037458 RID: 226392 RVA: 0x0077D640 File Offset: 0x0077B840
+		// Token: 0x0603A8FB RID: 239867 RVA: 0x007E1794 File Offset: 0x007DF994
 		public IAbsolutePos2T AsIAbsolutePos2()
 		{
 			return this.As<IAbsolutePos2T>();
 		}
 
-		// Token: 0x06037459 RID: 226393 RVA: 0x0077D648 File Offset: 0x0077B848
+		// Token: 0x0603A8FC RID: 239868 RVA: 0x007E179C File Offset: 0x007DF99C
 		public static TEffectPos2Union FromIAbsolutePos2(IAbsolutePos2T _iabsolutepos2)
 		{
 			return new TEffectPos2Union
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0603745A RID: 226394 RVA: 0x0077D65D File Offset: 0x0077B85D
+		// Token: 0x0603A8FD RID: 239869 RVA: 0x007E17B1 File Offset: 0x007DF9B1
 		public IEffectEntityPos2T AsIEffectEntityPos2()
 		{
 			return this.As<IEffectEntityPos2T>();
 		}
 
-		// Token: 0x0603745B RID: 226395 RVA: 0x0077D665 File Offset: 0x0077B865
+		// Token: 0x0603A8FE RID: 239870 RVA: 0x007E17B9 File Offset: 0x007DF9B9
 		public static TEffectPos2Union FromIEffectEntityPos2(IEffectEntityPos2T _ieffectentitypos2)
 		{
 			return new TEffectPos2Union
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0603745C RID: 226396 RVA: 0x0077D67A File Offset: 0x0077B87A
+		// Token: 0x0603A8FF RID: 239871 RVA: 0x007E17CE File Offset: 0x007DF9CE
 		public IEffectPlayerPos2T AsIEffectPlayerPos2()
 		{
 			return this.As<IEffectPlayerPos2T>();
 		}
 
-		// Token: 0x0603745D RID: 226397 RVA: 0x0077D682 File Offset: 0x0077B882
+		// Token: 0x0603A900 RID: 239872 RVA: 0x007E17D6 File Offset: 0x007DF9D6
 		public static TEffectPos2Union FromIEffectPlayerPos2(IEffectPlayerPos2T _ieffectplayerpos2)
 		{
 			return new TEffectPos2Union
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0603745E RID: 226398 RVA: 0x0077D698 File Offset: 0x0077B898
+		// Token: 0x0603A901 RID: 239873 RVA: 0x007E17EC File Offset: 0x007DF9EC
 		public static int Pack(FlatBufferBuilder builder, TEffectPos2Union _o)
 		{
 			switch (_o.Type)

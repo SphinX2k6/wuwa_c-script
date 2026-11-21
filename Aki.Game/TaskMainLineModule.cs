@@ -9,10 +9,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200136A RID: 4970
+// Token: 0x0200081E RID: 2078
 public class TaskMainLineModule : UiPanelBase
 {
-	// Token: 0x06008A93 RID: 35475 RVA: 0x001D9B84 File Offset: 0x001D7D84
+	// Token: 0x06005E2E RID: 24110 RVA: 0x001E29E0 File Offset: 0x001E0BE0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,12 +31,12 @@ public class TaskMainLineModule : UiPanelBase
 		};
 	}
 
-	// Token: 0x06008A94 RID: 35476 RVA: 0x001D9C90 File Offset: 0x001D7E90
+	// Token: 0x06005E2F RID: 24111 RVA: 0x001E2AEC File Offset: 0x001E0CEC
 	protected override void OnStart()
 	{
 	}
 
-	// Token: 0x06008A95 RID: 35477 RVA: 0x001D9C94 File Offset: 0x001D7E94
+	// Token: 0x06005E30 RID: 24112 RVA: 0x001E2AF0 File Offset: 0x001E0CF0
 	protected override UniTask OnBeforeShowAsyncImplement()
 	{
 		TaskMainLineModule.<OnBeforeShowAsyncImplement>d__8 <OnBeforeShowAsyncImplement>d__;
@@ -47,14 +47,14 @@ public class TaskMainLineModule : UiPanelBase
 		return <OnBeforeShowAsyncImplement>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008A96 RID: 35478 RVA: 0x001D9CD7 File Offset: 0x001D7ED7
+	// Token: 0x06005E31 RID: 24113 RVA: 0x001E2B33 File Offset: 0x001E0D33
 	public void SetSelectTaskId(int id, bool isLastTask)
 	{
 		this.SelectTaskId = id;
 		this.IsSelectLastTask = isLastTask;
 	}
 
-	// Token: 0x06008A97 RID: 35479 RVA: 0x001D9CE8 File Offset: 0x001D7EE8
+	// Token: 0x06005E32 RID: 24114 RVA: 0x001E2B44 File Offset: 0x001E0D44
 	[NullableContext(1)]
 	public override UUIItem[] GetGuideUiItemAndUiItemForShowEx(string[] configParams)
 	{
@@ -111,23 +111,23 @@ public class TaskMainLineModule : UiPanelBase
 		}
 	}
 
-	// Token: 0x04003DB9 RID: 15801
+	// Token: 0x04003E51 RID: 15953
 	[Nullable(1)]
 	private readonly List<TaskMainLineModule.MainLineItem> QuestItemList = new List<TaskMainLineModule.MainLineItem>();
 
-	// Token: 0x04003DBA RID: 15802
+	// Token: 0x04003E52 RID: 15954
 	private int SelectTaskId;
 
-	// Token: 0x04003DBB RID: 15803
+	// Token: 0x04003E53 RID: 15955
 	private bool IsSelectLastTask;
 
-	// Token: 0x04003DBC RID: 15804
+	// Token: 0x04003E54 RID: 15956
 	private bool NeedDelay = true;
 
-	// Token: 0x020079D9 RID: 31193
+	// Token: 0x02006B63 RID: 27491
 	private class MainLineItem : UiPanelBase
 	{
-		// Token: 0x060493DB RID: 299995 RVA: 0x012ECE00 File Offset: 0x012EB000
+		// Token: 0x0603F80F RID: 260111 RVA: 0x0128FFFC File Offset: 0x0128E1FC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -150,13 +150,13 @@ public class TaskMainLineModule : UiPanelBase
 			};
 		}
 
-		// Token: 0x060493DC RID: 299996 RVA: 0x012ECF2F File Offset: 0x012EB12F
+		// Token: 0x0603F810 RID: 260112 RVA: 0x0129012B File Offset: 0x0128E32B
 		protected override void OnBeforeShow()
 		{
 			this.Refresh();
 		}
 
-		// Token: 0x060493DD RID: 299997 RVA: 0x012ECF38 File Offset: 0x012EB138
+		// Token: 0x0603F811 RID: 260113 RVA: 0x01290134 File Offset: 0x0128E334
 		protected void OnSkipToTask()
 		{
 			EQuestState questState = QuestNewModel.Instance.GetQuestState(this.Data.TaskId);
@@ -177,21 +177,21 @@ public class TaskMainLineModule : UiPanelBase
 			QuestNewController.Instance.TryTrackAndOpenWorldMap(this.Data.TaskId);
 		}
 
-		// Token: 0x060493DE RID: 299998 RVA: 0x012ECFB4 File Offset: 0x012EB1B4
+		// Token: 0x0603F812 RID: 260114 RVA: 0x012901B0 File Offset: 0x0128E3B0
 		protected void RefreshRedDot()
 		{
 			bool uiactive = MoonChasingModel.Instance.CheckQuestIdRedDotState(this.Data.TaskId);
 			base.GetItem(4).SetUIActive(uiactive);
 		}
 
-		// Token: 0x060493DF RID: 299999 RVA: 0x012ECFE4 File Offset: 0x012EB1E4
+		// Token: 0x0603F813 RID: 260115 RVA: 0x012901E0 File Offset: 0x0128E3E0
 		public virtual void SetData(MainLine data, int index)
 		{
 			this.Data = data;
 			this.Index = index;
 		}
 
-		// Token: 0x060493E0 RID: 300000 RVA: 0x012ECFF4 File Offset: 0x012EB1F4
+		// Token: 0x0603F814 RID: 260116 RVA: 0x012901F0 File Offset: 0x0128E3F0
 		protected virtual void RefreshName()
 		{
 			MainLine? mainLineTaskById = TaskConfig.Instance.GetMainLineTaskById(this.Data.Id);
@@ -204,7 +204,7 @@ public class TaskMainLineModule : UiPanelBase
 			text.SetText((this.Index + 1).ToString(), true);
 		}
 
-		// Token: 0x060493E1 RID: 300001 RVA: 0x012ED060 File Offset: 0x012EB260
+		// Token: 0x0603F815 RID: 260117 RVA: 0x0129025C File Offset: 0x0128E45C
 		protected virtual void RefreshState()
 		{
 			EQuestState questState = QuestNewModel.Instance.GetQuestState(this.Data.TaskId);
@@ -233,7 +233,7 @@ public class TaskMainLineModule : UiPanelBase
 			}
 		}
 
-		// Token: 0x060493E2 RID: 300002 RVA: 0x012ED11C File Offset: 0x012EB31C
+		// Token: 0x0603F816 RID: 260118 RVA: 0x01290318 File Offset: 0x0128E518
 		protected void RefreshImage()
 		{
 			if (!StringUtils.IsEmpty(this.Data.Icon))
@@ -242,13 +242,13 @@ public class TaskMainLineModule : UiPanelBase
 			}
 		}
 
-		// Token: 0x060493E3 RID: 300003 RVA: 0x012ED15D File Offset: 0x012EB35D
+		// Token: 0x0603F817 RID: 260119 RVA: 0x01290359 File Offset: 0x0128E559
 		public bool IsPrevTaskActive()
 		{
 			return this.Data.PrevTaskId == 0 || QuestNewModel.Instance.GetQuestState(this.Data.PrevTaskId) > EQuestState.InActive;
 		}
 
-		// Token: 0x060493E4 RID: 300004 RVA: 0x012ED186 File Offset: 0x012EB386
+		// Token: 0x0603F818 RID: 260120 RVA: 0x01290382 File Offset: 0x0128E582
 		public virtual void Refresh()
 		{
 			this.RefreshName();
@@ -262,17 +262,17 @@ public class TaskMainLineModule : UiPanelBase
 			this.RefreshRedDot();
 		}
 
-		// Token: 0x040281B2 RID: 164274
+		// Token: 0x040234DF RID: 144607
 		protected MainLine Data;
 
-		// Token: 0x040281B3 RID: 164275
+		// Token: 0x040234E0 RID: 144608
 		private int Index;
 	}
 
-	// Token: 0x020079DA RID: 31194
+	// Token: 0x02006B64 RID: 27492
 	private class MainLineBranchItem : TaskMainLineModule.MainLineItem
 	{
-		// Token: 0x060493E6 RID: 300006 RVA: 0x012ED1B8 File Offset: 0x012EB3B8
+		// Token: 0x0603F81A RID: 260122 RVA: 0x012903B4 File Offset: 0x0128E5B4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -291,20 +291,20 @@ public class TaskMainLineModule : UiPanelBase
 			};
 		}
 
-		// Token: 0x060493E7 RID: 300007 RVA: 0x012ED28D File Offset: 0x012EB48D
+		// Token: 0x0603F81B RID: 260123 RVA: 0x01290489 File Offset: 0x0128E689
 		public override void SetData(MainLine data, int index)
 		{
 			this.Data = data;
 		}
 
-		// Token: 0x060493E8 RID: 300008 RVA: 0x012ED298 File Offset: 0x012EB498
+		// Token: 0x0603F81C RID: 260124 RVA: 0x01290494 File Offset: 0x0128E694
 		protected override void RefreshName()
 		{
 			MainLine? mainLineTaskById = TaskConfig.Instance.GetMainLineTaskById(this.Data.Id);
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), mainLineTaskById.Value.TaskName, Array.Empty<object>());
 		}
 
-		// Token: 0x060493E9 RID: 300009 RVA: 0x012ED2E0 File Offset: 0x012EB4E0
+		// Token: 0x0603F81D RID: 260125 RVA: 0x012904DC File Offset: 0x0128E6DC
 		protected override void RefreshState()
 		{
 			EQuestState questState = QuestNewModel.Instance.GetQuestState(this.Data.TaskId);
@@ -318,7 +318,7 @@ public class TaskMainLineModule : UiPanelBase
 			base.GetTexture(5).SetColor(FColor.FromHex("#FFFFFFFF"));
 		}
 
-		// Token: 0x060493EA RID: 300010 RVA: 0x012ED353 File Offset: 0x012EB553
+		// Token: 0x0603F81E RID: 260126 RVA: 0x0129054F File Offset: 0x0128E74F
 		public override void Refresh()
 		{
 			this.RefreshName();
@@ -333,77 +333,77 @@ public class TaskMainLineModule : UiPanelBase
 		}
 	}
 
-	// Token: 0x020079DB RID: 31195
+	// Token: 0x02006B65 RID: 27493
 	private class EMainLineItem
 	{
-		// Token: 0x040281B4 RID: 164276
+		// Token: 0x040234E1 RID: 144609
 		public const int Name = 0;
 
-		// Token: 0x040281B5 RID: 164277
+		// Token: 0x040234E2 RID: 144610
 		public const int DoneItem = 1;
 
-		// Token: 0x040281B6 RID: 164278
+		// Token: 0x040234E3 RID: 144611
 		public const int LockItem = 2;
 
-		// Token: 0x040281B7 RID: 164279
+		// Token: 0x040234E4 RID: 144612
 		public const int SkipToTaskBtn = 3;
 
-		// Token: 0x040281B8 RID: 164280
+		// Token: 0x040234E5 RID: 144613
 		public const int RedDotItem = 4;
 
-		// Token: 0x040281B9 RID: 164281
+		// Token: 0x040234E6 RID: 144614
 		public const int Texture = 5;
 
-		// Token: 0x040281BA RID: 164282
+		// Token: 0x040234E7 RID: 144615
 		public const int LineItem = 6;
 
-		// Token: 0x040281BB RID: 164283
+		// Token: 0x040234E8 RID: 144616
 		public const int TxtIndex = 7;
 
-		// Token: 0x040281BC RID: 164284
+		// Token: 0x040234E9 RID: 144617
 		public const int Star1 = 8;
 
-		// Token: 0x040281BD RID: 164285
+		// Token: 0x040234EA RID: 144618
 		public const int Star2 = 9;
 
-		// Token: 0x040281BE RID: 164286
+		// Token: 0x040234EB RID: 144619
 		public const int Star3 = 10;
 	}
 
-	// Token: 0x020079DC RID: 31196
+	// Token: 0x02006B66 RID: 27494
 	private class EComponentDefine
 	{
-		// Token: 0x040281BF RID: 164287
+		// Token: 0x040234EC RID: 144620
 		public const int ScrollView = 0;
 
-		// Token: 0x040281C0 RID: 164288
+		// Token: 0x040234ED RID: 144621
 		public const int QuestItem1 = 1;
 
-		// Token: 0x040281C1 RID: 164289
+		// Token: 0x040234EE RID: 144622
 		public const int QuestItem2 = 2;
 
-		// Token: 0x040281C2 RID: 164290
+		// Token: 0x040234EF RID: 144623
 		public const int QuestItem3 = 3;
 
-		// Token: 0x040281C3 RID: 164291
+		// Token: 0x040234F0 RID: 144624
 		public const int QuestItem4 = 4;
 
-		// Token: 0x040281C4 RID: 164292
+		// Token: 0x040234F1 RID: 144625
 		public const int QuestItem5 = 5;
 
-		// Token: 0x040281C5 RID: 164293
+		// Token: 0x040234F2 RID: 144626
 		public const int QuestItem6 = 6;
 
-		// Token: 0x040281C6 RID: 164294
+		// Token: 0x040234F3 RID: 144627
 		public const int QuestItem7 = 7;
 
-		// Token: 0x040281C7 RID: 164295
+		// Token: 0x040234F4 RID: 144628
 		public const int QuestItem8 = 8;
 
-		// Token: 0x040281C8 RID: 164296
+		// Token: 0x040234F5 RID: 144629
 		public const int BranchQuestItem = 9;
 
-		// Token: 0x040281C9 RID: 164297
+		// Token: 0x040234F6 RID: 144630
 		public const int HorizontalLayout = 10;
 	}
 }

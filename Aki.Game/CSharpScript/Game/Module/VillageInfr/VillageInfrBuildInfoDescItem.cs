@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.VillageInfr
 {
-	// Token: 0x0200486F RID: 18543
+	// Token: 0x020037E6 RID: 14310
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 	})]
 	public class VillageInfrBuildInfoDescItem : GridProxyAbstract<string>
 	{
-		// Token: 0x06030886 RID: 198790 RVA: 0x00B451CD File Offset: 0x00B433CD
+		// Token: 0x060253B2 RID: 152498 RVA: 0x00A7FF69 File Offset: 0x00A7E169
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.VillageInfr
 			};
 		}
 
-		// Token: 0x06030887 RID: 198791 RVA: 0x00B451F0 File Offset: 0x00B433F0
+		// Token: 0x060253B3 RID: 152499 RVA: 0x00A7FF8C File Offset: 0x00A7E18C
 		public override void Refresh(string data, bool isSelected, int gridIndex)
 		{
 			base.GetText(0).ShowTextNew(data);

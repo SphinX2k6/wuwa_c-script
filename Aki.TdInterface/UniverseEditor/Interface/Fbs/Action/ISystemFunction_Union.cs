@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007280 RID: 29312
+	// Token: 0x02007A55 RID: 31317
 	public enum ISystemFunction_Union : byte
 	{
-		// Token: 0x04011D86 RID: 73094
+		// Token: 0x04012D88 RID: 77192
 		NONE,
-		// Token: 0x04011D87 RID: 73095
+		// Token: 0x04012D89 RID: 77193
 		ISystemFunction,
-		// Token: 0x04011D88 RID: 73096
+		// Token: 0x04012D8A RID: 77194
 		IBuyGoods
 	}
 }

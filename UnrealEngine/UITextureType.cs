@@ -4,24 +4,24 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x020021DA RID: 8666
+	// Token: 0x02000738 RID: 1848
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/LGUI.UITextureType")]
 	public enum UITextureType : byte
 	{
-		// Token: 0x040119F3 RID: 72179
+		// Token: 0x040044FB RID: 17659
 		Normal,
-		// Token: 0x040119F4 RID: 72180
+		// Token: 0x040044FC RID: 17660
 		Sliced,
-		// Token: 0x040119F5 RID: 72181
+		// Token: 0x040044FD RID: 17661
 		SlicedFrame,
-		// Token: 0x040119F6 RID: 72182
+		// Token: 0x040044FE RID: 17662
 		Tiled,
-		// Token: 0x040119F7 RID: 72183
+		// Token: 0x040044FF RID: 17663
 		Filled,
-		// Token: 0x040119F8 RID: 72184
+		// Token: 0x04004500 RID: 17664
 		SlicedEx,
-		// Token: 0x040119F9 RID: 72185
+		// Token: 0x04004501 RID: 17665
 		UITextureType_MAX
 	}
 }

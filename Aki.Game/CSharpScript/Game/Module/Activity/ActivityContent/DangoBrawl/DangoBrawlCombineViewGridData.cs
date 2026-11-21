@@ -2,19 +2,19 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067AC RID: 26540
+	// Token: 0x020056FC RID: 22268
 	public class DangoBrawlCombineViewGridData
 	{
-		// Token: 0x04022855 RID: 141397
+		// Token: 0x0401D0B2 RID: 118962
 		public int ItemUid;
 
-		// Token: 0x04022856 RID: 141398
+		// Token: 0x0401D0B3 RID: 118963
 		public int ItemId;
 
-		// Token: 0x04022857 RID: 141399
+		// Token: 0x0401D0B4 RID: 118964
 		public bool IsExist;
 
-		// Token: 0x04022858 RID: 141400
+		// Token: 0x0401D0B5 RID: 118965
 		public bool? IsShop;
 	}
 }

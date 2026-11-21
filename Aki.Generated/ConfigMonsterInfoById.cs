@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000556 RID: 1366
+	// Token: 0x0200056C RID: 1388
 	public class ConfigMonsterInfoById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002011 RID: 8209 RVA: 0x0010E96D File Offset: 0x0010CB6D
+		// Token: 0x06002095 RID: 8341 RVA: 0x001150C1 File Offset: 0x001132C1
 		static ConfigMonsterInfoById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMonsterInfoById.CreateStaticDefaultValue), new Action(ConfigMonsterInfoById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002012 RID: 8210 RVA: 0x0010E98C File Offset: 0x0010CB8C
+		// Token: 0x06002096 RID: 8342 RVA: 0x001150E0 File Offset: 0x001132E0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMonsterInfoById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002013 RID: 8211 RVA: 0x0010EA0B File Offset: 0x0010CC0B
+		// Token: 0x06002097 RID: 8343 RVA: 0x0011515F File Offset: 0x0011335F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMonsterInfoById.LogPair = null;
 			ConfigMonsterInfoById.HandleId = 0;
 		}
 
-		// Token: 0x06002014 RID: 8212 RVA: 0x0010EA19 File Offset: 0x0010CC19
+		// Token: 0x06002098 RID: 8344 RVA: 0x0011516D File Offset: 0x0011336D
 		public static void Init()
 		{
 			ConfigMonsterInfoById.HandleId = ConfigCommon.InitDataStatement(ConfigMonsterInfoById.HandleId, "db_monster_info.db", "select BinData from `MonsterInfo` where Id=?");
 		}
 
-		// Token: 0x06002015 RID: 8213 RVA: 0x0010EA34 File Offset: 0x0010CC34
+		// Token: 0x06002099 RID: 8345 RVA: 0x00115188 File Offset: 0x00113388
 		public static MonsterInfo? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigMonsterInfoById.HandleId, ConfigMonsterInfoById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new MonsterInfo?(rootAsMonsterInfo);
 		}
 
-		// Token: 0x0400253E RID: 9534
+		// Token: 0x040025D8 RID: 9688
 		private const string DB = "db_monster_info.db";
 
-		// Token: 0x0400253F RID: 9535
+		// Token: 0x040025D9 RID: 9689
 		private const string FILE = "g.怪物信息.xlsx";
 
-		// Token: 0x04002540 RID: 9536
+		// Token: 0x040025DA RID: 9690
 		private const string TABLE = "MonsterInfo";
 
-		// Token: 0x04002541 RID: 9537
+		// Token: 0x040025DB RID: 9691
 		private const string COMMAND = "select BinData from `MonsterInfo` where Id=?";
 
-		// Token: 0x04002542 RID: 9538
+		// Token: 0x040025DC RID: 9692
 		private const string KEY_PREFIX = "MonsterInfoById";
 
-		// Token: 0x04002543 RID: 9539
+		// Token: 0x040025DD RID: 9693
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002544 RID: 9540
+		// Token: 0x040025DE RID: 9694
 		private static int HandleId;
 	}
 }

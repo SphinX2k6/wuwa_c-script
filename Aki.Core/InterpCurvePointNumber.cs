@@ -1,22 +1,22 @@
 ﻿using System;
 using UnrealEngine;
 
-// Token: 0x020000E9 RID: 233
+// Token: 0x020000EB RID: 235
 public class InterpCurvePointNumber : ICurvePoint<float>
 {
-	// Token: 0x060006F8 RID: 1784 RVA: 0x00024EDC File Offset: 0x000230DC
+	// Token: 0x06000739 RID: 1849 RVA: 0x000254B0 File Offset: 0x000236B0
 	public InterpCurvePointNumber(global::EInterpCurveMode param)
 	{
 		this.InterpMode = param;
 	}
 
-	// Token: 0x060006F9 RID: 1785 RVA: 0x00024EEB File Offset: 0x000230EB
+	// Token: 0x0600073A RID: 1850 RVA: 0x000254BF File Offset: 0x000236BF
 	public InterpCurvePointNumber(UnrealEngine.EInterpCurveMode param)
 	{
 		this.InterpMode = SplineCurve.getTsInterpCurveMode(param);
 	}
 
-	// Token: 0x060006FA RID: 1786 RVA: 0x00024F00 File Offset: 0x00023100
+	// Token: 0x0600073B RID: 1851 RVA: 0x000254D4 File Offset: 0x000236D4
 	public void DeepCopy(FInterpCurvePointFloat param)
 	{
 		this.InVal = param.InVal;
@@ -26,7 +26,7 @@ public class InterpCurvePointNumber : ICurvePoint<float>
 		this.InterpMode = SplineCurve.getTsInterpCurveMode(param.InterpMode);
 	}
 
-	// Token: 0x060006FB RID: 1787 RVA: 0x00024F53 File Offset: 0x00023153
+	// Token: 0x0600073C RID: 1852 RVA: 0x00025527 File Offset: 0x00023727
 	public void Clear()
 	{
 		this.InVal = 0f;
@@ -35,6 +35,6 @@ public class InterpCurvePointNumber : ICurvePoint<float>
 		this.OutVal = 0f;
 	}
 
-	// Token: 0x0400059F RID: 1439
+	// Token: 0x040005AE RID: 1454
 	public global::EInterpCurveMode InterpMode;
 }

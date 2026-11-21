@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Shape;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020052EF RID: 21231
+	// Token: 0x02005872 RID: 22642
 	public class IGazeConditionT
 	{
-		// Token: 0x17009BD3 RID: 39891
-		// (get) Token: 0x06022A9A RID: 141978 RVA: 0x004CDEC1 File Offset: 0x004CC0C1
-		// (set) Token: 0x06022A9B RID: 141979 RVA: 0x004CDEC9 File Offset: 0x004CC0C9
+		// Token: 0x1700A404 RID: 41988
+		// (get) Token: 0x06024B34 RID: 150324 RVA: 0x0050A9ED File Offset: 0x00508BED
+		// (set) Token: 0x06024B35 RID: 150325 RVA: 0x0050A9F5 File Offset: 0x00508BF5
 		public int GazeInDistance { get; set; }
 
-		// Token: 0x17009BD4 RID: 39892
-		// (get) Token: 0x06022A9C RID: 141980 RVA: 0x004CDED2 File Offset: 0x004CC0D2
-		// (set) Token: 0x06022A9D RID: 141981 RVA: 0x004CDEDA File Offset: 0x004CC0DA
+		// Token: 0x1700A405 RID: 41989
+		// (get) Token: 0x06024B36 RID: 150326 RVA: 0x0050A9FE File Offset: 0x00508BFE
+		// (set) Token: 0x06024B37 RID: 150327 RVA: 0x0050AA06 File Offset: 0x00508C06
 		public IConeTriggerShapeT ScanRange { get; set; }
 
-		// Token: 0x17009BD5 RID: 39893
-		// (get) Token: 0x06022A9E RID: 141982 RVA: 0x004CDEE3 File Offset: 0x004CC0E3
-		// (set) Token: 0x06022A9F RID: 141983 RVA: 0x004CDEEB File Offset: 0x004CC0EB
+		// Token: 0x1700A406 RID: 41990
+		// (get) Token: 0x06024B38 RID: 150328 RVA: 0x0050AA0F File Offset: 0x00508C0F
+		// (set) Token: 0x06024B39 RID: 150329 RVA: 0x0050AA17 File Offset: 0x00508C17
 		public byte NullMask { get; set; }
 
-		// Token: 0x06022AA0 RID: 141984 RVA: 0x004CDEF4 File Offset: 0x004CC0F4
+		// Token: 0x06024B3A RID: 150330 RVA: 0x0050AA20 File Offset: 0x00508C20
 		public IGazeConditionT()
 		{
 			this.GazeInDistance = 0;

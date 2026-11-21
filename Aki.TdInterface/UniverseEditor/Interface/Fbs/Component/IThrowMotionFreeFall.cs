@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005A6A RID: 23146
+	// Token: 0x02006077 RID: 24695
 	public struct IThrowMotionFreeFall : IFlatbufferObject
 	{
-		// Token: 0x1700AE2C RID: 44588
-		// (get) Token: 0x06027635 RID: 161333 RVA: 0x0056B8FD File Offset: 0x00569AFD
+		// Token: 0x1700B764 RID: 46948
+		// (get) Token: 0x06029BAD RID: 170925 RVA: 0x005B2909 File Offset: 0x005B0B09
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027636 RID: 161334 RVA: 0x0056B90A File Offset: 0x00569B0A
+		// Token: 0x06029BAE RID: 170926 RVA: 0x005B2916 File Offset: 0x005B0B16
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06027637 RID: 161335 RVA: 0x0056B914 File Offset: 0x00569B14
+		// Token: 0x06029BAF RID: 170927 RVA: 0x005B2920 File Offset: 0x005B0B20
 		public static IThrowMotionFreeFall GetRootAsIThrowMotionFreeFall(ByteBuffer _bb)
 		{
 			return IThrowMotionFreeFall.GetRootAsIThrowMotionFreeFall(_bb, default(IThrowMotionFreeFall));
 		}
 
-		// Token: 0x06027638 RID: 161336 RVA: 0x0056B930 File Offset: 0x00569B30
+		// Token: 0x06029BB0 RID: 170928 RVA: 0x005B293C File Offset: 0x005B0B3C
 		public static IThrowMotionFreeFall GetRootAsIThrowMotionFreeFall(ByteBuffer _bb, IThrowMotionFreeFall obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06027639 RID: 161337 RVA: 0x0056B94D File Offset: 0x00569B4D
+		// Token: 0x06029BB1 RID: 170929 RVA: 0x005B2959 File Offset: 0x005B0B59
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602763A RID: 161338 RVA: 0x0056B95C File Offset: 0x00569B5C
+		// Token: 0x06029BB2 RID: 170930 RVA: 0x005B2968 File Offset: 0x005B0B68
 		public IThrowMotionFreeFall __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700AE2D RID: 44589
-		// (get) Token: 0x0602763B RID: 161339 RVA: 0x0056B96C File Offset: 0x00569B6C
+		// Token: 0x1700B765 RID: 46949
+		// (get) Token: 0x06029BB3 RID: 170931 RVA: 0x005B2978 File Offset: 0x005B0B78
 		public EThrowMotion Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AE2E RID: 44590
-		// (get) Token: 0x0602763C RID: 161340 RVA: 0x0056B9A8 File Offset: 0x00569BA8
+		// Token: 0x1700B766 RID: 46950
+		// (get) Token: 0x06029BB4 RID: 170932 RVA: 0x005B29B4 File Offset: 0x005B0BB4
 		public IVectorInfo? Velocity
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AE2F RID: 44591
-		// (get) Token: 0x0602763D RID: 161341 RVA: 0x0056BA08 File Offset: 0x00569C08
+		// Token: 0x1700B767 RID: 46951
+		// (get) Token: 0x06029BB5 RID: 170933 RVA: 0x005B2A14 File Offset: 0x005B0C14
 		public IAngularVelocityConfig? AngularVelocity
 		{
 			get
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602763E RID: 161342 RVA: 0x0056BA65 File Offset: 0x00569C65
+		// Token: 0x06029BB6 RID: 170934 RVA: 0x005B2A71 File Offset: 0x005B0C71
 		public static Offset<IThrowMotionFreeFall> CreateIThrowMotionFreeFall(FlatBufferBuilder builder, EThrowMotion Type = EThrowMotion.Projectile, Offset<IVectorInfo> VelocityOffset = default(Offset<IVectorInfo>), Offset<IAngularVelocityConfig> AngularVelocityOffset = default(Offset<IAngularVelocityConfig>))
 		{
 			builder.StartTable(3);
@@ -103,37 +103,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IThrowMotionFreeFall.EndIThrowMotionFreeFall(builder);
 		}
 
-		// Token: 0x0602763F RID: 161343 RVA: 0x0056BA89 File Offset: 0x00569C89
+		// Token: 0x06029BB7 RID: 170935 RVA: 0x005B2A95 File Offset: 0x005B0C95
 		public static void StartIThrowMotionFreeFall(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06027640 RID: 161344 RVA: 0x0056BA92 File Offset: 0x00569C92
+		// Token: 0x06029BB8 RID: 170936 RVA: 0x005B2A9E File Offset: 0x005B0C9E
 		public static void AddType(FlatBufferBuilder builder, EThrowMotion type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06027641 RID: 161345 RVA: 0x0056BA9D File Offset: 0x00569C9D
+		// Token: 0x06029BB9 RID: 170937 RVA: 0x005B2AA9 File Offset: 0x005B0CA9
 		public static void AddVelocity(FlatBufferBuilder builder, Offset<IVectorInfo> velocityOffset)
 		{
 			builder.AddOffset(1, velocityOffset.Value, 0);
 		}
 
-		// Token: 0x06027642 RID: 161346 RVA: 0x0056BAAD File Offset: 0x00569CAD
+		// Token: 0x06029BBA RID: 170938 RVA: 0x005B2AB9 File Offset: 0x005B0CB9
 		public static void AddAngularVelocity(FlatBufferBuilder builder, Offset<IAngularVelocityConfig> angularVelocityOffset)
 		{
 			builder.AddOffset(2, angularVelocityOffset.Value, 0);
 		}
 
-		// Token: 0x06027643 RID: 161347 RVA: 0x0056BABD File Offset: 0x00569CBD
+		// Token: 0x06029BBB RID: 170939 RVA: 0x005B2AC9 File Offset: 0x005B0CC9
 		public static Offset<IThrowMotionFreeFall> EndIThrowMotionFreeFall(FlatBufferBuilder builder)
 		{
 			return new Offset<IThrowMotionFreeFall>(builder.EndTable());
 		}
 
-		// Token: 0x06027644 RID: 161348 RVA: 0x0056BACC File Offset: 0x00569CCC
+		// Token: 0x06029BBC RID: 170940 RVA: 0x005B2AD8 File Offset: 0x005B0CD8
 		public IThrowMotionFreeFallT UnPack()
 		{
 			IThrowMotionFreeFallT throwMotionFreeFallT = new IThrowMotionFreeFallT();
@@ -141,7 +141,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return throwMotionFreeFallT;
 		}
 
-		// Token: 0x06027645 RID: 161349 RVA: 0x0056BAE8 File Offset: 0x00569CE8
+		// Token: 0x06029BBD RID: 170941 RVA: 0x005B2AF4 File Offset: 0x005B0CF4
 		public void UnPackTo(IThrowMotionFreeFallT _o)
 		{
 			_o.Type = this.Type;
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.AngularVelocity = ((this.AngularVelocity != null) ? this.AngularVelocity.Value.UnPack() : null);
 		}
 
-		// Token: 0x06027646 RID: 161350 RVA: 0x0056BB60 File Offset: 0x00569D60
+		// Token: 0x06029BBE RID: 170942 RVA: 0x005B2B6C File Offset: 0x005B0D6C
 		public static Offset<IThrowMotionFreeFall> Pack(FlatBufferBuilder builder, IThrowMotionFreeFallT _o)
 		{
 			if (_o == null)
@@ -161,7 +161,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IThrowMotionFreeFall.CreateIThrowMotionFreeFall(builder, _o.Type, velocityOffset, angularVelocityOffset);
 		}
 
-		// Token: 0x0400F0FB RID: 61691
+		// Token: 0x0400FDF2 RID: 65010
 		private Table __p;
 	}
 }

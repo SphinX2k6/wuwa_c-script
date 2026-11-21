@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D78 RID: 23928
+	// Token: 0x02004D5A RID: 19802
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LackResourceQuestTextInfo : MissionViewStepTextInfoBase
 	{
-		// Token: 0x0603CBB6 RID: 248758 RVA: 0x00E954A8 File Offset: 0x00E936A8
+		// Token: 0x06031B12 RID: 203538 RVA: 0x00DE5CF0 File Offset: 0x00DE3EF0
 		public LackResourceQuestTextInfo(string tidTitle) : base(tidTitle, null, null)
 		{
 		}
 
-		// Token: 0x17008E25 RID: 36389
-		// (get) Token: 0x0603CBB7 RID: 248759 RVA: 0x00E954B3 File Offset: 0x00E936B3
+		// Token: 0x170061F7 RID: 25079
+		// (get) Token: 0x06031B13 RID: 203539 RVA: 0x00DE5CFB File Offset: 0x00DE3EFB
 		public override EMissionItemViewDataSource ShowSource
 		{
 			get
@@ -23,8 +23,8 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x17008E26 RID: 36390
-		// (get) Token: 0x0603CBB8 RID: 248760 RVA: 0x00E954B6 File Offset: 0x00E936B6
+		// Token: 0x170061F8 RID: 25080
+		// (get) Token: 0x06031B14 RID: 203540 RVA: 0x00DE5CFE File Offset: 0x00DE3EFE
 		public override string TidTitle
 		{
 			get
@@ -33,8 +33,8 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x17008E27 RID: 36391
-		// (get) Token: 0x0603CBB9 RID: 248761 RVA: 0x00E954BE File Offset: 0x00E936BE
+		// Token: 0x170061F9 RID: 25081
+		// (get) Token: 0x06031B15 RID: 203541 RVA: 0x00DE5D06 File Offset: 0x00DE3F06
 		public string QuestScheduleType
 		{
 			get

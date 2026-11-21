@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 {
-	// Token: 0x0200576F RID: 22383
+	// Token: 0x02004746 RID: 18246
 	public class KurotatoEnemyDetailBookTabTog : GridProxyAbstract<EKurotatoEnemyDetailBookTabAllOrWave>
 	{
-		// Token: 0x06038DC1 RID: 232897 RVA: 0x00D8277C File Offset: 0x00D8097C
+		// Token: 0x0602DCD1 RID: 187601 RVA: 0x00CD1278 File Offset: 0x00CCF478
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -33,13 +33,13 @@ namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06038DC2 RID: 232898 RVA: 0x00D82843 File Offset: 0x00D80A43
+		// Token: 0x0602DCD2 RID: 187602 RVA: 0x00CD133F File Offset: 0x00CCF53F
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(0).CanExecuteChange.Bind(() => this.CanExecuteChangeFunc == null || this.CanExecuteChangeFunc(base.GridIndex));
 		}
 
-		// Token: 0x06038DC3 RID: 232899 RVA: 0x00D82862 File Offset: 0x00D80A62
+		// Token: 0x0602DCD3 RID: 187603 RVA: 0x00CD135E File Offset: 0x00CCF55E
 		private void OnTogClick(EToggleState state)
 		{
 			if (this.Data != null)
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 			}
 		}
 
-		// Token: 0x06038DC4 RID: 232900 RVA: 0x00D8288C File Offset: 0x00D80A8C
+		// Token: 0x0602DCD4 RID: 187604 RVA: 0x00CD1388 File Offset: 0x00CCF588
 		public override void Refresh(EKurotatoEnemyDetailBookTabAllOrWave data, bool isSelected, int gridIndex)
 		{
 			this.Data = new EKurotatoEnemyDetailBookTabAllOrWave?(data);
@@ -61,46 +61,46 @@ namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), textStringId, Array.Empty<object>());
 		}
 
-		// Token: 0x06038DC5 RID: 232901 RVA: 0x00D828CC File Offset: 0x00D80ACC
+		// Token: 0x0602DCD5 RID: 187605 RVA: 0x00CD13C8 File Offset: 0x00CCF5C8
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetToggleState(true);
 		}
 
-		// Token: 0x06038DC6 RID: 232902 RVA: 0x00D828D5 File Offset: 0x00D80AD5
+		// Token: 0x0602DCD6 RID: 187606 RVA: 0x00CD13D1 File Offset: 0x00CCF5D1
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetToggleState(false);
 		}
 
-		// Token: 0x06038DC7 RID: 232903 RVA: 0x00D828E0 File Offset: 0x00D80AE0
+		// Token: 0x0602DCD7 RID: 187607 RVA: 0x00CD13DC File Offset: 0x00CCF5DC
 		private void SetToggleState(bool state)
 		{
 			EToggleState state2 = state ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 			base.GetExtendToggle(0).SetToggleState(state2, false, false, false);
 		}
 
-		// Token: 0x0401DD29 RID: 122153
+		// Token: 0x040187BF RID: 100287
 		public EKurotatoEnemyDetailBookTabAllOrWave? Data;
 
-		// Token: 0x0401DD2A RID: 122154
+		// Token: 0x040187C0 RID: 100288
 		[Nullable(2)]
 		public Action<EKurotatoEnemyDetailBookTabAllOrWave> OnTogClickCallBack;
 
-		// Token: 0x0401DD2B RID: 122155
+		// Token: 0x040187C1 RID: 100289
 		[Nullable(2)]
 		public Func<int, bool> CanExecuteChangeFunc;
 
-		// Token: 0x0200B979 RID: 47481
+		// Token: 0x0200A393 RID: 41875
 		private class ETabItemComponent
 		{
-			// Token: 0x0403815B RID: 229723
+			// Token: 0x04032B55 RID: 207701
 			public const int TogSelf = 0;
 
-			// Token: 0x0403815C RID: 229724
+			// Token: 0x04032B56 RID: 207702
 			public const int TextTitle = 1;
 
-			// Token: 0x0403815D RID: 229725
+			// Token: 0x04032B57 RID: 207703
 			public const int RedDot = 2;
 		}
 	}

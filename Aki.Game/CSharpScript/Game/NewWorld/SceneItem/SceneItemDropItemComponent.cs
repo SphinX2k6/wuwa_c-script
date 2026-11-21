@@ -20,13 +20,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x02007177 RID: 29047
+	// Token: 0x0200622B RID: 25131
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneItemDropItemComponent : EntityComponent
 	{
-		// Token: 0x17009D60 RID: 40288
-		// (get) Token: 0x06046EDC RID: 290524 RVA: 0x011EA7C2 File Offset: 0x011E89C2
+		// Token: 0x17007236 RID: 29238
+		// (get) Token: 0x0603C753 RID: 247635 RVA: 0x011459B0 File Offset: 0x01143BB0
 		public DropItemData DropItemConfig
 		{
 			get
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046EDD RID: 290525 RVA: 0x011EA7CC File Offset: 0x011E89CC
+		// Token: 0x0603C754 RID: 247636 RVA: 0x011459B8 File Offset: 0x01143BB8
 		protected override bool OnClear()
 		{
 			if (EffectSystem.Instance.IsValid(this.ProgressEffect))
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046EDE RID: 290526 RVA: 0x011EA870 File Offset: 0x011E8A70
+		// Token: 0x0603C755 RID: 247637 RVA: 0x01145A5C File Offset: 0x01143C5C
 		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046EDF RID: 290527 RVA: 0x011EA8D5 File Offset: 0x011E8AD5
+		// Token: 0x0603C756 RID: 247638 RVA: 0x01145AC1 File Offset: 0x01143CC1
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<SceneItemActorComponent>();
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046EE0 RID: 290528 RVA: 0x011EA8F0 File Offset: 0x011E8AF0
+		// Token: 0x0603C757 RID: 247639 RVA: 0x01145ADC File Offset: 0x01143CDC
 		protected override void OnActivate()
 		{
 			DropItemData itemData = this.ItemData;
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			EventSystem.Instance.OnceWithTarget(base.Entity, EEventName.OnSceneInteractionShowCompleted, new Action(this.OnOnSceneInteractionShowCompleted));
 		}
 
-		// Token: 0x06046EE1 RID: 290529 RVA: 0x011EA99C File Offset: 0x011E8B9C
+		// Token: 0x0603C758 RID: 247640 RVA: 0x01145B88 File Offset: 0x01143D88
 		protected override void OnEnable()
 		{
 			if (this.DropDownCanRun && !Info.Instance.EnableForceTick)
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046EE2 RID: 290530 RVA: 0x011EA9E8 File Offset: 0x011E8BE8
+		// Token: 0x0603C759 RID: 247641 RVA: 0x01145BD4 File Offset: 0x01143DD4
 		protected override void OnDisable(string reason)
 		{
 			if (this.DropDownCanRun && !Info.Instance.EnableForceTick)
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046EE3 RID: 290531 RVA: 0x011EAA09 File Offset: 0x011E8C09
+		// Token: 0x0603C75A RID: 247642 RVA: 0x01145BF5 File Offset: 0x01143DF5
 		protected override bool OnEnd()
 		{
 			if (this.DropDownCanRun && !Info.Instance.EnableForceTick)
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046EE4 RID: 290532 RVA: 0x011EAA2C File Offset: 0x011E8C2C
+		// Token: 0x0603C75B RID: 247643 RVA: 0x01145C18 File Offset: 0x01143E18
 		private void InitBaseInfo(DropComponentPb data)
 		{
 			int itemId = data.ItemId;
@@ -206,7 +206,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.ItemData.BornEffectPath = honamiStoryQuality.Value.SpecialEffects;
 		}
 
-		// Token: 0x06046EE5 RID: 290533 RVA: 0x011EACF0 File Offset: 0x011E8EF0
+		// Token: 0x0603C75C RID: 247644 RVA: 0x01145EDC File Offset: 0x011440DC
 		private bool CheckCanStartDropDown(DropComponentPb data)
 		{
 			DropItemData itemData = this.ItemData;
@@ -249,7 +249,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return false;
 		}
 
-		// Token: 0x06046EE6 RID: 290534 RVA: 0x011EADE4 File Offset: 0x011E8FE4
+		// Token: 0x0603C75D RID: 247645 RVA: 0x01145FD0 File Offset: 0x011441D0
 		private void HandleDieAnimationEnd()
 		{
 			if (this.DelayHandler != null)
@@ -282,7 +282,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046EE7 RID: 290535 RVA: 0x011EAE9C File Offset: 0x011E909C
+		// Token: 0x0603C75E RID: 247646 RVA: 0x01146088 File Offset: 0x01144288
 		private void StartDropDown()
 		{
 			this.InitPhysics();
@@ -290,7 +290,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.StartInteraction();
 		}
 
-		// Token: 0x06046EE8 RID: 290536 RVA: 0x011EAEB0 File Offset: 0x011E90B0
+		// Token: 0x0603C75F RID: 247647 RVA: 0x0114609C File Offset: 0x0114429C
 		private unsafe void CheckGround()
 		{
 			FVector zeroVector = FVector.ZeroVector;
@@ -329,7 +329,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046EE9 RID: 290537 RVA: 0x011EB0A4 File Offset: 0x011E92A4
+		// Token: 0x0603C760 RID: 247648 RVA: 0x01146290 File Offset: 0x01144490
 		private void InitPhysics()
 		{
 			DropItemData itemData = this.ItemData;
@@ -401,7 +401,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}, 100, "js_undefined");
 		}
 
-		// Token: 0x06046EEA RID: 290538 RVA: 0x011EB128 File Offset: 0x011E9328
+		// Token: 0x0603C761 RID: 247649 RVA: 0x01146314 File Offset: 0x01144514
 		private void InitEffects()
 		{
 			FTransformDouble value = this.ActorComp.StaticMesh.D_GetRelativeTransform();
@@ -416,7 +416,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			EffectSystem.Instance.GetEffectActor(this.ProgressEffect).K2_AttachToComponent(this.ActorComp.StaticMesh, new FName?(FNameUtil.NONE), EAttachmentRule.SnapToTarget, EAttachmentRule.KeepRelative, EAttachmentRule.KeepRelative, true);
 		}
 
-		// Token: 0x06046EEB RID: 290539 RVA: 0x011EB1B8 File Offset: 0x011E93B8
+		// Token: 0x0603C762 RID: 247650 RVA: 0x011463A4 File Offset: 0x011445A4
 		private void StartInteraction()
 		{
 			PawnInteractNewComponent component = base.Entity.GetComponent<PawnInteractNewComponent>();
@@ -433,13 +433,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046EEC RID: 290540 RVA: 0x011EB21F File Offset: 0x011E941F
+		// Token: 0x0603C763 RID: 247651 RVA: 0x0114640B File Offset: 0x0114460B
 		protected override void OnForceTick(float delta)
 		{
 			this.ForceTickInternal(delta);
 		}
 
-		// Token: 0x06046EED RID: 290541 RVA: 0x011EB228 File Offset: 0x011E9428
+		// Token: 0x0603C764 RID: 247652 RVA: 0x01146414 File Offset: 0x01144614
 		private void ForceTickInternal(float delta)
 		{
 			if (this.ItemData == null || this.ItemData.DropFinished)
@@ -455,7 +455,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.DropTick(num);
 		}
 
-		// Token: 0x06046EEE RID: 290542 RVA: 0x011EB270 File Offset: 0x011E9470
+		// Token: 0x0603C765 RID: 247653 RVA: 0x0114645C File Offset: 0x0114465C
 		protected void InitDropStateFunction()
 		{
 			this.DropStateFunctionMap = new Dictionary<EDropStateType, Action<float>>();
@@ -466,7 +466,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.DropStateFunctionMap.Add(EDropStateType.WaitToManualPickUp, new Action<float>(this.WaitToManualPickUpProcess));
 		}
 
-		// Token: 0x06046EEF RID: 290543 RVA: 0x011EB300 File Offset: 0x011E9500
+		// Token: 0x0603C766 RID: 247654 RVA: 0x011464EC File Offset: 0x011446EC
 		public global::Vector GetRandomForce(float yaw)
 		{
 			int showPlanId = this.ItemData.ShowPlanId;
@@ -491,7 +491,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return vector.MultiplyEqual(MathUtils.Instance.GetRandomRange((double)num5, (double)num6));
 		}
 
-		// Token: 0x06046EF0 RID: 290544 RVA: 0x011EB428 File Offset: 0x011E9628
+		// Token: 0x0603C767 RID: 247655 RVA: 0x01146614 File Offset: 0x01144814
 		private void DropTick(float deltaTimes)
 		{
 			BaseActorComponent actorComp = this.ActorComp;
@@ -509,7 +509,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046EF1 RID: 290545 RVA: 0x011EB490 File Offset: 0x011E9690
+		// Token: 0x0603C768 RID: 247656 RVA: 0x0114667C File Offset: 0x0114487C
 		private void CreateAutoAttachEffect()
 		{
 			this.ActorComp.StaticMesh.SetCollisionEnabled(ECollisionEnabled.NoCollision);
@@ -524,7 +524,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			EffectSystem.Instance.GetEffectActor(this.ProgressEffect).K2_AttachToComponent(this.ActorComp.StaticMesh, new FName?(FNameUtil.NONE), EAttachmentRule.SnapToTarget, EAttachmentRule.KeepWorld, EAttachmentRule.KeepRelative, true);
 		}
 
-		// Token: 0x06046EF2 RID: 290546 RVA: 0x011EB564 File Offset: 0x011E9764
+		// Token: 0x0603C769 RID: 247657 RVA: 0x01146750 File Offset: 0x01144950
 		private void UpProcess(float deltaTimes)
 		{
 			if ((double)this.ActorComp.StaticMesh.GetComponentVelocity().Z >= 0.0)
@@ -536,7 +536,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.ActorComp.StaticMesh.SetNotifyRigidBodyCollision(false);
 		}
 
-		// Token: 0x06046EF3 RID: 290547 RVA: 0x011EB5C8 File Offset: 0x011E97C8
+		// Token: 0x0603C76A RID: 247658 RVA: 0x011467B4 File Offset: 0x011449B4
 		private void DownProcess(float deltaTimes)
 		{
 			FVector componentVelocity = this.ActorComp.StaticMesh.GetComponentVelocity();
@@ -566,7 +566,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.ItemData.DropState = EDropStateType.DownStill;
 		}
 
-		// Token: 0x06046EF4 RID: 290548 RVA: 0x011EB72C File Offset: 0x011E992C
+		// Token: 0x0603C76B RID: 247659 RVA: 0x01146918 File Offset: 0x01144B18
 		protected void CheckDropRotation(float deltaTime)
 		{
 			if (this.ItemData.RotationProtectTime > 0f)
@@ -579,7 +579,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046EF5 RID: 290549 RVA: 0x011EB784 File Offset: 0x011E9984
+		// Token: 0x0603C76C RID: 247660 RVA: 0x01146970 File Offset: 0x01144B70
 		private void DownStillProcess(float deltaSeconds)
 		{
 			EDropAdsorptionType? adsorptionType = this.ItemData.AdsorptionType;
@@ -598,7 +598,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.ItemData.DropState = EDropStateType.AutoAttach;
 		}
 
-		// Token: 0x06046EF6 RID: 290550 RVA: 0x011EB7F8 File Offset: 0x011E99F8
+		// Token: 0x0603C76D RID: 247661 RVA: 0x011469E4 File Offset: 0x01144BE4
 		private void AutoAttachProcess(float deltaTimes)
 		{
 			this.ItemData.AdsorptionTime += deltaTimes;
@@ -637,7 +637,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046EF7 RID: 290551 RVA: 0x011EB94C File Offset: 0x011E9B4C
+		// Token: 0x0603C76E RID: 247662 RVA: 0x01146B38 File Offset: 0x01144D38
 		private void WaitToManualPickUpProcess(float deltaTimes)
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -656,7 +656,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046EF8 RID: 290552 RVA: 0x011EB9C0 File Offset: 0x011E9BC0
+		// Token: 0x0603C76F RID: 247663 RVA: 0x01146BAC File Offset: 0x01144DAC
 		private bool CheckOutofProtectedHeight()
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -669,7 +669,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return Math.Abs(actorLocation.Z - this.ActorComp.ActorLocationProxy.Z) >= (double)heightProtect && this.ActorComp.StaticMesh.GetComponentVelocity().Z <= 0f;
 		}
 
-		// Token: 0x06046EF9 RID: 290553 RVA: 0x011EBA30 File Offset: 0x011E9C30
+		// Token: 0x0603C770 RID: 247664 RVA: 0x01146C1C File Offset: 0x01144E1C
 		private bool CheckIsUnderWater()
 		{
 			global::Vector actorLocationProxy = this.ActorComp.ActorLocationProxy;
@@ -691,7 +691,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return false;
 		}
 
-		// Token: 0x06046EFA RID: 290554 RVA: 0x011EBADC File Offset: 0x011E9CDC
+		// Token: 0x0603C771 RID: 247665 RVA: 0x01146CC8 File Offset: 0x01144EC8
 		public void DestroyWithEffect()
 		{
 			DropItemData itemData = this.ItemData;
@@ -717,7 +717,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			CreatureController.Instance.DelayRemoveEntityFinished(base.Entity);
 		}
 
-		// Token: 0x06046EFB RID: 290555 RVA: 0x011EBC2B File Offset: 0x011E9E2B
+		// Token: 0x0603C772 RID: 247666 RVA: 0x01146E17 File Offset: 0x01145017
 		private void ExecuteAutoPickup()
 		{
 			this.ItemData.DropState = EDropStateType.WaitToAutoPickUp;
@@ -725,13 +725,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.ItemData.DropFinished = true;
 		}
 
-		// Token: 0x06046EFC RID: 290556 RVA: 0x011EBC67 File Offset: 0x011E9E67
+		// Token: 0x0603C773 RID: 247667 RVA: 0x01146E53 File Offset: 0x01145053
 		private void OnOnSceneInteractionShowCompleted()
 		{
 			this.FixBornLocation();
 		}
 
-		// Token: 0x06046EFD RID: 290557 RVA: 0x011EBC70 File Offset: 0x011E9E70
+		// Token: 0x0603C774 RID: 247668 RVA: 0x01146E5C File Offset: 0x0114505C
 		public unsafe bool FixBornLocation()
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -778,7 +778,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return false;
 		}
 
-		// Token: 0x06046EFE RID: 290558 RVA: 0x011EBDB8 File Offset: 0x011E9FB8
+		// Token: 0x0603C775 RID: 247669 RVA: 0x01146FA4 File Offset: 0x011451A4
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -811,7 +811,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return this.FixBornLocationInternal(actorLocationProxy, commonStartLocation, commonEndLocation, false, showLog);
 		}
 
-		// Token: 0x06046EFF RID: 290559 RVA: 0x011EBEE0 File Offset: 0x011EA0E0
+		// Token: 0x0603C776 RID: 247670 RVA: 0x011470CC File Offset: 0x011452CC
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -948,7 +948,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return new ValueTuple<bool, global::Vector>(true, commonHitLocation);
 		}
 
-		// Token: 0x06046F00 RID: 290560 RVA: 0x011EC500 File Offset: 0x011EA700
+		// Token: 0x0603C777 RID: 247671 RVA: 0x011476EC File Offset: 0x011458EC
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -956,115 +956,158 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemDropItemComponent sceneItemDropItemComponent = (SceneItemDropItemComponent)componentTemplate;
-			if (base.CanResetComponentProperty("CreatureData"))
+			if (sceneItemDropItemComponent.CreatureData == null)
 			{
-				if (sceneItemDropItemComponent.CreatureData == null)
-				{
-					this.CreatureData = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureData), "CreatureData"))
-				{
-					return false;
-				}
+				this.CreatureData = null;
 			}
-			if (base.CanResetComponentProperty("ActorComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureData), "CreatureData"))
 			{
-				if (sceneItemDropItemComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("DropDownIsStarted"))
+			if (sceneItemDropItemComponent.ActorComp == null)
 			{
-				this.DropDownIsStarted = sceneItemDropItemComponent.DropDownIsStarted;
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("DropDownCanRun"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				this.DropDownCanRun = sceneItemDropItemComponent.DropDownCanRun;
+				return false;
 			}
-			if (base.CanResetComponentProperty("ProgressEffect"))
+			this.DropDownIsStarted = sceneItemDropItemComponent.DropDownIsStarted;
+			this.DropDownCanRun = sceneItemDropItemComponent.DropDownCanRun;
+			this.ProgressEffect = sceneItemDropItemComponent.ProgressEffect;
+			if (sceneItemDropItemComponent.ItemData == null)
 			{
-				this.ProgressEffect = sceneItemDropItemComponent.ProgressEffect;
+				this.ItemData = null;
 			}
-			if (base.CanResetComponentProperty("ItemData"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ItemData), "ItemData"))
 			{
-				if (sceneItemDropItemComponent.ItemData == null)
-				{
-					this.ItemData = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<DropItemData>(this.ItemData), "ItemData"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("DropStateFunctionMap"))
+			if (sceneItemDropItemComponent.DropStateFunctionMap == null)
 			{
-				if (sceneItemDropItemComponent.DropStateFunctionMap == null)
-				{
-					this.DropStateFunctionMap = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<EDropStateType, Action<float>>>(this.DropStateFunctionMap), "DropStateFunctionMap"))
-				{
-					return false;
-				}
+				this.DropStateFunctionMap = null;
 			}
-			if (base.CanResetComponentProperty("OnEntityDieAnimationEnd"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DropStateFunctionMap), "DropStateFunctionMap"))
 			{
-				if (sceneItemDropItemComponent.OnEntityDieAnimationEnd == null)
-				{
-					this.OnEntityDieAnimationEnd = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Action<int>>(this.OnEntityDieAnimationEnd), "OnEntityDieAnimationEnd"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("DelayHandler"))
+			if (sceneItemDropItemComponent.OnEntityDieAnimationEnd == null)
 			{
-				if (sceneItemDropItemComponent.DelayHandler == null)
-				{
-					this.DelayHandler = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.DelayHandler), "DelayHandler"))
-				{
-					return false;
-				}
+				this.OnEntityDieAnimationEnd = null;
 			}
-			return !base.CanResetComponentProperty("PreFrameLocation") || sceneItemDropItemComponent.PreFrameLocation == null || base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.PreFrameLocation), "PreFrameLocation");
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnEntityDieAnimationEnd), "OnEntityDieAnimationEnd"))
+			{
+				return false;
+			}
+			if (sceneItemDropItemComponent.DelayHandler == null)
+			{
+				this.DelayHandler = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DelayHandler), "DelayHandler"))
+			{
+				return false;
+			}
+			return sceneItemDropItemComponent.PreFrameLocation == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.PreFrameLocation), "PreFrameLocation");
 		}
 
-		// Token: 0x0402540E RID: 152590
+		// Token: 0x17007237 RID: 29239
+		// (get) Token: 0x0603C778 RID: 247672 RVA: 0x01147854 File Offset: 0x01145A54
+		public override bool NeedClearInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007238 RID: 29240
+		// (get) Token: 0x0603C779 RID: 247673 RVA: 0x01147857 File Offset: 0x01145A57
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007239 RID: 29241
+		// (get) Token: 0x0603C77A RID: 247674 RVA: 0x0114785A File Offset: 0x01145A5A
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700723A RID: 29242
+		// (get) Token: 0x0603C77B RID: 247675 RVA: 0x0114785D File Offset: 0x01145A5D
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700723B RID: 29243
+		// (get) Token: 0x0603C77C RID: 247676 RVA: 0x01147860 File Offset: 0x01145A60
+		public override bool NeedEnableInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700723C RID: 29244
+		// (get) Token: 0x0603C77D RID: 247677 RVA: 0x01147863 File Offset: 0x01145A63
+		public override bool NeedDisableInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700723D RID: 29245
+		// (get) Token: 0x0603C77E RID: 247678 RVA: 0x01147866 File Offset: 0x01145A66
+		public override bool NeedForceTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020075 RID: 131189
 		private const float FIX_SPAWN_TRACE_HEIGHT = -60f;
 
-		// Token: 0x0402540F RID: 152591
+		// Token: 0x04020076 RID: 131190
 		private const string PROFILE_KEY = "SceneItemDropItemComponent_FixBornLocation";
 
-		// Token: 0x04025410 RID: 152592
+		// Token: 0x04020077 RID: 131191
 		private const float LINEARDAMPING = 0f;
 
-		// Token: 0x04025411 RID: 152593
+		// Token: 0x04020078 RID: 131192
 		private const float ANGULARDAMPING = 0f;
 
-		// Token: 0x04025412 RID: 152594
+		// Token: 0x04020079 RID: 131193
 		private const float CHECK_WATER_OFFSET_Z = 10f;
 
-		// Token: 0x04025413 RID: 152595
+		// Token: 0x0402007A RID: 131194
 		private static readonly FName COLLISION_PROFILE_NAME = new FName("DropItem");
 
-		// Token: 0x04025414 RID: 152596
+		// Token: 0x0402007B RID: 131195
 		private const string PICKUP_AUDIO_EVENT_NAME = "play_ui_fb_pickup";
 
-		// Token: 0x04025415 RID: 152597
+		// Token: 0x0402007C RID: 131196
 		private const string PHYSICAL_MATERIAL_PATH = "/Game/Aki/Scene/PhysMaterial/PM_DropItem.PM_DropItem";
 
-		// Token: 0x04025416 RID: 152598
+		// Token: 0x0402007D RID: 131197
 		private const string PARABOLIC_EFFECT = "/Game/Aki/Effect/DataAsset/Niagara/BigWorld/DA_Fx_Xingxing_001.DA_Fx_Xingxing_001";
 
-		// Token: 0x04025417 RID: 152599
+		// Token: 0x0402007E RID: 131198
 		[StaticVariableRuleIgnore]
 		private static readonly string[] BORN_EFFECTS = new string[]
 		{
@@ -1075,7 +1118,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			"/Game/Aki/Effect/DataAsset/Niagara/BigWorld/DA_Fx_UI_Sence_Diaoluo_005.DA_Fx_UI_Sence_Diaoluo_005"
 		};
 
-		// Token: 0x04025418 RID: 152600
+		// Token: 0x0402007F RID: 131199
 		[StaticVariableRuleIgnore]
 		private static readonly string[] TRAIL_EFFECTS = new string[]
 		{
@@ -1086,7 +1129,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			"/Game/Aki/Effect/DataAsset/Niagara/BigWorld/DA_Fx_UI_Sence_Trail_005.DA_Fx_UI_Sence_Trail_005"
 		};
 
-		// Token: 0x04025419 RID: 152601
+		// Token: 0x04020080 RID: 131200
 		[StaticVariableRuleIgnore]
 		private static readonly string[] DESTROY_EFFECTS = new string[]
 		{
@@ -1097,28 +1140,28 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			"/Game/Aki/Effect/DataAsset/Niagara/BigWorld/DA_Fx_UI_Sence_Xiaosan_005.DA_Fx_UI_Sence_Xiaosan_005"
 		};
 
-		// Token: 0x0402541A RID: 152602
+		// Token: 0x04020081 RID: 131201
 		[Nullable(2)]
 		private CreatureDataComponent CreatureData;
 
-		// Token: 0x0402541B RID: 152603
+		// Token: 0x04020082 RID: 131202
 		[Nullable(2)]
 		private SceneItemActorComponent ActorComp;
 
-		// Token: 0x0402541C RID: 152604
+		// Token: 0x04020083 RID: 131203
 		private bool DropDownIsStarted;
 
-		// Token: 0x0402541D RID: 152605
+		// Token: 0x04020084 RID: 131204
 		private bool DropDownCanRun;
 
-		// Token: 0x0402541E RID: 152606
+		// Token: 0x04020085 RID: 131205
 		private int ProgressEffect;
 
-		// Token: 0x0402541F RID: 152607
+		// Token: 0x04020086 RID: 131206
 		[Nullable(2)]
 		private DropItemData ItemData;
 
-		// Token: 0x04025420 RID: 152608
+		// Token: 0x04020087 RID: 131207
 		[Nullable(new byte[]
 		{
 			2,
@@ -1126,19 +1169,19 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 		})]
 		private Dictionary<EDropStateType, Action<float>> DropStateFunctionMap;
 
-		// Token: 0x04025421 RID: 152609
+		// Token: 0x04020088 RID: 131208
 		[Nullable(2)]
 		private Action<int> OnEntityDieAnimationEnd;
 
-		// Token: 0x04025422 RID: 152610
+		// Token: 0x04020089 RID: 131209
 		[Nullable(2)]
 		private TimerHandle DelayHandler;
 
-		// Token: 0x04025423 RID: 152611
+		// Token: 0x0402008A RID: 131210
 		[StaticVariableRuleIgnore]
 		private static readonly global::Vector TempVector = global::Vector.Create();
 
-		// Token: 0x04025424 RID: 152612
+		// Token: 0x0402008B RID: 131211
 		private readonly global::Vector PreFrameLocation = global::Vector.Create();
 	}
 }

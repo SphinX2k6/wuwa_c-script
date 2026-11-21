@@ -10,39 +10,39 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x020057F8 RID: 22520
+	// Token: 0x020047CF RID: 18383
 	public class PayRewardView : UiViewBase, ICommonRewardComponentUiAccessor, ICommonRewardComponentChildType, ICommonRewardComponentCallbacks
 	{
-		// Token: 0x0603940B RID: 234507 RVA: 0x00D939B8 File Offset: 0x00D91BB8
+		// Token: 0x0602E31F RID: 189215 RVA: 0x00CE2800 File Offset: 0x00CE0A00
 		[NullableContext(2)]
 		public UUIItem GetItemForComponent(int childType)
 		{
 			return base.GetItem(childType);
 		}
 
-		// Token: 0x0603940C RID: 234508 RVA: 0x00D939C1 File Offset: 0x00D91BC1
+		// Token: 0x0602E320 RID: 189216 RVA: 0x00CE2809 File Offset: 0x00CE0A09
 		[NullableContext(2)]
 		public UUIText GetTextForComponent(int childType)
 		{
 			return base.GetText(childType);
 		}
 
-		// Token: 0x0603940D RID: 234509 RVA: 0x00D939CA File Offset: 0x00D91BCA
+		// Token: 0x0602E321 RID: 189217 RVA: 0x00CE2812 File Offset: 0x00CE0A12
 		[NullableContext(2)]
 		public UUIGridLayout GetGridLayoutForComponent(int childType)
 		{
 			return base.GetGridLayout(childType);
 		}
 
-		// Token: 0x0603940E RID: 234510 RVA: 0x00D939D3 File Offset: 0x00D91BD3
+		// Token: 0x0602E322 RID: 189218 RVA: 0x00CE281B File Offset: 0x00CE0A1B
 		[NullableContext(2)]
 		public UUIButtonComponent GetButtonForComponent(int childType)
 		{
 			return base.GetButton(childType);
 		}
 
-		// Token: 0x17008A1E RID: 35358
-		// (get) Token: 0x0603940F RID: 234511 RVA: 0x00D939DC File Offset: 0x00D91BDC
+		// Token: 0x17005DE8 RID: 24040
+		// (get) Token: 0x0602E323 RID: 189219 RVA: 0x00CE2824 File Offset: 0x00CE0A24
 		public int TitleText
 		{
 			get
@@ -51,8 +51,8 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x17008A1F RID: 35359
-		// (get) Token: 0x06039410 RID: 234512 RVA: 0x00D939DF File Offset: 0x00D91BDF
+		// Token: 0x17005DE9 RID: 24041
+		// (get) Token: 0x0602E324 RID: 189220 RVA: 0x00CE2827 File Offset: 0x00CE0A27
 		public int TitlePanelItem
 		{
 			get
@@ -61,8 +61,8 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x17008A20 RID: 35360
-		// (get) Token: 0x06039411 RID: 234513 RVA: 0x00D939E2 File Offset: 0x00D91BE2
+		// Token: 0x17005DEA RID: 24042
+		// (get) Token: 0x0602E325 RID: 189221 RVA: 0x00CE282A File Offset: 0x00CE0A2A
 		public int RewardItemListItem
 		{
 			get
@@ -71,8 +71,8 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x17008A21 RID: 35361
-		// (get) Token: 0x06039412 RID: 234514 RVA: 0x00D939E5 File Offset: 0x00D91BE5
+		// Token: 0x17005DEB RID: 24043
+		// (get) Token: 0x0602E326 RID: 189222 RVA: 0x00CE282D File Offset: 0x00CE0A2D
 		public int ContinueText
 		{
 			get
@@ -81,8 +81,8 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x17008A22 RID: 35362
-		// (get) Token: 0x06039413 RID: 234515 RVA: 0x00D939E8 File Offset: 0x00D91BE8
+		// Token: 0x17005DEC RID: 24044
+		// (get) Token: 0x0602E327 RID: 189223 RVA: 0x00CE2830 File Offset: 0x00CE0A30
 		public int LeftButton
 		{
 			get
@@ -91,8 +91,8 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x17008A23 RID: 35363
-		// (get) Token: 0x06039414 RID: 234516 RVA: 0x00D939EB File Offset: 0x00D91BEB
+		// Token: 0x17005DED RID: 24045
+		// (get) Token: 0x0602E328 RID: 189224 RVA: 0x00CE2833 File Offset: 0x00CE0A33
 		public int RightButton
 		{
 			get
@@ -101,8 +101,8 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x17008A24 RID: 35364
-		// (get) Token: 0x06039415 RID: 234517 RVA: 0x00D939EE File Offset: 0x00D91BEE
+		// Token: 0x17005DEE RID: 24046
+		// (get) Token: 0x0602E329 RID: 189225 RVA: 0x00CE2836 File Offset: 0x00CE0A36
 		public int RewardItemLoopListItem
 		{
 			get
@@ -111,8 +111,8 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x17008A25 RID: 35365
-		// (get) Token: 0x06039416 RID: 234518 RVA: 0x00D939F1 File Offset: 0x00D91BF1
+		// Token: 0x17005DEF RID: 24047
+		// (get) Token: 0x0602E32A RID: 189226 RVA: 0x00CE2839 File Offset: 0x00CE0A39
 		public int ListContentItem
 		{
 			get
@@ -121,8 +121,8 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x17008A26 RID: 35366
-		// (get) Token: 0x06039417 RID: 234519 RVA: 0x00D939F4 File Offset: 0x00D91BF4
+		// Token: 0x17005DF0 RID: 24048
+		// (get) Token: 0x0602E32B RID: 189227 RVA: 0x00CE283C File Offset: 0x00CE0A3C
 		public int MaskButton
 		{
 			get
@@ -131,25 +131,25 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x06039418 RID: 234520 RVA: 0x00D939F7 File Offset: 0x00D91BF7
+		// Token: 0x0602E32C RID: 189228 RVA: 0x00CE283F File Offset: 0x00CE0A3F
 		void ICommonRewardComponentCallbacks.OnCloseView()
 		{
 			this.OnCloseView();
 		}
 
-		// Token: 0x06039419 RID: 234521 RVA: 0x00D939FF File Offset: 0x00D91BFF
+		// Token: 0x0602E32D RID: 189229 RVA: 0x00CE2847 File Offset: 0x00CE0A47
 		void ICommonRewardComponentCallbacks.OnRefreshView()
 		{
 			this.OnRefreshView();
 		}
 
-		// Token: 0x0603941A RID: 234522 RVA: 0x00D93A07 File Offset: 0x00D91C07
+		// Token: 0x0602E32E RID: 189230 RVA: 0x00CE284F File Offset: 0x00CE0A4F
 		[NullableContext(1)]
 		public PayRewardView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603941B RID: 234523 RVA: 0x00D93A10 File Offset: 0x00D91C10
+		// Token: 0x0602E32F RID: 189231 RVA: 0x00CE2858 File Offset: 0x00CE0A58
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -184,7 +184,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603941C RID: 234524 RVA: 0x00D93B9E File Offset: 0x00D91D9E
+		// Token: 0x0602E330 RID: 189232 RVA: 0x00CE29E6 File Offset: 0x00CE0BE6
 		protected override void OnAddEventListener()
 		{
 			CommonRewardComponent commonRewardComponent = this.CommonRewardComponent;
@@ -195,7 +195,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			commonRewardComponent.AddEventListener();
 		}
 
-		// Token: 0x0603941D RID: 234525 RVA: 0x00D93BB0 File Offset: 0x00D91DB0
+		// Token: 0x0602E331 RID: 189233 RVA: 0x00CE29F8 File Offset: 0x00CE0BF8
 		protected override void OnRemoveEventListener()
 		{
 			CommonRewardComponent commonRewardComponent = this.CommonRewardComponent;
@@ -206,7 +206,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			commonRewardComponent.RemoveEventListener();
 		}
 
-		// Token: 0x0603941E RID: 234526 RVA: 0x00D93BC4 File Offset: 0x00D91DC4
+		// Token: 0x0602E332 RID: 189234 RVA: 0x00CE2A0C File Offset: 0x00CE0C0C
 		protected override UniTask OnCreateAsync()
 		{
 			PayRewardView.<OnCreateAsync>d__30 <OnCreateAsync>d__;
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return <OnCreateAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603941F RID: 234527 RVA: 0x00D93C08 File Offset: 0x00D91E08
+		// Token: 0x0602E333 RID: 189235 RVA: 0x00CE2A50 File Offset: 0x00CE0C50
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PayRewardView.<OnBeforeStartAsync>d__31 <OnBeforeStartAsync>d__;
@@ -228,7 +228,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039420 RID: 234528 RVA: 0x00D93C4C File Offset: 0x00D91E4C
+		// Token: 0x0602E334 RID: 189236 RVA: 0x00CE2A94 File Offset: 0x00CE0C94
 		protected override void OnStart()
 		{
 			RewardData<ICommonRewardInfo> rewardData = this.PickLastRewardData();
@@ -239,7 +239,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.RefreshDisplay(rewardData);
 		}
 
-		// Token: 0x06039421 RID: 234529 RVA: 0x00D93C6C File Offset: 0x00D91E6C
+		// Token: 0x0602E335 RID: 189237 RVA: 0x00CE2AB4 File Offset: 0x00CE0CB4
 		[NullableContext(1)]
 		private void RefreshDisplay(RewardData<ICommonRewardInfo> rewardData)
 		{
@@ -252,25 +252,25 @@ namespace CSharpScript.Game.Module.ItemReward
 			ItemRewardController.Instance.PlayAudio(audioId, null);
 		}
 
-		// Token: 0x06039422 RID: 234530 RVA: 0x00D93CA4 File Offset: 0x00D91EA4
+		// Token: 0x0602E336 RID: 189238 RVA: 0x00CE2AEC File Offset: 0x00CE0CEC
 		protected override void OnAfterPlayStartSequence()
 		{
 			this.UiViewSequence.PlaySequence("Switch", false, null);
 		}
 
-		// Token: 0x06039423 RID: 234531 RVA: 0x00D93CCB File Offset: 0x00D91ECB
+		// Token: 0x0602E337 RID: 189239 RVA: 0x00CE2B13 File Offset: 0x00CE0D13
 		protected override void OnAfterShow()
 		{
 			EventSystem.Instance.Emit(EEventName.OnShowRewardView);
 		}
 
-		// Token: 0x06039424 RID: 234532 RVA: 0x00D93CDD File Offset: 0x00D91EDD
+		// Token: 0x0602E338 RID: 189240 RVA: 0x00CE2B25 File Offset: 0x00CE0D25
 		protected override void OnBeforePlayCloseSequence()
 		{
 			this.UiViewSequence.StopSequenceByKey("Switch", false, false);
 		}
 
-		// Token: 0x06039425 RID: 234533 RVA: 0x00D93CF4 File Offset: 0x00D91EF4
+		// Token: 0x0602E339 RID: 189241 RVA: 0x00CE2B3C File Offset: 0x00CE0D3C
 		protected override void OnBeforeDestroy()
 		{
 			CommonRewardComponent commonRewardComponent = this.CommonRewardComponent;
@@ -288,7 +288,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			ItemRewardModel.Instance.ClearCurrentRewardData();
 		}
 
-		// Token: 0x06039426 RID: 234534 RVA: 0x00D93D44 File Offset: 0x00D91F44
+		// Token: 0x0602E33A RID: 189242 RVA: 0x00CE2B8C File Offset: 0x00CE0D8C
 		private void OnCloseView()
 		{
 			RewardData<ICommonRewardInfo> rewardData = this.PickLastRewardData();
@@ -301,7 +301,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.RefreshDisplay(rewardData);
 		}
 
-		// Token: 0x06039427 RID: 234535 RVA: 0x00D93D71 File Offset: 0x00D91F71
+		// Token: 0x0602E33B RID: 189243 RVA: 0x00CE2BB9 File Offset: 0x00CE0DB9
 		private void OnRefreshView()
 		{
 			UiBehaviorLevelSequence uiViewSequence = this.UiViewSequence;
@@ -312,7 +312,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			uiViewSequence.PlaySequencePurely("Start01", true, false);
 		}
 
-		// Token: 0x06039428 RID: 234536 RVA: 0x00D93D8A File Offset: 0x00D91F8A
+		// Token: 0x0602E33C RID: 189244 RVA: 0x00CE2BD2 File Offset: 0x00CE0DD2
 		private void OnClickedMaskButton()
 		{
 			CommonRewardComponent commonRewardComponent = this.CommonRewardComponent;
@@ -323,7 +323,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			commonRewardComponent.OnClickMaskButton();
 		}
 
-		// Token: 0x06039429 RID: 234537 RVA: 0x00D93D9C File Offset: 0x00D91F9C
+		// Token: 0x0602E33D RID: 189245 RVA: 0x00CE2BE4 File Offset: 0x00CE0DE4
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -344,38 +344,38 @@ namespace CSharpScript.Game.Module.ItemReward
 			return null;
 		}
 
-		// Token: 0x0401DF2D RID: 122669
+		// Token: 0x040189C4 RID: 100804
 		[Nullable(2)]
 		private CommonRewardComponent CommonRewardComponent;
 
-		// Token: 0x0200B9E8 RID: 47592
+		// Token: 0x0200A3FE RID: 41982
 		private class EChildType
 		{
-			// Token: 0x04038349 RID: 230217
+			// Token: 0x04032D36 RID: 208182
 			public const int MaskButton = 0;
 
-			// Token: 0x0403834A RID: 230218
+			// Token: 0x04032D37 RID: 208183
 			public const int TitleText = 1;
 
-			// Token: 0x0403834B RID: 230219
+			// Token: 0x04032D38 RID: 208184
 			public const int TitlePanelItem = 2;
 
-			// Token: 0x0403834C RID: 230220
+			// Token: 0x04032D39 RID: 208185
 			public const int RewardItemListItem = 3;
 
-			// Token: 0x0403834D RID: 230221
+			// Token: 0x04032D3A RID: 208186
 			public const int ContinueText = 4;
 
-			// Token: 0x0403834E RID: 230222
+			// Token: 0x04032D3B RID: 208187
 			public const int LeftButton = 5;
 
-			// Token: 0x0403834F RID: 230223
+			// Token: 0x04032D3C RID: 208188
 			public const int RightButton = 6;
 
-			// Token: 0x04038350 RID: 230224
+			// Token: 0x04032D3D RID: 208189
 			public const int RewardItemLoopListItem = 7;
 
-			// Token: 0x04038351 RID: 230225
+			// Token: 0x04032D3E RID: 208190
 			public const int ListContentItem = 8;
 		}
 	}

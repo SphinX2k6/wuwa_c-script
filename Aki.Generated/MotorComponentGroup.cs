@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000E2F RID: 3631
+	// Token: 0x02000F14 RID: 3860
 	public struct MotorComponentGroup : IFlatbufferObject
 	{
-		// Token: 0x17002014 RID: 8212
-		// (get) Token: 0x060096B8 RID: 38584 RVA: 0x0028B084 File Offset: 0x00289284
+		// Token: 0x17002079 RID: 8313
+		// (get) Token: 0x06009CD8 RID: 40152 RVA: 0x002A8D78 File Offset: 0x002A6F78
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060096B9 RID: 38585 RVA: 0x0028B091 File Offset: 0x00289291
+		// Token: 0x06009CD9 RID: 40153 RVA: 0x002A8D85 File Offset: 0x002A6F85
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060096BA RID: 38586 RVA: 0x0028B098 File Offset: 0x00289298
+		// Token: 0x06009CDA RID: 40154 RVA: 0x002A8D8C File Offset: 0x002A6F8C
 		public static MotorComponentGroup GetRootAsMotorComponentGroup(ByteBuffer _bb)
 		{
 			return MotorComponentGroup.GetRootAsMotorComponentGroup(_bb, default(MotorComponentGroup));
 		}
 
-		// Token: 0x060096BB RID: 38587 RVA: 0x0028B0B4 File Offset: 0x002892B4
+		// Token: 0x06009CDB RID: 40155 RVA: 0x002A8DA8 File Offset: 0x002A6FA8
 		public static MotorComponentGroup GetRootAsMotorComponentGroup(ByteBuffer _bb, MotorComponentGroup obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060096BC RID: 38588 RVA: 0x0028B0D1 File Offset: 0x002892D1
+		// Token: 0x06009CDC RID: 40156 RVA: 0x002A8DC5 File Offset: 0x002A6FC5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060096BD RID: 38589 RVA: 0x0028B0E0 File Offset: 0x002892E0
+		// Token: 0x06009CDD RID: 40157 RVA: 0x002A8DD4 File Offset: 0x002A6FD4
 		public MotorComponentGroup __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002015 RID: 8213
-		// (get) Token: 0x060096BE RID: 38590 RVA: 0x0028B0F0 File Offset: 0x002892F0
+		// Token: 0x1700207A RID: 8314
+		// (get) Token: 0x06009CDE RID: 40158 RVA: 0x002A8DE4 File Offset: 0x002A6FE4
 		public int Id
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002016 RID: 8214
-		// (get) Token: 0x060096BF RID: 38591 RVA: 0x0028B12C File Offset: 0x0028932C
+		// Token: 0x1700207B RID: 8315
+		// (get) Token: 0x06009CDF RID: 40159 RVA: 0x002A8E20 File Offset: 0x002A7020
 		public string Desc
 		{
 			get
@@ -80,19 +80,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060096C0 RID: 38592 RVA: 0x0028B163 File Offset: 0x00289363
+		// Token: 0x06009CE0 RID: 40160 RVA: 0x002A8E57 File Offset: 0x002A7057
 		public Span<byte> GetDescBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x060096C1 RID: 38593 RVA: 0x0028B172 File Offset: 0x00289372
+		// Token: 0x06009CE1 RID: 40161 RVA: 0x002A8E66 File Offset: 0x002A7066
 		public byte[] GetDescArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x060096C2 RID: 38594 RVA: 0x0028B18C File Offset: 0x0028938C
+		// Token: 0x06009CE2 RID: 40162 RVA: 0x002A8E80 File Offset: 0x002A7080
 		public int ConflictGroup(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -103,8 +103,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17002017 RID: 8215
-		// (get) Token: 0x060096C3 RID: 38595 RVA: 0x0028B1CC File Offset: 0x002893CC
+		// Token: 0x1700207C RID: 8316
+		// (get) Token: 0x06009CE3 RID: 40163 RVA: 0x002A8EC0 File Offset: 0x002A70C0
 		public int ConflictGroupLength
 		{
 			get
@@ -118,19 +118,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060096C4 RID: 38596 RVA: 0x0028B1F7 File Offset: 0x002893F7
+		// Token: 0x06009CE4 RID: 40164 RVA: 0x002A8EEB File Offset: 0x002A70EB
 		public Span<int> GetConflictGroupBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x060096C5 RID: 38597 RVA: 0x0028B206 File Offset: 0x00289406
+		// Token: 0x06009CE5 RID: 40165 RVA: 0x002A8EFA File Offset: 0x002A70FA
 		public int[] GetConflictGroupArray()
 		{
 			return this.__p.__vector_as_array<int>(8) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x060096C6 RID: 38598 RVA: 0x0028B220 File Offset: 0x00289420
+		// Token: 0x06009CE6 RID: 40166 RVA: 0x002A8F14 File Offset: 0x002A7114
 		public string Region(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -141,8 +141,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17002018 RID: 8216
-		// (get) Token: 0x060096C7 RID: 38599 RVA: 0x0028B25C File Offset: 0x0028945C
+		// Token: 0x1700207D RID: 8317
+		// (get) Token: 0x06009CE7 RID: 40167 RVA: 0x002A8F50 File Offset: 0x002A7150
 		public int RegionLength
 		{
 			get
@@ -156,42 +156,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060096C8 RID: 38600 RVA: 0x0028B288 File Offset: 0x00289488
+		// Token: 0x06009CE8 RID: 40168 RVA: 0x002A8F7C File Offset: 0x002A717C
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ConflictGroupIter()或GetConflictGroupBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] ConflictGroup()
+		public int[] ConflictGroup()
 		{
-			MotorComponentGroup motorComponentGroup = this;
-			return motorComponentGroup.GetConflictGroupArray() ?? Array.Empty<int>();
+			return this.GetConflictGroupArray();
 		}
 
-		// Token: 0x060096C9 RID: 38601 RVA: 0x0028B2AC File Offset: 0x002894AC
+		// Token: 0x06009CE9 RID: 40169 RVA: 0x002A8F84 File Offset: 0x002A7184
 		[NullableContext(1)]
-		public readonly IEnumerable<int> ConflictGroupIter()
+		public IEnumerable<int> ConflictGroupIter()
 		{
 			MotorComponentGroup.<ConflictGroupIter>d__23 <ConflictGroupIter>d__ = new MotorComponentGroup.<ConflictGroupIter>d__23(-2);
 			<ConflictGroupIter>d__.<>3__<>4__this = this;
 			return <ConflictGroupIter>d__;
 		}
 
-		// Token: 0x060096CA RID: 38602 RVA: 0x0028B2C1 File Offset: 0x002894C1
+		// Token: 0x06009CEA RID: 40170 RVA: 0x002A8F99 File Offset: 0x002A7199
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用RegionIter()或GetRegionBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] Region()
+		public string[] Region()
 		{
 			return this.RegionIter().ToArray<string>();
 		}
 
-		// Token: 0x060096CB RID: 38603 RVA: 0x0028B2CE File Offset: 0x002894CE
+		// Token: 0x06009CEB RID: 40171 RVA: 0x002A8FA6 File Offset: 0x002A71A6
 		[NullableContext(1)]
-		public readonly IEnumerable<string> RegionIter()
+		public IEnumerable<string> RegionIter()
 		{
 			MotorComponentGroup.<RegionIter>d__25 <RegionIter>d__ = new MotorComponentGroup.<RegionIter>d__25(-2);
 			<RegionIter>d__.<>3__<>4__this = this;
 			return <RegionIter>d__;
 		}
 
-		// Token: 0x04004ED4 RID: 20180
+		// Token: 0x040054B9 RID: 21689
 		private Table __p;
 	}
 }

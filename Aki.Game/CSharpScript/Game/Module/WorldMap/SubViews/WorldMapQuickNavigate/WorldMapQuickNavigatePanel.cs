@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -20,18 +19,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 {
-	// Token: 0x020047DC RID: 18396
+	// Token: 0x0200370D RID: 14093
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WorldMapQuickNavigatePanel : WorldMapSecondaryUi
 	{
-		// Token: 0x06030305 RID: 197381 RVA: 0x00B2A6BB File Offset: 0x00B288BB
+		// Token: 0x06024AD5 RID: 150229 RVA: 0x00A5A557 File Offset: 0x00A58757
 		public override string GetResourceId()
 		{
 			return "UiItem_MapChange";
 		}
 
-		// Token: 0x06030306 RID: 197382 RVA: 0x00B2A6C4 File Offset: 0x00B288C4
+		// Token: 0x06024AD6 RID: 150230 RVA: 0x00A5A560 File Offset: 0x00A58760
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -55,13 +54,13 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06030307 RID: 197383 RVA: 0x00B2A7D2 File Offset: 0x00B289D2
+		// Token: 0x06024AD7 RID: 150231 RVA: 0x00A5A66E File Offset: 0x00A5886E
 		protected override PopupTypeRightItem GetPopupRightItem()
 		{
 			return new PopupRightItemA();
 		}
 
-		// Token: 0x06030308 RID: 197384 RVA: 0x00B2A7DC File Offset: 0x00B289DC
+		// Token: 0x06024AD8 RID: 150232 RVA: 0x00A5A678 File Offset: 0x00A58878
 		protected override UniTask OnBeforeStartAsync()
 		{
 			WorldMapQuickNavigatePanel.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -72,14 +71,14 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030309 RID: 197385 RVA: 0x00B2A820 File Offset: 0x00B28A20
+		// Token: 0x06024AD9 RID: 150233 RVA: 0x00A5A6BC File Offset: 0x00A588BC
 		protected override void OnStart()
 		{
 			UUIItem rootItem = base.GetRootItem();
 			this.SequencePlayer = new UiSequencePlayer(rootItem);
 		}
 
-		// Token: 0x0603030A RID: 197386 RVA: 0x00B2A840 File Offset: 0x00B28A40
+		// Token: 0x06024ADA RID: 150234 RVA: 0x00A5A6DC File Offset: 0x00A588DC
 		protected override void OnBeforeShow()
 		{
 			EventSystem.Instance.Add(EEventName.WorldMapFirstNavigateSelect, new Action<QuickNavigateDynamicData>(this.OnFirstNavigateSelect));
@@ -93,7 +92,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			this.OnTimerRefresh(0f);
 		}
 
-		// Token: 0x0603030B RID: 197387 RVA: 0x00B2A934 File Offset: 0x00B28B34
+		// Token: 0x06024ADB RID: 150235 RVA: 0x00A5A7D0 File Offset: 0x00A589D0
 		protected override void OnAfterHide()
 		{
 			EventSystem.Instance.Remove(EEventName.WorldMapFirstNavigateSelect, new Action<QuickNavigateDynamicData>(this.OnFirstNavigateSelect));
@@ -105,7 +104,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			this.ClearTimer();
 		}
 
-		// Token: 0x0603030C RID: 197388 RVA: 0x00B2A9F0 File Offset: 0x00B28BF0
+		// Token: 0x06024ADC RID: 150236 RVA: 0x00A5A88C File Offset: 0x00A58A8C
 		private void SetupSelection()
 		{
 			if (this.SelectionInfo == null)
@@ -130,7 +129,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			}
 		}
 
-		// Token: 0x0603030D RID: 197389 RVA: 0x00B2AA94 File Offset: 0x00B28C94
+		// Token: 0x06024ADD RID: 150237 RVA: 0x00A5A930 File Offset: 0x00A58B30
 		protected override void OnShowWorldMapSecondaryUi(params object[] parameters)
 		{
 			if (RecallQuestModel.Instance.IsInRecallInstance())
@@ -145,7 +144,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			this.RefreshNavigateLayout(ERefreshNavigateType.All);
 		}
 
-		// Token: 0x0603030E RID: 197390 RVA: 0x00B2AAE8 File Offset: 0x00B28CE8
+		// Token: 0x06024ADE RID: 150238 RVA: 0x00A5A984 File Offset: 0x00A58B84
 		protected override UniTask OnBeforeShowWorldMapSecondaryUiAsync(params object[] parameters)
 		{
 			WorldMapQuickNavigatePanel.<OnBeforeShowWorldMapSecondaryUiAsync>d__17 <OnBeforeShowWorldMapSecondaryUiAsync>d__;
@@ -157,13 +156,13 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			return <OnBeforeShowWorldMapSecondaryUiAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603030F RID: 197391 RVA: 0x00B2AB33 File Offset: 0x00B28D33
+		// Token: 0x06024ADF RID: 150239 RVA: 0x00A5A9CF File Offset: 0x00A58BCF
 		protected override void OnCloseWorldMapSecondaryUi()
 		{
 			this.SelectionInfo = null;
 		}
 
-		// Token: 0x06030310 RID: 197392 RVA: 0x00B2AB3C File Offset: 0x00B28D3C
+		// Token: 0x06024AE0 RID: 150240 RVA: 0x00A5A9D8 File Offset: 0x00A58BD8
 		protected override void OnBeforeDestroy()
 		{
 			LoopScrollView<QuickNavigateLoopScrollAreaGridItem, QuickNavigateLoopScrollAreaGridItemData> areaLoopScrollView = this.AreaLoopScrollView;
@@ -181,19 +180,19 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			this.IconLayout = null;
 		}
 
-		// Token: 0x06030311 RID: 197393 RVA: 0x00B2AB75 File Offset: 0x00B28D75
+		// Token: 0x06024AE1 RID: 150241 RVA: 0x00A5AA11 File Offset: 0x00A58C11
 		private QuickNavigateLoopScrollAreaGridItem OnGridProxyCreate()
 		{
 			return new QuickNavigateLoopScrollAreaGridItem();
 		}
 
-		// Token: 0x06030312 RID: 197394 RVA: 0x00B2AB7C File Offset: 0x00B28D7C
+		// Token: 0x06024AE2 RID: 150242 RVA: 0x00A5AA18 File Offset: 0x00A58C18
 		private QuickNavigateDynamicScrollItem CreateItemFunc(QuickNavigateDynamicData data, UUIItem uiItem, int index)
 		{
 			return new QuickNavigateDynamicScrollItem();
 		}
 
-		// Token: 0x06030313 RID: 197395 RVA: 0x00B2AB84 File Offset: 0x00B28D84
+		// Token: 0x06024AE3 RID: 150243 RVA: 0x00A5AA20 File Offset: 0x00A58C20
 		private void RefreshNavigateLayout(ERefreshNavigateType refreshType)
 		{
 			if (refreshType == ERefreshNavigateType.All || refreshType == ERefreshNavigateType.StateOnly)
@@ -240,7 +239,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			}
 		}
 
-		// Token: 0x06030314 RID: 197396 RVA: 0x00B2AC68 File Offset: 0x00B28E68
+		// Token: 0x06024AE4 RID: 150244 RVA: 0x00A5AB04 File Offset: 0x00A58D04
 		private QuickNavigateDynamicData[] GetDynamicScrollViewDataList(ERefreshNavigateType refreshType)
 		{
 			List<IWorldMapNavigateCountryData> countryList = this.NavigateBundle.CountryList;
@@ -260,9 +259,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 				list.Add(quickNavigateDynamicData);
 				if (navigateCountry.StateMap != null)
 				{
-					using (IEnumerator<IWorldMapNavigateState> enumerator2 = (from a in navigateCountry.StateMap.Values
-					orderby a.SortIndex
-					select a).GetEnumerator())
+					using (List<IWorldMapNavigateState>.Enumerator enumerator2 = NoLinq.OrderByToList<IWorldMapNavigateState, int>(navigateCountry.StateMap.Values, (IWorldMapNavigateState state) => state.SortIndex).GetEnumerator())
 					{
 						while (enumerator2.MoveNext())
 						{
@@ -312,7 +309,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			return list.ToArray();
 		}
 
-		// Token: 0x06030315 RID: 197397 RVA: 0x00B2AF80 File Offset: 0x00B29180
+		// Token: 0x06024AE5 RID: 150245 RVA: 0x00A5AE1C File Offset: 0x00A5901C
 		private List<QuickNavigateLoopScrollAreaGridItemData> GetAreaGridItemDataList(ERefreshNavigateType refreshType)
 		{
 			List<QuickNavigateLoopScrollAreaGridItemData> list = new List<QuickNavigateLoopScrollAreaGridItemData>();
@@ -348,7 +345,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			return list;
 		}
 
-		// Token: 0x06030316 RID: 197398 RVA: 0x00B2B0BC File Offset: 0x00B292BC
+		// Token: 0x06024AE6 RID: 150246 RVA: 0x00A5AF58 File Offset: 0x00A59158
 		private void Select(ISelectionInfo selectInfo)
 		{
 			IWorldMapNavigateCountry valueOrDefault = this.NavigateBundle.CountryMap.GetValueOrDefault(selectInfo.CountryId);
@@ -404,7 +401,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			}
 		}
 
-		// Token: 0x06030317 RID: 197399 RVA: 0x00B2B210 File Offset: 0x00B29410
+		// Token: 0x06024AE7 RID: 150247 RVA: 0x00A5B0AC File Offset: 0x00A592AC
 		private void SelectCountry(int countryId, int index)
 		{
 			IWorldMapNavigateCountry valueOrDefault = this.NavigateBundle.CountryMap.GetValueOrDefault(countryId);
@@ -416,10 +413,16 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 				{
 					expandCountry = true;
 				}
-				IWorldMapNavigateState worldMapNavigateState = (from a in valueOrDefault.StateMap.Values
-				orderby a.SortIndex
-				select a).First<IWorldMapNavigateState>();
-				IWorldMapNavigate worldMapNavigate = worldMapNavigateState.AreaNavigateList[0];
+				IWorldMapNavigateState worldMapNavigateState = null;
+				foreach (IWorldMapNavigateState worldMapNavigateState2 in valueOrDefault.StateMap.Values)
+				{
+					if (worldMapNavigateState == null || worldMapNavigateState2.SortIndex < worldMapNavigateState.SortIndex)
+					{
+						worldMapNavigateState = worldMapNavigateState2;
+					}
+				}
+				IWorldMapNavigateState worldMapNavigateState3 = worldMapNavigateState;
+				IWorldMapNavigate worldMapNavigate = worldMapNavigateState3.AreaNavigateList[0];
 				ISelectionInfo selectionInfo = this.SelectionInfo;
 				int? num = (selectionInfo != null) ? new int?(selectionInfo.CountryId) : null;
 				this.IsRepeatSelectCountry = (countryId == num.GetValueOrDefault() & num != null);
@@ -429,7 +432,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 					SecondIndex = 0,
 					CountryId = countryId,
 					ExpandCountry = expandCountry,
-					StateId = (this.IsRepeatSelectCountry ? this.SelectionInfo.StateId : worldMapNavigateState.StateId),
+					StateId = (this.IsRepeatSelectCountry ? this.SelectionInfo.StateId : worldMapNavigateState3.StateId),
 					AreaId = worldMapNavigate.AreaId
 				});
 			}
@@ -459,7 +462,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			}
 		}
 
-		// Token: 0x06030318 RID: 197400 RVA: 0x00B2B3F4 File Offset: 0x00B295F4
+		// Token: 0x06024AE8 RID: 150248 RVA: 0x00A5B2C0 File Offset: 0x00A594C0
 		private void SelectState(int stateId, int index)
 		{
 			bool flag = stateId != this.SelectionInfo.StateId;
@@ -484,7 +487,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			}
 		}
 
-		// Token: 0x06030319 RID: 197401 RVA: 0x00B2B4D8 File Offset: 0x00B296D8
+		// Token: 0x06024AE9 RID: 150249 RVA: 0x00A5B3A4 File Offset: 0x00A595A4
 		private void SelectArea(int areaId, int index)
 		{
 			SelectionInfo selectionInfo = new SelectionInfo();
@@ -498,7 +501,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			this.Select(selectionInfo);
 		}
 
-		// Token: 0x0603031A RID: 197402 RVA: 0x00B2B54C File Offset: 0x00B2974C
+		// Token: 0x06024AEA RID: 150250 RVA: 0x00A5B418 File Offset: 0x00A59618
 		private void ExecuteSelection(bool closeView = false)
 		{
 			if (closeView)
@@ -513,7 +516,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			});
 		}
 
-		// Token: 0x0603031B RID: 197403 RVA: 0x00B2B5AB File Offset: 0x00B297AB
+		// Token: 0x06024AEB RID: 150251 RVA: 0x00A5B477 File Offset: 0x00A59677
 		private void OnFirstNavigateSelect(QuickNavigateDynamicData navigateDynamicData)
 		{
 			if (navigateDynamicData.ItemType == EQuickNavigateItemType.Country)
@@ -524,26 +527,26 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			this.SelectState(navigateDynamicData.StateId, navigateDynamicData.Index);
 		}
 
-		// Token: 0x0603031C RID: 197404 RVA: 0x00B2B5DC File Offset: 0x00B297DC
+		// Token: 0x06024AEC RID: 150252 RVA: 0x00A5B4A8 File Offset: 0x00A596A8
 		private void OnSecondNavigateSelect(int gridIndex)
 		{
 			IWorldMapNavigate areaNavigateInfo = this.AreaLoopScrollView.TryGetCachedData(gridIndex).AreaNavigateInfo;
 			this.SelectArea(areaNavigateInfo.AreaId, gridIndex);
 		}
 
-		// Token: 0x0603031D RID: 197405 RVA: 0x00B2B608 File Offset: 0x00B29808
+		// Token: 0x06024AED RID: 150253 RVA: 0x00A5B4D4 File Offset: 0x00A596D4
 		private void OnBeforeChangeMap()
 		{
 			base.GetItem(5).SetUIActive(true);
 		}
 
-		// Token: 0x0603031E RID: 197406 RVA: 0x00B2B617 File Offset: 0x00B29817
+		// Token: 0x06024AEE RID: 150254 RVA: 0x00A5B4E3 File Offset: 0x00A596E3
 		private void OnAfterChangeMap()
 		{
 			base.GetItem(5).SetUIActive(false);
 		}
 
-		// Token: 0x0603031F RID: 197407 RVA: 0x00B2B626 File Offset: 0x00B29826
+		// Token: 0x06024AEF RID: 150255 RVA: 0x00A5B4F2 File Offset: 0x00A596F2
 		[NullableContext(2)]
 		private void OnFocusPlayerClick(int id, MarkItem markItem)
 		{
@@ -553,7 +556,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			EventSystem.Instance.Emit(EEventName.WorldMapFocusPlayer);
 		}
 
-		// Token: 0x06030320 RID: 197408 RVA: 0x00B2B64C File Offset: 0x00B2984C
+		// Token: 0x06024AF0 RID: 150256 RVA: 0x00A5B518 File Offset: 0x00A59718
 		private INavigateIconItemData[] GetNavigateIconDataList(List<MarkItem> navigateMarkItems)
 		{
 			ExploreProgressModel.Instance.ClearTrackTaskAreaId();
@@ -597,7 +600,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			return list.ToArray();
 		}
 
-		// Token: 0x06030321 RID: 197409 RVA: 0x00B2B7A4 File Offset: 0x00B299A4
+		// Token: 0x06024AF1 RID: 150257 RVA: 0x00A5B670 File Offset: 0x00A59870
 		[NullableContext(2)]
 		private void OnNavigateIconClick(int id, MarkItem markItem = null)
 		{
@@ -605,7 +608,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			EventSystem.Instance.Emit<EMarkType, int>(EEventName.OnWorldMapTrackMarkItem, markItem.MarkType, markItem.MarkId);
 		}
 
-		// Token: 0x06030322 RID: 197410 RVA: 0x00B2B7CC File Offset: 0x00B299CC
+		// Token: 0x06024AF2 RID: 150258 RVA: 0x00A5B698 File Offset: 0x00A59898
 		private void UpdateTrackTaskArea(MarkItem markItem)
 		{
 			TTrackTarget trackTarget = markItem.TrackTarget;
@@ -625,7 +628,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			}
 		}
 
-		// Token: 0x06030323 RID: 197411 RVA: 0x00B2B86B File Offset: 0x00B29A6B
+		// Token: 0x06024AF3 RID: 150259 RVA: 0x00A5B737 File Offset: 0x00A59937
 		private void OnTimerRefresh(float delta)
 		{
 			if (OnlineModel.Instance.GetIsTeamModel())
@@ -634,7 +637,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			}
 		}
 
-		// Token: 0x06030324 RID: 197412 RVA: 0x00B2B888 File Offset: 0x00B29A88
+		// Token: 0x06024AF4 RID: 150260 RVA: 0x00A5B754 File Offset: 0x00A59954
 		private void ClearTimer()
 		{
 			if (TimerSystem.RealTimeInstance.Has(this.RefreshTimerHandle))
@@ -644,14 +647,14 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			}
 		}
 
-		// Token: 0x06030325 RID: 197413 RVA: 0x00B2B8B4 File Offset: 0x00B29AB4
+		// Token: 0x06024AF5 RID: 150261 RVA: 0x00A5B780 File Offset: 0x00A59980
 		private void OnUpdateOnlinePlayersArea()
 		{
 			ERefreshNavigateType refreshType = ERefreshNavigateType.AreaOnly;
 			this.RefreshNavigateLayout(refreshType);
 		}
 
-		// Token: 0x06030326 RID: 197414 RVA: 0x00B2B8CC File Offset: 0x00B29ACC
+		// Token: 0x06024AF6 RID: 150262 RVA: 0x00A5B798 File Offset: 0x00A59998
 		private void OnPlayerMarkItemChanged()
 		{
 			List<MarkItem> navigateMarkList = this.Map.GetNavigateMarkList();
@@ -661,15 +664,15 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 			}).Forget();
 		}
 
-		// Token: 0x04019F41 RID: 106305
+		// Token: 0x040145F5 RID: 83445
 		[Nullable(2)]
 		private ISelectionInfo SelectionInfo;
 
-		// Token: 0x04019F42 RID: 106306
+		// Token: 0x040145F6 RID: 83446
 		[Nullable(2)]
 		protected UiSequencePlayer SequencePlayer;
 
-		// Token: 0x04019F43 RID: 106307
+		// Token: 0x040145F7 RID: 83447
 		[Nullable(new byte[]
 		{
 			2,
@@ -679,7 +682,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 		})]
 		private DynamicScrollView<QuickNavigateDynamicScrollItem, QuickNavigateDynamicItem, QuickNavigateDynamicData> DynamicScrollView;
 
-		// Token: 0x04019F44 RID: 106308
+		// Token: 0x040145F8 RID: 83448
 		[Nullable(new byte[]
 		{
 			2,
@@ -688,7 +691,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 		})]
 		private LoopScrollView<QuickNavigateLoopScrollAreaGridItem, QuickNavigateLoopScrollAreaGridItemData> AreaLoopScrollView;
 
-		// Token: 0x04019F45 RID: 106309
+		// Token: 0x040145F9 RID: 83449
 		[Nullable(new byte[]
 		{
 			2,
@@ -697,14 +700,14 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapQuickNavigate
 		})]
 		private GenericLayout<NavigateIconItem, INavigateIconItemData> IconLayout;
 
-		// Token: 0x04019F46 RID: 106310
+		// Token: 0x040145FA RID: 83450
 		[Nullable(2)]
 		private TimerHandle RefreshTimerHandle;
 
-		// Token: 0x04019F47 RID: 106311
+		// Token: 0x040145FB RID: 83451
 		private bool IsRepeatSelectCountry;
 
-		// Token: 0x04019F48 RID: 106312
+		// Token: 0x040145FC RID: 83452
 		private WorldMapNavigateBundle NavigateBundle = new WorldMapNavigateBundle();
 	}
 }

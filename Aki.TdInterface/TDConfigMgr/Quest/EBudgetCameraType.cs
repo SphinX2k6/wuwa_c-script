@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000E59 RID: 3673
+	// Token: 0x02000F6A RID: 3946
 	[EnumExtensions]
 	public enum EBudgetCameraType
 	{
-		// Token: 0x04002FD3 RID: 12243
+		// Token: 0x040032CA RID: 13002
 		Role
 	}
 }

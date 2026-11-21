@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.QuickTimeAction.Condition
 {
-	// Token: 0x02004F53 RID: 20307
+	// Token: 0x02003F1C RID: 16156
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CfgLazyConditionGroup
 	{
-		// Token: 0x0401BA84 RID: 113284
+		// Token: 0x04016459 RID: 91225
 		public List<CfgLazyConditionBase> ConditionGroup = new List<CfgLazyConditionBase>();
 
-		// Token: 0x0401BA85 RID: 113285
+		// Token: 0x0401645A RID: 91226
 		public string ConditionFormula = string.Empty;
 
-		// Token: 0x0401BA86 RID: 113286
+		// Token: 0x0401645B RID: 91227
 		public int PayloadId;
 	}
 }

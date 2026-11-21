@@ -6,97 +6,88 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001DE2 RID: 7650
+	// Token: 0x0200057A RID: 1402
 	[UnrealObjectPath("/Script/KuroSimpleCombat.KSC_Entity_Weapon")]
 	[UnrealStructLayout(1576, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1576)]
-	public class AKSC_Entity_Weapon : AKSC_Entity, IUnrealUObject, IUnrealObject, IKSC_SummonedEntity, IUnrealNativeInterface, IUnrealInterface
+	public class AKSC_Entity_Weapon : AKSC_Entity, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601D3AC RID: 119724 RVA: 0x002B2B47 File Offset: 0x002B0D47
+		// Token: 0x06007F93 RID: 32659 RVA: 0x000BCC1D File Offset: 0x000BAE1D
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return AKSC_Entity_Weapon._ClassPtr;
 		}
 
-		// Token: 0x0601D3AD RID: 119725 RVA: 0x002B2B53 File Offset: 0x002B0D53
-		int IKSC_SummonedEntity.InterfaceOffset()
-		{
-			return AKSC_Entity_Weapon.__InterfaceOffset_IKSC_SummonedEntity;
-		}
-
-		// Token: 0x0601D3AE RID: 119726 RVA: 0x002B2B5C File Offset: 0x002B0D5C
+		// Token: 0x06007F94 RID: 32660 RVA: 0x000BCC2C File Offset: 0x000BAE2C
 		public AKSC_Entity_Weapon() : this(BuiltinUtils.AllocNativeUObject(AKSC_Entity_Weapon.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601D3AF RID: 119727 RVA: 0x002B2B84 File Offset: 0x002B0D84
+		// Token: 0x06007F95 RID: 32661 RVA: 0x000BCC54 File Offset: 0x000BAE54
 		[NullableContext(1)]
 		public AKSC_Entity_Weapon(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(AKSC_Entity_Weapon.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x0601D3B0 RID: 119728 RVA: 0x002B2BB7 File Offset: 0x002B0DB7
+		// Token: 0x06007F96 RID: 32662 RVA: 0x000BCC87 File Offset: 0x000BAE87
 		[NullableContext(2)]
 		public void SetSummonerEntity(AKSC_Entity Entity)
 		{
 			AKSC_Entity_Weapon.__SetSummonerEntity_Internal(base.NativePtr, (Entity != null) ? Entity.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0601D3B1 RID: 119729 RVA: 0x002B2BD4 File Offset: 0x002B0DD4
+		// Token: 0x06007F97 RID: 32663 RVA: 0x000BCCA4 File Offset: 0x000BAEA4
 		public void OnSummonerAttrChange(EKSC_AttrType AttrType, int OldValue, int NewValue)
 		{
 			AKSC_Entity_Weapon.__OnSummonerAttrChange_Internal(base.NativePtr, AttrType, OldValue, NewValue);
 		}
 
-		// Token: 0x0601D3B2 RID: 119730 RVA: 0x002B2BE4 File Offset: 0x002B0DE4
+		// Token: 0x06007F98 RID: 32664 RVA: 0x000BCCB4 File Offset: 0x000BAEB4
 		public void AddInheritSourceItem(EKSC_AttrType SelfAttrType, EKSC_AttrType SummonerAttrType)
 		{
 			AKSC_Entity_Weapon.__AddInheritSourceItem_Internal(base.NativePtr, SelfAttrType, SummonerAttrType);
 		}
 
-		// Token: 0x0601D3B3 RID: 119731 RVA: 0x002B2BF3 File Offset: 0x002B0DF3
+		// Token: 0x06007F99 RID: 32665 RVA: 0x000BCCC3 File Offset: 0x000BAEC3
 		public void AddInheritScaleItem(EKSC_AttrType AttrType, float Radio)
 		{
 			AKSC_Entity_Weapon.__AddInheritScaleItem_Internal(base.NativePtr, AttrType, Radio);
 		}
 
-		// Token: 0x0601D3B4 RID: 119732
+		// Token: 0x06007F9A RID: 32666
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetSummonerEntity_Internal(IntPtr @this, IntPtr Entity);
 
-		// Token: 0x0601D3B5 RID: 119733
+		// Token: 0x06007F9B RID: 32667
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnSummonerAttrChange_Internal(IntPtr @this, EKSC_AttrType AttrType, int OldValue, int NewValue);
 
-		// Token: 0x0601D3B6 RID: 119734
+		// Token: 0x06007F9C RID: 32668
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AddInheritSourceItem_Internal(IntPtr @this, EKSC_AttrType SelfAttrType, EKSC_AttrType SummonerAttrType);
 
-		// Token: 0x0601D3B7 RID: 119735
+		// Token: 0x06007F9D RID: 32669
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AddInheritScaleItem_Internal(IntPtr @this, EKSC_AttrType AttrType, float Radio);
 
-		// Token: 0x0601D3B8 RID: 119736 RVA: 0x002B2C02 File Offset: 0x002B0E02
+		// Token: 0x06007F9E RID: 32670 RVA: 0x000BCCD2 File Offset: 0x000BAED2
 		static AKSC_Entity_Weapon()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroSimpleCombat.KSC_Entity_Weapon");
 		}
 
-		// Token: 0x0601D3B9 RID: 119737 RVA: 0x002B2C10 File Offset: 0x002B0E10
+		// Token: 0x06007F9F RID: 32671 RVA: 0x000BCCE0 File Offset: 0x000BAEE0
 		protected AKSC_Entity_Weapon(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400FDCD RID: 64973
-		internal static int __InterfaceOffset_IKSC_SummonedEntity;
-
-		// Token: 0x0400FDCE RID: 64974
+		// Token: 0x040037B9 RID: 14265
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroSimpleCombat.KSC_Entity_Weapon";
 
-		// Token: 0x0400FDCF RID: 64975
+		// Token: 0x040037BA RID: 14266
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400FDD0 RID: 64976
+		// Token: 0x040037BB RID: 14267
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

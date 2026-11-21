@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C33 RID: 3123
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D06 RID: 3334
 	public class IEntityTrackControl : ITimelineTrackControlData
 	{
-		// Token: 0x06004781 RID: 18305 RVA: 0x000B4119 File Offset: 0x000B2319
+		// Token: 0x06004BF1 RID: 19441 RVA: 0x000BE4C9 File Offset: 0x000BC6C9
 		public static IEntityTrackControl Create(IEntityTrackControl? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170014D8 RID: 5336
-		// (get) Token: 0x06004782 RID: 18306 RVA: 0x000B4138 File Offset: 0x000B2338
+		// Token: 0x170015E0 RID: 5600
+		// (get) Token: 0x06004BF2 RID: 19442 RVA: 0x000BE4E8 File Offset: 0x000BC6E8
 		public override ETrackControlMode Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170014D9 RID: 5337
-		// (get) Token: 0x06004783 RID: 18307 RVA: 0x000B4145 File Offset: 0x000B2345
+		// Token: 0x170015E1 RID: 5601
+		// (get) Token: 0x06004BF3 RID: 19443 RVA: 0x000BE4F5 File Offset: 0x000BC6F5
 		public virtual int EntityId
 		{
 			get
@@ -43,8 +40,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170014DA RID: 5338
-		// (get) Token: 0x06004784 RID: 18308 RVA: 0x000B4154 File Offset: 0x000B2354
+		// Token: 0x170015E2 RID: 5602
+		// (get) Token: 0x06004BF4 RID: 19444 RVA: 0x000BE504 File Offset: 0x000BC704
 		public virtual List<IEntityTrackControlPoint> ControlPoints
 		{
 			get
@@ -64,13 +61,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400289E RID: 10398
+		// Token: 0x04002AF3 RID: 10995
 		private IEntityTrackControl Instance;
 
-		// Token: 0x0400289F RID: 10399
+		// Token: 0x04002AF4 RID: 10996
 		private List<IEntityTrackControlPoint> _ControlPointsCache;
 
-		// Token: 0x040028A0 RID: 10400
+		// Token: 0x04002AF5 RID: 10997
 		private bool _ControlPointsInited;
 	}
 }

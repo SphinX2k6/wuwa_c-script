@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DFC RID: 3580
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000EF8 RID: 3832
 	public class IDollComboCamera
 	{
-		// Token: 0x06005116 RID: 20758 RVA: 0x000C8202 File Offset: 0x000C6402
+		// Token: 0x0600563D RID: 22077 RVA: 0x000D3ACA File Offset: 0x000D1CCA
 		public static IDollComboCamera Create(IDollComboCamera? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001ADB RID: 6875
-		// (get) Token: 0x06005117 RID: 20759 RVA: 0x000C8221 File Offset: 0x000C6421
+		// Token: 0x17001C48 RID: 7240
+		// (get) Token: 0x0600563E RID: 22078 RVA: 0x000D3AE9 File Offset: 0x000D1CE9
 		public virtual float Fov
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001ADC RID: 6876
-		// (get) Token: 0x06005118 RID: 20760 RVA: 0x000C8230 File Offset: 0x000C6430
+		// Token: 0x17001C49 RID: 7241
+		// (get) Token: 0x0600563F RID: 22079 RVA: 0x000D3AF8 File Offset: 0x000D1CF8
 		public virtual List<IDollComboCameraConfig> ComboCameras
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002E9F RID: 11935
+		// Token: 0x04003167 RID: 12647
 		private IDollComboCamera Instance;
 
-		// Token: 0x04002EA0 RID: 11936
+		// Token: 0x04003168 RID: 12648
 		private List<IDollComboCameraConfig> _ComboCamerasCache;
 
-		// Token: 0x04002EA1 RID: 11937
+		// Token: 0x04003169 RID: 12649
 		private bool _ComboCamerasInited;
 	}
 }

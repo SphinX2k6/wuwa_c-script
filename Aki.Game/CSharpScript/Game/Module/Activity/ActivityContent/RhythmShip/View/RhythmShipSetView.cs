@@ -9,17 +9,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 {
-	// Token: 0x02006256 RID: 25174
+	// Token: 0x020051D4 RID: 20948
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RhythmShipSetView : UiViewBase
 	{
-		// Token: 0x0603F66E RID: 259694 RVA: 0x00F53D27 File Offset: 0x00F51F27
+		// Token: 0x0603432F RID: 213807 RVA: 0x00E9AC83 File Offset: 0x00E98E83
 		public RhythmShipSetView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603F66F RID: 259695 RVA: 0x00F53D42 File Offset: 0x00F51F42
+		// Token: 0x06034330 RID: 213808 RVA: 0x00E9AC9E File Offset: 0x00E98E9E
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			};
 		}
 
-		// Token: 0x0603F670 RID: 259696 RVA: 0x00F53D7C File Offset: 0x00F51F7C
+		// Token: 0x06034331 RID: 213809 RVA: 0x00E9ACD8 File Offset: 0x00E98ED8
 		protected override void OnStart()
 		{
 			CommonTabComponentData<CommonTabItem> data = new CommonTabComponentData<CommonTabItem>(new Func<UUIItem, int?, CommonTabItem>(this.TabItemProxyCreate), new Action<int>(this.ToggleCallBack), new Func<int, CommonTabData>(this.GetCommonData));
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			});
 		}
 
-		// Token: 0x0603F671 RID: 259697 RVA: 0x00F53E09 File Offset: 0x00F52009
+		// Token: 0x06034332 RID: 213810 RVA: 0x00E9AD65 File Offset: 0x00E98F65
 		protected override void OnBeforeShow()
 		{
 			if (this.HaveFirstShow)
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			this.RefreshSliderItem();
 		}
 
-		// Token: 0x0603F672 RID: 259698 RVA: 0x00F53E24 File Offset: 0x00F52024
+		// Token: 0x06034333 RID: 213811 RVA: 0x00E9AD80 File Offset: 0x00E98F80
 		private void RefreshScrollView()
 		{
 			this.InitScrollViewData();
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			setMultiTemplateScrollView.RefreshByData(multiTemplateScrollViewRefreshContext);
 		}
 
-		// Token: 0x0603F673 RID: 259699 RVA: 0x00F53E5C File Offset: 0x00F5205C
+		// Token: 0x06034334 RID: 213812 RVA: 0x00E9ADB8 File Offset: 0x00E98FB8
 		private void RefreshSliderItem()
 		{
 			int num = this.ScrollDataList.FindIndex((IMultiTemplateGridData data) => (data.Data as RhythmShipSetData).Type == ERhythmShipSetDataType.ItemBar);
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			proxyByGridIndex.Refresh(this.ScrollDataList[num].Data);
 		}
 
-		// Token: 0x0603F674 RID: 259700 RVA: 0x00F53EC0 File Offset: 0x00F520C0
+		// Token: 0x06034335 RID: 213813 RVA: 0x00E9AE1C File Offset: 0x00E9901C
 		private void InitScrollViewData()
 		{
 			this.ScrollDataList = new List<IMultiTemplateGridData>();
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			this.AddItemSliderData("RhythmShipSetItem_3", ERhythmShipSetDataType.ItemBar, new Action<int>(this.OnCalibrationValueChange));
 		}
 
-		// Token: 0x0603F675 RID: 259701 RVA: 0x00F53F38 File Offset: 0x00F52138
+		// Token: 0x06034336 RID: 213814 RVA: 0x00E9AE94 File Offset: 0x00E99094
 		private void AddTitleData(string titleText, ERhythmShipSetDataType type)
 		{
 			RhythmShipSetTitleData item = new RhythmShipSetTitleData(new RhythmShipSetData
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			this.ScrollDataList.Add(item);
 		}
 
-		// Token: 0x0603F676 RID: 259702 RVA: 0x00F53F6C File Offset: 0x00F5216C
+		// Token: 0x06034337 RID: 213815 RVA: 0x00E9AEC8 File Offset: 0x00E990C8
 		private void AddItemBtnData(string text, ERhythmShipSetDataType type, Action callBack)
 		{
 			RhythmShipSetItemBtnData item = new RhythmShipSetItemBtnData(new RhythmShipSetData
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			this.ScrollDataList.Add(item);
 		}
 
-		// Token: 0x0603F677 RID: 259703 RVA: 0x00F53FA8 File Offset: 0x00F521A8
+		// Token: 0x06034338 RID: 213816 RVA: 0x00E9AF04 File Offset: 0x00E99104
 		private void AddItemSliderData(string text, ERhythmShipSetDataType type, Action<int> barValueChange)
 		{
 			RhythmShipSetItemSliderData rhythmShipSetItemSliderData = new RhythmShipSetItemSliderData(new RhythmShipSetData
@@ -138,39 +138,39 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			this.ScrollDataList.Add(rhythmShipSetItemSliderData);
 		}
 
-		// Token: 0x0603F678 RID: 259704 RVA: 0x00F53FE1 File Offset: 0x00F521E1
+		// Token: 0x06034339 RID: 213817 RVA: 0x00E9AF3D File Offset: 0x00E9913D
 		private CommonTabItem TabItemProxyCreate([Nullable(2)] UUIItem uiItem, int? index)
 		{
 			return new CommonTabItem();
 		}
 
-		// Token: 0x0603F679 RID: 259705 RVA: 0x00F53FE8 File Offset: 0x00F521E8
+		// Token: 0x0603433A RID: 213818 RVA: 0x00E9AF44 File Offset: 0x00E99144
 		private void ToggleCallBack(int index)
 		{
 			this.RefreshScrollView();
 		}
 
-		// Token: 0x0603F67A RID: 259706 RVA: 0x00F53FF0 File Offset: 0x00F521F0
+		// Token: 0x0603433B RID: 213819 RVA: 0x00E9AF4C File Offset: 0x00E9914C
 		private CommonTabData GetCommonData(int index)
 		{
 			CommonTabTitleData titleData = new CommonTabTitleData("RhythmRole_SetView_Title", Array.Empty<object>());
 			return new CommonTabData(UiResourceConfig.Instance.GetResourcePath("SP_SETanjian"), titleData, null);
 		}
 
-		// Token: 0x0603F67B RID: 259707 RVA: 0x00F54023 File Offset: 0x00F52223
+		// Token: 0x0603433C RID: 213820 RVA: 0x00E9AF7F File Offset: 0x00E9917F
 		private void OnCalibrationValueChange(int currentCalibrationValue)
 		{
 			this.CurrentCalibrationValue = currentCalibrationValue;
 		}
 
-		// Token: 0x0603F67C RID: 259708 RVA: 0x00F5402C File Offset: 0x00F5222C
+		// Token: 0x0603433D RID: 213821 RVA: 0x00E9AF88 File Offset: 0x00E99188
 		private void OnSetCalibrationItemBtnClickCallBack()
 		{
 			this.SaveCurrentCalibration();
 			UiManager.Instance.OpenView(EUiViewName.RhythmShipCalibrationView, null, null);
 		}
 
-		// Token: 0x0603F67D RID: 259709 RVA: 0x00F54048 File Offset: 0x00F52248
+		// Token: 0x0603433E RID: 213822 RVA: 0x00E9AFA4 File Offset: 0x00E991A4
 		private void OnSetKeyItemBtnClickCallBack()
 		{
 			if (Info.Instance.IsInTouch())
@@ -186,19 +186,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			UiManager.Instance.OpenView(EUiViewName.CommonKeySettingView, param, null);
 		}
 
-		// Token: 0x0603F67E RID: 259710 RVA: 0x00F54096 File Offset: 0x00F52296
+		// Token: 0x0603433F RID: 213823 RVA: 0x00E9AFF2 File Offset: 0x00E991F2
 		protected override void OnBeforeHide()
 		{
 			this.SaveCurrentCalibration();
 		}
 
-		// Token: 0x0603F67F RID: 259711 RVA: 0x00F5409E File Offset: 0x00F5229E
+		// Token: 0x06034340 RID: 213824 RVA: 0x00E9AFFA File Offset: 0x00E991FA
 		private void SaveCurrentCalibration()
 		{
 			RhythmShipModel.Instance.SetLocalCalibrationValue(this.CurrentCalibrationValue);
 		}
 
-		// Token: 0x0603F680 RID: 259712 RVA: 0x00F540B0 File Offset: 0x00F522B0
+		// Token: 0x06034341 RID: 213825 RVA: 0x00E9B00C File Offset: 0x00E9920C
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -273,7 +273,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			}
 		}
 
-		// Token: 0x040211DD RID: 135645
+		// Token: 0x0401BB0C RID: 113420
 		[Nullable(new byte[]
 		{
 			2,
@@ -281,17 +281,17 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 		})]
 		protected TabComponentWithCaptionItem<CommonTabItem> TabComponent;
 
-		// Token: 0x040211DE RID: 135646
+		// Token: 0x0401BB0D RID: 113421
 		[Nullable(2)]
 		private MultiTemplateScrollView SetMultiTemplateScrollView;
 
-		// Token: 0x040211DF RID: 135647
+		// Token: 0x0401BB0E RID: 113422
 		private List<IMultiTemplateGridData> ScrollDataList = new List<IMultiTemplateGridData>();
 
-		// Token: 0x040211E0 RID: 135648
+		// Token: 0x0401BB0F RID: 113423
 		private int CurrentCalibrationValue;
 
-		// Token: 0x040211E1 RID: 135649
+		// Token: 0x0401BB10 RID: 113424
 		private bool HaveFirstShow = true;
 	}
 }

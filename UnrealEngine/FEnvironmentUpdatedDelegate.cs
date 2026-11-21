@@ -6,17 +6,17 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001692 RID: 5778
+	// Token: 0x0200030D RID: 781
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FEnvironmentUpdatedDelegate : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06014F4D RID: 85837 RVA: 0x001ECE5E File Offset: 0x001EB05E
+		// Token: 0x06005336 RID: 21302 RVA: 0x0007462E File Offset: 0x0007282E
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FEnvironmentUpdatedDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x06014F4E RID: 85838 RVA: 0x001ECE6A File Offset: 0x001EB06A
+		// Token: 0x06005337 RID: 21303 RVA: 0x0007463A File Offset: 0x0007283A
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (UKuroAudioEnvironmentSubsystem.__EnvironmentUpdatedDelegate__DelegateSignature_NativeFunctionPtr == IntPtr.Zero)
@@ -26,32 +26,31 @@ namespace UnrealEngine
 			return UKuroAudioEnvironmentSubsystem.__EnvironmentUpdatedDelegate__DelegateSignature_NativeFunctionPtr;
 		}
 
-		// Token: 0x06014F4F RID: 85839 RVA: 0x001ECE8D File Offset: 0x001EB08D
+		// Token: 0x06005338 RID: 21304 RVA: 0x0007465D File Offset: 0x0007285D
 		public FEnvironmentUpdatedDelegate()
 		{
 		}
 
-		// Token: 0x06014F50 RID: 85840 RVA: 0x001ECE95 File Offset: 0x001EB095
+		// Token: 0x06005339 RID: 21305 RVA: 0x00074665 File Offset: 0x00072865
 		[NullableContext(2)]
 		public FEnvironmentUpdatedDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06014F51 RID: 85841 RVA: 0x001ECE9F File Offset: 0x001EB09F
+		// Token: 0x0600533A RID: 21306 RVA: 0x0007466F File Offset: 0x0007286F
 		public FEnvironmentUpdatedDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06014F52 RID: 85842 RVA: 0x001ECEAA File Offset: 0x001EB0AA
+		// Token: 0x0600533B RID: 21307 RVA: 0x0007467A File Offset: 0x0007287A
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action) ?? ((Action)Delegate.CreateDelegate(typeof(Action), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06014F53 RID: 85843 RVA: 0x001ECEDC File Offset: 0x001EB0DC
+		// Token: 0x0600533C RID: 21308 RVA: 0x000746AC File Offset: 0x000728AC
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action Callback)
 		{
 			if (FEnvironmentUpdatedDelegate.RegisterId == 0)
@@ -66,26 +65,23 @@ namespace UnrealEngine
 			base.Add(Callback, FEnvironmentUpdatedDelegate.RegisterId);
 		}
 
-		// Token: 0x06014F54 RID: 85844 RVA: 0x001ECF16 File Offset: 0x001EB116
+		// Token: 0x0600533D RID: 21309 RVA: 0x000746E6 File Offset: 0x000728E6
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x06014F55 RID: 85845 RVA: 0x001ECF1F File Offset: 0x001EB11F
+		// Token: 0x0600533E RID: 21310 RVA: 0x000746EF File Offset: 0x000728EF
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Broadcast()
 		{
 			base.BroadcastInternal(null);
 		}
 
-		// Token: 0x06014F56 RID: 85846 RVA: 0x001ECF2C File Offset: 0x001EB12C
+		// Token: 0x0600533F RID: 21311 RVA: 0x000746FC File Offset: 0x000728FC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action action = target as Action;
@@ -96,18 +92,18 @@ namespace UnrealEngine
 			action();
 		}
 
-		// Token: 0x0400B6B8 RID: 46776
+		// Token: 0x0400220E RID: 8718
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroAudio.KuroAudioEnvironmentSubsystem:EnvironmentUpdatedDelegate__DelegateSignature";
 
-		// Token: 0x0400B6B9 RID: 46777
+		// Token: 0x0400220F RID: 8719
 		private static int RegisterId;
 
-		// Token: 0x02002EDD RID: 11997
+		// Token: 0x02000A16 RID: 2582
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040169FB RID: 92667
+			// Token: 0x040059D6 RID: 22998
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200654D RID: 25933
+	// Token: 0x02006BBE RID: 27582
 	public class IDeadEyeEffectConfigT
 	{
-		// Token: 0x1700C0C7 RID: 49351
-		// (get) Token: 0x0602CFF6 RID: 184310 RVA: 0x0062D466 File Offset: 0x0062B666
-		// (set) Token: 0x0602CFF7 RID: 184311 RVA: 0x0062D46E File Offset: 0x0062B66E
+		// Token: 0x1700CA62 RID: 51810
+		// (get) Token: 0x0602F7B2 RID: 194482 RVA: 0x00679C2A File Offset: 0x00677E2A
+		// (set) Token: 0x0602F7B3 RID: 194483 RVA: 0x00679C32 File Offset: 0x00677E32
 		public string FilterEffect { get; set; }
 
-		// Token: 0x1700C0C8 RID: 49352
-		// (get) Token: 0x0602CFF8 RID: 184312 RVA: 0x0062D477 File Offset: 0x0062B677
-		// (set) Token: 0x0602CFF9 RID: 184313 RVA: 0x0062D47F File Offset: 0x0062B67F
+		// Token: 0x1700CA63 RID: 51811
+		// (get) Token: 0x0602F7B4 RID: 194484 RVA: 0x00679C3B File Offset: 0x00677E3B
+		// (set) Token: 0x0602F7B5 RID: 194485 RVA: 0x00679C43 File Offset: 0x00677E43
 		public string TargetIdleMaterialDa { get; set; }
 
-		// Token: 0x1700C0C9 RID: 49353
-		// (get) Token: 0x0602CFFA RID: 184314 RVA: 0x0062D488 File Offset: 0x0062B688
-		// (set) Token: 0x0602CFFB RID: 184315 RVA: 0x0062D490 File Offset: 0x0062B690
+		// Token: 0x1700CA64 RID: 51812
+		// (get) Token: 0x0602F7B6 RID: 194486 RVA: 0x00679C4C File Offset: 0x00677E4C
+		// (set) Token: 0x0602F7B7 RID: 194487 RVA: 0x00679C54 File Offset: 0x00677E54
 		public string TargetLockedMaterialDa { get; set; }
 
-		// Token: 0x0602CFFC RID: 184316 RVA: 0x0062D499 File Offset: 0x0062B699
+		// Token: 0x0602F7B8 RID: 194488 RVA: 0x00679C5D File Offset: 0x00677E5D
 		public IDeadEyeEffectConfigT()
 		{
 			this.FilterEffect = null;

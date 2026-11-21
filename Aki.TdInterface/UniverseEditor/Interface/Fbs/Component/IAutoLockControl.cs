@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004EE6 RID: 20198
+	// Token: 0x02005415 RID: 21525
 	public struct IAutoLockControl : IFlatbufferObject
 	{
-		// Token: 0x170090FA RID: 37114
-		// (get) Token: 0x0601FD67 RID: 130407 RVA: 0x0046E053 File Offset: 0x0046C253
+		// Token: 0x1700986D RID: 39021
+		// (get) Token: 0x06021AAB RID: 137899 RVA: 0x004A3E23 File Offset: 0x004A2023
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601FD68 RID: 130408 RVA: 0x0046E060 File Offset: 0x0046C260
+		// Token: 0x06021AAC RID: 137900 RVA: 0x004A3E30 File Offset: 0x004A2030
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601FD69 RID: 130409 RVA: 0x0046E068 File Offset: 0x0046C268
+		// Token: 0x06021AAD RID: 137901 RVA: 0x004A3E38 File Offset: 0x004A2038
 		public static IAutoLockControl GetRootAsIAutoLockControl(ByteBuffer _bb)
 		{
 			return IAutoLockControl.GetRootAsIAutoLockControl(_bb, default(IAutoLockControl));
 		}
 
-		// Token: 0x0601FD6A RID: 130410 RVA: 0x0046E084 File Offset: 0x0046C284
+		// Token: 0x06021AAE RID: 137902 RVA: 0x004A3E54 File Offset: 0x004A2054
 		public static IAutoLockControl GetRootAsIAutoLockControl(ByteBuffer _bb, IAutoLockControl obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601FD6B RID: 130411 RVA: 0x0046E0A1 File Offset: 0x0046C2A1
+		// Token: 0x06021AAF RID: 137903 RVA: 0x004A3E71 File Offset: 0x004A2071
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601FD6C RID: 130412 RVA: 0x0046E0B0 File Offset: 0x0046C2B0
+		// Token: 0x06021AB0 RID: 137904 RVA: 0x004A3E80 File Offset: 0x004A2080
 		public IAutoLockControl __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170090FB RID: 37115
-		// (get) Token: 0x0601FD6D RID: 130413 RVA: 0x0046E0C0 File Offset: 0x0046C2C0
+		// Token: 0x1700986E RID: 39022
+		// (get) Token: 0x06021AB1 RID: 137905 RVA: 0x004A3E90 File Offset: 0x004A2090
 		public IConditionGroup? EnableCondition
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170090FC RID: 37116
-		// (get) Token: 0x0601FD6E RID: 130414 RVA: 0x0046E120 File Offset: 0x0046C320
+		// Token: 0x1700986F RID: 39023
+		// (get) Token: 0x06021AB2 RID: 137906 RVA: 0x004A3EF0 File Offset: 0x004A20F0
 		public IConditionGroup? DisableCondition
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601FD6F RID: 130415 RVA: 0x0046E17D File Offset: 0x0046C37D
+		// Token: 0x06021AB3 RID: 137907 RVA: 0x004A3F4D File Offset: 0x004A214D
 		public static Offset<IAutoLockControl> CreateIAutoLockControl(FlatBufferBuilder builder, Offset<IConditionGroup> EnableConditionOffset = default(Offset<IConditionGroup>), Offset<IConditionGroup> DisableConditionOffset = default(Offset<IConditionGroup>))
 		{
 			builder.StartTable(2);
@@ -87,31 +87,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IAutoLockControl.EndIAutoLockControl(builder);
 		}
 
-		// Token: 0x0601FD70 RID: 130416 RVA: 0x0046E19A File Offset: 0x0046C39A
+		// Token: 0x06021AB4 RID: 137908 RVA: 0x004A3F6A File Offset: 0x004A216A
 		public static void StartIAutoLockControl(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601FD71 RID: 130417 RVA: 0x0046E1A3 File Offset: 0x0046C3A3
+		// Token: 0x06021AB5 RID: 137909 RVA: 0x004A3F73 File Offset: 0x004A2173
 		public static void AddEnableCondition(FlatBufferBuilder builder, Offset<IConditionGroup> enableConditionOffset)
 		{
 			builder.AddOffset(0, enableConditionOffset.Value, 0);
 		}
 
-		// Token: 0x0601FD72 RID: 130418 RVA: 0x0046E1B3 File Offset: 0x0046C3B3
+		// Token: 0x06021AB6 RID: 137910 RVA: 0x004A3F83 File Offset: 0x004A2183
 		public static void AddDisableCondition(FlatBufferBuilder builder, Offset<IConditionGroup> disableConditionOffset)
 		{
 			builder.AddOffset(1, disableConditionOffset.Value, 0);
 		}
 
-		// Token: 0x0601FD73 RID: 130419 RVA: 0x0046E1C3 File Offset: 0x0046C3C3
+		// Token: 0x06021AB7 RID: 137911 RVA: 0x004A3F93 File Offset: 0x004A2193
 		public static Offset<IAutoLockControl> EndIAutoLockControl(FlatBufferBuilder builder)
 		{
 			return new Offset<IAutoLockControl>(builder.EndTable());
 		}
 
-		// Token: 0x0601FD74 RID: 130420 RVA: 0x0046E1D0 File Offset: 0x0046C3D0
+		// Token: 0x06021AB8 RID: 137912 RVA: 0x004A3FA0 File Offset: 0x004A21A0
 		public IAutoLockControlT UnPack()
 		{
 			IAutoLockControlT autoLockControlT = new IAutoLockControlT();
@@ -119,14 +119,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return autoLockControlT;
 		}
 
-		// Token: 0x0601FD75 RID: 130421 RVA: 0x0046E1EC File Offset: 0x0046C3EC
+		// Token: 0x06021AB9 RID: 137913 RVA: 0x004A3FBC File Offset: 0x004A21BC
 		public void UnPackTo(IAutoLockControlT _o)
 		{
 			_o.EnableCondition = ((this.EnableCondition != null) ? this.EnableCondition.Value.UnPack() : null);
 			_o.DisableCondition = ((this.DisableCondition != null) ? this.DisableCondition.Value.UnPack() : null);
 		}
 
-		// Token: 0x0601FD76 RID: 130422 RVA: 0x0046E258 File Offset: 0x0046C458
+		// Token: 0x06021ABA RID: 137914 RVA: 0x004A4028 File Offset: 0x004A2228
 		public static Offset<IAutoLockControl> Pack(FlatBufferBuilder builder, IAutoLockControlT _o)
 		{
 			if (_o == null)
@@ -138,7 +138,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IAutoLockControl.CreateIAutoLockControl(builder, enableConditionOffset, disableConditionOffset);
 		}
 
-		// Token: 0x0400DCEF RID: 56559
+		// Token: 0x0400E896 RID: 59542
 		private Table __p;
 	}
 }

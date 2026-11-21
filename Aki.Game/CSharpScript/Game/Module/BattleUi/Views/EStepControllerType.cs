@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D8D RID: 23949
+	// Token: 0x02004D6F RID: 19823
 	public enum EStepControllerType
 	{
-		// Token: 0x0401FA9F RID: 129695
+		// Token: 0x0401A557 RID: 107863
 		MotionArtText,
-		// Token: 0x0401FAA0 RID: 129696
+		// Token: 0x0401A558 RID: 107864
 		ProgressBar
 	}
 }

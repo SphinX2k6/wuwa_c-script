@@ -3,34 +3,34 @@ using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02001ADB RID: 6875
+// Token: 0x02000F9A RID: 3994
 public class FloroRanchAsyncActionBase : IStaticVariableResetter
 {
-	// Token: 0x0600CBF5 RID: 52213 RVA: 0x002E8CA7 File Offset: 0x002E6EA7
+	// Token: 0x0600A006 RID: 40966 RVA: 0x002F3E3B File Offset: 0x002F203B
 	static FloroRanchAsyncActionBase()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(FloroRanchAsyncActionBase.CreateStaticDefaultValue), new Action(FloroRanchAsyncActionBase.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600CBF6 RID: 52214 RVA: 0x002E8CC6 File Offset: 0x002E6EC6
+	// Token: 0x0600A007 RID: 40967 RVA: 0x002F3E5A File Offset: 0x002F205A
 	public FloroRanchAsyncActionBase()
 	{
 		this.ActionId = ++FloroRanchAsyncActionBase.SelfIncrementId;
 	}
 
-	// Token: 0x0600CBF7 RID: 52215 RVA: 0x002E8CE1 File Offset: 0x002E6EE1
+	// Token: 0x0600A008 RID: 40968 RVA: 0x002F3E75 File Offset: 0x002F2075
 	public static void CreateStaticDefaultValue()
 	{
 		FloroRanchAsyncActionBase.SelfIncrementId = 0;
 	}
 
-	// Token: 0x0600CBF8 RID: 52216 RVA: 0x002E8CE9 File Offset: 0x002E6EE9
+	// Token: 0x0600A009 RID: 40969 RVA: 0x002F3E7D File Offset: 0x002F207D
 	public static void ResetStaticDefaultValue()
 	{
 		FloroRanchAsyncActionBase.SelfIncrementId = 0;
 	}
 
-	// Token: 0x0600CBF9 RID: 52217 RVA: 0x002E8CF4 File Offset: 0x002E6EF4
+	// Token: 0x0600A00A RID: 40970 RVA: 0x002F3E88 File Offset: 0x002F2088
 	public UniTask ExecuteAction()
 	{
 		FloroRanchAsyncActionBase.<ExecuteAction>d__8 <ExecuteAction>d__;
@@ -41,13 +41,13 @@ public class FloroRanchAsyncActionBase : IStaticVariableResetter
 		return <ExecuteAction>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CBFA RID: 52218 RVA: 0x002E8D37 File Offset: 0x002E6F37
+	// Token: 0x0600A00B RID: 40971 RVA: 0x002F3ECB File Offset: 0x002F20CB
 	public virtual UniTask OnExecute()
 	{
 		return UniTask.CompletedTask;
 	}
 
-	// Token: 0x0600CBFB RID: 52219 RVA: 0x002E8D40 File Offset: 0x002E6F40
+	// Token: 0x0600A00C RID: 40972 RVA: 0x002F3ED4 File Offset: 0x002F20D4
 	public void Pause()
 	{
 		if (this.ActionState == EFloroRanchActionState.Pause)
@@ -71,12 +71,12 @@ public class FloroRanchAsyncActionBase : IStaticVariableResetter
 		this.PausePromise = new CustomPromise<UniTaskVoid>();
 	}
 
-	// Token: 0x0600CBFC RID: 52220 RVA: 0x002E8E1A File Offset: 0x002E701A
+	// Token: 0x0600A00D RID: 40973 RVA: 0x002F3FAE File Offset: 0x002F21AE
 	protected virtual void OnPause()
 	{
 	}
 
-	// Token: 0x0600CBFD RID: 52221 RVA: 0x002E8E1C File Offset: 0x002E701C
+	// Token: 0x0600A00E RID: 40974 RVA: 0x002F3FB0 File Offset: 0x002F21B0
 	public UniTask WaitIfPause()
 	{
 		FloroRanchAsyncActionBase.<WaitIfPause>d__12 <WaitIfPause>d__;
@@ -87,19 +87,19 @@ public class FloroRanchAsyncActionBase : IStaticVariableResetter
 		return <WaitIfPause>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CBFE RID: 52222 RVA: 0x002E8E5F File Offset: 0x002E705F
+	// Token: 0x0600A00F RID: 40975 RVA: 0x002F3FF3 File Offset: 0x002F21F3
 	public bool IsPause()
 	{
 		return this.ActionState == EFloroRanchActionState.Pause;
 	}
 
-	// Token: 0x0600CBFF RID: 52223 RVA: 0x002E8E6A File Offset: 0x002E706A
+	// Token: 0x0600A010 RID: 40976 RVA: 0x002F3FFE File Offset: 0x002F21FE
 	public bool IsExit()
 	{
 		return this.ActionState == EFloroRanchActionState.Exit;
 	}
 
-	// Token: 0x0600CC00 RID: 52224 RVA: 0x002E8E78 File Offset: 0x002E7078
+	// Token: 0x0600A011 RID: 40977 RVA: 0x002F400C File Offset: 0x002F220C
 	public void Resume()
 	{
 		if (this.ActionState != EFloroRanchActionState.Pause)
@@ -129,12 +129,12 @@ public class FloroRanchAsyncActionBase : IStaticVariableResetter
 		this.PausePromise = null;
 	}
 
-	// Token: 0x0600CC01 RID: 52225 RVA: 0x002E8F77 File Offset: 0x002E7177
+	// Token: 0x0600A012 RID: 40978 RVA: 0x002F410B File Offset: 0x002F230B
 	protected virtual void OnResume()
 	{
 	}
 
-	// Token: 0x0600CC02 RID: 52226 RVA: 0x002E8F7C File Offset: 0x002E717C
+	// Token: 0x0600A013 RID: 40979 RVA: 0x002F4110 File Offset: 0x002F2310
 	public void Exit()
 	{
 		this.OnExit();
@@ -146,21 +146,21 @@ public class FloroRanchAsyncActionBase : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600CC03 RID: 52227 RVA: 0x002E8FB9 File Offset: 0x002E71B9
+	// Token: 0x0600A014 RID: 40980 RVA: 0x002F414D File Offset: 0x002F234D
 	protected virtual void OnExit()
 	{
 	}
 
-	// Token: 0x04005DC4 RID: 24004
+	// Token: 0x04005E93 RID: 24211
 	protected EFloroRanchActionState ActionState;
 
-	// Token: 0x04005DC5 RID: 24005
+	// Token: 0x04005E94 RID: 24212
 	[Nullable(2)]
 	private CustomPromise<UniTaskVoid> PausePromise;
 
-	// Token: 0x04005DC6 RID: 24006
+	// Token: 0x04005E95 RID: 24213
 	public readonly int ActionId;
 
-	// Token: 0x04005DC7 RID: 24007
+	// Token: 0x04005E96 RID: 24214
 	private static int SelfIncrementId;
 }

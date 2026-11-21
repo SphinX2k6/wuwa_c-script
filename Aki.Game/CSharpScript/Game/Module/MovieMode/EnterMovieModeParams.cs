@@ -5,74 +5,74 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.MovieMode
 {
-	// Token: 0x02005380 RID: 21376
+	// Token: 0x02004363 RID: 17251
 	[NullableContext(2)]
 	[Nullable(0)]
 	[RequiredMember]
 	public class EnterMovieModeParams : IEnterMovieModeParams
 	{
-		// Token: 0x1700836F RID: 33647
-		// (get) Token: 0x060369D1 RID: 223697 RVA: 0x00CEE6D9 File Offset: 0x00CEC8D9
-		// (set) Token: 0x060369D2 RID: 223698 RVA: 0x00CEE6E1 File Offset: 0x00CEC8E1
+		// Token: 0x1700573B RID: 22331
+		// (get) Token: 0x0602B917 RID: 178455 RVA: 0x00C3D601 File Offset: 0x00C3B801
+		// (set) Token: 0x0602B918 RID: 178456 RVA: 0x00C3D609 File Offset: 0x00C3B809
 		[RequiredMember]
 		public float BlendTime { get; set; }
 
-		// Token: 0x17008370 RID: 33648
-		// (get) Token: 0x060369D3 RID: 223699 RVA: 0x00CEE6EA File Offset: 0x00CEC8EA
-		// (set) Token: 0x060369D4 RID: 223700 RVA: 0x00CEE6F2 File Offset: 0x00CEC8F2
+		// Token: 0x1700573C RID: 22332
+		// (get) Token: 0x0602B919 RID: 178457 RVA: 0x00C3D612 File Offset: 0x00C3B812
+		// (set) Token: 0x0602B91A RID: 178458 RVA: 0x00C3D61A File Offset: 0x00C3B81A
 		public IMovieCameraConfig MovieCameraConfig { get; set; }
 
-		// Token: 0x17008371 RID: 33649
-		// (get) Token: 0x060369D5 RID: 223701 RVA: 0x00CEE6FB File Offset: 0x00CEC8FB
-		// (set) Token: 0x060369D6 RID: 223702 RVA: 0x00CEE703 File Offset: 0x00CEC903
+		// Token: 0x1700573D RID: 22333
+		// (get) Token: 0x0602B91B RID: 178459 RVA: 0x00C3D623 File Offset: 0x00C3B823
+		// (set) Token: 0x0602B91C RID: 178460 RVA: 0x00C3D62B File Offset: 0x00C3B82B
 		public float? DelayDuration { get; set; }
 
-		// Token: 0x17008372 RID: 33650
-		// (get) Token: 0x060369D7 RID: 223703 RVA: 0x00CEE70C File Offset: 0x00CEC90C
-		// (set) Token: 0x060369D8 RID: 223704 RVA: 0x00CEE714 File Offset: 0x00CEC914
+		// Token: 0x1700573E RID: 22334
+		// (get) Token: 0x0602B91D RID: 178461 RVA: 0x00C3D634 File Offset: 0x00C3B834
+		// (set) Token: 0x0602B91E RID: 178462 RVA: 0x00C3D63C File Offset: 0x00C3B83C
 		public bool? IsEnableEsc { get; set; }
 
-		// Token: 0x17008373 RID: 33651
-		// (get) Token: 0x060369D9 RID: 223705 RVA: 0x00CEE71D File Offset: 0x00CEC91D
-		// (set) Token: 0x060369DA RID: 223706 RVA: 0x00CEE725 File Offset: 0x00CEC925
+		// Token: 0x1700573F RID: 22335
+		// (get) Token: 0x0602B91F RID: 178463 RVA: 0x00C3D645 File Offset: 0x00C3B845
+		// (set) Token: 0x0602B920 RID: 178464 RVA: 0x00C3D64D File Offset: 0x00C3B84D
 		public bool? IsEnablePhoto { get; set; }
 
-		// Token: 0x17008374 RID: 33652
-		// (get) Token: 0x060369DB RID: 223707 RVA: 0x00CEE72E File Offset: 0x00CEC92E
-		// (set) Token: 0x060369DC RID: 223708 RVA: 0x00CEE736 File Offset: 0x00CEC936
+		// Token: 0x17005740 RID: 22336
+		// (get) Token: 0x0602B921 RID: 178465 RVA: 0x00C3D656 File Offset: 0x00C3B856
+		// (set) Token: 0x0602B922 RID: 178466 RVA: 0x00C3D65E File Offset: 0x00C3B85E
 		public bool? IsAutoExitInFlowSequence { get; set; }
 
-		// Token: 0x17008375 RID: 33653
-		// (get) Token: 0x060369DD RID: 223709 RVA: 0x00CEE73F File Offset: 0x00CEC93F
-		// (set) Token: 0x060369DE RID: 223710 RVA: 0x00CEE747 File Offset: 0x00CEC947
+		// Token: 0x17005741 RID: 22337
+		// (get) Token: 0x0602B923 RID: 178467 RVA: 0x00C3D667 File Offset: 0x00C3B867
+		// (set) Token: 0x0602B924 RID: 178468 RVA: 0x00C3D66F File Offset: 0x00C3B86F
 		public bool? IsBanAdaptation { get; set; }
 
-		// Token: 0x17008376 RID: 33654
-		// (get) Token: 0x060369DF RID: 223711 RVA: 0x00CEE750 File Offset: 0x00CEC950
-		// (set) Token: 0x060369E0 RID: 223712 RVA: 0x00CEE758 File Offset: 0x00CEC958
+		// Token: 0x17005742 RID: 22338
+		// (get) Token: 0x0602B925 RID: 178469 RVA: 0x00C3D678 File Offset: 0x00C3B878
+		// (set) Token: 0x0602B926 RID: 178470 RVA: 0x00C3D680 File Offset: 0x00C3B880
 		public UiPanelBase Parent { get; set; }
 
-		// Token: 0x17008377 RID: 33655
-		// (get) Token: 0x060369E1 RID: 223713 RVA: 0x00CEE761 File Offset: 0x00CEC961
-		// (set) Token: 0x060369E2 RID: 223714 RVA: 0x00CEE769 File Offset: 0x00CEC969
+		// Token: 0x17005743 RID: 22339
+		// (get) Token: 0x0602B927 RID: 178471 RVA: 0x00C3D689 File Offset: 0x00C3B889
+		// (set) Token: 0x0602B928 RID: 178472 RVA: 0x00C3D691 File Offset: 0x00C3B891
 		public ELayerType? UiLayer { get; set; }
 
-		// Token: 0x17008378 RID: 33656
-		// (get) Token: 0x060369E3 RID: 223715 RVA: 0x00CEE772 File Offset: 0x00CEC972
-		// (set) Token: 0x060369E4 RID: 223716 RVA: 0x00CEE77A File Offset: 0x00CEC97A
+		// Token: 0x17005744 RID: 22340
+		// (get) Token: 0x0602B929 RID: 178473 RVA: 0x00C3D69A File Offset: 0x00C3B89A
+		// (set) Token: 0x0602B92A RID: 178474 RVA: 0x00C3D6A2 File Offset: 0x00C3B8A2
 		public ELayerType[] AdaptUiLayers { get; set; }
 
-		// Token: 0x17008379 RID: 33657
-		// (get) Token: 0x060369E5 RID: 223717 RVA: 0x00CEE783 File Offset: 0x00CEC983
-		// (set) Token: 0x060369E6 RID: 223718 RVA: 0x00CEE78B File Offset: 0x00CEC98B
+		// Token: 0x17005745 RID: 22341
+		// (get) Token: 0x0602B92B RID: 178475 RVA: 0x00C3D6AB File Offset: 0x00C3B8AB
+		// (set) Token: 0x0602B92C RID: 178476 RVA: 0x00C3D6B3 File Offset: 0x00C3B8B3
 		public bool? IsIgnoreUiLayerVisible { get; set; }
 
-		// Token: 0x1700837A RID: 33658
-		// (get) Token: 0x060369E7 RID: 223719 RVA: 0x00CEE794 File Offset: 0x00CEC994
-		// (set) Token: 0x060369E8 RID: 223720 RVA: 0x00CEE79C File Offset: 0x00CEC99C
+		// Token: 0x17005746 RID: 22342
+		// (get) Token: 0x0602B92D RID: 178477 RVA: 0x00C3D6BC File Offset: 0x00C3B8BC
+		// (set) Token: 0x0602B92E RID: 178478 RVA: 0x00C3D6C4 File Offset: 0x00C3B8C4
 		public bool? IsNeedMovieModeUi { get; set; }
 
-		// Token: 0x060369E9 RID: 223721 RVA: 0x00CEE7A5 File Offset: 0x00CEC9A5
+		// Token: 0x0602B92F RID: 178479 RVA: 0x00C3D6CD File Offset: 0x00C3B8CD
 		[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 		[CompilerFeatureRequired("RequiredMembers")]
 		public EnterMovieModeParams()

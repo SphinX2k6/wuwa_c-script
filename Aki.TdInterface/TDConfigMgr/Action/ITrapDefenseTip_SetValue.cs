@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FF7 RID: 8183
+	// Token: 0x0200223E RID: 8766
 	public class ITrapDefenseTip_SetValue
 	{
-		// Token: 0x04006C81 RID: 27777
+		// Token: 0x04007283 RID: 29315
 		public ECommonTipType Type;
 
-		// Token: 0x04006C82 RID: 27778
-		[Nullable(1)]
+		// Token: 0x04007284 RID: 29316
 		public string MainText;
 
-		// Token: 0x04006C83 RID: 27779
+		// Token: 0x04007285 RID: 29317
 		public ETrapDefenseTipType TipType;
 	}
 }

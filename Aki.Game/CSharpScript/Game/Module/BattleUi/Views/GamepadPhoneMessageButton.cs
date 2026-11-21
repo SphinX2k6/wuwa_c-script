@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DA9 RID: 23977
+	// Token: 0x02004D8D RID: 19853
 	public class GamepadPhoneMessageButton : UiPanelBase, IPhoneMessageButtonImplement
 	{
-		// Token: 0x0603CE2D RID: 249389 RVA: 0x00EA0504 File Offset: 0x00E9E704
+		// Token: 0x06031DA4 RID: 204196 RVA: 0x00DF13B0 File Offset: 0x00DEF5B0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603CE2E RID: 249390 RVA: 0x00EA0670 File Offset: 0x00E9E870
+		// Token: 0x06031DA5 RID: 204197 RVA: 0x00DF151C File Offset: 0x00DEF71C
 		protected override void OnStart()
 		{
 			base.GetItem(1).SetUIActive(false);
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.Helper.Init();
 		}
 
-		// Token: 0x0603CE2F RID: 249391 RVA: 0x00EA06E2 File Offset: 0x00E9E8E2
+		// Token: 0x06031DA6 RID: 204198 RVA: 0x00DF158E File Offset: 0x00DEF78E
 		public void OnShowGamepadTopPanel()
 		{
 			PhoneMessageButtonHelper helper = this.Helper;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			helper.OnShowBattleChildView();
 		}
 
-		// Token: 0x0603CE30 RID: 249392 RVA: 0x00EA06F4 File Offset: 0x00E9E8F4
+		// Token: 0x06031DA7 RID: 204199 RVA: 0x00DF15A0 File Offset: 0x00DEF7A0
 		public void OnHideGamepadTopPanel()
 		{
 			PhoneMessageButtonHelper helper = this.Helper;
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			helper.OnHideBattleChildView();
 		}
 
-		// Token: 0x0603CE31 RID: 249393 RVA: 0x00EA0706 File Offset: 0x00E9E906
+		// Token: 0x06031DA8 RID: 204200 RVA: 0x00DF15B2 File Offset: 0x00DEF7B2
 		protected override void OnBeforeDestroy()
 		{
 			base.OnBeforeDestroy();
@@ -90,13 +90,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			helper.Clear();
 		}
 
-		// Token: 0x0603CE32 RID: 249394 RVA: 0x00EA071E File Offset: 0x00E9E91E
+		// Token: 0x06031DA9 RID: 204201 RVA: 0x00DF15CA File Offset: 0x00DEF7CA
 		private void OnButtonClick()
 		{
 			PhoneMsgController.Instance.OpenAndJumpShowTipShortMessage(EPhoneMsgOpenWay.HUD, EPhoneMsgViewType.Big);
 		}
 
-		// Token: 0x0603CE33 RID: 249395 RVA: 0x00EA072C File Offset: 0x00E9E92C
+		// Token: 0x06031DAA RID: 204202 RVA: 0x00DF15D8 File Offset: 0x00DEF7D8
 		public void CheckAndPlayPhoneSequence()
 		{
 			PhoneMessageButtonHelper helper = this.Helper;
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			helper.CheckAndPlayPhoneSequence();
 		}
 
-		// Token: 0x0603CE34 RID: 249396 RVA: 0x00EA073E File Offset: 0x00E9E93E
+		// Token: 0x06031DAB RID: 204203 RVA: 0x00DF15EA File Offset: 0x00DEF7EA
 		public void PopShowHeadIcon()
 		{
 			PhoneMessageButtonHelper helper = this.Helper;
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			helper.PopShowHeadIcon();
 		}
 
-		// Token: 0x0603CE35 RID: 249397 RVA: 0x00EA0750 File Offset: 0x00E9E950
+		// Token: 0x06031DAC RID: 204204 RVA: 0x00DF15FC File Offset: 0x00DEF7FC
 		public void HideHeadIcon()
 		{
 			PhoneMessageButtonHelper helper = this.Helper;
@@ -129,28 +129,28 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			helper.HideHeadIcon();
 		}
 
-		// Token: 0x0401FB70 RID: 129904
+		// Token: 0x0401A62D RID: 108077
 		[Nullable(2)]
 		private PhoneMessageButtonHelper Helper;
 
-		// Token: 0x0200C084 RID: 49284
+		// Token: 0x0200AA8E RID: 43662
 		private enum EChildType
 		{
-			// Token: 0x0403A185 RID: 237957
+			// Token: 0x04034B59 RID: 215897
 			Button,
-			// Token: 0x0403A186 RID: 237958
+			// Token: 0x04034B5A RID: 215898
 			RedDotItem,
-			// Token: 0x0403A187 RID: 237959
+			// Token: 0x04034B5B RID: 215899
 			SpriteEnterIcon,
-			// Token: 0x0403A188 RID: 237960
+			// Token: 0x04034B5C RID: 215900
 			TexPhoneBlue,
-			// Token: 0x0403A189 RID: 237961
+			// Token: 0x04034B5D RID: 215901
 			PanelPrefabHead,
-			// Token: 0x0403A18A RID: 237962
+			// Token: 0x04034B5E RID: 215902
 			TexIconHead,
-			// Token: 0x0403A18B RID: 237963
+			// Token: 0x04034B5F RID: 215903
 			BubbleItem,
-			// Token: 0x0403A18C RID: 237964
+			// Token: 0x04034B60 RID: 215904
 			NiagaraItem
 		}
 	}

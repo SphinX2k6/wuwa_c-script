@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E4B RID: 20043
+	// Token: 0x02003E14 RID: 15892
 	public class RogueBattleBuyRoleStarItem : GridProxyAbstract<bool>
 	{
-		// Token: 0x06033AA8 RID: 211624 RVA: 0x00C18BA8 File Offset: 0x00C16DA8
+		// Token: 0x06028913 RID: 166163 RVA: 0x00B620D0 File Offset: 0x00B602D0
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -22,13 +22,13 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033AA9 RID: 211625 RVA: 0x00C18C2E File Offset: 0x00C16E2E
+		// Token: 0x06028914 RID: 166164 RVA: 0x00B62156 File Offset: 0x00B60356
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(base.GetRootItem());
 		}
 
-		// Token: 0x06033AAA RID: 211626 RVA: 0x00C18C41 File Offset: 0x00C16E41
+		// Token: 0x06028915 RID: 166165 RVA: 0x00B62169 File Offset: 0x00B60369
 		public override void Refresh(bool isOn, bool isSelected, int gridIndex)
 		{
 			base.GetSprite(0).SetUIActive(true);
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			this.SetPreviewAnimOn(false);
 		}
 
-		// Token: 0x06033AAB RID: 211627 RVA: 0x00C18C64 File Offset: 0x00C16E64
+		// Token: 0x06028916 RID: 166166 RVA: 0x00B6218C File Offset: 0x00B6038C
 		public void SetPreviewAnimOn(bool bOn)
 		{
 			base.GetSprite(2).SetUIActive(bOn);
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x0401B65E RID: 112222
+		// Token: 0x04016031 RID: 90161
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 	}

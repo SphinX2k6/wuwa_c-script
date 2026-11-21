@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005D03 RID: 23811
+	// Token: 0x02006337 RID: 25399
 	public enum EOutAreaBorderTipType : byte
 	{
-		// Token: 0x0400F673 RID: 63091
+		// Token: 0x040103C2 RID: 66498
 		DownTimeTextTip
 	}
 }

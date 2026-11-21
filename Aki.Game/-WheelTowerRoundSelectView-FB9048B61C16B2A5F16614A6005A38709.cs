@@ -1,46 +1,46 @@
 ﻿using System;
 
-// Token: 0x02001638 RID: 5688
+// Token: 0x02000AF0 RID: 2800
 internal enum <WheelTowerRoundSelectView>FB9048B61C16B2A5F16614A6005A38709FA757B32D0E1744282206D8A6A5AC196__EWheelTowerRoundSelectViewComponent
 {
-	// Token: 0x040048A4 RID: 18596
+	// Token: 0x0400494A RID: 18762
 	BgEndless,
-	// Token: 0x040048A5 RID: 18597
+	// Token: 0x0400494B RID: 18763
 	BgNormal,
-	// Token: 0x040048A6 RID: 18598
+	// Token: 0x0400494C RID: 18764
 	Caption,
-	// Token: 0x040048A7 RID: 18599
+	// Token: 0x0400494D RID: 18765
 	BtnBattleInfo,
-	// Token: 0x040048A8 RID: 18600
+	// Token: 0x0400494E RID: 18766
 	BtnSwitchLeft,
-	// Token: 0x040048A9 RID: 18601
+	// Token: 0x0400494F RID: 18767
 	BtnSwitchRight,
-	// Token: 0x040048AA RID: 18602
+	// Token: 0x04004950 RID: 18768
 	TabAttachView,
-	// Token: 0x040048AB RID: 18603
+	// Token: 0x04004951 RID: 18769
 	BossSv,
-	// Token: 0x040048AC RID: 18604
+	// Token: 0x04004952 RID: 18770
 	BossTemplate,
-	// Token: 0x040048AD RID: 18605
+	// Token: 0x04004953 RID: 18771
 	Desc,
-	// Token: 0x040048AE RID: 18606
+	// Token: 0x04004954 RID: 18772
 	LevelBuffItem,
-	// Token: 0x040048AF RID: 18607
+	// Token: 0x04004955 RID: 18773
 	RoleTeamItem,
-	// Token: 0x040048B0 RID: 18608
+	// Token: 0x04004956 RID: 18774
 	BestRecord,
-	// Token: 0x040048B1 RID: 18609
+	// Token: 0x04004957 RID: 18775
 	CurRecord,
-	// Token: 0x040048B2 RID: 18610
+	// Token: 0x04004958 RID: 18776
 	CostNum,
-	// Token: 0x040048B3 RID: 18611
+	// Token: 0x04004959 RID: 18777
 	BtnStart,
-	// Token: 0x040048B4 RID: 18612
+	// Token: 0x0400495A RID: 18778
 	BtnReset,
-	// Token: 0x040048B5 RID: 18613
+	// Token: 0x0400495B RID: 18779
 	TxtBossRound,
-	// Token: 0x040048B6 RID: 18614
+	// Token: 0x0400495C RID: 18780
 	RoundTab,
-	// Token: 0x040048B7 RID: 18615
+	// Token: 0x0400495D RID: 18781
 	TxtConfirm
 }

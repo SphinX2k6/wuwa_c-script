@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001146 RID: 4422
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001274 RID: 4724
 	public class ISpecialProcess
 	{
-		// Token: 0x06006462 RID: 25698 RVA: 0x000F15A4 File Offset: 0x000EF7A4
+		// Token: 0x06006A5D RID: 27229 RVA: 0x000FE718 File Offset: 0x000FC918
 		private ISpecialProcess_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006463 RID: 25699 RVA: 0x000F15DC File Offset: 0x000EF7DC
+		// Token: 0x06006A5E RID: 27230 RVA: 0x000FE750 File Offset: 0x000FC950
 		public static ISpecialProcess Create([Nullable(2)] ISpecialProcess instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006464 RID: 25700 RVA: 0x000F15EF File Offset: 0x000EF7EF
+		// Token: 0x06006A5F RID: 27231 RVA: 0x000FE763 File Offset: 0x000FC963
 		public static ISpecialProcess CreateFromSetValue([Nullable(2)] ISpecialProcess_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006465 RID: 25701 RVA: 0x000F1602 File Offset: 0x000EF802
+		// Token: 0x06006A60 RID: 27232 RVA: 0x000FE776 File Offset: 0x000FC976
 		public ISpecialProcess_SetValue ToSetValue()
 		{
 			return new ISpecialProcess_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x170020CD RID: 8397
-		// (get) Token: 0x06006466 RID: 25702 RVA: 0x000F1615 File Offset: 0x000EF815
-		// (set) Token: 0x06006467 RID: 25703 RVA: 0x000F1640 File Offset: 0x000EF840
+		// Token: 0x17002280 RID: 8832
+		// (get) Token: 0x06006A61 RID: 27233 RVA: 0x000FE789 File Offset: 0x000FC989
+		// (set) Token: 0x06006A62 RID: 27234 RVA: 0x000FE7B4 File Offset: 0x000FC9B4
 		public virtual ESpecialProcess Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003C50 RID: 15440
+		// Token: 0x04003F9E RID: 16286
 		[Nullable(2)]
 		protected ISpecialProcess FbInstance;
 
-		// Token: 0x04003C51 RID: 15441
+		// Token: 0x04003F9F RID: 16287
 		[Nullable(2)]
 		protected ISpecialProcess_SetValue PocoInterface;
 	}

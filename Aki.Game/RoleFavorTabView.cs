@@ -12,12 +12,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002867 RID: 10343
+// Token: 0x02001DE2 RID: 7650
 [NullableContext(2)]
 [Nullable(0)]
 public class RoleFavorTabView : UiTabViewBase
 {
-	// Token: 0x060154B8 RID: 87224 RVA: 0x005608E4 File Offset: 0x0055EAE4
+	// Token: 0x06012EB6 RID: 77494 RVA: 0x0058B640 File Offset: 0x00589840
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -44,21 +44,21 @@ public class RoleFavorTabView : UiTabViewBase
 		};
 	}
 
-	// Token: 0x060154B9 RID: 87225 RVA: 0x00560A72 File Offset: 0x0055EC72
+	// Token: 0x06012EB7 RID: 77495 RVA: 0x0058B7CE File Offset: 0x005899CE
 	protected override void AddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.UpdateRoleFavorData, new Action<int>(this.OnUpdateRoleFavorData));
 		EventSystem.Instance.Add<int>(EEventName.RoleSystemChangeRole, new Action<int>(this.OnRoleSystemChangeRole));
 	}
 
-	// Token: 0x060154BA RID: 87226 RVA: 0x00560AAC File Offset: 0x0055ECAC
+	// Token: 0x06012EB8 RID: 77496 RVA: 0x0058B808 File Offset: 0x00589A08
 	protected override void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.UpdateRoleFavorData, new Action<int>(this.OnUpdateRoleFavorData));
 		EventSystem.Instance.Remove(EEventName.RoleSystemChangeRole, new Action<int>(this.OnRoleSystemChangeRole));
 	}
 
-	// Token: 0x060154BB RID: 87227 RVA: 0x00560AE8 File Offset: 0x0055ECE8
+	// Token: 0x06012EB9 RID: 77497 RVA: 0x0058B844 File Offset: 0x00589A44
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RoleFavorTabView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -69,7 +69,7 @@ public class RoleFavorTabView : UiTabViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060154BC RID: 87228 RVA: 0x00560B2C File Offset: 0x0055ED2C
+	// Token: 0x06012EBA RID: 77498 RVA: 0x0058B888 File Offset: 0x00589A88
 	protected override void OnStart()
 	{
 		this.RoleViewAgent = (this.ExtraParams as RoleViewAgent);
@@ -84,7 +84,7 @@ public class RoleFavorTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x060154BD RID: 87229 RVA: 0x00560B80 File Offset: 0x0055ED80
+	// Token: 0x06012EBB RID: 77499 RVA: 0x0058B8DC File Offset: 0x00589ADC
 	protected override void OnBeforeShow()
 	{
 		this.PlayMontageStart();
@@ -97,7 +97,7 @@ public class RoleFavorTabView : UiTabViewBase
 		this.Refresh();
 	}
 
-	// Token: 0x060154BE RID: 87230 RVA: 0x00560BB8 File Offset: 0x0055EDB8
+	// Token: 0x06012EBC RID: 77500 RVA: 0x0058B914 File Offset: 0x00589B14
 	protected override void OnHideUiTabViewBase(bool fromToggle)
 	{
 		if (this.PlayAudioHandle != null)
@@ -113,19 +113,19 @@ public class RoleFavorTabView : UiTabViewBase
 		roleLangItem.OnTabViewHide();
 	}
 
-	// Token: 0x060154BF RID: 87231 RVA: 0x00560C0D File Offset: 0x0055EE0D
+	// Token: 0x06012EBD RID: 77501 RVA: 0x0058B969 File Offset: 0x00589B69
 	private void OnUpdateRoleFavorData(int _)
 	{
 		this.Refresh();
 	}
 
-	// Token: 0x060154C0 RID: 87232 RVA: 0x00560C15 File Offset: 0x0055EE15
+	// Token: 0x06012EBE RID: 77502 RVA: 0x0058B971 File Offset: 0x00589B71
 	private void OnRoleSystemChangeRole(int _)
 	{
 		this.Refresh();
 	}
 
-	// Token: 0x060154C1 RID: 87233 RVA: 0x00560C20 File Offset: 0x0055EE20
+	// Token: 0x06012EBF RID: 77503 RVA: 0x0058B97C File Offset: 0x00589B7C
 	private void Refresh()
 	{
 		int curSelectRoleId = this.RoleViewAgent.GetCurSelectRoleId();
@@ -209,7 +209,7 @@ public class RoleFavorTabView : UiTabViewBase
 		this.RoleLangItem.SetUiActive(false);
 	}
 
-	// Token: 0x060154C2 RID: 87234 RVA: 0x00560E60 File Offset: 0x0055F060
+	// Token: 0x06012EC0 RID: 77504 RVA: 0x0058BBBC File Offset: 0x00589DBC
 	private void RefreshRedDot()
 	{
 		RoleDataBase curSelectRoleData = this.RoleViewAgent.GetCurSelectRoleData();
@@ -241,13 +241,13 @@ public class RoleFavorTabView : UiTabViewBase
 		item4.SetUIActive(favorData.IsFavorItemCanUnlock(EFavorContentType.PreciousItem));
 	}
 
-	// Token: 0x060154C3 RID: 87235 RVA: 0x00560EE9 File Offset: 0x0055F0E9
+	// Token: 0x06012EC1 RID: 77505 RVA: 0x0058BC45 File Offset: 0x00589E45
 	protected void PlayMontageStart()
 	{
 		RoleController.Instance.PlayRoleMontage(EPerformanceRoleState.Favor, false, false, false);
 	}
 
-	// Token: 0x060154C4 RID: 87236 RVA: 0x00560EFC File Offset: 0x0055F0FC
+	// Token: 0x06012EC2 RID: 77506 RVA: 0x0058BC58 File Offset: 0x00589E58
 	private USkeletalMeshComponent GetRoleActorMesh()
 	{
 		TsUiSceneRoleActor roleSystemRoleActor = UiSceneManager.Instance.GetRoleSystemRoleActor();
@@ -265,7 +265,7 @@ public class RoleFavorTabView : UiTabViewBase
 		return uskeletalMeshComponent;
 	}
 
-	// Token: 0x060154C5 RID: 87237 RVA: 0x00560F40 File Offset: 0x0055F140
+	// Token: 0x06012EC3 RID: 77507 RVA: 0x0058BC9C File Offset: 0x00589E9C
 	private UAnimInstance GetAnimInstance()
 	{
 		USkeletalMeshComponent roleActorMesh = this.GetRoleActorMesh();
@@ -281,7 +281,7 @@ public class RoleFavorTabView : UiTabViewBase
 		return animInstance.GetLinkedAnimGraphInstanceByTag(CharacterNameDefines.Instance.ABP_BASE);
 	}
 
-	// Token: 0x060154C6 RID: 87238 RVA: 0x00560F74 File Offset: 0x0055F174
+	// Token: 0x06012EC4 RID: 77508 RVA: 0x0058BCD0 File Offset: 0x00589ED0
 	protected void OnClickExperienceButton()
 	{
 		int curSelectRoleId = this.RoleViewAgent.GetCurSelectRoleId();
@@ -302,7 +302,7 @@ public class RoleFavorTabView : UiTabViewBase
 		}, null);
 	}
 
-	// Token: 0x060154C7 RID: 87239 RVA: 0x00560FF4 File Offset: 0x0055F1F4
+	// Token: 0x06012EC5 RID: 77509 RVA: 0x0058BD50 File Offset: 0x00589F50
 	protected void OnClickVoiceButton()
 	{
 		int curSelectRoleId = this.RoleViewAgent.GetCurSelectRoleId();
@@ -325,7 +325,7 @@ public class RoleFavorTabView : UiTabViewBase
 		}, null);
 	}
 
-	// Token: 0x060154C8 RID: 87240 RVA: 0x00561078 File Offset: 0x0055F278
+	// Token: 0x06012EC6 RID: 77510 RVA: 0x0058BDD4 File Offset: 0x00589FD4
 	protected void OnClickActionButton()
 	{
 		int curSelectRoleId = this.RoleViewAgent.GetCurSelectRoleId();
@@ -348,7 +348,7 @@ public class RoleFavorTabView : UiTabViewBase
 		}, null);
 	}
 
-	// Token: 0x060154C9 RID: 87241 RVA: 0x005610FC File Offset: 0x0055F2FC
+	// Token: 0x06012EC7 RID: 77511 RVA: 0x0058BE58 File Offset: 0x0058A058
 	protected void OnClickPreciousItemButton()
 	{
 		int curSelectRoleId = this.RoleViewAgent.GetCurSelectRoleId();
@@ -370,7 +370,7 @@ public class RoleFavorTabView : UiTabViewBase
 		}, null);
 	}
 
-	// Token: 0x060154CA RID: 87242 RVA: 0x0056117C File Offset: 0x0055F37C
+	// Token: 0x06012EC8 RID: 77512 RVA: 0x0058BED8 File Offset: 0x0058A0D8
 	private void OnSetPlayerVoice()
 	{
 		if (this.PlayAudioHandle != null)
@@ -381,12 +381,12 @@ public class RoleFavorTabView : UiTabViewBase
 		this.PlayAudioHandle = new int?(RoleLangCustomModel.Instance.PlayVoiceOnSetVoice(curSelectRoleId));
 	}
 
-	// Token: 0x04009F1B RID: 40731
+	// Token: 0x0400A304 RID: 41732
 	private RoleViewAgent RoleViewAgent;
 
-	// Token: 0x04009F1C RID: 40732
+	// Token: 0x0400A305 RID: 41733
 	private RoleLangCustomItem RoleLangItem;
 
-	// Token: 0x04009F1D RID: 40733
+	// Token: 0x0400A306 RID: 41734
 	private int? PlayAudioHandle;
 }

@@ -2,40 +2,40 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
 
-// Token: 0x0200297F RID: 10623
+// Token: 0x02001EFA RID: 7930
 [RequiredMember]
 public class ShipTowerRoleData : HaveAreaInfo
 {
-	// Token: 0x06016034 RID: 90164 RVA: 0x0058F05D File Offset: 0x0058D25D
+	// Token: 0x06013A3A RID: 80442 RVA: 0x005BA021 File Offset: 0x005B8221
 	[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 	[CompilerFeatureRequired("RequiredMembers")]
 	public ShipTowerRoleData()
 	{
 	}
 
-	// Token: 0x0400A3B1 RID: 41905
+	// Token: 0x0400A79B RID: 42907
 	[RequiredMember]
 	public int RoleId;
 
-	// Token: 0x0400A3B2 RID: 41906
+	// Token: 0x0400A79C RID: 42908
 	[RequiredMember]
 	public int RoleIdEdit;
 
-	// Token: 0x0400A3B3 RID: 41907
+	// Token: 0x0400A79D RID: 42909
 	[RequiredMember]
 	public int TeamIndex;
 
-	// Token: 0x0400A3B4 RID: 41908
+	// Token: 0x0400A79E RID: 42910
 	[RequiredMember]
 	public int TeamId;
 
-	// Token: 0x0400A3B5 RID: 41909
+	// Token: 0x0400A79F RID: 42911
 	[RequiredMember]
 	public int PositionIndex;
 
-	// Token: 0x0400A3B6 RID: 41910
+	// Token: 0x0400A7A0 RID: 42912
 	public int SkillBranchId;
 
-	// Token: 0x0400A3B7 RID: 41911
+	// Token: 0x0400A7A1 RID: 42913
 	public int SkillBranchIdEdit;
 }

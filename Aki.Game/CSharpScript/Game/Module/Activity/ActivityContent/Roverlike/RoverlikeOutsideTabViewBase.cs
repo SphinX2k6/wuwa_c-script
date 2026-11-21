@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
@@ -10,13 +9,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006133 RID: 24883
+	// Token: 0x020050B1 RID: 20657
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class RoverlikeOutsideTabViewBase : UiTabViewBase
 	{
-		// Token: 0x17009193 RID: 37267
-		// (get) Token: 0x0603EE61 RID: 257633 RVA: 0x00F3195E File Offset: 0x00F2FB5E
+		// Token: 0x170064F5 RID: 25845
+		// (get) Token: 0x06033B24 RID: 211748 RVA: 0x00E787CB File Offset: 0x00E769CB
 		[Nullable(2)]
 		protected RoverlikeActivityData ActivityData
 		{
@@ -32,8 +31,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x17009194 RID: 37268
-		// (get) Token: 0x0603EE62 RID: 257634
+		// Token: 0x170064F6 RID: 25846
+		// (get) Token: 0x06033B25 RID: 211749
 		[TupleElementNames(new string[]
 		{
 			"Slot",
@@ -56,7 +55,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			1
 		})] get; }
 
-		// Token: 0x0603EE63 RID: 257635 RVA: 0x00F31970 File Offset: 0x00F2FB70
+		// Token: 0x06033B26 RID: 211750 RVA: 0x00E787E0 File Offset: 0x00E769E0
 		protected override void OnRegisterComponent()
 		{
 			List<ValueTuple<int, Type>> list = new List<ValueTuple<int, Type>>();
@@ -66,11 +65,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 				list.Add(new ValueTuple<int, Type>(i, this.Layout[i].Item2));
 				this.SlotIndexMap[this.Layout[i].Item1] = i;
 			}
-			this.ComponentRegisterInfos = (from entry in list
-			select new ValueTuple<int, Type>(entry.Item1, entry.Item2)).ToList<ValueTuple<int, Type>>();
+			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>(list);
 		}
 
-		// Token: 0x0603EE64 RID: 257636 RVA: 0x00F31A10 File Offset: 0x00F2FC10
+		// Token: 0x06033B27 RID: 211751 RVA: 0x00E7885C File Offset: 0x00E76A5C
 		protected int SlotIndex(EOutsideSlot slot)
 		{
 			int result;
@@ -81,14 +79,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return result;
 		}
 
-		// Token: 0x0603EE65 RID: 257637 RVA: 0x00F31A30 File Offset: 0x00F2FC30
+		// Token: 0x06033B28 RID: 211752 RVA: 0x00E7887C File Offset: 0x00E76A7C
 		[NullableContext(2)]
 		protected UUIItem GetSlotItem(EOutsideSlot slot)
 		{
 			return base.GetItem(this.SlotIndex(slot));
 		}
 
-		// Token: 0x0603EE66 RID: 257638 RVA: 0x00F31A40 File Offset: 0x00F2FC40
+		// Token: 0x06033B29 RID: 211753 RVA: 0x00E7888C File Offset: 0x00E76A8C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoverlikeOutsideTabViewBase.<OnBeforeStartAsync>d__16 <OnBeforeStartAsync>d__;
@@ -99,7 +97,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603EE67 RID: 257639 RVA: 0x00F31A83 File Offset: 0x00F2FC83
+		// Token: 0x06033B2A RID: 211754 RVA: 0x00E788CF File Offset: 0x00E76ACF
 		protected override void OnStart()
 		{
 			this.SetupChromeVisibility();
@@ -115,7 +113,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.RefreshList();
 		}
 
-		// Token: 0x0603EE68 RID: 257640 RVA: 0x00F31AB3 File Offset: 0x00F2FCB3
+		// Token: 0x06033B2B RID: 211755 RVA: 0x00E788FF File Offset: 0x00E76AFF
 		protected override void OnShowUiTabViewFromToggle()
 		{
 			if (this.MultiList == null)
@@ -130,7 +128,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.RefreshList();
 		}
 
-		// Token: 0x0603EE69 RID: 257641 RVA: 0x00F31AE0 File Offset: 0x00F2FCE0
+		// Token: 0x06033B2C RID: 211756 RVA: 0x00E7892C File Offset: 0x00E76B2C
 		protected override void OnBeforeDestroy()
 		{
 			if (this.ShouldShowToggle())
@@ -148,7 +146,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.RoleDataList = new List<RoverlikeOutsideRoleData>();
 		}
 
-		// Token: 0x0603EE6A RID: 257642 RVA: 0x00F31B4C File Offset: 0x00F2FD4C
+		// Token: 0x06033B2D RID: 211757 RVA: 0x00E78998 File Offset: 0x00E76B98
 		private void SetupChromeVisibility()
 		{
 			UUIItem slotItem = this.GetSlotItem(EOutsideSlot.PnlRole);
@@ -175,7 +173,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			slotItem4.SetUIActive(false);
 		}
 
-		// Token: 0x0603EE6B RID: 257643 RVA: 0x00F31BBC File Offset: 0x00F2FDBC
+		// Token: 0x06033B2E RID: 211758 RVA: 0x00E78A08 File Offset: 0x00E76C08
 		private void SetRoleEmptyActive(bool active)
 		{
 			UUIItem slotItem = this.GetSlotItem(EOutsideSlot.PnlRoleEmpty);
@@ -191,7 +189,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			slotItem2.SetUIActive(!active);
 		}
 
-		// Token: 0x0603EE6C RID: 257644 RVA: 0x00F31BE8 File Offset: 0x00F2FDE8
+		// Token: 0x06033B2F RID: 211759 RVA: 0x00E78A34 File Offset: 0x00E76C34
 		private void BuildRoleList()
 		{
 			UUILoopScrollViewComponent loopScrollViewComponent = base.GetLoopScrollViewComponent(this.SlotIndex(EOutsideSlot.SvRole));
@@ -205,7 +203,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.RefreshRoleListData();
 		}
 
-		// Token: 0x0603EE6D RID: 257645 RVA: 0x00F31C49 File Offset: 0x00F2FE49
+		// Token: 0x06033B30 RID: 211760 RVA: 0x00E78A95 File Offset: 0x00E76C95
 		private RoverlikeOutsideRoleItem CreateRoleProxy()
 		{
 			return new RoverlikeOutsideRoleItem
@@ -216,7 +214,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			};
 		}
 
-		// Token: 0x0603EE6E RID: 257646 RVA: 0x00F31C88 File Offset: 0x00F2FE88
+		// Token: 0x06033B31 RID: 211761 RVA: 0x00E78AD4 File Offset: 0x00E76CD4
 		private void RefreshRoleListData()
 		{
 			this.RoleDataList = this.BuildRoleDataList();
@@ -224,7 +222,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			{
 				return;
 			}
-			if (!this.RoleDataList.Any((RoverlikeOutsideRoleData data) => data.RoleId == this.SelectedRoleId))
+			bool flag = false;
+			using (List<RoverlikeOutsideRoleData>.Enumerator enumerator = this.RoleDataList.GetEnumerator())
+			{
+				while (enumerator.MoveNext())
+				{
+					if (enumerator.Current.RoleId == this.SelectedRoleId)
+					{
+						flag = true;
+						break;
+					}
+				}
+			}
+			if (!flag)
 			{
 				this.SelectedRoleId = this.RoleDataList[0].RoleId;
 			}
@@ -236,13 +246,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			roleList.RefreshByData(this.RoleDataList, false, null, false);
 		}
 
-		// Token: 0x0603EE6F RID: 257647 RVA: 0x00F31CF8 File Offset: 0x00F2FEF8
+		// Token: 0x06033B32 RID: 211762 RVA: 0x00E78B80 File Offset: 0x00E76D80
 		protected virtual List<RoverlikeOutsideRoleData> BuildRoleDataList()
 		{
 			return new List<RoverlikeOutsideRoleData>();
 		}
 
-		// Token: 0x0603EE70 RID: 257648 RVA: 0x00F31D00 File Offset: 0x00F2FF00
+		// Token: 0x06033B33 RID: 211763 RVA: 0x00E78B88 File Offset: 0x00E76D88
 		private void OnRoleClick(RoverlikeOutsideRoleData data, int gridIndex)
 		{
 			this.OnRoleRedDotClear(data.RoleId);
@@ -266,23 +276,23 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			roleList2.RefreshAllGridProxies();
 		}
 
-		// Token: 0x0603EE71 RID: 257649 RVA: 0x00F31D61 File Offset: 0x00F2FF61
+		// Token: 0x06033B34 RID: 211764 RVA: 0x00E78BE9 File Offset: 0x00E76DE9
 		protected virtual void OnRoleSelected()
 		{
 		}
 
-		// Token: 0x0603EE72 RID: 257650 RVA: 0x00F31D63 File Offset: 0x00F2FF63
+		// Token: 0x06033B35 RID: 211765 RVA: 0x00E78BEB File Offset: 0x00E76DEB
 		protected virtual bool IsRoleRedDotVisible(RoverlikeOutsideRoleData data, int gridIndex)
 		{
 			return data.HasRedDot;
 		}
 
-		// Token: 0x0603EE73 RID: 257651 RVA: 0x00F31D6B File Offset: 0x00F2FF6B
+		// Token: 0x06033B36 RID: 211766 RVA: 0x00E78BF3 File Offset: 0x00E76DF3
 		protected virtual void OnRoleRedDotClear(int roleId)
 		{
 		}
 
-		// Token: 0x0603EE74 RID: 257652 RVA: 0x00F31D6D File Offset: 0x00F2FF6D
+		// Token: 0x06033B37 RID: 211767 RVA: 0x00E78BF5 File Offset: 0x00E76DF5
 		protected void RefreshRoleGrids()
 		{
 			LoopScrollView<RoverlikeOutsideRoleItem, RoverlikeOutsideRoleData> roleList = this.RoleList;
@@ -293,26 +303,34 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			roleList.RefreshAllGridProxies();
 		}
 
-		// Token: 0x0603EE75 RID: 257653 RVA: 0x00F31D7F File Offset: 0x00F2FF7F
+		// Token: 0x06033B38 RID: 211768 RVA: 0x00E78C07 File Offset: 0x00E76E07
 		private bool IsRoleSelected(RoverlikeOutsideRoleData data, int gridIndex)
 		{
 			return data.RoleId == this.SelectedRoleId;
 		}
 
-		// Token: 0x0603EE76 RID: 257654 RVA: 0x00F31D8F File Offset: 0x00F2FF8F
+		// Token: 0x06033B39 RID: 211769 RVA: 0x00E78C18 File Offset: 0x00E76E18
 		protected bool IsSelectedRoleUnlocked()
 		{
-			RoverlikeOutsideRoleData roverlikeOutsideRoleData = this.RoleDataList.FirstOrDefault((RoverlikeOutsideRoleData item) => item.RoleId == this.SelectedRoleId);
+			RoverlikeOutsideRoleData roverlikeOutsideRoleData = null;
+			foreach (RoverlikeOutsideRoleData roverlikeOutsideRoleData2 in this.RoleDataList)
+			{
+				if (roverlikeOutsideRoleData2.RoleId == this.SelectedRoleId)
+				{
+					roverlikeOutsideRoleData = roverlikeOutsideRoleData2;
+					break;
+				}
+			}
 			return roverlikeOutsideRoleData == null || roverlikeOutsideRoleData.Unlocked;
 		}
 
-		// Token: 0x0603EE77 RID: 257655 RVA: 0x00F31DB3 File Offset: 0x00F2FFB3
+		// Token: 0x06033B3A RID: 211770 RVA: 0x00E78C84 File Offset: 0x00E76E84
 		protected int GetSelectedRoleId()
 		{
 			return this.SelectedRoleId;
 		}
 
-		// Token: 0x0603EE78 RID: 257656 RVA: 0x00F31DBC File Offset: 0x00F2FFBC
+		// Token: 0x06033B3B RID: 211771 RVA: 0x00E78C8C File Offset: 0x00E76E8C
 		private void SetupToggle()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(this.SlotIndex(EOutsideSlot.ToggleTick));
@@ -325,20 +343,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			extendToggle.OnStateChange.Add(new Action<EToggleState>(this.OnToggleStateChanged));
 		}
 
-		// Token: 0x0603EE79 RID: 257657 RVA: 0x00F31E05 File Offset: 0x00F30005
+		// Token: 0x06033B3C RID: 211772 RVA: 0x00E78CD5 File Offset: 0x00E76ED5
 		private void OnToggleStateChanged(EToggleState state)
 		{
 			this.ShowAllChecked = (state == EToggleState.ETT_Checked);
 			this.RefreshList();
 		}
 
-		// Token: 0x0603EE7A RID: 257658 RVA: 0x00F31E17 File Offset: 0x00F30017
+		// Token: 0x06033B3D RID: 211773 RVA: 0x00E78CE7 File Offset: 0x00E76EE7
 		protected bool IsShowAllChecked()
 		{
 			return this.ShowAllChecked;
 		}
 
-		// Token: 0x0603EE7B RID: 257659 RVA: 0x00F31E20 File Offset: 0x00F30020
+		// Token: 0x06033B3E RID: 211774 RVA: 0x00E78CF0 File Offset: 0x00E76EF0
 		private void RefreshCollectProgress()
 		{
 			if (!this.ShouldShowCollectProgress())
@@ -359,7 +377,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x0603EE7C RID: 257660 RVA: 0x00F31EA0 File Offset: 0x00F300A0
+		// Token: 0x06033B3F RID: 211775 RVA: 0x00E78D70 File Offset: 0x00E76F70
 		protected void RefreshList()
 		{
 			this.ScrollDataList.Clear();
@@ -389,10 +407,18 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ShowEmptyDetail();
 		}
 
-		// Token: 0x0603EE7D RID: 257661 RVA: 0x00F31F34 File Offset: 0x00F30134
+		// Token: 0x06033B40 RID: 211776 RVA: 0x00E78E04 File Offset: 0x00E77004
 		private void ShowRoleLocked()
 		{
-			RoverlikeOutsideRoleData roverlikeOutsideRoleData = this.RoleDataList.FirstOrDefault((RoverlikeOutsideRoleData item) => item.RoleId == this.SelectedRoleId);
+			RoverlikeOutsideRoleData roverlikeOutsideRoleData = null;
+			foreach (RoverlikeOutsideRoleData roverlikeOutsideRoleData2 in this.RoleDataList)
+			{
+				if (roverlikeOutsideRoleData2.RoleId == this.SelectedRoleId)
+				{
+					roverlikeOutsideRoleData = roverlikeOutsideRoleData2;
+					break;
+				}
+			}
 			UUIItem slotItem = this.GetSlotItem(EOutsideSlot.PnlItem);
 			if (slotItem != null)
 			{
@@ -406,12 +432,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.OnRefreshRoleLockedDesc(unlockDesc);
 		}
 
-		// Token: 0x0603EE7E RID: 257662 RVA: 0x00F31FB9 File Offset: 0x00F301B9
+		// Token: 0x06033B41 RID: 211777 RVA: 0x00E78EC8 File Offset: 0x00E770C8
 		protected virtual void OnRefreshRoleLockedDesc(string unlockDesc)
 		{
 		}
 
-		// Token: 0x0603EE7F RID: 257663 RVA: 0x00F31FBC File Offset: 0x00F301BC
+		// Token: 0x06033B42 RID: 211778 RVA: 0x00E78ECC File Offset: 0x00E770CC
 		protected void PushTitle(string titleKey)
 		{
 			RoverlikeOutsideTitleTemplateData roverlikeOutsideTitleTemplateData = new RoverlikeOutsideTitleTemplateData();
@@ -422,7 +448,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ScrollDataList.Add(roverlikeOutsideTitleTemplateData);
 		}
 
-		// Token: 0x0603EE80 RID: 257664 RVA: 0x00F31FF0 File Offset: 0x00F301F0
+		// Token: 0x06033B43 RID: 211779 RVA: 0x00E78F00 File Offset: 0x00E77100
 		protected void PushTitleIcon(string iconPath)
 		{
 			RoverlikeOutsideTitleTemplateData roverlikeOutsideTitleTemplateData = new RoverlikeOutsideTitleTemplateData();
@@ -433,7 +459,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ScrollDataList.Add(roverlikeOutsideTitleTemplateData);
 		}
 
-		// Token: 0x0603EE81 RID: 257665 RVA: 0x00F32024 File Offset: 0x00F30224
+		// Token: 0x06033B44 RID: 211780 RVA: 0x00E78F34 File Offset: 0x00E77134
 		protected void PushTitleIconWithText(string iconPath, string titleKey)
 		{
 			RoverlikeOutsideTitleTemplateData roverlikeOutsideTitleTemplateData = new RoverlikeOutsideTitleTemplateData();
@@ -445,7 +471,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ScrollDataList.Add(roverlikeOutsideTitleTemplateData);
 		}
 
-		// Token: 0x0603EE82 RID: 257666 RVA: 0x00F3205C File Offset: 0x00F3025C
+		// Token: 0x06033B45 RID: 211781 RVA: 0x00E78F6C File Offset: 0x00E7716C
 		protected int PushGrid(RoverlikeGainEntry entry)
 		{
 			RoverlikeOutsideEntryGridItemTemplateData roverlikeOutsideEntryGridItemTemplateData = new RoverlikeOutsideEntryGridItemTemplateData();
@@ -457,7 +483,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return this.ScrollDataList.Count - 1;
 		}
 
-		// Token: 0x0603EE83 RID: 257667 RVA: 0x00F320C8 File Offset: 0x00F302C8
+		// Token: 0x06033B46 RID: 211782 RVA: 0x00E78FD8 File Offset: 0x00E771D8
 		private void SelectByGridIndex(int gridIndex)
 		{
 			int selectedGridIndex = this.SelectedGridIndex;
@@ -471,7 +497,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.RefreshDetail(entry);
 		}
 
-		// Token: 0x0603EE84 RID: 257668 RVA: 0x00F32123 File Offset: 0x00F30323
+		// Token: 0x06033B47 RID: 211783 RVA: 0x00E79033 File Offset: 0x00E77233
 		[NullableContext(2)]
 		private void RefreshDetail(RoverlikeGainEntry entry)
 		{
@@ -488,7 +514,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.RefreshDetailCard(entry);
 		}
 
-		// Token: 0x0603EE85 RID: 257669 RVA: 0x00F32151 File Offset: 0x00F30351
+		// Token: 0x06033B48 RID: 211784 RVA: 0x00E79061 File Offset: 0x00E77261
 		private void ShowEmptyDetail()
 		{
 			UUIItem detailItemComponent = this.GetDetailItemComponent();
@@ -499,7 +525,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			detailItemComponent.SetUIActive(false);
 		}
 
-		// Token: 0x0603EE86 RID: 257670 RVA: 0x00F32164 File Offset: 0x00F30364
+		// Token: 0x06033B49 RID: 211785 RVA: 0x00E79074 File Offset: 0x00E77274
 		private void HideOtherDetailCards()
 		{
 			UUIItem detailItemComponent = this.GetDetailItemComponent();
@@ -518,7 +544,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EE87 RID: 257671 RVA: 0x00F321B6 File Offset: 0x00F303B6
+		// Token: 0x06033B4A RID: 211786 RVA: 0x00E790C6 File Offset: 0x00E772C6
 		private void OnGridClick(RoverlikeGainEntry data, int gridIndex)
 		{
 			if (gridIndex == this.SelectedGridIndex)
@@ -529,19 +555,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.SelectByGridIndex(gridIndex);
 		}
 
-		// Token: 0x0603EE88 RID: 257672 RVA: 0x00F321D4 File Offset: 0x00F303D4
+		// Token: 0x06033B4B RID: 211787 RVA: 0x00E790E4 File Offset: 0x00E772E4
 		private bool IsGridSelected(RoverlikeGainEntry data, int gridIndex)
 		{
 			return gridIndex == this.SelectedGridIndex;
 		}
 
-		// Token: 0x0603EE89 RID: 257673 RVA: 0x00F321DF File Offset: 0x00F303DF
+		// Token: 0x06033B4C RID: 211788 RVA: 0x00E790EF File Offset: 0x00E772EF
 		private bool IsGridLocked(RoverlikeGainEntry data, int gridIndex)
 		{
 			return this.IsEntryLocked(data);
 		}
 
-		// Token: 0x0603EE8A RID: 257674 RVA: 0x00F321E8 File Offset: 0x00F303E8
+		// Token: 0x06033B4D RID: 211789 RVA: 0x00E790F8 File Offset: 0x00E772F8
 		protected void PlaySequence(string sequenceName)
 		{
 			UiBehaviorLevelSequence uiViewSequence = this.UiViewSequence;
@@ -552,7 +578,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			uiViewSequence.PlayOrReplaySequenceByName(sequenceName, false, null);
 		}
 
-		// Token: 0x0603EE8B RID: 257675 RVA: 0x00F32210 File Offset: 0x00F30410
+		// Token: 0x06033B4E RID: 211790 RVA: 0x00E79120 File Offset: 0x00E77320
 		private void PlayListInturnAnimation()
 		{
 			UUIInturnAnimController multiListAnimController = this.MultiListAnimController;
@@ -563,55 +589,55 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			multiListAnimController.Play("", -1, true);
 		}
 
-		// Token: 0x0603EE8C RID: 257676
+		// Token: 0x06033B4F RID: 211791
 		protected abstract UniTask CreateDetailCardAsync();
 
-		// Token: 0x0603EE8D RID: 257677
+		// Token: 0x06033B50 RID: 211792
 		protected abstract void RefreshDetailCard(RoverlikeGainEntry entry);
 
-		// Token: 0x0603EE8E RID: 257678
+		// Token: 0x06033B51 RID: 211793
 		[NullableContext(2)]
 		protected abstract UUIItem GetDetailItemComponent();
 
-		// Token: 0x0603EE8F RID: 257679
+		// Token: 0x06033B52 RID: 211794
 		protected abstract int BuildScrollDataList();
 
-		// Token: 0x0603EE90 RID: 257680
+		// Token: 0x06033B53 RID: 211795
 		protected abstract bool IsEntryLocked(RoverlikeGainEntry entry);
 
-		// Token: 0x0603EE91 RID: 257681 RVA: 0x00F32229 File Offset: 0x00F30429
+		// Token: 0x06033B54 RID: 211796 RVA: 0x00E79139 File Offset: 0x00E77339
 		protected virtual bool ShouldShowRoleList()
 		{
 			return false;
 		}
 
-		// Token: 0x0603EE92 RID: 257682 RVA: 0x00F3222C File Offset: 0x00F3042C
+		// Token: 0x06033B55 RID: 211797 RVA: 0x00E7913C File Offset: 0x00E7733C
 		protected virtual bool ShouldShowToggle()
 		{
 			return false;
 		}
 
-		// Token: 0x0603EE93 RID: 257683 RVA: 0x00F3222F File Offset: 0x00F3042F
+		// Token: 0x06033B56 RID: 211798 RVA: 0x00E7913F File Offset: 0x00E7733F
 		protected virtual bool ShouldShowCollectProgress()
 		{
 			return false;
 		}
 
-		// Token: 0x04020D7C RID: 134524
+		// Token: 0x0401B6A9 RID: 112297
 		[Nullable(2)]
 		protected MultiTemplateScrollView MultiList;
 
-		// Token: 0x04020D7D RID: 134525
+		// Token: 0x0401B6AA RID: 112298
 		[Nullable(2)]
 		private UUIInturnAnimController MultiListAnimController;
 
-		// Token: 0x04020D7E RID: 134526
+		// Token: 0x0401B6AB RID: 112299
 		protected readonly List<IMultiTemplateGridData> ScrollDataList = new List<IMultiTemplateGridData>();
 
-		// Token: 0x04020D7F RID: 134527
+		// Token: 0x0401B6AC RID: 112300
 		protected int SelectedGridIndex = -1;
 
-		// Token: 0x04020D80 RID: 134528
+		// Token: 0x0401B6AD RID: 112301
 		[Nullable(new byte[]
 		{
 			2,
@@ -620,16 +646,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		private LoopScrollView<RoverlikeOutsideRoleItem, RoverlikeOutsideRoleData> RoleList;
 
-		// Token: 0x04020D81 RID: 134529
+		// Token: 0x0401B6AE RID: 112302
 		private List<RoverlikeOutsideRoleData> RoleDataList = new List<RoverlikeOutsideRoleData>();
 
-		// Token: 0x04020D82 RID: 134530
+		// Token: 0x0401B6AF RID: 112303
 		private int SelectedRoleId;
 
-		// Token: 0x04020D83 RID: 134531
+		// Token: 0x0401B6B0 RID: 112304
 		private bool ShowAllChecked;
 
-		// Token: 0x04020D84 RID: 134532
+		// Token: 0x0401B6B1 RID: 112305
 		private readonly Dictionary<EOutsideSlot, int> SlotIndexMap = new Dictionary<EOutsideSlot, int>();
 	}
 }

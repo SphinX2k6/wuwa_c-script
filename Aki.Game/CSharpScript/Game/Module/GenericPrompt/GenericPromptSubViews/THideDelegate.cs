@@ -2,7 +2,7 @@
 
 namespace CSharpScript.Game.Module.GenericPrompt.GenericPromptSubViews
 {
-	// Token: 0x020059B7 RID: 22967
-	// (Invoke) Token: 0x0603A3B3 RID: 238515
+	// Token: 0x02004990 RID: 18832
+	// (Invoke) Token: 0x0602F2DA RID: 193242
 	public delegate void THideDelegate(PromptForFloatLineView promptView);
 }

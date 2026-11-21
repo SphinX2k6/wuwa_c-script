@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006619 RID: 26137
+	// Token: 0x02006C8A RID: 27786
 	public class IDungeonEventType_UnionUnion
 	{
-		// Token: 0x1700C238 RID: 49720
-		// (get) Token: 0x0602D639 RID: 185913 RVA: 0x00638335 File Offset: 0x00636535
-		// (set) Token: 0x0602D63A RID: 185914 RVA: 0x0063833D File Offset: 0x0063653D
+		// Token: 0x1700CBD6 RID: 52182
+		// (get) Token: 0x0602FE0A RID: 196106 RVA: 0x00684E9D File Offset: 0x0068309D
+		// (set) Token: 0x0602FE0B RID: 196107 RVA: 0x00684EA5 File Offset: 0x006830A5
 		public IDungeonEventType_Union Type { get; set; }
 
-		// Token: 0x1700C239 RID: 49721
-		// (get) Token: 0x0602D63B RID: 185915 RVA: 0x00638346 File Offset: 0x00636546
-		// (set) Token: 0x0602D63C RID: 185916 RVA: 0x0063834E File Offset: 0x0063654E
+		// Token: 0x1700CBD7 RID: 52183
+		// (get) Token: 0x0602FE0C RID: 196108 RVA: 0x00684EAE File Offset: 0x006830AE
+		// (set) Token: 0x0602FE0D RID: 196109 RVA: 0x00684EB6 File Offset: 0x006830B6
 		public object Value { get; set; }
 
-		// Token: 0x0602D63D RID: 185917 RVA: 0x00638357 File Offset: 0x00636557
+		// Token: 0x0602FE0E RID: 196110 RVA: 0x00684EBF File Offset: 0x006830BF
 		public IDungeonEventType_UnionUnion()
 		{
 			this.Type = IDungeonEventType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602D63E RID: 185918 RVA: 0x0063836D File Offset: 0x0063656D
+		// Token: 0x0602FE0F RID: 196111 RVA: 0x00684ED5 File Offset: 0x006830D5
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602D63F RID: 185919 RVA: 0x0063837F File Offset: 0x0063657F
+		// Token: 0x0602FE10 RID: 196112 RVA: 0x00684EE7 File Offset: 0x006830E7
 		public IDungeonEventTypeT AsIDungeonEventType()
 		{
 			return this.As<IDungeonEventTypeT>();
 		}
 
-		// Token: 0x0602D640 RID: 185920 RVA: 0x00638387 File Offset: 0x00636587
+		// Token: 0x0602FE11 RID: 196113 RVA: 0x00684EEF File Offset: 0x006830EF
 		public static IDungeonEventType_UnionUnion FromIDungeonEventType(IDungeonEventTypeT _idungeoneventtype)
 		{
 			return new IDungeonEventType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602D641 RID: 185921 RVA: 0x0063839C File Offset: 0x0063659C
+		// Token: 0x0602FE12 RID: 196114 RVA: 0x00684F04 File Offset: 0x00683104
 		public IRecordTimeStampTypeT AsIRecordTimeStampType()
 		{
 			return this.As<IRecordTimeStampTypeT>();
 		}
 
-		// Token: 0x0602D642 RID: 185922 RVA: 0x006383A4 File Offset: 0x006365A4
+		// Token: 0x0602FE13 RID: 196115 RVA: 0x00684F0C File Offset: 0x0068310C
 		public static IDungeonEventType_UnionUnion FromIRecordTimeStampType(IRecordTimeStampTypeT _irecordtimestamptype)
 		{
 			return new IDungeonEventType_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602D643 RID: 185923 RVA: 0x006383BC File Offset: 0x006365BC
+		// Token: 0x0602FE14 RID: 196116 RVA: 0x00684F24 File Offset: 0x00683124
 		public static int Pack(FlatBufferBuilder builder, IDungeonEventType_UnionUnion _o)
 		{
 			IDungeonEventType_Union type = _o.Type;

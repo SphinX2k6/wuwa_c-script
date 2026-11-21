@@ -4,27 +4,25 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020000FE RID: 254
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000107 RID: 263
 	public class EntityGroupComponent_SetValue
 	{
-		// Token: 0x0400054F RID: 1359
+		// Token: 0x04000579 RID: 1401
 		public bool? Disabled;
 
-		// Token: 0x04000550 RID: 1360
+		// Token: 0x0400057A RID: 1402
 		public bool? EdIsLocked;
 
-		// Token: 0x04000551 RID: 1361
+		// Token: 0x0400057B RID: 1403
 		public List<int> EntityIds;
 
-		// Token: 0x04000552 RID: 1362
+		// Token: 0x0400057C RID: 1404
 		public List<IEntityStateTrigger> StateTriggers;
 
-		// Token: 0x04000553 RID: 1363
+		// Token: 0x0400057D RID: 1405
 		public IFinishStateTrigger FinishState;
 
-		// Token: 0x04000554 RID: 1364
+		// Token: 0x0400057E RID: 1406
 		[Nullable(2)]
 		public IFailureStateTrigger FailureState;
 	}

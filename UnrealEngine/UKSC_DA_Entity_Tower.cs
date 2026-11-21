@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001D94 RID: 7572
+	// Token: 0x0200056D RID: 1389
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroSimpleCombat.KSC_DA_Entity_Tower")]
 	[UnrealStructLayout(480, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 480)]
 	public class UKSC_DA_Entity_Tower : UKSC_DA_Entity, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601CFA4 RID: 118692 RVA: 0x002AD4EA File Offset: 0x002AB6EA
+		// Token: 0x06007E5B RID: 32347 RVA: 0x000BB433 File Offset: 0x000B9633
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKSC_DA_Entity_Tower._ClassPtr;
 		}
 
-		// Token: 0x0601CFA5 RID: 118693 RVA: 0x002AD4F8 File Offset: 0x002AB6F8
+		// Token: 0x06007E5C RID: 32348 RVA: 0x000BB440 File Offset: 0x000B9640
 		public UKSC_DA_Entity_Tower() : this(BuiltinUtils.AllocNativeUObject(UKSC_DA_Entity_Tower.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601CFA6 RID: 118694 RVA: 0x002AD520 File Offset: 0x002AB720
+		// Token: 0x06007E5D RID: 32349 RVA: 0x000BB468 File Offset: 0x000B9668
 		public UKSC_DA_Entity_Tower(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKSC_DA_Entity_Tower.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170074E5 RID: 29925
-		// (get) Token: 0x0601CFA7 RID: 118695 RVA: 0x002AD554 File Offset: 0x002AB754
-		// (set) Token: 0x0601CFA8 RID: 118696 RVA: 0x002AD58D File Offset: 0x002AB78D
+		// Token: 0x1700186E RID: 6254
+		// (get) Token: 0x06007E5E RID: 32350 RVA: 0x000BB49C File Offset: 0x000B969C
+		// (set) Token: 0x06007E5F RID: 32351 RVA: 0x000BB4D5 File Offset: 0x000B96D5
 		public TMap<EKSC_Skill_State, FName> SkillStateMap
 		{
 			get
@@ -50,30 +50,30 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601CFA9 RID: 118697 RVA: 0x002AD59B File Offset: 0x002AB79B
+		// Token: 0x06007E60 RID: 32352 RVA: 0x000BB4E3 File Offset: 0x000B96E3
 		static UKSC_DA_Entity_Tower()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroSimpleCombat.KSC_DA_Entity_Tower");
 		}
 
-		// Token: 0x0601CFAA RID: 118698 RVA: 0x002AD5A9 File Offset: 0x002AB7A9
+		// Token: 0x06007E61 RID: 32353 RVA: 0x000BB4F1 File Offset: 0x000B96F1
 		protected UKSC_DA_Entity_Tower(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400FBA5 RID: 64421
+		// Token: 0x04003723 RID: 14115
 		public new const string __ObjectPath = "/Script/KuroSimpleCombat.KSC_DA_Entity_Tower";
 
-		// Token: 0x0400FBA6 RID: 64422
+		// Token: 0x04003724 RID: 14116
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400FBA7 RID: 64423
+		// Token: 0x04003725 RID: 14117
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400FBA8 RID: 64424
+		// Token: 0x04003726 RID: 14118
 		internal static int __PropertyOffset_SkillStateMap;
 
-		// Token: 0x0400FBA9 RID: 64425
+		// Token: 0x04003727 RID: 14119
 		[Nullable(2)]
 		private TMap<EKSC_Skill_State, FName> _SkillStateMap;
 	}

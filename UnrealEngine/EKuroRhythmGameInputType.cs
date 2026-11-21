@@ -4,22 +4,22 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001C3F RID: 7231
+	// Token: 0x020004F9 RID: 1273
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/KuroRhythmGame.EKuroRhythmGameInputType")]
 	public enum EKuroRhythmGameInputType : byte
 	{
-		// Token: 0x0400F10B RID: 61707
+		// Token: 0x04003262 RID: 12898
 		TapLeft,
-		// Token: 0x0400F10C RID: 61708
+		// Token: 0x04003263 RID: 12899
 		TapRight,
-		// Token: 0x0400F10D RID: 61709
+		// Token: 0x04003264 RID: 12900
 		FlickLeft,
-		// Token: 0x0400F10E RID: 61710
+		// Token: 0x04003265 RID: 12901
 		FlickRight,
-		// Token: 0x0400F10F RID: 61711
+		// Token: 0x04003266 RID: 12902
 		Line,
-		// Token: 0x0400F110 RID: 61712
+		// Token: 0x04003267 RID: 12903
 		EKuroRhythmGameInputType_MAX
 	}
 }

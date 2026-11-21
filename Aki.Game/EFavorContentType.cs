@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02002852 RID: 10322
+// Token: 0x02001DCD RID: 7629
 public enum EFavorContentType
 {
-	// Token: 0x04009EE9 RID: 40681
+	// Token: 0x0400A2D2 RID: 41682
 	Voice,
-	// Token: 0x04009EEA RID: 40682
+	// Token: 0x0400A2D3 RID: 41683
 	ExperienceFile,
-	// Token: 0x04009EEB RID: 40683
+	// Token: 0x0400A2D4 RID: 41684
 	ExperienceStory,
-	// Token: 0x04009EEC RID: 40684
+	// Token: 0x0400A2D5 RID: 41685
 	Action,
-	// Token: 0x04009EED RID: 40685
+	// Token: 0x0400A2D6 RID: 41686
 	PreciousItem
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006837 RID: 26679
+	// Token: 0x02006EBD RID: 28349
 	public struct IFocusObject : IFlatbufferObject
 	{
-		// Token: 0x1700C62E RID: 50734
-		// (get) Token: 0x0602E835 RID: 190517 RVA: 0x00658CA6 File Offset: 0x00656EA6
+		// Token: 0x1700CFF2 RID: 53234
+		// (get) Token: 0x060310BD RID: 200893 RVA: 0x006A6BE6 File Offset: 0x006A4DE6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E836 RID: 190518 RVA: 0x00658CB3 File Offset: 0x00656EB3
+		// Token: 0x060310BE RID: 200894 RVA: 0x006A6BF3 File Offset: 0x006A4DF3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602E837 RID: 190519 RVA: 0x00658CBC File Offset: 0x00656EBC
+		// Token: 0x060310BF RID: 200895 RVA: 0x006A6BFC File Offset: 0x006A4DFC
 		public static IFocusObject GetRootAsIFocusObject(ByteBuffer _bb)
 		{
 			return IFocusObject.GetRootAsIFocusObject(_bb, default(IFocusObject));
 		}
 
-		// Token: 0x0602E838 RID: 190520 RVA: 0x00658CD8 File Offset: 0x00656ED8
+		// Token: 0x060310C0 RID: 200896 RVA: 0x006A6C18 File Offset: 0x006A4E18
 		public static IFocusObject GetRootAsIFocusObject(ByteBuffer _bb, IFocusObject obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602E839 RID: 190521 RVA: 0x00658CF5 File Offset: 0x00656EF5
+		// Token: 0x060310C1 RID: 200897 RVA: 0x006A6C35 File Offset: 0x006A4E35
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602E83A RID: 190522 RVA: 0x00658D04 File Offset: 0x00656F04
+		// Token: 0x060310C2 RID: 200898 RVA: 0x006A6C44 File Offset: 0x006A4E44
 		public IFocusObject __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C62F RID: 50735
-		// (get) Token: 0x0602E83B RID: 190523 RVA: 0x00658D14 File Offset: 0x00656F14
+		// Token: 0x1700CFF3 RID: 53235
+		// (get) Token: 0x060310C3 RID: 200899 RVA: 0x006A6C54 File Offset: 0x006A4E54
 		public IFocusObjectRotationConfig? RotationConfig
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C630 RID: 50736
-		// (get) Token: 0x0602E83C RID: 190524 RVA: 0x00658D74 File Offset: 0x00656F74
+		// Token: 0x1700CFF4 RID: 53236
+		// (get) Token: 0x060310C4 RID: 200900 RVA: 0x006A6CB4 File Offset: 0x006A4EB4
 		public IFocusObjectCameraConfig? CameraConfig
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C631 RID: 50737
-		// (get) Token: 0x0602E83D RID: 190525 RVA: 0x00658DD4 File Offset: 0x00656FD4
+		// Token: 0x1700CFF5 RID: 53237
+		// (get) Token: 0x060310C5 RID: 200901 RVA: 0x006A6D14 File Offset: 0x006A4F14
 		public int LeaveIndex
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C632 RID: 50738
-		// (get) Token: 0x0602E83E RID: 190526 RVA: 0x00658E10 File Offset: 0x00657010
+		// Token: 0x1700CFF6 RID: 53238
+		// (get) Token: 0x060310C6 RID: 200902 RVA: 0x006A6D50 File Offset: 0x006A4F50
 		public byte NullMask
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E83F RID: 190527 RVA: 0x00658E4D File Offset: 0x0065704D
+		// Token: 0x060310C7 RID: 200903 RVA: 0x006A6D8D File Offset: 0x006A4F8D
 		public static Offset<IFocusObject> CreateIFocusObject(FlatBufferBuilder builder, Offset<IFocusObjectRotationConfig> RotationConfigOffset = default(Offset<IFocusObjectRotationConfig>), Offset<IFocusObjectCameraConfig> CameraConfigOffset = default(Offset<IFocusObjectCameraConfig>), int LeaveIndex = 0, byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -118,43 +118,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFocusObject.EndIFocusObject(builder);
 		}
 
-		// Token: 0x0602E840 RID: 190528 RVA: 0x00658E79 File Offset: 0x00657079
+		// Token: 0x060310C8 RID: 200904 RVA: 0x006A6DB9 File Offset: 0x006A4FB9
 		public static void StartIFocusObject(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0602E841 RID: 190529 RVA: 0x00658E82 File Offset: 0x00657082
+		// Token: 0x060310C9 RID: 200905 RVA: 0x006A6DC2 File Offset: 0x006A4FC2
 		public static void AddRotationConfig(FlatBufferBuilder builder, Offset<IFocusObjectRotationConfig> rotationConfigOffset)
 		{
 			builder.AddOffset(0, rotationConfigOffset.Value, 0);
 		}
 
-		// Token: 0x0602E842 RID: 190530 RVA: 0x00658E92 File Offset: 0x00657092
+		// Token: 0x060310CA RID: 200906 RVA: 0x006A6DD2 File Offset: 0x006A4FD2
 		public static void AddCameraConfig(FlatBufferBuilder builder, Offset<IFocusObjectCameraConfig> cameraConfigOffset)
 		{
 			builder.AddOffset(1, cameraConfigOffset.Value, 0);
 		}
 
-		// Token: 0x0602E843 RID: 190531 RVA: 0x00658EA2 File Offset: 0x006570A2
+		// Token: 0x060310CB RID: 200907 RVA: 0x006A6DE2 File Offset: 0x006A4FE2
 		public static void AddLeaveIndex(FlatBufferBuilder builder, int leaveIndex)
 		{
 			builder.AddInt(2, leaveIndex, 0);
 		}
 
-		// Token: 0x0602E844 RID: 190532 RVA: 0x00658EAD File Offset: 0x006570AD
+		// Token: 0x060310CC RID: 200908 RVA: 0x006A6DED File Offset: 0x006A4FED
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x0602E845 RID: 190533 RVA: 0x00658EB8 File Offset: 0x006570B8
+		// Token: 0x060310CD RID: 200909 RVA: 0x006A6DF8 File Offset: 0x006A4FF8
 		public static Offset<IFocusObject> EndIFocusObject(FlatBufferBuilder builder)
 		{
 			return new Offset<IFocusObject>(builder.EndTable());
 		}
 
-		// Token: 0x0602E846 RID: 190534 RVA: 0x00658EC8 File Offset: 0x006570C8
+		// Token: 0x060310CE RID: 200910 RVA: 0x006A6E08 File Offset: 0x006A5008
 		public IFocusObjectT UnPack()
 		{
 			IFocusObjectT focusObjectT = new IFocusObjectT();
@@ -162,7 +162,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return focusObjectT;
 		}
 
-		// Token: 0x0602E847 RID: 190535 RVA: 0x00658EE4 File Offset: 0x006570E4
+		// Token: 0x060310CF RID: 200911 RVA: 0x006A6E24 File Offset: 0x006A5024
 		public void UnPackTo(IFocusObjectT _o)
 		{
 			_o.RotationConfig = ((this.RotationConfig != null) ? this.RotationConfig.Value.UnPack() : null);
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602E848 RID: 190536 RVA: 0x00658F68 File Offset: 0x00657168
+		// Token: 0x060310D0 RID: 200912 RVA: 0x006A6EA8 File Offset: 0x006A50A8
 		public static Offset<IFocusObject> Pack(FlatBufferBuilder builder, IFocusObjectT _o)
 		{
 			if (_o == null)
@@ -183,7 +183,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFocusObject.CreateIFocusObject(builder, rotationConfigOffset, cameraConfigOffset, _o.LeaveIndex, _o.NullMask);
 		}
 
-		// Token: 0x04010F7D RID: 69501
+		// Token: 0x04011DB7 RID: 73143
 		private Table __p;
 	}
 }

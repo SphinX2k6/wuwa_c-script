@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -16,41 +15,41 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x02000F7A RID: 3962
+// Token: 0x0200042F RID: 1071
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class FurnitureController : UiControllerBase
 {
-	// Token: 0x06006589 RID: 25993 RVA: 0x00142C0F File Offset: 0x00140E0F
+	// Token: 0x06003921 RID: 14625 RVA: 0x0014B4AB File Offset: 0x001496AB
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.WorldDone, new Action(this.OnWorldDone));
 		EventSystem.Instance.Add(EEventName.AddEntity, new Action<EAddEntityType, EntityHandle, AActor>(this.OnAddEntity));
 	}
 
-	// Token: 0x0600658A RID: 25994 RVA: 0x00142C49 File Offset: 0x00140E49
+	// Token: 0x06003922 RID: 14626 RVA: 0x0014B4E5 File Offset: 0x001496E5
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.WorldDone, new Action(this.OnWorldDone));
 		EventSystem.Instance.Remove(EEventName.AddEntity, new Action<EAddEntityType, EntityHandle, AActor>(this.OnAddEntity));
 	}
 
-	// Token: 0x0600658B RID: 25995 RVA: 0x00142C83 File Offset: 0x00140E83
+	// Token: 0x06003923 RID: 14627 RVA: 0x0014B51F File Offset: 0x0014971F
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.SpringFestivalAreaUnlockNotify, new Action<IMessage, Net.CallbackStatus>(this.OnUnlockAreaNotify));
 		Net.Instance.Register(ENotifyMessageId.FurnitureUnlockNotify, new Action<IMessage, Net.CallbackStatus>(this.OnFurnitureUnlockNotify));
 	}
 
-	// Token: 0x0600658C RID: 25996 RVA: 0x00142CBD File Offset: 0x00140EBD
+	// Token: 0x06003924 RID: 14628 RVA: 0x0014B559 File Offset: 0x00149759
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.SpringFestivalAreaUnlockNotify);
 		Net.Instance.UnRegister(ENotifyMessageId.FurnitureUnlockNotify);
 	}
 
-	// Token: 0x0600658D RID: 25997 RVA: 0x00142CDF File Offset: 0x00140EDF
+	// Token: 0x06003925 RID: 14629 RVA: 0x0014B57B File Offset: 0x0014977B
 	public void UpdateData(int protoHandleId, int mapId, AreaInfo[] areaInfos, int[] unlockFurnitureIds)
 	{
 		FurnitureModel.Instance.UpdateFurnitureInfo(protoHandleId, mapId, areaInfos, unlockFurnitureIds);
@@ -58,7 +57,7 @@ public class FurnitureController : UiControllerBase
 		EventSystem.Instance.Emit(EEventName.UpdateFurnitureEntranceRedDot);
 	}
 
-	// Token: 0x0600658E RID: 25998 RVA: 0x00142D08 File Offset: 0x00140F08
+	// Token: 0x06003926 RID: 14630 RVA: 0x0014B5A4 File Offset: 0x001497A4
 	[NullableContext(0)]
 	public UniTask<bool> FurnitureSaveRequestAsync([Nullable(1)] FurnitureAreaData areaData)
 	{
@@ -71,7 +70,7 @@ public class FurnitureController : UiControllerBase
 		return <FurnitureSaveRequestAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600658F RID: 25999 RVA: 0x00142D54 File Offset: 0x00140F54
+	// Token: 0x06003927 RID: 14631 RVA: 0x0014B5F0 File Offset: 0x001497F0
 	public void OnFurnitureSaveResponse(FurnitureAreaData areaData, int newAtmosphere)
 	{
 		areaData.SetAtmosphere(newAtmosphere);
@@ -80,7 +79,7 @@ public class FurnitureController : UiControllerBase
 		FurnitureModel.Instance.FurnitureAreaDataMap[areaData.GetAreaId()] = furnitureAreaData;
 	}
 
-	// Token: 0x06006590 RID: 26000 RVA: 0x00142D8C File Offset: 0x00140F8C
+	// Token: 0x06003928 RID: 14632 RVA: 0x0014B628 File Offset: 0x00149828
 	[NullableContext(2)]
 	private void OnUnlockAreaNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -99,7 +98,7 @@ public class FurnitureController : UiControllerBase
 		{
 			instance.ClearCurrentAreaData();
 		}
-		instance.AddUnlockAreaData(springFestivalAreaUnlockNotify.AreaInfos.ToArray<AreaInfo>());
+		instance.AddUnlockAreaData(springFestivalAreaUnlockNotify.AreaInfos);
 		if (this.CheckInMap())
 		{
 			instance.FurnitureEntityVisibleManager.EnableAllFurnitureEntity();
@@ -112,10 +111,10 @@ public class FurnitureController : UiControllerBase
 				}
 			}
 		}
-		EventSystem.Instance.Emit<int, IReadOnlyList<AreaInfo>>(EEventName.OnFurnitureAreaUnlockNotify, handleId, springFestivalAreaUnlockNotify.AreaInfos.ToArray<AreaInfo>());
+		EventSystem.Instance.Emit<int, IReadOnlyList<AreaInfo>>(EEventName.OnFurnitureAreaUnlockNotify, handleId, new List<AreaInfo>(springFestivalAreaUnlockNotify.AreaInfos));
 	}
 
-	// Token: 0x06006591 RID: 26001 RVA: 0x00142E6C File Offset: 0x0014106C
+	// Token: 0x06003929 RID: 14633 RVA: 0x0014B704 File Offset: 0x00149904
 	[NullableContext(2)]
 	private void OnFurnitureUnlockNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -132,20 +131,20 @@ public class FurnitureController : UiControllerBase
 		EventSystem.Instance.Emit<int, IReadOnlyList<int>>(EEventName.OnFurnitureUnlockNotify, instance.HandleId, furnitureUnlockNotify.FurnitureIds);
 	}
 
-	// Token: 0x06006592 RID: 26002 RVA: 0x00142EEC File Offset: 0x001410EC
+	// Token: 0x0600392A RID: 14634 RVA: 0x0014B784 File Offset: 0x00149984
 	private void OnWorldDone()
 	{
 		this.CheckToLoadAllFurnitureSceneItem();
 	}
 
-	// Token: 0x06006593 RID: 26003 RVA: 0x00142EF4 File Offset: 0x001410F4
+	// Token: 0x0600392B RID: 14635 RVA: 0x0014B78C File Offset: 0x0014998C
 	protected override bool OnLeaveLevel()
 	{
 		this.UnloadAllFurnitureSceneItem();
 		return true;
 	}
 
-	// Token: 0x06006594 RID: 26004 RVA: 0x00142EFD File Offset: 0x001410FD
+	// Token: 0x0600392C RID: 14636 RVA: 0x0014B795 File Offset: 0x00149995
 	private void OnAddEntity(EAddEntityType addType, EntityHandle handle, [Nullable(2)] AActor actor)
 	{
 		if (!this.CheckInMap())
@@ -155,7 +154,7 @@ public class FurnitureController : UiControllerBase
 		FurnitureModel.Instance.FurnitureEntityVisibleManager.TryEnableFurnitureEntity(handle);
 	}
 
-	// Token: 0x06006595 RID: 26005 RVA: 0x00142F1C File Offset: 0x0014111C
+	// Token: 0x0600392D RID: 14637 RVA: 0x0014B7B4 File Offset: 0x001499B4
 	private void CheckToLoadAllFurnitureSceneItem()
 	{
 		if (!this.CheckInMap())
@@ -167,7 +166,7 @@ public class FurnitureController : UiControllerBase
 		this.LoadAllFurnitureSceneItemByMapIdAsync(instance.MapId, new Func<int, bool>(this.NonServerFurnitureEntityFilter));
 	}
 
-	// Token: 0x06006596 RID: 26006 RVA: 0x00142F5C File Offset: 0x0014115C
+	// Token: 0x0600392E RID: 14638 RVA: 0x0014B7F4 File Offset: 0x001499F4
 	public bool CheckInMap()
 	{
 		if (!WorldMapModel.Instance.IsPlayerInBigWorldInstanceDungeon())
@@ -178,7 +177,7 @@ public class FurnitureController : UiControllerBase
 		return GameModeModel.Instance.MapId == mapId;
 	}
 
-	// Token: 0x06006597 RID: 26007 RVA: 0x00142F90 File Offset: 0x00141190
+	// Token: 0x0600392F RID: 14639 RVA: 0x0014B828 File Offset: 0x00149A28
 	[NullableContext(0)]
 	public UniTask<bool> OpenFurnitureShopViewAsync(int goodsId = 0)
 	{
@@ -190,7 +189,7 @@ public class FurnitureController : UiControllerBase
 		return <OpenFurnitureShopViewAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06006598 RID: 26008 RVA: 0x00142FD4 File Offset: 0x001411D4
+	// Token: 0x06003930 RID: 14640 RVA: 0x0014B86C File Offset: 0x00149A6C
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -214,7 +213,7 @@ public class FurnitureController : UiControllerBase
 		return curEditorAreaDataMap;
 	}
 
-	// Token: 0x06006599 RID: 26009 RVA: 0x00143068 File Offset: 0x00141268
+	// Token: 0x06003931 RID: 14641 RVA: 0x0014B900 File Offset: 0x00149B00
 	public void EndEditArea()
 	{
 		Dictionary<int, FurnitureAreaData> curEditorAreaDataMap = FurnitureModel.Instance.CurEditorAreaDataMap;
@@ -225,7 +224,7 @@ public class FurnitureController : UiControllerBase
 		curEditorAreaDataMap.Clear();
 	}
 
-	// Token: 0x0600659A RID: 26010 RVA: 0x00143094 File Offset: 0x00141294
+	// Token: 0x06003932 RID: 14642 RVA: 0x0014B92C File Offset: 0x00149B2C
 	public UniTask ApplyFurniturePresetAsync(FurnitureAreaData areaData)
 	{
 		FurnitureController.<ApplyFurniturePresetAsync>d__17 <ApplyFurniturePresetAsync>d__;
@@ -237,7 +236,7 @@ public class FurnitureController : UiControllerBase
 		return <ApplyFurniturePresetAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600659B RID: 26011 RVA: 0x001430E0 File Offset: 0x001412E0
+	// Token: 0x06003933 RID: 14643 RVA: 0x0014B978 File Offset: 0x00149B78
 	public UniTask PlaceFurnitureAsync(IFurnitureSceneItemPlaceContext placeContext)
 	{
 		FurnitureController.<PlaceFurnitureAsync>d__18 <PlaceFurnitureAsync>d__;
@@ -249,7 +248,7 @@ public class FurnitureController : UiControllerBase
 		return <PlaceFurnitureAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600659C RID: 26012 RVA: 0x0014312C File Offset: 0x0014132C
+	// Token: 0x06003934 RID: 14644 RVA: 0x0014B9C4 File Offset: 0x00149BC4
 	public UniTask LoadAllFurnitureSceneItemByMapIdAsync(int mapId, Func<int, bool> filter)
 	{
 		FurnitureController.<LoadAllFurnitureSceneItemByMapIdAsync>d__19 <LoadAllFurnitureSceneItemByMapIdAsync>d__;
@@ -262,7 +261,7 @@ public class FurnitureController : UiControllerBase
 		return <LoadAllFurnitureSceneItemByMapIdAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600659D RID: 26013 RVA: 0x00143180 File Offset: 0x00141380
+	// Token: 0x06003935 RID: 14645 RVA: 0x0014BA18 File Offset: 0x00149C18
 	[return: Nullable(0)]
 	public UniTask<bool> LoadAllFurnitureSceneItemByAreaDataAsync(FurnitureAreaData areaData, Func<int, bool> filter)
 	{
@@ -276,7 +275,7 @@ public class FurnitureController : UiControllerBase
 		return <LoadAllFurnitureSceneItemByAreaDataAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600659E RID: 26014 RVA: 0x001431D4 File Offset: 0x001413D4
+	// Token: 0x06003936 RID: 14646 RVA: 0x0014BA6C File Offset: 0x00149C6C
 	[NullableContext(0)]
 	public UniTask<bool> LoadRootFurnitureSceneItemAsync(int mapId, int slotEntityId, int furnitureConfigId, bool bShow)
 	{
@@ -291,7 +290,7 @@ public class FurnitureController : UiControllerBase
 		return <LoadRootFurnitureSceneItemAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600659F RID: 26015 RVA: 0x00143230 File Offset: 0x00141430
+	// Token: 0x06003937 RID: 14647 RVA: 0x0014BAC8 File Offset: 0x00149CC8
 	[NullableContext(0)]
 	public UniTask<bool> LoadSubFurnitureSceneItemAsync(int mapId, int slotEntityId, int rootFurnitureConfigId, int slotIndex, int furnitureConfigId, bool bShow)
 	{
@@ -308,31 +307,31 @@ public class FurnitureController : UiControllerBase
 		return <LoadSubFurnitureSceneItemAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060065A0 RID: 26016 RVA: 0x0014329E File Offset: 0x0014149E
+	// Token: 0x06003938 RID: 14648 RVA: 0x0014BB36 File Offset: 0x00149D36
 	public void UnloadRootFurnitureSceneItem(int slotEntityId)
 	{
 		FurnitureModel.Instance.FurnitureSceneItemManager.UnloadRootFurnitureSceneItem(slotEntityId);
 	}
 
-	// Token: 0x060065A1 RID: 26017 RVA: 0x001432B0 File Offset: 0x001414B0
+	// Token: 0x06003939 RID: 14649 RVA: 0x0014BB48 File Offset: 0x00149D48
 	public void UnloadSubFurnitureSceneItem(int slotEntityId, int slotIndex)
 	{
 		FurnitureModel.Instance.FurnitureSceneItemManager.UnloadSubFurnitureSceneItem(slotEntityId, slotIndex);
 	}
 
-	// Token: 0x060065A2 RID: 26018 RVA: 0x001432C3 File Offset: 0x001414C3
+	// Token: 0x0600393A RID: 14650 RVA: 0x0014BB5B File Offset: 0x00149D5B
 	public void UnloadAllSubFurnitureSceneItem(int slotEntityId)
 	{
 		FurnitureModel.Instance.FurnitureSceneItemManager.UnloadAllSubFurnitureSceneItem(slotEntityId);
 	}
 
-	// Token: 0x060065A3 RID: 26019 RVA: 0x001432D5 File Offset: 0x001414D5
+	// Token: 0x0600393B RID: 14651 RVA: 0x0014BB6D File Offset: 0x00149D6D
 	public void UnloadAllFurnitureSceneItem()
 	{
 		FurnitureModel.Instance.FurnitureSceneItemManager.UnloadAllFurnitureSceneItem();
 	}
 
-	// Token: 0x060065A4 RID: 26020 RVA: 0x001432E8 File Offset: 0x001414E8
+	// Token: 0x0600393C RID: 14652 RVA: 0x0014BB80 File Offset: 0x00149D80
 	public void UnloadAllServerFurnitureSceneItem()
 	{
 		FurnitureSceneItemManager furnitureSceneItemManager = FurnitureModel.Instance.FurnitureSceneItemManager;
@@ -361,13 +360,13 @@ public class FurnitureController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060065A5 RID: 26021 RVA: 0x001433E0 File Offset: 0x001415E0
+	// Token: 0x0600393D RID: 14653 RVA: 0x0014BC78 File Offset: 0x00149E78
 	public void DoUnloadNeedUnloadedSceneItem()
 	{
 		FurnitureModel.Instance.FurnitureSceneItemManager.DoUnloadNeedUnloadedSceneItem();
 	}
 
-	// Token: 0x060065A6 RID: 26022 RVA: 0x001433F4 File Offset: 0x001415F4
+	// Token: 0x0600393E RID: 14654 RVA: 0x0014BC8C File Offset: 0x00149E8C
 	public UniTask ChangeAreaFurnitureSceneItemsAsync(FurnitureAreaData oldAreaData, FurnitureAreaData newAreaData)
 	{
 		FurnitureController.<ChangeAreaFurnitureSceneItemsAsync>d__29 <ChangeAreaFurnitureSceneItemsAsync>d__;
@@ -380,33 +379,33 @@ public class FurnitureController : UiControllerBase
 		return <ChangeAreaFurnitureSceneItemsAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060065A7 RID: 26023 RVA: 0x00143448 File Offset: 0x00141648
+	// Token: 0x0600393F RID: 14655 RVA: 0x0014BCE0 File Offset: 0x00149EE0
 	public bool FurnitureEntityFilter(int furnitureConfigId)
 	{
 		Furniture? furnitureConfig = FurnitureConfig.Instance.GetFurnitureConfig(furnitureConfigId);
 		return furnitureConfig != null && furnitureConfig.Value.EntityId > 0;
 	}
 
-	// Token: 0x060065A8 RID: 26024 RVA: 0x0014347E File Offset: 0x0014167E
+	// Token: 0x06003940 RID: 14656 RVA: 0x0014BD16 File Offset: 0x00149F16
 	public bool NonServerFurnitureEntityFilter(int furnitureConfigId)
 	{
 		return !this.ServerFurnitureEntityFilter(furnitureConfigId);
 	}
 
-	// Token: 0x060065A9 RID: 26025 RVA: 0x0014348C File Offset: 0x0014168C
+	// Token: 0x06003941 RID: 14657 RVA: 0x0014BD24 File Offset: 0x00149F24
 	public bool ServerFurnitureEntityFilter(int furnitureConfigId)
 	{
 		Furniture? furnitureConfig = FurnitureConfig.Instance.GetFurnitureConfig(furnitureConfigId);
 		return furnitureConfig != null && furnitureConfig.Value.EntityId > 0 && (furnitureConfig.Value.IsEntityGroup || FurnitureModel.Instance.IsSingleEntityFurnitureCanInteract(furnitureConfig.Value));
 	}
 
-	// Token: 0x060065AA RID: 26026 RVA: 0x001434E8 File Offset: 0x001416E8
+	// Token: 0x06003942 RID: 14658 RVA: 0x0014BD80 File Offset: 0x00149F80
 	public bool AllFurnitureFilter(int furnitureConfigId)
 	{
 		return true;
 	}
 
-	// Token: 0x060065AB RID: 26027 RVA: 0x001434EC File Offset: 0x001416EC
+	// Token: 0x06003943 RID: 14659 RVA: 0x0014BD84 File Offset: 0x00149F84
 	public void SetFurnitureAreaRedDotAsRead(int areaId)
 	{
 		FurnitureModel instance = FurnitureModel.Instance;
@@ -417,7 +416,7 @@ public class FurnitureController : UiControllerBase
 		instance.SaveLocalDataDelegate(instance.HandleId, 0, areaId, 1, 1);
 	}
 
-	// Token: 0x060065AC RID: 26028 RVA: 0x00143520 File Offset: 0x00141720
+	// Token: 0x06003944 RID: 14660 RVA: 0x0014BDB8 File Offset: 0x00149FB8
 	public void SetFurnitureHandBookItemRedDotAsRead(int furnitureId)
 	{
 		FurnitureModel instance = FurnitureModel.Instance;
@@ -428,7 +427,7 @@ public class FurnitureController : UiControllerBase
 		instance.SaveLocalDataDelegate(instance.HandleId, 0, furnitureId, 2, 1);
 	}
 
-	// Token: 0x060065AD RID: 26029 RVA: 0x00143554 File Offset: 0x00141754
+	// Token: 0x06003945 RID: 14661 RVA: 0x0014BDEC File Offset: 0x00149FEC
 	public void SetAllFurnitureHandBookItemRedDotAsRead()
 	{
 		FurnitureModel instance = FurnitureModel.Instance;
@@ -442,7 +441,7 @@ public class FurnitureController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060065AE RID: 26030 RVA: 0x001435B8 File Offset: 0x001417B8
+	// Token: 0x06003946 RID: 14662 RVA: 0x0014BE50 File Offset: 0x0014A050
 	public void SetFurnitureShopItemRedDotAsRead(int goodsId)
 	{
 		FurnitureModel instance = FurnitureModel.Instance;
@@ -453,7 +452,7 @@ public class FurnitureController : UiControllerBase
 		instance.SaveLocalDataDelegate(instance.HandleId, 0, goodsId, 4, 1);
 	}
 
-	// Token: 0x060065AF RID: 26031 RVA: 0x001435EC File Offset: 0x001417EC
+	// Token: 0x06003947 RID: 14663 RVA: 0x0014BE84 File Offset: 0x0014A084
 	public void SetAllFurnitureShopItemRedDotAsRead()
 	{
 		SpringFestival? gameplayConfigById = FurnitureConfig.Instance.GetGameplayConfigById(FurnitureModel.Instance.HandleId);
@@ -476,7 +475,7 @@ public class FurnitureController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060065B0 RID: 26032 RVA: 0x00143694 File Offset: 0x00141894
+	// Token: 0x06003948 RID: 14664 RVA: 0x0014BF2C File Offset: 0x0014A12C
 	public void SetFurnitureDesignItemRedDotAsRead(int furnitureId)
 	{
 		FurnitureModel instance = FurnitureModel.Instance;
@@ -487,7 +486,7 @@ public class FurnitureController : UiControllerBase
 		instance.SaveLocalDataDelegate(instance.HandleId, 0, furnitureId, 3, 1);
 	}
 
-	// Token: 0x060065B1 RID: 26033 RVA: 0x001436C8 File Offset: 0x001418C8
+	// Token: 0x06003949 RID: 14665 RVA: 0x0014BF60 File Offset: 0x0014A160
 	public void TryJumpToFurnitureGift(Furniture furnitureConfig)
 	{
 		if (furnitureConfig.SourceType != 2)
@@ -516,7 +515,7 @@ public class FurnitureController : UiControllerBase
 		});
 	}
 
-	// Token: 0x060065B2 RID: 26034 RVA: 0x00143748 File Offset: 0x00141948
+	// Token: 0x0600394A RID: 14666 RVA: 0x0014BFE0 File Offset: 0x0014A1E0
 	public void OpenFurnitureAreaSelectView()
 	{
 		FurnitureModel instance = FurnitureModel.Instance;
@@ -555,7 +554,7 @@ public class FurnitureController : UiControllerBase
 					{
 						WorldEntity entity2 = entityById.Entity;
 						RangeComponent rangeComponent = (entity2 != null) ? entity2.GetComponent<RangeComponent>() : null;
-						if (rangeComponent != null && rangeComponent.IsEntityInRange(num.Value, false))
+						if (rangeComponent != null && rangeComponent.IsEntityInRange(num.Value))
 						{
 							num2 = id;
 							break;
@@ -571,7 +570,7 @@ public class FurnitureController : UiControllerBase
 		UiManager.Instance.OpenView(EUiViewName.FurnitureAreaSelectView, num2, null);
 	}
 
-	// Token: 0x060065B3 RID: 26035 RVA: 0x001438C0 File Offset: 0x00141AC0
+	// Token: 0x0600394B RID: 14667 RVA: 0x0014C154 File Offset: 0x0014A354
 	public UniTask TeleportToAreaAsync(int areaId)
 	{
 		FurnitureController.<TeleportToAreaAsync>d__42 <TeleportToAreaAsync>d__;
@@ -582,7 +581,7 @@ public class FurnitureController : UiControllerBase
 		return <TeleportToAreaAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060065B4 RID: 26036 RVA: 0x00143904 File Offset: 0x00141B04
+	// Token: 0x0600394C RID: 14668 RVA: 0x0014C198 File Offset: 0x0014A398
 	public void FurnitureDesignReport(IFurnitureDesignReportContext context)
 	{
 		FurnitureDesignLogEvent furnitureDesignLogEvent = new FurnitureDesignLogEvent();
@@ -602,7 +601,7 @@ public class FurnitureController : UiControllerBase
 		LogReportController.Instance.LogReport(furnitureDesignLogEvent);
 	}
 
-	// Token: 0x060065B5 RID: 26037 RVA: 0x001439C0 File Offset: 0x00141BC0
+	// Token: 0x0600394D RID: 14669 RVA: 0x0014C254 File Offset: 0x0014A454
 	public void FurnitureSaveReport(IFurnitureSaveReportContext context)
 	{
 		FurnitureSaveLogEvent furnitureSaveLogEvent = new FurnitureSaveLogEvent();
@@ -619,7 +618,7 @@ public class FurnitureController : UiControllerBase
 		LogReportController.Instance.LogReport(furnitureSaveLogEvent);
 	}
 
-	// Token: 0x060065B6 RID: 26038 RVA: 0x00143A60 File Offset: 0x00141C60
+	// Token: 0x0600394E RID: 14670 RVA: 0x0014C2F4 File Offset: 0x0014A4F4
 	public List<FurniturePlaceLogData> CoverAreaDataToReportData(FurnitureAreaData areaData)
 	{
 		List<FurniturePlaceLogData> list = new List<FurniturePlaceLogData>();
@@ -646,7 +645,7 @@ public class FurnitureController : UiControllerBase
 		return list;
 	}
 
-	// Token: 0x060065B7 RID: 26039 RVA: 0x00143B64 File Offset: 0x00141D64
+	// Token: 0x0600394F RID: 14671 RVA: 0x0014C3F8 File Offset: 0x0014A5F8
 	public List<FurniturePlaceDiffLogData> GetAreaDataDiffToLogData(FurnitureAreaData oldAreaData, FurnitureAreaData newAreaData)
 	{
 		List<FurniturePlaceDiffLogData> list = new List<FurniturePlaceDiffLogData>();
@@ -705,8 +704,8 @@ public class FurnitureController : UiControllerBase
 		return list;
 	}
 
-	// Token: 0x170007C1 RID: 1985
-	// (get) Token: 0x060065B8 RID: 26040 RVA: 0x00143D00 File Offset: 0x00141F00
+	// Token: 0x170007E3 RID: 2019
+	// (get) Token: 0x06003950 RID: 14672 RVA: 0x0014C594 File Offset: 0x0014A794
 	public static FurnitureController Instance
 	{
 		get
@@ -715,7 +714,7 @@ public class FurnitureController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060065B9 RID: 26041 RVA: 0x00143D07 File Offset: 0x00141F07
+	// Token: 0x06003951 RID: 14673 RVA: 0x0014C59B File Offset: 0x0014A79B
 	public static FurnitureController GetOrCreateInstance()
 	{
 		if (FurnitureController._Instance == null)
@@ -725,7 +724,7 @@ public class FurnitureController : UiControllerBase
 		return FurnitureController._Instance;
 	}
 
-	// Token: 0x060065BA RID: 26042 RVA: 0x00143D1B File Offset: 0x00141F1B
+	// Token: 0x06003952 RID: 14674 RVA: 0x0014C5AF File Offset: 0x0014A7AF
 	public static bool CreateInstance()
 	{
 		if (FurnitureController._Instance != null)
@@ -736,24 +735,24 @@ public class FurnitureController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x060065BB RID: 26043 RVA: 0x00143D31 File Offset: 0x00141F31
+	// Token: 0x06003953 RID: 14675 RVA: 0x0014C5C5 File Offset: 0x0014A7C5
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060065BC RID: 26044 RVA: 0x00143D33 File Offset: 0x00141F33
+	// Token: 0x06003954 RID: 14676 RVA: 0x0014C5C7 File Offset: 0x0014A7C7
 	public static void ResetStaticDefaultValue()
 	{
 		FurnitureController._Instance = null;
 	}
 
-	// Token: 0x060065BD RID: 26045 RVA: 0x00143D3B File Offset: 0x00141F3B
+	// Token: 0x06003955 RID: 14677 RVA: 0x0014C5CF File Offset: 0x0014A7CF
 	static FurnitureController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(FurnitureController.CreateStaticDefaultValue), new Action(FurnitureController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04002E11 RID: 11793
+	// Token: 0x04002EAA RID: 11946
 	[Nullable(2)]
 	private static FurnitureController _Instance;
 }

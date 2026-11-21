@@ -3,29 +3,29 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Utils
 {
-	// Token: 0x02004516 RID: 17686
+	// Token: 0x02003438 RID: 13368
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BuffShareDamageContext : BaseContext, IExpressionContext
 	{
-		// Token: 0x170073F2 RID: 29682
-		// (get) Token: 0x0602D838 RID: 186424 RVA: 0x00A45D32 File Offset: 0x00A43F32
-		// (set) Token: 0x0602D839 RID: 186425 RVA: 0x00A45D3A File Offset: 0x00A43F3A
+		// Token: 0x170046AA RID: 18090
+		// (get) Token: 0x06021F08 RID: 139016 RVA: 0x00971B42 File Offset: 0x0096FD42
+		// (set) Token: 0x06021F09 RID: 139017 RVA: 0x00971B4A File Offset: 0x0096FD4A
 		public EContextType ContextType { get; set; }
 
-		// Token: 0x04018557 RID: 99671
+		// Token: 0x04012B7F RID: 76671
 		public IBuffDamageParam DamageParam;
 
-		// Token: 0x04018558 RID: 99672
+		// Token: 0x04012B80 RID: 76672
 		public Partial_RequirementPayload Payload;
 
-		// Token: 0x04018559 RID: 99673
+		// Token: 0x04012B81 RID: 76673
 		public float ExtraRate;
 
-		// Token: 0x0401855A RID: 99674
+		// Token: 0x04012B82 RID: 76674
 		public long ContextId;
 
-		// Token: 0x0401855B RID: 99675
+		// Token: 0x04012B83 RID: 76675
 		public BaseDamageComponent Victim;
 	}
 }

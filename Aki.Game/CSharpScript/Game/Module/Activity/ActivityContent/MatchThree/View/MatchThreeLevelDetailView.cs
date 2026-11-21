@@ -12,18 +12,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 {
-	// Token: 0x02006496 RID: 25750
+	// Token: 0x02005414 RID: 21524
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MatchThreeLevelDetailView : UiViewBase
 	{
-		// Token: 0x06040AA3 RID: 264867 RVA: 0x00FA6CB8 File Offset: 0x00FA4EB8
+		// Token: 0x06035767 RID: 218983 RVA: 0x00EEDD00 File Offset: 0x00EEBF00
 		[NullableContext(1)]
 		public MatchThreeLevelDetailView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06040AA4 RID: 264868 RVA: 0x00FA6CC4 File Offset: 0x00FA4EC4
+		// Token: 0x06035768 RID: 218984 RVA: 0x00EEDD0C File Offset: 0x00EEBF0C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 18;
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06040AA5 RID: 264869 RVA: 0x00FA6F84 File Offset: 0x00FA5184
+		// Token: 0x06035769 RID: 218985 RVA: 0x00EEDFCC File Offset: 0x00EEC1CC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MatchThreeLevelDetailView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040AA6 RID: 264870 RVA: 0x00FA6FC8 File Offset: 0x00FA51C8
+		// Token: 0x0603576A RID: 218986 RVA: 0x00EEE010 File Offset: 0x00EEC210
 		private UniTask InitDifficultyTabsAsync()
 		{
 			MatchThreeLevelDetailView.<InitDifficultyTabsAsync>d__12 <InitDifficultyTabsAsync>d__;
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			return <InitDifficultyTabsAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040AA7 RID: 264871 RVA: 0x00FA700B File Offset: 0x00FA520B
+		// Token: 0x0603576B RID: 218987 RVA: 0x00EEE053 File Offset: 0x00EEC253
 		protected override void OnBeforeShow()
 		{
 			this.SetEnteringChallenge(false);
@@ -106,21 +106,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			ActivityMatchThreeController.Instance.TryShowPendingRoleUnlockTips(new Action(this.RefreshSelectRoleRedDot));
 		}
 
-		// Token: 0x06040AA8 RID: 264872 RVA: 0x00FA7030 File Offset: 0x00FA5230
+		// Token: 0x0603576C RID: 218988 RVA: 0x00EEE078 File Offset: 0x00EEC278
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int>(EEventName.OnMatchThreeChallengeStateUpdate, new Action<int>(this.OnChallengeStateUpdate));
 			EventSystem.Instance.Add(EEventName.OnMatchThreeRoleNewRedDotUpdate, new Action(this.RefreshSelectRoleRedDot));
 		}
 
-		// Token: 0x06040AA9 RID: 264873 RVA: 0x00FA706A File Offset: 0x00FA526A
+		// Token: 0x0603576D RID: 218989 RVA: 0x00EEE0B2 File Offset: 0x00EEC2B2
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<int>(EEventName.OnMatchThreeChallengeStateUpdate, new Action<int>(this.OnChallengeStateUpdate));
 			EventSystem.Instance.Remove(EEventName.OnMatchThreeRoleNewRedDotUpdate, new Action(this.RefreshSelectRoleRedDot));
 		}
 
-		// Token: 0x06040AAA RID: 264874 RVA: 0x00FA70A4 File Offset: 0x00FA52A4
+		// Token: 0x0603576E RID: 218990 RVA: 0x00EEE0EC File Offset: 0x00EEC2EC
 		private void InitDefaultRole()
 		{
 			if (this.ViewModel == null || this.ActivityData == null)
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.ViewModel.SelectedRoleId = this.ActivityData.ResolvePreferredRoleId(this.ViewModel.CurrentLevelId);
 		}
 
-		// Token: 0x06040AAB RID: 264875 RVA: 0x00FA710C File Offset: 0x00FA530C
+		// Token: 0x0603576F RID: 218991 RVA: 0x00EEE154 File Offset: 0x00EEC354
 		private void RefreshAll()
 		{
 			if (this.ViewModel == null || this.ActivityData == null)
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.RefreshSelectRoleRedDot();
 		}
 
-		// Token: 0x06040AAC RID: 264876 RVA: 0x00FA7174 File Offset: 0x00FA5374
+		// Token: 0x06035770 RID: 218992 RVA: 0x00EEE1BC File Offset: 0x00EEC3BC
 		private void RefreshSelectRoleRedDot()
 		{
 			bool uiactive = this.ActivityData != null && (this.ActivityData.HasSelectRoleBtnRedDot() || this.ActivityData.HasAnyNewRoleRedDot());
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			item.SetUIActive(uiactive);
 		}
 
-		// Token: 0x06040AAD RID: 264877 RVA: 0x00FA71BB File Offset: 0x00FA53BB
+		// Token: 0x06035771 RID: 218993 RVA: 0x00EEE203 File Offset: 0x00EEC403
 		private void ApplyDefaultDifficulty()
 		{
 			if (this.ViewModel == null || this.ActivityData == null)
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.ViewModel.DifficultyIndex = ActivityMatchThreeController.ResolveDefaultDifficultyIndex(this.ViewModel.ChapterData, this.ActivityData);
 		}
 
-		// Token: 0x06040AAE RID: 264878 RVA: 0x00FA71F0 File Offset: 0x00FA53F0
+		// Token: 0x06035772 RID: 218994 RVA: 0x00EEE238 File Offset: 0x00EEC438
 		private void RefreshModeVisual()
 		{
 			if (this.ViewModel == null)
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			item2.SetUIActive(isEndless);
 		}
 
-		// Token: 0x06040AAF RID: 264879 RVA: 0x00FA7244 File Offset: 0x00FA5444
+		// Token: 0x06035773 RID: 218995 RVA: 0x00EEE28C File Offset: 0x00EEC48C
 		private void RefreshDifficultyArea()
 		{
 			if (this.ViewModel == null || this.ActivityData == null)
@@ -263,7 +263,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.RefreshDifficultyToggleState();
 		}
 
-		// Token: 0x06040AB0 RID: 264880 RVA: 0x00FA73E4 File Offset: 0x00FA55E4
+		// Token: 0x06035774 RID: 218996 RVA: 0x00EEE42C File Offset: 0x00EEC62C
 		private void RefreshDifficultyToggleState()
 		{
 			if (this.ViewModel == null)
@@ -284,7 +284,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			hardTab.SetToggleActive(flag);
 		}
 
-		// Token: 0x06040AB1 RID: 264881 RVA: 0x00FA7430 File Offset: 0x00FA5630
+		// Token: 0x06035775 RID: 218997 RVA: 0x00EEE478 File Offset: 0x00EEC678
 		public void ChangeDifficultyIndex(int index)
 		{
 			if (this.IsEnteringChallenge || this.ViewModel == null || this.ActivityData == null)
@@ -312,7 +312,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.RefreshRoleInfo();
 		}
 
-		// Token: 0x06040AB2 RID: 264882 RVA: 0x00FA74CC File Offset: 0x00FA56CC
+		// Token: 0x06035776 RID: 218998 RVA: 0x00EEE514 File Offset: 0x00EEC714
 		private void PlaySwitchSequence()
 		{
 			UiBehaviorLevelSequence uiViewSequence = this.UiViewSequence;
@@ -323,7 +323,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			base.PlayOrReplaySequence("Switch", false, null);
 		}
 
-		// Token: 0x06040AB3 RID: 264883 RVA: 0x00FA7504 File Offset: 0x00FA5704
+		// Token: 0x06035777 RID: 218999 RVA: 0x00EEE54C File Offset: 0x00EEC74C
 		private void RefreshScore()
 		{
 			if (this.ViewModel == null || this.ActivityData == null)
@@ -354,7 +354,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			LguiUtil.Instance.TrySetLocalTextNew(text, "MatchThree_NoRecord", Array.Empty<object>());
 		}
 
-		// Token: 0x06040AB4 RID: 264884 RVA: 0x00FA75A4 File Offset: 0x00FA57A4
+		// Token: 0x06035778 RID: 219000 RVA: 0x00EEE5EC File Offset: 0x00EEC7EC
 		private void RefreshRoleInfo()
 		{
 			if (this.ViewModel == null)
@@ -372,7 +372,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.RefreshSkillIcons(roleConfig.Value);
 		}
 
-		// Token: 0x06040AB5 RID: 264885 RVA: 0x00FA7618 File Offset: 0x00FA5818
+		// Token: 0x06035779 RID: 219001 RVA: 0x00EEE660 File Offset: 0x00EEC860
 		private void RefreshRoleName(MatchThreeRole roleConfig)
 		{
 			UUIText text = base.GetText(10);
@@ -388,7 +388,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			LguiUtil.Instance.TrySetLocalTextNew(text, roleConfig.Name, Array.Empty<object>());
 		}
 
-		// Token: 0x06040AB6 RID: 264886 RVA: 0x00FA7664 File Offset: 0x00FA5864
+		// Token: 0x0603577A RID: 219002 RVA: 0x00EEE6AC File Offset: 0x00EEC8AC
 		private UniTask RefreshRoleSpine(MatchThreeRole roleConfig)
 		{
 			MatchThreeLevelDetailView.<RefreshRoleSpine>d__28 <RefreshRoleSpine>d__;
@@ -400,7 +400,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			return <RefreshRoleSpine>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040AB7 RID: 264887 RVA: 0x00FA76B0 File Offset: 0x00FA58B0
+		// Token: 0x0603577B RID: 219003 RVA: 0x00EEE6F8 File Offset: 0x00EEC8F8
 		private UniTask RefreshRoleSpineBack(MatchThreeRole roleConfig)
 		{
 			MatchThreeLevelDetailView.<RefreshRoleSpineBack>d__29 <RefreshRoleSpineBack>d__;
@@ -412,7 +412,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			return <RefreshRoleSpineBack>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040AB8 RID: 264888 RVA: 0x00FA76FC File Offset: 0x00FA58FC
+		// Token: 0x0603577C RID: 219004 RVA: 0x00EEE744 File Offset: 0x00EEC944
 		[NullableContext(1)]
 		private UniTask LoadAndPlayRoleSpine([Nullable(2)] USpineSkeletonAnimationComponent spine, MatchThreeRole roleConfig, Func<int> nextSerial, Func<int> currentSerial)
 		{
@@ -428,14 +428,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			return <LoadAndPlayRoleSpine>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040AB9 RID: 264889 RVA: 0x00FA7760 File Offset: 0x00FA5960
+		// Token: 0x0603577D RID: 219005 RVA: 0x00EEE7A8 File Offset: 0x00EEC9A8
 		private void RefreshSkillIcons(MatchThreeRole roleConfig)
 		{
 			this.RefreshOneSkillIcon(7, (roleConfig.SkillsLength > 0) ? roleConfig.Skills(0) : 0);
 			this.RefreshOneSkillIcon(8, (roleConfig.SkillsLength > 1) ? roleConfig.Skills(1) : 0);
 		}
 
-		// Token: 0x06040ABA RID: 264890 RVA: 0x00FA779C File Offset: 0x00FA599C
+		// Token: 0x0603577E RID: 219006 RVA: 0x00EEE7E4 File Offset: 0x00EEC9E4
 		private void RefreshOneSkillIcon(int componentIndex, int skillId)
 		{
 			UUISprite sprite = base.GetSprite(componentIndex);
@@ -453,7 +453,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.SetSpriteByPath(matchThreeSkill.Value.Icon, sprite, false, null, null);
 		}
 
-		// Token: 0x06040ABB RID: 264891 RVA: 0x00FA7820 File Offset: 0x00FA5A20
+		// Token: 0x0603577F RID: 219007 RVA: 0x00EEE868 File Offset: 0x00EECA68
 		private void OnClickSelectRole()
 		{
 			if (this.ViewModel == null || this.IsEnteringChallenge)
@@ -474,7 +474,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			});
 		}
 
-		// Token: 0x06040ABC RID: 264892 RVA: 0x00FA7889 File Offset: 0x00FA5A89
+		// Token: 0x06035780 RID: 219008 RVA: 0x00EEE8D1 File Offset: 0x00EECAD1
 		private void OnRoleSelectedFromPopup()
 		{
 			this.PlaySwitchSequence();
@@ -482,7 +482,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			this.RefreshSelectRoleRedDot();
 		}
 
-		// Token: 0x06040ABD RID: 264893 RVA: 0x00FA789D File Offset: 0x00FA5A9D
+		// Token: 0x06035781 RID: 219009 RVA: 0x00EEE8E5 File Offset: 0x00EECAE5
 		private void OnClickPopupInfo()
 		{
 			if (this.ViewModel == null || this.IsEnteringChallenge)
@@ -492,7 +492,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			ActivityMatchThreeController.Instance.OpenPopupInfoByLevel(this.ViewModel.CurrentLevelId, this.ViewModel.SelectedRoleId, false, 0, 0);
 		}
 
-		// Token: 0x06040ABE RID: 264894 RVA: 0x00FA78D4 File Offset: 0x00FA5AD4
+		// Token: 0x06035782 RID: 219010 RVA: 0x00EEE91C File Offset: 0x00EECB1C
 		private void OnClickChallenge()
 		{
 			if (this.ViewModel == null || this.ActivityData == null || this.IsEnteringChallenge)
@@ -518,7 +518,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			});
 		}
 
-		// Token: 0x06040ABF RID: 264895 RVA: 0x00FA796E File Offset: 0x00FA5B6E
+		// Token: 0x06035783 RID: 219011 RVA: 0x00EEE9B6 File Offset: 0x00EECBB6
 		private void SetEnteringChallenge(bool entering)
 		{
 			this.IsEnteringChallenge = entering;
@@ -530,7 +530,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			item.SetUIActive(entering);
 		}
 
-		// Token: 0x06040AC0 RID: 264896 RVA: 0x00FA798A File Offset: 0x00FA5B8A
+		// Token: 0x06035784 RID: 219012 RVA: 0x00EEE9D2 File Offset: 0x00EECBD2
 		private void OnClickClose()
 		{
 			if (this.IsEnteringChallenge)
@@ -540,7 +540,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			UiManager.Instance.CloseView(EUiViewName.MatchThreeLevelDetailView, null);
 		}
 
-		// Token: 0x06040AC1 RID: 264897 RVA: 0x00FA79A8 File Offset: 0x00FA5BA8
+		// Token: 0x06035785 RID: 219013 RVA: 0x00EEE9F0 File Offset: 0x00EECBF0
 		private void OnClickHelp()
 		{
 			if (!this.IsEnteringChallenge)
@@ -554,37 +554,37 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.View
 			}
 		}
 
-		// Token: 0x06040AC2 RID: 264898 RVA: 0x00FA79FC File Offset: 0x00FA5BFC
+		// Token: 0x06035786 RID: 219014 RVA: 0x00EEEA44 File Offset: 0x00EECC44
 		private void OnChallengeStateUpdate(int challengeId)
 		{
 			this.RefreshAll();
 		}
 
-		// Token: 0x04021A51 RID: 137809
+		// Token: 0x0401C382 RID: 115586
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04021A52 RID: 137810
+		// Token: 0x0401C383 RID: 115587
 		private MatchThreeLevelDetailTipsPanel TipsPanel;
 
-		// Token: 0x04021A53 RID: 137811
+		// Token: 0x0401C384 RID: 115588
 		private MatchThreeDifficultyTabItem EasyTab;
 
-		// Token: 0x04021A54 RID: 137812
+		// Token: 0x0401C385 RID: 115589
 		private MatchThreeDifficultyTabItem HardTab;
 
-		// Token: 0x04021A55 RID: 137813
+		// Token: 0x0401C386 RID: 115590
 		private MatchThreeLevelDetailViewModel ViewModel;
 
-		// Token: 0x04021A56 RID: 137814
+		// Token: 0x0401C387 RID: 115591
 		private ActivityMatchThreeData ActivityData;
 
-		// Token: 0x04021A57 RID: 137815
+		// Token: 0x0401C388 RID: 115592
 		private int SpineLoadSerial;
 
-		// Token: 0x04021A58 RID: 137816
+		// Token: 0x0401C389 RID: 115593
 		private int SpineBackLoadSerial;
 
-		// Token: 0x04021A59 RID: 137817
+		// Token: 0x0401C38A RID: 115594
 		private bool IsEnteringChallenge;
 	}
 }

@@ -6,11 +6,11 @@ using CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents.SimpleGameplay.Handlers
 {
-	// Token: 0x02006BC1 RID: 27585
+	// Token: 0x02005D3A RID: 23866
 	public class DragActorOpenHandler : DragActorHandlerBase, ISimpleGameplayOpenHandler<IDragActor>, ISimpleGameplayOpenHandler, ISimpleGameplayHandlerBase
 	{
-		// Token: 0x170099A3 RID: 39331
-		// (get) Token: 0x0604435A RID: 279386 RVA: 0x010D037B File Offset: 0x010CE57B
+		// Token: 0x17006EA6 RID: 28326
+		// (get) Token: 0x0603A4B2 RID: 238770 RVA: 0x0107A2CF File Offset: 0x010784CF
 		public ESimpleGameplayType Type
 		{
 			get
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents.SimpleGameplay.Handlers
 			}
 		}
 
-		// Token: 0x0604435B RID: 279387 RVA: 0x010D0380 File Offset: 0x010CE580
+		// Token: 0x0603A4B3 RID: 238771 RVA: 0x0107A2D4 File Offset: 0x010784D4
 		[NullableContext(1)]
 		public void Open(IDragActor config, OpenSimpleGameplay @params, ISimpleGameplayOpenHost host)
 		{

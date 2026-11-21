@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020007E1 RID: 2017
+	// Token: 0x020007FD RID: 2045
 	public class ConfigReignsCardById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002F58 RID: 12120 RVA: 0x00164D0C File Offset: 0x00162F0C
+		// Token: 0x06003000 RID: 12288 RVA: 0x0016BFF4 File Offset: 0x0016A1F4
 		static ConfigReignsCardById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigReignsCardById.CreateStaticDefaultValue), new Action(ConfigReignsCardById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002F59 RID: 12121 RVA: 0x00164D2C File Offset: 0x00162F2C
+		// Token: 0x06003001 RID: 12289 RVA: 0x0016C014 File Offset: 0x0016A214
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigReignsCardById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002F5A RID: 12122 RVA: 0x00164DAB File Offset: 0x00162FAB
+		// Token: 0x06003002 RID: 12290 RVA: 0x0016C093 File Offset: 0x0016A293
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigReignsCardById.LogPair = null;
 			ConfigReignsCardById.HandleId = 0;
 		}
 
-		// Token: 0x06002F5B RID: 12123 RVA: 0x00164DB9 File Offset: 0x00162FB9
+		// Token: 0x06003003 RID: 12291 RVA: 0x0016C0A1 File Offset: 0x0016A2A1
 		public static void Init()
 		{
 			ConfigReignsCardById.HandleId = ConfigCommon.InitDataStatement(ConfigReignsCardById.HandleId, "db_reignscard.db", "select BinData from `ReignsCard` where Id=?");
 		}
 
-		// Token: 0x06002F5C RID: 12124 RVA: 0x00164DD4 File Offset: 0x00162FD4
+		// Token: 0x06003004 RID: 12292 RVA: 0x0016C0BC File Offset: 0x0016A2BC
 		public static ReignsCard? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigReignsCardById.HandleId, ConfigReignsCardById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new ReignsCard?(rootAsReignsCard);
 		}
 
-		// Token: 0x0400370D RID: 14093
+		// Token: 0x040037D1 RID: 14289
 		private const string DB = "db_reignscard.db";
 
-		// Token: 0x0400370E RID: 14094
+		// Token: 0x040037D2 RID: 14290
 		private const string FILE = "k.可视化编辑/c.Csv/w.王权玩法结果卡片/*.csv*";
 
-		// Token: 0x0400370F RID: 14095
+		// Token: 0x040037D3 RID: 14291
 		private const string TABLE = "ReignsCard";
 
-		// Token: 0x04003710 RID: 14096
+		// Token: 0x040037D4 RID: 14292
 		private const string COMMAND = "select BinData from `ReignsCard` where Id=?";
 
-		// Token: 0x04003711 RID: 14097
+		// Token: 0x040037D5 RID: 14293
 		private const string KEY_PREFIX = "ReignsCardById";
 
-		// Token: 0x04003712 RID: 14098
+		// Token: 0x040037D6 RID: 14294
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003713 RID: 14099
+		// Token: 0x040037D7 RID: 14295
 		private static int HandleId;
 	}
 }

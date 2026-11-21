@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004690 RID: 18064
+	// Token: 0x020035C1 RID: 13761
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InputDistributeTag
 	{
-		// Token: 0x0602E9AC RID: 190892 RVA: 0x00ACA9D0 File Offset: 0x00AC8BD0
+		// Token: 0x060230F6 RID: 143606 RVA: 0x009F8704 File Offset: 0x009F6904
 		public InputDistributeTag(string tag, [Nullable(2)] InputDistributeTag parentTag = null)
 		{
 			this.TagNameInternal = tag;
@@ -21,8 +21,8 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x17007630 RID: 30256
-		// (get) Token: 0x0602E9AD RID: 190893 RVA: 0x00ACAA1E File Offset: 0x00AC8C1E
+		// Token: 0x170048EC RID: 18668
+		// (get) Token: 0x060230F7 RID: 143607 RVA: 0x009F8752 File Offset: 0x009F6952
 		public string TagName
 		{
 			get
@@ -31,8 +31,8 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x17007631 RID: 30257
-		// (get) Token: 0x0602E9AE RID: 190894 RVA: 0x00ACAA26 File Offset: 0x00AC8C26
+		// Token: 0x170048ED RID: 18669
+		// (get) Token: 0x060230F8 RID: 143608 RVA: 0x009F875A File Offset: 0x009F695A
 		[Nullable(2)]
 		public InputDistributeTag ParentTag
 		{
@@ -43,20 +43,20 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E9AF RID: 190895 RVA: 0x00ACAA2E File Offset: 0x00AC8C2E
+		// Token: 0x060230F9 RID: 143609 RVA: 0x009F8762 File Offset: 0x009F6962
 		public bool MatchTag(string tag, bool bExactMatch = false)
 		{
 			return this.TagNameInternal == tag || (!bExactMatch && this.ParentTagNameSet.Contains(tag));
 		}
 
-		// Token: 0x04019543 RID: 103747
+		// Token: 0x04013BEA RID: 80874
 		[Nullable(2)]
 		private readonly InputDistributeTag ParentTagInternal;
 
-		// Token: 0x04019544 RID: 103748
+		// Token: 0x04013BEB RID: 80875
 		private readonly HashSet<string> ParentTagNameSet = new HashSet<string>();
 
-		// Token: 0x04019545 RID: 103749
+		// Token: 0x04013BEC RID: 80876
 		private readonly string TagNameInternal;
 	}
 }

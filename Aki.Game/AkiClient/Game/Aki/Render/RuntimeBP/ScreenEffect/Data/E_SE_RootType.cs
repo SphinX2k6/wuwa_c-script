@@ -4,20 +4,20 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.ScreenEffect.Data
 {
-	// Token: 0x02003AEA RID: 15082
+	// Token: 0x020030B3 RID: 12467
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/ScreenEffect/Data/E_SE_RootType.E_SE_RootType")]
 	public enum E_SE_RootType : byte
 	{
-		// Token: 0x0400FD8E RID: 64910
+		// Token: 0x0400FD1B RID: 64795
 		Fight,
-		// Token: 0x0400FD8F RID: 64911
+		// Token: 0x0400FD1C RID: 64796
 		Plot,
-		// Token: 0x0400FD90 RID: 64912
+		// Token: 0x0400FD1D RID: 64797
 		General,
-		// Token: 0x0400FD91 RID: 64913
+		// Token: 0x0400FD1E RID: 64798
 		CoverLoading,
-		// Token: 0x0400FD92 RID: 64914
+		// Token: 0x0400FD1F RID: 64799
 		E_SE_MAX
 	}
 }

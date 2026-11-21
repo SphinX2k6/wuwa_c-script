@@ -4,18 +4,18 @@ using CSharpScript.Game.Module.KeySetting;
 using CSharpScript.Game.Module.Menu;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02002028 RID: 8232
+// Token: 0x020014FB RID: 5371
 [NullableContext(2)]
 [Nullable(0)]
 public class KeySettingPanelBase : UiPanelBase
 {
-	// Token: 0x06010227 RID: 66087 RVA: 0x003EDFA4 File Offset: 0x003EC1A4
+	// Token: 0x0600D68F RID: 54927 RVA: 0x003FA59C File Offset: 0x003F879C
 	public KeySettingPanelBase(EKeySettingExclusiveType exclusiveType = EKeySettingExclusiveType.None)
 	{
 		this.ExclusiveType = exclusiveType;
 	}
 
-	// Token: 0x06010228 RID: 66088 RVA: 0x003EDFB4 File Offset: 0x003EC1B4
+	// Token: 0x0600D690 RID: 54928 RVA: 0x003FA5AC File Offset: 0x003F87AC
 	protected override void OnStartImplement()
 	{
 		KeySettingViewModel.InitData(this.ExclusiveType);
@@ -30,7 +30,7 @@ public class KeySettingPanelBase : UiPanelBase
 		KeySettingViewModel.AddOnKeyUnHoverDelegate(new Action<KeySettingRowData>(this.DelegateOnKeyUnHover));
 	}
 
-	// Token: 0x06010229 RID: 66089 RVA: 0x003EE05C File Offset: 0x003EC25C
+	// Token: 0x0600D691 RID: 54929 RVA: 0x003FA654 File Offset: 0x003F8854
 	protected override void OnBeforeDestroyImplement()
 	{
 		KeySettingViewModel.RemoveOnWaitKeySettingDelegate(new Action<KeySettingRowData, IKeySettingItem>(this.DelegateOnWaitKeySetting));
@@ -44,97 +44,97 @@ public class KeySettingPanelBase : UiPanelBase
 		KeySettingViewModel.OnViewDestroy();
 	}
 
-	// Token: 0x0601022A RID: 66090 RVA: 0x003EE0F6 File Offset: 0x003EC2F6
+	// Token: 0x0600D692 RID: 54930 RVA: 0x003FA6EE File Offset: 0x003F88EE
 	protected virtual void OnWaitKeySetting()
 	{
 	}
 
-	// Token: 0x0601022B RID: 66091 RVA: 0x003EE0F8 File Offset: 0x003EC2F8
+	// Token: 0x0600D693 RID: 54931 RVA: 0x003FA6F0 File Offset: 0x003F88F0
 	protected virtual void OnBeforeBeginEditKey()
 	{
 	}
 
-	// Token: 0x0601022C RID: 66092 RVA: 0x003EE0FA File Offset: 0x003EC2FA
+	// Token: 0x0600D694 RID: 54932 RVA: 0x003FA6F2 File Offset: 0x003F88F2
 	protected virtual void OnBeginEditKey()
 	{
 	}
 
-	// Token: 0x0601022D RID: 66093 RVA: 0x003EE0FC File Offset: 0x003EC2FC
+	// Token: 0x0600D695 RID: 54933 RVA: 0x003FA6F4 File Offset: 0x003F88F4
 	protected virtual void OnFinishEditKey()
 	{
 	}
 
-	// Token: 0x0601022E RID: 66094 RVA: 0x003EE0FE File Offset: 0x003EC2FE
+	// Token: 0x0600D696 RID: 54934 RVA: 0x003FA6F6 File Offset: 0x003F88F6
 	[NullableContext(1)]
 	protected virtual void OnKeyChange(KeySettingRowData data, CSharpScript.Game.Module.Menu.EInputControllerType type)
 	{
 	}
 
-	// Token: 0x0601022F RID: 66095 RVA: 0x003EE100 File Offset: 0x003EC300
+	// Token: 0x0600D697 RID: 54935 RVA: 0x003FA6F8 File Offset: 0x003F88F8
 	protected virtual void OnKeySelected(KeySettingRowData data)
 	{
 	}
 
-	// Token: 0x06010230 RID: 66096 RVA: 0x003EE102 File Offset: 0x003EC302
+	// Token: 0x0600D698 RID: 54936 RVA: 0x003FA6FA File Offset: 0x003F88FA
 	protected virtual void OnKeyHover(KeySettingRowData data)
 	{
 	}
 
-	// Token: 0x06010231 RID: 66097 RVA: 0x003EE104 File Offset: 0x003EC304
+	// Token: 0x0600D699 RID: 54937 RVA: 0x003FA6FC File Offset: 0x003F88FC
 	protected virtual void OnKeyUnHover(KeySettingRowData data)
 	{
 	}
 
-	// Token: 0x06010232 RID: 66098 RVA: 0x003EE106 File Offset: 0x003EC306
+	// Token: 0x0600D69A RID: 54938 RVA: 0x003FA6FE File Offset: 0x003F88FE
 	[NullableContext(1)]
 	private void DelegateOnWaitKeySetting(KeySettingRowData data, IKeySettingItem item)
 	{
 		this.OnWaitKeySetting();
 	}
 
-	// Token: 0x06010233 RID: 66099 RVA: 0x003EE10E File Offset: 0x003EC30E
+	// Token: 0x0600D69B RID: 54939 RVA: 0x003FA706 File Offset: 0x003F8906
 	private void DelegateOnBeforeBeginEditKey()
 	{
 		this.OnBeforeBeginEditKey();
 	}
 
-	// Token: 0x06010234 RID: 66100 RVA: 0x003EE116 File Offset: 0x003EC316
+	// Token: 0x0600D69C RID: 54940 RVA: 0x003FA70E File Offset: 0x003F890E
 	private void DelegateOnBeginEditKey()
 	{
 		this.OnBeginEditKey();
 	}
 
-	// Token: 0x06010235 RID: 66101 RVA: 0x003EE11E File Offset: 0x003EC31E
+	// Token: 0x0600D69D RID: 54941 RVA: 0x003FA716 File Offset: 0x003F8916
 	private void DelegateOnFinishEditKey()
 	{
 		this.OnFinishEditKey();
 	}
 
-	// Token: 0x06010236 RID: 66102 RVA: 0x003EE126 File Offset: 0x003EC326
+	// Token: 0x0600D69E RID: 54942 RVA: 0x003FA71E File Offset: 0x003F891E
 	[NullableContext(1)]
 	private void DelegateOnKeyChange(KeySettingRowData data, CSharpScript.Game.Module.Menu.EInputControllerType type)
 	{
 		this.OnKeyChange(data, type);
 	}
 
-	// Token: 0x06010237 RID: 66103 RVA: 0x003EE130 File Offset: 0x003EC330
+	// Token: 0x0600D69F RID: 54943 RVA: 0x003FA728 File Offset: 0x003F8928
 	private void DelegateOnKeySelected(KeySettingRowData data)
 	{
 		this.OnKeySelected(data);
 	}
 
-	// Token: 0x06010238 RID: 66104 RVA: 0x003EE139 File Offset: 0x003EC339
+	// Token: 0x0600D6A0 RID: 54944 RVA: 0x003FA731 File Offset: 0x003F8931
 	private void DelegateOnKeyHover(KeySettingRowData data)
 	{
 		this.OnKeyHover(data);
 	}
 
-	// Token: 0x06010239 RID: 66105 RVA: 0x003EE142 File Offset: 0x003EC342
+	// Token: 0x0600D6A1 RID: 54945 RVA: 0x003FA73A File Offset: 0x003F893A
 	private void DelegateOnKeyUnHover(KeySettingRowData data)
 	{
 		this.OnKeyUnHover(data);
 	}
 
-	// Token: 0x04007767 RID: 30567
+	// Token: 0x04007850 RID: 30800
 	private readonly EKeySettingExclusiveType ExclusiveType;
 }

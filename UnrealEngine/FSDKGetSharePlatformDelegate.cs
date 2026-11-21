@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001CA1 RID: 7329
+	// Token: 0x0200053A RID: 1338
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FSDKGetSharePlatformDelegate : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601C72E RID: 116526 RVA: 0x002A09A1 File Offset: 0x0029EBA1
+		// Token: 0x06007C6B RID: 31851 RVA: 0x000B8355 File Offset: 0x000B6555
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FSDKGetSharePlatformDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601C72F RID: 116527 RVA: 0x002A09AD File Offset: 0x0029EBAD
+		// Token: 0x06007C6C RID: 31852 RVA: 0x000B8361 File Offset: 0x000B6561
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FSDKGetSharePlatformDelegate._FunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace UnrealEngine
 			return FSDKGetSharePlatformDelegate._FunctionPtr;
 		}
 
-		// Token: 0x0601C730 RID: 116528 RVA: 0x002A09D0 File Offset: 0x0029EBD0
+		// Token: 0x06007C6D RID: 31853 RVA: 0x000B8384 File Offset: 0x000B6584
 		public FSDKGetSharePlatformDelegate()
 		{
 		}
 
-		// Token: 0x0601C731 RID: 116529 RVA: 0x002A09D8 File Offset: 0x0029EBD8
+		// Token: 0x06007C6E RID: 31854 RVA: 0x000B838C File Offset: 0x000B658C
 		[NullableContext(2)]
 		public FSDKGetSharePlatformDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601C732 RID: 116530 RVA: 0x002A09E2 File Offset: 0x0029EBE2
+		// Token: 0x06007C6F RID: 31855 RVA: 0x000B8396 File Offset: 0x000B6596
 		public FSDKGetSharePlatformDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601C733 RID: 116531 RVA: 0x002A09ED File Offset: 0x0029EBED
+		// Token: 0x06007C70 RID: 31856 RVA: 0x000B83A1 File Offset: 0x000B65A1
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<int, string, string>) ?? ((Action<int, string, string>)Delegate.CreateDelegate(typeof(Action<int, string, string>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601C734 RID: 116532 RVA: 0x002A0A1F File Offset: 0x0029EC1F
+		// Token: 0x06007C71 RID: 31857 RVA: 0x000B83D3 File Offset: 0x000B65D3
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action<int, string, string> Callback)
 		{
 			if (FSDKGetSharePlatformDelegate.RegisterId == 0)
@@ -67,18 +66,16 @@ namespace UnrealEngine
 			base.Add(Callback, FSDKGetSharePlatformDelegate.RegisterId);
 		}
 
-		// Token: 0x0601C735 RID: 116533 RVA: 0x002A0A59 File Offset: 0x0029EC59
+		// Token: 0x06007C72 RID: 31858 RVA: 0x000B840D File Offset: 0x000B660D
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action<int, string, string> Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601C736 RID: 116534 RVA: 0x002A0A64 File Offset: 0x0029EC64
+		// Token: 0x06007C73 RID: 31859 RVA: 0x000B8418 File Offset: 0x000B6618
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(int code, string value, string msg)
 		{
 			FSDKGetSharePlatformDelegate.__FSDKGetSharePlatformDelegate_DelegateParams* ptr = stackalloc FSDKGetSharePlatformDelegate.__FSDKGetSharePlatformDelegate_DelegateParams[(UIntPtr)55] + 15L / (long)sizeof(FSDKGetSharePlatformDelegate.__FSDKGetSharePlatformDelegate_DelegateParams) & -16L;
@@ -90,10 +87,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FSDKGetSharePlatformDelegate._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601C737 RID: 116535 RVA: 0x002A0ACC File Offset: 0x0029ECCC
+		// Token: 0x06007C74 RID: 31860 RVA: 0x000B8480 File Offset: 0x000B6680
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<int, string, string> action = target as Action<int, string, string>;
@@ -106,39 +102,39 @@ namespace UnrealEngine
 			action(((FSDKGetSharePlatformDelegate.__FSDKGetSharePlatformDelegate_DelegateParams*)__Parameters)->code, arg, arg2);
 		}
 
-		// Token: 0x0400F4C4 RID: 62660
+		// Token: 0x0400352E RID: 13614
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400F4C5 RID: 62661
+		// Token: 0x0400352F RID: 13615
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroSDK.SDKGetSharePlatformDelegate__DelegateSignature";
 
-		// Token: 0x0400F4C6 RID: 62662
+		// Token: 0x04003530 RID: 13616
 		private static int RegisterId;
 
-		// Token: 0x02003275 RID: 12917
+		// Token: 0x02000CEA RID: 3306
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 40)]
-		protected ref struct __FSDKGetSharePlatformDelegate_DelegateParams
+		private ref struct __FSDKGetSharePlatformDelegate_DelegateParams
 		{
-			// Token: 0x040170FB RID: 94459
+			// Token: 0x04005F6F RID: 24431
 			[FieldOffset(0)]
 			public int code;
 
-			// Token: 0x040170FC RID: 94460
+			// Token: 0x04005F70 RID: 24432
 			[FieldOffset(8)]
 			public FString value;
 
-			// Token: 0x040170FD RID: 94461
+			// Token: 0x04005F71 RID: 24433
 			[FieldOffset(24)]
 			public FString msg;
 		}
 
-		// Token: 0x02003276 RID: 12918
+		// Token: 0x02000CEB RID: 3307
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040170FE RID: 94462
+			// Token: 0x04005F72 RID: 24434
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

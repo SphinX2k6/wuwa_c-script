@@ -4,13 +4,13 @@ using CSharpScript.Game.Module.Map.Misc;
 
 namespace CSharpScript.Game.Module.Map.Base
 {
-	// Token: 0x02005596 RID: 21910
+	// Token: 0x0200456C RID: 17772
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class MapComponent : IStaticVariableResetter
 	{
-		// Token: 0x17008673 RID: 34419
-		// (get) Token: 0x06037D7C RID: 228732 RVA: 0x00D3C5B8 File Offset: 0x00D3A7B8
+		// Token: 0x17005A3A RID: 23098
+		// (get) Token: 0x0602CC7A RID: 183418 RVA: 0x00C8A300 File Offset: 0x00C88500
 		[Nullable(new byte[]
 		{
 			1,
@@ -42,22 +42,22 @@ namespace CSharpScript.Game.Module.Map.Base
 			}
 		}
 
-		// Token: 0x06037D7D RID: 228733 RVA: 0x00D3C5DD File Offset: 0x00D3A7DD
+		// Token: 0x0602CC7B RID: 183419 RVA: 0x00C8A325 File Offset: 0x00C88525
 		static MapComponent()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MapComponent.CreateStaticDefaultValue), new Action(MapComponent.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06037D7E RID: 228734 RVA: 0x00D3C5FC File Offset: 0x00D3A7FC
+		// Token: 0x0602CC7C RID: 183420 RVA: 0x00C8A344 File Offset: 0x00C88544
 		public static int GenComponentId()
 		{
 			MapComponent.IncId++;
 			return MapComponent.IncId;
 		}
 
-		// Token: 0x17008674 RID: 34420
-		// (get) Token: 0x06037D7F RID: 228735 RVA: 0x00D3C60F File Offset: 0x00D3A80F
-		// (set) Token: 0x06037D80 RID: 228736 RVA: 0x00D3C62A File Offset: 0x00D3A82A
+		// Token: 0x17005A3B RID: 23099
+		// (get) Token: 0x0602CC7D RID: 183421 RVA: 0x00C8A357 File Offset: 0x00C88557
+		// (set) Token: 0x0602CC7E RID: 183422 RVA: 0x00C8A372 File Offset: 0x00C88572
 		public int ComponentId
 		{
 			get
@@ -74,9 +74,9 @@ namespace CSharpScript.Game.Module.Map.Base
 			}
 		}
 
-		// Token: 0x17008675 RID: 34421
-		// (get) Token: 0x06037D81 RID: 228737 RVA: 0x00D3C633 File Offset: 0x00D3A833
-		// (set) Token: 0x06037D82 RID: 228738 RVA: 0x00D3C63B File Offset: 0x00D3A83B
+		// Token: 0x17005A3C RID: 23100
+		// (get) Token: 0x0602CC7F RID: 183423 RVA: 0x00C8A37B File Offset: 0x00C8857B
+		// (set) Token: 0x0602CC80 RID: 183424 RVA: 0x00C8A383 File Offset: 0x00C88583
 		[Nullable(new byte[]
 		{
 			0,
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.Map.Base
 			1
 		})] set; }
 
-		// Token: 0x06037D83 RID: 228739 RVA: 0x00D3C644 File Offset: 0x00D3A844
+		// Token: 0x0602CC81 RID: 183425 RVA: 0x00C8A38C File Offset: 0x00C8858C
 		public MapComponent([Nullable(new byte[]
 		{
 			0,
@@ -110,8 +110,8 @@ namespace CSharpScript.Game.Module.Map.Base
 			this.Parent = parent;
 		}
 
-		// Token: 0x17008676 RID: 34422
-		// (get) Token: 0x06037D84 RID: 228740 RVA: 0x00D3C654 File Offset: 0x00D3A854
+		// Token: 0x17005A3D RID: 23101
+		// (get) Token: 0x0602CC82 RID: 183426 RVA: 0x00C8A39C File Offset: 0x00C8859C
 		public MapEntity ParentEntity
 		{
 			get
@@ -120,9 +120,9 @@ namespace CSharpScript.Game.Module.Map.Base
 			}
 		}
 
-		// Token: 0x17008677 RID: 34423
-		// (get) Token: 0x06037D85 RID: 228741 RVA: 0x00D3C66F File Offset: 0x00D3A86F
-		// (set) Token: 0x06037D86 RID: 228742 RVA: 0x00D3C680 File Offset: 0x00D3A880
+		// Token: 0x17005A3E RID: 23102
+		// (get) Token: 0x0602CC83 RID: 183427 RVA: 0x00C8A3B7 File Offset: 0x00C885B7
+		// (set) Token: 0x0602CC84 RID: 183428 RVA: 0x00C8A3C8 File Offset: 0x00C885C8
 		public bool Enable
 		{
 			get
@@ -150,9 +150,9 @@ namespace CSharpScript.Game.Module.Map.Base
 			}
 		}
 
-		// Token: 0x17008678 RID: 34424
-		// (get) Token: 0x06037D87 RID: 228743 RVA: 0x00D3C6CC File Offset: 0x00D3A8CC
-		// (set) Token: 0x06037D88 RID: 228744 RVA: 0x00D3C6DA File Offset: 0x00D3A8DA
+		// Token: 0x17005A3F RID: 23103
+		// (get) Token: 0x0602CC85 RID: 183429 RVA: 0x00C8A414 File Offset: 0x00C88614
+		// (set) Token: 0x0602CC86 RID: 183430 RVA: 0x00C8A422 File Offset: 0x00C88622
 		private bool FirstEnable
 		{
 			get
@@ -165,9 +165,9 @@ namespace CSharpScript.Game.Module.Map.Base
 			}
 		}
 
-		// Token: 0x17008679 RID: 34425
-		// (get) Token: 0x06037D89 RID: 228745 RVA: 0x00D3C6E8 File Offset: 0x00D3A8E8
-		// (set) Token: 0x06037D8A RID: 228746 RVA: 0x00D3C6F6 File Offset: 0x00D3A8F6
+		// Token: 0x17005A40 RID: 23104
+		// (get) Token: 0x0602CC87 RID: 183431 RVA: 0x00C8A430 File Offset: 0x00C88630
+		// (set) Token: 0x0602CC88 RID: 183432 RVA: 0x00C8A43E File Offset: 0x00C8863E
 		public bool EnableTick
 		{
 			get
@@ -180,59 +180,59 @@ namespace CSharpScript.Game.Module.Map.Base
 			}
 		}
 
-		// Token: 0x06037D8B RID: 228747 RVA: 0x00D3C704 File Offset: 0x00D3A904
+		// Token: 0x0602CC89 RID: 183433 RVA: 0x00C8A44C File Offset: 0x00C8864C
 		public void Remove()
 		{
 			this.OnRemove();
 		}
 
-		// Token: 0x06037D8C RID: 228748 RVA: 0x00D3C70C File Offset: 0x00D3A90C
+		// Token: 0x0602CC8A RID: 183434 RVA: 0x00C8A454 File Offset: 0x00C88654
 		protected virtual void OnRemove()
 		{
 		}
 
-		// Token: 0x06037D8D RID: 228749 RVA: 0x00D3C70E File Offset: 0x00D3A90E
+		// Token: 0x0602CC8B RID: 183435 RVA: 0x00C8A456 File Offset: 0x00C88656
 		public void Add()
 		{
 			this.OnAdd();
 		}
 
-		// Token: 0x06037D8E RID: 228750 RVA: 0x00D3C716 File Offset: 0x00D3A916
+		// Token: 0x0602CC8C RID: 183436 RVA: 0x00C8A45E File Offset: 0x00C8865E
 		protected virtual void OnAdd()
 		{
 		}
 
-		// Token: 0x06037D8F RID: 228751 RVA: 0x00D3C718 File Offset: 0x00D3A918
+		// Token: 0x0602CC8D RID: 183437 RVA: 0x00C8A460 File Offset: 0x00C88660
 		protected virtual void OnEnable()
 		{
 		}
 
-		// Token: 0x06037D90 RID: 228752 RVA: 0x00D3C71A File Offset: 0x00D3A91A
+		// Token: 0x0602CC8E RID: 183438 RVA: 0x00C8A462 File Offset: 0x00C88662
 		protected virtual void OnStart()
 		{
 		}
 
-		// Token: 0x06037D91 RID: 228753 RVA: 0x00D3C71C File Offset: 0x00D3A91C
+		// Token: 0x0602CC8F RID: 183439 RVA: 0x00C8A464 File Offset: 0x00C88664
 		protected virtual void OnDisable()
 		{
 		}
 
-		// Token: 0x1700867A RID: 34426
-		// (get) Token: 0x06037D92 RID: 228754
+		// Token: 0x17005A41 RID: 23105
+		// (get) Token: 0x0602CC90 RID: 183440
 		public abstract EMapComponent ComponentType { get; }
 
-		// Token: 0x06037D93 RID: 228755 RVA: 0x00D3C71E File Offset: 0x00D3A91E
+		// Token: 0x0602CC91 RID: 183441 RVA: 0x00C8A466 File Offset: 0x00C88666
 		public void Init()
 		{
 			this.OnInit();
 		}
 
-		// Token: 0x06037D94 RID: 228756 RVA: 0x00D3C726 File Offset: 0x00D3A926
+		// Token: 0x0602CC92 RID: 183442 RVA: 0x00C8A46E File Offset: 0x00C8866E
 		protected virtual void OnInit()
 		{
 		}
 
-		// Token: 0x06037D95 RID: 228757 RVA: 0x00D3C728 File Offset: 0x00D3A928
+		// Token: 0x0602CC93 RID: 183443 RVA: 0x00C8A470 File Offset: 0x00C88670
 		public void Tick(float delta)
 		{
 			if (this.Enable && this.EnableTick)
@@ -241,12 +241,12 @@ namespace CSharpScript.Game.Module.Map.Base
 			}
 		}
 
-		// Token: 0x06037D96 RID: 228758 RVA: 0x00D3C741 File Offset: 0x00D3A941
+		// Token: 0x0602CC94 RID: 183444 RVA: 0x00C8A489 File Offset: 0x00C88689
 		protected virtual void OnTick(float delta)
 		{
 		}
 
-		// Token: 0x06037D97 RID: 228759 RVA: 0x00D3C743 File Offset: 0x00D3A943
+		// Token: 0x0602CC95 RID: 183445 RVA: 0x00C8A48B File Offset: 0x00C8868B
 		public void Update()
 		{
 			if (this.Enable)
@@ -255,12 +255,12 @@ namespace CSharpScript.Game.Module.Map.Base
 			}
 		}
 
-		// Token: 0x06037D98 RID: 228760 RVA: 0x00D3C753 File Offset: 0x00D3A953
+		// Token: 0x0602CC96 RID: 183446 RVA: 0x00C8A49B File Offset: 0x00C8869B
 		protected virtual void OnUpdate()
 		{
 		}
 
-		// Token: 0x06037D99 RID: 228761 RVA: 0x00D3C755 File Offset: 0x00D3A955
+		// Token: 0x0602CC97 RID: 183447 RVA: 0x00C8A49D File Offset: 0x00C8869D
 		protected void LogInfo(ELogAuthor author, string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 		{
 			0,
@@ -272,7 +272,7 @@ namespace CSharpScript.Game.Module.Map.Base
 			MapLogger.Info(author, message, pairs);
 		}
 
-		// Token: 0x06037D9A RID: 228762 RVA: 0x00D3C75F File Offset: 0x00D3A95F
+		// Token: 0x0602CC98 RID: 183448 RVA: 0x00C8A4A7 File Offset: 0x00C886A7
 		protected void LogWarn(ELogAuthor author, string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 		{
 			0,
@@ -284,7 +284,7 @@ namespace CSharpScript.Game.Module.Map.Base
 			MapLogger.Warn(author, message, pairs);
 		}
 
-		// Token: 0x06037D9B RID: 228763 RVA: 0x00D3C769 File Offset: 0x00D3A969
+		// Token: 0x0602CC99 RID: 183449 RVA: 0x00C8A4B1 File Offset: 0x00C886B1
 		protected void LogError(ELogAuthor author, string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 		{
 			0,
@@ -296,19 +296,19 @@ namespace CSharpScript.Game.Module.Map.Base
 			MapLogger.Error(author, message, pairs);
 		}
 
-		// Token: 0x06037D9C RID: 228764 RVA: 0x00D3C773 File Offset: 0x00D3A973
+		// Token: 0x0602CC9A RID: 183450 RVA: 0x00C8A4BB File Offset: 0x00C886BB
 		public static void CreateStaticDefaultValue()
 		{
 			MapComponent.IncId = 0;
 		}
 
-		// Token: 0x06037D9D RID: 228765 RVA: 0x00D3C77B File Offset: 0x00D3A97B
+		// Token: 0x0602CC9B RID: 183451 RVA: 0x00C8A4C3 File Offset: 0x00C886C3
 		public static void ResetStaticDefaultValue()
 		{
 			MapComponent.IncId = 0;
 		}
 
-		// Token: 0x0401D574 RID: 120180
+		// Token: 0x04017FFF RID: 98303
 		[Nullable(new byte[]
 		{
 			2,
@@ -320,31 +320,31 @@ namespace CSharpScript.Game.Module.Map.Base
 		})]
 		private PropertyMap<OneOf<int, string>, OneOf<Vector2D, bool, int, string, float>> PropertyMapInternal;
 
-		// Token: 0x0401D575 RID: 120181
+		// Token: 0x04018000 RID: 98304
 		private MapComponent.BooleanState EnableState;
 
-		// Token: 0x0401D576 RID: 120182
+		// Token: 0x04018001 RID: 98305
 		private MapComponent.BooleanState FirstEnableState;
 
-		// Token: 0x0401D577 RID: 120183
+		// Token: 0x04018002 RID: 98306
 		private MapComponent.BooleanState EnableTickState;
 
-		// Token: 0x0401D578 RID: 120184
+		// Token: 0x04018003 RID: 98307
 		private static int IncId;
 
-		// Token: 0x0401D579 RID: 120185
+		// Token: 0x04018004 RID: 98308
 		private int ComponentIdInternal;
 
-		// Token: 0x0200B788 RID: 46984
+		// Token: 0x0200A1B3 RID: 41395
 		[NullableContext(0)]
 		private struct BooleanState
 		{
-			// Token: 0x1700A1B7 RID: 41399
-			// (get) Token: 0x0604F209 RID: 324105 RVA: 0x0152632F File Offset: 0x0152452F
-			// (set) Token: 0x0604F20A RID: 324106 RVA: 0x01526337 File Offset: 0x01524537
+			// Token: 0x17007954 RID: 31060
+			// (get) Token: 0x060457E3 RID: 284643 RVA: 0x014DFD93 File Offset: 0x014DDF93
+			// (set) Token: 0x060457E4 RID: 284644 RVA: 0x014DFD9B File Offset: 0x014DDF9B
 			public bool IsDirty { readonly get; private set; }
 
-			// Token: 0x0604F20B RID: 324107 RVA: 0x01526340 File Offset: 0x01524540
+			// Token: 0x060457E5 RID: 284645 RVA: 0x014DFDA4 File Offset: 0x014DDFA4
 			public bool Get(bool defaultValue)
 			{
 				if (!this.HasValue)
@@ -355,7 +355,7 @@ namespace CSharpScript.Game.Module.Map.Base
 				return this.Value;
 			}
 
-			// Token: 0x0604F20C RID: 324108 RVA: 0x01526359 File Offset: 0x01524559
+			// Token: 0x060457E6 RID: 284646 RVA: 0x014DFDBD File Offset: 0x014DDFBD
 			public void Set(bool value)
 			{
 				if (this.HasValue && this.Value == value)
@@ -367,10 +367,10 @@ namespace CSharpScript.Game.Module.Map.Base
 				this.IsDirty = true;
 			}
 
-			// Token: 0x040378DF RID: 227551
+			// Token: 0x04032309 RID: 205577
 			private bool HasValue;
 
-			// Token: 0x040378E0 RID: 227552
+			// Token: 0x0403230A RID: 205578
 			private bool Value;
 		}
 	}

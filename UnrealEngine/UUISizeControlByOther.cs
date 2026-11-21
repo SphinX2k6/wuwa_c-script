@@ -6,31 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020021B0 RID: 8624
+	// Token: 0x02000724 RID: 1828
 	[UnrealObjectPath("/Script/LGUI.UISizeControlByOther")]
 	[UnrealStructLayout(440, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 440)]
 	public class UUISizeControlByOther : UUILayoutBase, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06020CAD RID: 134317 RVA: 0x003076BF File Offset: 0x003058BF
+		// Token: 0x06009E6A RID: 40554 RVA: 0x000EB8BD File Offset: 0x000E9ABD
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UUISizeControlByOther._ClassPtr;
 		}
 
-		// Token: 0x06020CAE RID: 134318 RVA: 0x003076CC File Offset: 0x003058CC
+		// Token: 0x06009E6B RID: 40555 RVA: 0x000EB8CC File Offset: 0x000E9ACC
 		public UUISizeControlByOther() : this(BuiltinUtils.AllocNativeUObject(UUISizeControlByOther.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06020CAF RID: 134319 RVA: 0x003076F4 File Offset: 0x003058F4
+		// Token: 0x06009E6C RID: 40556 RVA: 0x000EB8F4 File Offset: 0x000E9AF4
 		[NullableContext(1)]
 		public UUISizeControlByOther(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UUISizeControlByOther.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17008011 RID: 32785
-		// (get) Token: 0x06020CB0 RID: 134320 RVA: 0x00307727 File Offset: 0x00305927
-		// (set) Token: 0x06020CB1 RID: 134321 RVA: 0x0030773B File Offset: 0x0030593B
+		// Token: 0x17001D61 RID: 7521
+		// (get) Token: 0x06009E6D RID: 40557 RVA: 0x000EB927 File Offset: 0x000E9B27
+		// (set) Token: 0x06009E6E RID: 40558 RVA: 0x000EB93B File Offset: 0x000E9B3B
 		[Nullable(new byte[]
 		{
 			0,
@@ -58,9 +58,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008012 RID: 32786
-		// (get) Token: 0x06020CB2 RID: 134322 RVA: 0x00307750 File Offset: 0x00305950
-		// (set) Token: 0x06020CB3 RID: 134323 RVA: 0x00307760 File Offset: 0x00305960
+		// Token: 0x17001D62 RID: 7522
+		// (get) Token: 0x06009E6F RID: 40559 RVA: 0x000EB950 File Offset: 0x000E9B50
+		// (set) Token: 0x06009E70 RID: 40560 RVA: 0x000EB960 File Offset: 0x000E9B60
 		public unsafe bool ControlWidth
 		{
 			get
@@ -73,9 +73,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008013 RID: 32787
-		// (get) Token: 0x06020CB4 RID: 134324 RVA: 0x00307771 File Offset: 0x00305971
-		// (set) Token: 0x06020CB5 RID: 134325 RVA: 0x00307781 File Offset: 0x00305981
+		// Token: 0x17001D63 RID: 7523
+		// (get) Token: 0x06009E71 RID: 40561 RVA: 0x000EB971 File Offset: 0x000E9B71
+		// (set) Token: 0x06009E72 RID: 40562 RVA: 0x000EB981 File Offset: 0x000E9B81
 		public unsafe bool ControlHeight
 		{
 			get
@@ -88,9 +88,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008014 RID: 32788
-		// (get) Token: 0x06020CB6 RID: 134326 RVA: 0x00307792 File Offset: 0x00305992
-		// (set) Token: 0x06020CB7 RID: 134327 RVA: 0x003077A2 File Offset: 0x003059A2
+		// Token: 0x17001D64 RID: 7524
+		// (get) Token: 0x06009E73 RID: 40563 RVA: 0x000EB992 File Offset: 0x000E9B92
+		// (set) Token: 0x06009E74 RID: 40564 RVA: 0x000EB9A2 File Offset: 0x000E9BA2
 		public unsafe bool UseWidthRange
 		{
 			get
@@ -103,9 +103,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008015 RID: 32789
-		// (get) Token: 0x06020CB8 RID: 134328 RVA: 0x003077B3 File Offset: 0x003059B3
-		// (set) Token: 0x06020CB9 RID: 134329 RVA: 0x003077C3 File Offset: 0x003059C3
+		// Token: 0x17001D65 RID: 7525
+		// (get) Token: 0x06009E75 RID: 40565 RVA: 0x000EB9B3 File Offset: 0x000E9BB3
+		// (set) Token: 0x06009E76 RID: 40566 RVA: 0x000EB9C3 File Offset: 0x000E9BC3
 		public unsafe bool UseHeightRange
 		{
 			get
@@ -118,9 +118,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008016 RID: 32790
-		// (get) Token: 0x06020CBA RID: 134330 RVA: 0x003077D4 File Offset: 0x003059D4
-		// (set) Token: 0x06020CBB RID: 134331 RVA: 0x003077E4 File Offset: 0x003059E4
+		// Token: 0x17001D66 RID: 7526
+		// (get) Token: 0x06009E77 RID: 40567 RVA: 0x000EB9D4 File Offset: 0x000E9BD4
+		// (set) Token: 0x06009E78 RID: 40568 RVA: 0x000EB9E4 File Offset: 0x000E9BE4
 		public unsafe int MaxWidth
 		{
 			get
@@ -133,9 +133,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008017 RID: 32791
-		// (get) Token: 0x06020CBC RID: 134332 RVA: 0x003077F5 File Offset: 0x003059F5
-		// (set) Token: 0x06020CBD RID: 134333 RVA: 0x00307805 File Offset: 0x00305A05
+		// Token: 0x17001D67 RID: 7527
+		// (get) Token: 0x06009E79 RID: 40569 RVA: 0x000EB9F5 File Offset: 0x000E9BF5
+		// (set) Token: 0x06009E7A RID: 40570 RVA: 0x000EBA05 File Offset: 0x000E9C05
 		public unsafe int MinWidth
 		{
 			get
@@ -148,9 +148,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008018 RID: 32792
-		// (get) Token: 0x06020CBE RID: 134334 RVA: 0x00307816 File Offset: 0x00305A16
-		// (set) Token: 0x06020CBF RID: 134335 RVA: 0x00307826 File Offset: 0x00305A26
+		// Token: 0x17001D68 RID: 7528
+		// (get) Token: 0x06009E7B RID: 40571 RVA: 0x000EBA16 File Offset: 0x000E9C16
+		// (set) Token: 0x06009E7C RID: 40572 RVA: 0x000EBA26 File Offset: 0x000E9C26
 		public unsafe int MaxHeight
 		{
 			get
@@ -163,9 +163,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008019 RID: 32793
-		// (get) Token: 0x06020CC0 RID: 134336 RVA: 0x00307837 File Offset: 0x00305A37
-		// (set) Token: 0x06020CC1 RID: 134337 RVA: 0x00307847 File Offset: 0x00305A47
+		// Token: 0x17001D69 RID: 7529
+		// (get) Token: 0x06009E7D RID: 40573 RVA: 0x000EBA37 File Offset: 0x000E9C37
+		// (set) Token: 0x06009E7E RID: 40574 RVA: 0x000EBA47 File Offset: 0x000E9C47
 		public unsafe int MinHeight
 		{
 			get
@@ -178,9 +178,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700801A RID: 32794
-		// (get) Token: 0x06020CC2 RID: 134338 RVA: 0x00307858 File Offset: 0x00305A58
-		// (set) Token: 0x06020CC3 RID: 134339 RVA: 0x00307868 File Offset: 0x00305A68
+		// Token: 0x17001D6A RID: 7530
+		// (get) Token: 0x06009E7F RID: 40575 RVA: 0x000EBA58 File Offset: 0x000E9C58
+		// (set) Token: 0x06009E80 RID: 40576 RVA: 0x000EBA68 File Offset: 0x000E9C68
 		public unsafe float AdditionalWidth
 		{
 			get
@@ -193,9 +193,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700801B RID: 32795
-		// (get) Token: 0x06020CC4 RID: 134340 RVA: 0x00307879 File Offset: 0x00305A79
-		// (set) Token: 0x06020CC5 RID: 134341 RVA: 0x00307889 File Offset: 0x00305A89
+		// Token: 0x17001D6B RID: 7531
+		// (get) Token: 0x06009E81 RID: 40577 RVA: 0x000EBA79 File Offset: 0x000E9C79
+		// (set) Token: 0x06009E82 RID: 40578 RVA: 0x000EBA89 File Offset: 0x000E9C89
 		public unsafe float AdditionalHeight
 		{
 			get
@@ -208,9 +208,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700801C RID: 32796
-		// (get) Token: 0x06020CC6 RID: 134342 RVA: 0x0030789A File Offset: 0x00305A9A
-		// (set) Token: 0x06020CC7 RID: 134343 RVA: 0x003078AA File Offset: 0x00305AAA
+		// Token: 0x17001D6C RID: 7532
+		// (get) Token: 0x06009E83 RID: 40579 RVA: 0x000EBA9A File Offset: 0x000E9C9A
+		// (set) Token: 0x06009E84 RID: 40580 RVA: 0x000EBAAA File Offset: 0x000E9CAA
 		public unsafe bool bSizeZeroWhenNotActive
 		{
 			get
@@ -223,9 +223,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700801D RID: 32797
-		// (get) Token: 0x06020CC8 RID: 134344 RVA: 0x003078BB File Offset: 0x00305ABB
-		// (set) Token: 0x06020CC9 RID: 134345 RVA: 0x003078CF File Offset: 0x00305ACF
+		// Token: 0x17001D6D RID: 7533
+		// (get) Token: 0x06009E85 RID: 40581 RVA: 0x000EBABB File Offset: 0x000E9CBB
+		// (set) Token: 0x06009E86 RID: 40582 RVA: 0x000EBACF File Offset: 0x000E9CCF
 		[Nullable(new byte[]
 		{
 			0,
@@ -253,199 +253,166 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700801E RID: 32798
-		// (get) Token: 0x06020CCA RID: 134346 RVA: 0x003078E4 File Offset: 0x00305AE4
-		// (set) Token: 0x06020CCB RID: 134347 RVA: 0x003078F8 File Offset: 0x00305AF8
-		[Nullable(new byte[]
-		{
-			0,
-			1
-		})]
-		public unsafe TWeakObjectPtr<UUISizeControlByOtherHelper> HelperComp
-		{
-			[return: Nullable(new byte[]
-			{
-				0,
-				1
-			})]
-			get
-			{
-				return *(base.NativePtr + (IntPtr)UUISizeControlByOther.__PropertyOffset_HelperComp);
-			}
-			[param: Nullable(new byte[]
-			{
-				0,
-				1
-			})]
-			set
-			{
-				*(base.NativePtr + (IntPtr)UUISizeControlByOther.__PropertyOffset_HelperComp) = value;
-			}
-		}
-
-		// Token: 0x06020CCC RID: 134348 RVA: 0x0030790D File Offset: 0x00305B0D
+		// Token: 0x06009E87 RID: 40583 RVA: 0x000EBAE4 File Offset: 0x000E9CE4
 		[NullableContext(2)]
 		public void SetTargetActor(AUIBaseActor NewTargetActor)
 		{
 			UUISizeControlByOther.__SetTargetActor_Internal(base.NativePtr, (NewTargetActor != null) ? NewTargetActor.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06020CCD RID: 134349 RVA: 0x0030792A File Offset: 0x00305B2A
+		// Token: 0x06009E88 RID: 40584 RVA: 0x000EBB01 File Offset: 0x000E9D01
 		public void SetControlWidth(bool value)
 		{
 			UUISizeControlByOther.__SetControlWidth_Internal(base.NativePtr, value);
 		}
 
-		// Token: 0x06020CCE RID: 134350 RVA: 0x00307938 File Offset: 0x00305B38
+		// Token: 0x06009E89 RID: 40585 RVA: 0x000EBB0F File Offset: 0x000E9D0F
 		public void SetControlHeight(bool value)
 		{
 			UUISizeControlByOther.__SetControlHeight_Internal(base.NativePtr, value);
 		}
 
-		// Token: 0x06020CCF RID: 134351 RVA: 0x00307946 File Offset: 0x00305B46
+		// Token: 0x06009E8A RID: 40586 RVA: 0x000EBB1D File Offset: 0x000E9D1D
 		public void SetAdditionalWidth(float value)
 		{
 			UUISizeControlByOther.__SetAdditionalWidth_Internal(base.NativePtr, value);
 		}
 
-		// Token: 0x06020CD0 RID: 134352 RVA: 0x00307954 File Offset: 0x00305B54
+		// Token: 0x06009E8B RID: 40587 RVA: 0x000EBB2B File Offset: 0x000E9D2B
 		public void SetAdditionalHeight(float value)
 		{
 			UUISizeControlByOther.__SetAdditionalHeight_Internal(base.NativePtr, value);
 		}
 
-		// Token: 0x06020CD1 RID: 134353 RVA: 0x00307962 File Offset: 0x00305B62
+		// Token: 0x06009E8C RID: 40588 RVA: 0x000EBB39 File Offset: 0x000E9D39
 		[NullableContext(2)]
 		public AUIBaseActor GetTargetActor()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<AUIBaseActor>(UUISizeControlByOther.__GetTargetActor_Internal(base.NativePtr));
 		}
 
-		// Token: 0x06020CD2 RID: 134354 RVA: 0x00307974 File Offset: 0x00305B74
+		// Token: 0x06009E8D RID: 40589 RVA: 0x000EBB4B File Offset: 0x000E9D4B
 		public bool GetControlWidth()
 		{
 			return UUISizeControlByOther.__GetControlWidth_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06020CD3 RID: 134355 RVA: 0x00307981 File Offset: 0x00305B81
+		// Token: 0x06009E8E RID: 40590 RVA: 0x000EBB58 File Offset: 0x000E9D58
 		public bool GetControlHeight()
 		{
 			return UUISizeControlByOther.__GetControlHeight_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06020CD4 RID: 134356 RVA: 0x0030798E File Offset: 0x00305B8E
+		// Token: 0x06009E8F RID: 40591 RVA: 0x000EBB65 File Offset: 0x000E9D65
 		public float GetAdditionalWidth()
 		{
 			return UUISizeControlByOther.__GetAdditionalWidth_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06020CD5 RID: 134357 RVA: 0x0030799B File Offset: 0x00305B9B
+		// Token: 0x06009E90 RID: 40592 RVA: 0x000EBB72 File Offset: 0x000E9D72
 		public float GetAdditionalHeight()
 		{
 			return UUISizeControlByOther.__GetAdditionalHeight_Internal(base.NativePtr);
 		}
 
-		// Token: 0x06020CD6 RID: 134358
+		// Token: 0x06009E91 RID: 40593
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetTargetActor_Internal(IntPtr @this, IntPtr NewTargetActor);
 
-		// Token: 0x06020CD7 RID: 134359
+		// Token: 0x06009E92 RID: 40594
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetControlWidth_Internal(IntPtr @this, bool value);
 
-		// Token: 0x06020CD8 RID: 134360
+		// Token: 0x06009E93 RID: 40595
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetControlHeight_Internal(IntPtr @this, bool value);
 
-		// Token: 0x06020CD9 RID: 134361
+		// Token: 0x06009E94 RID: 40596
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetAdditionalWidth_Internal(IntPtr @this, float value);
 
-		// Token: 0x06020CDA RID: 134362
+		// Token: 0x06009E95 RID: 40597
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetAdditionalHeight_Internal(IntPtr @this, float value);
 
-		// Token: 0x06020CDB RID: 134363
+		// Token: 0x06009E96 RID: 40598
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetTargetActor_Internal(IntPtr @this);
 
-		// Token: 0x06020CDC RID: 134364
+		// Token: 0x06009E97 RID: 40599
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetControlWidth_Internal(IntPtr @this);
 
-		// Token: 0x06020CDD RID: 134365
+		// Token: 0x06009E98 RID: 40600
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetControlHeight_Internal(IntPtr @this);
 
-		// Token: 0x06020CDE RID: 134366
+		// Token: 0x06009E99 RID: 40601
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetAdditionalWidth_Internal(IntPtr @this);
 
-		// Token: 0x06020CDF RID: 134367
+		// Token: 0x06009E9A RID: 40602
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetAdditionalHeight_Internal(IntPtr @this);
 
-		// Token: 0x06020CE0 RID: 134368 RVA: 0x003079A8 File Offset: 0x00305BA8
+		// Token: 0x06009E9B RID: 40603 RVA: 0x000EBB7F File Offset: 0x000E9D7F
 		static UUISizeControlByOther()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LGUI.UISizeControlByOther");
 		}
 
-		// Token: 0x06020CE1 RID: 134369 RVA: 0x003079B6 File Offset: 0x00305BB6
+		// Token: 0x06009E9C RID: 40604 RVA: 0x000EBB8D File Offset: 0x000E9D8D
 		protected UUISizeControlByOther(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0401184D RID: 71757
+		// Token: 0x04004401 RID: 17409
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/LGUI.UISizeControlByOther";
 
-		// Token: 0x0401184E RID: 71758
+		// Token: 0x04004402 RID: 17410
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401184F RID: 71759
+		// Token: 0x04004403 RID: 17411
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04011850 RID: 71760
+		// Token: 0x04004404 RID: 17412
 		internal static int __PropertyOffset_TargetActor;
 
-		// Token: 0x04011851 RID: 71761
+		// Token: 0x04004405 RID: 17413
 		internal static int __PropertyOffset_ControlWidth;
 
-		// Token: 0x04011852 RID: 71762
+		// Token: 0x04004406 RID: 17414
 		internal static int __PropertyOffset_ControlHeight;
 
-		// Token: 0x04011853 RID: 71763
+		// Token: 0x04004407 RID: 17415
 		internal static int __PropertyOffset_UseWidthRange;
 
-		// Token: 0x04011854 RID: 71764
+		// Token: 0x04004408 RID: 17416
 		internal static int __PropertyOffset_UseHeightRange;
 
-		// Token: 0x04011855 RID: 71765
+		// Token: 0x04004409 RID: 17417
 		internal static int __PropertyOffset_MaxWidth;
 
-		// Token: 0x04011856 RID: 71766
+		// Token: 0x0400440A RID: 17418
 		internal static int __PropertyOffset_MinWidth;
 
-		// Token: 0x04011857 RID: 71767
+		// Token: 0x0400440B RID: 17419
 		internal static int __PropertyOffset_MaxHeight;
 
-		// Token: 0x04011858 RID: 71768
+		// Token: 0x0400440C RID: 17420
 		internal static int __PropertyOffset_MinHeight;
 
-		// Token: 0x04011859 RID: 71769
+		// Token: 0x0400440D RID: 17421
 		internal static int __PropertyOffset_AdditionalWidth;
 
-		// Token: 0x0401185A RID: 71770
+		// Token: 0x0400440E RID: 17422
 		internal static int __PropertyOffset_AdditionalHeight;
 
-		// Token: 0x0401185B RID: 71771
+		// Token: 0x0400440F RID: 17423
 		internal static int __PropertyOffset_bSizeZeroWhenNotActive;
 
-		// Token: 0x0401185C RID: 71772
+		// Token: 0x04004410 RID: 17424
 		internal static int __PropertyOffset_TargetUIItem;
-
-		// Token: 0x0401185D RID: 71773
-		internal static int __PropertyOffset_HelperComp;
 	}
 }

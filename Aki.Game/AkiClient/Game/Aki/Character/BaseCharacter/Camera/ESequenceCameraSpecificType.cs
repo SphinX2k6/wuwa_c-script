@@ -4,16 +4,16 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter.Camera
 {
-	// Token: 0x020043C1 RID: 17345
+	// Token: 0x020033DC RID: 13276
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/Camera/ESequenceCameraSpecificType.ESequenceCameraSpecificType")]
 	public enum ESequenceCameraSpecificType : byte
 	{
-		// Token: 0x04017C9D RID: 97437
+		// Token: 0x04012805 RID: 75781
 		无,
-		// Token: 0x04017C9E RID: 97438
+		// Token: 0x04012806 RID: 75782
 		梦境链接,
-		// Token: 0x04017C9F RID: 97439
+		// Token: 0x04012807 RID: 75783
 		ESequenceCameraSpecificType_MAX
 	}
 }

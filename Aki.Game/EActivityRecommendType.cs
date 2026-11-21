@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x02001093 RID: 4243
+// Token: 0x02000547 RID: 1351
 public enum EActivityRecommendType
 {
-	// Token: 0x04003325 RID: 13093
+	// Token: 0x040033BE RID: 13246
 	MainQuest = 1,
-	// Token: 0x04003326 RID: 13094
+	// Token: 0x040033BF RID: 13247
 	TimeLimitActivity,
-	// Token: 0x04003327 RID: 13095
+	// Token: 0x040033C0 RID: 13248
 	NormalActivity,
-	// Token: 0x04003328 RID: 13096
+	// Token: 0x040033C1 RID: 13249
 	Area,
-	// Token: 0x04003329 RID: 13097
+	// Token: 0x040033C2 RID: 13250
 	DailyActivity,
-	// Token: 0x0400332A RID: 13098
+	// Token: 0x040033C3 RID: 13251
 	WeeklyChallenge
 }

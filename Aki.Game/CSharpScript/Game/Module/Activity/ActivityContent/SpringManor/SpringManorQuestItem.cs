@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x02006064 RID: 24676
+	// Token: 0x02004FE2 RID: 20450
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SpringManorQuestItem : GridProxyAbstract<int>
 	{
-		// Token: 0x0603E6AE RID: 255662 RVA: 0x00F13C2C File Offset: 0x00F11E2C
+		// Token: 0x06033372 RID: 209778 RVA: 0x00E5A9F0 File Offset: 0x00E58BF0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603E6AF RID: 255663 RVA: 0x00F13D98 File Offset: 0x00F11F98
+		// Token: 0x06033373 RID: 209779 RVA: 0x00E5AB5C File Offset: 0x00E58D5C
 		private void OnToggleClicked(EToggleState state)
 		{
 			Action<int, int> toggleClickCallback = this.ToggleClickCallback;
@@ -57,19 +57,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.RefreshRedDot();
 		}
 
-		// Token: 0x0603E6B0 RID: 255664 RVA: 0x00F13DBD File Offset: 0x00F11FBD
+		// Token: 0x06033374 RID: 209780 RVA: 0x00E5AB81 File Offset: 0x00E58D81
 		public override void Refresh(int questId, bool isSelected, int gridIndex)
 		{
 			this.UpdateItem(questId);
 		}
 
-		// Token: 0x0603E6B1 RID: 255665 RVA: 0x00F13DC6 File Offset: 0x00F11FC6
+		// Token: 0x06033375 RID: 209781 RVA: 0x00E5AB8A File Offset: 0x00E58D8A
 		public void RefreshWithoutData()
 		{
 			this.UpdateItem(this.QuestId);
 		}
 
-		// Token: 0x0603E6B2 RID: 255666 RVA: 0x00F13DD4 File Offset: 0x00F11FD4
+		// Token: 0x06033376 RID: 209782 RVA: 0x00E5AB98 File Offset: 0x00E58D98
 		public void RefreshRedPoint(bool show)
 		{
 			UUIItem item = base.GetItem(1);
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			item.SetUIActive(show);
 		}
 
-		// Token: 0x0603E6B3 RID: 255667 RVA: 0x00F13DE8 File Offset: 0x00F11FE8
+		// Token: 0x06033377 RID: 209783 RVA: 0x00E5ABAC File Offset: 0x00E58DAC
 		public void UpdateItem(int inQuestId)
 		{
 			this.QuestId = inQuestId;
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.RefreshRedDot();
 		}
 
-		// Token: 0x0603E6B4 RID: 255668 RVA: 0x00F13E44 File Offset: 0x00F12044
+		// Token: 0x06033378 RID: 209784 RVA: 0x00E5AC08 File Offset: 0x00E58E08
 		public void RefreshRedDot()
 		{
 			UUIItem item = base.GetItem(1);
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E6B5 RID: 255669 RVA: 0x00F13EB0 File Offset: 0x00F120B0
+		// Token: 0x06033379 RID: 209785 RVA: 0x00E5AC74 File Offset: 0x00E58E74
 		private void RefreshLockState()
 		{
 			IQuest questConfig = QuestNewModel.Instance.GetQuestConfig(this.QuestId);
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			text2.SetUIActive(false);
 		}
 
-		// Token: 0x0603E6B6 RID: 255670 RVA: 0x00F13F20 File Offset: 0x00F12120
+		// Token: 0x0603337A RID: 209786 RVA: 0x00E5ACE4 File Offset: 0x00E58EE4
 		private void SetLockIcon()
 		{
 			string questLockIconPath = QuestNewModel.Instance.GetQuestLockIconPath(this.QuestId);
@@ -164,25 +164,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			sprite.SetUIActive(true);
 		}
 
-		// Token: 0x0603E6B7 RID: 255671 RVA: 0x00F13F8C File Offset: 0x00F1218C
+		// Token: 0x0603337B RID: 209787 RVA: 0x00E5AD50 File Offset: 0x00E58F50
 		private void SetTrackIcon(global::Quest quest)
 		{
 			this.SetSpriteByPath(QuestNewConfig.Instance.GetQuestTypeMark(quest.QuestMarkId), base.GetSprite(4), false, null, null);
 		}
 
-		// Token: 0x0603E6B8 RID: 255672 RVA: 0x00F13FC1 File Offset: 0x00F121C1
+		// Token: 0x0603337C RID: 209788 RVA: 0x00E5AD85 File Offset: 0x00E58F85
 		public void UpdateTrackIconActive()
 		{
 			base.GetSprite(4).SetUIActive(SpringManorModel.Instance.IsCurrentTrackQuest(this.QuestId));
 		}
 
-		// Token: 0x0603E6B9 RID: 255673 RVA: 0x00F13FDF File Offset: 0x00F121DF
+		// Token: 0x0603337D RID: 209789 RVA: 0x00E5ADA3 File Offset: 0x00E58FA3
 		private void UpdateQuestName(global::Quest quest)
 		{
 			base.GetText(5).SetText(quest.Name, true);
 		}
 
-		// Token: 0x0603E6BA RID: 255674 RVA: 0x00F13FF4 File Offset: 0x00F121F4
+		// Token: 0x0603337E RID: 209790 RVA: 0x00E5ADB8 File Offset: 0x00E58FB8
 		private void UpdateDistance(int questId)
 		{
 			SpringManorModel instance = SpringManorModel.Instance;
@@ -202,13 +202,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E6BB RID: 255675 RVA: 0x00F1404E File Offset: 0x00F1224E
+		// Token: 0x0603337F RID: 209791 RVA: 0x00E5AE12 File Offset: 0x00E59012
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetToggleSelect(false, false);
 		}
 
-		// Token: 0x0603E6BC RID: 255676 RVA: 0x00F14058 File Offset: 0x00F12258
+		// Token: 0x06033380 RID: 209792 RVA: 0x00E5AE1C File Offset: 0x00E5901C
 		public void SetToggleSelect(bool select, bool fireEvent)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -219,10 +219,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			extendToggle.SetToggleStateForce(select ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, fireEvent, false, false);
 		}
 
-		// Token: 0x040209F1 RID: 133617
+		// Token: 0x0401B31E RID: 111390
 		private int QuestId;
 
-		// Token: 0x040209F2 RID: 133618
+		// Token: 0x0401B31F RID: 111391
 		[Nullable(2)]
 		public Action<int, int> ToggleClickCallback;
 	}

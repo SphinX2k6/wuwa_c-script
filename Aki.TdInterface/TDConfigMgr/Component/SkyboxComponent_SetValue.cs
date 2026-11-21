@@ -3,33 +3,33 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200089A RID: 2202
+	// Token: 0x0200093D RID: 2365
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SkyboxComponent_SetValue
 	{
-		// Token: 0x0400204D RID: 8269
+		// Token: 0x0400225F RID: 8799
 		public bool? Disabled;
 
-		// Token: 0x0400204E RID: 8270
+		// Token: 0x04002260 RID: 8800
 		public bool? EdIsLocked;
 
-		// Token: 0x0400204F RID: 8271
+		// Token: 0x04002261 RID: 8801
 		public string WeatherDataAsset;
 
-		// Token: 0x04002050 RID: 8272
+		// Token: 0x04002262 RID: 8802
 		public string PPTODDataAsset;
 
-		// Token: 0x04002051 RID: 8273
+		// Token: 0x04002263 RID: 8803
 		public int? SkyboxSetting;
 
-		// Token: 0x04002052 RID: 8274
+		// Token: 0x04002264 RID: 8804
 		public float? FadeTime;
 
-		// Token: 0x04002053 RID: 8275
+		// Token: 0x04002265 RID: 8805
 		public float? Priority;
 
-		// Token: 0x04002054 RID: 8276
+		// Token: 0x04002266 RID: 8806
 		public ISkyboxTrigger TriggerMode;
 	}
 }

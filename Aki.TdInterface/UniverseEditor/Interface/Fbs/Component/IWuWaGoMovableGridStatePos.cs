@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005BCA RID: 23498
+	// Token: 0x020061E0 RID: 25056
 	public struct IWuWaGoMovableGridStatePos : IFlatbufferObject
 	{
-		// Token: 0x1700B18C RID: 45452
-		// (get) Token: 0x0602840D RID: 164877 RVA: 0x00587D9F File Offset: 0x00585F9F
+		// Token: 0x1700BAD4 RID: 47828
+		// (get) Token: 0x0602A9D1 RID: 174545 RVA: 0x005CF82F File Offset: 0x005CDA2F
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602840E RID: 164878 RVA: 0x00587DAC File Offset: 0x00585FAC
+		// Token: 0x0602A9D2 RID: 174546 RVA: 0x005CF83C File Offset: 0x005CDA3C
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602840F RID: 164879 RVA: 0x00587DB4 File Offset: 0x00585FB4
+		// Token: 0x0602A9D3 RID: 174547 RVA: 0x005CF844 File Offset: 0x005CDA44
 		public static IWuWaGoMovableGridStatePos GetRootAsIWuWaGoMovableGridStatePos(ByteBuffer _bb)
 		{
 			return IWuWaGoMovableGridStatePos.GetRootAsIWuWaGoMovableGridStatePos(_bb, default(IWuWaGoMovableGridStatePos));
 		}
 
-		// Token: 0x06028410 RID: 164880 RVA: 0x00587DD0 File Offset: 0x00585FD0
+		// Token: 0x0602A9D4 RID: 174548 RVA: 0x005CF860 File Offset: 0x005CDA60
 		public static IWuWaGoMovableGridStatePos GetRootAsIWuWaGoMovableGridStatePos(ByteBuffer _bb, IWuWaGoMovableGridStatePos obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06028411 RID: 164881 RVA: 0x00587DED File Offset: 0x00585FED
+		// Token: 0x0602A9D5 RID: 174549 RVA: 0x005CF87D File Offset: 0x005CDA7D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06028412 RID: 164882 RVA: 0x00587DFC File Offset: 0x00585FFC
+		// Token: 0x0602A9D6 RID: 174550 RVA: 0x005CF88C File Offset: 0x005CDA8C
 		public IWuWaGoMovableGridStatePos __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B18D RID: 45453
-		// (get) Token: 0x06028413 RID: 164883 RVA: 0x00587E0C File Offset: 0x0058600C
+		// Token: 0x1700BAD5 RID: 47829
+		// (get) Token: 0x0602A9D7 RID: 174551 RVA: 0x005CF89C File Offset: 0x005CDA9C
 		public string EntityState
 		{
 			get
@@ -63,20 +63,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06028414 RID: 164884 RVA: 0x00587E43 File Offset: 0x00586043
+		// Token: 0x0602A9D8 RID: 174552 RVA: 0x005CF8D3 File Offset: 0x005CDAD3
 		public Span<byte> GetEntityStateBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x06028415 RID: 164885 RVA: 0x00587E52 File Offset: 0x00586052
+		// Token: 0x0602A9D9 RID: 174553 RVA: 0x005CF8E2 File Offset: 0x005CDAE2
 		public byte[] GetEntityStateArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x1700B18E RID: 45454
-		// (get) Token: 0x06028416 RID: 164886 RVA: 0x00587E60 File Offset: 0x00586060
+		// Token: 0x1700BAD6 RID: 47830
+		// (get) Token: 0x0602A9DA RID: 174554 RVA: 0x005CF8F0 File Offset: 0x005CDAF0
 		public IVectorInfo? GridPos
 		{
 			get
@@ -90,7 +90,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06028417 RID: 164887 RVA: 0x00587EBD File Offset: 0x005860BD
+		// Token: 0x0602A9DB RID: 174555 RVA: 0x005CF94D File Offset: 0x005CDB4D
 		public static Offset<IWuWaGoMovableGridStatePos> CreateIWuWaGoMovableGridStatePos(FlatBufferBuilder builder, StringOffset EntityStateOffset = default(StringOffset), Offset<IVectorInfo> GridPosOffset = default(Offset<IVectorInfo>))
 		{
 			builder.StartTable(2);
@@ -99,31 +99,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IWuWaGoMovableGridStatePos.EndIWuWaGoMovableGridStatePos(builder);
 		}
 
-		// Token: 0x06028418 RID: 164888 RVA: 0x00587EDA File Offset: 0x005860DA
+		// Token: 0x0602A9DC RID: 174556 RVA: 0x005CF96A File Offset: 0x005CDB6A
 		public static void StartIWuWaGoMovableGridStatePos(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06028419 RID: 164889 RVA: 0x00587EE3 File Offset: 0x005860E3
+		// Token: 0x0602A9DD RID: 174557 RVA: 0x005CF973 File Offset: 0x005CDB73
 		public static void AddEntityState(FlatBufferBuilder builder, StringOffset entityStateOffset)
 		{
 			builder.AddOffset(0, entityStateOffset.Value, 0);
 		}
 
-		// Token: 0x0602841A RID: 164890 RVA: 0x00587EF3 File Offset: 0x005860F3
+		// Token: 0x0602A9DE RID: 174558 RVA: 0x005CF983 File Offset: 0x005CDB83
 		public static void AddGridPos(FlatBufferBuilder builder, Offset<IVectorInfo> gridPosOffset)
 		{
 			builder.AddOffset(1, gridPosOffset.Value, 0);
 		}
 
-		// Token: 0x0602841B RID: 164891 RVA: 0x00587F03 File Offset: 0x00586103
+		// Token: 0x0602A9DF RID: 174559 RVA: 0x005CF993 File Offset: 0x005CDB93
 		public static Offset<IWuWaGoMovableGridStatePos> EndIWuWaGoMovableGridStatePos(FlatBufferBuilder builder)
 		{
 			return new Offset<IWuWaGoMovableGridStatePos>(builder.EndTable());
 		}
 
-		// Token: 0x0602841C RID: 164892 RVA: 0x00587F10 File Offset: 0x00586110
+		// Token: 0x0602A9E0 RID: 174560 RVA: 0x005CF9A0 File Offset: 0x005CDBA0
 		public IWuWaGoMovableGridStatePosT UnPack()
 		{
 			IWuWaGoMovableGridStatePosT wuWaGoMovableGridStatePosT = new IWuWaGoMovableGridStatePosT();
@@ -131,14 +131,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return wuWaGoMovableGridStatePosT;
 		}
 
-		// Token: 0x0602841D RID: 164893 RVA: 0x00587F2C File Offset: 0x0058612C
+		// Token: 0x0602A9E1 RID: 174561 RVA: 0x005CF9BC File Offset: 0x005CDBBC
 		public void UnPackTo(IWuWaGoMovableGridStatePosT _o)
 		{
 			_o.EntityState = this.EntityState;
 			_o.GridPos = ((this.GridPos != null) ? this.GridPos.Value.UnPack() : null);
 		}
 
-		// Token: 0x0602841E RID: 164894 RVA: 0x00587F74 File Offset: 0x00586174
+		// Token: 0x0602A9E2 RID: 174562 RVA: 0x005CFA04 File Offset: 0x005CDC04
 		public static Offset<IWuWaGoMovableGridStatePos> Pack(FlatBufferBuilder builder, IWuWaGoMovableGridStatePosT _o)
 		{
 			if (_o == null)
@@ -150,7 +150,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IWuWaGoMovableGridStatePos.CreateIWuWaGoMovableGridStatePos(builder, entityStateOffset, gridPosOffset);
 		}
 
-		// Token: 0x0400F346 RID: 62278
+		// Token: 0x0401004C RID: 65612
 		private Table __p;
 	}
 }

@@ -4,17 +4,17 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using AkiClient.Game.Aki.Character.BaseCharacter;
 
-// Token: 0x02002FA5 RID: 12197
+// Token: 0x020024F9 RID: 9465
 [NullableContext(1)]
 [Nullable(0)]
 public class AdjacentBuffStackToEffect : PeriodExecution
 {
-	// Token: 0x06019DE9 RID: 105961 RVA: 0x006C2CA0 File Offset: 0x006C0EA0
+	// Token: 0x060176FB RID: 95995 RVA: 0x006E953C File Offset: 0x006E773C
 	public AdjacentBuffStackToEffect(RequireAndLimits requireAndLimits) : base(requireAndLimits)
 	{
 	}
 
-	// Token: 0x06019DEA RID: 105962 RVA: 0x006C2CE0 File Offset: 0x006C0EE0
+	// Token: 0x060176FC RID: 95996 RVA: 0x006E957C File Offset: 0x006E777C
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -103,7 +103,7 @@ public class AdjacentBuffStackToEffect : PeriodExecution
 		}
 	}
 
-	// Token: 0x06019DEB RID: 105963 RVA: 0x006C2F25 File Offset: 0x006C1125
+	// Token: 0x060176FD RID: 95997 RVA: 0x006E97C1 File Offset: 0x006E79C1
 	protected override bool CheckExecutable()
 	{
 		if (GameModeModel.Instance.IsMulti)
@@ -114,7 +114,7 @@ public class AdjacentBuffStackToEffect : PeriodExecution
 		return true;
 	}
 
-	// Token: 0x06019DEC RID: 105964 RVA: 0x006C2F48 File Offset: 0x006C1148
+	// Token: 0x060176FE RID: 95998 RVA: 0x006E97E4 File Offset: 0x006E79E4
 	[return: Nullable(2)]
 	public unsafe override object OnExecute(params object[] args)
 	{
@@ -236,7 +236,7 @@ public class AdjacentBuffStackToEffect : PeriodExecution
 		return null;
 	}
 
-	// Token: 0x06019DED RID: 105965 RVA: 0x006C32D8 File Offset: 0x006C14D8
+	// Token: 0x060176FF RID: 95999 RVA: 0x006E9B74 File Offset: 0x006E7D74
 	private int AccumulateConvertedStackCount(int currentStackCount, int sourceStackCount)
 	{
 		EAdjacentBuffConvertedStackCalculateMethod convertedStackCalculateMethod = this.ConvertedStackCalculateMethod;
@@ -247,7 +247,7 @@ public class AdjacentBuffStackToEffect : PeriodExecution
 		return currentStackCount + sourceStackCount;
 	}
 
-	// Token: 0x06019DEE RID: 105966 RVA: 0x006C3300 File Offset: 0x006C1500
+	// Token: 0x06017700 RID: 96000 RVA: 0x006E9B9C File Offset: 0x006E7D9C
 	public bool CheckCamp(EAuraTargetFilter filter, int targetId, ECamp targetCamp, int? instigatorId, ECamp? instigatorCamp, int ownerId, ECamp ownerCamp)
 	{
 		switch (filter)
@@ -275,7 +275,7 @@ public class AdjacentBuffStackToEffect : PeriodExecution
 		}
 	}
 
-	// Token: 0x06019DEF RID: 105967 RVA: 0x006C33BC File Offset: 0x006C15BC
+	// Token: 0x06017701 RID: 96001 RVA: 0x006E9C58 File Offset: 0x006E7E58
 	public override string GetDebugEffectString()
 	{
 		List<string> list = new List<string>();
@@ -353,7 +353,7 @@ public class AdjacentBuffStackToEffect : PeriodExecution
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06019DF0 RID: 105968 RVA: 0x006C35DC File Offset: 0x006C17DC
+	// Token: 0x06017702 RID: 96002 RVA: 0x006E9E78 File Offset: 0x006E8078
 	private string GetConvertedStackCalculateMethodDebugString()
 	{
 		EAdjacentBuffConvertedStackCalculateMethod convertedStackCalculateMethod = this.ConvertedStackCalculateMethod;
@@ -372,36 +372,36 @@ public class AdjacentBuffStackToEffect : PeriodExecution
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0400C38C RID: 50060
+	// Token: 0x0400C735 RID: 50997
 	private float Distance;
 
-	// Token: 0x0400C38D RID: 50061
+	// Token: 0x0400C736 RID: 50998
 	private EAuraTargetFilter[] CampFilter = Array.Empty<EAuraTargetFilter>();
 
-	// Token: 0x0400C38E RID: 50062
+	// Token: 0x0400C737 RID: 50999
 	private long[] BuffIds = Array.Empty<long>();
 
-	// Token: 0x0400C38F RID: 50063
+	// Token: 0x0400C738 RID: 51000
 	private int AttributeId;
 
-	// Token: 0x0400C390 RID: 50064
+	// Token: 0x0400C739 RID: 51001
 	private float RatePerTenThousand;
 
-	// Token: 0x0400C391 RID: 50065
+	// Token: 0x0400C73A RID: 51002
 	private long[] ConvertedBuffIds = Array.Empty<long>();
 
-	// Token: 0x0400C392 RID: 50066
+	// Token: 0x0400C73B RID: 51003
 	private float[] ConvertedBuffRatios = Array.Empty<float>();
 
-	// Token: 0x0400C393 RID: 50067
+	// Token: 0x0400C73C RID: 51004
 	private EAdjacentBuffConvertedStackCalculateMethod ConvertedStackCalculateMethod;
 
-	// Token: 0x0400C394 RID: 50068
+	// Token: 0x0400C73D RID: 51005
 	private bool HasWarned;
 
-	// Token: 0x0400C395 RID: 50069
+	// Token: 0x0400C73E RID: 51006
 	private readonly List<EntityHandle> EntityHandleList = new List<EntityHandle>();
 
-	// Token: 0x0400C396 RID: 50070
+	// Token: 0x0400C73F RID: 51007
 	private bool NeedInstigator;
 }

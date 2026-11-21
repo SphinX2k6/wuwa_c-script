@@ -2,12 +2,12 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000E74 RID: 3700
+	// Token: 0x02000F87 RID: 3975
 	public enum EOnCameraCheckType
 	{
-		// Token: 0x040030CC RID: 12492
+		// Token: 0x040033CE RID: 13262
 		All,
-		// Token: 0x040030CD RID: 12493
+		// Token: 0x040033CF RID: 13263
 		Any
 	}
 }

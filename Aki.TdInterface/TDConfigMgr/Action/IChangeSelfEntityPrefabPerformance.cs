@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001876 RID: 6262
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001A01 RID: 6657
 	public class IChangeSelfEntityPrefabPerformance : ChangeEntityPrefabPerformance
 	{
-		// Token: 0x06008691 RID: 34449 RVA: 0x0013F9A4 File Offset: 0x0013DBA4
+		// Token: 0x06008DB9 RID: 36281 RVA: 0x0014F1D8 File Offset: 0x0014D3D8
 		private IChangeSelfEntityPrefabPerformance_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008692 RID: 34450 RVA: 0x0013F9DC File Offset: 0x0013DBDC
+		// Token: 0x06008DBA RID: 36282 RVA: 0x0014F210 File Offset: 0x0014D410
 		public static IChangeSelfEntityPrefabPerformance Create([Nullable(2)] IChangeSelfEntityPrefabPerformance instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008693 RID: 34451 RVA: 0x0013F9EF File Offset: 0x0013DBEF
+		// Token: 0x06008DBB RID: 36283 RVA: 0x0014F223 File Offset: 0x0014D423
 		public static IChangeSelfEntityPrefabPerformance CreateFromSetValue([Nullable(2)] IChangeSelfEntityPrefabPerformance_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008694 RID: 34452 RVA: 0x0013FA02 File Offset: 0x0013DC02
+		// Token: 0x06008DBC RID: 36284 RVA: 0x0014F236 File Offset: 0x0014D436
 		public new IChangeSelfEntityPrefabPerformance_SetValue ToSetValue()
 		{
 			return new IChangeSelfEntityPrefabPerformance_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002BEC RID: 11244
-		// (get) Token: 0x06008695 RID: 34453 RVA: 0x0013FA21 File Offset: 0x0013DC21
-		// (set) Token: 0x06008696 RID: 34454 RVA: 0x0013FA4C File Offset: 0x0013DC4C
+		// Token: 0x17002DE7 RID: 11751
+		// (get) Token: 0x06008DBD RID: 36285 RVA: 0x0014F255 File Offset: 0x0014D455
+		// (set) Token: 0x06008DBE RID: 36286 RVA: 0x0014F280 File Offset: 0x0014D480
 		public override EChangeEntityPrefabPerformanceType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002BED RID: 11245
-		// (get) Token: 0x06008697 RID: 34455 RVA: 0x0013FA5A File Offset: 0x0013DC5A
-		// (set) Token: 0x06008698 RID: 34456 RVA: 0x0013FA85 File Offset: 0x0013DC85
+		// Token: 0x17002DE8 RID: 11752
+		// (get) Token: 0x06008DBF RID: 36287 RVA: 0x0014F28E File Offset: 0x0014D48E
+		// (set) Token: 0x06008DC0 RID: 36288 RVA: 0x0014F2B9 File Offset: 0x0014D4B9
 		public virtual string PerformanceTag
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040054DB RID: 21723
+		// Token: 0x04005928 RID: 22824
 		[Nullable(2)]
 		protected new IChangeSelfEntityPrefabPerformance FbInstance;
 
-		// Token: 0x040054DC RID: 21724
+		// Token: 0x04005929 RID: 22825
 		[Nullable(2)]
 		protected new IChangeSelfEntityPrefabPerformance_SetValue PocoInterface;
 	}

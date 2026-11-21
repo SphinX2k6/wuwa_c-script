@@ -1,25 +1,25 @@
 ﻿using System;
 
-// Token: 0x020027EC RID: 10220
+// Token: 0x02001D67 RID: 7527
 public class PhantomMonsterItemData : IPhantomMonsterItemData, IUniversalSmallItemData<ERoleDevItemType>
 {
-	// Token: 0x17001B87 RID: 7047
-	// (get) Token: 0x06014FB1 RID: 85937 RVA: 0x005512A0 File Offset: 0x0054F4A0
-	// (set) Token: 0x06014FB2 RID: 85938 RVA: 0x005512A8 File Offset: 0x0054F4A8
+	// Token: 0x17001BDF RID: 7135
+	// (get) Token: 0x060129B1 RID: 76209 RVA: 0x0057C010 File Offset: 0x0057A210
+	// (set) Token: 0x060129B2 RID: 76210 RVA: 0x0057C018 File Offset: 0x0057A218
 	public ERoleDevItemType Type { get; set; }
 
-	// Token: 0x17001B88 RID: 7048
-	// (get) Token: 0x06014FB3 RID: 85939 RVA: 0x005512B1 File Offset: 0x0054F4B1
-	// (set) Token: 0x06014FB4 RID: 85940 RVA: 0x005512B9 File Offset: 0x0054F4B9
+	// Token: 0x17001BE0 RID: 7136
+	// (get) Token: 0x060129B3 RID: 76211 RVA: 0x0057C021 File Offset: 0x0057A221
+	// (set) Token: 0x060129B4 RID: 76212 RVA: 0x0057C029 File Offset: 0x0057A229
 	public int MonsterId { get; set; }
 
-	// Token: 0x17001B89 RID: 7049
-	// (get) Token: 0x06014FB5 RID: 85941 RVA: 0x005512C2 File Offset: 0x0054F4C2
-	// (set) Token: 0x06014FB6 RID: 85942 RVA: 0x005512CA File Offset: 0x0054F4CA
+	// Token: 0x17001BE1 RID: 7137
+	// (get) Token: 0x060129B5 RID: 76213 RVA: 0x0057C032 File Offset: 0x0057A232
+	// (set) Token: 0x060129B6 RID: 76214 RVA: 0x0057C03A File Offset: 0x0057A23A
 	public int QualityId { get; set; }
 
-	// Token: 0x17001B8A RID: 7050
-	// (get) Token: 0x06014FB7 RID: 85943 RVA: 0x005512D3 File Offset: 0x0054F4D3
-	// (set) Token: 0x06014FB8 RID: 85944 RVA: 0x005512DB File Offset: 0x0054F4DB
+	// Token: 0x17001BE2 RID: 7138
+	// (get) Token: 0x060129B7 RID: 76215 RVA: 0x0057C043 File Offset: 0x0057A243
+	// (set) Token: 0x060129B8 RID: 76216 RVA: 0x0057C04B File Offset: 0x0057A24B
 	public int RoleId { get; set; }
 }

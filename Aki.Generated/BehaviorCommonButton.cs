@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000B31 RID: 2865
+	// Token: 0x02000C11 RID: 3089
 	public struct BehaviorCommonButton : IFlatbufferObject
 	{
-		// Token: 0x17000516 RID: 1302
-		// (get) Token: 0x06004D04 RID: 19716 RVA: 0x001E2FF5 File Offset: 0x001E11F5
+		// Token: 0x17000556 RID: 1366
+		// (get) Token: 0x060052C6 RID: 21190 RVA: 0x002033D5 File Offset: 0x002015D5
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,39 +20,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004D05 RID: 19717 RVA: 0x001E3002 File Offset: 0x001E1202
+		// Token: 0x060052C7 RID: 21191 RVA: 0x002033E2 File Offset: 0x002015E2
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06004D06 RID: 19718 RVA: 0x001E300C File Offset: 0x001E120C
+		// Token: 0x060052C8 RID: 21192 RVA: 0x002033EC File Offset: 0x002015EC
 		public static BehaviorCommonButton GetRootAsBehaviorCommonButton(ByteBuffer _bb)
 		{
 			return BehaviorCommonButton.GetRootAsBehaviorCommonButton(_bb, default(BehaviorCommonButton));
 		}
 
-		// Token: 0x06004D07 RID: 19719 RVA: 0x001E3028 File Offset: 0x001E1228
+		// Token: 0x060052C9 RID: 21193 RVA: 0x00203408 File Offset: 0x00201608
 		public static BehaviorCommonButton GetRootAsBehaviorCommonButton(ByteBuffer _bb, BehaviorCommonButton obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06004D08 RID: 19720 RVA: 0x001E3045 File Offset: 0x001E1245
+		// Token: 0x060052CA RID: 21194 RVA: 0x00203425 File Offset: 0x00201625
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06004D09 RID: 19721 RVA: 0x001E3054 File Offset: 0x001E1254
+		// Token: 0x060052CB RID: 21195 RVA: 0x00203434 File Offset: 0x00201634
 		public BehaviorCommonButton __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000517 RID: 1303
-		// (get) Token: 0x06004D0A RID: 19722 RVA: 0x001E3064 File Offset: 0x001E1264
+		// Token: 0x17000557 RID: 1367
+		// (get) Token: 0x060052CC RID: 21196 RVA: 0x00203444 File Offset: 0x00201644
 		public int Id
 		{
 			get
@@ -66,8 +66,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000518 RID: 1304
-		// (get) Token: 0x06004D0B RID: 19723 RVA: 0x001E30A0 File Offset: 0x001E12A0
+		// Token: 0x17000558 RID: 1368
+		// (get) Token: 0x060052CD RID: 21197 RVA: 0x00203480 File Offset: 0x00201680
 		public string Name
 		{
 			get
@@ -81,20 +81,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004D0C RID: 19724 RVA: 0x001E30D7 File Offset: 0x001E12D7
+		// Token: 0x060052CE RID: 21198 RVA: 0x002034B7 File Offset: 0x002016B7
 		public Span<byte> GetNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06004D0D RID: 19725 RVA: 0x001E30E6 File Offset: 0x001E12E6
+		// Token: 0x060052CF RID: 21199 RVA: 0x002034C6 File Offset: 0x002016C6
 		public byte[] GetNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17000519 RID: 1305
-		// (get) Token: 0x06004D0E RID: 19726 RVA: 0x001E3100 File Offset: 0x001E1300
+		// Token: 0x17000559 RID: 1369
+		// (get) Token: 0x060052D0 RID: 21200 RVA: 0x002034E0 File Offset: 0x002016E0
 		public int ButtonType
 		{
 			get
@@ -108,8 +108,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700051A RID: 1306
-		// (get) Token: 0x06004D0F RID: 19727 RVA: 0x001E313C File Offset: 0x001E133C
+		// Token: 0x1700055A RID: 1370
+		// (get) Token: 0x060052D1 RID: 21201 RVA: 0x0020351C File Offset: 0x0020171C
 		public int ActionType
 		{
 			get
@@ -123,8 +123,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700051B RID: 1307
-		// (get) Token: 0x06004D10 RID: 19728 RVA: 0x001E317C File Offset: 0x001E137C
+		// Token: 0x1700055B RID: 1371
+		// (get) Token: 0x060052D2 RID: 21202 RVA: 0x0020355C File Offset: 0x0020175C
 		public int SkillId
 		{
 			get
@@ -138,7 +138,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004D11 RID: 19729 RVA: 0x001E31BC File Offset: 0x001E13BC
+		// Token: 0x060052D3 RID: 21203 RVA: 0x0020359C File Offset: 0x0020179C
 		public DicIntInt? SkillIdTagMap(int j)
 		{
 			int num = this.__p.__offset(14);
@@ -149,8 +149,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700051C RID: 1308
-		// (get) Token: 0x06004D12 RID: 19730 RVA: 0x001E3220 File Offset: 0x001E1420
+		// Token: 0x1700055C RID: 1372
+		// (get) Token: 0x060052D4 RID: 21204 RVA: 0x00203600 File Offset: 0x00201800
 		public int SkillIdTagMapLength
 		{
 			get
@@ -164,7 +164,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004D13 RID: 19731 RVA: 0x001E324C File Offset: 0x001E144C
+		// Token: 0x060052D5 RID: 21205 RVA: 0x0020362C File Offset: 0x0020182C
 		public string SkillIcons(int j)
 		{
 			int num = this.__p.__offset(16);
@@ -175,8 +175,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700051D RID: 1309
-		// (get) Token: 0x06004D14 RID: 19732 RVA: 0x001E3288 File Offset: 0x001E1488
+		// Token: 0x1700055D RID: 1373
+		// (get) Token: 0x060052D6 RID: 21206 RVA: 0x00203668 File Offset: 0x00201868
 		public int SkillIconsLength
 		{
 			get
@@ -190,7 +190,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004D15 RID: 19733 RVA: 0x001E32B4 File Offset: 0x001E14B4
+		// Token: 0x060052D7 RID: 21207 RVA: 0x00203694 File Offset: 0x00201894
 		public int SkillIconTags(int j)
 		{
 			int num = this.__p.__offset(18);
@@ -201,8 +201,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700051E RID: 1310
-		// (get) Token: 0x06004D16 RID: 19734 RVA: 0x001E32F4 File Offset: 0x001E14F4
+		// Token: 0x1700055E RID: 1374
+		// (get) Token: 0x060052D8 RID: 21208 RVA: 0x002036D4 File Offset: 0x002018D4
 		public int SkillIconTagsLength
 		{
 			get
@@ -216,19 +216,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004D17 RID: 19735 RVA: 0x001E3320 File Offset: 0x001E1520
+		// Token: 0x060052D9 RID: 21209 RVA: 0x00203700 File Offset: 0x00201900
 		public Span<int> GetSkillIconTagsBytes()
 		{
 			return this.__p.__vector_as_span<int>(18, 4);
 		}
 
-		// Token: 0x06004D18 RID: 19736 RVA: 0x001E3330 File Offset: 0x001E1530
+		// Token: 0x060052DA RID: 21210 RVA: 0x00203710 File Offset: 0x00201910
 		public int[] GetSkillIconTagsArray()
 		{
 			return this.__p.__vector_as_array<int>(18) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06004D19 RID: 19737 RVA: 0x001E3348 File Offset: 0x001E1548
+		// Token: 0x060052DB RID: 21211 RVA: 0x00203728 File Offset: 0x00201928
 		public int DisableTags(int j)
 		{
 			int num = this.__p.__offset(20);
@@ -239,8 +239,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700051F RID: 1311
-		// (get) Token: 0x06004D1A RID: 19738 RVA: 0x001E3388 File Offset: 0x001E1588
+		// Token: 0x1700055F RID: 1375
+		// (get) Token: 0x060052DC RID: 21212 RVA: 0x00203768 File Offset: 0x00201968
 		public int DisableTagsLength
 		{
 			get
@@ -254,19 +254,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004D1B RID: 19739 RVA: 0x001E33B4 File Offset: 0x001E15B4
+		// Token: 0x060052DD RID: 21213 RVA: 0x00203794 File Offset: 0x00201994
 		public Span<int> GetDisableTagsBytes()
 		{
 			return this.__p.__vector_as_span<int>(20, 4);
 		}
 
-		// Token: 0x06004D1C RID: 19740 RVA: 0x001E33C4 File Offset: 0x001E15C4
+		// Token: 0x060052DE RID: 21214 RVA: 0x002037A4 File Offset: 0x002019A4
 		public int[] GetDisableTagsArray()
 		{
 			return this.__p.__vector_as_array<int>(20) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06004D1D RID: 19741 RVA: 0x001E33DC File Offset: 0x001E15DC
+		// Token: 0x060052DF RID: 21215 RVA: 0x002037BC File Offset: 0x002019BC
 		public DicIntIntArray? DisableSkillIdTags(int j)
 		{
 			int num = this.__p.__offset(22);
@@ -277,8 +277,8 @@ namespace Aki.Config
 			return new DicIntIntArray?(default(DicIntIntArray).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17000520 RID: 1312
-		// (get) Token: 0x06004D1E RID: 19742 RVA: 0x001E3440 File Offset: 0x001E1640
+		// Token: 0x17000560 RID: 1376
+		// (get) Token: 0x060052E0 RID: 21216 RVA: 0x00203820 File Offset: 0x00201A20
 		public int DisableSkillIdTagsLength
 		{
 			get
@@ -292,7 +292,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004D1F RID: 19743 RVA: 0x001E346C File Offset: 0x001E166C
+		// Token: 0x060052E1 RID: 21217 RVA: 0x0020384C File Offset: 0x00201A4C
 		public int VisibleTags(int j)
 		{
 			int num = this.__p.__offset(24);
@@ -303,8 +303,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000521 RID: 1313
-		// (get) Token: 0x06004D20 RID: 19744 RVA: 0x001E34AC File Offset: 0x001E16AC
+		// Token: 0x17000561 RID: 1377
+		// (get) Token: 0x060052E2 RID: 21218 RVA: 0x0020388C File Offset: 0x00201A8C
 		public int VisibleTagsLength
 		{
 			get
@@ -318,19 +318,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004D21 RID: 19745 RVA: 0x001E34D8 File Offset: 0x001E16D8
+		// Token: 0x060052E3 RID: 21219 RVA: 0x002038B8 File Offset: 0x00201AB8
 		public Span<int> GetVisibleTagsBytes()
 		{
 			return this.__p.__vector_as_span<int>(24, 4);
 		}
 
-		// Token: 0x06004D22 RID: 19746 RVA: 0x001E34E8 File Offset: 0x001E16E8
+		// Token: 0x060052E4 RID: 21220 RVA: 0x002038C8 File Offset: 0x00201AC8
 		public int[] GetVisibleTagsArray()
 		{
 			return this.__p.__vector_as_array<int>(24) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06004D23 RID: 19747 RVA: 0x001E3500 File Offset: 0x001E1700
+		// Token: 0x060052E5 RID: 21221 RVA: 0x002038E0 File Offset: 0x00201AE0
 		public int HiddenTags(int j)
 		{
 			int num = this.__p.__offset(26);
@@ -341,8 +341,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000522 RID: 1314
-		// (get) Token: 0x06004D24 RID: 19748 RVA: 0x001E3540 File Offset: 0x001E1740
+		// Token: 0x17000562 RID: 1378
+		// (get) Token: 0x060052E6 RID: 21222 RVA: 0x00203920 File Offset: 0x00201B20
 		public int HiddenTagsLength
 		{
 			get
@@ -356,19 +356,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004D25 RID: 19749 RVA: 0x001E356C File Offset: 0x001E176C
+		// Token: 0x060052E7 RID: 21223 RVA: 0x0020394C File Offset: 0x00201B4C
 		public Span<int> GetHiddenTagsBytes()
 		{
 			return this.__p.__vector_as_span<int>(26, 4);
 		}
 
-		// Token: 0x06004D26 RID: 19750 RVA: 0x001E357C File Offset: 0x001E177C
+		// Token: 0x060052E8 RID: 21224 RVA: 0x0020395C File Offset: 0x00201B5C
 		public int[] GetHiddenTagsArray()
 		{
 			return this.__p.__vector_as_array<int>(26) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06004D27 RID: 19751 RVA: 0x001E3594 File Offset: 0x001E1794
+		// Token: 0x060052E9 RID: 21225 RVA: 0x00203974 File Offset: 0x00201B74
 		public DicIntInt? DynamicEffectTagMap(int j)
 		{
 			int num = this.__p.__offset(28);
@@ -379,8 +379,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17000523 RID: 1315
-		// (get) Token: 0x06004D28 RID: 19752 RVA: 0x001E35F8 File Offset: 0x001E17F8
+		// Token: 0x17000563 RID: 1379
+		// (get) Token: 0x060052EA RID: 21226 RVA: 0x002039D8 File Offset: 0x00201BD8
 		public int DynamicEffectTagMapLength
 		{
 			get
@@ -394,147 +394,135 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004D29 RID: 19753 RVA: 0x001E3624 File Offset: 0x001E1824
+		// Token: 0x060052EB RID: 21227 RVA: 0x00203A04 File Offset: 0x00201C04
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用DisableSkillIdTagsFrozenDict()缓存字典，遍历请使用DisableSkillIdTagsIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, IntArray> DisableSkillIdTags()
+		public Dictionary<int, IntArray> DisableSkillIdTags()
 		{
 			return this.DisableSkillIdTagsIter().ToDictionary((DicIntIntArray element) => element.Key, (DicIntIntArray element) => element.Value.Value);
 		}
 
-		// Token: 0x06004D2A RID: 19754 RVA: 0x001E367A File Offset: 0x001E187A
+		// Token: 0x060052EC RID: 21228 RVA: 0x00203A5A File Offset: 0x00201C5A
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntIntArray> DisableSkillIdTagsIter()
+		public IEnumerable<DicIntIntArray> DisableSkillIdTagsIter()
 		{
 			BehaviorCommonButton.<DisableSkillIdTagsIter>d__53 <DisableSkillIdTagsIter>d__ = new BehaviorCommonButton.<DisableSkillIdTagsIter>d__53(-2);
 			<DisableSkillIdTagsIter>d__.<>3__<>4__this = this;
 			return <DisableSkillIdTagsIter>d__;
 		}
 
-		// Token: 0x06004D2B RID: 19755 RVA: 0x001E3690 File Offset: 0x001E1890
+		// Token: 0x060052ED RID: 21229 RVA: 0x00203A6F File Offset: 0x00201C6F
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用DisableTagsIter()或GetDisableTagsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] DisableTags()
+		public int[] DisableTags()
 		{
-			BehaviorCommonButton behaviorCommonButton = this;
-			return behaviorCommonButton.GetDisableTagsArray() ?? Array.Empty<int>();
+			return this.GetDisableTagsArray();
 		}
 
-		// Token: 0x06004D2C RID: 19756 RVA: 0x001E36B4 File Offset: 0x001E18B4
+		// Token: 0x060052EE RID: 21230 RVA: 0x00203A77 File Offset: 0x00201C77
 		[NullableContext(1)]
-		public readonly IEnumerable<int> DisableTagsIter()
+		public IEnumerable<int> DisableTagsIter()
 		{
 			BehaviorCommonButton.<DisableTagsIter>d__55 <DisableTagsIter>d__ = new BehaviorCommonButton.<DisableTagsIter>d__55(-2);
 			<DisableTagsIter>d__.<>3__<>4__this = this;
 			return <DisableTagsIter>d__;
 		}
 
-		// Token: 0x06004D2D RID: 19757 RVA: 0x001E36CC File Offset: 0x001E18CC
+		// Token: 0x060052EF RID: 21231 RVA: 0x00203A8C File Offset: 0x00201C8C
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用DynamicEffectTagMapFrozenDict()缓存字典，遍历请使用DynamicEffectTagMapIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> DynamicEffectTagMap()
+		public Dictionary<int, int> DynamicEffectTagMap()
 		{
 			return this.DynamicEffectTagMapIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x06004D2E RID: 19758 RVA: 0x001E3722 File Offset: 0x001E1922
+		// Token: 0x060052F0 RID: 21232 RVA: 0x00203AE2 File Offset: 0x00201CE2
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> DynamicEffectTagMapIter()
+		public IEnumerable<DicIntInt> DynamicEffectTagMapIter()
 		{
 			BehaviorCommonButton.<DynamicEffectTagMapIter>d__57 <DynamicEffectTagMapIter>d__ = new BehaviorCommonButton.<DynamicEffectTagMapIter>d__57(-2);
 			<DynamicEffectTagMapIter>d__.<>3__<>4__this = this;
 			return <DynamicEffectTagMapIter>d__;
 		}
 
-		// Token: 0x06004D2F RID: 19759 RVA: 0x001E3738 File Offset: 0x001E1938
+		// Token: 0x060052F1 RID: 21233 RVA: 0x00203AF7 File Offset: 0x00201CF7
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用HiddenTagsIter()或GetHiddenTagsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] HiddenTags()
+		public int[] HiddenTags()
 		{
-			BehaviorCommonButton behaviorCommonButton = this;
-			return behaviorCommonButton.GetHiddenTagsArray() ?? Array.Empty<int>();
+			return this.GetHiddenTagsArray();
 		}
 
-		// Token: 0x06004D30 RID: 19760 RVA: 0x001E375C File Offset: 0x001E195C
+		// Token: 0x060052F2 RID: 21234 RVA: 0x00203AFF File Offset: 0x00201CFF
 		[NullableContext(1)]
-		public readonly IEnumerable<int> HiddenTagsIter()
+		public IEnumerable<int> HiddenTagsIter()
 		{
 			BehaviorCommonButton.<HiddenTagsIter>d__59 <HiddenTagsIter>d__ = new BehaviorCommonButton.<HiddenTagsIter>d__59(-2);
 			<HiddenTagsIter>d__.<>3__<>4__this = this;
 			return <HiddenTagsIter>d__;
 		}
 
-		// Token: 0x06004D31 RID: 19761 RVA: 0x001E3774 File Offset: 0x001E1974
+		// Token: 0x060052F3 RID: 21235 RVA: 0x00203B14 File Offset: 0x00201D14
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用SkillIconTagsIter()或GetSkillIconTagsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] SkillIconTags()
+		public int[] SkillIconTags()
 		{
-			BehaviorCommonButton behaviorCommonButton = this;
-			return behaviorCommonButton.GetSkillIconTagsArray() ?? Array.Empty<int>();
+			return this.GetSkillIconTagsArray();
 		}
 
-		// Token: 0x06004D32 RID: 19762 RVA: 0x001E3798 File Offset: 0x001E1998
+		// Token: 0x060052F4 RID: 21236 RVA: 0x00203B1C File Offset: 0x00201D1C
 		[NullableContext(1)]
-		public readonly IEnumerable<int> SkillIconTagsIter()
+		public IEnumerable<int> SkillIconTagsIter()
 		{
 			BehaviorCommonButton.<SkillIconTagsIter>d__61 <SkillIconTagsIter>d__ = new BehaviorCommonButton.<SkillIconTagsIter>d__61(-2);
 			<SkillIconTagsIter>d__.<>3__<>4__this = this;
 			return <SkillIconTagsIter>d__;
 		}
 
-		// Token: 0x06004D33 RID: 19763 RVA: 0x001E37AD File Offset: 0x001E19AD
+		// Token: 0x060052F5 RID: 21237 RVA: 0x00203B31 File Offset: 0x00201D31
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用SkillIconsIter()或GetSkillIconsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] SkillIcons()
+		public string[] SkillIcons()
 		{
 			return this.SkillIconsIter().ToArray<string>();
 		}
 
-		// Token: 0x06004D34 RID: 19764 RVA: 0x001E37BA File Offset: 0x001E19BA
+		// Token: 0x060052F6 RID: 21238 RVA: 0x00203B3E File Offset: 0x00201D3E
 		[NullableContext(1)]
-		public readonly IEnumerable<string> SkillIconsIter()
+		public IEnumerable<string> SkillIconsIter()
 		{
 			BehaviorCommonButton.<SkillIconsIter>d__63 <SkillIconsIter>d__ = new BehaviorCommonButton.<SkillIconsIter>d__63(-2);
 			<SkillIconsIter>d__.<>3__<>4__this = this;
 			return <SkillIconsIter>d__;
 		}
 
-		// Token: 0x06004D35 RID: 19765 RVA: 0x001E37D0 File Offset: 0x001E19D0
+		// Token: 0x060052F7 RID: 21239 RVA: 0x00203B54 File Offset: 0x00201D54
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用SkillIdTagMapFrozenDict()缓存字典，遍历请使用SkillIdTagMapIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> SkillIdTagMap()
+		public Dictionary<int, int> SkillIdTagMap()
 		{
 			return this.SkillIdTagMapIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x06004D36 RID: 19766 RVA: 0x001E3826 File Offset: 0x001E1A26
+		// Token: 0x060052F8 RID: 21240 RVA: 0x00203BAA File Offset: 0x00201DAA
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> SkillIdTagMapIter()
+		public IEnumerable<DicIntInt> SkillIdTagMapIter()
 		{
 			BehaviorCommonButton.<SkillIdTagMapIter>d__65 <SkillIdTagMapIter>d__ = new BehaviorCommonButton.<SkillIdTagMapIter>d__65(-2);
 			<SkillIdTagMapIter>d__.<>3__<>4__this = this;
 			return <SkillIdTagMapIter>d__;
 		}
 
-		// Token: 0x06004D37 RID: 19767 RVA: 0x001E383C File Offset: 0x001E1A3C
+		// Token: 0x060052F9 RID: 21241 RVA: 0x00203BBF File Offset: 0x00201DBF
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用VisibleTagsIter()或GetVisibleTagsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] VisibleTags()
+		public int[] VisibleTags()
 		{
-			BehaviorCommonButton behaviorCommonButton = this;
-			return behaviorCommonButton.GetVisibleTagsArray() ?? Array.Empty<int>();
+			return this.GetVisibleTagsArray();
 		}
 
-		// Token: 0x06004D38 RID: 19768 RVA: 0x001E3860 File Offset: 0x001E1A60
+		// Token: 0x060052FA RID: 21242 RVA: 0x00203BC7 File Offset: 0x00201DC7
 		[NullableContext(1)]
-		public readonly IEnumerable<int> VisibleTagsIter()
+		public IEnumerable<int> VisibleTagsIter()
 		{
 			BehaviorCommonButton.<VisibleTagsIter>d__67 <VisibleTagsIter>d__ = new BehaviorCommonButton.<VisibleTagsIter>d__67(-2);
 			<VisibleTagsIter>d__.<>3__<>4__this = this;
 			return <VisibleTagsIter>d__;
 		}
 
-		// Token: 0x06004D39 RID: 19769 RVA: 0x001E3878 File Offset: 0x001E1A78
+		// Token: 0x060052FB RID: 21243 RVA: 0x00203BDC File Offset: 0x00201DDC
 		public IntArray? GetDisableSkillIdTags(int key)
 		{
 			this.EnsureDisableSkillIdTagsCacheIfNeeded();
@@ -546,7 +534,7 @@ namespace Aki.Config
 			return new IntArray?(value);
 		}
 
-		// Token: 0x06004D3A RID: 19770 RVA: 0x001E38AC File Offset: 0x001E1AAC
+		// Token: 0x060052FC RID: 21244 RVA: 0x00203C10 File Offset: 0x00201E10
 		public int? GetDynamicEffectTagMap(int key)
 		{
 			this.EnsureDynamicEffectTagMapCacheIfNeeded();
@@ -558,7 +546,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x06004D3B RID: 19771 RVA: 0x001E38E0 File Offset: 0x001E1AE0
+		// Token: 0x060052FD RID: 21245 RVA: 0x00203C44 File Offset: 0x00201E44
 		public int? GetSkillIdTagMap(int key)
 		{
 			this.EnsureSkillIdTagMapCacheIfNeeded();
@@ -570,7 +558,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x06004D3C RID: 19772 RVA: 0x001E3914 File Offset: 0x001E1B14
+		// Token: 0x060052FE RID: 21246 RVA: 0x00203C78 File Offset: 0x00201E78
 		private void EnsureDisableSkillIdTagsCacheIfNeeded()
 		{
 			if (this.DisableSkillIdTagsCache != null)
@@ -580,7 +568,7 @@ namespace Aki.Config
 			this.DisableSkillIdTagsCache = this.DisableSkillIdTagsIter().ToFrozenDictionary((DicIntIntArray kvp) => kvp.Key, (DicIntIntArray kvp) => kvp.Value.Value, null);
 		}
 
-		// Token: 0x06004D3D RID: 19773 RVA: 0x001E397C File Offset: 0x001E1B7C
+		// Token: 0x060052FF RID: 21247 RVA: 0x00203CE0 File Offset: 0x00201EE0
 		private void EnsureDynamicEffectTagMapCacheIfNeeded()
 		{
 			if (this.DynamicEffectTagMapCache != null)
@@ -590,7 +578,7 @@ namespace Aki.Config
 			this.DynamicEffectTagMapCache = this.DynamicEffectTagMapIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x06004D3E RID: 19774 RVA: 0x001E39E4 File Offset: 0x001E1BE4
+		// Token: 0x06005300 RID: 21248 RVA: 0x00203D48 File Offset: 0x00201F48
 		private void EnsureSkillIdTagMapCacheIfNeeded()
 		{
 			if (this.SkillIdTagMapCache != null)
@@ -600,42 +588,42 @@ namespace Aki.Config
 			this.SkillIdTagMapCache = this.SkillIdTagMapIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x06004D3F RID: 19775 RVA: 0x001E3A4A File Offset: 0x001E1C4A
-		[NullableContext(2)]
-		public FrozenDictionary<int, IntArray> GetDisableSkillIdTagsFrozenDict(int key)
+		// Token: 0x06005301 RID: 21249 RVA: 0x00203DAE File Offset: 0x00201FAE
+		[NullableContext(1)]
+		public FrozenDictionary<int, IntArray> GetDisableSkillIdTagsFrozenDict()
 		{
 			this.EnsureDisableSkillIdTagsCacheIfNeeded();
 			return this.DisableSkillIdTagsCache;
 		}
 
-		// Token: 0x06004D40 RID: 19776 RVA: 0x001E3A58 File Offset: 0x001E1C58
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetDynamicEffectTagMapFrozenDict(int key)
+		// Token: 0x06005302 RID: 21250 RVA: 0x00203DBC File Offset: 0x00201FBC
+		[NullableContext(1)]
+		public FrozenDictionary<int, int> GetDynamicEffectTagMapFrozenDict()
 		{
 			this.EnsureDynamicEffectTagMapCacheIfNeeded();
 			return this.DynamicEffectTagMapCache;
 		}
 
-		// Token: 0x06004D41 RID: 19777 RVA: 0x001E3A66 File Offset: 0x001E1C66
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetSkillIdTagMapFrozenDict(int key)
+		// Token: 0x06005303 RID: 21251 RVA: 0x00203DCA File Offset: 0x00201FCA
+		[NullableContext(1)]
+		public FrozenDictionary<int, int> GetSkillIdTagMapFrozenDict()
 		{
 			this.EnsureSkillIdTagMapCacheIfNeeded();
 			return this.SkillIdTagMapCache;
 		}
 
-		// Token: 0x04004B29 RID: 19241
+		// Token: 0x04005109 RID: 20745
 		private Table __p;
 
-		// Token: 0x04004B2A RID: 19242
+		// Token: 0x0400510A RID: 20746
 		[Nullable(2)]
 		private FrozenDictionary<int, IntArray> DisableSkillIdTagsCache;
 
-		// Token: 0x04004B2B RID: 19243
+		// Token: 0x0400510B RID: 20747
 		[Nullable(2)]
 		private FrozenDictionary<int, int> DynamicEffectTagMapCache;
 
-		// Token: 0x04004B2C RID: 19244
+		// Token: 0x0400510C RID: 20748
 		[Nullable(2)]
 		private FrozenDictionary<int, int> SkillIdTagMapCache;
 	}

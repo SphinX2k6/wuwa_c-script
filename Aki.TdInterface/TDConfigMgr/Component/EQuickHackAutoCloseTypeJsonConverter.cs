@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009E9 RID: 2537
+	// Token: 0x02000AAE RID: 2734
 	public class EQuickHackAutoCloseTypeJsonConverter : JsonConverter<EQuickHackAutoCloseType>
 	{
-		// Token: 0x0600384B RID: 14411 RVA: 0x00091E1C File Offset: 0x0009001C
+		// Token: 0x06003C23 RID: 15395 RVA: 0x0009A6DC File Offset: 0x000988DC
 		public override EQuickHackAutoCloseType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return EQuickHackAutoCloseTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600384C RID: 14412 RVA: 0x00091E40 File Offset: 0x00090040
+		// Token: 0x06003C24 RID: 15396 RVA: 0x0009A700 File Offset: 0x00098900
 		public override void Write(Utf8JsonWriter writer, EQuickHackAutoCloseType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

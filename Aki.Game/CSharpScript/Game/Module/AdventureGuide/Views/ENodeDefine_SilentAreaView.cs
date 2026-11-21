@@ -2,50 +2,50 @@
 
 namespace CSharpScript.Game.Module.AdventureGuide.Views
 {
-	// Token: 0x02005EE8 RID: 24296
+	// Token: 0x02004ECF RID: 20175
 	public enum ENodeDefine_SilentAreaView
 	{
-		// Token: 0x0402042A RID: 132138
+		// Token: 0x0401AEFC RID: 110332
 		DetectBtn,
-		// Token: 0x0402042B RID: 132139
+		// Token: 0x0401AEFD RID: 110333
 		SilentAreaNameText,
-		// Token: 0x0402042C RID: 132140
+		// Token: 0x0401AEFE RID: 110334
 		PositionText,
-		// Token: 0x0402042D RID: 132141
+		// Token: 0x0401AEFF RID: 110335
 		DescText,
-		// Token: 0x0402042E RID: 132142
+		// Token: 0x0401AF00 RID: 110336
 		TargetPic,
-		// Token: 0x0402042F RID: 132143
+		// Token: 0x0401AF01 RID: 110337
 		HighDangerItem,
-		// Token: 0x04020430 RID: 132144
+		// Token: 0x0401AF02 RID: 110338
 		MidDangerItem,
-		// Token: 0x04020431 RID: 132145
+		// Token: 0x0401AF03 RID: 110339
 		LowDangerItem,
-		// Token: 0x04020432 RID: 132146
+		// Token: 0x0401AF04 RID: 110340
 		PowerCostText,
-		// Token: 0x04020433 RID: 132147
+		// Token: 0x0401AF05 RID: 110341
 		DropRatioText,
-		// Token: 0x04020434 RID: 132148
+		// Token: 0x0401AF06 RID: 110342
 		ScrollView,
-		// Token: 0x04020435 RID: 132149
+		// Token: 0x0401AF07 RID: 110343
 		RewardLayout,
-		// Token: 0x04020436 RID: 132150
+		// Token: 0x0401AF08 RID: 110344
 		NotFoundItem,
-		// Token: 0x04020437 RID: 132151
+		// Token: 0x0401AF09 RID: 110345
 		DetectText,
-		// Token: 0x04020438 RID: 132152
+		// Token: 0x0401AF0A RID: 110346
 		HighLevelText,
-		// Token: 0x04020439 RID: 132153
+		// Token: 0x0401AF0B RID: 110347
 		MidLevelText,
-		// Token: 0x0402043A RID: 132154
+		// Token: 0x0401AF0C RID: 110348
 		LowLevelText,
-		// Token: 0x0402043B RID: 132155
+		// Token: 0x0401AF0D RID: 110349
 		CondText,
-		// Token: 0x0402043C RID: 132156
+		// Token: 0x0401AF0E RID: 110350
 		BoPianMapLink,
-		// Token: 0x0402043D RID: 132157
+		// Token: 0x0401AF0F RID: 110351
 		BoPianViewer,
-		// Token: 0x0402043E RID: 132158
+		// Token: 0x0401AF10 RID: 110352
 		SilentItem
 	}
 }

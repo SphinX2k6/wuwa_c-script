@@ -3,14 +3,14 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 {
-	// Token: 0x020060C1 RID: 24769
+	// Token: 0x0200503F RID: 20543
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SolarSpeedRoleIconPanelData : ISolarSpeedRoleIconPanelData
 	{
-		// Token: 0x17009114 RID: 37140
-		// (get) Token: 0x0603EA0E RID: 256526 RVA: 0x00F2071B File Offset: 0x00F1E91B
-		// (set) Token: 0x0603EA0F RID: 256527 RVA: 0x00F20723 File Offset: 0x00F1E923
+		// Token: 0x17006476 RID: 25718
+		// (get) Token: 0x060336D2 RID: 210642 RVA: 0x00E674DF File Offset: 0x00E656DF
+		// (set) Token: 0x060336D3 RID: 210643 RVA: 0x00E674E7 File Offset: 0x00E656E7
 		public string IconPath { get; set; }
 	}
 }

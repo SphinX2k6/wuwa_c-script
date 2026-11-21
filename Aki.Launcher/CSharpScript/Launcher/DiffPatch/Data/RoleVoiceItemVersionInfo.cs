@@ -5,41 +5,41 @@ using CSharpScript.Launcher.Define;
 
 namespace CSharpScript.Launcher.DiffPatch.Data
 {
-	// Token: 0x02000232 RID: 562
+	// Token: 0x02000237 RID: 567
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoleVoiceItemVersionInfo : OptionalDownloadVersionInfo
 	{
-		// Token: 0x06000E54 RID: 3668 RVA: 0x000556DB File Offset: 0x000538DB
+		// Token: 0x06000E95 RID: 3733 RVA: 0x000581E3 File Offset: 0x000563E3
 		public RoleVoiceItemVersionInfo(string packageVersion, string remoteVersion, Dictionary<string, string> remoteManifestHash, string packKey) : base(packageVersion, remoteVersion, remoteManifestHash, packKey)
 		{
 		}
 
-		// Token: 0x06000E55 RID: 3669 RVA: 0x000556E8 File Offset: 0x000538E8
+		// Token: 0x06000E96 RID: 3734 RVA: 0x000581F0 File Offset: 0x000563F0
 		public override string GetResType()
 		{
 			return "RoleVoice/" + this.PackKey;
 		}
 
-		// Token: 0x06000E56 RID: 3670 RVA: 0x000556FA File Offset: 0x000538FA
+		// Token: 0x06000E97 RID: 3735 RVA: 0x00058202 File Offset: 0x00056402
 		protected override string GetVersionRecordKey()
 		{
 			return "Version_" + EResType.Optional.ToEnumString() + "_" + this.PackKey;
 		}
 
-		// Token: 0x06000E57 RID: 3671 RVA: 0x00055717 File Offset: 0x00053917
+		// Token: 0x06000E98 RID: 3736 RVA: 0x0005821F File Offset: 0x0005641F
 		public override string GetManifestFileName()
 		{
 			return "";
 		}
 
-		// Token: 0x06000E58 RID: 3672 RVA: 0x0005571E File Offset: 0x0005391E
+		// Token: 0x06000E99 RID: 3737 RVA: 0x00058226 File Offset: 0x00056426
 		public override bool NeedRecordMount()
 		{
 			return false;
 		}
 
-		// Token: 0x06000E59 RID: 3673 RVA: 0x00055721 File Offset: 0x00053921
+		// Token: 0x06000E9A RID: 3738 RVA: 0x00058229 File Offset: 0x00056429
 		public string GetPackKey()
 		{
 			return this.PackKey;

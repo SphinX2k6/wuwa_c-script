@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020017D4 RID: 6100
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200195B RID: 6491
 	public class IAlertValueSpeedChangeType
 	{
-		// Token: 0x060082FB RID: 33531 RVA: 0x001390F4 File Offset: 0x001372F4
+		// Token: 0x06008A0D RID: 35341 RVA: 0x001486DC File Offset: 0x001468DC
 		private IAlertValueSpeedChangeType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060082FC RID: 33532 RVA: 0x0013912C File Offset: 0x0013732C
+		// Token: 0x06008A0E RID: 35342 RVA: 0x00148714 File Offset: 0x00146914
 		public static IAlertValueSpeedChangeType Create([Nullable(2)] IAlertValueSpeedChangeType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060082FD RID: 33533 RVA: 0x0013913F File Offset: 0x0013733F
+		// Token: 0x06008A0F RID: 35343 RVA: 0x00148727 File Offset: 0x00146927
 		public static IAlertValueSpeedChangeType CreateFromSetValue([Nullable(2)] IAlertValueSpeedChangeType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060082FE RID: 33534 RVA: 0x00139152 File Offset: 0x00137352
+		// Token: 0x06008A10 RID: 35344 RVA: 0x0014873A File Offset: 0x0014693A
 		public IAlertValueSpeedChangeType_SetValue ToSetValue()
 		{
 			return new IAlertValueSpeedChangeType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002B14 RID: 11028
-		// (get) Token: 0x060082FF RID: 33535 RVA: 0x00139165 File Offset: 0x00137365
-		// (set) Token: 0x06008300 RID: 33536 RVA: 0x00139190 File Offset: 0x00137390
+		// Token: 0x17002D0A RID: 11530
+		// (get) Token: 0x06008A11 RID: 35345 RVA: 0x0014874D File Offset: 0x0014694D
+		// (set) Token: 0x06008A12 RID: 35346 RVA: 0x00148778 File Offset: 0x00146978
 		public virtual EValueChangeType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005335 RID: 21301
+		// Token: 0x04005779 RID: 22393
 		[Nullable(2)]
 		protected IAlertValueSpeedChangeType FbInstance;
 
-		// Token: 0x04005336 RID: 21302
+		// Token: 0x0400577A RID: 22394
 		[Nullable(2)]
 		protected IAlertValueSpeedChangeType_SetValue PocoInterface;
 	}

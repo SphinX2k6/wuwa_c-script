@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006C63 RID: 27747
+	// Token: 0x020073CA RID: 29642
 	public struct IPathLineFacingCurrentDirection : IFlatbufferObject
 	{
-		// Token: 0x1700CEA1 RID: 52897
-		// (get) Token: 0x06030E2D RID: 200237 RVA: 0x006A3B72 File Offset: 0x006A1D72
+		// Token: 0x1700D9BC RID: 55740
+		// (get) Token: 0x06033D88 RID: 212360 RVA: 0x006FE072 File Offset: 0x006FC272
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030E2E RID: 200238 RVA: 0x006A3B7F File Offset: 0x006A1D7F
+		// Token: 0x06033D89 RID: 212361 RVA: 0x006FE07F File Offset: 0x006FC27F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06030E2F RID: 200239 RVA: 0x006A3B88 File Offset: 0x006A1D88
+		// Token: 0x06033D8A RID: 212362 RVA: 0x006FE088 File Offset: 0x006FC288
 		public static IPathLineFacingCurrentDirection GetRootAsIPathLineFacingCurrentDirection(ByteBuffer _bb)
 		{
 			return IPathLineFacingCurrentDirection.GetRootAsIPathLineFacingCurrentDirection(_bb, default(IPathLineFacingCurrentDirection));
 		}
 
-		// Token: 0x06030E30 RID: 200240 RVA: 0x006A3BA4 File Offset: 0x006A1DA4
+		// Token: 0x06033D8B RID: 212363 RVA: 0x006FE0A4 File Offset: 0x006FC2A4
 		public static IPathLineFacingCurrentDirection GetRootAsIPathLineFacingCurrentDirection(ByteBuffer _bb, IPathLineFacingCurrentDirection obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06030E31 RID: 200241 RVA: 0x006A3BC1 File Offset: 0x006A1DC1
+		// Token: 0x06033D8C RID: 212364 RVA: 0x006FE0C1 File Offset: 0x006FC2C1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06030E32 RID: 200242 RVA: 0x006A3BD0 File Offset: 0x006A1DD0
+		// Token: 0x06033D8D RID: 212365 RVA: 0x006FE0D0 File Offset: 0x006FC2D0
 		public IPathLineFacingCurrentDirection __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CEA2 RID: 52898
-		// (get) Token: 0x06030E33 RID: 200243 RVA: 0x006A3BE0 File Offset: 0x006A1DE0
+		// Token: 0x1700D9BD RID: 55741
+		// (get) Token: 0x06033D8E RID: 212366 RVA: 0x006FE0E0 File Offset: 0x006FC2E0
 		public EPathLineFacingType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CEA3 RID: 52899
-		// (get) Token: 0x06030E34 RID: 200244 RVA: 0x006A3C1C File Offset: 0x006A1E1C
+		// Token: 0x1700D9BE RID: 55742
+		// (get) Token: 0x06033D8F RID: 212367 RVA: 0x006FE11C File Offset: 0x006FC31C
 		public float YawOffset
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CEA4 RID: 52900
-		// (get) Token: 0x06030E35 RID: 200245 RVA: 0x006A3C5C File Offset: 0x006A1E5C
+		// Token: 0x1700D9BF RID: 55743
+		// (get) Token: 0x06033D90 RID: 212368 RVA: 0x006FE15C File Offset: 0x006FC35C
 		public byte NullMask
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030E36 RID: 200246 RVA: 0x006A3C98 File Offset: 0x006A1E98
+		// Token: 0x06033D91 RID: 212369 RVA: 0x006FE198 File Offset: 0x006FC398
 		public static Offset<IPathLineFacingCurrentDirection> CreateIPathLineFacingCurrentDirection(FlatBufferBuilder builder, EPathLineFacingType Type = EPathLineFacingType.Current, float YawOffset = 0f, byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPathLineFacingCurrentDirection.EndIPathLineFacingCurrentDirection(builder);
 		}
 
-		// Token: 0x06030E37 RID: 200247 RVA: 0x006A3CBC File Offset: 0x006A1EBC
+		// Token: 0x06033D92 RID: 212370 RVA: 0x006FE1BC File Offset: 0x006FC3BC
 		public static void StartIPathLineFacingCurrentDirection(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06030E38 RID: 200248 RVA: 0x006A3CC5 File Offset: 0x006A1EC5
+		// Token: 0x06033D93 RID: 212371 RVA: 0x006FE1C5 File Offset: 0x006FC3C5
 		public static void AddType(FlatBufferBuilder builder, EPathLineFacingType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06030E39 RID: 200249 RVA: 0x006A3CD0 File Offset: 0x006A1ED0
+		// Token: 0x06033D94 RID: 212372 RVA: 0x006FE1D0 File Offset: 0x006FC3D0
 		public static void AddYawOffset(FlatBufferBuilder builder, float yawOffset)
 		{
 			builder.AddFloat(1, yawOffset, 0.0);
 		}
 
-		// Token: 0x06030E3A RID: 200250 RVA: 0x006A3CE3 File Offset: 0x006A1EE3
+		// Token: 0x06033D95 RID: 212373 RVA: 0x006FE1E3 File Offset: 0x006FC3E3
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x06030E3B RID: 200251 RVA: 0x006A3CEE File Offset: 0x006A1EEE
+		// Token: 0x06033D96 RID: 212374 RVA: 0x006FE1EE File Offset: 0x006FC3EE
 		public static Offset<IPathLineFacingCurrentDirection> EndIPathLineFacingCurrentDirection(FlatBufferBuilder builder)
 		{
 			return new Offset<IPathLineFacingCurrentDirection>(builder.EndTable());
 		}
 
-		// Token: 0x06030E3C RID: 200252 RVA: 0x006A3CFC File Offset: 0x006A1EFC
+		// Token: 0x06033D97 RID: 212375 RVA: 0x006FE1FC File Offset: 0x006FC3FC
 		public IPathLineFacingCurrentDirectionT UnPack()
 		{
 			IPathLineFacingCurrentDirectionT pathLineFacingCurrentDirectionT = new IPathLineFacingCurrentDirectionT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return pathLineFacingCurrentDirectionT;
 		}
 
-		// Token: 0x06030E3D RID: 200253 RVA: 0x006A3D17 File Offset: 0x006A1F17
+		// Token: 0x06033D98 RID: 212376 RVA: 0x006FE217 File Offset: 0x006FC417
 		public void UnPackTo(IPathLineFacingCurrentDirectionT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06030E3E RID: 200254 RVA: 0x006A3D40 File Offset: 0x006A1F40
+		// Token: 0x06033D99 RID: 212377 RVA: 0x006FE240 File Offset: 0x006FC440
 		public static Offset<IPathLineFacingCurrentDirection> Pack(FlatBufferBuilder builder, IPathLineFacingCurrentDirectionT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPathLineFacingCurrentDirection.CreateIPathLineFacingCurrentDirection(builder, _o.Type, _o.YawOffset, _o.NullMask);
 		}
 
-		// Token: 0x040115A7 RID: 71079
+		// Token: 0x040124FF RID: 75007
 		private Table __p;
 	}
 }

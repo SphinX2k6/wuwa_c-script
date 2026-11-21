@@ -4,31 +4,31 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 {
-	// Token: 0x02006F3C RID: 28476
+	// Token: 0x020060BD RID: 24765
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TicTacToeController
 	{
-		// Token: 0x06045476 RID: 283766 RVA: 0x01124DA2 File Offset: 0x01122FA2
+		// Token: 0x0603B624 RID: 243236 RVA: 0x010CED4E File Offset: 0x010CCF4E
 		public void Init(TicTacToeBoard board, ETicTacToeBoardContent camp)
 		{
 			this.ChessBoard = board;
 			this.SelfCamp = camp;
 		}
 
-		// Token: 0x06045477 RID: 283767 RVA: 0x01124DB2 File Offset: 0x01122FB2
+		// Token: 0x0603B625 RID: 243237 RVA: 0x010CED5E File Offset: 0x010CCF5E
 		public virtual void OnStartRound()
 		{
 		}
 
-		// Token: 0x06045478 RID: 283768 RVA: 0x01124DB4 File Offset: 0x01122FB4
+		// Token: 0x0603B626 RID: 243238 RVA: 0x010CED60 File Offset: 0x010CCF60
 		public virtual void OnStartGame()
 		{
 			this.SelectIndex = -1;
 		}
 
-		// Token: 0x17009B25 RID: 39717
-		// (get) Token: 0x06045479 RID: 283769 RVA: 0x01124DBD File Offset: 0x01122FBD
+		// Token: 0x17007064 RID: 28772
+		// (get) Token: 0x0603B627 RID: 243239 RVA: 0x010CED69 File Offset: 0x010CCF69
 		public bool IsSelecting
 		{
 			get
@@ -37,8 +37,8 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			}
 		}
 
-		// Token: 0x17009B26 RID: 39718
-		// (get) Token: 0x0604547A RID: 283770 RVA: 0x01124DC8 File Offset: 0x01122FC8
+		// Token: 0x17007065 RID: 28773
+		// (get) Token: 0x0603B628 RID: 243240 RVA: 0x010CED74 File Offset: 0x010CCF74
 		public int SelectPieceIndex
 		{
 			get
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			}
 		}
 
-		// Token: 0x0604547B RID: 283771 RVA: 0x01124DD0 File Offset: 0x01122FD0
+		// Token: 0x0603B629 RID: 243241 RVA: 0x010CED7C File Offset: 0x010CCF7C
 		public bool SelectPiece(int index)
 		{
 			if (this.SelectIndex == index)
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			return true;
 		}
 
-		// Token: 0x0604547C RID: 283772 RVA: 0x01124E02 File Offset: 0x01123002
+		// Token: 0x0603B62A RID: 243242 RVA: 0x010CEDAE File Offset: 0x010CCFAE
 		public bool ResetSelectPiece(int index)
 		{
 			if (this.SelectIndex == index)
@@ -74,19 +74,19 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			return false;
 		}
 
-		// Token: 0x0604547D RID: 283773 RVA: 0x01124E17 File Offset: 0x01123017
+		// Token: 0x0603B62B RID: 243243 RVA: 0x010CEDC3 File Offset: 0x010CCFC3
 		public IReadOnlyList<int> GetSelectNeighbor()
 		{
 			return this.ChessBoard.GetNoneNeighbors(this.SelectIndex);
 		}
 
-		// Token: 0x0604547E RID: 283774 RVA: 0x01124E2A File Offset: 0x0112302A
+		// Token: 0x0603B62C RID: 243244 RVA: 0x010CEDD6 File Offset: 0x010CCFD6
 		public void RegisterEvent(Action<int, int> onPieceMove)
 		{
 			this.OnPieceMove = onPieceMove;
 		}
 
-		// Token: 0x0604547F RID: 283775 RVA: 0x01124E34 File Offset: 0x01123034
+		// Token: 0x0603B62D RID: 243245 RVA: 0x010CEDE0 File Offset: 0x010CCFE0
 		public virtual bool MovePiece(int newIndex)
 		{
 			if (this.ChessBoard == null || !this.ChessBoard.CheckPieceMove(this.SelectIndex, newIndex, this.SelfCamp))
@@ -107,26 +107,26 @@ namespace CSharpScript.Game.LevelGamePlay.Chess.TicTacToe
 			return true;
 		}
 
-		// Token: 0x06045480 RID: 283776 RVA: 0x01124EAB File Offset: 0x011230AB
+		// Token: 0x0603B62E RID: 243246 RVA: 0x010CEE57 File Offset: 0x010CD057
 		public void OnResetGame()
 		{
 			this.OnStartGame();
 		}
 
-		// Token: 0x0402420F RID: 147983
+		// Token: 0x0401F4C4 RID: 128196
 		protected ETicTacToeBoardContent SelfCamp = ETicTacToeBoardContent.White;
 
-		// Token: 0x04024210 RID: 147984
+		// Token: 0x0401F4C5 RID: 128197
 		protected int SelectIndex = -1;
 
-		// Token: 0x04024211 RID: 147985
+		// Token: 0x0401F4C6 RID: 128198
 		protected readonly int WinLineCount = 3;
 
-		// Token: 0x04024212 RID: 147986
+		// Token: 0x0401F4C7 RID: 128199
 		[Nullable(2)]
 		protected TicTacToeBoard ChessBoard;
 
-		// Token: 0x04024213 RID: 147987
+		// Token: 0x0401F4C8 RID: 128200
 		[Nullable(2)]
 		protected Action<int, int> OnPieceMove;
 	}

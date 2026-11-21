@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005405 RID: 21509
+	// Token: 0x0200598B RID: 22923
 	public class IInhalationPerformanceType_UnionUnion
 	{
-		// Token: 0x17009E42 RID: 40514
-		// (get) Token: 0x06023529 RID: 144681 RVA: 0x004E3CA9 File Offset: 0x004E1EA9
-		// (set) Token: 0x0602352A RID: 144682 RVA: 0x004E3CB1 File Offset: 0x004E1EB1
+		// Token: 0x1700A67C RID: 42620
+		// (get) Token: 0x060255E1 RID: 153057 RVA: 0x00520CD5 File Offset: 0x0051EED5
+		// (set) Token: 0x060255E2 RID: 153058 RVA: 0x00520CDD File Offset: 0x0051EEDD
 		public IInhalationPerformanceType_Union Type { get; set; }
 
-		// Token: 0x17009E43 RID: 40515
-		// (get) Token: 0x0602352B RID: 144683 RVA: 0x004E3CBA File Offset: 0x004E1EBA
-		// (set) Token: 0x0602352C RID: 144684 RVA: 0x004E3CC2 File Offset: 0x004E1EC2
+		// Token: 0x1700A67D RID: 42621
+		// (get) Token: 0x060255E3 RID: 153059 RVA: 0x00520CE6 File Offset: 0x0051EEE6
+		// (set) Token: 0x060255E4 RID: 153060 RVA: 0x00520CEE File Offset: 0x0051EEEE
 		public object Value { get; set; }
 
-		// Token: 0x0602352D RID: 144685 RVA: 0x004E3CCB File Offset: 0x004E1ECB
+		// Token: 0x060255E5 RID: 153061 RVA: 0x00520CF7 File Offset: 0x0051EEF7
 		public IInhalationPerformanceType_UnionUnion()
 		{
 			this.Type = IInhalationPerformanceType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602352E RID: 144686 RVA: 0x004E3CE1 File Offset: 0x004E1EE1
+		// Token: 0x060255E6 RID: 153062 RVA: 0x00520D0D File Offset: 0x0051EF0D
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602352F RID: 144687 RVA: 0x004E3CF3 File Offset: 0x004E1EF3
+		// Token: 0x060255E7 RID: 153063 RVA: 0x00520D1F File Offset: 0x0051EF1F
 		public IInhalationPerformanceTypeT AsIInhalationPerformanceType()
 		{
 			return this.As<IInhalationPerformanceTypeT>();
 		}
 
-		// Token: 0x06023530 RID: 144688 RVA: 0x004E3CFB File Offset: 0x004E1EFB
+		// Token: 0x060255E8 RID: 153064 RVA: 0x00520D27 File Offset: 0x0051EF27
 		public static IInhalationPerformanceType_UnionUnion FromIInhalationPerformanceType(IInhalationPerformanceTypeT _iinhalationperformancetype)
 		{
 			return new IInhalationPerformanceType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06023531 RID: 144689 RVA: 0x004E3D10 File Offset: 0x004E1F10
+		// Token: 0x060255E9 RID: 153065 RVA: 0x00520D3C File Offset: 0x0051EF3C
 		public IRoleInhalationT AsIRoleInhalation()
 		{
 			return this.As<IRoleInhalationT>();
 		}
 
-		// Token: 0x06023532 RID: 144690 RVA: 0x004E3D18 File Offset: 0x004E1F18
+		// Token: 0x060255EA RID: 153066 RVA: 0x00520D44 File Offset: 0x0051EF44
 		public static IInhalationPerformanceType_UnionUnion FromIRoleInhalation(IRoleInhalationT _iroleinhalation)
 		{
 			return new IInhalationPerformanceType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06023533 RID: 144691 RVA: 0x004E3D2D File Offset: 0x004E1F2D
+		// Token: 0x060255EB RID: 153067 RVA: 0x00520D59 File Offset: 0x0051EF59
 		public ISceneItemInhalationT AsISceneItemInhalation()
 		{
 			return this.As<ISceneItemInhalationT>();
 		}
 
-		// Token: 0x06023534 RID: 144692 RVA: 0x004E3D35 File Offset: 0x004E1F35
+		// Token: 0x060255EC RID: 153068 RVA: 0x00520D61 File Offset: 0x0051EF61
 		public static IInhalationPerformanceType_UnionUnion FromISceneItemInhalation(ISceneItemInhalationT _isceneiteminhalation)
 		{
 			return new IInhalationPerformanceType_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06023535 RID: 144693 RVA: 0x004E3D4C File Offset: 0x004E1F4C
+		// Token: 0x060255ED RID: 153069 RVA: 0x00520D78 File Offset: 0x0051EF78
 		public static int Pack(FlatBufferBuilder builder, IInhalationPerformanceType_UnionUnion _o)
 		{
 			switch (_o.Type)

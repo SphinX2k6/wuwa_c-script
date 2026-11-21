@@ -3,23 +3,23 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02002AEA RID: 10986
+// Token: 0x02002066 RID: 8294
 [NullableContext(1)]
 [Nullable(0)]
 internal class SurvivorsShopViewInfo : ISurvivorsShopViewInfo
 {
-	// Token: 0x17001E75 RID: 7797
-	// (get) Token: 0x06016DC2 RID: 93634 RVA: 0x005CD1D4 File Offset: 0x005CB3D4
-	// (set) Token: 0x06016DC3 RID: 93635 RVA: 0x005CD1DC File Offset: 0x005CB3DC
+	// Token: 0x17001ECD RID: 7885
+	// (get) Token: 0x060147F3 RID: 83955 RVA: 0x005F9D24 File Offset: 0x005F7F24
+	// (set) Token: 0x060147F4 RID: 83956 RVA: 0x005F9D2C File Offset: 0x005F7F2C
 	public List<GoodsDetail> DataList { get; set; }
 
-	// Token: 0x17001E76 RID: 7798
-	// (get) Token: 0x06016DC4 RID: 93636 RVA: 0x005CD1E5 File Offset: 0x005CB3E5
-	// (set) Token: 0x06016DC5 RID: 93637 RVA: 0x005CD1ED File Offset: 0x005CB3ED
+	// Token: 0x17001ECE RID: 7886
+	// (get) Token: 0x060147F5 RID: 83957 RVA: 0x005F9D35 File Offset: 0x005F7F35
+	// (set) Token: 0x060147F6 RID: 83958 RVA: 0x005F9D3D File Offset: 0x005F7F3D
 	public int RefreshItemId { get; set; }
 
-	// Token: 0x17001E77 RID: 7799
-	// (get) Token: 0x06016DC6 RID: 93638 RVA: 0x005CD1F6 File Offset: 0x005CB3F6
-	// (set) Token: 0x06016DC7 RID: 93639 RVA: 0x005CD1FE File Offset: 0x005CB3FE
+	// Token: 0x17001ECF RID: 7887
+	// (get) Token: 0x060147F7 RID: 83959 RVA: 0x005F9D46 File Offset: 0x005F7F46
+	// (set) Token: 0x060147F8 RID: 83960 RVA: 0x005F9D4E File Offset: 0x005F7F4E
 	public int RefreshCost { get; set; }
 }

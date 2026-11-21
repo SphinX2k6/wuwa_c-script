@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 {
-	// Token: 0x020058A2 RID: 22690
+	// Token: 0x0200487A RID: 18554
 	public class InstanceDungeonPicItem : UiPanelBase
 	{
-		// Token: 0x06039BA7 RID: 236455 RVA: 0x00DB83B8 File Offset: 0x00DB65B8
+		// Token: 0x0602EACA RID: 191178 RVA: 0x00D072D0 File Offset: 0x00D054D0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -22,17 +22,17 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06039BA8 RID: 236456 RVA: 0x00DB8400 File Offset: 0x00DB6600
+		// Token: 0x0602EACB RID: 191179 RVA: 0x00D07318 File Offset: 0x00D05518
 		[NullableContext(2)]
 		public void RefreshItem(string picPath)
 		{
 			base.TrySetTextureByPath(picPath, base.GetTexture(0), null, null);
 		}
 
-		// Token: 0x0200BB0B RID: 47883
+		// Token: 0x0200A524 RID: 42276
 		private enum EComponent
 		{
-			// Token: 0x0403881B RID: 231451
+			// Token: 0x0403321C RID: 209436
 			PicTexture
 		}
 	}

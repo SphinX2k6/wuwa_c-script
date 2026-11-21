@@ -5,20 +5,20 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x020019CA RID: 6602
+	// Token: 0x0200045F RID: 1119
 	[UnrealObjectPath("/Script/KuroMath.KuroSplineSamplingOptions")]
 	[UnrealStructLayout(12, 4, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 12)]
 	public class FKuroSplineSamplingOptions : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06018883 RID: 100483 RVA: 0x0024215E File Offset: 0x0024035E
+		// Token: 0x06006B5A RID: 27482 RVA: 0x0009C4B2 File Offset: 0x0009A6B2
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FKuroSplineSamplingOptions._ScriptStructPtr != 0) ? FKuroSplineSamplingOptions._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroMath.KuroSplineSamplingOptions", ref FKuroSplineSamplingOptions._ScriptStructPtr);
 		}
 
-		// Token: 0x170061D1 RID: 25041
-		// (get) Token: 0x06018884 RID: 100484 RVA: 0x00242182 File Offset: 0x00240382
-		// (set) Token: 0x06018885 RID: 100485 RVA: 0x00242192 File Offset: 0x00240392
+		// Token: 0x17001554 RID: 5460
+		// (get) Token: 0x06006B5B RID: 27483 RVA: 0x0009C4D6 File Offset: 0x0009A6D6
+		// (set) Token: 0x06006B5C RID: 27484 RVA: 0x0009C4E6 File Offset: 0x0009A6E6
 		public unsafe int NumSamples
 		{
 			get
@@ -31,9 +31,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170061D2 RID: 25042
-		// (get) Token: 0x06018886 RID: 100486 RVA: 0x002421A3 File Offset: 0x002403A3
-		// (set) Token: 0x06018887 RID: 100487 RVA: 0x002421B3 File Offset: 0x002403B3
+		// Token: 0x17001555 RID: 5461
+		// (get) Token: 0x06006B5D RID: 27485 RVA: 0x0009C4F7 File Offset: 0x0009A6F7
+		// (set) Token: 0x06006B5E RID: 27486 RVA: 0x0009C507 File Offset: 0x0009A707
 		public unsafe float ErrorTolerance
 		{
 			get
@@ -46,9 +46,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170061D3 RID: 25043
-		// (get) Token: 0x06018888 RID: 100488 RVA: 0x002421C4 File Offset: 0x002403C4
-		// (set) Token: 0x06018889 RID: 100489 RVA: 0x002421D4 File Offset: 0x002403D4
+		// Token: 0x17001556 RID: 5462
+		// (get) Token: 0x06006B5F RID: 27487 RVA: 0x0009C518 File Offset: 0x0009A718
+		// (set) Token: 0x06006B60 RID: 27488 RVA: 0x0009C528 File Offset: 0x0009A728
 		public unsafe EKuroMathSampleSpacing SampleSpacing
 		{
 			get
@@ -61,9 +61,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170061D4 RID: 25044
-		// (get) Token: 0x0601888A RID: 100490 RVA: 0x002421E5 File Offset: 0x002403E5
-		// (set) Token: 0x0601888B RID: 100491 RVA: 0x002421F9 File Offset: 0x002403F9
+		// Token: 0x17001557 RID: 5463
+		// (get) Token: 0x06006B61 RID: 27489 RVA: 0x0009C539 File Offset: 0x0009A739
+		// (set) Token: 0x06006B62 RID: 27490 RVA: 0x0009C54D File Offset: 0x0009A74D
 		public unsafe TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace
 		{
 			get
@@ -76,68 +76,59 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601888C RID: 100492 RVA: 0x0024220E File Offset: 0x0024040E
+		// Token: 0x06006B63 RID: 27491 RVA: 0x0009C562 File Offset: 0x0009A762
 		public FKuroSplineSamplingOptions()
 		{
 		}
 
-		// Token: 0x0601888D RID: 100493 RVA: 0x00242216 File Offset: 0x00240416
-		public FKuroSplineSamplingOptions(int NumSamples, float ErrorTolerance, EKuroMathSampleSpacing SampleSpacing, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
-		{
-			this.NumSamples = NumSamples;
-			this.ErrorTolerance = ErrorTolerance;
-			this.SampleSpacing = SampleSpacing;
-			this.CoordinateSpace = CoordinateSpace;
-		}
-
-		// Token: 0x0601888E RID: 100494 RVA: 0x0024223B File Offset: 0x0024043B
+		// Token: 0x06006B64 RID: 27492 RVA: 0x0009C56A File Offset: 0x0009A76A
 		protected override IntPtr GetUStructPtr()
 		{
 			return FKuroSplineSamplingOptions.StaticStruct();
 		}
 
-		// Token: 0x0601888F RID: 100495 RVA: 0x00242247 File Offset: 0x00240447
+		// Token: 0x06006B65 RID: 27493 RVA: 0x0009C576 File Offset: 0x0009A776
 		[NullableContext(2)]
 		public FKuroSplineSamplingOptions(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06018890 RID: 100496 RVA: 0x00242251 File Offset: 0x00240451
+		// Token: 0x06006B66 RID: 27494 RVA: 0x0009C580 File Offset: 0x0009A780
 		public FKuroSplineSamplingOptions(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06018891 RID: 100497 RVA: 0x0024225C File Offset: 0x0024045C
+		// Token: 0x06006B67 RID: 27495 RVA: 0x0009C58B File Offset: 0x0009A78B
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FKuroSplineSamplingOptions(Pointer, false, true);
 		}
 
-		// Token: 0x06018892 RID: 100498 RVA: 0x00242266 File Offset: 0x00240466
+		// Token: 0x06006B68 RID: 27496 RVA: 0x0009C595 File Offset: 0x0009A795
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FKuroSplineSamplingOptions(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0400D413 RID: 54291
+		// Token: 0x04002DAC RID: 11692
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroMath.KuroSplineSamplingOptions";
 
-		// Token: 0x0400D414 RID: 54292
+		// Token: 0x04002DAD RID: 11693
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0400D415 RID: 54293
+		// Token: 0x04002DAE RID: 11694
 		internal static int __PropertyOffset_NumSamples;
 
-		// Token: 0x0400D416 RID: 54294
+		// Token: 0x04002DAF RID: 11695
 		internal static int __PropertyOffset_ErrorTolerance;
 
-		// Token: 0x0400D417 RID: 54295
+		// Token: 0x04002DB0 RID: 11696
 		internal static int __PropertyOffset_SampleSpacing;
 
-		// Token: 0x0400D418 RID: 54296
+		// Token: 0x04002DB1 RID: 11697
 		internal static int __PropertyOffset_CoordinateSpace;
 	}
 }

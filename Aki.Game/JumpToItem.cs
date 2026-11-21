@@ -6,7 +6,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001172 RID: 4466
+// Token: 0x02000626 RID: 1574
 [Nullable(new byte[]
 {
 	0,
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class JumpToItem : GridProxyAbstract<IJumpToItemData>
 {
-	// Token: 0x060075E8 RID: 30184 RVA: 0x001864EC File Offset: 0x001846EC
+	// Token: 0x0600497F RID: 18815 RVA: 0x0018F094 File Offset: 0x0018D294
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -45,7 +45,7 @@ public class JumpToItem : GridProxyAbstract<IJumpToItemData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060075E9 RID: 30185 RVA: 0x00186638 File Offset: 0x00184838
+	// Token: 0x06004980 RID: 18816 RVA: 0x0018F1E0 File Offset: 0x0018D3E0
 	[NullableContext(1)]
 	public override void Refresh(IJumpToItemData data, bool isSelected, int gridIndex)
 	{
@@ -67,7 +67,7 @@ public class JumpToItem : GridProxyAbstract<IJumpToItemData>
 		base.GetText(4).SetText(data.StarNumber.ToString(), true);
 	}
 
-	// Token: 0x060075EA RID: 30186 RVA: 0x0018671F File Offset: 0x0018491F
+	// Token: 0x06004981 RID: 18817 RVA: 0x0018F2C7 File Offset: 0x0018D4C7
 	private void OnClickButton()
 	{
 		if (!this.IsUnlock)
@@ -87,41 +87,41 @@ public class JumpToItem : GridProxyAbstract<IJumpToItemData>
 		onClickButtonCallBack(this.LevelId);
 	}
 
-	// Token: 0x04003618 RID: 13848
+	// Token: 0x040036B1 RID: 14001
 	private int LevelId;
 
-	// Token: 0x04003619 RID: 13849
+	// Token: 0x040036B2 RID: 14002
 	private bool IsUnlock;
 
-	// Token: 0x0400361A RID: 13850
+	// Token: 0x040036B3 RID: 14003
 	private bool IsCurrentLevel;
 
-	// Token: 0x0400361B RID: 13851
+	// Token: 0x040036B4 RID: 14004
 	[Nullable(2)]
 	public Action<int> OnClickButtonCallBack;
 
-	// Token: 0x02007743 RID: 30531
+	// Token: 0x020068D0 RID: 26832
 	private class EJumpToItem
 	{
-		// Token: 0x0402756C RID: 161132
+		// Token: 0x040228A5 RID: 141477
 		public const int BgItem = 0;
 
-		// Token: 0x0402756D RID: 161133
+		// Token: 0x040228A6 RID: 141478
 		public const int DoneItem = 1;
 
-		// Token: 0x0402756E RID: 161134
+		// Token: 0x040228A7 RID: 141479
 		public const int AreaText = 2;
 
-		// Token: 0x0402756F RID: 161135
+		// Token: 0x040228A8 RID: 141480
 		public const int Button = 3;
 
-		// Token: 0x04027570 RID: 161136
+		// Token: 0x040228A9 RID: 141481
 		public const int StarNumberText = 4;
 
-		// Token: 0x04027571 RID: 161137
+		// Token: 0x040228AA RID: 141482
 		public const int StarItem = 5;
 
-		// Token: 0x04027572 RID: 161138
+		// Token: 0x040228AB RID: 141483
 		public const int ArrowItem = 6;
 	}
 }

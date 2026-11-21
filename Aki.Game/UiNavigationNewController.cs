@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Core.Common;
@@ -10,14 +9,14 @@ using CSharpScript.Game.Module.UiNavigation;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002CCB RID: 11467
+// Token: 0x02002224 RID: 8740
 [NullableContext(1)]
 [Nullable(0)]
 [TickController(0)]
 public class UiNavigationNewController : UiControllerBase
 {
-	// Token: 0x1700206C RID: 8300
-	// (get) Token: 0x0601805A RID: 98394 RVA: 0x0061B1E4 File Offset: 0x006193E4
+	// Token: 0x170020BF RID: 8383
+	// (get) Token: 0x060158D7 RID: 88279 RVA: 0x00640DE0 File Offset: 0x0063EFE0
 	protected override bool IsTickEvenPausedInternal
 	{
 		get
@@ -26,7 +25,7 @@ public class UiNavigationNewController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0601805B RID: 98395 RVA: 0x0061B1E8 File Offset: 0x006193E8
+	// Token: 0x060158D8 RID: 88280 RVA: 0x00640DE4 File Offset: 0x0063EFE4
 	[NullableContext(2)]
 	private NavigationScrollbarData GetCurrentNavigationScrollbarData()
 	{
@@ -39,7 +38,7 @@ public class UiNavigationNewController : UiControllerBase
 		return currentViewHandle.GetScrollbarData();
 	}
 
-	// Token: 0x0601805C RID: 98396 RVA: 0x0061B22C File Offset: 0x0061942C
+	// Token: 0x060158D9 RID: 88281 RVA: 0x00640E28 File Offset: 0x0063F028
 	[return: Nullable(2)]
 	public unsafe TsUiNavigationBehaviorListener GetCurrentNavigationActiveListenerByTag(string tag, bool isAllowEmpty = false)
 	{
@@ -77,7 +76,7 @@ public class UiNavigationNewController : UiControllerBase
 		return activeListenerByTag;
 	}
 
-	// Token: 0x0601805D RID: 98397 RVA: 0x0061B33C File Offset: 0x0061953C
+	// Token: 0x060158DA RID: 88282 RVA: 0x00640F38 File Offset: 0x0063F138
 	[NullableContext(2)]
 	public TsUiNavigationBehaviorListener GetCurrentNavigationFocusListener()
 	{
@@ -95,7 +94,7 @@ public class UiNavigationNewController : UiControllerBase
 		return focusListener;
 	}
 
-	// Token: 0x0601805E RID: 98398 RVA: 0x0061B388 File Offset: 0x00619588
+	// Token: 0x060158DB RID: 88283 RVA: 0x00640F84 File Offset: 0x0063F184
 	[NullableContext(2)]
 	private NavigationGroup GetCurrentNavigationListenerGroup()
 	{
@@ -114,7 +113,7 @@ public class UiNavigationNewController : UiControllerBase
 		return navigationGroup;
 	}
 
-	// Token: 0x0601805F RID: 98399 RVA: 0x0061B3D4 File Offset: 0x006195D4
+	// Token: 0x060158DC RID: 88284 RVA: 0x00640FD0 File Offset: 0x0063F1D0
 	protected unsafe override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.LoadLguiEventSystemActor, new Action(this.Initialize));
@@ -139,7 +138,7 @@ public class UiNavigationNewController : UiControllerBase
 		InputDistributeController.Instance.BindAction("手柄引导下一步", new TInputHandle<InputDistributeDefine.EActionType>(this.OnGuideInputNavigation));
 	}
 
-	// Token: 0x06018060 RID: 98400 RVA: 0x0061B4FC File Offset: 0x006196FC
+	// Token: 0x060158DD RID: 88285 RVA: 0x006410F8 File Offset: 0x0063F2F8
 	protected unsafe override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.LoadLguiEventSystemActor, new Action(this.Initialize));
@@ -164,7 +163,7 @@ public class UiNavigationNewController : UiControllerBase
 		InputDistributeController.Instance.UnBindAction("手柄引导下一步", new TInputHandle<InputDistributeDefine.EActionType>(this.OnGuideInputNavigation));
 	}
 
-	// Token: 0x06018061 RID: 98401 RVA: 0x0061B624 File Offset: 0x00619824
+	// Token: 0x060158DE RID: 88286 RVA: 0x00641220 File Offset: 0x0063F420
 	private void Initialize()
 	{
 		ULGUIEventSystem lguiEventSystem = LguiEventSystemManager.Instance.LguiEventSystem;
@@ -179,7 +178,7 @@ public class UiNavigationNewController : UiControllerBase
 		InputDistributeModel.Instance.AddInputDistributeTagChangedListener("UiInputRoot.Navigation", new TInputTagChangedCallback(this.OnNavigationTagChanged));
 	}
 
-	// Token: 0x06018062 RID: 98402 RVA: 0x0061B698 File Offset: 0x00619898
+	// Token: 0x060158DF RID: 88287 RVA: 0x00641294 File Offset: 0x0063F494
 	private void Destroy()
 	{
 		UiNavigationLogic.ClearNavigationDelegate(LguiEventSystemManager.Instance.LguiEventSystem);
@@ -191,7 +190,7 @@ public class UiNavigationNewController : UiControllerBase
 		instance.RemoveInputDistributeTagChangedListener("UiInputRoot.Navigation", new TInputTagChangedCallback(this.OnNavigationTagChanged));
 	}
 
-	// Token: 0x06018063 RID: 98403 RVA: 0x0061B6CC File Offset: 0x006198CC
+	// Token: 0x060158E0 RID: 88288 RVA: 0x006412C8 File Offset: 0x0063F4C8
 	private void OnNavigationTagChanged(string tagName, bool tagExist)
 	{
 		if (!tagExist)
@@ -201,7 +200,7 @@ public class UiNavigationNewController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06018064 RID: 98404 RVA: 0x0061B700 File Offset: 0x00619900
+	// Token: 0x060158E1 RID: 88289 RVA: 0x006412FC File Offset: 0x0063F4FC
 	private void InputControllerMainTypeChange(EInputControllerMainType last, EInputControllerMainType now)
 	{
 		if (last == EInputControllerMainType.Gamepad || last == EInputControllerMainType.Keyboard)
@@ -211,7 +210,7 @@ public class UiNavigationNewController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06018065 RID: 98405 RVA: 0x0061B73C File Offset: 0x0061993C
+	// Token: 0x060158E2 RID: 88290 RVA: 0x00641338 File Offset: 0x0063F538
 	private unsafe void InputControllerChange(EInputControllerType last, EInputControllerType now)
 	{
 		Log instance = Log.Instance;
@@ -228,7 +227,7 @@ public class UiNavigationNewController : UiControllerBase
 		UiNavigationViewManager.Instance.RefreshCurrentHotKey();
 	}
 
-	// Token: 0x06018066 RID: 98406 RVA: 0x0061B7C8 File Offset: 0x006199C8
+	// Token: 0x060158E3 RID: 88291 RVA: 0x006413C4 File Offset: 0x0063F5C4
 	private void PointerInputTypeChange(ELGUIPointerInputType type)
 	{
 		if (Info.Instance.IsInGamepad())
@@ -244,13 +243,13 @@ public class UiNavigationNewController : UiControllerBase
 		UiNavigationLogic.HandleInputControllerTypeChange();
 	}
 
-	// Token: 0x06018067 RID: 98407 RVA: 0x0061B816 File Offset: 0x00619A16
+	// Token: 0x060158E4 RID: 88292 RVA: 0x00641412 File Offset: 0x0063F612
 	private void OnInputNavigation(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 	{
 		UiNavigationJoystickInput.TriggerActionInputTick(actionName, actionType);
 	}
 
-	// Token: 0x06018068 RID: 98408 RVA: 0x0061B820 File Offset: 0x00619A20
+	// Token: 0x060158E5 RID: 88293 RVA: 0x0064141C File Offset: 0x0063F61C
 	private void OnGuideInputNavigation(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 	{
 		UiNavigationModel instance = UiNavigationModel.Instance;
@@ -265,30 +264,39 @@ public class UiNavigationNewController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06018069 RID: 98409 RVA: 0x0061B851 File Offset: 0x00619A51
+	// Token: 0x060158E6 RID: 88294 RVA: 0x0064144D File Offset: 0x0063F64D
 	protected override void OnTick(float delta)
 	{
 		UiNavigationJoystickInput.Tick(delta);
 		UiNavigationModel.Instance.Tick(delta);
 	}
 
-	// Token: 0x0601806A RID: 98410 RVA: 0x0061B864 File Offset: 0x00619A64
+	// Token: 0x060158E7 RID: 88295 RVA: 0x00641460 File Offset: 0x0063F660
 	public void HotKeyCloseView()
 	{
 		TsUiNavigationBehaviorListener currentNavigationActiveListenerByTag = this.GetCurrentNavigationActiveListenerByTag("tag1", true);
 		if (Info.Instance.IsInGamepad() && this.JumpNavigationGroup(ELGUINavigationDirection.Prev))
 		{
-			UiNavigationLogic.ExecuteInterfaceMethod<INavigationInteractPrevGroup>(currentNavigationActiveListenerByTag.GetNavigationComponent(), "InteractClickPrevGroup", Array.Empty<object>());
+			INavigationInteractPrevGroup navigationInteractPrevGroup = ((currentNavigationActiveListenerByTag != null) ? currentNavigationActiveListenerByTag.GetNavigationComponent() : null) as INavigationInteractPrevGroup;
+			if (navigationInteractPrevGroup == null)
+			{
+				return;
+			}
+			navigationInteractPrevGroup.InteractClickPrevGroup();
 			return;
 		}
-		if (currentNavigationActiveListenerByTag == null)
+		else
 		{
+			if (currentNavigationActiveListenerByTag == null)
+			{
+				return;
+			}
+			this.ClickButtonInternal(currentNavigationActiveListenerByTag);
 			return;
 		}
-		this.ClickButtonInternal(currentNavigationActiveListenerByTag);
 	}
 
-	// Token: 0x0601806B RID: 98411 RVA: 0x0061B8B4 File Offset: 0x00619AB4
+	// Token: 0x060158E8 RID: 88296 RVA: 0x006414B8 File Offset: 0x0063F6B8
 	public void ClickButton(string tag)
 	{
 		TsUiNavigationBehaviorListener currentNavigationActiveListenerByTag = this.GetCurrentNavigationActiveListenerByTag(tag, true);
@@ -299,7 +307,7 @@ public class UiNavigationNewController : UiControllerBase
 		this.ClickButtonInternal(currentNavigationActiveListenerByTag);
 	}
 
-	// Token: 0x0601806C RID: 98412 RVA: 0x0061B8D8 File Offset: 0x00619AD8
+	// Token: 0x060158E9 RID: 88297 RVA: 0x006414DC File Offset: 0x0063F6DC
 	public bool SimulateClickItem(UUIItem uiItem, FVector2D? pivot)
 	{
 		TsLguiEventSystemActor lguiEventSystemActor = LguiEventSystemManager.Instance.LguiEventSystemActor;
@@ -311,28 +319,41 @@ public class UiNavigationNewController : UiControllerBase
 		return lguiEventSystemActor.SimulateClickButton(pointerId, uiItem, pivot);
 	}
 
-	// Token: 0x0601806D RID: 98413 RVA: 0x0061B904 File Offset: 0x00619B04
+	// Token: 0x060158EA RID: 88298 RVA: 0x00641508 File Offset: 0x0063F708
 	private void ClickButtonInternal(TsUiNavigationBehaviorListener listener)
 	{
 		if (this.InMaskState())
 		{
 			return;
 		}
-		if (!this.SimulateClickItem(listener.GetBehaviorComponent().RootUIComp, new FVector2D?(listener.ClickPivot)))
+		if (this.SimulateClickItem(listener.GetBehaviorComponent().RootUIComp, new FVector2D?(listener.ClickPivot)))
 		{
-			UiNavigationLogic.ExecuteInterfaceMethod<INavigationInteractFailClick>(listener.GetNavigationComponent(), "InteractClickFailHandle", Array.Empty<object>());
+			INavigationInteractClick navigationInteractClick = listener.GetNavigationComponent() as INavigationInteractClick;
+			if (navigationInteractClick != null)
+			{
+				navigationInteractClick.InteractClickHandle();
+			}
+			UiNavigationModel instance = UiNavigationModel.Instance;
+			if (instance == null)
+			{
+				return;
+			}
+			instance.RepeatMove();
 			return;
 		}
-		UiNavigationLogic.ExecuteInterfaceMethod<INavigationInteractClick>(listener.GetNavigationComponent(), "InteractClickHandle", Array.Empty<object>());
-		UiNavigationModel instance = UiNavigationModel.Instance;
-		if (instance == null)
+		else
 		{
+			INavigationInteractFailClick navigationInteractFailClick = listener.GetNavigationComponent() as INavigationInteractFailClick;
+			if (navigationInteractFailClick == null)
+			{
+				return;
+			}
+			navigationInteractFailClick.InteractClickFailHandle();
 			return;
 		}
-		instance.RepeatMove();
 	}
 
-	// Token: 0x0601806E RID: 98414 RVA: 0x0061B978 File Offset: 0x00619B78
+	// Token: 0x060158EB RID: 88299 RVA: 0x0064157C File Offset: 0x0063F77C
 	public void ClickButtonInside(string tag)
 	{
 		TsUiNavigationBehaviorListener currentNavigationFocusListener = this.GetCurrentNavigationFocusListener();
@@ -358,7 +379,7 @@ public class UiNavigationNewController : UiControllerBase
 		this.ClickButtonInternal(tsUiNavigationBehaviorListener);
 	}
 
-	// Token: 0x0601806F RID: 98415 RVA: 0x0061B9DC File Offset: 0x00619BDC
+	// Token: 0x060158EC RID: 88300 RVA: 0x006415E0 File Offset: 0x0063F7E0
 	public bool Interact(bool bPress, int configId)
 	{
 		TsUiNavigationBehaviorListener currentNavigationFocusListener = this.GetCurrentNavigationFocusListener();
@@ -373,21 +394,21 @@ public class UiNavigationNewController : UiControllerBase
 		return this.PointDownUpInternal(currentNavigationFocusListener, false, configId, this.DefaultPivot);
 	}
 
-	// Token: 0x06018070 RID: 98416 RVA: 0x0061BA17 File Offset: 0x00619C17
+	// Token: 0x060158ED RID: 88301 RVA: 0x0064161B File Offset: 0x0063F81B
 	[NullableContext(2)]
 	public bool InteractRelease(int configId, TsUiNavigationBehaviorListener listener)
 	{
 		return listener != null && this.PointDownUpInternal(listener, false, configId, this.DefaultPivot);
 	}
 
-	// Token: 0x06018071 RID: 98417 RVA: 0x0061BA30 File Offset: 0x00619C30
+	// Token: 0x060158EE RID: 88302 RVA: 0x00641634 File Offset: 0x0063F834
 	public void InteractClick()
 	{
 		TsUiNavigationBehaviorListener currentNavigationFocusListener = this.GetCurrentNavigationFocusListener();
 		this.InteractClickByListener(currentNavigationFocusListener);
 	}
 
-	// Token: 0x06018072 RID: 98418 RVA: 0x0061BA4B File Offset: 0x00619C4B
+	// Token: 0x060158EF RID: 88303 RVA: 0x0064164F File Offset: 0x0063F84F
 	[NullableContext(2)]
 	public void InteractClickByListener(TsUiNavigationBehaviorListener listener)
 	{
@@ -400,7 +421,7 @@ public class UiNavigationNewController : UiControllerBase
 		UiNavigationGlobalData.IsAllowLoopScrollInteractHighlight = false;
 	}
 
-	// Token: 0x06018073 RID: 98419 RVA: 0x0061BA64 File Offset: 0x00619C64
+	// Token: 0x060158F0 RID: 88304 RVA: 0x00641668 File Offset: 0x0063F868
 	public void FindScrollbar(bool isNext)
 	{
 		NavigationScrollbarData currentNavigationScrollbarData = this.GetCurrentNavigationScrollbarData();
@@ -416,7 +437,7 @@ public class UiNavigationNewController : UiControllerBase
 		currentNavigationScrollbarData.FindPrevScrollbar();
 	}
 
-	// Token: 0x06018074 RID: 98420 RVA: 0x0061BA8C File Offset: 0x00619C8C
+	// Token: 0x060158F1 RID: 88305 RVA: 0x00641690 File Offset: 0x0063F890
 	public void ScrollBarChangeSchedule(float value)
 	{
 		NavigationScrollbarData currentNavigationScrollbarData = this.GetCurrentNavigationScrollbarData();
@@ -428,7 +449,7 @@ public class UiNavigationNewController : UiControllerBase
 		this.HandleScrollbarComponentSetValue(currentScrollbar, value);
 	}
 
-	// Token: 0x06018075 RID: 98421 RVA: 0x0061BAB4 File Offset: 0x00619CB4
+	// Token: 0x060158F2 RID: 88306 RVA: 0x006416B8 File Offset: 0x0063F8B8
 	public void ScrollBarChangeScheduleByListener(TsUiNavigationBehaviorListener listener, float value)
 	{
 		UUIScrollViewComponent uuiscrollViewComponent = listener.GetBehaviorComponent() as UUIScrollViewComponent;
@@ -439,7 +460,7 @@ public class UiNavigationNewController : UiControllerBase
 		this.HandleScrollbarComponentSetValue(uuiscrollViewComponent, value);
 	}
 
-	// Token: 0x06018076 RID: 98422 RVA: 0x0061BADC File Offset: 0x00619CDC
+	// Token: 0x060158F3 RID: 88307 RVA: 0x006416E0 File Offset: 0x0063F8E0
 	public void VerticalScrollBarChangeSchedule(float value)
 	{
 		NavigationScrollbarData currentNavigationScrollbarData = this.GetCurrentNavigationScrollbarData();
@@ -455,7 +476,7 @@ public class UiNavigationNewController : UiControllerBase
 		this.HandleVerticalScrollbarComponentSetValue(currentScrollbar, value);
 	}
 
-	// Token: 0x06018077 RID: 98423 RVA: 0x0061BB08 File Offset: 0x00619D08
+	// Token: 0x060158F4 RID: 88308 RVA: 0x0064170C File Offset: 0x0063F90C
 	public void HorizontalScrollBarChangeSchedule(float value)
 	{
 		NavigationScrollbarData currentNavigationScrollbarData = this.GetCurrentNavigationScrollbarData();
@@ -467,7 +488,7 @@ public class UiNavigationNewController : UiControllerBase
 		this.HandleHorizontalScrollbarComponentSetValue(currentScrollbar, value);
 	}
 
-	// Token: 0x06018078 RID: 98424 RVA: 0x0061BB30 File Offset: 0x00619D30
+	// Token: 0x060158F5 RID: 88309 RVA: 0x00641734 File Offset: 0x0063F934
 	public void BookMarkNavigation(ELGUINavigationDirection direction, string tag)
 	{
 		TsUiNavigationBehaviorListener currentNavigationActiveListenerByTag = this.GetCurrentNavigationActiveListenerByTag(tag, false);
@@ -487,46 +508,63 @@ public class UiNavigationNewController : UiControllerBase
 			return;
 		}
 		UUIExtendToggle uuiextendToggle = null;
-		List<TsUiNavigationBehaviorListener> canFocusListeners = (from l in navigationGroup.ListenerList
-		where l.IsCanFocus()
-		select l).ToList<TsUiNavigationBehaviorListener>();
-		List<TsUiNavigationBehaviorListener> list = (from l in canFocusListeners
-		where l.IsSelectedToggle()
-		select l).ToList<TsUiNavigationBehaviorListener>();
-		if (list.Count == 1)
+		List<TsUiNavigationBehaviorListener> list = new List<TsUiNavigationBehaviorListener>();
+		foreach (TsUiNavigationBehaviorListener tsUiNavigationBehaviorListener in navigationGroup.ListenerList)
 		{
-			uuiextendToggle = (list[0].GetSelectableComponent() as UUIExtendToggle);
+			if (tsUiNavigationBehaviorListener.IsCanFocus())
+			{
+				list.Add(tsUiNavigationBehaviorListener);
+			}
 		}
-		else if (list.Count > 1)
+		List<TsUiNavigationBehaviorListener> list2 = new List<TsUiNavigationBehaviorListener>();
+		foreach (TsUiNavigationBehaviorListener tsUiNavigationBehaviorListener2 in list)
 		{
-			List<int> indices = (from l in list
-			select canFocusListeners.IndexOf(l) into x
-			orderby x
-			select x).ToList<int>();
-			if (!indices.Select((int val, int idx) => new ValueTuple<int, int>(val, idx)).All(([TupleElementNames(new string[]
+			if (tsUiNavigationBehaviorListener2.IsSelectedToggle())
 			{
-				"val",
-				"idx"
-			})] ValueTuple<int, int> x) => x.Item2 == 0 || x.Item1 == indices[x.Item2 - 1] + 1))
+				list2.Add(tsUiNavigationBehaviorListener2);
+			}
+		}
+		if (list2.Count == 1)
+		{
+			uuiextendToggle = (list2[0].GetSelectableComponent() as UUIExtendToggle);
+		}
+		else if (list2.Count > 1)
+		{
+			List<int> list3 = new List<int>();
+			foreach (TsUiNavigationBehaviorListener item in list2)
 			{
-				List<TsUiNavigationBehaviorListener> canFocusListeners2 = canFocusListeners;
-				List<int> indices3 = indices;
-				uuiextendToggle = (canFocusListeners2[indices3[indices3.Count - 1]].GetSelectableComponent() as UUIExtendToggle);
+				list3.Add(list.IndexOf(item));
+			}
+			list3.Sort();
+			bool flag = true;
+			for (int i = 1; i < list3.Count; i++)
+			{
+				if (list3[i] != list3[i - 1] + 1)
+				{
+					flag = false;
+					break;
+				}
+			}
+			if (!flag)
+			{
+				List<TsUiNavigationBehaviorListener> list4 = list;
+				List<int> list5 = list3;
+				uuiextendToggle = (list4[list5[list5.Count - 1]].GetSelectableComponent() as UUIExtendToggle);
 			}
 			else
 			{
 				int num;
 				if (direction != ELGUINavigationDirection.Right && direction != ELGUINavigationDirection.Down && direction != ELGUINavigationDirection.Next)
 				{
-					num = indices[0];
+					num = list3[0];
 				}
 				else
 				{
-					List<int> indices2 = indices;
-					num = indices2[indices2.Count - 1];
+					List<int> list6 = list3;
+					num = list6[list6.Count - 1];
 				}
 				int index = num;
-				uuiextendToggle = (canFocusListeners[index].GetSelectableComponent() as UUIExtendToggle);
+				uuiextendToggle = (list[index].GetSelectableComponent() as UUIExtendToggle);
 			}
 		}
 		USceneComponent usceneComponent = UiNavigationLogic.TryFindNavigationDelegate(direction, uuiextendToggle);
@@ -579,34 +617,34 @@ public class UiNavigationNewController : UiControllerBase
 		{
 			return;
 		}
-		TsUiNavigationBehaviorListener tsUiNavigationBehaviorListener = uuiextendToggle2.GetOwner().GetComponentByClass(TsUiNavigationBehaviorListener.StaticClass()) as TsUiNavigationBehaviorListener;
-		if (uuiextendToggle2.bAutoScrollOnSelected && tsUiNavigationBehaviorListener != null)
+		TsUiNavigationBehaviorListener tsUiNavigationBehaviorListener3 = uuiextendToggle2.GetOwner().GetComponentByClass(TsUiNavigationBehaviorListener.StaticClass()) as TsUiNavigationBehaviorListener;
+		if (uuiextendToggle2.bAutoScrollOnSelected && tsUiNavigationBehaviorListener3 != null)
 		{
-			UiNavigationScrollProxy scrollProxy = tsUiNavigationBehaviorListener.ScrollProxy;
-			bool? flag;
+			UiNavigationScrollProxy scrollProxy = tsUiNavigationBehaviorListener3.ScrollProxy;
+			bool? flag2;
 			if (scrollProxy == null)
 			{
-				flag = null;
+				flag2 = null;
 			}
 			else
 			{
 				UUIScrollViewWithScrollbarComponent scrollView = scrollProxy.ScrollView;
-				flag = ((scrollView != null) ? new bool?(scrollView.IsValid()) : null);
+				flag2 = ((scrollView != null) ? new bool?(scrollView.IsValid()) : null);
 			}
-			bool? flag2 = flag;
-			if (flag2.GetValueOrDefault())
+			bool? flag3 = flag2;
+			if (flag3.GetValueOrDefault())
 			{
-				this.NavigateScrollTo(tsUiNavigationBehaviorListener);
+				this.NavigateScrollTo(tsUiNavigationBehaviorListener3);
 			}
 		}
-		this.ClickButtonInternal(tsUiNavigationBehaviorListener);
+		this.ClickButtonInternal(tsUiNavigationBehaviorListener3);
 		if (navigationGroup.RefreshNavigation)
 		{
 			this.MarkViewHandleRefreshNavigationDirty();
 		}
 	}
 
-	// Token: 0x06018079 RID: 98425 RVA: 0x0061BE6C File Offset: 0x0061A06C
+	// Token: 0x060158F6 RID: 88310 RVA: 0x00641A9C File Offset: 0x0063FC9C
 	public void MarkViewHandleRefreshNavigationDirty()
 	{
 		UiNavigationViewHandle currentViewHandle = UiNavigationViewManager.Instance.GetCurrentViewHandle();
@@ -617,7 +655,7 @@ public class UiNavigationNewController : UiControllerBase
 		currentViewHandle.MarkRefreshNavigationDirty(0);
 	}
 
-	// Token: 0x0601807A RID: 98426 RVA: 0x0061BE84 File Offset: 0x0061A084
+	// Token: 0x060158F7 RID: 88311 RVA: 0x00641AB4 File Offset: 0x0063FCB4
 	public void MarkViewHandleRefreshNavigationDirtyByGroupItem(UUIItem uiItem)
 	{
 		TsUiNavigationPanelConfig tsUiNavigationPanelConfig = uiItem.GetOwner().GetComponentByClass(TsUiNavigationPanelConfig.StaticClass()) as TsUiNavigationPanelConfig;
@@ -632,7 +670,7 @@ public class UiNavigationNewController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0601807B RID: 98427 RVA: 0x0061BEC0 File Offset: 0x0061A0C0
+	// Token: 0x060158F8 RID: 88312 RVA: 0x00641AF0 File Offset: 0x0063FCF0
 	public bool JumpNavigationGroupByTag(string tag)
 	{
 		NavigationGroup currentNavigationListenerGroup = this.GetCurrentNavigationListenerGroup();
@@ -649,7 +687,7 @@ public class UiNavigationNewController : UiControllerBase
 		return this.JumpNavigationGroupByName(currentNavigationListenerGroup.GroupName, nextGroupName);
 	}
 
-	// Token: 0x0601807C RID: 98428 RVA: 0x0061BF10 File Offset: 0x0061A110
+	// Token: 0x060158F9 RID: 88313 RVA: 0x00641B40 File Offset: 0x0063FD40
 	public bool JumpNavigationGroupByName(string lastGroupName, string nextGroupName)
 	{
 		UiNavigationViewHandle currentViewHandle = UiNavigationViewManager.Instance.GetCurrentViewHandle();
@@ -665,7 +703,7 @@ public class UiNavigationNewController : UiControllerBase
 		return flag;
 	}
 
-	// Token: 0x0601807D RID: 98429 RVA: 0x0061BF48 File Offset: 0x0061A148
+	// Token: 0x060158FA RID: 88314 RVA: 0x00641B78 File Offset: 0x0063FD78
 	public bool JumpNavigationGroup(ELGUINavigationDirection direction)
 	{
 		NavigationGroup currentNavigationListenerGroup = this.GetCurrentNavigationListenerGroup();
@@ -696,7 +734,7 @@ public class UiNavigationNewController : UiControllerBase
 		return flag;
 	}
 
-	// Token: 0x0601807E RID: 98430 RVA: 0x0061BFD4 File Offset: 0x0061A1D4
+	// Token: 0x060158FB RID: 88315 RVA: 0x00641C04 File Offset: 0x0063FE04
 	private bool ChangeFocusListenerByGroupName(UiNavigationViewHandle viewHandle, string groupName)
 	{
 		if (UiNavigationGlobalData.IsBlockNavigation)
@@ -724,7 +762,7 @@ public class UiNavigationNewController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0601807F RID: 98431 RVA: 0x0061C040 File Offset: 0x0061A240
+	// Token: 0x060158FC RID: 88316 RVA: 0x00641C70 File Offset: 0x0063FE70
 	private void NavigateScrollTo(TsUiNavigationBehaviorListener listener)
 	{
 		UiNavigationScrollProxy scrollProxy = listener.ScrollProxy;
@@ -740,7 +778,7 @@ public class UiNavigationNewController : UiControllerBase
 		listener.ScrollProxy.ScrollView.ScrollTo(selectableComponent.GetRootComponent(), false);
 	}
 
-	// Token: 0x06018080 RID: 98432 RVA: 0x0061C084 File Offset: 0x0061A284
+	// Token: 0x060158FD RID: 88317 RVA: 0x00641CB4 File Offset: 0x0063FEB4
 	[return: Nullable(2)]
 	private TsUiNavigationBehaviorListener GetCanNavigationListenerInGroup(NavigationGroup groupConfig)
 	{
@@ -760,7 +798,7 @@ public class UiNavigationNewController : UiControllerBase
 		return this.FindListenerByGroupConfig(groupConfig);
 	}
 
-	// Token: 0x06018081 RID: 98433 RVA: 0x0061C0E0 File Offset: 0x0061A2E0
+	// Token: 0x060158FE RID: 88318 RVA: 0x00641D10 File Offset: 0x0063FF10
 	[NullableContext(2)]
 	private static TsUiNavigationBehaviorListener GetLastCanNavigationListenerInGroup(NavigationGroup groupConfig)
 	{
@@ -793,7 +831,7 @@ public class UiNavigationNewController : UiControllerBase
 		return null;
 	}
 
-	// Token: 0x06018082 RID: 98434 RVA: 0x0061C1AC File Offset: 0x0061A3AC
+	// Token: 0x060158FF RID: 88319 RVA: 0x00641DDC File Offset: 0x0063FFDC
 	[return: Nullable(2)]
 	private TsUiNavigationBehaviorListener FindListenerByGroupConfig(NavigationGroup groupConfig)
 	{
@@ -820,7 +858,7 @@ public class UiNavigationNewController : UiControllerBase
 		return this.FindLoopOrDynListener(groupConfig);
 	}
 
-	// Token: 0x06018083 RID: 98435 RVA: 0x0061C214 File Offset: 0x0061A414
+	// Token: 0x06015900 RID: 88320 RVA: 0x00641E44 File Offset: 0x00640044
 	[return: Nullable(2)]
 	public TsUiNavigationBehaviorListener FindLoopOrDynListener(NavigationGroup groupConfig)
 	{
@@ -836,7 +874,7 @@ public class UiNavigationNewController : UiControllerBase
 		return this.FindLoopOrLayoutListener(groupConfig);
 	}
 
-	// Token: 0x06018084 RID: 98436 RVA: 0x0061C240 File Offset: 0x0061A440
+	// Token: 0x06015901 RID: 88321 RVA: 0x00641E70 File Offset: 0x00640070
 	[return: Nullable(2)]
 	private TsUiNavigationBehaviorListener FindDynListenerWithoutDefault(NavigationGroup groupConfig, TsUiNavigationBehaviorListener defaultListener)
 	{
@@ -872,7 +910,7 @@ public class UiNavigationNewController : UiControllerBase
 		return tsUiNavigationBehaviorListener;
 	}
 
-	// Token: 0x06018085 RID: 98437 RVA: 0x0061C2EC File Offset: 0x0061A4EC
+	// Token: 0x06015902 RID: 88322 RVA: 0x00641F1C File Offset: 0x0064011C
 	[return: Nullable(2)]
 	private TsUiNavigationBehaviorListener FindMultiTemplateScrollListenerWithoutDefault(NavigationGroup groupConfig, TsUiNavigationBehaviorListener defaultListener)
 	{
@@ -897,7 +935,7 @@ public class UiNavigationNewController : UiControllerBase
 		return tsUiNavigationBehaviorListener;
 	}
 
-	// Token: 0x06018086 RID: 98438 RVA: 0x0061C359 File Offset: 0x0061A559
+	// Token: 0x06015903 RID: 88323 RVA: 0x00641F89 File Offset: 0x00640189
 	[return: Nullable(2)]
 	private TsUiNavigationBehaviorListener FindLoopOrLayoutListenerWithoutDefault(NavigationGroup groupConfig, TsUiNavigationBehaviorListener listener)
 	{
@@ -916,7 +954,7 @@ public class UiNavigationNewController : UiControllerBase
 		return null;
 	}
 
-	// Token: 0x06018087 RID: 98439 RVA: 0x0061C388 File Offset: 0x0061A588
+	// Token: 0x06015904 RID: 88324 RVA: 0x00641FB8 File Offset: 0x006401B8
 	[return: Nullable(2)]
 	private TsUiNavigationBehaviorListener FindLoopOrLayoutListener(NavigationGroup groupConfig)
 	{
@@ -940,7 +978,7 @@ public class UiNavigationNewController : UiControllerBase
 		return tsUiNavigationBehaviorListener;
 	}
 
-	// Token: 0x06018088 RID: 98440 RVA: 0x0061C3DB File Offset: 0x0061A5DB
+	// Token: 0x06015905 RID: 88325 RVA: 0x0064200B File Offset: 0x0064020B
 	[return: Nullable(2)]
 	private TsUiNavigationBehaviorListener FindLoopOrLayoutListenerWithDefault(NavigationGroup groupConfig, TsUiNavigationBehaviorListener defaultListener)
 	{
@@ -955,7 +993,7 @@ public class UiNavigationNewController : UiControllerBase
 		return this.FindLoopListenerWithDefault(groupConfig, defaultListener);
 	}
 
-	// Token: 0x06018089 RID: 98441 RVA: 0x0061C408 File Offset: 0x0061A608
+	// Token: 0x06015906 RID: 88326 RVA: 0x00642038 File Offset: 0x00640238
 	private List<TsUiNavigationBehaviorListener> GetDynListenerListInGroup(AUIBaseActor baseActor, NavigationGroup groupConfig)
 	{
 		TArray<UActorComponent> componentsInChildren = ULGUIBPLibrary.GetComponentsInChildren(baseActor, TsUiNavigationBehaviorListener.StaticClass(), true);
@@ -971,7 +1009,7 @@ public class UiNavigationNewController : UiControllerBase
 		return list;
 	}
 
-	// Token: 0x0601808A RID: 98442 RVA: 0x0061C470 File Offset: 0x0061A670
+	// Token: 0x06015907 RID: 88327 RVA: 0x006420A0 File Offset: 0x006402A0
 	[return: Nullable(2)]
 	private TsUiNavigationBehaviorListener FindDynListenerWithDefault(NavigationGroup groupConfig, TsUiNavigationBehaviorListener defaultListener)
 	{
@@ -1009,7 +1047,7 @@ public class UiNavigationNewController : UiControllerBase
 		return tsUiNavigationBehaviorListener;
 	}
 
-	// Token: 0x0601808B RID: 98443 RVA: 0x0061C524 File Offset: 0x0061A724
+	// Token: 0x06015908 RID: 88328 RVA: 0x00642154 File Offset: 0x00640354
 	[return: Nullable(2)]
 	private TsUiNavigationBehaviorListener FindLoopListenerWithDefault(NavigationGroup groupConfig, TsUiNavigationBehaviorListener defaultListener)
 	{
@@ -1037,7 +1075,7 @@ public class UiNavigationNewController : UiControllerBase
 		return tsUiNavigationBehaviorListener;
 	}
 
-	// Token: 0x0601808C RID: 98444 RVA: 0x0061C5A4 File Offset: 0x0061A7A4
+	// Token: 0x06015909 RID: 88329 RVA: 0x006421D4 File Offset: 0x006403D4
 	[return: Nullable(2)]
 	private TsUiNavigationBehaviorListener FindMultiTemplateScrollListenerWithDefault(NavigationGroup groupConfig, TsUiNavigationBehaviorListener defaultListener)
 	{
@@ -1065,7 +1103,7 @@ public class UiNavigationNewController : UiControllerBase
 		return tsUiNavigationBehaviorListener;
 	}
 
-	// Token: 0x0601808D RID: 98445 RVA: 0x0061C61C File Offset: 0x0061A81C
+	// Token: 0x0601590A RID: 88330 RVA: 0x0064224C File Offset: 0x0064044C
 	[return: Nullable(2)]
 	public TsUiNavigationBehaviorListener FindSuitableListenerWithoutLayout(NavigationGroup groupConfig)
 	{
@@ -1088,7 +1126,7 @@ public class UiNavigationNewController : UiControllerBase
 		return tsUiNavigationBehaviorListener;
 	}
 
-	// Token: 0x0601808E RID: 98446 RVA: 0x0061C668 File Offset: 0x0061A868
+	// Token: 0x0601590B RID: 88331 RVA: 0x00642298 File Offset: 0x00640498
 	[return: Nullable(2)]
 	public TsUiNavigationBehaviorListener GetCanFocusInsideListener(TsUiNavigationBehaviorListener listener)
 	{
@@ -1112,7 +1150,7 @@ public class UiNavigationNewController : UiControllerBase
 		return null;
 	}
 
-	// Token: 0x0601808F RID: 98447 RVA: 0x0061C6F0 File Offset: 0x0061A8F0
+	// Token: 0x0601590C RID: 88332 RVA: 0x00642320 File Offset: 0x00640520
 	public List<TsUiNavigationBehaviorListener> GetCanFocusInsideListenerList(TsUiNavigationBehaviorListener listener)
 	{
 		HashSet<string> insideGroupNameSet = listener.GetNavigationGroup().InsideGroupNameSet;
@@ -1136,7 +1174,7 @@ public class UiNavigationNewController : UiControllerBase
 		return list;
 	}
 
-	// Token: 0x06018090 RID: 98448 RVA: 0x0061C788 File Offset: 0x0061A988
+	// Token: 0x0601590D RID: 88333 RVA: 0x006423B8 File Offset: 0x006405B8
 	public bool IsInFocusInsideListenerList(TsUiNavigationBehaviorListener parent, TsUiNavigationBehaviorListener target)
 	{
 		if (StringUtils.IsEmpty(target.GroupName))
@@ -1148,7 +1186,7 @@ public class UiNavigationNewController : UiControllerBase
 		return componentsInChildren != null && insideGroupNameSet.Contains(target.GroupName) && componentsInChildren.Contains(target);
 	}
 
-	// Token: 0x06018091 RID: 98449 RVA: 0x0061C7E4 File Offset: 0x0061A9E4
+	// Token: 0x0601590E RID: 88334 RVA: 0x00642414 File Offset: 0x00640614
 	public void JumpInsideNavigationGroup()
 	{
 		NavigationGroup currentNavigationListenerGroup = this.GetCurrentNavigationListenerGroup();
@@ -1176,7 +1214,7 @@ public class UiNavigationNewController : UiControllerBase
 		this.SwitchNavigationFocus(canFocusInsideListener);
 	}
 
-	// Token: 0x06018092 RID: 98450 RVA: 0x0061C898 File Offset: 0x0061AA98
+	// Token: 0x0601590F RID: 88335 RVA: 0x006424C8 File Offset: 0x006406C8
 	public void SimulationPointUp(string tag, int configId, Vector2D pivot = null)
 	{
 		pivot = (pivot ?? this.DefaultPivot);
@@ -1201,7 +1239,7 @@ public class UiNavigationNewController : UiControllerBase
 		this.PointDownUpInternal(currentNavigationActiveListenerByTag, false, configId, pivot);
 	}
 
-	// Token: 0x06018093 RID: 98451 RVA: 0x0061C904 File Offset: 0x0061AB04
+	// Token: 0x06015910 RID: 88336 RVA: 0x00642534 File Offset: 0x00640734
 	public void SimulationPointUpInside(string tag, int configId, [Nullable(2)] TsUiNavigationBehaviorListener listener)
 	{
 		if (listener != null)
@@ -1228,7 +1266,7 @@ public class UiNavigationNewController : UiControllerBase
 		this.PointDownUpInternal(childListenerByTag, false, configId, this.DefaultPivot);
 	}
 
-	// Token: 0x06018094 RID: 98452 RVA: 0x0061C978 File Offset: 0x0061AB78
+	// Token: 0x06015911 RID: 88337 RVA: 0x006425A8 File Offset: 0x006407A8
 	private bool PointDownUpInternal(TsUiNavigationBehaviorListener listener, bool isPress, int configId, Vector2D pivot)
 	{
 		if (isPress && this.InMaskState())
@@ -1249,7 +1287,7 @@ public class UiNavigationNewController : UiControllerBase
 		return lguiEventSystemActor.SimulationPointerDownUp(pointerId2, listener.RootUIComp, false, pivot.ToUeVector2D(false));
 	}
 
-	// Token: 0x06018095 RID: 98453 RVA: 0x0061C9EC File Offset: 0x0061ABEC
+	// Token: 0x06015912 RID: 88338 RVA: 0x0064261C File Offset: 0x0064081C
 	[NullableContext(2)]
 	public bool GamepadInteractSimulationPointer(ULGUIBehaviour selectableComponent, bool isPress)
 	{
@@ -1261,7 +1299,7 @@ public class UiNavigationNewController : UiControllerBase
 		return lguiEventSystemActor != null && lguiEventSystemActor.SimulationPointerDownUp(0, selectableComponent.RootUIComp, isPress, this.DefaultPivot.ToUeVector2D(false));
 	}
 
-	// Token: 0x06018096 RID: 98454 RVA: 0x0061CA30 File Offset: 0x0061AC30
+	// Token: 0x06015913 RID: 88339 RVA: 0x00642660 File Offset: 0x00640860
 	public void SimulationPointDown(string tag, int configId, Vector2D pivot = null)
 	{
 		pivot = (pivot ?? this.DefaultPivot);
@@ -1273,7 +1311,7 @@ public class UiNavigationNewController : UiControllerBase
 		this.PointDownUpInternal(currentNavigationActiveListenerByTag, true, configId, pivot);
 	}
 
-	// Token: 0x06018097 RID: 98455 RVA: 0x0061CA64 File Offset: 0x0061AC64
+	// Token: 0x06015914 RID: 88340 RVA: 0x00642694 File Offset: 0x00640894
 	[return: Nullable(2)]
 	public TsUiNavigationBehaviorListener SimulationPointDownInside(string tag, int configId)
 	{
@@ -1297,7 +1335,7 @@ public class UiNavigationNewController : UiControllerBase
 		return childListenerByTag;
 	}
 
-	// Token: 0x06018098 RID: 98456 RVA: 0x0061CAC8 File Offset: 0x0061ACC8
+	// Token: 0x06015915 RID: 88341 RVA: 0x006426F8 File Offset: 0x006408F8
 	public void FindTarget(ELGUINavigationDirection direction)
 	{
 		TsUiNavigationBehaviorListener currentNavigationFocusListener = this.GetCurrentNavigationFocusListener();
@@ -1315,7 +1353,7 @@ public class UiNavigationNewController : UiControllerBase
 		this.NavigateScrollTo(listener);
 	}
 
-	// Token: 0x06018099 RID: 98457 RVA: 0x0061CB24 File Offset: 0x0061AD24
+	// Token: 0x06015916 RID: 88342 RVA: 0x00642754 File Offset: 0x00640954
 	public void SliderComponentSetValue(string tag, float value)
 	{
 		TsUiNavigationBehaviorListener currentNavigationActiveListenerByTag = this.GetCurrentNavigationActiveListenerByTag(tag, false);
@@ -1326,7 +1364,7 @@ public class UiNavigationNewController : UiControllerBase
 		this.HandleSliderComponentValue(currentNavigationActiveListenerByTag.GetSelectableComponent(), value);
 	}
 
-	// Token: 0x0601809A RID: 98458 RVA: 0x0061CB4C File Offset: 0x0061AD4C
+	// Token: 0x06015917 RID: 88343 RVA: 0x0064277C File Offset: 0x0064097C
 	public void SliderInsideComponentSetValue(string tag, float value)
 	{
 		TsUiNavigationBehaviorListener currentNavigationFocusListener = this.GetCurrentNavigationFocusListener();
@@ -1348,7 +1386,7 @@ public class UiNavigationNewController : UiControllerBase
 		this.HandleSliderComponentValue(focusListenerInsideListenerByTag.GetSelectableComponent(), value);
 	}
 
-	// Token: 0x0601809B RID: 98459 RVA: 0x0061CBA8 File Offset: 0x0061ADA8
+	// Token: 0x06015918 RID: 88344 RVA: 0x006427D8 File Offset: 0x006409D8
 	public void ScrollbarInsideComponentSetValue(string tag, float value)
 	{
 		TsUiNavigationBehaviorListener currentNavigationFocusListener = this.GetCurrentNavigationFocusListener();
@@ -1370,7 +1408,7 @@ public class UiNavigationNewController : UiControllerBase
 		this.HandleScrollbarComponentSetValue(focusListenerInsideListenerByTag.GetBehaviorComponent(), value);
 	}
 
-	// Token: 0x0601809C RID: 98460 RVA: 0x0061CC04 File Offset: 0x0061AE04
+	// Token: 0x06015919 RID: 88345 RVA: 0x00642834 File Offset: 0x00640A34
 	private void HandleScrollbarComponentSetValue(ULGUIBehaviour behavior, float value)
 	{
 		UUIScrollViewComponent uuiscrollViewComponent = behavior as UUIScrollViewComponent;
@@ -1385,7 +1423,7 @@ public class UiNavigationNewController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0601809D RID: 98461 RVA: 0x0061CC40 File Offset: 0x0061AE40
+	// Token: 0x0601591A RID: 88346 RVA: 0x00642870 File Offset: 0x00640A70
 	private void HandleVerticalScrollbarComponentSetValue(ULGUIBehaviour behavior, float value)
 	{
 		UUIScrollViewComponent uuiscrollViewComponent = behavior as UUIScrollViewComponent;
@@ -1395,7 +1433,7 @@ public class UiNavigationNewController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0601809E RID: 98462 RVA: 0x0061CC64 File Offset: 0x0061AE64
+	// Token: 0x0601591B RID: 88347 RVA: 0x00642894 File Offset: 0x00640A94
 	private void HandleHorizontalScrollbarComponentSetValue(ULGUIBehaviour behavior, float value)
 	{
 		UUIScrollViewComponent uuiscrollViewComponent = behavior as UUIScrollViewComponent;
@@ -1405,7 +1443,7 @@ public class UiNavigationNewController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0601809F RID: 98463 RVA: 0x0061CC88 File Offset: 0x0061AE88
+	// Token: 0x0601591C RID: 88348 RVA: 0x006428B8 File Offset: 0x00640AB8
 	private void HandleSliderComponentValue(UUISelectableComponent selectableComponent, float value)
 	{
 		UUISliderComponent uuisliderComponent = selectableComponent as UUISliderComponent;
@@ -1428,7 +1466,7 @@ public class UiNavigationNewController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060180A0 RID: 98464 RVA: 0x0061CCFC File Offset: 0x0061AEFC
+	// Token: 0x0601591D RID: 88349 RVA: 0x0064292C File Offset: 0x00640B2C
 	public void DraggableComponentNavigate(string tag, bool toNext)
 	{
 		TsUiNavigationBehaviorListener currentNavigationActiveListenerByTag = this.GetCurrentNavigationActiveListenerByTag(tag, false);
@@ -1439,7 +1477,7 @@ public class UiNavigationNewController : UiControllerBase
 		this.HandleDraggableComponentNavigate(currentNavigationActiveListenerByTag.GetBehaviorComponent(), toNext);
 	}
 
-	// Token: 0x060180A1 RID: 98465 RVA: 0x0061CD24 File Offset: 0x0061AF24
+	// Token: 0x0601591E RID: 88350 RVA: 0x00642954 File Offset: 0x00640B54
 	public void DraggableInsideComponentNavigate(string tag, bool toNext)
 	{
 		TsUiNavigationBehaviorListener currentNavigationFocusListener = this.GetCurrentNavigationFocusListener();
@@ -1461,7 +1499,7 @@ public class UiNavigationNewController : UiControllerBase
 		this.HandleDraggableComponentNavigate(focusListenerInsideListenerByTag.GetBehaviorComponent(), toNext);
 	}
 
-	// Token: 0x060180A2 RID: 98466 RVA: 0x0061CD80 File Offset: 0x0061AF80
+	// Token: 0x0601591F RID: 88351 RVA: 0x006429B0 File Offset: 0x00640BB0
 	private void HandleDraggableComponentNavigate(ULGUIBehaviour behavior, bool toNext)
 	{
 		UUIDraggableComponent uuidraggableComponent = behavior as UUIDraggableComponent;
@@ -1476,7 +1514,7 @@ public class UiNavigationNewController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060180A3 RID: 98467 RVA: 0x0061CDA8 File Offset: 0x0061AFA8
+	// Token: 0x06015920 RID: 88352 RVA: 0x006429D8 File Offset: 0x00640BD8
 	[NullableContext(2)]
 	public void SwitchNavigationFocus(TsUiNavigationBehaviorListener listener)
 	{
@@ -1512,7 +1550,7 @@ public class UiNavigationNewController : UiControllerBase
 		UiNavigationGlobalData.IsAllowCrossNavigationGroup = false;
 	}
 
-	// Token: 0x060180A4 RID: 98468 RVA: 0x0061CE64 File Offset: 0x0061B064
+	// Token: 0x06015921 RID: 88353 RVA: 0x00642A94 File Offset: 0x00640C94
 	[NullableContext(2)]
 	public bool SwitchNavigationFocusWithDirtyCheck(TsUiNavigationBehaviorListener listener)
 	{
@@ -1539,7 +1577,7 @@ public class UiNavigationNewController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x060180A5 RID: 98469 RVA: 0x0061CEBC File Offset: 0x0061B0BC
+	// Token: 0x06015922 RID: 88354 RVA: 0x00642AEC File Offset: 0x00640CEC
 	public bool SetNavigationFocusForView(UUIItem uiItem, bool checkDirty = false, bool waitListenerActive = false, bool suppressDefaultFind = false)
 	{
 		if (Info.Instance.IsInTouch())
@@ -1593,7 +1631,7 @@ public class UiNavigationNewController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x060180A6 RID: 98470 RVA: 0x0061CF94 File Offset: 0x0061B194
+	// Token: 0x06015923 RID: 88355 RVA: 0x00642BC4 File Offset: 0x00640DC4
 	public void SetNavigationFocusForViewByRootItem(UUIItem uiItem, string targetGroupName, bool checkDirty = false)
 	{
 		if (Info.Instance.IsInGamepad())
@@ -1637,7 +1675,7 @@ public class UiNavigationNewController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060180A7 RID: 98471 RVA: 0x0061D07C File Offset: 0x0061B27C
+	// Token: 0x06015924 RID: 88356 RVA: 0x00642CAC File Offset: 0x00640EAC
 	public void ResetNavigationFocusForViewWithDirtyCheck()
 	{
 		if (!Info.Instance.IsInTouch())
@@ -1647,7 +1685,7 @@ public class UiNavigationNewController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060180A8 RID: 98472 RVA: 0x0061D0BC File Offset: 0x0061B2BC
+	// Token: 0x06015925 RID: 88357 RVA: 0x00642CEC File Offset: 0x00640EEC
 	public void SetNavigationFocusForViewSameGroup(UUIItem uiItem)
 	{
 		if (Info.Instance.IsInGamepad())
@@ -1695,7 +1733,7 @@ public class UiNavigationNewController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060180A9 RID: 98473 RVA: 0x0061D18C File Offset: 0x0061B38C
+	// Token: 0x06015926 RID: 88358 RVA: 0x00642DBC File Offset: 0x00640FBC
 	private void SetNavigationMousePositionForGuide(UUIItem uiItem)
 	{
 		UiNavigationViewHandle currentViewHandle = UiNavigationViewManager.Instance.GetCurrentViewHandle();
@@ -1715,7 +1753,7 @@ public class UiNavigationNewController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060180AA RID: 98474 RVA: 0x0061D1E8 File Offset: 0x0061B3E8
+	// Token: 0x06015927 RID: 88359 RVA: 0x00642E18 File Offset: 0x00641018
 	public void RefreshNavigationMousePositionForGuide(UUIItem uiItem)
 	{
 		if (!Info.Instance.IsInGamepad())
@@ -1737,7 +1775,7 @@ public class UiNavigationNewController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060180AB RID: 98475 RVA: 0x0061D234 File Offset: 0x0061B434
+	// Token: 0x06015928 RID: 88360 RVA: 0x00642E64 File Offset: 0x00641064
 	public void SetNavigationFocusForGuide(UUIItem uiItem)
 	{
 		if (Info.Instance.IsInGamepad())
@@ -1797,7 +1835,7 @@ public class UiNavigationNewController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060180AC RID: 98476 RVA: 0x0061D354 File Offset: 0x0061B554
+	// Token: 0x06015929 RID: 88361 RVA: 0x00642F84 File Offset: 0x00641184
 	public void SetNavigationMousePositionForView(UUIItem uiItem)
 	{
 		if (!Info.Instance.IsInGamepad())
@@ -1825,7 +1863,7 @@ public class UiNavigationNewController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060180AD RID: 98477 RVA: 0x0061D3D0 File Offset: 0x0061B5D0
+	// Token: 0x0601592A RID: 88362 RVA: 0x00643000 File Offset: 0x00641200
 	public void MarkViewHandleRefreshNavigationDirtyByItem(UUIItem uiItem)
 	{
 		if (!Info.Instance.IsInTouch())
@@ -1878,7 +1916,7 @@ public class UiNavigationNewController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060180AE RID: 98478 RVA: 0x0061D496 File Offset: 0x0061B696
+	// Token: 0x0601592B RID: 88363 RVA: 0x006430C6 File Offset: 0x006412C6
 	[NullableContext(2)]
 	public void MarkViewHandleRefreshNavigationDirtyByListener(TsUiNavigationBehaviorListener listener)
 	{
@@ -1902,7 +1940,7 @@ public class UiNavigationNewController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060180AF RID: 98479 RVA: 0x0061D4C4 File Offset: 0x0061B6C4
+	// Token: 0x0601592C RID: 88364 RVA: 0x006430F4 File Offset: 0x006412F4
 	public void ResetNavigationFocusForGuide()
 	{
 		if (Info.Instance.IsInGamepad())
@@ -1916,7 +1954,7 @@ public class UiNavigationNewController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060180B0 RID: 98480 RVA: 0x0061D4FC File Offset: 0x0061B6FC
+	// Token: 0x0601592D RID: 88365 RVA: 0x0064312C File Offset: 0x0064132C
 	[return: Nullable(2)]
 	public UUIItem GetNoneTagNavigateItemByUiItem(UUIItem uiItem)
 	{
@@ -1936,7 +1974,7 @@ public class UiNavigationNewController : UiControllerBase
 		return null;
 	}
 
-	// Token: 0x060180B1 RID: 98481 RVA: 0x0061D570 File Offset: 0x0061B770
+	// Token: 0x0601592E RID: 88366 RVA: 0x006431A0 File Offset: 0x006413A0
 	[return: Nullable(2)]
 	public TsUiNavigationBehaviorListener GetFocusListenerInsideListenerByTag(TsUiNavigationBehaviorListener listener, string tag)
 	{
@@ -1962,7 +2000,7 @@ public class UiNavigationNewController : UiControllerBase
 		return null;
 	}
 
-	// Token: 0x060180B2 RID: 98482 RVA: 0x0061D5F0 File Offset: 0x0061B7F0
+	// Token: 0x0601592F RID: 88367 RVA: 0x00643220 File Offset: 0x00641420
 	public List<TsUiNavigationBehaviorListener> GetMarkBookActiveListenerList([Nullable(2)] NavigationGroup groupConfig)
 	{
 		if (groupConfig == null)
@@ -1988,7 +2026,7 @@ public class UiNavigationNewController : UiControllerBase
 		return list;
 	}
 
-	// Token: 0x060180B3 RID: 98483 RVA: 0x0061D650 File Offset: 0x0061B850
+	// Token: 0x06015930 RID: 88368 RVA: 0x00643280 File Offset: 0x00641480
 	public void ActiveTextInput(string tag)
 	{
 		TsUiNavigationBehaviorListener currentNavigationActiveListenerByTag = this.GetCurrentNavigationActiveListenerByTag(tag, false);
@@ -1999,7 +2037,7 @@ public class UiNavigationNewController : UiControllerBase
 		(currentNavigationActiveListenerByTag.GetBehaviorComponent() as UUITextInputComponent).ActivateInputText();
 	}
 
-	// Token: 0x060180B4 RID: 98484 RVA: 0x0061D67C File Offset: 0x0061B87C
+	// Token: 0x06015931 RID: 88369 RVA: 0x006432AC File Offset: 0x006414AC
 	public void ActiveTextInputInside(string tag)
 	{
 		TsUiNavigationBehaviorListener currentNavigationFocusListener = this.GetCurrentNavigationFocusListener();
@@ -2015,7 +2053,7 @@ public class UiNavigationNewController : UiControllerBase
 		(focusListenerInsideListenerByTag.GetBehaviorComponent() as UUITextInputComponent).ActivateInputText();
 	}
 
-	// Token: 0x060180B5 RID: 98485 RVA: 0x0061D6B4 File Offset: 0x0061B8B4
+	// Token: 0x06015932 RID: 88370 RVA: 0x006432E4 File Offset: 0x006414E4
 	public void HandleCommonConsumeNavigation(string tag)
 	{
 		if (StringUtils.IsBlank(tag))
@@ -2059,7 +2097,7 @@ public class UiNavigationNewController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060180B6 RID: 98486 RVA: 0x0061D77C File Offset: 0x0061B97C
+	// Token: 0x06015933 RID: 88371 RVA: 0x006433AC File Offset: 0x006415AC
 	public void HandleCommonConsumeNavigationToLast(string tag)
 	{
 		if (StringUtils.IsBlank(tag))
@@ -2091,7 +2129,7 @@ public class UiNavigationNewController : UiControllerBase
 		activeNavigationGroupByNameCheckAll.PrevGroupName = currentNavigationListenerGroup.GroupName;
 	}
 
-	// Token: 0x060180B7 RID: 98487 RVA: 0x0061D800 File Offset: 0x0061BA00
+	// Token: 0x06015934 RID: 88372 RVA: 0x00643430 File Offset: 0x00641630
 	public void HandleCommonConsumeNavigationInside()
 	{
 		TsUiNavigationBehaviorListener currentNavigationFocusListener = this.GetCurrentNavigationFocusListener();
@@ -2118,13 +2156,13 @@ public class UiNavigationNewController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060180B8 RID: 98488 RVA: 0x0061D867 File Offset: 0x0061BA67
+	// Token: 0x06015935 RID: 88373 RVA: 0x00643497 File Offset: 0x00641697
 	public bool IsGamepadHitListenerUseDrag()
 	{
 		return Info.Instance.IsInGamepad() && UiNavigationViewManager.Instance.GetCurrentViewHandle().IsGamepadHitListenerUseDrag();
 	}
 
-	// Token: 0x060180B9 RID: 98489 RVA: 0x0061D888 File Offset: 0x0061BA88
+	// Token: 0x06015936 RID: 88374 RVA: 0x006434B8 File Offset: 0x006416B8
 	public void SimulationPointerTrigger(bool isPress)
 	{
 		TsLguiEventSystemActor lguiEventSystemActor = LguiEventSystemManager.Instance.LguiEventSystemActor;
@@ -2141,7 +2179,7 @@ public class UiNavigationNewController : UiControllerBase
 		currentViewHandle.SetGamepadMouseTrigger(isPress);
 	}
 
-	// Token: 0x060180BA RID: 98490 RVA: 0x0061D8C4 File Offset: 0x0061BAC4
+	// Token: 0x06015937 RID: 88375 RVA: 0x006434F4 File Offset: 0x006416F4
 	public void GamepadControlMouseMoveForward(float value)
 	{
 		UiNavigationViewHandle currentViewHandle = UiNavigationViewManager.Instance.GetCurrentViewHandle();
@@ -2152,7 +2190,7 @@ public class UiNavigationNewController : UiControllerBase
 		currentViewHandle.SetGamepadMouseMoveForward(value);
 	}
 
-	// Token: 0x060180BB RID: 98491 RVA: 0x0061D8E8 File Offset: 0x0061BAE8
+	// Token: 0x06015938 RID: 88376 RVA: 0x00643518 File Offset: 0x00641718
 	public void GamepadControlMouseMoveRight(float value)
 	{
 		UiNavigationViewHandle currentViewHandle = UiNavigationViewManager.Instance.GetCurrentViewHandle();
@@ -2163,7 +2201,7 @@ public class UiNavigationNewController : UiControllerBase
 		currentViewHandle.SetGamepadMouseMoveRight(value);
 	}
 
-	// Token: 0x060180BC RID: 98492 RVA: 0x0061D90B File Offset: 0x0061BB0B
+	// Token: 0x06015939 RID: 88377 RVA: 0x0064353B File Offset: 0x0064173B
 	public void RepeatCursorMove()
 	{
 		if (Info.Instance.IsInGamepad())
@@ -2177,13 +2215,13 @@ public class UiNavigationNewController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060180BD RID: 98493 RVA: 0x0061D928 File Offset: 0x0061BB28
+	// Token: 0x0601593A RID: 88378 RVA: 0x00643558 File Offset: 0x00641758
 	private bool InMaskState()
 	{
 		return UiLayer.Instance.IsInMask() || !ReConnectModel.Instance.IsRpcEmpty();
 	}
 
-	// Token: 0x060180BE RID: 98494 RVA: 0x0061D948 File Offset: 0x0061BB48
+	// Token: 0x0601593B RID: 88379 RVA: 0x00643578 File Offset: 0x00641778
 	public List<TsUiNavigationBehaviorListener> GetDynamicScrollListenerListByListener(TsUiNavigationBehaviorListener listener)
 	{
 		NavigationGroup navigationGroup = listener.GetNavigationGroup();
@@ -2206,7 +2244,7 @@ public class UiNavigationNewController : UiControllerBase
 		return list;
 	}
 
-	// Token: 0x060180BF RID: 98495 RVA: 0x0061D9C0 File Offset: 0x0061BBC0
+	// Token: 0x0601593C RID: 88380 RVA: 0x006435F0 File Offset: 0x006417F0
 	public void NotifyNavigationMousePositionDragState(bool state)
 	{
 		if (Info.Instance.IsInTouch())
@@ -2221,7 +2259,7 @@ public class UiNavigationNewController : UiControllerBase
 		currentViewHandle.NotifyNavigationMousePositionDragState(state);
 	}
 
-	// Token: 0x060180C0 RID: 98496 RVA: 0x0061D9F0 File Offset: 0x0061BBF0
+	// Token: 0x0601593D RID: 88381 RVA: 0x00643620 File Offset: 0x00641820
 	public bool IsNavigationMousePositionDragging()
 	{
 		if (Info.Instance.IsInTouch())
@@ -2232,7 +2270,7 @@ public class UiNavigationNewController : UiControllerBase
 		return currentViewHandle != null && currentViewHandle.IsNavigationMousePositionDragging();
 	}
 
-	// Token: 0x060180C1 RID: 98497 RVA: 0x0061DA24 File Offset: 0x0061BC24
+	// Token: 0x0601593E RID: 88382 RVA: 0x00643654 File Offset: 0x00641854
 	public void SetLockUseDragState(bool lockState)
 	{
 		if (Info.Instance.IsInTouch())
@@ -2247,7 +2285,7 @@ public class UiNavigationNewController : UiControllerBase
 		currentViewHandle.SetLockUseDragState(lockState);
 	}
 
-	// Token: 0x060180C2 RID: 98498 RVA: 0x0061DA54 File Offset: 0x0061BC54
+	// Token: 0x0601593F RID: 88383 RVA: 0x00643684 File Offset: 0x00641884
 	public void SetLockUseDragStateByPanelItem(UUIItem uiItem, bool lockState)
 	{
 		if (Info.Instance.IsInTouch())
@@ -2281,7 +2319,7 @@ public class UiNavigationNewController : UiControllerBase
 		viewHandle.SetLockUseDragState(lockState);
 	}
 
-	// Token: 0x060180C3 RID: 98499 RVA: 0x0061DAC0 File Offset: 0x0061BCC0
+	// Token: 0x06015940 RID: 88384 RVA: 0x006436F0 File Offset: 0x006418F0
 	[NullableContext(2)]
 	public Vector2D GetMouseViewportPosition()
 	{
@@ -2297,8 +2335,8 @@ public class UiNavigationNewController : UiControllerBase
 		return currentViewHandle.GetMouseViewportPosition();
 	}
 
-	// Token: 0x1700206D RID: 8301
-	// (get) Token: 0x060180C4 RID: 98500 RVA: 0x0061DAF1 File Offset: 0x0061BCF1
+	// Token: 0x170020C0 RID: 8384
+	// (get) Token: 0x06015941 RID: 88385 RVA: 0x00643721 File Offset: 0x00641921
 	public static UiNavigationNewController Instance
 	{
 		get
@@ -2307,7 +2345,7 @@ public class UiNavigationNewController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060180C5 RID: 98501 RVA: 0x0061DAF8 File Offset: 0x0061BCF8
+	// Token: 0x06015942 RID: 88386 RVA: 0x00643728 File Offset: 0x00641928
 	public static UiNavigationNewController GetOrCreateInstance()
 	{
 		if (UiNavigationNewController._Instance == null)
@@ -2317,7 +2355,7 @@ public class UiNavigationNewController : UiControllerBase
 		return UiNavigationNewController._Instance;
 	}
 
-	// Token: 0x060180C6 RID: 98502 RVA: 0x0061DB0C File Offset: 0x0061BD0C
+	// Token: 0x06015943 RID: 88387 RVA: 0x0064373C File Offset: 0x0064193C
 	public static bool CreateInstance()
 	{
 		if (UiNavigationNewController._Instance != null)
@@ -2328,27 +2366,27 @@ public class UiNavigationNewController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x060180C7 RID: 98503 RVA: 0x0061DB22 File Offset: 0x0061BD22
+	// Token: 0x06015944 RID: 88388 RVA: 0x00643752 File Offset: 0x00641952
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060180C8 RID: 98504 RVA: 0x0061DB24 File Offset: 0x0061BD24
+	// Token: 0x06015945 RID: 88389 RVA: 0x00643754 File Offset: 0x00641954
 	public static void ResetStaticDefaultValue()
 	{
 		UiNavigationNewController._Instance = null;
 	}
 
-	// Token: 0x060180C9 RID: 98505 RVA: 0x0061DB2C File Offset: 0x0061BD2C
+	// Token: 0x06015946 RID: 88390 RVA: 0x0064375C File Offset: 0x0064195C
 	static UiNavigationNewController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(UiNavigationNewController.CreateStaticDefaultValue), new Action(UiNavigationNewController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400B2E8 RID: 45800
+	// Token: 0x0400B654 RID: 46676
 	protected Vector2D DefaultPivot = Vector2D.Create(0.5, 0.5);
 
-	// Token: 0x0400B2E9 RID: 45801
+	// Token: 0x0400B655 RID: 46677
 	[Nullable(2)]
 	private static UiNavigationNewController _Instance;
 }

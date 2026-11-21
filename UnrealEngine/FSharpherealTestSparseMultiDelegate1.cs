@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200273B RID: 10043
+	// Token: 0x020007F0 RID: 2032
 	[UnrealStructLayout(1, 1, UnrealReflectionPropertyTypeCode.MulticastSparseDelegate)]
 	public sealed class FSharpherealTestSparseMultiDelegate1 : FSparseDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x060252D5 RID: 152277 RVA: 0x003712B2 File Offset: 0x0036F4B2
+		// Token: 0x0600ADC4 RID: 44484 RVA: 0x00101280 File Offset: 0x000FF480
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FSharpherealTestSparseMultiDelegate1.StaticFunctionPtr();
 		}
 
-		// Token: 0x060252D6 RID: 152278 RVA: 0x003712BE File Offset: 0x0036F4BE
+		// Token: 0x0600ADC5 RID: 44485 RVA: 0x0010128C File Offset: 0x000FF48C
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FSharpherealTestSparseMultiDelegate1._FunctionPtr == IntPtr.Zero)
@@ -27,8 +27,8 @@ namespace UnrealEngine
 			return FSharpherealTestSparseMultiDelegate1._FunctionPtr;
 		}
 
-		// Token: 0x17008F6B RID: 36715
-		// (get) Token: 0x060252D7 RID: 152279 RVA: 0x003712E1 File Offset: 0x0036F4E1
+		// Token: 0x17002054 RID: 8276
+		// (get) Token: 0x0600ADC6 RID: 44486 RVA: 0x001012AF File Offset: 0x000FF4AF
 		public override FName DelegateName
 		{
 			get
@@ -37,22 +37,21 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060252D8 RID: 152280 RVA: 0x003712E8 File Offset: 0x0036F4E8
+		// Token: 0x0600ADC7 RID: 44487 RVA: 0x001012B6 File Offset: 0x000FF4B6
 		[NullableContext(2)]
 		public FSharpherealTestSparseMultiDelegate1(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060252D9 RID: 152281 RVA: 0x003712F2 File Offset: 0x0036F4F2
+		// Token: 0x0600ADC8 RID: 44488 RVA: 0x001012C0 File Offset: 0x000FF4C0
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<int>) ?? ((Action<int>)Delegate.CreateDelegate(typeof(Action<int>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x060252DA RID: 152282 RVA: 0x00371324 File Offset: 0x0036F524
+		// Token: 0x0600ADC9 RID: 44489 RVA: 0x001012F4 File Offset: 0x000FF4F4
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action<int> Callback)
 		{
 			if (FSharpherealTestSparseMultiDelegate1.RegisterId == 0)
@@ -68,18 +67,16 @@ namespace UnrealEngine
 			base.Add(delegateName, Callback, FSharpherealTestSparseMultiDelegate1.RegisterId);
 		}
 
-		// Token: 0x060252DB RID: 152283 RVA: 0x00371374 File Offset: 0x0036F574
+		// Token: 0x0600ADCA RID: 44490 RVA: 0x00101344 File Offset: 0x000FF544
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action<int> Callback)
 		{
 			FName delegateName = this.DelegateName;
 			base.Remove(delegateName, Callback);
 		}
 
-		// Token: 0x060252DC RID: 152284 RVA: 0x00371394 File Offset: 0x0036F594
+		// Token: 0x0600ADCB RID: 44491 RVA: 0x00101364 File Offset: 0x000FF564
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(int Val)
 		{
 			FSharpherealTestSparseMultiDelegate1.__FSharpherealTestSparseMultiDelegate1_DelegateParams* ptr = stackalloc FSharpherealTestSparseMultiDelegate1.__FSharpherealTestSparseMultiDelegate1_DelegateParams[(UIntPtr)19] + 15L / (long)sizeof(FSharpherealTestSparseMultiDelegate1.__FSharpherealTestSparseMultiDelegate1_DelegateParams) & -16L;
@@ -88,10 +85,9 @@ namespace UnrealEngine
 			FSparseDelegate.BroadcastInternal(base.GetOwner().NativePtr, this.DelegateName, (void*)ptr);
 		}
 
-		// Token: 0x060252DD RID: 152285 RVA: 0x003713E0 File Offset: 0x0036F5E0
+		// Token: 0x0600ADCC RID: 44492 RVA: 0x001013B0 File Offset: 0x000FF5B0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<int> action = target as Action<int>;
@@ -102,31 +98,31 @@ namespace UnrealEngine
 			action(((FSharpherealTestSparseMultiDelegate1.__FSharpherealTestSparseMultiDelegate1_DelegateParams*)__Parameters)->Val);
 		}
 
-		// Token: 0x04014096 RID: 82070
+		// Token: 0x04004AF9 RID: 19193
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04014097 RID: 82071
+		// Token: 0x04004AFA RID: 19194
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/SharpherealTest.SharpherealTestSparseMultiDelegate1__DelegateSignature";
 
-		// Token: 0x04014098 RID: 82072
+		// Token: 0x04004AFB RID: 19195
 		private static int RegisterId;
 
-		// Token: 0x020036C8 RID: 14024
+		// Token: 0x02000F9A RID: 3994
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
-		protected ref struct __FSharpherealTestSparseMultiDelegate1_DelegateParams
+		private ref struct __FSharpherealTestSparseMultiDelegate1_DelegateParams
 		{
-			// Token: 0x040177EB RID: 96235
+			// Token: 0x0400639E RID: 25502
 			[FieldOffset(0)]
 			public int Val;
 		}
 
-		// Token: 0x020036C9 RID: 14025
+		// Token: 0x02000F9B RID: 3995
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040177EC RID: 96236
+			// Token: 0x0400639F RID: 25503
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

@@ -6,7 +6,7 @@ using CSharpScript.Game.Module.SkipInterface;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001BA0 RID: 7072
+// Token: 0x0200105F RID: 4191
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class FloroRanchTaskItem : GridProxyAbstract<FloroRanchTaskData>
 {
-	// Token: 0x0600D291 RID: 53905 RVA: 0x003061A8 File Offset: 0x003043A8
+	// Token: 0x0600A6A2 RID: 42658 RVA: 0x00311288 File Offset: 0x0030F488
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -52,19 +52,19 @@ public class FloroRanchTaskItem : GridProxyAbstract<FloroRanchTaskData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D292 RID: 53906 RVA: 0x00306353 File Offset: 0x00304553
+	// Token: 0x0600A6A3 RID: 42659 RVA: 0x00311433 File Offset: 0x0030F633
 	protected override void OnStart()
 	{
 		this.RewardScroll = new GenericScrollViewNew<CommonItemSmallItemGrid, TItem>(base.GetScrollViewWithScrollbar(2), new Func<CommonItemSmallItemGrid>(this.CreateRewardItem), null, false, null);
 	}
 
-	// Token: 0x0600D293 RID: 53907 RVA: 0x00306376 File Offset: 0x00304576
+	// Token: 0x0600A6A4 RID: 42660 RVA: 0x00311456 File Offset: 0x0030F656
 	private CommonItemSmallItemGrid CreateRewardItem()
 	{
 		return new CommonItemSmallItemGrid();
 	}
 
-	// Token: 0x0600D294 RID: 53908 RVA: 0x00306380 File Offset: 0x00304580
+	// Token: 0x0600A6A5 RID: 42661 RVA: 0x00311460 File Offset: 0x0030F660
 	public override void Refresh(FloroRanchTaskData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -92,22 +92,22 @@ public class FloroRanchTaskItem : GridProxyAbstract<FloroRanchTaskData>
 		}));
 	}
 
-	// Token: 0x0600D295 RID: 53909 RVA: 0x003064A6 File Offset: 0x003046A6
+	// Token: 0x0600A6A6 RID: 42662 RVA: 0x00311586 File Offset: 0x0030F786
 	private void OnJumpBtnClick()
 	{
 		SkipTaskManager.RunByConfigId(this.Data.JumpId, null);
 	}
 
-	// Token: 0x04006088 RID: 24712
+	// Token: 0x04006157 RID: 24919
 	[Nullable(2)]
 	private FloroRanchTaskData Data;
 
-	// Token: 0x04006089 RID: 24713
+	// Token: 0x04006158 RID: 24920
 	public Action OnGetBtnClick = delegate()
 	{
 	};
 
-	// Token: 0x0400608A RID: 24714
+	// Token: 0x04006159 RID: 24921
 	[Nullable(new byte[]
 	{
 		2,
@@ -115,35 +115,35 @@ public class FloroRanchTaskItem : GridProxyAbstract<FloroRanchTaskData>
 	})]
 	private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardScroll;
 
-	// Token: 0x0200813B RID: 33083
+	// Token: 0x020072C9 RID: 29385
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x0402A2EC RID: 172780
+		// Token: 0x04025620 RID: 153120
 		public const int TextName = 0;
 
-		// Token: 0x0402A2ED RID: 172781
+		// Token: 0x04025621 RID: 153121
 		public const int TextProgress = 1;
 
-		// Token: 0x0402A2EE RID: 172782
+		// Token: 0x04025622 RID: 153122
 		public const int ScrollReward = 2;
 
-		// Token: 0x0402A2EF RID: 172783
+		// Token: 0x04025623 RID: 153123
 		public const int ItemReward = 3;
 
-		// Token: 0x0402A2F0 RID: 172784
+		// Token: 0x04025624 RID: 153124
 		public const int ButtonGet = 4;
 
-		// Token: 0x0402A2F1 RID: 172785
+		// Token: 0x04025625 RID: 153125
 		public const int TextDoing = 5;
 
-		// Token: 0x0402A2F2 RID: 172786
+		// Token: 0x04025626 RID: 153126
 		public const int SpriteFinish = 6;
 
-		// Token: 0x0402A2F3 RID: 172787
+		// Token: 0x04025627 RID: 153127
 		public const int ItemRedDot = 7;
 
-		// Token: 0x0402A2F4 RID: 172788
+		// Token: 0x04025628 RID: 153128
 		public const int ButtonJump = 8;
 	}
 }

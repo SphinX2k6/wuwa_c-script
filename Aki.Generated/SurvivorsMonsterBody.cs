@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020010FF RID: 4351
+	// Token: 0x02001235 RID: 4661
 	public struct SurvivorsMonsterBody : IFlatbufferObject
 	{
-		// Token: 0x170038E5 RID: 14565
-		// (get) Token: 0x0600DAD3 RID: 56019 RVA: 0x00324AF4 File Offset: 0x00322CF4
+		// Token: 0x17003C3B RID: 15419
+		// (get) Token: 0x0600E81E RID: 59422 RVA: 0x0034FE2C File Offset: 0x0034E02C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DAD4 RID: 56020 RVA: 0x00324B01 File Offset: 0x00322D01
+		// Token: 0x0600E81F RID: 59423 RVA: 0x0034FE39 File Offset: 0x0034E039
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600DAD5 RID: 56021 RVA: 0x00324B08 File Offset: 0x00322D08
+		// Token: 0x0600E820 RID: 59424 RVA: 0x0034FE40 File Offset: 0x0034E040
 		public static SurvivorsMonsterBody GetRootAsSurvivorsMonsterBody(ByteBuffer _bb)
 		{
 			return SurvivorsMonsterBody.GetRootAsSurvivorsMonsterBody(_bb, default(SurvivorsMonsterBody));
 		}
 
-		// Token: 0x0600DAD6 RID: 56022 RVA: 0x00324B24 File Offset: 0x00322D24
+		// Token: 0x0600E821 RID: 59425 RVA: 0x0034FE5C File Offset: 0x0034E05C
 		public static SurvivorsMonsterBody GetRootAsSurvivorsMonsterBody(ByteBuffer _bb, SurvivorsMonsterBody obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600DAD7 RID: 56023 RVA: 0x00324B41 File Offset: 0x00322D41
+		// Token: 0x0600E822 RID: 59426 RVA: 0x0034FE79 File Offset: 0x0034E079
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600DAD8 RID: 56024 RVA: 0x00324B50 File Offset: 0x00322D50
+		// Token: 0x0600E823 RID: 59427 RVA: 0x0034FE88 File Offset: 0x0034E088
 		public SurvivorsMonsterBody __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170038E6 RID: 14566
-		// (get) Token: 0x0600DAD9 RID: 56025 RVA: 0x00324B60 File Offset: 0x00322D60
+		// Token: 0x17003C3C RID: 15420
+		// (get) Token: 0x0600E824 RID: 59428 RVA: 0x0034FE98 File Offset: 0x0034E098
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170038E7 RID: 14567
-		// (get) Token: 0x0600DADA RID: 56026 RVA: 0x00324B9C File Offset: 0x00322D9C
+		// Token: 0x17003C3D RID: 15421
+		// (get) Token: 0x0600E825 RID: 59429 RVA: 0x0034FED4 File Offset: 0x0034E0D4
 		public string Name
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DADB RID: 56027 RVA: 0x00324BD3 File Offset: 0x00322DD3
+		// Token: 0x0600E826 RID: 59430 RVA: 0x0034FF0B File Offset: 0x0034E10B
 		public Span<byte> GetNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0600DADC RID: 56028 RVA: 0x00324BE2 File Offset: 0x00322DE2
+		// Token: 0x0600E827 RID: 59431 RVA: 0x0034FF1A File Offset: 0x0034E11A
 		public byte[] GetNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04005237 RID: 21047
+		// Token: 0x0400587A RID: 22650
 		private Table __p;
 	}
 }

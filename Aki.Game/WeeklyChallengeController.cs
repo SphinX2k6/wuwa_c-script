@@ -8,50 +8,50 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 
-// Token: 0x02002D2C RID: 11564
+// Token: 0x02002286 RID: 8838
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class WeeklyChallengeController : UiControllerBase
 {
-	// Token: 0x060184EE RID: 99566 RVA: 0x00630334 File Offset: 0x0062E534
+	// Token: 0x06015D90 RID: 89488 RVA: 0x00656348 File Offset: 0x00654548
 	protected override bool OnInit()
 	{
 		return true;
 	}
 
-	// Token: 0x060184EF RID: 99567 RVA: 0x00630337 File Offset: 0x0062E537
+	// Token: 0x06015D91 RID: 89489 RVA: 0x0065634B File Offset: 0x0065454B
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.WeeklyFrameworkInfoUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnReceiveWeeklyFrameworkUpdateNotify));
 	}
 
-	// Token: 0x060184F0 RID: 99568 RVA: 0x00630355 File Offset: 0x0062E555
+	// Token: 0x06015D92 RID: 89490 RVA: 0x00656369 File Offset: 0x00654569
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.WeeklyFrameworkInfoUpdateNotify);
 	}
 
-	// Token: 0x060184F1 RID: 99569 RVA: 0x00630367 File Offset: 0x0062E567
+	// Token: 0x06015D93 RID: 89491 RVA: 0x0065637B File Offset: 0x0065457B
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.OnLoadingNetDataDone, new Action(this.OnLoadingNetDataDone));
 	}
 
-	// Token: 0x060184F2 RID: 99570 RVA: 0x00630385 File Offset: 0x0062E585
+	// Token: 0x06015D94 RID: 89492 RVA: 0x00656399 File Offset: 0x00654599
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OnLoadingNetDataDone, new Action(this.OnLoadingNetDataDone));
 	}
 
-	// Token: 0x060184F3 RID: 99571 RVA: 0x006303A3 File Offset: 0x0062E5A3
+	// Token: 0x06015D95 RID: 89493 RVA: 0x006563B7 File Offset: 0x006545B7
 	private void OnLoadingNetDataDone()
 	{
 		WeeklyChallengeModel.Instance.InitGoalData();
 		this.RequestWeeklyFrameworkInfo().Forget<bool>();
 	}
 
-	// Token: 0x060184F4 RID: 99572 RVA: 0x006303BC File Offset: 0x0062E5BC
+	// Token: 0x06015D96 RID: 89494 RVA: 0x006563D0 File Offset: 0x006545D0
 	[NullableContext(0)]
 	public UniTask<bool> RequestWeeklyFrameworkInfo()
 	{
@@ -62,7 +62,7 @@ public class WeeklyChallengeController : UiControllerBase
 		return <RequestWeeklyFrameworkInfo>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060184F5 RID: 99573 RVA: 0x006303F8 File Offset: 0x0062E5F8
+	// Token: 0x06015D97 RID: 89495 RVA: 0x0065640C File Offset: 0x0065460C
 	public void RequestWeeklyFrameworkScoreReward(List<int> taskIds)
 	{
 		WeeklyChallengeController.<>c__DisplayClass7_0 CS$<>8__locals1 = new WeeklyChallengeController.<>c__DisplayClass7_0();
@@ -72,7 +72,7 @@ public class WeeklyChallengeController : UiControllerBase
 		Net.Instance.Call(ERequestMessageId.WeeklyFrameworkScoreRewardRequest, weeklyFrameworkScoreRewardRequest, new Action<IMessage, Net.CallbackStatus>(CS$<>8__locals1.<RequestWeeklyFrameworkScoreReward>g__ResponseAction|0), 0);
 	}
 
-	// Token: 0x060184F6 RID: 99574 RVA: 0x00630448 File Offset: 0x0062E648
+	// Token: 0x06015D98 RID: 89496 RVA: 0x0065645C File Offset: 0x0065465C
 	[NullableContext(2)]
 	private void OnReceiveWeeklyFrameworkUpdateNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -80,8 +80,8 @@ public class WeeklyChallengeController : UiControllerBase
 		WeeklyChallengeModel.Instance.RefreshData(weeklyFrameworkInfoUpdateNotify.FrameworkInfo);
 	}
 
-	// Token: 0x170020C5 RID: 8389
-	// (get) Token: 0x060184F7 RID: 99575 RVA: 0x0063046C File Offset: 0x0062E66C
+	// Token: 0x17002120 RID: 8480
+	// (get) Token: 0x06015D99 RID: 89497 RVA: 0x00656480 File Offset: 0x00654680
 	public static WeeklyChallengeController Instance
 	{
 		get
@@ -90,7 +90,7 @@ public class WeeklyChallengeController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060184F8 RID: 99576 RVA: 0x00630473 File Offset: 0x0062E673
+	// Token: 0x06015D9A RID: 89498 RVA: 0x00656487 File Offset: 0x00654687
 	public static WeeklyChallengeController GetOrCreateInstance()
 	{
 		if (WeeklyChallengeController._Instance == null)
@@ -100,7 +100,7 @@ public class WeeklyChallengeController : UiControllerBase
 		return WeeklyChallengeController._Instance;
 	}
 
-	// Token: 0x060184F9 RID: 99577 RVA: 0x00630487 File Offset: 0x0062E687
+	// Token: 0x06015D9B RID: 89499 RVA: 0x0065649B File Offset: 0x0065469B
 	public static bool CreateInstance()
 	{
 		if (WeeklyChallengeController._Instance != null)
@@ -111,24 +111,24 @@ public class WeeklyChallengeController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x060184FA RID: 99578 RVA: 0x0063049D File Offset: 0x0062E69D
+	// Token: 0x06015D9C RID: 89500 RVA: 0x006564B1 File Offset: 0x006546B1
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060184FB RID: 99579 RVA: 0x0063049F File Offset: 0x0062E69F
+	// Token: 0x06015D9D RID: 89501 RVA: 0x006564B3 File Offset: 0x006546B3
 	public static void ResetStaticDefaultValue()
 	{
 		WeeklyChallengeController._Instance = null;
 	}
 
-	// Token: 0x060184FC RID: 99580 RVA: 0x006304A7 File Offset: 0x0062E6A7
+	// Token: 0x06015D9E RID: 89502 RVA: 0x006564BB File Offset: 0x006546BB
 	static WeeklyChallengeController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(WeeklyChallengeController.CreateStaticDefaultValue), new Action(WeeklyChallengeController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400B489 RID: 46217
+	// Token: 0x0400B7FE RID: 47102
 	[Nullable(2)]
 	private static WeeklyChallengeController _Instance;
 }

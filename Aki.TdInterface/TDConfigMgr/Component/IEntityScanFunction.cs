@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000333 RID: 819
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200037A RID: 890
 	public class IEntityScanFunction
 	{
-		// Token: 0x0600101E RID: 4126 RVA: 0x0003826C File Offset: 0x0003646C
+		// Token: 0x06001150 RID: 4432 RVA: 0x0003B238 File Offset: 0x00039438
 		private IEntityScanFunction_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600101F RID: 4127 RVA: 0x000382A4 File Offset: 0x000364A4
+		// Token: 0x06001151 RID: 4433 RVA: 0x0003B270 File Offset: 0x00039470
 		public static IEntityScanFunction Create([Nullable(2)] IEntityScanFunction instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001020 RID: 4128 RVA: 0x000382B7 File Offset: 0x000364B7
+		// Token: 0x06001152 RID: 4434 RVA: 0x0003B283 File Offset: 0x00039483
 		public static IEntityScanFunction CreateFromSetValue([Nullable(2)] IEntityScanFunction_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001021 RID: 4129 RVA: 0x000382CA File Offset: 0x000364CA
+		// Token: 0x06001153 RID: 4435 RVA: 0x0003B296 File Offset: 0x00039496
 		public IEntityScanFunction_SetValue ToSetValue()
 		{
 			return new IEntityScanFunction_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700049F RID: 1183
-		// (get) Token: 0x06001022 RID: 4130 RVA: 0x00038301 File Offset: 0x00036501
-		// (set) Token: 0x06001023 RID: 4131 RVA: 0x0003832C File Offset: 0x0003652C
+		// Token: 0x170004ED RID: 1261
+		// (get) Token: 0x06001154 RID: 4436 RVA: 0x0003B2CD File Offset: 0x000394CD
+		// (set) Token: 0x06001155 RID: 4437 RVA: 0x0003B2F8 File Offset: 0x000394F8
 		public virtual int ScanId
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004A0 RID: 1184
-		// (get) Token: 0x06001024 RID: 4132 RVA: 0x0003833A File Offset: 0x0003653A
-		// (set) Token: 0x06001025 RID: 4133 RVA: 0x00038365 File Offset: 0x00036565
+		// Token: 0x170004EE RID: 1262
+		// (get) Token: 0x06001156 RID: 4438 RVA: 0x0003B306 File Offset: 0x00039506
+		// (set) Token: 0x06001157 RID: 4439 RVA: 0x0003B331 File Offset: 0x00039531
 		public virtual bool IsConcealed
 		{
 			get
@@ -105,9 +103,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004A1 RID: 1185
-		// (get) Token: 0x06001026 RID: 4134 RVA: 0x00038374 File Offset: 0x00036574
-		// (set) Token: 0x06001027 RID: 4135 RVA: 0x000383D5 File Offset: 0x000365D5
+		// Token: 0x170004EF RID: 1263
+		// (get) Token: 0x06001158 RID: 4440 RVA: 0x0003B340 File Offset: 0x00039540
+		// (set) Token: 0x06001159 RID: 4441 RVA: 0x0003B3A1 File Offset: 0x000395A1
 		[Nullable(2)]
 		public virtual IScanTraceEffect TraceEffect
 		{
@@ -138,9 +136,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004A2 RID: 1186
-		// (get) Token: 0x06001028 RID: 4136 RVA: 0x000383EC File Offset: 0x000365EC
-		// (set) Token: 0x06001029 RID: 4137 RVA: 0x00038426 File Offset: 0x00036626
+		// Token: 0x170004F0 RID: 1264
+		// (get) Token: 0x0600115A RID: 4442 RVA: 0x0003B3B8 File Offset: 0x000395B8
+		// (set) Token: 0x0600115B RID: 4443 RVA: 0x0003B3F2 File Offset: 0x000395F2
 		public virtual ESpecificScanType? SpecificScanType
 		{
 			get
@@ -162,18 +160,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000D9A RID: 3482
+		// Token: 0x04000E85 RID: 3717
 		[Nullable(2)]
 		protected IEntityScanFunction FbInstance;
 
-		// Token: 0x04000D9B RID: 3483
+		// Token: 0x04000E86 RID: 3718
 		[Nullable(2)]
 		protected IEntityScanFunction_SetValue PocoInterface;
 
-		// Token: 0x04000D9C RID: 3484
+		// Token: 0x04000E87 RID: 3719
 		private IScanTraceEffect _TraceEffectCache;
 
-		// Token: 0x04000D9D RID: 3485
+		// Token: 0x04000E88 RID: 3720
 		private bool _TraceEffectInited;
 	}
 }

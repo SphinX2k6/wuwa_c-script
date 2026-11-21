@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02002FDB RID: 12251
+// Token: 0x02002530 RID: 9520
 public enum ETriggerTargetType
 {
-	// Token: 0x0400C49F RID: 50335
+	// Token: 0x0400C867 RID: 51303
 	Self,
-	// Token: 0x0400C4A0 RID: 50336
+	// Token: 0x0400C868 RID: 51304
 	LocalFormation,
-	// Token: 0x0400C4A1 RID: 50337
+	// Token: 0x0400C869 RID: 51305
 	AllFormation,
-	// Token: 0x0400C4A2 RID: 50338
+	// Token: 0x0400C86A RID: 51306
 	Enemy
 }

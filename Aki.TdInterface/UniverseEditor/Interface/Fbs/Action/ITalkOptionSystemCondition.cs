@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007352 RID: 29522
+	// Token: 0x02007B2A RID: 31530
 	public struct ITalkOptionSystemCondition : IFlatbufferObject
 	{
-		// Token: 0x1700E027 RID: 57383
-		// (get) Token: 0x06035926 RID: 219430 RVA: 0x0074BB24 File Offset: 0x00749D24
+		// Token: 0x1700EC23 RID: 60451
+		// (get) Token: 0x06038C59 RID: 232537 RVA: 0x007AD6AC File Offset: 0x007AB8AC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06035927 RID: 219431 RVA: 0x0074BB31 File Offset: 0x00749D31
+		// Token: 0x06038C5A RID: 232538 RVA: 0x007AD6B9 File Offset: 0x007AB8B9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06035928 RID: 219432 RVA: 0x0074BB38 File Offset: 0x00749D38
+		// Token: 0x06038C5B RID: 232539 RVA: 0x007AD6C0 File Offset: 0x007AB8C0
 		public static ITalkOptionSystemCondition GetRootAsITalkOptionSystemCondition(ByteBuffer _bb)
 		{
 			return ITalkOptionSystemCondition.GetRootAsITalkOptionSystemCondition(_bb, default(ITalkOptionSystemCondition));
 		}
 
-		// Token: 0x06035929 RID: 219433 RVA: 0x0074BB54 File Offset: 0x00749D54
+		// Token: 0x06038C5C RID: 232540 RVA: 0x007AD6DC File Offset: 0x007AB8DC
 		public static ITalkOptionSystemCondition GetRootAsITalkOptionSystemCondition(ByteBuffer _bb, ITalkOptionSystemCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0603592A RID: 219434 RVA: 0x0074BB71 File Offset: 0x00749D71
+		// Token: 0x06038C5D RID: 232541 RVA: 0x007AD6F9 File Offset: 0x007AB8F9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0603592B RID: 219435 RVA: 0x0074BB80 File Offset: 0x00749D80
+		// Token: 0x06038C5E RID: 232542 RVA: 0x007AD708 File Offset: 0x007AB908
 		public ITalkOptionSystemCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E028 RID: 57384
-		// (get) Token: 0x0603592C RID: 219436 RVA: 0x0074BB90 File Offset: 0x00749D90
+		// Token: 0x1700EC24 RID: 60452
+		// (get) Token: 0x06038C5F RID: 232543 RVA: 0x007AD718 File Offset: 0x007AB918
 		public ETalkOptionPreConditionType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E029 RID: 57385
-		// (get) Token: 0x0603592D RID: 219437 RVA: 0x0074BBCC File Offset: 0x00749DCC
+		// Token: 0x1700EC25 RID: 60453
+		// (get) Token: 0x06038C60 RID: 232544 RVA: 0x007AD754 File Offset: 0x007AB954
 		public ITalkOptionConditionSolarSchool? System
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E02A RID: 57386
-		// (get) Token: 0x0603592E RID: 219438 RVA: 0x0074BC2C File Offset: 0x00749E2C
+		// Token: 0x1700EC26 RID: 60454
+		// (get) Token: 0x06038C61 RID: 232545 RVA: 0x007AD7B4 File Offset: 0x007AB9B4
 		public bool HideWhenUnmet
 		{
 			get
@@ -88,8 +88,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E02B RID: 57387
-		// (get) Token: 0x0603592F RID: 219439 RVA: 0x0074BC6C File Offset: 0x00749E6C
+		// Token: 0x1700EC27 RID: 60455
+		// (get) Token: 0x06038C62 RID: 232546 RVA: 0x007AD7F4 File Offset: 0x007AB9F4
 		public bool HideConditionTextWhenUnmet
 		{
 			get
@@ -99,8 +99,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E02C RID: 57388
-		// (get) Token: 0x06035930 RID: 219440 RVA: 0x0074BCAC File Offset: 0x00749EAC
+		// Token: 0x1700EC28 RID: 60456
+		// (get) Token: 0x06038C63 RID: 232547 RVA: 0x007AD834 File Offset: 0x007ABA34
 		public string TidReplaceTextWhenUnmet
 		{
 			get
@@ -114,20 +114,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06035931 RID: 219441 RVA: 0x0074BCE4 File Offset: 0x00749EE4
+		// Token: 0x06038C64 RID: 232548 RVA: 0x007AD86C File Offset: 0x007ABA6C
 		public Span<byte> GetTidReplaceTextWhenUnmetBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x06035932 RID: 219442 RVA: 0x0074BCF4 File Offset: 0x00749EF4
+		// Token: 0x06038C65 RID: 232549 RVA: 0x007AD87C File Offset: 0x007ABA7C
 		public byte[] GetTidReplaceTextWhenUnmetArray()
 		{
 			return this.__p.__vector_as_array<byte>(12);
 		}
 
-		// Token: 0x1700E02D RID: 57389
-		// (get) Token: 0x06035933 RID: 219443 RVA: 0x0074BD04 File Offset: 0x00749F04
+		// Token: 0x1700EC29 RID: 60457
+		// (get) Token: 0x06038C66 RID: 232550 RVA: 0x007AD88C File Offset: 0x007ABA8C
 		public byte NullMask
 		{
 			get
@@ -141,7 +141,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06035934 RID: 219444 RVA: 0x0074BD41 File Offset: 0x00749F41
+		// Token: 0x06038C67 RID: 232551 RVA: 0x007AD8C9 File Offset: 0x007ABAC9
 		public static Offset<ITalkOptionSystemCondition> CreateITalkOptionSystemCondition(FlatBufferBuilder builder, ETalkOptionPreConditionType Type = ETalkOptionPreConditionType.PreOption, Offset<ITalkOptionConditionSolarSchool> SystemOffset = default(Offset<ITalkOptionConditionSolarSchool>), bool HideWhenUnmet = false, bool HideConditionTextWhenUnmet = false, StringOffset TidReplaceTextWhenUnmetOffset = default(StringOffset), byte NullMask = 0)
 		{
 			builder.StartTable(6);
@@ -154,55 +154,55 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITalkOptionSystemCondition.EndITalkOptionSystemCondition(builder);
 		}
 
-		// Token: 0x06035935 RID: 219445 RVA: 0x0074BD7D File Offset: 0x00749F7D
+		// Token: 0x06038C68 RID: 232552 RVA: 0x007AD905 File Offset: 0x007ABB05
 		public static void StartITalkOptionSystemCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x06035936 RID: 219446 RVA: 0x0074BD86 File Offset: 0x00749F86
+		// Token: 0x06038C69 RID: 232553 RVA: 0x007AD90E File Offset: 0x007ABB0E
 		public static void AddType(FlatBufferBuilder builder, ETalkOptionPreConditionType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06035937 RID: 219447 RVA: 0x0074BD91 File Offset: 0x00749F91
+		// Token: 0x06038C6A RID: 232554 RVA: 0x007AD919 File Offset: 0x007ABB19
 		public static void AddSystem(FlatBufferBuilder builder, Offset<ITalkOptionConditionSolarSchool> systemOffset)
 		{
 			builder.AddOffset(1, systemOffset.Value, 0);
 		}
 
-		// Token: 0x06035938 RID: 219448 RVA: 0x0074BDA1 File Offset: 0x00749FA1
+		// Token: 0x06038C6B RID: 232555 RVA: 0x007AD929 File Offset: 0x007ABB29
 		public static void AddHideWhenUnmet(FlatBufferBuilder builder, bool hideWhenUnmet)
 		{
 			builder.AddBool(2, hideWhenUnmet, false);
 		}
 
-		// Token: 0x06035939 RID: 219449 RVA: 0x0074BDAC File Offset: 0x00749FAC
+		// Token: 0x06038C6C RID: 232556 RVA: 0x007AD934 File Offset: 0x007ABB34
 		public static void AddHideConditionTextWhenUnmet(FlatBufferBuilder builder, bool hideConditionTextWhenUnmet)
 		{
 			builder.AddBool(3, hideConditionTextWhenUnmet, false);
 		}
 
-		// Token: 0x0603593A RID: 219450 RVA: 0x0074BDB7 File Offset: 0x00749FB7
+		// Token: 0x06038C6D RID: 232557 RVA: 0x007AD93F File Offset: 0x007ABB3F
 		public static void AddTidReplaceTextWhenUnmet(FlatBufferBuilder builder, StringOffset tidReplaceTextWhenUnmetOffset)
 		{
 			builder.AddOffset(4, tidReplaceTextWhenUnmetOffset.Value, 0);
 		}
 
-		// Token: 0x0603593B RID: 219451 RVA: 0x0074BDC7 File Offset: 0x00749FC7
+		// Token: 0x06038C6E RID: 232558 RVA: 0x007AD94F File Offset: 0x007ABB4F
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(5, nullMask, 0);
 		}
 
-		// Token: 0x0603593C RID: 219452 RVA: 0x0074BDD2 File Offset: 0x00749FD2
+		// Token: 0x06038C6F RID: 232559 RVA: 0x007AD95A File Offset: 0x007ABB5A
 		public static Offset<ITalkOptionSystemCondition> EndITalkOptionSystemCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<ITalkOptionSystemCondition>(builder.EndTable());
 		}
 
-		// Token: 0x0603593D RID: 219453 RVA: 0x0074BDE0 File Offset: 0x00749FE0
+		// Token: 0x06038C70 RID: 232560 RVA: 0x007AD968 File Offset: 0x007ABB68
 		public ITalkOptionSystemConditionT UnPack()
 		{
 			ITalkOptionSystemConditionT talkOptionSystemConditionT = new ITalkOptionSystemConditionT();
@@ -210,7 +210,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return talkOptionSystemConditionT;
 		}
 
-		// Token: 0x0603593E RID: 219454 RVA: 0x0074BDFC File Offset: 0x00749FFC
+		// Token: 0x06038C71 RID: 232561 RVA: 0x007AD984 File Offset: 0x007ABB84
 		public void UnPackTo(ITalkOptionSystemConditionT _o)
 		{
 			_o.Type = this.Type;
@@ -221,7 +221,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0603593F RID: 219455 RVA: 0x0074BE74 File Offset: 0x0074A074
+		// Token: 0x06038C72 RID: 232562 RVA: 0x007AD9FC File Offset: 0x007ABBFC
 		public static Offset<ITalkOptionSystemCondition> Pack(FlatBufferBuilder builder, ITalkOptionSystemConditionT _o)
 		{
 			if (_o == null)
@@ -233,7 +233,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITalkOptionSystemCondition.CreateITalkOptionSystemCondition(builder, _o.Type, systemOffset, _o.HideWhenUnmet, _o.HideConditionTextWhenUnmet, tidReplaceTextWhenUnmetOffset, _o.NullMask);
 		}
 
-		// Token: 0x0401214A RID: 74058
+		// Token: 0x04013150 RID: 78160
 		private Table __p;
 	}
 }

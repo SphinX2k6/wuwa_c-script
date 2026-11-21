@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents.OpenSystem
 {
-	// Token: 0x02006BF4 RID: 27636
+	// Token: 0x02005D6D RID: 23917
 	internal class OpenSystemParam : IOpenSystem
 	{
-		// Token: 0x170099A5 RID: 39333
-		// (get) Token: 0x060443F0 RID: 279536 RVA: 0x010D18CC File Offset: 0x010CFACC
-		// (set) Token: 0x060443F1 RID: 279537 RVA: 0x010D18D4 File Offset: 0x010CFAD4
+		// Token: 0x17006EA8 RID: 28328
+		// (get) Token: 0x0603A548 RID: 238920 RVA: 0x0107B820 File Offset: 0x01079A20
+		// (set) Token: 0x0603A549 RID: 238921 RVA: 0x0107B828 File Offset: 0x01079A28
 		public bool FadeBeforeHide { get; set; }
 	}
 }

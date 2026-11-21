@@ -1,30 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.WuwaGo.Model
 {
-	// Token: 0x0200473B RID: 18235
+	// Token: 0x0200366C RID: 13932
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WuWaGoRollbackSnapshot
 	{
-		// Token: 0x0602FA95 RID: 195221 RVA: 0x00B0C1A6 File Offset: 0x00B0A3A6
+		// Token: 0x0602425F RID: 148063 RVA: 0x00A3C172 File Offset: 0x00A3A372
 		private WuWaGoRollbackSnapshot(int round, Dictionary<int, IRollbackCapture> captures)
 		{
 			this.Round = round;
 			this.Captures = captures;
 		}
 
-		// Token: 0x0602FA96 RID: 195222 RVA: 0x00B0C1BC File Offset: 0x00B0A3BC
+		// Token: 0x06024260 RID: 148064 RVA: 0x00A3C188 File Offset: 0x00A3A388
 		public static WuWaGoRollbackSnapshot CreateFromCaptures(int round, Dictionary<int, IRollbackCapture> captures)
 		{
 			return new WuWaGoRollbackSnapshot(round, captures);
 		}
 
-		// Token: 0x17007713 RID: 30483
-		// (get) Token: 0x0602FA97 RID: 195223 RVA: 0x00B0C1C5 File Offset: 0x00B0A3C5
+		// Token: 0x170049CF RID: 18895
+		// (get) Token: 0x06024261 RID: 148065 RVA: 0x00A3C191 File Offset: 0x00A3A391
 		public int Size
 		{
 			get
@@ -33,13 +32,13 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			}
 		}
 
-		// Token: 0x0602FA98 RID: 195224 RVA: 0x00B0C1D2 File Offset: 0x00B0A3D2
+		// Token: 0x06024262 RID: 148066 RVA: 0x00A3C19E File Offset: 0x00A3A39E
 		public IReadOnlyList<IRollbackCapture> GetCaptures()
 		{
-			return this.Captures.Values.ToList<IRollbackCapture>();
+			return new List<IRollbackCapture>(this.Captures.Values);
 		}
 
-		// Token: 0x0602FA99 RID: 195225 RVA: 0x00B0C1E4 File Offset: 0x00B0A3E4
+		// Token: 0x06024263 RID: 148067 RVA: 0x00A3C1B0 File Offset: 0x00A3A3B0
 		public void RestoreToGameData(WuWaGoGameData gameData)
 		{
 			gameData.Round = this.Round;
@@ -52,10 +51,10 @@ namespace CSharpScript.Game.Module.WuwaGo.Model
 			}
 		}
 
-		// Token: 0x04019BC5 RID: 105413
+		// Token: 0x04014275 RID: 82549
 		public readonly int Round;
 
-		// Token: 0x04019BC6 RID: 105414
+		// Token: 0x04014276 RID: 82550
 		private readonly Dictionary<int, IRollbackCapture> Captures;
 	}
 }

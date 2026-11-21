@@ -4,16 +4,16 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000B37 RID: 2871
+	// Token: 0x020001F2 RID: 498
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/Engine.EQuitPreference")]
 	public enum EQuitPreference
 	{
-		// Token: 0x04004F21 RID: 20257
+		// Token: 0x04000C66 RID: 3174
 		Quit,
-		// Token: 0x04004F22 RID: 20258
+		// Token: 0x04000C67 RID: 3175
 		Background,
-		// Token: 0x04004F23 RID: 20259
+		// Token: 0x04000C68 RID: 3176
 		EQuitPreference_MAX
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200744B RID: 29771
+	// Token: 0x02007C3E RID: 31806
 	public struct ITransitionPopupLeftTopTip : IFlatbufferObject
 	{
-		// Token: 0x1700E206 RID: 57862
-		// (get) Token: 0x0603615D RID: 221533 RVA: 0x0075B0CD File Offset: 0x007592CD
+		// Token: 0x1700EE23 RID: 60963
+		// (get) Token: 0x06039546 RID: 234822 RVA: 0x007BDDF9 File Offset: 0x007BBFF9
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603615E RID: 221534 RVA: 0x0075B0DA File Offset: 0x007592DA
+		// Token: 0x06039547 RID: 234823 RVA: 0x007BDE06 File Offset: 0x007BC006
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0603615F RID: 221535 RVA: 0x0075B0E4 File Offset: 0x007592E4
+		// Token: 0x06039548 RID: 234824 RVA: 0x007BDE10 File Offset: 0x007BC010
 		public static ITransitionPopupLeftTopTip GetRootAsITransitionPopupLeftTopTip(ByteBuffer _bb)
 		{
 			return ITransitionPopupLeftTopTip.GetRootAsITransitionPopupLeftTopTip(_bb, default(ITransitionPopupLeftTopTip));
 		}
 
-		// Token: 0x06036160 RID: 221536 RVA: 0x0075B100 File Offset: 0x00759300
+		// Token: 0x06039549 RID: 234825 RVA: 0x007BDE2C File Offset: 0x007BC02C
 		public static ITransitionPopupLeftTopTip GetRootAsITransitionPopupLeftTopTip(ByteBuffer _bb, ITransitionPopupLeftTopTip obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06036161 RID: 221537 RVA: 0x0075B11D File Offset: 0x0075931D
+		// Token: 0x0603954A RID: 234826 RVA: 0x007BDE49 File Offset: 0x007BC049
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06036162 RID: 221538 RVA: 0x0075B12C File Offset: 0x0075932C
+		// Token: 0x0603954B RID: 234827 RVA: 0x007BDE58 File Offset: 0x007BC058
 		public ITransitionPopupLeftTopTip __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E207 RID: 57863
-		// (get) Token: 0x06036163 RID: 221539 RVA: 0x0075B13C File Offset: 0x0075933C
+		// Token: 0x1700EE24 RID: 60964
+		// (get) Token: 0x0603954C RID: 234828 RVA: 0x007BDE68 File Offset: 0x007BC068
 		public ETransitionPopupStyleType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E208 RID: 57864
-		// (get) Token: 0x06036164 RID: 221540 RVA: 0x0075B178 File Offset: 0x00759378
+		// Token: 0x1700EE25 RID: 60965
+		// (get) Token: 0x0603954D RID: 234829 RVA: 0x007BDEA4 File Offset: 0x007BC0A4
 		public string TitleText
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036165 RID: 221541 RVA: 0x0075B1AF File Offset: 0x007593AF
+		// Token: 0x0603954E RID: 234830 RVA: 0x007BDEDB File Offset: 0x007BC0DB
 		public Span<byte> GetTitleTextBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06036166 RID: 221542 RVA: 0x0075B1BE File Offset: 0x007593BE
+		// Token: 0x0603954F RID: 234831 RVA: 0x007BDEEA File Offset: 0x007BC0EA
 		public byte[] GetTitleTextArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x1700E209 RID: 57865
-		// (get) Token: 0x06036167 RID: 221543 RVA: 0x0075B1CC File Offset: 0x007593CC
+		// Token: 0x1700EE26 RID: 60966
+		// (get) Token: 0x06039550 RID: 234832 RVA: 0x007BDEF8 File Offset: 0x007BC0F8
 		public string ContentText
 		{
 			get
@@ -104,19 +104,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036168 RID: 221544 RVA: 0x0075B203 File Offset: 0x00759403
+		// Token: 0x06039551 RID: 234833 RVA: 0x007BDF2F File Offset: 0x007BC12F
 		public Span<byte> GetContentTextBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x06036169 RID: 221545 RVA: 0x0075B212 File Offset: 0x00759412
+		// Token: 0x06039552 RID: 234834 RVA: 0x007BDF3E File Offset: 0x007BC13E
 		public byte[] GetContentTextArray()
 		{
 			return this.__p.__vector_as_array<byte>(8);
 		}
 
-		// Token: 0x0603616A RID: 221546 RVA: 0x0075B220 File Offset: 0x00759420
+		// Token: 0x06039553 RID: 234835 RVA: 0x007BDF4C File Offset: 0x007BC14C
 		public static Offset<ITransitionPopupLeftTopTip> CreateITransitionPopupLeftTopTip(FlatBufferBuilder builder, ETransitionPopupStyleType Type = ETransitionPopupStyleType.LeftTopTip, StringOffset TitleTextOffset = default(StringOffset), StringOffset ContentTextOffset = default(StringOffset))
 		{
 			builder.StartTable(3);
@@ -126,37 +126,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITransitionPopupLeftTopTip.EndITransitionPopupLeftTopTip(builder);
 		}
 
-		// Token: 0x0603616B RID: 221547 RVA: 0x0075B244 File Offset: 0x00759444
+		// Token: 0x06039554 RID: 234836 RVA: 0x007BDF70 File Offset: 0x007BC170
 		public static void StartITransitionPopupLeftTopTip(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0603616C RID: 221548 RVA: 0x0075B24D File Offset: 0x0075944D
+		// Token: 0x06039555 RID: 234837 RVA: 0x007BDF79 File Offset: 0x007BC179
 		public static void AddType(FlatBufferBuilder builder, ETransitionPopupStyleType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0603616D RID: 221549 RVA: 0x0075B258 File Offset: 0x00759458
+		// Token: 0x06039556 RID: 234838 RVA: 0x007BDF84 File Offset: 0x007BC184
 		public static void AddTitleText(FlatBufferBuilder builder, StringOffset titleTextOffset)
 		{
 			builder.AddOffset(1, titleTextOffset.Value, 0);
 		}
 
-		// Token: 0x0603616E RID: 221550 RVA: 0x0075B268 File Offset: 0x00759468
+		// Token: 0x06039557 RID: 234839 RVA: 0x007BDF94 File Offset: 0x007BC194
 		public static void AddContentText(FlatBufferBuilder builder, StringOffset contentTextOffset)
 		{
 			builder.AddOffset(2, contentTextOffset.Value, 0);
 		}
 
-		// Token: 0x0603616F RID: 221551 RVA: 0x0075B278 File Offset: 0x00759478
+		// Token: 0x06039558 RID: 234840 RVA: 0x007BDFA4 File Offset: 0x007BC1A4
 		public static Offset<ITransitionPopupLeftTopTip> EndITransitionPopupLeftTopTip(FlatBufferBuilder builder)
 		{
 			return new Offset<ITransitionPopupLeftTopTip>(builder.EndTable());
 		}
 
-		// Token: 0x06036170 RID: 221552 RVA: 0x0075B288 File Offset: 0x00759488
+		// Token: 0x06039559 RID: 234841 RVA: 0x007BDFB4 File Offset: 0x007BC1B4
 		public ITransitionPopupLeftTopTipT UnPack()
 		{
 			ITransitionPopupLeftTopTipT transitionPopupLeftTopTipT = new ITransitionPopupLeftTopTipT();
@@ -164,7 +164,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return transitionPopupLeftTopTipT;
 		}
 
-		// Token: 0x06036171 RID: 221553 RVA: 0x0075B2A3 File Offset: 0x007594A3
+		// Token: 0x0603955A RID: 234842 RVA: 0x007BDFCF File Offset: 0x007BC1CF
 		public void UnPackTo(ITransitionPopupLeftTopTipT _o)
 		{
 			_o.Type = this.Type;
@@ -172,7 +172,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.ContentText = this.ContentText;
 		}
 
-		// Token: 0x06036172 RID: 221554 RVA: 0x0075B2CC File Offset: 0x007594CC
+		// Token: 0x0603955B RID: 234843 RVA: 0x007BDFF8 File Offset: 0x007BC1F8
 		public static Offset<ITransitionPopupLeftTopTip> Pack(FlatBufferBuilder builder, ITransitionPopupLeftTopTipT _o)
 		{
 			if (_o == null)
@@ -184,7 +184,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITransitionPopupLeftTopTip.CreateITransitionPopupLeftTopTip(builder, _o.Type, titleTextOffset, contentTextOffset);
 		}
 
-		// Token: 0x040122CE RID: 74446
+		// Token: 0x040132F5 RID: 78581
 		private Table __p;
 	}
 }

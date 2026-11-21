@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02001147 RID: 4423
+// Token: 0x020005FB RID: 1531
 public enum EBabelTowerTeamTabType
 {
-	// Token: 0x0400357B RID: 13691
+	// Token: 0x04003614 RID: 13844
 	RoleList,
-	// Token: 0x0400357C RID: 13692
+	// Token: 0x04003615 RID: 13845
 	UseTeam
 }

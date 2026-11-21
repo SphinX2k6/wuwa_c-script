@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000149 RID: 329
+	// Token: 0x0200014C RID: 332
 	public sealed class BabelPassRoleInfo : IMessage<BabelPassRoleInfo>, IMessage, IEquatable<BabelPassRoleInfo>, IDeepCloneable<BabelPassRoleInfo>, IBufferMessage
 	{
-		// Token: 0x06002A48 RID: 10824 RVA: 0x0006EFA5 File Offset: 0x0006D1A5
+		// Token: 0x06002ABF RID: 10943 RVA: 0x000703D9 File Offset: 0x0006E5D9
 		[NullableContext(1)]
 		public static BabelPassRoleInfo Create()
 		{
 			return new BabelPassRoleInfo();
 		}
 
-		// Token: 0x1700063F RID: 1599
-		// (get) Token: 0x06002A49 RID: 10825 RVA: 0x0006EFAC File Offset: 0x0006D1AC
+		// Token: 0x17000653 RID: 1619
+		// (get) Token: 0x06002AC0 RID: 10944 RVA: 0x000703E0 File Offset: 0x0006E5E0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<BabelPassRoleInfo> Parser
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000640 RID: 1600
-		// (get) Token: 0x06002A4A RID: 10826 RVA: 0x0006EFB3 File Offset: 0x0006D1B3
+		// Token: 0x17000654 RID: 1620
+		// (get) Token: 0x06002AC1 RID: 10945 RVA: 0x000703E7 File Offset: 0x0006E5E7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -41,8 +41,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000641 RID: 1601
-		// (get) Token: 0x06002A4B RID: 10827 RVA: 0x0006EFB6 File Offset: 0x0006D1B6
+		// Token: 0x17000655 RID: 1621
+		// (get) Token: 0x06002AC2 RID: 10946 RVA: 0x000703EA File Offset: 0x0006E5EA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06002A4C RID: 10828 RVA: 0x0006EFBD File Offset: 0x0006D1BD
+		// Token: 0x06002AC3 RID: 10947 RVA: 0x000703F1 File Offset: 0x0006E5F1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BabelPassRoleInfo()
 		{
 		}
 
-		// Token: 0x06002A4D RID: 10829 RVA: 0x0006EFC5 File Offset: 0x0006D1C5
+		// Token: 0x06002AC4 RID: 10948 RVA: 0x000703F9 File Offset: 0x0006E5F9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BabelPassRoleInfo(BabelPassRoleInfo other) : this()
@@ -70,7 +70,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06002A4E RID: 10830 RVA: 0x0006EFF6 File Offset: 0x0006D1F6
+		// Token: 0x06002AC5 RID: 10949 RVA: 0x0007042A File Offset: 0x0006E62A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BabelPassRoleInfo Clone()
@@ -78,9 +78,9 @@ namespace Aki.Protocol
 			return new BabelPassRoleInfo(this);
 		}
 
-		// Token: 0x17000642 RID: 1602
-		// (get) Token: 0x06002A4F RID: 10831 RVA: 0x0006EFFE File Offset: 0x0006D1FE
-		// (set) Token: 0x06002A50 RID: 10832 RVA: 0x0006F006 File Offset: 0x0006D206
+		// Token: 0x17000656 RID: 1622
+		// (get) Token: 0x06002AC6 RID: 10950 RVA: 0x00070432 File Offset: 0x0006E632
+		// (set) Token: 0x06002AC7 RID: 10951 RVA: 0x0007043A File Offset: 0x0006E63A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RoleId
@@ -95,9 +95,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000643 RID: 1603
-		// (get) Token: 0x06002A51 RID: 10833 RVA: 0x0006F00F File Offset: 0x0006D20F
-		// (set) Token: 0x06002A52 RID: 10834 RVA: 0x0006F017 File Offset: 0x0006D217
+		// Token: 0x17000657 RID: 1623
+		// (get) Token: 0x06002AC8 RID: 10952 RVA: 0x00070443 File Offset: 0x0006E643
+		// (set) Token: 0x06002AC9 RID: 10953 RVA: 0x0007044B File Offset: 0x0006E64B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RoleLevel
@@ -112,7 +112,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06002A53 RID: 10835 RVA: 0x0006F020 File Offset: 0x0006D220
+		// Token: 0x06002ACA RID: 10954 RVA: 0x00070454 File Offset: 0x0006E654
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -120,7 +120,7 @@ namespace Aki.Protocol
 			return this.Equals(other as BabelPassRoleInfo);
 		}
 
-		// Token: 0x06002A54 RID: 10836 RVA: 0x0006F02E File Offset: 0x0006D22E
+		// Token: 0x06002ACB RID: 10955 RVA: 0x00070462 File Offset: 0x0006E662
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(BabelPassRoleInfo other)
@@ -128,7 +128,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.RoleId == other.RoleId && this.RoleLevel == other.RoleLevel && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06002A55 RID: 10837 RVA: 0x0006F06C File Offset: 0x0006D26C
+		// Token: 0x06002ACC RID: 10956 RVA: 0x000704A0 File Offset: 0x0006E6A0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -149,7 +149,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06002A56 RID: 10838 RVA: 0x0006F0C4 File Offset: 0x0006D2C4
+		// Token: 0x06002ACD RID: 10957 RVA: 0x000704F8 File Offset: 0x0006E6F8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -157,7 +157,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06002A57 RID: 10839 RVA: 0x0006F0D1 File Offset: 0x0006D2D1
+		// Token: 0x06002ACE RID: 10958 RVA: 0x00070505 File Offset: 0x0006E705
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -165,7 +165,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06002A58 RID: 10840 RVA: 0x0006F0DC File Offset: 0x0006D2DC
+		// Token: 0x06002ACF RID: 10959 RVA: 0x00070510 File Offset: 0x0006E710
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -186,7 +186,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06002A59 RID: 10841 RVA: 0x0006F134 File Offset: 0x0006D334
+		// Token: 0x06002AD0 RID: 10960 RVA: 0x00070568 File Offset: 0x0006E768
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -207,7 +207,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06002A5A RID: 10842 RVA: 0x0006F18C File Offset: 0x0006D38C
+		// Token: 0x06002AD1 RID: 10961 RVA: 0x000705C0 File Offset: 0x0006E7C0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(BabelPassRoleInfo other)
@@ -227,7 +227,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06002A5B RID: 10843 RVA: 0x0006F1DC File Offset: 0x0006D3DC
+		// Token: 0x06002AD2 RID: 10962 RVA: 0x00070610 File Offset: 0x0006E810
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -235,7 +235,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06002A5C RID: 10844 RVA: 0x0006F1E8 File Offset: 0x0006D3E8
+		// Token: 0x06002AD3 RID: 10963 RVA: 0x0007061C File Offset: 0x0006E81C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -265,22 +265,22 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04002759 RID: 10073
+		// Token: 0x040027CD RID: 10189
 		private static readonly MessageParser<BabelPassRoleInfo> _parser = new MessageParser<BabelPassRoleInfo>(() => new BabelPassRoleInfo());
 
-		// Token: 0x0400275A RID: 10074
+		// Token: 0x040027CE RID: 10190
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400275B RID: 10075
+		// Token: 0x040027CF RID: 10191
 		public const int RoleIdFieldNumber = 1;
 
-		// Token: 0x0400275C RID: 10076
+		// Token: 0x040027D0 RID: 10192
 		private int roleId_;
 
-		// Token: 0x0400275D RID: 10077
+		// Token: 0x040027D1 RID: 10193
 		public const int RoleLevelFieldNumber = 2;
 
-		// Token: 0x0400275E RID: 10078
+		// Token: 0x040027D2 RID: 10194
 		private int roleLevel_;
 	}
 }

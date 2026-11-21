@@ -12,7 +12,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004EBA RID: 20154
+	// Token: 0x02003E83 RID: 16003
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 	})]
 	public class RogueBattleTokenItem : GridProxyAbstract<RogueResGainData>
 	{
-		// Token: 0x06033C06 RID: 211974 RVA: 0x00C1FFAC File Offset: 0x00C1E1AC
+		// Token: 0x06028A71 RID: 166513 RVA: 0x00B694C4 File Offset: 0x00B676C4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -44,26 +44,26 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033C07 RID: 211975 RVA: 0x00C200DC File Offset: 0x00C1E2DC
+		// Token: 0x06028A72 RID: 166514 RVA: 0x00B695F4 File Offset: 0x00B677F4
 		protected override void OnStart()
 		{
 			this.ElementLayout = new GenericLayout<RogueBattleTokenElement, int>(base.GetHorizontalLayout(3), () => new RogueBattleTokenElement(), null, false, true);
 			base.GetItem(10).SetUIActive(false);
 		}
 
-		// Token: 0x06033C08 RID: 211976 RVA: 0x00C2012B File Offset: 0x00C1E32B
+		// Token: 0x06028A73 RID: 166515 RVA: 0x00B69643 File Offset: 0x00B67843
 		protected override void OnBeforeShow()
 		{
 			EventSystem.Instance.Add(EEventName.RogueBattleDescModeChange, new Action(this.RefreshDescText));
 		}
 
-		// Token: 0x06033C09 RID: 211977 RVA: 0x00C20149 File Offset: 0x00C1E349
+		// Token: 0x06028A74 RID: 166516 RVA: 0x00B69661 File Offset: 0x00B67861
 		protected override void OnBeforeHide()
 		{
 			EventSystem.Instance.Remove(EEventName.RogueBattleDescModeChange, new Action(this.RefreshDescText));
 		}
 
-		// Token: 0x06033C0A RID: 211978 RVA: 0x00C20168 File Offset: 0x00C1E368
+		// Token: 0x06028A75 RID: 166517 RVA: 0x00B69680 File Offset: 0x00B67880
 		private void ToggleCallBackInternal(EToggleState state)
 		{
 			if (base.GetExtendToggle(5).GetToggleState() == EToggleState.ETT_Checked)
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x06033C0B RID: 211979 RVA: 0x00C201C8 File Offset: 0x00C1E3C8
+		// Token: 0x06028A76 RID: 166518 RVA: 0x00B696E0 File Offset: 0x00B678E0
 		[NullableContext(1)]
 		public override void Refresh(RogueResGainData data, bool isSelected, int gridIndex)
 		{
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			base.RunAsyncTask(task);
 		}
 
-		// Token: 0x06033C0C RID: 211980 RVA: 0x00C203A8 File Offset: 0x00C1E5A8
+		// Token: 0x06028A77 RID: 166519 RVA: 0x00B698C0 File Offset: 0x00B67AC0
 		public void RefreshDescText()
 		{
 			if (this.GainData == null)
@@ -166,27 +166,27 @@ namespace CSharpScript.Game.Module.RogueBattle
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(4), rogueResBuffPoolById.Value.BuffDesc, rogueResBuffPoolById.Value.BuffDescParam());
 		}
 
-		// Token: 0x06033C0D RID: 211981 RVA: 0x00C2047A File Offset: 0x00C1E67A
+		// Token: 0x06028A78 RID: 166520 RVA: 0x00B69992 File Offset: 0x00B67B92
 		public override void OnSelected(bool fireEvent)
 		{
 			RogueBattleModel.Instance.SelectGainData = this.GainData;
 			base.GetExtendToggle(5).SetToggleState(EToggleState.ETT_Checked, false, false, false);
 		}
 
-		// Token: 0x06033C0E RID: 211982 RVA: 0x00C2049D File Offset: 0x00C1E69D
+		// Token: 0x06028A79 RID: 166521 RVA: 0x00B699B5 File Offset: 0x00B67BB5
 		public override void OnDeselected(bool fireEvent)
 		{
 			RogueBattleModel.Instance.SelectGainData = null;
 			base.GetExtendToggle(5).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0401B806 RID: 112646
+		// Token: 0x040161D9 RID: 90585
 		public RogueResGainData GainData;
 
-		// Token: 0x0401B807 RID: 112647
+		// Token: 0x040161DA RID: 90586
 		public Action<int?> OnClickHandle;
 
-		// Token: 0x0401B808 RID: 112648
+		// Token: 0x040161DB RID: 90587
 		[Nullable(new byte[]
 		{
 			2,

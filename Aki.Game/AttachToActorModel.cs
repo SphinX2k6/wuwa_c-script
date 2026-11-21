@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200351A RID: 13594
+// Token: 0x02002A8F RID: 10895
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class AttachToActorModel : ModelBase
 {
-	// Token: 0x0601DCE0 RID: 122080 RVA: 0x0085A147 File Offset: 0x00858347
+	// Token: 0x0601B9FA RID: 113146 RVA: 0x008826EF File Offset: 0x008808EF
 	protected override bool OnInit()
 	{
 		this.ShowLog = GlobalData.IsPlayInEditor;
 		return true;
 	}
 
-	// Token: 0x0601DCE1 RID: 122081 RVA: 0x0085A158 File Offset: 0x00858358
+	// Token: 0x0601B9FB RID: 113147 RVA: 0x00882700 File Offset: 0x00880900
 	public unsafe bool AddEntityActor(int entityId, AActor actor, AActor parentActor, string reason, EDetachType detachType)
 	{
 		AttachActorEntry attachActorEntry;
@@ -60,7 +60,7 @@ public class AttachToActorModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601DCE2 RID: 122082 RVA: 0x0085A304 File Offset: 0x00858504
+	// Token: 0x0601B9FC RID: 113148 RVA: 0x008828AC File Offset: 0x00880AAC
 	public unsafe bool RemoveEntityActor(int entityId, AActor actor, string reason)
 	{
 		AttachActorEntry attachActorEntry;
@@ -99,7 +99,7 @@ public class AttachToActorModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601DCE3 RID: 122083 RVA: 0x0085A440 File Offset: 0x00858640
+	// Token: 0x0601B9FD RID: 113149 RVA: 0x008829E8 File Offset: 0x00880BE8
 	public int GetEntityIdByActor(AActor actor)
 	{
 		int result;
@@ -110,7 +110,7 @@ public class AttachToActorModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0601DCE4 RID: 122084 RVA: 0x0085A460 File Offset: 0x00858660
+	// Token: 0x0601B9FE RID: 113150 RVA: 0x00882A08 File Offset: 0x00880C08
 	[NullableContext(2)]
 	public AttachActorEntry GetAttachActorEntry(int entityId)
 	{
@@ -122,7 +122,7 @@ public class AttachToActorModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x0601DCE5 RID: 122085 RVA: 0x0085A480 File Offset: 0x00858680
+	// Token: 0x0601B9FF RID: 113151 RVA: 0x00882A28 File Offset: 0x00880C28
 	[return: Nullable(2)]
 	public AttachActorItem GetAttachActorItem(int entityId, AActor actor)
 	{
@@ -134,7 +134,7 @@ public class AttachToActorModel : ModelBase
 		return attachActorEntry.GetAttachActorItem(actor);
 	}
 
-	// Token: 0x0601DCE6 RID: 122086 RVA: 0x0085A4A8 File Offset: 0x008586A8
+	// Token: 0x0601BA00 RID: 113152 RVA: 0x00882A50 File Offset: 0x00880C50
 	public unsafe void ClearActorsByEntity(int entityId)
 	{
 		AttachActorEntry attachActorEntry;
@@ -167,7 +167,7 @@ public class AttachToActorModel : ModelBase
 		attachActorEntry.Clear();
 	}
 
-	// Token: 0x0601DCE7 RID: 122087 RVA: 0x0085A608 File Offset: 0x00858808
+	// Token: 0x0601BA01 RID: 113153 RVA: 0x00882BB0 File Offset: 0x00880DB0
 	public unsafe void ClearEntityActor(string reason)
 	{
 		foreach (KeyValuePair<int, AttachActorEntry> keyValuePair in this.AttachActorMap)
@@ -196,15 +196,15 @@ public class AttachToActorModel : ModelBase
 		this.ActorForEntityMap.Clear();
 	}
 
-	// Token: 0x0601DCE8 RID: 122088 RVA: 0x0085A7BC File Offset: 0x008589BC
+	// Token: 0x0601BA02 RID: 113154 RVA: 0x00882D64 File Offset: 0x00880F64
 	protected override bool OnLeaveLevel()
 	{
 		this.ClearEntityActor("AttachToActorModel.OnLeaveLevel");
 		return true;
 	}
 
-	// Token: 0x17002912 RID: 10514
-	// (get) Token: 0x0601DCE9 RID: 122089 RVA: 0x0085A7CA File Offset: 0x008589CA
+	// Token: 0x17002CAB RID: 11435
+	// (get) Token: 0x0601BA03 RID: 113155 RVA: 0x00882D72 File Offset: 0x00880F72
 	public static AttachToActorModel Instance
 	{
 		get
@@ -213,7 +213,7 @@ public class AttachToActorModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601DCEA RID: 122090 RVA: 0x0085A7D1 File Offset: 0x008589D1
+	// Token: 0x0601BA04 RID: 113156 RVA: 0x00882D79 File Offset: 0x00880F79
 	public static AttachToActorModel GetOrCreateInstance()
 	{
 		if (AttachToActorModel._Instance == null)
@@ -223,7 +223,7 @@ public class AttachToActorModel : ModelBase
 		return AttachToActorModel._Instance;
 	}
 
-	// Token: 0x0601DCEB RID: 122091 RVA: 0x0085A7E5 File Offset: 0x008589E5
+	// Token: 0x0601BA05 RID: 113157 RVA: 0x00882D8D File Offset: 0x00880F8D
 	public static bool CreateInstance()
 	{
 		if (AttachToActorModel._Instance != null)
@@ -234,36 +234,36 @@ public class AttachToActorModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601DCEC RID: 122092 RVA: 0x0085A7FB File Offset: 0x008589FB
+	// Token: 0x0601BA06 RID: 113158 RVA: 0x00882DA3 File Offset: 0x00880FA3
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601DCED RID: 122093 RVA: 0x0085A7FD File Offset: 0x008589FD
+	// Token: 0x0601BA07 RID: 113159 RVA: 0x00882DA5 File Offset: 0x00880FA5
 	public static void ResetStaticDefaultValue()
 	{
 		AttachToActorModel._Instance = null;
 	}
 
-	// Token: 0x0601DCEE RID: 122094 RVA: 0x0085A805 File Offset: 0x00858A05
+	// Token: 0x0601BA08 RID: 113160 RVA: 0x00882DAD File Offset: 0x00880FAD
 	static AttachToActorModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(AttachToActorModel.CreateStaticDefaultValue), new Action(AttachToActorModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400E9EF RID: 59887
+	// Token: 0x0400EEAA RID: 61098
 	public bool ShowLog = true;
 
-	// Token: 0x0400E9F0 RID: 59888
+	// Token: 0x0400EEAB RID: 61099
 	private readonly Dictionary<int, AttachActorEntry> AttachActorMap = new Dictionary<int, AttachActorEntry>();
 
-	// Token: 0x0400E9F1 RID: 59889
+	// Token: 0x0400EEAC RID: 61100
 	private readonly Dictionary<AActor, int> ActorForEntityMap = new Dictionary<AActor, int>();
 
-	// Token: 0x0400E9F2 RID: 59890
+	// Token: 0x0400EEAD RID: 61101
 	private int AttachId;
 
-	// Token: 0x0400E9F3 RID: 59891
+	// Token: 0x0400EEAE RID: 61102
 	[Nullable(2)]
 	private static AttachToActorModel _Instance;
 }

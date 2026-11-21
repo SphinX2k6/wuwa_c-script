@@ -2,13 +2,13 @@
 
 namespace CSharpScript.Game.Module.Morale
 {
-	// Token: 0x020053AE RID: 21422
+	// Token: 0x02004391 RID: 17297
 	public class MoraleBuffViewParams
 	{
-		// Token: 0x0401CE61 RID: 118369
+		// Token: 0x040178F9 RID: 96505
 		public int? LvId;
 
-		// Token: 0x0401CE62 RID: 118370
+		// Token: 0x040178FA RID: 96506
 		public int? BuffId;
 	}
 }

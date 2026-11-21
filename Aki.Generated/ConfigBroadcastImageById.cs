@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200011C RID: 284
+	// Token: 0x0200012B RID: 299
 	public class ConfigBroadcastImageById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060006A9 RID: 1705 RVA: 0x0007F3E4 File Offset: 0x0007D5E4
+		// Token: 0x06000703 RID: 1795 RVA: 0x00084D48 File Offset: 0x00082F48
 		static ConfigBroadcastImageById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigBroadcastImageById.CreateStaticDefaultValue), new Action(ConfigBroadcastImageById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060006AA RID: 1706 RVA: 0x0007F404 File Offset: 0x0007D604
+		// Token: 0x06000704 RID: 1796 RVA: 0x00084D68 File Offset: 0x00082F68
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigBroadcastImageById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060006AB RID: 1707 RVA: 0x0007F483 File Offset: 0x0007D683
+		// Token: 0x06000705 RID: 1797 RVA: 0x00084DE7 File Offset: 0x00082FE7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigBroadcastImageById.LogPair = null;
 			ConfigBroadcastImageById.HandleId = 0;
 		}
 
-		// Token: 0x060006AC RID: 1708 RVA: 0x0007F491 File Offset: 0x0007D691
+		// Token: 0x06000706 RID: 1798 RVA: 0x00084DF5 File Offset: 0x00082FF5
 		public static void Init()
 		{
 			ConfigBroadcastImageById.HandleId = ConfigCommon.InitDataStatement(ConfigBroadcastImageById.HandleId, "db_loadingtips.db", "select BinData from `BroadcastImage` where Id=?");
 		}
 
-		// Token: 0x060006AD RID: 1709 RVA: 0x0007F4AC File Offset: 0x0007D6AC
+		// Token: 0x06000707 RID: 1799 RVA: 0x00084E10 File Offset: 0x00083010
 		public static BroadcastImage? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigBroadcastImageById.HandleId, ConfigBroadcastImageById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new BroadcastImage?(rootAsBroadcastImage);
 		}
 
-		// Token: 0x040007A8 RID: 1960
+		// Token: 0x04000811 RID: 2065
 		private const string DB = "db_loadingtips.db";
 
-		// Token: 0x040007A9 RID: 1961
+		// Token: 0x04000812 RID: 2066
 		private const string FILE = "z.载入提示.xlsx";
 
-		// Token: 0x040007AA RID: 1962
+		// Token: 0x04000813 RID: 2067
 		private const string TABLE = "BroadcastImage";
 
-		// Token: 0x040007AB RID: 1963
+		// Token: 0x04000814 RID: 2068
 		private const string COMMAND = "select BinData from `BroadcastImage` where Id=?";
 
-		// Token: 0x040007AC RID: 1964
+		// Token: 0x04000815 RID: 2069
 		private const string KEY_PREFIX = "BroadcastImageById";
 
-		// Token: 0x040007AD RID: 1965
+		// Token: 0x04000816 RID: 2070
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040007AE RID: 1966
+		// Token: 0x04000817 RID: 2071
 		private static int HandleId;
 	}
 }

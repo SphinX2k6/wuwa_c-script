@@ -4,93 +4,93 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 {
-	// Token: 0x02006339 RID: 25401
+	// Token: 0x020052B7 RID: 21175
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PinballMainViewModel
 	{
-		// Token: 0x0603FEB9 RID: 261817 RVA: 0x00F77012 File Offset: 0x00F75212
+		// Token: 0x06034B7A RID: 215930 RVA: 0x00EBDF6E File Offset: 0x00EBC16E
 		public PinballMainViewModel()
 		{
 			this.LevelDataList = new List<PinballLevelRecordData>();
 		}
 
-		// Token: 0x0603FEBA RID: 261818 RVA: 0x00F77025 File Offset: 0x00F75225
+		// Token: 0x06034B7B RID: 215931 RVA: 0x00EBDF81 File Offset: 0x00EBC181
 		[NullableContext(1)]
 		public void SetChapterData(PinballChapterData chapterData)
 		{
 			this.ChapterData = chapterData;
 		}
 
-		// Token: 0x0603FEBB RID: 261819 RVA: 0x00F7702E File Offset: 0x00F7522E
+		// Token: 0x06034B7C RID: 215932 RVA: 0x00EBDF8A File Offset: 0x00EBC18A
 		public PinballChapterData GetChapterData()
 		{
 			return this.ChapterData;
 		}
 
-		// Token: 0x0603FEBC RID: 261820 RVA: 0x00F77036 File Offset: 0x00F75236
+		// Token: 0x06034B7D RID: 215933 RVA: 0x00EBDF92 File Offset: 0x00EBC192
 		[NullableContext(1)]
 		public void SetLevelDataList(List<PinballLevelRecordData> levelDataList)
 		{
 			this.LevelDataList = levelDataList;
 		}
 
-		// Token: 0x0603FEBD RID: 261821 RVA: 0x00F7703F File Offset: 0x00F7523F
+		// Token: 0x06034B7E RID: 215934 RVA: 0x00EBDF9B File Offset: 0x00EBC19B
 		[NullableContext(1)]
 		public List<PinballLevelRecordData> GetLevelDataList()
 		{
 			return this.LevelDataList;
 		}
 
-		// Token: 0x0603FEBE RID: 261822 RVA: 0x00F77047 File Offset: 0x00F75247
+		// Token: 0x06034B7F RID: 215935 RVA: 0x00EBDFA3 File Offset: 0x00EBC1A3
 		[NullableContext(1)]
 		public void SetSelectLevelData(PinballLevelRecordData levelData)
 		{
 			this.SelectLevelData = levelData;
 		}
 
-		// Token: 0x0603FEBF RID: 261823 RVA: 0x00F77050 File Offset: 0x00F75250
+		// Token: 0x06034B80 RID: 215936 RVA: 0x00EBDFAC File Offset: 0x00EBC1AC
 		public void ClearSelectLevelData()
 		{
 			this.SelectLevelData = null;
 		}
 
-		// Token: 0x0603FEC0 RID: 261824 RVA: 0x00F77059 File Offset: 0x00F75259
+		// Token: 0x06034B81 RID: 215937 RVA: 0x00EBDFB5 File Offset: 0x00EBC1B5
 		public PinballLevelRecordData GetSelectLevelData()
 		{
 			return this.SelectLevelData;
 		}
 
-		// Token: 0x0603FEC1 RID: 261825 RVA: 0x00F77061 File Offset: 0x00F75261
+		// Token: 0x06034B82 RID: 215938 RVA: 0x00EBDFBD File Offset: 0x00EBC1BD
 		[NullableContext(1)]
 		public void SetOverrideCloseFunc(Action func)
 		{
 			this.OverrideCloseFunc = func;
 		}
 
-		// Token: 0x0603FEC2 RID: 261826 RVA: 0x00F7706A File Offset: 0x00F7526A
+		// Token: 0x06034B83 RID: 215939 RVA: 0x00EBDFC6 File Offset: 0x00EBC1C6
 		public void ResetOverrideCloseFunc()
 		{
 			this.OverrideCloseFunc = null;
 		}
 
-		// Token: 0x0603FEC3 RID: 261827 RVA: 0x00F77073 File Offset: 0x00F75273
+		// Token: 0x06034B84 RID: 215940 RVA: 0x00EBDFCF File Offset: 0x00EBC1CF
 		public Action GetOverrideCloseFunc()
 		{
 			return this.OverrideCloseFunc;
 		}
 
-		// Token: 0x04021574 RID: 136564
+		// Token: 0x0401BEA3 RID: 114339
 		private PinballChapterData ChapterData;
 
-		// Token: 0x04021575 RID: 136565
+		// Token: 0x0401BEA4 RID: 114340
 		[Nullable(1)]
 		private List<PinballLevelRecordData> LevelDataList;
 
-		// Token: 0x04021576 RID: 136566
+		// Token: 0x0401BEA5 RID: 114341
 		private PinballLevelRecordData SelectLevelData;
 
-		// Token: 0x04021577 RID: 136567
+		// Token: 0x0401BEA6 RID: 114342
 		[Nullable(new byte[]
 		{
 			2,
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 		})]
 		public Action<string> ChangePlanetTexture;
 
-		// Token: 0x04021578 RID: 136568
+		// Token: 0x0401BEA7 RID: 114343
 		[Nullable(new byte[]
 		{
 			2,
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 		})]
 		public Action<string> ChangePlanetMaskTexture;
 
-		// Token: 0x04021579 RID: 136569
+		// Token: 0x0401BEA8 RID: 114344
 		[Nullable(new byte[]
 		{
 			2,
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 		})]
 		public Action<string> ChangePlanetSwitchTexture;
 
-		// Token: 0x0402157A RID: 136570
+		// Token: 0x0401BEA9 RID: 114345
 		[Nullable(new byte[]
 		{
 			2,
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 		})]
 		public Action<string> SetViewTitle;
 
-		// Token: 0x0402157B RID: 136571
+		// Token: 0x0401BEAA RID: 114346
 		[Nullable(new byte[]
 		{
 			2,
@@ -130,13 +130,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Main
 		})]
 		public Action<string> SetViewIcon;
 
-		// Token: 0x0402157C RID: 136572
+		// Token: 0x0401BEAB RID: 114347
 		public Action<int> SetViewHelpId;
 
-		// Token: 0x0402157D RID: 136573
+		// Token: 0x0401BEAC RID: 114348
 		public Action<bool> SetViewHelpBtnActive;
 
-		// Token: 0x0402157E RID: 136574
+		// Token: 0x0401BEAD RID: 114349
 		private Action OverrideCloseFunc;
 	}
 }

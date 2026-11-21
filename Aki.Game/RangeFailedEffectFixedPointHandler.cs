@@ -3,30 +3,30 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Effect;
 using UnrealEngine;
 
-// Token: 0x02001D6A RID: 7530
+// Token: 0x0200122C RID: 4652
 [NullableContext(1)]
 [Nullable(0)]
 internal class RangeFailedEffectFixedPointHandler : RangeFailedEffectHandler
 {
-	// Token: 0x0600E50A RID: 58634 RVA: 0x0035F638 File Offset: 0x0035D838
+	// Token: 0x0600B928 RID: 47400 RVA: 0x0036B28C File Offset: 0x0036948C
 	private static bool FixedPointValid(RangeFailedParameterContext context)
 	{
 		return context.IsValid() && context.RangeFailedEffectCenterPos != null && context.RangeFailedEffectRadius > 0f;
 	}
 
-	// Token: 0x0600E50B RID: 58635 RVA: 0x0035F659 File Offset: 0x0035D859
+	// Token: 0x0600B929 RID: 47401 RVA: 0x0036B2AD File Offset: 0x003694AD
 	protected override bool CanHandle(RangeFailedParameterContext context)
 	{
 		return RangeFailedEffectFixedPointHandler.FixedPointValid(context);
 	}
 
-	// Token: 0x0600E50C RID: 58636 RVA: 0x0035F661 File Offset: 0x0035D861
+	// Token: 0x0600B92A RID: 47402 RVA: 0x0036B2B5 File Offset: 0x003694B5
 	protected override bool ShouldStop(RangeFailedParameterContext context)
 	{
 		return RangeFailedEffectFixedPointHandler.FixedPointValid(context);
 	}
 
-	// Token: 0x0600E50D RID: 58637 RVA: 0x0035F66C File Offset: 0x0035D86C
+	// Token: 0x0600B92B RID: 47403 RVA: 0x0036B2C0 File Offset: 0x003694C0
 	protected override void ExecuteProcessing(RangeFailedParameterContext context)
 	{
 		EffectSystem instance = EffectSystem.Instance;

@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000FFF RID: 4095
+	// Token: 0x02000FEF RID: 4079
 	public sealed class RogueResPhantom : IMessage<RogueResPhantom>, IMessage, IEquatable<RogueResPhantom>, IDeepCloneable<RogueResPhantom>, IBufferMessage
 	{
-		// Token: 0x06015E4F RID: 89679 RVA: 0x0032EA96 File Offset: 0x0032CC96
+		// Token: 0x06015D6A RID: 89450 RVA: 0x0032D3D6 File Offset: 0x0032B5D6
 		[NullableContext(1)]
 		public static RogueResPhantom Create()
 		{
 			return new RogueResPhantom();
 		}
 
-		// Token: 0x17004923 RID: 18723
-		// (get) Token: 0x06015E50 RID: 89680 RVA: 0x0032EA9D File Offset: 0x0032CC9D
+		// Token: 0x170048F9 RID: 18681
+		// (get) Token: 0x06015D6B RID: 89451 RVA: 0x0032D3DD File Offset: 0x0032B5DD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004924 RID: 18724
-		// (get) Token: 0x06015E51 RID: 89681 RVA: 0x0032EAA0 File Offset: 0x0032CCA0
+		// Token: 0x170048FA RID: 18682
+		// (get) Token: 0x06015D6C RID: 89452 RVA: 0x0032D3E0 File Offset: 0x0032B5E0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06015E52 RID: 89682 RVA: 0x0032EAA7 File Offset: 0x0032CCA7
+		// Token: 0x06015D6D RID: 89453 RVA: 0x0032D3E7 File Offset: 0x0032B5E7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueResPhantom()
 		{
 		}
 
-		// Token: 0x06015E53 RID: 89683 RVA: 0x0032EABC File Offset: 0x0032CCBC
+		// Token: 0x06015D6E RID: 89454 RVA: 0x0032D3FC File Offset: 0x0032B5FC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueResPhantom(RogueResPhantom other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06015E54 RID: 89684 RVA: 0x0032EB09 File Offset: 0x0032CD09
+		// Token: 0x06015D6F RID: 89455 RVA: 0x0032D449 File Offset: 0x0032B649
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueResPhantom Clone()
@@ -68,9 +68,9 @@ namespace Aki.Protocol
 			return new RogueResPhantom(this);
 		}
 
-		// Token: 0x17004925 RID: 18725
-		// (get) Token: 0x06015E55 RID: 89685 RVA: 0x0032EB11 File Offset: 0x0032CD11
-		// (set) Token: 0x06015E56 RID: 89686 RVA: 0x0032EB19 File Offset: 0x0032CD19
+		// Token: 0x170048FB RID: 18683
+		// (get) Token: 0x06015D70 RID: 89456 RVA: 0x0032D451 File Offset: 0x0032B651
+		// (set) Token: 0x06015D71 RID: 89457 RVA: 0x0032D459 File Offset: 0x0032B659
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ConfigId
@@ -85,9 +85,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004926 RID: 18726
-		// (get) Token: 0x06015E57 RID: 89687 RVA: 0x0032EB22 File Offset: 0x0032CD22
-		// (set) Token: 0x06015E58 RID: 89688 RVA: 0x0032EB2A File Offset: 0x0032CD2A
+		// Token: 0x170048FC RID: 18684
+		// (get) Token: 0x06015D72 RID: 89458 RVA: 0x0032D462 File Offset: 0x0032B662
+		// (set) Token: 0x06015D73 RID: 89459 RVA: 0x0032D46A File Offset: 0x0032B66A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool IsNew
@@ -102,8 +102,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004927 RID: 18727
-		// (get) Token: 0x06015E59 RID: 89689 RVA: 0x0032EB33 File Offset: 0x0032CD33
+		// Token: 0x170048FD RID: 18685
+		// (get) Token: 0x06015D74 RID: 89460 RVA: 0x0032D473 File Offset: 0x0032B673
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<PhantomAffixInfo> PhantomAffixInfos
@@ -114,7 +114,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06015E5A RID: 89690 RVA: 0x0032EB3B File Offset: 0x0032CD3B
+		// Token: 0x06015D75 RID: 89461 RVA: 0x0032D47B File Offset: 0x0032B67B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -122,7 +122,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RogueResPhantom);
 		}
 
-		// Token: 0x06015E5B RID: 89691 RVA: 0x0032EB4C File Offset: 0x0032CD4C
+		// Token: 0x06015D76 RID: 89462 RVA: 0x0032D48C File Offset: 0x0032B68C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RogueResPhantom other)
@@ -130,7 +130,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ConfigId == other.ConfigId && this.IsNew == other.IsNew && this.phantomAffixInfos_.Equals(other.phantomAffixInfos_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06015E5C RID: 89692 RVA: 0x0032EBAC File Offset: 0x0032CDAC
+		// Token: 0x06015D77 RID: 89463 RVA: 0x0032D4EC File Offset: 0x0032B6EC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -152,7 +152,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06015E5D RID: 89693 RVA: 0x0032EC12 File Offset: 0x0032CE12
+		// Token: 0x06015D78 RID: 89464 RVA: 0x0032D552 File Offset: 0x0032B752
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -160,7 +160,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06015E5E RID: 89694 RVA: 0x0032EC1F File Offset: 0x0032CE1F
+		// Token: 0x06015D79 RID: 89465 RVA: 0x0032D55F File Offset: 0x0032B75F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -168,7 +168,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06015E5F RID: 89695 RVA: 0x0032EC28 File Offset: 0x0032CE28
+		// Token: 0x06015D7A RID: 89466 RVA: 0x0032D568 File Offset: 0x0032B768
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -190,7 +190,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06015E60 RID: 89696 RVA: 0x0032EC94 File Offset: 0x0032CE94
+		// Token: 0x06015D7B RID: 89467 RVA: 0x0032D5D4 File Offset: 0x0032B7D4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -212,7 +212,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06015E61 RID: 89697 RVA: 0x0032ECF4 File Offset: 0x0032CEF4
+		// Token: 0x06015D7C RID: 89468 RVA: 0x0032D634 File Offset: 0x0032B834
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RogueResPhantom other)
@@ -233,7 +233,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06015E62 RID: 89698 RVA: 0x0032ED55 File Offset: 0x0032CF55
+		// Token: 0x06015D7D RID: 89469 RVA: 0x0032D695 File Offset: 0x0032B895
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -241,7 +241,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06015E63 RID: 89699 RVA: 0x0032ED60 File Offset: 0x0032CF60
+		// Token: 0x06015D7E RID: 89470 RVA: 0x0032D6A0 File Offset: 0x0032B8A0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -278,28 +278,28 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400835A RID: 33626
+		// Token: 0x04008384 RID: 33668
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400835B RID: 33627
+		// Token: 0x04008385 RID: 33669
 		public const int ConfigIdFieldNumber = 1;
 
-		// Token: 0x0400835C RID: 33628
+		// Token: 0x04008386 RID: 33670
 		private int configId_;
 
-		// Token: 0x0400835D RID: 33629
+		// Token: 0x04008387 RID: 33671
 		public const int IsNewFieldNumber = 2;
 
-		// Token: 0x0400835E RID: 33630
+		// Token: 0x04008388 RID: 33672
 		private bool isNew_;
 
-		// Token: 0x0400835F RID: 33631
+		// Token: 0x04008389 RID: 33673
 		public const int PhantomAffixInfosFieldNumber = 3;
 
-		// Token: 0x04008360 RID: 33632
+		// Token: 0x0400838A RID: 33674
 		private static readonly FieldCodec<PhantomAffixInfo> _repeated_phantomAffixInfos_codec = FieldCodec.ForMessage<PhantomAffixInfo>(26U, PhantomAffixInfo.Parser);
 
-		// Token: 0x04008361 RID: 33633
+		// Token: 0x0400838B RID: 33675
 		private readonly RepeatedField<PhantomAffixInfo> phantomAffixInfos_ = new RepeatedField<PhantomAffixInfo>();
 	}
 }

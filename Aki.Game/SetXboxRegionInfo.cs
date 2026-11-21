@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02000E2B RID: 3627
+// Token: 0x020002E0 RID: 736
 public class SetXboxRegionInfo
 {
-	// Token: 0x1700064C RID: 1612
-	// (get) Token: 0x06005712 RID: 22290 RVA: 0x000FA360 File Offset: 0x000F8560
-	// (set) Token: 0x06005713 RID: 22291 RVA: 0x000FA368 File Offset: 0x000F8568
+	// Token: 0x17000670 RID: 1648
+	// (get) Token: 0x06002AA2 RID: 10914 RVA: 0x00101B48 File Offset: 0x000FFD48
+	// (set) Token: 0x06002AA3 RID: 10915 RVA: 0x00101B50 File Offset: 0x000FFD50
 	public int Code { get; set; }
 
-	// Token: 0x1700064D RID: 1613
-	// (get) Token: 0x06005714 RID: 22292 RVA: 0x000FA371 File Offset: 0x000F8571
-	// (set) Token: 0x06005715 RID: 22293 RVA: 0x000FA379 File Offset: 0x000F8579
+	// Token: 0x17000671 RID: 1649
+	// (get) Token: 0x06002AA4 RID: 10916 RVA: 0x00101B59 File Offset: 0x000FFD59
+	// (set) Token: 0x06002AA5 RID: 10917 RVA: 0x00101B61 File Offset: 0x000FFD61
 	public int SdkLoginCode { get; set; }
 }

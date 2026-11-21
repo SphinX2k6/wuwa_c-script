@@ -3,16 +3,16 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Launcher.Platform.PlatformSdk
 {
-	// Token: 0x0200013C RID: 316
+	// Token: 0x02000140 RID: 320
 	public class RequestEmailCodeResponse
 	{
-		// Token: 0x040005DB RID: 1499
+		// Token: 0x04000616 RID: 1558
 		public bool IfSuccess;
 
-		// Token: 0x040005DC RID: 1500
+		// Token: 0x04000617 RID: 1559
 		public int Code;
 
-		// Token: 0x040005DD RID: 1501
+		// Token: 0x04000618 RID: 1560
 		[Nullable(1)]
 		public string Msg = "";
 	}

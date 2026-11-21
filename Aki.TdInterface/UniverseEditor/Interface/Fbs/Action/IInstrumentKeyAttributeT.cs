@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200696D RID: 26989
+	// Token: 0x02007020 RID: 28704
 	public class IInstrumentKeyAttributeT
 	{
-		// Token: 0x1700C828 RID: 51240
-		// (get) Token: 0x0602F1FC RID: 193020 RVA: 0x0066B98E File Offset: 0x00669B8E
-		// (set) Token: 0x0602F1FD RID: 193021 RVA: 0x0066B996 File Offset: 0x00669B96
+		// Token: 0x1700D22B RID: 53803
+		// (get) Token: 0x06031BCC RID: 203724 RVA: 0x006BBE76 File Offset: 0x006BA076
+		// (set) Token: 0x06031BCD RID: 203725 RVA: 0x006BBE7E File Offset: 0x006BA07E
 		public string FundamentalToneAssetPath { get; set; }
 
-		// Token: 0x1700C829 RID: 51241
-		// (get) Token: 0x0602F1FE RID: 193022 RVA: 0x0066B99F File Offset: 0x00669B9F
-		// (set) Token: 0x0602F1FF RID: 193023 RVA: 0x0066B9A7 File Offset: 0x00669BA7
+		// Token: 0x1700D22C RID: 53804
+		// (get) Token: 0x06031BCE RID: 203726 RVA: 0x006BBE87 File Offset: 0x006BA087
+		// (set) Token: 0x06031BCF RID: 203727 RVA: 0x006BBE8F File Offset: 0x006BA08F
 		public string OverToneAssetPath { get; set; }
 
-		// Token: 0x1700C82A RID: 51242
-		// (get) Token: 0x0602F200 RID: 193024 RVA: 0x0066B9B0 File Offset: 0x00669BB0
-		// (set) Token: 0x0602F201 RID: 193025 RVA: 0x0066B9B8 File Offset: 0x00669BB8
+		// Token: 0x1700D22D RID: 53805
+		// (get) Token: 0x06031BD0 RID: 203728 RVA: 0x006BBE98 File Offset: 0x006BA098
+		// (set) Token: 0x06031BD1 RID: 203729 RVA: 0x006BBEA0 File Offset: 0x006BA0A0
 		public string TextureAssetPath { get; set; }
 
-		// Token: 0x0602F202 RID: 193026 RVA: 0x0066B9C1 File Offset: 0x00669BC1
+		// Token: 0x06031BD2 RID: 203730 RVA: 0x006BBEA9 File Offset: 0x006BA0A9
 		public IInstrumentKeyAttributeT()
 		{
 			this.FundamentalToneAssetPath = null;

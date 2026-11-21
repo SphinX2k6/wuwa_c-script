@@ -5,20 +5,20 @@ using CSharpScript.Game.Module.MovieMode;
 
 namespace CSharpScript.Game.Ui.Common.HudOnlyPopup
 {
-	// Token: 0x020046EC RID: 18156
+	// Token: 0x0200361C RID: 13852
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class HudOnlyPopupController : UiControllerBase
 	{
-		// Token: 0x0602F7C7 RID: 194503 RVA: 0x00B01EA2 File Offset: 0x00B000A2
+		// Token: 0x06023F90 RID: 147344 RVA: 0x00A31CDE File Offset: 0x00A2FEDE
 		protected override void OnAddEvents()
 		{
 			EventSystem.Instance.Add<EUiViewName, int>(EEventName.CloseView, new Action<EUiViewName, int>(this.OnAnyViewClose));
 			EventSystem.Instance.Add(EEventName.ActiveBattleView, new Action(this.OnActiveBattleView));
 		}
 
-		// Token: 0x0602F7C8 RID: 194504 RVA: 0x00B01EDC File Offset: 0x00B000DC
+		// Token: 0x06023F91 RID: 147345 RVA: 0x00A31D18 File Offset: 0x00A2FF18
 		protected override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove<EUiViewName, int>(EEventName.CloseView, new Action<EUiViewName, int>(this.OnAnyViewClose));
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Ui.Common.HudOnlyPopup
 			this.Queue.Clear();
 		}
 
-		// Token: 0x0602F7C9 RID: 194505 RVA: 0x00B01F2C File Offset: 0x00B0012C
+		// Token: 0x06023F92 RID: 147346 RVA: 0x00A31D68 File Offset: 0x00A2FF68
 		public unsafe void Push(HudOnlyPopupTask task)
 		{
 			this.Queue.Push(task);
@@ -42,26 +42,26 @@ namespace CSharpScript.Game.Ui.Common.HudOnlyPopup
 			this.TryFlush();
 		}
 
-		// Token: 0x0602F7CA RID: 194506 RVA: 0x00B01FDD File Offset: 0x00B001DD
+		// Token: 0x06023F93 RID: 147347 RVA: 0x00A31E19 File Offset: 0x00A30019
 		public bool Cancel(string dedupKey)
 		{
 			return this.Queue.RemoveByKey(dedupKey);
 		}
 
-		// Token: 0x0602F7CB RID: 194507 RVA: 0x00B01FEB File Offset: 0x00B001EB
+		// Token: 0x06023F94 RID: 147348 RVA: 0x00A31E27 File Offset: 0x00A30027
 		public void ClearAll()
 		{
 			this.Queue.Clear();
 		}
 
-		// Token: 0x0602F7CC RID: 194508 RVA: 0x00B01FF8 File Offset: 0x00B001F8
+		// Token: 0x06023F95 RID: 147349 RVA: 0x00A31E34 File Offset: 0x00A30034
 		public bool CanShowNow()
 		{
 			UiViewBase uiViewBase = UiModel.Instance.NormalStack.Peek();
 			return uiViewBase != null && uiViewBase.ViewInfo.Name.Equals(UiModel.Instance.MainViewName) && UiModel.Instance.PopList.Count <= 0 && !MovieModeController.Instance.IsInMovieMode() && !UiManager.Instance.IsViewOpen(EUiViewName.GuideFocusView);
 		}
 
-		// Token: 0x0602F7CD RID: 194509 RVA: 0x00B0206F File Offset: 0x00B0026F
+		// Token: 0x06023F96 RID: 147350 RVA: 0x00A31EAB File Offset: 0x00A300AB
 		private void OnAnyViewClose(EUiViewName viewName, int viewId)
 		{
 			if (this.Queue.IsEmpty)
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Ui.Common.HudOnlyPopup
 			this.TryFlush();
 		}
 
-		// Token: 0x0602F7CE RID: 194510 RVA: 0x00B02085 File Offset: 0x00B00285
+		// Token: 0x06023F97 RID: 147351 RVA: 0x00A31EC1 File Offset: 0x00A300C1
 		private void OnActiveBattleView()
 		{
 			if (this.Queue.IsEmpty)
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Ui.Common.HudOnlyPopup
 			this.TryFlush();
 		}
 
-		// Token: 0x0602F7CF RID: 194511 RVA: 0x00B0209C File Offset: 0x00B0029C
+		// Token: 0x06023F98 RID: 147352 RVA: 0x00A31ED8 File Offset: 0x00A300D8
 		private unsafe void TryFlush()
 		{
 			int length = this.Queue.Length;
@@ -100,8 +100,8 @@ namespace CSharpScript.Game.Ui.Common.HudOnlyPopup
 			}
 		}
 
-		// Token: 0x17007688 RID: 30344
-		// (get) Token: 0x0602F7D0 RID: 194512 RVA: 0x00B02168 File Offset: 0x00B00368
+		// Token: 0x17004944 RID: 18756
+		// (get) Token: 0x06023F99 RID: 147353 RVA: 0x00A31FA4 File Offset: 0x00A301A4
 		public static HudOnlyPopupController Instance
 		{
 			get
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Ui.Common.HudOnlyPopup
 			}
 		}
 
-		// Token: 0x0602F7D1 RID: 194513 RVA: 0x00B0216F File Offset: 0x00B0036F
+		// Token: 0x06023F9A RID: 147354 RVA: 0x00A31FAB File Offset: 0x00A301AB
 		public static HudOnlyPopupController GetOrCreateInstance()
 		{
 			if (HudOnlyPopupController._Instance == null)
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Ui.Common.HudOnlyPopup
 			return HudOnlyPopupController._Instance;
 		}
 
-		// Token: 0x0602F7D2 RID: 194514 RVA: 0x00B02183 File Offset: 0x00B00383
+		// Token: 0x06023F9B RID: 147355 RVA: 0x00A31FBF File Offset: 0x00A301BF
 		public static bool CreateInstance()
 		{
 			if (HudOnlyPopupController._Instance != null)
@@ -131,27 +131,27 @@ namespace CSharpScript.Game.Ui.Common.HudOnlyPopup
 			return true;
 		}
 
-		// Token: 0x0602F7D3 RID: 194515 RVA: 0x00B02199 File Offset: 0x00B00399
+		// Token: 0x06023F9C RID: 147356 RVA: 0x00A31FD5 File Offset: 0x00A301D5
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602F7D4 RID: 194516 RVA: 0x00B0219B File Offset: 0x00B0039B
+		// Token: 0x06023F9D RID: 147357 RVA: 0x00A31FD7 File Offset: 0x00A301D7
 		public static void ResetStaticDefaultValue()
 		{
 			HudOnlyPopupController._Instance = null;
 		}
 
-		// Token: 0x0602F7D5 RID: 194517 RVA: 0x00B021A3 File Offset: 0x00B003A3
+		// Token: 0x06023F9E RID: 147358 RVA: 0x00A31FDF File Offset: 0x00A301DF
 		static HudOnlyPopupController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(HudOnlyPopupController.CreateStaticDefaultValue), new Action(HudOnlyPopupController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04019A76 RID: 105078
+		// Token: 0x04014125 RID: 82213
 		private readonly HudOnlyPopupQueue Queue = new HudOnlyPopupQueue();
 
-		// Token: 0x04019A77 RID: 105079
+		// Token: 0x04014126 RID: 82214
 		[Nullable(2)]
 		private static HudOnlyPopupController _Instance;
 	}

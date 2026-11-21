@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067DF RID: 26591
+	// Token: 0x0200572F RID: 22319
 	[NullableContext(2)]
 	[Nullable(0)]
 	public static class DangoBrawlStickyUtil
 	{
-		// Token: 0x0604236C RID: 271212 RVA: 0x01010545 File Offset: 0x0100E745
+		// Token: 0x06036EC2 RID: 224962 RVA: 0x00F519DD File Offset: 0x00F4FBDD
 		public static DangoBrawlBackpackItemData PickReplaceCandidate([Nullable(new byte[]
 		{
 			2,
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return DangoBrawlStickyUtil.Pick(abandonedFollowers, isLayerMode) ?? DangoBrawlStickyUtil.Pick(replacedItems, isLayerMode);
 		}
 
-		// Token: 0x0604236D RID: 271213 RVA: 0x0101055C File Offset: 0x0100E75C
+		// Token: 0x06036EC3 RID: 224963 RVA: 0x00F519F4 File Offset: 0x00F4FBF4
 		private static DangoBrawlBackpackItemData Pick([Nullable(new byte[]
 		{
 			2,
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return dangoBrawlBackpackItemData;
 		}
 
-		// Token: 0x0604236E RID: 271214 RVA: 0x010105C8 File Offset: 0x0100E7C8
+		// Token: 0x06036EC4 RID: 224964 RVA: 0x00F51A60 File Offset: 0x00F4FC60
 		[NullableContext(1)]
 		private static bool IsBetter(DangoBrawlBackpackItemData a, DangoBrawlBackpackItemData b)
 		{

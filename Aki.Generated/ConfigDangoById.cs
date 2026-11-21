@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020001E5 RID: 485
+	// Token: 0x020001F7 RID: 503
 	public class ConfigDangoById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000B61 RID: 2913 RVA: 0x00099EFC File Offset: 0x000980FC
+		// Token: 0x06000BCD RID: 3021 RVA: 0x0009FE34 File Offset: 0x0009E034
 		static ConfigDangoById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDangoById.CreateStaticDefaultValue), new Action(ConfigDangoById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000B62 RID: 2914 RVA: 0x00099F1C File Offset: 0x0009811C
+		// Token: 0x06000BCE RID: 3022 RVA: 0x0009FE54 File Offset: 0x0009E054
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDangoById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000B63 RID: 2915 RVA: 0x00099F9B File Offset: 0x0009819B
+		// Token: 0x06000BCF RID: 3023 RVA: 0x0009FED3 File Offset: 0x0009E0D3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDangoById.LogPair = null;
 			ConfigDangoById.HandleId = 0;
 		}
 
-		// Token: 0x06000B64 RID: 2916 RVA: 0x00099FA9 File Offset: 0x000981A9
+		// Token: 0x06000BD0 RID: 3024 RVA: 0x0009FEE1 File Offset: 0x0009E0E1
 		public static void Init()
 		{
 			ConfigDangoById.HandleId = ConfigCommon.InitDataStatement(ConfigDangoById.HandleId, "db_dango.db", "select BinData from `Dango` where Id=?");
 		}
 
-		// Token: 0x06000B65 RID: 2917 RVA: 0x00099FC4 File Offset: 0x000981C4
+		// Token: 0x06000BD1 RID: 3025 RVA: 0x0009FEFC File Offset: 0x0009E0FC
 		public static Dango? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigDangoById.HandleId, ConfigDangoById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new Dango?(rootAsDango);
 		}
 
-		// Token: 0x04000D27 RID: 3367
+		// Token: 0x04000DA5 RID: 3493
 		private const string DB = "db_dango.db";
 
-		// Token: 0x04000D28 RID: 3368
+		// Token: 0x04000DA6 RID: 3494
 		private const string FILE = "t.团子.xlsx";
 
-		// Token: 0x04000D29 RID: 3369
+		// Token: 0x04000DA7 RID: 3495
 		private const string TABLE = "Dango";
 
-		// Token: 0x04000D2A RID: 3370
+		// Token: 0x04000DA8 RID: 3496
 		private const string COMMAND = "select BinData from `Dango` where Id=?";
 
-		// Token: 0x04000D2B RID: 3371
+		// Token: 0x04000DA9 RID: 3497
 		private const string KEY_PREFIX = "DangoById";
 
-		// Token: 0x04000D2C RID: 3372
+		// Token: 0x04000DAA RID: 3498
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000D2D RID: 3373
+		// Token: 0x04000DAB RID: 3499
 		private static int HandleId;
 	}
 }

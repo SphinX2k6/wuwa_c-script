@@ -3,42 +3,42 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x0200329F RID: 12959
+// Token: 0x02002810 RID: 10256
 [NullableContext(1)]
 [Nullable(0)]
 public class SquadPropComponent : EntityComponent, ISquadAttributeSet, IStaticVariableResetter
 {
-	// Token: 0x0601C0B3 RID: 114867 RVA: 0x007CBAB4 File Offset: 0x007C9CB4
+	// Token: 0x06019CE1 RID: 105697 RVA: 0x007F2D74 File Offset: 0x007F0F74
 	static SquadPropComponent()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(SquadPropComponent.CreateStaticDefaultValue), new Action(SquadPropComponent.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601C0B4 RID: 114868 RVA: 0x007CBB1A File Offset: 0x007C9D1A
+	// Token: 0x06019CE2 RID: 105698 RVA: 0x007F2DDA File Offset: 0x007F0FDA
 	public static void CreateStaticDefaultValue()
 	{
 		SquadPropComponent.ModifierHandleGenerator = 100;
 	}
 
-	// Token: 0x0601C0B5 RID: 114869 RVA: 0x007CBB23 File Offset: 0x007C9D23
+	// Token: 0x06019CE3 RID: 105699 RVA: 0x007F2DE3 File Offset: 0x007F0FE3
 	public static void ResetStaticDefaultValue()
 	{
 		SquadPropComponent.ModifierHandleGenerator = 100;
 	}
 
-	// Token: 0x0601C0B6 RID: 114870 RVA: 0x007CBB2C File Offset: 0x007C9D2C
+	// Token: 0x06019CE4 RID: 105700 RVA: 0x007F2DEC File Offset: 0x007F0FEC
 	public bool IsWritableAttribute(ESquadAttributeType attrId)
 	{
 		return SquadAttributeTypes.squadWritableAttributeIds.Contains(attrId);
 	}
 
-	// Token: 0x0601C0B7 RID: 114871 RVA: 0x007CBB39 File Offset: 0x007C9D39
+	// Token: 0x06019CE5 RID: 105701 RVA: 0x007F2DF9 File Offset: 0x007F0FF9
 	public bool IsLocalAttribute(ESquadAttributeType attrId)
 	{
 		return SquadAttributeTypes.squadLocalAttributeIds.Contains(attrId);
 	}
 
-	// Token: 0x0601C0B8 RID: 114872 RVA: 0x007CBB48 File Offset: 0x007C9D48
+	// Token: 0x06019CE6 RID: 105702 RVA: 0x007F2E08 File Offset: 0x007F1008
 	[NullableContext(2)]
 	public static SquadPropComponent GetByEntity(Entity entity)
 	{
@@ -66,7 +66,7 @@ public class SquadPropComponent : EntityComponent, ISquadAttributeSet, IStaticVa
 		return playerEntity.GetComponent<SquadPropComponent>();
 	}
 
-	// Token: 0x0601C0B9 RID: 114873 RVA: 0x007CBBA8 File Offset: 0x007C9DA8
+	// Token: 0x06019CE7 RID: 105703 RVA: 0x007F2E68 File Offset: 0x007F1068
 	[NullableContext(2)]
 	protected override bool OnCreate(IEntityArgs args = null)
 	{
@@ -79,7 +79,7 @@ public class SquadPropComponent : EntityComponent, ISquadAttributeSet, IStaticVa
 		return true;
 	}
 
-	// Token: 0x0601C0BA RID: 114874 RVA: 0x007CBBE9 File Offset: 0x007C9DE9
+	// Token: 0x06019CE8 RID: 105704 RVA: 0x007F2EA9 File Offset: 0x007F10A9
 	[NullableContext(2)]
 	protected override bool OnInitData(IEntityArgs args = null)
 	{
@@ -89,13 +89,13 @@ public class SquadPropComponent : EntityComponent, ISquadAttributeSet, IStaticVa
 		return true;
 	}
 
-	// Token: 0x0601C0BB RID: 114875 RVA: 0x007CBC0F File Offset: 0x007C9E0F
+	// Token: 0x06019CE9 RID: 105705 RVA: 0x007F2ECF File Offset: 0x007F10CF
 	protected override void OnActivate()
 	{
 		this.InitFromPbData();
 	}
 
-	// Token: 0x0601C0BC RID: 114876 RVA: 0x007CBC17 File Offset: 0x007C9E17
+	// Token: 0x06019CEA RID: 105706 RVA: 0x007F2ED7 File Offset: 0x007F10D7
 	protected override bool OnEnd()
 	{
 		this.CurrentValueListenerMap.Clear();
@@ -103,7 +103,7 @@ public class SquadPropComponent : EntityComponent, ISquadAttributeSet, IStaticVa
 		return true;
 	}
 
-	// Token: 0x0601C0BD RID: 114877 RVA: 0x007CBC30 File Offset: 0x007C9E30
+	// Token: 0x06019CEB RID: 105707 RVA: 0x007F2EF0 File Offset: 0x007F10F0
 	protected override bool OnClear()
 	{
 		Array.Clear(this.BaseValues, 0, this.BaseValues.Length);
@@ -112,7 +112,7 @@ public class SquadPropComponent : EntityComponent, ISquadAttributeSet, IStaticVa
 		return true;
 	}
 
-	// Token: 0x0601C0BE RID: 114878 RVA: 0x007CBC70 File Offset: 0x007C9E70
+	// Token: 0x06019CEC RID: 105708 RVA: 0x007F2F30 File Offset: 0x007F1130
 	private void InitFromPbData()
 	{
 		CreatureDataComponent creatureDataComponent = base.Entity.CheckGetComponent<CreatureDataComponent>();
@@ -124,7 +124,7 @@ public class SquadPropComponent : EntityComponent, ISquadAttributeSet, IStaticVa
 		}
 	}
 
-	// Token: 0x0601C0BF RID: 114879 RVA: 0x007CBCCC File Offset: 0x007C9ECC
+	// Token: 0x06019CED RID: 105709 RVA: 0x007F2F8C File Offset: 0x007F118C
 	public void ApplyAttributes(IReadOnlyList<GameplayAttributeData> attributes)
 	{
 		foreach (GameplayAttributeData gameplayAttributeData in attributes)
@@ -137,7 +137,7 @@ public class SquadPropComponent : EntityComponent, ISquadAttributeSet, IStaticVa
 		}
 	}
 
-	// Token: 0x0601C0C0 RID: 114880 RVA: 0x007CBD2C File Offset: 0x007C9F2C
+	// Token: 0x06019CEE RID: 105710 RVA: 0x007F2FEC File Offset: 0x007F11EC
 	[NullableContext(2)]
 	[CombatListen(ENotifyMessageId.SquadPropChangedNotify, true, false)]
 	public static void SquadPropChangedNotify(Entity entity, [Nullable(1)] SquadPropChangedNotify data, CombatCommon combatCommon = null)
@@ -149,7 +149,7 @@ public class SquadPropComponent : EntityComponent, ISquadAttributeSet, IStaticVa
 		}
 	}
 
-	// Token: 0x0601C0C1 RID: 114881 RVA: 0x007CBD60 File Offset: 0x007C9F60
+	// Token: 0x06019CEF RID: 105711 RVA: 0x007F3020 File Offset: 0x007F1220
 	public void SyncValueFromServer(ESquadAttributeType attrId, float baseValue, float currentValue)
 	{
 		if (attrId <= ESquadAttributeType.None || attrId >= ESquadAttributeType.Max)
@@ -174,7 +174,7 @@ public class SquadPropComponent : EntityComponent, ISquadAttributeSet, IStaticVa
 		}
 	}
 
-	// Token: 0x0601C0C2 RID: 114882 RVA: 0x007CBDC8 File Offset: 0x007C9FC8
+	// Token: 0x06019CF0 RID: 105712 RVA: 0x007F3088 File Offset: 0x007F1288
 	public void SetBaseValue(ESquadAttributeType attrId, float value)
 	{
 		if (attrId <= ESquadAttributeType.None || attrId >= ESquadAttributeType.Max)
@@ -203,25 +203,25 @@ public class SquadPropComponent : EntityComponent, ISquadAttributeSet, IStaticVa
 		this.UpdateCurAndDispatch(attrId);
 	}
 
-	// Token: 0x0601C0C3 RID: 114883 RVA: 0x007CBE48 File Offset: 0x007CA048
+	// Token: 0x06019CF1 RID: 105713 RVA: 0x007F3108 File Offset: 0x007F1308
 	public void AddBaseValue(ESquadAttributeType attrId, float value)
 	{
 		this.SetBaseValue(attrId, this.BaseValues[(int)attrId] + value);
 	}
 
-	// Token: 0x0601C0C4 RID: 114884 RVA: 0x007CBE5B File Offset: 0x007CA05B
+	// Token: 0x06019CF2 RID: 105714 RVA: 0x007F311B File Offset: 0x007F131B
 	public float GetBaseValue(ESquadAttributeType attrId)
 	{
 		return this.BaseValues[(int)attrId];
 	}
 
-	// Token: 0x0601C0C5 RID: 114885 RVA: 0x007CBE65 File Offset: 0x007CA065
+	// Token: 0x06019CF3 RID: 105715 RVA: 0x007F3125 File Offset: 0x007F1325
 	public float GetCurrentValue(ESquadAttributeType attrId)
 	{
 		return this.CurrentValues[(int)attrId];
 	}
 
-	// Token: 0x0601C0C6 RID: 114886 RVA: 0x007CBE70 File Offset: 0x007CA070
+	// Token: 0x06019CF4 RID: 105716 RVA: 0x007F3130 File Offset: 0x007F1330
 	private float? GetMaxValue(ESquadAttributeType attrId)
 	{
 		ESquadAttributeType attrId2;
@@ -232,7 +232,7 @@ public class SquadPropComponent : EntityComponent, ISquadAttributeSet, IStaticVa
 		return null;
 	}
 
-	// Token: 0x0601C0C7 RID: 114887 RVA: 0x007CBEA4 File Offset: 0x007CA0A4
+	// Token: 0x06019CF5 RID: 105717 RVA: 0x007F3164 File Offset: 0x007F1364
 	public SquadAttributeSnapshot TakeSnapshot()
 	{
 		SquadAttributeSnapshot squadAttributeSnapshot = new SquadAttributeSnapshot();
@@ -241,7 +241,7 @@ public class SquadPropComponent : EntityComponent, ISquadAttributeSet, IStaticVa
 		return squadAttributeSnapshot;
 	}
 
-	// Token: 0x0601C0C8 RID: 114888 RVA: 0x007CBEDC File Offset: 0x007CA0DC
+	// Token: 0x06019CF6 RID: 105718 RVA: 0x007F319C File Offset: 0x007F139C
 	private void UpdateCurAndDispatch(ESquadAttributeType attrId)
 	{
 		float num = this.CurrentValues[(int)attrId];
@@ -255,7 +255,7 @@ public class SquadPropComponent : EntityComponent, ISquadAttributeSet, IStaticVa
 		}
 	}
 
-	// Token: 0x0601C0C9 RID: 114889 RVA: 0x007CBF28 File Offset: 0x007CA128
+	// Token: 0x06019CF7 RID: 105719 RVA: 0x007F31E8 File Offset: 0x007F13E8
 	private void UpdateCurrentValue(ESquadAttributeType attrId)
 	{
 		if (!this.IsWritableAttribute(attrId))
@@ -276,7 +276,7 @@ public class SquadPropComponent : EntityComponent, ISquadAttributeSet, IStaticVa
 		this.CurrentValues[(int)attrId] = num;
 	}
 
-	// Token: 0x0601C0CA RID: 114890 RVA: 0x007CBFA0 File Offset: 0x007CA1A0
+	// Token: 0x06019CF8 RID: 105720 RVA: 0x007F3260 File Offset: 0x007F1460
 	public int AddModifier(ESquadAttributeType attrId, ISquadModifier modifier)
 	{
 		if (attrId <= ESquadAttributeType.None || attrId >= ESquadAttributeType.Max)
@@ -304,7 +304,7 @@ public class SquadPropComponent : EntityComponent, ISquadAttributeSet, IStaticVa
 		return num;
 	}
 
-	// Token: 0x0601C0CB RID: 114891 RVA: 0x007CC03D File Offset: 0x007CA23D
+	// Token: 0x06019CF9 RID: 105721 RVA: 0x007F32FD File Offset: 0x007F14FD
 	public void RemoveModifier(ESquadAttributeType attrId, int handle)
 	{
 		Dictionary<int, ISquadModifier> dictionary = this.ModifierLists[(int)attrId];
@@ -314,7 +314,7 @@ public class SquadPropComponent : EntityComponent, ISquadAttributeSet, IStaticVa
 		}
 	}
 
-	// Token: 0x0601C0CC RID: 114892 RVA: 0x007CC05D File Offset: 0x007CA25D
+	// Token: 0x06019CFA RID: 105722 RVA: 0x007F331D File Offset: 0x007F151D
 	public IEnumerable<ISquadModifier> GetAllModifiers(ESquadAttributeType attrId)
 	{
 		SquadPropComponent.<GetAllModifiers>d__32 <GetAllModifiers>d__ = new SquadPropComponent.<GetAllModifiers>d__32(-2);
@@ -323,7 +323,7 @@ public class SquadPropComponent : EntityComponent, ISquadAttributeSet, IStaticVa
 		return <GetAllModifiers>d__;
 	}
 
-	// Token: 0x0601C0CD RID: 114893 RVA: 0x007CC074 File Offset: 0x007CA274
+	// Token: 0x06019CFB RID: 105723 RVA: 0x007F3334 File Offset: 0x007F1534
 	private float EvaluateModifiers(ESquadAttributeType attrId)
 	{
 		float num = this.BaseValues[(int)attrId];
@@ -383,7 +383,7 @@ public class SquadPropComponent : EntityComponent, ISquadAttributeSet, IStaticVa
 		return (float)Math.Floor((double)((num * (num2 * 0.0001f + 1f) + num4) * (num3 * 0.0001f + 1f)));
 	}
 
-	// Token: 0x0601C0CE RID: 114894 RVA: 0x007CC1C0 File Offset: 0x007CA3C0
+	// Token: 0x06019CFC RID: 105724 RVA: 0x007F3480 File Offset: 0x007F1680
 	public void AddListener(ESquadAttributeType attrId, SquadAttrChangeListener callback)
 	{
 		HashSet<SquadAttrChangeListener> hashSet;
@@ -395,7 +395,7 @@ public class SquadPropComponent : EntityComponent, ISquadAttributeSet, IStaticVa
 		hashSet.Add(callback);
 	}
 
-	// Token: 0x0601C0CF RID: 114895 RVA: 0x007CC1F8 File Offset: 0x007CA3F8
+	// Token: 0x06019CFD RID: 105725 RVA: 0x007F34B8 File Offset: 0x007F16B8
 	public void AddListeners(ESquadAttributeType[] attrIds, SquadAttrChangeListener callback)
 	{
 		foreach (ESquadAttributeType attrId in attrIds)
@@ -404,14 +404,14 @@ public class SquadPropComponent : EntityComponent, ISquadAttributeSet, IStaticVa
 		}
 	}
 
-	// Token: 0x0601C0D0 RID: 114896 RVA: 0x007CC224 File Offset: 0x007CA424
+	// Token: 0x06019CFE RID: 105726 RVA: 0x007F34E4 File Offset: 0x007F16E4
 	public bool RemoveListener(ESquadAttributeType attrId, SquadAttrChangeListener callback)
 	{
 		HashSet<SquadAttrChangeListener> hashSet;
 		return this.CurrentValueListenerMap.TryGetValue(attrId, out hashSet) && hashSet.Remove(callback);
 	}
 
-	// Token: 0x0601C0D1 RID: 114897 RVA: 0x007CC24C File Offset: 0x007CA44C
+	// Token: 0x06019CFF RID: 105727 RVA: 0x007F350C File Offset: 0x007F170C
 	public void RemoveListeners(ESquadAttributeType[] attrIds, SquadAttrChangeListener callback)
 	{
 		foreach (ESquadAttributeType attrId in attrIds)
@@ -420,19 +420,19 @@ public class SquadPropComponent : EntityComponent, ISquadAttributeSet, IStaticVa
 		}
 	}
 
-	// Token: 0x0601C0D2 RID: 114898 RVA: 0x007CC276 File Offset: 0x007CA476
+	// Token: 0x06019D00 RID: 105728 RVA: 0x007F3536 File Offset: 0x007F1736
 	public void AddGeneralListener(SquadAttrChangeListener listener)
 	{
 		this.AnyCurrentValueListenerSet.Add(listener);
 	}
 
-	// Token: 0x0601C0D3 RID: 114899 RVA: 0x007CC285 File Offset: 0x007CA485
+	// Token: 0x06019D01 RID: 105729 RVA: 0x007F3545 File Offset: 0x007F1745
 	public void RemoveGeneralListener(SquadAttrChangeListener listener)
 	{
 		this.AnyCurrentValueListenerSet.Remove(listener);
 	}
 
-	// Token: 0x0601C0D4 RID: 114900 RVA: 0x007CC294 File Offset: 0x007CA494
+	// Token: 0x06019D02 RID: 105730 RVA: 0x007F3554 File Offset: 0x007F1754
 	public void DispatchCurrentValueEvent(ESquadAttributeType attrId, float newValue, float oldValue)
 	{
 		if (oldValue == newValue)
@@ -455,7 +455,7 @@ public class SquadPropComponent : EntityComponent, ISquadAttributeSet, IStaticVa
 		this.DispatchCurrentValueEventImplement(attrId, newValue, oldValue);
 	}
 
-	// Token: 0x0601C0D5 RID: 114901 RVA: 0x007CC32C File Offset: 0x007CA52C
+	// Token: 0x06019D03 RID: 105731 RVA: 0x007F35EC File Offset: 0x007F17EC
 	protected void DispatchCurrentValueEventImplement(ESquadAttributeType attrId, float newValue, float oldValue)
 	{
 		HashSet<SquadAttrChangeListener> hashSet;
@@ -518,7 +518,7 @@ public class SquadPropComponent : EntityComponent, ISquadAttributeSet, IStaticVa
 		}
 	}
 
-	// Token: 0x0601C0D6 RID: 114902 RVA: 0x007CC4D4 File Offset: 0x007CA6D4
+	// Token: 0x06019D04 RID: 105732 RVA: 0x007F3794 File Offset: 0x007F1994
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -526,43 +526,80 @@ public class SquadPropComponent : EntityComponent, ISquadAttributeSet, IStaticVa
 			return false;
 		}
 		SquadPropComponent squadPropComponent = (SquadPropComponent)componentTemplate;
-		if (base.CanResetComponentProperty("PlayerId"))
-		{
-			this.PlayerId = squadPropComponent.PlayerId;
-		}
-		return (!base.CanResetComponentProperty("CurrentValueListenerMap") || squadPropComponent.CurrentValueListenerMap == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<ESquadAttributeType, HashSet<SquadAttrChangeListener>>>(this.CurrentValueListenerMap), "CurrentValueListenerMap")) && (!base.CanResetComponentProperty("AnyCurrentValueListenerSet") || squadPropComponent.AnyCurrentValueListenerSet == null || base.CheckClearObject(EntityComponentSystem.ClearObject<SquadAttrChangeListener>(this.AnyCurrentValueListenerSet), "AnyCurrentValueListenerSet"));
+		this.PlayerId = squadPropComponent.PlayerId;
+		return (squadPropComponent.CurrentValueListenerMap == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurrentValueListenerMap), "CurrentValueListenerMap")) && (squadPropComponent.AnyCurrentValueListenerSet == null || base.CheckClearObject(EntityComponentSystem.ClearObject<SquadAttrChangeListener>(this.AnyCurrentValueListenerSet), "AnyCurrentValueListenerSet"));
 	}
 
-	// Token: 0x0400DDAB RID: 56747
+	// Token: 0x1700299B RID: 10651
+	// (get) Token: 0x06019D05 RID: 105733 RVA: 0x007F3804 File Offset: 0x007F1A04
+	public override bool NeedCreateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700299C RID: 10652
+	// (get) Token: 0x06019D06 RID: 105734 RVA: 0x007F3807 File Offset: 0x007F1A07
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700299D RID: 10653
+	// (get) Token: 0x06019D07 RID: 105735 RVA: 0x007F380A File Offset: 0x007F1A0A
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700299E RID: 10654
+	// (get) Token: 0x06019D08 RID: 105736 RVA: 0x007F380D File Offset: 0x007F1A0D
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400E252 RID: 57938
 	public int PlayerId;
 
-	// Token: 0x0400DDAC RID: 56748
+	// Token: 0x0400E253 RID: 57939
 	private readonly float[] BaseValues = new float[3];
 
-	// Token: 0x0400DDAD RID: 56749
+	// Token: 0x0400E254 RID: 57940
 	private readonly float[] CurrentValues = new float[3];
 
-	// Token: 0x0400DDAE RID: 56750
+	// Token: 0x0400E255 RID: 57941
 	private readonly Dictionary<int, ISquadModifier>[] ModifierLists = new Dictionary<int, ISquadModifier>[3];
 
-	// Token: 0x0400DDAF RID: 56751
+	// Token: 0x0400E256 RID: 57942
 	private static int ModifierHandleGenerator;
 
-	// Token: 0x0400DDB0 RID: 56752
+	// Token: 0x0400E257 RID: 57943
 	protected readonly Dictionary<ESquadAttributeType, HashSet<SquadAttrChangeListener>> CurrentValueListenerMap = new Dictionary<ESquadAttributeType, HashSet<SquadAttrChangeListener>>();
 
-	// Token: 0x0400DDB1 RID: 56753
+	// Token: 0x0400E258 RID: 57944
 	protected readonly HashSet<SquadAttrChangeListener> AnyCurrentValueListenerSet = new HashSet<SquadAttrChangeListener>();
 
-	// Token: 0x0400DDB2 RID: 56754
+	// Token: 0x0400E259 RID: 57945
 	[StaticVariableRuleIgnore]
 	private static readonly Stat DispatchCurrentValueEventStat = Stat.Create("SquadPropComponent.DispatchCurrentValueEvent", "STATGROUP_KuroBattle", "");
 
-	// Token: 0x0400DDB3 RID: 56755
+	// Token: 0x0400E25A RID: 57946
 	[StaticVariableRuleIgnore]
 	private static readonly Dictionary<ESquadAttributeType, Stat> StatCurrentAttrEventMap = new Dictionary<ESquadAttributeType, Stat>();
 
-	// Token: 0x0400DDB4 RID: 56756
+	// Token: 0x0400E25B RID: 57947
 	[StaticVariableRuleIgnore]
 	private static readonly Stat StatAnyCurrentAttrEvent = Stat.Create("Squad AnyCurrentAttr event", "STATGROUP_KuroBattle", "");
 }

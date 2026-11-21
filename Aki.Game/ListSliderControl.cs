@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200200F RID: 8207
+// Token: 0x020014E2 RID: 5346
 [NullableContext(1)]
 [Nullable(0)]
 public class ListSliderControl<[Nullable(0)] T> where T : SliderItem
 {
-	// Token: 0x06010182 RID: 65922 RVA: 0x003EB370 File Offset: 0x003E9570
+	// Token: 0x0600D5EA RID: 54762 RVA: 0x003F7968 File Offset: 0x003F5B68
 	public ListSliderControl(IListSliderControlData<T> data)
 	{
 		this.Data = data;
@@ -49,13 +49,13 @@ public class ListSliderControl<[Nullable(0)] T> where T : SliderItem
 		this.OffsetIndex = 0;
 	}
 
-	// Token: 0x06010183 RID: 65923 RVA: 0x003EB4A4 File Offset: 0x003E96A4
+	// Token: 0x0600D5EB RID: 54763 RVA: 0x003F7A9C File Offset: 0x003F5C9C
 	public void SetDynamicLoadResourceId(string resourceId)
 	{
 		this.ResourceId = resourceId;
 	}
 
-	// Token: 0x06010184 RID: 65924 RVA: 0x003EB4B0 File Offset: 0x003E96B0
+	// Token: 0x0600D5EC RID: 54764 RVA: 0x003F7AA8 File Offset: 0x003F5CA8
 	public void DisEnableParentLayout()
 	{
 		if (this.ParentUiItem == null)
@@ -71,7 +71,7 @@ public class ListSliderControl<[Nullable(0)] T> where T : SliderItem
 		this.Layout.SetEnable(false);
 	}
 
-	// Token: 0x06010185 RID: 65925 RVA: 0x003EB514 File Offset: 0x003E9714
+	// Token: 0x0600D5ED RID: 54765 RVA: 0x003F7B0C File Offset: 0x003F5D0C
 	public void Tick(float delta)
 	{
 		this.UpdateLastActiveStatus();
@@ -209,7 +209,7 @@ public class ListSliderControl<[Nullable(0)] T> where T : SliderItem
 		}
 	}
 
-	// Token: 0x06010186 RID: 65926 RVA: 0x003EB77C File Offset: 0x003E997C
+	// Token: 0x0600D5EE RID: 54766 RVA: 0x003F7D74 File Offset: 0x003F5F74
 	private void UpdateLastActiveStatus()
 	{
 		bool flag = this.ParentUiItem.IsUIActiveInHierarchy();
@@ -223,7 +223,7 @@ public class ListSliderControl<[Nullable(0)] T> where T : SliderItem
 		}
 	}
 
-	// Token: 0x06010187 RID: 65927 RVA: 0x003EB7F0 File Offset: 0x003E99F0
+	// Token: 0x0600D5EF RID: 54767 RVA: 0x003F7DE8 File Offset: 0x003F5FE8
 	private void UpdateLastMaxCount()
 	{
 		int maxShowCount = this.GetMaxShowCount();
@@ -241,7 +241,7 @@ public class ListSliderControl<[Nullable(0)] T> where T : SliderItem
 		}
 	}
 
-	// Token: 0x06010188 RID: 65928 RVA: 0x003EB88C File Offset: 0x003E9A8C
+	// Token: 0x0600D5F0 RID: 54768 RVA: 0x003F7E84 File Offset: 0x003F6084
 	private void UpdateItemPosition(T sliderItem, int index)
 	{
 		UUIItem rootItem = sliderItem.GetRootItem();
@@ -249,7 +249,7 @@ public class ListSliderControl<[Nullable(0)] T> where T : SliderItem
 		rootItem.SetAnchorOffsetY(anchorOffsetY);
 	}
 
-	// Token: 0x06010189 RID: 65929 RVA: 0x003EB8F0 File Offset: 0x003E9AF0
+	// Token: 0x0600D5F1 RID: 54769 RVA: 0x003F7EE8 File Offset: 0x003F60E8
 	public void SliderItemTick(T sliderItem, float delta, int index)
 	{
 		sliderItem.Tick(delta);
@@ -283,7 +283,7 @@ public class ListSliderControl<[Nullable(0)] T> where T : SliderItem
 		}
 	}
 
-	// Token: 0x0601018A RID: 65930 RVA: 0x003EB9C0 File Offset: 0x003E9BC0
+	// Token: 0x0600D5F2 RID: 54770 RVA: 0x003F7FB8 File Offset: 0x003F61B8
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -299,7 +299,7 @@ public class ListSliderControl<[Nullable(0)] T> where T : SliderItem
 		return <GetNewItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601018B RID: 65931 RVA: 0x003EBA04 File Offset: 0x003E9C04
+	// Token: 0x0600D5F3 RID: 54771 RVA: 0x003F7FFC File Offset: 0x003F61FC
 	private void UpdateSliderProcess(float delta)
 	{
 		if (this.NeedSliderHeight <= 0f)
@@ -314,7 +314,7 @@ public class ListSliderControl<[Nullable(0)] T> where T : SliderItem
 		this.NeedSliderHeight = 0f;
 	}
 
-	// Token: 0x0601018C RID: 65932 RVA: 0x003EBA54 File Offset: 0x003E9C54
+	// Token: 0x0600D5F4 RID: 54772 RVA: 0x003F804C File Offset: 0x003F624C
 	private void RecycleItem()
 	{
 		List<T> childrenList = this.ChildrenList;
@@ -340,13 +340,13 @@ public class ListSliderControl<[Nullable(0)] T> where T : SliderItem
 		}
 	}
 
-	// Token: 0x0601018D RID: 65933 RVA: 0x003EBADC File Offset: 0x003E9CDC
+	// Token: 0x0600D5F5 RID: 54773 RVA: 0x003F80D4 File Offset: 0x003F62D4
 	private void AddNeedSliderHeight()
 	{
 		this.NeedSliderHeight += this.ChildHeight + this.Layout.Spacing;
 	}
 
-	// Token: 0x0601018E RID: 65934 RVA: 0x003EBB00 File Offset: 0x003E9D00
+	// Token: 0x0600D5F6 RID: 54774 RVA: 0x003F80F8 File Offset: 0x003F62F8
 	public void DestroyMe()
 	{
 		if (this.Layout != null)
@@ -360,53 +360,53 @@ public class ListSliderControl<[Nullable(0)] T> where T : SliderItem
 		this.ChildrenPool = null;
 	}
 
-	// Token: 0x0601018F RID: 65935 RVA: 0x003EBB78 File Offset: 0x003E9D78
+	// Token: 0x0600D5F7 RID: 54775 RVA: 0x003F8170 File Offset: 0x003F6370
 	private void SetParentHeight()
 	{
 		this.ParentUiItem.SetHeight((float)this.ShowItemCount * this.ChildHeight);
 	}
 
-	// Token: 0x06010190 RID: 65936 RVA: 0x003EBB93 File Offset: 0x003E9D93
+	// Token: 0x0600D5F8 RID: 54776 RVA: 0x003F818B File Offset: 0x003F638B
 	private T CreateProxyFunction()
 	{
 		return this.Data.CreateProxyFunction();
 	}
 
-	// Token: 0x06010191 RID: 65937 RVA: 0x003EBBA5 File Offset: 0x003E9DA5
+	// Token: 0x0600D5F9 RID: 54777 RVA: 0x003F819D File Offset: 0x003F639D
 	private bool CheckNext()
 	{
 		return this.Data.CheckNext();
 	}
 
-	// Token: 0x06010192 RID: 65938 RVA: 0x003EBBB8 File Offset: 0x003E9DB8
+	// Token: 0x0600D5FA RID: 54778 RVA: 0x003F81B0 File Offset: 0x003F63B0
 	private int GetMaxShowCount()
 	{
 		IListSliderControlData<T> data = this.Data;
 		return ((data != null) ? data.MaxShowCount : null).GetValueOrDefault(8);
 	}
 
-	// Token: 0x06010193 RID: 65939 RVA: 0x003EBBE8 File Offset: 0x003E9DE8
+	// Token: 0x0600D5FB RID: 54779 RVA: 0x003F81E0 File Offset: 0x003F63E0
 	private float GetAddItemTime()
 	{
 		IListSliderControlData<T> data = this.Data;
 		return ((data != null) ? data.AddItemTime : null).GetValueOrDefault(100f);
 	}
 
-	// Token: 0x06010194 RID: 65940 RVA: 0x003EBC1C File Offset: 0x003E9E1C
+	// Token: 0x0600D5FC RID: 54780 RVA: 0x003F8214 File Offset: 0x003F6414
 	private float GetItemSliderTime()
 	{
 		IListSliderControlData<T> data = this.Data;
 		return ((data != null) ? data.ItemSliderTime : null).GetValueOrDefault(100f);
 	}
 
-	// Token: 0x06010195 RID: 65941 RVA: 0x003EBC50 File Offset: 0x003E9E50
+	// Token: 0x0600D5FD RID: 54781 RVA: 0x003F8248 File Offset: 0x003F6448
 	private float GetItemShowTime()
 	{
 		IListSliderControlData<T> data = this.Data;
 		return ((data != null) ? data.ItemShowTime : null).GetValueOrDefault(2000f);
 	}
 
-	// Token: 0x04007713 RID: 30483
+	// Token: 0x040077FC RID: 30716
 	[Nullable(new byte[]
 	{
 		2,
@@ -414,63 +414,63 @@ public class ListSliderControl<[Nullable(0)] T> where T : SliderItem
 	})]
 	private readonly IListSliderControlData<T> Data;
 
-	// Token: 0x04007714 RID: 30484
+	// Token: 0x040077FD RID: 30717
 	[Nullable(2)]
 	private readonly UUIItem ParentUiItem;
 
-	// Token: 0x04007715 RID: 30485
+	// Token: 0x040077FE RID: 30718
 	[Nullable(2)]
 	private readonly UUIVerticalLayout Layout;
 
-	// Token: 0x04007716 RID: 30486
+	// Token: 0x040077FF RID: 30719
 	[Nullable(2)]
 	private readonly UUIItem ChildTemplate;
 
-	// Token: 0x04007717 RID: 30487
+	// Token: 0x04007800 RID: 30720
 	private float ChildHeight;
 
-	// Token: 0x04007718 RID: 30488
+	// Token: 0x04007801 RID: 30721
 	private float NeedSliderHeight;
 
-	// Token: 0x04007719 RID: 30489
+	// Token: 0x04007802 RID: 30722
 	private int OffsetIndex;
 
-	// Token: 0x0400771A RID: 30490
+	// Token: 0x04007803 RID: 30723
 	private bool LastActiveStatus;
 
-	// Token: 0x0400771B RID: 30491
+	// Token: 0x04007804 RID: 30724
 	public bool IsFinish;
 
-	// Token: 0x0400771C RID: 30492
+	// Token: 0x04007805 RID: 30725
 	private EItemLoadState LoadState;
 
-	// Token: 0x0400771D RID: 30493
+	// Token: 0x04007806 RID: 30726
 	private int ShowItemCount;
 
-	// Token: 0x0400771E RID: 30494
+	// Token: 0x04007807 RID: 30727
 	private int LastMaxCount;
 
-	// Token: 0x0400771F RID: 30495
+	// Token: 0x04007808 RID: 30728
 	private float NextItemAddTime;
 
-	// Token: 0x04007720 RID: 30496
+	// Token: 0x04007809 RID: 30729
 	private readonly ESliderMode SliderMode;
 
-	// Token: 0x04007721 RID: 30497
+	// Token: 0x0400780A RID: 30730
 	private readonly ETickItemMode TickItemMode;
 
-	// Token: 0x04007722 RID: 30498
+	// Token: 0x0400780B RID: 30731
 	[Nullable(2)]
 	private T CacheItem;
 
-	// Token: 0x04007723 RID: 30499
+	// Token: 0x0400780C RID: 30732
 	[Nullable(2)]
 	private string ResourceId;
 
-	// Token: 0x04007724 RID: 30500
+	// Token: 0x0400780D RID: 30733
 	private readonly List<T> ChildrenList = new List<T>();
 
-	// Token: 0x04007725 RID: 30501
+	// Token: 0x0400780E RID: 30734
 	[Nullable(new byte[]
 	{
 		2,
@@ -478,6 +478,6 @@ public class ListSliderControl<[Nullable(0)] T> where T : SliderItem
 	})]
 	private List<T> ChildrenPool = new List<T>();
 
-	// Token: 0x04007726 RID: 30502
+	// Token: 0x0400780F RID: 30735
 	private readonly List<UiPoolActor> PoolActorList = new List<UiPoolActor>();
 }

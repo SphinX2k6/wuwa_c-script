@@ -1,19 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000808 RID: 2056
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020008AB RID: 2219
 	public class IWuWaGoInteractStateAction_SetValue
 	{
-		// Token: 0x04001D87 RID: 7559
+		// Token: 0x04001F93 RID: 8083
 		public string EntityState;
 
-		// Token: 0x04001D88 RID: 7560
+		// Token: 0x04001F94 RID: 8084
 		public List<ActionInfo> ActionList;
 	}
 }

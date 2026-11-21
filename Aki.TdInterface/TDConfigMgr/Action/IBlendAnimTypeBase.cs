@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200180E RID: 6158
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001999 RID: 6553
 	public class IBlendAnimTypeBase
 	{
-		// Token: 0x0600842D RID: 33837 RVA: 0x0013B0D8 File Offset: 0x001392D8
+		// Token: 0x06008B51 RID: 35665 RVA: 0x0014A87C File Offset: 0x00148A7C
 		private IBlendAnimTypeBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600842E RID: 33838 RVA: 0x0013B110 File Offset: 0x00139310
+		// Token: 0x06008B52 RID: 35666 RVA: 0x0014A8B4 File Offset: 0x00148AB4
 		public static IBlendAnimTypeBase Create([Nullable(2)] IBlendAnimTypeBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600842F RID: 33839 RVA: 0x0013B123 File Offset: 0x00139323
+		// Token: 0x06008B53 RID: 35667 RVA: 0x0014A8C7 File Offset: 0x00148AC7
 		public static IBlendAnimTypeBase CreateFromSetValue([Nullable(2)] IBlendAnimTypeBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008430 RID: 33840 RVA: 0x0013B136 File Offset: 0x00139336
+		// Token: 0x06008B54 RID: 35668 RVA: 0x0014A8DA File Offset: 0x00148ADA
 		public IBlendAnimTypeBase_SetValue ToSetValue()
 		{
 			return new IBlendAnimTypeBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002B56 RID: 11094
-		// (get) Token: 0x06008431 RID: 33841 RVA: 0x0013B149 File Offset: 0x00139349
-		// (set) Token: 0x06008432 RID: 33842 RVA: 0x0013B174 File Offset: 0x00139374
+		// Token: 0x17002D4F RID: 11599
+		// (get) Token: 0x06008B55 RID: 35669 RVA: 0x0014A8ED File Offset: 0x00148AED
+		// (set) Token: 0x06008B56 RID: 35670 RVA: 0x0014A918 File Offset: 0x00148B18
 		public virtual EBlendAnimType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040053B3 RID: 21427
+		// Token: 0x040057FE RID: 22526
 		[Nullable(2)]
 		protected IBlendAnimTypeBase FbInstance;
 
-		// Token: 0x040053B4 RID: 21428
+		// Token: 0x040057FF RID: 22527
 		[Nullable(2)]
 		protected IBlendAnimTypeBase_SetValue PocoInterface;
 	}

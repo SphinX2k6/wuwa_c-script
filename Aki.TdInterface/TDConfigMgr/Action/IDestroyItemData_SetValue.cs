@@ -2,16 +2,16 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200198D RID: 6541
+	// Token: 0x02001B14 RID: 6932
 	public class IDestroyItemData_SetValue
 	{
-		// Token: 0x0400573E RID: 22334
+		// Token: 0x04005B87 RID: 23431
 		public int ItemId;
 
-		// Token: 0x0400573F RID: 22335
+		// Token: 0x04005B88 RID: 23432
 		public int Count;
 
-		// Token: 0x04005740 RID: 22336
+		// Token: 0x04005B89 RID: 23433
 		public bool IsAll;
 	}
 }

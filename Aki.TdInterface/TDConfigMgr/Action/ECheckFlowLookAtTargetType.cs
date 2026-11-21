@@ -2,12 +2,12 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020015AA RID: 5546
+	// Token: 0x02001709 RID: 5897
 	public enum ECheckFlowLookAtTargetType
 	{
-		// Token: 0x040049D9 RID: 18905
+		// Token: 0x04004D8B RID: 19851
 		Entity,
-		// Token: 0x040049DA RID: 18906
+		// Token: 0x04004D8C RID: 19852
 		Player
 	}
 }

@@ -10,13 +10,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072DB RID: 29403
+	// Token: 0x0200645D RID: 25693
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneCameraDisplayComponent : EntityComponent
 	{
-		// Token: 0x17009F3F RID: 40767
-		// (get) Token: 0x0604825F RID: 295519 RVA: 0x01282F60 File Offset: 0x01281160
+		// Token: 0x170076B9 RID: 30393
+		// (get) Token: 0x0603E673 RID: 255603 RVA: 0x01225748 File Offset: 0x01223948
 		public BP_CineCamera_C CineCamera
 		{
 			get
@@ -30,8 +30,8 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x17009F40 RID: 40768
-		// (get) Token: 0x06048260 RID: 295520 RVA: 0x01282F78 File Offset: 0x01281178
+		// Token: 0x170076BA RID: 30394
+		// (get) Token: 0x0603E674 RID: 255604 RVA: 0x01225760 File Offset: 0x01223960
 		public SceneSubCamera CurSceneSubCamera
 		{
 			get
@@ -45,8 +45,8 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x17009F41 RID: 40769
-		// (get) Token: 0x06048261 RID: 295521 RVA: 0x01282F8B File Offset: 0x0128118B
+		// Token: 0x170076BB RID: 30395
+		// (get) Token: 0x0603E675 RID: 255605 RVA: 0x01225773 File Offset: 0x01223973
 		public SceneSubCamera DefaultSceneSubCamera
 		{
 			get
@@ -55,14 +55,14 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x06048262 RID: 295522 RVA: 0x01282F93 File Offset: 0x01281193
+		// Token: 0x0603E676 RID: 255606 RVA: 0x0122577B File Offset: 0x0122397B
 		protected override bool OnCreate(IEntityArgs args = null)
 		{
 			this.CameraModelInstanceInternal = ((args != null) ? args.GetP1<CameraModelInstance>() : null);
 			return base.OnCreate(args);
 		}
 
-		// Token: 0x06048263 RID: 295523 RVA: 0x01282FB0 File Offset: 0x012811B0
+		// Token: 0x0603E677 RID: 255607 RVA: 0x01225798 File Offset: 0x01223998
 		protected override bool OnInit()
 		{
 			Comparison<SceneSubCamera> compare;
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Camera
 			return this.DefaultCineCameraInternal != null;
 		}
 
-		// Token: 0x06048264 RID: 295524 RVA: 0x012830AA File Offset: 0x012812AA
+		// Token: 0x0603E678 RID: 255608 RVA: 0x01225892 File Offset: 0x01223A92
 		private void AddEvents()
 		{
 			if (!EventSystem.Instance.Has<ECustomCameraMode, ECustomCameraMode?, string>(EEventName.CameraModeChanged, new Action<ECustomCameraMode, ECustomCameraMode?, string>(this.OnModeChanged)))
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x06048265 RID: 295525 RVA: 0x012830E5 File Offset: 0x012812E5
+		// Token: 0x0603E679 RID: 255609 RVA: 0x012258CD File Offset: 0x01223ACD
 		private void RemoveEvents()
 		{
 			if (EventSystem.Instance.Has<ECustomCameraMode, ECustomCameraMode?, string>(EEventName.CameraModeChanged, new Action<ECustomCameraMode, ECustomCameraMode?, string>(this.OnModeChanged)))
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x06048266 RID: 295526 RVA: 0x01283120 File Offset: 0x01281320
+		// Token: 0x0603E67A RID: 255610 RVA: 0x01225908 File Offset: 0x01223B08
 		[NullableContext(1)]
 		protected void OnModeChanged(ECustomCameraMode newMode, ECustomCameraMode? oldMode, string cameraName)
 		{
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x06048267 RID: 295527 RVA: 0x012831F0 File Offset: 0x012813F0
+		// Token: 0x0603E67B RID: 255611 RVA: 0x012259D8 File Offset: 0x01223BD8
 		protected void OnWorldDone()
 		{
 			this.DefaultCamera.Camera = CameraController.Instance.SpawnCineCamera();
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x06048268 RID: 295528 RVA: 0x01283280 File Offset: 0x01281480
+		// Token: 0x0603E67C RID: 255612 RVA: 0x01225A68 File Offset: 0x01223C68
 		protected void OnClearWorld()
 		{
 			if (this.DefaultCamera != null)
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.Camera
 			this.ClearRemovedSceneCamera();
 		}
 
-		// Token: 0x06048269 RID: 295529 RVA: 0x012832CC File Offset: 0x012814CC
+		// Token: 0x0603E67D RID: 255613 RVA: 0x01225AB4 File Offset: 0x01223CB4
 		protected override bool OnClear()
 		{
 			if (this.DefaultCineCameraInternal != null)
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Camera
 			return true;
 		}
 
-		// Token: 0x0604826A RID: 295530 RVA: 0x01283361 File Offset: 0x01281561
+		// Token: 0x0603E67E RID: 255614 RVA: 0x01225B49 File Offset: 0x01223D49
 		protected override void OnChangeTimeDilation(float timeDilation)
 		{
 			BP_CineCamera_C defaultCineCameraInternal = this.DefaultCineCameraInternal;
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x0604826B RID: 295531 RVA: 0x01283384 File Offset: 0x01281584
+		// Token: 0x0603E67F RID: 255615 RVA: 0x01225B6C File Offset: 0x01223D6C
 		public SceneSubCamera GetUnBoundSceneCamera(ESceneSubCameraType type)
 		{
 			if (this.CameraQueue.Empty)
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.Camera
 			return sceneSubCamera;
 		}
 
-		// Token: 0x0604826C RID: 295532 RVA: 0x01283410 File Offset: 0x01281610
+		// Token: 0x0603E680 RID: 255616 RVA: 0x01225BF8 File Offset: 0x01223DF8
 		public void RemoveBoundSceneCamera(SceneSubCamera camera)
 		{
 			if (this.CameraQueue.Empty || camera == null)
@@ -231,13 +231,13 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x0604826D RID: 295533 RVA: 0x01283484 File Offset: 0x01281684
+		// Token: 0x0603E681 RID: 255617 RVA: 0x01225C6C File Offset: 0x01223E6C
 		public bool IsIdle()
 		{
 			return !this.CameraQueue.Empty && this.CameraQueue.Top == this.DefaultCamera && !this.DefaultCamera.IsBinding;
 		}
 
-		// Token: 0x0604826E RID: 295534 RVA: 0x012834B8 File Offset: 0x012816B8
+		// Token: 0x0603E682 RID: 255618 RVA: 0x01225CA0 File Offset: 0x01223EA0
 		public void ClearRemovedSceneCamera()
 		{
 			foreach (SceneSubCamera sceneSubCamera in this.RemoveCameraList)
@@ -247,7 +247,7 @@ namespace CSharpScript.Game.Camera
 			this.RemoveCameraList.Clear();
 		}
 
-		// Token: 0x0604826F RID: 295535 RVA: 0x01283514 File Offset: 0x01281714
+		// Token: 0x0603E683 RID: 255619 RVA: 0x01225CFC File Offset: 0x01223EFC
 		public void UpdateViewTarget(float? fadeIn = null, Action callback = null)
 		{
 			if (fadeIn != null)
@@ -258,13 +258,13 @@ namespace CSharpScript.Game.Camera
 			CameraController.Instance.SetViewTarget(this.CurSceneSubCamera.Camera, "SceneCamera.UpdateViewTarget2", this.CurSceneSubCamera.FadeIn, this.CurSceneSubCamera.FadeInFunc, this.CurSceneSubCamera.FadeInExp, new bool?(true), new bool?(true), this.CameraModelInstanceInternal.CameraName, callback, this.CurSceneSubCamera.FadeInCurve);
 		}
 
-		// Token: 0x06048270 RID: 295536 RVA: 0x012835C9 File Offset: 0x012817C9
+		// Token: 0x0603E684 RID: 255620 RVA: 0x01225DB1 File Offset: 0x01223FB1
 		public void EnableExtraCameraAction()
 		{
 			this.EnablePerspectiveToOrthographicView(null);
 		}
 
-		// Token: 0x06048271 RID: 295537 RVA: 0x012835D2 File Offset: 0x012817D2
+		// Token: 0x0603E685 RID: 255621 RVA: 0x01225DBA File Offset: 0x01223FBA
 		public void EnablePerspectiveToOrthographicView(Action callback = null)
 		{
 			if (this.CurSceneSubCamera.IsCameraAberrationEnable && this.CurSceneSubCamera.CameraAberrationView != null)
@@ -273,7 +273,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x06048272 RID: 295538 RVA: 0x0128360C File Offset: 0x0128180C
+		// Token: 0x0603E686 RID: 255622 RVA: 0x01225DF4 File Offset: 0x01223FF4
 		public void EnableOrthographicToPerspectiveView(Action callback = null)
 		{
 			if (this.CurSceneSubCamera.IsCameraAberrationEnable && this.CurSceneSubCamera.CameraAberrationView != null)
@@ -288,7 +288,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x06048273 RID: 295539 RVA: 0x01283668 File Offset: 0x01281868
+		// Token: 0x0603E687 RID: 255623 RVA: 0x01225E50 File Offset: 0x01224050
 		protected override void OnAfterTick(float deltaTime)
 		{
 			float second = deltaTime * 0.001f * this.SelfCenteredTimeDilation;
@@ -299,7 +299,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x06048274 RID: 295540 RVA: 0x012836AC File Offset: 0x012818AC
+		// Token: 0x0603E688 RID: 255624 RVA: 0x01225E94 File Offset: 0x01224094
 		private void RestDefaultSubSceneCamera()
 		{
 			this.DefaultCamera.IsBinding = false;
@@ -315,7 +315,7 @@ namespace CSharpScript.Game.Camera
 			this.DefaultCamera.FollowConfig = null;
 		}
 
-		// Token: 0x06048275 RID: 295541 RVA: 0x01283724 File Offset: 0x01281924
+		// Token: 0x0603E689 RID: 255625 RVA: 0x01225F0C File Offset: 0x0122410C
 		public void SetUiActive(bool isActive)
 		{
 			if (isActive)
@@ -352,7 +352,7 @@ namespace CSharpScript.Game.Camera
 			UiTimeDilation.Instance.AddWaitSetTimeDilationTag("SceneCameraDisplayComponent.SetUiActive");
 		}
 
-		// Token: 0x06048276 RID: 295542 RVA: 0x01283801 File Offset: 0x01281A01
+		// Token: 0x0603E68A RID: 255626 RVA: 0x01225FE9 File Offset: 0x012241E9
 		private void OnSwitchSelfCenteredMode(ESelfCenteredMode selfCenterMode, float globalTimeDilation)
 		{
 			TimerSystem.Instance.Next(delegate(float _)
@@ -361,14 +361,14 @@ namespace CSharpScript.Game.Camera
 			}, null, null);
 		}
 
-		// Token: 0x06048277 RID: 295543 RVA: 0x0128381C File Offset: 0x01281A1C
+		// Token: 0x0603E68B RID: 255627 RVA: 0x01226004 File Offset: 0x01224204
 		protected override bool OnEnd()
 		{
 			this.SelfCenteredTimeDilation = 1f;
 			return true;
 		}
 
-		// Token: 0x06048278 RID: 295544 RVA: 0x0128382C File Offset: 0x01281A2C
+		// Token: 0x0603E68C RID: 255628 RVA: 0x01226014 File Offset: 0x01224214
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -377,79 +377,118 @@ namespace CSharpScript.Game.Camera
 				return false;
 			}
 			SceneCameraDisplayComponent sceneCameraDisplayComponent = (SceneCameraDisplayComponent)componentTemplate;
-			if (base.CanResetComponentProperty("CameraModelInstanceInternal"))
+			if (sceneCameraDisplayComponent.CameraModelInstanceInternal == null)
 			{
-				if (sceneCameraDisplayComponent.CameraModelInstanceInternal == null)
-				{
-					this.CameraModelInstanceInternal = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CameraModelInstance>(this.CameraModelInstanceInternal), "CameraModelInstanceInternal"))
-				{
-					return false;
-				}
+				this.CameraModelInstanceInternal = null;
 			}
-			if (base.CanResetComponentProperty("DefaultCineCameraInternal"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CameraModelInstanceInternal), "CameraModelInstanceInternal"))
 			{
-				if (sceneCameraDisplayComponent.DefaultCineCameraInternal == null)
-				{
-					this.DefaultCineCameraInternal = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BP_CineCamera_C>(this.DefaultCineCameraInternal), "DefaultCineCameraInternal"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("CameraQueue"))
+			if (sceneCameraDisplayComponent.DefaultCineCameraInternal == null)
 			{
-				if (sceneCameraDisplayComponent.CameraQueue == null)
-				{
-					this.CameraQueue = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PriorityQueue<SceneSubCamera>>(this.CameraQueue), "CameraQueue"))
-				{
-					return false;
-				}
+				this.DefaultCineCameraInternal = null;
 			}
-			if (base.CanResetComponentProperty("RemoveCameraList"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DefaultCineCameraInternal), "DefaultCineCameraInternal"))
 			{
-				if (sceneCameraDisplayComponent.RemoveCameraList == null)
-				{
-					this.RemoveCameraList = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<SceneSubCamera>>(this.RemoveCameraList), "RemoveCameraList"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("DefaultCamera"))
+			if (sceneCameraDisplayComponent.CameraQueue == null)
 			{
-				if (sceneCameraDisplayComponent.DefaultCamera == null)
-				{
-					this.DefaultCamera = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneSubCamera>(this.DefaultCamera), "DefaultCamera"))
-				{
-					return false;
-				}
+				this.CameraQueue = null;
 			}
-			if (base.CanResetComponentProperty("UiInActiveCount"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CameraQueue), "CameraQueue"))
 			{
-				this.UiInActiveCount = sceneCameraDisplayComponent.UiInActiveCount;
+				return false;
 			}
-			if (base.CanResetComponentProperty("SelfCenteredTimeDilation"))
+			if (sceneCameraDisplayComponent.RemoveCameraList == null)
 			{
-				this.SelfCenteredTimeDilation = sceneCameraDisplayComponent.SelfCenteredTimeDilation;
+				this.RemoveCameraList = null;
 			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RemoveCameraList), "RemoveCameraList"))
+			{
+				return false;
+			}
+			if (sceneCameraDisplayComponent.DefaultCamera == null)
+			{
+				this.DefaultCamera = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DefaultCamera), "DefaultCamera"))
+			{
+				return false;
+			}
+			this.UiInActiveCount = sceneCameraDisplayComponent.UiInActiveCount;
+			this.SelfCenteredTimeDilation = sceneCameraDisplayComponent.SelfCenteredTimeDilation;
 			return true;
 		}
 
-		// Token: 0x04026151 RID: 155985
+		// Token: 0x170076BC RID: 30396
+		// (get) Token: 0x0603E68D RID: 255629 RVA: 0x01226123 File Offset: 0x01224323
+		public override bool NeedCreateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170076BD RID: 30397
+		// (get) Token: 0x0603E68E RID: 255630 RVA: 0x01226126 File Offset: 0x01224326
+		public override bool NeedInitInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170076BE RID: 30398
+		// (get) Token: 0x0603E68F RID: 255631 RVA: 0x01226129 File Offset: 0x01224329
+		public override bool NeedClearInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170076BF RID: 30399
+		// (get) Token: 0x0603E690 RID: 255632 RVA: 0x0122612C File Offset: 0x0122432C
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170076C0 RID: 30400
+		// (get) Token: 0x0603E691 RID: 255633 RVA: 0x0122612F File Offset: 0x0122432F
+		public override bool NeedAfterTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170076C1 RID: 30401
+		// (get) Token: 0x0603E692 RID: 255634 RVA: 0x01226132 File Offset: 0x01224332
+		public override bool NeedChangeTimeDilationInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04021434 RID: 136244
 		private CameraModelInstance CameraModelInstanceInternal;
 
-		// Token: 0x04026152 RID: 155986
+		// Token: 0x04021435 RID: 136245
 		private BP_CineCamera_C DefaultCineCameraInternal;
 
-		// Token: 0x04026153 RID: 155987
+		// Token: 0x04021436 RID: 136246
 		[Nullable(new byte[]
 		{
 			2,
@@ -457,7 +496,7 @@ namespace CSharpScript.Game.Camera
 		})]
 		private PriorityQueue<SceneSubCamera> CameraQueue;
 
-		// Token: 0x04026154 RID: 155988
+		// Token: 0x04021437 RID: 136247
 		[Nullable(new byte[]
 		{
 			2,
@@ -465,20 +504,20 @@ namespace CSharpScript.Game.Camera
 		})]
 		private List<SceneSubCamera> RemoveCameraList;
 
-		// Token: 0x04026155 RID: 155989
+		// Token: 0x04021438 RID: 136248
 		private SceneSubCamera DefaultCamera;
 
-		// Token: 0x04026156 RID: 155990
+		// Token: 0x04021439 RID: 136249
 		private int UiInActiveCount;
 
-		// Token: 0x04026157 RID: 155991
+		// Token: 0x0402143A RID: 136250
 		private float SelfCenteredTimeDilation = 1f;
 
-		// Token: 0x0200CFD0 RID: 53200
+		// Token: 0x0200BBAB RID: 48043
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0403E7C9 RID: 255945
+			// Token: 0x04039C06 RID: 236550
 			[Nullable(new byte[]
 			{
 				0,

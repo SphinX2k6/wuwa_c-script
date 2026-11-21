@@ -6,22 +6,20 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200210E RID: 8462
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020006DF RID: 1759
 	[UnrealObjectPath("/Script/LGUI.SpriteTransitionOfState")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 48)]
 	public class FSpriteTransitionOfState : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0601FD69 RID: 130409 RVA: 0x002F5AE1 File Offset: 0x002F3CE1
+		// Token: 0x0600956C RID: 38252 RVA: 0x000E1A4C File Offset: 0x000DFC4C
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FSpriteTransitionOfState._ScriptStructPtr != 0) ? FSpriteTransitionOfState._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/LGUI.SpriteTransitionOfState", ref FSpriteTransitionOfState._ScriptStructPtr);
 		}
 
-		// Token: 0x17007D38 RID: 32056
-		// (get) Token: 0x0601FD6A RID: 130410 RVA: 0x002F5B05 File Offset: 0x002F3D05
-		// (set) Token: 0x0601FD6B RID: 130411 RVA: 0x002F5B19 File Offset: 0x002F3D19
+		// Token: 0x17001BB6 RID: 7094
+		// (get) Token: 0x0600956D RID: 38253 RVA: 0x000E1A70 File Offset: 0x000DFC70
+		// (set) Token: 0x0600956E RID: 38254 RVA: 0x000E1A84 File Offset: 0x000DFC84
 		[Nullable(2)]
 		public unsafe ULGUISpriteData_BaseObject Sprite
 		{
@@ -37,9 +35,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007D39 RID: 32057
-		// (get) Token: 0x0601FD6C RID: 130412 RVA: 0x002F5B2E File Offset: 0x002F3D2E
-		// (set) Token: 0x0601FD6D RID: 130413 RVA: 0x002F5B42 File Offset: 0x002F3D42
+		// Token: 0x17001BB7 RID: 7095
+		// (get) Token: 0x0600956F RID: 38255 RVA: 0x000E1A99 File Offset: 0x000DFC99
+		// (set) Token: 0x06009570 RID: 38256 RVA: 0x000E1AAD File Offset: 0x000DFCAD
 		public unsafe FColor Color
 		{
 			get
@@ -52,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007D3A RID: 32058
-		// (get) Token: 0x0601FD6E RID: 130414 RVA: 0x002F5B57 File Offset: 0x002F3D57
-		// (set) Token: 0x0601FD6F RID: 130415 RVA: 0x002F5B70 File Offset: 0x002F3D70
+		// Token: 0x17001BB8 RID: 7096
+		// (get) Token: 0x06009571 RID: 38257 RVA: 0x000E1AC2 File Offset: 0x000DFCC2
+		// (set) Token: 0x06009572 RID: 38258 RVA: 0x000E1ADB File Offset: 0x000DFCDB
 		public unsafe bool bSnapSize
 		{
 			get
@@ -67,9 +65,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007D3B RID: 32059
-		// (get) Token: 0x0601FD70 RID: 130416 RVA: 0x002F5BA0 File Offset: 0x002F3DA0
-		// (set) Token: 0x0601FD71 RID: 130417 RVA: 0x002F5BB9 File Offset: 0x002F3DB9
+		// Token: 0x17001BB9 RID: 7097
+		// (get) Token: 0x06009573 RID: 38259 RVA: 0x000E1B0B File Offset: 0x000DFD0B
+		// (set) Token: 0x06009574 RID: 38260 RVA: 0x000E1B24 File Offset: 0x000DFD24
 		public unsafe bool bGradualChange
 		{
 			get
@@ -82,9 +80,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007D3C RID: 32060
-		// (get) Token: 0x0601FD72 RID: 130418 RVA: 0x002F5BE9 File Offset: 0x002F3DE9
-		// (set) Token: 0x0601FD73 RID: 130419 RVA: 0x002F5BF9 File Offset: 0x002F3DF9
+		// Token: 0x17001BBA RID: 7098
+		// (get) Token: 0x06009575 RID: 38261 RVA: 0x000E1B54 File Offset: 0x000DFD54
+		// (set) Token: 0x06009576 RID: 38262 RVA: 0x000E1B64 File Offset: 0x000DFD64
 		public unsafe float GradualDuration
 		{
 			get
@@ -97,104 +95,68 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007D3D RID: 32061
-		// (get) Token: 0x0601FD74 RID: 130420 RVA: 0x002F5C0C File Offset: 0x002F3E0C
-		// (set) Token: 0x0601FD75 RID: 130421 RVA: 0x002F5C4F File Offset: 0x002F3E4F
-		public FRenderableAdditionalInfo AdditionInfo
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FRenderableAdditionalInfo result;
-				if ((result = this._AdditionInfo) == null)
-				{
-					result = (this._AdditionInfo = new FRenderableAdditionalInfo(base.NativePtr + (IntPtr)FSpriteTransitionOfState.__PropertyOffset_AdditionInfo, base.MemoryOwner ?? this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FRenderableAdditionalInfo.StaticStruct(), base.NativePtr + (IntPtr)FSpriteTransitionOfState.__PropertyOffset_AdditionInfo, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x0601FD76 RID: 130422 RVA: 0x002F5C70 File Offset: 0x002F3E70
+		// Token: 0x06009577 RID: 38263 RVA: 0x000E1B75 File Offset: 0x000DFD75
 		public FSpriteTransitionOfState()
 		{
 		}
 
-		// Token: 0x0601FD77 RID: 130423 RVA: 0x002F5C78 File Offset: 0x002F3E78
-		public FSpriteTransitionOfState(ULGUISpriteData_BaseObject Sprite, string PredefineColor, FColor Color, bool bSnapSize, bool bGradualChange, float GradualDuration, FRenderableAdditionalInfo AdditionInfo)
-		{
-			this.Sprite = Sprite;
-			this.Color = Color;
-			this.bSnapSize = bSnapSize;
-			this.bGradualChange = bGradualChange;
-			this.GradualDuration = GradualDuration;
-			this.AdditionInfo = AdditionInfo;
-		}
-
-		// Token: 0x0601FD78 RID: 130424 RVA: 0x002F5CAE File Offset: 0x002F3EAE
+		// Token: 0x06009578 RID: 38264 RVA: 0x000E1B7D File Offset: 0x000DFD7D
 		protected override IntPtr GetUStructPtr()
 		{
 			return FSpriteTransitionOfState.StaticStruct();
 		}
 
-		// Token: 0x0601FD79 RID: 130425 RVA: 0x002F5CBA File Offset: 0x002F3EBA
+		// Token: 0x06009579 RID: 38265 RVA: 0x000E1B89 File Offset: 0x000DFD89
 		[NullableContext(2)]
 		public FSpriteTransitionOfState(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601FD7A RID: 130426 RVA: 0x002F5CC4 File Offset: 0x002F3EC4
+		// Token: 0x0600957A RID: 38266 RVA: 0x000E1B93 File Offset: 0x000DFD93
 		public FSpriteTransitionOfState(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601FD7B RID: 130427 RVA: 0x002F5CCF File Offset: 0x002F3ECF
+		// Token: 0x0600957B RID: 38267 RVA: 0x000E1B9E File Offset: 0x000DFD9E
+		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FSpriteTransitionOfState(Pointer, false, true);
 		}
 
-		// Token: 0x0601FD7C RID: 130428 RVA: 0x002F5CD9 File Offset: 0x002F3ED9
+		// Token: 0x0600957C RID: 38268 RVA: 0x000E1BA8 File Offset: 0x000DFDA8
+		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FSpriteTransitionOfState(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04011283 RID: 70275
+		// Token: 0x04004100 RID: 16640
+		[Nullable(1)]
 		public const string __ObjectPath = "/Script/LGUI.SpriteTransitionOfState";
 
-		// Token: 0x04011284 RID: 70276
+		// Token: 0x04004101 RID: 16641
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04011285 RID: 70277
+		// Token: 0x04004102 RID: 16642
 		internal static int __PropertyOffset_Sprite;
 
-		// Token: 0x04011286 RID: 70278
+		// Token: 0x04004103 RID: 16643
 		internal static int __PropertyOffset_Color;
 
-		// Token: 0x04011287 RID: 70279
+		// Token: 0x04004104 RID: 16644
 		internal static int __PropertyOffset_bSnapSize;
 
-		// Token: 0x04011288 RID: 70280
+		// Token: 0x04004105 RID: 16645
 		internal static byte __PropertyMask_bSnapSize;
 
-		// Token: 0x04011289 RID: 70281
+		// Token: 0x04004106 RID: 16646
 		internal static int __PropertyOffset_bGradualChange;
 
-		// Token: 0x0401128A RID: 70282
+		// Token: 0x04004107 RID: 16647
 		internal static byte __PropertyMask_bGradualChange;
 
-		// Token: 0x0401128B RID: 70283
+		// Token: 0x04004108 RID: 16648
 		internal static int __PropertyOffset_GradualDuration;
-
-		// Token: 0x0401128C RID: 70284
-		internal static int __PropertyOffset_AdditionInfo;
-
-		// Token: 0x0401128D RID: 70285
-		[Nullable(2)]
-		private FRenderableAdditionalInfo _AdditionInfo;
 	}
 }

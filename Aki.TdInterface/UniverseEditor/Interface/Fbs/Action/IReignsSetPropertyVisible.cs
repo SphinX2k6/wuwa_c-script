@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006E2E RID: 28206
+	// Token: 0x020075AC RID: 30124
 	public struct IReignsSetPropertyVisible : IFlatbufferObject
 	{
-		// Token: 0x1700D231 RID: 53809
-		// (get) Token: 0x06031D5C RID: 204124 RVA: 0x006BEDCE File Offset: 0x006BCFCE
+		// Token: 0x1700DD80 RID: 56704
+		// (get) Token: 0x06034D72 RID: 216434 RVA: 0x0071A756 File Offset: 0x00718956
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031D5D RID: 204125 RVA: 0x006BEDDB File Offset: 0x006BCFDB
+		// Token: 0x06034D73 RID: 216435 RVA: 0x0071A763 File Offset: 0x00718963
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06031D5E RID: 204126 RVA: 0x006BEDE4 File Offset: 0x006BCFE4
+		// Token: 0x06034D74 RID: 216436 RVA: 0x0071A76C File Offset: 0x0071896C
 		public static IReignsSetPropertyVisible GetRootAsIReignsSetPropertyVisible(ByteBuffer _bb)
 		{
 			return IReignsSetPropertyVisible.GetRootAsIReignsSetPropertyVisible(_bb, default(IReignsSetPropertyVisible));
 		}
 
-		// Token: 0x06031D5F RID: 204127 RVA: 0x006BEE00 File Offset: 0x006BD000
+		// Token: 0x06034D75 RID: 216437 RVA: 0x0071A788 File Offset: 0x00718988
 		public static IReignsSetPropertyVisible GetRootAsIReignsSetPropertyVisible(ByteBuffer _bb, IReignsSetPropertyVisible obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06031D60 RID: 204128 RVA: 0x006BEE1D File Offset: 0x006BD01D
+		// Token: 0x06034D76 RID: 216438 RVA: 0x0071A7A5 File Offset: 0x007189A5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06031D61 RID: 204129 RVA: 0x006BEE2C File Offset: 0x006BD02C
+		// Token: 0x06034D77 RID: 216439 RVA: 0x0071A7B4 File Offset: 0x007189B4
 		public IReignsSetPropertyVisible __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D232 RID: 53810
-		// (get) Token: 0x06031D62 RID: 204130 RVA: 0x006BEE3C File Offset: 0x006BD03C
+		// Token: 0x1700DD81 RID: 56705
+		// (get) Token: 0x06034D78 RID: 216440 RVA: 0x0071A7C4 File Offset: 0x007189C4
 		public int PropertyId
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D233 RID: 53811
-		// (get) Token: 0x06031D63 RID: 204131 RVA: 0x006BEE78 File Offset: 0x006BD078
+		// Token: 0x1700DD82 RID: 56706
+		// (get) Token: 0x06034D79 RID: 216441 RVA: 0x0071A800 File Offset: 0x00718A00
 		public bool IsVisible
 		{
 			get
@@ -73,7 +73,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031D64 RID: 204132 RVA: 0x006BEEB7 File Offset: 0x006BD0B7
+		// Token: 0x06034D7A RID: 216442 RVA: 0x0071A83F File Offset: 0x00718A3F
 		public static Offset<IReignsSetPropertyVisible> CreateIReignsSetPropertyVisible(FlatBufferBuilder builder, int PropertyId = 0, bool IsVisible = false)
 		{
 			builder.StartTable(2);
@@ -82,31 +82,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IReignsSetPropertyVisible.EndIReignsSetPropertyVisible(builder);
 		}
 
-		// Token: 0x06031D65 RID: 204133 RVA: 0x006BEED4 File Offset: 0x006BD0D4
+		// Token: 0x06034D7B RID: 216443 RVA: 0x0071A85C File Offset: 0x00718A5C
 		public static void StartIReignsSetPropertyVisible(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06031D66 RID: 204134 RVA: 0x006BEEDD File Offset: 0x006BD0DD
+		// Token: 0x06034D7C RID: 216444 RVA: 0x0071A865 File Offset: 0x00718A65
 		public static void AddPropertyId(FlatBufferBuilder builder, int propertyId)
 		{
 			builder.AddInt(0, propertyId, 0);
 		}
 
-		// Token: 0x06031D67 RID: 204135 RVA: 0x006BEEE8 File Offset: 0x006BD0E8
+		// Token: 0x06034D7D RID: 216445 RVA: 0x0071A870 File Offset: 0x00718A70
 		public static void AddIsVisible(FlatBufferBuilder builder, bool isVisible)
 		{
 			builder.AddBool(1, isVisible, false);
 		}
 
-		// Token: 0x06031D68 RID: 204136 RVA: 0x006BEEF3 File Offset: 0x006BD0F3
+		// Token: 0x06034D7E RID: 216446 RVA: 0x0071A87B File Offset: 0x00718A7B
 		public static Offset<IReignsSetPropertyVisible> EndIReignsSetPropertyVisible(FlatBufferBuilder builder)
 		{
 			return new Offset<IReignsSetPropertyVisible>(builder.EndTable());
 		}
 
-		// Token: 0x06031D69 RID: 204137 RVA: 0x006BEF00 File Offset: 0x006BD100
+		// Token: 0x06034D7F RID: 216447 RVA: 0x0071A888 File Offset: 0x00718A88
 		public IReignsSetPropertyVisibleT UnPack()
 		{
 			IReignsSetPropertyVisibleT reignsSetPropertyVisibleT = new IReignsSetPropertyVisibleT();
@@ -114,14 +114,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return reignsSetPropertyVisibleT;
 		}
 
-		// Token: 0x06031D6A RID: 204138 RVA: 0x006BEF1B File Offset: 0x006BD11B
+		// Token: 0x06034D80 RID: 216448 RVA: 0x0071A8A3 File Offset: 0x00718AA3
 		public void UnPackTo(IReignsSetPropertyVisibleT _o)
 		{
 			_o.PropertyId = this.PropertyId;
 			_o.IsVisible = this.IsVisible;
 		}
 
-		// Token: 0x06031D6B RID: 204139 RVA: 0x006BEF38 File Offset: 0x006BD138
+		// Token: 0x06034D81 RID: 216449 RVA: 0x0071A8C0 File Offset: 0x00718AC0
 		public static Offset<IReignsSetPropertyVisible> Pack(FlatBufferBuilder builder, IReignsSetPropertyVisibleT _o)
 		{
 			if (_o == null)
@@ -131,7 +131,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IReignsSetPropertyVisible.CreateIReignsSetPropertyVisible(builder, _o.PropertyId, _o.IsVisible);
 		}
 
-		// Token: 0x04011813 RID: 71699
+		// Token: 0x04012793 RID: 75667
 		private Table __p;
 	}
 }

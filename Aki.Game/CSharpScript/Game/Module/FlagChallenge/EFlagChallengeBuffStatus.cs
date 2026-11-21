@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.FlagChallenge
 {
-	// Token: 0x02005A2E RID: 23086
+	// Token: 0x02004A0A RID: 18954
 	public enum EFlagChallengeBuffStatus
 	{
-		// Token: 0x0401E7ED RID: 124909
+		// Token: 0x04019294 RID: 103060
 		NotActive,
-		// Token: 0x0401E7EE RID: 124910
+		// Token: 0x04019295 RID: 103061
 		Active,
-		// Token: 0x0401E7EF RID: 124911
+		// Token: 0x04019296 RID: 103062
 		TempActive
 	}
 }

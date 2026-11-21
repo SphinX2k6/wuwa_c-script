@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 
-// Token: 0x0200118F RID: 4495
+// Token: 0x02000643 RID: 1603
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityBeginnerBookData : ActivityBaseData
 {
-	// Token: 0x060076FB RID: 30459 RVA: 0x0018C76C File Offset: 0x0018A96C
+	// Token: 0x06004A92 RID: 19090 RVA: 0x0019534C File Offset: 0x0019354C
 	protected override void PhraseEx(ActivityData data)
 	{
 		this.AllBeginnerTargetList.Clear();
@@ -25,7 +25,7 @@ public class ActivityBeginnerBookData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x060076FC RID: 30460 RVA: 0x0018C810 File Offset: 0x0018AA10
+	// Token: 0x06004A93 RID: 19091 RVA: 0x001953F0 File Offset: 0x001935F0
 	protected override bool GetExDataFinishShowState()
 	{
 		foreach (int beginnerId in this.AllBeginnerTargetList)
@@ -38,7 +38,7 @@ public class ActivityBeginnerBookData : ActivityBaseData
 		return true;
 	}
 
-	// Token: 0x060076FD RID: 30461 RVA: 0x0018C86C File Offset: 0x0018AA6C
+	// Token: 0x06004A94 RID: 19092 RVA: 0x0019544C File Offset: 0x0019364C
 	public bool GetEnableJump(int beginnerId)
 	{
 		ActivityBeginnerBookConfig instance = ActivityBeginnerBookConfig.Instance;
@@ -46,19 +46,19 @@ public class ActivityBeginnerBookData : ActivityBaseData
 		return (instance != null && instance.GetActivityBeginnerConfig(beginnerId).ConditionId == 0) || (this.UnLockBeginnerMap.TryGetValue(beginnerId, out flag) && flag);
 	}
 
-	// Token: 0x060076FE RID: 30462 RVA: 0x0018C8B0 File Offset: 0x0018AAB0
+	// Token: 0x06004A95 RID: 19093 RVA: 0x00195490 File Offset: 0x00193690
 	public bool GetFinishState(int beginnerId)
 	{
 		bool flag;
 		return this.FinishBeginnerMap.TryGetValue(beginnerId, out flag) && flag;
 	}
 
-	// Token: 0x0400368A RID: 13962
+	// Token: 0x04003723 RID: 14115
 	public List<int> AllBeginnerTargetList = new List<int>();
 
-	// Token: 0x0400368B RID: 13963
+	// Token: 0x04003724 RID: 14116
 	public Dictionary<int, bool> UnLockBeginnerMap = new Dictionary<int, bool>();
 
-	// Token: 0x0400368C RID: 13964
+	// Token: 0x04003725 RID: 14117
 	public Dictionary<int, bool> FinishBeginnerMap = new Dictionary<int, bool>();
 }

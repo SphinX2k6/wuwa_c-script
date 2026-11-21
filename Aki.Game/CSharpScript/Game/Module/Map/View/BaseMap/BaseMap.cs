@@ -20,38 +20,41 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.View.BaseMap
 {
-	// Token: 0x0200548D RID: 21645
+	// Token: 0x02004470 RID: 17520
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BaseMap : UiPanelBase
 	{
-		// Token: 0x17008482 RID: 33922
-		// (get) Token: 0x0603746F RID: 226415 RVA: 0x00D1E106 File Offset: 0x00D1C306
-		// (set) Token: 0x06037470 RID: 226416 RVA: 0x00D1E10E File Offset: 0x00D1C30E
+		// Token: 0x1700584E RID: 22606
+		// (get) Token: 0x0602C3B9 RID: 181177 RVA: 0x00C6D7E1 File Offset: 0x00C6B9E1
+		// (set) Token: 0x0602C3BA RID: 181178 RVA: 0x00C6D7E9 File Offset: 0x00C6B9E9
 		public int MapId { get; set; }
 
-		// Token: 0x17008483 RID: 33923
-		// (get) Token: 0x06037471 RID: 226417 RVA: 0x00D1E117 File Offset: 0x00D1C317
-		// (set) Token: 0x06037472 RID: 226418 RVA: 0x00D1E11F File Offset: 0x00D1C31F
+		// Token: 0x1700584F RID: 22607
+		// (get) Token: 0x0602C3BB RID: 181179 RVA: 0x00C6D7F2 File Offset: 0x00C6B9F2
+		// (set) Token: 0x0602C3BC RID: 181180 RVA: 0x00C6D7FA File Offset: 0x00C6B9FA
 		public int InstanceDungeonId { get; set; }
 
-		// Token: 0x17008484 RID: 33924
-		// (get) Token: 0x06037473 RID: 226419 RVA: 0x00D1E128 File Offset: 0x00D1C328
+		// Token: 0x17005850 RID: 22608
+		// (get) Token: 0x0602C3BD RID: 181181 RVA: 0x00C6D803 File Offset: 0x00C6BA03
+		[Nullable(2)]
 		public MapRangePanel MapRangePanel
 		{
+			[NullableContext(2)]
 			get
 			{
 				return this.MapRangePanelInner;
 			}
 		}
 
-		// Token: 0x17008485 RID: 33925
-		// (get) Token: 0x06037474 RID: 226420 RVA: 0x00D1E130 File Offset: 0x00D1C330
-		// (set) Token: 0x06037475 RID: 226421 RVA: 0x00D1E138 File Offset: 0x00D1C338
-		public AutoPilotLine AutoPilotLine { get; private set; }
+		// Token: 0x17005851 RID: 22609
+		// (get) Token: 0x0602C3BE RID: 181182 RVA: 0x00C6D80B File Offset: 0x00C6BA0B
+		// (set) Token: 0x0602C3BF RID: 181183 RVA: 0x00C6D813 File Offset: 0x00C6BA13
+		[Nullable(2)]
+		public AutoPilotLine AutoPilotLine { [NullableContext(2)] get; [NullableContext(2)] private set; }
 
-		// Token: 0x17008486 RID: 33926
-		// (get) Token: 0x06037476 RID: 226422 RVA: 0x00D1E141 File Offset: 0x00D1C341
+		// Token: 0x17005852 RID: 22610
+		// (get) Token: 0x0602C3C0 RID: 181184 RVA: 0x00C6D81C File Offset: 0x00C6BA1C
 		public UUIItem MapRootItem
 		{
 			get
@@ -60,8 +63,8 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap
 			}
 		}
 
-		// Token: 0x17008487 RID: 33927
-		// (get) Token: 0x06037477 RID: 226423 RVA: 0x00D1E149 File Offset: 0x00D1C349
+		// Token: 0x17005853 RID: 22611
+		// (get) Token: 0x0602C3C1 RID: 181185 RVA: 0x00C6D824 File Offset: 0x00C6BA24
 		public EMapGravityDirection MapGravity
 		{
 			get
@@ -70,7 +73,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap
 			}
 		}
 
-		// Token: 0x06037478 RID: 226424 RVA: 0x00D1E154 File Offset: 0x00D1C354
+		// Token: 0x0602C3C2 RID: 181186 RVA: 0x00C6D82C File Offset: 0x00C6BA2C
 		public BaseMap(MapConstructorParams mapParams)
 		{
 			this.InstanceDungeonId = mapParams.InstanceId;
@@ -83,7 +86,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap
 			this.MapGravityInternal = mapParams.Gravity.GetValueOrDefault(EMapGravityDirection.Down);
 		}
 
-		// Token: 0x06037479 RID: 226425 RVA: 0x00D1E21C File Offset: 0x00D1C41C
+		// Token: 0x0602C3C3 RID: 181187 RVA: 0x00C6D8F4 File Offset: 0x00C6BAF4
 		public void Tick()
 		{
 			MapMarkMgr mapMarkMgr = this.MapMarkMgr;
@@ -94,20 +97,20 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap
 			mapMarkMgr.Tick();
 		}
 
-		// Token: 0x0603747A RID: 226426 RVA: 0x00D1E230 File Offset: 0x00D1C430
+		// Token: 0x0602C3C4 RID: 181188 RVA: 0x00C6D908 File Offset: 0x00C6BB08
 		public UniTask ChangeMapAsync(int mapId, EMapGravityDirection gravity)
 		{
-			BaseMap.<ChangeMapAsync>d__37 <ChangeMapAsync>d__;
+			BaseMap.<ChangeMapAsync>d__38 <ChangeMapAsync>d__;
 			<ChangeMapAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<ChangeMapAsync>d__.<>4__this = this;
 			<ChangeMapAsync>d__.mapId = mapId;
 			<ChangeMapAsync>d__.gravity = gravity;
 			<ChangeMapAsync>d__.<>1__state = -1;
-			<ChangeMapAsync>d__.<>t__builder.Start<BaseMap.<ChangeMapAsync>d__37>(ref <ChangeMapAsync>d__);
+			<ChangeMapAsync>d__.<>t__builder.Start<BaseMap.<ChangeMapAsync>d__38>(ref <ChangeMapAsync>d__);
 			return <ChangeMapAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603747B RID: 226427 RVA: 0x00D1E284 File Offset: 0x00D1C484
+		// Token: 0x0602C3C5 RID: 181189 RVA: 0x00C6D95C File Offset: 0x00C6BB5C
 		protected override void OnBeforeDestroy()
 		{
 			this.UnBindEvents();
@@ -118,10 +121,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap
 			}
 			this.PlayerMapGravityComponent = null;
 			MapMarkMgr mapMarkMgr = this.MapMarkMgr;
-			if (mapMarkMgr != null)
-			{
-				mapMarkMgr.Dispose();
-			}
+			this.MapMarkDisposeTask = ((mapMarkMgr != null) ? new UniTask?(mapMarkMgr.DisposeAsync()) : null);
 			this.MapMarkMgr = null;
 			MapTileMgr mapTileMgr = this.MapTileMgr;
 			if (mapTileMgr != null)
@@ -149,7 +149,18 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap
 			this.MapRoadWaysMgr = null;
 		}
 
-		// Token: 0x0603747C RID: 226428 RVA: 0x00D1E328 File Offset: 0x00D1C528
+		// Token: 0x0602C3C6 RID: 181190 RVA: 0x00C6DA14 File Offset: 0x00C6BC14
+		protected override UniTask OnDestroyAsyncImplementImplement()
+		{
+			BaseMap.<OnDestroyAsyncImplementImplement>d__40 <OnDestroyAsyncImplementImplement>d__;
+			<OnDestroyAsyncImplementImplement>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
+			<OnDestroyAsyncImplementImplement>d__.<>4__this = this;
+			<OnDestroyAsyncImplementImplement>d__.<>1__state = -1;
+			<OnDestroyAsyncImplementImplement>d__.<>t__builder.Start<BaseMap.<OnDestroyAsyncImplementImplement>d__40>(ref <OnDestroyAsyncImplementImplement>d__);
+			return <OnDestroyAsyncImplementImplement>d__.<>t__builder.Task;
+		}
+
+		// Token: 0x0602C3C7 RID: 181191 RVA: 0x00C6DA58 File Offset: 0x00C6BC58
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 14;
@@ -187,18 +198,18 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603747D RID: 226429 RVA: 0x00D1E524 File Offset: 0x00D1C724
+		// Token: 0x0602C3C8 RID: 181192 RVA: 0x00C6DC54 File Offset: 0x00C6BE54
 		protected override UniTask OnBeforeStartAsync()
 		{
-			BaseMap.<OnBeforeStartAsync>d__40 <OnBeforeStartAsync>d__;
+			BaseMap.<OnBeforeStartAsync>d__42 <OnBeforeStartAsync>d__;
 			<OnBeforeStartAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<OnBeforeStartAsync>d__.<>4__this = this;
 			<OnBeforeStartAsync>d__.<>1__state = -1;
-			<OnBeforeStartAsync>d__.<>t__builder.Start<BaseMap.<OnBeforeStartAsync>d__40>(ref <OnBeforeStartAsync>d__);
+			<OnBeforeStartAsync>d__.<>t__builder.Start<BaseMap.<OnBeforeStartAsync>d__42>(ref <OnBeforeStartAsync>d__);
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603747E RID: 226430 RVA: 0x00D1E568 File Offset: 0x00D1C768
+		// Token: 0x0602C3C9 RID: 181193 RVA: 0x00C6DC98 File Offset: 0x00C6BE98
 		protected override void OnStart()
 		{
 			this.PlayerOutOfBoundIndicator = base.GetItem(2);
@@ -224,7 +235,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap
 			this.AutoPilotLine.CheckAutoPilotLineInfo();
 		}
 
-		// Token: 0x0603747F RID: 226431 RVA: 0x00D1E61C File Offset: 0x00D1C81C
+		// Token: 0x0602C3CA RID: 181194 RVA: 0x00C6DD4C File Offset: 0x00C6BF4C
 		private void InitAssistants(float markScale)
 		{
 			UUIItem item = base.GetItem(3);
@@ -273,8 +284,8 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap
 			});
 		}
 
-		// Token: 0x17008488 RID: 33928
-		// (get) Token: 0x06037480 RID: 226432 RVA: 0x00D1E7AB File Offset: 0x00D1C9AB
+		// Token: 0x17005854 RID: 22612
+		// (get) Token: 0x0602C3CB RID: 181195 RVA: 0x00C6DEDB File Offset: 0x00C6C0DB
 		public UUIItem MarkContainer
 		{
 			get
@@ -283,8 +294,8 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap
 			}
 		}
 
-		// Token: 0x17008489 RID: 33929
-		// (get) Token: 0x06037481 RID: 226433 RVA: 0x00D1E7B4 File Offset: 0x00D1C9B4
+		// Token: 0x17005855 RID: 22613
+		// (get) Token: 0x0602C3CC RID: 181196 RVA: 0x00C6DEE4 File Offset: 0x00C6C0E4
 		public UUIItem FogUnlockAnchorItem
 		{
 			get
@@ -293,7 +304,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap
 			}
 		}
 
-		// Token: 0x06037482 RID: 226434 RVA: 0x00D1E7BE File Offset: 0x00D1C9BE
+		// Token: 0x0602C3CD RID: 181197 RVA: 0x00C6DEEE File Offset: 0x00C6C0EE
 		private void BindEvents()
 		{
 			if (this.MapType == EMapType.WorldMap)
@@ -308,7 +319,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap
 			EventSystem.Instance.Add(EEventName.WorldDone, new Action(this.SetUp));
 		}
 
-		// Token: 0x06037483 RID: 226435 RVA: 0x00D1E7FC File Offset: 0x00D1C9FC
+		// Token: 0x0602C3CE RID: 181198 RVA: 0x00C6DF2C File Offset: 0x00C6C12C
 		protected void UnBindEvents()
 		{
 			if (this.MapType == EMapType.WorldMap)
@@ -321,7 +332,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap
 			}
 		}
 
-		// Token: 0x06037484 RID: 226436 RVA: 0x00D1E84C File Offset: 0x00D1CA4C
+		// Token: 0x0602C3CF RID: 181199 RVA: 0x00C6DF7C File Offset: 0x00C6C17C
 		private void SetUp()
 		{
 			MapTileMgr mapTileMgr = this.MapTileMgr;
@@ -352,24 +363,24 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap
 			rootItem.SetUIActive(true);
 		}
 
-		// Token: 0x06037485 RID: 226437 RVA: 0x00D1E8BC File Offset: 0x00D1CABC
+		// Token: 0x0602C3D0 RID: 181200 RVA: 0x00C6DFEC File Offset: 0x00C6C1EC
 		private UniTask SetUpWorldMapAsync()
 		{
-			BaseMap.<SetUpWorldMapAsync>d__50 <SetUpWorldMapAsync>d__;
+			BaseMap.<SetUpWorldMapAsync>d__52 <SetUpWorldMapAsync>d__;
 			<SetUpWorldMapAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<SetUpWorldMapAsync>d__.<>4__this = this;
 			<SetUpWorldMapAsync>d__.<>1__state = -1;
-			<SetUpWorldMapAsync>d__.<>t__builder.Start<BaseMap.<SetUpWorldMapAsync>d__50>(ref <SetUpWorldMapAsync>d__);
+			<SetUpWorldMapAsync>d__.<>t__builder.Start<BaseMap.<SetUpWorldMapAsync>d__52>(ref <SetUpWorldMapAsync>d__);
 			return <SetUpWorldMapAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06037486 RID: 226438 RVA: 0x00D1E8FF File Offset: 0x00D1CAFF
+		// Token: 0x0602C3D1 RID: 181201 RVA: 0x00C6E02F File Offset: 0x00C6C22F
 		public Dictionary<EMarkType, Dictionary<int, MarkItem>> GetAllMarkItems()
 		{
 			return this.MapMarkMgr.GetAllMarkItems();
 		}
 
-		// Token: 0x06037487 RID: 226439 RVA: 0x00D1E90C File Offset: 0x00D1CB0C
+		// Token: 0x0602C3D2 RID: 181202 RVA: 0x00C6E03C File Offset: 0x00C6C23C
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -377,29 +388,39 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap
 		})]
 		public Dictionary<int, MarkItem> GetMarkItemsByType(EMarkType markType, bool withCrossMap = true)
 		{
-			return this.MapMarkMgr.GetMarkItemsByType(markType, withCrossMap);
+			MapMarkMgr mapMarkMgr = this.MapMarkMgr;
+			if (mapMarkMgr == null)
+			{
+				return null;
+			}
+			return mapMarkMgr.GetMarkItemsByType(markType, withCrossMap);
 		}
 
-		// Token: 0x06037488 RID: 226440 RVA: 0x00D1E91B File Offset: 0x00D1CB1B
+		// Token: 0x0602C3D3 RID: 181203 RVA: 0x00C6E051 File Offset: 0x00C6C251
 		public List<MarkItem> GetMarkItemsByClickPosition(Vector clickPosition, int cellRadius = 1)
 		{
 			return this.MapMarkMgr.GetMarkItemsByClickPosition(clickPosition, cellRadius);
 		}
 
-		// Token: 0x06037489 RID: 226441 RVA: 0x00D1E92A File Offset: 0x00D1CB2A
+		// Token: 0x0602C3D4 RID: 181204 RVA: 0x00C6E060 File Offset: 0x00C6C260
 		[NullableContext(2)]
 		public MarkItem GetMarkItem(EMarkType markType, int markId)
 		{
-			return this.MapMarkMgr.GetMarkItem(markType, markId);
+			MapMarkMgr mapMarkMgr = this.MapMarkMgr;
+			if (mapMarkMgr == null)
+			{
+				return null;
+			}
+			return mapMarkMgr.GetMarkItem(markType, markId);
 		}
 
-		// Token: 0x0603748A RID: 226442 RVA: 0x00D1E939 File Offset: 0x00D1CB39
+		// Token: 0x0602C3D5 RID: 181205 RVA: 0x00C6E075 File Offset: 0x00C6C275
 		public CustomMarkItem CreateCustomMark(DynamicMarkCreateInfo info)
 		{
 			return this.MapMarkMgr.CreateDynamicMark(info, true) as CustomMarkItem;
 		}
 
-		// Token: 0x0603748B RID: 226443 RVA: 0x00D1E94D File Offset: 0x00D1CB4D
+		// Token: 0x0602C3D6 RID: 181206 RVA: 0x00C6E089 File Offset: 0x00C6C289
 		[return: Nullable(new byte[]
 		{
 			1,
@@ -411,30 +432,35 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap
 			return this.MapMarkMgr.FindNearbyMarkItems(markItem, searchRadius, filterFunction);
 		}
 
-		// Token: 0x0603748C RID: 226444 RVA: 0x00D1E95D File Offset: 0x00D1CB5D
+		// Token: 0x0602C3D7 RID: 181207 RVA: 0x00C6E099 File Offset: 0x00C6C299
 		public List<MarkItem> GetTrackMenuMarkList()
 		{
 			return this.MapMarkMgr.GetTrackMenuMarkList();
 		}
 
-		// Token: 0x0603748D RID: 226445 RVA: 0x00D1E96A File Offset: 0x00D1CB6A
+		// Token: 0x0602C3D8 RID: 181208 RVA: 0x00C6E0A6 File Offset: 0x00C6C2A6
 		public List<MarkItem> GetNavigateMarkList()
 		{
 			return this.MapMarkMgr.GetNavigateMarkList();
 		}
 
-		// Token: 0x1700848A RID: 33930
-		// (get) Token: 0x0603748E RID: 226446 RVA: 0x00D1E977 File Offset: 0x00D1CB77
+		// Token: 0x17005856 RID: 22614
+		// (get) Token: 0x0602C3D9 RID: 181209 RVA: 0x00C6E0B4 File Offset: 0x00C6C2B4
 		public Vector4? MapOffset
 		{
 			get
 			{
-				return new Vector4?(this.MapTileMgr.MapOffset);
+				MapTileMgr mapTileMgr = this.MapTileMgr;
+				if (mapTileMgr == null)
+				{
+					return null;
+				}
+				return new Vector4?(mapTileMgr.MapOffset);
 			}
 		}
 
-		// Token: 0x1700848B RID: 33931
-		// (get) Token: 0x0603748F RID: 226447 RVA: 0x00D1E989 File Offset: 0x00D1CB89
+		// Token: 0x17005857 RID: 22615
+		// (get) Token: 0x0602C3DA RID: 181210 RVA: 0x00C6E0DF File Offset: 0x00C6C2DF
 		public float FakeOffset
 		{
 			get
@@ -443,7 +469,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap
 			}
 		}
 
-		// Token: 0x06037490 RID: 226448 RVA: 0x00D1E996 File Offset: 0x00D1CB96
+		// Token: 0x0602C3DB RID: 181211 RVA: 0x00C6E0EC File Offset: 0x00C6C2EC
 		public void ShowSubMapTile(int groupId, int layer, bool fastTween = false)
 		{
 			MapTileMgr mapTileMgr = this.MapTileMgr;
@@ -454,7 +480,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap
 			mapTileMgr.ShowSubMapByPosition(groupId, layer, fastTween);
 		}
 
-		// Token: 0x06037491 RID: 226449 RVA: 0x00D1E9AB File Offset: 0x00D1CBAB
+		// Token: 0x0602C3DC RID: 181212 RVA: 0x00C6E101 File Offset: 0x00C6C301
 		public void HideSubMapTile()
 		{
 			MapTileMgr mapTileMgr = this.MapTileMgr;
@@ -465,7 +491,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap
 			mapTileMgr.HideSubMap();
 		}
 
-		// Token: 0x06037492 RID: 226450 RVA: 0x00D1E9BD File Offset: 0x00D1CBBD
+		// Token: 0x0602C3DD RID: 181213 RVA: 0x00C6E113 File Offset: 0x00C6C313
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -473,10 +499,15 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap
 		})]
 		public List<MapTileItem> GetAllMapTileItems()
 		{
-			return this.MapTileMgr.GetMapTileItems();
+			MapTileMgr mapTileMgr = this.MapTileMgr;
+			if (mapTileMgr == null)
+			{
+				return null;
+			}
+			return mapTileMgr.GetMapTileItems();
 		}
 
-		// Token: 0x06037493 RID: 226451 RVA: 0x00D1E9CA File Offset: 0x00D1CBCA
+		// Token: 0x0602C3DE RID: 181214 RVA: 0x00C6E126 File Offset: 0x00C6C326
 		[NullableContext(2)]
 		public Vector GetWorldMapCenterPosition()
 		{
@@ -488,7 +519,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap
 			return mapTileMgr.GetWorldMapCenterPosition();
 		}
 
-		// Token: 0x06037494 RID: 226452 RVA: 0x00D1E9DD File Offset: 0x00D1CBDD
+		// Token: 0x0602C3DF RID: 181215 RVA: 0x00C6E139 File Offset: 0x00C6C339
 		public int GetMultiMapAreaIdByPosition(Vector position)
 		{
 			MapTileMgr mapTileMgr = this.MapTileMgr;
@@ -499,7 +530,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap
 			return mapTileMgr.GetMultiMapAreaIdByPosition(position);
 		}
 
-		// Token: 0x06037495 RID: 226453 RVA: 0x00D1E9F1 File Offset: 0x00D1CBF1
+		// Token: 0x0602C3E0 RID: 181216 RVA: 0x00C6E14D File Offset: 0x00C6C34D
 		public int GetSubMapGroupByPosition(Vector position)
 		{
 			MapTileMgr mapTileMgr = this.MapTileMgr;
@@ -510,18 +541,19 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap
 			return mapTileMgr.GetSubMapGroupByPosition(position);
 		}
 
-		// Token: 0x06037496 RID: 226454 RVA: 0x00D1EA08 File Offset: 0x00D1CC08
+		// Token: 0x0602C3E1 RID: 181217 RVA: 0x00C6E164 File Offset: 0x00C6C364
 		public int GetWorldMapCenterAreaId()
 		{
-			Vector worldMapCenterPosition = this.MapTileMgr.GetWorldMapCenterPosition();
-			if (worldMapCenterPosition == null)
+			MapTileMgr mapTileMgr = this.MapTileMgr;
+			Vector vector = (mapTileMgr != null) ? mapTileMgr.GetWorldMapCenterPosition() : null;
+			if (vector == null)
 			{
 				return 0;
 			}
-			return this.MapTileMgr.GetMultiMapAreaIdByPosition(worldMapCenterPosition);
+			return this.MapTileMgr.GetMultiMapAreaIdByPosition(vector);
 		}
 
-		// Token: 0x06037497 RID: 226455 RVA: 0x00D1EA32 File Offset: 0x00D1CC32
+		// Token: 0x0602C3E2 RID: 181218 RVA: 0x00C6E195 File Offset: 0x00C6C395
 		public void UpdateCurrentAreaMapGroupId(Vector position)
 		{
 			MapTileMgr mapTileMgr = this.MapTileMgr;
@@ -532,7 +564,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap
 			mapTileMgr.UpdateCurrentAreaMapGroupId(position);
 		}
 
-		// Token: 0x06037498 RID: 226456 RVA: 0x00D1EA48 File Offset: 0x00D1CC48
+		// Token: 0x0602C3E3 RID: 181219 RVA: 0x00C6E1A8 File Offset: 0x00C6C3A8
 		public void SetMapScale(float scale)
 		{
 			UUIItem rootItem = this.RootItem;
@@ -544,7 +576,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap
 			rootItem.SetUIRelativeScale3D(fvector);
 		}
 
-		// Token: 0x06037499 RID: 226457 RVA: 0x00D1EA70 File Offset: 0x00D1CC70
+		// Token: 0x0602C3E4 RID: 181220 RVA: 0x00C6E1D0 File Offset: 0x00C6C3D0
 		public void HandleFogAreaOpen(int fogId)
 		{
 			MapTileMgr mapTileMgr = this.MapTileMgr;
@@ -555,7 +587,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap
 			mapTileMgr.HandleFogAreaOpen(fogId);
 		}
 
-		// Token: 0x0603749A RID: 226458 RVA: 0x00D1EA83 File Offset: 0x00D1CC83
+		// Token: 0x0602C3E5 RID: 181221 RVA: 0x00C6E1E3 File Offset: 0x00C6C3E3
 		public void HandleMapTileDelegate()
 		{
 			MapTileMgr mapTileMgr = this.MapTileMgr;
@@ -566,7 +598,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap
 			mapTileMgr.HandleDelegate();
 		}
 
-		// Token: 0x0603749B RID: 226459 RVA: 0x00D1EA95 File Offset: 0x00D1CC95
+		// Token: 0x0602C3E6 RID: 181222 RVA: 0x00C6E1F5 File Offset: 0x00C6C3F5
 		public void UnBindMapTileDelegate()
 		{
 			MapTileMgr mapTileMgr = this.MapTileMgr;
@@ -577,7 +609,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap
 			mapTileMgr.UnBindDelegate();
 		}
 
-		// Token: 0x0603749C RID: 226460 RVA: 0x00D1EAA8 File Offset: 0x00D1CCA8
+		// Token: 0x0602C3E7 RID: 181223 RVA: 0x00C6E208 File Offset: 0x00C6C408
 		public void HandleSceneGamePlayMarkItemOpen(EMarkType markType, int relativeType, int subRelativeType)
 		{
 			Dictionary<int, MarkItem> markItemsByType = this.GetMarkItemsByType(markType, true);
@@ -605,7 +637,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap
 			}
 		}
 
-		// Token: 0x0603749D RID: 226461 RVA: 0x00D1EB88 File Offset: 0x00D1CD88
+		// Token: 0x0602C3E8 RID: 181224 RVA: 0x00C6E2F0 File Offset: 0x00C6C4F0
 		[NullableContext(2)]
 		public void SetClickRangeVisible(bool visible, Vector2D clickUiPosition = null)
 		{
@@ -616,28 +648,28 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap
 			this.PlaySequenceAndSetActive(visible, clickUiPosition).Forget<bool>();
 		}
 
-		// Token: 0x0603749E RID: 226462 RVA: 0x00D1EBB4 File Offset: 0x00D1CDB4
+		// Token: 0x0602C3E9 RID: 181225 RVA: 0x00C6E31C File Offset: 0x00C6C51C
 		[NullableContext(0)]
 		private UniTask<bool> PlaySequenceAndSetActive(bool bActive, [Nullable(1)] Vector2D clickUiPosition)
 		{
-			BaseMap.<PlaySequenceAndSetActive>d__77 <PlaySequenceAndSetActive>d__;
+			BaseMap.<PlaySequenceAndSetActive>d__79 <PlaySequenceAndSetActive>d__;
 			<PlaySequenceAndSetActive>d__.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
 			<PlaySequenceAndSetActive>d__.<>4__this = this;
 			<PlaySequenceAndSetActive>d__.bActive = bActive;
 			<PlaySequenceAndSetActive>d__.clickUiPosition = clickUiPosition;
 			<PlaySequenceAndSetActive>d__.<>1__state = -1;
-			<PlaySequenceAndSetActive>d__.<>t__builder.Start<BaseMap.<PlaySequenceAndSetActive>d__77>(ref <PlaySequenceAndSetActive>d__);
+			<PlaySequenceAndSetActive>d__.<>t__builder.Start<BaseMap.<PlaySequenceAndSetActive>d__79>(ref <PlaySequenceAndSetActive>d__);
 			return <PlaySequenceAndSetActive>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603749F RID: 226463 RVA: 0x00D1EC07 File Offset: 0x00D1CE07
+		// Token: 0x0602C3EA RID: 181226 RVA: 0x00C6E36F File Offset: 0x00C6C56F
 		public bool InValidMapTile(Vector worldPosition)
 		{
 			MapTileMgr mapTileMgr = this.MapTileMgr;
 			return mapTileMgr != null && mapTileMgr.InValidTile(worldPosition);
 		}
 
-		// Token: 0x060374A0 RID: 226464 RVA: 0x00D1EC1B File Offset: 0x00D1CE1B
+		// Token: 0x0602C3EB RID: 181227 RVA: 0x00C6E383 File Offset: 0x00C6C583
 		public void UpdateDraggableParams(ITileNum tileNum)
 		{
 			MapTileMgr mapTileMgr = this.MapTileMgr;
@@ -648,7 +680,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap
 			mapTileMgr.UpdateDraggableParams(tileNum);
 		}
 
-		// Token: 0x060374A1 RID: 226465 RVA: 0x00D1EC2E File Offset: 0x00D1CE2E
+		// Token: 0x0602C3EC RID: 181228 RVA: 0x00C6E396 File Offset: 0x00C6C596
 		public void ResetDraggableParams()
 		{
 			MapTileMgr mapTileMgr = this.MapTileMgr;
@@ -659,7 +691,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap
 			mapTileMgr.ResetDraggableParams();
 		}
 
-		// Token: 0x060374A2 RID: 226466 RVA: 0x00D1EC40 File Offset: 0x00D1CE40
+		// Token: 0x0602C3ED RID: 181229 RVA: 0x00C6E3A8 File Offset: 0x00C6C5A8
 		public void SetPlayerGravityActive(bool active, EMapGravityDirection gravity = EMapGravityDirection.Down)
 		{
 			if (gravity != EMapGravityDirection.Down)
@@ -674,19 +706,19 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap
 			playerMapGravityComponent.SetActive(active);
 		}
 
-		// Token: 0x060374A3 RID: 226467 RVA: 0x00D1EC63 File Offset: 0x00D1CE63
+		// Token: 0x0602C3EE RID: 181230 RVA: 0x00C6E3CB File Offset: 0x00C6C5CB
 		[Conditional("DEBUG")]
 		public void SetDebugMarkPosition(Vector2D position)
 		{
 		}
 
-		// Token: 0x060374A4 RID: 226468 RVA: 0x00D1EC65 File Offset: 0x00D1CE65
+		// Token: 0x0602C3EF RID: 181231 RVA: 0x00C6E3CD File Offset: 0x00C6C5CD
 		[Conditional("DEBUG")]
 		public void SetDebugPath(TArray<FVector2D> debugPath)
 		{
 		}
 
-		// Token: 0x060374A5 RID: 226469 RVA: 0x00D1EC67 File Offset: 0x00D1CE67
+		// Token: 0x0602C3F0 RID: 181232 RVA: 0x00C6E3CF File Offset: 0x00C6C5CF
 		public void SetMarkUnFocal(EMarkType markType, int markId)
 		{
 			MapMarkMgr mapMarkMgr = this.MapMarkMgr;
@@ -697,7 +729,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap
 			mapMarkMgr.RefreshMarkRenderOrderBySelect(markType, markId, false);
 		}
 
-		// Token: 0x060374A6 RID: 226470 RVA: 0x00D1EC7C File Offset: 0x00D1CE7C
+		// Token: 0x0602C3F1 RID: 181233 RVA: 0x00C6E3E4 File Offset: 0x00C6C5E4
 		public void SetMarkFocal(EMarkType markType, int markId)
 		{
 			MapMarkMgr mapMarkMgr = this.MapMarkMgr;
@@ -708,7 +740,7 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap
 			mapMarkMgr.RefreshMarkRenderOrderBySelect(markType, markId, true);
 		}
 
-		// Token: 0x060374A7 RID: 226471 RVA: 0x00D1EC91 File Offset: 0x00D1CE91
+		// Token: 0x0602C3F2 RID: 181234 RVA: 0x00C6E3F9 File Offset: 0x00C6C5F9
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -734,31 +766,33 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap
 			return mapMarkContainer.FindNearbyMarkItemsByPosition(position, searchRadius, filterFunction);
 		}
 
-		// Token: 0x0401D20B RID: 119307
+		// Token: 0x04017CA4 RID: 97444
 		public UUIItem SelfPlayerNode;
 
-		// Token: 0x0401D20C RID: 119308
+		// Token: 0x04017CA5 RID: 97445
 		public UUIItem PlayerArrow;
 
-		// Token: 0x0401D20D RID: 119309
+		// Token: 0x04017CA6 RID: 97446
 		public UUIItem PlayerOutOfBoundIndicator;
 
-		// Token: 0x0401D20E RID: 119310
+		// Token: 0x04017CA7 RID: 97447
 		public EMapType MapType = EMapType.WorldMap;
 
-		// Token: 0x0401D20F RID: 119311
+		// Token: 0x04017CA8 RID: 97448
 		private readonly float MapDefaultScale = 1f;
 
-		// Token: 0x0401D210 RID: 119312
+		// Token: 0x04017CA9 RID: 97449
 		private readonly float MarkScale = 1f;
 
-		// Token: 0x0401D211 RID: 119313
+		// Token: 0x04017CAA RID: 97450
+		[Nullable(2)]
 		private MapMarkMgr MapMarkMgr;
 
-		// Token: 0x0401D212 RID: 119314
+		// Token: 0x04017CAB RID: 97451
+		[Nullable(2)]
 		public MapTileMgr MapTileMgr;
 
-		// Token: 0x0401D213 RID: 119315
+		// Token: 0x04017CAC RID: 97452
 		[Nullable(new byte[]
 		{
 			2,
@@ -767,73 +801,77 @@ namespace CSharpScript.Game.Module.Map.View.BaseMap
 		})]
 		private Dictionary<string, UTexture> PreloadTiles;
 
-		// Token: 0x0401D214 RID: 119316
+		// Token: 0x04017CAD RID: 97453
 		private readonly float ClickRange = 100f;
 
-		// Token: 0x0401D215 RID: 119317
+		// Token: 0x04017CAE RID: 97454
 		private LevelSequencePlayer RangeItemLevelSequencePlayer;
 
-		// Token: 0x0401D216 RID: 119318
+		// Token: 0x04017CAF RID: 97455
 		private bool LogicUiActive;
 
-		// Token: 0x0401D219 RID: 119321
+		// Token: 0x04017CB2 RID: 97458
+		[Nullable(2)]
 		private MapRangePanel MapRangePanelInner;
 
-		// Token: 0x0401D21B RID: 119323
+		// Token: 0x04017CB4 RID: 97460
 		private EMapGravityDirection MapGravityInternal;
 
-		// Token: 0x0401D21C RID: 119324
+		// Token: 0x04017CB5 RID: 97461
 		[Nullable(2)]
 		private MarkGravityReverseIconComponent PlayerMapGravityComponent;
 
-		// Token: 0x0401D21D RID: 119325
+		// Token: 0x04017CB6 RID: 97462
 		[Nullable(2)]
 		private MapRoadWaysMgr MapRoadWaysMgr;
 
-		// Token: 0x0200B705 RID: 46853
+		// Token: 0x04017CB7 RID: 97463
+		private UniTask? MapMarkDisposeTask;
+
+		// Token: 0x0200A137 RID: 41271
 		[NullableContext(0)]
 		public static class EChildComponentType
 		{
-			// Token: 0x040376FF RID: 227071
+			// Token: 0x04032147 RID: 205127
 			public const int Player = 0;
 
-			// Token: 0x04037700 RID: 227072
+			// Token: 0x04032148 RID: 205128
 			public const int PlayerArrow = 1;
 
-			// Token: 0x04037701 RID: 227073
+			// Token: 0x04032149 RID: 205129
 			public const int PlayerOutOfBoundIndicator = 2;
 
-			// Token: 0x04037702 RID: 227074
+			// Token: 0x0403214A RID: 205130
 			public const int MarkRoot = 3;
 
-			// Token: 0x04037703 RID: 227075
+			// Token: 0x0403214B RID: 205131
 			public const int TileContainer = 4;
 
-			// Token: 0x04037704 RID: 227076
+			// Token: 0x0403214C RID: 205132
 			public const int TileTexture = 5;
 
-			// Token: 0x04037705 RID: 227077
+			// Token: 0x0403214D RID: 205133
 			public const int ClickRangePrompt = 6;
 
-			// Token: 0x04037706 RID: 227078
+			// Token: 0x0403214E RID: 205134
 			public const int SubMapMaskItem = 7;
 
-			// Token: 0x04037707 RID: 227079
+			// Token: 0x0403214F RID: 205135
 			public const int SubMapTileItem = 8;
 
-			// Token: 0x04037708 RID: 227080
+			// Token: 0x04032150 RID: 205136
 			public const int TileTextureV2 = 9;
 
-			// Token: 0x04037709 RID: 227081
+			// Token: 0x04032151 RID: 205137
 			public const int FogUnlockAnchorItem = 10;
 
-			// Token: 0x0403770A RID: 227082
+			// Token: 0x04032152 RID: 205138
 			public const int DebugMark = 11;
 
-			// Token: 0x0403770B RID: 227083
+			// Token: 0x04032153 RID: 205139
 			public const int DebugPath = 12;
 
-			// Token: 0x0403770C RID: 227084
+			// Token: 0x04032154 RID: 205140
 			public const int RoadWayContainer = 13;
 		}
 	}

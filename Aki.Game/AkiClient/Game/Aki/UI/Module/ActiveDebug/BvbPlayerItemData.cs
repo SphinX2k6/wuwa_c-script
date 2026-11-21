@@ -6,22 +6,22 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.UI.Module.ActiveDebug
 {
-	// Token: 0x020039E1 RID: 14817
+	// Token: 0x02003039 RID: 12345
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/UI/Module/ActiveDebug/BvbPlayerItemData.BvbPlayerItemData")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 48)]
 	public class BvbPlayerItemData : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0601F02A RID: 127018 RVA: 0x008A764A File Offset: 0x008A584A
+		// Token: 0x0601D4A0 RID: 119968 RVA: 0x008EFF11 File Offset: 0x008EE111
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (BvbPlayerItemData._ScriptStructPtr != 0) ? BvbPlayerItemData._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/UI/Module/ActiveDebug/BvbPlayerItemData.BvbPlayerItemData", ref BvbPlayerItemData._ScriptStructPtr);
 		}
 
-		// Token: 0x170029D1 RID: 10705
-		// (get) Token: 0x0601F02B RID: 127019 RVA: 0x008A7670 File Offset: 0x008A5870
-		// (set) Token: 0x0601F02C RID: 127020 RVA: 0x008A76B3 File Offset: 0x008A58B3
+		// Token: 0x17002E90 RID: 11920
+		// (get) Token: 0x0601D4A1 RID: 119969 RVA: 0x008EFF38 File Offset: 0x008EE138
+		// (set) Token: 0x0601D4A2 RID: 119970 RVA: 0x008EFF7B File Offset: 0x008EE17B
 		public TArray<BvbCardItemData> CardsOnField
 		{
 			get
@@ -30,7 +30,7 @@ namespace AkiClient.Game.Aki.UI.Module.ActiveDebug
 				TArray<BvbCardItemData> result;
 				if ((result = this._CardsOnField) == null)
 				{
-					result = (this._CardsOnField = new TArray<BvbCardItemData>(base.NativePtr + (IntPtr)BvbPlayerItemData.__PropertyOffset_0, base.MemoryOwner ?? this));
+					result = (this._CardsOnField = new TArray<BvbCardItemData>(base.NativePtr + (IntPtr)BvbPlayerItemData.__PropertyOffset_CardsOnField, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -40,9 +40,9 @@ namespace AkiClient.Game.Aki.UI.Module.ActiveDebug
 			}
 		}
 
-		// Token: 0x170029D2 RID: 10706
-		// (get) Token: 0x0601F02D RID: 127021 RVA: 0x008A76C4 File Offset: 0x008A58C4
-		// (set) Token: 0x0601F02E RID: 127022 RVA: 0x008A7707 File Offset: 0x008A5907
+		// Token: 0x17002E91 RID: 11921
+		// (get) Token: 0x0601D4A3 RID: 119971 RVA: 0x008EFF8C File Offset: 0x008EE18C
+		// (set) Token: 0x0601D4A4 RID: 119972 RVA: 0x008EFFCF File Offset: 0x008EE1CF
 		public TArray<BvbCardItemData> CardsOnHand
 		{
 			get
@@ -51,7 +51,7 @@ namespace AkiClient.Game.Aki.UI.Module.ActiveDebug
 				TArray<BvbCardItemData> result;
 				if ((result = this._CardsOnHand) == null)
 				{
-					result = (this._CardsOnHand = new TArray<BvbCardItemData>(base.NativePtr + (IntPtr)BvbPlayerItemData.__PropertyOffset_1, base.MemoryOwner ?? this));
+					result = (this._CardsOnHand = new TArray<BvbCardItemData>(base.NativePtr + (IntPtr)BvbPlayerItemData.__PropertyOffset_CardsOnHand, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -61,9 +61,9 @@ namespace AkiClient.Game.Aki.UI.Module.ActiveDebug
 			}
 		}
 
-		// Token: 0x170029D3 RID: 10707
-		// (get) Token: 0x0601F02F RID: 127023 RVA: 0x008A7718 File Offset: 0x008A5918
-		// (set) Token: 0x0601F030 RID: 127024 RVA: 0x008A775B File Offset: 0x008A595B
+		// Token: 0x17002E92 RID: 11922
+		// (get) Token: 0x0601D4A5 RID: 119973 RVA: 0x008EFFE0 File Offset: 0x008EE1E0
+		// (set) Token: 0x0601D4A6 RID: 119974 RVA: 0x008F0023 File Offset: 0x008EE223
 		public TArray<BvbCardItemData> CardsInLibrary
 		{
 			get
@@ -72,7 +72,7 @@ namespace AkiClient.Game.Aki.UI.Module.ActiveDebug
 				TArray<BvbCardItemData> result;
 				if ((result = this._CardsInLibrary) == null)
 				{
-					result = (this._CardsInLibrary = new TArray<BvbCardItemData>(base.NativePtr + (IntPtr)BvbPlayerItemData.__PropertyOffset_2, base.MemoryOwner ?? this));
+					result = (this._CardsInLibrary = new TArray<BvbCardItemData>(base.NativePtr + (IntPtr)BvbPlayerItemData.__PropertyOffset_CardsInLibrary, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -82,58 +82,50 @@ namespace AkiClient.Game.Aki.UI.Module.ActiveDebug
 			}
 		}
 
-		// Token: 0x0601F031 RID: 127025 RVA: 0x008A7769 File Offset: 0x008A5969
+		// Token: 0x0601D4A7 RID: 119975 RVA: 0x008F0031 File Offset: 0x008EE231
 		public BvbPlayerItemData()
 		{
 		}
 
-		// Token: 0x0601F032 RID: 127026 RVA: 0x008A7771 File Offset: 0x008A5971
-		public BvbPlayerItemData(TArray<BvbCardItemData> CardsOnField, TArray<BvbCardItemData> CardsOnHand, TArray<BvbCardItemData> CardsInLibrary)
-		{
-			this.CardsOnField = CardsOnField;
-			this.CardsOnHand = CardsOnHand;
-			this.CardsInLibrary = CardsInLibrary;
-		}
-
-		// Token: 0x0601F033 RID: 127027 RVA: 0x008A778E File Offset: 0x008A598E
+		// Token: 0x0601D4A8 RID: 119976 RVA: 0x008F0039 File Offset: 0x008EE239
 		protected override IntPtr GetUStructPtr()
 		{
 			return BvbPlayerItemData.StaticStruct();
 		}
 
-		// Token: 0x0601F034 RID: 127028 RVA: 0x008A779A File Offset: 0x008A599A
+		// Token: 0x0601D4A9 RID: 119977 RVA: 0x008F0045 File Offset: 0x008EE245
 		[NullableContext(2)]
 		public BvbPlayerItemData(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F035 RID: 127029 RVA: 0x008A77A4 File Offset: 0x008A59A4
+		// Token: 0x0601D4AA RID: 119978 RVA: 0x008F004F File Offset: 0x008EE24F
 		public BvbPlayerItemData(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F036 RID: 127030 RVA: 0x008A77AF File Offset: 0x008A59AF
+		// Token: 0x0601D4AB RID: 119979 RVA: 0x008F005A File Offset: 0x008EE25A
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new BvbPlayerItemData(Pointer, false, true);
 		}
 
-		// Token: 0x0601F037 RID: 127031 RVA: 0x008A77B9 File Offset: 0x008A59B9
+		// Token: 0x0601D4AC RID: 119980 RVA: 0x008F0064 File Offset: 0x008EE264
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new BvbPlayerItemData(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0400ED89 RID: 60809
+		// Token: 0x0400F6BB RID: 63163
 		public const string __ObjectPath = "/Game/Aki/UI/Module/ActiveDebug/BvbPlayerItemData.BvbPlayerItemData";
 
-		// Token: 0x0400ED8A RID: 60810
+		// Token: 0x0400F6BC RID: 63164
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0400ED8B RID: 60811
-		internal static int __PropertyOffset_0;
+		// Token: 0x0400F6BD RID: 63165
+		internal static int __PropertyOffset_CardsOnField;
 
-		// Token: 0x0400ED8C RID: 60812
+		// Token: 0x0400F6BE RID: 63166
 		[Nullable(new byte[]
 		{
 			2,
@@ -141,10 +133,10 @@ namespace AkiClient.Game.Aki.UI.Module.ActiveDebug
 		})]
 		private TArray<BvbCardItemData> _CardsOnField;
 
-		// Token: 0x0400ED8D RID: 60813
-		internal static int __PropertyOffset_1;
+		// Token: 0x0400F6BF RID: 63167
+		internal static int __PropertyOffset_CardsOnHand;
 
-		// Token: 0x0400ED8E RID: 60814
+		// Token: 0x0400F6C0 RID: 63168
 		[Nullable(new byte[]
 		{
 			2,
@@ -152,10 +144,10 @@ namespace AkiClient.Game.Aki.UI.Module.ActiveDebug
 		})]
 		private TArray<BvbCardItemData> _CardsOnHand;
 
-		// Token: 0x0400ED8F RID: 60815
-		internal static int __PropertyOffset_2;
+		// Token: 0x0400F6C1 RID: 63169
+		internal static int __PropertyOffset_CardsInLibrary;
 
-		// Token: 0x0400ED90 RID: 60816
+		// Token: 0x0400F6C2 RID: 63170
 		[Nullable(new byte[]
 		{
 			2,

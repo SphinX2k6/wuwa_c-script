@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000436 RID: 1078
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200048F RID: 1167
 	public class IHookFetchMoveModeBase
 	{
-		// Token: 0x060015C5 RID: 5573 RVA: 0x00043DE4 File Offset: 0x00041FE4
+		// Token: 0x0600175F RID: 5983 RVA: 0x00047B2C File Offset: 0x00045D2C
 		private IHookFetchMoveModeBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060015C6 RID: 5574 RVA: 0x00043E1C File Offset: 0x0004201C
+		// Token: 0x06001760 RID: 5984 RVA: 0x00047B64 File Offset: 0x00045D64
 		public static IHookFetchMoveModeBase Create([Nullable(2)] IHookFetchMoveModeBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060015C7 RID: 5575 RVA: 0x00043E2F File Offset: 0x0004202F
+		// Token: 0x06001761 RID: 5985 RVA: 0x00047B77 File Offset: 0x00045D77
 		public static IHookFetchMoveModeBase CreateFromSetValue([Nullable(2)] IHookFetchMoveModeBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060015C8 RID: 5576 RVA: 0x00043E42 File Offset: 0x00042042
+		// Token: 0x06001762 RID: 5986 RVA: 0x00047B8A File Offset: 0x00045D8A
 		public IHookFetchMoveModeBase_SetValue ToSetValue()
 		{
 			return new IHookFetchMoveModeBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170005EF RID: 1519
-		// (get) Token: 0x060015C9 RID: 5577 RVA: 0x00043E55 File Offset: 0x00042055
-		// (set) Token: 0x060015CA RID: 5578 RVA: 0x00043E80 File Offset: 0x00042080
+		// Token: 0x17000656 RID: 1622
+		// (get) Token: 0x06001763 RID: 5987 RVA: 0x00047B9D File Offset: 0x00045D9D
+		// (set) Token: 0x06001764 RID: 5988 RVA: 0x00047BC8 File Offset: 0x00045DC8
 		public virtual EHookFetchMoveMode Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040010C2 RID: 4290
+		// Token: 0x040011E4 RID: 4580
 		[Nullable(2)]
 		protected IHookFetchMoveModeBase FbInstance;
 
-		// Token: 0x040010C3 RID: 4291
+		// Token: 0x040011E5 RID: 4581
 		[Nullable(2)]
 		protected IHookFetchMoveModeBase_SetValue PocoInterface;
 	}

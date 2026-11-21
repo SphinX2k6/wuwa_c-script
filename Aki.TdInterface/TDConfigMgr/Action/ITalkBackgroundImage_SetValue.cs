@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F1D RID: 7965
+	// Token: 0x02002156 RID: 8534
 	public class ITalkBackgroundImage_SetValue
 	{
-		// Token: 0x0400652A RID: 25898
+		// Token: 0x04006B19 RID: 27417
 		public ETalkBackgroundType Type;
 
-		// Token: 0x0400652B RID: 25899
-		[Nullable(1)]
+		// Token: 0x04006B1A RID: 27418
 		public string ImageAsset;
 	}
 }

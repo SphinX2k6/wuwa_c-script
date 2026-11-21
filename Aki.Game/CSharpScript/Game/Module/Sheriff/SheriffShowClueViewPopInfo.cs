@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.Module.Sheriff
 {
-	// Token: 0x02004C50 RID: 19536
+	// Token: 0x02003C01 RID: 15361
 	public class SheriffShowClueViewPopInfo : ISheriffShowClueViewPopInfo
 	{
-		// Token: 0x17007CCC RID: 31948
-		// (get) Token: 0x06032810 RID: 206864 RVA: 0x00BC345E File Offset: 0x00BC165E
-		// (set) Token: 0x06032811 RID: 206865 RVA: 0x00BC3466 File Offset: 0x00BC1666
+		// Token: 0x17005076 RID: 20598
+		// (get) Token: 0x060275C3 RID: 161219 RVA: 0x00B08076 File Offset: 0x00B06276
+		// (set) Token: 0x060275C4 RID: 161220 RVA: 0x00B0807E File Offset: 0x00B0627E
 		public int AnomalyId { get; set; }
 
-		// Token: 0x17007CCD RID: 31949
-		// (get) Token: 0x06032812 RID: 206866 RVA: 0x00BC346F File Offset: 0x00BC166F
-		// (set) Token: 0x06032813 RID: 206867 RVA: 0x00BC3477 File Offset: 0x00BC1677
+		// Token: 0x17005077 RID: 20599
+		// (get) Token: 0x060275C5 RID: 161221 RVA: 0x00B08087 File Offset: 0x00B06287
+		// (set) Token: 0x060275C6 RID: 161222 RVA: 0x00B0808F File Offset: 0x00B0628F
 		public int? ClueId { get; set; }
 	}
 }

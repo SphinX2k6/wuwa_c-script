@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000171 RID: 369
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000186 RID: 390
 	public class FightInteractComponent : IComponentBase
 	{
-		// Token: 0x060004CE RID: 1230 RVA: 0x0001F018 File Offset: 0x0001D218
+		// Token: 0x060004D2 RID: 1234 RVA: 0x0001F98C File Offset: 0x0001DB8C
 		private FightInteractComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060004CF RID: 1231 RVA: 0x0001F050 File Offset: 0x0001D250
+		// Token: 0x060004D3 RID: 1235 RVA: 0x0001F9C4 File Offset: 0x0001DBC4
 		public static FightInteractComponent Create([Nullable(2)] FightInteractComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060004D0 RID: 1232 RVA: 0x0001F063 File Offset: 0x0001D263
+		// Token: 0x060004D4 RID: 1236 RVA: 0x0001F9D7 File Offset: 0x0001DBD7
 		public static FightInteractComponent CreateFromSetValue([Nullable(2)] FightInteractComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060004D1 RID: 1233 RVA: 0x0001F078 File Offset: 0x0001D278
+		// Token: 0x060004D5 RID: 1237 RVA: 0x0001F9EC File Offset: 0x0001DBEC
 		public new FightInteractComponent_SetValue ToSetValue()
 		{
 			return new FightInteractComponent_SetValue
@@ -65,9 +63,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700019B RID: 411
-		// (get) Token: 0x060004D2 RID: 1234 RVA: 0x0001F0D4 File Offset: 0x0001D2D4
-		// (set) Token: 0x060004D3 RID: 1235 RVA: 0x0001F10E File Offset: 0x0001D30E
+		// Token: 0x1700019D RID: 413
+		// (get) Token: 0x060004D6 RID: 1238 RVA: 0x0001FA48 File Offset: 0x0001DC48
+		// (set) Token: 0x060004D7 RID: 1239 RVA: 0x0001FA82 File Offset: 0x0001DC82
 		public override bool? Disabled
 		{
 			get
@@ -89,9 +87,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700019C RID: 412
-		// (get) Token: 0x060004D4 RID: 1236 RVA: 0x0001F11C File Offset: 0x0001D31C
-		// (set) Token: 0x060004D5 RID: 1237 RVA: 0x0001F146 File Offset: 0x0001D346
+		// Token: 0x1700019E RID: 414
+		// (get) Token: 0x060004D8 RID: 1240 RVA: 0x0001FA90 File Offset: 0x0001DC90
+		// (set) Token: 0x060004D9 RID: 1241 RVA: 0x0001FABA File Offset: 0x0001DCBA
 		public override bool? EdIsLocked
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700019D RID: 413
-		// (get) Token: 0x060004D6 RID: 1238 RVA: 0x0001F154 File Offset: 0x0001D354
-		// (set) Token: 0x060004D7 RID: 1239 RVA: 0x0001F17F File Offset: 0x0001D37F
+		// Token: 0x1700019F RID: 415
+		// (get) Token: 0x060004DA RID: 1242 RVA: 0x0001FAC8 File Offset: 0x0001DCC8
+		// (set) Token: 0x060004DB RID: 1243 RVA: 0x0001FAF3 File Offset: 0x0001DCF3
 		public virtual int LockRange
 		{
 			get
@@ -131,9 +129,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700019E RID: 414
-		// (get) Token: 0x060004D8 RID: 1240 RVA: 0x0001F190 File Offset: 0x0001D390
-		// (set) Token: 0x060004D9 RID: 1241 RVA: 0x0001F1F1 File Offset: 0x0001D3F1
+		// Token: 0x170001A0 RID: 416
+		// (get) Token: 0x060004DC RID: 1244 RVA: 0x0001FB04 File Offset: 0x0001DD04
+		// (set) Token: 0x060004DD RID: 1245 RVA: 0x0001FB65 File Offset: 0x0001DD65
 		public virtual VectorInfo LockOffset
 		{
 			get
@@ -161,9 +159,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700019F RID: 415
-		// (get) Token: 0x060004DA RID: 1242 RVA: 0x0001F208 File Offset: 0x0001D408
-		// (set) Token: 0x060004DB RID: 1243 RVA: 0x0001F242 File Offset: 0x0001D442
+		// Token: 0x170001A1 RID: 417
+		// (get) Token: 0x060004DE RID: 1246 RVA: 0x0001FB7C File Offset: 0x0001DD7C
+		// (set) Token: 0x060004DF RID: 1247 RVA: 0x0001FBB6 File Offset: 0x0001DDB6
 		public virtual bool? DisableLock
 		{
 			get
@@ -185,9 +183,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170001A0 RID: 416
-		// (get) Token: 0x060004DC RID: 1244 RVA: 0x0001F250 File Offset: 0x0001D450
-		// (set) Token: 0x060004DD RID: 1245 RVA: 0x0001F2B1 File Offset: 0x0001D4B1
+		// Token: 0x170001A2 RID: 418
+		// (get) Token: 0x060004E0 RID: 1248 RVA: 0x0001FBC4 File Offset: 0x0001DDC4
+		// (set) Token: 0x060004E1 RID: 1249 RVA: 0x0001FC25 File Offset: 0x0001DE25
 		[Nullable(2)]
 		public virtual IAutoLockControl LockControl
 		{
@@ -218,24 +216,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000707 RID: 1799
+		// Token: 0x04000754 RID: 1876
 		[Nullable(2)]
 		protected new FightInteractComponent FbInstance;
 
-		// Token: 0x04000708 RID: 1800
+		// Token: 0x04000755 RID: 1877
 		[Nullable(2)]
 		protected new FightInteractComponent_SetValue PocoInterface;
 
-		// Token: 0x04000709 RID: 1801
+		// Token: 0x04000756 RID: 1878
 		private VectorInfo _LockOffsetCache;
 
-		// Token: 0x0400070A RID: 1802
+		// Token: 0x04000757 RID: 1879
 		private bool _LockOffsetInited;
 
-		// Token: 0x0400070B RID: 1803
+		// Token: 0x04000758 RID: 1880
 		private IAutoLockControl _LockControlCache;
 
-		// Token: 0x0400070C RID: 1804
+		// Token: 0x04000759 RID: 1881
 		private bool _LockControlInited;
 	}
 }

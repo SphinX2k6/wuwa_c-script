@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000B94 RID: 2964
+	// Token: 0x02000C76 RID: 3190
 	public struct Condition : IFlatbufferObject
 	{
-		// Token: 0x170008F6 RID: 2294
-		// (get) Token: 0x060057F7 RID: 22519 RVA: 0x001FBD84 File Offset: 0x001F9F84
+		// Token: 0x1700093C RID: 2364
+		// (get) Token: 0x06005DD0 RID: 24016 RVA: 0x0021BB60 File Offset: 0x00219D60
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,39 +20,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060057F8 RID: 22520 RVA: 0x001FBD91 File Offset: 0x001F9F91
+		// Token: 0x06005DD1 RID: 24017 RVA: 0x0021BB6D File Offset: 0x00219D6D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060057F9 RID: 22521 RVA: 0x001FBD98 File Offset: 0x001F9F98
+		// Token: 0x06005DD2 RID: 24018 RVA: 0x0021BB74 File Offset: 0x00219D74
 		public static Condition GetRootAsCondition(ByteBuffer _bb)
 		{
 			return Condition.GetRootAsCondition(_bb, default(Condition));
 		}
 
-		// Token: 0x060057FA RID: 22522 RVA: 0x001FBDB4 File Offset: 0x001F9FB4
+		// Token: 0x06005DD3 RID: 24019 RVA: 0x0021BB90 File Offset: 0x00219D90
 		public static Condition GetRootAsCondition(ByteBuffer _bb, Condition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060057FB RID: 22523 RVA: 0x001FBDD1 File Offset: 0x001F9FD1
+		// Token: 0x06005DD4 RID: 24020 RVA: 0x0021BBAD File Offset: 0x00219DAD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060057FC RID: 22524 RVA: 0x001FBDE0 File Offset: 0x001F9FE0
+		// Token: 0x06005DD5 RID: 24021 RVA: 0x0021BBBC File Offset: 0x00219DBC
 		public Condition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170008F7 RID: 2295
-		// (get) Token: 0x060057FD RID: 22525 RVA: 0x001FBDF0 File Offset: 0x001F9FF0
+		// Token: 0x1700093D RID: 2365
+		// (get) Token: 0x06005DD6 RID: 24022 RVA: 0x0021BBCC File Offset: 0x00219DCC
 		public int Id
 		{
 			get
@@ -66,8 +66,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170008F8 RID: 2296
-		// (get) Token: 0x060057FE RID: 22526 RVA: 0x001FBE2C File Offset: 0x001FA02C
+		// Token: 0x1700093E RID: 2366
+		// (get) Token: 0x06005DD7 RID: 24023 RVA: 0x0021BC08 File Offset: 0x00219E08
 		public string Type
 		{
 			get
@@ -81,20 +81,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060057FF RID: 22527 RVA: 0x001FBE63 File Offset: 0x001FA063
+		// Token: 0x06005DD8 RID: 24024 RVA: 0x0021BC3F File Offset: 0x00219E3F
 		public Span<byte> GetTypeBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06005800 RID: 22528 RVA: 0x001FBE72 File Offset: 0x001FA072
+		// Token: 0x06005DD9 RID: 24025 RVA: 0x0021BC4E File Offset: 0x00219E4E
 		public byte[] GetTypeArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170008F9 RID: 2297
-		// (get) Token: 0x06005801 RID: 22529 RVA: 0x001FBE8C File Offset: 0x001FA08C
+		// Token: 0x1700093F RID: 2367
+		// (get) Token: 0x06005DDA RID: 24026 RVA: 0x0021BC68 File Offset: 0x00219E68
 		public int NeedNum
 		{
 			get
@@ -108,7 +108,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005802 RID: 22530 RVA: 0x001FBEC8 File Offset: 0x001FA0C8
+		// Token: 0x06005DDB RID: 24027 RVA: 0x0021BCA4 File Offset: 0x00219EA4
 		public DicStringString? LimitParams(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -119,8 +119,8 @@ namespace Aki.Config
 			return new DicStringString?(default(DicStringString).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x170008FA RID: 2298
-		// (get) Token: 0x06005803 RID: 22531 RVA: 0x001FBF2C File Offset: 0x001FA12C
+		// Token: 0x17000940 RID: 2368
+		// (get) Token: 0x06005DDC RID: 24028 RVA: 0x0021BD08 File Offset: 0x00219F08
 		public int LimitParamsLength
 		{
 			get
@@ -134,7 +134,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005804 RID: 22532 RVA: 0x001FBF58 File Offset: 0x001FA158
+		// Token: 0x06005DDD RID: 24029 RVA: 0x0021BD34 File Offset: 0x00219F34
 		public DicStringString? LimitParamsOpe(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -145,8 +145,8 @@ namespace Aki.Config
 			return new DicStringString?(default(DicStringString).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x170008FB RID: 2299
-		// (get) Token: 0x06005805 RID: 22533 RVA: 0x001FBFBC File Offset: 0x001FA1BC
+		// Token: 0x17000941 RID: 2369
+		// (get) Token: 0x06005DDE RID: 24030 RVA: 0x0021BD98 File Offset: 0x00219F98
 		public int LimitParamsOpeLength
 		{
 			get
@@ -160,8 +160,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170008FC RID: 2300
-		// (get) Token: 0x06005806 RID: 22534 RVA: 0x001FBFE8 File Offset: 0x001FA1E8
+		// Token: 0x17000942 RID: 2370
+		// (get) Token: 0x06005DDF RID: 24031 RVA: 0x0021BDC4 File Offset: 0x00219FC4
 		public bool IsClient
 		{
 			get
@@ -171,8 +171,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170008FD RID: 2301
-		// (get) Token: 0x06005807 RID: 22535 RVA: 0x001FC028 File Offset: 0x001FA228
+		// Token: 0x17000943 RID: 2371
+		// (get) Token: 0x06005DE0 RID: 24032 RVA: 0x0021BE04 File Offset: 0x0021A004
 		public string Description
 		{
 			get
@@ -186,20 +186,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06005808 RID: 22536 RVA: 0x001FC060 File Offset: 0x001FA260
+		// Token: 0x06005DE1 RID: 24033 RVA: 0x0021BE3C File Offset: 0x0021A03C
 		public Span<byte> GetDescriptionBytes()
 		{
 			return this.__p.__vector_as_span<byte>(16, 1);
 		}
 
-		// Token: 0x06005809 RID: 22537 RVA: 0x001FC070 File Offset: 0x001FA270
+		// Token: 0x06005DE2 RID: 24034 RVA: 0x0021BE4C File Offset: 0x0021A04C
 		public byte[] GetDescriptionArray()
 		{
 			return this.__p.__vector_as_array<byte>(16) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170008FE RID: 2302
-		// (get) Token: 0x0600580A RID: 22538 RVA: 0x001FC088 File Offset: 0x001FA288
+		// Token: 0x17000944 RID: 2372
+		// (get) Token: 0x06005DE3 RID: 24035 RVA: 0x0021BE64 File Offset: 0x0021A064
 		public int AccessId
 		{
 			get
@@ -213,41 +213,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600580B RID: 22539 RVA: 0x001FC0C8 File Offset: 0x001FA2C8
+		// Token: 0x06005DE4 RID: 24036 RVA: 0x0021BEA4 File Offset: 0x0021A0A4
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用LimitParamsFrozenDict()缓存字典，遍历请使用LimitParamsIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<string, string> LimitParams()
+		public Dictionary<string, string> LimitParams()
 		{
 			return this.LimitParamsIter().ToDictionary((DicStringString element) => element.Key, (DicStringString element) => element.Value);
 		}
 
-		// Token: 0x0600580C RID: 22540 RVA: 0x001FC11E File Offset: 0x001FA31E
+		// Token: 0x06005DE5 RID: 24037 RVA: 0x0021BEFA File Offset: 0x0021A0FA
 		[NullableContext(1)]
-		public readonly IEnumerable<DicStringString> LimitParamsIter()
+		public IEnumerable<DicStringString> LimitParamsIter()
 		{
 			Condition.<LimitParamsIter>d__31 <LimitParamsIter>d__ = new Condition.<LimitParamsIter>d__31(-2);
 			<LimitParamsIter>d__.<>3__<>4__this = this;
 			return <LimitParamsIter>d__;
 		}
 
-		// Token: 0x0600580D RID: 22541 RVA: 0x001FC134 File Offset: 0x001FA334
+		// Token: 0x06005DE6 RID: 24038 RVA: 0x0021BF10 File Offset: 0x0021A110
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用LimitParamsOpeFrozenDict()缓存字典，遍历请使用LimitParamsOpeIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<string, string> LimitParamsOpe()
+		public Dictionary<string, string> LimitParamsOpe()
 		{
 			return this.LimitParamsOpeIter().ToDictionary((DicStringString element) => element.Key, (DicStringString element) => element.Value);
 		}
 
-		// Token: 0x0600580E RID: 22542 RVA: 0x001FC18A File Offset: 0x001FA38A
+		// Token: 0x06005DE7 RID: 24039 RVA: 0x0021BF66 File Offset: 0x0021A166
 		[NullableContext(1)]
-		public readonly IEnumerable<DicStringString> LimitParamsOpeIter()
+		public IEnumerable<DicStringString> LimitParamsOpeIter()
 		{
 			Condition.<LimitParamsOpeIter>d__33 <LimitParamsOpeIter>d__ = new Condition.<LimitParamsOpeIter>d__33(-2);
 			<LimitParamsOpeIter>d__.<>3__<>4__this = this;
 			return <LimitParamsOpeIter>d__;
 		}
 
-		// Token: 0x0600580F RID: 22543 RVA: 0x001FC1A0 File Offset: 0x001FA3A0
+		// Token: 0x06005DE8 RID: 24040 RVA: 0x0021BF7C File Offset: 0x0021A17C
 		[NullableContext(1)]
 		[return: Nullable(2)]
 		public string GetLimitParams(string key)
@@ -261,7 +259,7 @@ namespace Aki.Config
 			return result;
 		}
 
-		// Token: 0x06005810 RID: 22544 RVA: 0x001FC1C8 File Offset: 0x001FA3C8
+		// Token: 0x06005DE9 RID: 24041 RVA: 0x0021BFA4 File Offset: 0x0021A1A4
 		[NullableContext(1)]
 		[return: Nullable(2)]
 		public string GetLimitParamsOpe(string key)
@@ -275,7 +273,7 @@ namespace Aki.Config
 			return result;
 		}
 
-		// Token: 0x06005811 RID: 22545 RVA: 0x001FC1F0 File Offset: 0x001FA3F0
+		// Token: 0x06005DEA RID: 24042 RVA: 0x0021BFCC File Offset: 0x0021A1CC
 		private void EnsureLimitParamsCacheIfNeeded()
 		{
 			if (this.LimitParamsCache != null)
@@ -285,7 +283,7 @@ namespace Aki.Config
 			this.LimitParamsCache = this.LimitParamsIter().ToFrozenDictionary((DicStringString kvp) => kvp.Key, (DicStringString kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x06005812 RID: 22546 RVA: 0x001FC258 File Offset: 0x001FA458
+		// Token: 0x06005DEB RID: 24043 RVA: 0x0021C034 File Offset: 0x0021A234
 		private void EnsureLimitParamsOpeCacheIfNeeded()
 		{
 			if (this.LimitParamsOpeCache != null)
@@ -295,38 +293,26 @@ namespace Aki.Config
 			this.LimitParamsOpeCache = this.LimitParamsOpeIter().ToFrozenDictionary((DicStringString kvp) => kvp.Key, (DicStringString kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x06005813 RID: 22547 RVA: 0x001FC2BE File Offset: 0x001FA4BE
+		// Token: 0x06005DEC RID: 24044 RVA: 0x0021C09A File Offset: 0x0021A29A
 		[NullableContext(1)]
-		[return: Nullable(new byte[]
-		{
-			2,
-			1,
-			1
-		})]
-		public FrozenDictionary<string, string> GetLimitParamsFrozenDict(string key)
+		public FrozenDictionary<string, string> GetLimitParamsFrozenDict()
 		{
 			this.EnsureLimitParamsCacheIfNeeded();
 			return this.LimitParamsCache;
 		}
 
-		// Token: 0x06005814 RID: 22548 RVA: 0x001FC2CC File Offset: 0x001FA4CC
+		// Token: 0x06005DED RID: 24045 RVA: 0x0021C0A8 File Offset: 0x0021A2A8
 		[NullableContext(1)]
-		[return: Nullable(new byte[]
-		{
-			2,
-			1,
-			1
-		})]
-		public FrozenDictionary<string, string> GetLimitParamsOpeFrozenDict(string key)
+		public FrozenDictionary<string, string> GetLimitParamsOpeFrozenDict()
 		{
 			this.EnsureLimitParamsOpeCacheIfNeeded();
 			return this.LimitParamsOpeCache;
 		}
 
-		// Token: 0x04004BA3 RID: 19363
+		// Token: 0x04005185 RID: 20869
 		private Table __p;
 
-		// Token: 0x04004BA4 RID: 19364
+		// Token: 0x04005186 RID: 20870
 		[Nullable(new byte[]
 		{
 			2,
@@ -335,7 +321,7 @@ namespace Aki.Config
 		})]
 		private FrozenDictionary<string, string> LimitParamsCache;
 
-		// Token: 0x04004BA5 RID: 19365
+		// Token: 0x04005187 RID: 20871
 		[Nullable(new byte[]
 		{
 			2,

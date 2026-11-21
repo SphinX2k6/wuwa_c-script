@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000C3D RID: 3133
+	// Token: 0x02000D20 RID: 3360
 	public struct EntrustRoleLevel : IFlatbufferObject
 	{
-		// Token: 0x17000F64 RID: 3940
-		// (get) Token: 0x06006A31 RID: 27185 RVA: 0x002254E8 File Offset: 0x002236E8
+		// Token: 0x17000FBD RID: 4029
+		// (get) Token: 0x06007033 RID: 28723 RVA: 0x00244830 File Offset: 0x00242A30
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006A32 RID: 27186 RVA: 0x002254F5 File Offset: 0x002236F5
+		// Token: 0x06007034 RID: 28724 RVA: 0x0024483D File Offset: 0x00242A3D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06006A33 RID: 27187 RVA: 0x002254FC File Offset: 0x002236FC
+		// Token: 0x06007035 RID: 28725 RVA: 0x00244844 File Offset: 0x00242A44
 		public static EntrustRoleLevel GetRootAsEntrustRoleLevel(ByteBuffer _bb)
 		{
 			return EntrustRoleLevel.GetRootAsEntrustRoleLevel(_bb, default(EntrustRoleLevel));
 		}
 
-		// Token: 0x06006A34 RID: 27188 RVA: 0x00225518 File Offset: 0x00223718
+		// Token: 0x06007036 RID: 28726 RVA: 0x00244860 File Offset: 0x00242A60
 		public static EntrustRoleLevel GetRootAsEntrustRoleLevel(ByteBuffer _bb, EntrustRoleLevel obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06006A35 RID: 27189 RVA: 0x00225535 File Offset: 0x00223735
+		// Token: 0x06007037 RID: 28727 RVA: 0x0024487D File Offset: 0x00242A7D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06006A36 RID: 27190 RVA: 0x00225544 File Offset: 0x00223744
+		// Token: 0x06007038 RID: 28728 RVA: 0x0024488C File Offset: 0x00242A8C
 		public EntrustRoleLevel __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000F65 RID: 3941
-		// (get) Token: 0x06006A37 RID: 27191 RVA: 0x00225554 File Offset: 0x00223754
+		// Token: 0x17000FBE RID: 4030
+		// (get) Token: 0x06007039 RID: 28729 RVA: 0x0024489C File Offset: 0x00242A9C
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000F66 RID: 3942
-		// (get) Token: 0x06006A38 RID: 27192 RVA: 0x00225590 File Offset: 0x00223790
+		// Token: 0x17000FBF RID: 4031
+		// (get) Token: 0x0600703A RID: 28730 RVA: 0x002448D8 File Offset: 0x00242AD8
 		public int RoleId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000F67 RID: 3943
-		// (get) Token: 0x06006A39 RID: 27193 RVA: 0x002255CC File Offset: 0x002237CC
+		// Token: 0x17000FC0 RID: 4032
+		// (get) Token: 0x0600703B RID: 28731 RVA: 0x00244914 File Offset: 0x00242B14
 		public int NeedLike
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004C7D RID: 19581
+		// Token: 0x04005260 RID: 21088
 		private Table __p;
 	}
 }

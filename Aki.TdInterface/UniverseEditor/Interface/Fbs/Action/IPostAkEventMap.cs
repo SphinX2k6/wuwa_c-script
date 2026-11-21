@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006D74 RID: 28020
+	// Token: 0x020074EF RID: 29935
 	public struct IPostAkEventMap : IFlatbufferObject
 	{
-		// Token: 0x1700D10A RID: 53514
-		// (get) Token: 0x060317D4 RID: 202708 RVA: 0x006B59F5 File Offset: 0x006B3BF5
+		// Token: 0x1700DC52 RID: 56402
+		// (get) Token: 0x060347D0 RID: 214992 RVA: 0x007110DD File Offset: 0x0070F2DD
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060317D5 RID: 202709 RVA: 0x006B5A02 File Offset: 0x006B3C02
+		// Token: 0x060347D1 RID: 214993 RVA: 0x007110EA File Offset: 0x0070F2EA
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060317D6 RID: 202710 RVA: 0x006B5A0C File Offset: 0x006B3C0C
+		// Token: 0x060347D2 RID: 214994 RVA: 0x007110F4 File Offset: 0x0070F2F4
 		public static IPostAkEventMap GetRootAsIPostAkEventMap(ByteBuffer _bb)
 		{
 			return IPostAkEventMap.GetRootAsIPostAkEventMap(_bb, default(IPostAkEventMap));
 		}
 
-		// Token: 0x060317D7 RID: 202711 RVA: 0x006B5A28 File Offset: 0x006B3C28
+		// Token: 0x060347D3 RID: 214995 RVA: 0x00711110 File Offset: 0x0070F310
 		public static IPostAkEventMap GetRootAsIPostAkEventMap(ByteBuffer _bb, IPostAkEventMap obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060317D8 RID: 202712 RVA: 0x006B5A45 File Offset: 0x006B3C45
+		// Token: 0x060347D4 RID: 214996 RVA: 0x0071112D File Offset: 0x0070F32D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060317D9 RID: 202713 RVA: 0x006B5A54 File Offset: 0x006B3C54
+		// Token: 0x060347D5 RID: 214997 RVA: 0x0071113C File Offset: 0x0070F33C
 		public IPostAkEventMap __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D10B RID: 53515
-		// (get) Token: 0x060317DA RID: 202714 RVA: 0x006B5A64 File Offset: 0x006B3C64
+		// Token: 0x1700DC53 RID: 56403
+		// (get) Token: 0x060347D6 RID: 214998 RVA: 0x0071114C File Offset: 0x0070F34C
 		public EPostAkEvent Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D10C RID: 53516
-		// (get) Token: 0x060317DB RID: 202715 RVA: 0x006B5AA0 File Offset: 0x006B3CA0
+		// Token: 0x1700DC54 RID: 56404
+		// (get) Token: 0x060347D7 RID: 214999 RVA: 0x00711188 File Offset: 0x0070F388
 		public IPlayMapMusic? MapEventType
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D10D RID: 53517
-		// (get) Token: 0x060317DC RID: 202716 RVA: 0x006B5B00 File Offset: 0x006B3D00
+		// Token: 0x1700DC55 RID: 56405
+		// (get) Token: 0x060347D8 RID: 215000 RVA: 0x007111E8 File Offset: 0x0070F3E8
 		public string AkEvent
 		{
 			get
@@ -92,19 +92,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060317DD RID: 202717 RVA: 0x006B5B37 File Offset: 0x006B3D37
+		// Token: 0x060347D9 RID: 215001 RVA: 0x0071121F File Offset: 0x0070F41F
 		public Span<byte> GetAkEventBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x060317DE RID: 202718 RVA: 0x006B5B46 File Offset: 0x006B3D46
+		// Token: 0x060347DA RID: 215002 RVA: 0x0071122E File Offset: 0x0070F42E
 		public byte[] GetAkEventArray()
 		{
 			return this.__p.__vector_as_array<byte>(8);
 		}
 
-		// Token: 0x060317DF RID: 202719 RVA: 0x006B5B54 File Offset: 0x006B3D54
+		// Token: 0x060347DB RID: 215003 RVA: 0x0071123C File Offset: 0x0070F43C
 		public static Offset<IPostAkEventMap> CreateIPostAkEventMap(FlatBufferBuilder builder, EPostAkEvent Type = EPostAkEvent.Global, Offset<IPlayMapMusic> MapEventTypeOffset = default(Offset<IPlayMapMusic>), StringOffset AkEventOffset = default(StringOffset))
 		{
 			builder.StartTable(3);
@@ -114,37 +114,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPostAkEventMap.EndIPostAkEventMap(builder);
 		}
 
-		// Token: 0x060317E0 RID: 202720 RVA: 0x006B5B78 File Offset: 0x006B3D78
+		// Token: 0x060347DC RID: 215004 RVA: 0x00711260 File Offset: 0x0070F460
 		public static void StartIPostAkEventMap(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x060317E1 RID: 202721 RVA: 0x006B5B81 File Offset: 0x006B3D81
+		// Token: 0x060347DD RID: 215005 RVA: 0x00711269 File Offset: 0x0070F469
 		public static void AddType(FlatBufferBuilder builder, EPostAkEvent type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060317E2 RID: 202722 RVA: 0x006B5B8C File Offset: 0x006B3D8C
+		// Token: 0x060347DE RID: 215006 RVA: 0x00711274 File Offset: 0x0070F474
 		public static void AddMapEventType(FlatBufferBuilder builder, Offset<IPlayMapMusic> mapEventTypeOffset)
 		{
 			builder.AddOffset(1, mapEventTypeOffset.Value, 0);
 		}
 
-		// Token: 0x060317E3 RID: 202723 RVA: 0x006B5B9C File Offset: 0x006B3D9C
+		// Token: 0x060347DF RID: 215007 RVA: 0x00711284 File Offset: 0x0070F484
 		public static void AddAkEvent(FlatBufferBuilder builder, StringOffset akEventOffset)
 		{
 			builder.AddOffset(2, akEventOffset.Value, 0);
 		}
 
-		// Token: 0x060317E4 RID: 202724 RVA: 0x006B5BAC File Offset: 0x006B3DAC
+		// Token: 0x060347E0 RID: 215008 RVA: 0x00711294 File Offset: 0x0070F494
 		public static Offset<IPostAkEventMap> EndIPostAkEventMap(FlatBufferBuilder builder)
 		{
 			return new Offset<IPostAkEventMap>(builder.EndTable());
 		}
 
-		// Token: 0x060317E5 RID: 202725 RVA: 0x006B5BBC File Offset: 0x006B3DBC
+		// Token: 0x060347E1 RID: 215009 RVA: 0x007112A4 File Offset: 0x0070F4A4
 		public IPostAkEventMapT UnPack()
 		{
 			IPostAkEventMapT postAkEventMapT = new IPostAkEventMapT();
@@ -152,7 +152,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return postAkEventMapT;
 		}
 
-		// Token: 0x060317E6 RID: 202726 RVA: 0x006B5BD8 File Offset: 0x006B3DD8
+		// Token: 0x060347E2 RID: 215010 RVA: 0x007112C0 File Offset: 0x0070F4C0
 		public void UnPackTo(IPostAkEventMapT _o)
 		{
 			_o.Type = this.Type;
@@ -160,7 +160,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.AkEvent = this.AkEvent;
 		}
 
-		// Token: 0x060317E7 RID: 202727 RVA: 0x006B5C2C File Offset: 0x006B3E2C
+		// Token: 0x060347E3 RID: 215011 RVA: 0x00711314 File Offset: 0x0070F514
 		public static Offset<IPostAkEventMap> Pack(FlatBufferBuilder builder, IPostAkEventMapT _o)
 		{
 			if (_o == null)
@@ -172,7 +172,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPostAkEventMap.CreateIPostAkEventMap(builder, _o.Type, mapEventTypeOffset, akEventOffset);
 		}
 
-		// Token: 0x04011737 RID: 71479
+		// Token: 0x040126B3 RID: 75443
 		private Table __p;
 	}
 }

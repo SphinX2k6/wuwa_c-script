@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001885 RID: 6277
+	// Token: 0x02001A10 RID: 6672
 	public class ICharacterLookAtEntityData_SetValue
 	{
-		// Token: 0x040054F6 RID: 21750
+		// Token: 0x04005943 RID: 22851
 		public ECharacterLookAt Type;
 
-		// Token: 0x040054F7 RID: 21751
+		// Token: 0x04005944 RID: 22852
 		public int EntityId;
 	}
 }

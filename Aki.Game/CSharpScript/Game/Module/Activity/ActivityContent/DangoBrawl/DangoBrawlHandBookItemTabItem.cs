@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006807 RID: 26631
+	// Token: 0x02005757 RID: 22359
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 	})]
 	public class DangoBrawlHandBookItemTabItem : GridProxyAbstract<DangoBrawlHandBookItemTabData>
 	{
-		// Token: 0x060426AB RID: 272043 RVA: 0x0102112C File Offset: 0x0101F32C
+		// Token: 0x06037200 RID: 225792 RVA: 0x00F62670 File Offset: 0x00F60870
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060426AC RID: 272044 RVA: 0x01021235 File Offset: 0x0101F435
+		// Token: 0x06037201 RID: 225793 RVA: 0x00F62779 File Offset: 0x00F60979
 		protected override void OnStart()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(4);
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.SetToggleState(false, false);
 		}
 
-		// Token: 0x060426AD RID: 272045 RVA: 0x01021274 File Offset: 0x0101F474
+		// Token: 0x06037202 RID: 225794 RVA: 0x00F627B8 File Offset: 0x00F609B8
 		public override void Refresh(DangoBrawlHandBookItemTabData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -87,19 +87,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.SetRedDotVisible(data.HasNew);
 		}
 
-		// Token: 0x060426AE RID: 272046 RVA: 0x0102135D File Offset: 0x0101F55D
+		// Token: 0x06037203 RID: 225795 RVA: 0x00F628A1 File Offset: 0x00F60AA1
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetToggleState(true, fireEvent);
 		}
 
-		// Token: 0x060426AF RID: 272047 RVA: 0x01021367 File Offset: 0x0101F567
+		// Token: 0x06037204 RID: 225796 RVA: 0x00F628AB File Offset: 0x00F60AAB
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetToggleState(false, fireEvent);
 		}
 
-		// Token: 0x060426B0 RID: 272048 RVA: 0x01021374 File Offset: 0x0101F574
+		// Token: 0x06037205 RID: 225797 RVA: 0x00F628B8 File Offset: 0x00F60AB8
 		private void SetToggleState(bool state, bool fireEvent)
 		{
 			EToggleState state2 = state ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			extendToggle.SetToggleStateForce(state2, fireEvent, false, false);
 		}
 
-		// Token: 0x060426B1 RID: 272049 RVA: 0x0102139E File Offset: 0x0101F59E
+		// Token: 0x06037206 RID: 225798 RVA: 0x00F628E2 File Offset: 0x00F60AE2
 		public void SetRedDotVisible(bool visible)
 		{
 			UUIItem item = base.GetItem(3);
@@ -122,14 +122,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			item.SetUIActive(visible);
 		}
 
-		// Token: 0x060426B2 RID: 272050 RVA: 0x010213B4 File Offset: 0x0101F5B4
+		// Token: 0x06037207 RID: 225799 RVA: 0x00F628F8 File Offset: 0x00F60AF8
 		private bool OnCanExecuteChange()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(4);
 			return extendToggle == null || extendToggle.GetToggleState() != EToggleState.ETT_Checked;
 		}
 
-		// Token: 0x060426B3 RID: 272051 RVA: 0x010213DA File Offset: 0x0101F5DA
+		// Token: 0x06037208 RID: 225800 RVA: 0x00F6291E File Offset: 0x00F60B1E
 		private void OnToggleClick(EToggleState state)
 		{
 			if (this.Data == null)
@@ -144,13 +144,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			onClickToggleBack(base.GridIndex, this.Data);
 		}
 
-		// Token: 0x040229E2 RID: 141794
+		// Token: 0x0401D23F RID: 119359
 		private const string ALL_ICON_PATH = "T_DangoBrawl_HandBook_All";
 
-		// Token: 0x040229E3 RID: 141795
+		// Token: 0x0401D240 RID: 119360
 		private const string ALL_NAME = "Text_FilterTextAll_Text";
 
-		// Token: 0x040229E4 RID: 141796
+		// Token: 0x0401D241 RID: 119361
 		[Nullable(new byte[]
 		{
 			2,
@@ -158,23 +158,23 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 		})]
 		public Action<int, DangoBrawlHandBookItemTabData> OnClickToggleBack;
 
-		// Token: 0x040229E5 RID: 141797
+		// Token: 0x0401D242 RID: 119362
 		[Nullable(2)]
 		private DangoBrawlHandBookItemTabData Data;
 
-		// Token: 0x0200C97A RID: 51578
+		// Token: 0x0200B347 RID: 45895
 		[NullableContext(0)]
 		private enum EItemComponent
 		{
-			// Token: 0x0403CD72 RID: 249202
+			// Token: 0x0403765F RID: 226911
 			TexIcon,
-			// Token: 0x0403CD73 RID: 249203
+			// Token: 0x04037660 RID: 226912
 			TxtName,
-			// Token: 0x0403CD74 RID: 249204
+			// Token: 0x04037661 RID: 226913
 			SprLine,
-			// Token: 0x0403CD75 RID: 249205
+			// Token: 0x04037662 RID: 226914
 			RedDotItem,
-			// Token: 0x0403CD76 RID: 249206
+			// Token: 0x04037663 RID: 226915
 			TogItem
 		}
 	}

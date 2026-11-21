@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007355 RID: 29525
+	// Token: 0x02007B2D RID: 31533
 	public struct ITalkOptionVisualNovel : IFlatbufferObject
 	{
-		// Token: 0x1700E034 RID: 57396
-		// (get) Token: 0x0603594E RID: 219470 RVA: 0x0074C017 File Offset: 0x0074A217
+		// Token: 0x1700EC30 RID: 60464
+		// (get) Token: 0x06038C81 RID: 232577 RVA: 0x007ADB9F File Offset: 0x007ABD9F
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603594F RID: 219471 RVA: 0x0074C024 File Offset: 0x0074A224
+		// Token: 0x06038C82 RID: 232578 RVA: 0x007ADBAC File Offset: 0x007ABDAC
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06035950 RID: 219472 RVA: 0x0074C02C File Offset: 0x0074A22C
+		// Token: 0x06038C83 RID: 232579 RVA: 0x007ADBB4 File Offset: 0x007ABDB4
 		public static ITalkOptionVisualNovel GetRootAsITalkOptionVisualNovel(ByteBuffer _bb)
 		{
 			return ITalkOptionVisualNovel.GetRootAsITalkOptionVisualNovel(_bb, default(ITalkOptionVisualNovel));
 		}
 
-		// Token: 0x06035951 RID: 219473 RVA: 0x0074C048 File Offset: 0x0074A248
+		// Token: 0x06038C84 RID: 232580 RVA: 0x007ADBD0 File Offset: 0x007ABDD0
 		public static ITalkOptionVisualNovel GetRootAsITalkOptionVisualNovel(ByteBuffer _bb, ITalkOptionVisualNovel obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06035952 RID: 219474 RVA: 0x0074C065 File Offset: 0x0074A265
+		// Token: 0x06038C85 RID: 232581 RVA: 0x007ADBED File Offset: 0x007ABDED
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06035953 RID: 219475 RVA: 0x0074C074 File Offset: 0x0074A274
+		// Token: 0x06038C86 RID: 232582 RVA: 0x007ADBFC File Offset: 0x007ABDFC
 		public ITalkOptionVisualNovel __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E035 RID: 57397
-		// (get) Token: 0x06035954 RID: 219476 RVA: 0x0074C084 File Offset: 0x0074A284
+		// Token: 0x1700EC31 RID: 60465
+		// (get) Token: 0x06038C87 RID: 232583 RVA: 0x007ADC0C File Offset: 0x007ABE0C
 		public ETalkOptionParamType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E036 RID: 57398
-		// (get) Token: 0x06035955 RID: 219477 RVA: 0x0074C0C0 File Offset: 0x0074A2C0
+		// Token: 0x1700EC32 RID: 60466
+		// (get) Token: 0x06038C88 RID: 232584 RVA: 0x007ADC48 File Offset: 0x007ABE48
 		public int PlotOptionId
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06035956 RID: 219478 RVA: 0x0074C0FC File Offset: 0x0074A2FC
+		// Token: 0x06038C89 RID: 232585 RVA: 0x007ADC84 File Offset: 0x007ABE84
 		public TVisualNovelPerformance OptionPerformancesType(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return (TVisualNovelPerformance)this.__p.bb.Get(this.__p.__vector(num) + j);
 		}
 
-		// Token: 0x1700E037 RID: 57399
-		// (get) Token: 0x06035957 RID: 219479 RVA: 0x0074C13C File Offset: 0x0074A33C
+		// Token: 0x1700EC33 RID: 60467
+		// (get) Token: 0x06038C8A RID: 232586 RVA: 0x007ADCC4 File Offset: 0x007ABEC4
 		public int OptionPerformancesTypeLength
 		{
 			get
@@ -104,13 +104,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06035958 RID: 219480 RVA: 0x0074C167 File Offset: 0x0074A367
+		// Token: 0x06038C8B RID: 232587 RVA: 0x007ADCEF File Offset: 0x007ABEEF
 		public Span<TVisualNovelPerformance> GetOptionPerformancesTypeBytes()
 		{
 			return this.__p.__vector_as_span<TVisualNovelPerformance>(8, 1);
 		}
 
-		// Token: 0x06035959 RID: 219481 RVA: 0x0074C178 File Offset: 0x0074A378
+		// Token: 0x06038C8C RID: 232588 RVA: 0x007ADD00 File Offset: 0x007ABF00
 		public TVisualNovelPerformance[] GetOptionPerformancesTypeArray()
 		{
 			int num = this.__p.__offset(8);
@@ -128,7 +128,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return array;
 		}
 
-		// Token: 0x0603595A RID: 219482 RVA: 0x0074C1E4 File Offset: 0x0074A3E4
+		// Token: 0x06038C8D RID: 232589 RVA: 0x007ADD6C File Offset: 0x007ABF6C
 		public TTable? OptionPerformances<TTable>(int j) where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(10);
@@ -139,8 +139,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(this.__p.__vector(num) + j * 4));
 		}
 
-		// Token: 0x1700E038 RID: 57400
-		// (get) Token: 0x0603595B RID: 219483 RVA: 0x0074C22C File Offset: 0x0074A42C
+		// Token: 0x1700EC34 RID: 60468
+		// (get) Token: 0x06038C8E RID: 232590 RVA: 0x007ADDB4 File Offset: 0x007ABFB4
 		public int OptionPerformancesLength
 		{
 			get
@@ -154,13 +154,28 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E039 RID: 57401
-		// (get) Token: 0x0603595C RID: 219484 RVA: 0x0074C258 File Offset: 0x0074A458
-		public byte NullMask
+		// Token: 0x1700EC35 RID: 60469
+		// (get) Token: 0x06038C8F RID: 232591 RVA: 0x007ADDE0 File Offset: 0x007ABFE0
+		public ITalkOptionVisualNovelDoubleConfirm? DoubleConfirm
 		{
 			get
 			{
 				int num = this.__p.__offset(12);
+				if (num == 0)
+				{
+					return null;
+				}
+				return new ITalkOptionVisualNovelDoubleConfirm?(default(ITalkOptionVisualNovelDoubleConfirm).__assign(this.__p.__indirect(num + this.__p.bb_pos), this.__p.bb));
+			}
+		}
+
+		// Token: 0x1700EC36 RID: 60470
+		// (get) Token: 0x06038C90 RID: 232592 RVA: 0x007ADE40 File Offset: 0x007AC040
+		public byte NullMask
+		{
+			get
+			{
+				int num = this.__p.__offset(14);
 				if (num == 0)
 				{
 					return 0;
@@ -169,10 +184,11 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603595D RID: 219485 RVA: 0x0074C295 File Offset: 0x0074A495
-		public static Offset<ITalkOptionVisualNovel> CreateITalkOptionVisualNovel(FlatBufferBuilder builder, ETalkOptionParamType Type = ETalkOptionParamType.QteSucceed, int PlotOptionId = 0, VectorOffset OptionPerformances_typeOffset = default(VectorOffset), VectorOffset OptionPerformancesOffset = default(VectorOffset), byte NullMask = 0)
+		// Token: 0x06038C91 RID: 232593 RVA: 0x007ADE7D File Offset: 0x007AC07D
+		public static Offset<ITalkOptionVisualNovel> CreateITalkOptionVisualNovel(FlatBufferBuilder builder, ETalkOptionParamType Type = ETalkOptionParamType.QteSucceed, int PlotOptionId = 0, VectorOffset OptionPerformances_typeOffset = default(VectorOffset), VectorOffset OptionPerformancesOffset = default(VectorOffset), Offset<ITalkOptionVisualNovelDoubleConfirm> DoubleConfirmOffset = default(Offset<ITalkOptionVisualNovelDoubleConfirm>), byte NullMask = 0)
 		{
-			builder.StartTable(5);
+			builder.StartTable(6);
+			ITalkOptionVisualNovel.AddDoubleConfirm(builder, DoubleConfirmOffset);
 			ITalkOptionVisualNovel.AddOptionPerformances(builder, OptionPerformancesOffset);
 			ITalkOptionVisualNovel.AddOptionPerformancesType(builder, OptionPerformances_typeOffset);
 			ITalkOptionVisualNovel.AddPlotOptionId(builder, PlotOptionId);
@@ -181,31 +197,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITalkOptionVisualNovel.EndITalkOptionVisualNovel(builder);
 		}
 
-		// Token: 0x0603595E RID: 219486 RVA: 0x0074C2C9 File Offset: 0x0074A4C9
+		// Token: 0x06038C92 RID: 232594 RVA: 0x007ADEB9 File Offset: 0x007AC0B9
 		public static void StartITalkOptionVisualNovel(FlatBufferBuilder builder)
 		{
-			builder.StartTable(5);
+			builder.StartTable(6);
 		}
 
-		// Token: 0x0603595F RID: 219487 RVA: 0x0074C2D2 File Offset: 0x0074A4D2
+		// Token: 0x06038C93 RID: 232595 RVA: 0x007ADEC2 File Offset: 0x007AC0C2
 		public static void AddType(FlatBufferBuilder builder, ETalkOptionParamType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06035960 RID: 219488 RVA: 0x0074C2DD File Offset: 0x0074A4DD
+		// Token: 0x06038C94 RID: 232596 RVA: 0x007ADECD File Offset: 0x007AC0CD
 		public static void AddPlotOptionId(FlatBufferBuilder builder, int plotOptionId)
 		{
 			builder.AddInt(1, plotOptionId, 0);
 		}
 
-		// Token: 0x06035961 RID: 219489 RVA: 0x0074C2E8 File Offset: 0x0074A4E8
+		// Token: 0x06038C95 RID: 232597 RVA: 0x007ADED8 File Offset: 0x007AC0D8
 		public static void AddOptionPerformancesType(FlatBufferBuilder builder, VectorOffset optionPerformancesTypeOffset)
 		{
 			builder.AddOffset(2, optionPerformancesTypeOffset.Value, 0);
 		}
 
-		// Token: 0x06035962 RID: 219490 RVA: 0x0074C2F8 File Offset: 0x0074A4F8
+		// Token: 0x06038C96 RID: 232598 RVA: 0x007ADEE8 File Offset: 0x007AC0E8
 		public static VectorOffset CreateOptionPerformancesTypeVector(FlatBufferBuilder builder, TVisualNovelPerformance[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -216,7 +232,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06035963 RID: 219491 RVA: 0x0074C32F File Offset: 0x0074A52F
+		// Token: 0x06038C97 RID: 232599 RVA: 0x007ADF1F File Offset: 0x007AC11F
 		public static VectorOffset CreateOptionPerformancesTypeVectorBlock(FlatBufferBuilder builder, TVisualNovelPerformance[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -224,7 +240,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06035964 RID: 219492 RVA: 0x0074C349 File Offset: 0x0074A549
+		// Token: 0x06038C98 RID: 232600 RVA: 0x007ADF39 File Offset: 0x007AC139
 		public static VectorOffset CreateOptionPerformancesTypeVectorBlock(FlatBufferBuilder builder, ArraySegment<TVisualNovelPerformance> data)
 		{
 			builder.StartVector(1, data.Count, 1);
@@ -232,7 +248,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06035965 RID: 219493 RVA: 0x0074C367 File Offset: 0x0074A567
+		// Token: 0x06038C99 RID: 232601 RVA: 0x007ADF57 File Offset: 0x007AC157
 		public static VectorOffset CreateOptionPerformancesTypeVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -240,19 +256,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06035966 RID: 219494 RVA: 0x0074C380 File Offset: 0x0074A580
+		// Token: 0x06038C9A RID: 232602 RVA: 0x007ADF70 File Offset: 0x007AC170
 		public static void StartOptionPerformancesTypeVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(1, numElems, 1);
 		}
 
-		// Token: 0x06035967 RID: 219495 RVA: 0x0074C38B File Offset: 0x0074A58B
+		// Token: 0x06038C9B RID: 232603 RVA: 0x007ADF7B File Offset: 0x007AC17B
 		public static void AddOptionPerformances(FlatBufferBuilder builder, VectorOffset optionPerformancesOffset)
 		{
 			builder.AddOffset(3, optionPerformancesOffset.Value, 0);
 		}
 
-		// Token: 0x06035968 RID: 219496 RVA: 0x0074C39C File Offset: 0x0074A59C
+		// Token: 0x06038C9C RID: 232604 RVA: 0x007ADF8C File Offset: 0x007AC18C
 		public static VectorOffset CreateOptionPerformancesVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -263,7 +279,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06035969 RID: 219497 RVA: 0x0074C3D3 File Offset: 0x0074A5D3
+		// Token: 0x06038C9D RID: 232605 RVA: 0x007ADFC3 File Offset: 0x007AC1C3
 		public static VectorOffset CreateOptionPerformancesVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -271,7 +287,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0603596A RID: 219498 RVA: 0x0074C3ED File Offset: 0x0074A5ED
+		// Token: 0x06038C9E RID: 232606 RVA: 0x007ADFDD File Offset: 0x007AC1DD
 		public static VectorOffset CreateOptionPerformancesVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -279,7 +295,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0603596B RID: 219499 RVA: 0x0074C40B File Offset: 0x0074A60B
+		// Token: 0x06038C9F RID: 232607 RVA: 0x007ADFFB File Offset: 0x007AC1FB
 		public static VectorOffset CreateOptionPerformancesVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -287,25 +303,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0603596C RID: 219500 RVA: 0x0074C424 File Offset: 0x0074A624
+		// Token: 0x06038CA0 RID: 232608 RVA: 0x007AE014 File Offset: 0x007AC214
 		public static void StartOptionPerformancesVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0603596D RID: 219501 RVA: 0x0074C42F File Offset: 0x0074A62F
-		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
+		// Token: 0x06038CA1 RID: 232609 RVA: 0x007AE01F File Offset: 0x007AC21F
+		public static void AddDoubleConfirm(FlatBufferBuilder builder, Offset<ITalkOptionVisualNovelDoubleConfirm> doubleConfirmOffset)
 		{
-			builder.AddByte(4, nullMask, 0);
+			builder.AddOffset(4, doubleConfirmOffset.Value, 0);
 		}
 
-		// Token: 0x0603596E RID: 219502 RVA: 0x0074C43A File Offset: 0x0074A63A
+		// Token: 0x06038CA2 RID: 232610 RVA: 0x007AE02F File Offset: 0x007AC22F
+		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
+		{
+			builder.AddByte(5, nullMask, 0);
+		}
+
+		// Token: 0x06038CA3 RID: 232611 RVA: 0x007AE03A File Offset: 0x007AC23A
 		public static Offset<ITalkOptionVisualNovel> EndITalkOptionVisualNovel(FlatBufferBuilder builder)
 		{
 			return new Offset<ITalkOptionVisualNovel>(builder.EndTable());
 		}
 
-		// Token: 0x0603596F RID: 219503 RVA: 0x0074C448 File Offset: 0x0074A648
+		// Token: 0x06038CA4 RID: 232612 RVA: 0x007AE048 File Offset: 0x007AC248
 		public ITalkOptionVisualNovelT UnPack()
 		{
 			ITalkOptionVisualNovelT talkOptionVisualNovelT = new ITalkOptionVisualNovelT();
@@ -313,7 +335,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return talkOptionVisualNovelT;
 		}
 
-		// Token: 0x06035970 RID: 219504 RVA: 0x0074C464 File Offset: 0x0074A664
+		// Token: 0x06038CA5 RID: 232613 RVA: 0x007AE064 File Offset: 0x007AC264
 		public void UnPackTo(ITalkOptionVisualNovelT _o)
 		{
 			_o.Type = this.Type;
@@ -373,16 +395,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 				case TVisualNovelPerformance.IVisualNovelPerformanceTransition:
 					tvisualNovelPerformanceUnion.Value = ((this.OptionPerformances<IVisualNovelPerformanceTransition>(i) != null) ? this.OptionPerformances<IVisualNovelPerformanceTransition>(i).Value.UnPack() : null);
 					break;
-				case TVisualNovelPerformance.IVisualNovelPerformanceUiShake:
-					tvisualNovelPerformanceUnion.Value = ((this.OptionPerformances<IVisualNovelPerformanceUiShake>(i) != null) ? this.OptionPerformances<IVisualNovelPerformanceUiShake>(i).Value.UnPack() : null);
-					break;
 				}
 				_o.OptionPerformances.Add(tvisualNovelPerformanceUnion);
 			}
+			_o.DoubleConfirm = ((this.DoubleConfirm != null) ? this.DoubleConfirm.Value.UnPack() : null);
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06035971 RID: 219505 RVA: 0x0074C8EC File Offset: 0x0074AAEC
+		// Token: 0x06038CA6 RID: 232614 RVA: 0x007AE4E0 File Offset: 0x007AC6E0
 		public static Offset<ITalkOptionVisualNovel> Pack(FlatBufferBuilder builder, ITalkOptionVisualNovelT _o)
 		{
 			if (_o == null)
@@ -409,10 +429,11 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 				}
 				optionPerformancesOffset = ITalkOptionVisualNovel.CreateOptionPerformancesVector(builder, array2);
 			}
-			return ITalkOptionVisualNovel.CreateITalkOptionVisualNovel(builder, _o.Type, _o.PlotOptionId, optionPerformances_typeOffset, optionPerformancesOffset, _o.NullMask);
+			Offset<ITalkOptionVisualNovelDoubleConfirm> doubleConfirmOffset = (_o.DoubleConfirm == null) ? default(Offset<ITalkOptionVisualNovelDoubleConfirm>) : ITalkOptionVisualNovelDoubleConfirm.Pack(builder, _o.DoubleConfirm);
+			return ITalkOptionVisualNovel.CreateITalkOptionVisualNovel(builder, _o.Type, _o.PlotOptionId, optionPerformances_typeOffset, optionPerformancesOffset, doubleConfirmOffset, _o.NullMask);
 		}
 
-		// Token: 0x04012151 RID: 74065
+		// Token: 0x04013157 RID: 78167
 		private Table __p;
 	}
 }

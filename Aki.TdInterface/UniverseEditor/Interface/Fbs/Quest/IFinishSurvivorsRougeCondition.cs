@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003E4B RID: 15947
+	// Token: 0x02004286 RID: 17030
 	public struct IFinishSurvivorsRougeCondition : IFlatbufferObject
 	{
-		// Token: 0x17006E79 RID: 28281
-		// (get) Token: 0x06016696 RID: 91798 RVA: 0x0033CF3D File Offset: 0x0033B13D
+		// Token: 0x1700745D RID: 29789
+		// (get) Token: 0x06017CBD RID: 97469 RVA: 0x00365A6D File Offset: 0x00363C6D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016697 RID: 91799 RVA: 0x0033CF4A File Offset: 0x0033B14A
+		// Token: 0x06017CBE RID: 97470 RVA: 0x00365A7A File Offset: 0x00363C7A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06016698 RID: 91800 RVA: 0x0033CF54 File Offset: 0x0033B154
+		// Token: 0x06017CBF RID: 97471 RVA: 0x00365A84 File Offset: 0x00363C84
 		public static IFinishSurvivorsRougeCondition GetRootAsIFinishSurvivorsRougeCondition(ByteBuffer _bb)
 		{
 			return IFinishSurvivorsRougeCondition.GetRootAsIFinishSurvivorsRougeCondition(_bb, default(IFinishSurvivorsRougeCondition));
 		}
 
-		// Token: 0x06016699 RID: 91801 RVA: 0x0033CF70 File Offset: 0x0033B170
+		// Token: 0x06017CC0 RID: 97472 RVA: 0x00365AA0 File Offset: 0x00363CA0
 		public static IFinishSurvivorsRougeCondition GetRootAsIFinishSurvivorsRougeCondition(ByteBuffer _bb, IFinishSurvivorsRougeCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601669A RID: 91802 RVA: 0x0033CF8D File Offset: 0x0033B18D
+		// Token: 0x06017CC1 RID: 97473 RVA: 0x00365ABD File Offset: 0x00363CBD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601669B RID: 91803 RVA: 0x0033CF9C File Offset: 0x0033B19C
+		// Token: 0x06017CC2 RID: 97474 RVA: 0x00365ACC File Offset: 0x00363CCC
 		public IFinishSurvivorsRougeCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006E7A RID: 28282
-		// (get) Token: 0x0601669C RID: 91804 RVA: 0x0033CFAC File Offset: 0x0033B1AC
+		// Token: 0x1700745E RID: 29790
+		// (get) Token: 0x06017CC3 RID: 97475 RVA: 0x00365ADC File Offset: 0x00363CDC
 		public EChildQuest Type
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006E7B RID: 28283
-		// (get) Token: 0x0601669D RID: 91805 RVA: 0x0033CFE8 File Offset: 0x0033B1E8
+		// Token: 0x1700745F RID: 29791
+		// (get) Token: 0x06017CC4 RID: 97476 RVA: 0x00365B18 File Offset: 0x00363D18
 		public IConditionGroup? PreConditions
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006E7C RID: 28284
-		// (get) Token: 0x0601669E RID: 91806 RVA: 0x0033D048 File Offset: 0x0033B248
+		// Token: 0x17007460 RID: 29792
+		// (get) Token: 0x06017CC5 RID: 97477 RVA: 0x00365B78 File Offset: 0x00363D78
 		public TSurvivorsRougeConditionStep StepType
 		{
 			get
@@ -94,7 +94,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601669F RID: 91807 RVA: 0x0033D084 File Offset: 0x0033B284
+		// Token: 0x06017CC6 RID: 97478 RVA: 0x00365BB4 File Offset: 0x00363DB4
 		public TTable? Step<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(10);
@@ -105,50 +105,50 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x060166A0 RID: 91808 RVA: 0x0033D0CC File Offset: 0x0033B2CC
+		// Token: 0x06017CC7 RID: 97479 RVA: 0x00365BFC File Offset: 0x00363DFC
 		public ISurvivorsRougeConditionStepBattle StepAsISurvivorsRougeConditionStepBattle()
 		{
 			return this.Step<ISurvivorsRougeConditionStepBattle>().Value;
 		}
 
-		// Token: 0x060166A1 RID: 91809 RVA: 0x0033D0E8 File Offset: 0x0033B2E8
+		// Token: 0x06017CC8 RID: 97480 RVA: 0x00365C18 File Offset: 0x00363E18
 		public ISurvivorsRougeConditionStepChestReward StepAsISurvivorsRougeConditionStepChestReward()
 		{
 			return this.Step<ISurvivorsRougeConditionStepChestReward>().Value;
 		}
 
-		// Token: 0x060166A2 RID: 91810 RVA: 0x0033D104 File Offset: 0x0033B304
+		// Token: 0x06017CC9 RID: 97481 RVA: 0x00365C34 File Offset: 0x00363E34
 		public ISurvivorsRougeConditionStepChooseItem StepAsISurvivorsRougeConditionStepChooseItem()
 		{
 			return this.Step<ISurvivorsRougeConditionStepChooseItem>().Value;
 		}
 
-		// Token: 0x060166A3 RID: 91811 RVA: 0x0033D120 File Offset: 0x0033B320
+		// Token: 0x06017CCA RID: 97482 RVA: 0x00365C50 File Offset: 0x00363E50
 		public ISurvivorsRougeConditionStepChooseWeapon StepAsISurvivorsRougeConditionStepChooseWeapon()
 		{
 			return this.Step<ISurvivorsRougeConditionStepChooseWeapon>().Value;
 		}
 
-		// Token: 0x060166A4 RID: 91812 RVA: 0x0033D13C File Offset: 0x0033B33C
+		// Token: 0x06017CCB RID: 97483 RVA: 0x00365C6C File Offset: 0x00363E6C
 		public ISurvivorsRougeConditionStepEnd StepAsISurvivorsRougeConditionStepEnd()
 		{
 			return this.Step<ISurvivorsRougeConditionStepEnd>().Value;
 		}
 
-		// Token: 0x060166A5 RID: 91813 RVA: 0x0033D158 File Offset: 0x0033B358
+		// Token: 0x06017CCC RID: 97484 RVA: 0x00365C88 File Offset: 0x00363E88
 		public ISurvivorsRougeConditionStepPrepare StepAsISurvivorsRougeConditionStepPrepare()
 		{
 			return this.Step<ISurvivorsRougeConditionStepPrepare>().Value;
 		}
 
-		// Token: 0x060166A6 RID: 91814 RVA: 0x0033D174 File Offset: 0x0033B374
+		// Token: 0x06017CCD RID: 97485 RVA: 0x00365CA4 File Offset: 0x00363EA4
 		public ISurvivorsRougeConditionStepShopping StepAsISurvivorsRougeConditionStepShopping()
 		{
 			return this.Step<ISurvivorsRougeConditionStepShopping>().Value;
 		}
 
-		// Token: 0x17006E7D RID: 28285
-		// (get) Token: 0x060166A7 RID: 91815 RVA: 0x0033D190 File Offset: 0x0033B390
+		// Token: 0x17007461 RID: 29793
+		// (get) Token: 0x06017CCE RID: 97486 RVA: 0x00365CC0 File Offset: 0x00363EC0
 		public TVarRef BatchType
 		{
 			get
@@ -162,7 +162,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060166A8 RID: 91816 RVA: 0x0033D1D0 File Offset: 0x0033B3D0
+		// Token: 0x06017CCF RID: 97487 RVA: 0x00365D00 File Offset: 0x00363F00
 		public TTable? Batch<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(14);
@@ -173,37 +173,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x060166A9 RID: 91817 RVA: 0x0033D218 File Offset: 0x0033B418
+		// Token: 0x06017CD0 RID: 97488 RVA: 0x00365D48 File Offset: 0x00363F48
 		public IConstVarRef BatchAsIConstVarRef()
 		{
 			return this.Batch<IConstVarRef>().Value;
 		}
 
-		// Token: 0x060166AA RID: 91818 RVA: 0x0033D234 File Offset: 0x0033B434
+		// Token: 0x06017CD1 RID: 97489 RVA: 0x00365D64 File Offset: 0x00363F64
 		public IGlobalVarRef BatchAsIGlobalVarRef()
 		{
 			return this.Batch<IGlobalVarRef>().Value;
 		}
 
-		// Token: 0x060166AB RID: 91819 RVA: 0x0033D250 File Offset: 0x0033B450
+		// Token: 0x06017CD2 RID: 97490 RVA: 0x00365D80 File Offset: 0x00363F80
 		public IOtherVarRef BatchAsIOtherVarRef()
 		{
 			return this.Batch<IOtherVarRef>().Value;
 		}
 
-		// Token: 0x060166AC RID: 91820 RVA: 0x0033D26C File Offset: 0x0033B46C
+		// Token: 0x06017CD3 RID: 97491 RVA: 0x00365D9C File Offset: 0x00363F9C
 		public ISelfVarRef BatchAsISelfVarRef()
 		{
 			return this.Batch<ISelfVarRef>().Value;
 		}
 
-		// Token: 0x060166AD RID: 91821 RVA: 0x0033D288 File Offset: 0x0033B488
+		// Token: 0x06017CD4 RID: 97492 RVA: 0x00365DB8 File Offset: 0x00363FB8
 		public ISystemVarRef BatchAsISystemVarRef()
 		{
 			return this.Batch<ISystemVarRef>().Value;
 		}
 
-		// Token: 0x060166AE RID: 91822 RVA: 0x0033D2A3 File Offset: 0x0033B4A3
+		// Token: 0x06017CD5 RID: 97493 RVA: 0x00365DD3 File Offset: 0x00363FD3
 		public static Offset<IFinishSurvivorsRougeCondition> CreateIFinishSurvivorsRougeCondition(FlatBufferBuilder builder, EChildQuest Type = EChildQuest.DoInteract, Offset<IConditionGroup> PreConditionsOffset = default(Offset<IConditionGroup>), TSurvivorsRougeConditionStep Step_type = TSurvivorsRougeConditionStep.NONE, int StepOffset = 0, TVarRef Batch_type = TVarRef.NONE, int BatchOffset = 0)
 		{
 			builder.StartTable(6);
@@ -216,55 +216,55 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IFinishSurvivorsRougeCondition.EndIFinishSurvivorsRougeCondition(builder);
 		}
 
-		// Token: 0x060166AF RID: 91823 RVA: 0x0033D2DF File Offset: 0x0033B4DF
+		// Token: 0x06017CD6 RID: 97494 RVA: 0x00365E0F File Offset: 0x0036400F
 		public static void StartIFinishSurvivorsRougeCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x060166B0 RID: 91824 RVA: 0x0033D2E8 File Offset: 0x0033B4E8
+		// Token: 0x06017CD7 RID: 97495 RVA: 0x00365E18 File Offset: 0x00364018
 		public static void AddType(FlatBufferBuilder builder, EChildQuest type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060166B1 RID: 91825 RVA: 0x0033D2F3 File Offset: 0x0033B4F3
+		// Token: 0x06017CD8 RID: 97496 RVA: 0x00365E23 File Offset: 0x00364023
 		public static void AddPreConditions(FlatBufferBuilder builder, Offset<IConditionGroup> preConditionsOffset)
 		{
 			builder.AddOffset(1, preConditionsOffset.Value, 0);
 		}
 
-		// Token: 0x060166B2 RID: 91826 RVA: 0x0033D303 File Offset: 0x0033B503
+		// Token: 0x06017CD9 RID: 97497 RVA: 0x00365E33 File Offset: 0x00364033
 		public static void AddStepType(FlatBufferBuilder builder, TSurvivorsRougeConditionStep stepType)
 		{
 			builder.AddByte(2, (byte)stepType, 0);
 		}
 
-		// Token: 0x060166B3 RID: 91827 RVA: 0x0033D30E File Offset: 0x0033B50E
+		// Token: 0x06017CDA RID: 97498 RVA: 0x00365E3E File Offset: 0x0036403E
 		public static void AddStep(FlatBufferBuilder builder, int stepOffset)
 		{
 			builder.AddOffset(3, stepOffset, 0);
 		}
 
-		// Token: 0x060166B4 RID: 91828 RVA: 0x0033D319 File Offset: 0x0033B519
+		// Token: 0x06017CDB RID: 97499 RVA: 0x00365E49 File Offset: 0x00364049
 		public static void AddBatchType(FlatBufferBuilder builder, TVarRef batchType)
 		{
 			builder.AddByte(4, (byte)batchType, 0);
 		}
 
-		// Token: 0x060166B5 RID: 91829 RVA: 0x0033D324 File Offset: 0x0033B524
+		// Token: 0x06017CDC RID: 97500 RVA: 0x00365E54 File Offset: 0x00364054
 		public static void AddBatch(FlatBufferBuilder builder, int batchOffset)
 		{
 			builder.AddOffset(5, batchOffset, 0);
 		}
 
-		// Token: 0x060166B6 RID: 91830 RVA: 0x0033D32F File Offset: 0x0033B52F
+		// Token: 0x06017CDD RID: 97501 RVA: 0x00365E5F File Offset: 0x0036405F
 		public static Offset<IFinishSurvivorsRougeCondition> EndIFinishSurvivorsRougeCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<IFinishSurvivorsRougeCondition>(builder.EndTable());
 		}
 
-		// Token: 0x060166B7 RID: 91831 RVA: 0x0033D33C File Offset: 0x0033B53C
+		// Token: 0x06017CDE RID: 97502 RVA: 0x00365E6C File Offset: 0x0036406C
 		public IFinishSurvivorsRougeConditionT UnPack()
 		{
 			IFinishSurvivorsRougeConditionT finishSurvivorsRougeConditionT = new IFinishSurvivorsRougeConditionT();
@@ -272,7 +272,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return finishSurvivorsRougeConditionT;
 		}
 
-		// Token: 0x060166B8 RID: 91832 RVA: 0x0033D358 File Offset: 0x0033B558
+		// Token: 0x06017CDF RID: 97503 RVA: 0x00365E88 File Offset: 0x00364088
 		public void UnPackTo(IFinishSurvivorsRougeConditionT _o)
 		{
 			_o.Type = this.Type;
@@ -327,7 +327,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060166B9 RID: 91833 RVA: 0x0033D6DC File Offset: 0x0033B8DC
+		// Token: 0x06017CE0 RID: 97504 RVA: 0x0036620C File Offset: 0x0036440C
 		public static Offset<IFinishSurvivorsRougeCondition> Pack(FlatBufferBuilder builder, IFinishSurvivorsRougeConditionT _o)
 		{
 			if (_o == null)
@@ -342,7 +342,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IFinishSurvivorsRougeCondition.CreateIFinishSurvivorsRougeCondition(builder, _o.Type, preConditionsOffset, step_type, stepOffset, batch_type, batchOffset);
 		}
 
-		// Token: 0x0400B7EC RID: 47084
+		// Token: 0x0400C1C3 RID: 49603
 		private Table __p;
 	}
 }

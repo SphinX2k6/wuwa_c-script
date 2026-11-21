@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D61 RID: 23905
+	// Token: 0x02004D43 RID: 19779
 	public class CommonKeyItem : KeyItemBase
 	{
-		// Token: 0x0603CB0C RID: 248588 RVA: 0x00E92A1C File Offset: 0x00E90C1C
+		// Token: 0x06031A67 RID: 203367 RVA: 0x00DE3208 File Offset: 0x00DE1408
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -21,21 +21,21 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603CB0D RID: 248589 RVA: 0x00E92A64 File Offset: 0x00E90C64
+		// Token: 0x06031A68 RID: 203368 RVA: 0x00DE3250 File Offset: 0x00DE1450
 		[NullableContext(2)]
 		protected override UUIText GetKeyText()
 		{
 			return null;
 		}
 
-		// Token: 0x0603CB0E RID: 248590 RVA: 0x00E92A67 File Offset: 0x00E90C67
+		// Token: 0x06031A69 RID: 203369 RVA: 0x00DE3253 File Offset: 0x00DE1453
 		[NullableContext(2)]
 		protected override UUITexture GetKeyTexture()
 		{
 			return base.GetTexture(0);
 		}
 
-		// Token: 0x0603CB0F RID: 248591 RVA: 0x00E92A70 File Offset: 0x00E90C70
+		// Token: 0x06031A6A RID: 203370 RVA: 0x00DE325C File Offset: 0x00DE145C
 		protected override void OnSetGray()
 		{
 			UUITexture keyTexture = this.GetKeyTexture();
@@ -45,10 +45,10 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			uuiitem.SetChangeColor(isGray, fcolor);
 		}
 
-		// Token: 0x0200C011 RID: 49169
+		// Token: 0x0200AA17 RID: 43543
 		private enum EChildType
 		{
-			// Token: 0x04039F55 RID: 237397
+			// Token: 0x04034917 RID: 215319
 			KeyTexture
 		}
 	}

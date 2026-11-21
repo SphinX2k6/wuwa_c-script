@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002568 RID: 9576
+	// Token: 0x02002811 RID: 10257
 	public class IVisualNovelCgClean : IVisualNovelCgBase
 	{
-		// Token: 0x0600D6F8 RID: 55032 RVA: 0x0020090E File Offset: 0x001FEB0E
-		[NullableContext(1)]
+		// Token: 0x0600E463 RID: 58467 RVA: 0x0021C517 File Offset: 0x0021A717
 		public static IVisualNovelCgClean Create(IVisualNovelCgClean? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003DEA RID: 15850
-		// (get) Token: 0x0600D6F9 RID: 55033 RVA: 0x0020092D File Offset: 0x001FEB2D
+		// Token: 0x170040EF RID: 16623
+		// (get) Token: 0x0600E464 RID: 58468 RVA: 0x0021C536 File Offset: 0x0021A736
 		public override EVisualNovelCgType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400770A RID: 30474
+		// Token: 0x04007D67 RID: 32103
 		private IVisualNovelCgClean Instance;
 	}
 }

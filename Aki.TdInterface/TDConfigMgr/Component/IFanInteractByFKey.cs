@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000374 RID: 884
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020003BD RID: 957
 	public class IFanInteractByFKey : IFanInteractType
 	{
-		// Token: 0x0600118F RID: 4495 RVA: 0x0003B288 File Offset: 0x00039488
+		// Token: 0x060012D3 RID: 4819 RVA: 0x0003E56C File Offset: 0x0003C76C
 		private IFanInteractByFKey_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001190 RID: 4496 RVA: 0x0003B2C0 File Offset: 0x000394C0
+		// Token: 0x060012D4 RID: 4820 RVA: 0x0003E5A4 File Offset: 0x0003C7A4
 		public static IFanInteractByFKey Create([Nullable(2)] IFanInteractByFKey instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001191 RID: 4497 RVA: 0x0003B2D3 File Offset: 0x000394D3
+		// Token: 0x060012D5 RID: 4821 RVA: 0x0003E5B7 File Offset: 0x0003C7B7
 		public static IFanInteractByFKey CreateFromSetValue([Nullable(2)] IFanInteractByFKey_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001192 RID: 4498 RVA: 0x0003B2E6 File Offset: 0x000394E6
+		// Token: 0x060012D6 RID: 4822 RVA: 0x0003E5CA File Offset: 0x0003C7CA
 		public new IFanInteractByFKey_SetValue ToSetValue()
 		{
 			return new IFanInteractByFKey_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170004F7 RID: 1271
-		// (get) Token: 0x06001193 RID: 4499 RVA: 0x0003B311 File Offset: 0x00039511
-		// (set) Token: 0x06001194 RID: 4500 RVA: 0x0003B33C File Offset: 0x0003953C
+		// Token: 0x1700054B RID: 1355
+		// (get) Token: 0x060012D7 RID: 4823 RVA: 0x0003E5F5 File Offset: 0x0003C7F5
+		// (set) Token: 0x060012D8 RID: 4824 RVA: 0x0003E620 File Offset: 0x0003C820
 		public override EFanInteractType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004F8 RID: 1272
-		// (get) Token: 0x06001195 RID: 4501 RVA: 0x0003B34A File Offset: 0x0003954A
-		// (set) Token: 0x06001196 RID: 4502 RVA: 0x0003B375 File Offset: 0x00039575
+		// Token: 0x1700054C RID: 1356
+		// (get) Token: 0x060012D9 RID: 4825 RVA: 0x0003E62E File Offset: 0x0003C82E
+		// (set) Token: 0x060012DA RID: 4826 RVA: 0x0003E659 File Offset: 0x0003C859
 		public virtual string TidInteractOptionText
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004F9 RID: 1273
-		// (get) Token: 0x06001197 RID: 4503 RVA: 0x0003B383 File Offset: 0x00039583
-		// (set) Token: 0x06001198 RID: 4504 RVA: 0x0003B39A File Offset: 0x0003959A
+		// Token: 0x1700054D RID: 1357
+		// (get) Token: 0x060012DB RID: 4827 RVA: 0x0003E667 File Offset: 0x0003C867
+		// (set) Token: 0x060012DC RID: 4828 RVA: 0x0003E67E File Offset: 0x0003C87E
 		[Nullable(2)]
 		public virtual string EdTidInteractOptionText
 		{
@@ -129,11 +127,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000E64 RID: 3684
+		// Token: 0x04000F5B RID: 3931
 		[Nullable(2)]
 		protected new IFanInteractByFKey FbInstance;
 
-		// Token: 0x04000E65 RID: 3685
+		// Token: 0x04000F5C RID: 3932
 		[Nullable(2)]
 		protected new IFanInteractByFKey_SetValue PocoInterface;
 	}

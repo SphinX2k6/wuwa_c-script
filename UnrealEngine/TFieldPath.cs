@@ -6,7 +6,7 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200008F RID: 143
+	// Token: 0x02000074 RID: 116
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealBlittableStruct(UnrealReflectionPropertyTypeCode.FieldPath)]
@@ -14,7 +14,7 @@ namespace UnrealEngine
 	[StructLayout(LayoutKind.Sequential, Pack = 8)]
 	public struct TFieldPath<T> : IEqualityOperators<TFieldPath<T>, TFieldPath<T>, bool>, IEquatable<TFieldPath<T>>
 	{
-		// Token: 0x06000FD4 RID: 4052 RVA: 0x0001814A File Offset: 0x0001634A
+		// Token: 0x06000B67 RID: 2919 RVA: 0x00012E6E File Offset: 0x0001106E
 		public static bool operator ==([Nullable(new byte[]
 		{
 			0,
@@ -28,7 +28,7 @@ namespace UnrealEngine
 			throw new NotImplementedException();
 		}
 
-		// Token: 0x06000FD5 RID: 4053 RVA: 0x00018151 File Offset: 0x00016351
+		// Token: 0x06000B68 RID: 2920 RVA: 0x00012E75 File Offset: 0x00011075
 		public static bool operator !=([Nullable(new byte[]
 		{
 			0,
@@ -42,7 +42,7 @@ namespace UnrealEngine
 			throw new NotImplementedException();
 		}
 
-		// Token: 0x06000FD6 RID: 4054 RVA: 0x00018158 File Offset: 0x00016358
+		// Token: 0x06000B69 RID: 2921 RVA: 0x00012E7C File Offset: 0x0001107C
 		public bool Equals([Nullable(new byte[]
 		{
 			0,
@@ -52,7 +52,7 @@ namespace UnrealEngine
 			throw new NotImplementedException();
 		}
 
-		// Token: 0x06000FD7 RID: 4055 RVA: 0x00018160 File Offset: 0x00016360
+		// Token: 0x06000B6A RID: 2922 RVA: 0x00012E84 File Offset: 0x00011084
 		public override bool Equals(object obj)
 		{
 			if (obj is TFieldPath<T>)
@@ -63,13 +63,13 @@ namespace UnrealEngine
 			return false;
 		}
 
-		// Token: 0x06000FD8 RID: 4056 RVA: 0x00018185 File Offset: 0x00016385
+		// Token: 0x06000B6B RID: 2923 RVA: 0x00012EA9 File Offset: 0x000110A9
 		public override int GetHashCode()
 		{
 			throw new NotImplementedException();
 		}
 
-		// Token: 0x040001F7 RID: 503
+		// Token: 0x040001B0 RID: 432
 		private FFieldPath FieldPath;
 	}
 }

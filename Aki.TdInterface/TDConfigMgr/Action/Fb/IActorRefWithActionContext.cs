@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028EC RID: 10476
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002BC4 RID: 11204
 	public class IActorRefWithActionContext
 	{
-		// Token: 0x0600E8BE RID: 59582 RVA: 0x00222706 File Offset: 0x00220906
+		// Token: 0x0600F6FF RID: 63231 RVA: 0x0023F8BE File Offset: 0x0023DABE
 		public static IActorRefWithActionContext Create(IActorRefWithActionContext? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170048A8 RID: 18600
-		// (get) Token: 0x0600E8BF RID: 59583 RVA: 0x00222725 File Offset: 0x00220925
+		// Token: 0x17004C25 RID: 19493
+		// (get) Token: 0x0600F700 RID: 63232 RVA: 0x0023F8DD File Offset: 0x0023DADD
 		public virtual ActionInfo ContextAction
 		{
 			get
@@ -39,8 +37,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170048A9 RID: 18601
-		// (get) Token: 0x0600E8C0 RID: 59584 RVA: 0x00222759 File Offset: 0x00220959
+		// Token: 0x17004C26 RID: 19494
+		// (get) Token: 0x0600F701 RID: 63233 RVA: 0x0023F911 File Offset: 0x0023DB11
 		public virtual IActorRef ActorRef
 		{
 			get
@@ -55,21 +53,21 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400807A RID: 32890
+		// Token: 0x0400873E RID: 34622
 		private IActorRefWithActionContext Instance;
 
-		// Token: 0x0400807B RID: 32891
+		// Token: 0x0400873F RID: 34623
 		[Nullable(2)]
 		private ActionInfo _ContextActionCache;
 
-		// Token: 0x0400807C RID: 32892
+		// Token: 0x04008740 RID: 34624
 		private bool _ContextActionInited;
 
-		// Token: 0x0400807D RID: 32893
+		// Token: 0x04008741 RID: 34625
 		[Nullable(2)]
 		private IActorRef _ActorRefCache;
 
-		// Token: 0x0400807E RID: 32894
+		// Token: 0x04008742 RID: 34626
 		private bool _ActorRefInited;
 	}
 }

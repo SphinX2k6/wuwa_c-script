@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000AED RID: 2797
+	// Token: 0x02000ADC RID: 2780
 	[NetMessage(EMessageId.MutiplayerTeamRefreshNearListResponse)]
 	public sealed class MutiplayerTeamRefreshNearListResponse : IMessage<MutiplayerTeamRefreshNearListResponse>, IMessage, IEquatable<MutiplayerTeamRefreshNearListResponse>, IDeepCloneable<MutiplayerTeamRefreshNearListResponse>, IBufferMessage
 	{
-		// Token: 0x0600F336 RID: 62262 RVA: 0x00238016 File Offset: 0x00236216
+		// Token: 0x0600F21C RID: 61980 RVA: 0x00235E0E File Offset: 0x0023400E
 		[NullableContext(1)]
 		public static MutiplayerTeamRefreshNearListResponse Create()
 		{
 			return new MutiplayerTeamRefreshNearListResponse();
 		}
 
-		// Token: 0x17003185 RID: 12677
-		// (get) Token: 0x0600F337 RID: 62263 RVA: 0x0023801D File Offset: 0x0023621D
+		// Token: 0x17003147 RID: 12615
+		// (get) Token: 0x0600F21D RID: 61981 RVA: 0x00235E15 File Offset: 0x00234015
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003186 RID: 12678
-		// (get) Token: 0x0600F338 RID: 62264 RVA: 0x00238020 File Offset: 0x00236220
+		// Token: 0x17003148 RID: 12616
+		// (get) Token: 0x0600F21E RID: 61982 RVA: 0x00235E18 File Offset: 0x00234018
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600F339 RID: 62265 RVA: 0x00238027 File Offset: 0x00236227
+		// Token: 0x0600F21F RID: 61983 RVA: 0x00235E1F File Offset: 0x0023401F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MutiplayerTeamRefreshNearListResponse()
 		{
 		}
 
-		// Token: 0x0600F33A RID: 62266 RVA: 0x00238048 File Offset: 0x00236248
+		// Token: 0x0600F220 RID: 61984 RVA: 0x00235E40 File Offset: 0x00234040
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MutiplayerTeamRefreshNearListResponse(MutiplayerTeamRefreshNearListResponse other) : this()
@@ -62,7 +62,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600F33B RID: 62267 RVA: 0x002380A6 File Offset: 0x002362A6
+		// Token: 0x0600F221 RID: 61985 RVA: 0x00235E9E File Offset: 0x0023409E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MutiplayerTeamRefreshNearListResponse Clone()
@@ -70,9 +70,9 @@ namespace Aki.Protocol
 			return new MutiplayerTeamRefreshNearListResponse(this);
 		}
 
-		// Token: 0x17003187 RID: 12679
-		// (get) Token: 0x0600F33C RID: 62268 RVA: 0x002380AE File Offset: 0x002362AE
-		// (set) Token: 0x0600F33D RID: 62269 RVA: 0x002380B6 File Offset: 0x002362B6
+		// Token: 0x17003149 RID: 12617
+		// (get) Token: 0x0600F222 RID: 61986 RVA: 0x00235EA6 File Offset: 0x002340A6
+		// (set) Token: 0x0600F223 RID: 61987 RVA: 0x00235EAE File Offset: 0x002340AE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ErrorCode ErrorCode
@@ -87,9 +87,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003188 RID: 12680
-		// (get) Token: 0x0600F33E RID: 62270 RVA: 0x002380BF File Offset: 0x002362BF
-		// (set) Token: 0x0600F33F RID: 62271 RVA: 0x002380C7 File Offset: 0x002362C7
+		// Token: 0x1700314A RID: 12618
+		// (get) Token: 0x0600F224 RID: 61988 RVA: 0x00235EB7 File Offset: 0x002340B7
+		// (set) Token: 0x0600F225 RID: 61989 RVA: 0x00235EBF File Offset: 0x002340BF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int NextRefreshTime
@@ -104,8 +104,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003189 RID: 12681
-		// (get) Token: 0x0600F340 RID: 62272 RVA: 0x002380D0 File Offset: 0x002362D0
+		// Token: 0x1700314B RID: 12619
+		// (get) Token: 0x0600F226 RID: 61990 RVA: 0x00235EC8 File Offset: 0x002340C8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<MutiplayerInfo> InfoList
@@ -116,8 +116,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700318A RID: 12682
-		// (get) Token: 0x0600F341 RID: 62273 RVA: 0x002380D8 File Offset: 0x002362D8
+		// Token: 0x1700314C RID: 12620
+		// (get) Token: 0x0600F227 RID: 61991 RVA: 0x00235ED0 File Offset: 0x002340D0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<string> ErrorParams
@@ -128,7 +128,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600F342 RID: 62274 RVA: 0x002380E0 File Offset: 0x002362E0
+		// Token: 0x0600F228 RID: 61992 RVA: 0x00235ED8 File Offset: 0x002340D8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -136,7 +136,7 @@ namespace Aki.Protocol
 			return this.Equals(other as MutiplayerTeamRefreshNearListResponse);
 		}
 
-		// Token: 0x0600F343 RID: 62275 RVA: 0x002380F0 File Offset: 0x002362F0
+		// Token: 0x0600F229 RID: 61993 RVA: 0x00235EE8 File Offset: 0x002340E8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(MutiplayerTeamRefreshNearListResponse other)
@@ -144,7 +144,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ErrorCode == other.ErrorCode && this.NextRefreshTime == other.NextRefreshTime && this.infoList_.Equals(other.infoList_) && this.errorParams_.Equals(other.errorParams_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600F344 RID: 62276 RVA: 0x00238164 File Offset: 0x00236364
+		// Token: 0x0600F22A RID: 61994 RVA: 0x00235F5C File Offset: 0x0023415C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -167,7 +167,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600F345 RID: 62277 RVA: 0x002381DE File Offset: 0x002363DE
+		// Token: 0x0600F22B RID: 61995 RVA: 0x00235FD6 File Offset: 0x002341D6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600F346 RID: 62278 RVA: 0x002381EB File Offset: 0x002363EB
+		// Token: 0x0600F22C RID: 61996 RVA: 0x00235FE3 File Offset: 0x002341E3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -183,30 +183,30 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600F347 RID: 62279 RVA: 0x002381F4 File Offset: 0x002363F4
+		// Token: 0x0600F22D RID: 61997 RVA: 0x00235FEC File Offset: 0x002341EC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.NextRefreshTime != 0)
-			{
-				output.WriteRawTag(24);
-				output.WriteInt32(this.NextRefreshTime);
-			}
+			this.errorParams_.WriteTo(ref output, MutiplayerTeamRefreshNearListResponse._repeated_errorParams_codec);
+			this.infoList_.WriteTo(ref output, MutiplayerTeamRefreshNearListResponse._repeated_infoList_codec);
 			if (this.ErrorCode != ErrorCode.Success)
 			{
-				output.WriteRawTag(32);
+				output.WriteRawTag(80);
 				output.WriteEnum((int)this.ErrorCode);
 			}
-			this.infoList_.WriteTo(ref output, MutiplayerTeamRefreshNearListResponse._repeated_infoList_codec);
-			this.errorParams_.WriteTo(ref output, MutiplayerTeamRefreshNearListResponse._repeated_errorParams_codec);
+			if (this.NextRefreshTime != 0)
+			{
+				output.WriteRawTag(120);
+				output.WriteInt32(this.NextRefreshTime);
+			}
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x0600F348 RID: 62280 RVA: 0x00238270 File Offset: 0x00236470
+		// Token: 0x0600F22E RID: 61998 RVA: 0x00236068 File Offset: 0x00234268
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -229,7 +229,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600F349 RID: 62281 RVA: 0x002382EC File Offset: 0x002364EC
+		// Token: 0x0600F22F RID: 61999 RVA: 0x002360E4 File Offset: 0x002342E4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(MutiplayerTeamRefreshNearListResponse other)
@@ -251,7 +251,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600F34A RID: 62282 RVA: 0x0023835E File Offset: 0x0023655E
+		// Token: 0x0600F230 RID: 62000 RVA: 0x00236156 File Offset: 0x00234356
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -259,7 +259,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600F34B RID: 62283 RVA: 0x00238368 File Offset: 0x00236568
+		// Token: 0x0600F231 RID: 62001 RVA: 0x00236160 File Offset: 0x00234360
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -271,29 +271,29 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 32U)
+				if (num <= 26U)
 				{
-					if (num == 24U)
+					if (num == 18U)
 					{
-						this.NextRefreshTime = input.ReadInt32();
+						this.errorParams_.AddEntriesFrom(ref input, MutiplayerTeamRefreshNearListResponse._repeated_errorParams_codec);
 						continue;
 					}
-					if (num == 32U)
+					if (num == 26U)
 					{
-						this.ErrorCode = (ErrorCode)input.ReadEnum();
+						this.infoList_.AddEntriesFrom(ref input, MutiplayerTeamRefreshNearListResponse._repeated_infoList_codec);
 						continue;
 					}
 				}
 				else
 				{
-					if (num == 98U)
+					if (num == 80U)
 					{
-						this.infoList_.AddEntriesFrom(ref input, MutiplayerTeamRefreshNearListResponse._repeated_infoList_codec);
+						this.ErrorCode = (ErrorCode)input.ReadEnum();
 						continue;
 					}
-					if (num == 114U)
+					if (num == 120U)
 					{
-						this.errorParams_.AddEntriesFrom(ref input, MutiplayerTeamRefreshNearListResponse._repeated_errorParams_codec);
+						this.NextRefreshTime = input.ReadInt32();
 						continue;
 					}
 				}
@@ -301,37 +301,37 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400620A RID: 25098
+		// Token: 0x04006213 RID: 25107
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400620B RID: 25099
-		public const int ErrorCodeFieldNumber = 4;
+		// Token: 0x04006214 RID: 25108
+		public const int ErrorCodeFieldNumber = 10;
 
-		// Token: 0x0400620C RID: 25100
+		// Token: 0x04006215 RID: 25109
 		private ErrorCode errorCode_;
 
-		// Token: 0x0400620D RID: 25101
-		public const int NextRefreshTimeFieldNumber = 3;
+		// Token: 0x04006216 RID: 25110
+		public const int NextRefreshTimeFieldNumber = 15;
 
-		// Token: 0x0400620E RID: 25102
+		// Token: 0x04006217 RID: 25111
 		private int nextRefreshTime_;
 
-		// Token: 0x0400620F RID: 25103
-		public const int InfoListFieldNumber = 12;
+		// Token: 0x04006218 RID: 25112
+		public const int InfoListFieldNumber = 3;
 
-		// Token: 0x04006210 RID: 25104
-		private static readonly FieldCodec<MutiplayerInfo> _repeated_infoList_codec = FieldCodec.ForMessage<MutiplayerInfo>(98U, MutiplayerInfo.Parser);
+		// Token: 0x04006219 RID: 25113
+		private static readonly FieldCodec<MutiplayerInfo> _repeated_infoList_codec = FieldCodec.ForMessage<MutiplayerInfo>(26U, MutiplayerInfo.Parser);
 
-		// Token: 0x04006211 RID: 25105
+		// Token: 0x0400621A RID: 25114
 		private readonly RepeatedField<MutiplayerInfo> infoList_ = new RepeatedField<MutiplayerInfo>();
 
-		// Token: 0x04006212 RID: 25106
-		public const int ErrorParamsFieldNumber = 14;
+		// Token: 0x0400621B RID: 25115
+		public const int ErrorParamsFieldNumber = 2;
 
-		// Token: 0x04006213 RID: 25107
-		private static readonly FieldCodec<string> _repeated_errorParams_codec = FieldCodec.ForString(114U);
+		// Token: 0x0400621C RID: 25116
+		private static readonly FieldCodec<string> _repeated_errorParams_codec = FieldCodec.ForString(18U);
 
-		// Token: 0x04006214 RID: 25108
+		// Token: 0x0400621D RID: 25117
 		private readonly RepeatedField<string> errorParams_ = new RepeatedField<string>();
 	}
 }

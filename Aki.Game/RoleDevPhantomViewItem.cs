@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200280B RID: 10251
+// Token: 0x02001D86 RID: 7558
 [NullableContext(2)]
 [Nullable(0)]
 public class RoleDevPhantomViewItem : UiPanelBase
 {
-	// Token: 0x0601508E RID: 86158 RVA: 0x005534D0 File Offset: 0x005516D0
+	// Token: 0x06012A8E RID: 76430 RVA: 0x0057E2A4 File Offset: 0x0057C4A4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,7 +36,7 @@ public class RoleDevPhantomViewItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0601508F RID: 86159 RVA: 0x00553600 File Offset: 0x00551800
+	// Token: 0x06012A8F RID: 76431 RVA: 0x0057E3D4 File Offset: 0x0057C5D4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RoleDevPhantomViewItem.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -47,14 +47,14 @@ public class RoleDevPhantomViewItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015090 RID: 86160 RVA: 0x00553643 File Offset: 0x00551843
+	// Token: 0x06012A90 RID: 76432 RVA: 0x0057E417 File Offset: 0x0057C617
 	protected override void OnBeforeCreateImplement()
 	{
 		this.UiViewSequence = new UiBehaviorLevelSequence(this);
 		base.AddUiBehavior(this.UiViewSequence);
 	}
 
-	// Token: 0x06015091 RID: 86161 RVA: 0x00553660 File Offset: 0x00551860
+	// Token: 0x06012A91 RID: 76433 RVA: 0x0057E434 File Offset: 0x0057C634
 	private UniTask InitVisionHeadItems()
 	{
 		RoleDevPhantomViewItem.<InitVisionHeadItems>d__14 <InitVisionHeadItems>d__;
@@ -65,20 +65,20 @@ public class RoleDevPhantomViewItem : UiPanelBase
 		return <InitVisionHeadItems>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015092 RID: 86162 RVA: 0x005536A3 File Offset: 0x005518A3
+	// Token: 0x06012A92 RID: 76434 RVA: 0x0057E477 File Offset: 0x0057C677
 	private void InitPanelSuit()
 	{
 		this.SuitLayout = new GenericLayout<RoleDevPhantomSuitItem, RoleDevPhantomSuitItemData>(base.GetVerticalLayout(9), new Func<RoleDevPhantomSuitItem>(this.InitSuitLayoutItem), null, false, true);
 	}
 
-	// Token: 0x06015093 RID: 86163 RVA: 0x005536C7 File Offset: 0x005518C7
+	// Token: 0x06012A93 RID: 76435 RVA: 0x0057E49B File Offset: 0x0057C69B
 	[NullableContext(1)]
 	private RoleDevPhantomSuitItem InitSuitLayoutItem()
 	{
 		return new RoleDevPhantomSuitItem();
 	}
 
-	// Token: 0x06015094 RID: 86164 RVA: 0x005536D0 File Offset: 0x005518D0
+	// Token: 0x06012A94 RID: 76436 RVA: 0x0057E4A4 File Offset: 0x0057C6A4
 	[NullableContext(1)]
 	public void Refresh(RoleDevPhantomViewItemDataBase data)
 	{
@@ -96,7 +96,7 @@ public class RoleDevPhantomViewItem : UiPanelBase
 		this.SetVisionHeadItems();
 	}
 
-	// Token: 0x06015095 RID: 86165 RVA: 0x00553748 File Offset: 0x00551948
+	// Token: 0x06012A95 RID: 76437 RVA: 0x0057E51C File Offset: 0x0057C71C
 	private void SetVisionHeadItems()
 	{
 		int count = this.RoleVisionItems.Count;
@@ -106,7 +106,7 @@ public class RoleDevPhantomViewItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06015096 RID: 86166 RVA: 0x0055378C File Offset: 0x0055198C
+	// Token: 0x06012A96 RID: 76438 RVA: 0x0057E560 File Offset: 0x0057C760
 	private void RefreshPhantomItems(int roleId)
 	{
 		RoleDataBase roleDataById = RoleModel.Instance.GetRoleDataById(roleId, true);
@@ -123,7 +123,7 @@ public class RoleDevPhantomViewItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06015097 RID: 86167 RVA: 0x005537F9 File Offset: 0x005519F9
+	// Token: 0x06012A97 RID: 76439 RVA: 0x0057E5CD File Offset: 0x0057C7CD
 	private void RefreshDevelopButtons()
 	{
 		base.GetItem(2).SetUIActive(false);
@@ -131,7 +131,7 @@ public class RoleDevPhantomViewItem : UiPanelBase
 		this.ButtonDevelop.SetLocalTextNew("RoleProject_Button01", Array.Empty<object>());
 	}
 
-	// Token: 0x06015098 RID: 86168 RVA: 0x00553834 File Offset: 0x00551A34
+	// Token: 0x06012A98 RID: 76440 RVA: 0x0057E608 File Offset: 0x0057C808
 	[NullableContext(1)]
 	private void RefreshSuitList(List<RoleDevPhantomSuitItemData> suitDataList)
 	{
@@ -141,7 +141,7 @@ public class RoleDevPhantomViewItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06015099 RID: 86169 RVA: 0x0055384C File Offset: 0x00551A4C
+	// Token: 0x06012A99 RID: 76441 RVA: 0x0057E620 File Offset: 0x0057C820
 	private void OnClickDevelop(int _)
 	{
 		RoleDevController.Instance.LogRoleDevSubPageClick(this.Data.RoleId, ERoleDevMainPage.Phantom, ERoleDevSubPageButton.PhantomGoToCultivation);
@@ -152,7 +152,7 @@ public class RoleDevPhantomViewItem : UiPanelBase
 		PhantomUtil.OpenVisionEquipmentView(this.Data.RoleId, num, null);
 	}
 
-	// Token: 0x0601509A RID: 86170 RVA: 0x005538BC File Offset: 0x00551ABC
+	// Token: 0x06012A9A RID: 76442 RVA: 0x0057E690 File Offset: 0x0057C890
 	private void OnClickSwitch()
 	{
 		RoleDevController.Instance.LogRoleDevSubPageClick(this.Data.RoleId, ERoleDevMainPage.Phantom, ERoleDevSubPageButton.SwitchScheme);
@@ -166,7 +166,7 @@ public class RoleDevPhantomViewItem : UiPanelBase
 		UiManager.Instance.OpenView(EUiViewName.VisionNewRecommendView, param, null);
 	}
 
-	// Token: 0x0601509B RID: 86171 RVA: 0x00553934 File Offset: 0x00551B34
+	// Token: 0x06012A9B RID: 76443 RVA: 0x0057E708 File Offset: 0x0057C908
 	private UniTask InitDevelopButtons()
 	{
 		RoleDevPhantomViewItem.<InitDevelopButtons>d__24 <InitDevelopButtons>d__;
@@ -177,7 +177,7 @@ public class RoleDevPhantomViewItem : UiPanelBase
 		return <InitDevelopButtons>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601509C RID: 86172 RVA: 0x00553977 File Offset: 0x00551B77
+	// Token: 0x06012A9C RID: 76444 RVA: 0x0057E74B File Offset: 0x0057C94B
 	private void OnChangeFetterGroupSuccessInternal(int roleId, int planId, int? firstVisionMonsterId)
 	{
 		RoleDevPhantomViewItemDataBase data = this.Data;
@@ -197,7 +197,7 @@ public class RoleDevPhantomViewItem : UiPanelBase
 		onChangeFetterGroupSuccessCallBack(roleId, planId);
 	}
 
-	// Token: 0x0601509D RID: 86173 RVA: 0x005539AC File Offset: 0x00551BAC
+	// Token: 0x06012A9D RID: 76445 RVA: 0x0057E780 File Offset: 0x0057C980
 	private int OnGetSelectedPlanIdInternal(int roleId)
 	{
 		RoleDevPhantomViewItemDataBase data = this.Data;
@@ -215,26 +215,26 @@ public class RoleDevPhantomViewItem : UiPanelBase
 		return num2.GetValueOrDefault();
 	}
 
-	// Token: 0x04009E1D RID: 40477
+	// Token: 0x0400A206 RID: 41478
 	public Action<int> OnClickToggleCallBack;
 
-	// Token: 0x04009E1E RID: 40478
+	// Token: 0x0400A207 RID: 41479
 	public Func<int, bool> CanClickCallBack;
 
-	// Token: 0x04009E1F RID: 40479
+	// Token: 0x0400A208 RID: 41480
 	public Action<int> OnDevelopCallBack;
 
-	// Token: 0x04009E20 RID: 40480
+	// Token: 0x0400A209 RID: 41481
 	public Action<int> OnPerfectDevelopCallBack;
 
-	// Token: 0x04009E21 RID: 40481
+	// Token: 0x0400A20A RID: 41482
 	public Action<int, int> OnChangeFetterGroupSuccessCallBack;
 
-	// Token: 0x04009E22 RID: 40482
+	// Token: 0x0400A20B RID: 41483
 	[Nullable(1)]
 	private readonly List<RoleDevPhantomHeadItem> RoleVisionItems = new List<RoleDevPhantomHeadItem>();
 
-	// Token: 0x04009E23 RID: 40483
+	// Token: 0x0400A20C RID: 41484
 	[Nullable(new byte[]
 	{
 		2,
@@ -243,40 +243,40 @@ public class RoleDevPhantomViewItem : UiPanelBase
 	})]
 	private GenericLayout<RoleDevPhantomSuitItem, RoleDevPhantomSuitItemData> SuitLayout;
 
-	// Token: 0x04009E24 RID: 40484
+	// Token: 0x0400A20D RID: 41485
 	private ButtonItem ButtonDevelop;
 
-	// Token: 0x04009E25 RID: 40485
+	// Token: 0x0400A20E RID: 41486
 	public UiBehaviorLevelSequence UiViewSequence;
 
-	// Token: 0x04009E26 RID: 40486
+	// Token: 0x0400A20F RID: 41487
 	private RoleDevPhantomViewItemDataBase Data;
 
-	// Token: 0x02008E50 RID: 36432
+	// Token: 0x02008098 RID: 32920
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402E29D RID: 189085
+		// Token: 0x04029999 RID: 170393
 		PanelPhantomDev,
-		// Token: 0x0402E29E RID: 189086
+		// Token: 0x0402999A RID: 170394
 		BtnDevelop,
-		// Token: 0x0402E29F RID: 189087
+		// Token: 0x0402999B RID: 170395
 		BtnPerfectDevelop,
-		// Token: 0x0402E2A0 RID: 189088
+		// Token: 0x0402999C RID: 170396
 		SubPhantomCircle1,
-		// Token: 0x0402E2A1 RID: 189089
+		// Token: 0x0402999D RID: 170397
 		SubPhantomCircle2,
-		// Token: 0x0402E2A2 RID: 189090
+		// Token: 0x0402999E RID: 170398
 		SubPhantomCircle3,
-		// Token: 0x0402E2A3 RID: 189091
+		// Token: 0x0402999F RID: 170399
 		SubPhantomCircle4,
-		// Token: 0x0402E2A4 RID: 189092
+		// Token: 0x040299A0 RID: 170400
 		SubPhantomCircle5,
-		// Token: 0x0402E2A5 RID: 189093
+		// Token: 0x040299A1 RID: 170401
 		BtnSwitch,
-		// Token: 0x0402E2A6 RID: 189094
+		// Token: 0x040299A2 RID: 170402
 		PanelSuitLayout,
-		// Token: 0x0402E2A7 RID: 189095
+		// Token: 0x040299A3 RID: 170403
 		PanelSuit
 	}
 }

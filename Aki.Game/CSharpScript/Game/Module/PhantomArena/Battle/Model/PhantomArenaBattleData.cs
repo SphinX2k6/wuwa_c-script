@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.Model
 {
-	// Token: 0x02005294 RID: 21140
+	// Token: 0x02004264 RID: 16996
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaBattleData
 	{
-		// Token: 0x060360EF RID: 221423 RVA: 0x00CCB100 File Offset: 0x00CC9300
+		// Token: 0x0602AFEA RID: 176106 RVA: 0x00C18804 File Offset: 0x00C16A04
 		public void SetNpcMonsterEntityData(Dictionary<int, long> data)
 		{
 			this.NpcMonsterEntityIncIdMap.Clear();
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Model
 			}
 		}
 
-		// Token: 0x060360F0 RID: 221424 RVA: 0x00CCB1A0 File Offset: 0x00CC93A0
+		// Token: 0x0602AFEB RID: 176107 RVA: 0x00C188A4 File Offset: 0x00C16AA4
 		public void SetPlayerEntityData(Dictionary<int, long> data)
 		{
 			this.PlayerEntityIncIdListMap.Clear();
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Model
 			}
 		}
 
-		// Token: 0x060360F1 RID: 221425 RVA: 0x00CCB240 File Offset: 0x00CC9440
+		// Token: 0x0602AFEC RID: 176108 RVA: 0x00C18944 File Offset: 0x00C16B44
 		public List<long> GetNpcEntityIdList()
 		{
 			List<long> list = new List<long>();
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Model
 			return list;
 		}
 
-		// Token: 0x060360F2 RID: 221426 RVA: 0x00CCB2A0 File Offset: 0x00CC94A0
+		// Token: 0x0602AFED RID: 176109 RVA: 0x00C189A4 File Offset: 0x00C16BA4
 		public List<long> GetPlayerEntityIdList()
 		{
 			List<long> list = new List<long>();
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Model
 			return list;
 		}
 
-		// Token: 0x060360F3 RID: 221427 RVA: 0x00CCB300 File Offset: 0x00CC9500
+		// Token: 0x0602AFEE RID: 176110 RVA: 0x00C18A04 File Offset: 0x00C16C04
 		public List<long> GetPlayerEntityIdListBySort()
 		{
 			List<long> playerEntityIdList = this.GetPlayerEntityIdList();
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Model
 			return playerEntityIdList;
 		}
 
-		// Token: 0x060360F4 RID: 221428 RVA: 0x00CCB31A File Offset: 0x00CC951A
+		// Token: 0x0602AFEF RID: 176111 RVA: 0x00C18A1E File Offset: 0x00C16C1E
 		public List<long> GetNpcEntityIdListBySort()
 		{
 			List<long> npcEntityIdList = this.GetNpcEntityIdList();
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Model
 			return npcEntityIdList;
 		}
 
-		// Token: 0x060360F5 RID: 221429 RVA: 0x00CCB334 File Offset: 0x00CC9534
+		// Token: 0x0602AFF0 RID: 176112 RVA: 0x00C18A38 File Offset: 0x00C16C38
 		public List<long> GetAllEntityIdList()
 		{
 			List<long> list = new List<long>();
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Model
 			return list;
 		}
 
-		// Token: 0x060360F6 RID: 221430 RVA: 0x00CCB353 File Offset: 0x00CC9553
+		// Token: 0x0602AFF1 RID: 176113 RVA: 0x00C18A57 File Offset: 0x00C16C57
 		public PhantomCardData GetCardDataByEntityId(long entityId)
 		{
 			if (!this.EntityIdCardDataMap.ContainsKey(entityId))
@@ -100,13 +100,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Model
 			return this.EntityIdCardDataMap[entityId];
 		}
 
-		// Token: 0x060360F7 RID: 221431 RVA: 0x00CCB371 File Offset: 0x00CC9571
+		// Token: 0x0602AFF2 RID: 176114 RVA: 0x00C18A75 File Offset: 0x00C16C75
 		public void CreatePrepareLoadingPromise()
 		{
 			this.PrepareLoadingPromise = new CustomPromise();
 		}
 
-		// Token: 0x060360F8 RID: 221432 RVA: 0x00CCB37E File Offset: 0x00CC957E
+		// Token: 0x0602AFF3 RID: 176115 RVA: 0x00C18A82 File Offset: 0x00C16C82
 		public void FinishPrepareLoadingPromise()
 		{
 			CustomPromise prepareLoadingPromise = this.PrepareLoadingPromise;
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Model
 			this.PrepareLoadingPromise = null;
 		}
 
-		// Token: 0x060360F9 RID: 221433 RVA: 0x00CCB398 File Offset: 0x00CC9598
+		// Token: 0x0602AFF4 RID: 176116 RVA: 0x00C18A9C File Offset: 0x00C16C9C
 		public void Clear()
 		{
 			this.NpcMonsterEntityIncIdMap.Clear();
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Model
 			this.EntityIdCardDataMap.Clear();
 		}
 
-		// Token: 0x060360FA RID: 221434 RVA: 0x00CCB3BC File Offset: 0x00CC95BC
+		// Token: 0x0602AFF5 RID: 176117 RVA: 0x00C18AC0 File Offset: 0x00C16CC0
 		private int SortByCost(long aEntityId, long bEntityId)
 		{
 			PhantomCardData phantomCardData = this.EntityIdCardDataMap.ContainsKey(aEntityId) ? this.EntityIdCardDataMap[aEntityId] : null;
@@ -141,16 +141,16 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Model
 			return phantomCardData2.ConfigCost - phantomCardData.ConfigCost;
 		}
 
-		// Token: 0x0401C9F2 RID: 117234
+		// Token: 0x04017427 RID: 95271
 		private readonly Dictionary<int, long> NpcMonsterEntityIncIdMap = new Dictionary<int, long>();
 
-		// Token: 0x0401C9F3 RID: 117235
+		// Token: 0x04017428 RID: 95272
 		private readonly Dictionary<int, long> PlayerEntityIncIdListMap = new Dictionary<int, long>();
 
-		// Token: 0x0401C9F4 RID: 117236
+		// Token: 0x04017429 RID: 95273
 		private readonly Dictionary<long, PhantomCardData> EntityIdCardDataMap = new Dictionary<long, PhantomCardData>();
 
-		// Token: 0x0401C9F5 RID: 117237
+		// Token: 0x0401742A RID: 95274
 		[Nullable(2)]
 		public CustomPromise PrepareLoadingPromise;
 	}

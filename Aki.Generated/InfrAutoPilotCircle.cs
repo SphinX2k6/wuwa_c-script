@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000D63 RID: 3427
+	// Token: 0x02000E48 RID: 3656
 	public struct InfrAutoPilotCircle : IFlatbufferObject
 	{
-		// Token: 0x170018DF RID: 6367
-		// (get) Token: 0x06008323 RID: 33571 RVA: 0x0025E430 File Offset: 0x0025C630
+		// Token: 0x17001942 RID: 6466
+		// (get) Token: 0x0600893D RID: 35133 RVA: 0x0027CAE0 File Offset: 0x0027ACE0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008324 RID: 33572 RVA: 0x0025E43D File Offset: 0x0025C63D
+		// Token: 0x0600893E RID: 35134 RVA: 0x0027CAED File Offset: 0x0027ACED
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06008325 RID: 33573 RVA: 0x0025E444 File Offset: 0x0025C644
+		// Token: 0x0600893F RID: 35135 RVA: 0x0027CAF4 File Offset: 0x0027ACF4
 		public static InfrAutoPilotCircle GetRootAsInfrAutoPilotCircle(ByteBuffer _bb)
 		{
 			return InfrAutoPilotCircle.GetRootAsInfrAutoPilotCircle(_bb, default(InfrAutoPilotCircle));
 		}
 
-		// Token: 0x06008326 RID: 33574 RVA: 0x0025E460 File Offset: 0x0025C660
+		// Token: 0x06008940 RID: 35136 RVA: 0x0027CB10 File Offset: 0x0027AD10
 		public static InfrAutoPilotCircle GetRootAsInfrAutoPilotCircle(ByteBuffer _bb, InfrAutoPilotCircle obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06008327 RID: 33575 RVA: 0x0025E47D File Offset: 0x0025C67D
+		// Token: 0x06008941 RID: 35137 RVA: 0x0027CB2D File Offset: 0x0027AD2D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06008328 RID: 33576 RVA: 0x0025E48C File Offset: 0x0025C68C
+		// Token: 0x06008942 RID: 35138 RVA: 0x0027CB3C File Offset: 0x0027AD3C
 		public InfrAutoPilotCircle __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170018E0 RID: 6368
-		// (get) Token: 0x06008329 RID: 33577 RVA: 0x0025E49C File Offset: 0x0025C69C
+		// Token: 0x17001943 RID: 6467
+		// (get) Token: 0x06008943 RID: 35139 RVA: 0x0027CB4C File Offset: 0x0027AD4C
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170018E1 RID: 6369
-		// (get) Token: 0x0600832A RID: 33578 RVA: 0x0025E4D8 File Offset: 0x0025C6D8
+		// Token: 0x17001944 RID: 6468
+		// (get) Token: 0x06008944 RID: 35140 RVA: 0x0027CB88 File Offset: 0x0027AD88
 		public int AutoPilotCirclePathId
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170018E2 RID: 6370
-		// (get) Token: 0x0600832B RID: 33579 RVA: 0x0025E514 File Offset: 0x0025C714
+		// Token: 0x17001945 RID: 6469
+		// (get) Token: 0x06008945 RID: 35141 RVA: 0x0027CBC4 File Offset: 0x0027ADC4
 		public int MapId
 		{
 			get
@@ -94,7 +94,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600832C RID: 33580 RVA: 0x0025E550 File Offset: 0x0025C750
+		// Token: 0x06008946 RID: 35142 RVA: 0x0027CC00 File Offset: 0x0027AE00
 		public int RoadBuildIdArray(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -105,8 +105,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170018E3 RID: 6371
-		// (get) Token: 0x0600832D RID: 33581 RVA: 0x0025E590 File Offset: 0x0025C790
+		// Token: 0x17001946 RID: 6470
+		// (get) Token: 0x06008947 RID: 35143 RVA: 0x0027CC40 File Offset: 0x0027AE40
 		public int RoadBuildIdArrayLength
 		{
 			get
@@ -120,20 +120,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600832E RID: 33582 RVA: 0x0025E5BC File Offset: 0x0025C7BC
+		// Token: 0x06008948 RID: 35144 RVA: 0x0027CC6C File Offset: 0x0027AE6C
 		public Span<int> GetRoadBuildIdArrayBytes()
 		{
 			return this.__p.__vector_as_span<int>(10, 4);
 		}
 
-		// Token: 0x0600832F RID: 33583 RVA: 0x0025E5CC File Offset: 0x0025C7CC
+		// Token: 0x06008949 RID: 35145 RVA: 0x0027CC7C File Offset: 0x0027AE7C
 		public int[] GetRoadBuildIdArrayArray()
 		{
 			return this.__p.__vector_as_array<int>(10) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x170018E4 RID: 6372
-		// (get) Token: 0x06008330 RID: 33584 RVA: 0x0025E5E4 File Offset: 0x0025C7E4
+		// Token: 0x17001947 RID: 6471
+		// (get) Token: 0x0600894A RID: 35146 RVA: 0x0027CC94 File Offset: 0x0027AE94
 		public string PrefabPath
 		{
 			get
@@ -147,37 +147,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008331 RID: 33585 RVA: 0x0025E61C File Offset: 0x0025C81C
+		// Token: 0x0600894B RID: 35147 RVA: 0x0027CCCC File Offset: 0x0027AECC
 		public Span<byte> GetPrefabPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x06008332 RID: 33586 RVA: 0x0025E62C File Offset: 0x0025C82C
+		// Token: 0x0600894C RID: 35148 RVA: 0x0027CCDC File Offset: 0x0027AEDC
 		public byte[] GetPrefabPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(12) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x06008333 RID: 33587 RVA: 0x0025E644 File Offset: 0x0025C844
+		// Token: 0x0600894D RID: 35149 RVA: 0x0027CCF4 File Offset: 0x0027AEF4
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用RoadBuildIdArrayIter()或GetRoadBuildIdArrayBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] RoadBuildIdArray()
+		public int[] RoadBuildIdArray()
 		{
-			InfrAutoPilotCircle infrAutoPilotCircle = this;
-			return infrAutoPilotCircle.GetRoadBuildIdArrayArray() ?? Array.Empty<int>();
+			return this.GetRoadBuildIdArrayArray();
 		}
 
-		// Token: 0x06008334 RID: 33588 RVA: 0x0025E668 File Offset: 0x0025C868
+		// Token: 0x0600894E RID: 35150 RVA: 0x0027CCFC File Offset: 0x0027AEFC
 		[NullableContext(1)]
-		public readonly IEnumerable<int> RoadBuildIdArrayIter()
+		public IEnumerable<int> RoadBuildIdArrayIter()
 		{
 			InfrAutoPilotCircle.<RoadBuildIdArrayIter>d__24 <RoadBuildIdArrayIter>d__ = new InfrAutoPilotCircle.<RoadBuildIdArrayIter>d__24(-2);
 			<RoadBuildIdArrayIter>d__.<>3__<>4__this = this;
 			return <RoadBuildIdArrayIter>d__;
 		}
 
-		// Token: 0x04004DE2 RID: 19938
+		// Token: 0x040053C7 RID: 21447
 		private Table __p;
 	}
 }

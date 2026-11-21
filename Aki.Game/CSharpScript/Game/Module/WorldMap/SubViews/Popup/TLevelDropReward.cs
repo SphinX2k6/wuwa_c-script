@@ -2,13 +2,13 @@
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.Popup
 {
-	// Token: 0x020047FA RID: 18426
+	// Token: 0x0200372B RID: 14123
 	public struct TLevelDropReward
 	{
-		// Token: 0x04019F9A RID: 106394
+		// Token: 0x0401464E RID: 83534
 		public int WorldLevel;
 
-		// Token: 0x04019F9B RID: 106395
+		// Token: 0x0401464F RID: 83535
 		public int DropId;
 	}
 }

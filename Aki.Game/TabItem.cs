@@ -6,7 +6,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001A32 RID: 6706
+// Token: 0x02000EF1 RID: 3825
 [Nullable(new byte[]
 {
 	0,
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 internal class TabItem : GridProxyAbstract<TabData>
 {
-	// Token: 0x0600C537 RID: 50487 RVA: 0x002CBC40 File Offset: 0x002C9E40
+	// Token: 0x06009947 RID: 39239 RVA: 0x002D6D5C File Offset: 0x002D4F5C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -39,7 +39,7 @@ internal class TabItem : GridProxyAbstract<TabData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600C538 RID: 50488 RVA: 0x002CBD28 File Offset: 0x002C9F28
+	// Token: 0x06009948 RID: 39240 RVA: 0x002D6E44 File Offset: 0x002D5044
 	private void OnClickToggle(EToggleState toggleState)
 	{
 		if (this.CurrentData.ClickCallBack != null)
@@ -48,7 +48,7 @@ internal class TabItem : GridProxyAbstract<TabData>
 		}
 	}
 
-	// Token: 0x0600C539 RID: 50489 RVA: 0x002CBD54 File Offset: 0x002C9F54
+	// Token: 0x06009949 RID: 39241 RVA: 0x002D6E70 File Offset: 0x002D5070
 	[NullableContext(1)]
 	public override void Refresh(TabData data, bool isSelected, int gridIndex)
 	{
@@ -60,7 +60,7 @@ internal class TabItem : GridProxyAbstract<TabData>
 		this.RefreshRedDot();
 	}
 
-	// Token: 0x0600C53A RID: 50490 RVA: 0x002CBDCC File Offset: 0x002C9FCC
+	// Token: 0x0600994A RID: 39242 RVA: 0x002D6EE8 File Offset: 0x002D50E8
 	public void RefreshRedDot()
 	{
 		if (this.CurrentData == null)
@@ -81,23 +81,23 @@ internal class TabItem : GridProxyAbstract<TabData>
 		base.GetItem(3).SetUIActive(uiactive);
 	}
 
-	// Token: 0x04005AEB RID: 23275
+	// Token: 0x04005BBA RID: 23482
 	[Nullable(2)]
 	private TabData CurrentData;
 
-	// Token: 0x02007F79 RID: 32633
+	// Token: 0x02007108 RID: 28936
 	private class ETabComponent
 	{
-		// Token: 0x040299CF RID: 170447
+		// Token: 0x04024D0C RID: 150796
 		public const int FrameItem = 0;
 
-		// Token: 0x040299D0 RID: 170448
+		// Token: 0x04024D0D RID: 150797
 		public const int Text = 1;
 
-		// Token: 0x040299D1 RID: 170449
+		// Token: 0x04024D0E RID: 150798
 		public const int Toggle = 2;
 
-		// Token: 0x040299D2 RID: 170450
+		// Token: 0x04024D0F RID: 150799
 		public const int RedDot = 3;
 	}
 }

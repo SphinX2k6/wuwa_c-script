@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E0B RID: 19979
+	// Token: 0x02005318 RID: 21272
 	public enum ERuntimePlatformType : byte
 	{
-		// Token: 0x0400DB0D RID: 56077
+		// Token: 0x0400E676 RID: 58998
 		None,
-		// Token: 0x0400DB0E RID: 56078
+		// Token: 0x0400E677 RID: 58999
 		PC,
-		// Token: 0x0400DB0F RID: 56079
+		// Token: 0x0400E678 RID: 59000
 		Mobile
 	}
 }

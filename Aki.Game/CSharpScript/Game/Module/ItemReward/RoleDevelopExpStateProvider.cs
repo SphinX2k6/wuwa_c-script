@@ -4,14 +4,14 @@ using CSharpScript.Game.Module.RoleUi.RoleDevelop;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x020057E9 RID: 22505
+	// Token: 0x020047C0 RID: 18368
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RoleDevelopExpStateProvider : IRoleDevelopExpStateProvider
 	{
-		// Token: 0x17008A05 RID: 35333
-		// (get) Token: 0x0603933C RID: 234300 RVA: 0x00D90F0C File Offset: 0x00D8F10C
-		// (set) Token: 0x0603933D RID: 234301 RVA: 0x00D90F14 File Offset: 0x00D8F114
+		// Token: 0x17005DCF RID: 24015
+		// (get) Token: 0x0602E250 RID: 189008 RVA: 0x00CDFD54 File Offset: 0x00CDDF54
+		// (set) Token: 0x0602E251 RID: 189009 RVA: 0x00CDFD5C File Offset: 0x00CDDF5C
 		public Func<int, EItemRequirementState?> GetExpItemRequirementState { get; set; }
 	}
 }

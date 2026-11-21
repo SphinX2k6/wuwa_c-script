@@ -6,13 +6,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Model
 {
-	// Token: 0x020071D7 RID: 29143
+	// Token: 0x0200628C RID: 25228
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class SceneInteractionModel : ModelBase
 	{
-		// Token: 0x06047536 RID: 292150 RVA: 0x012232B8 File Offset: 0x012214B8
+		// Token: 0x0603CE38 RID: 249400 RVA: 0x0117D0EC File Offset: 0x0117B2EC
 		[return: Nullable(2)]
 		public EntityHandle GetEntityByBaseItem(AActor actor)
 		{
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Model
 			return instance.GetEntityById(entityIdByBaseItem);
 		}
 
-		// Token: 0x06047537 RID: 292151 RVA: 0x012232FC File Offset: 0x012214FC
+		// Token: 0x0603CE39 RID: 249401 RVA: 0x0117D130 File Offset: 0x0117B330
 		[return: Nullable(2)]
 		public EntityHandle GetEntityByActor(AActor actor, bool isAccurate = false)
 		{
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Model
 			return ActorUtils.GetEntityByActor(baseItemByActor, true);
 		}
 
-		// Token: 0x06047538 RID: 292152 RVA: 0x01223320 File Offset: 0x01221520
+		// Token: 0x0603CE3A RID: 249402 RVA: 0x0117D154 File Offset: 0x0117B354
 		[return: Nullable(2)]
 		public AActor GetBaseItemByActor(AActor actor, bool isAccurate = false)
 		{
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Model
 			return this.GetEntityActorByChildActor(actor);
 		}
 
-		// Token: 0x06047539 RID: 292153 RVA: 0x0122337C File Offset: 0x0122157C
+		// Token: 0x0603CE3B RID: 249403 RVA: 0x0117D1B0 File Offset: 0x0117B3B0
 		[return: Nullable(2)]
 		private AActor GetEntityActorByChildActor(AActor childActor)
 		{
@@ -96,8 +96,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Model
 			return aactor;
 		}
 
-		// Token: 0x17009DF1 RID: 40433
-		// (get) Token: 0x0604753A RID: 292154 RVA: 0x012233CF File Offset: 0x012215CF
+		// Token: 0x17007348 RID: 29512
+		// (get) Token: 0x0603CE3C RID: 249404 RVA: 0x0117D203 File Offset: 0x0117B403
 		public static SceneInteractionModel Instance
 		{
 			get
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Model
 			}
 		}
 
-		// Token: 0x0604753B RID: 292155 RVA: 0x012233D6 File Offset: 0x012215D6
+		// Token: 0x0603CE3D RID: 249405 RVA: 0x0117D20A File Offset: 0x0117B40A
 		public static SceneInteractionModel GetOrCreateInstance()
 		{
 			if (SceneInteractionModel._Instance == null)
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Model
 			return SceneInteractionModel._Instance;
 		}
 
-		// Token: 0x0604753C RID: 292156 RVA: 0x012233EA File Offset: 0x012215EA
+		// Token: 0x0603CE3E RID: 249406 RVA: 0x0117D21E File Offset: 0x0117B41E
 		public static bool CreateInstance()
 		{
 			if (SceneInteractionModel._Instance != null)
@@ -127,30 +127,30 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Model
 			return true;
 		}
 
-		// Token: 0x0604753D RID: 292157 RVA: 0x01223400 File Offset: 0x01221600
+		// Token: 0x0603CE3F RID: 249407 RVA: 0x0117D234 File Offset: 0x0117B434
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0604753E RID: 292158 RVA: 0x01223402 File Offset: 0x01221602
+		// Token: 0x0603CE40 RID: 249408 RVA: 0x0117D236 File Offset: 0x0117B436
 		public static void ResetStaticDefaultValue()
 		{
 			SceneInteractionModel._Instance = null;
 		}
 
-		// Token: 0x0604753F RID: 292159 RVA: 0x0122340A File Offset: 0x0122160A
+		// Token: 0x0603CE41 RID: 249409 RVA: 0x0117D23E File Offset: 0x0117B43E
 		static SceneInteractionModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SceneInteractionModel.CreateStaticDefaultValue), new Action(SceneInteractionModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0402580D RID: 153613
+		// Token: 0x0402047C RID: 132220
 		private bool IsInitBaseItemInfo;
 
-		// Token: 0x0402580E RID: 153614
+		// Token: 0x0402047D RID: 132221
 		private readonly Stat StatGetEntityByActor = Stat.Create("SceneInteractionModel.GetEntityByActor", "", "");
 
-		// Token: 0x0402580F RID: 153615
+		// Token: 0x0402047E RID: 132222
 		[Nullable(2)]
 		private static SceneInteractionModel _Instance;
 	}

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200056C RID: 1388
+	// Token: 0x02000582 RID: 1410
 	public class ConfigMoralePlayById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002095 RID: 8341 RVA: 0x001118BC File Offset: 0x0010FABC
+		// Token: 0x06002119 RID: 8473 RVA: 0x00118010 File Offset: 0x00116210
 		static ConfigMoralePlayById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMoralePlayById.CreateStaticDefaultValue), new Action(ConfigMoralePlayById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002096 RID: 8342 RVA: 0x001118DC File Offset: 0x0010FADC
+		// Token: 0x0600211A RID: 8474 RVA: 0x00118030 File Offset: 0x00116230
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMoralePlayById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002097 RID: 8343 RVA: 0x0011195B File Offset: 0x0010FB5B
+		// Token: 0x0600211B RID: 8475 RVA: 0x001180AF File Offset: 0x001162AF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMoralePlayById.LogPair = null;
 			ConfigMoralePlayById.HandleId = 0;
 		}
 
-		// Token: 0x06002098 RID: 8344 RVA: 0x00111969 File Offset: 0x0010FB69
+		// Token: 0x0600211C RID: 8476 RVA: 0x001180BD File Offset: 0x001162BD
 		public static void Init()
 		{
 			ConfigMoralePlayById.HandleId = ConfigCommon.InitDataStatement(ConfigMoralePlayById.HandleId, "db_moraleplay.db", "select BinData from `MoralePlay` where Id=?");
 		}
 
-		// Token: 0x06002099 RID: 8345 RVA: 0x00111984 File Offset: 0x0010FB84
+		// Token: 0x0600211D RID: 8477 RVA: 0x001180D8 File Offset: 0x001162D8
 		public static MoralePlay? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigMoralePlayById.HandleId, ConfigMoralePlayById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new MoralePlay?(rootAsMoralePlay);
 		}
 
-		// Token: 0x040025D8 RID: 9688
+		// Token: 0x04002672 RID: 9842
 		private const string DB = "db_moraleplay.db";
 
-		// Token: 0x040025D9 RID: 9689
+		// Token: 0x04002673 RID: 9843
 		private const string FILE = "c.插旗玩法.xlsx";
 
-		// Token: 0x040025DA RID: 9690
+		// Token: 0x04002674 RID: 9844
 		private const string TABLE = "MoralePlay";
 
-		// Token: 0x040025DB RID: 9691
+		// Token: 0x04002675 RID: 9845
 		private const string COMMAND = "select BinData from `MoralePlay` where Id=?";
 
-		// Token: 0x040025DC RID: 9692
+		// Token: 0x04002676 RID: 9846
 		private const string KEY_PREFIX = "MoralePlayById";
 
-		// Token: 0x040025DD RID: 9693
+		// Token: 0x04002677 RID: 9847
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040025DE RID: 9694
+		// Token: 0x04002678 RID: 9848
 		private static int HandleId;
 	}
 }

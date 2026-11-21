@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02001A17 RID: 6679
+// Token: 0x02000ED6 RID: 3798
 [NullableContext(1)]
 [Nullable(0)]
 public class AbyssRankChallengeInfo
 {
-	// Token: 0x0600C401 RID: 50177 RVA: 0x002C5F44 File Offset: 0x002C4144
+	// Token: 0x06009811 RID: 38929 RVA: 0x002D0FC8 File Offset: 0x002CF1C8
 	public void SetIsOpenAnonymousName(int challengeId, bool isOpen)
 	{
 		this.ChallengeAnonymousMap[challengeId] = isOpen;
@@ -30,7 +30,7 @@ public class AbyssRankChallengeInfo
 		}
 	}
 
-	// Token: 0x0600C402 RID: 50178 RVA: 0x002C5FF8 File Offset: 0x002C41F8
+	// Token: 0x06009812 RID: 38930 RVA: 0x002D107C File Offset: 0x002CF27C
 	public void OnSelfRankInfoUpdate(AbyssSelfPassResponse data)
 	{
 		this.RemoveAllSelfPassData(this.AllSinglePassDataMap);
@@ -67,14 +67,14 @@ public class AbyssRankChallengeInfo
 		}
 	}
 
-	// Token: 0x0600C403 RID: 50179 RVA: 0x002C6108 File Offset: 0x002C4308
+	// Token: 0x06009813 RID: 38931 RVA: 0x002D118C File Offset: 0x002CF38C
 	public bool GetAnonymousNameMode(int challengeId)
 	{
 		bool flag;
 		return !this.ChallengeAnonymousMap.TryGetValue(challengeId, out flag) || flag;
 	}
 
-	// Token: 0x0600C404 RID: 50180 RVA: 0x002C6128 File Offset: 0x002C4328
+	// Token: 0x06009814 RID: 38932 RVA: 0x002D11AC File Offset: 0x002CF3AC
 	private void RemoveAllSelfPassData(Dictionary<int, List<global::AbyssChallengeInfo>> dataMap)
 	{
 		foreach (KeyValuePair<int, List<global::AbyssChallengeInfo>> keyValuePair in dataMap)
@@ -91,7 +91,7 @@ public class AbyssRankChallengeInfo
 		}
 	}
 
-	// Token: 0x0600C405 RID: 50181 RVA: 0x002C61A4 File Offset: 0x002C43A4
+	// Token: 0x06009815 RID: 38933 RVA: 0x002D1228 File Offset: 0x002CF428
 	public void OnChallengeRankInfoUpdate(AbyssRankListResponse data)
 	{
 		this.AllSinglePassDataMap.Clear();
@@ -136,7 +136,7 @@ public class AbyssRankChallengeInfo
 		this.SelfRankInfo = list2.ToArray();
 	}
 
-	// Token: 0x0600C406 RID: 50182 RVA: 0x002C6304 File Offset: 0x002C4504
+	// Token: 0x06009816 RID: 38934 RVA: 0x002D1388 File Offset: 0x002CF588
 	public void RefreshAllPassDataRank(int challengeId)
 	{
 		List<global::AbyssChallengeInfo> orAddSinglePassData = this.GetOrAddSinglePassData(challengeId);
@@ -147,7 +147,7 @@ public class AbyssRankChallengeInfo
 		this.RefreshSelfRankItemDataName(challengeId);
 	}
 
-	// Token: 0x0600C407 RID: 50183 RVA: 0x002C634C File Offset: 0x002C454C
+	// Token: 0x06009817 RID: 38935 RVA: 0x002D13D0 File Offset: 0x002CF5D0
 	private void RefreshOwnPassData(int challengeId)
 	{
 		global::AbyssChallengeInfo abyssChallengeInfo;
@@ -166,7 +166,7 @@ public class AbyssRankChallengeInfo
 		this.OwnMultiPassData.IsInRank = this.MultiPassDataList.Contains(abyssChallengeInfo2);
 	}
 
-	// Token: 0x0600C408 RID: 50184 RVA: 0x002C63C8 File Offset: 0x002C45C8
+	// Token: 0x06009818 RID: 38936 RVA: 0x002D144C File Offset: 0x002CF64C
 	private global::AbyssChallengeInfo CreateOwnSinglePassData(int challengeId)
 	{
 		global::AbyssChallengeInfo abyssChallengeInfo = new global::AbyssChallengeInfo();
@@ -174,7 +174,7 @@ public class AbyssRankChallengeInfo
 		return abyssChallengeInfo;
 	}
 
-	// Token: 0x0600C409 RID: 50185 RVA: 0x002C63E4 File Offset: 0x002C45E4
+	// Token: 0x06009819 RID: 38937 RVA: 0x002D1468 File Offset: 0x002CF668
 	private global::AbyssChallengeInfo CreateOwnMultiPassData(int challengeId)
 	{
 		global::AbyssChallengeInfo abyssChallengeInfo = new global::AbyssChallengeInfo();
@@ -182,7 +182,7 @@ public class AbyssRankChallengeInfo
 		return abyssChallengeInfo;
 	}
 
-	// Token: 0x0600C40A RID: 50186 RVA: 0x002C6400 File Offset: 0x002C4600
+	// Token: 0x0600981A RID: 38938 RVA: 0x002D1484 File Offset: 0x002CF684
 	private int SortNormalPassData(global::AbyssChallengeInfo aData, global::AbyssChallengeInfo bData)
 	{
 		if (aData.GetProgress() == bData.GetProgress())
@@ -192,7 +192,7 @@ public class AbyssRankChallengeInfo
 		return bData.GetProgress() - aData.GetProgress();
 	}
 
-	// Token: 0x0600C40B RID: 50187 RVA: 0x002C642C File Offset: 0x002C462C
+	// Token: 0x0600981B RID: 38939 RVA: 0x002D14B0 File Offset: 0x002CF6B0
 	private void RefreshPassDataRank(int challengeId, List<global::AbyssChallengeInfo> allDataList, List<global::AbyssChallengeInfo> refDataList)
 	{
 		refDataList.Clear();
@@ -225,7 +225,7 @@ public class AbyssRankChallengeInfo
 		}
 	}
 
-	// Token: 0x0600C40C RID: 50188 RVA: 0x002C64D0 File Offset: 0x002C46D0
+	// Token: 0x0600981C RID: 38940 RVA: 0x002D1554 File Offset: 0x002CF754
 	public void RefreshSelfRankItemDataName(int challengeId)
 	{
 		List<global::AbyssChallengeInfo> list;
@@ -254,7 +254,7 @@ public class AbyssRankChallengeInfo
 		}
 	}
 
-	// Token: 0x0600C40D RID: 50189 RVA: 0x002C65A4 File Offset: 0x002C47A4
+	// Token: 0x0600981D RID: 38941 RVA: 0x002D1628 File Offset: 0x002CF828
 	public global::AbyssChallengeInfo[] GetRankDataListByOnlineType(bool onlineState)
 	{
 		if (!onlineState)
@@ -264,7 +264,7 @@ public class AbyssRankChallengeInfo
 		return this.MultiPassDataList.ToArray();
 	}
 
-	// Token: 0x0600C40E RID: 50190 RVA: 0x002C65C0 File Offset: 0x002C47C0
+	// Token: 0x0600981E RID: 38942 RVA: 0x002D1644 File Offset: 0x002CF844
 	public global::AbyssChallengeInfo GetSelfRankDataByTabType(bool onlineState)
 	{
 		if (!onlineState)
@@ -274,7 +274,7 @@ public class AbyssRankChallengeInfo
 		return this.OwnMultiPassData;
 	}
 
-	// Token: 0x0600C40F RID: 50191 RVA: 0x002C65D4 File Offset: 0x002C47D4
+	// Token: 0x0600981F RID: 38943 RVA: 0x002D1658 File Offset: 0x002CF858
 	private List<global::AbyssChallengeInfo> GetOrAddSinglePassData(int challengeId)
 	{
 		List<global::AbyssChallengeInfo> list;
@@ -286,14 +286,14 @@ public class AbyssRankChallengeInfo
 		return list;
 	}
 
-	// Token: 0x0600C410 RID: 50192 RVA: 0x002C6605 File Offset: 0x002C4805
+	// Token: 0x06009820 RID: 38944 RVA: 0x002D1689 File Offset: 0x002CF889
 	private void SetSelfSinglePassData(global::AbyssChallengeInfo itemData, int challengeId)
 	{
 		itemData.IsSelf = true;
 		this.AllOwnSinglePassDataMap[challengeId] = itemData;
 	}
 
-	// Token: 0x0600C411 RID: 50193 RVA: 0x002C661C File Offset: 0x002C481C
+	// Token: 0x06009821 RID: 38945 RVA: 0x002D16A0 File Offset: 0x002CF8A0
 	private List<global::AbyssChallengeInfo> GetOrAddMultiPassData(int challengeId)
 	{
 		List<global::AbyssChallengeInfo> list;
@@ -305,14 +305,14 @@ public class AbyssRankChallengeInfo
 		return list;
 	}
 
-	// Token: 0x0600C412 RID: 50194 RVA: 0x002C664D File Offset: 0x002C484D
+	// Token: 0x06009822 RID: 38946 RVA: 0x002D16D1 File Offset: 0x002CF8D1
 	private void SetSelfMultiPassData(global::AbyssChallengeInfo itemData, int challengeId)
 	{
 		itemData.IsSelf = true;
 		this.AllOwnMultiPassData[challengeId] = itemData;
 	}
 
-	// Token: 0x0600C413 RID: 50195 RVA: 0x002C6664 File Offset: 0x002C4864
+	// Token: 0x06009823 RID: 38947 RVA: 0x002D16E8 File Offset: 0x002CF8E8
 	public bool IsOwnSingleBestScore(int challengeId)
 	{
 		bool isEmpty = this.OwnSinglePassData.IsEmpty;
@@ -330,36 +330,36 @@ public class AbyssRankChallengeInfo
 		return passTime <= passTime2;
 	}
 
-	// Token: 0x04005A68 RID: 23144
+	// Token: 0x04005B37 RID: 23351
 	private readonly Dictionary<int, bool> ChallengeAnonymousMap = new Dictionary<int, bool>();
 
-	// Token: 0x04005A69 RID: 23145
+	// Token: 0x04005B38 RID: 23352
 	private readonly Dictionary<int, List<global::AbyssChallengeInfo>> AllMultiPassDataMap = new Dictionary<int, List<global::AbyssChallengeInfo>>();
 
-	// Token: 0x04005A6A RID: 23146
+	// Token: 0x04005B39 RID: 23353
 	private readonly Dictionary<int, global::AbyssChallengeInfo> AllOwnSinglePassDataMap = new Dictionary<int, global::AbyssChallengeInfo>();
 
-	// Token: 0x04005A6B RID: 23147
+	// Token: 0x04005B3A RID: 23354
 	private readonly Dictionary<int, List<global::AbyssChallengeInfo>> AllSinglePassDataMap = new Dictionary<int, List<global::AbyssChallengeInfo>>();
 
-	// Token: 0x04005A6C RID: 23148
+	// Token: 0x04005B3B RID: 23355
 	private readonly Dictionary<int, global::AbyssChallengeInfo> AllOwnMultiPassData = new Dictionary<int, global::AbyssChallengeInfo>();
 
-	// Token: 0x04005A6D RID: 23149
+	// Token: 0x04005B3C RID: 23356
 	private readonly List<global::AbyssChallengeInfo> SinglePassDataList = new List<global::AbyssChallengeInfo>();
 
-	// Token: 0x04005A6E RID: 23150
+	// Token: 0x04005B3D RID: 23357
 	private readonly List<global::AbyssChallengeInfo> MultiPassDataList = new List<global::AbyssChallengeInfo>();
 
-	// Token: 0x04005A6F RID: 23151
+	// Token: 0x04005B3E RID: 23358
 	private global::AbyssChallengeInfo[] FriendRankList = Array.Empty<global::AbyssChallengeInfo>();
 
-	// Token: 0x04005A70 RID: 23152
+	// Token: 0x04005B3F RID: 23359
 	private global::AbyssChallengeInfo[] SelfRankInfo = Array.Empty<global::AbyssChallengeInfo>();
 
-	// Token: 0x04005A71 RID: 23153
+	// Token: 0x04005B40 RID: 23360
 	private global::AbyssChallengeInfo OwnSinglePassData;
 
-	// Token: 0x04005A72 RID: 23154
+	// Token: 0x04005B41 RID: 23361
 	private global::AbyssChallengeInfo OwnMultiPassData;
 }

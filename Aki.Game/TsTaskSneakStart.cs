@@ -12,30 +12,27 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskSneakStart.TsTaskSneakStart_C")]
 public class TsTaskSneakStart : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x06000B30 RID: 2864 RVA: 0x00037FA4 File Offset: 0x000361A4
+	// Token: 0x06000B36 RID: 2870 RVA: 0x00039154 File Offset: 0x00037354
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveExecuteAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskSneakStart) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveExecuteAI"), TsTaskSneakStart.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			this.ReceiveExecuteAI_Implementation(ownerController, controlledPawn);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000B31 RID: 2865 RVA: 0x00038040 File Offset: 0x00036240
+	// Token: 0x06000B37 RID: 2871 RVA: 0x00039204 File Offset: 0x00037404
 	[NullableContext(2)]
 	protected virtual void ReceiveExecuteAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -61,7 +58,7 @@ public class TsTaskSneakStart : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnr
 		base.FinishExecute(true);
 	}
 
-	// Token: 0x06000B32 RID: 2866 RVA: 0x000380CC File Offset: 0x000362CC
+	// Token: 0x06000B38 RID: 2872 RVA: 0x00039290 File Offset: 0x00037490
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskSneakStart._ClassPtr == IntPtr.Zero)
@@ -71,23 +68,23 @@ public class TsTaskSneakStart : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnr
 		return TsTaskSneakStart._ClassPtr;
 	}
 
-	// Token: 0x06000B33 RID: 2867 RVA: 0x000380F0 File Offset: 0x000362F0
+	// Token: 0x06000B39 RID: 2873 RVA: 0x000392B4 File Offset: 0x000374B4
 	public TsTaskSneakStart() : this(BuiltinUtils.AllocNativeUObject(TsTaskSneakStart.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06000B34 RID: 2868 RVA: 0x00038118 File Offset: 0x00036318
+	// Token: 0x06000B3A RID: 2874 RVA: 0x000392DC File Offset: 0x000374DC
 	[NullableContext(1)]
 	public TsTaskSneakStart(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskSneakStart.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06000B35 RID: 2869 RVA: 0x0003814B File Offset: 0x0003634B
+	// Token: 0x06000B3B RID: 2875 RVA: 0x0003930F File Offset: 0x0003750F
 	protected TsTaskSneakStart(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06000B36 RID: 2870 RVA: 0x00038154 File Offset: 0x00036354
+	// Token: 0x06000B3C RID: 2876 RVA: 0x00039318 File Offset: 0x00037518
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);
@@ -95,13 +92,13 @@ public class TsTaskSneakStart : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnr
 		this.ReceiveExecuteAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x040008C4 RID: 2244
+	// Token: 0x040008CC RID: 2252
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskSneakStart.TsTaskSneakStart_C";
 
-	// Token: 0x040008C5 RID: 2245
+	// Token: 0x040008CD RID: 2253
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x040008C6 RID: 2246
+	// Token: 0x040008CE RID: 2254
 	private static IntPtr _ClassDefaultObjectPtr;
 }

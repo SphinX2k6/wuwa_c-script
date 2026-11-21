@@ -5,18 +5,18 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x0200675A RID: 26458
+	// Token: 0x020056AA RID: 22186
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlDamageReporter
 	{
-		// Token: 0x06042171 RID: 270705 RVA: 0x0100972A File Offset: 0x0100792A
+		// Token: 0x06036CC7 RID: 224455 RVA: 0x00F4AB0F File Offset: 0x00F48D0F
 		public DangoBrawlBattleLogAggregator GetLog()
 		{
 			return this.LogAgg;
 		}
 
-		// Token: 0x06042172 RID: 270706 RVA: 0x01009734 File Offset: 0x01007934
+		// Token: 0x06036CC8 RID: 224456 RVA: 0x00F4AB18 File Offset: 0x00F48D18
 		public void Report(DangoBrawlDamageEvent evt)
 		{
 			DangoBrawlBattleManager battleManager = DangoBrawlModel.Instance.GetBattleManager(true);
@@ -43,13 +43,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x06042173 RID: 270707 RVA: 0x01009800 File Offset: 0x01007A00
+		// Token: 0x06036CC9 RID: 224457 RVA: 0x00F4ABE4 File Offset: 0x00F48DE4
 		private static bool IsHitFlashSource(EDangoBrawlDamageSource src)
 		{
 			return src == EDangoBrawlDamageSource.Weapon;
 		}
 
-		// Token: 0x06042174 RID: 270708 RVA: 0x01009818 File Offset: 0x01007A18
+		// Token: 0x06036CCA RID: 224458 RVA: 0x00F4ABFC File Offset: 0x00F48DFC
 		private unsafe void DispatchDamageText(DangoBrawlDamageEvent evt)
 		{
 			DangoBrawlDamageShow? dangoBrawlDamageShow = this.ResolveDamageShow(evt);
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x06042175 RID: 270709 RVA: 0x01009988 File Offset: 0x01007B88
+		// Token: 0x06036CCB RID: 224459 RVA: 0x00F4AD6C File Offset: 0x00F48F6C
 		private static bool ShouldWarnMissingItemUid(EDangoBrawlDamageSource src)
 		{
 			switch (src)
@@ -119,13 +119,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return true;
 		}
 
-		// Token: 0x06042176 RID: 270710 RVA: 0x010099D0 File Offset: 0x01007BD0
+		// Token: 0x06036CCC RID: 224460 RVA: 0x00F4ADB4 File Offset: 0x00F48FB4
 		private static bool ShouldShowUiDamageText(EDangoBrawlDamageSource src)
 		{
 			return src != EDangoBrawlDamageSource.BuffTick;
 		}
 
-		// Token: 0x06042177 RID: 270711 RVA: 0x010099E8 File Offset: 0x01007BE8
+		// Token: 0x06036CCD RID: 224461 RVA: 0x00F4ADCC File Offset: 0x00F48FCC
 		public unsafe void ReportEffectShow(int ownerFighterUid, int effectId)
 		{
 			if (effectId == 0)
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.DispatchDamageDA(ownerFighterUid, damageShowConfig.Value);
 		}
 
-		// Token: 0x06042178 RID: 270712 RVA: 0x01009B18 File Offset: 0x01007D18
+		// Token: 0x06036CCE RID: 224462 RVA: 0x00F4AEFC File Offset: 0x00F490FC
 		private void DispatchDamageDA(int targetFighterUid, DangoBrawlDamageShow showConfig)
 		{
 			string targetDA = showConfig.TargetDA;
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			battleManager.ShowDamageDA(targetFighterUid, targetDA, oppositeDA, showConfig.DAInternal);
 		}
 
-		// Token: 0x06042179 RID: 270713 RVA: 0x01009B68 File Offset: 0x01007D68
+		// Token: 0x06036CCF RID: 224463 RVA: 0x00F4AF4C File Offset: 0x00F4914C
 		private DangoBrawlDamageShow? ResolveDamageShow(DangoBrawlDamageEvent evt)
 		{
 			DangoBrawlConfig instance = DangoBrawlConfig.Instance;
@@ -218,13 +218,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return instance.GetDamageShowConfig(num2);
 		}
 
-		// Token: 0x0604217A RID: 270714 RVA: 0x01009C3C File Offset: 0x01007E3C
+		// Token: 0x06036CD0 RID: 224464 RVA: 0x00F4B020 File Offset: 0x00F49220
 		public void Reset()
 		{
 			this.LogAgg.Reset();
 		}
 
-		// Token: 0x0604217B RID: 270715 RVA: 0x01009C4C File Offset: 0x01007E4C
+		// Token: 0x06036CD1 RID: 224465 RVA: 0x00F4B030 File Offset: 0x00F49230
 		private static bool IsDamageForLog(EDangoBrawlDamageSource src)
 		{
 			switch (src)
@@ -247,13 +247,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return false;
 		}
 
-		// Token: 0x0604217C RID: 270716 RVA: 0x01009C88 File Offset: 0x01007E88
+		// Token: 0x06036CD2 RID: 224466 RVA: 0x00F4B06C File Offset: 0x00F4926C
 		private static bool IsHealForLog(EDangoBrawlDamageSource src)
 		{
 			return src == EDangoBrawlDamageSource.Heal || src == EDangoBrawlDamageSource.Lifesteal;
 		}
 
-		// Token: 0x0402268A RID: 140938
+		// Token: 0x0401CEE7 RID: 118503
 		private readonly DangoBrawlBattleLogAggregator LogAgg = new DangoBrawlBattleLogAggregator();
 	}
 }

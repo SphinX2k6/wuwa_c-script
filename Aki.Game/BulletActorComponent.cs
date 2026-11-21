@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002DEE RID: 11758
+// Token: 0x02002349 RID: 9033
 [NullableContext(1)]
 [Nullable(0)]
 public class BulletActorComponent : BaseActorComponent
 {
-	// Token: 0x06018B0C RID: 101132 RVA: 0x006574AC File Offset: 0x006556AC
+	// Token: 0x060163BC RID: 91068 RVA: 0x0067D560 File Offset: 0x0067B760
 	protected override bool OnStart()
 	{
 		BulletEntity bulletEntity = base.Entity as BulletEntity;
@@ -24,14 +24,14 @@ public class BulletActorComponent : BaseActorComponent
 		return base.OnStart();
 	}
 
-	// Token: 0x06018B0D RID: 101133 RVA: 0x00657541 File Offset: 0x00655741
+	// Token: 0x060163BD RID: 91069 RVA: 0x0067D5F5 File Offset: 0x0067B7F5
 	protected override void OnActivate()
 	{
 		this.ActorInternal.Kuro_SetRole(EKuroNetRole.KURO_ROLE_AutonomousProxy);
 		this.LastActorLocation.DeepCopy(this.ActorLocationProxy);
 	}
 
-	// Token: 0x06018B0E RID: 101134 RVA: 0x00657560 File Offset: 0x00655760
+	// Token: 0x060163BE RID: 91070 RVA: 0x0067D614 File Offset: 0x0067B814
 	protected unsafe override bool OnClear()
 	{
 		if (this.ActorInternal != null)
@@ -154,7 +154,7 @@ public class BulletActorComponent : BaseActorComponent
 		return base.OnClear();
 	}
 
-	// Token: 0x06018B0F RID: 101135 RVA: 0x006578C4 File Offset: 0x00655AC4
+	// Token: 0x060163BF RID: 91071 RVA: 0x0067D978 File Offset: 0x0067BB78
 	[NullableContext(2)]
 	public void SetAttachToComponent(USceneComponent parent, FName socketName, EAttachmentRule locationRule, EAttachmentRule rotationRule, EAttachmentRule scaleRule, bool bWeldSimulatedBodies)
 	{
@@ -163,20 +163,20 @@ public class BulletActorComponent : BaseActorComponent
 		base.ResetAllCachedTime();
 	}
 
-	// Token: 0x06018B10 RID: 101136 RVA: 0x006578E8 File Offset: 0x00655AE8
+	// Token: 0x060163C0 RID: 91072 RVA: 0x0067D99C File Offset: 0x0067BB9C
 	public void AddBulletLocalRotator(FRotator newRotator)
 	{
 		this.ActorInternal.K2_AddActorLocalRotation(newRotator, true, ref WorldGlobal.SweepHitResult, false);
 		base.ResetAllCachedTime();
 	}
 
-	// Token: 0x06018B11 RID: 101137 RVA: 0x00657903 File Offset: 0x00655B03
+	// Token: 0x060163C1 RID: 91073 RVA: 0x0067D9B7 File Offset: 0x0067BBB7
 	public void SetBulletCustomTimeDilation(float timeSize)
 	{
 		this.ActorInternal.CustomTimeDilation = timeSize;
 	}
 
-	// Token: 0x06018B12 RID: 101138 RVA: 0x00657914 File Offset: 0x00655B14
+	// Token: 0x060163C2 RID: 91074 RVA: 0x0067D9C8 File Offset: 0x0067BBC8
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -184,48 +184,83 @@ public class BulletActorComponent : BaseActorComponent
 			return false;
 		}
 		BulletActorComponent bulletActorComponent = (BulletActorComponent)componentTemplate;
-		if (base.CanResetComponentProperty("Shape"))
+		this.Shape = bulletActorComponent.Shape;
+		this.NeedDetach = bulletActorComponent.NeedDetach;
+		this.NeedDetachForBaseMovement = bulletActorComponent.NeedDetachForBaseMovement;
+		if (bulletActorComponent.ChildrenAttached == null)
 		{
-			this.Shape = bulletActorComponent.Shape;
+			this.ChildrenAttached = null;
 		}
-		if (base.CanResetComponentProperty("NeedDetach"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ChildrenAttached), "ChildrenAttached"))
 		{
-			this.NeedDetach = bulletActorComponent.NeedDetach;
+			return false;
 		}
-		if (base.CanResetComponentProperty("NeedDetachForBaseMovement"))
-		{
-			this.NeedDetachForBaseMovement = bulletActorComponent.NeedDetachForBaseMovement;
-		}
-		if (base.CanResetComponentProperty("ChildrenAttached"))
-		{
-			if (bulletActorComponent.ChildrenAttached == null)
-			{
-				this.ChildrenAttached = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<AActor>>(this.ChildrenAttached), "ChildrenAttached"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("IsLockScale"))
-		{
-			this.IsLockScale = bulletActorComponent.IsLockScale;
-		}
+		this.IsLockScale = bulletActorComponent.IsLockScale;
 		return true;
 	}
 
-	// Token: 0x0400B81C RID: 47132
+	// Token: 0x1700221E RID: 8734
+	// (get) Token: 0x060163C3 RID: 91075 RVA: 0x0067DA43 File Offset: 0x0067BC43
+	public override bool NeedCreateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700221F RID: 8735
+	// (get) Token: 0x060163C4 RID: 91076 RVA: 0x0067DA46 File Offset: 0x0067BC46
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002220 RID: 8736
+	// (get) Token: 0x060163C5 RID: 91077 RVA: 0x0067DA49 File Offset: 0x0067BC49
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002221 RID: 8737
+	// (get) Token: 0x060163C6 RID: 91078 RVA: 0x0067DA4C File Offset: 0x0067BC4C
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002222 RID: 8738
+	// (get) Token: 0x060163C7 RID: 91079 RVA: 0x0067DA4F File Offset: 0x0067BC4F
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400BBA2 RID: 48034
 	private EBulletShape? Shape;
 
-	// Token: 0x0400B81D RID: 47133
+	// Token: 0x0400BBA3 RID: 48035
 	public bool NeedDetach;
 
-	// Token: 0x0400B81E RID: 47134
+	// Token: 0x0400BBA4 RID: 48036
 	public bool NeedDetachForBaseMovement;
 
-	// Token: 0x0400B81F RID: 47135
+	// Token: 0x0400BBA5 RID: 48037
 	public List<AActor> ChildrenAttached = new List<AActor>();
 
-	// Token: 0x0400B820 RID: 47136
+	// Token: 0x0400BBA6 RID: 48038
 	private bool IsLockScale;
 }

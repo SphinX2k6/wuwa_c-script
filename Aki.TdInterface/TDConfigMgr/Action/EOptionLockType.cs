@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001667 RID: 5735
+	// Token: 0x020017D7 RID: 6103
 	[EnumExtensions]
 	public enum EOptionLockType
 	{
-		// Token: 0x04004CD0 RID: 19664
+		// Token: 0x040050CB RID: 20683
 		OnMotor
 	}
 }

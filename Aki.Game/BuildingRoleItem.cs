@@ -5,10 +5,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020012F2 RID: 4850
+// Token: 0x020007A6 RID: 1958
 public class BuildingRoleItem : UiPanelBase
 {
-	// Token: 0x06008627 RID: 34343 RVA: 0x001C981C File Offset: 0x001C7A1C
+	// Token: 0x060059C2 RID: 22978 RVA: 0x001D2688 File Offset: 0x001D0888
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -19,7 +19,7 @@ public class BuildingRoleItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06008628 RID: 34344 RVA: 0x001C9876 File Offset: 0x001C7A76
+	// Token: 0x060059C3 RID: 22979 RVA: 0x001D26E2 File Offset: 0x001D08E2
 	protected override void OnStart()
 	{
 		UUIItem item = base.GetItem(1);
@@ -30,7 +30,7 @@ public class BuildingRoleItem : UiPanelBase
 		item.SetUIActive(false);
 	}
 
-	// Token: 0x06008629 RID: 34345 RVA: 0x001C988C File Offset: 0x001C7A8C
+	// Token: 0x060059C4 RID: 22980 RVA: 0x001D26F8 File Offset: 0x001D08F8
 	public UniTask RefreshSpine(int roleId)
 	{
 		BuildingRoleItem.<RefreshSpine>d__3 <RefreshSpine>d__;
@@ -42,16 +42,16 @@ public class BuildingRoleItem : UiPanelBase
 		return <RefreshSpine>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x02007920 RID: 31008
+	// Token: 0x02006AAA RID: 27306
 	private static class EComponentDefine
 	{
-		// Token: 0x04027E75 RID: 163445
+		// Token: 0x040231A2 RID: 143778
 		public const int Spine = 0;
 
-		// Token: 0x04027E76 RID: 163446
+		// Token: 0x040231A3 RID: 143779
 		public const int DialogItem = 1;
 
-		// Token: 0x04027E77 RID: 163447
+		// Token: 0x040231A4 RID: 143780
 		public const int Dialog = 2;
 	}
 }

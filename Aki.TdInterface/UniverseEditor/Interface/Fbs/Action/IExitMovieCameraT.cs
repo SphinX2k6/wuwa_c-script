@@ -2,7 +2,7 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006724 RID: 26404
+	// Token: 0x02006DA4 RID: 28068
 	public class IExitMovieCameraT
 	{
 	}

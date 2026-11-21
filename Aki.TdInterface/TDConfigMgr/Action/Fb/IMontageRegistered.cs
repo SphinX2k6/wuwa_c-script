@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200288A RID: 10378
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B5F RID: 11103
 	public class IMontageRegistered : IMontageConfig
 	{
-		// Token: 0x0600E5E7 RID: 58855 RVA: 0x0021CB44 File Offset: 0x0021AD44
+		// Token: 0x0600F416 RID: 62486 RVA: 0x00239AC4 File Offset: 0x00237CC4
 		public static IMontageRegistered Create(IMontageRegistered? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004695 RID: 18069
-		// (get) Token: 0x0600E5E8 RID: 58856 RVA: 0x0021CB63 File Offset: 0x0021AD63
+		// Token: 0x17004A06 RID: 18950
+		// (get) Token: 0x0600F417 RID: 62487 RVA: 0x00239AE3 File Offset: 0x00237CE3
 		public override EMontageConfigType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004696 RID: 18070
-		// (get) Token: 0x0600E5E9 RID: 58857 RVA: 0x0021CB70 File Offset: 0x0021AD70
+		// Token: 0x17004A07 RID: 18951
+		// (get) Token: 0x0600F418 RID: 62488 RVA: 0x00239AF0 File Offset: 0x00237CF0
 		public virtual IMontageId MontageId
 		{
 			get
@@ -48,14 +46,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007F1A RID: 32538
+		// Token: 0x040085D9 RID: 34265
 		private IMontageRegistered Instance;
 
-		// Token: 0x04007F1B RID: 32539
+		// Token: 0x040085DA RID: 34266
 		[Nullable(2)]
 		private IMontageId _MontageIdCache;
 
-		// Token: 0x04007F1C RID: 32540
+		// Token: 0x040085DB RID: 34267
 		private bool _MontageIdInited;
 	}
 }

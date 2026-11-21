@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002922 RID: 10530
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002BFE RID: 11262
 	public class IPlayRegisteredMontageRender
 	{
-		// Token: 0x0600E9B5 RID: 59829 RVA: 0x002240A7 File Offset: 0x002222A7
+		// Token: 0x0600F807 RID: 63495 RVA: 0x002413FF File Offset: 0x0023F5FF
 		public static IPlayRegisteredMontageRender Create(IPlayRegisteredMontageRender? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004933 RID: 18739
-		// (get) Token: 0x0600E9B6 RID: 59830 RVA: 0x002240C6 File Offset: 0x002222C6
+		// Token: 0x17004CB9 RID: 19641
+		// (get) Token: 0x0600F808 RID: 63496 RVA: 0x0024141E File Offset: 0x0023F61E
 		public virtual int EntityId
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004934 RID: 18740
-		// (get) Token: 0x0600E9B7 RID: 59831 RVA: 0x002240D4 File Offset: 0x002222D4
+		// Token: 0x17004CBA RID: 19642
+		// (get) Token: 0x0600F809 RID: 63497 RVA: 0x0024142C File Offset: 0x0023F62C
 		public virtual bool? IsOverlayMontage
 		{
 			get
@@ -46,8 +44,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004935 RID: 18741
-		// (get) Token: 0x0600E9B8 RID: 59832 RVA: 0x0022410A File Offset: 0x0022230A
+		// Token: 0x17004CBB RID: 19643
+		// (get) Token: 0x0600F80A RID: 63498 RVA: 0x00241462 File Offset: 0x0023F662
 		public virtual IMontageId MontageId
 		{
 			get
@@ -62,8 +60,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004936 RID: 18742
-		// (get) Token: 0x0600E9B9 RID: 59833 RVA: 0x00224140 File Offset: 0x00222340
+		// Token: 0x17004CBC RID: 19644
+		// (get) Token: 0x0600F80B RID: 63499 RVA: 0x00241498 File Offset: 0x0023F698
 		public virtual int? FaceExpressionId
 		{
 			get
@@ -76,8 +74,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004937 RID: 18743
-		// (get) Token: 0x0600E9BA RID: 59834 RVA: 0x00224178 File Offset: 0x00222378
+		// Token: 0x17004CBD RID: 19645
+		// (get) Token: 0x0600F80C RID: 63500 RVA: 0x002414D0 File Offset: 0x0023F6D0
 		public virtual float? LoopDuration
 		{
 			get
@@ -90,8 +88,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004938 RID: 18744
-		// (get) Token: 0x0600E9BB RID: 59835 RVA: 0x002241B0 File Offset: 0x002223B0
+		// Token: 0x17004CBE RID: 19646
+		// (get) Token: 0x0600F80D RID: 63501 RVA: 0x00241508 File Offset: 0x0023F708
 		public virtual int? RepeatTimes
 		{
 			get
@@ -104,8 +102,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004939 RID: 18745
-		// (get) Token: 0x0600E9BC RID: 59836 RVA: 0x002241E8 File Offset: 0x002223E8
+		// Token: 0x17004CBF RID: 19647
+		// (get) Token: 0x0600F80E RID: 63502 RVA: 0x00241540 File Offset: 0x0023F740
 		public virtual bool? KeepMontageWhenEnd
 		{
 			get
@@ -118,8 +116,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700493A RID: 18746
-		// (get) Token: 0x0600E9BD RID: 59837 RVA: 0x00224220 File Offset: 0x00222420
+		// Token: 0x17004CC0 RID: 19648
+		// (get) Token: 0x0600F80F RID: 63503 RVA: 0x00241578 File Offset: 0x0023F778
 		public virtual bool? KeepMontageAfterFlow
 		{
 			get
@@ -132,14 +130,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040080F2 RID: 33010
+		// Token: 0x040087C0 RID: 34752
 		private IPlayRegisteredMontageRender Instance;
 
-		// Token: 0x040080F3 RID: 33011
+		// Token: 0x040087C1 RID: 34753
 		[Nullable(2)]
 		private IMontageId _MontageIdCache;
 
-		// Token: 0x040080F4 RID: 33012
+		// Token: 0x040087C2 RID: 34754
 		private bool _MontageIdInited;
 	}
 }

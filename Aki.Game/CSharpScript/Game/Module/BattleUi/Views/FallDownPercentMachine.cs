@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D0C RID: 23820
+	// Token: 0x02004CEE RID: 19694
 	public class FallDownPercentMachine
 	{
-		// Token: 0x0603C5D9 RID: 247257 RVA: 0x00E77044 File Offset: 0x00E75244
+		// Token: 0x06031532 RID: 202034 RVA: 0x00DC76B4 File Offset: 0x00DC58B4
 		public void SetTargetPercent(float percent)
 		{
 			if (percent == this.TargetPercent)
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.Speed = 0f;
 		}
 
-		// Token: 0x0603C5DA RID: 247258 RVA: 0x00E770A4 File Offset: 0x00E752A4
+		// Token: 0x06031533 RID: 202035 RVA: 0x00DC7714 File Offset: 0x00DC5914
 		public bool Update(float delta)
 		{
 			if (this.Speed == 0f)
@@ -39,22 +39,22 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return true;
 		}
 
-		// Token: 0x0603C5DB RID: 247259 RVA: 0x00E770FB File Offset: 0x00E752FB
+		// Token: 0x06031534 RID: 202036 RVA: 0x00DC776B File Offset: 0x00DC596B
 		public float GetCurPercent()
 		{
 			return this.CurPercent;
 		}
 
-		// Token: 0x0401F730 RID: 128816
+		// Token: 0x0401A1E9 RID: 106985
 		private const float DURATION = 100f;
 
-		// Token: 0x0401F731 RID: 128817
+		// Token: 0x0401A1EA RID: 106986
 		private float TargetPercent;
 
-		// Token: 0x0401F732 RID: 128818
+		// Token: 0x0401A1EB RID: 106987
 		private float CurPercent;
 
-		// Token: 0x0401F733 RID: 128819
+		// Token: 0x0401A1EC RID: 106988
 		private float Speed;
 	}
 }

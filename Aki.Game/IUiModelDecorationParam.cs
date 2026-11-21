@@ -2,22 +2,22 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002C71 RID: 11377
+// Token: 0x020021CA RID: 8650
 [NullableContext(1)]
 public interface IUiModelDecorationParam
 {
-	// Token: 0x17001FE5 RID: 8165
-	// (get) Token: 0x06017C38 RID: 97336
-	// (set) Token: 0x06017C39 RID: 97337
+	// Token: 0x17002036 RID: 8246
+	// (get) Token: 0x060154AA RID: 87210
+	// (set) Token: 0x060154AB RID: 87211
 	string SocketName { get; set; }
 
-	// Token: 0x17001FE6 RID: 8166
-	// (get) Token: 0x06017C3A RID: 97338
-	// (set) Token: 0x06017C3B RID: 97339
+	// Token: 0x17002037 RID: 8247
+	// (get) Token: 0x060154AC RID: 87212
+	// (set) Token: 0x060154AD RID: 87213
 	USkeletalMesh SkeletalMesh { get; set; }
 
-	// Token: 0x17001FE7 RID: 8167
-	// (get) Token: 0x06017C3C RID: 97340
-	// (set) Token: 0x06017C3D RID: 97341
+	// Token: 0x17002038 RID: 8248
+	// (get) Token: 0x060154AE RID: 87214
+	// (set) Token: 0x060154AF RID: 87215
 	FTransform Transform { get; set; }
 }

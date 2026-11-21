@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020020A6 RID: 8358
+	// Token: 0x020006B1 RID: 1713
 	public sealed class FLGUIPointerEnterExit_DynamicDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601F7FD RID: 129021 RVA: 0x002ED24C File Offset: 0x002EB44C
+		// Token: 0x060092F1 RID: 37617 RVA: 0x000DD50C File Offset: 0x000DB70C
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FLGUIPointerEnterExit_DynamicDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601F7FE RID: 129022 RVA: 0x002ED258 File Offset: 0x002EB458
+		// Token: 0x060092F2 RID: 37618 RVA: 0x000DD518 File Offset: 0x000DB718
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FLGUIPointerEnterExit_DynamicDelegate._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FLGUIPointerEnterExit_DynamicDelegate._FunctionPtr;
 		}
 
-		// Token: 0x0601F7FF RID: 129023 RVA: 0x002ED27B File Offset: 0x002EB47B
+		// Token: 0x060092F3 RID: 37619 RVA: 0x000DD53B File Offset: 0x000DB73B
 		public FLGUIPointerEnterExit_DynamicDelegate()
 		{
 		}
 
-		// Token: 0x0601F800 RID: 129024 RVA: 0x002ED283 File Offset: 0x002EB483
+		// Token: 0x060092F4 RID: 37620 RVA: 0x000DD543 File Offset: 0x000DB743
 		[NullableContext(2)]
 		public FLGUIPointerEnterExit_DynamicDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F801 RID: 129025 RVA: 0x002ED28D File Offset: 0x002EB48D
+		// Token: 0x060092F5 RID: 37621 RVA: 0x000DD54D File Offset: 0x000DB74D
 		public FLGUIPointerEnterExit_DynamicDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F802 RID: 129026 RVA: 0x002ED298 File Offset: 0x002EB498
+		// Token: 0x060092F6 RID: 37622 RVA: 0x000DD558 File Offset: 0x000DB758
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<bool>) ?? ((Action<bool>)Delegate.CreateDelegate(typeof(Action<bool>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601F803 RID: 129027 RVA: 0x002ED2CA File Offset: 0x002EB4CA
+		// Token: 0x060092F7 RID: 37623 RVA: 0x000DD58A File Offset: 0x000DB78A
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<bool> Callback)
 		{
 			if (FLGUIPointerEnterExit_DynamicDelegate.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FLGUIPointerEnterExit_DynamicDelegate.RegisterId);
 		}
 
-		// Token: 0x0601F804 RID: 129028 RVA: 0x002ED304 File Offset: 0x002EB504
+		// Token: 0x060092F8 RID: 37624 RVA: 0x000DD5C4 File Offset: 0x000DB7C4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(bool bEnter)
 		{
 			FLGUIPointerEnterExit_DynamicDelegate.__FLGUIPointerEnterExit_DynamicDelegate_DelegateParams* ptr = stackalloc FLGUIPointerEnterExit_DynamicDelegate.__FLGUIPointerEnterExit_DynamicDelegate_DelegateParams[(UIntPtr)16] + 15L / (long)sizeof(FLGUIPointerEnterExit_DynamicDelegate.__FLGUIPointerEnterExit_DynamicDelegate_DelegateParams) & -16L;
@@ -76,10 +74,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x0601F805 RID: 129029 RVA: 0x002ED344 File Offset: 0x002EB544
+		// Token: 0x060092F9 RID: 37625 RVA: 0x000DD604 File Offset: 0x000DB804
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<bool> action = target as Action<bool>;
@@ -90,31 +87,31 @@ namespace UnrealEngine
 			action(((FLGUIPointerEnterExit_DynamicDelegate.__FLGUIPointerEnterExit_DynamicDelegate_DelegateParams*)__Parameters)->bEnter);
 		}
 
-		// Token: 0x0401101F RID: 69663
+		// Token: 0x0400400E RID: 16398
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04011020 RID: 69664
+		// Token: 0x0400400F RID: 16399
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/LGUI.LGUIPointerEnterExit_DynamicDelegate__DelegateSignature";
 
-		// Token: 0x04011021 RID: 69665
+		// Token: 0x04004010 RID: 16400
 		private static int RegisterId;
 
-		// Token: 0x020034A4 RID: 13476
+		// Token: 0x02000ED8 RID: 3800
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
-		protected ref struct __FLGUIPointerEnterExit_DynamicDelegate_DelegateParams
+		private ref struct __FLGUIPointerEnterExit_DynamicDelegate_DelegateParams
 		{
-			// Token: 0x040174A7 RID: 95399
+			// Token: 0x04006298 RID: 25240
 			[FieldOffset(0)]
 			public bool bEnter;
 		}
 
-		// Token: 0x020034A5 RID: 13477
+		// Token: 0x02000ED9 RID: 3801
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040174A8 RID: 95400
+			// Token: 0x04006299 RID: 25241
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

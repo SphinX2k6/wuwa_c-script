@@ -3,36 +3,36 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.QuestMultiLine
 {
-	// Token: 0x02004FA4 RID: 20388
+	// Token: 0x02003F6D RID: 16237
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class ESpritePointPath
 	{
-		// Token: 0x0401BC05 RID: 113669
+		// Token: 0x040165DA RID: 91610
 		public const string NormalIdle = "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_TImeBtnPointNor.SP_TImeBtnPointNor";
 
-		// Token: 0x0401BC06 RID: 113670
+		// Token: 0x040165DB RID: 91611
 		public const string NormalHover = "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_TimeBtnPointHold.SP_TimeBtnPointHold";
 
-		// Token: 0x0401BC07 RID: 113671
+		// Token: 0x040165DC RID: 91612
 		public const string NormalPressed = "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_TimeBtnPointPress.SP_TimeBtnPointPress";
 
-		// Token: 0x0401BC08 RID: 113672
+		// Token: 0x040165DD RID: 91613
 		public const string NormalSelected = "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_TimeBtnPointSele.SP_TimeBtnPointSele";
 
-		// Token: 0x0401BC09 RID: 113673
+		// Token: 0x040165DE RID: 91614
 		public const string BranchIdle = "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_TimeBtnPointSubNor.SP_TimeBtnPointSubNor";
 
-		// Token: 0x0401BC0A RID: 113674
+		// Token: 0x040165DF RID: 91615
 		public const string BranchHover = "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_TimeBtnPointSubHold.SP_TimeBtnPointSubHold";
 
-		// Token: 0x0401BC0B RID: 113675
+		// Token: 0x040165E0 RID: 91616
 		public const string BranchPressed = "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_TimeBtnPointSubPress.SP_TimeBtnPointSubPress";
 
-		// Token: 0x0401BC0C RID: 113676
+		// Token: 0x040165E1 RID: 91617
 		public const string BranchSelected = "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_TimeBtnPointSubSele.SP_TimeBtnPointSubSele";
 
-		// Token: 0x0401BC0D RID: 113677
+		// Token: 0x040165E2 RID: 91618
 		public const string Lock = "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_TImeBtnPointLock.SP_TImeBtnPointLock";
 	}
 }

@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200040D RID: 1037
+	// Token: 0x02000466 RID: 1126
 	public class IHitBulletGroup_SetValue
 	{
-		// Token: 0x04001054 RID: 4180
+		// Token: 0x04001176 RID: 4470
 		public bool MatchAny;
 
-		// Token: 0x04001055 RID: 4181
-		[Nullable(1)]
+		// Token: 0x04001177 RID: 4471
 		public List<IHitBulletType> HitBullets;
 	}
 }

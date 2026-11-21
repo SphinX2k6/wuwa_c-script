@@ -4,12 +4,12 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.BattleUiSet
 {
-	// Token: 0x02005E63 RID: 24163
+	// Token: 0x02004E48 RID: 20040
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BattleUiSetPanelItemData
 	{
-		// Token: 0x0603D6D4 RID: 251604 RVA: 0x00ED1084 File Offset: 0x00ECF284
+		// Token: 0x06032664 RID: 206436 RVA: 0x00E225F4 File Offset: 0x00E207F4
 		public BattleUiSetPanelItemData(int index, in MobileBattleUiSet config)
 		{
 			MobileBattleUiSet mobileBattleUiSet = config;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.BattleUiSet
 			this.SourceHierarchyIndex = this.HierarchyIndex;
 		}
 
-		// Token: 0x0603D6D5 RID: 251605 RVA: 0x00ED11F2 File Offset: 0x00ECF3F2
+		// Token: 0x06032665 RID: 206437 RVA: 0x00E22762 File Offset: 0x00E20962
 		public void ReInit()
 		{
 			this.EditSize = this.Size;
@@ -56,19 +56,19 @@ namespace CSharpScript.Game.Module.BattleUiSet
 			this.EditOffsetY = this.OffsetY;
 		}
 
-		// Token: 0x0603D6D6 RID: 251606 RVA: 0x00ED1224 File Offset: 0x00ECF424
+		// Token: 0x06032666 RID: 206438 RVA: 0x00E22794 File Offset: 0x00E20994
 		public bool IsEdited()
 		{
 			return this.EditSize != this.Size || this.EditAlpha != this.Alpha || this.EditOffsetY != this.OffsetY || this.EditOffsetX != this.OffsetX;
 		}
 
-		// Token: 0x0603D6D7 RID: 251607 RVA: 0x00ED1263 File Offset: 0x00ECF463
+		// Token: 0x06032667 RID: 206439 RVA: 0x00E227D3 File Offset: 0x00E209D3
 		public bool IsInitialized()
 		{
 			return this.Size != 0f || this.Alpha != 0f || this.OffsetX != 0f || this.OffsetY != 0f;
 		}
 
-		// Token: 0x0603D6D8 RID: 251608 RVA: 0x00ED12A0 File Offset: 0x00ECF4A0
+		// Token: 0x06032668 RID: 206440 RVA: 0x00E22810 File Offset: 0x00E20A10
 		public string GetDebugString()
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(19, 5);
@@ -85,70 +85,70 @@ namespace CSharpScript.Game.Module.BattleUiSet
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x040200DD RID: 131293
+		// Token: 0x0401ABA4 RID: 109476
 		public readonly int PanelIndex;
 
-		// Token: 0x040200DE RID: 131294
+		// Token: 0x0401ABA5 RID: 109477
 		public readonly int PanelItemIndex;
 
-		// Token: 0x040200DF RID: 131295
+		// Token: 0x0401ABA6 RID: 109478
 		public readonly int ConfigId;
 
-		// Token: 0x040200E0 RID: 131296
+		// Token: 0x0401ABA7 RID: 109479
 		public float Size;
 
-		// Token: 0x040200E1 RID: 131297
+		// Token: 0x0401ABA8 RID: 109480
 		public float EditSize;
 
-		// Token: 0x040200E2 RID: 131298
+		// Token: 0x0401ABA9 RID: 109481
 		public readonly float SourceSize;
 
-		// Token: 0x040200E3 RID: 131299
+		// Token: 0x0401ABAA RID: 109482
 		public float Alpha;
 
-		// Token: 0x040200E4 RID: 131300
+		// Token: 0x0401ABAB RID: 109483
 		public float EditAlpha;
 
-		// Token: 0x040200E5 RID: 131301
+		// Token: 0x0401ABAC RID: 109484
 		public readonly float SourceAlpha;
 
-		// Token: 0x040200E6 RID: 131302
+		// Token: 0x0401ABAD RID: 109485
 		public float OffsetX;
 
-		// Token: 0x040200E7 RID: 131303
+		// Token: 0x0401ABAE RID: 109486
 		public float EditOffsetX;
 
-		// Token: 0x040200E8 RID: 131304
+		// Token: 0x0401ABAF RID: 109487
 		public readonly float SourceOffsetX;
 
-		// Token: 0x040200E9 RID: 131305
+		// Token: 0x0401ABB0 RID: 109488
 		public float OffsetY;
 
-		// Token: 0x040200EA RID: 131306
+		// Token: 0x0401ABB1 RID: 109489
 		public float EditOffsetY;
 
-		// Token: 0x040200EB RID: 131307
+		// Token: 0x0401ABB2 RID: 109490
 		public readonly float SourceOffsetY;
 
-		// Token: 0x040200EC RID: 131308
+		// Token: 0x0401ABB3 RID: 109491
 		private readonly string Name;
 
-		// Token: 0x040200ED RID: 131309
+		// Token: 0x0401ABB4 RID: 109492
 		public int HierarchyIndex;
 
-		// Token: 0x040200EE RID: 131310
+		// Token: 0x0401ABB5 RID: 109493
 		public int EditorHierarchyIndex;
 
-		// Token: 0x040200EF RID: 131311
+		// Token: 0x0401ABB6 RID: 109494
 		public int SourceHierarchyIndex;
 
-		// Token: 0x040200F0 RID: 131312
+		// Token: 0x0401ABB7 RID: 109495
 		public readonly bool CanEdit;
 
-		// Token: 0x040200F1 RID: 131313
+		// Token: 0x0401ABB8 RID: 109496
 		public readonly bool IsDefaultSelected;
 
-		// Token: 0x040200F2 RID: 131314
+		// Token: 0x0401ABB9 RID: 109497
 		public readonly bool IsCheckOverlap;
 	}
 }

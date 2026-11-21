@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002BBA RID: 11194
+// Token: 0x02002135 RID: 8501
 public enum ETimeOfDaySecondToggleItem
 {
-	// Token: 0x0400ADD8 RID: 44504
+	// Token: 0x0400B1DD RID: 45533
 	Toggle,
-	// Token: 0x0400ADD9 RID: 44505
+	// Token: 0x0400B1DE RID: 45534
 	ToggleText
 }

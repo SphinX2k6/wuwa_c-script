@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001E6 RID: 486
+	// Token: 0x0200020F RID: 527
 	public class IBaseRoleNpcPerform_SetValue
 	{
-		// Token: 0x040008D5 RID: 2261
+		// Token: 0x04000966 RID: 2406
 		public ESpecialNpcType Type;
 	}
 }

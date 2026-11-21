@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.Module.RoleDev
 {
-	// Token: 0x02004CBA RID: 19642
+	// Token: 0x02003C6B RID: 15467
 	public interface IItemMaterial
 	{
-		// Token: 0x17007D1D RID: 32029
-		// (get) Token: 0x06032B7D RID: 207741
-		// (set) Token: 0x06032B7E RID: 207742
+		// Token: 0x170050C7 RID: 20679
+		// (get) Token: 0x06027931 RID: 162097
+		// (set) Token: 0x06027932 RID: 162098
 		int ItemId { get; set; }
 
-		// Token: 0x17007D1E RID: 32030
-		// (get) Token: 0x06032B7F RID: 207743
-		// (set) Token: 0x06032B80 RID: 207744
+		// Token: 0x170050C8 RID: 20680
+		// (get) Token: 0x06027933 RID: 162099
+		// (set) Token: 0x06027934 RID: 162100
 		int RequiredCount { get; set; }
 	}
 }

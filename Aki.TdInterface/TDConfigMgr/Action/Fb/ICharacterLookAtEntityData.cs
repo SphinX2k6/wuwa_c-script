@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200262A RID: 9770
+	// Token: 0x020028EA RID: 10474
 	public class ICharacterLookAtEntityData : ICharacterLookAtData
 	{
-		// Token: 0x0600DB48 RID: 56136 RVA: 0x0020A666 File Offset: 0x00208866
-		[NullableContext(1)]
+		// Token: 0x0600E916 RID: 59670 RVA: 0x00226E32 File Offset: 0x00225032
 		public static ICharacterLookAtEntityData Create(ICharacterLookAtEntityData? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170040B6 RID: 16566
-		// (get) Token: 0x0600DB49 RID: 56137 RVA: 0x0020A685 File Offset: 0x00208885
+		// Token: 0x170043F0 RID: 17392
+		// (get) Token: 0x0600E917 RID: 59671 RVA: 0x00226E51 File Offset: 0x00225051
 		public override ECharacterLookAt Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170040B7 RID: 16567
-		// (get) Token: 0x0600DB4A RID: 56138 RVA: 0x0020A692 File Offset: 0x00208892
+		// Token: 0x170043F1 RID: 17393
+		// (get) Token: 0x0600E918 RID: 59672 RVA: 0x00226E5E File Offset: 0x0022505E
 		public virtual int EntityId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040079D0 RID: 31184
+		// Token: 0x0400806C RID: 32876
 		private ICharacterLookAtEntityData Instance;
 	}
 }

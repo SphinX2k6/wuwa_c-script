@@ -12,17 +12,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200127C RID: 4732
+// Token: 0x02000730 RID: 1840
 [NullableContext(1)]
 [Nullable(0)]
 public class FightPhotoMainView : UiTickViewBase
 {
-	// Token: 0x06008111 RID: 33041 RVA: 0x001B5860 File Offset: 0x001B3A60
+	// Token: 0x060054A8 RID: 21672 RVA: 0x001BE530 File Offset: 0x001BC730
 	public FightPhotoMainView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06008112 RID: 33042 RVA: 0x001B587C File Offset: 0x001B3A7C
+	// Token: 0x060054A9 RID: 21673 RVA: 0x001BE54C File Offset: 0x001BC74C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -64,7 +64,7 @@ public class FightPhotoMainView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x06008113 RID: 33043 RVA: 0x001B5B64 File Offset: 0x001B3D64
+	// Token: 0x060054AA RID: 21674 RVA: 0x001BE834 File Offset: 0x001BCA34
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FightPhotoMainView.<OnBeforeStartAsync>d__17 <OnBeforeStartAsync>d__;
@@ -75,7 +75,7 @@ public class FightPhotoMainView : UiTickViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008114 RID: 33044 RVA: 0x001B5BA8 File Offset: 0x001B3DA8
+	// Token: 0x060054AB RID: 21675 RVA: 0x001BE878 File Offset: 0x001BCA78
 	protected override void OnStart()
 	{
 		UUIItem item = base.GetItem(5);
@@ -97,13 +97,13 @@ public class FightPhotoMainView : UiTickViewBase
 		this.NoCircleAttachView.ReloadView(levelGroupDataList.Count, levelGroupDataList.ToArray(), selectLevelGroupDataIndex);
 	}
 
-	// Token: 0x06008115 RID: 33045 RVA: 0x001B5CC1 File Offset: 0x001B3EC1
+	// Token: 0x060054AC RID: 21676 RVA: 0x001BE991 File Offset: 0x001BCB91
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnRefreshFightPhotoLevelRedDot, new Action(this.OnRefreshFightPhotoLevelRedDot));
 	}
 
-	// Token: 0x06008116 RID: 33046 RVA: 0x001B5CE0 File Offset: 0x001B3EE0
+	// Token: 0x060054AD RID: 21677 RVA: 0x001BE9B0 File Offset: 0x001BCBB0
 	protected override void OnBeforeShow()
 	{
 		SplashScreenController.Instance.FinishCurTask(ESplashScreenSourceModuleType.None);
@@ -151,7 +151,7 @@ public class FightPhotoMainView : UiTickViewBase
 		item.SetUIActive(this.ActivityData.IsTaskHasRedDot());
 	}
 
-	// Token: 0x06008117 RID: 33047 RVA: 0x001B5DF7 File Offset: 0x001B3FF7
+	// Token: 0x060054AE RID: 21678 RVA: 0x001BEAC7 File Offset: 0x001BCCC7
 	protected override void OnAfterShow()
 	{
 		if (this.ActivityData.IsNeedShowTip)
@@ -161,7 +161,7 @@ public class FightPhotoMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06008118 RID: 33048 RVA: 0x001B5E28 File Offset: 0x001B4028
+	// Token: 0x060054AF RID: 21679 RVA: 0x001BEAF8 File Offset: 0x001BCCF8
 	protected override void OnTick(float delta)
 	{
 		if (this.CurrentLevelGroupData == null)
@@ -186,7 +186,7 @@ public class FightPhotoMainView : UiTickViewBase
 		text2.SetText(newText, true);
 	}
 
-	// Token: 0x06008119 RID: 33049 RVA: 0x001B5EAC File Offset: 0x001B40AC
+	// Token: 0x060054B0 RID: 21680 RVA: 0x001BEB7C File Offset: 0x001BCD7C
 	private void RefreshView(FightPhotoLevelGroupData data)
 	{
 		UUIItem item = base.GetItem(10);
@@ -228,7 +228,7 @@ public class FightPhotoMainView : UiTickViewBase
 		}, false);
 	}
 
-	// Token: 0x0600811A RID: 33050 RVA: 0x001B5FE4 File Offset: 0x001B41E4
+	// Token: 0x060054B1 RID: 21681 RVA: 0x001BECB4 File Offset: 0x001BCEB4
 	private void RefreshRightPanel(FightPhotoLevelData levelData)
 	{
 		if (this.CurrentLevelData != null)
@@ -277,19 +277,19 @@ public class FightPhotoMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600811B RID: 33051 RVA: 0x001B6146 File Offset: 0x001B4346
+	// Token: 0x060054B2 RID: 21682 RVA: 0x001BEE16 File Offset: 0x001BD016
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnRefreshFightPhotoLevelRedDot, new Action(this.OnRefreshFightPhotoLevelRedDot));
 	}
 
-	// Token: 0x0600811C RID: 33052 RVA: 0x001B6164 File Offset: 0x001B4364
+	// Token: 0x060054B3 RID: 21683 RVA: 0x001BEE34 File Offset: 0x001BD034
 	protected override void OnBeforeDestroy()
 	{
 		InstanceDungeonEntranceModel.Instance.SelectInstanceId = 0;
 	}
 
-	// Token: 0x0600811D RID: 33053 RVA: 0x001B6174 File Offset: 0x001B4374
+	// Token: 0x060054B4 RID: 21684 RVA: 0x001BEE44 File Offset: 0x001BD044
 	private FightPhotoLevelGroupItem CreateNoCircleAttachItem(AActor actor, int index, int showNum)
 	{
 		FightPhotoLevelGroupItem fightPhotoLevelGroupItem = new FightPhotoLevelGroupItem(actor);
@@ -300,7 +300,7 @@ public class FightPhotoMainView : UiTickViewBase
 		return fightPhotoLevelGroupItem;
 	}
 
-	// Token: 0x0600811E RID: 33054 RVA: 0x001B61CB File Offset: 0x001B43CB
+	// Token: 0x060054B5 RID: 21685 RVA: 0x001BEE9B File Offset: 0x001BD09B
 	private void OnItemClick(int index, FightPhotoLevelGroupData data)
 	{
 		if (this.NoCircleAttachView.IsVelocityMoveState())
@@ -314,7 +314,7 @@ public class FightPhotoMainView : UiTickViewBase
 		this.NoCircleAttachView.AttachToIndex(index, false);
 	}
 
-	// Token: 0x0600811F RID: 33055 RVA: 0x001B61EC File Offset: 0x001B43EC
+	// Token: 0x060054B6 RID: 21686 RVA: 0x001BEEBC File Offset: 0x001BD0BC
 	private void OnItemSelectCallback(int index, FightPhotoLevelGroupData data)
 	{
 		if (this.SelectedIndex != -1 && this.SelectedIndex != index)
@@ -330,13 +330,13 @@ public class FightPhotoMainView : UiTickViewBase
 		this.NoCircleAttachView.GetCurrentSelectItem().GetRootItem().SetHierarchyIndex(this.NoCircleAttachView.GetDataLength() + 1);
 	}
 
-	// Token: 0x06008120 RID: 33056 RVA: 0x001B626C File Offset: 0x001B446C
+	// Token: 0x060054B7 RID: 21687 RVA: 0x001BEF3C File Offset: 0x001BD13C
 	private bool CheckToggleCanClick()
 	{
 		return !this.IsQuickRoleSelectViewOpen && !this.NoCircleAttachView.MovingState();
 	}
 
-	// Token: 0x06008121 RID: 33057 RVA: 0x001B6286 File Offset: 0x001B4486
+	// Token: 0x060054B8 RID: 21688 RVA: 0x001BEF56 File Offset: 0x001BD156
 	private FightPhotoLevelItem CreateLevelItem()
 	{
 		return new FightPhotoLevelItem
@@ -346,13 +346,13 @@ public class FightPhotoMainView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x06008122 RID: 33058 RVA: 0x001B62B1 File Offset: 0x001B44B1
+	// Token: 0x060054B9 RID: 21689 RVA: 0x001BEF81 File Offset: 0x001BD181
 	private bool CheckLevelToggleCanClick()
 	{
 		return !this.IsQuickRoleSelectViewOpen;
 	}
 
-	// Token: 0x06008123 RID: 33059 RVA: 0x001B62BC File Offset: 0x001B44BC
+	// Token: 0x060054BA RID: 21690 RVA: 0x001BEF8C File Offset: 0x001BD18C
 	private void OnLevelItemClick(FightPhotoLevelData data)
 	{
 		base.PlaySequence("InfoSwitch", null, false);
@@ -361,13 +361,13 @@ public class FightPhotoMainView : UiTickViewBase
 		this.RefreshRightPanel(data);
 	}
 
-	// Token: 0x06008124 RID: 33060 RVA: 0x001B62EF File Offset: 0x001B44EF
+	// Token: 0x060054BB RID: 21691 RVA: 0x001BEFBF File Offset: 0x001BD1BF
 	private FightPhotoTaskTargetItem CreateTaskTargetItem()
 	{
 		return new FightPhotoTaskTargetItem();
 	}
 
-	// Token: 0x06008125 RID: 33061 RVA: 0x001B62F6 File Offset: 0x001B44F6
+	// Token: 0x060054BC RID: 21692 RVA: 0x001BEFC6 File Offset: 0x001BD1C6
 	private FightPhotoRoleItem CreateRoleItem()
 	{
 		return new FightPhotoRoleItem
@@ -376,7 +376,7 @@ public class FightPhotoMainView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x06008126 RID: 33062 RVA: 0x001B6310 File Offset: 0x001B4510
+	// Token: 0x060054BD RID: 21693 RVA: 0x001BEFE0 File Offset: 0x001BD1E0
 	private unsafe void OnRoleBtnClick(int index)
 	{
 		if (UiManager.Instance.IsViewOpen(EUiViewName.QuickRoleSelectView))
@@ -425,7 +425,7 @@ public class FightPhotoMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06008127 RID: 33063 RVA: 0x001B6456 File Offset: 0x001B4656
+	// Token: 0x060054BE RID: 21694 RVA: 0x001BF126 File Offset: 0x001BD326
 	private void SetLevelSwitchLock(bool locked)
 	{
 		this.IsQuickRoleSelectViewOpen = locked;
@@ -451,7 +451,7 @@ public class FightPhotoMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06008128 RID: 33064 RVA: 0x001B6484 File Offset: 0x001B4684
+	// Token: 0x060054BF RID: 21695 RVA: 0x001BF154 File Offset: 0x001BD354
 	private void OnQuickSelectConfirm(int[] roleIdList)
 	{
 		List<int> list = new List<int>(roleIdList);
@@ -463,7 +463,7 @@ public class FightPhotoMainView : UiTickViewBase
 		this.RoleLayout.RefreshByData(this.CurrentRoleList, null, false);
 	}
 
-	// Token: 0x06008129 RID: 33065 RVA: 0x001B64C4 File Offset: 0x001B46C4
+	// Token: 0x060054C0 RID: 21696 RVA: 0x001BF194 File Offset: 0x001BD394
 	private bool CanConfirm(int[] roleIdList)
 	{
 		if (roleIdList.Length == 0)
@@ -502,7 +502,7 @@ public class FightPhotoMainView : UiTickViewBase
 		return true;
 	}
 
-	// Token: 0x0600812A RID: 33066 RVA: 0x001B65C4 File Offset: 0x001B47C4
+	// Token: 0x060054C1 RID: 21697 RVA: 0x001BF294 File Offset: 0x001BD494
 	private string GetRoleSelectedViewTip()
 	{
 		if (this.CurrentLevelData.IsFinished)
@@ -516,7 +516,7 @@ public class FightPhotoMainView : UiTickViewBase
 		});
 	}
 
-	// Token: 0x0600812B RID: 33067 RVA: 0x001B6638 File Offset: 0x001B4838
+	// Token: 0x060054C2 RID: 21698 RVA: 0x001BF308 File Offset: 0x001BD508
 	private void OnGotoBtnClick()
 	{
 		if (GameModeModel.Instance.IsMulti)
@@ -528,25 +528,25 @@ public class FightPhotoMainView : UiTickViewBase
 		FightPhotoController.Instance.EnterFightPhotoDungeonDirectly(this.ActivityData.Id, this.CurrentLevelData.LevelId, this.CurrentLevelData.InstanceId, this.CurrentRoleList.ToArray()).Forget();
 	}
 
-	// Token: 0x0600812C RID: 33068 RVA: 0x001B66BB File Offset: 0x001B48BB
+	// Token: 0x060054C3 RID: 21699 RVA: 0x001BF38B File Offset: 0x001BD58B
 	private void OnRefreshFightPhotoLevelRedDot()
 	{
 		this.NoCircleAttachView.GetCurrentSelectItem().RefreshRedDot();
 	}
 
-	// Token: 0x0600812D RID: 33069 RVA: 0x001B66CD File Offset: 0x001B48CD
+	// Token: 0x060054C4 RID: 21700 RVA: 0x001BF39D File Offset: 0x001BD59D
 	private void OnRewardBtnClick()
 	{
 		UiManager.Instance.OpenView(EUiViewName.FightPhotoRewardView, this.ActivityData, null);
 	}
 
-	// Token: 0x0600812E RID: 33070 RVA: 0x001B66E5 File Offset: 0x001B48E5
+	// Token: 0x060054C5 RID: 21701 RVA: 0x001BF3B5 File Offset: 0x001BD5B5
 	private void OnCloseBtnClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600812F RID: 33071 RVA: 0x001B66F0 File Offset: 0x001B48F0
+	// Token: 0x060054C6 RID: 21702 RVA: 0x001BF3C0 File Offset: 0x001BD5C0
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -571,42 +571,42 @@ public class FightPhotoMainView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x04003A86 RID: 14982
+	// Token: 0x04003B1E RID: 15134
 	private const int TEAM_MAX_NUMBER = 3;
 
-	// Token: 0x04003A87 RID: 14983
+	// Token: 0x04003B1F RID: 15135
 	[Nullable(2)]
 	private FightPhotoActivityData ActivityData;
 
-	// Token: 0x04003A88 RID: 14984
+	// Token: 0x04003B20 RID: 15136
 	[Nullable(2)]
 	private FightPhotoLevelGroupData CurrentLevelGroupData;
 
-	// Token: 0x04003A89 RID: 14985
+	// Token: 0x04003B21 RID: 15137
 	[Nullable(2)]
 	private FightPhotoLevelData CurrentLevelData;
 
-	// Token: 0x04003A8A RID: 14986
+	// Token: 0x04003B22 RID: 15138
 	private List<int> CurrentRoleList = new List<int>();
 
-	// Token: 0x04003A8B RID: 14987
+	// Token: 0x04003B23 RID: 15139
 	private bool IsCurrentLevelGroupUnlock;
 
-	// Token: 0x04003A8C RID: 14988
+	// Token: 0x04003B24 RID: 15140
 	private bool IsQuickRoleSelectViewOpen;
 
-	// Token: 0x04003A8D RID: 14989
+	// Token: 0x04003B25 RID: 15141
 	private int SelectedIndex = -1;
 
-	// Token: 0x04003A8E RID: 14990
+	// Token: 0x04003B26 RID: 15142
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04003A8F RID: 14991
+	// Token: 0x04003B27 RID: 15143
 	[Nullable(2)]
 	private FunctionalPanelConditionLock PanelLock;
 
-	// Token: 0x04003A90 RID: 14992
+	// Token: 0x04003B28 RID: 15144
 	[Nullable(new byte[]
 	{
 		2,
@@ -615,7 +615,7 @@ public class FightPhotoMainView : UiTickViewBase
 	})]
 	private NoCircleAttachView<FightPhotoLevelGroupData, FightPhotoLevelGroupItem> NoCircleAttachView;
 
-	// Token: 0x04003A91 RID: 14993
+	// Token: 0x04003B29 RID: 15145
 	[Nullable(new byte[]
 	{
 		2,
@@ -624,7 +624,7 @@ public class FightPhotoMainView : UiTickViewBase
 	})]
 	private GenericLayout<FightPhotoLevelItem, FightPhotoLevelData> LevelLayout;
 
-	// Token: 0x04003A92 RID: 14994
+	// Token: 0x04003B2A RID: 15146
 	[Nullable(new byte[]
 	{
 		2,
@@ -633,7 +633,7 @@ public class FightPhotoMainView : UiTickViewBase
 	})]
 	private GenericLayout<FightPhotoTaskTargetItem, string> TaskTargetLayout;
 
-	// Token: 0x04003A93 RID: 14995
+	// Token: 0x04003B2B RID: 15147
 	[Nullable(new byte[]
 	{
 		2,
@@ -641,67 +641,67 @@ public class FightPhotoMainView : UiTickViewBase
 	})]
 	private GenericLayout<FightPhotoRoleItem, int> RoleLayout;
 
-	// Token: 0x02007890 RID: 30864
+	// Token: 0x02006A1B RID: 27163
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x04027B82 RID: 162690
+		// Token: 0x04022EB3 RID: 143027
 		ItemCaption,
-		// Token: 0x04027B83 RID: 162691
+		// Token: 0x04022EB4 RID: 143028
 		TextureRole,
-		// Token: 0x04027B84 RID: 162692
+		// Token: 0x04022EB5 RID: 143029
 		TextName,
-		// Token: 0x04027B85 RID: 162693
+		// Token: 0x04022EB6 RID: 143030
 		TextureLastRoleAni,
-		// Token: 0x04027B86 RID: 162694
+		// Token: 0x04022EB7 RID: 143031
 		TextLastNameAni,
-		// Token: 0x04027B87 RID: 162695
+		// Token: 0x04022EB8 RID: 143032
 		ItemDrag,
-		// Token: 0x04027B88 RID: 162696
+		// Token: 0x04022EB9 RID: 143033
 		ItemLevelGroupContent,
-		// Token: 0x04027B89 RID: 162697
+		// Token: 0x04022EBA RID: 143034
 		ItemLevelGroup,
-		// Token: 0x04027B8A RID: 162698
+		// Token: 0x04022EBB RID: 143035
 		BtnReward,
-		// Token: 0x04027B8B RID: 162699
+		// Token: 0x04022EBC RID: 143036
 		TextLevelGName,
-		// Token: 0x04027B8C RID: 162700
+		// Token: 0x04022EBD RID: 143037
 		ItemLockPanel,
-		// Token: 0x04027B8D RID: 162701
+		// Token: 0x04022EBE RID: 143038
 		ItemUnlockPanel,
-		// Token: 0x04027B8E RID: 162702
+		// Token: 0x04022EBF RID: 143039
 		LayoutLevel,
-		// Token: 0x04027B8F RID: 162703
+		// Token: 0x04022EC0 RID: 143040
 		ItemContent,
-		// Token: 0x04027B90 RID: 162704
+		// Token: 0x04022EC1 RID: 143041
 		TextTargetRole,
-		// Token: 0x04027B91 RID: 162705
+		// Token: 0x04022EC2 RID: 143042
 		LayoutTaskTarget,
-		// Token: 0x04027B92 RID: 162706
+		// Token: 0x04022EC3 RID: 143043
 		ItemTaskTarget,
-		// Token: 0x04027B93 RID: 162707
+		// Token: 0x04022EC4 RID: 143044
 		LayoutRole,
-		// Token: 0x04027B94 RID: 162708
+		// Token: 0x04022EC5 RID: 143045
 		ItemRole,
-		// Token: 0x04027B95 RID: 162709
+		// Token: 0x04022EC6 RID: 143046
 		BtnGoto,
-		// Token: 0x04027B96 RID: 162710
+		// Token: 0x04022EC7 RID: 143047
 		ItemRedPoint,
-		// Token: 0x04027B97 RID: 162711
+		// Token: 0x04022EC8 RID: 143048
 		TextReward,
-		// Token: 0x04027B98 RID: 162712
+		// Token: 0x04022EC9 RID: 143049
 		ArtTextReward1,
-		// Token: 0x04027B99 RID: 162713
+		// Token: 0x04022ECA RID: 143050
 		ArtTextReward2,
-		// Token: 0x04027B9A RID: 162714
+		// Token: 0x04022ECB RID: 143051
 		ArtTextReward3,
-		// Token: 0x04027B9B RID: 162715
+		// Token: 0x04022ECC RID: 143052
 		ArtTextReward4,
-		// Token: 0x04027B9C RID: 162716
+		// Token: 0x04022ECD RID: 143053
 		ItemLockTip,
-		// Token: 0x04027B9D RID: 162717
+		// Token: 0x04022ECE RID: 143054
 		TextLock,
-		// Token: 0x04027B9E RID: 162718
+		// Token: 0x04022ECF RID: 143055
 		TextureLastRole
 	}
 }

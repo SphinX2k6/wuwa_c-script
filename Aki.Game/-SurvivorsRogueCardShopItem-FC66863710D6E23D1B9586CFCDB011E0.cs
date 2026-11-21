@@ -1,26 +1,26 @@
 ﻿using System;
 
-// Token: 0x02002AD5 RID: 10965
+// Token: 0x02002051 RID: 8273
 internal enum <SurvivorsRogueCardShopItem>FC66863710D6E23D1B9586CFCDB011E026B43F64D5F9718D79944177AFEC84E9F__EComponents
 {
-	// Token: 0x0400A981 RID: 43393
+	// Token: 0x0400AD87 RID: 44423
 	CardItem,
-	// Token: 0x0400A982 RID: 43394
+	// Token: 0x0400AD88 RID: 44424
 	BtnPurchase,
-	// Token: 0x0400A983 RID: 43395
+	// Token: 0x0400AD89 RID: 44425
 	PanelLv,
-	// Token: 0x0400A984 RID: 43396
+	// Token: 0x0400AD8A RID: 44426
 	VerticalLvLayout,
-	// Token: 0x0400A985 RID: 43397
+	// Token: 0x0400AD8B RID: 44427
 	LvNode,
-	// Token: 0x0400A986 RID: 43398
+	// Token: 0x0400AD8C RID: 44428
 	LvArrowItem,
-	// Token: 0x0400A987 RID: 43399
+	// Token: 0x0400AD8D RID: 44429
 	PurchasedItem,
-	// Token: 0x0400A988 RID: 43400
+	// Token: 0x0400AD8E RID: 44430
 	PurchasedMask,
-	// Token: 0x0400A989 RID: 43401
+	// Token: 0x0400AD8F RID: 44431
 	PanelArrow,
-	// Token: 0x0400A98A RID: 43402
+	// Token: 0x0400AD90 RID: 44432
 	NiagaraEffect
 }

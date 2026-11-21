@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000478 RID: 1144
+	// Token: 0x0200048E RID: 1166
 	public class ConfigKSCBuffById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001ADA RID: 6874 RVA: 0x000F12C3 File Offset: 0x000EF4C3
+		// Token: 0x06001B5E RID: 7006 RVA: 0x000F7A17 File Offset: 0x000F5C17
 		static ConfigKSCBuffById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigKSCBuffById.CreateStaticDefaultValue), new Action(ConfigKSCBuffById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001ADB RID: 6875 RVA: 0x000F12E4 File Offset: 0x000EF4E4
+		// Token: 0x06001B5F RID: 7007 RVA: 0x000F7A38 File Offset: 0x000F5C38
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigKSCBuffById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001ADC RID: 6876 RVA: 0x000F1363 File Offset: 0x000EF563
+		// Token: 0x06001B60 RID: 7008 RVA: 0x000F7AB7 File Offset: 0x000F5CB7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigKSCBuffById.LogPair = null;
 			ConfigKSCBuffById.HandleId = 0;
 		}
 
-		// Token: 0x06001ADD RID: 6877 RVA: 0x000F1371 File Offset: 0x000EF571
+		// Token: 0x06001B61 RID: 7009 RVA: 0x000F7AC5 File Offset: 0x000F5CC5
 		public static void Init()
 		{
 			ConfigKSCBuffById.HandleId = ConfigCommon.InitDataStatement(ConfigKSCBuffById.HandleId, "db_tdbuff.db", "select BinData from `KSCBuff` where Id=?");
 		}
 
-		// Token: 0x06001ADE RID: 6878 RVA: 0x000F138C File Offset: 0x000EF58C
+		// Token: 0x06001B62 RID: 7010 RVA: 0x000F7AE0 File Offset: 0x000F5CE0
 		public static KSCBuff? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigKSCBuffById.HandleId, ConfigKSCBuffById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new KSCBuff?(rootAsKSCBuff);
 		}
 
-		// Token: 0x04001F2C RID: 7980
+		// Token: 0x04001FC6 RID: 8134
 		private const string DB = "db_tdbuff.db";
 
-		// Token: 0x04001F2D RID: 7981
+		// Token: 0x04001FC7 RID: 8135
 		private const string FILE = "s.SimpleCombatBuff.xlsx";
 
-		// Token: 0x04001F2E RID: 7982
+		// Token: 0x04001FC8 RID: 8136
 		private const string TABLE = "KSCBuff";
 
-		// Token: 0x04001F2F RID: 7983
+		// Token: 0x04001FC9 RID: 8137
 		private const string COMMAND = "select BinData from `KSCBuff` where Id=?";
 
-		// Token: 0x04001F30 RID: 7984
+		// Token: 0x04001FCA RID: 8138
 		private const string KEY_PREFIX = "KSCBuffById";
 
-		// Token: 0x04001F31 RID: 7985
+		// Token: 0x04001FCB RID: 8139
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001F32 RID: 7986
+		// Token: 0x04001FCC RID: 8140
 		private static int HandleId;
 	}
 }

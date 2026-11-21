@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002945 RID: 10565
+	// Token: 0x02002C27 RID: 11303
 	public class IDisableSkillOperation : ISkillOperationType
 	{
-		// Token: 0x0600EA4B RID: 59979 RVA: 0x00224F65 File Offset: 0x00223165
-		[NullableContext(1)]
+		// Token: 0x0600F8B6 RID: 63670 RVA: 0x00242545 File Offset: 0x00240745
 		public static IDisableSkillOperation Create(IDisableSkillOperation? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004983 RID: 18819
-		// (get) Token: 0x0600EA4C RID: 59980 RVA: 0x00224F84 File Offset: 0x00223184
+		// Token: 0x17004D16 RID: 19734
+		// (get) Token: 0x0600F8B7 RID: 63671 RVA: 0x00242564 File Offset: 0x00240764
 		public override ESkillOperationType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004984 RID: 18820
-		// (get) Token: 0x0600EA4D RID: 59981 RVA: 0x00224F94 File Offset: 0x00223194
+		// Token: 0x17004D17 RID: 19735
+		// (get) Token: 0x0600F8B8 RID: 63672 RVA: 0x00242574 File Offset: 0x00240774
 		public virtual EDisplayModeInSkillOp? DisplayMode
 		{
 			get
@@ -45,8 +43,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004985 RID: 18821
-		// (get) Token: 0x0600EA4E RID: 59982 RVA: 0x00224FCC File Offset: 0x002231CC
+		// Token: 0x17004D18 RID: 19736
+		// (get) Token: 0x0600F8B9 RID: 63673 RVA: 0x002425AC File Offset: 0x002407AC
 		public virtual bool? DisableSkillWheel
 		{
 			get
@@ -59,7 +57,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400812F RID: 33071
+		// Token: 0x0400880B RID: 34827
 		private IDisableSkillOperation Instance;
 	}
 }

@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006DFC RID: 28156
+	// Token: 0x02007577 RID: 30071
 	public class IQuestBranchConfigT
 	{
-		// Token: 0x1700D1DC RID: 53724
-		// (get) Token: 0x06031BD5 RID: 203733 RVA: 0x006BC0A0 File Offset: 0x006BA2A0
-		// (set) Token: 0x06031BD6 RID: 203734 RVA: 0x006BC0A8 File Offset: 0x006BA2A8
+		// Token: 0x1700DD24 RID: 56612
+		// (get) Token: 0x06034BD1 RID: 216017 RVA: 0x00717788 File Offset: 0x00715988
+		// (set) Token: 0x06034BD2 RID: 216018 RVA: 0x00717790 File Offset: 0x00715990
 		public bool EnableAnimation { get; set; }
 
-		// Token: 0x1700D1DD RID: 53725
-		// (get) Token: 0x06031BD7 RID: 203735 RVA: 0x006BC0B1 File Offset: 0x006BA2B1
-		// (set) Token: 0x06031BD8 RID: 203736 RVA: 0x006BC0B9 File Offset: 0x006BA2B9
+		// Token: 0x1700DD25 RID: 56613
+		// (get) Token: 0x06034BD3 RID: 216019 RVA: 0x00717799 File Offset: 0x00715999
+		// (set) Token: 0x06034BD4 RID: 216020 RVA: 0x007177A1 File Offset: 0x007159A1
 		public byte NullMask { get; set; }
 
-		// Token: 0x06031BD9 RID: 203737 RVA: 0x006BC0C2 File Offset: 0x006BA2C2
+		// Token: 0x06034BD5 RID: 216021 RVA: 0x007177AA File Offset: 0x007159AA
 		public IQuestBranchConfigT()
 		{
 			this.EnableAnimation = false;

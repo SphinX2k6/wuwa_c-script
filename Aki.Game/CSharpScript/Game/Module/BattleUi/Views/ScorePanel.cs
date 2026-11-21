@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CCA RID: 23754
+	// Token: 0x02004CAC RID: 19628
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ScorePanel : BattleChildViewPanel
 	{
-		// Token: 0x0603C110 RID: 246032 RVA: 0x00E5F068 File Offset: 0x00E5D268
+		// Token: 0x06031065 RID: 200805 RVA: 0x00DAF5BC File Offset: 0x00DAD7BC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C111 RID: 246033 RVA: 0x00E5F0B0 File Offset: 0x00E5D2B0
+		// Token: 0x06031066 RID: 200806 RVA: 0x00DAF604 File Offset: 0x00DAD804
 		public override UniTask InitializeAsync()
 		{
 			ScorePanel.<InitializeAsync>d__7 <InitializeAsync>d__;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitializeAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C112 RID: 246034 RVA: 0x00E5F0F3 File Offset: 0x00E5D2F3
+		// Token: 0x06031067 RID: 200807 RVA: 0x00DAF647 File Offset: 0x00DAD847
 		public override void Reset()
 		{
 			this.ScoreItemList.Clear();
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.Reset();
 		}
 
-		// Token: 0x0603C113 RID: 246035 RVA: 0x00E5F114 File Offset: 0x00E5D314
+		// Token: 0x06031068 RID: 200808 RVA: 0x00DAF668 File Offset: 0x00DAD868
 		protected override void OnBeforeDestroyImplement()
 		{
 			this.ScoreItemList.Clear();
@@ -56,19 +56,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.FarmGoldScoreItem = null;
 		}
 
-		// Token: 0x0603C114 RID: 246036 RVA: 0x00E5F12F File Offset: 0x00E5D32F
+		// Token: 0x06031069 RID: 200809 RVA: 0x00DAF683 File Offset: 0x00DAD883
 		protected override void AddEvents()
 		{
 			EventSystem.Instance.Add<int, bool>(EEventName.BattleScoreEnableChanged, new Action<int, bool>(this.OnBattleScoreEnableChanged));
 		}
 
-		// Token: 0x0603C115 RID: 246037 RVA: 0x00E5F14D File Offset: 0x00E5D34D
+		// Token: 0x0603106A RID: 200810 RVA: 0x00DAF6A1 File Offset: 0x00DAD8A1
 		protected override void RemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.BattleScoreEnableChanged, new Action<int, bool>(this.OnBattleScoreEnableChanged));
 		}
 
-		// Token: 0x0603C116 RID: 246038 RVA: 0x00E5F16B File Offset: 0x00E5D36B
+		// Token: 0x0603106B RID: 200811 RVA: 0x00DAF6BF File Offset: 0x00DAD8BF
 		private void OnBattleScoreEnableChanged(int scoreId, bool enable)
 		{
 			if (enable)
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C117 RID: 246039 RVA: 0x00E5F178 File Offset: 0x00E5D378
+		// Token: 0x0603106C RID: 200812 RVA: 0x00DAF6CC File Offset: 0x00DAD8CC
 		private void TryLoadScoreItem(int scoreId)
 		{
 			BattleScoreConf? battleScoreConfig = BattleScoreConfig.Instance.GetBattleScoreConfig(scoreId);
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.LoadVisionArenaScoreItem(scoreId).Forget();
 		}
 
-		// Token: 0x0603C118 RID: 246040 RVA: 0x00E5F1D0 File Offset: 0x00E5D3D0
+		// Token: 0x0603106D RID: 200813 RVA: 0x00DAF724 File Offset: 0x00DAD924
 		private UniTask LoadRogueScoreItem(bool initHide = true)
 		{
 			ScorePanel.<LoadRogueScoreItem>d__14 <LoadRogueScoreItem>d__;
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <LoadRogueScoreItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C119 RID: 246041 RVA: 0x00E5F21C File Offset: 0x00E5D41C
+		// Token: 0x0603106E RID: 200814 RVA: 0x00DAF770 File Offset: 0x00DAD970
 		private UniTask LoadFarmGoldScoreItem()
 		{
 			ScorePanel.<LoadFarmGoldScoreItem>d__15 <LoadFarmGoldScoreItem>d__;
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <LoadFarmGoldScoreItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C11A RID: 246042 RVA: 0x00E5F260 File Offset: 0x00E5D460
+		// Token: 0x0603106F RID: 200815 RVA: 0x00DAF7B4 File Offset: 0x00DAD9B4
 		private UniTask LoadDreamLinkScoreItem()
 		{
 			ScorePanel.<LoadDreamLinkScoreItem>d__16 <LoadDreamLinkScoreItem>d__;
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <LoadDreamLinkScoreItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C11B RID: 246043 RVA: 0x00E5F2A4 File Offset: 0x00E5D4A4
+		// Token: 0x06031070 RID: 200816 RVA: 0x00DAF7F8 File Offset: 0x00DAD9F8
 		private UniTask LoadLinkScoreItem()
 		{
 			ScorePanel.<LoadLinkScoreItem>d__17 <LoadLinkScoreItem>d__;
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <LoadLinkScoreItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C11C RID: 246044 RVA: 0x00E5F2E8 File Offset: 0x00E5D4E8
+		// Token: 0x06031071 RID: 200817 RVA: 0x00DAF83C File Offset: 0x00DADA3C
 		private UniTask LoadShipTowerScoreItem()
 		{
 			ScorePanel.<LoadShipTowerScoreItem>d__18 <LoadShipTowerScoreItem>d__;
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <LoadShipTowerScoreItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C11D RID: 246045 RVA: 0x00E5F32C File Offset: 0x00E5D52C
+		// Token: 0x06031072 RID: 200818 RVA: 0x00DAF880 File Offset: 0x00DADA80
 		private UniTask LoadBossPilingScoreItem()
 		{
 			ScorePanel.<LoadBossPilingScoreItem>d__19 <LoadBossPilingScoreItem>d__;
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <LoadBossPilingScoreItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C11E RID: 246046 RVA: 0x00E5F370 File Offset: 0x00E5D570
+		// Token: 0x06031073 RID: 200819 RVA: 0x00DAF8C4 File Offset: 0x00DADAC4
 		private UniTask LoadVisionArenaScoreItem(int scoreId)
 		{
 			ScorePanel.<LoadVisionArenaScoreItem>d__20 <LoadVisionArenaScoreItem>d__;
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <LoadVisionArenaScoreItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C11F RID: 246047 RVA: 0x00E5F3BC File Offset: 0x00E5D5BC
+		// Token: 0x06031074 RID: 200820 RVA: 0x00DAF910 File Offset: 0x00DADB10
 		protected override void OnShowBattleChildViewPanel(bool isFirst)
 		{
 			if (isFirst)
@@ -189,7 +189,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C120 RID: 246048 RVA: 0x00E5F414 File Offset: 0x00E5D614
+		// Token: 0x06031075 RID: 200821 RVA: 0x00DAF968 File Offset: 0x00DADB68
 		public override void OnTickBattleChildViewPanel(float delta)
 		{
 			foreach (BaseScoreItem baseScoreItem in this.ScoreItemList.Values)
@@ -201,7 +201,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C121 RID: 246049 RVA: 0x00E5F474 File Offset: 0x00E5D674
+		// Token: 0x06031076 RID: 200822 RVA: 0x00DAF9C8 File Offset: 0x00DADBC8
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -226,52 +226,52 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			};
 		}
 
-		// Token: 0x0401F545 RID: 128325
+		// Token: 0x04019FFE RID: 106494
 		[StaticVariableRuleIgnore]
 		private static readonly Stat TickStatsObject = Stat.Create("[BattleView]ScorePanelTick", "", "");
 
-		// Token: 0x0401F546 RID: 128326
+		// Token: 0x04019FFF RID: 106495
 		private readonly Dictionary<string, BaseScoreItem> ScoreItemList = new Dictionary<string, BaseScoreItem>();
 
-		// Token: 0x0401F547 RID: 128327
+		// Token: 0x0401A000 RID: 106496
 		[Nullable(2)]
 		private RogueScoreItem RogueScoreItem;
 
-		// Token: 0x0401F548 RID: 128328
+		// Token: 0x0401A001 RID: 106497
 		[Nullable(2)]
 		private FarmGoldScoreItem FarmGoldScoreItem;
 
-		// Token: 0x0200BED9 RID: 48857
+		// Token: 0x0200A8DF RID: 43231
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x040398EB RID: 235755
+			// Token: 0x040342AC RID: 213676
 			FarmGoldPoint
 		}
 
-		// Token: 0x0200BEDA RID: 48858
+		// Token: 0x0200A8E0 RID: 43232
 		[Nullable(0)]
 		private static class EScoreItemType
 		{
-			// Token: 0x040398EC RID: 235756
+			// Token: 0x040342AD RID: 213677
 			public const string RogueScoreItemType = "RogueScoreItem";
 
-			// Token: 0x040398ED RID: 235757
+			// Token: 0x040342AE RID: 213678
 			public const string FarmGoldScoreItemType = "FarmGoldScoreItem";
 
-			// Token: 0x040398EE RID: 235758
+			// Token: 0x040342AF RID: 213679
 			public const string DreamLinkScoreItemType = "DreamLinkScoreItem";
 
-			// Token: 0x040398EF RID: 235759
+			// Token: 0x040342B0 RID: 213680
 			public const string LinkScoreItemType = "LinkScoreItem";
 
-			// Token: 0x040398F0 RID: 235760
+			// Token: 0x040342B1 RID: 213681
 			public const string VisionArenaScoreItemType = "VisionArenaScoreItem";
 
-			// Token: 0x040398F1 RID: 235761
+			// Token: 0x040342B2 RID: 213682
 			public const string ShipTowerScoreItemType = "ShipTowerScoreItem";
 
-			// Token: 0x040398F2 RID: 235762
+			// Token: 0x040342B3 RID: 213683
 			public const string BossPilingScoreItem = "BossPilingScoreItem";
 		}
 	}

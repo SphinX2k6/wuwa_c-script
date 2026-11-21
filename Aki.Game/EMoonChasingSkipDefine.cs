@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02001349 RID: 4937
+// Token: 0x020007FD RID: 2045
 public enum EMoonChasingSkipDefine
 {
-	// Token: 0x04003D53 RID: 15699
+	// Token: 0x04003DEB RID: 15851
 	None,
-	// Token: 0x04003D54 RID: 15700
+	// Token: 0x04003DEC RID: 15852
 	Business,
-	// Token: 0x04003D55 RID: 15701
+	// Token: 0x04003DED RID: 15853
 	Build,
-	// Token: 0x04003D56 RID: 15702
+	// Token: 0x04003DEE RID: 15854
 	Task
 }

@@ -5,15 +5,15 @@ using CSharpScript.Game.Module.MapRogue;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x0200498E RID: 18830
+	// Token: 0x02003908 RID: 14600
 	public class MapRogueQuicklyMoveComponent : HotKeyComponent
 	{
-		// Token: 0x06031115 RID: 200981 RVA: 0x00B635B8 File Offset: 0x00B617B8
+		// Token: 0x06025C4B RID: 154699 RVA: 0x00A9E508 File Offset: 0x00A9C708
 		public MapRogueQuicklyMoveComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x06031116 RID: 200982 RVA: 0x00B635C4 File Offset: 0x00B617C4
+		// Token: 0x06025C4C RID: 154700 RVA: 0x00A9E514 File Offset: 0x00A9C714
 		protected override void OnPress(HotKeyMap config)
 		{
 			MapRogueGameInfo gameInfo = MapRogueModel.Instance.GameInfo;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			gameInfo.OnMove(null);
 		}
 
-		// Token: 0x06031117 RID: 200983 RVA: 0x00B635EE File Offset: 0x00B617EE
+		// Token: 0x06025C4D RID: 154701 RVA: 0x00A9E53E File Offset: 0x00A9C73E
 		[NullableContext(1)]
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{

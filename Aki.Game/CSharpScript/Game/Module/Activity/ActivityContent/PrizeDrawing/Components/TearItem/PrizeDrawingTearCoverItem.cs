@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Components.TearItem
 {
-	// Token: 0x020062AD RID: 25261
+	// Token: 0x0200522B RID: 21035
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PrizeDrawingTearCoverItem : PrizeDrawingTearCoverItemBase
 	{
-		// Token: 0x0603F89C RID: 260252 RVA: 0x00F5D7F4 File Offset: 0x00F5B9F4
+		// Token: 0x0603455D RID: 214365 RVA: 0x00EA4750 File Offset: 0x00EA2950
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 16;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603F89D RID: 260253 RVA: 0x00F5DA34 File Offset: 0x00F5BC34
+		// Token: 0x0603455E RID: 214366 RVA: 0x00EA4990 File Offset: 0x00EA2B90
 		protected override void OnStart()
 		{
 			this.TearRoot = base.GetItem(1);
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			this.InitializeFx();
 		}
 
-		// Token: 0x0603F89E RID: 260254 RVA: 0x00F5DB60 File Offset: 0x00F5BD60
+		// Token: 0x0603455F RID: 214367 RVA: 0x00EA4ABC File Offset: 0x00EA2CBC
 		protected override void OnBeforeDestroy()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			}
 		}
 
-		// Token: 0x0603F89F RID: 260255 RVA: 0x00F5DBF0 File Offset: 0x00F5BDF0
+		// Token: 0x06034560 RID: 214368 RVA: 0x00EA4B4C File Offset: 0x00EA2D4C
 		public void OnTick(float progress)
 		{
 			if (this.IsOpened)
@@ -197,13 +197,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			AudioSystem.Instance.SetRtpcValue("sys_game_prizedrawing_ticket_torn", progress * 100f, null);
 		}
 
-		// Token: 0x0603F8A0 RID: 260256 RVA: 0x00F5DEB5 File Offset: 0x00F5C0B5
+		// Token: 0x06034561 RID: 214369 RVA: 0x00EA4E11 File Offset: 0x00EA3011
 		public bool IsUnOpened()
 		{
 			return !this.IsOpened;
 		}
 
-		// Token: 0x0603F8A1 RID: 260257 RVA: 0x00F5DEC0 File Offset: 0x00F5C0C0
+		// Token: 0x06034562 RID: 214370 RVA: 0x00EA4E1C File Offset: 0x00EA301C
 		private void SetTearActive(int index)
 		{
 			if (this.CachedSelectedIndex >= 0 && this.CachedSelectedIndex < this.TearItemList.Count)
@@ -241,7 +241,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			this.CachedSelectedIndex = index;
 		}
 
-		// Token: 0x0603F8A2 RID: 260258 RVA: 0x00F5DF9C File Offset: 0x00F5C19C
+		// Token: 0x06034563 RID: 214371 RVA: 0x00EA4EF8 File Offset: 0x00EA30F8
 		private void SetEmojiActive(int index)
 		{
 			if (this.CachedEmojiIndex >= 0 && this.CachedEmojiIndex < this.EmojiItemList.Count)
@@ -263,7 +263,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			this.CachedEmojiIndex = index;
 		}
 
-		// Token: 0x0603F8A3 RID: 260259 RVA: 0x00F5E013 File Offset: 0x00F5C213
+		// Token: 0x06034564 RID: 214372 RVA: 0x00EA4F6F File Offset: 0x00EA316F
 		public void SetTearShadowActive(bool active)
 		{
 			UUIItem tearShadowRoot = this.TearShadowRoot;
@@ -274,7 +274,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			tearShadowRoot.SetUIActive(active);
 		}
 
-		// Token: 0x0603F8A4 RID: 260260 RVA: 0x00F5E028 File Offset: 0x00F5C228
+		// Token: 0x06034565 RID: 214373 RVA: 0x00EA4F84 File Offset: 0x00EA3184
 		public void Open(bool playAudio)
 		{
 			this.IsOpened = true;
@@ -320,7 +320,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			}
 		}
 
-		// Token: 0x0603F8A5 RID: 260261 RVA: 0x00F5E12A File Offset: 0x00F5C32A
+		// Token: 0x06034566 RID: 214374 RVA: 0x00EA5086 File Offset: 0x00EA3286
 		public void PlayRevelAnimation()
 		{
 			PrizeDrawingTearItemBase tearItem = this.TearItem;
@@ -331,7 +331,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			tearItem.PlayRevelAnimation();
 		}
 
-		// Token: 0x0603F8A6 RID: 260262 RVA: 0x00F5E13C File Offset: 0x00F5C33C
+		// Token: 0x06034567 RID: 214375 RVA: 0x00EA5098 File Offset: 0x00EA3298
 		private void OnFirstStartDrag()
 		{
 			if (this.FxLevel == EFxLevel.Super)
@@ -356,7 +356,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			}
 		}
 
-		// Token: 0x0603F8A7 RID: 260263 RVA: 0x00F5E199 File Offset: 0x00F5C399
+		// Token: 0x06034568 RID: 214376 RVA: 0x00EA50F5 File Offset: 0x00EA32F5
 		public void OnStartDragging()
 		{
 			if (this.FxLevel != EFxLevel.None)
@@ -365,7 +365,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			}
 		}
 
-		// Token: 0x0603F8A8 RID: 260264 RVA: 0x00F5E1C0 File Offset: 0x00F5C3C0
+		// Token: 0x06034569 RID: 214377 RVA: 0x00EA511C File Offset: 0x00EA331C
 		public void OnStopDragging()
 		{
 			if (this.FxLevel != EFxLevel.None)
@@ -379,7 +379,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			}
 		}
 
-		// Token: 0x0603F8A9 RID: 260265 RVA: 0x00F5E232 File Offset: 0x00F5C432
+		// Token: 0x0603456A RID: 214378 RVA: 0x00EA518E File Offset: 0x00EA338E
 		protected void OnOpened()
 		{
 			Action openedCallback = this.OpenedCallback;
@@ -390,7 +390,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			openedCallback();
 		}
 
-		// Token: 0x0603F8AA RID: 260266 RVA: 0x00F5E244 File Offset: 0x00F5C444
+		// Token: 0x0603456B RID: 214379 RVA: 0x00EA51A0 File Offset: 0x00EA33A0
 		public void Reset()
 		{
 			this.IsOpened = false;
@@ -441,7 +441,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			this.IsDragStarted = false;
 		}
 
-		// Token: 0x0603F8AB RID: 260267 RVA: 0x00F5E348 File Offset: 0x00F5C548
+		// Token: 0x0603456C RID: 214380 RVA: 0x00EA52A4 File Offset: 0x00EA34A4
 		public void RefreshEffectVisible(EFxLevel fxLevel)
 		{
 			this.FxLevel = fxLevel;
@@ -469,7 +469,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			fxControlMinor2.SetAlpha(fxLevel == EFxLevel.Minor);
 		}
 
-		// Token: 0x0603F8AC RID: 260268 RVA: 0x00F5E3C0 File Offset: 0x00F5C5C0
+		// Token: 0x0603456D RID: 214381 RVA: 0x00EA531C File Offset: 0x00EA351C
 		[NullableContext(1)]
 		public UniTask CreateTearItem(List<IKujiAwardData> rewards, ETearType tearType)
 		{
@@ -483,21 +483,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			return <CreateTearItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F8AD RID: 260269 RVA: 0x00F5E413 File Offset: 0x00F5C613
+		// Token: 0x0603456E RID: 214382 RVA: 0x00EA536F File Offset: 0x00EA356F
 		[NullableContext(1)]
 		public UUIItem GetFxControl()
 		{
 			return this.FxControl;
 		}
 
-		// Token: 0x0603F8AE RID: 260270 RVA: 0x00F5E41B File Offset: 0x00F5C61B
+		// Token: 0x0603456F RID: 214383 RVA: 0x00EA5377 File Offset: 0x00EA3577
 		[NullableContext(1)]
 		public UUIItem GetFxControlMinor()
 		{
 			return this.FxControlMinor;
 		}
 
-		// Token: 0x0603F8AF RID: 260271 RVA: 0x00F5E424 File Offset: 0x00F5C624
+		// Token: 0x06034570 RID: 214384 RVA: 0x00EA5380 File Offset: 0x00EA3580
 		private void InitializeFx()
 		{
 			this.ShineItem = base.GetUiNiagara(3);
@@ -551,80 +551,80 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PrizeDrawing.Compone
 			fxControlMinor.SetUIActive(false);
 		}
 
-		// Token: 0x0402139A RID: 136090
+		// Token: 0x0401BCC9 RID: 113865
 		[Nullable(1)]
 		private readonly List<UUIItem> TearItemList = new List<UUIItem>();
 
-		// Token: 0x0402139B RID: 136091
+		// Token: 0x0401BCCA RID: 113866
 		[Nullable(1)]
 		private readonly List<UUIItem> TearShadowItemList = new List<UUIItem>();
 
-		// Token: 0x0402139C RID: 136092
+		// Token: 0x0401BCCB RID: 113867
 		private int CachedSelectedIndex;
 
-		// Token: 0x0402139D RID: 136093
+		// Token: 0x0401BCCC RID: 113868
 		private bool IsOpened;
 
-		// Token: 0x0402139E RID: 136094
+		// Token: 0x0401BCCD RID: 113869
 		public Action OpenedCallback;
 
-		// Token: 0x0402139F RID: 136095
+		// Token: 0x0401BCCE RID: 113870
 		private FLinearColor GlowOffsetVector = new FLinearColor(1f, 5f, 0f, 0f);
 
-		// Token: 0x040213A0 RID: 136096
+		// Token: 0x0401BCCF RID: 113871
 		[Nullable(1)]
 		private readonly List<UUIItem> EmojiItemList = new List<UUIItem>();
 
-		// Token: 0x040213A1 RID: 136097
+		// Token: 0x0401BCD0 RID: 113872
 		[Nullable(1)]
 		private readonly List<LevelSequencePlayer> EmojiSeqPlayerList = new List<LevelSequencePlayer>();
 
-		// Token: 0x040213A2 RID: 136098
+		// Token: 0x0401BCD1 RID: 113873
 		private int CachedEmojiIndex = -1;
 
-		// Token: 0x040213A3 RID: 136099
+		// Token: 0x0401BCD2 RID: 113874
 		private int CachedTearAudioIndex;
 
-		// Token: 0x040213A4 RID: 136100
+		// Token: 0x0401BCD3 RID: 113875
 		private EFxLevel FxLevel;
 
-		// Token: 0x040213A5 RID: 136101
+		// Token: 0x0401BCD4 RID: 113876
 		private bool IsDragStarted;
 
-		// Token: 0x040213A6 RID: 136102
+		// Token: 0x0401BCD5 RID: 113877
 		private int? LoopAudioHandle;
 
-		// Token: 0x040213A7 RID: 136103
+		// Token: 0x0401BCD6 RID: 113878
 		private UUIItem TearRoot;
 
-		// Token: 0x040213A8 RID: 136104
+		// Token: 0x0401BCD7 RID: 113879
 		private UUIItem TearShadowRoot;
 
-		// Token: 0x040213A9 RID: 136105
+		// Token: 0x0401BCD8 RID: 113880
 		private UUINiagara ShineItem;
 
-		// Token: 0x040213AA RID: 136106
+		// Token: 0x0401BCD9 RID: 113881
 		private UUITexture GlowItem;
 
-		// Token: 0x040213AB RID: 136107
+		// Token: 0x0401BCDA RID: 113882
 		private UUINiagara BurstItem;
 
-		// Token: 0x040213AC RID: 136108
+		// Token: 0x0401BCDB RID: 113883
 		private UUINiagara ShineItemMinor;
 
-		// Token: 0x040213AD RID: 136109
+		// Token: 0x0401BCDC RID: 113884
 		private UUINiagara BurstItemMinor;
 
-		// Token: 0x040213AE RID: 136110
+		// Token: 0x0401BCDD RID: 113885
 		private UUITexture GlowItemMinor;
 
-		// Token: 0x040213AF RID: 136111
+		// Token: 0x0401BCDE RID: 113886
 		private UUIItem FxControl;
 
-		// Token: 0x040213B0 RID: 136112
+		// Token: 0x0401BCDF RID: 113887
 		private UUIItem FxControlMinor;
 
-		// Token: 0x040213B1 RID: 136113
+		// Token: 0x0401BCE0 RID: 113888
 		private LevelSequencePlayer LevelSequencePlayer;
 	}
 }

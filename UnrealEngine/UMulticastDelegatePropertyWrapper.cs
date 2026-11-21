@@ -6,47 +6,47 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200074A RID: 1866
+	// Token: 0x02000130 RID: 304
 	[UnrealObjectPath("/Script/CoreUObject.MulticastDelegatePropertyWrapper")]
 	[UnrealStructLayout(56, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 56)]
 	public class UMulticastDelegatePropertyWrapper : UPropertyWrapper, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060062E8 RID: 25320 RVA: 0x0008DF15 File Offset: 0x0008C115
+		// Token: 0x06001244 RID: 4676 RVA: 0x0001CE95 File Offset: 0x0001B095
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UMulticastDelegatePropertyWrapper._ClassPtr;
 		}
 
-		// Token: 0x060062E9 RID: 25321 RVA: 0x0008DF24 File Offset: 0x0008C124
+		// Token: 0x06001245 RID: 4677 RVA: 0x0001CEA4 File Offset: 0x0001B0A4
 		public UMulticastDelegatePropertyWrapper() : this(BuiltinUtils.AllocNativeUObject(UMulticastDelegatePropertyWrapper.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060062EA RID: 25322 RVA: 0x0008DF4C File Offset: 0x0008C14C
+		// Token: 0x06001246 RID: 4678 RVA: 0x0001CECC File Offset: 0x0001B0CC
 		[NullableContext(1)]
 		public UMulticastDelegatePropertyWrapper(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UMulticastDelegatePropertyWrapper.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x060062EB RID: 25323 RVA: 0x0008DF7F File Offset: 0x0008C17F
+		// Token: 0x06001247 RID: 4679 RVA: 0x0001CEFF File Offset: 0x0001B0FF
 		static UMulticastDelegatePropertyWrapper()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/CoreUObject.MulticastDelegatePropertyWrapper");
 		}
 
-		// Token: 0x060062EC RID: 25324 RVA: 0x0008DF8D File Offset: 0x0008C18D
+		// Token: 0x06001248 RID: 4680 RVA: 0x0001CF0D File Offset: 0x0001B10D
 		protected UMulticastDelegatePropertyWrapper(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04002F55 RID: 12117
+		// Token: 0x0400058B RID: 1419
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/CoreUObject.MulticastDelegatePropertyWrapper";
 
-		// Token: 0x04002F56 RID: 12118
+		// Token: 0x0400058C RID: 1420
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04002F57 RID: 12119
+		// Token: 0x0400058D RID: 1421
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

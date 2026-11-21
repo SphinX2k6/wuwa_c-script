@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000FB7 RID: 4023
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020010E3 RID: 4323
 	public class IInformationBoardConfig
 	{
-		// Token: 0x060059B4 RID: 22964 RVA: 0x000DA748 File Offset: 0x000D8948
+		// Token: 0x06005F92 RID: 24466 RVA: 0x000E72D4 File Offset: 0x000E54D4
 		private IInformationBoardConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060059B5 RID: 22965 RVA: 0x000DA780 File Offset: 0x000D8980
+		// Token: 0x06005F93 RID: 24467 RVA: 0x000E730C File Offset: 0x000E550C
 		public static IInformationBoardConfig Create([Nullable(2)] IInformationBoardConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060059B6 RID: 22966 RVA: 0x000DA793 File Offset: 0x000D8993
+		// Token: 0x06005F94 RID: 24468 RVA: 0x000E731F File Offset: 0x000E551F
 		public static IInformationBoardConfig CreateFromSetValue([Nullable(2)] IInformationBoardConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060059B7 RID: 22967 RVA: 0x000DA7A6 File Offset: 0x000D89A6
+		// Token: 0x06005F95 RID: 24469 RVA: 0x000E7332 File Offset: 0x000E5532
 		public IInformationBoardConfig_SetValue ToSetValue()
 		{
 			return new IInformationBoardConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001DC9 RID: 7625
-		// (get) Token: 0x060059B8 RID: 22968 RVA: 0x000DA7BC File Offset: 0x000D89BC
-		// (set) Token: 0x060059B9 RID: 22969 RVA: 0x000DA81D File Offset: 0x000D8A1D
+		// Token: 0x17001F71 RID: 8049
+		// (get) Token: 0x06005F96 RID: 24470 RVA: 0x000E7348 File Offset: 0x000E5548
+		// (set) Token: 0x06005F97 RID: 24471 RVA: 0x000E73A9 File Offset: 0x000E55A9
 		public virtual IDangoAbyssInformationBoard InformationBoard
 		{
 			get
@@ -89,18 +87,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003622 RID: 13858
+		// Token: 0x04003957 RID: 14679
 		[Nullable(2)]
 		protected IInformationBoardConfig FbInstance;
 
-		// Token: 0x04003623 RID: 13859
+		// Token: 0x04003958 RID: 14680
 		[Nullable(2)]
 		protected IInformationBoardConfig_SetValue PocoInterface;
 
-		// Token: 0x04003624 RID: 13860
+		// Token: 0x04003959 RID: 14681
 		private IDangoAbyssInformationBoard _InformationBoardCache;
 
-		// Token: 0x04003625 RID: 13861
+		// Token: 0x0400395A RID: 14682
 		private bool _InformationBoardInited;
 	}
 }

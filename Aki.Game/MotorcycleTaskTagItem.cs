@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200223B RID: 8763
+// Token: 0x0200171F RID: 5919
 public class MotorcycleTaskTagItem : UiPanelBase
 {
-	// Token: 0x06011193 RID: 70035 RVA: 0x0042BE90 File Offset: 0x0042A090
+	// Token: 0x0600E629 RID: 58921 RVA: 0x00438A34 File Offset: 0x00436C34
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -19,7 +19,7 @@ public class MotorcycleTaskTagItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06011194 RID: 70036 RVA: 0x0042BF00 File Offset: 0x0042A100
+	// Token: 0x0600E62A RID: 58922 RVA: 0x00438AA4 File Offset: 0x00436CA4
 	[NullableContext(1)]
 	public void Refresh(MotorTechTaskNode node)
 	{
@@ -54,7 +54,7 @@ public class MotorcycleTaskTagItem : UiPanelBase
 		uuiitem.SetChangeColor(bUseChangeColor, fcolor);
 	}
 
-	// Token: 0x06011195 RID: 70037 RVA: 0x0042C044 File Offset: 0x0042A244
+	// Token: 0x0600E62B RID: 58923 RVA: 0x00438BE8 File Offset: 0x00436DE8
 	[NullableContext(1)]
 	private CommonDefine.ETimeType[] GetTimeTypeData(double remainTime)
 	{
@@ -83,19 +83,19 @@ public class MotorcycleTaskTagItem : UiPanelBase
 		return new CommonDefine.ETimeType[2];
 	}
 
-	// Token: 0x0200876F RID: 34671
+	// Token: 0x020078F8 RID: 30968
 	private class EMotorTaskTabItemComponent
 	{
-		// Token: 0x0402C05E RID: 180318
+		// Token: 0x04027376 RID: 160630
 		public const int SprTagBg = 0;
 
-		// Token: 0x0402C05F RID: 180319
+		// Token: 0x04027377 RID: 160631
 		public const int RepeatItem = 1;
 
-		// Token: 0x0402C060 RID: 180320
+		// Token: 0x04027378 RID: 160632
 		public const int TimeItem = 2;
 
-		// Token: 0x0402C061 RID: 180321
+		// Token: 0x04027379 RID: 160633
 		public const int TxtTag = 3;
 	}
 }

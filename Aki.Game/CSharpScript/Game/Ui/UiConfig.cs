@@ -7,12 +7,12 @@ using CSharpScript.Game.InputSetting;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x0200465F RID: 18015
+	// Token: 0x02003590 RID: 13712
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UiConfig : Singleton
 	{
-		// Token: 0x0602E82F RID: 190511 RVA: 0x00ABF598 File Offset: 0x00ABD798
+		// Token: 0x06022F79 RID: 143225 RVA: 0x009ECC68 File Offset: 0x009EAE68
 		[NullableContext(2)]
 		public unsafe UiViewInfo TryGetViewInfo(EUiViewName name)
 		{
@@ -111,13 +111,13 @@ namespace CSharpScript.Game.Ui
 			return uiViewInfo;
 		}
 
-		// Token: 0x0602E830 RID: 190512 RVA: 0x00ABFA38 File Offset: 0x00ABDC38
+		// Token: 0x06022F7A RID: 143226 RVA: 0x009ED108 File Offset: 0x009EB308
 		private bool CheckIfNotInPackageView(EUiViewName name)
 		{
 			return name == EUiViewName.GmView || name == EUiViewName.LoginDebugView;
 		}
 
-		// Token: 0x0602E831 RID: 190513 RVA: 0x00ABFA58 File Offset: 0x00ABDC58
+		// Token: 0x06022F7B RID: 143227 RVA: 0x009ED128 File Offset: 0x009EB328
 		[NullableContext(2)]
 		public unsafe void RewritePath([Nullable(1)] UiViewInfo viewInfo, IUiViewResource resInterface, object param = null)
 		{
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Ui
 			viewInfo.PcPath = resourceConfig.Value.PcPath;
 		}
 
-		// Token: 0x0602E832 RID: 190514 RVA: 0x00ABFB70 File Offset: 0x00ABDD70
+		// Token: 0x06022F7C RID: 143228 RVA: 0x009ED240 File Offset: 0x009EB440
 		[NullableContext(2)]
 		public void RewritePopFrameType([Nullable(1)] UiViewInfo viewInfo, IExtraUiPopFrameType popTypeInterface, object param = null)
 		{
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.Ui
 			viewInfo.CommonPopBg = euiBehaviourPopType.Value;
 		}
 
-		// Token: 0x0602E833 RID: 190515 RVA: 0x00ABFBB8 File Offset: 0x00ABDDB8
+		// Token: 0x06022F7D RID: 143229 RVA: 0x009ED288 File Offset: 0x009EB488
 		public string GetMemoryTag(EUiViewName name)
 		{
 			UiShow value = UiViewConfig.Instance.GetUiShowConfig(name).Value;
@@ -181,8 +181,8 @@ namespace CSharpScript.Game.Ui
 			return name;
 		}
 
-		// Token: 0x17007607 RID: 30215
-		// (get) Token: 0x0602E834 RID: 190516 RVA: 0x00ABFC38 File Offset: 0x00ABDE38
+		// Token: 0x170048C3 RID: 18627
+		// (get) Token: 0x06022F7E RID: 143230 RVA: 0x009ED308 File Offset: 0x009EB508
 		public static UiConfig Instance
 		{
 			get
@@ -196,12 +196,12 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602E835 RID: 190517 RVA: 0x00ABFC5B File Offset: 0x00ABDE5B
+		// Token: 0x06022F7F RID: 143231 RVA: 0x009ED32B File Offset: 0x009EB52B
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602E836 RID: 190518 RVA: 0x00ABFC5D File Offset: 0x00ABDE5D
+		// Token: 0x06022F80 RID: 143232 RVA: 0x009ED32D File Offset: 0x009EB52D
 		public static void ResetStaticDefaultValue()
 		{
 			UiConfig instance = UiConfig._instance;
@@ -212,13 +212,13 @@ namespace CSharpScript.Game.Ui
 			UiConfig._instance = null;
 		}
 
-		// Token: 0x0602E837 RID: 190519 RVA: 0x00ABFC76 File Offset: 0x00ABDE76
+		// Token: 0x06022F81 RID: 143233 RVA: 0x009ED346 File Offset: 0x009EB546
 		static UiConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(UiConfig.CreateStaticDefaultValue), new Action(UiConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0602E838 RID: 190520 RVA: 0x00ABFC98 File Offset: 0x00ABDE98
+		// Token: 0x06022F82 RID: 143234 RVA: 0x009ED368 File Offset: 0x009EB568
 		public UiConfig()
 		{
 			HashSet<EUiViewName> hashSet = new HashSet<EUiViewName>();
@@ -230,16 +230,16 @@ namespace CSharpScript.Game.Ui
 			base..ctor();
 		}
 
-		// Token: 0x04018E46 RID: 101958
+		// Token: 0x0401349F RID: 79007
 		private StringBuilder StringBuilder = new StringBuilder();
 
-		// Token: 0x04018E47 RID: 101959
+		// Token: 0x040134A0 RID: 79008
 		private readonly Dictionary<EUiViewName, UiViewInfo> UiViewInfoMap = new Dictionary<EUiViewName, UiViewInfo>();
 
-		// Token: 0x04018E48 RID: 101960
+		// Token: 0x040134A1 RID: 79009
 		public readonly HashSet<EUiViewName> CanOpenWhileClearSceneViewNameSet;
 
-		// Token: 0x04018E49 RID: 101961
+		// Token: 0x040134A2 RID: 79010
 		[Nullable(2)]
 		private static UiConfig _instance;
 	}

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020017EC RID: 6124
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001975 RID: 6517
 	public class IAutomaticDrive
 	{
-		// Token: 0x06008385 RID: 33669 RVA: 0x00139FB0 File Offset: 0x001381B0
+		// Token: 0x06008AA1 RID: 35489 RVA: 0x00149698 File Offset: 0x00147898
 		private IAutomaticDrive_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008386 RID: 33670 RVA: 0x00139FE8 File Offset: 0x001381E8
+		// Token: 0x06008AA2 RID: 35490 RVA: 0x001496D0 File Offset: 0x001478D0
 		public static IAutomaticDrive Create([Nullable(2)] IAutomaticDrive instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008387 RID: 33671 RVA: 0x00139FFB File Offset: 0x001381FB
+		// Token: 0x06008AA3 RID: 35491 RVA: 0x001496E3 File Offset: 0x001478E3
 		public static IAutomaticDrive CreateFromSetValue([Nullable(2)] IAutomaticDrive_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008388 RID: 33672 RVA: 0x0013A00E File Offset: 0x0013820E
+		// Token: 0x06008AA4 RID: 35492 RVA: 0x001496F6 File Offset: 0x001478F6
 		public IAutomaticDrive_SetValue ToSetValue()
 		{
 			return new IAutomaticDrive_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002B35 RID: 11061
-		// (get) Token: 0x06008389 RID: 33673 RVA: 0x0013A021 File Offset: 0x00138221
-		// (set) Token: 0x0600838A RID: 33674 RVA: 0x0013A050 File Offset: 0x00138250
+		// Token: 0x17002D2D RID: 11565
+		// (get) Token: 0x06008AA5 RID: 35493 RVA: 0x00149709 File Offset: 0x00147909
+		// (set) Token: 0x06008AA6 RID: 35494 RVA: 0x00149738 File Offset: 0x00147938
 		public virtual float StandbyTime
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005370 RID: 21360
+		// Token: 0x040057B8 RID: 22456
 		[Nullable(2)]
 		protected IAutomaticDrive FbInstance;
 
-		// Token: 0x04005371 RID: 21361
+		// Token: 0x040057B9 RID: 22457
 		[Nullable(2)]
 		protected IAutomaticDrive_SetValue PocoInterface;
 	}

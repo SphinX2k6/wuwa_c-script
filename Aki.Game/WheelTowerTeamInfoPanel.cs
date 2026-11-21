@@ -8,17 +8,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020015CA RID: 5578
+// Token: 0x02000A82 RID: 2690
 [NullableContext(2)]
 [Nullable(0)]
 public class WheelTowerTeamInfoPanel : UiPanelBase
 {
-	// Token: 0x17000D7F RID: 3455
-	// (get) Token: 0x06009E08 RID: 40456 RVA: 0x00226302 File Offset: 0x00224502
-	// (set) Token: 0x06009E09 RID: 40457 RVA: 0x0022630A File Offset: 0x0022450A
+	// Token: 0x17000DA0 RID: 3488
+	// (get) Token: 0x060071E6 RID: 29158 RVA: 0x002300B2 File Offset: 0x0022E2B2
+	// (set) Token: 0x060071E7 RID: 29159 RVA: 0x002300BA File Offset: 0x0022E2BA
 	public Action ClickCallback { get; set; }
 
-	// Token: 0x06009E0A RID: 40458 RVA: 0x00226314 File Offset: 0x00224514
+	// Token: 0x060071E8 RID: 29160 RVA: 0x002300C4 File Offset: 0x0022E2C4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -55,7 +55,7 @@ public class WheelTowerTeamInfoPanel : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009E0B RID: 40459 RVA: 0x002264C8 File Offset: 0x002246C8
+	// Token: 0x060071E9 RID: 29161 RVA: 0x00230278 File Offset: 0x0022E478
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WheelTowerTeamInfoPanel.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -66,7 +66,7 @@ public class WheelTowerTeamInfoPanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009E0C RID: 40460 RVA: 0x0022650C File Offset: 0x0022470C
+	// Token: 0x060071EA RID: 29162 RVA: 0x002302BC File Offset: 0x0022E4BC
 	[NullableContext(1)]
 	public void RefreshRoleList(List<RoleDataWithBranch> roleDataList)
 	{
@@ -93,7 +93,7 @@ public class WheelTowerTeamInfoPanel : UiPanelBase
 		item.SetUIActive(uiactive);
 	}
 
-	// Token: 0x06009E0D RID: 40461 RVA: 0x002265A0 File Offset: 0x002247A0
+	// Token: 0x060071EB RID: 29163 RVA: 0x00230350 File Offset: 0x0022E550
 	public void RefreshBuff(int buffId)
 	{
 		WheelTowerSmallBuffItem buffItem = this.BuffItem;
@@ -104,7 +104,7 @@ public class WheelTowerTeamInfoPanel : UiPanelBase
 		buffItem.Refresh(buffId);
 	}
 
-	// Token: 0x06009E0E RID: 40462 RVA: 0x002265B4 File Offset: 0x002247B4
+	// Token: 0x060071EC RID: 29164 RVA: 0x00230364 File Offset: 0x0022E564
 	protected override void OnBeforeShow()
 	{
 		UUIItem item = base.GetItem(1);
@@ -136,7 +136,7 @@ public class WheelTowerTeamInfoPanel : UiPanelBase
 		text2.SetText(newText, true);
 	}
 
-	// Token: 0x06009E0F RID: 40463 RVA: 0x0022663A File Offset: 0x0022483A
+	// Token: 0x060071ED RID: 29165 RVA: 0x002303EA File Offset: 0x0022E5EA
 	private void OnClick()
 	{
 		Action clickCallback = this.ClickCallback;
@@ -147,16 +147,16 @@ public class WheelTowerTeamInfoPanel : UiPanelBase
 		clickCallback();
 	}
 
-	// Token: 0x06009E10 RID: 40464 RVA: 0x0022664C File Offset: 0x0022484C
+	// Token: 0x060071EE RID: 29166 RVA: 0x002303FC File Offset: 0x0022E5FC
 	private void OnRecommendBtnClick()
 	{
 		UiManager.Instance.OpenView(EUiViewName.WheelTowerRecommendView, null, null);
 	}
 
-	// Token: 0x04004628 RID: 17960
+	// Token: 0x040046CE RID: 18126
 	private WheelTowerSmallBuffItem BuffItem;
 
-	// Token: 0x04004629 RID: 17961
+	// Token: 0x040046CF RID: 18127
 	[Nullable(new byte[]
 	{
 		2,

@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020054A3 RID: 21667
+	// Token: 0x02005A29 RID: 23081
 	public enum IJigsawCompleteCondition_Union : byte
 	{
-		// Token: 0x0400E73F RID: 59199
+		// Token: 0x0400F370 RID: 62320
 		NONE,
-		// Token: 0x0400E740 RID: 59200
+		// Token: 0x0400F371 RID: 62321
 		IJigsawCompleteCondition,
-		// Token: 0x0400E741 RID: 59201
+		// Token: 0x0400F372 RID: 62322
 		IActivateAllCorrectPiece,
-		// Token: 0x0400E742 RID: 59202
+		// Token: 0x0400F373 RID: 62323
 		IPutInTheSpecifiedPiece,
-		// Token: 0x0400E743 RID: 59203
+		// Token: 0x0400F374 RID: 62324
 		IActiveRenjuPiece,
-		// Token: 0x0400E744 RID: 59204
+		// Token: 0x0400F375 RID: 62325
 		IActivateSpecifiedPiece
 	}
 }

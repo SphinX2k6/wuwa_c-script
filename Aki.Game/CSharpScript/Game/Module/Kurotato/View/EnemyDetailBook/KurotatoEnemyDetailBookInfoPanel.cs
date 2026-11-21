@@ -9,18 +9,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 {
-	// Token: 0x02005769 RID: 22377
+	// Token: 0x02004740 RID: 18240
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class KurotatoEnemyDetailBookInfoPanel : UiPanelBase
 	{
-		// Token: 0x06038D91 RID: 232849 RVA: 0x00D815DC File Offset: 0x00D7F7DC
+		// Token: 0x0602DCA1 RID: 187553 RVA: 0x00CD00D8 File Offset: 0x00CCE2D8
 		public KurotatoEnemyDetailBookInfoPanel(KurotatoEnemyDetailBookMainView parentView)
 		{
 			this.ParentView = parentView;
 		}
 
-		// Token: 0x06038D92 RID: 232850 RVA: 0x00D815EC File Offset: 0x00D7F7EC
+		// Token: 0x0602DCA2 RID: 187554 RVA: 0x00CD00E8 File Offset: 0x00CCE2E8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038D93 RID: 232851 RVA: 0x00D81760 File Offset: 0x00D7F960
+		// Token: 0x0602DCA3 RID: 187555 RVA: 0x00CD025C File Offset: 0x00CCE45C
 		protected override void OnStart()
 		{
 			this.Grid = new SmallItemGrid();
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x06038D94 RID: 232852 RVA: 0x00D817E4 File Offset: 0x00D7F9E4
+		// Token: 0x0602DCA4 RID: 187556 RVA: 0x00CD02E0 File Offset: 0x00CCE4E0
 		[NullableContext(2)]
 		public void RefreshMonsterInfoShow(KurotatoEnemyData monsterData)
 		{
@@ -99,26 +99,26 @@ namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 			base.GetItem(9).SetUIActive(monsterData.CharacteristicDataList.Count > 0);
 		}
 
-		// Token: 0x06038D95 RID: 232853 RVA: 0x00D8192F File Offset: 0x00D7FB2F
+		// Token: 0x0602DCA5 RID: 187557 RVA: 0x00CD042B File Offset: 0x00CCE62B
 		private KurotatoEnemyBasePropertyItem CreateBasePropertyItem()
 		{
 			return new KurotatoEnemyBasePropertyItem();
 		}
 
-		// Token: 0x06038D96 RID: 232854 RVA: 0x00D81936 File Offset: 0x00D7FB36
+		// Token: 0x0602DCA6 RID: 187558 RVA: 0x00CD0432 File Offset: 0x00CCE632
 		private KurotatoEnemyCharacteristicItem CreateCharacteristicItem()
 		{
 			return new KurotatoEnemyCharacteristicItem();
 		}
 
-		// Token: 0x0401DD10 RID: 122128
+		// Token: 0x040187A6 RID: 100262
 		protected KurotatoEnemyDetailBookMainView ParentView;
 
-		// Token: 0x0401DD11 RID: 122129
+		// Token: 0x040187A7 RID: 100263
 		[Nullable(2)]
 		private SmallItemGrid Grid;
 
-		// Token: 0x0401DD12 RID: 122130
+		// Token: 0x040187A8 RID: 100264
 		[Nullable(new byte[]
 		{
 			2,
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 		})]
 		private GenericLayout<KurotatoEnemyBasePropertyItem, KurotatoEnemyBasePropertyData> BasePropertyLayout;
 
-		// Token: 0x0401DD13 RID: 122131
+		// Token: 0x040187A9 RID: 100265
 		[Nullable(new byte[]
 		{
 			2,
@@ -136,42 +136,42 @@ namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 		})]
 		private GenericLayout<KurotatoEnemyCharacteristicItem, KurotatoEnemyCharacteristicData> CharacteristicLayout;
 
-		// Token: 0x0401DD14 RID: 122132
+		// Token: 0x040187AA RID: 100266
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200B972 RID: 47474
+		// Token: 0x0200A38C RID: 41868
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x04038134 RID: 229684
+			// Token: 0x04032B2E RID: 207662
 			public const int ItemIconBox = 0;
 
-			// Token: 0x04038135 RID: 229685
+			// Token: 0x04032B2F RID: 207663
 			public const int TextName = 1;
 
-			// Token: 0x04038136 RID: 229686
+			// Token: 0x04032B30 RID: 207664
 			public const int TextType = 2;
 
-			// Token: 0x04038137 RID: 229687
+			// Token: 0x04032B31 RID: 207665
 			public const int TextSize = 3;
 
-			// Token: 0x04038138 RID: 229688
+			// Token: 0x04032B32 RID: 207666
 			public const int PanelBasePropertyLayout = 4;
 
-			// Token: 0x04038139 RID: 229689
+			// Token: 0x04032B33 RID: 207667
 			public const int ItemBaseProperty = 5;
 
-			// Token: 0x0403813A RID: 229690
+			// Token: 0x04032B34 RID: 207668
 			public const int PanelCharacteristicLayout = 6;
 
-			// Token: 0x0403813B RID: 229691
+			// Token: 0x04032B35 RID: 207669
 			public const int ItemCharacteristic = 7;
 
-			// Token: 0x0403813C RID: 229692
+			// Token: 0x04032B36 RID: 207670
 			public const int TextDesc = 8;
 
-			// Token: 0x0403813D RID: 229693
+			// Token: 0x04032B37 RID: 207671
 			public const int Line = 9;
 		}
 	}

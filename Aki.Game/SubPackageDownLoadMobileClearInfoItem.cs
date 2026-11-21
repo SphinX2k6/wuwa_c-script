@@ -7,7 +7,7 @@ using CSharpScript.Launcher.Update.ResourceDiffUpdate;
 using CSharpScript.Launcher.Util;
 using UnrealEngine;
 
-// Token: 0x02002AAD RID: 10925
+// Token: 0x02002029 RID: 8233
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class SubPackageDownLoadMobileClearInfoItem : GridProxyAbstract<ISubPackageDownLoadMobileClearInfoItemData>
 {
-	// Token: 0x06016BF8 RID: 93176 RVA: 0x005C5AA4 File Offset: 0x005C3CA4
+	// Token: 0x06014627 RID: 83495 RVA: 0x005F2538 File Offset: 0x005F0738
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,7 +32,7 @@ public class SubPackageDownLoadMobileClearInfoItem : GridProxyAbstract<ISubPacka
 		};
 	}
 
-	// Token: 0x06016BF9 RID: 93177 RVA: 0x005C5B38 File Offset: 0x005C3D38
+	// Token: 0x06014628 RID: 83496 RVA: 0x005F25CC File Offset: 0x005F07CC
 	public override void Refresh(ISubPackageDownLoadMobileClearInfoItemData data, bool isSelected, int gridIndex)
 	{
 		this.SceneId = null;
@@ -52,7 +52,7 @@ public class SubPackageDownLoadMobileClearInfoItem : GridProxyAbstract<ISubPacka
 		}
 	}
 
-	// Token: 0x06016BFA RID: 93178 RVA: 0x005C5BB8 File Offset: 0x005C3DB8
+	// Token: 0x06014629 RID: 83497 RVA: 0x005F264C File Offset: 0x005F084C
 	public void RefreshItemByScene(int sceneId)
 	{
 		this.SceneId = new int?(sceneId);
@@ -78,7 +78,7 @@ public class SubPackageDownLoadMobileClearInfoItem : GridProxyAbstract<ISubPacka
 		extendToggle.SetToggleState(EToggleState.ETT_Checked, true, false, false);
 	}
 
-	// Token: 0x06016BFB RID: 93179 RVA: 0x005C5CC4 File Offset: 0x005C3EC4
+	// Token: 0x0601462A RID: 83498 RVA: 0x005F2758 File Offset: 0x005F0958
 	public void RefreshItemByPlot(bool haveVideo)
 	{
 		this.IsVideo = true;
@@ -101,7 +101,7 @@ public class SubPackageDownLoadMobileClearInfoItem : GridProxyAbstract<ISubPacka
 		extendToggle.SetToggleState(EToggleState.ETT_Checked, true, false, false);
 	}
 
-	// Token: 0x06016BFC RID: 93180 RVA: 0x005C5D80 File Offset: 0x005C3F80
+	// Token: 0x0601462B RID: 83499 RVA: 0x005F2814 File Offset: 0x005F0A14
 	public void RefreshItemByVoice(string audioCode)
 	{
 		this.VoiceCode = audioCode;
@@ -142,7 +142,7 @@ public class SubPackageDownLoadMobileClearInfoItem : GridProxyAbstract<ISubPacka
 		extendToggle.SetToggleState(EToggleState.ETT_Checked, true, false, false);
 	}
 
-	// Token: 0x06016BFD RID: 93181 RVA: 0x005C5EE0 File Offset: 0x005C40E0
+	// Token: 0x0601462C RID: 83500 RVA: 0x005F2974 File Offset: 0x005F0B74
 	private void OnClickToggle(EToggleState state)
 	{
 		Action<int?, bool, EToggleState, string> onClickToggleCallBack = this.OnClickToggleCallBack;
@@ -153,34 +153,34 @@ public class SubPackageDownLoadMobileClearInfoItem : GridProxyAbstract<ISubPacka
 		onClickToggleCallBack(this.SceneId, this.IsVideo, state, this.VoiceCode);
 	}
 
-	// Token: 0x0400A8D7 RID: 43223
+	// Token: 0x0400ACDD RID: 44253
 	[Nullable(2)]
 	public Action<int?, bool, EToggleState, string> OnClickToggleCallBack;
 
-	// Token: 0x0400A8D8 RID: 43224
+	// Token: 0x0400ACDE RID: 44254
 	private int? SceneId;
 
-	// Token: 0x0400A8D9 RID: 43225
+	// Token: 0x0400ACDF RID: 44255
 	private bool IsVideo;
 
-	// Token: 0x0400A8DA RID: 43226
+	// Token: 0x0400ACE0 RID: 44256
 	[Nullable(2)]
 	private string VoiceCode;
 
-	// Token: 0x020090DD RID: 37085
+	// Token: 0x02008321 RID: 33569
 	[NullableContext(0)]
 	private class ESubPackageDownLoadMobileClearInfoItem
 	{
-		// Token: 0x0402EEEE RID: 192238
+		// Token: 0x0402A5F3 RID: 173555
 		public const int Toggle = 0;
 
-		// Token: 0x0402EEEF RID: 192239
+		// Token: 0x0402A5F4 RID: 173556
 		public const int Text = 1;
 
-		// Token: 0x0402EEF0 RID: 192240
+		// Token: 0x0402A5F5 RID: 173557
 		public const int EmptyItem = 2;
 
-		// Token: 0x0402EEF1 RID: 192241
+		// Token: 0x0402A5F6 RID: 173558
 		public const int SpaceText = 3;
 	}
 }

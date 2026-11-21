@@ -4,45 +4,45 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004F4D RID: 20301
+	// Token: 0x0200547C RID: 21628
 	public class ICableWayT
 	{
-		// Token: 0x17009262 RID: 37474
-		// (get) Token: 0x06020295 RID: 131733 RVA: 0x00479B56 File Offset: 0x00477D56
-		// (set) Token: 0x06020296 RID: 131734 RVA: 0x00479B5E File Offset: 0x00477D5E
+		// Token: 0x170099DB RID: 39387
+		// (get) Token: 0x06021FE7 RID: 139239 RVA: 0x004AFB46 File Offset: 0x004ADD46
+		// (set) Token: 0x06021FE8 RID: 139240 RVA: 0x004AFB4E File Offset: 0x004ADD4E
 		public EHookInteractType Type { get; set; }
 
-		// Token: 0x17009263 RID: 37475
-		// (get) Token: 0x06020297 RID: 131735 RVA: 0x00479B67 File Offset: 0x00477D67
-		// (set) Token: 0x06020298 RID: 131736 RVA: 0x00479B6F File Offset: 0x00477D6F
+		// Token: 0x170099DC RID: 39388
+		// (get) Token: 0x06021FE9 RID: 139241 RVA: 0x004AFB57 File Offset: 0x004ADD57
+		// (set) Token: 0x06021FEA RID: 139242 RVA: 0x004AFB5F File Offset: 0x004ADD5F
 		public List<IActionInfoT> HookActions { get; set; }
 
-		// Token: 0x17009264 RID: 37476
-		// (get) Token: 0x06020299 RID: 131737 RVA: 0x00479B78 File Offset: 0x00477D78
-		// (set) Token: 0x0602029A RID: 131738 RVA: 0x00479B80 File Offset: 0x00477D80
+		// Token: 0x170099DD RID: 39389
+		// (get) Token: 0x06021FEB RID: 139243 RVA: 0x004AFB68 File Offset: 0x004ADD68
+		// (set) Token: 0x06021FEC RID: 139244 RVA: 0x004AFB70 File Offset: 0x004ADD70
 		public List<IActionInfoT> ExitHookActions { get; set; }
 
-		// Token: 0x17009265 RID: 37477
-		// (get) Token: 0x0602029B RID: 131739 RVA: 0x00479B89 File Offset: 0x00477D89
-		// (set) Token: 0x0602029C RID: 131740 RVA: 0x00479B91 File Offset: 0x00477D91
+		// Token: 0x170099DE RID: 39390
+		// (get) Token: 0x06021FED RID: 139245 RVA: 0x004AFB79 File Offset: 0x004ADD79
+		// (set) Token: 0x06021FEE RID: 139246 RVA: 0x004AFB81 File Offset: 0x004ADD81
 		public List<IActionInfoT> FinishActions { get; set; }
 
-		// Token: 0x17009266 RID: 37478
-		// (get) Token: 0x0602029D RID: 131741 RVA: 0x00479B9A File Offset: 0x00477D9A
-		// (set) Token: 0x0602029E RID: 131742 RVA: 0x00479BA2 File Offset: 0x00477DA2
+		// Token: 0x170099DF RID: 39391
+		// (get) Token: 0x06021FEF RID: 139247 RVA: 0x004AFB8A File Offset: 0x004ADD8A
+		// (set) Token: 0x06021FF0 RID: 139248 RVA: 0x004AFB92 File Offset: 0x004ADD92
 		public IClientHookActionConfigT ClientHookActionConfig { get; set; }
 
-		// Token: 0x17009267 RID: 37479
-		// (get) Token: 0x0602029F RID: 131743 RVA: 0x00479BAB File Offset: 0x00477DAB
-		// (set) Token: 0x060202A0 RID: 131744 RVA: 0x00479BB3 File Offset: 0x00477DB3
+		// Token: 0x170099E0 RID: 39392
+		// (get) Token: 0x06021FF1 RID: 139249 RVA: 0x004AFB9B File Offset: 0x004ADD9B
+		// (set) Token: 0x06021FF2 RID: 139250 RVA: 0x004AFBA3 File Offset: 0x004ADDA3
 		public int SplineEntityId { get; set; }
 
-		// Token: 0x17009268 RID: 37480
-		// (get) Token: 0x060202A1 RID: 131745 RVA: 0x00479BBC File Offset: 0x00477DBC
-		// (set) Token: 0x060202A2 RID: 131746 RVA: 0x00479BC4 File Offset: 0x00477DC4
+		// Token: 0x170099E1 RID: 39393
+		// (get) Token: 0x06021FF3 RID: 139251 RVA: 0x004AFBAC File Offset: 0x004ADDAC
+		// (set) Token: 0x06021FF4 RID: 139252 RVA: 0x004AFBB4 File Offset: 0x004ADDB4
 		public byte NullMask { get; set; }
 
-		// Token: 0x060202A3 RID: 131747 RVA: 0x00479BCD File Offset: 0x00477DCD
+		// Token: 0x06021FF5 RID: 139253 RVA: 0x004AFBBD File Offset: 0x004ADDBD
 		public ICableWayT()
 		{
 			this.Type = EHookInteractType.FixedPointHook;

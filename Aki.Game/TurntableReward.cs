@@ -1,30 +1,30 @@
 ﻿using System;
 
-// Token: 0x0200153C RID: 5436
+// Token: 0x020009F4 RID: 2548
 public class TurntableReward : ITurntableReward
 {
-	// Token: 0x17000D59 RID: 3417
-	// (get) Token: 0x06009B76 RID: 39798 RVA: 0x0021A97D File Offset: 0x00218B7D
-	// (set) Token: 0x06009B77 RID: 39799 RVA: 0x0021A985 File Offset: 0x00218B85
+	// Token: 0x17000D7A RID: 3450
+	// (get) Token: 0x06006F54 RID: 28500 RVA: 0x0022472D File Offset: 0x0022292D
+	// (set) Token: 0x06006F55 RID: 28501 RVA: 0x00224735 File Offset: 0x00222935
 	public int Id { get; set; }
 
-	// Token: 0x17000D5A RID: 3418
-	// (get) Token: 0x06009B78 RID: 39800 RVA: 0x0021A98E File Offset: 0x00218B8E
-	// (set) Token: 0x06009B79 RID: 39801 RVA: 0x0021A996 File Offset: 0x00218B96
+	// Token: 0x17000D7B RID: 3451
+	// (get) Token: 0x06006F56 RID: 28502 RVA: 0x0022473E File Offset: 0x0022293E
+	// (set) Token: 0x06006F57 RID: 28503 RVA: 0x00224746 File Offset: 0x00222946
 	public int RoundId { get; set; }
 
-	// Token: 0x17000D5B RID: 3419
-	// (get) Token: 0x06009B7A RID: 39802 RVA: 0x0021A99F File Offset: 0x00218B9F
-	// (set) Token: 0x06009B7B RID: 39803 RVA: 0x0021A9A7 File Offset: 0x00218BA7
+	// Token: 0x17000D7C RID: 3452
+	// (get) Token: 0x06006F58 RID: 28504 RVA: 0x0022474F File Offset: 0x0022294F
+	// (set) Token: 0x06006F59 RID: 28505 RVA: 0x00224757 File Offset: 0x00222957
 	public bool IsClaimed { get; set; }
 
-	// Token: 0x17000D5C RID: 3420
-	// (get) Token: 0x06009B7C RID: 39804 RVA: 0x0021A9B0 File Offset: 0x00218BB0
-	// (set) Token: 0x06009B7D RID: 39805 RVA: 0x0021A9B8 File Offset: 0x00218BB8
+	// Token: 0x17000D7D RID: 3453
+	// (get) Token: 0x06006F5A RID: 28506 RVA: 0x00224760 File Offset: 0x00222960
+	// (set) Token: 0x06006F5B RID: 28507 RVA: 0x00224768 File Offset: 0x00222968
 	public TItem RewardItem { get; set; }
 
-	// Token: 0x17000D5D RID: 3421
-	// (get) Token: 0x06009B7E RID: 39806 RVA: 0x0021A9C1 File Offset: 0x00218BC1
-	// (set) Token: 0x06009B7F RID: 39807 RVA: 0x0021A9C9 File Offset: 0x00218BC9
+	// Token: 0x17000D7E RID: 3454
+	// (get) Token: 0x06006F5C RID: 28508 RVA: 0x00224771 File Offset: 0x00222971
+	// (set) Token: 0x06006F5D RID: 28509 RVA: 0x00224779 File Offset: 0x00222979
 	public bool IsSpecial { get; set; }
 }

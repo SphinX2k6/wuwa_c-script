@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x020046BB RID: 18107
+	// Token: 0x02004B23 RID: 19235
 	public class ITeleportToCurQuestTrackPositionT
 	{
-		// Token: 0x170080A4 RID: 32932
-		// (get) Token: 0x0601B857 RID: 112727 RVA: 0x003E7E2C File Offset: 0x003E602C
-		// (set) Token: 0x0601B858 RID: 112728 RVA: 0x003E7E34 File Offset: 0x003E6034
+		// Token: 0x170086E5 RID: 34533
+		// (get) Token: 0x0601D02C RID: 118828 RVA: 0x004140C8 File Offset: 0x004122C8
+		// (set) Token: 0x0601D02D RID: 118829 RVA: 0x004140D0 File Offset: 0x004122D0
 		public EGmCommand Type { get; set; }
 
-		// Token: 0x170080A5 RID: 32933
-		// (get) Token: 0x0601B859 RID: 112729 RVA: 0x003E7E3D File Offset: 0x003E603D
-		// (set) Token: 0x0601B85A RID: 112730 RVA: 0x003E7E45 File Offset: 0x003E6045
+		// Token: 0x170086E6 RID: 34534
+		// (get) Token: 0x0601D02E RID: 118830 RVA: 0x004140D9 File Offset: 0x004122D9
+		// (set) Token: 0x0601D02F RID: 118831 RVA: 0x004140E1 File Offset: 0x004122E1
 		public int NodeId { get; set; }
 
-		// Token: 0x170080A6 RID: 32934
-		// (get) Token: 0x0601B85B RID: 112731 RVA: 0x003E7E4E File Offset: 0x003E604E
-		// (set) Token: 0x0601B85C RID: 112732 RVA: 0x003E7E56 File Offset: 0x003E6056
+		// Token: 0x170086E7 RID: 34535
+		// (get) Token: 0x0601D030 RID: 118832 RVA: 0x004140EA File Offset: 0x004122EA
+		// (set) Token: 0x0601D031 RID: 118833 RVA: 0x004140F2 File Offset: 0x004122F2
 		public int NodeIndex { get; set; }
 
-		// Token: 0x170080A7 RID: 32935
-		// (get) Token: 0x0601B85D RID: 112733 RVA: 0x003E7E5F File Offset: 0x003E605F
-		// (set) Token: 0x0601B85E RID: 112734 RVA: 0x003E7E67 File Offset: 0x003E6067
+		// Token: 0x170086E8 RID: 34536
+		// (get) Token: 0x0601D032 RID: 118834 RVA: 0x004140FB File Offset: 0x004122FB
+		// (set) Token: 0x0601D033 RID: 118835 RVA: 0x00414103 File Offset: 0x00412303
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601B85F RID: 112735 RVA: 0x003E7E70 File Offset: 0x003E6070
+		// Token: 0x0601D034 RID: 118836 RVA: 0x0041410C File Offset: 0x0041230C
 		public ITeleportToCurQuestTrackPositionT()
 		{
 			this.Type = EGmCommand.SkipToLevelPlayNode;

@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020028EF RID: 10479
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002BC7 RID: 11207
 	public class IOpenSkiConfig : ISkiConfigType
 	{
-		// Token: 0x0600E8C9 RID: 59593 RVA: 0x0022282C File Offset: 0x00220A2C
+		// Token: 0x0600F70A RID: 63242 RVA: 0x0023F9E4 File Offset: 0x0023DBE4
 		public static IOpenSkiConfig Create(IOpenSkiConfig? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170048AD RID: 18605
-		// (get) Token: 0x0600E8CA RID: 59594 RVA: 0x0022284B File Offset: 0x00220A4B
+		// Token: 0x17004C2A RID: 19498
+		// (get) Token: 0x0600F70B RID: 63243 RVA: 0x0023FA03 File Offset: 0x0023DC03
 		public override ESkiConfig Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170048AE RID: 18606
-		// (get) Token: 0x0600E8CB RID: 59595 RVA: 0x00222858 File Offset: 0x00220A58
+		// Token: 0x17004C2B RID: 19499
+		// (get) Token: 0x0600F70C RID: 63244 RVA: 0x0023FA10 File Offset: 0x0023DC10
 		public override ITargetEntityType Target
 		{
 			get
@@ -48,8 +45,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170048AF RID: 18607
-		// (get) Token: 0x0600E8CC RID: 59596 RVA: 0x00222887 File Offset: 0x00220A87
+		// Token: 0x17004C2C RID: 19500
+		// (get) Token: 0x0600F70D RID: 63245 RVA: 0x0023FA3F File Offset: 0x0023DC3F
 		public virtual string SkiConfig
 		{
 			get
@@ -58,13 +55,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008083 RID: 32899
+		// Token: 0x04008747 RID: 34631
 		private IOpenSkiConfig Instance;
 
-		// Token: 0x04008084 RID: 32900
+		// Token: 0x04008748 RID: 34632
 		private ITargetEntityType _TargetCache;
 
-		// Token: 0x04008085 RID: 32901
+		// Token: 0x04008749 RID: 34633
 		private bool _TargetInited;
 	}
 }

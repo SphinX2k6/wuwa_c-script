@@ -4,10 +4,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001C0C RID: 7180
+// Token: 0x020010CB RID: 4299
 public class FormationRoleDragStateItem : UiPanelBase
 {
-	// Token: 0x0600D6CF RID: 54991 RVA: 0x0031AA78 File Offset: 0x00318C78
+	// Token: 0x0600AAE2 RID: 43746 RVA: 0x00325D6C File Offset: 0x00323F6C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -23,27 +23,27 @@ public class FormationRoleDragStateItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600D6D0 RID: 54992 RVA: 0x0031AB02 File Offset: 0x00318D02
+	// Token: 0x0600AAE3 RID: 43747 RVA: 0x00325DF6 File Offset: 0x00323FF6
 	public float GetCanChangeAlpha()
 	{
 		return base.GetItem(2).GetAlpha();
 	}
 
-	// Token: 0x0600D6D1 RID: 54993 RVA: 0x0031AB10 File Offset: 0x00318D10
+	// Token: 0x0600AAE4 RID: 43748 RVA: 0x00325E04 File Offset: 0x00324004
 	public void SetBarFill(float value)
 	{
 		base.GetItem(3).SetUIActive(value > 0f);
 		base.GetSprite(4).SetFillAmount(value);
 	}
 
-	// Token: 0x020081BF RID: 33215
+	// Token: 0x02007348 RID: 29512
 	private enum EChildType
 	{
-		// Token: 0x0402A564 RID: 173412
+		// Token: 0x0402588B RID: 153739
 		CanChangeItem = 2,
-		// Token: 0x0402A565 RID: 173413
+		// Token: 0x0402588C RID: 153740
 		BarItem,
-		// Token: 0x0402A566 RID: 173414
+		// Token: 0x0402588D RID: 153741
 		BarSprite
 	}
 }

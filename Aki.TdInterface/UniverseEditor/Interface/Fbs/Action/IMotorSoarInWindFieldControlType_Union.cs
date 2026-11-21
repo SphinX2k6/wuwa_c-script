@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006B39 RID: 27449
+	// Token: 0x0200727F RID: 29311
 	public enum IMotorSoarInWindFieldControlType_Union : byte
 	{
-		// Token: 0x040113D0 RID: 70608
+		// Token: 0x040122F9 RID: 74489
 		NONE,
-		// Token: 0x040113D1 RID: 70609
+		// Token: 0x040122FA RID: 74490
 		IMotorSoarInWindFieldControlType,
-		// Token: 0x040113D2 RID: 70610
+		// Token: 0x040122FB RID: 74491
 		IMotorSoarInWindFieldEnterWindField,
-		// Token: 0x040113D3 RID: 70611
+		// Token: 0x040122FC RID: 74492
 		IMotorSoarInWindFieldExitWindField
 	}
 }

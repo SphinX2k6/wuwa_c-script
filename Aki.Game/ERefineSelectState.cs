@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x0200172E RID: 5934
+// Token: 0x02000BE6 RID: 3046
 public enum ERefineSelectState
 {
-	// Token: 0x04004DB0 RID: 19888
+	// Token: 0x04004E57 RID: 20055
 	None,
-	// Token: 0x04004DB1 RID: 19889
+	// Token: 0x04004E58 RID: 20056
 	Vision,
-	// Token: 0x04004DB2 RID: 19890
+	// Token: 0x04004E59 RID: 20057
 	Attribute
 }

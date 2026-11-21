@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001503 RID: 5379
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200165E RID: 5726
 	public class ClientSetPlayerOperationRestriction : ActionParams
 	{
-		// Token: 0x06007A4A RID: 31306 RVA: 0x00124178 File Offset: 0x00122378
+		// Token: 0x0600811D RID: 33053 RVA: 0x00132E58 File Offset: 0x00131058
 		private ClientSetPlayerOperationRestriction_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007A4B RID: 31307 RVA: 0x001241B0 File Offset: 0x001223B0
+		// Token: 0x0600811E RID: 33054 RVA: 0x00132E90 File Offset: 0x00131090
 		public static ClientSetPlayerOperationRestriction Create([Nullable(2)] ClientSetPlayerOperationRestriction instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007A4C RID: 31308 RVA: 0x001241C3 File Offset: 0x001223C3
+		// Token: 0x0600811F RID: 33055 RVA: 0x00132EA3 File Offset: 0x001310A3
 		public static ClientSetPlayerOperationRestriction CreateFromSetValue([Nullable(2)] ClientSetPlayerOperationRestriction_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007A4D RID: 31309 RVA: 0x001241D6 File Offset: 0x001223D6
+		// Token: 0x06008120 RID: 33056 RVA: 0x00132EB6 File Offset: 0x001310B6
 		public ClientSetPlayerOperationRestriction_SetValue ToSetValue()
 		{
 			return new ClientSetPlayerOperationRestriction_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170028D8 RID: 10456
-		// (get) Token: 0x06007A4E RID: 31310 RVA: 0x001241E9 File Offset: 0x001223E9
-		// (set) Token: 0x06007A4F RID: 31311 RVA: 0x00124214 File Offset: 0x00122414
+		// Token: 0x17002AC2 RID: 10946
+		// (get) Token: 0x06008121 RID: 33057 RVA: 0x00132EC9 File Offset: 0x001310C9
+		// (set) Token: 0x06008122 RID: 33058 RVA: 0x00132EF4 File Offset: 0x001310F4
 		public virtual EPlayerOperationType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040046DA RID: 18138
+		// Token: 0x04004A79 RID: 19065
 		[Nullable(2)]
 		protected new ClientSetPlayerOperationRestriction FbInstance;
 
-		// Token: 0x040046DB RID: 18139
+		// Token: 0x04004A7A RID: 19066
 		[Nullable(2)]
 		protected ClientSetPlayerOperationRestriction_SetValue PocoInterface;
 	}

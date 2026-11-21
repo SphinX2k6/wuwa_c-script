@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000776 RID: 1910
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000817 RID: 2071
 	public class ITimelineTrackControlData
 	{
-		// Token: 0x0600296F RID: 10607 RVA: 0x0006D58C File Offset: 0x0006B78C
+		// Token: 0x06002C93 RID: 11411 RVA: 0x00074734 File Offset: 0x00072934
 		private ITimelineTrackControlData_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002970 RID: 10608 RVA: 0x0006D5C4 File Offset: 0x0006B7C4
+		// Token: 0x06002C94 RID: 11412 RVA: 0x0007476C File Offset: 0x0007296C
 		public static ITimelineTrackControlData Create([Nullable(2)] ITimelineTrackControlData instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002971 RID: 10609 RVA: 0x0006D5D7 File Offset: 0x0006B7D7
+		// Token: 0x06002C95 RID: 11413 RVA: 0x0007477F File Offset: 0x0007297F
 		public static ITimelineTrackControlData CreateFromSetValue([Nullable(2)] ITimelineTrackControlData_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002972 RID: 10610 RVA: 0x0006D5EA File Offset: 0x0006B7EA
+		// Token: 0x06002C96 RID: 11414 RVA: 0x00074792 File Offset: 0x00072992
 		public ITimelineTrackControlData_SetValue ToSetValue()
 		{
 			return new ITimelineTrackControlData_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000AE7 RID: 2791
-		// (get) Token: 0x06002973 RID: 10611 RVA: 0x0006D5FD File Offset: 0x0006B7FD
-		// (set) Token: 0x06002974 RID: 10612 RVA: 0x0006D628 File Offset: 0x0006B828
+		// Token: 0x17000BA7 RID: 2983
+		// (get) Token: 0x06002C97 RID: 11415 RVA: 0x000747A5 File Offset: 0x000729A5
+		// (set) Token: 0x06002C98 RID: 11416 RVA: 0x000747D0 File Offset: 0x000729D0
 		public virtual ETrackControlMode Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001BCC RID: 7116
+		// Token: 0x04001DD1 RID: 7633
 		[Nullable(2)]
 		protected ITimelineTrackControlData FbInstance;
 
-		// Token: 0x04001BCD RID: 7117
+		// Token: 0x04001DD2 RID: 7634
 		[Nullable(2)]
 		protected ITimelineTrackControlData_SetValue PocoInterface;
 	}

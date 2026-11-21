@@ -5,10 +5,10 @@ using CSharpScript.Game.Module.Plot.Flow;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050B8 RID: 20664
+	// Token: 0x02004088 RID: 16520
 	public class FlowActionFadeOutScreen : FlowActionBase
 	{
-		// Token: 0x06034ED2 RID: 216786 RVA: 0x00C895CC File Offset: 0x00C877CC
+		// Token: 0x06029DCB RID: 171467 RVA: 0x00BD68B4 File Offset: 0x00BD4AB4
 		protected override void OnExecute()
 		{
 			FadeBackgroundController.Instance.CloseFadeBackground();
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			instance.CloseLoading(reason, context, callback, duration);
 		}
 
-		// Token: 0x06034ED3 RID: 216787 RVA: 0x00C896B7 File Offset: 0x00C878B7
+		// Token: 0x06029DCC RID: 171468 RVA: 0x00BD699F File Offset: 0x00BD4B9F
 		protected override void OnBackgroundExecute()
 		{
 			FadeBackgroundController.Instance.CloseFadeBackground();
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			base.FinishExecute(true, true);
 		}
 
-		// Token: 0x06034ED4 RID: 216788 RVA: 0x00C896D6 File Offset: 0x00C878D6
+		// Token: 0x06029DCD RID: 171469 RVA: 0x00BD69BE File Offset: 0x00BD4BBE
 		private void OnFadeComplete()
 		{
 			base.FinishExecute(true, true);

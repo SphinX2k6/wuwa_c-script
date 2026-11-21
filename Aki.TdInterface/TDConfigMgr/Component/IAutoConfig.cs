@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001DF RID: 479
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000206 RID: 518
 	public class IAutoConfig
 	{
-		// Token: 0x060007B6 RID: 1974 RVA: 0x0002564C File Offset: 0x0002384C
+		// Token: 0x06000824 RID: 2084 RVA: 0x00026D2C File Offset: 0x00024F2C
 		private IAutoConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060007B7 RID: 1975 RVA: 0x00025684 File Offset: 0x00023884
+		// Token: 0x06000825 RID: 2085 RVA: 0x00026D64 File Offset: 0x00024F64
 		public static IAutoConfig Create([Nullable(2)] IAutoConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060007B8 RID: 1976 RVA: 0x00025697 File Offset: 0x00023897
+		// Token: 0x06000826 RID: 2086 RVA: 0x00026D77 File Offset: 0x00024F77
 		public static IAutoConfig CreateFromSetValue([Nullable(2)] IAutoConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060007B9 RID: 1977 RVA: 0x000256AA File Offset: 0x000238AA
+		// Token: 0x06000827 RID: 2087 RVA: 0x00026D8A File Offset: 0x00024F8A
 		public IAutoConfig_SetValue ToSetValue()
 		{
 			return new IAutoConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700026A RID: 618
-		// (get) Token: 0x060007BA RID: 1978 RVA: 0x000256C9 File Offset: 0x000238C9
-		// (set) Token: 0x060007BB RID: 1979 RVA: 0x000256F4 File Offset: 0x000238F4
+		// Token: 0x17000286 RID: 646
+		// (get) Token: 0x06000828 RID: 2088 RVA: 0x00026DA9 File Offset: 0x00024FA9
+		// (set) Token: 0x06000829 RID: 2089 RVA: 0x00026DD4 File Offset: 0x00024FD4
 		public virtual bool IsCircle
 		{
 			get
@@ -79,9 +77,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700026B RID: 619
-		// (get) Token: 0x060007BC RID: 1980 RVA: 0x00025702 File Offset: 0x00023902
-		// (set) Token: 0x060007BD RID: 1981 RVA: 0x0002572D File Offset: 0x0002392D
+		// Token: 0x17000287 RID: 647
+		// (get) Token: 0x0600082A RID: 2090 RVA: 0x00026DE2 File Offset: 0x00024FE2
+		// (set) Token: 0x0600082B RID: 2091 RVA: 0x00026E0D File Offset: 0x0002500D
 		public virtual int Interval
 		{
 			get
@@ -102,11 +100,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040008C0 RID: 2240
+		// Token: 0x04000947 RID: 2375
 		[Nullable(2)]
 		protected IAutoConfig FbInstance;
 
-		// Token: 0x040008C1 RID: 2241
+		// Token: 0x04000948 RID: 2376
 		[Nullable(2)]
 		protected IAutoConfig_SetValue PocoInterface;
 	}

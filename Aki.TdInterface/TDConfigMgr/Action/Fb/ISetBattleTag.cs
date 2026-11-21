@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026E0 RID: 9952
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020029A4 RID: 10660
 	public class ISetBattleTag : ISendBattleStateType
 	{
-		// Token: 0x0600DE59 RID: 56921 RVA: 0x0020FD36 File Offset: 0x0020DF36
+		// Token: 0x0600EC35 RID: 60469 RVA: 0x0022C576 File Offset: 0x0022A776
 		public static ISetBattleTag Create(ISetBattleTag? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700425B RID: 16987
-		// (get) Token: 0x0600DE5A RID: 56922 RVA: 0x0020FD55 File Offset: 0x0020DF55
+		// Token: 0x1700459B RID: 17819
+		// (get) Token: 0x0600EC36 RID: 60470 RVA: 0x0022C595 File Offset: 0x0022A795
 		public override ESetBattleStateType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700425C RID: 16988
-		// (get) Token: 0x0600DE5B RID: 56923 RVA: 0x0020FD64 File Offset: 0x0020DF64
+		// Token: 0x1700459C RID: 17820
+		// (get) Token: 0x0600EC37 RID: 60471 RVA: 0x0022C5A4 File Offset: 0x0022A7A4
 		public virtual List<ISetEntityTag> SetTags
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B6C RID: 31596
+		// Token: 0x0400820C RID: 33292
 		private ISetBattleTag Instance;
 
-		// Token: 0x04007B6D RID: 31597
+		// Token: 0x0400820D RID: 33293
 		private List<ISetEntityTag> _SetTagsCache;
 
-		// Token: 0x04007B6E RID: 31598
+		// Token: 0x0400820E RID: 33294
 		private bool _SetTagsInited;
 	}
 }

@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle
 {
-	// Token: 0x02005231 RID: 21041
+	// Token: 0x02004201 RID: 16897
 	public enum EPhantomArenaCanvasSortOrder
 	{
-		// Token: 0x0401C800 RID: 116736
+		// Token: 0x04017235 RID: 94773
 		Normal,
-		// Token: 0x0401C801 RID: 116737
+		// Token: 0x04017236 RID: 94774
 		SkillTriggerMask,
-		// Token: 0x0401C802 RID: 116738
+		// Token: 0x04017237 RID: 94775
 		Card,
-		// Token: 0x0401C803 RID: 116739
+		// Token: 0x04017238 RID: 94776
 		Skill = 2
 	}
 }

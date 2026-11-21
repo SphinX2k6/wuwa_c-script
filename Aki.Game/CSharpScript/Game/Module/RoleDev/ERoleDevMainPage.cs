@@ -2,18 +2,18 @@
 
 namespace CSharpScript.Game.Module.RoleDev
 {
-	// Token: 0x02004CB3 RID: 19635
+	// Token: 0x02003C64 RID: 15460
 	public enum ERoleDevMainPage
 	{
-		// Token: 0x0401B014 RID: 110612
+		// Token: 0x04015975 RID: 88437
 		None,
-		// Token: 0x0401B015 RID: 110613
+		// Token: 0x04015976 RID: 88438
 		Role,
-		// Token: 0x0401B016 RID: 110614
+		// Token: 0x04015977 RID: 88439
 		Weapon,
-		// Token: 0x0401B017 RID: 110615
+		// Token: 0x04015978 RID: 88440
 		Phantom,
-		// Token: 0x0401B018 RID: 110616
+		// Token: 0x04015979 RID: 88441
 		Skill
 	}
 }

@@ -5,49 +5,49 @@ using Aki.Protocol;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
 using CSharpScript.Game.Module.TrapDefense;
 
-// Token: 0x02002C17 RID: 11287
+// Token: 0x02002192 RID: 8594
 [NullableContext(1)]
 [Nullable(0)]
 public class TrapDefenseShopBuffData : ITrapDefenseShopGoods
 {
-	// Token: 0x17001FA2 RID: 8098
-	// (get) Token: 0x06017759 RID: 96089 RVA: 0x005F8345 File Offset: 0x005F6545
-	// (set) Token: 0x0601775A RID: 96090 RVA: 0x005F834D File Offset: 0x005F654D
+	// Token: 0x17001FFA RID: 8186
+	// (get) Token: 0x0601518B RID: 86411 RVA: 0x00624E69 File Offset: 0x00623069
+	// (set) Token: 0x0601518C RID: 86412 RVA: 0x00624E71 File Offset: 0x00623071
 	public int Id { get; set; }
 
-	// Token: 0x17001FA3 RID: 8099
-	// (get) Token: 0x0601775B RID: 96091 RVA: 0x005F8356 File Offset: 0x005F6556
-	// (set) Token: 0x0601775C RID: 96092 RVA: 0x005F835E File Offset: 0x005F655E
+	// Token: 0x17001FFB RID: 8187
+	// (get) Token: 0x0601518D RID: 86413 RVA: 0x00624E7A File Offset: 0x0062307A
+	// (set) Token: 0x0601518E RID: 86414 RVA: 0x00624E82 File Offset: 0x00623082
 	public int? OriginalPrice { get; set; }
 
-	// Token: 0x17001FA4 RID: 8100
-	// (get) Token: 0x0601775D RID: 96093 RVA: 0x005F8367 File Offset: 0x005F6567
-	// (set) Token: 0x0601775E RID: 96094 RVA: 0x005F836F File Offset: 0x005F656F
+	// Token: 0x17001FFC RID: 8188
+	// (get) Token: 0x0601518F RID: 86415 RVA: 0x00624E8B File Offset: 0x0062308B
+	// (set) Token: 0x06015190 RID: 86416 RVA: 0x00624E93 File Offset: 0x00623093
 	public int CurrentPrice { get; set; }
 
-	// Token: 0x17001FA5 RID: 8101
-	// (get) Token: 0x0601775F RID: 96095 RVA: 0x005F8378 File Offset: 0x005F6578
-	// (set) Token: 0x06017760 RID: 96096 RVA: 0x005F8380 File Offset: 0x005F6580
+	// Token: 0x17001FFD RID: 8189
+	// (get) Token: 0x06015191 RID: 86417 RVA: 0x00624E9C File Offset: 0x0062309C
+	// (set) Token: 0x06015192 RID: 86418 RVA: 0x00624EA4 File Offset: 0x006230A4
 	public ETrapDefenseShopGoodsType Type { get; set; } = ETrapDefenseShopGoodsType.Buff;
 
-	// Token: 0x17001FA6 RID: 8102
-	// (get) Token: 0x06017761 RID: 96097 RVA: 0x005F8389 File Offset: 0x005F6589
-	// (set) Token: 0x06017762 RID: 96098 RVA: 0x005F8391 File Offset: 0x005F6591
+	// Token: 0x17001FFE RID: 8190
+	// (get) Token: 0x06015193 RID: 86419 RVA: 0x00624EAD File Offset: 0x006230AD
+	// (set) Token: 0x06015194 RID: 86420 RVA: 0x00624EB5 File Offset: 0x006230B5
 	public int QualityId { get; set; } = 1;
 
-	// Token: 0x17001FA7 RID: 8103
-	// (get) Token: 0x06017763 RID: 96099 RVA: 0x005F839A File Offset: 0x005F659A
-	// (set) Token: 0x06017764 RID: 96100 RVA: 0x005F83A2 File Offset: 0x005F65A2
+	// Token: 0x17001FFF RID: 8191
+	// (get) Token: 0x06015195 RID: 86421 RVA: 0x00624EBE File Offset: 0x006230BE
+	// (set) Token: 0x06015196 RID: 86422 RVA: 0x00624EC6 File Offset: 0x006230C6
 	public string Name { get; set; }
 
-	// Token: 0x17001FA8 RID: 8104
-	// (get) Token: 0x06017765 RID: 96101 RVA: 0x005F83AB File Offset: 0x005F65AB
-	// (set) Token: 0x06017766 RID: 96102 RVA: 0x005F83B3 File Offset: 0x005F65B3
+	// Token: 0x17002000 RID: 8192
+	// (get) Token: 0x06015197 RID: 86423 RVA: 0x00624ECF File Offset: 0x006230CF
+	// (set) Token: 0x06015198 RID: 86424 RVA: 0x00624ED7 File Offset: 0x006230D7
 	public string Desc { get; set; }
 
-	// Token: 0x17001FA9 RID: 8105
-	// (get) Token: 0x06017767 RID: 96103 RVA: 0x005F83BC File Offset: 0x005F65BC
-	// (set) Token: 0x06017768 RID: 96104 RVA: 0x005F83C4 File Offset: 0x005F65C4
+	// Token: 0x17002001 RID: 8193
+	// (get) Token: 0x06015199 RID: 86425 RVA: 0x00624EE0 File Offset: 0x006230E0
+	// (set) Token: 0x0601519A RID: 86426 RVA: 0x00624EE8 File Offset: 0x006230E8
 	[Nullable(new byte[]
 	{
 		2,
@@ -63,18 +63,18 @@ public class TrapDefenseShopBuffData : ITrapDefenseShopGoods
 		1
 	})] set; }
 
-	// Token: 0x17001FAA RID: 8106
-	// (get) Token: 0x06017769 RID: 96105 RVA: 0x005F83CD File Offset: 0x005F65CD
-	// (set) Token: 0x0601776A RID: 96106 RVA: 0x005F83D5 File Offset: 0x005F65D5
+	// Token: 0x17002002 RID: 8194
+	// (get) Token: 0x0601519B RID: 86427 RVA: 0x00624EF1 File Offset: 0x006230F1
+	// (set) Token: 0x0601519C RID: 86428 RVA: 0x00624EF9 File Offset: 0x006230F9
 	public string Icon { get; set; }
 
-	// Token: 0x17001FAB RID: 8107
-	// (get) Token: 0x0601776B RID: 96107 RVA: 0x005F83DE File Offset: 0x005F65DE
-	// (set) Token: 0x0601776C RID: 96108 RVA: 0x005F83E6 File Offset: 0x005F65E6
+	// Token: 0x17002003 RID: 8195
+	// (get) Token: 0x0601519D RID: 86429 RVA: 0x00624F02 File Offset: 0x00623102
+	// (set) Token: 0x0601519E RID: 86430 RVA: 0x00624F0A File Offset: 0x0062310A
 	public int CanPurchaseNum { get; set; }
 
-	// Token: 0x17001FAC RID: 8108
-	// (get) Token: 0x0601776D RID: 96109 RVA: 0x005F83EF File Offset: 0x005F65EF
+	// Token: 0x17002004 RID: 8196
+	// (get) Token: 0x0601519F RID: 86431 RVA: 0x00624F13 File Offset: 0x00623113
 	public bool Disable
 	{
 		get
@@ -83,8 +83,8 @@ public class TrapDefenseShopBuffData : ITrapDefenseShopGoods
 		}
 	}
 
-	// Token: 0x17001FAD RID: 8109
-	// (get) Token: 0x0601776E RID: 96110 RVA: 0x005F83F7 File Offset: 0x005F65F7
+	// Token: 0x17002005 RID: 8197
+	// (get) Token: 0x060151A0 RID: 86432 RVA: 0x00624F1B File Offset: 0x0062311B
 	public ETrapDefenseShopGoodsUnavailableReason DisableReason
 	{
 		get
@@ -97,12 +97,12 @@ public class TrapDefenseShopBuffData : ITrapDefenseShopGoods
 		}
 	}
 
-	// Token: 0x17001FAE RID: 8110
-	// (get) Token: 0x0601776F RID: 96111 RVA: 0x005F8404 File Offset: 0x005F6604
-	// (set) Token: 0x06017770 RID: 96112 RVA: 0x005F840C File Offset: 0x005F660C
+	// Token: 0x17002006 RID: 8198
+	// (get) Token: 0x060151A1 RID: 86433 RVA: 0x00624F28 File Offset: 0x00623128
+	// (set) Token: 0x060151A2 RID: 86434 RVA: 0x00624F30 File Offset: 0x00623130
 	public Func<PropMediumItemGrid> GetItemGridParam { get; set; }
 
-	// Token: 0x06017771 RID: 96113 RVA: 0x005F8415 File Offset: 0x005F6615
+	// Token: 0x060151A3 RID: 86435 RVA: 0x00624F39 File Offset: 0x00623139
 	public static TrapDefenseShopBuffData Create(TrapDefenseShopProductPbInfo serverData)
 	{
 		TrapDefenseShopBuffData trapDefenseShopBuffData = new TrapDefenseShopBuffData();
@@ -110,7 +110,7 @@ public class TrapDefenseShopBuffData : ITrapDefenseShopGoods
 		return trapDefenseShopBuffData;
 	}
 
-	// Token: 0x06017772 RID: 96114 RVA: 0x005F8424 File Offset: 0x005F6624
+	// Token: 0x060151A4 RID: 86436 RVA: 0x00624F48 File Offset: 0x00623148
 	public void Update(TrapDefenseShopProductPbInfo serverData)
 	{
 		TrapDefenseShopBdGroupPbInfo bdGroupPbInfo = serverData.BdGroupPbInfo;
@@ -148,7 +148,7 @@ public class TrapDefenseShopBuffData : ITrapDefenseShopGoods
 		this.IsSold = (bdGroupPbInfo2 != null && bdGroupPbInfo2.IsSold);
 	}
 
-	// Token: 0x06017773 RID: 96115 RVA: 0x005F8598 File Offset: 0x005F6798
+	// Token: 0x060151A5 RID: 86437 RVA: 0x006250BC File Offset: 0x006232BC
 	private PropMediumItemGrid BuildItemGridParam()
 	{
 		return new PropMediumItemGrid
@@ -165,23 +165,23 @@ public class TrapDefenseShopBuffData : ITrapDefenseShopGoods
 		};
 	}
 
-	// Token: 0x06017774 RID: 96116 RVA: 0x005F860C File Offset: 0x005F680C
+	// Token: 0x060151A6 RID: 86438 RVA: 0x00625130 File Offset: 0x00623330
 	private void Init(TrapDefenseShopProductPbInfo serverData)
 	{
 		this.GetItemGridParam = new Func<PropMediumItemGrid>(this.BuildItemGridParam);
 		this.Update(serverData);
 	}
 
-	// Token: 0x0400AF5E RID: 44894
+	// Token: 0x0400B363 RID: 45923
 	public TrapDefenseBdBuff Config;
 
-	// Token: 0x0400AF67 RID: 44903
+	// Token: 0x0400B36C RID: 45932
 	public int PurchaseLimit;
 
-	// Token: 0x0400AF69 RID: 44905
+	// Token: 0x0400B36E RID: 45934
 	[Nullable(2)]
 	public TrapDefenseBdBuffData BdBuffData;
 
-	// Token: 0x0400AF6A RID: 44906
+	// Token: 0x0400B36F RID: 45935
 	public bool IsSold;
 }

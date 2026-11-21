@@ -1,30 +1,30 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020010AC RID: 4268
+// Token: 0x02000560 RID: 1376
 [NullableContext(1)]
 [Nullable(0)]
 public readonly struct EActivityRewardSource : IEquatable<EActivityRewardSource>
 {
-	// Token: 0x06006F18 RID: 28440 RVA: 0x0016B433 File Offset: 0x00169633
+	// Token: 0x060042AE RID: 17070 RVA: 0x00173DAB File Offset: 0x00171FAB
 	private EActivityRewardSource(string value)
 	{
 		this._Value = value;
 	}
 
-	// Token: 0x06006F19 RID: 28441 RVA: 0x0016B43C File Offset: 0x0016963C
+	// Token: 0x060042AF RID: 17071 RVA: 0x00173DB4 File Offset: 0x00171FB4
 	public override string ToString()
 	{
 		return this._Value;
 	}
 
-	// Token: 0x06006F1A RID: 28442 RVA: 0x0016B444 File Offset: 0x00169644
+	// Token: 0x060042B0 RID: 17072 RVA: 0x00173DBC File Offset: 0x00171FBC
 	public bool Equals(EActivityRewardSource other)
 	{
 		return this._Value == other._Value;
 	}
 
-	// Token: 0x06006F1B RID: 28443 RVA: 0x0016B458 File Offset: 0x00169658
+	// Token: 0x060042B1 RID: 17073 RVA: 0x00173DD0 File Offset: 0x00171FD0
 	public override bool Equals(object obj)
 	{
 		if (obj is EActivityRewardSource)
@@ -35,7 +35,7 @@ public readonly struct EActivityRewardSource : IEquatable<EActivityRewardSource>
 		return false;
 	}
 
-	// Token: 0x06006F1C RID: 28444 RVA: 0x0016B47D File Offset: 0x0016967D
+	// Token: 0x060042B2 RID: 17074 RVA: 0x00173DF5 File Offset: 0x00171FF5
 	public override int GetHashCode()
 	{
 		string value = this._Value;
@@ -46,54 +46,54 @@ public readonly struct EActivityRewardSource : IEquatable<EActivityRewardSource>
 		return value.GetHashCode();
 	}
 
-	// Token: 0x06006F1D RID: 28445 RVA: 0x0016B490 File Offset: 0x00169690
+	// Token: 0x060042B3 RID: 17075 RVA: 0x00173E08 File Offset: 0x00172008
 	public static bool operator ==(EActivityRewardSource left, EActivityRewardSource right)
 	{
 		return left.Equals(right);
 	}
 
-	// Token: 0x06006F1E RID: 28446 RVA: 0x0016B49A File Offset: 0x0016969A
+	// Token: 0x060042B4 RID: 17076 RVA: 0x00173E12 File Offset: 0x00172012
 	public static bool operator !=(EActivityRewardSource left, EActivityRewardSource right)
 	{
 		return !left.Equals(right);
 	}
 
-	// Token: 0x040033AA RID: 13226
+	// Token: 0x04003443 RID: 13379
 	private readonly string _Value;
 
-	// Token: 0x040033AB RID: 13227
+	// Token: 0x04003444 RID: 13380
 	public static readonly EActivityRewardSource BossRush = new EActivityRewardSource("BossRush");
 
-	// Token: 0x040033AC RID: 13228
+	// Token: 0x04003445 RID: 13381
 	public static readonly EActivityRewardSource Collection = new EActivityRewardSource("Collection");
 
-	// Token: 0x040033AD RID: 13229
+	// Token: 0x04003446 RID: 13382
 	public static readonly EActivityRewardSource MoonChasing = new EActivityRewardSource("MoonChasing");
 
-	// Token: 0x040033AE RID: 13230
+	// Token: 0x04003447 RID: 13383
 	public static readonly EActivityRewardSource Mowing = new EActivityRewardSource("Mowing");
 
-	// Token: 0x040033AF RID: 13231
+	// Token: 0x04003448 RID: 13384
 	public static readonly EActivityRewardSource MowingRisk = new EActivityRewardSource("MowingRisk");
 
-	// Token: 0x040033B0 RID: 13232
+	// Token: 0x04003449 RID: 13385
 	public static readonly EActivityRewardSource DreamLink = new EActivityRewardSource("DreamLink");
 
-	// Token: 0x040033B1 RID: 13233
+	// Token: 0x0400344A RID: 13386
 	public static readonly EActivityRewardSource DarkCoastDelivery = new EActivityRewardSource("DarkCoastDelivery");
 
-	// Token: 0x040033B2 RID: 13234
+	// Token: 0x0400344B RID: 13387
 	public static readonly EActivityRewardSource TowerDefence = new EActivityRewardSource("TowerDefence");
 
-	// Token: 0x040033B3 RID: 13235
+	// Token: 0x0400344C RID: 13388
 	public static readonly EActivityRewardSource FarmGold = new EActivityRewardSource("FarmGold");
 
-	// Token: 0x040033B4 RID: 13236
+	// Token: 0x0400344D RID: 13389
 	public static readonly EActivityRewardSource WeeklyRogue = new EActivityRewardSource("WeeklyRogue");
 
-	// Token: 0x040033B5 RID: 13237
+	// Token: 0x0400344E RID: 13390
 	public static readonly EActivityRewardSource RogueRes = new EActivityRewardSource("RogueRes");
 
-	// Token: 0x040033B6 RID: 13238
+	// Token: 0x0400344F RID: 13391
 	public static readonly EActivityRewardSource Infrastructure = new EActivityRewardSource("Infrastructure");
 }

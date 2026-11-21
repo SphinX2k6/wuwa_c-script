@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200590C RID: 22796
+	// Token: 0x02005F19 RID: 24345
 	public class IShowcaseDeliveryRewardT
 	{
-		// Token: 0x1700AAE0 RID: 43744
-		// (get) Token: 0x06026870 RID: 157808 RVA: 0x0054EBFC File Offset: 0x0054CDFC
-		// (set) Token: 0x06026871 RID: 157809 RVA: 0x0054EC04 File Offset: 0x0054CE04
+		// Token: 0x1700B414 RID: 46100
+		// (get) Token: 0x06028DDA RID: 167386 RVA: 0x00595868 File Offset: 0x00593A68
+		// (set) Token: 0x06028DDB RID: 167387 RVA: 0x00595870 File Offset: 0x00593A70
 		public int AchievedDollCount { get; set; }
 
-		// Token: 0x1700AAE1 RID: 43745
-		// (get) Token: 0x06026872 RID: 157810 RVA: 0x0054EC0D File Offset: 0x0054CE0D
-		// (set) Token: 0x06026873 RID: 157811 RVA: 0x0054EC15 File Offset: 0x0054CE15
+		// Token: 0x1700B415 RID: 46101
+		// (get) Token: 0x06028DDC RID: 167388 RVA: 0x00595879 File Offset: 0x00593A79
+		// (set) Token: 0x06028DDD RID: 167389 RVA: 0x00595881 File Offset: 0x00593A81
 		public int DropId { get; set; }
 
-		// Token: 0x06026874 RID: 157812 RVA: 0x0054EC1E File Offset: 0x0054CE1E
+		// Token: 0x06028DDE RID: 167390 RVA: 0x0059588A File Offset: 0x00593A8A
 		public IShowcaseDeliveryRewardT()
 		{
 			this.AchievedDollCount = 0;

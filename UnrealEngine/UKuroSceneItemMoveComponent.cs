@@ -7,37 +7,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001764 RID: 5988
+	// Token: 0x0200034D RID: 845
 	[UnrealObjectPath("/Script/KuroComponent.KuroSceneItemMoveComponent")]
 	[UnrealStructLayout(832, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 832)]
-	public class UKuroSceneItemMoveComponent : UMovementComponent, IUnrealUObject, IUnrealObject, IRVOAvoidanceInterface, IUnrealNativeInterface, IUnrealInterface
+	public class UKuroSceneItemMoveComponent : UMovementComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06015865 RID: 88165 RVA: 0x001FA12A File Offset: 0x001F832A
+		// Token: 0x0600567B RID: 22139 RVA: 0x000793BA File Offset: 0x000775BA
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroSceneItemMoveComponent._ClassPtr;
 		}
 
-		// Token: 0x06015866 RID: 88166 RVA: 0x001FA136 File Offset: 0x001F8336
-		int IRVOAvoidanceInterface.InterfaceOffset()
-		{
-			return UKuroSceneItemMoveComponent.__InterfaceOffset_IRVOAvoidanceInterface;
-		}
-
-		// Token: 0x06015867 RID: 88167 RVA: 0x001FA140 File Offset: 0x001F8340
+		// Token: 0x0600567C RID: 22140 RVA: 0x000793C8 File Offset: 0x000775C8
 		public UKuroSceneItemMoveComponent() : this(BuiltinUtils.AllocNativeUObject(UKuroSceneItemMoveComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06015868 RID: 88168 RVA: 0x001FA168 File Offset: 0x001F8368
+		// Token: 0x0600567D RID: 22141 RVA: 0x000793F0 File Offset: 0x000775F0
 		[NullableContext(1)]
 		public UKuroSceneItemMoveComponent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroSceneItemMoveComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170054FA RID: 21754
-		// (get) Token: 0x06015869 RID: 88169 RVA: 0x001FA19B File Offset: 0x001F839B
-		// (set) Token: 0x0601586A RID: 88170 RVA: 0x001FA1AB File Offset: 0x001F83AB
+		// Token: 0x170010FB RID: 4347
+		// (get) Token: 0x0600567E RID: 22142 RVA: 0x00079423 File Offset: 0x00077623
+		// (set) Token: 0x0600567F RID: 22143 RVA: 0x00079433 File Offset: 0x00077633
 		public unsafe float CustomTimeDilation
 		{
 			get
@@ -50,9 +44,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170054FB RID: 21755
-		// (get) Token: 0x0601586B RID: 88171 RVA: 0x001FA1BC File Offset: 0x001F83BC
-		// (set) Token: 0x0601586C RID: 88172 RVA: 0x001FA1D5 File Offset: 0x001F83D5
+		// Token: 0x170010FC RID: 4348
+		// (get) Token: 0x06005680 RID: 22144 RVA: 0x00079444 File Offset: 0x00077644
+		// (set) Token: 0x06005681 RID: 22145 RVA: 0x0007945D File Offset: 0x0007765D
 		public unsafe bool bUseRVOAvoidance
 		{
 			get
@@ -65,9 +59,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170054FC RID: 21756
-		// (get) Token: 0x0601586D RID: 88173 RVA: 0x001FA205 File Offset: 0x001F8405
-		// (set) Token: 0x0601586E RID: 88174 RVA: 0x001FA215 File Offset: 0x001F8415
+		// Token: 0x170010FD RID: 4349
+		// (get) Token: 0x06005682 RID: 22146 RVA: 0x0007948D File Offset: 0x0007768D
+		// (set) Token: 0x06005683 RID: 22147 RVA: 0x0007949D File Offset: 0x0007769D
 		public unsafe int AvoidanceUID
 		{
 			get
@@ -80,9 +74,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170054FD RID: 21757
-		// (get) Token: 0x0601586F RID: 88175 RVA: 0x001FA228 File Offset: 0x001F8428
-		// (set) Token: 0x06015870 RID: 88176 RVA: 0x001FA261 File Offset: 0x001F8461
+		// Token: 0x170010FE RID: 4350
+		// (get) Token: 0x06005684 RID: 22148 RVA: 0x000794B0 File Offset: 0x000776B0
+		// (set) Token: 0x06005685 RID: 22149 RVA: 0x000794E9 File Offset: 0x000776E9
 		[Nullable(1)]
 		public FNavAvoidanceMask AvoidanceGroup
 		{
@@ -104,9 +98,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170054FE RID: 21758
-		// (get) Token: 0x06015871 RID: 88177 RVA: 0x001FA284 File Offset: 0x001F8484
-		// (set) Token: 0x06015872 RID: 88178 RVA: 0x001FA2BD File Offset: 0x001F84BD
+		// Token: 0x170010FF RID: 4351
+		// (get) Token: 0x06005686 RID: 22150 RVA: 0x0007950C File Offset: 0x0007770C
+		// (set) Token: 0x06005687 RID: 22151 RVA: 0x00079545 File Offset: 0x00077745
 		[Nullable(1)]
 		public FNavAvoidanceMask GroupsToAvoid
 		{
@@ -128,9 +122,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170054FF RID: 21759
-		// (get) Token: 0x06015873 RID: 88179 RVA: 0x001FA2E0 File Offset: 0x001F84E0
-		// (set) Token: 0x06015874 RID: 88180 RVA: 0x001FA319 File Offset: 0x001F8519
+		// Token: 0x17001100 RID: 4352
+		// (get) Token: 0x06005688 RID: 22152 RVA: 0x00079568 File Offset: 0x00077768
+		// (set) Token: 0x06005689 RID: 22153 RVA: 0x000795A1 File Offset: 0x000777A1
 		[Nullable(1)]
 		public FNavAvoidanceMask GroupsToIgnore
 		{
@@ -152,9 +146,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005500 RID: 21760
-		// (get) Token: 0x06015875 RID: 88181 RVA: 0x001FA33A File Offset: 0x001F853A
-		// (set) Token: 0x06015876 RID: 88182 RVA: 0x001FA34A File Offset: 0x001F854A
+		// Token: 0x17001101 RID: 4353
+		// (get) Token: 0x0600568A RID: 22154 RVA: 0x000795C2 File Offset: 0x000777C2
+		// (set) Token: 0x0600568B RID: 22155 RVA: 0x000795D2 File Offset: 0x000777D2
 		public unsafe float AvoidanceWeight
 		{
 			get
@@ -167,9 +161,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005501 RID: 21761
-		// (get) Token: 0x06015877 RID: 88183 RVA: 0x001FA35B File Offset: 0x001F855B
-		// (set) Token: 0x06015878 RID: 88184 RVA: 0x001FA36B File Offset: 0x001F856B
+		// Token: 0x17001102 RID: 4354
+		// (get) Token: 0x0600568C RID: 22156 RVA: 0x000795E3 File Offset: 0x000777E3
+		// (set) Token: 0x0600568D RID: 22157 RVA: 0x000795F3 File Offset: 0x000777F3
 		public unsafe float AvoidanceHeight
 		{
 			get
@@ -182,9 +176,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005502 RID: 21762
-		// (get) Token: 0x06015879 RID: 88185 RVA: 0x001FA37C File Offset: 0x001F857C
-		// (set) Token: 0x0601587A RID: 88186 RVA: 0x001FA38C File Offset: 0x001F858C
+		// Token: 0x17001103 RID: 4355
+		// (get) Token: 0x0600568E RID: 22158 RVA: 0x00079604 File Offset: 0x00077804
+		// (set) Token: 0x0600568F RID: 22159 RVA: 0x00079614 File Offset: 0x00077814
 		public unsafe float AvoidanceRadius
 		{
 			get
@@ -197,9 +191,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005503 RID: 21763
-		// (get) Token: 0x0601587B RID: 88187 RVA: 0x001FA39D File Offset: 0x001F859D
-		// (set) Token: 0x0601587C RID: 88188 RVA: 0x001FA3AD File Offset: 0x001F85AD
+		// Token: 0x17001104 RID: 4356
+		// (get) Token: 0x06005690 RID: 22160 RVA: 0x00079625 File Offset: 0x00077825
+		// (set) Token: 0x06005691 RID: 22161 RVA: 0x00079635 File Offset: 0x00077835
 		public unsafe float AvoidanceConsiderationRadius
 		{
 			get
@@ -212,9 +206,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005504 RID: 21764
-		// (get) Token: 0x0601587D RID: 88189 RVA: 0x001FA3BE File Offset: 0x001F85BE
-		// (set) Token: 0x0601587E RID: 88190 RVA: 0x001FA3D7 File Offset: 0x001F85D7
+		// Token: 0x17001105 RID: 4357
+		// (get) Token: 0x06005692 RID: 22162 RVA: 0x00079646 File Offset: 0x00077846
+		// (set) Token: 0x06005693 RID: 22163 RVA: 0x0007965F File Offset: 0x0007785F
 		public unsafe bool bWasAvoidanceUpdated
 		{
 			get
@@ -227,33 +221,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005505 RID: 21765
-		// (get) Token: 0x0601587F RID: 88191 RVA: 0x001FA408 File Offset: 0x001F8608
-		// (set) Token: 0x06015880 RID: 88192 RVA: 0x001FA441 File Offset: 0x001F8641
-		[Nullable(1)]
-		public FSimpleMoveData SimpleMoveData
-		{
-			[NullableContext(1)]
-			get
-			{
-				base.FastCheckIsValid();
-				FSimpleMoveData result;
-				if ((result = this._SimpleMoveData) == null)
-				{
-					result = (this._SimpleMoveData = new FSimpleMoveData(base.NativePtr + (IntPtr)UKuroSceneItemMoveComponent.__PropertyOffset_SimpleMoveData, this));
-				}
-				return result;
-			}
-			[NullableContext(1)]
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FSimpleMoveData.StaticStruct(), base.NativePtr + (IntPtr)UKuroSceneItemMoveComponent.__PropertyOffset_SimpleMoveData, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x17005506 RID: 21766
-		// (get) Token: 0x06015881 RID: 88193 RVA: 0x001FA464 File Offset: 0x001F8664
-		// (set) Token: 0x06015882 RID: 88194 RVA: 0x001FA49D File Offset: 0x001F869D
+		// Token: 0x17001106 RID: 4358
+		// (get) Token: 0x06005694 RID: 22164 RVA: 0x00079690 File Offset: 0x00077890
+		// (set) Token: 0x06005695 RID: 22165 RVA: 0x000796C9 File Offset: 0x000778C9
 		[Nullable(1)]
 		public FSplineMoveData SplineMoveData
 		{
@@ -275,33 +245,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005507 RID: 21767
-		// (get) Token: 0x06015883 RID: 88195 RVA: 0x001FA4C0 File Offset: 0x001F86C0
-		// (set) Token: 0x06015884 RID: 88196 RVA: 0x001FA4F9 File Offset: 0x001F86F9
-		[Nullable(1)]
-		public FTrackMoveData TrackMoveData
-		{
-			[NullableContext(1)]
-			get
-			{
-				base.FastCheckIsValid();
-				FTrackMoveData result;
-				if ((result = this._TrackMoveData) == null)
-				{
-					result = (this._TrackMoveData = new FTrackMoveData(base.NativePtr + (IntPtr)UKuroSceneItemMoveComponent.__PropertyOffset_TrackMoveData, this));
-				}
-				return result;
-			}
-			[NullableContext(1)]
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FTrackMoveData.StaticStruct(), base.NativePtr + (IntPtr)UKuroSceneItemMoveComponent.__PropertyOffset_TrackMoveData, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x17005508 RID: 21768
-		// (get) Token: 0x06015885 RID: 88197 RVA: 0x001FA51C File Offset: 0x001F871C
-		// (set) Token: 0x06015886 RID: 88198 RVA: 0x001FA555 File Offset: 0x001F8755
+		// Token: 0x17001107 RID: 4359
+		// (get) Token: 0x06005696 RID: 22166 RVA: 0x000796EC File Offset: 0x000778EC
+		// (set) Token: 0x06005697 RID: 22167 RVA: 0x00079725 File Offset: 0x00077925
 		[Nullable(1)]
 		public FOnStopEvent OnStopCallback
 		{
@@ -323,9 +269,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005509 RID: 21769
-		// (get) Token: 0x06015887 RID: 88199 RVA: 0x001FA578 File Offset: 0x001F8778
-		// (set) Token: 0x06015888 RID: 88200 RVA: 0x001FA5B1 File Offset: 0x001F87B1
+		// Token: 0x17001108 RID: 4360
+		// (get) Token: 0x06005698 RID: 22168 RVA: 0x00079748 File Offset: 0x00077948
+		// (set) Token: 0x06005699 RID: 22169 RVA: 0x00079781 File Offset: 0x00077981
 		[Nullable(1)]
 		public FOnStopEvent OnMoveStopCallback
 		{
@@ -347,9 +293,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700550A RID: 21770
-		// (get) Token: 0x06015889 RID: 88201 RVA: 0x001FA5D4 File Offset: 0x001F87D4
-		// (set) Token: 0x0601588A RID: 88202 RVA: 0x001FA60D File Offset: 0x001F880D
+		// Token: 0x17001109 RID: 4361
+		// (get) Token: 0x0600569A RID: 22170 RVA: 0x000797A4 File Offset: 0x000779A4
+		// (set) Token: 0x0600569B RID: 22171 RVA: 0x000797DD File Offset: 0x000779DD
 		[Nullable(1)]
 		public FOnArrivePoint OnArrivePointCallback
 		{
@@ -371,9 +317,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700550B RID: 21771
-		// (get) Token: 0x0601588B RID: 88203 RVA: 0x001FA630 File Offset: 0x001F8830
-		// (set) Token: 0x0601588C RID: 88204 RVA: 0x001FA669 File Offset: 0x001F8869
+		// Token: 0x1700110A RID: 4362
+		// (get) Token: 0x0600569C RID: 22172 RVA: 0x00079800 File Offset: 0x00077A00
+		// (set) Token: 0x0600569D RID: 22173 RVA: 0x00079839 File Offset: 0x00077A39
 		[Nullable(1)]
 		public FOnStopEvent OnRotateStopCallback
 		{
@@ -395,57 +341,30 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700550C RID: 21772
-		// (get) Token: 0x0601588D RID: 88205 RVA: 0x001FA68C File Offset: 0x001F888C
-		// (set) Token: 0x0601588E RID: 88206 RVA: 0x001FA6C5 File Offset: 0x001F88C5
-		[Nullable(1)]
-		public FTargetRotationData TargetRotationData
-		{
-			[NullableContext(1)]
-			get
-			{
-				base.FastCheckIsValid();
-				FTargetRotationData result;
-				if ((result = this._TargetRotationData) == null)
-				{
-					result = (this._TargetRotationData = new FTargetRotationData(base.NativePtr + (IntPtr)UKuroSceneItemMoveComponent.__PropertyOffset_TargetRotationData, this));
-				}
-				return result;
-			}
-			[NullableContext(1)]
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FTargetRotationData.StaticStruct(), base.NativePtr + (IntPtr)UKuroSceneItemMoveComponent.__PropertyOffset_TargetRotationData, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x0601588F RID: 88207 RVA: 0x001FA6E8 File Offset: 0x001F88E8
+		// Token: 0x0600569E RID: 22174 RVA: 0x0007985C File Offset: 0x00077A5C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool UpdateSplineMoveDistanceByPosition(FVectorDouble NewPosition)
 		{
 			UKuroSceneItemMoveComponent.__UpdateSplineMoveDistanceByPosition_FunctionParams* ptr = stackalloc UKuroSceneItemMoveComponent.__UpdateSplineMoveDistanceByPosition_FunctionParams[(UIntPtr)47] + 15L / (long)sizeof(UKuroSceneItemMoveComponent.__UpdateSplineMoveDistanceByPosition_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSceneItemMoveComponent.__UpdateSplineMoveDistanceByPosition_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->NewPosition = NewPosition;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__UpdateSplineMoveDistanceByPosition_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__UpdateSplineMoveDistanceByPosition_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06015890 RID: 88208 RVA: 0x001FA738 File Offset: 0x001F8938
+		// Token: 0x0600569F RID: 22175 RVA: 0x000798A8 File Offset: 0x00077AA8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool UpdateSplineMoveDistance(float NewDistanceAloneSpline)
 		{
 			UKuroSceneItemMoveComponent.__UpdateSplineMoveDistance_FunctionParams* ptr = stackalloc UKuroSceneItemMoveComponent.__UpdateSplineMoveDistance_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(UKuroSceneItemMoveComponent.__UpdateSplineMoveDistance_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSceneItemMoveComponent.__UpdateSplineMoveDistance_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->NewDistanceAloneSpline = NewDistanceAloneSpline;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__UpdateSplineMoveDistance_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__UpdateSplineMoveDistance_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06015891 RID: 88209 RVA: 0x001FA788 File Offset: 0x001F8988
+		// Token: 0x060056A0 RID: 22176 RVA: 0x000798F4 File Offset: 0x00077AF4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool UpdateDynamicSpeedSplineMoveParams(float CurrentSpeed, float Acceleration, float TargetSpeed)
 		{
 			UKuroSceneItemMoveComponent.__UpdateDynamicSpeedSplineMoveParams_FunctionParams* ptr = stackalloc UKuroSceneItemMoveComponent.__UpdateDynamicSpeedSplineMoveParams_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UKuroSceneItemMoveComponent.__UpdateDynamicSpeedSplineMoveParams_FunctionParams) & -16L;
@@ -453,52 +372,48 @@ namespace UnrealEngine
 			ptr->CurrentSpeed = CurrentSpeed;
 			ptr->Acceleration = Acceleration;
 			ptr->TargetSpeed = TargetSpeed;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__UpdateDynamicSpeedSplineMoveParams_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__UpdateDynamicSpeedSplineMoveParams_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06015892 RID: 88210 RVA: 0x001FA7E4 File Offset: 0x001F89E4
+		// Token: 0x060056A1 RID: 22177 RVA: 0x00079950 File Offset: 0x00077B50
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool SwitchTrackTarget(AActor NewTargetActor)
 		{
 			UKuroSceneItemMoveComponent.__SwitchTrackTarget_FunctionParams* ptr = stackalloc UKuroSceneItemMoveComponent.__SwitchTrackTarget_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UKuroSceneItemMoveComponent.__SwitchTrackTarget_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSceneItemMoveComponent.__SwitchTrackTarget_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->NewTargetActor = ((NewTargetActor != null) ? NewTargetActor.NativePtr : IntPtr.Zero);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__SwitchTrackTarget_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__SwitchTrackTarget_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06015893 RID: 88211 RVA: 0x001FA840 File Offset: 0x001F8A40
+		// Token: 0x060056A2 RID: 22178 RVA: 0x000799AC File Offset: 0x00077BAC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool StopRotate(EKuroSceneItemStopRotateMethod StopMethod, bool bBroadcastRotateStopCallback = false)
 		{
 			UKuroSceneItemMoveComponent.__StopRotate_FunctionParams* ptr = stackalloc UKuroSceneItemMoveComponent.__StopRotate_FunctionParams[(UIntPtr)18] + 15L / (long)sizeof(UKuroSceneItemMoveComponent.__StopRotate_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSceneItemMoveComponent.__StopRotate_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->StopMethod = StopMethod;
 			ptr->bBroadcastRotateStopCallback = bBroadcastRotateStopCallback;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__StopRotate_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__StopRotate_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06015894 RID: 88212 RVA: 0x001FA894 File Offset: 0x001F8A94
+		// Token: 0x060056A3 RID: 22179 RVA: 0x00079A00 File Offset: 0x00077C00
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void StopAllMove(bool bBroadcastStopCallback = false, bool bBroadcastIndexCallback = false)
 		{
 			UKuroSceneItemMoveComponent.__StopAllMove_FunctionParams* ptr = stackalloc UKuroSceneItemMoveComponent.__StopAllMove_FunctionParams[(UIntPtr)17] + 15L / (long)sizeof(UKuroSceneItemMoveComponent.__StopAllMove_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSceneItemMoveComponent.__StopAllMove_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->bBroadcastStopCallback = bBroadcastStopCallback;
 			ptr->bBroadcastIndexCallback = bBroadcastIndexCallback;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__StopAllMove_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__StopAllMove_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06015895 RID: 88213 RVA: 0x001FA8E4 File Offset: 0x001F8AE4
+		// Token: 0x060056A4 RID: 22180 RVA: 0x00079A50 File Offset: 0x00077C50
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool StartTrackMove(AActor TargetActor, float MoveSpeed, FRotator InitRotatorOffset, float angleSpeed)
 		{
 			UKuroSceneItemMoveComponent.__StartTrackMove_FunctionParams* ptr = stackalloc UKuroSceneItemMoveComponent.__StartTrackMove_FunctionParams[(UIntPtr)47] + 15L / (long)sizeof(UKuroSceneItemMoveComponent.__StartTrackMove_FunctionParams) & -16L;
@@ -507,25 +422,23 @@ namespace UnrealEngine
 			ptr->MoveSpeed = MoveSpeed;
 			ptr->InitRotatorOffset = InitRotatorOffset;
 			ptr->angleSpeed = angleSpeed;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__StartTrackMove_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__StartTrackMove_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06015896 RID: 88214 RVA: 0x001FA958 File Offset: 0x001F8B58
+		// Token: 0x060056A5 RID: 22181 RVA: 0x00079AC4 File Offset: 0x00077CC4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool StartRotate()
 		{
 			UKuroSceneItemMoveComponent.__StartRotate_FunctionParams* ptr = stackalloc UKuroSceneItemMoveComponent.__StartRotate_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(UKuroSceneItemMoveComponent.__StartRotate_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSceneItemMoveComponent.__StartRotate_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__StartRotate_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__StartRotate_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06015897 RID: 88215 RVA: 0x001FA9A0 File Offset: 0x001F8BA0
+		// Token: 0x060056A6 RID: 22182 RVA: 0x00079B0C File Offset: 0x00077D0C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool StartMoveWithSplineAtDynamicSpeed(USplineComponent SplineComponent, int MaxMoveTimes, bool Cycle, bool KeepLookAt, float InitSpeed, float Acceleration, float TargetSpeed, float StartDis = -1f, float EndDis = -1f)
 		{
 			UKuroSceneItemMoveComponent.__StartMoveWithSplineAtDynamicSpeed_FunctionParams* ptr = stackalloc UKuroSceneItemMoveComponent.__StartMoveWithSplineAtDynamicSpeed_FunctionParams[(UIntPtr)55] + 15L / (long)sizeof(UKuroSceneItemMoveComponent.__StartMoveWithSplineAtDynamicSpeed_FunctionParams) & -16L;
@@ -539,14 +452,13 @@ namespace UnrealEngine
 			ptr->TargetSpeed = TargetSpeed;
 			ptr->StartDis = StartDis;
 			ptr->EndDis = EndDis;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__StartMoveWithSplineAtDynamicSpeed_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__StartMoveWithSplineAtDynamicSpeed_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06015898 RID: 88216 RVA: 0x001FAA3C File Offset: 0x001F8C3C
+		// Token: 0x060056A7 RID: 22183 RVA: 0x00079BA8 File Offset: 0x00077DA8
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool StartMoveWithSplineAtConstantTime(USplineComponent SplineComponent, bool Repeat, bool Cycle, bool KeepLookAt, float TimeSec, UCurveFloat TimeDisCurve, float StartTimeOffset, float StartDis = -1f, float EndDis = -1f)
 		{
 			UKuroSceneItemMoveComponent.__StartMoveWithSplineAtConstantTime_FunctionParams* ptr = stackalloc UKuroSceneItemMoveComponent.__StartMoveWithSplineAtConstantTime_FunctionParams[(UIntPtr)55] + 15L / (long)sizeof(UKuroSceneItemMoveComponent.__StartMoveWithSplineAtConstantTime_FunctionParams) & -16L;
@@ -560,47 +472,43 @@ namespace UnrealEngine
 			ptr->StartTimeOffset = StartTimeOffset;
 			ptr->StartDis = StartDis;
 			ptr->EndDis = EndDis;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__StartMoveWithSplineAtConstantTime_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__StartMoveWithSplineAtConstantTime_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06015899 RID: 88217 RVA: 0x001FAAE8 File Offset: 0x001F8CE8
+		// Token: 0x060056A8 RID: 22184 RVA: 0x00079C54 File Offset: 0x00077E54
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetTickingRotateEnable(bool bEnabled)
 		{
 			UKuroSceneItemMoveComponent.__SetTickingRotateEnable_FunctionParams* ptr = stackalloc UKuroSceneItemMoveComponent.__SetTickingRotateEnable_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(UKuroSceneItemMoveComponent.__SetTickingRotateEnable_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSceneItemMoveComponent.__SetTickingRotateEnable_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->bEnabled = bEnabled;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__SetTickingRotateEnable_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__SetTickingRotateEnable_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601589A RID: 88218 RVA: 0x001FAB30 File Offset: 0x001F8D30
+		// Token: 0x060056A9 RID: 22185 RVA: 0x00079C9C File Offset: 0x00077E9C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetTickingMoveEnable(bool bEnabled)
 		{
 			UKuroSceneItemMoveComponent.__SetTickingMoveEnable_FunctionParams* ptr = stackalloc UKuroSceneItemMoveComponent.__SetTickingMoveEnable_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(UKuroSceneItemMoveComponent.__SetTickingMoveEnable_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSceneItemMoveComponent.__SetTickingMoveEnable_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->bEnabled = bEnabled;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__SetTickingMoveEnable_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__SetTickingMoveEnable_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601589B RID: 88219 RVA: 0x001FAB78 File Offset: 0x001F8D78
+		// Token: 0x060056AA RID: 22186 RVA: 0x00079CE4 File Offset: 0x00077EE4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetMaxDeltaDegreePerSecondForUpdatingLookAt(float MaxDegreePerSecond)
 		{
 			UKuroSceneItemMoveComponent.__SetMaxDeltaDegreePerSecondForUpdatingLookAt_FunctionParams* ptr = stackalloc UKuroSceneItemMoveComponent.__SetMaxDeltaDegreePerSecondForUpdatingLookAt_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(UKuroSceneItemMoveComponent.__SetMaxDeltaDegreePerSecondForUpdatingLookAt_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSceneItemMoveComponent.__SetMaxDeltaDegreePerSecondForUpdatingLookAt_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->MaxDegreePerSecond = MaxDegreePerSecond;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__SetMaxDeltaDegreePerSecondForUpdatingLookAt_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__SetMaxDeltaDegreePerSecondForUpdatingLookAt_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601589C RID: 88220 RVA: 0x001FABC0 File Offset: 0x001F8DC0
+		// Token: 0x060056AB RID: 22187 RVA: 0x00079D2C File Offset: 0x00077F2C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetGroupsToIgnoreMask(in FNavAvoidanceMask GroupMask)
 		{
 			UKuroSceneItemMoveComponent.__SetGroupsToIgnoreMask_FunctionParams* ptr = stackalloc UKuroSceneItemMoveComponent.__SetGroupsToIgnoreMask_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(UKuroSceneItemMoveComponent.__SetGroupsToIgnoreMask_FunctionParams) & -16L;
@@ -609,13 +517,12 @@ namespace UnrealEngine
 			{
 				UnrealReflectionUtils.CopyNativeStruct(FNavAvoidanceMask.StaticStruct(), &ptr->GroupMask, GroupMask.NativePtr, 1, false);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__SetGroupsToIgnoreMask_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__SetGroupsToIgnoreMask_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601589D RID: 88221 RVA: 0x001FAC24 File Offset: 0x001F8E24
+		// Token: 0x060056AC RID: 22188 RVA: 0x00079D90 File Offset: 0x00077F90
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetGroupsToAvoidMask(in FNavAvoidanceMask GroupMask)
 		{
 			UKuroSceneItemMoveComponent.__SetGroupsToAvoidMask_FunctionParams* ptr = stackalloc UKuroSceneItemMoveComponent.__SetGroupsToAvoidMask_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(UKuroSceneItemMoveComponent.__SetGroupsToAvoidMask_FunctionParams) & -16L;
@@ -624,24 +531,22 @@ namespace UnrealEngine
 			{
 				UnrealReflectionUtils.CopyNativeStruct(FNavAvoidanceMask.StaticStruct(), &ptr->GroupMask, GroupMask.NativePtr, 1, false);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__SetGroupsToAvoidMask_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__SetGroupsToAvoidMask_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601589E RID: 88222 RVA: 0x001FAC88 File Offset: 0x001F8E88
+		// Token: 0x060056AD RID: 22189 RVA: 0x00079DF4 File Offset: 0x00077FF4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetEnableDebugForMove(bool Enable)
 		{
 			UKuroSceneItemMoveComponent.__SetEnableDebugForMove_FunctionParams* ptr = stackalloc UKuroSceneItemMoveComponent.__SetEnableDebugForMove_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(UKuroSceneItemMoveComponent.__SetEnableDebugForMove_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSceneItemMoveComponent.__SetEnableDebugForMove_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->Enable = Enable;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__SetEnableDebugForMove_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__SetEnableDebugForMove_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601589F RID: 88223 RVA: 0x001FACD0 File Offset: 0x001F8ED0
+		// Token: 0x060056AE RID: 22190 RVA: 0x00079E3C File Offset: 0x0007803C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetAvoidanceGroupMask(in FNavAvoidanceMask GroupMask)
 		{
 			UKuroSceneItemMoveComponent.__SetAvoidanceGroupMask_FunctionParams* ptr = stackalloc UKuroSceneItemMoveComponent.__SetAvoidanceGroupMask_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(UKuroSceneItemMoveComponent.__SetAvoidanceGroupMask_FunctionParams) & -16L;
@@ -650,131 +555,120 @@ namespace UnrealEngine
 			{
 				UnrealReflectionUtils.CopyNativeStruct(FNavAvoidanceMask.StaticStruct(), &ptr->GroupMask, GroupMask.NativePtr, 1, false);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__SetAvoidanceGroupMask_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__SetAvoidanceGroupMask_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060158A0 RID: 88224 RVA: 0x001FAD34 File Offset: 0x001F8F34
+		// Token: 0x060056AF RID: 22191 RVA: 0x00079EA0 File Offset: 0x000780A0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetAvoidanceEnabled(bool bEnable)
 		{
 			UKuroSceneItemMoveComponent.__SetAvoidanceEnabled_FunctionParams* ptr = stackalloc UKuroSceneItemMoveComponent.__SetAvoidanceEnabled_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(UKuroSceneItemMoveComponent.__SetAvoidanceEnabled_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSceneItemMoveComponent.__SetAvoidanceEnabled_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->bEnable = bEnable;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__SetAvoidanceEnabled_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__SetAvoidanceEnabled_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060158A1 RID: 88225 RVA: 0x001FAD7C File Offset: 0x001F8F7C
+		// Token: 0x060056B0 RID: 22192 RVA: 0x00079EE8 File Offset: 0x000780E8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Kuro_SetGravityDirect(FVector InGravityDirect)
 		{
 			UKuroSceneItemMoveComponent.__Kuro_SetGravityDirect_FunctionParams* ptr = stackalloc UKuroSceneItemMoveComponent.__Kuro_SetGravityDirect_FunctionParams[(UIntPtr)27] + 15L / (long)sizeof(UKuroSceneItemMoveComponent.__Kuro_SetGravityDirect_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSceneItemMoveComponent.__Kuro_SetGravityDirect_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->InGravityDirect = InGravityDirect;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__Kuro_SetGravityDirect_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__Kuro_SetGravityDirect_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060158A2 RID: 88226 RVA: 0x001FADC4 File Offset: 0x001F8FC4
+		// Token: 0x060056B1 RID: 22193 RVA: 0x00079F30 File Offset: 0x00078130
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe FVector Kuro_GetGravityDirect()
 		{
 			UKuroSceneItemMoveComponent.__Kuro_GetGravityDirect_FunctionParams* ptr = stackalloc UKuroSceneItemMoveComponent.__Kuro_GetGravityDirect_FunctionParams[(UIntPtr)27] + 15L / (long)sizeof(UKuroSceneItemMoveComponent.__Kuro_GetGravityDirect_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSceneItemMoveComponent.__Kuro_GetGravityDirect_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__Kuro_GetGravityDirect_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__Kuro_GetGravityDirect_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x060158A3 RID: 88227 RVA: 0x001FAE0C File Offset: 0x001F900C
+		// Token: 0x060056B2 RID: 22194 RVA: 0x00079F78 File Offset: 0x00078178
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool IsRotating()
 		{
 			UKuroSceneItemMoveComponent.__IsRotating_FunctionParams* ptr = stackalloc UKuroSceneItemMoveComponent.__IsRotating_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(UKuroSceneItemMoveComponent.__IsRotating_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSceneItemMoveComponent.__IsRotating_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__IsRotating_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__IsRotating_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x060158A4 RID: 88228 RVA: 0x001FAE54 File Offset: 0x001F9054
+		// Token: 0x060056B3 RID: 22195 RVA: 0x00079FC0 File Offset: 0x000781C0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool IsMoving(bool ConsiderSimpleWaitAsMoving = false)
 		{
 			UKuroSceneItemMoveComponent.__IsMoving_FunctionParams* ptr = stackalloc UKuroSceneItemMoveComponent.__IsMoving_FunctionParams[(UIntPtr)17] + 15L / (long)sizeof(UKuroSceneItemMoveComponent.__IsMoving_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSceneItemMoveComponent.__IsMoving_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->ConsiderSimpleWaitAsMoving = ConsiderSimpleWaitAsMoving;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__IsMoving_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__IsMoving_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x060158A5 RID: 88229 RVA: 0x001FAEA4 File Offset: 0x001F90A4
+		// Token: 0x060056B4 RID: 22196 RVA: 0x0007A00C File Offset: 0x0007820C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool InitRotationData(AActor TargetActor, bool IsLoop)
 		{
 			UKuroSceneItemMoveComponent.__InitRotationData_FunctionParams* ptr = stackalloc UKuroSceneItemMoveComponent.__InitRotationData_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UKuroSceneItemMoveComponent.__InitRotationData_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSceneItemMoveComponent.__InitRotationData_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->TargetActor = ((TargetActor != null) ? TargetActor.NativePtr : IntPtr.Zero);
 			ptr->IsLoop = IsLoop;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__InitRotationData_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__InitRotationData_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x060158A6 RID: 88230 RVA: 0x001FAF08 File Offset: 0x001F9108
+		// Token: 0x060056B5 RID: 22197 RVA: 0x0007A070 File Offset: 0x00078270
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe ESplineRunState GetSplineRunState()
 		{
 			UKuroSceneItemMoveComponent.__GetSplineRunState_FunctionParams* ptr = stackalloc UKuroSceneItemMoveComponent.__GetSplineRunState_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(UKuroSceneItemMoveComponent.__GetSplineRunState_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSceneItemMoveComponent.__GetSplineRunState_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__GetSplineRunState_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__GetSplineRunState_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x060158A7 RID: 88231 RVA: 0x001FAF50 File Offset: 0x001F9150
+		// Token: 0x060056B6 RID: 22198 RVA: 0x0007A0B8 File Offset: 0x000782B8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe ESimpleRunState GetSimpleRunState()
 		{
 			UKuroSceneItemMoveComponent.__GetSimpleRunState_FunctionParams* ptr = stackalloc UKuroSceneItemMoveComponent.__GetSimpleRunState_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(UKuroSceneItemMoveComponent.__GetSimpleRunState_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSceneItemMoveComponent.__GetSimpleRunState_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__GetSimpleRunState_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__GetSimpleRunState_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x060158A8 RID: 88232 RVA: 0x001FAF98 File Offset: 0x001F9198
+		// Token: 0x060056B7 RID: 22199 RVA: 0x0007A100 File Offset: 0x00078300
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool GetNextMoveTarget(ref FVectorDouble NextTarget, ref FVectorDouble CurrentVelocity)
 		{
 			UKuroSceneItemMoveComponent.__GetNextMoveTarget_FunctionParams* ptr = stackalloc UKuroSceneItemMoveComponent.__GetNextMoveTarget_FunctionParams[(UIntPtr)71] + 15L / (long)sizeof(UKuroSceneItemMoveComponent.__GetNextMoveTarget_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSceneItemMoveComponent.__GetNextMoveTarget_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->NextTarget = NextTarget;
 			ptr->CurrentVelocity = CurrentVelocity;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__GetNextMoveTarget_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__GetNextMoveTarget_NativeFunctionPtr, (void*)ptr);
 			NextTarget = ptr->NextTarget;
 			CurrentVelocity = ptr->CurrentVelocity;
 			return ptr->__Result;
 		}
 
-		// Token: 0x060158A9 RID: 88233 RVA: 0x001FB010 File Offset: 0x001F9210
+		// Token: 0x060056B8 RID: 22200 RVA: 0x0007A178 File Offset: 0x00078378
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe float GetDistanceAlongSpline()
 		{
 			UKuroSceneItemMoveComponent.__GetDistanceAlongSpline_FunctionParams* ptr = stackalloc UKuroSceneItemMoveComponent.__GetDistanceAlongSpline_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(UKuroSceneItemMoveComponent.__GetDistanceAlongSpline_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSceneItemMoveComponent.__GetDistanceAlongSpline_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__GetDistanceAlongSpline_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__GetDistanceAlongSpline_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x060158AA RID: 88234 RVA: 0x001FB058 File Offset: 0x001F9258
+		// Token: 0x060056B9 RID: 22201 RVA: 0x0007A1C0 File Offset: 0x000783C0
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe static bool FindTimeByValueIn01Curve(UCurveFloat Curve, float TargetValue, ref float ResultTime, int MaxSearchDepth = 100, float Tolerance = 1E-06f)
 		{
 			UKuroSceneItemMoveComponent.__FindTimeByValueIn01Curve_FunctionParams* ptr = stackalloc UKuroSceneItemMoveComponent.__FindTimeByValueIn01Curve_FunctionParams[(UIntPtr)47] + 15L / (long)sizeof(UKuroSceneItemMoveComponent.__FindTimeByValueIn01Curve_FunctionParams) & -16L;
@@ -784,26 +678,24 @@ namespace UnrealEngine
 			ptr->ResultTime = ResultTime;
 			ptr->MaxSearchDepth = MaxSearchDepth;
 			ptr->Tolerance = Tolerance;
-			UnrealReflectionUtils.CallUFunction(UKuroSceneItemMoveComponent._ClassDefaultObjectPtr, UKuroSceneItemMoveComponent.__FindTimeByValueIn01Curve_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(UKuroSceneItemMoveComponent._ClassDefaultObjectPtr, UKuroSceneItemMoveComponent.__FindTimeByValueIn01Curve_NativeFunctionPtr, (void*)ptr);
 			ResultTime = ptr->ResultTime;
 			return ptr->__Result;
 		}
 
-		// Token: 0x060158AB RID: 88235 RVA: 0x001FB0DC File Offset: 0x001F92DC
+		// Token: 0x060056BA RID: 22202 RVA: 0x0007A240 File Offset: 0x00078440
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void CalcVelocity(float DeltaTime)
 		{
 			UKuroSceneItemMoveComponent.__CalcVelocity_FunctionParams* ptr = stackalloc UKuroSceneItemMoveComponent.__CalcVelocity_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(UKuroSceneItemMoveComponent.__CalcVelocity_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroSceneItemMoveComponent.__CalcVelocity_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->DeltaTime = DeltaTime;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__CalcVelocity_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__CalcVelocity_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060158AC RID: 88236 RVA: 0x001FB124 File Offset: 0x001F9324
+		// Token: 0x060056BB RID: 22203 RVA: 0x0007A288 File Offset: 0x00078488
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool AddRotationStep(in FRotator BeginRotation, in FRotator EndRotation, float TimeSec, float CdSec, UCurveFloat RotateCurve = null)
 		{
 			UKuroSceneItemMoveComponent.__AddRotationStep_FunctionParams* ptr = stackalloc UKuroSceneItemMoveComponent.__AddRotationStep_FunctionParams[(UIntPtr)63] + 15L / (long)sizeof(UKuroSceneItemMoveComponent.__AddRotationStep_FunctionParams) & -16L;
@@ -813,13 +705,12 @@ namespace UnrealEngine
 			ptr->TimeSec = TimeSec;
 			ptr->CdSec = CdSec;
 			ptr->RotateCurve = ((RotateCurve != null) ? RotateCurve.NativePtr : IntPtr.Zero);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__AddRotationStep_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__AddRotationStep_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x060158AD RID: 88237 RVA: 0x001FB1AC File Offset: 0x001F93AC
+		// Token: 0x060056BC RID: 22204 RVA: 0x0007A30C File Offset: 0x0007850C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void AddMoveTarget(FVectorDouble Loc, float MoveTime, float WaitTime, float MaxSpeed = -1f, float Acceleration = -1f)
 		{
 			UKuroSceneItemMoveComponent.__AddMoveTarget_FunctionParams* ptr = stackalloc UKuroSceneItemMoveComponent.__AddMoveTarget_FunctionParams[(UIntPtr)55] + 15L / (long)sizeof(UKuroSceneItemMoveComponent.__AddMoveTarget_FunctionParams) & -16L;
@@ -829,739 +720,715 @@ namespace UnrealEngine
 			ptr->WaitTime = WaitTime;
 			ptr->MaxSpeed = MaxSpeed;
 			ptr->Acceleration = Acceleration;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__AddMoveTarget_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroSceneItemMoveComponent.__AddMoveTarget_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060158AE RID: 88238 RVA: 0x001FB211 File Offset: 0x001F9411
+		// Token: 0x060056BD RID: 22205 RVA: 0x0007A370 File Offset: 0x00078570
 		static UKuroSceneItemMoveComponent()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroComponent.KuroSceneItemMoveComponent");
 		}
 
-		// Token: 0x060158AF RID: 88239 RVA: 0x001FB21F File Offset: 0x001F941F
+		// Token: 0x060056BE RID: 22206 RVA: 0x0007A37E File Offset: 0x0007857E
 		protected UKuroSceneItemMoveComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400BBDD RID: 48093
-		internal static int __InterfaceOffset_IRVOAvoidanceInterface;
-
-		// Token: 0x0400BBDE RID: 48094
+		// Token: 0x04002377 RID: 9079
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroComponent.KuroSceneItemMoveComponent";
 
-		// Token: 0x0400BBDF RID: 48095
+		// Token: 0x04002378 RID: 9080
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400BBE0 RID: 48096
+		// Token: 0x04002379 RID: 9081
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400BBE1 RID: 48097
+		// Token: 0x0400237A RID: 9082
 		internal static int __PropertyOffset_CustomTimeDilation;
 
-		// Token: 0x0400BBE2 RID: 48098
+		// Token: 0x0400237B RID: 9083
 		internal static int __PropertyOffset_bUseRVOAvoidance;
 
-		// Token: 0x0400BBE3 RID: 48099
+		// Token: 0x0400237C RID: 9084
 		internal static byte __PropertyMask_bUseRVOAvoidance;
 
-		// Token: 0x0400BBE4 RID: 48100
+		// Token: 0x0400237D RID: 9085
 		internal static int __PropertyOffset_AvoidanceUID;
 
-		// Token: 0x0400BBE5 RID: 48101
+		// Token: 0x0400237E RID: 9086
 		internal static int __PropertyOffset_AvoidanceGroup;
 
-		// Token: 0x0400BBE6 RID: 48102
+		// Token: 0x0400237F RID: 9087
 		[Nullable(2)]
 		private FNavAvoidanceMask _AvoidanceGroup;
 
-		// Token: 0x0400BBE7 RID: 48103
+		// Token: 0x04002380 RID: 9088
 		internal static int __PropertyOffset_GroupsToAvoid;
 
-		// Token: 0x0400BBE8 RID: 48104
+		// Token: 0x04002381 RID: 9089
 		[Nullable(2)]
 		private FNavAvoidanceMask _GroupsToAvoid;
 
-		// Token: 0x0400BBE9 RID: 48105
+		// Token: 0x04002382 RID: 9090
 		internal static int __PropertyOffset_GroupsToIgnore;
 
-		// Token: 0x0400BBEA RID: 48106
+		// Token: 0x04002383 RID: 9091
 		[Nullable(2)]
 		private FNavAvoidanceMask _GroupsToIgnore;
 
-		// Token: 0x0400BBEB RID: 48107
+		// Token: 0x04002384 RID: 9092
 		internal static int __PropertyOffset_AvoidanceWeight;
 
-		// Token: 0x0400BBEC RID: 48108
+		// Token: 0x04002385 RID: 9093
 		internal static int __PropertyOffset_AvoidanceHeight;
 
-		// Token: 0x0400BBED RID: 48109
+		// Token: 0x04002386 RID: 9094
 		internal static int __PropertyOffset_AvoidanceRadius;
 
-		// Token: 0x0400BBEE RID: 48110
+		// Token: 0x04002387 RID: 9095
 		internal static int __PropertyOffset_AvoidanceConsiderationRadius;
 
-		// Token: 0x0400BBEF RID: 48111
+		// Token: 0x04002388 RID: 9096
 		internal static int __PropertyOffset_bWasAvoidanceUpdated;
 
-		// Token: 0x0400BBF0 RID: 48112
+		// Token: 0x04002389 RID: 9097
 		internal static byte __PropertyMask_bWasAvoidanceUpdated;
 
-		// Token: 0x0400BBF1 RID: 48113
-		internal static int __PropertyOffset_SimpleMoveData;
-
-		// Token: 0x0400BBF2 RID: 48114
-		[Nullable(2)]
-		private FSimpleMoveData _SimpleMoveData;
-
-		// Token: 0x0400BBF3 RID: 48115
+		// Token: 0x0400238A RID: 9098
 		internal static int __PropertyOffset_SplineMoveData;
 
-		// Token: 0x0400BBF4 RID: 48116
+		// Token: 0x0400238B RID: 9099
 		[Nullable(2)]
 		private FSplineMoveData _SplineMoveData;
 
-		// Token: 0x0400BBF5 RID: 48117
-		internal static int __PropertyOffset_TrackMoveData;
-
-		// Token: 0x0400BBF6 RID: 48118
-		[Nullable(2)]
-		private FTrackMoveData _TrackMoveData;
-
-		// Token: 0x0400BBF7 RID: 48119
+		// Token: 0x0400238C RID: 9100
 		internal static int __PropertyOffset_OnStopCallback;
 
-		// Token: 0x0400BBF8 RID: 48120
+		// Token: 0x0400238D RID: 9101
 		[Nullable(2)]
 		private FOnStopEvent _OnStopCallback;
 
-		// Token: 0x0400BBF9 RID: 48121
+		// Token: 0x0400238E RID: 9102
 		internal static int __PropertyOffset_OnMoveStopCallback;
 
-		// Token: 0x0400BBFA RID: 48122
+		// Token: 0x0400238F RID: 9103
 		[Nullable(2)]
 		private FOnStopEvent _OnMoveStopCallback;
 
-		// Token: 0x0400BBFB RID: 48123
+		// Token: 0x04002390 RID: 9104
 		internal static int __PropertyOffset_OnArrivePointCallback;
 
-		// Token: 0x0400BBFC RID: 48124
+		// Token: 0x04002391 RID: 9105
 		[Nullable(2)]
 		private FOnArrivePoint _OnArrivePointCallback;
 
-		// Token: 0x0400BBFD RID: 48125
+		// Token: 0x04002392 RID: 9106
 		internal static int __PropertyOffset_OnRotateStopCallback;
 
-		// Token: 0x0400BBFE RID: 48126
+		// Token: 0x04002393 RID: 9107
 		[Nullable(2)]
 		private FOnStopEvent _OnRotateStopCallback;
 
-		// Token: 0x0400BBFF RID: 48127
-		internal static int __PropertyOffset_TargetRotationData;
-
-		// Token: 0x0400BC00 RID: 48128
-		[Nullable(2)]
-		private FTargetRotationData _TargetRotationData;
-
-		// Token: 0x0400BC01 RID: 48129
+		// Token: 0x04002394 RID: 9108
 		private static IntPtr __UpdateSplineMoveDistanceByPosition_NativeFunctionPtr;
 
-		// Token: 0x0400BC02 RID: 48130
+		// Token: 0x04002395 RID: 9109
 		private static IntPtr __UpdateSplineMoveDistance_NativeFunctionPtr;
 
-		// Token: 0x0400BC03 RID: 48131
+		// Token: 0x04002396 RID: 9110
 		private static IntPtr __UpdateDynamicSpeedSplineMoveParams_NativeFunctionPtr;
 
-		// Token: 0x0400BC04 RID: 48132
+		// Token: 0x04002397 RID: 9111
 		private static IntPtr __SwitchTrackTarget_NativeFunctionPtr;
 
-		// Token: 0x0400BC05 RID: 48133
+		// Token: 0x04002398 RID: 9112
 		private static IntPtr __StopRotate_NativeFunctionPtr;
 
-		// Token: 0x0400BC06 RID: 48134
+		// Token: 0x04002399 RID: 9113
 		private static IntPtr __StopAllMove_NativeFunctionPtr;
 
-		// Token: 0x0400BC07 RID: 48135
+		// Token: 0x0400239A RID: 9114
 		private static IntPtr __StartTrackMove_NativeFunctionPtr;
 
-		// Token: 0x0400BC08 RID: 48136
+		// Token: 0x0400239B RID: 9115
 		private static IntPtr __StartRotate_NativeFunctionPtr;
 
-		// Token: 0x0400BC09 RID: 48137
+		// Token: 0x0400239C RID: 9116
 		private static IntPtr __StartMoveWithSplineAtDynamicSpeed_NativeFunctionPtr;
 
-		// Token: 0x0400BC0A RID: 48138
+		// Token: 0x0400239D RID: 9117
 		private static IntPtr __StartMoveWithSplineAtConstantTime_NativeFunctionPtr;
 
-		// Token: 0x0400BC0B RID: 48139
+		// Token: 0x0400239E RID: 9118
 		private static IntPtr __SetTickingRotateEnable_NativeFunctionPtr;
 
-		// Token: 0x0400BC0C RID: 48140
+		// Token: 0x0400239F RID: 9119
 		private static IntPtr __SetTickingMoveEnable_NativeFunctionPtr;
 
-		// Token: 0x0400BC0D RID: 48141
+		// Token: 0x040023A0 RID: 9120
 		private static IntPtr __SetMaxDeltaDegreePerSecondForUpdatingLookAt_NativeFunctionPtr;
 
-		// Token: 0x0400BC0E RID: 48142
+		// Token: 0x040023A1 RID: 9121
 		private static IntPtr __SetGroupsToIgnoreMask_NativeFunctionPtr;
 
-		// Token: 0x0400BC0F RID: 48143
+		// Token: 0x040023A2 RID: 9122
 		private static IntPtr __SetGroupsToAvoidMask_NativeFunctionPtr;
 
-		// Token: 0x0400BC10 RID: 48144
+		// Token: 0x040023A3 RID: 9123
 		private static IntPtr __SetEnableDebugForMove_NativeFunctionPtr;
 
-		// Token: 0x0400BC11 RID: 48145
+		// Token: 0x040023A4 RID: 9124
 		private static IntPtr __SetAvoidanceGroupMask_NativeFunctionPtr;
 
-		// Token: 0x0400BC12 RID: 48146
+		// Token: 0x040023A5 RID: 9125
 		private static IntPtr __SetAvoidanceEnabled_NativeFunctionPtr;
 
-		// Token: 0x0400BC13 RID: 48147
+		// Token: 0x040023A6 RID: 9126
 		private static IntPtr __Kuro_SetGravityDirect_NativeFunctionPtr;
 
-		// Token: 0x0400BC14 RID: 48148
+		// Token: 0x040023A7 RID: 9127
 		private static IntPtr __Kuro_GetGravityDirect_NativeFunctionPtr;
 
-		// Token: 0x0400BC15 RID: 48149
+		// Token: 0x040023A8 RID: 9128
 		private static IntPtr __IsRotating_NativeFunctionPtr;
 
-		// Token: 0x0400BC16 RID: 48150
+		// Token: 0x040023A9 RID: 9129
 		private static IntPtr __IsMoving_NativeFunctionPtr;
 
-		// Token: 0x0400BC17 RID: 48151
+		// Token: 0x040023AA RID: 9130
 		private static IntPtr __InitRotationData_NativeFunctionPtr;
 
-		// Token: 0x0400BC18 RID: 48152
+		// Token: 0x040023AB RID: 9131
 		private static IntPtr __GetSplineRunState_NativeFunctionPtr;
 
-		// Token: 0x0400BC19 RID: 48153
+		// Token: 0x040023AC RID: 9132
 		private static IntPtr __GetSimpleRunState_NativeFunctionPtr;
 
-		// Token: 0x0400BC1A RID: 48154
+		// Token: 0x040023AD RID: 9133
 		private static IntPtr __GetNextMoveTarget_NativeFunctionPtr;
 
-		// Token: 0x0400BC1B RID: 48155
+		// Token: 0x040023AE RID: 9134
 		private static IntPtr __GetDistanceAlongSpline_NativeFunctionPtr;
 
-		// Token: 0x0400BC1C RID: 48156
+		// Token: 0x040023AF RID: 9135
 		private static IntPtr __FindTimeByValueIn01Curve_NativeFunctionPtr;
 
-		// Token: 0x0400BC1D RID: 48157
+		// Token: 0x040023B0 RID: 9136
 		private static IntPtr __CalcVelocity_NativeFunctionPtr;
 
-		// Token: 0x0400BC1E RID: 48158
+		// Token: 0x040023B1 RID: 9137
 		private static IntPtr __AddRotationStep_NativeFunctionPtr;
 
-		// Token: 0x0400BC1F RID: 48159
+		// Token: 0x040023B2 RID: 9138
 		private static IntPtr __AddMoveTarget_NativeFunctionPtr;
 
-		// Token: 0x02002F0B RID: 12043
+		// Token: 0x02000A40 RID: 2624
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
 		protected ref struct __UpdateSplineMoveDistanceByPosition_FunctionParams
 		{
-			// Token: 0x04016A54 RID: 92756
+			// Token: 0x04005A28 RID: 23080
 			[FieldOffset(0)]
 			public FVectorDouble NewPosition;
 
-			// Token: 0x04016A55 RID: 92757
+			// Token: 0x04005A29 RID: 23081
 			[FieldOffset(24)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002F0C RID: 12044
+		// Token: 0x02000A41 RID: 2625
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __UpdateSplineMoveDistance_FunctionParams
 		{
-			// Token: 0x04016A56 RID: 92758
+			// Token: 0x04005A2A RID: 23082
 			[FieldOffset(0)]
 			public float NewDistanceAloneSpline;
 
-			// Token: 0x04016A57 RID: 92759
+			// Token: 0x04005A2B RID: 23083
 			[FieldOffset(4)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002F0D RID: 12045
+		// Token: 0x02000A42 RID: 2626
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __UpdateDynamicSpeedSplineMoveParams_FunctionParams
 		{
-			// Token: 0x04016A58 RID: 92760
+			// Token: 0x04005A2C RID: 23084
 			[FieldOffset(0)]
 			public float CurrentSpeed;
 
-			// Token: 0x04016A59 RID: 92761
+			// Token: 0x04005A2D RID: 23085
 			[FieldOffset(4)]
 			public float Acceleration;
 
-			// Token: 0x04016A5A RID: 92762
+			// Token: 0x04005A2E RID: 23086
 			[FieldOffset(8)]
 			public float TargetSpeed;
 
-			// Token: 0x04016A5B RID: 92763
+			// Token: 0x04005A2F RID: 23087
 			[FieldOffset(12)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002F0E RID: 12046
+		// Token: 0x02000A43 RID: 2627
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __SwitchTrackTarget_FunctionParams
 		{
-			// Token: 0x04016A5C RID: 92764
+			// Token: 0x04005A30 RID: 23088
 			[FieldOffset(0)]
 			public IntPtr NewTargetActor;
 
-			// Token: 0x04016A5D RID: 92765
+			// Token: 0x04005A31 RID: 23089
 			[FieldOffset(8)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002F0F RID: 12047
+		// Token: 0x02000A44 RID: 2628
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 3)]
 		protected ref struct __StopRotate_FunctionParams
 		{
-			// Token: 0x04016A5E RID: 92766
+			// Token: 0x04005A32 RID: 23090
 			[FieldOffset(0)]
 			public EKuroSceneItemStopRotateMethod StopMethod;
 
-			// Token: 0x04016A5F RID: 92767
+			// Token: 0x04005A33 RID: 23091
 			[FieldOffset(1)]
 			public bool bBroadcastRotateStopCallback;
 
-			// Token: 0x04016A60 RID: 92768
+			// Token: 0x04005A34 RID: 23092
 			[FieldOffset(2)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002F10 RID: 12048
+		// Token: 0x02000A45 RID: 2629
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 2)]
 		protected ref struct __StopAllMove_FunctionParams
 		{
-			// Token: 0x04016A61 RID: 92769
+			// Token: 0x04005A35 RID: 23093
 			[FieldOffset(0)]
 			public bool bBroadcastStopCallback;
 
-			// Token: 0x04016A62 RID: 92770
+			// Token: 0x04005A36 RID: 23094
 			[FieldOffset(1)]
 			public bool bBroadcastIndexCallback;
 		}
 
-		// Token: 0x02002F11 RID: 12049
+		// Token: 0x02000A46 RID: 2630
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
 		protected ref struct __StartTrackMove_FunctionParams
 		{
-			// Token: 0x04016A63 RID: 92771
+			// Token: 0x04005A37 RID: 23095
 			[FieldOffset(0)]
 			public IntPtr TargetActor;
 
-			// Token: 0x04016A64 RID: 92772
+			// Token: 0x04005A38 RID: 23096
 			[FieldOffset(8)]
 			public float MoveSpeed;
 
-			// Token: 0x04016A65 RID: 92773
+			// Token: 0x04005A39 RID: 23097
 			[FieldOffset(12)]
 			public FRotator InitRotatorOffset;
 
-			// Token: 0x04016A66 RID: 92774
+			// Token: 0x04005A3A RID: 23098
 			[FieldOffset(24)]
 			public float angleSpeed;
 
-			// Token: 0x04016A67 RID: 92775
+			// Token: 0x04005A3B RID: 23099
 			[FieldOffset(28)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002F12 RID: 12050
+		// Token: 0x02000A47 RID: 2631
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __StartRotate_FunctionParams
 		{
-			// Token: 0x04016A68 RID: 92776
+			// Token: 0x04005A3C RID: 23100
 			[FieldOffset(0)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002F13 RID: 12051
+		// Token: 0x02000A48 RID: 2632
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 40)]
 		protected ref struct __StartMoveWithSplineAtDynamicSpeed_FunctionParams
 		{
-			// Token: 0x04016A69 RID: 92777
+			// Token: 0x04005A3D RID: 23101
 			[FieldOffset(0)]
 			public IntPtr SplineComponent;
 
-			// Token: 0x04016A6A RID: 92778
+			// Token: 0x04005A3E RID: 23102
 			[FieldOffset(8)]
 			public int MaxMoveTimes;
 
-			// Token: 0x04016A6B RID: 92779
+			// Token: 0x04005A3F RID: 23103
 			[FieldOffset(12)]
 			public bool Cycle;
 
-			// Token: 0x04016A6C RID: 92780
+			// Token: 0x04005A40 RID: 23104
 			[FieldOffset(13)]
 			public bool KeepLookAt;
 
-			// Token: 0x04016A6D RID: 92781
+			// Token: 0x04005A41 RID: 23105
 			[FieldOffset(16)]
 			public float InitSpeed;
 
-			// Token: 0x04016A6E RID: 92782
+			// Token: 0x04005A42 RID: 23106
 			[FieldOffset(20)]
 			public float Acceleration;
 
-			// Token: 0x04016A6F RID: 92783
+			// Token: 0x04005A43 RID: 23107
 			[FieldOffset(24)]
 			public float TargetSpeed;
 
-			// Token: 0x04016A70 RID: 92784
+			// Token: 0x04005A44 RID: 23108
 			[FieldOffset(28)]
 			public float StartDis;
 
-			// Token: 0x04016A71 RID: 92785
+			// Token: 0x04005A45 RID: 23109
 			[FieldOffset(32)]
 			public float EndDis;
 
-			// Token: 0x04016A72 RID: 92786
+			// Token: 0x04005A46 RID: 23110
 			[FieldOffset(36)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002F14 RID: 12052
+		// Token: 0x02000A49 RID: 2633
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 40)]
 		protected ref struct __StartMoveWithSplineAtConstantTime_FunctionParams
 		{
-			// Token: 0x04016A73 RID: 92787
+			// Token: 0x04005A47 RID: 23111
 			[FieldOffset(0)]
 			public IntPtr SplineComponent;
 
-			// Token: 0x04016A74 RID: 92788
+			// Token: 0x04005A48 RID: 23112
 			[FieldOffset(8)]
 			public bool Repeat;
 
-			// Token: 0x04016A75 RID: 92789
+			// Token: 0x04005A49 RID: 23113
 			[FieldOffset(9)]
 			public bool Cycle;
 
-			// Token: 0x04016A76 RID: 92790
+			// Token: 0x04005A4A RID: 23114
 			[FieldOffset(10)]
 			public bool KeepLookAt;
 
-			// Token: 0x04016A77 RID: 92791
+			// Token: 0x04005A4B RID: 23115
 			[FieldOffset(12)]
 			public float TimeSec;
 
-			// Token: 0x04016A78 RID: 92792
+			// Token: 0x04005A4C RID: 23116
 			[FieldOffset(16)]
 			public IntPtr TimeDisCurve;
 
-			// Token: 0x04016A79 RID: 92793
+			// Token: 0x04005A4D RID: 23117
 			[FieldOffset(24)]
 			public float StartTimeOffset;
 
-			// Token: 0x04016A7A RID: 92794
+			// Token: 0x04005A4E RID: 23118
 			[FieldOffset(28)]
 			public float StartDis;
 
-			// Token: 0x04016A7B RID: 92795
+			// Token: 0x04005A4F RID: 23119
 			[FieldOffset(32)]
 			public float EndDis;
 
-			// Token: 0x04016A7C RID: 92796
+			// Token: 0x04005A50 RID: 23120
 			[FieldOffset(36)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002F15 RID: 12053
+		// Token: 0x02000A4A RID: 2634
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __SetTickingRotateEnable_FunctionParams
 		{
-			// Token: 0x04016A7D RID: 92797
+			// Token: 0x04005A51 RID: 23121
 			[FieldOffset(0)]
 			public bool bEnabled;
 		}
 
-		// Token: 0x02002F16 RID: 12054
+		// Token: 0x02000A4B RID: 2635
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __SetTickingMoveEnable_FunctionParams
 		{
-			// Token: 0x04016A7E RID: 92798
+			// Token: 0x04005A52 RID: 23122
 			[FieldOffset(0)]
 			public bool bEnabled;
 		}
 
-		// Token: 0x02002F17 RID: 12055
+		// Token: 0x02000A4C RID: 2636
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __SetMaxDeltaDegreePerSecondForUpdatingLookAt_FunctionParams
 		{
-			// Token: 0x04016A7F RID: 92799
+			// Token: 0x04005A53 RID: 23123
 			[FieldOffset(0)]
 			public float MaxDegreePerSecond;
 		}
 
-		// Token: 0x02002F18 RID: 12056
+		// Token: 0x02000A4D RID: 2637
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __SetGroupsToIgnoreMask_FunctionParams
 		{
-			// Token: 0x04016A80 RID: 92800
+			// Token: 0x04005A54 RID: 23124
 			[FieldOffset(0)]
 			public byte GroupMask;
 		}
 
-		// Token: 0x02002F19 RID: 12057
+		// Token: 0x02000A4E RID: 2638
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __SetGroupsToAvoidMask_FunctionParams
 		{
-			// Token: 0x04016A81 RID: 92801
+			// Token: 0x04005A55 RID: 23125
 			[FieldOffset(0)]
 			public byte GroupMask;
 		}
 
-		// Token: 0x02002F1A RID: 12058
+		// Token: 0x02000A4F RID: 2639
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __SetEnableDebugForMove_FunctionParams
 		{
-			// Token: 0x04016A82 RID: 92802
+			// Token: 0x04005A56 RID: 23126
 			[FieldOffset(0)]
 			public bool Enable;
 		}
 
-		// Token: 0x02002F1B RID: 12059
+		// Token: 0x02000A50 RID: 2640
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __SetAvoidanceGroupMask_FunctionParams
 		{
-			// Token: 0x04016A83 RID: 92803
+			// Token: 0x04005A57 RID: 23127
 			[FieldOffset(0)]
 			public byte GroupMask;
 		}
 
-		// Token: 0x02002F1C RID: 12060
+		// Token: 0x02000A51 RID: 2641
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __SetAvoidanceEnabled_FunctionParams
 		{
-			// Token: 0x04016A84 RID: 92804
+			// Token: 0x04005A58 RID: 23128
 			[FieldOffset(0)]
 			public bool bEnable;
 		}
 
-		// Token: 0x02002F1D RID: 12061
+		// Token: 0x02000A52 RID: 2642
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 12)]
 		protected ref struct __Kuro_SetGravityDirect_FunctionParams
 		{
-			// Token: 0x04016A85 RID: 92805
+			// Token: 0x04005A59 RID: 23129
 			[FieldOffset(0)]
 			public FVector InGravityDirect;
 		}
 
-		// Token: 0x02002F1E RID: 12062
+		// Token: 0x02000A53 RID: 2643
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 12)]
 		protected ref struct __Kuro_GetGravityDirect_FunctionParams
 		{
-			// Token: 0x04016A86 RID: 92806
+			// Token: 0x04005A5A RID: 23130
 			[FieldOffset(0)]
 			public FVector __Result;
 		}
 
-		// Token: 0x02002F1F RID: 12063
+		// Token: 0x02000A54 RID: 2644
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __IsRotating_FunctionParams
 		{
-			// Token: 0x04016A87 RID: 92807
+			// Token: 0x04005A5B RID: 23131
 			[FieldOffset(0)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002F20 RID: 12064
+		// Token: 0x02000A55 RID: 2645
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 2)]
 		protected ref struct __IsMoving_FunctionParams
 		{
-			// Token: 0x04016A88 RID: 92808
+			// Token: 0x04005A5C RID: 23132
 			[FieldOffset(0)]
 			public bool ConsiderSimpleWaitAsMoving;
 
-			// Token: 0x04016A89 RID: 92809
+			// Token: 0x04005A5D RID: 23133
 			[FieldOffset(1)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002F21 RID: 12065
+		// Token: 0x02000A56 RID: 2646
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __InitRotationData_FunctionParams
 		{
-			// Token: 0x04016A8A RID: 92810
+			// Token: 0x04005A5E RID: 23134
 			[FieldOffset(0)]
 			public IntPtr TargetActor;
 
-			// Token: 0x04016A8B RID: 92811
+			// Token: 0x04005A5F RID: 23135
 			[FieldOffset(8)]
 			public bool IsLoop;
 
-			// Token: 0x04016A8C RID: 92812
+			// Token: 0x04005A60 RID: 23136
 			[FieldOffset(9)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002F22 RID: 12066
+		// Token: 0x02000A57 RID: 2647
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __GetSplineRunState_FunctionParams
 		{
-			// Token: 0x04016A8D RID: 92813
+			// Token: 0x04005A61 RID: 23137
 			[FieldOffset(0)]
 			public ESplineRunState __Result;
 		}
 
-		// Token: 0x02002F23 RID: 12067
+		// Token: 0x02000A58 RID: 2648
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __GetSimpleRunState_FunctionParams
 		{
-			// Token: 0x04016A8E RID: 92814
+			// Token: 0x04005A62 RID: 23138
 			[FieldOffset(0)]
 			public ESimpleRunState __Result;
 		}
 
-		// Token: 0x02002F24 RID: 12068
+		// Token: 0x02000A59 RID: 2649
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 56)]
 		protected ref struct __GetNextMoveTarget_FunctionParams
 		{
-			// Token: 0x04016A8F RID: 92815
+			// Token: 0x04005A63 RID: 23139
 			[FieldOffset(0)]
 			public FVectorDouble NextTarget;
 
-			// Token: 0x04016A90 RID: 92816
+			// Token: 0x04005A64 RID: 23140
 			[FieldOffset(24)]
 			public FVectorDouble CurrentVelocity;
 
-			// Token: 0x04016A91 RID: 92817
+			// Token: 0x04005A65 RID: 23141
 			[FieldOffset(48)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002F25 RID: 12069
+		// Token: 0x02000A5A RID: 2650
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __GetDistanceAlongSpline_FunctionParams
 		{
-			// Token: 0x04016A92 RID: 92818
+			// Token: 0x04005A66 RID: 23142
 			[FieldOffset(0)]
 			public float __Result;
 		}
 
-		// Token: 0x02002F26 RID: 12070
+		// Token: 0x02000A5B RID: 2651
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
 		protected ref struct __FindTimeByValueIn01Curve_FunctionParams
 		{
-			// Token: 0x04016A93 RID: 92819
+			// Token: 0x04005A67 RID: 23143
 			[FieldOffset(0)]
 			public IntPtr Curve;
 
-			// Token: 0x04016A94 RID: 92820
+			// Token: 0x04005A68 RID: 23144
 			[FieldOffset(8)]
 			public float TargetValue;
 
-			// Token: 0x04016A95 RID: 92821
+			// Token: 0x04005A69 RID: 23145
 			[FieldOffset(12)]
 			public float ResultTime;
 
-			// Token: 0x04016A96 RID: 92822
+			// Token: 0x04005A6A RID: 23146
 			[FieldOffset(16)]
 			public int MaxSearchDepth;
 
-			// Token: 0x04016A97 RID: 92823
+			// Token: 0x04005A6B RID: 23147
 			[FieldOffset(20)]
 			public float Tolerance;
 
-			// Token: 0x04016A98 RID: 92824
+			// Token: 0x04005A6C RID: 23148
 			[FieldOffset(24)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002F27 RID: 12071
+		// Token: 0x02000A5C RID: 2652
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __CalcVelocity_FunctionParams
 		{
-			// Token: 0x04016A99 RID: 92825
+			// Token: 0x04005A6D RID: 23149
 			[FieldOffset(0)]
 			public float DeltaTime;
 		}
 
-		// Token: 0x02002F28 RID: 12072
+		// Token: 0x02000A5D RID: 2653
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 48)]
 		protected ref struct __AddRotationStep_FunctionParams
 		{
-			// Token: 0x04016A9A RID: 92826
+			// Token: 0x04005A6E RID: 23150
 			[FieldOffset(0)]
 			public FRotator BeginRotation;
 
-			// Token: 0x04016A9B RID: 92827
+			// Token: 0x04005A6F RID: 23151
 			[FieldOffset(12)]
 			public FRotator EndRotation;
 
-			// Token: 0x04016A9C RID: 92828
+			// Token: 0x04005A70 RID: 23152
 			[FieldOffset(24)]
 			public float TimeSec;
 
-			// Token: 0x04016A9D RID: 92829
+			// Token: 0x04005A71 RID: 23153
 			[FieldOffset(28)]
 			public float CdSec;
 
-			// Token: 0x04016A9E RID: 92830
+			// Token: 0x04005A72 RID: 23154
 			[FieldOffset(32)]
 			public IntPtr RotateCurve;
 
-			// Token: 0x04016A9F RID: 92831
+			// Token: 0x04005A73 RID: 23155
 			[FieldOffset(40)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002F29 RID: 12073
+		// Token: 0x02000A5E RID: 2654
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 40)]
 		protected ref struct __AddMoveTarget_FunctionParams
 		{
-			// Token: 0x04016AA0 RID: 92832
+			// Token: 0x04005A74 RID: 23156
 			[FieldOffset(0)]
 			public FVectorDouble Loc;
 
-			// Token: 0x04016AA1 RID: 92833
+			// Token: 0x04005A75 RID: 23157
 			[FieldOffset(24)]
 			public float MoveTime;
 
-			// Token: 0x04016AA2 RID: 92834
+			// Token: 0x04005A76 RID: 23158
 			[FieldOffset(28)]
 			public float WaitTime;
 
-			// Token: 0x04016AA3 RID: 92835
+			// Token: 0x04005A77 RID: 23159
 			[FieldOffset(32)]
 			public float MaxSpeed;
 
-			// Token: 0x04016AA4 RID: 92836
+			// Token: 0x04005A78 RID: 23160
 			[FieldOffset(36)]
 			public float Acceleration;
 		}

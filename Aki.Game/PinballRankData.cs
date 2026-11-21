@@ -4,24 +4,24 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 
-// Token: 0x020013E4 RID: 5092
+// Token: 0x02000898 RID: 2200
 [NullableContext(2)]
 [Nullable(0)]
 public class PinballRankData
 {
-	// Token: 0x06008FBE RID: 36798 RVA: 0x001F14AF File Offset: 0x001EF6AF
+	// Token: 0x06006353 RID: 25427 RVA: 0x001F9FEB File Offset: 0x001F81EB
 	public PinballRankData(bool isMyRank)
 	{
 		this.IsMyRank = isMyRank;
 	}
 
-	// Token: 0x06008FBF RID: 36799 RVA: 0x001F14D4 File Offset: 0x001EF6D4
+	// Token: 0x06006354 RID: 25428 RVA: 0x001FA010 File Offset: 0x001F8210
 	public static bool IsValidServerRankData(Aki.Protocol.PinballRankData data)
 	{
 		return data != null && data.TowerLevel > 0;
 	}
 
-	// Token: 0x06008FC0 RID: 36800 RVA: 0x001F14E4 File Offset: 0x001EF6E4
+	// Token: 0x06006355 RID: 25429 RVA: 0x001FA020 File Offset: 0x001F8220
 	public void SetDataByConfig(int towerLevel)
 	{
 		PinballRank? pinballRankConfigByTower = PinballConfig.Instance.GetPinballRankConfigByTower(towerLevel);
@@ -56,7 +56,7 @@ public class PinballRankData
 		}
 	}
 
-	// Token: 0x06008FC1 RID: 36801 RVA: 0x001F160C File Offset: 0x001EF80C
+	// Token: 0x06006356 RID: 25430 RVA: 0x001FA148 File Offset: 0x001F8348
 	public void SetDataByServerInfo(Aki.Protocol.PinballRankData data)
 	{
 		if (!global::PinballRankData.IsValidServerRankData(data))
@@ -74,7 +74,7 @@ public class PinballRankData
 		this.HasData = true;
 	}
 
-	// Token: 0x06008FC2 RID: 36802 RVA: 0x001F16B0 File Offset: 0x001EF8B0
+	// Token: 0x06006357 RID: 25431 RVA: 0x001FA1EC File Offset: 0x001F83EC
 	public void SetMyRankData(Aki.Protocol.PinballRankData data)
 	{
 		if (!global::PinballRankData.IsValidServerRankData(data))
@@ -89,26 +89,26 @@ public class PinballRankData
 		this.SetDataByServerInfo(data);
 	}
 
-	// Token: 0x04003F8B RID: 16267
+	// Token: 0x04004023 RID: 16419
 	public int Ranking;
 
-	// Token: 0x04003F8C RID: 16268
+	// Token: 0x04004024 RID: 16420
 	[Nullable(1)]
 	public string Name = "";
 
-	// Token: 0x04003F8D RID: 16269
+	// Token: 0x04004025 RID: 16421
 	public int TowerLevel;
 
-	// Token: 0x04003F8E RID: 16270
+	// Token: 0x04004026 RID: 16422
 	public int CostTime;
 
-	// Token: 0x04003F8F RID: 16271
+	// Token: 0x04004027 RID: 16423
 	public bool HasData;
 
-	// Token: 0x04003F90 RID: 16272
+	// Token: 0x04004028 RID: 16424
 	public int DisplayThreshold;
 
-	// Token: 0x04003F91 RID: 16273
+	// Token: 0x04004029 RID: 16425
 	[TupleElementNames(new string[]
 	{
 		"RoleId",
@@ -121,6 +121,6 @@ public class PinballRankData
 	})]
 	public List<ValueTuple<int, int>> Formation = new List<ValueTuple<int, int>>();
 
-	// Token: 0x04003F92 RID: 16274
+	// Token: 0x0400402A RID: 16426
 	public bool IsMyRank;
 }

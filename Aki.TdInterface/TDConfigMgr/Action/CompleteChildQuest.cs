@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200151A RID: 5402
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001673 RID: 5747
 	public class CompleteChildQuest : ActionParams
 	{
-		// Token: 0x06007AB2 RID: 31410 RVA: 0x00124CA0 File Offset: 0x00122EA0
+		// Token: 0x0600817D RID: 33149 RVA: 0x001338C8 File Offset: 0x00131AC8
 		private CompleteChildQuest_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007AB3 RID: 31411 RVA: 0x00124CD8 File Offset: 0x00122ED8
+		// Token: 0x0600817E RID: 33150 RVA: 0x00133900 File Offset: 0x00131B00
 		public static CompleteChildQuest Create([Nullable(2)] CompleteChildQuest instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007AB4 RID: 31412 RVA: 0x00124CEB File Offset: 0x00122EEB
+		// Token: 0x0600817F RID: 33151 RVA: 0x00133913 File Offset: 0x00131B13
 		public static CompleteChildQuest CreateFromSetValue([Nullable(2)] CompleteChildQuest_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007AB5 RID: 31413 RVA: 0x00124CFE File Offset: 0x00122EFE
+		// Token: 0x06008180 RID: 33152 RVA: 0x00133926 File Offset: 0x00131B26
 		public CompleteChildQuest_SetValue ToSetValue()
 		{
 			return new CompleteChildQuest_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170028EA RID: 10474
-		// (get) Token: 0x06007AB6 RID: 31414 RVA: 0x00124D1D File Offset: 0x00122F1D
-		// (set) Token: 0x06007AB7 RID: 31415 RVA: 0x00124D48 File Offset: 0x00122F48
+		// Token: 0x17002AD3 RID: 10963
+		// (get) Token: 0x06008181 RID: 33153 RVA: 0x00133945 File Offset: 0x00131B45
+		// (set) Token: 0x06008182 RID: 33154 RVA: 0x00133970 File Offset: 0x00131B70
 		public virtual int QuestId
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170028EB RID: 10475
-		// (get) Token: 0x06007AB8 RID: 31416 RVA: 0x00124D56 File Offset: 0x00122F56
-		// (set) Token: 0x06007AB9 RID: 31417 RVA: 0x00124D81 File Offset: 0x00122F81
+		// Token: 0x17002AD4 RID: 10964
+		// (get) Token: 0x06008183 RID: 33155 RVA: 0x0013397E File Offset: 0x00131B7E
+		// (set) Token: 0x06008184 RID: 33156 RVA: 0x001339A9 File Offset: 0x00131BA9
 		public virtual int NodeId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400470B RID: 18187
+		// Token: 0x04004AA7 RID: 19111
 		[Nullable(2)]
 		protected new CompleteChildQuest FbInstance;
 
-		// Token: 0x0400470C RID: 18188
+		// Token: 0x04004AA8 RID: 19112
 		[Nullable(2)]
 		protected CompleteChildQuest_SetValue PocoInterface;
 	}

@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 {
-	// Token: 0x02005FB2 RID: 24498
+	// Token: 0x02004F99 RID: 20377
 	public class TotalTopUpRecharge37InfoItem : UiPanelBase
 	{
-		// Token: 0x0603E1A7 RID: 254375 RVA: 0x00EFF324 File Offset: 0x00EFD524
+		// Token: 0x06033141 RID: 209217 RVA: 0x00E50FE0 File Offset: 0x00E4F1E0
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			};
 		}
 
-		// Token: 0x0603E1A8 RID: 254376 RVA: 0x00EFF3B8 File Offset: 0x00EFD5B8
+		// Token: 0x06033142 RID: 209218 RVA: 0x00E51074 File Offset: 0x00E4F274
 		public void SetScore(int score)
 		{
 			UUIText text = base.GetText(1);
@@ -38,20 +38,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x0603E1A9 RID: 254377 RVA: 0x00EFF3EF File Offset: 0x00EFD5EF
+		// Token: 0x06033143 RID: 209219 RVA: 0x00E510AB File Offset: 0x00E4F2AB
 		public void SetHelpVisible(bool visible)
 		{
 			base.SetButtonUiActive(3, visible);
 		}
 
-		// Token: 0x0603E1AA RID: 254378 RVA: 0x00EFF3F9 File Offset: 0x00EFD5F9
+		// Token: 0x06033144 RID: 209220 RVA: 0x00E510B5 File Offset: 0x00E4F2B5
 		[NullableContext(1)]
 		public void SetHelpCallback(Action callback)
 		{
 			this.HelpCallback = callback;
 		}
 
-		// Token: 0x0603E1AB RID: 254379 RVA: 0x00EFF402 File Offset: 0x00EFD602
+		// Token: 0x06033145 RID: 209221 RVA: 0x00E510BE File Offset: 0x00E4F2BE
 		private void OnClickHelp()
 		{
 			Action helpCallback = this.HelpCallback;
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			helpCallback();
 		}
 
-		// Token: 0x0402071E RID: 132894
+		// Token: 0x0401B1F0 RID: 111088
 		[Nullable(2)]
 		private Action HelpCallback;
 	}

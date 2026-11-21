@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200200A RID: 8202
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002251 RID: 8785
 	public class ITuningStandGridBoard
 	{
-		// Token: 0x0600B468 RID: 46184 RVA: 0x001A38C4 File Offset: 0x001A1AC4
+		// Token: 0x0600BF80 RID: 49024 RVA: 0x001B9E88 File Offset: 0x001B8088
 		private ITuningStandGridBoard_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B469 RID: 46185 RVA: 0x001A38FC File Offset: 0x001A1AFC
+		// Token: 0x0600BF81 RID: 49025 RVA: 0x001B9EC0 File Offset: 0x001B80C0
 		public static ITuningStandGridBoard Create([Nullable(2)] ITuningStandGridBoard instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B46A RID: 46186 RVA: 0x001A390F File Offset: 0x001A1B0F
+		// Token: 0x0600BF82 RID: 49026 RVA: 0x001B9ED3 File Offset: 0x001B80D3
 		public static ITuningStandGridBoard CreateFromSetValue([Nullable(2)] ITuningStandGridBoard_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B46B RID: 46187 RVA: 0x001A3922 File Offset: 0x001A1B22
+		// Token: 0x0600BF83 RID: 49027 RVA: 0x001B9EE6 File Offset: 0x001B80E6
 		public ITuningStandGridBoard_SetValue ToSetValue()
 		{
 			return new ITuningStandGridBoard_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700377D RID: 14205
-		// (get) Token: 0x0600B46C RID: 46188 RVA: 0x001A3935 File Offset: 0x001A1B35
-		// (set) Token: 0x0600B46D RID: 46189 RVA: 0x001A395C File Offset: 0x001A1B5C
+		// Token: 0x17003A56 RID: 14934
+		// (get) Token: 0x0600BF84 RID: 49028 RVA: 0x001B9EF9 File Offset: 0x001B80F9
+		// (set) Token: 0x0600BF85 RID: 49029 RVA: 0x001B9F20 File Offset: 0x001B8120
 		public virtual List<ETuningStandGridType> Grids
 		{
 			get
@@ -84,11 +82,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006CBC RID: 27836
+		// Token: 0x040072BF RID: 29375
 		[Nullable(2)]
 		protected ITuningStandGridBoard FbInstance;
 
-		// Token: 0x04006CBD RID: 27837
+		// Token: 0x040072C0 RID: 29376
 		[Nullable(2)]
 		protected ITuningStandGridBoard_SetValue PocoInterface;
 	}

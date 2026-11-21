@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020041E4 RID: 16868
+	// Token: 0x0200463D RID: 17981
 	public struct ITitlePreState : IFlatbufferObject
 	{
-		// Token: 0x170077AB RID: 30635
-		// (get) Token: 0x06018DE2 RID: 101858 RVA: 0x0039406B File Offset: 0x0039226B
+		// Token: 0x17007DD7 RID: 32215
+		// (get) Token: 0x0601A538 RID: 107832 RVA: 0x003BF4BF File Offset: 0x003BD6BF
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018DE3 RID: 101859 RVA: 0x00394078 File Offset: 0x00392278
+		// Token: 0x0601A539 RID: 107833 RVA: 0x003BF4CC File Offset: 0x003BD6CC
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06018DE4 RID: 101860 RVA: 0x00394080 File Offset: 0x00392280
+		// Token: 0x0601A53A RID: 107834 RVA: 0x003BF4D4 File Offset: 0x003BD6D4
 		public static ITitlePreState GetRootAsITitlePreState(ByteBuffer _bb)
 		{
 			return ITitlePreState.GetRootAsITitlePreState(_bb, default(ITitlePreState));
 		}
 
-		// Token: 0x06018DE5 RID: 101861 RVA: 0x0039409C File Offset: 0x0039229C
+		// Token: 0x0601A53B RID: 107835 RVA: 0x003BF4F0 File Offset: 0x003BD6F0
 		public static ITitlePreState GetRootAsITitlePreState(ByteBuffer _bb, ITitlePreState obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06018DE6 RID: 101862 RVA: 0x003940B9 File Offset: 0x003922B9
+		// Token: 0x0601A53C RID: 107836 RVA: 0x003BF50D File Offset: 0x003BD70D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06018DE7 RID: 101863 RVA: 0x003940C8 File Offset: 0x003922C8
+		// Token: 0x0601A53D RID: 107837 RVA: 0x003BF51C File Offset: 0x003BD71C
 		public ITitlePreState __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170077AC RID: 30636
-		// (get) Token: 0x06018DE8 RID: 101864 RVA: 0x003940D8 File Offset: 0x003922D8
+		// Token: 0x17007DD8 RID: 32216
+		// (get) Token: 0x0601A53E RID: 107838 RVA: 0x003BF52C File Offset: 0x003BD72C
 		public string TidPreStateTitle
 		{
 			get
@@ -63,20 +63,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018DE9 RID: 101865 RVA: 0x0039410F File Offset: 0x0039230F
+		// Token: 0x0601A53F RID: 107839 RVA: 0x003BF563 File Offset: 0x003BD763
 		public Span<byte> GetTidPreStateTitleBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x06018DEA RID: 101866 RVA: 0x0039411E File Offset: 0x0039231E
+		// Token: 0x0601A540 RID: 107840 RVA: 0x003BF572 File Offset: 0x003BD772
 		public byte[] GetTidPreStateTitleArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x170077AD RID: 30637
-		// (get) Token: 0x06018DEB RID: 101867 RVA: 0x0039412C File Offset: 0x0039232C
+		// Token: 0x17007DD9 RID: 32217
+		// (get) Token: 0x0601A541 RID: 107841 RVA: 0x003BF580 File Offset: 0x003BD780
 		public IConditionGroup? SwitchConditions
 		{
 			get
@@ -90,7 +90,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018DEC RID: 101868 RVA: 0x00394189 File Offset: 0x00392389
+		// Token: 0x0601A542 RID: 107842 RVA: 0x003BF5DD File Offset: 0x003BD7DD
 		public static Offset<ITitlePreState> CreateITitlePreState(FlatBufferBuilder builder, StringOffset TidPreStateTitleOffset = default(StringOffset), Offset<IConditionGroup> SwitchConditionsOffset = default(Offset<IConditionGroup>))
 		{
 			builder.StartTable(2);
@@ -99,31 +99,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ITitlePreState.EndITitlePreState(builder);
 		}
 
-		// Token: 0x06018DED RID: 101869 RVA: 0x003941A6 File Offset: 0x003923A6
+		// Token: 0x0601A543 RID: 107843 RVA: 0x003BF5FA File Offset: 0x003BD7FA
 		public static void StartITitlePreState(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06018DEE RID: 101870 RVA: 0x003941AF File Offset: 0x003923AF
+		// Token: 0x0601A544 RID: 107844 RVA: 0x003BF603 File Offset: 0x003BD803
 		public static void AddTidPreStateTitle(FlatBufferBuilder builder, StringOffset tidPreStateTitleOffset)
 		{
 			builder.AddOffset(0, tidPreStateTitleOffset.Value, 0);
 		}
 
-		// Token: 0x06018DEF RID: 101871 RVA: 0x003941BF File Offset: 0x003923BF
+		// Token: 0x0601A545 RID: 107845 RVA: 0x003BF613 File Offset: 0x003BD813
 		public static void AddSwitchConditions(FlatBufferBuilder builder, Offset<IConditionGroup> switchConditionsOffset)
 		{
 			builder.AddOffset(1, switchConditionsOffset.Value, 0);
 		}
 
-		// Token: 0x06018DF0 RID: 101872 RVA: 0x003941CF File Offset: 0x003923CF
+		// Token: 0x0601A546 RID: 107846 RVA: 0x003BF623 File Offset: 0x003BD823
 		public static Offset<ITitlePreState> EndITitlePreState(FlatBufferBuilder builder)
 		{
 			return new Offset<ITitlePreState>(builder.EndTable());
 		}
 
-		// Token: 0x06018DF1 RID: 101873 RVA: 0x003941DC File Offset: 0x003923DC
+		// Token: 0x0601A547 RID: 107847 RVA: 0x003BF630 File Offset: 0x003BD830
 		public ITitlePreStateT UnPack()
 		{
 			ITitlePreStateT titlePreStateT = new ITitlePreStateT();
@@ -131,14 +131,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return titlePreStateT;
 		}
 
-		// Token: 0x06018DF2 RID: 101874 RVA: 0x003941F8 File Offset: 0x003923F8
+		// Token: 0x0601A548 RID: 107848 RVA: 0x003BF64C File Offset: 0x003BD84C
 		public void UnPackTo(ITitlePreStateT _o)
 		{
 			_o.TidPreStateTitle = this.TidPreStateTitle;
 			_o.SwitchConditions = ((this.SwitchConditions != null) ? this.SwitchConditions.Value.UnPack() : null);
 		}
 
-		// Token: 0x06018DF3 RID: 101875 RVA: 0x00394240 File Offset: 0x00392440
+		// Token: 0x0601A549 RID: 107849 RVA: 0x003BF694 File Offset: 0x003BD894
 		public static Offset<ITitlePreState> Pack(FlatBufferBuilder builder, ITitlePreStateT _o)
 		{
 			if (_o == null)
@@ -150,7 +150,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ITitlePreState.CreateITitlePreState(builder, tidPreStateTitleOffset, switchConditionsOffset);
 		}
 
-		// Token: 0x0400BE39 RID: 48697
+		// Token: 0x0400C843 RID: 51267
 		private Table __p;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020003E0 RID: 992
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000439 RID: 1081
 	public class IGraph3dEffectBase
 	{
-		// Token: 0x060013F3 RID: 5107 RVA: 0x000403CC File Offset: 0x0003E5CC
+		// Token: 0x0600158D RID: 5517 RVA: 0x00044114 File Offset: 0x00042314
 		private IGraph3dEffectBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060013F4 RID: 5108 RVA: 0x00040404 File Offset: 0x0003E604
+		// Token: 0x0600158E RID: 5518 RVA: 0x0004414C File Offset: 0x0004234C
 		public static IGraph3dEffectBase Create([Nullable(2)] IGraph3dEffectBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060013F5 RID: 5109 RVA: 0x00040417 File Offset: 0x0003E617
+		// Token: 0x0600158F RID: 5519 RVA: 0x0004415F File Offset: 0x0004235F
 		public static IGraph3dEffectBase CreateFromSetValue([Nullable(2)] IGraph3dEffectBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060013F6 RID: 5110 RVA: 0x0004042A File Offset: 0x0003E62A
+		// Token: 0x06001590 RID: 5520 RVA: 0x00044172 File Offset: 0x00042372
 		public IGraph3dEffectBase_SetValue ToSetValue()
 		{
 			return new IGraph3dEffectBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000587 RID: 1415
-		// (get) Token: 0x060013F7 RID: 5111 RVA: 0x0004043D File Offset: 0x0003E63D
-		// (set) Token: 0x060013F8 RID: 5112 RVA: 0x00040468 File Offset: 0x0003E668
+		// Token: 0x170005EE RID: 1518
+		// (get) Token: 0x06001591 RID: 5521 RVA: 0x00044185 File Offset: 0x00042385
+		// (set) Token: 0x06001592 RID: 5522 RVA: 0x000441B0 File Offset: 0x000423B0
 		public virtual EGraph3dEffectType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000FC8 RID: 4040
+		// Token: 0x040010EA RID: 4330
 		[Nullable(2)]
 		protected IGraph3dEffectBase FbInstance;
 
-		// Token: 0x04000FC9 RID: 4041
+		// Token: 0x040010EB RID: 4331
 		[Nullable(2)]
 		protected IGraph3dEffectBase_SetValue PocoInterface;
 	}

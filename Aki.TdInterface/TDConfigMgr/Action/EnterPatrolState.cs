@@ -4,11 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200165F RID: 5727
+	// Token: 0x020017CF RID: 6095
 	public class EnterPatrolState : ActionParams
 	{
-		// Token: 0x06007CDD RID: 31965 RVA: 0x0012BF58 File Offset: 0x0012A158
-		[NullableContext(1)]
+		// Token: 0x060083BB RID: 33723 RVA: 0x0013B004 File Offset: 0x00139204
 		public static EnterPatrolState Create([Nullable(2)] EnterPatrolState instance)
 		{
 			if (instance == null)
@@ -21,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x04004CB9 RID: 19641
+		// Token: 0x040050B4 RID: 20660
 		[Nullable(2)]
 		protected new EnterPatrolState FbInstance;
 	}

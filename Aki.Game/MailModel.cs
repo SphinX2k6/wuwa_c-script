@@ -1,20 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Common;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Inventory;
+using Google.Protobuf.Collections;
 
-// Token: 0x020021CC RID: 8652
+// Token: 0x020016B0 RID: 5808
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class MailModel : ModelBase
 {
-	// Token: 0x06010D4E RID: 68942 RVA: 0x00416D94 File Offset: 0x00414F94
+	// Token: 0x0600E1DF RID: 57823 RVA: 0x00423684 File Offset: 0x00421884
 	public int GetFavoriteMailCount()
 	{
 		int num = 0;
@@ -31,19 +31,19 @@ public class MailModel : ModelBase
 		return num;
 	}
 
-	// Token: 0x06010D4F RID: 68943 RVA: 0x00416DF4 File Offset: 0x00414FF4
+	// Token: 0x0600E1E0 RID: 57824 RVA: 0x004236E4 File Offset: 0x004218E4
 	public int GetFavoriteMailCapacity()
 	{
 		return MailConfig.Instance.GetFavoriteMailSize().GetValueOrDefault();
 	}
 
-	// Token: 0x06010D50 RID: 68944 RVA: 0x00416E13 File Offset: 0x00415013
+	// Token: 0x0600E1E1 RID: 57825 RVA: 0x00423703 File Offset: 0x00421903
 	public bool IsFavoriteMailFull()
 	{
 		return this.GetFavoriteMailCount() >= this.GetFavoriteMailCapacity();
 	}
 
-	// Token: 0x06010D51 RID: 68945 RVA: 0x00416E28 File Offset: 0x00415028
+	// Token: 0x0600E1E2 RID: 57826 RVA: 0x00423718 File Offset: 0x00421918
 	public bool IsFavoriteMailSpaceNearFull()
 	{
 		double favoriteMailCapacity = (double)this.GetFavoriteMailCapacity();
@@ -52,26 +52,26 @@ public class MailModel : ModelBase
 		return this.GetFavoriteMailCount() >= num;
 	}
 
-	// Token: 0x06010D52 RID: 68946 RVA: 0x00416E66 File Offset: 0x00415066
+	// Token: 0x0600E1E3 RID: 57827 RVA: 0x00423756 File Offset: 0x00421956
 	public bool IsMailFavorite(string mailId)
 	{
 		MailData mailInstanceById = this.GetMailInstanceById(mailId);
 		return mailInstanceById != null && mailInstanceById.IsFavorite;
 	}
 
-	// Token: 0x06010D53 RID: 68947 RVA: 0x00416E7A File Offset: 0x0041507A
+	// Token: 0x0600E1E4 RID: 57828 RVA: 0x0042376A File Offset: 0x0042196A
 	public int GetMailSpaceWarningThreshold()
 	{
 		return MailConfig.Instance.GetMailSpaceWarningThreshold();
 	}
 
-	// Token: 0x06010D54 RID: 68948 RVA: 0x00416E86 File Offset: 0x00415086
+	// Token: 0x0600E1E5 RID: 57829 RVA: 0x00423776 File Offset: 0x00421976
 	public bool IsMailSpaceNearFull()
 	{
 		return this.GetMailListLength() >= this.GetMailSpaceWarningThreshold();
 	}
 
-	// Token: 0x06010D55 RID: 68949 RVA: 0x00416E99 File Offset: 0x00415099
+	// Token: 0x0600E1E6 RID: 57830 RVA: 0x00423789 File Offset: 0x00421989
 	public bool CanRequestMailFavorite(string mailId, bool isFavorite)
 	{
 		if (this.GetMailInstanceById(mailId) == null)
@@ -96,7 +96,7 @@ public class MailModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06010D56 RID: 68950 RVA: 0x00416ECC File Offset: 0x004150CC
+	// Token: 0x0600E1E7 RID: 57831 RVA: 0x004237BC File Offset: 0x004219BC
 	public void ApplyMailFavoriteResponse(string mailId, bool isFavorite, int state, long expiryTime)
 	{
 		MailData mailInstanceById = this.GetMailInstanceById(mailId);
@@ -113,7 +113,7 @@ public class MailModel : ModelBase
 		EventSystem.Instance.Emit<string, bool>(EEventName.MailFavoriteChanged, mailId, isFavorite);
 	}
 
-	// Token: 0x06010D57 RID: 68951 RVA: 0x00416F20 File Offset: 0x00415120
+	// Token: 0x0600E1E8 RID: 57832 RVA: 0x00423810 File Offset: 0x00421A10
 	private void UpdateUnFinishedMailCountByMail(MailData mail)
 	{
 		if (!mail.GetWasScanned() || mail.GetAttachmentStatus() == EMailAttachment.AttachmentRemained)
@@ -137,13 +137,13 @@ public class MailModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.SwitchUnfinishedFlag);
 	}
 
-	// Token: 0x06010D58 RID: 68952 RVA: 0x00416FBC File Offset: 0x004151BC
+	// Token: 0x0600E1E9 RID: 57833 RVA: 0x004238AC File Offset: 0x00421AAC
 	public bool GetRedDotCouldLightOn()
 	{
 		return this.UnFinishedMailSet.Count > 0 && this.CheckOpenCondition();
 	}
 
-	// Token: 0x06010D59 RID: 68953 RVA: 0x00416FD4 File Offset: 0x004151D4
+	// Token: 0x0600E1EA RID: 57834 RVA: 0x004238C4 File Offset: 0x00421AC4
 	public bool UnScannedRedPoint()
 	{
 		if (!this.CheckOpenCondition())
@@ -168,7 +168,7 @@ public class MailModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x06010D5A RID: 68954 RVA: 0x0041704C File Offset: 0x0041524C
+	// Token: 0x0600E1EB RID: 57835 RVA: 0x0042393C File Offset: 0x00421B3C
 	public bool GetRedDotImportant()
 	{
 		if (!this.CheckOpenCondition())
@@ -190,7 +190,7 @@ public class MailModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x06010D5B RID: 68955 RVA: 0x004170C8 File Offset: 0x004152C8
+	// Token: 0x0600E1EC RID: 57836 RVA: 0x004239B8 File Offset: 0x00421BB8
 	public List<TItem> GetLastPickedAttachments()
 	{
 		List<TItem> list = new List<TItem>();
@@ -203,7 +203,7 @@ public class MailModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06010D5C RID: 68956 RVA: 0x00417140 File Offset: 0x00415340
+	// Token: 0x0600E1ED RID: 57837 RVA: 0x00423A30 File Offset: 0x00421C30
 	public void SetLastPickedAttachments(Dictionary<string, int> successIdMap, EMailAttachmentPickType pickType)
 	{
 		this.ClearLastPickedAttachments();
@@ -232,25 +232,25 @@ public class MailModel : ModelBase
 		EventSystem.Instance.Emit<EMailAttachmentPickType>(EEventName.PickingAttachment, pickType);
 	}
 
-	// Token: 0x06010D5D RID: 68957 RVA: 0x004172B8 File Offset: 0x004154B8
+	// Token: 0x0600E1EE RID: 57838 RVA: 0x00423BA8 File Offset: 0x00421DA8
 	public void ClearLastPickedAttachments()
 	{
 		this.LastPickedAttachments.Clear();
 	}
 
-	// Token: 0x06010D5E RID: 68958 RVA: 0x004172C5 File Offset: 0x004154C5
+	// Token: 0x0600E1EF RID: 57839 RVA: 0x00423BB5 File Offset: 0x00421DB5
 	public string GetCurrentSelectMailId()
 	{
 		return this.CurrentSelectMailId;
 	}
 
-	// Token: 0x06010D5F RID: 68959 RVA: 0x004172CD File Offset: 0x004154CD
+	// Token: 0x0600E1F0 RID: 57840 RVA: 0x00423BBD File Offset: 0x00421DBD
 	public void SetCurrentSelectMailId(string newMailId)
 	{
 		this.CurrentSelectMailId = newMailId;
 	}
 
-	// Token: 0x06010D60 RID: 68960 RVA: 0x004172D6 File Offset: 0x004154D6
+	// Token: 0x0600E1F1 RID: 57841 RVA: 0x00423BC6 File Offset: 0x00421DC6
 	public void OpenWebBrowser(string url)
 	{
 		if (string.IsNullOrEmpty(url))
@@ -260,7 +260,7 @@ public class MailModel : ModelBase
 		KuroSdkController.Instance.OpenExternalUrl(url);
 	}
 
-	// Token: 0x06010D61 RID: 68961 RVA: 0x004172EC File Offset: 0x004154EC
+	// Token: 0x0600E1F2 RID: 57842 RVA: 0x00423BDC File Offset: 0x00421DDC
 	private int MailSort(MailData mailDataA, MailData mailDataB)
 	{
 		if (mailDataA.GetWasScanned() != mailDataB.GetWasScanned())
@@ -301,7 +301,7 @@ public class MailModel : ModelBase
 		}
 	}
 
-	// Token: 0x06010D62 RID: 68962 RVA: 0x00417374 File Offset: 0x00415574
+	// Token: 0x0600E1F3 RID: 57843 RVA: 0x00423C64 File Offset: 0x00421E64
 	public void ReloadMailList()
 	{
 		this.MailList.Clear();
@@ -309,24 +309,25 @@ public class MailModel : ModelBase
 		{
 			this.MailList.Add(item);
 		}
-		List<MailData> collection = this.MailList.OrderBy((MailData mail) => mail, Comparer<MailData>.Create(new Comparison<MailData>(this.MailSort))).ToList<MailData>();
+		List<MailData> list = new List<MailData>(this.MailList);
+		NoLinq.SortStable<MailData>(list, new Comparison<MailData>(this.MailSort));
 		this.MailList.Clear();
-		this.MailList.AddRange(collection);
+		this.MailList.AddRange(list);
 	}
 
-	// Token: 0x06010D63 RID: 68963 RVA: 0x00417434 File Offset: 0x00415634
+	// Token: 0x0600E1F4 RID: 57844 RVA: 0x00423D04 File Offset: 0x00421F04
 	public List<MailData> GetMailList()
 	{
 		return this.MailList;
 	}
 
-	// Token: 0x06010D64 RID: 68964 RVA: 0x0041743C File Offset: 0x0041563C
+	// Token: 0x0600E1F5 RID: 57845 RVA: 0x00423D0C File Offset: 0x00421F0C
 	private void SetValueOfMailList(MailData mail)
 	{
 		this.MailMap[mail.Id] = mail;
 	}
 
-	// Token: 0x06010D65 RID: 68965 RVA: 0x00417450 File Offset: 0x00415650
+	// Token: 0x0600E1F6 RID: 57846 RVA: 0x00423D20 File Offset: 0x00421F20
 	public void DeleteMail(string mailId)
 	{
 		if (this.GetMailInstanceById(mailId) == null)
@@ -342,13 +343,13 @@ public class MailModel : ModelBase
 		this.ReloadMailList();
 	}
 
-	// Token: 0x06010D66 RID: 68966 RVA: 0x004174A5 File Offset: 0x004156A5
+	// Token: 0x0600E1F7 RID: 57847 RVA: 0x00423D75 File Offset: 0x00421F75
 	public int GetMailListLength()
 	{
 		return this.MailMap.Count;
 	}
 
-	// Token: 0x06010D67 RID: 68967 RVA: 0x004174B4 File Offset: 0x004156B4
+	// Token: 0x0600E1F8 RID: 57848 RVA: 0x00423D84 File Offset: 0x00421F84
 	public MailData GetMailInstanceById(string id)
 	{
 		MailData result;
@@ -356,7 +357,7 @@ public class MailModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x06010D68 RID: 68968 RVA: 0x004174D4 File Offset: 0x004156D4
+	// Token: 0x0600E1F9 RID: 57849 RVA: 0x00423DA4 File Offset: 0x00421FA4
 	public void AddMail(PbMailInfo mailInfo, bool reloadList = true)
 	{
 		if (this.MailMap.Count >= this.GetMailCapacity())
@@ -370,7 +371,7 @@ public class MailModel : ModelBase
 		}
 	}
 
-	// Token: 0x06010D69 RID: 68969 RVA: 0x00417520 File Offset: 0x00415720
+	// Token: 0x0600E1FA RID: 57850 RVA: 0x00423DF0 File Offset: 0x00421FF0
 	public void OnMailInfoSynced(MailInfosNotify response)
 	{
 		foreach (PbMailInfo other in response.MailInfos)
@@ -386,7 +387,7 @@ public class MailModel : ModelBase
 		this.ReloadMailList();
 	}
 
-	// Token: 0x06010D6A RID: 68970 RVA: 0x004175B4 File Offset: 0x004157B4
+	// Token: 0x0600E1FB RID: 57851 RVA: 0x00423E84 File Offset: 0x00422084
 	public int GetMailCapacity()
 	{
 		if (this.MailCapacity != null)
@@ -404,7 +405,7 @@ public class MailModel : ModelBase
 		return 0;
 	}
 
-	// Token: 0x06010D6B RID: 68971 RVA: 0x00417614 File Offset: 0x00415814
+	// Token: 0x0600E1FC RID: 57852 RVA: 0x00423EE4 File Offset: 0x004220E4
 	private string GenerateOverLimitMailIdSuffix(long timeStamp)
 	{
 		DateTime localDateTime = DateTimeOffset.FromUnixTimeMilliseconds(timeStamp * (long)TimeUtil.Instance.InverseMillisecond).LocalDateTime;
@@ -420,13 +421,13 @@ public class MailModel : ModelBase
 		return " " + text + " " + str;
 	}
 
-	// Token: 0x06010D6C RID: 68972 RVA: 0x00417694 File Offset: 0x00415894
+	// Token: 0x0600E1FD RID: 57853 RVA: 0x00423F64 File Offset: 0x00422164
 	private string FormatIdStringByLength(int id, int length)
 	{
 		return (new string('0', length) + ((double)id % Math.Pow(10.0, (double)length)).ToString()).Substring(Math.Max(0, (new string('0', length) + ((double)id % Math.Pow(10.0, (double)length)).ToString()).Length - length));
 	}
 
-	// Token: 0x06010D6D RID: 68973 RVA: 0x00417704 File Offset: 0x00415904
+	// Token: 0x0600E1FE RID: 57854 RVA: 0x00423FD4 File Offset: 0x004221D4
 	private unsafe void MakeMailInstance(PbMailInfo mailInformation)
 	{
 		Log instance = Log.Instance;
@@ -449,7 +450,10 @@ public class MailModel : ModelBase
 		mailData.Sender = mailInformation.Sender;
 		mailData.ExpiryTime = MathUtils.Instance.LongToBigInt(mailInformation.ExpiryTime);
 		mailData.IsIntervalMail = mailInformation.IsIntervalMail;
-		mailData.AttachmentInfos = mailInformation.Attachments.ToArray<PbMailAttachment>();
+		RepeatedField<PbMailAttachment> attachments = mailInformation.Attachments;
+		PbMailAttachment[] array = new PbMailAttachment[attachments.Count];
+		attachments.CopyTo(array, 0);
+		mailData.AttachmentInfos = array;
 		mailData.ReadTime = MathUtils.Instance.LongToNumber(mailInformation.ReadTime);
 		this.AddSpecialMail(mailData);
 		this.SetValueOfMailList(mailData);
@@ -468,7 +472,7 @@ public class MailModel : ModelBase
 		instance2.Info(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 	}
 
-	// Token: 0x06010D6E RID: 68974 RVA: 0x00417890 File Offset: 0x00415A90
+	// Token: 0x0600E1FF RID: 57855 RVA: 0x00424170 File Offset: 0x00422370
 	public bool IfNeedShowNewMail()
 	{
 		Dictionary<string, bool> dictionary = LocalStorage.GetPlayer<Dictionary<string, bool>>(ELocalStoragePlayerKey.HasShowNewMailTipsMap, null) ?? new Dictionary<string, bool>();
@@ -483,7 +487,7 @@ public class MailModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x06010D6F RID: 68975 RVA: 0x00417918 File Offset: 0x00415B18
+	// Token: 0x0600E200 RID: 57856 RVA: 0x004241F8 File Offset: 0x004223F8
 	public void SaveShowNewMailMap()
 	{
 		Dictionary<string, bool> dictionary = LocalStorage.GetPlayer<Dictionary<string, bool>>(ELocalStoragePlayerKey.HasShowNewMailTipsMap, null) ?? new Dictionary<string, bool>();
@@ -494,7 +498,7 @@ public class MailModel : ModelBase
 		LocalStorage.SetPlayer<Dictionary<string, bool>>(ELocalStoragePlayerKey.HasShowNewMailTipsMap, dictionary);
 	}
 
-	// Token: 0x06010D70 RID: 68976 RVA: 0x00417990 File Offset: 0x00415B90
+	// Token: 0x0600E201 RID: 57857 RVA: 0x00424270 File Offset: 0x00422470
 	public void RefreshLocalNewMailMap()
 	{
 		Dictionary<string, bool> dictionary = LocalStorage.GetPlayer<Dictionary<string, bool>>(ELocalStoragePlayerKey.HasShowNewMailTipsMap, null) ?? new Dictionary<string, bool>();
@@ -521,7 +525,7 @@ public class MailModel : ModelBase
 		LocalStorage.SetPlayer<Dictionary<string, bool>>(ELocalStoragePlayerKey.HasShowNewMailTipsMap, dictionary);
 	}
 
-	// Token: 0x06010D71 RID: 68977 RVA: 0x00417AC8 File Offset: 0x00415CC8
+	// Token: 0x0600E202 RID: 57858 RVA: 0x004243A8 File Offset: 0x004225A8
 	private void AddSpecialMail(MailData mailData)
 	{
 		EMailConfigType configId = (EMailConfigType)mailData.ConfigId;
@@ -532,7 +536,7 @@ public class MailModel : ModelBase
 		}
 	}
 
-	// Token: 0x06010D72 RID: 68978 RVA: 0x00417B04 File Offset: 0x00415D04
+	// Token: 0x0600E203 RID: 57859 RVA: 0x004243E4 File Offset: 0x004225E4
 	public unsafe void SetMailStatusByStatusCode(int state, MailData mailInstance)
 	{
 		bool flag = (state & 1) != 0;
@@ -567,19 +571,19 @@ public class MailModel : ModelBase
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray5<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 5));
 	}
 
-	// Token: 0x06010D73 RID: 68979 RVA: 0x00417C38 File Offset: 0x00415E38
+	// Token: 0x0600E204 RID: 57860 RVA: 0x00424518 File Offset: 0x00422718
 	public bool CheckOpenCondition()
 	{
 		return FunctionModel.Instance.IsOpen(10020);
 	}
 
-	// Token: 0x06010D74 RID: 68980 RVA: 0x00417C49 File Offset: 0x00415E49
+	// Token: 0x0600E205 RID: 57861 RVA: 0x00424529 File Offset: 0x00422729
 	public MailFilter GetMailFilterConfigData(EMailFilter type)
 	{
 		return MailConfig.Instance.GetMailFilterConfigById((int)type);
 	}
 
-	// Token: 0x06010D75 RID: 68981 RVA: 0x00417C58 File Offset: 0x00415E58
+	// Token: 0x0600E206 RID: 57862 RVA: 0x00424538 File Offset: 0x00422738
 	public List<MailData> GetImportantMails(List<MailData> totalSortedMails = null)
 	{
 		List<MailData> list = totalSortedMails ?? this.GetMailList();
@@ -595,7 +599,7 @@ public class MailModel : ModelBase
 		return list2;
 	}
 
-	// Token: 0x06010D76 RID: 68982 RVA: 0x00417CA4 File Offset: 0x00415EA4
+	// Token: 0x0600E207 RID: 57863 RVA: 0x00424584 File Offset: 0x00422784
 	public List<MailData> GetUnScanMails(List<MailData> totalSortedMails = null)
 	{
 		List<MailData> list = totalSortedMails ?? this.GetMailList();
@@ -611,7 +615,7 @@ public class MailModel : ModelBase
 		return list2;
 	}
 
-	// Token: 0x06010D77 RID: 68983 RVA: 0x00417CEC File Offset: 0x00415EEC
+	// Token: 0x0600E208 RID: 57864 RVA: 0x004245CC File Offset: 0x004227CC
 	public List<MailData> GetFavoriteMails(List<MailData> totalSortedMails = null)
 	{
 		List<MailData> list = totalSortedMails ?? this.GetMailList();
@@ -627,8 +631,8 @@ public class MailModel : ModelBase
 		return list2;
 	}
 
-	// Token: 0x1700155B RID: 5467
-	// (get) Token: 0x06010D78 RID: 68984 RVA: 0x00417D34 File Offset: 0x00415F34
+	// Token: 0x17001592 RID: 5522
+	// (get) Token: 0x0600E209 RID: 57865 RVA: 0x00424614 File Offset: 0x00422814
 	public static MailModel Instance
 	{
 		get
@@ -637,7 +641,7 @@ public class MailModel : ModelBase
 		}
 	}
 
-	// Token: 0x06010D79 RID: 68985 RVA: 0x00417D3B File Offset: 0x00415F3B
+	// Token: 0x0600E20A RID: 57866 RVA: 0x0042461B File Offset: 0x0042281B
 	public static MailModel GetOrCreateInstance()
 	{
 		if (MailModel._Instance == null)
@@ -647,7 +651,7 @@ public class MailModel : ModelBase
 		return MailModel._Instance;
 	}
 
-	// Token: 0x06010D7A RID: 68986 RVA: 0x00417D4F File Offset: 0x00415F4F
+	// Token: 0x0600E20B RID: 57867 RVA: 0x0042462F File Offset: 0x0042282F
 	public static bool CreateInstance()
 	{
 		if (MailModel._Instance != null)
@@ -658,51 +662,51 @@ public class MailModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06010D7B RID: 68987 RVA: 0x00417D65 File Offset: 0x00415F65
+	// Token: 0x0600E20C RID: 57868 RVA: 0x00424645 File Offset: 0x00422845
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06010D7C RID: 68988 RVA: 0x00417D67 File Offset: 0x00415F67
+	// Token: 0x0600E20D RID: 57869 RVA: 0x00424647 File Offset: 0x00422847
 	public static void ResetStaticDefaultValue()
 	{
 		MailModel._Instance = null;
 	}
 
-	// Token: 0x06010D7D RID: 68989 RVA: 0x00417D6F File Offset: 0x00415F6F
+	// Token: 0x0600E20E RID: 57870 RVA: 0x0042464F File Offset: 0x0042284F
 	static MailModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(MailModel.CreateStaticDefaultValue), new Action(MailModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04007FF6 RID: 32758
+	// Token: 0x0400813D RID: 33085
 	private const int ID_SHOW_LENGTH = 3;
 
-	// Token: 0x04007FF7 RID: 32759
+	// Token: 0x0400813E RID: 33086
 	private Dictionary<string, MailData> MailMap = new Dictionary<string, MailData>();
 
-	// Token: 0x04007FF8 RID: 32760
+	// Token: 0x0400813F RID: 33087
 	private List<MailData> MailList = new List<MailData>();
 
-	// Token: 0x04007FF9 RID: 32761
+	// Token: 0x04008140 RID: 33088
 	private string CurrentSelectMailId = "";
 
-	// Token: 0x04007FFA RID: 32762
+	// Token: 0x04008141 RID: 33089
 	private HashSet<string> UnFinishedMailSet = new HashSet<string>();
 
-	// Token: 0x04007FFB RID: 32763
+	// Token: 0x04008142 RID: 33090
 	private Dictionary<string, int> DayToSpecialMailCount = new Dictionary<string, int>();
 
-	// Token: 0x04007FFC RID: 32764
+	// Token: 0x04008143 RID: 33091
 	public double LastTimeShowNewMailTipsTime;
 
-	// Token: 0x04007FFD RID: 32765
+	// Token: 0x04008144 RID: 33092
 	private int? MailCapacity;
 
-	// Token: 0x04007FFE RID: 32766
+	// Token: 0x04008145 RID: 33093
 	private List<MailAttachmentData> LastPickedAttachments = new List<MailAttachmentData>();
 
-	// Token: 0x04007FFF RID: 32767
+	// Token: 0x04008146 RID: 33094
 	[Nullable(2)]
 	private static MailModel _Instance;
 }

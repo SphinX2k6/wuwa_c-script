@@ -7,7 +7,7 @@ using CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardReward
 {
-	// Token: 0x020051C4 RID: 20932
+	// Token: 0x02004194 RID: 16788
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardReward
 	})]
 	public class RewardGridCardItem : CommonGridCardItem<CollectGridCardData>
 	{
-		// Token: 0x06035990 RID: 219536 RVA: 0x00CB30C4 File Offset: 0x00CB12C4
+		// Token: 0x0602A88B RID: 174219 RVA: 0x00C00700 File Offset: 0x00BFE900
 		protected override void OnRegisterCardComponent()
 		{
 			if (this.IsNewPhantomArenaActivity)
@@ -39,13 +39,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardReward
 			};
 		}
 
-		// Token: 0x06035991 RID: 219537 RVA: 0x00CB3138 File Offset: 0x00CB1338
+		// Token: 0x0602A88C RID: 174220 RVA: 0x00C00774 File Offset: 0x00BFE974
 		public override void Refresh(CollectGridCardData data)
 		{
 			this.Refresh(data, false, 0);
 		}
 
-		// Token: 0x06035992 RID: 219538 RVA: 0x00CB3144 File Offset: 0x00CB1344
+		// Token: 0x0602A88D RID: 174221 RVA: 0x00C00780 File Offset: 0x00BFE980
 		public override void Refresh(CollectGridCardData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -91,28 +91,28 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardReward
 			component3.Refresh(data3);
 		}
 
-		// Token: 0x06035993 RID: 219539 RVA: 0x00CB3249 File Offset: 0x00CB1449
+		// Token: 0x0602A88E RID: 174222 RVA: 0x00C00885 File Offset: 0x00BFEA85
 		private void OnPointerUp()
 		{
 			PhantomArenaController.Instance.OpenDeckBuilderCardInfoViewWithoutOutlookTab(this.Data.CardId);
 		}
 
-		// Token: 0x06035994 RID: 219540 RVA: 0x00CB3260 File Offset: 0x00CB1460
+		// Token: 0x0602A88F RID: 174223 RVA: 0x00C0089C File Offset: 0x00BFEA9C
 		private bool CanToggleChange()
 		{
 			return false;
 		}
 
-		// Token: 0x06035995 RID: 219541 RVA: 0x00CB3263 File Offset: 0x00CB1463
+		// Token: 0x0602A890 RID: 174224 RVA: 0x00C0089F File Offset: 0x00BFEA9F
 		public new object GetKey(CollectGridCardData data, int gridIndex)
 		{
 			return data.CardId;
 		}
 
-		// Token: 0x0401C729 RID: 116521
+		// Token: 0x0401715E RID: 94558
 		protected CollectGridCardData Data;
 
-		// Token: 0x0401C72A RID: 116522
+		// Token: 0x0401715F RID: 94559
 		public bool IsNewPhantomArenaActivity;
 	}
 }

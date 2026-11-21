@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200270B RID: 9995
+// Token: 0x02001BF6 RID: 7158
 [NullableContext(1)]
 [Nullable(0)]
 public class RacingBetsButtonItem : UiPanelBase
 {
-	// Token: 0x060147D0 RID: 83920 RVA: 0x0052CAB4 File Offset: 0x0052ACB4
+	// Token: 0x06011CB2 RID: 72882 RVA: 0x0053B7D0 File Offset: 0x005399D0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,7 +23,7 @@ public class RacingBetsButtonItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x060147D1 RID: 83921 RVA: 0x0052CB1B File Offset: 0x0052AD1B
+	// Token: 0x06011CB3 RID: 72883 RVA: 0x0053B837 File Offset: 0x00539A37
 	protected override void OnBeforeDestroy()
 	{
 		this.ButtonFunction = null;
@@ -31,7 +31,7 @@ public class RacingBetsButtonItem : UiPanelBase
 		this.UnBindGivenUid(this.RedDotUid);
 	}
 
-	// Token: 0x060147D2 RID: 83922 RVA: 0x0052CB3C File Offset: 0x0052AD3C
+	// Token: 0x06011CB4 RID: 72884 RVA: 0x0053B858 File Offset: 0x00539A58
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -52,7 +52,7 @@ public class RacingBetsButtonItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x060147D3 RID: 83923 RVA: 0x0052CB78 File Offset: 0x0052AD78
+	// Token: 0x06011CB5 RID: 72885 RVA: 0x0053B894 File Offset: 0x00539A94
 	private void ButtonClick()
 	{
 		Action buttonFunction = this.ButtonFunction;
@@ -66,7 +66,7 @@ public class RacingBetsButtonItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060147D4 RID: 83924 RVA: 0x0052CBDC File Offset: 0x0052ADDC
+	// Token: 0x06011CB6 RID: 72886 RVA: 0x0053B8F8 File Offset: 0x00539AF8
 	public void SetButtonAllowEventBubbleUp(bool value)
 	{
 		UUIButtonComponent button = base.GetButton(0);
@@ -76,7 +76,7 @@ public class RacingBetsButtonItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060147D5 RID: 83925 RVA: 0x0052CBFB File Offset: 0x0052ADFB
+	// Token: 0x06011CB7 RID: 72887 RVA: 0x0053B917 File Offset: 0x00539B17
 	public void SetEnableClick(bool state)
 	{
 		UUIButtonComponent button = base.GetButton(0);
@@ -87,25 +87,25 @@ public class RacingBetsButtonItem : UiPanelBase
 		button.SetSelfInteractive(state);
 	}
 
-	// Token: 0x060147D6 RID: 83926 RVA: 0x0052CC0F File Offset: 0x0052AE0F
+	// Token: 0x06011CB8 RID: 72888 RVA: 0x0053B92B File Offset: 0x00539B2B
 	public void SetFunction(Action buttonFunction)
 	{
 		this.ButtonFunction = buttonFunction;
 	}
 
-	// Token: 0x060147D7 RID: 83927 RVA: 0x0052CC18 File Offset: 0x0052AE18
+	// Token: 0x06011CB9 RID: 72889 RVA: 0x0053B934 File Offset: 0x00539B34
 	public void SetExtraFunction(Action buttonFunction)
 	{
 		this.ExtraButtonFunctionSet.Add(buttonFunction);
 	}
 
-	// Token: 0x060147D8 RID: 83928 RVA: 0x0052CC27 File Offset: 0x0052AE27
+	// Token: 0x06011CBA RID: 72890 RVA: 0x0053B943 File Offset: 0x00539B43
 	public void DeleteExtraFunction(Action buttonFunction)
 	{
 		this.ExtraButtonFunctionSet.Remove(buttonFunction);
 	}
 
-	// Token: 0x060147D9 RID: 83929 RVA: 0x0052CC36 File Offset: 0x0052AE36
+	// Token: 0x06011CBB RID: 72891 RVA: 0x0053B952 File Offset: 0x00539B52
 	public void SetRedDotVisible(bool bVisible)
 	{
 		UUIItem item = base.GetItem(1);
@@ -116,7 +116,7 @@ public class RacingBetsButtonItem : UiPanelBase
 		item.SetUIActive(bVisible);
 	}
 
-	// Token: 0x060147DA RID: 83930 RVA: 0x0052CC4C File Offset: 0x0052AE4C
+	// Token: 0x06011CBC RID: 72892 RVA: 0x0053B968 File Offset: 0x00539B68
 	public void BindRedDot(ERedDotName redDotName, int uId = 0)
 	{
 		UUIItem item = base.GetItem(1);
@@ -132,7 +132,7 @@ public class RacingBetsButtonItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060147DB RID: 83931 RVA: 0x0052CC9D File Offset: 0x0052AE9D
+	// Token: 0x06011CBD RID: 72893 RVA: 0x0053B9B9 File Offset: 0x00539BB9
 	public void UnBindGivenUid(int uId)
 	{
 		if (this.RedDotName != null)
@@ -143,7 +143,7 @@ public class RacingBetsButtonItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x060147DC RID: 83932 RVA: 0x0052CCDC File Offset: 0x0052AEDC
+	// Token: 0x06011CBE RID: 72894 RVA: 0x0053B9F8 File Offset: 0x00539BF8
 	public void UnBindRedDot()
 	{
 		if (this.RedDotName != null)
@@ -154,26 +154,26 @@ public class RacingBetsButtonItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x04009A28 RID: 39464
+	// Token: 0x04009B80 RID: 39808
 	private ERedDotName? RedDotName;
 
-	// Token: 0x04009A29 RID: 39465
+	// Token: 0x04009B81 RID: 39809
 	private int RedDotUid;
 
-	// Token: 0x04009A2A RID: 39466
+	// Token: 0x04009B82 RID: 39810
 	private readonly HashSet<Action> ExtraButtonFunctionSet = new HashSet<Action>();
 
-	// Token: 0x04009A2B RID: 39467
+	// Token: 0x04009B83 RID: 39811
 	[Nullable(2)]
 	private Action ButtonFunction;
 
-	// Token: 0x02008D59 RID: 36185
+	// Token: 0x02007EE2 RID: 32482
 	[NullableContext(0)]
 	private enum EButtonItemDefine
 	{
-		// Token: 0x0402DDE6 RID: 187878
+		// Token: 0x040290FD RID: 168189
 		Button,
-		// Token: 0x0402DDE7 RID: 187879
+		// Token: 0x040290FE RID: 168190
 		RedDot
 	}
 }

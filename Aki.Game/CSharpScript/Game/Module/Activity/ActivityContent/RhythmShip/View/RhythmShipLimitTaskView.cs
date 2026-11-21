@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 {
-	// Token: 0x02006229 RID: 25129
+	// Token: 0x020051A7 RID: 20903
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RhythmShipLimitTaskView : UiTickViewBase
 	{
-		// Token: 0x0603F5ED RID: 259565 RVA: 0x00F51BEC File Offset: 0x00F4FDEC
+		// Token: 0x060342AE RID: 213678 RVA: 0x00E98B44 File Offset: 0x00E96D44
 		public RhythmShipLimitTaskView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603F5EE RID: 259566 RVA: 0x00F51C00 File Offset: 0x00F4FE00
+		// Token: 0x060342AF RID: 213679 RVA: 0x00E98B58 File Offset: 0x00E96D58
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,19 +39,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			};
 		}
 
-		// Token: 0x0603F5EF RID: 259567 RVA: 0x00F51CBF File Offset: 0x00F4FEBF
+		// Token: 0x060342B0 RID: 213680 RVA: 0x00E98C17 File Offset: 0x00E96E17
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnRhythmShipTaskRefresh, new Action(this.OnRhythmShipTaskRefresh));
 		}
 
-		// Token: 0x0603F5F0 RID: 259568 RVA: 0x00F51CDD File Offset: 0x00F4FEDD
+		// Token: 0x060342B1 RID: 213681 RVA: 0x00E98C35 File Offset: 0x00E96E35
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnRhythmShipTaskRefresh, new Action(this.OnRhythmShipTaskRefresh));
 		}
 
-		// Token: 0x0603F5F1 RID: 259569 RVA: 0x00F51CFC File Offset: 0x00F4FEFC
+		// Token: 0x060342B2 RID: 213682 RVA: 0x00E98C54 File Offset: 0x00E96E54
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RhythmShipLimitTaskView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F5F2 RID: 259570 RVA: 0x00F51D3F File Offset: 0x00F4FF3F
+		// Token: 0x060342B3 RID: 213683 RVA: 0x00E98C97 File Offset: 0x00E96E97
 		protected override void OnTick(float delta)
 		{
 			if (this.RefreshTime > 500f)
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			this.RefreshTime += delta;
 		}
 
-		// Token: 0x0603F5F3 RID: 259571 RVA: 0x00F51D6D File Offset: 0x00F4FF6D
+		// Token: 0x060342B4 RID: 213684 RVA: 0x00E98CC5 File Offset: 0x00E96EC5
 		protected override void OnStart()
 		{
 			this.TitleRemainTimeText = (TextConfig.Instance.GetMultiTextByKey("ActivityRemainingTime") ?? "");
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			this.RefreshTimeText();
 		}
 
-		// Token: 0x0603F5F4 RID: 259572 RVA: 0x00F51D9C File Offset: 0x00F4FF9C
+		// Token: 0x060342B5 RID: 213685 RVA: 0x00E98CF4 File Offset: 0x00E96EF4
 		private void RefreshTaskScrollView()
 		{
 			List<int> rhythmShipTaskIdByTypeAndActivityId = RhythmShipConfig.Instance.GetRhythmShipTaskIdByTypeAndActivityId(1, RhythmShipModel.Instance.ActivityId);
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			taskScrollView.RefreshByData(data, null, true);
 		}
 
-		// Token: 0x0603F5F5 RID: 259573 RVA: 0x00F51DE0 File Offset: 0x00F4FFE0
+		// Token: 0x060342B6 RID: 213686 RVA: 0x00E98D38 File Offset: 0x00E96F38
 		private void RefreshTimeText()
 		{
 			RhythmShipData activityData = RhythmShipModel.Instance.ActivityData;
@@ -111,29 +111,29 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			base.GetText(3).SetText(remainTimeText ?? "", true);
 		}
 
-		// Token: 0x0603F5F6 RID: 259574 RVA: 0x00F51E40 File Offset: 0x00F50040
+		// Token: 0x060342B7 RID: 213687 RVA: 0x00E98D98 File Offset: 0x00E96F98
 		private void OnRhythmShipTaskRefresh()
 		{
 			this.RefreshTaskScrollView();
 		}
 
-		// Token: 0x0603F5F7 RID: 259575 RVA: 0x00F51E48 File Offset: 0x00F50048
+		// Token: 0x060342B8 RID: 213688 RVA: 0x00E98DA0 File Offset: 0x00E96FA0
 		private void OnLookBtnClick()
 		{
-			ItemController.Instance.OpenItemTipsByItemId(80065017, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(80065017, true, null, false);
 		}
 
-		// Token: 0x04021149 RID: 135497
+		// Token: 0x0401BA78 RID: 113272
 		private const int REFRESH_TIME = 500;
 
-		// Token: 0x0402114A RID: 135498
+		// Token: 0x0401BA79 RID: 113273
 		private const int REWARD_BUSINESS_CARD_ID = 80065017;
 
-		// Token: 0x0402114B RID: 135499
+		// Token: 0x0401BA7A RID: 113274
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0402114C RID: 135500
+		// Token: 0x0401BA7B RID: 113275
 		[Nullable(new byte[]
 		{
 			2,
@@ -141,10 +141,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 		})]
 		private GenericScrollViewNew<RhythmShipTaskItem, int> TaskScrollView;
 
-		// Token: 0x0402114D RID: 135501
+		// Token: 0x0401BA7C RID: 113276
 		private string TitleRemainTimeText = "";
 
-		// Token: 0x0402114E RID: 135502
+		// Token: 0x0401BA7D RID: 113277
 		private float RefreshTime;
 	}
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200011B RID: 283
+	// Token: 0x0200012A RID: 298
 	public class ConfigBranchLineById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060006A3 RID: 1699 RVA: 0x0007F19B File Offset: 0x0007D39B
+		// Token: 0x060006FD RID: 1789 RVA: 0x00084AFF File Offset: 0x00082CFF
 		static ConfigBranchLineById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigBranchLineById.CreateStaticDefaultValue), new Action(ConfigBranchLineById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060006A4 RID: 1700 RVA: 0x0007F1BC File Offset: 0x0007D3BC
+		// Token: 0x060006FE RID: 1790 RVA: 0x00084B20 File Offset: 0x00082D20
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigBranchLineById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060006A5 RID: 1701 RVA: 0x0007F23B File Offset: 0x0007D43B
+		// Token: 0x060006FF RID: 1791 RVA: 0x00084B9F File Offset: 0x00082D9F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigBranchLineById.LogPair = null;
 			ConfigBranchLineById.HandleId = 0;
 		}
 
-		// Token: 0x060006A6 RID: 1702 RVA: 0x0007F249 File Offset: 0x0007D449
+		// Token: 0x06000700 RID: 1792 RVA: 0x00084BAD File Offset: 0x00082DAD
 		public static void Init()
 		{
 			ConfigBranchLineById.HandleId = ConfigCommon.InitDataStatement(ConfigBranchLineById.HandleId, "db_moonchasing.db", "select BinData from `BranchLine` where Id=?");
 		}
 
-		// Token: 0x060006A7 RID: 1703 RVA: 0x0007F264 File Offset: 0x0007D464
+		// Token: 0x06000701 RID: 1793 RVA: 0x00084BC8 File Offset: 0x00082DC8
 		public static BranchLine? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigBranchLineById.HandleId, ConfigBranchLineById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new BranchLine?(rootAsBranchLine);
 		}
 
-		// Token: 0x040007A1 RID: 1953
+		// Token: 0x0400080A RID: 2058
 		private const string DB = "db_moonchasing.db";
 
-		// Token: 0x040007A2 RID: 1954
+		// Token: 0x0400080B RID: 2059
 		private const string FILE = "z.追月节.xlsx";
 
-		// Token: 0x040007A3 RID: 1955
+		// Token: 0x0400080C RID: 2060
 		private const string TABLE = "BranchLine";
 
-		// Token: 0x040007A4 RID: 1956
+		// Token: 0x0400080D RID: 2061
 		private const string COMMAND = "select BinData from `BranchLine` where Id=?";
 
-		// Token: 0x040007A5 RID: 1957
+		// Token: 0x0400080E RID: 2062
 		private const string KEY_PREFIX = "BranchLineById";
 
-		// Token: 0x040007A6 RID: 1958
+		// Token: 0x0400080F RID: 2063
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040007A7 RID: 1959
+		// Token: 0x04000810 RID: 2064
 		private static int HandleId;
 	}
 }

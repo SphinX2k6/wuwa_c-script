@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 {
-	// Token: 0x02005FBE RID: 24510
+	// Token: 0x02004FA5 RID: 20389
 	public class TotalTopUpPageTitlePanel : UiPanelBase
 	{
-		// Token: 0x0603E212 RID: 254482 RVA: 0x00F01444 File Offset: 0x00EFF644
+		// Token: 0x060331AC RID: 209324 RVA: 0x00E53100 File Offset: 0x00E51300
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			};
 		}
 
-		// Token: 0x0603E213 RID: 254483 RVA: 0x00F014D8 File Offset: 0x00EFF6D8
+		// Token: 0x060331AD RID: 209325 RVA: 0x00E53194 File Offset: 0x00E51394
 		public void RefreshTime(long time)
 		{
 			CommonDefine.ICountDown remainTimeDataFormat = TimeUtil.Instance.GetRemainTimeDataFormat3((double)time);
@@ -32,25 +32,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			LguiUtil.Instance.SetLocalTextNew(text, "TotalTopUp_1001", new <>z__ReadOnlySingleElementList<object>(remainTimeDataFormat.CountDownText ?? string.Empty));
 		}
 
-		// Token: 0x0603E214 RID: 254484 RVA: 0x00F0151E File Offset: 0x00EFF71E
+		// Token: 0x060331AE RID: 209326 RVA: 0x00E531DA File Offset: 0x00E513DA
 		private void OnClickHelp()
 		{
 			HelpController.Instance.OpenHelpById(516);
 		}
 
-		// Token: 0x0200C296 RID: 49814
+		// Token: 0x0200ACA1 RID: 44193
 		private class ENode
 		{
-			// Token: 0x0403AC88 RID: 240776
+			// Token: 0x04035664 RID: 218724
 			public const int TextTitle = 0;
 
-			// Token: 0x0403AC89 RID: 240777
+			// Token: 0x04035665 RID: 218725
 			public const int TextTime = 1;
 
-			// Token: 0x0403AC8A RID: 240778
+			// Token: 0x04035666 RID: 218726
 			public const int TextDescription = 2;
 
-			// Token: 0x0403AC8B RID: 240779
+			// Token: 0x04035667 RID: 218727
 			public const int BtnHelp = 3;
 		}
 	}

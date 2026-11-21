@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -11,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 {
-	// Token: 0x020060C7 RID: 24775
+	// Token: 0x02005045 RID: 20549
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class AbyssDangoDescContent : UiPanelBase
 	{
-		// Token: 0x0603EA41 RID: 256577 RVA: 0x00F20B10 File Offset: 0x00F1ED10
+		// Token: 0x06033705 RID: 210693 RVA: 0x00E678D4 File Offset: 0x00E65AD4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -32,19 +31,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603EA42 RID: 256578 RVA: 0x00F20B9A File Offset: 0x00F1ED9A
+		// Token: 0x06033706 RID: 210694 RVA: 0x00E6795E File Offset: 0x00E65B5E
 		protected override void OnStart()
 		{
 			this.Scroll = new GenericScrollViewNew<AbyssDangoDescItem, IAbyssDescData>(base.GetScrollViewWithScrollbar(1), new Func<AbyssDangoDescItem>(this.InitScrollItem), base.GetItem(2).GetOwner() as AUIBaseActor, false, null);
 		}
 
-		// Token: 0x0603EA43 RID: 256579 RVA: 0x00F20BCD File Offset: 0x00F1EDCD
+		// Token: 0x06033707 RID: 210695 RVA: 0x00E67991 File Offset: 0x00E65B91
 		private AbyssDangoDescItem InitScrollItem()
 		{
 			return new AbyssDangoDescItem();
 		}
 
-		// Token: 0x0603EA44 RID: 256580 RVA: 0x00F20BD4 File Offset: 0x00F1EDD4
+		// Token: 0x06033708 RID: 210696 RVA: 0x00E67998 File Offset: 0x00E65B98
 		private void RefreshDescLayout(List<IAbyssDescData> data)
 		{
 			AbyssDangoDescContent.<>c__DisplayClass5_0 CS$<>8__locals1 = new AbyssDangoDescContent.<>c__DisplayClass5_0();
@@ -62,7 +61,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			base.RunAsyncTask(task);
 		}
 
-		// Token: 0x0603EA45 RID: 256581 RVA: 0x00F20C18 File Offset: 0x00F1EE18
+		// Token: 0x06033709 RID: 210697 RVA: 0x00E679DC File Offset: 0x00E65BDC
 		public void Refresh(IAbyssRolePanelData data)
 		{
 			List<IAbyssDescData> mainDescData = data.MainDescData;
@@ -73,7 +72,9 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 				AbyssSettle? abyssSettleById = DangoAbyssConfig.Instance.GetAbyssSettleById(abyssDescData.Id);
 				int count = abyssSettleById.Value.Title().Count;
 				int num = (mainHonorRank >= count - 1) ? (count - 1) : mainHonorRank;
-				int key = abyssSettleById.Value.Title().Keys.ToArray<int>()[num];
+				int[] array = new int[count];
+				abyssSettleById.Value.Title().Keys.CopyTo(array, 0);
+				int key = array[num];
 				string text;
 				string textStringId;
 				if (abyssSettleById.Value.Title().TryGetValue(key, out text))
@@ -89,18 +90,18 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			this.RefreshDescLayout(data.SubDescData);
 		}
 
-		// Token: 0x04020C02 RID: 134146
+		// Token: 0x0401B52F RID: 111919
 		protected GenericScrollViewNew<AbyssDangoDescItem, IAbyssDescData> Scroll;
 
-		// Token: 0x0200C311 RID: 49937
+		// Token: 0x0200ACFC RID: 44284
 		[NullableContext(0)]
 		private enum EComponentDefine
 		{
-			// Token: 0x0403AE75 RID: 241269
+			// Token: 0x040357DD RID: 219101
 			Title,
-			// Token: 0x0403AE76 RID: 241270
+			// Token: 0x040357DE RID: 219102
 			DescScroll,
-			// Token: 0x0403AE77 RID: 241271
+			// Token: 0x040357DF RID: 219103
 			DescItem
 		}
 	}

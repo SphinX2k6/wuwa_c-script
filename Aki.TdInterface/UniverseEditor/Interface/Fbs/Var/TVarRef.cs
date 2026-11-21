@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003B5F RID: 15199
+	// Token: 0x02003F67 RID: 16231
 	public enum TVarRef : byte
 	{
-		// Token: 0x0400B077 RID: 45175
+		// Token: 0x0400B9F4 RID: 47604
 		NONE,
-		// Token: 0x0400B078 RID: 45176
+		// Token: 0x0400B9F5 RID: 47605
 		IConstVarRef,
-		// Token: 0x0400B079 RID: 45177
+		// Token: 0x0400B9F6 RID: 47606
 		IGlobalVarRef,
-		// Token: 0x0400B07A RID: 45178
+		// Token: 0x0400B9F7 RID: 47607
 		IOtherVarRef,
-		// Token: 0x0400B07B RID: 45179
+		// Token: 0x0400B9F8 RID: 47608
 		ISelfVarRef,
-		// Token: 0x0400B07C RID: 45180
+		// Token: 0x0400B9F9 RID: 47609
 		ISystemVarRef
 	}
 }

@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B5D RID: 7005
+	// Token: 0x02001D0A RID: 7434
 	public class IItemData_SetValue
 	{
-		// Token: 0x04005BBD RID: 23485
+		// Token: 0x04006056 RID: 24662
 		public int ItemId;
 
-		// Token: 0x04005BBE RID: 23486
+		// Token: 0x04006057 RID: 24663
 		public int Count;
 	}
 }

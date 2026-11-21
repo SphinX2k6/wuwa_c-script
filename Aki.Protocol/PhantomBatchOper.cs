@@ -3,16 +3,16 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001609 RID: 5641
+	// Token: 0x0200167C RID: 5756
 	public enum PhantomBatchOper
 	{
-		// Token: 0x0400BF82 RID: 49026
+		// Token: 0x0400C47C RID: 50300
 		[OriginalName("Lock")]
 		Lock,
-		// Token: 0x0400BF83 RID: 49027
+		// Token: 0x0400C47D RID: 50301
 		[OriginalName("Disuse")]
 		Disuse,
-		// Token: 0x0400BF84 RID: 49028
+		// Token: 0x0400C47E RID: 50302
 		[OriginalName("Reset")]
 		Reset
 	}

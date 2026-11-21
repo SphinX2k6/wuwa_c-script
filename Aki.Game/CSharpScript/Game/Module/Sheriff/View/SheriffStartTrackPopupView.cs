@@ -8,16 +8,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Sheriff.View
 {
-	// Token: 0x02004C5D RID: 19549
+	// Token: 0x02003C0E RID: 15374
 	public class SheriffStartTrackPopupView : UiViewBase
 	{
-		// Token: 0x06032898 RID: 207000 RVA: 0x00BC6306 File Offset: 0x00BC4506
+		// Token: 0x0602764B RID: 161355 RVA: 0x00B0AF52 File Offset: 0x00B09152
 		[NullableContext(1)]
 		public SheriffStartTrackPopupView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06032899 RID: 207001 RVA: 0x00BC6310 File Offset: 0x00BC4510
+		// Token: 0x0602764C RID: 161356 RVA: 0x00B0AF5C File Offset: 0x00B0915C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603289A RID: 207002 RVA: 0x00BC6358 File Offset: 0x00BC4558
+		// Token: 0x0602764D RID: 161357 RVA: 0x00B0AFA4 File Offset: 0x00B091A4
 		protected override void OnStart()
 		{
 			SheriffStartTrackPopupViewData sheriffStartTrackPopupViewData = this.OpenParam as SheriffStartTrackPopupViewData;
@@ -41,16 +41,16 @@ namespace CSharpScript.Game.Module.Sheriff.View
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), (anomalyConfigById != null) ? anomalyConfigById.GetValueOrDefault().Name : null, Array.Empty<object>());
 		}
 
-		// Token: 0x0603289B RID: 207003 RVA: 0x00BC63B7 File Offset: 0x00BC45B7
+		// Token: 0x0602764E RID: 161358 RVA: 0x00B0B003 File Offset: 0x00B09203
 		protected override void OnFinishShow()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0200AE01 RID: 44545
+		// Token: 0x0200981F RID: 38943
 		private static class EComponents
 		{
-			// Token: 0x04034DA3 RID: 216483
+			// Token: 0x0402F748 RID: 194376
 			public const int TitleText = 0;
 		}
 	}

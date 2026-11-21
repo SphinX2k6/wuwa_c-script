@@ -2,10 +2,10 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.AdventureGuide;
 
-// Token: 0x02001872 RID: 6258
+// Token: 0x02000D2B RID: 3371
 public class AdventureGuideSort : CommonSort<EAdventureGuideSortType>
 {
-	// Token: 0x0600B7B6 RID: 47030 RVA: 0x002993FC File Offset: 0x002975FC
+	// Token: 0x06008B9F RID: 35743 RVA: 0x002A3B14 File Offset: 0x002A1D14
 	[NullableContext(1)]
 	private int SortDanger(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
@@ -30,7 +30,7 @@ public class AdventureGuideSort : CommonSort<EAdventureGuideSortType>
 		return 0;
 	}
 
-	// Token: 0x0600B7B7 RID: 47031 RVA: 0x0029944C File Offset: 0x0029764C
+	// Token: 0x06008BA0 RID: 35744 RVA: 0x002A3B64 File Offset: 0x002A1D64
 	protected override void OnInitSortMap()
 	{
 		this.SortMap.Add(EAdventureGuideSortType.Danger, new TSortResult(this.SortDanger));

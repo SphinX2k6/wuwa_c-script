@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.AdventureGuide.Views
 {
-	// Token: 0x02005EE2 RID: 24290
+	// Token: 0x02004EC9 RID: 20169
 	public enum ETowerItemComponent
 	{
-		// Token: 0x0402040F RID: 132111
+		// Token: 0x0401AEE1 RID: 110305
 		DoingItem,
-		// Token: 0x04020410 RID: 132112
+		// Token: 0x0401AEE2 RID: 110306
 		FinishItem,
-		// Token: 0x04020411 RID: 132113
+		// Token: 0x0401AEE3 RID: 110307
 		LevelText,
-		// Token: 0x04020412 RID: 132114
+		// Token: 0x0401AEE4 RID: 110308
 		ScoreText
 	}
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000469 RID: 1129
+	// Token: 0x0200047F RID: 1151
 	public class ConfigKeyPoolById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001A80 RID: 6784 RVA: 0x000EF2E7 File Offset: 0x000ED4E7
+		// Token: 0x06001B04 RID: 6916 RVA: 0x000F5A3B File Offset: 0x000F3C3B
 		static ConfigKeyPoolById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigKeyPoolById.CreateStaticDefaultValue), new Action(ConfigKeyPoolById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001A81 RID: 6785 RVA: 0x000EF308 File Offset: 0x000ED508
+		// Token: 0x06001B05 RID: 6917 RVA: 0x000F5A5C File Offset: 0x000F3C5C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigKeyPoolById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001A82 RID: 6786 RVA: 0x000EF387 File Offset: 0x000ED587
+		// Token: 0x06001B06 RID: 6918 RVA: 0x000F5ADB File Offset: 0x000F3CDB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigKeyPoolById.LogPair = null;
 			ConfigKeyPoolById.HandleId = 0;
 		}
 
-		// Token: 0x06001A83 RID: 6787 RVA: 0x000EF395 File Offset: 0x000ED595
+		// Token: 0x06001B07 RID: 6919 RVA: 0x000F5AE9 File Offset: 0x000F3CE9
 		public static void Init()
 		{
 			ConfigKeyPoolById.HandleId = ConfigCommon.InitDataStatement(ConfigKeyPoolById.HandleId, "db_menu.db", "select BinData from `KeyPool` where Id=?");
 		}
 
-		// Token: 0x06001A84 RID: 6788 RVA: 0x000EF3B0 File Offset: 0x000ED5B0
+		// Token: 0x06001B08 RID: 6920 RVA: 0x000F5B04 File Offset: 0x000F3D04
 		public static KeyPool? GetConfig(string p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigKeyPoolById.HandleId, ConfigKeyPoolById.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new KeyPool?(rootAsKeyPool);
 		}
 
-		// Token: 0x04001EC3 RID: 7875
+		// Token: 0x04001F5D RID: 8029
 		private const string DB = "db_menu.db";
 
-		// Token: 0x04001EC4 RID: 7876
+		// Token: 0x04001F5E RID: 8030
 		private const string FILE = "s.设置系统.xlsx";
 
-		// Token: 0x04001EC5 RID: 7877
+		// Token: 0x04001F5F RID: 8031
 		private const string TABLE = "KeyPool";
 
-		// Token: 0x04001EC6 RID: 7878
+		// Token: 0x04001F60 RID: 8032
 		private const string COMMAND = "select BinData from `KeyPool` where Id=?";
 
-		// Token: 0x04001EC7 RID: 7879
+		// Token: 0x04001F61 RID: 8033
 		private const string KEY_PREFIX = "KeyPoolById";
 
-		// Token: 0x04001EC8 RID: 7880
+		// Token: 0x04001F62 RID: 8034
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001EC9 RID: 7881
+		// Token: 0x04001F63 RID: 8035
 		private static int HandleId;
 	}
 }

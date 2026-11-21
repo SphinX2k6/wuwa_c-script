@@ -5,10 +5,10 @@ using CSharpScript.Core.Common;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002471 RID: 9329
+// Token: 0x02001956 RID: 6486
 public class PhantomInteractDetailSpecialContent : UiPanelBase, IDetailContent
 {
-	// Token: 0x06012BA2 RID: 76706 RVA: 0x0049EA10 File Offset: 0x0049CC10
+	// Token: 0x0601005A RID: 65626 RVA: 0x004AC17C File Offset: 0x004AA37C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -21,13 +21,13 @@ public class PhantomInteractDetailSpecialContent : UiPanelBase, IDetailContent
 		};
 	}
 
-	// Token: 0x06012BA3 RID: 76707 RVA: 0x0049EA96 File Offset: 0x0049CC96
+	// Token: 0x0601005B RID: 65627 RVA: 0x004AC202 File Offset: 0x004AA402
 	protected override void OnStart()
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(0), "PhantomDisplay_SpecialSkillTitle", Array.Empty<object>());
 	}
 
-	// Token: 0x06012BA4 RID: 76708 RVA: 0x0049EAB4 File Offset: 0x0049CCB4
+	// Token: 0x0601005C RID: 65628 RVA: 0x004AC220 File Offset: 0x004AA420
 	[NullableContext(1)]
 	public void Refresh(PhantomInteractDetailViewModel viewModel)
 	{
@@ -40,7 +40,7 @@ public class PhantomInteractDetailSpecialContent : UiPanelBase, IDetailContent
 		}
 	}
 
-	// Token: 0x06012BA5 RID: 76709 RVA: 0x0049EB24 File Offset: 0x0049CD24
+	// Token: 0x0601005D RID: 65629 RVA: 0x004AC290 File Offset: 0x004AA490
 	public void SetScrollListenerActive(bool active)
 	{
 		if (!Info.Instance.IsPcPlatform() || this.ScrollListenerActive == active)
@@ -61,7 +61,7 @@ public class PhantomInteractDetailSpecialContent : UiPanelBase, IDetailContent
 		lguiEventSystem.OnScrollTriggeredDelegate.Unbind();
 	}
 
-	// Token: 0x06012BA6 RID: 76710 RVA: 0x0049EB84 File Offset: 0x0049CD84
+	// Token: 0x0601005E RID: 65630 RVA: 0x004AC2F0 File Offset: 0x004AA4F0
 	[NullableContext(2)]
 	private void OnGlobalScrollTriggered(ULGUIPointerEventData eventData)
 	{
@@ -73,21 +73,21 @@ public class PhantomInteractDetailSpecialContent : UiPanelBase, IDetailContent
 		scrollViewWithScrollbar.TriggerScrollEventManually(eventData);
 	}
 
-	// Token: 0x04008D0E RID: 36110
+	// Token: 0x04008E55 RID: 36437
 	private bool ScrollListenerActive;
 
-	// Token: 0x020089EC RID: 35308
+	// Token: 0x02007B73 RID: 31603
 	private enum EComponent
 	{
-		// Token: 0x0402CCA8 RID: 183464
+		// Token: 0x04027FBE RID: 163774
 		TxtName,
-		// Token: 0x0402CCA9 RID: 183465
+		// Token: 0x04027FBF RID: 163775
 		TexPix,
-		// Token: 0x0402CCAA RID: 183466
+		// Token: 0x04027FC0 RID: 163776
 		TxtDescTitle,
-		// Token: 0x0402CCAB RID: 183467
+		// Token: 0x04027FC1 RID: 163777
 		TxtDesc,
-		// Token: 0x0402CCAC RID: 183468
+		// Token: 0x04027FC2 RID: 163778
 		SvDesc
 	}
 }

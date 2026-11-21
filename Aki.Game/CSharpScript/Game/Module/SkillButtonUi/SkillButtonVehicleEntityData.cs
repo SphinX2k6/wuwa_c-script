@@ -10,12 +10,12 @@ using CSharpScript.Game.Module.SkillButtonUi.Custom;
 
 namespace CSharpScript.Game.Module.SkillButtonUi
 {
-	// Token: 0x02004C1B RID: 19483
+	// Token: 0x02003BCC RID: 15308
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SkillButtonVehicleEntityData : SkillButtonEntityDataBase
 	{
-		// Token: 0x060326E6 RID: 206566 RVA: 0x00BBF580 File Offset: 0x00BBD780
+		// Token: 0x06027499 RID: 160921 RVA: 0x00B0420C File Offset: 0x00B0240C
 		[NullableContext(1)]
 		public void Init(EntityHandle entityHandle, EVehicleType vehicleType)
 		{
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x060326E7 RID: 206567 RVA: 0x00BBF8F8 File Offset: 0x00BBDAF8
+		// Token: 0x0602749A RID: 160922 RVA: 0x00B04584 File Offset: 0x00B02784
 		private void ListenEntityTag()
 		{
 			foreach (SkillButtonData skillButtonData in this.SkillButtonDataMap.Values)
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x060326E8 RID: 206568 RVA: 0x00BBFD3C File Offset: 0x00BBDF3C
+		// Token: 0x0602749B RID: 160923 RVA: 0x00B049C8 File Offset: 0x00B02BC8
 		private void ListenEntityAttribute()
 		{
 			foreach (SkillButtonData skillButtonData in this.SkillButtonDataMap.Values)
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x060326E9 RID: 206569 RVA: 0x00BBFDD4 File Offset: 0x00BBDFD4
+		// Token: 0x0602749C RID: 160924 RVA: 0x00B04A60 File Offset: 0x00B02C60
 		public override void Clear()
 		{
 			base.Clear();
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			this.SkillButtonConfigList = null;
 		}
 
-		// Token: 0x060326EA RID: 206570 RVA: 0x00BBFE2A File Offset: 0x00BBE02A
+		// Token: 0x0602749D RID: 160925 RVA: 0x00B04AB6 File Offset: 0x00B02CB6
 		protected override void EnableNextTick()
 		{
 			if (this.NextTickTimerId != null)
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			this.NextTickTimerId = TimerSystem.Instance.Next(new TTimerAction(this.NextTick), SkillButtonEntityDataBase.NextTickStat, null);
 		}
 
-		// Token: 0x060326EB RID: 206571 RVA: 0x00BBFE58 File Offset: 0x00BBE058
+		// Token: 0x0602749E RID: 160926 RVA: 0x00B04AE4 File Offset: 0x00B02CE4
 		private void ClearNextTick()
 		{
 			if (this.NextTickTimerId == null)
@@ -201,7 +201,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			this.AttributeChanged.Clear();
 		}
 
-		// Token: 0x060326EC RID: 206572 RVA: 0x00BBFEFC File Offset: 0x00BBE0FC
+		// Token: 0x0602749F RID: 160927 RVA: 0x00B04B88 File Offset: 0x00B02D88
 		private void NextTick(float _)
 		{
 			this.NextTickTimerId = null;
@@ -260,7 +260,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x060326ED RID: 206573 RVA: 0x00BC02A0 File Offset: 0x00BBE4A0
+		// Token: 0x060274A0 RID: 160928 RVA: 0x00B04F2C File Offset: 0x00B0312C
 		private void OnAttributeIdTagChanged(int tagId, bool tagExist)
 		{
 			HashSet<SkillButtonData> hashSet = this.AttributeIdTagSkillButtonMapping.Get(tagId);
@@ -300,7 +300,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x060326EE RID: 206574 RVA: 0x00BC03D4 File Offset: 0x00BBE5D4
+		// Token: 0x060274A1 RID: 160929 RVA: 0x00B05060 File Offset: 0x00B03260
 		private void OnEnableTagChanged(int tagId, bool tagExist)
 		{
 			HashSet<SkillButtonData> skillButtonDataByEnableTag = this.GetSkillButtonDataByEnableTag(tagId);
@@ -333,7 +333,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x060326EF RID: 206575 RVA: 0x00BC0470 File Offset: 0x00BBE670
+		// Token: 0x060274A2 RID: 160930 RVA: 0x00B050FC File Offset: 0x00B032FC
 		private void OnDisableTagChanged(int tagId, bool tagExist)
 		{
 			HashSet<SkillButtonData> skillButtonDataByDisableTag = base.GetSkillButtonDataByDisableTag(tagId);
@@ -366,7 +366,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x060326F0 RID: 206576 RVA: 0x00BC050C File Offset: 0x00BBE70C
+		// Token: 0x060274A3 RID: 160931 RVA: 0x00B05198 File Offset: 0x00B03398
 		private void OnDisableSkillIdTagChanged(int tagId, bool tagExist)
 		{
 			HashSet<SkillButtonData> skillButtonDataByDisableSkillIdTag = base.GetSkillButtonDataByDisableSkillIdTag(tagId);
@@ -409,7 +409,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x060326F1 RID: 206577 RVA: 0x00BC0608 File Offset: 0x00BBE808
+		// Token: 0x060274A4 RID: 160932 RVA: 0x00B05294 File Offset: 0x00B03494
 		private void OnSkillTagChanged(int tagId, bool tagExist)
 		{
 			HashSet<SkillButtonData> skillButtonDataBySkillIdTag = base.GetSkillButtonDataBySkillIdTag(tagId);
@@ -441,7 +441,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x060326F2 RID: 206578 RVA: 0x00BC06D0 File Offset: 0x00BBE8D0
+		// Token: 0x060274A5 RID: 160933 RVA: 0x00B0535C File Offset: 0x00B0355C
 		private void OnSkillIconTagChanged(int tagId, bool tagExist)
 		{
 			HashSet<SkillButtonData> skillButtonDataBySkillIconTag = base.GetSkillButtonDataBySkillIconTag(tagId);
@@ -469,7 +469,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x060326F3 RID: 206579 RVA: 0x00BC0760 File Offset: 0x00BBE960
+		// Token: 0x060274A6 RID: 160934 RVA: 0x00B053EC File Offset: 0x00B035EC
 		private void OnDynamicEffectTagChanged(int tagId, bool tagExist)
 		{
 			HashSet<SkillButtonData> skillButtonDataByDynamicEffectTag = base.GetSkillButtonDataByDynamicEffectTag(tagId);
@@ -485,7 +485,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x060326F4 RID: 206580 RVA: 0x00BC07CC File Offset: 0x00BBE9CC
+		// Token: 0x060274A7 RID: 160935 RVA: 0x00B05458 File Offset: 0x00B03658
 		private void OnCustomTagCountChanged(int count, int tagId, int exactTagId, int oldCount)
 		{
 			SkillButtonMapping<int> customHandleSkillButtonMapping = this.CustomHandleSkillButtonMapping;
@@ -503,7 +503,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x060326F5 RID: 206581 RVA: 0x00BC0874 File Offset: 0x00BBEA74
+		// Token: 0x060274A8 RID: 160936 RVA: 0x00B05500 File Offset: 0x00B03700
 		[NullableContext(1)]
 		private void CheckCustomHd(SkillButtonCustomHandleBase customHd, SkillButtonData skillButtonData, int count, int tagId)
 		{
@@ -535,7 +535,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			customHd.ClearModifyMark();
 		}
 
-		// Token: 0x060326F6 RID: 206582 RVA: 0x00BC0914 File Offset: 0x00BBEB14
+		// Token: 0x060274A9 RID: 160937 RVA: 0x00B055A0 File Offset: 0x00B037A0
 		private void OnHoldRingFxTagChanged(int tagId, bool tagExist)
 		{
 			HashSet<SkillButtonData> hashSet = this.ShowLongPressTagSkillButtonMapping.Get(tagId);
@@ -551,7 +551,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			this.EnableNextTick();
 		}
 
-		// Token: 0x060326F7 RID: 206583 RVA: 0x00BC0988 File Offset: 0x00BBEB88
+		// Token: 0x060274AA RID: 160938 RVA: 0x00B05614 File Offset: 0x00B03814
 		private void OnAttributeChanged(EAttributeType attributeId, float newValue, float oldValue)
 		{
 			this.RefreshSkillButtonEnableByAttributeId(attributeId);
@@ -567,7 +567,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			this.EnableNextTick();
 		}
 
-		// Token: 0x060326F8 RID: 206584 RVA: 0x00BC09F8 File Offset: 0x00BBEBF8
+		// Token: 0x060274AB RID: 160939 RVA: 0x00B05684 File Offset: 0x00B03884
 		public void RefreshSkillButtonEnableByAttributeId(EAttributeType attributeId)
 		{
 			HashSet<SkillButtonData> skillButtonDataByAttributeId = base.GetSkillButtonDataByAttributeId(attributeId);
@@ -588,7 +588,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x060326F9 RID: 206585 RVA: 0x00BC0A74 File Offset: 0x00BBEC74
+		// Token: 0x060274AC RID: 160940 RVA: 0x00B05700 File Offset: 0x00B03900
 		public void RefreshSkillCd(int skillId)
 		{
 			foreach (SkillButtonData skillButtonData in this.SkillButtonDataMap.Values)
@@ -602,7 +602,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x060326FA RID: 206586 RVA: 0x00BC0AE8 File Offset: 0x00BBECE8
+		// Token: 0x060274AD RID: 160941 RVA: 0x00B05774 File Offset: 0x00B03974
 		public void RefreshSkillButtonExplorePhantomSkillId(ESkillButtonType buttonType)
 		{
 			SkillButtonData skillButtonDataByButton = base.GetSkillButtonDataByButton(buttonType);
@@ -623,7 +623,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x060326FB RID: 206587 RVA: 0x00BC0B50 File Offset: 0x00BBED50
+		// Token: 0x060274AE RID: 160942 RVA: 0x00B057DC File Offset: 0x00B039DC
 		public void RefreshEnableByInputEvent(EInputAction inputAction, bool enable)
 		{
 			foreach (SkillButtonData skillButtonData in this.SkillButtonDataMap.Values)
@@ -642,7 +642,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x060326FC RID: 206588 RVA: 0x00BC0BD8 File Offset: 0x00BBEDD8
+		// Token: 0x060274AF RID: 160943 RVA: 0x00B05864 File Offset: 0x00B03A64
 		public void RefreshVisibleByInputEvent(EInputAction inputAction, bool visible)
 		{
 			foreach (SkillButtonData skillButtonData in this.SkillButtonDataMap.Values)
@@ -668,7 +668,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x060326FD RID: 206589 RVA: 0x00BC0C6C File Offset: 0x00BBEE6C
+		// Token: 0x060274B0 RID: 160944 RVA: 0x00B058F8 File Offset: 0x00B03AF8
 		public void RefreshEnableByButtonType(ESkillButtonType buttonType)
 		{
 			SkillButtonData skillButtonDataByButton = base.GetSkillButtonDataByButton(buttonType);
@@ -686,7 +686,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x060326FE RID: 206590 RVA: 0x00BC0CB0 File Offset: 0x00BBEEB0
+		// Token: 0x060274B1 RID: 160945 RVA: 0x00B0593C File Offset: 0x00B03B3C
 		public void RefreshVisibleByButtonType(ESkillButtonType buttonType)
 		{
 			SkillButtonData skillButtonDataByButton = base.GetSkillButtonDataByButton(buttonType);
@@ -704,13 +704,13 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x060326FF RID: 206591 RVA: 0x00BC0CF3 File Offset: 0x00BBEEF3
+		// Token: 0x060274B2 RID: 160946 RVA: 0x00B0597F File Offset: 0x00B03B7F
 		public BehaviorButtonData GetBehaviorButtonDataByButton(int buttonType)
 		{
 			return null;
 		}
 
-		// Token: 0x06032700 RID: 206592 RVA: 0x00BC0CF6 File Offset: 0x00BBEEF6
+		// Token: 0x060274B3 RID: 160947 RVA: 0x00B05982 File Offset: 0x00B03B82
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -721,29 +721,29 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			return this.EnableTagSkillButtonMapping.Get(tagId);
 		}
 
-		// Token: 0x0401AD92 RID: 109970
+		// Token: 0x040156EF RID: 87791
 		public EVehicleType? VehicleType;
 
-		// Token: 0x0401AD93 RID: 109971
+		// Token: 0x040156F0 RID: 87792
 		public IReadOnlyList<SkillVehicleButton> SkillButtonConfigList;
 
-		// Token: 0x0401AD94 RID: 109972
+		// Token: 0x040156F1 RID: 87793
 		public SkillButtonMapping<int> EnableTagSkillButtonMapping = new SkillButtonMapping<int>();
 
-		// Token: 0x0401AD95 RID: 109973
+		// Token: 0x040156F2 RID: 87794
 		public SkillButtonMapping<int> ShowLongPressTagSkillButtonMapping = new SkillButtonMapping<int>();
 
-		// Token: 0x0401AD96 RID: 109974
+		// Token: 0x040156F3 RID: 87795
 		private TimerHandle NextTickTimerId;
 
-		// Token: 0x0401AD97 RID: 109975
+		// Token: 0x040156F4 RID: 87796
 		[Nullable(1)]
 		private readonly HashSet<SkillButtonData> HoldRingFxChanged = new HashSet<SkillButtonData>();
 
-		// Token: 0x0401AD98 RID: 109976
+		// Token: 0x040156F5 RID: 87797
 		private bool SkillButtonDataRefresh;
 
-		// Token: 0x0401AD99 RID: 109977
+		// Token: 0x040156F6 RID: 87798
 		private readonly ESkillButtonRefreshReason SkillButtonDataRefreshReason = ESkillButtonRefreshReason.None;
 	}
 }

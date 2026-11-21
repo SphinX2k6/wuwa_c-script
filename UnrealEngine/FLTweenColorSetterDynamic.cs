@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200223C RID: 8764
+	// Token: 0x02000742 RID: 1858
 	public sealed class FLTweenColorSetterDynamic : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x060215DA RID: 136666 RVA: 0x00312B69 File Offset: 0x00310D69
+		// Token: 0x0600A271 RID: 41585 RVA: 0x000EFEDD File Offset: 0x000EE0DD
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FLTweenColorSetterDynamic.StaticFunctionPtr();
 		}
 
-		// Token: 0x060215DB RID: 136667 RVA: 0x00312B75 File Offset: 0x00310D75
+		// Token: 0x0600A272 RID: 41586 RVA: 0x000EFEE9 File Offset: 0x000EE0E9
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FLTweenColorSetterDynamic._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FLTweenColorSetterDynamic._FunctionPtr;
 		}
 
-		// Token: 0x060215DC RID: 136668 RVA: 0x00312B98 File Offset: 0x00310D98
+		// Token: 0x0600A273 RID: 41587 RVA: 0x000EFF0C File Offset: 0x000EE10C
 		public FLTweenColorSetterDynamic()
 		{
 		}
 
-		// Token: 0x060215DD RID: 136669 RVA: 0x00312BA0 File Offset: 0x00310DA0
+		// Token: 0x0600A274 RID: 41588 RVA: 0x000EFF14 File Offset: 0x000EE114
 		[NullableContext(2)]
 		public FLTweenColorSetterDynamic(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060215DE RID: 136670 RVA: 0x00312BAA File Offset: 0x00310DAA
+		// Token: 0x0600A275 RID: 41589 RVA: 0x000EFF1E File Offset: 0x000EE11E
 		public FLTweenColorSetterDynamic(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060215DF RID: 136671 RVA: 0x00312BB5 File Offset: 0x00310DB5
+		// Token: 0x0600A276 RID: 41590 RVA: 0x000EFF29 File Offset: 0x000EE129
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<FColor>) ?? ((Action<FColor>)Delegate.CreateDelegate(typeof(Action<FColor>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x060215E0 RID: 136672 RVA: 0x00312BE7 File Offset: 0x00310DE7
+		// Token: 0x0600A277 RID: 41591 RVA: 0x000EFF5B File Offset: 0x000EE15B
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<FColor> Callback)
 		{
 			if (FLTweenColorSetterDynamic.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FLTweenColorSetterDynamic.RegisterId);
 		}
 
-		// Token: 0x060215E1 RID: 136673 RVA: 0x00312C24 File Offset: 0x00310E24
+		// Token: 0x0600A278 RID: 41592 RVA: 0x000EFF98 File Offset: 0x000EE198
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(in FColor value)
 		{
 			FLTweenColorSetterDynamic.__FLTweenColorSetterDynamic_DelegateParams* ptr = stackalloc FLTweenColorSetterDynamic.__FLTweenColorSetterDynamic_DelegateParams[(UIntPtr)19] + 15L / (long)sizeof(FLTweenColorSetterDynamic.__FLTweenColorSetterDynamic_DelegateParams) & -16L;
@@ -76,10 +74,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x060215E2 RID: 136674 RVA: 0x00312C68 File Offset: 0x00310E68
+		// Token: 0x0600A279 RID: 41593 RVA: 0x000EFFDC File Offset: 0x000EE1DC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<FColor> action = target as Action<FColor>;
@@ -90,31 +87,31 @@ namespace UnrealEngine
 			action(((FLTweenColorSetterDynamic.__FLTweenColorSetterDynamic_DelegateParams*)__Parameters)->value);
 		}
 
-		// Token: 0x04011C78 RID: 72824
+		// Token: 0x04004569 RID: 17769
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04011C79 RID: 72825
+		// Token: 0x0400456A RID: 17770
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/LTween.LTweenColorSetterDynamic__DelegateSignature";
 
-		// Token: 0x04011C7A RID: 72826
+		// Token: 0x0400456B RID: 17771
 		private static int RegisterId;
 
-		// Token: 0x0200350C RID: 13580
+		// Token: 0x02000F29 RID: 3881
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
-		protected ref struct __FLTweenColorSetterDynamic_DelegateParams
+		private ref struct __FLTweenColorSetterDynamic_DelegateParams
 		{
-			// Token: 0x0401753E RID: 95550
+			// Token: 0x040062FD RID: 25341
 			[FieldOffset(0)]
 			public FColor value;
 		}
 
-		// Token: 0x0200350D RID: 13581
+		// Token: 0x02000F2A RID: 3882
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0401753F RID: 95551
+			// Token: 0x040062FE RID: 25342
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

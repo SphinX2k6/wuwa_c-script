@@ -9,17 +9,17 @@ using CSharpScript.Game.Ui;
 using CSharpScript.Launcher.Platform;
 using UnrealEngine;
 
-// Token: 0x020022F5 RID: 8949
+// Token: 0x020017D9 RID: 6105
 [NullableContext(1)]
 [Nullable(0)]
 public class OnlineSearchView : UiTickViewBase
 {
-	// Token: 0x06011A4F RID: 72271 RVA: 0x004552EA File Offset: 0x004534EA
+	// Token: 0x0600EEE7 RID: 61159 RVA: 0x00461FB6 File Offset: 0x004601B6
 	public OnlineSearchView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06011A50 RID: 72272 RVA: 0x004552F4 File Offset: 0x004534F4
+	// Token: 0x0600EEE8 RID: 61160 RVA: 0x00461FC0 File Offset: 0x004601C0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -48,7 +48,7 @@ public class OnlineSearchView : UiTickViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06011A51 RID: 72273 RVA: 0x00455420 File Offset: 0x00453620
+	// Token: 0x0600EEE9 RID: 61161 RVA: 0x004620EC File Offset: 0x004602EC
 	protected override void OnStart()
 	{
 		this.FunctionButtonItem = new ButtonAndSpriteItem(base.GetItem(1));
@@ -59,26 +59,26 @@ public class OnlineSearchView : UiTickViewBase
 		this.RefreshShow();
 	}
 
-	// Token: 0x06011A52 RID: 72274 RVA: 0x004554AB File Offset: 0x004536AB
+	// Token: 0x0600EEEA RID: 61162 RVA: 0x00462177 File Offset: 0x00460377
 	protected override void OnBeforeDestroy()
 	{
 		OnlineModel.Instance.CleanSearchResultList();
 		base.GetInputText(0).OnTextChange.Unbind();
 	}
 
-	// Token: 0x06011A53 RID: 72275 RVA: 0x004554C8 File Offset: 0x004536C8
+	// Token: 0x0600EEEB RID: 61163 RVA: 0x00462194 File Offset: 0x00460394
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.OnSearchWorld, new Action<int>(this.CallBackSearchWorld));
 	}
 
-	// Token: 0x06011A54 RID: 72276 RVA: 0x004554E6 File Offset: 0x004536E6
+	// Token: 0x0600EEEC RID: 61164 RVA: 0x004621B2 File Offset: 0x004603B2
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnSearchWorld, new Action<int>(this.CallBackSearchWorld));
 	}
 
-	// Token: 0x06011A55 RID: 72277 RVA: 0x00455504 File Offset: 0x00453704
+	// Token: 0x0600EEED RID: 61165 RVA: 0x004621D0 File Offset: 0x004603D0
 	private void RefreshShow()
 	{
 		this.ResultList.RefreshByData(OnlineModel.Instance.SearchResult, false, delegate
@@ -93,26 +93,26 @@ public class OnlineSearchView : UiTickViewBase
 		this.RefreshUiComponents();
 	}
 
-	// Token: 0x06011A56 RID: 72278 RVA: 0x0045552F File Offset: 0x0045372F
+	// Token: 0x0600EEEE RID: 61166 RVA: 0x004621FB File Offset: 0x004603FB
 	private void RefreshUiComponents()
 	{
 		this.SetClearOrPaste(null);
 		base.GetItem(5).SetUIActive(OnlineModel.Instance.SearchResult.Count <= 0);
 	}
 
-	// Token: 0x06011A57 RID: 72279 RVA: 0x00455559 File Offset: 0x00453759
+	// Token: 0x0600EEEF RID: 61167 RVA: 0x00462225 File Offset: 0x00460425
 	private void CallBackSearchWorld(int i)
 	{
 		this.RefreshShow();
 	}
 
-	// Token: 0x06011A58 RID: 72280 RVA: 0x00455561 File Offset: 0x00453761
+	// Token: 0x0600EEF0 RID: 61168 RVA: 0x0046222D File Offset: 0x0046042D
 	private OnlineHallItem ProxyCreateFunction()
 	{
 		return new OnlineHallItem(this.ViewInfo.Name);
 	}
 
-	// Token: 0x06011A59 RID: 72281 RVA: 0x00455574 File Offset: 0x00453774
+	// Token: 0x0600EEF1 RID: 61169 RVA: 0x00462240 File Offset: 0x00460440
 	private void OnClickClearSearchInputBtn()
 	{
 		UUITextInputComponent inputText = base.GetInputText(0);
@@ -142,7 +142,7 @@ public class OnlineSearchView : UiTickViewBase
 		this.SetClearOrPaste(null);
 	}
 
-	// Token: 0x06011A5A RID: 72282 RVA: 0x00455621 File Offset: 0x00453821
+	// Token: 0x0600EEF2 RID: 61170 RVA: 0x004622ED File Offset: 0x004604ED
 	private void SetClearOrPaste(string _)
 	{
 		if (base.GetInputText(0).GetText() == "")
@@ -153,7 +153,7 @@ public class OnlineSearchView : UiTickViewBase
 		this.FunctionButtonItem.RefreshSprite("SP_Clear");
 	}
 
-	// Token: 0x06011A5B RID: 72283 RVA: 0x0045565C File Offset: 0x0045385C
+	// Token: 0x0600EEF3 RID: 61171 RVA: 0x00462328 File Offset: 0x00460528
 	private void OnClickSearchConfirmBtn()
 	{
 		string text = base.GetInputText(0).GetText();
@@ -165,7 +165,7 @@ public class OnlineSearchView : UiTickViewBase
 		GenericPromptController.Instance.ShowPromptByCode("OnlineInvalidUserId", Array.Empty<object>());
 	}
 
-	// Token: 0x040085DF RID: 34271
+	// Token: 0x0400871D RID: 34589
 	[Nullable(new byte[]
 	{
 		2,
@@ -174,25 +174,25 @@ public class OnlineSearchView : UiTickViewBase
 	})]
 	private LoopScrollView<OnlineHallItem, OnlineHallData> ResultList;
 
-	// Token: 0x040085E0 RID: 34272
+	// Token: 0x0400871E RID: 34590
 	[Nullable(2)]
 	private ButtonAndSpriteItem FunctionButtonItem;
 
-	// Token: 0x02008876 RID: 34934
+	// Token: 0x020079FA RID: 31226
 	[NullableContext(0)]
 	private enum EOnlineSearchViewComponents
 	{
-		// Token: 0x0402C59D RID: 181661
+		// Token: 0x0402789F RID: 161951
 		SearchUIDTextInput,
-		// Token: 0x0402C59E RID: 181662
+		// Token: 0x040278A0 RID: 161952
 		UIDClearOrPasteBtn,
-		// Token: 0x0402C59F RID: 181663
+		// Token: 0x040278A1 RID: 161953
 		SearchConfirmBtn,
-		// Token: 0x0402C5A0 RID: 181664
+		// Token: 0x040278A2 RID: 161954
 		ResultListLoopScrollView,
-		// Token: 0x0402C5A1 RID: 181665
+		// Token: 0x040278A3 RID: 161955
 		ResultModelItem,
-		// Token: 0x0402C5A2 RID: 181666
+		// Token: 0x040278A4 RID: 161956
 		ResultEmptyText
 	}
 }

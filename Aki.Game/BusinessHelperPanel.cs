@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001318 RID: 4888
+// Token: 0x020007CC RID: 1996
 [NullableContext(1)]
 [Nullable(0)]
 public class BusinessHelperPanel : UiPanelBase
 {
-	// Token: 0x0600878D RID: 34701 RVA: 0x001CEEFC File Offset: 0x001CD0FC
+	// Token: 0x06005B28 RID: 23336 RVA: 0x001D7D68 File Offset: 0x001D5F68
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,7 +29,7 @@ public class BusinessHelperPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600878E RID: 34702 RVA: 0x001CEF94 File Offset: 0x001CD194
+	// Token: 0x06005B29 RID: 23337 RVA: 0x001D7E00 File Offset: 0x001D6000
 	protected override UniTask OnBeforeStartAsync()
 	{
 		BusinessHelperPanel.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -40,7 +40,7 @@ public class BusinessHelperPanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600878F RID: 34703 RVA: 0x001CEFD8 File Offset: 0x001CD1D8
+	// Token: 0x06005B2A RID: 23338 RVA: 0x001D7E44 File Offset: 0x001D6044
 	protected override UniTask OnBeforeShowAsyncImplement()
 	{
 		BusinessHelperPanel.<OnBeforeShowAsyncImplement>d__7 <OnBeforeShowAsyncImplement>d__;
@@ -51,7 +51,7 @@ public class BusinessHelperPanel : UiPanelBase
 		return <OnBeforeShowAsyncImplement>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008790 RID: 34704 RVA: 0x001CF01B File Offset: 0x001CD21B
+	// Token: 0x06005B2B RID: 23339 RVA: 0x001D7E87 File Offset: 0x001D6087
 	private void OnConfirm()
 	{
 		BusinessHelperViewController vc = this.Vc;
@@ -62,7 +62,7 @@ public class BusinessHelperPanel : UiPanelBase
 		vc.SkipToInteractivePanel();
 	}
 
-	// Token: 0x06008791 RID: 34705 RVA: 0x001CF030 File Offset: 0x001CD230
+	// Token: 0x06005B2C RID: 23340 RVA: 0x001D7E9C File Offset: 0x001D609C
 	private void OnClickJumpBtn()
 	{
 		EntrustRole entrustRoleById = BusinessConfig.Instance.GetEntrustRoleById(this.SelectedRoleId);
@@ -114,7 +114,7 @@ public class BusinessHelperPanel : UiPanelBase
 		vc4.SkipToTaskView(EMoonChasingTaskType.MainLine, entrustRoleById.Id);
 	}
 
-	// Token: 0x06008792 RID: 34706 RVA: 0x001CF0E0 File Offset: 0x001CD2E0
+	// Token: 0x06005B2D RID: 23341 RVA: 0x001D7F4C File Offset: 0x001D614C
 	private void RefreshRoleDetail(int roleId, bool isSelected, int gridIndex)
 	{
 		bool selectedRoleId = this.SelectedRoleId != 0;
@@ -142,25 +142,25 @@ public class BusinessHelperPanel : UiPanelBase
 		vc.RefreshSpine(roleId).Forget();
 	}
 
-	// Token: 0x06008793 RID: 34707 RVA: 0x001CF178 File Offset: 0x001CD378
+	// Token: 0x06005B2E RID: 23342 RVA: 0x001D7FE4 File Offset: 0x001D61E4
 	private bool CanExecuteChange(int roleId, EToggleState toggleState)
 	{
 		return this.SelectedRoleId != roleId || toggleState != EToggleState.ETT_Checked;
 	}
 
-	// Token: 0x06008794 RID: 34708 RVA: 0x001CF18A File Offset: 0x001CD38A
+	// Token: 0x06005B2F RID: 23343 RVA: 0x001D7FF6 File Offset: 0x001D61F6
 	private bool IsItemSelected(int roleId)
 	{
 		return this.SelectedRoleId == roleId;
 	}
 
-	// Token: 0x06008795 RID: 34709 RVA: 0x001CF195 File Offset: 0x001CD395
+	// Token: 0x06005B30 RID: 23344 RVA: 0x001D8001 File Offset: 0x001D6201
 	public void RegisterViewController(BusinessHelperViewController vc)
 	{
 		this.Vc = vc;
 	}
 
-	// Token: 0x06008796 RID: 34710 RVA: 0x001CF19E File Offset: 0x001CD39E
+	// Token: 0x06005B31 RID: 23345 RVA: 0x001D800A File Offset: 0x001D620A
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -171,30 +171,30 @@ public class BusinessHelperPanel : UiPanelBase
 		return this.EditTeamModule.GetGuideUiItemAndUiItemForShowEx(configParams);
 	}
 
-	// Token: 0x04003C75 RID: 15477
+	// Token: 0x04003D0D RID: 15629
 	protected EditTeamModule EditTeamModule;
 
-	// Token: 0x04003C76 RID: 15478
+	// Token: 0x04003D0E RID: 15630
 	protected int SelectedRoleId;
 
-	// Token: 0x04003C77 RID: 15479
+	// Token: 0x04003D0F RID: 15631
 	protected List<EditTeamData> RoleList = new List<EditTeamData>();
 
-	// Token: 0x04003C78 RID: 15480
+	// Token: 0x04003D10 RID: 15632
 	[Nullable(2)]
 	private BusinessHelperViewController Vc;
 
-	// Token: 0x02007963 RID: 31075
+	// Token: 0x02006AED RID: 27373
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x04027FAD RID: 163757
+		// Token: 0x040232DA RID: 144090
 		public const int RoleListRootItem = 0;
 
-		// Token: 0x04027FAE RID: 163758
+		// Token: 0x040232DB RID: 144091
 		public const int ConfirmBtn = 1;
 
-		// Token: 0x04027FAF RID: 163759
+		// Token: 0x040232DC RID: 144092
 		public const int JumpBtn = 2;
 	}
 }

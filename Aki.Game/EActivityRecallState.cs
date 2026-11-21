@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02001459 RID: 5209
+// Token: 0x0200090D RID: 2317
 public enum EActivityRecallState
 {
-	// Token: 0x04004145 RID: 16709
+	// Token: 0x040041DD RID: 16861
 	UnOpen,
-	// Token: 0x04004146 RID: 16710
+	// Token: 0x040041DE RID: 16862
 	Opening
 }

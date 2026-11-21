@@ -2,27 +2,27 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020018A8 RID: 6312
+// Token: 0x02000D61 RID: 3425
 [NullableContext(2)]
 public interface ISortStorageData
 {
-	// Token: 0x17000F50 RID: 3920
-	// (get) Token: 0x0600B8BC RID: 47292
-	// (set) Token: 0x0600B8BD RID: 47293
+	// Token: 0x17000F73 RID: 3955
+	// (get) Token: 0x06008CA5 RID: 36005
+	// (set) Token: 0x06008CA6 RID: 36006
 	int ConfigId { get; set; }
 
-	// Token: 0x17000F51 RID: 3921
-	// (get) Token: 0x0600B8BE RID: 47294
-	// (set) Token: 0x0600B8BF RID: 47295
+	// Token: 0x17000F74 RID: 3956
+	// (get) Token: 0x06008CA7 RID: 36007
+	// (set) Token: 0x06008CA8 RID: 36008
 	int? SelectBaseSort { get; set; }
 
-	// Token: 0x17000F52 RID: 3922
-	// (get) Token: 0x0600B8C0 RID: 47296
-	// (set) Token: 0x0600B8C1 RID: 47297
+	// Token: 0x17000F75 RID: 3957
+	// (get) Token: 0x06008CA9 RID: 36009
+	// (set) Token: 0x06008CAA RID: 36010
 	List<int> SelectAttributeSort { get; set; }
 
-	// Token: 0x17000F53 RID: 3923
-	// (get) Token: 0x0600B8C2 RID: 47298
-	// (set) Token: 0x0600B8C3 RID: 47299
+	// Token: 0x17000F76 RID: 3958
+	// (get) Token: 0x06008CAB RID: 36011
+	// (set) Token: 0x06008CAC RID: 36012
 	bool IsAscending { get; set; }
 }

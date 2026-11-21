@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020000D4 RID: 212
+// Token: 0x020000D6 RID: 214
 [NullableContext(2)]
 [Nullable(0)]
 public class Timer
 {
-	// Token: 0x0600069D RID: 1693 RVA: 0x00023068 File Offset: 0x00021268
+	// Token: 0x060006DE RID: 1758 RVA: 0x00023638 File Offset: 0x00021838
 	public Timer(int id, TTimerAction action, double interval, int loop, float dilation, TimerHandle handle, Stat stat, string reason)
 	{
 		this.Id = id;
@@ -20,7 +20,7 @@ public class Timer
 		this.Next = this.Now + this.Interval / (double)this.Dilation;
 	}
 
-	// Token: 0x0600069E RID: 1694 RVA: 0x000230D4 File Offset: 0x000212D4
+	// Token: 0x060006DF RID: 1759 RVA: 0x000236A4 File Offset: 0x000218A4
 	public unsafe bool Do()
 	{
 		double next = this.Next;
@@ -50,7 +50,7 @@ public class Timer
 		return this.Loop == 0 || this.Count < this.Loop;
 	}
 
-	// Token: 0x0600069F RID: 1695 RVA: 0x000231FC File Offset: 0x000213FC
+	// Token: 0x060006E0 RID: 1760 RVA: 0x000237CC File Offset: 0x000219CC
 	[NullableContext(1)]
 	public Timer Copy()
 	{
@@ -64,7 +64,7 @@ public class Timer
 		};
 	}
 
-	// Token: 0x060006A0 RID: 1696 RVA: 0x00023270 File Offset: 0x00021470
+	// Token: 0x060006E1 RID: 1761 RVA: 0x00023840 File Offset: 0x00021A40
 	public void Clear()
 	{
 		this.Action = null;
@@ -72,46 +72,46 @@ public class Timer
 		this.Stat = null;
 	}
 
-	// Token: 0x060006A1 RID: 1697 RVA: 0x00023287 File Offset: 0x00021487
+	// Token: 0x060006E2 RID: 1762 RVA: 0x00023857 File Offset: 0x00021A57
 	[NullableContext(1)]
 	public static int Compare(Timer a, Timer b)
 	{
 		return a.Next.CompareTo(b.Next);
 	}
 
-	// Token: 0x04000550 RID: 1360
+	// Token: 0x0400055F RID: 1375
 	public double Now;
 
-	// Token: 0x04000551 RID: 1361
+	// Token: 0x04000560 RID: 1376
 	public double Next;
 
-	// Token: 0x04000552 RID: 1362
+	// Token: 0x04000561 RID: 1377
 	private int Count;
 
-	// Token: 0x04000553 RID: 1363
+	// Token: 0x04000562 RID: 1378
 	public EState State;
 
-	// Token: 0x04000554 RID: 1364
+	// Token: 0x04000563 RID: 1379
 	public readonly int Id;
 
-	// Token: 0x04000555 RID: 1365
+	// Token: 0x04000564 RID: 1380
 	private TTimerAction Action;
 
-	// Token: 0x04000556 RID: 1366
+	// Token: 0x04000565 RID: 1381
 	public double Interval;
 
-	// Token: 0x04000557 RID: 1367
+	// Token: 0x04000566 RID: 1382
 	private readonly int Loop;
 
-	// Token: 0x04000558 RID: 1368
+	// Token: 0x04000567 RID: 1383
 	public float Dilation;
 
-	// Token: 0x04000559 RID: 1369
+	// Token: 0x04000568 RID: 1384
 	public TimerHandle Handle;
 
-	// Token: 0x0400055A RID: 1370
+	// Token: 0x04000569 RID: 1385
 	private Stat Stat;
 
-	// Token: 0x0400055B RID: 1371
+	// Token: 0x0400056A RID: 1386
 	public readonly string Reason;
 }

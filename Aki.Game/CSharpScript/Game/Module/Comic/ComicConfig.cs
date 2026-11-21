@@ -4,26 +4,26 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Comic
 {
-	// Token: 0x02005B88 RID: 23432
+	// Token: 0x02004B68 RID: 19304
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Config(0)]
 	public class ComicConfig : ConfigBase
 	{
-		// Token: 0x0603B491 RID: 242833 RVA: 0x00E21660 File Offset: 0x00E1F860
+		// Token: 0x060303DE RID: 197598 RVA: 0x00D71BCC File Offset: 0x00D6FDCC
 		public ComicDisplayConfig? GetComicDisplayConfig(int id)
 		{
 			return ConfigComicDisplayConfigById.GetConfig(id, true);
 		}
 
-		// Token: 0x0603B492 RID: 242834 RVA: 0x00E21669 File Offset: 0x00E1F869
+		// Token: 0x060303DF RID: 197599 RVA: 0x00D71BD5 File Offset: 0x00D6FDD5
 		public ComicPrefabConfig? GetComicPrefabConfig(int id)
 		{
 			return ConfigComicPrefabConfigById.GetConfig(id, true);
 		}
 
-		// Token: 0x17008CD1 RID: 36049
-		// (get) Token: 0x0603B493 RID: 242835 RVA: 0x00E21672 File Offset: 0x00E1F872
+		// Token: 0x170060A3 RID: 24739
+		// (get) Token: 0x060303E0 RID: 197600 RVA: 0x00D71BDE File Offset: 0x00D6FDDE
 		public static ComicConfig Instance
 		{
 			get
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Comic
 			}
 		}
 
-		// Token: 0x0603B494 RID: 242836 RVA: 0x00E21679 File Offset: 0x00E1F879
+		// Token: 0x060303E1 RID: 197601 RVA: 0x00D71BE5 File Offset: 0x00D6FDE5
 		public static ComicConfig GetOrCreateInstance()
 		{
 			if (ComicConfig._Instance == null)
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Comic
 			return ComicConfig._Instance;
 		}
 
-		// Token: 0x0603B495 RID: 242837 RVA: 0x00E2168D File Offset: 0x00E1F88D
+		// Token: 0x060303E2 RID: 197602 RVA: 0x00D71BF9 File Offset: 0x00D6FDF9
 		public static bool CreateInstance()
 		{
 			if (ComicConfig._Instance != null)
@@ -53,24 +53,24 @@ namespace CSharpScript.Game.Module.Comic
 			return true;
 		}
 
-		// Token: 0x0603B496 RID: 242838 RVA: 0x00E216A3 File Offset: 0x00E1F8A3
+		// Token: 0x060303E3 RID: 197603 RVA: 0x00D71C0F File Offset: 0x00D6FE0F
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603B497 RID: 242839 RVA: 0x00E216A5 File Offset: 0x00E1F8A5
+		// Token: 0x060303E4 RID: 197604 RVA: 0x00D71C11 File Offset: 0x00D6FE11
 		public static void ResetStaticDefaultValue()
 		{
 			ComicConfig._Instance = null;
 		}
 
-		// Token: 0x0603B498 RID: 242840 RVA: 0x00E216AD File Offset: 0x00E1F8AD
+		// Token: 0x060303E5 RID: 197605 RVA: 0x00D71C19 File Offset: 0x00D6FE19
 		static ComicConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ComicConfig.CreateStaticDefaultValue), new Action(ComicConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401EE77 RID: 126583
+		// Token: 0x04019928 RID: 104744
 		[Nullable(2)]
 		private static ComicConfig _Instance;
 	}

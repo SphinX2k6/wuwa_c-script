@@ -11,7 +11,7 @@ namespace UnrealEngine
 	[Nullable(0)]
 	public static class ListExtensions
 	{
-		// Token: 0x06000188 RID: 392 RVA: 0x000094A3 File Offset: 0x000076A3
+		// Token: 0x06000188 RID: 392 RVA: 0x000094DA File Offset: 0x000076DA
 		public static bool TryPop<[Nullable(2)] T>(this IList<T> list, [MaybeNullWhen(false)] out T result)
 		{
 			if (list.Count == 0)
@@ -24,7 +24,7 @@ namespace UnrealEngine
 			return true;
 		}
 
-		// Token: 0x06000189 RID: 393 RVA: 0x000094D9 File Offset: 0x000076D9
+		// Token: 0x06000189 RID: 393 RVA: 0x00009510 File Offset: 0x00007710
 		public static T Pop<[Nullable(2)] T>(this IList<T> list)
 		{
 			if (list.Count == 0)
@@ -36,7 +36,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0600018A RID: 394 RVA: 0x0000950A File Offset: 0x0000770A
+		// Token: 0x0600018A RID: 394 RVA: 0x00009541 File Offset: 0x00007741
 		public static bool TryShift<[Nullable(2)] T>(this IList<T> list, [MaybeNullWhen(false)] out T result)
 		{
 			if (list.Count == 0)
@@ -49,7 +49,7 @@ namespace UnrealEngine
 			return true;
 		}
 
-		// Token: 0x0600018B RID: 395 RVA: 0x00009532 File Offset: 0x00007732
+		// Token: 0x0600018B RID: 395 RVA: 0x00009569 File Offset: 0x00007769
 		public static T Shift<[Nullable(2)] T>(this IList<T> list)
 		{
 			if (list.Count == 0)
@@ -61,7 +61,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0600018C RID: 396 RVA: 0x00009558 File Offset: 0x00007758
+		// Token: 0x0600018C RID: 396 RVA: 0x0000958C File Offset: 0x0000778C
 		public static void Swap<[Nullable(2)] T>(this IList<T> list, int indexA, int indexB)
 		{
 			T value = list[indexA];
@@ -69,7 +69,7 @@ namespace UnrealEngine
 			list[indexB] = value;
 		}
 
-		// Token: 0x0600018D RID: 397 RVA: 0x00009584 File Offset: 0x00007784
+		// Token: 0x0600018D RID: 397 RVA: 0x000095B8 File Offset: 0x000077B8
 		[NullableContext(2)]
 		public static T GetValueOrDefault<T>([Nullable(1)] this IReadOnlyList<T> list, int index)
 		{
@@ -80,7 +80,7 @@ namespace UnrealEngine
 			return default(T);
 		}
 
-		// Token: 0x0600018E RID: 398 RVA: 0x000095AF File Offset: 0x000077AF
+		// Token: 0x0600018E RID: 398 RVA: 0x000095E3 File Offset: 0x000077E3
 		public static T GetValueOrDefault<[Nullable(2)] T>(this IReadOnlyList<T> list, int index, T defaultValue)
 		{
 			if (index >= 0 && index < list.Count)
@@ -90,7 +90,7 @@ namespace UnrealEngine
 			return defaultValue;
 		}
 
-		// Token: 0x0600018F RID: 399 RVA: 0x000095C8 File Offset: 0x000077C8
+		// Token: 0x0600018F RID: 399 RVA: 0x000095FC File Offset: 0x000077FC
 		[NullableContext(0)]
 		public static T? GetValueOrNull<T>([Nullable(new byte[]
 		{
@@ -105,7 +105,7 @@ namespace UnrealEngine
 			return null;
 		}
 
-		// Token: 0x06000190 RID: 400 RVA: 0x000095F8 File Offset: 0x000077F8
+		// Token: 0x06000190 RID: 400 RVA: 0x0000962C File Offset: 0x0000782C
 		public static bool TryGetValue<[Nullable(2)] T>(this IReadOnlyList<T> list, int index, [MaybeNullWhen(false)] out T value)
 		{
 			if (index >= 0 && index < list.Count)
@@ -117,7 +117,7 @@ namespace UnrealEngine
 			return false;
 		}
 
-		// Token: 0x06000191 RID: 401 RVA: 0x00009620 File Offset: 0x00007820
+		// Token: 0x06000191 RID: 401 RVA: 0x00009654 File Offset: 0x00007854
 		[NullableContext(0)]
 		public static T? FirstOrNull<T>([Nullable(new byte[]
 		{
@@ -132,7 +132,7 @@ namespace UnrealEngine
 			return new T?(list[0]);
 		}
 
-		// Token: 0x06000192 RID: 402 RVA: 0x0000964B File Offset: 0x0000784B
+		// Token: 0x06000192 RID: 402 RVA: 0x0000967F File Offset: 0x0000787F
 		[NullableContext(0)]
 		public static T? FirstOrNull<T>([Nullable(new byte[]
 		{
@@ -147,7 +147,7 @@ namespace UnrealEngine
 			return new T?(list[0]);
 		}
 
-		// Token: 0x06000193 RID: 403 RVA: 0x00009664 File Offset: 0x00007864
+		// Token: 0x06000193 RID: 403 RVA: 0x00009698 File Offset: 0x00007898
 		[NullableContext(0)]
 		public static T? FirstOrNull<T>([Nullable(new byte[]
 		{
@@ -169,7 +169,7 @@ namespace UnrealEngine
 			return null;
 		}
 
-		// Token: 0x06000194 RID: 404 RVA: 0x000096C4 File Offset: 0x000078C4
+		// Token: 0x06000194 RID: 404 RVA: 0x000096F8 File Offset: 0x000078F8
 		public static int IndexOf<[Nullable(2)] T>(this IReadOnlyList<T> list, T obj)
 		{
 			ArgumentNullException.ThrowIfNull(list, "list");
@@ -184,7 +184,7 @@ namespace UnrealEngine
 			return -1;
 		}
 
-		// Token: 0x06000195 RID: 405 RVA: 0x00009708 File Offset: 0x00007908
+		// Token: 0x06000195 RID: 405 RVA: 0x0000973C File Offset: 0x0000793C
 		public static int IndexOf<[Nullable(2)] T>(this IReadOnlyList<T> list, Func<T, bool> predicate)
 		{
 			ArgumentNullException.ThrowIfNull(list, "list");
@@ -199,7 +199,7 @@ namespace UnrealEngine
 			return -1;
 		}
 
-		// Token: 0x06000196 RID: 406 RVA: 0x00009748 File Offset: 0x00007948
+		// Token: 0x06000196 RID: 406 RVA: 0x0000977C File Offset: 0x0000797C
 		public static int ParseInt(this IReadOnlyList<string> list, int index, int defaultValue)
 		{
 			int result;
@@ -210,7 +210,7 @@ namespace UnrealEngine
 			return defaultValue;
 		}
 
-		// Token: 0x06000197 RID: 407 RVA: 0x00009775 File Offset: 0x00007975
+		// Token: 0x06000197 RID: 407 RVA: 0x000097A9 File Offset: 0x000079A9
 		public static bool TryParseInt(this IReadOnlyList<string> list, int index, out int value)
 		{
 			if (index >= 0 && index < list.Count && int.TryParse(list[index], out value))
@@ -221,7 +221,7 @@ namespace UnrealEngine
 			return false;
 		}
 
-		// Token: 0x06000198 RID: 408 RVA: 0x0000979C File Offset: 0x0000799C
+		// Token: 0x06000198 RID: 408 RVA: 0x000097D0 File Offset: 0x000079D0
 		public static int? ParseInt(this IReadOnlyList<string> list, int index)
 		{
 			int value;
@@ -232,7 +232,7 @@ namespace UnrealEngine
 			return null;
 		}
 
-		// Token: 0x06000199 RID: 409 RVA: 0x000097D8 File Offset: 0x000079D8
+		// Token: 0x06000199 RID: 409 RVA: 0x0000980C File Offset: 0x00007A0C
 		public static float ParseFloat(this IReadOnlyList<string> list, int index, float defaultValue)
 		{
 			float result;
@@ -243,7 +243,7 @@ namespace UnrealEngine
 			return defaultValue;
 		}
 
-		// Token: 0x0600019A RID: 410 RVA: 0x00009805 File Offset: 0x00007A05
+		// Token: 0x0600019A RID: 410 RVA: 0x00009839 File Offset: 0x00007A39
 		public static bool TryParseFloat(this IReadOnlyList<string> list, int index, out float value)
 		{
 			if (index >= 0 && index < list.Count && float.TryParse(list[index], out value))
@@ -254,18 +254,18 @@ namespace UnrealEngine
 			return false;
 		}
 
-		// Token: 0x0600019B RID: 411 RVA: 0x00009830 File Offset: 0x00007A30
+		// Token: 0x0600019B RID: 411 RVA: 0x00009864 File Offset: 0x00007A64
 		public static float? ParseFloat(this IReadOnlyList<string> list, int index)
 		{
 			float value;
-			if (index > list.Count && float.TryParse(list[index], out value))
+			if (index >= 0 && index < list.Count && float.TryParse(list[index], out value))
 			{
 				return new float?(value);
 			}
 			return null;
 		}
 
-		// Token: 0x0600019C RID: 412 RVA: 0x00009866 File Offset: 0x00007A66
+		// Token: 0x0600019C RID: 412 RVA: 0x0000989E File Offset: 0x00007A9E
 		[NullableContext(2)]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		[return: Nullable(new byte[]

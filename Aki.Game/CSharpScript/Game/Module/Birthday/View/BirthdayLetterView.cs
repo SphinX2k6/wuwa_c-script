@@ -8,6 +8,7 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.ItemReward;
 using CSharpScript.Game.Module.Reward;
 using CSharpScript.Game.Module.RoleUi;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
@@ -16,17 +17,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Birthday.View
 {
-	// Token: 0x02005C2C RID: 23596
+	// Token: 0x02004C0C RID: 19468
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BirthdayLetterView : UiTickViewBase, IUiViewResource
 	{
-		// Token: 0x0603B9A8 RID: 244136 RVA: 0x00E3832B File Offset: 0x00E3652B
+		// Token: 0x060308F3 RID: 198899 RVA: 0x00D886AF File Offset: 0x00D868AF
 		public BirthdayLetterView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603B9A9 RID: 244137 RVA: 0x00E38354 File Offset: 0x00E36554
+		// Token: 0x060308F4 RID: 198900 RVA: 0x00D886D8 File Offset: 0x00D868D8
 		public string GetExtraResourceId([Nullable(2)] object param = null)
 		{
 			BirthdayInfo birthdayInfo = param as BirthdayInfo;
@@ -37,23 +38,23 @@ namespace CSharpScript.Game.Module.Birthday.View
 			return BirthdayModel.Instance.GetLetterViewResource(birthdayInfo.Year);
 		}
 
-		// Token: 0x0603B9AA RID: 244138 RVA: 0x00E38384 File Offset: 0x00E36584
-		protected override string OnGetLoopAudioEvent()
+		// Token: 0x060308F5 RID: 198901 RVA: 0x00D88708 File Offset: 0x00D86908
+		protected override string OnGetBgm()
 		{
 			BirthdayInfo birthdayInfo = this.OpenParam as BirthdayInfo;
 			if (birthdayInfo == null)
 			{
-				return base.OnGetLoopAudioEvent();
+				return base.OnGetBgm();
 			}
 			string letterViewBgm = BirthdayModel.Instance.GetLetterViewBgm(birthdayInfo.Year);
 			if (StringUtils.IsBlank(letterViewBgm))
 			{
-				return base.OnGetLoopAudioEvent();
+				return base.OnGetBgm();
 			}
 			return letterViewBgm;
 		}
 
-		// Token: 0x0603B9AB RID: 244139 RVA: 0x00E383C8 File Offset: 0x00E365C8
+		// Token: 0x060308F6 RID: 198902 RVA: 0x00D8874C File Offset: 0x00D8694C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 13;
@@ -102,7 +103,7 @@ namespace CSharpScript.Game.Module.Birthday.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B9AC RID: 244140 RVA: 0x00E38648 File Offset: 0x00E36848
+		// Token: 0x060308F7 RID: 198903 RVA: 0x00D889CC File Offset: 0x00D86BCC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			BirthdayLetterView.<OnBeforeStartAsync>d__24 <OnBeforeStartAsync>d__;
@@ -113,7 +114,7 @@ namespace CSharpScript.Game.Module.Birthday.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B9AD RID: 244141 RVA: 0x00E3868C File Offset: 0x00E3688C
+		// Token: 0x060308F8 RID: 198904 RVA: 0x00D88A10 File Offset: 0x00D86C10
 		protected override void OnBeforeShow()
 		{
 			this.IsFirstOpen = BirthdayController.TryBirthDayRewardRequest(this.Year);
@@ -147,7 +148,7 @@ namespace CSharpScript.Game.Module.Birthday.View
 			this.RefreshRoleInfo();
 		}
 
-		// Token: 0x0603B9AE RID: 244142 RVA: 0x00E387E4 File Offset: 0x00E369E4
+		// Token: 0x060308F9 RID: 198905 RVA: 0x00D88B68 File Offset: 0x00D86D68
 		private void RefreshRoleInfo()
 		{
 			if (this.EventHandle != 0)
@@ -194,7 +195,7 @@ namespace CSharpScript.Game.Module.Birthday.View
 			}));
 		}
 
-		// Token: 0x0603B9AF RID: 244143 RVA: 0x00E3891C File Offset: 0x00E36B1C
+		// Token: 0x060308FA RID: 198906 RVA: 0x00D88CA0 File Offset: 0x00D86EA0
 		private void ShowLetterContent(float voiceDuration)
 		{
 			this.InitText(voiceDuration);
@@ -202,7 +203,7 @@ namespace CSharpScript.Game.Module.Birthday.View
 			base.GetUiSizeControlByOther(11).MinHeight = (int)Math.Ceiling((double)(base.GetScrollViewWithScrollbar(12).RootUIComp.Get().Height / 60f)) * 60;
 		}
 
-		// Token: 0x0603B9B0 RID: 244144 RVA: 0x00E3896D File Offset: 0x00E36B6D
+		// Token: 0x060308FB RID: 198907 RVA: 0x00D88CF1 File Offset: 0x00D86EF1
 		private void LoadRoleModel()
 		{
 			UiModelBase model = this.UiSceneRoleActor.Model;
@@ -214,10 +215,10 @@ namespace CSharpScript.Game.Module.Birthday.View
 			uiModelActorComponent.SetTransformByTag("RoleCase");
 		}
 
-		// Token: 0x0603B9B1 RID: 244145 RVA: 0x00E38998 File Offset: 0x00E36B98
+		// Token: 0x060308FC RID: 198908 RVA: 0x00D88D1C File Offset: 0x00D86F1C
 		private void ShowLetterPanel()
 		{
-			UiCameraAnimationManager.Instance.PushCameraHandleByHandleName(this.CardCameraId, true, true, "1001", false, null, null);
+			UiCameraModel.Instance.PushCameraHandleByHandleName(this.CardCameraId, true, true, "1001", false, null);
 			UiModelBase model = this.UiSceneRoleActor.Model;
 			UiRoleStateMachineComponent uiRoleStateMachineComponent = (model != null) ? model.CheckGetComponent<UiRoleStateMachineComponent>() : null;
 			if (uiRoleStateMachineComponent != null)
@@ -227,7 +228,7 @@ namespace CSharpScript.Game.Module.Birthday.View
 			this.IsLetterShow = true;
 		}
 
-		// Token: 0x0603B9B2 RID: 244146 RVA: 0x00E389F8 File Offset: 0x00E36BF8
+		// Token: 0x060308FD RID: 198909 RVA: 0x00D88D70 File Offset: 0x00D86F70
 		private void InitText(float voiceDuration)
 		{
 			if (this.TextPlayTweenEndCbWrapper != null)
@@ -262,7 +263,7 @@ namespace CSharpScript.Game.Module.Birthday.View
 			this.ShowText();
 		}
 
-		// Token: 0x0603B9B3 RID: 244147 RVA: 0x00E38B0C File Offset: 0x00E36D0C
+		// Token: 0x060308FE RID: 198910 RVA: 0x00D88E84 File Offset: 0x00D87084
 		private void ShowText()
 		{
 			base.GetText(6).SetUIActive(true);
@@ -274,13 +275,13 @@ namespace CSharpScript.Game.Module.Birthday.View
 			}
 		}
 
-		// Token: 0x0603B9B4 RID: 244148 RVA: 0x00E38B6A File Offset: 0x00E36D6A
+		// Token: 0x060308FF RID: 198911 RVA: 0x00D88EE2 File Offset: 0x00D870E2
 		private BirthdayRewardItem CreatePropItem()
 		{
 			return new BirthdayRewardItem();
 		}
 
-		// Token: 0x0603B9B5 RID: 244149 RVA: 0x00E38B74 File Offset: 0x00E36D74
+		// Token: 0x06030900 RID: 198912 RVA: 0x00D88EEC File Offset: 0x00D870EC
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove<int>(EEventName.OnBirthRoleChange, new Action<int>(this.OnBirthRoleChange));
@@ -307,7 +308,7 @@ namespace CSharpScript.Game.Module.Birthday.View
 			AudioSystem.Instance.SetState("mute_nature_voice", ERoleMuteAudioState.None, true);
 		}
 
-		// Token: 0x0603B9B6 RID: 244150 RVA: 0x00E38C28 File Offset: 0x00E36E28
+		// Token: 0x06030901 RID: 198913 RVA: 0x00D88FA0 File Offset: 0x00D871A0
 		private void OnClickBackBtn()
 		{
 			if (this.LastClickTimeStamp != 0 && TimeUtil.Instance.GetServerTimeStamp() - (double)this.LastClickTimeStamp < (double)this.BirthdayLetterInterval)
@@ -317,7 +318,7 @@ namespace CSharpScript.Game.Module.Birthday.View
 			this.LastClickTimeStamp = (int)TimeUtil.Instance.GetServerTimeStamp();
 			if (this.IsLetterShow)
 			{
-				UiCameraAnimationManager.Instance.PushCameraHandleByHandleName(this.SceneCameraId, true, true, "1001", false, null, null);
+				UiCameraModel.Instance.PushCameraHandleByHandleName(this.SceneCameraId, true, true, "1001", false, null);
 				UiModelBase model = this.UiSceneRoleActor.Model;
 				UiRoleStateMachineComponent uiRoleStateMachineComponent = (model != null) ? model.CheckGetComponent<UiRoleStateMachineComponent>() : null;
 				if (uiRoleStateMachineComponent != null)
@@ -336,7 +337,7 @@ namespace CSharpScript.Game.Module.Birthday.View
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x0603B9B7 RID: 244151 RVA: 0x00E38D10 File Offset: 0x00E36F10
+		// Token: 0x06030902 RID: 198914 RVA: 0x00D89080 File Offset: 0x00D87280
 		public void CloseBirthdayLetterView()
 		{
 			base.CloseMe(null);
@@ -363,7 +364,7 @@ namespace CSharpScript.Game.Module.Birthday.View
 			SplashScreenController.Instance.FinishCurTask(ESplashScreenSourceModuleType.Birthday);
 		}
 
-		// Token: 0x0603B9B8 RID: 244152 RVA: 0x00E38E0C File Offset: 0x00E3700C
+		// Token: 0x06030903 RID: 198915 RVA: 0x00D8917C File Offset: 0x00D8737C
 		private void OnClickGiftBtn()
 		{
 			if (this.LastClickTimeStamp != 0 && TimeUtil.Instance.GetServerTimeStamp() - (double)this.LastClickTimeStamp < (double)this.BirthdayLetterInterval)
@@ -375,7 +376,7 @@ namespace CSharpScript.Game.Module.Birthday.View
 			base.PlaySequence("WindowOpen", null, false);
 		}
 
-		// Token: 0x0603B9B9 RID: 244153 RVA: 0x00E38E64 File Offset: 0x00E37064
+		// Token: 0x06030904 RID: 198916 RVA: 0x00D891D4 File Offset: 0x00D873D4
 		private void OnClickPhotoBtn()
 		{
 			PhotographController.Instance.ScreenShot(new PhotoSaveViewParam
@@ -391,20 +392,20 @@ namespace CSharpScript.Game.Module.Birthday.View
 			});
 		}
 
-		// Token: 0x0603B9BA RID: 244154 RVA: 0x00E38EB8 File Offset: 0x00E370B8
+		// Token: 0x06030905 RID: 198917 RVA: 0x00D89228 File Offset: 0x00D87428
 		private void OnClickResetBtn()
 		{
 			UiManager.Instance.OpenViewWithLayer(EUiViewName.BirthdayRoleSelectView, ELayerType.Pop, new BirthdayInfo(BirthdayDefine.ETriggerType.ReSelect, this.Year, null), null);
 		}
 
-		// Token: 0x0603B9BB RID: 244155 RVA: 0x00E38EEC File Offset: 0x00E370EC
+		// Token: 0x06030906 RID: 198918 RVA: 0x00D8925C File Offset: 0x00D8745C
 		private void OnTweenEnd()
 		{
 			this.TextPlayTweenComp.Stop();
 			this.TextAnimDataComp.SetSelectorOffset(0f);
 		}
 
-		// Token: 0x0603B9BC RID: 244156 RVA: 0x00E38F0C File Offset: 0x00E3710C
+		// Token: 0x06030907 RID: 198919 RVA: 0x00D8927C File Offset: 0x00D8747C
 		private void OnBirthRoleChange(int roleId)
 		{
 			this.RoleId = roleId;
@@ -425,10 +426,10 @@ namespace CSharpScript.Game.Module.Birthday.View
 			scrollViewWithScrollbar.SetScrollValue(Vector2D.ZeroVector);
 		}
 
-		// Token: 0x0401F079 RID: 127097
+		// Token: 0x04019B2A RID: 105258
 		private const int HEIGHT_PER_LINE = 60;
 
-		// Token: 0x0401F07A RID: 127098
+		// Token: 0x04019B2B RID: 105259
 		[Nullable(new byte[]
 		{
 			2,
@@ -436,103 +437,103 @@ namespace CSharpScript.Game.Module.Birthday.View
 		})]
 		private GenericScrollViewNew<BirthdayRewardItem, TItem> GiftScrollView;
 
-		// Token: 0x0401F07B RID: 127099
+		// Token: 0x04019B2C RID: 105260
 		[Nullable(2)]
 		private TsUiSceneRoleActor UiSceneRoleActor;
 
-		// Token: 0x0401F07C RID: 127100
+		// Token: 0x04019B2D RID: 105261
 		private int RoleId;
 
-		// Token: 0x0401F07D RID: 127101
+		// Token: 0x04019B2E RID: 105262
 		private int Year;
 
-		// Token: 0x0401F07E RID: 127102
+		// Token: 0x04019B2F RID: 105263
 		private bool IsLetterShow = true;
 
-		// Token: 0x0401F07F RID: 127103
+		// Token: 0x04019B30 RID: 105264
 		private string SceneCameraId = "";
 
-		// Token: 0x0401F080 RID: 127104
+		// Token: 0x04019B31 RID: 105265
 		private string CardCameraId = "";
 
-		// Token: 0x0401F081 RID: 127105
+		// Token: 0x04019B32 RID: 105266
 		private bool IsFirstOpen;
 
-		// Token: 0x0401F082 RID: 127106
+		// Token: 0x04019B33 RID: 105267
 		private int RewardId;
 
-		// Token: 0x0401F083 RID: 127107
+		// Token: 0x04019B34 RID: 105268
 		private int EventHandle;
 
-		// Token: 0x0401F084 RID: 127108
+		// Token: 0x04019B35 RID: 105269
 		[Nullable(2)]
 		private UUIEffectTextAnimation TextAnimDataComp;
 
-		// Token: 0x0401F085 RID: 127109
+		// Token: 0x04019B36 RID: 105270
 		[Nullable(2)]
 		private ULGUIPlayTweenComponent TextPlayTweenComp;
 
-		// Token: 0x0401F086 RID: 127110
+		// Token: 0x04019B37 RID: 105271
 		[Nullable(2)]
 		private FLGUIPlayTweenCompleteDynamicDelegate TextPlayTweenEndCb;
 
-		// Token: 0x0401F087 RID: 127111
+		// Token: 0x04019B38 RID: 105272
 		[Nullable(2)]
 		private FLGUIDelegateHandleWrapper TextPlayTweenEndCbWrapper;
 
-		// Token: 0x0401F088 RID: 127112
+		// Token: 0x04019B39 RID: 105273
 		private float VoiceDuration;
 
-		// Token: 0x0401F089 RID: 127113
+		// Token: 0x04019B3A RID: 105274
 		private int LastClickTimeStamp;
 
-		// Token: 0x0401F08A RID: 127114
+		// Token: 0x04019B3B RID: 105275
 		private int BirthdayLetterInterval;
 
-		// Token: 0x0401F08B RID: 127115
+		// Token: 0x04019B3C RID: 105276
 		private BirthdayInfo BirthdayInfo;
 
-		// Token: 0x0200BE18 RID: 48664
+		// Token: 0x0200A820 RID: 43040
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403952F RID: 234799
+			// Token: 0x04033EF2 RID: 212722
 			public const int ButtonBack = 0;
 
-			// Token: 0x04039530 RID: 234800
+			// Token: 0x04033EF3 RID: 212723
 			public const int ItemButtonPanel = 1;
 
-			// Token: 0x04039531 RID: 234801
+			// Token: 0x04033EF4 RID: 212724
 			public const int ItemLetterPanel = 2;
 
-			// Token: 0x04039532 RID: 234802
+			// Token: 0x04033EF5 RID: 212725
 			public const int ButtonPhoto = 3;
 
-			// Token: 0x04039533 RID: 234803
+			// Token: 0x04033EF6 RID: 212726
 			public const int ButtonGift = 4;
 
-			// Token: 0x04039534 RID: 234804
+			// Token: 0x04033EF7 RID: 212727
 			public const int TextTitle = 5;
 
-			// Token: 0x04039535 RID: 234805
+			// Token: 0x04033EF8 RID: 212728
 			public const int TextBless = 6;
 
-			// Token: 0x04039536 RID: 234806
+			// Token: 0x04033EF9 RID: 212729
 			public const int ScrollViewGift = 7;
 
-			// Token: 0x04039537 RID: 234807
+			// Token: 0x04033EFA RID: 212730
 			public const int ItemGift = 8;
 
-			// Token: 0x04039538 RID: 234808
+			// Token: 0x04033EFB RID: 212731
 			public const int TextTime = 9;
 
-			// Token: 0x04039539 RID: 234809
+			// Token: 0x04033EFC RID: 212732
 			public const int BtnReSelect = 10;
 
-			// Token: 0x0403953A RID: 234810
+			// Token: 0x04033EFD RID: 212733
 			public const int SpriteLine = 11;
 
-			// Token: 0x0403953B RID: 234811
+			// Token: 0x04033EFE RID: 212734
 			public const int SVInfo = 12;
 		}
 	}

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003B32 RID: 15154
+	// Token: 0x02003F34 RID: 16180
 	public struct IWoodenBoxProliferateRandomInRange : IFlatbufferObject
 	{
-		// Token: 0x170067FE RID: 26622
-		// (get) Token: 0x06014B59 RID: 84825 RVA: 0x00303190 File Offset: 0x00301390
+		// Token: 0x17006D99 RID: 28057
+		// (get) Token: 0x06016003 RID: 90115 RVA: 0x00329420 File Offset: 0x00327620
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x06014B5A RID: 84826 RVA: 0x0030319D File Offset: 0x0030139D
+		// Token: 0x06016004 RID: 90116 RVA: 0x0032942D File Offset: 0x0032762D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06014B5B RID: 84827 RVA: 0x003031A4 File Offset: 0x003013A4
+		// Token: 0x06016005 RID: 90117 RVA: 0x00329434 File Offset: 0x00327634
 		public static IWoodenBoxProliferateRandomInRange GetRootAsIWoodenBoxProliferateRandomInRange(ByteBuffer _bb)
 		{
 			return IWoodenBoxProliferateRandomInRange.GetRootAsIWoodenBoxProliferateRandomInRange(_bb, default(IWoodenBoxProliferateRandomInRange));
 		}
 
-		// Token: 0x06014B5C RID: 84828 RVA: 0x003031C0 File Offset: 0x003013C0
+		// Token: 0x06016006 RID: 90118 RVA: 0x00329450 File Offset: 0x00327650
 		public static IWoodenBoxProliferateRandomInRange GetRootAsIWoodenBoxProliferateRandomInRange(ByteBuffer _bb, IWoodenBoxProliferateRandomInRange obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06014B5D RID: 84829 RVA: 0x003031DD File Offset: 0x003013DD
+		// Token: 0x06016007 RID: 90119 RVA: 0x0032946D File Offset: 0x0032766D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06014B5E RID: 84830 RVA: 0x003031EC File Offset: 0x003013EC
+		// Token: 0x06016008 RID: 90120 RVA: 0x0032947C File Offset: 0x0032767C
 		public IWoodenBoxProliferateRandomInRange __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170067FF RID: 26623
-		// (get) Token: 0x06014B5F RID: 84831 RVA: 0x003031FC File Offset: 0x003013FC
+		// Token: 0x17006D9A RID: 28058
+		// (get) Token: 0x06016009 RID: 90121 RVA: 0x0032948C File Offset: 0x0032768C
 		public EWoodenBoxProliferateSpawnType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x17006800 RID: 26624
-		// (get) Token: 0x06014B60 RID: 84832 RVA: 0x00303238 File Offset: 0x00301438
+		// Token: 0x17006D9B RID: 28059
+		// (get) Token: 0x0601600A RID: 90122 RVA: 0x003294C8 File Offset: 0x003276C8
 		public float RangeRadius
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x17006801 RID: 26625
-		// (get) Token: 0x06014B61 RID: 84833 RVA: 0x00303278 File Offset: 0x00301478
+		// Token: 0x17006D9C RID: 28060
+		// (get) Token: 0x0601600B RID: 90123 RVA: 0x00329508 File Offset: 0x00327708
 		public int Count
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x06014B62 RID: 84834 RVA: 0x003032B4 File Offset: 0x003014B4
+		// Token: 0x0601600C RID: 90124 RVA: 0x00329544 File Offset: 0x00327744
 		public static Offset<IWoodenBoxProliferateRandomInRange> CreateIWoodenBoxProliferateRandomInRange(FlatBufferBuilder builder, EWoodenBoxProliferateSpawnType Type = EWoodenBoxProliferateSpawnType.RandomInRange, float RangeRadius = 0f, int Count = 0)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return IWoodenBoxProliferateRandomInRange.EndIWoodenBoxProliferateRandomInRange(builder);
 		}
 
-		// Token: 0x06014B63 RID: 84835 RVA: 0x003032D8 File Offset: 0x003014D8
+		// Token: 0x0601600D RID: 90125 RVA: 0x00329568 File Offset: 0x00327768
 		public static void StartIWoodenBoxProliferateRandomInRange(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06014B64 RID: 84836 RVA: 0x003032E1 File Offset: 0x003014E1
+		// Token: 0x0601600E RID: 90126 RVA: 0x00329571 File Offset: 0x00327771
 		public static void AddType(FlatBufferBuilder builder, EWoodenBoxProliferateSpawnType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06014B65 RID: 84837 RVA: 0x003032EC File Offset: 0x003014EC
+		// Token: 0x0601600F RID: 90127 RVA: 0x0032957C File Offset: 0x0032777C
 		public static void AddRangeRadius(FlatBufferBuilder builder, float rangeRadius)
 		{
 			builder.AddFloat(1, rangeRadius, 0.0);
 		}
 
-		// Token: 0x06014B66 RID: 84838 RVA: 0x003032FF File Offset: 0x003014FF
+		// Token: 0x06016010 RID: 90128 RVA: 0x0032958F File Offset: 0x0032778F
 		public static void AddCount(FlatBufferBuilder builder, int count)
 		{
 			builder.AddInt(2, count, 0);
 		}
 
-		// Token: 0x06014B67 RID: 84839 RVA: 0x0030330A File Offset: 0x0030150A
+		// Token: 0x06016011 RID: 90129 RVA: 0x0032959A File Offset: 0x0032779A
 		public static Offset<IWoodenBoxProliferateRandomInRange> EndIWoodenBoxProliferateRandomInRange(FlatBufferBuilder builder)
 		{
 			return new Offset<IWoodenBoxProliferateRandomInRange>(builder.EndTable());
 		}
 
-		// Token: 0x06014B68 RID: 84840 RVA: 0x00303318 File Offset: 0x00301518
+		// Token: 0x06016012 RID: 90130 RVA: 0x003295A8 File Offset: 0x003277A8
 		public IWoodenBoxProliferateRandomInRangeT UnPack()
 		{
 			IWoodenBoxProliferateRandomInRangeT woodenBoxProliferateRandomInRangeT = new IWoodenBoxProliferateRandomInRangeT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return woodenBoxProliferateRandomInRangeT;
 		}
 
-		// Token: 0x06014B69 RID: 84841 RVA: 0x00303333 File Offset: 0x00301533
+		// Token: 0x06016013 RID: 90131 RVA: 0x003295C3 File Offset: 0x003277C3
 		public void UnPackTo(IWoodenBoxProliferateRandomInRangeT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			_o.Count = this.Count;
 		}
 
-		// Token: 0x06014B6A RID: 84842 RVA: 0x0030335C File Offset: 0x0030155C
+		// Token: 0x06016014 RID: 90132 RVA: 0x003295EC File Offset: 0x003277EC
 		public static Offset<IWoodenBoxProliferateRandomInRange> Pack(FlatBufferBuilder builder, IWoodenBoxProliferateRandomInRangeT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return IWoodenBoxProliferateRandomInRange.CreateIWoodenBoxProliferateRandomInRange(builder, _o.Type, _o.RangeRadius, _o.Count);
 		}
 
-		// Token: 0x0400B012 RID: 45074
+		// Token: 0x0400B97F RID: 47487
 		private Table __p;
 	}
 }

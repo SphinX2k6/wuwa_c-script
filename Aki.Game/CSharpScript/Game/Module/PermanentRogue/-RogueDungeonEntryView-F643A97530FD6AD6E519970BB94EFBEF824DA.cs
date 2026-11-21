@@ -2,24 +2,24 @@
 
 namespace CSharpScript.Game.Module.PermanentRogue
 {
-	// Token: 0x02005307 RID: 21255
+	// Token: 0x020042D7 RID: 17111
 	internal enum <RogueDungeonEntryView>F643A97530FD6AD6E519970BB94EFBEF824DA3B2869446269D6DC73333A1E6A58__EBtnDefine
 	{
-		// Token: 0x0401CB9A RID: 117658
+		// Token: 0x040175D0 RID: 95696
 		PanelCondition,
-		// Token: 0x0401CB9B RID: 117659
+		// Token: 0x040175D1 RID: 95697
 		FunctionButton,
-		// Token: 0x0401CB9C RID: 117660
+		// Token: 0x040175D2 RID: 95698
 		PanelActivate,
-		// Token: 0x0401CB9D RID: 117661
+		// Token: 0x040175D3 RID: 95699
 		FunctionRedDot,
-		// Token: 0x0401CB9E RID: 117662
+		// Token: 0x040175D4 RID: 95700
 		PanelCircle,
-		// Token: 0x0401CB9F RID: 117663
+		// Token: 0x040175D5 RID: 95701
 		ButtonCircle,
-		// Token: 0x0401CBA0 RID: 117664
+		// Token: 0x040175D6 RID: 95702
 		PanelTip,
-		// Token: 0x0401CBA1 RID: 117665
+		// Token: 0x040175D7 RID: 95703
 		TxtTip
 	}
 }

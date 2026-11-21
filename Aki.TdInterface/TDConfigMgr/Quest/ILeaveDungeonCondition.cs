@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000FED RID: 4077
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001119 RID: 4377
 	public class ILeaveDungeonCondition : IQuestCondition
 	{
-		// Token: 0x06005AB8 RID: 23224 RVA: 0x000DC37C File Offset: 0x000DA57C
+		// Token: 0x06006098 RID: 24728 RVA: 0x000E8FBC File Offset: 0x000E71BC
 		private ILeaveDungeonCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005AB9 RID: 23225 RVA: 0x000DC3B4 File Offset: 0x000DA5B4
+		// Token: 0x06006099 RID: 24729 RVA: 0x000E8FF4 File Offset: 0x000E71F4
 		public static ILeaveDungeonCondition Create([Nullable(2)] ILeaveDungeonCondition instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005ABA RID: 23226 RVA: 0x000DC3C7 File Offset: 0x000DA5C7
+		// Token: 0x0600609A RID: 24730 RVA: 0x000E9007 File Offset: 0x000E7207
 		public static ILeaveDungeonCondition CreateFromSetValue([Nullable(2)] ILeaveDungeonCondition_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005ABB RID: 23227 RVA: 0x000DC3DA File Offset: 0x000DA5DA
+		// Token: 0x0600609B RID: 24731 RVA: 0x000E901A File Offset: 0x000E721A
 		public new ILeaveDungeonCondition_SetValue ToSetValue()
 		{
 			return new ILeaveDungeonCondition_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001DFA RID: 7674
-		// (get) Token: 0x06005ABC RID: 23228 RVA: 0x000DC3F9 File Offset: 0x000DA5F9
-		// (set) Token: 0x06005ABD RID: 23229 RVA: 0x000DC424 File Offset: 0x000DA624
+		// Token: 0x17001FA3 RID: 8099
+		// (get) Token: 0x0600609C RID: 24732 RVA: 0x000E9039 File Offset: 0x000E7239
+		// (set) Token: 0x0600609D RID: 24733 RVA: 0x000E9064 File Offset: 0x000E7264
 		public override EChildQuest Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001DFB RID: 7675
-		// (get) Token: 0x06005ABE RID: 23230 RVA: 0x000DC434 File Offset: 0x000DA634
-		// (set) Token: 0x06005ABF RID: 23231 RVA: 0x000DC495 File Offset: 0x000DA695
+		// Token: 0x17001FA4 RID: 8100
+		// (get) Token: 0x0600609E RID: 24734 RVA: 0x000E9074 File Offset: 0x000E7274
+		// (set) Token: 0x0600609F RID: 24735 RVA: 0x000E90D5 File Offset: 0x000E72D5
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -117,18 +115,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003699 RID: 13977
+		// Token: 0x040039D1 RID: 14801
 		[Nullable(2)]
 		protected new ILeaveDungeonCondition FbInstance;
 
-		// Token: 0x0400369A RID: 13978
+		// Token: 0x040039D2 RID: 14802
 		[Nullable(2)]
 		protected new ILeaveDungeonCondition_SetValue PocoInterface;
 
-		// Token: 0x0400369B RID: 13979
+		// Token: 0x040039D3 RID: 14803
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x0400369C RID: 13980
+		// Token: 0x040039D4 RID: 14804
 		private bool _PreConditionsInited;
 	}
 }

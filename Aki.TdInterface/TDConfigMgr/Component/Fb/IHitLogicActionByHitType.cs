@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B90 RID: 2960
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000C5E RID: 3166
 	public class IHitLogicActionByHitType : IHitLogicType
 	{
-		// Token: 0x0600440A RID: 17418 RVA: 0x000AD112 File Offset: 0x000AB312
+		// Token: 0x06004863 RID: 18531 RVA: 0x000B71D6 File Offset: 0x000B53D6
 		public static IHitLogicActionByHitType Create(IHitLogicActionByHitType? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170012A7 RID: 4775
-		// (get) Token: 0x0600440B RID: 17419 RVA: 0x000AD131 File Offset: 0x000AB331
+		// Token: 0x170013A2 RID: 5026
+		// (get) Token: 0x06004864 RID: 18532 RVA: 0x000B71F5 File Offset: 0x000B53F5
 		public override EHitLogicType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170012A8 RID: 4776
-		// (get) Token: 0x0600440C RID: 17420 RVA: 0x000AD140 File Offset: 0x000AB340
+		// Token: 0x170013A3 RID: 5027
+		// (get) Token: 0x06004865 RID: 18533 RVA: 0x000B7204 File Offset: 0x000B5404
 		public virtual List<IActionByHitTypeConfig> Configs
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002667 RID: 9831
+		// Token: 0x040028AF RID: 10415
 		private IHitLogicActionByHitType Instance;
 
-		// Token: 0x04002668 RID: 9832
+		// Token: 0x040028B0 RID: 10416
 		private List<IActionByHitTypeConfig> _ConfigsCache;
 
-		// Token: 0x04002669 RID: 9833
+		// Token: 0x040028B1 RID: 10417
 		private bool _ConfigsInited;
 	}
 }

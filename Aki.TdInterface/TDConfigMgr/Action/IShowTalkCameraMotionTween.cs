@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E62 RID: 7778
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002097 RID: 8343
 	public class IShowTalkCameraMotionTween : IShowTalkCameraMotion
 	{
-		// Token: 0x0600A677 RID: 42615 RVA: 0x00178AA4 File Offset: 0x00176CA4
+		// Token: 0x0600B12F RID: 45359 RVA: 0x0018E7A4 File Offset: 0x0018C9A4
 		private IShowTalkCameraMotionTween_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A678 RID: 42616 RVA: 0x00178ADC File Offset: 0x00176CDC
+		// Token: 0x0600B130 RID: 45360 RVA: 0x0018E7DC File Offset: 0x0018C9DC
 		public static IShowTalkCameraMotionTween Create([Nullable(2)] IShowTalkCameraMotionTween instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A679 RID: 42617 RVA: 0x00178AEF File Offset: 0x00176CEF
+		// Token: 0x0600B131 RID: 45361 RVA: 0x0018E7EF File Offset: 0x0018C9EF
 		public static IShowTalkCameraMotionTween CreateFromSetValue([Nullable(2)] IShowTalkCameraMotionTween_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A67A RID: 42618 RVA: 0x00178B04 File Offset: 0x00176D04
+		// Token: 0x0600B132 RID: 45362 RVA: 0x0018E804 File Offset: 0x0018CA04
 		public new IShowTalkCameraMotionTween_SetValue ToSetValue()
 		{
 			return new IShowTalkCameraMotionTween_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170032FF RID: 13055
-		// (get) Token: 0x0600A67B RID: 42619 RVA: 0x00178B5E File Offset: 0x00176D5E
-		// (set) Token: 0x0600A67C RID: 42620 RVA: 0x00178B89 File Offset: 0x00176D89
+		// Token: 0x170035C3 RID: 13763
+		// (get) Token: 0x0600B133 RID: 45363 RVA: 0x0018E85E File Offset: 0x0018CA5E
+		// (set) Token: 0x0600B134 RID: 45364 RVA: 0x0018E889 File Offset: 0x0018CA89
 		public override EShowTalkCameraMotionType Type
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003300 RID: 13056
-		// (get) Token: 0x0600A67D RID: 42621 RVA: 0x00178B98 File Offset: 0x00176D98
-		// (set) Token: 0x0600A67E RID: 42622 RVA: 0x00178BF9 File Offset: 0x00176DF9
+		// Token: 0x170035C4 RID: 13764
+		// (get) Token: 0x0600B135 RID: 45365 RVA: 0x0018E898 File Offset: 0x0018CA98
+		// (set) Token: 0x0600B136 RID: 45366 RVA: 0x0018E8F9 File Offset: 0x0018CAF9
 		public virtual ICameraParams Start
 		{
 			get
@@ -117,9 +115,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003301 RID: 13057
-		// (get) Token: 0x0600A67F RID: 42623 RVA: 0x00178C10 File Offset: 0x00176E10
-		// (set) Token: 0x0600A680 RID: 42624 RVA: 0x00178C71 File Offset: 0x00176E71
+		// Token: 0x170035C5 RID: 13765
+		// (get) Token: 0x0600B137 RID: 45367 RVA: 0x0018E910 File Offset: 0x0018CB10
+		// (set) Token: 0x0600B138 RID: 45368 RVA: 0x0018E971 File Offset: 0x0018CB71
 		public virtual ICameraParams End
 		{
 			get
@@ -147,9 +145,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003302 RID: 13058
-		// (get) Token: 0x0600A681 RID: 42625 RVA: 0x00178C86 File Offset: 0x00176E86
-		// (set) Token: 0x0600A682 RID: 42626 RVA: 0x00178CB5 File Offset: 0x00176EB5
+		// Token: 0x170035C6 RID: 13766
+		// (get) Token: 0x0600B139 RID: 45369 RVA: 0x0018E986 File Offset: 0x0018CB86
+		// (set) Token: 0x0600B13A RID: 45370 RVA: 0x0018E9B5 File Offset: 0x0018CBB5
 		public virtual float Duration
 		{
 			get
@@ -170,9 +168,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003303 RID: 13059
-		// (get) Token: 0x0600A683 RID: 42627 RVA: 0x00178CC4 File Offset: 0x00176EC4
-		// (set) Token: 0x0600A684 RID: 42628 RVA: 0x00178CFE File Offset: 0x00176EFE
+		// Token: 0x170035C7 RID: 13767
+		// (get) Token: 0x0600B13B RID: 45371 RVA: 0x0018E9C4 File Offset: 0x0018CBC4
+		// (set) Token: 0x0600B13C RID: 45372 RVA: 0x0018E9FE File Offset: 0x0018CBFE
 		public virtual EEaseType? EaseType
 		{
 			get
@@ -194,9 +192,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003304 RID: 13060
-		// (get) Token: 0x0600A685 RID: 42629 RVA: 0x00178D0C File Offset: 0x00176F0C
-		// (set) Token: 0x0600A686 RID: 42630 RVA: 0x00178D6D File Offset: 0x00176F6D
+		// Token: 0x170035C8 RID: 13768
+		// (get) Token: 0x0600B13D RID: 45373 RVA: 0x0018EA0C File Offset: 0x0018CC0C
+		// (set) Token: 0x0600B13E RID: 45374 RVA: 0x0018EA6D File Offset: 0x0018CC6D
 		[Nullable(2)]
 		public virtual IFlowCameraShake CamShake
 		{
@@ -227,30 +225,30 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400636A RID: 25450
+		// Token: 0x0400694E RID: 26958
 		[Nullable(2)]
 		protected new IShowTalkCameraMotionTween FbInstance;
 
-		// Token: 0x0400636B RID: 25451
+		// Token: 0x0400694F RID: 26959
 		[Nullable(2)]
 		protected new IShowTalkCameraMotionTween_SetValue PocoInterface;
 
-		// Token: 0x0400636C RID: 25452
+		// Token: 0x04006950 RID: 26960
 		private ICameraParams _StartCache;
 
-		// Token: 0x0400636D RID: 25453
+		// Token: 0x04006951 RID: 26961
 		private bool _StartInited;
 
-		// Token: 0x0400636E RID: 25454
+		// Token: 0x04006952 RID: 26962
 		private ICameraParams _EndCache;
 
-		// Token: 0x0400636F RID: 25455
+		// Token: 0x04006953 RID: 26963
 		private bool _EndInited;
 
-		// Token: 0x04006370 RID: 25456
+		// Token: 0x04006954 RID: 26964
 		private IFlowCameraShake _CamShakeCache;
 
-		// Token: 0x04006371 RID: 25457
+		// Token: 0x04006955 RID: 26965
 		private bool _CamShakeInited;
 	}
 }

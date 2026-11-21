@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200320F RID: 12815
+// Token: 0x0200277E RID: 10110
 [NullableContext(2)]
 [Nullable(0)]
 public class InterestEvent : IStaticVariableResetter
 {
-	// Token: 0x0601BA46 RID: 113222 RVA: 0x00797EA7 File Offset: 0x007960A7
+	// Token: 0x060195CB RID: 103883 RVA: 0x007C0613 File Offset: 0x007BE813
 	static InterestEvent()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(InterestEvent.CreateStaticDefaultValue), new Action(InterestEvent.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601BA47 RID: 113223 RVA: 0x00797EC8 File Offset: 0x007960C8
+	// Token: 0x060195CC RID: 103884 RVA: 0x007C0634 File Offset: 0x007BE834
 	[NullableContext(1)]
 	public InterestEvent(Entity ownerEntity)
 	{
@@ -23,13 +23,13 @@ public class InterestEvent : IStaticVariableResetter
 		this.OwnerController = component.InterestEventController;
 	}
 
-	// Token: 0x0601BA48 RID: 113224 RVA: 0x00797F18 File Offset: 0x00796118
+	// Token: 0x060195CD RID: 103885 RVA: 0x007C0684 File Offset: 0x007BE884
 	public int GetPriority()
 	{
 		return this.Action.GetPriority(this.OwnerEntity, this.Target);
 	}
 
-	// Token: 0x0601BA49 RID: 113225 RVA: 0x00797F34 File Offset: 0x00796134
+	// Token: 0x060195CE RID: 103886 RVA: 0x007C06A0 File Offset: 0x007BE8A0
 	public bool CheckCondition()
 	{
 		using (List<InterestConditionBase>.Enumerator enumerator = this.Conditions.GetEnumerator())
@@ -45,7 +45,7 @@ public class InterestEvent : IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x0601BA4A RID: 113226 RVA: 0x00797F9C File Offset: 0x0079619C
+	// Token: 0x060195CF RID: 103887 RVA: 0x007C0708 File Offset: 0x007BE908
 	public void TryEnterRange()
 	{
 		if (this.IsEntered)
@@ -62,7 +62,7 @@ public class InterestEvent : IStaticVariableResetter
 		action.OnEnter(this.OwnerEntity, this.Target);
 	}
 
-	// Token: 0x0601BA4B RID: 113227 RVA: 0x00797FD6 File Offset: 0x007961D6
+	// Token: 0x060195D0 RID: 103888 RVA: 0x007C0742 File Offset: 0x007BE942
 	public void TryLeaveRange()
 	{
 		if (!this.IsEntered)
@@ -78,42 +78,42 @@ public class InterestEvent : IStaticVariableResetter
 		this.IsEntered = false;
 	}
 
-	// Token: 0x0601BA4C RID: 113228 RVA: 0x00798011 File Offset: 0x00796211
+	// Token: 0x060195D1 RID: 103889 RVA: 0x007C077D File Offset: 0x007BE97D
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601BA4D RID: 113229 RVA: 0x00798013 File Offset: 0x00796213
+	// Token: 0x060195D2 RID: 103890 RVA: 0x007C077F File Offset: 0x007BE97F
 	public static void ResetStaticDefaultValue()
 	{
 		InterestEvent.IdGenerator = 0;
 	}
 
-	// Token: 0x0400D95B RID: 55643
+	// Token: 0x0400DDFA RID: 56826
 	public Entity OwnerEntity;
 
-	// Token: 0x0400D95C RID: 55644
+	// Token: 0x0400DDFB RID: 56827
 	public NpcInterestEventController OwnerController;
 
-	// Token: 0x0400D95D RID: 55645
+	// Token: 0x0400DDFC RID: 56828
 	public int Id;
 
-	// Token: 0x0400D95E RID: 55646
+	// Token: 0x0400DDFD RID: 56829
 	public float Radius;
 
-	// Token: 0x0400D95F RID: 55647
+	// Token: 0x0400DDFE RID: 56830
 	public InterestItemBase Target;
 
-	// Token: 0x0400D960 RID: 55648
+	// Token: 0x0400DDFF RID: 56831
 	[Nullable(1)]
 	public List<InterestConditionBase> Conditions = new List<InterestConditionBase>();
 
-	// Token: 0x0400D961 RID: 55649
+	// Token: 0x0400DE00 RID: 56832
 	public InterestActionBase Action;
 
-	// Token: 0x0400D962 RID: 55650
+	// Token: 0x0400DE01 RID: 56833
 	public bool IsEntered;
 
-	// Token: 0x0400D963 RID: 55651
+	// Token: 0x0400DE02 RID: 56834
 	private static int IdGenerator;
 }

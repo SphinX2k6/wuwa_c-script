@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002F32 RID: 12082
+// Token: 0x02002485 RID: 9349
 [NullableContext(1)]
 [Nullable(0)]
 public class DamageTransferRecipients : BuffEffect
 {
-	// Token: 0x06019BC3 RID: 105411 RVA: 0x006B3E24 File Offset: 0x006B2024
+	// Token: 0x060174CE RID: 95438 RVA: 0x006DA13C File Offset: 0x006D833C
 	public DamageTransferRecipients(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019BC4 RID: 105412 RVA: 0x006B3E40 File Offset: 0x006B2040
+	// Token: 0x060174CF RID: 95439 RVA: 0x006DA158 File Offset: 0x006D8358
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -36,7 +36,7 @@ public class DamageTransferRecipients : BuffEffect
 		this.ToughAppliers = list.ToArray();
 	}
 
-	// Token: 0x06019BC5 RID: 105413 RVA: 0x006B3EC8 File Offset: 0x006B20C8
+	// Token: 0x060174D0 RID: 95440 RVA: 0x006DA1E0 File Offset: 0x006D83E0
 	[NullableContext(2)]
 	private Entity GetEntityByApplierType(EDamageTransferType applierType)
 	{
@@ -83,7 +83,7 @@ public class DamageTransferRecipients : BuffEffect
 		}
 	}
 
-	// Token: 0x06019BC6 RID: 105414 RVA: 0x006B3F46 File Offset: 0x006B2146
+	// Token: 0x060174D1 RID: 95441 RVA: 0x006DA25E File Offset: 0x006D845E
 	private void SetTargetIsOwnerFlag(EDamageTransferType applierType)
 	{
 		if (applierType == EDamageTransferType.Owner)
@@ -92,14 +92,14 @@ public class DamageTransferRecipients : BuffEffect
 		}
 	}
 
-	// Token: 0x06019BC7 RID: 105415 RVA: 0x006B3F53 File Offset: 0x006B2153
+	// Token: 0x060174D2 RID: 95442 RVA: 0x006DA26B File Offset: 0x006D846B
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
 		return this.ToughAppliers;
 	}
 
-	// Token: 0x06019BC8 RID: 105416 RVA: 0x006B3F5C File Offset: 0x006B215C
+	// Token: 0x060174D3 RID: 95443 RVA: 0x006DA274 File Offset: 0x006D8474
 	public override string GetDebugEffectString()
 	{
 		string text = string.Empty;
@@ -116,7 +116,7 @@ public class DamageTransferRecipients : BuffEffect
 		return "获取伤害结算属性传递对象列表：客户端逻辑-韧性" + text + " ";
 	}
 
-	// Token: 0x06019BC9 RID: 105417 RVA: 0x006B3FC0 File Offset: 0x006B21C0
+	// Token: 0x060174D4 RID: 95444 RVA: 0x006DA2D8 File Offset: 0x006D84D8
 	public static HashSet<Entity> ApplyEffects(Entity owner)
 	{
 		bool flag = false;
@@ -177,9 +177,9 @@ public class DamageTransferRecipients : BuffEffect
 		return hashSet;
 	}
 
-	// Token: 0x0400C1FE RID: 49662
+	// Token: 0x0400C5A0 RID: 50592
 	private Entity[] ToughAppliers = Array.Empty<Entity>();
 
-	// Token: 0x0400C1FF RID: 49663
+	// Token: 0x0400C5A1 RID: 50593
 	private bool TargetIsOwner;
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020059F5 RID: 23029
+	// Token: 0x02006002 RID: 24578
 	public struct ISunSpiritCollectComponent : IFlatbufferObject
 	{
-		// Token: 0x1700AD03 RID: 44291
-		// (get) Token: 0x06027144 RID: 160068 RVA: 0x005605F4 File Offset: 0x0055E7F4
+		// Token: 0x1700B63B RID: 46651
+		// (get) Token: 0x060296BC RID: 169660 RVA: 0x005A75B8 File Offset: 0x005A57B8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027145 RID: 160069 RVA: 0x00560601 File Offset: 0x0055E801
+		// Token: 0x060296BD RID: 169661 RVA: 0x005A75C5 File Offset: 0x005A57C5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06027146 RID: 160070 RVA: 0x00560608 File Offset: 0x0055E808
+		// Token: 0x060296BE RID: 169662 RVA: 0x005A75CC File Offset: 0x005A57CC
 		public static ISunSpiritCollectComponent GetRootAsISunSpiritCollectComponent(ByteBuffer _bb)
 		{
 			return ISunSpiritCollectComponent.GetRootAsISunSpiritCollectComponent(_bb, default(ISunSpiritCollectComponent));
 		}
 
-		// Token: 0x06027147 RID: 160071 RVA: 0x00560624 File Offset: 0x0055E824
+		// Token: 0x060296BF RID: 169663 RVA: 0x005A75E8 File Offset: 0x005A57E8
 		public static ISunSpiritCollectComponent GetRootAsISunSpiritCollectComponent(ByteBuffer _bb, ISunSpiritCollectComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06027148 RID: 160072 RVA: 0x00560641 File Offset: 0x0055E841
+		// Token: 0x060296C0 RID: 169664 RVA: 0x005A7605 File Offset: 0x005A5805
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06027149 RID: 160073 RVA: 0x00560650 File Offset: 0x0055E850
+		// Token: 0x060296C1 RID: 169665 RVA: 0x005A7614 File Offset: 0x005A5814
 		public ISunSpiritCollectComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700AD04 RID: 44292
-		// (get) Token: 0x0602714A RID: 160074 RVA: 0x00560660 File Offset: 0x0055E860
+		// Token: 0x1700B63C RID: 46652
+		// (get) Token: 0x060296C2 RID: 169666 RVA: 0x005A7624 File Offset: 0x005A5824
 		public bool Disabled
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AD05 RID: 44293
-		// (get) Token: 0x0602714B RID: 160075 RVA: 0x005606A0 File Offset: 0x0055E8A0
+		// Token: 0x1700B63D RID: 46653
+		// (get) Token: 0x060296C3 RID: 169667 RVA: 0x005A7664 File Offset: 0x005A5864
 		public int AreaId
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AD06 RID: 44294
-		// (get) Token: 0x0602714C RID: 160076 RVA: 0x005606DC File Offset: 0x0055E8DC
+		// Token: 0x1700B63E RID: 46654
+		// (get) Token: 0x060296C4 RID: 169668 RVA: 0x005A76A0 File Offset: 0x005A58A0
 		public float SunSpiritScale
 		{
 			get
@@ -88,8 +88,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AD07 RID: 44295
-		// (get) Token: 0x0602714D RID: 160077 RVA: 0x0056071C File Offset: 0x0055E91C
+		// Token: 0x1700B63F RID: 46655
+		// (get) Token: 0x060296C5 RID: 169669 RVA: 0x005A76E0 File Offset: 0x005A58E0
 		public ISunSpiritPlayerBattleConfig? PlayerBattleConfig
 		{
 			get
@@ -103,8 +103,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AD08 RID: 44296
-		// (get) Token: 0x0602714E RID: 160078 RVA: 0x0056077C File Offset: 0x0055E97C
+		// Token: 0x1700B640 RID: 46656
+		// (get) Token: 0x060296C6 RID: 169670 RVA: 0x005A7740 File Offset: 0x005A5940
 		public byte NullMask
 		{
 			get
@@ -118,7 +118,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602714F RID: 160079 RVA: 0x005607B9 File Offset: 0x0055E9B9
+		// Token: 0x060296C7 RID: 169671 RVA: 0x005A777D File Offset: 0x005A597D
 		public static Offset<ISunSpiritCollectComponent> CreateISunSpiritCollectComponent(FlatBufferBuilder builder, bool Disabled = false, int AreaId = 0, float SunSpiritScale = 0f, Offset<ISunSpiritPlayerBattleConfig> PlayerBattleConfigOffset = default(Offset<ISunSpiritPlayerBattleConfig>), byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -130,49 +130,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISunSpiritCollectComponent.EndISunSpiritCollectComponent(builder);
 		}
 
-		// Token: 0x06027150 RID: 160080 RVA: 0x005607ED File Offset: 0x0055E9ED
+		// Token: 0x060296C8 RID: 169672 RVA: 0x005A77B1 File Offset: 0x005A59B1
 		public static void StartISunSpiritCollectComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x06027151 RID: 160081 RVA: 0x005607F6 File Offset: 0x0055E9F6
+		// Token: 0x060296C9 RID: 169673 RVA: 0x005A77BA File Offset: 0x005A59BA
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x06027152 RID: 160082 RVA: 0x00560801 File Offset: 0x0055EA01
+		// Token: 0x060296CA RID: 169674 RVA: 0x005A77C5 File Offset: 0x005A59C5
 		public static void AddAreaId(FlatBufferBuilder builder, int areaId)
 		{
 			builder.AddInt(1, areaId, 0);
 		}
 
-		// Token: 0x06027153 RID: 160083 RVA: 0x0056080C File Offset: 0x0055EA0C
+		// Token: 0x060296CB RID: 169675 RVA: 0x005A77D0 File Offset: 0x005A59D0
 		public static void AddSunSpiritScale(FlatBufferBuilder builder, float sunSpiritScale)
 		{
 			builder.AddFloat(2, sunSpiritScale, 0.0);
 		}
 
-		// Token: 0x06027154 RID: 160084 RVA: 0x0056081F File Offset: 0x0055EA1F
+		// Token: 0x060296CC RID: 169676 RVA: 0x005A77E3 File Offset: 0x005A59E3
 		public static void AddPlayerBattleConfig(FlatBufferBuilder builder, Offset<ISunSpiritPlayerBattleConfig> playerBattleConfigOffset)
 		{
 			builder.AddOffset(3, playerBattleConfigOffset.Value, 0);
 		}
 
-		// Token: 0x06027155 RID: 160085 RVA: 0x0056082F File Offset: 0x0055EA2F
+		// Token: 0x060296CD RID: 169677 RVA: 0x005A77F3 File Offset: 0x005A59F3
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x06027156 RID: 160086 RVA: 0x0056083A File Offset: 0x0055EA3A
+		// Token: 0x060296CE RID: 169678 RVA: 0x005A77FE File Offset: 0x005A59FE
 		public static Offset<ISunSpiritCollectComponent> EndISunSpiritCollectComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<ISunSpiritCollectComponent>(builder.EndTable());
 		}
 
-		// Token: 0x06027157 RID: 160087 RVA: 0x00560848 File Offset: 0x0055EA48
+		// Token: 0x060296CF RID: 169679 RVA: 0x005A780C File Offset: 0x005A5A0C
 		public ISunSpiritCollectComponentT UnPack()
 		{
 			ISunSpiritCollectComponentT sunSpiritCollectComponentT = new ISunSpiritCollectComponentT();
@@ -180,7 +180,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return sunSpiritCollectComponentT;
 		}
 
-		// Token: 0x06027158 RID: 160088 RVA: 0x00560864 File Offset: 0x0055EA64
+		// Token: 0x060296D0 RID: 169680 RVA: 0x005A7828 File Offset: 0x005A5A28
 		public void UnPackTo(ISunSpiritCollectComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -190,7 +190,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06027159 RID: 160089 RVA: 0x005608D0 File Offset: 0x0055EAD0
+		// Token: 0x060296D1 RID: 169681 RVA: 0x005A7894 File Offset: 0x005A5A94
 		public static Offset<ISunSpiritCollectComponent> Pack(FlatBufferBuilder builder, ISunSpiritCollectComponentT _o)
 		{
 			if (_o == null)
@@ -201,7 +201,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISunSpiritCollectComponent.CreateISunSpiritCollectComponent(builder, _o.Disabled, _o.AreaId, _o.SunSpiritScale, playerBattleConfigOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400F030 RID: 61488
+		// Token: 0x0400FD27 RID: 64807
 		private Table __p;
 	}
 }

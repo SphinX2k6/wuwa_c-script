@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02001191 RID: 4497
+	// Token: 0x020012C7 RID: 4807
 	public struct WeaponBreach : IFlatbufferObject
 	{
-		// Token: 0x17003DAF RID: 15791
-		// (get) Token: 0x0600E75C RID: 59228 RVA: 0x00341395 File Offset: 0x0033F595
+		// Token: 0x17004113 RID: 16659
+		// (get) Token: 0x0600F4CA RID: 62666 RVA: 0x0036C14D File Offset: 0x0036A34D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,39 +20,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E75D RID: 59229 RVA: 0x003413A2 File Offset: 0x0033F5A2
+		// Token: 0x0600F4CB RID: 62667 RVA: 0x0036C15A File Offset: 0x0036A35A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600E75E RID: 59230 RVA: 0x003413AC File Offset: 0x0033F5AC
+		// Token: 0x0600F4CC RID: 62668 RVA: 0x0036C164 File Offset: 0x0036A364
 		public static WeaponBreach GetRootAsWeaponBreach(ByteBuffer _bb)
 		{
 			return WeaponBreach.GetRootAsWeaponBreach(_bb, default(WeaponBreach));
 		}
 
-		// Token: 0x0600E75F RID: 59231 RVA: 0x003413C8 File Offset: 0x0033F5C8
+		// Token: 0x0600F4CD RID: 62669 RVA: 0x0036C180 File Offset: 0x0036A380
 		public static WeaponBreach GetRootAsWeaponBreach(ByteBuffer _bb, WeaponBreach obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600E760 RID: 59232 RVA: 0x003413E5 File Offset: 0x0033F5E5
+		// Token: 0x0600F4CE RID: 62670 RVA: 0x0036C19D File Offset: 0x0036A39D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600E761 RID: 59233 RVA: 0x003413F4 File Offset: 0x0033F5F4
+		// Token: 0x0600F4CF RID: 62671 RVA: 0x0036C1AC File Offset: 0x0036A3AC
 		public WeaponBreach __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003DB0 RID: 15792
-		// (get) Token: 0x0600E762 RID: 59234 RVA: 0x00341404 File Offset: 0x0033F604
+		// Token: 0x17004114 RID: 16660
+		// (get) Token: 0x0600F4D0 RID: 62672 RVA: 0x0036C1BC File Offset: 0x0036A3BC
 		public int Id
 		{
 			get
@@ -66,8 +66,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003DB1 RID: 15793
-		// (get) Token: 0x0600E763 RID: 59235 RVA: 0x00341440 File Offset: 0x0033F640
+		// Token: 0x17004115 RID: 16661
+		// (get) Token: 0x0600F4D1 RID: 62673 RVA: 0x0036C1F8 File Offset: 0x0036A3F8
 		public int BreachId
 		{
 			get
@@ -81,8 +81,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003DB2 RID: 15794
-		// (get) Token: 0x0600E764 RID: 59236 RVA: 0x0034147C File Offset: 0x0033F67C
+		// Token: 0x17004116 RID: 16662
+		// (get) Token: 0x0600F4D2 RID: 62674 RVA: 0x0036C234 File Offset: 0x0036A434
 		public int Level
 		{
 			get
@@ -96,8 +96,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003DB3 RID: 15795
-		// (get) Token: 0x0600E765 RID: 59237 RVA: 0x003414B8 File Offset: 0x0033F6B8
+		// Token: 0x17004117 RID: 16663
+		// (get) Token: 0x0600F4D3 RID: 62675 RVA: 0x0036C270 File Offset: 0x0036A470
 		public int ConditionId
 		{
 			get
@@ -111,8 +111,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003DB4 RID: 15796
-		// (get) Token: 0x0600E766 RID: 59238 RVA: 0x003414F8 File Offset: 0x0033F6F8
+		// Token: 0x17004118 RID: 16664
+		// (get) Token: 0x0600F4D4 RID: 62676 RVA: 0x0036C2B0 File Offset: 0x0036A4B0
 		public int LevelLimit
 		{
 			get
@@ -126,7 +126,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E767 RID: 59239 RVA: 0x00341538 File Offset: 0x0033F738
+		// Token: 0x0600F4D5 RID: 62677 RVA: 0x0036C2F0 File Offset: 0x0036A4F0
 		public DicIntInt? Consume(int j)
 		{
 			int num = this.__p.__offset(14);
@@ -137,8 +137,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17003DB5 RID: 15797
-		// (get) Token: 0x0600E768 RID: 59240 RVA: 0x0034159C File Offset: 0x0033F79C
+		// Token: 0x17004119 RID: 16665
+		// (get) Token: 0x0600F4D6 RID: 62678 RVA: 0x0036C354 File Offset: 0x0036A554
 		public int ConsumeLength
 		{
 			get
@@ -152,8 +152,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003DB6 RID: 15798
-		// (get) Token: 0x0600E769 RID: 59241 RVA: 0x003415C8 File Offset: 0x0033F7C8
+		// Token: 0x1700411A RID: 16666
+		// (get) Token: 0x0600F4D7 RID: 62679 RVA: 0x0036C380 File Offset: 0x0036A580
 		public int GoldConsume
 		{
 			get
@@ -167,24 +167,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E76A RID: 59242 RVA: 0x00341608 File Offset: 0x0033F808
+		// Token: 0x0600F4D8 RID: 62680 RVA: 0x0036C3C0 File Offset: 0x0036A5C0
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用ConsumeFrozenDict()缓存字典，遍历请使用ConsumeIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> Consume()
+		public Dictionary<int, int> Consume()
 		{
 			return this.ConsumeIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x0600E76B RID: 59243 RVA: 0x0034165E File Offset: 0x0033F85E
+		// Token: 0x0600F4D9 RID: 62681 RVA: 0x0036C416 File Offset: 0x0036A616
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> ConsumeIter()
+		public IEnumerable<DicIntInt> ConsumeIter()
 		{
 			WeaponBreach.<ConsumeIter>d__24 <ConsumeIter>d__ = new WeaponBreach.<ConsumeIter>d__24(-2);
 			<ConsumeIter>d__.<>3__<>4__this = this;
 			return <ConsumeIter>d__;
 		}
 
-		// Token: 0x0600E76C RID: 59244 RVA: 0x00341674 File Offset: 0x0033F874
+		// Token: 0x0600F4DA RID: 62682 RVA: 0x0036C42C File Offset: 0x0036A62C
 		public int? GetConsume(int key)
 		{
 			this.EnsureConsumeCacheIfNeeded();
@@ -196,7 +195,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x0600E76D RID: 59245 RVA: 0x003416A8 File Offset: 0x0033F8A8
+		// Token: 0x0600F4DB RID: 62683 RVA: 0x0036C460 File Offset: 0x0036A660
 		private void EnsureConsumeCacheIfNeeded()
 		{
 			if (this.ConsumeCache != null)
@@ -206,18 +205,18 @@ namespace Aki.Config
 			this.ConsumeCache = this.ConsumeIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x0600E76E RID: 59246 RVA: 0x0034170E File Offset: 0x0033F90E
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetConsumeFrozenDict(int key)
+		// Token: 0x0600F4DC RID: 62684 RVA: 0x0036C4C6 File Offset: 0x0036A6C6
+		[NullableContext(1)]
+		public FrozenDictionary<int, int> GetConsumeFrozenDict()
 		{
 			this.EnsureConsumeCacheIfNeeded();
 			return this.ConsumeCache;
 		}
 
-		// Token: 0x040052DB RID: 21211
+		// Token: 0x0400591E RID: 22814
 		private Table __p;
 
-		// Token: 0x040052DC RID: 21212
+		// Token: 0x0400591F RID: 22815
 		[Nullable(2)]
 		private FrozenDictionary<int, int> ConsumeCache;
 	}

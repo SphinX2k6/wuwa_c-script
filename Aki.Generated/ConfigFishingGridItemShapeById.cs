@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020002DA RID: 730
+	// Token: 0x020002EF RID: 751
 	public class ConfigFishingGridItemShapeById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001121 RID: 4385 RVA: 0x000BA3F8 File Offset: 0x000B85F8
+		// Token: 0x0600119F RID: 4511 RVA: 0x000C0904 File Offset: 0x000BEB04
 		static ConfigFishingGridItemShapeById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigFishingGridItemShapeById.CreateStaticDefaultValue), new Action(ConfigFishingGridItemShapeById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001122 RID: 4386 RVA: 0x000BA418 File Offset: 0x000B8618
+		// Token: 0x060011A0 RID: 4512 RVA: 0x000C0924 File Offset: 0x000BEB24
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigFishingGridItemShapeById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001123 RID: 4387 RVA: 0x000BA497 File Offset: 0x000B8697
+		// Token: 0x060011A1 RID: 4513 RVA: 0x000C09A3 File Offset: 0x000BEBA3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigFishingGridItemShapeById.LogPair = null;
 			ConfigFishingGridItemShapeById.HandleId = 0;
 		}
 
-		// Token: 0x06001124 RID: 4388 RVA: 0x000BA4A5 File Offset: 0x000B86A5
+		// Token: 0x060011A2 RID: 4514 RVA: 0x000C09B1 File Offset: 0x000BEBB1
 		public static void Init()
 		{
 			ConfigFishingGridItemShapeById.HandleId = ConfigCommon.InitDataStatement(ConfigFishingGridItemShapeById.HandleId, "db_fishinggriditemshape.db", "select BinData from `FishingGridItemShape` where Id=?");
 		}
 
-		// Token: 0x06001125 RID: 4389 RVA: 0x000BA4C0 File Offset: 0x000B86C0
+		// Token: 0x060011A3 RID: 4515 RVA: 0x000C09CC File Offset: 0x000BEBCC
 		public static FishingGridItemShape? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigFishingGridItemShapeById.HandleId, ConfigFishingGridItemShapeById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new FishingGridItemShape?(rootAsFishingGridItemShape);
 		}
 
-		// Token: 0x040013DA RID: 5082
+		// Token: 0x0400146D RID: 5229
 		private const string DB = "db_fishinggriditemshape.db";
 
-		// Token: 0x040013DB RID: 5083
+		// Token: 0x0400146E RID: 5230
 		private const string FILE = "k.可视化编辑/c.Csv/g.格子道具形状/*.csv*";
 
-		// Token: 0x040013DC RID: 5084
+		// Token: 0x0400146F RID: 5231
 		private const string TABLE = "FishingGridItemShape";
 
-		// Token: 0x040013DD RID: 5085
+		// Token: 0x04001470 RID: 5232
 		private const string COMMAND = "select BinData from `FishingGridItemShape` where Id=?";
 
-		// Token: 0x040013DE RID: 5086
+		// Token: 0x04001471 RID: 5233
 		private const string KEY_PREFIX = "FishingGridItemShapeById";
 
-		// Token: 0x040013DF RID: 5087
+		// Token: 0x04001472 RID: 5234
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040013E0 RID: 5088
+		// Token: 0x04001473 RID: 5235
 		private static int HandleId;
 	}
 }

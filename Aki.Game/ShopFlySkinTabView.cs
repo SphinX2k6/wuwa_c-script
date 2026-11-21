@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002376 RID: 9078
+// Token: 0x0200185B RID: 6235
 public class ShopFlySkinTabView : UiTabViewBase, IUiTabViewRefresh
 {
-	// Token: 0x06012228 RID: 74280 RVA: 0x0047490E File Offset: 0x00472B0E
+	// Token: 0x0600F6D8 RID: 63192 RVA: 0x00481A8E File Offset: 0x0047FC8E
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -19,7 +19,7 @@ public class ShopFlySkinTabView : UiTabViewBase, IUiTabViewRefresh
 		};
 	}
 
-	// Token: 0x06012229 RID: 74281 RVA: 0x00474948 File Offset: 0x00472B48
+	// Token: 0x0600F6D9 RID: 63193 RVA: 0x00481AC8 File Offset: 0x0047FCC8
 	protected override void OnStart()
 	{
 		this.CurrentShopId = (int)(this.ExtraParams ?? 0);
@@ -27,20 +27,20 @@ public class ShopFlySkinTabView : UiTabViewBase, IUiTabViewRefresh
 		this.Layout = new GenericLayout<FlySkinItemContent, FlySkinItemContentData>(base.GetHorizontalLayout(0), new Func<FlySkinItemContent>(this.OnCreateItem), null, false, true);
 	}
 
-	// Token: 0x0601222A RID: 74282 RVA: 0x004749AC File Offset: 0x00472BAC
+	// Token: 0x0600F6DA RID: 63194 RVA: 0x00481B2C File Offset: 0x0047FD2C
 	[NullableContext(1)]
 	private FlySkinItemContent OnCreateItem()
 	{
 		return new FlySkinItemContent();
 	}
 
-	// Token: 0x0601222B RID: 74283 RVA: 0x004749B3 File Offset: 0x00472BB3
+	// Token: 0x0600F6DB RID: 63195 RVA: 0x00481B33 File Offset: 0x0047FD33
 	protected override void OnBeforeShow()
 	{
 		this.RefreshLayout();
 	}
 
-	// Token: 0x0601222C RID: 74284 RVA: 0x004749BC File Offset: 0x00472BBC
+	// Token: 0x0600F6DC RID: 63196 RVA: 0x00481B3C File Offset: 0x0047FD3C
 	private void RefreshLayout()
 	{
 		List<PayShopGoods> payShopTabData = PayShopModel.Instance.GetPayShopTabData((PayShopDefine.EPayShopTabType)this.CurrentShopId, this.TabId, true);
@@ -58,19 +58,19 @@ public class ShopFlySkinTabView : UiTabViewBase, IUiTabViewRefresh
 		this.Layout.RefreshByData(list, null, true);
 	}
 
-	// Token: 0x0601222D RID: 74285 RVA: 0x00474A36 File Offset: 0x00472C36
+	// Token: 0x0600F6DD RID: 63197 RVA: 0x00481BB6 File Offset: 0x0047FDB6
 	[NullableContext(2)]
 	public void RefreshView(object @params)
 	{
 	}
 
-	// Token: 0x0400891A RID: 35098
+	// Token: 0x04008A5F RID: 35423
 	private int CurrentShopId;
 
-	// Token: 0x0400891B RID: 35099
+	// Token: 0x04008A60 RID: 35424
 	private int TabId;
 
-	// Token: 0x0400891C RID: 35100
+	// Token: 0x04008A61 RID: 35425
 	[Nullable(new byte[]
 	{
 		2,
@@ -79,12 +79,12 @@ public class ShopFlySkinTabView : UiTabViewBase, IUiTabViewRefresh
 	})]
 	private GenericLayout<FlySkinItemContent, FlySkinItemContentData> Layout;
 
-	// Token: 0x02008913 RID: 35091
+	// Token: 0x02007A9D RID: 31389
 	private enum EComponent
 	{
-		// Token: 0x0402C8BB RID: 182459
+		// Token: 0x04027BD3 RID: 162771
 		HorizontalLayout,
-		// Token: 0x0402C8BC RID: 182460
+		// Token: 0x04027BD4 RID: 162772
 		Item
 	}
 }

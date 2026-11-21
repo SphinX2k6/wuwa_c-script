@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020075C2 RID: 30146
+	// Token: 0x02007DBB RID: 32187
 	public struct IVisualNovelPerformanceStopScreenEffect : IFlatbufferObject
 	{
-		// Token: 0x1700E4EE RID: 58606
-		// (get) Token: 0x06036E5E RID: 224862 RVA: 0x00773B04 File Offset: 0x00771D04
+		// Token: 0x1700F11B RID: 61723
+		// (get) Token: 0x0603A28F RID: 238223 RVA: 0x007D7238 File Offset: 0x007D5438
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036E5F RID: 224863 RVA: 0x00773B11 File Offset: 0x00771D11
+		// Token: 0x0603A290 RID: 238224 RVA: 0x007D7245 File Offset: 0x007D5445
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06036E60 RID: 224864 RVA: 0x00773B18 File Offset: 0x00771D18
+		// Token: 0x0603A291 RID: 238225 RVA: 0x007D724C File Offset: 0x007D544C
 		public static IVisualNovelPerformanceStopScreenEffect GetRootAsIVisualNovelPerformanceStopScreenEffect(ByteBuffer _bb)
 		{
 			return IVisualNovelPerformanceStopScreenEffect.GetRootAsIVisualNovelPerformanceStopScreenEffect(_bb, default(IVisualNovelPerformanceStopScreenEffect));
 		}
 
-		// Token: 0x06036E61 RID: 224865 RVA: 0x00773B34 File Offset: 0x00771D34
+		// Token: 0x0603A292 RID: 238226 RVA: 0x007D7268 File Offset: 0x007D5468
 		public static IVisualNovelPerformanceStopScreenEffect GetRootAsIVisualNovelPerformanceStopScreenEffect(ByteBuffer _bb, IVisualNovelPerformanceStopScreenEffect obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06036E62 RID: 224866 RVA: 0x00773B51 File Offset: 0x00771D51
+		// Token: 0x0603A293 RID: 238227 RVA: 0x007D7285 File Offset: 0x007D5485
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06036E63 RID: 224867 RVA: 0x00773B60 File Offset: 0x00771D60
+		// Token: 0x0603A294 RID: 238228 RVA: 0x007D7294 File Offset: 0x007D5494
 		public IVisualNovelPerformanceStopScreenEffect __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E4EF RID: 58607
-		// (get) Token: 0x06036E64 RID: 224868 RVA: 0x00773B70 File Offset: 0x00771D70
+		// Token: 0x1700F11C RID: 61724
+		// (get) Token: 0x0603A295 RID: 238229 RVA: 0x007D72A4 File Offset: 0x007D54A4
 		public EVisualNovelPerformanceType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E4F0 RID: 58608
-		// (get) Token: 0x06036E65 RID: 224869 RVA: 0x00773BAC File Offset: 0x00771DAC
+		// Token: 0x1700F11D RID: 61725
+		// (get) Token: 0x0603A296 RID: 238230 RVA: 0x007D72E0 File Offset: 0x007D54E0
 		public float StartTime
 		{
 			get
@@ -77,9 +77,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E4F1 RID: 58609
-		// (get) Token: 0x06036E66 RID: 224870 RVA: 0x00773BEC File Offset: 0x00771DEC
-		public string ScreenEffectDa
+		// Token: 0x1700F11E RID: 61726
+		// (get) Token: 0x0603A297 RID: 238231 RVA: 0x007D7320 File Offset: 0x007D5520
+		public IVisualNovelStopScreenEffectPersistent? EffectConfig
 		{
 			get
 			{
@@ -88,24 +88,12 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 				{
 					return null;
 				}
-				return this.__p.__string(num + this.__p.bb_pos);
+				return new IVisualNovelStopScreenEffectPersistent?(default(IVisualNovelStopScreenEffectPersistent).__assign(this.__p.__indirect(num + this.__p.bb_pos), this.__p.bb));
 			}
 		}
 
-		// Token: 0x06036E67 RID: 224871 RVA: 0x00773C23 File Offset: 0x00771E23
-		public Span<byte> GetScreenEffectDaBytes()
-		{
-			return this.__p.__vector_as_span<byte>(8, 1);
-		}
-
-		// Token: 0x06036E68 RID: 224872 RVA: 0x00773C32 File Offset: 0x00771E32
-		public byte[] GetScreenEffectDaArray()
-		{
-			return this.__p.__vector_as_array<byte>(8);
-		}
-
-		// Token: 0x1700E4F2 RID: 58610
-		// (get) Token: 0x06036E69 RID: 224873 RVA: 0x00773C40 File Offset: 0x00771E40
+		// Token: 0x1700F11F RID: 61727
+		// (get) Token: 0x0603A298 RID: 238232 RVA: 0x007D7380 File Offset: 0x007D5580
 		public byte NullMask
 		{
 			get
@@ -119,54 +107,54 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036E6A RID: 224874 RVA: 0x00773C7D File Offset: 0x00771E7D
-		public static Offset<IVisualNovelPerformanceStopScreenEffect> CreateIVisualNovelPerformanceStopScreenEffect(FlatBufferBuilder builder, EVisualNovelPerformanceType Type = EVisualNovelPerformanceType.Enter, float StartTime = 0f, StringOffset ScreenEffectDaOffset = default(StringOffset), byte NullMask = 0)
+		// Token: 0x0603A299 RID: 238233 RVA: 0x007D73BD File Offset: 0x007D55BD
+		public static Offset<IVisualNovelPerformanceStopScreenEffect> CreateIVisualNovelPerformanceStopScreenEffect(FlatBufferBuilder builder, EVisualNovelPerformanceType Type = EVisualNovelPerformanceType.Enter, float StartTime = 0f, Offset<IVisualNovelStopScreenEffectPersistent> EffectConfigOffset = default(Offset<IVisualNovelStopScreenEffectPersistent>), byte NullMask = 0)
 		{
 			builder.StartTable(4);
-			IVisualNovelPerformanceStopScreenEffect.AddScreenEffectDa(builder, ScreenEffectDaOffset);
+			IVisualNovelPerformanceStopScreenEffect.AddEffectConfig(builder, EffectConfigOffset);
 			IVisualNovelPerformanceStopScreenEffect.AddStartTime(builder, StartTime);
 			IVisualNovelPerformanceStopScreenEffect.AddNullMask(builder, NullMask);
 			IVisualNovelPerformanceStopScreenEffect.AddType(builder, Type);
 			return IVisualNovelPerformanceStopScreenEffect.EndIVisualNovelPerformanceStopScreenEffect(builder);
 		}
 
-		// Token: 0x06036E6B RID: 224875 RVA: 0x00773CA9 File Offset: 0x00771EA9
+		// Token: 0x0603A29A RID: 238234 RVA: 0x007D73E9 File Offset: 0x007D55E9
 		public static void StartIVisualNovelPerformanceStopScreenEffect(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06036E6C RID: 224876 RVA: 0x00773CB2 File Offset: 0x00771EB2
+		// Token: 0x0603A29B RID: 238235 RVA: 0x007D73F2 File Offset: 0x007D55F2
 		public static void AddType(FlatBufferBuilder builder, EVisualNovelPerformanceType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06036E6D RID: 224877 RVA: 0x00773CBD File Offset: 0x00771EBD
+		// Token: 0x0603A29C RID: 238236 RVA: 0x007D73FD File Offset: 0x007D55FD
 		public static void AddStartTime(FlatBufferBuilder builder, float startTime)
 		{
 			builder.AddFloat(1, startTime, 0.0);
 		}
 
-		// Token: 0x06036E6E RID: 224878 RVA: 0x00773CD0 File Offset: 0x00771ED0
-		public static void AddScreenEffectDa(FlatBufferBuilder builder, StringOffset screenEffectDaOffset)
+		// Token: 0x0603A29D RID: 238237 RVA: 0x007D7410 File Offset: 0x007D5610
+		public static void AddEffectConfig(FlatBufferBuilder builder, Offset<IVisualNovelStopScreenEffectPersistent> effectConfigOffset)
 		{
-			builder.AddOffset(2, screenEffectDaOffset.Value, 0);
+			builder.AddOffset(2, effectConfigOffset.Value, 0);
 		}
 
-		// Token: 0x06036E6F RID: 224879 RVA: 0x00773CE0 File Offset: 0x00771EE0
+		// Token: 0x0603A29E RID: 238238 RVA: 0x007D7420 File Offset: 0x007D5620
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x06036E70 RID: 224880 RVA: 0x00773CEB File Offset: 0x00771EEB
+		// Token: 0x0603A29F RID: 238239 RVA: 0x007D742B File Offset: 0x007D562B
 		public static Offset<IVisualNovelPerformanceStopScreenEffect> EndIVisualNovelPerformanceStopScreenEffect(FlatBufferBuilder builder)
 		{
 			return new Offset<IVisualNovelPerformanceStopScreenEffect>(builder.EndTable());
 		}
 
-		// Token: 0x06036E71 RID: 224881 RVA: 0x00773CF8 File Offset: 0x00771EF8
+		// Token: 0x0603A2A0 RID: 238240 RVA: 0x007D7438 File Offset: 0x007D5638
 		public IVisualNovelPerformanceStopScreenEffectT UnPack()
 		{
 			IVisualNovelPerformanceStopScreenEffectT visualNovelPerformanceStopScreenEffectT = new IVisualNovelPerformanceStopScreenEffectT();
@@ -174,27 +162,27 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return visualNovelPerformanceStopScreenEffectT;
 		}
 
-		// Token: 0x06036E72 RID: 224882 RVA: 0x00773D13 File Offset: 0x00771F13
+		// Token: 0x0603A2A1 RID: 238241 RVA: 0x007D7454 File Offset: 0x007D5654
 		public void UnPackTo(IVisualNovelPerformanceStopScreenEffectT _o)
 		{
 			_o.Type = this.Type;
 			_o.StartTime = this.StartTime;
-			_o.ScreenEffectDa = this.ScreenEffectDa;
+			_o.EffectConfig = ((this.EffectConfig != null) ? this.EffectConfig.Value.UnPack() : null);
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06036E73 RID: 224883 RVA: 0x00773D48 File Offset: 0x00771F48
+		// Token: 0x0603A2A2 RID: 238242 RVA: 0x007D74B4 File Offset: 0x007D56B4
 		public static Offset<IVisualNovelPerformanceStopScreenEffect> Pack(FlatBufferBuilder builder, IVisualNovelPerformanceStopScreenEffectT _o)
 		{
 			if (_o == null)
 			{
 				return default(Offset<IVisualNovelPerformanceStopScreenEffect>);
 			}
-			StringOffset screenEffectDaOffset = (_o.ScreenEffectDa == null) ? default(StringOffset) : builder.CreateString(_o.ScreenEffectDa);
-			return IVisualNovelPerformanceStopScreenEffect.CreateIVisualNovelPerformanceStopScreenEffect(builder, _o.Type, _o.StartTime, screenEffectDaOffset, _o.NullMask);
+			Offset<IVisualNovelStopScreenEffectPersistent> effectConfigOffset = (_o.EffectConfig == null) ? default(Offset<IVisualNovelStopScreenEffectPersistent>) : IVisualNovelStopScreenEffectPersistent.Pack(builder, _o.EffectConfig);
+			return IVisualNovelPerformanceStopScreenEffect.CreateIVisualNovelPerformanceStopScreenEffect(builder, _o.Type, _o.StartTime, effectConfigOffset, _o.NullMask);
 		}
 
-		// Token: 0x04012514 RID: 75028
+		// Token: 0x04013547 RID: 79175
 		private Table __p;
 	}
 }

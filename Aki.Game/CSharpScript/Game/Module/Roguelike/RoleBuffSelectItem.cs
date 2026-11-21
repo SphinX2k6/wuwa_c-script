@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E3A RID: 20026
+	// Token: 0x02003E03 RID: 15875
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,33 +18,33 @@ namespace CSharpScript.Game.Module.Roguelike
 	})]
 	public class RoleBuffSelectItem : GridProxyAbstract<RogueGainEntry>
 	{
-		// Token: 0x06033A00 RID: 211456 RVA: 0x00C14FDD File Offset: 0x00C131DD
+		// Token: 0x0602886B RID: 165995 RVA: 0x00B5E505 File Offset: 0x00B5C705
 		public override void Refresh(RogueGainEntry data, bool isSelected, int gridIndex)
 		{
 			this.Update(data);
 			base.GetExtendToggle(0).SetToggleState(isSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x06033A01 RID: 211457 RVA: 0x00C14FFD File Offset: 0x00C131FD
+		// Token: 0x0602886C RID: 165996 RVA: 0x00B5E525 File Offset: 0x00B5C725
 		public void Update(RogueGainEntry rogueGainEntry)
 		{
 			this.RogueGainEntry = rogueGainEntry;
 			this.RefreshPanel();
 		}
 
-		// Token: 0x06033A02 RID: 211458 RVA: 0x00C1500C File Offset: 0x00C1320C
+		// Token: 0x0602886D RID: 165997 RVA: 0x00B5E534 File Offset: 0x00B5C734
 		public void SetToggleStateChangeCallback(Action<int, bool> callback)
 		{
 			this.ToggleStateChangeCallback = callback;
 		}
 
-		// Token: 0x06033A03 RID: 211459 RVA: 0x00C15015 File Offset: 0x00C13215
+		// Token: 0x0602886E RID: 165998 RVA: 0x00B5E53D File Offset: 0x00B5C73D
 		public bool IsSelect()
 		{
 			return base.GetExtendToggle(0).GetToggleState() == EToggleState.ETT_Checked;
 		}
 
-		// Token: 0x06033A04 RID: 211460 RVA: 0x00C15028 File Offset: 0x00C13228
+		// Token: 0x0602886F RID: 165999 RVA: 0x00B5E550 File Offset: 0x00B5C750
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06033A05 RID: 211461 RVA: 0x00C15196 File Offset: 0x00C13396
+		// Token: 0x06028870 RID: 166000 RVA: 0x00B5E6BE File Offset: 0x00B5C8BE
 		private void SelfToggle(EToggleState state)
 		{
 			Action<int, bool> toggleStateChangeCallback = this.ToggleStateChangeCallback;
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			toggleStateChangeCallback(base.GridIndex, state == EToggleState.ETT_Checked);
 		}
 
-		// Token: 0x06033A06 RID: 211462 RVA: 0x00C151B2 File Offset: 0x00C133B2
+		// Token: 0x06028871 RID: 166001 RVA: 0x00B5E6DA File Offset: 0x00B5C8DA
 		private void OnClickBtnDetail()
 		{
 			Action<int> onClickBtnDetailCallback = this.OnClickBtnDetailCallback;
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			onClickBtnDetailCallback(base.GridIndex);
 		}
 
-		// Token: 0x06033A07 RID: 211463 RVA: 0x00C151CC File Offset: 0x00C133CC
+		// Token: 0x06028872 RID: 166002 RVA: 0x00B5E6F4 File Offset: 0x00B5C8F4
 		public void RefreshPanel()
 		{
 			RogueCharacterBuff? rogueCharacterBuffConfig = RoguelikeConfig.Instance.GetRogueCharacterBuffConfig(this.RogueGainEntry.ConfigId);
@@ -139,53 +139,53 @@ namespace CSharpScript.Game.Module.Roguelike
 			base.GetItem(4).SetUIActive(this.RogueGainEntry.IsNew);
 		}
 
-		// Token: 0x06033A08 RID: 211464 RVA: 0x00C15364 File Offset: 0x00C13564
+		// Token: 0x06028873 RID: 166003 RVA: 0x00B5E88C File Offset: 0x00B5CA8C
 		public override void OnSelected(bool fireEvent)
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_Checked, fireEvent, false, false);
 		}
 
-		// Token: 0x06033A09 RID: 211465 RVA: 0x00C15377 File Offset: 0x00C13577
+		// Token: 0x06028874 RID: 166004 RVA: 0x00B5E89F File Offset: 0x00B5CA9F
 		public override void OnDeselected(bool fireEvent)
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, fireEvent, false, false);
 		}
 
-		// Token: 0x0401B616 RID: 112150
+		// Token: 0x04015FE9 RID: 90089
 		[Nullable(2)]
 		public RogueGainEntry RogueGainEntry;
 
-		// Token: 0x0401B617 RID: 112151
+		// Token: 0x04015FEA RID: 90090
 		[Nullable(2)]
 		private Action<int, bool> ToggleStateChangeCallback;
 
-		// Token: 0x0401B618 RID: 112152
+		// Token: 0x04015FEB RID: 90091
 		[Nullable(2)]
 		public Action<int> OnClickBtnDetailCallback;
 
-		// Token: 0x0200AFEF RID: 45039
+		// Token: 0x02009A21 RID: 39457
 		[NullableContext(0)]
 		public static class ERoleBuffSelectItemCom
 		{
-			// Token: 0x0403569C RID: 218780
+			// Token: 0x040300CC RID: 196812
 			public const int SelfToggle = 0;
 
-			// Token: 0x0403569D RID: 218781
+			// Token: 0x040300CD RID: 196813
 			public const int DescText = 1;
 
-			// Token: 0x0403569E RID: 218782
+			// Token: 0x040300CE RID: 196814
 			public const int SpriteIcon = 2;
 
-			// Token: 0x0403569F RID: 218783
+			// Token: 0x040300CF RID: 196815
 			public const int TxtName = 3;
 
-			// Token: 0x040356A0 RID: 218784
+			// Token: 0x040300D0 RID: 196816
 			public const int NewItem = 4;
 
-			// Token: 0x040356A1 RID: 218785
+			// Token: 0x040300D1 RID: 196817
 			public const int BtnDetail = 5;
 
-			// Token: 0x040356A2 RID: 218786
+			// Token: 0x040300D2 RID: 196818
 			public const int TxtClassify = 6;
 		}
 	}

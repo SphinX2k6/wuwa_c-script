@@ -1,138 +1,138 @@
 ﻿using System;
 
-// Token: 0x0200188C RID: 6284
+// Token: 0x02000D45 RID: 3397
 public enum EPhantomSortWayType
 {
-	// Token: 0x04005312 RID: 21266
+	// Token: 0x040053BD RID: 21437
 	Level = 1,
-	// Token: 0x04005313 RID: 21267
+	// Token: 0x040053BE RID: 21438
 	Breach,
-	// Token: 0x04005314 RID: 21268
+	// Token: 0x040053BF RID: 21439
 	Quality,
-	// Token: 0x04005315 RID: 21269
+	// Token: 0x040053C0 RID: 21440
 	MonsterId,
-	// Token: 0x04005316 RID: 21270
+	// Token: 0x040053C1 RID: 21441
 	UniqueId,
-	// Token: 0x04005317 RID: 21271
+	// Token: 0x040053C2 RID: 21442
 	MainLife,
-	// Token: 0x04005318 RID: 21272
+	// Token: 0x040053C3 RID: 21443
 	MainLifePercentage,
-	// Token: 0x04005319 RID: 21273
+	// Token: 0x040053C4 RID: 21444
 	MainAttack,
-	// Token: 0x0400531A RID: 21274
+	// Token: 0x040053C5 RID: 21445
 	MainAttackPercentage,
-	// Token: 0x0400531B RID: 21275
+	// Token: 0x040053C6 RID: 21446
 	MainDefense,
-	// Token: 0x0400531C RID: 21276
+	// Token: 0x040053C7 RID: 21447
 	MainDefensePercentage,
-	// Token: 0x0400531D RID: 21277
+	// Token: 0x040053C8 RID: 21448
 	MainCrit,
-	// Token: 0x0400531E RID: 21278
+	// Token: 0x040053C9 RID: 21449
 	MainCritHurt,
-	// Token: 0x0400531F RID: 21279
+	// Token: 0x040053CA RID: 21450
 	MainTreat,
-	// Token: 0x04005320 RID: 21280
+	// Token: 0x040053CB RID: 21451
 	MainPhysicsHurt,
-	// Token: 0x04005321 RID: 21281
+	// Token: 0x040053CC RID: 21452
 	MainIceHurt,
-	// Token: 0x04005322 RID: 21282
+	// Token: 0x040053CD RID: 21453
 	MainFireHurt,
-	// Token: 0x04005323 RID: 21283
+	// Token: 0x040053CE RID: 21454
 	MainThunderHurt,
-	// Token: 0x04005324 RID: 21284
+	// Token: 0x040053CF RID: 21455
 	MainWindHurt,
-	// Token: 0x04005325 RID: 21285
+	// Token: 0x040053D0 RID: 21456
 	MainLightHurt,
-	// Token: 0x04005326 RID: 21286
+	// Token: 0x040053D1 RID: 21457
 	MainDarkHurt,
-	// Token: 0x04005327 RID: 21287
+	// Token: 0x040053D2 RID: 21458
 	MainEnergy,
-	// Token: 0x04005328 RID: 21288
+	// Token: 0x040053D3 RID: 21459
 	SubLife,
-	// Token: 0x04005329 RID: 21289
+	// Token: 0x040053D4 RID: 21460
 	SubLifePercentage,
-	// Token: 0x0400532A RID: 21290
+	// Token: 0x040053D5 RID: 21461
 	SubAttack,
-	// Token: 0x0400532B RID: 21291
+	// Token: 0x040053D6 RID: 21462
 	SubAttackPercentage,
-	// Token: 0x0400532C RID: 21292
+	// Token: 0x040053D7 RID: 21463
 	SubDefense,
-	// Token: 0x0400532D RID: 21293
+	// Token: 0x040053D8 RID: 21464
 	SubDefensePercentage,
-	// Token: 0x0400532E RID: 21294
+	// Token: 0x040053D9 RID: 21465
 	SubCrit,
-	// Token: 0x0400532F RID: 21295
+	// Token: 0x040053DA RID: 21466
 	SubCritHurt,
-	// Token: 0x04005330 RID: 21296
+	// Token: 0x040053DB RID: 21467
 	SubTreat,
-	// Token: 0x04005331 RID: 21297
+	// Token: 0x040053DC RID: 21468
 	SubPhysicsHurt,
-	// Token: 0x04005332 RID: 21298
+	// Token: 0x040053DD RID: 21469
 	SubIceHurt,
-	// Token: 0x04005333 RID: 21299
+	// Token: 0x040053DE RID: 21470
 	SubFireHurt,
-	// Token: 0x04005334 RID: 21300
+	// Token: 0x040053DF RID: 21471
 	SubThunderHurt,
-	// Token: 0x04005335 RID: 21301
+	// Token: 0x040053E0 RID: 21472
 	SubWindHurt,
-	// Token: 0x04005336 RID: 21302
+	// Token: 0x040053E1 RID: 21473
 	SubLightHurt,
-	// Token: 0x04005337 RID: 21303
+	// Token: 0x040053E2 RID: 21474
 	SubDarkHurt,
-	// Token: 0x04005338 RID: 21304
+	// Token: 0x040053E3 RID: 21475
 	SubEnergy,
-	// Token: 0x04005339 RID: 21305
+	// Token: 0x040053E4 RID: 21476
 	Exp,
-	// Token: 0x0400533A RID: 21306
+	// Token: 0x040053E5 RID: 21477
 	ExpItem,
-	// Token: 0x0400533B RID: 21307
+	// Token: 0x040053E6 RID: 21478
 	EquipState,
-	// Token: 0x0400533C RID: 21308
+	// Token: 0x040053E7 RID: 21479
 	CurrentRoleEquip,
-	// Token: 0x0400533D RID: 21309
+	// Token: 0x040053E8 RID: 21480
 	Lock,
-	// Token: 0x0400533E RID: 21310
+	// Token: 0x040053E9 RID: 21481
 	Rarity,
-	// Token: 0x0400533F RID: 21311
+	// Token: 0x040053EA RID: 21482
 	Skin,
-	// Token: 0x04005340 RID: 21312
+	// Token: 0x040053EB RID: 21483
 	SubComboHurt,
-	// Token: 0x04005341 RID: 21313
+	// Token: 0x040053EC RID: 21484
 	SubNormalHurt,
-	// Token: 0x04005342 RID: 21314
+	// Token: 0x040053ED RID: 21485
 	SubChargeHurt,
-	// Token: 0x04005343 RID: 21315
+	// Token: 0x040053EE RID: 21486
 	SubComboReleaseHurt,
-	// Token: 0x04005344 RID: 21316
+	// Token: 0x040053EF RID: 21487
 	DeprecateFirst,
-	// Token: 0x04005345 RID: 21317
+	// Token: 0x040053F0 RID: 21488
 	DeprecateLast,
-	// Token: 0x04005346 RID: 21318
+	// Token: 0x040053F1 RID: 21489
 	QualityFiveFirst,
-	// Token: 0x04005347 RID: 21319
+	// Token: 0x040053F2 RID: 21490
 	LevelOneFirst,
-	// Token: 0x04005348 RID: 21320
+	// Token: 0x040053F3 RID: 21491
 	SortGetExp,
-	// Token: 0x04005349 RID: 21321
+	// Token: 0x040053F4 RID: 21492
 	IdentifyNumHighFirst,
-	// Token: 0x0400534A RID: 21322
+	// Token: 0x040053F5 RID: 21493
 	NonEquipFirst,
-	// Token: 0x0400534B RID: 21323
+	// Token: 0x040053F6 RID: 21494
 	MainLifePercentage4C = 1001,
-	// Token: 0x0400534C RID: 21324
+	// Token: 0x040053F7 RID: 21495
 	MainLifePercentage3C,
-	// Token: 0x0400534D RID: 21325
+	// Token: 0x040053F8 RID: 21496
 	MainLifePercentage1C,
-	// Token: 0x0400534E RID: 21326
+	// Token: 0x040053F9 RID: 21497
 	MainAttackPercentage4C,
-	// Token: 0x0400534F RID: 21327
+	// Token: 0x040053FA RID: 21498
 	MainAttackPercentage3C,
-	// Token: 0x04005350 RID: 21328
+	// Token: 0x040053FB RID: 21499
 	MainAttackPercentage1C,
-	// Token: 0x04005351 RID: 21329
+	// Token: 0x040053FC RID: 21500
 	MainDefensePercentage4C,
-	// Token: 0x04005352 RID: 21330
+	// Token: 0x040053FD RID: 21501
 	MainDefensePercentage3C,
-	// Token: 0x04005353 RID: 21331
+	// Token: 0x040053FE RID: 21502
 	MainDefensePercentage1C
 }

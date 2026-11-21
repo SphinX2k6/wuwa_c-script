@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001057 RID: 4183
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001185 RID: 4485
 	public class IPlotHandBookNode
 	{
-		// Token: 0x06005DB6 RID: 23990 RVA: 0x000E2C70 File Offset: 0x000E0E70
+		// Token: 0x060063A8 RID: 25512 RVA: 0x000EFC44 File Offset: 0x000EDE44
 		private IPlotHandBookNode_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005DB7 RID: 23991 RVA: 0x000E2CA8 File Offset: 0x000E0EA8
+		// Token: 0x060063A9 RID: 25513 RVA: 0x000EFC7C File Offset: 0x000EDE7C
 		public static IPlotHandBookNode Create([Nullable(2)] IPlotHandBookNode instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005DB8 RID: 23992 RVA: 0x000E2CBB File Offset: 0x000E0EBB
+		// Token: 0x060063AA RID: 25514 RVA: 0x000EFC8F File Offset: 0x000EDE8F
 		public static IPlotHandBookNode CreateFromSetValue([Nullable(2)] IPlotHandBookNode_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005DB9 RID: 23993 RVA: 0x000E2CCE File Offset: 0x000E0ECE
+		// Token: 0x060063AB RID: 25515 RVA: 0x000EFCA2 File Offset: 0x000EDEA2
 		public IPlotHandBookNode_SetValue ToSetValue()
 		{
 			return new IPlotHandBookNode_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001EDA RID: 7898
-		// (get) Token: 0x06005DBA RID: 23994 RVA: 0x000E2CF9 File Offset: 0x000E0EF9
-		// (set) Token: 0x06005DBB RID: 23995 RVA: 0x000E2D24 File Offset: 0x000E0F24
+		// Token: 0x17002089 RID: 8329
+		// (get) Token: 0x060063AC RID: 25516 RVA: 0x000EFCCD File Offset: 0x000EDECD
+		// (set) Token: 0x060063AD RID: 25517 RVA: 0x000EFCF8 File Offset: 0x000EDEF8
 		public virtual string TidTip
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001EDB RID: 7899
-		// (get) Token: 0x06005DBC RID: 23996 RVA: 0x000E2D34 File Offset: 0x000E0F34
-		// (set) Token: 0x06005DBD RID: 23997 RVA: 0x000E2D95 File Offset: 0x000E0F95
+		// Token: 0x1700208A RID: 8330
+		// (get) Token: 0x060063AE RID: 25518 RVA: 0x000EFD08 File Offset: 0x000EDF08
+		// (set) Token: 0x060063AF RID: 25519 RVA: 0x000EFD69 File Offset: 0x000EDF69
 		public virtual IFlowStateIndex Flow
 		{
 			get
@@ -115,9 +113,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001EDC RID: 7900
-		// (get) Token: 0x06005DBE RID: 23998 RVA: 0x000E2DAA File Offset: 0x000E0FAA
-		// (set) Token: 0x06005DBF RID: 23999 RVA: 0x000E2DD5 File Offset: 0x000E0FD5
+		// Token: 0x1700208B RID: 8331
+		// (get) Token: 0x060063B0 RID: 25520 RVA: 0x000EFD7E File Offset: 0x000EDF7E
+		// (set) Token: 0x060063B1 RID: 25521 RVA: 0x000EFDA9 File Offset: 0x000EDFA9
 		public virtual bool IsHideUi
 		{
 			get
@@ -134,18 +132,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x0400386B RID: 14443
+		// Token: 0x04003BB3 RID: 15283
 		[Nullable(2)]
 		protected IPlotHandBookNode FbInstance;
 
-		// Token: 0x0400386C RID: 14444
+		// Token: 0x04003BB4 RID: 15284
 		[Nullable(2)]
 		protected IPlotHandBookNode_SetValue PocoInterface;
 
-		// Token: 0x0400386D RID: 14445
+		// Token: 0x04003BB5 RID: 15285
 		private IFlowStateIndex _FlowCache;
 
-		// Token: 0x0400386E RID: 14446
+		// Token: 0x04003BB6 RID: 15286
 		private bool _FlowInited;
 	}
 }

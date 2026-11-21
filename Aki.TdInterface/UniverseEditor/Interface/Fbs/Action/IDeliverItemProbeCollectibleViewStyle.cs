@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006570 RID: 25968
+	// Token: 0x02006BDE RID: 27614
 	public struct IDeliverItemProbeCollectibleViewStyle : IFlatbufferObject
 	{
-		// Token: 0x1700C0F7 RID: 49399
-		// (get) Token: 0x0602D0D8 RID: 184536 RVA: 0x0062EA01 File Offset: 0x0062CC01
+		// Token: 0x1700CA8B RID: 51851
+		// (get) Token: 0x0602F87A RID: 194682 RVA: 0x0067AE3C File Offset: 0x0067903C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D0D9 RID: 184537 RVA: 0x0062EA0E File Offset: 0x0062CC0E
+		// Token: 0x0602F87B RID: 194683 RVA: 0x0067AE49 File Offset: 0x00679049
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602D0DA RID: 184538 RVA: 0x0062EA18 File Offset: 0x0062CC18
+		// Token: 0x0602F87C RID: 194684 RVA: 0x0067AE50 File Offset: 0x00679050
 		public static IDeliverItemProbeCollectibleViewStyle GetRootAsIDeliverItemProbeCollectibleViewStyle(ByteBuffer _bb)
 		{
 			return IDeliverItemProbeCollectibleViewStyle.GetRootAsIDeliverItemProbeCollectibleViewStyle(_bb, default(IDeliverItemProbeCollectibleViewStyle));
 		}
 
-		// Token: 0x0602D0DB RID: 184539 RVA: 0x0062EA34 File Offset: 0x0062CC34
+		// Token: 0x0602F87D RID: 194685 RVA: 0x0067AE6C File Offset: 0x0067906C
 		public static IDeliverItemProbeCollectibleViewStyle GetRootAsIDeliverItemProbeCollectibleViewStyle(ByteBuffer _bb, IDeliverItemProbeCollectibleViewStyle obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602D0DC RID: 184540 RVA: 0x0062EA51 File Offset: 0x0062CC51
+		// Token: 0x0602F87E RID: 194686 RVA: 0x0067AE89 File Offset: 0x00679089
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602D0DD RID: 184541 RVA: 0x0062EA60 File Offset: 0x0062CC60
+		// Token: 0x0602F87F RID: 194687 RVA: 0x0067AE98 File Offset: 0x00679098
 		public IDeliverItemProbeCollectibleViewStyle __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C0F8 RID: 49400
-		// (get) Token: 0x0602D0DE RID: 184542 RVA: 0x0062EA70 File Offset: 0x0062CC70
+		// Token: 0x1700CA8C RID: 51852
+		// (get) Token: 0x0602F880 RID: 194688 RVA: 0x0067AEA8 File Offset: 0x006790A8
 		public EDeliverItemProbeCollectibleViewStyle Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D0DF RID: 184543 RVA: 0x0062EAAC File Offset: 0x0062CCAC
+		// Token: 0x0602F881 RID: 194689 RVA: 0x0067AEE4 File Offset: 0x006790E4
 		public static Offset<IDeliverItemProbeCollectibleViewStyle> CreateIDeliverItemProbeCollectibleViewStyle(FlatBufferBuilder builder, EDeliverItemProbeCollectibleViewStyle Type = EDeliverItemProbeCollectibleViewStyle.HandInItemStyle)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IDeliverItemProbeCollectibleViewStyle.EndIDeliverItemProbeCollectibleViewStyle(builder);
 		}
 
-		// Token: 0x0602D0E0 RID: 184544 RVA: 0x0062EAC2 File Offset: 0x0062CCC2
+		// Token: 0x0602F882 RID: 194690 RVA: 0x0067AEFA File Offset: 0x006790FA
 		public static void StartIDeliverItemProbeCollectibleViewStyle(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602D0E1 RID: 184545 RVA: 0x0062EACB File Offset: 0x0062CCCB
+		// Token: 0x0602F883 RID: 194691 RVA: 0x0067AF03 File Offset: 0x00679103
 		public static void AddType(FlatBufferBuilder builder, EDeliverItemProbeCollectibleViewStyle type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602D0E2 RID: 184546 RVA: 0x0062EAD6 File Offset: 0x0062CCD6
+		// Token: 0x0602F884 RID: 194692 RVA: 0x0067AF0E File Offset: 0x0067910E
 		public static Offset<IDeliverItemProbeCollectibleViewStyle> EndIDeliverItemProbeCollectibleViewStyle(FlatBufferBuilder builder)
 		{
 			return new Offset<IDeliverItemProbeCollectibleViewStyle>(builder.EndTable());
 		}
 
-		// Token: 0x0602D0E3 RID: 184547 RVA: 0x0062EAE4 File Offset: 0x0062CCE4
+		// Token: 0x0602F885 RID: 194693 RVA: 0x0067AF1C File Offset: 0x0067911C
 		public IDeliverItemProbeCollectibleViewStyleT UnPack()
 		{
 			IDeliverItemProbeCollectibleViewStyleT deliverItemProbeCollectibleViewStyleT = new IDeliverItemProbeCollectibleViewStyleT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return deliverItemProbeCollectibleViewStyleT;
 		}
 
-		// Token: 0x0602D0E4 RID: 184548 RVA: 0x0062EAFF File Offset: 0x0062CCFF
+		// Token: 0x0602F886 RID: 194694 RVA: 0x0067AF37 File Offset: 0x00679137
 		public void UnPackTo(IDeliverItemProbeCollectibleViewStyleT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602D0E5 RID: 184549 RVA: 0x0062EB10 File Offset: 0x0062CD10
+		// Token: 0x0602F887 RID: 194695 RVA: 0x0067AF48 File Offset: 0x00679148
 		public static Offset<IDeliverItemProbeCollectibleViewStyle> Pack(FlatBufferBuilder builder, IDeliverItemProbeCollectibleViewStyleT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IDeliverItemProbeCollectibleViewStyle.CreateIDeliverItemProbeCollectibleViewStyle(builder, _o.Type);
 		}
 
-		// Token: 0x04010BC6 RID: 68550
+		// Token: 0x040119E0 RID: 72160
 		private Table __p;
 	}
 }

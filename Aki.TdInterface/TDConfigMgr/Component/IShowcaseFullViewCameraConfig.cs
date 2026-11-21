@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006CC RID: 1740
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200076D RID: 1901
 	public class IShowcaseFullViewCameraConfig
 	{
-		// Token: 0x06002562 RID: 9570 RVA: 0x00064AF4 File Offset: 0x00062CF4
+		// Token: 0x06002882 RID: 10370 RVA: 0x0006BB64 File Offset: 0x00069D64
 		private IShowcaseFullViewCameraConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002563 RID: 9571 RVA: 0x00064B2C File Offset: 0x00062D2C
+		// Token: 0x06002883 RID: 10371 RVA: 0x0006BB9C File Offset: 0x00069D9C
 		public static IShowcaseFullViewCameraConfig Create([Nullable(2)] IShowcaseFullViewCameraConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002564 RID: 9572 RVA: 0x00064B3F File Offset: 0x00062D3F
+		// Token: 0x06002884 RID: 10372 RVA: 0x0006BBAF File Offset: 0x00069DAF
 		public static IShowcaseFullViewCameraConfig CreateFromSetValue([Nullable(2)] IShowcaseFullViewCameraConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002565 RID: 9573 RVA: 0x00064B52 File Offset: 0x00062D52
+		// Token: 0x06002885 RID: 10373 RVA: 0x0006BBC2 File Offset: 0x00069DC2
 		public IShowcaseFullViewCameraConfig_SetValue ToSetValue()
 		{
 			return new IShowcaseFullViewCameraConfig_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170009DE RID: 2526
-		// (get) Token: 0x06002566 RID: 9574 RVA: 0x00064B71 File Offset: 0x00062D71
-		// (set) Token: 0x06002567 RID: 9575 RVA: 0x00064BA0 File Offset: 0x00062DA0
+		// Token: 0x17000A9C RID: 2716
+		// (get) Token: 0x06002886 RID: 10374 RVA: 0x0006BBE1 File Offset: 0x00069DE1
+		// (set) Token: 0x06002887 RID: 10375 RVA: 0x0006BC10 File Offset: 0x00069E10
 		public virtual float Fov
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009DF RID: 2527
-		// (get) Token: 0x06002568 RID: 9576 RVA: 0x00064BB0 File Offset: 0x00062DB0
-		// (set) Token: 0x06002569 RID: 9577 RVA: 0x00064C11 File Offset: 0x00062E11
+		// Token: 0x17000A9D RID: 2717
+		// (get) Token: 0x06002888 RID: 10376 RVA: 0x0006BC20 File Offset: 0x00069E20
+		// (set) Token: 0x06002889 RID: 10377 RVA: 0x0006BC81 File Offset: 0x00069E81
 		public virtual PosAndRot PosAndRot
 		{
 			get
@@ -114,18 +112,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001986 RID: 6534
+		// Token: 0x04001B85 RID: 7045
 		[Nullable(2)]
 		protected IShowcaseFullViewCameraConfig FbInstance;
 
-		// Token: 0x04001987 RID: 6535
+		// Token: 0x04001B86 RID: 7046
 		[Nullable(2)]
 		protected IShowcaseFullViewCameraConfig_SetValue PocoInterface;
 
-		// Token: 0x04001988 RID: 6536
+		// Token: 0x04001B87 RID: 7047
 		private PosAndRot _PosAndRotCache;
 
-		// Token: 0x04001989 RID: 6537
+		// Token: 0x04001B88 RID: 7048
 		private bool _PosAndRotInited;
 	}
 }

@@ -12,18 +12,18 @@ using UnrealEngine;
 
 namespace ActivityNamespace.MapTravel.MapTravelSubViewQuest
 {
-	// Token: 0x020044DE RID: 17630
+	// Token: 0x02002F6B RID: 12139
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class QuestCardItem : GridProxyAbstract<int>
 	{
-		// Token: 0x0602D6C0 RID: 186048 RVA: 0x00A40735 File Offset: 0x00A3E935
+		// Token: 0x0601CBFE RID: 117758 RVA: 0x008C6399 File Offset: 0x008C4599
 		public QuestCardItem(ActivityMapTravelData activityBaseData)
 		{
 			this.ActivityBaseData = activityBaseData;
 		}
 
-		// Token: 0x0602D6C1 RID: 186049 RVA: 0x00A40744 File Offset: 0x00A3E944
+		// Token: 0x0601CBFF RID: 117759 RVA: 0x008C63A8 File Offset: 0x008C45A8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -52,13 +52,13 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewQuest
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0602D6C2 RID: 186050 RVA: 0x00A4086E File Offset: 0x00A3EA6E
+		// Token: 0x0601CC00 RID: 117760 RVA: 0x008C64D2 File Offset: 0x008C46D2
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x0602D6C3 RID: 186051 RVA: 0x00A40884 File Offset: 0x00A3EA84
+		// Token: 0x0601CC01 RID: 117761 RVA: 0x008C64E8 File Offset: 0x008C46E8
 		public override void Refresh(int phantomTaskId, bool isSelected, int gridIndex)
 		{
 			this.PhantomTaskId = phantomTaskId;
@@ -77,13 +77,13 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewQuest
 			this.TryPlayItem();
 		}
 
-		// Token: 0x0602D6C4 RID: 186052 RVA: 0x00A40922 File Offset: 0x00A3EB22
+		// Token: 0x0601CC02 RID: 117762 RVA: 0x008C6586 File Offset: 0x008C4786
 		private void RefreshNewState()
 		{
 			base.GetItem(3).SetUIActive(this.ActivityBaseData.GetPhantomQuestNewState(this.PhantomTaskId));
 		}
 
-		// Token: 0x0602D6C5 RID: 186053 RVA: 0x00A40944 File Offset: 0x00A3EB44
+		// Token: 0x0601CC03 RID: 117763 RVA: 0x008C65A8 File Offset: 0x008C47A8
 		private void TryPlayItem()
 		{
 			bool flag = false;
@@ -103,14 +103,14 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewQuest
 			}
 		}
 
-		// Token: 0x0602D6C6 RID: 186054 RVA: 0x00A409DC File Offset: 0x00A3EBDC
+		// Token: 0x0601CC04 RID: 117764 RVA: 0x008C6640 File Offset: 0x008C4840
 		private EQuestState GetQuestState()
 		{
 			TravelPhantomQuest? questConfig = ActivityMapTravelConfig.Instance.GetQuestConfig(this.PhantomTaskId);
 			return QuestNewModel.Instance.GetQuestState(questConfig.Value.QuestId);
 		}
 
-		// Token: 0x0602D6C7 RID: 186055 RVA: 0x00A40A14 File Offset: 0x00A3EC14
+		// Token: 0x0601CC05 RID: 117765 RVA: 0x008C6678 File Offset: 0x008C4878
 		private void OnClickedButton()
 		{
 			bool flag = this.GetQuestState() > EQuestState.InActive;
@@ -131,38 +131,38 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewQuest
 			ScrollingTipsController.Instance.ShowTipsByTextId(value.UnlockTips, Array.Empty<object>());
 		}
 
-		// Token: 0x170073A9 RID: 29609
-		// (get) Token: 0x0602D6C8 RID: 186056 RVA: 0x00A40AB4 File Offset: 0x00A3ECB4
-		// (set) Token: 0x0602D6C9 RID: 186057 RVA: 0x00A40ABC File Offset: 0x00A3ECBC
+		// Token: 0x17002D7B RID: 11643
+		// (get) Token: 0x0601CC06 RID: 117766 RVA: 0x008C6718 File Offset: 0x008C4918
+		// (set) Token: 0x0601CC07 RID: 117767 RVA: 0x008C6720 File Offset: 0x008C4920
 		protected ActivityMapTravelData ActivityBaseData { get; set; }
 
-		// Token: 0x0401849F RID: 99487
+		// Token: 0x0400F247 RID: 62023
 		protected int PhantomTaskId;
 
-		// Token: 0x040184A0 RID: 99488
+		// Token: 0x0400F248 RID: 62024
 		[Nullable(2)]
 		protected LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200A734 RID: 42804
+		// Token: 0x02008C08 RID: 35848
 		[NullableContext(0)]
 		private class ECardDefine
 		{
-			// Token: 0x040327E6 RID: 206822
+			// Token: 0x0402C5AF RID: 181679
 			public const int Button = 0;
 
-			// Token: 0x040327E7 RID: 206823
+			// Token: 0x0402C5B0 RID: 181680
 			public const int TexMain = 1;
 
-			// Token: 0x040327E8 RID: 206824
+			// Token: 0x0402C5B1 RID: 181681
 			public const int ItemDone = 2;
 
-			// Token: 0x040327E9 RID: 206825
+			// Token: 0x0402C5B2 RID: 181682
 			public const int ItemNew = 3;
 
-			// Token: 0x040327EA RID: 206826
+			// Token: 0x0402C5B3 RID: 181683
 			public const int TxtName = 4;
 
-			// Token: 0x040327EB RID: 206827
+			// Token: 0x0402C5B4 RID: 181684
 			public const int TexLock = 5;
 		}
 	}

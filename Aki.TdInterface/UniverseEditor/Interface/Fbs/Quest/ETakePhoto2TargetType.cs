@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003CD6 RID: 15574
+	// Token: 0x020040ED RID: 16621
 	public enum ETakePhoto2TargetType : byte
 	{
-		// Token: 0x0400B50C RID: 46348
+		// Token: 0x0400BEB9 RID: 48825
 		Entity,
-		// Token: 0x0400B50D RID: 46349
+		// Token: 0x0400BEBA RID: 48826
 		PhotoTargetEntity,
-		// Token: 0x0400B50E RID: 46350
+		// Token: 0x0400BEBB RID: 48827
 		TaggedEntity,
-		// Token: 0x0400B50F RID: 46351
+		// Token: 0x0400BEBC RID: 48828
 		TaggedActor
 	}
 }

@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PermanentRogue
 {
-	// Token: 0x02005315 RID: 21269
+	// Token: 0x020042E5 RID: 17125
 	public class RogueIllustratedEventItem : GridProxyAbstract<int>
 	{
-		// Token: 0x06036662 RID: 222818 RVA: 0x00CDF9EC File Offset: 0x00CDDBEC
+		// Token: 0x0602B55E RID: 177502 RVA: 0x00C2D3BC File Offset: 0x00C2B5BC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			};
 		}
 
-		// Token: 0x06036663 RID: 222819 RVA: 0x00CDFA46 File Offset: 0x00CDDC46
+		// Token: 0x0602B55F RID: 177503 RVA: 0x00C2D416 File Offset: 0x00C2B616
 		protected override void OnStartImplement()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			extendToggle.OnStateChange.Add(new Action<EToggleState>(this.ExtendToggleStateChanged));
 		}
 
-		// Token: 0x06036664 RID: 222820 RVA: 0x00CDFA6A File Offset: 0x00CDDC6A
+		// Token: 0x0602B560 RID: 177504 RVA: 0x00C2D43A File Offset: 0x00C2B63A
 		protected override void OnBeforeDestroyImplement()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			extendToggle.OnStateChange.Remove(new Action<EToggleState>(this.ExtendToggleStateChanged));
 		}
 
-		// Token: 0x06036665 RID: 222821 RVA: 0x00CDFA90 File Offset: 0x00CDDC90
+		// Token: 0x0602B561 RID: 177505 RVA: 0x00C2D460 File Offset: 0x00C2B660
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			this.EventIdKey = data;
@@ -68,19 +68,19 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			this.SetSelected(isSelected, false);
 		}
 
-		// Token: 0x06036666 RID: 222822 RVA: 0x00CDFB89 File Offset: 0x00CDDD89
+		// Token: 0x0602B562 RID: 177506 RVA: 0x00C2D559 File Offset: 0x00C2B759
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetSelected(true, false);
 		}
 
-		// Token: 0x06036667 RID: 222823 RVA: 0x00CDFB93 File Offset: 0x00CDDD93
+		// Token: 0x0602B563 RID: 177507 RVA: 0x00C2D563 File Offset: 0x00C2B763
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetSelected(false, false);
 		}
 
-		// Token: 0x06036668 RID: 222824 RVA: 0x00CDFBA0 File Offset: 0x00CDDDA0
+		// Token: 0x0602B564 RID: 177508 RVA: 0x00C2D570 File Offset: 0x00C2B770
 		public void SetSelected(bool bSelected, bool bForce = false)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -106,14 +106,14 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			}
 		}
 
-		// Token: 0x06036669 RID: 222825 RVA: 0x00CDFBEB File Offset: 0x00CDDDEB
+		// Token: 0x0602B565 RID: 177509 RVA: 0x00C2D5BB File Offset: 0x00C2B7BB
 		[NullableContext(1)]
 		public void BindOnItemButtonClickedCallback(Action<int, SignState> onItemButtonClicked)
 		{
 			this.OnItemButtonClickedCallback = onItemButtonClicked;
 		}
 
-		// Token: 0x0603666A RID: 222826 RVA: 0x00CDFBF4 File Offset: 0x00CDDDF4
+		// Token: 0x0602B566 RID: 177510 RVA: 0x00C2D5C4 File Offset: 0x00C2B7C4
 		private void ExtendToggleStateChanged(EToggleState state)
 		{
 			if (this.OnItemButtonClickedCallback != null)
@@ -122,13 +122,13 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			}
 		}
 
-		// Token: 0x0401CBFD RID: 117757
+		// Token: 0x04017633 RID: 95795
 		private int EventIdKey;
 
-		// Token: 0x0401CBFE RID: 117758
+		// Token: 0x04017634 RID: 95796
 		private SignState State;
 
-		// Token: 0x0401CBFF RID: 117759
+		// Token: 0x04017635 RID: 95797
 		[Nullable(2)]
 		private Action<int, SignState> OnItemButtonClickedCallback;
 	}

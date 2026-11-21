@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelAi
 {
-	// Token: 0x02006DB0 RID: 28080
+	// Token: 0x02005F2F RID: 24367
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelAiPlanLevel
 	{
-		// Token: 0x0604482D RID: 280621 RVA: 0x010E4F24 File Offset: 0x010E3124
+		// Token: 0x0603A991 RID: 240017 RVA: 0x0108F14C File Offset: 0x0108D34C
 		public LevelAiPlanLevel(LevelAiWorldState worldStateAtLevelStart, [Nullable(2)] LevelAiPlanStepId parentStepId = null)
 		{
 			this.WorldStateAtLevelStart = worldStateAtLevelStart;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			this.Cost = 0;
 		}
 
-		// Token: 0x0604482E RID: 280622 RVA: 0x010E4F8C File Offset: 0x010E318C
+		// Token: 0x0603A992 RID: 240018 RVA: 0x0108F1B4 File Offset: 0x0108D3B4
 		public LevelAiPlanLevel MakeCopy()
 		{
 			LevelAiPlanLevel levelAiPlanLevel = new LevelAiPlanLevel(this.WorldStateAtLevelStart, this.ParentStepId);
@@ -39,19 +39,19 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi
 			return levelAiPlanLevel;
 		}
 
-		// Token: 0x04023A18 RID: 145944
+		// Token: 0x0401ECBA RID: 126138
 		public List<LevelAiPlanStep> Steps = new List<LevelAiPlanStep>();
 
-		// Token: 0x04023A19 RID: 145945
+		// Token: 0x0401ECBB RID: 126139
 		public SubNodesInfo RootSubNodesInfo;
 
-		// Token: 0x04023A1A RID: 145946
+		// Token: 0x0401ECBC RID: 126140
 		public LevelAiPlanStepId ParentStepId;
 
-		// Token: 0x04023A1B RID: 145947
+		// Token: 0x0401ECBD RID: 126141
 		public LevelAiWorldState WorldStateAtLevelStart;
 
-		// Token: 0x04023A1C RID: 145948
+		// Token: 0x0401ECBE RID: 126142
 		public int Cost;
 	}
 }

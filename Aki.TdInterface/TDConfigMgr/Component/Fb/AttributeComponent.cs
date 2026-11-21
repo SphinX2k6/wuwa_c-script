@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A9D RID: 2717
+	// Token: 0x02000B67 RID: 2919
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class AttributeComponent : IComponentBase
 	{
-		// Token: 0x06003E71 RID: 15985 RVA: 0x0009FBF6 File Offset: 0x0009DDF6
-		[NullableContext(1)]
+		// Token: 0x0600429A RID: 17050 RVA: 0x000A91AE File Offset: 0x000A73AE
+		[NullableContext(0)]
 		public static AttributeComponent Create(IAttributeComponent? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000EF4 RID: 3828
-		// (get) Token: 0x06003E72 RID: 15986 RVA: 0x0009FC18 File Offset: 0x0009DE18
+		// Token: 0x17000FC7 RID: 4039
+		// (get) Token: 0x0600429B RID: 17051 RVA: 0x000A91D0 File Offset: 0x000A73D0
 		public override bool? Disabled
 		{
 			get
@@ -38,8 +38,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000EF5 RID: 3829
-		// (get) Token: 0x06003E73 RID: 15987 RVA: 0x0009FC50 File Offset: 0x0009DE50
+		// Token: 0x17000FC8 RID: 4040
+		// (get) Token: 0x0600429C RID: 17052 RVA: 0x000A9208 File Offset: 0x000A7408
 		public override bool? EdIsLocked
 		{
 			get
@@ -48,8 +48,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000EF6 RID: 3830
-		// (get) Token: 0x06003E74 RID: 15988 RVA: 0x0009FC66 File Offset: 0x0009DE66
+		// Token: 0x17000FC9 RID: 4041
+		// (get) Token: 0x0600429D RID: 17053 RVA: 0x000A921E File Offset: 0x000A741E
 		public virtual int PropertyId
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000EF7 RID: 3831
-		// (get) Token: 0x06003E75 RID: 15989 RVA: 0x0009FC73 File Offset: 0x0009DE73
+		// Token: 0x17000FCA RID: 4042
+		// (get) Token: 0x0600429E RID: 17054 RVA: 0x000A922B File Offset: 0x000A742B
 		public virtual int MonsterPropExtraRateId
 		{
 			get
@@ -68,8 +68,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000EF8 RID: 3832
-		// (get) Token: 0x06003E76 RID: 15990 RVA: 0x0009FC80 File Offset: 0x0009DE80
+		// Token: 0x17000FCB RID: 4043
+		// (get) Token: 0x0600429F RID: 17055 RVA: 0x000A9238 File Offset: 0x000A7438
 		public virtual int? MonsterPropGrowthId
 		{
 			get
@@ -82,8 +82,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000EF9 RID: 3833
-		// (get) Token: 0x06003E77 RID: 15991 RVA: 0x0009FCB6 File Offset: 0x0009DEB6
+		// Token: 0x17000FCC RID: 4044
+		// (get) Token: 0x060042A0 RID: 17056 RVA: 0x000A926E File Offset: 0x000A746E
 		public virtual int Level
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000EFA RID: 3834
-		// (get) Token: 0x06003E78 RID: 15992 RVA: 0x0009FCC4 File Offset: 0x0009DEC4
+		// Token: 0x17000FCD RID: 4045
+		// (get) Token: 0x060042A1 RID: 17057 RVA: 0x000A927C File Offset: 0x000A747C
 		public virtual int? MoraleLevel
 		{
 			get
@@ -106,8 +106,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000EFB RID: 3835
-		// (get) Token: 0x06003E79 RID: 15993 RVA: 0x0009FCFC File Offset: 0x0009DEFC
+		// Token: 0x17000FCE RID: 4046
+		// (get) Token: 0x060042A2 RID: 17058 RVA: 0x000A92B4 File Offset: 0x000A74B4
 		public virtual int? HonamiStoryMonsterGrowth
 		{
 			get
@@ -120,8 +120,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000EFC RID: 3836
-		// (get) Token: 0x06003E7A RID: 15994 RVA: 0x0009FD34 File Offset: 0x0009DF34
+		// Token: 0x17000FCF RID: 4047
+		// (get) Token: 0x060042A3 RID: 17059 RVA: 0x000A92EC File Offset: 0x000A74EC
 		public virtual int? FlagChallengeMonsterLevel
 		{
 			get
@@ -134,8 +134,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000EFD RID: 3837
-		// (get) Token: 0x06003E7B RID: 15995 RVA: 0x0009FD6B File Offset: 0x0009DF6B
+		// Token: 0x17000FD0 RID: 4048
+		// (get) Token: 0x060042A4 RID: 17060 RVA: 0x000A9323 File Offset: 0x000A7523
 		public virtual int RageModeId
 		{
 			get
@@ -144,8 +144,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000EFE RID: 3838
-		// (get) Token: 0x06003E7C RID: 15996 RVA: 0x0009FD78 File Offset: 0x0009DF78
+		// Token: 0x17000FD1 RID: 4049
+		// (get) Token: 0x060042A5 RID: 17061 RVA: 0x000A9330 File Offset: 0x000A7530
 		public virtual int HardnessModeId
 		{
 			get
@@ -154,8 +154,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000EFF RID: 3839
-		// (get) Token: 0x06003E7D RID: 15997 RVA: 0x0009FD85 File Offset: 0x0009DF85
+		// Token: 0x17000FD2 RID: 4050
+		// (get) Token: 0x060042A6 RID: 17062 RVA: 0x000A933D File Offset: 0x000A753D
 		public virtual int WorldLevelBonusId
 		{
 			get
@@ -164,8 +164,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F00 RID: 3840
-		// (get) Token: 0x06003E7E RID: 15998 RVA: 0x0009FD94 File Offset: 0x0009DF94
+		// Token: 0x17000FD3 RID: 4051
+		// (get) Token: 0x060042A7 RID: 17063 RVA: 0x000A934C File Offset: 0x000A754C
 		public virtual bool? IgnoreFightMusic
 		{
 			get
@@ -178,8 +178,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F01 RID: 3841
-		// (get) Token: 0x06003E7F RID: 15999 RVA: 0x0009FDCB File Offset: 0x0009DFCB
+		// Token: 0x17000FD4 RID: 4052
+		// (get) Token: 0x060042A8 RID: 17064 RVA: 0x000A9383 File Offset: 0x000A7583
 		public virtual IFightMusicsSwitchByTagList FightMusics
 		{
 			get
@@ -194,8 +194,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F02 RID: 3842
-		// (get) Token: 0x06003E80 RID: 16000 RVA: 0x0009FDFF File Offset: 0x0009DFFF
+		// Token: 0x17000FD5 RID: 4053
+		// (get) Token: 0x060042A9 RID: 17065 RVA: 0x000A93B7 File Offset: 0x000A75B7
 		public virtual string FightMusic
 		{
 			get
@@ -204,8 +204,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F03 RID: 3843
-		// (get) Token: 0x06003E81 RID: 16001 RVA: 0x0009FE0C File Offset: 0x0009E00C
+		// Token: 0x17000FD6 RID: 4054
+		// (get) Token: 0x060042AA RID: 17066 RVA: 0x000A93C4 File Offset: 0x000A75C4
 		public virtual bool? FightMusicBanRadioMusic
 		{
 			get
@@ -218,8 +218,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F04 RID: 3844
-		// (get) Token: 0x06003E82 RID: 16002 RVA: 0x0009FE44 File Offset: 0x0009E044
+		// Token: 0x17000FD7 RID: 4055
+		// (get) Token: 0x060042AB RID: 17067 RVA: 0x000A93FC File Offset: 0x000A75FC
 		public virtual List<long> AppendBuffIds
 		{
 			get
@@ -243,12 +243,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F05 RID: 3845
-		// (get) Token: 0x06003E83 RID: 16003 RVA: 0x0009FEBD File Offset: 0x0009E0BD
-		[Nullable(1)]
+		// Token: 0x17000FD8 RID: 4056
+		// (get) Token: 0x060042AC RID: 17068 RVA: 0x000A9475 File Offset: 0x000A7675
+		[Nullable(0)]
 		public virtual IWorldLevelBonusType WorldLevelBonusType
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._WorldLevelBonusTypeInited)
@@ -261,26 +261,26 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040022C6 RID: 8902
+		// Token: 0x040024E2 RID: 9442
 		private IAttributeComponent Instance;
 
-		// Token: 0x040022C7 RID: 8903
+		// Token: 0x040024E3 RID: 9443
 		private IFightMusicsSwitchByTagList _FightMusicsCache;
 
-		// Token: 0x040022C8 RID: 8904
+		// Token: 0x040024E4 RID: 9444
 		private bool _FightMusicsInited;
 
-		// Token: 0x040022C9 RID: 8905
+		// Token: 0x040024E5 RID: 9445
 		private List<long> _AppendBuffIdsCache;
 
-		// Token: 0x040022CA RID: 8906
+		// Token: 0x040024E6 RID: 9446
 		private bool _AppendBuffIdsInited;
 
-		// Token: 0x040022CB RID: 8907
-		[Nullable(1)]
+		// Token: 0x040024E7 RID: 9447
+		[Nullable(0)]
 		private IWorldLevelBonusType _WorldLevelBonusTypeCache;
 
-		// Token: 0x040022CC RID: 8908
+		// Token: 0x040024E8 RID: 9448
 		private bool _WorldLevelBonusTypeInited;
 	}
 }

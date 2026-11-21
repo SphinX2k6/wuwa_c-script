@@ -4,15 +4,14 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000623 RID: 1571
+	// Token: 0x020006C0 RID: 1728
 	public class IProbabilityRefreshGroup_SetValue
 	{
-		// Token: 0x04001767 RID: 5991
+		// Token: 0x04001959 RID: 6489
 		[Nullable(2)]
 		public string CheckOccupation;
 
-		// Token: 0x04001768 RID: 5992
-		[Nullable(1)]
+		// Token: 0x0400195A RID: 6490
 		public List<IProbabilityRefreshItem> RefreshItems;
 	}
 }

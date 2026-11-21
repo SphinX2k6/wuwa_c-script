@@ -8,7 +8,7 @@ using CSharpScript.Game.Module.WorldMap;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001337 RID: 4919
+// Token: 0x020007EB RID: 2027
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -17,7 +17,7 @@ using UnrealEngine;
 })]
 public class HandbookDisplayGrid : GridProxyAbstract<IHandbookGridData>
 {
-	// Token: 0x060088F3 RID: 35059 RVA: 0x001D4278 File Offset: 0x001D2478
+	// Token: 0x06005C8E RID: 23694 RVA: 0x001DD0E4 File Offset: 0x001DB2E4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,7 +36,7 @@ public class HandbookDisplayGrid : GridProxyAbstract<IHandbookGridData>
 		};
 	}
 
-	// Token: 0x060088F4 RID: 35060 RVA: 0x001D4350 File Offset: 0x001D2550
+	// Token: 0x06005C8F RID: 23695 RVA: 0x001DD1BC File Offset: 0x001DB3BC
 	public override void Refresh(IHandbookGridData data, bool isSelected, int gridIndex)
 	{
 		this.HandBookGridData = data;
@@ -57,7 +57,7 @@ public class HandbookDisplayGrid : GridProxyAbstract<IHandbookGridData>
 		this.MarkId = buildingById.MapMarkId;
 	}
 
-	// Token: 0x060088F5 RID: 35061 RVA: 0x001D440C File Offset: 0x001D260C
+	// Token: 0x06005C90 RID: 23696 RVA: 0x001DD278 File Offset: 0x001DB478
 	private void RefreshTexture(string path, bool isUnlock)
 	{
 		UUITexture texture = base.GetTexture(0);
@@ -78,19 +78,19 @@ public class HandbookDisplayGrid : GridProxyAbstract<IHandbookGridData>
 		});
 	}
 
-	// Token: 0x060088F6 RID: 35062 RVA: 0x001D44A5 File Offset: 0x001D26A5
+	// Token: 0x06005C91 RID: 23697 RVA: 0x001DD311 File Offset: 0x001DB511
 	private void SetPanelTitleVisible(bool bVisible)
 	{
 		base.GetItem(1).SetUIActive(bVisible);
 	}
 
-	// Token: 0x060088F7 RID: 35063 RVA: 0x001D44B4 File Offset: 0x001D26B4
+	// Token: 0x06005C92 RID: 23698 RVA: 0x001DD320 File Offset: 0x001DB520
 	private void SetTitleByTextId(string textId)
 	{
 		base.GetText(2).ShowTextNew(textId);
 	}
 
-	// Token: 0x060088F8 RID: 35064 RVA: 0x001D44C4 File Offset: 0x001D26C4
+	// Token: 0x06005C93 RID: 23699 RVA: 0x001DD330 File Offset: 0x001DB530
 	private void OnButtonClicked()
 	{
 		if (this.HandBookGridData.IsUnlock)
@@ -120,35 +120,35 @@ public class HandbookDisplayGrid : GridProxyAbstract<IHandbookGridData>
 		}
 	}
 
-	// Token: 0x04003D0C RID: 15628
+	// Token: 0x04003DA4 RID: 15780
 	private int MarkId;
 
-	// Token: 0x04003D0D RID: 15629
+	// Token: 0x04003DA5 RID: 15781
 	private IHandbookGridData HandBookGridData;
 
-	// Token: 0x020079A1 RID: 31137
+	// Token: 0x02006B2B RID: 27435
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x040280CA RID: 164042
+		// Token: 0x040233F7 RID: 144375
 		public const int Texture = 0;
 
-		// Token: 0x040280CB RID: 164043
+		// Token: 0x040233F8 RID: 144376
 		public const int PanelTitle = 1;
 
-		// Token: 0x040280CC RID: 164044
+		// Token: 0x040233F9 RID: 144377
 		public const int TxtTitle = 2;
 
-		// Token: 0x040280CD RID: 164045
+		// Token: 0x040233FA RID: 144378
 		public const int Button = 3;
 
-		// Token: 0x040280CE RID: 164046
+		// Token: 0x040233FB RID: 144379
 		public const int SpriteBg = 4;
 
-		// Token: 0x040280CF RID: 164047
+		// Token: 0x040233FC RID: 144380
 		public const int SpriteLockBg = 5;
 
-		// Token: 0x040280D0 RID: 164048
+		// Token: 0x040233FD RID: 144381
 		public const int TextureLock = 6;
 	}
 }

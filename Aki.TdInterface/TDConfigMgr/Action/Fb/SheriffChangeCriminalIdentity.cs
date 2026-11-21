@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002B00 RID: 11008
+	// Token: 0x02002DF4 RID: 11764
 	public class SheriffChangeCriminalIdentity : ActionParams
 	{
-		// Token: 0x0600F119 RID: 61721 RVA: 0x0022FA36 File Offset: 0x0022DC36
-		[NullableContext(1)]
+		// Token: 0x0600FFCF RID: 65487 RVA: 0x0024D742 File Offset: 0x0024B942
 		public static SheriffChangeCriminalIdentity Create(ISheriffChangeCriminalIdentity? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004CDB RID: 19675
-		// (get) Token: 0x0600F11A RID: 61722 RVA: 0x0022FA55 File Offset: 0x0022DC55
+		// Token: 0x17005095 RID: 20629
+		// (get) Token: 0x0600FFD0 RID: 65488 RVA: 0x0024D761 File Offset: 0x0024B961
 		public virtual int CriminalId
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004CDC RID: 19676
-		// (get) Token: 0x0600F11B RID: 61723 RVA: 0x0022FA62 File Offset: 0x0022DC62
+		// Token: 0x17005096 RID: 20630
+		// (get) Token: 0x0600FFD1 RID: 65489 RVA: 0x0024D76E File Offset: 0x0024B96E
 		public virtual int IdentityId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400849E RID: 33950
+		// Token: 0x04008BA2 RID: 35746
 		private ISheriffChangeCriminalIdentity Instance;
 	}
 }

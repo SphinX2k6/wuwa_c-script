@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Launcher.Update.ResourceDiffUpdate
 {
-	// Token: 0x020000A0 RID: 160
+	// Token: 0x020000A3 RID: 163
 	public enum EResUpdateType
 	{
-		// Token: 0x0400036A RID: 874
+		// Token: 0x04000398 RID: 920
 		NotSet,
-		// Token: 0x0400036B RID: 875
+		// Token: 0x04000399 RID: 921
 		Max,
-		// Token: 0x0400036C RID: 876
+		// Token: 0x0400039A RID: 922
 		Min
 	}
 }

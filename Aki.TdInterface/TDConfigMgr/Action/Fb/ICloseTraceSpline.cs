@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200273C RID: 10044
+	// Token: 0x02002A08 RID: 10760
 	public class ICloseTraceSpline : ToggleScanSplineEffect
 	{
-		// Token: 0x0600DFDB RID: 57307 RVA: 0x0021272D File Offset: 0x0021092D
-		[NullableContext(1)]
+		// Token: 0x0600EDDB RID: 60891 RVA: 0x0022F265 File Offset: 0x0022D465
 		public static ICloseTraceSpline Create(ICloseTraceSpline? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004325 RID: 17189
-		// (get) Token: 0x0600DFDC RID: 57308 RVA: 0x0021274C File Offset: 0x0021094C
+		// Token: 0x17004679 RID: 18041
+		// (get) Token: 0x0600EDDC RID: 60892 RVA: 0x0022F284 File Offset: 0x0022D484
 		public override ETraceSplineOptionType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004326 RID: 17190
-		// (get) Token: 0x0600DFDD RID: 57309 RVA: 0x00212759 File Offset: 0x00210959
+		// Token: 0x1700467A RID: 18042
+		// (get) Token: 0x0600EDDD RID: 60893 RVA: 0x0022F291 File Offset: 0x0022D491
 		public virtual int SplineEntityId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C36 RID: 31798
+		// Token: 0x040082E4 RID: 33508
 		private ICloseTraceSpline Instance;
 	}
 }

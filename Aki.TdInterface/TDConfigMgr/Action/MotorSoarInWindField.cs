@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020DB RID: 8411
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200233C RID: 9020
 	public class MotorSoarInWindField : ActionParams
 	{
-		// Token: 0x0600B8CC RID: 47308 RVA: 0x001AB614 File Offset: 0x001A9814
+		// Token: 0x0600C456 RID: 50262 RVA: 0x001C26F0 File Offset: 0x001C08F0
 		private MotorSoarInWindField_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B8CD RID: 47309 RVA: 0x001AB64C File Offset: 0x001A984C
+		// Token: 0x0600C457 RID: 50263 RVA: 0x001C2728 File Offset: 0x001C0928
 		public static MotorSoarInWindField Create([Nullable(2)] MotorSoarInWindField instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B8CE RID: 47310 RVA: 0x001AB65F File Offset: 0x001A985F
+		// Token: 0x0600C458 RID: 50264 RVA: 0x001C273B File Offset: 0x001C093B
 		public static MotorSoarInWindField CreateFromSetValue([Nullable(2)] MotorSoarInWindField_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B8CF RID: 47311 RVA: 0x001AB672 File Offset: 0x001A9872
+		// Token: 0x0600C459 RID: 50265 RVA: 0x001C274E File Offset: 0x001C094E
 		public MotorSoarInWindField_SetValue ToSetValue()
 		{
 			return new MotorSoarInWindField_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003876 RID: 14454
-		// (get) Token: 0x0600B8D0 RID: 47312 RVA: 0x001AB685 File Offset: 0x001A9885
-		// (set) Token: 0x0600B8D1 RID: 47313 RVA: 0x001AB6AC File Offset: 0x001A98AC
+		// Token: 0x17003B61 RID: 15201
+		// (get) Token: 0x0600C45A RID: 50266 RVA: 0x001C2761 File Offset: 0x001C0961
+		// (set) Token: 0x0600C45B RID: 50267 RVA: 0x001C2788 File Offset: 0x001C0988
 		public virtual IMotorSoarInWindFieldControlType ControlType
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006EB3 RID: 28339
+		// Token: 0x040074E4 RID: 29924
 		[Nullable(2)]
 		protected new MotorSoarInWindField FbInstance;
 
-		// Token: 0x04006EB4 RID: 28340
+		// Token: 0x040074E5 RID: 29925
 		[Nullable(2)]
 		protected MotorSoarInWindField_SetValue PocoInterface;
 	}

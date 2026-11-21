@@ -12,18 +12,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x02006070 RID: 24688
+	// Token: 0x02004FEE RID: 20462
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SpringMonorRewardView : UiTickViewBase
 	{
-		// Token: 0x0603E6EF RID: 255727 RVA: 0x00F1559F File Offset: 0x00F1379F
+		// Token: 0x060333B3 RID: 209843 RVA: 0x00E5C363 File Offset: 0x00E5A563
 		[NullableContext(1)]
 		public SpringMonorRewardView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603E6F0 RID: 255728 RVA: 0x00F155B0 File Offset: 0x00F137B0
+		// Token: 0x060333B4 RID: 209844 RVA: 0x00E5C374 File Offset: 0x00E5A574
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603E6F1 RID: 255729 RVA: 0x00F1571C File Offset: 0x00F1391C
+		// Token: 0x060333B5 RID: 209845 RVA: 0x00E5C4E0 File Offset: 0x00E5A6E0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SpringMonorRewardView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E6F2 RID: 255730 RVA: 0x00F15760 File Offset: 0x00F13960
+		// Token: 0x060333B6 RID: 209846 RVA: 0x00E5C524 File Offset: 0x00E5A724
 		protected override void OnStart()
 		{
 			this.InitCaption();
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.FormatTimeText = ConfigMultiTextLang.GetLocalTextNew("ActivityRemainingTime", null);
 		}
 
-		// Token: 0x0603E6F3 RID: 255731 RVA: 0x00F157B0 File Offset: 0x00F139B0
+		// Token: 0x060333B7 RID: 209847 RVA: 0x00E5C574 File Offset: 0x00E5A774
 		protected override void OnBeforeHide()
 		{
 			GameSettingsDeviceRender instance = GameSettingsDeviceRender.Instance;
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			instance.CancelPerformanceLimit((euiViewName != null) ? euiViewName.GetValueOrDefault() : null);
 		}
 
-		// Token: 0x0603E6F4 RID: 255732 RVA: 0x00F15800 File Offset: 0x00F13A00
+		// Token: 0x060333B8 RID: 209848 RVA: 0x00E5C5C4 File Offset: 0x00E5A7C4
 		protected override void OnTick(float delta)
 		{
 			string remainTimeText = ActivityModel.Instance.GetRemainTimeText(SpringManorModel.Instance.ActivityData.EndShowTime, this.FormatTimeText);
@@ -103,19 +103,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			timeTextItem.SetText(remainTimeText, true);
 		}
 
-		// Token: 0x0603E6F5 RID: 255733 RVA: 0x00F1583F File Offset: 0x00F13A3F
+		// Token: 0x060333B9 RID: 209849 RVA: 0x00E5C603 File Offset: 0x00E5A803
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.SpringManorTaskUpdateNotify, new Action(this.RefreshView));
 		}
 
-		// Token: 0x0603E6F6 RID: 255734 RVA: 0x00F1585D File Offset: 0x00F13A5D
+		// Token: 0x060333BA RID: 209850 RVA: 0x00E5C621 File Offset: 0x00E5A821
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.SpringManorTaskUpdateNotify, new Action(this.RefreshView));
 		}
 
-		// Token: 0x0603E6F7 RID: 255735 RVA: 0x00F1587B File Offset: 0x00F13A7B
+		// Token: 0x060333BB RID: 209851 RVA: 0x00E5C63F File Offset: 0x00E5A83F
 		private void RefreshView()
 		{
 			GenericLayout<TabItem, int> tabLayout = this.TabLayout;
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			bottomItem.Refresh();
 		}
 
-		// Token: 0x0603E6F8 RID: 255736 RVA: 0x00F158A8 File Offset: 0x00F13AA8
+		// Token: 0x060333BC RID: 209852 RVA: 0x00E5C66C File Offset: 0x00E5A86C
 		private void InitCaption()
 		{
 			this.CaptionItem.SetCloseCallBack(new Action(this.OnClickClose));
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			});
 		}
 
-		// Token: 0x0603E6F9 RID: 255737 RVA: 0x00F158FC File Offset: 0x00F13AFC
+		// Token: 0x060333BD RID: 209853 RVA: 0x00E5C6C0 File Offset: 0x00E5A8C0
 		private void InitTabLayout()
 		{
 			this.TabLayout = new GenericLayout<TabItem, int>(base.GetLayoutBase(3), new Func<TabItem>(this.CreateTabItem), base.GetItem(4).GetOwner() as AUIBaseActor, false, true);
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}, false);
 		}
 
-		// Token: 0x0603E6FA RID: 255738 RVA: 0x00F1595E File Offset: 0x00F13B5E
+		// Token: 0x060333BE RID: 209854 RVA: 0x00E5C722 File Offset: 0x00E5A922
 		[NullableContext(1)]
 		private TabItem CreateTabItem()
 		{
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return tabItem;
 		}
 
-		// Token: 0x0603E6FB RID: 255739 RVA: 0x00F15977 File Offset: 0x00F13B77
+		// Token: 0x060333BF RID: 209855 RVA: 0x00E5C73B File Offset: 0x00E5A93B
 		private void OnClickTab(int tabIndex)
 		{
 			this.SelectedTabIndex = tabIndex;
@@ -189,13 +189,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.RefreshQuestScroll(false);
 		}
 
-		// Token: 0x0603E6FC RID: 255740 RVA: 0x00F1599A File Offset: 0x00F13B9A
+		// Token: 0x060333C0 RID: 209856 RVA: 0x00E5C75E File Offset: 0x00E5A95E
 		private void InitQuestScroll()
 		{
 			this.QuestScroll = new GenericScrollViewNew<SpringManorRewardQuestItem, int>(base.GetScrollViewWithScrollbar(1), new Func<SpringManorRewardQuestItem>(this.CreateQuestItem), null, false, null);
 		}
 
-		// Token: 0x0603E6FD RID: 255741 RVA: 0x00F159C0 File Offset: 0x00F13BC0
+		// Token: 0x060333C1 RID: 209857 RVA: 0x00E5C784 File Offset: 0x00E5A984
 		private void RefreshQuestScroll(bool keepPosition = true)
 		{
 			List<int> rewardTaskListByTabId = SpringManorModel.Instance.ActivityData.GetRewardTaskListByTabId(this.SelectedTabIndex);
@@ -232,7 +232,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			questScroll.RefreshByData(rewardTaskListByTabId, callBack, true);
 		}
 
-		// Token: 0x0603E6FE RID: 255742 RVA: 0x00F15A2D File Offset: 0x00F13C2D
+		// Token: 0x060333C2 RID: 209858 RVA: 0x00E5C7F1 File Offset: 0x00E5A9F1
 		[NullableContext(1)]
 		private SpringManorRewardQuestItem CreateQuestItem()
 		{
@@ -242,7 +242,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return springManorRewardQuestItem;
 		}
 
-		// Token: 0x0603E6FF RID: 255743 RVA: 0x00F15A58 File Offset: 0x00F13C58
+		// Token: 0x060333C3 RID: 209859 RVA: 0x00E5C81C File Offset: 0x00E5AA1C
 		private void OnClickTaskSkip(ESpringRewardTaskSkipType skipType)
 		{
 			if (skipType == ESpringRewardTaskSkipType.WorldPosition)
@@ -251,19 +251,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E700 RID: 255744 RVA: 0x00F15A65 File Offset: 0x00F13C65
+		// Token: 0x060333C4 RID: 209860 RVA: 0x00E5C829 File Offset: 0x00E5AA29
 		private void OnClickTaskReceive()
 		{
 			SpringManorController.Instance.RequestTaskRewardReceive(this.SelectedTabIndex, new Action(this.RefreshView));
 		}
 
-		// Token: 0x0603E701 RID: 255745 RVA: 0x00F15A83 File Offset: 0x00F13C83
+		// Token: 0x060333C5 RID: 209861 RVA: 0x00E5C847 File Offset: 0x00E5AA47
 		private void OnClickClose()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603E702 RID: 255746 RVA: 0x00F15A8C File Offset: 0x00F13C8C
+		// Token: 0x060333C6 RID: 209862 RVA: 0x00E5C850 File Offset: 0x00E5AA50
 		private void OnClickPreview()
 		{
 			SpringManorModel instance = SpringManorModel.Instance;
@@ -271,10 +271,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			CalabashController.Instance.JumpToCalabashCollectTabViewOnlyShow(num.Value, true);
 		}
 
-		// Token: 0x04020A42 RID: 133698
+		// Token: 0x0401B36F RID: 111471
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04020A43 RID: 133699
+		// Token: 0x0401B370 RID: 111472
 		[Nullable(new byte[]
 		{
 			2,
@@ -282,7 +282,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 		})]
 		private GenericLayout<TabItem, int> TabLayout;
 
-		// Token: 0x04020A44 RID: 133700
+		// Token: 0x0401B371 RID: 111473
 		[Nullable(new byte[]
 		{
 			2,
@@ -290,16 +290,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 		})]
 		private GenericScrollViewNew<SpringManorRewardQuestItem, int> QuestScroll;
 
-		// Token: 0x04020A45 RID: 133701
+		// Token: 0x0401B372 RID: 111474
 		private int SelectedTabIndex = -1;
 
-		// Token: 0x04020A46 RID: 133702
+		// Token: 0x0401B373 RID: 111475
 		private SpringManorRewardBottomItem BottomItem;
 
-		// Token: 0x04020A47 RID: 133703
+		// Token: 0x0401B374 RID: 111476
 		private UUIText TimeTextItem;
 
-		// Token: 0x04020A48 RID: 133704
+		// Token: 0x0401B375 RID: 111477
 		private string FormatTimeText;
 	}
 }

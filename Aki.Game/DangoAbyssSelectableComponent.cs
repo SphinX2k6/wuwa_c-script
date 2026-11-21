@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
 using UnrealEngine;
 
-// Token: 0x02001A5B RID: 6747
+// Token: 0x02000F1A RID: 3866
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -12,13 +12,13 @@ using UnrealEngine;
 })]
 public class DangoAbyssSelectableComponent<[Nullable(0)] T> : SelectableComponent<T> where T : ItemDataBase
 {
-	// Token: 0x0600C699 RID: 50841 RVA: 0x002D2FA4 File Offset: 0x002D11A4
+	// Token: 0x06009AA9 RID: 39593 RVA: 0x002DE0AA File Offset: 0x002DC2AA
 	public DangoAbyssSelectableComponent(bool stateForEquip)
 	{
 		this.StateForEquip = stateForEquip;
 	}
 
-	// Token: 0x0600C69A RID: 50842 RVA: 0x002D2FBC File Offset: 0x002D11BC
+	// Token: 0x06009AAA RID: 39594 RVA: 0x002DE0C0 File Offset: 0x002DC2C0
 	[PreserveBaseOverrides]
 	protected new virtual DangoAbyssItemPropMediumItemGrid InitItem()
 	{
@@ -36,7 +36,7 @@ public class DangoAbyssSelectableComponent<[Nullable(0)] T> : SelectableComponen
 		return dangoAbyssItemPropMediumItemGrid;
 	}
 
-	// Token: 0x0600C69B RID: 50843 RVA: 0x002D3020 File Offset: 0x002D1220
+	// Token: 0x06009AAB RID: 39595 RVA: 0x002DE124 File Offset: 0x002DC324
 	protected override bool CanAddMaterial(SelectablePropData propData, bool isShowTip = false)
 	{
 		AbyssPluginItemInfo pluginItemInfoById = DangoAbyssModel.Instance.GetPluginItemInfoById(propData.IncId);
@@ -76,7 +76,7 @@ public class DangoAbyssSelectableComponent<[Nullable(0)] T> : SelectableComponen
 		return this.Data.CheckIfCanAddFunction == null || this.Data.CheckIfCanAddFunction(this.SelectedDataList, propData.IncId, propData.ItemId, 1);
 	}
 
-	// Token: 0x0600C69C RID: 50844 RVA: 0x002D3124 File Offset: 0x002D1324
+	// Token: 0x06009AAC RID: 39596 RVA: 0x002DE228 File Offset: 0x002DC428
 	public void RemoveAndRefresh(int uniqueId)
 	{
 		int loopScrollViewIndex = base.GetLoopScrollViewIndex(uniqueId, -1);
@@ -93,6 +93,6 @@ public class DangoAbyssSelectableComponent<[Nullable(0)] T> : SelectableComponen
 		base.UpdateChangeItemSelectList();
 	}
 
-	// Token: 0x04005B84 RID: 23428
+	// Token: 0x04005C53 RID: 23635
 	private readonly bool StateForEquip = true;
 }

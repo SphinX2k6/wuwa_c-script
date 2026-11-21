@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200578D RID: 22413
+	// Token: 0x02005D94 RID: 23956
 	public enum IProceduralMaterialType_Union : byte
 	{
-		// Token: 0x0400EC3C RID: 60476
+		// Token: 0x0400F927 RID: 63783
 		NONE,
-		// Token: 0x0400EC3D RID: 60477
+		// Token: 0x0400F928 RID: 63784
 		IProceduralMaterialType,
-		// Token: 0x0400EC3E RID: 60478
+		// Token: 0x0400F929 RID: 63785
 		ICustomPrimitiveDataConfig
 	}
 }

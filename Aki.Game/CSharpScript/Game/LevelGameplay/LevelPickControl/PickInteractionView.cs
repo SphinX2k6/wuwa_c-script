@@ -8,16 +8,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelPickControl
 {
-	// Token: 0x02006AD7 RID: 27351
+	// Token: 0x02005C4F RID: 23631
 	public class PickInteractionView : UiViewBase
 	{
-		// Token: 0x06043F4C RID: 278348 RVA: 0x010AACF3 File Offset: 0x010A8EF3
+		// Token: 0x0603A095 RID: 237717 RVA: 0x010543A3 File Offset: 0x010525A3
 		[NullableContext(1)]
 		public PickInteractionView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06043F4D RID: 278349 RVA: 0x010AACFC File Offset: 0x010A8EFC
+		// Token: 0x0603A096 RID: 237718 RVA: 0x010543AC File Offset: 0x010525AC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelPickControl
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06043F4E RID: 278350 RVA: 0x010AAE0C File Offset: 0x010A900C
+		// Token: 0x0603A097 RID: 237719 RVA: 0x010544BC File Offset: 0x010526BC
 		protected override void OnStart()
 		{
 			LevelPickInteractController.Instance.OnClosingView = new Action(this.OnClosingView);
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelPickControl
 			this.IsDoingPostMoveEvent = false;
 		}
 
-		// Token: 0x06043F4F RID: 278351 RVA: 0x010AAE64 File Offset: 0x010A9064
+		// Token: 0x0603A098 RID: 237720 RVA: 0x01054514 File Offset: 0x01052714
 		private void OnClosingView()
 		{
 			base.GetButton(0).RootUIComp.Get().SetUIActive(false);
@@ -61,32 +61,32 @@ namespace CSharpScript.Game.LevelGamePlay.LevelPickControl
 			base.GetButton(2).RootUIComp.Get().SetUIActive(false);
 		}
 
-		// Token: 0x06043F50 RID: 278352 RVA: 0x010AAEBF File Offset: 0x010A90BF
+		// Token: 0x0603A099 RID: 237721 RVA: 0x0105456F File Offset: 0x0105276F
 		private void OnViewPiecePostMoveEventStart()
 		{
 			this.IsDoingPostMoveEvent = true;
 		}
 
-		// Token: 0x06043F51 RID: 278353 RVA: 0x010AAEC8 File Offset: 0x010A90C8
+		// Token: 0x0603A09A RID: 237722 RVA: 0x01054578 File Offset: 0x01052778
 		private void OnViewPiecePostMoveEventEnd()
 		{
 			this.IsDoingPostMoveEvent = false;
 		}
 
-		// Token: 0x06043F52 RID: 278354 RVA: 0x010AAED1 File Offset: 0x010A90D1
+		// Token: 0x0603A09B RID: 237723 RVA: 0x01054581 File Offset: 0x01052781
 		private void OnClickResetBtn()
 		{
 			LevelPickInteractController.Instance.ResetPickInteractGame();
 		}
 
-		// Token: 0x06043F53 RID: 278355 RVA: 0x010AAEDD File Offset: 0x010A90DD
+		// Token: 0x0603A09C RID: 237724 RVA: 0x0105458D File Offset: 0x0105278D
 		private void OnClickBackBtn()
 		{
 			this.OnClosingView();
 			LevelPickInteractController.Instance.ExitPickInteractModel(false);
 		}
 
-		// Token: 0x06043F54 RID: 278356 RVA: 0x010AAEF0 File Offset: 0x010A90F0
+		// Token: 0x0603A09D RID: 237725 RVA: 0x010545A0 File Offset: 0x010527A0
 		private void OnClickHelpInfoBtn()
 		{
 			if (this.IsDoingPostMoveEvent)
@@ -100,17 +100,17 @@ namespace CSharpScript.Game.LevelGamePlay.LevelPickControl
 			}
 		}
 
-		// Token: 0x04023858 RID: 145496
+		// Token: 0x0401EAF8 RID: 125688
 		private bool IsDoingPostMoveEvent;
 
-		// Token: 0x0200CBBC RID: 52156
+		// Token: 0x0200B7AD RID: 47021
 		public enum EPickInteractionViewComponent
 		{
-			// Token: 0x0403D7C0 RID: 251840
+			// Token: 0x04038BE3 RID: 232419
 			ResetBtn,
-			// Token: 0x0403D7C1 RID: 251841
+			// Token: 0x04038BE4 RID: 232420
 			CloseBtn,
-			// Token: 0x0403D7C2 RID: 251842
+			// Token: 0x04038BE5 RID: 232421
 			HelpInfoBtn
 		}
 	}

@@ -3,25 +3,24 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using AkiClient.Game.Aki.Data.UiRoleCamera.Struct;
-using CSharpScript.Game.Module.Common.UiCamera;
 using CSharpScript.Game.Module.Inventory;
-using CSharpScript.Game.Module.UiCameraAnimation.UiCameraContext;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002A3B RID: 10811
+// Token: 0x02001FB6 RID: 8118
 [NullableContext(1)]
 [Nullable(0)]
 public class SpecialItemSummonShowView : UiTickViewBase
 {
-	// Token: 0x06016826 RID: 92198 RVA: 0x005B4F96 File Offset: 0x005B3196
+	// Token: 0x06014248 RID: 82504 RVA: 0x005E1161 File Offset: 0x005DF361
 	public SpecialItemSummonShowView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06016827 RID: 92199 RVA: 0x005B4FB8 File Offset: 0x005B31B8
+	// Token: 0x06014249 RID: 82505 RVA: 0x005E1180 File Offset: 0x005DF380
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -57,7 +56,7 @@ public class SpecialItemSummonShowView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x06016828 RID: 92200 RVA: 0x005B5214 File Offset: 0x005B3414
+	// Token: 0x0601424A RID: 82506 RVA: 0x005E13DC File Offset: 0x005DF5DC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SpecialItemSummonShowView.<OnBeforeStartAsync>d__24 <OnBeforeStartAsync>d__;
@@ -68,7 +67,7 @@ public class SpecialItemSummonShowView : UiTickViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016829 RID: 92201 RVA: 0x005B5258 File Offset: 0x005B3458
+	// Token: 0x0601424B RID: 82507 RVA: 0x005E1420 File Offset: 0x005DF620
 	protected override void OnStart()
 	{
 		this.ItemId = (int)(this.OpenParam ?? 0);
@@ -84,7 +83,7 @@ public class SpecialItemSummonShowView : UiTickViewBase
 		this.RefreshView();
 	}
 
-	// Token: 0x0601682A RID: 92202 RVA: 0x005B530B File Offset: 0x005B350B
+	// Token: 0x0601424C RID: 82508 RVA: 0x005E14D3 File Offset: 0x005DF6D3
 	private void SetupEffectPreviewButton()
 	{
 		ButtonItem effectPreviewButton = this.EffectPreviewButton;
@@ -105,7 +104,7 @@ public class SpecialItemSummonShowView : UiTickViewBase
 		effectPreviewButton3.SetLocalTextNew("SummonPreviewIng", Array.Empty<object>());
 	}
 
-	// Token: 0x0601682B RID: 92203 RVA: 0x005B534C File Offset: 0x005B354C
+	// Token: 0x0601424D RID: 82509 RVA: 0x005E1514 File Offset: 0x005DF714
 	private void HideRedundantNodes()
 	{
 		foreach (int name in SpecialItemSummonShowView.DisableNodeList)
@@ -118,7 +117,7 @@ public class SpecialItemSummonShowView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0601682C RID: 92204 RVA: 0x005B5384 File Offset: 0x005B3584
+	// Token: 0x0601424E RID: 82510 RVA: 0x005E154C File Offset: 0x005DF74C
 	protected override void OnHandlePostLoadScene(bool isSceneLoad)
 	{
 		SpecialItemSummonUiModelUtil.CreateSummon();
@@ -126,7 +125,7 @@ public class SpecialItemSummonShowView : UiTickViewBase
 		this.InitCameraInputData();
 	}
 
-	// Token: 0x0601682D RID: 92205 RVA: 0x005B539C File Offset: 0x005B359C
+	// Token: 0x0601424F RID: 82511 RVA: 0x005E1564 File Offset: 0x005DF764
 	protected override void OnBeforeShow()
 	{
 		this.TryPushCamera(false);
@@ -140,11 +139,10 @@ public class SpecialItemSummonShowView : UiTickViewBase
 		{
 			Log.Instance.Error(ELogModule.UiCommon, ELogAuthor.TZJ, "[SpecialItemSummon] modelId<=0 跳过加载模型", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
-		this.CameraInputComponent.Start();
-		this.CameraInputComponent.TryActivate();
+		this.CameraInputBinding.Unbind();
 	}
 
-	// Token: 0x0601682E RID: 92206 RVA: 0x005B540E File Offset: 0x005B360E
+	// Token: 0x06014250 RID: 82512 RVA: 0x005E15CA File Offset: 0x005DF7CA
 	private void OnSummonLoadFinished()
 	{
 		if (this.DisplayMontagePath == "")
@@ -155,43 +153,40 @@ public class SpecialItemSummonShowView : UiTickViewBase
 		this.SetEffectPreviewButtonEnable(true);
 	}
 
-	// Token: 0x0601682F RID: 92207 RVA: 0x005B543A File Offset: 0x005B363A
+	// Token: 0x06014251 RID: 82513 RVA: 0x005E15F6 File Offset: 0x005DF7F6
 	protected override void OnBeforeHide()
 	{
-		this.CameraInputComponent.End();
+		this.CameraInputBinding.Unbind();
 	}
 
-	// Token: 0x06016830 RID: 92208 RVA: 0x005B5447 File Offset: 0x005B3647
+	// Token: 0x06014252 RID: 82514 RVA: 0x005E1603 File Offset: 0x005DF803
 	protected override void OnHandleReleaseScene()
 	{
-		UiCameraManager.Get().DestroyUiCameraComponent(typeof(UiCameraControlRotationComponent));
 		SpecialItemSummonUiModelUtil.DestroySummon();
 	}
 
-	// Token: 0x06016831 RID: 92209 RVA: 0x005B5464 File Offset: 0x005B3664
+	// Token: 0x06014253 RID: 82515 RVA: 0x005E160C File Offset: 0x005DF80C
 	private void TryPushCamera(bool useBlend = true)
 	{
-		UiCameraHandleData uiCameraHandleData = UiCameraHandleData.NewByHandleName("Cam_Summon", null);
-		uiCameraHandleData.ViewName = "Cam_Summon";
-		uiCameraHandleData.OwnerViewName = "SpecialItemSummonShowView";
+		UiCameraHandleData handleData = UiCameraUtil.CreateHandleData("Cam_Summon", "Cam_Summon");
 		if (useBlend)
 		{
 			UiLayer.Instance.SetShowMaskLayer("SpecialItemSummonShowView", true);
-			UiCameraAnimationManager.Instance.PushCameraHandle(uiCameraHandleData, true, true, "1001", true, delegate(UiCameraAnimationDefine.IFinishData _)
+			UiCameraModel.Instance.PushCameraHandle(handleData, true, true, "1001", true, delegate(UiCameraDefine.IFinishData _)
 			{
 				UiLayer.Instance.SetShowMaskLayer("SpecialItemSummonShowView", false);
 			});
 			return;
 		}
-		UiCameraAnimationManager.Instance.PushCameraHandle(uiCameraHandleData, false, false, null, false, null);
+		UiCameraModel.Instance.PushCameraHandle(handleData, false, false, null, false, null);
 	}
 
-	// Token: 0x06016832 RID: 92210 RVA: 0x005B54F4 File Offset: 0x005B36F4
-	private IUiCameraInputComponentData GetCameraInputData()
+	// Token: 0x06014254 RID: 82516 RVA: 0x005E1684 File Offset: 0x005DF884
+	private UiCameraInputBindingData GetCameraInputData()
 	{
 		SUiRoleCameraSetting value = UiRoleCameraConfig.Instance.GetRoleCameraConfig("藏品预览界面").Value;
 		FVectorDouble fvectorDouble = UKuroCollectActorComponent.GetActorWithTag(FNameUtil.GetDynamicFName("SummonCase").Value, ECollectActorType.UI).D_K2_GetActorLocation();
-		return new UiCameraInputComponentData
+		return new UiCameraInputBindingData
 		{
 			DragComponent = base.GetDraggable(29),
 			CameraSettingConfig = value,
@@ -199,22 +194,14 @@ public class SpecialItemSummonShowView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x06016833 RID: 92211 RVA: 0x005B5560 File Offset: 0x005B3760
+	// Token: 0x06014255 RID: 82517 RVA: 0x005E16F0 File Offset: 0x005DF8F0
 	private void InitCameraInputData()
 	{
-		IUiCameraInputComponentData cameraInputData = this.GetCameraInputData();
-		this.CameraInputComponent.InitData(cameraInputData);
-		this.CameraInputComponent.CanCameraInput = false;
+		UiCameraInputBindingData cameraInputData = this.GetCameraInputData();
+		this.CameraInputBinding.Configure(cameraInputData);
 	}
 
-	// Token: 0x06016834 RID: 92212 RVA: 0x005B558C File Offset: 0x005B378C
-	private void UpdateCameraInputData()
-	{
-		IUiCameraInputComponentData cameraInputData = this.GetCameraInputData();
-		this.CameraInputComponent.UpdateData(cameraInputData);
-	}
-
-	// Token: 0x06016835 RID: 92213 RVA: 0x005B55AC File Offset: 0x005B37AC
+	// Token: 0x06014256 RID: 82518 RVA: 0x005E1710 File Offset: 0x005DF910
 	private void RefreshView()
 	{
 		this.RefreshAssembleButton();
@@ -230,7 +217,7 @@ public class SpecialItemSummonShowView : UiTickViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(12), itemConfig.BgDescription ?? "", Array.Empty<object>());
 	}
 
-	// Token: 0x06016836 RID: 92214 RVA: 0x005B5654 File Offset: 0x005B3854
+	// Token: 0x06014257 RID: 82519 RVA: 0x005E17B8 File Offset: 0x005DF9B8
 	private void RefreshAssembleButton()
 	{
 		bool uiActive = InventoryModel.Instance.GetItemCountByConfigId(this.ItemId, 0) > 0;
@@ -242,7 +229,7 @@ public class SpecialItemSummonShowView : UiTickViewBase
 		assembleButton.SetUiActive(uiActive);
 	}
 
-	// Token: 0x06016837 RID: 92215 RVA: 0x005B5688 File Offset: 0x005B3888
+	// Token: 0x06014258 RID: 82520 RVA: 0x005E17EC File Offset: 0x005DF9EC
 	private int GetPreviewModelId()
 	{
 		SpecialItemConfig instance = SpecialItemConfig.Instance;
@@ -254,7 +241,7 @@ public class SpecialItemSummonShowView : UiTickViewBase
 		return specialItem.GetValueOrDefault().PreviewModelId;
 	}
 
-	// Token: 0x06016838 RID: 92216 RVA: 0x005B56D0 File Offset: 0x005B38D0
+	// Token: 0x06014259 RID: 82521 RVA: 0x005E1834 File Offset: 0x005DFA34
 	private string GetPreviewMontagePath()
 	{
 		SpecialItemConfig instance = SpecialItemConfig.Instance;
@@ -262,25 +249,25 @@ public class SpecialItemSummonShowView : UiTickViewBase
 		return ((specialItem != null) ? specialItem.GetValueOrDefault().PreviewMontage : null) ?? "";
 	}
 
-	// Token: 0x06016839 RID: 92217 RVA: 0x005B5721 File Offset: 0x005B3921
+	// Token: 0x0601425A RID: 82522 RVA: 0x005E1885 File Offset: 0x005DFA85
 	private void OnCloseView()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0601683A RID: 92218 RVA: 0x005B572A File Offset: 0x005B392A
+	// Token: 0x0601425B RID: 82523 RVA: 0x005E188E File Offset: 0x005DFA8E
 	private void OnClickedHelpButton()
 	{
 		HelpController.Instance.OpenHelpById(672);
 	}
 
-	// Token: 0x0601683B RID: 92219 RVA: 0x005B573C File Offset: 0x005B393C
+	// Token: 0x0601425C RID: 82524 RVA: 0x005E18A0 File Offset: 0x005DFAA0
 	private void OnClickAssembleButton(int data)
 	{
 		RouletteController.Instance.OpenAssemblyView(ERouletteType.Explore, null, null, new int?(this.ItemId), true);
 	}
 
-	// Token: 0x0601683C RID: 92220 RVA: 0x005B5774 File Offset: 0x005B3974
+	// Token: 0x0601425D RID: 82525 RVA: 0x005E18D8 File Offset: 0x005DFAD8
 	private void OnClickOnlyUiToggle(EToggleState toggleState)
 	{
 		bool state = base.GetItem(28).bIsUIActive;
@@ -302,15 +289,17 @@ public class SpecialItemSummonShowView : UiTickViewBase
 				this.GetItem(28).SetUIActive(!state);
 			}, true);
 		}
-		this.CameraInputComponent.CanCameraInput = state;
-		if (!state)
+		if (state)
 		{
-			this.TryPushCamera(true);
-			this.UpdateCameraInputData();
+			this.CameraInputBinding.Bind();
+			return;
 		}
+		this.CameraInputBinding.Unbind();
+		this.TryPushCamera(true);
+		this.InitCameraInputData();
 	}
 
-	// Token: 0x0601683D RID: 92221 RVA: 0x005B582A File Offset: 0x005B3A2A
+	// Token: 0x0601425E RID: 82526 RVA: 0x005E1994 File Offset: 0x005DFB94
 	private void OnClickEffectPreviewButton(int data)
 	{
 		SpecialItemSummonUiModelUtil.JumpToDisplaySection(this.DisplayMontagePath, "Default");
@@ -319,7 +308,7 @@ public class SpecialItemSummonShowView : UiTickViewBase
 		this.SectionCheckElapsed = 0f;
 	}
 
-	// Token: 0x0601683E RID: 92222 RVA: 0x005B5858 File Offset: 0x005B3A58
+	// Token: 0x0601425F RID: 82527 RVA: 0x005E19C0 File Offset: 0x005DFBC0
 	protected override void OnTick(float delta)
 	{
 		if (!this.NeedCheckSection)
@@ -341,7 +330,7 @@ public class SpecialItemSummonShowView : UiTickViewBase
 		this.SetEffectPreviewButtonEnable(true);
 	}
 
-	// Token: 0x0601683F RID: 92223 RVA: 0x005B58C8 File Offset: 0x005B3AC8
+	// Token: 0x06014260 RID: 82528 RVA: 0x005E1A30 File Offset: 0x005DFC30
 	private void SetEffectPreviewButtonEnable(bool enable)
 	{
 		ButtonItem effectPreviewButton = this.EffectPreviewButton;
@@ -357,46 +346,46 @@ public class SpecialItemSummonShowView : UiTickViewBase
 		effectPreviewButton2.SetLocalTextNew(enable ? "PrefabTextItem_2948403725_Text" : "SummonPreviewIng", Array.Empty<object>());
 	}
 
-	// Token: 0x0400A72B RID: 42795
+	// Token: 0x0400AB2F RID: 43823
 	private const string SUMMON_CASE_TAG = "SummonCase";
 
-	// Token: 0x0400A72C RID: 42796
+	// Token: 0x0400AB30 RID: 43824
 	private const string CAMERA_CONFIG_ID = "藏品预览界面";
 
-	// Token: 0x0400A72D RID: 42797
+	// Token: 0x0400AB31 RID: 43825
 	private const string CAMERA_HANDLE_NAME = "Cam_Summon";
 
-	// Token: 0x0400A72E RID: 42798
+	// Token: 0x0400AB32 RID: 43826
 	private const string VIEW_NAME = "SpecialItemSummonShowView";
 
-	// Token: 0x0400A72F RID: 42799
+	// Token: 0x0400AB33 RID: 43827
 	private const string LOOP_SECTION = "Loop";
 
-	// Token: 0x0400A730 RID: 42800
+	// Token: 0x0400AB34 RID: 43828
 	private const string DEFAULT_SECTION = "Default";
 
-	// Token: 0x0400A731 RID: 42801
+	// Token: 0x0400AB35 RID: 43829
 	private const string CAPTION_TITLE_KEY = "SummonPreview";
 
-	// Token: 0x0400A732 RID: 42802
+	// Token: 0x0400AB36 RID: 43830
 	private const string CAPTION_ICON_RESOURCE_ID = "SummonPreviewTitle_Icon";
 
-	// Token: 0x0400A733 RID: 42803
+	// Token: 0x0400AB37 RID: 43831
 	private const string ASSEMBLE_BUTTON_TEXT_KEY = "GoToSummonAssemble";
 
-	// Token: 0x0400A734 RID: 42804
+	// Token: 0x0400AB38 RID: 43832
 	private const string EFFECT_PREVIEW_ENABLE_TEXT_KEY = "PrefabTextItem_2948403725_Text";
 
-	// Token: 0x0400A735 RID: 42805
+	// Token: 0x0400AB39 RID: 43833
 	private const string EFFECT_PREVIEW_DISABLE_TEXT_KEY = "SummonPreviewIng";
 
-	// Token: 0x0400A736 RID: 42806
+	// Token: 0x0400AB3A RID: 43834
 	private const int HELP_GROUP_ID = 672;
 
-	// Token: 0x0400A737 RID: 42807
+	// Token: 0x0400AB3B RID: 43835
 	private const float SECTION_CHECK_INTERVAL = 0.2f;
 
-	// Token: 0x0400A738 RID: 42808
+	// Token: 0x0400AB3C RID: 43836
 	[StaticVariableRuleIgnore]
 	private static readonly int[] DisableNodeList = new int[]
 	{
@@ -417,30 +406,30 @@ public class SpecialItemSummonShowView : UiTickViewBase
 		52
 	};
 
-	// Token: 0x0400A739 RID: 42809
+	// Token: 0x0400AB3D RID: 43837
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x0400A73A RID: 42810
+	// Token: 0x0400AB3E RID: 43838
 	private int ItemId;
 
-	// Token: 0x0400A73B RID: 42811
-	public UiCameraInputComponent CameraInputComponent = new UiCameraInputComponent();
+	// Token: 0x0400AB3F RID: 43839
+	public UiCameraInputBinding CameraInputBinding = new UiCameraInputBinding();
 
-	// Token: 0x0400A73C RID: 42812
+	// Token: 0x0400AB40 RID: 43840
 	private bool NeedCheckSection;
 
-	// Token: 0x0400A73D RID: 42813
+	// Token: 0x0400AB41 RID: 43841
 	private float SectionCheckElapsed;
 
-	// Token: 0x0400A73E RID: 42814
+	// Token: 0x0400AB42 RID: 43842
 	private string DisplayMontagePath = "";
 
-	// Token: 0x0400A73F RID: 42815
+	// Token: 0x0400AB43 RID: 43843
 	[Nullable(2)]
 	private ButtonItem AssembleButton;
 
-	// Token: 0x0400A740 RID: 42816
+	// Token: 0x0400AB44 RID: 43844
 	[Nullable(2)]
 	private ButtonItem EffectPreviewButton;
 }

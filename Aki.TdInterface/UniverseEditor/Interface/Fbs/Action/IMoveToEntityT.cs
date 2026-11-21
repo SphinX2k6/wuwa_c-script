@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006B5E RID: 27486
+	// Token: 0x020072A4 RID: 29348
 	public class IMoveToEntityT
 	{
-		// Token: 0x1700CC35 RID: 52277
-		// (get) Token: 0x060303FB RID: 197627 RVA: 0x0068E4AD File Offset: 0x0068C6AD
-		// (set) Token: 0x060303FC RID: 197628 RVA: 0x0068E4B5 File Offset: 0x0068C6B5
+		// Token: 0x1700D71A RID: 55066
+		// (get) Token: 0x06033252 RID: 209490 RVA: 0x006E6A69 File Offset: 0x006E4C69
+		// (set) Token: 0x06033253 RID: 209491 RVA: 0x006E6A71 File Offset: 0x006E4C71
 		public EMoveSceneItemType Type { get; set; }
 
-		// Token: 0x1700CC36 RID: 52278
-		// (get) Token: 0x060303FD RID: 197629 RVA: 0x0068E4BE File Offset: 0x0068C6BE
-		// (set) Token: 0x060303FE RID: 197630 RVA: 0x0068E4C6 File Offset: 0x0068C6C6
+		// Token: 0x1700D71B RID: 55067
+		// (get) Token: 0x06033254 RID: 209492 RVA: 0x006E6A7A File Offset: 0x006E4C7A
+		// (set) Token: 0x06033255 RID: 209493 RVA: 0x006E6A82 File Offset: 0x006E4C82
 		public int EntityId { get; set; }
 
-		// Token: 0x1700CC37 RID: 52279
-		// (get) Token: 0x060303FF RID: 197631 RVA: 0x0068E4CF File Offset: 0x0068C6CF
-		// (set) Token: 0x06030400 RID: 197632 RVA: 0x0068E4D7 File Offset: 0x0068C6D7
+		// Token: 0x1700D71C RID: 55068
+		// (get) Token: 0x06033256 RID: 209494 RVA: 0x006E6A8B File Offset: 0x006E4C8B
+		// (set) Token: 0x06033257 RID: 209495 RVA: 0x006E6A93 File Offset: 0x006E4C93
 		public TMoveToPointTypeUnion MoveMotion { get; set; }
 
-		// Token: 0x06030401 RID: 197633 RVA: 0x0068E4E0 File Offset: 0x0068C6E0
+		// Token: 0x06033258 RID: 209496 RVA: 0x006E6A9C File Offset: 0x006E4C9C
 		public IMoveToEntityT()
 		{
 			this.Type = EMoveSceneItemType.MoveToPoint;

@@ -12,17 +12,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.WeaponDecompose
 {
-	// Token: 0x020062E8 RID: 25320
+	// Token: 0x02005266 RID: 21094
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballWeaponDecomposeResultView : UiViewBase
 	{
-		// Token: 0x0603FB50 RID: 260944 RVA: 0x00F69EF2 File Offset: 0x00F680F2
+		// Token: 0x06034811 RID: 215057 RVA: 0x00EB0E4E File Offset: 0x00EAF04E
 		public PinballWeaponDecomposeResultView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603FB52 RID: 260946 RVA: 0x00F69F50 File Offset: 0x00F68150
+		// Token: 0x06034813 RID: 215059 RVA: 0x00EB0EAC File Offset: 0x00EAF0AC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.WeaponD
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603FB53 RID: 260947 RVA: 0x00F6A038 File Offset: 0x00F68238
+		// Token: 0x06034814 RID: 215060 RVA: 0x00EB0F94 File Offset: 0x00EAF194
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PinballWeaponDecomposeResultView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -58,13 +58,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.WeaponD
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FB54 RID: 260948 RVA: 0x00F6A07B File Offset: 0x00F6827B
+		// Token: 0x06034815 RID: 215061 RVA: 0x00EB0FD7 File Offset: 0x00EAF1D7
 		protected override void OnBeforeShow()
 		{
 			this.RefreshItemsAsync().Forget();
 		}
 
-		// Token: 0x0603FB55 RID: 260949 RVA: 0x00F6A088 File Offset: 0x00F68288
+		// Token: 0x06034816 RID: 215062 RVA: 0x00EB0FE4 File Offset: 0x00EAF1E4
 		private UniTask RefreshItemsAsync()
 		{
 			PinballWeaponDecomposeResultView.<RefreshItemsAsync>d__10 <RefreshItemsAsync>d__;
@@ -75,34 +75,34 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.WeaponD
 			return <RefreshItemsAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FB56 RID: 260950 RVA: 0x00F6A0CB File Offset: 0x00F682CB
+		// Token: 0x06034817 RID: 215063 RVA: 0x00EB1027 File Offset: 0x00EAF227
 		private void OnBtnCloseClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603FB57 RID: 260951 RVA: 0x00F6A0D4 File Offset: 0x00F682D4
+		// Token: 0x06034818 RID: 215064 RVA: 0x00EB1030 File Offset: 0x00EAF230
 		private void OnResultItemExtendToggleClicked(IPinballItemToggleCallback callbackParameter)
 		{
-			ItemController.Instance.OpenItemTipsByItemId(89500002, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(89500002, true, null, false);
 		}
 
-		// Token: 0x0603FB58 RID: 260952 RVA: 0x00F6A0E7 File Offset: 0x00F682E7
+		// Token: 0x06034819 RID: 215065 RVA: 0x00EB1044 File Offset: 0x00EAF244
 		private bool OnResultItemCanExecuteChange(IPinballItemToggleCallback callbackParameter)
 		{
 			return false;
 		}
 
-		// Token: 0x04021467 RID: 136295
+		// Token: 0x0401BD96 RID: 114070
 		public new TItem OpenParam;
 
-		// Token: 0x04021468 RID: 136296
+		// Token: 0x0401BD97 RID: 114071
 		private PinballItemView ResultItemView;
 
-		// Token: 0x04021469 RID: 136297
+		// Token: 0x0401BD98 RID: 114072
 		private PinballItemView ReflectionResultItemView;
 
-		// Token: 0x0402146A RID: 136298
+		// Token: 0x0401BD99 RID: 114073
 		private static readonly Dictionary<InventoryDefine.EQuality, string> QualityColorMap = new Dictionary<InventoryDefine.EQuality, string>
 		{
 			{
@@ -127,17 +127,17 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.WeaponD
 			}
 		};
 
-		// Token: 0x0200C4D5 RID: 50389
+		// Token: 0x0200AEBC RID: 44732
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403B65D RID: 243293
+			// Token: 0x04035FBF RID: 221119
 			BtnClose,
-			// Token: 0x0403B65E RID: 243294
+			// Token: 0x04035FC0 RID: 221120
 			Item,
-			// Token: 0x0403B65F RID: 243295
+			// Token: 0x04035FC1 RID: 221121
 			ItemReflection,
-			// Token: 0x0403B660 RID: 243296
+			// Token: 0x04035FC2 RID: 221122
 			TexLight
 		}
 	}

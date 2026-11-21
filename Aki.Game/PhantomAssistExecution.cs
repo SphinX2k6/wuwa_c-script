@@ -2,24 +2,24 @@
 using System.Runtime.CompilerServices;
 using Aki.Protocol.Summon;
 
-// Token: 0x02002F90 RID: 12176
+// Token: 0x020024E4 RID: 9444
 [NullableContext(1)]
 [Nullable(0)]
 public class PhantomAssistExecution : InitExecution
 {
-	// Token: 0x06019D9B RID: 105883 RVA: 0x006BF8F8 File Offset: 0x006BDAF8
+	// Token: 0x060176AD RID: 95917 RVA: 0x006E61D8 File Offset: 0x006E43D8
 	public PhantomAssistExecution(RequireAndLimits requireAndLimits) : base(requireAndLimits)
 	{
 	}
 
-	// Token: 0x06019D9C RID: 105884 RVA: 0x006BF908 File Offset: 0x006BDB08
+	// Token: 0x060176AE RID: 95918 RVA: 0x006E61E8 File Offset: 0x006E43E8
 	protected override bool CheckExecutable()
 	{
 		IBuffComponent ownerBuffComponent = this.OwnerBuffComponent;
 		return ownerBuffComponent != null && ownerBuffComponent.HasBuffAuthority();
 	}
 
-	// Token: 0x06019D9D RID: 105885 RVA: 0x006BF91C File Offset: 0x006BDB1C
+	// Token: 0x060176AF RID: 95919 RVA: 0x006E61FC File Offset: 0x006E43FC
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -29,7 +29,7 @@ public class PhantomAssistExecution : InitExecution
 		this.SkillTargetType = (ESkillTargetType)((extraEffectParameters_ != null && extraEffectParameters_.Length > 3) ? int.Parse(extraEffectParameters_[3]) : 2);
 	}
 
-	// Token: 0x06019D9E RID: 105886 RVA: 0x006BF998 File Offset: 0x006BDB98
+	// Token: 0x060176B0 RID: 95920 RVA: 0x006E6278 File Offset: 0x006E4478
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] args)
 	{
@@ -55,7 +55,7 @@ public class PhantomAssistExecution : InitExecution
 		return null;
 	}
 
-	// Token: 0x06019D9F RID: 105887 RVA: 0x006BFA28 File Offset: 0x006BDC28
+	// Token: 0x060176B1 RID: 95921 RVA: 0x006E6308 File Offset: 0x006E4508
 	[NullableContext(2)]
 	private EntityHandle GetSkillTarget()
 	{
@@ -113,15 +113,15 @@ public class PhantomAssistExecution : InitExecution
 		return result;
 	}
 
-	// Token: 0x0400C347 RID: 49991
+	// Token: 0x0400C6F0 RID: 50928
 	private ESummonType SummonType;
 
-	// Token: 0x0400C348 RID: 49992
+	// Token: 0x0400C6F1 RID: 50929
 	private int FollowIndex;
 
-	// Token: 0x0400C349 RID: 49993
+	// Token: 0x0400C6F2 RID: 50930
 	private int SkillId;
 
-	// Token: 0x0400C34A RID: 49994
+	// Token: 0x0400C6F3 RID: 50931
 	private ESkillTargetType SkillTargetType = ESkillTargetType.Owner;
 }

@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.Skin
 {
-	// Token: 0x02004BDE RID: 19422
+	// Token: 0x02003B8A RID: 15242
 	public enum EModelStateInSkinView
 	{
-		// Token: 0x0401AB92 RID: 109458
+		// Token: 0x040154EE RID: 87278
 		ShowRole,
-		// Token: 0x0401AB93 RID: 109459
+		// Token: 0x040154EF RID: 87279
 		ShowWeapon,
-		// Token: 0x0401AB94 RID: 109460
+		// Token: 0x040154F0 RID: 87280
 		ShowGlider,
-		// Token: 0x0401AB95 RID: 109461
+		// Token: 0x040154F1 RID: 87281
 		ShowCalabash
 	}
 }

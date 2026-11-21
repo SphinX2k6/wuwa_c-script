@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020F3 RID: 8435
+	// Token: 0x02002354 RID: 9044
 	public class OpenSystemBoardWithReturn_SetValue
 	{
-		// Token: 0x04006F2C RID: 28460
-		[Nullable(1)]
+		// Token: 0x04007560 RID: 30048
 		public IOpenSystemBoardWithReturnType SystemType;
 	}
 }

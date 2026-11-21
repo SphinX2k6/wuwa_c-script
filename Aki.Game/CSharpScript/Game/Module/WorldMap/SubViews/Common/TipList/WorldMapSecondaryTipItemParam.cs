@@ -3,19 +3,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.Common.TipList
 {
-	// Token: 0x02004836 RID: 18486
+	// Token: 0x02003767 RID: 14183
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WorldMapSecondaryTipItemParam : IWorldMapSecondaryTipItemParam
 	{
-		// Token: 0x170078F0 RID: 30960
-		// (get) Token: 0x06030619 RID: 198169 RVA: 0x00B3B56A File Offset: 0x00B3976A
-		// (set) Token: 0x0603061A RID: 198170 RVA: 0x00B3B572 File Offset: 0x00B39772
+		// Token: 0x17004BAD RID: 19373
+		// (get) Token: 0x06024DE9 RID: 151017 RVA: 0x00A6B636 File Offset: 0x00A69836
+		// (set) Token: 0x06024DEA RID: 151018 RVA: 0x00A6B63E File Offset: 0x00A6983E
 		public string Name { get; set; }
 
-		// Token: 0x170078F1 RID: 30961
-		// (get) Token: 0x0603061B RID: 198171 RVA: 0x00B3B57B File Offset: 0x00B3977B
-		// (set) Token: 0x0603061C RID: 198172 RVA: 0x00B3B583 File Offset: 0x00B39783
+		// Token: 0x17004BAE RID: 19374
+		// (get) Token: 0x06024DEB RID: 151019 RVA: 0x00A6B647 File Offset: 0x00A69847
+		// (set) Token: 0x06024DEC RID: 151020 RVA: 0x00A6B64F File Offset: 0x00A6984F
 		public string Desc { get; set; }
 	}
 }

@@ -5,16 +5,16 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalComponents
 {
-	// Token: 0x02005F74 RID: 24436
+	// Token: 0x02004F5B RID: 20315
 	public class ActivityConditionView : CommonConditionView
 	{
-		// Token: 0x0603E077 RID: 254071 RVA: 0x00EF9C5B File Offset: 0x00EF7E5B
+		// Token: 0x06033011 RID: 208913 RVA: 0x00E4B943 File Offset: 0x00E49B43
 		[NullableContext(1)]
 		public ActivityConditionView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603E078 RID: 254072 RVA: 0x00EF9C64 File Offset: 0x00EF7E64
+		// Token: 0x06033012 RID: 208914 RVA: 0x00E4B94C File Offset: 0x00E49B4C
 		protected override void OnStart()
 		{
 			ActivityConditionGroupData activityConditionGroupData = this.OpenParam as ActivityConditionGroupData;
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalComponents
 			base.CreateConditionLayout();
 		}
 
-		// Token: 0x04020646 RID: 132678
+		// Token: 0x0401B118 RID: 110872
 		private int ActivityId;
 	}
 }

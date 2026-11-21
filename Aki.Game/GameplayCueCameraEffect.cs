@@ -1,10 +1,10 @@
 ﻿using System;
 using CSharpScript.Game.Render.Effect.ScreenEffectSystem;
 
-// Token: 0x02002FB8 RID: 12216
+// Token: 0x0200250C RID: 9484
 public class GameplayCueCameraEffect : GameplayCueBase
 {
-	// Token: 0x06019E66 RID: 106086 RVA: 0x006C545C File Offset: 0x006C365C
+	// Token: 0x06017778 RID: 96120 RVA: 0x006EBD20 File Offset: 0x006E9F20
 	protected override void OnCreate()
 	{
 		if (!string.IsNullOrEmpty(this.CueConfig.Path) && this.EntityHandle.Entity.GetComponent<CharacterActorComponent>().IsAutonomousProxy && CharacterUtils.CanCharacterMonsterOrSummonedDisplayEffect(this.EntityHandle))
@@ -17,7 +17,7 @@ public class GameplayCueCameraEffect : GameplayCueBase
 		}
 	}
 
-	// Token: 0x06019E67 RID: 106087 RVA: 0x006C54D4 File Offset: 0x006C36D4
+	// Token: 0x06017779 RID: 96121 RVA: 0x006EBD98 File Offset: 0x006E9F98
 	protected override void OnDestroy()
 	{
 		if (this.HandleId != 0)
@@ -27,18 +27,18 @@ public class GameplayCueCameraEffect : GameplayCueBase
 		}
 	}
 
-	// Token: 0x06019E68 RID: 106088 RVA: 0x006C54F5 File Offset: 0x006C36F5
+	// Token: 0x0601777A RID: 96122 RVA: 0x006EBDB9 File Offset: 0x006E9FB9
 	public override void OnEnable()
 	{
 		this.OnCreate();
 	}
 
-	// Token: 0x06019E69 RID: 106089 RVA: 0x006C54FD File Offset: 0x006C36FD
+	// Token: 0x0601777B RID: 96123 RVA: 0x006EBDC1 File Offset: 0x006E9FC1
 	public override void OnDisable()
 	{
 		this.OnDestroy();
 	}
 
-	// Token: 0x0400C3E9 RID: 50153
+	// Token: 0x0400C792 RID: 51090
 	private int HandleId;
 }

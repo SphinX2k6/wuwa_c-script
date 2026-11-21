@@ -5,18 +5,18 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002308 RID: 8968
+// Token: 0x020017EC RID: 6124
 [NullableContext(1)]
 [Nullable(0)]
 public class QteTipItem : UiPanelBase
 {
-	// Token: 0x06011B51 RID: 72529 RVA: 0x0045A4DF File Offset: 0x004586DF
+	// Token: 0x0600EFEC RID: 61420 RVA: 0x004672EF File Offset: 0x004654EF
 	public void Init(UUIItem rootItem)
 	{
 		base.CreateThenShowByResourceIdAsync("UiItem_QteTips", rootItem, false);
 	}
 
-	// Token: 0x06011B52 RID: 72530 RVA: 0x0045A4F0 File Offset: 0x004586F0
+	// Token: 0x0600EFED RID: 61421 RVA: 0x00467300 File Offset: 0x00465500
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -28,7 +28,7 @@ public class QteTipItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06011B53 RID: 72531 RVA: 0x0045A538 File Offset: 0x00458738
+	// Token: 0x0600EFEE RID: 61422 RVA: 0x00467348 File Offset: 0x00465548
 	protected override void OnStart()
 	{
 		if (!string.IsNullOrEmpty(this.Tip))
@@ -37,7 +37,7 @@ public class QteTipItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06011B54 RID: 72532 RVA: 0x0045A553 File Offset: 0x00458753
+	// Token: 0x0600EFEF RID: 61423 RVA: 0x00467363 File Offset: 0x00465563
 	public void Refresh(string tip)
 	{
 		this.Tip = tip;
@@ -47,14 +47,14 @@ public class QteTipItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x04008657 RID: 34391
+	// Token: 0x04008797 RID: 34711
 	private string Tip = string.Empty;
 
-	// Token: 0x02008885 RID: 34949
+	// Token: 0x02007A0B RID: 31243
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402C5F5 RID: 181749
+		// Token: 0x04027903 RID: 162051
 		TxtTip
 	}
 }

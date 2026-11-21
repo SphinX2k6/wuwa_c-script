@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005BFA RID: 23546
+	// Token: 0x02006219 RID: 25113
 	public enum TConnectorLogic : byte
 	{
-		// Token: 0x0400F39A RID: 62362
+		// Token: 0x040100B5 RID: 65717
 		NONE,
-		// Token: 0x0400F39B RID: 62363
+		// Token: 0x040100B6 RID: 65718
 		IConnectorPointToPointPathAdvance,
-		// Token: 0x0400F39C RID: 62364
+		// Token: 0x040100B7 RID: 65719
 		IConnectorRange
 	}
 }

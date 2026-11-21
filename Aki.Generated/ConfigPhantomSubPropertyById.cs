@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020006B5 RID: 1717
+	// Token: 0x020006CD RID: 1741
 	public class ConfigPhantomSubPropertyById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600284E RID: 10318 RVA: 0x0013D843 File Offset: 0x0013BA43
+		// Token: 0x060028DE RID: 10462 RVA: 0x001442BF File Offset: 0x001424BF
 		static ConfigPhantomSubPropertyById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPhantomSubPropertyById.CreateStaticDefaultValue), new Action(ConfigPhantomSubPropertyById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600284F RID: 10319 RVA: 0x0013D864 File Offset: 0x0013BA64
+		// Token: 0x060028DF RID: 10463 RVA: 0x001442E0 File Offset: 0x001424E0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPhantomSubPropertyById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002850 RID: 10320 RVA: 0x0013D8E3 File Offset: 0x0013BAE3
+		// Token: 0x060028E0 RID: 10464 RVA: 0x0014435F File Offset: 0x0014255F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPhantomSubPropertyById.LogPair = null;
 			ConfigPhantomSubPropertyById.HandleId = 0;
 		}
 
-		// Token: 0x06002851 RID: 10321 RVA: 0x0013D8F1 File Offset: 0x0013BAF1
+		// Token: 0x060028E1 RID: 10465 RVA: 0x0014436D File Offset: 0x0014256D
 		public static void Init()
 		{
 			ConfigPhantomSubPropertyById.HandleId = ConfigCommon.InitDataStatement(ConfigPhantomSubPropertyById.HandleId, "db_phantom.db", "select BinData from `PhantomSubProperty` where Id=?");
 		}
 
-		// Token: 0x06002852 RID: 10322 RVA: 0x0013D90C File Offset: 0x0013BB0C
+		// Token: 0x060028E2 RID: 10466 RVA: 0x00144388 File Offset: 0x00142588
 		public static PhantomSubProperty? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPhantomSubPropertyById.HandleId, ConfigPhantomSubPropertyById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PhantomSubProperty?(rootAsPhantomSubProperty);
 		}
 
-		// Token: 0x04002ED9 RID: 11993
+		// Token: 0x04002F81 RID: 12161
 		private const string DB = "db_phantom.db";
 
-		// Token: 0x04002EDA RID: 11994
+		// Token: 0x04002F82 RID: 12162
 		private const string FILE = "h.幻象.xlsx";
 
-		// Token: 0x04002EDB RID: 11995
+		// Token: 0x04002F83 RID: 12163
 		private const string TABLE = "PhantomSubProperty";
 
-		// Token: 0x04002EDC RID: 11996
+		// Token: 0x04002F84 RID: 12164
 		private const string COMMAND = "select BinData from `PhantomSubProperty` where Id=?";
 
-		// Token: 0x04002EDD RID: 11997
+		// Token: 0x04002F85 RID: 12165
 		private const string KEY_PREFIX = "PhantomSubPropertyById";
 
-		// Token: 0x04002EDE RID: 11998
+		// Token: 0x04002F86 RID: 12166
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002EDF RID: 11999
+		// Token: 0x04002F87 RID: 12167
 		private static int HandleId;
 	}
 }

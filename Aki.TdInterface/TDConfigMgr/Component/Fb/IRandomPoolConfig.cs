@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DAE RID: 3502
+	// Token: 0x02000EAA RID: 3754
 	public class IRandomPoolConfig
 	{
-		// Token: 0x06004F8C RID: 20364 RVA: 0x000C4F86 File Offset: 0x000C3186
-		[NullableContext(1)]
+		// Token: 0x060054B1 RID: 21681 RVA: 0x000D07D6 File Offset: 0x000CE9D6
 		public static IRandomPoolConfig Create(IRandomPoolConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170019ED RID: 6637
-		// (get) Token: 0x06004F8D RID: 20365 RVA: 0x000C4FA5 File Offset: 0x000C31A5
+		// Token: 0x17001B58 RID: 7000
+		// (get) Token: 0x060054B2 RID: 21682 RVA: 0x000D07F5 File Offset: 0x000CE9F5
 		public virtual int Id
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170019EE RID: 6638
-		// (get) Token: 0x06004F8E RID: 20366 RVA: 0x000C4FB2 File Offset: 0x000C31B2
+		// Token: 0x17001B59 RID: 7001
+		// (get) Token: 0x060054B3 RID: 21683 RVA: 0x000D0802 File Offset: 0x000CEA02
 		public virtual int Count
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002DA3 RID: 11683
+		// Token: 0x04003069 RID: 12393
 		private IRandomPoolConfig Instance;
 	}
 }

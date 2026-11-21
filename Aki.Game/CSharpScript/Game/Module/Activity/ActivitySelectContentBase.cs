@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity
 {
-	// Token: 0x02005EFE RID: 24318
+	// Token: 0x02004EE5 RID: 20197
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ActivitySelectContentBase : UiPanelBase, IDynamicScrollBaseItem<ActivityBaseData>
 	{
-		// Token: 0x0603DCB1 RID: 253105 RVA: 0x00EF06F8 File Offset: 0x00EEE8F8
+		// Token: 0x06032C4C RID: 207948 RVA: 0x00E423BC File Offset: 0x00E405BC
 		public UniTask Init(UUIItem actor)
 		{
 			ActivitySelectContentBase.<Init>d__0 <Init>d__;
@@ -25,12 +25,12 @@ namespace CSharpScript.Game.Module.Activity
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603DCB2 RID: 253106 RVA: 0x00EF0743 File Offset: 0x00EEE943
+		// Token: 0x06032C4D RID: 207949 RVA: 0x00E42407 File Offset: 0x00E40607
 		public void ClearItem()
 		{
 		}
 
-		// Token: 0x0603DCB3 RID: 253107 RVA: 0x00EF0745 File Offset: 0x00EEE945
+		// Token: 0x06032C4E RID: 207950 RVA: 0x00E42409 File Offset: 0x00E40609
 		public FVector2D GetItemSize(ActivityBaseData data)
 		{
 			Vector2D vector2D = Vector2D.Create();

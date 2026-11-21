@@ -14,12 +14,12 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02003481 RID: 13441
+// Token: 0x020029F5 RID: 10741
 [UClass("/Game/Aki/TypeScript/Game/Render/Effect/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Render/Effect/EffectBlueprintFunctionLibrary.EffectBlueprintFunctionLibrary_C")]
 public class EffectBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x0601D218 RID: 119320 RVA: 0x0081EB20 File Offset: 0x0081CD20
+	// Token: 0x0601AF20 RID: 110368 RVA: 0x00845E20 File Offset: 0x00844020
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetMaterialControllerDataSync(int entityId, string materialDataPath, bool isGroup)
@@ -113,28 +113,28 @@ public class EffectBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		CombatNet.Instance.Send(EPushMessageId.MaterialPush, worldEntity, materialPush, null, null, null);
 	}
 
-	// Token: 0x0601D219 RID: 119321 RVA: 0x0081EC7D File Offset: 0x0081CE7D
+	// Token: 0x0601AF21 RID: 110369 RVA: 0x00845F7D File Offset: 0x0084417D
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void RecycleEffect(EffectViewComponent view)
 	{
 	}
 
-	// Token: 0x0601D21A RID: 119322 RVA: 0x0081EC7F File Offset: 0x0081CE7F
+	// Token: 0x0601AF22 RID: 110370 RVA: 0x00845F7F File Offset: 0x0084417F
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static float AddDebugLineFromPlayer(FVector location, FLinearColor color, float width)
 	{
 		return (float)DebugDrawManager.AddDebugLineFromPlayer(global::Vector.Create(location), color, width);
 	}
 
-	// Token: 0x0601D21B RID: 119323 RVA: 0x0081EC94 File Offset: 0x0081CE94
+	// Token: 0x0601AF23 RID: 110371 RVA: 0x00845F94 File Offset: 0x00844194
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void ClearDebugDraw()
 	{
 		DebugDrawManager.ClearDebugDraw();
 	}
 
-	// Token: 0x0601D21C RID: 119324 RVA: 0x0081EC9B File Offset: 0x0081CE9B
+	// Token: 0x0601AF24 RID: 110372 RVA: 0x00845F9B File Offset: 0x0084419B
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool ValidateKuroAnimNotify(UKuroAnimNotify asset)
@@ -142,7 +142,7 @@ public class EffectBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		return asset.K2_ValidateAssets();
 	}
 
-	// Token: 0x0601D21D RID: 119325 RVA: 0x0081ECA3 File Offset: 0x0081CEA3
+	// Token: 0x0601AF25 RID: 110373 RVA: 0x00845FA3 File Offset: 0x008441A3
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool ValidateKuroAnimNotifyState(UKuroAnimNotifyState asset)
@@ -150,63 +150,63 @@ public class EffectBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		return asset.K2_ValidateAssets();
 	}
 
-	// Token: 0x0601D21E RID: 119326 RVA: 0x0081ECAB File Offset: 0x0081CEAB
+	// Token: 0x0601AF26 RID: 110374 RVA: 0x00845FAB File Offset: 0x008441AB
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetVisualizeCharacterWaterEffectTrace(bool enable)
 	{
 		SceneCharacterInteraction.SetTraceDebug(enable);
 	}
 
-	// Token: 0x0601D21F RID: 119327 RVA: 0x0081ECB3 File Offset: 0x0081CEB3
+	// Token: 0x0601AF27 RID: 110375 RVA: 0x00845FB3 File Offset: 0x008441B3
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetEffectSpawnLogEnabled(bool enabled)
 	{
 		EffectGlobal.Instance.EnableSpawnLog = enabled;
 	}
 
-	// Token: 0x0601D220 RID: 119328 RVA: 0x0081ECC0 File Offset: 0x0081CEC0
+	// Token: 0x0601AF28 RID: 110376 RVA: 0x00845FC0 File Offset: 0x008441C0
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void BeginDebugDrawFoliageDetect(FLinearColor color, float width)
 	{
 		FoliageClusteredEffectManager.Instance.BeginDebugDraw(color, width);
 	}
 
-	// Token: 0x0601D221 RID: 119329 RVA: 0x0081ECCE File Offset: 0x0081CECE
+	// Token: 0x0601AF29 RID: 110377 RVA: 0x00845FCE File Offset: 0x008441CE
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void EndDebugDrawFoliageDetect()
 	{
 		FoliageClusteredEffectManager.Instance.EndDebugDraw();
 	}
 
-	// Token: 0x0601D222 RID: 119330 RVA: 0x0081ECDA File Offset: 0x0081CEDA
+	// Token: 0x0601AF2A RID: 110378 RVA: 0x00845FDA File Offset: 0x008441DA
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void RefreshFoliageDetectConfig()
 	{
 		FoliageClusteredEffectManager.Instance.CacheFromConfig();
 	}
 
-	// Token: 0x0601D223 RID: 119331 RVA: 0x0081ECE6 File Offset: 0x0081CEE6
+	// Token: 0x0601AF2B RID: 110379 RVA: 0x00845FE6 File Offset: 0x008441E6
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetEffectInPoolEnabled(bool enable)
 	{
 		EffectGlobal.Instance.AllowEffectInPool = enable;
 	}
 
-	// Token: 0x0601D224 RID: 119332 RVA: 0x0081ECF3 File Offset: 0x0081CEF3
+	// Token: 0x0601AF2C RID: 110380 RVA: 0x00845FF3 File Offset: 0x008441F3
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetEffectOutPoolEnabled(bool enable)
 	{
 		EffectGlobal.Instance.AllowEffectOutPool = enable;
 	}
 
-	// Token: 0x0601D225 RID: 119333 RVA: 0x0081ED00 File Offset: 0x0081CF00
+	// Token: 0x0601AF2D RID: 110381 RVA: 0x00846000 File Offset: 0x00844200
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void EnableSceneObjectWaterEffectShowDebugTrace(bool enable)
 	{
 		EffectGlobal.Instance.SceneObjectWaterEffectShowDebugTrace = enable;
 	}
 
-	// Token: 0x0601D226 RID: 119334 RVA: 0x0081ED0D File Offset: 0x0081CF0D
+	// Token: 0x0601AF2E RID: 110382 RVA: 0x0084600D File Offset: 0x0084420D
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetTsWriteTimeToCollectionEnabled(bool enable)
 	{
@@ -216,14 +216,14 @@ public class EffectBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		}
 	}
 
-	// Token: 0x0601D227 RID: 119335 RVA: 0x0081ED26 File Offset: 0x0081CF26
+	// Token: 0x0601AF2F RID: 110383 RVA: 0x00846026 File Offset: 0x00844226
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void EffectCgMode(bool enable)
 	{
 		EffectGlobal.Instance.CgMode = enable;
 	}
 
-	// Token: 0x0601D228 RID: 119336 RVA: 0x0081ED33 File Offset: 0x0081CF33
+	// Token: 0x0601AF30 RID: 110384 RVA: 0x00846033 File Offset: 0x00844233
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static BP_ScreenEffectSystem_C GetScreenEffectSystem()
@@ -231,7 +231,7 @@ public class EffectBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		return ScreenEffectSystem.GetInstance();
 	}
 
-	// Token: 0x0601D229 RID: 119337 RVA: 0x0081ED3C File Offset: 0x0081CF3C
+	// Token: 0x0601AF31 RID: 110385 RVA: 0x0084603C File Offset: 0x0084423C
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public unsafe static void ChangeMaterialTextures([Nullable(2)] AActor actor, string assetPath)
@@ -267,7 +267,7 @@ public class EffectBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		}, 100, "js_undefined");
 	}
 
-	// Token: 0x0601D22A RID: 119338 RVA: 0x0081ED8A File Offset: 0x0081CF8A
+	// Token: 0x0601AF32 RID: 110386 RVA: 0x0084608A File Offset: 0x0084428A
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (EffectBlueprintFunctionLibrary._ClassPtr == IntPtr.Zero)
@@ -277,122 +277,122 @@ public class EffectBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		return EffectBlueprintFunctionLibrary._ClassPtr;
 	}
 
-	// Token: 0x0601D22B RID: 119339 RVA: 0x0081EDB0 File Offset: 0x0081CFB0
+	// Token: 0x0601AF33 RID: 110387 RVA: 0x008460B0 File Offset: 0x008442B0
 	public EffectBlueprintFunctionLibrary() : this(BuiltinUtils.AllocNativeUObject(EffectBlueprintFunctionLibrary.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0601D22C RID: 119340 RVA: 0x0081EDD8 File Offset: 0x0081CFD8
+	// Token: 0x0601AF34 RID: 110388 RVA: 0x008460D8 File Offset: 0x008442D8
 	[NullableContext(1)]
 	public EffectBlueprintFunctionLibrary(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(EffectBlueprintFunctionLibrary.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601D22D RID: 119341 RVA: 0x0081EE0B File Offset: 0x0081D00B
+	// Token: 0x0601AF35 RID: 110389 RVA: 0x0084610B File Offset: 0x0084430B
 	protected EffectBlueprintFunctionLibrary(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0601D22E RID: 119342 RVA: 0x0081EE14 File Offset: 0x0081D014
+	// Token: 0x0601AF36 RID: 110390 RVA: 0x00846114 File Offset: 0x00844314
 	protected unsafe static void __CPPCALL_SetMaterialControllerDataSync_Implementation(EffectBlueprintFunctionLibrary.__SetMaterialControllerDataSync_FunctionParams* __Params)
 	{
 		string materialDataPath = FString.ToString((void*)(&__Params->materialDataPath));
 		EffectBlueprintFunctionLibrary.SetMaterialControllerDataSync(__Params->entityId, materialDataPath, __Params->isGroup);
 	}
 
-	// Token: 0x0601D22F RID: 119343 RVA: 0x0081EE40 File Offset: 0x0081D040
+	// Token: 0x0601AF37 RID: 110391 RVA: 0x00846140 File Offset: 0x00844340
 	protected unsafe static void __CPPCALL_RecycleEffect_Implementation(EffectBlueprintFunctionLibrary.__RecycleEffect_FunctionParams* __Params)
 	{
 		EffectBlueprintFunctionLibrary.RecycleEffect(BuiltinUtils.GetOrCreateUObjectByNativePointer<EffectViewComponent>(__Params->view));
 	}
 
-	// Token: 0x0601D230 RID: 119344 RVA: 0x0081EE52 File Offset: 0x0081D052
+	// Token: 0x0601AF38 RID: 110392 RVA: 0x00846152 File Offset: 0x00844352
 	protected unsafe static void __CPPCALL_AddDebugLineFromPlayer_Implementation(EffectBlueprintFunctionLibrary.__AddDebugLineFromPlayer_FunctionParams* __Params)
 	{
 		__Params->__Result = EffectBlueprintFunctionLibrary.AddDebugLineFromPlayer(__Params->location, __Params->color, __Params->width);
 	}
 
-	// Token: 0x0601D231 RID: 119345 RVA: 0x0081EE71 File Offset: 0x0081D071
+	// Token: 0x0601AF39 RID: 110393 RVA: 0x00846171 File Offset: 0x00844371
 	protected unsafe static void __CPPCALL_ClearDebugDraw_Implementation(EffectBlueprintFunctionLibrary.__ClearDebugDraw_FunctionParams* __Params)
 	{
 		EffectBlueprintFunctionLibrary.ClearDebugDraw();
 	}
 
-	// Token: 0x0601D232 RID: 119346 RVA: 0x0081EE78 File Offset: 0x0081D078
+	// Token: 0x0601AF3A RID: 110394 RVA: 0x00846178 File Offset: 0x00844378
 	protected unsafe static void __CPPCALL_ValidateKuroAnimNotify_Implementation(EffectBlueprintFunctionLibrary.__ValidateKuroAnimNotify_FunctionParams* __Params)
 	{
 		UKuroAnimNotify orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<UKuroAnimNotify>(__Params->asset);
 		__Params->__Result = EffectBlueprintFunctionLibrary.ValidateKuroAnimNotify(orCreateUObjectByNativePointer);
 	}
 
-	// Token: 0x0601D233 RID: 119347 RVA: 0x0081EEA0 File Offset: 0x0081D0A0
+	// Token: 0x0601AF3B RID: 110395 RVA: 0x008461A0 File Offset: 0x008443A0
 	protected unsafe static void __CPPCALL_ValidateKuroAnimNotifyState_Implementation(EffectBlueprintFunctionLibrary.__ValidateKuroAnimNotifyState_FunctionParams* __Params)
 	{
 		UKuroAnimNotifyState orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<UKuroAnimNotifyState>(__Params->asset);
 		__Params->__Result = EffectBlueprintFunctionLibrary.ValidateKuroAnimNotifyState(orCreateUObjectByNativePointer);
 	}
 
-	// Token: 0x0601D234 RID: 119348 RVA: 0x0081EEC5 File Offset: 0x0081D0C5
+	// Token: 0x0601AF3C RID: 110396 RVA: 0x008461C5 File Offset: 0x008443C5
 	protected unsafe static void __CPPCALL_SetVisualizeCharacterWaterEffectTrace_Implementation(EffectBlueprintFunctionLibrary.__SetVisualizeCharacterWaterEffectTrace_FunctionParams* __Params)
 	{
 		EffectBlueprintFunctionLibrary.SetVisualizeCharacterWaterEffectTrace(__Params->enable);
 	}
 
-	// Token: 0x0601D235 RID: 119349 RVA: 0x0081EED2 File Offset: 0x0081D0D2
+	// Token: 0x0601AF3D RID: 110397 RVA: 0x008461D2 File Offset: 0x008443D2
 	protected unsafe static void __CPPCALL_SetEffectSpawnLogEnabled_Implementation(EffectBlueprintFunctionLibrary.__SetEffectSpawnLogEnabled_FunctionParams* __Params)
 	{
 		EffectBlueprintFunctionLibrary.SetEffectSpawnLogEnabled(__Params->enabled);
 	}
 
-	// Token: 0x0601D236 RID: 119350 RVA: 0x0081EEDF File Offset: 0x0081D0DF
+	// Token: 0x0601AF3E RID: 110398 RVA: 0x008461DF File Offset: 0x008443DF
 	protected unsafe static void __CPPCALL_BeginDebugDrawFoliageDetect_Implementation(EffectBlueprintFunctionLibrary.__BeginDebugDrawFoliageDetect_FunctionParams* __Params)
 	{
 		EffectBlueprintFunctionLibrary.BeginDebugDrawFoliageDetect(__Params->color, __Params->width);
 	}
 
-	// Token: 0x0601D237 RID: 119351 RVA: 0x0081EEF2 File Offset: 0x0081D0F2
+	// Token: 0x0601AF3F RID: 110399 RVA: 0x008461F2 File Offset: 0x008443F2
 	protected unsafe static void __CPPCALL_EndDebugDrawFoliageDetect_Implementation(EffectBlueprintFunctionLibrary.__EndDebugDrawFoliageDetect_FunctionParams* __Params)
 	{
 		EffectBlueprintFunctionLibrary.EndDebugDrawFoliageDetect();
 	}
 
-	// Token: 0x0601D238 RID: 119352 RVA: 0x0081EEF9 File Offset: 0x0081D0F9
+	// Token: 0x0601AF40 RID: 110400 RVA: 0x008461F9 File Offset: 0x008443F9
 	protected unsafe static void __CPPCALL_RefreshFoliageDetectConfig_Implementation(EffectBlueprintFunctionLibrary.__RefreshFoliageDetectConfig_FunctionParams* __Params)
 	{
 		EffectBlueprintFunctionLibrary.RefreshFoliageDetectConfig();
 	}
 
-	// Token: 0x0601D239 RID: 119353 RVA: 0x0081EF00 File Offset: 0x0081D100
+	// Token: 0x0601AF41 RID: 110401 RVA: 0x00846200 File Offset: 0x00844400
 	protected unsafe static void __CPPCALL_SetEffectInPoolEnabled_Implementation(EffectBlueprintFunctionLibrary.__SetEffectInPoolEnabled_FunctionParams* __Params)
 	{
 		EffectBlueprintFunctionLibrary.SetEffectInPoolEnabled(__Params->enable);
 	}
 
-	// Token: 0x0601D23A RID: 119354 RVA: 0x0081EF0D File Offset: 0x0081D10D
+	// Token: 0x0601AF42 RID: 110402 RVA: 0x0084620D File Offset: 0x0084440D
 	protected unsafe static void __CPPCALL_SetEffectOutPoolEnabled_Implementation(EffectBlueprintFunctionLibrary.__SetEffectOutPoolEnabled_FunctionParams* __Params)
 	{
 		EffectBlueprintFunctionLibrary.SetEffectOutPoolEnabled(__Params->enable);
 	}
 
-	// Token: 0x0601D23B RID: 119355 RVA: 0x0081EF1A File Offset: 0x0081D11A
+	// Token: 0x0601AF43 RID: 110403 RVA: 0x0084621A File Offset: 0x0084441A
 	protected unsafe static void __CPPCALL_EnableSceneObjectWaterEffectShowDebugTrace_Implementation(EffectBlueprintFunctionLibrary.__EnableSceneObjectWaterEffectShowDebugTrace_FunctionParams* __Params)
 	{
 		EffectBlueprintFunctionLibrary.EnableSceneObjectWaterEffectShowDebugTrace(__Params->enable);
 	}
 
-	// Token: 0x0601D23C RID: 119356 RVA: 0x0081EF27 File Offset: 0x0081D127
+	// Token: 0x0601AF44 RID: 110404 RVA: 0x00846227 File Offset: 0x00844427
 	protected unsafe static void __CPPCALL_SetTsWriteTimeToCollectionEnabled_Implementation(EffectBlueprintFunctionLibrary.__SetTsWriteTimeToCollectionEnabled_FunctionParams* __Params)
 	{
 		EffectBlueprintFunctionLibrary.SetTsWriteTimeToCollectionEnabled(__Params->enable);
 	}
 
-	// Token: 0x0601D23D RID: 119357 RVA: 0x0081EF34 File Offset: 0x0081D134
+	// Token: 0x0601AF45 RID: 110405 RVA: 0x00846234 File Offset: 0x00844434
 	protected unsafe static void __CPPCALL_EffectCgMode_Implementation(EffectBlueprintFunctionLibrary.__EffectCgMode_FunctionParams* __Params)
 	{
 		EffectBlueprintFunctionLibrary.EffectCgMode(__Params->enable);
 	}
 
-	// Token: 0x0601D23E RID: 119358 RVA: 0x0081EF41 File Offset: 0x0081D141
+	// Token: 0x0601AF46 RID: 110406 RVA: 0x00846241 File Offset: 0x00844441
 	protected unsafe static void __CPPCALL_GetScreenEffectSystem_Implementation(EffectBlueprintFunctionLibrary.__GetScreenEffectSystem_FunctionParams* __Params)
 	{
 		ref IntPtr ptr = ref *(&__Params->__Result);
@@ -400,7 +400,7 @@ public class EffectBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		ptr = ((screenEffectSystem != null) ? screenEffectSystem.NativePtr : ((IntPtr)0));
 	}
 
-	// Token: 0x0601D23F RID: 119359 RVA: 0x0081EF60 File Offset: 0x0081D160
+	// Token: 0x0601AF47 RID: 110407 RVA: 0x00846260 File Offset: 0x00844460
 	protected unsafe static void __CPPCALL_ChangeMaterialTextures_Implementation(EffectBlueprintFunctionLibrary.__ChangeMaterialTextures_FunctionParams* __Params)
 	{
 		AActor orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AActor>(__Params->actor);
@@ -408,288 +408,288 @@ public class EffectBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnreal
 		EffectBlueprintFunctionLibrary.ChangeMaterialTextures(orCreateUObjectByNativePointer, assetPath);
 	}
 
-	// Token: 0x0400E572 RID: 58738
+	// Token: 0x0400EA2A RID: 59946
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Render/Effect/EffectBlueprintFunctionLibrary.EffectBlueprintFunctionLibrary_C";
 
-	// Token: 0x0400E573 RID: 58739
+	// Token: 0x0400EA2B RID: 59947
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400E574 RID: 58740
+	// Token: 0x0400EA2C RID: 59948
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x020097F7 RID: 38903
+	// Token: 0x02008A1A RID: 35354
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __SetMaterialControllerDataSync_FunctionParams
 	{
-		// Token: 0x040307E9 RID: 198633
+		// Token: 0x0402BE76 RID: 179830
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x040307EA RID: 198634
+		// Token: 0x0402BE77 RID: 179831
 		[FieldOffset(8)]
 		public FString materialDataPath;
 
-		// Token: 0x040307EB RID: 198635
+		// Token: 0x0402BE78 RID: 179832
 		[FieldOffset(24)]
 		public bool isGroup;
 
-		// Token: 0x040307EC RID: 198636
+		// Token: 0x0402BE79 RID: 179833
 		[FieldOffset(32)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020097F8 RID: 38904
+	// Token: 0x02008A1B RID: 35355
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __RecycleEffect_FunctionParams
 	{
-		// Token: 0x040307ED RID: 198637
+		// Token: 0x0402BE7A RID: 179834
 		[FieldOffset(0)]
 		public IntPtr view;
 
-		// Token: 0x040307EE RID: 198638
+		// Token: 0x0402BE7B RID: 179835
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020097F9 RID: 38905
+	// Token: 0x02008A1C RID: 35356
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __AddDebugLineFromPlayer_FunctionParams
 	{
-		// Token: 0x040307EF RID: 198639
+		// Token: 0x0402BE7C RID: 179836
 		[FieldOffset(0)]
 		public FVector location;
 
-		// Token: 0x040307F0 RID: 198640
+		// Token: 0x0402BE7D RID: 179837
 		[FieldOffset(12)]
 		public FLinearColor color;
 
-		// Token: 0x040307F1 RID: 198641
+		// Token: 0x0402BE7E RID: 179838
 		[FieldOffset(28)]
 		public float width;
 
-		// Token: 0x040307F2 RID: 198642
+		// Token: 0x0402BE7F RID: 179839
 		[FieldOffset(32)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x040307F3 RID: 198643
+		// Token: 0x0402BE80 RID: 179840
 		[FieldOffset(40)]
 		public float __Result;
 	}
 
-	// Token: 0x020097FA RID: 38906
+	// Token: 0x02008A1D RID: 35357
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __ClearDebugDraw_FunctionParams
 	{
-		// Token: 0x040307F4 RID: 198644
+		// Token: 0x0402BE81 RID: 179841
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020097FB RID: 38907
+	// Token: 0x02008A1E RID: 35358
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __ValidateKuroAnimNotify_FunctionParams
 	{
-		// Token: 0x040307F5 RID: 198645
+		// Token: 0x0402BE82 RID: 179842
 		[FieldOffset(0)]
 		public IntPtr asset;
 
-		// Token: 0x040307F6 RID: 198646
+		// Token: 0x0402BE83 RID: 179843
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x040307F7 RID: 198647
+		// Token: 0x0402BE84 RID: 179844
 		[FieldOffset(16)]
 		public bool __Result;
 	}
 
-	// Token: 0x020097FC RID: 38908
+	// Token: 0x02008A1F RID: 35359
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __ValidateKuroAnimNotifyState_FunctionParams
 	{
-		// Token: 0x040307F8 RID: 198648
+		// Token: 0x0402BE85 RID: 179845
 		[FieldOffset(0)]
 		public IntPtr asset;
 
-		// Token: 0x040307F9 RID: 198649
+		// Token: 0x0402BE86 RID: 179846
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x040307FA RID: 198650
+		// Token: 0x0402BE87 RID: 179847
 		[FieldOffset(16)]
 		public bool __Result;
 	}
 
-	// Token: 0x020097FD RID: 38909
+	// Token: 0x02008A20 RID: 35360
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __SetVisualizeCharacterWaterEffectTrace_FunctionParams
 	{
-		// Token: 0x040307FB RID: 198651
+		// Token: 0x0402BE88 RID: 179848
 		[FieldOffset(0)]
 		public bool enable;
 
-		// Token: 0x040307FC RID: 198652
+		// Token: 0x0402BE89 RID: 179849
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020097FE RID: 38910
+	// Token: 0x02008A21 RID: 35361
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __SetEffectSpawnLogEnabled_FunctionParams
 	{
-		// Token: 0x040307FD RID: 198653
+		// Token: 0x0402BE8A RID: 179850
 		[FieldOffset(0)]
 		public bool enabled;
 
-		// Token: 0x040307FE RID: 198654
+		// Token: 0x0402BE8B RID: 179851
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020097FF RID: 38911
+	// Token: 0x02008A22 RID: 35362
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __BeginDebugDrawFoliageDetect_FunctionParams
 	{
-		// Token: 0x040307FF RID: 198655
+		// Token: 0x0402BE8C RID: 179852
 		[FieldOffset(0)]
 		public FLinearColor color;
 
-		// Token: 0x04030800 RID: 198656
+		// Token: 0x0402BE8D RID: 179853
 		[FieldOffset(16)]
 		public float width;
 
-		// Token: 0x04030801 RID: 198657
+		// Token: 0x0402BE8E RID: 179854
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009800 RID: 38912
+	// Token: 0x02008A23 RID: 35363
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __EndDebugDrawFoliageDetect_FunctionParams
 	{
-		// Token: 0x04030802 RID: 198658
+		// Token: 0x0402BE8F RID: 179855
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009801 RID: 38913
+	// Token: 0x02008A24 RID: 35364
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __RefreshFoliageDetectConfig_FunctionParams
 	{
-		// Token: 0x04030803 RID: 198659
+		// Token: 0x0402BE90 RID: 179856
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009802 RID: 38914
+	// Token: 0x02008A25 RID: 35365
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __SetEffectInPoolEnabled_FunctionParams
 	{
-		// Token: 0x04030804 RID: 198660
+		// Token: 0x0402BE91 RID: 179857
 		[FieldOffset(0)]
 		public bool enable;
 
-		// Token: 0x04030805 RID: 198661
+		// Token: 0x0402BE92 RID: 179858
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009803 RID: 38915
+	// Token: 0x02008A26 RID: 35366
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __SetEffectOutPoolEnabled_FunctionParams
 	{
-		// Token: 0x04030806 RID: 198662
+		// Token: 0x0402BE93 RID: 179859
 		[FieldOffset(0)]
 		public bool enable;
 
-		// Token: 0x04030807 RID: 198663
+		// Token: 0x0402BE94 RID: 179860
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009804 RID: 38916
+	// Token: 0x02008A27 RID: 35367
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __EnableSceneObjectWaterEffectShowDebugTrace_FunctionParams
 	{
-		// Token: 0x04030808 RID: 198664
+		// Token: 0x0402BE95 RID: 179861
 		[FieldOffset(0)]
 		public bool enable;
 
-		// Token: 0x04030809 RID: 198665
+		// Token: 0x0402BE96 RID: 179862
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009805 RID: 38917
+	// Token: 0x02008A28 RID: 35368
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __SetTsWriteTimeToCollectionEnabled_FunctionParams
 	{
-		// Token: 0x0403080A RID: 198666
+		// Token: 0x0402BE97 RID: 179863
 		[FieldOffset(0)]
 		public bool enable;
 
-		// Token: 0x0403080B RID: 198667
+		// Token: 0x0402BE98 RID: 179864
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009806 RID: 38918
+	// Token: 0x02008A29 RID: 35369
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __EffectCgMode_FunctionParams
 	{
-		// Token: 0x0403080C RID: 198668
+		// Token: 0x0402BE99 RID: 179865
 		[FieldOffset(0)]
 		public bool enable;
 
-		// Token: 0x0403080D RID: 198669
+		// Token: 0x0402BE9A RID: 179866
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009807 RID: 38919
+	// Token: 0x02008A2A RID: 35370
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __GetScreenEffectSystem_FunctionParams
 	{
-		// Token: 0x0403080E RID: 198670
+		// Token: 0x0402BE9B RID: 179867
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0403080F RID: 198671
+		// Token: 0x0402BE9C RID: 179868
 		[FieldOffset(8)]
 		public IntPtr __Result;
 	}
 
-	// Token: 0x02009808 RID: 38920
+	// Token: 0x02008A2B RID: 35371
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __ChangeMaterialTextures_FunctionParams
 	{
-		// Token: 0x04030810 RID: 198672
+		// Token: 0x0402BE9D RID: 179869
 		[FieldOffset(0)]
 		public IntPtr actor;
 
-		// Token: 0x04030811 RID: 198673
+		// Token: 0x0402BE9E RID: 179870
 		[FieldOffset(8)]
 		public FString assetPath;
 
-		// Token: 0x04030812 RID: 198674
+		// Token: 0x0402BE9F RID: 179871
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 	}

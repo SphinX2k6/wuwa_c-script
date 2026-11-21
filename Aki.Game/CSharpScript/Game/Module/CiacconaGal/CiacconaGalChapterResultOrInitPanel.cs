@@ -9,19 +9,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BEC RID: 23532
+	// Token: 0x02004BCC RID: 19404
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CiacconaGalChapterResultOrInitPanel : UiPanelBase
 	{
-		// Token: 0x0603B7A3 RID: 243619 RVA: 0x00E2F237 File Offset: 0x00E2D437
+		// Token: 0x060306EE RID: 198382 RVA: 0x00D7F547 File Offset: 0x00D7D747
 		public CiacconaGalChapterResultOrInitPanel(CiacconaGalChapterData chapterData, Action onConfirm)
 		{
 			this.ChapterData = chapterData;
 			this.OnConfirm = onConfirm;
 		}
 
-		// Token: 0x0603B7A4 RID: 243620 RVA: 0x00E2F250 File Offset: 0x00E2D450
+		// Token: 0x060306EF RID: 198383 RVA: 0x00D7F560 File Offset: 0x00D7D760
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603B7A5 RID: 243621 RVA: 0x00E2F31C File Offset: 0x00E2D51C
+		// Token: 0x060306F0 RID: 198384 RVA: 0x00D7F62C File Offset: 0x00D7D82C
 		protected override void OnStart()
 		{
 			this.LayoutResults = new GenericLayout<CiacconaGalChapterSubEndingItem, CiacconaGalSubEndingData>(base.GetVerticalLayout(2), new Func<CiacconaGalChapterSubEndingItem>(this.GetResultItem), null, false, true);
@@ -56,26 +56,26 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			EventSystem.Instance.Emit(EEventName.OnCiacconaChapterFirstStart);
 		}
 
-		// Token: 0x0603B7A6 RID: 243622 RVA: 0x00E2F38A File Offset: 0x00E2D58A
+		// Token: 0x060306F1 RID: 198385 RVA: 0x00D7F69A File Offset: 0x00D7D89A
 		protected override void OnBeforeShow()
 		{
 			EventSystem.Instance.Add(EEventName.OnCiacconaChapterDataUpdate, new Action(this.OnChapterDataUpdate));
 		}
 
-		// Token: 0x0603B7A7 RID: 243623 RVA: 0x00E2F3A8 File Offset: 0x00E2D5A8
+		// Token: 0x060306F2 RID: 198386 RVA: 0x00D7F6B8 File Offset: 0x00D7D8B8
 		protected override void OnBeforeHide()
 		{
 			EventSystem.Instance.Remove(EEventName.OnCiacconaChapterDataUpdate, new Action(this.OnChapterDataUpdate));
 		}
 
-		// Token: 0x0603B7A8 RID: 243624 RVA: 0x00E2F3C8 File Offset: 0x00E2D5C8
+		// Token: 0x060306F3 RID: 198387 RVA: 0x00D7F6D8 File Offset: 0x00D7D8D8
 		private void RefreshCommon()
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), this.ChapterData.Title, Array.Empty<object>());
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), this.ChapterData.Desc, Array.Empty<object>());
 		}
 
-		// Token: 0x0603B7A9 RID: 243625 RVA: 0x00E2F418 File Offset: 0x00E2D618
+		// Token: 0x060306F4 RID: 198388 RVA: 0x00D7F728 File Offset: 0x00D7D928
 		private void RefreshResults()
 		{
 			base.GetVerticalLayout(2).SetActive(this.ChapterData.IsFinished, false);
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0603B7AA RID: 243626 RVA: 0x00E2F498 File Offset: 0x00E2D698
+		// Token: 0x060306F5 RID: 198389 RVA: 0x00D7F7A8 File Offset: 0x00D7D9A8
 		private void RefreshBtn()
 		{
 			this.ConfirmBtn = new ButtonAndTextItem(base.GetItem(4));
@@ -109,23 +109,23 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.ConfirmBtn.BindCallback(this.OnConfirm);
 		}
 
-		// Token: 0x0603B7AB RID: 243627 RVA: 0x00E2F501 File Offset: 0x00E2D701
+		// Token: 0x060306F6 RID: 198390 RVA: 0x00D7F811 File Offset: 0x00D7DA11
 		private CiacconaGalChapterSubEndingItem GetResultItem()
 		{
 			return new CiacconaGalChapterSubEndingItem();
 		}
 
-		// Token: 0x0603B7AC RID: 243628 RVA: 0x00E2F508 File Offset: 0x00E2D708
+		// Token: 0x060306F7 RID: 198391 RVA: 0x00D7F818 File Offset: 0x00D7DA18
 		private void OnChapterDataUpdate()
 		{
 			this.RefreshResults();
 		}
 
-		// Token: 0x0401EFC8 RID: 126920
+		// Token: 0x04019A79 RID: 105081
 		[Nullable(2)]
 		private ButtonAndTextItem ConfirmBtn;
 
-		// Token: 0x0401EFC9 RID: 126921
+		// Token: 0x04019A7A RID: 105082
 		[Nullable(new byte[]
 		{
 			2,
@@ -134,29 +134,29 @@ namespace CSharpScript.Game.Module.CiacconaGal
 		})]
 		private GenericLayout<CiacconaGalChapterSubEndingItem, CiacconaGalSubEndingData> LayoutResults;
 
-		// Token: 0x0401EFCA RID: 126922
+		// Token: 0x04019A7B RID: 105083
 		private CiacconaGalChapterData ChapterData;
 
-		// Token: 0x0401EFCB RID: 126923
+		// Token: 0x04019A7C RID: 105084
 		private Action OnConfirm;
 
-		// Token: 0x0200BDD1 RID: 48593
+		// Token: 0x0200A7D9 RID: 42969
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x040393C1 RID: 234433
+			// Token: 0x04033D84 RID: 212356
 			public const int TextTitle = 0;
 
-			// Token: 0x040393C2 RID: 234434
+			// Token: 0x04033D85 RID: 212357
 			public const int TextDesc = 1;
 
-			// Token: 0x040393C3 RID: 234435
+			// Token: 0x04033D86 RID: 212358
 			public const int LayoutResults = 2;
 
-			// Token: 0x040393C4 RID: 234436
+			// Token: 0x04033D87 RID: 212359
 			public const int ItemResult = 3;
 
-			// Token: 0x040393C5 RID: 234437
+			// Token: 0x04033D88 RID: 212360
 			public const int BtnConfirm = 4;
 		}
 	}

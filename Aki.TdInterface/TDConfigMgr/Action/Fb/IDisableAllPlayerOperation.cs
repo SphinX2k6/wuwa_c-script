@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200293B RID: 10555
+	// Token: 0x02002C1D RID: 11293
 	public class IDisableAllPlayerOperation : SetPlayerOperationRestriction
 	{
-		// Token: 0x0600EA19 RID: 59929 RVA: 0x0022496A File Offset: 0x00222B6A
-		[NullableContext(1)]
+		// Token: 0x0600F884 RID: 63620 RVA: 0x00241F4A File Offset: 0x0024014A
 		public static IDisableAllPlayerOperation Create(IDisableAllPlayerOperation? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004965 RID: 18789
-		// (get) Token: 0x0600EA1A RID: 59930 RVA: 0x00224989 File Offset: 0x00222B89
+		// Token: 0x17004CF8 RID: 19704
+		// (get) Token: 0x0600F885 RID: 63621 RVA: 0x00241F69 File Offset: 0x00240169
 		public override EPlayerOperationType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004966 RID: 18790
-		// (get) Token: 0x0600EA1B RID: 59931 RVA: 0x00224998 File Offset: 0x00222B98
+		// Token: 0x17004CF9 RID: 19705
+		// (get) Token: 0x0600F886 RID: 63622 RVA: 0x00241F78 File Offset: 0x00240178
 		public virtual EDisplayModeInPlayerOp? DisplayMode
 		{
 			get
@@ -45,8 +43,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004967 RID: 18791
-		// (get) Token: 0x0600EA1C RID: 59932 RVA: 0x002249D0 File Offset: 0x00222BD0
+		// Token: 0x17004CFA RID: 19706
+		// (get) Token: 0x0600F887 RID: 63623 RVA: 0x00241FB0 File Offset: 0x002401B0
 		public virtual bool? IsUiFadeEffect
 		{
 			get
@@ -59,7 +57,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008119 RID: 33049
+		// Token: 0x040087F5 RID: 34805
 		private IDisableAllPlayerOperation Instance;
 	}
 }

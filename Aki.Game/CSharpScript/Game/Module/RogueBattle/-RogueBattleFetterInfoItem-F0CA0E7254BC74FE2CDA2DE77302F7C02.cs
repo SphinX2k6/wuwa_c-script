@@ -2,30 +2,30 @@
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E54 RID: 20052
+	// Token: 0x02003E1D RID: 15901
 	internal enum <RogueBattleFetterInfoItem>F0CA0E7254BC74FE2CDA2DE77302F7C02860D41C10FD326EA05231E171303A627__ERogueBattleFetterInfoItemDefine
 	{
-		// Token: 0x0401B673 RID: 112243
+		// Token: 0x04016046 RID: 90182
 		TxtCurLevel,
-		// Token: 0x0401B674 RID: 112244
+		// Token: 0x04016047 RID: 90183
 		TxtNextLevel,
-		// Token: 0x0401B675 RID: 112245
+		// Token: 0x04016048 RID: 90184
 		TxtCurExp,
-		// Token: 0x0401B676 RID: 112246
+		// Token: 0x04016049 RID: 90185
 		TxtAddExp,
-		// Token: 0x0401B677 RID: 112247
+		// Token: 0x0401604A RID: 90186
 		SpriteCurValue,
-		// Token: 0x0401B678 RID: 112248
+		// Token: 0x0401604B RID: 90187
 		SpriteTargetValue,
-		// Token: 0x0401B679 RID: 112249
+		// Token: 0x0401604C RID: 90188
 		LevelItem,
-		// Token: 0x0401B67A RID: 112250
+		// Token: 0x0401604D RID: 90189
 		TextureIcon,
-		// Token: 0x0401B67B RID: 112251
+		// Token: 0x0401604E RID: 90190
 		NextLevelLayoutItem,
-		// Token: 0x0401B67C RID: 112252
+		// Token: 0x0401604F RID: 90191
 		Button,
-		// Token: 0x0401B67D RID: 112253
+		// Token: 0x04016050 RID: 90192
 		LevelAddItem
 	}
 }

@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029D7 RID: 10711
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002CC4 RID: 11460
 	public class VehicleMoveWithPathLine : ActionParams
 	{
-		// Token: 0x0600ECAE RID: 60590 RVA: 0x00228DB4 File Offset: 0x00226FB4
+		// Token: 0x0600FB45 RID: 64325 RVA: 0x00246738 File Offset: 0x00244938
 		public static VehicleMoveWithPathLine Create(IVehicleMoveWithPathLine? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004AC2 RID: 19138
-		// (get) Token: 0x0600ECAF RID: 60591 RVA: 0x00228DD3 File Offset: 0x00226FD3
+		// Token: 0x17004E6B RID: 20075
+		// (get) Token: 0x0600FB46 RID: 64326 RVA: 0x00246757 File Offset: 0x00244957
 		public virtual ITargetVehicle TargetVehicle
 		{
 			get
@@ -38,8 +35,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004AC3 RID: 19139
-		// (get) Token: 0x0600ECB0 RID: 60592 RVA: 0x00228E02 File Offset: 0x00227002
+		// Token: 0x17004E6C RID: 20076
+		// (get) Token: 0x0600FB47 RID: 64327 RVA: 0x00246786 File Offset: 0x00244986
 		public virtual int SplineEntityId
 		{
 			get
@@ -48,8 +45,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004AC4 RID: 19140
-		// (get) Token: 0x0600ECB1 RID: 60593 RVA: 0x00228E0F File Offset: 0x0022700F
+		// Token: 0x17004E6D RID: 20077
+		// (get) Token: 0x0600FB48 RID: 64328 RVA: 0x00246793 File Offset: 0x00244993
 		public virtual IVehicleControlType ControlType
 		{
 			get
@@ -64,19 +61,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008255 RID: 33365
+		// Token: 0x04008946 RID: 35142
 		private IVehicleMoveWithPathLine Instance;
 
-		// Token: 0x04008256 RID: 33366
+		// Token: 0x04008947 RID: 35143
 		private ITargetVehicle _TargetVehicleCache;
 
-		// Token: 0x04008257 RID: 33367
+		// Token: 0x04008948 RID: 35144
 		private bool _TargetVehicleInited;
 
-		// Token: 0x04008258 RID: 33368
+		// Token: 0x04008949 RID: 35145
 		private IVehicleControlType _ControlTypeCache;
 
-		// Token: 0x04008259 RID: 33369
+		// Token: 0x0400894A RID: 35146
 		private bool _ControlTypeInited;
 	}
 }

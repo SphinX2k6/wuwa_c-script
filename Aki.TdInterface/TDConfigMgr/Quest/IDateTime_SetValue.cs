@@ -2,16 +2,16 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F39 RID: 3897
+	// Token: 0x02001063 RID: 4195
 	public class IDateTime_SetValue
 	{
-		// Token: 0x04003477 RID: 13431
+		// Token: 0x040037A6 RID: 14246
 		public int Hours;
 
-		// Token: 0x04003478 RID: 13432
+		// Token: 0x040037A7 RID: 14247
 		public int Minutes;
 
-		// Token: 0x04003479 RID: 13433
+		// Token: 0x040037A8 RID: 14248
 		public int? Days;
 	}
 }

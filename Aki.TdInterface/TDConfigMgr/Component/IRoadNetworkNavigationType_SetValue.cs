@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200068B RID: 1675
+	// Token: 0x0200072C RID: 1836
 	public class IRoadNetworkNavigationType_SetValue
 	{
-		// Token: 0x040018B9 RID: 6329
+		// Token: 0x04001AB6 RID: 6838
 		public ERoadNetworkNavigationType Type;
 	}
 }

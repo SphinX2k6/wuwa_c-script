@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200123C RID: 4668
+// Token: 0x020006F0 RID: 1776
 [NullableContext(1)]
 [Nullable(0)]
 public class DangoMonopolyMainCaption : UiPanelBase
 {
-	// Token: 0x06007E49 RID: 32329 RVA: 0x001AB9C0 File Offset: 0x001A9BC0
+	// Token: 0x060051E0 RID: 20960 RVA: 0x001B4680 File Offset: 0x001B2880
 	public UniTask Init(UUIItem item)
 	{
 		DangoMonopolyMainCaption.<Init>d__4 <Init>d__;
@@ -23,7 +23,7 @@ public class DangoMonopolyMainCaption : UiPanelBase
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007E4A RID: 32330 RVA: 0x001ABA0C File Offset: 0x001A9C0C
+	// Token: 0x060051E1 RID: 20961 RVA: 0x001B46CC File Offset: 0x001B28CC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,7 +39,7 @@ public class DangoMonopolyMainCaption : UiPanelBase
 		};
 	}
 
-	// Token: 0x06007E4B RID: 32331 RVA: 0x001ABAA1 File Offset: 0x001A9CA1
+	// Token: 0x060051E2 RID: 20962 RVA: 0x001B4761 File Offset: 0x001B2961
 	private void OnClickCloseBtn()
 	{
 		Action onCloseCallback = this.OnCloseCallback;
@@ -50,7 +50,7 @@ public class DangoMonopolyMainCaption : UiPanelBase
 		onCloseCallback();
 	}
 
-	// Token: 0x06007E4C RID: 32332 RVA: 0x001ABAB3 File Offset: 0x001A9CB3
+	// Token: 0x060051E3 RID: 20963 RVA: 0x001B4773 File Offset: 0x001B2973
 	private void OnClickHelpBtn()
 	{
 		Action onHelpCallback = this.OnHelpCallback;
@@ -61,43 +61,43 @@ public class DangoMonopolyMainCaption : UiPanelBase
 		onHelpCallback();
 	}
 
-	// Token: 0x06007E4D RID: 32333 RVA: 0x001ABAC5 File Offset: 0x001A9CC5
+	// Token: 0x060051E4 RID: 20964 RVA: 0x001B4785 File Offset: 0x001B2985
 	private UUIButtonComponent GetBtnClose()
 	{
 		return base.GetButton(0);
 	}
 
-	// Token: 0x06007E4E RID: 32334 RVA: 0x001ABACE File Offset: 0x001A9CCE
+	// Token: 0x060051E5 RID: 20965 RVA: 0x001B478E File Offset: 0x001B298E
 	private UUIButtonComponent GetBtnHelp()
 	{
 		return base.GetButton(1);
 	}
 
-	// Token: 0x06007E4F RID: 32335 RVA: 0x001ABAD7 File Offset: 0x001A9CD7
+	// Token: 0x060051E6 RID: 20966 RVA: 0x001B4797 File Offset: 0x001B2997
 	public UUIItem GetCostContent()
 	{
 		return base.GetItem(2);
 	}
 
-	// Token: 0x06007E50 RID: 32336 RVA: 0x001ABAE0 File Offset: 0x001A9CE0
+	// Token: 0x060051E7 RID: 20967 RVA: 0x001B47A0 File Offset: 0x001B29A0
 	public void SetBtnHelpVisible(bool state)
 	{
 		this.GetBtnHelp().RootUIComp.Get().SetUIActive(state);
 	}
 
-	// Token: 0x06007E51 RID: 32337 RVA: 0x001ABB08 File Offset: 0x001A9D08
+	// Token: 0x060051E8 RID: 20968 RVA: 0x001B47C8 File Offset: 0x001B29C8
 	public void SetBtnCloseVisible(bool state)
 	{
 		this.GetBtnClose().RootUIComp.Get().SetUIActive(state);
 	}
 
-	// Token: 0x06007E52 RID: 32338 RVA: 0x001ABB2E File Offset: 0x001A9D2E
+	// Token: 0x060051E9 RID: 20969 RVA: 0x001B47EE File Offset: 0x001B29EE
 	public void SetCurrencyVisible(bool bVisible)
 	{
 		this.GetCostContent().SetUIActive(bVisible);
 	}
 
-	// Token: 0x06007E53 RID: 32339 RVA: 0x001ABB3C File Offset: 0x001A9D3C
+	// Token: 0x060051EA RID: 20970 RVA: 0x001B47FC File Offset: 0x001B29FC
 	public UniTask SetCurrencyItemList(int[] itemIdList)
 	{
 		DangoMonopolyMainCaption.<SetCurrencyItemList>d__14 <SetCurrencyItemList>d__;
@@ -109,7 +109,7 @@ public class DangoMonopolyMainCaption : UiPanelBase
 		return <SetCurrencyItemList>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007E54 RID: 32340 RVA: 0x001ABB87 File Offset: 0x001A9D87
+	// Token: 0x060051EB RID: 20971 RVA: 0x001B4847 File Offset: 0x001B2A47
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -125,7 +125,7 @@ public class DangoMonopolyMainCaption : UiPanelBase
 		return currencyItemListComponent.GetCurrencyItemList();
 	}
 
-	// Token: 0x06007E55 RID: 32341 RVA: 0x001ABB9C File Offset: 0x001A9D9C
+	// Token: 0x060051EC RID: 20972 RVA: 0x001B485C File Offset: 0x001B2A5C
 	public void SetCurrencyItemBtnFunction(int itemId, Action<int> callBack)
 	{
 		CommonCurrencyItemListComponent currencyItemListComponent = this.CurrencyItemListComponent;
@@ -143,27 +143,27 @@ public class DangoMonopolyMainCaption : UiPanelBase
 		}
 	}
 
-	// Token: 0x04003991 RID: 14737
+	// Token: 0x04003A29 RID: 14889
 	[Nullable(2)]
 	private CommonCurrencyItemListComponent CurrencyItemListComponent;
 
-	// Token: 0x04003992 RID: 14738
+	// Token: 0x04003A2A RID: 14890
 	[Nullable(2)]
 	public Action OnCloseCallback;
 
-	// Token: 0x04003993 RID: 14739
+	// Token: 0x04003A2B RID: 14891
 	[Nullable(2)]
 	public Action OnHelpCallback;
 
-	// Token: 0x0200782C RID: 30764
+	// Token: 0x020069B7 RID: 27063
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x040279AA RID: 162218
+		// Token: 0x04022CDB RID: 142555
 		BtnClose,
-		// Token: 0x040279AB RID: 162219
+		// Token: 0x04022CDC RID: 142556
 		BtnHelp,
-		// Token: 0x040279AC RID: 162220
+		// Token: 0x04022CDD RID: 142557
 		CostContent
 	}
 }

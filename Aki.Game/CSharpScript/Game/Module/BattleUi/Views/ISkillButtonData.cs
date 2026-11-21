@@ -10,179 +10,179 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CE9 RID: 23785
+	// Token: 0x02004CCB RID: 19659
 	[NullableContext(2)]
 	public interface ISkillButtonData
 	{
-		// Token: 0x0603C2FF RID: 246527
+		// Token: 0x06031255 RID: 201301
 		bool IsEnable();
 
-		// Token: 0x0603C300 RID: 246528
+		// Token: 0x06031256 RID: 201302
 		bool IsVisible();
 
-		// Token: 0x0603C301 RID: 246529
+		// Token: 0x06031257 RID: 201303
 		bool IsEnableInput();
 
-		// Token: 0x0603C302 RID: 246530
+		// Token: 0x06031258 RID: 201304
 		void RefreshIsEnable();
 
-		// Token: 0x0603C303 RID: 246531
+		// Token: 0x06031259 RID: 201305
 		ESkillButtonType GetButtonType();
 
-		// Token: 0x17008E03 RID: 36355
-		// (get) Token: 0x0603C304 RID: 246532
+		// Token: 0x170061D5 RID: 25045
+		// (get) Token: 0x0603125A RID: 201306
 		bool IsExploreAsFight { get; }
 
-		// Token: 0x0603C305 RID: 246533
+		// Token: 0x0603125B RID: 201307
 		bool GetExploreSkillChange();
 
-		// Token: 0x0603C306 RID: 246534
+		// Token: 0x0603125C RID: 201308
 		void SetExploreSkillChange(bool isExploreSkillChange);
 
-		// Token: 0x0603C307 RID: 246535
+		// Token: 0x0603125D RID: 201309
 		bool HasConfigFollower();
 
-		// Token: 0x0603C308 RID: 246536
+		// Token: 0x0603125E RID: 201310
 		SkillButtonTypeFormationData GetFormationData();
 
-		// Token: 0x0603C309 RID: 246537
+		// Token: 0x0603125F RID: 201311
 		EInputAction GetActionType();
 
-		// Token: 0x0603C30A RID: 246538
+		// Token: 0x06031260 RID: 201312
 		[NullableContext(1)]
 		string GetInputAction();
 
-		// Token: 0x17008E04 RID: 36356
-		// (get) Token: 0x0603C30B RID: 246539
+		// Token: 0x170061D6 RID: 25046
+		// (get) Token: 0x06031261 RID: 201313
 		bool IsEnableSlideControl { get; }
 
-		// Token: 0x0603C30C RID: 246540
+		// Token: 0x06031262 RID: 201314
 		bool IsEnableLongPress();
 
-		// Token: 0x0603C30D RID: 246541
+		// Token: 0x06031263 RID: 201315
 		bool IsShowLongPress();
 
-		// Token: 0x0603C30E RID: 246542
+		// Token: 0x06031264 RID: 201316
 		bool GetIsLongPressing();
 
-		// Token: 0x0603C30F RID: 246543
+		// Token: 0x06031265 RID: 201317
 		bool GetIsConfigShowLongPress();
 
-		// Token: 0x0603C310 RID: 246544
+		// Token: 0x06031266 RID: 201318
 		bool? GetIsLongPressControlCamera();
 
-		// Token: 0x0603C311 RID: 246545
+		// Token: 0x06031267 RID: 201319
 		double GetLongPressTime();
 
-		// Token: 0x0603C312 RID: 246546
+		// Token: 0x06031268 RID: 201320
 		double GetLongPressDuration();
 
-		// Token: 0x0603C313 RID: 246547
+		// Token: 0x06031269 RID: 201321
 		void RefreshLongPressTime();
 
-		// Token: 0x0603C314 RID: 246548
+		// Token: 0x0603126A RID: 201322
 		void RefreshLongPressDuration();
 
-		// Token: 0x17008E05 RID: 36357
-		// (get) Token: 0x0603C315 RID: 246549
+		// Token: 0x170061D7 RID: 25047
+		// (get) Token: 0x0603126B RID: 201323
 		int TotalCoolDownCustom { get; }
 
-		// Token: 0x0603C316 RID: 246550
+		// Token: 0x0603126C RID: 201324
 		float GetRemainingCoolDownCustom();
 
-		// Token: 0x0603C317 RID: 246551
+		// Token: 0x0603126D RID: 201325
 		float GetSkillRemainingCoolDown();
 
-		// Token: 0x0603C318 RID: 246552
+		// Token: 0x0603126E RID: 201326
 		bool HasCdComponent();
 
-		// Token: 0x0603C319 RID: 246553
+		// Token: 0x0603126F RID: 201327
 		bool IsCdVisible();
 
-		// Token: 0x17008E06 RID: 36358
-		// (get) Token: 0x0603C31A RID: 246554
+		// Token: 0x170061D8 RID: 25048
+		// (get) Token: 0x06031270 RID: 201328
 		bool HideCoolDownTextCustom { get; }
 
-		// Token: 0x0603C31B RID: 246555
+		// Token: 0x06031271 RID: 201329
 		int GetSkillId();
 
-		// Token: 0x0603C31C RID: 246556
+		// Token: 0x06031272 RID: 201330
 		string GetSkillIconName();
 
-		// Token: 0x0603C31D RID: 246557
+		// Token: 0x06031273 RID: 201331
 		string GetActionName();
 
-		// Token: 0x0603C31E RID: 246558
+		// Token: 0x06031274 RID: 201332
 		string GetSkillTexturePath();
 
-		// Token: 0x0603C31F RID: 246559
+		// Token: 0x06031275 RID: 201333
 		bool IsSkillIdChangeByTag();
 
-		// Token: 0x0603C320 RID: 246560
+		// Token: 0x06031276 RID: 201334
 		bool? IsMultiStageSkill();
 
-		// Token: 0x0603C321 RID: 246561
+		// Token: 0x06031277 RID: 201335
 		string GetMultiSkillTexturePath();
 
-		// Token: 0x0603C322 RID: 246562
+		// Token: 0x06031278 RID: 201336
 		MultiSkillInfo GetMultiSkillInfo();
 
-		// Token: 0x0603C323 RID: 246563
+		// Token: 0x06031279 RID: 201337
 		GroupSkillCdInfo GetGroupSkillCdInfo();
 
-		// Token: 0x0603C324 RID: 246564
+		// Token: 0x0603127A RID: 201338
 		bool HasAttribute();
 
-		// Token: 0x17008E07 RID: 36359
-		// (get) Token: 0x0603C325 RID: 246565
+		// Token: 0x170061D9 RID: 25049
+		// (get) Token: 0x0603127B RID: 201339
 		EAttributeType AttributeId { get; }
 
-		// Token: 0x17008E08 RID: 36360
-		// (get) Token: 0x0603C326 RID: 246566
+		// Token: 0x170061DA RID: 25050
+		// (get) Token: 0x0603127C RID: 201340
 		ESkillButtonAttributeUsageMode AttributeUsageMode { get; }
 
-		// Token: 0x17008E09 RID: 36361
-		// (get) Token: 0x0603C327 RID: 246567
+		// Token: 0x170061DB RID: 25051
+		// (get) Token: 0x0603127D RID: 201341
 		int[] AttributeUsageParams { get; }
 
-		// Token: 0x0603C328 RID: 246568
+		// Token: 0x0603127E RID: 201342
 		float GetAttribute();
 
-		// Token: 0x0603C329 RID: 246569
+		// Token: 0x0603127F RID: 201343
 		float GetMaxAttribute();
 
-		// Token: 0x0603C32A RID: 246570
+		// Token: 0x06031280 RID: 201344
 		string GetMaxAttributeEffectPath();
 
-		// Token: 0x0603C32B RID: 246571
+		// Token: 0x06031281 RID: 201345
 		FLinearColor? GetMaxAttributeColor();
 
-		// Token: 0x0603C32C RID: 246572
+		// Token: 0x06031282 RID: 201346
 		int GetMaxAttributeBurstEffectId();
 
-		// Token: 0x0603C32D RID: 246573
+		// Token: 0x06031283 RID: 201347
 		SkillButtonEffect? GetMaxAttributeBurstEffectConfig();
 
-		// Token: 0x17008E0A RID: 36362
-		// (get) Token: 0x0603C32E RID: 246574
+		// Token: 0x170061DC RID: 25052
+		// (get) Token: 0x06031284 RID: 201348
 		bool IsLimitCountCustom { get; }
 
-		// Token: 0x17008E0B RID: 36363
-		// (get) Token: 0x0603C32F RID: 246575
+		// Token: 0x170061DD RID: 25053
+		// (get) Token: 0x06031285 RID: 201349
 		int RemainingCountCustom { get; }
 
-		// Token: 0x17008E0C RID: 36364
-		// (get) Token: 0x0603C330 RID: 246576
+		// Token: 0x170061DE RID: 25054
+		// (get) Token: 0x06031286 RID: 201350
 		bool IsLimitCountVehicleSkill { get; }
 
-		// Token: 0x17008E0D RID: 36365
-		// (get) Token: 0x0603C331 RID: 246577
+		// Token: 0x170061DF RID: 25055
+		// (get) Token: 0x06031287 RID: 201351
 		int RemainingCountVehicleSkill { get; }
 
-		// Token: 0x0603C332 RID: 246578
+		// Token: 0x06031288 RID: 201352
 		bool IsVehicleSkillInCd();
 
-		// Token: 0x0603C333 RID: 246579
+		// Token: 0x06031289 RID: 201353
 		[NullableContext(0)]
 		[return: TupleElementNames(new string[]
 		{
@@ -191,13 +191,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 		})]
 		ValueTuple<double, double> GetVehicleSkillCd();
 
-		// Token: 0x0603C334 RID: 246580
+		// Token: 0x0603128A RID: 201354
 		void InitVehicleHandle();
 
-		// Token: 0x0603C335 RID: 246581
+		// Token: 0x0603128B RID: 201355
 		bool IsSkillInItemUseBuffCd();
 
-		// Token: 0x0603C336 RID: 246582
+		// Token: 0x0603128C RID: 201356
 		[NullableContext(0)]
 		[return: TupleElementNames(new string[]
 		{
@@ -206,10 +206,10 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 		})]
 		ValueTuple<double, double> GetEquippedItemUsingBuffCd();
 
-		// Token: 0x0603C337 RID: 246583
+		// Token: 0x0603128D RID: 201357
 		bool IsSkillInItemUseSkillCd();
 
-		// Token: 0x0603C338 RID: 246584
+		// Token: 0x0603128E RID: 201358
 		[NullableContext(0)]
 		[return: TupleElementNames(new string[]
 		{
@@ -218,27 +218,27 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 		})]
 		ValueTuple<double, double> GetEquippedItemUsingSkillCd();
 
-		// Token: 0x0603C339 RID: 246585
+		// Token: 0x0603128F RID: 201359
 		FColor? GetFrameSpriteColor();
 
-		// Token: 0x0603C33A RID: 246586
+		// Token: 0x06031290 RID: 201360
 		SkillButtonEffect? GetCdCompletedEffectConfig();
 
-		// Token: 0x0603C33B RID: 246587
+		// Token: 0x06031291 RID: 201361
 		SkillButtonEffect? GetDynamicEffectConfig();
 
-		// Token: 0x0603C33C RID: 246588
+		// Token: 0x06031292 RID: 201362
 		int GetCdCompletedEffectId();
 
-		// Token: 0x0603C33D RID: 246589
+		// Token: 0x06031293 RID: 201363
 		List<EInputAction> GetValidSharedHoldRingFxActions();
 
-		// Token: 0x17008E0E RID: 36366
-		// (get) Token: 0x0603C33E RID: 246590
+		// Token: 0x170061E0 RID: 25056
+		// (get) Token: 0x06031294 RID: 201364
 		bool IsEnableDotIndicator { get; }
 
-		// Token: 0x17008E0F RID: 36367
-		// (get) Token: 0x0603C33F RID: 246591
+		// Token: 0x170061E1 RID: 25057
+		// (get) Token: 0x06031295 RID: 201365
 		int DotIndicatorCount { get; }
 	}
 }

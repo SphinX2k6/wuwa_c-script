@@ -7,13 +7,13 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Launcher.Platform.PlatformSdk;
 using UnrealEngine;
 
-// Token: 0x02001787 RID: 6023
+// Token: 0x02000C40 RID: 3136
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class ChannelModel : ModelBase
 {
-	// Token: 0x0600AF15 RID: 44821 RVA: 0x00278954 File Offset: 0x00276B54
+	// Token: 0x060082FD RID: 33533 RVA: 0x00282E88 File Offset: 0x00281088
 	protected override bool OnInit()
 	{
 		this.OpenShareChannel = new List<EChannelShare>();
@@ -24,14 +24,14 @@ public class ChannelModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600AF16 RID: 44822 RVA: 0x002789A7 File Offset: 0x00276BA7
+	// Token: 0x060082FE RID: 33534 RVA: 0x00282EDB File Offset: 0x002810DB
 	protected override bool OnClear()
 	{
 		EventSystem.Instance.Remove(EEventName.SdkInitDone, new Action(this.ResetOpenFunc));
 		return true;
 	}
 
-	// Token: 0x0600AF17 RID: 44823 RVA: 0x002789C4 File Offset: 0x00276BC4
+	// Token: 0x060082FF RID: 33535 RVA: 0x00282EF8 File Offset: 0x002810F8
 	private unsafe void ResetOpenFunc()
 	{
 		this.OpenShareChannel = new List<EChannelShare>();
@@ -129,7 +129,7 @@ public class ChannelModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.ChannelReset);
 	}
 
-	// Token: 0x0600AF18 RID: 44824 RVA: 0x00278E04 File Offset: 0x00277004
+	// Token: 0x06008300 RID: 33536 RVA: 0x00283338 File Offset: 0x00281538
 	private bool CheckLanguage(string checkLanguage, IEnumerable<string> checkIter)
 	{
 		foreach (string a in checkIter)
@@ -146,7 +146,7 @@ public class ChannelModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600AF19 RID: 44825 RVA: 0x00278E68 File Offset: 0x00277068
+	// Token: 0x06008301 RID: 33537 RVA: 0x0028339C File Offset: 0x0028159C
 	private bool CheckChannel(int checkChannel, IEnumerable<int> checkIter)
 	{
 		foreach (int num in checkIter)
@@ -163,7 +163,7 @@ public class ChannelModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600AF1A RID: 44826 RVA: 0x00278EBC File Offset: 0x002770BC
+	// Token: 0x06008302 RID: 33538 RVA: 0x002833F0 File Offset: 0x002815F0
 	private bool CheckPackageId([Nullable(2)] string checkPackageId, IEnumerable<string> packageIdIter)
 	{
 		if (checkPackageId == null)
@@ -184,28 +184,28 @@ public class ChannelModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600AF1B RID: 44827 RVA: 0x00278F24 File Offset: 0x00277124
+	// Token: 0x06008303 RID: 33539 RVA: 0x00283458 File Offset: 0x00281658
 	public bool CheckShareChannelOpen(EChannelShare type)
 	{
 		this.TryResetOpenMap();
 		return this.OpenShareChannel.Contains(type);
 	}
 
-	// Token: 0x0600AF1C RID: 44828 RVA: 0x00278F38 File Offset: 0x00277138
+	// Token: 0x06008304 RID: 33540 RVA: 0x0028346C File Offset: 0x0028166C
 	public bool CheckKuroStreetOpen()
 	{
 		this.TryResetOpenMap();
 		return this.OpenKuroStreetId.Count > 0;
 	}
 
-	// Token: 0x0600AF1D RID: 44829 RVA: 0x00278F4E File Offset: 0x0027714E
+	// Token: 0x06008305 RID: 33541 RVA: 0x00283482 File Offset: 0x00281682
 	public bool CheckAccountSettingOpen(EChannelAccountSetting type)
 	{
 		this.TryResetOpenMap();
 		return this.OpenAccountSetting.Contains(type);
 	}
 
-	// Token: 0x0600AF1E RID: 44830 RVA: 0x00278F64 File Offset: 0x00277164
+	// Token: 0x06008306 RID: 33542 RVA: 0x00283498 File Offset: 0x00281698
 	public bool CheckCustomerServiceOpen()
 	{
 		this.TryResetOpenMap();
@@ -218,7 +218,7 @@ public class ChannelModel : ModelBase
 		return this.IsCustomerServiceOpen;
 	}
 
-	// Token: 0x0600AF1F RID: 44831 RVA: 0x00278FB0 File Offset: 0x002771B0
+	// Token: 0x06008307 RID: 33543 RVA: 0x002834E4 File Offset: 0x002816E4
 	public void OpenKuroStreet()
 	{
 		if (Info.Instance.PlatformType == ESourcePlatformType.Android)
@@ -238,7 +238,7 @@ public class ChannelModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600AF20 RID: 44832 RVA: 0x00279039 File Offset: 0x00277239
+	// Token: 0x06008308 RID: 33544 RVA: 0x0028356D File Offset: 0x0028176D
 	private void TryResetOpenMap()
 	{
 		if (this.OpenAccountSetting.Count == 0)
@@ -247,7 +247,7 @@ public class ChannelModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600AF21 RID: 44833 RVA: 0x00279050 File Offset: 0x00277250
+	// Token: 0x06008309 RID: 33545 RVA: 0x00283584 File Offset: 0x00281784
 	public void ProcessAccountSetting(EChannelAccountSetting type)
 	{
 		if (type == EChannelAccountSetting.UserCenter || type == EChannelAccountSetting.UserCenterGlobal)
@@ -286,14 +286,14 @@ public class ChannelModel : ModelBase
 		this.OpenAddress(url);
 	}
 
-	// Token: 0x0600AF22 RID: 44834 RVA: 0x00279137 File Offset: 0x00277337
+	// Token: 0x0600830A RID: 33546 RVA: 0x0028366B File Offset: 0x0028186B
 	public List<EChannelShare> GetOpenedShareIds()
 	{
 		this.TryResetOpenMap();
 		return this.OpenShareChannel;
 	}
 
-	// Token: 0x0600AF23 RID: 44835 RVA: 0x00279148 File Offset: 0x00277348
+	// Token: 0x0600830B RID: 33547 RVA: 0x0028367C File Offset: 0x0028187C
 	public bool CouldGetShareReward(EShareActionId id)
 	{
 		ShareReward? config = ConfigShareRewardById.GetConfig((int)id, true);
@@ -305,7 +305,7 @@ public class ChannelModel : ModelBase
 		return this.OpenShareChannel.Count > 0 && num != null && !this.SharedActionTypeMap.Contains(num.Value);
 	}
 
-	// Token: 0x0600AF24 RID: 44836 RVA: 0x002791D0 File Offset: 0x002773D0
+	// Token: 0x0600830C RID: 33548 RVA: 0x00283704 File Offset: 0x00281904
 	public void MarkActionShared(EShareActionId id)
 	{
 		ShareReward? shareReward;
@@ -316,7 +316,7 @@ public class ChannelModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600AF25 RID: 44837 RVA: 0x0027922C File Offset: 0x0027742C
+	// Token: 0x0600830D RID: 33549 RVA: 0x00283760 File Offset: 0x00281960
 	[NullableContext(2)]
 	private void OpenAddress(string url)
 	{
@@ -327,7 +327,7 @@ public class ChannelModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600AF26 RID: 44838 RVA: 0x0027925D File Offset: 0x0027745D
+	// Token: 0x0600830E RID: 33550 RVA: 0x00283791 File Offset: 0x00281991
 	public void GmOpenShareId(EChannelShare id)
 	{
 		if (this.OpenAccountSetting.Count == 0)
@@ -342,8 +342,8 @@ public class ChannelModel : ModelBase
 		openShareChannel.Add(id);
 	}
 
-	// Token: 0x17000E82 RID: 3714
-	// (get) Token: 0x0600AF27 RID: 44839 RVA: 0x00279289 File Offset: 0x00277489
+	// Token: 0x17000EA5 RID: 3749
+	// (get) Token: 0x0600830F RID: 33551 RVA: 0x002837BD File Offset: 0x002819BD
 	public static ChannelModel Instance
 	{
 		get
@@ -352,7 +352,7 @@ public class ChannelModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600AF28 RID: 44840 RVA: 0x00279290 File Offset: 0x00277490
+	// Token: 0x06008310 RID: 33552 RVA: 0x002837C4 File Offset: 0x002819C4
 	public static ChannelModel GetOrCreateInstance()
 	{
 		if (ChannelModel._Instance == null)
@@ -362,7 +362,7 @@ public class ChannelModel : ModelBase
 		return ChannelModel._Instance;
 	}
 
-	// Token: 0x0600AF29 RID: 44841 RVA: 0x002792A4 File Offset: 0x002774A4
+	// Token: 0x06008311 RID: 33553 RVA: 0x002837D8 File Offset: 0x002819D8
 	public static bool CreateInstance()
 	{
 		if (ChannelModel._Instance != null)
@@ -373,55 +373,55 @@ public class ChannelModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600AF2A RID: 44842 RVA: 0x002792BA File Offset: 0x002774BA
+	// Token: 0x06008312 RID: 33554 RVA: 0x002837EE File Offset: 0x002819EE
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600AF2B RID: 44843 RVA: 0x002792BC File Offset: 0x002774BC
+	// Token: 0x06008313 RID: 33555 RVA: 0x002837F0 File Offset: 0x002819F0
 	public static void ResetStaticDefaultValue()
 	{
 		ChannelModel._Instance = null;
 	}
 
-	// Token: 0x0600AF2C RID: 44844 RVA: 0x002792C4 File Offset: 0x002774C4
+	// Token: 0x06008314 RID: 33556 RVA: 0x002837F8 File Offset: 0x002819F8
 	static ChannelModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ChannelModel.CreateStaticDefaultValue), new Action(ChannelModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04004F97 RID: 20375
+	// Token: 0x04005041 RID: 20545
 	[Nullable(2)]
 	private List<EChannelShare> OpenShareChannel;
 
-	// Token: 0x04004F98 RID: 20376
+	// Token: 0x04005042 RID: 20546
 	[Nullable(2)]
 	private List<EChannelKuroStreet> OpenKuroStreetId;
 
-	// Token: 0x04004F99 RID: 20377
+	// Token: 0x04005043 RID: 20547
 	[Nullable(2)]
 	private List<EChannelAccountSetting> OpenAccountSetting;
 
-	// Token: 0x04004F9A RID: 20378
+	// Token: 0x04005044 RID: 20548
 	[Nullable(2)]
 	private List<int> SharedActionTypeMap;
 
-	// Token: 0x04004F9B RID: 20379
+	// Token: 0x04005045 RID: 20549
 	private bool IsCustomerServiceOpen;
 
-	// Token: 0x04004F9C RID: 20380
+	// Token: 0x04005046 RID: 20550
 	public EShareActionId SharingActionId = EShareActionId.Photo;
 
-	// Token: 0x04004F9D RID: 20381
+	// Token: 0x04005047 RID: 20551
 	public int SharingConfigId;
 
-	// Token: 0x04004F9E RID: 20382
+	// Token: 0x04005048 RID: 20552
 	public EShareReportExtraType ShareReportExtraType;
 
-	// Token: 0x04004F9F RID: 20383
+	// Token: 0x04005049 RID: 20553
 	public string GameIntroductionUrl = "";
 
-	// Token: 0x04004FA0 RID: 20384
+	// Token: 0x0400504A RID: 20554
 	[Nullable(2)]
 	private static ChannelModel _Instance;
 }

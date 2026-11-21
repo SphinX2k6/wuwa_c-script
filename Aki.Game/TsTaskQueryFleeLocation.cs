@@ -16,13 +16,13 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/Animal/TsTaskQueryFleeLocation.TsTaskQueryFleeLocation_C")]
 public class TsTaskQueryFleeLocation : TsTaskAbortImmediatelyBase, IStaticVariableResetter, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x060003A1 RID: 929 RVA: 0x00010D18 File Offset: 0x0000EF18
+	// Token: 0x060003A1 RID: 929 RVA: 0x000114E0 File Offset: 0x0000F6E0
 	static TsTaskQueryFleeLocation()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TsTaskQueryFleeLocation.CreateStaticDefaultValue), new Action(TsTaskQueryFleeLocation.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x060003A2 RID: 930 RVA: 0x00010D74 File Offset: 0x0000EF74
+	// Token: 0x060003A2 RID: 930 RVA: 0x0001153C File Offset: 0x0000F73C
 	public static void CreateStaticDefaultValue()
 	{
 		TsTaskQueryFleeLocation.QuaternionQueue = new List<Quat>();
@@ -39,7 +39,7 @@ public class TsTaskQueryFleeLocation : TsTaskAbortImmediatelyBase, IStaticVariab
 		TsTaskQueryFleeLocation.StaticVariablesInited = true;
 	}
 
-	// Token: 0x060003A3 RID: 931 RVA: 0x00010E59 File Offset: 0x0000F059
+	// Token: 0x060003A3 RID: 931 RVA: 0x00011621 File Offset: 0x0000F821
 	public static void ResetStaticDefaultValue()
 	{
 		TsTaskQueryFleeLocation.QuaternionQueue = null;
@@ -47,8 +47,8 @@ public class TsTaskQueryFleeLocation : TsTaskAbortImmediatelyBase, IStaticVariab
 	}
 
 	// Token: 0x1700008C RID: 140
-	// (get) Token: 0x060003A4 RID: 932 RVA: 0x00010E67 File Offset: 0x0000F067
-	// (set) Token: 0x060003A5 RID: 933 RVA: 0x00010E7B File Offset: 0x0000F07B
+	// (get) Token: 0x060003A4 RID: 932 RVA: 0x0001162F File Offset: 0x0000F82F
+	// (set) Token: 0x060003A5 RID: 933 RVA: 0x00011643 File Offset: 0x0000F843
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string TargetKey
 	{
@@ -63,8 +63,8 @@ public class TsTaskQueryFleeLocation : TsTaskAbortImmediatelyBase, IStaticVariab
 	}
 
 	// Token: 0x1700008D RID: 141
-	// (get) Token: 0x060003A6 RID: 934 RVA: 0x00010E90 File Offset: 0x0000F090
-	// (set) Token: 0x060003A7 RID: 935 RVA: 0x00010EA0 File Offset: 0x0000F0A0
+	// (get) Token: 0x060003A6 RID: 934 RVA: 0x00011658 File Offset: 0x0000F858
+	// (set) Token: 0x060003A7 RID: 935 RVA: 0x00011668 File Offset: 0x0000F868
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool DebugMode
 	{
@@ -79,8 +79,8 @@ public class TsTaskQueryFleeLocation : TsTaskAbortImmediatelyBase, IStaticVariab
 	}
 
 	// Token: 0x1700008E RID: 142
-	// (get) Token: 0x060003A8 RID: 936 RVA: 0x00010EB1 File Offset: 0x0000F0B1
-	// (set) Token: 0x060003A9 RID: 937 RVA: 0x00010EC1 File Offset: 0x0000F0C1
+	// (get) Token: 0x060003A8 RID: 936 RVA: 0x00011679 File Offset: 0x0000F879
+	// (set) Token: 0x060003A9 RID: 937 RVA: 0x00011689 File Offset: 0x0000F889
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int Radius
 	{
@@ -94,7 +94,7 @@ public class TsTaskQueryFleeLocation : TsTaskAbortImmediatelyBase, IStaticVariab
 		}
 	}
 
-	// Token: 0x060003AA RID: 938 RVA: 0x00010ED4 File Offset: 0x0000F0D4
+	// Token: 0x060003AA RID: 938 RVA: 0x0001169C File Offset: 0x0000F89C
 	private static void InitStaticVariables()
 	{
 		TsTaskQueryFleeLocation.QuaternionQueue = new List<Quat>();
@@ -110,7 +110,7 @@ public class TsTaskQueryFleeLocation : TsTaskAbortImmediatelyBase, IStaticVariab
 		}
 	}
 
-	// Token: 0x060003AB RID: 939 RVA: 0x00010FB4 File Offset: 0x0000F1B4
+	// Token: 0x060003AB RID: 939 RVA: 0x0001177C File Offset: 0x0000F97C
 	private void InitTsVariables(AiController aiController)
 	{
 		if (!this.IsInitTsVariables)
@@ -132,30 +132,27 @@ public class TsTaskQueryFleeLocation : TsTaskAbortImmediatelyBase, IStaticVariab
 		}
 	}
 
-	// Token: 0x060003AC RID: 940 RVA: 0x0001108C File Offset: 0x0000F28C
+	// Token: 0x060003AC RID: 940 RVA: 0x00011854 File Offset: 0x0000FA54
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveExecuteAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskQueryFleeLocation) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveExecuteAI"), TsTaskQueryFleeLocation.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			this.ReceiveExecuteAI_Implementation(ownerController, controlledPawn);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x060003AD RID: 941 RVA: 0x00011128 File Offset: 0x0000F328
+	// Token: 0x060003AD RID: 941 RVA: 0x00011904 File Offset: 0x0000FB04
 	[NullableContext(2)]
 	protected unsafe virtual void ReceiveExecuteAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -231,7 +228,7 @@ public class TsTaskQueryFleeLocation : TsTaskAbortImmediatelyBase, IStaticVariab
 		base.Finish(true);
 	}
 
-	// Token: 0x060003AE RID: 942 RVA: 0x00011364 File Offset: 0x0000F564
+	// Token: 0x060003AE RID: 942 RVA: 0x00011B40 File Offset: 0x0000FD40
 	private bool FindTarget()
 	{
 		if (this.TsTargetKey != "")
@@ -250,7 +247,7 @@ public class TsTaskQueryFleeLocation : TsTaskAbortImmediatelyBase, IStaticVariab
 		return false;
 	}
 
-	// Token: 0x060003AF RID: 943 RVA: 0x000113D4 File Offset: 0x0000F5D4
+	// Token: 0x060003AF RID: 943 RVA: 0x00011BB0 File Offset: 0x0000FDB0
 	private unsafe bool QueryFleeLocation()
 	{
 		Vector actorLocationProxy = this.Character.ActorLocationProxy;
@@ -329,26 +326,26 @@ public class TsTaskQueryFleeLocation : TsTaskAbortImmediatelyBase, IStaticVariab
 		return this.FoundPath;
 	}
 
-	// Token: 0x060003B0 RID: 944 RVA: 0x00011798 File Offset: 0x0000F998
+	// Token: 0x060003B0 RID: 944 RVA: 0x00011F74 File Offset: 0x00010174
 	private void DebugDraw(FVectorDouble location, FLinearColor color)
 	{
 		UKismetSystemLibrary.D_DrawDebugSphere(this, location, 20f, 10, new FLinearColor?(color), 5f, 0f);
 	}
 
-	// Token: 0x060003B1 RID: 945 RVA: 0x000117B8 File Offset: 0x0000F9B8
+	// Token: 0x060003B1 RID: 945 RVA: 0x00011F94 File Offset: 0x00010194
 	private void DebugDraw2()
 	{
 		bool isPlayInEditor = GlobalData.IsPlayInEditor;
 	}
 
-	// Token: 0x060003B2 RID: 946 RVA: 0x000117CB File Offset: 0x0000F9CB
+	// Token: 0x060003B2 RID: 946 RVA: 0x00011FA7 File Offset: 0x000101A7
 	protected override void OnClear()
 	{
 		this.Character = null;
 		this.TargetCharacter = null;
 	}
 
-	// Token: 0x060003B3 RID: 947 RVA: 0x000117DB File Offset: 0x0000F9DB
+	// Token: 0x060003B3 RID: 947 RVA: 0x00011FB7 File Offset: 0x000101B7
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskQueryFleeLocation._ClassPtr == IntPtr.Zero)
@@ -358,22 +355,22 @@ public class TsTaskQueryFleeLocation : TsTaskAbortImmediatelyBase, IStaticVariab
 		return TsTaskQueryFleeLocation._ClassPtr;
 	}
 
-	// Token: 0x060003B4 RID: 948 RVA: 0x00011800 File Offset: 0x0000FA00
+	// Token: 0x060003B4 RID: 948 RVA: 0x00011FDC File Offset: 0x000101DC
 	public TsTaskQueryFleeLocation() : this(BuiltinUtils.AllocNativeUObject(TsTaskQueryFleeLocation.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x060003B5 RID: 949 RVA: 0x00011828 File Offset: 0x0000FA28
+	// Token: 0x060003B5 RID: 949 RVA: 0x00012004 File Offset: 0x00010204
 	public TsTaskQueryFleeLocation(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskQueryFleeLocation.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x060003B6 RID: 950 RVA: 0x0001185B File Offset: 0x0000FA5B
+	// Token: 0x060003B6 RID: 950 RVA: 0x00012037 File Offset: 0x00010237
 	protected TsTaskQueryFleeLocation(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x060003B7 RID: 951 RVA: 0x0001187C File Offset: 0x0000FA7C
+	// Token: 0x060003B7 RID: 951 RVA: 0x00012058 File Offset: 0x00010258
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{

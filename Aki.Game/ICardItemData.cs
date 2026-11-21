@@ -3,32 +3,32 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 
-// Token: 0x0200203D RID: 8253
+// Token: 0x02001510 RID: 5392
 [NullableContext(1)]
 public interface ICardItemData
 {
-	// Token: 0x170013C8 RID: 5064
-	// (get) Token: 0x0601033E RID: 66366
-	// (set) Token: 0x0601033F RID: 66367
+	// Token: 0x170013F5 RID: 5109
+	// (get) Token: 0x0600D7A6 RID: 55206
+	// (set) Token: 0x0600D7A7 RID: 55207
 	int Id { get; set; }
 
-	// Token: 0x170013C9 RID: 5065
-	// (get) Token: 0x06010340 RID: 66368
-	// (set) Token: 0x06010341 RID: 66369
+	// Token: 0x170013F6 RID: 5110
+	// (get) Token: 0x0600D7A8 RID: 55208
+	// (set) Token: 0x0600D7A9 RID: 55209
 	List<ITalkOption> Options { get; set; }
 
-	// Token: 0x170013CA RID: 5066
-	// (get) Token: 0x06010342 RID: 66370
-	// (set) Token: 0x06010343 RID: 66371
+	// Token: 0x170013F7 RID: 5111
+	// (get) Token: 0x0600D7AA RID: 55210
+	// (set) Token: 0x0600D7AB RID: 55211
 	string Tid { get; set; }
 
-	// Token: 0x170013CB RID: 5067
-	// (get) Token: 0x06010344 RID: 66372
-	// (set) Token: 0x06010345 RID: 66373
+	// Token: 0x170013F8 RID: 5112
+	// (get) Token: 0x0600D7AC RID: 55212
+	// (set) Token: 0x0600D7AD RID: 55213
 	int WhoId { get; set; }
 
-	// Token: 0x170013CC RID: 5068
-	// (get) Token: 0x06010346 RID: 66374
-	// (set) Token: 0x06010347 RID: 66375
+	// Token: 0x170013F9 RID: 5113
+	// (get) Token: 0x0600D7AE RID: 55214
+	// (set) Token: 0x0600D7AF RID: 55215
 	string BackGroundConfig { get; set; }
 }

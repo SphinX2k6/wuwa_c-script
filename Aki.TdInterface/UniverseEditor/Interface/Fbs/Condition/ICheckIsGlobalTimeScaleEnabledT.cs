@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004A8B RID: 19083
+	// Token: 0x02004F51 RID: 20305
 	public class ICheckIsGlobalTimeScaleEnabledT
 	{
-		// Token: 0x17008A41 RID: 35393
-		// (get) Token: 0x0601DEDC RID: 122588 RVA: 0x00434054 File Offset: 0x00432254
-		// (set) Token: 0x0601DEDD RID: 122589 RVA: 0x0043405C File Offset: 0x0043225C
+		// Token: 0x1700911D RID: 37149
+		// (get) Token: 0x0601F97F RID: 129407 RVA: 0x004651E0 File Offset: 0x004633E0
+		// (set) Token: 0x0601F980 RID: 129408 RVA: 0x004651E8 File Offset: 0x004633E8
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008A42 RID: 35394
-		// (get) Token: 0x0601DEDE RID: 122590 RVA: 0x00434065 File Offset: 0x00432265
-		// (set) Token: 0x0601DEDF RID: 122591 RVA: 0x0043406D File Offset: 0x0043226D
+		// Token: 0x1700911E RID: 37150
+		// (get) Token: 0x0601F981 RID: 129409 RVA: 0x004651F1 File Offset: 0x004633F1
+		// (set) Token: 0x0601F982 RID: 129410 RVA: 0x004651F9 File Offset: 0x004633F9
 		public bool Enabled { get; set; }
 
-		// Token: 0x0601DEE0 RID: 122592 RVA: 0x00434076 File Offset: 0x00432276
+		// Token: 0x0601F983 RID: 129411 RVA: 0x00465202 File Offset: 0x00463402
 		public ICheckIsGlobalTimeScaleEnabledT()
 		{
 			this.Type = ECondition.CompareVar;

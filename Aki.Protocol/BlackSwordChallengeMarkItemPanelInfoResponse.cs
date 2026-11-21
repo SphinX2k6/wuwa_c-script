@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020001B0 RID: 432
+	// Token: 0x020001B4 RID: 436
 	[NetMessage(EMessageId.BlackSwordChallengeMarkItemPanelInfoResponse)]
 	public sealed class BlackSwordChallengeMarkItemPanelInfoResponse : IMessage<BlackSwordChallengeMarkItemPanelInfoResponse>, IMessage, IEquatable<BlackSwordChallengeMarkItemPanelInfoResponse>, IDeepCloneable<BlackSwordChallengeMarkItemPanelInfoResponse>, IBufferMessage
 	{
-		// Token: 0x0600325B RID: 12891 RVA: 0x0007FE85 File Offset: 0x0007E085
+		// Token: 0x060032E8 RID: 13032 RVA: 0x000815F1 File Offset: 0x0007F7F1
 		[NullableContext(1)]
 		public static BlackSwordChallengeMarkItemPanelInfoResponse Create()
 		{
 			return new BlackSwordChallengeMarkItemPanelInfoResponse();
 		}
 
-		// Token: 0x170007E4 RID: 2020
-		// (get) Token: 0x0600325C RID: 12892 RVA: 0x0007FE8C File Offset: 0x0007E08C
+		// Token: 0x170007FD RID: 2045
+		// (get) Token: 0x060032E9 RID: 13033 RVA: 0x000815F8 File Offset: 0x0007F7F8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170007E5 RID: 2021
-		// (get) Token: 0x0600325D RID: 12893 RVA: 0x0007FE8F File Offset: 0x0007E08F
+		// Token: 0x170007FE RID: 2046
+		// (get) Token: 0x060032EA RID: 13034 RVA: 0x000815FB File Offset: 0x0007F7FB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600325E RID: 12894 RVA: 0x0007FE96 File Offset: 0x0007E096
+		// Token: 0x060032EB RID: 13035 RVA: 0x00081602 File Offset: 0x0007F802
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BlackSwordChallengeMarkItemPanelInfoResponse()
 		{
 		}
 
-		// Token: 0x0600325F RID: 12895 RVA: 0x0007FEAC File Offset: 0x0007E0AC
+		// Token: 0x060032EC RID: 13036 RVA: 0x00081618 File Offset: 0x0007F818
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BlackSwordChallengeMarkItemPanelInfoResponse(BlackSwordChallengeMarkItemPanelInfoResponse other) : this()
@@ -61,7 +61,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06003260 RID: 12896 RVA: 0x0007FEF9 File Offset: 0x0007E0F9
+		// Token: 0x060032ED RID: 13037 RVA: 0x00081665 File Offset: 0x0007F865
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BlackSwordChallengeMarkItemPanelInfoResponse Clone()
@@ -69,9 +69,9 @@ namespace Aki.Protocol
 			return new BlackSwordChallengeMarkItemPanelInfoResponse(this);
 		}
 
-		// Token: 0x170007E6 RID: 2022
-		// (get) Token: 0x06003261 RID: 12897 RVA: 0x0007FF01 File Offset: 0x0007E101
-		// (set) Token: 0x06003262 RID: 12898 RVA: 0x0007FF09 File Offset: 0x0007E109
+		// Token: 0x170007FF RID: 2047
+		// (get) Token: 0x060032EE RID: 13038 RVA: 0x0008166D File Offset: 0x0007F86D
+		// (set) Token: 0x060032EF RID: 13039 RVA: 0x00081675 File Offset: 0x0007F875
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ChallengeId
@@ -86,9 +86,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170007E7 RID: 2023
-		// (get) Token: 0x06003263 RID: 12899 RVA: 0x0007FF12 File Offset: 0x0007E112
-		// (set) Token: 0x06003264 RID: 12900 RVA: 0x0007FF1A File Offset: 0x0007E11A
+		// Token: 0x17000800 RID: 2048
+		// (get) Token: 0x060032F0 RID: 13040 RVA: 0x0008167E File Offset: 0x0007F87E
+		// (set) Token: 0x060032F1 RID: 13041 RVA: 0x00081686 File Offset: 0x0007F886
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ErrorCode ErrorCode
@@ -103,8 +103,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170007E8 RID: 2024
-		// (get) Token: 0x06003265 RID: 12901 RVA: 0x0007FF23 File Offset: 0x0007E123
+		// Token: 0x17000801 RID: 2049
+		// (get) Token: 0x060032F2 RID: 13042 RVA: 0x0008168F File Offset: 0x0007F88F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<BlackSwordChallengeInfo> LevelPlayUiInfoList
@@ -115,7 +115,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06003266 RID: 12902 RVA: 0x0007FF2B File Offset: 0x0007E12B
+		// Token: 0x060032F3 RID: 13043 RVA: 0x00081697 File Offset: 0x0007F897
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -123,7 +123,7 @@ namespace Aki.Protocol
 			return this.Equals(other as BlackSwordChallengeMarkItemPanelInfoResponse);
 		}
 
-		// Token: 0x06003267 RID: 12903 RVA: 0x0007FF3C File Offset: 0x0007E13C
+		// Token: 0x060032F4 RID: 13044 RVA: 0x000816A8 File Offset: 0x0007F8A8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(BlackSwordChallengeMarkItemPanelInfoResponse other)
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ChallengeId == other.ChallengeId && this.ErrorCode == other.ErrorCode && this.levelPlayUiInfoList_.Equals(other.levelPlayUiInfoList_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06003268 RID: 12904 RVA: 0x0007FF9C File Offset: 0x0007E19C
+		// Token: 0x060032F5 RID: 13045 RVA: 0x00081708 File Offset: 0x0007F908
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -153,7 +153,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06003269 RID: 12905 RVA: 0x00080008 File Offset: 0x0007E208
+		// Token: 0x060032F6 RID: 13046 RVA: 0x00081774 File Offset: 0x0007F974
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -161,7 +161,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600326A RID: 12906 RVA: 0x00080015 File Offset: 0x0007E215
+		// Token: 0x060032F7 RID: 13047 RVA: 0x00081781 File Offset: 0x0007F981
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -169,29 +169,29 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600326B RID: 12907 RVA: 0x00080020 File Offset: 0x0007E220
+		// Token: 0x060032F8 RID: 13048 RVA: 0x0008178C File Offset: 0x0007F98C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
+			this.levelPlayUiInfoList_.WriteTo(ref output, BlackSwordChallengeMarkItemPanelInfoResponse._repeated_levelPlayUiInfoList_codec);
 			if (this.ErrorCode != ErrorCode.Success)
 			{
-				output.WriteRawTag(40);
+				output.WriteRawTag(32);
 				output.WriteEnum((int)this.ErrorCode);
 			}
 			if (this.ChallengeId != 0)
 			{
-				output.WriteRawTag(80);
+				output.WriteRawTag(112);
 				output.WriteInt32(this.ChallengeId);
 			}
-			this.levelPlayUiInfoList_.WriteTo(ref output, BlackSwordChallengeMarkItemPanelInfoResponse._repeated_levelPlayUiInfoList_codec);
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x0600326C RID: 12908 RVA: 0x0008008C File Offset: 0x0007E28C
+		// Token: 0x060032F9 RID: 13049 RVA: 0x000817F8 File Offset: 0x0007F9F8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -213,7 +213,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600326D RID: 12909 RVA: 0x000800F8 File Offset: 0x0007E2F8
+		// Token: 0x060032FA RID: 13050 RVA: 0x00081864 File Offset: 0x0007FA64
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(BlackSwordChallengeMarkItemPanelInfoResponse other)
@@ -234,7 +234,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600326E RID: 12910 RVA: 0x00080159 File Offset: 0x0007E359
+		// Token: 0x060032FB RID: 13051 RVA: 0x000818C5 File Offset: 0x0007FAC5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -242,7 +242,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600326F RID: 12911 RVA: 0x00080164 File Offset: 0x0007E364
+		// Token: 0x060032FC RID: 13052 RVA: 0x000818D0 File Offset: 0x0007FAD0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -254,53 +254,53 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 40U)
+				if (num != 18U)
 				{
-					if (num != 80U)
+					if (num != 32U)
 					{
-						if (num != 90U)
+						if (num != 112U)
 						{
 							this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 						}
 						else
 						{
-							this.levelPlayUiInfoList_.AddEntriesFrom(ref input, BlackSwordChallengeMarkItemPanelInfoResponse._repeated_levelPlayUiInfoList_codec);
+							this.ChallengeId = input.ReadInt32();
 						}
 					}
 					else
 					{
-						this.ChallengeId = input.ReadInt32();
+						this.ErrorCode = (ErrorCode)input.ReadEnum();
 					}
 				}
 				else
 				{
-					this.ErrorCode = (ErrorCode)input.ReadEnum();
+					this.levelPlayUiInfoList_.AddEntriesFrom(ref input, BlackSwordChallengeMarkItemPanelInfoResponse._repeated_levelPlayUiInfoList_codec);
 				}
 			}
 		}
 
-		// Token: 0x04002972 RID: 10610
+		// Token: 0x040029ED RID: 10733
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04002973 RID: 10611
-		public const int ChallengeIdFieldNumber = 10;
+		// Token: 0x040029EE RID: 10734
+		public const int ChallengeIdFieldNumber = 14;
 
-		// Token: 0x04002974 RID: 10612
+		// Token: 0x040029EF RID: 10735
 		private int challengeId_;
 
-		// Token: 0x04002975 RID: 10613
-		public const int ErrorCodeFieldNumber = 5;
+		// Token: 0x040029F0 RID: 10736
+		public const int ErrorCodeFieldNumber = 4;
 
-		// Token: 0x04002976 RID: 10614
+		// Token: 0x040029F1 RID: 10737
 		private ErrorCode errorCode_;
 
-		// Token: 0x04002977 RID: 10615
-		public const int LevelPlayUiInfoListFieldNumber = 11;
+		// Token: 0x040029F2 RID: 10738
+		public const int LevelPlayUiInfoListFieldNumber = 2;
 
-		// Token: 0x04002978 RID: 10616
-		private static readonly FieldCodec<BlackSwordChallengeInfo> _repeated_levelPlayUiInfoList_codec = FieldCodec.ForMessage<BlackSwordChallengeInfo>(90U, BlackSwordChallengeInfo.Parser);
+		// Token: 0x040029F3 RID: 10739
+		private static readonly FieldCodec<BlackSwordChallengeInfo> _repeated_levelPlayUiInfoList_codec = FieldCodec.ForMessage<BlackSwordChallengeInfo>(18U, BlackSwordChallengeInfo.Parser);
 
-		// Token: 0x04002979 RID: 10617
+		// Token: 0x040029F4 RID: 10740
 		private readonly RepeatedField<BlackSwordChallengeInfo> levelPlayUiInfoList_ = new RepeatedField<BlackSwordChallengeInfo>();
 	}
 }

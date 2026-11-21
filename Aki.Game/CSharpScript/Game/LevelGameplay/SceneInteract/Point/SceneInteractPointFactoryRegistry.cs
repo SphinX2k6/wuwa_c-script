@@ -7,20 +7,20 @@ using CSharpScript.Game.LevelGamePlay.SceneInteractExplorePlaced;
 
 namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point
 {
-	// Token: 0x02006A86 RID: 27270
+	// Token: 0x02005BE3 RID: 23523
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneInteractPointFactoryRegistry : Singleton
 	{
-		// Token: 0x06043C53 RID: 277587 RVA: 0x010967EC File Offset: 0x010949EC
+		// Token: 0x06039CA1 RID: 236705 RVA: 0x0103B02C File Offset: 0x0103922C
 		[return: Nullable(2)]
 		public ISceneInteractPoint Create(SceneInteractPointContext context)
 		{
 			return this.Factories[context.GetInteractPointType()].Create(context);
 		}
 
-		// Token: 0x1700993B RID: 39227
-		// (get) Token: 0x06043C54 RID: 277588 RVA: 0x01096805 File Offset: 0x01094A05
+		// Token: 0x17006E20 RID: 28192
+		// (get) Token: 0x06039CA2 RID: 236706 RVA: 0x0103B045 File Offset: 0x01039245
 		public static SceneInteractPointFactoryRegistry Instance
 		{
 			get
@@ -34,12 +34,12 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point
 			}
 		}
 
-		// Token: 0x06043C55 RID: 277589 RVA: 0x01096828 File Offset: 0x01094A28
+		// Token: 0x06039CA3 RID: 236707 RVA: 0x0103B068 File Offset: 0x01039268
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06043C56 RID: 277590 RVA: 0x0109682A File Offset: 0x01094A2A
+		// Token: 0x06039CA4 RID: 236708 RVA: 0x0103B06A File Offset: 0x0103926A
 		public static void ResetStaticDefaultValue()
 		{
 			SceneInteractPointFactoryRegistry instance = SceneInteractPointFactoryRegistry._instance;
@@ -50,13 +50,13 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point
 			SceneInteractPointFactoryRegistry._instance = null;
 		}
 
-		// Token: 0x06043C57 RID: 277591 RVA: 0x01096843 File Offset: 0x01094A43
+		// Token: 0x06039CA5 RID: 236709 RVA: 0x0103B083 File Offset: 0x01039283
 		static SceneInteractPointFactoryRegistry()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SceneInteractPointFactoryRegistry.CreateStaticDefaultValue), new Action(SceneInteractPointFactoryRegistry.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06043C58 RID: 277592 RVA: 0x01096862 File Offset: 0x01094A62
+		// Token: 0x06039CA6 RID: 236710 RVA: 0x0103B0A2 File Offset: 0x010392A2
 		public SceneInteractPointFactoryRegistry()
 		{
 			Dictionary<ESceneInteractPointType, SceneInteractPointFactory> dictionary = new Dictionary<ESceneInteractPointType, SceneInteractPointFactory>();
@@ -66,10 +66,10 @@ namespace CSharpScript.Game.LevelGamePlay.SceneInteract.Point
 			base..ctor();
 		}
 
-		// Token: 0x0402367E RID: 145022
+		// Token: 0x0401E870 RID: 125040
 		private readonly Dictionary<ESceneInteractPointType, SceneInteractPointFactory> Factories;
 
-		// Token: 0x0402367F RID: 145023
+		// Token: 0x0401E871 RID: 125041
 		[Nullable(2)]
 		private static SceneInteractPointFactoryRegistry _instance;
 	}

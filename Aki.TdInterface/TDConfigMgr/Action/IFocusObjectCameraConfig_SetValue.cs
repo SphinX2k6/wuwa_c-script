@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001AAA RID: 6826
+	// Token: 0x02001C43 RID: 7235
 	public class IFocusObjectCameraConfig_SetValue
 	{
-		// Token: 0x04005A29 RID: 23081
-		[Nullable(1)]
+		// Token: 0x04005E99 RID: 24217
 		public ICameraParams CameraConfig;
 
-		// Token: 0x04005A2A RID: 23082
+		// Token: 0x04005E9A RID: 24218
 		public float? BlendInTime;
 	}
 }

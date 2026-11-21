@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001C18 RID: 7192
+	// Token: 0x020004F2 RID: 1266
 	public sealed class FOnForbidWeatherStateChangedDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601BBDD RID: 113629 RVA: 0x0028D2B2 File Offset: 0x0028B4B2
+		// Token: 0x0600772D RID: 30509 RVA: 0x000AE28E File Offset: 0x000AC48E
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnForbidWeatherStateChangedDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601BBDE RID: 113630 RVA: 0x0028D2BE File Offset: 0x0028B4BE
+		// Token: 0x0600772E RID: 30510 RVA: 0x000AE29A File Offset: 0x000AC49A
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (AKuroGlobalGI.__OnForbidWeatherStateChangedDelegate__DelegateSignature_NativeFunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return AKuroGlobalGI.__OnForbidWeatherStateChangedDelegate__DelegateSignature_NativeFunctionPtr;
 		}
 
-		// Token: 0x0601BBDF RID: 113631 RVA: 0x0028D2E1 File Offset: 0x0028B4E1
+		// Token: 0x0600772F RID: 30511 RVA: 0x000AE2BD File Offset: 0x000AC4BD
 		public FOnForbidWeatherStateChangedDelegate()
 		{
 		}
 
-		// Token: 0x0601BBE0 RID: 113632 RVA: 0x0028D2E9 File Offset: 0x0028B4E9
+		// Token: 0x06007730 RID: 30512 RVA: 0x000AE2C5 File Offset: 0x000AC4C5
 		[NullableContext(2)]
 		public FOnForbidWeatherStateChangedDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601BBE1 RID: 113633 RVA: 0x0028D2F3 File Offset: 0x0028B4F3
+		// Token: 0x06007731 RID: 30513 RVA: 0x000AE2CF File Offset: 0x000AC4CF
 		public FOnForbidWeatherStateChangedDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601BBE2 RID: 113634 RVA: 0x0028D2FE File Offset: 0x0028B4FE
+		// Token: 0x06007732 RID: 30514 RVA: 0x000AE2DA File Offset: 0x000AC4DA
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<bool>) ?? ((Action<bool>)Delegate.CreateDelegate(typeof(Action<bool>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601BBE3 RID: 113635 RVA: 0x0028D330 File Offset: 0x0028B530
+		// Token: 0x06007733 RID: 30515 RVA: 0x000AE30C File Offset: 0x000AC50C
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<bool> Callback)
 		{
 			if (FOnForbidWeatherStateChangedDelegate.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FOnForbidWeatherStateChangedDelegate.RegisterId);
 		}
 
-		// Token: 0x0601BBE4 RID: 113636 RVA: 0x0028D36C File Offset: 0x0028B56C
+		// Token: 0x06007734 RID: 30516 RVA: 0x000AE348 File Offset: 0x000AC548
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(bool InForbidWeather)
 		{
 			FOnForbidWeatherStateChangedDelegate.__FOnForbidWeatherStateChangedDelegate_DelegateParams* ptr = stackalloc FOnForbidWeatherStateChangedDelegate.__FOnForbidWeatherStateChangedDelegate_DelegateParams[(UIntPtr)16] + 15L / (long)sizeof(FOnForbidWeatherStateChangedDelegate.__FOnForbidWeatherStateChangedDelegate_DelegateParams) & -16L;
@@ -76,10 +74,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x0601BBE5 RID: 113637 RVA: 0x0028D3AC File Offset: 0x0028B5AC
+		// Token: 0x06007735 RID: 30517 RVA: 0x000AE388 File Offset: 0x000AC588
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<bool> action = target as Action<bool>;
@@ -90,28 +87,28 @@ namespace UnrealEngine
 			action(((FOnForbidWeatherStateChangedDelegate.__FOnForbidWeatherStateChangedDelegate_DelegateParams*)__Parameters)->InForbidWeather);
 		}
 
-		// Token: 0x0400EE99 RID: 61081
+		// Token: 0x0400323E RID: 12862
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroRenderingRuntimeBPPlugin.KuroGlobalGI:OnForbidWeatherStateChangedDelegate__DelegateSignature";
 
-		// Token: 0x0400EE9A RID: 61082
+		// Token: 0x0400323F RID: 12863
 		private static int RegisterId;
 
-		// Token: 0x0200319C RID: 12700
+		// Token: 0x02000C32 RID: 3122
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
-		protected ref struct __FOnForbidWeatherStateChangedDelegate_DelegateParams
+		private ref struct __FOnForbidWeatherStateChangedDelegate_DelegateParams
 		{
-			// Token: 0x04016FDA RID: 94170
+			// Token: 0x04005E7F RID: 24191
 			[FieldOffset(0)]
 			public bool InForbidWeather;
 		}
 
-		// Token: 0x0200319D RID: 12701
+		// Token: 0x02000C33 RID: 3123
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016FDB RID: 94171
+			// Token: 0x04005E80 RID: 24192
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

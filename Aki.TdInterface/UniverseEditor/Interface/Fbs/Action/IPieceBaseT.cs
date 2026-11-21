@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006CCD RID: 27853
+	// Token: 0x02007443 RID: 29763
 	public class IPieceBaseT
 	{
-		// Token: 0x1700CF60 RID: 53088
-		// (get) Token: 0x0603117B RID: 201083 RVA: 0x006A9757 File Offset: 0x006A7957
-		// (set) Token: 0x0603117C RID: 201084 RVA: 0x006A975F File Offset: 0x006A795F
+		// Token: 0x1700DA9D RID: 55965
+		// (get) Token: 0x06034152 RID: 213330 RVA: 0x0070498B File Offset: 0x00702B8B
+		// (set) Token: 0x06034153 RID: 213331 RVA: 0x00704993 File Offset: 0x00702B93
 		public IPieceIndexT Index { get; set; }
 
-		// Token: 0x1700CF61 RID: 53089
-		// (get) Token: 0x0603117D RID: 201085 RVA: 0x006A9768 File Offset: 0x006A7968
-		// (set) Token: 0x0603117E RID: 201086 RVA: 0x006A9770 File Offset: 0x006A7970
+		// Token: 0x1700DA9E RID: 55966
+		// (get) Token: 0x06034154 RID: 213332 RVA: 0x0070499C File Offset: 0x00702B9C
+		// (set) Token: 0x06034155 RID: 213333 RVA: 0x007049A4 File Offset: 0x00702BA4
 		public bool Active { get; set; }
 
-		// Token: 0x0603117F RID: 201087 RVA: 0x006A9779 File Offset: 0x006A7979
+		// Token: 0x06034156 RID: 213334 RVA: 0x007049AD File Offset: 0x00702BAD
 		public IPieceBaseT()
 		{
 			this.Index = null;

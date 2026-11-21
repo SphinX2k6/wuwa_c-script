@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006ED7 RID: 28375
+	// Token: 0x0200765B RID: 30299
 	public class IRoadNetworkNavigationTarget_UnionUnion
 	{
-		// Token: 0x1700D323 RID: 54051
-		// (get) Token: 0x0603224B RID: 205387 RVA: 0x006C724D File Offset: 0x006C544D
-		// (set) Token: 0x0603224C RID: 205388 RVA: 0x006C7255 File Offset: 0x006C5455
+		// Token: 0x1700DE7A RID: 56954
+		// (get) Token: 0x0603528B RID: 217739 RVA: 0x00722F81 File Offset: 0x00721181
+		// (set) Token: 0x0603528C RID: 217740 RVA: 0x00722F89 File Offset: 0x00721189
 		public IRoadNetworkNavigationTarget_Union Type { get; set; }
 
-		// Token: 0x1700D324 RID: 54052
-		// (get) Token: 0x0603224D RID: 205389 RVA: 0x006C725E File Offset: 0x006C545E
-		// (set) Token: 0x0603224E RID: 205390 RVA: 0x006C7266 File Offset: 0x006C5466
+		// Token: 0x1700DE7B RID: 56955
+		// (get) Token: 0x0603528D RID: 217741 RVA: 0x00722F92 File Offset: 0x00721192
+		// (set) Token: 0x0603528E RID: 217742 RVA: 0x00722F9A File Offset: 0x0072119A
 		public object Value { get; set; }
 
-		// Token: 0x0603224F RID: 205391 RVA: 0x006C726F File Offset: 0x006C546F
+		// Token: 0x0603528F RID: 217743 RVA: 0x00722FA3 File Offset: 0x007211A3
 		public IRoadNetworkNavigationTarget_UnionUnion()
 		{
 			this.Type = IRoadNetworkNavigationTarget_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06032250 RID: 205392 RVA: 0x006C7285 File Offset: 0x006C5485
+		// Token: 0x06035290 RID: 217744 RVA: 0x00722FB9 File Offset: 0x007211B9
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06032251 RID: 205393 RVA: 0x006C7297 File Offset: 0x006C5497
+		// Token: 0x06035291 RID: 217745 RVA: 0x00722FCB File Offset: 0x007211CB
 		public IRoadNetworkNavigationTargetT AsIRoadNetworkNavigationTarget()
 		{
 			return this.As<IRoadNetworkNavigationTargetT>();
 		}
 
-		// Token: 0x06032252 RID: 205394 RVA: 0x006C729F File Offset: 0x006C549F
+		// Token: 0x06035292 RID: 217746 RVA: 0x00722FD3 File Offset: 0x007211D3
 		public static IRoadNetworkNavigationTarget_UnionUnion FromIRoadNetworkNavigationTarget(IRoadNetworkNavigationTargetT _iroadnetworknavigationtarget)
 		{
 			return new IRoadNetworkNavigationTarget_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06032253 RID: 205395 RVA: 0x006C72B4 File Offset: 0x006C54B4
+		// Token: 0x06035293 RID: 217747 RVA: 0x00722FE8 File Offset: 0x007211E8
 		public ISceneItemRoadNetworkNavigationT AsISceneItemRoadNetworkNavigation()
 		{
 			return this.As<ISceneItemRoadNetworkNavigationT>();
 		}
 
-		// Token: 0x06032254 RID: 205396 RVA: 0x006C72BC File Offset: 0x006C54BC
+		// Token: 0x06035294 RID: 217748 RVA: 0x00722FF0 File Offset: 0x007211F0
 		public static IRoadNetworkNavigationTarget_UnionUnion FromISceneItemRoadNetworkNavigation(ISceneItemRoadNetworkNavigationT _isceneitemroadnetworknavigation)
 		{
 			return new IRoadNetworkNavigationTarget_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06032255 RID: 205397 RVA: 0x006C72D4 File Offset: 0x006C54D4
+		// Token: 0x06035295 RID: 217749 RVA: 0x00723008 File Offset: 0x00721208
 		public static int Pack(FlatBufferBuilder builder, IRoadNetworkNavigationTarget_UnionUnion _o)
 		{
 			IRoadNetworkNavigationTarget_Union type = _o.Type;

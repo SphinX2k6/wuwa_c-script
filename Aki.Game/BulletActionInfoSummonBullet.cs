@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002D8B RID: 11659
+// Token: 0x020022E5 RID: 8933
 [NullableContext(2)]
 [Nullable(0)]
 public class BulletActionInfoSummonBullet : BulletActionInfoBase
 {
-	// Token: 0x060187F3 RID: 100339 RVA: 0x0063C8D8 File Offset: 0x0063AAD8
+	// Token: 0x06016095 RID: 90261 RVA: 0x00662610 File Offset: 0x00660810
 	public BulletActionInfoSummonBullet(EBulletAction type) : base(type)
 	{
 	}
 
-	// Token: 0x060187F4 RID: 100340 RVA: 0x0063C8E8 File Offset: 0x0063AAE8
+	// Token: 0x06016096 RID: 90262 RVA: 0x00662620 File Offset: 0x00660820
 	public override void Clear()
 	{
 		this.ChildrenType = null;
@@ -21,21 +21,21 @@ public class BulletActionInfoSummonBullet : BulletActionInfoBase
 		this.ParentLastPosition = null;
 	}
 
-	// Token: 0x0400B5A7 RID: 46503
+	// Token: 0x0400B91C RID: 47388
 	public EBulletChildrenType? ChildrenType;
 
-	// Token: 0x0400B5A8 RID: 46504
+	// Token: 0x0400B91D RID: 47389
 	public Entity Victim;
 
-	// Token: 0x0400B5A9 RID: 46505
+	// Token: 0x0400B91E RID: 47390
 	public bool IsStayInCharacter;
 
-	// Token: 0x0400B5AA RID: 46506
+	// Token: 0x0400B91F RID: 47391
 	public Vector ParentImpactPoint;
 
-	// Token: 0x0400B5AB RID: 46507
+	// Token: 0x0400B920 RID: 47392
 	public Vector ParentLastPosition;
 
-	// Token: 0x0400B5AC RID: 46508
+	// Token: 0x0400B921 RID: 47393
 	public bool CreateOnAuthority = true;
 }

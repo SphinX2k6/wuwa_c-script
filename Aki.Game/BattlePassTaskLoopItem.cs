@@ -8,7 +8,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002333 RID: 9011
+// Token: 0x02001818 RID: 6168
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -17,7 +17,7 @@ using UnrealEngine;
 })]
 public class BattlePassTaskLoopItem : GridProxyAbstract<BattlePassTaskData>
 {
-	// Token: 0x06011D5D RID: 73053 RVA: 0x00464FA0 File Offset: 0x004631A0
+	// Token: 0x0600F20D RID: 61965 RVA: 0x00472068 File Offset: 0x00470268
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -50,7 +50,7 @@ public class BattlePassTaskLoopItem : GridProxyAbstract<BattlePassTaskData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06011D5E RID: 73054 RVA: 0x00465110 File Offset: 0x00463310
+	// Token: 0x0600F20E RID: 61966 RVA: 0x004721D8 File Offset: 0x004703D8
 	private void OnClickSkipToBtn()
 	{
 		BattlePassTaskData dataCache = this.DataCache;
@@ -61,7 +61,7 @@ public class BattlePassTaskLoopItem : GridProxyAbstract<BattlePassTaskData>
 		}
 	}
 
-	// Token: 0x06011D5F RID: 73055 RVA: 0x00465158 File Offset: 0x00463358
+	// Token: 0x0600F20F RID: 61967 RVA: 0x00472220 File Offset: 0x00470420
 	private void OnClickTakeRewardBtn()
 	{
 		BattlePassController.Instance.TryRequestTaskList(new List<int>
@@ -70,21 +70,21 @@ public class BattlePassTaskLoopItem : GridProxyAbstract<BattlePassTaskData>
 		});
 	}
 
-	// Token: 0x06011D60 RID: 73056 RVA: 0x00465175 File Offset: 0x00463375
+	// Token: 0x0600F210 RID: 61968 RVA: 0x0047223D File Offset: 0x0047043D
 	protected override void OnStart()
 	{
 		this.CommonItemGrid = new CommonItemSmallItemGrid();
 		this.CommonItemGrid.Initialize(base.GetItem(5).GetOwner());
 	}
 
-	// Token: 0x06011D61 RID: 73057 RVA: 0x00465199 File Offset: 0x00463399
+	// Token: 0x0600F211 RID: 61969 RVA: 0x00472261 File Offset: 0x00470461
 	[NullableContext(1)]
 	public override void Refresh(BattlePassTaskData data, bool isSelected, int gridIndex)
 	{
 		this.RefreshAsyncInternal(data).Forget();
 	}
 
-	// Token: 0x06011D62 RID: 73058 RVA: 0x004651A8 File Offset: 0x004633A8
+	// Token: 0x0600F212 RID: 61970 RVA: 0x00472270 File Offset: 0x00470470
 	[NullableContext(1)]
 	private UniTask RefreshAsyncInternal(BattlePassTaskData data)
 	{
@@ -97,38 +97,38 @@ public class BattlePassTaskLoopItem : GridProxyAbstract<BattlePassTaskData>
 		return <RefreshAsyncInternal>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x04008732 RID: 34610
+	// Token: 0x04008875 RID: 34933
 	private CommonItemSmallItemGrid CommonItemGrid;
 
-	// Token: 0x04008733 RID: 34611
+	// Token: 0x04008876 RID: 34934
 	private BattlePassTaskLoopItemButton SkipToButtonItem;
 
-	// Token: 0x04008734 RID: 34612
+	// Token: 0x04008877 RID: 34935
 	private BattlePassTaskLoopItemButton RewardButtonItem;
 
-	// Token: 0x04008735 RID: 34613
+	// Token: 0x04008878 RID: 34936
 	private int TaskId;
 
-	// Token: 0x04008736 RID: 34614
+	// Token: 0x04008879 RID: 34937
 	private BattlePassTaskData DataCache;
 
-	// Token: 0x020088B4 RID: 34996
+	// Token: 0x02007A3D RID: 31293
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x0402C6DF RID: 181983
+		// Token: 0x040279F3 RID: 162291
 		TaskDescriptionText,
-		// Token: 0x0402C6E0 RID: 181984
+		// Token: 0x040279F4 RID: 162292
 		CompleteText,
-		// Token: 0x0402C6E1 RID: 181985
+		// Token: 0x040279F5 RID: 162293
 		SprDone,
-		// Token: 0x0402C6E2 RID: 181986
+		// Token: 0x040279F6 RID: 162294
 		RunningTip,
-		// Token: 0x0402C6E3 RID: 181987
+		// Token: 0x040279F7 RID: 162295
 		SkipToBtn,
-		// Token: 0x0402C6E4 RID: 181988
+		// Token: 0x040279F8 RID: 162296
 		CommonItem,
-		// Token: 0x0402C6E5 RID: 181989
+		// Token: 0x040279F9 RID: 162297
 		TakeRewardBtn
 	}
 }

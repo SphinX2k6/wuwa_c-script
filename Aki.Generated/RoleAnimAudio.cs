@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02001037 RID: 4151
+	// Token: 0x0200111F RID: 4383
 	public struct RoleAnimAudio : IFlatbufferObject
 	{
-		// Token: 0x170031E8 RID: 12776
-		// (get) Token: 0x0600C727 RID: 50983 RVA: 0x002F755D File Offset: 0x002F575D
+		// Token: 0x17003263 RID: 12899
+		// (get) Token: 0x0600CD71 RID: 52593 RVA: 0x003133D1 File Offset: 0x003115D1
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C728 RID: 50984 RVA: 0x002F756A File Offset: 0x002F576A
+		// Token: 0x0600CD72 RID: 52594 RVA: 0x003133DE File Offset: 0x003115DE
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600C729 RID: 50985 RVA: 0x002F7574 File Offset: 0x002F5774
+		// Token: 0x0600CD73 RID: 52595 RVA: 0x003133E8 File Offset: 0x003115E8
 		public static RoleAnimAudio GetRootAsRoleAnimAudio(ByteBuffer _bb)
 		{
 			return RoleAnimAudio.GetRootAsRoleAnimAudio(_bb, default(RoleAnimAudio));
 		}
 
-		// Token: 0x0600C72A RID: 50986 RVA: 0x002F7590 File Offset: 0x002F5790
+		// Token: 0x0600CD74 RID: 52596 RVA: 0x00313404 File Offset: 0x00311604
 		public static RoleAnimAudio GetRootAsRoleAnimAudio(ByteBuffer _bb, RoleAnimAudio obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600C72B RID: 50987 RVA: 0x002F75AD File Offset: 0x002F57AD
+		// Token: 0x0600CD75 RID: 52597 RVA: 0x00313421 File Offset: 0x00311621
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600C72C RID: 50988 RVA: 0x002F75BC File Offset: 0x002F57BC
+		// Token: 0x0600CD76 RID: 52598 RVA: 0x00313430 File Offset: 0x00311630
 		public RoleAnimAudio __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170031E9 RID: 12777
-		// (get) Token: 0x0600C72D RID: 50989 RVA: 0x002F75CC File Offset: 0x002F57CC
+		// Token: 0x17003264 RID: 12900
+		// (get) Token: 0x0600CD77 RID: 52599 RVA: 0x00313440 File Offset: 0x00311640
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170031EA RID: 12778
-		// (get) Token: 0x0600C72E RID: 50990 RVA: 0x002F7608 File Offset: 0x002F5808
+		// Token: 0x17003265 RID: 12901
+		// (get) Token: 0x0600CD78 RID: 52600 RVA: 0x0031347C File Offset: 0x0031167C
 		public int RoleId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170031EB RID: 12779
-		// (get) Token: 0x0600C72F RID: 50991 RVA: 0x002F7644 File Offset: 0x002F5844
+		// Token: 0x17003266 RID: 12902
+		// (get) Token: 0x0600CD79 RID: 52601 RVA: 0x003134B8 File Offset: 0x003116B8
 		public string ActionName
 		{
 			get
@@ -92,20 +92,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C730 RID: 50992 RVA: 0x002F767B File Offset: 0x002F587B
+		// Token: 0x0600CD7A RID: 52602 RVA: 0x003134EF File Offset: 0x003116EF
 		public Span<byte> GetActionNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0600C731 RID: 50993 RVA: 0x002F768A File Offset: 0x002F588A
+		// Token: 0x0600CD7B RID: 52603 RVA: 0x003134FE File Offset: 0x003116FE
 		public byte[] GetActionNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170031EC RID: 12780
-		// (get) Token: 0x0600C732 RID: 50994 RVA: 0x002F76A4 File Offset: 0x002F58A4
+		// Token: 0x17003267 RID: 12903
+		// (get) Token: 0x0600CD7C RID: 52604 RVA: 0x00313518 File Offset: 0x00311718
 		public string AudioPath
 		{
 			get
@@ -119,20 +119,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C733 RID: 50995 RVA: 0x002F76DC File Offset: 0x002F58DC
+		// Token: 0x0600CD7D RID: 52605 RVA: 0x00313550 File Offset: 0x00311750
 		public Span<byte> GetAudioPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0600C734 RID: 50996 RVA: 0x002F76EC File Offset: 0x002F58EC
+		// Token: 0x0600CD7E RID: 52606 RVA: 0x00313560 File Offset: 0x00311760
 		public byte[] GetAudioPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170031ED RID: 12781
-		// (get) Token: 0x0600C735 RID: 50997 RVA: 0x002F7704 File Offset: 0x002F5904
+		// Token: 0x17003268 RID: 12904
+		// (get) Token: 0x0600CD7F RID: 52607 RVA: 0x00313578 File Offset: 0x00311778
 		public bool CanInterrupt
 		{
 			get
@@ -142,7 +142,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04005134 RID: 20788
+		// Token: 0x0400571C RID: 22300
 		private Table __p;
 	}
 }

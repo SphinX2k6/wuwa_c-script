@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026F7 RID: 9975
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020029BD RID: 10685
 	public class IGroupAiCommunicateRemoveTag : IGroupAiCommunicateMode
 	{
-		// Token: 0x0600DEB6 RID: 57014 RVA: 0x00210890 File Offset: 0x0020EA90
+		// Token: 0x0600EC9E RID: 60574 RVA: 0x0022D1F8 File Offset: 0x0022B3F8
 		public static IGroupAiCommunicateRemoveTag Create(IGroupAiCommunicateRemoveTag? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700428A RID: 17034
-		// (get) Token: 0x0600DEB7 RID: 57015 RVA: 0x002108AF File Offset: 0x0020EAAF
+		// Token: 0x170045D2 RID: 17874
+		// (get) Token: 0x0600EC9F RID: 60575 RVA: 0x0022D217 File Offset: 0x0022B417
 		public override EGroupAiCommunicateType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700428B RID: 17035
-		// (get) Token: 0x0600DEB8 RID: 57016 RVA: 0x002108BC File Offset: 0x0020EABC
+		// Token: 0x170045D3 RID: 17875
+		// (get) Token: 0x0600ECA0 RID: 60576 RVA: 0x0022D224 File Offset: 0x0022B424
 		public virtual List<string> Tags
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B9D RID: 31645
+		// Token: 0x04008241 RID: 33345
 		private IGroupAiCommunicateRemoveTag Instance;
 
-		// Token: 0x04007B9E RID: 31646
+		// Token: 0x04008242 RID: 33346
 		private List<string> _TagsCache;
 
-		// Token: 0x04007B9F RID: 31647
+		// Token: 0x04008243 RID: 33347
 		private bool _TagsInited;
 	}
 }

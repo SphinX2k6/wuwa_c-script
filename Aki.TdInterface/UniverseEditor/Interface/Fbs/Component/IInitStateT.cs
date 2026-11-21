@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200541A RID: 21530
+	// Token: 0x020059A0 RID: 22944
 	public class IInitStateT
 	{
-		// Token: 0x17009E63 RID: 40547
-		// (get) Token: 0x060235CB RID: 144843 RVA: 0x004E4D66 File Offset: 0x004E2F66
-		// (set) Token: 0x060235CC RID: 144844 RVA: 0x004E4D6E File Offset: 0x004E2F6E
+		// Token: 0x1700A69D RID: 42653
+		// (get) Token: 0x06025683 RID: 153219 RVA: 0x00521D92 File Offset: 0x0051FF92
+		// (set) Token: 0x06025684 RID: 153220 RVA: 0x00521D9A File Offset: 0x0051FF9A
 		public EInitStateType Type { get; set; }
 
-		// Token: 0x060235CD RID: 144845 RVA: 0x004E4D77 File Offset: 0x004E2F77
+		// Token: 0x06025685 RID: 153221 RVA: 0x00521DA3 File Offset: 0x0051FFA3
 		public IInitStateT()
 		{
 			this.Type = EInitStateType.Birth;

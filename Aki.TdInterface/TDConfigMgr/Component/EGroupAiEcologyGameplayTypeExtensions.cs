@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000958 RID: 2392
+	// Token: 0x02000A0B RID: 2571
 	public static class EGroupAiEcologyGameplayTypeExtensions
 	{
-		// Token: 0x060035BD RID: 13757 RVA: 0x0008C0E4 File Offset: 0x0008A2E4
+		// Token: 0x06003944 RID: 14660 RVA: 0x00094038 File Offset: 0x00092238
 		public static string ToEnumString(this EGroupAiEcologyGameplayType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060035BE RID: 13758 RVA: 0x0008C10C File Offset: 0x0008A30C
+		// Token: 0x06003945 RID: 14661 RVA: 0x00094060 File Offset: 0x00092260
 		public static EGroupAiEcologyGameplayType FromString(string name)
 		{
 			EGroupAiEcologyGameplayType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060035BF RID: 13759 RVA: 0x0008C135 File Offset: 0x0008A335
+		// Token: 0x06003946 RID: 14662 RVA: 0x00094089 File Offset: 0x00092289
 		public static bool TryFromString(string name, out EGroupAiEcologyGameplayType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x060035C0 RID: 13760 RVA: 0x0008C15A File Offset: 0x0008A35A
+		// Token: 0x06003947 RID: 14663 RVA: 0x000940AE File Offset: 0x000922AE
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060035C1 RID: 13761 RVA: 0x0008C16A File Offset: 0x0008A36A
+		// Token: 0x06003948 RID: 14664 RVA: 0x000940BE File Offset: 0x000922BE
 		public static EGroupAiEcologyGameplayType[] GetValues()
 		{
 			return new EGroupAiEcologyGameplayType[1];
 		}
 
-		// Token: 0x060035C2 RID: 13762 RVA: 0x0008C172 File Offset: 0x0008A372
+		// Token: 0x06003949 RID: 14665 RVA: 0x000940C6 File Offset: 0x000922C6
 		public static string[] GetNames()
 		{
 			return new string[]

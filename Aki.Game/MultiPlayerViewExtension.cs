@@ -8,12 +8,12 @@ using CSharpScript.Game.Ui;
 using CSharpScript.Module.InstanceDungeon;
 using UnrealEngine;
 
-// Token: 0x02001BD7 RID: 7127
+// Token: 0x02001096 RID: 4246
 [NullableContext(1)]
 [Nullable(0)]
 public class MultiPlayerViewExtension : IViewExtension
 {
-	// Token: 0x0600D473 RID: 54387 RVA: 0x0030E600 File Offset: 0x0030C800
+	// Token: 0x0600A885 RID: 43141 RVA: 0x00319774 File Offset: 0x00317974
 	public MultiPlayerViewExtension(UUIItem rootItem, UUIItem chatInfoItem, UUIText chatInfoText, Func<List<FormationRoleSlot>> getRoleSlots, Action refreshConfirm, Action refreshEnter, Func<bool> isMulti)
 	{
 		this.RootItem = rootItem;
@@ -25,13 +25,13 @@ public class MultiPlayerViewExtension : IViewExtension
 		this.IsMulti = isMulti;
 	}
 
-	// Token: 0x0600D474 RID: 54388 RVA: 0x0030E63D File Offset: 0x0030C83D
+	// Token: 0x0600A886 RID: 43142 RVA: 0x003197B1 File Offset: 0x003179B1
 	public bool ShouldActivate()
 	{
 		return this.IsMulti();
 	}
 
-	// Token: 0x0600D475 RID: 54389 RVA: 0x0030E64C File Offset: 0x0030C84C
+	// Token: 0x0600A887 RID: 43143 RVA: 0x003197C0 File Offset: 0x003179C0
 	public void OnViewStart()
 	{
 		this.ChatNotice = new ChatNoticeComponent(this.RootItem, this.ChatInfoItem, this.ChatInfoText);
@@ -43,7 +43,7 @@ public class MultiPlayerViewExtension : IViewExtension
 		EventSystem.Instance.Add(EEventName.ScenePlayerLeaveScene, new Action<int>(this.ScenePlayerLeaveScene));
 	}
 
-	// Token: 0x0600D476 RID: 54390 RVA: 0x0030E714 File Offset: 0x0030C914
+	// Token: 0x0600A888 RID: 43144 RVA: 0x00319888 File Offset: 0x00317A88
 	public void OnViewRefresh()
 	{
 		bool editBattleTeamMatching = InstanceDungeonEntranceModel.Instance.EditBattleTeamMatching;
@@ -55,7 +55,7 @@ public class MultiPlayerViewExtension : IViewExtension
 		matchPanel.Refresh(editBattleTeamMatching);
 	}
 
-	// Token: 0x0600D477 RID: 54391 RVA: 0x0030E740 File Offset: 0x0030C940
+	// Token: 0x0600A889 RID: 43145 RVA: 0x003198B4 File Offset: 0x00317AB4
 	public void OnDetach()
 	{
 		if (this.ChatNotice == null)
@@ -72,7 +72,7 @@ public class MultiPlayerViewExtension : IViewExtension
 		this.MatchPanel = null;
 	}
 
-	// Token: 0x0600D478 RID: 54392 RVA: 0x0030E7FB File Offset: 0x0030C9FB
+	// Token: 0x0600A88A RID: 43146 RVA: 0x0031996F File Offset: 0x00317B6F
 	public void OnClickChat()
 	{
 		if (UiManager.Instance.IsViewShow(EUiViewName.ChatView))
@@ -82,14 +82,14 @@ public class MultiPlayerViewExtension : IViewExtension
 		UiManager.Instance.OpenView(EUiViewName.ChatView, null, null);
 	}
 
-	// Token: 0x0600D479 RID: 54393 RVA: 0x0030E820 File Offset: 0x0030CA20
+	// Token: 0x0600A88B RID: 43147 RVA: 0x00319994 File Offset: 0x00317B94
 	public void OnClickAddPlayer()
 	{
 		InstanceDungeonEntranceModel.Instance.SetEditBattleTeamMatching(true);
 		InstanceDungeonEntranceController.Instance.SetMatchTeamMatchFlagRequest(InstanceDungeonEntranceModel.Instance.EditBattleTeamMatching);
 	}
 
-	// Token: 0x0600D47A RID: 54394 RVA: 0x0030E844 File Offset: 0x0030CA44
+	// Token: 0x0600A88C RID: 43148 RVA: 0x003199B8 File Offset: 0x00317BB8
 	public void OnClickInvite()
 	{
 		double serverTime = TimeUtil.Instance.GetServerTime();
@@ -103,7 +103,7 @@ public class MultiPlayerViewExtension : IViewExtension
 		ScrollingTipsController.Instance.ShowTipsById("MatchingInviteCd", Array.Empty<object>());
 	}
 
-	// Token: 0x0600D47B RID: 54395 RVA: 0x0030E8AB File Offset: 0x0030CAAB
+	// Token: 0x0600A88D RID: 43149 RVA: 0x00319A1F File Offset: 0x00317C1F
 	private void OnPushChatRowData(ChatRowData chatRowData)
 	{
 		ChatNoticeComponent chatNotice = this.ChatNotice;
@@ -114,7 +114,7 @@ public class MultiPlayerViewExtension : IViewExtension
 		chatNotice.HandlePushChatRowData(chatRowData);
 	}
 
-	// Token: 0x0600D47C RID: 54396 RVA: 0x0030E8BE File Offset: 0x0030CABE
+	// Token: 0x0600A88E RID: 43150 RVA: 0x00319A32 File Offset: 0x00317C32
 	private void MatchTeamFlagChange(bool isMatching)
 	{
 		this.RefreshConfirm();
@@ -127,7 +127,7 @@ public class MultiPlayerViewExtension : IViewExtension
 		matchPanel.Refresh(isMatching);
 	}
 
-	// Token: 0x0600D47D RID: 54397 RVA: 0x0030E8E8 File Offset: 0x0030CAE8
+	// Token: 0x0600A88F RID: 43151 RVA: 0x00319A5C File Offset: 0x00317C5C
 	private void OnRefreshPlayerUiState(int playerId)
 	{
 		InstanceDungeonModel instance = InstanceDungeonModel.Instance;
@@ -147,48 +147,48 @@ public class MultiPlayerViewExtension : IViewExtension
 		}
 	}
 
-	// Token: 0x0600D47E RID: 54398 RVA: 0x0030E9A0 File Offset: 0x0030CBA0
+	// Token: 0x0600A890 RID: 43152 RVA: 0x00319B14 File Offset: 0x00317D14
 	private void OnRefreshEditBattleRoleReady(int position, bool bReady)
 	{
 		this.RefreshConfirm();
 		this.RefreshEnter();
 	}
 
-	// Token: 0x0600D47F RID: 54399 RVA: 0x0030E9B8 File Offset: 0x0030CBB8
+	// Token: 0x0600A891 RID: 43153 RVA: 0x00319B2C File Offset: 0x00317D2C
 	private void ScenePlayerLeaveScene(int playerId)
 	{
 		this.RefreshConfirm();
 	}
 
-	// Token: 0x04006114 RID: 24852
+	// Token: 0x040061E3 RID: 25059
 	[Nullable(2)]
 	private ChatNoticeComponent ChatNotice;
 
-	// Token: 0x04006115 RID: 24853
+	// Token: 0x040061E4 RID: 25060
 	[Nullable(2)]
 	private MatchPanelComponent MatchPanel;
 
-	// Token: 0x04006116 RID: 24854
+	// Token: 0x040061E5 RID: 25061
 	private double RequestTimeStamp;
 
-	// Token: 0x04006117 RID: 24855
+	// Token: 0x040061E6 RID: 25062
 	private readonly UUIItem RootItem;
 
-	// Token: 0x04006118 RID: 24856
+	// Token: 0x040061E7 RID: 25063
 	private readonly UUIItem ChatInfoItem;
 
-	// Token: 0x04006119 RID: 24857
+	// Token: 0x040061E8 RID: 25064
 	private readonly UUIText ChatInfoText;
 
-	// Token: 0x0400611A RID: 24858
+	// Token: 0x040061E9 RID: 25065
 	private readonly Func<List<FormationRoleSlot>> GetRoleSlots;
 
-	// Token: 0x0400611B RID: 24859
+	// Token: 0x040061EA RID: 25066
 	private readonly Action RefreshConfirm;
 
-	// Token: 0x0400611C RID: 24860
+	// Token: 0x040061EB RID: 25067
 	private readonly Action RefreshEnter;
 
-	// Token: 0x0400611D RID: 24861
+	// Token: 0x040061EC RID: 25068
 	private readonly Func<bool> IsMulti;
 }

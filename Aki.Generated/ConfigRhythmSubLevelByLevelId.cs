@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020007FB RID: 2043
+	// Token: 0x02000817 RID: 2071
 	public class ConfigRhythmSubLevelByLevelId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002FF4 RID: 12276 RVA: 0x00168490 File Offset: 0x00166690
+		// Token: 0x0600309C RID: 12444 RVA: 0x0016F778 File Offset: 0x0016D978
 		static ConfigRhythmSubLevelByLevelId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRhythmSubLevelByLevelId.CreateStaticDefaultValue), new Action(ConfigRhythmSubLevelByLevelId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002FF5 RID: 12277 RVA: 0x001684B0 File Offset: 0x001666B0
+		// Token: 0x0600309D RID: 12445 RVA: 0x0016F798 File Offset: 0x0016D998
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRhythmSubLevelByLevelId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002FF6 RID: 12278 RVA: 0x0016852F File Offset: 0x0016672F
+		// Token: 0x0600309E RID: 12446 RVA: 0x0016F817 File Offset: 0x0016DA17
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRhythmSubLevelByLevelId.LogPair = null;
 			ConfigRhythmSubLevelByLevelId.HandleId = 0;
 		}
 
-		// Token: 0x06002FF7 RID: 12279 RVA: 0x0016853D File Offset: 0x0016673D
+		// Token: 0x0600309F RID: 12447 RVA: 0x0016F825 File Offset: 0x0016DA25
 		public static void Init()
 		{
 			ConfigRhythmSubLevelByLevelId.HandleId = ConfigCommon.InitDataStatement(ConfigRhythmSubLevelByLevelId.HandleId, "db_rhythmship.db", "select BinData from `RhythmSubLevel` where LevelId=?");
 		}
 
-		// Token: 0x06002FF8 RID: 12280 RVA: 0x00168558 File Offset: 0x00166758
+		// Token: 0x060030A0 RID: 12448 RVA: 0x0016F840 File Offset: 0x0016DA40
 		[NullableContext(2)]
 		public static IReadOnlyList<RhythmSubLevel> GetConfigList(int p0LevelId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040037C3 RID: 14275
+		// Token: 0x04003887 RID: 14471
 		private const string DB = "db_rhythmship.db";
 
-		// Token: 0x040037C4 RID: 14276
+		// Token: 0x04003888 RID: 14472
 		private const string FILE = "j.节奏飞船_局外.xlsx";
 
-		// Token: 0x040037C5 RID: 14277
+		// Token: 0x04003889 RID: 14473
 		private const string TABLE = "RhythmSubLevel";
 
-		// Token: 0x040037C6 RID: 14278
+		// Token: 0x0400388A RID: 14474
 		private const string COMMAND = "select BinData from `RhythmSubLevel` where LevelId=?";
 
-		// Token: 0x040037C7 RID: 14279
+		// Token: 0x0400388B RID: 14475
 		private const string KEY_PREFIX = "RhythmSubLevelByLevelId";
 
-		// Token: 0x040037C8 RID: 14280
+		// Token: 0x0400388C RID: 14476
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040037C9 RID: 14281
+		// Token: 0x0400388D RID: 14477
 		private static int HandleId;
 	}
 }

@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002BB4 RID: 11188
+// Token: 0x02002130 RID: 8496
 [NullableContext(1)]
 [Nullable(0)]
 public class TodTimeAdjustingAnimation
 {
-	// Token: 0x0601731D RID: 95005 RVA: 0x005E12FC File Offset: 0x005DF4FC
+	// Token: 0x06014D4E RID: 85326 RVA: 0x0060DED0 File Offset: 0x0060C0D0
 	public TodTimeAdjustingAnimation(double maxV, double a, Action<double> onPlaying, Action onFinished)
 	{
 		this.MaxV = maxV;
@@ -15,8 +15,8 @@ public class TodTimeAdjustingAnimation
 		this.OnFinished = onFinished;
 	}
 
-	// Token: 0x17001F56 RID: 8022
-	// (get) Token: 0x0601731E RID: 95006 RVA: 0x005E134A File Offset: 0x005DF54A
+	// Token: 0x17001FAE RID: 8110
+	// (get) Token: 0x06014D4F RID: 85327 RVA: 0x0060DF1E File Offset: 0x0060C11E
 	public bool IsPlaying
 	{
 		get
@@ -25,8 +25,8 @@ public class TodTimeAdjustingAnimation
 		}
 	}
 
-	// Token: 0x17001F57 RID: 8023
-	// (get) Token: 0x0601731F RID: 95007 RVA: 0x005E1360 File Offset: 0x005DF560
+	// Token: 0x17001FAF RID: 8111
+	// (get) Token: 0x06014D50 RID: 85328 RVA: 0x0060DF34 File Offset: 0x0060C134
 	public bool IsFinished
 	{
 		get
@@ -35,14 +35,14 @@ public class TodTimeAdjustingAnimation
 		}
 	}
 
-	// Token: 0x06017320 RID: 95008 RVA: 0x005E137D File Offset: 0x005DF57D
+	// Token: 0x06014D51 RID: 85329 RVA: 0x0060DF51 File Offset: 0x0060C151
 	private void Finish()
 	{
 		this.Stop();
 		this.OnFinished();
 	}
 
-	// Token: 0x06017321 RID: 95009 RVA: 0x005E1390 File Offset: 0x005DF590
+	// Token: 0x06014D52 RID: 85330 RVA: 0x0060DF64 File Offset: 0x0060C164
 	public void Play(double fromSecond, double toSecond)
 	{
 		this.Stop();
@@ -52,13 +52,13 @@ public class TodTimeAdjustingAnimation
 		this.DeAccelerateDistance = Math.Abs(this.GetTimeDistance() - 0.5 * this.A * num * num);
 	}
 
-	// Token: 0x06017322 RID: 95010 RVA: 0x005E13E5 File Offset: 0x005DF5E5
+	// Token: 0x06014D53 RID: 85331 RVA: 0x0060DFB9 File Offset: 0x0060C1B9
 	private double GetTimeDistance()
 	{
 		return this.ToSecond - this.StartSecond;
 	}
 
-	// Token: 0x06017323 RID: 95011 RVA: 0x005E13F4 File Offset: 0x005DF5F4
+	// Token: 0x06014D54 RID: 85332 RVA: 0x0060DFC8 File Offset: 0x0060C1C8
 	public void Tick(double deltaMillionSecond)
 	{
 		if (!this.IsPlaying)
@@ -101,7 +101,7 @@ public class TodTimeAdjustingAnimation
 		this.OnPlaying(this.StartSecond);
 	}
 
-	// Token: 0x06017324 RID: 95012 RVA: 0x005E151C File Offset: 0x005DF71C
+	// Token: 0x06014D55 RID: 85333 RVA: 0x0060E0F0 File Offset: 0x0060C2F0
 	public void Stop()
 	{
 		this.CurrentSpeed = 0.0;
@@ -114,7 +114,7 @@ public class TodTimeAdjustingAnimation
 		this.CurrentMoveSpeedMax = 0.0;
 	}
 
-	// Token: 0x06017325 RID: 95013 RVA: 0x005E15A4 File Offset: 0x005DF7A4
+	// Token: 0x06014D56 RID: 85334 RVA: 0x0060E178 File Offset: 0x0060C378
 	public unsafe void DebugPrint()
 	{
 		Log instance = Log.Instance;
@@ -129,39 +129,39 @@ public class TodTimeAdjustingAnimation
 		instance.Warn(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 4));
 	}
 
-	// Token: 0x0400AD9D RID: 44445
+	// Token: 0x0400B1A4 RID: 45476
 	private readonly double MaxV;
 
-	// Token: 0x0400AD9E RID: 44446
+	// Token: 0x0400B1A5 RID: 45477
 	private readonly double A;
 
-	// Token: 0x0400AD9F RID: 44447
+	// Token: 0x0400B1A6 RID: 45478
 	private readonly Action<double> OnPlaying;
 
-	// Token: 0x0400ADA0 RID: 44448
+	// Token: 0x0400B1A7 RID: 45479
 	private readonly Action OnFinished;
 
-	// Token: 0x0400ADA1 RID: 44449
+	// Token: 0x0400B1A8 RID: 45480
 	private double CurrentSpeed;
 
-	// Token: 0x0400ADA2 RID: 44450
+	// Token: 0x0400B1A9 RID: 45481
 	private double CurrentRunTime;
 
-	// Token: 0x0400ADA3 RID: 44451
+	// Token: 0x0400B1AA RID: 45482
 	private double CurrentAddDistance;
 
-	// Token: 0x0400ADA4 RID: 44452
+	// Token: 0x0400B1AB RID: 45483
 	private double StartSecond = -1.0;
 
-	// Token: 0x0400ADA5 RID: 44453
+	// Token: 0x0400B1AC RID: 45484
 	private double ToSecond = -1.0;
 
-	// Token: 0x0400ADA6 RID: 44454
+	// Token: 0x0400B1AD RID: 45485
 	private double DeAccelerateDistance;
 
-	// Token: 0x0400ADA7 RID: 44455
+	// Token: 0x0400B1AE RID: 45486
 	private double DeAccelerateTime;
 
-	// Token: 0x0400ADA8 RID: 44456
+	// Token: 0x0400B1AF RID: 45487
 	private double CurrentMoveSpeedMax;
 }

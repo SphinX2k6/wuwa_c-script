@@ -2,40 +2,40 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020070E0 RID: 28896
+	// Token: 0x020078AC RID: 30892
 	public class IShowHighlightExploreSkillIconT
 	{
-		// Token: 0x1700D6B7 RID: 54967
-		// (get) Token: 0x0603331B RID: 209691 RVA: 0x006E6D18 File Offset: 0x006E4F18
-		// (set) Token: 0x0603331C RID: 209692 RVA: 0x006E6D20 File Offset: 0x006E4F20
+		// Token: 0x1700E29A RID: 58010
+		// (get) Token: 0x060365BD RID: 222653 RVA: 0x00747324 File Offset: 0x00745524
+		// (set) Token: 0x060365BE RID: 222654 RVA: 0x0074732C File Offset: 0x0074552C
 		public EHighlightExploreSkillIconType Type { get; set; }
 
-		// Token: 0x1700D6B8 RID: 54968
-		// (get) Token: 0x0603331D RID: 209693 RVA: 0x006E6D29 File Offset: 0x006E4F29
-		// (set) Token: 0x0603331E RID: 209694 RVA: 0x006E6D31 File Offset: 0x006E4F31
+		// Token: 0x1700E29B RID: 58011
+		// (get) Token: 0x060365BF RID: 222655 RVA: 0x00747335 File Offset: 0x00745535
+		// (set) Token: 0x060365C0 RID: 222656 RVA: 0x0074733D File Offset: 0x0074553D
 		public EHighlightType HighlightType { get; set; }
 
-		// Token: 0x1700D6B9 RID: 54969
-		// (get) Token: 0x0603331F RID: 209695 RVA: 0x006E6D3A File Offset: 0x006E4F3A
-		// (set) Token: 0x06033320 RID: 209696 RVA: 0x006E6D42 File Offset: 0x006E4F42
+		// Token: 0x1700E29C RID: 58012
+		// (get) Token: 0x060365C1 RID: 222657 RVA: 0x00747346 File Offset: 0x00745546
+		// (set) Token: 0x060365C2 RID: 222658 RVA: 0x0074734E File Offset: 0x0074554E
 		public int SkillType { get; set; }
 
-		// Token: 0x1700D6BA RID: 54970
-		// (get) Token: 0x06033321 RID: 209697 RVA: 0x006E6D4B File Offset: 0x006E4F4B
-		// (set) Token: 0x06033322 RID: 209698 RVA: 0x006E6D53 File Offset: 0x006E4F53
+		// Token: 0x1700E29D RID: 58013
+		// (get) Token: 0x060365C3 RID: 222659 RVA: 0x00747357 File Offset: 0x00745557
+		// (set) Token: 0x060365C4 RID: 222660 RVA: 0x0074735F File Offset: 0x0074555F
 		public float Duration { get; set; }
 
-		// Token: 0x1700D6BB RID: 54971
-		// (get) Token: 0x06033323 RID: 209699 RVA: 0x006E6D5C File Offset: 0x006E4F5C
-		// (set) Token: 0x06033324 RID: 209700 RVA: 0x006E6D64 File Offset: 0x006E4F64
+		// Token: 0x1700E29E RID: 58014
+		// (get) Token: 0x060365C5 RID: 222661 RVA: 0x00747368 File Offset: 0x00745568
+		// (set) Token: 0x060365C6 RID: 222662 RVA: 0x00747370 File Offset: 0x00745570
 		public bool IsSwitchBack { get; set; }
 
-		// Token: 0x1700D6BC RID: 54972
-		// (get) Token: 0x06033325 RID: 209701 RVA: 0x006E6D6D File Offset: 0x006E4F6D
-		// (set) Token: 0x06033326 RID: 209702 RVA: 0x006E6D75 File Offset: 0x006E4F75
+		// Token: 0x1700E29F RID: 58015
+		// (get) Token: 0x060365C7 RID: 222663 RVA: 0x00747379 File Offset: 0x00745579
+		// (set) Token: 0x060365C8 RID: 222664 RVA: 0x00747381 File Offset: 0x00745581
 		public byte NullMask { get; set; }
 
-		// Token: 0x06033327 RID: 209703 RVA: 0x006E6D7E File Offset: 0x006E4F7E
+		// Token: 0x060365C9 RID: 222665 RVA: 0x0074738A File Offset: 0x0074558A
 		public IShowHighlightExploreSkillIconT()
 		{
 			this.Type = EHighlightExploreSkillIconType.Show;

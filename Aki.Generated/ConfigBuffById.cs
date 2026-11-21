@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000122 RID: 290
+	// Token: 0x02000131 RID: 305
 	public class ConfigBuffById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060006CD RID: 1741 RVA: 0x00080199 File Offset: 0x0007E399
+		// Token: 0x06000727 RID: 1831 RVA: 0x00085AFD File Offset: 0x00083CFD
 		static ConfigBuffById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigBuffById.CreateStaticDefaultValue), new Action(ConfigBuffById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060006CE RID: 1742 RVA: 0x000801B8 File Offset: 0x0007E3B8
+		// Token: 0x06000728 RID: 1832 RVA: 0x00085B1C File Offset: 0x00083D1C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigBuffById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060006CF RID: 1743 RVA: 0x00080237 File Offset: 0x0007E437
+		// Token: 0x06000729 RID: 1833 RVA: 0x00085B9B File Offset: 0x00083D9B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigBuffById.LogPair = null;
 			ConfigBuffById.HandleId = 0;
 		}
 
-		// Token: 0x060006D0 RID: 1744 RVA: 0x00080245 File Offset: 0x0007E445
+		// Token: 0x0600072A RID: 1834 RVA: 0x00085BA9 File Offset: 0x00083DA9
 		public static void Init()
 		{
 			ConfigBuffById.HandleId = ConfigCommon.InitDataStatement(ConfigBuffById.HandleId, "db_buff.db", "select BinData from `Buff` where Id=?");
 		}
 
-		// Token: 0x060006D1 RID: 1745 RVA: 0x00080260 File Offset: 0x0007E460
+		// Token: 0x0600072B RID: 1835 RVA: 0x00085BC4 File Offset: 0x00083DC4
 		public static Buff? GetConfig(long p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigBuffById.HandleId, ConfigBuffById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new Buff?(rootAsBuff);
 		}
 
-		// Token: 0x040007D2 RID: 2002
+		// Token: 0x0400083B RID: 2107
 		private const string DB = "db_buff.db";
 
-		// Token: 0x040007D3 RID: 2003
+		// Token: 0x0400083C RID: 2108
 		private const string FILE = "b.Buff.xlsx";
 
-		// Token: 0x040007D4 RID: 2004
+		// Token: 0x0400083D RID: 2109
 		private const string TABLE = "Buff";
 
-		// Token: 0x040007D5 RID: 2005
+		// Token: 0x0400083E RID: 2110
 		private const string COMMAND = "select BinData from `Buff` where Id=?";
 
-		// Token: 0x040007D6 RID: 2006
+		// Token: 0x0400083F RID: 2111
 		private const string KEY_PREFIX = "BuffById";
 
-		// Token: 0x040007D7 RID: 2007
+		// Token: 0x04000840 RID: 2112
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040007D8 RID: 2008
+		// Token: 0x04000841 RID: 2113
 		private static int HandleId;
 	}
 }

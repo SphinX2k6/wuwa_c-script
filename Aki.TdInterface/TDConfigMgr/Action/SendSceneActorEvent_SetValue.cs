@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200218C RID: 8588
+	// Token: 0x020023F5 RID: 9205
 	public class SendSceneActorEvent_SetValue
 	{
-		// Token: 0x040070A8 RID: 28840
-		[Nullable(1)]
+		// Token: 0x040076EA RID: 30442
 		public ISceneActorEvent ActorEvent;
 	}
 }

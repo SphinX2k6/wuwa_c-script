@@ -9,17 +9,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004ABA RID: 19130
+	// Token: 0x02003A62 RID: 14946
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseRougeLevelView : UiViewBase
 	{
-		// Token: 0x06031902 RID: 203010 RVA: 0x00B7E45F File Offset: 0x00B7C65F
+		// Token: 0x06026692 RID: 157330 RVA: 0x00AC2413 File Offset: 0x00AC0613
 		public TrapDefenseRougeLevelView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06031903 RID: 203011 RVA: 0x00B7E478 File Offset: 0x00B7C678
+		// Token: 0x06026693 RID: 157331 RVA: 0x00AC242C File Offset: 0x00AC062C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06031904 RID: 203012 RVA: 0x00B7E64C File Offset: 0x00B7C84C
+		// Token: 0x06026694 RID: 157332 RVA: 0x00AC2600 File Offset: 0x00AC0800
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TrapDefenseRougeLevelView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -69,67 +69,67 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031905 RID: 203013 RVA: 0x00B7E68F File Offset: 0x00B7C88F
+		// Token: 0x06026695 RID: 157333 RVA: 0x00AC2643 File Offset: 0x00AC0843
 		protected override void OnStart()
 		{
 			TrapDefenseModel.Instance.RougeModeData.CheckModeOpenRedDotState();
 			this.InitData();
 		}
 
-		// Token: 0x06031906 RID: 203014 RVA: 0x00B7E6A7 File Offset: 0x00B7C8A7
+		// Token: 0x06026696 RID: 157334 RVA: 0x00AC265B File Offset: 0x00AC085B
 		protected override void OnAddEventListener()
 		{
 		}
 
-		// Token: 0x06031907 RID: 203015 RVA: 0x00B7E6A9 File Offset: 0x00B7C8A9
+		// Token: 0x06026697 RID: 157335 RVA: 0x00AC265D File Offset: 0x00AC085D
 		protected override void OnRemoveEventListener()
 		{
 		}
 
-		// Token: 0x06031908 RID: 203016 RVA: 0x00B7E6AB File Offset: 0x00B7C8AB
+		// Token: 0x06026698 RID: 157336 RVA: 0x00AC265F File Offset: 0x00AC085F
 		protected override void OnBeforeShow()
 		{
 			this.UpdateData();
 		}
 
-		// Token: 0x06031909 RID: 203017 RVA: 0x00B7E6B3 File Offset: 0x00B7C8B3
+		// Token: 0x06026699 RID: 157337 RVA: 0x00AC2667 File Offset: 0x00AC0867
 		protected override void OnBeforeDestroy()
 		{
 		}
 
-		// Token: 0x0603190A RID: 203018 RVA: 0x00B7E6B5 File Offset: 0x00B7C8B5
+		// Token: 0x0602669A RID: 157338 RVA: 0x00AC2669 File Offset: 0x00AC0869
 		protected override void OnBeforeHide()
 		{
 			this.ViewModel.Model.RougeModeData.SaveCacheReachOpenTimeLevels();
 		}
 
-		// Token: 0x0603190B RID: 203019 RVA: 0x00B7E6CC File Offset: 0x00B7C8CC
+		// Token: 0x0602669B RID: 157339 RVA: 0x00AC2680 File Offset: 0x00AC0880
 		public void OnClickBtnKeyboardSet()
 		{
 			this.ViewModel.Model.OpenViewKeySetting();
 		}
 
-		// Token: 0x0603190C RID: 203020 RVA: 0x00B7E6E0 File Offset: 0x00B7C8E0
+		// Token: 0x0602669C RID: 157340 RVA: 0x00AC2694 File Offset: 0x00AC0894
 		public void OnClickBtnSave()
 		{
 			int helpIdLevelSaveProgress = TrapDefenseConfig.Instance.GetHelpIdLevelSaveProgress();
 			HelpController.Instance.OpenHelpById(helpIdLevelSaveProgress);
 		}
 
-		// Token: 0x0603190D RID: 203021 RVA: 0x00B7E704 File Offset: 0x00B7C904
+		// Token: 0x0602669D RID: 157341 RVA: 0x00AC26B8 File Offset: 0x00AC08B8
 		public void OnBtnHelp()
 		{
 			int helpIdRougeLevel = TrapDefenseConfig.Instance.GetHelpIdRougeLevel();
 			HelpController.Instance.OpenHelpById(helpIdRougeLevel);
 		}
 
-		// Token: 0x0603190E RID: 203022 RVA: 0x00B7E727 File Offset: 0x00B7C927
+		// Token: 0x0602669E RID: 157342 RVA: 0x00AC26DB File Offset: 0x00AC08DB
 		public void OnBtnClose()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603190F RID: 203023 RVA: 0x00B7E730 File Offset: 0x00B7C930
+		// Token: 0x0602669F RID: 157343 RVA: 0x00AC26E4 File Offset: 0x00AC08E4
 		public void InitData()
 		{
 			if (this.ViewModel.JumpLevelData != null)
@@ -138,14 +138,14 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031910 RID: 203024 RVA: 0x00B7E755 File Offset: 0x00B7C955
+		// Token: 0x060266A0 RID: 157344 RVA: 0x00AC2709 File Offset: 0x00AC0909
 		public void UpdateData()
 		{
 			this.PanelLevelTab.UpdateModeData();
 			this.UpdateSaveState();
 		}
 
-		// Token: 0x06031911 RID: 203025 RVA: 0x00B7E768 File Offset: 0x00B7C968
+		// Token: 0x060266A1 RID: 157345 RVA: 0x00AC271C File Offset: 0x00AC091C
 		public void UpdateSaveState()
 		{
 			TrapDefenseLevelData curSelectLevel = this.PanelLevelTab.CurSelectLevel;
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031912 RID: 203026 RVA: 0x00B7E7EC File Offset: 0x00B7C9EC
+		// Token: 0x060266A2 RID: 157346 RVA: 0x00AC27A0 File Offset: 0x00AC09A0
 		public void OnSelectLevelItem(TrapDefenseLevelData data)
 		{
 			this.PanelNameInfo.UpdateData(data);
@@ -189,56 +189,56 @@ namespace CSharpScript.Game.Module.TrapDefense
 			uiViewSequence2.PlaySequencePurely("Switch", false, false);
 		}
 
-		// Token: 0x0401A7BB RID: 108475
+		// Token: 0x0401510D RID: 86285
 		public TrapDefenseRougeLevelViewModel ViewModel = TrapDefenseModel.Instance.ViewModelRougeLevel;
 
-		// Token: 0x0401A7BC RID: 108476
+		// Token: 0x0401510E RID: 86286
 		public PopupCaptionItem PopupCaption;
 
-		// Token: 0x0401A7BD RID: 108477
+		// Token: 0x0401510F RID: 86287
 		public TrapDefenseRougeLevelTabPanel PanelLevelTab;
 
-		// Token: 0x0401A7BE RID: 108478
+		// Token: 0x04015110 RID: 86288
 		public TrapDefenseLevelNamePanel PanelNameInfo;
 
-		// Token: 0x0401A7BF RID: 108479
+		// Token: 0x04015111 RID: 86289
 		public TrapDefenseLevelMapPanel PanelMapInfo;
 
-		// Token: 0x0401A7C0 RID: 108480
+		// Token: 0x04015112 RID: 86290
 		public TrapDefenseLevelTargetPanel PanelTargetInfo;
 
-		// Token: 0x0200AC20 RID: 44064
+		// Token: 0x02009640 RID: 38464
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x040344D8 RID: 214232
+			// Token: 0x0402EE89 RID: 192137
 			public const int ItemCaption = 0;
 
-			// Token: 0x040344D9 RID: 214233
+			// Token: 0x0402EE8A RID: 192138
 			public const int BtnKeyboardSet = 1;
 
-			// Token: 0x040344DA RID: 214234
+			// Token: 0x0402EE8B RID: 192139
 			public const int ItemLevelTabPanel = 2;
 
-			// Token: 0x040344DB RID: 214235
+			// Token: 0x0402EE8C RID: 192140
 			public const int ItemLevelNamePanel = 3;
 
-			// Token: 0x040344DC RID: 214236
+			// Token: 0x0402EE8D RID: 192141
 			public const int ItemLevelMapPanel = 4;
 
-			// Token: 0x040344DD RID: 214237
+			// Token: 0x0402EE8E RID: 192142
 			public const int ItemLevelTargetPanel = 5;
 
-			// Token: 0x040344DE RID: 214238
+			// Token: 0x0402EE8F RID: 192143
 			public const int BtnSave = 6;
 
-			// Token: 0x040344DF RID: 214239
+			// Token: 0x0402EE90 RID: 192144
 			public const int SpriteSaveIcon = 7;
 
-			// Token: 0x040344E0 RID: 214240
+			// Token: 0x0402EE91 RID: 192145
 			public const int TextSaveTitle = 8;
 
-			// Token: 0x040344E1 RID: 214241
+			// Token: 0x0402EE92 RID: 192146
 			public const int TexLevel = 9;
 		}
 	}

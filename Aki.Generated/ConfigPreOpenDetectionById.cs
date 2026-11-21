@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000760 RID: 1888
+	// Token: 0x02000778 RID: 1912
 	public class ConfigPreOpenDetectionById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002C51 RID: 11345 RVA: 0x00153C67 File Offset: 0x00151E67
+		// Token: 0x06002CE1 RID: 11489 RVA: 0x0015A6E3 File Offset: 0x001588E3
 		static ConfigPreOpenDetectionById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPreOpenDetectionById.CreateStaticDefaultValue), new Action(ConfigPreOpenDetectionById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002C52 RID: 11346 RVA: 0x00153C88 File Offset: 0x00151E88
+		// Token: 0x06002CE2 RID: 11490 RVA: 0x0015A704 File Offset: 0x00158904
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPreOpenDetectionById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002C53 RID: 11347 RVA: 0x00153D07 File Offset: 0x00151F07
+		// Token: 0x06002CE3 RID: 11491 RVA: 0x0015A783 File Offset: 0x00158983
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPreOpenDetectionById.LogPair = null;
 			ConfigPreOpenDetectionById.HandleId = 0;
 		}
 
-		// Token: 0x06002C54 RID: 11348 RVA: 0x00153D15 File Offset: 0x00151F15
+		// Token: 0x06002CE4 RID: 11492 RVA: 0x0015A791 File Offset: 0x00158991
 		public static void Init()
 		{
 			ConfigPreOpenDetectionById.HandleId = ConfigCommon.InitDataStatement(ConfigPreOpenDetectionById.HandleId, "db_adventure_detect.db", "select BinData from `PreOpenDetection` where Id=?");
 		}
 
-		// Token: 0x06002C55 RID: 11349 RVA: 0x00153D30 File Offset: 0x00151F30
+		// Token: 0x06002CE5 RID: 11493 RVA: 0x0015A7AC File Offset: 0x001589AC
 		public static PreOpenDetection? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPreOpenDetectionById.HandleId, ConfigPreOpenDetectionById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PreOpenDetection?(rootAsPreOpenDetection);
 		}
 
-		// Token: 0x04003386 RID: 13190
+		// Token: 0x0400342E RID: 13358
 		private const string DB = "db_adventure_detect.db";
 
-		// Token: 0x04003387 RID: 13191
+		// Token: 0x0400342F RID: 13359
 		private const string FILE = "k.开拓探测.xlsx";
 
-		// Token: 0x04003388 RID: 13192
+		// Token: 0x04003430 RID: 13360
 		private const string TABLE = "PreOpenDetection";
 
-		// Token: 0x04003389 RID: 13193
+		// Token: 0x04003431 RID: 13361
 		private const string COMMAND = "select BinData from `PreOpenDetection` where Id=?";
 
-		// Token: 0x0400338A RID: 13194
+		// Token: 0x04003432 RID: 13362
 		private const string KEY_PREFIX = "PreOpenDetectionById";
 
-		// Token: 0x0400338B RID: 13195
+		// Token: 0x04003433 RID: 13363
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400338C RID: 13196
+		// Token: 0x04003434 RID: 13364
 		private static int HandleId;
 	}
 }

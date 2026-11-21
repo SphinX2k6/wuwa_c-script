@@ -5,66 +5,66 @@ using Aki.Config;
 
 namespace CSharpScript.Game.InputSetting
 {
-	// Token: 0x02006FEE RID: 28654
+	// Token: 0x0200616F RID: 24943
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Config(0)]
 	public class InputSettingsConfig : ConfigBase
 	{
-		// Token: 0x06045B71 RID: 285553 RVA: 0x011519BC File Offset: 0x0114FBBC
+		// Token: 0x0603BD22 RID: 245026 RVA: 0x010FB74C File Offset: 0x010F994C
 		[NullableContext(2)]
 		public IReadOnlyList<ActionMapping> GetAllActionMappingConfig()
 		{
 			return ConfigActionMappingAll.GetConfigList(true);
 		}
 
-		// Token: 0x06045B72 RID: 285554 RVA: 0x011519C4 File Offset: 0x0114FBC4
+		// Token: 0x0603BD23 RID: 245027 RVA: 0x010FB754 File Offset: 0x010F9954
 		[NullableContext(2)]
 		public IReadOnlyList<ActionMapping> GetActionMappingConfigByActionType(int actionType)
 		{
 			return ConfigActionMappingByActionType.GetConfigList(actionType, true);
 		}
 
-		// Token: 0x06045B73 RID: 285555 RVA: 0x011519CD File Offset: 0x0114FBCD
+		// Token: 0x0603BD24 RID: 245028 RVA: 0x010FB75D File Offset: 0x010F995D
 		public ActionMapping? GetActionMappingConfigByActionName(string actionName)
 		{
 			return ConfigActionMappingByActionName.GetConfig(actionName, true);
 		}
 
-		// Token: 0x06045B74 RID: 285556 RVA: 0x011519D6 File Offset: 0x0114FBD6
+		// Token: 0x0603BD25 RID: 245029 RVA: 0x010FB766 File Offset: 0x010F9966
 		[NullableContext(2)]
 		public IReadOnlyList<AxisMapping> GetAllAxisMappingConfig()
 		{
 			return ConfigAxisMappingAll.GetConfigList(true);
 		}
 
-		// Token: 0x06045B75 RID: 285557 RVA: 0x011519DE File Offset: 0x0114FBDE
+		// Token: 0x0603BD26 RID: 245030 RVA: 0x010FB76E File Offset: 0x010F996E
 		[NullableContext(2)]
 		public IReadOnlyList<AxisMapping> GetAxisMappingConfigByActionType(int axisType)
 		{
 			return ConfigAxisMappingByAxisType.GetConfigList(axisType, true);
 		}
 
-		// Token: 0x06045B76 RID: 285558 RVA: 0x011519E7 File Offset: 0x0114FBE7
+		// Token: 0x0603BD27 RID: 245031 RVA: 0x010FB777 File Offset: 0x010F9977
 		public AxisMapping? GetAxisMappingConfigByAxisName(string axisName)
 		{
 			return ConfigAxisMappingByAxisName.GetConfig(axisName, true);
 		}
 
-		// Token: 0x06045B77 RID: 285559 RVA: 0x011519F0 File Offset: 0x0114FBF0
+		// Token: 0x0603BD28 RID: 245032 RVA: 0x010FB780 File Offset: 0x010F9980
 		[NullableContext(2)]
 		public IReadOnlyList<CombinationAction> GetAllCombinationActionConfig()
 		{
 			return ConfigCombinationActionAll.GetConfigList(true);
 		}
 
-		// Token: 0x06045B78 RID: 285560 RVA: 0x011519F8 File Offset: 0x0114FBF8
+		// Token: 0x0603BD29 RID: 245033 RVA: 0x010FB788 File Offset: 0x010F9988
 		public CombinationAction? GetCombinationActionConfigByActionName(string actionName)
 		{
 			return ConfigCombinationActionByActionName.GetConfig(actionName, true);
 		}
 
-		// Token: 0x06045B79 RID: 285561 RVA: 0x01151A04 File Offset: 0x0114FC04
+		// Token: 0x0603BD2A RID: 245034 RVA: 0x010FB794 File Offset: 0x010F9994
 		public CombinationAction? GetCombinationActionConfigByActionNameInList(string actionName)
 		{
 			IReadOnlyList<CombinationAction> allCombinationActionConfig = this.GetAllCombinationActionConfig();
@@ -81,65 +81,65 @@ namespace CSharpScript.Game.InputSetting
 			return null;
 		}
 
-		// Token: 0x06045B7A RID: 285562 RVA: 0x01151A74 File Offset: 0x0114FC74
+		// Token: 0x0603BD2B RID: 245035 RVA: 0x010FB804 File Offset: 0x010F9A04
 		[NullableContext(2)]
 		public IReadOnlyList<CombinationAction> GetCombinationActionConfigByActionType(int actionType)
 		{
 			return ConfigCombinationActionByActionType.GetConfigList(actionType, true);
 		}
 
-		// Token: 0x06045B7B RID: 285563 RVA: 0x01151A7D File Offset: 0x0114FC7D
+		// Token: 0x0603BD2C RID: 245036 RVA: 0x010FB80D File Offset: 0x010F9A0D
 		[NullableContext(2)]
 		public IReadOnlyList<CombinationAxis> GetAllCombinationAxisConfig()
 		{
 			return ConfigCombinationAxisAll.GetConfigList(true);
 		}
 
-		// Token: 0x06045B7C RID: 285564 RVA: 0x01151A85 File Offset: 0x0114FC85
+		// Token: 0x0603BD2D RID: 245037 RVA: 0x010FB815 File Offset: 0x010F9A15
 		public CombinationAxis? GetCombinationAxisConfigByAxisName(string axisName)
 		{
 			return ConfigCombinationAxisByAxisName.GetConfig(axisName, true);
 		}
 
-		// Token: 0x06045B7D RID: 285565 RVA: 0x01151A8E File Offset: 0x0114FC8E
+		// Token: 0x0603BD2E RID: 245038 RVA: 0x010FB81E File Offset: 0x010F9A1E
 		public PcKey? GetPcKeyConfig(string keyName)
 		{
 			return ConfigPcKeyByKeyName.GetConfig(keyName, true);
 		}
 
-		// Token: 0x06045B7E RID: 285566 RVA: 0x01151A97 File Offset: 0x0114FC97
+		// Token: 0x0603BD2F RID: 245039 RVA: 0x010FB827 File Offset: 0x010F9A27
 		[NullableContext(2)]
 		public IReadOnlyList<PcKey> GetPcKeyConfigList()
 		{
 			return ConfigPcKeyAll.GetConfigList(true);
 		}
 
-		// Token: 0x06045B7F RID: 285567 RVA: 0x01151A9F File Offset: 0x0114FC9F
+		// Token: 0x0603BD30 RID: 245040 RVA: 0x010FB82F File Offset: 0x010F9A2F
 		public PcKey? GetPcKeyConfigById(int configId)
 		{
 			return ConfigPcKeyById.GetConfig(configId, true);
 		}
 
-		// Token: 0x06045B80 RID: 285568 RVA: 0x01151AA8 File Offset: 0x0114FCA8
+		// Token: 0x0603BD31 RID: 245041 RVA: 0x010FB838 File Offset: 0x010F9A38
 		public GamepadKey? GetGamepadKeyConfig(string keyName)
 		{
 			return ConfigGamepadKeyByKeyName.GetConfig(keyName, true);
 		}
 
-		// Token: 0x06045B81 RID: 285569 RVA: 0x01151AB1 File Offset: 0x0114FCB1
+		// Token: 0x0603BD32 RID: 245042 RVA: 0x010FB841 File Offset: 0x010F9A41
 		public GamepadKey? GetGamepadKeyConfigById(int configId)
 		{
 			return ConfigGamepadKeyById.GetConfig(configId, true);
 		}
 
-		// Token: 0x06045B82 RID: 285570 RVA: 0x01151ABA File Offset: 0x0114FCBA
+		// Token: 0x0603BD33 RID: 245043 RVA: 0x010FB84A File Offset: 0x010F9A4A
 		public PlatformIcon? GetPlatformIconConfig(int configId)
 		{
 			return ConfigPlatformIconById.GetConfig(configId, true);
 		}
 
-		// Token: 0x17009B96 RID: 39830
-		// (get) Token: 0x06045B83 RID: 285571 RVA: 0x01151AC3 File Offset: 0x0114FCC3
+		// Token: 0x170070D6 RID: 28886
+		// (get) Token: 0x0603BD34 RID: 245044 RVA: 0x010FB853 File Offset: 0x010F9A53
 		public static InputSettingsConfig Instance
 		{
 			get
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045B84 RID: 285572 RVA: 0x01151ACA File Offset: 0x0114FCCA
+		// Token: 0x0603BD35 RID: 245045 RVA: 0x010FB85A File Offset: 0x010F9A5A
 		public static InputSettingsConfig GetOrCreateInstance()
 		{
 			if (InputSettingsConfig._Instance == null)
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.InputSetting
 			return InputSettingsConfig._Instance;
 		}
 
-		// Token: 0x06045B85 RID: 285573 RVA: 0x01151ADE File Offset: 0x0114FCDE
+		// Token: 0x0603BD36 RID: 245046 RVA: 0x010FB86E File Offset: 0x010F9A6E
 		public static bool CreateInstance()
 		{
 			if (InputSettingsConfig._Instance != null)
@@ -169,24 +169,24 @@ namespace CSharpScript.Game.InputSetting
 			return true;
 		}
 
-		// Token: 0x06045B86 RID: 285574 RVA: 0x01151AF4 File Offset: 0x0114FCF4
+		// Token: 0x0603BD37 RID: 245047 RVA: 0x010FB884 File Offset: 0x010F9A84
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06045B87 RID: 285575 RVA: 0x01151AF6 File Offset: 0x0114FCF6
+		// Token: 0x0603BD38 RID: 245048 RVA: 0x010FB886 File Offset: 0x010F9A86
 		public static void ResetStaticDefaultValue()
 		{
 			InputSettingsConfig._Instance = null;
 		}
 
-		// Token: 0x06045B88 RID: 285576 RVA: 0x01151AFE File Offset: 0x0114FCFE
+		// Token: 0x0603BD39 RID: 245049 RVA: 0x010FB88E File Offset: 0x010F9A8E
 		static InputSettingsConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(InputSettingsConfig.CreateStaticDefaultValue), new Action(InputSettingsConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040245DE RID: 148958
+		// Token: 0x0401F893 RID: 129171
 		[Nullable(2)]
 		private static InputSettingsConfig _Instance;
 	}

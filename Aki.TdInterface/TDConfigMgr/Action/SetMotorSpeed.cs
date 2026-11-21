@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021C3 RID: 8643
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200242E RID: 9262
 	public class SetMotorSpeed : ActionParams
 	{
-		// Token: 0x0600BDD0 RID: 48592 RVA: 0x001B51C0 File Offset: 0x001B33C0
+		// Token: 0x0600C98A RID: 51594 RVA: 0x001CC7F8 File Offset: 0x001CA9F8
 		private SetMotorSpeed_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BDD1 RID: 48593 RVA: 0x001B51F8 File Offset: 0x001B33F8
+		// Token: 0x0600C98B RID: 51595 RVA: 0x001CC830 File Offset: 0x001CAA30
 		public static SetMotorSpeed Create([Nullable(2)] SetMotorSpeed instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BDD2 RID: 48594 RVA: 0x001B520B File Offset: 0x001B340B
+		// Token: 0x0600C98C RID: 51596 RVA: 0x001CC843 File Offset: 0x001CAA43
 		public static SetMotorSpeed CreateFromSetValue([Nullable(2)] SetMotorSpeed_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BDD3 RID: 48595 RVA: 0x001B521E File Offset: 0x001B341E
+		// Token: 0x0600C98D RID: 51597 RVA: 0x001CC856 File Offset: 0x001CAA56
 		public SetMotorSpeed_SetValue ToSetValue()
 		{
 			return new SetMotorSpeed_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170039A4 RID: 14756
-		// (get) Token: 0x0600BDD4 RID: 48596 RVA: 0x001B5240 File Offset: 0x001B3440
-		// (set) Token: 0x0600BDD5 RID: 48597 RVA: 0x001B52A1 File Offset: 0x001B34A1
+		// Token: 0x17003C98 RID: 15512
+		// (get) Token: 0x0600C98E RID: 51598 RVA: 0x001CC878 File Offset: 0x001CAA78
+		// (set) Token: 0x0600C98F RID: 51599 RVA: 0x001CC8D9 File Offset: 0x001CAAD9
 		[Nullable(2)]
 		public virtual IMotorConstraintConfig MotorConstraint
 		{
@@ -93,9 +91,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170039A5 RID: 14757
-		// (get) Token: 0x0600BDD6 RID: 48598 RVA: 0x001B52B8 File Offset: 0x001B34B8
-		// (set) Token: 0x0600BDD7 RID: 48599 RVA: 0x001B5319 File Offset: 0x001B3519
+		// Token: 0x17003C99 RID: 15513
+		// (get) Token: 0x0600C990 RID: 51600 RVA: 0x001CC8F0 File Offset: 0x001CAAF0
+		// (set) Token: 0x0600C991 RID: 51601 RVA: 0x001CC951 File Offset: 0x001CAB51
 		public virtual ISetMotorSpeedTargetSpeed SpeedConfig
 		{
 			get
@@ -123,24 +121,24 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04007149 RID: 29001
+		// Token: 0x04007791 RID: 30609
 		[Nullable(2)]
 		protected new SetMotorSpeed FbInstance;
 
-		// Token: 0x0400714A RID: 29002
+		// Token: 0x04007792 RID: 30610
 		[Nullable(2)]
 		protected SetMotorSpeed_SetValue PocoInterface;
 
-		// Token: 0x0400714B RID: 29003
+		// Token: 0x04007793 RID: 30611
 		private IMotorConstraintConfig _MotorConstraintCache;
 
-		// Token: 0x0400714C RID: 29004
+		// Token: 0x04007794 RID: 30612
 		private bool _MotorConstraintInited;
 
-		// Token: 0x0400714D RID: 29005
+		// Token: 0x04007795 RID: 30613
 		private ISetMotorSpeedTargetSpeed _SpeedConfigCache;
 
-		// Token: 0x0400714E RID: 29006
+		// Token: 0x04007796 RID: 30614
 		private bool _SpeedConfigInited;
 	}
 }

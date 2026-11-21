@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200043A RID: 1082
+	// Token: 0x02000450 RID: 1104
 	public class ConfigInfrV2RewardAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001966 RID: 6502 RVA: 0x000E9294 File Offset: 0x000E7494
+		// Token: 0x060019EA RID: 6634 RVA: 0x000EF9E8 File Offset: 0x000EDBE8
 		static ConfigInfrV2RewardAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigInfrV2RewardAll.CreateStaticDefaultValue), new Action(ConfigInfrV2RewardAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001967 RID: 6503 RVA: 0x000E92B4 File Offset: 0x000E74B4
+		// Token: 0x060019EB RID: 6635 RVA: 0x000EFA08 File Offset: 0x000EDC08
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigInfrV2RewardAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001968 RID: 6504 RVA: 0x000E9333 File Offset: 0x000E7533
+		// Token: 0x060019EC RID: 6636 RVA: 0x000EFA87 File Offset: 0x000EDC87
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigInfrV2RewardAll.LogPair = null;
 			ConfigInfrV2RewardAll.HandleId = 0;
 		}
 
-		// Token: 0x06001969 RID: 6505 RVA: 0x000E9341 File Offset: 0x000E7541
+		// Token: 0x060019ED RID: 6637 RVA: 0x000EFA95 File Offset: 0x000EDC95
 		public static void Init()
 		{
 			ConfigInfrV2RewardAll.HandleId = ConfigCommon.InitDataStatement(ConfigInfrV2RewardAll.HandleId, "db_villageinfr.db", "select BinData from `InfrV2Reward`");
 		}
 
-		// Token: 0x0600196A RID: 6506 RVA: 0x000E935C File Offset: 0x000E755C
+		// Token: 0x060019EE RID: 6638 RVA: 0x000EFAB0 File Offset: 0x000EDCB0
 		[NullableContext(2)]
 		public static IReadOnlyList<InfrV2Reward> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04001D7A RID: 7546
+		// Token: 0x04001E14 RID: 7700
 		private const string DB = "db_villageinfr.db";
 
-		// Token: 0x04001D7B RID: 7547
+		// Token: 0x04001E15 RID: 7701
 		private const string FILE = "j.基建V2.xlsx";
 
-		// Token: 0x04001D7C RID: 7548
+		// Token: 0x04001E16 RID: 7702
 		private const string TABLE = "InfrV2Reward";
 
-		// Token: 0x04001D7D RID: 7549
+		// Token: 0x04001E17 RID: 7703
 		private const string COMMAND = "select BinData from `InfrV2Reward`";
 
-		// Token: 0x04001D7E RID: 7550
+		// Token: 0x04001E18 RID: 7704
 		private const string KEY_PREFIX = "InfrV2RewardAll";
 
-		// Token: 0x04001D7F RID: 7551
+		// Token: 0x04001E19 RID: 7705
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001D80 RID: 7552
+		// Token: 0x04001E1A RID: 7706
 		private static int HandleId;
 	}
 }

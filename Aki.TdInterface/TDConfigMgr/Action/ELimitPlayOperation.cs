@@ -3,23 +3,23 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200160B RID: 5643
+	// Token: 0x0200176D RID: 5997
 	[EnumExtensions]
 	public enum ELimitPlayOperation
 	{
-		// Token: 0x04004BB9 RID: 19385
+		// Token: 0x04004F7F RID: 20351
 		AllowCamera,
-		// Token: 0x04004BBA RID: 19386
+		// Token: 0x04004F80 RID: 20352
 		AllowAction,
-		// Token: 0x04004BBB RID: 19387
+		// Token: 0x04004F81 RID: 20353
 		AllowMove,
-		// Token: 0x04004BBC RID: 19388
+		// Token: 0x04004F82 RID: 20354
 		AllowMoveNew,
-		// Token: 0x04004BBD RID: 19389
+		// Token: 0x04004F83 RID: 20355
 		AllowUi,
-		// Token: 0x04004BBE RID: 19390
+		// Token: 0x04004F84 RID: 20356
 		AllowMouse,
-		// Token: 0x04004BBF RID: 19391
+		// Token: 0x04004F85 RID: 20357
 		BlockAll
 	}
 }

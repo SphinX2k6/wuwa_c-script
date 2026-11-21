@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007732 RID: 30514
+	// Token: 0x02007F5B RID: 32603
 	public class TMoveToPointTypeUnion
 	{
-		// Token: 0x1700E665 RID: 58981
-		// (get) Token: 0x06037734 RID: 227124 RVA: 0x00781DD6 File Offset: 0x0077FFD6
-		// (set) Token: 0x06037735 RID: 227125 RVA: 0x00781DDE File Offset: 0x0077FFDE
+		// Token: 0x1700F2B5 RID: 62133
+		// (get) Token: 0x0603AC6F RID: 240751 RVA: 0x007E6D66 File Offset: 0x007E4F66
+		// (set) Token: 0x0603AC70 RID: 240752 RVA: 0x007E6D6E File Offset: 0x007E4F6E
 		public TMoveToPointType Type { get; set; }
 
-		// Token: 0x1700E666 RID: 58982
-		// (get) Token: 0x06037736 RID: 227126 RVA: 0x00781DE7 File Offset: 0x0077FFE7
-		// (set) Token: 0x06037737 RID: 227127 RVA: 0x00781DEF File Offset: 0x0077FFEF
+		// Token: 0x1700F2B6 RID: 62134
+		// (get) Token: 0x0603AC71 RID: 240753 RVA: 0x007E6D77 File Offset: 0x007E4F77
+		// (set) Token: 0x0603AC72 RID: 240754 RVA: 0x007E6D7F File Offset: 0x007E4F7F
 		public object Value { get; set; }
 
-		// Token: 0x06037738 RID: 227128 RVA: 0x00781DF8 File Offset: 0x0077FFF8
+		// Token: 0x0603AC73 RID: 240755 RVA: 0x007E6D88 File Offset: 0x007E4F88
 		public TMoveToPointTypeUnion()
 		{
 			this.Type = TMoveToPointType.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06037739 RID: 227129 RVA: 0x00781E0E File Offset: 0x0078000E
+		// Token: 0x0603AC74 RID: 240756 RVA: 0x007E6D9E File Offset: 0x007E4F9E
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0603773A RID: 227130 RVA: 0x00781E20 File Offset: 0x00780020
+		// Token: 0x0603AC75 RID: 240757 RVA: 0x007E6DB0 File Offset: 0x007E4FB0
 		public IUniformMotionT AsIUniformMotion()
 		{
 			return this.As<IUniformMotionT>();
 		}
 
-		// Token: 0x0603773B RID: 227131 RVA: 0x00781E28 File Offset: 0x00780028
+		// Token: 0x0603AC76 RID: 240758 RVA: 0x007E6DB8 File Offset: 0x007E4FB8
 		public static TMoveToPointTypeUnion FromIUniformMotion(IUniformMotionT _iuniformmotion)
 		{
 			return new TMoveToPointTypeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0603773C RID: 227132 RVA: 0x00781E3D File Offset: 0x0078003D
+		// Token: 0x0603AC77 RID: 240759 RVA: 0x007E6DCD File Offset: 0x007E4FCD
 		public IVariableMotionT AsIVariableMotion()
 		{
 			return this.As<IVariableMotionT>();
 		}
 
-		// Token: 0x0603773D RID: 227133 RVA: 0x00781E45 File Offset: 0x00780045
+		// Token: 0x0603AC78 RID: 240760 RVA: 0x007E6DD5 File Offset: 0x007E4FD5
 		public static TMoveToPointTypeUnion FromIVariableMotion(IVariableMotionT _ivariablemotion)
 		{
 			return new TMoveToPointTypeUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0603773E RID: 227134 RVA: 0x00781E5C File Offset: 0x0078005C
+		// Token: 0x0603AC79 RID: 240761 RVA: 0x007E6DEC File Offset: 0x007E4FEC
 		public static int Pack(FlatBufferBuilder builder, TMoveToPointTypeUnion _o)
 		{
 			TMoveToPointType type = _o.Type;

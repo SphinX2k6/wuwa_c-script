@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000473 RID: 1139
+	// Token: 0x02000489 RID: 1161
 	public class ConfigKingShipBuffById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001ABC RID: 6844 RVA: 0x000F08D4 File Offset: 0x000EEAD4
+		// Token: 0x06001B40 RID: 6976 RVA: 0x000F7028 File Offset: 0x000F5228
 		static ConfigKingShipBuffById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigKingShipBuffById.CreateStaticDefaultValue), new Action(ConfigKingShipBuffById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001ABD RID: 6845 RVA: 0x000F08F4 File Offset: 0x000EEAF4
+		// Token: 0x06001B41 RID: 6977 RVA: 0x000F7048 File Offset: 0x000F5248
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigKingShipBuffById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001ABE RID: 6846 RVA: 0x000F0973 File Offset: 0x000EEB73
+		// Token: 0x06001B42 RID: 6978 RVA: 0x000F70C7 File Offset: 0x000F52C7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigKingShipBuffById.LogPair = null;
 			ConfigKingShipBuffById.HandleId = 0;
 		}
 
-		// Token: 0x06001ABF RID: 6847 RVA: 0x000F0981 File Offset: 0x000EEB81
+		// Token: 0x06001B43 RID: 6979 RVA: 0x000F70D5 File Offset: 0x000F52D5
 		public static void Init()
 		{
 			ConfigKingShipBuffById.HandleId = ConfigCommon.InitDataStatement(ConfigKingShipBuffById.HandleId, "db_kingship.db", "select BinData from `KingShipBuff` where Id = ?");
 		}
 
-		// Token: 0x06001AC0 RID: 6848 RVA: 0x000F099C File Offset: 0x000EEB9C
+		// Token: 0x06001B44 RID: 6980 RVA: 0x000F70F0 File Offset: 0x000F52F0
 		public static KingShipBuff? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigKingShipBuffById.HandleId, ConfigKingShipBuffById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new KingShipBuff?(rootAsKingShipBuff);
 		}
 
-		// Token: 0x04001F09 RID: 7945
+		// Token: 0x04001FA3 RID: 8099
 		private const string DB = "db_kingship.db";
 
-		// Token: 0x04001F0A RID: 7946
+		// Token: 0x04001FA4 RID: 8100
 		private const string FILE = "w.王权.xlsx";
 
-		// Token: 0x04001F0B RID: 7947
+		// Token: 0x04001FA5 RID: 8101
 		private const string TABLE = "KingShipBuff";
 
-		// Token: 0x04001F0C RID: 7948
+		// Token: 0x04001FA6 RID: 8102
 		private const string COMMAND = "select BinData from `KingShipBuff` where Id = ?";
 
-		// Token: 0x04001F0D RID: 7949
+		// Token: 0x04001FA7 RID: 8103
 		private const string KEY_PREFIX = "KingShipBuffById";
 
-		// Token: 0x04001F0E RID: 7950
+		// Token: 0x04001FA8 RID: 8104
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001F0F RID: 7951
+		// Token: 0x04001FA9 RID: 8105
 		private static int HandleId;
 	}
 }

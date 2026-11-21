@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020021CE RID: 8654
+// Token: 0x020016B2 RID: 5810
 internal enum EMailLinkButtonComponents
 {
-	// Token: 0x04008005 RID: 32773
+	// Token: 0x0400814C RID: 33100
 	TxtLink,
-	// Token: 0x04008006 RID: 32774
+	// Token: 0x0400814D RID: 33101
 	SprBg
 }

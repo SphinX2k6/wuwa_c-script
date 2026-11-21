@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol.CombatMessage
 {
-	// Token: 0x02001688 RID: 5768
+	// Token: 0x02001704 RID: 5892
 	public sealed class CombatPushData : IMessage<CombatPushData>, IMessage, IEquatable<CombatPushData>, IDeepCloneable<CombatPushData>, IBufferMessage
 	{
-		// Token: 0x0601CCC3 RID: 117955 RVA: 0x0042BDCA File Offset: 0x00429FCA
+		// Token: 0x0601D790 RID: 120720 RVA: 0x00447A8A File Offset: 0x00445C8A
 		[NullableContext(1)]
 		public static CombatPushData Create()
 		{
 			return new CombatPushData();
 		}
 
-		// Token: 0x17006134 RID: 24884
-		// (get) Token: 0x0601CCC4 RID: 117956 RVA: 0x0042BDD1 File Offset: 0x00429FD1
+		// Token: 0x170063D8 RID: 25560
+		// (get) Token: 0x0601D791 RID: 120721 RVA: 0x00447A91 File Offset: 0x00445C91
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006135 RID: 24885
-		// (get) Token: 0x0601CCC5 RID: 117957 RVA: 0x0042BDD4 File Offset: 0x00429FD4
+		// Token: 0x170063D9 RID: 25561
+		// (get) Token: 0x0601D792 RID: 120722 RVA: 0x00447A94 File Offset: 0x00445C94
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x0601CCC6 RID: 117958 RVA: 0x0042BDDB File Offset: 0x00429FDB
+		// Token: 0x0601D793 RID: 120723 RVA: 0x00447A9B File Offset: 0x00445C9B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CombatPushData()
 		{
 		}
 
-		// Token: 0x0601CCC7 RID: 117959 RVA: 0x0042BDE4 File Offset: 0x00429FE4
+		// Token: 0x0601D794 RID: 120724 RVA: 0x00447AA4 File Offset: 0x00445CA4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CombatPushData(CombatPushData other) : this()
@@ -258,9 +258,6 @@ namespace Aki.Protocol.CombatMessage
 			case CombatPushData.MessageOneofCase.DodgeInfoPush:
 				this.DodgeInfoPush = other.DodgeInfoPush.Clone();
 				break;
-			case CombatPushData.MessageOneofCase.SwitchDarkTideWeaponPush:
-				this.SwitchDarkTideWeaponPush = other.SwitchDarkTideWeaponPush.Clone();
-				break;
 			case CombatPushData.MessageOneofCase.RoleTrialSceneRollbackPush:
 				this.RoleTrialSceneRollbackPush = other.RoleTrialSceneRollbackPush.Clone();
 				break;
@@ -268,7 +265,7 @@ namespace Aki.Protocol.CombatMessage
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601CCC8 RID: 117960 RVA: 0x0042C523 File Offset: 0x0042A723
+		// Token: 0x0601D795 RID: 120725 RVA: 0x004481CD File Offset: 0x004463CD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CombatPushData Clone()
@@ -276,9 +273,9 @@ namespace Aki.Protocol.CombatMessage
 			return new CombatPushData(this);
 		}
 
-		// Token: 0x17006136 RID: 24886
-		// (get) Token: 0x0601CCC9 RID: 117961 RVA: 0x0042C52B File Offset: 0x0042A72B
-		// (set) Token: 0x0601CCCA RID: 117962 RVA: 0x0042C533 File Offset: 0x0042A733
+		// Token: 0x170063DA RID: 25562
+		// (get) Token: 0x0601D796 RID: 120726 RVA: 0x004481D5 File Offset: 0x004463D5
+		// (set) Token: 0x0601D797 RID: 120727 RVA: 0x004481DD File Offset: 0x004463DD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CombatCommon CombatCommon
@@ -293,9 +290,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006137 RID: 24887
-		// (get) Token: 0x0601CCCB RID: 117963 RVA: 0x0042C53C File Offset: 0x0042A73C
-		// (set) Token: 0x0601CCCC RID: 117964 RVA: 0x0042C554 File Offset: 0x0042A754
+		// Token: 0x170063DB RID: 25563
+		// (get) Token: 0x0601D798 RID: 120728 RVA: 0x004481E6 File Offset: 0x004463E6
+		// (set) Token: 0x0601D799 RID: 120729 RVA: 0x004481FE File Offset: 0x004463FE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ApplyBuffS2cResponsePush ApplyBuffS2CResponsePush
@@ -315,9 +312,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006138 RID: 24888
-		// (get) Token: 0x0601CCCD RID: 117965 RVA: 0x0042C56A File Offset: 0x0042A76A
-		// (set) Token: 0x0601CCCE RID: 117966 RVA: 0x0042C582 File Offset: 0x0042A782
+		// Token: 0x170063DC RID: 25564
+		// (get) Token: 0x0601D79A RID: 120730 RVA: 0x00448214 File Offset: 0x00446414
+		// (set) Token: 0x0601D79B RID: 120731 RVA: 0x0044822C File Offset: 0x0044642C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RemoveBuffS2cResponsePush RemoveBuffS2CResponsePush
@@ -337,9 +334,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006139 RID: 24889
-		// (get) Token: 0x0601CCCF RID: 117967 RVA: 0x0042C598 File Offset: 0x0042A798
-		// (set) Token: 0x0601CCD0 RID: 117968 RVA: 0x0042C5B0 File Offset: 0x0042A7B0
+		// Token: 0x170063DD RID: 25565
+		// (get) Token: 0x0601D79C RID: 120732 RVA: 0x00448242 File Offset: 0x00446442
+		// (set) Token: 0x0601D79D RID: 120733 RVA: 0x0044825A File Offset: 0x0044645A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RemoveBuffByIdS2cResponsePush RemoveBuffByIdS2CResponsePush
@@ -359,9 +356,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700613A RID: 24890
-		// (get) Token: 0x0601CCD1 RID: 117969 RVA: 0x0042C5C6 File Offset: 0x0042A7C6
-		// (set) Token: 0x0601CCD2 RID: 117970 RVA: 0x0042C5DE File Offset: 0x0042A7DE
+		// Token: 0x170063DE RID: 25566
+		// (get) Token: 0x0601D79E RID: 120734 RVA: 0x00448270 File Offset: 0x00446470
+		// (set) Token: 0x0601D79F RID: 120735 RVA: 0x00448288 File Offset: 0x00446488
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CreateBulletPush CreateBulletPush
@@ -381,9 +378,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700613B RID: 24891
-		// (get) Token: 0x0601CCD3 RID: 117971 RVA: 0x0042C5F4 File Offset: 0x0042A7F4
-		// (set) Token: 0x0601CCD4 RID: 117972 RVA: 0x0042C60C File Offset: 0x0042A80C
+		// Token: 0x170063DF RID: 25567
+		// (get) Token: 0x0601D7A0 RID: 120736 RVA: 0x0044829E File Offset: 0x0044649E
+		// (set) Token: 0x0601D7A1 RID: 120737 RVA: 0x004482B6 File Offset: 0x004464B6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DestroyBulletPush DestroyBulletPush
@@ -403,9 +400,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700613C RID: 24892
-		// (get) Token: 0x0601CCD5 RID: 117973 RVA: 0x0042C622 File Offset: 0x0042A822
-		// (set) Token: 0x0601CCD6 RID: 117974 RVA: 0x0042C63B File Offset: 0x0042A83B
+		// Token: 0x170063E0 RID: 25568
+		// (get) Token: 0x0601D7A2 RID: 120738 RVA: 0x004482CC File Offset: 0x004464CC
+		// (set) Token: 0x0601D7A3 RID: 120739 RVA: 0x004482E5 File Offset: 0x004464E5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ApplyGameplayEffectPush ApplyGameplayEffectPush
@@ -425,9 +422,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700613D RID: 24893
-		// (get) Token: 0x0601CCD7 RID: 117975 RVA: 0x0042C652 File Offset: 0x0042A852
-		// (set) Token: 0x0601CCD8 RID: 117976 RVA: 0x0042C66B File Offset: 0x0042A86B
+		// Token: 0x170063E1 RID: 25569
+		// (get) Token: 0x0601D7A4 RID: 120740 RVA: 0x004482FC File Offset: 0x004464FC
+		// (set) Token: 0x0601D7A5 RID: 120741 RVA: 0x00448315 File Offset: 0x00446515
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RemoveGameplayEffectPush RemoveGameplayEffectPush
@@ -447,9 +444,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700613E RID: 24894
-		// (get) Token: 0x0601CCD9 RID: 117977 RVA: 0x0042C682 File Offset: 0x0042A882
-		// (set) Token: 0x0601CCDA RID: 117978 RVA: 0x0042C69B File Offset: 0x0042A89B
+		// Token: 0x170063E2 RID: 25570
+		// (get) Token: 0x0601D7A6 RID: 120742 RVA: 0x0044832C File Offset: 0x0044652C
+		// (set) Token: 0x0601D7A7 RID: 120743 RVA: 0x00448345 File Offset: 0x00446545
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public HitEndPush HitEndPush
@@ -469,9 +466,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700613F RID: 24895
-		// (get) Token: 0x0601CCDB RID: 117979 RVA: 0x0042C6B2 File Offset: 0x0042A8B2
-		// (set) Token: 0x0601CCDC RID: 117980 RVA: 0x0042C6CB File Offset: 0x0042A8CB
+		// Token: 0x170063E3 RID: 25571
+		// (get) Token: 0x0601D7A8 RID: 120744 RVA: 0x0044835C File Offset: 0x0044655C
+		// (set) Token: 0x0601D7A9 RID: 120745 RVA: 0x00448375 File Offset: 0x00446575
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EndSkillPush EndSkillPush
@@ -491,9 +488,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006140 RID: 24896
-		// (get) Token: 0x0601CCDD RID: 117981 RVA: 0x0042C6E2 File Offset: 0x0042A8E2
-		// (set) Token: 0x0601CCDE RID: 117982 RVA: 0x0042C6FB File Offset: 0x0042A8FB
+		// Token: 0x170063E4 RID: 25572
+		// (get) Token: 0x0601D7AA RID: 120746 RVA: 0x0044838C File Offset: 0x0044658C
+		// (set) Token: 0x0601D7AB RID: 120747 RVA: 0x004483A5 File Offset: 0x004465A5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PartUpdatePush PartUpdatePush
@@ -513,9 +510,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006141 RID: 24897
-		// (get) Token: 0x0601CCDF RID: 117983 RVA: 0x0042C712 File Offset: 0x0042A912
-		// (set) Token: 0x0601CCE0 RID: 117984 RVA: 0x0042C72B File Offset: 0x0042A92B
+		// Token: 0x170063E5 RID: 25573
+		// (get) Token: 0x0601D7AC RID: 120748 RVA: 0x004483BC File Offset: 0x004465BC
+		// (set) Token: 0x0601D7AD RID: 120749 RVA: 0x004483D5 File Offset: 0x004465D5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MaterialPush MaterialPush
@@ -535,9 +532,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006142 RID: 24898
-		// (get) Token: 0x0601CCE1 RID: 117985 RVA: 0x0042C742 File Offset: 0x0042A942
-		// (set) Token: 0x0601CCE2 RID: 117986 RVA: 0x0042C75B File Offset: 0x0042A95B
+		// Token: 0x170063E6 RID: 25574
+		// (get) Token: 0x0601D7AE RID: 120750 RVA: 0x004483EC File Offset: 0x004465EC
+		// (set) Token: 0x0601D7AF RID: 120751 RVA: 0x00448405 File Offset: 0x00446605
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GameplayCuePush GameplayCuePush
@@ -557,9 +554,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006143 RID: 24899
-		// (get) Token: 0x0601CCE3 RID: 117987 RVA: 0x0042C772 File Offset: 0x0042A972
-		// (set) Token: 0x0601CCE4 RID: 117988 RVA: 0x0042C78B File Offset: 0x0042A98B
+		// Token: 0x170063E7 RID: 25575
+		// (get) Token: 0x0601D7B0 RID: 120752 RVA: 0x0044841C File Offset: 0x0044661C
+		// (set) Token: 0x0601D7B1 RID: 120753 RVA: 0x00448435 File Offset: 0x00446635
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EntityIsVisiblePush EntityIsVisiblePush
@@ -579,9 +576,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006144 RID: 24900
-		// (get) Token: 0x0601CCE5 RID: 117989 RVA: 0x0042C7A2 File Offset: 0x0042A9A2
-		// (set) Token: 0x0601CCE6 RID: 117990 RVA: 0x0042C7BB File Offset: 0x0042A9BB
+		// Token: 0x170063E8 RID: 25576
+		// (get) Token: 0x0601D7B2 RID: 120754 RVA: 0x0044844C File Offset: 0x0044664C
+		// (set) Token: 0x0601D7B3 RID: 120755 RVA: 0x00448465 File Offset: 0x00446665
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SwitchCharacterStatePush SwitchCharacterStatePush
@@ -601,9 +598,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006145 RID: 24901
-		// (get) Token: 0x0601CCE7 RID: 117991 RVA: 0x0042C7D2 File Offset: 0x0042A9D2
-		// (set) Token: 0x0601CCE8 RID: 117992 RVA: 0x0042C7EB File Offset: 0x0042A9EB
+		// Token: 0x170063E9 RID: 25577
+		// (get) Token: 0x0601D7B4 RID: 120756 RVA: 0x0044847C File Offset: 0x0044667C
+		// (set) Token: 0x0601D7B5 RID: 120757 RVA: 0x00448495 File Offset: 0x00446695
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public LogicStateInitPush LogicStateInitPush
@@ -623,9 +620,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006146 RID: 24902
-		// (get) Token: 0x0601CCE9 RID: 117993 RVA: 0x0042C802 File Offset: 0x0042AA02
-		// (set) Token: 0x0601CCEA RID: 117994 RVA: 0x0042C81B File Offset: 0x0042AA1B
+		// Token: 0x170063EA RID: 25578
+		// (get) Token: 0x0601D7B6 RID: 120758 RVA: 0x004484AC File Offset: 0x004466AC
+		// (set) Token: 0x0601D7B7 RID: 120759 RVA: 0x004484C5 File Offset: 0x004466C5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SwitchLogicStatePush SwitchLogicStatePush
@@ -645,9 +642,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006147 RID: 24903
-		// (get) Token: 0x0601CCEB RID: 117995 RVA: 0x0042C832 File Offset: 0x0042AA32
-		// (set) Token: 0x0601CCEC RID: 117996 RVA: 0x0042C84B File Offset: 0x0042AA4B
+		// Token: 0x170063EB RID: 25579
+		// (get) Token: 0x0601D7B8 RID: 120760 RVA: 0x004484DC File Offset: 0x004466DC
+		// (set) Token: 0x0601D7B9 RID: 120761 RVA: 0x004484F5 File Offset: 0x004466F5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AnimationStateChangedPush AnimationStateChangedPush
@@ -667,9 +664,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006148 RID: 24904
-		// (get) Token: 0x0601CCED RID: 117997 RVA: 0x0042C862 File Offset: 0x0042AA62
-		// (set) Token: 0x0601CCEE RID: 117998 RVA: 0x0042C87B File Offset: 0x0042AA7B
+		// Token: 0x170063EC RID: 25580
+		// (get) Token: 0x0601D7BA RID: 120762 RVA: 0x0044850C File Offset: 0x0044670C
+		// (set) Token: 0x0601D7BB RID: 120763 RVA: 0x00448525 File Offset: 0x00446725
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AnimationStateInitPush AnimationStateInitPush
@@ -689,9 +686,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006149 RID: 24905
-		// (get) Token: 0x0601CCEF RID: 117999 RVA: 0x0042C892 File Offset: 0x0042AA92
-		// (set) Token: 0x0601CCF0 RID: 118000 RVA: 0x0042C8AB File Offset: 0x0042AAAB
+		// Token: 0x170063ED RID: 25581
+		// (get) Token: 0x0601D7BC RID: 120764 RVA: 0x0044853C File Offset: 0x0044673C
+		// (set) Token: 0x0601D7BD RID: 120765 RVA: 0x00448555 File Offset: 0x00446755
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ModifyBulletParamsPush ModifyBulletParamsPush
@@ -711,9 +708,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700614A RID: 24906
-		// (get) Token: 0x0601CCF1 RID: 118001 RVA: 0x0042C8C2 File Offset: 0x0042AAC2
-		// (set) Token: 0x0601CCF2 RID: 118002 RVA: 0x0042C8DB File Offset: 0x0042AADB
+		// Token: 0x170063EE RID: 25582
+		// (get) Token: 0x0601D7BE RID: 120766 RVA: 0x0044856C File Offset: 0x0044676C
+		// (set) Token: 0x0601D7BF RID: 120767 RVA: 0x00448585 File Offset: 0x00446785
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DrownPush DrownPush
@@ -733,9 +730,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700614B RID: 24907
-		// (get) Token: 0x0601CCF3 RID: 118003 RVA: 0x0042C8F2 File Offset: 0x0042AAF2
-		// (set) Token: 0x0601CCF4 RID: 118004 RVA: 0x0042C90B File Offset: 0x0042AB0B
+		// Token: 0x170063EF RID: 25583
+		// (get) Token: 0x0601D7C0 RID: 120768 RVA: 0x0044859C File Offset: 0x0044679C
+		// (set) Token: 0x0601D7C1 RID: 120769 RVA: 0x004485B5 File Offset: 0x004467B5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ActivateBuffPush ActivateBuffPush
@@ -755,9 +752,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700614C RID: 24908
-		// (get) Token: 0x0601CCF5 RID: 118005 RVA: 0x0042C922 File Offset: 0x0042AB22
-		// (set) Token: 0x0601CCF6 RID: 118006 RVA: 0x0042C93B File Offset: 0x0042AB3B
+		// Token: 0x170063F0 RID: 25584
+		// (get) Token: 0x0601D7C2 RID: 120770 RVA: 0x004485CC File Offset: 0x004467CC
+		// (set) Token: 0x0601D7C3 RID: 120771 RVA: 0x004485E5 File Offset: 0x004467E5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AiInformationPush AiInformationPush
@@ -777,9 +774,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700614D RID: 24909
-		// (get) Token: 0x0601CCF7 RID: 118007 RVA: 0x0042C952 File Offset: 0x0042AB52
-		// (set) Token: 0x0601CCF8 RID: 118008 RVA: 0x0042C96B File Offset: 0x0042AB6B
+		// Token: 0x170063F1 RID: 25585
+		// (get) Token: 0x0601D7C4 RID: 120772 RVA: 0x004485FC File Offset: 0x004467FC
+		// (set) Token: 0x0601D7C5 RID: 120773 RVA: 0x00448615 File Offset: 0x00446815
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ToughCalcExtraRatioChangePush ToughCalcExtraRatioChangePush
@@ -799,9 +796,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700614E RID: 24910
-		// (get) Token: 0x0601CCF9 RID: 118009 RVA: 0x0042C982 File Offset: 0x0042AB82
-		// (set) Token: 0x0601CCFA RID: 118010 RVA: 0x0042C99B File Offset: 0x0042AB9B
+		// Token: 0x170063F2 RID: 25586
+		// (get) Token: 0x0601D7C6 RID: 120774 RVA: 0x0044862C File Offset: 0x0044682C
+		// (set) Token: 0x0601D7C7 RID: 120775 RVA: 0x00448645 File Offset: 0x00446845
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BattleStateChangePush BattleStateChangePush
@@ -821,9 +818,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700614F RID: 24911
-		// (get) Token: 0x0601CCFB RID: 118011 RVA: 0x0042C9B2 File Offset: 0x0042ABB2
-		// (set) Token: 0x0601CCFC RID: 118012 RVA: 0x0042C9CB File Offset: 0x0042ABCB
+		// Token: 0x170063F3 RID: 25587
+		// (get) Token: 0x0601D7C8 RID: 120776 RVA: 0x0044865C File Offset: 0x0044685C
+		// (set) Token: 0x0601D7C9 RID: 120777 RVA: 0x00448675 File Offset: 0x00446875
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AnimationGameplayTagPush AnimationGameplayTagPush
@@ -843,9 +840,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006150 RID: 24912
-		// (get) Token: 0x0601CCFD RID: 118013 RVA: 0x0042C9E2 File Offset: 0x0042ABE2
-		// (set) Token: 0x0601CCFE RID: 118014 RVA: 0x0042C9FB File Offset: 0x0042ABFB
+		// Token: 0x170063F4 RID: 25588
+		// (get) Token: 0x0601D7CA RID: 120778 RVA: 0x0044868C File Offset: 0x0044688C
+		// (set) Token: 0x0601D7CB RID: 120779 RVA: 0x004486A5 File Offset: 0x004468A5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BoneVisibleChangePush BoneVisibleChangePush
@@ -865,9 +862,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006151 RID: 24913
-		// (get) Token: 0x0601CCFF RID: 118015 RVA: 0x0042CA12 File Offset: 0x0042AC12
-		// (set) Token: 0x0601CD00 RID: 118016 RVA: 0x0042CA2B File Offset: 0x0042AC2B
+		// Token: 0x170063F5 RID: 25589
+		// (get) Token: 0x0601D7CC RID: 120780 RVA: 0x004486BC File Offset: 0x004468BC
+		// (set) Token: 0x0601D7CD RID: 120781 RVA: 0x004486D5 File Offset: 0x004468D5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AiBlackboardsPush AiBlackboardsPush
@@ -887,9 +884,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006152 RID: 24914
-		// (get) Token: 0x0601CD01 RID: 118017 RVA: 0x0042CA42 File Offset: 0x0042AC42
-		// (set) Token: 0x0601CD02 RID: 118018 RVA: 0x0042CA5B File Offset: 0x0042AC5B
+		// Token: 0x170063F6 RID: 25590
+		// (get) Token: 0x0601D7CE RID: 120782 RVA: 0x004486EC File Offset: 0x004468EC
+		// (set) Token: 0x0601D7CF RID: 120783 RVA: 0x00448705 File Offset: 0x00446905
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AiBlackboardCdPush AiBlackboardCdPush
@@ -909,9 +906,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006153 RID: 24915
-		// (get) Token: 0x0601CD03 RID: 118019 RVA: 0x0042CA72 File Offset: 0x0042AC72
-		// (set) Token: 0x0601CD04 RID: 118020 RVA: 0x0042CA8B File Offset: 0x0042AC8B
+		// Token: 0x170063F7 RID: 25591
+		// (get) Token: 0x0601D7D0 RID: 120784 RVA: 0x0044871C File Offset: 0x0044691C
+		// (set) Token: 0x0601D7D1 RID: 120785 RVA: 0x00448735 File Offset: 0x00446935
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AiHatePush AiHatePush
@@ -931,9 +928,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006154 RID: 24916
-		// (get) Token: 0x0601CD05 RID: 118021 RVA: 0x0042CAA2 File Offset: 0x0042ACA2
-		// (set) Token: 0x0601CD06 RID: 118022 RVA: 0x0042CABB File Offset: 0x0042ACBB
+		// Token: 0x170063F8 RID: 25592
+		// (get) Token: 0x0601D7D2 RID: 120786 RVA: 0x0044874C File Offset: 0x0044694C
+		// (set) Token: 0x0601D7D3 RID: 120787 RVA: 0x00448765 File Offset: 0x00446965
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MonsterBoomPush MonsterBoomPush
@@ -953,9 +950,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006155 RID: 24917
-		// (get) Token: 0x0601CD07 RID: 118023 RVA: 0x0042CAD2 File Offset: 0x0042ACD2
-		// (set) Token: 0x0601CD08 RID: 118024 RVA: 0x0042CAEB File Offset: 0x0042ACEB
+		// Token: 0x170063F9 RID: 25593
+		// (get) Token: 0x0601D7D4 RID: 120788 RVA: 0x0044877C File Offset: 0x0044697C
+		// (set) Token: 0x0601D7D5 RID: 120789 RVA: 0x00448795 File Offset: 0x00446995
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CaughtPush CaughtPush
@@ -975,9 +972,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006156 RID: 24918
-		// (get) Token: 0x0601CD09 RID: 118025 RVA: 0x0042CB02 File Offset: 0x0042AD02
-		// (set) Token: 0x0601CD0A RID: 118026 RVA: 0x0042CB1B File Offset: 0x0042AD1B
+		// Token: 0x170063FA RID: 25594
+		// (get) Token: 0x0601D7D6 RID: 120790 RVA: 0x004487AC File Offset: 0x004469AC
+		// (set) Token: 0x0601D7D7 RID: 120791 RVA: 0x004487C5 File Offset: 0x004469C5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EntityStaticHookMovePush EntityStaticHookMovePush
@@ -997,9 +994,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006157 RID: 24919
-		// (get) Token: 0x0601CD0B RID: 118027 RVA: 0x0042CB32 File Offset: 0x0042AD32
-		// (set) Token: 0x0601CD0C RID: 118028 RVA: 0x0042CB4B File Offset: 0x0042AD4B
+		// Token: 0x170063FB RID: 25595
+		// (get) Token: 0x0601D7D8 RID: 120792 RVA: 0x004487DC File Offset: 0x004469DC
+		// (set) Token: 0x0601D7D9 RID: 120793 RVA: 0x004487F5 File Offset: 0x004469F5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ChangeStateConfirmPush ChangeStateConfirmPush
@@ -1019,9 +1016,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006158 RID: 24920
-		// (get) Token: 0x0601CD0D RID: 118029 RVA: 0x0042CB62 File Offset: 0x0042AD62
-		// (set) Token: 0x0601CD0E RID: 118030 RVA: 0x0042CB7B File Offset: 0x0042AD7B
+		// Token: 0x170063FC RID: 25596
+		// (get) Token: 0x0601D7DA RID: 120794 RVA: 0x0044880C File Offset: 0x00446A0C
+		// (set) Token: 0x0601D7DB RID: 120795 RVA: 0x00448825 File Offset: 0x00446A25
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BuffStackCountPush BuffStackCountPush
@@ -1041,9 +1038,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006159 RID: 24921
-		// (get) Token: 0x0601CD0F RID: 118031 RVA: 0x0042CB92 File Offset: 0x0042AD92
-		// (set) Token: 0x0601CD10 RID: 118032 RVA: 0x0042CBAB File Offset: 0x0042ADAB
+		// Token: 0x170063FD RID: 25597
+		// (get) Token: 0x0601D7DC RID: 120796 RVA: 0x0044883C File Offset: 0x00446A3C
+		// (set) Token: 0x0601D7DD RID: 120797 RVA: 0x00448855 File Offset: 0x00446A55
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ANStartPush ANStartPush
@@ -1063,9 +1060,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700615A RID: 24922
-		// (get) Token: 0x0601CD11 RID: 118033 RVA: 0x0042CBC2 File Offset: 0x0042ADC2
-		// (set) Token: 0x0601CD12 RID: 118034 RVA: 0x0042CBDB File Offset: 0x0042ADDB
+		// Token: 0x170063FE RID: 25598
+		// (get) Token: 0x0601D7DE RID: 120798 RVA: 0x0044886C File Offset: 0x00446A6C
+		// (set) Token: 0x0601D7DF RID: 120799 RVA: 0x00448885 File Offset: 0x00446A85
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public UseSkillFailPush UseSkillFailPush
@@ -1085,9 +1082,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700615B RID: 24923
-		// (get) Token: 0x0601CD13 RID: 118035 RVA: 0x0042CBF2 File Offset: 0x0042ADF2
-		// (set) Token: 0x0601CD14 RID: 118036 RVA: 0x0042CC0B File Offset: 0x0042AE0B
+		// Token: 0x170063FF RID: 25599
+		// (get) Token: 0x0601D7E0 RID: 120800 RVA: 0x0044889C File Offset: 0x00446A9C
+		// (set) Token: 0x0601D7E1 RID: 120801 RVA: 0x004488B5 File Offset: 0x00446AB5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EnterViewDirectionPush EnterViewDirectionPush
@@ -1107,9 +1104,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700615C RID: 24924
-		// (get) Token: 0x0601CD15 RID: 118037 RVA: 0x0042CC22 File Offset: 0x0042AE22
-		// (set) Token: 0x0601CD16 RID: 118038 RVA: 0x0042CC3B File Offset: 0x0042AE3B
+		// Token: 0x17006400 RID: 25600
+		// (get) Token: 0x0601D7E2 RID: 120802 RVA: 0x004488CC File Offset: 0x00446ACC
+		// (set) Token: 0x0601D7E3 RID: 120803 RVA: 0x004488E5 File Offset: 0x00446AE5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ExitViewDirectionPush ExitViewDirectionPush
@@ -1129,9 +1126,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700615D RID: 24925
-		// (get) Token: 0x0601CD17 RID: 118039 RVA: 0x0042CC52 File Offset: 0x0042AE52
-		// (set) Token: 0x0601CD18 RID: 118040 RVA: 0x0042CC6B File Offset: 0x0042AE6B
+		// Token: 0x17006401 RID: 25601
+		// (get) Token: 0x0601D7E4 RID: 120804 RVA: 0x004488FC File Offset: 0x00446AFC
+		// (set) Token: 0x0601D7E5 RID: 120805 RVA: 0x00448915 File Offset: 0x00446B15
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PassiveSkillAddPush PassiveSkillAddPush
@@ -1151,9 +1148,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700615E RID: 24926
-		// (get) Token: 0x0601CD19 RID: 118041 RVA: 0x0042CC82 File Offset: 0x0042AE82
-		// (set) Token: 0x0601CD1A RID: 118042 RVA: 0x0042CC9B File Offset: 0x0042AE9B
+		// Token: 0x17006402 RID: 25602
+		// (get) Token: 0x0601D7E6 RID: 120806 RVA: 0x0044892C File Offset: 0x00446B2C
+		// (set) Token: 0x0601D7E7 RID: 120807 RVA: 0x00448945 File Offset: 0x00446B45
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public InterruptSkillInDelayPush InterruptSkillInDelayPush
@@ -1173,9 +1170,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700615F RID: 24927
-		// (get) Token: 0x0601CD1B RID: 118043 RVA: 0x0042CCB2 File Offset: 0x0042AEB2
-		// (set) Token: 0x0601CD1C RID: 118044 RVA: 0x0042CCCB File Offset: 0x0042AECB
+		// Token: 0x17006403 RID: 25603
+		// (get) Token: 0x0601D7E8 RID: 120808 RVA: 0x0044895C File Offset: 0x00446B5C
+		// (set) Token: 0x0601D7E9 RID: 120809 RVA: 0x00448975 File Offset: 0x00446B75
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TriggerExitSkillPush TriggerExitSkillPush
@@ -1195,9 +1192,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006160 RID: 24928
-		// (get) Token: 0x0601CD1D RID: 118045 RVA: 0x0042CCE2 File Offset: 0x0042AEE2
-		// (set) Token: 0x0601CD1E RID: 118046 RVA: 0x0042CCFB File Offset: 0x0042AEFB
+		// Token: 0x17006404 RID: 25604
+		// (get) Token: 0x0601D7EA RID: 120810 RVA: 0x0044898C File Offset: 0x00446B8C
+		// (set) Token: 0x0601D7EB RID: 120811 RVA: 0x004489A5 File Offset: 0x00446BA5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ActorVisiblePush ActorVisiblePush
@@ -1217,9 +1214,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006161 RID: 24929
-		// (get) Token: 0x0601CD1F RID: 118047 RVA: 0x0042CD12 File Offset: 0x0042AF12
-		// (set) Token: 0x0601CD20 RID: 118048 RVA: 0x0042CD2B File Offset: 0x0042AF2B
+		// Token: 0x17006405 RID: 25605
+		// (get) Token: 0x0601D7EC RID: 120812 RVA: 0x004489BC File Offset: 0x00446BBC
+		// (set) Token: 0x0601D7ED RID: 120813 RVA: 0x004489D5 File Offset: 0x00446BD5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BuffEffectPush BuffEffectPush
@@ -1239,9 +1236,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006162 RID: 24930
-		// (get) Token: 0x0601CD21 RID: 118049 RVA: 0x0042CD42 File Offset: 0x0042AF42
-		// (set) Token: 0x0601CD22 RID: 118050 RVA: 0x0042CD5B File Offset: 0x0042AF5B
+		// Token: 0x17006406 RID: 25606
+		// (get) Token: 0x0601D7EE RID: 120814 RVA: 0x004489EC File Offset: 0x00446BEC
+		// (set) Token: 0x0601D7EF RID: 120815 RVA: 0x00448A05 File Offset: 0x00446C05
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RTimeStopPush RTimeStopPush
@@ -1261,9 +1258,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006163 RID: 24931
-		// (get) Token: 0x0601CD23 RID: 118051 RVA: 0x0042CD72 File Offset: 0x0042AF72
-		// (set) Token: 0x0601CD24 RID: 118052 RVA: 0x0042CD8B File Offset: 0x0042AF8B
+		// Token: 0x17006407 RID: 25607
+		// (get) Token: 0x0601D7F0 RID: 120816 RVA: 0x00448A1C File Offset: 0x00446C1C
+		// (set) Token: 0x0601D7F1 RID: 120817 RVA: 0x00448A35 File Offset: 0x00446C35
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DrownEndTeleportPush DrownEndTeleportPush
@@ -1283,9 +1280,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006164 RID: 24932
-		// (get) Token: 0x0601CD25 RID: 118053 RVA: 0x0042CDA2 File Offset: 0x0042AFA2
-		// (set) Token: 0x0601CD26 RID: 118054 RVA: 0x0042CDBB File Offset: 0x0042AFBB
+		// Token: 0x17006408 RID: 25608
+		// (get) Token: 0x0601D7F2 RID: 120818 RVA: 0x00448A4C File Offset: 0x00446C4C
+		// (set) Token: 0x0601D7F3 RID: 120819 RVA: 0x00448A65 File Offset: 0x00446C65
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MonsterDrownPush MonsterDrownPush
@@ -1305,9 +1302,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006165 RID: 24933
-		// (get) Token: 0x0601CD27 RID: 118055 RVA: 0x0042CDD2 File Offset: 0x0042AFD2
-		// (set) Token: 0x0601CD28 RID: 118056 RVA: 0x0042CDEB File Offset: 0x0042AFEB
+		// Token: 0x17006409 RID: 25609
+		// (get) Token: 0x0601D7F4 RID: 120820 RVA: 0x00448A7C File Offset: 0x00446C7C
+		// (set) Token: 0x0601D7F5 RID: 120821 RVA: 0x00448A95 File Offset: 0x00446C95
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PassiveSkillRemovePush PassiveSkillRemovePush
@@ -1327,9 +1324,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006166 RID: 24934
-		// (get) Token: 0x0601CD29 RID: 118057 RVA: 0x0042CE02 File Offset: 0x0042B002
-		// (set) Token: 0x0601CD2A RID: 118058 RVA: 0x0042CE1B File Offset: 0x0042B01B
+		// Token: 0x1700640A RID: 25610
+		// (get) Token: 0x0601D7F6 RID: 120822 RVA: 0x00448AAC File Offset: 0x00446CAC
+		// (set) Token: 0x0601D7F7 RID: 120823 RVA: 0x00448AC5 File Offset: 0x00446CC5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RTimeStopInstPush RTimeStopInstPush
@@ -1349,9 +1346,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006167 RID: 24935
-		// (get) Token: 0x0601CD2B RID: 118059 RVA: 0x0042CE32 File Offset: 0x0042B032
-		// (set) Token: 0x0601CD2C RID: 118060 RVA: 0x0042CE4B File Offset: 0x0042B04B
+		// Token: 0x1700640B RID: 25611
+		// (get) Token: 0x0601D7F8 RID: 120824 RVA: 0x00448ADC File Offset: 0x00446CDC
+		// (set) Token: 0x0601D7F9 RID: 120825 RVA: 0x00448AF5 File Offset: 0x00446CF5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FsmPlayMontagePush FsmPlayMontagePush
@@ -1371,9 +1368,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006168 RID: 24936
-		// (get) Token: 0x0601CD2D RID: 118061 RVA: 0x0042CE62 File Offset: 0x0042B062
-		// (set) Token: 0x0601CD2E RID: 118062 RVA: 0x0042CE7B File Offset: 0x0042B07B
+		// Token: 0x1700640C RID: 25612
+		// (get) Token: 0x0601D7FA RID: 120826 RVA: 0x00448B0C File Offset: 0x00446D0C
+		// (set) Token: 0x0601D7FB RID: 120827 RVA: 0x00448B25 File Offset: 0x00446D25
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RTimeStopAnimPush RTimeStopAnimPush
@@ -1393,9 +1390,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006169 RID: 24937
-		// (get) Token: 0x0601CD2F RID: 118063 RVA: 0x0042CE92 File Offset: 0x0042B092
-		// (set) Token: 0x0601CD30 RID: 118064 RVA: 0x0042CEAB File Offset: 0x0042B0AB
+		// Token: 0x1700640D RID: 25613
+		// (get) Token: 0x0601D7FC RID: 120828 RVA: 0x00448B3C File Offset: 0x00446D3C
+		// (set) Token: 0x0601D7FD RID: 120829 RVA: 0x00448B55 File Offset: 0x00446D55
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public GameplayTagPush GameplayTagPush
@@ -1415,9 +1412,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700616A RID: 24938
-		// (get) Token: 0x0601CD31 RID: 118065 RVA: 0x0042CEC2 File Offset: 0x0042B0C2
-		// (set) Token: 0x0601CD32 RID: 118066 RVA: 0x0042CEDB File Offset: 0x0042B0DB
+		// Token: 0x1700640E RID: 25614
+		// (get) Token: 0x0601D7FE RID: 120830 RVA: 0x00448B6C File Offset: 0x00446D6C
+		// (set) Token: 0x0601D7FF RID: 120831 RVA: 0x00448B85 File Offset: 0x00446D85
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ExecuteQtePush ExecuteQtePush
@@ -1437,9 +1434,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700616B RID: 24939
-		// (get) Token: 0x0601CD33 RID: 118067 RVA: 0x0042CEF2 File Offset: 0x0042B0F2
-		// (set) Token: 0x0601CD34 RID: 118068 RVA: 0x0042CF0B File Offset: 0x0042B10B
+		// Token: 0x1700640F RID: 25615
+		// (get) Token: 0x0601D800 RID: 120832 RVA: 0x00448B9C File Offset: 0x00446D9C
+		// (set) Token: 0x0601D801 RID: 120833 RVA: 0x00448BB5 File Offset: 0x00446DB5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ClientCurrentRoleReportPush ClientCurrentRoleReportPush
@@ -1459,9 +1456,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700616C RID: 24940
-		// (get) Token: 0x0601CD35 RID: 118069 RVA: 0x0042CF22 File Offset: 0x0042B122
-		// (set) Token: 0x0601CD36 RID: 118070 RVA: 0x0042CF3B File Offset: 0x0042B13B
+		// Token: 0x17006410 RID: 25616
+		// (get) Token: 0x0601D802 RID: 120834 RVA: 0x00448BCC File Offset: 0x00446DCC
+		// (set) Token: 0x0601D803 RID: 120835 RVA: 0x00448BE5 File Offset: 0x00446DE5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PlayEntityMontagePush PlayEntityMontagePush
@@ -1481,9 +1478,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700616D RID: 24941
-		// (get) Token: 0x0601CD37 RID: 118071 RVA: 0x0042CF52 File Offset: 0x0042B152
-		// (set) Token: 0x0601CD38 RID: 118072 RVA: 0x0042CF6B File Offset: 0x0042B16B
+		// Token: 0x17006411 RID: 25617
+		// (get) Token: 0x0601D804 RID: 120836 RVA: 0x00448BFC File Offset: 0x00446DFC
+		// (set) Token: 0x0601D805 RID: 120837 RVA: 0x00448C15 File Offset: 0x00446E15
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BeforeHitPush BeforeHitPush
@@ -1503,9 +1500,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700616E RID: 24942
-		// (get) Token: 0x0601CD39 RID: 118073 RVA: 0x0042CF82 File Offset: 0x0042B182
-		// (set) Token: 0x0601CD3A RID: 118074 RVA: 0x0042CF9B File Offset: 0x0042B19B
+		// Token: 0x17006412 RID: 25618
+		// (get) Token: 0x0601D806 RID: 120838 RVA: 0x00448C2C File Offset: 0x00446E2C
+		// (set) Token: 0x0601D807 RID: 120839 RVA: 0x00448C45 File Offset: 0x00446E45
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NewLinkBurstPush NewLinkBurstPush
@@ -1525,9 +1522,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700616F RID: 24943
-		// (get) Token: 0x0601CD3B RID: 118075 RVA: 0x0042CFB2 File Offset: 0x0042B1B2
-		// (set) Token: 0x0601CD3C RID: 118076 RVA: 0x0042CFCB File Offset: 0x0042B1CB
+		// Token: 0x17006413 RID: 25619
+		// (get) Token: 0x0601D808 RID: 120840 RVA: 0x00448C5C File Offset: 0x00446E5C
+		// (set) Token: 0x0601D809 RID: 120841 RVA: 0x00448C75 File Offset: 0x00446E75
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RefreshBuffDurationPush RefreshBuffDurationPush
@@ -1547,9 +1544,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006170 RID: 24944
-		// (get) Token: 0x0601CD3D RID: 118077 RVA: 0x0042CFE2 File Offset: 0x0042B1E2
-		// (set) Token: 0x0601CD3E RID: 118078 RVA: 0x0042CFFB File Offset: 0x0042B1FB
+		// Token: 0x17006414 RID: 25620
+		// (get) Token: 0x0601D80A RID: 120842 RVA: 0x00448C8C File Offset: 0x00446E8C
+		// (set) Token: 0x0601D80B RID: 120843 RVA: 0x00448CA5 File Offset: 0x00446EA5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoleGoDownPush RoleGoDownPush
@@ -1569,9 +1566,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006171 RID: 24945
-		// (get) Token: 0x0601CD3F RID: 118079 RVA: 0x0042D012 File Offset: 0x0042B212
-		// (set) Token: 0x0601CD40 RID: 118080 RVA: 0x0042D02B File Offset: 0x0042B22B
+		// Token: 0x17006415 RID: 25621
+		// (get) Token: 0x0601D80C RID: 120844 RVA: 0x00448CBC File Offset: 0x00446EBC
+		// (set) Token: 0x0601D80D RID: 120845 RVA: 0x00448CD5 File Offset: 0x00446ED5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FsmConditionPassPush FsmConditionPassPush
@@ -1591,9 +1588,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006172 RID: 24946
-		// (get) Token: 0x0601CD41 RID: 118081 RVA: 0x0042D042 File Offset: 0x0042B242
-		// (set) Token: 0x0601CD42 RID: 118082 RVA: 0x0042D05B File Offset: 0x0042B25B
+		// Token: 0x17006416 RID: 25622
+		// (get) Token: 0x0601D80E RID: 120846 RVA: 0x00448CEC File Offset: 0x00446EEC
+		// (set) Token: 0x0601D80F RID: 120847 RVA: 0x00448D05 File Offset: 0x00446F05
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BuffEffectExecutePush BuffEffectExecutePush
@@ -1613,9 +1610,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006173 RID: 24947
-		// (get) Token: 0x0601CD43 RID: 118083 RVA: 0x0042D072 File Offset: 0x0042B272
-		// (set) Token: 0x0601CD44 RID: 118084 RVA: 0x0042D08B File Offset: 0x0042B28B
+		// Token: 0x17006417 RID: 25623
+		// (get) Token: 0x0601D810 RID: 120848 RVA: 0x00448D1C File Offset: 0x00446F1C
+		// (set) Token: 0x0601D811 RID: 120849 RVA: 0x00448D35 File Offset: 0x00446F35
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public VisionTriggerPush VisionTriggerPush
@@ -1635,9 +1632,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006174 RID: 24948
-		// (get) Token: 0x0601CD45 RID: 118085 RVA: 0x0042D0A2 File Offset: 0x0042B2A2
-		// (set) Token: 0x0601CD46 RID: 118086 RVA: 0x0042D0BB File Offset: 0x0042B2BB
+		// Token: 0x17006418 RID: 25624
+		// (get) Token: 0x0601D812 RID: 120850 RVA: 0x00448D4C File Offset: 0x00446F4C
+		// (set) Token: 0x0601D813 RID: 120851 RVA: 0x00448D65 File Offset: 0x00446F65
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MotorIsEnablePush MotorIsEnablePush
@@ -1657,9 +1654,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006175 RID: 24949
-		// (get) Token: 0x0601CD47 RID: 118087 RVA: 0x0042D0D2 File Offset: 0x0042B2D2
-		// (set) Token: 0x0601CD48 RID: 118088 RVA: 0x0042D0EB File Offset: 0x0042B2EB
+		// Token: 0x17006419 RID: 25625
+		// (get) Token: 0x0601D814 RID: 120852 RVA: 0x00448D7C File Offset: 0x00446F7C
+		// (set) Token: 0x0601D815 RID: 120853 RVA: 0x00448D95 File Offset: 0x00446F95
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MotorSummonAndRidePush MotorSummonAndRidePush
@@ -1679,9 +1676,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006176 RID: 24950
-		// (get) Token: 0x0601CD49 RID: 118089 RVA: 0x0042D102 File Offset: 0x0042B302
-		// (set) Token: 0x0601CD4A RID: 118090 RVA: 0x0042D11B File Offset: 0x0042B31B
+		// Token: 0x1700641A RID: 25626
+		// (get) Token: 0x0601D816 RID: 120854 RVA: 0x00448DAC File Offset: 0x00446FAC
+		// (set) Token: 0x0601D817 RID: 120855 RVA: 0x00448DC5 File Offset: 0x00446FC5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BulletPatternPush BulletPatternPush
@@ -1701,9 +1698,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006177 RID: 24951
-		// (get) Token: 0x0601CD4B RID: 118091 RVA: 0x0042D132 File Offset: 0x0042B332
-		// (set) Token: 0x0601CD4C RID: 118092 RVA: 0x0042D14B File Offset: 0x0042B34B
+		// Token: 0x1700641B RID: 25627
+		// (get) Token: 0x0601D818 RID: 120856 RVA: 0x00448DDC File Offset: 0x00446FDC
+		// (set) Token: 0x0601D819 RID: 120857 RVA: 0x00448DF5 File Offset: 0x00446FF5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public QuickHackRamVerifyPush QuickHackRamVerifyPush
@@ -1723,9 +1720,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006178 RID: 24952
-		// (get) Token: 0x0601CD4D RID: 118093 RVA: 0x0042D162 File Offset: 0x0042B362
-		// (set) Token: 0x0601CD4E RID: 118094 RVA: 0x0042D17B File Offset: 0x0042B37B
+		// Token: 0x1700641C RID: 25628
+		// (get) Token: 0x0601D81A RID: 120858 RVA: 0x00448E0C File Offset: 0x0044700C
+		// (set) Token: 0x0601D81B RID: 120859 RVA: 0x00448E25 File Offset: 0x00447025
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public QuickHackOpenPush QuickHackOpenPush
@@ -1745,9 +1742,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x17006179 RID: 24953
-		// (get) Token: 0x0601CD4F RID: 118095 RVA: 0x0042D192 File Offset: 0x0042B392
-		// (set) Token: 0x0601CD50 RID: 118096 RVA: 0x0042D1AB File Offset: 0x0042B3AB
+		// Token: 0x1700641D RID: 25629
+		// (get) Token: 0x0601D81C RID: 120860 RVA: 0x00448E3C File Offset: 0x0044703C
+		// (set) Token: 0x0601D81D RID: 120861 RVA: 0x00448E55 File Offset: 0x00447055
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DodgeInfoPush DodgeInfoPush
@@ -1767,31 +1764,9 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700617A RID: 24954
-		// (get) Token: 0x0601CD51 RID: 118097 RVA: 0x0042D1C2 File Offset: 0x0042B3C2
-		// (set) Token: 0x0601CD52 RID: 118098 RVA: 0x0042D1DB File Offset: 0x0042B3DB
-		[DebuggerNonUserCode]
-		[GeneratedCode("protoc", null)]
-		public SwitchDarkTideWeaponPush SwitchDarkTideWeaponPush
-		{
-			get
-			{
-				if (this.messageCase_ != CombatPushData.MessageOneofCase.SwitchDarkTideWeaponPush)
-				{
-					return null;
-				}
-				return (SwitchDarkTideWeaponPush)this.message_;
-			}
-			set
-			{
-				this.message_ = value;
-				this.messageCase_ = ((value == null) ? CombatPushData.MessageOneofCase.None : CombatPushData.MessageOneofCase.SwitchDarkTideWeaponPush);
-			}
-		}
-
-		// Token: 0x1700617B RID: 24955
-		// (get) Token: 0x0601CD53 RID: 118099 RVA: 0x0042D1F2 File Offset: 0x0042B3F2
-		// (set) Token: 0x0601CD54 RID: 118100 RVA: 0x0042D20B File Offset: 0x0042B40B
+		// Token: 0x1700641E RID: 25630
+		// (get) Token: 0x0601D81E RID: 120862 RVA: 0x00448E6C File Offset: 0x0044706C
+		// (set) Token: 0x0601D81F RID: 120863 RVA: 0x00448E85 File Offset: 0x00447085
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RoleTrialSceneRollbackPush RoleTrialSceneRollbackPush
@@ -1811,8 +1786,8 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x1700617C RID: 24956
-		// (get) Token: 0x0601CD55 RID: 118101 RVA: 0x0042D222 File Offset: 0x0042B422
+		// Token: 0x1700641F RID: 25631
+		// (get) Token: 0x0601D820 RID: 120864 RVA: 0x00448E9C File Offset: 0x0044709C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CombatPushData.MessageOneofCase MessageCase
@@ -1823,7 +1798,7 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x0601CD56 RID: 118102 RVA: 0x0042D22A File Offset: 0x0042B42A
+		// Token: 0x0601D821 RID: 120865 RVA: 0x00448EA4 File Offset: 0x004470A4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearMessage()
@@ -1832,7 +1807,7 @@ namespace Aki.Protocol.CombatMessage
 			this.message_ = null;
 		}
 
-		// Token: 0x0601CD57 RID: 118103 RVA: 0x0042D23A File Offset: 0x0042B43A
+		// Token: 0x0601D822 RID: 120866 RVA: 0x00448EB4 File Offset: 0x004470B4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -1840,15 +1815,15 @@ namespace Aki.Protocol.CombatMessage
 			return this.Equals(other as CombatPushData);
 		}
 
-		// Token: 0x0601CD58 RID: 118104 RVA: 0x0042D248 File Offset: 0x0042B448
+		// Token: 0x0601D823 RID: 120867 RVA: 0x00448EC4 File Offset: 0x004470C4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(CombatPushData other)
 		{
-			return other != null && (other == this || (object.Equals(this.CombatCommon, other.CombatCommon) && object.Equals(this.ApplyBuffS2CResponsePush, other.ApplyBuffS2CResponsePush) && object.Equals(this.RemoveBuffS2CResponsePush, other.RemoveBuffS2CResponsePush) && object.Equals(this.RemoveBuffByIdS2CResponsePush, other.RemoveBuffByIdS2CResponsePush) && object.Equals(this.CreateBulletPush, other.CreateBulletPush) && object.Equals(this.DestroyBulletPush, other.DestroyBulletPush) && object.Equals(this.ApplyGameplayEffectPush, other.ApplyGameplayEffectPush) && object.Equals(this.RemoveGameplayEffectPush, other.RemoveGameplayEffectPush) && object.Equals(this.HitEndPush, other.HitEndPush) && object.Equals(this.EndSkillPush, other.EndSkillPush) && object.Equals(this.PartUpdatePush, other.PartUpdatePush) && object.Equals(this.MaterialPush, other.MaterialPush) && object.Equals(this.GameplayCuePush, other.GameplayCuePush) && object.Equals(this.EntityIsVisiblePush, other.EntityIsVisiblePush) && object.Equals(this.SwitchCharacterStatePush, other.SwitchCharacterStatePush) && object.Equals(this.LogicStateInitPush, other.LogicStateInitPush) && object.Equals(this.SwitchLogicStatePush, other.SwitchLogicStatePush) && object.Equals(this.AnimationStateChangedPush, other.AnimationStateChangedPush) && object.Equals(this.AnimationStateInitPush, other.AnimationStateInitPush) && object.Equals(this.ModifyBulletParamsPush, other.ModifyBulletParamsPush) && object.Equals(this.DrownPush, other.DrownPush) && object.Equals(this.ActivateBuffPush, other.ActivateBuffPush) && object.Equals(this.AiInformationPush, other.AiInformationPush) && object.Equals(this.ToughCalcExtraRatioChangePush, other.ToughCalcExtraRatioChangePush) && object.Equals(this.BattleStateChangePush, other.BattleStateChangePush) && object.Equals(this.AnimationGameplayTagPush, other.AnimationGameplayTagPush) && object.Equals(this.BoneVisibleChangePush, other.BoneVisibleChangePush) && object.Equals(this.AiBlackboardsPush, other.AiBlackboardsPush) && object.Equals(this.AiBlackboardCdPush, other.AiBlackboardCdPush) && object.Equals(this.AiHatePush, other.AiHatePush) && object.Equals(this.MonsterBoomPush, other.MonsterBoomPush) && object.Equals(this.CaughtPush, other.CaughtPush) && object.Equals(this.EntityStaticHookMovePush, other.EntityStaticHookMovePush) && object.Equals(this.ChangeStateConfirmPush, other.ChangeStateConfirmPush) && object.Equals(this.BuffStackCountPush, other.BuffStackCountPush) && object.Equals(this.ANStartPush, other.ANStartPush) && object.Equals(this.UseSkillFailPush, other.UseSkillFailPush) && object.Equals(this.EnterViewDirectionPush, other.EnterViewDirectionPush) && object.Equals(this.ExitViewDirectionPush, other.ExitViewDirectionPush) && object.Equals(this.PassiveSkillAddPush, other.PassiveSkillAddPush) && object.Equals(this.InterruptSkillInDelayPush, other.InterruptSkillInDelayPush) && object.Equals(this.TriggerExitSkillPush, other.TriggerExitSkillPush) && object.Equals(this.ActorVisiblePush, other.ActorVisiblePush) && object.Equals(this.BuffEffectPush, other.BuffEffectPush) && object.Equals(this.RTimeStopPush, other.RTimeStopPush) && object.Equals(this.DrownEndTeleportPush, other.DrownEndTeleportPush) && object.Equals(this.MonsterDrownPush, other.MonsterDrownPush) && object.Equals(this.PassiveSkillRemovePush, other.PassiveSkillRemovePush) && object.Equals(this.RTimeStopInstPush, other.RTimeStopInstPush) && object.Equals(this.FsmPlayMontagePush, other.FsmPlayMontagePush) && object.Equals(this.RTimeStopAnimPush, other.RTimeStopAnimPush) && object.Equals(this.GameplayTagPush, other.GameplayTagPush) && object.Equals(this.ExecuteQtePush, other.ExecuteQtePush) && object.Equals(this.ClientCurrentRoleReportPush, other.ClientCurrentRoleReportPush) && object.Equals(this.PlayEntityMontagePush, other.PlayEntityMontagePush) && object.Equals(this.BeforeHitPush, other.BeforeHitPush) && object.Equals(this.NewLinkBurstPush, other.NewLinkBurstPush) && object.Equals(this.RefreshBuffDurationPush, other.RefreshBuffDurationPush) && object.Equals(this.RoleGoDownPush, other.RoleGoDownPush) && object.Equals(this.FsmConditionPassPush, other.FsmConditionPassPush) && object.Equals(this.BuffEffectExecutePush, other.BuffEffectExecutePush) && object.Equals(this.VisionTriggerPush, other.VisionTriggerPush) && object.Equals(this.MotorIsEnablePush, other.MotorIsEnablePush) && object.Equals(this.MotorSummonAndRidePush, other.MotorSummonAndRidePush) && object.Equals(this.BulletPatternPush, other.BulletPatternPush) && object.Equals(this.QuickHackRamVerifyPush, other.QuickHackRamVerifyPush) && object.Equals(this.QuickHackOpenPush, other.QuickHackOpenPush) && object.Equals(this.DodgeInfoPush, other.DodgeInfoPush) && object.Equals(this.SwitchDarkTideWeaponPush, other.SwitchDarkTideWeaponPush) && object.Equals(this.RoleTrialSceneRollbackPush, other.RoleTrialSceneRollbackPush) && this.MessageCase == other.MessageCase && object.Equals(this._unknownFields, other._unknownFields)));
+			return other != null && (other == this || (object.Equals(this.CombatCommon, other.CombatCommon) && object.Equals(this.ApplyBuffS2CResponsePush, other.ApplyBuffS2CResponsePush) && object.Equals(this.RemoveBuffS2CResponsePush, other.RemoveBuffS2CResponsePush) && object.Equals(this.RemoveBuffByIdS2CResponsePush, other.RemoveBuffByIdS2CResponsePush) && object.Equals(this.CreateBulletPush, other.CreateBulletPush) && object.Equals(this.DestroyBulletPush, other.DestroyBulletPush) && object.Equals(this.ApplyGameplayEffectPush, other.ApplyGameplayEffectPush) && object.Equals(this.RemoveGameplayEffectPush, other.RemoveGameplayEffectPush) && object.Equals(this.HitEndPush, other.HitEndPush) && object.Equals(this.EndSkillPush, other.EndSkillPush) && object.Equals(this.PartUpdatePush, other.PartUpdatePush) && object.Equals(this.MaterialPush, other.MaterialPush) && object.Equals(this.GameplayCuePush, other.GameplayCuePush) && object.Equals(this.EntityIsVisiblePush, other.EntityIsVisiblePush) && object.Equals(this.SwitchCharacterStatePush, other.SwitchCharacterStatePush) && object.Equals(this.LogicStateInitPush, other.LogicStateInitPush) && object.Equals(this.SwitchLogicStatePush, other.SwitchLogicStatePush) && object.Equals(this.AnimationStateChangedPush, other.AnimationStateChangedPush) && object.Equals(this.AnimationStateInitPush, other.AnimationStateInitPush) && object.Equals(this.ModifyBulletParamsPush, other.ModifyBulletParamsPush) && object.Equals(this.DrownPush, other.DrownPush) && object.Equals(this.ActivateBuffPush, other.ActivateBuffPush) && object.Equals(this.AiInformationPush, other.AiInformationPush) && object.Equals(this.ToughCalcExtraRatioChangePush, other.ToughCalcExtraRatioChangePush) && object.Equals(this.BattleStateChangePush, other.BattleStateChangePush) && object.Equals(this.AnimationGameplayTagPush, other.AnimationGameplayTagPush) && object.Equals(this.BoneVisibleChangePush, other.BoneVisibleChangePush) && object.Equals(this.AiBlackboardsPush, other.AiBlackboardsPush) && object.Equals(this.AiBlackboardCdPush, other.AiBlackboardCdPush) && object.Equals(this.AiHatePush, other.AiHatePush) && object.Equals(this.MonsterBoomPush, other.MonsterBoomPush) && object.Equals(this.CaughtPush, other.CaughtPush) && object.Equals(this.EntityStaticHookMovePush, other.EntityStaticHookMovePush) && object.Equals(this.ChangeStateConfirmPush, other.ChangeStateConfirmPush) && object.Equals(this.BuffStackCountPush, other.BuffStackCountPush) && object.Equals(this.ANStartPush, other.ANStartPush) && object.Equals(this.UseSkillFailPush, other.UseSkillFailPush) && object.Equals(this.EnterViewDirectionPush, other.EnterViewDirectionPush) && object.Equals(this.ExitViewDirectionPush, other.ExitViewDirectionPush) && object.Equals(this.PassiveSkillAddPush, other.PassiveSkillAddPush) && object.Equals(this.InterruptSkillInDelayPush, other.InterruptSkillInDelayPush) && object.Equals(this.TriggerExitSkillPush, other.TriggerExitSkillPush) && object.Equals(this.ActorVisiblePush, other.ActorVisiblePush) && object.Equals(this.BuffEffectPush, other.BuffEffectPush) && object.Equals(this.RTimeStopPush, other.RTimeStopPush) && object.Equals(this.DrownEndTeleportPush, other.DrownEndTeleportPush) && object.Equals(this.MonsterDrownPush, other.MonsterDrownPush) && object.Equals(this.PassiveSkillRemovePush, other.PassiveSkillRemovePush) && object.Equals(this.RTimeStopInstPush, other.RTimeStopInstPush) && object.Equals(this.FsmPlayMontagePush, other.FsmPlayMontagePush) && object.Equals(this.RTimeStopAnimPush, other.RTimeStopAnimPush) && object.Equals(this.GameplayTagPush, other.GameplayTagPush) && object.Equals(this.ExecuteQtePush, other.ExecuteQtePush) && object.Equals(this.ClientCurrentRoleReportPush, other.ClientCurrentRoleReportPush) && object.Equals(this.PlayEntityMontagePush, other.PlayEntityMontagePush) && object.Equals(this.BeforeHitPush, other.BeforeHitPush) && object.Equals(this.NewLinkBurstPush, other.NewLinkBurstPush) && object.Equals(this.RefreshBuffDurationPush, other.RefreshBuffDurationPush) && object.Equals(this.RoleGoDownPush, other.RoleGoDownPush) && object.Equals(this.FsmConditionPassPush, other.FsmConditionPassPush) && object.Equals(this.BuffEffectExecutePush, other.BuffEffectExecutePush) && object.Equals(this.VisionTriggerPush, other.VisionTriggerPush) && object.Equals(this.MotorIsEnablePush, other.MotorIsEnablePush) && object.Equals(this.MotorSummonAndRidePush, other.MotorSummonAndRidePush) && object.Equals(this.BulletPatternPush, other.BulletPatternPush) && object.Equals(this.QuickHackRamVerifyPush, other.QuickHackRamVerifyPush) && object.Equals(this.QuickHackOpenPush, other.QuickHackOpenPush) && object.Equals(this.DodgeInfoPush, other.DodgeInfoPush) && object.Equals(this.RoleTrialSceneRollbackPush, other.RoleTrialSceneRollbackPush) && this.MessageCase == other.MessageCase && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601CD59 RID: 118105 RVA: 0x0042D840 File Offset: 0x0042BA40
+		// Token: 0x0601D824 RID: 120868 RVA: 0x004494A8 File Offset: 0x004476A8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -2126,10 +2101,6 @@ namespace Aki.Protocol.CombatMessage
 			{
 				num ^= this.DodgeInfoPush.GetHashCode();
 			}
-			if (this.messageCase_ == CombatPushData.MessageOneofCase.SwitchDarkTideWeaponPush)
-			{
-				num ^= this.SwitchDarkTideWeaponPush.GetHashCode();
-			}
 			if (this.messageCase_ == CombatPushData.MessageOneofCase.RoleTrialSceneRollbackPush)
 			{
 				num ^= this.RoleTrialSceneRollbackPush.GetHashCode();
@@ -2142,7 +2113,7 @@ namespace Aki.Protocol.CombatMessage
 			return num;
 		}
 
-		// Token: 0x0601CD5A RID: 118106 RVA: 0x0042DEF8 File Offset: 0x0042C0F8
+		// Token: 0x0601D825 RID: 120869 RVA: 0x00449B48 File Offset: 0x00447D48
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -2150,7 +2121,7 @@ namespace Aki.Protocol.CombatMessage
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601CD5B RID: 118107 RVA: 0x0042DF05 File Offset: 0x0042C105
+		// Token: 0x0601D826 RID: 120870 RVA: 0x00449B55 File Offset: 0x00447D55
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -2158,7 +2129,7 @@ namespace Aki.Protocol.CombatMessage
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601CD5C RID: 118108 RVA: 0x0042DF10 File Offset: 0x0042C110
+		// Token: 0x0601D827 RID: 120871 RVA: 0x00449B60 File Offset: 0x00447D60
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -2503,11 +2474,6 @@ namespace Aki.Protocol.CombatMessage
 				output.WriteRawTag(178, 4);
 				output.WriteMessage(this.DodgeInfoPush);
 			}
-			if (this.messageCase_ == CombatPushData.MessageOneofCase.SwitchDarkTideWeaponPush)
-			{
-				output.WriteRawTag(186, 4);
-				output.WriteMessage(this.SwitchDarkTideWeaponPush);
-			}
 			if (this.messageCase_ == CombatPushData.MessageOneofCase.RoleTrialSceneRollbackPush)
 			{
 				output.WriteRawTag(194, 4);
@@ -2519,7 +2485,7 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x0601CD5D RID: 118109 RVA: 0x0042E844 File Offset: 0x0042CA44
+		// Token: 0x0601D828 RID: 120872 RVA: 0x0044A470 File Offset: 0x00448670
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -2797,10 +2763,6 @@ namespace Aki.Protocol.CombatMessage
 			{
 				num += 2 + CodedOutputStream.ComputeMessageSize(this.DodgeInfoPush);
 			}
-			if (this.messageCase_ == CombatPushData.MessageOneofCase.SwitchDarkTideWeaponPush)
-			{
-				num += 2 + CodedOutputStream.ComputeMessageSize(this.SwitchDarkTideWeaponPush);
-			}
 			if (this.messageCase_ == CombatPushData.MessageOneofCase.RoleTrialSceneRollbackPush)
 			{
 				num += 2 + CodedOutputStream.ComputeMessageSize(this.RoleTrialSceneRollbackPush);
@@ -2812,7 +2774,7 @@ namespace Aki.Protocol.CombatMessage
 			return num;
 		}
 
-		// Token: 0x0601CD5E RID: 118110 RVA: 0x0042EF80 File Offset: 0x0042D180
+		// Token: 0x0601D829 RID: 120873 RVA: 0x0044AB94 File Offset: 0x00448D94
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CombatPushData other)
@@ -3300,13 +3262,6 @@ namespace Aki.Protocol.CombatMessage
 				}
 				this.DodgeInfoPush.MergeFrom(other.DodgeInfoPush);
 				break;
-			case CombatPushData.MessageOneofCase.SwitchDarkTideWeaponPush:
-				if (this.SwitchDarkTideWeaponPush == null)
-				{
-					this.SwitchDarkTideWeaponPush = new SwitchDarkTideWeaponPush();
-				}
-				this.SwitchDarkTideWeaponPush.MergeFrom(other.SwitchDarkTideWeaponPush);
-				break;
 			case CombatPushData.MessageOneofCase.RoleTrialSceneRollbackPush:
 				if (this.RoleTrialSceneRollbackPush == null)
 				{
@@ -3318,7 +3273,7 @@ namespace Aki.Protocol.CombatMessage
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601CD5F RID: 118111 RVA: 0x0042FBFB File Offset: 0x0042DDFB
+		// Token: 0x0601D82A RID: 120874 RVA: 0x0044B7E6 File Offset: 0x004499E6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -3326,7 +3281,7 @@ namespace Aki.Protocol.CombatMessage
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601CD60 RID: 118112 RVA: 0x0042FC04 File Offset: 0x0042DE04
+		// Token: 0x0601D82B RID: 120875 RVA: 0x0044B7F0 File Offset: 0x004499F0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -3338,7 +3293,7 @@ namespace Aki.Protocol.CombatMessage
 				{
 					return;
 				}
-				if (num <= 298U)
+				if (num <= 290U)
 				{
 					if (num <= 154U)
 					{
@@ -3561,7 +3516,7 @@ namespace Aki.Protocol.CombatMessage
 							}
 						}
 					}
-					else if (num <= 226U)
+					else if (num <= 218U)
 					{
 						if (num <= 186U)
 						{
@@ -3665,6 +3620,12 @@ namespace Aki.Protocol.CombatMessage
 								this.BattleStateChangePush = battleStateChangePush;
 								continue;
 							}
+						}
+					}
+					else if (num <= 250U)
+					{
+						if (num <= 234U)
+						{
 							if (num == 226U)
 							{
 								AnimationGameplayTagPush animationGameplayTagPush = new AnimationGameplayTagPush();
@@ -3676,12 +3637,6 @@ namespace Aki.Protocol.CombatMessage
 								this.AnimationGameplayTagPush = animationGameplayTagPush;
 								continue;
 							}
-						}
-					}
-					else if (num <= 258U)
-					{
-						if (num <= 242U)
-						{
 							if (num == 234U)
 							{
 								BoneVisibleChangePush boneVisibleChangePush = new BoneVisibleChangePush();
@@ -3693,6 +3648,9 @@ namespace Aki.Protocol.CombatMessage
 								this.BoneVisibleChangePush = boneVisibleChangePush;
 								continue;
 							}
+						}
+						else
+						{
 							if (num == 242U)
 							{
 								AiBlackboardsPush aiBlackboardsPush = new AiBlackboardsPush();
@@ -3704,9 +3662,6 @@ namespace Aki.Protocol.CombatMessage
 								this.AiBlackboardsPush = aiBlackboardsPush;
 								continue;
 							}
-						}
-						else
-						{
 							if (num == 250U)
 							{
 								AiBlackboardCdPush aiBlackboardCdPush = new AiBlackboardCdPush();
@@ -3718,21 +3673,21 @@ namespace Aki.Protocol.CombatMessage
 								this.AiBlackboardCdPush = aiBlackboardCdPush;
 								continue;
 							}
-							if (num == 258U)
-							{
-								AiHatePush aiHatePush = new AiHatePush();
-								if (this.messageCase_ == CombatPushData.MessageOneofCase.AiHatePush)
-								{
-									aiHatePush.MergeFrom(this.AiHatePush);
-								}
-								input.ReadMessage(aiHatePush);
-								this.AiHatePush = aiHatePush;
-								continue;
-							}
 						}
 					}
-					else if (num <= 274U)
+					else if (num <= 266U)
 					{
+						if (num == 258U)
+						{
+							AiHatePush aiHatePush = new AiHatePush();
+							if (this.messageCase_ == CombatPushData.MessageOneofCase.AiHatePush)
+							{
+								aiHatePush.MergeFrom(this.AiHatePush);
+							}
+							input.ReadMessage(aiHatePush);
+							this.AiHatePush = aiHatePush;
+							continue;
+						}
 						if (num == 266U)
 						{
 							MonsterBoomPush monsterBoomPush = new MonsterBoomPush();
@@ -3744,6 +3699,9 @@ namespace Aki.Protocol.CombatMessage
 							this.MonsterBoomPush = monsterBoomPush;
 							continue;
 						}
+					}
+					else
+					{
 						if (num == 274U)
 						{
 							CaughtPush caughtPush = new CaughtPush();
@@ -3755,9 +3713,6 @@ namespace Aki.Protocol.CombatMessage
 							this.CaughtPush = caughtPush;
 							continue;
 						}
-					}
-					else
-					{
 						if (num == 282U)
 						{
 							EntityStaticHookMovePush entityStaticHookMovePush = new EntityStaticHookMovePush();
@@ -3780,27 +3735,27 @@ namespace Aki.Protocol.CombatMessage
 							this.ChangeStateConfirmPush = changeStateConfirmPush;
 							continue;
 						}
-						if (num == 298U)
-						{
-							BuffStackCountPush buffStackCountPush = new BuffStackCountPush();
-							if (this.messageCase_ == CombatPushData.MessageOneofCase.BuffStackCountPush)
-							{
-								buffStackCountPush.MergeFrom(this.BuffStackCountPush);
-							}
-							input.ReadMessage(buffStackCountPush);
-							this.BuffStackCountPush = buffStackCountPush;
-							continue;
-						}
 					}
 				}
-				else if (num <= 434U)
+				else if (num <= 426U)
 				{
-					if (num <= 362U)
+					if (num <= 354U)
 					{
-						if (num <= 330U)
+						if (num <= 322U)
 						{
-							if (num <= 314U)
+							if (num <= 306U)
 							{
+								if (num == 298U)
+								{
+									BuffStackCountPush buffStackCountPush = new BuffStackCountPush();
+									if (this.messageCase_ == CombatPushData.MessageOneofCase.BuffStackCountPush)
+									{
+										buffStackCountPush.MergeFrom(this.BuffStackCountPush);
+									}
+									input.ReadMessage(buffStackCountPush);
+									this.BuffStackCountPush = buffStackCountPush;
+									continue;
+								}
 								if (num == 306U)
 								{
 									ANStartPush anstartPush = new ANStartPush();
@@ -3812,6 +3767,9 @@ namespace Aki.Protocol.CombatMessage
 									this.ANStartPush = anstartPush;
 									continue;
 								}
+							}
+							else
+							{
 								if (num == 314U)
 								{
 									UseSkillFailPush useSkillFailPush = new UseSkillFailPush();
@@ -3823,9 +3781,6 @@ namespace Aki.Protocol.CombatMessage
 									this.UseSkillFailPush = useSkillFailPush;
 									continue;
 								}
-							}
-							else
-							{
 								if (num == 322U)
 								{
 									EnterViewDirectionPush enterViewDirectionPush = new EnterViewDirectionPush();
@@ -3837,21 +3792,21 @@ namespace Aki.Protocol.CombatMessage
 									this.EnterViewDirectionPush = enterViewDirectionPush;
 									continue;
 								}
-								if (num == 330U)
-								{
-									ExitViewDirectionPush exitViewDirectionPush = new ExitViewDirectionPush();
-									if (this.messageCase_ == CombatPushData.MessageOneofCase.ExitViewDirectionPush)
-									{
-										exitViewDirectionPush.MergeFrom(this.ExitViewDirectionPush);
-									}
-									input.ReadMessage(exitViewDirectionPush);
-									this.ExitViewDirectionPush = exitViewDirectionPush;
-									continue;
-								}
 							}
 						}
-						else if (num <= 346U)
+						else if (num <= 338U)
 						{
+							if (num == 330U)
+							{
+								ExitViewDirectionPush exitViewDirectionPush = new ExitViewDirectionPush();
+								if (this.messageCase_ == CombatPushData.MessageOneofCase.ExitViewDirectionPush)
+								{
+									exitViewDirectionPush.MergeFrom(this.ExitViewDirectionPush);
+								}
+								input.ReadMessage(exitViewDirectionPush);
+								this.ExitViewDirectionPush = exitViewDirectionPush;
+								continue;
+							}
 							if (num == 338U)
 							{
 								PassiveSkillAddPush passiveSkillAddPush = new PassiveSkillAddPush();
@@ -3863,6 +3818,9 @@ namespace Aki.Protocol.CombatMessage
 								this.PassiveSkillAddPush = passiveSkillAddPush;
 								continue;
 							}
+						}
+						else
+						{
 							if (num == 346U)
 							{
 								InterruptSkillInDelayPush interruptSkillInDelayPush = new InterruptSkillInDelayPush();
@@ -3874,9 +3832,6 @@ namespace Aki.Protocol.CombatMessage
 								this.InterruptSkillInDelayPush = interruptSkillInDelayPush;
 								continue;
 							}
-						}
-						else
-						{
 							if (num == 354U)
 							{
 								TriggerExitSkillPush triggerExitSkillPush = new TriggerExitSkillPush();
@@ -3888,6 +3843,12 @@ namespace Aki.Protocol.CombatMessage
 								this.TriggerExitSkillPush = triggerExitSkillPush;
 								continue;
 							}
+						}
+					}
+					else if (num <= 386U)
+					{
+						if (num <= 370U)
+						{
 							if (num == 362U)
 							{
 								ActorVisiblePush actorVisiblePush = new ActorVisiblePush();
@@ -3899,12 +3860,6 @@ namespace Aki.Protocol.CombatMessage
 								this.ActorVisiblePush = actorVisiblePush;
 								continue;
 							}
-						}
-					}
-					else if (num <= 394U)
-					{
-						if (num <= 378U)
-						{
 							if (num == 370U)
 							{
 								BuffEffectPush buffEffectPush = new BuffEffectPush();
@@ -3916,6 +3871,9 @@ namespace Aki.Protocol.CombatMessage
 								this.BuffEffectPush = buffEffectPush;
 								continue;
 							}
+						}
+						else
+						{
 							if (num == 378U)
 							{
 								RTimeStopPush rtimeStopPush = new RTimeStopPush();
@@ -3927,9 +3885,6 @@ namespace Aki.Protocol.CombatMessage
 								this.RTimeStopPush = rtimeStopPush;
 								continue;
 							}
-						}
-						else
-						{
 							if (num == 386U)
 							{
 								DrownEndTeleportPush drownEndTeleportPush = new DrownEndTeleportPush();
@@ -3941,21 +3896,21 @@ namespace Aki.Protocol.CombatMessage
 								this.DrownEndTeleportPush = drownEndTeleportPush;
 								continue;
 							}
-							if (num == 394U)
-							{
-								MonsterDrownPush monsterDrownPush = new MonsterDrownPush();
-								if (this.messageCase_ == CombatPushData.MessageOneofCase.MonsterDrownPush)
-								{
-									monsterDrownPush.MergeFrom(this.MonsterDrownPush);
-								}
-								input.ReadMessage(monsterDrownPush);
-								this.MonsterDrownPush = monsterDrownPush;
-								continue;
-							}
 						}
 					}
-					else if (num <= 410U)
+					else if (num <= 402U)
 					{
+						if (num == 394U)
+						{
+							MonsterDrownPush monsterDrownPush = new MonsterDrownPush();
+							if (this.messageCase_ == CombatPushData.MessageOneofCase.MonsterDrownPush)
+							{
+								monsterDrownPush.MergeFrom(this.MonsterDrownPush);
+							}
+							input.ReadMessage(monsterDrownPush);
+							this.MonsterDrownPush = monsterDrownPush;
+							continue;
+						}
 						if (num == 402U)
 						{
 							PassiveSkillRemovePush passiveSkillRemovePush = new PassiveSkillRemovePush();
@@ -3967,6 +3922,9 @@ namespace Aki.Protocol.CombatMessage
 							this.PassiveSkillRemovePush = passiveSkillRemovePush;
 							continue;
 						}
+					}
+					else
+					{
 						if (num == 410U)
 						{
 							RTimeStopInstPush rtimeStopInstPush = new RTimeStopInstPush();
@@ -3978,9 +3936,6 @@ namespace Aki.Protocol.CombatMessage
 							this.RTimeStopInstPush = rtimeStopInstPush;
 							continue;
 						}
-					}
-					else
-					{
 						if (num == 418U)
 						{
 							FsmPlayMontagePush fsmPlayMontagePush = new FsmPlayMontagePush();
@@ -4003,25 +3958,25 @@ namespace Aki.Protocol.CombatMessage
 							this.RTimeStopAnimPush = rtimeStopAnimPush;
 							continue;
 						}
-						if (num == 434U)
-						{
-							GameplayTagPush gameplayTagPush = new GameplayTagPush();
-							if (this.messageCase_ == CombatPushData.MessageOneofCase.GameplayTagPush)
-							{
-								gameplayTagPush.MergeFrom(this.GameplayTagPush);
-							}
-							input.ReadMessage(gameplayTagPush);
-							this.GameplayTagPush = gameplayTagPush;
-							continue;
-						}
 					}
 				}
-				else if (num <= 506U)
+				else if (num <= 498U)
 				{
-					if (num <= 466U)
+					if (num <= 458U)
 					{
-						if (num <= 450U)
+						if (num <= 442U)
 						{
+							if (num == 434U)
+							{
+								GameplayTagPush gameplayTagPush = new GameplayTagPush();
+								if (this.messageCase_ == CombatPushData.MessageOneofCase.GameplayTagPush)
+								{
+									gameplayTagPush.MergeFrom(this.GameplayTagPush);
+								}
+								input.ReadMessage(gameplayTagPush);
+								this.GameplayTagPush = gameplayTagPush;
+								continue;
+							}
 							if (num == 442U)
 							{
 								ExecuteQtePush executeQtePush = new ExecuteQtePush();
@@ -4033,6 +3988,9 @@ namespace Aki.Protocol.CombatMessage
 								this.ExecuteQtePush = executeQtePush;
 								continue;
 							}
+						}
+						else
+						{
 							if (num == 450U)
 							{
 								ClientCurrentRoleReportPush clientCurrentRoleReportPush = new ClientCurrentRoleReportPush();
@@ -4044,9 +4002,6 @@ namespace Aki.Protocol.CombatMessage
 								this.ClientCurrentRoleReportPush = clientCurrentRoleReportPush;
 								continue;
 							}
-						}
-						else
-						{
 							if (num == 458U)
 							{
 								PlayEntityMontagePush playEntityMontagePush = new PlayEntityMontagePush();
@@ -4058,21 +4013,21 @@ namespace Aki.Protocol.CombatMessage
 								this.PlayEntityMontagePush = playEntityMontagePush;
 								continue;
 							}
-							if (num == 466U)
-							{
-								BeforeHitPush beforeHitPush = new BeforeHitPush();
-								if (this.messageCase_ == CombatPushData.MessageOneofCase.BeforeHitPush)
-								{
-									beforeHitPush.MergeFrom(this.BeforeHitPush);
-								}
-								input.ReadMessage(beforeHitPush);
-								this.BeforeHitPush = beforeHitPush;
-								continue;
-							}
 						}
 					}
-					else if (num <= 482U)
+					else if (num <= 474U)
 					{
+						if (num == 466U)
+						{
+							BeforeHitPush beforeHitPush = new BeforeHitPush();
+							if (this.messageCase_ == CombatPushData.MessageOneofCase.BeforeHitPush)
+							{
+								beforeHitPush.MergeFrom(this.BeforeHitPush);
+							}
+							input.ReadMessage(beforeHitPush);
+							this.BeforeHitPush = beforeHitPush;
+							continue;
+						}
 						if (num == 474U)
 						{
 							NewLinkBurstPush newLinkBurstPush = new NewLinkBurstPush();
@@ -4084,6 +4039,9 @@ namespace Aki.Protocol.CombatMessage
 							this.NewLinkBurstPush = newLinkBurstPush;
 							continue;
 						}
+					}
+					else
+					{
 						if (num == 482U)
 						{
 							RefreshBuffDurationPush refreshBuffDurationPush = new RefreshBuffDurationPush();
@@ -4095,9 +4053,6 @@ namespace Aki.Protocol.CombatMessage
 							this.RefreshBuffDurationPush = refreshBuffDurationPush;
 							continue;
 						}
-					}
-					else
-					{
 						if (num == 490U)
 						{
 							RoleGoDownPush roleGoDownPush = new RoleGoDownPush();
@@ -4120,6 +4075,12 @@ namespace Aki.Protocol.CombatMessage
 							this.FsmConditionPassPush = fsmConditionPassPush;
 							continue;
 						}
+					}
+				}
+				else if (num <= 530U)
+				{
+					if (num <= 514U)
+					{
 						if (num == 506U)
 						{
 							BuffEffectExecutePush buffEffectExecutePush = new BuffEffectExecutePush();
@@ -4131,12 +4092,6 @@ namespace Aki.Protocol.CombatMessage
 							this.BuffEffectExecutePush = buffEffectExecutePush;
 							continue;
 						}
-					}
-				}
-				else if (num <= 538U)
-				{
-					if (num <= 522U)
-					{
 						if (num == 514U)
 						{
 							VisionTriggerPush visionTriggerPush = new VisionTriggerPush();
@@ -4148,6 +4103,9 @@ namespace Aki.Protocol.CombatMessage
 							this.VisionTriggerPush = visionTriggerPush;
 							continue;
 						}
+					}
+					else
+					{
 						if (num == 522U)
 						{
 							MotorIsEnablePush motorIsEnablePush = new MotorIsEnablePush();
@@ -4159,9 +4117,6 @@ namespace Aki.Protocol.CombatMessage
 							this.MotorIsEnablePush = motorIsEnablePush;
 							continue;
 						}
-					}
-					else
-					{
 						if (num == 530U)
 						{
 							MotorSummonAndRidePush motorSummonAndRidePush = new MotorSummonAndRidePush();
@@ -4173,21 +4128,21 @@ namespace Aki.Protocol.CombatMessage
 							this.MotorSummonAndRidePush = motorSummonAndRidePush;
 							continue;
 						}
-						if (num == 538U)
-						{
-							BulletPatternPush bulletPatternPush = new BulletPatternPush();
-							if (this.messageCase_ == CombatPushData.MessageOneofCase.BulletPatternPush)
-							{
-								bulletPatternPush.MergeFrom(this.BulletPatternPush);
-							}
-							input.ReadMessage(bulletPatternPush);
-							this.BulletPatternPush = bulletPatternPush;
-							continue;
-						}
 					}
 				}
-				else if (num <= 554U)
+				else if (num <= 546U)
 				{
+					if (num == 538U)
+					{
+						BulletPatternPush bulletPatternPush = new BulletPatternPush();
+						if (this.messageCase_ == CombatPushData.MessageOneofCase.BulletPatternPush)
+						{
+							bulletPatternPush.MergeFrom(this.BulletPatternPush);
+						}
+						input.ReadMessage(bulletPatternPush);
+						this.BulletPatternPush = bulletPatternPush;
+						continue;
+					}
 					if (num == 546U)
 					{
 						QuickHackRamVerifyPush quickHackRamVerifyPush = new QuickHackRamVerifyPush();
@@ -4199,6 +4154,9 @@ namespace Aki.Protocol.CombatMessage
 						this.QuickHackRamVerifyPush = quickHackRamVerifyPush;
 						continue;
 					}
+				}
+				else
+				{
 					if (num == 554U)
 					{
 						QuickHackOpenPush quickHackOpenPush = new QuickHackOpenPush();
@@ -4210,9 +4168,6 @@ namespace Aki.Protocol.CombatMessage
 						this.QuickHackOpenPush = quickHackOpenPush;
 						continue;
 					}
-				}
-				else
-				{
 					if (num == 562U)
 					{
 						DodgeInfoPush dodgeInfoPush = new DodgeInfoPush();
@@ -4222,17 +4177,6 @@ namespace Aki.Protocol.CombatMessage
 						}
 						input.ReadMessage(dodgeInfoPush);
 						this.DodgeInfoPush = dodgeInfoPush;
-						continue;
-					}
-					if (num == 570U)
-					{
-						SwitchDarkTideWeaponPush switchDarkTideWeaponPush = new SwitchDarkTideWeaponPush();
-						if (this.messageCase_ == CombatPushData.MessageOneofCase.SwitchDarkTideWeaponPush)
-						{
-							switchDarkTideWeaponPush.MergeFrom(this.SwitchDarkTideWeaponPush);
-						}
-						input.ReadMessage(switchDarkTideWeaponPush);
-						this.SwitchDarkTideWeaponPush = switchDarkTideWeaponPush;
 						continue;
 					}
 					if (num == 578U)
@@ -4251,371 +4195,366 @@ namespace Aki.Protocol.CombatMessage
 			}
 		}
 
-		// Token: 0x0400C268 RID: 49768
+		// Token: 0x0400C794 RID: 51092
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400C269 RID: 49769
+		// Token: 0x0400C795 RID: 51093
 		public const int CombatCommonFieldNumber = 1;
 
-		// Token: 0x0400C26A RID: 49770
+		// Token: 0x0400C796 RID: 51094
 		private CombatCommon combatCommon_;
 
-		// Token: 0x0400C26B RID: 49771
+		// Token: 0x0400C797 RID: 51095
 		public const int ApplyBuffS2CResponsePushFieldNumber = 4;
 
-		// Token: 0x0400C26C RID: 49772
+		// Token: 0x0400C798 RID: 51096
 		public const int RemoveBuffS2CResponsePushFieldNumber = 5;
 
-		// Token: 0x0400C26D RID: 49773
+		// Token: 0x0400C799 RID: 51097
 		public const int RemoveBuffByIdS2CResponsePushFieldNumber = 6;
 
-		// Token: 0x0400C26E RID: 49774
+		// Token: 0x0400C79A RID: 51098
 		public const int CreateBulletPushFieldNumber = 7;
 
-		// Token: 0x0400C26F RID: 49775
+		// Token: 0x0400C79B RID: 51099
 		public const int DestroyBulletPushFieldNumber = 8;
 
-		// Token: 0x0400C270 RID: 49776
+		// Token: 0x0400C79C RID: 51100
 		public const int ApplyGameplayEffectPushFieldNumber = 9;
 
-		// Token: 0x0400C271 RID: 49777
+		// Token: 0x0400C79D RID: 51101
 		public const int RemoveGameplayEffectPushFieldNumber = 10;
 
-		// Token: 0x0400C272 RID: 49778
+		// Token: 0x0400C79E RID: 51102
 		public const int HitEndPushFieldNumber = 11;
 
-		// Token: 0x0400C273 RID: 49779
+		// Token: 0x0400C79F RID: 51103
 		public const int EndSkillPushFieldNumber = 12;
 
-		// Token: 0x0400C274 RID: 49780
+		// Token: 0x0400C7A0 RID: 51104
 		public const int PartUpdatePushFieldNumber = 13;
 
-		// Token: 0x0400C275 RID: 49781
+		// Token: 0x0400C7A1 RID: 51105
 		public const int MaterialPushFieldNumber = 14;
 
-		// Token: 0x0400C276 RID: 49782
+		// Token: 0x0400C7A2 RID: 51106
 		public const int GameplayCuePushFieldNumber = 15;
 
-		// Token: 0x0400C277 RID: 49783
+		// Token: 0x0400C7A3 RID: 51107
 		public const int EntityIsVisiblePushFieldNumber = 16;
 
-		// Token: 0x0400C278 RID: 49784
+		// Token: 0x0400C7A4 RID: 51108
 		public const int SwitchCharacterStatePushFieldNumber = 17;
 
-		// Token: 0x0400C279 RID: 49785
+		// Token: 0x0400C7A5 RID: 51109
 		public const int LogicStateInitPushFieldNumber = 18;
 
-		// Token: 0x0400C27A RID: 49786
+		// Token: 0x0400C7A6 RID: 51110
 		public const int SwitchLogicStatePushFieldNumber = 19;
 
-		// Token: 0x0400C27B RID: 49787
+		// Token: 0x0400C7A7 RID: 51111
 		public const int AnimationStateChangedPushFieldNumber = 20;
 
-		// Token: 0x0400C27C RID: 49788
+		// Token: 0x0400C7A8 RID: 51112
 		public const int AnimationStateInitPushFieldNumber = 21;
 
-		// Token: 0x0400C27D RID: 49789
+		// Token: 0x0400C7A9 RID: 51113
 		public const int ModifyBulletParamsPushFieldNumber = 22;
 
-		// Token: 0x0400C27E RID: 49790
+		// Token: 0x0400C7AA RID: 51114
 		public const int DrownPushFieldNumber = 23;
 
-		// Token: 0x0400C27F RID: 49791
+		// Token: 0x0400C7AB RID: 51115
 		public const int ActivateBuffPushFieldNumber = 24;
 
-		// Token: 0x0400C280 RID: 49792
+		// Token: 0x0400C7AC RID: 51116
 		public const int AiInformationPushFieldNumber = 25;
 
-		// Token: 0x0400C281 RID: 49793
+		// Token: 0x0400C7AD RID: 51117
 		public const int ToughCalcExtraRatioChangePushFieldNumber = 26;
 
-		// Token: 0x0400C282 RID: 49794
+		// Token: 0x0400C7AE RID: 51118
 		public const int BattleStateChangePushFieldNumber = 27;
 
-		// Token: 0x0400C283 RID: 49795
+		// Token: 0x0400C7AF RID: 51119
 		public const int AnimationGameplayTagPushFieldNumber = 28;
 
-		// Token: 0x0400C284 RID: 49796
+		// Token: 0x0400C7B0 RID: 51120
 		public const int BoneVisibleChangePushFieldNumber = 29;
 
-		// Token: 0x0400C285 RID: 49797
+		// Token: 0x0400C7B1 RID: 51121
 		public const int AiBlackboardsPushFieldNumber = 30;
 
-		// Token: 0x0400C286 RID: 49798
+		// Token: 0x0400C7B2 RID: 51122
 		public const int AiBlackboardCdPushFieldNumber = 31;
 
-		// Token: 0x0400C287 RID: 49799
+		// Token: 0x0400C7B3 RID: 51123
 		public const int AiHatePushFieldNumber = 32;
 
-		// Token: 0x0400C288 RID: 49800
+		// Token: 0x0400C7B4 RID: 51124
 		public const int MonsterBoomPushFieldNumber = 33;
 
-		// Token: 0x0400C289 RID: 49801
+		// Token: 0x0400C7B5 RID: 51125
 		public const int CaughtPushFieldNumber = 34;
 
-		// Token: 0x0400C28A RID: 49802
+		// Token: 0x0400C7B6 RID: 51126
 		public const int EntityStaticHookMovePushFieldNumber = 35;
 
-		// Token: 0x0400C28B RID: 49803
+		// Token: 0x0400C7B7 RID: 51127
 		public const int ChangeStateConfirmPushFieldNumber = 36;
 
-		// Token: 0x0400C28C RID: 49804
+		// Token: 0x0400C7B8 RID: 51128
 		public const int BuffStackCountPushFieldNumber = 37;
 
-		// Token: 0x0400C28D RID: 49805
+		// Token: 0x0400C7B9 RID: 51129
 		public const int ANStartPushFieldNumber = 38;
 
-		// Token: 0x0400C28E RID: 49806
+		// Token: 0x0400C7BA RID: 51130
 		public const int UseSkillFailPushFieldNumber = 39;
 
-		// Token: 0x0400C28F RID: 49807
+		// Token: 0x0400C7BB RID: 51131
 		public const int EnterViewDirectionPushFieldNumber = 40;
 
-		// Token: 0x0400C290 RID: 49808
+		// Token: 0x0400C7BC RID: 51132
 		public const int ExitViewDirectionPushFieldNumber = 41;
 
-		// Token: 0x0400C291 RID: 49809
+		// Token: 0x0400C7BD RID: 51133
 		public const int PassiveSkillAddPushFieldNumber = 42;
 
-		// Token: 0x0400C292 RID: 49810
+		// Token: 0x0400C7BE RID: 51134
 		public const int InterruptSkillInDelayPushFieldNumber = 43;
 
-		// Token: 0x0400C293 RID: 49811
+		// Token: 0x0400C7BF RID: 51135
 		public const int TriggerExitSkillPushFieldNumber = 44;
 
-		// Token: 0x0400C294 RID: 49812
+		// Token: 0x0400C7C0 RID: 51136
 		public const int ActorVisiblePushFieldNumber = 45;
 
-		// Token: 0x0400C295 RID: 49813
+		// Token: 0x0400C7C1 RID: 51137
 		public const int BuffEffectPushFieldNumber = 46;
 
-		// Token: 0x0400C296 RID: 49814
+		// Token: 0x0400C7C2 RID: 51138
 		public const int RTimeStopPushFieldNumber = 47;
 
-		// Token: 0x0400C297 RID: 49815
+		// Token: 0x0400C7C3 RID: 51139
 		public const int DrownEndTeleportPushFieldNumber = 48;
 
-		// Token: 0x0400C298 RID: 49816
+		// Token: 0x0400C7C4 RID: 51140
 		public const int MonsterDrownPushFieldNumber = 49;
 
-		// Token: 0x0400C299 RID: 49817
+		// Token: 0x0400C7C5 RID: 51141
 		public const int PassiveSkillRemovePushFieldNumber = 50;
 
-		// Token: 0x0400C29A RID: 49818
+		// Token: 0x0400C7C6 RID: 51142
 		public const int RTimeStopInstPushFieldNumber = 51;
 
-		// Token: 0x0400C29B RID: 49819
+		// Token: 0x0400C7C7 RID: 51143
 		public const int FsmPlayMontagePushFieldNumber = 52;
 
-		// Token: 0x0400C29C RID: 49820
+		// Token: 0x0400C7C8 RID: 51144
 		public const int RTimeStopAnimPushFieldNumber = 53;
 
-		// Token: 0x0400C29D RID: 49821
+		// Token: 0x0400C7C9 RID: 51145
 		public const int GameplayTagPushFieldNumber = 54;
 
-		// Token: 0x0400C29E RID: 49822
+		// Token: 0x0400C7CA RID: 51146
 		public const int ExecuteQtePushFieldNumber = 55;
 
-		// Token: 0x0400C29F RID: 49823
+		// Token: 0x0400C7CB RID: 51147
 		public const int ClientCurrentRoleReportPushFieldNumber = 56;
 
-		// Token: 0x0400C2A0 RID: 49824
+		// Token: 0x0400C7CC RID: 51148
 		public const int PlayEntityMontagePushFieldNumber = 57;
 
-		// Token: 0x0400C2A1 RID: 49825
+		// Token: 0x0400C7CD RID: 51149
 		public const int BeforeHitPushFieldNumber = 58;
 
-		// Token: 0x0400C2A2 RID: 49826
+		// Token: 0x0400C7CE RID: 51150
 		public const int NewLinkBurstPushFieldNumber = 59;
 
-		// Token: 0x0400C2A3 RID: 49827
+		// Token: 0x0400C7CF RID: 51151
 		public const int RefreshBuffDurationPushFieldNumber = 60;
 
-		// Token: 0x0400C2A4 RID: 49828
+		// Token: 0x0400C7D0 RID: 51152
 		public const int RoleGoDownPushFieldNumber = 61;
 
-		// Token: 0x0400C2A5 RID: 49829
+		// Token: 0x0400C7D1 RID: 51153
 		public const int FsmConditionPassPushFieldNumber = 62;
 
-		// Token: 0x0400C2A6 RID: 49830
+		// Token: 0x0400C7D2 RID: 51154
 		public const int BuffEffectExecutePushFieldNumber = 63;
 
-		// Token: 0x0400C2A7 RID: 49831
+		// Token: 0x0400C7D3 RID: 51155
 		public const int VisionTriggerPushFieldNumber = 64;
 
-		// Token: 0x0400C2A8 RID: 49832
+		// Token: 0x0400C7D4 RID: 51156
 		public const int MotorIsEnablePushFieldNumber = 65;
 
-		// Token: 0x0400C2A9 RID: 49833
+		// Token: 0x0400C7D5 RID: 51157
 		public const int MotorSummonAndRidePushFieldNumber = 66;
 
-		// Token: 0x0400C2AA RID: 49834
+		// Token: 0x0400C7D6 RID: 51158
 		public const int BulletPatternPushFieldNumber = 67;
 
-		// Token: 0x0400C2AB RID: 49835
+		// Token: 0x0400C7D7 RID: 51159
 		public const int QuickHackRamVerifyPushFieldNumber = 68;
 
-		// Token: 0x0400C2AC RID: 49836
+		// Token: 0x0400C7D8 RID: 51160
 		public const int QuickHackOpenPushFieldNumber = 69;
 
-		// Token: 0x0400C2AD RID: 49837
+		// Token: 0x0400C7D9 RID: 51161
 		public const int DodgeInfoPushFieldNumber = 70;
 
-		// Token: 0x0400C2AE RID: 49838
-		public const int SwitchDarkTideWeaponPushFieldNumber = 71;
-
-		// Token: 0x0400C2AF RID: 49839
+		// Token: 0x0400C7DA RID: 51162
 		public const int RoleTrialSceneRollbackPushFieldNumber = 72;
 
-		// Token: 0x0400C2B0 RID: 49840
+		// Token: 0x0400C7DB RID: 51163
 		private object message_;
 
-		// Token: 0x0400C2B1 RID: 49841
+		// Token: 0x0400C7DC RID: 51164
 		private CombatPushData.MessageOneofCase messageCase_;
 
-		// Token: 0x020019FE RID: 6654
+		// Token: 0x02001AA0 RID: 6816
 		public enum MessageOneofCase
 		{
-			// Token: 0x0400CB3F RID: 52031
+			// Token: 0x0400D0AA RID: 53418
 			None,
-			// Token: 0x0400CB40 RID: 52032
+			// Token: 0x0400D0AB RID: 53419
 			ApplyBuffS2CResponsePush = 4,
-			// Token: 0x0400CB41 RID: 52033
+			// Token: 0x0400D0AC RID: 53420
 			RemoveBuffS2CResponsePush,
-			// Token: 0x0400CB42 RID: 52034
+			// Token: 0x0400D0AD RID: 53421
 			RemoveBuffByIdS2CResponsePush,
-			// Token: 0x0400CB43 RID: 52035
+			// Token: 0x0400D0AE RID: 53422
 			CreateBulletPush,
-			// Token: 0x0400CB44 RID: 52036
+			// Token: 0x0400D0AF RID: 53423
 			DestroyBulletPush,
-			// Token: 0x0400CB45 RID: 52037
+			// Token: 0x0400D0B0 RID: 53424
 			ApplyGameplayEffectPush,
-			// Token: 0x0400CB46 RID: 52038
+			// Token: 0x0400D0B1 RID: 53425
 			RemoveGameplayEffectPush,
-			// Token: 0x0400CB47 RID: 52039
+			// Token: 0x0400D0B2 RID: 53426
 			HitEndPush,
-			// Token: 0x0400CB48 RID: 52040
+			// Token: 0x0400D0B3 RID: 53427
 			EndSkillPush,
-			// Token: 0x0400CB49 RID: 52041
+			// Token: 0x0400D0B4 RID: 53428
 			PartUpdatePush,
-			// Token: 0x0400CB4A RID: 52042
+			// Token: 0x0400D0B5 RID: 53429
 			MaterialPush,
-			// Token: 0x0400CB4B RID: 52043
+			// Token: 0x0400D0B6 RID: 53430
 			GameplayCuePush,
-			// Token: 0x0400CB4C RID: 52044
+			// Token: 0x0400D0B7 RID: 53431
 			EntityIsVisiblePush,
-			// Token: 0x0400CB4D RID: 52045
+			// Token: 0x0400D0B8 RID: 53432
 			SwitchCharacterStatePush,
-			// Token: 0x0400CB4E RID: 52046
+			// Token: 0x0400D0B9 RID: 53433
 			LogicStateInitPush,
-			// Token: 0x0400CB4F RID: 52047
+			// Token: 0x0400D0BA RID: 53434
 			SwitchLogicStatePush,
-			// Token: 0x0400CB50 RID: 52048
+			// Token: 0x0400D0BB RID: 53435
 			AnimationStateChangedPush,
-			// Token: 0x0400CB51 RID: 52049
+			// Token: 0x0400D0BC RID: 53436
 			AnimationStateInitPush,
-			// Token: 0x0400CB52 RID: 52050
+			// Token: 0x0400D0BD RID: 53437
 			ModifyBulletParamsPush,
-			// Token: 0x0400CB53 RID: 52051
+			// Token: 0x0400D0BE RID: 53438
 			DrownPush,
-			// Token: 0x0400CB54 RID: 52052
+			// Token: 0x0400D0BF RID: 53439
 			ActivateBuffPush,
-			// Token: 0x0400CB55 RID: 52053
+			// Token: 0x0400D0C0 RID: 53440
 			AiInformationPush,
-			// Token: 0x0400CB56 RID: 52054
+			// Token: 0x0400D0C1 RID: 53441
 			ToughCalcExtraRatioChangePush,
-			// Token: 0x0400CB57 RID: 52055
+			// Token: 0x0400D0C2 RID: 53442
 			BattleStateChangePush,
-			// Token: 0x0400CB58 RID: 52056
+			// Token: 0x0400D0C3 RID: 53443
 			AnimationGameplayTagPush,
-			// Token: 0x0400CB59 RID: 52057
+			// Token: 0x0400D0C4 RID: 53444
 			BoneVisibleChangePush,
-			// Token: 0x0400CB5A RID: 52058
+			// Token: 0x0400D0C5 RID: 53445
 			AiBlackboardsPush,
-			// Token: 0x0400CB5B RID: 52059
+			// Token: 0x0400D0C6 RID: 53446
 			AiBlackboardCdPush,
-			// Token: 0x0400CB5C RID: 52060
+			// Token: 0x0400D0C7 RID: 53447
 			AiHatePush,
-			// Token: 0x0400CB5D RID: 52061
+			// Token: 0x0400D0C8 RID: 53448
 			MonsterBoomPush,
-			// Token: 0x0400CB5E RID: 52062
+			// Token: 0x0400D0C9 RID: 53449
 			CaughtPush,
-			// Token: 0x0400CB5F RID: 52063
+			// Token: 0x0400D0CA RID: 53450
 			EntityStaticHookMovePush,
-			// Token: 0x0400CB60 RID: 52064
+			// Token: 0x0400D0CB RID: 53451
 			ChangeStateConfirmPush,
-			// Token: 0x0400CB61 RID: 52065
+			// Token: 0x0400D0CC RID: 53452
 			BuffStackCountPush,
-			// Token: 0x0400CB62 RID: 52066
+			// Token: 0x0400D0CD RID: 53453
 			ANStartPush,
-			// Token: 0x0400CB63 RID: 52067
+			// Token: 0x0400D0CE RID: 53454
 			UseSkillFailPush,
-			// Token: 0x0400CB64 RID: 52068
+			// Token: 0x0400D0CF RID: 53455
 			EnterViewDirectionPush,
-			// Token: 0x0400CB65 RID: 52069
+			// Token: 0x0400D0D0 RID: 53456
 			ExitViewDirectionPush,
-			// Token: 0x0400CB66 RID: 52070
+			// Token: 0x0400D0D1 RID: 53457
 			PassiveSkillAddPush,
-			// Token: 0x0400CB67 RID: 52071
+			// Token: 0x0400D0D2 RID: 53458
 			InterruptSkillInDelayPush,
-			// Token: 0x0400CB68 RID: 52072
+			// Token: 0x0400D0D3 RID: 53459
 			TriggerExitSkillPush,
-			// Token: 0x0400CB69 RID: 52073
+			// Token: 0x0400D0D4 RID: 53460
 			ActorVisiblePush,
-			// Token: 0x0400CB6A RID: 52074
+			// Token: 0x0400D0D5 RID: 53461
 			BuffEffectPush,
-			// Token: 0x0400CB6B RID: 52075
+			// Token: 0x0400D0D6 RID: 53462
 			RTimeStopPush,
-			// Token: 0x0400CB6C RID: 52076
+			// Token: 0x0400D0D7 RID: 53463
 			DrownEndTeleportPush,
-			// Token: 0x0400CB6D RID: 52077
+			// Token: 0x0400D0D8 RID: 53464
 			MonsterDrownPush,
-			// Token: 0x0400CB6E RID: 52078
+			// Token: 0x0400D0D9 RID: 53465
 			PassiveSkillRemovePush,
-			// Token: 0x0400CB6F RID: 52079
+			// Token: 0x0400D0DA RID: 53466
 			RTimeStopInstPush,
-			// Token: 0x0400CB70 RID: 52080
+			// Token: 0x0400D0DB RID: 53467
 			FsmPlayMontagePush,
-			// Token: 0x0400CB71 RID: 52081
+			// Token: 0x0400D0DC RID: 53468
 			RTimeStopAnimPush,
-			// Token: 0x0400CB72 RID: 52082
+			// Token: 0x0400D0DD RID: 53469
 			GameplayTagPush,
-			// Token: 0x0400CB73 RID: 52083
+			// Token: 0x0400D0DE RID: 53470
 			ExecuteQtePush,
-			// Token: 0x0400CB74 RID: 52084
+			// Token: 0x0400D0DF RID: 53471
 			ClientCurrentRoleReportPush,
-			// Token: 0x0400CB75 RID: 52085
+			// Token: 0x0400D0E0 RID: 53472
 			PlayEntityMontagePush,
-			// Token: 0x0400CB76 RID: 52086
+			// Token: 0x0400D0E1 RID: 53473
 			BeforeHitPush,
-			// Token: 0x0400CB77 RID: 52087
+			// Token: 0x0400D0E2 RID: 53474
 			NewLinkBurstPush,
-			// Token: 0x0400CB78 RID: 52088
+			// Token: 0x0400D0E3 RID: 53475
 			RefreshBuffDurationPush,
-			// Token: 0x0400CB79 RID: 52089
+			// Token: 0x0400D0E4 RID: 53476
 			RoleGoDownPush,
-			// Token: 0x0400CB7A RID: 52090
+			// Token: 0x0400D0E5 RID: 53477
 			FsmConditionPassPush,
-			// Token: 0x0400CB7B RID: 52091
+			// Token: 0x0400D0E6 RID: 53478
 			BuffEffectExecutePush,
-			// Token: 0x0400CB7C RID: 52092
+			// Token: 0x0400D0E7 RID: 53479
 			VisionTriggerPush,
-			// Token: 0x0400CB7D RID: 52093
+			// Token: 0x0400D0E8 RID: 53480
 			MotorIsEnablePush,
-			// Token: 0x0400CB7E RID: 52094
+			// Token: 0x0400D0E9 RID: 53481
 			MotorSummonAndRidePush,
-			// Token: 0x0400CB7F RID: 52095
+			// Token: 0x0400D0EA RID: 53482
 			BulletPatternPush,
-			// Token: 0x0400CB80 RID: 52096
+			// Token: 0x0400D0EB RID: 53483
 			QuickHackRamVerifyPush,
-			// Token: 0x0400CB81 RID: 52097
+			// Token: 0x0400D0EC RID: 53484
 			QuickHackOpenPush,
-			// Token: 0x0400CB82 RID: 52098
+			// Token: 0x0400D0ED RID: 53485
 			DodgeInfoPush,
-			// Token: 0x0400CB83 RID: 52099
-			SwitchDarkTideWeaponPush,
-			// Token: 0x0400CB84 RID: 52100
-			RoleTrialSceneRollbackPush
+			// Token: 0x0400D0EE RID: 53486
+			RoleTrialSceneRollbackPush = 72
 		}
 	}
 }

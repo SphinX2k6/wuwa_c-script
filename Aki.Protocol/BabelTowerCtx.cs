@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200014A RID: 330
+	// Token: 0x0200014D RID: 333
 	public sealed class BabelTowerCtx : IMessage<BabelTowerCtx>, IMessage, IEquatable<BabelTowerCtx>, IDeepCloneable<BabelTowerCtx>, IBufferMessage
 	{
-		// Token: 0x06002A5E RID: 10846 RVA: 0x0006F25B File Offset: 0x0006D45B
+		// Token: 0x06002AD5 RID: 10965 RVA: 0x0007068F File Offset: 0x0006E88F
 		[NullableContext(1)]
 		public static BabelTowerCtx Create()
 		{
 			return new BabelTowerCtx();
 		}
 
-		// Token: 0x17000644 RID: 1604
-		// (get) Token: 0x06002A5F RID: 10847 RVA: 0x0006F262 File Offset: 0x0006D462
+		// Token: 0x17000658 RID: 1624
+		// (get) Token: 0x06002AD6 RID: 10966 RVA: 0x00070696 File Offset: 0x0006E896
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000645 RID: 1605
-		// (get) Token: 0x06002A60 RID: 10848 RVA: 0x0006F265 File Offset: 0x0006D465
+		// Token: 0x17000659 RID: 1625
+		// (get) Token: 0x06002AD7 RID: 10967 RVA: 0x00070699 File Offset: 0x0006E899
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06002A61 RID: 10849 RVA: 0x0006F26C File Offset: 0x0006D46C
+		// Token: 0x06002AD8 RID: 10968 RVA: 0x000706A0 File Offset: 0x0006E8A0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BabelTowerCtx()
 		{
 		}
 
-		// Token: 0x06002A62 RID: 10850 RVA: 0x0006F28C File Offset: 0x0006D48C
+		// Token: 0x06002AD9 RID: 10969 RVA: 0x000706C0 File Offset: 0x0006E8C0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BabelTowerCtx(BabelTowerCtx other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06002A63 RID: 10851 RVA: 0x0006F2DE File Offset: 0x0006D4DE
+		// Token: 0x06002ADA RID: 10970 RVA: 0x00070712 File Offset: 0x0006E912
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BabelTowerCtx Clone()
@@ -68,9 +68,9 @@ namespace Aki.Protocol
 			return new BabelTowerCtx(this);
 		}
 
-		// Token: 0x17000646 RID: 1606
-		// (get) Token: 0x06002A64 RID: 10852 RVA: 0x0006F2E6 File Offset: 0x0006D4E6
-		// (set) Token: 0x06002A65 RID: 10853 RVA: 0x0006F2EE File Offset: 0x0006D4EE
+		// Token: 0x1700065A RID: 1626
+		// (get) Token: 0x06002ADB RID: 10971 RVA: 0x0007071A File Offset: 0x0006E91A
+		// (set) Token: 0x06002ADC RID: 10972 RVA: 0x00070722 File Offset: 0x0006E922
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int LevelsId
@@ -85,8 +85,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000647 RID: 1607
-		// (get) Token: 0x06002A66 RID: 10854 RVA: 0x0006F2F7 File Offset: 0x0006D4F7
+		// Token: 0x1700065B RID: 1627
+		// (get) Token: 0x06002ADD RID: 10973 RVA: 0x0007072B File Offset: 0x0006E92B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> SelectBuff
@@ -97,8 +97,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000648 RID: 1608
-		// (get) Token: 0x06002A67 RID: 10855 RVA: 0x0006F2FF File Offset: 0x0006D4FF
+		// Token: 0x1700065C RID: 1628
+		// (get) Token: 0x06002ADE RID: 10974 RVA: 0x00070733 File Offset: 0x0006E933
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> SkillBranchId
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06002A68 RID: 10856 RVA: 0x0006F307 File Offset: 0x0006D507
+		// Token: 0x06002ADF RID: 10975 RVA: 0x0007073B File Offset: 0x0006E93B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return this.Equals(other as BabelTowerCtx);
 		}
 
-		// Token: 0x06002A69 RID: 10857 RVA: 0x0006F318 File Offset: 0x0006D518
+		// Token: 0x06002AE0 RID: 10976 RVA: 0x0007074C File Offset: 0x0006E94C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(BabelTowerCtx other)
@@ -125,7 +125,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.LevelsId == other.LevelsId && this.selectBuff_.Equals(other.selectBuff_) && this.skillBranchId_.Equals(other.skillBranchId_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06002A6A RID: 10858 RVA: 0x0006F37C File Offset: 0x0006D57C
+		// Token: 0x06002AE1 RID: 10977 RVA: 0x000707B0 File Offset: 0x0006E9B0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -144,7 +144,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06002A6B RID: 10859 RVA: 0x0006F3D7 File Offset: 0x0006D5D7
+		// Token: 0x06002AE2 RID: 10978 RVA: 0x0007080B File Offset: 0x0006EA0B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -152,7 +152,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06002A6C RID: 10860 RVA: 0x0006F3E4 File Offset: 0x0006D5E4
+		// Token: 0x06002AE3 RID: 10979 RVA: 0x00070818 File Offset: 0x0006EA18
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -160,7 +160,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06002A6D RID: 10861 RVA: 0x0006F3F0 File Offset: 0x0006D5F0
+		// Token: 0x06002AE4 RID: 10980 RVA: 0x00070824 File Offset: 0x0006EA24
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -178,7 +178,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06002A6E RID: 10862 RVA: 0x0006F450 File Offset: 0x0006D650
+		// Token: 0x06002AE5 RID: 10981 RVA: 0x00070884 File Offset: 0x0006EA84
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -197,7 +197,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06002A6F RID: 10863 RVA: 0x0006F4B4 File Offset: 0x0006D6B4
+		// Token: 0x06002AE6 RID: 10982 RVA: 0x000708E8 File Offset: 0x0006EAE8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(BabelTowerCtx other)
@@ -215,7 +215,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06002A70 RID: 10864 RVA: 0x0006F512 File Offset: 0x0006D712
+		// Token: 0x06002AE7 RID: 10983 RVA: 0x00070946 File Offset: 0x0006EB46
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -223,7 +223,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06002A71 RID: 10865 RVA: 0x0006F51C File Offset: 0x0006D71C
+		// Token: 0x06002AE8 RID: 10984 RVA: 0x00070950 File Offset: 0x0006EB50
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -266,31 +266,31 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400275F RID: 10079
+		// Token: 0x040027D3 RID: 10195
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04002760 RID: 10080
+		// Token: 0x040027D4 RID: 10196
 		public const int LevelsIdFieldNumber = 1;
 
-		// Token: 0x04002761 RID: 10081
+		// Token: 0x040027D5 RID: 10197
 		private int levelsId_;
 
-		// Token: 0x04002762 RID: 10082
+		// Token: 0x040027D6 RID: 10198
 		public const int SelectBuffFieldNumber = 2;
 
-		// Token: 0x04002763 RID: 10083
+		// Token: 0x040027D7 RID: 10199
 		private static readonly FieldCodec<int> _repeated_selectBuff_codec = FieldCodec.ForInt32(18U);
 
-		// Token: 0x04002764 RID: 10084
+		// Token: 0x040027D8 RID: 10200
 		private readonly RepeatedField<int> selectBuff_ = new RepeatedField<int>();
 
-		// Token: 0x04002765 RID: 10085
+		// Token: 0x040027D9 RID: 10201
 		public const int SkillBranchIdFieldNumber = 3;
 
-		// Token: 0x04002766 RID: 10086
+		// Token: 0x040027DA RID: 10202
 		private static readonly FieldCodec<int> _repeated_skillBranchId_codec = FieldCodec.ForInt32(26U);
 
-		// Token: 0x04002767 RID: 10087
+		// Token: 0x040027DB RID: 10203
 		private readonly RepeatedField<int> skillBranchId_ = new RepeatedField<int>();
 	}
 }

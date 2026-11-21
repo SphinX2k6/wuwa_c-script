@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnrealEngine;
 
-// Token: 0x02001BCF RID: 7119
+// Token: 0x0200108E RID: 4238
 internal class FormationRoleSlotSkillBranchToggleItem : CommonRoleSkillBranchSwitchItem
 {
-	// Token: 0x0600D44E RID: 54350 RVA: 0x0030DAA8 File Offset: 0x0030BCA8
+	// Token: 0x0600A860 RID: 43104 RVA: 0x00318C1C File Offset: 0x00316E1C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -38,14 +38,14 @@ internal class FormationRoleSlotSkillBranchToggleItem : CommonRoleSkillBranchSwi
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D44F RID: 54351 RVA: 0x0030DBF3 File Offset: 0x0030BDF3
+	// Token: 0x0600A861 RID: 43105 RVA: 0x00318D67 File Offset: 0x00316F67
 	[NullableContext(1)]
 	protected override UUIExtendToggle GetBranchToggle()
 	{
 		return base.GetExtendToggle(0);
 	}
 
-	// Token: 0x0600D450 RID: 54352 RVA: 0x0030DBFC File Offset: 0x0030BDFC
+	// Token: 0x0600A862 RID: 43106 RVA: 0x00318D70 File Offset: 0x00316F70
 	[NullableContext(1)]
 	protected override SkillBranchSwitchItemGroup[] CollectBranchItems()
 	{
@@ -72,22 +72,22 @@ internal class FormationRoleSlotSkillBranchToggleItem : CommonRoleSkillBranchSwi
 		};
 	}
 
-	// Token: 0x02008189 RID: 33161
+	// Token: 0x02007317 RID: 29463
 	private enum ESlotSkillBranchChild
 	{
-		// Token: 0x0402A445 RID: 173125
+		// Token: 0x04025779 RID: 153465
 		Toggle,
-		// Token: 0x0402A446 RID: 173126
+		// Token: 0x0402577A RID: 153466
 		SpriteTagBgL,
-		// Token: 0x0402A447 RID: 173127
+		// Token: 0x0402577B RID: 153467
 		SpriteTagBgR,
-		// Token: 0x0402A448 RID: 173128
+		// Token: 0x0402577C RID: 153468
 		SpriteTagIconL,
-		// Token: 0x0402A449 RID: 173129
+		// Token: 0x0402577D RID: 153469
 		ItemTagL,
-		// Token: 0x0402A44A RID: 173130
+		// Token: 0x0402577E RID: 153470
 		SpriteTagIconR,
-		// Token: 0x0402A44B RID: 173131
+		// Token: 0x0402577F RID: 153471
 		ItemTagR
 	}
 }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C5D RID: 3165
+	// Token: 0x02000D36 RID: 3382
 	public class IVehicleGenerateByVehicleTeamTemplate : IVehicleGenerationType
 	{
-		// Token: 0x0600487D RID: 18557 RVA: 0x000B6133 File Offset: 0x000B4333
-		[NullableContext(1)]
+		// Token: 0x06004D02 RID: 19714 RVA: 0x000C0727 File Offset: 0x000BE927
 		public static IVehicleGenerateByVehicleTeamTemplate Create(IVehicleGenerateByVehicleTeamTemplate? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001580 RID: 5504
-		// (get) Token: 0x0600487E RID: 18558 RVA: 0x000B6152 File Offset: 0x000B4352
+		// Token: 0x17001691 RID: 5777
+		// (get) Token: 0x06004D03 RID: 19715 RVA: 0x000C0746 File Offset: 0x000BE946
 		public override EVehicleGenerationType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001581 RID: 5505
-		// (get) Token: 0x0600487F RID: 18559 RVA: 0x000B615F File Offset: 0x000B435F
+		// Token: 0x17001692 RID: 5778
+		// (get) Token: 0x06004D04 RID: 19716 RVA: 0x000C0753 File Offset: 0x000BE953
 		public override int Id
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001582 RID: 5506
-		// (get) Token: 0x06004880 RID: 18560 RVA: 0x000B616C File Offset: 0x000B436C
+		// Token: 0x17001693 RID: 5779
+		// (get) Token: 0x06004D05 RID: 19717 RVA: 0x000C0760 File Offset: 0x000BE960
 		public override int Weight
 		{
 			get
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002948 RID: 10568
+		// Token: 0x04002BA9 RID: 11177
 		private IVehicleGenerateByVehicleTeamTemplate Instance;
 	}
 }

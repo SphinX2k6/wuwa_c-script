@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200571E RID: 22302
+	// Token: 0x02005D25 RID: 23845
 	public enum IPerformanceOptimization_Union : byte
 	{
-		// Token: 0x0400EB90 RID: 60304
+		// Token: 0x0400F879 RID: 63609
 		NONE,
-		// Token: 0x0400EB91 RID: 60305
+		// Token: 0x0400F87A RID: 63610
 		IPerformanceOptimization,
-		// Token: 0x0400EB92 RID: 60306
+		// Token: 0x0400F87B RID: 63611
 		IPlaneMovementOptimizationConfig,
-		// Token: 0x0400EB93 RID: 60307
+		// Token: 0x0400F87C RID: 63612
 		IDamageTextOptimizationConfig
 	}
 }

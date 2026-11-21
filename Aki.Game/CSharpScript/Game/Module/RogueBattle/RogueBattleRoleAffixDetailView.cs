@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004EF8 RID: 20216
+	// Token: 0x02003EC1 RID: 16065
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RogueBattleRoleAffixDetailView : UiViewBase
 	{
-		// Token: 0x06033DB1 RID: 212401 RVA: 0x00C25ABE File Offset: 0x00C23CBE
+		// Token: 0x06028C1C RID: 166940 RVA: 0x00B6F066 File Offset: 0x00B6D266
 		public RogueBattleRoleAffixDetailView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06033DB2 RID: 212402 RVA: 0x00C25AC8 File Offset: 0x00C23CC8
+		// Token: 0x06028C1D RID: 166941 RVA: 0x00B6F070 File Offset: 0x00B6D270
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033DB3 RID: 212403 RVA: 0x00C25B88 File Offset: 0x00C23D88
+		// Token: 0x06028C1E RID: 166942 RVA: 0x00B6F130 File Offset: 0x00B6D330
 		private unsafe void OnClickBtnRolePreview()
 		{
 			int roleId = ((IRogueBattleRoleAffixDetailOpenParam)this.OpenParam).RoleId;
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x06033DB4 RID: 212404 RVA: 0x00C25C46 File Offset: 0x00C23E46
+		// Token: 0x06028C1F RID: 166943 RVA: 0x00B6F1EE File Offset: 0x00B6D3EE
 		private void OnSelectAffix(int index)
 		{
 			GenericLayout<RogueBattleRoleAffixDetailToggle, int> affixLayout = this.AffixLayout;
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			this.RefreshDetail();
 		}
 
-		// Token: 0x06033DB5 RID: 212405 RVA: 0x00C25C61 File Offset: 0x00C23E61
+		// Token: 0x06028C20 RID: 166944 RVA: 0x00B6F209 File Offset: 0x00B6D409
 		private RogueBattleRoleAffixDetailToggle CreateItem()
 		{
 			return new RogueBattleRoleAffixDetailToggle
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033DB6 RID: 212406 RVA: 0x00C25C7C File Offset: 0x00C23E7C
+		// Token: 0x06028C21 RID: 166945 RVA: 0x00B6F224 File Offset: 0x00B6D424
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RogueBattleRoleAffixDetailView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033DB7 RID: 212407 RVA: 0x00C25CC0 File Offset: 0x00C23EC0
+		// Token: 0x06028C22 RID: 166946 RVA: 0x00B6F268 File Offset: 0x00B6D468
 		public void RefreshDetail()
 		{
 			int selectedGridIndex = this.AffixLayout.GetSelectedGridIndex();
@@ -123,11 +123,11 @@ namespace CSharpScript.Game.Module.RogueBattle
 			this.SetSpriteByPath(rogueResCharacterBuff.Value.AffixIcon, base.GetSprite(1), false, null, null);
 		}
 
-		// Token: 0x0401B8DF RID: 112863
+		// Token: 0x040162B2 RID: 90802
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401B8E0 RID: 112864
+		// Token: 0x040162B3 RID: 90803
 		[Nullable(new byte[]
 		{
 			2,

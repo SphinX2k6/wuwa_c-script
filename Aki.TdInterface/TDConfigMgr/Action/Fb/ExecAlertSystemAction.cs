@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029FD RID: 10749
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002CEA RID: 11498
 	public class ExecAlertSystemAction : ActionParams
 	{
-		// Token: 0x0600ED3F RID: 60735 RVA: 0x002299D7 File Offset: 0x00227BD7
+		// Token: 0x0600FBD6 RID: 64470 RVA: 0x0024735B File Offset: 0x0024555B
 		public static ExecAlertSystemAction Create(IExecAlertSystemAction? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B07 RID: 19207
-		// (get) Token: 0x0600ED40 RID: 60736 RVA: 0x002299F6 File Offset: 0x00227BF6
+		// Token: 0x17004EB0 RID: 20144
+		// (get) Token: 0x0600FBD7 RID: 64471 RVA: 0x0024737A File Offset: 0x0024557A
 		public virtual IAlertSystemOption Option
 		{
 			get
@@ -38,13 +35,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400829B RID: 33435
+		// Token: 0x0400898C RID: 35212
 		private IExecAlertSystemAction Instance;
 
-		// Token: 0x0400829C RID: 33436
+		// Token: 0x0400898D RID: 35213
 		private IAlertSystemOption _OptionCache;
 
-		// Token: 0x0400829D RID: 33437
+		// Token: 0x0400898E RID: 35214
 		private bool _OptionInited;
 	}
 }

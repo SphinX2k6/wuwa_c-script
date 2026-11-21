@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200731D RID: 29469
+	// Token: 0x02007AF5 RID: 31477
 	public class ITalkItem_UnionUnion
 	{
-		// Token: 0x1700DFC9 RID: 57289
-		// (get) Token: 0x0603574D RID: 218957 RVA: 0x00748509 File Offset: 0x00746709
-		// (set) Token: 0x0603574E RID: 218958 RVA: 0x00748511 File Offset: 0x00746711
+		// Token: 0x1700EBC5 RID: 60357
+		// (get) Token: 0x06038A80 RID: 232064 RVA: 0x007AA092 File Offset: 0x007A8292
+		// (set) Token: 0x06038A81 RID: 232065 RVA: 0x007AA09A File Offset: 0x007A829A
 		public ITalkItem_Union Type { get; set; }
 
-		// Token: 0x1700DFCA RID: 57290
-		// (get) Token: 0x0603574F RID: 218959 RVA: 0x0074851A File Offset: 0x0074671A
-		// (set) Token: 0x06035750 RID: 218960 RVA: 0x00748522 File Offset: 0x00746722
+		// Token: 0x1700EBC6 RID: 60358
+		// (get) Token: 0x06038A82 RID: 232066 RVA: 0x007AA0A3 File Offset: 0x007A82A3
+		// (set) Token: 0x06038A83 RID: 232067 RVA: 0x007AA0AB File Offset: 0x007A82AB
 		public object Value { get; set; }
 
-		// Token: 0x06035751 RID: 218961 RVA: 0x0074852B File Offset: 0x0074672B
+		// Token: 0x06038A84 RID: 232068 RVA: 0x007AA0B4 File Offset: 0x007A82B4
 		public ITalkItem_UnionUnion()
 		{
 			this.Type = ITalkItem_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06035752 RID: 218962 RVA: 0x00748541 File Offset: 0x00746741
+		// Token: 0x06038A85 RID: 232069 RVA: 0x007AA0CA File Offset: 0x007A82CA
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06035753 RID: 218963 RVA: 0x00748553 File Offset: 0x00746753
+		// Token: 0x06038A86 RID: 232070 RVA: 0x007AA0DC File Offset: 0x007A82DC
 		public ITalkItemT AsITalkItem()
 		{
 			return this.As<ITalkItemT>();
 		}
 
-		// Token: 0x06035754 RID: 218964 RVA: 0x0074855B File Offset: 0x0074675B
+		// Token: 0x06038A87 RID: 232071 RVA: 0x007AA0E4 File Offset: 0x007A82E4
 		public static ITalkItem_UnionUnion FromITalkItem(ITalkItemT _italkitem)
 		{
 			return new ITalkItem_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06035755 RID: 218965 RVA: 0x00748570 File Offset: 0x00746770
+		// Token: 0x06038A88 RID: 232072 RVA: 0x007AA0F9 File Offset: 0x007A82F9
 		public ITalkItemDialogT AsITalkItemDialog()
 		{
 			return this.As<ITalkItemDialogT>();
 		}
 
-		// Token: 0x06035756 RID: 218966 RVA: 0x00748578 File Offset: 0x00746778
+		// Token: 0x06038A89 RID: 232073 RVA: 0x007AA101 File Offset: 0x007A8301
 		public static ITalkItem_UnionUnion FromITalkItemDialog(ITalkItemDialogT _italkitemdialog)
 		{
 			return new ITalkItem_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06035757 RID: 218967 RVA: 0x0074858D File Offset: 0x0074678D
+		// Token: 0x06038A8A RID: 232074 RVA: 0x007AA116 File Offset: 0x007A8316
 		public ITalkItemOptionT AsITalkItemOption()
 		{
 			return this.As<ITalkItemOptionT>();
 		}
 
-		// Token: 0x06035758 RID: 218968 RVA: 0x00748595 File Offset: 0x00746795
+		// Token: 0x06038A8B RID: 232075 RVA: 0x007AA11E File Offset: 0x007A831E
 		public static ITalkItem_UnionUnion FromITalkItemOption(ITalkItemOptionT _italkitemoption)
 		{
 			return new ITalkItem_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06035759 RID: 218969 RVA: 0x007485AA File Offset: 0x007467AA
+		// Token: 0x06038A8C RID: 232076 RVA: 0x007AA133 File Offset: 0x007A8333
 		public ITalkItemSystemOptionT AsITalkItemSystemOption()
 		{
 			return this.As<ITalkItemSystemOptionT>();
 		}
 
-		// Token: 0x0603575A RID: 218970 RVA: 0x007485B2 File Offset: 0x007467B2
+		// Token: 0x06038A8D RID: 232077 RVA: 0x007AA13B File Offset: 0x007A833B
 		public static ITalkItem_UnionUnion FromITalkItemSystemOption(ITalkItemSystemOptionT _italkitemsystemoption)
 		{
 			return new ITalkItem_UnionUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0603575B RID: 218971 RVA: 0x007485C7 File Offset: 0x007467C7
+		// Token: 0x06038A8E RID: 232078 RVA: 0x007AA150 File Offset: 0x007A8350
 		public ITalkItemCenterTextT AsITalkItemCenterText()
 		{
 			return this.As<ITalkItemCenterTextT>();
 		}
 
-		// Token: 0x0603575C RID: 218972 RVA: 0x007485CF File Offset: 0x007467CF
+		// Token: 0x06038A8F RID: 232079 RVA: 0x007AA158 File Offset: 0x007A8358
 		public static ITalkItem_UnionUnion FromITalkItemCenterText(ITalkItemCenterTextT _italkitemcentertext)
 		{
 			return new ITalkItem_UnionUnion
@@ -109,13 +109,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0603575D RID: 218973 RVA: 0x007485E4 File Offset: 0x007467E4
+		// Token: 0x06038A90 RID: 232080 RVA: 0x007AA16D File Offset: 0x007A836D
 		public ITalkItemQteT AsITalkItemQte()
 		{
 			return this.As<ITalkItemQteT>();
 		}
 
-		// Token: 0x0603575E RID: 218974 RVA: 0x007485EC File Offset: 0x007467EC
+		// Token: 0x06038A91 RID: 232081 RVA: 0x007AA175 File Offset: 0x007A8375
 		public static ITalkItem_UnionUnion FromITalkItemQte(ITalkItemQteT _italkitemqte)
 		{
 			return new ITalkItem_UnionUnion
@@ -125,13 +125,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0603575F RID: 218975 RVA: 0x00748601 File Offset: 0x00746801
+		// Token: 0x06038A92 RID: 232082 RVA: 0x007AA18A File Offset: 0x007A838A
 		public ITalkItemNoTextItemT AsITalkItemNoTextItem()
 		{
 			return this.As<ITalkItemNoTextItemT>();
 		}
 
-		// Token: 0x06035760 RID: 218976 RVA: 0x00748609 File Offset: 0x00746809
+		// Token: 0x06038A93 RID: 232083 RVA: 0x007AA192 File Offset: 0x007A8392
 		public static ITalkItem_UnionUnion FromITalkItemNoTextItem(ITalkItemNoTextItemT _italkitemnotextitem)
 		{
 			return new ITalkItem_UnionUnion
@@ -141,13 +141,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06035761 RID: 218977 RVA: 0x0074861E File Offset: 0x0074681E
+		// Token: 0x06038A94 RID: 232084 RVA: 0x007AA1A7 File Offset: 0x007A83A7
 		public ITalkItemPhoneMessageT AsITalkItemPhoneMessage()
 		{
 			return this.As<ITalkItemPhoneMessageT>();
 		}
 
-		// Token: 0x06035762 RID: 218978 RVA: 0x00748626 File Offset: 0x00746826
+		// Token: 0x06038A95 RID: 232085 RVA: 0x007AA1AF File Offset: 0x007A83AF
 		public static ITalkItem_UnionUnion FromITalkItemPhoneMessage(ITalkItemPhoneMessageT _italkitemphonemessage)
 		{
 			return new ITalkItem_UnionUnion
@@ -157,13 +157,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06035763 RID: 218979 RVA: 0x0074863B File Offset: 0x0074683B
+		// Token: 0x06038A96 RID: 232086 RVA: 0x007AA1C4 File Offset: 0x007A83C4
 		public ITalkItemAvgTalkT AsITalkItemAvgTalk()
 		{
 			return this.As<ITalkItemAvgTalkT>();
 		}
 
-		// Token: 0x06035764 RID: 218980 RVA: 0x00748643 File Offset: 0x00746843
+		// Token: 0x06038A97 RID: 232087 RVA: 0x007AA1CC File Offset: 0x007A83CC
 		public static ITalkItem_UnionUnion FromITalkItemAvgTalk(ITalkItemAvgTalkT _italkitemavgtalk)
 		{
 			return new ITalkItem_UnionUnion
@@ -173,13 +173,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06035765 RID: 218981 RVA: 0x00748659 File Offset: 0x00746859
+		// Token: 0x06038A98 RID: 232088 RVA: 0x007AA1E2 File Offset: 0x007A83E2
 		public ITalkItemAvgEnterT AsITalkItemAvgEnter()
 		{
 			return this.As<ITalkItemAvgEnterT>();
 		}
 
-		// Token: 0x06035766 RID: 218982 RVA: 0x00748661 File Offset: 0x00746861
+		// Token: 0x06038A99 RID: 232089 RVA: 0x007AA1EA File Offset: 0x007A83EA
 		public static ITalkItem_UnionUnion FromITalkItemAvgEnter(ITalkItemAvgEnterT _italkitemavgenter)
 		{
 			return new ITalkItem_UnionUnion
@@ -189,13 +189,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06035767 RID: 218983 RVA: 0x00748677 File Offset: 0x00746877
+		// Token: 0x06038A9A RID: 232090 RVA: 0x007AA200 File Offset: 0x007A8400
 		public ITalkItemAvgExitT AsITalkItemAvgExit()
 		{
 			return this.As<ITalkItemAvgExitT>();
 		}
 
-		// Token: 0x06035768 RID: 218984 RVA: 0x0074867F File Offset: 0x0074687F
+		// Token: 0x06038A9B RID: 232091 RVA: 0x007AA208 File Offset: 0x007A8408
 		public static ITalkItem_UnionUnion FromITalkItemAvgExit(ITalkItemAvgExitT _italkitemavgexit)
 		{
 			return new ITalkItem_UnionUnion
@@ -205,13 +205,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06035769 RID: 218985 RVA: 0x00748695 File Offset: 0x00746895
+		// Token: 0x06038A9C RID: 232092 RVA: 0x007AA21E File Offset: 0x007A841E
 		public ITalkItemAvgOptionT AsITalkItemAvgOption()
 		{
 			return this.As<ITalkItemAvgOptionT>();
 		}
 
-		// Token: 0x0603576A RID: 218986 RVA: 0x0074869D File Offset: 0x0074689D
+		// Token: 0x06038A9D RID: 232093 RVA: 0x007AA226 File Offset: 0x007A8426
 		public static ITalkItem_UnionUnion FromITalkItemAvgOption(ITalkItemAvgOptionT _italkitemavgoption)
 		{
 			return new ITalkItem_UnionUnion
@@ -221,13 +221,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0603576B RID: 218987 RVA: 0x007486B3 File Offset: 0x007468B3
+		// Token: 0x06038A9E RID: 232094 RVA: 0x007AA23C File Offset: 0x007A843C
 		public ITalkItemAvgNarrationT AsITalkItemAvgNarration()
 		{
 			return this.As<ITalkItemAvgNarrationT>();
 		}
 
-		// Token: 0x0603576C RID: 218988 RVA: 0x007486BB File Offset: 0x007468BB
+		// Token: 0x06038A9F RID: 232095 RVA: 0x007AA244 File Offset: 0x007A8444
 		public static ITalkItem_UnionUnion FromITalkItemAvgNarration(ITalkItemAvgNarrationT _italkitemavgnarration)
 		{
 			return new ITalkItem_UnionUnion
@@ -237,13 +237,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0603576D RID: 218989 RVA: 0x007486D1 File Offset: 0x007468D1
+		// Token: 0x06038AA0 RID: 232096 RVA: 0x007AA25A File Offset: 0x007A845A
 		public ITalkItemAvgCenterTextT AsITalkItemAvgCenterText()
 		{
 			return this.As<ITalkItemAvgCenterTextT>();
 		}
 
-		// Token: 0x0603576E RID: 218990 RVA: 0x007486D9 File Offset: 0x007468D9
+		// Token: 0x06038AA1 RID: 232097 RVA: 0x007AA262 File Offset: 0x007A8462
 		public static ITalkItem_UnionUnion FromITalkItemAvgCenterText(ITalkItemAvgCenterTextT _italkitemavgcentertext)
 		{
 			return new ITalkItem_UnionUnion
@@ -253,13 +253,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0603576F RID: 218991 RVA: 0x007486EF File Offset: 0x007468EF
+		// Token: 0x06038AA2 RID: 232098 RVA: 0x007AA278 File Offset: 0x007A8478
 		public ITalkItemVisualNovelTalkT AsITalkItemVisualNovelTalk()
 		{
 			return this.As<ITalkItemVisualNovelTalkT>();
 		}
 
-		// Token: 0x06035770 RID: 218992 RVA: 0x007486F7 File Offset: 0x007468F7
+		// Token: 0x06038AA3 RID: 232099 RVA: 0x007AA280 File Offset: 0x007A8480
 		public static ITalkItem_UnionUnion FromITalkItemVisualNovelTalk(ITalkItemVisualNovelTalkT _italkitemvisualnoveltalk)
 		{
 			return new ITalkItem_UnionUnion
@@ -269,13 +269,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06035771 RID: 218993 RVA: 0x0074870D File Offset: 0x0074690D
+		// Token: 0x06038AA4 RID: 232100 RVA: 0x007AA296 File Offset: 0x007A8496
 		public ITalkItemVisualNovelNoTextItemT AsITalkItemVisualNovelNoTextItem()
 		{
 			return this.As<ITalkItemVisualNovelNoTextItemT>();
 		}
 
-		// Token: 0x06035772 RID: 218994 RVA: 0x00748715 File Offset: 0x00746915
+		// Token: 0x06038AA5 RID: 232101 RVA: 0x007AA29E File Offset: 0x007A849E
 		public static ITalkItem_UnionUnion FromITalkItemVisualNovelNoTextItem(ITalkItemVisualNovelNoTextItemT _italkitemvisualnovelnotextitem)
 		{
 			return new ITalkItem_UnionUnion
@@ -285,13 +285,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06035773 RID: 218995 RVA: 0x0074872B File Offset: 0x0074692B
+		// Token: 0x06038AA6 RID: 232102 RVA: 0x007AA2B4 File Offset: 0x007A84B4
 		public ITalkItemVisualNovelNarrationT AsITalkItemVisualNovelNarration()
 		{
 			return this.As<ITalkItemVisualNovelNarrationT>();
 		}
 
-		// Token: 0x06035774 RID: 218996 RVA: 0x00748733 File Offset: 0x00746933
+		// Token: 0x06038AA7 RID: 232103 RVA: 0x007AA2BC File Offset: 0x007A84BC
 		public static ITalkItem_UnionUnion FromITalkItemVisualNovelNarration(ITalkItemVisualNovelNarrationT _italkitemvisualnovelnarration)
 		{
 			return new ITalkItem_UnionUnion
@@ -301,13 +301,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06035775 RID: 218997 RVA: 0x00748749 File Offset: 0x00746949
+		// Token: 0x06038AA8 RID: 232104 RVA: 0x007AA2D2 File Offset: 0x007A84D2
 		public ITalkItemVisualNovelOptionT AsITalkItemVisualNovelOption()
 		{
 			return this.As<ITalkItemVisualNovelOptionT>();
 		}
 
-		// Token: 0x06035776 RID: 218998 RVA: 0x00748751 File Offset: 0x00746951
+		// Token: 0x06038AA9 RID: 232105 RVA: 0x007AA2DA File Offset: 0x007A84DA
 		public static ITalkItem_UnionUnion FromITalkItemVisualNovelOption(ITalkItemVisualNovelOptionT _italkitemvisualnoveloption)
 		{
 			return new ITalkItem_UnionUnion
@@ -317,13 +317,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06035777 RID: 218999 RVA: 0x00748767 File Offset: 0x00746967
+		// Token: 0x06038AAA RID: 232106 RVA: 0x007AA2F0 File Offset: 0x007A84F0
 		public ITalkItemVisualNovelCenterTextT AsITalkItemVisualNovelCenterText()
 		{
 			return this.As<ITalkItemVisualNovelCenterTextT>();
 		}
 
-		// Token: 0x06035778 RID: 219000 RVA: 0x0074876F File Offset: 0x0074696F
+		// Token: 0x06038AAB RID: 232107 RVA: 0x007AA2F8 File Offset: 0x007A84F8
 		public static ITalkItem_UnionUnion FromITalkItemVisualNovelCenterText(ITalkItemVisualNovelCenterTextT _italkitemvisualnovelcentertext)
 		{
 			return new ITalkItem_UnionUnion
@@ -333,7 +333,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06035779 RID: 219001 RVA: 0x00748788 File Offset: 0x00746988
+		// Token: 0x06038AAC RID: 232108 RVA: 0x007AA310 File Offset: 0x007A8510
 		public static int Pack(FlatBufferBuilder builder, ITalkItem_UnionUnion _o)
 		{
 			switch (_o.Type)

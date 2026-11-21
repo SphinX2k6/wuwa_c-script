@@ -1,27 +1,26 @@
 ﻿using System;
-using System.Linq;
 using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004955 RID: 18773
+	// Token: 0x020038CD RID: 14541
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CommonFilterResetComponent : LongTimeToTriggerComponent
 	{
-		// Token: 0x06030FF7 RID: 200695 RVA: 0x00B60D35 File Offset: 0x00B5EF35
+		// Token: 0x06025B27 RID: 154407 RVA: 0x00A9BC15 File Offset: 0x00A99E15
 		public CommonFilterResetComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x06030FF8 RID: 200696 RVA: 0x00B60D3E File Offset: 0x00B5EF3E
+		// Token: 0x06025B28 RID: 154408 RVA: 0x00A9BC1E File Offset: 0x00A99E1E
 		protected override void ClickButton(string tag)
 		{
 			UiNavigationNewController.Instance.ClickButton(tag);
 			this.ResetToFindListener();
 		}
 
-		// Token: 0x06030FF9 RID: 200697 RVA: 0x00B60D54 File Offset: 0x00B5EF54
+		// Token: 0x06025B29 RID: 154409 RVA: 0x00A9BC34 File Offset: 0x00A99E34
 		protected void ResetToFindListener()
 		{
 			TsUiNavigationBehaviorListener currentNavigationFocusListener = UiNavigationNewController.Instance.GetCurrentNavigationFocusListener();
@@ -33,7 +32,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			{
 				return;
 			}
-			if (!CommonFilterResetComponent.ListenerGroupNameArray.Contains(currentNavigationFocusListener.GroupName))
+			if (Array.IndexOf<string>(CommonFilterResetComponent.ListenerGroupNameArray, currentNavigationFocusListener.GroupName) < 0)
 			{
 				return;
 			}
@@ -51,7 +50,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			UiNavigationNewController.Instance.MarkViewHandleRefreshNavigationDirty();
 		}
 
-		// Token: 0x0401A482 RID: 107650
+		// Token: 0x04014CF5 RID: 85237
 		[StaticVariableRuleIgnore]
 		private static readonly string[] ListenerGroupNameArray = new string[]
 		{

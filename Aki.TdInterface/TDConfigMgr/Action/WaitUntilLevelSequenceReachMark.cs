@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002281 RID: 8833
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020024EE RID: 9454
 	public class WaitUntilLevelSequenceReachMark : ActionParams
 	{
-		// Token: 0x0600C1C2 RID: 49602 RVA: 0x001BC800 File Offset: 0x001BAA00
+		// Token: 0x0600CD88 RID: 52616 RVA: 0x001D3F84 File Offset: 0x001D2184
 		private WaitUntilLevelSequenceReachMark_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C1C3 RID: 49603 RVA: 0x001BC838 File Offset: 0x001BAA38
+		// Token: 0x0600CD89 RID: 52617 RVA: 0x001D3FBC File Offset: 0x001D21BC
 		public static WaitUntilLevelSequenceReachMark Create([Nullable(2)] WaitUntilLevelSequenceReachMark instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C1C4 RID: 49604 RVA: 0x001BC84B File Offset: 0x001BAA4B
+		// Token: 0x0600CD8A RID: 52618 RVA: 0x001D3FCF File Offset: 0x001D21CF
 		public static WaitUntilLevelSequenceReachMark CreateFromSetValue([Nullable(2)] WaitUntilLevelSequenceReachMark_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C1C5 RID: 49605 RVA: 0x001BC85E File Offset: 0x001BAA5E
+		// Token: 0x0600CD8B RID: 52619 RVA: 0x001D3FE2 File Offset: 0x001D21E2
 		public WaitUntilLevelSequenceReachMark_SetValue ToSetValue()
 		{
 			return new WaitUntilLevelSequenceReachMark_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003A8D RID: 14989
-		// (get) Token: 0x0600C1C6 RID: 49606 RVA: 0x001BC87D File Offset: 0x001BAA7D
-		// (set) Token: 0x0600C1C7 RID: 49607 RVA: 0x001BC8A8 File Offset: 0x001BAAA8
+		// Token: 0x17003D84 RID: 15748
+		// (get) Token: 0x0600CD8C RID: 52620 RVA: 0x001D4001 File Offset: 0x001D2201
+		// (set) Token: 0x0600CD8D RID: 52621 RVA: 0x001D402C File Offset: 0x001D222C
 		public virtual int EntityId
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A8E RID: 14990
-		// (get) Token: 0x0600C1C8 RID: 49608 RVA: 0x001BC8B6 File Offset: 0x001BAAB6
-		// (set) Token: 0x0600C1C9 RID: 49609 RVA: 0x001BC8E1 File Offset: 0x001BAAE1
+		// Token: 0x17003D85 RID: 15749
+		// (get) Token: 0x0600CD8E RID: 52622 RVA: 0x001D403A File Offset: 0x001D223A
+		// (set) Token: 0x0600CD8F RID: 52623 RVA: 0x001D4065 File Offset: 0x001D2265
 		public virtual string Mark
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04007368 RID: 29544
+		// Token: 0x040079B5 RID: 31157
 		[Nullable(2)]
 		protected new WaitUntilLevelSequenceReachMark FbInstance;
 
-		// Token: 0x04007369 RID: 29545
+		// Token: 0x040079B6 RID: 31158
 		[Nullable(2)]
 		protected WaitUntilLevelSequenceReachMark_SetValue PocoInterface;
 	}

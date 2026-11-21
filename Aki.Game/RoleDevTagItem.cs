@@ -4,10 +4,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020027FB RID: 10235
+// Token: 0x02001D76 RID: 7542
 public class RoleDevTagItem : UiPanelBase
 {
-	// Token: 0x06015025 RID: 86053 RVA: 0x005523A4 File Offset: 0x005505A4
+	// Token: 0x06012A25 RID: 76325 RVA: 0x0057D118 File Offset: 0x0057B318
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -21,7 +21,7 @@ public class RoleDevTagItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06015026 RID: 86054 RVA: 0x00552410 File Offset: 0x00550610
+	// Token: 0x06012A26 RID: 76326 RVA: 0x0057D184 File Offset: 0x0057B384
 	public void SetData(ERoleTypeTag typeTag)
 	{
 		string textStringId;
@@ -44,12 +44,12 @@ public class RoleDevTagItem : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), textStringId, Array.Empty<object>());
 	}
 
-	// Token: 0x02008E48 RID: 36424
+	// Token: 0x02008091 RID: 32913
 	private enum EComponent
 	{
-		// Token: 0x0402E27B RID: 189051
+		// Token: 0x04029978 RID: 170360
 		TexBg,
-		// Token: 0x0402E27C RID: 189052
+		// Token: 0x04029979 RID: 170361
 		TxtTagState
 	}
 }

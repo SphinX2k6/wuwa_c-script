@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020024E3 RID: 9443
+// Token: 0x020019CA RID: 6602
 [Nullable(new byte[]
 {
 	0,
@@ -12,7 +12,7 @@ using UnrealEngine;
 })]
 public class FetterIconItem : GridProxyAbstract<IVisionNewRecommendFetterItemData>
 {
-	// Token: 0x06012FD0 RID: 77776 RVA: 0x004B39CC File Offset: 0x004B1BCC
+	// Token: 0x0601048F RID: 66703 RVA: 0x004C158C File Offset: 0x004BF78C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,7 +23,7 @@ public class FetterIconItem : GridProxyAbstract<IVisionNewRecommendFetterItemDat
 		};
 	}
 
-	// Token: 0x06012FD1 RID: 77777 RVA: 0x004B3A28 File Offset: 0x004B1C28
+	// Token: 0x06010490 RID: 66704 RVA: 0x004C15E8 File Offset: 0x004BF7E8
 	[NullableContext(1)]
 	public override void Refresh(IVisionNewRecommendFetterItemData data, bool isSelected, int gridIndex)
 	{
@@ -48,14 +48,14 @@ public class FetterIconItem : GridProxyAbstract<IVisionNewRecommendFetterItemDat
 		item.SetUIActive(gridIndex != 0);
 	}
 
-	// Token: 0x02008A72 RID: 35442
+	// Token: 0x02007BFA RID: 31738
 	private enum EFetterIcon
 	{
-		// Token: 0x0402CF4D RID: 184141
+		// Token: 0x04028266 RID: 164454
 		Icon,
-		// Token: 0x0402CF4E RID: 184142
+		// Token: 0x04028267 RID: 164455
 		Num,
-		// Token: 0x0402CF4F RID: 184143
+		// Token: 0x04028268 RID: 164456
 		Add
 	}
 }

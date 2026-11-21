@@ -7,10 +7,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02000F6D RID: 3949
+// Token: 0x02000422 RID: 1058
 public class DrinksRoleStateItem : UiPanelBase
 {
-	// Token: 0x060064FE RID: 25854 RVA: 0x00140E34 File Offset: 0x0013F034
+	// Token: 0x06003896 RID: 14486 RVA: 0x001496D0 File Offset: 0x001478D0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,7 +29,7 @@ public class DrinksRoleStateItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x060064FF RID: 25855 RVA: 0x00140F40 File Offset: 0x0013F140
+	// Token: 0x06003897 RID: 14487 RVA: 0x001497DC File Offset: 0x001479DC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DrinksRoleStateItem.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -40,7 +40,7 @@ public class DrinksRoleStateItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06006500 RID: 25856 RVA: 0x00140F84 File Offset: 0x0013F184
+	// Token: 0x06003898 RID: 14488 RVA: 0x00149820 File Offset: 0x00147A20
 	protected override void OnStart()
 	{
 		this.LevelSequence = new LevelSequencePlayer(base.GetItem(4));
@@ -62,7 +62,7 @@ public class DrinksRoleStateItem : UiPanelBase
 		this.Delegate = DelegateUtils.ToManualReleaseDelegate<FLTweenFloatSetterDynamic>(new Action<float>(this.UpdateProgress));
 	}
 
-	// Token: 0x06006501 RID: 25857 RVA: 0x00141048 File Offset: 0x0013F248
+	// Token: 0x06003899 RID: 14489 RVA: 0x001498E4 File Offset: 0x00147AE4
 	protected override void OnBeforeDestroy()
 	{
 		if (this.Delegate != null)
@@ -72,7 +72,7 @@ public class DrinksRoleStateItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06006502 RID: 25858 RVA: 0x0014106C File Offset: 0x0013F26C
+	// Token: 0x0600389A RID: 14490 RVA: 0x00149908 File Offset: 0x00147B08
 	public void RefreshCurState()
 	{
 		ValueTuple<int, List<IDrinksRequireInfo>> roleState = DrinksModel.Instance.GetRoleState();
@@ -101,7 +101,7 @@ public class DrinksRoleStateItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06006503 RID: 25859 RVA: 0x00141134 File Offset: 0x0013F334
+	// Token: 0x0600389B RID: 14491 RVA: 0x001499D0 File Offset: 0x00147BD0
 	protected void InitCurState()
 	{
 		List<IDrinksRequireInfo> item = DrinksModel.Instance.GetRoleState().Item2;
@@ -125,7 +125,7 @@ public class DrinksRoleStateItem : UiPanelBase
 		sprite2.SetFillAmount(0f);
 	}
 
-	// Token: 0x06006504 RID: 25860 RVA: 0x001411AC File Offset: 0x0013F3AC
+	// Token: 0x0600389C RID: 14492 RVA: 0x00149A48 File Offset: 0x00147C48
 	protected void RefreshLikeTxt(float value, bool isInit)
 	{
 		int num;
@@ -206,14 +206,14 @@ public class DrinksRoleStateItem : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(5), textStringId, Array.Empty<object>());
 	}
 
-	// Token: 0x06006505 RID: 25861 RVA: 0x0014134C File Offset: 0x0013F54C
+	// Token: 0x0600389D RID: 14493 RVA: 0x00149BE8 File Offset: 0x00147DE8
 	[NullableContext(1)]
 	private DrinksRoleRequireItem CreateRequestItem()
 	{
 		return new DrinksRoleRequireItem();
 	}
 
-	// Token: 0x06006506 RID: 25862 RVA: 0x00141354 File Offset: 0x0013F554
+	// Token: 0x0600389E RID: 14494 RVA: 0x00149BF0 File Offset: 0x00147DF0
 	private void UpdateProgress(float value)
 	{
 		this.RefreshLikeTxt(value, false);
@@ -251,7 +251,7 @@ public class DrinksRoleStateItem : UiPanelBase
 		this.CurLikeness = value;
 	}
 
-	// Token: 0x06006507 RID: 25863 RVA: 0x001413FC File Offset: 0x0013F5FC
+	// Token: 0x0600389F RID: 14495 RVA: 0x00149C98 File Offset: 0x00147E98
 	private void OnTweenerEnd()
 	{
 		this.CurLikeness = this.EndLikeness;
@@ -261,15 +261,15 @@ public class DrinksRoleStateItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x04002DE5 RID: 11749
+	// Token: 0x04002E7E RID: 11902
 	[Nullable(2)]
 	protected ULTweener Tweener;
 
-	// Token: 0x04002DE6 RID: 11750
+	// Token: 0x04002E7F RID: 11903
 	[Nullable(2)]
 	protected FLTweenFloatSetterDynamic Delegate;
 
-	// Token: 0x04002DE7 RID: 11751
+	// Token: 0x04002E80 RID: 11904
 	[Nullable(new byte[]
 	{
 		2,
@@ -278,76 +278,76 @@ public class DrinksRoleStateItem : UiPanelBase
 	})]
 	protected GenericLayout<DrinksRoleRequireItem, IDrinksRequireInfo> Layout;
 
-	// Token: 0x04002DE8 RID: 11752
+	// Token: 0x04002E81 RID: 11905
 	[Nullable(2)]
 	protected LevelSequencePlayer LevelSequence;
 
-	// Token: 0x04002DE9 RID: 11753
+	// Token: 0x04002E82 RID: 11906
 	protected float CurLikeness;
 
-	// Token: 0x04002DEA RID: 11754
+	// Token: 0x04002E83 RID: 11907
 	protected float EndLikeness;
 
-	// Token: 0x04002DEB RID: 11755
+	// Token: 0x04002E84 RID: 11908
 	protected int CurLikenessState = 1;
 
-	// Token: 0x04002DEC RID: 11756
+	// Token: 0x04002E85 RID: 11909
 	protected float MaxScore;
 
-	// Token: 0x04002DED RID: 11757
+	// Token: 0x04002E86 RID: 11910
 	[Nullable(1)]
 	protected UCurveFloat Curve;
 
-	// Token: 0x020075B6 RID: 30134
+	// Token: 0x0200674A RID: 26442
 	private static class ECurFavorState
 	{
-		// Token: 0x04026E77 RID: 159351
+		// Token: 0x040221C2 RID: 139714
 		public const int Dislike = 0;
 
-		// Token: 0x04026E78 RID: 159352
+		// Token: 0x040221C3 RID: 139715
 		public const int Zero = 1;
 
-		// Token: 0x04026E79 RID: 159353
+		// Token: 0x040221C4 RID: 139716
 		public const int Like = 2;
 
-		// Token: 0x04026E7A RID: 159354
+		// Token: 0x040221C5 RID: 139717
 		public const int VeryLike = 3;
 	}
 
-	// Token: 0x020075B7 RID: 30135
+	// Token: 0x0200674B RID: 26443
 	private static class EDefine
 	{
-		// Token: 0x04026E7B RID: 159355
+		// Token: 0x040221C6 RID: 139718
 		public const int TexHeadIcon = 0;
 
-		// Token: 0x04026E7C RID: 159356
+		// Token: 0x040221C7 RID: 139719
 		public const int TxtTitle = 1;
 
-		// Token: 0x04026E7D RID: 159357
+		// Token: 0x040221C8 RID: 139720
 		public const int Content = 2;
 
-		// Token: 0x04026E7E RID: 159358
+		// Token: 0x040221C9 RID: 139721
 		public const int RequestItem = 3;
 
-		// Token: 0x04026E7F RID: 159359
+		// Token: 0x040221CA RID: 139722
 		public const int PanelLikeness = 4;
 
-		// Token: 0x04026E80 RID: 159360
+		// Token: 0x040221CB RID: 139723
 		public const int TxtLikeState = 5;
 
-		// Token: 0x04026E81 RID: 159361
+		// Token: 0x040221CC RID: 139724
 		public const int SpriteNotLike = 6;
 
-		// Token: 0x04026E82 RID: 159362
+		// Token: 0x040221CD RID: 139725
 		public const int SpriteLike = 7;
 
-		// Token: 0x04026E83 RID: 159363
+		// Token: 0x040221CE RID: 139726
 		public const int TexNotLike = 8;
 
-		// Token: 0x04026E84 RID: 159364
+		// Token: 0x040221CF RID: 139727
 		public const int TexLike = 9;
 
-		// Token: 0x04026E85 RID: 159365
+		// Token: 0x040221D0 RID: 139728
 		public const int PanelFxLike = 10;
 	}
 }

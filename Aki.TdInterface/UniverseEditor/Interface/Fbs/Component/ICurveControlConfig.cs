@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200504B RID: 20555
+	// Token: 0x020055AD RID: 21933
 	public struct ICurveControlConfig : IFlatbufferObject
 	{
-		// Token: 0x17009529 RID: 38185
-		// (get) Token: 0x06020F09 RID: 134921 RVA: 0x00494483 File Offset: 0x00492683
+		// Token: 0x17009D0F RID: 40207
+		// (get) Token: 0x06022E43 RID: 142915 RVA: 0x004CE137 File Offset: 0x004CC337
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06020F0A RID: 134922 RVA: 0x00494490 File Offset: 0x00492690
+		// Token: 0x06022E44 RID: 142916 RVA: 0x004CE144 File Offset: 0x004CC344
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06020F0B RID: 134923 RVA: 0x00494498 File Offset: 0x00492698
+		// Token: 0x06022E45 RID: 142917 RVA: 0x004CE14C File Offset: 0x004CC34C
 		public static ICurveControlConfig GetRootAsICurveControlConfig(ByteBuffer _bb)
 		{
 			return ICurveControlConfig.GetRootAsICurveControlConfig(_bb, default(ICurveControlConfig));
 		}
 
-		// Token: 0x06020F0C RID: 134924 RVA: 0x004944B4 File Offset: 0x004926B4
+		// Token: 0x06022E46 RID: 142918 RVA: 0x004CE168 File Offset: 0x004CC368
 		public static ICurveControlConfig GetRootAsICurveControlConfig(ByteBuffer _bb, ICurveControlConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06020F0D RID: 134925 RVA: 0x004944D1 File Offset: 0x004926D1
+		// Token: 0x06022E47 RID: 142919 RVA: 0x004CE185 File Offset: 0x004CC385
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06020F0E RID: 134926 RVA: 0x004944E0 File Offset: 0x004926E0
+		// Token: 0x06022E48 RID: 142920 RVA: 0x004CE194 File Offset: 0x004CC394
 		public ICurveControlConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700952A RID: 38186
-		// (get) Token: 0x06020F0F RID: 134927 RVA: 0x004944F0 File Offset: 0x004926F0
+		// Token: 0x17009D10 RID: 40208
+		// (get) Token: 0x06022E49 RID: 142921 RVA: 0x004CE1A4 File Offset: 0x004CC3A4
 		public ECurveControlType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06020F10 RID: 134928 RVA: 0x0049452C File Offset: 0x0049272C
+		// Token: 0x06022E4A RID: 142922 RVA: 0x004CE1E0 File Offset: 0x004CC3E0
 		public static Offset<ICurveControlConfig> CreateICurveControlConfig(FlatBufferBuilder builder, ECurveControlType Type = ECurveControlType.ChargeSlash)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ICurveControlConfig.EndICurveControlConfig(builder);
 		}
 
-		// Token: 0x06020F11 RID: 134929 RVA: 0x00494542 File Offset: 0x00492742
+		// Token: 0x06022E4B RID: 142923 RVA: 0x004CE1F6 File Offset: 0x004CC3F6
 		public static void StartICurveControlConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06020F12 RID: 134930 RVA: 0x0049454B File Offset: 0x0049274B
+		// Token: 0x06022E4C RID: 142924 RVA: 0x004CE1FF File Offset: 0x004CC3FF
 		public static void AddType(FlatBufferBuilder builder, ECurveControlType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06020F13 RID: 134931 RVA: 0x00494556 File Offset: 0x00492756
+		// Token: 0x06022E4D RID: 142925 RVA: 0x004CE20A File Offset: 0x004CC40A
 		public static Offset<ICurveControlConfig> EndICurveControlConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<ICurveControlConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06020F14 RID: 134932 RVA: 0x00494564 File Offset: 0x00492764
+		// Token: 0x06022E4E RID: 142926 RVA: 0x004CE218 File Offset: 0x004CC418
 		public ICurveControlConfigT UnPack()
 		{
 			ICurveControlConfigT curveControlConfigT = new ICurveControlConfigT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return curveControlConfigT;
 		}
 
-		// Token: 0x06020F15 RID: 134933 RVA: 0x0049457F File Offset: 0x0049277F
+		// Token: 0x06022E4F RID: 142927 RVA: 0x004CE233 File Offset: 0x004CC433
 		public void UnPackTo(ICurveControlConfigT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06020F16 RID: 134934 RVA: 0x00494590 File Offset: 0x00492790
+		// Token: 0x06022E50 RID: 142928 RVA: 0x004CE244 File Offset: 0x004CC444
 		public static Offset<ICurveControlConfig> Pack(FlatBufferBuilder builder, ICurveControlConfigT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ICurveControlConfig.CreateICurveControlConfig(builder, _o.Type);
 		}
 
-		// Token: 0x0400E040 RID: 57408
+		// Token: 0x0400EC39 RID: 60473
 		private Table __p;
 	}
 }

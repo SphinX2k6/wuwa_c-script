@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006C1E RID: 27678
+	// Token: 0x02007385 RID: 29573
 	public enum IOpenQteConfig_Union : byte
 	{
-		// Token: 0x04011522 RID: 70946
+		// Token: 0x04012479 RID: 74873
 		NONE,
-		// Token: 0x04011523 RID: 70947
+		// Token: 0x0401247A RID: 74874
 		IOpenQteConfig,
-		// Token: 0x04011524 RID: 70948
+		// Token: 0x0401247B RID: 74875
 		IOpenPanelQteQte,
-		// Token: 0x04011525 RID: 70949
+		// Token: 0x0401247C RID: 74876
 		IOpenLevelQte
 	}
 }

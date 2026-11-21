@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004FAD RID: 20397
+	// Token: 0x02005509 RID: 21769
 	public class IClientTriggerComponentT
 	{
-		// Token: 0x170093B9 RID: 37817
-		// (get) Token: 0x0602076B RID: 132971 RVA: 0x0048455E File Offset: 0x0048275E
-		// (set) Token: 0x0602076C RID: 132972 RVA: 0x00484566 File Offset: 0x00482766
+		// Token: 0x17009B91 RID: 39825
+		// (get) Token: 0x0602265F RID: 140895 RVA: 0x004BDA42 File Offset: 0x004BBC42
+		// (set) Token: 0x06022660 RID: 140896 RVA: 0x004BDA4A File Offset: 0x004BBC4A
 		public bool Disabled { get; set; }
 
-		// Token: 0x170093BA RID: 37818
-		// (get) Token: 0x0602076D RID: 132973 RVA: 0x0048456F File Offset: 0x0048276F
-		// (set) Token: 0x0602076E RID: 132974 RVA: 0x00484577 File Offset: 0x00482777
+		// Token: 0x17009B92 RID: 39826
+		// (get) Token: 0x06022661 RID: 140897 RVA: 0x004BDA53 File Offset: 0x004BBC53
+		// (set) Token: 0x06022662 RID: 140898 RVA: 0x004BDA5B File Offset: 0x004BBC5B
 		public ITriggerMatchConfigT TriggerMatch { get; set; }
 
-		// Token: 0x170093BB RID: 37819
-		// (get) Token: 0x0602076F RID: 132975 RVA: 0x00484580 File Offset: 0x00482780
-		// (set) Token: 0x06020770 RID: 132976 RVA: 0x00484588 File Offset: 0x00482788
+		// Token: 0x17009B93 RID: 39827
+		// (get) Token: 0x06022663 RID: 140899 RVA: 0x004BDA64 File Offset: 0x004BBC64
+		// (set) Token: 0x06022664 RID: 140900 RVA: 0x004BDA6C File Offset: 0x004BBC6C
 		public ITriggeredConfigT OnTriggerEnter { get; set; }
 
-		// Token: 0x170093BC RID: 37820
-		// (get) Token: 0x06020771 RID: 132977 RVA: 0x00484591 File Offset: 0x00482791
-		// (set) Token: 0x06020772 RID: 132978 RVA: 0x00484599 File Offset: 0x00482799
+		// Token: 0x17009B94 RID: 39828
+		// (get) Token: 0x06022665 RID: 140901 RVA: 0x004BDA75 File Offset: 0x004BBC75
+		// (set) Token: 0x06022666 RID: 140902 RVA: 0x004BDA7D File Offset: 0x004BBC7D
 		public ITriggeredConfigT OnTriggerExit { get; set; }
 
-		// Token: 0x170093BD RID: 37821
-		// (get) Token: 0x06020773 RID: 132979 RVA: 0x004845A2 File Offset: 0x004827A2
-		// (set) Token: 0x06020774 RID: 132980 RVA: 0x004845AA File Offset: 0x004827AA
+		// Token: 0x17009B95 RID: 39829
+		// (get) Token: 0x06022667 RID: 140903 RVA: 0x004BDA86 File Offset: 0x004BBC86
+		// (set) Token: 0x06022668 RID: 140904 RVA: 0x004BDA8E File Offset: 0x004BBC8E
 		public byte NullMask { get; set; }
 
-		// Token: 0x06020775 RID: 132981 RVA: 0x004845B3 File Offset: 0x004827B3
+		// Token: 0x06022669 RID: 140905 RVA: 0x004BDA97 File Offset: 0x004BBC97
 		public IClientTriggerComponentT()
 		{
 			this.Disabled = false;

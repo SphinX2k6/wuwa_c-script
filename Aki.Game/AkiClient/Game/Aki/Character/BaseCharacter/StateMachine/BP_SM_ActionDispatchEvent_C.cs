@@ -7,14 +7,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter.StateMachine
 {
-	// Token: 0x0200435B RID: 17243
+	// Token: 0x0200337C RID: 13180
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/StateMachine/BP_SM_ActionDispatchEvent.BP_SM_ActionDispatchEvent_C")]
 	[UnrealStructLayout(64, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 64)]
 	public class BP_SM_ActionDispatchEvent_C : UASMAction, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602CB4A RID: 183114 RVA: 0x00A265A1 File Offset: 0x00A247A1
+		// Token: 0x06021768 RID: 137064 RVA: 0x009613F5 File Offset: 0x0095F5F5
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_SM_ActionDispatchEvent_C._ClassPtr == IntPtr.Zero)
@@ -24,46 +24,46 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter.StateMachine
 			return BP_SM_ActionDispatchEvent_C._ClassPtr;
 		}
 
-		// Token: 0x0602CB4B RID: 183115 RVA: 0x00A265C8 File Offset: 0x00A247C8
+		// Token: 0x06021769 RID: 137065 RVA: 0x0096141C File Offset: 0x0095F61C
 		public BP_SM_ActionDispatchEvent_C() : this(BuiltinUtils.AllocNativeUObject(BP_SM_ActionDispatchEvent_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602CB4C RID: 183116 RVA: 0x00A265F0 File Offset: 0x00A247F0
+		// Token: 0x0602176A RID: 137066 RVA: 0x00961444 File Offset: 0x0095F644
 		public BP_SM_ActionDispatchEvent_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_SM_ActionDispatchEvent_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17007087 RID: 28807
-		// (get) Token: 0x0602CB4D RID: 183117 RVA: 0x00A26623 File Offset: 0x00A24823
-		// (set) Token: 0x0602CB4E RID: 183118 RVA: 0x00A26637 File Offset: 0x00A24837
+		// Token: 0x17004489 RID: 17545
+		// (get) Token: 0x0602176B RID: 137067 RVA: 0x00961477 File Offset: 0x0095F677
+		// (set) Token: 0x0602176C RID: 137068 RVA: 0x0096148B File Offset: 0x0095F68B
 		public unsafe string 派发事件名
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)BP_SM_ActionDispatchEvent_C.__PropertyOffset_0)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)BP_SM_ActionDispatchEvent_C.__PropertyOffset_派发事件名)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)BP_SM_ActionDispatchEvent_C.__PropertyOffset_0)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)BP_SM_ActionDispatchEvent_C.__PropertyOffset_派发事件名)), value);
 			}
 		}
 
-		// Token: 0x0602CB4F RID: 183119 RVA: 0x00A2664C File Offset: 0x00A2484C
+		// Token: 0x0602176D RID: 137069 RVA: 0x009614A0 File Offset: 0x0095F6A0
 		protected BP_SM_ActionDispatchEvent_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04017926 RID: 96550
+		// Token: 0x040124A7 RID: 74919
 		public new const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/StateMachine/BP_SM_ActionDispatchEvent.BP_SM_ActionDispatchEvent_C";
 
-		// Token: 0x04017927 RID: 96551
+		// Token: 0x040124A8 RID: 74920
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04017928 RID: 96552
+		// Token: 0x040124A9 RID: 74921
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04017929 RID: 96553
-		internal static int __PropertyOffset_0;
+		// Token: 0x040124AA RID: 74922
+		internal static int __PropertyOffset_派发事件名;
 	}
 }

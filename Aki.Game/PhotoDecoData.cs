@@ -2,13 +2,13 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x0200255D RID: 9565
+// Token: 0x02001A48 RID: 6728
 [NullableContext(1)]
 [Nullable(0)]
 public class PhotoDecoData
 {
-	// Token: 0x170018EC RID: 6380
-	// (get) Token: 0x060134B1 RID: 79025 RVA: 0x004CC960 File Offset: 0x004CAB60
+	// Token: 0x17001926 RID: 6438
+	// (get) Token: 0x06010993 RID: 67987 RVA: 0x004DB594 File Offset: 0x004D9794
 	public int RelativeItem
 	{
 		get
@@ -32,8 +32,8 @@ public class PhotoDecoData
 		}
 	}
 
-	// Token: 0x170018ED RID: 6381
-	// (get) Token: 0x060134B2 RID: 79026 RVA: 0x004CC9B4 File Offset: 0x004CABB4
+	// Token: 0x17001927 RID: 6439
+	// (get) Token: 0x06010994 RID: 67988 RVA: 0x004DB5E8 File Offset: 0x004D97E8
 	public bool IsDefault
 	{
 		get
@@ -46,7 +46,7 @@ public class PhotoDecoData
 		}
 	}
 
-	// Token: 0x060134B3 RID: 79027 RVA: 0x004CCA0A File Offset: 0x004CAC0A
+	// Token: 0x06010995 RID: 67989 RVA: 0x004DB63E File Offset: 0x004D983E
 	public static PhotoDecoData FromFrame(PhotoFrame cfg)
 	{
 		return new PhotoDecoData
@@ -57,7 +57,7 @@ public class PhotoDecoData
 		};
 	}
 
-	// Token: 0x060134B4 RID: 79028 RVA: 0x004CCA31 File Offset: 0x004CAC31
+	// Token: 0x06010996 RID: 67990 RVA: 0x004DB665 File Offset: 0x004D9865
 	public static PhotoDecoData FromSticker(PhotoSticker cfg)
 	{
 		return new PhotoDecoData
@@ -68,15 +68,15 @@ public class PhotoDecoData
 		};
 	}
 
-	// Token: 0x0400918E RID: 37262
+	// Token: 0x040092E7 RID: 37607
 	public int Id;
 
-	// Token: 0x0400918F RID: 37263
+	// Token: 0x040092E8 RID: 37608
 	public EPhotoDecorationSubTabType DecoType;
 
-	// Token: 0x04009190 RID: 37264
+	// Token: 0x040092E9 RID: 37609
 	public PhotoFrame? FrameConfig;
 
-	// Token: 0x04009191 RID: 37265
+	// Token: 0x040092EA RID: 37610
 	public PhotoSticker? StickerConfig;
 }

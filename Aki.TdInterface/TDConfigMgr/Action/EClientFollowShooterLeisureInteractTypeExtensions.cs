@@ -2,32 +2,32 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022E3 RID: 8931
+	// Token: 0x02002554 RID: 9556
 	public static class EClientFollowShooterLeisureInteractTypeExtensions
 	{
-		// Token: 0x0600C37C RID: 50044 RVA: 0x001C8F60 File Offset: 0x001C7160
+		// Token: 0x0600CF54 RID: 53076 RVA: 0x001E0E44 File Offset: 0x001DF044
 		public static string ToEnumString(this EClientFollowShooterLeisureInteractType value)
 		{
 			string result;
-			if (value != EClientFollowShooterLeisureInteractType.ResetToPlayer)
+			switch (value)
 			{
-				if (value != EClientFollowShooterLeisureInteractType.PlayAnimation)
-				{
-					result = value.ToString();
-				}
-				else
-				{
-					result = "PlayAnimation";
-				}
-			}
-			else
-			{
+			case EClientFollowShooterLeisureInteractType.PlayAnimation:
+				result = "PlayAnimation";
+				break;
+			case EClientFollowShooterLeisureInteractType.ResetToPlayer:
 				result = "ResetToPlayer";
+				break;
+			case EClientFollowShooterLeisureInteractType.PlaySkill:
+				result = "PlaySkill";
+				break;
+			default:
+				result = value.ToString();
+				break;
 			}
 			return result;
 		}
 
-		// Token: 0x0600C37D RID: 50045 RVA: 0x001C8F98 File Offset: 0x001C7198
+		// Token: 0x0600CF55 RID: 53077 RVA: 0x001E0E8C File Offset: 0x001DF08C
 		public static EClientFollowShooterLeisureInteractType FromString(string name)
 		{
 			EClientFollowShooterLeisureInteractType result;
@@ -38,55 +38,63 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C37E RID: 50046 RVA: 0x001C8FC1 File Offset: 0x001C71C1
+		// Token: 0x0600CF56 RID: 53078 RVA: 0x001E0EB8 File Offset: 0x001DF0B8
 		public static bool TryFromString(string name, out EClientFollowShooterLeisureInteractType value)
 		{
 			if (string.IsNullOrEmpty(name))
 			{
-				value = EClientFollowShooterLeisureInteractType.ResetToPlayer;
+				value = EClientFollowShooterLeisureInteractType.PlayAnimation;
 				return false;
+			}
+			if (name == "PlayAnimation")
+			{
+				value = EClientFollowShooterLeisureInteractType.PlayAnimation;
+				return true;
 			}
 			if (name == "ResetToPlayer")
 			{
 				value = EClientFollowShooterLeisureInteractType.ResetToPlayer;
 				return true;
 			}
-			if (!(name == "PlayAnimation"))
+			if (!(name == "PlaySkill"))
 			{
-				value = EClientFollowShooterLeisureInteractType.ResetToPlayer;
+				value = EClientFollowShooterLeisureInteractType.PlayAnimation;
 				return false;
 			}
-			value = EClientFollowShooterLeisureInteractType.PlayAnimation;
+			value = EClientFollowShooterLeisureInteractType.PlaySkill;
 			return true;
 		}
 
-		// Token: 0x0600C37F RID: 50047 RVA: 0x001C8FFA File Offset: 0x001C71FA
+		// Token: 0x0600CF57 RID: 53079 RVA: 0x001E0F0E File Offset: 0x001DF10E
 		public static string[] GetStringValues()
 		{
 			return new string[]
 			{
+				"PlayAnimation",
 				"ResetToPlayer",
-				"PlayAnimation"
+				"PlaySkill"
 			};
 		}
 
-		// Token: 0x0600C380 RID: 50048 RVA: 0x001C9012 File Offset: 0x001C7212
+		// Token: 0x0600CF58 RID: 53080 RVA: 0x001E0F2E File Offset: 0x001DF12E
 		public static EClientFollowShooterLeisureInteractType[] GetValues()
 		{
 			return new EClientFollowShooterLeisureInteractType[]
 			{
+				EClientFollowShooterLeisureInteractType.PlayAnimation,
 				EClientFollowShooterLeisureInteractType.ResetToPlayer,
-				EClientFollowShooterLeisureInteractType.PlayAnimation
+				EClientFollowShooterLeisureInteractType.PlaySkill
 			};
 		}
 
-		// Token: 0x0600C381 RID: 50049 RVA: 0x001C901E File Offset: 0x001C721E
+		// Token: 0x0600CF59 RID: 53081 RVA: 0x001E0F3E File Offset: 0x001DF13E
 		public static string[] GetNames()
 		{
 			return new string[]
 			{
+				"PlayAnimation",
 				"ResetToPlayer",
-				"PlayAnimation"
+				"PlaySkill"
 			};
 		}
 	}

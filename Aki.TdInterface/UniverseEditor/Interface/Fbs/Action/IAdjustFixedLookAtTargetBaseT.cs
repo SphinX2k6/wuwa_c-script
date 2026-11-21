@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006159 RID: 24921
+	// Token: 0x020067BE RID: 26558
 	public class IAdjustFixedLookAtTargetBaseT
 	{
-		// Token: 0x1700B910 RID: 47376
-		// (get) Token: 0x0602ACF6 RID: 175350 RVA: 0x005E6F86 File Offset: 0x005E5186
-		// (set) Token: 0x0602ACF7 RID: 175351 RVA: 0x005E6F8E File Offset: 0x005E518E
+		// Token: 0x1700C280 RID: 49792
+		// (get) Token: 0x0602D3EF RID: 185327 RVA: 0x00631162 File Offset: 0x0062F362
+		// (set) Token: 0x0602D3F0 RID: 185328 RVA: 0x0063116A File Offset: 0x0062F36A
 		public EFixedLookAtTargetType Type { get; set; }
 
-		// Token: 0x0602ACF8 RID: 175352 RVA: 0x005E6F97 File Offset: 0x005E5197
+		// Token: 0x0602D3F1 RID: 185329 RVA: 0x00631173 File Offset: 0x0062F373
 		public IAdjustFixedLookAtTargetBaseT()
 		{
 			this.Type = EFixedLookAtTargetType.RangeEntity;

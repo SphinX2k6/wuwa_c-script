@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007329 RID: 29481
+	// Token: 0x02007B01 RID: 31489
 	public class ITalkOptionConditionSystemConfigBaseT
 	{
-		// Token: 0x1700DFF8 RID: 57336
-		// (get) Token: 0x0603581C RID: 219164 RVA: 0x0074A2F6 File Offset: 0x007484F6
-		// (set) Token: 0x0603581D RID: 219165 RVA: 0x0074A2FE File Offset: 0x007484FE
+		// Token: 0x1700EBF4 RID: 60404
+		// (get) Token: 0x06038B4F RID: 232271 RVA: 0x007ABE7E File Offset: 0x007AA07E
+		// (set) Token: 0x06038B50 RID: 232272 RVA: 0x007ABE86 File Offset: 0x007AA086
 		public ETalkOptionConditionSystem Type { get; set; }
 
-		// Token: 0x0603581E RID: 219166 RVA: 0x0074A307 File Offset: 0x00748507
+		// Token: 0x06038B51 RID: 232273 RVA: 0x007ABE8F File Offset: 0x007AA08F
 		public ITalkOptionConditionSystemConfigBaseT()
 		{
 			this.Type = ETalkOptionConditionSystem.SolarSchool;

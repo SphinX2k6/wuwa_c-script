@@ -1,11 +1,11 @@
 ﻿using System;
 using AkiClient.Game.Aki.Core.Fight;
 
-// Token: 0x02002DB3 RID: 11699
+// Token: 0x0200230D RID: 8973
 public class BulletDataSummon
 {
-	// Token: 0x170021AB RID: 8619
-	// (get) Token: 0x0601899D RID: 100765 RVA: 0x006496A6 File Offset: 0x006478A6
+	// Token: 0x17002207 RID: 8711
+	// (get) Token: 0x06016245 RID: 90693 RVA: 0x0066F4AE File Offset: 0x0066D6AE
 	public int EntityId
 	{
 		get
@@ -18,8 +18,8 @@ public class BulletDataSummon
 		}
 	}
 
-	// Token: 0x170021AC RID: 8620
-	// (get) Token: 0x0601899E RID: 100766 RVA: 0x006496D6 File Offset: 0x006478D6
+	// Token: 0x17002208 RID: 8712
+	// (get) Token: 0x06016246 RID: 90694 RVA: 0x0066F4DE File Offset: 0x0066D6DE
 	public bool DestroyEntityOnBulletEnd
 	{
 		get
@@ -32,18 +32,18 @@ public class BulletDataSummon
 		}
 	}
 
-	// Token: 0x0601899F RID: 100767 RVA: 0x00649706 File Offset: 0x00647906
+	// Token: 0x06016247 RID: 90695 RVA: 0x0066F50E File Offset: 0x0066D70E
 	public BulletDataSummon(SReBulletDataEntity data)
 	{
 		this.Data = data;
 	}
 
-	// Token: 0x0400B6C8 RID: 46792
+	// Token: 0x0400BA42 RID: 47682
 	private readonly SReBulletDataEntity Data;
 
-	// Token: 0x0400B6C9 RID: 46793
+	// Token: 0x0400BA43 RID: 47683
 	private int? EntityIdInternal;
 
-	// Token: 0x0400B6CA RID: 46794
+	// Token: 0x0400BA44 RID: 47684
 	private bool? DestroyEntityOnBulletEndInternal;
 }

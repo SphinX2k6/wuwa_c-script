@@ -1,122 +1,193 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
+using CSharpScript.Game.Module.Plot.PlotView;
 using CSharpScript.Game.Ui;
 using CSharpScript.Typing;
 using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot
 {
-	// Token: 0x02004FD9 RID: 20441
+	// Token: 0x02003FA3 RID: 16291
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MusicSubtitleManager : IStaticVariableResetter
 	{
-		// Token: 0x060344D5 RID: 214229 RVA: 0x00C48611 File Offset: 0x00C46811
+		// Token: 0x0602935A RID: 168794 RVA: 0x00B9236D File Offset: 0x00B9056D
 		static MusicSubtitleManager()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MusicSubtitleManager.CreateStaticDefaultValue), new Action(MusicSubtitleManager.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060344D6 RID: 214230 RVA: 0x00C48630 File Offset: 0x00C46830
+		// Token: 0x0602935B RID: 168795 RVA: 0x00B9238C File Offset: 0x00B9058C
 		public unsafe static void Play(IPostAkEventMusicSubtitle config)
 		{
-			if (MusicSubtitleManager.ActiveSession != null || MusicSubtitleManager.OpeningViewRequestId != null)
+			UiViewBase viewByName = UiManager.Instance.GetViewByName(EUiViewName.MusicSubtitleView);
+			if (config.IsEndAkEvent.GetValueOrDefault())
+			{
+				MusicSubtitleView musicSubtitleView = viewByName as MusicSubtitleView;
+				if (musicSubtitleView != null)
+				{
+					musicSubtitleView.StopAndClose();
+					return;
+				}
+				if (MusicSubtitleManager.ActiveSession != null)
+				{
+					MusicSubtitleManager.Stop(MusicSubtitleManager.ActiveSession.RequestId);
+				}
+				return;
+			}
+			else
+			{
+				if (MusicSubtitleManager.ActiveSession != null || MusicSubtitleManager.OpeningViewRequestId != null || viewByName != null)
+				{
+					global::Log instance = global::Log.Instance;
+					ELogModule module = ELogModule.Plot;
+					ELogAuthor author = ELogAuthor.FZX;
+					string message = "[MusicSubtitle] 已有音乐字幕正在播放或打开界面，拒绝重复请求";
+					string item = "Event";
+					MusicSubtitleManager.IMusicSubtitleSession activeSession = MusicSubtitleManager.ActiveSession;
+					ValueTuple<string, object> valueTuple = new ValueTuple<string, object>(item, (activeSession != null) ? activeSession.Event : null);
+					instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
+					return;
+				}
+				string @event = AudioSystem.Instance.parseAudioEventPath(config.AkEvent);
+				if (string.IsNullOrEmpty(config.MusicSubtitleGroupTag) || string.IsNullOrEmpty(@event))
+				{
+					global::Log instance2 = global::Log.Instance;
+					ELogModule module2 = ELogModule.Plot;
+					ELogAuthor author2 = ELogAuthor.FZX;
+					string message2 = "[MusicSubtitle] 音乐字幕配置错误";
+					<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("MusicSubtitleGroupTag", config.MusicSubtitleGroupTag);
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("AkEvent", config.AkEvent);
+					instance2.Error(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
+					return;
+				}
+				double milliseconds = KuroTime.GetMilliseconds64();
+				MusicSubtitleManager.IMusicSubtitleSession session = new MusicSubtitleManager.MusicSubtitleSession
+				{
+					RequestId = ++MusicSubtitleManager.NextRequestId,
+					MusicSubtitleGroupTag = config.MusicSubtitleGroupTag,
+					Event = @event,
+					Handle = 0,
+					IsLoop = config.IsLoop.GetValueOrDefault(),
+					RequestTime = milliseconds,
+					AudioStartTime = null,
+					HasHandledDuration = false,
+					Listener = null
+				};
+				MusicSubtitleManager.ActiveSession = session;
+				global::Log instance3 = global::Log.Instance;
+				ELogModule module3 = ELogModule.Plot;
+				ELogAuthor author3 = ELogAuthor.FZX;
+				string message3 = "[MusicSubtitle] 音乐字幕请求开始";
+				ValueTuple<string, object> valueTuple2 = new ValueTuple<string, object>("time", milliseconds);
+				instance3.Info(module3, author3, message3, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
+				if (!MusicSubtitleManager.PlayAudio(session))
+				{
+					return;
+				}
+				MusicSubtitleManager.IMusicSubtitleViewParam param = new MusicSubtitleManager.MusicSubtitleViewParam
+				{
+					RequestId = session.RequestId
+				};
+				MusicSubtitleManager.OpeningViewRequestId = new int?(session.RequestId);
+				UiManager.Instance.OpenView(EUiViewName.MusicSubtitleView, param, delegate(bool success, int viewId)
+				{
+					int? openingViewRequestId = MusicSubtitleManager.OpeningViewRequestId;
+					int requestId = session.RequestId;
+					if (openingViewRequestId.GetValueOrDefault() == requestId & openingViewRequestId != null)
+					{
+						MusicSubtitleManager.OpeningViewRequestId = null;
+					}
+					if (!success && MusicSubtitleManager.ActiveSession == session)
+					{
+						global::Log instance4 = global::Log.Instance;
+						ELogModule module4 = ELogModule.Plot;
+						ELogAuthor author4 = ELogAuthor.FZX;
+						string message4 = "[MusicSubtitle] 音乐字幕界面打开失败";
+						ValueTuple<string, object> valueTuple3 = new ValueTuple<string, object>("akEvent", @event);
+						instance4.Info(module4, author4, message4, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple3));
+						MusicSubtitleManager.Stop(session.RequestId);
+						return;
+					}
+					if (success && MusicSubtitleManager.ActiveSession != session)
+					{
+						MusicSubtitleView musicSubtitleView2 = UiManager.Instance.GetView(viewId) as MusicSubtitleView;
+						if (musicSubtitleView2 == null)
+						{
+							return;
+						}
+						musicSubtitleView2.StopAndClose();
+					}
+				});
+				return;
+			}
+		}
+
+		// Token: 0x0602935C RID: 168796 RVA: 0x00B925D4 File Offset: 0x00B907D4
+		private static bool PlayAudio(MusicSubtitleManager.IMusicSubtitleSession session)
+		{
+			MusicSubtitleManager.<>c__DisplayClass12_0 CS$<>8__locals1 = new MusicSubtitleManager.<>c__DisplayClass12_0();
+			CS$<>8__locals1.session = session;
+			if (!MusicSubtitleManager.CanPlayAudio(CS$<>8__locals1.session))
+			{
+				MusicSubtitleManager.Stop(CS$<>8__locals1.session.RequestId);
+				return false;
+			}
+			CS$<>8__locals1.session.RequestTime = KuroTime.GetMilliseconds64();
+			CS$<>8__locals1.session.AudioStartTime = null;
+			CS$<>8__locals1.session.HasHandledDuration = false;
+			MusicSubtitleManager.<>c__DisplayClass12_0 CS$<>8__locals2 = CS$<>8__locals1;
+			MusicSubtitleManager.IMusicSubtitleSession session2 = CS$<>8__locals1.session;
+			int playbackId = session2.PlaybackId + 1;
+			session2.PlaybackId = playbackId;
+			CS$<>8__locals2.playbackId = playbackId;
+			MusicSubtitleManager.IMusicSubtitleViewListener listener = CS$<>8__locals1.session.Listener;
+			if (listener != null)
+			{
+				listener.OnAudioReset();
+			}
+			if (!MusicSubtitleManager.CanPlayAudio(CS$<>8__locals1.session))
+			{
+				MusicSubtitleManager.Stop(CS$<>8__locals1.session.RequestId);
+				return false;
+			}
+			CS$<>8__locals1.session.Handle = AudioSystem.Instance.PostEvent(CS$<>8__locals1.session.Event, null, new PostEventArgs?(new PostEventArgs
+			{
+				CallbackHandler = delegate(EAkCallbackType callbackType, UAkCallbackInfo _)
+				{
+					MusicSubtitleManager.HandleAudioCallback(CS$<>8__locals1.session, CS$<>8__locals1.playbackId, callbackType);
+				},
+				CallbackMask = new ECallbackMask?((ECallbackMask)9)
+			}));
+			if (!MusicSubtitleManager.CanPlayAudio(CS$<>8__locals1.session))
+			{
+				MusicSubtitleManager.StopAudio(CS$<>8__locals1.session);
+				return false;
+			}
+			if (CS$<>8__locals1.session.Handle == 0)
 			{
 				global::Log instance = global::Log.Instance;
 				ELogModule module = ELogModule.Plot;
 				ELogAuthor author = ELogAuthor.FZX;
-				string message = "[MusicSubtitle] 已有音乐字幕正在播放或打开界面，忽略重复请求";
-				string item = "Event";
-				MusicSubtitleManager.IMusicSubtitleSession activeSession = MusicSubtitleManager.ActiveSession;
-				ValueTuple<string, object> valueTuple = new ValueTuple<string, object>(item, (activeSession != null) ? activeSession.Event : null);
-				instance.Warn(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
-				return;
+				string message = "[MusicSubtitle] 音乐字幕播放失败";
+				ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("akEvent", CS$<>8__locals1.session.Event);
+				instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
+				MusicSubtitleManager.FinishSession(CS$<>8__locals1.session);
+				return false;
 			}
-			string @event = AudioSystem.Instance.parseAudioEventPath(config.AkEvent);
-			if (string.IsNullOrEmpty(config.MusicSubtitleGroupTag) || string.IsNullOrEmpty(@event))
-			{
-				global::Log instance2 = global::Log.Instance;
-				ELogModule module2 = ELogModule.Plot;
-				ELogAuthor author2 = ELogAuthor.FZX;
-				string message2 = "[MusicSubtitle] 音乐字幕配置错误";
-				<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
-				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("MusicSubtitleGroupTag", config.MusicSubtitleGroupTag);
-				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("AkEvent", config.AkEvent);
-				instance2.Error(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
-				return;
-			}
-			double milliseconds = KuroTime.GetMilliseconds64();
-			MusicSubtitleManager.IMusicSubtitleSession session = new MusicSubtitleManager.MusicSubtitleSession
-			{
-				RequestId = ++MusicSubtitleManager.NextRequestId,
-				MusicSubtitleGroupTag = config.MusicSubtitleGroupTag,
-				Event = @event,
-				Handle = 0,
-				RequestTime = milliseconds,
-				AudioStartTime = null,
-				HasHandledDuration = false,
-				Listener = null
-			};
-			MusicSubtitleManager.ActiveSession = session;
-			global::Log instance3 = global::Log.Instance;
-			ELogModule module3 = ELogModule.Plot;
-			ELogAuthor author3 = ELogAuthor.FZX;
-			string message3 = "[MusicSubtitle] 音乐字幕请求开始";
-			ValueTuple<string, object> valueTuple2 = new ValueTuple<string, object>("time", milliseconds);
-			instance3.Info(module3, author3, message3, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
-			session.Handle = AudioSystem.Instance.PostEvent(@event, null, new PostEventArgs?(new PostEventArgs
-			{
-				CallbackHandler = delegate(EAkCallbackType callbackType, UAkCallbackInfo _)
-				{
-					MusicSubtitleManager.HandleAudioCallback(session, callbackType);
-				},
-				CallbackMask = new ECallbackMask?((ECallbackMask)9)
-			}));
-			if (session.Handle == 0)
-			{
-				MusicSubtitleManager.ActiveSession = null;
-				global::Log instance4 = global::Log.Instance;
-				ELogModule module4 = ELogModule.Plot;
-				ELogAuthor author4 = ELogAuthor.FZX;
-				string message4 = "[MusicSubtitle] 音乐字幕播放失败";
-				ValueTuple<string, object> valueTuple3 = new ValueTuple<string, object>("akEvent", @event);
-				instance4.Info(module4, author4, message4, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple3));
-				return;
-			}
-			global::Log instance5 = global::Log.Instance;
-			ELogModule module5 = ELogModule.Audio;
-			ELogAuthor author5 = ELogAuthor.MSY;
-			string message5 = "[MusicSubtitle][Game.Action] PostEvent";
-			ValueTuple<string, object> valueTuple4 = new ValueTuple<string, object>("Event", @event);
-			instance5.Info(module5, author5, message5, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple4));
-			MusicSubtitleManager.IMusicSubtitleViewParam param = new MusicSubtitleManager.MusicSubtitleViewParam
-			{
-				RequestId = session.RequestId
-			};
-			MusicSubtitleManager.OpeningViewRequestId = new int?(session.RequestId);
-			UiManager.Instance.OpenView(EUiViewName.MusicSubtitleView, param, delegate(bool success, int _)
-			{
-				int? openingViewRequestId = MusicSubtitleManager.OpeningViewRequestId;
-				int requestId = session.RequestId;
-				if (openingViewRequestId.GetValueOrDefault() == requestId & openingViewRequestId != null)
-				{
-					MusicSubtitleManager.OpeningViewRequestId = null;
-				}
-				if (!success && MusicSubtitleManager.ActiveSession == session)
-				{
-					global::Log instance6 = global::Log.Instance;
-					ELogModule module6 = ELogModule.Plot;
-					ELogAuthor author6 = ELogAuthor.FZX;
-					string message6 = "[MusicSubtitle] 音乐字幕界面打开失败";
-					ValueTuple<string, object> valueTuple5 = new ValueTuple<string, object>("akEvent", @event);
-					instance6.Info(module6, author6, message6, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple5));
-					MusicSubtitleManager.Stop(session.RequestId);
-				}
-			});
+			global::Log instance2 = global::Log.Instance;
+			ELogModule module2 = ELogModule.Audio;
+			ELogAuthor author2 = ELogAuthor.MSY;
+			string message2 = "[MusicSubtitle][Game.Action] PostEvent";
+			ValueTuple<string, object> valueTuple2 = new ValueTuple<string, object>("Event", CS$<>8__locals1.session.Event);
+			instance2.Info(module2, author2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
+			return true;
 		}
 
-		// Token: 0x060344D7 RID: 214231 RVA: 0x00C488BB File Offset: 0x00C46ABB
+		// Token: 0x0602935D RID: 168797 RVA: 0x00B9277E File Offset: 0x00B9097E
 		[NullableContext(2)]
 		public static string GetMusicSubtitleGroupTag(int requestId)
 		{
@@ -128,11 +199,11 @@ namespace CSharpScript.Game.Module.Plot
 			return session.MusicSubtitleGroupTag;
 		}
 
-		// Token: 0x060344D8 RID: 214232 RVA: 0x00C488D0 File Offset: 0x00C46AD0
+		// Token: 0x0602935E RID: 168798 RVA: 0x00B92794 File Offset: 0x00B90994
 		public static bool AttachView(int requestId, MusicSubtitleManager.IMusicSubtitleViewListener listener)
 		{
 			MusicSubtitleManager.IMusicSubtitleSession session = MusicSubtitleManager.GetSession(requestId);
-			if (session == null)
+			if (session == null || !MusicSubtitleManager.CanPlayAudio(session))
 			{
 				return false;
 			}
@@ -144,7 +215,7 @@ namespace CSharpScript.Game.Module.Plot
 			return true;
 		}
 
-		// Token: 0x060344D9 RID: 214233 RVA: 0x00C48908 File Offset: 0x00C46B08
+		// Token: 0x0602935F RID: 168799 RVA: 0x00B927D4 File Offset: 0x00B909D4
 		public static void DetachView(int requestId, MusicSubtitleManager.IMusicSubtitleViewListener listener)
 		{
 			MusicSubtitleManager.IMusicSubtitleSession session = MusicSubtitleManager.GetSession(requestId);
@@ -154,7 +225,7 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x060344DA RID: 214234 RVA: 0x00C48934 File Offset: 0x00C46B34
+		// Token: 0x06029360 RID: 168800 RVA: 0x00B92800 File Offset: 0x00B90A00
 		public static int? GetSourcePlayPosition(int requestId)
 		{
 			MusicSubtitleManager.IMusicSubtitleSession session = MusicSubtitleManager.GetSession(requestId);
@@ -165,7 +236,7 @@ namespace CSharpScript.Game.Module.Plot
 			return AudioSystem.Instance.GetSourcePlayPosition(session.Handle, false);
 		}
 
-		// Token: 0x060344DB RID: 214235 RVA: 0x00C48968 File Offset: 0x00C46B68
+		// Token: 0x06029361 RID: 168801 RVA: 0x00B92834 File Offset: 0x00B90A34
 		public static void Seek(int requestId, int position)
 		{
 			MusicSubtitleManager.IMusicSubtitleSession session = MusicSubtitleManager.GetSession(requestId);
@@ -176,7 +247,7 @@ namespace CSharpScript.Game.Module.Plot
 			AudioSystem.Instance.SeekOnEvent(session.Event, position, new SeekOnEventArgs?(new SeekOnEventArgs(null, new int?(session.Handle), null)));
 		}
 
-		// Token: 0x060344DC RID: 214236 RVA: 0x00C489B0 File Offset: 0x00C46BB0
+		// Token: 0x06029362 RID: 168802 RVA: 0x00B9287C File Offset: 0x00B90A7C
 		public static void Stop(int requestId)
 		{
 			MusicSubtitleManager.IMusicSubtitleSession session = MusicSubtitleManager.GetSession(requestId);
@@ -184,12 +255,62 @@ namespace CSharpScript.Game.Module.Plot
 			{
 				return;
 			}
-			MusicSubtitleManager.ActiveSession = null;
-			session.Listener = null;
-			AudioSystem.Instance.ExecuteAction(session.Handle, EAudioActionType.Stop, null);
+			MusicSubtitleManager.StopAudio(session);
 		}
 
-		// Token: 0x060344DD RID: 214237 RVA: 0x00C489F0 File Offset: 0x00C46BF0
+		// Token: 0x06029363 RID: 168803 RVA: 0x00B9289C File Offset: 0x00B90A9C
+		private static void StopAudio(MusicSubtitleManager.IMusicSubtitleSession session)
+		{
+			if (MusicSubtitleManager.ActiveSession == session)
+			{
+				MusicSubtitleManager.ActiveSession = null;
+			}
+			session.Listener = null;
+			session.HasHandledDuration = false;
+			session.AudioStartTime = null;
+			int handle = session.Handle;
+			session.Handle = 0;
+			if (handle != 0)
+			{
+				AudioSystem.Instance.ExecuteAction(handle, EAudioActionType.Stop, new ExecuteActionArgs?(new ExecuteActionArgs
+				{
+					TransitionDuration = new int?(0)
+				}));
+			}
+		}
+
+		// Token: 0x06029364 RID: 168804 RVA: 0x00B9290C File Offset: 0x00B90B0C
+		private static void FinishSession(MusicSubtitleManager.IMusicSubtitleSession session)
+		{
+			MusicSubtitleManager.IMusicSubtitleViewListener listener = session.Listener;
+			MusicSubtitleManager.StopAudio(session);
+			if (listener != null)
+			{
+				listener.OnAudioEnd(session.Event);
+				return;
+			}
+			MusicSubtitleView musicSubtitleView = UiManager.Instance.GetViewByName(EUiViewName.MusicSubtitleView) as MusicSubtitleView;
+			MusicSubtitleManager.IMusicSubtitleViewParam musicSubtitleViewParam = ((musicSubtitleView != null) ? musicSubtitleView.OpenParam : null) as MusicSubtitleManager.IMusicSubtitleViewParam;
+			int? num = (musicSubtitleViewParam != null) ? new int?(musicSubtitleViewParam.RequestId) : null;
+			int requestId = session.RequestId;
+			if (num.GetValueOrDefault() == requestId & num != null)
+			{
+				musicSubtitleView.StopAndClose();
+			}
+		}
+
+		// Token: 0x06029365 RID: 168805 RVA: 0x00B929A0 File Offset: 0x00B90BA0
+		private static bool CanPlayAudio(MusicSubtitleManager.IMusicSubtitleSession session)
+		{
+			if (MusicSubtitleManager.ActiveSession != session)
+			{
+				return false;
+			}
+			UiViewBase viewByName = UiManager.Instance.GetViewByName(EUiViewName.MusicSubtitleView);
+			return viewByName == null || (viewByName.ClosePromise == null && !viewByName.WaitToDestroy && !viewByName.IsDestroyByClear && !viewByName.IsDestroyOrDestroying && !viewByName.LastHide);
+		}
+
+		// Token: 0x06029366 RID: 168806 RVA: 0x00B929F8 File Offset: 0x00B90BF8
 		[NullableContext(2)]
 		private static MusicSubtitleManager.IMusicSubtitleSession GetSession(int requestId)
 		{
@@ -201,23 +322,36 @@ namespace CSharpScript.Game.Module.Plot
 			return activeSession;
 		}
 
-		// Token: 0x060344DE RID: 214238 RVA: 0x00C48A14 File Offset: 0x00C46C14
-		private static void HandleAudioCallback(MusicSubtitleManager.IMusicSubtitleSession session, EAkCallbackType callbackType)
+		// Token: 0x06029367 RID: 168807 RVA: 0x00B92A1C File Offset: 0x00B90C1C
+		private static void HandleAudioCallback(MusicSubtitleManager.IMusicSubtitleSession session, int playbackId, EAkCallbackType callbackType)
 		{
-			if (MusicSubtitleManager.ActiveSession != session)
+			if (MusicSubtitleManager.ActiveSession != session || session.PlaybackId != playbackId)
 			{
+				return;
+			}
+			if (!MusicSubtitleManager.CanPlayAudio(session))
+			{
+				MusicSubtitleManager.Stop(session.RequestId);
 				return;
 			}
 			if (callbackType == EAkCallbackType.EndOfEvent)
 			{
-				MusicSubtitleManager.ActiveSession = null;
-				MusicSubtitleManager.IMusicSubtitleViewListener listener = session.Listener;
-				session.Listener = null;
-				if (listener == null)
+				session.Handle = 0;
+				if (session.IsLoop && session.HasHandledDuration)
 				{
+					MusicSubtitleManager.PlayAudio(session);
 					return;
 				}
-				listener.OnAudioEnd(session.Event);
+				if (session.IsLoop)
+				{
+					global::Log instance = global::Log.Instance;
+					ELogModule module = ELogModule.Plot;
+					ELogAuthor author = ELogAuthor.FZX;
+					string message = "[MusicSubtitle] 循环音乐未正常起播即结束，停止循环";
+					ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("akEvent", session.Event);
+					instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
+				}
+				MusicSubtitleManager.FinishSession(session);
 				return;
 			}
 			else
@@ -229,12 +363,12 @@ namespace CSharpScript.Game.Module.Plot
 				session.HasHandledDuration = true;
 				session.AudioStartTime = new double?(KuroTime.GetMilliseconds64());
 				double num = session.AudioStartTime.Value - session.RequestTime;
-				global::Log instance = global::Log.Instance;
-				ELogModule module = ELogModule.Plot;
-				ELogAuthor author = ELogAuthor.FZX;
-				string message = "[MusicSubtitle] 音乐字幕正式开始";
-				ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("delayTime", num);
-				instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
+				global::Log instance2 = global::Log.Instance;
+				ELogModule module2 = ELogModule.Plot;
+				ELogAuthor author2 = ELogAuthor.FZX;
+				string message2 = "[MusicSubtitle] 音乐字幕正式开始";
+				ValueTuple<string, object> valueTuple2 = new ValueTuple<string, object>("delayTime", num);
+				instance2.Info(module2, author2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
 				if (num > 40.0)
 				{
 					MusicSubtitleManager.Seek(session.RequestId, (int)num);
@@ -247,7 +381,7 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x060344DF RID: 214239 RVA: 0x00C48B04 File Offset: 0x00C46D04
+		// Token: 0x06029368 RID: 168808 RVA: 0x00B92B5C File Offset: 0x00B90D5C
 		private static void NotifyAudioStart(MusicSubtitleManager.IMusicSubtitleSession session, int? startPosition = null)
 		{
 			MusicSubtitleManager.IMusicSubtitleViewListener listener = session.Listener;
@@ -270,7 +404,7 @@ namespace CSharpScript.Game.Module.Plot
 			listener.OnAudioStart((float)num3, session.Event);
 		}
 
-		// Token: 0x060344E0 RID: 214240 RVA: 0x00C48B8F File Offset: 0x00C46D8F
+		// Token: 0x06029369 RID: 168809 RVA: 0x00B92BE7 File Offset: 0x00B90DE7
 		public static void CreateStaticDefaultValue()
 		{
 			MusicSubtitleManager.ActiveSession = null;
@@ -278,7 +412,7 @@ namespace CSharpScript.Game.Module.Plot
 			MusicSubtitleManager.NextRequestId = 0;
 		}
 
-		// Token: 0x060344E1 RID: 214241 RVA: 0x00C48BA8 File Offset: 0x00C46DA8
+		// Token: 0x0602936A RID: 168810 RVA: 0x00B92C00 File Offset: 0x00B90E00
 		public static void ResetStaticDefaultValue()
 		{
 			MusicSubtitleManager.ActiveSession = null;
@@ -286,40 +420,40 @@ namespace CSharpScript.Game.Module.Plot
 			MusicSubtitleManager.NextRequestId = 0;
 		}
 
-		// Token: 0x0401BD16 RID: 113942
+		// Token: 0x040166F1 RID: 91889
 		private const int AUDIO_START_SYNC_THRESHOLD = 40;
 
-		// Token: 0x0401BD17 RID: 113943
+		// Token: 0x040166F2 RID: 91890
 		[Nullable(2)]
 		private static MusicSubtitleManager.IMusicSubtitleSession ActiveSession;
 
-		// Token: 0x0401BD18 RID: 113944
+		// Token: 0x040166F3 RID: 91891
 		private static int? OpeningViewRequestId;
 
-		// Token: 0x0401BD19 RID: 113945
+		// Token: 0x040166F4 RID: 91892
 		private static int NextRequestId;
 
-		// Token: 0x0200B0EA RID: 45290
+		// Token: 0x02009B1A RID: 39706
 		public interface IMusicSubtitleViewParam
 		{
-			// Token: 0x1700A165 RID: 41317
-			// (get) Token: 0x0604E4BB RID: 320699
-			// (set) Token: 0x0604E4BC RID: 320700
+			// Token: 0x17007903 RID: 30979
+			// (get) Token: 0x06044AAB RID: 281259
+			// (set) Token: 0x06044AAC RID: 281260
 			int RequestId { get; set; }
 		}
 
-		// Token: 0x0200B0EB RID: 45291
+		// Token: 0x02009B1B RID: 39707
 		[NullableContext(0)]
 		[RequiredMember]
 		public class MusicSubtitleViewParam : MusicSubtitleManager.IMusicSubtitleViewParam
 		{
-			// Token: 0x1700A166 RID: 41318
-			// (get) Token: 0x0604E4BD RID: 320701 RVA: 0x014C6DFE File Offset: 0x014C4FFE
-			// (set) Token: 0x0604E4BE RID: 320702 RVA: 0x014C6E06 File Offset: 0x014C5006
+			// Token: 0x17007904 RID: 30980
+			// (get) Token: 0x06044AAD RID: 281261 RVA: 0x0147FF16 File Offset: 0x0147E116
+			// (set) Token: 0x06044AAE RID: 281262 RVA: 0x0147FF1E File Offset: 0x0147E11E
 			[RequiredMember]
 			public int RequestId { get; set; }
 
-			// Token: 0x0604E4BF RID: 320703 RVA: 0x014C6E0F File Offset: 0x014C500F
+			// Token: 0x06044AAF RID: 281263 RVA: 0x0147FF27 File Offset: 0x0147E127
 			[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 			[CompilerFeatureRequired("RequiredMembers")]
 			public MusicSubtitleViewParam()
@@ -327,38 +461,49 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x0200B0EC RID: 45292
+		// Token: 0x02009B1C RID: 39708
 		public interface IMusicSubtitleViewListener
 		{
-			// Token: 0x1700A167 RID: 41319
-			// (get) Token: 0x0604E4C0 RID: 320704
-			// (set) Token: 0x0604E4C1 RID: 320705
+			// Token: 0x17007905 RID: 30981
+			// (get) Token: 0x06044AB0 RID: 281264
+			// (set) Token: 0x06044AB1 RID: 281265
+			Action OnAudioReset { get; set; }
+
+			// Token: 0x17007906 RID: 30982
+			// (get) Token: 0x06044AB2 RID: 281266
+			// (set) Token: 0x06044AB3 RID: 281267
 			Action<float, string> OnAudioStart { get; set; }
 
-			// Token: 0x1700A168 RID: 41320
-			// (get) Token: 0x0604E4C2 RID: 320706
-			// (set) Token: 0x0604E4C3 RID: 320707
+			// Token: 0x17007907 RID: 30983
+			// (get) Token: 0x06044AB4 RID: 281268
+			// (set) Token: 0x06044AB5 RID: 281269
 			Action<string> OnAudioEnd { get; set; }
 		}
 
-		// Token: 0x0200B0ED RID: 45293
+		// Token: 0x02009B1D RID: 39709
 		[Nullable(0)]
 		[RequiredMember]
 		public class MusicSubtitleViewListener : MusicSubtitleManager.IMusicSubtitleViewListener
 		{
-			// Token: 0x1700A169 RID: 41321
-			// (get) Token: 0x0604E4C4 RID: 320708 RVA: 0x014C6E17 File Offset: 0x014C5017
-			// (set) Token: 0x0604E4C5 RID: 320709 RVA: 0x014C6E1F File Offset: 0x014C501F
+			// Token: 0x17007908 RID: 30984
+			// (get) Token: 0x06044AB6 RID: 281270 RVA: 0x0147FF2F File Offset: 0x0147E12F
+			// (set) Token: 0x06044AB7 RID: 281271 RVA: 0x0147FF37 File Offset: 0x0147E137
+			[RequiredMember]
+			public Action OnAudioReset { get; set; }
+
+			// Token: 0x17007909 RID: 30985
+			// (get) Token: 0x06044AB8 RID: 281272 RVA: 0x0147FF40 File Offset: 0x0147E140
+			// (set) Token: 0x06044AB9 RID: 281273 RVA: 0x0147FF48 File Offset: 0x0147E148
 			[RequiredMember]
 			public Action<float, string> OnAudioStart { get; set; }
 
-			// Token: 0x1700A16A RID: 41322
-			// (get) Token: 0x0604E4C6 RID: 320710 RVA: 0x014C6E28 File Offset: 0x014C5028
-			// (set) Token: 0x0604E4C7 RID: 320711 RVA: 0x014C6E30 File Offset: 0x014C5030
+			// Token: 0x1700790A RID: 30986
+			// (get) Token: 0x06044ABA RID: 281274 RVA: 0x0147FF51 File Offset: 0x0147E151
+			// (set) Token: 0x06044ABB RID: 281275 RVA: 0x0147FF59 File Offset: 0x0147E159
 			[RequiredMember]
 			public Action<string> OnAudioEnd { get; set; }
 
-			// Token: 0x0604E4C8 RID: 320712 RVA: 0x014C6E39 File Offset: 0x014C5039
+			// Token: 0x06044ABC RID: 281276 RVA: 0x0147FF62 File Offset: 0x0147E162
 			[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 			[CompilerFeatureRequired("RequiredMembers")]
 			public MusicSubtitleViewListener()
@@ -366,104 +511,125 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x0200B0EE RID: 45294
+		// Token: 0x02009B1E RID: 39710
 		private interface IMusicSubtitleSession
 		{
-			// Token: 0x1700A16B RID: 41323
-			// (get) Token: 0x0604E4C9 RID: 320713
-			// (set) Token: 0x0604E4CA RID: 320714
+			// Token: 0x1700790B RID: 30987
+			// (get) Token: 0x06044ABD RID: 281277
+			// (set) Token: 0x06044ABE RID: 281278
 			int RequestId { get; set; }
 
-			// Token: 0x1700A16C RID: 41324
-			// (get) Token: 0x0604E4CB RID: 320715
-			// (set) Token: 0x0604E4CC RID: 320716
+			// Token: 0x1700790C RID: 30988
+			// (get) Token: 0x06044ABF RID: 281279
+			// (set) Token: 0x06044AC0 RID: 281280
 			string MusicSubtitleGroupTag { get; set; }
 
-			// Token: 0x1700A16D RID: 41325
-			// (get) Token: 0x0604E4CD RID: 320717
-			// (set) Token: 0x0604E4CE RID: 320718
+			// Token: 0x1700790D RID: 30989
+			// (get) Token: 0x06044AC1 RID: 281281
+			// (set) Token: 0x06044AC2 RID: 281282
 			string Event { get; set; }
 
-			// Token: 0x1700A16E RID: 41326
-			// (get) Token: 0x0604E4CF RID: 320719
-			// (set) Token: 0x0604E4D0 RID: 320720
+			// Token: 0x1700790E RID: 30990
+			// (get) Token: 0x06044AC3 RID: 281283
+			// (set) Token: 0x06044AC4 RID: 281284
 			int Handle { get; set; }
 
-			// Token: 0x1700A16F RID: 41327
-			// (get) Token: 0x0604E4D1 RID: 320721
-			// (set) Token: 0x0604E4D2 RID: 320722
+			// Token: 0x1700790F RID: 30991
+			// (get) Token: 0x06044AC5 RID: 281285
+			// (set) Token: 0x06044AC6 RID: 281286
+			bool IsLoop { get; set; }
+
+			// Token: 0x17007910 RID: 30992
+			// (get) Token: 0x06044AC7 RID: 281287
+			// (set) Token: 0x06044AC8 RID: 281288
+			int PlaybackId { get; set; }
+
+			// Token: 0x17007911 RID: 30993
+			// (get) Token: 0x06044AC9 RID: 281289
+			// (set) Token: 0x06044ACA RID: 281290
 			double RequestTime { get; set; }
 
-			// Token: 0x1700A170 RID: 41328
-			// (get) Token: 0x0604E4D3 RID: 320723
-			// (set) Token: 0x0604E4D4 RID: 320724
+			// Token: 0x17007912 RID: 30994
+			// (get) Token: 0x06044ACB RID: 281291
+			// (set) Token: 0x06044ACC RID: 281292
 			double? AudioStartTime { get; set; }
 
-			// Token: 0x1700A171 RID: 41329
-			// (get) Token: 0x0604E4D5 RID: 320725
-			// (set) Token: 0x0604E4D6 RID: 320726
+			// Token: 0x17007913 RID: 30995
+			// (get) Token: 0x06044ACD RID: 281293
+			// (set) Token: 0x06044ACE RID: 281294
 			bool HasHandledDuration { get; set; }
 
-			// Token: 0x1700A172 RID: 41330
-			// (get) Token: 0x0604E4D7 RID: 320727
-			// (set) Token: 0x0604E4D8 RID: 320728
+			// Token: 0x17007914 RID: 30996
+			// (get) Token: 0x06044ACF RID: 281295
+			// (set) Token: 0x06044AD0 RID: 281296
 			[Nullable(2)]
 			MusicSubtitleManager.IMusicSubtitleViewListener Listener { [NullableContext(2)] get; [NullableContext(2)] set; }
 		}
 
-		// Token: 0x0200B0EF RID: 45295
+		// Token: 0x02009B1F RID: 39711
 		[Nullable(0)]
 		[RequiredMember]
 		private class MusicSubtitleSession : MusicSubtitleManager.IMusicSubtitleSession
 		{
-			// Token: 0x1700A173 RID: 41331
-			// (get) Token: 0x0604E4D9 RID: 320729 RVA: 0x014C6E41 File Offset: 0x014C5041
-			// (set) Token: 0x0604E4DA RID: 320730 RVA: 0x014C6E49 File Offset: 0x014C5049
+			// Token: 0x17007915 RID: 30997
+			// (get) Token: 0x06044AD1 RID: 281297 RVA: 0x0147FF6A File Offset: 0x0147E16A
+			// (set) Token: 0x06044AD2 RID: 281298 RVA: 0x0147FF72 File Offset: 0x0147E172
 			[RequiredMember]
 			public int RequestId { get; set; }
 
-			// Token: 0x1700A174 RID: 41332
-			// (get) Token: 0x0604E4DB RID: 320731 RVA: 0x014C6E52 File Offset: 0x014C5052
-			// (set) Token: 0x0604E4DC RID: 320732 RVA: 0x014C6E5A File Offset: 0x014C505A
+			// Token: 0x17007916 RID: 30998
+			// (get) Token: 0x06044AD3 RID: 281299 RVA: 0x0147FF7B File Offset: 0x0147E17B
+			// (set) Token: 0x06044AD4 RID: 281300 RVA: 0x0147FF83 File Offset: 0x0147E183
 			[RequiredMember]
 			public string MusicSubtitleGroupTag { get; set; }
 
-			// Token: 0x1700A175 RID: 41333
-			// (get) Token: 0x0604E4DD RID: 320733 RVA: 0x014C6E63 File Offset: 0x014C5063
-			// (set) Token: 0x0604E4DE RID: 320734 RVA: 0x014C6E6B File Offset: 0x014C506B
+			// Token: 0x17007917 RID: 30999
+			// (get) Token: 0x06044AD5 RID: 281301 RVA: 0x0147FF8C File Offset: 0x0147E18C
+			// (set) Token: 0x06044AD6 RID: 281302 RVA: 0x0147FF94 File Offset: 0x0147E194
 			[RequiredMember]
 			public string Event { get; set; }
 
-			// Token: 0x1700A176 RID: 41334
-			// (get) Token: 0x0604E4DF RID: 320735 RVA: 0x014C6E74 File Offset: 0x014C5074
-			// (set) Token: 0x0604E4E0 RID: 320736 RVA: 0x014C6E7C File Offset: 0x014C507C
+			// Token: 0x17007918 RID: 31000
+			// (get) Token: 0x06044AD7 RID: 281303 RVA: 0x0147FF9D File Offset: 0x0147E19D
+			// (set) Token: 0x06044AD8 RID: 281304 RVA: 0x0147FFA5 File Offset: 0x0147E1A5
 			[RequiredMember]
 			public int Handle { get; set; }
 
-			// Token: 0x1700A177 RID: 41335
-			// (get) Token: 0x0604E4E1 RID: 320737 RVA: 0x014C6E85 File Offset: 0x014C5085
-			// (set) Token: 0x0604E4E2 RID: 320738 RVA: 0x014C6E8D File Offset: 0x014C508D
+			// Token: 0x17007919 RID: 31001
+			// (get) Token: 0x06044AD9 RID: 281305 RVA: 0x0147FFAE File Offset: 0x0147E1AE
+			// (set) Token: 0x06044ADA RID: 281306 RVA: 0x0147FFB6 File Offset: 0x0147E1B6
+			[RequiredMember]
+			public bool IsLoop { get; set; }
+
+			// Token: 0x1700791A RID: 31002
+			// (get) Token: 0x06044ADB RID: 281307 RVA: 0x0147FFBF File Offset: 0x0147E1BF
+			// (set) Token: 0x06044ADC RID: 281308 RVA: 0x0147FFC7 File Offset: 0x0147E1C7
+			public int PlaybackId { get; set; }
+
+			// Token: 0x1700791B RID: 31003
+			// (get) Token: 0x06044ADD RID: 281309 RVA: 0x0147FFD0 File Offset: 0x0147E1D0
+			// (set) Token: 0x06044ADE RID: 281310 RVA: 0x0147FFD8 File Offset: 0x0147E1D8
 			[RequiredMember]
 			public double RequestTime { get; set; }
 
-			// Token: 0x1700A178 RID: 41336
-			// (get) Token: 0x0604E4E3 RID: 320739 RVA: 0x014C6E96 File Offset: 0x014C5096
-			// (set) Token: 0x0604E4E4 RID: 320740 RVA: 0x014C6E9E File Offset: 0x014C509E
+			// Token: 0x1700791C RID: 31004
+			// (get) Token: 0x06044ADF RID: 281311 RVA: 0x0147FFE1 File Offset: 0x0147E1E1
+			// (set) Token: 0x06044AE0 RID: 281312 RVA: 0x0147FFE9 File Offset: 0x0147E1E9
 			public double? AudioStartTime { get; set; }
 
-			// Token: 0x1700A179 RID: 41337
-			// (get) Token: 0x0604E4E5 RID: 320741 RVA: 0x014C6EA7 File Offset: 0x014C50A7
-			// (set) Token: 0x0604E4E6 RID: 320742 RVA: 0x014C6EAF File Offset: 0x014C50AF
+			// Token: 0x1700791D RID: 31005
+			// (get) Token: 0x06044AE1 RID: 281313 RVA: 0x0147FFF2 File Offset: 0x0147E1F2
+			// (set) Token: 0x06044AE2 RID: 281314 RVA: 0x0147FFFA File Offset: 0x0147E1FA
 			[RequiredMember]
 			public bool HasHandledDuration { get; set; }
 
-			// Token: 0x1700A17A RID: 41338
-			// (get) Token: 0x0604E4E7 RID: 320743 RVA: 0x014C6EB8 File Offset: 0x014C50B8
-			// (set) Token: 0x0604E4E8 RID: 320744 RVA: 0x014C6EC0 File Offset: 0x014C50C0
+			// Token: 0x1700791E RID: 31006
+			// (get) Token: 0x06044AE3 RID: 281315 RVA: 0x01480003 File Offset: 0x0147E203
+			// (set) Token: 0x06044AE4 RID: 281316 RVA: 0x0148000B File Offset: 0x0147E20B
 			[Nullable(2)]
 			public MusicSubtitleManager.IMusicSubtitleViewListener Listener { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-			// Token: 0x0604E4E9 RID: 320745 RVA: 0x014C6EC9 File Offset: 0x014C50C9
+			// Token: 0x06044AE5 RID: 281317 RVA: 0x01480014 File Offset: 0x0147E214
 			[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 			[CompilerFeatureRequired("RequiredMembers")]
 			public MusicSubtitleSession()

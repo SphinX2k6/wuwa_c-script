@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002981 RID: 10625
+// Token: 0x02001EFC RID: 7932
 public enum EShipTowerTeamTabType
 {
-	// Token: 0x0400A3BC RID: 41916
+	// Token: 0x0400A7A6 RID: 42918
 	RoleList,
-	// Token: 0x0400A3BD RID: 41917
+	// Token: 0x0400A7A7 RID: 42919
 	UseTeam
 }

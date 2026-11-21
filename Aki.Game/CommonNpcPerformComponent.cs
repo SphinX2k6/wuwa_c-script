@@ -17,12 +17,12 @@ using CSharpScript.Game.NewWorld.Pawn.SensoryInfo;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020031D2 RID: 12754
+// Token: 0x02002741 RID: 10049
 [NullableContext(2)]
 [Nullable(0)]
 public class CommonNpcPerformComponent : global::NpcPerformComponent
 {
-	// Token: 0x0601B7DD RID: 112605 RVA: 0x007886B0 File Offset: 0x007868B0
+	// Token: 0x06019328 RID: 103208 RVA: 0x007B06DC File Offset: 0x007AE8DC
 	public ENpcPerformState? GetCurrentState()
 	{
 		StateMachine<EntityHandle, ENpcPerformState> stateMachine = this.StateMachine;
@@ -33,7 +33,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		return stateMachine.CurrentState;
 	}
 
-	// Token: 0x0601B7DE RID: 112606 RVA: 0x007886D8 File Offset: 0x007868D8
+	// Token: 0x06019329 RID: 103209 RVA: 0x007B0704 File Offset: 0x007AE904
 	protected override bool OnInitData(IEntityArgs args = null)
 	{
 		IEntityData pbEntityInitData = base.Entity.GetComponent<CreatureDataComponent>().GetPbEntityInitData();
@@ -59,7 +59,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		return true;
 	}
 
-	// Token: 0x0601B7DF RID: 112607 RVA: 0x0078878C File Offset: 0x0078698C
+	// Token: 0x0601932A RID: 103210 RVA: 0x007B07B8 File Offset: 0x007AE9B8
 	protected override bool OnStart()
 	{
 		base.OnStart();
@@ -105,7 +105,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		return true;
 	}
 
-	// Token: 0x0601B7E0 RID: 112608 RVA: 0x00788914 File Offset: 0x00786B14
+	// Token: 0x0601932B RID: 103211 RVA: 0x007B0940 File Offset: 0x007AEB40
 	protected override void OnActivate()
 	{
 		base.OnActivate();
@@ -124,7 +124,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		this.AddMonsterNearbyCheck();
 	}
 
-	// Token: 0x0601B7E1 RID: 112609 RVA: 0x00788984 File Offset: 0x00786B84
+	// Token: 0x0601932C RID: 103212 RVA: 0x007B09B0 File Offset: 0x007AEBB0
 	protected override bool OnEnd()
 	{
 		PawnTurnActionController turnActionController = this.TurnActionController;
@@ -148,7 +148,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		return true;
 	}
 
-	// Token: 0x0601B7E2 RID: 112610 RVA: 0x007889D8 File Offset: 0x00786BD8
+	// Token: 0x0601932D RID: 103213 RVA: 0x007B0A04 File Offset: 0x007AEC04
 	protected override bool OnClear()
 	{
 		this.TurnActionController = null;
@@ -165,7 +165,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		return base.OnClear();
 	}
 
-	// Token: 0x0601B7E3 RID: 112611 RVA: 0x00788A08 File Offset: 0x00786C08
+	// Token: 0x0601932E RID: 103214 RVA: 0x007B0A34 File Offset: 0x007AEC34
 	protected void InitStateMachine()
 	{
 		if (this.Config == null)
@@ -196,7 +196,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		this.DestroyState = (this.StateMachine.GetState(ENpcPerformState.Destroy) as NpcPerformDestroyState);
 	}
 
-	// Token: 0x0601B7E4 RID: 112612 RVA: 0x00788BC4 File Offset: 0x00786DC4
+	// Token: 0x0601932F RID: 103215 RVA: 0x007B0BF0 File Offset: 0x007AEDF0
 	private void RestoreProperties()
 	{
 		this.BornState = null;
@@ -210,7 +210,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		this.DestroyState = null;
 	}
 
-	// Token: 0x0601B7E5 RID: 112613 RVA: 0x00788C10 File Offset: 0x00786E10
+	// Token: 0x06019330 RID: 103216 RVA: 0x007B0C3C File Offset: 0x007AEE3C
 	private void AddEvents()
 	{
 		if (this.EventsInited)
@@ -222,7 +222,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		this.EventsInited = true;
 	}
 
-	// Token: 0x0601B7E6 RID: 112614 RVA: 0x00788C74 File Offset: 0x00786E74
+	// Token: 0x06019331 RID: 103217 RVA: 0x007B0CA0 File Offset: 0x007AEEA0
 	private void RemoveEvents()
 	{
 		if (!this.EventsInited)
@@ -234,7 +234,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		this.EventsInited = false;
 	}
 
-	// Token: 0x0601B7E7 RID: 112615 RVA: 0x00788CD5 File Offset: 0x00786ED5
+	// Token: 0x06019332 RID: 103218 RVA: 0x007B0D01 File Offset: 0x007AEF01
 	private void RemoveDynamicEvents()
 	{
 		if (EventSystem.Instance.Has(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.OnChangeRole)))
@@ -243,21 +243,21 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		}
 	}
 
-	// Token: 0x0601B7E8 RID: 112616 RVA: 0x00788D10 File Offset: 0x00786F10
+	// Token: 0x06019333 RID: 103219 RVA: 0x007B0D3C File Offset: 0x007AEF3C
 	private void PreStartStateMachine()
 	{
 		this.IdleState.NpcMoveComp = base.Entity.GetComponent<BaseMoveComponent>();
 		this.UnderAttackState.SetDefaultDirect(this.ActorComp.ActorForwardProxy);
 	}
 
-	// Token: 0x0601B7E9 RID: 112617 RVA: 0x00788D40 File Offset: 0x00786F40
+	// Token: 0x06019334 RID: 103220 RVA: 0x007B0D6C File Offset: 0x007AEF6C
 	[NullableContext(1)]
 	public bool OnMonsterNearby(Entity entity)
 	{
 		return this.StateMachine.CurrentState.Value == ENpcPerformState.MonsterNearby || (!base.IsInPlot && this.StateMachine.CurrentState.GetValueOrDefault() == ENpcPerformState.Idle && this.IdleState.OnMonsterNearby());
 	}
 
-	// Token: 0x0601B7EA RID: 112618 RVA: 0x00788D90 File Offset: 0x00786F90
+	// Token: 0x06019335 RID: 103221 RVA: 0x007B0DBC File Offset: 0x007AEFBC
 	private void AddMonsterNearbyCheck()
 	{
 		Aki.TDConfigMgr.Component.NpcPerformComponent config = this.Config;
@@ -280,7 +280,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		}
 	}
 
-	// Token: 0x0601B7EB RID: 112619 RVA: 0x00788E3C File Offset: 0x0078703C
+	// Token: 0x06019336 RID: 103222 RVA: 0x007B0E68 File Offset: 0x007AF068
 	private void RemoveAddMonsterNearbyCheck()
 	{
 		if (this.MonsterNearbyInfo >= 0)
@@ -290,7 +290,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		}
 	}
 
-	// Token: 0x0601B7EC RID: 112620 RVA: 0x00788E64 File Offset: 0x00787064
+	// Token: 0x06019337 RID: 103223 RVA: 0x007B0E90 File Offset: 0x007AF090
 	public override void OnPlayerAttack()
 	{
 		if (base.IsInPlot || this.StateMachine.CurrentState.GetValueOrDefault() != ENpcPerformState.Idle)
@@ -300,13 +300,13 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		this.IdleState.OnPlayerAttack();
 	}
 
-	// Token: 0x0601B7ED RID: 112621 RVA: 0x00788E9B File Offset: 0x0078709B
+	// Token: 0x06019338 RID: 103224 RVA: 0x007B0EC7 File Offset: 0x007AF0C7
 	public override void OnPlayerAttackBegin()
 	{
 		this.IsBeingAttacked = false;
 	}
 
-	// Token: 0x0601B7EE RID: 112622 RVA: 0x00788EA4 File Offset: 0x007870A4
+	// Token: 0x06019339 RID: 103225 RVA: 0x007B0ED0 File Offset: 0x007AF0D0
 	public unsafe override void OnPlayerAttackEnd()
 	{
 		this.SetStiffTag(false);
@@ -325,7 +325,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		this.StateMachine.Switch(ENpcPerformState.Idle);
 	}
 
-	// Token: 0x0601B7EF RID: 112623 RVA: 0x00788F4C File Offset: 0x0078714C
+	// Token: 0x0601933A RID: 103226 RVA: 0x007B0F78 File Offset: 0x007AF178
 	public override void OnPlayerImpact()
 	{
 		if (base.IsInPlot || this.StateMachine.CurrentState.GetValueOrDefault() != ENpcPerformState.Idle)
@@ -335,13 +335,13 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		this.IdleState.OnPlayerImpact();
 	}
 
-	// Token: 0x0601B7F0 RID: 112624 RVA: 0x00788F83 File Offset: 0x00787183
+	// Token: 0x0601933B RID: 103227 RVA: 0x007B0FAF File Offset: 0x007AF1AF
 	public override void OnPlayerImpactBegin()
 	{
 		this.IsBeingImpacted = false;
 	}
 
-	// Token: 0x0601B7F1 RID: 112625 RVA: 0x00788F8C File Offset: 0x0078718C
+	// Token: 0x0601933C RID: 103228 RVA: 0x007B0FB8 File Offset: 0x007AF1B8
 	public unsafe override void OnPlayerImpactEnd()
 	{
 		this.SetStiffTag(false);
@@ -360,7 +360,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		this.StateMachine.Switch(ENpcPerformState.Idle);
 	}
 
-	// Token: 0x0601B7F2 RID: 112626 RVA: 0x00789034 File Offset: 0x00787234
+	// Token: 0x0601933D RID: 103229 RVA: 0x007B1060 File Offset: 0x007AF260
 	public void OnEnterVehicle()
 	{
 		if (this.StateMachine.CurrentState.Value == ENpcPerformState.RideVehicle)
@@ -374,7 +374,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		this.StateMachine.Switch(ENpcPerformState.RideVehicle);
 	}
 
-	// Token: 0x0601B7F3 RID: 112627 RVA: 0x0078907C File Offset: 0x0078727C
+	// Token: 0x0601933E RID: 103230 RVA: 0x007B10A8 File Offset: 0x007AF2A8
 	public unsafe void OnLeaveVehicle()
 	{
 		EntityHandle owner = this.StateMachine.Owner;
@@ -401,7 +401,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		this.StateMachine.Switch(ENpcPerformState.Idle);
 	}
 
-	// Token: 0x0601B7F4 RID: 112628 RVA: 0x00789140 File Offset: 0x00787340
+	// Token: 0x0601933F RID: 103231 RVA: 0x007B116C File Offset: 0x007AF36C
 	public bool OnPlayerInteractStart(bool needTurn, bool waitTurnComplete, Action onTurnEndHandle, Vector playerOffset = null)
 	{
 		if (this.TurnActionController == null)
@@ -454,7 +454,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		return true;
 	}
 
-	// Token: 0x0601B7F5 RID: 112629 RVA: 0x00789294 File Offset: 0x00787494
+	// Token: 0x06019340 RID: 103232 RVA: 0x007B12C0 File Offset: 0x007AF4C0
 	public void OnPlayerInteractEnd()
 	{
 		if (this.TurnActionController == null)
@@ -474,7 +474,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		(this.StateMachine.GetState(enpcPerformState.Value) as NpcPerformBaseState).OnPlayerInteractTurnActionEnd();
 	}
 
-	// Token: 0x0601B7F6 RID: 112630 RVA: 0x007892F4 File Offset: 0x007874F4
+	// Token: 0x06019341 RID: 103233 RVA: 0x007B1320 File Offset: 0x007AF520
 	protected override void OnTick(float delta)
 	{
 		if (this.AnimComp == null)
@@ -499,7 +499,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		this.UpdateInSightBehavior(delta);
 	}
 
-	// Token: 0x0601B7F7 RID: 112631 RVA: 0x0078934B File Offset: 0x0078754B
+	// Token: 0x06019342 RID: 103234 RVA: 0x007B1377 File Offset: 0x007AF577
 	private void UpdateInSightBehavior(float delta)
 	{
 		if (!this.CanLookAtPlayer)
@@ -514,7 +514,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		this.EnableLookAtPlayer(false, true);
 	}
 
-	// Token: 0x0601B7F8 RID: 112632 RVA: 0x0078937C File Offset: 0x0078757C
+	// Token: 0x06019343 RID: 103235 RVA: 0x007B13A8 File Offset: 0x007AF5A8
 	private bool IsInSightDirection()
 	{
 		if (Global.BaseCharacter == null || !Global.BaseCharacter.IsValid())
@@ -529,7 +529,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		return MathUtils.Instance.GetAngleByVectorDot(this.TempDirect, this.ActorComp.ActorForwardProxy) <= 80.0;
 	}
 
-	// Token: 0x0601B7F9 RID: 112633 RVA: 0x00789423 File Offset: 0x00787623
+	// Token: 0x06019344 RID: 103236 RVA: 0x007B1459 File Offset: 0x007AF659
 	public void SightTarget([Nullable(new byte[]
 	{
 		0,
@@ -546,7 +546,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		this.SightController.ChangeSightTarget(target, context);
 	}
 
-	// Token: 0x0601B7FA RID: 112634 RVA: 0x00789448 File Offset: 0x00787648
+	// Token: 0x06019345 RID: 103237 RVA: 0x007B1480 File Offset: 0x007AF680
 	public void HandleCachedStareAction()
 	{
 		foreach (KeyValuePair<EStareActionType, OneOf<BaseActorComponent, Vector, AActor>?> keyValuePair in this.CachedStareTargetMap)
@@ -556,8 +556,8 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		this.CachedStareTargetMap.Clear();
 	}
 
-	// Token: 0x17002606 RID: 9734
-	// (get) Token: 0x0601B7FB RID: 112635 RVA: 0x007894B8 File Offset: 0x007876B8
+	// Token: 0x1700281C RID: 10268
+	// (get) Token: 0x06019346 RID: 103238 RVA: 0x007B14F0 File Offset: 0x007AF6F0
 	public bool OpenLookAt
 	{
 		get
@@ -566,7 +566,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		}
 	}
 
-	// Token: 0x0601B7FC RID: 112636 RVA: 0x007894C0 File Offset: 0x007876C0
+	// Token: 0x06019347 RID: 103239 RVA: 0x007B14F8 File Offset: 0x007AF6F8
 	public void SetLookAtPlayerEnabled(bool enabled, bool bCleanCurrentTarget = true)
 	{
 		if (this.CanLookAtPlayer == enabled)
@@ -585,7 +585,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		}
 	}
 
-	// Token: 0x0601B7FD RID: 112637 RVA: 0x007894F4 File Offset: 0x007876F4
+	// Token: 0x06019348 RID: 103240 RVA: 0x007B152C File Offset: 0x007AF72C
 	public unsafe void SetUiOpenPerformance(EUiViewName uiViewName, int boardId)
 	{
 		if (base.IsInPlot)
@@ -642,7 +642,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		}
 	}
 
-	// Token: 0x0601B7FE RID: 112638 RVA: 0x00789740 File Offset: 0x00787940
+	// Token: 0x06019349 RID: 103241 RVA: 0x007B1778 File Offset: 0x007AF978
 	private void OnEnterHitCollision(UPrimitiveComponent overlappedComponent, AActor otherActor, UPrimitiveComponent otherComp, int temp1, bool temp2, [Nullable(1)] FHitResult hitResult)
 	{
 		if (base.IsInPlot || this.IsBeingAttacked || this.IsBeingImpacted || this.StateMachine.CurrentState.GetValueOrDefault() != ENpcPerformState.Idle)
@@ -672,7 +672,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		}
 	}
 
-	// Token: 0x0601B7FF RID: 112639 RVA: 0x007897E3 File Offset: 0x007879E3
+	// Token: 0x0601934A RID: 103242 RVA: 0x007B181B File Offset: 0x007AFA1B
 	private void OnNpcIsAttacked()
 	{
 		this.IsBeingAttacked = true;
@@ -685,7 +685,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		this.OnPlayerAttack();
 	}
 
-	// Token: 0x0601B800 RID: 112640 RVA: 0x0078980C File Offset: 0x00787A0C
+	// Token: 0x0601934B RID: 103243 RVA: 0x007B1844 File Offset: 0x007AFA44
 	private void OnNpcIsImpacted()
 	{
 		float num = (float)Global.BaseCharacter.D_GetVelocity().Size2D();
@@ -705,7 +705,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		this.OnPlayerImpact();
 	}
 
-	// Token: 0x0601B801 RID: 112641 RVA: 0x00789868 File Offset: 0x00787A68
+	// Token: 0x0601934C RID: 103244 RVA: 0x007B18A0 File Offset: 0x007AFAA0
 	private void SetStiffTag(bool active)
 	{
 		if (this.TagComp == null)
@@ -722,14 +722,14 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		}
 	}
 
-	// Token: 0x0601B802 RID: 112642 RVA: 0x007898FC File Offset: 0x00787AFC
+	// Token: 0x0601934D RID: 103245 RVA: 0x007B1934 File Offset: 0x007AFB34
 	private bool CheckNpcOnHit()
 	{
 		BaseTagComponent component = Global.BaseCharacter.CharacterActorComponent.Entity.GetComponent<BaseTagComponent>();
 		return component != null && (component.HasTag(GameplayTagDefine.EGameplayTagId["角色.Common.技能通用标识.普攻"]) || component.HasTag(GameplayTagDefine.EGameplayTagId["角色.Common.技能通用标识.技能"]) || component.HasTag(GameplayTagDefine.EGameplayTagId["角色.Common.技能通用标识.大招"]));
 	}
 
-	// Token: 0x0601B803 RID: 112643 RVA: 0x00789968 File Offset: 0x00787B68
+	// Token: 0x0601934E RID: 103246 RVA: 0x007B19A0 File Offset: 0x007AFBA0
 	private void CalculateImpactDirection()
 	{
 		FVectorDouble fvectorDouble = Global.BaseCharacter.D_GetVelocity();
@@ -747,12 +747,12 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		this.CollisionDirection = num2;
 	}
 
-	// Token: 0x0601B804 RID: 112644 RVA: 0x007899FC File Offset: 0x00787BFC
+	// Token: 0x0601934F RID: 103247 RVA: 0x007B1A34 File Offset: 0x007AFC34
 	private void OnSwitchState(ENpcPerformState oldState, ENpcPerformState newState)
 	{
 	}
 
-	// Token: 0x0601B805 RID: 112645 RVA: 0x00789A00 File Offset: 0x00787C00
+	// Token: 0x06019350 RID: 103248 RVA: 0x007B1A38 File Offset: 0x007AFC38
 	[NullableContext(1)]
 	public static string GetStateName(ENpcPerformState state)
 	{
@@ -783,8 +783,8 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		}
 	}
 
-	// Token: 0x17002607 RID: 9735
-	// (get) Token: 0x0601B806 RID: 112646 RVA: 0x00789A7E File Offset: 0x00787C7E
+	// Token: 0x1700281D RID: 10269
+	// (get) Token: 0x06019351 RID: 103249 RVA: 0x007B1AB6 File Offset: 0x007AFCB6
 	public bool HasBrain
 	{
 		get
@@ -793,7 +793,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		}
 	}
 
-	// Token: 0x0601B807 RID: 112647 RVA: 0x00789A94 File Offset: 0x00787C94
+	// Token: 0x06019352 RID: 103250 RVA: 0x007B1ACC File Offset: 0x007AFCCC
 	[NullableContext(1)]
 	public void ResumeAi(string key)
 	{
@@ -808,7 +808,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		this.AiControllerPaused = false;
 	}
 
-	// Token: 0x0601B808 RID: 112648 RVA: 0x00789AE0 File Offset: 0x00787CE0
+	// Token: 0x06019353 RID: 103251 RVA: 0x007B1B18 File Offset: 0x007AFD18
 	[NullableContext(1)]
 	public void PauseAi(string key)
 	{
@@ -823,7 +823,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		this.AiControllerPaused = true;
 	}
 
-	// Token: 0x0601B809 RID: 112649 RVA: 0x00789B20 File Offset: 0x00787D20
+	// Token: 0x06019354 RID: 103252 RVA: 0x007B1B58 File Offset: 0x007AFD58
 	public void InitAiControllerType()
 	{
 		CharacterAiComponent component = base.Entity.GetComponent<CharacterAiComponent>();
@@ -844,7 +844,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		}
 	}
 
-	// Token: 0x0601B80A RID: 112650 RVA: 0x00789B80 File Offset: 0x00787D80
+	// Token: 0x06019355 RID: 103253 RVA: 0x007B1BB8 File Offset: 0x007AFDB8
 	public override void OnNpcInPlot(bool isInPlot)
 	{
 		base.OnNpcInPlot(isInPlot);
@@ -856,7 +856,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		this.ResumeAi("OnNpcInPlot");
 	}
 
-	// Token: 0x0601B80B RID: 112651 RVA: 0x00789BA4 File Offset: 0x00787DA4
+	// Token: 0x06019356 RID: 103254 RVA: 0x007B1BDC File Offset: 0x007AFDDC
 	public void OnNpcInAiControl()
 	{
 		if (this.CurrentController == CommonNpcPerformComponent.EAiController.LevelAi)
@@ -875,7 +875,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		}
 	}
 
-	// Token: 0x0601B80C RID: 112652 RVA: 0x00789C08 File Offset: 0x00787E08
+	// Token: 0x06019357 RID: 103255 RVA: 0x007B1C40 File Offset: 0x007AFE40
 	public override bool InLevelAiControl()
 	{
 		if (this.CurrentController == CommonNpcPerformComponent.EAiController.Ai)
@@ -901,14 +901,14 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		return true;
 	}
 
-	// Token: 0x0601B80D RID: 112653 RVA: 0x00789C81 File Offset: 0x00787E81
+	// Token: 0x06019358 RID: 103256 RVA: 0x007B1CB9 File Offset: 0x007AFEB9
 	protected void HandleEntryPerform()
 	{
 		this.HandleEntryMaterial();
 		this.HandleEntryEffect();
 	}
 
-	// Token: 0x0601B80E RID: 112654 RVA: 0x00789C90 File Offset: 0x00787E90
+	// Token: 0x06019359 RID: 103257 RVA: 0x007B1CC8 File Offset: 0x007AFEC8
 	protected void HandleEntryMaterial()
 	{
 		BaseCharacterComponent actorComp = this.ActorComp;
@@ -929,13 +929,13 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		this.MaterialController.ApplyMaterialEffect(assetPathName.ToString());
 	}
 
-	// Token: 0x0601B80F RID: 112655 RVA: 0x00789D0C File Offset: 0x00787F0C
+	// Token: 0x0601935A RID: 103258 RVA: 0x007B1D44 File Offset: 0x007AFF44
 	protected void HandleEntryEffect()
 	{
 		this.HandleCommonNpcEntryEffect();
 	}
 
-	// Token: 0x0601B810 RID: 112656 RVA: 0x00789D14 File Offset: 0x00787F14
+	// Token: 0x0601935B RID: 103259 RVA: 0x007B1D4C File Offset: 0x007AFF4C
 	protected void HandleCommonNpcEntryEffect()
 	{
 		CreatureDataComponent component = base.Entity.GetComponent<CreatureDataComponent>();
@@ -955,7 +955,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		}
 	}
 
-	// Token: 0x0601B811 RID: 112657 RVA: 0x00789D6C File Offset: 0x00787F6C
+	// Token: 0x0601935C RID: 103260 RVA: 0x007B1DA4 File Offset: 0x007AFFA4
 	private void InitEnterExitVehicleMontage()
 	{
 		this.EnterVehiclePerformMap.Clear();
@@ -1036,7 +1036,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		}
 	}
 
-	// Token: 0x0601B812 RID: 112658 RVA: 0x0078A1B0 File Offset: 0x007883B0
+	// Token: 0x0601935D RID: 103261 RVA: 0x007B21E8 File Offset: 0x007B03E8
 	public override void HandlePendingDestroy()
 	{
 		if (this.StateMachine == null)
@@ -1048,7 +1048,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		this.StateMachine.Switch(ENpcPerformState.Destroy);
 	}
 
-	// Token: 0x0601B813 RID: 112659 RVA: 0x0078A1E0 File Offset: 0x007883E0
+	// Token: 0x0601935E RID: 103262 RVA: 0x007B2218 File Offset: 0x007B0418
 	[NullableContext(1)]
 	public void OnStartMoveWithSpline(MoveWithSpline eventParam, bool noSyncPoint, [Nullable(2)] Action<bool> callback)
 	{
@@ -1077,7 +1077,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		this.SetSensoryInfo(eventParam);
 	}
 
-	// Token: 0x0601B814 RID: 112660 RVA: 0x0078A2A2 File Offset: 0x007884A2
+	// Token: 0x0601935F RID: 103263 RVA: 0x007B22DA File Offset: 0x007B04DA
 	private void HandlePatrolEnd(ELevelEventState result)
 	{
 		if (result == ELevelEventState.Success)
@@ -1094,7 +1094,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		this.IsMoveWithSpline = false;
 	}
 
-	// Token: 0x0601B815 RID: 112661 RVA: 0x0078A2DC File Offset: 0x007884DC
+	// Token: 0x06019360 RID: 103264 RVA: 0x007B2314 File Offset: 0x007B0514
 	[NullableContext(1)]
 	private void SetSensoryInfo(MoveWithSpline eventParam)
 	{
@@ -1104,7 +1104,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		pawnSensoryInfo.CreatePerceptionEvent(enterDistance, (entity != null) ? entity.GameBudgetManagedToken : 0U, new Action(this.HandleEnterRange), new Action(this.HandleExitRange), null, null, (float)eventParam.NpcFollow.PerformerWhenExit.Range, null);
 	}
 
-	// Token: 0x0601B816 RID: 112662 RVA: 0x0078A344 File Offset: 0x00788544
+	// Token: 0x06019361 RID: 103265 RVA: 0x007B237C File Offset: 0x007B057C
 	private void HandleEnterRange()
 	{
 		if (!this.IsMoveWithSpline)
@@ -1119,7 +1119,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		this.OnOutRange(this.IsOutRangeNow);
 	}
 
-	// Token: 0x0601B817 RID: 112663 RVA: 0x0078A36B File Offset: 0x0078856B
+	// Token: 0x06019362 RID: 103266 RVA: 0x007B23A3 File Offset: 0x007B05A3
 	private void HandleExitRange()
 	{
 		if (!this.IsMoveWithSpline)
@@ -1134,7 +1134,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		this.OnOutRange(this.IsOutRangeNow);
 	}
 
-	// Token: 0x0601B818 RID: 112664 RVA: 0x0078A394 File Offset: 0x00788594
+	// Token: 0x06019363 RID: 103267 RVA: 0x007B23CC File Offset: 0x007B05CC
 	private void OnOutRange(bool outRange)
 	{
 		if (outRange == this.IsOutRangeOld)
@@ -1197,7 +1197,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		LevelGeneralController.Instance.ExecuteActionsNew(actions2, EntityContext.Create(this.ActorComp.Entity.Id, null), new Action<ELevelEventState>(this.HandleEnterActionsFinished));
 	}
 
-	// Token: 0x0601B819 RID: 112665 RVA: 0x0078A4A3 File Offset: 0x007886A3
+	// Token: 0x06019364 RID: 103268 RVA: 0x007B24DB File Offset: 0x007B06DB
 	private void HandleExitActionsFinished(ELevelEventState result)
 	{
 		if (result == ELevelEventState.Success)
@@ -1213,7 +1213,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		}
 	}
 
-	// Token: 0x0601B81A RID: 112666 RVA: 0x0078A4D8 File Offset: 0x007886D8
+	// Token: 0x06019365 RID: 103269 RVA: 0x007B2510 File Offset: 0x007B0710
 	private void HandleEnterActionsFinished(ELevelEventState result)
 	{
 		if (result == ELevelEventState.Success)
@@ -1235,7 +1235,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		}
 	}
 
-	// Token: 0x0601B81B RID: 112667 RVA: 0x0078A53C File Offset: 0x0078873C
+	// Token: 0x06019366 RID: 103270 RVA: 0x007B2574 File Offset: 0x007B0774
 	protected void EnableLookAtPlayer(bool enable, bool bCleanCurrentTarget = true)
 	{
 		if (this.IsLookingAtPlayer == enable)
@@ -1256,7 +1256,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		EventSystem.Instance.Remove(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.OnChangeRole));
 	}
 
-	// Token: 0x0601B81C RID: 112668 RVA: 0x0078A5C4 File Offset: 0x007887C4
+	// Token: 0x06019367 RID: 103271 RVA: 0x007B25FC File Offset: 0x007B07FC
 	[NullableContext(1)]
 	protected void OnChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 	{
@@ -1273,7 +1273,7 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 		this.SightTarget(new OneOf<BaseActorComponent, Vector, AActor>?(characterActorComponent), EStareActionType.LookAtPlayer);
 	}
 
-	// Token: 0x0601B81D RID: 112669 RVA: 0x0078A604 File Offset: 0x00788804
+	// Token: 0x06019368 RID: 103272 RVA: 0x007B263C File Offset: 0x007B083C
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -1282,378 +1282,325 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 			return false;
 		}
 		CommonNpcPerformComponent commonNpcPerformComponent = (CommonNpcPerformComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ConfigId"))
+		this.ConfigId = commonNpcPerformComponent.ConfigId;
+		if (commonNpcPerformComponent.Config == null)
 		{
-			this.ConfigId = commonNpcPerformComponent.ConfigId;
+			this.Config = null;
 		}
-		if (base.CanResetComponentProperty("Config"))
-		{
-			if (commonNpcPerformComponent.Config == null)
-			{
-				this.Config = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Aki.TDConfigMgr.Component.NpcPerformComponent>(this.Config), "Config"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CanLookAtPlayer"))
-		{
-			this.CanLookAtPlayer = commonNpcPerformComponent.CanLookAtPlayer;
-		}
-		if (base.CanResetComponentProperty("IsLookingAtPlayer"))
-		{
-			this.IsLookingAtPlayer = commonNpcPerformComponent.IsLookingAtPlayer;
-		}
-		if (base.CanResetComponentProperty("PerceptionComp"))
-		{
-			if (commonNpcPerformComponent.PerceptionComp == null)
-			{
-				this.PerceptionComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PawnPerceptionComponent>(this.PerceptionComp), "PerceptionComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("InteractionComp"))
-		{
-			if (commonNpcPerformComponent.InteractionComp == null)
-			{
-				this.InteractionComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PawnInteractBaseComponent>(this.InteractionComp), "InteractionComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TagComp"))
-		{
-			if (commonNpcPerformComponent.TagComp == null)
-			{
-				this.TagComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LevelTagComponent>(this.TagComp), "TagComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("StateMachine"))
-		{
-			if (commonNpcPerformComponent.StateMachine == null)
-			{
-				this.StateMachine = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<StateMachine<EntityHandle, ENpcPerformState>>(this.StateMachine), "StateMachine"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("BornState"))
-		{
-			if (commonNpcPerformComponent.BornState == null)
-			{
-				this.BornState = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<NpcPerformBornState>(this.BornState), "BornState"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("IdleState"))
-		{
-			if (commonNpcPerformComponent.IdleState == null)
-			{
-				this.IdleState = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<NpcPerformIdleState>(this.IdleState), "IdleState"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("InteractState"))
-		{
-			if (commonNpcPerformComponent.InteractState == null)
-			{
-				this.InteractState = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<NpcPerformInteractState>(this.InteractState), "InteractState"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("UnderAttackState"))
-		{
-			if (commonNpcPerformComponent.UnderAttackState == null)
-			{
-				this.UnderAttackState = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<NpcPerformUnderAttackState>(this.UnderAttackState), "UnderAttackState"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("MonsterNearbyState"))
-		{
-			if (commonNpcPerformComponent.MonsterNearbyState == null)
-			{
-				this.MonsterNearbyState = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<NpcPerformMonsterNearbyState>(this.MonsterNearbyState), "MonsterNearbyState"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("RideVehicleState"))
-		{
-			if (commonNpcPerformComponent.RideVehicleState == null)
-			{
-				this.RideVehicleState = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<NpcPerformRideVehicleState>(this.RideVehicleState), "RideVehicleState"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("DestroyState"))
-		{
-			if (commonNpcPerformComponent.DestroyState == null)
-			{
-				this.DestroyState = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<NpcPerformDestroyState>(this.DestroyState), "DestroyState"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("SystemUiState"))
-		{
-			if (commonNpcPerformComponent.SystemUiState == null)
-			{
-				this.SystemUiState = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<NpcPerformSystemUiState>(this.SystemUiState), "SystemUiState"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TurnActionController"))
-		{
-			if (commonNpcPerformComponent.TurnActionController == null)
-			{
-				this.TurnActionController = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PawnTurnActionController>(this.TurnActionController), "TurnActionController"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("MonsterNearbyInfo"))
-		{
-			this.MonsterNearbyInfo = commonNpcPerformComponent.MonsterNearbyInfo;
-		}
-		if (base.CanResetComponentProperty("DefaultDirect") && commonNpcPerformComponent.DefaultDirect != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.DefaultDirect), "DefaultDirect"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TempDirect") && commonNpcPerformComponent.TempDirect != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TempDirect), "TempDirect"))
+		this.CanLookAtPlayer = commonNpcPerformComponent.CanLookAtPlayer;
+		this.IsLookingAtPlayer = commonNpcPerformComponent.IsLookingAtPlayer;
+		if (commonNpcPerformComponent.PerceptionComp == null)
+		{
+			this.PerceptionComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PerceptionComp), "PerceptionComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("EventsInited"))
+		if (commonNpcPerformComponent.InteractionComp == null)
 		{
-			this.EventsInited = commonNpcPerformComponent.EventsInited;
+			this.InteractionComp = null;
 		}
-		if (base.CanResetComponentProperty("HasNpcPerformConfig"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.InteractionComp), "InteractionComp"))
 		{
-			this.HasNpcPerformConfig = commonNpcPerformComponent.HasNpcPerformConfig;
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsBaseRoleNpc"))
+		if (commonNpcPerformComponent.TagComp == null)
 		{
-			this.IsBaseRoleNpc = commonNpcPerformComponent.IsBaseRoleNpc;
+			this.TagComp = null;
 		}
-		if (base.CanResetComponentProperty("PerformGroupController"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 		{
-			if (commonNpcPerformComponent.PerformGroupController == null)
-			{
-				this.PerformGroupController = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PerformGroupController>(this.PerformGroupController), "PerformGroupController"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("ExpressionController"))
+		if (commonNpcPerformComponent.StateMachine == null)
 		{
-			if (commonNpcPerformComponent.ExpressionController == null)
-			{
-				this.ExpressionController = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<NpcFacialExpressionController>(this.ExpressionController), "ExpressionController"))
-			{
-				return false;
-			}
+			this.StateMachine = null;
 		}
-		if (base.CanResetComponentProperty("SightController"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateMachine), "StateMachine"))
 		{
-			if (commonNpcPerformComponent.SightController == null)
-			{
-				this.SightController = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<NpcSightController>(this.SightController), "SightController"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("InterestEventController"))
+		if (commonNpcPerformComponent.BornState == null)
 		{
-			if (commonNpcPerformComponent.InterestEventController == null)
-			{
-				this.InterestEventController = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<NpcInterestEventController>(this.InterestEventController), "InterestEventController"))
-			{
-				return false;
-			}
+			this.BornState = null;
 		}
-		if (base.CanResetComponentProperty("AnyIdleLoopMontagePlaying"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BornState), "BornState"))
 		{
-			this.AnyIdleLoopMontagePlaying = commonNpcPerformComponent.AnyIdleLoopMontagePlaying;
+			return false;
 		}
-		if (base.CanResetComponentProperty("CachedStareTargetMap"))
+		if (commonNpcPerformComponent.IdleState == null)
 		{
-			if (commonNpcPerformComponent.CachedStareTargetMap == null)
-			{
-				this.CachedStareTargetMap = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<EStareActionType, OneOf<BaseActorComponent, Vector, AActor>?>>(this.CachedStareTargetMap), "CachedStareTargetMap"))
-			{
-				return false;
-			}
+			this.IdleState = null;
 		}
-		if (base.CanResetComponentProperty("EnterVehiclePerformMap"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.IdleState), "IdleState"))
 		{
-			if (commonNpcPerformComponent.EnterVehiclePerformMap == null)
-			{
-				this.EnterVehiclePerformMap = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<CommonNpcPerformComponent.EEnterVehicleDirection, CommonNpcPerformComponent.EnterVehiclePerformMontage>>(this.EnterVehiclePerformMap), "EnterVehiclePerformMap"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("LeaveVehiclePerformMap"))
+		if (commonNpcPerformComponent.InteractState == null)
 		{
-			if (commonNpcPerformComponent.LeaveVehiclePerformMap == null)
-			{
-				this.LeaveVehiclePerformMap = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<CommonNpcPerformComponent.EEnterVehicleDirection, CommonNpcPerformComponent.LeaveVehiclePerformMontage>>(this.LeaveVehiclePerformMap), "LeaveVehiclePerformMap"))
-			{
-				return false;
-			}
+			this.InteractState = null;
 		}
-		if (base.CanResetComponentProperty("IsMoveWithSpline"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.InteractState), "InteractState"))
 		{
-			this.IsMoveWithSpline = commonNpcPerformComponent.IsMoveWithSpline;
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsOutRangeOld"))
+		if (commonNpcPerformComponent.UnderAttackState == null)
 		{
-			this.IsOutRangeOld = commonNpcPerformComponent.IsOutRangeOld;
+			this.UnderAttackState = null;
 		}
-		if (base.CanResetComponentProperty("IsOutRangeNow"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.UnderAttackState), "UnderAttackState"))
 		{
-			this.IsOutRangeNow = commonNpcPerformComponent.IsOutRangeNow;
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsPlaySplineAction"))
+		if (commonNpcPerformComponent.MonsterNearbyState == null)
 		{
-			this.IsPlaySplineAction = commonNpcPerformComponent.IsPlaySplineAction;
+			this.MonsterNearbyState = null;
 		}
-		if (base.CanResetComponentProperty("PatrolComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MonsterNearbyState), "MonsterNearbyState"))
 		{
-			if (commonNpcPerformComponent.PatrolComp == null)
-			{
-				this.PatrolComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterPatrolComponent>(this.PatrolComp), "PatrolComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("PawnSensoryInfo"))
+		if (commonNpcPerformComponent.RideVehicleState == null)
 		{
-			if (commonNpcPerformComponent.PawnSensoryInfo == null)
-			{
-				this.PawnSensoryInfo = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PawnSensoryInfoComponent>(this.PawnSensoryInfo), "PawnSensoryInfo"))
-			{
-				return false;
-			}
+			this.RideVehicleState = null;
 		}
-		if (base.CanResetComponentProperty("SplineEntityId"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RideVehicleState), "RideVehicleState"))
 		{
-			this.SplineEntityId = commonNpcPerformComponent.SplineEntityId;
+			return false;
 		}
-		if (base.CanResetComponentProperty("MoveWithSplineParam"))
+		if (commonNpcPerformComponent.DestroyState == null)
 		{
-			if (commonNpcPerformComponent.MoveWithSplineParam == null)
-			{
-				this.MoveWithSplineParam = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<MoveWithSpline>(this.MoveWithSplineParam), "MoveWithSplineParam"))
-			{
-				return false;
-			}
+			this.DestroyState = null;
 		}
-		if (base.CanResetComponentProperty("EndMoveWithSplineCallback"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DestroyState), "DestroyState"))
 		{
-			if (commonNpcPerformComponent.EndMoveWithSplineCallback == null)
-			{
-				this.EndMoveWithSplineCallback = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Action<bool>>(this.EndMoveWithSplineCallback), "EndMoveWithSplineCallback"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("CurrentController"))
+		if (commonNpcPerformComponent.SystemUiState == null)
 		{
-			this.CurrentController = commonNpcPerformComponent.CurrentController;
+			this.SystemUiState = null;
 		}
-		if (base.CanResetComponentProperty("LastController"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SystemUiState), "SystemUiState"))
 		{
-			this.LastController = commonNpcPerformComponent.LastController;
+			return false;
 		}
-		if (base.CanResetComponentProperty("AiControllerPaused"))
+		if (commonNpcPerformComponent.TurnActionController == null)
 		{
-			this.AiControllerPaused = commonNpcPerformComponent.AiControllerPaused;
+			this.TurnActionController = null;
 		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TurnActionController), "TurnActionController"))
+		{
+			return false;
+		}
+		this.MonsterNearbyInfo = commonNpcPerformComponent.MonsterNearbyInfo;
+		if (commonNpcPerformComponent.DefaultDirect != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.DefaultDirect), "DefaultDirect"))
+		{
+			return false;
+		}
+		if (commonNpcPerformComponent.TempDirect != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempDirect), "TempDirect"))
+		{
+			return false;
+		}
+		this.EventsInited = commonNpcPerformComponent.EventsInited;
+		this.HasNpcPerformConfig = commonNpcPerformComponent.HasNpcPerformConfig;
+		this.IsBaseRoleNpc = commonNpcPerformComponent.IsBaseRoleNpc;
+		if (commonNpcPerformComponent.PerformGroupController == null)
+		{
+			this.PerformGroupController = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PerformGroupController), "PerformGroupController"))
+		{
+			return false;
+		}
+		if (commonNpcPerformComponent.ExpressionController == null)
+		{
+			this.ExpressionController = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ExpressionController), "ExpressionController"))
+		{
+			return false;
+		}
+		if (commonNpcPerformComponent.SightController == null)
+		{
+			this.SightController = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SightController), "SightController"))
+		{
+			return false;
+		}
+		if (commonNpcPerformComponent.InterestEventController == null)
+		{
+			this.InterestEventController = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.InterestEventController), "InterestEventController"))
+		{
+			return false;
+		}
+		this.AnyIdleLoopMontagePlaying = commonNpcPerformComponent.AnyIdleLoopMontagePlaying;
+		if (commonNpcPerformComponent.CachedStareTargetMap == null)
+		{
+			this.CachedStareTargetMap = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CachedStareTargetMap), "CachedStareTargetMap"))
+		{
+			return false;
+		}
+		if (commonNpcPerformComponent.EnterVehiclePerformMap == null)
+		{
+			this.EnterVehiclePerformMap = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.EnterVehiclePerformMap), "EnterVehiclePerformMap"))
+		{
+			return false;
+		}
+		if (commonNpcPerformComponent.LeaveVehiclePerformMap == null)
+		{
+			this.LeaveVehiclePerformMap = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LeaveVehiclePerformMap), "LeaveVehiclePerformMap"))
+		{
+			return false;
+		}
+		this.IsMoveWithSpline = commonNpcPerformComponent.IsMoveWithSpline;
+		this.IsOutRangeOld = commonNpcPerformComponent.IsOutRangeOld;
+		this.IsOutRangeNow = commonNpcPerformComponent.IsOutRangeNow;
+		this.IsPlaySplineAction = commonNpcPerformComponent.IsPlaySplineAction;
+		if (commonNpcPerformComponent.PatrolComp == null)
+		{
+			this.PatrolComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PatrolComp), "PatrolComp"))
+		{
+			return false;
+		}
+		if (commonNpcPerformComponent.PawnSensoryInfo == null)
+		{
+			this.PawnSensoryInfo = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PawnSensoryInfo), "PawnSensoryInfo"))
+		{
+			return false;
+		}
+		this.SplineEntityId = commonNpcPerformComponent.SplineEntityId;
+		if (commonNpcPerformComponent.MoveWithSplineParam == null)
+		{
+			this.MoveWithSplineParam = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveWithSplineParam), "MoveWithSplineParam"))
+		{
+			return false;
+		}
+		if (commonNpcPerformComponent.EndMoveWithSplineCallback == null)
+		{
+			this.EndMoveWithSplineCallback = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.EndMoveWithSplineCallback), "EndMoveWithSplineCallback"))
+		{
+			return false;
+		}
+		this.CurrentController = commonNpcPerformComponent.CurrentController;
+		this.LastController = commonNpcPerformComponent.LastController;
+		this.AiControllerPaused = commonNpcPerformComponent.AiControllerPaused;
 		return true;
 	}
 
-	// Token: 0x0400D7C8 RID: 55240
+	// Token: 0x1700281E RID: 10270
+	// (get) Token: 0x06019369 RID: 103273 RVA: 0x007B2B93 File Offset: 0x007B0D93
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700281F RID: 10271
+	// (get) Token: 0x0601936A RID: 103274 RVA: 0x007B2B96 File Offset: 0x007B0D96
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002820 RID: 10272
+	// (get) Token: 0x0601936B RID: 103275 RVA: 0x007B2B99 File Offset: 0x007B0D99
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002821 RID: 10273
+	// (get) Token: 0x0601936C RID: 103276 RVA: 0x007B2B9C File Offset: 0x007B0D9C
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002822 RID: 10274
+	// (get) Token: 0x0601936D RID: 103277 RVA: 0x007B2B9F File Offset: 0x007B0D9F
+	public override bool NeedEnableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002823 RID: 10275
+	// (get) Token: 0x0601936E RID: 103278 RVA: 0x007B2BA2 File Offset: 0x007B0DA2
+	public override bool NeedDisableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002824 RID: 10276
+	// (get) Token: 0x0601936F RID: 103279 RVA: 0x007B2BA5 File Offset: 0x007B0DA5
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400DC4F RID: 56399
 	private int ConfigId;
 
-	// Token: 0x0400D7C9 RID: 55241
+	// Token: 0x0400DC50 RID: 56400
 	private Aki.TDConfigMgr.Component.NpcPerformComponent Config;
 
-	// Token: 0x0400D7CA RID: 55242
+	// Token: 0x0400DC51 RID: 56401
 	private bool CanLookAtPlayer;
 
-	// Token: 0x0400D7CB RID: 55243
+	// Token: 0x0400DC52 RID: 56402
 	private bool IsLookingAtPlayer;
 
-	// Token: 0x0400D7CC RID: 55244
+	// Token: 0x0400DC53 RID: 56403
 	private PawnPerceptionComponent PerceptionComp;
 
-	// Token: 0x0400D7CD RID: 55245
+	// Token: 0x0400DC54 RID: 56404
 	private PawnInteractBaseComponent InteractionComp;
 
-	// Token: 0x0400D7CE RID: 55246
+	// Token: 0x0400DC55 RID: 56405
 	private LevelTagComponent TagComp;
 
-	// Token: 0x0400D7CF RID: 55247
+	// Token: 0x0400DC56 RID: 56406
 	[Nullable(new byte[]
 	{
 		2,
@@ -1661,69 +1608,69 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 	})]
 	protected StateMachine<EntityHandle, ENpcPerformState> StateMachine;
 
-	// Token: 0x0400D7D0 RID: 55248
+	// Token: 0x0400DC57 RID: 56407
 	protected NpcPerformBornState BornState;
 
-	// Token: 0x0400D7D1 RID: 55249
+	// Token: 0x0400DC58 RID: 56408
 	protected NpcPerformIdleState IdleState;
 
-	// Token: 0x0400D7D2 RID: 55250
+	// Token: 0x0400DC59 RID: 56409
 	protected NpcPerformInteractState InteractState;
 
-	// Token: 0x0400D7D3 RID: 55251
+	// Token: 0x0400DC5A RID: 56410
 	protected NpcPerformUnderAttackState UnderAttackState;
 
-	// Token: 0x0400D7D4 RID: 55252
+	// Token: 0x0400DC5B RID: 56411
 	protected NpcPerformMonsterNearbyState MonsterNearbyState;
 
-	// Token: 0x0400D7D5 RID: 55253
+	// Token: 0x0400DC5C RID: 56412
 	protected NpcPerformRideVehicleState RideVehicleState;
 
-	// Token: 0x0400D7D6 RID: 55254
+	// Token: 0x0400DC5D RID: 56413
 	protected NpcPerformDestroyState DestroyState;
 
-	// Token: 0x0400D7D7 RID: 55255
+	// Token: 0x0400DC5E RID: 56414
 	protected NpcPerformSystemUiState SystemUiState;
 
-	// Token: 0x0400D7D8 RID: 55256
+	// Token: 0x0400DC5F RID: 56415
 	public PawnTurnActionController TurnActionController;
 
-	// Token: 0x0400D7D9 RID: 55257
+	// Token: 0x0400DC60 RID: 56416
 	private int MonsterNearbyInfo = -1;
 
-	// Token: 0x0400D7DA RID: 55258
+	// Token: 0x0400DC61 RID: 56417
 	[Nullable(1)]
 	private readonly Vector DefaultDirect = Vector.Create();
 
-	// Token: 0x0400D7DB RID: 55259
+	// Token: 0x0400DC62 RID: 56418
 	[Nullable(1)]
 	private readonly Vector TempDirect = Vector.Create();
 
-	// Token: 0x0400D7DC RID: 55260
+	// Token: 0x0400DC63 RID: 56419
 	private bool EventsInited;
 
-	// Token: 0x0400D7DD RID: 55261
+	// Token: 0x0400DC64 RID: 56420
 	private bool HasNpcPerformConfig;
 
-	// Token: 0x0400D7DE RID: 55262
+	// Token: 0x0400DC65 RID: 56421
 	public bool IsBaseRoleNpc;
 
-	// Token: 0x0400D7DF RID: 55263
+	// Token: 0x0400DC66 RID: 56422
 	public PerformGroupController PerformGroupController;
 
-	// Token: 0x0400D7E0 RID: 55264
+	// Token: 0x0400DC67 RID: 56423
 	public NpcFacialExpressionController ExpressionController;
 
-	// Token: 0x0400D7E1 RID: 55265
+	// Token: 0x0400DC68 RID: 56424
 	public NpcSightController SightController;
 
-	// Token: 0x0400D7E2 RID: 55266
+	// Token: 0x0400DC69 RID: 56425
 	public NpcInterestEventController InterestEventController;
 
-	// Token: 0x0400D7E3 RID: 55267
+	// Token: 0x0400DC6A RID: 56426
 	public bool AnyIdleLoopMontagePlaying;
 
-	// Token: 0x0400D7E4 RID: 55268
+	// Token: 0x0400DC6B RID: 56427
 	[Nullable(new byte[]
 	{
 		1,
@@ -1734,110 +1681,110 @@ public class CommonNpcPerformComponent : global::NpcPerformComponent
 	})]
 	protected Dictionary<EStareActionType, OneOf<BaseActorComponent, Vector, AActor>?> CachedStareTargetMap = new Dictionary<EStareActionType, OneOf<BaseActorComponent, Vector, AActor>?>();
 
-	// Token: 0x0400D7E5 RID: 55269
+	// Token: 0x0400DC6C RID: 56428
 	[Nullable(1)]
 	public Dictionary<CommonNpcPerformComponent.EEnterVehicleDirection, CommonNpcPerformComponent.EnterVehiclePerformMontage> EnterVehiclePerformMap = new Dictionary<CommonNpcPerformComponent.EEnterVehicleDirection, CommonNpcPerformComponent.EnterVehiclePerformMontage>();
 
-	// Token: 0x0400D7E6 RID: 55270
+	// Token: 0x0400DC6D RID: 56429
 	[Nullable(1)]
 	public Dictionary<CommonNpcPerformComponent.EEnterVehicleDirection, CommonNpcPerformComponent.LeaveVehiclePerformMontage> LeaveVehiclePerformMap = new Dictionary<CommonNpcPerformComponent.EEnterVehicleDirection, CommonNpcPerformComponent.LeaveVehiclePerformMontage>();
 
-	// Token: 0x0400D7E7 RID: 55271
+	// Token: 0x0400DC6E RID: 56430
 	private bool IsMoveWithSpline;
 
-	// Token: 0x0400D7E8 RID: 55272
+	// Token: 0x0400DC6F RID: 56431
 	private bool IsOutRangeOld;
 
-	// Token: 0x0400D7E9 RID: 55273
+	// Token: 0x0400DC70 RID: 56432
 	private bool IsOutRangeNow;
 
-	// Token: 0x0400D7EA RID: 55274
+	// Token: 0x0400DC71 RID: 56433
 	private bool IsPlaySplineAction;
 
-	// Token: 0x0400D7EB RID: 55275
+	// Token: 0x0400DC72 RID: 56434
 	private CharacterPatrolComponent PatrolComp;
 
-	// Token: 0x0400D7EC RID: 55276
+	// Token: 0x0400DC73 RID: 56435
 	private PawnSensoryInfoComponent PawnSensoryInfo;
 
-	// Token: 0x0400D7ED RID: 55277
+	// Token: 0x0400DC74 RID: 56436
 	private int SplineEntityId;
 
-	// Token: 0x0400D7EE RID: 55278
+	// Token: 0x0400DC75 RID: 56437
 	private MoveWithSpline MoveWithSplineParam;
 
-	// Token: 0x0400D7EF RID: 55279
+	// Token: 0x0400DC76 RID: 56438
 	private Action<bool> EndMoveWithSplineCallback;
 
-	// Token: 0x0400D7F0 RID: 55280
+	// Token: 0x0400DC77 RID: 56439
 	private const int MIN_IMPACT_STRENGTH = 500;
 
-	// Token: 0x0400D7F1 RID: 55281
+	// Token: 0x0400DC78 RID: 56440
 	private const int DEFAULT_SIGHT_RANGE = 300;
 
-	// Token: 0x0400D7F2 RID: 55282
+	// Token: 0x0400DC79 RID: 56441
 	private const int SIGHT_OPEN_DEGREE = 80;
 
-	// Token: 0x0400D7F3 RID: 55283
+	// Token: 0x0400DC7A RID: 56442
 	public const float DITHER_RATE_PER_SECOND = 0.33f;
 
-	// Token: 0x0400D7F4 RID: 55284
+	// Token: 0x0400DC7B RID: 56443
 	private CommonNpcPerformComponent.EAiController CurrentController;
 
-	// Token: 0x0400D7F5 RID: 55285
+	// Token: 0x0400DC7C RID: 56444
 	private CommonNpcPerformComponent.EAiController LastController;
 
-	// Token: 0x0400D7F6 RID: 55286
+	// Token: 0x0400DC7D RID: 56445
 	private bool AiControllerPaused;
 
-	// Token: 0x02009701 RID: 38657
+	// Token: 0x02008927 RID: 35111
 	[NullableContext(0)]
 	public enum EAiController
 	{
-		// Token: 0x040305BB RID: 198075
+		// Token: 0x0402BC50 RID: 179280
 		None,
-		// Token: 0x040305BC RID: 198076
+		// Token: 0x0402BC51 RID: 179281
 		Ai,
-		// Token: 0x040305BD RID: 198077
+		// Token: 0x0402BC52 RID: 179282
 		LevelAi
 	}
 
-	// Token: 0x02009702 RID: 38658
+	// Token: 0x02008928 RID: 35112
 	[NullableContext(0)]
 	public enum EEnterVehicleDirection
 	{
-		// Token: 0x040305BF RID: 198079
+		// Token: 0x0402BC54 RID: 179284
 		Left,
-		// Token: 0x040305C0 RID: 198080
+		// Token: 0x0402BC55 RID: 179285
 		Right
 	}
 
-	// Token: 0x02009703 RID: 38659
+	// Token: 0x02008929 RID: 35113
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class EnterVehiclePerformMontage
 	{
-		// Token: 0x040305C1 RID: 198081
+		// Token: 0x0402BC56 RID: 179286
 		public CommonNpcPerformComponent.EEnterVehicleDirection EnterVehicleDirection;
 
-		// Token: 0x040305C2 RID: 198082
+		// Token: 0x0402BC57 RID: 179287
 		public Vector Offset = Vector.Create();
 
-		// Token: 0x040305C3 RID: 198083
+		// Token: 0x0402BC58 RID: 179288
 		public Rotator IdealRotationOffset = Rotator.Create();
 
-		// Token: 0x040305C4 RID: 198084
+		// Token: 0x0402BC59 RID: 179289
 		public string Montage = "";
 	}
 
-	// Token: 0x02009704 RID: 38660
+	// Token: 0x0200892A RID: 35114
 	[NullableContext(0)]
 	public class LeaveVehiclePerformMontage
 	{
-		// Token: 0x040305C5 RID: 198085
+		// Token: 0x0402BC5A RID: 179290
 		public CommonNpcPerformComponent.EEnterVehicleDirection LeaveVehicleDirection;
 
-		// Token: 0x040305C6 RID: 198086
+		// Token: 0x0402BC5B RID: 179291
 		[Nullable(1)]
 		public string Montage = "";
 	}

@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020052C8 RID: 21192
+	// Token: 0x02005833 RID: 22579
 	public class IFoxJumpInteractPointRelationType_UnionUnion
 	{
-		// Token: 0x17009B6C RID: 39788
-		// (get) Token: 0x0602290B RID: 141579 RVA: 0x004CA876 File Offset: 0x004C8A76
-		// (set) Token: 0x0602290C RID: 141580 RVA: 0x004CA87E File Offset: 0x004C8A7E
+		// Token: 0x1700A375 RID: 41845
+		// (get) Token: 0x060248CF RID: 149711 RVA: 0x00505972 File Offset: 0x00503B72
+		// (set) Token: 0x060248D0 RID: 149712 RVA: 0x0050597A File Offset: 0x00503B7A
 		public IFoxJumpInteractPointRelationType_Union Type { get; set; }
 
-		// Token: 0x17009B6D RID: 39789
-		// (get) Token: 0x0602290D RID: 141581 RVA: 0x004CA887 File Offset: 0x004C8A87
-		// (set) Token: 0x0602290E RID: 141582 RVA: 0x004CA88F File Offset: 0x004C8A8F
+		// Token: 0x1700A376 RID: 41846
+		// (get) Token: 0x060248D1 RID: 149713 RVA: 0x00505983 File Offset: 0x00503B83
+		// (set) Token: 0x060248D2 RID: 149714 RVA: 0x0050598B File Offset: 0x00503B8B
 		public object Value { get; set; }
 
-		// Token: 0x0602290F RID: 141583 RVA: 0x004CA898 File Offset: 0x004C8A98
+		// Token: 0x060248D3 RID: 149715 RVA: 0x00505994 File Offset: 0x00503B94
 		public IFoxJumpInteractPointRelationType_UnionUnion()
 		{
 			this.Type = IFoxJumpInteractPointRelationType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06022910 RID: 141584 RVA: 0x004CA8AE File Offset: 0x004C8AAE
+		// Token: 0x060248D4 RID: 149716 RVA: 0x005059AA File Offset: 0x00503BAA
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06022911 RID: 141585 RVA: 0x004CA8C0 File Offset: 0x004C8AC0
+		// Token: 0x060248D5 RID: 149717 RVA: 0x005059BC File Offset: 0x00503BBC
 		public IFoxJumpInteractPointRelationTypeT AsIFoxJumpInteractPointRelationType()
 		{
 			return this.As<IFoxJumpInteractPointRelationTypeT>();
 		}
 
-		// Token: 0x06022912 RID: 141586 RVA: 0x004CA8C8 File Offset: 0x004C8AC8
+		// Token: 0x060248D6 RID: 149718 RVA: 0x005059C4 File Offset: 0x00503BC4
 		public static IFoxJumpInteractPointRelationType_UnionUnion FromIFoxJumpInteractPointRelationType(IFoxJumpInteractPointRelationTypeT _ifoxjumpinteractpointrelationtype)
 		{
 			return new IFoxJumpInteractPointRelationType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06022913 RID: 141587 RVA: 0x004CA8DD File Offset: 0x004C8ADD
+		// Token: 0x060248D7 RID: 149719 RVA: 0x005059D9 File Offset: 0x00503BD9
 		public IFoxJumpPositionOnThisEntityT AsIFoxJumpPositionOnThisEntity()
 		{
 			return this.As<IFoxJumpPositionOnThisEntityT>();
 		}
 
-		// Token: 0x06022914 RID: 141588 RVA: 0x004CA8E5 File Offset: 0x004C8AE5
+		// Token: 0x060248D8 RID: 149720 RVA: 0x005059E1 File Offset: 0x00503BE1
 		public static IFoxJumpInteractPointRelationType_UnionUnion FromIFoxJumpPositionOnThisEntity(IFoxJumpPositionOnThisEntityT _ifoxjumppositiononthisentity)
 		{
 			return new IFoxJumpInteractPointRelationType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06022915 RID: 141589 RVA: 0x004CA8FA File Offset: 0x004C8AFA
+		// Token: 0x060248D9 RID: 149721 RVA: 0x005059F6 File Offset: 0x00503BF6
 		public IFoxJumpPositionOnPathDrivenSpawnedActorT AsIFoxJumpPositionOnPathDrivenSpawnedActor()
 		{
 			return this.As<IFoxJumpPositionOnPathDrivenSpawnedActorT>();
 		}
 
-		// Token: 0x06022916 RID: 141590 RVA: 0x004CA902 File Offset: 0x004C8B02
+		// Token: 0x060248DA RID: 149722 RVA: 0x005059FE File Offset: 0x00503BFE
 		public static IFoxJumpInteractPointRelationType_UnionUnion FromIFoxJumpPositionOnPathDrivenSpawnedActor(IFoxJumpPositionOnPathDrivenSpawnedActorT _ifoxjumppositiononpathdrivenspawnedactor)
 		{
 			return new IFoxJumpInteractPointRelationType_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06022917 RID: 141591 RVA: 0x004CA918 File Offset: 0x004C8B18
+		// Token: 0x060248DB RID: 149723 RVA: 0x00505A14 File Offset: 0x00503C14
 		public static int Pack(FlatBufferBuilder builder, IFoxJumpInteractPointRelationType_UnionUnion _o)
 		{
 			switch (_o.Type)

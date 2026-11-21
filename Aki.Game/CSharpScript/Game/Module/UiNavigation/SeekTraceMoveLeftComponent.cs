@@ -3,15 +3,15 @@ using CSharpScript.Game.LevelGamePlay.SeekTrace;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020049CB RID: 18891
+	// Token: 0x02003945 RID: 14661
 	public class SeekTraceMoveLeftComponent : SeekTraceBaseMoveComponent
 	{
-		// Token: 0x060311EA RID: 201194 RVA: 0x00B650F5 File Offset: 0x00B632F5
+		// Token: 0x06025D20 RID: 154912 RVA: 0x00AA0045 File Offset: 0x00A9E245
 		public SeekTraceMoveLeftComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x060311EB RID: 201195 RVA: 0x00B650FE File Offset: 0x00B632FE
+		// Token: 0x06025D21 RID: 154913 RVA: 0x00AA004E File Offset: 0x00A9E24E
 		protected override ESeekTraceMoveDirection GetMoveDirection()
 		{
 			return ESeekTraceMoveDirection.Left;

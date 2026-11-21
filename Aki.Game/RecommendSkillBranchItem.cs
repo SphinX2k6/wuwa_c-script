@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020024DC RID: 9436
+// Token: 0x020019C3 RID: 6595
 public class RecommendSkillBranchItem : CommonRoleSkillBranchSwitchItem
 {
-	// Token: 0x06012FA0 RID: 77728 RVA: 0x004B30E0 File Offset: 0x004B12E0
+	// Token: 0x0601045F RID: 66655 RVA: 0x004C0CA0 File Offset: 0x004BEEA0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -19,7 +19,7 @@ public class RecommendSkillBranchItem : CommonRoleSkillBranchSwitchItem
 		};
 	}
 
-	// Token: 0x06012FA1 RID: 77729 RVA: 0x004B3168 File Offset: 0x004B1368
+	// Token: 0x06010460 RID: 66656 RVA: 0x004C0D28 File Offset: 0x004BEF28
 	[NullableContext(1)]
 	protected override SkillBranchSwitchItemGroup[] CollectBranchItems()
 	{
@@ -45,14 +45,14 @@ public class RecommendSkillBranchItem : CommonRoleSkillBranchSwitchItem
 		};
 	}
 
-	// Token: 0x06012FA2 RID: 77730 RVA: 0x004B31C9 File Offset: 0x004B13C9
+	// Token: 0x06010461 RID: 66657 RVA: 0x004C0D89 File Offset: 0x004BEF89
 	[NullableContext(1)]
 	protected override UUIExtendToggle GetBranchToggle()
 	{
 		return null;
 	}
 
-	// Token: 0x06012FA3 RID: 77731 RVA: 0x004B31CC File Offset: 0x004B13CC
+	// Token: 0x06010462 RID: 66658 RVA: 0x004C0D8C File Offset: 0x004BEF8C
 	private void SetMiddleIconToLeft(bool isLeft)
 	{
 		UUIItem item = base.GetItem(0);
@@ -61,18 +61,18 @@ public class RecommendSkillBranchItem : CommonRoleSkillBranchSwitchItem
 		item.SetUIRelativeRotation(frotator);
 	}
 
-	// Token: 0x02008A6D RID: 35437
+	// Token: 0x02007BF5 RID: 31733
 	private enum EComp
 	{
-		// Token: 0x0402CF35 RID: 184117
+		// Token: 0x0402824E RID: 164430
 		ItemSpriteMiddle,
-		// Token: 0x0402CF36 RID: 184118
+		// Token: 0x0402824F RID: 164431
 		SpriteTagIconL,
-		// Token: 0x0402CF37 RID: 184119
+		// Token: 0x04028250 RID: 164432
 		ItemTagL,
-		// Token: 0x0402CF38 RID: 184120
+		// Token: 0x04028251 RID: 164433
 		SpriteTagIconR,
-		// Token: 0x0402CF39 RID: 184121
+		// Token: 0x04028252 RID: 164434
 		ItemTagR
 	}
 }

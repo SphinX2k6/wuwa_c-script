@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200071E RID: 1822
+	// Token: 0x02000105 RID: 261
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/CoreUObject.ERangeBoundTypes")]
 	public enum ERangeBoundTypes
 	{
-		// Token: 0x04002E62 RID: 11874
+		// Token: 0x040004CC RID: 1228
 		Exclusive,
-		// Token: 0x04002E63 RID: 11875
+		// Token: 0x040004CD RID: 1229
 		Inclusive,
-		// Token: 0x04002E64 RID: 11876
+		// Token: 0x040004CE RID: 1230
 		Open,
-		// Token: 0x04002E65 RID: 11877
+		// Token: 0x040004CF RID: 1231
 		ERangeBoundTypes_MAX
 	}
 }

@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020044EC RID: 17644
+	// Token: 0x02004954 RID: 18772
 	public class ILevelPlayActiveT
 	{
-		// Token: 0x17007D05 RID: 32005
-		// (get) Token: 0x0601A79D RID: 108445 RVA: 0x003C854B File Offset: 0x003C674B
-		// (set) Token: 0x0601A79E RID: 108446 RVA: 0x003C8553 File Offset: 0x003C6753
+		// Token: 0x17008346 RID: 33606
+		// (get) Token: 0x0601BF72 RID: 114546 RVA: 0x003F47E7 File Offset: 0x003F29E7
+		// (set) Token: 0x0601BF73 RID: 114547 RVA: 0x003F47EF File Offset: 0x003F29EF
 		public ELevelPlayActiveType ActiveType { get; set; }
 
-		// Token: 0x17007D06 RID: 32006
-		// (get) Token: 0x0601A79F RID: 108447 RVA: 0x003C855C File Offset: 0x003C675C
-		// (set) Token: 0x0601A7A0 RID: 108448 RVA: 0x003C8564 File Offset: 0x003C6764
+		// Token: 0x17008347 RID: 33607
+		// (get) Token: 0x0601BF74 RID: 114548 RVA: 0x003F47F8 File Offset: 0x003F29F8
+		// (set) Token: 0x0601BF75 RID: 114549 RVA: 0x003F4800 File Offset: 0x003F2A00
 		public IConditionGroupT ActiveCondition { get; set; }
 
-		// Token: 0x0601A7A1 RID: 108449 RVA: 0x003C856D File Offset: 0x003C676D
+		// Token: 0x0601BF76 RID: 114550 RVA: 0x003F4809 File Offset: 0x003F2A09
 		public ILevelPlayActiveT()
 		{
 			this.ActiveType = ELevelPlayActiveType.Default;

@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E19 RID: 3609
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000F15 RID: 3861
 	public class IPathDrivenActorSplineMove : IPathDrivenActorMoveBase
 	{
-		// Token: 0x060051AD RID: 20909 RVA: 0x000C96A9 File Offset: 0x000C78A9
+		// Token: 0x060056D4 RID: 22228 RVA: 0x000D4F71 File Offset: 0x000D3171
 		public static IPathDrivenActorSplineMove Create(IPathDrivenActorSplineMove? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001B38 RID: 6968
-		// (get) Token: 0x060051AE RID: 20910 RVA: 0x000C96C8 File Offset: 0x000C78C8
+		// Token: 0x17001CA5 RID: 7333
+		// (get) Token: 0x060056D5 RID: 22229 RVA: 0x000D4F90 File Offset: 0x000D3190
 		public override EPathDrivenActorMoveType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B39 RID: 6969
-		// (get) Token: 0x060051AF RID: 20911 RVA: 0x000C96D8 File Offset: 0x000C78D8
+		// Token: 0x17001CA6 RID: 7334
+		// (get) Token: 0x060056D6 RID: 22230 RVA: 0x000D4FA0 File Offset: 0x000D31A0
 		public virtual List<int> SplineEntityIds
 		{
 			get
@@ -54,8 +51,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B3A RID: 6970
-		// (get) Token: 0x060051B0 RID: 20912 RVA: 0x000C973C File Offset: 0x000C793C
+		// Token: 0x17001CA7 RID: 7335
+		// (get) Token: 0x060056D7 RID: 22231 RVA: 0x000D5004 File Offset: 0x000D3204
 		public virtual bool? IsRandomSpline
 		{
 			get
@@ -68,8 +65,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B3B RID: 6971
-		// (get) Token: 0x060051B1 RID: 20913 RVA: 0x000C9774 File Offset: 0x000C7974
+		// Token: 0x17001CA8 RID: 7336
+		// (get) Token: 0x060056D8 RID: 22232 RVA: 0x000D503C File Offset: 0x000D323C
 		public virtual bool? IsChainedSpline
 		{
 			get
@@ -82,8 +79,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B3C RID: 6972
-		// (get) Token: 0x060051B2 RID: 20914 RVA: 0x000C97AC File Offset: 0x000C79AC
+		// Token: 0x17001CA9 RID: 7337
+		// (get) Token: 0x060056D9 RID: 22233 RVA: 0x000D5074 File Offset: 0x000D3274
 		public virtual bool? IsLoop
 		{
 			get
@@ -96,8 +93,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B3D RID: 6973
-		// (get) Token: 0x060051B3 RID: 20915 RVA: 0x000C97E4 File Offset: 0x000C79E4
+		// Token: 0x17001CAA RID: 7338
+		// (get) Token: 0x060056DA RID: 22234 RVA: 0x000D50AC File Offset: 0x000D32AC
 		public virtual bool? IsFollowSplineDir
 		{
 			get
@@ -110,13 +107,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002F0C RID: 12044
+		// Token: 0x040031D4 RID: 12756
 		private IPathDrivenActorSplineMove Instance;
 
-		// Token: 0x04002F0D RID: 12045
+		// Token: 0x040031D5 RID: 12757
 		private List<int> _SplineEntityIdsCache;
 
-		// Token: 0x04002F0E RID: 12046
+		// Token: 0x040031D6 RID: 12758
 		private bool _SplineEntityIdsInited;
 	}
 }

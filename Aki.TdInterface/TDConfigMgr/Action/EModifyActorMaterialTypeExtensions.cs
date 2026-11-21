@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002383 RID: 9091
+	// Token: 0x0200260C RID: 9740
 	public static class EModifyActorMaterialTypeExtensions
 	{
-		// Token: 0x0600C64C RID: 50764 RVA: 0x001D0C9C File Offset: 0x001CEE9C
+		// Token: 0x0600D290 RID: 53904 RVA: 0x001E9C70 File Offset: 0x001E7E70
 		public static string ToEnumString(this EModifyActorMaterialType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C64D RID: 50765 RVA: 0x001D0CD4 File Offset: 0x001CEED4
+		// Token: 0x0600D291 RID: 53905 RVA: 0x001E9CA8 File Offset: 0x001E7EA8
 		public static EModifyActorMaterialType FromString(string name)
 		{
 			EModifyActorMaterialType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C64E RID: 50766 RVA: 0x001D0CFD File Offset: 0x001CEEFD
+		// Token: 0x0600D292 RID: 53906 RVA: 0x001E9CD1 File Offset: 0x001E7ED1
 		public static bool TryFromString(string name, out EModifyActorMaterialType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C64F RID: 50767 RVA: 0x001D0D36 File Offset: 0x001CEF36
+		// Token: 0x0600D293 RID: 53907 RVA: 0x001E9D0A File Offset: 0x001E7F0A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C650 RID: 50768 RVA: 0x001D0D4E File Offset: 0x001CEF4E
+		// Token: 0x0600D294 RID: 53908 RVA: 0x001E9D22 File Offset: 0x001E7F22
 		public static EModifyActorMaterialType[] GetValues()
 		{
 			return new EModifyActorMaterialType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C651 RID: 50769 RVA: 0x001D0D5A File Offset: 0x001CEF5A
+		// Token: 0x0600D295 RID: 53909 RVA: 0x001E9D2E File Offset: 0x001E7F2E
 		public static string[] GetNames()
 		{
 			return new string[]

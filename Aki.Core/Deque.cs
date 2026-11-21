@@ -7,14 +7,14 @@ using UnrealEngine.Extension;
 [Nullable(0)]
 public class Deque<T> : IClearable
 {
-	// Token: 0x060001F1 RID: 497 RVA: 0x0000BA04 File Offset: 0x00009C04
+	// Token: 0x060001F2 RID: 498 RVA: 0x0000B6E8 File Offset: 0x000098E8
 	public Deque(int capacity = 4)
 	{
 		this.DefaultCapacity = capacity;
 		this.DataArray = new T[capacity];
 	}
 
-	// Token: 0x060001F2 RID: 498 RVA: 0x0000BA20 File Offset: 0x00009C20
+	// Token: 0x060001F3 RID: 499 RVA: 0x0000B704 File Offset: 0x00009904
 	[NullableContext(1)]
 	public void Clone(Deque<T> origin)
 	{
@@ -29,8 +29,8 @@ public class Deque<T> : IClearable
 		this.Tail = origin.Size;
 	}
 
-	// Token: 0x17000042 RID: 66
-	// (get) Token: 0x060001F3 RID: 499 RVA: 0x0000BA99 File Offset: 0x00009C99
+	// Token: 0x17000041 RID: 65
+	// (get) Token: 0x060001F4 RID: 500 RVA: 0x0000B77D File Offset: 0x0000997D
 	public int Size
 	{
 		get
@@ -39,7 +39,7 @@ public class Deque<T> : IClearable
 		}
 	}
 
-	// Token: 0x060001F4 RID: 500 RVA: 0x0000BAA4 File Offset: 0x00009CA4
+	// Token: 0x060001F5 RID: 501 RVA: 0x0000B788 File Offset: 0x00009988
 	[NullableContext(1)]
 	public void AddFront(T element)
 	{
@@ -58,7 +58,7 @@ public class Deque<T> : IClearable
 		this.SizeInternal++;
 	}
 
-	// Token: 0x060001F5 RID: 501 RVA: 0x0000BB28 File Offset: 0x00009D28
+	// Token: 0x060001F6 RID: 502 RVA: 0x0000B80C File Offset: 0x00009A0C
 	[NullableContext(1)]
 	public void AddRear(T element)
 	{
@@ -76,8 +76,8 @@ public class Deque<T> : IClearable
 		this.SizeInternal++;
 	}
 
-	// Token: 0x17000043 RID: 67
-	// (get) Token: 0x060001F6 RID: 502 RVA: 0x0000BBA8 File Offset: 0x00009DA8
+	// Token: 0x17000042 RID: 66
+	// (get) Token: 0x060001F7 RID: 503 RVA: 0x0000B88C File Offset: 0x00009A8C
 	public T Front
 	{
 		get
@@ -91,8 +91,8 @@ public class Deque<T> : IClearable
 		}
 	}
 
-	// Token: 0x17000044 RID: 68
-	// (get) Token: 0x060001F7 RID: 503 RVA: 0x0000BBF4 File Offset: 0x00009DF4
+	// Token: 0x17000043 RID: 67
+	// (get) Token: 0x060001F8 RID: 504 RVA: 0x0000B8D8 File Offset: 0x00009AD8
 	public T Rear
 	{
 		get
@@ -107,7 +107,7 @@ public class Deque<T> : IClearable
 		}
 	}
 
-	// Token: 0x060001F8 RID: 504 RVA: 0x0000BC58 File Offset: 0x00009E58
+	// Token: 0x060001F9 RID: 505 RVA: 0x0000B93C File Offset: 0x00009B3C
 	public T RemoveFront()
 	{
 		if (this.SizeInternal == 0)
@@ -135,7 +135,7 @@ public class Deque<T> : IClearable
 		return result;
 	}
 
-	// Token: 0x060001F9 RID: 505 RVA: 0x0000BD38 File Offset: 0x00009F38
+	// Token: 0x060001FA RID: 506 RVA: 0x0000BA1C File Offset: 0x00009C1C
 	public T RemoveRear()
 	{
 		if (this.SizeInternal == 0)
@@ -164,7 +164,7 @@ public class Deque<T> : IClearable
 		return result;
 	}
 
-	// Token: 0x060001FA RID: 506 RVA: 0x0000BE1C File Offset: 0x0000A01C
+	// Token: 0x060001FB RID: 507 RVA: 0x0000BB00 File Offset: 0x00009D00
 	public unsafe T Get(int index)
 	{
 		if (this.SizeInternal == 0)
@@ -187,7 +187,7 @@ public class Deque<T> : IClearable
 		return this.DataArray[(this.Head + index) % this.DataArray.Length];
 	}
 
-	// Token: 0x060001FB RID: 507 RVA: 0x0000BEEC File Offset: 0x0000A0EC
+	// Token: 0x060001FC RID: 508 RVA: 0x0000BBD0 File Offset: 0x00009DD0
 	private void SetCapacity(int capacity)
 	{
 		if (this.SizeInternal == 0)
@@ -268,8 +268,8 @@ public class Deque<T> : IClearable
 		}
 	}
 
-	// Token: 0x17000045 RID: 69
-	// (get) Token: 0x060001FC RID: 508 RVA: 0x0000C12C File Offset: 0x0000A32C
+	// Token: 0x17000044 RID: 68
+	// (get) Token: 0x060001FD RID: 509 RVA: 0x0000BE10 File Offset: 0x0000A010
 	public bool Empty
 	{
 		get
@@ -278,7 +278,7 @@ public class Deque<T> : IClearable
 		}
 	}
 
-	// Token: 0x060001FD RID: 509 RVA: 0x0000C137 File Offset: 0x0000A337
+	// Token: 0x060001FE RID: 510 RVA: 0x0000BE1B File Offset: 0x0000A01B
 	public void Clear()
 	{
 		Array.Resize<T>(ref this.DataArray, 0);
@@ -287,25 +287,25 @@ public class Deque<T> : IClearable
 		this.SizeInternal = 0;
 	}
 
-	// Token: 0x040001AD RID: 429
+	// Token: 0x040001AF RID: 431
 	private const int MINIMUM_GROW = 4;
 
-	// Token: 0x040001AE RID: 430
+	// Token: 0x040001B0 RID: 432
 	private const float THREE_QUARTER = 0.75f;
 
-	// Token: 0x040001AF RID: 431
+	// Token: 0x040001B1 RID: 433
 	[Nullable(1)]
 	private T[] DataArray;
 
-	// Token: 0x040001B0 RID: 432
+	// Token: 0x040001B2 RID: 434
 	private readonly int DefaultCapacity;
 
-	// Token: 0x040001B1 RID: 433
+	// Token: 0x040001B3 RID: 435
 	private int Head;
 
-	// Token: 0x040001B2 RID: 434
+	// Token: 0x040001B4 RID: 436
 	private int Tail;
 
-	// Token: 0x040001B3 RID: 435
+	// Token: 0x040001B5 RID: 437
 	private int SizeInternal;
 }

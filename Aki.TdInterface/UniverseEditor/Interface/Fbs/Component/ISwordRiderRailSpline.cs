@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005A13 RID: 23059
+	// Token: 0x02006020 RID: 24608
 	public struct ISwordRiderRailSpline : IFlatbufferObject
 	{
-		// Token: 0x1700AD4A RID: 44362
-		// (get) Token: 0x0602726D RID: 160365 RVA: 0x00562BE9 File Offset: 0x00560DE9
+		// Token: 0x1700B682 RID: 46722
+		// (get) Token: 0x060297E5 RID: 169957 RVA: 0x005A9BAD File Offset: 0x005A7DAD
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602726E RID: 160366 RVA: 0x00562BF6 File Offset: 0x00560DF6
+		// Token: 0x060297E6 RID: 169958 RVA: 0x005A9BBA File Offset: 0x005A7DBA
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602726F RID: 160367 RVA: 0x00562C00 File Offset: 0x00560E00
+		// Token: 0x060297E7 RID: 169959 RVA: 0x005A9BC4 File Offset: 0x005A7DC4
 		public static ISwordRiderRailSpline GetRootAsISwordRiderRailSpline(ByteBuffer _bb)
 		{
 			return ISwordRiderRailSpline.GetRootAsISwordRiderRailSpline(_bb, default(ISwordRiderRailSpline));
 		}
 
-		// Token: 0x06027270 RID: 160368 RVA: 0x00562C1C File Offset: 0x00560E1C
+		// Token: 0x060297E8 RID: 169960 RVA: 0x005A9BE0 File Offset: 0x005A7DE0
 		public static ISwordRiderRailSpline GetRootAsISwordRiderRailSpline(ByteBuffer _bb, ISwordRiderRailSpline obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06027271 RID: 160369 RVA: 0x00562C39 File Offset: 0x00560E39
+		// Token: 0x060297E9 RID: 169961 RVA: 0x005A9BFD File Offset: 0x005A7DFD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06027272 RID: 160370 RVA: 0x00562C48 File Offset: 0x00560E48
+		// Token: 0x060297EA RID: 169962 RVA: 0x005A9C0C File Offset: 0x005A7E0C
 		public ISwordRiderRailSpline __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700AD4B RID: 44363
-		// (get) Token: 0x06027273 RID: 160371 RVA: 0x00562C58 File Offset: 0x00560E58
+		// Token: 0x1700B683 RID: 46723
+		// (get) Token: 0x060297EB RID: 169963 RVA: 0x005A9C1C File Offset: 0x005A7E1C
 		public ESplineType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AD4C RID: 44364
-		// (get) Token: 0x06027274 RID: 160372 RVA: 0x00562C94 File Offset: 0x00560E94
+		// Token: 0x1700B684 RID: 46724
+		// (get) Token: 0x060297EC RID: 169964 RVA: 0x005A9C58 File Offset: 0x005A7E58
 		public ESwordRiderRailWall WallType
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AD4D RID: 44365
-		// (get) Token: 0x06027275 RID: 160373 RVA: 0x00562CD0 File Offset: 0x00560ED0
+		// Token: 0x1700B685 RID: 46725
+		// (get) Token: 0x060297ED RID: 169965 RVA: 0x005A9C94 File Offset: 0x005A7E94
 		public string PathEffect
 		{
 			get
@@ -93,19 +93,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027276 RID: 160374 RVA: 0x00562D07 File Offset: 0x00560F07
+		// Token: 0x060297EE RID: 169966 RVA: 0x005A9CCB File Offset: 0x005A7ECB
 		public Span<byte> GetPathEffectBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x06027277 RID: 160375 RVA: 0x00562D16 File Offset: 0x00560F16
+		// Token: 0x060297EF RID: 169967 RVA: 0x005A9CDA File Offset: 0x005A7EDA
 		public byte[] GetPathEffectArray()
 		{
 			return this.__p.__vector_as_array<byte>(8);
 		}
 
-		// Token: 0x06027278 RID: 160376 RVA: 0x00562D24 File Offset: 0x00560F24
+		// Token: 0x060297F0 RID: 169968 RVA: 0x005A9CE8 File Offset: 0x005A7EE8
 		public ISwordRiderRailSplinePoint? Points(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -116,8 +116,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new ISwordRiderRailSplinePoint?(default(ISwordRiderRailSplinePoint).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700AD4E RID: 44366
-		// (get) Token: 0x06027279 RID: 160377 RVA: 0x00562D88 File Offset: 0x00560F88
+		// Token: 0x1700B686 RID: 46726
+		// (get) Token: 0x060297F1 RID: 169969 RVA: 0x005A9D4C File Offset: 0x005A7F4C
 		public int PointsLength
 		{
 			get
@@ -131,7 +131,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602727A RID: 160378 RVA: 0x00562DB4 File Offset: 0x00560FB4
+		// Token: 0x060297F2 RID: 169970 RVA: 0x005A9D78 File Offset: 0x005A7F78
 		public static Offset<ISwordRiderRailSpline> CreateISwordRiderRailSpline(FlatBufferBuilder builder, ESplineType Type = ESplineType.Common, ESwordRiderRailWall WallType = ESwordRiderRailWall.Inner, StringOffset PathEffectOffset = default(StringOffset), VectorOffset PointsOffset = default(VectorOffset))
 		{
 			builder.StartTable(4);
@@ -142,37 +142,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISwordRiderRailSpline.EndISwordRiderRailSpline(builder);
 		}
 
-		// Token: 0x0602727B RID: 160379 RVA: 0x00562DE0 File Offset: 0x00560FE0
+		// Token: 0x060297F3 RID: 169971 RVA: 0x005A9DA4 File Offset: 0x005A7FA4
 		public static void StartISwordRiderRailSpline(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0602727C RID: 160380 RVA: 0x00562DE9 File Offset: 0x00560FE9
+		// Token: 0x060297F4 RID: 169972 RVA: 0x005A9DAD File Offset: 0x005A7FAD
 		public static void AddType(FlatBufferBuilder builder, ESplineType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602727D RID: 160381 RVA: 0x00562DF4 File Offset: 0x00560FF4
+		// Token: 0x060297F5 RID: 169973 RVA: 0x005A9DB8 File Offset: 0x005A7FB8
 		public static void AddWallType(FlatBufferBuilder builder, ESwordRiderRailWall wallType)
 		{
 			builder.AddByte(1, (byte)wallType, 0);
 		}
 
-		// Token: 0x0602727E RID: 160382 RVA: 0x00562DFF File Offset: 0x00560FFF
+		// Token: 0x060297F6 RID: 169974 RVA: 0x005A9DC3 File Offset: 0x005A7FC3
 		public static void AddPathEffect(FlatBufferBuilder builder, StringOffset pathEffectOffset)
 		{
 			builder.AddOffset(2, pathEffectOffset.Value, 0);
 		}
 
-		// Token: 0x0602727F RID: 160383 RVA: 0x00562E0F File Offset: 0x0056100F
+		// Token: 0x060297F7 RID: 169975 RVA: 0x005A9DD3 File Offset: 0x005A7FD3
 		public static void AddPoints(FlatBufferBuilder builder, VectorOffset pointsOffset)
 		{
 			builder.AddOffset(3, pointsOffset.Value, 0);
 		}
 
-		// Token: 0x06027280 RID: 160384 RVA: 0x00562E20 File Offset: 0x00561020
+		// Token: 0x060297F8 RID: 169976 RVA: 0x005A9DE4 File Offset: 0x005A7FE4
 		public static VectorOffset CreatePointsVector(FlatBufferBuilder builder, Offset<ISwordRiderRailSplinePoint>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -183,7 +183,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06027281 RID: 160385 RVA: 0x00562E60 File Offset: 0x00561060
+		// Token: 0x060297F9 RID: 169977 RVA: 0x005A9E24 File Offset: 0x005A8024
 		public static VectorOffset CreatePointsVectorBlock(FlatBufferBuilder builder, Offset<ISwordRiderRailSplinePoint>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -191,7 +191,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06027282 RID: 160386 RVA: 0x00562E7A File Offset: 0x0056107A
+		// Token: 0x060297FA RID: 169978 RVA: 0x005A9E3E File Offset: 0x005A803E
 		public static VectorOffset CreatePointsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<ISwordRiderRailSplinePoint>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -199,7 +199,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06027283 RID: 160387 RVA: 0x00562E98 File Offset: 0x00561098
+		// Token: 0x060297FB RID: 169979 RVA: 0x005A9E5C File Offset: 0x005A805C
 		public static VectorOffset CreatePointsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -207,19 +207,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06027284 RID: 160388 RVA: 0x00562EB1 File Offset: 0x005610B1
+		// Token: 0x060297FC RID: 169980 RVA: 0x005A9E75 File Offset: 0x005A8075
 		public static void StartPointsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06027285 RID: 160389 RVA: 0x00562EBC File Offset: 0x005610BC
+		// Token: 0x060297FD RID: 169981 RVA: 0x005A9E80 File Offset: 0x005A8080
 		public static Offset<ISwordRiderRailSpline> EndISwordRiderRailSpline(FlatBufferBuilder builder)
 		{
 			return new Offset<ISwordRiderRailSpline>(builder.EndTable());
 		}
 
-		// Token: 0x06027286 RID: 160390 RVA: 0x00562ECC File Offset: 0x005610CC
+		// Token: 0x060297FE RID: 169982 RVA: 0x005A9E90 File Offset: 0x005A8090
 		public ISwordRiderRailSplineT UnPack()
 		{
 			ISwordRiderRailSplineT swordRiderRailSplineT = new ISwordRiderRailSplineT();
@@ -227,7 +227,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return swordRiderRailSplineT;
 		}
 
-		// Token: 0x06027287 RID: 160391 RVA: 0x00562EE8 File Offset: 0x005610E8
+		// Token: 0x060297FF RID: 169983 RVA: 0x005A9EAC File Offset: 0x005A80AC
 		public void UnPackTo(ISwordRiderRailSplineT _o)
 		{
 			_o.Type = this.Type;
@@ -240,7 +240,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027288 RID: 160392 RVA: 0x00562F6C File Offset: 0x0056116C
+		// Token: 0x06029800 RID: 169984 RVA: 0x005A9F30 File Offset: 0x005A8130
 		public static Offset<ISwordRiderRailSpline> Pack(FlatBufferBuilder builder, ISwordRiderRailSplineT _o)
 		{
 			if (_o == null)
@@ -261,7 +261,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISwordRiderRailSpline.CreateISwordRiderRailSpline(builder, _o.Type, _o.WallType, pathEffectOffset, pointsOffset);
 		}
 
-		// Token: 0x0400F05E RID: 61534
+		// Token: 0x0400FD55 RID: 64853
 		private Table __p;
 	}
 }

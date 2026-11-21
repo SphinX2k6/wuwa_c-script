@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity
 {
-	// Token: 0x02005F02 RID: 24322
+	// Token: 0x02004EE9 RID: 20201
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ActivitySwitchToggleDynamicItem : UiPanelBase, IDynamicScrollBaseItem<IActivityCategoryTabData>
 	{
-		// Token: 0x17008EF4 RID: 36596
-		// (get) Token: 0x0603DCE1 RID: 253153 RVA: 0x00EF0D0A File Offset: 0x00EEEF0A
-		// (set) Token: 0x0603DCE2 RID: 253154 RVA: 0x00EF0D12 File Offset: 0x00EEEF12
+		// Token: 0x170062C6 RID: 25286
+		// (get) Token: 0x06032C7C RID: 207996 RVA: 0x00E42A12 File Offset: 0x00E40C12
+		// (set) Token: 0x06032C7D RID: 207997 RVA: 0x00E42A1A File Offset: 0x00E40C1A
 		private Vector2D ItemSizeVector { get; set; }
 
-		// Token: 0x0603DCE3 RID: 253155 RVA: 0x00EF0D1C File Offset: 0x00EEEF1C
+		// Token: 0x06032C7E RID: 207998 RVA: 0x00E42A24 File Offset: 0x00E40C24
 		[NullableContext(1)]
 		public UniTask Init(UUIItem actor)
 		{
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Activity
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603DCE4 RID: 253156 RVA: 0x00EF0D68 File Offset: 0x00EEEF68
+		// Token: 0x06032C7F RID: 207999 RVA: 0x00E42A70 File Offset: 0x00E40C70
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.Activity
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603DCE5 RID: 253157 RVA: 0x00EF0DD4 File Offset: 0x00EEEFD4
+		// Token: 0x06032C80 RID: 208000 RVA: 0x00E42ADC File Offset: 0x00E40CDC
 		[NullableContext(1)]
 		public FVector2D GetItemSize(IActivityCategoryTabData data)
 		{
@@ -66,19 +66,19 @@ namespace CSharpScript.Game.Module.Activity
 			return this.ItemSizeVector.ToUeVector2D(false);
 		}
 
-		// Token: 0x0603DCE6 RID: 253158 RVA: 0x00EF0E56 File Offset: 0x00EEF056
+		// Token: 0x06032C81 RID: 208001 RVA: 0x00E42B5E File Offset: 0x00E40D5E
 		public void ClearItem()
 		{
 		}
 
-		// Token: 0x0200C237 RID: 49719
+		// Token: 0x0200AC44 RID: 44100
 		[NullableContext(0)]
 		private class ECategoryComponents
 		{
-			// Token: 0x0403AADE RID: 240350
+			// Token: 0x040354D0 RID: 218320
 			public const int ItemTypeTitle = 1;
 
-			// Token: 0x0403AADF RID: 240351
+			// Token: 0x040354D1 RID: 218321
 			public const int PanelTab = 0;
 		}
 	}

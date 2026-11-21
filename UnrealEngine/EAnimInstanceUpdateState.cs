@@ -4,22 +4,22 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x020009ED RID: 2541
+	// Token: 0x020001CB RID: 459
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/Engine.EAnimInstanceUpdateState")]
 	public enum EAnimInstanceUpdateState : byte
 	{
-		// Token: 0x04004432 RID: 17458
+		// Token: 0x04000B34 RID: 2868
 		NotStart,
-		// Token: 0x04004433 RID: 17459
+		// Token: 0x04000B35 RID: 2869
 		Updating,
-		// Token: 0x04004434 RID: 17460
+		// Token: 0x04000B36 RID: 2870
 		Loading,
-		// Token: 0x04004435 RID: 17461
+		// Token: 0x04000B37 RID: 2871
 		Evaluating,
-		// Token: 0x04004436 RID: 17462
+		// Token: 0x04000B38 RID: 2872
 		Complete,
-		// Token: 0x04004437 RID: 17463
+		// Token: 0x04000B39 RID: 2873
 		EAnimInstanceUpdateState_MAX
 	}
 }

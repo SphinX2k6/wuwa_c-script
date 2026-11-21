@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000904 RID: 2308
+	// Token: 0x0200094F RID: 2383
 	public class ConfigServerLimitById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600362B RID: 13867 RVA: 0x0018B8B7 File Offset: 0x00189AB7
+		// Token: 0x060037ED RID: 14317 RVA: 0x00198AD7 File Offset: 0x00196CD7
 		static ConfigServerLimitById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigServerLimitById.CreateStaticDefaultValue), new Action(ConfigServerLimitById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600362C RID: 13868 RVA: 0x0018B8D8 File Offset: 0x00189AD8
+		// Token: 0x060037EE RID: 14318 RVA: 0x00198AF8 File Offset: 0x00196CF8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigServerLimitById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600362D RID: 13869 RVA: 0x0018B957 File Offset: 0x00189B57
+		// Token: 0x060037EF RID: 14319 RVA: 0x00198B77 File Offset: 0x00196D77
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigServerLimitById.LogPair = null;
 			ConfigServerLimitById.HandleId = 0;
 		}
 
-		// Token: 0x0600362E RID: 13870 RVA: 0x0018B965 File Offset: 0x00189B65
+		// Token: 0x060037F0 RID: 14320 RVA: 0x00198B85 File Offset: 0x00196D85
 		public static void Init()
 		{
 			ConfigServerLimitById.HandleId = ConfigCommon.InitDataStatement(ConfigServerLimitById.HandleId, "db_serverlimit.db", "select BinData from `ServerLimit` where Id=?");
 		}
 
-		// Token: 0x0600362F RID: 13871 RVA: 0x0018B980 File Offset: 0x00189B80
+		// Token: 0x060037F1 RID: 14321 RVA: 0x00198BA0 File Offset: 0x00196DA0
 		public static ServerLimit? GetConfig(string p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigServerLimitById.HandleId, ConfigServerLimitById.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new ServerLimit?(rootAsServerLimit);
 		}
 
-		// Token: 0x04003F02 RID: 16130
+		// Token: 0x0400410F RID: 16655
 		private const string DB = "db_serverlimit.db";
 
-		// Token: 0x04003F03 RID: 16131
+		// Token: 0x04004110 RID: 16656
 		private const string FILE = "f.服务器限制.xlsx";
 
-		// Token: 0x04003F04 RID: 16132
+		// Token: 0x04004111 RID: 16657
 		private const string TABLE = "ServerLimit";
 
-		// Token: 0x04003F05 RID: 16133
+		// Token: 0x04004112 RID: 16658
 		private const string COMMAND = "select BinData from `ServerLimit` where Id=?";
 
-		// Token: 0x04003F06 RID: 16134
+		// Token: 0x04004113 RID: 16659
 		private const string KEY_PREFIX = "ServerLimitById";
 
-		// Token: 0x04003F07 RID: 16135
+		// Token: 0x04004114 RID: 16660
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003F08 RID: 16136
+		// Token: 0x04004115 RID: 16661
 		private static int HandleId;
 	}
 }

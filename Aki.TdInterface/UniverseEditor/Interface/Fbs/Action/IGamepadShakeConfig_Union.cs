@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006870 RID: 26736
+	// Token: 0x02006F11 RID: 28433
 	public enum IGamepadShakeConfig_Union : byte
 	{
-		// Token: 0x04010FC2 RID: 69570
+		// Token: 0x04011E17 RID: 73239
 		NONE,
-		// Token: 0x04010FC3 RID: 69571
+		// Token: 0x04011E18 RID: 73240
 		IGamepadShakeConfig,
-		// Token: 0x04010FC4 RID: 69572
+		// Token: 0x04011E19 RID: 73241
 		IOnetimeGamepadShake,
-		// Token: 0x04010FC5 RID: 69573
+		// Token: 0x04011E1A RID: 73242
 		IContinualGamepadShake,
-		// Token: 0x04010FC6 RID: 69574
+		// Token: 0x04011E1B RID: 73243
 		IAttenuatedGamepadShake,
-		// Token: 0x04010FC7 RID: 69575
+		// Token: 0x04011E1C RID: 73244
 		IMp4GamepadShake
 	}
 }

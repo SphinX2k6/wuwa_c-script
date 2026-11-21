@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C57 RID: 7255
+	// Token: 0x02001E4E RID: 7758
 	public class INearestEntity_SetValue
 	{
-		// Token: 0x04005E7C RID: 24188
+		// Token: 0x040063B3 RID: 25523
 		public ETeleportType Type;
 
-		// Token: 0x04005E7D RID: 24189
-		[Nullable(1)]
+		// Token: 0x040063B4 RID: 25524
 		public List<int> EntityIds;
 	}
 }

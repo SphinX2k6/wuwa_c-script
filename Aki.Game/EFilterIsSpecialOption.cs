@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002462 RID: 9314
+// Token: 0x02001947 RID: 6471
 public enum EFilterIsSpecialOption
 {
-	// Token: 0x04008CCF RID: 36047
+	// Token: 0x04008E16 RID: 36374
 	All,
-	// Token: 0x04008CD0 RID: 36048
+	// Token: 0x04008E17 RID: 36375
 	Special,
-	// Token: 0x04008CD1 RID: 36049
+	// Token: 0x04008E18 RID: 36376
 	NonSpecial
 }

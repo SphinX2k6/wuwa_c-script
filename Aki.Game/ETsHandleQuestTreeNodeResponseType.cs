@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02002697 RID: 9879
+// Token: 0x02001B82 RID: 7042
 public enum ETsHandleQuestTreeNodeResponseType
 {
-	// Token: 0x04009860 RID: 39008
+	// Token: 0x040099B8 RID: 39352
 	None,
-	// Token: 0x04009861 RID: 39009
+	// Token: 0x040099B9 RID: 39353
 	TrackNode,
-	// Token: 0x04009862 RID: 39010
+	// Token: 0x040099BA RID: 39354
 	UpdateNode,
-	// Token: 0x04009863 RID: 39011
+	// Token: 0x040099BB RID: 39355
 	RemoveLockByFocus,
-	// Token: 0x04009864 RID: 39012
+	// Token: 0x040099BC RID: 39356
 	RemoveLackResource
 }

@@ -2,20 +2,20 @@
 using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 
-// Token: 0x020030A7 RID: 12455
+// Token: 0x020025FE RID: 9726
 [NullableContext(2)]
 [Nullable(0)]
 public class CharacterDynamicFlowData
 {
-	// Token: 0x0400CDF2 RID: 52722
+	// Token: 0x0400D1D6 RID: 53718
 	public DynamicFlowActorInfo MasterInfo;
 
-	// Token: 0x0400CDF3 RID: 52723
+	// Token: 0x0400D1D7 RID: 53719
 	public AddPlayBubble BubbleData;
 
-	// Token: 0x0400CDF4 RID: 52724
+	// Token: 0x0400D1D8 RID: 53720
 	public EDynamicFlowType? Type;
 
-	// Token: 0x0400CDF5 RID: 52725
+	// Token: 0x0400D1D9 RID: 53721
 	public Action Callback;
 }

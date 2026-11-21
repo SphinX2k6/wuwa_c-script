@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200190B RID: 6411
+	// Token: 0x02001A92 RID: 6802
 	public class ICommonConfirmBox_SetValue
 	{
-		// Token: 0x04005616 RID: 22038
+		// Token: 0x04005A60 RID: 23136
 		public EInteractionConfirmBoxType Type;
 
-		// Token: 0x04005617 RID: 22039
+		// Token: 0x04005A61 RID: 23137
 		public int Id;
 	}
 }

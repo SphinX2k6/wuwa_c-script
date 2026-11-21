@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x020000B8 RID: 184
+// Token: 0x020000BA RID: 186
 public enum ELoadMode
 {
-	// Token: 0x040004B3 RID: 1203
+	// Token: 0x040004C1 RID: 1217
 	None,
-	// Token: 0x040004B4 RID: 1204
+	// Token: 0x040004C2 RID: 1218
 	InGame,
-	// Token: 0x040004B5 RID: 1205
+	// Token: 0x040004C3 RID: 1219
 	InGameLoading,
-	// Token: 0x040004B6 RID: 1206
+	// Token: 0x040004C4 RID: 1220
 	Loading,
-	// Token: 0x040004B7 RID: 1207
+	// Token: 0x040004C5 RID: 1221
 	ForceInGame
 }

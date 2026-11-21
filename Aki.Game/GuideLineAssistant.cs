@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using AkiClient.Game.Aki.Effect.BluePrint.BP_FX_Common;
@@ -11,24 +10,24 @@ using CSharpScript.Game.Module.Teleport;
 using GuideLineProcess;
 using UnrealEngine;
 
-// Token: 0x02002635 RID: 9781
+// Token: 0x02001B20 RID: 6944
 [NullableContext(1)]
 [Nullable(0)]
 public class GuideLineAssistant : ControllerAssistantBase
 {
-	// Token: 0x06014005 RID: 81925 RVA: 0x00508DDC File Offset: 0x00506FDC
+	// Token: 0x060114E7 RID: 70887 RVA: 0x00517CBC File Offset: 0x00515EBC
 	public GuideLineAssistant(IReadOnlyList<BtType> btTypes)
 	{
 		this.BtTypes = btTypes;
 		this.CurBtType = ((this.BtTypes.Count > 0) ? this.BtTypes[0] : BtType.Invalid);
 	}
 
-	// Token: 0x06014006 RID: 81926 RVA: 0x00508E6B File Offset: 0x0050706B
+	// Token: 0x060114E8 RID: 70888 RVA: 0x00517D4B File Offset: 0x00515F4B
 	protected override void OnInit()
 	{
 	}
 
-	// Token: 0x06014007 RID: 81927 RVA: 0x00508E6D File Offset: 0x0050706D
+	// Token: 0x060114E9 RID: 70889 RVA: 0x00517D4D File Offset: 0x00515F4D
 	protected override void OnDestroy()
 	{
 		this.ProcessList.Clear();
@@ -36,7 +35,7 @@ public class GuideLineAssistant : ControllerAssistantBase
 		this.QuestGuidePoints.Empty(true);
 	}
 
-	// Token: 0x06014008 RID: 81928 RVA: 0x00508E8C File Offset: 0x0050708C
+	// Token: 0x060114EA RID: 70890 RVA: 0x00517D6C File Offset: 0x00515F6C
 	public override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.GeneralLogicTreeWakeUp, new Action(this.SpawnQuestGuideLine));
@@ -46,7 +45,7 @@ public class GuideLineAssistant : ControllerAssistantBase
 		EventSystem.Instance.Add<TeleportContext>(EEventName.TeleportComplete, new Action<TeleportContext>(this.RefreshSpawn));
 	}
 
-	// Token: 0x06014009 RID: 81929 RVA: 0x00508F24 File Offset: 0x00507124
+	// Token: 0x060114EB RID: 70891 RVA: 0x00517E04 File Offset: 0x00516004
 	public override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.GeneralLogicTreeWakeUp, new Action(this.SpawnQuestGuideLine));
@@ -56,7 +55,7 @@ public class GuideLineAssistant : ControllerAssistantBase
 		EventSystem.Instance.Remove<TeleportContext>(EEventName.TeleportComplete, new Action<TeleportContext>(this.RefreshSpawn));
 	}
 
-	// Token: 0x0601400A RID: 81930 RVA: 0x00508FBA File Offset: 0x005071BA
+	// Token: 0x060114EC RID: 70892 RVA: 0x00517E9A File Offset: 0x0051609A
 	private void OnUseSkill(int charId, int skillId, bool isAutonomousProxy)
 	{
 		if (skillId == 210004)
@@ -65,10 +64,19 @@ public class GuideLineAssistant : ControllerAssistantBase
 		}
 	}
 
-	// Token: 0x0601400B RID: 81931 RVA: 0x00508FCE File Offset: 0x005071CE
+	// Token: 0x060114ED RID: 70893 RVA: 0x00517EB0 File Offset: 0x005160B0
 	private void OnQuestTrackUpdate(BtType contextType, long? _ = null)
 	{
-		if (!this.BtTypes.Contains(contextType))
+		bool flag = false;
+		for (int i = 0; i < this.BtTypes.Count; i++)
+		{
+			if (this.BtTypes[i] == contextType)
+			{
+				flag = true;
+				break;
+			}
+		}
+		if (!flag)
 		{
 			return;
 		}
@@ -81,7 +89,7 @@ public class GuideLineAssistant : ControllerAssistantBase
 		this.RefreshSpawn(null);
 	}
 
-	// Token: 0x0601400C RID: 81932 RVA: 0x00509000 File Offset: 0x00507200
+	// Token: 0x060114EE RID: 70894 RVA: 0x00517F10 File Offset: 0x00516110
 	private void OnNodeStatusUpdate(GeneralContext context, NodeStatus oldStatus, NodeStatus newStatus, ENodeStatusUpdateReason reason)
 	{
 		if (context.Type.GetValueOrDefault() == EGeneralContextType.GeneralLogicTree)
@@ -100,7 +108,7 @@ public class GuideLineAssistant : ControllerAssistantBase
 		}
 	}
 
-	// Token: 0x0601400D RID: 81933 RVA: 0x00509065 File Offset: 0x00507265
+	// Token: 0x060114EF RID: 70895 RVA: 0x00517F75 File Offset: 0x00516175
 	public void SpawnQuestGuideLine()
 	{
 		this.DestroyGuideSpline();
@@ -112,7 +120,7 @@ public class GuideLineAssistant : ControllerAssistantBase
 		this.PathPointsPersistent = new TArray<FVectorDouble>();
 	}
 
-	// Token: 0x0601400E RID: 81934 RVA: 0x0050909F File Offset: 0x0050729F
+	// Token: 0x060114F0 RID: 70896 RVA: 0x00517FAF File Offset: 0x005161AF
 	private void DestroyGuideSpline()
 	{
 		if (ObjectUtils.IsValid(this.PersistentSpline))
@@ -122,7 +130,7 @@ public class GuideLineAssistant : ControllerAssistantBase
 		this.PersistentSpline = null;
 	}
 
-	// Token: 0x0601400F RID: 81935 RVA: 0x005090CC File Offset: 0x005072CC
+	// Token: 0x060114F1 RID: 70897 RVA: 0x00517FDC File Offset: 0x005161DC
 	public void Tick(float delta)
 	{
 		this.UpdateCurSpawn(delta);
@@ -143,7 +151,7 @@ public class GuideLineAssistant : ControllerAssistantBase
 		}
 	}
 
-	// Token: 0x06014010 RID: 81936 RVA: 0x00509134 File Offset: 0x00507334
+	// Token: 0x060114F2 RID: 70898 RVA: 0x00518044 File Offset: 0x00516244
 	private void UpdateProcess()
 	{
 		if (this.ProcessList.Count == 0)
@@ -168,7 +176,7 @@ public class GuideLineAssistant : ControllerAssistantBase
 		this.ChangeAnimType(EAnimType.Hide);
 	}
 
-	// Token: 0x06014011 RID: 81937 RVA: 0x0050918C File Offset: 0x0050738C
+	// Token: 0x060114F3 RID: 70899 RVA: 0x0051809C File Offset: 0x0051629C
 	[NullableContext(2)]
 	private void RefreshSpawn(TeleportContext teleportContext = null)
 	{
@@ -182,7 +190,7 @@ public class GuideLineAssistant : ControllerAssistantBase
 		this.TriggeredSpawn = true;
 	}
 
-	// Token: 0x06014012 RID: 81938 RVA: 0x005091DF File Offset: 0x005073DF
+	// Token: 0x060114F4 RID: 70900 RVA: 0x005180EF File Offset: 0x005162EF
 	private void DisableQuestGuideLine()
 	{
 		this.ProcessList.Add(new GuideLineProcess.EndShowProcess());
@@ -197,7 +205,7 @@ public class GuideLineAssistant : ControllerAssistantBase
 		}
 	}
 
-	// Token: 0x06014013 RID: 81939 RVA: 0x00509210 File Offset: 0x00507410
+	// Token: 0x060114F5 RID: 70901 RVA: 0x00518120 File Offset: 0x00516320
 	public bool CheckCanShowGuideLine()
 	{
 		if (PlotModel.Instance.IsInHighLevelPlot())
@@ -226,7 +234,7 @@ public class GuideLineAssistant : ControllerAssistantBase
 		return TimeUtil.Instance.GetServerTime() - guideLineStartShowTime <= this.GuideLineShowTime;
 	}
 
-	// Token: 0x06014014 RID: 81940 RVA: 0x005092B0 File Offset: 0x005074B0
+	// Token: 0x060114F6 RID: 70902 RVA: 0x005181C0 File Offset: 0x005163C0
 	private bool UpdateMovingState()
 	{
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -249,7 +257,7 @@ public class GuideLineAssistant : ControllerAssistantBase
 		return this.SetMovingState(baseMoveComponent2.IsMoving);
 	}
 
-	// Token: 0x06014015 RID: 81941 RVA: 0x005092FC File Offset: 0x005074FC
+	// Token: 0x060114F7 RID: 70903 RVA: 0x0051820C File Offset: 0x0051640C
 	private void UpdateCurSpawn(float delta)
 	{
 		if (this.CurProcess == null || !ObjectUtils.IsValid(this.PersistentSpline))
@@ -266,7 +274,7 @@ public class GuideLineAssistant : ControllerAssistantBase
 		this.LastTimeElapse = this.TimeElapse;
 	}
 
-	// Token: 0x06014016 RID: 81942 RVA: 0x005093B0 File Offset: 0x005075B0
+	// Token: 0x060114F8 RID: 70904 RVA: 0x005182C0 File Offset: 0x005164C0
 	private void FinishLerp()
 	{
 		this.CurProcess.Finished = true;
@@ -274,7 +282,7 @@ public class GuideLineAssistant : ControllerAssistantBase
 		this.CurProcess = null;
 	}
 
-	// Token: 0x06014017 RID: 81943 RVA: 0x005093D4 File Offset: 0x005075D4
+	// Token: 0x060114F9 RID: 70905 RVA: 0x005182E4 File Offset: 0x005164E4
 	private void UpdateQuestGuideline()
 	{
 		if (!ObjectUtils.IsValid(this.PersistentSpline))
@@ -333,7 +341,7 @@ public class GuideLineAssistant : ControllerAssistantBase
 		}
 	}
 
-	// Token: 0x06014018 RID: 81944 RVA: 0x005095C8 File Offset: 0x005077C8
+	// Token: 0x060114FA RID: 70906 RVA: 0x005184D8 File Offset: 0x005166D8
 	private void UpdatePersistentSpline(USplineComponent spline, TArray<FVectorDouble> pathPoints, int stepFactor)
 	{
 		spline.ClearSplinePoints(true);
@@ -379,7 +387,7 @@ public class GuideLineAssistant : ControllerAssistantBase
 		this.ChangeAnimType(EAnimType.Show);
 	}
 
-	// Token: 0x06014019 RID: 81945 RVA: 0x00509724 File Offset: 0x00507924
+	// Token: 0x060114FB RID: 70907 RVA: 0x00518634 File Offset: 0x00516834
 	private void ChangeAnimType(EAnimType type)
 	{
 		this.LerpStartSpawn = this.CurSpawn;
@@ -397,7 +405,7 @@ public class GuideLineAssistant : ControllerAssistantBase
 		this.LerpTargetSpawn = 0f;
 	}
 
-	// Token: 0x0601401A RID: 81946 RVA: 0x00509773 File Offset: 0x00507973
+	// Token: 0x060114FC RID: 70908 RVA: 0x00518683 File Offset: 0x00516883
 	private bool SetMovingState(bool value)
 	{
 		if (this.Moving != value)
@@ -408,7 +416,7 @@ public class GuideLineAssistant : ControllerAssistantBase
 		return false;
 	}
 
-	// Token: 0x0601401B RID: 81947 RVA: 0x00509788 File Offset: 0x00507988
+	// Token: 0x060114FD RID: 70909 RVA: 0x00518698 File Offset: 0x00516898
 	[NullableContext(2)]
 	private LogicTreeContainer GetCurrentTrack(BtType? btType = null)
 	{
@@ -427,63 +435,63 @@ public class GuideLineAssistant : ControllerAssistantBase
 		return result;
 	}
 
-	// Token: 0x040096DB RID: 38619
+	// Token: 0x04009833 RID: 38963
 	private const int QUERY_VALUE = 500;
 
-	// Token: 0x040096DC RID: 38620
+	// Token: 0x04009834 RID: 38964
 	private const int SPLIT_Z_LIMIT = 2000;
 
-	// Token: 0x040096DD RID: 38621
+	// Token: 0x04009835 RID: 38965
 	private readonly IReadOnlyList<BtType> BtTypes = Array.Empty<BtType>();
 
-	// Token: 0x040096DE RID: 38622
+	// Token: 0x04009836 RID: 38966
 	private BtType CurBtType;
 
-	// Token: 0x040096DF RID: 38623
+	// Token: 0x04009837 RID: 38967
 	[Nullable(2)]
 	private BP_Fx_WayFinding_C PersistentSpline;
 
-	// Token: 0x040096E0 RID: 38624
+	// Token: 0x04009838 RID: 38968
 	[Nullable(2)]
 	private TArray<FVectorDouble> PathPointsPersistent;
 
-	// Token: 0x040096E1 RID: 38625
+	// Token: 0x04009839 RID: 38969
 	private readonly List<GuideLineProcess.PendingProcess> ProcessList = new List<GuideLineProcess.PendingProcess>();
 
-	// Token: 0x040096E2 RID: 38626
+	// Token: 0x0400983A RID: 38970
 	[Nullable(2)]
 	private GuideLineProcess.PendingProcess CurProcess;
 
-	// Token: 0x040096E3 RID: 38627
+	// Token: 0x0400983B RID: 38971
 	private double GuideLineShowTime;
 
-	// Token: 0x040096E4 RID: 38628
+	// Token: 0x0400983C RID: 38972
 	private readonly TArray<FVectorDouble> QuestGuidePoints = new TArray<FVectorDouble>();
 
-	// Token: 0x040096E5 RID: 38629
+	// Token: 0x0400983D RID: 38973
 	private readonly global::Vector StartVector = global::Vector.Create();
 
-	// Token: 0x040096E6 RID: 38630
+	// Token: 0x0400983E RID: 38974
 	private readonly global::Vector ProjectQueryExtVector = global::Vector.Create(500.0, 500.0, 500.0);
 
-	// Token: 0x040096E7 RID: 38631
+	// Token: 0x0400983F RID: 38975
 	private float LerpStartSpawn;
 
-	// Token: 0x040096E8 RID: 38632
+	// Token: 0x04009840 RID: 38976
 	private float LerpTargetSpawn;
 
-	// Token: 0x040096E9 RID: 38633
+	// Token: 0x04009841 RID: 38977
 	private float LastTimeElapse;
 
-	// Token: 0x040096EA RID: 38634
+	// Token: 0x04009842 RID: 38978
 	private float CurSpawn;
 
-	// Token: 0x040096EB RID: 38635
+	// Token: 0x04009843 RID: 38979
 	private float TimeElapse;
 
-	// Token: 0x040096EC RID: 38636
+	// Token: 0x04009844 RID: 38980
 	private bool Moving;
 
-	// Token: 0x040096ED RID: 38637
+	// Token: 0x04009845 RID: 38981
 	private bool TriggeredSpawn;
 }

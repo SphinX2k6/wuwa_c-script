@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Common
 {
-	// Token: 0x02007283 RID: 29315
+	// Token: 0x02006402 RID: 25602
 	public class AsyncUtil
 	{
-		// Token: 0x06047DAA RID: 294314 RVA: 0x01262B60 File Offset: 0x01260D60
+		// Token: 0x0603E16A RID: 254314 RVA: 0x01203570 File Offset: 0x01201770
 		public static void InitializeEnvironment()
 		{
 			if (!JsModelManager.Instance.HasInitialized)
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Common
 			}
 		}
 
-		// Token: 0x06047DAB RID: 294315 RVA: 0x01262BE6 File Offset: 0x01260DE6
+		// Token: 0x0603E16B RID: 254315 RVA: 0x012035F6 File Offset: 0x012017F6
 		public static void DestroyEnvironment()
 		{
 			if (JsModelManager.Instance.HasInitialized)

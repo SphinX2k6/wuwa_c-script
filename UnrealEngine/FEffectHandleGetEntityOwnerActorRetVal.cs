@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001899 RID: 6297
+	// Token: 0x020003BC RID: 956
 	public sealed class FEffectHandleGetEntityOwnerActorRetVal : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x060172EB RID: 94955 RVA: 0x0021CFD2 File Offset: 0x0021B1D2
+		// Token: 0x06005D96 RID: 23958 RVA: 0x0008446E File Offset: 0x0008266E
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FEffectHandleGetEntityOwnerActorRetVal.StaticFunctionPtr();
 		}
 
-		// Token: 0x060172EC RID: 94956 RVA: 0x0021CFDE File Offset: 0x0021B1DE
+		// Token: 0x06005D97 RID: 23959 RVA: 0x0008447A File Offset: 0x0008267A
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FEffectHandleGetEntityOwnerActorRetVal._FunctionPtr == IntPtr.Zero)
@@ -25,31 +25,30 @@ namespace UnrealEngine
 			return FEffectHandleGetEntityOwnerActorRetVal._FunctionPtr;
 		}
 
-		// Token: 0x060172ED RID: 94957 RVA: 0x0021D001 File Offset: 0x0021B201
+		// Token: 0x06005D98 RID: 23960 RVA: 0x0008449D File Offset: 0x0008269D
 		public FEffectHandleGetEntityOwnerActorRetVal()
 		{
 		}
 
-		// Token: 0x060172EE RID: 94958 RVA: 0x0021D009 File Offset: 0x0021B209
+		// Token: 0x06005D99 RID: 23961 RVA: 0x000844A5 File Offset: 0x000826A5
 		[NullableContext(2)]
 		public FEffectHandleGetEntityOwnerActorRetVal(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060172EF RID: 94959 RVA: 0x0021D013 File Offset: 0x0021B213
+		// Token: 0x06005D9A RID: 23962 RVA: 0x000844AF File Offset: 0x000826AF
 		public FEffectHandleGetEntityOwnerActorRetVal(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060172F0 RID: 94960 RVA: 0x0021D01E File Offset: 0x0021B21E
+		// Token: 0x06005D9B RID: 23963 RVA: 0x000844BA File Offset: 0x000826BA
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Func<int, AActor>) ?? ((Func<int, AActor>)Delegate.CreateDelegate(typeof(Func<int, AActor>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x060172F1 RID: 94961 RVA: 0x0021D050 File Offset: 0x0021B250
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x06005D9C RID: 23964 RVA: 0x000844EC File Offset: 0x000826EC
 		public void Bind([Nullable(new byte[]
 		{
 			1,
@@ -68,10 +67,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FEffectHandleGetEntityOwnerActorRetVal.RegisterId);
 		}
 
-		// Token: 0x060172F2 RID: 94962 RVA: 0x0021D08C File Offset: 0x0021B28C
+		// Token: 0x06005D9D RID: 23965 RVA: 0x00084528 File Offset: 0x00082728
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe AActor Execute(int EntityId)
 		{
 			FEffectHandleGetEntityOwnerActorRetVal.__FEffectHandleGetEntityOwnerActorRetVal_DelegateParams* ptr = stackalloc FEffectHandleGetEntityOwnerActorRetVal.__FEffectHandleGetEntityOwnerActorRetVal_DelegateParams[(UIntPtr)31] + 15L / (long)sizeof(FEffectHandleGetEntityOwnerActorRetVal.__FEffectHandleGetEntityOwnerActorRetVal_DelegateParams) & -16L;
@@ -81,10 +79,9 @@ namespace UnrealEngine
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<AActor>(ptr->__Result);
 		}
 
-		// Token: 0x060172F3 RID: 94963 RVA: 0x0021D0D4 File Offset: 0x0021B2D4
+		// Token: 0x06005D9E RID: 23966 RVA: 0x00084570 File Offset: 0x00082770
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Func<int, AActor> func = target as Func<int, AActor>;
@@ -96,35 +93,35 @@ namespace UnrealEngine
 			((FEffectHandleGetEntityOwnerActorRetVal.__FEffectHandleGetEntityOwnerActorRetVal_DelegateParams*)__Parameters)->__Result = ((aactor != null) ? aactor.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0400C931 RID: 51505
+		// Token: 0x04002700 RID: 9984
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400C932 RID: 51506
+		// Token: 0x04002701 RID: 9985
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroGameplay.EffectHandleGetEntityOwnerActorRetVal__DelegateSignature";
 
-		// Token: 0x0400C933 RID: 51507
+		// Token: 0x04002702 RID: 9986
 		private static int RegisterId;
 
-		// Token: 0x02002F9F RID: 12191
+		// Token: 0x02000AC2 RID: 2754
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
-		protected ref struct __FEffectHandleGetEntityOwnerActorRetVal_DelegateParams
+		private ref struct __FEffectHandleGetEntityOwnerActorRetVal_DelegateParams
 		{
-			// Token: 0x04016B75 RID: 93045
+			// Token: 0x04005B32 RID: 23346
 			[FieldOffset(0)]
 			public int EntityId;
 
-			// Token: 0x04016B76 RID: 93046
+			// Token: 0x04005B33 RID: 23347
 			[FieldOffset(8)]
 			public IntPtr __Result;
 		}
 
-		// Token: 0x02002FA0 RID: 12192
+		// Token: 0x02000AC3 RID: 2755
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016B77 RID: 93047
+			// Token: 0x04005B34 RID: 23348
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

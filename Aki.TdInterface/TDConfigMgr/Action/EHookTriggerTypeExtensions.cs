@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002359 RID: 9049
+	// Token: 0x020025CE RID: 9678
 	public static class EHookTriggerTypeExtensions
 	{
-		// Token: 0x0600C58F RID: 50575 RVA: 0x001CD550 File Offset: 0x001CB750
+		// Token: 0x0600D179 RID: 53625 RVA: 0x001E5830 File Offset: 0x001E3A30
 		public static string ToEnumString(this EHookTriggerType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C590 RID: 50576 RVA: 0x001CD578 File Offset: 0x001CB778
+		// Token: 0x0600D17A RID: 53626 RVA: 0x001E5858 File Offset: 0x001E3A58
 		public static EHookTriggerType FromString(string name)
 		{
 			EHookTriggerType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C591 RID: 50577 RVA: 0x001CD5A1 File Offset: 0x001CB7A1
+		// Token: 0x0600D17B RID: 53627 RVA: 0x001E5881 File Offset: 0x001E3A81
 		public static bool TryFromString(string name, out EHookTriggerType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C592 RID: 50578 RVA: 0x001CD5C6 File Offset: 0x001CB7C6
+		// Token: 0x0600D17C RID: 53628 RVA: 0x001E58A6 File Offset: 0x001E3AA6
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C593 RID: 50579 RVA: 0x001CD5D6 File Offset: 0x001CB7D6
+		// Token: 0x0600D17D RID: 53629 RVA: 0x001E58B6 File Offset: 0x001E3AB6
 		public static EHookTriggerType[] GetValues()
 		{
 			return new EHookTriggerType[1];
 		}
 
-		// Token: 0x0600C594 RID: 50580 RVA: 0x001CD5DE File Offset: 0x001CB7DE
+		// Token: 0x0600D17E RID: 53630 RVA: 0x001E58BE File Offset: 0x001E3ABE
 		public static string[] GetNames()
 		{
 			return new string[]

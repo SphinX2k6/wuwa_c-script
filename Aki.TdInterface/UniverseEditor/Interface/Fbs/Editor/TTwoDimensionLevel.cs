@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x020048F3 RID: 18675
+	// Token: 0x02004D58 RID: 19800
 	public enum TTwoDimensionLevel : byte
 	{
-		// Token: 0x0400CF4D RID: 53069
+		// Token: 0x0400D986 RID: 55686
 		NONE,
-		// Token: 0x0400CF4E RID: 53070
+		// Token: 0x0400D987 RID: 55687
 		IDangoBrawlLevel,
-		// Token: 0x0400CF4F RID: 53071
+		// Token: 0x0400D988 RID: 55688
 		IMarbleLevel
 	}
 }

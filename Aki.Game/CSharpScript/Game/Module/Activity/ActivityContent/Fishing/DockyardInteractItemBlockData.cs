@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065A8 RID: 26024
+	// Token: 0x02005526 RID: 21798
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DockyardInteractItemBlockData
 	{
-		// Token: 0x060413FF RID: 267263 RVA: 0x00FCFA70 File Offset: 0x00FCDC70
+		// Token: 0x060360C4 RID: 221380 RVA: 0x00F16A74 File Offset: 0x00F14C74
 		public DockyardInteractItemBlockData(DockyardItemBlockOriginalData data)
 		{
 			this.Rotate = 0;
@@ -20,13 +20,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.Data = data;
 		}
 
-		// Token: 0x04021F7E RID: 139134
+		// Token: 0x0401C8AF RID: 116911
 		public int Rotate;
 
-		// Token: 0x04021F7F RID: 139135
+		// Token: 0x0401C8B0 RID: 116912
 		public IPanelPos Pos;
 
-		// Token: 0x04021F80 RID: 139136
+		// Token: 0x0401C8B1 RID: 116913
 		public DockyardItemBlockOriginalData Data;
 	}
 }

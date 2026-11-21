@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006FB4 RID: 28596
+	// Token: 0x0200777D RID: 30589
 	public struct ISetAudioState : IFlatbufferObject
 	{
-		// Token: 0x1700D457 RID: 54359
-		// (get) Token: 0x060328A5 RID: 207013 RVA: 0x006D20C4 File Offset: 0x006D02C4
+		// Token: 0x1700E02B RID: 57387
+		// (get) Token: 0x06035B0B RID: 219915 RVA: 0x00731D08 File Offset: 0x0072FF08
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060328A6 RID: 207014 RVA: 0x006D20D1 File Offset: 0x006D02D1
+		// Token: 0x06035B0C RID: 219916 RVA: 0x00731D15 File Offset: 0x0072FF15
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060328A7 RID: 207015 RVA: 0x006D20D8 File Offset: 0x006D02D8
+		// Token: 0x06035B0D RID: 219917 RVA: 0x00731D1C File Offset: 0x0072FF1C
 		public static ISetAudioState GetRootAsISetAudioState(ByteBuffer _bb)
 		{
 			return ISetAudioState.GetRootAsISetAudioState(_bb, default(ISetAudioState));
 		}
 
-		// Token: 0x060328A8 RID: 207016 RVA: 0x006D20F4 File Offset: 0x006D02F4
+		// Token: 0x06035B0E RID: 219918 RVA: 0x00731D38 File Offset: 0x0072FF38
 		public static ISetAudioState GetRootAsISetAudioState(ByteBuffer _bb, ISetAudioState obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060328A9 RID: 207017 RVA: 0x006D2111 File Offset: 0x006D0311
+		// Token: 0x06035B0F RID: 219919 RVA: 0x00731D55 File Offset: 0x0072FF55
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060328AA RID: 207018 RVA: 0x006D2120 File Offset: 0x006D0320
+		// Token: 0x06035B10 RID: 219920 RVA: 0x00731D64 File Offset: 0x0072FF64
 		public ISetAudioState __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D458 RID: 54360
-		// (get) Token: 0x060328AB RID: 207019 RVA: 0x006D2130 File Offset: 0x006D0330
+		// Token: 0x1700E02C RID: 57388
+		// (get) Token: 0x06035B11 RID: 219921 RVA: 0x00731D74 File Offset: 0x0072FF74
 		public IAudioState? AudioConfig
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060328AC RID: 207020 RVA: 0x006D218D File Offset: 0x006D038D
+		// Token: 0x06035B12 RID: 219922 RVA: 0x00731DD1 File Offset: 0x0072FFD1
 		public static Offset<ISetAudioState> CreateISetAudioState(FlatBufferBuilder builder, Offset<IAudioState> AudioConfigOffset = default(Offset<IAudioState>))
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISetAudioState.EndISetAudioState(builder);
 		}
 
-		// Token: 0x060328AD RID: 207021 RVA: 0x006D21A3 File Offset: 0x006D03A3
+		// Token: 0x06035B13 RID: 219923 RVA: 0x00731DE7 File Offset: 0x0072FFE7
 		public static void StartISetAudioState(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060328AE RID: 207022 RVA: 0x006D21AC File Offset: 0x006D03AC
+		// Token: 0x06035B14 RID: 219924 RVA: 0x00731DF0 File Offset: 0x0072FFF0
 		public static void AddAudioConfig(FlatBufferBuilder builder, Offset<IAudioState> audioConfigOffset)
 		{
 			builder.AddOffset(0, audioConfigOffset.Value, 0);
 		}
 
-		// Token: 0x060328AF RID: 207023 RVA: 0x006D21BC File Offset: 0x006D03BC
+		// Token: 0x06035B15 RID: 219925 RVA: 0x00731E00 File Offset: 0x00730000
 		public static Offset<ISetAudioState> EndISetAudioState(FlatBufferBuilder builder)
 		{
 			return new Offset<ISetAudioState>(builder.EndTable());
 		}
 
-		// Token: 0x060328B0 RID: 207024 RVA: 0x006D21CC File Offset: 0x006D03CC
+		// Token: 0x06035B16 RID: 219926 RVA: 0x00731E10 File Offset: 0x00730010
 		public ISetAudioStateT UnPack()
 		{
 			ISetAudioStateT setAudioStateT = new ISetAudioStateT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return setAudioStateT;
 		}
 
-		// Token: 0x060328B1 RID: 207025 RVA: 0x006D21E8 File Offset: 0x006D03E8
+		// Token: 0x06035B17 RID: 219927 RVA: 0x00731E2C File Offset: 0x0073002C
 		public void UnPackTo(ISetAudioStateT _o)
 		{
 			_o.AudioConfig = ((this.AudioConfig != null) ? this.AudioConfig.Value.UnPack() : null);
 		}
 
-		// Token: 0x060328B2 RID: 207026 RVA: 0x006D2224 File Offset: 0x006D0424
+		// Token: 0x06035B18 RID: 219928 RVA: 0x00731E68 File Offset: 0x00730068
 		public static Offset<ISetAudioState> Pack(FlatBufferBuilder builder, ISetAudioStateT _o)
 		{
 			if (_o == null)
@@ -113,7 +113,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISetAudioState.CreateISetAudioState(builder, audioConfigOffset);
 		}
 
-		// Token: 0x040119BB RID: 72123
+		// Token: 0x040129A0 RID: 76192
 		private Table __p;
 	}
 }

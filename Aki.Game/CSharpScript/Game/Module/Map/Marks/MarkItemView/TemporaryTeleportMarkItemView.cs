@@ -8,17 +8,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 {
-	// Token: 0x02005526 RID: 21798
+	// Token: 0x020044F9 RID: 17657
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TemporaryTeleportMarkItemView : ServerMarkItemView
 	{
-		// Token: 0x06037A8B RID: 227979 RVA: 0x00D364A9 File Offset: 0x00D346A9
+		// Token: 0x0602C95B RID: 182619 RVA: 0x00C841D6 File Offset: 0x00C823D6
 		public TemporaryTeleportMarkItemView(TemporaryTeleportMarkItem holder) : base(holder)
 		{
 		}
 
-		// Token: 0x06037A8C RID: 227980 RVA: 0x00D364B2 File Offset: 0x00D346B2
+		// Token: 0x0602C95C RID: 182620 RVA: 0x00C841DF File Offset: 0x00C823DF
 		public override void RegisterEvents()
 		{
 			MarkItem holder = this.Holder;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			}
 		}
 
-		// Token: 0x06037A8D RID: 227981 RVA: 0x00D364E7 File Offset: 0x00D346E7
+		// Token: 0x0602C95D RID: 182621 RVA: 0x00C84214 File Offset: 0x00C82414
 		public override void UnRegisterEvents()
 		{
 			MarkItem holder = this.Holder;
@@ -38,14 +38,14 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			}
 		}
 
-		// Token: 0x06037A8E RID: 227982 RVA: 0x00D3651C File Offset: 0x00D3471C
+		// Token: 0x0602C95E RID: 182622 RVA: 0x00C84249 File Offset: 0x00C82449
 		protected override void OnViewRefresh()
 		{
 			this.OnIconPathChanged(this.Holder.IconPath);
 			this.UpdateDisableState();
 		}
 
-		// Token: 0x06037A8F RID: 227983 RVA: 0x00D36535 File Offset: 0x00D34735
+		// Token: 0x0602C95F RID: 182623 RVA: 0x00C84262 File Offset: 0x00C82462
 		protected override void OnSelectedStateChange(bool newState)
 		{
 			if (((TemporaryTeleportMarkItem)this.Holder).IsServerDisable)
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			}
 		}
 
-		// Token: 0x06037A90 RID: 227984 RVA: 0x00D3655D File Offset: 0x00D3475D
+		// Token: 0x0602C960 RID: 182624 RVA: 0x00C8428A File Offset: 0x00C8248A
 		protected override void OnSafeUpdate(Vector playerLocation, bool bDragging = false, bool bIsScale = false)
 		{
 			if (this.Holder != null)
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			}
 		}
 
-		// Token: 0x06037A91 RID: 227985 RVA: 0x00D36570 File Offset: 0x00D34770
+		// Token: 0x0602C961 RID: 182625 RVA: 0x00C8429C File Offset: 0x00C8249C
 		private void UpdateDisableState()
 		{
 			TemporaryTeleportMarkItem temporaryTeleportMarkItem = (TemporaryTeleportMarkItem)this.Holder;
@@ -75,21 +75,21 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			sprite.SetUIActive(temporaryTeleportMarkItem.IsServerDisable);
 		}
 
-		// Token: 0x06037A92 RID: 227986 RVA: 0x00D365A0 File Offset: 0x00D347A0
+		// Token: 0x0602C962 RID: 182626 RVA: 0x00C842CC File Offset: 0x00C824CC
 		[PreserveBaseOverrides]
 		protected new virtual MarkItemChildIconHandle CreateChildIconHandle(IMarkItemComponentContext markComponentContext)
 		{
 			return new TemporaryTeleportMarkItemChildIconHandle(markComponentContext);
 		}
 
-		// Token: 0x06037A93 RID: 227987 RVA: 0x00D365A8 File Offset: 0x00D347A8
+		// Token: 0x0602C963 RID: 182627 RVA: 0x00C842D4 File Offset: 0x00C824D4
 		public void UpdateIcon()
 		{
 			base.MarkItemChildIconHandle.Update();
 			base.MarkItemChildIconHandle.ApplyModified();
 		}
 
-		// Token: 0x06037A94 RID: 227988 RVA: 0x00D365C0 File Offset: 0x00D347C0
+		// Token: 0x0602C964 RID: 182628 RVA: 0x00C842EC File Offset: 0x00C824EC
 		private void OnSubMapChanged(int floorIndex)
 		{
 			TemporaryTeleportMarkItem temporaryTeleportMarkItem = this.Holder as TemporaryTeleportMarkItem;

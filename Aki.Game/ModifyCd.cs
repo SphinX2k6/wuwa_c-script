@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002F5D RID: 12125
+// Token: 0x020024B1 RID: 9393
 [NullableContext(1)]
 [Nullable(0)]
 public class ModifyCd : BuffEffect
 {
-	// Token: 0x06019CD3 RID: 105683 RVA: 0x006BAABB File Offset: 0x006B8CBB
+	// Token: 0x060175E5 RID: 95717 RVA: 0x006E13AA File Offset: 0x006DF5AA
 	public ModifyCd(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019CD4 RID: 105684 RVA: 0x006BAAD8 File Offset: 0x006B8CD8
+	// Token: 0x060175E6 RID: 95718 RVA: 0x006E13C4 File Offset: 0x006DF5C4
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -26,7 +26,7 @@ public class ModifyCd : BuffEffect
 		this.ModifyValues = parameters.ExtraEffectGrowParameters1;
 	}
 
-	// Token: 0x06019CD5 RID: 105685 RVA: 0x006BAB44 File Offset: 0x006B8D44
+	// Token: 0x060175E7 RID: 95719 RVA: 0x006E1430 File Offset: 0x006DF630
 	public override void OnCreated()
 	{
 		Entity exactOwnerEntity = base.ExactOwnerEntity;
@@ -43,14 +43,14 @@ public class ModifyCd : BuffEffect
 		baseSkillCdComponent.UpdateModifyCdEffect(true, this);
 	}
 
-	// Token: 0x06019CD6 RID: 105686 RVA: 0x006BABB0 File Offset: 0x006B8DB0
+	// Token: 0x060175E8 RID: 95720 RVA: 0x006E149C File Offset: 0x006DF69C
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
 		return null;
 	}
 
-	// Token: 0x06019CD7 RID: 105687 RVA: 0x006BABB4 File Offset: 0x006B8DB4
+	// Token: 0x060175E9 RID: 95721 RVA: 0x006E14A0 File Offset: 0x006DF6A0
 	public override void OnRemoved(bool bPremature)
 	{
 		Entity exactOwnerEntity = base.ExactOwnerEntity;
@@ -62,19 +62,19 @@ public class ModifyCd : BuffEffect
 		baseSkillCdComponent.UpdateModifyCdEffect(false, this);
 	}
 
-	// Token: 0x0400C27A RID: 49786
+	// Token: 0x0400C623 RID: 50723
 	public HashSet<long> SkillIdOrGenres = new HashSet<long>();
 
-	// Token: 0x0400C27B RID: 49787
+	// Token: 0x0400C624 RID: 50724
 	public int SkillType;
 
-	// Token: 0x0400C27C RID: 49788
+	// Token: 0x0400C625 RID: 50725
 	public EModifyCdType ModifyType;
 
-	// Token: 0x0400C27D RID: 49789
+	// Token: 0x0400C626 RID: 50726
 	public float ModifyValue;
 
-	// Token: 0x0400C27E RID: 49790
+	// Token: 0x0400C627 RID: 50727
 	[Nullable(2)]
 	private float[] ModifyValues;
 }

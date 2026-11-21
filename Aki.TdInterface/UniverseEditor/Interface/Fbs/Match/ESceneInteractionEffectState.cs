@@ -2,32 +2,32 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Match
 {
-	// Token: 0x020043F3 RID: 17395
+	// Token: 0x02004858 RID: 18520
 	public enum ESceneInteractionEffectState : byte
 	{
-		// Token: 0x0400C310 RID: 49936
+		// Token: 0x0400CD38 RID: 52536
 		Effect0,
-		// Token: 0x0400C311 RID: 49937
+		// Token: 0x0400CD39 RID: 52537
 		Effect1,
-		// Token: 0x0400C312 RID: 49938
+		// Token: 0x0400CD3A RID: 52538
 		Effect2,
-		// Token: 0x0400C313 RID: 49939
+		// Token: 0x0400CD3B RID: 52539
 		Effect3,
-		// Token: 0x0400C314 RID: 49940
+		// Token: 0x0400CD3C RID: 52540
 		Effect4,
-		// Token: 0x0400C315 RID: 49941
+		// Token: 0x0400CD3D RID: 52541
 		Effect5,
-		// Token: 0x0400C316 RID: 49942
+		// Token: 0x0400CD3E RID: 52542
 		Effect6,
-		// Token: 0x0400C317 RID: 49943
+		// Token: 0x0400CD3F RID: 52543
 		Effect7,
-		// Token: 0x0400C318 RID: 49944
+		// Token: 0x0400CD40 RID: 52544
 		Effect8,
-		// Token: 0x0400C319 RID: 49945
+		// Token: 0x0400CD41 RID: 52545
 		Effect9,
-		// Token: 0x0400C31A RID: 49946
+		// Token: 0x0400CD42 RID: 52546
 		Error,
-		// Token: 0x0400C31B RID: 49947
+		// Token: 0x0400CD43 RID: 52547
 		SceneInteractionEffectMAX
 	}
 }

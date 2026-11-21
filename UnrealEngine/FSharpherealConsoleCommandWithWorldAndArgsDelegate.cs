@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002766 RID: 10086
+	// Token: 0x0200080F RID: 2063
 	public sealed class FSharpherealConsoleCommandWithWorldAndArgsDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06025B76 RID: 154486 RVA: 0x00392A33 File Offset: 0x00390C33
+		// Token: 0x0600B54D RID: 46413 RVA: 0x001205EB File Offset: 0x0011E7EB
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FSharpherealConsoleCommandWithWorldAndArgsDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x06025B77 RID: 154487 RVA: 0x00392A3F File Offset: 0x00390C3F
+		// Token: 0x0600B54E RID: 46414 RVA: 0x001205F7 File Offset: 0x0011E7F7
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FSharpherealConsoleCommandWithWorldAndArgsDelegate._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FSharpherealConsoleCommandWithWorldAndArgsDelegate._FunctionPtr;
 		}
 
-		// Token: 0x06025B78 RID: 154488 RVA: 0x00392A62 File Offset: 0x00390C62
+		// Token: 0x0600B54F RID: 46415 RVA: 0x0012061A File Offset: 0x0011E81A
 		public FSharpherealConsoleCommandWithWorldAndArgsDelegate()
 		{
 		}
 
-		// Token: 0x06025B79 RID: 154489 RVA: 0x00392A6A File Offset: 0x00390C6A
+		// Token: 0x0600B550 RID: 46416 RVA: 0x00120622 File Offset: 0x0011E822
 		[NullableContext(2)]
 		public FSharpherealConsoleCommandWithWorldAndArgsDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06025B7A RID: 154490 RVA: 0x00392A74 File Offset: 0x00390C74
+		// Token: 0x0600B551 RID: 46417 RVA: 0x0012062C File Offset: 0x0011E82C
 		public FSharpherealConsoleCommandWithWorldAndArgsDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06025B7B RID: 154491 RVA: 0x00392A7F File Offset: 0x00390C7F
+		// Token: 0x0600B552 RID: 46418 RVA: 0x00120637 File Offset: 0x0011E837
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as FSharpherealConsoleCommandWithWorldAndArgsDelegate.FSharpherealConsoleCommandWithWorldAndArgsDelegate_ScriptDelegate) ?? ((FSharpherealConsoleCommandWithWorldAndArgsDelegate.FSharpherealConsoleCommandWithWorldAndArgsDelegate_ScriptDelegate)Delegate.CreateDelegate(typeof(FSharpherealConsoleCommandWithWorldAndArgsDelegate.FSharpherealConsoleCommandWithWorldAndArgsDelegate_ScriptDelegate), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06025B7C RID: 154492 RVA: 0x00392AB1 File Offset: 0x00390CB1
+		// Token: 0x0600B553 RID: 46419 RVA: 0x00120669 File Offset: 0x0011E869
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(FSharpherealConsoleCommandWithWorldAndArgsDelegate.FSharpherealConsoleCommandWithWorldAndArgsDelegate_ScriptDelegate Callback)
 		{
 			if (FSharpherealConsoleCommandWithWorldAndArgsDelegate.RegisterId == 0)
@@ -65,10 +64,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FSharpherealConsoleCommandWithWorldAndArgsDelegate.RegisterId);
 		}
 
-		// Token: 0x06025B7D RID: 154493 RVA: 0x00392AEC File Offset: 0x00390CEC
+		// Token: 0x0600B554 RID: 46420 RVA: 0x001206A4 File Offset: 0x0011E8A4
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute([Nullable(new byte[]
 		{
 			2,
@@ -92,10 +90,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FSharpherealConsoleCommandWithWorldAndArgsDelegate._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06025B7E RID: 154494 RVA: 0x00392B74 File Offset: 0x00390D74
+		// Token: 0x0600B555 RID: 46421 RVA: 0x0012072C File Offset: 0x0011E92C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			FSharpherealConsoleCommandWithWorldAndArgsDelegate.FSharpherealConsoleCommandWithWorldAndArgsDelegate_ScriptDelegate fsharpherealConsoleCommandWithWorldAndArgsDelegate_ScriptDelegate = target as FSharpherealConsoleCommandWithWorldAndArgsDelegate.FSharpherealConsoleCommandWithWorldAndArgsDelegate_ScriptDelegate;
@@ -112,43 +109,43 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x04014884 RID: 84100
+		// Token: 0x040051D2 RID: 20946
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04014885 RID: 84101
+		// Token: 0x040051D3 RID: 20947
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/Sharphereal.SharpherealConsoleCommandWithWorldAndArgsDelegate__DelegateSignature";
 
-		// Token: 0x04014886 RID: 84102
+		// Token: 0x040051D4 RID: 20948
 		private static int RegisterId;
 
-		// Token: 0x02003A5D RID: 14941
-		// (Invoke) Token: 0x060285D2 RID: 165330
+		// Token: 0x0200132F RID: 4911
+		// (Invoke) Token: 0x0600BF37 RID: 48951
 		public delegate void FSharpherealConsoleCommandWithWorldAndArgsDelegate_ScriptDelegate([Nullable(new byte[]
 		{
 			2,
 			1
 		})] in TArray<string> Args, UWorld World);
 
-		// Token: 0x02003A5E RID: 14942
+		// Token: 0x02001330 RID: 4912
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
-		protected ref struct __FSharpherealConsoleCommandWithWorldAndArgsDelegate_DelegateParams
+		private ref struct __FSharpherealConsoleCommandWithWorldAndArgsDelegate_DelegateParams
 		{
-			// Token: 0x04017BB6 RID: 97206
+			// Token: 0x04006769 RID: 26473
 			[FieldOffset(0)]
 			public byte Args;
 
-			// Token: 0x04017BB7 RID: 97207
+			// Token: 0x0400676A RID: 26474
 			[FieldOffset(16)]
 			public IntPtr World;
 		}
 
-		// Token: 0x02003A5F RID: 14943
+		// Token: 0x02001331 RID: 4913
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017BB8 RID: 97208
+			// Token: 0x0400676B RID: 26475
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

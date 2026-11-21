@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020012F3 RID: 4851
+	// Token: 0x02001443 RID: 5187
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IDisableTrackAnim
 	{
-		// Token: 0x06006EB1 RID: 28337 RVA: 0x0010B5CD File Offset: 0x001097CD
-		[NullableContext(1)]
+		// Token: 0x06007551 RID: 30033 RVA: 0x00119B38 File Offset: 0x00117D38
+		[NullableContext(0)]
 		public static IDisableTrackAnim Create(IDisableTrackAnim? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700229E RID: 8862
-		// (get) Token: 0x06006EB2 RID: 28338 RVA: 0x0010B5EC File Offset: 0x001097EC
+		// Token: 0x1700246D RID: 9325
+		// (get) Token: 0x06007552 RID: 30034 RVA: 0x00119B57 File Offset: 0x00117D57
 		public virtual IConditionGroup Condition
 		{
 			get
@@ -40,13 +40,13 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04003F71 RID: 16241
+		// Token: 0x040042ED RID: 17133
 		private IDisableTrackAnim Instance;
 
-		// Token: 0x04003F72 RID: 16242
+		// Token: 0x040042EE RID: 17134
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x04003F73 RID: 16243
+		// Token: 0x040042EF RID: 17135
 		private bool _ConditionInited;
 	}
 }

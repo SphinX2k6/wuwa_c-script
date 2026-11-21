@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000FBA RID: 4026
+	// Token: 0x020010A2 RID: 4258
 	public struct ResonanceAmplification : IFlatbufferObject
 	{
-		// Token: 0x17002DF4 RID: 11764
-		// (get) Token: 0x0600BBB0 RID: 48048 RVA: 0x002DD753 File Offset: 0x002DB953
+		// Token: 0x17002E6F RID: 11887
+		// (get) Token: 0x0600C1FA RID: 49658 RVA: 0x002F9EC7 File Offset: 0x002F80C7
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BBB1 RID: 48049 RVA: 0x002DD760 File Offset: 0x002DB960
+		// Token: 0x0600C1FB RID: 49659 RVA: 0x002F9ED4 File Offset: 0x002F80D4
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600BBB2 RID: 48050 RVA: 0x002DD768 File Offset: 0x002DB968
+		// Token: 0x0600C1FC RID: 49660 RVA: 0x002F9EDC File Offset: 0x002F80DC
 		public static ResonanceAmplification GetRootAsResonanceAmplification(ByteBuffer _bb)
 		{
 			return ResonanceAmplification.GetRootAsResonanceAmplification(_bb, default(ResonanceAmplification));
 		}
 
-		// Token: 0x0600BBB3 RID: 48051 RVA: 0x002DD784 File Offset: 0x002DB984
+		// Token: 0x0600C1FD RID: 49661 RVA: 0x002F9EF8 File Offset: 0x002F80F8
 		public static ResonanceAmplification GetRootAsResonanceAmplification(ByteBuffer _bb, ResonanceAmplification obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600BBB4 RID: 48052 RVA: 0x002DD7A1 File Offset: 0x002DB9A1
+		// Token: 0x0600C1FE RID: 49662 RVA: 0x002F9F15 File Offset: 0x002F8115
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600BBB5 RID: 48053 RVA: 0x002DD7B0 File Offset: 0x002DB9B0
+		// Token: 0x0600C1FF RID: 49663 RVA: 0x002F9F24 File Offset: 0x002F8124
 		public ResonanceAmplification __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002DF5 RID: 11765
-		// (get) Token: 0x0600BBB6 RID: 48054 RVA: 0x002DD7C0 File Offset: 0x002DB9C0
+		// Token: 0x17002E70 RID: 11888
+		// (get) Token: 0x0600C200 RID: 49664 RVA: 0x002F9F34 File Offset: 0x002F8134
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002DF6 RID: 11766
-		// (get) Token: 0x0600BBB7 RID: 48055 RVA: 0x002DD7FC File Offset: 0x002DB9FC
+		// Token: 0x17002E71 RID: 11889
+		// (get) Token: 0x0600C201 RID: 49665 RVA: 0x002F9F70 File Offset: 0x002F8170
 		public int Attr
 		{
 			get
@@ -79,7 +79,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BBB8 RID: 48056 RVA: 0x002DD838 File Offset: 0x002DBA38
+		// Token: 0x0600C202 RID: 49666 RVA: 0x002F9FAC File Offset: 0x002F81AC
 		public float LifeSeatBoostFactor(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -90,8 +90,8 @@ namespace Aki.Config
 			return this.__p.bb.GetFloat(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17002DF7 RID: 11767
-		// (get) Token: 0x0600BBB9 RID: 48057 RVA: 0x002DD87C File Offset: 0x002DBA7C
+		// Token: 0x17002E72 RID: 11890
+		// (get) Token: 0x0600C203 RID: 49667 RVA: 0x002F9FF0 File Offset: 0x002F81F0
 		public int LifeSeatBoostFactorLength
 		{
 			get
@@ -105,37 +105,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600BBBA RID: 48058 RVA: 0x002DD8A7 File Offset: 0x002DBAA7
+		// Token: 0x0600C204 RID: 49668 RVA: 0x002FA01B File Offset: 0x002F821B
 		public Span<float> GetLifeSeatBoostFactorBytes()
 		{
 			return this.__p.__vector_as_span<float>(8, 4);
 		}
 
-		// Token: 0x0600BBBB RID: 48059 RVA: 0x002DD8B6 File Offset: 0x002DBAB6
+		// Token: 0x0600C205 RID: 49669 RVA: 0x002FA02A File Offset: 0x002F822A
 		public float[] GetLifeSeatBoostFactorArray()
 		{
 			return this.__p.__vector_as_array<float>(8) ?? Array.Empty<float>();
 		}
 
-		// Token: 0x0600BBBC RID: 48060 RVA: 0x002DD8D0 File Offset: 0x002DBAD0
+		// Token: 0x0600C206 RID: 49670 RVA: 0x002FA041 File Offset: 0x002F8241
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用LifeSeatBoostFactorIter()或GetLifeSeatBoostFactorBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly float[] LifeSeatBoostFactor()
+		public float[] LifeSeatBoostFactor()
 		{
-			ResonanceAmplification resonanceAmplification = this;
-			return resonanceAmplification.GetLifeSeatBoostFactorArray() ?? Array.Empty<float>();
+			return this.GetLifeSeatBoostFactorArray();
 		}
 
-		// Token: 0x0600BBBD RID: 48061 RVA: 0x002DD8F4 File Offset: 0x002DBAF4
+		// Token: 0x0600C207 RID: 49671 RVA: 0x002FA049 File Offset: 0x002F8249
 		[NullableContext(1)]
-		public readonly IEnumerable<float> LifeSeatBoostFactorIter()
+		public IEnumerable<float> LifeSeatBoostFactorIter()
 		{
 			ResonanceAmplification.<LifeSeatBoostFactorIter>d__18 <LifeSeatBoostFactorIter>d__ = new ResonanceAmplification.<LifeSeatBoostFactorIter>d__18(-2);
 			<LifeSeatBoostFactorIter>d__.<>3__<>4__this = this;
 			return <LifeSeatBoostFactorIter>d__;
 		}
 
-		// Token: 0x04005093 RID: 20627
+		// Token: 0x0400567B RID: 22139
 		private Table __p;
 	}
 }

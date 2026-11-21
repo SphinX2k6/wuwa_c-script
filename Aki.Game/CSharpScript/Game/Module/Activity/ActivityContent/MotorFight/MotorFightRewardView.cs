@@ -12,17 +12,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 {
-	// Token: 0x0200642D RID: 25645
+	// Token: 0x020053AB RID: 21419
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorFightRewardView : UiTickViewBase
 	{
-		// Token: 0x060407AB RID: 264107 RVA: 0x00F9AC5F File Offset: 0x00F98E5F
+		// Token: 0x0603546C RID: 218220 RVA: 0x00EE1BFF File Offset: 0x00EDFDFF
 		public MotorFightRewardView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x060407AC RID: 264108 RVA: 0x00F9AC68 File Offset: 0x00F98E68
+		// Token: 0x0603546D RID: 218221 RVA: 0x00EE1C08 File Offset: 0x00EDFE08
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060407AD RID: 264109 RVA: 0x00F9AD58 File Offset: 0x00F98F58
+		// Token: 0x0603546E RID: 218222 RVA: 0x00EE1CF8 File Offset: 0x00EDFEF8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MotorFightRewardView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -55,19 +55,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060407AE RID: 264110 RVA: 0x00F9AD9B File Offset: 0x00F98F9B
+		// Token: 0x0603546F RID: 218223 RVA: 0x00EE1D3B File Offset: 0x00EDFF3B
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 		}
 
-		// Token: 0x060407AF RID: 264111 RVA: 0x00F9ADB9 File Offset: 0x00F98FB9
+		// Token: 0x06035470 RID: 218224 RVA: 0x00EE1D59 File Offset: 0x00EDFF59
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 		}
 
-		// Token: 0x060407B0 RID: 264112 RVA: 0x00F9ADD8 File Offset: 0x00F98FD8
+		// Token: 0x06035471 RID: 218225 RVA: 0x00EE1D78 File Offset: 0x00EDFF78
 		protected override void OnTick(float delta)
 		{
 			string localTextNew = ConfigMultiTextLang.GetLocalTextNew("ActivityRemainingTime", null);
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			text.SetText(remainTimeText, true);
 		}
 
-		// Token: 0x060407B1 RID: 264113 RVA: 0x00F9AE1B File Offset: 0x00F9901B
+		// Token: 0x06035472 RID: 218226 RVA: 0x00EE1DBB File Offset: 0x00EDFFBB
 		private void OnRefreshCommonActivityRedDot(int activityId)
 		{
 			if (activityId == this.ActivityData.Id)
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x060407B2 RID: 264114 RVA: 0x00F9AE4E File Offset: 0x00F9904E
+		// Token: 0x06035473 RID: 218227 RVA: 0x00EE1DEE File Offset: 0x00EDFFEE
 		private void RefreshTaskLayout(bool isPlayAnim = false)
 		{
 			this.TaskLayout.RefreshByData(this.ActivityData.GetTaskDataList(this.CurrentTabId), delegate
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}, isPlayAnim);
 		}
 
-		// Token: 0x060407B3 RID: 264115 RVA: 0x00F9AE79 File Offset: 0x00F99079
+		// Token: 0x06035474 RID: 218228 RVA: 0x00EE1E19 File Offset: 0x00EE0019
 		private MotorFightTaskTabItem CreateTabItem()
 		{
 			return new MotorFightTaskTabItem
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			};
 		}
 
-		// Token: 0x060407B4 RID: 264116 RVA: 0x00F9AE9E File Offset: 0x00F9909E
+		// Token: 0x06035475 RID: 218229 RVA: 0x00EE1E3E File Offset: 0x00EE003E
 		private void OnTabClickCallBack(int tabId)
 		{
 			this.CurrentTabId = tabId;
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.RefreshTaskLayout(true);
 		}
 
-		// Token: 0x060407B5 RID: 264117 RVA: 0x00F9AED0 File Offset: 0x00F990D0
+		// Token: 0x06035476 RID: 218230 RVA: 0x00EE1E70 File Offset: 0x00EE0070
 		private MotorFightTaskItem CreateTaskItem()
 		{
 			return new MotorFightTaskItem
@@ -133,51 +133,51 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			};
 		}
 
-		// Token: 0x060407B6 RID: 264118 RVA: 0x00F9AEE9 File Offset: 0x00F990E9
+		// Token: 0x06035477 RID: 218231 RVA: 0x00EE1E89 File Offset: 0x00EE0089
 		private void OnRewardBtnClick()
 		{
 			this.ActivityData.RequestTaskReward(this.CurrentTabId);
 		}
 
-		// Token: 0x060407B7 RID: 264119 RVA: 0x00F9AEFC File Offset: 0x00F990FC
+		// Token: 0x06035478 RID: 218232 RVA: 0x00EE1E9C File Offset: 0x00EE009C
 		private void OnCloseBtnClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x04021857 RID: 137303
+		// Token: 0x0401C186 RID: 115078
 		[Nullable(2)]
 		private MotorFightActivityData ActivityData;
 
-		// Token: 0x04021858 RID: 137304
+		// Token: 0x0401C187 RID: 115079
 		private int CurrentTabId;
 
-		// Token: 0x04021859 RID: 137305
+		// Token: 0x0401C188 RID: 115080
 		private GenericScrollViewNew<MotorFightTaskTabItem, MotorFightTaskTab> TabLayout;
 
-		// Token: 0x0402185A RID: 137306
+		// Token: 0x0401C189 RID: 115081
 		private GenericScrollViewNew<MotorFightTaskItem, MotorFightTaskData> TaskLayout;
 
-		// Token: 0x0200C66A RID: 50794
+		// Token: 0x0200B051 RID: 45137
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403BE6C RID: 245356
+			// Token: 0x040367C9 RID: 223177
 			public const int ItemCaption = 0;
 
-			// Token: 0x0403BE6D RID: 245357
+			// Token: 0x040367CA RID: 223178
 			public const int ScrollLayoutTab = 1;
 
-			// Token: 0x0403BE6E RID: 245358
+			// Token: 0x040367CB RID: 223179
 			public const int ItemTab = 2;
 
-			// Token: 0x0403BE6F RID: 245359
+			// Token: 0x040367CC RID: 223180
 			public const int ScrollReward = 3;
 
-			// Token: 0x0403BE70 RID: 245360
+			// Token: 0x040367CD RID: 223181
 			public const int ItemReward = 4;
 
-			// Token: 0x0403BE71 RID: 245361
+			// Token: 0x040367CE RID: 223182
 			public const int TextRemainTime = 5;
 		}
 	}

@@ -4,10 +4,10 @@ using CSharpScript.Game.Effect;
 using CSharpScript.Game.Utils;
 using UnrealEngine;
 
-// Token: 0x02002FC1 RID: 12225
+// Token: 0x02002515 RID: 9493
 public class GameplayCueGhost : GameplayCueBase
 {
-	// Token: 0x06019EB6 RID: 106166 RVA: 0x006C7AA4 File Offset: 0x006C5CA4
+	// Token: 0x060177C8 RID: 96200 RVA: 0x006EE370 File Offset: 0x006EC570
 	protected override void OnInit()
 	{
 		int parametersLength = this.CueConfig.ParametersLength;
@@ -29,7 +29,7 @@ public class GameplayCueGhost : GameplayCueBase
 		}
 	}
 
-	// Token: 0x06019EB7 RID: 106167 RVA: 0x006C7B2C File Offset: 0x006C5D2C
+	// Token: 0x060177C9 RID: 96201 RVA: 0x006EE3F8 File Offset: 0x006EC5F8
 	protected unsafe override void OnCreate()
 	{
 		if (this.IsInstant)
@@ -54,7 +54,7 @@ public class GameplayCueGhost : GameplayCueBase
 		this.CueComp.AddCueEffectToSet(this.EffectViewHandle, this.EffectTimeScaleType, (ECueHideRule)this.CueConfig.HideRule);
 	}
 
-	// Token: 0x06019EB8 RID: 106168 RVA: 0x006C7C34 File Offset: 0x006C5E34
+	// Token: 0x060177CA RID: 96202 RVA: 0x006EE500 File Offset: 0x006EC700
 	protected override void OnDestroy()
 	{
 		if (this.EffectViewHandle != 0 && EffectSystem.Instance.IsValid(this.EffectViewHandle))
@@ -64,7 +64,7 @@ public class GameplayCueGhost : GameplayCueBase
 		}
 	}
 
-	// Token: 0x06019EB9 RID: 106169 RVA: 0x006C7C84 File Offset: 0x006C5E84
+	// Token: 0x060177CB RID: 96203 RVA: 0x006EE550 File Offset: 0x006EC750
 	[NullableContext(1)]
 	private EffectRuntimeGhostEffectContext CreateEffectContext()
 	{
@@ -80,7 +80,7 @@ public class GameplayCueGhost : GameplayCueBase
 		};
 	}
 
-	// Token: 0x06019EBA RID: 106170 RVA: 0x006C7D04 File Offset: 0x006C5F04
+	// Token: 0x060177CC RID: 96204 RVA: 0x006EE5D0 File Offset: 0x006EC7D0
 	private ETimeScaleType GetEffectTimeScaleType()
 	{
 		if (this.BuffHandleId <= 0)
@@ -113,21 +113,21 @@ public class GameplayCueGhost : GameplayCueBase
 		return ETimeScaleType.ImmuneForeverTimeScale;
 	}
 
-	// Token: 0x0400C426 RID: 50214
+	// Token: 0x0400C7CF RID: 51151
 	private int EffectViewHandle;
 
-	// Token: 0x0400C427 RID: 50215
+	// Token: 0x0400C7D0 RID: 51152
 	private ETimeScaleType EffectTimeScaleType;
 
-	// Token: 0x0400C428 RID: 50216
+	// Token: 0x0400C7D1 RID: 51153
 	private float SpawnRate = 20f;
 
-	// Token: 0x0400C429 RID: 50217
+	// Token: 0x0400C7D2 RID: 51154
 	private float GhostLifeTime = 0.25f;
 
-	// Token: 0x0400C42A RID: 50218
+	// Token: 0x0400C7D3 RID: 51155
 	private bool UseSpawnRate = true;
 
-	// Token: 0x0400C42B RID: 50219
+	// Token: 0x0400C7D4 RID: 51156
 	private float SpawnInterval = -1f;
 }

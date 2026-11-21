@@ -1,27 +1,27 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002AF3 RID: 10995
+// Token: 0x0200206F RID: 8303
 [NullableContext(2)]
 public interface ISurvivorsWeaponGridData
 {
-	// Token: 0x17001E7F RID: 7807
-	// (get) Token: 0x06016DF8 RID: 93688
+	// Token: 0x17001ED7 RID: 7895
+	// (get) Token: 0x06014829 RID: 84009
 	SurvivorsWeaponGainData WeaponData { get; }
 
-	// Token: 0x17001E80 RID: 7808
-	// (get) Token: 0x06016DF9 RID: 93689
+	// Token: 0x17001ED8 RID: 7896
+	// (get) Token: 0x0601482A RID: 84010
 	int? BondPosition { get; }
 
-	// Token: 0x17001E81 RID: 7809
-	// (get) Token: 0x06016DFA RID: 93690
+	// Token: 0x17001ED9 RID: 7897
+	// (get) Token: 0x0601482B RID: 84011
 	bool IsLock { get; }
 
-	// Token: 0x17001E82 RID: 7810
-	// (get) Token: 0x06016DFB RID: 93691
+	// Token: 0x17001EDA RID: 7898
+	// (get) Token: 0x0601482C RID: 84012
 	int? UnlockBatch { get; }
 
-	// Token: 0x17001E83 RID: 7811
-	// (get) Token: 0x06016DFC RID: 93692
+	// Token: 0x17001EDB RID: 7899
+	// (get) Token: 0x0601482D RID: 84013
 	bool IsDisable { get; }
 }

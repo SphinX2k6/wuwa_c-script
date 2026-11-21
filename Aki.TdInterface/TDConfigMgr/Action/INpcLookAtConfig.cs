@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C6E RID: 7278
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001E73 RID: 7795
 	public class INpcLookAtConfig
 	{
-		// Token: 0x06009C15 RID: 39957 RVA: 0x00166258 File Offset: 0x00164458
+		// Token: 0x0600A5AF RID: 42415 RVA: 0x00179C4C File Offset: 0x00177E4C
 		private INpcLookAtConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009C16 RID: 39958 RVA: 0x00166290 File Offset: 0x00164490
+		// Token: 0x0600A5B0 RID: 42416 RVA: 0x00179C84 File Offset: 0x00177E84
 		public static INpcLookAtConfig Create([Nullable(2)] INpcLookAtConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009C17 RID: 39959 RVA: 0x001662A3 File Offset: 0x001644A3
+		// Token: 0x0600A5B1 RID: 42417 RVA: 0x00179C97 File Offset: 0x00177E97
 		public static INpcLookAtConfig CreateFromSetValue([Nullable(2)] INpcLookAtConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009C18 RID: 39960 RVA: 0x001662B6 File Offset: 0x001644B6
+		// Token: 0x0600A5B2 RID: 42418 RVA: 0x00179CAA File Offset: 0x00177EAA
 		public INpcLookAtConfig_SetValue ToSetValue()
 		{
 			return new INpcLookAtConfig_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170030BC RID: 12476
-		// (get) Token: 0x06009C19 RID: 39961 RVA: 0x001662ED File Offset: 0x001644ED
-		// (set) Token: 0x06009C1A RID: 39962 RVA: 0x00166314 File Offset: 0x00164514
+		// Token: 0x17003339 RID: 13113
+		// (get) Token: 0x0600A5B3 RID: 42419 RVA: 0x00179CE1 File Offset: 0x00177EE1
+		// (set) Token: 0x0600A5B4 RID: 42420 RVA: 0x00179D08 File Offset: 0x00177F08
 		public virtual INpcLookAtTypeBase Target
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170030BD RID: 12477
-		// (get) Token: 0x06009C1B RID: 39963 RVA: 0x00166324 File Offset: 0x00164524
-		// (set) Token: 0x06009C1C RID: 39964 RVA: 0x0016635E File Offset: 0x0016455E
+		// Token: 0x1700333A RID: 13114
+		// (get) Token: 0x0600A5B5 RID: 42421 RVA: 0x00179D18 File Offset: 0x00177F18
+		// (set) Token: 0x0600A5B6 RID: 42422 RVA: 0x00179D52 File Offset: 0x00177F52
 		public virtual bool? IsKeepOverAngle
 		{
 			get
@@ -110,9 +108,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170030BE RID: 12478
-		// (get) Token: 0x06009C1D RID: 39965 RVA: 0x0016636C File Offset: 0x0016456C
-		// (set) Token: 0x06009C1E RID: 39966 RVA: 0x0016639B File Offset: 0x0016459B
+		// Token: 0x1700333B RID: 13115
+		// (get) Token: 0x0600A5B7 RID: 42423 RVA: 0x00179D60 File Offset: 0x00177F60
+		// (set) Token: 0x0600A5B8 RID: 42424 RVA: 0x00179D8F File Offset: 0x00177F8F
 		public virtual float MaxDistance
 		{
 			get
@@ -133,9 +131,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170030BF RID: 12479
-		// (get) Token: 0x06009C1F RID: 39967 RVA: 0x001663A9 File Offset: 0x001645A9
-		// (set) Token: 0x06009C20 RID: 39968 RVA: 0x001663D8 File Offset: 0x001645D8
+		// Token: 0x1700333C RID: 13116
+		// (get) Token: 0x0600A5B9 RID: 42425 RVA: 0x00179D9D File Offset: 0x00177F9D
+		// (set) Token: 0x0600A5BA RID: 42426 RVA: 0x00179DCC File Offset: 0x00177FCC
 		public virtual float MaxAngle
 		{
 			get
@@ -156,11 +154,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005EB3 RID: 24243
+		// Token: 0x04006406 RID: 25606
 		[Nullable(2)]
 		protected INpcLookAtConfig FbInstance;
 
-		// Token: 0x04005EB4 RID: 24244
+		// Token: 0x04006407 RID: 25607
 		[Nullable(2)]
 		protected INpcLookAtConfig_SetValue PocoInterface;
 	}

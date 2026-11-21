@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E71 RID: 7793
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020020A6 RID: 8358
 	public class ISingleAxisSpringArmSoftZoneConfig
 	{
-		// Token: 0x0600A6CA RID: 42698 RVA: 0x00179558 File Offset: 0x00177758
+		// Token: 0x0600B182 RID: 45442 RVA: 0x0018F258 File Offset: 0x0018D458
 		private ISingleAxisSpringArmSoftZoneConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A6CB RID: 42699 RVA: 0x00179590 File Offset: 0x00177790
+		// Token: 0x0600B183 RID: 45443 RVA: 0x0018F290 File Offset: 0x0018D490
 		public static ISingleAxisSpringArmSoftZoneConfig Create([Nullable(2)] ISingleAxisSpringArmSoftZoneConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A6CC RID: 42700 RVA: 0x001795A3 File Offset: 0x001777A3
+		// Token: 0x0600B184 RID: 45444 RVA: 0x0018F2A3 File Offset: 0x0018D4A3
 		public static ISingleAxisSpringArmSoftZoneConfig CreateFromSetValue([Nullable(2)] ISingleAxisSpringArmSoftZoneConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A6CD RID: 42701 RVA: 0x001795B6 File Offset: 0x001777B6
+		// Token: 0x0600B185 RID: 45445 RVA: 0x0018F2B6 File Offset: 0x0018D4B6
 		public ISingleAxisSpringArmSoftZoneConfig_SetValue ToSetValue()
 		{
 			return new ISingleAxisSpringArmSoftZoneConfig_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003313 RID: 13075
-		// (get) Token: 0x0600A6CE RID: 42702 RVA: 0x001795F0 File Offset: 0x001777F0
-		// (set) Token: 0x0600A6CF RID: 42703 RVA: 0x0017962A File Offset: 0x0017782A
+		// Token: 0x170035D7 RID: 13783
+		// (get) Token: 0x0600B186 RID: 45446 RVA: 0x0018F2F0 File Offset: 0x0018D4F0
+		// (set) Token: 0x0600B187 RID: 45447 RVA: 0x0018F32A File Offset: 0x0018D52A
 		public virtual float? MaxOffsetDistance
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003314 RID: 13076
-		// (get) Token: 0x0600A6D0 RID: 42704 RVA: 0x00179638 File Offset: 0x00177838
-		// (set) Token: 0x0600A6D1 RID: 42705 RVA: 0x00179672 File Offset: 0x00177872
+		// Token: 0x170035D8 RID: 13784
+		// (get) Token: 0x0600B188 RID: 45448 RVA: 0x0018F338 File Offset: 0x0018D538
+		// (set) Token: 0x0600B189 RID: 45449 RVA: 0x0018F372 File Offset: 0x0018D572
 		public virtual float? MinOffsetDistance
 		{
 			get
@@ -110,9 +108,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003315 RID: 13077
-		// (get) Token: 0x0600A6D2 RID: 42706 RVA: 0x00179680 File Offset: 0x00177880
-		// (set) Token: 0x0600A6D3 RID: 42707 RVA: 0x001796BA File Offset: 0x001778BA
+		// Token: 0x170035D9 RID: 13785
+		// (get) Token: 0x0600B18A RID: 45450 RVA: 0x0018F380 File Offset: 0x0018D580
+		// (set) Token: 0x0600B18B RID: 45451 RVA: 0x0018F3BA File Offset: 0x0018D5BA
 		public virtual float? MaxInterpolationSpeed
 		{
 			get
@@ -134,9 +132,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003316 RID: 13078
-		// (get) Token: 0x0600A6D4 RID: 42708 RVA: 0x001796C8 File Offset: 0x001778C8
-		// (set) Token: 0x0600A6D5 RID: 42709 RVA: 0x00179702 File Offset: 0x00177902
+		// Token: 0x170035DA RID: 13786
+		// (get) Token: 0x0600B18C RID: 45452 RVA: 0x0018F3C8 File Offset: 0x0018D5C8
+		// (set) Token: 0x0600B18D RID: 45453 RVA: 0x0018F402 File Offset: 0x0018D602
 		public virtual float? MinInterpolationSpeed
 		{
 			get
@@ -158,11 +156,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400639A RID: 25498
+		// Token: 0x0400697E RID: 27006
 		[Nullable(2)]
 		protected ISingleAxisSpringArmSoftZoneConfig FbInstance;
 
-		// Token: 0x0400639B RID: 25499
+		// Token: 0x0400697F RID: 27007
 		[Nullable(2)]
 		protected ISingleAxisSpringArmSoftZoneConfig_SetValue PocoInterface;
 	}

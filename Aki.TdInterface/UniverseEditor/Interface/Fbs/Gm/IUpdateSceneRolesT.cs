@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x020046D6 RID: 18134
+	// Token: 0x02004B3E RID: 19262
 	public class IUpdateSceneRolesT
 	{
-		// Token: 0x170080D7 RID: 32983
-		// (get) Token: 0x0601B933 RID: 112947 RVA: 0x003E942B File Offset: 0x003E762B
-		// (set) Token: 0x0601B934 RID: 112948 RVA: 0x003E9433 File Offset: 0x003E7633
+		// Token: 0x17008718 RID: 34584
+		// (get) Token: 0x0601D108 RID: 119048 RVA: 0x004156C7 File Offset: 0x004138C7
+		// (set) Token: 0x0601D109 RID: 119049 RVA: 0x004156CF File Offset: 0x004138CF
 		public EGmCommand Type { get; set; }
 
-		// Token: 0x170080D8 RID: 32984
-		// (get) Token: 0x0601B935 RID: 112949 RVA: 0x003E943C File Offset: 0x003E763C
-		// (set) Token: 0x0601B936 RID: 112950 RVA: 0x003E9444 File Offset: 0x003E7644
+		// Token: 0x17008719 RID: 34585
+		// (get) Token: 0x0601D10A RID: 119050 RVA: 0x004156D8 File Offset: 0x004138D8
+		// (set) Token: 0x0601D10B RID: 119051 RVA: 0x004156E0 File Offset: 0x004138E0
 		public string Group { get; set; }
 
-		// Token: 0x0601B937 RID: 112951 RVA: 0x003E944D File Offset: 0x003E764D
+		// Token: 0x0601D10C RID: 119052 RVA: 0x004156E9 File Offset: 0x004138E9
 		public IUpdateSceneRolesT()
 		{
 			this.Type = EGmCommand.SkipToLevelPlayNode;

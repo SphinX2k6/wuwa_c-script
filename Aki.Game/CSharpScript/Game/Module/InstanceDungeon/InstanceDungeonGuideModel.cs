@@ -4,24 +4,24 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.InstanceDungeon
 {
-	// Token: 0x02005877 RID: 22647
+	// Token: 0x0200484F RID: 18511
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InstanceDungeonGuideModel : ModelBase
 	{
-		// Token: 0x060399F9 RID: 236025 RVA: 0x00DB19BC File Offset: 0x00DAFBBC
+		// Token: 0x0602E91A RID: 190746 RVA: 0x00D0088C File Offset: 0x00CFEA8C
 		public int GetCurrentInstanceDungeonGuideType()
 		{
 			return this.CurrentInstanceDungeonGuideType;
 		}
 
-		// Token: 0x060399FA RID: 236026 RVA: 0x00DB19C4 File Offset: 0x00DAFBC4
+		// Token: 0x0602E91B RID: 190747 RVA: 0x00D00894 File Offset: 0x00CFEA94
 		public int GetCurrentInstanceDungeonGuideValue()
 		{
 			return this.CurrentInstanceDungeonGuideValue;
 		}
 
-		// Token: 0x060399FB RID: 236027 RVA: 0x00DB19CC File Offset: 0x00DAFBCC
+		// Token: 0x0602E91C RID: 190748 RVA: 0x00D0089C File Offset: 0x00CFEA9C
 		public void RefreshCurrentDungeonGuide()
 		{
 			ValueTuple<int, int> guide = InstanceDungeonConfig.Instance.GetGuide(CreatureModel.Instance.GetInstanceId());
@@ -30,14 +30,14 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			EventSystem.Instance.Emit(EEventName.DungeonGuideChange);
 		}
 
-		// Token: 0x060399FC RID: 236028 RVA: 0x00DB1A16 File Offset: 0x00DAFC16
+		// Token: 0x0602E91D RID: 190749 RVA: 0x00D008E6 File Offset: 0x00CFEAE6
 		public bool GetHaveGuide()
 		{
 			return this.CurrentInstanceDungeonGuideType != 0;
 		}
 
-		// Token: 0x17008A69 RID: 35433
-		// (get) Token: 0x060399FD RID: 236029 RVA: 0x00DB1A21 File Offset: 0x00DAFC21
+		// Token: 0x17005E35 RID: 24117
+		// (get) Token: 0x0602E91E RID: 190750 RVA: 0x00D008F1 File Offset: 0x00CFEAF1
 		public static InstanceDungeonGuideModel Instance
 		{
 			get
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x060399FE RID: 236030 RVA: 0x00DB1A28 File Offset: 0x00DAFC28
+		// Token: 0x0602E91F RID: 190751 RVA: 0x00D008F8 File Offset: 0x00CFEAF8
 		public static InstanceDungeonGuideModel GetOrCreateInstance()
 		{
 			if (InstanceDungeonGuideModel._Instance == null)
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return InstanceDungeonGuideModel._Instance;
 		}
 
-		// Token: 0x060399FF RID: 236031 RVA: 0x00DB1A3C File Offset: 0x00DAFC3C
+		// Token: 0x0602E920 RID: 190752 RVA: 0x00D0090C File Offset: 0x00CFEB0C
 		public static bool CreateInstance()
 		{
 			if (InstanceDungeonGuideModel._Instance != null)
@@ -67,30 +67,30 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return true;
 		}
 
-		// Token: 0x06039A00 RID: 236032 RVA: 0x00DB1A52 File Offset: 0x00DAFC52
+		// Token: 0x0602E921 RID: 190753 RVA: 0x00D00922 File Offset: 0x00CFEB22
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06039A01 RID: 236033 RVA: 0x00DB1A54 File Offset: 0x00DAFC54
+		// Token: 0x0602E922 RID: 190754 RVA: 0x00D00924 File Offset: 0x00CFEB24
 		public static void ResetStaticDefaultValue()
 		{
 			InstanceDungeonGuideModel._Instance = null;
 		}
 
-		// Token: 0x06039A02 RID: 236034 RVA: 0x00DB1A5C File Offset: 0x00DAFC5C
+		// Token: 0x0602E923 RID: 190755 RVA: 0x00D0092C File Offset: 0x00CFEB2C
 		static InstanceDungeonGuideModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(InstanceDungeonGuideModel.CreateStaticDefaultValue), new Action(InstanceDungeonGuideModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401E1E4 RID: 123364
+		// Token: 0x04018C81 RID: 101505
 		private int CurrentInstanceDungeonGuideType;
 
-		// Token: 0x0401E1E5 RID: 123365
+		// Token: 0x04018C82 RID: 101506
 		private int CurrentInstanceDungeonGuideValue;
 
-		// Token: 0x0401E1E6 RID: 123366
+		// Token: 0x04018C83 RID: 101507
 		[Nullable(2)]
 		private static InstanceDungeonGuideModel _Instance;
 	}

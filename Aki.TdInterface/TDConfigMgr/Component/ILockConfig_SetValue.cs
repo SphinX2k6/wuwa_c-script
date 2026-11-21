@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004CF RID: 1231
+	// Token: 0x02000528 RID: 1320
 	public class ILockConfig_SetValue
 	{
-		// Token: 0x04001271 RID: 4721
+		// Token: 0x04001393 RID: 5011
 		public bool IsInitLock;
 
-		// Token: 0x04001272 RID: 4722
+		// Token: 0x04001394 RID: 5012
 		public ELockType? LockType;
 	}
 }

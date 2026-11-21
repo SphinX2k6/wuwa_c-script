@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000E52 RID: 3666
+	// Token: 0x02000F37 RID: 3895
 	public struct MotorFightWave : IFlatbufferObject
 	{
-		// Token: 0x17002147 RID: 8519
-		// (get) Token: 0x0600999F RID: 39327 RVA: 0x00291B75 File Offset: 0x0028FD75
+		// Token: 0x170021AC RID: 8620
+		// (get) Token: 0x06009FBF RID: 40895 RVA: 0x002AF6A9 File Offset: 0x002AD8A9
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060099A0 RID: 39328 RVA: 0x00291B82 File Offset: 0x0028FD82
+		// Token: 0x06009FC0 RID: 40896 RVA: 0x002AF6B6 File Offset: 0x002AD8B6
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060099A1 RID: 39329 RVA: 0x00291B8C File Offset: 0x0028FD8C
+		// Token: 0x06009FC1 RID: 40897 RVA: 0x002AF6C0 File Offset: 0x002AD8C0
 		public static MotorFightWave GetRootAsMotorFightWave(ByteBuffer _bb)
 		{
 			return MotorFightWave.GetRootAsMotorFightWave(_bb, default(MotorFightWave));
 		}
 
-		// Token: 0x060099A2 RID: 39330 RVA: 0x00291BA8 File Offset: 0x0028FDA8
+		// Token: 0x06009FC2 RID: 40898 RVA: 0x002AF6DC File Offset: 0x002AD8DC
 		public static MotorFightWave GetRootAsMotorFightWave(ByteBuffer _bb, MotorFightWave obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060099A3 RID: 39331 RVA: 0x00291BC5 File Offset: 0x0028FDC5
+		// Token: 0x06009FC3 RID: 40899 RVA: 0x002AF6F9 File Offset: 0x002AD8F9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060099A4 RID: 39332 RVA: 0x00291BD4 File Offset: 0x0028FDD4
+		// Token: 0x06009FC4 RID: 40900 RVA: 0x002AF708 File Offset: 0x002AD908
 		public MotorFightWave __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002148 RID: 8520
-		// (get) Token: 0x060099A5 RID: 39333 RVA: 0x00291BE4 File Offset: 0x0028FDE4
+		// Token: 0x170021AD RID: 8621
+		// (get) Token: 0x06009FC5 RID: 40901 RVA: 0x002AF718 File Offset: 0x002AD918
 		public int WaveId
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002149 RID: 8521
-		// (get) Token: 0x060099A6 RID: 39334 RVA: 0x00291C20 File Offset: 0x0028FE20
+		// Token: 0x170021AE RID: 8622
+		// (get) Token: 0x06009FC6 RID: 40902 RVA: 0x002AF754 File Offset: 0x002AD954
 		public int RefreshType
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700214A RID: 8522
-		// (get) Token: 0x060099A7 RID: 39335 RVA: 0x00291C5C File Offset: 0x0028FE5C
+		// Token: 0x170021AF RID: 8623
+		// (get) Token: 0x06009FC7 RID: 40903 RVA: 0x002AF790 File Offset: 0x002AD990
 		public int RefreshGroupId
 		{
 			get
@@ -94,8 +94,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700214B RID: 8523
-		// (get) Token: 0x060099A8 RID: 39336 RVA: 0x00291C98 File Offset: 0x0028FE98
+		// Token: 0x170021B0 RID: 8624
+		// (get) Token: 0x06009FC8 RID: 40904 RVA: 0x002AF7CC File Offset: 0x002AD9CC
 		public int BuffGateBornGroup
 		{
 			get
@@ -109,8 +109,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700214C RID: 8524
-		// (get) Token: 0x060099A9 RID: 39337 RVA: 0x00291CD8 File Offset: 0x0028FED8
+		// Token: 0x170021B1 RID: 8625
+		// (get) Token: 0x06009FC9 RID: 40905 RVA: 0x002AF80C File Offset: 0x002ADA0C
 		public int ConditionId
 		{
 			get
@@ -124,8 +124,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700214D RID: 8525
-		// (get) Token: 0x060099AA RID: 39338 RVA: 0x00291D18 File Offset: 0x0028FF18
+		// Token: 0x170021B2 RID: 8626
+		// (get) Token: 0x06009FCA RID: 40906 RVA: 0x002AF84C File Offset: 0x002ADA4C
 		public int Weight
 		{
 			get
@@ -139,8 +139,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700214E RID: 8526
-		// (get) Token: 0x060099AB RID: 39339 RVA: 0x00291D58 File Offset: 0x0028FF58
+		// Token: 0x170021B3 RID: 8627
+		// (get) Token: 0x06009FCB RID: 40907 RVA: 0x002AF88C File Offset: 0x002ADA8C
 		public int BornTrack
 		{
 			get
@@ -154,7 +154,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060099AC RID: 39340 RVA: 0x00291D98 File Offset: 0x0028FF98
+		// Token: 0x06009FCC RID: 40908 RVA: 0x002AF8CC File Offset: 0x002ADACC
 		public int BornDistance(int j)
 		{
 			int num = this.__p.__offset(18);
@@ -165,8 +165,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700214F RID: 8527
-		// (get) Token: 0x060099AD RID: 39341 RVA: 0x00291DD8 File Offset: 0x0028FFD8
+		// Token: 0x170021B4 RID: 8628
+		// (get) Token: 0x06009FCD RID: 40909 RVA: 0x002AF90C File Offset: 0x002ADB0C
 		public int BornDistanceLength
 		{
 			get
@@ -180,37 +180,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060099AE RID: 39342 RVA: 0x00291E04 File Offset: 0x00290004
+		// Token: 0x06009FCE RID: 40910 RVA: 0x002AF938 File Offset: 0x002ADB38
 		public Span<int> GetBornDistanceBytes()
 		{
 			return this.__p.__vector_as_span<int>(18, 4);
 		}
 
-		// Token: 0x060099AF RID: 39343 RVA: 0x00291E14 File Offset: 0x00290014
+		// Token: 0x06009FCF RID: 40911 RVA: 0x002AF948 File Offset: 0x002ADB48
 		public int[] GetBornDistanceArray()
 		{
 			return this.__p.__vector_as_array<int>(18) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x060099B0 RID: 39344 RVA: 0x00291E2C File Offset: 0x0029002C
+		// Token: 0x06009FD0 RID: 40912 RVA: 0x002AF960 File Offset: 0x002ADB60
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用BornDistanceIter()或GetBornDistanceBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] BornDistance()
+		public int[] BornDistance()
 		{
-			MotorFightWave motorFightWave = this;
-			return motorFightWave.GetBornDistanceArray() ?? Array.Empty<int>();
+			return this.GetBornDistanceArray();
 		}
 
-		// Token: 0x060099B1 RID: 39345 RVA: 0x00291E50 File Offset: 0x00290050
+		// Token: 0x06009FD1 RID: 40913 RVA: 0x002AF968 File Offset: 0x002ADB68
 		[NullableContext(1)]
-		public readonly IEnumerable<int> BornDistanceIter()
+		public IEnumerable<int> BornDistanceIter()
 		{
 			MotorFightWave.<BornDistanceIter>d__28 <BornDistanceIter>d__ = new MotorFightWave.<BornDistanceIter>d__28(-2);
 			<BornDistanceIter>d__.<>3__<>4__this = this;
 			return <BornDistanceIter>d__;
 		}
 
-		// Token: 0x04004EFB RID: 20219
+		// Token: 0x040054E0 RID: 21728
 		private Table __p;
 	}
 }

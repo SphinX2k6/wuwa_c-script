@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000E57 RID: 3671
+	// Token: 0x02000F68 RID: 3944
 	[EnumExtensions]
 	public enum EBindingProgressType
 	{
-		// Token: 0x04002FC2 RID: 12226
+		// Token: 0x040032B9 RID: 12985
 		PlayerHavingItemCount
 	}
 }

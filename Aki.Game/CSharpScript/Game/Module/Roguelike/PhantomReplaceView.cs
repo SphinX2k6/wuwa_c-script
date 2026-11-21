@@ -7,17 +7,17 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DEC RID: 19948
+	// Token: 0x02003DB5 RID: 15797
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomReplaceView : PhantomSelectView
 	{
-		// Token: 0x060337A5 RID: 210853 RVA: 0x00C073DC File Offset: 0x00C055DC
+		// Token: 0x06028610 RID: 165392 RVA: 0x00B508EC File Offset: 0x00B4EAEC
 		public PhantomReplaceView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x060337A6 RID: 210854 RVA: 0x00C073E8 File Offset: 0x00C055E8
+		// Token: 0x06028611 RID: 165393 RVA: 0x00B508F8 File Offset: 0x00B4EAF8
 		protected override void ConfirmBtn(int _)
 		{
 			RogueGainEntry rogueGainEntry = (this.RoguelikeChooseData.RogueGainEntryList.Count > 0) ? this.RoguelikeChooseData.RogueGainEntryList[0] : null;
@@ -30,20 +30,20 @@ namespace CSharpScript.Game.Module.Roguelike
 			RoguelikeController.Instance.RogueChooseDataResultRequest(EPerkType.Phantom);
 		}
 
-		// Token: 0x060337A7 RID: 210855 RVA: 0x00C07455 File Offset: 0x00C05655
+		// Token: 0x06028612 RID: 165394 RVA: 0x00B50965 File Offset: 0x00B4EB65
 		protected void GiveUpBtn()
 		{
 			RoguelikeController.Instance.RoguelikeGiveUpGainRequest(this.RoguelikeChooseData.Index).Forget();
 		}
 
-		// Token: 0x060337A8 RID: 210856 RVA: 0x00C07471 File Offset: 0x00C05671
+		// Token: 0x06028613 RID: 165395 RVA: 0x00B50981 File Offset: 0x00B4EB81
 		protected override void OnStart()
 		{
 			base.OnStart();
 			this.IsShowChooseTips = true;
 		}
 
-		// Token: 0x060337A9 RID: 210857 RVA: 0x00C07480 File Offset: 0x00C05680
+		// Token: 0x06028614 RID: 165396 RVA: 0x00B50990 File Offset: 0x00B4EB90
 		protected override void RefreshTopPanel()
 		{
 			this.TopPanel.RefreshTitle("RoguelikeView_1_Text");
@@ -58,12 +58,12 @@ namespace CSharpScript.Game.Module.Roguelike
 			});
 		}
 
-		// Token: 0x060337AA RID: 210858 RVA: 0x00C0753A File Offset: 0x00C0573A
+		// Token: 0x06028615 RID: 165397 RVA: 0x00B50A4A File Offset: 0x00B4EC4A
 		protected override void RefreshBtnEnableClick()
 		{
 		}
 
-		// Token: 0x060337AB RID: 210859 RVA: 0x00C0753C File Offset: 0x00C0573C
+		// Token: 0x06028616 RID: 165398 RVA: 0x00B50A4C File Offset: 0x00B4EC4C
 		private RogueGainEntry[] GetRogueGainEntryList()
 		{
 			List<RogueGainEntry> list = new List<RogueGainEntry>();

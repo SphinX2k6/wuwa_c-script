@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006B24 RID: 27428
+	// Token: 0x0200725B RID: 29275
 	public struct IMotorParkourTrackingEvent : IFlatbufferObject
 	{
-		// Token: 0x1700CBD8 RID: 52184
-		// (get) Token: 0x0603023C RID: 197180 RVA: 0x0068B190 File Offset: 0x00689390
+		// Token: 0x1700D6A7 RID: 54951
+		// (get) Token: 0x06033010 RID: 208912 RVA: 0x006E2848 File Offset: 0x006E0A48
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603023D RID: 197181 RVA: 0x0068B19D File Offset: 0x0068939D
+		// Token: 0x06033011 RID: 208913 RVA: 0x006E2855 File Offset: 0x006E0A55
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0603023E RID: 197182 RVA: 0x0068B1A4 File Offset: 0x006893A4
+		// Token: 0x06033012 RID: 208914 RVA: 0x006E285C File Offset: 0x006E0A5C
 		public static IMotorParkourTrackingEvent GetRootAsIMotorParkourTrackingEvent(ByteBuffer _bb)
 		{
 			return IMotorParkourTrackingEvent.GetRootAsIMotorParkourTrackingEvent(_bb, default(IMotorParkourTrackingEvent));
 		}
 
-		// Token: 0x0603023F RID: 197183 RVA: 0x0068B1C0 File Offset: 0x006893C0
+		// Token: 0x06033013 RID: 208915 RVA: 0x006E2878 File Offset: 0x006E0A78
 		public static IMotorParkourTrackingEvent GetRootAsIMotorParkourTrackingEvent(ByteBuffer _bb, IMotorParkourTrackingEvent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06030240 RID: 197184 RVA: 0x0068B1DD File Offset: 0x006893DD
+		// Token: 0x06033014 RID: 208916 RVA: 0x006E2895 File Offset: 0x006E0A95
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06030241 RID: 197185 RVA: 0x0068B1EC File Offset: 0x006893EC
+		// Token: 0x06033015 RID: 208917 RVA: 0x006E28A4 File Offset: 0x006E0AA4
 		public IMotorParkourTrackingEvent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CBD9 RID: 52185
-		// (get) Token: 0x06030242 RID: 197186 RVA: 0x0068B1FC File Offset: 0x006893FC
+		// Token: 0x1700D6A8 RID: 54952
+		// (get) Token: 0x06033016 RID: 208918 RVA: 0x006E28B4 File Offset: 0x006E0AB4
 		public ETrackingEventType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CBDA RID: 52186
-		// (get) Token: 0x06030243 RID: 197187 RVA: 0x0068B238 File Offset: 0x00689438
+		// Token: 0x1700D6A9 RID: 54953
+		// (get) Token: 0x06033017 RID: 208919 RVA: 0x006E28F0 File Offset: 0x006E0AF0
 		public EMotorParkourPhase MotorParkourPhase
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CBDB RID: 52187
-		// (get) Token: 0x06030244 RID: 197188 RVA: 0x0068B274 File Offset: 0x00689474
+		// Token: 0x1700D6AA RID: 54954
+		// (get) Token: 0x06033018 RID: 208920 RVA: 0x006E292C File Offset: 0x006E0B2C
 		public TVarRef MotorParkourScoreVarRefType
 		{
 			get
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030245 RID: 197189 RVA: 0x0068B2B0 File Offset: 0x006894B0
+		// Token: 0x06033019 RID: 208921 RVA: 0x006E2968 File Offset: 0x006E0B68
 		public TTable? MotorParkourScoreVarRef<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(10);
@@ -104,37 +104,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06030246 RID: 197190 RVA: 0x0068B2F8 File Offset: 0x006894F8
+		// Token: 0x0603301A RID: 208922 RVA: 0x006E29B0 File Offset: 0x006E0BB0
 		public IConstVarRef MotorParkourScoreVarRefAsIConstVarRef()
 		{
 			return this.MotorParkourScoreVarRef<IConstVarRef>().Value;
 		}
 
-		// Token: 0x06030247 RID: 197191 RVA: 0x0068B314 File Offset: 0x00689514
+		// Token: 0x0603301B RID: 208923 RVA: 0x006E29CC File Offset: 0x006E0BCC
 		public IGlobalVarRef MotorParkourScoreVarRefAsIGlobalVarRef()
 		{
 			return this.MotorParkourScoreVarRef<IGlobalVarRef>().Value;
 		}
 
-		// Token: 0x06030248 RID: 197192 RVA: 0x0068B330 File Offset: 0x00689530
+		// Token: 0x0603301C RID: 208924 RVA: 0x006E29E8 File Offset: 0x006E0BE8
 		public IOtherVarRef MotorParkourScoreVarRefAsIOtherVarRef()
 		{
 			return this.MotorParkourScoreVarRef<IOtherVarRef>().Value;
 		}
 
-		// Token: 0x06030249 RID: 197193 RVA: 0x0068B34C File Offset: 0x0068954C
+		// Token: 0x0603301D RID: 208925 RVA: 0x006E2A04 File Offset: 0x006E0C04
 		public ISelfVarRef MotorParkourScoreVarRefAsISelfVarRef()
 		{
 			return this.MotorParkourScoreVarRef<ISelfVarRef>().Value;
 		}
 
-		// Token: 0x0603024A RID: 197194 RVA: 0x0068B368 File Offset: 0x00689568
+		// Token: 0x0603301E RID: 208926 RVA: 0x006E2A20 File Offset: 0x006E0C20
 		public ISystemVarRef MotorParkourScoreVarRefAsISystemVarRef()
 		{
 			return this.MotorParkourScoreVarRef<ISystemVarRef>().Value;
 		}
 
-		// Token: 0x0603024B RID: 197195 RVA: 0x0068B383 File Offset: 0x00689583
+		// Token: 0x0603301F RID: 208927 RVA: 0x006E2A3B File Offset: 0x006E0C3B
 		public static Offset<IMotorParkourTrackingEvent> CreateIMotorParkourTrackingEvent(FlatBufferBuilder builder, ETrackingEventType Type = ETrackingEventType.EasterEgg, EMotorParkourPhase MotorParkourPhase = EMotorParkourPhase.Start, TVarRef MotorParkourScoreVarRef_type = TVarRef.NONE, int MotorParkourScoreVarRefOffset = 0)
 		{
 			builder.StartTable(4);
@@ -145,43 +145,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IMotorParkourTrackingEvent.EndIMotorParkourTrackingEvent(builder);
 		}
 
-		// Token: 0x0603024C RID: 197196 RVA: 0x0068B3AF File Offset: 0x006895AF
+		// Token: 0x06033020 RID: 208928 RVA: 0x006E2A67 File Offset: 0x006E0C67
 		public static void StartIMotorParkourTrackingEvent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0603024D RID: 197197 RVA: 0x0068B3B8 File Offset: 0x006895B8
+		// Token: 0x06033021 RID: 208929 RVA: 0x006E2A70 File Offset: 0x006E0C70
 		public static void AddType(FlatBufferBuilder builder, ETrackingEventType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0603024E RID: 197198 RVA: 0x0068B3C3 File Offset: 0x006895C3
+		// Token: 0x06033022 RID: 208930 RVA: 0x006E2A7B File Offset: 0x006E0C7B
 		public static void AddMotorParkourPhase(FlatBufferBuilder builder, EMotorParkourPhase motorParkourPhase)
 		{
 			builder.AddByte(1, (byte)motorParkourPhase, 0);
 		}
 
-		// Token: 0x0603024F RID: 197199 RVA: 0x0068B3CE File Offset: 0x006895CE
+		// Token: 0x06033023 RID: 208931 RVA: 0x006E2A86 File Offset: 0x006E0C86
 		public static void AddMotorParkourScoreVarRefType(FlatBufferBuilder builder, TVarRef motorParkourScoreVarRefType)
 		{
 			builder.AddByte(2, (byte)motorParkourScoreVarRefType, 0);
 		}
 
-		// Token: 0x06030250 RID: 197200 RVA: 0x0068B3D9 File Offset: 0x006895D9
+		// Token: 0x06033024 RID: 208932 RVA: 0x006E2A91 File Offset: 0x006E0C91
 		public static void AddMotorParkourScoreVarRef(FlatBufferBuilder builder, int motorParkourScoreVarRefOffset)
 		{
 			builder.AddOffset(3, motorParkourScoreVarRefOffset, 0);
 		}
 
-		// Token: 0x06030251 RID: 197201 RVA: 0x0068B3E4 File Offset: 0x006895E4
+		// Token: 0x06033025 RID: 208933 RVA: 0x006E2A9C File Offset: 0x006E0C9C
 		public static Offset<IMotorParkourTrackingEvent> EndIMotorParkourTrackingEvent(FlatBufferBuilder builder)
 		{
 			return new Offset<IMotorParkourTrackingEvent>(builder.EndTable());
 		}
 
-		// Token: 0x06030252 RID: 197202 RVA: 0x0068B3F4 File Offset: 0x006895F4
+		// Token: 0x06033026 RID: 208934 RVA: 0x006E2AAC File Offset: 0x006E0CAC
 		public IMotorParkourTrackingEventT UnPack()
 		{
 			IMotorParkourTrackingEventT motorParkourTrackingEventT = new IMotorParkourTrackingEventT();
@@ -189,7 +189,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return motorParkourTrackingEventT;
 		}
 
-		// Token: 0x06030253 RID: 197203 RVA: 0x0068B410 File Offset: 0x00689610
+		// Token: 0x06033027 RID: 208935 RVA: 0x006E2AC8 File Offset: 0x006E0CC8
 		public void UnPackTo(IMotorParkourTrackingEventT _o)
 		{
 			_o.Type = this.Type;
@@ -218,7 +218,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030254 RID: 197204 RVA: 0x0068B588 File Offset: 0x00689788
+		// Token: 0x06033028 RID: 208936 RVA: 0x006E2C40 File Offset: 0x006E0E40
 		public static Offset<IMotorParkourTrackingEvent> Pack(FlatBufferBuilder builder, IMotorParkourTrackingEventT _o)
 		{
 			if (_o == null)
@@ -230,7 +230,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IMotorParkourTrackingEvent.CreateIMotorParkourTrackingEvent(builder, _o.Type, _o.MotorParkourPhase, motorParkourScoreVarRef_type, motorParkourScoreVarRefOffset);
 		}
 
-		// Token: 0x040113B9 RID: 70585
+		// Token: 0x040122CC RID: 74444
 		private Table __p;
 	}
 }

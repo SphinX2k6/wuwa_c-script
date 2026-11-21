@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200251E RID: 9502
+// Token: 0x02001A05 RID: 6661
 public class SettingPanelChatItem : UiPanelBase
 {
-	// Token: 0x060131D5 RID: 78293 RVA: 0x004BEC74 File Offset: 0x004BCE74
+	// Token: 0x06010695 RID: 67221 RVA: 0x004CC980 File Offset: 0x004CAB80
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ public class SettingPanelChatItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x060131D6 RID: 78294 RVA: 0x004BED98 File Offset: 0x004BCF98
+	// Token: 0x06010696 RID: 67222 RVA: 0x004CCAA4 File Offset: 0x004CACA4
 	public void RefreshSpeakerNameTextColor(int bgId)
 	{
 		bool flag = PhoneMsgModel.Instance.IsDefaultChatBg(bgId);
@@ -39,7 +39,7 @@ public class SettingPanelChatItem : UiPanelBase
 		text.SetUIActive(!flag);
 	}
 
-	// Token: 0x060131D7 RID: 78295 RVA: 0x004BEDD4 File Offset: 0x004BCFD4
+	// Token: 0x06010697 RID: 67223 RVA: 0x004CCAE0 File Offset: 0x004CACE0
 	public void OnNameChange()
 	{
 		string text = FunctionModel.Instance.GetPlayerName() ?? "";

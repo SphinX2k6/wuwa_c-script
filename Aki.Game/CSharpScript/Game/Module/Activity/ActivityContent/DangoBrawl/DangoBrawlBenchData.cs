@@ -6,13 +6,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067CB RID: 26571
+	// Token: 0x0200571B RID: 22299
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlBenchData
 	{
-		// Token: 0x170096C6 RID: 38598
-		// (get) Token: 0x060422C2 RID: 271042 RVA: 0x0100C445 File Offset: 0x0100A645
+		// Token: 0x17006A07 RID: 27143
+		// (get) Token: 0x06036E18 RID: 224792 RVA: 0x00F4D811 File Offset: 0x00F4BA11
 		public int MyActivityId
 		{
 			get
@@ -21,14 +21,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x060422C3 RID: 271043 RVA: 0x0100C44D File Offset: 0x0100A64D
+		// Token: 0x06036E19 RID: 224793 RVA: 0x00F4D819 File Offset: 0x00F4BA19
 		public void Init(int activityId, DangoBrawlBenchServerData serverData)
 		{
 			this.ActivityId = activityId;
 			this.InitItemDataMap(serverData);
 		}
 
-		// Token: 0x060422C4 RID: 271044 RVA: 0x0100C460 File Offset: 0x0100A660
+		// Token: 0x06036E1A RID: 224794 RVA: 0x00F4D82C File Offset: 0x00F4BA2C
 		private void InitItemDataMap(DangoBrawlBenchServerData serverData)
 		{
 			foreach (DangoBrawlBenchItemServerData dangoBrawlBenchItemServerData in serverData.GetItemList())
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x060422C5 RID: 271045 RVA: 0x0100C4D8 File Offset: 0x0100A6D8
+		// Token: 0x06036E1B RID: 224795 RVA: 0x00F4D8A4 File Offset: 0x00F4BAA4
 		public void AddItemDataToMap(DangoBrawlBenchItemServerData serverData, FVector2D? dropLguiPos = null, EDangoBrawlRotate bagRotation = EDangoBrawlRotate.Direction0, bool emitEvent = true)
 		{
 			DangoBrawlBenchItemData dangoBrawlBenchItemData = new DangoBrawlBenchItemData(serverData, bagRotation);
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x060422C6 RID: 271046 RVA: 0x0100C574 File Offset: 0x0100A774
+		// Token: 0x06036E1C RID: 224796 RVA: 0x00F4D940 File Offset: 0x00F4BB40
 		public void DelItemDataFromMap(int uid, bool emitEvent = true)
 		{
 			DangoBrawlBenchItemData dangoBrawlBenchItemData;
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x060422C7 RID: 271047 RVA: 0x0100C5B4 File Offset: 0x0100A7B4
+		// Token: 0x06036E1D RID: 224797 RVA: 0x00F4D980 File Offset: 0x00F4BB80
 		public bool MoveItem(int uid, FVector2D? dropLguiPos = null, EDangoBrawlRotate? newRotation = null, bool emitEvent = true)
 		{
 			DangoBrawlBenchItemData dangoBrawlBenchItemData;
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return true;
 		}
 
-		// Token: 0x060422C8 RID: 271048 RVA: 0x0100C658 File Offset: 0x0100A858
+		// Token: 0x06036E1E RID: 224798 RVA: 0x00F4DA24 File Offset: 0x00F4BC24
 		[NullableContext(2)]
 		public DangoBrawlBenchItemData GetItem(int uid)
 		{
@@ -113,31 +113,31 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return result;
 		}
 
-		// Token: 0x060422C9 RID: 271049 RVA: 0x0100C678 File Offset: 0x0100A878
+		// Token: 0x06036E1F RID: 224799 RVA: 0x00F4DA44 File Offset: 0x00F4BC44
 		public List<DangoBrawlBenchItemData> GetItemList()
 		{
 			return new List<DangoBrawlBenchItemData>(this.ItemDataMap.Values);
 		}
 
-		// Token: 0x060422CA RID: 271050 RVA: 0x0100C68A File Offset: 0x0100A88A
+		// Token: 0x06036E20 RID: 224800 RVA: 0x00F4DA56 File Offset: 0x00F4BC56
 		public int GetAreaCount()
 		{
 			return DangoBrawlConfig.Instance.GetBenchAreaSizeByActivityId(this.ActivityId);
 		}
 
-		// Token: 0x060422CB RID: 271051 RVA: 0x0100C69C File Offset: 0x0100A89C
+		// Token: 0x06036E21 RID: 224801 RVA: 0x00F4DA68 File Offset: 0x00F4BC68
 		public bool HasCapacityFor(int n)
 		{
 			return this.ItemDataMap.Count + n <= 999;
 		}
 
-		// Token: 0x040228B9 RID: 141497
+		// Token: 0x0401D116 RID: 119062
 		private int ActivityId;
 
-		// Token: 0x040228BA RID: 141498
+		// Token: 0x0401D117 RID: 119063
 		private readonly Dictionary<int, DangoBrawlBenchItemData> ItemDataMap = new Dictionary<int, DangoBrawlBenchItemData>();
 
-		// Token: 0x040228BB RID: 141499
+		// Token: 0x0401D118 RID: 119064
 		private const int MAX_CAPACITY = 999;
 	}
 }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001451 RID: 5201
+	// Token: 0x020015A9 RID: 5545
 	public class IFocusModeSetting
 	{
-		// Token: 0x06007640 RID: 30272 RVA: 0x0011A7BD File Offset: 0x001189BD
-		[NullableContext(1)]
+		// Token: 0x06007D0A RID: 32010 RVA: 0x00129341 File Offset: 0x00127541
 		public static IFocusModeSetting Create(IFocusModeSetting? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002771 RID: 10097
-		// (get) Token: 0x06007641 RID: 30273 RVA: 0x0011A7DC File Offset: 0x001189DC
+		// Token: 0x1700295A RID: 10586
+		// (get) Token: 0x06007D0B RID: 32011 RVA: 0x00129360 File Offset: 0x00127560
 		public virtual bool? CanOpenFocusMode
 		{
 			get
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002772 RID: 10098
-		// (get) Token: 0x06007642 RID: 30274 RVA: 0x0011A814 File Offset: 0x00118A14
+		// Token: 0x1700295B RID: 10587
+		// (get) Token: 0x06007D0C RID: 32012 RVA: 0x00129398 File Offset: 0x00127598
 		public virtual bool? IsFocusModeInherit
 		{
 			get
@@ -49,8 +47,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002773 RID: 10099
-		// (get) Token: 0x06007643 RID: 30275 RVA: 0x0011A84C File Offset: 0x00118A4C
+		// Token: 0x1700295C RID: 10588
+		// (get) Token: 0x06007D0D RID: 32013 RVA: 0x001293D0 File Offset: 0x001275D0
 		public virtual bool? CanAcceptInFocusMode
 		{
 			get
@@ -63,8 +61,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002774 RID: 10100
-		// (get) Token: 0x06007644 RID: 30276 RVA: 0x0011A884 File Offset: 0x00118A84
+		// Token: 0x1700295D RID: 10589
+		// (get) Token: 0x06007D0E RID: 32014 RVA: 0x00129408 File Offset: 0x00127608
 		public virtual bool? IsFocusModeWhiteList
 		{
 			get
@@ -77,7 +75,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040044AB RID: 17579
+		// Token: 0x04004843 RID: 18499
 		private IFocusModeSetting Instance;
 	}
 }

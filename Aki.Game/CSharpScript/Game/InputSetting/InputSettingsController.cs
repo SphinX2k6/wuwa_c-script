@@ -14,13 +14,13 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.InputSetting
 {
-	// Token: 0x02006FF6 RID: 28662
+	// Token: 0x02006177 RID: 24951
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class InputSettingsController : ControllerBase
 	{
-		// Token: 0x06045B91 RID: 285585 RVA: 0x01151BEC File Offset: 0x0114FDEC
+		// Token: 0x0603BD42 RID: 245058 RVA: 0x010FB97C File Offset: 0x010F9B7C
 		protected override bool OnInit()
 		{
 			Net.Instance.Register(ENotifyMessageId.InputSettingUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.InputSettingUpdateNotify));
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.InputSetting
 			return true;
 		}
 
-		// Token: 0x06045B92 RID: 285586 RVA: 0x01151C27 File Offset: 0x0114FE27
+		// Token: 0x0603BD43 RID: 245059 RVA: 0x010FB9B7 File Offset: 0x010F9BB7
 		protected override bool OnClear()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.InputSettingUpdateNotify);
@@ -36,14 +36,14 @@ namespace CSharpScript.Game.InputSetting
 			return true;
 		}
 
-		// Token: 0x06045B93 RID: 285587 RVA: 0x01151C58 File Offset: 0x0114FE58
+		// Token: 0x0603BD44 RID: 245060 RVA: 0x010FB9E8 File Offset: 0x010F9BE8
 		private void OnGetPlayerBasicInfo()
 		{
 			Log.Instance.Info(ELogModule.InputSettings, ELogAuthor.XXJ, "登录直接请求服务端输入数据", default(ReadOnlySpan<ValueTuple<string, object>>));
 			this.InputSettingRequest();
 		}
 
-		// Token: 0x06045B94 RID: 285588 RVA: 0x01151C88 File Offset: 0x0114FE88
+		// Token: 0x0603BD45 RID: 245061 RVA: 0x010FBA18 File Offset: 0x010F9C18
 		[NullableContext(2)]
 		private void InputSettingUpdateNotify(IMessage msg, Net.CallbackStatus Status)
 		{
@@ -59,14 +59,14 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045B95 RID: 285589 RVA: 0x01151CE8 File Offset: 0x0114FEE8
+		// Token: 0x0603BD46 RID: 245062 RVA: 0x010FBA78 File Offset: 0x010F9C78
 		public void InputSettingRequest()
 		{
 			InputSettingRequest message = Aki.Protocol.InputSettingRequest.Create();
 			Net.Instance.Call(ERequestMessageId.InputSettingRequest, message, new Action<IMessage, Net.CallbackStatus>(this.InputSettingResponse), 0);
 		}
 
-		// Token: 0x06045B96 RID: 285590 RVA: 0x01151D18 File Offset: 0x0114FF18
+		// Token: 0x0603BD47 RID: 245063 RVA: 0x010FBAA8 File Offset: 0x010F9CA8
 		[NullableContext(2)]
 		private void InputSettingResponse(IMessage msg, Net.CallbackStatus Status)
 		{
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045B97 RID: 285591 RVA: 0x01151DC0 File Offset: 0x0114FFC0
+		// Token: 0x0603BD48 RID: 245064 RVA: 0x010FBB50 File Offset: 0x010F9D50
 		private void ApplyEmptyServerInputSettings()
 		{
 			SkillButtonUiGamepadDataBase gamepadData = SkillButtonUiModel.Instance.GamepadData;
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045B98 RID: 285592 RVA: 0x01151E88 File Offset: 0x01150088
+		// Token: 0x0603BD49 RID: 245065 RVA: 0x010FBC18 File Offset: 0x010F9E18
 		public void InputSettingUpdateRequest()
 		{
 			InputSettingUpdateRequest inputSettingUpdateRequest = Aki.Protocol.InputSettingUpdateRequest.Create();
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.InputSetting
 			Net.Instance.Call(ERequestMessageId.InputSettingUpdateRequest, inputSettingUpdateRequest, new Action<IMessage, Net.CallbackStatus>(this.InputSettingUpdateResponse), 0);
 		}
 
-		// Token: 0x06045B99 RID: 285593 RVA: 0x01151EC4 File Offset: 0x011500C4
+		// Token: 0x0603BD4A RID: 245066 RVA: 0x010FBC54 File Offset: 0x010F9E54
 		[NullableContext(2)]
 		private void InputSettingUpdateResponse(IMessage msg, Net.CallbackStatus _)
 		{
@@ -147,10 +147,10 @@ namespace CSharpScript.Game.InputSetting
 			{
 				return;
 			}
-			ErrorCodeController.Instance.OpenErrorCodeTipView(inputSettingUpdateResponse.ErrorCode, 29097, null, true, true);
+			ErrorCodeController.Instance.OpenErrorCodeTipView(inputSettingUpdateResponse.ErrorCode, 20916, null, true, true);
 		}
 
-		// Token: 0x06045B9A RID: 285594 RVA: 0x01151F00 File Offset: 0x01150100
+		// Token: 0x0603BD4B RID: 245067 RVA: 0x010FBC90 File Offset: 0x010F9E90
 		private bool TryGetInputBindType(SettingInputType inputType, out EInputBindingType bindingType)
 		{
 			foreach (KeyValuePair<EInputBindingType, SettingInputType> keyValuePair in this.InputBindTypeMap)
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.InputSetting
 			return false;
 		}
 
-		// Token: 0x06045B9B RID: 285595 RVA: 0x01151F70 File Offset: 0x01150170
+		// Token: 0x0603BD4C RID: 245068 RVA: 0x010FBD00 File Offset: 0x010F9F00
 		private bool TryGetInputControllerType(InputSettingDevice inputDeviceType, out CSharpScript.Game.Module.Menu.EInputControllerType inputControllerType)
 		{
 			if (inputDeviceType == InputSettingDevice.Mouse)
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.InputSetting
 			return false;
 		}
 
-		// Token: 0x06045B9C RID: 285596 RVA: 0x01151F88 File Offset: 0x01150188
+		// Token: 0x0603BD4D RID: 245069 RVA: 0x010FBD18 File Offset: 0x010F9F18
 		private bool TryApplySparseInputSettingSnapshot(InputSettingData inputSettingsData)
 		{
 			NormalizedInputSettingSnapshot normalizedInputSettingSnapshot = this.TryNormalizeInputSettingSnapshot(inputSettingsData);
@@ -206,19 +206,23 @@ namespace CSharpScript.Game.InputSetting
 			{
 				InputSettingsManager.Instance.RebuildDefaultInputSnapshot();
 				InputSettingsManager.Instance.ClearAppliedServerOverrides();
-				InputSettingApplyCount applyCount = new InputSettingApplyCount();
+				InputSettingApplyCount inputSettingApplyCount = new InputSettingApplyCount();
 				bool flag = false;
 				foreach (NormalizedOneDeviceInputSetting deviceSetting in normalizedInputSettingSnapshot.DeviceSettings)
 				{
-					flag |= this.ApplyOneDeviceSparseOverrides(deviceSetting, applyCount);
+					flag |= this.ApplyOneDeviceSparseOverrides(deviceSetting, inputSettingApplyCount, false);
+				}
+				foreach (NormalizedOneDeviceInputSetting deviceSetting2 in normalizedInputSettingSnapshot.DeviceSettings)
+				{
+					flag |= this.ApplyOneDeviceSparseOverrides(deviceSetting2, inputSettingApplyCount, true);
 				}
 				bool flag2 = InputSettingsManager.Instance.ConvertAppliedServerKeyboardOverrides(serverDeviceLang, text);
 				this.HandleLinkActionKey();
 				this.HandleBothActionSyncAllExclusiveKey();
-				this.NormalizeActionCombinationActionExclusivity(applyCount);
+				this.NormalizeActionCombinationActionExclusivity(inputSettingApplyCount);
 				InputSettingsManager.Instance.RebuildCurrentCombinationRuntimeMappings();
-				bool needNormalizeUpload = flag || flag2;
-				this.LogInputSettingApplyResult(normalizedInputSettingSnapshot.DeviceSettings.Count, applyCount, flag2, needNormalizeUpload);
+				bool needNormalizeUpload = flag || flag2 || inputSettingApplyCount.EmptyOverrideRejected > 0;
+				this.LogInputSettingApplyResult(normalizedInputSettingSnapshot.DeviceSettings.Count, inputSettingApplyCount, flag2, needNormalizeUpload);
 				this.FinishApplyingInputSnapshot(needNormalizeUpload);
 				result = true;
 			}
@@ -238,31 +242,32 @@ namespace CSharpScript.Game.InputSetting
 			return result;
 		}
 
-		// Token: 0x06045B9D RID: 285597 RVA: 0x011520D8 File Offset: 0x011502D8
+		// Token: 0x0603BD4E RID: 245070 RVA: 0x010FBEF4 File Offset: 0x010FA0F4
 		private unsafe void LogInputSettingApplyResult(int deviceCount, InputSettingApplyCount applyCount, bool deviceLangChanged, bool needNormalizeUpload)
 		{
 			Log instance = Log.Instance;
 			ELogModule module = ELogModule.InputSettings;
 			ELogAuthor author = ELogAuthor.TZJ;
 			string message = "服务端键位数据应用完成";
-			<>y__InlineArray13<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray13<ValueTuple<string, object>>);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray13<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("DeviceCount", deviceCount);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray13<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("ActionApplied", applyCount.ActionApplied);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray13<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("ActionSkipped", applyCount.ActionSkipped);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray13<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 3) = new ValueTuple<string, object>("AxisApplied", applyCount.AxisApplied);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray13<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 4) = new ValueTuple<string, object>("AxisSkipped", applyCount.AxisSkipped);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray13<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 5) = new ValueTuple<string, object>("CombinationActionApplied", applyCount.CombinationActionApplied);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray13<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 6) = new ValueTuple<string, object>("CombinationActionSkipped", applyCount.CombinationActionSkipped);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray13<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 7) = new ValueTuple<string, object>("CombinationAxisApplied", applyCount.CombinationAxisApplied);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray13<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 8) = new ValueTuple<string, object>("CombinationAxisSkipped", applyCount.CombinationAxisSkipped);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray13<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 9) = new ValueTuple<string, object>("VersionOutdated", applyCount.VersionOutdated);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray13<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 10) = new ValueTuple<string, object>("ExclusivityCleared", applyCount.ExclusivityCleared);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray13<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 11) = new ValueTuple<string, object>("DeviceLangChanged", deviceLangChanged);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray13<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 12) = new ValueTuple<string, object>("NeedNormalizeUpload", needNormalizeUpload);
-			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray13<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 13));
+			<>y__InlineArray14<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray14<ValueTuple<string, object>>);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray14<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("DeviceCount", deviceCount);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray14<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("ActionApplied", applyCount.ActionApplied);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray14<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("ActionSkipped", applyCount.ActionSkipped);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray14<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 3) = new ValueTuple<string, object>("AxisApplied", applyCount.AxisApplied);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray14<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 4) = new ValueTuple<string, object>("AxisSkipped", applyCount.AxisSkipped);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray14<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 5) = new ValueTuple<string, object>("CombinationActionApplied", applyCount.CombinationActionApplied);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray14<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 6) = new ValueTuple<string, object>("CombinationActionSkipped", applyCount.CombinationActionSkipped);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray14<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 7) = new ValueTuple<string, object>("CombinationAxisApplied", applyCount.CombinationAxisApplied);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray14<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 8) = new ValueTuple<string, object>("CombinationAxisSkipped", applyCount.CombinationAxisSkipped);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray14<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 9) = new ValueTuple<string, object>("VersionOutdated", applyCount.VersionOutdated);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray14<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 10) = new ValueTuple<string, object>("ExclusivityCleared", applyCount.ExclusivityCleared);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray14<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 11) = new ValueTuple<string, object>("EmptyOverrideRejected", applyCount.EmptyOverrideRejected);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray14<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 12) = new ValueTuple<string, object>("DeviceLangChanged", deviceLangChanged);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray14<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 13) = new ValueTuple<string, object>("NeedNormalizeUpload", needNormalizeUpload);
+			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray14<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 14));
 		}
 
-		// Token: 0x06045B9E RID: 285598 RVA: 0x011522B9 File Offset: 0x011504B9
+		// Token: 0x0603BD4F RID: 245071 RVA: 0x010FC0F8 File Offset: 0x010FA2F8
 		private void FinishApplyingInputSnapshot(bool needNormalizeUpload)
 		{
 			if (needNormalizeUpload)
@@ -273,7 +278,7 @@ namespace CSharpScript.Game.InputSetting
 			GameSettingsUtils.RefreshViewRevertState(Info.Instance.InputControllerMainType);
 		}
 
-		// Token: 0x06045B9F RID: 285599 RVA: 0x011522D4 File Offset: 0x011504D4
+		// Token: 0x0603BD50 RID: 245072 RVA: 0x010FC114 File Offset: 0x010FA314
 		private void TryRestoreDefaultSnapshot(Exception error)
 		{
 			try
@@ -294,7 +299,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045BA0 RID: 285600 RVA: 0x01152354 File Offset: 0x01150554
+		// Token: 0x0603BD51 RID: 245073 RVA: 0x010FC194 File Offset: 0x010FA394
 		[return: Nullable(2)]
 		private unsafe NormalizedInputSettingSnapshot TryNormalizeInputSettingSnapshot(InputSettingData inputSettingsData)
 		{
@@ -354,7 +359,7 @@ namespace CSharpScript.Game.InputSetting
 			return normalizedInputSettingSnapshot;
 		}
 
-		// Token: 0x06045BA1 RID: 285601 RVA: 0x01152640 File Offset: 0x01150840
+		// Token: 0x0603BD52 RID: 245074 RVA: 0x010FC480 File Offset: 0x010FA680
 		private unsafe void AddWinnerRecord<[Nullable(2)] TRecord>(Dictionary<string, Dictionary<EInputBindingType, TRecord>> winnerMap, string name, EInputBindingType bindingType, TRecord record, string categoryName)
 		{
 			Dictionary<EInputBindingType, TRecord> dictionary;
@@ -378,7 +383,7 @@ namespace CSharpScript.Game.InputSetting
 			dictionary[bindingType] = record;
 		}
 
-		// Token: 0x06045BA2 RID: 285602 RVA: 0x011526EC File Offset: 0x011508EC
+		// Token: 0x0603BD53 RID: 245075 RVA: 0x010FC52C File Offset: 0x010FA72C
 		private void NormalizeActionOverrides([Nullable(new byte[]
 		{
 			2,
@@ -449,7 +454,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045BA3 RID: 285603 RVA: 0x011528EC File Offset: 0x01150AEC
+		// Token: 0x0603BD54 RID: 245076 RVA: 0x010FC72C File Offset: 0x010FA92C
 		private void NormalizeAxisOverrides([Nullable(new byte[]
 		{
 			2,
@@ -524,7 +529,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045BA4 RID: 285604 RVA: 0x01152B48 File Offset: 0x01150D48
+		// Token: 0x0603BD55 RID: 245077 RVA: 0x010FC988 File Offset: 0x010FAB88
 		private void NormalizeCombinationActionOverrides([Nullable(new byte[]
 		{
 			2,
@@ -582,7 +587,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045BA5 RID: 285605 RVA: 0x01152CE8 File Offset: 0x01150EE8
+		// Token: 0x0603BD56 RID: 245078 RVA: 0x010FCB28 File Offset: 0x010FAD28
 		private unsafe void NormalizeCombinationAxisOverrides([Nullable(new byte[]
 		{
 			2,
@@ -676,7 +681,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045BA6 RID: 285606 RVA: 0x01152FDC File Offset: 0x011511DC
+		// Token: 0x0603BD57 RID: 245079 RVA: 0x010FCE1C File Offset: 0x010FB01C
 		private unsafe bool TryNormalizeCombinationKeyList([Nullable(new byte[]
 		{
 			2,
@@ -734,13 +739,170 @@ namespace CSharpScript.Game.InputSetting
 			return true;
 		}
 
-		// Token: 0x06045BA7 RID: 285607 RVA: 0x011531A8 File Offset: 0x011513A8
-		private bool ApplyOneDeviceSparseOverrides(NormalizedOneDeviceInputSetting deviceSetting, InputSettingApplyCount applyCount)
+		// Token: 0x0603BD58 RID: 245080 RVA: 0x010FCFE8 File Offset: 0x010FB1E8
+		private bool ApplyOneDeviceSparseOverrides(NormalizedOneDeviceInputSetting deviceSetting, InputSettingApplyCount applyCount, bool applyEmptyOverrides)
 		{
-			return false | this.ApplyNormalizedActionOverrides(deviceSetting, applyCount) | this.ApplyNormalizedAxisOverrides(deviceSetting, applyCount) | this.ApplyNormalizedCombinationActionOverrides(deviceSetting, applyCount) | this.ApplyNormalizedCombinationAxisOverrides(deviceSetting, applyCount);
+			return false | this.ApplyNormalizedActionOverrides(deviceSetting, applyCount, applyEmptyOverrides) | this.ApplyNormalizedAxisOverrides(deviceSetting, applyCount, applyEmptyOverrides) | this.ApplyNormalizedCombinationActionOverrides(deviceSetting, applyCount, applyEmptyOverrides) | this.ApplyNormalizedCombinationAxisOverrides(deviceSetting, applyCount, applyEmptyOverrides);
 		}
 
-		// Token: 0x06045BA8 RID: 285608 RVA: 0x011531D0 File Offset: 0x011513D0
+		// Token: 0x0603BD59 RID: 245081 RVA: 0x010FD013 File Offset: 0x010FB213
+		private static bool IsValidBindingKey(string keyName)
+		{
+			return !string.IsNullOrEmpty(keyName) && keyName != EKey.Keyboard_Invalid && keyName != EKey.Gamepad_Invalid;
+		}
+
+		// Token: 0x0603BD5A RID: 245082 RVA: 0x010FD044 File Offset: 0x010FB244
+		private static bool HasValidBindingKey(IEnumerable<string> keyNames)
+		{
+			using (IEnumerator<string> enumerator = keyNames.GetEnumerator())
+			{
+				while (enumerator.MoveNext())
+				{
+					if (InputSettingsController.IsValidBindingKey(enumerator.Current))
+					{
+						return true;
+					}
+				}
+			}
+			return false;
+		}
+
+		// Token: 0x0603BD5B RID: 245083 RVA: 0x010FD094 File Offset: 0x010FB294
+		private static bool HasValidCombinationBinding(IReadOnlyDictionary<string, string> keyMap)
+		{
+			foreach (KeyValuePair<string, string> keyValuePair in keyMap)
+			{
+				string text;
+				string text2;
+				keyValuePair.Deconstruct(out text, out text2);
+				string keyName = text;
+				string keyName2 = text2;
+				if (InputSettingsController.IsValidBindingKey(keyName) && InputSettingsController.IsValidBindingKey(keyName2))
+				{
+					return true;
+				}
+			}
+			return false;
+		}
+
+		// Token: 0x0603BD5C RID: 245084 RVA: 0x010FD0FC File Offset: 0x010FB2FC
+		private unsafe bool CanApplyEmptyOverride(string name, EInputBindingType bindingType, CSharpScript.Game.Module.Menu.EInputControllerType inputControllerType, bool isAction, bool isCombination, InputSettingApplyCount applyCount)
+		{
+			IReadOnlyList<KeySetting> configList = ConfigKeySettingAll.GetConfigList(true);
+			if (configList == null)
+			{
+				return true;
+			}
+			EKeySettingExclusiveType exclusiveTypeByBindingType = InputSettingsManager.Instance.GetExclusiveTypeByBindingType(bindingType);
+			foreach (KeySetting keySetting in configList)
+			{
+				if (!keySetting.CanDisable && keySetting.ActionOrAxis == 1 == isAction && keySetting.ExclusiveType == (int)exclusiveTypeByBindingType && (keySetting.InputControllerType == 0 || keySetting.InputControllerType == (int)inputControllerType))
+				{
+					bool flag = keySetting.ActionOrAxisName == name;
+					if (isAction)
+					{
+						int num = 0;
+						while (!flag && num < keySetting.BothActionNameLength)
+						{
+							flag = (keySetting.BothActionName(num) == name);
+							num++;
+						}
+					}
+					if (flag && ((!isCombination && !keySetting.CanCombination) || !this.HasOtherBinding(name, bindingType, inputControllerType, isAction, isCombination)))
+					{
+						applyCount.EmptyOverrideRejected++;
+						Log instance = Log.Instance;
+						ELogModule module = ELogModule.InputSettings;
+						ELogAuthor author = ELogAuthor.TZJ;
+						string message = "服务端要求清空不可禁用的键位，忽略该记录并回传本地键位";
+						<>y__InlineArray6<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray6<ValueTuple<string, object>>);
+						*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray6<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("KeySettingId", keySetting.Id);
+						*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray6<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("Name", name);
+						*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray6<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("InputControllerType", inputControllerType);
+						*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray6<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 3) = new ValueTuple<string, object>("BindingType", bindingType);
+						*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray6<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 4) = new ValueTuple<string, object>("IsAction", isAction);
+						*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray6<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 5) = new ValueTuple<string, object>("IsCombination", isCombination);
+						instance.Warn(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray6<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 6));
+						return false;
+					}
+				}
+			}
+			return true;
+		}
+
+		// Token: 0x0603BD5D RID: 245085 RVA: 0x010FD2F8 File Offset: 0x010FB4F8
+		private bool HasOtherBinding(string name, EInputBindingType bindingType, CSharpScript.Game.Module.Menu.EInputControllerType inputControllerType, bool isAction, bool isCombination)
+		{
+			bool flag = inputControllerType == CSharpScript.Game.Module.Menu.EInputControllerType.Keyboard;
+			if (!isCombination)
+			{
+				Dictionary<string, string> dictionary = new Dictionary<string, string>();
+				if (isAction)
+				{
+					InputCombinationActionBinding combinationActionBindingByActionName = InputSettingsManager.Instance.GetCombinationActionBindingByActionName(name);
+					if (flag)
+					{
+						if (combinationActionBindingByActionName != null)
+						{
+							combinationActionBindingByActionName.GetPcKeyNameMap(dictionary, bindingType);
+						}
+					}
+					else if (combinationActionBindingByActionName != null)
+					{
+						combinationActionBindingByActionName.GetGamepadKeyNameMapByBindingType(dictionary, bindingType);
+					}
+				}
+				else
+				{
+					InputCombinationAxisBinding combinationAxisBindingByAxisName = InputSettingsManager.Instance.GetCombinationAxisBindingByAxisName(name);
+					if (flag)
+					{
+						if (combinationAxisBindingByAxisName != null)
+						{
+							combinationAxisBindingByAxisName.GetPcKeyNameMap(dictionary, bindingType);
+						}
+					}
+					else if (combinationAxisBindingByAxisName != null)
+					{
+						combinationAxisBindingByAxisName.GetGamepadKeyNameMap(dictionary, bindingType);
+					}
+				}
+				return InputSettingsController.HasValidCombinationBinding(dictionary);
+			}
+			if (isAction)
+			{
+				List<string> list = new List<string>();
+				InputActionBinding actionBinding = InputSettingsManager.Instance.GetActionBinding(name);
+				if (flag)
+				{
+					if (actionBinding != null)
+					{
+						actionBinding.GetPcKeyNameListByBindingType(list, bindingType);
+					}
+				}
+				else if (actionBinding != null)
+				{
+					actionBinding.GetGamepadKeyNameListByBindingType(list, bindingType);
+				}
+				return InputSettingsController.HasValidBindingKey(list);
+			}
+			Dictionary<string, float> dictionary2 = new Dictionary<string, float>();
+			InputAxisBinding axisBinding = InputSettingsManager.Instance.GetAxisBinding(name);
+			if (flag)
+			{
+				if (axisBinding != null)
+				{
+					axisBinding.GetPcKeyNameMapByBindingType(dictionary2, bindingType);
+				}
+			}
+			else if (axisBinding != null)
+			{
+				axisBinding.GetGamepadKeyNameMapByBindingType(dictionary2, bindingType);
+			}
+			return InputSettingsController.HasValidBindingKey(dictionary2.Keys);
+		}
+
+		// Token: 0x0603BD5E RID: 245086 RVA: 0x010FD3F4 File Offset: 0x010FB5F4
 		private unsafe void LogVersionOutdatedKeys(string categoryName, CSharpScript.Game.Module.Menu.EInputControllerType inputControllerType, int outdatedCount)
 		{
 			if (outdatedCount <= 0)
@@ -758,174 +920,206 @@ namespace CSharpScript.Game.InputSetting
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 		}
 
-		// Token: 0x06045BA9 RID: 285609 RVA: 0x01153258 File Offset: 0x01151458
-		private bool ApplyNormalizedActionOverrides(NormalizedOneDeviceInputSetting deviceSetting, InputSettingApplyCount applyCount)
+		// Token: 0x0603BD5F RID: 245087 RVA: 0x010FD47C File Offset: 0x010FB67C
+		private bool ApplyNormalizedActionOverrides(NormalizedOneDeviceInputSetting deviceSetting, InputSettingApplyCount applyCount, bool applyEmptyOverrides)
 		{
 			bool result = false;
 			int num = 0;
 			bool flag = deviceSetting.InputControllerType == CSharpScript.Game.Module.Menu.EInputControllerType.Keyboard;
 			foreach (NormalizedActionOverride normalizedActionOverride in deviceSetting.ActionOverrides)
 			{
-				InputActionBinding actionBinding = InputSettingsManager.Instance.GetActionBinding(normalizedActionOverride.ActionName);
-				if (actionBinding == null)
+				bool flag2 = !InputSettingsController.HasValidBindingKey(normalizedActionOverride.KeyNameList);
+				if (flag2 == applyEmptyOverrides)
 				{
-					applyCount.ActionSkipped++;
-				}
-				else if ((flag ? actionBinding.GetKeyboardVersion(normalizedActionOverride.ExclusiveType) : actionBinding.GetGamepadVersion(normalizedActionOverride.ExclusiveType)) > normalizedActionOverride.Version)
-				{
-					applyCount.ActionSkipped++;
-					applyCount.VersionOutdated++;
-					num++;
-					result = true;
-				}
-				else
-				{
-					if (flag)
+					InputActionBinding actionBinding = InputSettingsManager.Instance.GetActionBinding(normalizedActionOverride.ActionName);
+					if (actionBinding == null)
 					{
-						actionBinding.SetKeyboardKeys(normalizedActionOverride.KeyNameList, normalizedActionOverride.BindingType);
-						actionBinding.SetKeyboardVersion(normalizedActionOverride.Version, normalizedActionOverride.ExclusiveType);
-						InputSettingsManager.Instance.MarkAppliedKeyboardActionOverride(normalizedActionOverride.ActionName, normalizedActionOverride.BindingType);
+						applyCount.ActionSkipped++;
+					}
+					else if ((flag ? actionBinding.GetKeyboardVersion(normalizedActionOverride.ExclusiveType) : actionBinding.GetGamepadVersion(normalizedActionOverride.ExclusiveType)) > normalizedActionOverride.Version)
+					{
+						applyCount.ActionSkipped++;
+						applyCount.VersionOutdated++;
+						num++;
+						result = true;
+					}
+					else if (flag2 && !this.CanApplyEmptyOverride(normalizedActionOverride.ActionName, normalizedActionOverride.BindingType, deviceSetting.InputControllerType, true, false, applyCount))
+					{
+						applyCount.ActionSkipped++;
 					}
 					else
 					{
-						actionBinding.SetGamepadKeys(normalizedActionOverride.KeyNameList, normalizedActionOverride.BindingType);
-						actionBinding.SetGamepadVersion(normalizedActionOverride.Version, normalizedActionOverride.ExclusiveType);
+						if (flag)
+						{
+							actionBinding.SetKeyboardKeys(normalizedActionOverride.KeyNameList, normalizedActionOverride.BindingType);
+							actionBinding.SetKeyboardVersion(normalizedActionOverride.Version, normalizedActionOverride.ExclusiveType);
+							InputSettingsManager.Instance.MarkAppliedKeyboardActionOverride(normalizedActionOverride.ActionName, normalizedActionOverride.BindingType);
+						}
+						else
+						{
+							actionBinding.SetGamepadKeys(normalizedActionOverride.KeyNameList, normalizedActionOverride.BindingType);
+							actionBinding.SetGamepadVersion(normalizedActionOverride.Version, normalizedActionOverride.ExclusiveType);
+						}
+						applyCount.ActionApplied++;
 					}
-					applyCount.ActionApplied++;
 				}
 			}
 			this.LogVersionOutdatedKeys("Action", deviceSetting.InputControllerType, num);
 			return result;
 		}
 
-		// Token: 0x06045BAA RID: 285610 RVA: 0x011533D0 File Offset: 0x011515D0
-		private bool ApplyNormalizedAxisOverrides(NormalizedOneDeviceInputSetting deviceSetting, InputSettingApplyCount applyCount)
+		// Token: 0x0603BD60 RID: 245088 RVA: 0x010FD644 File Offset: 0x010FB844
+		private bool ApplyNormalizedAxisOverrides(NormalizedOneDeviceInputSetting deviceSetting, InputSettingApplyCount applyCount, bool applyEmptyOverrides)
 		{
 			bool result = false;
 			int num = 0;
 			bool flag = deviceSetting.InputControllerType == CSharpScript.Game.Module.Menu.EInputControllerType.Keyboard;
 			foreach (NormalizedAxisOverride normalizedAxisOverride in deviceSetting.AxisOverrides)
 			{
-				InputAxisBinding axisBinding = InputSettingsManager.Instance.GetAxisBinding(normalizedAxisOverride.AxisName);
-				if (axisBinding == null)
+				bool flag2 = !InputSettingsController.HasValidBindingKey(normalizedAxisOverride.KeyScaleMap.Keys);
+				if (flag2 == applyEmptyOverrides)
 				{
-					applyCount.AxisSkipped++;
-				}
-				else if ((flag ? axisBinding.GetKeyboardVersion(normalizedAxisOverride.ExclusiveType) : axisBinding.GetGamepadVersion(normalizedAxisOverride.ExclusiveType)) > normalizedAxisOverride.Version)
-				{
-					applyCount.AxisSkipped++;
-					applyCount.VersionOutdated++;
-					num++;
-					result = true;
-				}
-				else
-				{
-					if (flag)
+					InputAxisBinding axisBinding = InputSettingsManager.Instance.GetAxisBinding(normalizedAxisOverride.AxisName);
+					if (axisBinding == null)
 					{
-						axisBinding.SetKeyboardKeys(normalizedAxisOverride.KeyScaleMap, normalizedAxisOverride.BindingType);
-						axisBinding.SetKeyboardVersion(normalizedAxisOverride.Version, normalizedAxisOverride.ExclusiveType);
-						InputSettingsManager.Instance.MarkAppliedKeyboardAxisOverride(normalizedAxisOverride.AxisName, normalizedAxisOverride.BindingType);
+						applyCount.AxisSkipped++;
+					}
+					else if ((flag ? axisBinding.GetKeyboardVersion(normalizedAxisOverride.ExclusiveType) : axisBinding.GetGamepadVersion(normalizedAxisOverride.ExclusiveType)) > normalizedAxisOverride.Version)
+					{
+						applyCount.AxisSkipped++;
+						applyCount.VersionOutdated++;
+						num++;
+						result = true;
+					}
+					else if (flag2 && !this.CanApplyEmptyOverride(normalizedAxisOverride.AxisName, normalizedAxisOverride.BindingType, deviceSetting.InputControllerType, false, false, applyCount))
+					{
+						applyCount.AxisSkipped++;
 					}
 					else
 					{
-						axisBinding.SetGamepadKeys(normalizedAxisOverride.KeyScaleMap, normalizedAxisOverride.BindingType);
-						axisBinding.SetGamepadVersion(normalizedAxisOverride.Version, normalizedAxisOverride.ExclusiveType);
+						if (flag)
+						{
+							axisBinding.SetKeyboardKeys(normalizedAxisOverride.KeyScaleMap, normalizedAxisOverride.BindingType);
+							axisBinding.SetKeyboardVersion(normalizedAxisOverride.Version, normalizedAxisOverride.ExclusiveType);
+							InputSettingsManager.Instance.MarkAppliedKeyboardAxisOverride(normalizedAxisOverride.AxisName, normalizedAxisOverride.BindingType);
+						}
+						else
+						{
+							axisBinding.SetGamepadKeys(normalizedAxisOverride.KeyScaleMap, normalizedAxisOverride.BindingType);
+							axisBinding.SetGamepadVersion(normalizedAxisOverride.Version, normalizedAxisOverride.ExclusiveType);
+						}
+						applyCount.AxisApplied++;
 					}
-					applyCount.AxisApplied++;
 				}
 			}
 			this.LogVersionOutdatedKeys("Axis", deviceSetting.InputControllerType, num);
 			return result;
 		}
 
-		// Token: 0x06045BAB RID: 285611 RVA: 0x01153548 File Offset: 0x01151748
-		private unsafe bool ApplyNormalizedCombinationActionOverrides(NormalizedOneDeviceInputSetting deviceSetting, InputSettingApplyCount applyCount)
+		// Token: 0x0603BD61 RID: 245089 RVA: 0x010FD810 File Offset: 0x010FBA10
+		private unsafe bool ApplyNormalizedCombinationActionOverrides(NormalizedOneDeviceInputSetting deviceSetting, InputSettingApplyCount applyCount, bool applyEmptyOverrides)
 		{
 			bool result = false;
 			int num = 0;
 			bool flag = deviceSetting.InputControllerType == CSharpScript.Game.Module.Menu.EInputControllerType.Keyboard;
 			foreach (NormalizedCombinationActionOverride normalizedCombinationActionOverride in deviceSetting.CombinationActionOverrides)
 			{
-				InputCombinationActionBinding inputCombinationActionBinding = InputSettingsManager.Instance.TryGetCombinationActionBinding(normalizedCombinationActionOverride.ActionName);
-				if ((flag ? inputCombinationActionBinding.GetKeyboardVersion(normalizedCombinationActionOverride.ExclusiveType) : inputCombinationActionBinding.GetGamepadVersion(normalizedCombinationActionOverride.ExclusiveType)) > normalizedCombinationActionOverride.Version)
+				bool flag2 = !InputSettingsController.HasValidCombinationBinding(normalizedCombinationActionOverride.KeyMap);
+				if (flag2 == applyEmptyOverrides)
 				{
-					applyCount.CombinationActionSkipped++;
-					applyCount.VersionOutdated++;
-					num++;
-					result = true;
-				}
-				else if (InputSettingsManager.Instance.IsNotInSettingsCombinationAction(normalizedCombinationActionOverride.ActionName, normalizedCombinationActionOverride.ExclusiveType, deviceSetting.InputControllerType))
-				{
-					Log instance = Log.Instance;
-					ELogModule module = ELogModule.InputSettings;
-					ELogAuthor author = ELogAuthor.TZJ;
-					string message = "组合Action不在改键设置中，该身份保留默认值";
-					<>y__InlineArray3<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray3<ValueTuple<string, object>>);
-					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("ActionName", normalizedCombinationActionOverride.ActionName);
-					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("InputControllerType", deviceSetting.InputControllerType);
-					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("bindingType", normalizedCombinationActionOverride.BindingType);
-					instance.Warn(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
-					applyCount.CombinationActionSkipped++;
-				}
-				else
-				{
-					InputSettingsManager.Instance.ReplaceCombinationActionDeviceKeyMap(normalizedCombinationActionOverride.ActionName, deviceSetting.InputControllerType, normalizedCombinationActionOverride.BindingType, normalizedCombinationActionOverride.KeyMap);
-					if (flag)
+					InputCombinationActionBinding inputCombinationActionBinding = InputSettingsManager.Instance.TryGetCombinationActionBinding(normalizedCombinationActionOverride.ActionName);
+					if ((flag ? inputCombinationActionBinding.GetKeyboardVersion(normalizedCombinationActionOverride.ExclusiveType) : inputCombinationActionBinding.GetGamepadVersion(normalizedCombinationActionOverride.ExclusiveType)) > normalizedCombinationActionOverride.Version)
 					{
-						inputCombinationActionBinding.SetKeyboardVersion(normalizedCombinationActionOverride.Version, normalizedCombinationActionOverride.ExclusiveType);
-						InputSettingsManager.Instance.MarkAppliedKeyboardCombinationActionOverride(normalizedCombinationActionOverride.ActionName, normalizedCombinationActionOverride.BindingType);
+						applyCount.CombinationActionSkipped++;
+						applyCount.VersionOutdated++;
+						num++;
+						result = true;
+					}
+					else if (InputSettingsManager.Instance.IsNotInSettingsCombinationAction(normalizedCombinationActionOverride.ActionName, normalizedCombinationActionOverride.ExclusiveType, deviceSetting.InputControllerType))
+					{
+						Log instance = Log.Instance;
+						ELogModule module = ELogModule.InputSettings;
+						ELogAuthor author = ELogAuthor.TZJ;
+						string message = "组合Action不在改键设置中，该身份保留默认值";
+						<>y__InlineArray3<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray3<ValueTuple<string, object>>);
+						*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("ActionName", normalizedCombinationActionOverride.ActionName);
+						*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("InputControllerType", deviceSetting.InputControllerType);
+						*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("bindingType", normalizedCombinationActionOverride.BindingType);
+						instance.Warn(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
+						applyCount.CombinationActionSkipped++;
+					}
+					else if (flag2 && !this.CanApplyEmptyOverride(normalizedCombinationActionOverride.ActionName, normalizedCombinationActionOverride.BindingType, deviceSetting.InputControllerType, true, true, applyCount))
+					{
+						applyCount.CombinationActionSkipped++;
 					}
 					else
 					{
-						inputCombinationActionBinding.SetGamepadVersion(normalizedCombinationActionOverride.Version, normalizedCombinationActionOverride.ExclusiveType);
+						InputSettingsManager.Instance.ReplaceCombinationActionDeviceKeyMap(normalizedCombinationActionOverride.ActionName, deviceSetting.InputControllerType, normalizedCombinationActionOverride.BindingType, normalizedCombinationActionOverride.KeyMap);
+						if (flag)
+						{
+							inputCombinationActionBinding.SetKeyboardVersion(normalizedCombinationActionOverride.Version, normalizedCombinationActionOverride.ExclusiveType);
+							InputSettingsManager.Instance.MarkAppliedKeyboardCombinationActionOverride(normalizedCombinationActionOverride.ActionName, normalizedCombinationActionOverride.BindingType);
+						}
+						else
+						{
+							inputCombinationActionBinding.SetGamepadVersion(normalizedCombinationActionOverride.Version, normalizedCombinationActionOverride.ExclusiveType);
+						}
+						applyCount.CombinationActionApplied++;
 					}
-					applyCount.CombinationActionApplied++;
 				}
 			}
 			this.LogVersionOutdatedKeys("CombinationAction", deviceSetting.InputControllerType, num);
 			return result;
 		}
 
-		// Token: 0x06045BAC RID: 285612 RVA: 0x01153760 File Offset: 0x01151960
-		private bool ApplyNormalizedCombinationAxisOverrides(NormalizedOneDeviceInputSetting deviceSetting, InputSettingApplyCount applyCount)
+		// Token: 0x0603BD62 RID: 245090 RVA: 0x010FDA78 File Offset: 0x010FBC78
+		private bool ApplyNormalizedCombinationAxisOverrides(NormalizedOneDeviceInputSetting deviceSetting, InputSettingApplyCount applyCount, bool applyEmptyOverrides)
 		{
 			bool result = false;
 			int num = 0;
 			bool flag = deviceSetting.InputControllerType == CSharpScript.Game.Module.Menu.EInputControllerType.Keyboard;
 			foreach (NormalizedCombinationAxisOverride normalizedCombinationAxisOverride in deviceSetting.CombinationAxisOverrides)
 			{
-				InputCombinationAxisBinding combinationAxisBindingByAxisName = InputSettingsManager.Instance.GetCombinationAxisBindingByAxisName(normalizedCombinationAxisOverride.AxisName);
-				if (combinationAxisBindingByAxisName == null)
+				bool flag2 = !InputSettingsController.HasValidCombinationBinding(normalizedCombinationAxisOverride.KeyMap);
+				if (flag2 == applyEmptyOverrides)
 				{
-					applyCount.CombinationAxisSkipped++;
-				}
-				else if ((flag ? combinationAxisBindingByAxisName.GetKeyboardVersion(normalizedCombinationAxisOverride.ExclusiveType) : combinationAxisBindingByAxisName.GetGamepadVersion(normalizedCombinationAxisOverride.ExclusiveType)) > normalizedCombinationAxisOverride.Version)
-				{
-					applyCount.CombinationAxisSkipped++;
-					applyCount.VersionOutdated++;
-					num++;
-					result = true;
-				}
-				else
-				{
-					InputSettingsManager.Instance.ReplaceCombinationAxisDeviceKeyMap(normalizedCombinationAxisOverride.AxisName, deviceSetting.InputControllerType, normalizedCombinationAxisOverride.BindingType, normalizedCombinationAxisOverride.KeyMap);
-					if (flag)
+					InputCombinationAxisBinding combinationAxisBindingByAxisName = InputSettingsManager.Instance.GetCombinationAxisBindingByAxisName(normalizedCombinationAxisOverride.AxisName);
+					if (combinationAxisBindingByAxisName == null)
 					{
-						combinationAxisBindingByAxisName.SetKeyboardVersion(normalizedCombinationAxisOverride.Version, normalizedCombinationAxisOverride.ExclusiveType);
-						InputSettingsManager.Instance.MarkAppliedKeyboardCombinationAxisOverride(normalizedCombinationAxisOverride.AxisName, normalizedCombinationAxisOverride.BindingType);
+						applyCount.CombinationAxisSkipped++;
+					}
+					else if ((flag ? combinationAxisBindingByAxisName.GetKeyboardVersion(normalizedCombinationAxisOverride.ExclusiveType) : combinationAxisBindingByAxisName.GetGamepadVersion(normalizedCombinationAxisOverride.ExclusiveType)) > normalizedCombinationAxisOverride.Version)
+					{
+						applyCount.CombinationAxisSkipped++;
+						applyCount.VersionOutdated++;
+						num++;
+						result = true;
+					}
+					else if (flag2 && !this.CanApplyEmptyOverride(normalizedCombinationAxisOverride.AxisName, normalizedCombinationAxisOverride.BindingType, deviceSetting.InputControllerType, false, true, applyCount))
+					{
+						applyCount.CombinationAxisSkipped++;
 					}
 					else
 					{
-						combinationAxisBindingByAxisName.SetGamepadVersion(normalizedCombinationAxisOverride.Version, normalizedCombinationAxisOverride.ExclusiveType);
+						InputSettingsManager.Instance.ReplaceCombinationAxisDeviceKeyMap(normalizedCombinationAxisOverride.AxisName, deviceSetting.InputControllerType, normalizedCombinationAxisOverride.BindingType, normalizedCombinationAxisOverride.KeyMap);
+						if (flag)
+						{
+							combinationAxisBindingByAxisName.SetKeyboardVersion(normalizedCombinationAxisOverride.Version, normalizedCombinationAxisOverride.ExclusiveType);
+							InputSettingsManager.Instance.MarkAppliedKeyboardCombinationAxisOverride(normalizedCombinationAxisOverride.AxisName, normalizedCombinationAxisOverride.BindingType);
+						}
+						else
+						{
+							combinationAxisBindingByAxisName.SetGamepadVersion(normalizedCombinationAxisOverride.Version, normalizedCombinationAxisOverride.ExclusiveType);
+						}
+						applyCount.CombinationAxisApplied++;
 					}
-					applyCount.CombinationAxisApplied++;
 				}
 			}
 			this.LogVersionOutdatedKeys("CombinationAxis", deviceSetting.InputControllerType, num);
 			return result;
 		}
 
-		// Token: 0x06045BAD RID: 285613 RVA: 0x011538D4 File Offset: 0x01151AD4
+		// Token: 0x0603BD63 RID: 245091 RVA: 0x010FDC3C File Offset: 0x010FBE3C
 		private unsafe void ProcessConnectedKeySetting(int connectedKeySettingId, KeySetting keySettingConfig)
 		{
 			KeySetting? config = ConfigKeySettingById.GetConfig(connectedKeySettingId, true);
@@ -1063,7 +1257,7 @@ namespace CSharpScript.Game.InputSetting
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray6<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 6));
 		}
 
-		// Token: 0x06045BAE RID: 285614 RVA: 0x01153C4C File Offset: 0x01151E4C
+		// Token: 0x0603BD64 RID: 245092 RVA: 0x010FDFB4 File Offset: 0x010FC1B4
 		private unsafe void HandleLinkActionKey()
 		{
 			IReadOnlyList<KeySetting> configList = ConfigKeySettingAll.GetConfigList(true);
@@ -1086,7 +1280,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045BAF RID: 285615 RVA: 0x01153CD8 File Offset: 0x01151ED8
+		// Token: 0x0603BD65 RID: 245093 RVA: 0x010FE040 File Offset: 0x010FC240
 		public void HandleBothActionSyncAllExclusiveKey()
 		{
 			IReadOnlyList<KeySetting> configList = ConfigKeySettingAll.GetConfigList(true);
@@ -1122,7 +1316,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045BB0 RID: 285616 RVA: 0x01153DB8 File Offset: 0x01151FB8
+		// Token: 0x0603BD66 RID: 245094 RVA: 0x010FE120 File Offset: 0x010FC320
 		private void NormalizeActionCombinationActionExclusivity(InputSettingApplyCount applyCount)
 		{
 			List<string> list = new List<string>(InputSettingsManager.Instance.GetCombinationActionBindingMap().Keys);
@@ -1164,7 +1358,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045BB1 RID: 285617 RVA: 0x01153F14 File Offset: 0x01152114
+		// Token: 0x0603BD67 RID: 245095 RVA: 0x010FE27C File Offset: 0x010FC47C
 		[NullableContext(2)]
 		private unsafe InputSettingData BuildInputSettingsToProtoData()
 		{
@@ -1201,7 +1395,7 @@ namespace CSharpScript.Game.InputSetting
 			return inputSettingData;
 		}
 
-		// Token: 0x06045BB2 RID: 285618 RVA: 0x0115410C File Offset: 0x0115230C
+		// Token: 0x0603BD68 RID: 245096 RVA: 0x010FE474 File Offset: 0x010FC674
 		private void BuildActionBindingToProtoData(OneDeviceInputSetting keyboardInputSettings, OneDeviceInputSetting gamepadInputSettings)
 		{
 			foreach (KeyValuePair<string, InputActionBinding> keyValuePair in InputSettingsManager.Instance.GetActionBindingMap())
@@ -1240,7 +1434,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045BB3 RID: 285619 RVA: 0x011542A0 File Offset: 0x011524A0
+		// Token: 0x0603BD69 RID: 245097 RVA: 0x010FE608 File Offset: 0x010FC808
 		private void BuildAxisBindingToProtoData(OneDeviceInputSetting keyboardInputSettings, OneDeviceInputSetting gamepadInputSettings)
 		{
 			foreach (KeyValuePair<string, InputAxisBinding> keyValuePair in InputSettingsManager.Instance.GetAxisBindingMap())
@@ -1275,7 +1469,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045BB4 RID: 285620 RVA: 0x011543EC File Offset: 0x011525EC
+		// Token: 0x0603BD6A RID: 245098 RVA: 0x010FE754 File Offset: 0x010FC954
 		private void BuildCombinationActionBindingToProtoData(OneDeviceInputSetting keyboardInputSettings, OneDeviceInputSetting gamepadInputSettings)
 		{
 			foreach (KeyValuePair<string, InputCombinationActionBinding> keyValuePair in InputSettingsManager.Instance.GetCombinationActionBindingMap())
@@ -1314,7 +1508,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045BB5 RID: 285621 RVA: 0x01154574 File Offset: 0x01152774
+		// Token: 0x0603BD6B RID: 245099 RVA: 0x010FE8DC File Offset: 0x010FCADC
 		private void BuildCombinationAxisBindingToProtoData(OneDeviceInputSetting keyboardInputSettings, OneDeviceInputSetting gamepadInputSettings)
 		{
 			foreach (KeyValuePair<string, InputCombinationAxisBinding> keyValuePair in InputSettingsManager.Instance.GetCombinationAxisBindingMap())
@@ -1353,7 +1547,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045BB6 RID: 285622 RVA: 0x011546FC File Offset: 0x011528FC
+		// Token: 0x0603BD6C RID: 245100 RVA: 0x010FEA64 File Offset: 0x010FCC64
 		private void BuildActionKey(string actionName, OneDeviceInputSetting inputSettings, string[] keyNameList, int version, EInputBindingType bindingType)
 		{
 			SettingInputType inputType = this.InputBindTypeMap[bindingType];
@@ -1365,7 +1559,7 @@ namespace CSharpScript.Game.InputSetting
 			inputSettings.InputAction.Add(inputAction);
 		}
 
-		// Token: 0x06045BB7 RID: 285623 RVA: 0x0115474C File Offset: 0x0115294C
+		// Token: 0x0603BD6D RID: 245101 RVA: 0x010FEAB4 File Offset: 0x010FCCB4
 		private void BuildAxisKey(string axisName, OneDeviceInputSetting inputSettings, IReadOnlyDictionary<string, float> keyScaleMap, int version, EInputBindingType bindingType)
 		{
 			SettingInputType inputType = this.InputBindTypeMap[bindingType];
@@ -1385,7 +1579,7 @@ namespace CSharpScript.Game.InputSetting
 			inputSettings.InputAxis.Add(inputAxis);
 		}
 
-		// Token: 0x06045BB8 RID: 285624 RVA: 0x011547F4 File Offset: 0x011529F4
+		// Token: 0x0603BD6E RID: 245102 RVA: 0x010FEB5C File Offset: 0x010FCD5C
 		private void BuildCombinationActionKey(string actionName, OneDeviceInputSetting inputSettings, Dictionary<string, string> keyMap, int version, EInputBindingType bindingType)
 		{
 			SettingInputType inputType = this.InputBindTypeMap[bindingType];
@@ -1411,7 +1605,7 @@ namespace CSharpScript.Game.InputSetting
 			inputSettings.InputCombinationAction.Add(combinationAction);
 		}
 
-		// Token: 0x06045BB9 RID: 285625 RVA: 0x011548B8 File Offset: 0x01152AB8
+		// Token: 0x0603BD6F RID: 245103 RVA: 0x010FEC20 File Offset: 0x010FCE20
 		private void BuildCombinationAxisKey(string axisName, OneDeviceInputSetting inputSettings, Dictionary<string, string> keyMap, int version, EInputBindingType bindingType)
 		{
 			SettingInputType inputType = this.InputBindTypeMap[bindingType];
@@ -1437,8 +1631,8 @@ namespace CSharpScript.Game.InputSetting
 			inputSettings.InputCombinationAxis.Add(combinationAxis);
 		}
 
-		// Token: 0x17009B97 RID: 39831
-		// (get) Token: 0x06045BBA RID: 285626 RVA: 0x0115497C File Offset: 0x01152B7C
+		// Token: 0x170070D7 RID: 28887
+		// (get) Token: 0x0603BD70 RID: 245104 RVA: 0x010FECE4 File Offset: 0x010FCEE4
 		public static InputSettingsController Instance
 		{
 			get
@@ -1447,7 +1641,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045BBB RID: 285627 RVA: 0x01154983 File Offset: 0x01152B83
+		// Token: 0x0603BD71 RID: 245105 RVA: 0x010FECEB File Offset: 0x010FCEEB
 		public static InputSettingsController GetOrCreateInstance()
 		{
 			if (InputSettingsController._Instance == null)
@@ -1457,7 +1651,7 @@ namespace CSharpScript.Game.InputSetting
 			return InputSettingsController._Instance;
 		}
 
-		// Token: 0x06045BBC RID: 285628 RVA: 0x01154997 File Offset: 0x01152B97
+		// Token: 0x0603BD72 RID: 245106 RVA: 0x010FECFF File Offset: 0x010FCEFF
 		public static bool CreateInstance()
 		{
 			if (InputSettingsController._Instance != null)
@@ -1468,30 +1662,30 @@ namespace CSharpScript.Game.InputSetting
 			return true;
 		}
 
-		// Token: 0x06045BBD RID: 285629 RVA: 0x011549AD File Offset: 0x01152BAD
+		// Token: 0x0603BD73 RID: 245107 RVA: 0x010FED15 File Offset: 0x010FCF15
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06045BBE RID: 285630 RVA: 0x011549AF File Offset: 0x01152BAF
+		// Token: 0x0603BD74 RID: 245108 RVA: 0x010FED17 File Offset: 0x010FCF17
 		public static void ResetStaticDefaultValue()
 		{
 			InputSettingsController._Instance = null;
 		}
 
-		// Token: 0x06045BBF RID: 285631 RVA: 0x011549B7 File Offset: 0x01152BB7
+		// Token: 0x0603BD75 RID: 245109 RVA: 0x010FED1F File Offset: 0x010FCF1F
 		static InputSettingsController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(InputSettingsController.CreateStaticDefaultValue), new Action(InputSettingsController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04024605 RID: 148997
+		// Token: 0x0401F8BB RID: 129211
 		private const float AXIS_SCALE_PROTOCOL_FACTOR = 1000f;
 
-		// Token: 0x04024606 RID: 148998
+		// Token: 0x0401F8BC RID: 129212
 		private const int COMBINATION_KEY_NAME_COUNT = 2;
 
-		// Token: 0x04024607 RID: 148999
+		// Token: 0x0401F8BD RID: 129213
 		private readonly Dictionary<EInputBindingType, SettingInputType> InputBindTypeMap = new Dictionary<EInputBindingType, SettingInputType>
 		{
 			{
@@ -1504,7 +1698,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		};
 
-		// Token: 0x04024608 RID: 149000
+		// Token: 0x0401F8BE RID: 129214
 		[Nullable(2)]
 		private static InputSettingsController _Instance;
 	}

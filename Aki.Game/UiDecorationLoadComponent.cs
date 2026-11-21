@@ -5,19 +5,19 @@ using AkiClient.Game.Aki.Character.Prop.Shipin.Common;
 using AkiClient.Game.Aki.Data.Entity.Struct;
 using UnrealEngine;
 
-// Token: 0x02002C76 RID: 11382
+// Token: 0x020021CF RID: 8655
 [NullableContext(1)]
 [Nullable(0)]
 public class UiDecorationLoadComponent : UiModelComponentBase
 {
-	// Token: 0x06017C50 RID: 97360 RVA: 0x0060BA89 File Offset: 0x00609C89
+	// Token: 0x060154C2 RID: 87234 RVA: 0x00631531 File Offset: 0x0062F731
 	protected override void OnInit()
 	{
 		this.UiModelActorComponent = base.Owner.CheckGetComponent<UiModelActorComponent>();
 		this.UiModelDataComponent = base.Owner.CheckGetComponent<UiModelDataComponent>();
 	}
 
-	// Token: 0x06017C51 RID: 97361 RVA: 0x0060BAAD File Offset: 0x00609CAD
+	// Token: 0x060154C3 RID: 87235 RVA: 0x00631555 File Offset: 0x0062F755
 	protected override void OnEnd()
 	{
 		this.CancelLoad();
@@ -25,55 +25,55 @@ public class UiDecorationLoadComponent : UiModelComponentBase
 		this.AttachSkinId = 0;
 	}
 
-	// Token: 0x06017C52 RID: 97362 RVA: 0x0060BAC2 File Offset: 0x00609CC2
+	// Token: 0x060154C4 RID: 87236 RVA: 0x0063156A File Offset: 0x0062F76A
 	protected SDecorationConfig GetDecorationConfig(int configId)
 	{
 		return DataTableUtil.GetDataTableRowFromName<SDecorationConfig>(EDataTable.DecorationConfig, configId.ToString());
 	}
 
-	// Token: 0x06017C53 RID: 97363 RVA: 0x0060BAD2 File Offset: 0x00609CD2
+	// Token: 0x060154C5 RID: 87237 RVA: 0x0063157A File Offset: 0x0062F77A
 	protected string GetMainMeshPath()
 	{
 		return this.GetDecorationConfig(this.UiModelDataComponent.ModelConfigId).SkeletalMesh.ToAssetPathName();
 	}
 
-	// Token: 0x06017C54 RID: 97364 RVA: 0x0060BAEF File Offset: 0x00609CEF
+	// Token: 0x060154C6 RID: 87238 RVA: 0x00631597 File Offset: 0x0062F797
 	protected string GetAnimClassPath()
 	{
 		return this.GetDecorationConfig(this.UiModelDataComponent.ModelConfigId).AnimBlueprint.ToAssetPathName();
 	}
 
-	// Token: 0x06017C55 RID: 97365 RVA: 0x0060BB0C File Offset: 0x00609D0C
+	// Token: 0x060154C7 RID: 87239 RVA: 0x006315B4 File Offset: 0x0062F7B4
 	protected string GetUiAnimClassPath()
 	{
 		return this.GetDecorationConfig(this.UiModelDataComponent.ModelConfigId).UIAnimBlueprint.ToAssetPathName();
 	}
 
-	// Token: 0x06017C56 RID: 97366 RVA: 0x0060BB29 File Offset: 0x00609D29
+	// Token: 0x060154C8 RID: 87240 RVA: 0x006315D1 File Offset: 0x0062F7D1
 	public bool IsSetMasterFollow()
 	{
 		return this.GetDecorationConfig(this.UiModelDataComponent.ModelConfigId).SetMasterFollow;
 	}
 
-	// Token: 0x06017C57 RID: 97367 RVA: 0x0060BB41 File Offset: 0x00609D41
+	// Token: 0x060154C9 RID: 87241 RVA: 0x006315E9 File Offset: 0x0062F7E9
 	public FName GetAttachSocketName(int? index = null)
 	{
 		return this.GetDecorationConfig(this.UiModelDataComponent.ModelConfigId).AttachSocket.Get(index.GetValueOrDefault());
 	}
 
-	// Token: 0x06017C58 RID: 97368 RVA: 0x0060BB65 File Offset: 0x00609D65
+	// Token: 0x060154CA RID: 87242 RVA: 0x0063160D File Offset: 0x0062F80D
 	public FTransform GetAttachTransform(int? index = null)
 	{
 		return this.GetDecorationConfig(this.UiModelDataComponent.ModelConfigId).AttachTrans.Get(index.GetValueOrDefault());
 	}
 
-	// Token: 0x06017C59 RID: 97369 RVA: 0x0060BB89 File Offset: 0x00609D89
+	// Token: 0x060154CB RID: 87243 RVA: 0x00631631 File Offset: 0x0062F831
 	public void SetAttachSkinId(int skinId)
 	{
 		this.AttachSkinId = skinId;
 	}
 
-	// Token: 0x06017C5A RID: 97370 RVA: 0x0060BB94 File Offset: 0x00609D94
+	// Token: 0x060154CC RID: 87244 RVA: 0x0063163C File Offset: 0x0062F83C
 	private int GetAttachTransformIndex(SDecorationConfig config)
 	{
 		int result = this.PartIndex;
@@ -85,26 +85,26 @@ public class UiDecorationLoadComponent : UiModelComponentBase
 		return result;
 	}
 
-	// Token: 0x06017C5B RID: 97371 RVA: 0x0060BBE3 File Offset: 0x00609DE3
+	// Token: 0x060154CD RID: 87245 RVA: 0x0063168B File Offset: 0x0062F88B
 	public string GetSubMeshName()
 	{
 		return this.GetDecorationConfig(this.UiModelDataComponent.ModelConfigId).SubMeshName;
 	}
 
-	// Token: 0x06017C5C RID: 97372 RVA: 0x0060BBFB File Offset: 0x00609DFB
+	// Token: 0x060154CE RID: 87246 RVA: 0x006316A3 File Offset: 0x0062F8A3
 	[NullableContext(2)]
 	public UiModelActorComponent GetAttachActorComponent()
 	{
 		return this.UiAttachActorComponent;
 	}
 
-	// Token: 0x06017C5D RID: 97373 RVA: 0x0060BC03 File Offset: 0x00609E03
+	// Token: 0x060154CF RID: 87247 RVA: 0x006316AB File Offset: 0x0062F8AB
 	public void SetAttachActorComponent(UiModelActorComponent actorComponent)
 	{
 		this.UiAttachActorComponent = actorComponent;
 	}
 
-	// Token: 0x06017C5E RID: 97374 RVA: 0x0060BC0C File Offset: 0x00609E0C
+	// Token: 0x060154D0 RID: 87248 RVA: 0x006316B4 File Offset: 0x0062F8B4
 	[NullableContext(2)]
 	public void LoadModelByModelId(int modelId, int partIndex, bool waitMeshStreaming = false, Action loadFinishCallBack = null, [Nullable(new byte[]
 	{
@@ -120,7 +120,7 @@ public class UiDecorationLoadComponent : UiModelComponentBase
 		this.LoadModel(waitMeshStreaming, extraResourceList, 0);
 	}
 
-	// Token: 0x06017C5F RID: 97375 RVA: 0x0060BC4C File Offset: 0x00609E4C
+	// Token: 0x060154D1 RID: 87249 RVA: 0x006316F4 File Offset: 0x0062F8F4
 	protected void LoadModel(bool waitMeshStreaming, [Nullable(new byte[]
 	{
 		2,
@@ -168,7 +168,7 @@ public class UiDecorationLoadComponent : UiModelComponentBase
 		this.OnPostLoadAnimClass(null, animInstanceClassPath, waitMeshStreaming, extraResourceList, levelOfDetail);
 	}
 
-	// Token: 0x06017C60 RID: 97376 RVA: 0x0060BD70 File Offset: 0x00609F70
+	// Token: 0x060154D2 RID: 87250 RVA: 0x00631818 File Offset: 0x0062FA18
 	protected void OnPostLoadAnimClass([Nullable(2)] UClass asset, string path, bool waitMeshStreaming, [Nullable(new byte[]
 	{
 		2,
@@ -235,7 +235,7 @@ public class UiDecorationLoadComponent : UiModelComponentBase
 		});
 	}
 
-	// Token: 0x06017C61 RID: 97377 RVA: 0x0060BE00 File Offset: 0x0060A000
+	// Token: 0x060154D3 RID: 87251 RVA: 0x006318A8 File Offset: 0x0062FAA8
 	private void TrySetExtraFollowOwner(USkeletalMeshComponent ownerMesh)
 	{
 		UiModelActorComponent uiModelActorComponent = this.UiModelActorComponent;
@@ -263,7 +263,7 @@ public class UiDecorationLoadComponent : UiModelComponentBase
 		abp_BaseDecoration_C.SetExtraFollowOwner(animInstance);
 	}
 
-	// Token: 0x06017C62 RID: 97378 RVA: 0x0060BE60 File Offset: 0x0060A060
+	// Token: 0x060154D4 RID: 87252 RVA: 0x00631908 File Offset: 0x0062FB08
 	protected void FinishLoad()
 	{
 		UiModelDataComponent uiModelDataComponent = this.UiModelDataComponent;
@@ -301,7 +301,7 @@ public class UiDecorationLoadComponent : UiModelComponentBase
 		loadFinishCallBack();
 	}
 
-	// Token: 0x06017C63 RID: 97379 RVA: 0x0060BF14 File Offset: 0x0060A114
+	// Token: 0x060154D5 RID: 87253 RVA: 0x006319BC File Offset: 0x0062FBBC
 	public void AttachToTarget()
 	{
 		int modelConfigId = this.UiModelDataComponent.ModelConfigId;
@@ -343,7 +343,7 @@ public class UiDecorationLoadComponent : UiModelComponentBase
 		actor.K2_SetActorRelativeTransform(ftransform, false, ref fhitResult, false);
 	}
 
-	// Token: 0x06017C64 RID: 97380 RVA: 0x0060C018 File Offset: 0x0060A218
+	// Token: 0x060154D6 RID: 87254 RVA: 0x00631AC0 File Offset: 0x0062FCC0
 	private USkeletalMeshComponent GetSubMeshComponent(USkeletalMeshComponent parentMesh, string mesh)
 	{
 		if (parentMesh.GetOwner() == null || string.IsNullOrEmpty(mesh))
@@ -364,7 +364,7 @@ public class UiDecorationLoadComponent : UiModelComponentBase
 		return parentMesh;
 	}
 
-	// Token: 0x06017C65 RID: 97381 RVA: 0x0060C07C File Offset: 0x0060A27C
+	// Token: 0x060154D7 RID: 87255 RVA: 0x00631B24 File Offset: 0x0062FD24
 	public void CancelLoad()
 	{
 		UiModelDataComponent uiModelDataComponent = this.UiModelDataComponent;
@@ -389,7 +389,7 @@ public class UiDecorationLoadComponent : UiModelComponentBase
 		uiModelDataComponent2.SetModelLoadState(EUiModelLoadState.None);
 	}
 
-	// Token: 0x06017C66 RID: 97382 RVA: 0x0060C105 File Offset: 0x0060A305
+	// Token: 0x060154D8 RID: 87256 RVA: 0x00631BAD File Offset: 0x0062FDAD
 	[return: Nullable(2)]
 	public UObject GetLoadedResource(string path)
 	{
@@ -400,7 +400,7 @@ public class UiDecorationLoadComponent : UiModelComponentBase
 		return null;
 	}
 
-	// Token: 0x06017C67 RID: 97383 RVA: 0x0060C11D File Offset: 0x0060A31D
+	// Token: 0x060154D9 RID: 87257 RVA: 0x00631BC5 File Offset: 0x0062FDC5
 	protected void DestroyLoadMesh()
 	{
 		if (this.MeshStreamTaskId != -1)
@@ -410,25 +410,25 @@ public class UiDecorationLoadComponent : UiModelComponentBase
 		}
 	}
 
-	// Token: 0x0400B124 RID: 45348
+	// Token: 0x0400B48F RID: 46223
 	[Nullable(2)]
 	protected UiModelActorComponent UiModelActorComponent;
 
-	// Token: 0x0400B125 RID: 45349
+	// Token: 0x0400B490 RID: 46224
 	[Nullable(2)]
 	protected UiModelDataComponent UiModelDataComponent;
 
-	// Token: 0x0400B126 RID: 45350
+	// Token: 0x0400B491 RID: 46225
 	[Nullable(2)]
 	protected UiModelActorComponent UiAttachActorComponent;
 
-	// Token: 0x0400B127 RID: 45351
+	// Token: 0x0400B492 RID: 46226
 	private int LoadAnimClassHandle = -1;
 
-	// Token: 0x0400B128 RID: 45352
+	// Token: 0x0400B493 RID: 46227
 	protected int LoadHandleId = UiModelResourcesManager.Instance.InvalidValue;
 
-	// Token: 0x0400B129 RID: 45353
+	// Token: 0x0400B494 RID: 46228
 	[Nullable(new byte[]
 	{
 		2,
@@ -437,22 +437,22 @@ public class UiDecorationLoadComponent : UiModelComponentBase
 	})]
 	protected Dictionary<string, UObject> ResourceLoadCache;
 
-	// Token: 0x0400B12A RID: 45354
+	// Token: 0x0400B495 RID: 46229
 	protected TArray<USkeletalMesh> MeshArray = new TArray<USkeletalMesh>();
 
-	// Token: 0x0400B12B RID: 45355
+	// Token: 0x0400B496 RID: 46230
 	protected int MeshStreamTaskId = -1;
 
-	// Token: 0x0400B12C RID: 45356
+	// Token: 0x0400B497 RID: 46231
 	protected int PartIndex;
 
-	// Token: 0x0400B12D RID: 45357
+	// Token: 0x0400B498 RID: 46232
 	private int AttachSkinId;
 
-	// Token: 0x0400B12E RID: 45358
+	// Token: 0x0400B499 RID: 46233
 	[Nullable(2)]
 	protected Action LoadFinishCallBack;
 
-	// Token: 0x0400B12F RID: 45359
+	// Token: 0x0400B49A RID: 46234
 	protected bool SkipAttachOnLoadComplete;
 }

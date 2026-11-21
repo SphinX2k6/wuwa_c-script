@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003CC5 RID: 15557
+	// Token: 0x020040D9 RID: 16601
 	public enum ERogueUiType : byte
 	{
-		// Token: 0x0400B4A2 RID: 46242
+		// Token: 0x0400BE44 RID: 48708
 		None,
-		// Token: 0x0400B4A3 RID: 46243
+		// Token: 0x0400BE45 RID: 48709
 		Vision,
-		// Token: 0x0400B4A4 RID: 46244
+		// Token: 0x0400BE46 RID: 48710
 		RoleBuff = 5,
-		// Token: 0x0400B4A5 RID: 46245
+		// Token: 0x0400BE47 RID: 48711
 		MiracleCreation = 8,
-		// Token: 0x0400B4A6 RID: 46246
+		// Token: 0x0400BE48 RID: 48712
 		Token,
-		// Token: 0x0400B4A7 RID: 46247
+		// Token: 0x0400BE49 RID: 48713
 		RandomEvent
 	}
 }

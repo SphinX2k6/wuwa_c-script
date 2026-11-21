@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200233B RID: 9019
+	// Token: 0x020025AC RID: 9644
 	public static class EFireBulletTypeExtensions
 	{
-		// Token: 0x0600C508 RID: 50440 RVA: 0x001CC308 File Offset: 0x001CA508
+		// Token: 0x0600D0E0 RID: 53472 RVA: 0x001E43C0 File Offset: 0x001E25C0
 		public static string ToEnumString(this EFireBulletType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C509 RID: 50441 RVA: 0x001CC350 File Offset: 0x001CA550
+		// Token: 0x0600D0E1 RID: 53473 RVA: 0x001E4408 File Offset: 0x001E2608
 		public static EFireBulletType FromString(string name)
 		{
 			EFireBulletType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C50A RID: 50442 RVA: 0x001CC37C File Offset: 0x001CA57C
+		// Token: 0x0600D0E2 RID: 53474 RVA: 0x001E4434 File Offset: 0x001E2634
 		public static bool TryFromString(string name, out EFireBulletType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C50B RID: 50443 RVA: 0x001CC3D2 File Offset: 0x001CA5D2
+		// Token: 0x0600D0E3 RID: 53475 RVA: 0x001E448A File Offset: 0x001E268A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C50C RID: 50444 RVA: 0x001CC3F2 File Offset: 0x001CA5F2
+		// Token: 0x0600D0E4 RID: 53476 RVA: 0x001E44AA File Offset: 0x001E26AA
 		public static EFireBulletType[] GetValues()
 		{
 			return new EFireBulletType[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C50D RID: 50445 RVA: 0x001CC402 File Offset: 0x001CA602
+		// Token: 0x0600D0E5 RID: 53477 RVA: 0x001E44BA File Offset: 0x001E26BA
 		public static string[] GetNames()
 		{
 			return new string[]

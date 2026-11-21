@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x02006609 RID: 26121
+	// Token: 0x02005587 RID: 21895
 	[Nullable(new byte[]
 	{
 		0,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 	})]
 	public class FishingDockQuestChildItem : GridProxyAbstract<IFishingDockQuestChildItemData>
 	{
-		// Token: 0x06041769 RID: 268137 RVA: 0x00FDA394 File Offset: 0x00FD8594
+		// Token: 0x0603642E RID: 222254 RVA: 0x00F21414 File Offset: 0x00F1F614
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -31,13 +31,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0604176A RID: 268138 RVA: 0x00FDA41E File Offset: 0x00FD861E
+		// Token: 0x0603642F RID: 222255 RVA: 0x00F2149E File Offset: 0x00F1F69E
 		protected override void OnStart()
 		{
 			base.GetText(1).SetUIActive(true);
 		}
 
-		// Token: 0x0604176B RID: 268139 RVA: 0x00FDA430 File Offset: 0x00FD8630
+		// Token: 0x06036430 RID: 222256 RVA: 0x00F214B0 File Offset: 0x00F1F6B0
 		[NullableContext(1)]
 		public override void Refresh(IFishingDockQuestChildItemData data, bool isSelected, int gridIndex)
 		{
@@ -55,16 +55,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			base.GetText(0).useChangeColor = (data.CurrentCount >= data.MaxCount);
 		}
 
-		// Token: 0x0200C814 RID: 51220
+		// Token: 0x0200B1F7 RID: 45559
 		private class EComponentDefine
 		{
-			// Token: 0x0403C6BD RID: 247485
+			// Token: 0x04037005 RID: 225285
 			public const int TargetText = 0;
 
-			// Token: 0x0403C6BE RID: 247486
+			// Token: 0x04037006 RID: 225286
 			public const int TargetCountText = 1;
 
-			// Token: 0x0403C6BF RID: 247487
+			// Token: 0x04037007 RID: 225287
 			public const int FinishItem = 2;
 		}
 	}

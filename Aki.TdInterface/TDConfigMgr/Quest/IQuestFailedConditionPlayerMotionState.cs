@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200107B RID: 4219
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020011A9 RID: 4521
 	public class IQuestFailedConditionPlayerMotionState
 	{
-		// Token: 0x06005F12 RID: 24338 RVA: 0x000E65F0 File Offset: 0x000E47F0
+		// Token: 0x0600650B RID: 25867 RVA: 0x000F3710 File Offset: 0x000F1910
 		private IQuestFailedConditionPlayerMotionState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005F13 RID: 24339 RVA: 0x000E6628 File Offset: 0x000E4828
+		// Token: 0x0600650C RID: 25868 RVA: 0x000F3748 File Offset: 0x000F1948
 		public static IQuestFailedConditionPlayerMotionState Create([Nullable(2)] IQuestFailedConditionPlayerMotionState instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005F14 RID: 24340 RVA: 0x000E663B File Offset: 0x000E483B
+		// Token: 0x0600650D RID: 25869 RVA: 0x000F375B File Offset: 0x000F195B
 		public static IQuestFailedConditionPlayerMotionState CreateFromSetValue([Nullable(2)] IQuestFailedConditionPlayerMotionState_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005F15 RID: 24341 RVA: 0x000E664E File Offset: 0x000E484E
+		// Token: 0x0600650E RID: 25870 RVA: 0x000F376E File Offset: 0x000F196E
 		public IQuestFailedConditionPlayerMotionState_SetValue ToSetValue()
 		{
 			return new IQuestFailedConditionPlayerMotionState_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001F54 RID: 8020
-		// (get) Token: 0x06005F16 RID: 24342 RVA: 0x000E666D File Offset: 0x000E486D
-		// (set) Token: 0x06005F17 RID: 24343 RVA: 0x000E6698 File Offset: 0x000E4898
+		// Token: 0x17002106 RID: 8454
+		// (get) Token: 0x0600650F RID: 25871 RVA: 0x000F378D File Offset: 0x000F198D
+		// (set) Token: 0x06006510 RID: 25872 RVA: 0x000F37B8 File Offset: 0x000F19B8
 		public virtual EPlayerMotionState MotionState
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001F55 RID: 8021
-		// (get) Token: 0x06005F18 RID: 24344 RVA: 0x000E66A6 File Offset: 0x000E48A6
-		// (set) Token: 0x06005F19 RID: 24345 RVA: 0x000E66D1 File Offset: 0x000E48D1
+		// Token: 0x17002107 RID: 8455
+		// (get) Token: 0x06006511 RID: 25873 RVA: 0x000F37C6 File Offset: 0x000F19C6
+		// (set) Token: 0x06006512 RID: 25874 RVA: 0x000F37F1 File Offset: 0x000F19F1
 		public virtual ECompare Compare
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003963 RID: 14691
+		// Token: 0x04003CB0 RID: 15536
 		[Nullable(2)]
 		protected IQuestFailedConditionPlayerMotionState FbInstance;
 
-		// Token: 0x04003964 RID: 14692
+		// Token: 0x04003CB1 RID: 15537
 		[Nullable(2)]
 		protected IQuestFailedConditionPlayerMotionState_SetValue PocoInterface;
 	}

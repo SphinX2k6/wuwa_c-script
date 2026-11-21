@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x02005804 RID: 22532
+	// Token: 0x020047DB RID: 18395
 	internal class RoguelikeResultRecordItem : UiPanelBase
 	{
-		// Token: 0x06039483 RID: 234627 RVA: 0x00D95B40 File Offset: 0x00D93D40
+		// Token: 0x0602E397 RID: 189335 RVA: 0x00CE49A8 File Offset: 0x00CE2BA8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06039484 RID: 234628 RVA: 0x00D95BCA File Offset: 0x00D93DCA
+		// Token: 0x0602E398 RID: 189336 RVA: 0x00CE4A32 File Offset: 0x00CE2C32
 		[NullableContext(1)]
 		public void Refresh(IRoguelikeBossChallengeData data)
 		{
@@ -34,16 +34,16 @@ namespace CSharpScript.Game.Module.ItemReward
 			base.GetItem(2).SetUIActive(data.IsNewRecord);
 		}
 
-		// Token: 0x0200B9FF RID: 47615
+		// Token: 0x0200A415 RID: 42005
 		private class ERoguelikeResultRecordComponent
 		{
-			// Token: 0x0403839C RID: 230300
+			// Token: 0x04032D89 RID: 208265
 			public const int TxtTitle = 0;
 
-			// Token: 0x0403839D RID: 230301
+			// Token: 0x04032D8A RID: 208266
 			public const int TxtNum = 1;
 
-			// Token: 0x0403839E RID: 230302
+			// Token: 0x04032D8B RID: 208267
 			public const int NewTagItem = 2;
 		}
 	}

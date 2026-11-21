@@ -6,17 +6,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006156 RID: 24918
+	// Token: 0x020050D4 RID: 20692
 	public class RoverlikeGameShopDiscountTagComponent : MediumItemGridComponent
 	{
-		// Token: 0x0603EFC1 RID: 257985 RVA: 0x00F3719F File Offset: 0x00F3539F
+		// Token: 0x06033C81 RID: 212097 RVA: 0x00E7E073 File Offset: 0x00E7C273
 		[NullableContext(1)]
 		protected override string GetResourceId()
 		{
 			return "UiItem_ItemDiscountTag";
 		}
 
-		// Token: 0x0603EFC2 RID: 257986 RVA: 0x00F371A8 File Offset: 0x00F353A8
+		// Token: 0x06033C82 RID: 212098 RVA: 0x00E7E07C File Offset: 0x00E7C27C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603EFC3 RID: 257987 RVA: 0x00F371F0 File Offset: 0x00F353F0
+		// Token: 0x06033C83 RID: 212099 RVA: 0x00E7E0C4 File Offset: 0x00E7C2C4
 		[NullableContext(2)]
 		protected override void OnRefresh(object data)
 		{
@@ -49,10 +49,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.SetActive(true);
 		}
 
-		// Token: 0x0200C3B4 RID: 50100
+		// Token: 0x0200AD9B RID: 44443
 		private class EComponents
 		{
-			// Token: 0x0403B0E5 RID: 241893
+			// Token: 0x04035A46 RID: 219718
 			public const int TxtDiscount = 0;
 		}
 	}

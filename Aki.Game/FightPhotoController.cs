@@ -13,34 +13,34 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x0200126E RID: 4718
+// Token: 0x02000722 RID: 1826
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class FightPhotoController : ActivityControllerBase
 {
-	// Token: 0x060080A6 RID: 32934 RVA: 0x001B3A13 File Offset: 0x001B1C13
+	// Token: 0x0600543D RID: 21565 RVA: 0x001BC6E3 File Offset: 0x001BA8E3
 	[NullableContext(2)]
 	public BP_CameraShot_C GetCameraShotActor()
 	{
 		return this.CameraShotActor;
 	}
 
-	// Token: 0x060080A7 RID: 32935 RVA: 0x001B3A1B File Offset: 0x001B1C1B
+	// Token: 0x0600543E RID: 21566 RVA: 0x001BC6EB File Offset: 0x001BA8EB
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.PhotoFightResultNotify, new Action<IMessage, Net.CallbackStatus>(this.OnTaskInfoUpdate));
 		Net.Instance.Register(ENotifyMessageId.PhotoFightLevelInfoNotify, new Action<IMessage, Net.CallbackStatus>(this.OnLevelInfoUpdate));
 	}
 
-	// Token: 0x060080A8 RID: 32936 RVA: 0x001B3A55 File Offset: 0x001B1C55
+	// Token: 0x0600543F RID: 21567 RVA: 0x001BC725 File Offset: 0x001BA925
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.PhotoFightResultNotify);
 		Net.Instance.UnRegister(ENotifyMessageId.PhotoFightLevelInfoNotify);
 	}
 
-	// Token: 0x060080A9 RID: 32937 RVA: 0x001B3A78 File Offset: 0x001B1C78
+	// Token: 0x06005440 RID: 21568 RVA: 0x001BC748 File Offset: 0x001BA948
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.WorldDone, new Action(this.OnWorldDone));
@@ -48,7 +48,7 @@ public class FightPhotoController : ActivityControllerBase
 		EventSystem.Instance.Add<IReadOnlySet<int>>(EEventName.OnActivityClose, new Action<IReadOnlySet<int>>(this.OnActivityClose));
 	}
 
-	// Token: 0x060080AA RID: 32938 RVA: 0x001B3ADC File Offset: 0x001B1CDC
+	// Token: 0x06005441 RID: 21569 RVA: 0x001BC7AC File Offset: 0x001BA9AC
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.WorldDone, new Action(this.OnWorldDone));
@@ -56,25 +56,25 @@ public class FightPhotoController : ActivityControllerBase
 		EventSystem.Instance.Remove(EEventName.OnActivityClose, new Action<IReadOnlySet<int>>(this.OnActivityClose));
 	}
 
-	// Token: 0x060080AB RID: 32939 RVA: 0x001B3B3D File Offset: 0x001B1D3D
+	// Token: 0x06005442 RID: 21570 RVA: 0x001BC80D File Offset: 0x001BAA0D
 	protected override void OnOpenView(ActivityBaseData data)
 	{
 		throw new Exception("Method not implemented.");
 	}
 
-	// Token: 0x060080AC RID: 32940 RVA: 0x001B3B49 File Offset: 0x001B1D49
+	// Token: 0x06005443 RID: 21571 RVA: 0x001BC819 File Offset: 0x001BAA19
 	protected override string OnGetActivityResource(ActivityBaseData data)
 	{
 		return "UiItem_ActivityBattlePhoto";
 	}
 
-	// Token: 0x060080AD RID: 32941 RVA: 0x001B3B50 File Offset: 0x001B1D50
+	// Token: 0x06005444 RID: 21572 RVA: 0x001BC820 File Offset: 0x001BAA20
 	protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 	{
 		return new FightPhotoActivitySubView();
 	}
 
-	// Token: 0x060080AE RID: 32942 RVA: 0x001B3B58 File Offset: 0x001B1D58
+	// Token: 0x06005445 RID: 21573 RVA: 0x001BC828 File Offset: 0x001BAA28
 	protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 	{
 		FightPhotoActivityData fightPhotoActivityData = new FightPhotoActivityData();
@@ -82,7 +82,7 @@ public class FightPhotoController : ActivityControllerBase
 		return fightPhotoActivityData;
 	}
 
-	// Token: 0x060080AF RID: 32943 RVA: 0x001B3B74 File Offset: 0x001B1D74
+	// Token: 0x06005446 RID: 21574 RVA: 0x001BC844 File Offset: 0x001BAA44
 	protected override bool OnGetIsOpeningActivityRelativeView()
 	{
 		foreach (EUiViewName viewName in new EUiViewName[]
@@ -99,13 +99,13 @@ public class FightPhotoController : ActivityControllerBase
 		return false;
 	}
 
-	// Token: 0x060080B0 RID: 32944 RVA: 0x001B3BC6 File Offset: 0x001B1DC6
+	// Token: 0x06005447 RID: 21575 RVA: 0x001BC896 File Offset: 0x001BAA96
 	public override void OnShowActivityFirstUnlockView(ActivityBaseData data)
 	{
 		UiManager.Instance.OpenView(EUiViewName.FightPhotoUnlockTipView, null, null);
 	}
 
-	// Token: 0x060080B1 RID: 32945 RVA: 0x001B3BDC File Offset: 0x001B1DDC
+	// Token: 0x06005448 RID: 21576 RVA: 0x001BC8AC File Offset: 0x001BAAAC
 	[NullableContext(0)]
 	protected override UniTask<bool> OnOpenSubView(EUiViewName viewName, int activityId = 0)
 	{
@@ -118,7 +118,7 @@ public class FightPhotoController : ActivityControllerBase
 		return <OnOpenSubView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060080B2 RID: 32946 RVA: 0x001B3C28 File Offset: 0x001B1E28
+	// Token: 0x06005449 RID: 21577 RVA: 0x001BC8F8 File Offset: 0x001BAAF8
 	[NullableContext(2)]
 	public FightPhotoActivityData GetActivityData()
 	{
@@ -129,7 +129,7 @@ public class FightPhotoController : ActivityControllerBase
 		return this.FightPhotoActivityData;
 	}
 
-	// Token: 0x060080B3 RID: 32947 RVA: 0x001B3C64 File Offset: 0x001B1E64
+	// Token: 0x0600544A RID: 21578 RVA: 0x001BC934 File Offset: 0x001BAB34
 	[NullableContext(2)]
 	private void OnTaskInfoUpdate(IMessage msg, Net.CallbackStatus status)
 	{
@@ -137,7 +137,7 @@ public class FightPhotoController : ActivityControllerBase
 		this.FightPhotoActivityData.UpdateTaskData(photoFightResultNotify.Targets);
 	}
 
-	// Token: 0x060080B4 RID: 32948 RVA: 0x001B3C8C File Offset: 0x001B1E8C
+	// Token: 0x0600544B RID: 21579 RVA: 0x001BC95C File Offset: 0x001BAB5C
 	[NullableContext(2)]
 	private void OnLevelInfoUpdate(IMessage msg, Net.CallbackStatus status)
 	{
@@ -145,7 +145,7 @@ public class FightPhotoController : ActivityControllerBase
 		this.FightPhotoActivityData.UpdateLevelData(photoFightLevelInfoNotify.PhotoFightLevelInfos, false);
 	}
 
-	// Token: 0x060080B5 RID: 32949 RVA: 0x001B3CB4 File Offset: 0x001B1EB4
+	// Token: 0x0600544C RID: 21580 RVA: 0x001BC984 File Offset: 0x001BAB84
 	public UniTask EnterFightPhotoDungeonDirectly(int activityId, int levelId, int instanceId, int[] roleIds)
 	{
 		FightPhotoController.<EnterFightPhotoDungeonDirectly>d__22 <EnterFightPhotoDungeonDirectly>d__;
@@ -160,7 +160,7 @@ public class FightPhotoController : ActivityControllerBase
 		return <EnterFightPhotoDungeonDirectly>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060080B6 RID: 32950 RVA: 0x001B3D18 File Offset: 0x001B1F18
+	// Token: 0x0600544D RID: 21581 RVA: 0x001BC9E8 File Offset: 0x001BABE8
 	public void RequestTaskReward(int[] taskIds)
 	{
 		FightPhotoActivityData activityData = this.GetActivityData();
@@ -176,14 +176,14 @@ public class FightPhotoController : ActivityControllerBase
 			}
 			if (photoFightTaskRewardResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(photoFightTaskRewardResponse.ErrorCode, 22692, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(photoFightTaskRewardResponse.ErrorCode, 20913, null, true, true);
 				return;
 			}
 			activityData.UpdateTaskRewardStatus(photoFightTaskRewardResponse.Targets);
 		}, 0);
 	}
 
-	// Token: 0x060080B7 RID: 32951 RVA: 0x001B3D78 File Offset: 0x001B1F78
+	// Token: 0x0600544E RID: 21582 RVA: 0x001BCA48 File Offset: 0x001BAC48
 	public void RequestInstanceSettle()
 	{
 		PhotoFightSettleRequest message = PhotoFightSettleRequest.Create();
@@ -196,12 +196,12 @@ public class FightPhotoController : ActivityControllerBase
 			}
 			if (photoFightSettleResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(photoFightSettleResponse.ErrorCode, 20695, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(photoFightSettleResponse.ErrorCode, 26567, null, true, true);
 			}
 		}, 0);
 	}
 
-	// Token: 0x060080B8 RID: 32952 RVA: 0x001B3DBC File Offset: 0x001B1FBC
+	// Token: 0x0600544F RID: 21583 RVA: 0x001BCA8C File Offset: 0x001BAC8C
 	public bool CheckInFightPhotoDungeon()
 	{
 		if (GameModeController.Instance.IsInInstance())
@@ -213,7 +213,7 @@ public class FightPhotoController : ActivityControllerBase
 		return false;
 	}
 
-	// Token: 0x060080B9 RID: 32953 RVA: 0x001B3E0C File Offset: 0x001B200C
+	// Token: 0x06005450 RID: 21584 RVA: 0x001BCADC File Offset: 0x001BACDC
 	private void OnActiveBattleView()
 	{
 		if (this.FightPhotoActivityData == null)
@@ -232,7 +232,7 @@ public class FightPhotoController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x060080BA RID: 32954 RVA: 0x001B3E64 File Offset: 0x001B2064
+	// Token: 0x06005451 RID: 21585 RVA: 0x001BCB34 File Offset: 0x001BAD34
 	public void LeaveInstanceDungeon(bool needRequestLeave = true)
 	{
 		if (this.CheckInFightPhotoDungeon())
@@ -264,7 +264,7 @@ public class FightPhotoController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x060080BB RID: 32955 RVA: 0x001B3F3F File Offset: 0x001B213F
+	// Token: 0x06005452 RID: 21586 RVA: 0x001BCC0F File Offset: 0x001BAE0F
 	public void AddColorAdjustDuration(long time)
 	{
 		if (time > 0L)
@@ -273,7 +273,7 @@ public class FightPhotoController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x060080BC RID: 32956 RVA: 0x001B3F54 File Offset: 0x001B2154
+	// Token: 0x06005453 RID: 21587 RVA: 0x001BCC24 File Offset: 0x001BAE24
 	private void ReportFightPhotoDuration()
 	{
 		FightPhotoActivityData activityData = this.GetActivityData();
@@ -305,7 +305,7 @@ public class FightPhotoController : ActivityControllerBase
 		LogReportController.Instance.LogReport(fightPhotoDurationLogEvent);
 	}
 
-	// Token: 0x060080BD RID: 32957 RVA: 0x001B40BC File Offset: 0x001B22BC
+	// Token: 0x06005454 RID: 21588 RVA: 0x001BCD8C File Offset: 0x001BAF8C
 	private void OnWorldDone()
 	{
 		if (this.FightPhotoActivityData != null && this.FightPhotoActivityData.IsNeedShowFightPhotoMainView)
@@ -328,7 +328,7 @@ public class FightPhotoController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x060080BE RID: 32958 RVA: 0x001B417C File Offset: 0x001B237C
+	// Token: 0x06005455 RID: 21589 RVA: 0x001BCE4C File Offset: 0x001BB04C
 	private void AddMainViewSplashTask()
 	{
 		SplashScreenTask splashScreenTask = new SplashScreenTask(ESplashScreenSourceModuleType.None, ESplashScreenType.Other, delegate()
@@ -338,13 +338,13 @@ public class FightPhotoController : ActivityControllerBase
 		SplashScreenController.Instance.PushSplashScreenTask(splashScreenTask, false);
 	}
 
-	// Token: 0x060080BF RID: 32959 RVA: 0x001B41A9 File Offset: 0x001B23A9
+	// Token: 0x06005456 RID: 21590 RVA: 0x001BCE79 File Offset: 0x001BB079
 	private int GetCurrentStepCount()
 	{
 		return PhotographController.Instance.GetSavedFightPhotos().Count;
 	}
 
-	// Token: 0x060080C0 RID: 32960 RVA: 0x001B41BC File Offset: 0x001B23BC
+	// Token: 0x06005457 RID: 21591 RVA: 0x001BCE8C File Offset: 0x001BB08C
 	public void ShowFightPhotoTips(string textId)
 	{
 		if (Array.IndexOf<string>(this.StepTextIdList, textId) >= 0 && !UiManager.Instance.IsViewShow(EUiViewName.BattleView))
@@ -355,7 +355,7 @@ public class FightPhotoController : ActivityControllerBase
 		GenericPromptController.Instance.ShowPromptByItsType<object>(EPromptSubViewType.FightPhotoEventTip, mainTextObj, null, null, null, null, null, null, null, false, null);
 	}
 
-	// Token: 0x060080C1 RID: 32961 RVA: 0x001B421C File Offset: 0x001B241C
+	// Token: 0x06005458 RID: 21592 RVA: 0x001BCEEC File Offset: 0x001BB0EC
 	private void OnActivityClose(IReadOnlySet<int> closeActivities)
 	{
 		if (this.FightPhotoActivityData == null)
@@ -371,8 +371,8 @@ public class FightPhotoController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x17000B12 RID: 2834
-	// (get) Token: 0x060080C2 RID: 32962 RVA: 0x001B4294 File Offset: 0x001B2494
+	// Token: 0x17000B32 RID: 2866
+	// (get) Token: 0x06005459 RID: 21593 RVA: 0x001BCF64 File Offset: 0x001BB164
 	public static FightPhotoController Instance
 	{
 		get
@@ -381,7 +381,7 @@ public class FightPhotoController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x060080C3 RID: 32963 RVA: 0x001B429B File Offset: 0x001B249B
+	// Token: 0x0600545A RID: 21594 RVA: 0x001BCF6B File Offset: 0x001BB16B
 	public static FightPhotoController GetOrCreateInstance()
 	{
 		if (FightPhotoController._Instance == null)
@@ -391,7 +391,7 @@ public class FightPhotoController : ActivityControllerBase
 		return FightPhotoController._Instance;
 	}
 
-	// Token: 0x060080C4 RID: 32964 RVA: 0x001B42AF File Offset: 0x001B24AF
+	// Token: 0x0600545B RID: 21595 RVA: 0x001BCF7F File Offset: 0x001BB17F
 	public static bool CreateInstance()
 	{
 		if (FightPhotoController._Instance != null)
@@ -402,31 +402,31 @@ public class FightPhotoController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x060080C5 RID: 32965 RVA: 0x001B42C5 File Offset: 0x001B24C5
+	// Token: 0x0600545C RID: 21596 RVA: 0x001BCF95 File Offset: 0x001BB195
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060080C6 RID: 32966 RVA: 0x001B42C7 File Offset: 0x001B24C7
+	// Token: 0x0600545D RID: 21597 RVA: 0x001BCF97 File Offset: 0x001BB197
 	public static void ResetStaticDefaultValue()
 	{
 		FightPhotoController._Instance = null;
 	}
 
-	// Token: 0x060080C7 RID: 32967 RVA: 0x001B42CF File Offset: 0x001B24CF
+	// Token: 0x0600545E RID: 21598 RVA: 0x001BCF9F File Offset: 0x001BB19F
 	static FightPhotoController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(FightPhotoController.CreateStaticDefaultValue), new Action(FightPhotoController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x060080CA RID: 32970 RVA: 0x001B4332 File Offset: 0x001B2532
+	// Token: 0x06005461 RID: 21601 RVA: 0x001BD002 File Offset: 0x001BB202
 	[CompilerGenerated]
 	private void <OnActivityClose>g__confirmCallback|34_0()
 	{
 		this.LeaveInstanceDungeon(true);
 	}
 
-	// Token: 0x04003A53 RID: 14931
+	// Token: 0x04003AEB RID: 15083
 	public readonly string[] StepTextIdList = new string[]
 	{
 		"PhotographicTipMainText_01",
@@ -434,27 +434,27 @@ public class FightPhotoController : ActivityControllerBase
 		"PhotographicTipMainText_03"
 	};
 
-	// Token: 0x04003A54 RID: 14932
+	// Token: 0x04003AEC RID: 15084
 	private const int MAX_STEP_NUM = 3;
 
-	// Token: 0x04003A55 RID: 14933
+	// Token: 0x04003AED RID: 15085
 	[Nullable(2)]
 	private FightPhotoActivityData FightPhotoActivityData;
 
-	// Token: 0x04003A56 RID: 14934
+	// Token: 0x04003AEE RID: 15086
 	private int StepCount;
 
-	// Token: 0x04003A57 RID: 14935
+	// Token: 0x04003AEF RID: 15087
 	private long EnterDungeonTimestampMs;
 
-	// Token: 0x04003A58 RID: 14936
+	// Token: 0x04003AF0 RID: 15088
 	private long ColorAdjustDurationMs;
 
-	// Token: 0x04003A59 RID: 14937
+	// Token: 0x04003AF1 RID: 15089
 	[Nullable(2)]
 	private BP_CameraShot_C CameraShotActor;
 
-	// Token: 0x04003A5A RID: 14938
+	// Token: 0x04003AF2 RID: 15090
 	[Nullable(2)]
 	private static FightPhotoController _Instance;
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DB3 RID: 7603
+	// Token: 0x02001FCA RID: 8138
 	public class IResetPosType_SetValue
 	{
-		// Token: 0x040061C3 RID: 25027
+		// Token: 0x0400674B RID: 26443
 		public EResetPosType Type;
 	}
 }

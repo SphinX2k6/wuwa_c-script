@@ -7,124 +7,116 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Character.Role.Common.Data.Structure
 {
-	// Token: 0x020040B2 RID: 16562
+	// Token: 0x020032A6 RID: 12966
 	[HasGetTypeHash]
 	[UnrealObjectPath("/Game/Aki/Character/Role/Common/Data/Structure/SSelfieMontage.SSelfieMontage")]
 	[UnrealStructLayout(56, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 56)]
 	public class SSelfieMontage : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602AC8A RID: 175242 RVA: 0x009EB442 File Offset: 0x009E9642
+		// Token: 0x060209CD RID: 133581 RVA: 0x0094AED9 File Offset: 0x009490D9
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SSelfieMontage._ScriptStructPtr != 0) ? SSelfieMontage._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Character/Role/Common/Data/Structure/SSelfieMontage.SSelfieMontage", ref SSelfieMontage._ScriptStructPtr);
 		}
 
-		// Token: 0x17006980 RID: 27008
-		// (get) Token: 0x0602AC8B RID: 175243 RVA: 0x009EB466 File Offset: 0x009E9666
-		// (set) Token: 0x0602AC8C RID: 175244 RVA: 0x009EB476 File Offset: 0x009E9676
+		// Token: 0x1700400D RID: 16397
+		// (get) Token: 0x060209CE RID: 133582 RVA: 0x0094AEFD File Offset: 0x009490FD
+		// (set) Token: 0x060209CF RID: 133583 RVA: 0x0094AF0D File Offset: 0x0094910D
 		public unsafe int ConfigId
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SSelfieMontage.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)SSelfieMontage.__PropertyOffset_ConfigId);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SSelfieMontage.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)SSelfieMontage.__PropertyOffset_ConfigId) = value;
 			}
 		}
 
-		// Token: 0x17006981 RID: 27009
-		// (get) Token: 0x0602AC8D RID: 175245 RVA: 0x009EB487 File Offset: 0x009E9687
-		// (set) Token: 0x0602AC8E RID: 175246 RVA: 0x009EB49B File Offset: 0x009E969B
+		// Token: 0x1700400E RID: 16398
+		// (get) Token: 0x060209D0 RID: 133584 RVA: 0x0094AF1E File Offset: 0x0094911E
+		// (set) Token: 0x060209D1 RID: 133585 RVA: 0x0094AF32 File Offset: 0x00949132
 		public unsafe TEnumAsByte<ESelfieMontageType> MontageType
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SSelfieMontage.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)SSelfieMontage.__PropertyOffset_MontageType);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SSelfieMontage.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)SSelfieMontage.__PropertyOffset_MontageType) = value;
 			}
 		}
 
-		// Token: 0x17006982 RID: 27010
-		// (get) Token: 0x0602AC8F RID: 175247 RVA: 0x009EB4B0 File Offset: 0x009E96B0
-		// (set) Token: 0x0602AC90 RID: 175248 RVA: 0x009EB4CF File Offset: 0x009E96CF
+		// Token: 0x1700400F RID: 16399
+		// (get) Token: 0x060209D2 RID: 133586 RVA: 0x0094AF47 File Offset: 0x00949147
+		// (set) Token: 0x060209D3 RID: 133587 RVA: 0x0094AF66 File Offset: 0x00949166
 		[Nullable(1)]
 		public TSoftObjectPtr<UAnimMontage> MontageRef
 		{
 			[NullableContext(1)]
 			get
 			{
-				return new TSoftObjectPtr<UAnimMontage>(base.NativePtr + (IntPtr)SSelfieMontage.__PropertyOffset_2, base.MemoryOwner ?? this);
+				return new TSoftObjectPtr<UAnimMontage>(base.NativePtr + (IntPtr)SSelfieMontage.__PropertyOffset_MontageRef, base.MemoryOwner ?? this);
 			}
 			[NullableContext(1)]
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SSelfieMontage.__PropertyOffset_2, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SSelfieMontage.__PropertyOffset_MontageRef, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x0602AC91 RID: 175249 RVA: 0x009EB4F4 File Offset: 0x009E96F4
+		// Token: 0x060209D4 RID: 133588 RVA: 0x0094AF8B File Offset: 0x0094918B
 		public SSelfieMontage()
 		{
 		}
 
-		// Token: 0x0602AC92 RID: 175250 RVA: 0x009EB4FC File Offset: 0x009E96FC
-		public SSelfieMontage(int ConfigId, TEnumAsByte<ESelfieMontageType> MontageType, [Nullable(1)] TSoftObjectPtr<UAnimMontage> MontageRef)
-		{
-			this.ConfigId = ConfigId;
-			this.MontageType = MontageType;
-			this.MontageRef = MontageRef;
-		}
-
-		// Token: 0x0602AC93 RID: 175251 RVA: 0x009EB519 File Offset: 0x009E9719
+		// Token: 0x060209D5 RID: 133589 RVA: 0x0094AF93 File Offset: 0x00949193
 		protected override IntPtr GetUStructPtr()
 		{
 			return SSelfieMontage.StaticStruct();
 		}
 
-		// Token: 0x0602AC94 RID: 175252 RVA: 0x009EB525 File Offset: 0x009E9725
+		// Token: 0x060209D6 RID: 133590 RVA: 0x0094AF9F File Offset: 0x0094919F
 		[NullableContext(2)]
 		public SSelfieMontage(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602AC95 RID: 175253 RVA: 0x009EB52F File Offset: 0x009E972F
+		// Token: 0x060209D7 RID: 133591 RVA: 0x0094AFA9 File Offset: 0x009491A9
 		public SSelfieMontage(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602AC96 RID: 175254 RVA: 0x009EB53A File Offset: 0x009E973A
+		// Token: 0x060209D8 RID: 133592 RVA: 0x0094AFB4 File Offset: 0x009491B4
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SSelfieMontage(Pointer, false, true);
 		}
 
-		// Token: 0x0602AC97 RID: 175255 RVA: 0x009EB544 File Offset: 0x009E9744
+		// Token: 0x060209D9 RID: 133593 RVA: 0x0094AFBE File Offset: 0x009491BE
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SSelfieMontage(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04016254 RID: 90708
+		// Token: 0x04011A0D RID: 72205
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/Character/Role/Common/Data/Structure/SSelfieMontage.SSelfieMontage";
 
-		// Token: 0x04016255 RID: 90709
+		// Token: 0x04011A0E RID: 72206
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04016256 RID: 90710
-		internal static int __PropertyOffset_0;
+		// Token: 0x04011A0F RID: 72207
+		internal static int __PropertyOffset_ConfigId;
 
-		// Token: 0x04016257 RID: 90711
-		internal static int __PropertyOffset_1;
+		// Token: 0x04011A10 RID: 72208
+		internal static int __PropertyOffset_MontageType;
 
-		// Token: 0x04016258 RID: 90712
-		internal static int __PropertyOffset_2;
+		// Token: 0x04011A11 RID: 72209
+		internal static int __PropertyOffset_MontageRef;
 	}
 }

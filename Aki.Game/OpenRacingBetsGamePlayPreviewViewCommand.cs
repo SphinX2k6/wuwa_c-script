@@ -3,11 +3,11 @@ using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x020026C9 RID: 9929
+// Token: 0x02001BB4 RID: 7092
 public class OpenRacingBetsGamePlayPreviewViewCommand : RacingBetsCommandBase
 {
-	// Token: 0x17001A5F RID: 6751
-	// (get) Token: 0x060145DB RID: 83419 RVA: 0x0052711A File Offset: 0x0052531A
+	// Token: 0x17001A97 RID: 6807
+	// (get) Token: 0x06011ABD RID: 72381 RVA: 0x00535E52 File Offset: 0x00534052
 	public override ERacingBetsCommandType CommandType
 	{
 		get
@@ -16,13 +16,13 @@ public class OpenRacingBetsGamePlayPreviewViewCommand : RacingBetsCommandBase
 		}
 	}
 
-	// Token: 0x060145DC RID: 83420 RVA: 0x0052711E File Offset: 0x0052531E
+	// Token: 0x06011ABE RID: 72382 RVA: 0x00535E56 File Offset: 0x00534056
 	public void Init(bool canCameraInput = false)
 	{
 		this.CanCameraInput = canCameraInput;
 	}
 
-	// Token: 0x060145DD RID: 83421 RVA: 0x00527128 File Offset: 0x00525328
+	// Token: 0x06011ABF RID: 72383 RVA: 0x00535E60 File Offset: 0x00534060
 	public override UniTask OnExecute()
 	{
 		OpenRacingBetsGamePlayPreviewViewCommand.<OnExecute>d__4 <OnExecute>d__;
@@ -33,13 +33,13 @@ public class OpenRacingBetsGamePlayPreviewViewCommand : RacingBetsCommandBase
 		return <OnExecute>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060145DE RID: 83422 RVA: 0x0052716B File Offset: 0x0052536B
+	// Token: 0x06011AC0 RID: 72384 RVA: 0x00535EA3 File Offset: 0x005340A3
 	[NullableContext(1)]
 	public override string LogInfo()
 	{
 		return "RacingBetsGamePlayPreviewView";
 	}
 
-	// Token: 0x04009911 RID: 39185
+	// Token: 0x04009A69 RID: 39529
 	private bool CanCameraInput;
 }

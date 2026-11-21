@@ -9,19 +9,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Giant.Activity
 {
-	// Token: 0x0200598F RID: 22927
+	// Token: 0x02004968 RID: 18792
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GiantActivityInfoPanel : UiPanelBase
 	{
-		// Token: 0x0603A2D7 RID: 238295 RVA: 0x00DD3FF0 File Offset: 0x00DD21F0
+		// Token: 0x0602F1FD RID: 193021 RVA: 0x00D23480 File Offset: 0x00D21680
 		public GiantActivityInfoPanel(ActivityBaseData ActivityBaseData, Action OnEnterClick)
 		{
 			this.ActivityBaseData = ActivityBaseData;
 			this.OnEnterClick = OnEnterClick;
 		}
 
-		// Token: 0x0603A2D8 RID: 238296 RVA: 0x00DD4008 File Offset: 0x00DD2208
+		// Token: 0x0602F1FE RID: 193022 RVA: 0x00D23498 File Offset: 0x00D21698
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.Giant.Activity
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603A2D9 RID: 238297 RVA: 0x00DD40B4 File Offset: 0x00DD22B4
+		// Token: 0x0602F1FF RID: 193023 RVA: 0x00D23544 File Offset: 0x00D21744
 		protected override UniTask OnBeforeStartAsync()
 		{
 			GiantActivityInfoPanel.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Giant.Activity
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A2DA RID: 238298 RVA: 0x00DD40F7 File Offset: 0x00DD22F7
+		// Token: 0x0602F200 RID: 193024 RVA: 0x00D23587 File Offset: 0x00D21787
 		public void SetTitle(string text)
 		{
 			ActivityTitleTypeA title = this.Title;
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.Giant.Activity
 			title2.SetTitleByText(text);
 		}
 
-		// Token: 0x0603A2DB RID: 238299 RVA: 0x00DD4121 File Offset: 0x00DD2321
+		// Token: 0x0602F201 RID: 193025 RVA: 0x00D235B1 File Offset: 0x00D217B1
 		public void SetTimer(bool visible, string text)
 		{
 			ActivityTitleTypeA title = this.Title;
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.Giant.Activity
 			}
 		}
 
-		// Token: 0x0603A2DC RID: 238300 RVA: 0x00DD4149 File Offset: 0x00DD2349
+		// Token: 0x0602F202 RID: 193026 RVA: 0x00D235D9 File Offset: 0x00D217D9
 		public void SetDesc(string textId)
 		{
 			ActivityDescriptionTypeA desc = this.Desc;
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.Giant.Activity
 			desc.SetContentByTextId(textId, Array.Empty<string>());
 		}
 
-		// Token: 0x0603A2DD RID: 238301 RVA: 0x00DD4161 File Offset: 0x00DD2361
+		// Token: 0x0602F203 RID: 193027 RVA: 0x00D235F1 File Offset: 0x00D217F1
 		public void SetReward(List<TItem> rewardList)
 		{
 			ActivityRewardList<CommonItemSmallItemGrid, TItem> reward = this.Reward;
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.Giant.Activity
 			reward.RefreshItemLayout(rewardList, null);
 		}
 
-		// Token: 0x0603A2DE RID: 238302 RVA: 0x00DD4178 File Offset: 0x00DD2378
+		// Token: 0x0602F204 RID: 193028 RVA: 0x00D23608 File Offset: 0x00D21808
 		public void RefreshFunctionArea()
 		{
 			IActivityFunctionAreaParams parameters = new ActivityFunctionAreaParams
@@ -128,15 +128,15 @@ namespace CSharpScript.Game.Module.Giant.Activity
 			bottom2.SetFunctionRedDotVisible(this.ActivityBaseData.RedPointShowState);
 		}
 
-		// Token: 0x0401E59B RID: 124315
+		// Token: 0x04019039 RID: 102457
 		[Nullable(2)]
 		private ActivityTitleTypeA Title;
 
-		// Token: 0x0401E59C RID: 124316
+		// Token: 0x0401903A RID: 102458
 		[Nullable(2)]
 		private ActivityDescriptionTypeA Desc;
 
-		// Token: 0x0401E59D RID: 124317
+		// Token: 0x0401903B RID: 102459
 		[Nullable(new byte[]
 		{
 			2,
@@ -144,27 +144,27 @@ namespace CSharpScript.Game.Module.Giant.Activity
 		})]
 		private ActivityRewardList<CommonItemSmallItemGrid, TItem> Reward;
 
-		// Token: 0x0401E59E RID: 124318
+		// Token: 0x0401903C RID: 102460
 		[Nullable(2)]
 		private ActivityFunctionalTypeA Bottom;
 
-		// Token: 0x0401E59F RID: 124319
+		// Token: 0x0401903D RID: 102461
 		private readonly ActivityBaseData ActivityBaseData;
 
-		// Token: 0x0401E5A0 RID: 124320
+		// Token: 0x0401903E RID: 102462
 		private readonly Action OnEnterClick;
 
-		// Token: 0x0200BC10 RID: 48144
+		// Token: 0x0200A61B RID: 42523
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x04038C3E RID: 232510
+			// Token: 0x0403360D RID: 210445
 			Title,
-			// Token: 0x04038C3F RID: 232511
+			// Token: 0x0403360E RID: 210446
 			Desc,
-			// Token: 0x04038C40 RID: 232512
+			// Token: 0x0403360F RID: 210447
 			Reward,
-			// Token: 0x04038C41 RID: 232513
+			// Token: 0x04033610 RID: 210448
 			Bottom
 		}
 	}

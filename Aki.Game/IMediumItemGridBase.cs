@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x0200199D RID: 6557
+// Token: 0x02000E5A RID: 3674
 public interface IMediumItemGridBase
 {
-	// Token: 0x17001002 RID: 4098
-	// (get) Token: 0x0600BF7B RID: 49019
+	// Token: 0x17001026 RID: 4134
+	// (get) Token: 0x06009383 RID: 37763
 	ESmallItemGridType Type { get; }
 }

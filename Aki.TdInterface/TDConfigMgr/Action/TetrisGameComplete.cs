@@ -4,11 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200223C RID: 8764
+	// Token: 0x020024A7 RID: 9383
 	public class TetrisGameComplete : ActionParams
 	{
-		// Token: 0x0600C058 RID: 49240 RVA: 0x001B9E75 File Offset: 0x001B8075
-		[NullableContext(1)]
+		// Token: 0x0600CC16 RID: 52246 RVA: 0x001D1541 File Offset: 0x001CF741
 		public static TetrisGameComplete Create([Nullable(2)] TetrisGameComplete instance)
 		{
 			if (instance == null)
@@ -21,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x040072B2 RID: 29362
+		// Token: 0x040078FC RID: 30972
 		[Nullable(2)]
 		protected new TetrisGameComplete FbInstance;
 	}

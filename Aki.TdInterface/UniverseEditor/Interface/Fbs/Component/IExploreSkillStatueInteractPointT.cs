@@ -3,25 +3,25 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200520E RID: 21006
+	// Token: 0x02005776 RID: 22390
 	public class IExploreSkillStatueInteractPointT
 	{
-		// Token: 0x170099DA RID: 39386
-		// (get) Token: 0x0602221E RID: 139806 RVA: 0x004BC71D File Offset: 0x004BA91D
-		// (set) Token: 0x0602221F RID: 139807 RVA: 0x004BC725 File Offset: 0x004BA925
+		// Token: 0x1700A1D6 RID: 41430
+		// (get) Token: 0x060241B4 RID: 147892 RVA: 0x004F71E1 File Offset: 0x004F53E1
+		// (set) Token: 0x060241B5 RID: 147893 RVA: 0x004F71E9 File Offset: 0x004F53E9
 		public EExploreSkillInteractType Type { get; set; }
 
-		// Token: 0x170099DB RID: 39387
-		// (get) Token: 0x06022220 RID: 139808 RVA: 0x004BC72E File Offset: 0x004BA92E
-		// (set) Token: 0x06022221 RID: 139809 RVA: 0x004BC736 File Offset: 0x004BA936
+		// Token: 0x1700A1D7 RID: 41431
+		// (get) Token: 0x060241B6 RID: 147894 RVA: 0x004F71F2 File Offset: 0x004F53F2
+		// (set) Token: 0x060241B7 RID: 147895 RVA: 0x004F71FA File Offset: 0x004F53FA
 		public float PullTime { get; set; }
 
-		// Token: 0x170099DC RID: 39388
-		// (get) Token: 0x06022222 RID: 139810 RVA: 0x004BC73F File Offset: 0x004BA93F
-		// (set) Token: 0x06022223 RID: 139811 RVA: 0x004BC747 File Offset: 0x004BA947
+		// Token: 0x1700A1D8 RID: 41432
+		// (get) Token: 0x060241B8 RID: 147896 RVA: 0x004F7203 File Offset: 0x004F5403
+		// (set) Token: 0x060241B9 RID: 147897 RVA: 0x004F720B File Offset: 0x004F540B
 		public List<string> HangingPointList { get; set; }
 
-		// Token: 0x06022224 RID: 139812 RVA: 0x004BC750 File Offset: 0x004BA950
+		// Token: 0x060241BA RID: 147898 RVA: 0x004F7214 File Offset: 0x004F5414
 		public IExploreSkillStatueInteractPointT()
 		{
 			this.Type = EExploreSkillInteractType.PullGiant;

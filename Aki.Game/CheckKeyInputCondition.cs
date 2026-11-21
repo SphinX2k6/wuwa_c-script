@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020017DA RID: 6106
+// Token: 0x02000C93 RID: 3219
 [NullableContext(1)]
 [Nullable(0)]
 public class CheckKeyInputCondition : BaseCheckCondition
 {
-	// Token: 0x0600B27D RID: 45693 RVA: 0x00284FBC File Offset: 0x002831BC
+	// Token: 0x06008666 RID: 34406 RVA: 0x0028F568 File Offset: 0x0028D768
 	public CheckKeyInputCondition(string paramsString, bool isSuccessNode) : base(paramsString, isSuccessNode)
 	{
 		this.Type = EComboTeachingCheckType.Event;
@@ -14,22 +14,22 @@ public class CheckKeyInputCondition : BaseCheckCondition
 		this.SuccessType = EComboTeachingSuccessCondition.PressKey;
 	}
 
-	// Token: 0x17000F0D RID: 3853
-	// (get) Token: 0x0600B27E RID: 45694 RVA: 0x00284FEB File Offset: 0x002831EB
-	// (set) Token: 0x0600B27F RID: 45695 RVA: 0x00284FF3 File Offset: 0x002831F3
+	// Token: 0x17000F30 RID: 3888
+	// (get) Token: 0x06008667 RID: 34407 RVA: 0x0028F597 File Offset: 0x0028D797
+	// (set) Token: 0x06008668 RID: 34408 RVA: 0x0028F59F File Offset: 0x0028D79F
 	public override EComboTeachingCheckType Type { get; set; }
 
-	// Token: 0x17000F0E RID: 3854
-	// (get) Token: 0x0600B280 RID: 45696 RVA: 0x00284FFC File Offset: 0x002831FC
-	// (set) Token: 0x0600B281 RID: 45697 RVA: 0x00285004 File Offset: 0x00283204
+	// Token: 0x17000F31 RID: 3889
+	// (get) Token: 0x06008669 RID: 34409 RVA: 0x0028F5A8 File Offset: 0x0028D7A8
+	// (set) Token: 0x0600866A RID: 34410 RVA: 0x0028F5B0 File Offset: 0x0028D7B0
 	protected override EComboTeachingFailCondition FailType { get; set; } = EComboTeachingFailCondition.PressKey;
 
-	// Token: 0x17000F0F RID: 3855
-	// (get) Token: 0x0600B282 RID: 45698 RVA: 0x0028500D File Offset: 0x0028320D
-	// (set) Token: 0x0600B283 RID: 45699 RVA: 0x00285015 File Offset: 0x00283215
+	// Token: 0x17000F32 RID: 3890
+	// (get) Token: 0x0600866B RID: 34411 RVA: 0x0028F5B9 File Offset: 0x0028D7B9
+	// (set) Token: 0x0600866C RID: 34412 RVA: 0x0028F5C1 File Offset: 0x0028D7C1
 	protected override EComboTeachingSuccessCondition SuccessType { get; set; } = EComboTeachingSuccessCondition.PressKey;
 
-	// Token: 0x0600B284 RID: 45700 RVA: 0x00285020 File Offset: 0x00283220
+	// Token: 0x0600866D RID: 34413 RVA: 0x0028F5CC File Offset: 0x0028D7CC
 	protected override bool CheckFail(IComboTeachingInfo node, [Nullable(2)] IBaseCheckConditionInfo extra = null)
 	{
 		ICheckKeyCondition checkKeyCondition = extra as ICheckKeyCondition;
@@ -51,7 +51,7 @@ public class CheckKeyInputCondition : BaseCheckCondition
 		return this.ParamsArray[0] == b;
 	}
 
-	// Token: 0x0600B285 RID: 45701 RVA: 0x002850A8 File Offset: 0x002832A8
+	// Token: 0x0600866E RID: 34414 RVA: 0x0028F654 File Offset: 0x0028D854
 	protected override bool CheckSuccess(IComboTeachingInfo node, [Nullable(2)] IBaseCheckConditionInfo extra = null)
 	{
 		ICheckKeyCondition checkKeyCondition = extra as ICheckKeyCondition;

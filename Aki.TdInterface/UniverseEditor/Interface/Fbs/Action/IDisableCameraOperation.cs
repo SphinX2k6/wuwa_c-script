@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020065D9 RID: 26073
+	// Token: 0x02006C41 RID: 27713
 	public struct IDisableCameraOperation : IFlatbufferObject
 	{
-		// Token: 0x1700C181 RID: 49537
-		// (get) Token: 0x0602D386 RID: 185222 RVA: 0x00632B7B File Offset: 0x00630D7B
+		// Token: 0x1700CB10 RID: 51984
+		// (get) Token: 0x0602FB0A RID: 195338 RVA: 0x0067ED3F File Offset: 0x0067CF3F
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D387 RID: 185223 RVA: 0x00632B88 File Offset: 0x00630D88
+		// Token: 0x0602FB0B RID: 195339 RVA: 0x0067ED4C File Offset: 0x0067CF4C
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602D388 RID: 185224 RVA: 0x00632B90 File Offset: 0x00630D90
+		// Token: 0x0602FB0C RID: 195340 RVA: 0x0067ED54 File Offset: 0x0067CF54
 		public static IDisableCameraOperation GetRootAsIDisableCameraOperation(ByteBuffer _bb)
 		{
 			return IDisableCameraOperation.GetRootAsIDisableCameraOperation(_bb, default(IDisableCameraOperation));
 		}
 
-		// Token: 0x0602D389 RID: 185225 RVA: 0x00632BAC File Offset: 0x00630DAC
+		// Token: 0x0602FB0D RID: 195341 RVA: 0x0067ED70 File Offset: 0x0067CF70
 		public static IDisableCameraOperation GetRootAsIDisableCameraOperation(ByteBuffer _bb, IDisableCameraOperation obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602D38A RID: 185226 RVA: 0x00632BC9 File Offset: 0x00630DC9
+		// Token: 0x0602FB0E RID: 195342 RVA: 0x0067ED8D File Offset: 0x0067CF8D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602D38B RID: 185227 RVA: 0x00632BD8 File Offset: 0x00630DD8
+		// Token: 0x0602FB0F RID: 195343 RVA: 0x0067ED9C File Offset: 0x0067CF9C
 		public IDisableCameraOperation __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C182 RID: 49538
-		// (get) Token: 0x0602D38C RID: 185228 RVA: 0x00632BE8 File Offset: 0x00630DE8
+		// Token: 0x1700CB11 RID: 51985
+		// (get) Token: 0x0602FB10 RID: 195344 RVA: 0x0067EDAC File Offset: 0x0067CFAC
 		public ECameraOperationType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D38D RID: 185229 RVA: 0x00632C24 File Offset: 0x00630E24
+		// Token: 0x0602FB11 RID: 195345 RVA: 0x0067EDE8 File Offset: 0x0067CFE8
 		public static Offset<IDisableCameraOperation> CreateIDisableCameraOperation(FlatBufferBuilder builder, ECameraOperationType Type = ECameraOperationType.Enable)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IDisableCameraOperation.EndIDisableCameraOperation(builder);
 		}
 
-		// Token: 0x0602D38E RID: 185230 RVA: 0x00632C3A File Offset: 0x00630E3A
+		// Token: 0x0602FB12 RID: 195346 RVA: 0x0067EDFE File Offset: 0x0067CFFE
 		public static void StartIDisableCameraOperation(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602D38F RID: 185231 RVA: 0x00632C43 File Offset: 0x00630E43
+		// Token: 0x0602FB13 RID: 195347 RVA: 0x0067EE07 File Offset: 0x0067D007
 		public static void AddType(FlatBufferBuilder builder, ECameraOperationType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602D390 RID: 185232 RVA: 0x00632C4E File Offset: 0x00630E4E
+		// Token: 0x0602FB14 RID: 195348 RVA: 0x0067EE12 File Offset: 0x0067D012
 		public static Offset<IDisableCameraOperation> EndIDisableCameraOperation(FlatBufferBuilder builder)
 		{
 			return new Offset<IDisableCameraOperation>(builder.EndTable());
 		}
 
-		// Token: 0x0602D391 RID: 185233 RVA: 0x00632C5C File Offset: 0x00630E5C
+		// Token: 0x0602FB15 RID: 195349 RVA: 0x0067EE20 File Offset: 0x0067D020
 		public IDisableCameraOperationT UnPack()
 		{
 			IDisableCameraOperationT disableCameraOperationT = new IDisableCameraOperationT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return disableCameraOperationT;
 		}
 
-		// Token: 0x0602D392 RID: 185234 RVA: 0x00632C77 File Offset: 0x00630E77
+		// Token: 0x0602FB16 RID: 195350 RVA: 0x0067EE3B File Offset: 0x0067D03B
 		public void UnPackTo(IDisableCameraOperationT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602D393 RID: 185235 RVA: 0x00632C88 File Offset: 0x00630E88
+		// Token: 0x0602FB17 RID: 195351 RVA: 0x0067EE4C File Offset: 0x0067D04C
 		public static Offset<IDisableCameraOperation> Pack(FlatBufferBuilder builder, IDisableCameraOperationT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IDisableCameraOperation.CreateIDisableCameraOperation(builder, _o.Type);
 		}
 
-		// Token: 0x04010C3D RID: 68669
+		// Token: 0x04011A4F RID: 72271
 		private Table __p;
 	}
 }

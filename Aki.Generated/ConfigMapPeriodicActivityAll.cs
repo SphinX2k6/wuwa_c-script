@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000522 RID: 1314
+	// Token: 0x02000538 RID: 1336
 	public class ConfigMapPeriodicActivityAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001ED7 RID: 7895 RVA: 0x001078BC File Offset: 0x00105ABC
+		// Token: 0x06001F5B RID: 8027 RVA: 0x0010E010 File Offset: 0x0010C210
 		static ConfigMapPeriodicActivityAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMapPeriodicActivityAll.CreateStaticDefaultValue), new Action(ConfigMapPeriodicActivityAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001ED8 RID: 7896 RVA: 0x001078DC File Offset: 0x00105ADC
+		// Token: 0x06001F5C RID: 8028 RVA: 0x0010E030 File Offset: 0x0010C230
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMapPeriodicActivityAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001ED9 RID: 7897 RVA: 0x0010795B File Offset: 0x00105B5B
+		// Token: 0x06001F5D RID: 8029 RVA: 0x0010E0AF File Offset: 0x0010C2AF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMapPeriodicActivityAll.LogPair = null;
 			ConfigMapPeriodicActivityAll.HandleId = 0;
 		}
 
-		// Token: 0x06001EDA RID: 7898 RVA: 0x00107969 File Offset: 0x00105B69
+		// Token: 0x06001F5E RID: 8030 RVA: 0x0010E0BD File Offset: 0x0010C2BD
 		public static void Init()
 		{
 			ConfigMapPeriodicActivityAll.HandleId = ConfigCommon.InitDataStatement(ConfigMapPeriodicActivityAll.HandleId, "db_map.db", "select BinData from `MapPeriodicActivity`");
 		}
 
-		// Token: 0x06001EDB RID: 7899 RVA: 0x00107984 File Offset: 0x00105B84
+		// Token: 0x06001F5F RID: 8031 RVA: 0x0010E0D8 File Offset: 0x0010C2D8
 		[NullableContext(2)]
 		public static IReadOnlyList<MapPeriodicActivity> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040023D2 RID: 9170
+		// Token: 0x0400246C RID: 9324
 		private const string DB = "db_map.db";
 
-		// Token: 0x040023D3 RID: 9171
+		// Token: 0x0400246D RID: 9325
 		private const string FILE = "d.地图.xlsx";
 
-		// Token: 0x040023D4 RID: 9172
+		// Token: 0x0400246E RID: 9326
 		private const string TABLE = "MapPeriodicActivity";
 
-		// Token: 0x040023D5 RID: 9173
+		// Token: 0x0400246F RID: 9327
 		private const string COMMAND = "select BinData from `MapPeriodicActivity`";
 
-		// Token: 0x040023D6 RID: 9174
+		// Token: 0x04002470 RID: 9328
 		private const string KEY_PREFIX = "MapPeriodicActivityAll";
 
-		// Token: 0x040023D7 RID: 9175
+		// Token: 0x04002471 RID: 9329
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040023D8 RID: 9176
+		// Token: 0x04002472 RID: 9330
 		private static int HandleId;
 	}
 }

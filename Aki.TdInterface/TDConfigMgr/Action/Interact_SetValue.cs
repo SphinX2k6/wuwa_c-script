@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C83 RID: 7299
+	// Token: 0x02001E88 RID: 7816
 	public class Interact_SetValue
 	{
-		// Token: 0x04005EE9 RID: 24297
+		// Token: 0x0400643C RID: 25660
 		public int Who;
 
-		// Token: 0x04005EEA RID: 24298
-		[Nullable(1)]
+		// Token: 0x0400643D RID: 25661
 		public string Param;
 	}
 }

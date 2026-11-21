@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.RoleDev
 {
-	// Token: 0x02004CBC RID: 19644
+	// Token: 0x02003C6D RID: 15469
 	[NullableContext(1)]
 	public interface IMaterialGroup
 	{
-		// Token: 0x17007D21 RID: 32033
-		// (get) Token: 0x06032B86 RID: 207750
-		// (set) Token: 0x06032B87 RID: 207751
+		// Token: 0x170050CB RID: 20683
+		// (get) Token: 0x0602793A RID: 162106
+		// (set) Token: 0x0602793B RID: 162107
 		int Type { get; set; }
 
-		// Token: 0x17007D22 RID: 32034
-		// (get) Token: 0x06032B88 RID: 207752
-		// (set) Token: 0x06032B89 RID: 207753
+		// Token: 0x170050CC RID: 20684
+		// (get) Token: 0x0602793C RID: 162108
+		// (set) Token: 0x0602793D RID: 162109
 		List<IItemMaterial> Materials { get; set; }
 	}
 }

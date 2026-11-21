@@ -1,13 +1,13 @@
 ﻿using System;
 
-// Token: 0x020025F8 RID: 9720
+// Token: 0x02001AE3 RID: 6883
 public class PowerConst
 {
-	// Token: 0x06013C5D RID: 80989 RVA: 0x004F4FA7 File Offset: 0x004F31A7
+	// Token: 0x0601113F RID: 69951 RVA: 0x00503D33 File Offset: 0x00501F33
 	private PowerConst()
 	{
 	}
 
-	// Token: 0x04009504 RID: 38148
+	// Token: 0x0400965B RID: 38491
 	public const int MaxVirtualItemId = 2000;
 }

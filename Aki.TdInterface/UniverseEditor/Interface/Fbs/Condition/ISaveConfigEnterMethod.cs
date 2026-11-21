@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004CBB RID: 19643
+	// Token: 0x020051B4 RID: 20916
 	public struct ISaveConfigEnterMethod : IFlatbufferObject
 	{
-		// Token: 0x17008E9C RID: 36508
-		// (get) Token: 0x0601F2A9 RID: 127657 RVA: 0x0045A2AE File Offset: 0x004584AE
+		// Token: 0x170095CA RID: 38346
+		// (get) Token: 0x06020ECB RID: 134859 RVA: 0x0048DDFE File Offset: 0x0048BFFE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601F2AA RID: 127658 RVA: 0x0045A2BB File Offset: 0x004584BB
+		// Token: 0x06020ECC RID: 134860 RVA: 0x0048DE0B File Offset: 0x0048C00B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601F2AB RID: 127659 RVA: 0x0045A2C4 File Offset: 0x004584C4
+		// Token: 0x06020ECD RID: 134861 RVA: 0x0048DE14 File Offset: 0x0048C014
 		public static ISaveConfigEnterMethod GetRootAsISaveConfigEnterMethod(ByteBuffer _bb)
 		{
 			return ISaveConfigEnterMethod.GetRootAsISaveConfigEnterMethod(_bb, default(ISaveConfigEnterMethod));
 		}
 
-		// Token: 0x0601F2AC RID: 127660 RVA: 0x0045A2E0 File Offset: 0x004584E0
+		// Token: 0x06020ECE RID: 134862 RVA: 0x0048DE30 File Offset: 0x0048C030
 		public static ISaveConfigEnterMethod GetRootAsISaveConfigEnterMethod(ByteBuffer _bb, ISaveConfigEnterMethod obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601F2AD RID: 127661 RVA: 0x0045A2FD File Offset: 0x004584FD
+		// Token: 0x06020ECF RID: 134863 RVA: 0x0048DE4D File Offset: 0x0048C04D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601F2AE RID: 127662 RVA: 0x0045A30C File Offset: 0x0045850C
+		// Token: 0x06020ED0 RID: 134864 RVA: 0x0048DE5C File Offset: 0x0048C05C
 		public ISaveConfigEnterMethod __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008E9D RID: 36509
-		// (get) Token: 0x0601F2AF RID: 127663 RVA: 0x0045A31C File Offset: 0x0045851C
+		// Token: 0x170095CB RID: 38347
+		// (get) Token: 0x06020ED1 RID: 134865 RVA: 0x0048DE6C File Offset: 0x0048C06C
 		public ECondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008E9E RID: 36510
-		// (get) Token: 0x0601F2B0 RID: 127664 RVA: 0x0045A358 File Offset: 0x00458558
+		// Token: 0x170095CC RID: 38348
+		// (get) Token: 0x06020ED2 RID: 134866 RVA: 0x0048DEA8 File Offset: 0x0048C0A8
 		public ECompare Compare
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008E9F RID: 36511
-		// (get) Token: 0x0601F2B1 RID: 127665 RVA: 0x0045A394 File Offset: 0x00458594
+		// Token: 0x170095CD RID: 38349
+		// (get) Token: 0x06020ED3 RID: 134867 RVA: 0x0048DEE4 File Offset: 0x0048C0E4
 		public ESaveConfigEnterMethod EnterMethod
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601F2B2 RID: 127666 RVA: 0x0045A3D0 File Offset: 0x004585D0
+		// Token: 0x06020ED4 RID: 134868 RVA: 0x0048DF20 File Offset: 0x0048C120
 		public static Offset<ISaveConfigEnterMethod> CreateISaveConfigEnterMethod(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, ECompare Compare = ECompare.Eq, ESaveConfigEnterMethod EnterMethod = ESaveConfigEnterMethod.FirstTime)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ISaveConfigEnterMethod.EndISaveConfigEnterMethod(builder);
 		}
 
-		// Token: 0x0601F2B3 RID: 127667 RVA: 0x0045A3F4 File Offset: 0x004585F4
+		// Token: 0x06020ED5 RID: 134869 RVA: 0x0048DF44 File Offset: 0x0048C144
 		public static void StartISaveConfigEnterMethod(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601F2B4 RID: 127668 RVA: 0x0045A3FD File Offset: 0x004585FD
+		// Token: 0x06020ED6 RID: 134870 RVA: 0x0048DF4D File Offset: 0x0048C14D
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601F2B5 RID: 127669 RVA: 0x0045A408 File Offset: 0x00458608
+		// Token: 0x06020ED7 RID: 134871 RVA: 0x0048DF58 File Offset: 0x0048C158
 		public static void AddCompare(FlatBufferBuilder builder, ECompare compare)
 		{
 			builder.AddByte(1, (byte)compare, 0);
 		}
 
-		// Token: 0x0601F2B6 RID: 127670 RVA: 0x0045A413 File Offset: 0x00458613
+		// Token: 0x06020ED8 RID: 134872 RVA: 0x0048DF63 File Offset: 0x0048C163
 		public static void AddEnterMethod(FlatBufferBuilder builder, ESaveConfigEnterMethod enterMethod)
 		{
 			builder.AddByte(2, (byte)enterMethod, 0);
 		}
 
-		// Token: 0x0601F2B7 RID: 127671 RVA: 0x0045A41E File Offset: 0x0045861E
+		// Token: 0x06020ED9 RID: 134873 RVA: 0x0048DF6E File Offset: 0x0048C16E
 		public static Offset<ISaveConfigEnterMethod> EndISaveConfigEnterMethod(FlatBufferBuilder builder)
 		{
 			return new Offset<ISaveConfigEnterMethod>(builder.EndTable());
 		}
 
-		// Token: 0x0601F2B8 RID: 127672 RVA: 0x0045A42C File Offset: 0x0045862C
+		// Token: 0x06020EDA RID: 134874 RVA: 0x0048DF7C File Offset: 0x0048C17C
 		public ISaveConfigEnterMethodT UnPack()
 		{
 			ISaveConfigEnterMethodT saveConfigEnterMethodT = new ISaveConfigEnterMethodT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return saveConfigEnterMethodT;
 		}
 
-		// Token: 0x0601F2B9 RID: 127673 RVA: 0x0045A447 File Offset: 0x00458647
+		// Token: 0x06020EDB RID: 134875 RVA: 0x0048DF97 File Offset: 0x0048C197
 		public void UnPackTo(ISaveConfigEnterMethodT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.EnterMethod = this.EnterMethod;
 		}
 
-		// Token: 0x0601F2BA RID: 127674 RVA: 0x0045A470 File Offset: 0x00458670
+		// Token: 0x06020EDC RID: 134876 RVA: 0x0048DFC0 File Offset: 0x0048C1C0
 		public static Offset<ISaveConfigEnterMethod> Pack(FlatBufferBuilder builder, ISaveConfigEnterMethodT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ISaveConfigEnterMethod.CreateISaveConfigEnterMethod(builder, _o.Type, _o.Compare, _o.EnterMethod);
 		}
 
-		// Token: 0x0400D680 RID: 54912
+		// Token: 0x0400E1A7 RID: 57767
 		private Table __p;
 	}
 }

@@ -3,13 +3,13 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.AdventureGuide
 {
-	// Token: 0x02005EC2 RID: 24258
+	// Token: 0x02004EA7 RID: 20135
 	public class QuestRewardViewParam
 	{
-		// Token: 0x04020333 RID: 131891
+		// Token: 0x0401ADFA RID: 110074
 		public bool IsShowExpItem;
 
-		// Token: 0x04020334 RID: 131892
+		// Token: 0x0401ADFB RID: 110075
 		[Nullable(new byte[]
 		{
 			2,
@@ -17,13 +17,13 @@ namespace CSharpScript.Game.Module.AdventureGuide
 		})]
 		public int[][] RewardList;
 
-		// Token: 0x04020335 RID: 131893
+		// Token: 0x0401ADFC RID: 110076
 		public int AreaId;
 
-		// Token: 0x04020336 RID: 131894
+		// Token: 0x0401ADFD RID: 110077
 		public int BeforeContributionLevel;
 
-		// Token: 0x04020337 RID: 131895
+		// Token: 0x0401ADFE RID: 110078
 		public int BeforeContributionValue;
 	}
 }

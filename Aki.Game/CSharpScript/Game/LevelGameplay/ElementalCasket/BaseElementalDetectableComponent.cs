@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 {
-	// Token: 0x02006E79 RID: 28281
+	// Token: 0x02005FFA RID: 24570
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BaseElementalDetectableComponent : EntityComponent
 	{
-		// Token: 0x06044EC7 RID: 282311 RVA: 0x01106544 File Offset: 0x01104744
+		// Token: 0x0603B06A RID: 241770 RVA: 0x010B0B6C File Offset: 0x010AED6C
 		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return true;
 		}
 
-		// Token: 0x06044EC8 RID: 282312 RVA: 0x011065CC File Offset: 0x011047CC
+		// Token: 0x0603B06B RID: 241771 RVA: 0x010B0BF4 File Offset: 0x010AEDF4
 		protected override void OnActivate()
 		{
 			IEntityData pbEntityInitData = base.Entity.GetComponent<CreatureDataComponent>().GetPbEntityInitData();
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.InitByConfig(component);
 		}
 
-		// Token: 0x06044EC9 RID: 282313 RVA: 0x01106644 File Offset: 0x01104844
+		// Token: 0x0603B06C RID: 241772 RVA: 0x010B0C6C File Offset: 0x010AEE6C
 		private unsafe void InitByConfig(ElementalEffectComponent config)
 		{
 			try
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.RegisterOwnedShapes();
 		}
 
-		// Token: 0x06044ECA RID: 282314 RVA: 0x011066F4 File Offset: 0x011048F4
+		// Token: 0x0603B06D RID: 241773 RVA: 0x010B0D1C File Offset: 0x010AEF1C
 		protected virtual void OnInitByConfig(ElementalEffectComponent config)
 		{
 			if (config.Range.Type == EElementalRangeType.BaseShape)
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044ECB RID: 282315 RVA: 0x0110671C File Offset: 0x0110491C
+		// Token: 0x0603B06E RID: 241774 RVA: 0x010B0D44 File Offset: 0x010AEF44
 		public List<ActionInfo> CheckGetActions(bool isEnter, int index)
 		{
 			List<IElementalMatchActions> list = isEnter ? this.OnActiveEffectActions : this.OnLoseEffectActions;
@@ -107,19 +107,19 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return list[index].Actions ?? new List<ActionInfo>();
 		}
 
-		// Token: 0x06044ECC RID: 282316 RVA: 0x01106762 File Offset: 0x01104962
+		// Token: 0x0603B06F RID: 241775 RVA: 0x010B0D8A File Offset: 0x010AEF8A
 		public EElementalType? GetElementalType()
 		{
 			return this.ElementalType;
 		}
 
-		// Token: 0x06044ECD RID: 282317 RVA: 0x0110676A File Offset: 0x0110496A
+		// Token: 0x0603B070 RID: 241776 RVA: 0x010B0D92 File Offset: 0x010AEF92
 		public virtual bool IsImmuneTimeStop()
 		{
 			return false;
 		}
 
-		// Token: 0x06044ECE RID: 282318 RVA: 0x0110676D File Offset: 0x0110496D
+		// Token: 0x0603B071 RID: 241777 RVA: 0x010B0D95 File Offset: 0x010AEF95
 		protected virtual void RegisterOwnedShapes()
 		{
 			if (this.OwnedShapes != null)
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044ECF RID: 282319 RVA: 0x01106798 File Offset: 0x01104998
+		// Token: 0x0603B072 RID: 241778 RVA: 0x010B0DC0 File Offset: 0x010AEFC0
 		protected void InitByBaseShape(ITriggerShape shapeConfig)
 		{
 			BaseActorComponent component = base.Entity.GetComponent<BaseActorComponent>();
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.OwnedShapes.Add(ukuroFastCollisionShapeComponent);
 		}
 
-		// Token: 0x06044ED0 RID: 282320 RVA: 0x01106850 File Offset: 0x01104A50
+		// Token: 0x0603B073 RID: 241779 RVA: 0x010B0E78 File Offset: 0x010AF078
 		protected override bool OnEnd()
 		{
 			ElementalCasketController.Instance.UnregisterDetectable(base.Entity.Id);
@@ -173,14 +173,14 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			return true;
 		}
 
-		// Token: 0x06044ED1 RID: 282321 RVA: 0x011068D0 File Offset: 0x01104AD0
+		// Token: 0x0603B074 RID: 241780 RVA: 0x010B0EF8 File Offset: 0x010AF0F8
 		protected override bool OnClear()
 		{
 			this.OwnedShapes = null;
 			return true;
 		}
 
-		// Token: 0x06044ED2 RID: 282322 RVA: 0x011068DC File Offset: 0x01104ADC
+		// Token: 0x0603B075 RID: 241781 RVA: 0x010B0F04 File Offset: 0x010AF104
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -188,50 +188,68 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 				return false;
 			}
 			BaseElementalDetectableComponent baseElementalDetectableComponent = (BaseElementalDetectableComponent)componentTemplate;
-			if (base.CanResetComponentProperty("ElementalType"))
+			this.ElementalType = baseElementalDetectableComponent.ElementalType;
+			if (baseElementalDetectableComponent.OwnedShapes == null)
 			{
-				this.ElementalType = baseElementalDetectableComponent.ElementalType;
+				this.OwnedShapes = null;
 			}
-			if (base.CanResetComponentProperty("OwnedShapes"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OwnedShapes), "OwnedShapes"))
 			{
-				if (baseElementalDetectableComponent.OwnedShapes == null)
-				{
-					this.OwnedShapes = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<UKuroFastCollisionShapeComponent>>(this.OwnedShapes), "OwnedShapes"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("OnActiveEffectActions"))
+			if (baseElementalDetectableComponent.OnActiveEffectActions == null)
 			{
-				if (baseElementalDetectableComponent.OnActiveEffectActions == null)
-				{
-					this.OnActiveEffectActions = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<IElementalMatchActions>>(this.OnActiveEffectActions), "OnActiveEffectActions"))
-				{
-					return false;
-				}
+				this.OnActiveEffectActions = null;
 			}
-			if (base.CanResetComponentProperty("OnLoseEffectActions"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnActiveEffectActions), "OnActiveEffectActions"))
 			{
-				if (baseElementalDetectableComponent.OnLoseEffectActions == null)
-				{
-					this.OnLoseEffectActions = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<IElementalMatchActions>>(this.OnLoseEffectActions), "OnLoseEffectActions"))
-				{
-					return false;
-				}
+				return false;
+			}
+			if (baseElementalDetectableComponent.OnLoseEffectActions == null)
+			{
+				this.OnLoseEffectActions = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnLoseEffectActions), "OnLoseEffectActions"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x04023E37 RID: 146999
+		// Token: 0x17006F79 RID: 28537
+		// (get) Token: 0x0603B076 RID: 241782 RVA: 0x010B0FB1 File Offset: 0x010AF1B1
+		public override bool NeedClearInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17006F7A RID: 28538
+		// (get) Token: 0x0603B077 RID: 241783 RVA: 0x010B0FB4 File Offset: 0x010AF1B4
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17006F7B RID: 28539
+		// (get) Token: 0x0603B078 RID: 241784 RVA: 0x010B0FB7 File Offset: 0x010AF1B7
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401F0EF RID: 127215
 		protected EElementalType? ElementalType;
 
-		// Token: 0x04023E38 RID: 147000
+		// Token: 0x0401F0F0 RID: 127216
 		[Nullable(new byte[]
 		{
 			2,
@@ -239,7 +257,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 		})]
 		protected List<UKuroFastCollisionShapeComponent> OwnedShapes;
 
-		// Token: 0x04023E39 RID: 147001
+		// Token: 0x0401F0F1 RID: 127217
 		[Nullable(new byte[]
 		{
 			2,
@@ -247,7 +265,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 		})]
 		protected List<IElementalMatchActions> OnActiveEffectActions;
 
-		// Token: 0x04023E3A RID: 147002
+		// Token: 0x0401F0F2 RID: 127218
 		[Nullable(new byte[]
 		{
 			2,

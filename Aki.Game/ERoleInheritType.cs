@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02003246 RID: 12870
+// Token: 0x020027B5 RID: 10165
 public enum ERoleInheritType
 {
-	// Token: 0x0400DAD8 RID: 56024
+	// Token: 0x0400DF77 RID: 57207
 	NORMAL,
-	// Token: 0x0400DAD9 RID: 56025
+	// Token: 0x0400DF78 RID: 57208
 	QTE
 }

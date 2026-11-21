@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029BA RID: 10682
+	// Token: 0x02002CA7 RID: 11431
 	public class EnterNpcVehicle : ActionParams
 	{
-		// Token: 0x0600EC3E RID: 60478 RVA: 0x00228256 File Offset: 0x00226456
-		[NullableContext(1)]
+		// Token: 0x0600FAD5 RID: 64213 RVA: 0x00245BDA File Offset: 0x00243DDA
 		public static EnterNpcVehicle Create(IEnterNpcVehicle? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004A8C RID: 19084
-		// (get) Token: 0x0600EC3F RID: 60479 RVA: 0x00228275 File Offset: 0x00226475
+		// Token: 0x17004E35 RID: 20021
+		// (get) Token: 0x0600FAD6 RID: 64214 RVA: 0x00245BF9 File Offset: 0x00243DF9
 		public virtual int Target
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004A8D RID: 19085
-		// (get) Token: 0x0600EC40 RID: 60480 RVA: 0x00228282 File Offset: 0x00226482
+		// Token: 0x17004E36 RID: 20022
+		// (get) Token: 0x0600FAD7 RID: 64215 RVA: 0x00245C06 File Offset: 0x00243E06
 		public virtual int Seat
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008212 RID: 33298
+		// Token: 0x04008903 RID: 35075
 		private IEnterNpcVehicle Instance;
 	}
 }

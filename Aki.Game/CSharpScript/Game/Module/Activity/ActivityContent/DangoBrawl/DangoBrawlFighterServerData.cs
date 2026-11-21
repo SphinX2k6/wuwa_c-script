@@ -6,19 +6,19 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067C2 RID: 26562
+	// Token: 0x02005712 RID: 22290
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlFighterServerData
 	{
-		// Token: 0x06042278 RID: 270968 RVA: 0x0100AD39 File Offset: 0x01008F39
+		// Token: 0x06036DCE RID: 224718 RVA: 0x00F4C11D File Offset: 0x00F4A31D
 		public DangoBrawlFighterServerData(DangoBrawlFighterInfo data)
 		{
 			this.ServerData = data;
 		}
 
-		// Token: 0x170096B5 RID: 38581
-		// (get) Token: 0x06042279 RID: 270969 RVA: 0x0100AD48 File Offset: 0x01008F48
+		// Token: 0x170069F6 RID: 27126
+		// (get) Token: 0x06036DCF RID: 224719 RVA: 0x00F4C12C File Offset: 0x00F4A32C
 		public int Uid
 		{
 			get
@@ -27,8 +27,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096B6 RID: 38582
-		// (get) Token: 0x0604227A RID: 270970 RVA: 0x0100AD55 File Offset: 0x01008F55
+		// Token: 0x170069F7 RID: 27127
+		// (get) Token: 0x06036DD0 RID: 224720 RVA: 0x00F4C139 File Offset: 0x00F4A339
 		public DangoBrawlFightCamp Camp
 		{
 			get
@@ -37,8 +37,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096B7 RID: 38583
-		// (get) Token: 0x0604227B RID: 270971 RVA: 0x0100AD62 File Offset: 0x01008F62
+		// Token: 0x170069F8 RID: 27128
+		// (get) Token: 0x06036DD1 RID: 224721 RVA: 0x00F4C146 File Offset: 0x00F4A346
 		public int RoleConfigId
 		{
 			get
@@ -47,13 +47,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x0604227C RID: 270972 RVA: 0x0100AD6F File Offset: 0x01008F6F
+		// Token: 0x06036DD2 RID: 224722 RVA: 0x00F4C153 File Offset: 0x00F4A353
 		public int GetAttr(int attrId)
 		{
 			return this.ServerData.InitFinalAttrs.GetValueOrDefault(attrId, 0);
 		}
 
-		// Token: 0x0604227D RID: 270973 RVA: 0x0100AD84 File Offset: 0x01008F84
+		// Token: 0x06036DD3 RID: 224723 RVA: 0x00F4C168 File Offset: 0x00F4A368
 		public void SetFinalAttrs(MapField<int, int> map)
 		{
 			foreach (KeyValuePair<int, int> keyValuePair in map)
@@ -62,8 +62,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096B8 RID: 38584
-		// (get) Token: 0x0604227E RID: 270974 RVA: 0x0100ADE4 File Offset: 0x01008FE4
+		// Token: 0x170069F9 RID: 27129
+		// (get) Token: 0x06036DD4 RID: 224724 RVA: 0x00F4C1C8 File Offset: 0x00F4A3C8
 		public int MaxHp
 		{
 			get
@@ -72,8 +72,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096B9 RID: 38585
-		// (get) Token: 0x0604227F RID: 270975 RVA: 0x0100ADED File Offset: 0x01008FED
+		// Token: 0x170069FA RID: 27130
+		// (get) Token: 0x06036DD5 RID: 224725 RVA: 0x00F4C1D1 File Offset: 0x00F4A3D1
 		public int Cost
 		{
 			get
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x040228A1 RID: 141473
+		// Token: 0x0401D0FE RID: 119038
 		private readonly DangoBrawlFighterInfo ServerData;
 	}
 }

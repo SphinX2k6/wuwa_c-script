@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AEC RID: 2796
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000BB7 RID: 2999
 	public class IEntityGroupFailureArbitraryState : IEntityGroupFailureCondition
 	{
-		// Token: 0x0600405E RID: 16478 RVA: 0x000A451E File Offset: 0x000A271E
+		// Token: 0x0600448D RID: 17549 RVA: 0x000ADB52 File Offset: 0x000ABD52
 		public static IEntityGroupFailureArbitraryState Create(IEntityGroupFailureArbitraryState? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001043 RID: 4163
-		// (get) Token: 0x0600405F RID: 16479 RVA: 0x000A453D File Offset: 0x000A273D
+		// Token: 0x1700111A RID: 4378
+		// (get) Token: 0x0600448E RID: 17550 RVA: 0x000ADB71 File Offset: 0x000ABD71
 		public override EEntityGroupFailureCondition Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001044 RID: 4164
-		// (get) Token: 0x06004060 RID: 16480 RVA: 0x000A454A File Offset: 0x000A274A
+		// Token: 0x1700111B RID: 4379
+		// (get) Token: 0x0600448F RID: 17551 RVA: 0x000ADB7E File Offset: 0x000ABD7E
 		public virtual string State
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040023DB RID: 9179
+		// Token: 0x040025F8 RID: 9720
 		private IEntityGroupFailureArbitraryState Instance;
 	}
 }

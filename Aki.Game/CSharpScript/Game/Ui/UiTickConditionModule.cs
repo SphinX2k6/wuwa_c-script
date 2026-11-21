@@ -4,18 +4,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046E5 RID: 18149
+	// Token: 0x02003615 RID: 13845
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UiTickConditionModule
 	{
-		// Token: 0x0602ECD0 RID: 191696 RVA: 0x00AD5C59 File Offset: 0x00AD3E59
+		// Token: 0x0602340B RID: 144395 RVA: 0x00A03731 File Offset: 0x00A01931
 		public UiTickConditionModule(string tag)
 		{
 			this.Tag = tag;
 		}
 
-		// Token: 0x0602ECD1 RID: 191697 RVA: 0x00AD5C70 File Offset: 0x00AD3E70
+		// Token: 0x0602340C RID: 144396 RVA: 0x00A03748 File Offset: 0x00A01948
 		public void StartTick(Func<float, bool> checkCondition, Action<float> stopCallback, Action<float> finishCallback)
 		{
 			this.CheckCondition = checkCondition;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Ui
 			this.TickId = TickSystem.Instance.Add(new Action<float>(this.Tick), "UiTickConditionModule", ETickingGroup.TG_PrePhysics, true, 0, false).Id;
 		}
 
-		// Token: 0x0602ECD2 RID: 191698 RVA: 0x00AD5CBC File Offset: 0x00AD3EBC
+		// Token: 0x0602340D RID: 144397 RVA: 0x00A03794 File Offset: 0x00A01994
 		public void ManualStopTick()
 		{
 			if (this.StopCallback == null)
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Ui
 			this.StopTick();
 		}
 
-		// Token: 0x0602ECD3 RID: 191699 RVA: 0x00AD5D1E File Offset: 0x00AD3F1E
+		// Token: 0x0602340E RID: 144398 RVA: 0x00A037F6 File Offset: 0x00A019F6
 		private void StopTick()
 		{
 			this.RemoveTick();
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Ui
 			this.FinishCallback = null;
 		}
 
-		// Token: 0x0602ECD4 RID: 191700 RVA: 0x00AD5D46 File Offset: 0x00AD3F46
+		// Token: 0x0602340F RID: 144399 RVA: 0x00A0381E File Offset: 0x00A01A1E
 		private void RemoveTick()
 		{
 			if (this.TickId != -1)
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602ECD5 RID: 191701 RVA: 0x00AD5D64 File Offset: 0x00AD3F64
+		// Token: 0x06023410 RID: 144400 RVA: 0x00A0383C File Offset: 0x00A01A3C
 		private void Tick(float deltaTime)
 		{
 			Func<float, bool> checkCondition = this.CheckCondition;
@@ -86,22 +86,22 @@ namespace CSharpScript.Game.Ui
 			this.CurrentTickTime += deltaTime;
 		}
 
-		// Token: 0x0401975F RID: 104287
+		// Token: 0x04013DFD RID: 81405
 		private readonly string Tag;
 
-		// Token: 0x04019760 RID: 104288
+		// Token: 0x04013DFE RID: 81406
 		private Action<float> FinishCallback;
 
-		// Token: 0x04019761 RID: 104289
+		// Token: 0x04013DFF RID: 81407
 		private Action<float> StopCallback;
 
-		// Token: 0x04019762 RID: 104290
+		// Token: 0x04013E00 RID: 81408
 		private Func<float, bool> CheckCondition;
 
-		// Token: 0x04019763 RID: 104291
+		// Token: 0x04013E01 RID: 81409
 		private float CurrentTickTime;
 
-		// Token: 0x04019764 RID: 104292
+		// Token: 0x04013E02 RID: 81410
 		private int TickId = -1;
 	}
 }

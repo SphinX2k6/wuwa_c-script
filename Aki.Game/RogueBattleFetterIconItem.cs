@@ -7,7 +7,7 @@ using CSharpScript.Game.Module.RogueBattle;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x0200276C RID: 10092
+// Token: 0x02001C57 RID: 7255
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class RogueBattleFetterIconItem : GridProxyAbstract<RogueBattleRoleBondUpdateInfo>
 {
-	// Token: 0x06014B16 RID: 84758 RVA: 0x0053C842 File Offset: 0x0053AA42
+	// Token: 0x06011FF9 RID: 73721 RVA: 0x0054B652 File Offset: 0x00549852
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,14 +26,14 @@ public class RogueBattleFetterIconItem : GridProxyAbstract<RogueBattleRoleBondUp
 		};
 	}
 
-	// Token: 0x06014B17 RID: 84759 RVA: 0x0053C87B File Offset: 0x0053AA7B
+	// Token: 0x06011FFA RID: 73722 RVA: 0x0054B68B File Offset: 0x0054988B
 	public override void Refresh(RogueBattleRoleBondUpdateInfo data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
 		this.RefreshSelectState(false);
 	}
 
-	// Token: 0x06014B18 RID: 84760 RVA: 0x0053C88C File Offset: 0x0053AA8C
+	// Token: 0x06011FFB RID: 73723 RVA: 0x0054B69C File Offset: 0x0054989C
 	public void RefreshSelectState(bool isSelected)
 	{
 		RoleBondInfo roleBondInfo = isSelected ? this.Data.NewRoleBondInfo : this.Data.OldRoleBondInfo;
@@ -54,6 +54,6 @@ public class RogueBattleFetterIconItem : GridProxyAbstract<RogueBattleRoleBondUp
 		sprite.SetColor(color);
 	}
 
-	// Token: 0x04009B92 RID: 39826
+	// Token: 0x04009CEA RID: 40170
 	private RogueBattleRoleBondUpdateInfo Data;
 }

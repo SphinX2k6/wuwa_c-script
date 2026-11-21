@@ -6,15 +6,15 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001C8E RID: 7310
+// Token: 0x0200114D RID: 4429
 public class UpRoleGachaPoolItem : GachaPoolItem
 {
-	// Token: 0x0600DC99 RID: 56473 RVA: 0x0033779A File Offset: 0x0033599A
+	// Token: 0x0600B0AF RID: 45231 RVA: 0x00342CBE File Offset: 0x00340EBE
 	public UpRoleGachaPoolItem(GachaDefine.EGachaViewType gachaType) : base(gachaType)
 	{
 	}
 
-	// Token: 0x0600DC9A RID: 56474 RVA: 0x003377A4 File Offset: 0x003359A4
+	// Token: 0x0600B0B0 RID: 45232 RVA: 0x00342CC8 File Offset: 0x00340EC8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -36,7 +36,7 @@ public class UpRoleGachaPoolItem : GachaPoolItem
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600DC9B RID: 56475 RVA: 0x00337894 File Offset: 0x00335A94
+	// Token: 0x0600B0B1 RID: 45233 RVA: 0x00342DB8 File Offset: 0x00340FB8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		UpRoleGachaPoolItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -47,7 +47,7 @@ public class UpRoleGachaPoolItem : GachaPoolItem
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DC9C RID: 56476 RVA: 0x003378D8 File Offset: 0x00335AD8
+	// Token: 0x0600B0B2 RID: 45234 RVA: 0x00342DFC File Offset: 0x00340FFC
 	public override void Refresh()
 	{
 		if (this.GachaViewInfo == null)
@@ -80,30 +80,30 @@ public class UpRoleGachaPoolItem : GachaPoolItem
 		}
 	}
 
-	// Token: 0x0600DC9D RID: 56477 RVA: 0x00337AAB File Offset: 0x00335CAB
+	// Token: 0x0600B0B3 RID: 45235 RVA: 0x00342FCF File Offset: 0x003411CF
 	public void SetDescUiActive(bool bActive)
 	{
 		this.DescComponent.SetUiActive(bActive);
 	}
 
-	// Token: 0x0400652C RID: 25900
+	// Token: 0x040065FE RID: 26110
 	[Nullable(2)]
 	private RoleDescribeComponent DescComponent;
 
-	// Token: 0x02008268 RID: 33384
+	// Token: 0x020073F0 RID: 29680
 	private enum EComponent
 	{
-		// Token: 0x0402A8C7 RID: 174279
+		// Token: 0x04025BE8 RID: 154600
 		ContentTexture,
-		// Token: 0x0402A8C8 RID: 174280
+		// Token: 0x04025BE9 RID: 154601
 		DescItem,
-		// Token: 0x0402A8C9 RID: 174281
+		// Token: 0x04025BEA RID: 154602
 		ContentBgTexture,
-		// Token: 0x0402A8CA RID: 174282
+		// Token: 0x04025BEB RID: 154603
 		ThemeTextTexture,
-		// Token: 0x0402A8CB RID: 174283
+		// Token: 0x04025BEC RID: 154604
 		EffectPanel,
-		// Token: 0x0402A8CC RID: 174284
+		// Token: 0x04025BED RID: 154605
 		EffectNiagara
 	}
 }

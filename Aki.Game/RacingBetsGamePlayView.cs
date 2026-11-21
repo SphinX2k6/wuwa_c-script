@@ -7,24 +7,24 @@ using Aki.Protocol;
 using CSharpScript.Game.Camera;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.RacingBets;
-using CSharpScript.Game.Module.UiCameraAnimation.UiCameraContext;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002732 RID: 10034
+// Token: 0x02001C1D RID: 7197
 [NullableContext(1)]
 [Nullable(0)]
-public class RacingBetsGamePlayView : UiViewBase, IUiCameraBehavior
+public class RacingBetsGamePlayView : UiViewBase, IUiViewCameraBehavior
 {
-	// Token: 0x0601490F RID: 84239 RVA: 0x00532577 File Offset: 0x00530777
+	// Token: 0x06011DF1 RID: 73201 RVA: 0x0054128B File Offset: 0x0053F48B
 	public RacingBetsGamePlayView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06014910 RID: 84240 RVA: 0x005325AC File Offset: 0x005307AC
+	// Token: 0x06011DF2 RID: 73202 RVA: 0x005412C0 File Offset: 0x0053F4C0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 47;
@@ -161,7 +161,7 @@ public class RacingBetsGamePlayView : UiViewBase, IUiCameraBehavior
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06014911 RID: 84241 RVA: 0x00532E18 File Offset: 0x00531018
+	// Token: 0x06011DF3 RID: 73203 RVA: 0x00541B2C File Offset: 0x0053FD2C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RacingBetsGamePlayView.<OnBeforeStartAsync>d__22 <OnBeforeStartAsync>d__;
@@ -172,7 +172,7 @@ public class RacingBetsGamePlayView : UiViewBase, IUiCameraBehavior
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014912 RID: 84242 RVA: 0x00532E5C File Offset: 0x0053105C
+	// Token: 0x06011DF4 RID: 73204 RVA: 0x00541B70 File Offset: 0x0053FD70
 	private UniTask InitRacingBetsOrderList()
 	{
 		RacingBetsGamePlayView.<InitRacingBetsOrderList>d__23 <InitRacingBetsOrderList>d__;
@@ -183,7 +183,7 @@ public class RacingBetsGamePlayView : UiViewBase, IUiCameraBehavior
 		return <InitRacingBetsOrderList>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014913 RID: 84243 RVA: 0x00532EA0 File Offset: 0x005310A0
+	// Token: 0x06011DF5 RID: 73205 RVA: 0x00541BB4 File Offset: 0x0053FDB4
 	private UniTask InitRacingBetsDangoDiceList()
 	{
 		RacingBetsGamePlayView.<InitRacingBetsDangoDiceList>d__24 <InitRacingBetsDangoDiceList>d__;
@@ -194,7 +194,7 @@ public class RacingBetsGamePlayView : UiViewBase, IUiCameraBehavior
 		return <InitRacingBetsDangoDiceList>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014914 RID: 84244 RVA: 0x00532EE4 File Offset: 0x005310E4
+	// Token: 0x06011DF6 RID: 73206 RVA: 0x00541BF8 File Offset: 0x0053FDF8
 	private void InitBulletScreen()
 	{
 		this.ShowIconBulletScreenPanel = false;
@@ -226,7 +226,7 @@ public class RacingBetsGamePlayView : UiViewBase, IUiCameraBehavior
 		text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 	}
 
-	// Token: 0x06014915 RID: 84245 RVA: 0x00533020 File Offset: 0x00531220
+	// Token: 0x06011DF7 RID: 73207 RVA: 0x00541D34 File Offset: 0x0053FF34
 	private void RefreshUi()
 	{
 		bool isReplayDungeon = RacingBetsModel.Instance.IsReplayDungeon;
@@ -258,7 +258,7 @@ public class RacingBetsGamePlayView : UiViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x06014916 RID: 84246 RVA: 0x00533168 File Offset: 0x00531368
+	// Token: 0x06011DF8 RID: 73208 RVA: 0x00541E7C File Offset: 0x0054007C
 	private void RefreshDangoOrderList(IReadOnlyList<DangoIdToDiceNum> dangoOrderList)
 	{
 		for (int i = 0; i < dangoOrderList.Count; i++)
@@ -275,7 +275,7 @@ public class RacingBetsGamePlayView : UiViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x06014917 RID: 84247 RVA: 0x005331F4 File Offset: 0x005313F4
+	// Token: 0x06011DF9 RID: 73209 RVA: 0x00541F08 File Offset: 0x00540108
 	private void RefreshDangoDiceList(IReadOnlyList<DangoIdToDiceNum> dangoDiceList)
 	{
 		for (int i = 0; i < dangoDiceList.Count; i++)
@@ -292,7 +292,7 @@ public class RacingBetsGamePlayView : UiViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x06014918 RID: 84248 RVA: 0x00533280 File Offset: 0x00531480
+	// Token: 0x06011DFA RID: 73210 RVA: 0x00541F94 File Offset: 0x00540194
 	private void RefreshDangoSettingPanel(bool isShow)
 	{
 		if (this.ShowBulletScreenSettingPanel == isShow)
@@ -316,7 +316,7 @@ public class RacingBetsGamePlayView : UiViewBase, IUiCameraBehavior
 		base.PlaySequence("FuncHide03", null, false);
 	}
 
-	// Token: 0x06014919 RID: 84249 RVA: 0x00533304 File Offset: 0x00531504
+	// Token: 0x06011DFB RID: 73211 RVA: 0x00542018 File Offset: 0x00540218
 	private void RefreshTextBulletScreenPanel(bool isShow)
 	{
 		if (this.ShowTextBulletScreenPanel == isShow)
@@ -340,7 +340,7 @@ public class RacingBetsGamePlayView : UiViewBase, IUiCameraBehavior
 		base.PlaySequence("FuncHide02", null, false);
 	}
 
-	// Token: 0x0601491A RID: 84250 RVA: 0x00533388 File Offset: 0x00531588
+	// Token: 0x06011DFC RID: 73212 RVA: 0x0054209C File Offset: 0x0054029C
 	private void RefreshIconBulletScreenPanel(bool isShow)
 	{
 		if (this.ShowIconBulletScreenPanel == isShow)
@@ -364,13 +364,13 @@ public class RacingBetsGamePlayView : UiViewBase, IUiCameraBehavior
 		base.PlaySequence("FuncHide01", null, false);
 	}
 
-	// Token: 0x0601491B RID: 84251 RVA: 0x0053340C File Offset: 0x0053160C
-	public void PushCameraHandle(EUiViewName viewName, int viewId, bool isBlend)
+	// Token: 0x06011DFD RID: 73213 RVA: 0x00542120 File Offset: 0x00540320
+	public void PushCameraHandleByOpenView(EUiViewName viewName, int viewId, EUiCameraHandleOperationType operationType)
 	{
-		UiCameraAnimationController.Instance.PushCameraHandle(viewName, new int?(viewId), true);
+		UiCameraController.Instance.PushCameraHandleByOpenView(viewName, viewId, EUiCameraHandleOperationType.Blend);
 	}
 
-	// Token: 0x0601491C RID: 84252 RVA: 0x00533420 File Offset: 0x00531620
+	// Token: 0x06011DFE RID: 73214 RVA: 0x00542130 File Offset: 0x00540330
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnRacingBetsDiceAnim, new Action<int, CustomPromise>(this.OnRacingBetsDiceAnim));
@@ -380,7 +380,7 @@ public class RacingBetsGamePlayView : UiViewBase, IUiCameraBehavior
 		EventSystem.Instance.Add<UiCameraHandleData>(EEventName.OnActivateUiCameraAnimationHandle, new Action<UiCameraHandleData>(this.OnActivateUiCameraAnimationHandle));
 	}
 
-	// Token: 0x0601491D RID: 84253 RVA: 0x005334BC File Offset: 0x005316BC
+	// Token: 0x06011DFF RID: 73215 RVA: 0x005421CC File Offset: 0x005403CC
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnRacingBetsDiceAnim, new Action<int, CustomPromise>(this.OnRacingBetsDiceAnim));
@@ -390,24 +390,23 @@ public class RacingBetsGamePlayView : UiViewBase, IUiCameraBehavior
 		EventSystem.Instance.Remove(EEventName.OnActivateUiCameraAnimationHandle, new Action<UiCameraHandleData>(this.OnActivateUiCameraAnimationHandle));
 	}
 
-	// Token: 0x0601491E RID: 84254 RVA: 0x00533558 File Offset: 0x00531758
-	[NullableContext(2)]
-	public void PopCameraHandle(EUiViewName viewName, UiViewInfo stackTopInfo, int closeViewId, bool popOrDelete)
+	// Token: 0x06011E00 RID: 73216 RVA: 0x00542268 File Offset: 0x00540468
+	public void PopCameraHandleByCloseView(EUiViewName viewName, EUiViewName? nextViewName, int closeViewId, EUiCameraHandleOperationType operationType)
 	{
-		UiCameraAnimationController.Instance.DeepCopyCamera(CameraController.Instance.MainModel.FreeCamera.DisplayComponent.CameraActor);
+		UiCameraController.Instance.DeepCopyCamera(CameraController.Instance.MainModel.FreeCamera.DisplayComponent.CameraActor);
 		CameraController instance = CameraController.Instance;
-		UiCamera uiCamera = UiCameraAnimationManager.Instance.UiCamera;
+		UiCamera uiCamera = UiCameraModel.Instance.UiCamera;
 		instance.SetViewTarget((uiCamera != null) ? uiCamera.GetCameraActor() : null, "RacingBetsGamePlayView", 0f, EViewTargetBlendFunction.VTBlend_Linear, 0f, null, null, "MainCamera", null, null);
-		UiCameraAnimationController.Instance.PopCameraHandle(viewName, stackTopInfo, closeViewId, popOrDelete);
+		UiCameraController.Instance.PopCameraHandleByCloseView(viewName, nextViewName, closeViewId, operationType);
 	}
 
-	// Token: 0x0601491F RID: 84255 RVA: 0x005335E0 File Offset: 0x005317E0
+	// Token: 0x06011E01 RID: 73217 RVA: 0x005422F0 File Offset: 0x005404F0
 	protected override void OnBeforeDestroy()
 	{
 		UGameplayStatics.SetGlobalTimeDilation(GlobalData.World, 1f);
 	}
 
-	// Token: 0x06014920 RID: 84256 RVA: 0x005335F1 File Offset: 0x005317F1
+	// Token: 0x06011E02 RID: 73218 RVA: 0x00542301 File Offset: 0x00540501
 	private RacingBetsIconBulletScreenItem CreateIconBulletItem()
 	{
 		RacingBetsIconBulletScreenItem racingBetsIconBulletScreenItem = new RacingBetsIconBulletScreenItem();
@@ -415,7 +414,7 @@ public class RacingBetsGamePlayView : UiViewBase, IUiCameraBehavior
 		return racingBetsIconBulletScreenItem;
 	}
 
-	// Token: 0x06014921 RID: 84257 RVA: 0x0053360A File Offset: 0x0053180A
+	// Token: 0x06011E03 RID: 73219 RVA: 0x0054231A File Offset: 0x0054051A
 	private RacingBetsTextBulletScreenItem CreateTextBulletItem()
 	{
 		RacingBetsTextBulletScreenItem racingBetsTextBulletScreenItem = new RacingBetsTextBulletScreenItem();
@@ -423,13 +422,13 @@ public class RacingBetsGamePlayView : UiViewBase, IUiCameraBehavior
 		return racingBetsTextBulletScreenItem;
 	}
 
-	// Token: 0x06014922 RID: 84258 RVA: 0x00533623 File Offset: 0x00531823
+	// Token: 0x06011E04 RID: 73220 RVA: 0x00542333 File Offset: 0x00540533
 	private void OnRacingBetsDangoOrderRefresh(int round, IReadOnlyList<DangoIdToDiceNum> dangoOrderList, CustomPromise promise)
 	{
 		this.RefreshDangoOrder(round, dangoOrderList, promise).Forget();
 	}
 
-	// Token: 0x06014923 RID: 84259 RVA: 0x00533634 File Offset: 0x00531834
+	// Token: 0x06011E05 RID: 73221 RVA: 0x00542344 File Offset: 0x00540544
 	private UniTask RefreshDangoOrder(int round, IReadOnlyList<DangoIdToDiceNum> dangoOrderList, CustomPromise promise)
 	{
 		RacingBetsGamePlayView.<RefreshDangoOrder>d__40 <RefreshDangoOrder>d__;
@@ -443,13 +442,13 @@ public class RacingBetsGamePlayView : UiViewBase, IUiCameraBehavior
 		return <RefreshDangoOrder>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014924 RID: 84260 RVA: 0x0053368F File Offset: 0x0053188F
+	// Token: 0x06011E06 RID: 73222 RVA: 0x0054239F File Offset: 0x0054059F
 	private void OnRacingBetsDiceAnim(int diceCount, CustomPromise promise)
 	{
 		this.PlayDiceAnim(diceCount, promise).Forget();
 	}
 
-	// Token: 0x06014925 RID: 84261 RVA: 0x005336A0 File Offset: 0x005318A0
+	// Token: 0x06011E07 RID: 73223 RVA: 0x005423B0 File Offset: 0x005405B0
 	private UniTask PlayDiceAnim(int diceCount, CustomPromise promise)
 	{
 		RacingBetsGamePlayView.<PlayDiceAnim>d__42 <PlayDiceAnim>d__;
@@ -461,19 +460,19 @@ public class RacingBetsGamePlayView : UiViewBase, IUiCameraBehavior
 		return <PlayDiceAnim>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014926 RID: 84262 RVA: 0x005336EB File Offset: 0x005318EB
+	// Token: 0x06011E08 RID: 73224 RVA: 0x005423FB File Offset: 0x005405FB
 	private void OnRacingBetsPushBulletScreen(IReadOnlyList<int> bulletList, bool isSelf)
 	{
 		this.BulletScreenMovePanel.PushBulletScreen(bulletList, isSelf);
 	}
 
-	// Token: 0x06014927 RID: 84263 RVA: 0x005336FA File Offset: 0x005318FA
+	// Token: 0x06011E09 RID: 73225 RVA: 0x0054240A File Offset: 0x0054060A
 	private void OnRacingBetsDungeonDangoRankChange(CustomPromise promise)
 	{
 		this.RefreshDangoRank(promise).Forget();
 	}
 
-	// Token: 0x06014928 RID: 84264 RVA: 0x00533708 File Offset: 0x00531908
+	// Token: 0x06011E0A RID: 73226 RVA: 0x00542418 File Offset: 0x00540618
 	private UniTask RefreshDangoRank(CustomPromise promise)
 	{
 		RacingBetsGamePlayView.<RefreshDangoRank>d__45 <RefreshDangoRank>d__;
@@ -485,10 +484,10 @@ public class RacingBetsGamePlayView : UiViewBase, IUiCameraBehavior
 		return <RefreshDangoRank>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014929 RID: 84265 RVA: 0x00533754 File Offset: 0x00531954
+	// Token: 0x06011E0B RID: 73227 RVA: 0x00542464 File Offset: 0x00540664
 	private void OnActivateUiCameraAnimationHandle(UiCameraHandleData handleData)
 	{
-		if (handleData.ViewName == EUiViewName.RacingBetsGamePlayView)
+		if (handleData.GetViewName() == EUiViewName.RacingBetsGamePlayView)
 		{
 			int gameplayMode = GameModeModel.Instance.InstanceDungeon.Value.GameplayMode;
 			InstanceGameplayMode? gameplayModeConfig = InstanceDungeonConfig.Instance.GetGameplayModeConfig(gameplayMode);
@@ -496,17 +495,17 @@ public class RacingBetsGamePlayView : UiViewBase, IUiCameraBehavior
 			{
 				CameraController.Instance.MainModel.FreeCamera.LogicComponent.InitConfig(RacingBetsGamePlayView.ToFloatArray(gameplayModeConfig.Value.GetCameraParamsArray()));
 			}
-			UiCameraAnimationController.Instance.ExitUiCameraMode();
+			UiCameraController.Instance.ExitUiCameraMode();
 		}
 	}
 
-	// Token: 0x0601492A RID: 84266 RVA: 0x005337E0 File Offset: 0x005319E0
+	// Token: 0x06011E0C RID: 73228 RVA: 0x005424F0 File Offset: 0x005406F0
 	private void OnClickBulletScreenToggle(EToggleState state)
 	{
 		this.BulletScreenMovePanel.SetActive(state != EToggleState.ETT_Checked);
 	}
 
-	// Token: 0x0601492B RID: 84267 RVA: 0x005337F4 File Offset: 0x005319F4
+	// Token: 0x06011E0D RID: 73229 RVA: 0x00542504 File Offset: 0x00540704
 	private void OnClickTextBulletScreenButton()
 	{
 		bool flag = !this.ShowTextBulletScreenPanel;
@@ -516,7 +515,7 @@ public class RacingBetsGamePlayView : UiViewBase, IUiCameraBehavior
 		this.RefreshIconBulletScreenPanel(false);
 	}
 
-	// Token: 0x0601492C RID: 84268 RVA: 0x0053383C File Offset: 0x00531A3C
+	// Token: 0x06011E0E RID: 73230 RVA: 0x0054254C File Offset: 0x0054074C
 	private void OnClickIconBulletScreenButton()
 	{
 		bool flag = !this.ShowIconBulletScreenPanel;
@@ -526,7 +525,7 @@ public class RacingBetsGamePlayView : UiViewBase, IUiCameraBehavior
 		this.RefreshTextBulletScreenPanel(false);
 	}
 
-	// Token: 0x0601492D RID: 84269 RVA: 0x00533884 File Offset: 0x00531A84
+	// Token: 0x06011E0F RID: 73231 RVA: 0x00542594 File Offset: 0x00540794
 	private void OnClickDangoTextBulletToggle(EToggleState state)
 	{
 		base.GetExtendToggle(9).SetToggleStateForce(EToggleState.ETT_Checked, false, false, false);
@@ -535,7 +534,7 @@ public class RacingBetsGamePlayView : UiViewBase, IUiCameraBehavior
 		this.TextBulletScroll.RefreshByData(racingBetsBulletScreen, null, false);
 	}
 
-	// Token: 0x0601492E RID: 84270 RVA: 0x005338D0 File Offset: 0x00531AD0
+	// Token: 0x06011E10 RID: 73232 RVA: 0x005425E0 File Offset: 0x005407E0
 	private void OnClickTextBulletToggle(EToggleState state)
 	{
 		base.GetExtendToggle(9).SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
@@ -544,7 +543,7 @@ public class RacingBetsGamePlayView : UiViewBase, IUiCameraBehavior
 		this.TextBulletScroll.RefreshByData(racingBetsBulletScreen, null, false);
 	}
 
-	// Token: 0x0601492F RID: 84271 RVA: 0x0053391C File Offset: 0x00531B1C
+	// Token: 0x06011E11 RID: 73233 RVA: 0x0054262C File Offset: 0x0054082C
 	private void OnClickSpeedButton()
 	{
 		this.CurReplaySpeedIndex = (this.CurReplaySpeedIndex + 1) % this.ReplaySpeedList.Count;
@@ -557,7 +556,7 @@ public class RacingBetsGamePlayView : UiViewBase, IUiCameraBehavior
 		text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 	}
 
-	// Token: 0x06014930 RID: 84272 RVA: 0x00533998 File Offset: 0x00531B98
+	// Token: 0x06011E12 RID: 73234 RVA: 0x005426A8 File Offset: 0x005408A8
 	private void OnClickBulletScreenCloseButton()
 	{
 		this.RefreshDangoSettingPanel(false);
@@ -566,7 +565,7 @@ public class RacingBetsGamePlayView : UiViewBase, IUiCameraBehavior
 		base.GetButton(31).RootUIComp.Get().SetUIActive(false);
 	}
 
-	// Token: 0x06014931 RID: 84273 RVA: 0x005339D8 File Offset: 0x00531BD8
+	// Token: 0x06011E13 RID: 73235 RVA: 0x005426E8 File Offset: 0x005408E8
 	private void OnBulletScreenAlphaSliderValueChanged(float value)
 	{
 		int num = (int)Math.Floor((double)value);
@@ -579,7 +578,7 @@ public class RacingBetsGamePlayView : UiViewBase, IUiCameraBehavior
 		this.BulletScreenMovePanel.GetRootItem().SetAlpha((float)num / 100f);
 	}
 
-	// Token: 0x06014932 RID: 84274 RVA: 0x00533A44 File Offset: 0x00531C44
+	// Token: 0x06011E14 RID: 73236 RVA: 0x00542754 File Offset: 0x00540954
 	private void OnClickBulletScreenSettingButton()
 	{
 		bool flag = !this.ShowBulletScreenSettingPanel;
@@ -589,7 +588,7 @@ public class RacingBetsGamePlayView : UiViewBase, IUiCameraBehavior
 		this.RefreshIconBulletScreenPanel(false);
 	}
 
-	// Token: 0x06014933 RID: 84275 RVA: 0x00533A8B File Offset: 0x00531C8B
+	// Token: 0x06011E15 RID: 73237 RVA: 0x0054279B File Offset: 0x0054099B
 	private void OnClickFullBulletScreenToggle(EToggleState state)
 	{
 		RacingBetsModel.Instance.SetRacingBetsBulletScreenShowType(2);
@@ -597,7 +596,7 @@ public class RacingBetsGamePlayView : UiViewBase, IUiCameraBehavior
 		base.GetExtendToggle(37).SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x06014934 RID: 84276 RVA: 0x00533AB5 File Offset: 0x00531CB5
+	// Token: 0x06011E16 RID: 73238 RVA: 0x005427C5 File Offset: 0x005409C5
 	private void OnClickHalfBulletScreenToggle(EToggleState state)
 	{
 		RacingBetsModel.Instance.SetRacingBetsBulletScreenShowType(1);
@@ -605,7 +604,7 @@ public class RacingBetsGamePlayView : UiViewBase, IUiCameraBehavior
 		base.GetExtendToggle(36).SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x06014935 RID: 84277 RVA: 0x00533AE0 File Offset: 0x00531CE0
+	// Token: 0x06011E17 RID: 73239 RVA: 0x005427F0 File Offset: 0x005409F0
 	private void OnClickCloseButton()
 	{
 		if (this.IsPrepareLeave)
@@ -622,7 +621,7 @@ public class RacingBetsGamePlayView : UiViewBase, IUiCameraBehavior
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x06014936 RID: 84278 RVA: 0x00533B3C File Offset: 0x00531D3C
+	// Token: 0x06011E18 RID: 73240 RVA: 0x0054284C File Offset: 0x00540A4C
 	private void OnClickDetailButton()
 	{
 		int id = RacingBetsModel.Instance.GetRacingBetsSeasonData().GetCurLegMatchData().Id;
@@ -630,7 +629,7 @@ public class RacingBetsGamePlayView : UiViewBase, IUiCameraBehavior
 		UiManager.Instance.OpenView(EUiViewName.RacingBetsDangoTerrainView, param, null);
 	}
 
-	// Token: 0x06014937 RID: 84279 RVA: 0x00533B90 File Offset: 0x00531D90
+	// Token: 0x06011E19 RID: 73241 RVA: 0x005428A0 File Offset: 0x00540AA0
 	private void OnClickDangoSkillButton()
 	{
 		RacingBetsDangoSkillViewParam param = new RacingBetsDangoSkillViewParam
@@ -640,7 +639,7 @@ public class RacingBetsGamePlayView : UiViewBase, IUiCameraBehavior
 		UiManager.Instance.OpenView(EUiViewName.RacingBetsDangoSkillView, param, null);
 	}
 
-	// Token: 0x06014938 RID: 84280 RVA: 0x00533BC0 File Offset: 0x00531DC0
+	// Token: 0x06011E1A RID: 73242 RVA: 0x005428D0 File Offset: 0x00540AD0
 	private void OnClickBulletScreenItem(RacingBetsBulletScreen data)
 	{
 		if (this.NextBulletScreenAvailableSendTime > (long)TimeUtil.Instance.GetServerTimeStamp())
@@ -652,7 +651,7 @@ public class RacingBetsGamePlayView : UiViewBase, IUiCameraBehavior
 		RacingBetsController.Instance.RacingBetsBulletScreenRequest(data.Id);
 	}
 
-	// Token: 0x06014939 RID: 84281 RVA: 0x00533C20 File Offset: 0x00531E20
+	// Token: 0x06011E1B RID: 73243 RVA: 0x00542930 File Offset: 0x00540B30
 	private static float[] ToFloatArray(int[] intArray)
 	{
 		float[] array = new float[intArray.Length];
@@ -663,206 +662,206 @@ public class RacingBetsGamePlayView : UiViewBase, IUiCameraBehavior
 		return array;
 	}
 
-	// Token: 0x04009A93 RID: 39571
+	// Token: 0x04009BEB RID: 39915
 	private const int DANGO_ORDER_ITEM_START_INDEX = 24;
 
-	// Token: 0x04009A94 RID: 39572
+	// Token: 0x04009BEC RID: 39916
 	private const int DANGO_ORDER_ITEM_COUNT = 7;
 
-	// Token: 0x04009A95 RID: 39573
+	// Token: 0x04009BED RID: 39917
 	private const int DANGO_DICE_ITEM_START_INDEX = 38;
 
-	// Token: 0x04009A96 RID: 39574
+	// Token: 0x04009BEE RID: 39918
 	private const int DANGO_DICE_ITEM_COUNT = 7;
 
-	// Token: 0x04009A97 RID: 39575
+	// Token: 0x04009BEF RID: 39919
 	private bool ShowIconBulletScreenPanel;
 
-	// Token: 0x04009A98 RID: 39576
+	// Token: 0x04009BF0 RID: 39920
 	private bool ShowTextBulletScreenPanel;
 
-	// Token: 0x04009A99 RID: 39577
+	// Token: 0x04009BF1 RID: 39921
 	private bool ShowBulletScreenSettingPanel;
 
-	// Token: 0x04009A9A RID: 39578
+	// Token: 0x04009BF2 RID: 39922
 	private int BulletScreenSendInterval;
 
-	// Token: 0x04009A9B RID: 39579
+	// Token: 0x04009BF3 RID: 39923
 	private long NextBulletScreenAvailableSendTime;
 
-	// Token: 0x04009A9C RID: 39580
+	// Token: 0x04009BF4 RID: 39924
 	private int CurReplaySpeedIndex;
 
-	// Token: 0x04009A9D RID: 39581
+	// Token: 0x04009BF5 RID: 39925
 	private bool IsPrepareLeave;
 
-	// Token: 0x04009A9E RID: 39582
+	// Token: 0x04009BF6 RID: 39926
 	private List<float> ReplaySpeedList = new List<float>();
 
-	// Token: 0x04009A9F RID: 39583
+	// Token: 0x04009BF7 RID: 39927
 	private RacingBetsBulletScreenPanel BulletScreenMovePanel;
 
-	// Token: 0x04009AA0 RID: 39584
+	// Token: 0x04009BF8 RID: 39928
 	private List<RacingBetsDungeonDangoInfo> DungeonDangoSortList = new List<RacingBetsDungeonDangoInfo>();
 
-	// Token: 0x04009AA1 RID: 39585
+	// Token: 0x04009BF9 RID: 39929
 	private RacingBetsDangoRankPanel DangoRankPanel;
 
-	// Token: 0x04009AA2 RID: 39586
+	// Token: 0x04009BFA RID: 39930
 	private GenericScrollViewNew<RacingBetsIconBulletScreenItem, RacingBetsBulletScreen> IconBulletScroll;
 
-	// Token: 0x04009AA3 RID: 39587
+	// Token: 0x04009BFB RID: 39931
 	private GenericScrollViewNew<RacingBetsTextBulletScreenItem, RacingBetsBulletScreen> TextBulletScroll;
 
-	// Token: 0x04009AA4 RID: 39588
+	// Token: 0x04009BFC RID: 39932
 	private readonly List<RacingBetsDangoOrderItem> DangoOrderItemList = new List<RacingBetsDangoOrderItem>();
 
-	// Token: 0x04009AA5 RID: 39589
+	// Token: 0x04009BFD RID: 39933
 	private readonly List<RacingBetsDangoDiceItem> DangoDiceItemList = new List<RacingBetsDangoDiceItem>();
 
-	// Token: 0x02008D92 RID: 36242
+	// Token: 0x02007F1A RID: 32538
 	[NullableContext(0)]
 	private class EComponent
 	{
-		// Token: 0x0402DF13 RID: 188179
+		// Token: 0x04029229 RID: 168489
 		public const int DangoPanel = 0;
 
-		// Token: 0x0402DF14 RID: 188180
+		// Token: 0x0402922A RID: 168490
 		public const int DangoItem = 1;
 
-		// Token: 0x0402DF15 RID: 188181
+		// Token: 0x0402922B RID: 168491
 		public const int BulletScreenToggle = 2;
 
-		// Token: 0x0402DF16 RID: 188182
+		// Token: 0x0402922C RID: 168492
 		public const int TextBulletScreenButton = 3;
 
-		// Token: 0x0402DF17 RID: 188183
+		// Token: 0x0402922D RID: 168493
 		public const int IconBulletScreenButton = 4;
 
-		// Token: 0x0402DF18 RID: 188184
+		// Token: 0x0402922E RID: 168494
 		public const int IconBulletScreenPanel = 5;
 
-		// Token: 0x0402DF19 RID: 188185
+		// Token: 0x0402922F RID: 168495
 		public const int CloseButton = 6;
 
-		// Token: 0x0402DF1A RID: 188186
+		// Token: 0x04029230 RID: 168496
 		public const int DangoSkillButton = 7;
 
-		// Token: 0x0402DF1B RID: 188187
+		// Token: 0x04029231 RID: 168497
 		public const int TextBulletScreenPanel = 8;
 
-		// Token: 0x0402DF1C RID: 188188
+		// Token: 0x04029232 RID: 168498
 		public const int DangoTextBulletToggle = 9;
 
-		// Token: 0x0402DF1D RID: 188189
+		// Token: 0x04029233 RID: 168499
 		public const int TextBulletToggle = 10;
 
-		// Token: 0x0402DF1E RID: 188190
+		// Token: 0x04029234 RID: 168500
 		public const int TextBulletScrollView = 11;
 
-		// Token: 0x0402DF1F RID: 188191
+		// Token: 0x04029235 RID: 168501
 		public const int IconBulletScrollView = 12;
 
-		// Token: 0x0402DF20 RID: 188192
+		// Token: 0x04029236 RID: 168502
 		public const int DicePanel = 13;
 
-		// Token: 0x0402DF21 RID: 188193
+		// Token: 0x04029237 RID: 168503
 		public const int BulletScreenShowPanel = 14;
 
-		// Token: 0x0402DF22 RID: 188194
+		// Token: 0x04029238 RID: 168504
 		public const int DiceTexture = 15;
 
-		// Token: 0x0402DF23 RID: 188195
+		// Token: 0x04029239 RID: 168505
 		public const int DicePanelRoot = 16;
 
-		// Token: 0x0402DF24 RID: 188196
+		// Token: 0x0402923A RID: 168506
 		public const int DiceLayout = 17;
 
-		// Token: 0x0402DF25 RID: 188197
+		// Token: 0x0402923B RID: 168507
 		public const int DangoOrderPanel = 18;
 
-		// Token: 0x0402DF26 RID: 188198
+		// Token: 0x0402923C RID: 168508
 		public const int MaskPanel = 19;
 
-		// Token: 0x0402DF27 RID: 188199
+		// Token: 0x0402923D RID: 168509
 		public const int RoundText = 20;
 
-		// Token: 0x0402DF28 RID: 188200
+		// Token: 0x0402923E RID: 168510
 		public const int DangoOrderLayout = 21;
 
-		// Token: 0x0402DF29 RID: 188201
+		// Token: 0x0402923F RID: 168511
 		public const int SpeedButton = 22;
 
-		// Token: 0x0402DF2A RID: 188202
+		// Token: 0x04029240 RID: 168512
 		public const int SpeedText = 23;
 
-		// Token: 0x0402DF2B RID: 188203
+		// Token: 0x04029241 RID: 168513
 		public const int DangoOrderItem1 = 24;
 
-		// Token: 0x0402DF2C RID: 188204
+		// Token: 0x04029242 RID: 168514
 		public const int DangoOrderItem2 = 25;
 
-		// Token: 0x0402DF2D RID: 188205
+		// Token: 0x04029243 RID: 168515
 		public const int DangoOrderItem3 = 26;
 
-		// Token: 0x0402DF2E RID: 188206
+		// Token: 0x04029244 RID: 168516
 		public const int DangoOrderItem4 = 27;
 
-		// Token: 0x0402DF2F RID: 188207
+		// Token: 0x04029245 RID: 168517
 		public const int DangoOrderItem5 = 28;
 
-		// Token: 0x0402DF30 RID: 188208
+		// Token: 0x04029246 RID: 168518
 		public const int DangoOrderItem6 = 29;
 
-		// Token: 0x0402DF31 RID: 188209
+		// Token: 0x04029247 RID: 168519
 		public const int DangoOrderItem7 = 30;
 
-		// Token: 0x0402DF32 RID: 188210
+		// Token: 0x04029248 RID: 168520
 		public const int BulletScreenCloseButton = 31;
 
-		// Token: 0x0402DF33 RID: 188211
+		// Token: 0x04029249 RID: 168521
 		public const int BulletScreenSettingButton = 32;
 
-		// Token: 0x0402DF34 RID: 188212
+		// Token: 0x0402924A RID: 168522
 		public const int BulletScreenSettingPanel = 33;
 
-		// Token: 0x0402DF35 RID: 188213
+		// Token: 0x0402924B RID: 168523
 		public const int BulletScreenAlphaText = 34;
 
-		// Token: 0x0402DF36 RID: 188214
+		// Token: 0x0402924C RID: 168524
 		public const int BulletScreenAlphaSlider = 35;
 
-		// Token: 0x0402DF37 RID: 188215
+		// Token: 0x0402924D RID: 168525
 		public const int FullBulletScreenToggle = 36;
 
-		// Token: 0x0402DF38 RID: 188216
+		// Token: 0x0402924E RID: 168526
 		public const int HalfBulletScreenToggle = 37;
 
-		// Token: 0x0402DF39 RID: 188217
+		// Token: 0x0402924F RID: 168527
 		public const int DangoDiceItem1 = 38;
 
-		// Token: 0x0402DF3A RID: 188218
+		// Token: 0x04029250 RID: 168528
 		public const int DangoDiceItem2 = 39;
 
-		// Token: 0x0402DF3B RID: 188219
+		// Token: 0x04029251 RID: 168529
 		public const int DangoDiceItem3 = 40;
 
-		// Token: 0x0402DF3C RID: 188220
+		// Token: 0x04029252 RID: 168530
 		public const int DangoDiceItem4 = 41;
 
-		// Token: 0x0402DF3D RID: 188221
+		// Token: 0x04029253 RID: 168531
 		public const int DangoDiceItem5 = 42;
 
-		// Token: 0x0402DF3E RID: 188222
+		// Token: 0x04029254 RID: 168532
 		public const int DangoDiceItem6 = 43;
 
-		// Token: 0x0402DF3F RID: 188223
+		// Token: 0x04029255 RID: 168533
 		public const int DangoDiceItem7 = 44;
 
-		// Token: 0x0402DF40 RID: 188224
+		// Token: 0x04029256 RID: 168534
 		public const int LiveSprite = 45;
 
-		// Token: 0x0402DF41 RID: 188225
+		// Token: 0x04029257 RID: 168535
 		public const int DetailButton = 46;
 	}
 }

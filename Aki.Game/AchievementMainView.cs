@@ -10,17 +10,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02000F29 RID: 3881
+// Token: 0x020003DE RID: 990
 [NullableContext(1)]
 [Nullable(0)]
 public class AchievementMainView : UiViewBase
 {
-	// Token: 0x06006254 RID: 25172 RVA: 0x001338F5 File Offset: 0x00131AF5
+	// Token: 0x060035EC RID: 13804 RVA: 0x0013C21D File Offset: 0x0013A41D
 	public AchievementMainView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06006255 RID: 25173 RVA: 0x00133908 File Offset: 0x00131B08
+	// Token: 0x060035ED RID: 13805 RVA: 0x0013C230 File Offset: 0x0013A430
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -53,7 +53,7 @@ public class AchievementMainView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06006256 RID: 25174 RVA: 0x00133A74 File Offset: 0x00131C74
+	// Token: 0x060035EE RID: 13806 RVA: 0x0013C39C File Offset: 0x0013A59C
 	protected override UniTask OnCreateAsync()
 	{
 		AchievementMainView.<OnCreateAsync>d__10 <OnCreateAsync>d__;
@@ -63,7 +63,7 @@ public class AchievementMainView : UiViewBase
 		return <OnCreateAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06006257 RID: 25175 RVA: 0x00133AB0 File Offset: 0x00131CB0
+	// Token: 0x060035EF RID: 13807 RVA: 0x0013C3D8 File Offset: 0x0013A5D8
 	protected override void OnStart()
 	{
 		this.CurrentStarNumText = base.GetText(0);
@@ -75,13 +75,13 @@ public class AchievementMainView : UiViewBase
 		this.ScrollView = new GenericLayout<AchievementCategoryItem, AchievementCategoryData>(scrollViewWithScrollbar.GetContent().GetComponentByClass(UUILayoutBase.StaticClass()) as UUILayoutBase, new Func<AchievementCategoryItem>(this.UpdateItem), null, false, true);
 	}
 
-	// Token: 0x06006258 RID: 25176 RVA: 0x00133B6C File Offset: 0x00131D6C
+	// Token: 0x060035F0 RID: 13808 RVA: 0x0013C494 File Offset: 0x0013A694
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnAchievementDataNotify, new Action(this.OnAchievementDataNotify));
 	}
 
-	// Token: 0x06006259 RID: 25177 RVA: 0x00133B8A File Offset: 0x00131D8A
+	// Token: 0x060035F1 RID: 13809 RVA: 0x0013C4B2 File Offset: 0x0013A6B2
 	protected override void OnBeforeShow()
 	{
 		this.RefreshRecentRewardScroller();
@@ -91,13 +91,13 @@ public class AchievementMainView : UiViewBase
 		this.UpdateProgressText();
 	}
 
-	// Token: 0x0600625A RID: 25178 RVA: 0x00133BAA File Offset: 0x00131DAA
+	// Token: 0x060035F2 RID: 13810 RVA: 0x0013C4D2 File Offset: 0x0013A6D2
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnAchievementDataNotify, new Action(this.OnAchievementDataNotify));
 	}
 
-	// Token: 0x0600625B RID: 25179 RVA: 0x00133BC8 File Offset: 0x00131DC8
+	// Token: 0x060035F3 RID: 13811 RVA: 0x0013C4F0 File Offset: 0x0013A6F0
 	protected override void OnBeforeDestroy()
 	{
 		if (this.CaptionItem != null)
@@ -120,14 +120,14 @@ public class AchievementMainView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600625C RID: 25180 RVA: 0x00133C28 File Offset: 0x00131E28
+	// Token: 0x060035F4 RID: 13812 RVA: 0x0013C550 File Offset: 0x0013A750
 	private void RefreshStar()
 	{
 		int achievementFinishedStar = AchievementModel.Instance.GetAchievementFinishedStar();
 		this.CurrentStarNumText.SetText(achievementFinishedStar.ToString(), true);
 	}
 
-	// Token: 0x0600625D RID: 25181 RVA: 0x00133C54 File Offset: 0x00131E54
+	// Token: 0x060035F5 RID: 13813 RVA: 0x0013C57C File Offset: 0x0013A77C
 	private void RefreshOneClickBtn()
 	{
 		HashSet<int> hashSet = new HashSet<int>();
@@ -174,7 +174,7 @@ public class AchievementMainView : UiViewBase
 		base.GetButton(7).RootUIComp.Get().SetUIActive(flag);
 	}
 
-	// Token: 0x0600625E RID: 25182 RVA: 0x00133DC4 File Offset: 0x00131FC4
+	// Token: 0x060035F6 RID: 13814 RVA: 0x0013C6EC File Offset: 0x0013A8EC
 	private void UpdateProgressText()
 	{
 		int finishedAchievementNum = AchievementModel.Instance.GetFinishedAchievementNum();
@@ -186,7 +186,7 @@ public class AchievementMainView : UiViewBase
 		achievementProgressText.SetText(finishedAchievementNum.ToString(), true);
 	}
 
-	// Token: 0x0600625F RID: 25183 RVA: 0x00133DF4 File Offset: 0x00131FF4
+	// Token: 0x060035F7 RID: 13815 RVA: 0x0013C71C File Offset: 0x0013A91C
 	private void RefreshRecentRewardScroller()
 	{
 		AchievementModel instance = AchievementModel.Instance;
@@ -226,7 +226,7 @@ public class AchievementMainView : UiViewBase
 		this.CachedRecentFinishedIds = list2;
 	}
 
-	// Token: 0x06006260 RID: 25184 RVA: 0x00133F10 File Offset: 0x00132110
+	// Token: 0x060035F8 RID: 13816 RVA: 0x0013C838 File Offset: 0x0013AA38
 	private bool IsRecentFinishedListChanged(List<int> currentIds)
 	{
 		List<int> cachedRecentFinishedIds = this.CachedRecentFinishedIds;
@@ -248,20 +248,20 @@ public class AchievementMainView : UiViewBase
 		return false;
 	}
 
-	// Token: 0x06006261 RID: 25185 RVA: 0x00133F60 File Offset: 0x00132160
+	// Token: 0x060035F9 RID: 13817 RVA: 0x0013C888 File Offset: 0x0013AA88
 	private void RefreshCategoryScroller()
 	{
 		List<AchievementCategoryData> achievementCategoryArray = AchievementModel.Instance.GetAchievementCategoryArray();
 		this.ScrollView.RefreshByData(achievementCategoryArray, null, false);
 	}
 
-	// Token: 0x06006262 RID: 25186 RVA: 0x00133F86 File Offset: 0x00132186
+	// Token: 0x060035FA RID: 13818 RVA: 0x0013C8AE File Offset: 0x0013AAAE
 	private AchievementCategoryItem UpdateItem()
 	{
 		return new AchievementCategoryItem();
 	}
 
-	// Token: 0x06006263 RID: 25187 RVA: 0x00133F8D File Offset: 0x0013218D
+	// Token: 0x060035FB RID: 13819 RVA: 0x0013C8B5 File Offset: 0x0013AAB5
 	private void OnAchievementDataNotify()
 	{
 		this.RefreshRecentRewardScroller();
@@ -270,7 +270,7 @@ public class AchievementMainView : UiViewBase
 		this.RefreshOneClickBtn();
 	}
 
-	// Token: 0x06006264 RID: 25188 RVA: 0x00133FA7 File Offset: 0x001321A7
+	// Token: 0x060035FC RID: 13820 RVA: 0x0013C8CF File Offset: 0x0013AACF
 	private AchievementSmallItem OnRecentScrollerItemCreate()
 	{
 		return new AchievementSmallItem
@@ -279,24 +279,24 @@ public class AchievementMainView : UiViewBase
 		};
 	}
 
-	// Token: 0x06006265 RID: 25189 RVA: 0x00133FC0 File Offset: 0x001321C0
+	// Token: 0x060035FD RID: 13821 RVA: 0x0013C8E8 File Offset: 0x0013AAE8
 	private void OnClickGrid(int index)
 	{
 		this.CachedFocusGridIndex = index;
 	}
 
-	// Token: 0x06006266 RID: 25190 RVA: 0x00133FC9 File Offset: 0x001321C9
+	// Token: 0x060035FE RID: 13822 RVA: 0x0013C8F1 File Offset: 0x0013AAF1
 	protected override void OnBeforeHide()
 	{
 	}
 
-	// Token: 0x06006267 RID: 25191 RVA: 0x00133FCB File Offset: 0x001321CB
+	// Token: 0x060035FF RID: 13823 RVA: 0x0013C8F3 File Offset: 0x0013AAF3
 	private void OnClickBackBtn()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06006268 RID: 25192 RVA: 0x00133FD4 File Offset: 0x001321D4
+	// Token: 0x06003600 RID: 13824 RVA: 0x0013C8FC File Offset: 0x0013AAFC
 	private void OnClickOneClickReceive()
 	{
 		List<int> list = new List<int>();
@@ -335,19 +335,19 @@ public class AchievementMainView : UiViewBase
 		AchievementController.Instance.RequestGetMultiAchievementReward(list.ToArray(), list2.ToArray());
 	}
 
-	// Token: 0x04002CA2 RID: 11426
+	// Token: 0x04002D3B RID: 11579
 	[Nullable(2)]
 	private UUIText AchievementProgressText;
 
-	// Token: 0x04002CA3 RID: 11427
+	// Token: 0x04002D3C RID: 11580
 	[Nullable(2)]
 	private UUIText CurrentStarNumText;
 
-	// Token: 0x04002CA4 RID: 11428
+	// Token: 0x04002D3D RID: 11581
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04002CA5 RID: 11429
+	// Token: 0x04002D3E RID: 11582
 	[Nullable(new byte[]
 	{
 		2,
@@ -356,7 +356,7 @@ public class AchievementMainView : UiViewBase
 	})]
 	private GenericLayout<AchievementCategoryItem, AchievementCategoryData> ScrollView;
 
-	// Token: 0x04002CA6 RID: 11430
+	// Token: 0x04002D3F RID: 11583
 	[Nullable(new byte[]
 	{
 		2,
@@ -365,32 +365,32 @@ public class AchievementMainView : UiViewBase
 	})]
 	private LoopScrollView<AchievementSmallItem, AchievementData> AchievementRecentScroller;
 
-	// Token: 0x04002CA7 RID: 11431
+	// Token: 0x04002D40 RID: 11584
 	[Nullable(2)]
 	private List<int> CachedRecentFinishedIds;
 
-	// Token: 0x04002CA8 RID: 11432
+	// Token: 0x04002D41 RID: 11585
 	private int CachedFocusGridIndex = -1;
 
-	// Token: 0x02007570 RID: 30064
+	// Token: 0x02006704 RID: 26372
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x04026D40 RID: 159040
+		// Token: 0x0402208B RID: 139403
 		CurrentStarNumText,
-		// Token: 0x04026D41 RID: 159041
+		// Token: 0x0402208C RID: 139404
 		AchievementProgressText,
-		// Token: 0x04026D42 RID: 159042
+		// Token: 0x0402208D RID: 139405
 		CaptionItem,
-		// Token: 0x04026D43 RID: 159043
+		// Token: 0x0402208E RID: 139406
 		RecentFinishScroller,
-		// Token: 0x04026D44 RID: 159044
+		// Token: 0x0402208F RID: 139407
 		CategoryScroller,
-		// Token: 0x04026D45 RID: 159045
+		// Token: 0x04022090 RID: 139408
 		RecentFinishItem,
-		// Token: 0x04026D46 RID: 159046
+		// Token: 0x04022091 RID: 139409
 		EmptyAchievementItem,
-		// Token: 0x04026D47 RID: 159047
+		// Token: 0x04022092 RID: 139410
 		BtnOneClickReceive
 	}
 }

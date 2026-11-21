@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001282 RID: 4738
+	// Token: 0x020012F1 RID: 4849
 	[NetMessage(EMessageId.SpringSignPhotoRewardRequest)]
 	public sealed class SpringSignPhotoRewardRequest : IMessage<SpringSignPhotoRewardRequest>, IMessage, IEquatable<SpringSignPhotoRewardRequest>, IDeepCloneable<SpringSignPhotoRewardRequest>, IBufferMessage
 	{
-		// Token: 0x060193C1 RID: 103361 RVA: 0x003ABCA2 File Offset: 0x003A9EA2
+		// Token: 0x06019DF7 RID: 105975 RVA: 0x003C63D2 File Offset: 0x003C45D2
 		[NullableContext(1)]
 		public static SpringSignPhotoRewardRequest Create()
 		{
 			return new SpringSignPhotoRewardRequest();
 		}
 
-		// Token: 0x17005522 RID: 21794
-		// (get) Token: 0x060193C2 RID: 103362 RVA: 0x003ABCA9 File Offset: 0x003A9EA9
+		// Token: 0x170057A3 RID: 22435
+		// (get) Token: 0x06019DF8 RID: 105976 RVA: 0x003C63D9 File Offset: 0x003C45D9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005523 RID: 21795
-		// (get) Token: 0x060193C3 RID: 103363 RVA: 0x003ABCAC File Offset: 0x003A9EAC
+		// Token: 0x170057A4 RID: 22436
+		// (get) Token: 0x06019DF9 RID: 105977 RVA: 0x003C63DC File Offset: 0x003C45DC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060193C4 RID: 103364 RVA: 0x003ABCB3 File Offset: 0x003A9EB3
+		// Token: 0x06019DFA RID: 105978 RVA: 0x003C63E3 File Offset: 0x003C45E3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SpringSignPhotoRewardRequest()
 		{
 		}
 
-		// Token: 0x060193C5 RID: 103365 RVA: 0x003ABCBB File Offset: 0x003A9EBB
+		// Token: 0x06019DFB RID: 105979 RVA: 0x003C63EB File Offset: 0x003C45EB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SpringSignPhotoRewardRequest(SpringSignPhotoRewardRequest other) : this()
@@ -57,7 +57,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060193C6 RID: 103366 RVA: 0x003ABCD4 File Offset: 0x003A9ED4
+		// Token: 0x06019DFC RID: 105980 RVA: 0x003C6404 File Offset: 0x003C4604
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SpringSignPhotoRewardRequest Clone()
@@ -65,7 +65,7 @@ namespace Aki.Protocol
 			return new SpringSignPhotoRewardRequest(this);
 		}
 
-		// Token: 0x060193C7 RID: 103367 RVA: 0x003ABCDC File Offset: 0x003A9EDC
+		// Token: 0x06019DFD RID: 105981 RVA: 0x003C640C File Offset: 0x003C460C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -73,7 +73,7 @@ namespace Aki.Protocol
 			return this.Equals(other as SpringSignPhotoRewardRequest);
 		}
 
-		// Token: 0x060193C8 RID: 103368 RVA: 0x003ABCEA File Offset: 0x003A9EEA
+		// Token: 0x06019DFE RID: 105982 RVA: 0x003C641A File Offset: 0x003C461A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(SpringSignPhotoRewardRequest other)
@@ -81,7 +81,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || object.Equals(this._unknownFields, other._unknownFields));
 		}
 
-		// Token: 0x060193C9 RID: 103369 RVA: 0x003ABD08 File Offset: 0x003A9F08
+		// Token: 0x06019DFF RID: 105983 RVA: 0x003C6438 File Offset: 0x003C4638
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -94,7 +94,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060193CA RID: 103370 RVA: 0x003ABD2E File Offset: 0x003A9F2E
+		// Token: 0x06019E00 RID: 105984 RVA: 0x003C645E File Offset: 0x003C465E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -102,7 +102,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060193CB RID: 103371 RVA: 0x003ABD3B File Offset: 0x003A9F3B
+		// Token: 0x06019E01 RID: 105985 RVA: 0x003C646B File Offset: 0x003C466B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -110,7 +110,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060193CC RID: 103372 RVA: 0x003ABD44 File Offset: 0x003A9F44
+		// Token: 0x06019E02 RID: 105986 RVA: 0x003C6474 File Offset: 0x003C4674
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -121,7 +121,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060193CD RID: 103373 RVA: 0x003ABD5C File Offset: 0x003A9F5C
+		// Token: 0x06019E03 RID: 105987 RVA: 0x003C648C File Offset: 0x003C468C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -134,7 +134,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060193CE RID: 103374 RVA: 0x003ABD82 File Offset: 0x003A9F82
+		// Token: 0x06019E04 RID: 105988 RVA: 0x003C64B2 File Offset: 0x003C46B2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(SpringSignPhotoRewardRequest other)
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060193CF RID: 103375 RVA: 0x003ABD9F File Offset: 0x003A9F9F
+		// Token: 0x06019E05 RID: 105989 RVA: 0x003C64CF File Offset: 0x003C46CF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -154,7 +154,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060193D0 RID: 103376 RVA: 0x003ABDA8 File Offset: 0x003A9FA8
+		// Token: 0x06019E06 RID: 105990 RVA: 0x003C64D8 File Offset: 0x003C46D8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -170,7 +170,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04009479 RID: 38009
+		// Token: 0x040098A3 RID: 39075
 		private UnknownFieldSet _unknownFields;
 	}
 }

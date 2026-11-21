@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x0200264F RID: 9807
+// Token: 0x02001B3A RID: 6970
 public enum EQuestRedDotOperate
 {
-	// Token: 0x04009753 RID: 38739
+	// Token: 0x040098AB RID: 39083
 	Delete,
-	// Token: 0x04009754 RID: 38740
+	// Token: 0x040098AC RID: 39084
 	Add
 }

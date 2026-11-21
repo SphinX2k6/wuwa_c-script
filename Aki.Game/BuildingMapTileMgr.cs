@@ -5,12 +5,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020012F0 RID: 4848
+// Token: 0x020007A4 RID: 1956
 [NullableContext(1)]
 [Nullable(0)]
 public class BuildingMapTileMgr
 {
-	// Token: 0x06008610 RID: 34320 RVA: 0x001C9148 File Offset: 0x001C7348
+	// Token: 0x060059AB RID: 22955 RVA: 0x001D1FB4 File Offset: 0x001D01B4
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -28,7 +28,7 @@ public class BuildingMapTileMgr
 		return <LoadTileAssetAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008611 RID: 34321 RVA: 0x001C919C File Offset: 0x001C739C
+	// Token: 0x060059AC RID: 22956 RVA: 0x001D2008 File Offset: 0x001D0208
 	public List<string> CreateTilesPathList()
 	{
 		List<string> list = new List<string>();
@@ -48,7 +48,7 @@ public class BuildingMapTileMgr
 		return list;
 	}
 
-	// Token: 0x06008612 RID: 34322 RVA: 0x001C9204 File Offset: 0x001C7404
+	// Token: 0x060059AD RID: 22957 RVA: 0x001D2070 File Offset: 0x001D0270
 	public UniTask LoadMapTiles()
 	{
 		BuildingMapTileMgr.<LoadMapTiles>d__6 <LoadMapTiles>d__;
@@ -59,15 +59,15 @@ public class BuildingMapTileMgr
 		return <LoadMapTiles>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x04003C0D RID: 15373
+	// Token: 0x04003CA5 RID: 15525
 	private const int COLUMNS_NUM = 8;
 
-	// Token: 0x04003C0E RID: 15374
+	// Token: 0x04003CA6 RID: 15526
 	private const int ROW_NUM = 4;
 
-	// Token: 0x04003C0F RID: 15375
+	// Token: 0x04003CA7 RID: 15527
 	private const string MAPTILE_NAME_TEMPLATE = "ChasingMoonMap_{0}_{1}";
 
-	// Token: 0x04003C10 RID: 15376
+	// Token: 0x04003CA8 RID: 15528
 	private readonly Dictionary<string, UTexture> MapTilesMap = new Dictionary<string, UTexture>();
 }

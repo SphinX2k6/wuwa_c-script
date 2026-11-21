@@ -1,21 +1,20 @@
 ﻿using System;
-using CSharpScript.Core.Common;
 
 namespace CSharpScript.Game.Manager
 {
-	// Token: 0x02006942 RID: 26946
+	// Token: 0x02005A9D RID: 23197
 	public static class ControllerDefine
 	{
-		// Token: 0x0604326D RID: 275053 RVA: 0x0105E3DA File Offset: 0x0105C5DA
+		// Token: 0x060392A4 RID: 234148 RVA: 0x010025B1 File Offset: 0x010007B1
 		public static bool CheckCombatDebugDrawControllerTick()
 		{
-			return !Info.Instance.IsBuildShipping;
+			return false;
 		}
 
-		// Token: 0x0604326E RID: 275054 RVA: 0x0105E3E9 File Offset: 0x0105C5E9
+		// Token: 0x060392A5 RID: 234149 RVA: 0x010025B4 File Offset: 0x010007B4
 		public static bool CheckCrashCollectionControllerTick()
 		{
-			return !Info.Instance.IsBuildShipping;
+			return false;
 		}
 	}
 }

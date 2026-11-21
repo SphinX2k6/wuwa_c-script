@@ -2,17 +2,17 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02002F57 RID: 12119
+// Token: 0x020024AA RID: 9386
 [NullableContext(1)]
 [Nullable(0)]
 public class BindBuffToVehicleEffect : BuffEffect
 {
-	// Token: 0x06019CA9 RID: 105641 RVA: 0x006B9CCD File Offset: 0x006B7ECD
+	// Token: 0x060175B4 RID: 95668 RVA: 0x006DFFE9 File Offset: 0x006DE1E9
 	public BindBuffToVehicleEffect(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019CAA RID: 105642 RVA: 0x006B9CE8 File Offset: 0x006B7EE8
+	// Token: 0x060175B5 RID: 95669 RVA: 0x006E0004 File Offset: 0x006DE204
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -29,14 +29,14 @@ public class BindBuffToVehicleEffect : BuffEffect
 		}
 	}
 
-	// Token: 0x06019CAB RID: 105643 RVA: 0x006B9D47 File Offset: 0x006B7F47
+	// Token: 0x060175B6 RID: 95670 RVA: 0x006E0063 File Offset: 0x006DE263
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
 		return null;
 	}
 
-	// Token: 0x06019CAC RID: 105644 RVA: 0x006B9D4C File Offset: 0x006B7F4C
+	// Token: 0x060175B7 RID: 95671 RVA: 0x006E0068 File Offset: 0x006DE268
 	public override void OnCreated()
 	{
 		if (!this.CheckAuthority())
@@ -53,7 +53,7 @@ public class BindBuffToVehicleEffect : BuffEffect
 		}
 	}
 
-	// Token: 0x06019CAD RID: 105645 RVA: 0x006B9DE0 File Offset: 0x006B7FE0
+	// Token: 0x060175B8 RID: 95672 RVA: 0x006E00FC File Offset: 0x006DE2FC
 	public override void OnRemoved(bool bPremature)
 	{
 		if (!this.CheckAuthority())
@@ -70,7 +70,7 @@ public class BindBuffToVehicleEffect : BuffEffect
 		}
 	}
 
-	// Token: 0x06019CAE RID: 105646 RVA: 0x006B9E74 File Offset: 0x006B8074
+	// Token: 0x060175B9 RID: 95673 RVA: 0x006E0190 File Offset: 0x006DE390
 	protected void OnEnterVehicle(VehiclePassengerInfo info, bool byChangeRole)
 	{
 		if (!info.IsDriver)
@@ -80,7 +80,7 @@ public class BindBuffToVehicleEffect : BuffEffect
 		this.AddBuffVehicle(info.VehicleEntity, "OnEnterVehicle", null);
 	}
 
-	// Token: 0x06019CAF RID: 105647 RVA: 0x006B9EA4 File Offset: 0x006B80A4
+	// Token: 0x060175BA RID: 95674 RVA: 0x006E01C0 File Offset: 0x006DE3C0
 	protected void OnLeaveVehicle(VehiclePassengerInfo info, bool byChangeRole)
 	{
 		if (!info.IsDriver)
@@ -90,7 +90,7 @@ public class BindBuffToVehicleEffect : BuffEffect
 		this.RemoveBuffVehicle(info.VehicleEntity, "OnLeaveVehicle", null);
 	}
 
-	// Token: 0x06019CB0 RID: 105648 RVA: 0x006B9ED4 File Offset: 0x006B80D4
+	// Token: 0x060175BB RID: 95675 RVA: 0x006E01F0 File Offset: 0x006DE3F0
 	private unsafe void AddBuffVehicle([Nullable(2)] Entity vehicleEntity, string reason, int? stackCount = null)
 	{
 		IActiveBuff pendingBuff = base.PendingBuff;
@@ -117,7 +117,7 @@ public class BindBuffToVehicleEffect : BuffEffect
 		}
 	}
 
-	// Token: 0x06019CB1 RID: 105649 RVA: 0x006B9FE4 File Offset: 0x006B81E4
+	// Token: 0x060175BC RID: 95676 RVA: 0x006E0300 File Offset: 0x006DE500
 	private unsafe void RemoveBuffVehicle([Nullable(2)] Entity vehicleEntity, string reason, int? stackCount = null)
 	{
 		IActiveBuff pendingBuff = base.PendingBuff;
@@ -144,19 +144,19 @@ public class BindBuffToVehicleEffect : BuffEffect
 		}
 	}
 
-	// Token: 0x06019CB2 RID: 105650 RVA: 0x006BA0E8 File Offset: 0x006B82E8
+	// Token: 0x060175BD RID: 95677 RVA: 0x006E0404 File Offset: 0x006DE604
 	public override void OnStackDecreased(int newCount, int oldCount, bool bPremature)
 	{
 		this.UpdateVehicleBuffStack(newCount, oldCount);
 	}
 
-	// Token: 0x06019CB3 RID: 105651 RVA: 0x006BA0F2 File Offset: 0x006B82F2
+	// Token: 0x060175BE RID: 95678 RVA: 0x006E040E File Offset: 0x006DE60E
 	public override void OnStackIncreased(int newCount, int oldCount, long? instigatorId)
 	{
 		this.UpdateVehicleBuffStack(newCount, oldCount);
 	}
 
-	// Token: 0x06019CB4 RID: 105652 RVA: 0x006BA0FC File Offset: 0x006B82FC
+	// Token: 0x060175BF RID: 95679 RVA: 0x006E0418 File Offset: 0x006DE618
 	private void UpdateVehicleBuffStack(int newCount, int oldCount)
 	{
 		if (!this.CheckAuthority() || newCount == oldCount)
@@ -182,12 +182,12 @@ public class BindBuffToVehicleEffect : BuffEffect
 		this.RemoveBuffVehicle(vehicleEntity, "OnStackDecreased", new int?(oldCount - newCount));
 	}
 
-	// Token: 0x06019CB5 RID: 105653 RVA: 0x006BA16D File Offset: 0x006B836D
+	// Token: 0x060175C0 RID: 95680 RVA: 0x006E0489 File Offset: 0x006DE689
 	public override string GetDebugEffectString()
 	{
 		return "绑定buff到骑乘的载具上" + string.Join<long>(",", this.BuffIds);
 	}
 
-	// Token: 0x0400C26E RID: 49774
+	// Token: 0x0400C610 RID: 50704
 	public long[] BuffIds = Array.Empty<long>();
 }

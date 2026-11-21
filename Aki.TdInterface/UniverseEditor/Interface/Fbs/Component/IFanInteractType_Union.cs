@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200523A RID: 21050
+	// Token: 0x020057A2 RID: 22434
 	public enum IFanInteractType_Union : byte
 	{
-		// Token: 0x0400E37F RID: 58239
+		// Token: 0x0400EF85 RID: 61317
 		NONE,
-		// Token: 0x0400E380 RID: 58240
+		// Token: 0x0400EF86 RID: 61318
 		IFanInteractType,
-		// Token: 0x0400E381 RID: 58241
+		// Token: 0x0400EF87 RID: 61319
 		IFanInteractByHit,
-		// Token: 0x0400E382 RID: 58242
+		// Token: 0x0400EF88 RID: 61320
 		IFanInteractByFKey
 	}
 }

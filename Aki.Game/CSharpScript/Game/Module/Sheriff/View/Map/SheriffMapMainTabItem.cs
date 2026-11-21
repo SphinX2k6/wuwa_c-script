@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Sheriff.View.Map
 {
-	// Token: 0x02004C63 RID: 19555
+	// Token: 0x02003C14 RID: 15380
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 	})]
 	public class SheriffMapMainTabItem : GridProxyAbstract<ISheriffMainTabItemData>
 	{
-		// Token: 0x060328C7 RID: 207047 RVA: 0x00BC6D64 File Offset: 0x00BC4F64
+		// Token: 0x0602767A RID: 161402 RVA: 0x00B0B9D0 File Offset: 0x00B09BD0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060328C8 RID: 207048 RVA: 0x00BC6E2C File Offset: 0x00BC502C
+		// Token: 0x0602767B RID: 161403 RVA: 0x00B0BA98 File Offset: 0x00B09C98
 		private void OnClickItem(EToggleState state)
 		{
 			if (state == EToggleState.ETT_UnChecked)
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			selectCallBack(this.Data);
 		}
 
-		// Token: 0x060328C9 RID: 207049 RVA: 0x00BC6E7A File Offset: 0x00BC507A
+		// Token: 0x0602767C RID: 161404 RVA: 0x00B0BAE6 File Offset: 0x00B09CE6
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(0).SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
@@ -73,13 +73,13 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			base.GetExtendToggle(0).OnUndeterminedClicked.Add(new Action(this.OnUndeterminedClicked));
 		}
 
-		// Token: 0x060328CA RID: 207050 RVA: 0x00BC6EB6 File Offset: 0x00BC50B6
+		// Token: 0x0602767D RID: 161405 RVA: 0x00B0BB22 File Offset: 0x00B09D22
 		private void OnUndeterminedClicked()
 		{
 			this.OpenConditionView();
 		}
 
-		// Token: 0x060328CB RID: 207051 RVA: 0x00BC6EC0 File Offset: 0x00BC50C0
+		// Token: 0x0602767E RID: 161406 RVA: 0x00B0BB2C File Offset: 0x00B09D2C
 		public override void Refresh(ISheriffMainTabItemData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -95,25 +95,25 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			}
 		}
 
-		// Token: 0x060328CC RID: 207052 RVA: 0x00BC6F35 File Offset: 0x00BC5135
+		// Token: 0x0602767F RID: 161407 RVA: 0x00B0BBA1 File Offset: 0x00B09DA1
 		public override void OnSelected(bool fireEvent)
 		{
 			base.GetExtendToggle(0).SetToggleStateForce(EToggleState.ETT_Checked, fireEvent, false, false);
 		}
 
-		// Token: 0x060328CD RID: 207053 RVA: 0x00BC6F47 File Offset: 0x00BC5147
+		// Token: 0x06027680 RID: 161408 RVA: 0x00B0BBB3 File Offset: 0x00B09DB3
 		public override void OnDeselected(bool fireEvent)
 		{
 			base.GetExtendToggle(0).SetToggleStateForce(EToggleState.ETT_UnChecked, fireEvent, false, false);
 		}
 
-		// Token: 0x060328CE RID: 207054 RVA: 0x00BC6F59 File Offset: 0x00BC5159
+		// Token: 0x06027681 RID: 161409 RVA: 0x00B0BBC5 File Offset: 0x00B09DC5
 		public override object GetKey(ISheriffMainTabItemData data, int displayIndex)
 		{
 			return data.TabType;
 		}
 
-		// Token: 0x060328CF RID: 207055 RVA: 0x00BC6F68 File Offset: 0x00BC5168
+		// Token: 0x06027682 RID: 161410 RVA: 0x00B0BBD4 File Offset: 0x00B09DD4
 		public void OpenConditionView()
 		{
 			FunctionCondition? config = ConfigFunctionConditionByFunctionId.GetConfig((int)this.Data.FunctionType, true);
@@ -156,11 +156,11 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 			UiManager.Instance.OpenView(EUiViewName.CommonConditionView, param, null);
 		}
 
-		// Token: 0x0401AE72 RID: 110194
+		// Token: 0x040157CF RID: 88015
 		[Nullable(2)]
 		private ISheriffMainTabItemData Data;
 
-		// Token: 0x0401AE73 RID: 110195
+		// Token: 0x040157D0 RID: 88016
 		[Nullable(new byte[]
 		{
 			2,
@@ -168,17 +168,17 @@ namespace CSharpScript.Game.Module.Sheriff.View.Map
 		})]
 		public Action<ISheriffMainTabItemData> SelectCallBack;
 
-		// Token: 0x0200AE0E RID: 44558
+		// Token: 0x0200982C RID: 38956
 		[NullableContext(0)]
 		private static class EComponent
 		{
-			// Token: 0x04034DCC RID: 216524
+			// Token: 0x0402F771 RID: 194417
 			public const int Toggle = 0;
 
-			// Token: 0x04034DCD RID: 216525
+			// Token: 0x0402F772 RID: 194418
 			public const int Text = 1;
 
-			// Token: 0x04034DCE RID: 216526
+			// Token: 0x0402F773 RID: 194419
 			public const int Icon = 2;
 		}
 	}

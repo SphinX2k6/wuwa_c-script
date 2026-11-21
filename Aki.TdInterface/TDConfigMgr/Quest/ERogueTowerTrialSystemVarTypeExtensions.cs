@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200127E RID: 4734
+	// Token: 0x020013BE RID: 5054
 	public static class ERogueTowerTrialSystemVarTypeExtensions
 	{
-		// Token: 0x06006ADE RID: 27358 RVA: 0x001003E8 File Offset: 0x000FE5E8
+		// Token: 0x06007131 RID: 28977 RVA: 0x0010E014 File Offset: 0x0010C214
 		public static string ToEnumString(this ERogueTowerTrialSystemVarType value)
 		{
 			string result;
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006ADF RID: 27359 RVA: 0x00100484 File Offset: 0x000FE684
+		// Token: 0x06007132 RID: 28978 RVA: 0x0010E0B0 File Offset: 0x0010C2B0
 		public static ERogueTowerTrialSystemVarType FromString(string name)
 		{
 			ERogueTowerTrialSystemVarType result;
@@ -59,7 +59,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006AE0 RID: 27360 RVA: 0x001004B0 File Offset: 0x000FE6B0
+		// Token: 0x06007133 RID: 28979 RVA: 0x0010E0DC File Offset: 0x0010C2DC
 		public static bool TryFromString(string name, out ERogueTowerTrialSystemVarType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -166,7 +166,7 @@ namespace Aki.TDConfigMgr.Quest
 			return false;
 		}
 
-		// Token: 0x06006AE1 RID: 27361 RVA: 0x00100638 File Offset: 0x000FE838
+		// Token: 0x06007134 RID: 28980 RVA: 0x0010E264 File Offset: 0x0010C464
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -184,7 +184,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006AE2 RID: 27362 RVA: 0x0010069D File Offset: 0x000FE89D
+		// Token: 0x06007135 RID: 28981 RVA: 0x0010E2C9 File Offset: 0x0010C4C9
 		public static ERogueTowerTrialSystemVarType[] GetValues()
 		{
 			return new ERogueTowerTrialSystemVarType[]
@@ -202,7 +202,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006AE3 RID: 27363 RVA: 0x001006B4 File Offset: 0x000FE8B4
+		// Token: 0x06007136 RID: 28982 RVA: 0x0010E2E0 File Offset: 0x0010C4E0
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007262 RID: 29282
+	// Token: 0x02007A37 RID: 31287
 	public struct ISwitchPermission : IFlatbufferObject
 	{
-		// Token: 0x1700D940 RID: 55616
-		// (get) Token: 0x06033F14 RID: 212756 RVA: 0x006FC680 File Offset: 0x006FA880
+		// Token: 0x1700E539 RID: 58681
+		// (get) Token: 0x06037216 RID: 225814 RVA: 0x0075D9E0 File Offset: 0x0075BBE0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033F15 RID: 212757 RVA: 0x006FC68D File Offset: 0x006FA88D
+		// Token: 0x06037217 RID: 225815 RVA: 0x0075D9ED File Offset: 0x0075BBED
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06033F16 RID: 212758 RVA: 0x006FC694 File Offset: 0x006FA894
+		// Token: 0x06037218 RID: 225816 RVA: 0x0075D9F4 File Offset: 0x0075BBF4
 		public static ISwitchPermission GetRootAsISwitchPermission(ByteBuffer _bb)
 		{
 			return ISwitchPermission.GetRootAsISwitchPermission(_bb, default(ISwitchPermission));
 		}
 
-		// Token: 0x06033F17 RID: 212759 RVA: 0x006FC6B0 File Offset: 0x006FA8B0
+		// Token: 0x06037219 RID: 225817 RVA: 0x0075DA10 File Offset: 0x0075BC10
 		public static ISwitchPermission GetRootAsISwitchPermission(ByteBuffer _bb, ISwitchPermission obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06033F18 RID: 212760 RVA: 0x006FC6CD File Offset: 0x006FA8CD
+		// Token: 0x0603721A RID: 225818 RVA: 0x0075DA2D File Offset: 0x0075BC2D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06033F19 RID: 212761 RVA: 0x006FC6DC File Offset: 0x006FA8DC
+		// Token: 0x0603721B RID: 225819 RVA: 0x0075DA3C File Offset: 0x0075BC3C
 		public ISwitchPermission __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D941 RID: 55617
-		// (get) Token: 0x06033F1A RID: 212762 RVA: 0x006FC6EC File Offset: 0x006FA8EC
+		// Token: 0x1700E53A RID: 58682
+		// (get) Token: 0x0603721C RID: 225820 RVA: 0x0075DA4C File Offset: 0x0075BC4C
 		public ESwitchSubLevelsType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D942 RID: 55618
-		// (get) Token: 0x06033F1B RID: 212763 RVA: 0x006FC728 File Offset: 0x006FA928
+		// Token: 0x1700E53B RID: 58683
+		// (get) Token: 0x0603721D RID: 225821 RVA: 0x0075DA88 File Offset: 0x0075BC88
 		public bool IsAllowClientSwitch
 		{
 			get
@@ -74,7 +74,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033F1C RID: 212764 RVA: 0x006FC768 File Offset: 0x006FA968
+		// Token: 0x0603721E RID: 225822 RVA: 0x0075DAC8 File Offset: 0x0075BCC8
 		public string Levels(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -85,8 +85,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700D943 RID: 55619
-		// (get) Token: 0x06033F1D RID: 212765 RVA: 0x006FC7A4 File Offset: 0x006FA9A4
+		// Token: 0x1700E53C RID: 58684
+		// (get) Token: 0x0603721F RID: 225823 RVA: 0x0075DB04 File Offset: 0x0075BD04
 		public int LevelsLength
 		{
 			get
@@ -100,7 +100,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033F1E RID: 212766 RVA: 0x006FC7CF File Offset: 0x006FA9CF
+		// Token: 0x06037220 RID: 225824 RVA: 0x0075DB2F File Offset: 0x0075BD2F
 		public static Offset<ISwitchPermission> CreateISwitchPermission(FlatBufferBuilder builder, ESwitchSubLevelsType Type = ESwitchSubLevelsType.Directly, bool IsAllowClientSwitch = false, VectorOffset LevelsOffset = default(VectorOffset))
 		{
 			builder.StartTable(3);
@@ -110,31 +110,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISwitchPermission.EndISwitchPermission(builder);
 		}
 
-		// Token: 0x06033F1F RID: 212767 RVA: 0x006FC7F3 File Offset: 0x006FA9F3
+		// Token: 0x06037221 RID: 225825 RVA: 0x0075DB53 File Offset: 0x0075BD53
 		public static void StartISwitchPermission(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06033F20 RID: 212768 RVA: 0x006FC7FC File Offset: 0x006FA9FC
+		// Token: 0x06037222 RID: 225826 RVA: 0x0075DB5C File Offset: 0x0075BD5C
 		public static void AddType(FlatBufferBuilder builder, ESwitchSubLevelsType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06033F21 RID: 212769 RVA: 0x006FC807 File Offset: 0x006FAA07
+		// Token: 0x06037223 RID: 225827 RVA: 0x0075DB67 File Offset: 0x0075BD67
 		public static void AddIsAllowClientSwitch(FlatBufferBuilder builder, bool isAllowClientSwitch)
 		{
 			builder.AddBool(1, isAllowClientSwitch, false);
 		}
 
-		// Token: 0x06033F22 RID: 212770 RVA: 0x006FC812 File Offset: 0x006FAA12
+		// Token: 0x06037224 RID: 225828 RVA: 0x0075DB72 File Offset: 0x0075BD72
 		public static void AddLevels(FlatBufferBuilder builder, VectorOffset levelsOffset)
 		{
 			builder.AddOffset(2, levelsOffset.Value, 0);
 		}
 
-		// Token: 0x06033F23 RID: 212771 RVA: 0x006FC824 File Offset: 0x006FAA24
+		// Token: 0x06037225 RID: 225829 RVA: 0x0075DB84 File Offset: 0x0075BD84
 		public static VectorOffset CreateLevelsVector(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -145,7 +145,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06033F24 RID: 212772 RVA: 0x006FC864 File Offset: 0x006FAA64
+		// Token: 0x06037226 RID: 225830 RVA: 0x0075DBC4 File Offset: 0x0075BDC4
 		public static VectorOffset CreateLevelsVectorBlock(FlatBufferBuilder builder, StringOffset[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -153,7 +153,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06033F25 RID: 212773 RVA: 0x006FC87E File Offset: 0x006FAA7E
+		// Token: 0x06037227 RID: 225831 RVA: 0x0075DBDE File Offset: 0x0075BDDE
 		public static VectorOffset CreateLevelsVectorBlock(FlatBufferBuilder builder, ArraySegment<StringOffset> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -161,7 +161,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06033F26 RID: 212774 RVA: 0x006FC89C File Offset: 0x006FAA9C
+		// Token: 0x06037228 RID: 225832 RVA: 0x0075DBFC File Offset: 0x0075BDFC
 		public static VectorOffset CreateLevelsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -169,19 +169,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x06033F27 RID: 212775 RVA: 0x006FC8B5 File Offset: 0x006FAAB5
+		// Token: 0x06037229 RID: 225833 RVA: 0x0075DC15 File Offset: 0x0075BE15
 		public static void StartLevelsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06033F28 RID: 212776 RVA: 0x006FC8C0 File Offset: 0x006FAAC0
+		// Token: 0x0603722A RID: 225834 RVA: 0x0075DC20 File Offset: 0x0075BE20
 		public static Offset<ISwitchPermission> EndISwitchPermission(FlatBufferBuilder builder)
 		{
 			return new Offset<ISwitchPermission>(builder.EndTable());
 		}
 
-		// Token: 0x06033F29 RID: 212777 RVA: 0x006FC8D0 File Offset: 0x006FAAD0
+		// Token: 0x0603722B RID: 225835 RVA: 0x0075DC30 File Offset: 0x0075BE30
 		public ISwitchPermissionT UnPack()
 		{
 			ISwitchPermissionT switchPermissionT = new ISwitchPermissionT();
@@ -189,7 +189,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return switchPermissionT;
 		}
 
-		// Token: 0x06033F2A RID: 212778 RVA: 0x006FC8EC File Offset: 0x006FAAEC
+		// Token: 0x0603722C RID: 225836 RVA: 0x0075DC4C File Offset: 0x0075BE4C
 		public void UnPackTo(ISwitchPermissionT _o)
 		{
 			_o.Type = this.Type;
@@ -201,7 +201,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033F2B RID: 212779 RVA: 0x006FC940 File Offset: 0x006FAB40
+		// Token: 0x0603722D RID: 225837 RVA: 0x0075DCA0 File Offset: 0x0075BEA0
 		public static Offset<ISwitchPermission> Pack(FlatBufferBuilder builder, ISwitchPermissionT _o)
 		{
 			if (_o == null)
@@ -221,7 +221,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISwitchPermission.CreateISwitchPermission(builder, _o.Type, _o.IsAllowClientSwitch, levelsOffset);
 		}
 
-		// Token: 0x04011D5E RID: 73054
+		// Token: 0x04012D60 RID: 77152
 		private Table __p;
 	}
 }

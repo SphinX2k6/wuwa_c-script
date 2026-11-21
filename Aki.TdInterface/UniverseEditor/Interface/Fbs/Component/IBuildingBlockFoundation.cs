@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004F34 RID: 20276
+	// Token: 0x02005466 RID: 21606
 	public struct IBuildingBlockFoundation : IFlatbufferObject
 	{
-		// Token: 0x17009228 RID: 37416
-		// (get) Token: 0x06020185 RID: 131461 RVA: 0x00477270 File Offset: 0x00475470
+		// Token: 0x170099AA RID: 39338
+		// (get) Token: 0x06021EF5 RID: 138997 RVA: 0x004AD604 File Offset: 0x004AB804
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06020186 RID: 131462 RVA: 0x0047727D File Offset: 0x0047547D
+		// Token: 0x06021EF6 RID: 138998 RVA: 0x004AD611 File Offset: 0x004AB811
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06020187 RID: 131463 RVA: 0x00477284 File Offset: 0x00475484
+		// Token: 0x06021EF7 RID: 138999 RVA: 0x004AD618 File Offset: 0x004AB818
 		public static IBuildingBlockFoundation GetRootAsIBuildingBlockFoundation(ByteBuffer _bb)
 		{
 			return IBuildingBlockFoundation.GetRootAsIBuildingBlockFoundation(_bb, default(IBuildingBlockFoundation));
 		}
 
-		// Token: 0x06020188 RID: 131464 RVA: 0x004772A0 File Offset: 0x004754A0
+		// Token: 0x06021EF8 RID: 139000 RVA: 0x004AD634 File Offset: 0x004AB834
 		public static IBuildingBlockFoundation GetRootAsIBuildingBlockFoundation(ByteBuffer _bb, IBuildingBlockFoundation obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06020189 RID: 131465 RVA: 0x004772BD File Offset: 0x004754BD
+		// Token: 0x06021EF9 RID: 139001 RVA: 0x004AD651 File Offset: 0x004AB851
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602018A RID: 131466 RVA: 0x004772CC File Offset: 0x004754CC
+		// Token: 0x06021EFA RID: 139002 RVA: 0x004AD660 File Offset: 0x004AB860
 		public IBuildingBlockFoundation __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009229 RID: 37417
-		// (get) Token: 0x0602018B RID: 131467 RVA: 0x004772DC File Offset: 0x004754DC
+		// Token: 0x170099AB RID: 39339
+		// (get) Token: 0x06021EFB RID: 139003 RVA: 0x004AD670 File Offset: 0x004AB870
 		public EItemFoundation Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602018C RID: 131468 RVA: 0x00477318 File Offset: 0x00475518
+		// Token: 0x06021EFC RID: 139004 RVA: 0x004AD6AC File Offset: 0x004AB8AC
 		public static Offset<IBuildingBlockFoundation> CreateIBuildingBlockFoundation(FlatBufferBuilder builder, EItemFoundation Type = EItemFoundation.CategoryMatching)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IBuildingBlockFoundation.EndIBuildingBlockFoundation(builder);
 		}
 
-		// Token: 0x0602018D RID: 131469 RVA: 0x0047732E File Offset: 0x0047552E
+		// Token: 0x06021EFD RID: 139005 RVA: 0x004AD6C2 File Offset: 0x004AB8C2
 		public static void StartIBuildingBlockFoundation(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602018E RID: 131470 RVA: 0x00477337 File Offset: 0x00475537
+		// Token: 0x06021EFE RID: 139006 RVA: 0x004AD6CB File Offset: 0x004AB8CB
 		public static void AddType(FlatBufferBuilder builder, EItemFoundation type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602018F RID: 131471 RVA: 0x00477342 File Offset: 0x00475542
+		// Token: 0x06021EFF RID: 139007 RVA: 0x004AD6D6 File Offset: 0x004AB8D6
 		public static Offset<IBuildingBlockFoundation> EndIBuildingBlockFoundation(FlatBufferBuilder builder)
 		{
 			return new Offset<IBuildingBlockFoundation>(builder.EndTable());
 		}
 
-		// Token: 0x06020190 RID: 131472 RVA: 0x00477350 File Offset: 0x00475550
+		// Token: 0x06021F00 RID: 139008 RVA: 0x004AD6E4 File Offset: 0x004AB8E4
 		public IBuildingBlockFoundationT UnPack()
 		{
 			IBuildingBlockFoundationT buildingBlockFoundationT = new IBuildingBlockFoundationT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return buildingBlockFoundationT;
 		}
 
-		// Token: 0x06020191 RID: 131473 RVA: 0x0047736B File Offset: 0x0047556B
+		// Token: 0x06021F01 RID: 139009 RVA: 0x004AD6FF File Offset: 0x004AB8FF
 		public void UnPackTo(IBuildingBlockFoundationT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06020192 RID: 131474 RVA: 0x0047737C File Offset: 0x0047557C
+		// Token: 0x06021F02 RID: 139010 RVA: 0x004AD710 File Offset: 0x004AB910
 		public static Offset<IBuildingBlockFoundation> Pack(FlatBufferBuilder builder, IBuildingBlockFoundationT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IBuildingBlockFoundation.CreateIBuildingBlockFoundation(builder, _o.Type);
 		}
 
-		// Token: 0x0400DD9C RID: 56732
+		// Token: 0x0400E94B RID: 59723
 		private Table __p;
 	}
 }

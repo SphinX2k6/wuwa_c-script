@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x020048E7 RID: 18663
+	// Token: 0x02004D4C RID: 19788
 	public enum TBuffDuration : byte
 	{
-		// Token: 0x0400CF05 RID: 52997
+		// Token: 0x0400D93E RID: 55614
 		NONE,
-		// Token: 0x0400CF06 RID: 52998
+		// Token: 0x0400D93F RID: 55615
 		IBuffDurationInstant,
-		// Token: 0x0400CF07 RID: 52999
+		// Token: 0x0400D940 RID: 55616
 		IBuffDurationPermanent,
-		// Token: 0x0400CF08 RID: 53000
+		// Token: 0x0400D941 RID: 55617
 		IBuffHasDuration
 	}
 }

@@ -2,40 +2,40 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020066C4 RID: 26308
+	// Token: 0x02006D3E RID: 27966
 	public class IEnterOrbitalCameraControlByMoveT
 	{
-		// Token: 0x1700C37A RID: 50042
-		// (get) Token: 0x0602DBC2 RID: 187330 RVA: 0x00641BF3 File Offset: 0x0063FDF3
-		// (set) Token: 0x0602DBC3 RID: 187331 RVA: 0x00641BFB File Offset: 0x0063FDFB
+		// Token: 0x1700CD2B RID: 52523
+		// (get) Token: 0x060303DF RID: 197599 RVA: 0x0068EEA7 File Offset: 0x0068D0A7
+		// (set) Token: 0x060303E0 RID: 197600 RVA: 0x0068EEAF File Offset: 0x0068D0AF
 		public EEnterOrbitalCameraType Type { get; set; }
 
-		// Token: 0x1700C37B RID: 50043
-		// (get) Token: 0x0602DBC4 RID: 187332 RVA: 0x00641C04 File Offset: 0x0063FE04
-		// (set) Token: 0x0602DBC5 RID: 187333 RVA: 0x00641C0C File Offset: 0x0063FE0C
+		// Token: 0x1700CD2C RID: 52524
+		// (get) Token: 0x060303E1 RID: 197601 RVA: 0x0068EEB8 File Offset: 0x0068D0B8
+		// (set) Token: 0x060303E2 RID: 197602 RVA: 0x0068EEC0 File Offset: 0x0068D0C0
 		public string LevelSequence { get; set; }
 
-		// Token: 0x1700C37C RID: 50044
-		// (get) Token: 0x0602DBC6 RID: 187334 RVA: 0x00641C15 File Offset: 0x0063FE15
-		// (set) Token: 0x0602DBC7 RID: 187335 RVA: 0x00641C1D File Offset: 0x0063FE1D
+		// Token: 0x1700CD2D RID: 52525
+		// (get) Token: 0x060303E3 RID: 197603 RVA: 0x0068EEC9 File Offset: 0x0068D0C9
+		// (set) Token: 0x060303E4 RID: 197604 RVA: 0x0068EED1 File Offset: 0x0068D0D1
 		public float BlendInTime { get; set; }
 
-		// Token: 0x1700C37D RID: 50045
-		// (get) Token: 0x0602DBC8 RID: 187336 RVA: 0x00641C26 File Offset: 0x0063FE26
-		// (set) Token: 0x0602DBC9 RID: 187337 RVA: 0x00641C2E File Offset: 0x0063FE2E
+		// Token: 0x1700CD2E RID: 52526
+		// (get) Token: 0x060303E5 RID: 197605 RVA: 0x0068EEDA File Offset: 0x0068D0DA
+		// (set) Token: 0x060303E6 RID: 197606 RVA: 0x0068EEE2 File Offset: 0x0068D0E2
 		public float BlendOutTime { get; set; }
 
-		// Token: 0x1700C37E RID: 50046
-		// (get) Token: 0x0602DBCA RID: 187338 RVA: 0x00641C37 File Offset: 0x0063FE37
-		// (set) Token: 0x0602DBCB RID: 187339 RVA: 0x00641C3F File Offset: 0x0063FE3F
+		// Token: 0x1700CD2F RID: 52527
+		// (get) Token: 0x060303E7 RID: 197607 RVA: 0x0068EEEB File Offset: 0x0068D0EB
+		// (set) Token: 0x060303E8 RID: 197608 RVA: 0x0068EEF3 File Offset: 0x0068D0F3
 		public int BegEntity { get; set; }
 
-		// Token: 0x1700C37F RID: 50047
-		// (get) Token: 0x0602DBCC RID: 187340 RVA: 0x00641C48 File Offset: 0x0063FE48
-		// (set) Token: 0x0602DBCD RID: 187341 RVA: 0x00641C50 File Offset: 0x0063FE50
+		// Token: 0x1700CD30 RID: 52528
+		// (get) Token: 0x060303E9 RID: 197609 RVA: 0x0068EEFC File Offset: 0x0068D0FC
+		// (set) Token: 0x060303EA RID: 197610 RVA: 0x0068EF04 File Offset: 0x0068D104
 		public int EndEntity { get; set; }
 
-		// Token: 0x0602DBCE RID: 187342 RVA: 0x00641C59 File Offset: 0x0063FE59
+		// Token: 0x060303EB RID: 197611 RVA: 0x0068EF0D File Offset: 0x0068D10D
 		public IEnterOrbitalCameraControlByMoveT()
 		{
 			this.Type = EEnterOrbitalCameraType.ControlByMove;

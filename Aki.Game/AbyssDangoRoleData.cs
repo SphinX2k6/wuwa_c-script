@@ -1,34 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
+using Google.Protobuf.Collections;
 
-// Token: 0x0200121A RID: 4634
+// Token: 0x020006CE RID: 1742
 [NullableContext(1)]
 [Nullable(0)]
 public class AbyssDangoRoleData
 {
-	// Token: 0x06007C34 RID: 31796 RVA: 0x001A3D52 File Offset: 0x001A1F52
+	// Token: 0x06004FCA RID: 20426 RVA: 0x001AC9CA File Offset: 0x001AABCA
 	public int GetId()
 	{
 		return this.Id;
 	}
 
-	// Token: 0x06007C35 RID: 31797 RVA: 0x001A3D5A File Offset: 0x001A1F5A
+	// Token: 0x06004FCB RID: 20427 RVA: 0x001AC9D2 File Offset: 0x001AABD2
 	public int GetLevel()
 	{
 		return this.Level;
 	}
 
-	// Token: 0x06007C36 RID: 31798 RVA: 0x001A3D62 File Offset: 0x001A1F62
+	// Token: 0x06004FCC RID: 20428 RVA: 0x001AC9DA File Offset: 0x001AABDA
 	public int[] GetEquipItems()
 	{
 		return this.EquipItems;
 	}
 
-	// Token: 0x06007C37 RID: 31799 RVA: 0x001A3D6C File Offset: 0x001A1F6C
+	// Token: 0x06004FCD RID: 20429 RVA: 0x001AC9E4 File Offset: 0x001AABE4
 	public int[] GetEquipItemConfigIdList()
 	{
 		List<int> list = new List<int>();
@@ -47,58 +47,61 @@ public class AbyssDangoRoleData
 		return list.ToArray();
 	}
 
-	// Token: 0x06007C38 RID: 31800 RVA: 0x001A3DC5 File Offset: 0x001A1FC5
+	// Token: 0x06004FCE RID: 20430 RVA: 0x001ACA3D File Offset: 0x001AAC3D
 	public bool GetIfLock()
 	{
 		return this.Lock;
 	}
 
-	// Token: 0x06007C39 RID: 31801 RVA: 0x001A3DD0 File Offset: 0x001A1FD0
+	// Token: 0x06004FCF RID: 20431 RVA: 0x001ACA48 File Offset: 0x001AAC48
 	public string GetTexture()
 	{
 		return this.GetConfig().Value.Icon;
 	}
 
-	// Token: 0x06007C3A RID: 31802 RVA: 0x001A3DF4 File Offset: 0x001A1FF4
+	// Token: 0x06004FD0 RID: 20432 RVA: 0x001ACA6C File Offset: 0x001AAC6C
 	public string GetFormationIcon()
 	{
 		return this.GetConfig().Value.FormationIcon;
 	}
 
-	// Token: 0x06007C3B RID: 31803 RVA: 0x001A3E18 File Offset: 0x001A2018
+	// Token: 0x06004FD1 RID: 20433 RVA: 0x001ACA90 File Offset: 0x001AAC90
 	public int GetMeshId()
 	{
 		int phantomId = this.GetPhantomId();
 		return PhantomBattleModel.Instance.GetPhantomInstanceByItemId(phantomId).PhantomItem.Value.MeshId;
 	}
 
-	// Token: 0x06007C3C RID: 31804 RVA: 0x001A3E4C File Offset: 0x001A204C
+	// Token: 0x06004FD2 RID: 20434 RVA: 0x001ACAC4 File Offset: 0x001AACC4
 	public int GetPhantomId()
 	{
 		return this.GetConfig().Value.PhantomItemId;
 	}
 
-	// Token: 0x06007C3D RID: 31805 RVA: 0x001A3E6F File Offset: 0x001A206F
+	// Token: 0x06004FD3 RID: 20435 RVA: 0x001ACAE7 File Offset: 0x001AACE7
 	public void Init(AbyssLittleRole data)
 	{
 		this.Id = data.Id;
 		this.Level = 1;
 	}
 
-	// Token: 0x06007C3E RID: 31806 RVA: 0x001A3E88 File Offset: 0x001A2088
+	// Token: 0x06004FD4 RID: 20436 RVA: 0x001ACB00 File Offset: 0x001AAD00
 	public void Phrase(AbyssRoleInfo data, int[] itemIdList)
 	{
 		this.Id = data.Id;
 		this.Level = data.Level;
-		this.EquipItems = data.EquipItems.ToArray<int>();
+		RepeatedField<int> equipItems = data.EquipItems;
+		int[] array = new int[equipItems.Count];
+		equipItems.CopyTo(array, 0);
+		this.EquipItems = array;
 		this.Lock = false;
-		this.PhraseSlotData(data.EquipItems.ToArray<int>(), itemIdList);
+		this.PhraseSlotData(data.EquipItems, itemIdList);
 	}
 
-	// Token: 0x06007C3F RID: 31807 RVA: 0x001A3ED8 File Offset: 0x001A20D8
-	public void PhraseSlotData(int[] incIdList, int[] itemIdList)
+	// Token: 0x06004FD5 RID: 20437 RVA: 0x001ACB5C File Offset: 0x001AAD5C
+	public void PhraseSlotData(IReadOnlyList<int> incIdList, int[] itemIdList)
 	{
-		if (incIdList.Length < 9)
+		if (incIdList.Count < 9)
 		{
 			Log instance = Log.Instance;
 			ELogModule module = ELogModule.Activity;
@@ -118,19 +121,19 @@ public class AbyssDangoRoleData
 		}
 	}
 
-	// Token: 0x06007C40 RID: 31808 RVA: 0x001A3F64 File Offset: 0x001A2164
+	// Token: 0x06004FD6 RID: 20438 RVA: 0x001ACBEC File Offset: 0x001AADEC
 	public int GetQuality()
 	{
 		return this.GetConfig().Value.Quality;
 	}
 
-	// Token: 0x06007C41 RID: 31809 RVA: 0x001A3F88 File Offset: 0x001A2188
+	// Token: 0x06004FD7 RID: 20439 RVA: 0x001ACC10 File Offset: 0x001AAE10
 	public string GetQualitySpritePath()
 	{
 		return DangoAbyssConfig.Instance.GetAbyssQualityById(this.GetQuality()).Value.Bg;
 	}
 
-	// Token: 0x06007C42 RID: 31810 RVA: 0x001A3FB8 File Offset: 0x001A21B8
+	// Token: 0x06004FD8 RID: 20440 RVA: 0x001ACC40 File Offset: 0x001AAE40
 	public Dictionary<int, int> GetEquipPluginMap()
 	{
 		Dictionary<int, int> dictionary = new Dictionary<int, int>();
@@ -145,7 +148,7 @@ public class AbyssDangoRoleData
 		return dictionary;
 	}
 
-	// Token: 0x06007C43 RID: 31811 RVA: 0x001A4040 File Offset: 0x001A2240
+	// Token: 0x06004FD9 RID: 20441 RVA: 0x001ACCC8 File Offset: 0x001AAEC8
 	[NullableContext(2)]
 	public AbyssDangoRoleSlotData GetPluginSlotData(int slot)
 	{
@@ -157,75 +160,75 @@ public class AbyssDangoRoleData
 		return null;
 	}
 
-	// Token: 0x06007C44 RID: 31812 RVA: 0x001A4060 File Offset: 0x001A2260
+	// Token: 0x06004FDA RID: 20442 RVA: 0x001ACCE8 File Offset: 0x001AAEE8
 	public int GetCurrentPluginSlotNum()
 	{
 		return this.GetLevelConfig().Value.PluginNum;
 	}
 
-	// Token: 0x06007C45 RID: 31813 RVA: 0x001A4084 File Offset: 0x001A2284
+	// Token: 0x06004FDB RID: 20443 RVA: 0x001ACD0C File Offset: 0x001AAF0C
 	public string GetName()
 	{
 		return this.GetConfig().Value.Name;
 	}
 
-	// Token: 0x06007C46 RID: 31814 RVA: 0x001A40A8 File Offset: 0x001A22A8
+	// Token: 0x06004FDC RID: 20444 RVA: 0x001ACD30 File Offset: 0x001AAF30
 	public AbyssCastDesc GetCastTypeDesc()
 	{
 		return DangoAbyssConfig.Instance.GetDangoCastDescById(this.GetConfig().Value.CastType).Value;
 	}
 
-	// Token: 0x06007C47 RID: 31815 RVA: 0x001A40E0 File Offset: 0x001A22E0
+	// Token: 0x06004FDD RID: 20445 RVA: 0x001ACD68 File Offset: 0x001AAF68
 	public string GetSkillCastTypeName()
 	{
 		return this.GetCastTypeDesc().Name;
 	}
 
-	// Token: 0x06007C48 RID: 31816 RVA: 0x001A40FC File Offset: 0x001A22FC
+	// Token: 0x06004FDE RID: 20446 RVA: 0x001ACD84 File Offset: 0x001AAF84
 	public string GetSkillCastTypeIconPath()
 	{
 		return this.GetCastTypeDesc().Icon;
 	}
 
-	// Token: 0x06007C49 RID: 31817 RVA: 0x001A4117 File Offset: 0x001A2317
+	// Token: 0x06004FDF RID: 20447 RVA: 0x001ACD9F File Offset: 0x001AAF9F
 	public AbyssLittleRole? GetConfig()
 	{
 		return DangoAbyssConfig.Instance.GetDangoRoleById(this.Id);
 	}
 
-	// Token: 0x06007C4A RID: 31818 RVA: 0x001A412C File Offset: 0x001A232C
+	// Token: 0x06004FE0 RID: 20448 RVA: 0x001ACDB4 File Offset: 0x001AAFB4
 	private int GetLevelGroupId()
 	{
 		return this.GetConfig().Value.LevelGroupId;
 	}
 
-	// Token: 0x06007C4B RID: 31819 RVA: 0x001A414F File Offset: 0x001A234F
+	// Token: 0x06004FE1 RID: 20449 RVA: 0x001ACDD7 File Offset: 0x001AAFD7
 	[NullableContext(2)]
 	public IReadOnlyList<AbyssRoleLevel> GetLevelGroupConfigs()
 	{
 		return DangoAbyssConfig.Instance.GetDangoLevelConfigByGroupId(this.GetLevelGroupId());
 	}
 
-	// Token: 0x06007C4C RID: 31820 RVA: 0x001A4164 File Offset: 0x001A2364
+	// Token: 0x06004FE2 RID: 20450 RVA: 0x001ACDEC File Offset: 0x001AAFEC
 	public int GetSkillId()
 	{
 		return PhantomBattleModel.Instance.GetPhantomInstanceByItemId(this.GetConfig().Value.PhantomItemId).GetPhantomSkillId().Value;
 	}
 
-	// Token: 0x06007C4D RID: 31821 RVA: 0x001A419E File Offset: 0x001A239E
+	// Token: 0x06004FE3 RID: 20451 RVA: 0x001ACE26 File Offset: 0x001AB026
 	public PhantomSkill? GetSkillConfig()
 	{
 		return PhantomBattleConfig.Instance.GetPhantomSkillBySkillId(this.GetSkillId());
 	}
 
-	// Token: 0x06007C4E RID: 31822 RVA: 0x001A41B0 File Offset: 0x001A23B0
+	// Token: 0x06004FE4 RID: 20452 RVA: 0x001ACE38 File Offset: 0x001AB038
 	public string GetSkillDesc()
 	{
 		PhantomSkill? phantomSkill;
 		return ((this.GetSkillConfig() != null) ? phantomSkill.GetValueOrDefault().DescriptionEx : null) ?? string.Empty;
 	}
 
-	// Token: 0x06007C4F RID: 31823 RVA: 0x001A41E8 File Offset: 0x001A23E8
+	// Token: 0x06004FE5 RID: 20453 RVA: 0x001ACE70 File Offset: 0x001AB070
 	public string[] GetSkillDescAddition()
 	{
 		int skillId = this.GetSkillId();
@@ -233,7 +236,7 @@ public class AbyssDangoRoleData
 		return PhantomBattleConfig.Instance.GetPhantomSkillDescExBySkillIdAndQuality(skillId, qualityId);
 	}
 
-	// Token: 0x06007C50 RID: 31824 RVA: 0x001A4240 File Offset: 0x001A2440
+	// Token: 0x06004FE6 RID: 20454 RVA: 0x001ACEC8 File Offset: 0x001AB0C8
 	public string[] GetEffectPassiveSkillDescList()
 	{
 		List<string> list = new List<string>();
@@ -248,13 +251,13 @@ public class AbyssDangoRoleData
 		return list.ToArray();
 	}
 
-	// Token: 0x06007C51 RID: 31825 RVA: 0x001A42BC File Offset: 0x001A24BC
+	// Token: 0x06004FE7 RID: 20455 RVA: 0x001ACF44 File Offset: 0x001AB144
 	public AbyssRoleLevel? GetLevelConfig()
 	{
 		return DangoAbyssConfig.Instance.GetDangoLevelConfigByLevelAndGroupId(this.Level, this.GetLevelGroupId());
 	}
 
-	// Token: 0x06007C52 RID: 31826 RVA: 0x001A42D4 File Offset: 0x001A24D4
+	// Token: 0x06004FE8 RID: 20456 RVA: 0x001ACF5C File Offset: 0x001AB15C
 	public ICostData[] GetCurrentLevelUpConsume()
 	{
 		AbyssRoleLevel? levelConfig = this.GetLevelConfig();
@@ -278,7 +281,7 @@ public class AbyssDangoRoleData
 		return list.ToArray();
 	}
 
-	// Token: 0x06007C53 RID: 31827 RVA: 0x001A4394 File Offset: 0x001A2594
+	// Token: 0x06004FE9 RID: 20457 RVA: 0x001AD01C File Offset: 0x001AB21C
 	public bool GetIfLevelUpEnough()
 	{
 		foreach (ICostData costData in this.GetCurrentLevelUpConsume())
@@ -291,20 +294,20 @@ public class AbyssDangoRoleData
 		return true;
 	}
 
-	// Token: 0x06007C54 RID: 31828 RVA: 0x001A43CB File Offset: 0x001A25CB
+	// Token: 0x06004FEA RID: 20458 RVA: 0x001AD053 File Offset: 0x001AB253
 	public int GetMaxLevel()
 	{
 		return DangoAbyssConfig.Instance.GetDangoLevelConfigByGroupId(this.GetLevelGroupId()).Count;
 	}
 
-	// Token: 0x06007C55 RID: 31829 RVA: 0x001A43E4 File Offset: 0x001A25E4
+	// Token: 0x06004FEB RID: 20459 RVA: 0x001AD06C File Offset: 0x001AB26C
 	public bool GetIfMaxLevel()
 	{
 		IReadOnlyList<AbyssRoleLevel> dangoLevelConfigByGroupId = DangoAbyssConfig.Instance.GetDangoLevelConfigByGroupId(this.GetLevelGroupId());
 		return this.Level >= dangoLevelConfigByGroupId.Count;
 	}
 
-	// Token: 0x06007C56 RID: 31830 RVA: 0x001A4414 File Offset: 0x001A2614
+	// Token: 0x06004FEC RID: 20460 RVA: 0x001AD09C File Offset: 0x001AB29C
 	public bool GetIfCanLevelUp()
 	{
 		bool ifLock = this.GetIfLock();
@@ -312,7 +315,7 @@ public class AbyssDangoRoleData
 		return !ifLock && !ifMaxLevel;
 	}
 
-	// Token: 0x06007C57 RID: 31831 RVA: 0x001A4438 File Offset: 0x001A2638
+	// Token: 0x06004FED RID: 20461 RVA: 0x001AD0C0 File Offset: 0x001AB2C0
 	public AttrListScrollData[] GetLevelUpPreviewData(int targetLevel)
 	{
 		List<AttrListScrollData> list = new List<AttrListScrollData>();
@@ -354,7 +357,7 @@ public class AbyssDangoRoleData
 		return list.ToArray();
 	}
 
-	// Token: 0x06007C58 RID: 31832 RVA: 0x001A462C File Offset: 0x001A282C
+	// Token: 0x06004FEE RID: 20462 RVA: 0x001AD2B4 File Offset: 0x001AB4B4
 	public int GetLevelUpPluginAddData(int newLevel)
 	{
 		AbyssRoleLevel? dangoLevelConfigByLevelAndGroupId = DangoAbyssConfig.Instance.GetDangoLevelConfigByLevelAndGroupId(newLevel, this.GetLevelGroupId());
@@ -372,14 +375,14 @@ public class AbyssDangoRoleData
 		return dangoLevelConfigByLevelAndGroupId.Value.PluginNum - dangoLevelConfigByLevelAndGroupId2.Value.PluginNum;
 	}
 
-	// Token: 0x06007C59 RID: 31833 RVA: 0x001A46C4 File Offset: 0x001A28C4
+	// Token: 0x06004FEF RID: 20463 RVA: 0x001AD34C File Offset: 0x001AB54C
 	private string GetPropValueString(int indexId, double value, bool isRatio)
 	{
 		double propRatioValue = TipsDataTool.GetPropRatioValue(value, isRatio);
 		return AttributeModel.Instance.GetFormatAttributeValueString(indexId, propRatioValue, isRatio);
 	}
 
-	// Token: 0x06007C5A RID: 31834 RVA: 0x001A46E8 File Offset: 0x001A28E8
+	// Token: 0x06004FF0 RID: 20464 RVA: 0x001AD370 File Offset: 0x001AB570
 	public IAttributeInfo[] GetLevelUpViewAttributeInfo(int newLevel, bool? isMax = null)
 	{
 		AttrListScrollData[] levelUpPreviewData = this.GetLevelUpPreviewData(newLevel);
@@ -419,7 +422,7 @@ public class AbyssDangoRoleData
 		return list.ToArray();
 	}
 
-	// Token: 0x06007C5B RID: 31835 RVA: 0x001A4868 File Offset: 0x001A2A68
+	// Token: 0x06004FF1 RID: 20465 RVA: 0x001AD4F0 File Offset: 0x001AB6F0
 	public ILevelUpSuccessAttributeData GetLevelUpViewData(int newLevel)
 	{
 		LevelInfo levelInfo = new LevelInfo
@@ -433,22 +436,22 @@ public class AbyssDangoRoleData
 		return new LevelUpSuccessAttributeData
 		{
 			LevelInfo = levelInfo,
-			AttributeInfo = levelUpViewAttributeInfo.ToList<IAttributeInfo>()
+			AttributeInfo = new List<IAttributeInfo>(levelUpViewAttributeInfo)
 		};
 	}
 
-	// Token: 0x040038D7 RID: 14551
+	// Token: 0x04003970 RID: 14704
 	private int Id;
 
-	// Token: 0x040038D8 RID: 14552
+	// Token: 0x04003971 RID: 14705
 	private int Level;
 
-	// Token: 0x040038D9 RID: 14553
+	// Token: 0x04003972 RID: 14706
 	private int[] EquipItems = Array.Empty<int>();
 
-	// Token: 0x040038DA RID: 14554
+	// Token: 0x04003973 RID: 14707
 	private bool Lock = true;
 
-	// Token: 0x040038DB RID: 14555
+	// Token: 0x04003974 RID: 14708
 	private readonly Dictionary<int, AbyssDangoRoleSlotData> PluginSlotDataMap = new Dictionary<int, AbyssDangoRoleSlotData>();
 }

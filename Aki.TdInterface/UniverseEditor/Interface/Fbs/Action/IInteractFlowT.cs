@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006988 RID: 27016
+	// Token: 0x0200703B RID: 28731
 	public class IInteractFlowT
 	{
-		// Token: 0x1700C85B RID: 51291
-		// (get) Token: 0x0602F2F0 RID: 193264 RVA: 0x0066D58B File Offset: 0x0066B78B
-		// (set) Token: 0x0602F2F1 RID: 193265 RVA: 0x0066D593 File Offset: 0x0066B793
+		// Token: 0x1700D25E RID: 53854
+		// (get) Token: 0x06031CC0 RID: 203968 RVA: 0x006BDA73 File Offset: 0x006BBC73
+		// (set) Token: 0x06031CC1 RID: 203969 RVA: 0x006BDA7B File Offset: 0x006BBC7B
 		public EInteractOption Type { get; set; }
 
-		// Token: 0x1700C85C RID: 51292
-		// (get) Token: 0x0602F2F2 RID: 193266 RVA: 0x0066D59C File Offset: 0x0066B79C
-		// (set) Token: 0x0602F2F3 RID: 193267 RVA: 0x0066D5A4 File Offset: 0x0066B7A4
+		// Token: 0x1700D25F RID: 53855
+		// (get) Token: 0x06031CC2 RID: 203970 RVA: 0x006BDA84 File Offset: 0x006BBC84
+		// (set) Token: 0x06031CC3 RID: 203971 RVA: 0x006BDA8C File Offset: 0x006BBC8C
 		public IPlayFlowT Flow { get; set; }
 
-		// Token: 0x0602F2F4 RID: 193268 RVA: 0x0066D5AD File Offset: 0x0066B7AD
+		// Token: 0x06031CC4 RID: 203972 RVA: 0x006BDA95 File Offset: 0x006BBC95
 		public IInteractFlowT()
 		{
 			this.Type = EInteractOption.Flow;

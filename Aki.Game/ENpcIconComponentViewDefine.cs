@@ -1,40 +1,40 @@
 ﻿using System;
 
-// Token: 0x020022D6 RID: 8918
+// Token: 0x020017BA RID: 6074
 public enum ENpcIconComponentViewDefine
 {
-	// Token: 0x040084FD RID: 34045
+	// Token: 0x0400863B RID: 34363
 	NameText,
-	// Token: 0x040084FE RID: 34046
+	// Token: 0x0400863C RID: 34364
 	OccupationText,
-	// Token: 0x040084FF RID: 34047
+	// Token: 0x0400863D RID: 34365
 	DialogueItem,
-	// Token: 0x04008500 RID: 34048
+	// Token: 0x0400863E RID: 34366
 	DialogueText,
-	// Token: 0x04008501 RID: 34049
+	// Token: 0x0400863F RID: 34367
 	HeadIcon,
-	// Token: 0x04008502 RID: 34050
+	// Token: 0x04008640 RID: 34368
 	NameMessageItem,
-	// Token: 0x04008503 RID: 34051
+	// Token: 0x04008641 RID: 34369
 	HeadItem,
-	// Token: 0x04008504 RID: 34052
+	// Token: 0x04008642 RID: 34370
 	RedDot = 8,
-	// Token: 0x04008505 RID: 34053
+	// Token: 0x04008643 RID: 34371
 	PnlCell = 10,
-	// Token: 0x04008506 RID: 34054
+	// Token: 0x04008644 RID: 34372
 	SprPlayer,
-	// Token: 0x04008507 RID: 34055
+	// Token: 0x04008645 RID: 34373
 	FirstStartTweenAnim,
-	// Token: 0x04008508 RID: 34056
+	// Token: 0x04008646 RID: 34374
 	DialogueStartTweenAnim,
-	// Token: 0x04008509 RID: 34057
+	// Token: 0x04008647 RID: 34375
 	DialogueEndTweenAnim,
-	// Token: 0x0400850A RID: 34058
+	// Token: 0x04008648 RID: 34376
 	IconStartTweenAnim,
-	// Token: 0x0400850B RID: 34059
+	// Token: 0x04008649 RID: 34377
 	IconCloseTweenAnim,
-	// Token: 0x0400850C RID: 34060
+	// Token: 0x0400864A RID: 34378
 	NameStartTweenAnim,
-	// Token: 0x0400850D RID: 34061
+	// Token: 0x0400864B RID: 34379
 	NameCloseTweenAnim
 }

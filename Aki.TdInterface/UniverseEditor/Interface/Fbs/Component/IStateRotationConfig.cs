@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020059BF RID: 22975
+	// Token: 0x02005FCC RID: 24524
 	public struct IStateRotationConfig : IFlatbufferObject
 	{
-		// Token: 0x1700AC66 RID: 44134
-		// (get) Token: 0x06026EDB RID: 159451 RVA: 0x0055B037 File Offset: 0x00559237
+		// Token: 0x1700B59A RID: 46490
+		// (get) Token: 0x06029445 RID: 169029 RVA: 0x005A1CA3 File Offset: 0x0059FEA3
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026EDC RID: 159452 RVA: 0x0055B044 File Offset: 0x00559244
+		// Token: 0x06029446 RID: 169030 RVA: 0x005A1CB0 File Offset: 0x0059FEB0
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06026EDD RID: 159453 RVA: 0x0055B04C File Offset: 0x0055924C
+		// Token: 0x06029447 RID: 169031 RVA: 0x005A1CB8 File Offset: 0x0059FEB8
 		public static IStateRotationConfig GetRootAsIStateRotationConfig(ByteBuffer _bb)
 		{
 			return IStateRotationConfig.GetRootAsIStateRotationConfig(_bb, default(IStateRotationConfig));
 		}
 
-		// Token: 0x06026EDE RID: 159454 RVA: 0x0055B068 File Offset: 0x00559268
+		// Token: 0x06029448 RID: 169032 RVA: 0x005A1CD4 File Offset: 0x0059FED4
 		public static IStateRotationConfig GetRootAsIStateRotationConfig(ByteBuffer _bb, IStateRotationConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06026EDF RID: 159455 RVA: 0x0055B085 File Offset: 0x00559285
+		// Token: 0x06029449 RID: 169033 RVA: 0x005A1CF1 File Offset: 0x0059FEF1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06026EE0 RID: 159456 RVA: 0x0055B094 File Offset: 0x00559294
+		// Token: 0x0602944A RID: 169034 RVA: 0x005A1D00 File Offset: 0x0059FF00
 		public IStateRotationConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700AC67 RID: 44135
-		// (get) Token: 0x06026EE1 RID: 159457 RVA: 0x0055B0A4 File Offset: 0x005592A4
+		// Token: 0x1700B59B RID: 46491
+		// (get) Token: 0x0602944B RID: 169035 RVA: 0x005A1D10 File Offset: 0x0059FF10
 		public string State
 		{
 			get
@@ -63,20 +63,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026EE2 RID: 159458 RVA: 0x0055B0DB File Offset: 0x005592DB
+		// Token: 0x0602944C RID: 169036 RVA: 0x005A1D47 File Offset: 0x0059FF47
 		public Span<byte> GetStateBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x06026EE3 RID: 159459 RVA: 0x0055B0EA File Offset: 0x005592EA
+		// Token: 0x0602944D RID: 169037 RVA: 0x005A1D56 File Offset: 0x0059FF56
 		public byte[] GetStateArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x1700AC68 RID: 44136
-		// (get) Token: 0x06026EE4 RID: 159460 RVA: 0x0055B0F8 File Offset: 0x005592F8
+		// Token: 0x1700B59C RID: 46492
+		// (get) Token: 0x0602944E RID: 169038 RVA: 0x005A1D64 File Offset: 0x0059FF64
 		public bool IsLoop
 		{
 			get
@@ -86,8 +86,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AC69 RID: 44137
-		// (get) Token: 0x06026EE5 RID: 159461 RVA: 0x0055B138 File Offset: 0x00559338
+		// Token: 0x1700B59D RID: 46493
+		// (get) Token: 0x0602944F RID: 169039 RVA: 0x005A1DA4 File Offset: 0x0059FFA4
 		public IStartRotationConfig? StartRotationConfig
 		{
 			get
@@ -101,8 +101,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AC6A RID: 44138
-		// (get) Token: 0x06026EE6 RID: 159462 RVA: 0x0055B198 File Offset: 0x00559398
+		// Token: 0x1700B59E RID: 46494
+		// (get) Token: 0x06029450 RID: 169040 RVA: 0x005A1E04 File Offset: 0x005A0004
 		public string RotatePoint
 		{
 			get
@@ -116,19 +116,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026EE7 RID: 159463 RVA: 0x0055B1D0 File Offset: 0x005593D0
+		// Token: 0x06029451 RID: 169041 RVA: 0x005A1E3C File Offset: 0x005A003C
 		public Span<byte> GetRotatePointBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x06026EE8 RID: 159464 RVA: 0x0055B1E0 File Offset: 0x005593E0
+		// Token: 0x06029452 RID: 169042 RVA: 0x005A1E4C File Offset: 0x005A004C
 		public byte[] GetRotatePointArray()
 		{
 			return this.__p.__vector_as_array<byte>(10);
 		}
 
-		// Token: 0x06026EE9 RID: 159465 RVA: 0x0055B1F0 File Offset: 0x005593F0
+		// Token: 0x06029453 RID: 169043 RVA: 0x005A1E5C File Offset: 0x005A005C
 		public IRotationConfig? RotationConfig(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -139,8 +139,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IRotationConfig?(default(IRotationConfig).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700AC6B RID: 44139
-		// (get) Token: 0x06026EEA RID: 159466 RVA: 0x0055B254 File Offset: 0x00559454
+		// Token: 0x1700B59F RID: 46495
+		// (get) Token: 0x06029454 RID: 169044 RVA: 0x005A1EC0 File Offset: 0x005A00C0
 		public int RotationConfigLength
 		{
 			get
@@ -154,7 +154,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026EEB RID: 159467 RVA: 0x0055B280 File Offset: 0x00559480
+		// Token: 0x06029455 RID: 169045 RVA: 0x005A1EEC File Offset: 0x005A00EC
 		public IKeyRotatorConfig? KeyRotatorConfig(int j)
 		{
 			int num = this.__p.__offset(14);
@@ -165,8 +165,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IKeyRotatorConfig?(default(IKeyRotatorConfig).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700AC6C RID: 44140
-		// (get) Token: 0x06026EEC RID: 159468 RVA: 0x0055B2E4 File Offset: 0x005594E4
+		// Token: 0x1700B5A0 RID: 46496
+		// (get) Token: 0x06029456 RID: 169046 RVA: 0x005A1F50 File Offset: 0x005A0150
 		public int KeyRotatorConfigLength
 		{
 			get
@@ -180,24 +180,50 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AC6D RID: 44141
-		// (get) Token: 0x06026EED RID: 159469 RVA: 0x0055B310 File Offset: 0x00559510
-		public bool KeepLastRotation
+		// Token: 0x06029457 RID: 169047 RVA: 0x005A1F7C File Offset: 0x005A017C
+		public IAxisAngleMethodConfig? AxisAngleMethodConfig(int j)
+		{
+			int num = this.__p.__offset(16);
+			if (num == 0)
+			{
+				return null;
+			}
+			return new IAxisAngleMethodConfig?(default(IAxisAngleMethodConfig).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
+		}
+
+		// Token: 0x1700B5A1 RID: 46497
+		// (get) Token: 0x06029458 RID: 169048 RVA: 0x005A1FE0 File Offset: 0x005A01E0
+		public int AxisAngleMethodConfigLength
 		{
 			get
 			{
 				int num = this.__p.__offset(16);
-				return num != 0 && this.__p.bb.Get(num + this.__p.bb_pos) > 0;
+				if (num == 0)
+				{
+					return 0;
+				}
+				return this.__p.__vector_len(num);
 			}
 		}
 
-		// Token: 0x1700AC6E RID: 44142
-		// (get) Token: 0x06026EEE RID: 159470 RVA: 0x0055B350 File Offset: 0x00559550
-		public byte NullMask
+		// Token: 0x1700B5A2 RID: 46498
+		// (get) Token: 0x06029459 RID: 169049 RVA: 0x005A200C File Offset: 0x005A020C
+		public bool KeepLastRotation
 		{
 			get
 			{
 				int num = this.__p.__offset(18);
+				return num != 0 && this.__p.bb.Get(num + this.__p.bb_pos) > 0;
+			}
+		}
+
+		// Token: 0x1700B5A3 RID: 46499
+		// (get) Token: 0x0602945A RID: 169050 RVA: 0x005A204C File Offset: 0x005A024C
+		public byte NullMask
+		{
+			get
+			{
+				int num = this.__p.__offset(20);
 				if (num == 0)
 				{
 					return 0;
@@ -206,10 +232,11 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026EEF RID: 159471 RVA: 0x0055B390 File Offset: 0x00559590
-		public static Offset<IStateRotationConfig> CreateIStateRotationConfig(FlatBufferBuilder builder, StringOffset StateOffset = default(StringOffset), bool IsLoop = false, Offset<IStartRotationConfig> StartRotationConfigOffset = default(Offset<IStartRotationConfig>), StringOffset RotatePointOffset = default(StringOffset), VectorOffset RotationConfigOffset = default(VectorOffset), VectorOffset KeyRotatorConfigOffset = default(VectorOffset), bool KeepLastRotation = false, byte NullMask = 0)
+		// Token: 0x0602945B RID: 169051 RVA: 0x005A208C File Offset: 0x005A028C
+		public static Offset<IStateRotationConfig> CreateIStateRotationConfig(FlatBufferBuilder builder, StringOffset StateOffset = default(StringOffset), bool IsLoop = false, Offset<IStartRotationConfig> StartRotationConfigOffset = default(Offset<IStartRotationConfig>), StringOffset RotatePointOffset = default(StringOffset), VectorOffset RotationConfigOffset = default(VectorOffset), VectorOffset KeyRotatorConfigOffset = default(VectorOffset), VectorOffset AxisAngleMethodConfigOffset = default(VectorOffset), bool KeepLastRotation = false, byte NullMask = 0)
 		{
-			builder.StartTable(8);
+			builder.StartTable(9);
+			IStateRotationConfig.AddAxisAngleMethodConfig(builder, AxisAngleMethodConfigOffset);
 			IStateRotationConfig.AddKeyRotatorConfig(builder, KeyRotatorConfigOffset);
 			IStateRotationConfig.AddRotationConfig(builder, RotationConfigOffset);
 			IStateRotationConfig.AddRotatePoint(builder, RotatePointOffset);
@@ -221,43 +248,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IStateRotationConfig.EndIStateRotationConfig(builder);
 		}
 
-		// Token: 0x06026EF0 RID: 159472 RVA: 0x0055B3E7 File Offset: 0x005595E7
+		// Token: 0x0602945C RID: 169052 RVA: 0x005A20EC File Offset: 0x005A02EC
 		public static void StartIStateRotationConfig(FlatBufferBuilder builder)
 		{
-			builder.StartTable(8);
+			builder.StartTable(9);
 		}
 
-		// Token: 0x06026EF1 RID: 159473 RVA: 0x0055B3F0 File Offset: 0x005595F0
+		// Token: 0x0602945D RID: 169053 RVA: 0x005A20F6 File Offset: 0x005A02F6
 		public static void AddState(FlatBufferBuilder builder, StringOffset stateOffset)
 		{
 			builder.AddOffset(0, stateOffset.Value, 0);
 		}
 
-		// Token: 0x06026EF2 RID: 159474 RVA: 0x0055B400 File Offset: 0x00559600
+		// Token: 0x0602945E RID: 169054 RVA: 0x005A2106 File Offset: 0x005A0306
 		public static void AddIsLoop(FlatBufferBuilder builder, bool isLoop)
 		{
 			builder.AddBool(1, isLoop, false);
 		}
 
-		// Token: 0x06026EF3 RID: 159475 RVA: 0x0055B40B File Offset: 0x0055960B
+		// Token: 0x0602945F RID: 169055 RVA: 0x005A2111 File Offset: 0x005A0311
 		public static void AddStartRotationConfig(FlatBufferBuilder builder, Offset<IStartRotationConfig> startRotationConfigOffset)
 		{
 			builder.AddOffset(2, startRotationConfigOffset.Value, 0);
 		}
 
-		// Token: 0x06026EF4 RID: 159476 RVA: 0x0055B41B File Offset: 0x0055961B
+		// Token: 0x06029460 RID: 169056 RVA: 0x005A2121 File Offset: 0x005A0321
 		public static void AddRotatePoint(FlatBufferBuilder builder, StringOffset rotatePointOffset)
 		{
 			builder.AddOffset(3, rotatePointOffset.Value, 0);
 		}
 
-		// Token: 0x06026EF5 RID: 159477 RVA: 0x0055B42B File Offset: 0x0055962B
+		// Token: 0x06029461 RID: 169057 RVA: 0x005A2131 File Offset: 0x005A0331
 		public static void AddRotationConfig(FlatBufferBuilder builder, VectorOffset rotationConfigOffset)
 		{
 			builder.AddOffset(4, rotationConfigOffset.Value, 0);
 		}
 
-		// Token: 0x06026EF6 RID: 159478 RVA: 0x0055B43C File Offset: 0x0055963C
+		// Token: 0x06029462 RID: 169058 RVA: 0x005A2144 File Offset: 0x005A0344
 		public static VectorOffset CreateRotationConfigVector(FlatBufferBuilder builder, Offset<IRotationConfig>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -268,7 +295,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06026EF7 RID: 159479 RVA: 0x0055B47C File Offset: 0x0055967C
+		// Token: 0x06029463 RID: 169059 RVA: 0x005A2184 File Offset: 0x005A0384
 		public static VectorOffset CreateRotationConfigVectorBlock(FlatBufferBuilder builder, Offset<IRotationConfig>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -276,7 +303,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06026EF8 RID: 159480 RVA: 0x0055B496 File Offset: 0x00559696
+		// Token: 0x06029464 RID: 169060 RVA: 0x005A219E File Offset: 0x005A039E
 		public static VectorOffset CreateRotationConfigVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IRotationConfig>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -284,7 +311,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06026EF9 RID: 159481 RVA: 0x0055B4B4 File Offset: 0x005596B4
+		// Token: 0x06029465 RID: 169061 RVA: 0x005A21BC File Offset: 0x005A03BC
 		public static VectorOffset CreateRotationConfigVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -292,19 +319,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06026EFA RID: 159482 RVA: 0x0055B4CD File Offset: 0x005596CD
+		// Token: 0x06029466 RID: 169062 RVA: 0x005A21D5 File Offset: 0x005A03D5
 		public static void StartRotationConfigVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06026EFB RID: 159483 RVA: 0x0055B4D8 File Offset: 0x005596D8
+		// Token: 0x06029467 RID: 169063 RVA: 0x005A21E0 File Offset: 0x005A03E0
 		public static void AddKeyRotatorConfig(FlatBufferBuilder builder, VectorOffset keyRotatorConfigOffset)
 		{
 			builder.AddOffset(5, keyRotatorConfigOffset.Value, 0);
 		}
 
-		// Token: 0x06026EFC RID: 159484 RVA: 0x0055B4E8 File Offset: 0x005596E8
+		// Token: 0x06029468 RID: 169064 RVA: 0x005A21F0 File Offset: 0x005A03F0
 		public static VectorOffset CreateKeyRotatorConfigVector(FlatBufferBuilder builder, Offset<IKeyRotatorConfig>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -315,7 +342,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06026EFD RID: 159485 RVA: 0x0055B528 File Offset: 0x00559728
+		// Token: 0x06029469 RID: 169065 RVA: 0x005A2230 File Offset: 0x005A0430
 		public static VectorOffset CreateKeyRotatorConfigVectorBlock(FlatBufferBuilder builder, Offset<IKeyRotatorConfig>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -323,7 +350,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06026EFE RID: 159486 RVA: 0x0055B542 File Offset: 0x00559742
+		// Token: 0x0602946A RID: 169066 RVA: 0x005A224A File Offset: 0x005A044A
 		public static VectorOffset CreateKeyRotatorConfigVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IKeyRotatorConfig>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -331,7 +358,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06026EFF RID: 159487 RVA: 0x0055B560 File Offset: 0x00559760
+		// Token: 0x0602946B RID: 169067 RVA: 0x005A2268 File Offset: 0x005A0468
 		public static VectorOffset CreateKeyRotatorConfigVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -339,31 +366,78 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06026F00 RID: 159488 RVA: 0x0055B579 File Offset: 0x00559779
+		// Token: 0x0602946C RID: 169068 RVA: 0x005A2281 File Offset: 0x005A0481
 		public static void StartKeyRotatorConfigVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06026F01 RID: 159489 RVA: 0x0055B584 File Offset: 0x00559784
+		// Token: 0x0602946D RID: 169069 RVA: 0x005A228C File Offset: 0x005A048C
+		public static void AddAxisAngleMethodConfig(FlatBufferBuilder builder, VectorOffset axisAngleMethodConfigOffset)
+		{
+			builder.AddOffset(6, axisAngleMethodConfigOffset.Value, 0);
+		}
+
+		// Token: 0x0602946E RID: 169070 RVA: 0x005A229C File Offset: 0x005A049C
+		public static VectorOffset CreateAxisAngleMethodConfigVector(FlatBufferBuilder builder, Offset<IAxisAngleMethodConfig>[] data)
+		{
+			builder.StartVector(4, data.Length, 4);
+			for (int i = data.Length - 1; i >= 0; i--)
+			{
+				builder.AddOffset(data[i].Value);
+			}
+			return builder.EndVector();
+		}
+
+		// Token: 0x0602946F RID: 169071 RVA: 0x005A22DC File Offset: 0x005A04DC
+		public static VectorOffset CreateAxisAngleMethodConfigVectorBlock(FlatBufferBuilder builder, Offset<IAxisAngleMethodConfig>[] data)
+		{
+			builder.StartVector(4, data.Length, 4);
+			builder.Add<Offset<IAxisAngleMethodConfig>>(data);
+			return builder.EndVector();
+		}
+
+		// Token: 0x06029470 RID: 169072 RVA: 0x005A22F6 File Offset: 0x005A04F6
+		public static VectorOffset CreateAxisAngleMethodConfigVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IAxisAngleMethodConfig>> data)
+		{
+			builder.StartVector(4, data.Count, 4);
+			builder.Add<Offset<IAxisAngleMethodConfig>>(data);
+			return builder.EndVector();
+		}
+
+		// Token: 0x06029471 RID: 169073 RVA: 0x005A2314 File Offset: 0x005A0514
+		public static VectorOffset CreateAxisAngleMethodConfigVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
+		{
+			builder.StartVector(1, sizeInBytes, 1);
+			builder.Add<Offset<IAxisAngleMethodConfig>>(dataPtr, sizeInBytes);
+			return builder.EndVector();
+		}
+
+		// Token: 0x06029472 RID: 169074 RVA: 0x005A232D File Offset: 0x005A052D
+		public static void StartAxisAngleMethodConfigVector(FlatBufferBuilder builder, int numElems)
+		{
+			builder.StartVector(4, numElems, 4);
+		}
+
+		// Token: 0x06029473 RID: 169075 RVA: 0x005A2338 File Offset: 0x005A0538
 		public static void AddKeepLastRotation(FlatBufferBuilder builder, bool keepLastRotation)
 		{
-			builder.AddBool(6, keepLastRotation, false);
+			builder.AddBool(7, keepLastRotation, false);
 		}
 
-		// Token: 0x06026F02 RID: 159490 RVA: 0x0055B58F File Offset: 0x0055978F
+		// Token: 0x06029474 RID: 169076 RVA: 0x005A2343 File Offset: 0x005A0543
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
-			builder.AddByte(7, nullMask, 0);
+			builder.AddByte(8, nullMask, 0);
 		}
 
-		// Token: 0x06026F03 RID: 159491 RVA: 0x0055B59A File Offset: 0x0055979A
+		// Token: 0x06029475 RID: 169077 RVA: 0x005A234E File Offset: 0x005A054E
 		public static Offset<IStateRotationConfig> EndIStateRotationConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IStateRotationConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06026F04 RID: 159492 RVA: 0x0055B5A8 File Offset: 0x005597A8
+		// Token: 0x06029476 RID: 169078 RVA: 0x005A235C File Offset: 0x005A055C
 		public IStateRotationConfigT UnPack()
 		{
 			IStateRotationConfigT stateRotationConfigT = new IStateRotationConfigT();
@@ -371,7 +445,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return stateRotationConfigT;
 		}
 
-		// Token: 0x06026F05 RID: 159493 RVA: 0x0055B5C4 File Offset: 0x005597C4
+		// Token: 0x06029477 RID: 169079 RVA: 0x005A2378 File Offset: 0x005A0578
 		public void UnPackTo(IStateRotationConfigT _o)
 		{
 			_o.State = this.State;
@@ -388,11 +462,16 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			{
 				_o.KeyRotatorConfig.Add((this.KeyRotatorConfig(j) != null) ? this.KeyRotatorConfig(j).Value.UnPack() : null);
 			}
+			_o.AxisAngleMethodConfig = new List<IAxisAngleMethodConfigT>();
+			for (int k = 0; k < this.AxisAngleMethodConfigLength; k++)
+			{
+				_o.AxisAngleMethodConfig.Add((this.AxisAngleMethodConfig(k) != null) ? this.AxisAngleMethodConfig(k).Value.UnPack() : null);
+			}
 			_o.KeepLastRotation = this.KeepLastRotation;
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06026F06 RID: 159494 RVA: 0x0055B6EC File Offset: 0x005598EC
+		// Token: 0x06029478 RID: 169080 RVA: 0x005A24FC File Offset: 0x005A06FC
 		public static Offset<IStateRotationConfig> Pack(FlatBufferBuilder builder, IStateRotationConfigT _o)
 		{
 			if (_o == null)
@@ -422,10 +501,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 				}
 				keyRotatorConfigOffset = IStateRotationConfig.CreateKeyRotatorConfigVector(builder, array2);
 			}
-			return IStateRotationConfig.CreateIStateRotationConfig(builder, stateOffset, _o.IsLoop, startRotationConfigOffset, rotatePointOffset, rotationConfigOffset, keyRotatorConfigOffset, _o.KeepLastRotation, _o.NullMask);
+			VectorOffset axisAngleMethodConfigOffset = default(VectorOffset);
+			if (_o.AxisAngleMethodConfig != null)
+			{
+				Offset<IAxisAngleMethodConfig>[] array3 = new Offset<IAxisAngleMethodConfig>[_o.AxisAngleMethodConfig.Count];
+				for (int k = 0; k < array3.Length; k++)
+				{
+					array3[k] = IAxisAngleMethodConfig.Pack(builder, _o.AxisAngleMethodConfig[k]);
+				}
+				axisAngleMethodConfigOffset = IStateRotationConfig.CreateAxisAngleMethodConfigVector(builder, array3);
+			}
+			return IStateRotationConfig.CreateIStateRotationConfig(builder, stateOffset, _o.IsLoop, startRotationConfigOffset, rotatePointOffset, rotationConfigOffset, keyRotatorConfigOffset, axisAngleMethodConfigOffset, _o.KeepLastRotation, _o.NullMask);
 		}
 
-		// Token: 0x0400EFD3 RID: 61395
+		// Token: 0x0400FCC8 RID: 64712
 		private Table __p;
 	}
 }

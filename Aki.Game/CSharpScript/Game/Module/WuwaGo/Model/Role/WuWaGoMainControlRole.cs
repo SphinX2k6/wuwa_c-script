@@ -4,17 +4,17 @@ using Aki.TDConfigMgr.Component;
 
 namespace CSharpScript.Game.Module.WuwaGo.Model.Role
 {
-	// Token: 0x0200473C RID: 18236
+	// Token: 0x0200366D RID: 13933
 	public class WuWaGoMainControlRole : WuWaGoRole
 	{
-		// Token: 0x0602FA9A RID: 195226 RVA: 0x00B0C250 File Offset: 0x00B0A450
+		// Token: 0x06024264 RID: 148068 RVA: 0x00A3C21C File Offset: 0x00A3A41C
 		[NullableContext(1)]
 		public WuWaGoMainControlRole(Vector coordinate, Rotator rotator) : base(EWuWaGoRoleType.AircraftSoldiers, coordinate, rotator)
 		{
 		}
 
-		// Token: 0x17007714 RID: 30484
-		// (get) Token: 0x0602FA9B RID: 195227 RVA: 0x00B0C25B File Offset: 0x00B0A45B
+		// Token: 0x170049D0 RID: 18896
+		// (get) Token: 0x06024265 RID: 148069 RVA: 0x00A3C227 File Offset: 0x00A3A427
 		public override bool Actionable
 		{
 			get
@@ -23,8 +23,8 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.Role
 			}
 		}
 
-		// Token: 0x17007715 RID: 30485
-		// (get) Token: 0x0602FA9C RID: 195228 RVA: 0x00B0C25E File Offset: 0x00B0A45E
+		// Token: 0x170049D1 RID: 18897
+		// (get) Token: 0x06024266 RID: 148070 RVA: 0x00A3C22A File Offset: 0x00A3A42A
 		public override bool MoveAbility
 		{
 			get
@@ -33,10 +33,10 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.Role
 			}
 		}
 
-		// Token: 0x04019BC7 RID: 105415
+		// Token: 0x04014277 RID: 82551
 		public bool IsAcceptingInput;
 
-		// Token: 0x04019BC8 RID: 105416
+		// Token: 0x04014278 RID: 82552
 		public int DeathCount;
 	}
 }

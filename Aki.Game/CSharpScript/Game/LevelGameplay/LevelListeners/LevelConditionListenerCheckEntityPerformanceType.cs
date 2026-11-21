@@ -5,10 +5,10 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 {
-	// Token: 0x02006ADD RID: 27357
+	// Token: 0x02005C55 RID: 23637
 	public class LevelConditionListenerCheckEntityPerformanceType : LevelListenerBase
 	{
-		// Token: 0x06043F6F RID: 278383 RVA: 0x010ABB54 File Offset: 0x010A9D54
+		// Token: 0x0603A0C1 RID: 237761 RVA: 0x010553CC File Offset: 0x010535CC
 		private void PerformanceTypeChangeEventHandle(int entityId, int newState)
 		{
 			TListenerCallbackFunc callback = this.Callback;
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			}), Array.Empty<object>());
 		}
 
-		// Token: 0x06043F70 RID: 278384 RVA: 0x010ABB90 File Offset: 0x010A9D90
+		// Token: 0x0603A0C2 RID: 237762 RVA: 0x01055408 File Offset: 0x01053608
 		[NullableContext(1)]
 		protected override void OnListen(object listeningInfo, TListenerCallbackFunc callback, [Nullable(2)] GeneralContext context = null, params object[] otherParams)
 		{
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			}, 60000, false, true);
 		}
 
-		// Token: 0x06043F71 RID: 278385 RVA: 0x010ABBEC File Offset: 0x010A9DEC
+		// Token: 0x0603A0C3 RID: 237763 RVA: 0x01055464 File Offset: 0x01053664
 		protected override void OnUnListen()
 		{
 			bool flag = (this.EntityId ?? 0) == 0;
@@ -72,10 +72,10 @@ namespace CSharpScript.Game.LevelGamePlay.LevelListeners
 			}
 		}
 
-		// Token: 0x04023860 RID: 145504
+		// Token: 0x0401EB02 RID: 125698
 		private int? EntityId;
 
-		// Token: 0x04023861 RID: 145505
+		// Token: 0x0401EB03 RID: 125699
 		[Nullable(2)]
 		private WaitEntityTask WaitEntityTask;
 	}

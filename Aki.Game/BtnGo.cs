@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Common;
@@ -9,12 +8,12 @@ using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001EC9 RID: 7881
+// Token: 0x0200138B RID: 5003
 [NullableContext(1)]
 [Nullable(0)]
 public class BtnGo : UiPanelBase
 {
-	// Token: 0x0600F262 RID: 62050 RVA: 0x003A68DC File Offset: 0x003A4ADC
+	// Token: 0x0600C681 RID: 50817 RVA: 0x003B23DC File Offset: 0x003B05DC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -43,7 +42,7 @@ public class BtnGo : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600F263 RID: 62051 RVA: 0x003A6A08 File Offset: 0x003A4C08
+	// Token: 0x0600C682 RID: 50818 RVA: 0x003B2508 File Offset: 0x003B0708
 	public void SetPnlSelectLv(HonamiStoryLevelInfoView panel)
 	{
 		this.PnlSelectLv = panel;
@@ -56,14 +55,14 @@ public class BtnGo : UiPanelBase
 		this.CostItemId = activityData.OutCoinItemId;
 	}
 
-	// Token: 0x0600F264 RID: 62052 RVA: 0x003A6A4D File Offset: 0x003A4C4D
+	// Token: 0x0600C683 RID: 50819 RVA: 0x003B254D File Offset: 0x003B074D
 	public void SetCostData(Dictionary<int, int> itemCountMap)
 	{
 		this.ItemCountMap = itemCountMap;
 		this.RefreshView();
 	}
 
-	// Token: 0x0600F265 RID: 62053 RVA: 0x003A6A5C File Offset: 0x003A4C5C
+	// Token: 0x0600C684 RID: 50820 RVA: 0x003B255C File Offset: 0x003B075C
 	public void RefreshView()
 	{
 		UUITexture texture = base.GetTexture(3);
@@ -92,7 +91,7 @@ public class BtnGo : UiPanelBase
 		uuiitem.SetChangeColor(bUseChangeColor, fcolor);
 	}
 
-	// Token: 0x0600F266 RID: 62054 RVA: 0x003A6B3C File Offset: 0x003A4D3C
+	// Token: 0x0600C685 RID: 50821 RVA: 0x003B263C File Offset: 0x003B083C
 	private void SetLoadingPerform(bool isTower)
 	{
 		if (isTower)
@@ -120,14 +119,14 @@ public class BtnGo : UiPanelBase
 		HonamiStoryController.Instance.SetHonamiStoryLoadingInfoByBtId(mainBTId);
 	}
 
-	// Token: 0x0600F267 RID: 62055 RVA: 0x003A6BBC File Offset: 0x003A4DBC
+	// Token: 0x0600C686 RID: 50822 RVA: 0x003B26BC File Offset: 0x003B08BC
 	private void OnGoBtnClick()
 	{
 		int[] allRoleIdList = HonamiStoryModel.Instance.GetAllRoleIdList();
 		bool flag;
 		if (allRoleIdList != null && allRoleIdList.Length != 0)
 		{
-			flag = allRoleIdList.All((int id) => id == 0);
+			flag = Array.TrueForAll<int>(allRoleIdList, (int id) => id == 0);
 		}
 		else
 		{
@@ -168,31 +167,31 @@ public class BtnGo : UiPanelBase
 		HonamiStoryController.Instance.SendHonamiStoryItemEnterRequest(flag2, this.PnlSelectLv.GetCurDangerLv, isBuy);
 	}
 
-	// Token: 0x0600F268 RID: 62056 RVA: 0x003A6CFA File Offset: 0x003A4EFA
+	// Token: 0x0600C687 RID: 50823 RVA: 0x003B27FA File Offset: 0x003B09FA
 	public void SetRedDotShow(bool isShow)
 	{
 		base.GetItem(2).SetUIActive(isShow);
 	}
 
-	// Token: 0x0600F269 RID: 62057 RVA: 0x003A6D09 File Offset: 0x003A4F09
+	// Token: 0x0600C688 RID: 50824 RVA: 0x003B2809 File Offset: 0x003B0A09
 	private void OnTeamBtnClick()
 	{
 		HonamiStoryController.Instance.OpenHonamiStoryBag();
 	}
 
-	// Token: 0x04007041 RID: 28737
+	// Token: 0x04007122 RID: 28962
 	private int NeedCount;
 
-	// Token: 0x04007042 RID: 28738
+	// Token: 0x04007123 RID: 28963
 	private int CostItemId;
 
-	// Token: 0x04007043 RID: 28739
+	// Token: 0x04007124 RID: 28964
 	[Nullable(2)]
 	private HonamiStoryLevelInfoView PnlSelectLv;
 
-	// Token: 0x04007044 RID: 28740
+	// Token: 0x04007125 RID: 28965
 	private bool IsFreeSelect;
 
-	// Token: 0x04007045 RID: 28741
+	// Token: 0x04007126 RID: 28966
 	private Dictionary<int, int> ItemCountMap = new Dictionary<int, int>();
 }

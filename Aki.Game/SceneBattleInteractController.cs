@@ -3,13 +3,13 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Core.Framework;
 using CSharpScript.Game.Module;
 
-// Token: 0x02002941 RID: 10561
+// Token: 0x02001EBC RID: 7868
 [NullableContext(1)]
 [Nullable(0)]
 [TickController(2)]
 public class SceneBattleInteractController : ControllerBase
 {
-	// Token: 0x06015D12 RID: 89362 RVA: 0x005804F4 File Offset: 0x0057E6F4
+	// Token: 0x06013716 RID: 79638 RVA: 0x005AB4F4 File Offset: 0x005A96F4
 	protected override void OnTick(float delta)
 	{
 		if (!SceneBattleInteractModel.Instance.Open)
@@ -22,8 +22,8 @@ public class SceneBattleInteractController : ControllerBase
 		}
 	}
 
-	// Token: 0x17001D47 RID: 7495
-	// (get) Token: 0x06015D13 RID: 89363 RVA: 0x00580568 File Offset: 0x0057E768
+	// Token: 0x17001DA0 RID: 7584
+	// (get) Token: 0x06013717 RID: 79639 RVA: 0x005AB568 File Offset: 0x005A9768
 	public static SceneBattleInteractController Instance
 	{
 		get
@@ -32,7 +32,7 @@ public class SceneBattleInteractController : ControllerBase
 		}
 	}
 
-	// Token: 0x06015D14 RID: 89364 RVA: 0x0058056F File Offset: 0x0057E76F
+	// Token: 0x06013718 RID: 79640 RVA: 0x005AB56F File Offset: 0x005A976F
 	public static SceneBattleInteractController GetOrCreateInstance()
 	{
 		if (SceneBattleInteractController._Instance == null)
@@ -42,7 +42,7 @@ public class SceneBattleInteractController : ControllerBase
 		return SceneBattleInteractController._Instance;
 	}
 
-	// Token: 0x06015D15 RID: 89365 RVA: 0x00580583 File Offset: 0x0057E783
+	// Token: 0x06013719 RID: 79641 RVA: 0x005AB583 File Offset: 0x005A9783
 	public static bool CreateInstance()
 	{
 		if (SceneBattleInteractController._Instance != null)
@@ -53,24 +53,24 @@ public class SceneBattleInteractController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06015D16 RID: 89366 RVA: 0x00580599 File Offset: 0x0057E799
+	// Token: 0x0601371A RID: 79642 RVA: 0x005AB599 File Offset: 0x005A9799
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06015D17 RID: 89367 RVA: 0x0058059B File Offset: 0x0057E79B
+	// Token: 0x0601371B RID: 79643 RVA: 0x005AB59B File Offset: 0x005A979B
 	public static void ResetStaticDefaultValue()
 	{
 		SceneBattleInteractController._Instance = null;
 	}
 
-	// Token: 0x06015D18 RID: 89368 RVA: 0x005805A3 File Offset: 0x0057E7A3
+	// Token: 0x0601371C RID: 79644 RVA: 0x005AB5A3 File Offset: 0x005A97A3
 	static SceneBattleInteractController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(SceneBattleInteractController.CreateStaticDefaultValue), new Action(SceneBattleInteractController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400A263 RID: 41571
+	// Token: 0x0400A64D RID: 42573
 	[Nullable(2)]
 	private static SceneBattleInteractController _Instance;
 }

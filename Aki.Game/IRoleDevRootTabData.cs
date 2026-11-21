@@ -1,27 +1,27 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020027DD RID: 10205
+// Token: 0x02001D58 RID: 7512
 [NullableContext(1)]
 public interface IRoleDevRootTabData
 {
-	// Token: 0x17001B5A RID: 7002
-	// (get) Token: 0x06014F50 RID: 85840
-	// (set) Token: 0x06014F51 RID: 85841
+	// Token: 0x17001BB2 RID: 7090
+	// (get) Token: 0x06012950 RID: 76112
+	// (set) Token: 0x06012951 RID: 76113
 	ERoleDevTabType TabIndex { get; set; }
 
-	// Token: 0x17001B5B RID: 7003
-	// (get) Token: 0x06014F52 RID: 85842
-	// (set) Token: 0x06014F53 RID: 85843
+	// Token: 0x17001BB3 RID: 7091
+	// (get) Token: 0x06012952 RID: 76114
+	// (set) Token: 0x06012953 RID: 76115
 	string TabName { get; set; }
 
-	// Token: 0x17001B5C RID: 7004
-	// (get) Token: 0x06014F54 RID: 85844
-	// (set) Token: 0x06014F55 RID: 85845
+	// Token: 0x17001BB4 RID: 7092
+	// (get) Token: 0x06012954 RID: 76116
+	// (set) Token: 0x06012955 RID: 76117
 	bool TabIsUpgrade { get; set; }
 
-	// Token: 0x17001B5D RID: 7005
-	// (get) Token: 0x06014F56 RID: 85846
-	// (set) Token: 0x06014F57 RID: 85847
+	// Token: 0x17001BB5 RID: 7093
+	// (get) Token: 0x06012956 RID: 76118
+	// (set) Token: 0x06012957 RID: 76119
 	bool TabIsFinish { get; set; }
 }

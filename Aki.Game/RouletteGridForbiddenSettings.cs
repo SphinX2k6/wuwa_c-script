@@ -3,25 +3,25 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x0200292E RID: 10542
+// Token: 0x02001EA9 RID: 7849
 [NullableContext(2)]
 [Nullable(0)]
 public class RouletteGridForbiddenSettings : IStaticVariableResetter
 {
-	// Token: 0x06015C10 RID: 89104 RVA: 0x0057CBF2 File Offset: 0x0057ADF2
+	// Token: 0x06013615 RID: 79381 RVA: 0x005A7C32 File Offset: 0x005A5E32
 	static RouletteGridForbiddenSettings()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(RouletteGridForbiddenSettings.CreateStaticDefaultValue), new Action(RouletteGridForbiddenSettings.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06015C11 RID: 89105 RVA: 0x0057CC14 File Offset: 0x0057AE14
+	// Token: 0x06013616 RID: 79382 RVA: 0x005A7C54 File Offset: 0x005A5E54
 	public static bool CheckForbiddenState(ERouletteGridType gridType, int id)
 	{
 		Func<bool> func;
 		return gridType == ERouletteGridType.Explore && RouletteGridForbiddenSettings.ExploreGridForbiddenCheckMap.TryGetValue((ERouletteExploreId)id, out func) && func();
 	}
 
-	// Token: 0x06015C12 RID: 89106 RVA: 0x0057CC3C File Offset: 0x0057AE3C
+	// Token: 0x06013617 RID: 79383 RVA: 0x005A7C7C File Offset: 0x005A5E7C
 	public static void TipsForbiddenState(ERouletteGridType gridType, int id)
 	{
 		Action action;
@@ -31,7 +31,7 @@ public class RouletteGridForbiddenSettings : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06015C13 RID: 89107 RVA: 0x0057CC64 File Offset: 0x0057AE64
+	// Token: 0x06013618 RID: 79384 RVA: 0x005A7CA4 File Offset: 0x005A5EA4
 	public static bool CheckLockState(ERouletteGridType gridType, int id)
 	{
 		if (gridType != ERouletteGridType.Explore)
@@ -51,7 +51,7 @@ public class RouletteGridForbiddenSettings : IStaticVariableResetter
 		return false;
 	}
 
-	// Token: 0x06015C14 RID: 89108 RVA: 0x0057CCAC File Offset: 0x0057AEAC
+	// Token: 0x06013619 RID: 79385 RVA: 0x005A7CEC File Offset: 0x005A5EEC
 	public static void TipsLockState(ERouletteGridType gridType, int id)
 	{
 		if (gridType == ERouletteGridType.Explore)
@@ -68,7 +68,7 @@ public class RouletteGridForbiddenSettings : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06015C15 RID: 89109 RVA: 0x0057CCF8 File Offset: 0x0057AEF8
+	// Token: 0x0601361A RID: 79386 RVA: 0x005A7D38 File Offset: 0x005A5F38
 	public static EGridBehavior? CheckGridSpecialState(ERouletteViewType rouletteViewType, ERouletteGridType gridType, int id)
 	{
 		switch (gridType)
@@ -103,7 +103,7 @@ public class RouletteGridForbiddenSettings : IStaticVariableResetter
 		return null;
 	}
 
-	// Token: 0x06015C16 RID: 89110 RVA: 0x0057CD80 File Offset: 0x0057AF80
+	// Token: 0x0601361B RID: 79387 RVA: 0x005A7DC0 File Offset: 0x005A5FC0
 	public static void CreateStaticDefaultValue()
 	{
 		RouletteGridForbiddenSettings.IsBanHook = delegate()
@@ -167,7 +167,7 @@ public class RouletteGridForbiddenSettings : IStaticVariableResetter
 		};
 	}
 
-	// Token: 0x06015C17 RID: 89111 RVA: 0x0057CE71 File Offset: 0x0057B071
+	// Token: 0x0601361C RID: 79388 RVA: 0x005A7EB1 File Offset: 0x005A60B1
 	public static void ResetStaticDefaultValue()
 	{
 		RouletteGridForbiddenSettings.IsBanHook = null;
@@ -178,19 +178,19 @@ public class RouletteGridForbiddenSettings : IStaticVariableResetter
 		RouletteGridForbiddenSettings.ExploreGridForbiddenTipsMap = null;
 	}
 
-	// Token: 0x0400A209 RID: 41481
+	// Token: 0x0400A5F4 RID: 42484
 	private static Func<bool> IsBanHook;
 
-	// Token: 0x0400A20A RID: 41482
+	// Token: 0x0400A5F5 RID: 42485
 	private static Func<bool> IsBanFloaterAim;
 
-	// Token: 0x0400A20B RID: 41483
+	// Token: 0x0400A5F6 RID: 42486
 	private static Func<bool> IsBanMotorcyclePark;
 
-	// Token: 0x0400A20C RID: 41484
+	// Token: 0x0400A5F7 RID: 42487
 	private static Action MotorcycleParkBanTips;
 
-	// Token: 0x0400A20D RID: 41485
+	// Token: 0x0400A5F8 RID: 42488
 	[Nullable(new byte[]
 	{
 		2,
@@ -198,7 +198,7 @@ public class RouletteGridForbiddenSettings : IStaticVariableResetter
 	})]
 	private static Dictionary<ERouletteExploreId, Func<bool>> ExploreGridForbiddenCheckMap;
 
-	// Token: 0x0400A20E RID: 41486
+	// Token: 0x0400A5F9 RID: 42489
 	[Nullable(new byte[]
 	{
 		2,

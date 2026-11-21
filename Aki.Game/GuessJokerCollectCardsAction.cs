@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 
-// Token: 0x0200101E RID: 4126
+// Token: 0x020004D2 RID: 1234
 public class GuessJokerCollectCardsAction : GuessJokerActionBase
 {
-	// Token: 0x06006A07 RID: 27143 RVA: 0x0015410D File Offset: 0x0015230D
+	// Token: 0x06003D9C RID: 15772 RVA: 0x0015CA35 File Offset: 0x0015AC35
 	public GuessJokerCollectCardsAction(EGuessJokerPlayerType playerType, ECardPositionType targetPosition)
 	{
 		this.PlayerType = playerType;
 		this.TargetPosition = targetPosition;
 	}
 
-	// Token: 0x06006A08 RID: 27144 RVA: 0x00154124 File Offset: 0x00152324
+	// Token: 0x06003D9D RID: 15773 RVA: 0x0015CA4C File Offset: 0x0015AC4C
 	protected override void OnStart()
 	{
 		GuessJokerGamePlayView gamePlayView = GuessJokerGamePlayModel.Instance.GetGamePlayView();
@@ -66,9 +66,9 @@ public class GuessJokerCollectCardsAction : GuessJokerActionBase
 		});
 	}
 
-	// Token: 0x040030DB RID: 12507
+	// Token: 0x04003174 RID: 12660
 	private readonly EGuessJokerPlayerType PlayerType;
 
-	// Token: 0x040030DC RID: 12508
+	// Token: 0x04003175 RID: 12661
 	private readonly ECardPositionType TargetPosition;
 }

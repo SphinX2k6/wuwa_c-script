@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006F67 RID: 28519
+	// Token: 0x0200772A RID: 30506
 	public class ISendBattleEventsForMonsterSummonConfigT
 	{
-		// Token: 0x1700D3E3 RID: 54243
-		// (get) Token: 0x06032633 RID: 206387 RVA: 0x006CD6BA File Offset: 0x006CB8BA
-		// (set) Token: 0x06032634 RID: 206388 RVA: 0x006CD6C2 File Offset: 0x006CB8C2
+		// Token: 0x1700DFAF RID: 57263
+		// (get) Token: 0x06035871 RID: 219249 RVA: 0x0072CEFA File Offset: 0x0072B0FA
+		// (set) Token: 0x06035872 RID: 219250 RVA: 0x0072CF02 File Offset: 0x0072B102
 		public int TagConfigId { get; set; }
 
-		// Token: 0x1700D3E4 RID: 54244
-		// (get) Token: 0x06032635 RID: 206389 RVA: 0x006CD6CB File Offset: 0x006CB8CB
-		// (set) Token: 0x06032636 RID: 206390 RVA: 0x006CD6D3 File Offset: 0x006CB8D3
+		// Token: 0x1700DFB0 RID: 57264
+		// (get) Token: 0x06035873 RID: 219251 RVA: 0x0072CF0B File Offset: 0x0072B10B
+		// (set) Token: 0x06035874 RID: 219252 RVA: 0x0072CF13 File Offset: 0x0072B113
 		public int DelayTime { get; set; }
 
-		// Token: 0x1700D3E5 RID: 54245
-		// (get) Token: 0x06032637 RID: 206391 RVA: 0x006CD6DC File Offset: 0x006CB8DC
-		// (set) Token: 0x06032638 RID: 206392 RVA: 0x006CD6E4 File Offset: 0x006CB8E4
+		// Token: 0x1700DFB1 RID: 57265
+		// (get) Token: 0x06035875 RID: 219253 RVA: 0x0072CF1C File Offset: 0x0072B11C
+		// (set) Token: 0x06035876 RID: 219254 RVA: 0x0072CF24 File Offset: 0x0072B124
 		public byte NullMask { get; set; }
 
-		// Token: 0x06032639 RID: 206393 RVA: 0x006CD6ED File Offset: 0x006CB8ED
+		// Token: 0x06035877 RID: 219255 RVA: 0x0072CF2D File Offset: 0x0072B12D
 		public ISendBattleEventsForMonsterSummonConfigT()
 		{
 			this.TagConfigId = 0;

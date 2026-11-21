@@ -4,10 +4,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001604 RID: 5636
+// Token: 0x02000ABC RID: 2748
 public class WheelTowerModeSettlementTitleItem : UiPanelBase
 {
-	// Token: 0x06009ED9 RID: 40665 RVA: 0x0022B888 File Offset: 0x00229A88
+	// Token: 0x060072B7 RID: 29367 RVA: 0x00235688 File Offset: 0x00233888
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -25,7 +25,7 @@ public class WheelTowerModeSettlementTitleItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009EDA RID: 40666 RVA: 0x0022B934 File Offset: 0x00229B34
+	// Token: 0x060072B8 RID: 29368 RVA: 0x00235734 File Offset: 0x00233934
 	public void Refresh(bool isEndless)
 	{
 		base.GetTexture(0).SetUIActive(!isEndless);

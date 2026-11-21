@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003C34 RID: 15412
+	// Token: 0x02004043 RID: 16451
 	public struct IRelativeTipsActorTransformResult : IFlatbufferObject
 	{
-		// Token: 0x17006A1C RID: 27164
-		// (get) Token: 0x06015467 RID: 87143 RVA: 0x003145E6 File Offset: 0x003127E6
+		// Token: 0x17006FCD RID: 28621
+		// (get) Token: 0x0601697B RID: 92539 RVA: 0x0033B486 File Offset: 0x00339686
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x06015468 RID: 87144 RVA: 0x003145F3 File Offset: 0x003127F3
+		// Token: 0x0601697C RID: 92540 RVA: 0x0033B493 File Offset: 0x00339693
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06015469 RID: 87145 RVA: 0x003145FC File Offset: 0x003127FC
+		// Token: 0x0601697D RID: 92541 RVA: 0x0033B49C File Offset: 0x0033969C
 		public static IRelativeTipsActorTransformResult GetRootAsIRelativeTipsActorTransformResult(ByteBuffer _bb)
 		{
 			return IRelativeTipsActorTransformResult.GetRootAsIRelativeTipsActorTransformResult(_bb, default(IRelativeTipsActorTransformResult));
 		}
 
-		// Token: 0x0601546A RID: 87146 RVA: 0x00314618 File Offset: 0x00312818
+		// Token: 0x0601697E RID: 92542 RVA: 0x0033B4B8 File Offset: 0x003396B8
 		public static IRelativeTipsActorTransformResult GetRootAsIRelativeTipsActorTransformResult(ByteBuffer _bb, IRelativeTipsActorTransformResult obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601546B RID: 87147 RVA: 0x00314635 File Offset: 0x00312835
+		// Token: 0x0601697F RID: 92543 RVA: 0x0033B4D5 File Offset: 0x003396D5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601546C RID: 87148 RVA: 0x00314644 File Offset: 0x00312844
+		// Token: 0x06016980 RID: 92544 RVA: 0x0033B4E4 File Offset: 0x003396E4
 		public IRelativeTipsActorTransformResult __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006A1D RID: 27165
-		// (get) Token: 0x0601546D RID: 87149 RVA: 0x00314654 File Offset: 0x00312854
+		// Token: 0x17006FCE RID: 28622
+		// (get) Token: 0x06016981 RID: 92545 RVA: 0x0033B4F4 File Offset: 0x003396F4
 		public bool IsSuccess
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x17006A1E RID: 27166
-		// (get) Token: 0x0601546E RID: 87150 RVA: 0x00314694 File Offset: 0x00312894
+		// Token: 0x17006FCF RID: 28623
+		// (get) Token: 0x06016982 RID: 92546 RVA: 0x0033B534 File Offset: 0x00339734
 		public string Reason
 		{
 			get
@@ -73,20 +73,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x0601546F RID: 87151 RVA: 0x003146CB File Offset: 0x003128CB
+		// Token: 0x06016983 RID: 92547 RVA: 0x0033B56B File Offset: 0x0033976B
 		public Span<byte> GetReasonBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06015470 RID: 87152 RVA: 0x003146DA File Offset: 0x003128DA
+		// Token: 0x06016984 RID: 92548 RVA: 0x0033B57A File Offset: 0x0033977A
 		public byte[] GetReasonArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x17006A1F RID: 27167
-		// (get) Token: 0x06015471 RID: 87153 RVA: 0x003146E8 File Offset: 0x003128E8
+		// Token: 0x17006FD0 RID: 28624
+		// (get) Token: 0x06016985 RID: 92549 RVA: 0x0033B588 File Offset: 0x00339788
 		public ETipsActorTransformType Type
 		{
 			get
@@ -100,8 +100,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x17006A20 RID: 27168
-		// (get) Token: 0x06015472 RID: 87154 RVA: 0x00314724 File Offset: 0x00312924
+		// Token: 0x17006FD1 RID: 28625
+		// (get) Token: 0x06016986 RID: 92550 RVA: 0x0033B5C4 File Offset: 0x003397C4
 		public IShapeTransform? TransformWorld
 		{
 			get
@@ -115,8 +115,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x17006A21 RID: 27169
-		// (get) Token: 0x06015473 RID: 87155 RVA: 0x00314784 File Offset: 0x00312984
+		// Token: 0x17006FD2 RID: 28626
+		// (get) Token: 0x06016987 RID: 92551 RVA: 0x0033B624 File Offset: 0x00339824
 		public IHollowTipsActorComponent? HollowTipsActorComponent
 		{
 			get
@@ -130,8 +130,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x17006A22 RID: 27170
-		// (get) Token: 0x06015474 RID: 87156 RVA: 0x003147E4 File Offset: 0x003129E4
+		// Token: 0x17006FD3 RID: 28627
+		// (get) Token: 0x06016988 RID: 92552 RVA: 0x0033B684 File Offset: 0x00339884
 		public IShapeTransform? TransformEntity
 		{
 			get
@@ -145,7 +145,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x06015475 RID: 87157 RVA: 0x00314842 File Offset: 0x00312A42
+		// Token: 0x06016989 RID: 92553 RVA: 0x0033B6E2 File Offset: 0x003398E2
 		public static Offset<IRelativeTipsActorTransformResult> CreateIRelativeTipsActorTransformResult(FlatBufferBuilder builder, bool IsSuccess = false, StringOffset ReasonOffset = default(StringOffset), ETipsActorTransformType Type = ETipsActorTransformType.Absolute, Offset<IShapeTransform> TransformWorldOffset = default(Offset<IShapeTransform>), Offset<IHollowTipsActorComponent> HollowTipsActorComponentOffset = default(Offset<IHollowTipsActorComponent>), Offset<IShapeTransform> TransformEntityOffset = default(Offset<IShapeTransform>))
 		{
 			builder.StartTable(6);
@@ -158,55 +158,55 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return IRelativeTipsActorTransformResult.EndIRelativeTipsActorTransformResult(builder);
 		}
 
-		// Token: 0x06015476 RID: 87158 RVA: 0x0031487E File Offset: 0x00312A7E
+		// Token: 0x0601698A RID: 92554 RVA: 0x0033B71E File Offset: 0x0033991E
 		public static void StartIRelativeTipsActorTransformResult(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x06015477 RID: 87159 RVA: 0x00314887 File Offset: 0x00312A87
+		// Token: 0x0601698B RID: 92555 RVA: 0x0033B727 File Offset: 0x00339927
 		public static void AddIsSuccess(FlatBufferBuilder builder, bool isSuccess)
 		{
 			builder.AddBool(0, isSuccess, false);
 		}
 
-		// Token: 0x06015478 RID: 87160 RVA: 0x00314892 File Offset: 0x00312A92
+		// Token: 0x0601698C RID: 92556 RVA: 0x0033B732 File Offset: 0x00339932
 		public static void AddReason(FlatBufferBuilder builder, StringOffset reasonOffset)
 		{
 			builder.AddOffset(1, reasonOffset.Value, 0);
 		}
 
-		// Token: 0x06015479 RID: 87161 RVA: 0x003148A2 File Offset: 0x00312AA2
+		// Token: 0x0601698D RID: 92557 RVA: 0x0033B742 File Offset: 0x00339942
 		public static void AddType(FlatBufferBuilder builder, ETipsActorTransformType type)
 		{
 			builder.AddByte(2, (byte)type, 0);
 		}
 
-		// Token: 0x0601547A RID: 87162 RVA: 0x003148AD File Offset: 0x00312AAD
+		// Token: 0x0601698E RID: 92558 RVA: 0x0033B74D File Offset: 0x0033994D
 		public static void AddTransformWorld(FlatBufferBuilder builder, Offset<IShapeTransform> transformWorldOffset)
 		{
 			builder.AddOffset(3, transformWorldOffset.Value, 0);
 		}
 
-		// Token: 0x0601547B RID: 87163 RVA: 0x003148BD File Offset: 0x00312ABD
+		// Token: 0x0601698F RID: 92559 RVA: 0x0033B75D File Offset: 0x0033995D
 		public static void AddHollowTipsActorComponent(FlatBufferBuilder builder, Offset<IHollowTipsActorComponent> hollowTipsActorComponentOffset)
 		{
 			builder.AddOffset(4, hollowTipsActorComponentOffset.Value, 0);
 		}
 
-		// Token: 0x0601547C RID: 87164 RVA: 0x003148CD File Offset: 0x00312ACD
+		// Token: 0x06016990 RID: 92560 RVA: 0x0033B76D File Offset: 0x0033996D
 		public static void AddTransformEntity(FlatBufferBuilder builder, Offset<IShapeTransform> transformEntityOffset)
 		{
 			builder.AddOffset(5, transformEntityOffset.Value, 0);
 		}
 
-		// Token: 0x0601547D RID: 87165 RVA: 0x003148DD File Offset: 0x00312ADD
+		// Token: 0x06016991 RID: 92561 RVA: 0x0033B77D File Offset: 0x0033997D
 		public static Offset<IRelativeTipsActorTransformResult> EndIRelativeTipsActorTransformResult(FlatBufferBuilder builder)
 		{
 			return new Offset<IRelativeTipsActorTransformResult>(builder.EndTable());
 		}
 
-		// Token: 0x0601547E RID: 87166 RVA: 0x003148EC File Offset: 0x00312AEC
+		// Token: 0x06016992 RID: 92562 RVA: 0x0033B78C File Offset: 0x0033998C
 		public IRelativeTipsActorTransformResultT UnPack()
 		{
 			IRelativeTipsActorTransformResultT relativeTipsActorTransformResultT = new IRelativeTipsActorTransformResultT();
@@ -214,7 +214,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return relativeTipsActorTransformResultT;
 		}
 
-		// Token: 0x0601547F RID: 87167 RVA: 0x00314908 File Offset: 0x00312B08
+		// Token: 0x06016993 RID: 92563 RVA: 0x0033B7A8 File Offset: 0x003399A8
 		public void UnPackTo(IRelativeTipsActorTransformResultT _o)
 		{
 			_o.IsSuccess = this.IsSuccess;
@@ -225,7 +225,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			_o.TransformEntity = ((this.TransformEntity != null) ? this.TransformEntity.Value.UnPack() : null);
 		}
 
-		// Token: 0x06015480 RID: 87168 RVA: 0x003149C8 File Offset: 0x00312BC8
+		// Token: 0x06016994 RID: 92564 RVA: 0x0033B868 File Offset: 0x00339A68
 		public static Offset<IRelativeTipsActorTransformResult> Pack(FlatBufferBuilder builder, IRelativeTipsActorTransformResultT _o)
 		{
 			if (_o == null)
@@ -239,7 +239,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return IRelativeTipsActorTransformResult.CreateIRelativeTipsActorTransformResult(builder, _o.IsSuccess, reasonOffset, _o.Type, transformWorldOffset, hollowTipsActorComponentOffset, transformEntityOffset);
 		}
 
-		// Token: 0x0400B231 RID: 45617
+		// Token: 0x0400BBC1 RID: 48065
 		private Table __p;
 	}
 }

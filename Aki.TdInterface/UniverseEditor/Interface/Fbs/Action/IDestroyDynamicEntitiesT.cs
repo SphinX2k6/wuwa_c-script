@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006583 RID: 25987
+	// Token: 0x02006BEB RID: 27627
 	public class IDestroyDynamicEntitiesT
 	{
-		// Token: 0x1700C109 RID: 49417
-		// (get) Token: 0x0602D145 RID: 184645 RVA: 0x0062F379 File Offset: 0x0062D579
-		// (set) Token: 0x0602D146 RID: 184646 RVA: 0x0062F381 File Offset: 0x0062D581
+		// Token: 0x1700CA98 RID: 51864
+		// (get) Token: 0x0602F8C9 RID: 194761 RVA: 0x0067B53D File Offset: 0x0067973D
+		// (set) Token: 0x0602F8CA RID: 194762 RVA: 0x0067B545 File Offset: 0x00679745
 		public IDestroyVisionDisplayT DestroyEntitiesConfig { get; set; }
 
-		// Token: 0x0602D147 RID: 184647 RVA: 0x0062F38A File Offset: 0x0062D58A
+		// Token: 0x0602F8CB RID: 194763 RVA: 0x0067B54E File Offset: 0x0067974E
 		public IDestroyDynamicEntitiesT()
 		{
 			this.DestroyEntitiesConfig = null;

@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Map.MapDefine
 {
-	// Token: 0x0200555A RID: 21850
+	// Token: 0x0200452C RID: 17708
 	public enum EMapType
 	{
-		// Token: 0x0401D481 RID: 119937
+		// Token: 0x04017F0A RID: 98058
 		MiniMap = 1,
-		// Token: 0x0401D482 RID: 119938
+		// Token: 0x04017F0B RID: 98059
 		WorldMap
 	}
 }

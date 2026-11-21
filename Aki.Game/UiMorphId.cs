@@ -4,24 +4,24 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Data.Entity.Struct;
 using UnrealEngine;
 
-// Token: 0x02002C90 RID: 11408
+// Token: 0x020021E9 RID: 8681
 [NullableContext(2)]
 [Nullable(0)]
 public class UiMorphId : IUiMorphId
 {
-	// Token: 0x1700201D RID: 8221
-	// (get) Token: 0x06017D71 RID: 97649 RVA: 0x006105FF File Offset: 0x0060E7FF
-	// (set) Token: 0x06017D72 RID: 97650 RVA: 0x00610607 File Offset: 0x0060E807
+	// Token: 0x1700206E RID: 8302
+	// (get) Token: 0x060155E5 RID: 87525 RVA: 0x0063619F File Offset: 0x0063439F
+	// (set) Token: 0x060155E6 RID: 87526 RVA: 0x006361A7 File Offset: 0x006343A7
 	public string MainMeshPath { get; set; }
 
-	// Token: 0x1700201E RID: 8222
-	// (get) Token: 0x06017D73 RID: 97651 RVA: 0x00610610 File Offset: 0x0060E810
-	// (set) Token: 0x06017D74 RID: 97652 RVA: 0x00610618 File Offset: 0x0060E818
+	// Token: 0x1700206F RID: 8303
+	// (get) Token: 0x060155E7 RID: 87527 RVA: 0x006361B0 File Offset: 0x006343B0
+	// (set) Token: 0x060155E8 RID: 87528 RVA: 0x006361B8 File Offset: 0x006343B8
 	public string AnimPath { get; set; }
 
-	// Token: 0x1700201F RID: 8223
-	// (get) Token: 0x06017D75 RID: 97653 RVA: 0x00610621 File Offset: 0x0060E821
-	// (set) Token: 0x06017D76 RID: 97654 RVA: 0x00610629 File Offset: 0x0060E829
+	// Token: 0x17002070 RID: 8304
+	// (get) Token: 0x060155E9 RID: 87529 RVA: 0x006361C1 File Offset: 0x006343C1
+	// (set) Token: 0x060155EA RID: 87530 RVA: 0x006361C9 File Offset: 0x006343C9
 	[Nullable(new byte[]
 	{
 		2,
@@ -37,14 +37,14 @@ public class UiMorphId : IUiMorphId
 		1
 	})] set; }
 
-	// Token: 0x17002020 RID: 8224
-	// (get) Token: 0x06017D77 RID: 97655 RVA: 0x00610632 File Offset: 0x0060E832
-	// (set) Token: 0x06017D78 RID: 97656 RVA: 0x0061063A File Offset: 0x0060E83A
+	// Token: 0x17002071 RID: 8305
+	// (get) Token: 0x060155EB RID: 87531 RVA: 0x006361D2 File Offset: 0x006343D2
+	// (set) Token: 0x060155EC RID: 87532 RVA: 0x006361DA File Offset: 0x006343DA
 	[Nullable(1)]
 	public TArray<SModelDecorationConfig> DecorationMeshConfigArray { [NullableContext(1)] get; [NullableContext(1)] set; } = new TArray<SModelDecorationConfig>();
 
-	// Token: 0x17002021 RID: 8225
-	// (get) Token: 0x06017D79 RID: 97657 RVA: 0x00610643 File Offset: 0x0060E843
-	// (set) Token: 0x06017D7A RID: 97658 RVA: 0x0061064B File Offset: 0x0060E84B
+	// Token: 0x17002072 RID: 8306
+	// (get) Token: 0x060155ED RID: 87533 RVA: 0x006361E3 File Offset: 0x006343E3
+	// (set) Token: 0x060155EE RID: 87534 RVA: 0x006361EB File Offset: 0x006343EB
 	public string RoleBody { get; set; }
 }

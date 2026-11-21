@@ -3,565 +3,579 @@ using CSharpScript.Core.Common;
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x020069AE RID: 27054
+	// Token: 0x02005B0A RID: 23306
 	[EnumExtensions]
 	public enum ELevelGeneralCondition
 	{
-		// Token: 0x040230DA RID: 143578
+		// Token: 0x0401E2C2 RID: 123586
 		DistanceLess,
-		// Token: 0x040230DB RID: 143579
+		// Token: 0x0401E2C3 RID: 123587
 		SelfTagCheck,
-		// Token: 0x040230DC RID: 143580
+		// Token: 0x0401E2C4 RID: 123588
 		ItemCheck,
-		// Token: 0x040230DD RID: 143581
+		// Token: 0x0401E2C5 RID: 123589
 		CheckItemWithOperator,
-		// Token: 0x040230DE RID: 143582
+		// Token: 0x0401E2C6 RID: 123590
 		CheckDis,
-		// Token: 0x040230DF RID: 143583
+		// Token: 0x0401E2C7 RID: 123591
 		TargetTagCheck,
-		// Token: 0x040230E0 RID: 143584
+		// Token: 0x0401E2C8 RID: 123592
 		CheckOnTrap,
-		// Token: 0x040230E1 RID: 143585
+		// Token: 0x0401E2C9 RID: 123593
 		CheckDirection,
-		// Token: 0x040230E2 RID: 143586
+		// Token: 0x0401E2CA RID: 123594
 		QuestState,
-		// Token: 0x040230E3 RID: 143587
+		// Token: 0x0401E2CB RID: 123595
 		CheckStrikeInfo,
-		// Token: 0x040230E4 RID: 143588
+		// Token: 0x0401E2CC RID: 123596
 		CheckLevel,
-		// Token: 0x040230E5 RID: 143589
+		// Token: 0x0401E2CD RID: 123597
 		CheckLevelOp,
-		// Token: 0x040230E6 RID: 143590
+		// Token: 0x0401E2CE RID: 123598
 		CheckGuideStatus,
-		// Token: 0x040230E7 RID: 143591
+		// Token: 0x0401E2CF RID: 123599
 		CheckCharacterTag,
-		// Token: 0x040230E8 RID: 143592
+		// Token: 0x0401E2D0 RID: 123600
 		CheckCharacterTagByEvent,
-		// Token: 0x040230E9 RID: 143593
+		// Token: 0x0401E2D1 RID: 123601
 		CheckCharacterTagNotByEvent,
-		// Token: 0x040230EA RID: 143594
+		// Token: 0x0401E2D2 RID: 123602
 		CheckCharacterVehicleTagByEvent,
-		// Token: 0x040230EB RID: 143595
+		// Token: 0x0401E2D3 RID: 123603
 		CheckCharacterVehicleTagNotByEvent,
-		// Token: 0x040230EC RID: 143596
+		// Token: 0x0401E2D4 RID: 123604
 		DragonPoolState,
-		// Token: 0x040230ED RID: 143597
+		// Token: 0x0401E2D5 RID: 123605
 		SceneStepState,
-		// Token: 0x040230EE RID: 143598
+		// Token: 0x0401E2D6 RID: 123606
 		CheckTeleportStatus,
-		// Token: 0x040230EF RID: 143599
+		// Token: 0x0401E2D7 RID: 123607
 		RoleLevel,
-		// Token: 0x040230F0 RID: 143600
+		// Token: 0x0401E2D8 RID: 123608
 		CheckRoleLevel,
-		// Token: 0x040230F1 RID: 143601
+		// Token: 0x0401E2D9 RID: 123609
 		CheckRoleOwned,
-		// Token: 0x040230F2 RID: 143602
+		// Token: 0x0401E2DA RID: 123610
 		RoleBreach,
-		// Token: 0x040230F3 RID: 143603
+		// Token: 0x0401E2DB RID: 123611
 		SelfGameplayTagCheck,
-		// Token: 0x040230F4 RID: 143604
+		// Token: 0x0401E2DC RID: 123612
 		CheckInTodTimeSpan,
-		// Token: 0x040230F5 RID: 143605
+		// Token: 0x0401E2DD RID: 123613
 		[EnumStringMember("CheckEntityCommonTag")]
 		CheckSceneItemTag,
-		// Token: 0x040230F6 RID: 143606
+		// Token: 0x0401E2DE RID: 123614
 		IsPlayer,
-		// Token: 0x040230F7 RID: 143607
+		// Token: 0x0401E2DF RID: 123615
 		CheckEntityConfigId,
-		// Token: 0x040230F8 RID: 143608
+		// Token: 0x0401E2E0 RID: 123616
 		CheckSelfEntityCommonTag,
-		// Token: 0x040230F9 RID: 143609
+		// Token: 0x0401E2E1 RID: 123617
 		CheckInstanceEntranceUnlockStatus,
-		// Token: 0x040230FA RID: 143610
+		// Token: 0x0401E2E2 RID: 123618
 		CheckOriginWorldLevel,
-		// Token: 0x040230FB RID: 143611
+		// Token: 0x0401E2E3 RID: 123619
 		CheckCurWorldLevel,
-		// Token: 0x040230FC RID: 143612
+		// Token: 0x0401E2E4 RID: 123620
 		CheckCurWorldLevelOp,
-		// Token: 0x040230FD RID: 143613
+		// Token: 0x0401E2E5 RID: 123621
 		StartShootTarget,
-		// Token: 0x040230FE RID: 143614
+		// Token: 0x0401E2E6 RID: 123622
 		CheckInstanceState,
-		// Token: 0x040230FF RID: 143615
+		// Token: 0x0401E2E7 RID: 123623
 		CheckInstanceMatchAble,
-		// Token: 0x04023100 RID: 143616
+		// Token: 0x0401E2E8 RID: 123624
 		MoveStateCheck,
-		// Token: 0x04023101 RID: 143617
+		// Token: 0x0401E2E9 RID: 123625
 		[EnumStringMember("LevelConditionCheckBuff")]
 		CheckBuff,
-		// Token: 0x04023102 RID: 143618
+		// Token: 0x0401E2EA RID: 123626
 		CheckUIState,
-		// Token: 0x04023103 RID: 143619
+		// Token: 0x0401E2EB RID: 123627
 		CheckUIOpen,
-		// Token: 0x04023104 RID: 143620
+		// Token: 0x0401E2EC RID: 123628
 		CheckUIOpenDone,
-		// Token: 0x04023105 RID: 143621
+		// Token: 0x0401E2ED RID: 123629
 		CheckUIShowDone,
-		// Token: 0x04023106 RID: 143622
+		// Token: 0x0401E2EE RID: 123630
 		CheckInputAction,
-		// Token: 0x04023107 RID: 143623
+		// Token: 0x0401E2EF RID: 123631
 		CheckClientUseSkill,
-		// Token: 0x04023108 RID: 143624
+		// Token: 0x0401E2F0 RID: 123632
 		CheckClientUseVisionSkill,
-		// Token: 0x04023109 RID: 143625
+		// Token: 0x0401E2F1 RID: 123633
 		CheckBattleRole,
-		// Token: 0x0402310A RID: 143626
+		// Token: 0x0401E2F2 RID: 123634
 		CheckEquippedPhantom,
-		// Token: 0x0402310B RID: 143627
+		// Token: 0x0401E2F3 RID: 123635
 		CheckEnemyBuff,
-		// Token: 0x0402310C RID: 143628
+		// Token: 0x0401E2F4 RID: 123636
 		CheckEnemyTag,
-		// Token: 0x0402310D RID: 143629
+		// Token: 0x0401E2F5 RID: 123637
 		CheckSkillPoint,
-		// Token: 0x0402310E RID: 143630
+		// Token: 0x0401E2F6 RID: 123638
 		CheckExploreSkill,
-		// Token: 0x0402310F RID: 143631
+		// Token: 0x0401E2F7 RID: 123639
 		CheckFightEnergyBar,
-		// Token: 0x04023110 RID: 143632
+		// Token: 0x0401E2F8 RID: 123640
 		CheckFightEnergyBall,
-		// Token: 0x04023111 RID: 143633
+		// Token: 0x0401E2F9 RID: 123641
 		FunctionUnlock,
-		// Token: 0x04023112 RID: 143634
+		// Token: 0x0401E2FA RID: 123642
 		GetNewItem,
-		// Token: 0x04023113 RID: 143635
+		// Token: 0x0401E2FB RID: 123643
 		HarmonyQte,
-		// Token: 0x04023114 RID: 143636
+		// Token: 0x0401E2FC RID: 123644
 		GetWhichRole,
-		// Token: 0x04023115 RID: 143637
+		// Token: 0x0401E2FD RID: 123645
 		HpLowerThan,
-		// Token: 0x04023116 RID: 143638
+		// Token: 0x0401E2FE RID: 123646
 		FightWithMonster,
-		// Token: 0x04023117 RID: 143639
+		// Token: 0x0401E2FF RID: 123647
 		PawnInRange,
-		// Token: 0x04023118 RID: 143640
+		// Token: 0x0401E300 RID: 123648
 		SlotOfCurrentRole,
-		// Token: 0x04023119 RID: 143641
+		// Token: 0x0401E301 RID: 123649
 		PhantomTargetLevel,
-		// Token: 0x0402311A RID: 143642
+		// Token: 0x0401E302 RID: 123650
 		CheckClientQuest,
-		// Token: 0x0402311B RID: 143643
+		// Token: 0x0401E303 RID: 123651
 		CheckClientQuestNode,
-		// Token: 0x0402311C RID: 143644
+		// Token: 0x0401E304 RID: 123652
 		PhantomMaxLevel,
-		// Token: 0x0402311D RID: 143645
+		// Token: 0x0401E305 RID: 123653
 		RoleTargetLevel,
-		// Token: 0x0402311E RID: 143646
+		// Token: 0x0401E306 RID: 123654
 		RoleSkillTargetLevel,
-		// Token: 0x0402311F RID: 143647
+		// Token: 0x0401E307 RID: 123655
 		BattleRoleIsNot,
-		// Token: 0x04023120 RID: 143648
+		// Token: 0x0401E308 RID: 123656
 		BattleRoleWeaponType,
-		// Token: 0x04023121 RID: 143649
+		// Token: 0x0401E309 RID: 123657
 		FormationAnyRoleDead,
-		// Token: 0x04023122 RID: 143650
+		// Token: 0x0401E30A RID: 123658
 		ComboTeachingState,
-		// Token: 0x04023123 RID: 143651
+		// Token: 0x0401E30B RID: 123659
 		OnViewClose,
-		// Token: 0x04023124 RID: 143652
+		// Token: 0x0401E30C RID: 123660
 		OnPlayerUseSkill,
-		// Token: 0x04023125 RID: 143653
+		// Token: 0x0401E30D RID: 123661
 		OnSkillButtonDataRefresh,
-		// Token: 0x04023126 RID: 143654
+		// Token: 0x0401E30E RID: 123662
 		FinishGuideStepByEvent,
-		// Token: 0x04023127 RID: 143655
+		// Token: 0x0401E30F RID: 123663
 		PlayerRevive,
-		// Token: 0x04023128 RID: 143656
+		// Token: 0x0401E310 RID: 123664
 		CheckTeamRoleCouldLevelUp,
-		// Token: 0x04023129 RID: 143657
+		// Token: 0x0401E311 RID: 123665
 		CheckTeamWeaponCouldLevelUp,
-		// Token: 0x0402312A RID: 143658
+		// Token: 0x0401E312 RID: 123666
 		ClientCalabashLevel,
-		// Token: 0x0402312B RID: 143659
+		// Token: 0x0401E313 RID: 123667
 		TeamRoleLevel,
-		// Token: 0x0402312C RID: 143660
+		// Token: 0x0401E314 RID: 123668
 		TeamWeaponLevel,
-		// Token: 0x0402312D RID: 143661
+		// Token: 0x0401E315 RID: 123669
 		TeamCouldEquipPhantom,
-		// Token: 0x0402312E RID: 143662
+		// Token: 0x0401E316 RID: 123670
 		CheckAnyPhantomCouldUpdate,
-		// Token: 0x0402312F RID: 143663
+		// Token: 0x0401E317 RID: 123671
 		CheckAnyRoleFullPhantom,
-		// Token: 0x04023130 RID: 143664
+		// Token: 0x0401E318 RID: 123672
 		CheckRolePhantomNum,
-		// Token: 0x04023131 RID: 143665
+		// Token: 0x0401E319 RID: 123673
 		CheckItemCountByType,
-		// Token: 0x04023132 RID: 143666
+		// Token: 0x0401E31A RID: 123674
 		CheckRouletteEquipItemId,
-		// Token: 0x04023133 RID: 143667
+		// Token: 0x0401E31B RID: 123675
 		CheckVisionIntensifyTabOpen,
-		// Token: 0x04023134 RID: 143668
+		// Token: 0x0401E31C RID: 123676
 		CheckAccountSettingOpen,
-		// Token: 0x04023135 RID: 143669
+		// Token: 0x0401E31D RID: 123677
 		CheckOnTreasureBoxOpen,
-		// Token: 0x04023136 RID: 143670
+		// Token: 0x0401E31E RID: 123678
 		CheckWeaponCount,
-		// Token: 0x04023137 RID: 143671
+		// Token: 0x0401E31F RID: 123679
 		CheckOnCostInsufficient,
-		// Token: 0x04023138 RID: 143672
+		// Token: 0x0401E320 RID: 123680
 		CheckRangeByPbDataId,
-		// Token: 0x04023139 RID: 143673
+		// Token: 0x0401E321 RID: 123681
 		CheckDungeonId,
-		// Token: 0x0402313A RID: 143674
+		// Token: 0x0401E322 RID: 123682
 		CheckRogueTerm,
-		// Token: 0x0402313B RID: 143675
+		// Token: 0x0401E323 RID: 123683
 		CheckTeleportTypeUnlock,
-		// Token: 0x0402313C RID: 143676
+		// Token: 0x0401E324 RID: 123684
 		CheckTypeItemPickUp,
-		// Token: 0x0402313D RID: 143677
+		// Token: 0x0401E325 RID: 123685
 		CheckDungeonFinished,
-		// Token: 0x0402313E RID: 143678
+		// Token: 0x0401E326 RID: 123686
 		CheckRogueCanUnlockSkill,
-		// Token: 0x0402313F RID: 143679
+		// Token: 0x0401E327 RID: 123687
 		CheckPositionRolePhantomSkillEquip,
-		// Token: 0x04023140 RID: 143680
+		// Token: 0x0401E328 RID: 123688
 		CheckHasFirstPhantomAtPosition,
-		// Token: 0x04023141 RID: 143681
+		// Token: 0x0401E329 RID: 123689
 		CheckWorldMapSecondaryUiOpened,
-		// Token: 0x04023142 RID: 143682
+		// Token: 0x0401E32A RID: 123690
 		CheckHasUnlockAffixInBossRush,
-		// Token: 0x04023143 RID: 143683
+		// Token: 0x0401E32B RID: 123691
 		OnChangeBossRushBuff,
-		// Token: 0x04023144 RID: 143684
+		// Token: 0x0401E32C RID: 123692
 		RoguelikeHasSelectEntryAndShow,
-		// Token: 0x04023145 RID: 143685
+		// Token: 0x0401E32D RID: 123693
 		CheckActivityOpen,
-		// Token: 0x04023146 RID: 143686
+		// Token: 0x0401E32E RID: 123694
 		CheckHasSkinInRoleSkinSubView,
-		// Token: 0x04023147 RID: 143687
+		// Token: 0x0401E32F RID: 123695
 		OnTakingPhoto,
-		// Token: 0x04023148 RID: 143688
+		// Token: 0x0401E330 RID: 123696
 		HasNotInvitedRoleInSpring25,
-		// Token: 0x04023149 RID: 143689
+		// Token: 0x0401E331 RID: 123697
 		CheckMapFocusByQuestId,
-		// Token: 0x0402314A RID: 143690
+		// Token: 0x0401E332 RID: 123698
 		OnWorldMapGravityBtnShow,
-		// Token: 0x0402314B RID: 143691
+		// Token: 0x0401E333 RID: 123699
 		PickupInTowerDefenceBattle,
-		// Token: 0x0402314C RID: 143692
+		// Token: 0x0401E334 RID: 123700
 		CheckOnSelectMenuMainType,
-		// Token: 0x0402314D RID: 143693
+		// Token: 0x0401E335 RID: 123701
 		OnShowPhantomInFormation,
-		// Token: 0x0402314E RID: 143694
+		// Token: 0x0401E336 RID: 123702
 		ForMoonChasingCheckTargetBuiltCount,
-		// Token: 0x0402314F RID: 143695
+		// Token: 0x0401E337 RID: 123703
 		ForMoonChasingCheckHasCanLevelUpBuilding,
-		// Token: 0x04023150 RID: 143696
+		// Token: 0x0401E338 RID: 123704
 		ForMoonChasingCheckNeedBranch,
-		// Token: 0x04023151 RID: 143697
+		// Token: 0x0401E339 RID: 123705
 		ForMoonChasingCheckHasNotFinishedTask,
-		// Token: 0x04023152 RID: 143698
+		// Token: 0x0401E33A RID: 123706
 		ForMoonChasingCheckTaskState,
-		// Token: 0x04023153 RID: 143699
+		// Token: 0x0401E33B RID: 123707
 		ForMoonChasingCheckMainlineTaskDone,
-		// Token: 0x04023154 RID: 143700
+		// Token: 0x0401E33C RID: 123708
 		ForMoonChasingOpenInteractive,
-		// Token: 0x04023155 RID: 143701
+		// Token: 0x0401E33D RID: 123709
 		CheckPureModeWhenBattleViewActive,
-		// Token: 0x04023156 RID: 143702
+		// Token: 0x0401E33E RID: 123710
 		OnActivitySubViewDone,
-		// Token: 0x04023157 RID: 143703
+		// Token: 0x0401E33F RID: 123711
 		CheckLockEnemyMode,
-		// Token: 0x04023158 RID: 143704
+		// Token: 0x0401E340 RID: 123712
 		CheckIsShowProgressBarInMapExploreDetailView,
-		// Token: 0x04023159 RID: 143705
+		// Token: 0x0401E341 RID: 123713
 		CheckIsMulti,
-		// Token: 0x0402315A RID: 143706
+		// Token: 0x0401E342 RID: 123714
 		CheckFishingRoleTechViewOpen,
-		// Token: 0x0402315B RID: 143707
+		// Token: 0x0401E343 RID: 123715
 		CheckFishingDockyardItemTipsShown,
-		// Token: 0x0402315C RID: 143708
+		// Token: 0x0401E344 RID: 123716
 		CheckShipTowerTeamOpen,
-		// Token: 0x0402315D RID: 143709
+		// Token: 0x0401E345 RID: 123717
 		CheckDockyardWareHouseHasItem,
-		// Token: 0x0402315E RID: 143710
+		// Token: 0x0401E346 RID: 123718
 		CheckFishingQteBtnHitValidArea,
-		// Token: 0x0402315F RID: 143711
+		// Token: 0x0401E347 RID: 123719
 		OnFishingQteScoreReachedMaximum,
-		// Token: 0x04023160 RID: 143712
+		// Token: 0x0401E348 RID: 123720
 		CheckFishingTechUnlock,
-		// Token: 0x04023161 RID: 143713
+		// Token: 0x0401E349 RID: 123721
 		OnFishingBackpackBtnStateChange,
-		// Token: 0x04023162 RID: 143714
+		// Token: 0x0401E34A RID: 123722
 		CheckFishingEntrustState,
-		// Token: 0x04023163 RID: 143715
+		// Token: 0x0401E34B RID: 123723
 		CheckFishingWareHouseItemListLength,
-		// Token: 0x04023164 RID: 143716
+		// Token: 0x0401E34C RID: 123724
 		CheckCurFishingEntrustAvailablePeriod,
-		// Token: 0x04023165 RID: 143717
+		// Token: 0x0401E34D RID: 123725
 		OnTreasureCompassUnitShow,
-		// Token: 0x04023166 RID: 143718
+		// Token: 0x0401E34E RID: 123726
 		OnFishingBackpackQuickSellToggleShow,
-		// Token: 0x04023167 RID: 143719
+		// Token: 0x0401E34F RID: 123727
 		HideSettingInCloudGame,
-		// Token: 0x04023168 RID: 143720
+		// Token: 0x0401E350 RID: 123728
 		OnPlayerTitleUnlock,
-		// Token: 0x04023169 RID: 143721
+		// Token: 0x0401E351 RID: 123729
 		CheckDangoMonopolyHasFinishedRound,
-		// Token: 0x0402316A RID: 143722
+		// Token: 0x0401E352 RID: 123730
 		OnDangoMonopolyMoveStop,
-		// Token: 0x0402316B RID: 143723
+		// Token: 0x0401E353 RID: 123731
 		OnDangoMonopolyViewShowProcessEnd,
-		// Token: 0x0402316C RID: 143724
+		// Token: 0x0401E354 RID: 123732
 		OnDangoAbyssPluginRoleSelect,
-		// Token: 0x0402316D RID: 143725
+		// Token: 0x0401E355 RID: 123733
 		CheckDangoMatchState,
-		// Token: 0x0402316E RID: 143726
+		// Token: 0x0401E356 RID: 123734
 		CheckDangoMatchPlayerNumType,
-		// Token: 0x0402316F RID: 143727
+		// Token: 0x0401E357 RID: 123735
 		OnEnterDangoMatchView,
-		// Token: 0x04023170 RID: 143728
+		// Token: 0x0401E358 RID: 123736
 		OnDangoMonopolyViewStart,
-		// Token: 0x04023171 RID: 143729
+		// Token: 0x0401E359 RID: 123737
 		OnCiacconaAvgInspirationChoiceShow,
-		// Token: 0x04023172 RID: 143730
+		// Token: 0x0401E35A RID: 123738
 		OnCiacconaChapterFirstStart,
-		// Token: 0x04023173 RID: 143731
+		// Token: 0x0401E35B RID: 123739
 		OnCiacconaChapterRestart,
-		// Token: 0x04023174 RID: 143732
+		// Token: 0x0401E35C RID: 123740
 		OnMovieRogueInfoRefreshWithMultipleEnds,
-		// Token: 0x04023175 RID: 143733
+		// Token: 0x0401E35D RID: 123741
 		CheckMovieRogueFinishedEndingCount,
-		// Token: 0x04023176 RID: 143734
+		// Token: 0x0401E35E RID: 123742
 		OnDangoAbyssEnterWithTeamExploreBtn,
-		// Token: 0x04023177 RID: 143735
+		// Token: 0x0401E35F RID: 123743
 		OnDangoAbyssEquipPluginWithValidChange,
-		// Token: 0x04023178 RID: 143736
+		// Token: 0x0401E360 RID: 123744
 		OnDangoAbyssEquipPluginWithInvalid,
-		// Token: 0x04023179 RID: 143737
+		// Token: 0x0401E361 RID: 123745
 		OnMovieRogueLinkRefresh,
-		// Token: 0x0402317A RID: 143738
+		// Token: 0x0401E362 RID: 123746
 		OnMovieRogueMapMoveEnd,
-		// Token: 0x0402317B RID: 143739
+		// Token: 0x0401E363 RID: 123747
 		OnMapRogueEventDetailShow,
-		// Token: 0x0402317C RID: 143740
+		// Token: 0x0401E364 RID: 123748
 		CheckMapRogueEventDetailShow,
-		// Token: 0x0402317D RID: 143741
+		// Token: 0x0401E365 RID: 123749
 		OnDangoMonopolyCameraFocusOnMainDango,
-		// Token: 0x0402317E RID: 143742
+		// Token: 0x0401E366 RID: 123750
 		CheckDangoAbyssProgress,
-		// Token: 0x0402317F RID: 143743
+		// Token: 0x0401E367 RID: 123751
 		CheckDangoAbyssHasItemByType,
-		// Token: 0x04023180 RID: 143744
+		// Token: 0x0401E368 RID: 123752
 		CheckDangoMatchFinalEnd,
-		// Token: 0x04023181 RID: 143745
+		// Token: 0x0401E369 RID: 123753
 		CheckGridHasExplored,
-		// Token: 0x04023182 RID: 143746
+		// Token: 0x0401E36A RID: 123754
 		GolemHackingID,
-		// Token: 0x04023183 RID: 143747
+		// Token: 0x0401E36B RID: 123755
 		WeeklyChallengeOpen,
-		// Token: 0x04023184 RID: 143748
+		// Token: 0x0401E36C RID: 123756
 		OnUiTabViewShow,
-		// Token: 0x04023185 RID: 143749
+		// Token: 0x0401E36D RID: 123757
 		OnNewViewCovered,
-		// Token: 0x04023186 RID: 143750
+		// Token: 0x0401E36E RID: 123758
 		OnHandCardsShow,
-		// Token: 0x04023187 RID: 143751
+		// Token: 0x0401E36F RID: 123759
 		OnCardDetailShowWithFactor,
-		// Token: 0x04023188 RID: 143752
+		// Token: 0x0401E370 RID: 123760
 		OnMonsterNumReachLimit,
-		// Token: 0x04023189 RID: 143753
+		// Token: 0x0401E371 RID: 123761
 		OnGetSpCard,
-		// Token: 0x0402318A RID: 143754
+		// Token: 0x0401E372 RID: 123762
 		CheckPhantomArenaChallengeId,
-		// Token: 0x0402318B RID: 143755
+		// Token: 0x0401E373 RID: 123763
 		CheckClientQuestNodeStatus,
-		// Token: 0x0402318C RID: 143756
+		// Token: 0x0401E374 RID: 123764
 		CheckAnyMoraleAreaFinishWithReward,
-		// Token: 0x0402318D RID: 143757
+		// Token: 0x0401E375 RID: 123765
 		OnMoraleTempExpItemShow,
-		// Token: 0x0402318E RID: 143758
+		// Token: 0x0401E376 RID: 123766
 		OnPhantomArenaChildViewShow,
-		// Token: 0x0402318F RID: 143759
+		// Token: 0x0401E377 RID: 123767
 		CheckNoMoraleAreaFinished,
-		// Token: 0x04023190 RID: 143760
+		// Token: 0x0401E378 RID: 123768
 		OnFloroRanchCardCountReachTarget,
-		// Token: 0x04023191 RID: 143761
+		// Token: 0x0401E379 RID: 123769
 		CheckFloroRanchRound,
-		// Token: 0x04023192 RID: 143762
+		// Token: 0x0401E37A RID: 123770
 		FloroRanchActivityID,
-		// Token: 0x04023193 RID: 143763
+		// Token: 0x0401E37B RID: 123771
 		CheckFloroRanchHasTechCanUnlock,
-		// Token: 0x04023194 RID: 143764
+		// Token: 0x0401E37C RID: 123772
 		OnKingShipFirstAttrShow,
-		// Token: 0x04023195 RID: 143765
+		// Token: 0x0401E37D RID: 123773
 		OnKingShipAllAttrShown,
-		// Token: 0x04023196 RID: 143766
+		// Token: 0x0401E37E RID: 123774
 		OnFloroRanchSettleViewOpenWithEndlessMode,
-		// Token: 0x04023197 RID: 143767
+		// Token: 0x0401E37F RID: 123775
 		CheckFloroRanchLevel,
-		// Token: 0x04023198 RID: 143768
+		// Token: 0x0401E380 RID: 123776
 		OnFloroRanchStageStartTaskFinish,
-		// Token: 0x04023199 RID: 143769
+		// Token: 0x0401E381 RID: 123777
 		CheckTrapDefenseTalentCanUnlock,
-		// Token: 0x0402319A RID: 143770
+		// Token: 0x0401E382 RID: 123778
 		CheckTrapDefenseHasCanUpgradeMachine,
-		// Token: 0x0402319B RID: 143771
+		// Token: 0x0401E383 RID: 123779
 		OnTrapDefenseAuxiliaryMachineUpgradeToMax,
-		// Token: 0x0402319C RID: 143772
+		// Token: 0x0401E384 RID: 123780
 		OnTrapDefenseMachineCanChooseBranch,
-		// Token: 0x0402319D RID: 143773
+		// Token: 0x0401E385 RID: 123781
 		CheckTrapDefenseLevelFinish,
-		// Token: 0x0402319E RID: 143774
+		// Token: 0x0401E386 RID: 123782
 		CheckTrapDefenseRogueUnlock,
-		// Token: 0x0402319F RID: 143775
+		// Token: 0x0401E387 RID: 123783
 		OnTrapDefenseBuffGroupUpgrade,
-		// Token: 0x040231A0 RID: 143776
+		// Token: 0x0401E388 RID: 123784
 		TrapDefenseTotalStar,
-		// Token: 0x040231A1 RID: 143777
+		// Token: 0x0401E389 RID: 123785
 		TrapDefensePassFullStar,
-		// Token: 0x040231A2 RID: 143778
+		// Token: 0x0401E38A RID: 123786
 		TrapDefenseChallengeStar,
-		// Token: 0x040231A3 RID: 143779
+		// Token: 0x0401E38B RID: 123787
 		OnTrapDefenseBuildingDevelopPreviewBtnShow,
-		// Token: 0x040231A4 RID: 143780
+		// Token: 0x0401E38C RID: 123788
 		OnTrapDefenseDeployingBuilding,
-		// Token: 0x040231A5 RID: 143781
+		// Token: 0x0401E38D RID: 123789
 		OnTrapDefenseBuildingDevelopBottomLayoutShow,
-		// Token: 0x040231A6 RID: 143782
+		// Token: 0x0401E38E RID: 123790
 		CheckTrapDefenseMachineLevel,
-		// Token: 0x040231A7 RID: 143783
+		// Token: 0x0401E38F RID: 123791
 		CheckTrapDefenseTalentUnlock,
-		// Token: 0x040231A8 RID: 143784
+		// Token: 0x0401E390 RID: 123792
 		OnTrapDefenseMainLevelViewOpen,
-		// Token: 0x040231A9 RID: 143785
+		// Token: 0x0401E391 RID: 123793
 		OnVisionIntensifyViewShow,
-		// Token: 0x040231AA RID: 143786
+		// Token: 0x0401E392 RID: 123794
 		OnSurvivorsRogueEndlessToggleShow,
-		// Token: 0x040231AB RID: 143787
+		// Token: 0x0401E393 RID: 123795
 		OnSurvivorsRogueComboBuffShow,
-		// Token: 0x040231AC RID: 143788
+		// Token: 0x0401E394 RID: 123796
 		CheckFightPhotoHasTarget,
-		// Token: 0x040231AD RID: 143789
+		// Token: 0x0401E395 RID: 123797
 		CheckFightPhotoLevelFinished,
-		// Token: 0x040231AE RID: 143790
+		// Token: 0x0401E396 RID: 123798
 		CheckCalabashChildFunctionOpen,
-		// Token: 0x040231AF RID: 143791
+		// Token: 0x0401E397 RID: 123799
 		OnSurvivorsRoguePopViewRefresh,
-		// Token: 0x040231B0 RID: 143792
+		// Token: 0x0401E398 RID: 123800
 		CheckSurvivorRogueTalentCanUnlock,
-		// Token: 0x040231B1 RID: 143793
+		// Token: 0x0401E399 RID: 123801
 		CheckSurvivorRogueHasWeaponBond,
-		// Token: 0x040231B2 RID: 143794
+		// Token: 0x0401E39A RID: 123802
 		OnSurvivorsRogueWeaponDetailTabViewShow,
-		// Token: 0x040231B3 RID: 143795
+		// Token: 0x0401E39B RID: 123803
 		AlwaysFalse,
-		// Token: 0x040231B4 RID: 143796
+		// Token: 0x0401E39C RID: 123804
 		OnEnterOrExitBattle,
-		// Token: 0x040231B5 RID: 143797
+		// Token: 0x0401E39D RID: 123805
 		OnHonamiStoryLifeSupportChange,
-		// Token: 0x040231B6 RID: 143798
+		// Token: 0x0401E39E RID: 123806
 		OnPickUpHonamiStoryItem,
-		// Token: 0x040231B7 RID: 143799
+		// Token: 0x0401E39F RID: 123807
 		OnSceneItemDurabilityEmpty,
-		// Token: 0x040231B8 RID: 143800
+		// Token: 0x0401E3A0 RID: 123808
 		CheckPickUpHonamiStoryItemType,
-		// Token: 0x040231B9 RID: 143801
+		// Token: 0x0401E3A1 RID: 123809
 		IsHasRecommendRecActivity,
-		// Token: 0x040231BA RID: 143802
+		// Token: 0x0401E3A2 RID: 123810
 		CheckMotorMovieModeStateChange,
-		// Token: 0x040231BB RID: 143803
+		// Token: 0x0401E3A3 RID: 123811
 		OnMotorMusicPlayerShow,
-		// Token: 0x040231BC RID: 143804
+		// Token: 0x0401E3A4 RID: 123812
 		OnMapCustomMarkPanelShow,
-		// Token: 0x040231BD RID: 143805
+		// Token: 0x0401E3A5 RID: 123813
 		OnPhantomArenaChooseCardPanelShow,
-		// Token: 0x040231BE RID: 143806
+		// Token: 0x0401E3A6 RID: 123814
 		OnPhantomArenaDiscardCardPanelShow,
-		// Token: 0x040231BF RID: 143807
+		// Token: 0x0401E3A7 RID: 123815
 		OnMotorDiyViewShow,
-		// Token: 0x040231C0 RID: 143808
+		// Token: 0x0401E3A8 RID: 123816
 		OnPhantomArenaPlayFieldEffect,
-		// Token: 0x040231C1 RID: 143809
+		// Token: 0x0401E3A9 RID: 123817
 		OnRollBlockDifficultyChanged,
-		// Token: 0x040231C2 RID: 143810
+		// Token: 0x0401E3AA RID: 123818
 		CheckDungeonTypes,
-		// Token: 0x040231C3 RID: 143811
+		// Token: 0x0401E3AB RID: 123819
 		OnEnterWheelTowerEndlessMode,
-		// Token: 0x040231C4 RID: 143812
+		// Token: 0x0401E3AC RID: 123820
 		OnGuideTriggerEvent,
-		// Token: 0x040231C5 RID: 143813
+		// Token: 0x0401E3AD RID: 123821
 		CheckUiItemShow,
-		// Token: 0x040231C6 RID: 143814
+		// Token: 0x0401E3AE RID: 123822
 		CheckExploreSkillFlag,
-		// Token: 0x040231C7 RID: 143815
+		// Token: 0x0401E3AF RID: 123823
 		CheckGuessJokerRound,
-		// Token: 0x040231C8 RID: 143816
+		// Token: 0x0401E3B0 RID: 123824
 		CheckMotorFightLevelFinished,
-		// Token: 0x040231C9 RID: 143817
+		// Token: 0x0401E3B1 RID: 123825
 		CheckEncircleChallengeId,
-		// Token: 0x040231CA RID: 143818
+		// Token: 0x0401E3B2 RID: 123826
 		OnFlagChallengeCalculatedLevelOver,
-		// Token: 0x040231CB RID: 143819
+		// Token: 0x0401E3B3 RID: 123827
 		CheckTetrisLevelId,
-		// Token: 0x040231CC RID: 143820
+		// Token: 0x0401E3B4 RID: 123828
 		CheckRhythmShipSubLevelHasRank,
-		// Token: 0x040231CD RID: 143821
+		// Token: 0x0401E3B5 RID: 123829
 		CheckDropCatchGameplayId,
-		// Token: 0x040231CE RID: 143822
+		// Token: 0x0401E3B6 RID: 123830
 		CheckTetrisScore,
-		// Token: 0x040231CF RID: 143823
+		// Token: 0x0401E3B7 RID: 123831
 		CheckNewPlayerSupportV2,
-		// Token: 0x040231D0 RID: 143824
+		// Token: 0x0401E3B8 RID: 123832
 		CheckPinballLevelPass,
-		// Token: 0x040231D1 RID: 143825
+		// Token: 0x0401E3B9 RID: 123833
 		CheckPinballWeaponCount,
-		// Token: 0x040231D2 RID: 143826
+		// Token: 0x0401E3BA RID: 123834
 		OnNormalTopViewChange,
-		// Token: 0x040231D3 RID: 143827
+		// Token: 0x0401E3BB RID: 123835
 		CheckPopIsTargetOrEmpty,
-		// Token: 0x040231D4 RID: 143828
+		// Token: 0x0401E3BC RID: 123836
 		CheckKurotatoLevelWave,
-		// Token: 0x040231D5 RID: 143829
+		// Token: 0x0401E3BD RID: 123837
 		CheckKurotatoLevelFinished,
-		// Token: 0x040231D6 RID: 143830
+		// Token: 0x0401E3BE RID: 123838
 		CheckTrialRole,
-		// Token: 0x040231D7 RID: 143831
+		// Token: 0x0401E3BF RID: 123839
 		CheckInteractiveItemsFunctionEnable,
-		// Token: 0x040231D8 RID: 143832
+		// Token: 0x0401E3C0 RID: 123840
 		CheckPhantomTeam,
-		// Token: 0x040231D9 RID: 143833
+		// Token: 0x0401E3C1 RID: 123841
 		CheckTrialAssist,
-		// Token: 0x040231DA RID: 143834
+		// Token: 0x0401E3C2 RID: 123842
 		CheckQuestClosedSegment,
-		// Token: 0x040231DB RID: 143835
+		// Token: 0x0401E3C3 RID: 123843
 		CheckGameplayClosedSegment,
-		// Token: 0x040231DC RID: 143836
+		// Token: 0x0401E3C4 RID: 123844
 		CheckOperationRestrict,
-		// Token: 0x040231DD RID: 143837
+		// Token: 0x0401E3C5 RID: 123845
 		CheckCameraMode,
-		// Token: 0x040231DE RID: 143838
+		// Token: 0x0401E3C6 RID: 123846
 		CheckCharacterMotionState,
-		// Token: 0x040231DF RID: 143839
+		// Token: 0x0401E3C7 RID: 123847
 		CheckCharacterTagsRestrict,
-		// Token: 0x040231E0 RID: 143840
+		// Token: 0x0401E3C8 RID: 123848
 		CheckInteracting,
-		// Token: 0x040231E1 RID: 143841
+		// Token: 0x0401E3C9 RID: 123849
 		CheckRoverlikeInstPassed,
-		// Token: 0x040231E2 RID: 143842
+		// Token: 0x0401E3CA RID: 123850
 		CheckSubPackageDownLoadBtnShow,
-		// Token: 0x040231E3 RID: 143843
+		// Token: 0x0401E3CB RID: 123851
 		CheckFightSpecialEnergyFull,
-		// Token: 0x040231E4 RID: 143844
+		// Token: 0x0401E3CC RID: 123852
 		CheckNewbieGuideV2,
-		// Token: 0x040231E5 RID: 143845
+		// Token: 0x0401E3CD RID: 123853
 		CheckFormationViewDimension,
-		// Token: 0x040231E6 RID: 143846
+		// Token: 0x0401E3CE RID: 123854
 		CheckGiantCanChangeMood,
-		// Token: 0x040231E7 RID: 143847
+		// Token: 0x0401E3CF RID: 123855
 		CheckInMatchThreeLevel,
-		// Token: 0x040231E8 RID: 143848
+		// Token: 0x0401E3D0 RID: 123856
 		CheckMatchThreeLevelUnlocked,
-		// Token: 0x040231E9 RID: 143849
+		// Token: 0x0401E3D1 RID: 123857
 		CheckMatchThreeSmallSkillCharged,
-		// Token: 0x040231EA RID: 143850
+		// Token: 0x0401E3D2 RID: 123858
 		CheckMatchThreeBoardHasComponent,
-		// Token: 0x040231EB RID: 143851
+		// Token: 0x0401E3D3 RID: 123859
 		OnDangoBrawlBackpackAddItem,
-		// Token: 0x040231EC RID: 143852
+		// Token: 0x0401E3D4 RID: 123860
 		CheckDangoBrawlLevelRound,
-		// Token: 0x040231ED RID: 143853
+		// Token: 0x0401E3D5 RID: 123861
 		OnDangoBrawlHasCombinableItem,
-		// Token: 0x040231EE RID: 143854
-		CheckDangoBrawlLevelPassed
+		// Token: 0x0401E3D6 RID: 123862
+		CheckDangoBrawlLevelPassed,
+		// Token: 0x0401E3D7 RID: 123863
+		OnSolarSchoolItemTipsRefreshed,
+		// Token: 0x0401E3D8 RID: 123864
+		CheckRoleTowerEquippedToken,
+		// Token: 0x0401E3D9 RID: 123865
+		CheckRoleTowerCurrentStage,
+		// Token: 0x0401E3DA RID: 123866
+		CheckRoleTowerEchoLevel,
+		// Token: 0x0401E3DB RID: 123867
+		CheckActivityCondition,
+		// Token: 0x0401E3DC RID: 123868
+		OnCommonChildViewShowDone,
+		// Token: 0x0401E3DD RID: 123869
+		CheckPlayerInOpenArea
 	}
 }

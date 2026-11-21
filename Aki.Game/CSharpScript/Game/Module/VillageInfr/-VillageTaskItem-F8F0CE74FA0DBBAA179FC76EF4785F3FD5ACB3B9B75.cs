@@ -2,26 +2,26 @@
 
 namespace CSharpScript.Game.Module.VillageInfr
 {
-	// Token: 0x02004886 RID: 18566
+	// Token: 0x020037FD RID: 14333
 	internal enum <VillageTaskItem>F8F0CE74FA0DBBAA179FC76EF4785F3FD5ACB3B9B75157E06DFF55C059D7140EE__EComps
 	{
-		// Token: 0x0401A194 RID: 106900
+		// Token: 0x04014A07 RID: 84487
 		TextName,
-		// Token: 0x0401A195 RID: 106901
+		// Token: 0x04014A08 RID: 84488
 		TextNum,
-		// Token: 0x0401A196 RID: 106902
+		// Token: 0x04014A09 RID: 84489
 		HorizontalReward,
-		// Token: 0x0401A197 RID: 106903
+		// Token: 0x04014A0A RID: 84490
 		RewardItem,
-		// Token: 0x0401A198 RID: 106904
+		// Token: 0x04014A0B RID: 84491
 		BtnGoto,
-		// Token: 0x0401A199 RID: 106905
+		// Token: 0x04014A0C RID: 84492
 		TextDoing,
-		// Token: 0x0401A19A RID: 106906
+		// Token: 0x04014A0D RID: 84493
 		SpriteDoneBg,
-		// Token: 0x0401A19B RID: 106907
+		// Token: 0x04014A0E RID: 84494
 		PanelRedDot,
-		// Token: 0x0401A19C RID: 106908
+		// Token: 0x04014A0F RID: 84495
 		BtnConfirm
 	}
 }

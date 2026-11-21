@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C8D RID: 3213
+	// Token: 0x02000D6F RID: 3439
 	public class IJigsawCompleteCondition
 	{
-		// Token: 0x06004982 RID: 18818 RVA: 0x000B8335 File Offset: 0x000B6535
-		[NullableContext(1)]
+		// Token: 0x06004E30 RID: 20016 RVA: 0x000C2D45 File Offset: 0x000C0F45
 		public static IJigsawCompleteCondition Create(IJigsawCompleteCondition? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001625 RID: 5669
-		// (get) Token: 0x06004983 RID: 18819 RVA: 0x000B8354 File Offset: 0x000B6554
+		// Token: 0x1700174D RID: 5965
+		// (get) Token: 0x06004E31 RID: 20017 RVA: 0x000C2D64 File Offset: 0x000C0F64
 		public virtual EJigsawCompleteCondition Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040029EC RID: 10732
+		// Token: 0x04002C66 RID: 11366
 		private IJigsawCompleteCondition Instance;
 	}
 }

@@ -4,30 +4,30 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020055A3 RID: 21923
+	// Token: 0x02005B41 RID: 23361
 	public class IMonsterSummonInteractPointT
 	{
-		// Token: 0x1700A1ED RID: 41453
-		// (get) Token: 0x060244B3 RID: 148659 RVA: 0x00502ABB File Offset: 0x00500CBB
-		// (set) Token: 0x060244B4 RID: 148660 RVA: 0x00502AC3 File Offset: 0x00500CC3
+		// Token: 0x1700AA75 RID: 43637
+		// (get) Token: 0x060266C0 RID: 157376 RVA: 0x00543033 File Offset: 0x00541233
+		// (set) Token: 0x060266C1 RID: 157377 RVA: 0x0054303B File Offset: 0x0054123B
 		public EExploreSkillInteractType Type { get; set; }
 
-		// Token: 0x1700A1EE RID: 41454
-		// (get) Token: 0x060244B5 RID: 148661 RVA: 0x00502ACC File Offset: 0x00500CCC
-		// (set) Token: 0x060244B6 RID: 148662 RVA: 0x00502AD4 File Offset: 0x00500CD4
+		// Token: 0x1700AA76 RID: 43638
+		// (get) Token: 0x060266C2 RID: 157378 RVA: 0x00543044 File Offset: 0x00541244
+		// (set) Token: 0x060266C3 RID: 157379 RVA: 0x0054304C File Offset: 0x0054124C
 		public float Range { get; set; }
 
-		// Token: 0x1700A1EF RID: 41455
-		// (get) Token: 0x060244B7 RID: 148663 RVA: 0x00502ADD File Offset: 0x00500CDD
-		// (set) Token: 0x060244B8 RID: 148664 RVA: 0x00502AE5 File Offset: 0x00500CE5
+		// Token: 0x1700AA77 RID: 43639
+		// (get) Token: 0x060266C4 RID: 157380 RVA: 0x00543055 File Offset: 0x00541255
+		// (set) Token: 0x060266C5 RID: 157381 RVA: 0x0054305D File Offset: 0x0054125D
 		public List<IActionInfoT> Actions { get; set; }
 
-		// Token: 0x1700A1F0 RID: 41456
-		// (get) Token: 0x060244B9 RID: 148665 RVA: 0x00502AEE File Offset: 0x00500CEE
-		// (set) Token: 0x060244BA RID: 148666 RVA: 0x00502AF6 File Offset: 0x00500CF6
+		// Token: 0x1700AA78 RID: 43640
+		// (get) Token: 0x060266C6 RID: 157382 RVA: 0x00543066 File Offset: 0x00541266
+		// (set) Token: 0x060266C7 RID: 157383 RVA: 0x0054306E File Offset: 0x0054126E
 		public byte NullMask { get; set; }
 
-		// Token: 0x060244BB RID: 148667 RVA: 0x00502AFF File Offset: 0x00500CFF
+		// Token: 0x060266C8 RID: 157384 RVA: 0x00543077 File Offset: 0x00541277
 		public IMonsterSummonInteractPointT()
 		{
 			this.Type = EExploreSkillInteractType.PullGiant;

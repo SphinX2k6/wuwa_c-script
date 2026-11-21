@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020064DA RID: 25818
+	// Token: 0x02006B45 RID: 27461
 	public struct IControlTrackingSelf : IFlatbufferObject
 	{
-		// Token: 0x1700C01C RID: 49180
-		// (get) Token: 0x0602CC94 RID: 183444 RVA: 0x0062791F File Offset: 0x00625B1F
+		// Token: 0x1700C9A9 RID: 51625
+		// (get) Token: 0x0602F418 RID: 193560 RVA: 0x00673A47 File Offset: 0x00671C47
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602CC95 RID: 183445 RVA: 0x0062792C File Offset: 0x00625B2C
+		// Token: 0x0602F419 RID: 193561 RVA: 0x00673A54 File Offset: 0x00671C54
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602CC96 RID: 183446 RVA: 0x00627934 File Offset: 0x00625B34
+		// Token: 0x0602F41A RID: 193562 RVA: 0x00673A5C File Offset: 0x00671C5C
 		public static IControlTrackingSelf GetRootAsIControlTrackingSelf(ByteBuffer _bb)
 		{
 			return IControlTrackingSelf.GetRootAsIControlTrackingSelf(_bb, default(IControlTrackingSelf));
 		}
 
-		// Token: 0x0602CC97 RID: 183447 RVA: 0x00627950 File Offset: 0x00625B50
+		// Token: 0x0602F41B RID: 193563 RVA: 0x00673A78 File Offset: 0x00671C78
 		public static IControlTrackingSelf GetRootAsIControlTrackingSelf(ByteBuffer _bb, IControlTrackingSelf obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602CC98 RID: 183448 RVA: 0x0062796D File Offset: 0x00625B6D
+		// Token: 0x0602F41C RID: 193564 RVA: 0x00673A95 File Offset: 0x00671C95
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602CC99 RID: 183449 RVA: 0x0062797C File Offset: 0x00625B7C
+		// Token: 0x0602F41D RID: 193565 RVA: 0x00673AA4 File Offset: 0x00671CA4
 		public IControlTrackingSelf __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C01D RID: 49181
-		// (get) Token: 0x0602CC9A RID: 183450 RVA: 0x0062798C File Offset: 0x00625B8C
+		// Token: 0x1700C9AA RID: 51626
+		// (get) Token: 0x0602F41E RID: 193566 RVA: 0x00673AB4 File Offset: 0x00671CB4
 		public EControlTrackingType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602CC9B RID: 183451 RVA: 0x006279C8 File Offset: 0x00625BC8
+		// Token: 0x0602F41F RID: 193567 RVA: 0x00673AF0 File Offset: 0x00671CF0
 		public static Offset<IControlTrackingSelf> CreateIControlTrackingSelf(FlatBufferBuilder builder, EControlTrackingType Type = EControlTrackingType.Self)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IControlTrackingSelf.EndIControlTrackingSelf(builder);
 		}
 
-		// Token: 0x0602CC9C RID: 183452 RVA: 0x006279DE File Offset: 0x00625BDE
+		// Token: 0x0602F420 RID: 193568 RVA: 0x00673B06 File Offset: 0x00671D06
 		public static void StartIControlTrackingSelf(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602CC9D RID: 183453 RVA: 0x006279E7 File Offset: 0x00625BE7
+		// Token: 0x0602F421 RID: 193569 RVA: 0x00673B0F File Offset: 0x00671D0F
 		public static void AddType(FlatBufferBuilder builder, EControlTrackingType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602CC9E RID: 183454 RVA: 0x006279F2 File Offset: 0x00625BF2
+		// Token: 0x0602F422 RID: 193570 RVA: 0x00673B1A File Offset: 0x00671D1A
 		public static Offset<IControlTrackingSelf> EndIControlTrackingSelf(FlatBufferBuilder builder)
 		{
 			return new Offset<IControlTrackingSelf>(builder.EndTable());
 		}
 
-		// Token: 0x0602CC9F RID: 183455 RVA: 0x00627A00 File Offset: 0x00625C00
+		// Token: 0x0602F423 RID: 193571 RVA: 0x00673B28 File Offset: 0x00671D28
 		public IControlTrackingSelfT UnPack()
 		{
 			IControlTrackingSelfT controlTrackingSelfT = new IControlTrackingSelfT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return controlTrackingSelfT;
 		}
 
-		// Token: 0x0602CCA0 RID: 183456 RVA: 0x00627A1B File Offset: 0x00625C1B
+		// Token: 0x0602F424 RID: 193572 RVA: 0x00673B43 File Offset: 0x00671D43
 		public void UnPackTo(IControlTrackingSelfT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602CCA1 RID: 183457 RVA: 0x00627A2C File Offset: 0x00625C2C
+		// Token: 0x0602F425 RID: 193573 RVA: 0x00673B54 File Offset: 0x00671D54
 		public static Offset<IControlTrackingSelf> Pack(FlatBufferBuilder builder, IControlTrackingSelfT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IControlTrackingSelf.CreateIControlTrackingSelf(builder, _o.Type);
 		}
 
-		// Token: 0x04010B15 RID: 68373
+		// Token: 0x0401192B RID: 71979
 		private Table __p;
 	}
 }

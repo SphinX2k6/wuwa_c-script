@@ -4,12 +4,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 {
-	// Token: 0x02006556 RID: 25942
+	// Token: 0x020054D4 RID: 21716
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class LinkageRewardDayTextUtil
 	{
-		// Token: 0x06041023 RID: 266275 RVA: 0x00FC1276 File Offset: 0x00FBF476
+		// Token: 0x06035CE8 RID: 220392 RVA: 0x00F0825E File Offset: 0x00F0645E
 		[NullableContext(2)]
 		private static UUITextTransition TryGetUiTextTransition(UUIText text)
 		{
@@ -21,14 +21,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			return ((auibaseActor != null) ? auibaseActor.GetComponentByClass(UUITextTransition.StaticClass()) : null) as UUITextTransition;
 		}
 
-		// Token: 0x06041024 RID: 266276 RVA: 0x00FC12A3 File Offset: 0x00FBF4A3
+		// Token: 0x06035CE9 RID: 220393 RVA: 0x00F0828B File Offset: 0x00F0648B
 		private static void SetStateFontColor(FTextTransitionInfoOfState state, FColor color)
 		{
 			state.FontColor = color;
 			state.bSetFontColor = true;
 		}
 
-		// Token: 0x06041025 RID: 266277 RVA: 0x00FC12B3 File Offset: 0x00FBF4B3
+		// Token: 0x06035CEA RID: 220394 RVA: 0x00F0829B File Offset: 0x00F0649B
 		private static void SetDayTextTransitionUniform(UUITextTransition transition, FColor color)
 		{
 			FTextTransitionInfo transitionInfo = transition.TransitionInfo;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			LinkageRewardDayTextUtil.SetStateFontColor(transitionInfo.DisabledTransition, color);
 		}
 
-		// Token: 0x06041026 RID: 266278 RVA: 0x00FC12EA File Offset: 0x00FBF4EA
+		// Token: 0x06035CEB RID: 220395 RVA: 0x00F082D2 File Offset: 0x00F064D2
 		private static void SetDayTextTransitionPending(UUITextTransition transition, FColor normal, FColor hover, FColor pressed)
 		{
 			FTextTransitionInfo transitionInfo = transition.TransitionInfo;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			LinkageRewardDayTextUtil.SetStateFontColor(transitionInfo.DisabledTransition, normal);
 		}
 
-		// Token: 0x06041027 RID: 266279 RVA: 0x00FC1324 File Offset: 0x00FBF524
+		// Token: 0x06035CEC RID: 220396 RVA: 0x00F0830C File Offset: 0x00F0650C
 		[NullableContext(2)]
 		public static void ApplyLinkageRewardKeepMilestoneDayTextStyle(UUIText text, ETimePointRewardState state)
 		{
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LinkageReward
 			}
 		}
 
-		// Token: 0x06041028 RID: 266280 RVA: 0x00FC13C8 File Offset: 0x00FBF5C8
+		// Token: 0x06035CED RID: 220397 RVA: 0x00F083B0 File Offset: 0x00F065B0
 		[NullableContext(2)]
 		public static void ApplyLinkageRewardDayTextStyle(UUIText text, ETimePointRewardState state)
 		{

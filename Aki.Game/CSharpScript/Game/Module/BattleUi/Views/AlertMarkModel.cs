@@ -5,20 +5,20 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CAD RID: 23725
+	// Token: 0x02004C8F RID: 19599
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class AlertMarkModel : ModelBase
 	{
-		// Token: 0x0603BEF5 RID: 245493 RVA: 0x00E5279B File Offset: 0x00E5099B
+		// Token: 0x06030E48 RID: 200264 RVA: 0x00DA2E43 File Offset: 0x00DA1043
 		public void AddPendingMarkInfo(int id, AActor trackActor, EAlertnessType type, float showDist)
 		{
 			this.PendingMarkInfos[id] = new ValueTuple<AActor, EAlertnessType, float>(trackActor, type, showDist);
 		}
 
-		// Token: 0x17008DF0 RID: 36336
-		// (get) Token: 0x0603BEF6 RID: 245494 RVA: 0x00E527B2 File Offset: 0x00E509B2
+		// Token: 0x170061C2 RID: 25026
+		// (get) Token: 0x06030E49 RID: 200265 RVA: 0x00DA2E5A File Offset: 0x00DA105A
 		public static AlertMarkModel Instance
 		{
 			get
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603BEF7 RID: 245495 RVA: 0x00E527B9 File Offset: 0x00E509B9
+		// Token: 0x06030E4A RID: 200266 RVA: 0x00DA2E61 File Offset: 0x00DA1061
 		public static AlertMarkModel GetOrCreateInstance()
 		{
 			if (AlertMarkModel._Instance == null)
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return AlertMarkModel._Instance;
 		}
 
-		// Token: 0x0603BEF8 RID: 245496 RVA: 0x00E527CD File Offset: 0x00E509CD
+		// Token: 0x06030E4B RID: 200267 RVA: 0x00DA2E75 File Offset: 0x00DA1075
 		public static bool CreateInstance()
 		{
 			if (AlertMarkModel._Instance != null)
@@ -48,27 +48,27 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return true;
 		}
 
-		// Token: 0x0603BEF9 RID: 245497 RVA: 0x00E527E3 File Offset: 0x00E509E3
+		// Token: 0x06030E4C RID: 200268 RVA: 0x00DA2E8B File Offset: 0x00DA108B
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603BEFA RID: 245498 RVA: 0x00E527E5 File Offset: 0x00E509E5
+		// Token: 0x06030E4D RID: 200269 RVA: 0x00DA2E8D File Offset: 0x00DA108D
 		public static void ResetStaticDefaultValue()
 		{
 			AlertMarkModel._Instance = null;
 		}
 
-		// Token: 0x0603BEFB RID: 245499 RVA: 0x00E527ED File Offset: 0x00E509ED
+		// Token: 0x06030E4E RID: 200270 RVA: 0x00DA2E95 File Offset: 0x00DA1095
 		static AlertMarkModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(AlertMarkModel.CreateStaticDefaultValue), new Action(AlertMarkModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401F46C RID: 128108
+		// Token: 0x04019F25 RID: 106277
 		public bool AlertMarkInit;
 
-		// Token: 0x0401F46D RID: 128109
+		// Token: 0x04019F26 RID: 106278
 		[TupleElementNames(new string[]
 		{
 			"trackActor",
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 		})]
 		public readonly Dictionary<int, ValueTuple<AActor, EAlertnessType, float>> PendingMarkInfos = new Dictionary<int, ValueTuple<AActor, EAlertnessType, float>>();
 
-		// Token: 0x0401F46E RID: 128110
+		// Token: 0x04019F27 RID: 106279
 		[Nullable(2)]
 		private static AlertMarkModel _Instance;
 	}

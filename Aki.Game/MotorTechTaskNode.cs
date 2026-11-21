@@ -1,43 +1,43 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002259 RID: 8793
+// Token: 0x0200173D RID: 5949
 [NullableContext(1)]
 [Nullable(0)]
 public class MotorTechTaskNode
 {
-	// Token: 0x170015D1 RID: 5585
-	// (get) Token: 0x0601125A RID: 70234 RVA: 0x0042E2A1 File Offset: 0x0042C4A1
-	// (set) Token: 0x0601125B RID: 70235 RVA: 0x0042E2A9 File Offset: 0x0042C4A9
+	// Token: 0x17001608 RID: 5640
+	// (get) Token: 0x0600E6F0 RID: 59120 RVA: 0x0043AE41 File Offset: 0x00439041
+	// (set) Token: 0x0600E6F1 RID: 59121 RVA: 0x0043AE49 File Offset: 0x00439049
 	public int TaskId { get; set; }
 
-	// Token: 0x170015D2 RID: 5586
-	// (get) Token: 0x0601125C RID: 70236 RVA: 0x0042E2B2 File Offset: 0x0042C4B2
-	// (set) Token: 0x0601125D RID: 70237 RVA: 0x0042E2BA File Offset: 0x0042C4BA
+	// Token: 0x17001609 RID: 5641
+	// (get) Token: 0x0600E6F2 RID: 59122 RVA: 0x0043AE52 File Offset: 0x00439052
+	// (set) Token: 0x0600E6F3 RID: 59123 RVA: 0x0043AE5A File Offset: 0x0043905A
 	public int TreeType { get; set; }
 
-	// Token: 0x170015D3 RID: 5587
-	// (get) Token: 0x0601125E RID: 70238 RVA: 0x0042E2C3 File Offset: 0x0042C4C3
-	// (set) Token: 0x0601125F RID: 70239 RVA: 0x0042E2CB File Offset: 0x0042C4CB
+	// Token: 0x1700160A RID: 5642
+	// (get) Token: 0x0600E6F4 RID: 59124 RVA: 0x0043AE63 File Offset: 0x00439063
+	// (set) Token: 0x0600E6F5 RID: 59125 RVA: 0x0043AE6B File Offset: 0x0043906B
 	public EMotorTechTaskType Type { get; set; }
 
-	// Token: 0x170015D4 RID: 5588
-	// (get) Token: 0x06011260 RID: 70240 RVA: 0x0042E2D4 File Offset: 0x0042C4D4
-	// (set) Token: 0x06011261 RID: 70241 RVA: 0x0042E2DC File Offset: 0x0042C4DC
+	// Token: 0x1700160B RID: 5643
+	// (get) Token: 0x0600E6F6 RID: 59126 RVA: 0x0043AE74 File Offset: 0x00439074
+	// (set) Token: 0x0600E6F7 RID: 59127 RVA: 0x0043AE7C File Offset: 0x0043907C
 	public long StartTime { get; set; }
 
-	// Token: 0x170015D5 RID: 5589
-	// (get) Token: 0x06011262 RID: 70242 RVA: 0x0042E2E5 File Offset: 0x0042C4E5
-	// (set) Token: 0x06011263 RID: 70243 RVA: 0x0042E2ED File Offset: 0x0042C4ED
+	// Token: 0x1700160C RID: 5644
+	// (get) Token: 0x0600E6F8 RID: 59128 RVA: 0x0043AE85 File Offset: 0x00439085
+	// (set) Token: 0x0600E6F9 RID: 59129 RVA: 0x0043AE8D File Offset: 0x0043908D
 	public long EndTime { get; set; }
 
-	// Token: 0x170015D6 RID: 5590
-	// (get) Token: 0x06011264 RID: 70244 RVA: 0x0042E2F6 File Offset: 0x0042C4F6
-	// (set) Token: 0x06011265 RID: 70245 RVA: 0x0042E2FE File Offset: 0x0042C4FE
+	// Token: 0x1700160D RID: 5645
+	// (get) Token: 0x0600E6FA RID: 59130 RVA: 0x0043AE96 File Offset: 0x00439096
+	// (set) Token: 0x0600E6FB RID: 59131 RVA: 0x0043AE9E File Offset: 0x0043909E
 	public MotorTechTaskProcess ProcessInfo { get; set; } = new MotorTechTaskProcess();
 
-	// Token: 0x170015D7 RID: 5591
-	// (get) Token: 0x06011266 RID: 70246 RVA: 0x0042E307 File Offset: 0x0042C507
-	// (set) Token: 0x06011267 RID: 70247 RVA: 0x0042E30F File Offset: 0x0042C50F
+	// Token: 0x1700160E RID: 5646
+	// (get) Token: 0x0600E6FC RID: 59132 RVA: 0x0043AEA7 File Offset: 0x004390A7
+	// (set) Token: 0x0600E6FD RID: 59133 RVA: 0x0043AEAF File Offset: 0x004390AF
 	public MotorTechTaskReward RewardInfo { get; set; } = new MotorTechTaskReward();
 }

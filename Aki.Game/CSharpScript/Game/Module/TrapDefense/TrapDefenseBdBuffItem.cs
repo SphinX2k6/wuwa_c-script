@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004ADB RID: 19163
+	// Token: 0x02003A83 RID: 14979
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,21 +17,21 @@ namespace CSharpScript.Game.Module.TrapDefense
 	})]
 	public class TrapDefenseBdBuffItem : LoopScrollMediumItemGrid<TrapDefenseBdBuffData>
 	{
-		// Token: 0x06031A21 RID: 203297 RVA: 0x00B83CD9 File Offset: 0x00B81ED9
+		// Token: 0x060267B1 RID: 157617 RVA: 0x00AC7C8D File Offset: 0x00AC5E8D
 		protected override void OnStart()
 		{
 			base.SetUseFixedAsync(true);
 			this.AllComponentLoadedCallback = new Action(this.OnAllComponentLoadedCallback);
 		}
 
-		// Token: 0x06031A22 RID: 203298 RVA: 0x00B83CF4 File Offset: 0x00B81EF4
+		// Token: 0x060267B2 RID: 157618 RVA: 0x00AC7CA8 File Offset: 0x00AC5EA8
 		protected override void OnRefresh(TrapDefenseBdBuffData data, bool isSelected, int gridIndex)
 		{
 			this.BdBuffData = data;
 			this.UpdateBuffInfo();
 		}
 
-		// Token: 0x06031A23 RID: 203299 RVA: 0x00B83D04 File Offset: 0x00B81F04
+		// Token: 0x060267B3 RID: 157619 RVA: 0x00AC7CB8 File Offset: 0x00AC5EB8
 		public void UpdateBuffInfo()
 		{
 			if (this.IsAnyComponentLoading)
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			base.Apply<PropMediumItemGrid>(parameters);
 		}
 
-		// Token: 0x06031A24 RID: 203300 RVA: 0x00B83E10 File Offset: 0x00B82010
+		// Token: 0x060267B4 RID: 157620 RVA: 0x00AC7DC4 File Offset: 0x00AC5FC4
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetSelected(true, false);
@@ -72,18 +72,18 @@ namespace CSharpScript.Game.Module.TrapDefense
 			onSelectBuffItemCallback(this.BdBuffData, this);
 		}
 
-		// Token: 0x06031A25 RID: 203301 RVA: 0x00B83E31 File Offset: 0x00B82031
+		// Token: 0x060267B5 RID: 157621 RVA: 0x00AC7DE5 File Offset: 0x00AC5FE5
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetSelected(false, false);
 		}
 
-		// Token: 0x06031A26 RID: 203302 RVA: 0x00B83E3B File Offset: 0x00B8203B
+		// Token: 0x060267B6 RID: 157622 RVA: 0x00AC7DEF File Offset: 0x00AC5FEF
 		protected override void OnBeforeDestroy()
 		{
 		}
 
-		// Token: 0x06031A27 RID: 203303 RVA: 0x00B83E3D File Offset: 0x00B8203D
+		// Token: 0x060267B7 RID: 157623 RVA: 0x00AC7DF1 File Offset: 0x00AC5FF1
 		protected override void OnExtendToggleStateChanged(EToggleState state)
 		{
 			if (state != EToggleState.ETT_Checked)
@@ -102,14 +102,14 @@ namespace CSharpScript.Game.Module.TrapDefense
 			scrollViewDelegate.SelectGridProxy(base.GridIndex, base.DisplayIndex, false);
 		}
 
-		// Token: 0x06031A28 RID: 203304 RVA: 0x00B83E71 File Offset: 0x00B82071
+		// Token: 0x060267B8 RID: 157624 RVA: 0x00AC7E25 File Offset: 0x00AC6025
 		protected override bool OnCanExecuteChange()
 		{
 			Func<TrapDefenseBdBuffData, bool> canExecuteChangeCallback = this.CanExecuteChangeCallback;
 			return canExecuteChangeCallback == null || canExecuteChangeCallback(this.BdBuffData);
 		}
 
-		// Token: 0x06031A29 RID: 203305 RVA: 0x00B83E8A File Offset: 0x00B8208A
+		// Token: 0x060267B9 RID: 157625 RVA: 0x00AC7E3E File Offset: 0x00AC603E
 		protected override void OnExtendToggleClicked()
 		{
 			Action<TrapDefenseBdBuffData> onClickBuffItemCallback = this.OnClickBuffItemCallback;
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			onClickBuffItemCallback(this.BdBuffData);
 		}
 
-		// Token: 0x06031A2A RID: 203306 RVA: 0x00B83EA2 File Offset: 0x00B820A2
+		// Token: 0x060267BA RID: 157626 RVA: 0x00AC7E56 File Offset: 0x00AC6056
 		private void OnAllComponentLoadedCallback()
 		{
 			if (this.IsNeedUpdate)
@@ -130,34 +130,34 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031A2B RID: 203307 RVA: 0x00B83EB9 File Offset: 0x00B820B9
+		// Token: 0x060267BB RID: 157627 RVA: 0x00AC7E6D File Offset: 0x00AC606D
 		[Conditional("WITH_EDITOR")]
 		private void EditorShowActorLabel()
 		{
 		}
 
-		// Token: 0x0401A826 RID: 108582
+		// Token: 0x04015178 RID: 86392
 		protected TrapDefenseBdBuffData BdBuffData;
 
-		// Token: 0x0401A827 RID: 108583
+		// Token: 0x04015179 RID: 86393
 		public Action<TrapDefenseBdBuffData, TrapDefenseBdBuffItem> OnSelectBuffItemCallback;
 
-		// Token: 0x0401A828 RID: 108584
+		// Token: 0x0401517A RID: 86394
 		public Action<TrapDefenseBdBuffData> OnClickBuffItemCallback;
 
-		// Token: 0x0401A829 RID: 108585
+		// Token: 0x0401517B RID: 86395
 		public Func<TrapDefenseBdBuffData, bool> CanExecuteChangeCallback;
 
-		// Token: 0x0401A82A RID: 108586
+		// Token: 0x0401517C RID: 86396
 		public Func<TrapDefenseBdBuffData, bool> OnIsShowBdBuffLockStateCallback;
 
-		// Token: 0x0401A82B RID: 108587
+		// Token: 0x0401517D RID: 86397
 		public Func<TrapDefenseBdBuffData, bool> OnIsNewTagStateCallback;
 
-		// Token: 0x0401A82C RID: 108588
+		// Token: 0x0401517E RID: 86398
 		public Func<TrapDefenseBdBuffData, TrapDefenseBdBuff> OnGetBdBuffConfig;
 
-		// Token: 0x0401A82D RID: 108589
+		// Token: 0x0401517F RID: 86399
 		private bool IsNeedUpdate;
 	}
 }

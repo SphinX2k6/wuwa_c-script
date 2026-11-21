@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnrealEngine;
 
-// Token: 0x0200181E RID: 6174
+// Token: 0x02000CD7 RID: 3287
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -13,12 +13,12 @@ using UnrealEngine;
 })]
 public class OneTextDropDownItem : DropDownItemBase<TableTextArgNew>
 {
-	// Token: 0x0600B51D RID: 46365 RVA: 0x0028E295 File Offset: 0x0028C495
+	// Token: 0x06008908 RID: 35080 RVA: 0x002989B5 File Offset: 0x00296BB5
 	public OneTextDropDownItem(UUIItem uiItem) : base(uiItem)
 	{
 	}
 
-	// Token: 0x0600B51E RID: 46366 RVA: 0x0028E2A0 File Offset: 0x0028C4A0
+	// Token: 0x06008909 RID: 35081 RVA: 0x002989C0 File Offset: 0x00296BC0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -32,27 +32,27 @@ public class OneTextDropDownItem : DropDownItemBase<TableTextArgNew>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600B51F RID: 46367 RVA: 0x0028E309 File Offset: 0x0028C509
+	// Token: 0x0600890A RID: 35082 RVA: 0x00298A29 File Offset: 0x00296C29
 	[NullableContext(2)]
 	protected override UUIExtendToggle GetDropDownToggle()
 	{
 		return base.GetExtendToggle(0);
 	}
 
-	// Token: 0x0600B520 RID: 46368 RVA: 0x0028E312 File Offset: 0x0028C512
+	// Token: 0x0600890B RID: 35083 RVA: 0x00298A32 File Offset: 0x00296C32
 	protected override void OnShowDropDownItemBase(TableTextArgNew tableText)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), tableText.TextKey, tableText.Params);
 	}
 
-	// Token: 0x02007E0A RID: 32266
+	// Token: 0x02006F90 RID: 28560
 	[NullableContext(0)]
 	private class ECompDefine
 	{
-		// Token: 0x040293FC RID: 168956
+		// Token: 0x04024727 RID: 149287
 		public const int Toggle = 0;
 
-		// Token: 0x040293FD RID: 168957
+		// Token: 0x04024728 RID: 149288
 		public const int Content = 1;
 	}
 }

@@ -6,15 +6,15 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.World.Controller
 {
-	// Token: 0x0200453A RID: 17722
+	// Token: 0x02003462 RID: 13410
 	[NullableContext(1)]
 	[Nullable(0)]
 	[TickController(0)]
 	public class PlayerSoarMonitorController : ControllerBase
 	{
-		// Token: 0x17007542 RID: 30018
-		// (get) Token: 0x0602DCB4 RID: 187572 RVA: 0x00A862A7 File Offset: 0x00A844A7
-		// (set) Token: 0x0602DCB5 RID: 187573 RVA: 0x00A862AF File Offset: 0x00A844AF
+		// Token: 0x170047F9 RID: 18425
+		// (get) Token: 0x06022396 RID: 140182 RVA: 0x009B1ACF File Offset: 0x009AFCCF
+		// (set) Token: 0x06022397 RID: 140183 RVA: 0x009B1AD7 File Offset: 0x009AFCD7
 		public bool IsPlayerSoar
 		{
 			get
@@ -32,8 +32,8 @@ namespace CSharpScript.Game.World.Controller
 			}
 		}
 
-		// Token: 0x17007543 RID: 30019
-		// (get) Token: 0x0602DCB6 RID: 187574 RVA: 0x00A862D3 File Offset: 0x00A844D3
+		// Token: 0x170047FA RID: 18426
+		// (get) Token: 0x06022398 RID: 140184 RVA: 0x009B1AFB File Offset: 0x009AFCFB
 		public bool EnableSlowStreaming
 		{
 			get
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.World.Controller
 			}
 		}
 
-		// Token: 0x0602DCB7 RID: 187575 RVA: 0x00A862DB File Offset: 0x00A844DB
+		// Token: 0x06022399 RID: 140185 RVA: 0x009B1B03 File Offset: 0x009AFD03
 		protected override bool OnInit()
 		{
 			this.PlayerSoarMonitorFilter = EntityToLoadFilter.Create();
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.World.Controller
 			return base.OnInit();
 		}
 
-		// Token: 0x0602DCB8 RID: 187576 RVA: 0x00A862FD File Offset: 0x00A844FD
+		// Token: 0x0602239A RID: 140186 RVA: 0x009B1B25 File Offset: 0x009AFD25
 		private void InitConsoleVariables()
 		{
 			this.HeightThreshould = (float)UKismetSystemLibrary.GetConsoleVariableIntValue("wp.Runtime.SoraGridBlackListHeight");
@@ -61,21 +61,21 @@ namespace CSharpScript.Game.World.Controller
 			}
 		}
 
-		// Token: 0x0602DCB9 RID: 187577 RVA: 0x00A86328 File Offset: 0x00A84528
+		// Token: 0x0602239B RID: 140187 RVA: 0x009B1B50 File Offset: 0x009AFD50
 		protected override void OnTick(float deltaTime)
 		{
 			this.CheckPlayerMoveState();
 			this.CheckEnableSlowStreaming();
 		}
 
-		// Token: 0x0602DCBA RID: 187578 RVA: 0x00A86336 File Offset: 0x00A84536
+		// Token: 0x0602239C RID: 140188 RVA: 0x009B1B5E File Offset: 0x009AFD5E
 		protected override bool OnClear()
 		{
 			this.PlayerSoarMonitorFilter.Cleanup();
 			return base.OnClear();
 		}
 
-		// Token: 0x0602DCBB RID: 187579 RVA: 0x00A8634C File Offset: 0x00A8454C
+		// Token: 0x0602239D RID: 140189 RVA: 0x009B1B74 File Offset: 0x009AFD74
 		private void CheckPlayerMoveState()
 		{
 			EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.World.Controller
 			this.IsPlayerSoar = (component.MoveState == ECharMoveState.Soar);
 		}
 
-		// Token: 0x0602DCBC RID: 187580 RVA: 0x00A86398 File Offset: 0x00A84598
+		// Token: 0x0602239E RID: 140190 RVA: 0x009B1BC0 File Offset: 0x009AFDC0
 		private void CheckEnableSlowStreaming()
 		{
 			bool flag = this.IsPlayerSoar && this.CheckHeight();
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.World.Controller
 			}
 		}
 
-		// Token: 0x0602DCBD RID: 187581 RVA: 0x00A863E0 File Offset: 0x00A845E0
+		// Token: 0x0602239F RID: 140191 RVA: 0x009B1C08 File Offset: 0x009AFE08
 		private bool CheckHeight()
 		{
 			EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -116,8 +116,8 @@ namespace CSharpScript.Game.World.Controller
 			return component != null && component.GetHeightAboveGround(this.HeightThreshould + 1f) > this.HeightThreshould;
 		}
 
-		// Token: 0x17007544 RID: 30020
-		// (get) Token: 0x0602DCBE RID: 187582 RVA: 0x00A86428 File Offset: 0x00A84628
+		// Token: 0x170047FB RID: 18427
+		// (get) Token: 0x060223A0 RID: 140192 RVA: 0x009B1C50 File Offset: 0x009AFE50
 		public static PlayerSoarMonitorController Instance
 		{
 			get
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.World.Controller
 			}
 		}
 
-		// Token: 0x0602DCBF RID: 187583 RVA: 0x00A8642F File Offset: 0x00A8462F
+		// Token: 0x060223A1 RID: 140193 RVA: 0x009B1C57 File Offset: 0x009AFE57
 		public static PlayerSoarMonitorController GetOrCreateInstance()
 		{
 			if (PlayerSoarMonitorController._Instance == null)
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.World.Controller
 			return PlayerSoarMonitorController._Instance;
 		}
 
-		// Token: 0x0602DCC0 RID: 187584 RVA: 0x00A86443 File Offset: 0x00A84643
+		// Token: 0x060223A2 RID: 140194 RVA: 0x009B1C6B File Offset: 0x009AFE6B
 		public static bool CreateInstance()
 		{
 			if (PlayerSoarMonitorController._Instance != null)
@@ -147,45 +147,45 @@ namespace CSharpScript.Game.World.Controller
 			return true;
 		}
 
-		// Token: 0x0602DCC1 RID: 187585 RVA: 0x00A86459 File Offset: 0x00A84659
+		// Token: 0x060223A3 RID: 140195 RVA: 0x009B1C81 File Offset: 0x009AFE81
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602DCC2 RID: 187586 RVA: 0x00A8645B File Offset: 0x00A8465B
+		// Token: 0x060223A4 RID: 140196 RVA: 0x009B1C83 File Offset: 0x009AFE83
 		public static void ResetStaticDefaultValue()
 		{
 			PlayerSoarMonitorController._Instance = null;
 		}
 
-		// Token: 0x0602DCC3 RID: 187587 RVA: 0x00A86463 File Offset: 0x00A84663
+		// Token: 0x060223A5 RID: 140197 RVA: 0x009B1C8B File Offset: 0x009AFE8B
 		static PlayerSoarMonitorController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(PlayerSoarMonitorController.CreateStaticDefaultValue), new Action(PlayerSoarMonitorController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401874D RID: 100173
+		// Token: 0x04012D87 RID: 77191
 		public const int SLOW_STREAMING_HEIGHT_THRESHOULD = 1500;
 
-		// Token: 0x0401874E RID: 100174
+		// Token: 0x04012D88 RID: 77192
 		private const string SLOW_STREAMING_HEIGHT_THRESHOULD_CVAR = "wp.Runtime.SoraGridBlackListHeight";
 
-		// Token: 0x0401874F RID: 100175
+		// Token: 0x04012D89 RID: 77193
 		public const bool ENABLE_SLOW_STREAMING_ENTITY_FILTER = true;
 
-		// Token: 0x04018750 RID: 100176
+		// Token: 0x04012D8A RID: 77194
 		private bool IsPlayerSoarInternal;
 
-		// Token: 0x04018751 RID: 100177
+		// Token: 0x04012D8B RID: 77195
 		private bool EnableSlowStreamingInternal;
 
-		// Token: 0x04018752 RID: 100178
+		// Token: 0x04012D8C RID: 77196
 		private EntityToLoadFilter PlayerSoarMonitorFilter;
 
-		// Token: 0x04018753 RID: 100179
+		// Token: 0x04012D8D RID: 77197
 		public float HeightThreshould;
 
-		// Token: 0x04018754 RID: 100180
+		// Token: 0x04012D8E RID: 77198
 		[Nullable(2)]
 		private static PlayerSoarMonitorController _Instance;
 	}

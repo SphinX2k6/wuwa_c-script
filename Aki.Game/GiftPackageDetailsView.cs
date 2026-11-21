@@ -12,18 +12,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002399 RID: 9113
+// Token: 0x0200187E RID: 6270
 [NullableContext(2)]
 [Nullable(0)]
 public class GiftPackageDetailsView : UiViewBase
 {
-	// Token: 0x0601238A RID: 74634 RVA: 0x0047CA7E File Offset: 0x0047AC7E
+	// Token: 0x0600F83C RID: 63548 RVA: 0x00489EBE File Offset: 0x004880BE
 	[NullableContext(1)]
 	public GiftPackageDetailsView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0601238B RID: 74635 RVA: 0x0047CA90 File Offset: 0x0047AC90
+	// Token: 0x0600F83D RID: 63549 RVA: 0x00489ED0 File Offset: 0x004880D0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 18;
@@ -76,13 +76,13 @@ public class GiftPackageDetailsView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0601238C RID: 74636 RVA: 0x0047CD50 File Offset: 0x0047AF50
+	// Token: 0x0600F83E RID: 63550 RVA: 0x0048A190 File Offset: 0x00488390
 	private void CancelClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0601238D RID: 74637 RVA: 0x0047CD5C File Offset: 0x0047AF5C
+	// Token: 0x0600F83F RID: 63551 RVA: 0x0048A19C File Offset: 0x0048839C
 	private void ConfirmClick()
 	{
 		if (this.GoodsData.PayPackageType.GetValueOrDefault() == EPayGiftType.CdkGift)
@@ -95,7 +95,7 @@ public class GiftPackageDetailsView : UiViewBase
 		this.DoConfirmPurchase();
 	}
 
-	// Token: 0x0601238E RID: 74638 RVA: 0x0047CDB4 File Offset: 0x0047AFB4
+	// Token: 0x0600F840 RID: 63552 RVA: 0x0048A1F4 File Offset: 0x004883F4
 	private void DoConfirmPurchase()
 	{
 		if (this.IsEnoughMoney() && this.GoodsData.IfPayGift())
@@ -123,7 +123,7 @@ public class GiftPackageDetailsView : UiViewBase
 		});
 	}
 
-	// Token: 0x0601238F RID: 74639 RVA: 0x0047CE9C File Offset: 0x0047B09C
+	// Token: 0x0600F841 RID: 63553 RVA: 0x0048A2DC File Offset: 0x004884DC
 	protected override void OnBeforeCreate()
 	{
 		ExchangePopData exchangePopData = (ExchangePopData)this.OpenParam;
@@ -153,7 +153,7 @@ public class GiftPackageDetailsView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012390 RID: 74640 RVA: 0x0047CFBC File Offset: 0x0047B1BC
+	// Token: 0x0600F842 RID: 63554 RVA: 0x0048A3FC File Offset: 0x004885FC
 	protected override UniTask OnCreateAsync()
 	{
 		GiftPackageDetailsView.<OnCreateAsync>d__17 <OnCreateAsync>d__;
@@ -164,7 +164,7 @@ public class GiftPackageDetailsView : UiViewBase
 		return <OnCreateAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012391 RID: 74641 RVA: 0x0047D000 File Offset: 0x0047B200
+	// Token: 0x0600F843 RID: 63555 RVA: 0x0048A440 File Offset: 0x00488640
 	[NullableContext(1)]
 	private UniTask InitItem(PayShopGoods data)
 	{
@@ -177,19 +177,19 @@ public class GiftPackageDetailsView : UiViewBase
 		return <InitItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012392 RID: 74642 RVA: 0x0047D04B File Offset: 0x0047B24B
+	// Token: 0x0600F844 RID: 63556 RVA: 0x0048A48B File Offset: 0x0048868B
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.PayShopGoodsBuy, new Action(this.CancelClick));
 	}
 
-	// Token: 0x06012393 RID: 74643 RVA: 0x0047D069 File Offset: 0x0047B269
+	// Token: 0x0600F845 RID: 63557 RVA: 0x0048A4A9 File Offset: 0x004886A9
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.PayShopGoodsBuy, new Action(this.CancelClick));
 	}
 
-	// Token: 0x06012394 RID: 74644 RVA: 0x0047D088 File Offset: 0x0047B288
+	// Token: 0x0600F846 RID: 63558 RVA: 0x0048A4C8 File Offset: 0x004886C8
 	protected override void OnStart()
 	{
 		if (this.Id == null)
@@ -241,7 +241,7 @@ public class GiftPackageDetailsView : UiViewBase
 		skinItem2.SetActive(true);
 	}
 
-	// Token: 0x06012395 RID: 74645 RVA: 0x0047D194 File Offset: 0x0047B394
+	// Token: 0x0600F847 RID: 63559 RVA: 0x0048A5D4 File Offset: 0x004887D4
 	protected override void OnBeforeShow()
 	{
 		PayShopItem payShopItem = this.PayShopItem;
@@ -268,7 +268,7 @@ public class GiftPackageDetailsView : UiViewBase
 		this.RefreshTotalTopUpTips();
 	}
 
-	// Token: 0x06012396 RID: 74646 RVA: 0x0047D214 File Offset: 0x0047B414
+	// Token: 0x0600F848 RID: 63560 RVA: 0x0048A654 File Offset: 0x00488854
 	private void RefreshPayShopItemLeftTimeTextShowState()
 	{
 		int monthCardShopId = PayShopConfig.Instance.GetMonthCardShopId();
@@ -284,7 +284,7 @@ public class GiftPackageDetailsView : UiViewBase
 		}
 	}
 
-	// Token: 0x06012397 RID: 74647 RVA: 0x0047D254 File Offset: 0x0047B454
+	// Token: 0x0600F849 RID: 63561 RVA: 0x0048A694 File Offset: 0x00488894
 	private UniTask RefreshCurrency()
 	{
 		GiftPackageDetailsView.<RefreshCurrency>d__24 <RefreshCurrency>d__;
@@ -295,13 +295,13 @@ public class GiftPackageDetailsView : UiViewBase
 		return <RefreshCurrency>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012398 RID: 74648 RVA: 0x0047D297 File Offset: 0x0047B497
+	// Token: 0x0600F84A RID: 63562 RVA: 0x0048A6D7 File Offset: 0x004888D7
 	private void RefreshCloudGameTip()
 	{
 		base.GetItem(9).SetUIActive(this.Goods.HasCloudGameInfo() && !this.Goods.GetIfNeedExtraLimitText());
 	}
 
-	// Token: 0x06012399 RID: 74649 RVA: 0x0047D2C4 File Offset: 0x0047B4C4
+	// Token: 0x0600F84B RID: 63563 RVA: 0x0048A704 File Offset: 0x00488904
 	private void RefreshItemCouponTip()
 	{
 		UUIItem item = base.GetItem(10);
@@ -326,7 +326,7 @@ public class GiftPackageDetailsView : UiViewBase
 		base.SetTextureByPath(availableCouponItem.GetConfig().As<ItemInfo>().Value.IconSmall, texture, null, null);
 	}
 
-	// Token: 0x0601239A RID: 74650 RVA: 0x0047D3EC File Offset: 0x0047B5EC
+	// Token: 0x0600F84C RID: 63564 RVA: 0x0048A82C File Offset: 0x00488A2C
 	private void RefreshTotalTopUpTips()
 	{
 		UUIItem item = base.GetItem(15);
@@ -359,13 +359,13 @@ public class GiftPackageDetailsView : UiViewBase
 		}
 	}
 
-	// Token: 0x0601239B RID: 74651 RVA: 0x0047D4B7 File Offset: 0x0047B6B7
+	// Token: 0x0600F84D RID: 63565 RVA: 0x0048A8F7 File Offset: 0x00488AF7
 	private void BeforeEnterPayShop()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0601239C RID: 74652 RVA: 0x0047D4C0 File Offset: 0x0047B6C0
+	// Token: 0x0600F84E RID: 63566 RVA: 0x0048A900 File Offset: 0x00488B00
 	protected override void OnBeforeDestroy()
 	{
 		if (this.LoadedItem != null)
@@ -375,7 +375,7 @@ public class GiftPackageDetailsView : UiViewBase
 		this.RemoveResellTimer();
 	}
 
-	// Token: 0x0601239D RID: 74653 RVA: 0x0047D4DC File Offset: 0x0047B6DC
+	// Token: 0x0600F84F RID: 63567 RVA: 0x0048A91C File Offset: 0x00488B1C
 	protected void RemoveResellTimer()
 	{
 		if (this.ResellTimerId != null)
@@ -385,7 +385,7 @@ public class GiftPackageDetailsView : UiViewBase
 		}
 	}
 
-	// Token: 0x0601239E RID: 74654 RVA: 0x0047D500 File Offset: 0x0047B700
+	// Token: 0x0600F850 RID: 63568 RVA: 0x0048A940 File Offset: 0x00488B40
 	private void RefreshReSellText()
 	{
 		this.RemoveResellTimer();
@@ -444,14 +444,14 @@ public class GiftPackageDetailsView : UiViewBase
 		}
 	}
 
-	// Token: 0x0601239F RID: 74655 RVA: 0x0047D68D File Offset: 0x0047B88D
+	// Token: 0x0600F851 RID: 63569 RVA: 0x0048AACD File Offset: 0x00488CCD
 	private void SetResellItemShowState(bool state)
 	{
 		base.GetItem(7).SetUIActive(state);
 		this.RefreshDisclaimerText(state);
 	}
 
-	// Token: 0x060123A0 RID: 74656 RVA: 0x0047D6A4 File Offset: 0x0047B8A4
+	// Token: 0x0600F852 RID: 63570 RVA: 0x0048AAE4 File Offset: 0x00488CE4
 	private void RefreshDisclaimerText(bool resellItemShowState)
 	{
 		PayShopGoodsData goodsData = this.GoodsData;
@@ -464,13 +464,13 @@ public class GiftPackageDetailsView : UiViewBase
 		}
 	}
 
-	// Token: 0x060123A1 RID: 74657 RVA: 0x0047D6F4 File Offset: 0x0047B8F4
+	// Token: 0x0600F853 RID: 63571 RVA: 0x0048AB34 File Offset: 0x00488D34
 	protected bool IsEnoughMoney()
 	{
 		return this.GoodsData.IsDirect() || this.Goods.GetPriceData().Enough;
 	}
 
-	// Token: 0x060123A2 RID: 74658 RVA: 0x0047D718 File Offset: 0x0047B918
+	// Token: 0x0600F854 RID: 63572 RVA: 0x0048AB58 File Offset: 0x00488D58
 	protected void SetInteractionGroup()
 	{
 		UUIInteractionGroup interactionGroup = base.GetInteractionGroup(6);
@@ -490,7 +490,7 @@ public class GiftPackageDetailsView : UiViewBase
 		confirmBtn.SetLocalTextNew(priceData.Enough ? "PrefabTextItem_2105804973_Text" : "CurrencyNotEnoughGo", Array.Empty<object>());
 	}
 
-	// Token: 0x040089AC RID: 35244
+	// Token: 0x04008AF3 RID: 35571
 	[Nullable(1)]
 	[StaticVariableRuleIgnore]
 	private static readonly IGiftItemRegistryEntry[] GiftItemRegistry = new IGiftItemRegistryEntry[]
@@ -515,89 +515,89 @@ public class GiftPackageDetailsView : UiViewBase
 		}
 	};
 
-	// Token: 0x040089AD RID: 35245
+	// Token: 0x04008AF4 RID: 35572
 	private PayShopItem PayShopItem;
 
-	// Token: 0x040089AE RID: 35246
+	// Token: 0x04008AF5 RID: 35573
 	private IGiftDisplayItem SkinItem;
 
-	// Token: 0x040089AF RID: 35247
+	// Token: 0x04008AF6 RID: 35574
 	protected PayShopGoods Goods;
 
-	// Token: 0x040089B0 RID: 35248
+	// Token: 0x04008AF7 RID: 35575
 	protected PayShopGoodsData GoodsData;
 
-	// Token: 0x040089B1 RID: 35249
+	// Token: 0x04008AF8 RID: 35576
 	protected TimerHandle ResellTimerId;
 
-	// Token: 0x040089B2 RID: 35250
+	// Token: 0x04008AF9 RID: 35577
 	protected ButtonItem ConfirmBtn;
 
-	// Token: 0x040089B3 RID: 35251
+	// Token: 0x04008AFA RID: 35578
 	private EItemFunctionType ItemType = EItemFunctionType.ManualOpenGift;
 
-	// Token: 0x040089B4 RID: 35252
+	// Token: 0x04008AFB RID: 35579
 	private UiPanelBase LoadedItem;
 
-	// Token: 0x040089B5 RID: 35253
+	// Token: 0x04008AFC RID: 35580
 	private int? Id;
 
-	// Token: 0x02008938 RID: 35128
+	// Token: 0x02007AC3 RID: 31427
 	[NullableContext(0)]
 	private class EGiftPackageDetailsViewDefine
 	{
-		// Token: 0x0402C9BA RID: 182714
+		// Token: 0x04027CD8 RID: 163032
 		public const int GiftItem = 0;
 
-		// Token: 0x0402C9BB RID: 182715
+		// Token: 0x04027CD9 RID: 163033
 		public const int GiftDetailItem = 1;
 
-		// Token: 0x0402C9BC RID: 182716
+		// Token: 0x04027CDA RID: 163034
 		public const int EndTimeItem = 2;
 
-		// Token: 0x0402C9BD RID: 182717
+		// Token: 0x04027CDB RID: 163035
 		public const int EndTimeText = 3;
 
-		// Token: 0x0402C9BE RID: 182718
+		// Token: 0x04027CDC RID: 163036
 		public const int CancelButton = 4;
 
-		// Token: 0x0402C9BF RID: 182719
+		// Token: 0x04027CDD RID: 163037
 		public const int ConfirmButton = 5;
 
-		// Token: 0x0402C9C0 RID: 182720
+		// Token: 0x04027CDE RID: 163038
 		public const int InteractionGroup = 6;
 
-		// Token: 0x0402C9C1 RID: 182721
+		// Token: 0x04027CDF RID: 163039
 		public const int ReSellItem = 7;
 
-		// Token: 0x0402C9C2 RID: 182722
+		// Token: 0x04027CE0 RID: 163040
 		public const int ReSellText = 8;
 
-		// Token: 0x0402C9C3 RID: 182723
+		// Token: 0x04027CE1 RID: 163041
 		public const int CloudGameTip = 9;
 
-		// Token: 0x0402C9C4 RID: 182724
+		// Token: 0x04027CE2 RID: 163042
 		public const int ItemCouponTip = 10;
 
-		// Token: 0x0402C9C5 RID: 182725
+		// Token: 0x04027CE3 RID: 163043
 		public const int TextCouponDiscount = 11;
 
-		// Token: 0x0402C9C6 RID: 182726
+		// Token: 0x04027CE4 RID: 163044
 		public const int TextureCouponIcon = 12;
 
-		// Token: 0x0402C9C7 RID: 182727
+		// Token: 0x04027CE5 RID: 163045
 		public const int DisclaimerPanel = 13;
 
-		// Token: 0x0402C9C8 RID: 182728
+		// Token: 0x04027CE6 RID: 163046
 		public const int DisclaimerText = 14;
 
-		// Token: 0x0402C9C9 RID: 182729
+		// Token: 0x04027CE7 RID: 163047
 		public const int ItemTotalTopUpTips = 15;
 
-		// Token: 0x0402C9CA RID: 182730
+		// Token: 0x04027CE8 RID: 163048
 		public const int TextTotalTopUpTips = 16;
 
-		// Token: 0x0402C9CB RID: 182731
+		// Token: 0x04027CE9 RID: 163049
 		public const int TextureTotalTopUpIcon = 17;
 	}
 }

@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x020027C7 RID: 10183
+// Token: 0x02001D42 RID: 7490
 public enum ETrialRoleType
 {
-	// Token: 0x04009D5F RID: 40287
+	// Token: 0x0400A148 RID: 41288
 	None,
-	// Token: 0x04009D60 RID: 40288
+	// Token: 0x0400A149 RID: 41289
 	NormalTrial,
-	// Token: 0x04009D61 RID: 40289
+	// Token: 0x0400A14A RID: 41290
 	NewbieSupportTrial,
-	// Token: 0x04009D62 RID: 40290
+	// Token: 0x0400A14B RID: 41291
 	ReturnSupportTrial,
-	// Token: 0x04009D63 RID: 40291
+	// Token: 0x0400A14C RID: 41292
 	NewbieSupportTrialV2
 }

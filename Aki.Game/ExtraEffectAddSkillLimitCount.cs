@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02002EF7 RID: 12023
+// Token: 0x0200244A RID: 9290
 [NullableContext(1)]
 [Nullable(0)]
 public class ExtraEffectAddSkillLimitCount : BuffEffect
 {
-	// Token: 0x06019AF5 RID: 105205 RVA: 0x006AF5BB File Offset: 0x006AD7BB
+	// Token: 0x06017400 RID: 95232 RVA: 0x006D58AF File Offset: 0x006D3AAF
 	public ExtraEffectAddSkillLimitCount(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019AF6 RID: 105206 RVA: 0x006AF5D8 File Offset: 0x006AD7D8
+	// Token: 0x06017401 RID: 95233 RVA: 0x006D58CC File Offset: 0x006D3ACC
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -36,7 +36,7 @@ public class ExtraEffectAddSkillLimitCount : BuffEffect
 		this.TargetType = ExtraEffectAddSkillLimitCount.ETargetType.Owner;
 	}
 
-	// Token: 0x06019AF7 RID: 105207 RVA: 0x006AF660 File Offset: 0x006AD860
+	// Token: 0x06017402 RID: 95234 RVA: 0x006D5954 File Offset: 0x006D3B54
 	public override void OnCreated()
 	{
 		BaseBuffComponent component = this.GetEffectTarget().GetComponent<BaseBuffComponent>();
@@ -60,7 +60,7 @@ public class ExtraEffectAddSkillLimitCount : BuffEffect
 		}
 	}
 
-	// Token: 0x06019AF8 RID: 105208 RVA: 0x006AF75C File Offset: 0x006AD95C
+	// Token: 0x06017403 RID: 95235 RVA: 0x006D5A50 File Offset: 0x006D3C50
 	public override void OnRemoved(bool bPremature)
 	{
 		BaseBuffComponent component = this.GetEffectTarget().GetComponent<BaseBuffComponent>();
@@ -83,14 +83,14 @@ public class ExtraEffectAddSkillLimitCount : BuffEffect
 		}
 	}
 
-	// Token: 0x06019AF9 RID: 105209 RVA: 0x006AF84C File Offset: 0x006ADA4C
+	// Token: 0x06017404 RID: 95236 RVA: 0x006D5B40 File Offset: 0x006D3D40
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
 		return null;
 	}
 
-	// Token: 0x06019AFA RID: 105210 RVA: 0x006AF850 File Offset: 0x006ADA50
+	// Token: 0x06017405 RID: 95237 RVA: 0x006D5B44 File Offset: 0x006D3D44
 	private Entity GetEffectTarget()
 	{
 		ExtraEffectAddSkillLimitCount.ETargetType targetType = this.TargetType;
@@ -104,7 +104,7 @@ public class ExtraEffectAddSkillLimitCount : BuffEffect
 		return base.ExactOwnerEntity;
 	}
 
-	// Token: 0x06019AFB RID: 105211 RVA: 0x006AF880 File Offset: 0x006ADA80
+	// Token: 0x06017406 RID: 95238 RVA: 0x006D5B74 File Offset: 0x006D3D74
 	private void OnChangeTeam()
 	{
 		foreach (int id in BaseBuffComponent.GetNewOrRemoveTeamEntityIds(this.TeamEntityIds, true))
@@ -182,7 +182,7 @@ public class ExtraEffectAddSkillLimitCount : BuffEffect
 		this.TeamEntityIds = BaseBuffComponent.GetCurrentEntityIds();
 	}
 
-	// Token: 0x0400C0B2 RID: 49330
+	// Token: 0x0400C453 RID: 50259
 	[Nullable(new byte[]
 	{
 		2,
@@ -190,23 +190,23 @@ public class ExtraEffectAddSkillLimitCount : BuffEffect
 	})]
 	private string[] SkillInfoIds;
 
-	// Token: 0x0400C0B3 RID: 49331
+	// Token: 0x0400C454 RID: 50260
 	[Nullable(2)]
 	private int[] SkillLimitCounts;
 
-	// Token: 0x0400C0B4 RID: 49332
+	// Token: 0x0400C455 RID: 50261
 	private ExtraEffectAddSkillLimitCount.ETargetType TargetType;
 
-	// Token: 0x0400C0B5 RID: 49333
+	// Token: 0x0400C456 RID: 50262
 	private List<int> TeamEntityIds = new List<int>();
 
-	// Token: 0x020095FC RID: 38396
+	// Token: 0x02008821 RID: 34849
 	[NullableContext(0)]
 	public enum ETargetType
 	{
-		// Token: 0x04030243 RID: 197187
+		// Token: 0x0402B8D8 RID: 178392
 		Owner,
-		// Token: 0x04030244 RID: 197188
+		// Token: 0x0402B8D9 RID: 178393
 		Instigator
 	}
 }

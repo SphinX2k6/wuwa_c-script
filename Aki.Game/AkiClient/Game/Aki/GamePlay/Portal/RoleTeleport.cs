@@ -8,17 +8,17 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.GamePlay.Portal
 {
-	// Token: 0x02003E59 RID: 15961
+	// Token: 0x0200314C RID: 12620
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class RoleTeleport : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06028203 RID: 164355 RVA: 0x009A4BC8 File Offset: 0x009A2DC8
+		// Token: 0x0601F0A2 RID: 127138 RVA: 0x00924E0F File Offset: 0x0092300F
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return RoleTeleport.StaticFunctionPtr();
 		}
 
-		// Token: 0x06028204 RID: 164356 RVA: 0x009A4BD4 File Offset: 0x009A2DD4
+		// Token: 0x0601F0A3 RID: 127139 RVA: 0x00924E1B File Offset: 0x0092301B
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (BP_KuroPortalCapture_C.__RoleTeleport__DelegateSignature_NativeFunctionPtr == IntPtr.Zero)
@@ -28,32 +28,31 @@ namespace AkiClient.Game.Aki.GamePlay.Portal
 			return BP_KuroPortalCapture_C.__RoleTeleport__DelegateSignature_NativeFunctionPtr;
 		}
 
-		// Token: 0x06028205 RID: 164357 RVA: 0x009A4BF7 File Offset: 0x009A2DF7
+		// Token: 0x0601F0A4 RID: 127140 RVA: 0x00924E3E File Offset: 0x0092303E
 		public RoleTeleport()
 		{
 		}
 
-		// Token: 0x06028206 RID: 164358 RVA: 0x009A4BFF File Offset: 0x009A2DFF
+		// Token: 0x0601F0A5 RID: 127141 RVA: 0x00924E46 File Offset: 0x00923046
 		[NullableContext(2)]
 		public RoleTeleport(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06028207 RID: 164359 RVA: 0x009A4C09 File Offset: 0x009A2E09
+		// Token: 0x0601F0A6 RID: 127142 RVA: 0x00924E50 File Offset: 0x00923050
 		public RoleTeleport(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06028208 RID: 164360 RVA: 0x009A4C14 File Offset: 0x009A2E14
+		// Token: 0x0601F0A7 RID: 127143 RVA: 0x00924E5B File Offset: 0x0092305B
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<FVector>) ?? ((Action<FVector>)Delegate.CreateDelegate(typeof(Action<FVector>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06028209 RID: 164361 RVA: 0x009A4C46 File Offset: 0x009A2E46
+		// Token: 0x0601F0A8 RID: 127144 RVA: 0x00924E8D File Offset: 0x0092308D
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action<FVector> Callback)
 		{
 			if (RoleTeleport.RegisterId == 0)
@@ -68,17 +67,15 @@ namespace AkiClient.Game.Aki.GamePlay.Portal
 			base.Add(Callback, RoleTeleport.RegisterId);
 		}
 
-		// Token: 0x0602820A RID: 164362 RVA: 0x009A4C80 File Offset: 0x009A2E80
+		// Token: 0x0601F0A9 RID: 127145 RVA: 0x00924EC7 File Offset: 0x009230C7
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action<FVector> Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0602820B RID: 164363 RVA: 0x009A4C8C File Offset: 0x009A2E8C
+		// Token: 0x0601F0AA RID: 127146 RVA: 0x00924ED0 File Offset: 0x009230D0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(FVector Velocity)
 		{
 			RoleTeleport.__RoleTeleport_DelegateParams* ptr = stackalloc RoleTeleport.__RoleTeleport_DelegateParams[(UIntPtr)27] + 15L / (long)sizeof(RoleTeleport.__RoleTeleport_DelegateParams) & -16L;
@@ -87,10 +84,9 @@ namespace AkiClient.Game.Aki.GamePlay.Portal
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x0602820C RID: 164364 RVA: 0x009A4CC8 File Offset: 0x009A2EC8
+		// Token: 0x0601F0AB RID: 127147 RVA: 0x00924F0C File Offset: 0x0092310C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<FVector> action = target as Action<FVector>;
@@ -101,28 +97,28 @@ namespace AkiClient.Game.Aki.GamePlay.Portal
 			action(((RoleTeleport.__RoleTeleport_DelegateParams*)__Parameters)->Velocity);
 		}
 
-		// Token: 0x040146C8 RID: 83656
+		// Token: 0x04010954 RID: 67924
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/GamePlay/Portal/BP_KuroPortalCapture.BP_KuroPortalCapture_C:RoleTeleport__DelegateSignature";
 
-		// Token: 0x040146C9 RID: 83657
+		// Token: 0x04010955 RID: 67925
 		private static int RegisterId;
 
-		// Token: 0x0200A2CA RID: 41674
+		// Token: 0x02008F1D RID: 36637
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 12)]
-		protected ref struct __RoleTeleport_DelegateParams
+		private ref struct __RoleTeleport_DelegateParams
 		{
-			// Token: 0x0403200B RID: 204811
+			// Token: 0x0402CC4E RID: 183374
 			[FieldOffset(0)]
 			public FVector Velocity;
 		}
 
-		// Token: 0x0200A2CB RID: 41675
+		// Token: 0x02008F1E RID: 36638
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0403200C RID: 204812
+			// Token: 0x0402CC4F RID: 183375
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

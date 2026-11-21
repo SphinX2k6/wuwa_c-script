@@ -4,7 +4,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Common.MediumItemGrid;
 using CSharpScript.Game.Module.RoleUi;
 
-// Token: 0x0200159C RID: 5532
+// Token: 0x02000A54 RID: 2644
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -13,7 +13,7 @@ using CSharpScript.Game.Module.RoleUi;
 })]
 public class WheelTowerRecommendRoleGridItem : LoopScrollMediumItemGrid<RoleDataWithBranch>
 {
-	// Token: 0x06009D86 RID: 40326 RVA: 0x00222CF8 File Offset: 0x00220EF8
+	// Token: 0x06007164 RID: 29028 RVA: 0x0022CAA8 File Offset: 0x0022ACA8
 	protected override void OnRefresh(RoleDataWithBranch data, bool isSelected, int gridIndex)
 	{
 		int num = data.RoleId;
@@ -40,7 +40,7 @@ public class WheelTowerRecommendRoleGridItem : LoopScrollMediumItemGrid<RoleData
 		base.Apply<CharacterMediumItemGrid>(parameters);
 	}
 
-	// Token: 0x06009D87 RID: 40327 RVA: 0x00222DFF File Offset: 0x00220FFF
+	// Token: 0x06007165 RID: 29029 RVA: 0x0022CBAF File Offset: 0x0022ADAF
 	protected override bool OnCanExecuteChange()
 	{
 		return false;

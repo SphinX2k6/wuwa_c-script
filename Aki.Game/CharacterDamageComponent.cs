@@ -5,13 +5,13 @@ using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.DeadRevive;
 
-// Token: 0x02002EC0 RID: 11968
+// Token: 0x02002413 RID: 9235
 [NullableContext(2)]
 [Nullable(0)]
 public class CharacterDamageComponent : BaseDamageComponent
 {
-	// Token: 0x17002343 RID: 9027
-	// (get) Token: 0x060198CA RID: 104650 RVA: 0x0069BC37 File Offset: 0x00699E37
+	// Token: 0x170023E2 RID: 9186
+	// (get) Token: 0x060171B3 RID: 94643 RVA: 0x006C1E8B File Offset: 0x006C008B
 	private new CharacterActorComponent ActorComponent
 	{
 		get
@@ -20,7 +20,7 @@ public class CharacterDamageComponent : BaseDamageComponent
 		}
 	}
 
-	// Token: 0x060198CB RID: 104651 RVA: 0x0069BC44 File Offset: 0x00699E44
+	// Token: 0x060171B4 RID: 94644 RVA: 0x006C1E98 File Offset: 0x006C0098
 	protected override bool OnStart()
 	{
 		if (!base.OnStart())
@@ -35,7 +35,7 @@ public class CharacterDamageComponent : BaseDamageComponent
 		return true;
 	}
 
-	// Token: 0x060198CC RID: 104652 RVA: 0x0069BCAC File Offset: 0x00699EAC
+	// Token: 0x060171B5 RID: 94645 RVA: 0x006C1F00 File Offset: 0x006C0100
 	protected override void OnTick(float delta)
 	{
 		CharacterMoveComponent moveComponent = this.MoveComponent;
@@ -53,7 +53,7 @@ public class CharacterDamageComponent : BaseDamageComponent
 		}
 	}
 
-	// Token: 0x060198CD RID: 104653 RVA: 0x0069BD20 File Offset: 0x00699F20
+	// Token: 0x060171B6 RID: 94646 RVA: 0x006C1F74 File Offset: 0x006C0174
 	public void FallInjure()
 	{
 		if (!this.TagComponent.HasTag(GameplayTagDefine.EGameplayTagId["功能.逻辑状态标识.无敌"]))
@@ -98,7 +98,7 @@ public class CharacterDamageComponent : BaseDamageComponent
 		}
 	}
 
-	// Token: 0x060198CE RID: 104654 RVA: 0x0069BEC0 File Offset: 0x0069A0C0
+	// Token: 0x060171B7 RID: 94647 RVA: 0x006C2114 File Offset: 0x006C0314
 	private double CalculateFallInjure(double lastSpeedZ, double height, double time)
 	{
 		float currentValue = this.AttributeComponent.GetCurrentValue(EAttributeType.LifeMax);
@@ -118,7 +118,7 @@ public class CharacterDamageComponent : BaseDamageComponent
 		return num;
 	}
 
-	// Token: 0x060198CF RID: 104655 RVA: 0x0069BF20 File Offset: 0x0069A120
+	// Token: 0x060171B8 RID: 94648 RVA: 0x006C2174 File Offset: 0x006C0374
 	private double GetFallingHeight()
 	{
 		if (!this.HitComponent.NeedCalculateFallInjure)
@@ -134,13 +134,13 @@ public class CharacterDamageComponent : BaseDamageComponent
 		return z - z2;
 	}
 
-	// Token: 0x060198D0 RID: 104656 RVA: 0x0069BF77 File Offset: 0x0069A177
+	// Token: 0x060171B9 RID: 94649 RVA: 0x006C21CB File Offset: 0x006C03CB
 	private double GetFallingSpeedThreshold()
 	{
 		return (double)ConfigCommonParamById.GetIntArrayConfig("landing_damage_args_role")[1];
 	}
 
-	// Token: 0x060198D1 RID: 104657 RVA: 0x0069BF8C File Offset: 0x0069A18C
+	// Token: 0x060171BA RID: 94650 RVA: 0x006C21E0 File Offset: 0x006C03E0
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -149,62 +149,77 @@ public class CharacterDamageComponent : BaseDamageComponent
 			return false;
 		}
 		CharacterDamageComponent characterDamageComponent = (CharacterDamageComponent)componentTemplate;
-		if (base.CanResetComponentProperty("HitComponent"))
+		if (characterDamageComponent.HitComponent == null)
 		{
-			if (characterDamageComponent.HitComponent == null)
-			{
-				this.HitComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterHitComponent>(this.HitComponent), "HitComponent"))
-			{
-				return false;
-			}
+			this.HitComponent = null;
 		}
-		if (base.CanResetComponentProperty("UnifiedStateComponent"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.HitComponent), "HitComponent"))
 		{
-			if (characterDamageComponent.UnifiedStateComponent == null)
-			{
-				this.UnifiedStateComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterUnifiedStateComponent>(this.UnifiedStateComponent), "UnifiedStateComponent"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("MoveComponent"))
+		if (characterDamageComponent.UnifiedStateComponent == null)
 		{
-			if (characterDamageComponent.MoveComponent == null)
-			{
-				this.MoveComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterMoveComponent>(this.MoveComponent), "MoveComponent"))
-			{
-				return false;
-			}
+			this.UnifiedStateComponent = null;
 		}
-		if (base.CanResetComponentProperty("FallingSpeedThreshold"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.UnifiedStateComponent), "UnifiedStateComponent"))
 		{
-			this.FallingSpeedThreshold = characterDamageComponent.FallingSpeedThreshold;
+			return false;
 		}
-		if (base.CanResetComponentProperty("FallingStartTime"))
+		if (characterDamageComponent.MoveComponent == null)
 		{
-			this.FallingStartTime = characterDamageComponent.FallingStartTime;
+			this.MoveComponent = null;
 		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComponent), "MoveComponent"))
+		{
+			return false;
+		}
+		this.FallingSpeedThreshold = characterDamageComponent.FallingSpeedThreshold;
+		this.FallingStartTime = characterDamageComponent.FallingStartTime;
 		return true;
 	}
 
-	// Token: 0x0400BEF3 RID: 48883
+	// Token: 0x170023E3 RID: 9187
+	// (get) Token: 0x060171BB RID: 94651 RVA: 0x006C2299 File Offset: 0x006C0499
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170023E4 RID: 9188
+	// (get) Token: 0x060171BC RID: 94652 RVA: 0x006C229C File Offset: 0x006C049C
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170023E5 RID: 9189
+	// (get) Token: 0x060171BD RID: 94653 RVA: 0x006C229F File Offset: 0x006C049F
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400C28E RID: 49806
 	private CharacterHitComponent HitComponent;
 
-	// Token: 0x0400BEF4 RID: 48884
+	// Token: 0x0400C28F RID: 49807
 	private CharacterUnifiedStateComponent UnifiedStateComponent;
 
-	// Token: 0x0400BEF5 RID: 48885
+	// Token: 0x0400C290 RID: 49808
 	private CharacterMoveComponent MoveComponent;
 
-	// Token: 0x0400BEF6 RID: 48886
+	// Token: 0x0400C291 RID: 49809
 	private double FallingSpeedThreshold;
 
-	// Token: 0x0400BEF7 RID: 48887
+	// Token: 0x0400C292 RID: 49810
 	private double FallingStartTime;
 }

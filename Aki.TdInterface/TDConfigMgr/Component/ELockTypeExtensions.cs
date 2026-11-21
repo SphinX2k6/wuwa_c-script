@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000990 RID: 2448
+	// Token: 0x02000A43 RID: 2627
 	public static class ELockTypeExtensions
 	{
-		// Token: 0x060036B9 RID: 14009 RVA: 0x0008E794 File Offset: 0x0008C994
+		// Token: 0x06003A40 RID: 14912 RVA: 0x00096700 File Offset: 0x00094900
 		public static string ToEnumString(this ELockType value)
 		{
 			string result;
@@ -30,7 +30,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060036BA RID: 14010 RVA: 0x0008E7E8 File Offset: 0x0008C9E8
+		// Token: 0x06003A41 RID: 14913 RVA: 0x00096754 File Offset: 0x00094954
 		public static ELockType FromString(string name)
 		{
 			ELockType result;
@@ -41,7 +41,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060036BB RID: 14011 RVA: 0x0008E814 File Offset: 0x0008CA14
+		// Token: 0x06003A42 RID: 14914 RVA: 0x00096780 File Offset: 0x00094980
 		public static bool TryFromString(string name, out ELockType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -73,7 +73,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x060036BC RID: 14012 RVA: 0x0008E87C File Offset: 0x0008CA7C
+		// Token: 0x06003A43 RID: 14915 RVA: 0x000967E8 File Offset: 0x000949E8
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -85,7 +85,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060036BD RID: 14013 RVA: 0x0008E8A4 File Offset: 0x0008CAA4
+		// Token: 0x06003A44 RID: 14916 RVA: 0x00096810 File Offset: 0x00094A10
 		public static ELockType[] GetValues()
 		{
 			return new ELockType[]
@@ -97,7 +97,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060036BE RID: 14014 RVA: 0x0008E8B7 File Offset: 0x0008CAB7
+		// Token: 0x06003A45 RID: 14917 RVA: 0x00096823 File Offset: 0x00094A23
 		public static string[] GetNames()
 		{
 			return new string[]

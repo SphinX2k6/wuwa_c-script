@@ -6,7 +6,7 @@ using CSharpScript.Game.Common;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001B99 RID: 7065
+// Token: 0x02001058 RID: 4184
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class FloroRanchRaceCardItem : GridProxyAbstract<FloroRanchRaceData>
 {
-	// Token: 0x0600D26A RID: 53866 RVA: 0x00305034 File Offset: 0x00303234
+	// Token: 0x0600A67B RID: 42619 RVA: 0x0031010C File Offset: 0x0030E30C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 11;
@@ -54,7 +54,7 @@ public class FloroRanchRaceCardItem : GridProxyAbstract<FloroRanchRaceData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D26B RID: 53867 RVA: 0x00305208 File Offset: 0x00303408
+	// Token: 0x0600A67C RID: 42620 RVA: 0x003102E0 File Offset: 0x0030E4E0
 	[NullableContext(1)]
 	public override void Refresh(FloroRanchRaceData data, bool isSelected, int gridIndex)
 	{
@@ -86,7 +86,7 @@ public class FloroRanchRaceCardItem : GridProxyAbstract<FloroRanchRaceData>
 		}
 	}
 
-	// Token: 0x0600D26C RID: 53868 RVA: 0x0030535C File Offset: 0x0030355C
+	// Token: 0x0600A67D RID: 42621 RVA: 0x00310434 File Offset: 0x0030E634
 	private void OnClickToggle(EToggleState _)
 	{
 		FloroRanchActivityData activityData = FloroRanchModel.Instance.GetActivityData(this.ActivityDataType, true);
@@ -118,21 +118,21 @@ public class FloroRanchRaceCardItem : GridProxyAbstract<FloroRanchRaceData>
 		}
 	}
 
-	// Token: 0x0600D26D RID: 53869 RVA: 0x0030545D File Offset: 0x0030365D
+	// Token: 0x0600A67E RID: 42622 RVA: 0x00310535 File Offset: 0x0030E735
 	[NullableContext(1)]
 	public override object GetKey(FloroRanchRaceData data, int displayIndex)
 	{
 		return data.Id;
 	}
 
-	// Token: 0x0600D26E RID: 53870 RVA: 0x0030546C File Offset: 0x0030366C
+	// Token: 0x0600A67F RID: 42623 RVA: 0x00310544 File Offset: 0x0030E744
 	public void SetToggleState(bool state)
 	{
 		EToggleState state2 = state ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 		base.GetExtendToggle(9).SetToggleState(state2, false, false, false);
 	}
 
-	// Token: 0x0600D26F RID: 53871 RVA: 0x00305493 File Offset: 0x00303693
+	// Token: 0x0600A680 RID: 42624 RVA: 0x0031056B File Offset: 0x0030E76B
 	public void SetEquippedPanelVisible(bool isShow)
 	{
 		UUIItem item = base.GetItem(10);
@@ -143,53 +143,53 @@ public class FloroRanchRaceCardItem : GridProxyAbstract<FloroRanchRaceData>
 		item.SetUIActive(isShow);
 	}
 
-	// Token: 0x04006078 RID: 24696
+	// Token: 0x04006147 RID: 24903
 	private FloroRanchRaceData RaceData;
 
-	// Token: 0x04006079 RID: 24697
+	// Token: 0x04006148 RID: 24904
 	public EFloroRanchActivityDataType ActivityDataType;
 
-	// Token: 0x0400607A RID: 24698
+	// Token: 0x04006149 RID: 24905
 	public Func<int, bool> IsFixedRace;
 
-	// Token: 0x0400607B RID: 24699
+	// Token: 0x0400614A RID: 24906
 	public Action<int> OnToggleCallBack;
 
-	// Token: 0x02008135 RID: 33077
+	// Token: 0x020072C3 RID: 29379
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x0402A2C5 RID: 172741
+		// Token: 0x040255F9 RID: 153081
 		public const int SpriteSelected = 0;
 
-		// Token: 0x0402A2C6 RID: 172742
+		// Token: 0x040255FA RID: 153082
 		public const int ItemFixedPanel = 1;
 
-		// Token: 0x0402A2C7 RID: 172743
+		// Token: 0x040255FB RID: 153083
 		public const int ItemOptionPanel = 2;
 
-		// Token: 0x0402A2C8 RID: 172744
+		// Token: 0x040255FC RID: 153084
 		public const int TextureIcon = 3;
 
-		// Token: 0x0402A2C9 RID: 172745
+		// Token: 0x040255FD RID: 153085
 		public const int TextName = 4;
 
-		// Token: 0x0402A2CA RID: 172746
+		// Token: 0x040255FE RID: 153086
 		public const int TextDescription = 5;
 
-		// Token: 0x0402A2CB RID: 172747
+		// Token: 0x040255FF RID: 153087
 		public const int ItemLockPanel = 6;
 
-		// Token: 0x0402A2CC RID: 172748
+		// Token: 0x04025600 RID: 153088
 		public const int TextLock = 7;
 
-		// Token: 0x0402A2CD RID: 172749
+		// Token: 0x04025601 RID: 153089
 		public const int ItemRedDot = 8;
 
-		// Token: 0x0402A2CE RID: 172750
+		// Token: 0x04025602 RID: 153090
 		public const int ToggleRoot = 9;
 
-		// Token: 0x0402A2CF RID: 172751
+		// Token: 0x04025603 RID: 153091
 		public const int ItemEquippedPanel = 10;
 	}
 }

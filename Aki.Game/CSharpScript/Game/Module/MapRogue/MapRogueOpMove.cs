@@ -8,17 +8,17 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055B9 RID: 21945
+	// Token: 0x0200458F RID: 17807
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MapRogueOpMove : MapRogueOp
 	{
-		// Token: 0x170086CF RID: 34511
-		// (get) Token: 0x06037F23 RID: 229155 RVA: 0x00D412A3 File Offset: 0x00D3F4A3
-		// (set) Token: 0x06037F24 RID: 229156 RVA: 0x00D412AB File Offset: 0x00D3F4AB
+		// Token: 0x17005A96 RID: 23190
+		// (get) Token: 0x0602CE21 RID: 183841 RVA: 0x00C8EFEB File Offset: 0x00C8D1EB
+		// (set) Token: 0x0602CE22 RID: 183842 RVA: 0x00C8EFF3 File Offset: 0x00C8D1F3
 		public override int StepSize { get; set; } = 1;
 
-		// Token: 0x06037F25 RID: 229157 RVA: 0x00D412B4 File Offset: 0x00D3F4B4
+		// Token: 0x0602CE23 RID: 183843 RVA: 0x00C8EFFC File Offset: 0x00C8D1FC
 		public MapRogueOpMove(int lastGridIndex)
 		{
 			this.ExecuteInMapView = true;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.LastGridIndex = lastGridIndex;
 		}
 
-		// Token: 0x06037F26 RID: 229158 RVA: 0x00D41318 File Offset: 0x00D3F518
+		// Token: 0x0602CE24 RID: 183844 RVA: 0x00C8F060 File Offset: 0x00C8D260
 		public override string ToString()
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(29, 3);
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x06037F27 RID: 229159 RVA: 0x00D41384 File Offset: 0x00D3F584
+		// Token: 0x0602CE25 RID: 183845 RVA: 0x00C8F0CC File Offset: 0x00C8D2CC
 		protected override void OnUpdate(MapRogueGameInfo gameInfo)
 		{
 			MoveOp moveOp = this.Data.MoveOp;
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x06037F28 RID: 229160 RVA: 0x00D4144C File Offset: 0x00D3F64C
+		// Token: 0x0602CE26 RID: 183846 RVA: 0x00C8F194 File Offset: 0x00C8D394
 		protected override void OnStartExecute(MapRogueGameInfo gameInfo)
 		{
 			int num = this.Path[this.Path.Count - 1];
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.StartMoveAsync(gameInfo);
 		}
 
-		// Token: 0x06037F29 RID: 229161 RVA: 0x00D414C4 File Offset: 0x00D3F6C4
+		// Token: 0x0602CE27 RID: 183847 RVA: 0x00C8F20C File Offset: 0x00C8D40C
 		private UniTask StartMoveAsync(MapRogueGameInfo gameInfo)
 		{
 			MapRogueOpMove.<StartMoveAsync>d__17 <StartMoveAsync>d__;
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <StartMoveAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06037F2A RID: 229162 RVA: 0x00D41510 File Offset: 0x00D3F710
+		// Token: 0x0602CE28 RID: 183848 RVA: 0x00C8F258 File Offset: 0x00C8D458
 		protected override void OnExecute(MapRogueGameInfo gameInfo)
 		{
 			int num = this.Path[this.CurrentStep - 1];
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			gameInfo.GameStage = EMapRogueGameStage.Move;
 		}
 
-		// Token: 0x06037F2B RID: 229163 RVA: 0x00D415B0 File Offset: 0x00D3F7B0
+		// Token: 0x0602CE29 RID: 183849 RVA: 0x00C8F2F8 File Offset: 0x00C8D4F8
 		private void FocusNextPath(MapRogueGameInfo gameInfo)
 		{
 			if (this.CornerIndex.Count == 0)
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			gameInfo.FocusOnGrid(this.CurrentFocusGridIndex, true, null, new float?(gameInfo.MoveTimeGap * (float)num / 1000f));
 		}
 
-		// Token: 0x06037F2C RID: 229164 RVA: 0x00D41624 File Offset: 0x00D3F824
+		// Token: 0x0602CE2A RID: 183850 RVA: 0x00C8F36C File Offset: 0x00C8D56C
 		private List<int> GetWholePath()
 		{
 			List<int> list = new List<int>();
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return list;
 		}
 
-		// Token: 0x06037F2D RID: 229165 RVA: 0x00D41644 File Offset: 0x00D3F844
+		// Token: 0x0602CE2B RID: 183851 RVA: 0x00C8F38C File Offset: 0x00C8D58C
 		private void InitPathInfo()
 		{
 			int num = 0;
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.CornerSingleLength.Add(num + 1);
 		}
 
-		// Token: 0x06037F2E RID: 229166 RVA: 0x00D416E4 File Offset: 0x00D3F8E4
+		// Token: 0x0602CE2C RID: 183852 RVA: 0x00C8F42C File Offset: 0x00C8D62C
 		protected bool IsShapeCorner(int curId, int preId, int nextId)
 		{
 			int num = MapRogueOpMove.<IsShapeCorner>g__directionFunc|22_0(curId, preId);
@@ -159,14 +159,14 @@ namespace CSharpScript.Game.Module.MapRogue
 			return num != num2;
 		}
 
-		// Token: 0x06037F2F RID: 229167 RVA: 0x00D41706 File Offset: 0x00D3F906
+		// Token: 0x0602CE2D RID: 183853 RVA: 0x00C8F44E File Offset: 0x00C8D64E
 		protected override void OnFinish(MapRogueGameInfo gameInfo)
 		{
 			gameInfo.SetInteractAvailable(EMapForbiddenTag.WaitExecuteOp, false);
 			gameInfo.EndMove();
 		}
 
-		// Token: 0x06037F30 RID: 229168 RVA: 0x00D41716 File Offset: 0x00D3F916
+		// Token: 0x0602CE2E RID: 183854 RVA: 0x00C8F45E File Offset: 0x00C8D65E
 		[CompilerGenerated]
 		internal static int <IsShapeCorner>g__directionFunc|22_0(int g0, int g1)
 		{
@@ -177,31 +177,31 @@ namespace CSharpScript.Game.Module.MapRogue
 			return 1;
 		}
 
-		// Token: 0x0401D628 RID: 120360
+		// Token: 0x040180B3 RID: 98483
 		private List<int> Path = new List<int>();
 
-		// Token: 0x0401D629 RID: 120361
+		// Token: 0x040180B4 RID: 98484
 		private readonly List<List<int>> UnlockGridVisions = new List<List<int>>();
 
-		// Token: 0x0401D62A RID: 120362
+		// Token: 0x040180B5 RID: 98485
 		public List<int> CornerIndex = new List<int>();
 
-		// Token: 0x0401D62B RID: 120363
+		// Token: 0x040180B6 RID: 98486
 		public List<int> CornerSingleLength = new List<int>();
 
-		// Token: 0x0401D62C RID: 120364
+		// Token: 0x040180B7 RID: 98487
 		public int CurrentFocusGridIndex = -1;
 
-		// Token: 0x0401D62D RID: 120365
+		// Token: 0x040180B8 RID: 98488
 		public int LastGridIndex;
 
-		// Token: 0x0401D62E RID: 120366
+		// Token: 0x040180B9 RID: 98489
 		private const int THOUSANDTH_RATIO = 1000;
 
-		// Token: 0x0401D62F RID: 120367
+		// Token: 0x040180BA RID: 98490
 		private const float FOCUS_PLAYER_TWEEN_TIME = 0.25f;
 
-		// Token: 0x0401D630 RID: 120368
+		// Token: 0x040180BB RID: 98491
 		private const int MIN_FOCUS_PATH_COUNT = 3;
 	}
 }

@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.FlagChallenge
 {
-	// Token: 0x02005A71 RID: 23153
+	// Token: 0x02004A4D RID: 19021
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 	})]
 	public class FlagChallengeRoleCategoryItem : GridProxyAbstract<FlagChallengeRoleCategoryItemData>
 	{
-		// Token: 0x0603AAA6 RID: 240294 RVA: 0x00DF8418 File Offset: 0x00DF6618
+		// Token: 0x0602F9EF RID: 195055 RVA: 0x00D4899C File Offset: 0x00D46B9C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			};
 		}
 
-		// Token: 0x0603AAA7 RID: 240295 RVA: 0x00DF8474 File Offset: 0x00DF6674
+		// Token: 0x0602F9F0 RID: 195056 RVA: 0x00D489F8 File Offset: 0x00D46BF8
 		protected override void OnStart()
 		{
 			UUIGridLayout gridLayout = base.GetGridLayout(1);
@@ -36,13 +36,13 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			EventSystem.Instance.Add<int>(EEventName.OnFlagChallengeRoleSelectCategoryUpdate, new Action<int>(this.OnFlagChallengeRoleSelectCategoryUpdate));
 		}
 
-		// Token: 0x0603AAA8 RID: 240296 RVA: 0x00DF84E0 File Offset: 0x00DF66E0
+		// Token: 0x0602F9F1 RID: 195057 RVA: 0x00D48A64 File Offset: 0x00D46C64
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove(EEventName.OnFlagChallengeRoleSelectCategoryUpdate, new Action<int>(this.OnFlagChallengeRoleSelectCategoryUpdate));
 		}
 
-		// Token: 0x0603AAA9 RID: 240297 RVA: 0x00DF8500 File Offset: 0x00DF6700
+		// Token: 0x0602F9F2 RID: 195058 RVA: 0x00D48A84 File Offset: 0x00D46C84
 		public override void Refresh(FlagChallengeRoleCategoryItemData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			animationController.Play("", -1, false);
 		}
 
-		// Token: 0x0603AAAA RID: 240298 RVA: 0x00DF8565 File Offset: 0x00DF6765
+		// Token: 0x0602F9F3 RID: 195059 RVA: 0x00D48AE9 File Offset: 0x00D46CE9
 		private FlagChallengeRoleMediumGridItem CreateRoleItem()
 		{
 			FlagChallengeRoleMediumGridItem flagChallengeRoleMediumGridItem = new FlagChallengeRoleMediumGridItem();
@@ -66,13 +66,13 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			return flagChallengeRoleMediumGridItem;
 		}
 
-		// Token: 0x0603AAAB RID: 240299 RVA: 0x00DF8590 File Offset: 0x00DF6790
+		// Token: 0x0602F9F4 RID: 195060 RVA: 0x00D48B14 File Offset: 0x00D46D14
 		private bool CanSelectRole(int roleId, EToggleState state)
 		{
 			return this.Data == null || this.Data.CanSelectRole == null || this.Data.CanSelectRole(roleId, state);
 		}
 
-		// Token: 0x0603AAAC RID: 240300 RVA: 0x00DF85BB File Offset: 0x00DF67BB
+		// Token: 0x0602F9F5 RID: 195061 RVA: 0x00D48B3F File Offset: 0x00D46D3F
 		private void OnSelectRole(int roleId, EToggleState state)
 		{
 			if (this.Data != null && this.Data.OnSelectRole != null)
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			this.RoleLayout.RefreshWithoutDataSync();
 		}
 
-		// Token: 0x0603AAAD RID: 240301 RVA: 0x00DF85F0 File Offset: 0x00DF67F0
+		// Token: 0x0602F9F6 RID: 195062 RVA: 0x00D48B74 File Offset: 0x00D46D74
 		private void OnFlagChallengeRoleSelectCategoryUpdate(int roleId)
 		{
 			if (this.Data == null || this.Data.RoleList == null)
@@ -107,17 +107,17 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			}
 		}
 
-		// Token: 0x0603AAAE RID: 240302 RVA: 0x00DF8674 File Offset: 0x00DF6874
+		// Token: 0x0602F9F7 RID: 195063 RVA: 0x00D48BF8 File Offset: 0x00D46DF8
 		public override object GetKey(FlagChallengeRoleCategoryItemData data, int displayIndex)
 		{
 			return (int)data.CategoryType;
 		}
 
-		// Token: 0x0401E9C1 RID: 125377
+		// Token: 0x04019468 RID: 103528
 		[Nullable(2)]
 		private FlagChallengeRoleCategoryItemData Data;
 
-		// Token: 0x0401E9C2 RID: 125378
+		// Token: 0x04019469 RID: 103529
 		[Nullable(new byte[]
 		{
 			2,
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 		})]
 		private GenericLayout<FlagChallengeRoleMediumGridItem, RoleDataBase> RoleLayout;
 
-		// Token: 0x0401E9C3 RID: 125379
+		// Token: 0x0401946A RID: 103530
 		[Nullable(2)]
 		private UUIInturnAnimController AnimationController;
 	}

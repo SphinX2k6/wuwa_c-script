@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006302 RID: 25346
+	// Token: 0x02006973 RID: 26995
 	public struct IChangeInteractOptionText : IFlatbufferObject
 	{
-		// Token: 0x1700BD33 RID: 48435
-		// (get) Token: 0x0602BD37 RID: 179511 RVA: 0x00607087 File Offset: 0x00605287
+		// Token: 0x1700C6BD RID: 50877
+		// (get) Token: 0x0602E4A0 RID: 189600 RVA: 0x00652093 File Offset: 0x00650293
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602BD38 RID: 179512 RVA: 0x00607094 File Offset: 0x00605294
+		// Token: 0x0602E4A1 RID: 189601 RVA: 0x006520A0 File Offset: 0x006502A0
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602BD39 RID: 179513 RVA: 0x0060709C File Offset: 0x0060529C
+		// Token: 0x0602E4A2 RID: 189602 RVA: 0x006520A8 File Offset: 0x006502A8
 		public static IChangeInteractOptionText GetRootAsIChangeInteractOptionText(ByteBuffer _bb)
 		{
 			return IChangeInteractOptionText.GetRootAsIChangeInteractOptionText(_bb, default(IChangeInteractOptionText));
 		}
 
-		// Token: 0x0602BD3A RID: 179514 RVA: 0x006070B8 File Offset: 0x006052B8
+		// Token: 0x0602E4A3 RID: 189603 RVA: 0x006520C4 File Offset: 0x006502C4
 		public static IChangeInteractOptionText GetRootAsIChangeInteractOptionText(ByteBuffer _bb, IChangeInteractOptionText obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602BD3B RID: 179515 RVA: 0x006070D5 File Offset: 0x006052D5
+		// Token: 0x0602E4A4 RID: 189604 RVA: 0x006520E1 File Offset: 0x006502E1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602BD3C RID: 179516 RVA: 0x006070E4 File Offset: 0x006052E4
+		// Token: 0x0602E4A5 RID: 189605 RVA: 0x006520F0 File Offset: 0x006502F0
 		public IChangeInteractOptionText __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BD34 RID: 48436
-		// (get) Token: 0x0602BD3D RID: 179517 RVA: 0x006070F4 File Offset: 0x006052F4
+		// Token: 0x1700C6BE RID: 50878
+		// (get) Token: 0x0602E4A6 RID: 189606 RVA: 0x00652100 File Offset: 0x00650300
 		public string TidContent
 		{
 			get
@@ -62,19 +62,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602BD3E RID: 179518 RVA: 0x0060712B File Offset: 0x0060532B
+		// Token: 0x0602E4A7 RID: 189607 RVA: 0x00652137 File Offset: 0x00650337
 		public Span<byte> GetTidContentBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x0602BD3F RID: 179519 RVA: 0x0060713A File Offset: 0x0060533A
+		// Token: 0x0602E4A8 RID: 189608 RVA: 0x00652146 File Offset: 0x00650346
 		public byte[] GetTidContentArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x0602BD40 RID: 179520 RVA: 0x00607148 File Offset: 0x00605348
+		// Token: 0x0602E4A9 RID: 189609 RVA: 0x00652154 File Offset: 0x00650354
 		public static Offset<IChangeInteractOptionText> CreateIChangeInteractOptionText(FlatBufferBuilder builder, StringOffset TidContentOffset = default(StringOffset))
 		{
 			builder.StartTable(1);
@@ -82,25 +82,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IChangeInteractOptionText.EndIChangeInteractOptionText(builder);
 		}
 
-		// Token: 0x0602BD41 RID: 179521 RVA: 0x0060715E File Offset: 0x0060535E
+		// Token: 0x0602E4AA RID: 189610 RVA: 0x0065216A File Offset: 0x0065036A
 		public static void StartIChangeInteractOptionText(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602BD42 RID: 179522 RVA: 0x00607167 File Offset: 0x00605367
+		// Token: 0x0602E4AB RID: 189611 RVA: 0x00652173 File Offset: 0x00650373
 		public static void AddTidContent(FlatBufferBuilder builder, StringOffset tidContentOffset)
 		{
 			builder.AddOffset(0, tidContentOffset.Value, 0);
 		}
 
-		// Token: 0x0602BD43 RID: 179523 RVA: 0x00607177 File Offset: 0x00605377
+		// Token: 0x0602E4AC RID: 189612 RVA: 0x00652183 File Offset: 0x00650383
 		public static Offset<IChangeInteractOptionText> EndIChangeInteractOptionText(FlatBufferBuilder builder)
 		{
 			return new Offset<IChangeInteractOptionText>(builder.EndTable());
 		}
 
-		// Token: 0x0602BD44 RID: 179524 RVA: 0x00607184 File Offset: 0x00605384
+		// Token: 0x0602E4AD RID: 189613 RVA: 0x00652190 File Offset: 0x00650390
 		public IChangeInteractOptionTextT UnPack()
 		{
 			IChangeInteractOptionTextT changeInteractOptionTextT = new IChangeInteractOptionTextT();
@@ -108,13 +108,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return changeInteractOptionTextT;
 		}
 
-		// Token: 0x0602BD45 RID: 179525 RVA: 0x0060719F File Offset: 0x0060539F
+		// Token: 0x0602E4AE RID: 189614 RVA: 0x006521AB File Offset: 0x006503AB
 		public void UnPackTo(IChangeInteractOptionTextT _o)
 		{
 			_o.TidContent = this.TidContent;
 		}
 
-		// Token: 0x0602BD46 RID: 179526 RVA: 0x006071B0 File Offset: 0x006053B0
+		// Token: 0x0602E4AF RID: 189615 RVA: 0x006521BC File Offset: 0x006503BC
 		public static Offset<IChangeInteractOptionText> Pack(FlatBufferBuilder builder, IChangeInteractOptionTextT _o)
 		{
 			if (_o == null)
@@ -125,7 +125,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IChangeInteractOptionText.CreateIChangeInteractOptionText(builder, tidContentOffset);
 		}
 
-		// Token: 0x040108C1 RID: 67777
+		// Token: 0x040116D7 RID: 71383
 		private Table __p;
 	}
 }

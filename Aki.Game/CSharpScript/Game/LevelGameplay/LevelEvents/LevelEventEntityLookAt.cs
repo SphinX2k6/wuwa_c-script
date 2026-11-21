@@ -6,17 +6,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B21 RID: 27425
+	// Token: 0x02005C99 RID: 23705
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventEntityLookAt : LevelEventBase
 	{
-		// Token: 0x060440C5 RID: 278725 RVA: 0x010BA6D2 File Offset: 0x010B88D2
+		// Token: 0x0603A217 RID: 238103 RVA: 0x01063F5E File Offset: 0x0106215E
 		public LevelEventEntityLookAt(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060440C6 RID: 278726 RVA: 0x010BA6DB File Offset: 0x010B88DB
+		// Token: 0x0603A218 RID: 238104 RVA: 0x01063F67 File Offset: 0x01062167
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			if (inParams == null)
@@ -29,13 +29,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.CreateWaitEntityTask(this.Param.EntityId);
 		}
 
-		// Token: 0x060440C7 RID: 278727 RVA: 0x010BA70E File Offset: 0x010B890E
+		// Token: 0x0603A219 RID: 238105 RVA: 0x01063F9A File Offset: 0x0106219A
 		protected override void ExecuteInGm(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x060440C8 RID: 278728 RVA: 0x010BA71C File Offset: 0x010B891C
+		// Token: 0x0603A21A RID: 238106 RVA: 0x01063FA8 File Offset: 0x010621A8
 		protected override void ExecuteWhenEntitiesReady()
 		{
 			EntityHandle entityByPbDataId = CreatureModel.Instance.GetEntityByPbDataId(this.Param.EntityId);
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.CanTick = true;
 		}
 
-		// Token: 0x060440C9 RID: 278729 RVA: 0x010BA8F4 File Offset: 0x010B8AF4
+		// Token: 0x0603A21B RID: 238107 RVA: 0x01064180 File Offset: 0x01062380
 		protected override void OnTick(float deltaTime)
 		{
 			if (!this.CanTick)
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x060440CA RID: 278730 RVA: 0x010BA984 File Offset: 0x010B8B84
+		// Token: 0x0603A21C RID: 238108 RVA: 0x01064210 File Offset: 0x01062410
 		protected override void OnReset()
 		{
 			this.EntityHandle = null;
@@ -114,24 +114,24 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.MovementMode = EMovementMode.MOVE_None;
 		}
 
-		// Token: 0x040238EF RID: 145647
+		// Token: 0x0401EB91 RID: 125841
 		private const int TURN_SPEED = 200;
 
-		// Token: 0x040238F0 RID: 145648
+		// Token: 0x0401EB92 RID: 125842
 		private const int TOLERANCE = 10;
 
-		// Token: 0x040238F1 RID: 145649
+		// Token: 0x0401EB93 RID: 125843
 		[Nullable(2)]
 		private EntityHandle EntityHandle;
 
-		// Token: 0x040238F2 RID: 145650
+		// Token: 0x0401EB94 RID: 125844
 		[Nullable(2)]
 		private EntityLookAt Param;
 
-		// Token: 0x040238F3 RID: 145651
+		// Token: 0x0401EB95 RID: 125845
 		private bool CanTick;
 
-		// Token: 0x040238F4 RID: 145652
+		// Token: 0x0401EB96 RID: 125846
 		private EMovementMode MovementMode;
 	}
 }

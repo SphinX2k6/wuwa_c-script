@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007242 RID: 29250
+	// Token: 0x02007A17 RID: 31255
 	public class ISunSpiritDifficultyReductionT
 	{
-		// Token: 0x1700D90A RID: 55562
-		// (get) Token: 0x06033E14 RID: 212500 RVA: 0x006FAB80 File Offset: 0x006F8D80
-		// (set) Token: 0x06033E15 RID: 212501 RVA: 0x006FAB88 File Offset: 0x006F8D88
+		// Token: 0x1700E503 RID: 58627
+		// (get) Token: 0x06037116 RID: 225558 RVA: 0x0075BEE0 File Offset: 0x0075A0E0
+		// (set) Token: 0x06037117 RID: 225559 RVA: 0x0075BEE8 File Offset: 0x0075A0E8
 		public int LoseTimes { get; set; }
 
-		// Token: 0x1700D90B RID: 55563
-		// (get) Token: 0x06033E16 RID: 212502 RVA: 0x006FAB91 File Offset: 0x006F8D91
-		// (set) Token: 0x06033E17 RID: 212503 RVA: 0x006FAB99 File Offset: 0x006F8D99
+		// Token: 0x1700E504 RID: 58628
+		// (get) Token: 0x06037118 RID: 225560 RVA: 0x0075BEF1 File Offset: 0x0075A0F1
+		// (set) Token: 0x06037119 RID: 225561 RVA: 0x0075BEF9 File Offset: 0x0075A0F9
 		public int SubstituteId { get; set; }
 
-		// Token: 0x06033E18 RID: 212504 RVA: 0x006FABA2 File Offset: 0x006F8DA2
+		// Token: 0x0603711A RID: 225562 RVA: 0x0075BF02 File Offset: 0x0075A102
 		public ISunSpiritDifficultyReductionT()
 		{
 			this.LoseTimes = 0;

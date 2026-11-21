@@ -9,12 +9,12 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001DA4 RID: 7588
+// Token: 0x02001266 RID: 4710
 [NullableContext(1)]
 [Nullable(0)]
 public class QuestRewardItemList : UiPanelBase
 {
-	// Token: 0x0600E64B RID: 58955 RVA: 0x0036489D File Offset: 0x00362A9D
+	// Token: 0x0600BA69 RID: 47721 RVA: 0x003704FD File Offset: 0x0036E6FD
 	[NullableContext(2)]
 	public QuestRewardItemList(AActor rootActor)
 	{
@@ -25,7 +25,7 @@ public class QuestRewardItemList : UiPanelBase
 		base.CreateThenShowByActor(rootActor, null);
 	}
 
-	// Token: 0x0600E64C RID: 58956 RVA: 0x003648B4 File Offset: 0x00362AB4
+	// Token: 0x0600BA6A RID: 47722 RVA: 0x00370514 File Offset: 0x0036E714
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -42,7 +42,7 @@ public class QuestRewardItemList : UiPanelBase
 		this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 	}
 
-	// Token: 0x0600E64D RID: 58957 RVA: 0x00364949 File Offset: 0x00362B49
+	// Token: 0x0600BA6B RID: 47723 RVA: 0x003705A9 File Offset: 0x0036E7A9
 	protected override void OnStart()
 	{
 		this.SourceItem = base.GetItem(1);
@@ -50,7 +50,7 @@ public class QuestRewardItemList : UiPanelBase
 		this.GenericScrollView = new GenericScrollViewNew<QuestRewardItemGrid, RewardItemData>(base.GetScrollViewWithScrollbar(2), new Func<QuestRewardItemGrid>(this.OnCreateRewardItem), null, false, null);
 	}
 
-	// Token: 0x0600E64E RID: 58958 RVA: 0x00364988 File Offset: 0x00362B88
+	// Token: 0x0600BA6C RID: 47724 RVA: 0x003705E8 File Offset: 0x0036E7E8
 	private QuestRewardItemGrid OnCreateRewardItem()
 	{
 		QuestRewardItemGrid questRewardItemGrid = new QuestRewardItemGrid();
@@ -59,7 +59,7 @@ public class QuestRewardItemList : UiPanelBase
 		return questRewardItemGrid;
 	}
 
-	// Token: 0x0600E64F RID: 58959 RVA: 0x003649DB File Offset: 0x00362BDB
+	// Token: 0x0600BA6D RID: 47725 RVA: 0x0037063B File Offset: 0x0036E83B
 	public void Refresh(List<RewardItemData> rewardItemDataList)
 	{
 		rewardItemDataList.Sort(delegate(RewardItemData aRewardItem, RewardItemData bRewardItem)
@@ -81,7 +81,7 @@ public class QuestRewardItemList : UiPanelBase
 		this.GenericScrollView.RefreshByData(rewardItemDataList, null, false);
 	}
 
-	// Token: 0x0600E650 RID: 58960 RVA: 0x00364A10 File Offset: 0x00362C10
+	// Token: 0x0600BA6E RID: 47726 RVA: 0x00370670 File Offset: 0x0036E870
 	private void OnClickedRewardItem(MediumItemGridExtendCallback callbackParameter)
 	{
 		ItemGridBase selectedItemGrid = this.SelectedItemGrid;
@@ -98,14 +98,14 @@ public class QuestRewardItemList : UiPanelBase
 			ItemController.Instance.OpenItemTipsByItemUid(uniqueId, configId, true, null);
 			return;
 		}
-		ItemController.Instance.OpenItemTipsByItemId(configId, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(configId, true, null, false);
 	}
 
-	// Token: 0x04006A91 RID: 27281
+	// Token: 0x04006B72 RID: 27506
 	[Nullable(2)]
 	private UUIItem SourceItem;
 
-	// Token: 0x04006A92 RID: 27282
+	// Token: 0x04006B73 RID: 27507
 	[Nullable(new byte[]
 	{
 		2,
@@ -114,21 +114,21 @@ public class QuestRewardItemList : UiPanelBase
 	})]
 	private GenericScrollViewNew<QuestRewardItemGrid, RewardItemData> GenericScrollView;
 
-	// Token: 0x04006A93 RID: 27283
+	// Token: 0x04006B74 RID: 27508
 	[Nullable(2)]
 	private ItemGridBase SelectedItemGrid;
 
-	// Token: 0x02008382 RID: 33666
+	// Token: 0x0200750A RID: 29962
 	[NullableContext(0)]
 	private static class EChildType
 	{
-		// Token: 0x0402ADA4 RID: 175524
+		// Token: 0x040260CA RID: 155850
 		public const int ItemContentItem = 0;
 
-		// Token: 0x0402ADA5 RID: 175525
+		// Token: 0x040260CB RID: 155851
 		public const int SourceItem = 1;
 
-		// Token: 0x0402ADA6 RID: 175526
+		// Token: 0x040260CC RID: 155852
 		public const int ScrollViewWithScrollbar = 2;
 	}
 }

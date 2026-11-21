@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020009D0 RID: 2512
+	// Token: 0x02000AA5 RID: 2725
 	public class ConfigTermConfigById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003AF4 RID: 15092 RVA: 0x001A71EC File Offset: 0x001A53EC
+		// Token: 0x06003FF2 RID: 16370 RVA: 0x001C6580 File Offset: 0x001C4780
 		static ConfigTermConfigById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigTermConfigById.CreateStaticDefaultValue), new Action(ConfigTermConfigById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003AF5 RID: 15093 RVA: 0x001A720C File Offset: 0x001A540C
+		// Token: 0x06003FF3 RID: 16371 RVA: 0x001C65A0 File Offset: 0x001C47A0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigTermConfigById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003AF6 RID: 15094 RVA: 0x001A728B File Offset: 0x001A548B
+		// Token: 0x06003FF4 RID: 16372 RVA: 0x001C661F File Offset: 0x001C481F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigTermConfigById.LogPair = null;
 			ConfigTermConfigById.HandleId = 0;
 		}
 
-		// Token: 0x06003AF7 RID: 15095 RVA: 0x001A7299 File Offset: 0x001A5499
+		// Token: 0x06003FF5 RID: 16373 RVA: 0x001C662D File Offset: 0x001C482D
 		public static void Init()
 		{
 			ConfigTermConfigById.HandleId = ConfigCommon.InitDataStatement(ConfigTermConfigById.HandleId, "db_term.db", "select BinData from `TermConfig` where Id=?");
 		}
 
-		// Token: 0x06003AF8 RID: 15096 RVA: 0x001A72B4 File Offset: 0x001A54B4
+		// Token: 0x06003FF6 RID: 16374 RVA: 0x001C6648 File Offset: 0x001C4848
 		public static TermConfig? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigTermConfigById.HandleId, ConfigTermConfigById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new TermConfig?(rootAsTermConfig);
 		}
 
-		// Token: 0x04004496 RID: 17558
+		// Token: 0x04004A69 RID: 19049
 		private const string DB = "db_term.db";
 
-		// Token: 0x04004497 RID: 17559
+		// Token: 0x04004A6A RID: 19050
 		private const string FILE = "s.术语/*.csv*";
 
-		// Token: 0x04004498 RID: 17560
+		// Token: 0x04004A6B RID: 19051
 		private const string TABLE = "TermConfig";
 
-		// Token: 0x04004499 RID: 17561
+		// Token: 0x04004A6C RID: 19052
 		private const string COMMAND = "select BinData from `TermConfig` where Id=?";
 
-		// Token: 0x0400449A RID: 17562
+		// Token: 0x04004A6D RID: 19053
 		private const string KEY_PREFIX = "TermConfigById";
 
-		// Token: 0x0400449B RID: 17563
+		// Token: 0x04004A6E RID: 19054
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400449C RID: 17564
+		// Token: 0x04004A6F RID: 19055
 		private static int HandleId;
 	}
 }

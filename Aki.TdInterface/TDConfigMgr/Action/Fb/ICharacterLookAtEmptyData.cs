@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002629 RID: 9769
+	// Token: 0x020028E9 RID: 10473
 	public class ICharacterLookAtEmptyData : ICharacterLookAtData
 	{
-		// Token: 0x0600DB45 RID: 56133 RVA: 0x0020A632 File Offset: 0x00208832
-		[NullableContext(1)]
+		// Token: 0x0600E913 RID: 59667 RVA: 0x00226DFE File Offset: 0x00224FFE
 		public static ICharacterLookAtEmptyData Create(ICharacterLookAtEmptyData? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170040B5 RID: 16565
-		// (get) Token: 0x0600DB46 RID: 56134 RVA: 0x0020A651 File Offset: 0x00208851
+		// Token: 0x170043EF RID: 17391
+		// (get) Token: 0x0600E914 RID: 59668 RVA: 0x00226E1D File Offset: 0x0022501D
 		public override ECharacterLookAt Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040079CF RID: 31183
+		// Token: 0x0400806B RID: 32875
 		private ICharacterLookAtEmptyData Instance;
 	}
 }

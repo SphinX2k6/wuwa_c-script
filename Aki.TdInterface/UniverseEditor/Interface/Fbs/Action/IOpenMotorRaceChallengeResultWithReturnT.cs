@@ -3,40 +3,40 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006C10 RID: 27664
+	// Token: 0x02007377 RID: 29559
 	public class IOpenMotorRaceChallengeResultWithReturnT
 	{
-		// Token: 0x1700CDC2 RID: 52674
-		// (get) Token: 0x06030A6D RID: 199277 RVA: 0x0069AF5B File Offset: 0x0069915B
-		// (set) Token: 0x06030A6E RID: 199278 RVA: 0x0069AF63 File Offset: 0x00699163
+		// Token: 0x1700D8DD RID: 55517
+		// (get) Token: 0x060339C1 RID: 211393 RVA: 0x006F5257 File Offset: 0x006F3457
+		// (set) Token: 0x060339C2 RID: 211394 RVA: 0x006F525F File Offset: 0x006F345F
 		public ESystemType Type { get; set; }
 
-		// Token: 0x1700CDC3 RID: 52675
-		// (get) Token: 0x06030A6F RID: 199279 RVA: 0x0069AF6C File Offset: 0x0069916C
-		// (set) Token: 0x06030A70 RID: 199280 RVA: 0x0069AF74 File Offset: 0x00699174
+		// Token: 0x1700D8DE RID: 55518
+		// (get) Token: 0x060339C3 RID: 211395 RVA: 0x006F5268 File Offset: 0x006F3468
+		// (set) Token: 0x060339C4 RID: 211396 RVA: 0x006F5270 File Offset: 0x006F3470
 		public TVarRefUnion Score { get; set; }
 
-		// Token: 0x1700CDC4 RID: 52676
-		// (get) Token: 0x06030A71 RID: 199281 RVA: 0x0069AF7D File Offset: 0x0069917D
-		// (set) Token: 0x06030A72 RID: 199282 RVA: 0x0069AF85 File Offset: 0x00699185
+		// Token: 0x1700D8DF RID: 55519
+		// (get) Token: 0x060339C5 RID: 211397 RVA: 0x006F5279 File Offset: 0x006F3479
+		// (set) Token: 0x060339C6 RID: 211398 RVA: 0x006F5281 File Offset: 0x006F3481
 		public int RankS { get; set; }
 
-		// Token: 0x1700CDC5 RID: 52677
-		// (get) Token: 0x06030A73 RID: 199283 RVA: 0x0069AF8E File Offset: 0x0069918E
-		// (set) Token: 0x06030A74 RID: 199284 RVA: 0x0069AF96 File Offset: 0x00699196
+		// Token: 0x1700D8E0 RID: 55520
+		// (get) Token: 0x060339C7 RID: 211399 RVA: 0x006F528A File Offset: 0x006F348A
+		// (set) Token: 0x060339C8 RID: 211400 RVA: 0x006F5292 File Offset: 0x006F3492
 		public int RankA { get; set; }
 
-		// Token: 0x1700CDC6 RID: 52678
-		// (get) Token: 0x06030A75 RID: 199285 RVA: 0x0069AF9F File Offset: 0x0069919F
-		// (set) Token: 0x06030A76 RID: 199286 RVA: 0x0069AFA7 File Offset: 0x006991A7
+		// Token: 0x1700D8E1 RID: 55521
+		// (get) Token: 0x060339C9 RID: 211401 RVA: 0x006F529B File Offset: 0x006F349B
+		// (set) Token: 0x060339CA RID: 211402 RVA: 0x006F52A3 File Offset: 0x006F34A3
 		public int RankB { get; set; }
 
-		// Token: 0x1700CDC7 RID: 52679
-		// (get) Token: 0x06030A77 RID: 199287 RVA: 0x0069AFB0 File Offset: 0x006991B0
-		// (set) Token: 0x06030A78 RID: 199288 RVA: 0x0069AFB8 File Offset: 0x006991B8
+		// Token: 0x1700D8E2 RID: 55522
+		// (get) Token: 0x060339CB RID: 211403 RVA: 0x006F52AC File Offset: 0x006F34AC
+		// (set) Token: 0x060339CC RID: 211404 RVA: 0x006F52B4 File Offset: 0x006F34B4
 		public TVarRefUnion ReturnVar { get; set; }
 
-		// Token: 0x06030A79 RID: 199289 RVA: 0x0069AFC1 File Offset: 0x006991C1
+		// Token: 0x060339CD RID: 211405 RVA: 0x006F52BD File Offset: 0x006F34BD
 		public IOpenMotorRaceChallengeResultWithReturnT()
 		{
 			this.Type = ESystemType.Shop;

@@ -5,10 +5,10 @@ using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002B40 RID: 11072
+// Token: 0x020020BC RID: 8380
 internal class RoleItemComponent : UiPanelBase
 {
-	// Token: 0x06016F87 RID: 94087 RVA: 0x005D4C28 File Offset: 0x005D2E28
+	// Token: 0x060149B8 RID: 84408 RVA: 0x00601794 File Offset: 0x005FF994
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,19 +25,19 @@ internal class RoleItemComponent : UiPanelBase
 		};
 	}
 
-	// Token: 0x06016F88 RID: 94088 RVA: 0x005D4CD4 File Offset: 0x005D2ED4
+	// Token: 0x060149B9 RID: 84409 RVA: 0x00601840 File Offset: 0x005FFA40
 	private void OnClickRoleIcon()
 	{
 		SurvivorsRogueCharacterCard param = SurvivorsRogueCardDataFactory.CreateGeneralCharacter(this.CachedSurvivorRoleId);
 		UiManager.Instance.OpenView(EUiViewName.SurvivorsCardTips, param, null);
 	}
 
-	// Token: 0x06016F89 RID: 94089 RVA: 0x005D4CFE File Offset: 0x005D2EFE
+	// Token: 0x060149BA RID: 84410 RVA: 0x0060186A File Offset: 0x005FFA6A
 	protected override void OnStart()
 	{
 	}
 
-	// Token: 0x06016F8A RID: 94090 RVA: 0x005D4D00 File Offset: 0x005D2F00
+	// Token: 0x060149BB RID: 84411 RVA: 0x0060186C File Offset: 0x005FFA6C
 	public void Refresh(int survivorRoleId)
 	{
 		this.CachedSurvivorRoleId = survivorRoleId;
@@ -48,6 +48,6 @@ internal class RoleItemComponent : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(4), value.Name, Array.Empty<object>());
 	}
 
-	// Token: 0x0400AB41 RID: 43841
+	// Token: 0x0400AF47 RID: 44871
 	private int CachedSurvivorRoleId = -1;
 }

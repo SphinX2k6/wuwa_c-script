@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055CC RID: 21964
+	// Token: 0x020045A2 RID: 17826
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MapRogueActorPool
 	{
-		// Token: 0x06037FA2 RID: 229282 RVA: 0x00D42BE0 File Offset: 0x00D40DE0
+		// Token: 0x0602CEA0 RID: 183968 RVA: 0x00C90928 File Offset: 0x00C8EB28
 		public void Init()
 		{
 			this.PoolRootActor = UiLayer.Instance.GetLayerRootUiItem(ELayerType.Pool);
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x06037FA3 RID: 229283 RVA: 0x00D42C28 File Offset: 0x00D40E28
+		// Token: 0x0602CEA1 RID: 183969 RVA: 0x00C90970 File Offset: 0x00C8EB70
 		public void Tick(float deltaTime)
 		{
 			this.PeriodDeltaTime += deltaTime;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x06037FA4 RID: 229284 RVA: 0x00D42CB4 File Offset: 0x00D40EB4
+		// Token: 0x0602CEA2 RID: 183970 RVA: 0x00C909FC File Offset: 0x00C8EBFC
 		public void Clear()
 		{
 			foreach (MapUiActorFactory mapUiActorFactory in this.FactoryMap.Values)
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.FactoryMap.Clear();
 		}
 
-		// Token: 0x06037FA5 RID: 229285 RVA: 0x00D42D1C File Offset: 0x00D40F1C
+		// Token: 0x0602CEA3 RID: 183971 RVA: 0x00C90A64 File Offset: 0x00C8EC64
 		public void CancelLoad()
 		{
 			foreach (MapUiActorFactory mapUiActorFactory in this.FactoryMap.Values)
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x06037FA6 RID: 229286 RVA: 0x00D42D74 File Offset: 0x00D40F74
+		// Token: 0x0602CEA4 RID: 183972 RVA: 0x00C90ABC File Offset: 0x00C8ECBC
 		private MapUiActorFactory TryGetFactory(string path)
 		{
 			MapUiActorFactory mapUiActorFactory;
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return mapUiActorFactory;
 		}
 
-		// Token: 0x06037FA7 RID: 229287 RVA: 0x00D42DAC File Offset: 0x00D40FAC
+		// Token: 0x0602CEA5 RID: 183973 RVA: 0x00C90AF4 File Offset: 0x00C8ECF4
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -85,26 +85,26 @@ namespace CSharpScript.Game.Module.MapRogue
 			return this.TryGetFactory(path).GetAsync(path, parent);
 		}
 
-		// Token: 0x06037FA8 RID: 229288 RVA: 0x00D42DBC File Offset: 0x00D40FBC
+		// Token: 0x0602CEA6 RID: 183974 RVA: 0x00C90B04 File Offset: 0x00C8ED04
 		public void RecycleAsync(UiPoolActor uiPoolActor, string path)
 		{
 			this.TryGetFactory(path).Release(uiPoolActor);
 		}
 
-		// Token: 0x0401D66C RID: 120428
+		// Token: 0x040180F7 RID: 98551
 		private readonly Dictionary<string, MapUiActorFactory> FactoryMap = new Dictionary<string, MapUiActorFactory>();
 
-		// Token: 0x0401D66D RID: 120429
+		// Token: 0x040180F8 RID: 98552
 		[Nullable(2)]
 		private UUIItem PoolRootActor;
 
-		// Token: 0x0401D66E RID: 120430
+		// Token: 0x040180F9 RID: 98553
 		private float PeriodDeltaTime;
 
-		// Token: 0x0401D66F RID: 120431
+		// Token: 0x040180FA RID: 98554
 		private const int TICK_GARBAGE_MAXCOUNT = 10;
 
-		// Token: 0x0401D670 RID: 120432
+		// Token: 0x040180FB RID: 98555
 		public const int PROCESSING_INTERVAL = 100;
 	}
 }

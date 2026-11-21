@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001AD1 RID: 6865
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001C78 RID: 7288
 	public class IGetOffMotorcycleInteract : ILeisureInteractType
 	{
-		// Token: 0x0600932C RID: 37676 RVA: 0x00155B78 File Offset: 0x00153D78
+		// Token: 0x06009AEA RID: 39658 RVA: 0x00166398 File Offset: 0x00164598
 		private IGetOffMotorcycleInteract_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600932D RID: 37677 RVA: 0x00155BB0 File Offset: 0x00153DB0
+		// Token: 0x06009AEB RID: 39659 RVA: 0x001663D0 File Offset: 0x001645D0
 		public static IGetOffMotorcycleInteract Create([Nullable(2)] IGetOffMotorcycleInteract instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600932E RID: 37678 RVA: 0x00155BC3 File Offset: 0x00153DC3
+		// Token: 0x06009AEC RID: 39660 RVA: 0x001663E3 File Offset: 0x001645E3
 		public static IGetOffMotorcycleInteract CreateFromSetValue([Nullable(2)] IGetOffMotorcycleInteract_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600932F RID: 37679 RVA: 0x00155BD6 File Offset: 0x00153DD6
+		// Token: 0x06009AED RID: 39661 RVA: 0x001663F6 File Offset: 0x001645F6
 		public new IGetOffMotorcycleInteract_SetValue ToSetValue()
 		{
 			return new IGetOffMotorcycleInteract_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002EB2 RID: 11954
-		// (get) Token: 0x06009330 RID: 37680 RVA: 0x00155BE9 File Offset: 0x00153DE9
-		// (set) Token: 0x06009331 RID: 37681 RVA: 0x00155C14 File Offset: 0x00153E14
+		// Token: 0x170030CE RID: 12494
+		// (get) Token: 0x06009AEE RID: 39662 RVA: 0x00166409 File Offset: 0x00164609
+		// (set) Token: 0x06009AEF RID: 39663 RVA: 0x00166434 File Offset: 0x00164634
 		public override ELeisureInteract Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005A7F RID: 23167
+		// Token: 0x04005F09 RID: 24329
 		[Nullable(2)]
 		protected new IGetOffMotorcycleInteract FbInstance;
 
-		// Token: 0x04005A80 RID: 23168
+		// Token: 0x04005F0A RID: 24330
 		[Nullable(2)]
 		protected new IGetOffMotorcycleInteract_SetValue PocoInterface;
 	}

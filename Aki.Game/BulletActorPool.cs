@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002DA2 RID: 11682
+// Token: 0x020022FC RID: 8956
 [NullableContext(1)]
 [Nullable(0)]
 public static class BulletActorPool
 {
-	// Token: 0x0601887F RID: 100479 RVA: 0x006446C0 File Offset: 0x006428C0
+	// Token: 0x06016124 RID: 90404 RVA: 0x0066A4FC File Offset: 0x006686FC
 	public static AKuroEntityActor Get(EBulletShape shape)
 	{
 		AKuroEntityActor akuroEntityActor = null;
@@ -38,7 +38,7 @@ public static class BulletActorPool
 		return akuroEntityActor;
 	}
 
-	// Token: 0x06018880 RID: 100480 RVA: 0x00644794 File Offset: 0x00642994
+	// Token: 0x06016125 RID: 90405 RVA: 0x0066A5D0 File Offset: 0x006687D0
 	public static void Recycle(AKuroEntityActor actor, EBulletShape shape, bool needDetach = false)
 	{
 		actor.SetActorHiddenInGame(true);
@@ -74,7 +74,7 @@ public static class BulletActorPool
 		list.Add(actor);
 	}
 
-	// Token: 0x06018881 RID: 100481 RVA: 0x0064488C File Offset: 0x00642A8C
+	// Token: 0x06016126 RID: 90406 RVA: 0x0066A6C8 File Offset: 0x006688C8
 	public static void Preload()
 	{
 		BulletActorPool.PreloadByShape(EBulletShape.Cube, UBoxComponent.StaticClass());
@@ -83,7 +83,7 @@ public static class BulletActorPool
 		BulletActorPool.PreloadByShape(EBulletShape.Ray, default(UClassStackOnlyPtr));
 	}
 
-	// Token: 0x06018882 RID: 100482 RVA: 0x006448CC File Offset: 0x00642ACC
+	// Token: 0x06016127 RID: 90407 RVA: 0x0066A708 File Offset: 0x00668908
 	private static void PreloadByShape(EBulletShape shape, UClassStackOnlyPtr compClass)
 	{
 		List<AKuroEntityActor> list;
@@ -119,7 +119,7 @@ public static class BulletActorPool
 		}
 	}
 
-	// Token: 0x06018883 RID: 100483 RVA: 0x00644A0C File Offset: 0x00642C0C
+	// Token: 0x06016128 RID: 90408 RVA: 0x0066A848 File Offset: 0x00668A48
 	public static void Clear()
 	{
 		foreach (List<AKuroEntityActor> list in BulletActorPool.ActorPool.Values)
@@ -132,13 +132,13 @@ public static class BulletActorPool
 		BulletActorPool.ActorPool.Clear();
 	}
 
-	// Token: 0x0400B5ED RID: 46573
+	// Token: 0x0400B963 RID: 47459
 	private const int SIZE_POOL = 30;
 
-	// Token: 0x0400B5EE RID: 46574
+	// Token: 0x0400B964 RID: 47460
 	private const int PRE_ADD_COUNT = 5;
 
-	// Token: 0x0400B5EF RID: 46575
+	// Token: 0x0400B965 RID: 47461
 	[StaticVariableRuleIgnore]
 	private static readonly Dictionary<EBulletShape, List<AKuroEntityActor>> ActorPool = new Dictionary<EBulletShape, List<AKuroEntityActor>>();
 }

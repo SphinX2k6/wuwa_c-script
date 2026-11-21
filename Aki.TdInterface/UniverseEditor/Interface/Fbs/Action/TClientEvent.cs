@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200766E RID: 30318
+	// Token: 0x02007E7C RID: 32380
 	public enum TClientEvent : byte
 	{
-		// Token: 0x0401264E RID: 75342
+		// Token: 0x04013698 RID: 79512
 		NONE,
-		// Token: 0x0401264F RID: 75343
+		// Token: 0x04013699 RID: 79513
 		IClientUiEvent,
-		// Token: 0x04012650 RID: 75344
+		// Token: 0x0401369A RID: 79514
 		ISelfClientEvent
 	}
 }

@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DB5 RID: 19893
+	// Token: 0x02003D7E RID: 15742
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.Roguelike
 	})]
 	public class RoguelikeAchieveTogRoleRecordItem : GridProxyAbstract<RoguelikeAchieveSlotData>
 	{
-		// Token: 0x060335B9 RID: 210361 RVA: 0x00BFDB54 File Offset: 0x00BFBD54
+		// Token: 0x06028426 RID: 164902 RVA: 0x00B47094 File Offset: 0x00B45294
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060335BA RID: 210362 RVA: 0x00BFDC3C File Offset: 0x00BFBE3C
+		// Token: 0x06028427 RID: 164903 RVA: 0x00B4717C File Offset: 0x00B4537C
 		public override void Refresh(RoguelikeAchieveSlotData data, bool isSelected, int gridIndex)
 		{
 			this.SlotData = data;
@@ -51,39 +51,39 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.SetToggleState(isSelected, false);
 		}
 
-		// Token: 0x060335BB RID: 210363 RVA: 0x00BFDC5B File Offset: 0x00BFBE5B
+		// Token: 0x06028428 RID: 164904 RVA: 0x00B4719B File Offset: 0x00B4539B
 		protected override void OnStart()
 		{
 			this.SetRoleAvatarActive(false);
 			this.SetToggleState(false, false);
 		}
 
-		// Token: 0x060335BC RID: 210364 RVA: 0x00BFDC6C File Offset: 0x00BFBE6C
+		// Token: 0x06028429 RID: 164905 RVA: 0x00B471AC File Offset: 0x00B453AC
 		protected override void OnBeforeDestroy()
 		{
 			this.SlotData = null;
 			this.OnToggleStateChanged = null;
 		}
 
-		// Token: 0x060335BD RID: 210365 RVA: 0x00BFDC7C File Offset: 0x00BFBE7C
+		// Token: 0x0602842A RID: 164906 RVA: 0x00B471BC File Offset: 0x00B453BC
 		public void BindOnToggleStateChanged(Action<RoguelikeAchieveSlotData, int, EToggleState> callback)
 		{
 			this.OnToggleStateChanged = callback;
 		}
 
-		// Token: 0x060335BE RID: 210366 RVA: 0x00BFDC85 File Offset: 0x00BFBE85
+		// Token: 0x0602842B RID: 164907 RVA: 0x00B471C5 File Offset: 0x00B453C5
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetToggleState(true, fireEvent);
 		}
 
-		// Token: 0x060335BF RID: 210367 RVA: 0x00BFDC8F File Offset: 0x00BFBE8F
+		// Token: 0x0602842C RID: 164908 RVA: 0x00B471CF File Offset: 0x00B453CF
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetToggleState(false, fireEvent);
 		}
 
-		// Token: 0x060335C0 RID: 210368 RVA: 0x00BFDC99 File Offset: 0x00BFBE99
+		// Token: 0x0602842D RID: 164909 RVA: 0x00B471D9 File Offset: 0x00B453D9
 		private void OnToggleItemClick(EToggleState state)
 		{
 			if (this.SlotData == null)
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			onToggleStateChanged(this.SlotData, base.GridIndex, state);
 		}
 
-		// Token: 0x060335C1 RID: 210369 RVA: 0x00BFDCC4 File Offset: 0x00BFBEC4
+		// Token: 0x0602842E RID: 164910 RVA: 0x00B47204 File Offset: 0x00B45404
 		private void RefreshSlotIndex(RoguelikeAchieveSlotData data)
 		{
 			RogueArchiveInfoData archiveInfoData = data.ArchiveInfoData;
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			text2.SetText("", true);
 		}
 
-		// Token: 0x060335C2 RID: 210370 RVA: 0x00BFDD58 File Offset: 0x00BFBF58
+		// Token: 0x0602842F RID: 164911 RVA: 0x00B47298 File Offset: 0x00B45498
 		private void RefreshRoleAvatar(RoguelikeAchieveSlotData data)
 		{
 			RogueArchiveInfoData archiveInfoData = data.ArchiveInfoData;
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			base.SetRoleSkinIcon(text, base.GetTexture(3), roleSkinId, null, null);
 		}
 
-		// Token: 0x060335C3 RID: 210371 RVA: 0x00BFDE40 File Offset: 0x00BFC040
+		// Token: 0x06028430 RID: 164912 RVA: 0x00B47380 File Offset: 0x00B45580
 		private void SetToggleState(bool isSelected, bool fireEvent)
 		{
 			EToggleState state = isSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			extendToggle.SetToggleStateForce(state, fireEvent, false, false);
 		}
 
-		// Token: 0x060335C4 RID: 210372 RVA: 0x00BFDE6A File Offset: 0x00BFC06A
+		// Token: 0x06028431 RID: 164913 RVA: 0x00B473AA File Offset: 0x00B455AA
 		private void SetRoleAvatarActive(bool isActive)
 		{
 			UUIItem item = base.GetItem(2);
@@ -188,11 +188,11 @@ namespace CSharpScript.Game.Module.Roguelike
 			texture.SetUIActive(isActive);
 		}
 
-		// Token: 0x0401B472 RID: 111730
+		// Token: 0x04015E45 RID: 89669
 		[Nullable(2)]
 		private RoguelikeAchieveSlotData SlotData;
 
-		// Token: 0x0401B473 RID: 111731
+		// Token: 0x04015E46 RID: 89670
 		[Nullable(new byte[]
 		{
 			2,
@@ -200,20 +200,20 @@ namespace CSharpScript.Game.Module.Roguelike
 		})]
 		private Action<RoguelikeAchieveSlotData, int, EToggleState> OnToggleStateChanged;
 
-		// Token: 0x0200AF2C RID: 44844
+		// Token: 0x02009961 RID: 39265
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403531A RID: 217882
+			// Token: 0x0402FD4F RID: 195919
 			public const int ToggleItem = 0;
 
-			// Token: 0x0403531B RID: 217883
+			// Token: 0x0402FD50 RID: 195920
 			public const int TxtNum = 1;
 
-			// Token: 0x0403531C RID: 217884
+			// Token: 0x0402FD51 RID: 195921
 			public const int RoleAvatarItem = 2;
 
-			// Token: 0x0403531D RID: 217885
+			// Token: 0x0402FD52 RID: 195922
 			public const int TexRole = 3;
 		}
 	}

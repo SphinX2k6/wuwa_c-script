@@ -3,35 +3,35 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003D92 RID: 15762
+	// Token: 0x020041A9 RID: 16809
 	public class ICombatState2ConditionT
 	{
-		// Token: 0x17006C65 RID: 27749
-		// (get) Token: 0x06015E3A RID: 89658 RVA: 0x00329375 File Offset: 0x00327575
-		// (set) Token: 0x06015E3B RID: 89659 RVA: 0x0032937D File Offset: 0x0032757D
+		// Token: 0x1700721F RID: 29215
+		// (get) Token: 0x06017372 RID: 95090 RVA: 0x003506A1 File Offset: 0x0034E8A1
+		// (set) Token: 0x06017373 RID: 95091 RVA: 0x003506A9 File Offset: 0x0034E8A9
 		public int EntityId { get; set; }
 
-		// Token: 0x17006C66 RID: 27750
-		// (get) Token: 0x06015E3C RID: 89660 RVA: 0x00329386 File Offset: 0x00327586
-		// (set) Token: 0x06015E3D RID: 89661 RVA: 0x0032938E File Offset: 0x0032758E
+		// Token: 0x17007220 RID: 29216
+		// (get) Token: 0x06017374 RID: 95092 RVA: 0x003506B2 File Offset: 0x0034E8B2
+		// (set) Token: 0x06017375 RID: 95093 RVA: 0x003506BA File Offset: 0x0034E8BA
 		public string State { get; set; }
 
-		// Token: 0x17006C67 RID: 27751
-		// (get) Token: 0x06015E3E RID: 89662 RVA: 0x00329397 File Offset: 0x00327597
-		// (set) Token: 0x06015E3F RID: 89663 RVA: 0x0032939F File Offset: 0x0032759F
+		// Token: 0x17007221 RID: 29217
+		// (get) Token: 0x06017376 RID: 95094 RVA: 0x003506C3 File Offset: 0x0034E8C3
+		// (set) Token: 0x06017377 RID: 95095 RVA: 0x003506CB File Offset: 0x0034E8CB
 		public ECompare Compare { get; set; }
 
-		// Token: 0x17006C68 RID: 27752
-		// (get) Token: 0x06015E40 RID: 89664 RVA: 0x003293A8 File Offset: 0x003275A8
-		// (set) Token: 0x06015E41 RID: 89665 RVA: 0x003293B0 File Offset: 0x003275B0
+		// Token: 0x17007222 RID: 29218
+		// (get) Token: 0x06017378 RID: 95096 RVA: 0x003506D4 File Offset: 0x0034E8D4
+		// (set) Token: 0x06017379 RID: 95097 RVA: 0x003506DC File Offset: 0x0034E8DC
 		public EDetectTarget DetectTarget { get; set; }
 
-		// Token: 0x17006C69 RID: 27753
-		// (get) Token: 0x06015E42 RID: 89666 RVA: 0x003293B9 File Offset: 0x003275B9
-		// (set) Token: 0x06015E43 RID: 89667 RVA: 0x003293C1 File Offset: 0x003275C1
+		// Token: 0x17007223 RID: 29219
+		// (get) Token: 0x0601737A RID: 95098 RVA: 0x003506E5 File Offset: 0x0034E8E5
+		// (set) Token: 0x0601737B RID: 95099 RVA: 0x003506ED File Offset: 0x0034E8ED
 		public byte NullMask { get; set; }
 
-		// Token: 0x06015E44 RID: 89668 RVA: 0x003293CA File Offset: 0x003275CA
+		// Token: 0x0601737C RID: 95100 RVA: 0x003506F6 File Offset: 0x0034E8F6
 		public ICombatState2ConditionT()
 		{
 			this.EntityId = 0;

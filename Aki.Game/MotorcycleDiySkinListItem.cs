@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x0200227E RID: 8830
+// Token: 0x02001762 RID: 5986
 [Nullable(new byte[]
 {
 	0,
@@ -12,7 +12,7 @@ using UnrealEngine;
 })]
 public class MotorcycleDiySkinListItem : GridProxyAbstract<MotorcycleDiySkinListItemData>
 {
-	// Token: 0x060113E8 RID: 70632 RVA: 0x00435700 File Offset: 0x00433900
+	// Token: 0x0600E87E RID: 59518 RVA: 0x0044230C File Offset: 0x0044050C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,7 +23,7 @@ public class MotorcycleDiySkinListItem : GridProxyAbstract<MotorcycleDiySkinList
 		};
 	}
 
-	// Token: 0x060113E9 RID: 70633 RVA: 0x0043575C File Offset: 0x0043395C
+	// Token: 0x0600E87F RID: 59519 RVA: 0x00442368 File Offset: 0x00440568
 	[NullableContext(1)]
 	public override void Refresh(MotorcycleDiySkinListItemData data, bool isSelected, int gridIndex)
 	{
@@ -54,16 +54,16 @@ public class MotorcycleDiySkinListItem : GridProxyAbstract<MotorcycleDiySkinList
 		rootItem.SetAlpha((data.CanCustomizeNum > 0) ? 1f : 0.5f);
 	}
 
-	// Token: 0x020087C3 RID: 34755
+	// Token: 0x0200794C RID: 31052
 	private class EMotorDiySkinListItemComponent
 	{
-		// Token: 0x0402C1F3 RID: 180723
+		// Token: 0x0402750B RID: 161035
 		public const int TexIcon = 0;
 
-		// Token: 0x0402C1F4 RID: 180724
+		// Token: 0x0402750C RID: 161036
 		public const int TxtName = 1;
 
-		// Token: 0x0402C1F5 RID: 180725
+		// Token: 0x0402750D RID: 161037
 		public const int TxtNum = 2;
 	}
 }

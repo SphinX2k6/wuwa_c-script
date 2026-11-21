@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004302 RID: 17154
+	// Token: 0x02004761 RID: 18273
 	public enum TRecallCondition : byte
 	{
-		// Token: 0x0400C07E RID: 49278
+		// Token: 0x0400CA96 RID: 51862
 		NONE,
-		// Token: 0x0400C07F RID: 49279
+		// Token: 0x0400CA97 RID: 51863
 		IRecallConditionByEntityType,
-		// Token: 0x0400C080 RID: 49280
+		// Token: 0x0400CA98 RID: 51864
 		IRecallConditionByGroup,
-		// Token: 0x0400C081 RID: 49281
+		// Token: 0x0400CA99 RID: 51865
 		IRecallConditionByTemplate
 	}
 }

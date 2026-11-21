@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022F4 RID: 8948
+	// Token: 0x02002563 RID: 9571
 	public class ECustomScreenLoadingJsonConverter : JsonConverter<ECustomScreenLoading>
 	{
-		// Token: 0x0600C3CA RID: 50122 RVA: 0x001C98AC File Offset: 0x001C7AAC
+		// Token: 0x0600CF99 RID: 53145 RVA: 0x001E16F8 File Offset: 0x001DF8F8
 		public override ECustomScreenLoading Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return ECustomScreenLoadingExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C3CB RID: 50123 RVA: 0x001C98D0 File Offset: 0x001C7AD0
+		// Token: 0x0600CF9A RID: 53146 RVA: 0x001E171C File Offset: 0x001DF91C
 		public override void Write(Utf8JsonWriter writer, ECustomScreenLoading value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

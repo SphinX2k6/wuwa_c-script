@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000218 RID: 536
+	// Token: 0x0200023F RID: 575
 	public class ICastConfig_SetValue
 	{
-		// Token: 0x0400098E RID: 2446
+		// Token: 0x04000A18 RID: 2584
 		public int CastAngularVelocity;
 
-		// Token: 0x0400098F RID: 2447
-		[Nullable(1)]
+		// Token: 0x04000A19 RID: 2585
 		public string CastCameraShake;
 
-		// Token: 0x04000990 RID: 2448
+		// Token: 0x04000A1A RID: 2586
 		public int CastVelocity;
 	}
 }

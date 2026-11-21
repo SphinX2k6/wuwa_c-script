@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000E75 RID: 3701
+	// Token: 0x02000F5A RID: 3930
 	public struct MultiMapAreaConfig : IFlatbufferObject
 	{
-		// Token: 0x170022AD RID: 8877
-		// (get) Token: 0x06009D7D RID: 40317 RVA: 0x0029A46B File Offset: 0x0029866B
+		// Token: 0x17002312 RID: 8978
+		// (get) Token: 0x0600A39D RID: 41885 RVA: 0x002B7C16 File Offset: 0x002B5E16
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009D7E RID: 40318 RVA: 0x0029A478 File Offset: 0x00298678
+		// Token: 0x0600A39E RID: 41886 RVA: 0x002B7C23 File Offset: 0x002B5E23
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06009D7F RID: 40319 RVA: 0x0029A480 File Offset: 0x00298680
+		// Token: 0x0600A39F RID: 41887 RVA: 0x002B7C2C File Offset: 0x002B5E2C
 		public static MultiMapAreaConfig GetRootAsMultiMapAreaConfig(ByteBuffer _bb)
 		{
 			return MultiMapAreaConfig.GetRootAsMultiMapAreaConfig(_bb, default(MultiMapAreaConfig));
 		}
 
-		// Token: 0x06009D80 RID: 40320 RVA: 0x0029A49C File Offset: 0x0029869C
+		// Token: 0x0600A3A0 RID: 41888 RVA: 0x002B7C48 File Offset: 0x002B5E48
 		public static MultiMapAreaConfig GetRootAsMultiMapAreaConfig(ByteBuffer _bb, MultiMapAreaConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06009D81 RID: 40321 RVA: 0x0029A4B9 File Offset: 0x002986B9
+		// Token: 0x0600A3A1 RID: 41889 RVA: 0x002B7C65 File Offset: 0x002B5E65
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06009D82 RID: 40322 RVA: 0x0029A4C8 File Offset: 0x002986C8
+		// Token: 0x0600A3A2 RID: 41890 RVA: 0x002B7C74 File Offset: 0x002B5E74
 		public MultiMapAreaConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170022AE RID: 8878
-		// (get) Token: 0x06009D83 RID: 40323 RVA: 0x0029A4D8 File Offset: 0x002986D8
+		// Token: 0x17002313 RID: 8979
+		// (get) Token: 0x0600A3A3 RID: 41891 RVA: 0x002B7C84 File Offset: 0x002B5E84
 		public string Id
 		{
 			get
@@ -65,20 +65,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009D84 RID: 40324 RVA: 0x0029A50F File Offset: 0x0029870F
+		// Token: 0x0600A3A4 RID: 41892 RVA: 0x002B7CBB File Offset: 0x002B5EBB
 		public Span<byte> GetIdBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x06009D85 RID: 40325 RVA: 0x0029A51E File Offset: 0x0029871E
+		// Token: 0x0600A3A5 RID: 41893 RVA: 0x002B7CCA File Offset: 0x002B5ECA
 		public byte[] GetIdArray()
 		{
 			return this.__p.__vector_as_array<byte>(4) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170022AF RID: 8879
-		// (get) Token: 0x06009D86 RID: 40326 RVA: 0x0029A538 File Offset: 0x00298738
+		// Token: 0x17002314 RID: 8980
+		// (get) Token: 0x0600A3A6 RID: 41894 RVA: 0x002B7CE4 File Offset: 0x002B5EE4
 		public string Block
 		{
 			get
@@ -92,19 +92,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009D87 RID: 40327 RVA: 0x0029A56F File Offset: 0x0029876F
+		// Token: 0x0600A3A7 RID: 41895 RVA: 0x002B7D1B File Offset: 0x002B5F1B
 		public Span<byte> GetBlockBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06009D88 RID: 40328 RVA: 0x0029A57E File Offset: 0x0029877E
+		// Token: 0x0600A3A8 RID: 41896 RVA: 0x002B7D2A File Offset: 0x002B5F2A
 		public byte[] GetBlockArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x06009D89 RID: 40329 RVA: 0x0029A598 File Offset: 0x00298798
+		// Token: 0x0600A3A9 RID: 41897 RVA: 0x002B7D44 File Offset: 0x002B5F44
 		public int MultiMapList(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -115,8 +115,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170022B0 RID: 8880
-		// (get) Token: 0x06009D8A RID: 40330 RVA: 0x0029A5D8 File Offset: 0x002987D8
+		// Token: 0x17002315 RID: 8981
+		// (get) Token: 0x0600A3AA RID: 41898 RVA: 0x002B7D84 File Offset: 0x002B5F84
 		public int MultiMapListLength
 		{
 			get
@@ -130,19 +130,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009D8B RID: 40331 RVA: 0x0029A603 File Offset: 0x00298803
+		// Token: 0x0600A3AB RID: 41899 RVA: 0x002B7DAF File Offset: 0x002B5FAF
 		public Span<int> GetMultiMapListBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x06009D8C RID: 40332 RVA: 0x0029A612 File Offset: 0x00298812
+		// Token: 0x0600A3AC RID: 41900 RVA: 0x002B7DBE File Offset: 0x002B5FBE
 		public int[] GetMultiMapListArray()
 		{
 			return this.__p.__vector_as_array<int>(8) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x06009D8D RID: 40333 RVA: 0x0029A62C File Offset: 0x0029882C
+		// Token: 0x0600A3AD RID: 41901 RVA: 0x002B7DD8 File Offset: 0x002B5FD8
 		public IntArray? MultiMapRangeList(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -153,8 +153,8 @@ namespace Aki.Config
 			return new IntArray?(default(IntArray).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x170022B1 RID: 8881
-		// (get) Token: 0x06009D8E RID: 40334 RVA: 0x0029A690 File Offset: 0x00298890
+		// Token: 0x17002316 RID: 8982
+		// (get) Token: 0x0600A3AE RID: 41902 RVA: 0x002B7E3C File Offset: 0x002B603C
 		public int MultiMapRangeListLength
 		{
 			get
@@ -168,8 +168,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170022B2 RID: 8882
-		// (get) Token: 0x06009D8F RID: 40335 RVA: 0x0029A6BC File Offset: 0x002988BC
+		// Token: 0x17002317 RID: 8983
+		// (get) Token: 0x0600A3AF RID: 41903 RVA: 0x002B7E68 File Offset: 0x002B6068
 		public int MapConfigId
 		{
 			get
@@ -183,8 +183,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170022B3 RID: 8883
-		// (get) Token: 0x06009D90 RID: 40336 RVA: 0x0029A6FC File Offset: 0x002988FC
+		// Token: 0x17002318 RID: 8984
+		// (get) Token: 0x0600A3B0 RID: 41904 RVA: 0x002B7EA8 File Offset: 0x002B60A8
 		public int GravityFlip
 		{
 			get
@@ -198,42 +198,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009D91 RID: 40337 RVA: 0x0029A73C File Offset: 0x0029893C
+		// Token: 0x0600A3B1 RID: 41905 RVA: 0x002B7EE5 File Offset: 0x002B60E5
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用MultiMapListIter()或GetMultiMapListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] MultiMapList()
+		public int[] MultiMapList()
 		{
-			MultiMapAreaConfig multiMapAreaConfig = this;
-			return multiMapAreaConfig.GetMultiMapListArray() ?? Array.Empty<int>();
+			return this.GetMultiMapListArray();
 		}
 
-		// Token: 0x06009D92 RID: 40338 RVA: 0x0029A760 File Offset: 0x00298960
+		// Token: 0x0600A3B2 RID: 41906 RVA: 0x002B7EED File Offset: 0x002B60ED
 		[NullableContext(1)]
-		public readonly IEnumerable<int> MultiMapListIter()
+		public IEnumerable<int> MultiMapListIter()
 		{
 			MultiMapAreaConfig.<MultiMapListIter>d__29 <MultiMapListIter>d__ = new MultiMapAreaConfig.<MultiMapListIter>d__29(-2);
 			<MultiMapListIter>d__.<>3__<>4__this = this;
 			return <MultiMapListIter>d__;
 		}
 
-		// Token: 0x06009D93 RID: 40339 RVA: 0x0029A775 File Offset: 0x00298975
+		// Token: 0x0600A3B3 RID: 41907 RVA: 0x002B7F02 File Offset: 0x002B6102
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用MultiMapRangeListIter()或GetMultiMapRangeListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly IntArray[] MultiMapRangeList()
+		public IntArray[] MultiMapRangeList()
 		{
 			return this.MultiMapRangeListIter().ToArray<IntArray>();
 		}
 
-		// Token: 0x06009D94 RID: 40340 RVA: 0x0029A782 File Offset: 0x00298982
+		// Token: 0x0600A3B4 RID: 41908 RVA: 0x002B7F0F File Offset: 0x002B610F
 		[NullableContext(1)]
-		public readonly IEnumerable<IntArray> MultiMapRangeListIter()
+		public IEnumerable<IntArray> MultiMapRangeListIter()
 		{
 			MultiMapAreaConfig.<MultiMapRangeListIter>d__31 <MultiMapRangeListIter>d__ = new MultiMapAreaConfig.<MultiMapRangeListIter>d__31(-2);
 			<MultiMapRangeListIter>d__.<>3__<>4__this = this;
 			return <MultiMapRangeListIter>d__;
 		}
 
-		// Token: 0x04004F23 RID: 20259
+		// Token: 0x04005508 RID: 21768
 		private Table __p;
 	}
 }

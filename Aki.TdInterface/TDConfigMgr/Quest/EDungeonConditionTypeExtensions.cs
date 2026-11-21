@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200123A RID: 4666
+	// Token: 0x0200137A RID: 4986
 	public static class EDungeonConditionTypeExtensions
 	{
-		// Token: 0x060069AC RID: 27052 RVA: 0x000FD0B8 File Offset: 0x000FB2B8
+		// Token: 0x06006FFF RID: 28671 RVA: 0x0010AC84 File Offset: 0x00108E84
 		public static string ToEnumString(this EDungeonConditionType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060069AD RID: 27053 RVA: 0x000FD0F0 File Offset: 0x000FB2F0
+		// Token: 0x06007000 RID: 28672 RVA: 0x0010ACBC File Offset: 0x00108EBC
 		public static EDungeonConditionType FromString(string name)
 		{
 			EDungeonConditionType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060069AE RID: 27054 RVA: 0x000FD119 File Offset: 0x000FB319
+		// Token: 0x06007001 RID: 28673 RVA: 0x0010ACE5 File Offset: 0x00108EE5
 		public static bool TryFromString(string name, out EDungeonConditionType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Quest
 			return true;
 		}
 
-		// Token: 0x060069AF RID: 27055 RVA: 0x000FD152 File Offset: 0x000FB352
+		// Token: 0x06007002 RID: 28674 RVA: 0x0010AD1E File Offset: 0x00108F1E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060069B0 RID: 27056 RVA: 0x000FD16A File Offset: 0x000FB36A
+		// Token: 0x06007003 RID: 28675 RVA: 0x0010AD36 File Offset: 0x00108F36
 		public static EDungeonConditionType[] GetValues()
 		{
 			return new EDungeonConditionType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060069B1 RID: 27057 RVA: 0x000FD176 File Offset: 0x000FB376
+		// Token: 0x06007004 RID: 28676 RVA: 0x0010AD42 File Offset: 0x00108F42
 		public static string[] GetNames()
 		{
 			return new string[]

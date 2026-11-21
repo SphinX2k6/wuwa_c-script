@@ -2,18 +2,48 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
+using CSharpScript.Game.Common;
 using CSharpScript.Game.ServerStorage.Container;
 using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.ServerStorage
 {
-	// Token: 0x02004583 RID: 17795
+	// Token: 0x020034AB RID: 13483
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class ServerStorageModel : ModelBase
 	{
-		// Token: 0x0602DE97 RID: 188055 RVA: 0x00A8E4C4 File Offset: 0x00A8C6C4
+		// Token: 0x06022579 RID: 140665 RVA: 0x009BA04C File Offset: 0x009B824C
+		public void RegisterPendingLocalDelete(EClientStorageSystemIdType serverKey, ELocalStoragePlayerKey localKey)
+		{
+			List<ELocalStoragePlayerKey> list;
+			if (!this.PendingLocalDeletes.TryGetValue(serverKey, out list))
+			{
+				list = new List<ELocalStoragePlayerKey>();
+				this.PendingLocalDeletes[serverKey] = list;
+			}
+			if (!list.Contains(localKey))
+			{
+				list.Add(localKey);
+			}
+			this.MarkDirty(serverKey);
+		}
+
+		// Token: 0x0602257A RID: 140666 RVA: 0x009BA094 File Offset: 0x009B8294
+		public bool HasPendingLocalDelete(EClientStorageSystemIdType serverKey, ELocalStoragePlayerKey localKey)
+		{
+			List<ELocalStoragePlayerKey> list;
+			return this.PendingLocalDeletes.TryGetValue(serverKey, out list) && list.Contains(localKey);
+		}
+
+		// Token: 0x0602257B RID: 140667 RVA: 0x009BA0BA File Offset: 0x009B82BA
+		public void RemovePendingLocalDelete(EClientStorageSystemIdType serverKey)
+		{
+			this.PendingLocalDeletes.Remove(serverKey);
+		}
+
+		// Token: 0x0602257C RID: 140668 RVA: 0x009BA0CC File Offset: 0x009B82CC
 		[NullableContext(2)]
 		private ServerStorageEntryBase CreateContainer(EClientStorageSystemIdType key)
 		{
@@ -44,7 +74,7 @@ namespace CSharpScript.Game.ServerStorage
 			return serverStorageEntryBase;
 		}
 
-		// Token: 0x0602DE98 RID: 188056 RVA: 0x00A8E568 File Offset: 0x00A8C768
+		// Token: 0x0602257D RID: 140669 RVA: 0x009BA170 File Offset: 0x009B8370
 		public void InitStorageInfo(RepeatedField<ClientStorageInfo> storageInfoList)
 		{
 			this.Cache.Clear();
@@ -68,7 +98,7 @@ namespace CSharpScript.Game.ServerStorage
 			}
 		}
 
-		// Token: 0x0602DE99 RID: 188057 RVA: 0x00A8E614 File Offset: 0x00A8C814
+		// Token: 0x0602257E RID: 140670 RVA: 0x009BA21C File Offset: 0x009B841C
 		[NullableContext(2)]
 		public ServerStorageEntryBase Get(EClientStorageSystemIdType key)
 		{
@@ -80,7 +110,7 @@ namespace CSharpScript.Game.ServerStorage
 			return this.CreateContainer(key);
 		}
 
-		// Token: 0x0602DE9A RID: 188058 RVA: 0x00A8E63C File Offset: 0x00A8C83C
+		// Token: 0x0602257F RID: 140671 RVA: 0x009BA244 File Offset: 0x009B8444
 		public void MarkDirty(EClientStorageSystemIdType key)
 		{
 			this.DirtyCache.Add(key);
@@ -91,7 +121,7 @@ namespace CSharpScript.Game.ServerStorage
 			this.DelayTimerHandle = TimerSystem.RealTimeInstance.Delay(new TTimerAction(this.DelaySaveDirtyCache), 3000f, null, null, true, 1f);
 		}
 
-		// Token: 0x0602DE9B RID: 188059 RVA: 0x00A8E688 File Offset: 0x00A8C888
+		// Token: 0x06022580 RID: 140672 RVA: 0x009BA290 File Offset: 0x009B8490
 		protected override bool OnClear()
 		{
 			if (this.DelayTimerHandle == null)
@@ -104,7 +134,7 @@ namespace CSharpScript.Game.ServerStorage
 			return true;
 		}
 
-		// Token: 0x0602DE9C RID: 188060 RVA: 0x00A8E6B4 File Offset: 0x00A8C8B4
+		// Token: 0x06022581 RID: 140673 RVA: 0x009BA2BC File Offset: 0x009B84BC
 		private void SaveDirtyCache()
 		{
 			if (this.DirtyCache.Count == 0)
@@ -112,6 +142,8 @@ namespace CSharpScript.Game.ServerStorage
 				return;
 			}
 			StorageInfoUpdateRequest storageInfoUpdateRequest = StorageInfoUpdateRequest.Create();
+			List<ELocalStoragePlayerKey> localKeysToDelete = new List<ELocalStoragePlayerKey>();
+			List<EClientStorageSystemIdType> serverKeysToDelete = new List<EClientStorageSystemIdType>();
 			foreach (EClientStorageSystemIdType eclientStorageSystemIdType in this.DirtyCache)
 			{
 				ClientStorageInfo clientStorageInfo = ServerStorageModel.Instance.Get(eclientStorageSystemIdType).Deserialize();
@@ -127,6 +159,12 @@ namespace CSharpScript.Game.ServerStorage
 				else
 				{
 					storageInfoUpdateRequest.Infos.Add(clientStorageInfo);
+					List<ELocalStoragePlayerKey> collection;
+					if (this.PendingLocalDeletes.TryGetValue(eclientStorageSystemIdType, out collection))
+					{
+						localKeysToDelete.AddRange(collection);
+						serverKeysToDelete.Add(eclientStorageSystemIdType);
+					}
 				}
 			}
 			Log instance2 = Log.Instance;
@@ -135,19 +173,37 @@ namespace CSharpScript.Game.ServerStorage
 			string message2 = "DelaySaveDirtyCache";
 			ValueTuple<string, object> valueTuple2 = new ValueTuple<string, object>("storageInfo", storageInfoUpdateRequest.Infos);
 			instance2.Info(module2, author2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
-			ServerStorageController.Instance.SendStorageInfoUpdateRequest(storageInfoUpdateRequest);
+			ServerStorageController.Instance.SendStorageInfoUpdateRequest(storageInfoUpdateRequest, delegate(bool success)
+			{
+				if (!success)
+				{
+					foreach (EClientStorageSystemIdType serverKey in serverKeysToDelete)
+					{
+						this.RemovePendingLocalDelete(serverKey);
+					}
+					return;
+				}
+				foreach (ELocalStoragePlayerKey key in localKeysToDelete)
+				{
+					LocalStorage.DeletePlayer(key);
+				}
+				foreach (EClientStorageSystemIdType key2 in serverKeysToDelete)
+				{
+					this.PendingLocalDeletes.Remove(key2);
+				}
+			});
 			this.DirtyCache.Clear();
 		}
 
-		// Token: 0x0602DE9D RID: 188061 RVA: 0x00A8E7B0 File Offset: 0x00A8C9B0
+		// Token: 0x06022582 RID: 140674 RVA: 0x009BA418 File Offset: 0x009B8618
 		private void DelaySaveDirtyCache(float delta)
 		{
 			this.SaveDirtyCache();
 			this.DelayTimerHandle = null;
 		}
 
-		// Token: 0x17007596 RID: 30102
-		// (get) Token: 0x0602DE9E RID: 188062 RVA: 0x00A8E7BF File Offset: 0x00A8C9BF
+		// Token: 0x1700484D RID: 18509
+		// (get) Token: 0x06022583 RID: 140675 RVA: 0x009BA427 File Offset: 0x009B8627
 		public static ServerStorageModel Instance
 		{
 			get
@@ -156,7 +212,7 @@ namespace CSharpScript.Game.ServerStorage
 			}
 		}
 
-		// Token: 0x0602DE9F RID: 188063 RVA: 0x00A8E7C6 File Offset: 0x00A8C9C6
+		// Token: 0x06022584 RID: 140676 RVA: 0x009BA42E File Offset: 0x009B862E
 		public static ServerStorageModel GetOrCreateInstance()
 		{
 			if (ServerStorageModel._Instance == null)
@@ -166,7 +222,7 @@ namespace CSharpScript.Game.ServerStorage
 			return ServerStorageModel._Instance;
 		}
 
-		// Token: 0x0602DEA0 RID: 188064 RVA: 0x00A8E7DA File Offset: 0x00A8C9DA
+		// Token: 0x06022585 RID: 140677 RVA: 0x009BA442 File Offset: 0x009B8642
 		public static bool CreateInstance()
 		{
 			if (ServerStorageModel._Instance != null)
@@ -177,34 +233,37 @@ namespace CSharpScript.Game.ServerStorage
 			return true;
 		}
 
-		// Token: 0x0602DEA1 RID: 188065 RVA: 0x00A8E7F0 File Offset: 0x00A8C9F0
+		// Token: 0x06022586 RID: 140678 RVA: 0x009BA458 File Offset: 0x009B8658
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602DEA2 RID: 188066 RVA: 0x00A8E7F2 File Offset: 0x00A8C9F2
+		// Token: 0x06022587 RID: 140679 RVA: 0x009BA45A File Offset: 0x009B865A
 		public static void ResetStaticDefaultValue()
 		{
 			ServerStorageModel._Instance = null;
 		}
 
-		// Token: 0x0602DEA3 RID: 188067 RVA: 0x00A8E7FA File Offset: 0x00A8C9FA
+		// Token: 0x06022588 RID: 140680 RVA: 0x009BA462 File Offset: 0x009B8662
 		static ServerStorageModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ServerStorageModel.CreateStaticDefaultValue), new Action(ServerStorageModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04018844 RID: 100420
+		// Token: 0x04012E7E RID: 77438
 		private readonly Dictionary<EClientStorageSystemIdType, ServerStorageEntryBase> Cache = new Dictionary<EClientStorageSystemIdType, ServerStorageEntryBase>();
 
-		// Token: 0x04018845 RID: 100421
+		// Token: 0x04012E7F RID: 77439
 		private readonly HashSet<EClientStorageSystemIdType> DirtyCache = new HashSet<EClientStorageSystemIdType>();
 
-		// Token: 0x04018846 RID: 100422
+		// Token: 0x04012E80 RID: 77440
 		[Nullable(2)]
 		private TimerHandle DelayTimerHandle;
 
-		// Token: 0x04018847 RID: 100423
+		// Token: 0x04012E81 RID: 77441
+		private readonly Dictionary<EClientStorageSystemIdType, List<ELocalStoragePlayerKey>> PendingLocalDeletes = new Dictionary<EClientStorageSystemIdType, List<ELocalStoragePlayerKey>>();
+
+		// Token: 0x04012E82 RID: 77442
 		[Nullable(2)]
 		private static ServerStorageModel _Instance;
 	}

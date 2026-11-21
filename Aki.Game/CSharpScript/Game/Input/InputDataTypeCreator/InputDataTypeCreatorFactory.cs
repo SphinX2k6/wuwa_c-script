@@ -5,18 +5,18 @@ using CSharpScript.Game.Module.AdventureGuide;
 
 namespace CSharpScript.Game.Input.InputDataTypeCreator
 {
-	// Token: 0x02006FD3 RID: 28627
+	// Token: 0x02006154 RID: 24916
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InputDataTypeCreatorFactory : IStaticVariableResetter
 	{
-		// Token: 0x06045A0D RID: 285197 RVA: 0x0114A9FB File Offset: 0x01148BFB
+		// Token: 0x0603BBBE RID: 244670 RVA: 0x010F47EF File Offset: 0x010F29EF
 		static InputDataTypeCreatorFactory()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(InputDataTypeCreatorFactory.CreateStaticDefaultValue), new Action(InputDataTypeCreatorFactory.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06045A0E RID: 285198 RVA: 0x0114AA1C File Offset: 0x01148C1C
+		// Token: 0x0603BBBF RID: 244671 RVA: 0x010F4810 File Offset: 0x010F2A10
 		public static void Initialize()
 		{
 			InputDataTypeCreatorFactory.InputDataCreatorMap[EDungeonSubType.TowerDefenseEvent] = new TrapDefenseInputDataTypeCreator();
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Input.InputDataTypeCreator
 			InputDataTypeCreatorFactory.WorldInstanceInputDataCreatorMap[EWorldDungeonSubType.SpringManorWorld] = new SpringManorInputDataTypeCreator();
 		}
 
-		// Token: 0x06045A0F RID: 285199 RVA: 0x0114AA6C File Offset: 0x01148C6C
+		// Token: 0x0603BBC0 RID: 244672 RVA: 0x010F4860 File Offset: 0x010F2A60
 		public static InputDataTypeCreator GetInputDataCreator(EDungeonSubType dungeonSubType, EWorldDungeonSubType worldDungeonSubType)
 		{
 			InputDataTypeCreator inputDataTypeCreator = null;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Input.InputDataTypeCreator
 			return InputDataTypeCreatorFactory.DefaultInputDataCreator;
 		}
 
-		// Token: 0x06045A10 RID: 285200 RVA: 0x0114AAAE File Offset: 0x01148CAE
+		// Token: 0x0603BBC1 RID: 244673 RVA: 0x010F48A2 File Offset: 0x010F2AA2
 		public static void CreateStaticDefaultValue()
 		{
 			InputDataTypeCreatorFactory.InputDataCreatorMap = new Dictionary<EDungeonSubType, InputDataTypeCreator>();
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Input.InputDataTypeCreator
 			InputDataTypeCreatorFactory.DefaultInputDataCreator = new NormalWorldInputDataTypeCreator();
 		}
 
-		// Token: 0x06045A11 RID: 285201 RVA: 0x0114AACE File Offset: 0x01148CCE
+		// Token: 0x0603BBC2 RID: 244674 RVA: 0x010F48C2 File Offset: 0x010F2AC2
 		public static void ResetStaticDefaultValue()
 		{
 			InputDataTypeCreatorFactory.InputDataCreatorMap = null;
@@ -65,13 +65,13 @@ namespace CSharpScript.Game.Input.InputDataTypeCreator
 			InputDataTypeCreatorFactory.DefaultInputDataCreator = null;
 		}
 
-		// Token: 0x0402457C RID: 148860
+		// Token: 0x0401F831 RID: 129073
 		private static Dictionary<EDungeonSubType, InputDataTypeCreator> InputDataCreatorMap;
 
-		// Token: 0x0402457D RID: 148861
+		// Token: 0x0401F832 RID: 129074
 		private static Dictionary<EWorldDungeonSubType, InputDataTypeCreator> WorldInstanceInputDataCreatorMap;
 
-		// Token: 0x0402457E RID: 148862
+		// Token: 0x0401F833 RID: 129075
 		private static InputDataTypeCreator DefaultInputDataCreator;
 	}
 }

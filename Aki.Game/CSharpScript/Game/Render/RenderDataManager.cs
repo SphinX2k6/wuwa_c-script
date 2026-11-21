@@ -11,19 +11,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045C1 RID: 17857
+	// Token: 0x020034E9 RID: 13545
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RenderDataManager : Singleton
 	{
-		// Token: 0x0602E0A3 RID: 188579 RVA: 0x00A9CBDC File Offset: 0x00A9ADDC
+		// Token: 0x0602278D RID: 141197 RVA: 0x009C8E24 File Offset: 0x009C7024
 		private void OnGlobalFootstepMaterialChange(UPhysicalMaterial material)
 		{
 			this.GlobalFootstepMaterial = material;
 			EventSystem.Instance.Emit<UPhysicalMaterial>(EEventName.OnGlobalFootstepMaterialChange, material);
 		}
 
-		// Token: 0x0602E0A4 RID: 188580 RVA: 0x00A9CBF8 File Offset: 0x00A9ADF8
+		// Token: 0x0602278E RID: 141198 RVA: 0x009C8E40 File Offset: 0x009C7040
 		private void OnForbidWeatherStateChange(bool bForbidWeather)
 		{
 			this.ForbidWeather = bForbidWeather;
@@ -37,14 +37,32 @@ namespace CSharpScript.Game.Render
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x0602E0A5 RID: 188581 RVA: 0x00A9CC62 File Offset: 0x00A9AE62
+		// Token: 0x0602278F RID: 141199 RVA: 0x009C8EAC File Offset: 0x009C70AC
+		public void SyncForbidWeather()
+		{
+			AKuroGlobalGI akuroGlobalGI = UKuroRenderingRuntimeBPPluginBPLibrary.GetGlobalGIActor(GlobalData.World) as AKuroGlobalGI;
+			if (akuroGlobalGI == null)
+			{
+				return;
+			}
+			this.ForbidWeather = akuroGlobalGI.bForbidWeather;
+			WeatherModel.Instance.GetWorldWeatherActor().SetWeatherForbiddenImmediately(this.ForbidWeather);
+			Log instance = Log.Instance;
+			ELogModule module = ELogModule.Render;
+			ELogAuthor author = ELogAuthor.LJ;
+			string message = "切图同步随机天气状态";
+			ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("状态", this.ForbidWeather ? "禁用" : "启用");
+			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
+		}
+
+		// Token: 0x06022790 RID: 141200 RVA: 0x009C8F28 File Offset: 0x009C7128
 		protected override bool OnInit()
 		{
 			this.Init();
 			return true;
 		}
 
-		// Token: 0x0602E0A6 RID: 188582 RVA: 0x00A9CC6C File Offset: 0x00A9AE6C
+		// Token: 0x06022791 RID: 141201 RVA: 0x009C8F34 File Offset: 0x009C7134
 		private void Init()
 		{
 			this.Valid = false;
@@ -64,7 +82,7 @@ namespace CSharpScript.Game.Render
 			AKuroGlobalGI.BindEventForbidWeatherStateChanged(DelegateUtils.ToManualReleaseDelegate<FOnForbidWeatherStateChangedDelegate>(new Action<bool>(this.OnForbidWeatherStateChange)));
 		}
 
-		// Token: 0x0602E0A7 RID: 188583 RVA: 0x00A9CD2C File Offset: 0x00A9AF2C
+		// Token: 0x06022792 RID: 141202 RVA: 0x009C8FF4 File Offset: 0x009C71F4
 		public float GetRainIntensity()
 		{
 			if (GlobalData.World != null && this.GlobalShaderParameters != null)
@@ -74,7 +92,7 @@ namespace CSharpScript.Game.Render
 			return 0f;
 		}
 
-		// Token: 0x0602E0A8 RID: 188584 RVA: 0x00A9CD58 File Offset: 0x00A9AF58
+		// Token: 0x06022793 RID: 141203 RVA: 0x009C9020 File Offset: 0x009C7220
 		public float GetSnowIntensity()
 		{
 			if (GlobalData.World != null && this.GlobalShaderParameters != null)
@@ -84,7 +102,7 @@ namespace CSharpScript.Game.Render
 			return 0f;
 		}
 
-		// Token: 0x0602E0A9 RID: 188585 RVA: 0x00A9CD84 File Offset: 0x00A9AF84
+		// Token: 0x06022794 RID: 141204 RVA: 0x009C904C File Offset: 0x009C724C
 		public float GetWindIntensity()
 		{
 			if (GlobalData.World != null && this.GlobalShaderParameters != null)
@@ -94,7 +112,7 @@ namespace CSharpScript.Game.Render
 			return 0f;
 		}
 
-		// Token: 0x0602E0AA RID: 188586 RVA: 0x00A9CDB0 File Offset: 0x00A9AFB0
+		// Token: 0x06022795 RID: 141205 RVA: 0x009C9078 File Offset: 0x009C7278
 		public void SetGrassAo(float strength)
 		{
 			if (GlobalData.World != null && this.GlobalShaderParameters != null)
@@ -103,7 +121,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E0AB RID: 188587 RVA: 0x00A9CDD8 File Offset: 0x00A9AFD8
+		// Token: 0x06022796 RID: 141206 RVA: 0x009C90A0 File Offset: 0x009C72A0
 		public global::Vector GetMainLightVector(UObject worldContextObject = null)
 		{
 			UObject uobject = worldContextObject ?? GlobalData.World;
@@ -115,7 +133,7 @@ namespace CSharpScript.Game.Render
 			return null;
 		}
 
-		// Token: 0x0602E0AC RID: 188588 RVA: 0x00A9CE29 File Offset: 0x00A9B029
+		// Token: 0x06022797 RID: 141207 RVA: 0x009C90F1 File Offset: 0x009C72F1
 		public PDA_ModelLensFlareConfig_C GetGlobalLensFlareConfig()
 		{
 			if (!this.Valid)
@@ -125,7 +143,7 @@ namespace CSharpScript.Game.Render
 			return this.GlobalLensFlareConfig;
 		}
 
-		// Token: 0x0602E0AD RID: 188589 RVA: 0x00A9CE3B File Offset: 0x00A9B03B
+		// Token: 0x06022798 RID: 141208 RVA: 0x009C9103 File Offset: 0x009C7303
 		public PDA_DecalShadowConfig_C GetGlobalDecalShadowConfig()
 		{
 			if (!this.Valid)
@@ -135,123 +153,123 @@ namespace CSharpScript.Game.Render
 			return this.GlobalDecalShadowConfig;
 		}
 
-		// Token: 0x0602E0AE RID: 188590 RVA: 0x00A9CE4D File Offset: 0x00A9B04D
+		// Token: 0x06022799 RID: 141209 RVA: 0x009C9115 File Offset: 0x009C7315
 		public global::Vector GetCurrentCharacterPosition()
 		{
 			return this.CurrentCharacterPosition;
 		}
 
-		// Token: 0x0602E0AF RID: 188591 RVA: 0x00A9CE55 File Offset: 0x00A9B055
+		// Token: 0x0602279A RID: 141210 RVA: 0x009C911D File Offset: 0x009C731D
 		public global::Vector GetPreviousCharacterPosition()
 		{
 			return this.PreviousCharacterPosition;
 		}
 
-		// Token: 0x0602E0B0 RID: 188592 RVA: 0x00A9CE5D File Offset: 0x00A9B05D
+		// Token: 0x0602279B RID: 141211 RVA: 0x009C9125 File Offset: 0x009C7325
 		public global::Vector GetCurrentCharacterPositionWithOffset()
 		{
 			return this.CurrentCharacterPositionWithOffset;
 		}
 
-		// Token: 0x0602E0B1 RID: 188593 RVA: 0x00A9CE65 File Offset: 0x00A9B065
+		// Token: 0x0602279C RID: 141212 RVA: 0x009C912D File Offset: 0x009C732D
 		public global::Vector GetCurrentCharacterWeaponPositionWithOffset()
 		{
 			return this.CurrentCharacterWeaponPositionWithOffset;
 		}
 
-		// Token: 0x0602E0B2 RID: 188594 RVA: 0x00A9CE6D File Offset: 0x00A9B06D
+		// Token: 0x0602279D RID: 141213 RVA: 0x009C9135 File Offset: 0x009C7335
 		public global::Vector GetPreviousCharacterPositionWithOffset()
 		{
 			return this.PreviousCharacterPositionWithOffset;
 		}
 
-		// Token: 0x0602E0B3 RID: 188595 RVA: 0x00A9CE75 File Offset: 0x00A9B075
+		// Token: 0x0602279E RID: 141214 RVA: 0x009C913D File Offset: 0x009C733D
 		public global::Vector GetCurrentCharacterForward()
 		{
 			return this.CurrentCharacterForward;
 		}
 
-		// Token: 0x0602E0B4 RID: 188596 RVA: 0x00A9CE7D File Offset: 0x00A9B07D
+		// Token: 0x0602279F RID: 141215 RVA: 0x009C9145 File Offset: 0x009C7345
 		public global::Vector GetCurrentCameraPosition()
 		{
 			return this.CurrentCameraPosition;
 		}
 
-		// Token: 0x0602E0B5 RID: 188597 RVA: 0x00A9CE85 File Offset: 0x00A9B085
+		// Token: 0x060227A0 RID: 141216 RVA: 0x009C914D File Offset: 0x009C734D
 		public global::Vector GetCurrentCameraPositionWithOffset()
 		{
 			return this.CurrentCameraPosition;
 		}
 
-		// Token: 0x0602E0B6 RID: 188598 RVA: 0x00A9CE8D File Offset: 0x00A9B08D
+		// Token: 0x060227A1 RID: 141217 RVA: 0x009C9155 File Offset: 0x009C7355
 		public global::Vector GetCurrentCameraForward()
 		{
 			return this.CurrentCameraForward;
 		}
 
-		// Token: 0x0602E0B7 RID: 188599 RVA: 0x00A9CE95 File Offset: 0x00A9B095
+		// Token: 0x060227A2 RID: 141218 RVA: 0x009C915D File Offset: 0x009C735D
 		public UMaterialParameterCollection GetGlobalShaderParameters()
 		{
 			return this.GlobalShaderParameters;
 		}
 
-		// Token: 0x0602E0B8 RID: 188600 RVA: 0x00A9CE9D File Offset: 0x00A9B09D
+		// Token: 0x060227A3 RID: 141219 RVA: 0x009C9165 File Offset: 0x009C7365
 		public UMaterialParameterCollection GetSceneInteractionMaterialParameterCollection()
 		{
 			return this.SceneInteractionMaterialParameterCollection;
 		}
 
-		// Token: 0x0602E0B9 RID: 188601 RVA: 0x00A9CEA5 File Offset: 0x00A9B0A5
+		// Token: 0x060227A4 RID: 141220 RVA: 0x009C916D File Offset: 0x009C736D
 		public UMaterialParameterCollection GetUiShowBrightnessMaterialParameterCollection()
 		{
 			return this.UiShowBrightnessMaterialParameterCollection;
 		}
 
-		// Token: 0x0602E0BA RID: 188602 RVA: 0x00A9CEAD File Offset: 0x00A9B0AD
+		// Token: 0x060227A5 RID: 141221 RVA: 0x009C9175 File Offset: 0x009C7375
 		public UMaterialParameterCollection GetUiShowColorSettingMaterialParameterCollection()
 		{
 			return this.UiShowColorSettingMaterialParameterCollection;
 		}
 
-		// Token: 0x0602E0BB RID: 188603 RVA: 0x00A9CEB5 File Offset: 0x00A9B0B5
+		// Token: 0x060227A6 RID: 141222 RVA: 0x009C917D File Offset: 0x009C737D
 		public UMaterialParameterCollection GetEyesParameterMaterialParameterCollection()
 		{
 			return this.EyesParameterMaterialParameterCollection;
 		}
 
-		// Token: 0x0602E0BC RID: 188604 RVA: 0x00A9CEBD File Offset: 0x00A9B0BD
+		// Token: 0x060227A7 RID: 141223 RVA: 0x009C9185 File Offset: 0x009C7385
 		public UMaterialParameterCollection GetGroundFogMaskMaterialParameterCollection()
 		{
 			return this.GroundFogMaskMaterialParameterCollection;
 		}
 
-		// Token: 0x0602E0BD RID: 188605 RVA: 0x00A9CEC5 File Offset: 0x00A9B0C5
+		// Token: 0x060227A8 RID: 141224 RVA: 0x009C918D File Offset: 0x009C738D
 		public UMaterialParameterCollection GetSceneCaptureParameterCollection()
 		{
 			return this.SceneCaptureParameterCollection;
 		}
 
-		// Token: 0x0602E0BE RID: 188606 RVA: 0x00A9CECD File Offset: 0x00A9B0CD
+		// Token: 0x060227A9 RID: 141225 RVA: 0x009C9195 File Offset: 0x009C7395
 		public UMaterialParameterCollection GetMpcForGameplayParameterCollection()
 		{
 			return this.MpcForGameplayParameterCollection;
 		}
 
-		// Token: 0x0602E0BF RID: 188607 RVA: 0x00A9CED5 File Offset: 0x00A9B0D5
+		// Token: 0x060227AA RID: 141226 RVA: 0x009C919D File Offset: 0x009C739D
 		public bool GetPlayerInGrass()
 		{
 			this.UpdateVoxelState();
 			return this.PlayerInGrass;
 		}
 
-		// Token: 0x0602E0C0 RID: 188608 RVA: 0x00A9CEE3 File Offset: 0x00A9B0E3
+		// Token: 0x060227AB RID: 141227 RVA: 0x009C91AB File Offset: 0x009C73AB
 		public bool GetPlayerInCave()
 		{
 			this.UpdateVoxelState();
 			return this.PlayerInCave;
 		}
 
-		// Token: 0x0602E0C1 RID: 188609 RVA: 0x00A9CEF4 File Offset: 0x00A9B0F4
+		// Token: 0x060227AC RID: 141228 RVA: 0x009C91BC File Offset: 0x009C73BC
 		private void UpdateVoxelState()
 		{
 			if (this.PlayerVoxelStateDirty)
@@ -266,31 +284,31 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E0C2 RID: 188610 RVA: 0x00A9CF3B File Offset: 0x00A9B13B
+		// Token: 0x060227AD RID: 141229 RVA: 0x009C9203 File Offset: 0x009C7403
 		public double GetSceneTime()
 		{
 			return this.SceneTime;
 		}
 
-		// Token: 0x0602E0C3 RID: 188611 RVA: 0x00A9CF43 File Offset: 0x00A9B143
+		// Token: 0x060227AE RID: 141230 RVA: 0x009C920B File Offset: 0x009C740B
 		public UPhysicalMaterial GetGlobalFootstepMaterial()
 		{
 			return this.GlobalFootstepMaterial;
 		}
 
-		// Token: 0x0602E0C4 RID: 188612 RVA: 0x00A9CF4B File Offset: 0x00A9B14B
+		// Token: 0x060227AF RID: 141231 RVA: 0x009C9213 File Offset: 0x009C7413
 		public UMaterialInterface GetEmptyMaterial()
 		{
 			return this.EmptyMaterial;
 		}
 
-		// Token: 0x0602E0C5 RID: 188613 RVA: 0x00A9CF53 File Offset: 0x00A9B153
+		// Token: 0x060227B0 RID: 141232 RVA: 0x009C921B File Offset: 0x009C741B
 		public void SetWriteTime(bool enable)
 		{
 			this.WriteTimeToCollection = enable;
 		}
 
-		// Token: 0x0602E0C6 RID: 188614 RVA: 0x00A9CF5C File Offset: 0x00A9B15C
+		// Token: 0x060227B1 RID: 141233 RVA: 0x009C9224 File Offset: 0x009C7424
 		public void SetIsPlayerMale(bool isMale)
 		{
 			if (this.SceneInteractionMaterialParameterCollection != null && GlobalData.World != null)
@@ -299,7 +317,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E0C7 RID: 188615 RVA: 0x00A9CF94 File Offset: 0x00A9B194
+		// Token: 0x060227B2 RID: 141234 RVA: 0x009C925C File Offset: 0x009C745C
 		public void TickForce(float delta)
 		{
 			if (!this.Valid)
@@ -347,7 +365,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E0C8 RID: 188616 RVA: 0x00A9D094 File Offset: 0x00A9B294
+		// Token: 0x060227B3 RID: 141235 RVA: 0x009C935C File Offset: 0x009C755C
 		public void Tick(float delta)
 		{
 			if (!this.Valid)
@@ -551,7 +569,7 @@ namespace CSharpScript.Game.Render
 			this.SetAudioParameters(audioParameters);
 		}
 
-		// Token: 0x0602E0C9 RID: 188617 RVA: 0x00A9D518 File Offset: 0x00A9B718
+		// Token: 0x060227B4 RID: 141236 RVA: 0x009C97E0 File Offset: 0x009C79E0
 		protected void LoadAssets()
 		{
 			ResourceSystem.Instance.LoadAsync<PDA_GlobalRenderDataReference_C>("/Game/Aki/Render/Data/DA_GlobalRenderDataReference.DA_GlobalRenderDataReference", delegate([Nullable(2)] PDA_GlobalRenderDataReference_C result, string _)
@@ -631,14 +649,14 @@ namespace CSharpScript.Game.Render
 			}, 100, "js_undefined");
 		}
 
-		// Token: 0x0602E0CA RID: 188618 RVA: 0x00A9D53D File Offset: 0x00A9B73D
+		// Token: 0x060227B5 RID: 141237 RVA: 0x009C9805 File Offset: 0x009C7A05
 		public void Destroy()
 		{
 			DelegateUtils.ReleaseManualReleaseDelegate(new Action<UPhysicalMaterial>(this.OnGlobalFootstepMaterialChange));
 			DelegateUtils.ReleaseManualReleaseDelegate(new Action<bool>(this.OnForbidWeatherStateChange));
 		}
 
-		// Token: 0x0602E0CB RID: 188619 RVA: 0x00A9D564 File Offset: 0x00A9B764
+		// Token: 0x060227B6 RID: 141238 RVA: 0x009C982C File Offset: 0x009C7A2C
 		protected void SetAudioParameters(double deltaSeconds)
 		{
 			this.AudioParameterUpdateCounter -= deltaSeconds;
@@ -667,7 +685,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E0CC RID: 188620 RVA: 0x00A9D684 File Offset: 0x00A9B884
+		// Token: 0x060227B7 RID: 141239 RVA: 0x009C994C File Offset: 0x009C7B4C
 		private void SetTempColor(global::Vector vector)
 		{
 			if (this.TempColor == null || vector == null)
@@ -677,14 +695,14 @@ namespace CSharpScript.Game.Render
 			this.TempColor = new FLinearColor?(new FLinearColor((float)vector.X, (float)vector.Y, (float)vector.Z, this.TempColor.Value.A));
 		}
 
-		// Token: 0x0602E0CD RID: 188621 RVA: 0x00A9D6D7 File Offset: 0x00A9B8D7
+		// Token: 0x060227B8 RID: 141240 RVA: 0x009C999F File Offset: 0x009C7B9F
 		private void OnUiSceneStateChange()
 		{
 			UKuroRenderingRuntimeBPPluginBPLibrary.SetClusteredStuffVisible(GlobalData.World, !this.IsInUiScene);
 		}
 
-		// Token: 0x1700759F RID: 30111
-		// (get) Token: 0x0602E0CE RID: 188622 RVA: 0x00A9D6EC File Offset: 0x00A9B8EC
+		// Token: 0x17004856 RID: 18518
+		// (get) Token: 0x060227B9 RID: 141241 RVA: 0x009C99B4 File Offset: 0x009C7BB4
 		[Nullable(1)]
 		public static RenderDataManager Instance
 		{
@@ -700,12 +718,12 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E0CF RID: 188623 RVA: 0x00A9D70F File Offset: 0x00A9B90F
+		// Token: 0x060227BA RID: 141242 RVA: 0x009C99D7 File Offset: 0x009C7BD7
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602E0D0 RID: 188624 RVA: 0x00A9D711 File Offset: 0x00A9B911
+		// Token: 0x060227BB RID: 141243 RVA: 0x009C99D9 File Offset: 0x009C7BD9
 		public static void ResetStaticDefaultValue()
 		{
 			RenderDataManager instance = RenderDataManager._instance;
@@ -716,128 +734,128 @@ namespace CSharpScript.Game.Render
 			RenderDataManager._instance = null;
 		}
 
-		// Token: 0x0602E0D1 RID: 188625 RVA: 0x00A9D72A File Offset: 0x00A9B92A
+		// Token: 0x060227BC RID: 141244 RVA: 0x009C99F2 File Offset: 0x009C7BF2
 		static RenderDataManager()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(RenderDataManager.CreateStaticDefaultValue), new Action(RenderDataManager.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04018A7D RID: 100989
+		// Token: 0x040130B8 RID: 78008
 		public bool Valid;
 
-		// Token: 0x04018A7E RID: 100990
+		// Token: 0x040130B9 RID: 78009
 		protected UMaterialParameterCollection GlobalShaderParameters;
 
-		// Token: 0x04018A7F RID: 100991
+		// Token: 0x040130BA RID: 78010
 		protected UMaterialParameterCollection SceneInteractionMaterialParameterCollection;
 
-		// Token: 0x04018A80 RID: 100992
+		// Token: 0x040130BB RID: 78011
 		protected UMaterialParameterCollection UiShowBrightnessMaterialParameterCollection;
 
-		// Token: 0x04018A81 RID: 100993
+		// Token: 0x040130BC RID: 78012
 		protected UMaterialParameterCollection UiShowColorSettingMaterialParameterCollection;
 
-		// Token: 0x04018A82 RID: 100994
+		// Token: 0x040130BD RID: 78013
 		protected UMaterialParameterCollection EyesParameterMaterialParameterCollection;
 
-		// Token: 0x04018A83 RID: 100995
+		// Token: 0x040130BE RID: 78014
 		protected UMaterialParameterCollection GroundFogMaskMaterialParameterCollection;
 
-		// Token: 0x04018A84 RID: 100996
+		// Token: 0x040130BF RID: 78015
 		protected UMaterialParameterCollection SceneCaptureParameterCollection;
 
-		// Token: 0x04018A85 RID: 100997
+		// Token: 0x040130C0 RID: 78016
 		protected UMaterialParameterCollection MpcForGameplayParameterCollection;
 
-		// Token: 0x04018A86 RID: 100998
+		// Token: 0x040130C1 RID: 78017
 		protected PDA_ModelLensFlareConfig_C GlobalLensFlareConfig;
 
-		// Token: 0x04018A87 RID: 100999
+		// Token: 0x040130C2 RID: 78018
 		protected PDA_DecalShadowConfig_C GlobalDecalShadowConfig;
 
-		// Token: 0x04018A88 RID: 101000
+		// Token: 0x040130C3 RID: 78019
 		protected global::Vector PreviousCharacterPosition;
 
-		// Token: 0x04018A89 RID: 101001
+		// Token: 0x040130C4 RID: 78020
 		protected global::Vector CurrentCharacterPosition;
 
-		// Token: 0x04018A8A RID: 101002
+		// Token: 0x040130C5 RID: 78021
 		protected global::Vector PreviousCharacterPositionWithOffset;
 
-		// Token: 0x04018A8B RID: 101003
+		// Token: 0x040130C6 RID: 78022
 		protected global::Vector CurrentCharacterPositionWithOffset;
 
-		// Token: 0x04018A8C RID: 101004
+		// Token: 0x040130C7 RID: 78023
 		protected global::Vector CurrentCharacterWeaponPositionWithOffset;
 
-		// Token: 0x04018A8D RID: 101005
+		// Token: 0x040130C8 RID: 78024
 		protected global::Vector CurrentCharacterForward;
 
-		// Token: 0x04018A8E RID: 101006
+		// Token: 0x040130C9 RID: 78025
 		protected global::Vector CurrentCameraPosition;
 
-		// Token: 0x04018A8F RID: 101007
+		// Token: 0x040130CA RID: 78026
 		protected global::Vector CurrentCameraPositionWithOffset;
 
-		// Token: 0x04018A90 RID: 101008
+		// Token: 0x040130CB RID: 78027
 		protected global::Vector CurrentCameraForward;
 
-		// Token: 0x04018A91 RID: 101009
+		// Token: 0x040130CC RID: 78028
 		protected global::ECharMoveState? CurrentPlayerMoveState;
 
-		// Token: 0x04018A92 RID: 101010
+		// Token: 0x040130CD RID: 78029
 		protected double SceneTime;
 
-		// Token: 0x04018A93 RID: 101011
+		// Token: 0x040130CE RID: 78030
 		protected FLinearColor? TempColor;
 
-		// Token: 0x04018A94 RID: 101012
+		// Token: 0x040130CF RID: 78031
 		protected bool WriteTimeToCollection = true;
 
-		// Token: 0x04018A95 RID: 101013
+		// Token: 0x040130D0 RID: 78032
 		protected bool IsInUiScene;
 
-		// Token: 0x04018A96 RID: 101014
+		// Token: 0x040130D1 RID: 78033
 		protected UPhysicalMaterial GlobalFootstepMaterial;
 
-		// Token: 0x04018A97 RID: 101015
+		// Token: 0x040130D2 RID: 78034
 		protected bool PlayerInGrass;
 
-		// Token: 0x04018A98 RID: 101016
+		// Token: 0x040130D3 RID: 78035
 		protected UMaterialInterface EmptyMaterial;
 
-		// Token: 0x04018A99 RID: 101017
+		// Token: 0x040130D4 RID: 78036
 		protected bool PlayerInCave;
 
-		// Token: 0x04018A9A RID: 101018
+		// Token: 0x040130D5 RID: 78037
 		protected bool PlayerVoxelStateDirty = true;
 
-		// Token: 0x04018A9B RID: 101019
+		// Token: 0x040130D6 RID: 78038
 		protected bool ForbidWeather;
 
-		// Token: 0x04018A9C RID: 101020
+		// Token: 0x040130D7 RID: 78039
 		[Nullable(1)]
 		protected global::Vector CachedGravityDirect = global::Vector.Create(0.0, 0.0, -1.0);
 
-		// Token: 0x04018A9D RID: 101021
+		// Token: 0x040130D8 RID: 78040
 		private const int MinutesInHour = 60;
 
-		// Token: 0x04018A9E RID: 101022
+		// Token: 0x040130D9 RID: 78041
 		private const float AudioParameterUpdateInterval = 1f;
 
-		// Token: 0x04018A9F RID: 101023
+		// Token: 0x040130DA RID: 78042
 		private double AudioParameterUpdateCounter;
 
-		// Token: 0x04018AA0 RID: 101024
+		// Token: 0x040130DB RID: 78043
 		private float CachedAudioParameterRainIntensity;
 
-		// Token: 0x04018AA1 RID: 101025
+		// Token: 0x040130DC RID: 78044
 		private float CachedAudioParameterSnowIntensity;
 
-		// Token: 0x04018AA2 RID: 101026
+		// Token: 0x040130DD RID: 78045
 		private float CachedAudioParameterWindIntensity;
 
-		// Token: 0x04018AA3 RID: 101027
+		// Token: 0x040130DE RID: 78046
 		private static RenderDataManager _instance;
 	}
 }

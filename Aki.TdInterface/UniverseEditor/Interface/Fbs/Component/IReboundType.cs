@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200580E RID: 22542
+	// Token: 0x02005E15 RID: 24085
 	public struct IReboundType : IFlatbufferObject
 	{
-		// Token: 0x1700A868 RID: 43112
-		// (get) Token: 0x06025E65 RID: 155237 RVA: 0x0053A003 File Offset: 0x00538203
+		// Token: 0x1700B18C RID: 45452
+		// (get) Token: 0x06028385 RID: 164741 RVA: 0x0058018F File Offset: 0x0057E38F
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025E66 RID: 155238 RVA: 0x0053A010 File Offset: 0x00538210
+		// Token: 0x06028386 RID: 164742 RVA: 0x0058019C File Offset: 0x0057E39C
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06025E67 RID: 155239 RVA: 0x0053A018 File Offset: 0x00538218
+		// Token: 0x06028387 RID: 164743 RVA: 0x005801A4 File Offset: 0x0057E3A4
 		public static IReboundType GetRootAsIReboundType(ByteBuffer _bb)
 		{
 			return IReboundType.GetRootAsIReboundType(_bb, default(IReboundType));
 		}
 
-		// Token: 0x06025E68 RID: 155240 RVA: 0x0053A034 File Offset: 0x00538234
+		// Token: 0x06028388 RID: 164744 RVA: 0x005801C0 File Offset: 0x0057E3C0
 		public static IReboundType GetRootAsIReboundType(ByteBuffer _bb, IReboundType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06025E69 RID: 155241 RVA: 0x0053A051 File Offset: 0x00538251
+		// Token: 0x06028389 RID: 164745 RVA: 0x005801DD File Offset: 0x0057E3DD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06025E6A RID: 155242 RVA: 0x0053A060 File Offset: 0x00538260
+		// Token: 0x0602838A RID: 164746 RVA: 0x005801EC File Offset: 0x0057E3EC
 		public IReboundType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A869 RID: 43113
-		// (get) Token: 0x06025E6B RID: 155243 RVA: 0x0053A070 File Offset: 0x00538270
+		// Token: 0x1700B18D RID: 45453
+		// (get) Token: 0x0602838B RID: 164747 RVA: 0x005801FC File Offset: 0x0057E3FC
 		public EReboundOptionType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025E6C RID: 155244 RVA: 0x0053A0AC File Offset: 0x005382AC
+		// Token: 0x0602838C RID: 164748 RVA: 0x00580238 File Offset: 0x0057E438
 		public static Offset<IReboundType> CreateIReboundType(FlatBufferBuilder builder, EReboundOptionType Type = EReboundOptionType.ForwardFront)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IReboundType.EndIReboundType(builder);
 		}
 
-		// Token: 0x06025E6D RID: 155245 RVA: 0x0053A0C2 File Offset: 0x005382C2
+		// Token: 0x0602838D RID: 164749 RVA: 0x0058024E File Offset: 0x0057E44E
 		public static void StartIReboundType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06025E6E RID: 155246 RVA: 0x0053A0CB File Offset: 0x005382CB
+		// Token: 0x0602838E RID: 164750 RVA: 0x00580257 File Offset: 0x0057E457
 		public static void AddType(FlatBufferBuilder builder, EReboundOptionType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06025E6F RID: 155247 RVA: 0x0053A0D6 File Offset: 0x005382D6
+		// Token: 0x0602838F RID: 164751 RVA: 0x00580262 File Offset: 0x0057E462
 		public static Offset<IReboundType> EndIReboundType(FlatBufferBuilder builder)
 		{
 			return new Offset<IReboundType>(builder.EndTable());
 		}
 
-		// Token: 0x06025E70 RID: 155248 RVA: 0x0053A0E4 File Offset: 0x005382E4
+		// Token: 0x06028390 RID: 164752 RVA: 0x00580270 File Offset: 0x0057E470
 		public IReboundTypeT UnPack()
 		{
 			IReboundTypeT reboundTypeT = new IReboundTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return reboundTypeT;
 		}
 
-		// Token: 0x06025E71 RID: 155249 RVA: 0x0053A0FF File Offset: 0x005382FF
+		// Token: 0x06028391 RID: 164753 RVA: 0x0058028B File Offset: 0x0057E48B
 		public void UnPackTo(IReboundTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06025E72 RID: 155250 RVA: 0x0053A110 File Offset: 0x00538310
+		// Token: 0x06028392 RID: 164754 RVA: 0x0058029C File Offset: 0x0057E49C
 		public static Offset<IReboundType> Pack(FlatBufferBuilder builder, IReboundTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IReboundType.CreateIReboundType(builder, _o.Type);
 		}
 
-		// Token: 0x0400ED0E RID: 60686
+		// Token: 0x0400F9F9 RID: 63993
 		private Table __p;
 	}
 }

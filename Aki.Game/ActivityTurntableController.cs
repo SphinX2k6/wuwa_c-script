@@ -8,44 +8,44 @@ using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.ItemReward;
 using Google.Protobuf;
 
-// Token: 0x02001537 RID: 5431
+// Token: 0x020009EF RID: 2543
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class ActivityTurntableController : ActivityControllerBase
 {
-	// Token: 0x06009B31 RID: 39729 RVA: 0x00219855 File Offset: 0x00217A55
+	// Token: 0x06006F0F RID: 28431 RVA: 0x002235F6 File Offset: 0x002217F6
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.TurntableTaskUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnTurntableTaskUpdateNotify));
 	}
 
-	// Token: 0x06009B32 RID: 39730 RVA: 0x00219873 File Offset: 0x00217A73
+	// Token: 0x06006F10 RID: 28432 RVA: 0x00223614 File Offset: 0x00221814
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.TurntableTaskUpdateNotify);
 	}
 
-	// Token: 0x06009B33 RID: 39731 RVA: 0x00219885 File Offset: 0x00217A85
+	// Token: 0x06006F11 RID: 28433 RVA: 0x00223626 File Offset: 0x00221826
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<int, QuestState, EQuestStatusUpdateReason>(EEventName.OnQuestStateChange, new Action<int, QuestState, EQuestStatusUpdateReason>(this.OnQuestStateChange));
 		EventSystem.Instance.Add<int, int>(EEventName.OnCommonItemCountAnyChange, new Action<int, int>(this.OnCommonItemCountAnyChange));
 	}
 
-	// Token: 0x06009B34 RID: 39732 RVA: 0x002198BF File Offset: 0x00217ABF
+	// Token: 0x06006F12 RID: 28434 RVA: 0x00223660 File Offset: 0x00221860
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OnQuestStateChange, new Action<int, QuestState, EQuestStatusUpdateReason>(this.OnQuestStateChange));
 		EventSystem.Instance.Remove(EEventName.OnCommonItemCountAnyChange, new Action<int, int>(this.OnCommonItemCountAnyChange));
 	}
 
-	// Token: 0x06009B35 RID: 39733 RVA: 0x002198F9 File Offset: 0x00217AF9
+	// Token: 0x06006F13 RID: 28435 RVA: 0x0022369A File Offset: 0x0022189A
 	protected override void OnOpenView(ActivityBaseData data)
 	{
 	}
 
-	// Token: 0x06009B36 RID: 39734 RVA: 0x002198FB File Offset: 0x00217AFB
+	// Token: 0x06006F14 RID: 28436 RVA: 0x0022369C File Offset: 0x0022189C
 	protected override string OnGetActivityResource(ActivityBaseData data)
 	{
 		if (data.GetPreGuideQuestFinishState())
@@ -55,7 +55,7 @@ public class ActivityTurntableController : ActivityControllerBase
 		return "UiItem_ActivityTurntableLock";
 	}
 
-	// Token: 0x06009B37 RID: 39735 RVA: 0x00219910 File Offset: 0x00217B10
+	// Token: 0x06006F15 RID: 28437 RVA: 0x002236B1 File Offset: 0x002218B1
 	protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 	{
 		if (data.GetPreGuideQuestFinishState())
@@ -65,19 +65,19 @@ public class ActivityTurntableController : ActivityControllerBase
 		return new ActivitySubViewTurntableLock();
 	}
 
-	// Token: 0x06009B38 RID: 39736 RVA: 0x00219925 File Offset: 0x00217B25
+	// Token: 0x06006F16 RID: 28438 RVA: 0x002236C6 File Offset: 0x002218C6
 	protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 	{
 		return new ActivityTurntableData();
 	}
 
-	// Token: 0x06009B39 RID: 39737 RVA: 0x0021992C File Offset: 0x00217B2C
+	// Token: 0x06006F17 RID: 28439 RVA: 0x002236CD File Offset: 0x002218CD
 	protected override bool OnGetIsOpeningActivityRelativeView()
 	{
 		return false;
 	}
 
-	// Token: 0x06009B3A RID: 39738 RVA: 0x00219930 File Offset: 0x00217B30
+	// Token: 0x06006F18 RID: 28440 RVA: 0x002236D0 File Offset: 0x002218D0
 	private void OnQuestStateChange(int questId, QuestState state, EQuestStatusUpdateReason reason)
 	{
 		foreach (ActivityBaseData activityBaseData in ActivityModel.Instance.GetCurrentActivitiesByType(15))
@@ -86,7 +86,7 @@ public class ActivityTurntableController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06009B3B RID: 39739 RVA: 0x00219990 File Offset: 0x00217B90
+	// Token: 0x06006F19 RID: 28441 RVA: 0x00223730 File Offset: 0x00221930
 	private void OnCommonItemCountAnyChange(int configId, int count)
 	{
 		foreach (ActivityBaseData activityBaseData in ActivityModel.Instance.GetCurrentActivitiesByType(15))
@@ -95,7 +95,7 @@ public class ActivityTurntableController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06009B3C RID: 39740 RVA: 0x002199F0 File Offset: 0x00217BF0
+	// Token: 0x06006F1A RID: 28442 RVA: 0x00223790 File Offset: 0x00221990
 	[NullableContext(2)]
 	private void OnTurntableTaskUpdateNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -110,7 +110,7 @@ public class ActivityTurntableController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06009B3D RID: 39741 RVA: 0x00219A64 File Offset: 0x00217C64
+	// Token: 0x06006F1B RID: 28443 RVA: 0x00223804 File Offset: 0x00221A04
 	public static void RequestTurntableRun(int activityId)
 	{
 		RunTurntableActivityRequest runTurntableActivityRequest = RunTurntableActivityRequest.Create();
@@ -124,7 +124,7 @@ public class ActivityTurntableController : ActivityControllerBase
 			}
 			if (runTurntableActivityResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(runTurntableActivityResponse.ErrorCode, 26481, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(runTurntableActivityResponse.ErrorCode, 15518, null, true, true);
 			}
 			ActivityTurntableData activityTurntableData = ActivityModel.Instance.GetActivityById(activityId) as ActivityTurntableData;
 			if (activityTurntableData == null)
@@ -143,7 +143,7 @@ public class ActivityTurntableController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06009B3E RID: 39742 RVA: 0x00219AB0 File Offset: 0x00217CB0
+	// Token: 0x06006F1C RID: 28444 RVA: 0x00223850 File Offset: 0x00221A50
 	public static void ShowTurntableItemObtain(List<TItem> itemList, [Nullable(2)] Action onCloseCallback = null)
 	{
 		if (itemList.Count == 0)
@@ -164,8 +164,8 @@ public class ActivityTurntableController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x17000D4F RID: 3407
-	// (get) Token: 0x06009B3F RID: 39743 RVA: 0x00219B90 File Offset: 0x00217D90
+	// Token: 0x17000D70 RID: 3440
+	// (get) Token: 0x06006F1D RID: 28445 RVA: 0x00223930 File Offset: 0x00221B30
 	public static ActivityTurntableController Instance
 	{
 		get
@@ -174,7 +174,7 @@ public class ActivityTurntableController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06009B40 RID: 39744 RVA: 0x00219B97 File Offset: 0x00217D97
+	// Token: 0x06006F1E RID: 28446 RVA: 0x00223937 File Offset: 0x00221B37
 	public static ActivityTurntableController GetOrCreateInstance()
 	{
 		if (ActivityTurntableController._Instance == null)
@@ -184,7 +184,7 @@ public class ActivityTurntableController : ActivityControllerBase
 		return ActivityTurntableController._Instance;
 	}
 
-	// Token: 0x06009B41 RID: 39745 RVA: 0x00219BAB File Offset: 0x00217DAB
+	// Token: 0x06006F1F RID: 28447 RVA: 0x0022394B File Offset: 0x00221B4B
 	public static bool CreateInstance()
 	{
 		if (ActivityTurntableController._Instance != null)
@@ -195,24 +195,24 @@ public class ActivityTurntableController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x06009B42 RID: 39746 RVA: 0x00219BC1 File Offset: 0x00217DC1
+	// Token: 0x06006F20 RID: 28448 RVA: 0x00223961 File Offset: 0x00221B61
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06009B43 RID: 39747 RVA: 0x00219BC3 File Offset: 0x00217DC3
+	// Token: 0x06006F21 RID: 28449 RVA: 0x00223963 File Offset: 0x00221B63
 	public static void ResetStaticDefaultValue()
 	{
 		ActivityTurntableController._Instance = null;
 	}
 
-	// Token: 0x06009B44 RID: 39748 RVA: 0x00219BCB File Offset: 0x00217DCB
+	// Token: 0x06006F22 RID: 28450 RVA: 0x0022396B File Offset: 0x00221B6B
 	static ActivityTurntableController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActivityTurntableController.CreateStaticDefaultValue), new Action(ActivityTurntableController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400443A RID: 17466
+	// Token: 0x040044E0 RID: 17632
 	[Nullable(2)]
 	private static ActivityTurntableController _Instance;
 }

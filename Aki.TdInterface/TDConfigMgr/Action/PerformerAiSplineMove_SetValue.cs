@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020FE RID: 8446
+	// Token: 0x0200235F RID: 9055
 	public class PerformerAiSplineMove_SetValue
 	{
-		// Token: 0x04006F47 RID: 28487
+		// Token: 0x0400757B RID: 30075
 		public int? SplineEntityId;
 	}
 }

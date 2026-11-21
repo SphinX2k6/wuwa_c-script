@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006856 RID: 26710
+	// Token: 0x02006EEB RID: 28395
 	public class IForceOccupationsT
 	{
-		// Token: 0x1700C662 RID: 50786
-		// (get) Token: 0x0602E929 RID: 190761 RVA: 0x0065A74B File Offset: 0x0065894B
-		// (set) Token: 0x0602E92A RID: 190762 RVA: 0x0065A753 File Offset: 0x00658953
+		// Token: 0x1700D036 RID: 53302
+		// (get) Token: 0x0603120F RID: 201231 RVA: 0x006A8FB7 File Offset: 0x006A71B7
+		// (set) Token: 0x06031210 RID: 201232 RVA: 0x006A8FBF File Offset: 0x006A71BF
 		public EOccupationActionType OccupationType { get; set; }
 
-		// Token: 0x1700C663 RID: 50787
-		// (get) Token: 0x0602E92B RID: 190763 RVA: 0x0065A75C File Offset: 0x0065895C
-		// (set) Token: 0x0602E92C RID: 190764 RVA: 0x0065A764 File Offset: 0x00658964
+		// Token: 0x1700D037 RID: 53303
+		// (get) Token: 0x06031211 RID: 201233 RVA: 0x006A8FC8 File Offset: 0x006A71C8
+		// (set) Token: 0x06031212 RID: 201234 RVA: 0x006A8FD0 File Offset: 0x006A71D0
 		public List<string> Occupations { get; set; }
 
-		// Token: 0x0602E92D RID: 190765 RVA: 0x0065A76D File Offset: 0x0065896D
+		// Token: 0x06031213 RID: 201235 RVA: 0x006A8FD9 File Offset: 0x006A71D9
 		public IForceOccupationsT()
 		{
 			this.OccupationType = EOccupationActionType.Request;

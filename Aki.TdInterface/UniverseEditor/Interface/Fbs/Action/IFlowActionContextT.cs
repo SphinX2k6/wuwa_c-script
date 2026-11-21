@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020067ED RID: 26605
+	// Token: 0x02006E6D RID: 28269
 	public class IFlowActionContextT
 	{
-		// Token: 0x1700C577 RID: 50551
-		// (get) Token: 0x0602E525 RID: 189733 RVA: 0x00652D9D File Offset: 0x00650F9D
-		// (set) Token: 0x0602E526 RID: 189734 RVA: 0x00652DA5 File Offset: 0x00650FA5
+		// Token: 0x1700CF2D RID: 53037
+		// (get) Token: 0x06030D6B RID: 200043 RVA: 0x006A04E1 File Offset: 0x0069E6E1
+		// (set) Token: 0x06030D6C RID: 200044 RVA: 0x006A04E9 File Offset: 0x0069E6E9
 		public string Type { get; set; }
 
-		// Token: 0x0602E527 RID: 189735 RVA: 0x00652DAE File Offset: 0x00650FAE
+		// Token: 0x06030D6D RID: 200045 RVA: 0x006A04F2 File Offset: 0x0069E6F2
 		public IFlowActionContextT()
 		{
 			this.Type = null;

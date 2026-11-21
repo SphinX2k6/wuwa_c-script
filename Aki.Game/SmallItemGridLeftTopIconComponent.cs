@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200197B RID: 6523
+// Token: 0x02000E38 RID: 3640
 public class SmallItemGridLeftTopIconComponent : SmallItemGridComponent
 {
-	// Token: 0x0600BEEC RID: 48876 RVA: 0x002B2FA7 File Offset: 0x002B11A7
+	// Token: 0x060092F4 RID: 37620 RVA: 0x002BDF2B File Offset: 0x002BC12B
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -15,14 +15,14 @@ public class SmallItemGridLeftTopIconComponent : SmallItemGridComponent
 		};
 	}
 
-	// Token: 0x0600BEED RID: 48877 RVA: 0x002B2FCA File Offset: 0x002B11CA
+	// Token: 0x060092F5 RID: 37621 RVA: 0x002BDF4E File Offset: 0x002BC14E
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_AddtionIcon";
 	}
 
-	// Token: 0x0600BEEE RID: 48878 RVA: 0x002B2FD4 File Offset: 0x002B11D4
+	// Token: 0x060092F6 RID: 37622 RVA: 0x002BDF58 File Offset: 0x002BC158
 	[NullableContext(2)]
 	protected override void OnRefresh(object tempData)
 	{
@@ -31,10 +31,10 @@ public class SmallItemGridLeftTopIconComponent : SmallItemGridComponent
 		this.SetActive(true);
 	}
 
-	// Token: 0x02007EC6 RID: 32454
+	// Token: 0x02007055 RID: 28757
 	private static class EChildType
 	{
-		// Token: 0x04029705 RID: 169733
+		// Token: 0x04024A42 RID: 150082
 		public const int SpriteIcon = 0;
 	}
 }

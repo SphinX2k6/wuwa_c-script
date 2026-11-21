@@ -4,25 +4,25 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.BaseCharacter;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x0200314B RID: 12619
+// Token: 0x020026B8 RID: 9912
 [NullableContext(1)]
 [Nullable(0)]
 public class MultiSkillData
 {
-	// Token: 0x0601B26D RID: 111213 RVA: 0x00762D10 File Offset: 0x00760F10
+	// Token: 0x06018D70 RID: 101744 RVA: 0x0078A70A File Offset: 0x0078890A
 	public void Init(int entityId, int visionEntityId = 0)
 	{
 		this.EntityId = entityId;
 		this.VisionEntityId = visionEntityId;
 	}
 
-	// Token: 0x0601B26E RID: 111214 RVA: 0x00762D20 File Offset: 0x00760F20
+	// Token: 0x06018D71 RID: 101745 RVA: 0x0078A71A File Offset: 0x0078891A
 	public bool IsMultiSkill(SSkillInfo skillInfo)
 	{
 		return skillInfo.CooldownConfig.SectionCount > 1;
 	}
 
-	// Token: 0x0601B26F RID: 111215 RVA: 0x00762D30 File Offset: 0x00760F30
+	// Token: 0x06018D72 RID: 101746 RVA: 0x0078A72C File Offset: 0x0078892C
 	public bool CanStartMultiSkill(Skill skill)
 	{
 		int skillId = skill.SkillId;
@@ -46,7 +46,7 @@ public class MultiSkillData
 		return valueOrDefault.FirstSkillId == skillId;
 	}
 
-	// Token: 0x0601B270 RID: 111216 RVA: 0x00762DE4 File Offset: 0x00760FE4
+	// Token: 0x06018D73 RID: 101747 RVA: 0x0078A7E0 File Offset: 0x007889E0
 	public bool StartMultiSkill(Skill skill, bool bCheck = true)
 	{
 		if (bCheck && !this.CanStartMultiSkill(skill))
@@ -84,7 +84,7 @@ public class MultiSkillData
 		return true;
 	}
 
-	// Token: 0x0601B271 RID: 111217 RVA: 0x00762F2C File Offset: 0x0076112C
+	// Token: 0x06018D74 RID: 101748 RVA: 0x0078A928 File Offset: 0x00788B28
 	private void RemoveTimers(MultiSkillInfo info)
 	{
 		if (info.MultiSkillStartTimer != null)
@@ -99,7 +99,7 @@ public class MultiSkillData
 		}
 	}
 
-	// Token: 0x0601B272 RID: 111218 RVA: 0x00762F7C File Offset: 0x0076117C
+	// Token: 0x06018D75 RID: 101749 RVA: 0x0078A978 File Offset: 0x00788B78
 	public void InitMultiSkillInfo(Dictionary<int, Skill> skills)
 	{
 		foreach (KeyValuePair<int, Skill> keyValuePair in skills)
@@ -148,7 +148,7 @@ public class MultiSkillData
 		}
 	}
 
-	// Token: 0x0601B273 RID: 111219 RVA: 0x007630D4 File Offset: 0x007612D4
+	// Token: 0x06018D76 RID: 101750 RVA: 0x0078AAD0 File Offset: 0x00788CD0
 	private void StartNextSkillTimer(MultiSkillInfo info)
 	{
 		this.RemoveTimers(info);
@@ -173,7 +173,7 @@ public class MultiSkillData
 		}
 	}
 
-	// Token: 0x0601B274 RID: 111220 RVA: 0x007631A5 File Offset: 0x007613A5
+	// Token: 0x06018D77 RID: 101751 RVA: 0x0078ABA1 File Offset: 0x00788DA1
 	private void AheadFinishMultiSkill(MultiSkillInfo info, string reason)
 	{
 		info.NextSkillId = new int?(0);
@@ -183,7 +183,7 @@ public class MultiSkillData
 		this.RemoveTimers(info);
 	}
 
-	// Token: 0x0601B275 RID: 111221 RVA: 0x007631E0 File Offset: 0x007613E0
+	// Token: 0x06018D78 RID: 101752 RVA: 0x0078ABDC File Offset: 0x00788DDC
 	public void ResetMultiSkills(int skillId, bool ignoreIsReset = false)
 	{
 		MultiSkillInfo multiSkillInfo;
@@ -206,7 +206,7 @@ public class MultiSkillData
 		this.AheadFinishMultiSkill(multiSkillInfo, "多段技能被打断");
 	}
 
-	// Token: 0x0601B276 RID: 111222 RVA: 0x00763230 File Offset: 0x00761430
+	// Token: 0x06018D79 RID: 101753 RVA: 0x0078AC2C File Offset: 0x00788E2C
 	public void ResetOnChangeRole()
 	{
 		foreach (MultiSkillInfo multiSkillInfo in this.MultiSkillInfos)
@@ -218,7 +218,7 @@ public class MultiSkillData
 		}
 	}
 
-	// Token: 0x0601B277 RID: 111223 RVA: 0x00763290 File Offset: 0x00761490
+	// Token: 0x06018D7A RID: 101754 RVA: 0x0078AC8C File Offset: 0x00788E8C
 	public void ClearAllSkill()
 	{
 		foreach (MultiSkillInfo multiSkillInfo in this.MultiSkillInfos)
@@ -232,7 +232,7 @@ public class MultiSkillData
 		}
 	}
 
-	// Token: 0x0601B278 RID: 111224 RVA: 0x00763308 File Offset: 0x00761508
+	// Token: 0x06018D7B RID: 101755 RVA: 0x0078AD04 File Offset: 0x00788F04
 	public long GetNextMultiSkillId(int skillId)
 	{
 		MultiSkillInfo multiSkillInfo;
@@ -247,34 +247,34 @@ public class MultiSkillData
 		return (long)multiSkillInfo.NextSkillId.Value;
 	}
 
-	// Token: 0x0601B279 RID: 111225 RVA: 0x00763357 File Offset: 0x00761557
+	// Token: 0x06018D7C RID: 101756 RVA: 0x0078AD53 File Offset: 0x00788F53
 	[NullableContext(2)]
 	public MultiSkillInfo GetMultiSkillInfo(int skillId)
 	{
 		return this.MultiSkillInfoMap.GetValueOrDefault((long)skillId);
 	}
 
-	// Token: 0x0601B27A RID: 111226 RVA: 0x00763366 File Offset: 0x00761566
+	// Token: 0x06018D7D RID: 101757 RVA: 0x0078AD62 File Offset: 0x00788F62
 	private void DispatchMultiSkillIdChangedEvent(MultiSkillInfo info)
 	{
 		EventSystem.Instance.Emit<int, MultiSkillInfo, int>(EEventName.OnMultiSkillIdChanged, this.EntityId, info, this.VisionEntityId);
 	}
 
-	// Token: 0x0601B27B RID: 111227 RVA: 0x00763382 File Offset: 0x00761582
+	// Token: 0x06018D7E RID: 101758 RVA: 0x0078AD7E File Offset: 0x00788F7E
 	private void DispatchMultiSkillEnableEvent(MultiSkillInfo info)
 	{
 		EventSystem.Instance.Emit<int, MultiSkillInfo, int>(EEventName.OnMultiSkillEnable, this.EntityId, info, this.VisionEntityId);
 	}
 
-	// Token: 0x0400D33C RID: 54076
+	// Token: 0x0400D79F RID: 55199
 	public Dictionary<long, MultiSkillInfo> MultiSkillInfoMap = new Dictionary<long, MultiSkillInfo>();
 
-	// Token: 0x0400D33D RID: 54077
+	// Token: 0x0400D7A0 RID: 55200
 	public List<MultiSkillInfo> MultiSkillInfos = new List<MultiSkillInfo>();
 
-	// Token: 0x0400D33E RID: 54078
+	// Token: 0x0400D7A1 RID: 55201
 	public int EntityId;
 
-	// Token: 0x0400D33F RID: 54079
+	// Token: 0x0400D7A2 RID: 55202
 	public int VisionEntityId;
 }

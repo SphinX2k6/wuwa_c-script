@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200090F RID: 2319
+	// Token: 0x0200019B RID: 411
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.CameraModifier_CameraShake")]
 	[UnrealStructLayout(184, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 184)]
 	public class UCameraModifier_CameraShake : UCameraModifier, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06007FA3 RID: 32675 RVA: 0x000B6F3F File Offset: 0x000B513F
+		// Token: 0x06001BCB RID: 7115 RVA: 0x0002947B File Offset: 0x0002767B
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UCameraModifier_CameraShake._ClassPtr;
 		}
 
-		// Token: 0x06007FA4 RID: 32676 RVA: 0x000B6F4C File Offset: 0x000B514C
+		// Token: 0x06001BCC RID: 7116 RVA: 0x00029488 File Offset: 0x00027688
 		public UCameraModifier_CameraShake() : this(BuiltinUtils.AllocNativeUObject(UCameraModifier_CameraShake.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06007FA5 RID: 32677 RVA: 0x000B6F74 File Offset: 0x000B5174
+		// Token: 0x06001BCD RID: 7117 RVA: 0x000294B0 File Offset: 0x000276B0
 		public UCameraModifier_CameraShake(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UCameraModifier_CameraShake.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17001E03 RID: 7683
-		// (get) Token: 0x06007FA6 RID: 32678 RVA: 0x000B6FA8 File Offset: 0x000B51A8
-		// (set) Token: 0x06007FA7 RID: 32679 RVA: 0x000B6FE1 File Offset: 0x000B51E1
+		// Token: 0x17000360 RID: 864
+		// (get) Token: 0x06001BCE RID: 7118 RVA: 0x000294E4 File Offset: 0x000276E4
+		// (set) Token: 0x06001BCF RID: 7119 RVA: 0x0002951D File Offset: 0x0002771D
 		public TArray<FActiveCameraShakeInfo> ActiveShakes
 		{
 			get
@@ -50,51 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001E04 RID: 7684
-		// (get) Token: 0x06007FA8 RID: 32680 RVA: 0x000B6FF0 File Offset: 0x000B51F0
-		// (set) Token: 0x06007FA9 RID: 32681 RVA: 0x000B7029 File Offset: 0x000B5229
-		[Nullable(new byte[]
-		{
-			1,
-			0,
-			1,
-			1
-		})]
-		public TMap<TSubclassOf<UCameraShakeBase>, FPooledCameraShakes> ExpiredPooledShakesMap
-		{
-			[return: Nullable(new byte[]
-			{
-				1,
-				0,
-				1,
-				1
-			})]
-			get
-			{
-				base.FastCheckIsValid();
-				TMap<TSubclassOf<UCameraShakeBase>, FPooledCameraShakes> result;
-				if ((result = this._ExpiredPooledShakesMap) == null)
-				{
-					result = (this._ExpiredPooledShakesMap = new TMap<TSubclassOf<UCameraShakeBase>, FPooledCameraShakes>(base.NativePtr + (IntPtr)UCameraModifier_CameraShake.__PropertyOffset_ExpiredPooledShakesMap, this));
-				}
-				return result;
-			}
-			[param: Nullable(new byte[]
-			{
-				1,
-				0,
-				1,
-				1
-			})]
-			set
-			{
-				this.ExpiredPooledShakesMap.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17001E05 RID: 7685
-		// (get) Token: 0x06007FAA RID: 32682 RVA: 0x000B7037 File Offset: 0x000B5237
-		// (set) Token: 0x06007FAB RID: 32683 RVA: 0x000B7047 File Offset: 0x000B5247
+		// Token: 0x17000361 RID: 865
+		// (get) Token: 0x06001BD0 RID: 7120 RVA: 0x0002952B File Offset: 0x0002772B
+		// (set) Token: 0x06001BD1 RID: 7121 RVA: 0x0002953B File Offset: 0x0002773B
 		public unsafe float SplitScreenShakeScale
 		{
 			get
@@ -107,30 +65,30 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06007FAC RID: 32684 RVA: 0x000B7058 File Offset: 0x000B5258
+		// Token: 0x06001BD2 RID: 7122 RVA: 0x0002954C File Offset: 0x0002774C
 		static UCameraModifier_CameraShake()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.CameraModifier_CameraShake");
 		}
 
-		// Token: 0x06007FAD RID: 32685 RVA: 0x000B7066 File Offset: 0x000B5266
+		// Token: 0x06001BD3 RID: 7123 RVA: 0x0002955A File Offset: 0x0002775A
 		protected UCameraModifier_CameraShake(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04003D2F RID: 15663
+		// Token: 0x04000907 RID: 2311
 		public new const string __ObjectPath = "/Script/Engine.CameraModifier_CameraShake";
 
-		// Token: 0x04003D30 RID: 15664
+		// Token: 0x04000908 RID: 2312
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04003D31 RID: 15665
+		// Token: 0x04000909 RID: 2313
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04003D32 RID: 15666
+		// Token: 0x0400090A RID: 2314
 		internal static int __PropertyOffset_ActiveShakes;
 
-		// Token: 0x04003D33 RID: 15667
+		// Token: 0x0400090B RID: 2315
 		[Nullable(new byte[]
 		{
 			2,
@@ -138,20 +96,7 @@ namespace UnrealEngine
 		})]
 		private TArray<FActiveCameraShakeInfo> _ActiveShakes;
 
-		// Token: 0x04003D34 RID: 15668
-		internal static int __PropertyOffset_ExpiredPooledShakesMap;
-
-		// Token: 0x04003D35 RID: 15669
-		[Nullable(new byte[]
-		{
-			2,
-			0,
-			1,
-			1
-		})]
-		private TMap<TSubclassOf<UCameraShakeBase>, FPooledCameraShakes> _ExpiredPooledShakesMap;
-
-		// Token: 0x04003D36 RID: 15670
+		// Token: 0x0400090C RID: 2316
 		internal static int __PropertyOffset_SplitScreenShakeScale;
 	}
 }

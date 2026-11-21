@@ -26,63 +26,31 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02003491 RID: 13457
+// Token: 0x02002A05 RID: 10757
 [NullableContext(1)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/Render/Scene/Item/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Render/Scene/Item/SceneInteractionActor.SceneInteractionActor_C")]
 public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x1700287A RID: 10362
-	// (get) Token: 0x0601D346 RID: 119622 RVA: 0x00821B56 File Offset: 0x0081FD56
-	// (set) Token: 0x0601D347 RID: 119623 RVA: 0x00821B6A File Offset: 0x0081FD6A
+	// Token: 0x17002C17 RID: 11287
+	// (get) Token: 0x0601B04C RID: 110668 RVA: 0x00848DF2 File Offset: 0x00846FF2
+	// (set) Token: 0x0601B04D RID: 110669 RVA: 0x00848E02 File Offset: 0x00847002
 	[UProperty(EPropertyFlags.CPF_None)]
-	private unsafe string LevelName
+	public unsafe int MaxPendingStateCount
 	{
 		get
 		{
-			return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SceneInteractionActor.__PropertyOffset_LevelName)));
+			return *(base.NativePtr + (IntPtr)SceneInteractionActor.__PropertyOffset_MaxPendingStateCount);
 		}
 		set
 		{
-			FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SceneInteractionActor.__PropertyOffset_LevelName)), value);
+			*(base.NativePtr + (IntPtr)SceneInteractionActor.__PropertyOffset_MaxPendingStateCount) = value;
 		}
 	}
 
-	// Token: 0x1700287B RID: 10363
-	// (get) Token: 0x0601D348 RID: 119624 RVA: 0x00821B7F File Offset: 0x0081FD7F
-	// (set) Token: 0x0601D349 RID: 119625 RVA: 0x00821B8F File Offset: 0x0081FD8F
-	[UProperty(EPropertyFlags.CPF_None)]
-	private unsafe int HandleId
-	{
-		get
-		{
-			return *(base.NativePtr + (IntPtr)SceneInteractionActor.__PropertyOffset_HandleId);
-		}
-		set
-		{
-			*(base.NativePtr + (IntPtr)SceneInteractionActor.__PropertyOffset_HandleId) = value;
-		}
-	}
-
-	// Token: 0x1700287C RID: 10364
-	// (get) Token: 0x0601D34A RID: 119626 RVA: 0x00821BA0 File Offset: 0x0081FDA0
-	// (set) Token: 0x0601D34B RID: 119627 RVA: 0x00821BB0 File Offset: 0x0081FDB0
-	[UProperty(EPropertyFlags.CPF_None)]
-	private unsafe int EntityId
-	{
-		get
-		{
-			return *(base.NativePtr + (IntPtr)SceneInteractionActor.__PropertyOffset_EntityId);
-		}
-		set
-		{
-			*(base.NativePtr + (IntPtr)SceneInteractionActor.__PropertyOffset_EntityId) = value;
-		}
-	}
-
-	// Token: 0x1700287D RID: 10365
-	// (get) Token: 0x0601D34C RID: 119628 RVA: 0x00821BC4 File Offset: 0x0081FDC4
+	// Token: 0x17002C18 RID: 11288
+	// (get) Token: 0x0601B04E RID: 110670 RVA: 0x00848E14 File Offset: 0x00847014
 	[Nullable(new byte[]
 	{
 		1,
@@ -108,8 +76,8 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x1700287E RID: 10366
-	// (get) Token: 0x0601D34D RID: 119629 RVA: 0x00821C00 File Offset: 0x0081FE00
+	// Token: 0x17002C19 RID: 11289
+	// (get) Token: 0x0601B04F RID: 110671 RVA: 0x00848E50 File Offset: 0x00847050
 	[Nullable(new byte[]
 	{
 		1,
@@ -135,8 +103,8 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x1700287F RID: 10367
-	// (get) Token: 0x0601D34E RID: 119630 RVA: 0x00821C3C File Offset: 0x0081FE3C
+	// Token: 0x17002C1A RID: 11290
+	// (get) Token: 0x0601B050 RID: 110672 RVA: 0x00848E8C File Offset: 0x0084708C
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<BP_EffectActor_C> EffectsInheritTimeDilation
 	{
@@ -152,8 +120,8 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x17002880 RID: 10368
-	// (get) Token: 0x0601D34F RID: 119631 RVA: 0x00821C78 File Offset: 0x0081FE78
+	// Token: 0x17002C1B RID: 11291
+	// (get) Token: 0x0601B051 RID: 110673 RVA: 0x00848EC8 File Offset: 0x008470C8
 	[Nullable(new byte[]
 	{
 		1,
@@ -179,8 +147,8 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x17002881 RID: 10369
-	// (get) Token: 0x0601D350 RID: 119632 RVA: 0x00821CB4 File Offset: 0x0081FEB4
+	// Token: 0x17002C1C RID: 11292
+	// (get) Token: 0x0601B052 RID: 110674 RVA: 0x00848F04 File Offset: 0x00847104
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TMap<string, AActor> ReferenceActors
 	{
@@ -196,8 +164,8 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x17002882 RID: 10370
-	// (get) Token: 0x0601D351 RID: 119633 RVA: 0x00821CF0 File Offset: 0x0081FEF0
+	// Token: 0x17002C1D RID: 11293
+	// (get) Token: 0x0601B053 RID: 110675 RVA: 0x00848F40 File Offset: 0x00847140
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TMap<FGameplayTag, SSceneInteractionTags> TagsAndCorrespondingEffects
 	{
@@ -213,8 +181,8 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x17002883 RID: 10371
-	// (get) Token: 0x0601D352 RID: 119634 RVA: 0x00821D2C File Offset: 0x0081FF2C
+	// Token: 0x17002C1E RID: 11294
+	// (get) Token: 0x0601B054 RID: 110676 RVA: 0x00848F7C File Offset: 0x0084717C
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<AActor> CollisionActors
 	{
@@ -230,8 +198,8 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x17002884 RID: 10372
-	// (get) Token: 0x0601D353 RID: 119635 RVA: 0x00821D68 File Offset: 0x0081FF68
+	// Token: 0x17002C1F RID: 11295
+	// (get) Token: 0x0601B055 RID: 110677 RVA: 0x00848FB8 File Offset: 0x008471B8
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TMap<AActor, FGameplayTag> PartCollisionActorsAndCorrespondingTags
 	{
@@ -247,8 +215,8 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x17002885 RID: 10373
-	// (get) Token: 0x0601D354 RID: 119636 RVA: 0x00821DA4 File Offset: 0x0081FFA4
+	// Token: 0x17002C20 RID: 11296
+	// (get) Token: 0x0601B056 RID: 110678 RVA: 0x00848FF4 File Offset: 0x008471F4
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<AActor> InteractionEffectHookActors
 	{
@@ -264,9 +232,9 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x17002886 RID: 10374
-	// (get) Token: 0x0601D355 RID: 119637 RVA: 0x00821DDD File Offset: 0x0081FFDD
-	// (set) Token: 0x0601D356 RID: 119638 RVA: 0x00821DF1 File Offset: 0x0081FFF1
+	// Token: 0x17002C21 RID: 11297
+	// (get) Token: 0x0601B057 RID: 110679 RVA: 0x0084902D File Offset: 0x0084722D
+	// (set) Token: 0x0601B058 RID: 110680 RVA: 0x00849041 File Offset: 0x00847241
 	[Nullable(2)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe TsBaseCharacter CharacterForOrgan
@@ -283,8 +251,8 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x17002887 RID: 10375
-	// (get) Token: 0x0601D357 RID: 119639 RVA: 0x00821E08 File Offset: 0x00820008
+	// Token: 0x17002C22 RID: 11298
+	// (get) Token: 0x0601B059 RID: 110681 RVA: 0x00849058 File Offset: 0x00847258
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<AActor> ActorsForProjection
 	{
@@ -300,9 +268,9 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x17002888 RID: 10376
-	// (get) Token: 0x0601D358 RID: 119640 RVA: 0x00821E41 File Offset: 0x00820041
-	// (set) Token: 0x0601D359 RID: 119641 RVA: 0x00821E55 File Offset: 0x00820055
+	// Token: 0x17002C23 RID: 11299
+	// (get) Token: 0x0601B05A RID: 110682 RVA: 0x00849091 File Offset: 0x00847291
+	// (set) Token: 0x0601B05B RID: 110683 RVA: 0x008490A5 File Offset: 0x008472A5
 	[Nullable(2)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe UMaterialInstance MaterialForProjection
@@ -319,8 +287,8 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x17002889 RID: 10377
-	// (get) Token: 0x0601D35A RID: 119642 RVA: 0x00821E6C File Offset: 0x0082006C
+	// Token: 0x17002C24 RID: 11300
+	// (get) Token: 0x0601B05C RID: 110684 RVA: 0x008490BC File Offset: 0x008472BC
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<AActor> ReceivingDecalsActors
 	{
@@ -336,8 +304,8 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x1700288A RID: 10378
-	// (get) Token: 0x0601D35B RID: 119643 RVA: 0x00821EA8 File Offset: 0x008200A8
+	// Token: 0x17002C25 RID: 11301
+	// (get) Token: 0x0601B05D RID: 110685 RVA: 0x008490F8 File Offset: 0x008472F8
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<UStaticMesh> StaticMeshList
 	{
@@ -353,9 +321,9 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x1700288B RID: 10379
-	// (get) Token: 0x0601D35C RID: 119644 RVA: 0x00821EE1 File Offset: 0x008200E1
-	// (set) Token: 0x0601D35D RID: 119645 RVA: 0x00821EF1 File Offset: 0x008200F1
+	// Token: 0x17002C26 RID: 11302
+	// (get) Token: 0x0601B05E RID: 110686 RVA: 0x00849131 File Offset: 0x00847331
+	// (set) Token: 0x0601B05F RID: 110687 RVA: 0x00849141 File Offset: 0x00847341
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe BPELevelPrefabDestructibleOverlapSource RangeOtherActorVelocitySource
 	{
@@ -369,8 +337,8 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x1700288C RID: 10380
-	// (get) Token: 0x0601D35E RID: 119646 RVA: 0x00821F04 File Offset: 0x00820104
+	// Token: 0x17002C27 RID: 11303
+	// (get) Token: 0x0601B060 RID: 110688 RVA: 0x00849154 File Offset: 0x00847354
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<ASkeletalMeshActor> SkeletalMeshActors
 	{
@@ -386,8 +354,8 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x1700288D RID: 10381
-	// (get) Token: 0x0601D35F RID: 119647 RVA: 0x00821F40 File Offset: 0x00820140
+	// Token: 0x17002C28 RID: 11304
+	// (get) Token: 0x0601B061 RID: 110689 RVA: 0x00849190 File Offset: 0x00847390
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<ASkeletalMeshActor> AllSkeletalMeshActors
 	{
@@ -403,9 +371,9 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x1700288E RID: 10382
-	// (get) Token: 0x0601D360 RID: 119648 RVA: 0x00821F79 File Offset: 0x00820179
-	// (set) Token: 0x0601D361 RID: 119649 RVA: 0x00821F8D File Offset: 0x0082018D
+	// Token: 0x17002C29 RID: 11305
+	// (get) Token: 0x0601B062 RID: 110690 RVA: 0x008491C9 File Offset: 0x008473C9
+	// (set) Token: 0x0601B063 RID: 110691 RVA: 0x008491DD File Offset: 0x008473DD
 	[Nullable(2)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe BP_InteractionMaterialController_C InteractionMaterialController
@@ -422,43 +390,8 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x1700288F RID: 10383
-	// (get) Token: 0x0601D362 RID: 119650 RVA: 0x00821FA2 File Offset: 0x008201A2
-	// (set) Token: 0x0601D363 RID: 119651 RVA: 0x00821FB6 File Offset: 0x008201B6
-	[Nullable(2)]
-	[UProperty(EPropertyFlags.CPF_None)]
-	private unsafe BP_BasePlatform_C BasePlatformInternal
-	{
-		[NullableContext(2)]
-		get
-		{
-			return BuiltinUtils.ObjectPropertyGetter<BP_BasePlatform_C>(base.NativePtr / (IntPtr)sizeof(void*) + SceneInteractionActor.__PropertyOffset_BasePlatformInternal);
-		}
-		[NullableContext(2)]
-		set
-		{
-			BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + SceneInteractionActor.__PropertyOffset_BasePlatformInternal, value);
-		}
-	}
-
-	// Token: 0x17002890 RID: 10384
-	// (get) Token: 0x0601D364 RID: 119652 RVA: 0x00821FCB File Offset: 0x008201CB
-	// (set) Token: 0x0601D365 RID: 119653 RVA: 0x00821FDB File Offset: 0x008201DB
-	[UProperty(EPropertyFlags.CPF_None)]
-	private unsafe int CurrentStateAkEventHandle
-	{
-		get
-		{
-			return *(base.NativePtr + (IntPtr)SceneInteractionActor.__PropertyOffset_CurrentStateAkEventHandle);
-		}
-		set
-		{
-			*(base.NativePtr + (IntPtr)SceneInteractionActor.__PropertyOffset_CurrentStateAkEventHandle) = value;
-		}
-	}
-
-	// Token: 0x17002891 RID: 10385
-	// (get) Token: 0x0601D366 RID: 119654 RVA: 0x00821FEC File Offset: 0x008201EC
+	// Token: 0x17002C2A RID: 11306
+	// (get) Token: 0x0601B064 RID: 110692 RVA: 0x008491F2 File Offset: 0x008473F2
 	private HashSet<AKuroDestructibleActor> SkeletalMeshDestructibleActors
 	{
 		get
@@ -471,9 +404,9 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x17002892 RID: 10386
-	// (get) Token: 0x0601D367 RID: 119655 RVA: 0x00822007 File Offset: 0x00820207
-	// (set) Token: 0x0601D368 RID: 119656 RVA: 0x0082201B File Offset: 0x0082021B
+	// Token: 0x17002C2B RID: 11307
+	// (get) Token: 0x0601B065 RID: 110693 RVA: 0x0084920D File Offset: 0x0084740D
+	// (set) Token: 0x0601B066 RID: 110694 RVA: 0x00849221 File Offset: 0x00847421
 	[Nullable(2)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe AActor OverrideEffectActor
@@ -490,29 +423,26 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D369 RID: 119657 RVA: 0x00822030 File Offset: 0x00820230
+	// Token: 0x0601B067 RID: 110695 RVA: 0x00849238 File Offset: 0x00847438
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void SetOverrideSeqBindActor(AActor actorToBind, [Nullable(2)] string bindingName = null)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetOverrideSeqBindActor"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		SceneInteractionActor.__SetOverrideSeqBindActor_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetOverrideSeqBindActor"), SceneInteractionActor.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((SceneInteractionActor.__SetOverrideSeqBindActor_FunctionParams*)ptr + 15L / (long)sizeof(SceneInteractionActor.__SetOverrideSeqBindActor_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->actorToBind) = ((actorToBind != null) ? actorToBind.NativePtr : ((IntPtr)0));
-			FString.CopyFrom((void*)(&ptr2->bindingName), bindingName);
+			this.SetOverrideSeqBindActor_Implementation(actorToBind, bindingName);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		SceneInteractionActor.__SetOverrideSeqBindActor_FunctionParams* ptr = stackalloc SceneInteractionActor.__SetOverrideSeqBindActor_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(SceneInteractionActor.__SetOverrideSeqBindActor_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->actorToBind) = ((actorToBind != null) ? actorToBind.NativePtr : ((IntPtr)0));
+		FString.CopyFrom((void*)(&ptr->bindingName), bindingName);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D36A RID: 119658 RVA: 0x008220C4 File Offset: 0x008202C4
+	// Token: 0x0601B068 RID: 110696 RVA: 0x008492E0 File Offset: 0x008474E0
 	protected unsafe void SetOverrideSeqBindActor_Implementation(AActor actorToBind, [Nullable(2)] string bindingName = null)
 	{
 		if (this.OverrideSeqBindActors == null)
@@ -541,29 +471,26 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		this.OverrideSeqBindActors[key] = actorToBind;
 	}
 
-	// Token: 0x0601D36B RID: 119659 RVA: 0x008221B4 File Offset: 0x008203B4
+	// Token: 0x0601B069 RID: 110697 RVA: 0x008493D0 File Offset: 0x008475D0
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void UnsetOverrideSeqBindActor(AActor actorToUnbind, [Nullable(2)] string bindingName = null)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("UnsetOverrideSeqBindActor"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		SceneInteractionActor.__UnsetOverrideSeqBindActor_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("UnsetOverrideSeqBindActor"), SceneInteractionActor.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((SceneInteractionActor.__UnsetOverrideSeqBindActor_FunctionParams*)ptr + 15L / (long)sizeof(SceneInteractionActor.__UnsetOverrideSeqBindActor_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->actorToUnbind) = ((actorToUnbind != null) ? actorToUnbind.NativePtr : ((IntPtr)0));
-			FString.CopyFrom((void*)(&ptr2->bindingName), bindingName);
+			this.UnsetOverrideSeqBindActor_Implementation(actorToUnbind, bindingName);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		SceneInteractionActor.__UnsetOverrideSeqBindActor_FunctionParams* ptr = stackalloc SceneInteractionActor.__UnsetOverrideSeqBindActor_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(SceneInteractionActor.__UnsetOverrideSeqBindActor_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->actorToUnbind) = ((actorToUnbind != null) ? actorToUnbind.NativePtr : ((IntPtr)0));
+		FString.CopyFrom((void*)(&ptr->bindingName), bindingName);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D36C RID: 119660 RVA: 0x00822248 File Offset: 0x00820448
+	// Token: 0x0601B06A RID: 110698 RVA: 0x00849478 File Offset: 0x00847678
 	protected void UnsetOverrideSeqBindActor_Implementation(AActor actorToUnbind, [Nullable(2)] string bindingName = null)
 	{
 		if (this.OverrideSeqBindActors == null)
@@ -583,8 +510,8 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		this.OverrideSeqBindActors.Remove(key);
 	}
 
-	// Token: 0x17002893 RID: 10387
-	// (get) Token: 0x0601D36D RID: 119661 RVA: 0x008222A0 File Offset: 0x008204A0
+	// Token: 0x17002C2C RID: 11308
+	// (get) Token: 0x0601B06B RID: 110699 RVA: 0x008494D0 File Offset: 0x008476D0
 	[Nullable(2)]
 	public BP_BasePlatform_C BasePlatform
 	{
@@ -622,77 +549,45 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D36E RID: 119662 RVA: 0x008223AC File Offset: 0x008205AC
+	// Token: 0x0601B06C RID: 110700 RVA: 0x008495DC File Offset: 0x008477DC
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe override void ReceiveBeginPlay()
+	public override void ReceiveBeginPlay()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveBeginPlay"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveBeginPlay"), SceneInteractionActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.ReceiveBeginPlay_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D36F RID: 119663 RVA: 0x0082241C File Offset: 0x0082061C
+	// Token: 0x0601B06D RID: 110701 RVA: 0x00849638 File Offset: 0x00847838
 	protected virtual void ReceiveBeginPlay_Implementation()
 	{
 		this.PlayingTagAkEventHandle = new Dictionary<FGameplayTag, int>();
-		if (Info.Instance.IsPlayInEditor)
-		{
-			ULevel level = base.GetLevel();
-			UWorld uworld = (level != null) ? level.OwningWorld : null;
-			if (UKismetSystemLibrary.GetPathName((uworld != null) ? uworld.PersistentLevel : null).Contains("/Game/Aki/Scene/InteractionLevel/Prefab"))
-			{
-				ResourceSystem.Instance.LoadTypeAsync(EBpTypeName.BP_GlobalGI_C.ToEnumString(), delegate
-				{
-					this.GlobalGi = (ActorSystem.Instance.Get(BP_GlobalGI_C.StaticClass(), base.D_GetTransform(), null, true) as BP_GlobalGI_C);
-					this.GlobalGi.夜晚();
-				}, "js_undefined");
-				Info.Instance.SetInCg(true);
-				this.Init(0, -1, base.GetName(), null, 0);
-				Ticker ticker = TickSystem.Instance.Add(delegate(float delayTime)
-				{
-					this.Update(delayTime / 1000f);
-				}, "Game", ETickingGroup.TG_PrePhysics, true, 0, false);
-				if (ticker != null)
-				{
-					this.DebugTickId = ticker.Id;
-				}
-			}
-		}
 	}
 
-	// Token: 0x0601D370 RID: 119664 RVA: 0x008224E0 File Offset: 0x008206E0
+	// Token: 0x0601B06E RID: 110702 RVA: 0x00849650 File Offset: 0x00847850
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveEndPlay(EEndPlayReason EndPlayReason)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveEndPlay"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		AActor.__ReceiveEndPlay_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveEndPlay"), SceneInteractionActor.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((AActor.__ReceiveEndPlay_FunctionParams*)ptr + 15L / (long)sizeof(AActor.__ReceiveEndPlay_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(byte*)(&ptr2->EndPlayReason) = (byte)EndPlayReason;
+			this.ReceiveEndPlay_Implementation(EndPlayReason);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		AActor.__ReceiveEndPlay_FunctionParams* ptr = stackalloc AActor.__ReceiveEndPlay_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(AActor.__ReceiveEndPlay_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(byte*)(&ptr->EndPlayReason) = (byte)EndPlayReason;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D371 RID: 119665 RVA: 0x0082255C File Offset: 0x0082075C
+	// Token: 0x0601B06F RID: 110703 RVA: 0x008496E0 File Offset: 0x008478E0
 	protected virtual void ReceiveEndPlay_Implementation(EEndPlayReason EndPlayReason)
 	{
 		if (this.BasePlatformInternal != null)
@@ -718,7 +613,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		this.RemovePendingTagEffectTick();
 	}
 
-	// Token: 0x0601D372 RID: 119666 RVA: 0x00822644 File Offset: 0x00820844
+	// Token: 0x0601B070 RID: 110704 RVA: 0x008497C8 File Offset: 0x008479C8
 	private void RemoveDebugTicker()
 	{
 		if (this.DebugTickId != -1)
@@ -728,85 +623,67 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D373 RID: 119667 RVA: 0x00822668 File Offset: 0x00820868
+	// Token: 0x0601B071 RID: 110705 RVA: 0x008497EC File Offset: 0x008479EC
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void AddNewState()
+	public virtual void AddNewState()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("AddNewState"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("AddNewState"), SceneInteractionActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.AddNewState_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D374 RID: 119668 RVA: 0x008226D8 File Offset: 0x008208D8
+	// Token: 0x0601B072 RID: 110706 RVA: 0x00849845 File Offset: 0x00847A45
 	protected void AddNewState_Implementation()
 	{
 		this.States.Add((EKuroSceneInteractionState)this.States.Num(), null);
 	}
 
-	// Token: 0x0601D375 RID: 119669 RVA: 0x008226F4 File Offset: 0x008208F4
+	// Token: 0x0601B073 RID: 110707 RVA: 0x00849860 File Offset: 0x00847A60
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void AddNewEffect()
+	public virtual void AddNewEffect()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("AddNewEffect"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("AddNewEffect"), SceneInteractionActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.AddNewEffect_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D376 RID: 119670 RVA: 0x00822764 File Offset: 0x00820964
+	// Token: 0x0601B074 RID: 110708 RVA: 0x008498B9 File Offset: 0x00847AB9
 	protected void AddNewEffect_Implementation()
 	{
 		this.Effects.Add((ESceneInteractionEffect)this.Effects.Num(), null);
 	}
 
-	// Token: 0x0601D377 RID: 119671 RVA: 0x00822780 File Offset: 0x00820980
+	// Token: 0x0601B075 RID: 110709 RVA: 0x008498D4 File Offset: 0x00847AD4
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void AddNewEndEffect()
+	public virtual void AddNewEndEffect()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("AddNewEndEffect"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("AddNewEndEffect"), SceneInteractionActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.AddNewEndEffect_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D378 RID: 119672 RVA: 0x008227F0 File Offset: 0x008209F0
+	// Token: 0x0601B076 RID: 110710 RVA: 0x0084992D File Offset: 0x00847B2D
 	protected void AddNewEndEffect_Implementation()
 	{
 		this.EndEffects.Add((ESceneInteractionEffect)this.EndEffects.Num(), null);
 	}
 
-	// Token: 0x0601D379 RID: 119673 RVA: 0x0082280C File Offset: 0x00820A0C
+	// Token: 0x0601B077 RID: 110711 RVA: 0x00849948 File Offset: 0x00847B48
 	public void ChangeDirection(bool bPlayBack)
 	{
 		if ((bPlayBack && !this.IsPlayBack) || (!bPlayBack && this.IsPlayBack))
@@ -823,7 +700,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D37A RID: 119674 RVA: 0x008228AD File Offset: 0x00820AAD
+	// Token: 0x0601B078 RID: 110712 RVA: 0x008499E9 File Offset: 0x00847BE9
 	public void PlayStateBpMaterialRuntimeParUpdate(SSceneInteractionitem state)
 	{
 		if (state.BP_MaterialRuntimeParUpdate != null)
@@ -833,7 +710,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D37B RID: 119675 RVA: 0x008228D0 File Offset: 0x00820AD0
+	// Token: 0x0601B079 RID: 110713 RVA: 0x00849A0C File Offset: 0x00847C0C
 	public void PlayIndependentEffect(ESceneInteractionEffect effectKey)
 	{
 		SScenePropertyEffect valueOrDefault = this.Effects.GetValueOrDefault(effectKey);
@@ -858,7 +735,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D37C RID: 119676 RVA: 0x00822998 File Offset: 0x00820B98
+	// Token: 0x0601B07A RID: 110714 RVA: 0x00849AD4 File Offset: 0x00847CD4
 	public void EndIndependentEffect(ESceneInteractionEffect effectKey)
 	{
 		SScenePropertyEffect valueOrDefault = this.Effects.GetValueOrDefault(effectKey);
@@ -880,7 +757,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D37D RID: 119677 RVA: 0x00822A18 File Offset: 0x00820C18
+	// Token: 0x0601B07B RID: 110715 RVA: 0x00849B54 File Offset: 0x00847D54
 	public void PlayIndependentEndEffect(ESceneInteractionEffect effectKey)
 	{
 		BP_EffectActor_C valueOrDefault = this.EndEffects.GetValueOrDefault(effectKey);
@@ -891,7 +768,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		this.PlayEffect(valueOrDefault, "[SceneInteractionActor.PlayIndependentEndEffect]");
 	}
 
-	// Token: 0x0601D37E RID: 119678 RVA: 0x00822A44 File Offset: 0x00820C44
+	// Token: 0x0601B07C RID: 110716 RVA: 0x00849B80 File Offset: 0x00847D80
 	public void Update(float deltaSeconds)
 	{
 		if (deltaSeconds > 0f && this.SkeletalMontageConfigMap != null)
@@ -911,13 +788,22 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 				}
 			}
 		}
-		if ((this.InTransition || this.InWaitingForPlayableFinished) && !this.CheckPlaying(deltaSeconds, this.CurrentState))
+		if (this.InTransition || this.InWaitingForPlayableFinished)
 		{
-			this.DoSwitchState(false);
+			if (!this.CheckPlaying(deltaSeconds, this.CurrentState))
+			{
+				this.DoSwitchState(false);
+				return;
+			}
+		}
+		else if (this.NextState != null || this.PendingStates.First != null)
+		{
+			SSceneInteractionitem currentState = this.CurrentState;
+			this.DoSwitchState(currentState != null && currentState.WaitForPlayableFinished);
 		}
 	}
 
-	// Token: 0x0601D37F RID: 119679 RVA: 0x00822B28 File Offset: 0x00820D28
+	// Token: 0x0601B07D RID: 110717 RVA: 0x00849C90 File Offset: 0x00847E90
 	public void SetTimeDilation(float customTimeDilation)
 	{
 		if (base.CustomTimeDilation != customTimeDilation)
@@ -927,27 +813,21 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D380 RID: 119680 RVA: 0x00822B40 File Offset: 0x00820D40
+	// Token: 0x0601B07E RID: 110718 RVA: 0x00849CA8 File Offset: 0x00847EA8
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	protected unsafe virtual void UpdateTimeDilation()
+	protected virtual void UpdateTimeDilation()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("UpdateTimeDilation"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("UpdateTimeDilation"), SceneInteractionActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.UpdateTimeDilation_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D381 RID: 119681 RVA: 0x00822BB0 File Offset: 0x00820DB0
+	// Token: 0x0601B07F RID: 110719 RVA: 0x00849D04 File Offset: 0x00847F04
 	protected void UpdateTimeDilation_Implementation()
 	{
 		if (this.CurrentState == null)
@@ -1004,7 +884,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D382 RID: 119682 RVA: 0x00822D64 File Offset: 0x00820F64
+	// Token: 0x0601B080 RID: 110720 RVA: 0x00849EB8 File Offset: 0x008480B8
 	public void Init(int pbDataId, int handleId, string levelName, [Nullable(2)] Action onInit, int entityId = 0)
 	{
 		this.PbDataId = pbDataId;
@@ -1013,9 +893,13 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		this.LevelName = levelName;
 		this.OnInitCallback = onInit;
 		this.CurrentStateKey = new EKuroSceneInteractionState?(EKuroSceneInteractionState.Error);
+		this.PendingStates.Clear();
 		this.NextState = null;
-		this.CurrentState = null;
 		this.InTransition = false;
+		this.InWaitingForPlayableFinished = false;
+		this.IsUseTransitionTime = false;
+		this.SwitchingStateRemainTime = 0f;
+		this.CurrentState = null;
 		this.IsPlayBack = false;
 		this.Active = true;
 		TsBaseCharacter characterForOrgan = this.CharacterForOrgan;
@@ -1176,7 +1060,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 					AKuroDestructibleActor akuroDestructibleActor3 = enumerator2.Current;
 					akuroDestructibleActor3.TrunksInitializedDelegate.Bind(new Action(this.OnTrunksInitialized));
 				}
-				goto IL_4C4;
+				goto IL_4E8;
 			}
 		}
 		Action onInitCallback = this.OnInitCallback;
@@ -1184,14 +1068,14 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		{
 			onInitCallback();
 		}
-		IL_4C4:
+		IL_4E8:
 		if (!LevelPrefabConfigModel.Instance.IsCloseUroPrefab(this.LevelName))
 		{
 			this.ApplyAnimOptimizationParams(true);
 		}
 	}
 
-	// Token: 0x0601D383 RID: 119683 RVA: 0x0082326C File Offset: 0x0082146C
+	// Token: 0x0601B081 RID: 110721 RVA: 0x0084A3E4 File Offset: 0x008485E4
 	public void Clear()
 	{
 		this.SkeletalMeshDestructibleActorsInternal = null;
@@ -1205,7 +1089,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D384 RID: 119684 RVA: 0x008232D4 File Offset: 0x008214D4
+	// Token: 0x0601B082 RID: 110722 RVA: 0x0084A44C File Offset: 0x0084864C
 	private void OnTrunksInitialized()
 	{
 		if (this.SkeletalMeshDestructibleActors != null)
@@ -1227,7 +1111,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D385 RID: 119685 RVA: 0x00823364 File Offset: 0x00821564
+	// Token: 0x0601B083 RID: 110723 RVA: 0x0084A4DC File Offset: 0x008486DC
 	[return: Nullable(2)]
 	public AActor GetActorByKey(string key)
 	{
@@ -1243,7 +1127,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		return result;
 	}
 
-	// Token: 0x0601D386 RID: 119686 RVA: 0x00823390 File Offset: 0x00821590
+	// Token: 0x0601B084 RID: 110724 RVA: 0x0084A508 File Offset: 0x00848708
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -1263,7 +1147,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		return ssceneInteractionTags.Actors;
 	}
 
-	// Token: 0x0601D387 RID: 119687 RVA: 0x008233C2 File Offset: 0x008215C2
+	// Token: 0x0601B085 RID: 110725 RVA: 0x0084A53A File Offset: 0x0084873A
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -1279,7 +1163,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		return null;
 	}
 
-	// Token: 0x0601D388 RID: 119688 RVA: 0x008233D4 File Offset: 0x008215D4
+	// Token: 0x0601B086 RID: 110726 RVA: 0x0084A54C File Offset: 0x0084874C
 	public FTransformDouble? GetActorOriginalRelTransform(AActor actor)
 	{
 		if (this.ActorsOriginalRelTransform == null || (actor == null || !actor.IsValid()))
@@ -1294,13 +1178,13 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		return null;
 	}
 
-	// Token: 0x0601D389 RID: 119689 RVA: 0x00823424 File Offset: 0x00821624
+	// Token: 0x0601B087 RID: 110727 RVA: 0x0084A59C File Offset: 0x0084879C
 	public EKuroSceneInteractionState GetCurrentState()
 	{
 		return this.CurrentStateKey.Value;
 	}
 
-	// Token: 0x0601D38A RID: 119690 RVA: 0x00823434 File Offset: 0x00821634
+	// Token: 0x0601B088 RID: 110728 RVA: 0x0084A5AC File Offset: 0x008487AC
 	private void PlayEffect(BP_EffectActor_C effectActor, string reason)
 	{
 		if (effectActor == null || !effectActor.IsValid())
@@ -1347,29 +1231,25 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D38B RID: 119691 RVA: 0x00823540 File Offset: 0x00821740
+	// Token: 0x0601B089 RID: 110729 RVA: 0x0084A6B8 File Offset: 0x008488B8
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	protected unsafe virtual bool CheckAllEffectPlaying()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("CheckAllEffectPlaying"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		SceneInteractionActor.__CheckAllEffectPlaying_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("CheckAllEffectPlaying"), SceneInteractionActor.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((SceneInteractionActor.__CheckAllEffectPlaying_FunctionParams*)ptr + 15L / (long)sizeof(SceneInteractionActor.__CheckAllEffectPlaying_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.CheckAllEffectPlaying_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		SceneInteractionActor.__CheckAllEffectPlaying_FunctionParams* ptr = stackalloc SceneInteractionActor.__CheckAllEffectPlaying_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(SceneInteractionActor.__CheckAllEffectPlaying_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x0601D38C RID: 119692 RVA: 0x008235B8 File Offset: 0x008217B8
+	// Token: 0x0601B08A RID: 110730 RVA: 0x0084A744 File Offset: 0x00848944
 	protected bool CheckAllEffectPlaying_Implementation()
 	{
 		if (this.ActiveEffectInfoMap == null)
@@ -1389,7 +1269,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		return true;
 	}
 
-	// Token: 0x0601D38D RID: 119693 RVA: 0x00823620 File Offset: 0x00821820
+	// Token: 0x0601B08B RID: 110731 RVA: 0x0084A7AC File Offset: 0x008489AC
 	private void StopEffect(BP_EffectActor_C effectActor, string reason, bool immediately)
 	{
 		if (effectActor == null || !effectActor.IsValid())
@@ -1399,7 +1279,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		effectActor.Stop(reason, immediately);
 	}
 
-	// Token: 0x0601D38E RID: 119694 RVA: 0x00823640 File Offset: 0x00821840
+	// Token: 0x0601B08C RID: 110732 RVA: 0x0084A7CC File Offset: 0x008489CC
 	private unsafe void PlaySequence(ALevelSequenceActor director, SSceneInteractionSequence config, TArray<AActor> bindActors, bool jumpToEnd)
 	{
 		if (!this.Active)
@@ -1490,14 +1370,20 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 			}
 			if (jumpToEnd)
 			{
-				FMovieSceneSequencePlaybackParams playbackPosition = new FMovieSceneSequencePlaybackParams(config.Reverse ? director.SequencePlayer.GetStartTime().Time : director.SequencePlayer.GetEndTime().Time, 0f, "", EMovieScenePositionType.Frame, EUpdatePositionMethod.Play);
+				FFrameTime frame = config.Reverse ? director.SequencePlayer.GetStartTime().Time : director.SequencePlayer.GetEndTime().Time;
+				FMovieSceneSequencePlaybackParams playbackPosition = new FMovieSceneSequencePlaybackParams
+				{
+					Frame = frame,
+					PositionType = EMovieScenePositionType.Frame,
+					UpdateMethod = EUpdatePositionMethod.Play
+				};
 				director.SequencePlayer.SetPlaybackPosition(playbackPosition);
 			}
 			director.SequencePlayer.SetPlayRate(config.PlayRate * base.CustomTimeDilation);
 		}
 	}
 
-	// Token: 0x0601D38F RID: 119695 RVA: 0x00823994 File Offset: 0x00821B94
+	// Token: 0x0601B08D RID: 110733 RVA: 0x0084AB2C File Offset: 0x00848D2C
 	private void StopSequence(ULevelSequence sequence)
 	{
 		ALevelSequenceActor directorBySequence = this.GetDirectorBySequence(sequence);
@@ -1513,29 +1399,26 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D390 RID: 119696 RVA: 0x008239E8 File Offset: 0x00821BE8
+	// Token: 0x0601B08E RID: 110734 RVA: 0x0084AB80 File Offset: 0x00848D80
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void PlayKuroSkeletalMeshDestruction(AActor actor, bool isJumpToEnd)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("PlayKuroSkeletalMeshDestruction"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		SceneInteractionActor.__PlayKuroSkeletalMeshDestruction_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("PlayKuroSkeletalMeshDestruction"), SceneInteractionActor.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((SceneInteractionActor.__PlayKuroSkeletalMeshDestruction_FunctionParams*)ptr + 15L / (long)sizeof(SceneInteractionActor.__PlayKuroSkeletalMeshDestruction_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->actor) = ((actor != null) ? actor.NativePtr : ((IntPtr)0));
-			ptr2->isJumpToEnd = isJumpToEnd;
+			this.PlayKuroSkeletalMeshDestruction_Implementation(actor, isJumpToEnd);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		SceneInteractionActor.__PlayKuroSkeletalMeshDestruction_FunctionParams* ptr = stackalloc SceneInteractionActor.__PlayKuroSkeletalMeshDestruction_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(SceneInteractionActor.__PlayKuroSkeletalMeshDestruction_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->actor) = ((actor != null) ? actor.NativePtr : ((IntPtr)0));
+		ptr->isJumpToEnd = isJumpToEnd;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D391 RID: 119697 RVA: 0x00823A74 File Offset: 0x00821C74
+	// Token: 0x0601B08F RID: 110735 RVA: 0x0084AC24 File Offset: 0x00848E24
 	protected void PlayKuroSkeletalMeshDestruction_Implementation(AActor actor, bool isJumpToEnd)
 	{
 		SSceneInteractionitem currentState = this.CurrentState;
@@ -1554,28 +1437,25 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D392 RID: 119698 RVA: 0x00823ACC File Offset: 0x00821CCC
+	// Token: 0x0601B090 RID: 110736 RVA: 0x0084AC7C File Offset: 0x00848E7C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	protected unsafe virtual void OverrideKuroDestructibleActorPhysicsVelocity(AKuroDestructibleActor skeletalMeshDestruction)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("OverrideKuroDestructibleActorPhysicsVelocity"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		SceneInteractionActor.__OverrideKuroDestructibleActorPhysicsVelocity_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("OverrideKuroDestructibleActorPhysicsVelocity"), SceneInteractionActor.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((SceneInteractionActor.__OverrideKuroDestructibleActorPhysicsVelocity_FunctionParams*)ptr + 15L / (long)sizeof(SceneInteractionActor.__OverrideKuroDestructibleActorPhysicsVelocity_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->skeletalMeshDestruction) = ((skeletalMeshDestruction != null) ? skeletalMeshDestruction.NativePtr : ((IntPtr)0));
+			this.OverrideKuroDestructibleActorPhysicsVelocity_Implementation(skeletalMeshDestruction);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		SceneInteractionActor.__OverrideKuroDestructibleActorPhysicsVelocity_FunctionParams* ptr = stackalloc SceneInteractionActor.__OverrideKuroDestructibleActorPhysicsVelocity_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(SceneInteractionActor.__OverrideKuroDestructibleActorPhysicsVelocity_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->skeletalMeshDestruction) = ((skeletalMeshDestruction != null) ? skeletalMeshDestruction.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D393 RID: 119699 RVA: 0x00823B50 File Offset: 0x00821D50
+	// Token: 0x0601B091 RID: 110737 RVA: 0x0084AD18 File Offset: 0x00848F18
 	protected void OverrideKuroDestructibleActorPhysicsVelocity_Implementation(AKuroDestructibleActor skeletalMeshDestruction)
 	{
 		EntityHandle entityByPbDataId = CreatureModel.Instance.GetEntityByPbDataId(this.PbDataId);
@@ -1617,7 +1497,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D394 RID: 119700 RVA: 0x00823C94 File Offset: 0x00821E94
+	// Token: 0x0601B092 RID: 110738 RVA: 0x0084AE5C File Offset: 0x0084905C
 	private unsafe void PlaySkeletalMeshDestruction(AKuroDestructibleActor skeletalMeshDestruction, bool isJumpToEnd, [Nullable(2)] SSceneInteractionDestructibleInfo skeletalMeshDestructionConfig)
 	{
 		if (skeletalMeshDestruction == null || !skeletalMeshDestruction.IsValid())
@@ -1707,7 +1587,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		skeletalMeshDestruction.D_ApplyDamage(damageAmount, value, value2, impulseStrength);
 	}
 
-	// Token: 0x0601D395 RID: 119701 RVA: 0x00823F28 File Offset: 0x00822128
+	// Token: 0x0601B093 RID: 110739 RVA: 0x0084B0F0 File Offset: 0x008492F0
 	private float? GetActiveSequencePlaybackProgress(ULevelSequence sequence)
 	{
 		ALevelSequenceActor directorBySequence = this.GetDirectorBySequence(sequence);
@@ -1754,7 +1634,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		return new float?(MathUtils.Instance.Clamp(num5 / num, 0f, 1f));
 	}
 
-	// Token: 0x0601D396 RID: 119702 RVA: 0x00824094 File Offset: 0x00822294
+	// Token: 0x0601B094 RID: 110740 RVA: 0x0084B25C File Offset: 0x0084945C
 	private void SetActiveSequencePlaybackProgress(ULevelSequence sequence, float progress)
 	{
 		ALevelSequenceActor directorBySequence = this.GetDirectorBySequence(sequence);
@@ -1799,18 +1679,30 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		num5 = MathUtils.Instance.Clamp(num5, num3, num4);
 		int num6 = (int)Math.Floor((double)num5);
 		float subFrame = num5 - (float)num6;
-		FFrameTime frame = new FFrameTime(new FFrameNumber(num6), subFrame);
+		FFrameTime frame = new FFrameTime
+		{
+			FrameNumber = new FFrameNumber
+			{
+				Value = num6
+			},
+			SubFrame = subFrame
+		};
 		FFrameTime time4 = ulevelSequencePlayer.GetCurrentTime().Time;
 		float num7 = (float)time4.FrameNumber.Value + time4.SubFrame;
 		if (MathUtils.Instance.IsNearlyEqual((double)num7, (double)num5, new double?(0.0001)))
 		{
 			return;
 		}
-		FMovieSceneSequencePlaybackParams playbackPosition = new FMovieSceneSequencePlaybackParams(frame, 0f, "", EMovieScenePositionType.Frame, EUpdatePositionMethod.Play);
+		FMovieSceneSequencePlaybackParams playbackPosition = new FMovieSceneSequencePlaybackParams
+		{
+			Frame = frame,
+			PositionType = EMovieScenePositionType.Frame,
+			UpdateMethod = EUpdatePositionMethod.Play
+		};
 		ulevelSequencePlayer.SetPlaybackPosition(playbackPosition);
 	}
 
-	// Token: 0x0601D397 RID: 119703 RVA: 0x00824230 File Offset: 0x00822430
+	// Token: 0x0601B095 RID: 110741 RVA: 0x0084B414 File Offset: 0x00849614
 	private unsafe void SetActorCollisionProfile(TMap<AActor, FCollisionProfileName> profileMap)
 	{
 		if (profileMap == null)
@@ -1859,7 +1751,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D398 RID: 119704 RVA: 0x00824350 File Offset: 0x00822550
+	// Token: 0x0601B096 RID: 110742 RVA: 0x0084B534 File Offset: 0x00849734
 	public float? GetActiveTagSequencePlaybackProgress(FGameplayTag tag)
 	{
 		SSceneInteractionTags ssceneInteractionTags;
@@ -1876,7 +1768,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		return this.GetActiveSequencePlaybackProgress(ulevelSequence);
 	}
 
-	// Token: 0x0601D399 RID: 119705 RVA: 0x008243A0 File Offset: 0x008225A0
+	// Token: 0x0601B097 RID: 110743 RVA: 0x0084B584 File Offset: 0x00849784
 	public void SetActiveTagSequencePlaybackProgress(FGameplayTag tag, float progress)
 	{
 		SSceneInteractionTags ssceneInteractionTags;
@@ -1902,7 +1794,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		this.SetActiveSequencePlaybackProgress(ulevelSequence2, progress);
 	}
 
-	// Token: 0x0601D39A RID: 119706 RVA: 0x008243E4 File Offset: 0x008225E4
+	// Token: 0x0601B098 RID: 110744 RVA: 0x0084B5C8 File Offset: 0x008497C8
 	public float? GetActiveSequenceDurationTime(ULevelSequence sequence)
 	{
 		ALevelSequenceActor directorBySequence = this.GetDirectorBySequence(sequence);
@@ -1930,30 +1822,26 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		return new float?(num * num2);
 	}
 
-	// Token: 0x0601D39B RID: 119707 RVA: 0x008244B0 File Offset: 0x008226B0
+	// Token: 0x0601B099 RID: 110745 RVA: 0x0084B694 File Offset: 0x00849894
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual float GetActiveSequenceRemainTime(ULevelSequence sequence)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetActiveSequenceRemainTime"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		SceneInteractionActor.__GetActiveSequenceRemainTime_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetActiveSequenceRemainTime"), SceneInteractionActor.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((SceneInteractionActor.__GetActiveSequenceRemainTime_FunctionParams*)ptr + 15L / (long)sizeof(SceneInteractionActor.__GetActiveSequenceRemainTime_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->sequence) = ((sequence != null) ? sequence.NativePtr : ((IntPtr)0));
+			return this.GetActiveSequenceRemainTime_Implementation(sequence);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		float _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		SceneInteractionActor.__GetActiveSequenceRemainTime_FunctionParams* ptr = stackalloc SceneInteractionActor.__GetActiveSequenceRemainTime_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(SceneInteractionActor.__GetActiveSequenceRemainTime_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->sequence) = ((sequence != null) ? sequence.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		float _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x0601D39C RID: 119708 RVA: 0x0082453C File Offset: 0x0082273C
+	// Token: 0x0601B09A RID: 110746 RVA: 0x0084B734 File Offset: 0x00849934
 	protected float GetActiveSequenceRemainTime_Implementation(ULevelSequence sequence)
 	{
 		ALevelSequenceActor directorBySequence = this.GetDirectorBySequence(sequence);
@@ -1990,7 +1878,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		return num * num2;
 	}
 
-	// Token: 0x0601D39D RID: 119709 RVA: 0x00824694 File Offset: 0x00822894
+	// Token: 0x0601B09B RID: 110747 RVA: 0x0084B88C File Offset: 0x00849A8C
 	public float? GetActiveTagSequenceDurationTime(FGameplayTag tag)
 	{
 		SSceneInteractionTags ssceneInteractionTags;
@@ -2016,7 +1904,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		return this.GetActiveSequenceDurationTime(ulevelSequence2);
 	}
 
-	// Token: 0x0601D39E RID: 119710 RVA: 0x008246E8 File Offset: 0x008228E8
+	// Token: 0x0601B09C RID: 110748 RVA: 0x0084B8E0 File Offset: 0x00849AE0
 	public void SetActiveSequenceDurationTime(ULevelSequence sequence, float durationSecond)
 	{
 		ALevelSequenceActor directorBySequence = this.GetDirectorBySequence(sequence);
@@ -2050,7 +1938,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		ulevelSequencePlayer.SetPlayRate(num3 * base.CustomTimeDilation);
 	}
 
-	// Token: 0x0601D39F RID: 119711 RVA: 0x008247D4 File Offset: 0x008229D4
+	// Token: 0x0601B09D RID: 110749 RVA: 0x0084B9CC File Offset: 0x00849BCC
 	public void SetActiveTagSequenceDurationTime(FGameplayTag tag, float durationSecond)
 	{
 		SSceneInteractionTags ssceneInteractionTags;
@@ -2076,7 +1964,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		this.SetActiveSequenceDurationTime(ulevelSequence2, durationSecond);
 	}
 
-	// Token: 0x0601D3A0 RID: 119712 RVA: 0x00824818 File Offset: 0x00822A18
+	// Token: 0x0601B09E RID: 110750 RVA: 0x0084BA10 File Offset: 0x00849C10
 	private void PauseActiveSequence(ULevelSequence sequence)
 	{
 		ALevelSequenceActor directorBySequence = this.GetDirectorBySequence(sequence);
@@ -2092,7 +1980,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		ulevelSequencePlayer.Pause();
 	}
 
-	// Token: 0x0601D3A1 RID: 119713 RVA: 0x00824860 File Offset: 0x00822A60
+	// Token: 0x0601B09F RID: 110751 RVA: 0x0084BA58 File Offset: 0x00849C58
 	public void PauseActiveTagSequence(FGameplayTag tag)
 	{
 		SSceneInteractionTags ssceneInteractionTags;
@@ -2118,7 +2006,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		this.PauseActiveSequence(ulevelSequence2);
 	}
 
-	// Token: 0x0601D3A2 RID: 119714 RVA: 0x008248A4 File Offset: 0x00822AA4
+	// Token: 0x0601B0A0 RID: 110752 RVA: 0x0084BA9C File Offset: 0x00849C9C
 	private void ResumeActiveSequence(ULevelSequence sequence, bool bReverseFromConfig = false)
 	{
 		ALevelSequenceActor directorBySequence = this.GetDirectorBySequence(sequence);
@@ -2163,7 +2051,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D3A3 RID: 119715 RVA: 0x00824958 File Offset: 0x00822B58
+	// Token: 0x0601B0A1 RID: 110753 RVA: 0x0084BB50 File Offset: 0x00849D50
 	public void ResumeActiveTagSequence(FGameplayTag tag, bool bReverseFromConfig = false)
 	{
 		SSceneInteractionTags ssceneInteractionTags;
@@ -2189,7 +2077,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		this.ResumeActiveSequence(ulevelSequence2, bReverseFromConfig);
 	}
 
-	// Token: 0x0601D3A4 RID: 119716 RVA: 0x0082499C File Offset: 0x00822B9C
+	// Token: 0x0601B0A2 RID: 110754 RVA: 0x0084BB94 File Offset: 0x00849D94
 	public bool? GetIsActiveSequencePlayReverseFromConfig(ULevelSequence sequence)
 	{
 		ALevelSequenceActor directorBySequence = this.GetDirectorBySequence(sequence);
@@ -2210,7 +2098,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		return new bool?(sequenceDirectorConfig.Reverse != sequenceDirectorConfig.UeConfig.Reverse);
 	}
 
-	// Token: 0x0601D3A5 RID: 119717 RVA: 0x00824A20 File Offset: 0x00822C20
+	// Token: 0x0601B0A3 RID: 110755 RVA: 0x0084BC18 File Offset: 0x00849E18
 	public bool? GetIsActiveTagSequencePlayReverseFromConfig(FGameplayTag tag)
 	{
 		SSceneInteractionTags ssceneInteractionTags;
@@ -2236,7 +2124,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		return this.GetIsActiveSequencePlayReverseFromConfig(ulevelSequence2);
 	}
 
-	// Token: 0x0601D3A6 RID: 119718 RVA: 0x00824A74 File Offset: 0x00822C74
+	// Token: 0x0601B0A4 RID: 110756 RVA: 0x0084BC6C File Offset: 0x00849E6C
 	private void PlayActiveSequenceTo(ULevelSequence sequence, float progress, bool bReverseFromConfig = false)
 	{
 		ALevelSequenceActor directorBySequence = this.GetDirectorBySequence(sequence);
@@ -2282,18 +2170,30 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		num5 = MathUtils.Instance.Clamp(num5, num3, num4);
 		int num6 = (int)Math.Floor((double)num5);
 		float subFrame = num5 - (float)num6;
-		FFrameTime frame = new FFrameTime(new FFrameNumber(num6), subFrame);
+		FFrameTime frame = new FFrameTime
+		{
+			FrameNumber = new FFrameNumber
+			{
+				Value = num6
+			},
+			SubFrame = subFrame
+		};
 		FFrameTime time4 = ulevelSequencePlayer.GetCurrentTime().Time;
 		float num7 = (float)time4.FrameNumber.Value + time4.SubFrame;
 		if (MathUtils.Instance.IsNearlyEqual((double)num7, (double)num5, new double?(0.0001)))
 		{
 			return;
 		}
-		FMovieSceneSequencePlaybackParams inPlaybackParams = new FMovieSceneSequencePlaybackParams(frame, 0f, "", EMovieScenePositionType.Frame, EUpdatePositionMethod.Play);
+		FMovieSceneSequencePlaybackParams inPlaybackParams = new FMovieSceneSequencePlaybackParams
+		{
+			Frame = frame,
+			PositionType = EMovieScenePositionType.Frame,
+			UpdateMethod = EUpdatePositionMethod.Play
+		};
 		ulevelSequencePlayer.PlayTo_Circle(inPlaybackParams, false, !sequenceDirectorConfig.Reverse);
 	}
 
-	// Token: 0x0601D3A7 RID: 119719 RVA: 0x00824C40 File Offset: 0x00822E40
+	// Token: 0x0601B0A5 RID: 110757 RVA: 0x0084BE50 File Offset: 0x0084A050
 	public void PlayActiveTagSequenceTo(FGameplayTag tag, float progress, bool bReverseFromConfig = false)
 	{
 		SSceneInteractionTags ssceneInteractionTags;
@@ -2319,7 +2219,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		this.PlayActiveSequenceTo(ulevelSequence2, progress, bReverseFromConfig);
 	}
 
-	// Token: 0x0601D3A8 RID: 119720 RVA: 0x00824C84 File Offset: 0x00822E84
+	// Token: 0x0601B0A6 RID: 110758 RVA: 0x0084BE94 File Offset: 0x0084A094
 	public void PlayState(SSceneInteractionitem state, [Nullable(2)] SSceneInteractionitem lastState, bool jumpToEnd, EKuroSceneInteractionState targetState)
 	{
 		if (state != null)
@@ -2342,7 +2242,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D3A9 RID: 119721 RVA: 0x00824D0C File Offset: 0x00822F0C
+	// Token: 0x0601B0A7 RID: 110759 RVA: 0x0084BF1C File Offset: 0x0084A11C
 	private void PlayStateSequence(SSceneInteractionitem state, bool jumpToEnd)
 	{
 		if (state.Sequence.Sequence == null)
@@ -2363,7 +2263,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D3AA RID: 119722 RVA: 0x00824D8C File Offset: 0x00822F8C
+	// Token: 0x0601B0A8 RID: 110760 RVA: 0x0084BF9C File Offset: 0x0084A19C
 	private void PlayStateMontage(SSceneInteractionitem state, [Nullable(2)] SSceneInteractionitem lastState)
 	{
 		if (state.AnimMontage.SkeletalMesh == null || state.AnimMontage.Montage == null)
@@ -2419,28 +2319,25 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		animInstance.Montage_Play(state.AnimMontage.Montage, state.AnimMontage.PlayRate * base.CustomTimeDilation, EMontagePlayReturnType.MontageLength, 0f, true);
 	}
 
-	// Token: 0x0601D3AB RID: 119723 RVA: 0x00824F78 File Offset: 0x00823178
+	// Token: 0x0601B0A9 RID: 110761 RVA: 0x0084C188 File Offset: 0x0084A388
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	protected unsafe virtual void ApplyAnimOptimizationParams(bool bUseDistanceMap = true)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ApplyAnimOptimizationParams"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		SceneInteractionActor.__ApplyAnimOptimizationParams_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ApplyAnimOptimizationParams"), SceneInteractionActor.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((SceneInteractionActor.__ApplyAnimOptimizationParams_FunctionParams*)ptr + 15L / (long)sizeof(SceneInteractionActor.__ApplyAnimOptimizationParams_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->bUseDistanceMap = bUseDistanceMap;
+			this.ApplyAnimOptimizationParams_Implementation(bUseDistanceMap);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		SceneInteractionActor.__ApplyAnimOptimizationParams_FunctionParams* ptr = stackalloc SceneInteractionActor.__ApplyAnimOptimizationParams_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(SceneInteractionActor.__ApplyAnimOptimizationParams_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->bUseDistanceMap = bUseDistanceMap;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D3AC RID: 119724 RVA: 0x00824FF0 File Offset: 0x008231F0
+	// Token: 0x0601B0AA RID: 110762 RVA: 0x0084C214 File Offset: 0x0084A414
 	protected void ApplyAnimOptimizationParams_Implementation(bool bUseDistanceMap = true)
 	{
 		if (this.AllSkeletalMeshActors == null)
@@ -2498,7 +2395,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D3AD RID: 119725 RVA: 0x008251B4 File Offset: 0x008233B4
+	// Token: 0x0601B0AB RID: 110763 RVA: 0x0084C3D8 File Offset: 0x0084A5D8
 	private void PlayStateEffect(SSceneInteractionitem state)
 	{
 		if (state.Effects == null)
@@ -2522,27 +2419,21 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D3AE RID: 119726 RVA: 0x00825228 File Offset: 0x00823428
+	// Token: 0x0601B0AC RID: 110764 RVA: 0x0084C44C File Offset: 0x0084A64C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	protected unsafe virtual void PendingPlayStateEffect()
+	protected virtual void PendingPlayStateEffect()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("PendingPlayStateEffect"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("PendingPlayStateEffect"), SceneInteractionActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.PendingPlayStateEffect_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D3AF RID: 119727 RVA: 0x00825298 File Offset: 0x00823498
+	// Token: 0x0601B0AD RID: 110765 RVA: 0x0084C4A8 File Offset: 0x0084A6A8
 	protected void PendingPlayStateEffect_Implementation()
 	{
 		if (this.PendingStateEffects.Count == 0)
@@ -2562,27 +2453,21 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D3B0 RID: 119728 RVA: 0x00825300 File Offset: 0x00823500
+	// Token: 0x0601B0AE RID: 110766 RVA: 0x0084C510 File Offset: 0x0084A710
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	protected unsafe virtual void RemovePendingStateEffectTick()
+	protected virtual void RemovePendingStateEffectTick()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("RemovePendingStateEffectTick"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("RemovePendingStateEffectTick"), SceneInteractionActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.RemovePendingStateEffectTick_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D3B1 RID: 119729 RVA: 0x00825370 File Offset: 0x00823570
+	// Token: 0x0601B0AF RID: 110767 RVA: 0x0084C569 File Offset: 0x0084A769
 	protected void RemovePendingStateEffectTick_Implementation()
 	{
 		if (this.PendingStateEffectTickId != -1)
@@ -2592,7 +2477,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D3B2 RID: 119730 RVA: 0x00825394 File Offset: 0x00823594
+	// Token: 0x0601B0B0 RID: 110768 RVA: 0x0084C58C File Offset: 0x0084A78C
 	private void PlayStateMaterialController(SSceneInteractionitem state, bool jumpToEnd)
 	{
 		TArray<SSceneInteractionMaterialController> materialControllers = state.MaterialControllers;
@@ -2647,9 +2532,16 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 					if (ItemMaterialManager.Instance.AllActorControllerInfoMap != null && ItemMaterialManager.Instance.AllActorControllerInfoMap.TryGetValue((int)ssceneInteractionMaterialController.TailIndex, out itemMaterialActorController))
 					{
 						EffectLifeTimeController effectLifeTimeController = (itemMaterialActorController != null) ? itemMaterialActorController.GetLifeTimeController() : null;
-						if (jumpToEnd && effectLifeTimeController != null)
+						if (jumpToEnd)
 						{
-							effectLifeTimeController.JumpToEnd();
+							if (effectLifeTimeController != null)
+							{
+								effectLifeTimeController.JumpToEnd();
+							}
+							if (itemMaterialActorController != null)
+							{
+								itemMaterialActorController.UpdateParameters(true);
+							}
 						}
 					}
 				}
@@ -2657,7 +2549,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D3B3 RID: 119731 RVA: 0x008255A4 File Offset: 0x008237A4
+	// Token: 0x0601B0B1 RID: 110769 RVA: 0x0084C7AC File Offset: 0x0084A9AC
 	private void PlayStateCharMaterialControllerNew(SSceneInteractionitem state)
 	{
 		PD_CharacterControllerDataGroup_C characterDataGroupForOrgan = state.CharacterDataGroupForOrgan;
@@ -2677,7 +2569,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D3B4 RID: 119732 RVA: 0x0082561C File Offset: 0x0082381C
+	// Token: 0x0601B0B2 RID: 110770 RVA: 0x0084C824 File Offset: 0x0084AA24
 	private void PlayTagCharMaterialControllerNew(SSceneInteractionTags interactionTags)
 	{
 		PD_CharacterControllerDataGroup_C characterDataGroupForOrgan = interactionTags.CharacterDataGroupForOrgan;
@@ -2702,7 +2594,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D3B5 RID: 119733 RVA: 0x008256B4 File Offset: 0x008238B4
+	// Token: 0x0601B0B3 RID: 110771 RVA: 0x0084C8BC File Offset: 0x0084AABC
 	private void PlayStateCrossStateEffects(SSceneInteractionitem state)
 	{
 		if (state.CrossStateEffects == null)
@@ -2765,27 +2657,21 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D3B6 RID: 119734 RVA: 0x00825838 File Offset: 0x00823A38
+	// Token: 0x0601B0B4 RID: 110772 RVA: 0x0084CA40 File Offset: 0x0084AC40
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	protected unsafe virtual void PendingPlayCrossStateEffect()
+	protected virtual void PendingPlayCrossStateEffect()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("PendingPlayCrossStateEffect"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("PendingPlayCrossStateEffect"), SceneInteractionActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.PendingPlayCrossStateEffect_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D3B7 RID: 119735 RVA: 0x008258A8 File Offset: 0x00823AA8
+	// Token: 0x0601B0B5 RID: 110773 RVA: 0x0084CA9C File Offset: 0x0084AC9C
 	protected void PendingPlayCrossStateEffect_Implementation()
 	{
 		if (this.PendingCrossStateEffects.Count == 0)
@@ -2812,27 +2698,21 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D3B8 RID: 119736 RVA: 0x0082594C File Offset: 0x00823B4C
+	// Token: 0x0601B0B6 RID: 110774 RVA: 0x0084CB40 File Offset: 0x0084AD40
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	protected unsafe virtual void RemovePendingCrossStateEffectTick()
+	protected virtual void RemovePendingCrossStateEffectTick()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("RemovePendingCrossStateEffectTick"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("RemovePendingCrossStateEffectTick"), SceneInteractionActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.RemovePendingCrossStateEffectTick_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D3B9 RID: 119737 RVA: 0x008259BC File Offset: 0x00823BBC
+	// Token: 0x0601B0B7 RID: 110775 RVA: 0x0084CB99 File Offset: 0x0084AD99
 	protected void RemovePendingCrossStateEffectTick_Implementation()
 	{
 		if (this.PendingCrossStateEffectTickId != -1)
@@ -2842,7 +2722,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D3BA RID: 119738 RVA: 0x008259E0 File Offset: 0x00823BE0
+	// Token: 0x0601B0B8 RID: 110776 RVA: 0x0084CBBC File Offset: 0x0084ADBC
 	private void PlayStateSkeletalMeshDestruction(SSceneInteractionitem state, bool isJumpToEnd)
 	{
 		int num = state.SkeletalMeshDestructible.PlayDestructionAllImmediately.Num();
@@ -2857,7 +2737,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D3BB RID: 119739 RVA: 0x00825A34 File Offset: 0x00823C34
+	// Token: 0x0601B0B9 RID: 110777 RVA: 0x0084CC10 File Offset: 0x0084AE10
 	private void PlayTagSkeletalMeshDestruction(SSceneInteractionTags interactionTags, bool isJumpToEnd)
 	{
 		TArray<AKuroDestructibleActor> skeletalMeshDestructibleActors = interactionTags.SkeletalMeshDestructibleActors;
@@ -2875,7 +2755,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D3BC RID: 119740 RVA: 0x00825A78 File Offset: 0x00823C78
+	// Token: 0x0601B0BA RID: 110778 RVA: 0x0084CC54 File Offset: 0x0084AE54
 	private void PlayTagSequence(SSceneInteractionTags interactionTags, bool jumpToEnd)
 	{
 		SSceneInteractionSequence sequence = interactionTags.Sequence;
@@ -2895,7 +2775,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D3BD RID: 119741 RVA: 0x00825ABC File Offset: 0x00823CBC
+	// Token: 0x0601B0BB RID: 110779 RVA: 0x0084CC98 File Offset: 0x0084AE98
 	private void StopTagSequence(SSceneInteractionTags interactionTags)
 	{
 		SSceneInteractionSequence sequence = interactionTags.Sequence;
@@ -2907,7 +2787,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		this.StopSequence(ulevelSequence);
 	}
 
-	// Token: 0x0601D3BE RID: 119742 RVA: 0x00825AE8 File Offset: 0x00823CE8
+	// Token: 0x0601B0BC RID: 110780 RVA: 0x0084CCC4 File Offset: 0x0084AEC4
 	public void PlayTagEffect(FGameplayTag tag, SSceneInteractionTags interactionTags)
 	{
 		TArray<BP_EffectActor_C> effects = interactionTags.Effects;
@@ -2940,27 +2820,21 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D3BF RID: 119743 RVA: 0x00825B9C File Offset: 0x00823D9C
+	// Token: 0x0601B0BD RID: 110781 RVA: 0x0084CD78 File Offset: 0x0084AF78
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	protected unsafe virtual void PendingPlayTagEffect()
+	protected virtual void PendingPlayTagEffect()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("PendingPlayTagEffect"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("PendingPlayTagEffect"), SceneInteractionActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.PendingPlayTagEffect_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D3C0 RID: 119744 RVA: 0x00825C0C File Offset: 0x00823E0C
+	// Token: 0x0601B0BE RID: 110782 RVA: 0x0084CDD4 File Offset: 0x0084AFD4
 	protected void PendingPlayTagEffect_Implementation()
 	{
 		if (this.PendingTagEffects.Count == 0)
@@ -3002,27 +2876,21 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D3C1 RID: 119745 RVA: 0x00825D3C File Offset: 0x00823F3C
+	// Token: 0x0601B0BF RID: 110783 RVA: 0x0084CF04 File Offset: 0x0084B104
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	protected unsafe virtual void RemovePendingTagEffectTick()
+	protected virtual void RemovePendingTagEffectTick()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("RemovePendingTagEffectTick"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("RemovePendingTagEffectTick"), SceneInteractionActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.RemovePendingTagEffectTick_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D3C2 RID: 119746 RVA: 0x00825DAC File Offset: 0x00823FAC
+	// Token: 0x0601B0C0 RID: 110784 RVA: 0x0084CF5D File Offset: 0x0084B15D
 	protected void RemovePendingTagEffectTick_Implementation()
 	{
 		if (this.PendingTagEffectTickId != -1)
@@ -3032,7 +2900,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D3C3 RID: 119747 RVA: 0x00825DD0 File Offset: 0x00823FD0
+	// Token: 0x0601B0C1 RID: 110785 RVA: 0x0084CF80 File Offset: 0x0084B180
 	[NullableContext(2)]
 	public void StopTagEffect(FGameplayTag tag, SSceneInteractionTags interactionTags)
 	{
@@ -3057,7 +2925,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D3C4 RID: 119748 RVA: 0x00825E5C File Offset: 0x0082405C
+	// Token: 0x0601B0C2 RID: 110786 RVA: 0x0084D00C File Offset: 0x0084B20C
 	public void PlayTagMaterialController(SSceneInteractionTags interactionTags)
 	{
 		TArray<SSceneInteractionMaterialController> materialControllers = interactionTags.MaterialControllers;
@@ -3151,7 +3019,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D3C5 RID: 119749 RVA: 0x0082610C File Offset: 0x0082430C
+	// Token: 0x0601B0C3 RID: 110787 RVA: 0x0084D2BC File Offset: 0x0084B4BC
 	public void StopTagMaterialController(SSceneInteractionTags interactionTags)
 	{
 		TArray<SSceneInteractionMaterialController> materialControllers = interactionTags.MaterialControllers;
@@ -3210,7 +3078,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D3C6 RID: 119750 RVA: 0x00826294 File Offset: 0x00824494
+	// Token: 0x0601B0C4 RID: 110788 RVA: 0x0084D444 File Offset: 0x0084B644
 	private void PostTagAkEvent(FGameplayTag tag, SSceneInteractionTags interactionTags, bool jumpToEnd)
 	{
 		if (this.PlayingTagAkEventHandle == null)
@@ -3235,30 +3103,27 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		this.PostTagEvent(akEvent2.GetName(), tag, akEvent.IsFollow);
 	}
 
-	// Token: 0x0601D3C7 RID: 119751 RVA: 0x0082630C File Offset: 0x0082450C
+	// Token: 0x0601B0C5 RID: 110789 RVA: 0x0084D4BC File Offset: 0x0084B6BC
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	protected unsafe virtual void PostAutoMergeEvent(string eventName, float tagId, bool follow)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("PostAutoMergeEvent"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		SceneInteractionActor.__PostAutoMergeEvent_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("PostAutoMergeEvent"), SceneInteractionActor.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((SceneInteractionActor.__PostAutoMergeEvent_FunctionParams*)ptr + 15L / (long)sizeof(SceneInteractionActor.__PostAutoMergeEvent_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			FString.CopyFrom((void*)(&ptr2->eventName), eventName);
-			ptr2->tagId = tagId;
-			ptr2->follow = follow;
+			this.PostAutoMergeEvent_Implementation(eventName, tagId, follow);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		SceneInteractionActor.__PostAutoMergeEvent_FunctionParams* ptr = stackalloc SceneInteractionActor.__PostAutoMergeEvent_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(SceneInteractionActor.__PostAutoMergeEvent_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		FString.CopyFrom((void*)(&ptr->eventName), eventName);
+		ptr->tagId = tagId;
+		ptr->follow = follow;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D3C8 RID: 119752 RVA: 0x00826398 File Offset: 0x00824598
+	// Token: 0x0601B0C6 RID: 110790 RVA: 0x0084D560 File Offset: 0x0084B760
 	protected void PostAutoMergeEvent_Implementation(string eventName, float tagId, bool follow)
 	{
 		if (this.AkEventPostHandle.ContainsKey((int)tagId))
@@ -3275,30 +3140,27 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D3C9 RID: 119753 RVA: 0x00826434 File Offset: 0x00824634
+	// Token: 0x0601B0C7 RID: 110791 RVA: 0x0084D5FC File Offset: 0x0084B7FC
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	protected unsafe virtual void PostTagEvent(string eventName, FGameplayTag tag, bool follow)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("PostTagEvent"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		SceneInteractionActor.__PostTagEvent_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("PostTagEvent"), SceneInteractionActor.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((SceneInteractionActor.__PostTagEvent_FunctionParams*)ptr + 15L / (long)sizeof(SceneInteractionActor.__PostTagEvent_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			FString.CopyFrom((void*)(&ptr2->eventName), eventName);
-			ptr2->tag = tag;
-			ptr2->follow = follow;
+			this.PostTagEvent_Implementation(eventName, tag, follow);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		SceneInteractionActor.__PostTagEvent_FunctionParams* ptr = stackalloc SceneInteractionActor.__PostTagEvent_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(SceneInteractionActor.__PostTagEvent_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		FString.CopyFrom((void*)(&ptr->eventName), eventName);
+		ptr->tag = tag;
+		ptr->follow = follow;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D3CA RID: 119754 RVA: 0x008264C0 File Offset: 0x008246C0
+	// Token: 0x0601B0C8 RID: 110792 RVA: 0x0084D6A0 File Offset: 0x0084B8A0
 	protected void PostTagEvent_Implementation(string eventName, FGameplayTag tag, bool follow)
 	{
 		if (this.PlayingTagAkEventHandle == null || this.PlayingTagAkEventHandle.ContainsKey(tag))
@@ -3312,28 +3174,25 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D3CB RID: 119755 RVA: 0x00826530 File Offset: 0x00824730
+	// Token: 0x0601B0C9 RID: 110793 RVA: 0x0084D710 File Offset: 0x0084B910
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void StopTagAkEvent(FGameplayTag tag)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("StopTagAkEvent"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		SceneInteractionActor.__StopTagAkEvent_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("StopTagAkEvent"), SceneInteractionActor.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((SceneInteractionActor.__StopTagAkEvent_FunctionParams*)ptr + 15L / (long)sizeof(SceneInteractionActor.__StopTagAkEvent_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->tag = tag;
+			this.StopTagAkEvent_Implementation(tag);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		SceneInteractionActor.__StopTagAkEvent_FunctionParams* ptr = stackalloc SceneInteractionActor.__StopTagAkEvent_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(SceneInteractionActor.__StopTagAkEvent_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->tag = tag;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D3CC RID: 119756 RVA: 0x008265A8 File Offset: 0x008247A8
+	// Token: 0x0601B0CA RID: 110794 RVA: 0x0084D79C File Offset: 0x0084B99C
 	protected void StopTagAkEvent_Implementation(FGameplayTag tag)
 	{
 		SSceneInteractionTags interactionTags;
@@ -3343,7 +3202,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D3CD RID: 119757 RVA: 0x008265D0 File Offset: 0x008247D0
+	// Token: 0x0601B0CB RID: 110795 RVA: 0x0084D7C4 File Offset: 0x0084B9C4
 	private void StopTagAkEventNoBlueprint(FGameplayTag tag, SSceneInteractionTags interactionTags)
 	{
 		if (this.PlayingTagAkEventHandle == null)
@@ -3379,7 +3238,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D3CE RID: 119758 RVA: 0x0082666C File Offset: 0x0082486C
+	// Token: 0x0601B0CC RID: 110796 RVA: 0x0084D860 File Offset: 0x0084BA60
 	private void PlayStateBasedEffect(SSceneInteractionitem state, EKuroSceneInteractionState targetState)
 	{
 		TArray<SStateBasedEffect> stateBasedEffect = state.StateBasedEffect;
@@ -3412,7 +3271,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D3CF RID: 119759 RVA: 0x008266E8 File Offset: 0x008248E8
+	// Token: 0x0601B0CD RID: 110797 RVA: 0x0084D8DC File Offset: 0x0084BADC
 	private void PostStateAkEvent(SSceneInteractionitem state, bool jumpToEnd)
 	{
 		SSceneInteractionAudio akEvent = state.AkEvent;
@@ -3431,7 +3290,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		{
 			num = EffectAudioController.Instance.AddPlayEffectAudio(akEvent2.GetName(), akEvent.IsFollow ? this : base.D_GetTransform(), null, null, delegate
 			{
-				this.CurrentStateAkEventHandle = 0;
+				this.CurrentStateAkEventHandle = 0f;
 			}, new bool?(!akEvent.IsFollow));
 		}
 		else
@@ -3442,11 +3301,11 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		if (num != 0)
 		{
 			this.MergeCurrentStateAkEvent = akEvent.AutoMerge;
-			this.CurrentStateAkEventHandle = num;
+			this.CurrentStateAkEventHandle = (float)num;
 		}
 	}
 
-	// Token: 0x0601D3D0 RID: 119760 RVA: 0x008267EC File Offset: 0x008249EC
+	// Token: 0x0601B0CE RID: 110798 RVA: 0x0084D9E0 File Offset: 0x0084BBE0
 	private void SetStateActorHide(SSceneInteractionitem state)
 	{
 		TArray<AActor> hideActors = state.HideActors;
@@ -3474,7 +3333,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D3D1 RID: 119761 RVA: 0x008268A8 File Offset: 0x00824AA8
+	// Token: 0x0601B0CF RID: 110799 RVA: 0x0084DA9C File Offset: 0x0084BC9C
 	private void SetStateActorShow(SSceneInteractionitem state)
 	{
 		TArray<AActor> actors = state.Actors;
@@ -3496,7 +3355,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D3D2 RID: 119762 RVA: 0x008268EC File Offset: 0x00824AEC
+	// Token: 0x0601B0D0 RID: 110800 RVA: 0x0084DAE0 File Offset: 0x0084BCE0
 	private void SetStateActorCollisionProfile(SSceneInteractionitem state, [Nullable(2)] SSceneInteractionitem lastState)
 	{
 		if (lastState != null)
@@ -3508,7 +3367,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		this.SetActorCollisionProfile(enterStateActorCollisionProfile);
 	}
 
-	// Token: 0x0601D3D3 RID: 119763 RVA: 0x00826920 File Offset: 0x00824B20
+	// Token: 0x0601B0D1 RID: 110801 RVA: 0x0084DB14 File Offset: 0x0084BD14
 	[NullableContext(2)]
 	public void MakeActorProjection(FTransformDouble transform, ItemMaterialControllerActorData data = null)
 	{
@@ -3575,28 +3434,25 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		this.ProjectionRootActor.D_K2_SetActorTransform(transform, false, null, false);
 	}
 
-	// Token: 0x0601D3D4 RID: 119764 RVA: 0x00826B28 File Offset: 0x00824D28
+	// Token: 0x0601B0D2 RID: 110802 RVA: 0x0084DD1C File Offset: 0x0084BF1C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void UpdateProjectionActorTransform(FTransformDouble transform)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("UpdateProjectionActorTransform"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		SceneInteractionActor.__UpdateProjectionActorTransform_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("UpdateProjectionActorTransform"), SceneInteractionActor.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((SceneInteractionActor.__UpdateProjectionActorTransform_FunctionParams*)ptr + 15L / (long)sizeof(SceneInteractionActor.__UpdateProjectionActorTransform_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->transform = transform;
+			this.UpdateProjectionActorTransform_Implementation(transform);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		SceneInteractionActor.__UpdateProjectionActorTransform_FunctionParams* ptr = stackalloc SceneInteractionActor.__UpdateProjectionActorTransform_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(SceneInteractionActor.__UpdateProjectionActorTransform_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->transform = transform;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D3D5 RID: 119765 RVA: 0x00826BA0 File Offset: 0x00824DA0
+	// Token: 0x0601B0D3 RID: 110803 RVA: 0x0084DDA8 File Offset: 0x0084BFA8
 	protected void UpdateProjectionActorTransform_Implementation(FTransformDouble transform)
 	{
 		if (!this.IsProjecting)
@@ -3613,29 +3469,26 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		this.ProjectionRootActor.D_K2_SetActorTransform(transform, false, null, false);
 	}
 
-	// Token: 0x0601D3D6 RID: 119766 RVA: 0x00826C04 File Offset: 0x00824E04
+	// Token: 0x0601B0D4 RID: 110804 RVA: 0x0084DE0C File Offset: 0x0084C00C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	protected unsafe virtual void AddMatrialDataForChildrenActor(AActor actor, ItemMaterialControllerActorData materialData)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("AddMatrialDataForChildrenActor"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		SceneInteractionActor.__AddMatrialDataForChildrenActor_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("AddMatrialDataForChildrenActor"), SceneInteractionActor.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((SceneInteractionActor.__AddMatrialDataForChildrenActor_FunctionParams*)ptr + 15L / (long)sizeof(SceneInteractionActor.__AddMatrialDataForChildrenActor_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->actor) = ((actor != null) ? actor.NativePtr : ((IntPtr)0));
-			*(&ptr2->materialData) = ((materialData != null) ? materialData.NativePtr : ((IntPtr)0));
+			this.AddMatrialDataForChildrenActor_Implementation(actor, materialData);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		SceneInteractionActor.__AddMatrialDataForChildrenActor_FunctionParams* ptr = stackalloc SceneInteractionActor.__AddMatrialDataForChildrenActor_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(SceneInteractionActor.__AddMatrialDataForChildrenActor_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->actor) = ((actor != null) ? actor.NativePtr : ((IntPtr)0));
+		*(&ptr->materialData) = ((materialData != null) ? materialData.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D3D7 RID: 119767 RVA: 0x00826CA0 File Offset: 0x00824EA0
+	// Token: 0x0601B0D5 RID: 110805 RVA: 0x0084DEBC File Offset: 0x0084C0BC
 	protected void AddMatrialDataForChildrenActor_Implementation(AActor actor, ItemMaterialControllerActorData materialData)
 	{
 		if (!actor.IsValid())
@@ -3655,27 +3508,21 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		ItemMaterialManager.Instance.AddMaterialData(actor, materialData);
 	}
 
-	// Token: 0x0601D3D8 RID: 119768 RVA: 0x00826D00 File Offset: 0x00824F00
+	// Token: 0x0601B0D6 RID: 110806 RVA: 0x0084DF1C File Offset: 0x0084C11C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void RemoveActorProjection()
+	public virtual void RemoveActorProjection()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("RemoveActorProjection"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("RemoveActorProjection"), SceneInteractionActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.RemoveActorProjection_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D3D9 RID: 119769 RVA: 0x00826D70 File Offset: 0x00824F70
+	// Token: 0x0601B0D7 RID: 110807 RVA: 0x0084DF78 File Offset: 0x0084C178
 	protected void RemoveActorProjection_Implementation()
 	{
 		if (!this.IsProjecting)
@@ -3692,7 +3539,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		this.DestroyActor(this.ProjectionRootActor);
 	}
 
-	// Token: 0x0601D3DA RID: 119770 RVA: 0x00826DD0 File Offset: 0x00824FD0
+	// Token: 0x0601B0D8 RID: 110808 RVA: 0x0084DFD8 File Offset: 0x0084C1D8
 	private void DestroyActor(AActor actor)
 	{
 		TArray<AActor> tarray = new TArray<AActor>();
@@ -3710,34 +3557,28 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		actor.K2_DestroyActor();
 	}
 
-	// Token: 0x0601D3DB RID: 119771 RVA: 0x00826E28 File Offset: 0x00825028
+	// Token: 0x0601B0D9 RID: 110809 RVA: 0x0084E030 File Offset: 0x0084C230
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void DestroySelf()
+	public virtual void DestroySelf()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("DestroySelf"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("DestroySelf"), SceneInteractionActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.DestroySelf_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D3DC RID: 119772 RVA: 0x00826E98 File Offset: 0x00825098
+	// Token: 0x0601B0DA RID: 110810 RVA: 0x0084E089 File Offset: 0x0084C289
 	protected void DestroySelf_Implementation()
 	{
 		this.SkeletalMeshDestructibleActorsInternal = null;
 		this.DestroyActor(this);
 	}
 
-	// Token: 0x0601D3DD RID: 119773 RVA: 0x00826EA8 File Offset: 0x008250A8
+	// Token: 0x0601B0DB RID: 110811 RVA: 0x0084E09C File Offset: 0x0084C29C
 	public void SetTagActorHide(SSceneInteractionTags interactionTags)
 	{
 		TArray<AActor> hideActors = interactionTags.HideActors;
@@ -3778,28 +3619,25 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D3DE RID: 119774 RVA: 0x00826F98 File Offset: 0x00825198
+	// Token: 0x0601B0DC RID: 110812 RVA: 0x0084E18C File Offset: 0x0084C38C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void ResetTagActorHide(FGameplayTag tag)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ResetTagActorHide"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		SceneInteractionActor.__ResetTagActorHide_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ResetTagActorHide"), SceneInteractionActor.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((SceneInteractionActor.__ResetTagActorHide_FunctionParams*)ptr + 15L / (long)sizeof(SceneInteractionActor.__ResetTagActorHide_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->tag = tag;
+			this.ResetTagActorHide_Implementation(tag);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		SceneInteractionActor.__ResetTagActorHide_FunctionParams* ptr = stackalloc SceneInteractionActor.__ResetTagActorHide_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(SceneInteractionActor.__ResetTagActorHide_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->tag = tag;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D3DF RID: 119775 RVA: 0x00827010 File Offset: 0x00825210
+	// Token: 0x0601B0DD RID: 110813 RVA: 0x0084E218 File Offset: 0x0084C418
 	protected void ResetTagActorHide_Implementation(FGameplayTag tag)
 	{
 		SSceneInteractionTags interactionTags;
@@ -3809,7 +3647,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D3E0 RID: 119776 RVA: 0x0082703C File Offset: 0x0082523C
+	// Token: 0x0601B0DE RID: 110814 RVA: 0x0084E244 File Offset: 0x0084C444
 	private void ResetTagActorHideNoBlueprint(SSceneInteractionTags interactionTags)
 	{
 		TArray<AActor> hideActors = interactionTags.HideActors;
@@ -3831,7 +3669,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D3E1 RID: 119777 RVA: 0x00827080 File Offset: 0x00825280
+	// Token: 0x0601B0DF RID: 110815 RVA: 0x0084E288 File Offset: 0x0084C488
 	public void SetTagActorShow(SSceneInteractionTags interactionTags)
 	{
 		TArray<AActor> actors = interactionTags.Actors;
@@ -3853,7 +3691,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D3E2 RID: 119778 RVA: 0x008270C4 File Offset: 0x008252C4
+	// Token: 0x0601B0E0 RID: 110816 RVA: 0x0084E2CC File Offset: 0x0084C4CC
 	public void ResetTagActorShow(SSceneInteractionTags interactionTags)
 	{
 		TArray<AActor> actors = interactionTags.Actors;
@@ -3875,7 +3713,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D3E3 RID: 119779 RVA: 0x00827108 File Offset: 0x00825308
+	// Token: 0x0601B0E1 RID: 110817 RVA: 0x0084E310 File Offset: 0x0084C510
 	public void SetTagStaticMehActorCollisionProfile(SSceneInteractionTags interactionTags)
 	{
 		TMap<AActor, FCollisionProfileName> addTagActorCollisionProfile = interactionTags.AddTagActorCollisionProfile;
@@ -3885,7 +3723,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D3E4 RID: 119780 RVA: 0x00827128 File Offset: 0x00825328
+	// Token: 0x0601B0E2 RID: 110818 RVA: 0x0084E330 File Offset: 0x0084C530
 	public void ResetTagStaticMehActorCollisionProfile(SSceneInteractionTags interactionTags)
 	{
 		TMap<AActor, FCollisionProfileName> removeTagActorCollisionProfile = interactionTags.RemoveTagActorCollisionProfile;
@@ -3895,7 +3733,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D3E5 RID: 119781 RVA: 0x00827148 File Offset: 0x00825348
+	// Token: 0x0601B0E3 RID: 110819 RVA: 0x0084E350 File Offset: 0x0084C550
 	private void EmitStateReached(EKuroSceneInteractionState? stateKey)
 	{
 		if (stateKey == null)
@@ -3921,190 +3759,231 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		EventSystem.Instance.EmitWithTarget<int, EKuroSceneInteractionState>(entityHandle.Entity, EEventName.OnSceneInteractionStateReached, this.HandleId, stateKey.Value);
 	}
 
-	// Token: 0x0601D3E6 RID: 119782 RVA: 0x008271D0 File Offset: 0x008253D0
+	// Token: 0x0601B0E4 RID: 110820 RVA: 0x0084E3D8 File Offset: 0x0084C5D8
 	private void DoSwitchState(bool bWaitForCurrentFinished)
 	{
-		if (bWaitForCurrentFinished)
+		if (this.InDoSwitchState)
 		{
-			bool flag = false;
-			ULevelSequencePlayer activeSequencePlayer = this.ActiveSequencePlayer;
-			ULevelSequence ulevelSequence = ((activeSequencePlayer != null) ? activeSequencePlayer.Sequence : null) as ULevelSequence;
-			if (activeSequencePlayer != null && ulevelSequence != null && activeSequencePlayer.IsPlaying())
+			return;
+		}
+		EKuroSceneInteractionState? stateKey = null;
+		bool flag = false;
+		this.InDoSwitchState = true;
+		try
+		{
+			if (this.NextState == null)
 			{
-				if (activeSequencePlayer.IsReversed())
+				LinkedListNode<SceneInteractionActor.PendingState> first = this.PendingStates.First;
+				SceneInteractionActor.PendingState pendingState = (first != null) ? first.Value : null;
+				if (pendingState == null)
 				{
-					activeSequencePlayer.PlayReverseLooping(0);
+					return;
 				}
-				else
+				this.PendingStates.RemoveFirst();
+				EKuroSceneInteractionState targetState = pendingState.TargetState;
+				EKuroSceneInteractionState? currentStateKey = this.CurrentStateKey;
+				if (targetState == currentStateKey.GetValueOrDefault() & currentStateKey != null)
 				{
-					activeSequencePlayer.PlayLooping(0);
+					return;
 				}
-				flag = true;
+				this.NextState = pendingState;
 			}
-			if (this.CurrentState != null)
+			SceneInteractionActor.PendingState nextState = this.NextState;
+			SSceneInteractionitem valueOrDefault = this.States.GetValueOrDefault(nextState.TargetState);
+			this.TransitionStateJumpToEnd = (nextState.JumpToEnd && !valueOrDefault.NeedExpressionAnyway);
+			if (bWaitForCurrentFinished)
 			{
-				ASkeletalMeshActor skeletalMesh = this.CurrentState.AnimMontage.SkeletalMesh;
-				USkeletalMeshComponent uskeletalMeshComponent = (skeletalMesh != null) ? skeletalMesh.SkeletalMeshComponent : null;
-				if (uskeletalMeshComponent != null)
+				bool flag2 = false;
+				ULevelSequencePlayer activeSequencePlayer = this.ActiveSequencePlayer;
+				ULevelSequence ulevelSequence = ((activeSequencePlayer != null) ? activeSequencePlayer.Sequence : null) as ULevelSequence;
+				if (activeSequencePlayer != null && ulevelSequence != null && activeSequencePlayer.IsPlaying())
 				{
-					UAnimInstance animInstance = uskeletalMeshComponent.GetAnimInstance();
-					UAnimMontage montage = this.CurrentState.AnimMontage.Montage;
-					if (montage != null && animInstance != null && animInstance.Montage_IsPlaying(montage))
+					if (activeSequencePlayer.IsReversed())
 					{
-						UAnimSingleNodeInstance uanimSingleNodeInstance = animInstance as UAnimSingleNodeInstance;
-						if (uanimSingleNodeInstance != null)
+						activeSequencePlayer.PlayReverseLooping(0);
+					}
+					else
+					{
+						activeSequencePlayer.PlayLooping(0);
+					}
+					flag2 = true;
+				}
+				if (this.CurrentState != null)
+				{
+					ASkeletalMeshActor skeletalMesh = this.CurrentState.AnimMontage.SkeletalMesh;
+					USkeletalMeshComponent uskeletalMeshComponent = (skeletalMesh != null) ? skeletalMesh.SkeletalMeshComponent : null;
+					if (uskeletalMeshComponent != null)
+					{
+						UAnimInstance animInstance = uskeletalMeshComponent.GetAnimInstance();
+						UAnimMontage montage = this.CurrentState.AnimMontage.Montage;
+						if (montage != null && animInstance != null && animInstance.Montage_IsPlaying(montage))
 						{
-							uanimSingleNodeInstance.SetLooping(false);
-							flag = true;
-							goto IL_C8;
+							UAnimSingleNodeInstance uanimSingleNodeInstance = animInstance as UAnimSingleNodeInstance;
+							if (uanimSingleNodeInstance != null)
+							{
+								uanimSingleNodeInstance.SetLooping(false);
+								flag2 = true;
+								goto IL_18A;
+							}
+						}
+						if (animInstance is ABP_LevelPrefabDaiyu_C)
+						{
+							flag2 = true;
 						}
 					}
-					if (animInstance is ABP_LevelPrefabDaiyu_C)
-					{
-						flag = true;
-					}
+				}
+				IL_18A:
+				if (flag2)
+				{
+					this.InWaitingForPlayableFinished = true;
+					return;
 				}
 			}
-			IL_C8:
-			if (flag)
+			this.InWaitingForPlayableFinished = false;
+			EKuroSceneInteractionState ekuroSceneInteractionState = nextState.TargetState;
+			EKuroSceneInteractionState ekuroSceneInteractionState2;
+			if (nextState.NeedTransition && !this.InTransition && this.CurrentState != null && this.CurrentState.TransitionMap.TryGetValue(nextState.TargetState, out ekuroSceneInteractionState2) && this.States.GetValueOrDefault(ekuroSceneInteractionState2) != null)
 			{
-				this.InWaitingForPlayableFinished = true;
+				ekuroSceneInteractionState = ekuroSceneInteractionState2;
+			}
+			SSceneInteractionitem valueOrDefault2 = this.States.GetValueOrDefault(ekuroSceneInteractionState);
+			bool flag3 = ekuroSceneInteractionState != nextState.TargetState;
+			if (this.CurrentState != null)
+			{
+				this.StopState(this.CurrentState, valueOrDefault2);
+				if (this.NextState != nextState)
+				{
+					flag = (this.NextState != null);
+					return;
+				}
+			}
+			this.CurrentStateKey = new EKuroSceneInteractionState?(ekuroSceneInteractionState);
+			this.PlayState(valueOrDefault2, this.CurrentState, this.TransitionStateJumpToEnd, ekuroSceneInteractionState);
+			if (this.NextState != nextState)
+			{
+				flag = (this.NextState != null);
 				return;
 			}
-		}
-		this.InWaitingForPlayableFinished = false;
-		if (this.TransitionState != null)
-		{
-			this.InTransition = true;
-			if (this.CurrentState != null)
+			this.InTransition = flag3;
+			this.SwitchingStateRemainTime = (flag3 ? valueOrDefault2.TransitionTime : 0f);
+			this.IsUseTransitionTime = (flag3 && !this.CheckActivePlayable());
+			if (!flag3)
 			{
-				this.StopState(this.CurrentState, this.TransitionState);
+				this.NextState = null;
 			}
-			this.CurrentStateKey = this.TransitionStateKey;
-			this.PlayState(this.TransitionState, this.CurrentState, this.TransitionStateJumpToEnd, this.TransitionStateKey.Value);
-			this.SwitchingStateRemainTime = this.TransitionState.TransitionTime;
-			this.IsUseTransitionTime = !this.CheckActivePlayable();
-			this.TransitionState = null;
-			this.TransitionStateKey = null;
-			this.EmitStateReached(this.CurrentStateKey);
+			stateKey = new EKuroSceneInteractionState?(ekuroSceneInteractionState);
+		}
+		finally
+		{
+			this.InDoSwitchState = false;
+		}
+		if (flag)
+		{
+			SSceneInteractionitem currentState = this.CurrentState;
+			this.DoSwitchState(currentState != null && currentState.WaitForPlayableFinished);
 			return;
 		}
-		if (this.NextState != null)
+		if (stateKey != null)
 		{
-			this.SwitchingStateRemainTime = 0f;
-			this.InTransition = false;
-			if (this.CurrentState != null)
-			{
-				this.StopState(this.CurrentState, this.NextState);
-			}
-			this.CurrentStateKey = this.NextStateKey;
-			this.PlayState(this.NextState, this.CurrentState, this.TransitionStateJumpToEnd, this.NextStateKey.Value);
-			this.NextState = null;
-			this.NextStateKey = null;
-			this.EmitStateReached(this.CurrentStateKey);
-			return;
+			this.EmitStateReached(stateKey);
 		}
-		this.TransitionState = null;
-		this.TransitionStateKey = null;
-		this.NextState = null;
-		this.NextStateKey = null;
-		this.InTransition = false;
-		this.SwitchingStateRemainTime = 0f;
-		Log.Instance.Error(ELogModule.Level, ELogAuthor.LWH, "Nothing to Switch, should not happened!", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x0601D3E7 RID: 119783 RVA: 0x00827448 File Offset: 0x00825648
-	private void DetermineState(SSceneInteractionitem targetState, EKuroSceneInteractionState targetStateKey, bool needTransition, bool jumpToEnd)
-	{
-		this.NextState = targetState;
-		this.NextStateKey = new EKuroSceneInteractionState?(targetStateKey);
-		bool transitionStateJumpToEnd = jumpToEnd && !targetState.NeedExpressionAnyway;
-		EKuroSceneInteractionState ekuroSceneInteractionState;
-		SSceneInteractionitem transitionState;
-		if (needTransition && this.CurrentState != null && this.CurrentState.TransitionMap.TryGetValue(targetStateKey, out ekuroSceneInteractionState) && this.States.TryGetValue(ekuroSceneInteractionState, out transitionState))
-		{
-			this.TransitionState = transitionState;
-			this.TransitionStateKey = new EKuroSceneInteractionState?(ekuroSceneInteractionState);
-			this.TransitionStateJumpToEnd = transitionStateJumpToEnd;
-			return;
-		}
-		this.TransitionStateJumpToEnd = transitionStateJumpToEnd;
-		this.TransitionState = null;
-		this.TransitionStateKey = null;
-	}
-
-	// Token: 0x0601D3E8 RID: 119784 RVA: 0x008274E4 File Offset: 0x008256E4
+	// Token: 0x0601B0E5 RID: 110821 RVA: 0x0084E704 File Offset: 0x0084C904
 	public unsafe void SetState(EKuroSceneInteractionState state, bool needTransition, bool jumpToEnd)
 	{
-		if (this.States == null)
+		if (this.MaxPendingStateCount == 0)
 		{
 			Log instance = Log.Instance;
 			ELogModule module = ELogModule.RenderScene;
 			ELogAuthor author = ELogAuthor.ZYL;
-			string message = "状态为Undefined";
+			string message = "场景交互物目标状态队列容量配置不合法";
 			<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
 			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("Actor", this.LevelName);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("HandleID", this.HandleId);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("MaxPendingStateCount", this.MaxPendingStateCount);
 			instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
+			return;
+		}
+		if (this.States == null)
+		{
+			Log instance2 = Log.Instance;
+			ELogModule module2 = ELogModule.RenderScene;
+			ELogAuthor author2 = ELogAuthor.ZYL;
+			string message2 = "状态为Undefined";
+			<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray2 = default(<>y__InlineArray2<ValueTuple<string, object>>);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 0) = new ValueTuple<string, object>("Actor", this.LevelName);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 1) = new ValueTuple<string, object>("HandleID", this.HandleId);
+			instance2.Error(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 2));
 		}
 		SSceneInteractionitem valueOrDefault = this.States.GetValueOrDefault(state);
 		if (valueOrDefault == null)
 		{
 			if (state != EKuroSceneInteractionState.ConcealedState)
 			{
-				Log instance2 = Log.Instance;
-				ELogModule module2 = ELogModule.RenderScene;
-				ELogAuthor author2 = ELogAuthor.MY;
-				string message2 = "状态未配置";
-				<>y__InlineArray3<ValueTuple<string, object>> <>y__InlineArray2 = default(<>y__InlineArray3<ValueTuple<string, object>>);
-				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 0) = new ValueTuple<string, object>("未配置状态", state + 1);
-				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 1) = new ValueTuple<string, object>("Actor", this.LevelName);
-				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 2) = new ValueTuple<string, object>("HandleID", this.HandleId);
-				instance2.Warn(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 3));
+				Log instance3 = Log.Instance;
+				ELogModule module3 = ELogModule.RenderScene;
+				ELogAuthor author3 = ELogAuthor.MY;
+				string message3 = "状态未配置";
+				<>y__InlineArray3<ValueTuple<string, object>> <>y__InlineArray3 = default(<>y__InlineArray3<ValueTuple<string, object>>);
+				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 0) = new ValueTuple<string, object>("未配置状态", state + 1);
+				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 1) = new ValueTuple<string, object>("Actor", this.LevelName);
+				*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 2) = new ValueTuple<string, object>("HandleID", this.HandleId);
+				instance3.Warn(module3, author3, message3, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray3, 3));
 			}
 			return;
 		}
-		if (this.InTransition && !valueOrDefault.IsForceSetState)
+		int num = this.PendingStates.Count + ((this.NextState != null) ? 1 : 0);
+		SSceneInteractionitem currentState = this.CurrentState;
+		bool flag = currentState != null && currentState.WaitForPlayableFinished && this.InWaitingForPlayableFinished;
+		EKuroSceneInteractionState? currentStateKey = this.CurrentStateKey;
+		if ((state == currentStateKey.GetValueOrDefault() & currentStateKey != null) && (num == 0 || valueOrDefault.IsForceSetState))
 		{
-			Log instance3 = Log.Instance;
-			ELogModule module3 = ELogModule.RenderScene;
-			ELogAuthor author3 = ELogAuthor.MY;
-			string message3 = "正在过渡状态, 不可设置其他状态";
-			<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray3 = default(<>y__InlineArray2<ValueTuple<string, object>>);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 0) = new ValueTuple<string, object>("Actor", this.LevelName);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray3, 1) = new ValueTuple<string, object>("HandleID", this.HandleId);
-			instance3.Warn(module3, author3, message3, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray3, 2));
 			return;
 		}
-		if (this.NextState != null && !valueOrDefault.IsForceSetState)
+		if (valueOrDefault.IsForceSetState)
 		{
+			if (flag)
+			{
+				return;
+			}
+			this.PendingStates.Clear();
+			this.InTransition = false;
+			this.NextState = new SceneInteractionActor.PendingState(state, needTransition, jumpToEnd);
+			SSceneInteractionitem currentState2 = this.CurrentState;
+			this.DoSwitchState(currentState2 != null && currentState2.WaitForPlayableFinished);
+			return;
+		}
+		else if (this.MaxPendingStateCount > 0 && num >= this.MaxPendingStateCount)
+		{
+			if (flag)
+			{
+				return;
+			}
 			Log instance4 = Log.Instance;
 			ELogModule module4 = ELogModule.RenderScene;
 			ELogAuthor author4 = ELogAuthor.MY;
-			string message4 = "正在过渡状态, 不可设置其他状态";
-			<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray4 = default(<>y__InlineArray2<ValueTuple<string, object>>);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray4, 0) = new ValueTuple<string, object>("Actor", this.LevelName);
-			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray4, 1) = new ValueTuple<string, object>("HandleID", this.HandleId);
-			instance4.Warn(module4, author4, message4, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray4, 2));
+			string message4 = "场景交互物目标状态队列已满，丢弃新目标";
+			<>y__InlineArray3<ValueTuple<string, object>> <>y__InlineArray4 = default(<>y__InlineArray3<ValueTuple<string, object>>);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray4, 0) = new ValueTuple<string, object>("Actor", this.LevelName);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray4, 1) = new ValueTuple<string, object>("HandleID", this.HandleId);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray4, 2) = new ValueTuple<string, object>("MaxPendingStateCount", this.MaxPendingStateCount);
+			instance4.Warn(module4, author4, message4, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray4, 3));
 			return;
 		}
-		EKuroSceneInteractionState? currentStateKey = this.CurrentStateKey;
-		if (state == currentStateKey.GetValueOrDefault() & currentStateKey != null)
+		else
 		{
+			this.PendingStates.AddLast(new SceneInteractionActor.PendingState(state, needTransition, jumpToEnd));
+			if (this.NextState != null || this.PendingStates.Count > 1)
+			{
+				return;
+			}
+			SSceneInteractionitem currentState3 = this.CurrentState;
+			this.DoSwitchState(currentState3 != null && currentState3.WaitForPlayableFinished);
 			return;
 		}
-		SSceneInteractionitem currentState = this.CurrentState;
-		if (currentState != null && currentState.WaitForPlayableFinished && this.InWaitingForPlayableFinished)
-		{
-			return;
-		}
-		this.DetermineState(valueOrDefault, state, needTransition, jumpToEnd);
-		SSceneInteractionitem currentState2 = this.CurrentState;
-		bool bWaitForCurrentFinished = currentState2 != null && currentState2.WaitForPlayableFinished;
-		this.DoSwitchState(bWaitForCurrentFinished);
 	}
 
-	// Token: 0x0601D3E9 RID: 119785 RVA: 0x0082774C File Offset: 0x0082594C
+	// Token: 0x0601B0E6 RID: 110822 RVA: 0x0084EA10 File Offset: 0x0084CC10
 	public void StopState(SSceneInteractionitem stateToStop, [Nullable(2)] SSceneInteractionitem stateToPlay)
 	{
 		if (stateToStop == null)
@@ -4196,27 +4075,27 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		this.StopCurrentStateAkEvent("停止状态Ak事件");
 	}
 
-	// Token: 0x0601D3EA RID: 119786 RVA: 0x00827A44 File Offset: 0x00825C44
+	// Token: 0x0601B0E7 RID: 110823 RVA: 0x0084ED08 File Offset: 0x0084CF08
 	public void StopCurrentStateAkEvent(string context)
 	{
-		int currentStateAkEventHandle = this.CurrentStateAkEventHandle;
+		float currentStateAkEventHandle = this.CurrentStateAkEventHandle;
 		if (this.MergeCurrentStateAkEvent)
 		{
-			EffectAudioController.Instance.OnStopEffectAudio(this.CurrentStateAkEventHandle, "SceneInteractionActor." + context, false);
-			this.CurrentStateAkEventHandle = 0;
+			EffectAudioController.Instance.OnStopEffectAudio((int)this.CurrentStateAkEventHandle, "SceneInteractionActor." + context, false);
+			this.CurrentStateAkEventHandle = 0f;
 			return;
 		}
-		AudioSystem.Instance.ExecuteAction(this.CurrentStateAkEventHandle, EAudioActionType.Stop, null);
-		this.CurrentStateAkEventHandle = 0;
+		AudioSystem.Instance.ExecuteAction((int)this.CurrentStateAkEventHandle, EAudioActionType.Stop, null);
+		this.CurrentStateAkEventHandle = 0f;
 	}
 
-	// Token: 0x0601D3EB RID: 119787 RVA: 0x00827AA5 File Offset: 0x00825CA5
+	// Token: 0x0601B0E8 RID: 110824 RVA: 0x0084ED73 File Offset: 0x0084CF73
 	public void OnAnimPlayEnd(string animName)
 	{
 		this.IsAbpAnimPlayEnd = true;
 	}
 
-	// Token: 0x0601D3EC RID: 119788 RVA: 0x00827AB0 File Offset: 0x00825CB0
+	// Token: 0x0601B0E9 RID: 110825 RVA: 0x0084ED7C File Offset: 0x0084CF7C
 	private bool CheckActivePlayable()
 	{
 		bool flag = false;
@@ -4250,7 +4129,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		return flag;
 	}
 
-	// Token: 0x0601D3ED RID: 119789 RVA: 0x00827B50 File Offset: 0x00825D50
+	// Token: 0x0601B0EA RID: 110826 RVA: 0x0084EE1C File Offset: 0x0084D01C
 	private bool CheckPlaying(float deltaSeconds, SSceneInteractionitem state)
 	{
 		if (this.CheckActivePlayable())
@@ -4265,7 +4144,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		return this.SwitchingStateRemainTime >= 0f;
 	}
 
-	// Token: 0x0601D3EE RID: 119790 RVA: 0x00827B9C File Offset: 0x00825D9C
+	// Token: 0x0601B0EB RID: 110827 RVA: 0x0084EE68 File Offset: 0x0084D068
 	private UKuroSceneInteractionActorSystem GetKuroSceneInteractionActorSystem()
 	{
 		if (this.KuroSceneInteractionActorSystem == null)
@@ -4275,31 +4154,27 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		return this.KuroSceneInteractionActorSystem;
 	}
 
-	// Token: 0x0601D3EF RID: 119791 RVA: 0x00827BCC File Offset: 0x00825DCC
+	// Token: 0x0601B0EC RID: 110828 RVA: 0x0084EE98 File Offset: 0x0084D098
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	[return: Nullable(2)]
 	protected unsafe virtual ALevelSequenceActor GetDirectorBySequence(ULevelSequence sequence)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetDirectorBySequence"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		SceneInteractionActor.__GetDirectorBySequence_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetDirectorBySequence"), SceneInteractionActor.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((SceneInteractionActor.__GetDirectorBySequence_FunctionParams*)ptr + 15L / (long)sizeof(SceneInteractionActor.__GetDirectorBySequence_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->sequence) = ((sequence != null) ? sequence.NativePtr : ((IntPtr)0));
+			return this.GetDirectorBySequence_Implementation(sequence);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		ALevelSequenceActor orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<ALevelSequenceActor>(ptr2->__Result);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		SceneInteractionActor.__GetDirectorBySequence_FunctionParams* ptr = stackalloc SceneInteractionActor.__GetDirectorBySequence_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(SceneInteractionActor.__GetDirectorBySequence_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->sequence) = ((sequence != null) ? sequence.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		ALevelSequenceActor orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<ALevelSequenceActor>(ptr->__Result);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return orCreateUObjectByNativePointer;
 	}
 
-	// Token: 0x0601D3F0 RID: 119792 RVA: 0x00827C5C File Offset: 0x00825E5C
+	// Token: 0x0601B0ED RID: 110829 RVA: 0x0084EF40 File Offset: 0x0084D140
 	[return: Nullable(2)]
 	protected ALevelSequenceActor GetDirectorBySequence_Implementation(ULevelSequence sequence)
 	{
@@ -4311,7 +4186,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		return null;
 	}
 
-	// Token: 0x0601D3F1 RID: 119793 RVA: 0x00827C84 File Offset: 0x00825E84
+	// Token: 0x0601B0EE RID: 110830 RVA: 0x0084EF68 File Offset: 0x0084D168
 	[return: Nullable(2)]
 	private unsafe ALevelSequenceActor CreateDirectorBySequence(ULevelSequence sequence)
 	{
@@ -4417,7 +4292,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		return newDirector;
 	}
 
-	// Token: 0x0601D3F2 RID: 119794 RVA: 0x00827E1C File Offset: 0x0082601C
+	// Token: 0x0601B0EF RID: 110831 RVA: 0x0084F100 File Offset: 0x0084D300
 	public void PlayExtraEffectOnTagsChange(FGameplayTag tag, bool jumpToEnd = false)
 	{
 		if (this.TagsAndCorrespondingEffects == null)
@@ -4441,28 +4316,25 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		this.SetTagStaticMehActorCollisionProfile(ssceneInteractionTags);
 	}
 
-	// Token: 0x0601D3F3 RID: 119795 RVA: 0x00827E94 File Offset: 0x00826094
+	// Token: 0x0601B0F0 RID: 110832 RVA: 0x0084F178 File Offset: 0x0084D378
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void StopExtraEffectOnTagsChange(FGameplayTag tag)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("StopExtraEffectOnTagsChange"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		SceneInteractionActor.__StopExtraEffectOnTagsChange_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("StopExtraEffectOnTagsChange"), SceneInteractionActor.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((SceneInteractionActor.__StopExtraEffectOnTagsChange_FunctionParams*)ptr + 15L / (long)sizeof(SceneInteractionActor.__StopExtraEffectOnTagsChange_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->tag = tag;
+			this.StopExtraEffectOnTagsChange_Implementation(tag);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		SceneInteractionActor.__StopExtraEffectOnTagsChange_FunctionParams* ptr = stackalloc SceneInteractionActor.__StopExtraEffectOnTagsChange_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(SceneInteractionActor.__StopExtraEffectOnTagsChange_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->tag = tag;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0601D3F4 RID: 119796 RVA: 0x00827F0C File Offset: 0x0082610C
+	// Token: 0x0601B0F1 RID: 110833 RVA: 0x0084F204 File Offset: 0x0084D404
 	protected void StopExtraEffectOnTagsChange_Implementation(FGameplayTag tag)
 	{
 		if (this.TagsAndCorrespondingEffects == null)
@@ -4484,14 +4356,14 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		this.ResetTagStaticMehActorCollisionProfile(ssceneInteractionTags);
 	}
 
-	// Token: 0x0601D3F5 RID: 119797 RVA: 0x00827F6E File Offset: 0x0082616E
+	// Token: 0x0601B0F2 RID: 110834 RVA: 0x0084F266 File Offset: 0x0084D466
 	public void UpdateHitInfo(FVectorDouble pos, FVector dir)
 	{
 		this.HitLocation = new FVectorDouble?(pos);
 		this.HitDirection.Set((double)dir.X, (double)dir.Y, (double)dir.Z);
 	}
 
-	// Token: 0x0601D3F6 RID: 119798 RVA: 0x00827F9C File Offset: 0x0082619C
+	// Token: 0x0601B0F3 RID: 110835 RVA: 0x0084F294 File Offset: 0x0084D494
 	public void UpdateRangeOverlapInfo(bool isEnter, AActor otherActor)
 	{
 		if (!isEnter)
@@ -4544,27 +4416,21 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D3F7 RID: 119799 RVA: 0x00828078 File Offset: 0x00826278
+	// Token: 0x0601B0F4 RID: 110836 RVA: 0x0084F370 File Offset: 0x0084D570
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void TryStopCurrentState()
+	public virtual void TryStopCurrentState()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("TryStopCurrentState"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("TryStopCurrentState"), SceneInteractionActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.TryStopCurrentState_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D3F8 RID: 119800 RVA: 0x008280E8 File Offset: 0x008262E8
+	// Token: 0x0601B0F5 RID: 110837 RVA: 0x0084F3C9 File Offset: 0x0084D5C9
 	protected void TryStopCurrentState_Implementation()
 	{
 		if (this.CurrentState != null)
@@ -4573,9 +4439,9 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x17002894 RID: 10388
-	// (get) Token: 0x0601D3F9 RID: 119801 RVA: 0x00828105 File Offset: 0x00826305
-	// (set) Token: 0x0601D3FA RID: 119802 RVA: 0x00828115 File Offset: 0x00826315
+	// Token: 0x17002C2D RID: 11309
+	// (get) Token: 0x0601B0F6 RID: 110838 RVA: 0x0084F3E6 File Offset: 0x0084D5E6
+	// (set) Token: 0x0601B0F7 RID: 110839 RVA: 0x0084F3F6 File Offset: 0x0084D5F6
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool 需要过渡状态
 	{
@@ -4589,9 +4455,9 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x17002895 RID: 10389
-	// (get) Token: 0x0601D3FB RID: 119803 RVA: 0x00828126 File Offset: 0x00826326
-	// (set) Token: 0x0601D3FC RID: 119804 RVA: 0x00828136 File Offset: 0x00826336
+	// Token: 0x17002C2E RID: 11310
+	// (get) Token: 0x0601B0F8 RID: 110840 RVA: 0x0084F407 File Offset: 0x0084D607
+	// (set) Token: 0x0601B0F9 RID: 110841 RVA: 0x0084F417 File Offset: 0x0084D617
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool 跳过表现过程
 	{
@@ -4605,9 +4471,9 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x17002896 RID: 10390
-	// (get) Token: 0x0601D3FD RID: 119805 RVA: 0x00828147 File Offset: 0x00826347
-	// (set) Token: 0x0601D3FE RID: 119806 RVA: 0x00828157 File Offset: 0x00826357
+	// Token: 0x17002C2F RID: 11311
+	// (get) Token: 0x0601B0FA RID: 110842 RVA: 0x0084F428 File Offset: 0x0084D628
+	// (set) Token: 0x0601B0FB RID: 110843 RVA: 0x0084F438 File Offset: 0x0084D638
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe EKuroSceneInteractionState 模拟状态
 	{
@@ -4621,9 +4487,9 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x17002897 RID: 10391
-	// (get) Token: 0x0601D3FF RID: 119807 RVA: 0x00828168 File Offset: 0x00826368
-	// (set) Token: 0x0601D400 RID: 119808 RVA: 0x0082817C File Offset: 0x0082637C
+	// Token: 0x17002C30 RID: 11312
+	// (get) Token: 0x0601B0FC RID: 110844 RVA: 0x0084F449 File Offset: 0x0084D649
+	// (set) Token: 0x0601B0FD RID: 110845 RVA: 0x0084F45D File Offset: 0x0084D65D
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FGameplayTag 模拟Tag
 	{
@@ -4637,53 +4503,41 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D401 RID: 119809 RVA: 0x00828194 File Offset: 0x00826394
+	// Token: 0x0601B0FE RID: 110846 RVA: 0x0084F474 File Offset: 0x0084D674
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void 使用字段值切换状态()
+	public virtual void 使用字段值切换状态()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("使用字段值切换状态"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("使用字段值切换状态"), SceneInteractionActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.使用字段值切换状态_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D402 RID: 119810 RVA: 0x00828204 File Offset: 0x00826404
+	// Token: 0x0601B0FF RID: 110847 RVA: 0x0084F4CD File Offset: 0x0084D6CD
 	protected void 使用字段值切换状态_Implementation()
 	{
 		this.ChangeStateInternal(this.模拟状态);
 	}
 
-	// Token: 0x0601D403 RID: 119811 RVA: 0x00828214 File Offset: 0x00826414
+	// Token: 0x0601B100 RID: 110848 RVA: 0x0084F4DC File Offset: 0x0084D6DC
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void ChangeState1()
+	public virtual void ChangeState1()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ChangeState1"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ChangeState1"), SceneInteractionActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.ChangeState1_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D404 RID: 119812 RVA: 0x00828284 File Offset: 0x00826484
+	// Token: 0x0601B101 RID: 110849 RVA: 0x0084F538 File Offset: 0x0084D738
 	protected void ChangeState1_Implementation()
 	{
 		string sequencePath = "/Game/Aki/GamePlay/Mechanism/Test.Test";
@@ -4715,236 +4569,182 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		});
 	}
 
-	// Token: 0x0601D405 RID: 119813 RVA: 0x008282E0 File Offset: 0x008264E0
+	// Token: 0x0601B102 RID: 110850 RVA: 0x0084F594 File Offset: 0x0084D794
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void ChangeState2()
+	public virtual void ChangeState2()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ChangeState2"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ChangeState2"), SceneInteractionActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.ChangeState2_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D406 RID: 119814 RVA: 0x00828350 File Offset: 0x00826550
+	// Token: 0x0601B103 RID: 110851 RVA: 0x0084F5ED File Offset: 0x0084D7ED
 	protected void ChangeState2_Implementation()
 	{
 		this.ChangeStateInternal(EKuroSceneInteractionState.State2);
 	}
 
-	// Token: 0x0601D407 RID: 119815 RVA: 0x0082835C File Offset: 0x0082655C
+	// Token: 0x0601B104 RID: 110852 RVA: 0x0084F5F8 File Offset: 0x0084D7F8
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void ChangeState3()
+	public virtual void ChangeState3()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ChangeState3"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ChangeState3"), SceneInteractionActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.ChangeState3_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D408 RID: 119816 RVA: 0x008283CC File Offset: 0x008265CC
+	// Token: 0x0601B105 RID: 110853 RVA: 0x0084F651 File Offset: 0x0084D851
 	protected void ChangeState3_Implementation()
 	{
 		this.ChangeStateInternal(EKuroSceneInteractionState.State3);
 	}
 
-	// Token: 0x0601D409 RID: 119817 RVA: 0x008283D8 File Offset: 0x008265D8
+	// Token: 0x0601B106 RID: 110854 RVA: 0x0084F65C File Offset: 0x0084D85C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void ChangeState4()
+	public virtual void ChangeState4()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ChangeState4"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ChangeState4"), SceneInteractionActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.ChangeState4_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D40A RID: 119818 RVA: 0x00828448 File Offset: 0x00826648
+	// Token: 0x0601B107 RID: 110855 RVA: 0x0084F6B5 File Offset: 0x0084D8B5
 	protected void ChangeState4_Implementation()
 	{
 		this.ChangeStateInternal(EKuroSceneInteractionState.State4);
 	}
 
-	// Token: 0x0601D40B RID: 119819 RVA: 0x00828454 File Offset: 0x00826654
+	// Token: 0x0601B108 RID: 110856 RVA: 0x0084F6C0 File Offset: 0x0084D8C0
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void ChangeState5()
+	public virtual void ChangeState5()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ChangeState5"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ChangeState5"), SceneInteractionActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.ChangeState5_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D40C RID: 119820 RVA: 0x008284C4 File Offset: 0x008266C4
+	// Token: 0x0601B109 RID: 110857 RVA: 0x0084F719 File Offset: 0x0084D919
 	protected void ChangeState5_Implementation()
 	{
 		this.ChangeStateInternal(EKuroSceneInteractionState.State5);
 	}
 
-	// Token: 0x0601D40D RID: 119821 RVA: 0x008284D0 File Offset: 0x008266D0
+	// Token: 0x0601B10A RID: 110858 RVA: 0x0084F724 File Offset: 0x0084D924
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void ChangeState6()
+	public virtual void ChangeState6()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ChangeState6"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ChangeState6"), SceneInteractionActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.ChangeState6_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D40E RID: 119822 RVA: 0x00828540 File Offset: 0x00826740
+	// Token: 0x0601B10B RID: 110859 RVA: 0x0084F77D File Offset: 0x0084D97D
 	protected void ChangeState6_Implementation()
 	{
 		this.ChangeStateInternal(EKuroSceneInteractionState.State6);
 	}
 
-	// Token: 0x0601D40F RID: 119823 RVA: 0x0082854C File Offset: 0x0082674C
+	// Token: 0x0601B10C RID: 110860 RVA: 0x0084F788 File Offset: 0x0084D988
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void ChangeState7()
+	public virtual void ChangeState7()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ChangeState7"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ChangeState7"), SceneInteractionActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.ChangeState7_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D410 RID: 119824 RVA: 0x008285BC File Offset: 0x008267BC
+	// Token: 0x0601B10D RID: 110861 RVA: 0x0084F7E1 File Offset: 0x0084D9E1
 	protected void ChangeState7_Implementation()
 	{
 		this.ChangeStateInternal(EKuroSceneInteractionState.State7);
 	}
 
-	// Token: 0x0601D411 RID: 119825 RVA: 0x008285C8 File Offset: 0x008267C8
+	// Token: 0x0601B10E RID: 110862 RVA: 0x0084F7EC File Offset: 0x0084D9EC
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void ChangeState8()
+	public virtual void ChangeState8()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ChangeState8"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ChangeState8"), SceneInteractionActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.ChangeState8_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D412 RID: 119826 RVA: 0x00828638 File Offset: 0x00826838
+	// Token: 0x0601B10F RID: 110863 RVA: 0x0084F845 File Offset: 0x0084DA45
 	protected void ChangeState8_Implementation()
 	{
 		this.ChangeStateInternal(EKuroSceneInteractionState.State8);
 	}
 
-	// Token: 0x0601D413 RID: 119827 RVA: 0x00828644 File Offset: 0x00826844
+	// Token: 0x0601B110 RID: 110864 RVA: 0x0084F850 File Offset: 0x0084DA50
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void 模拟Tag添加()
+	public virtual void 模拟Tag添加()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("模拟Tag添加"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("模拟Tag添加"), SceneInteractionActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.模拟Tag添加_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D414 RID: 119828 RVA: 0x008286B4 File Offset: 0x008268B4
+	// Token: 0x0601B111 RID: 110865 RVA: 0x0084F8AC File Offset: 0x0084DAAC
 	protected void 模拟Tag添加_Implementation()
 	{
 		FGameplayTag 模拟Tag = this.模拟Tag;
 		this.PlayExtraEffectOnTagsChange(this.模拟Tag, this.跳过表现过程);
 	}
 
-	// Token: 0x0601D415 RID: 119829 RVA: 0x008286DC File Offset: 0x008268DC
+	// Token: 0x0601B112 RID: 110866 RVA: 0x0084F8D4 File Offset: 0x0084DAD4
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void 模拟Tag移除()
+	public virtual void 模拟Tag移除()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("模拟Tag移除"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("模拟Tag移除"), SceneInteractionActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.模拟Tag移除_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D416 RID: 119830 RVA: 0x0082874C File Offset: 0x0082694C
+	// Token: 0x0601B113 RID: 110867 RVA: 0x0084F930 File Offset: 0x0084DB30
 	protected void 模拟Tag移除_Implementation()
 	{
 		FGameplayTag 模拟Tag = this.模拟Tag;
@@ -4955,7 +4755,13 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 			SSceneInteractionSequence ssceneInteractionSequence = (ssceneInteractionTags != null) ? ssceneInteractionTags.Sequence : null;
 			if (ssceneInteractionSequence != null)
 			{
-				SSceneInteractionSequence ssceneInteractionSequence2 = new SSceneInteractionSequence(ssceneInteractionSequence.Sequence, ssceneInteractionSequence.IsLoop, !ssceneInteractionSequence.Reverse, ssceneInteractionSequence.PlayRate);
+				SSceneInteractionSequence ssceneInteractionSequence2 = new SSceneInteractionSequence
+				{
+					Sequence = ssceneInteractionSequence.Sequence,
+					IsLoop = ssceneInteractionSequence.IsLoop,
+					Reverse = !ssceneInteractionSequence.Reverse,
+					PlayRate = ssceneInteractionSequence.PlayRate
+				};
 				ULevelSequence sequence = ssceneInteractionSequence2.Sequence;
 				if (sequence != null)
 				{
@@ -4969,7 +4775,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		}
 	}
 
-	// Token: 0x0601D417 RID: 119831 RVA: 0x008287EC File Offset: 0x008269EC
+	// Token: 0x0601B114 RID: 110868 RVA: 0x0084F9EC File Offset: 0x0084DBEC
 	private void ChangeStateInternal(EKuroSceneInteractionState stateId)
 	{
 		Log instance = Log.Instance;
@@ -4982,27 +4788,21 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		this.SetState(stateId, this.需要过渡状态, this.跳过表现过程);
 	}
 
-	// Token: 0x0601D418 RID: 119832 RVA: 0x00828840 File Offset: 0x00826A40
+	// Token: 0x0601B115 RID: 110869 RVA: 0x0084FA40 File Offset: 0x0084DC40
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void 重置()
+	public virtual void 重置()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("重置"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(SceneInteractionActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("重置"), SceneInteractionActor.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.重置_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601D419 RID: 119833 RVA: 0x008288B0 File Offset: 0x00826AB0
+	// Token: 0x0601B116 RID: 110870 RVA: 0x0084FA9C File Offset: 0x0084DC9C
 	protected void 重置_Implementation()
 	{
 		string[] array = UKismetSystemLibrary.GetPathName(base.GetLevel()).Split('/', StringSplitOptions.None);
@@ -5029,7 +4829,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		characterController.ClientTravel(text, ETravelType.TRAVEL_Absolute, true, default(FGuid));
 	}
 
-	// Token: 0x0601D41A RID: 119834 RVA: 0x0082896F File Offset: 0x00826B6F
+	// Token: 0x0601B117 RID: 110871 RVA: 0x0084FB5B File Offset: 0x0084DD5B
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (SceneInteractionActor._ClassPtr == IntPtr.Zero)
@@ -5039,22 +4839,22 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		return SceneInteractionActor._ClassPtr;
 	}
 
-	// Token: 0x0601D41B RID: 119835 RVA: 0x00828994 File Offset: 0x00826B94
+	// Token: 0x0601B118 RID: 110872 RVA: 0x0084FB80 File Offset: 0x0084DD80
 	public SceneInteractionActor() : this(BuiltinUtils.AllocNativeUObject(SceneInteractionActor.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0601D41C RID: 119836 RVA: 0x008289BC File Offset: 0x00826BBC
+	// Token: 0x0601B119 RID: 110873 RVA: 0x0084FBA8 File Offset: 0x0084DDA8
 	public SceneInteractionActor(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(SceneInteractionActor.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601D41D RID: 119837 RVA: 0x008289F0 File Offset: 0x00826BF0
+	// Token: 0x0601B11A RID: 110874 RVA: 0x0084FBDC File Offset: 0x0084DDDC
 	protected SceneInteractionActor(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0601D41E RID: 119838 RVA: 0x00828A7C File Offset: 0x00826C7C
+	// Token: 0x0601B11B RID: 110875 RVA: 0x0084FC7C File Offset: 0x0084DE7C
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_SetOverrideSeqBindActor_Implementation(SceneInteractionActor.__SetOverrideSeqBindActor_FunctionParams* __Params)
 	{
@@ -5063,7 +4863,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		this.SetOverrideSeqBindActor_Implementation(orCreateUObjectByNativePointer, bindingName);
 	}
 
-	// Token: 0x0601D41F RID: 119839 RVA: 0x00828AAC File Offset: 0x00826CAC
+	// Token: 0x0601B11C RID: 110876 RVA: 0x0084FCAC File Offset: 0x0084DEAC
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_UnsetOverrideSeqBindActor_Implementation(SceneInteractionActor.__UnsetOverrideSeqBindActor_FunctionParams* __Params)
 	{
@@ -5072,13 +4872,13 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		this.UnsetOverrideSeqBindActor_Implementation(orCreateUObjectByNativePointer, bindingName);
 	}
 
-	// Token: 0x0601D420 RID: 119840 RVA: 0x00828ADA File Offset: 0x00826CDA
+	// Token: 0x0601B11D RID: 110877 RVA: 0x0084FCDA File Offset: 0x0084DEDA
 	protected virtual void __CPPCALL_ReceiveBeginPlay_Implementation()
 	{
 		this.ReceiveBeginPlay_Implementation();
 	}
 
-	// Token: 0x0601D421 RID: 119841 RVA: 0x00828AE4 File Offset: 0x00826CE4
+	// Token: 0x0601B11E RID: 110878 RVA: 0x0084FCE4 File Offset: 0x0084DEE4
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveEndPlay_Implementation(AActor.__ReceiveEndPlay_FunctionParams* __Params)
 	{
@@ -5086,38 +4886,38 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		this.ReceiveEndPlay_Implementation(endPlayReason);
 	}
 
-	// Token: 0x0601D422 RID: 119842 RVA: 0x00828B04 File Offset: 0x00826D04
+	// Token: 0x0601B11F RID: 110879 RVA: 0x0084FD04 File Offset: 0x0084DF04
 	protected virtual void __CPPCALL_AddNewState_Implementation()
 	{
 		this.AddNewState_Implementation();
 	}
 
-	// Token: 0x0601D423 RID: 119843 RVA: 0x00828B0C File Offset: 0x00826D0C
+	// Token: 0x0601B120 RID: 110880 RVA: 0x0084FD0C File Offset: 0x0084DF0C
 	protected virtual void __CPPCALL_AddNewEffect_Implementation()
 	{
 		this.AddNewEffect_Implementation();
 	}
 
-	// Token: 0x0601D424 RID: 119844 RVA: 0x00828B14 File Offset: 0x00826D14
+	// Token: 0x0601B121 RID: 110881 RVA: 0x0084FD14 File Offset: 0x0084DF14
 	protected virtual void __CPPCALL_AddNewEndEffect_Implementation()
 	{
 		this.AddNewEndEffect_Implementation();
 	}
 
-	// Token: 0x0601D425 RID: 119845 RVA: 0x00828B1C File Offset: 0x00826D1C
+	// Token: 0x0601B122 RID: 110882 RVA: 0x0084FD1C File Offset: 0x0084DF1C
 	protected virtual void __CPPCALL_UpdateTimeDilation_Implementation()
 	{
 		this.UpdateTimeDilation_Implementation();
 	}
 
-	// Token: 0x0601D426 RID: 119846 RVA: 0x00828B24 File Offset: 0x00826D24
+	// Token: 0x0601B123 RID: 110883 RVA: 0x0084FD24 File Offset: 0x0084DF24
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_CheckAllEffectPlaying_Implementation(SceneInteractionActor.__CheckAllEffectPlaying_FunctionParams* __Params)
 	{
 		__Params->__Result = this.CheckAllEffectPlaying_Implementation();
 	}
 
-	// Token: 0x0601D427 RID: 119847 RVA: 0x00828B34 File Offset: 0x00826D34
+	// Token: 0x0601B124 RID: 110884 RVA: 0x0084FD34 File Offset: 0x0084DF34
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_PlayKuroSkeletalMeshDestruction_Implementation(SceneInteractionActor.__PlayKuroSkeletalMeshDestruction_FunctionParams* __Params)
 	{
@@ -5125,7 +4925,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		this.PlayKuroSkeletalMeshDestruction_Implementation(orCreateUObjectByNativePointer, __Params->isJumpToEnd);
 	}
 
-	// Token: 0x0601D428 RID: 119848 RVA: 0x00828B5C File Offset: 0x00826D5C
+	// Token: 0x0601B125 RID: 110885 RVA: 0x0084FD5C File Offset: 0x0084DF5C
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_OverrideKuroDestructibleActorPhysicsVelocity_Implementation(SceneInteractionActor.__OverrideKuroDestructibleActorPhysicsVelocity_FunctionParams* __Params)
 	{
@@ -5133,7 +4933,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		this.OverrideKuroDestructibleActorPhysicsVelocity_Implementation(orCreateUObjectByNativePointer);
 	}
 
-	// Token: 0x0601D429 RID: 119849 RVA: 0x00828B7C File Offset: 0x00826D7C
+	// Token: 0x0601B126 RID: 110886 RVA: 0x0084FD7C File Offset: 0x0084DF7C
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_GetActiveSequenceRemainTime_Implementation(SceneInteractionActor.__GetActiveSequenceRemainTime_FunctionParams* __Params)
 	{
@@ -5141,50 +4941,50 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		__Params->__Result = this.GetActiveSequenceRemainTime_Implementation(orCreateUObjectByNativePointer);
 	}
 
-	// Token: 0x0601D42A RID: 119850 RVA: 0x00828BA2 File Offset: 0x00826DA2
+	// Token: 0x0601B127 RID: 110887 RVA: 0x0084FDA2 File Offset: 0x0084DFA2
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ApplyAnimOptimizationParams_Implementation(SceneInteractionActor.__ApplyAnimOptimizationParams_FunctionParams* __Params)
 	{
 		this.ApplyAnimOptimizationParams_Implementation(__Params->bUseDistanceMap);
 	}
 
-	// Token: 0x0601D42B RID: 119851 RVA: 0x00828BB0 File Offset: 0x00826DB0
+	// Token: 0x0601B128 RID: 110888 RVA: 0x0084FDB0 File Offset: 0x0084DFB0
 	protected virtual void __CPPCALL_PendingPlayStateEffect_Implementation()
 	{
 		this.PendingPlayStateEffect_Implementation();
 	}
 
-	// Token: 0x0601D42C RID: 119852 RVA: 0x00828BB8 File Offset: 0x00826DB8
+	// Token: 0x0601B129 RID: 110889 RVA: 0x0084FDB8 File Offset: 0x0084DFB8
 	protected virtual void __CPPCALL_RemovePendingStateEffectTick_Implementation()
 	{
 		this.RemovePendingStateEffectTick_Implementation();
 	}
 
-	// Token: 0x0601D42D RID: 119853 RVA: 0x00828BC0 File Offset: 0x00826DC0
+	// Token: 0x0601B12A RID: 110890 RVA: 0x0084FDC0 File Offset: 0x0084DFC0
 	protected virtual void __CPPCALL_PendingPlayCrossStateEffect_Implementation()
 	{
 		this.PendingPlayCrossStateEffect_Implementation();
 	}
 
-	// Token: 0x0601D42E RID: 119854 RVA: 0x00828BC8 File Offset: 0x00826DC8
+	// Token: 0x0601B12B RID: 110891 RVA: 0x0084FDC8 File Offset: 0x0084DFC8
 	protected virtual void __CPPCALL_RemovePendingCrossStateEffectTick_Implementation()
 	{
 		this.RemovePendingCrossStateEffectTick_Implementation();
 	}
 
-	// Token: 0x0601D42F RID: 119855 RVA: 0x00828BD0 File Offset: 0x00826DD0
+	// Token: 0x0601B12C RID: 110892 RVA: 0x0084FDD0 File Offset: 0x0084DFD0
 	protected virtual void __CPPCALL_PendingPlayTagEffect_Implementation()
 	{
 		this.PendingPlayTagEffect_Implementation();
 	}
 
-	// Token: 0x0601D430 RID: 119856 RVA: 0x00828BD8 File Offset: 0x00826DD8
+	// Token: 0x0601B12D RID: 110893 RVA: 0x0084FDD8 File Offset: 0x0084DFD8
 	protected virtual void __CPPCALL_RemovePendingTagEffectTick_Implementation()
 	{
 		this.RemovePendingTagEffectTick_Implementation();
 	}
 
-	// Token: 0x0601D431 RID: 119857 RVA: 0x00828BE0 File Offset: 0x00826DE0
+	// Token: 0x0601B12E RID: 110894 RVA: 0x0084FDE0 File Offset: 0x0084DFE0
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_PostAutoMergeEvent_Implementation(SceneInteractionActor.__PostAutoMergeEvent_FunctionParams* __Params)
 	{
@@ -5192,7 +4992,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		this.PostAutoMergeEvent_Implementation(eventName, __Params->tagId, __Params->follow);
 	}
 
-	// Token: 0x0601D432 RID: 119858 RVA: 0x00828C10 File Offset: 0x00826E10
+	// Token: 0x0601B12F RID: 110895 RVA: 0x0084FE10 File Offset: 0x0084E010
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_PostTagEvent_Implementation(SceneInteractionActor.__PostTagEvent_FunctionParams* __Params)
 	{
@@ -5200,21 +5000,21 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		this.PostTagEvent_Implementation(eventName, __Params->tag, __Params->follow);
 	}
 
-	// Token: 0x0601D433 RID: 119859 RVA: 0x00828C3D File Offset: 0x00826E3D
+	// Token: 0x0601B130 RID: 110896 RVA: 0x0084FE3D File Offset: 0x0084E03D
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_StopTagAkEvent_Implementation(SceneInteractionActor.__StopTagAkEvent_FunctionParams* __Params)
 	{
 		this.StopTagAkEvent_Implementation(__Params->tag);
 	}
 
-	// Token: 0x0601D434 RID: 119860 RVA: 0x00828C4B File Offset: 0x00826E4B
+	// Token: 0x0601B131 RID: 110897 RVA: 0x0084FE4B File Offset: 0x0084E04B
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_UpdateProjectionActorTransform_Implementation(SceneInteractionActor.__UpdateProjectionActorTransform_FunctionParams* __Params)
 	{
 		this.UpdateProjectionActorTransform_Implementation(__Params->transform);
 	}
 
-	// Token: 0x0601D435 RID: 119861 RVA: 0x00828C5C File Offset: 0x00826E5C
+	// Token: 0x0601B132 RID: 110898 RVA: 0x0084FE5C File Offset: 0x0084E05C
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_AddMatrialDataForChildrenActor_Implementation(SceneInteractionActor.__AddMatrialDataForChildrenActor_FunctionParams* __Params)
 	{
@@ -5223,26 +5023,26 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		this.AddMatrialDataForChildrenActor_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x0601D436 RID: 119862 RVA: 0x00828C89 File Offset: 0x00826E89
+	// Token: 0x0601B133 RID: 110899 RVA: 0x0084FE89 File Offset: 0x0084E089
 	protected virtual void __CPPCALL_RemoveActorProjection_Implementation()
 	{
 		this.RemoveActorProjection_Implementation();
 	}
 
-	// Token: 0x0601D437 RID: 119863 RVA: 0x00828C91 File Offset: 0x00826E91
+	// Token: 0x0601B134 RID: 110900 RVA: 0x0084FE91 File Offset: 0x0084E091
 	protected virtual void __CPPCALL_DestroySelf_Implementation()
 	{
 		this.DestroySelf_Implementation();
 	}
 
-	// Token: 0x0601D438 RID: 119864 RVA: 0x00828C99 File Offset: 0x00826E99
+	// Token: 0x0601B135 RID: 110901 RVA: 0x0084FE99 File Offset: 0x0084E099
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ResetTagActorHide_Implementation(SceneInteractionActor.__ResetTagActorHide_FunctionParams* __Params)
 	{
 		this.ResetTagActorHide_Implementation(__Params->tag);
 	}
 
-	// Token: 0x0601D439 RID: 119865 RVA: 0x00828CA8 File Offset: 0x00826EA8
+	// Token: 0x0601B136 RID: 110902 RVA: 0x0084FEA8 File Offset: 0x0084E0A8
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_GetDirectorBySequence_Implementation(SceneInteractionActor.__GetDirectorBySequence_FunctionParams* __Params)
 	{
@@ -5252,109 +5052,118 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 		ptr = ((directorBySequence_Implementation != null) ? directorBySequence_Implementation.NativePtr : ((IntPtr)0));
 	}
 
-	// Token: 0x0601D43A RID: 119866 RVA: 0x00828CDD File Offset: 0x00826EDD
+	// Token: 0x0601B137 RID: 110903 RVA: 0x0084FEDD File Offset: 0x0084E0DD
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_StopExtraEffectOnTagsChange_Implementation(SceneInteractionActor.__StopExtraEffectOnTagsChange_FunctionParams* __Params)
 	{
 		this.StopExtraEffectOnTagsChange_Implementation(__Params->tag);
 	}
 
-	// Token: 0x0601D43B RID: 119867 RVA: 0x00828CEB File Offset: 0x00826EEB
+	// Token: 0x0601B138 RID: 110904 RVA: 0x0084FEEB File Offset: 0x0084E0EB
 	protected virtual void __CPPCALL_TryStopCurrentState_Implementation()
 	{
 		this.TryStopCurrentState_Implementation();
 	}
 
-	// Token: 0x0601D43C RID: 119868 RVA: 0x00828CF3 File Offset: 0x00826EF3
+	// Token: 0x0601B139 RID: 110905 RVA: 0x0084FEF3 File Offset: 0x0084E0F3
 	protected virtual void __CPPCALL_使用字段值切换状态_Implementation()
 	{
 		this.使用字段值切换状态_Implementation();
 	}
 
-	// Token: 0x0601D43D RID: 119869 RVA: 0x00828CFB File Offset: 0x00826EFB
+	// Token: 0x0601B13A RID: 110906 RVA: 0x0084FEFB File Offset: 0x0084E0FB
 	protected virtual void __CPPCALL_ChangeState1_Implementation()
 	{
 		this.ChangeState1_Implementation();
 	}
 
-	// Token: 0x0601D43E RID: 119870 RVA: 0x00828D03 File Offset: 0x00826F03
+	// Token: 0x0601B13B RID: 110907 RVA: 0x0084FF03 File Offset: 0x0084E103
 	protected virtual void __CPPCALL_ChangeState2_Implementation()
 	{
 		this.ChangeState2_Implementation();
 	}
 
-	// Token: 0x0601D43F RID: 119871 RVA: 0x00828D0B File Offset: 0x00826F0B
+	// Token: 0x0601B13C RID: 110908 RVA: 0x0084FF0B File Offset: 0x0084E10B
 	protected virtual void __CPPCALL_ChangeState3_Implementation()
 	{
 		this.ChangeState3_Implementation();
 	}
 
-	// Token: 0x0601D440 RID: 119872 RVA: 0x00828D13 File Offset: 0x00826F13
+	// Token: 0x0601B13D RID: 110909 RVA: 0x0084FF13 File Offset: 0x0084E113
 	protected virtual void __CPPCALL_ChangeState4_Implementation()
 	{
 		this.ChangeState4_Implementation();
 	}
 
-	// Token: 0x0601D441 RID: 119873 RVA: 0x00828D1B File Offset: 0x00826F1B
+	// Token: 0x0601B13E RID: 110910 RVA: 0x0084FF1B File Offset: 0x0084E11B
 	protected virtual void __CPPCALL_ChangeState5_Implementation()
 	{
 		this.ChangeState5_Implementation();
 	}
 
-	// Token: 0x0601D442 RID: 119874 RVA: 0x00828D23 File Offset: 0x00826F23
+	// Token: 0x0601B13F RID: 110911 RVA: 0x0084FF23 File Offset: 0x0084E123
 	protected virtual void __CPPCALL_ChangeState6_Implementation()
 	{
 		this.ChangeState6_Implementation();
 	}
 
-	// Token: 0x0601D443 RID: 119875 RVA: 0x00828D2B File Offset: 0x00826F2B
+	// Token: 0x0601B140 RID: 110912 RVA: 0x0084FF2B File Offset: 0x0084E12B
 	protected virtual void __CPPCALL_ChangeState7_Implementation()
 	{
 		this.ChangeState7_Implementation();
 	}
 
-	// Token: 0x0601D444 RID: 119876 RVA: 0x00828D33 File Offset: 0x00826F33
+	// Token: 0x0601B141 RID: 110913 RVA: 0x0084FF33 File Offset: 0x0084E133
 	protected virtual void __CPPCALL_ChangeState8_Implementation()
 	{
 		this.ChangeState8_Implementation();
 	}
 
-	// Token: 0x0601D445 RID: 119877 RVA: 0x00828D3B File Offset: 0x00826F3B
+	// Token: 0x0601B142 RID: 110914 RVA: 0x0084FF3B File Offset: 0x0084E13B
 	protected virtual void __CPPCALL_模拟Tag添加_Implementation()
 	{
 		this.模拟Tag添加_Implementation();
 	}
 
-	// Token: 0x0601D446 RID: 119878 RVA: 0x00828D43 File Offset: 0x00826F43
+	// Token: 0x0601B143 RID: 110915 RVA: 0x0084FF43 File Offset: 0x0084E143
 	protected virtual void __CPPCALL_模拟Tag移除_Implementation()
 	{
 		this.模拟Tag移除_Implementation();
 	}
 
-	// Token: 0x0601D447 RID: 119879 RVA: 0x00828D4B File Offset: 0x00826F4B
+	// Token: 0x0601B144 RID: 110916 RVA: 0x0084FF4B File Offset: 0x0084E14B
 	protected virtual void __CPPCALL_重置_Implementation()
 	{
 		this.重置_Implementation();
 	}
 
-	// Token: 0x0400E65A RID: 58970
+	// Token: 0x0400EB10 RID: 60176
 	private const float DEFAULT_DAMAGE_AMOUNT = 1f;
 
-	// Token: 0x0400E65B RID: 58971
+	// Token: 0x0400EB11 RID: 60177
+	private string LevelName = string.Empty;
+
+	// Token: 0x0400EB12 RID: 60178
+	private int HandleId;
+
+	// Token: 0x0400EB13 RID: 60179
+	private int EntityId;
+
+	// Token: 0x0400EB14 RID: 60180
 	public int PbDataId;
 
-	// Token: 0x0400E65C RID: 58972
+	// Token: 0x0400EB15 RID: 60181
 	[Nullable(2)]
 	private Action OnInitCallback;
 
-	// Token: 0x0400E65D RID: 58973
+	// Token: 0x0400EB16 RID: 60182
 	public bool Active = true;
 
-	// Token: 0x0400E65E RID: 58974
+	// Token: 0x0400EB17 RID: 60183
 	[Nullable(2)]
 	private ULevelSequencePlayer ActiveSequencePlayer;
 
-	// Token: 0x0400E65F RID: 58975
+	// Token: 0x0400EB18 RID: 60184
 	[Nullable(new byte[]
 	{
 		2,
@@ -5363,7 +5172,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 	})]
 	private Dictionary<ULevelSequence, ALevelSequenceActor> ActiveSequenceDirectorMap;
 
-	// Token: 0x0400E660 RID: 58976
+	// Token: 0x0400EB19 RID: 60185
 	[Nullable(new byte[]
 	{
 		2,
@@ -5372,7 +5181,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 	})]
 	private Dictionary<ALevelSequenceActor, SequenceDirectorConfig> DirectorConfigMap;
 
-	// Token: 0x0400E661 RID: 58977
+	// Token: 0x0400EB1A RID: 60186
 	[Nullable(new byte[]
 	{
 		2,
@@ -5380,77 +5189,73 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 	})]
 	private Dictionary<int, EffectInfo> ActiveEffectInfoMap;
 
-	// Token: 0x0400E662 RID: 58978
+	// Token: 0x0400EB1B RID: 60187
 	private EKuroSceneInteractionState? CurrentStateKey;
 
-	// Token: 0x0400E663 RID: 58979
+	// Token: 0x0400EB1C RID: 60188
 	[Nullable(2)]
 	private SSceneInteractionitem CurrentState;
 
-	// Token: 0x0400E664 RID: 58980
+	// Token: 0x0400EB1D RID: 60189
+	private readonly System.Collections.Generic.LinkedList<SceneInteractionActor.PendingState> PendingStates = new System.Collections.Generic.LinkedList<SceneInteractionActor.PendingState>();
+
+	// Token: 0x0400EB1E RID: 60190
 	[Nullable(2)]
-	private SSceneInteractionitem TransitionState;
+	private SceneInteractionActor.PendingState NextState;
 
-	// Token: 0x0400E665 RID: 58981
-	private EKuroSceneInteractionState? TransitionStateKey;
+	// Token: 0x0400EB1F RID: 60191
+	private bool InDoSwitchState;
 
-	// Token: 0x0400E666 RID: 58982
-	[Nullable(2)]
-	private SSceneInteractionitem NextState;
-
-	// Token: 0x0400E667 RID: 58983
-	private EKuroSceneInteractionState? NextStateKey;
-
-	// Token: 0x0400E668 RID: 58984
+	// Token: 0x0400EB20 RID: 60192
 	private bool InTransition;
 
-	// Token: 0x0400E669 RID: 58985
+	// Token: 0x0400EB21 RID: 60193
 	private bool InWaitingForPlayableFinished;
 
-	// Token: 0x0400E66A RID: 58986
+	// Token: 0x0400EB22 RID: 60194
 	private bool TransitionStateJumpToEnd;
 
-	// Token: 0x0400E66B RID: 58987
+	// Token: 0x0400EB23 RID: 60195
 	private bool IsUseTransitionTime;
 
-	// Token: 0x0400E66C RID: 58988
+	// Token: 0x0400EB24 RID: 60196
 	private float SwitchingStateRemainTime;
 
-	// Token: 0x0400E66D RID: 58989
+	// Token: 0x0400EB25 RID: 60197
 	private bool IsPlayBack;
 
-	// Token: 0x0400E66E RID: 58990
+	// Token: 0x0400EB26 RID: 60198
 	[Nullable(2)]
 	private UKuroSceneInteractionActorSystem KuroSceneInteractionActorSystem;
 
-	// Token: 0x0400E66F RID: 58991
+	// Token: 0x0400EB27 RID: 60199
 	[Nullable(2)]
 	private AActor ProjectionRootActor;
 
-	// Token: 0x0400E670 RID: 58992
+	// Token: 0x0400EB28 RID: 60200
 	private bool IsProjecting;
 
-	// Token: 0x0400E671 RID: 58993
+	// Token: 0x0400EB29 RID: 60201
 	[Nullable(2)]
 	public CharRenderingComponent CharRenderingComponent;
 
-	// Token: 0x0400E672 RID: 58994
+	// Token: 0x0400EB2A RID: 60202
 	public int CharRenderingKey;
 
-	// Token: 0x0400E673 RID: 58995
+	// Token: 0x0400EB2B RID: 60203
 	public FVectorDouble? HitLocation;
 
-	// Token: 0x0400E674 RID: 58996
+	// Token: 0x0400EB2C RID: 60204
 	public FVectorDouble HitDirection = new FVectorDouble(0.0, 0.0, 1.0);
 
-	// Token: 0x0400E675 RID: 58997
+	// Token: 0x0400EB2D RID: 60205
 	public FVectorDouble? RangeOtherActorLocation;
 
-	// Token: 0x0400E676 RID: 58998
+	// Token: 0x0400EB2E RID: 60206
 	[Nullable(2)]
 	public Vector RangeOtherActorVelocityProxy;
 
-	// Token: 0x0400E677 RID: 58999
+	// Token: 0x0400EB2F RID: 60207
 	[Nullable(new byte[]
 	{
 		2,
@@ -5458,7 +5263,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 	})]
 	public Dictionary<CharRenderingComponent, int> CharRenderingComponents;
 
-	// Token: 0x0400E678 RID: 59000
+	// Token: 0x0400EB30 RID: 60208
 	[Nullable(new byte[]
 	{
 		2,
@@ -5466,7 +5271,7 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 	})]
 	public HashSet<BP_EffectActor_C> CrossStateEffectActors;
 
-	// Token: 0x0400E679 RID: 59001
+	// Token: 0x0400EB31 RID: 60209
 	[Nullable(new byte[]
 	{
 		2,
@@ -5474,7 +5279,11 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 	})]
 	public Dictionary<AActor, FTransformDouble> ActorsOriginalRelTransform;
 
-	// Token: 0x0400E67A RID: 59002
+	// Token: 0x0400EB32 RID: 60210
+	[Nullable(2)]
+	private BP_BasePlatform_C BasePlatformInternal;
+
+	// Token: 0x0400EB33 RID: 60211
 	[Nullable(new byte[]
 	{
 		2,
@@ -5484,18 +5293,21 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 	})]
 	private Dictionary<UStaticMeshComponent, Dictionary<int, UMaterialInterface>> RevertMaterialComponentsMaps;
 
-	// Token: 0x0400E67B RID: 59003
+	// Token: 0x0400EB34 RID: 60212
+	private float CurrentStateAkEventHandle;
+
+	// Token: 0x0400EB35 RID: 60213
 	private bool MergeCurrentStateAkEvent;
 
-	// Token: 0x0400E67C RID: 59004
+	// Token: 0x0400EB36 RID: 60214
 	[Nullable(2)]
 	private Dictionary<FGameplayTag, int> PlayingTagAkEventHandle;
 
-	// Token: 0x0400E67D RID: 59005
+	// Token: 0x0400EB37 RID: 60215
 	[Nullable(2)]
 	private BP_GlobalGI_C GlobalGi;
 
-	// Token: 0x0400E67E RID: 59006
+	// Token: 0x0400EB38 RID: 60216
 	[Nullable(new byte[]
 	{
 		2,
@@ -5504,10 +5316,10 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 	})]
 	private Dictionary<ASkeletalMeshActor, SkeletalMontageConfig> SkeletalMontageConfigMap;
 
-	// Token: 0x0400E67F RID: 59007
+	// Token: 0x0400EB39 RID: 60217
 	private int SkeletalMeshDestructibleActorInitCount;
 
-	// Token: 0x0400E680 RID: 59008
+	// Token: 0x0400EB3A RID: 60218
 	[Nullable(new byte[]
 	{
 		2,
@@ -5515,35 +5327,35 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 	})]
 	private HashSet<AKuroDestructibleActor> SkeletalMeshDestructibleActorsInternal;
 
-	// Token: 0x0400E681 RID: 59009
+	// Token: 0x0400EB3B RID: 60219
 	private int DebugTickId = -1;
 
-	// Token: 0x0400E682 RID: 59010
+	// Token: 0x0400EB3C RID: 60220
 	private List<BP_EffectActor_C> PendingStateEffects = new List<BP_EffectActor_C>();
 
-	// Token: 0x0400E683 RID: 59011
+	// Token: 0x0400EB3D RID: 60221
 	private int PendingStateEffectTickId = -1;
 
-	// Token: 0x0400E684 RID: 59012
+	// Token: 0x0400EB3E RID: 60222
 	private readonly Dictionary<FGameplayTag, List<BP_EffectActor_C>> PendingTagEffects = new Dictionary<FGameplayTag, List<BP_EffectActor_C>>();
 
-	// Token: 0x0400E685 RID: 59013
+	// Token: 0x0400EB3F RID: 60223
 	private int PendingTagEffectTickId = -1;
 
-	// Token: 0x0400E686 RID: 59014
+	// Token: 0x0400EB40 RID: 60224
 	private readonly Dictionary<BP_EffectActor_C, int> PendingCrossStateEffects = new Dictionary<BP_EffectActor_C, int>();
 
-	// Token: 0x0400E687 RID: 59015
+	// Token: 0x0400EB41 RID: 60225
 	private int PendingCrossStateEffectTickId = -1;
 
-	// Token: 0x0400E688 RID: 59016
+	// Token: 0x0400EB42 RID: 60226
 	public Dictionary<int, int> AkEventPostHandle = new Dictionary<int, int>();
 
-	// Token: 0x0400E689 RID: 59017
+	// Token: 0x0400EB43 RID: 60227
 	[Nullable(2)]
 	public Action OverrideEffectParmaFunc;
 
-	// Token: 0x0400E68A RID: 59018
+	// Token: 0x0400EB44 RID: 60228
 	[Nullable(new byte[]
 	{
 		2,
@@ -5552,57 +5364,51 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 	})]
 	private Dictionary<string, AActor> OverrideSeqBindActors;
 
-	// Token: 0x0400E68B RID: 59019
+	// Token: 0x0400EB45 RID: 60229
 	private bool IsAbpAnimPlayEnd;
 
-	// Token: 0x0400E68C RID: 59020
+	// Token: 0x0400EB46 RID: 60230
 	[Nullable(2)]
 	private List<int> TagCharDaHandleList;
 
-	// Token: 0x0400E68D RID: 59021
+	// Token: 0x0400EB47 RID: 60231
 	[Nullable(2)]
 	private Action<int> OnEffectFinishCallback;
 
-	// Token: 0x0400E68E RID: 59022
+	// Token: 0x0400EB48 RID: 60232
 	[Nullable(2)]
 	private Action<ELoadEffectResult, int> OnEffectPlayingCallback;
 
-	// Token: 0x0400E68F RID: 59023
+	// Token: 0x0400EB49 RID: 60233
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Render/Scene/Item/SceneInteractionActor.SceneInteractionActor_C";
 
-	// Token: 0x0400E690 RID: 59024
+	// Token: 0x0400EB4A RID: 60234
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400E691 RID: 59025
+	// Token: 0x0400EB4B RID: 60235
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400E692 RID: 59026
-	private static int __PropertyOffset_LevelName;
+	// Token: 0x0400EB4C RID: 60236
+	private static int __PropertyOffset_MaxPendingStateCount;
 
-	// Token: 0x0400E693 RID: 59027
-	private static int __PropertyOffset_HandleId;
-
-	// Token: 0x0400E694 RID: 59028
-	private static int __PropertyOffset_EntityId;
-
-	// Token: 0x0400E695 RID: 59029
+	// Token: 0x0400EB4D RID: 60237
 	private static int __PropertyOffset_States;
 
-	// Token: 0x0400E696 RID: 59030
+	// Token: 0x0400EB4E RID: 60238
 	[Nullable(2)]
 	private TMap<EKuroSceneInteractionState, SSceneInteractionitem> _States;
 
-	// Token: 0x0400E697 RID: 59031
+	// Token: 0x0400EB4F RID: 60239
 	private static int __PropertyOffset_Effects;
 
-	// Token: 0x0400E698 RID: 59032
+	// Token: 0x0400EB50 RID: 60240
 	[Nullable(2)]
 	private TMap<ESceneInteractionEffect, SScenePropertyEffect> _Effects;
 
-	// Token: 0x0400E699 RID: 59033
+	// Token: 0x0400EB51 RID: 60241
 	private static int __PropertyOffset_EffectsInheritTimeDilation;
 
-	// Token: 0x0400E69A RID: 59034
+	// Token: 0x0400EB52 RID: 60242
 	[Nullable(new byte[]
 	{
 		2,
@@ -5610,17 +5416,17 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 	})]
 	private TArray<BP_EffectActor_C> _EffectsInheritTimeDilation;
 
-	// Token: 0x0400E69B RID: 59035
+	// Token: 0x0400EB53 RID: 60243
 	private static int __PropertyOffset_EndEffects;
 
-	// Token: 0x0400E69C RID: 59036
+	// Token: 0x0400EB54 RID: 60244
 	[Nullable(2)]
 	private TMap<ESceneInteractionEffect, BP_EffectActor_C> _EndEffects;
 
-	// Token: 0x0400E69D RID: 59037
+	// Token: 0x0400EB55 RID: 60245
 	private static int __PropertyOffset_ReferenceActors;
 
-	// Token: 0x0400E69E RID: 59038
+	// Token: 0x0400EB56 RID: 60246
 	[Nullable(new byte[]
 	{
 		2,
@@ -5629,10 +5435,10 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 	})]
 	private TMap<string, AActor> _ReferenceActors;
 
-	// Token: 0x0400E69F RID: 59039
+	// Token: 0x0400EB57 RID: 60247
 	private static int __PropertyOffset_TagsAndCorrespondingEffects;
 
-	// Token: 0x0400E6A0 RID: 59040
+	// Token: 0x0400EB58 RID: 60248
 	[Nullable(new byte[]
 	{
 		2,
@@ -5640,10 +5446,10 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 	})]
 	private TMap<FGameplayTag, SSceneInteractionTags> _TagsAndCorrespondingEffects;
 
-	// Token: 0x0400E6A1 RID: 59041
+	// Token: 0x0400EB59 RID: 60249
 	private static int __PropertyOffset_CollisionActors;
 
-	// Token: 0x0400E6A2 RID: 59042
+	// Token: 0x0400EB5A RID: 60250
 	[Nullable(new byte[]
 	{
 		2,
@@ -5651,10 +5457,10 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 	})]
 	private TArray<AActor> _CollisionActors;
 
-	// Token: 0x0400E6A3 RID: 59043
+	// Token: 0x0400EB5B RID: 60251
 	private static int __PropertyOffset_PartCollisionActorsAndCorrespondingTags;
 
-	// Token: 0x0400E6A4 RID: 59044
+	// Token: 0x0400EB5C RID: 60252
 	[Nullable(new byte[]
 	{
 		2,
@@ -5662,10 +5468,10 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 	})]
 	private TMap<AActor, FGameplayTag> _PartCollisionActorsAndCorrespondingTags;
 
-	// Token: 0x0400E6A5 RID: 59045
+	// Token: 0x0400EB5D RID: 60253
 	private static int __PropertyOffset_InteractionEffectHookActors;
 
-	// Token: 0x0400E6A6 RID: 59046
+	// Token: 0x0400EB5E RID: 60254
 	[Nullable(new byte[]
 	{
 		2,
@@ -5673,13 +5479,13 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 	})]
 	private TArray<AActor> _InteractionEffectHookActors;
 
-	// Token: 0x0400E6A7 RID: 59047
+	// Token: 0x0400EB5F RID: 60255
 	private static int __PropertyOffset_CharacterForOrgan;
 
-	// Token: 0x0400E6A8 RID: 59048
+	// Token: 0x0400EB60 RID: 60256
 	private static int __PropertyOffset_ActorsForProjection;
 
-	// Token: 0x0400E6A9 RID: 59049
+	// Token: 0x0400EB61 RID: 60257
 	[Nullable(new byte[]
 	{
 		2,
@@ -5687,13 +5493,13 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 	})]
 	private TArray<AActor> _ActorsForProjection;
 
-	// Token: 0x0400E6AA RID: 59050
+	// Token: 0x0400EB62 RID: 60258
 	private static int __PropertyOffset_MaterialForProjection;
 
-	// Token: 0x0400E6AB RID: 59051
+	// Token: 0x0400EB63 RID: 60259
 	private static int __PropertyOffset_ReceivingDecalsActors;
 
-	// Token: 0x0400E6AC RID: 59052
+	// Token: 0x0400EB64 RID: 60260
 	[Nullable(new byte[]
 	{
 		2,
@@ -5701,10 +5507,10 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 	})]
 	private TArray<AActor> _ReceivingDecalsActors;
 
-	// Token: 0x0400E6AD RID: 59053
+	// Token: 0x0400EB65 RID: 60261
 	private static int __PropertyOffset_StaticMeshList;
 
-	// Token: 0x0400E6AE RID: 59054
+	// Token: 0x0400EB66 RID: 60262
 	[Nullable(new byte[]
 	{
 		2,
@@ -5712,13 +5518,13 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 	})]
 	private TArray<UStaticMesh> _StaticMeshList;
 
-	// Token: 0x0400E6AF RID: 59055
+	// Token: 0x0400EB67 RID: 60263
 	private static int __PropertyOffset_RangeOtherActorVelocitySource;
 
-	// Token: 0x0400E6B0 RID: 59056
+	// Token: 0x0400EB68 RID: 60264
 	private static int __PropertyOffset_SkeletalMeshActors;
 
-	// Token: 0x0400E6B1 RID: 59057
+	// Token: 0x0400EB69 RID: 60265
 	[Nullable(new byte[]
 	{
 		2,
@@ -5726,10 +5532,10 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 	})]
 	private TArray<ASkeletalMeshActor> _SkeletalMeshActors;
 
-	// Token: 0x0400E6B2 RID: 59058
+	// Token: 0x0400EB6A RID: 60266
 	private static int __PropertyOffset_AllSkeletalMeshActors;
 
-	// Token: 0x0400E6B3 RID: 59059
+	// Token: 0x0400EB6B RID: 60267
 	[Nullable(new byte[]
 	{
 		2,
@@ -5737,231 +5543,244 @@ public class SceneInteractionActor : AKuroSceneInteractionActor, IUnrealUObject,
 	})]
 	private TArray<ASkeletalMeshActor> _AllSkeletalMeshActors;
 
-	// Token: 0x0400E6B4 RID: 59060
+	// Token: 0x0400EB6C RID: 60268
 	private static int __PropertyOffset_InteractionMaterialController;
 
-	// Token: 0x0400E6B5 RID: 59061
-	private static int __PropertyOffset_BasePlatformInternal;
-
-	// Token: 0x0400E6B6 RID: 59062
-	private static int __PropertyOffset_CurrentStateAkEventHandle;
-
-	// Token: 0x0400E6B7 RID: 59063
+	// Token: 0x0400EB6D RID: 60269
 	private static int __PropertyOffset_OverrideEffectActor;
 
-	// Token: 0x0400E6B8 RID: 59064
+	// Token: 0x0400EB6E RID: 60270
 	private static int __PropertyOffset_需要过渡状态;
 
-	// Token: 0x0400E6B9 RID: 59065
+	// Token: 0x0400EB6F RID: 60271
 	private static int __PropertyOffset_跳过表现过程;
 
-	// Token: 0x0400E6BA RID: 59066
+	// Token: 0x0400EB70 RID: 60272
 	private static int __PropertyOffset_模拟状态;
 
-	// Token: 0x0400E6BB RID: 59067
+	// Token: 0x0400EB71 RID: 60273
 	private static int __PropertyOffset_模拟Tag;
 
-	// Token: 0x0200980E RID: 38926
+	// Token: 0x02008A31 RID: 35377
+	[NullableContext(0)]
+	private sealed class PendingState
+	{
+		// Token: 0x06042A50 RID: 272976 RVA: 0x013CA07B File Offset: 0x013C827B
+		public PendingState(EKuroSceneInteractionState targetState, bool needTransition, bool jumpToEnd)
+		{
+		}
+
+		// Token: 0x0402BEA7 RID: 179879
+		public readonly EKuroSceneInteractionState TargetState = targetState;
+
+		// Token: 0x0402BEA8 RID: 179880
+		public readonly bool NeedTransition = needTransition;
+
+		// Token: 0x0402BEA9 RID: 179881
+		public readonly bool JumpToEnd = jumpToEnd;
+	}
+
+	// Token: 0x02008A32 RID: 35378
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __SetOverrideSeqBindActor_FunctionParams
 	{
-		// Token: 0x0403081A RID: 198682
+		// Token: 0x0402BEAA RID: 179882
 		[FieldOffset(0)]
 		public IntPtr actorToBind;
 
-		// Token: 0x0403081B RID: 198683
+		// Token: 0x0402BEAB RID: 179883
 		[FieldOffset(8)]
 		public FString bindingName;
 	}
 
-	// Token: 0x0200980F RID: 38927
+	// Token: 0x02008A33 RID: 35379
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __UnsetOverrideSeqBindActor_FunctionParams
 	{
-		// Token: 0x0403081C RID: 198684
+		// Token: 0x0402BEAC RID: 179884
 		[FieldOffset(0)]
 		public IntPtr actorToUnbind;
 
-		// Token: 0x0403081D RID: 198685
+		// Token: 0x0402BEAD RID: 179885
 		[FieldOffset(8)]
 		public FString bindingName;
 	}
 
-	// Token: 0x02009810 RID: 38928
+	// Token: 0x02008A34 RID: 35380
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 1)]
 	protected ref struct __CheckAllEffectPlaying_FunctionParams
 	{
-		// Token: 0x0403081E RID: 198686
+		// Token: 0x0402BEAE RID: 179886
 		[FieldOffset(0)]
 		public bool __Result;
 	}
 
-	// Token: 0x02009811 RID: 38929
+	// Token: 0x02008A35 RID: 35381
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __PlayKuroSkeletalMeshDestruction_FunctionParams
 	{
-		// Token: 0x0403081F RID: 198687
+		// Token: 0x0402BEAF RID: 179887
 		[FieldOffset(0)]
 		public IntPtr actor;
 
-		// Token: 0x04030820 RID: 198688
+		// Token: 0x0402BEB0 RID: 179888
 		[FieldOffset(8)]
 		public bool isJumpToEnd;
 	}
 
-	// Token: 0x02009812 RID: 38930
+	// Token: 0x02008A36 RID: 35382
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __OverrideKuroDestructibleActorPhysicsVelocity_FunctionParams
 	{
-		// Token: 0x04030821 RID: 198689
+		// Token: 0x0402BEB1 RID: 179889
 		[FieldOffset(0)]
 		public IntPtr skeletalMeshDestruction;
 	}
 
-	// Token: 0x02009813 RID: 38931
+	// Token: 0x02008A37 RID: 35383
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __GetActiveSequenceRemainTime_FunctionParams
 	{
-		// Token: 0x04030822 RID: 198690
+		// Token: 0x0402BEB2 RID: 179890
 		[FieldOffset(0)]
 		public IntPtr sequence;
 
-		// Token: 0x04030823 RID: 198691
+		// Token: 0x0402BEB3 RID: 179891
 		[FieldOffset(8)]
 		public float __Result;
 	}
 
-	// Token: 0x02009814 RID: 38932
+	// Token: 0x02008A38 RID: 35384
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 1)]
 	protected ref struct __ApplyAnimOptimizationParams_FunctionParams
 	{
-		// Token: 0x04030824 RID: 198692
+		// Token: 0x0402BEB4 RID: 179892
 		[FieldOffset(0)]
 		public bool bUseDistanceMap;
 	}
 
-	// Token: 0x02009815 RID: 38933
+	// Token: 0x02008A39 RID: 35385
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __PostAutoMergeEvent_FunctionParams
 	{
-		// Token: 0x04030825 RID: 198693
+		// Token: 0x0402BEB5 RID: 179893
 		[FieldOffset(0)]
 		public FString eventName;
 
-		// Token: 0x04030826 RID: 198694
+		// Token: 0x0402BEB6 RID: 179894
 		[FieldOffset(16)]
 		public float tagId;
 
-		// Token: 0x04030827 RID: 198695
+		// Token: 0x0402BEB7 RID: 179895
 		[FieldOffset(20)]
 		public bool follow;
 	}
 
-	// Token: 0x02009816 RID: 38934
+	// Token: 0x02008A3A RID: 35386
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __PostTagEvent_FunctionParams
 	{
-		// Token: 0x04030828 RID: 198696
+		// Token: 0x0402BEB8 RID: 179896
 		[FieldOffset(0)]
 		public FString eventName;
 
-		// Token: 0x04030829 RID: 198697
+		// Token: 0x0402BEB9 RID: 179897
 		[FieldOffset(16)]
 		public FGameplayTag tag;
 
-		// Token: 0x0403082A RID: 198698
+		// Token: 0x0402BEBA RID: 179898
 		[FieldOffset(28)]
 		public bool follow;
 	}
 
-	// Token: 0x02009817 RID: 38935
+	// Token: 0x02008A3B RID: 35387
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 12)]
 	protected ref struct __StopTagAkEvent_FunctionParams
 	{
-		// Token: 0x0403082B RID: 198699
+		// Token: 0x0402BEBB RID: 179899
 		[FieldOffset(0)]
 		public FGameplayTag tag;
 	}
 
-	// Token: 0x02009818 RID: 38936
+	// Token: 0x02008A3C RID: 35388
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 64)]
 	protected ref struct __UpdateProjectionActorTransform_FunctionParams
 	{
-		// Token: 0x0403082C RID: 198700
+		// Token: 0x0402BEBC RID: 179900
 		[FieldOffset(0)]
 		public FTransformDouble transform;
 	}
 
-	// Token: 0x02009819 RID: 38937
+	// Token: 0x02008A3D RID: 35389
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __AddMatrialDataForChildrenActor_FunctionParams
 	{
-		// Token: 0x0403082D RID: 198701
+		// Token: 0x0402BEBD RID: 179901
 		[FieldOffset(0)]
 		public IntPtr actor;
 
-		// Token: 0x0403082E RID: 198702
+		// Token: 0x0402BEBE RID: 179902
 		[FieldOffset(8)]
 		public IntPtr materialData;
 	}
 
-	// Token: 0x0200981A RID: 38938
+	// Token: 0x02008A3E RID: 35390
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 12)]
 	protected ref struct __ResetTagActorHide_FunctionParams
 	{
-		// Token: 0x0403082F RID: 198703
+		// Token: 0x0402BEBF RID: 179903
 		[FieldOffset(0)]
 		public FGameplayTag tag;
 	}
 
-	// Token: 0x0200981B RID: 38939
+	// Token: 0x02008A3F RID: 35391
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __GetDirectorBySequence_FunctionParams
 	{
-		// Token: 0x04030830 RID: 198704
+		// Token: 0x0402BEC0 RID: 179904
 		[FieldOffset(0)]
 		public IntPtr sequence;
 
-		// Token: 0x04030831 RID: 198705
+		// Token: 0x0402BEC1 RID: 179905
 		[FieldOffset(8)]
 		public IntPtr __Result;
 	}
 
-	// Token: 0x0200981C RID: 38940
+	// Token: 0x02008A40 RID: 35392
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 12)]
 	protected ref struct __StopExtraEffectOnTagsChange_FunctionParams
 	{
-		// Token: 0x04030832 RID: 198706
+		// Token: 0x0402BEC2 RID: 179906
 		[FieldOffset(0)]
 		public FGameplayTag tag;
 	}

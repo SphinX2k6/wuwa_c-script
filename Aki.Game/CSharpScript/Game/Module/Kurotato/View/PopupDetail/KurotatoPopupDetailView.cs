@@ -10,16 +10,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.PopupDetail
 {
-	// Token: 0x0200573C RID: 22332
+	// Token: 0x02004713 RID: 18195
 	public class KurotatoPopupDetailView : UiViewBase
 	{
-		// Token: 0x06038C60 RID: 232544 RVA: 0x00D7A8C7 File Offset: 0x00D78AC7
+		// Token: 0x0602DB70 RID: 187248 RVA: 0x00CC8F77 File Offset: 0x00CC7177
 		[NullableContext(1)]
 		public KurotatoPopupDetailView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06038C61 RID: 232545 RVA: 0x00D7A8DC File Offset: 0x00D78ADC
+		// Token: 0x0602DB71 RID: 187249 RVA: 0x00CC8F8C File Offset: 0x00CC718C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.PopupDetail
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06038C62 RID: 232546 RVA: 0x00D7A984 File Offset: 0x00D78B84
+		// Token: 0x0602DB72 RID: 187250 RVA: 0x00CC9034 File Offset: 0x00CC7234
 		protected override UniTask OnBeforeStartAsync()
 		{
 			KurotatoPopupDetailView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -51,22 +51,22 @@ namespace CSharpScript.Game.Module.Kurotato.View.PopupDetail
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038C63 RID: 232547 RVA: 0x00D7A9C7 File Offset: 0x00D78BC7
+		// Token: 0x0602DB73 RID: 187251 RVA: 0x00CC9077 File Offset: 0x00CC7277
 		private void OnClickClose()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0401DC81 RID: 121985
+		// Token: 0x04018717 RID: 100119
 		[Nullable(1)]
 		private readonly KurotatoAttributePanel AttributePanel = new KurotatoAttributePanel();
 
-		// Token: 0x0200B91C RID: 47388
+		// Token: 0x0200A33D RID: 41789
 		private enum EComponents
 		{
-			// Token: 0x04037FC0 RID: 229312
+			// Token: 0x040329D0 RID: 207312
 			ItemAttrView,
-			// Token: 0x04037FC1 RID: 229313
+			// Token: 0x040329D1 RID: 207313
 			BtnClose
 		}
 	}

@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006E65 RID: 28261
+	// Token: 0x020075E6 RID: 30182
 	public class IRemovePreloadResourcePhantomCharacterT
 	{
-		// Token: 0x1700D27F RID: 53887
-		// (get) Token: 0x06031F08 RID: 204552 RVA: 0x006C19E5 File Offset: 0x006BFBE5
-		// (set) Token: 0x06031F09 RID: 204553 RVA: 0x006C19ED File Offset: 0x006BFBED
+		// Token: 0x1700DDD1 RID: 56785
+		// (get) Token: 0x06034F30 RID: 216880 RVA: 0x0071D4E5 File Offset: 0x0071B6E5
+		// (set) Token: 0x06034F31 RID: 216881 RVA: 0x0071D4ED File Offset: 0x0071B6ED
 		public ERemovePreloadResourceObjectType Type { get; set; }
 
-		// Token: 0x1700D280 RID: 53888
-		// (get) Token: 0x06031F0A RID: 204554 RVA: 0x006C19F6 File Offset: 0x006BFBF6
-		// (set) Token: 0x06031F0B RID: 204555 RVA: 0x006C19FE File Offset: 0x006BFBFE
+		// Token: 0x1700DDD2 RID: 56786
+		// (get) Token: 0x06034F32 RID: 216882 RVA: 0x0071D4F6 File Offset: 0x0071B6F6
+		// (set) Token: 0x06034F33 RID: 216883 RVA: 0x0071D4FE File Offset: 0x0071B6FE
 		public int Id { get; set; }
 
-		// Token: 0x1700D281 RID: 53889
-		// (get) Token: 0x06031F0C RID: 204556 RVA: 0x006C1A07 File Offset: 0x006BFC07
-		// (set) Token: 0x06031F0D RID: 204557 RVA: 0x006C1A0F File Offset: 0x006BFC0F
+		// Token: 0x1700DDD3 RID: 56787
+		// (get) Token: 0x06034F34 RID: 216884 RVA: 0x0071D507 File Offset: 0x0071B707
+		// (set) Token: 0x06034F35 RID: 216885 RVA: 0x0071D50F File Offset: 0x0071B70F
 		public IDelayRemoveAfterSkillFinishT DelayReMove { get; set; }
 
-		// Token: 0x06031F0E RID: 204558 RVA: 0x006C1A18 File Offset: 0x006BFC18
+		// Token: 0x06034F36 RID: 216886 RVA: 0x0071D518 File Offset: 0x0071B718
 		public IRemovePreloadResourcePhantomCharacterT()
 		{
 			this.Type = ERemovePreloadResourceObjectType.RemovePreloadResourceTrialCharacter;

@@ -7,7 +7,7 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x020013DB RID: 5083
+	// Token: 0x020002C7 RID: 711
 	[HasGetTypeHash]
 	[UnrealBlittableStruct(UnrealReflectionPropertyTypeCode.UnrealBlittableStruct)]
 	[UnrealStructLayout(12, 4, UnrealReflectionPropertyTypeCode.UnrealBlittableStruct, PropertiesSize = 12)]
@@ -15,31 +15,31 @@ namespace UnrealEngine
 	[StructLayout(LayoutKind.Explicit, Pack = 4, Size = 12)]
 	public struct FGameplayTag : IEqualityOperators<FGameplayTag, FGameplayTag, bool>, IEquatable<FGameplayTag>, IUnrealScriptStruct
 	{
-		// Token: 0x06012980 RID: 76160 RVA: 0x001B5BD9 File Offset: 0x001B3DD9
+		// Token: 0x06004DBD RID: 19901 RVA: 0x0006C9FE File Offset: 0x0006ABFE
 		public FGameplayTag(FName TagName)
 		{
 			this.TagName = TagName;
 		}
 
-		// Token: 0x06012981 RID: 76161 RVA: 0x001B5BE2 File Offset: 0x001B3DE2
+		// Token: 0x06004DBE RID: 19902 RVA: 0x0006CA07 File Offset: 0x0006AC07
 		public static bool operator ==(FGameplayTag left, FGameplayTag right)
 		{
 			return left.TagName == right.TagName;
 		}
 
-		// Token: 0x06012982 RID: 76162 RVA: 0x001B5BF5 File Offset: 0x001B3DF5
+		// Token: 0x06004DBF RID: 19903 RVA: 0x0006CA1A File Offset: 0x0006AC1A
 		public static bool operator !=(FGameplayTag left, FGameplayTag right)
 		{
 			return !(left == right);
 		}
 
-		// Token: 0x06012983 RID: 76163 RVA: 0x001B5C01 File Offset: 0x001B3E01
+		// Token: 0x06004DC0 RID: 19904 RVA: 0x0006CA26 File Offset: 0x0006AC26
 		public bool Equals(FGameplayTag other)
 		{
 			return this == other;
 		}
 
-		// Token: 0x06012984 RID: 76164 RVA: 0x001B5C10 File Offset: 0x001B3E10
+		// Token: 0x06004DC1 RID: 19905 RVA: 0x0006CA34 File Offset: 0x0006AC34
 		[NullableContext(2)]
 		public override bool Equals(object obj)
 		{
@@ -51,26 +51,26 @@ namespace UnrealEngine
 			return false;
 		}
 
-		// Token: 0x06012985 RID: 76165 RVA: 0x001B5C35 File Offset: 0x001B3E35
+		// Token: 0x06004DC2 RID: 19906 RVA: 0x0006CA59 File Offset: 0x0006AC59
 		public override int GetHashCode()
 		{
 			return HashCode.Combine<FName>(this.TagName);
 		}
 
-		// Token: 0x06012986 RID: 76166 RVA: 0x001B5C42 File Offset: 0x001B3E42
+		// Token: 0x06004DC3 RID: 19907 RVA: 0x0006CA66 File Offset: 0x0006AC66
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FGameplayTag._ScriptStructPtr != 0) ? FGameplayTag._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/GameplayTags.GameplayTag", ref FGameplayTag._ScriptStructPtr);
 		}
 
-		// Token: 0x04009EFB RID: 40699
+		// Token: 0x04001F04 RID: 7940
 		[FieldOffset(0)]
 		public readonly FName TagName;
 
-		// Token: 0x04009EFC RID: 40700
+		// Token: 0x04001F05 RID: 7941
 		public const string __ObjectPath = "/Script/GameplayTags.GameplayTag";
 
-		// Token: 0x04009EFD RID: 40701
+		// Token: 0x04001F06 RID: 7942
 		private static IntPtr _ScriptStructPtr;
 	}
 }

@@ -3,22 +3,22 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.FunPlay
 {
-	// Token: 0x02006575 RID: 25973
+	// Token: 0x020054F3 RID: 21747
 	public class RedDotActivityFunPlay : RedDotBase
 	{
-		// Token: 0x0604118D RID: 266637 RVA: 0x00FC701C File Offset: 0x00FC521C
+		// Token: 0x06035E52 RID: 220754 RVA: 0x00F0E000 File Offset: 0x00F0C200
 		protected override void AddCheckEvent()
 		{
 			EventSystem.Instance.Add<int>(EEventName.RefreshActivityFunPlayRedDot, new Action<int>(base.EventCheckWithUid));
 		}
 
-		// Token: 0x0604118E RID: 266638 RVA: 0x00FC703A File Offset: 0x00FC523A
+		// Token: 0x06035E53 RID: 220755 RVA: 0x00F0E01E File Offset: 0x00F0C21E
 		protected override void RemoveCheckEvent()
 		{
 			EventSystem.Instance.Remove<int>(EEventName.RefreshActivityFunPlayRedDot, new Action<int>(base.EventCheckWithUid));
 		}
 
-		// Token: 0x0604118F RID: 266639 RVA: 0x00FC7058 File Offset: 0x00FC5258
+		// Token: 0x06035E54 RID: 220756 RVA: 0x00F0E03C File Offset: 0x00F0C23C
 		protected override bool OnCheck(int challengeId)
 		{
 			ActivityFunPlayChallengeData challengeData = ActivityFunPlayModel.Instance.GetChallengeData(challengeId);

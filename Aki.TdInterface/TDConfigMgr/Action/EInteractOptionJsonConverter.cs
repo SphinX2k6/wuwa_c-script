@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002362 RID: 9058
+	// Token: 0x020025D7 RID: 9687
 	public class EInteractOptionJsonConverter : JsonConverter<EInteractOption>
 	{
-		// Token: 0x0600C5B9 RID: 50617 RVA: 0x001CE9B8 File Offset: 0x001CCBB8
+		// Token: 0x0600D1A3 RID: 53667 RVA: 0x001E6C98 File Offset: 0x001E4E98
 		public override EInteractOption Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EInteractOptionExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C5BA RID: 50618 RVA: 0x001CE9DC File Offset: 0x001CCBDC
+		// Token: 0x0600D1A4 RID: 53668 RVA: 0x001E6CBC File Offset: 0x001E4EBC
 		public override void Write(Utf8JsonWriter writer, EInteractOption value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

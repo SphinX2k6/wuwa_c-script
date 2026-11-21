@@ -8,17 +8,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200219D RID: 8605
+// Token: 0x02001681 RID: 5761
 [NullableContext(1)]
 [Nullable(0)]
 public class LordGymChallengeRecordView : UiViewBase
 {
-	// Token: 0x06010B9C RID: 68508 RVA: 0x0040FFD7 File Offset: 0x0040E1D7
+	// Token: 0x0600E02D RID: 57389 RVA: 0x0041C8C2 File Offset: 0x0041AAC2
 	public LordGymChallengeRecordView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06010B9D RID: 68509 RVA: 0x00410004 File Offset: 0x0040E204
+	// Token: 0x0600E02E RID: 57390 RVA: 0x0041C8EC File Offset: 0x0041AAEC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -40,7 +40,7 @@ public class LordGymChallengeRecordView : UiViewBase
 		};
 	}
 
-	// Token: 0x06010B9E RID: 68510 RVA: 0x00410120 File Offset: 0x0040E320
+	// Token: 0x0600E02F RID: 57391 RVA: 0x0041CA08 File Offset: 0x0041AC08
 	protected override UniTask OnBeforeStartAsync()
 	{
 		LordGymChallengeRecordView.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -51,7 +51,7 @@ public class LordGymChallengeRecordView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010B9F RID: 68511 RVA: 0x00410164 File Offset: 0x0040E364
+	// Token: 0x0600E030 RID: 57392 RVA: 0x0041CA4C File Offset: 0x0041AC4C
 	protected override void OnStart()
 	{
 		int defaultTabIndex = this.GetDefaultTabIndex();
@@ -65,7 +65,7 @@ public class LordGymChallengeRecordView : UiViewBase
 		this.UpdateRecordScrollView();
 	}
 
-	// Token: 0x06010BA0 RID: 68512 RVA: 0x004101CC File Offset: 0x0040E3CC
+	// Token: 0x0600E031 RID: 57393 RVA: 0x0041CAB4 File Offset: 0x0041ACB4
 	private void RefreshAllTabToggleState()
 	{
 		GenericScrollViewNew<LordGymFilterTypeTabItem, LordGymFilterType> tabScroll = this.TabScroll;
@@ -75,7 +75,7 @@ public class LordGymChallengeRecordView : UiViewBase
 		}
 	}
 
-	// Token: 0x06010BA1 RID: 68513 RVA: 0x00410240 File Offset: 0x0040E440
+	// Token: 0x0600E032 RID: 57394 RVA: 0x0041CB28 File Offset: 0x0041AD28
 	protected override void OnBeforeDestroy()
 	{
 		this.TabScroll = null;
@@ -84,7 +84,7 @@ public class LordGymChallengeRecordView : UiViewBase
 		this.SeqPlayer = null;
 	}
 
-	// Token: 0x06010BA2 RID: 68514 RVA: 0x00410260 File Offset: 0x0040E460
+	// Token: 0x0600E033 RID: 57395 RVA: 0x0041CB48 File Offset: 0x0041AD48
 	private void PlaySwitchSequence()
 	{
 		LevelSequencePlayer seqPlayer = this.SeqPlayer;
@@ -100,7 +100,7 @@ public class LordGymChallengeRecordView : UiViewBase
 		seqPlayer2.PlayLevelSequenceByName(this.SwitchSequenceName, false, null, false);
 	}
 
-	// Token: 0x06010BA3 RID: 68515 RVA: 0x004102A8 File Offset: 0x0040E4A8
+	// Token: 0x0600E034 RID: 57396 RVA: 0x0041CB90 File Offset: 0x0041AD90
 	private int GetDefaultTabIndex()
 	{
 		if (this.FilterTypeList.Count == 0)
@@ -133,19 +133,19 @@ public class LordGymChallengeRecordView : UiViewBase
 		return 0;
 	}
 
-	// Token: 0x06010BA4 RID: 68516 RVA: 0x00410358 File Offset: 0x0040E558
+	// Token: 0x0600E035 RID: 57397 RVA: 0x0041CC40 File Offset: 0x0041AE40
 	private bool MatchesSelectedFilter(LordGym config)
 	{
 		return config.FilterType == this.SelectedFilterTypeId;
 	}
 
-	// Token: 0x06010BA5 RID: 68517 RVA: 0x00410369 File Offset: 0x0040E569
+	// Token: 0x0600E036 RID: 57398 RVA: 0x0041CC51 File Offset: 0x0041AE51
 	private void OnCloseBtnClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06010BA6 RID: 68518 RVA: 0x00410372 File Offset: 0x0040E572
+	// Token: 0x0600E037 RID: 57399 RVA: 0x0041CC5A File Offset: 0x0041AE5A
 	private void OnSelectTab(int filterTypeId)
 	{
 		if (this.SelectedFilterTypeId == filterTypeId)
@@ -160,7 +160,7 @@ public class LordGymChallengeRecordView : UiViewBase
 		this.PlaySwitchSequence();
 	}
 
-	// Token: 0x06010BA7 RID: 68519 RVA: 0x004103A4 File Offset: 0x0040E5A4
+	// Token: 0x0600E038 RID: 57400 RVA: 0x0041CC8C File Offset: 0x0041AE8C
 	private void OnClickPrevDifficulty()
 	{
 		int num = this.AvailableDifficulties.IndexOf(this.SelectedDifficulty);
@@ -174,7 +174,7 @@ public class LordGymChallengeRecordView : UiViewBase
 		this.PlaySwitchSequence();
 	}
 
-	// Token: 0x06010BA8 RID: 68520 RVA: 0x004103F0 File Offset: 0x0040E5F0
+	// Token: 0x0600E039 RID: 57401 RVA: 0x0041CCD8 File Offset: 0x0041AED8
 	private void OnClickNextDifficulty()
 	{
 		int num = this.AvailableDifficulties.IndexOf(this.SelectedDifficulty);
@@ -188,7 +188,7 @@ public class LordGymChallengeRecordView : UiViewBase
 		this.PlaySwitchSequence();
 	}
 
-	// Token: 0x06010BA9 RID: 68521 RVA: 0x0041044C File Offset: 0x0040E64C
+	// Token: 0x0600E03A RID: 57402 RVA: 0x0041CD34 File Offset: 0x0041AF34
 	private void RefreshDifficultyState()
 	{
 		this.AvailableDifficulties = this.ComputeAvailableDifficulties();
@@ -207,7 +207,7 @@ public class LordGymChallengeRecordView : UiViewBase
 		this.UpdateDifficultyButtons();
 	}
 
-	// Token: 0x06010BAA RID: 68522 RVA: 0x004104B0 File Offset: 0x0040E6B0
+	// Token: 0x0600E03B RID: 57403 RVA: 0x0041CD98 File Offset: 0x0041AF98
 	private List<int> ComputeAvailableDifficulties()
 	{
 		List<int> list = new List<int>();
@@ -233,7 +233,7 @@ public class LordGymChallengeRecordView : UiViewBase
 		return list;
 	}
 
-	// Token: 0x06010BAB RID: 68523 RVA: 0x0041057C File Offset: 0x0040E77C
+	// Token: 0x0600E03C RID: 57404 RVA: 0x0041CE64 File Offset: 0x0041B064
 	private void UpdateDifficultyLabel()
 	{
 		UUIText text = base.GetText(5);
@@ -250,7 +250,7 @@ public class LordGymChallengeRecordView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(text, "LordGymDifficulty", new <>z__ReadOnlySingleElementList<object>(this.SelectedDifficulty));
 	}
 
-	// Token: 0x06010BAC RID: 68524 RVA: 0x004105CC File Offset: 0x0040E7CC
+	// Token: 0x0600E03D RID: 57405 RVA: 0x0041CEB4 File Offset: 0x0041B0B4
 	private void UpdateDifficultyButtons()
 	{
 		bool uiactive = this.AvailableDifficulties.Count > 1;
@@ -267,7 +267,7 @@ public class LordGymChallengeRecordView : UiViewBase
 		button2.RootUIComp.Get().SetUIActive(uiactive);
 	}
 
-	// Token: 0x06010BAD RID: 68525 RVA: 0x00410628 File Offset: 0x0040E828
+	// Token: 0x0600E03E RID: 57406 RVA: 0x0041CF10 File Offset: 0x0041B110
 	private List<LordGym> GetLordList()
 	{
 		List<LordGym> list = new List<LordGym>();
@@ -291,7 +291,7 @@ public class LordGymChallengeRecordView : UiViewBase
 		return list;
 	}
 
-	// Token: 0x06010BAE RID: 68526 RVA: 0x004106F4 File Offset: 0x0040E8F4
+	// Token: 0x0600E03F RID: 57407 RVA: 0x0041CFDC File Offset: 0x0041B1DC
 	private void UpdateRecordScrollView()
 	{
 		List<LordGym> lordList = this.GetLordList();
@@ -304,38 +304,38 @@ public class LordGymChallengeRecordView : UiViewBase
 		this.RecordScroll.SetActive(lordList.Count > 0);
 	}
 
-	// Token: 0x06010BAF RID: 68527 RVA: 0x00410745 File Offset: 0x0040E945
+	// Token: 0x0600E040 RID: 57408 RVA: 0x0041D02D File Offset: 0x0041B22D
 	private LordGymFilterTypeTabItem CreateTabItem()
 	{
 		return new LordGymFilterTypeTabItem(new Action<int>(this.OnSelectTab));
 	}
 
-	// Token: 0x06010BB0 RID: 68528 RVA: 0x00410758 File Offset: 0x0040E958
+	// Token: 0x0600E041 RID: 57409 RVA: 0x0041D040 File Offset: 0x0041B240
 	private LordGymRecordItem CreateRecordItem()
 	{
 		return new LordGymRecordItem();
 	}
 
-	// Token: 0x04007F5E RID: 32606
+	// Token: 0x040080A5 RID: 32933
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04007F5F RID: 32607
+	// Token: 0x040080A6 RID: 32934
 	private int DefaultLordEntranceId;
 
-	// Token: 0x04007F60 RID: 32608
+	// Token: 0x040080A7 RID: 32935
 	private int DefaultDifficulty;
 
-	// Token: 0x04007F61 RID: 32609
+	// Token: 0x040080A8 RID: 32936
 	private int SelectedFilterTypeId;
 
-	// Token: 0x04007F62 RID: 32610
+	// Token: 0x040080A9 RID: 32937
 	private int SelectedDifficulty;
 
-	// Token: 0x04007F63 RID: 32611
+	// Token: 0x040080AA RID: 32938
 	private List<int> AvailableDifficulties = new List<int>();
 
-	// Token: 0x04007F64 RID: 32612
+	// Token: 0x040080AB RID: 32939
 	[Nullable(new byte[]
 	{
 		2,
@@ -343,7 +343,7 @@ public class LordGymChallengeRecordView : UiViewBase
 	})]
 	private GenericScrollViewNew<LordGymFilterTypeTabItem, LordGymFilterType> TabScroll;
 
-	// Token: 0x04007F65 RID: 32613
+	// Token: 0x040080AC RID: 32940
 	[Nullable(new byte[]
 	{
 		2,
@@ -351,45 +351,45 @@ public class LordGymChallengeRecordView : UiViewBase
 	})]
 	private GenericScrollViewNew<LordGymRecordItem, LordGym> RecordScroll;
 
-	// Token: 0x04007F66 RID: 32614
+	// Token: 0x040080AD RID: 32941
 	private List<LordGymFilterType> FilterTypeList = new List<LordGymFilterType>();
 
-	// Token: 0x04007F67 RID: 32615
+	// Token: 0x040080AE RID: 32942
 	[Nullable(2)]
 	private LevelSequencePlayer SeqPlayer;
 
-	// Token: 0x04007F68 RID: 32616
+	// Token: 0x040080AF RID: 32943
 	private readonly string SwitchSequenceName = "switch";
 
-	// Token: 0x020086C6 RID: 34502
+	// Token: 0x02007851 RID: 30801
 	[NullableContext(0)]
 	private class EChallengeRecordComponents
 	{
-		// Token: 0x0402BD9D RID: 179613
+		// Token: 0x040270BE RID: 159934
 		public const int Caption = 0;
 
-		// Token: 0x0402BD9E RID: 179614
+		// Token: 0x040270BF RID: 159935
 		public const int SvTabLordGym = 1;
 
-		// Token: 0x0402BD9F RID: 179615
+		// Token: 0x040270C0 RID: 159936
 		public const int PnlTab = 2;
 
-		// Token: 0x0402BDA0 RID: 179616
+		// Token: 0x040270C1 RID: 159937
 		public const int BtnFunctionL = 3;
 
-		// Token: 0x0402BDA1 RID: 179617
+		// Token: 0x040270C2 RID: 159938
 		public const int BtnFunctionR = 4;
 
-		// Token: 0x0402BDA2 RID: 179618
+		// Token: 0x040270C3 RID: 159939
 		public const int TxtDifficult = 5;
 
-		// Token: 0x0402BDA3 RID: 179619
+		// Token: 0x040270C4 RID: 159940
 		public const int ScrollView = 6;
 
-		// Token: 0x0402BDA4 RID: 179620
+		// Token: 0x040270C5 RID: 159941
 		public const int PnlList = 7;
 
-		// Token: 0x0402BDA5 RID: 179621
+		// Token: 0x040270C6 RID: 159942
 		public const int UiItemEmpty = 8;
 	}
 }

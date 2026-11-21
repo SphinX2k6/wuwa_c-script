@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x0200258D RID: 9613
+// Token: 0x02001A78 RID: 6776
 public enum EPhotoFrameMode
 {
-	// Token: 0x040092D4 RID: 37588
+	// Token: 0x0400942C RID: 37932
 	None,
-	// Token: 0x040092D5 RID: 37589
+	// Token: 0x0400942D RID: 37933
 	SquareMask,
-	// Token: 0x040092D6 RID: 37590
+	// Token: 0x0400942E RID: 37934
 	Frame,
-	// Token: 0x040092D7 RID: 37591
+	// Token: 0x0400942F RID: 37935
 	CircleMask,
-	// Token: 0x040092D8 RID: 37592
+	// Token: 0x04009430 RID: 37936
 	RhombusMask,
-	// Token: 0x040092D9 RID: 37593
+	// Token: 0x04009431 RID: 37937
 	TextureFrame
 }

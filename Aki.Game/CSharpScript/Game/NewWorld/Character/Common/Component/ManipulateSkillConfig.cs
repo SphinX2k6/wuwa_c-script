@@ -5,34 +5,34 @@ using CSharpScript.Game.Module.RoleUi;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component
 {
-	// Token: 0x020070D6 RID: 28886
+	// Token: 0x0200633A RID: 25402
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class ManipulateSkillConfig
 	{
-		// Token: 0x060467C1 RID: 288705 RVA: 0x011B37D0 File Offset: 0x011B19D0
+		// Token: 0x0603D8C8 RID: 252104 RVA: 0x011D286D File Offset: 0x011D0A6D
 		public static bool IsMechascoutRole(int roleId)
 		{
 			return RoleConfig.Instance.GetBaseRoleId(roleId) == 5045;
 		}
 
-		// Token: 0x060467C2 RID: 288706 RVA: 0x011B37E4 File Offset: 0x011B19E4
+		// Token: 0x0603D8C9 RID: 252105 RVA: 0x011D2884 File Offset: 0x011D0A84
 		public static ManipulateSkillConfigData GetSkillConfig(int roleId)
 		{
 			int baseRoleId = RoleConfig.Instance.GetBaseRoleId(roleId);
 			return ManipulateSkillConfig.RoleSkillConfigMap.GetValueOrDefault(baseRoleId, ManipulateSkillConfig.DefaultConfig);
 		}
 
-		// Token: 0x060467C3 RID: 288707 RVA: 0x011B380D File Offset: 0x011B1A0D
+		// Token: 0x0603D8CA RID: 252106 RVA: 0x011D28AD File Offset: 0x011D0AAD
 		public static ManipulateSkillConfigData GetDefaultConfig()
 		{
 			return ManipulateSkillConfig.DefaultConfig;
 		}
 
-		// Token: 0x04024F23 RID: 151331
+		// Token: 0x04020A62 RID: 133730
 		public const int MechascoutBaseRoleId = 5045;
 
-		// Token: 0x04024F24 RID: 151332
+		// Token: 0x04020A63 RID: 133731
 		[StaticVariableRuleIgnore]
 		private static readonly ManipulateSkillConfigData DefaultConfig = new ManipulateSkillConfigData
 		{
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			HoldingSkillId = 210007
 		};
 
-		// Token: 0x04024F25 RID: 151333
+		// Token: 0x04020A64 RID: 133732
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<int, ManipulateSkillConfigData> RoleSkillConfigMap = new Dictionary<int, ManipulateSkillConfigData>
 		{

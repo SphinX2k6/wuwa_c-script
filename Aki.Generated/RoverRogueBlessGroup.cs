@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02001073 RID: 4211
+	// Token: 0x0200116E RID: 4462
 	public struct RoverRogueBlessGroup : IFlatbufferObject
 	{
-		// Token: 0x17003411 RID: 13329
-		// (get) Token: 0x0600CD21 RID: 52513 RVA: 0x00304A50 File Offset: 0x00302C50
+		// Token: 0x1700351E RID: 13598
+		// (get) Token: 0x0600D4F4 RID: 54516 RVA: 0x0032422C File Offset: 0x0032242C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600CD22 RID: 52514 RVA: 0x00304A5D File Offset: 0x00302C5D
+		// Token: 0x0600D4F5 RID: 54517 RVA: 0x00324239 File Offset: 0x00322439
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600CD23 RID: 52515 RVA: 0x00304A64 File Offset: 0x00302C64
+		// Token: 0x0600D4F6 RID: 54518 RVA: 0x00324240 File Offset: 0x00322440
 		public static RoverRogueBlessGroup GetRootAsRoverRogueBlessGroup(ByteBuffer _bb)
 		{
 			return RoverRogueBlessGroup.GetRootAsRoverRogueBlessGroup(_bb, default(RoverRogueBlessGroup));
 		}
 
-		// Token: 0x0600CD24 RID: 52516 RVA: 0x00304A80 File Offset: 0x00302C80
+		// Token: 0x0600D4F7 RID: 54519 RVA: 0x0032425C File Offset: 0x0032245C
 		public static RoverRogueBlessGroup GetRootAsRoverRogueBlessGroup(ByteBuffer _bb, RoverRogueBlessGroup obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600CD25 RID: 52517 RVA: 0x00304A9D File Offset: 0x00302C9D
+		// Token: 0x0600D4F8 RID: 54520 RVA: 0x00324279 File Offset: 0x00322479
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600CD26 RID: 52518 RVA: 0x00304AAC File Offset: 0x00302CAC
+		// Token: 0x0600D4F9 RID: 54521 RVA: 0x00324288 File Offset: 0x00322488
 		public RoverRogueBlessGroup __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003412 RID: 13330
-		// (get) Token: 0x0600CD27 RID: 52519 RVA: 0x00304ABC File Offset: 0x00302CBC
+		// Token: 0x1700351F RID: 13599
+		// (get) Token: 0x0600D4FA RID: 54522 RVA: 0x00324298 File Offset: 0x00322498
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003413 RID: 13331
-		// (get) Token: 0x0600CD28 RID: 52520 RVA: 0x00304AF8 File Offset: 0x00302CF8
+		// Token: 0x17003520 RID: 13600
+		// (get) Token: 0x0600D4FB RID: 54523 RVA: 0x003242D4 File Offset: 0x003224D4
 		public int BlessRoleId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0400517C RID: 20860
+		// Token: 0x0400577B RID: 22395
 		private Table __p;
 	}
 }

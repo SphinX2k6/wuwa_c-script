@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200189D RID: 6301
+// Token: 0x02000D56 RID: 3414
 public class WeaponSkinHandBookSort : CommonSort<EWeaponSkinHandBookSortWayType>
 {
-	// Token: 0x0600B878 RID: 47224 RVA: 0x0029DCC8 File Offset: 0x0029BEC8
+	// Token: 0x06008C61 RID: 35937 RVA: 0x002A83E4 File Offset: 0x002A65E4
 	[NullableContext(2)]
 	private int SortQuality(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
@@ -43,7 +43,7 @@ public class WeaponSkinHandBookSort : CommonSort<EWeaponSkinHandBookSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B879 RID: 47225 RVA: 0x0029DD42 File Offset: 0x0029BF42
+	// Token: 0x06008C62 RID: 35938 RVA: 0x002A845E File Offset: 0x002A665E
 	protected override void OnInitSortMap()
 	{
 		this.SortMap.Add(EWeaponSkinHandBookSortWayType.Quality, new TSortResult(this.SortQuality));

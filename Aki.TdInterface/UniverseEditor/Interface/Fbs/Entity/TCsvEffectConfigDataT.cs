@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Entity
 {
-	// Token: 0x020047F7 RID: 18423
+	// Token: 0x02004C5F RID: 19551
 	public class TCsvEffectConfigDataT
 	{
-		// Token: 0x17008466 RID: 33894
-		// (get) Token: 0x0601C7F9 RID: 116729 RVA: 0x00408037 File Offset: 0x00406237
-		// (set) Token: 0x0601C7FA RID: 116730 RVA: 0x0040803F File Offset: 0x0040623F
+		// Token: 0x17008AB1 RID: 35505
+		// (get) Token: 0x0601DFF6 RID: 122870 RVA: 0x00434987 File Offset: 0x00432B87
+		// (set) Token: 0x0601DFF7 RID: 122871 RVA: 0x0043498F File Offset: 0x00432B8F
 		public int Id { get; set; }
 
-		// Token: 0x17008467 RID: 33895
-		// (get) Token: 0x0601C7FB RID: 116731 RVA: 0x00408048 File Offset: 0x00406248
-		// (set) Token: 0x0601C7FC RID: 116732 RVA: 0x00408050 File Offset: 0x00406250
+		// Token: 0x17008AB2 RID: 35506
+		// (get) Token: 0x0601DFF8 RID: 122872 RVA: 0x00434998 File Offset: 0x00432B98
+		// (set) Token: 0x0601DFF9 RID: 122873 RVA: 0x004349A0 File Offset: 0x00432BA0
 		public IEffectConfigBase_UnionUnion Data { get; set; }
 
-		// Token: 0x0601C7FD RID: 116733 RVA: 0x00408059 File Offset: 0x00406259
+		// Token: 0x0601DFFA RID: 122874 RVA: 0x004349A9 File Offset: 0x00432BA9
 		public TCsvEffectConfigDataT()
 		{
 			this.Id = 0;

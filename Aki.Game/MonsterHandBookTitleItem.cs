@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001E32 RID: 7730
+// Token: 0x020012F4 RID: 4852
 internal class MonsterHandBookTitleItem : UiPanelBase
 {
-	// Token: 0x0600EB03 RID: 60163 RVA: 0x0037AD94 File Offset: 0x00378F94
+	// Token: 0x0600BF22 RID: 48930 RVA: 0x00386A20 File Offset: 0x00384C20
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -16,7 +16,7 @@ internal class MonsterHandBookTitleItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600EB04 RID: 60164 RVA: 0x0037ADB7 File Offset: 0x00378FB7
+	// Token: 0x0600BF23 RID: 48931 RVA: 0x00386A43 File Offset: 0x00384C43
 	[NullableContext(1)]
 	public void Update(string titleText)
 	{

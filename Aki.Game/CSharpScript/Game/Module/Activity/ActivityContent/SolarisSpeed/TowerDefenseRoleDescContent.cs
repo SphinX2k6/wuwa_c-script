@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 {
-	// Token: 0x020060D6 RID: 24790
+	// Token: 0x02005054 RID: 20564
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class TowerDefenseRoleDescContent : UiPanelBase
 	{
-		// Token: 0x0603EAA6 RID: 256678 RVA: 0x00F2292C File Offset: 0x00F20B2C
+		// Token: 0x0603376A RID: 210794 RVA: 0x00E696F4 File Offset: 0x00E678F4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -31,19 +31,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603EAA7 RID: 256679 RVA: 0x00F229B6 File Offset: 0x00F20BB6
+		// Token: 0x0603376B RID: 210795 RVA: 0x00E6977E File Offset: 0x00E6797E
 		protected override void OnStart()
 		{
 			this.Scroll = new GenericScrollViewNew<TowerDefenseRoleDescItem, ITowerDefenseRoleDescData>(base.GetScrollViewWithScrollbar(1), new Func<TowerDefenseRoleDescItem>(this.InitScrollItem), base.GetItem(2).GetOwner() as AUIBaseActor, false, null);
 		}
 
-		// Token: 0x0603EAA8 RID: 256680 RVA: 0x00F229E9 File Offset: 0x00F20BE9
+		// Token: 0x0603376C RID: 210796 RVA: 0x00E697B1 File Offset: 0x00E679B1
 		private TowerDefenseRoleDescItem InitScrollItem()
 		{
 			return new TowerDefenseRoleDescItem();
 		}
 
-		// Token: 0x0603EAA9 RID: 256681 RVA: 0x00F229F0 File Offset: 0x00F20BF0
+		// Token: 0x0603376D RID: 210797 RVA: 0x00E697B8 File Offset: 0x00E679B8
 		private void RefreshDescLayout(ITowerDefenseRoleDescData[] data)
 		{
 			TowerDefenseRoleDescContent.<>c__DisplayClass5_0 CS$<>8__locals1 = new TowerDefenseRoleDescContent.<>c__DisplayClass5_0();
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			base.RunAsyncTask(task);
 		}
 
-		// Token: 0x0603EAAA RID: 256682 RVA: 0x00F22A34 File Offset: 0x00F20C34
+		// Token: 0x0603376E RID: 210798 RVA: 0x00E697FC File Offset: 0x00E679FC
 		public void Refresh(ITowerDefenseRolePanelData data)
 		{
 			TowerDefenseSettle value = InstanceDungeonConfig.Instance.GetTowerDefenseSettleById(data.BestTitle).Value;
@@ -69,20 +69,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			this.RefreshDescLayout(data.DescDataList.ToArray());
 		}
 
-		// Token: 0x04020C31 RID: 134193
+		// Token: 0x0401B55E RID: 111966
 		protected GenericScrollViewNew<TowerDefenseRoleDescItem, ITowerDefenseRoleDescData> Scroll;
 
-		// Token: 0x0200C32A RID: 49962
+		// Token: 0x0200AD15 RID: 44309
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x0403AED7 RID: 241367
+			// Token: 0x0403583F RID: 219199
 			public const int Title = 0;
 
-			// Token: 0x0403AED8 RID: 241368
+			// Token: 0x04035840 RID: 219200
 			public const int DescScroll = 1;
 
-			// Token: 0x0403AED9 RID: 241369
+			// Token: 0x04035841 RID: 219201
 			public const int DescItem = 2;
 		}
 	}

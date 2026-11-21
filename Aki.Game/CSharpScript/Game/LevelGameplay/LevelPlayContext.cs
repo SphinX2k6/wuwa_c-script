@@ -4,22 +4,22 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x0200699C RID: 27036
+	// Token: 0x02005AF8 RID: 23288
 	public class LevelPlayContext : GeneralContext
 	{
-		// Token: 0x06043442 RID: 275522 RVA: 0x01065DD5 File Offset: 0x01063FD5
+		// Token: 0x0603947A RID: 234618 RVA: 0x0100A03D File Offset: 0x0100823D
 		public LevelPlayContext()
 		{
 			this.Type = new EGeneralContextType?(EGeneralContextType.LevelPlay);
 		}
 
-		// Token: 0x06043443 RID: 275523 RVA: 0x01065DE9 File Offset: 0x01063FE9
+		// Token: 0x0603947B RID: 234619 RVA: 0x0100A051 File Offset: 0x01008251
 		public override void Reset()
 		{
 			this.LevelPlayId = 0;
 		}
 
-		// Token: 0x06043444 RID: 275524 RVA: 0x01065DF2 File Offset: 0x01063FF2
+		// Token: 0x0603947C RID: 234620 RVA: 0x0100A05A File Offset: 0x0100825A
 		[NullableContext(1)]
 		public static LevelPlayContext Create(int levelPlayId = 0, GameCtxType? subType = null)
 		{
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.LevelGamePlay
 			return levelPlayContext;
 		}
 
-		// Token: 0x040230A8 RID: 143528
+		// Token: 0x0401E292 RID: 123538
 		public int LevelPlayId;
 	}
 }

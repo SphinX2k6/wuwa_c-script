@@ -3,21 +3,21 @@ using System.Runtime.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Utils;
 
-// Token: 0x020036CA RID: 14026
+// Token: 0x02002C3F RID: 11327
 public class __TsTaskTeamWander_InheritProxy : TsTaskTeamWander
 {
-	// Token: 0x0601E3A9 RID: 123817 RVA: 0x00885740 File Offset: 0x00883940
+	// Token: 0x0601C0C2 RID: 114882 RVA: 0x008AD118 File Offset: 0x008AB318
 	[NullableContext(1)]
 	public __TsTaskTeamWander_InheritProxy(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskTeamWander.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601E3AA RID: 123818 RVA: 0x00885773 File Offset: 0x00883973
+	// Token: 0x0601C0C3 RID: 114883 RVA: 0x008AD14B File Offset: 0x008AB34B
 	protected __TsTaskTeamWander_InheritProxy(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0601E3AB RID: 123819 RVA: 0x0088577C File Offset: 0x0088397C
+	// Token: 0x0601C0C4 RID: 114884 RVA: 0x008AD154 File Offset: 0x008AB354
 	protected unsafe override void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);
@@ -25,7 +25,7 @@ public class __TsTaskTeamWander_InheritProxy : TsTaskTeamWander
 		base.ReceiveExecuteAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x0601E3AC RID: 123820 RVA: 0x008857AC File Offset: 0x008839AC
+	// Token: 0x0601C0C5 RID: 114885 RVA: 0x008AD184 File Offset: 0x008AB384
 	protected unsafe override void __CPPCALL_ReceiveTickAI_Implementation(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);

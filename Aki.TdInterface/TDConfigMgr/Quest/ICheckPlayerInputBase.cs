@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000EF2 RID: 3826
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001008 RID: 4104
 	public class ICheckPlayerInputBase
 	{
-		// Token: 0x0600546C RID: 21612 RVA: 0x000CF49C File Offset: 0x000CD69C
+		// Token: 0x060059E8 RID: 23016 RVA: 0x000DB644 File Offset: 0x000D9844
 		private ICheckPlayerInputBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600546D RID: 21613 RVA: 0x000CF4D4 File Offset: 0x000CD6D4
+		// Token: 0x060059E9 RID: 23017 RVA: 0x000DB67C File Offset: 0x000D987C
 		public static ICheckPlayerInputBase Create([Nullable(2)] ICheckPlayerInputBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600546E RID: 21614 RVA: 0x000CF4E7 File Offset: 0x000CD6E7
+		// Token: 0x060059EA RID: 23018 RVA: 0x000DB68F File Offset: 0x000D988F
 		public static ICheckPlayerInputBase CreateFromSetValue([Nullable(2)] ICheckPlayerInputBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600546F RID: 21615 RVA: 0x000CF4FA File Offset: 0x000CD6FA
+		// Token: 0x060059EB RID: 23019 RVA: 0x000DB6A2 File Offset: 0x000D98A2
 		public ICheckPlayerInputBase_SetValue ToSetValue()
 		{
 			return new ICheckPlayerInputBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001C4C RID: 7244
-		// (get) Token: 0x06005470 RID: 21616 RVA: 0x000CF50D File Offset: 0x000CD70D
-		// (set) Token: 0x06005471 RID: 21617 RVA: 0x000CF538 File Offset: 0x000CD738
+		// Token: 0x17001DE4 RID: 7652
+		// (get) Token: 0x060059EC RID: 23020 RVA: 0x000DB6B5 File Offset: 0x000D98B5
+		// (set) Token: 0x060059ED RID: 23021 RVA: 0x000DB6E0 File Offset: 0x000D98E0
 		public virtual ECheckPlayerInputType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003325 RID: 13093
+		// Token: 0x04003632 RID: 13874
 		[Nullable(2)]
 		protected ICheckPlayerInputBase FbInstance;
 
-		// Token: 0x04003326 RID: 13094
+		// Token: 0x04003633 RID: 13875
 		[Nullable(2)]
 		protected ICheckPlayerInputBase_SetValue PocoInterface;
 	}

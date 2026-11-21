@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002ACC RID: 10956
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002DC0 RID: 11712
 	public class IMovieCameraConfig
 	{
-		// Token: 0x0600F055 RID: 61525 RVA: 0x0022E65F File Offset: 0x0022C85F
+		// Token: 0x0600FF0B RID: 65291 RVA: 0x0024C36B File Offset: 0x0024A56B
 		public static IMovieCameraConfig Create(IMovieCameraConfig? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004C7F RID: 19583
-		// (get) Token: 0x0600F056 RID: 61526 RVA: 0x0022E67E File Offset: 0x0022C87E
+		// Token: 0x17005039 RID: 20537
+		// (get) Token: 0x0600FF0C RID: 65292 RVA: 0x0024C38A File Offset: 0x0024A58A
 		public virtual IEnterMovieCameraType MovieCameraType
 		{
 			get
@@ -38,13 +35,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008432 RID: 33842
+		// Token: 0x04008B36 RID: 35638
 		private IMovieCameraConfig Instance;
 
-		// Token: 0x04008433 RID: 33843
+		// Token: 0x04008B37 RID: 35639
 		private IEnterMovieCameraType _MovieCameraTypeCache;
 
-		// Token: 0x04008434 RID: 33844
+		// Token: 0x04008B38 RID: 35640
 		private bool _MovieCameraTypeInited;
 	}
 }

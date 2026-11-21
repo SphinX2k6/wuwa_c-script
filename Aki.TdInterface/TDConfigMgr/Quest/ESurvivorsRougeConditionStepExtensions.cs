@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001296 RID: 4758
+	// Token: 0x020013D8 RID: 5080
 	public static class ESurvivorsRougeConditionStepExtensions
 	{
-		// Token: 0x06006B4A RID: 27466 RVA: 0x00101A18 File Offset: 0x000FFC18
+		// Token: 0x060071A6 RID: 29094 RVA: 0x0010F7F0 File Offset: 0x0010D9F0
 		public static string ToEnumString(this ESurvivorsRougeConditionStep value)
 		{
 			string result;
@@ -39,7 +39,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006B4B RID: 27467 RVA: 0x00101A90 File Offset: 0x000FFC90
+		// Token: 0x060071A7 RID: 29095 RVA: 0x0010F868 File Offset: 0x0010DA68
 		public static ESurvivorsRougeConditionStep FromString(string name)
 		{
 			ESurvivorsRougeConditionStep result;
@@ -50,7 +50,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006B4C RID: 27468 RVA: 0x00101ABC File Offset: 0x000FFCBC
+		// Token: 0x060071A8 RID: 29096 RVA: 0x0010F894 File Offset: 0x0010DA94
 		public static bool TryFromString(string name, out ESurvivorsRougeConditionStep value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -117,7 +117,7 @@ namespace Aki.TDConfigMgr.Quest
 			return false;
 		}
 
-		// Token: 0x06006B4D RID: 27469 RVA: 0x00101BA8 File Offset: 0x000FFDA8
+		// Token: 0x060071A9 RID: 29097 RVA: 0x0010F980 File Offset: 0x0010DB80
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -132,7 +132,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006B4E RID: 27470 RVA: 0x00101BE8 File Offset: 0x000FFDE8
+		// Token: 0x060071AA RID: 29098 RVA: 0x0010F9C0 File Offset: 0x0010DBC0
 		public static ESurvivorsRougeConditionStep[] GetValues()
 		{
 			return new ESurvivorsRougeConditionStep[]
@@ -147,7 +147,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006B4F RID: 27471 RVA: 0x00101BFB File Offset: 0x000FFDFB
+		// Token: 0x060071AB RID: 29099 RVA: 0x0010F9D3 File Offset: 0x0010DBD3
 		public static string[] GetNames()
 		{
 			return new string[]

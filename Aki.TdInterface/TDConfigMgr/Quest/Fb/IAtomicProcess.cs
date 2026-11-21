@@ -5,13 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200140D RID: 5133
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02001564 RID: 5476
 	public class IAtomicProcess : IQuestCondition
 	{
-		// Token: 0x060074B9 RID: 29881 RVA: 0x00117160 File Offset: 0x00115360
-		[NullableContext(1)]
+		// Token: 0x06007B7A RID: 31610 RVA: 0x00125B44 File Offset: 0x00123D44
 		public static IAtomicProcess Create(IAtomicProcess? instance)
 		{
 			if (instance == null)
@@ -24,8 +21,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002672 RID: 9842
-		// (get) Token: 0x060074BA RID: 29882 RVA: 0x0011717F File Offset: 0x0011537F
+		// Token: 0x17002854 RID: 10324
+		// (get) Token: 0x06007B7B RID: 31611 RVA: 0x00125B63 File Offset: 0x00123D63
 		public override EChildQuest Type
 		{
 			get
@@ -34,10 +31,12 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002673 RID: 9843
-		// (get) Token: 0x060074BB RID: 29883 RVA: 0x0011718C File Offset: 0x0011538C
+		// Token: 0x17002855 RID: 10325
+		// (get) Token: 0x06007B7C RID: 31612 RVA: 0x00125B70 File Offset: 0x00123D70
+		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this._PreConditionsInited)
@@ -50,12 +49,10 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002674 RID: 9844
-		// (get) Token: 0x060074BC RID: 29884 RVA: 0x001171C0 File Offset: 0x001153C0
-		[Nullable(1)]
+		// Token: 0x17002856 RID: 10326
+		// (get) Token: 0x06007B7D RID: 31613 RVA: 0x00125BA4 File Offset: 0x00123DA4
 		public virtual IAtomicProcessStoveCoreFall AtomicProcessType
 		{
-			[NullableContext(1)]
 			get
 			{
 				if (this._AtomicProcessTypeInited)
@@ -68,19 +65,21 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004393 RID: 17299
+		// Token: 0x04004724 RID: 18212
 		private IAtomicProcess Instance;
 
-		// Token: 0x04004394 RID: 17300
+		// Token: 0x04004725 RID: 18213
+		[Nullable(2)]
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04004395 RID: 17301
+		// Token: 0x04004726 RID: 18214
 		private bool _PreConditionsInited;
 
-		// Token: 0x04004396 RID: 17302
+		// Token: 0x04004727 RID: 18215
+		[Nullable(2)]
 		private IAtomicProcessStoveCoreFall _AtomicProcessTypeCache;
 
-		// Token: 0x04004397 RID: 17303
+		// Token: 0x04004728 RID: 18216
 		private bool _AtomicProcessTypeInited;
 	}
 }

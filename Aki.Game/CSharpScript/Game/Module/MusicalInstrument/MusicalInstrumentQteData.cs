@@ -5,35 +5,35 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.Module.MusicalInstrument
 {
-	// Token: 0x02005374 RID: 21364
+	// Token: 0x02004357 RID: 17239
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MusicalInstrumentQteData
 	{
-		// Token: 0x17008355 RID: 33621
-		// (get) Token: 0x0603694C RID: 223564 RVA: 0x00CECB18 File Offset: 0x00CEAD18
-		// (set) Token: 0x0603694D RID: 223565 RVA: 0x00CECB20 File Offset: 0x00CEAD20
+		// Token: 0x17005721 RID: 22305
+		// (get) Token: 0x0602B893 RID: 178323 RVA: 0x00C3BAE8 File Offset: 0x00C39CE8
+		// (set) Token: 0x0602B894 RID: 178324 RVA: 0x00C3BAF0 File Offset: 0x00C39CF0
 		public EInstrumentType InstrumentType { get; set; }
 
-		// Token: 0x17008356 RID: 33622
-		// (get) Token: 0x0603694E RID: 223566 RVA: 0x00CECB29 File Offset: 0x00CEAD29
-		// (set) Token: 0x0603694F RID: 223567 RVA: 0x00CECB31 File Offset: 0x00CEAD31
+		// Token: 0x17005722 RID: 22306
+		// (get) Token: 0x0602B895 RID: 178325 RVA: 0x00C3BAF9 File Offset: 0x00C39CF9
+		// (set) Token: 0x0602B896 RID: 178326 RVA: 0x00C3BB01 File Offset: 0x00C39D01
 		public int QteId { get; set; }
 
-		// Token: 0x17008357 RID: 33623
-		// (get) Token: 0x06036950 RID: 223568 RVA: 0x00CECB3A File Offset: 0x00CEAD3A
-		// (set) Token: 0x06036951 RID: 223569 RVA: 0x00CECB42 File Offset: 0x00CEAD42
+		// Token: 0x17005723 RID: 22307
+		// (get) Token: 0x0602B897 RID: 178327 RVA: 0x00C3BB0A File Offset: 0x00C39D0A
+		// (set) Token: 0x0602B898 RID: 178328 RVA: 0x00C3BB12 File Offset: 0x00C39D12
 		[Nullable(1)]
 		public List<MusicalInstrumentQteItemData> ItemDataList { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-		// Token: 0x17008358 RID: 33624
-		// (get) Token: 0x06036952 RID: 223570 RVA: 0x00CECB4B File Offset: 0x00CEAD4B
-		// (set) Token: 0x06036953 RID: 223571 RVA: 0x00CECB53 File Offset: 0x00CEAD53
+		// Token: 0x17005724 RID: 22308
+		// (get) Token: 0x0602B899 RID: 178329 RVA: 0x00C3BB1B File Offset: 0x00C39D1B
+		// (set) Token: 0x0602B89A RID: 178330 RVA: 0x00C3BB23 File Offset: 0x00C39D23
 		public string AudioEvent { get; set; }
 
-		// Token: 0x17008359 RID: 33625
-		// (get) Token: 0x06036954 RID: 223572 RVA: 0x00CECB5C File Offset: 0x00CEAD5C
-		// (set) Token: 0x06036955 RID: 223573 RVA: 0x00CECB64 File Offset: 0x00CEAD64
+		// Token: 0x17005725 RID: 22309
+		// (get) Token: 0x0602B89B RID: 178331 RVA: 0x00C3BB2C File Offset: 0x00C39D2C
+		// (set) Token: 0x0602B89C RID: 178332 RVA: 0x00C3BB34 File Offset: 0x00C39D34
 		public Action<bool> FinishCallback { get; set; }
 	}
 }

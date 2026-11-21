@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020016AB RID: 5803
+	// Token: 0x02000318 RID: 792
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FBackgroundDownloadAllCompleteDelegate : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x060150CF RID: 86223 RVA: 0x001EEEA0 File Offset: 0x001ED0A0
+		// Token: 0x060053C8 RID: 21448 RVA: 0x000751DE File Offset: 0x000733DE
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FBackgroundDownloadAllCompleteDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x060150D0 RID: 86224 RVA: 0x001EEEAC File Offset: 0x001ED0AC
+		// Token: 0x060053C9 RID: 21449 RVA: 0x000751EA File Offset: 0x000733EA
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FBackgroundDownloadAllCompleteDelegate._FunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace UnrealEngine
 			return FBackgroundDownloadAllCompleteDelegate._FunctionPtr;
 		}
 
-		// Token: 0x060150D1 RID: 86225 RVA: 0x001EEECF File Offset: 0x001ED0CF
+		// Token: 0x060053CA RID: 21450 RVA: 0x0007520D File Offset: 0x0007340D
 		public FBackgroundDownloadAllCompleteDelegate()
 		{
 		}
 
-		// Token: 0x060150D2 RID: 86226 RVA: 0x001EEED7 File Offset: 0x001ED0D7
+		// Token: 0x060053CB RID: 21451 RVA: 0x00075215 File Offset: 0x00073415
 		[NullableContext(2)]
 		public FBackgroundDownloadAllCompleteDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060150D3 RID: 86227 RVA: 0x001EEEE1 File Offset: 0x001ED0E1
+		// Token: 0x060053CC RID: 21452 RVA: 0x0007521F File Offset: 0x0007341F
 		public FBackgroundDownloadAllCompleteDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060150D4 RID: 86228 RVA: 0x001EEEEC File Offset: 0x001ED0EC
+		// Token: 0x060053CD RID: 21453 RVA: 0x0007522A File Offset: 0x0007342A
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<int, int>) ?? ((Action<int, int>)Delegate.CreateDelegate(typeof(Action<int, int>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x060150D5 RID: 86229 RVA: 0x001EEF1E File Offset: 0x001ED11E
+		// Token: 0x060053CE RID: 21454 RVA: 0x0007525C File Offset: 0x0007345C
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action<int, int> Callback)
 		{
 			if (FBackgroundDownloadAllCompleteDelegate.RegisterId == 0)
@@ -67,17 +66,15 @@ namespace UnrealEngine
 			base.Add(Callback, FBackgroundDownloadAllCompleteDelegate.RegisterId);
 		}
 
-		// Token: 0x060150D6 RID: 86230 RVA: 0x001EEF58 File Offset: 0x001ED158
+		// Token: 0x060053CF RID: 21455 RVA: 0x00075296 File Offset: 0x00073496
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action<int, int> Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x060150D7 RID: 86231 RVA: 0x001EEF64 File Offset: 0x001ED164
+		// Token: 0x060053D0 RID: 21456 RVA: 0x000752A0 File Offset: 0x000734A0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(int State, int HttpCode)
 		{
 			FBackgroundDownloadAllCompleteDelegate.__FBackgroundDownloadAllCompleteDelegate_DelegateParams* ptr = stackalloc FBackgroundDownloadAllCompleteDelegate.__FBackgroundDownloadAllCompleteDelegate_DelegateParams[(UIntPtr)23] + 15L / (long)sizeof(FBackgroundDownloadAllCompleteDelegate.__FBackgroundDownloadAllCompleteDelegate_DelegateParams) & -16L;
@@ -87,10 +84,9 @@ namespace UnrealEngine
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x060150D8 RID: 86232 RVA: 0x001EEFA8 File Offset: 0x001ED1A8
+		// Token: 0x060053D1 RID: 21457 RVA: 0x000752E4 File Offset: 0x000734E4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<int, int> action = target as Action<int, int>;
@@ -101,35 +97,35 @@ namespace UnrealEngine
 			action(((FBackgroundDownloadAllCompleteDelegate.__FBackgroundDownloadAllCompleteDelegate_DelegateParams*)__Parameters)->State, ((FBackgroundDownloadAllCompleteDelegate.__FBackgroundDownloadAllCompleteDelegate_DelegateParams*)__Parameters)->HttpCode);
 		}
 
-		// Token: 0x0400B75A RID: 46938
+		// Token: 0x0400223A RID: 8762
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400B75B RID: 46939
+		// Token: 0x0400223B RID: 8763
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroBackgroundDownload.BackgroundDownloadAllCompleteDelegate__DelegateSignature";
 
-		// Token: 0x0400B75C RID: 46940
+		// Token: 0x0400223C RID: 8764
 		private static int RegisterId;
 
-		// Token: 0x02002EE1 RID: 12001
+		// Token: 0x02000A1A RID: 2586
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
-		protected ref struct __FBackgroundDownloadAllCompleteDelegate_DelegateParams
+		private ref struct __FBackgroundDownloadAllCompleteDelegate_DelegateParams
 		{
-			// Token: 0x04016A00 RID: 92672
+			// Token: 0x040059DB RID: 23003
 			[FieldOffset(0)]
 			public int State;
 
-			// Token: 0x04016A01 RID: 92673
+			// Token: 0x040059DC RID: 23004
 			[FieldOffset(4)]
 			public int HttpCode;
 		}
 
-		// Token: 0x02002EE2 RID: 12002
+		// Token: 0x02000A1B RID: 2587
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016A02 RID: 92674
+			// Token: 0x040059DD RID: 23005
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

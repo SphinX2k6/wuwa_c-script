@@ -11,7 +11,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 {
-	// Token: 0x02006926 RID: 26918
+	// Token: 0x02005876 RID: 22646
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 	})]
 	public class AnniversaryPersonalRewardItem : GridProxyAbstract<AnniversaryPersonalRewardItemData>
 	{
-		// Token: 0x060431C3 RID: 274883 RVA: 0x0105B058 File Offset: 0x01059258
+		// Token: 0x06037D1B RID: 228635 RVA: 0x00F9C684 File Offset: 0x00F9A884
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			};
 		}
 
-		// Token: 0x060431C4 RID: 274884 RVA: 0x0105B120 File Offset: 0x01059320
+		// Token: 0x06037D1C RID: 228636 RVA: 0x00F9C74C File Offset: 0x00F9A94C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			AnniversaryPersonalRewardItem.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -47,13 +47,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060431C5 RID: 274885 RVA: 0x0105B163 File Offset: 0x01059363
+		// Token: 0x06037D1D RID: 228637 RVA: 0x00F9C78F File Offset: 0x00F9A98F
 		public void SetClickCallback(Action<int> callback)
 		{
 			this.ClickCallback = callback;
 		}
 
-		// Token: 0x060431C6 RID: 274886 RVA: 0x0105B16C File Offset: 0x0105936C
+		// Token: 0x06037D1E RID: 228638 RVA: 0x00F9C798 File Offset: 0x00F9A998
 		public override void Refresh(AnniversaryPersonalRewardItemData data, bool isSelected, int gridIndex)
 		{
 			if (data == null)
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			}
 		}
 
-		// Token: 0x060431C7 RID: 274887 RVA: 0x0105B358 File Offset: 0x01059558
+		// Token: 0x06037D1F RID: 228639 RVA: 0x00F9C984 File Offset: 0x00F9AB84
 		private FColor GetProgressTextColor(EAnniversaryProgressRewardState state)
 		{
 			if (state == EAnniversaryProgressRewardState.CanReceive)
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			return FColor.FromHex("#9EFF2BFF");
 		}
 
-		// Token: 0x060431C8 RID: 274888 RVA: 0x0105B384 File Offset: 0x01059584
+		// Token: 0x06037D20 RID: 228640 RVA: 0x00F9C9B0 File Offset: 0x00F9ABB0
 		private void OnClick(MediumItemGridExtendCallback _)
 		{
 			if (this.Data == null)
@@ -156,44 +156,44 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			clickCallback(this.Data.CfgId);
 		}
 
-		// Token: 0x04022EF7 RID: 143095
+		// Token: 0x0401D753 RID: 120659
 		[Nullable(2)]
 		private AnniversaryPersonalRewardItemData Data;
 
-		// Token: 0x04022EF8 RID: 143096
+		// Token: 0x0401D754 RID: 120660
 		[Nullable(2)]
 		private SmallItemGrid RewardItem;
 
-		// Token: 0x04022EF9 RID: 143097
+		// Token: 0x0401D755 RID: 120661
 		[Nullable(2)]
 		private Action<int> ClickCallback;
 
-		// Token: 0x0200CACC RID: 51916
+		// Token: 0x0200B494 RID: 46228
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403D4A0 RID: 251040
+			// Token: 0x04037D7A RID: 228730
 			public const int ItemBase = 0;
 
-			// Token: 0x0403D4A1 RID: 251041
+			// Token: 0x04037D7B RID: 228731
 			public const int SprNor = 1;
 
-			// Token: 0x0403D4A2 RID: 251042
+			// Token: 0x04037D7C RID: 228732
 			public const int SprCanGet = 2;
 
-			// Token: 0x0403D4A3 RID: 251043
+			// Token: 0x04037D7D RID: 228733
 			public const int SprFinished = 3;
 
-			// Token: 0x0403D4A4 RID: 251044
+			// Token: 0x04037D7E RID: 228734
 			public const int TxtValue = 4;
 
-			// Token: 0x0403D4A5 RID: 251045
+			// Token: 0x04037D7F RID: 228735
 			public const int SprProgressFill = 5;
 
-			// Token: 0x0403D4A6 RID: 251046
+			// Token: 0x04037D80 RID: 228736
 			public const int PnlProgress = 6;
 
-			// Token: 0x0403D4A7 RID: 251047
+			// Token: 0x04037D81 RID: 228737
 			public const int FxGlow = 7;
 		}
 	}

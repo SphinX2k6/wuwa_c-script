@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200119E RID: 4510
+	// Token: 0x020012D4 RID: 4820
 	public struct Weather : IFlatbufferObject
 	{
-		// Token: 0x17003E3A RID: 15930
-		// (get) Token: 0x0600E8A6 RID: 59558 RVA: 0x003445B5 File Offset: 0x003427B5
+		// Token: 0x1700419F RID: 16799
+		// (get) Token: 0x0600F617 RID: 62999 RVA: 0x0036F29D File Offset: 0x0036D49D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E8A7 RID: 59559 RVA: 0x003445C2 File Offset: 0x003427C2
+		// Token: 0x0600F618 RID: 63000 RVA: 0x0036F2AA File Offset: 0x0036D4AA
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600E8A8 RID: 59560 RVA: 0x003445CC File Offset: 0x003427CC
+		// Token: 0x0600F619 RID: 63001 RVA: 0x0036F2B4 File Offset: 0x0036D4B4
 		public static Weather GetRootAsWeather(ByteBuffer _bb)
 		{
 			return Weather.GetRootAsWeather(_bb, default(Weather));
 		}
 
-		// Token: 0x0600E8A9 RID: 59561 RVA: 0x003445E8 File Offset: 0x003427E8
+		// Token: 0x0600F61A RID: 63002 RVA: 0x0036F2D0 File Offset: 0x0036D4D0
 		public static Weather GetRootAsWeather(ByteBuffer _bb, Weather obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600E8AA RID: 59562 RVA: 0x00344605 File Offset: 0x00342805
+		// Token: 0x0600F61B RID: 63003 RVA: 0x0036F2ED File Offset: 0x0036D4ED
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600E8AB RID: 59563 RVA: 0x00344614 File Offset: 0x00342814
+		// Token: 0x0600F61C RID: 63004 RVA: 0x0036F2FC File Offset: 0x0036D4FC
 		public Weather __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003E3B RID: 15931
-		// (get) Token: 0x0600E8AC RID: 59564 RVA: 0x00344624 File Offset: 0x00342824
+		// Token: 0x170041A0 RID: 16800
+		// (get) Token: 0x0600F61D RID: 63005 RVA: 0x0036F30C File Offset: 0x0036D50C
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003E3C RID: 15932
-		// (get) Token: 0x0600E8AD RID: 59565 RVA: 0x00344660 File Offset: 0x00342860
+		// Token: 0x170041A1 RID: 16801
+		// (get) Token: 0x0600F61E RID: 63006 RVA: 0x0036F348 File Offset: 0x0036D548
 		public int WeatherType
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003E3D RID: 15933
-		// (get) Token: 0x0600E8AE RID: 59566 RVA: 0x0034469C File Offset: 0x0034289C
+		// Token: 0x170041A2 RID: 16802
+		// (get) Token: 0x0600F61F RID: 63007 RVA: 0x0036F384 File Offset: 0x0036D584
 		public int PhotoWeatherType
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003E3E RID: 15934
-		// (get) Token: 0x0600E8AF RID: 59567 RVA: 0x003446D8 File Offset: 0x003428D8
+		// Token: 0x170041A3 RID: 16803
+		// (get) Token: 0x0600F620 RID: 63008 RVA: 0x0036F3C0 File Offset: 0x0036D5C0
 		public int Type
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003E3F RID: 15935
-		// (get) Token: 0x0600E8B0 RID: 59568 RVA: 0x00344718 File Offset: 0x00342918
+		// Token: 0x170041A4 RID: 16804
+		// (get) Token: 0x0600F621 RID: 63009 RVA: 0x0036F400 File Offset: 0x0036D600
 		public string DAPath
 		{
 			get
@@ -122,19 +122,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E8B1 RID: 59569 RVA: 0x00344750 File Offset: 0x00342950
+		// Token: 0x0600F622 RID: 63010 RVA: 0x0036F438 File Offset: 0x0036D638
 		public Span<byte> GetDAPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x0600E8B2 RID: 59570 RVA: 0x00344760 File Offset: 0x00342960
+		// Token: 0x0600F623 RID: 63011 RVA: 0x0036F448 File Offset: 0x0036D648
 		public byte[] GetDAPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(12) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x040052E9 RID: 21225
+		// Token: 0x0400592C RID: 22828
 		private Table __p;
 	}
 }

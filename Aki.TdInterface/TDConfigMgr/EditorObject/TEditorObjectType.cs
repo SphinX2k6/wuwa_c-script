@@ -24,6 +24,8 @@ namespace Aki.TDConfigMgr.EditorObject
 		// Token: 0x0400001B RID: 27
 		Prefab,
 		// Token: 0x0400001C RID: 28
+		PrefabElement,
+		// Token: 0x0400001D RID: 29
 		Quest
 	}
 }

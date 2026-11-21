@@ -14,37 +14,37 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Extension;
 
-// Token: 0x02000EBA RID: 3770
+// Token: 0x0200036F RID: 879
 [NullableContext(1)]
 [Nullable(0)]
 public class PotatoSubController : KscSubControllerBase
 {
-	// Token: 0x06005D54 RID: 23892 RVA: 0x00112D25 File Offset: 0x00110F25
+	// Token: 0x060030EB RID: 12523 RVA: 0x0011A999 File Offset: 0x00118B99
 	protected override void OnInit()
 	{
 		base.OnInit();
 		this.EnableSyncEntityTimeScaleToPlayer = true;
 	}
 
-	// Token: 0x06005D55 RID: 23893 RVA: 0x00112D34 File Offset: 0x00110F34
+	// Token: 0x060030EC RID: 12524 RVA: 0x0011A9A8 File Offset: 0x00118BA8
 	protected override void CreateModel()
 	{
 		this.SubModel = new PotatoSubModel();
 	}
 
-	// Token: 0x06005D56 RID: 23894 RVA: 0x00112D41 File Offset: 0x00110F41
+	// Token: 0x060030ED RID: 12525 RVA: 0x0011A9B5 File Offset: 0x00118BB5
 	public PotatoSubModel GetModel()
 	{
 		return (PotatoSubModel)this.SubModel;
 	}
 
-	// Token: 0x06005D57 RID: 23895 RVA: 0x00112D4E File Offset: 0x00110F4E
+	// Token: 0x060030EE RID: 12526 RVA: 0x0011A9C2 File Offset: 0x00118BC2
 	public override bool IsTargetMap(int instSubType)
 	{
 		return instSubType == 51;
 	}
 
-	// Token: 0x06005D58 RID: 23896 RVA: 0x00112D58 File Offset: 0x00110F58
+	// Token: 0x060030EF RID: 12527 RVA: 0x0011A9CC File Offset: 0x00118BCC
 	public override void InitPropertyConfigs()
 	{
 		base.InitPropertyConfigs();
@@ -62,7 +62,7 @@ public class PotatoSubController : KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005D59 RID: 23897 RVA: 0x00112E00 File Offset: 0x00111000
+	// Token: 0x060030F0 RID: 12528 RVA: 0x0011AA74 File Offset: 0x00118C74
 	protected override void InitConstVar()
 	{
 		base.InitConstVar();
@@ -77,7 +77,7 @@ public class PotatoSubController : KscSubControllerBase
 		UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "fx.Niagara.SystemSimulation.AllowASync 0", null);
 	}
 
-	// Token: 0x06005D5A RID: 23898 RVA: 0x00112EAC File Offset: 0x001110AC
+	// Token: 0x060030F1 RID: 12529 RVA: 0x0011AB20 File Offset: 0x00118D20
 	protected override void OnInitMap()
 	{
 		this.EnableSyncEntityTimeScaleToPlayer = true;
@@ -88,7 +88,7 @@ public class PotatoSubController : KscSubControllerBase
 		DamageUiController.Instance.SetUeDamageConfig(fdamageConfig, true);
 	}
 
-	// Token: 0x06005D5B RID: 23899 RVA: 0x00112EF0 File Offset: 0x001110F0
+	// Token: 0x060030F2 RID: 12530 RVA: 0x0011AB64 File Offset: 0x00118D64
 	protected override void OnMapLoaded()
 	{
 		this.PreloadDodgeBuffAsync().Forget();
@@ -141,7 +141,7 @@ public class PotatoSubController : KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005D5C RID: 23900 RVA: 0x001130DC File Offset: 0x001112DC
+	// Token: 0x060030F3 RID: 12531 RVA: 0x0011AD50 File Offset: 0x00118F50
 	protected override void OnWorldDone()
 	{
 		UBulletWorld kuroBulletWorld = BulletModel.Instance.GetKuroBulletWorld();
@@ -169,7 +169,7 @@ public class PotatoSubController : KscSubControllerBase
 		}, 1000f, 1f, null, null, true);
 	}
 
-	// Token: 0x06005D5D RID: 23901 RVA: 0x001131A0 File Offset: 0x001113A0
+	// Token: 0x060030F4 RID: 12532 RVA: 0x0011AE14 File Offset: 0x00119014
 	protected override void OnWorldReset()
 	{
 		if (this.Timer != null)
@@ -185,14 +185,14 @@ public class PotatoSubController : KscSubControllerBase
 		this.WaveNum = 0;
 	}
 
-	// Token: 0x06005D5E RID: 23902 RVA: 0x001131F6 File Offset: 0x001113F6
+	// Token: 0x060030F5 RID: 12533 RVA: 0x0011AE6A File Offset: 0x0011906A
 	protected override void OnClearMap()
 	{
 		UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "ksc.damage.defense.const 1520.0", null);
 		UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "fx.Niagara.SystemSimulation.AllowASync 1", null);
 	}
 
-	// Token: 0x06005D5F RID: 23903 RVA: 0x00113218 File Offset: 0x00111418
+	// Token: 0x060030F6 RID: 12534 RVA: 0x0011AE8C File Offset: 0x0011908C
 	protected override void AddEvents()
 	{
 		base.AddEvents();
@@ -200,7 +200,7 @@ public class PotatoSubController : KscSubControllerBase
 		EventSystem.Instance.Add<EKurotatoStep>(EEventName.KurotatoOnStepChanged, new Action<EKurotatoStep>(this.OnStepChanged));
 	}
 
-	// Token: 0x06005D60 RID: 23904 RVA: 0x00113258 File Offset: 0x00111458
+	// Token: 0x060030F7 RID: 12535 RVA: 0x0011AECC File Offset: 0x001190CC
 	protected override void RemoveEvents()
 	{
 		base.RemoveEvents();
@@ -208,7 +208,7 @@ public class PotatoSubController : KscSubControllerBase
 		EventSystem.Instance.Remove<EKurotatoStep>(EEventName.KurotatoOnStepChanged, new Action<EKurotatoStep>(this.OnStepChanged));
 	}
 
-	// Token: 0x06005D61 RID: 23905 RVA: 0x00113298 File Offset: 0x00111498
+	// Token: 0x060030F8 RID: 12536 RVA: 0x0011AF0C File Offset: 0x0011910C
 	public override void OnSystemInfoNotify()
 	{
 		KurotatoLevel? levelConfig = KurotatoConfig.Instance.GetLevelConfig(KurotatoModel.Instance.GetCurLevelId());
@@ -228,13 +228,13 @@ public class PotatoSubController : KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005D62 RID: 23906 RVA: 0x00113341 File Offset: 0x00111541
+	// Token: 0x060030F9 RID: 12537 RVA: 0x0011AFB5 File Offset: 0x001191B5
 	private void OnUpdateWeapon()
 	{
 		this.RefreshWeaponIndexInfo();
 	}
 
-	// Token: 0x06005D63 RID: 23907 RVA: 0x0011334C File Offset: 0x0011154C
+	// Token: 0x060030FA RID: 12538 RVA: 0x0011AFC0 File Offset: 0x001191C0
 	private void OnStepChanged(EKurotatoStep step)
 	{
 		if (step == EKurotatoStep.WaveUpdate)
@@ -251,7 +251,7 @@ public class PotatoSubController : KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005D64 RID: 23908 RVA: 0x001133A4 File Offset: 0x001115A4
+	// Token: 0x060030FB RID: 12539 RVA: 0x0011B018 File Offset: 0x00119218
 	public unsafe override void OnEntityRemoved(KscRemoveContext context, Dictionary<long, SimpleCombatEntityDieContext> protoContexts)
 	{
 		int? logicProxy = base.Model.GetLogicProxy(context.CreatureDataId);
@@ -329,7 +329,7 @@ public class PotatoSubController : KscSubControllerBase
 		protoContexts[context.CreatureDataId] = simpleCombatEntityDieContext;
 	}
 
-	// Token: 0x06005D65 RID: 23909 RVA: 0x00113660 File Offset: 0x00111860
+	// Token: 0x060030FC RID: 12540 RVA: 0x0011B2D4 File Offset: 0x001194D4
 	private void RemoveAllMonsterNextFrame()
 	{
 		TimerSystem.Instance.Next(delegate(float _)
@@ -350,7 +350,7 @@ public class PotatoSubController : KscSubControllerBase
 		}, null, null);
 	}
 
-	// Token: 0x06005D66 RID: 23910 RVA: 0x0011367C File Offset: 0x0011187C
+	// Token: 0x060030FD RID: 12541 RVA: 0x0011B2F0 File Offset: 0x001194F0
 	private void PlayPlayerDeathForceFeedback()
 	{
 		if (!Info.Instance.IsInGamepad())
@@ -366,20 +366,20 @@ public class PotatoSubController : KscSubControllerBase
 		}, 100, "js_undefined");
 	}
 
-	// Token: 0x06005D67 RID: 23911 RVA: 0x001136CC File Offset: 0x001118CC
+	// Token: 0x060030FE RID: 12542 RVA: 0x0011B340 File Offset: 0x00119540
 	protected override void CreateEntityFilter()
 	{
 		this.RedirectFilter = this.EntityRedirectFilter;
 	}
 
-	// Token: 0x06005D68 RID: 23912 RVA: 0x001136DA File Offset: 0x001118DA
+	// Token: 0x060030FF RID: 12543 RVA: 0x0011B34E File Offset: 0x0011954E
 	[NullableContext(2)]
 	protected override EntityHandle GetPossessedPlayerEntity()
 	{
 		return this.PlayerEntityHandle;
 	}
 
-	// Token: 0x06005D69 RID: 23913 RVA: 0x001136E4 File Offset: 0x001118E4
+	// Token: 0x06003100 RID: 12544 RVA: 0x0011B358 File Offset: 0x00119558
 	protected override bool AddInputLayer()
 	{
 		PotatoInputLayer potatoInputLayer = this.GetInputLayer();
@@ -405,7 +405,7 @@ public class PotatoSubController : KscSubControllerBase
 		return false;
 	}
 
-	// Token: 0x06005D6A RID: 23914 RVA: 0x00113778 File Offset: 0x00111978
+	// Token: 0x06003101 RID: 12545 RVA: 0x0011B3EC File Offset: 0x001195EC
 	protected override bool RemoveInputLayer()
 	{
 		PotatoInputLayer inputLayer = this.GetInputLayer();
@@ -419,7 +419,7 @@ public class PotatoSubController : KscSubControllerBase
 		return false;
 	}
 
-	// Token: 0x06005D6B RID: 23915 RVA: 0x001137C4 File Offset: 0x001119C4
+	// Token: 0x06003102 RID: 12546 RVA: 0x0011B438 File Offset: 0x00119638
 	[NullableContext(2)]
 	private PotatoInputLayer GetInputLayer()
 	{
@@ -431,13 +431,13 @@ public class PotatoSubController : KscSubControllerBase
 		return null;
 	}
 
-	// Token: 0x06005D6C RID: 23916 RVA: 0x001137F4 File Offset: 0x001119F4
+	// Token: 0x06003103 RID: 12547 RVA: 0x0011B468 File Offset: 0x00119668
 	protected override void AddKscPlayerEntity()
 	{
 		this.AddInputLayer();
 	}
 
-	// Token: 0x06005D6D RID: 23917 RVA: 0x001137FD File Offset: 0x001119FD
+	// Token: 0x06003104 RID: 12548 RVA: 0x0011B471 File Offset: 0x00119671
 	public override void OnPlayerEntityCreated()
 	{
 		base.OnPlayerEntityCreated();
@@ -446,7 +446,7 @@ public class PotatoSubController : KscSubControllerBase
 		model.KscPlayerEntityId = ((kscPlayerEntity != null) ? kscPlayerEntity.EntityId_ : 0);
 	}
 
-	// Token: 0x06005D6E RID: 23918 RVA: 0x00113824 File Offset: 0x00111A24
+	// Token: 0x06003105 RID: 12549 RVA: 0x0011B498 File Offset: 0x00119698
 	protected override void SyncPlayerTransform()
 	{
 		if (this.GetModel().KscPlayerEntity == null)
@@ -467,14 +467,14 @@ public class PotatoSubController : KscSubControllerBase
 		kscPlayerEntity.SetTransformByWorld(ftransformDouble);
 	}
 
-	// Token: 0x06005D6F RID: 23919 RVA: 0x00113889 File Offset: 0x00111A89
+	// Token: 0x06003106 RID: 12550 RVA: 0x0011B4FD File Offset: 0x001196FD
 	public void OnWeaponCreated(AKSC_Entity kscEntity, int incId)
 	{
 		this.GetModel().WeaponKscEntityMap[incId] = kscEntity;
 		this.OnSummonedCreated(kscEntity, true);
 	}
 
-	// Token: 0x06005D70 RID: 23920 RVA: 0x001138A8 File Offset: 0x00111AA8
+	// Token: 0x06003107 RID: 12551 RVA: 0x0011B51C File Offset: 0x0011971C
 	public void OnSummonedCreated(AKSC_Entity kscEntity, bool isWeapon = false)
 	{
 		PotatoSubModel model = this.GetModel();
@@ -494,7 +494,7 @@ public class PotatoSubController : KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005D71 RID: 23921 RVA: 0x00113900 File Offset: 0x00111B00
+	// Token: 0x06003108 RID: 12552 RVA: 0x0011B574 File Offset: 0x00119774
 	private void RefreshWeaponIndexInfo()
 	{
 		PotatoSubModel model = this.GetModel();
@@ -523,7 +523,7 @@ public class PotatoSubController : KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005D72 RID: 23922 RVA: 0x001139BC File Offset: 0x00111BBC
+	// Token: 0x06003109 RID: 12553 RVA: 0x0011B630 File Offset: 0x00119830
 	protected override void OnHandlePlayerHeadHpInfo(KscHeadStateData kscPlayerHeadStateData, FKSC_HeadHpContext headInfo)
 	{
 		base.OnHandlePlayerHeadHpInfo(kscPlayerHeadStateData, headInfo);
@@ -534,7 +534,7 @@ public class PotatoSubController : KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005D73 RID: 23923 RVA: 0x001139F0 File Offset: 0x00111BF0
+	// Token: 0x0600310A RID: 12554 RVA: 0x0011B664 File Offset: 0x00119864
 	public override void GmPrintInfo()
 	{
 		PotatoSubModel model = this.GetModel();
@@ -573,7 +573,7 @@ public class PotatoSubController : KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005D74 RID: 23924 RVA: 0x00113B50 File Offset: 0x00111D50
+	// Token: 0x0600310B RID: 12555 RVA: 0x0011B7C4 File Offset: 0x001199C4
 	public override void InitDamageConfigs()
 	{
 		UKSC_World kscWorld = KscEnv.Instance.KscWorld;
@@ -605,19 +605,43 @@ public class PotatoSubController : KscSubControllerBase
 				fkscdamage.CritAttrType = (EKSC_AttrType)kscdamage.CritAttrType;
 				if (kscdamage.Amplify > 0)
 				{
-					fkscdamage.RelatedInfos.Add(new FKSCDamageRelated((float)kscdamage.Amplify * 0.0001f, (EKSC_AttrType)kscdamage.RelatedProperty, (EKSC_AttrType)kscdamage.MainDamageType, (EKSC_AttrType)kscdamage.SubDamageType));
+					fkscdamage.RelatedInfos.Add(new FKSCDamageRelated
+					{
+						Amplify = (float)kscdamage.Amplify * 0.0001f,
+						RelatedProperty = (EKSC_AttrType)kscdamage.RelatedProperty,
+						MainDamageType = (EKSC_AttrType)kscdamage.MainDamageType,
+						SubDamageType = (EKSC_AttrType)kscdamage.SubDamageType
+					});
 				}
 				if (kscdamage.Amplify1 > 0)
 				{
-					fkscdamage.RelatedInfos.Add(new FKSCDamageRelated((float)kscdamage.Amplify1 * 0.0001f, (EKSC_AttrType)kscdamage.RelatedProperty1, (EKSC_AttrType)kscdamage.MainDamageType1, (EKSC_AttrType)kscdamage.SubDamageType1));
+					fkscdamage.RelatedInfos.Add(new FKSCDamageRelated
+					{
+						Amplify = (float)kscdamage.Amplify1 * 0.0001f,
+						RelatedProperty = (EKSC_AttrType)kscdamage.RelatedProperty1,
+						MainDamageType = (EKSC_AttrType)kscdamage.MainDamageType1,
+						SubDamageType = (EKSC_AttrType)kscdamage.SubDamageType1
+					});
 				}
 				if (kscdamage.Amplify2 > 0)
 				{
-					fkscdamage.RelatedInfos.Add(new FKSCDamageRelated((float)kscdamage.Amplify2 * 0.0001f, (EKSC_AttrType)kscdamage.RelatedProperty2, (EKSC_AttrType)kscdamage.MainDamageType2, (EKSC_AttrType)kscdamage.SubDamageType2));
+					fkscdamage.RelatedInfos.Add(new FKSCDamageRelated
+					{
+						Amplify = (float)kscdamage.Amplify2 * 0.0001f,
+						RelatedProperty = (EKSC_AttrType)kscdamage.RelatedProperty2,
+						MainDamageType = (EKSC_AttrType)kscdamage.MainDamageType2,
+						SubDamageType = (EKSC_AttrType)kscdamage.SubDamageType2
+					});
 				}
 				if (kscdamage.Amplify3 > 0)
 				{
-					fkscdamage.RelatedInfos.Add(new FKSCDamageRelated((float)kscdamage.Amplify3 * 0.0001f, (EKSC_AttrType)kscdamage.RelatedProperty3, (EKSC_AttrType)kscdamage.MainDamageType3, (EKSC_AttrType)kscdamage.SubDamageType3));
+					fkscdamage.RelatedInfos.Add(new FKSCDamageRelated
+					{
+						Amplify = (float)kscdamage.Amplify3 * 0.0001f,
+						RelatedProperty = (EKSC_AttrType)kscdamage.RelatedProperty3,
+						MainDamageType = (EKSC_AttrType)kscdamage.MainDamageType3,
+						SubDamageType = (EKSC_AttrType)kscdamage.SubDamageType3
+					});
 				}
 				damageData.AddDamageData((int)kscdamage.Id, fkscdamage);
 			}
@@ -631,7 +655,13 @@ public class PotatoSubController : KscSubControllerBase
 				fkscdamage2.RelatedProperty = (EKSC_AttrType)kscdamage.RelatedProperty;
 				if (kscdamage.CalculateType == 8)
 				{
-					fkscdamage2.RelatedInfos.Add(new FKSCDamageRelated(0f, EKSC_AttrType.EAttributeType_None, (EKSC_AttrType)kscdamage.MainDamageType, EKSC_AttrType.EAttributeType_None));
+					fkscdamage2.RelatedInfos.Add(new FKSCDamageRelated
+					{
+						Amplify = 0f,
+						RelatedProperty = EKSC_AttrType.EAttributeType_None,
+						MainDamageType = (EKSC_AttrType)kscdamage.MainDamageType,
+						SubDamageType = EKSC_AttrType.EAttributeType_None
+					});
 				}
 				fkscdamage2.CritAttrType = (EKSC_AttrType)kscdamage.CritAttrType;
 				damageData.AddDamageData((int)kscdamage.Id, fkscdamage2);
@@ -639,7 +669,7 @@ public class PotatoSubController : KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005D75 RID: 23925 RVA: 0x00113E3C File Offset: 0x0011203C
+	// Token: 0x0600310C RID: 12556 RVA: 0x0011BB28 File Offset: 0x00119D28
 	public override void SetAttrs(AKSC_Entity entity, int propertyId, [Nullable(2)] Dictionary<int, int> attributeMap = null)
 	{
 		if (entity == null)
@@ -652,7 +682,6 @@ public class PotatoSubController : KscSubControllerBase
 			KscLog.Warn(flag, author, kscWorld, log, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 			return;
 		}
-		bool isBuildDevelopmentOrDebug = Info.Instance.IsBuildDevelopmentOrDebug;
 		KscSubModelBase subModel = this.SubModel;
 		KscEntityHandle kscEntityHandle2;
 		KscEntityHandle kscEntityHandle = (subModel != null && subModel.KscEntities.TryGetValue(entity.EntityId_, out kscEntityHandle2)) ? kscEntityHandle2 : null;
@@ -713,7 +742,7 @@ public class PotatoSubController : KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005D76 RID: 23926 RVA: 0x0011407C File Offset: 0x0011227C
+	// Token: 0x0600310D RID: 12557 RVA: 0x0011BD5C File Offset: 0x00119F5C
 	private void ClearWeaponDamage()
 	{
 		foreach (AKSC_Entity aksc_Entity in this.GetModel().WeaponKscEntityMap.Values)
@@ -722,7 +751,7 @@ public class PotatoSubController : KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005D77 RID: 23927 RVA: 0x001140DC File Offset: 0x001122DC
+	// Token: 0x0600310E RID: 12558 RVA: 0x0011BDBC File Offset: 0x00119FBC
 	private void SyncWeaponDamage()
 	{
 		Dictionary<long, int> dictionary = new Dictionary<long, int>();
@@ -777,7 +806,7 @@ public class PotatoSubController : KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005D78 RID: 23928 RVA: 0x00114244 File Offset: 0x00112444
+	// Token: 0x0600310F RID: 12559 RVA: 0x0011BF24 File Offset: 0x0011A124
 	private void SyncGoldGrowth()
 	{
 		UKSC_World kscWorld = KscEnv.Instance.KscWorld;
@@ -793,12 +822,12 @@ public class PotatoSubController : KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005D79 RID: 23929 RVA: 0x00114296 File Offset: 0x00112496
+	// Token: 0x06003110 RID: 12560 RVA: 0x0011BF76 File Offset: 0x0011A176
 	protected override void PushPlayerHp()
 	{
 	}
 
-	// Token: 0x06005D7A RID: 23930 RVA: 0x00114298 File Offset: 0x00112498
+	// Token: 0x06003111 RID: 12561 RVA: 0x0011BF78 File Offset: 0x0011A178
 	public void NotifyMonsterUpdate(int configId, int kscEntityId, bool isAdd)
 	{
 		if (KurotatoConfig.Instance.GetMonsterRiskType(configId) == 3)
@@ -807,7 +836,7 @@ public class PotatoSubController : KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005D7B RID: 23931 RVA: 0x001142BC File Offset: 0x001124BC
+	// Token: 0x06003112 RID: 12562 RVA: 0x0011BF9C File Offset: 0x0011A19C
 	public void NotifyStructureUpdate(int configId, int kscEntityId, bool isAdd)
 	{
 		KurotatoStructure? structureConfigById = KurotatoConfig.Instance.GetStructureConfigById(configId);
@@ -821,7 +850,7 @@ public class PotatoSubController : KscSubControllerBase
 		}
 	}
 
-	// Token: 0x06005D7C RID: 23932 RVA: 0x0011430C File Offset: 0x0011250C
+	// Token: 0x06003113 RID: 12563 RVA: 0x0011BFEC File Offset: 0x0011A1EC
 	public void ExecSkillDodge()
 	{
 		AKSC_Entity kscPlayerEntity = this.SubModel.KscPlayerEntity;
@@ -847,7 +876,7 @@ public class PotatoSubController : KscSubControllerBase
 		kscPlayerEntity.ApplyBuffSelf(this.DodgeBuffDa);
 	}
 
-	// Token: 0x06005D7D RID: 23933 RVA: 0x00114390 File Offset: 0x00112590
+	// Token: 0x06003114 RID: 12564 RVA: 0x0011C070 File Offset: 0x0011A270
 	private UniTask PreloadDodgeBuffAsync()
 	{
 		PotatoSubController.<PreloadDodgeBuffAsync>d__54 <PreloadDodgeBuffAsync>d__;
@@ -858,47 +887,47 @@ public class PotatoSubController : KscSubControllerBase
 		return <PreloadDodgeBuffAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x04002A85 RID: 10885
+	// Token: 0x04002B20 RID: 11040
 	public const int MULTI_RELATED_DAMAGE = 6;
 
-	// Token: 0x04002A86 RID: 10886
+	// Token: 0x04002B21 RID: 11041
 	public const int ITEM_HEAL = 8;
 
-	// Token: 0x04002A87 RID: 10887
+	// Token: 0x04002B22 RID: 11042
 	private const int PROPERTY_MIN = -2147483648;
 
-	// Token: 0x04002A88 RID: 10888
+	// Token: 0x04002B23 RID: 11043
 	private const int PROPERTY_MAX = 2147483647;
 
-	// Token: 0x04002A89 RID: 10889
+	// Token: 0x04002B24 RID: 11044
 	private const string PLAYER_DEATH_FORCE_FEEDBACK_PATH = "/Game/Aki/Data/SimpleCombat/3_4Potato/Player/PlayerDeath_ForceFeedback.PlayerDeath_ForceFeedback";
 
-	// Token: 0x04002A8A RID: 10890
+	// Token: 0x04002B25 RID: 11045
 	[Nullable(2)]
 	private EntityHandle PlayerEntityHandle;
 
-	// Token: 0x04002A8B RID: 10891
+	// Token: 0x04002B26 RID: 11046
 	private int WaveNum;
 
-	// Token: 0x04002A8C RID: 10892
+	// Token: 0x04002B27 RID: 11047
 	private readonly PotatoEntityRedirectFilter EntityRedirectFilter = new PotatoEntityRedirectFilter();
 
-	// Token: 0x04002A8D RID: 10893
+	// Token: 0x04002B28 RID: 11048
 	[Nullable(2)]
 	private TimerHandle Timer;
 
-	// Token: 0x04002A8E RID: 10894
+	// Token: 0x04002B29 RID: 11049
 	private bool NeedBroadcastPlayerOneHp;
 
-	// Token: 0x04002A8F RID: 10895
+	// Token: 0x04002B2A RID: 11050
 	[Nullable(2)]
 	private CharacterSkillCdComponent SkillCdComp;
 
-	// Token: 0x04002A90 RID: 10896
+	// Token: 0x04002B2B RID: 11051
 	[Nullable(2)]
 	private CharacterSkillComponent SkillComp;
 
-	// Token: 0x04002A91 RID: 10897
+	// Token: 0x04002B2C RID: 11052
 	[Nullable(2)]
 	private UKSC_DA_Buff DodgeBuffDa;
 }

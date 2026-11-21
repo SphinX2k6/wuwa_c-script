@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Entity
 {
-	// Token: 0x020047E2 RID: 18402
+	// Token: 0x02004C4A RID: 19530
 	public class IInstEntityDataT
 	{
-		// Token: 0x17008443 RID: 33859
-		// (get) Token: 0x0601C73E RID: 116542 RVA: 0x0040685C File Offset: 0x00404A5C
-		// (set) Token: 0x0601C73F RID: 116543 RVA: 0x00406864 File Offset: 0x00404A64
+		// Token: 0x17008A8E RID: 35470
+		// (get) Token: 0x0601DF3B RID: 122683 RVA: 0x004331AC File Offset: 0x004313AC
+		// (set) Token: 0x0601DF3C RID: 122684 RVA: 0x004331B4 File Offset: 0x004313B4
 		public int InstId { get; set; }
 
-		// Token: 0x17008444 RID: 33860
-		// (get) Token: 0x0601C740 RID: 116544 RVA: 0x0040686D File Offset: 0x00404A6D
-		// (set) Token: 0x0601C741 RID: 116545 RVA: 0x00406875 File Offset: 0x00404A75
+		// Token: 0x17008A8F RID: 35471
+		// (get) Token: 0x0601DF3D RID: 122685 RVA: 0x004331BD File Offset: 0x004313BD
+		// (set) Token: 0x0601DF3E RID: 122686 RVA: 0x004331C5 File Offset: 0x004313C5
 		public int EntityConfigId { get; set; }
 
-		// Token: 0x0601C742 RID: 116546 RVA: 0x0040687E File Offset: 0x00404A7E
+		// Token: 0x0601DF3F RID: 122687 RVA: 0x004331CE File Offset: 0x004313CE
 		public IInstEntityDataT()
 		{
 			this.InstId = 0;

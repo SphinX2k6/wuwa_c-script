@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000263 RID: 611
+	// Token: 0x02000277 RID: 631
 	public class ConfigElementLevelByLevel : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000E56 RID: 3670 RVA: 0x000AA777 File Offset: 0x000A8977
+		// Token: 0x06000ECE RID: 3790 RVA: 0x000B0A3B File Offset: 0x000AEC3B
 		static ConfigElementLevelByLevel()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigElementLevelByLevel.CreateStaticDefaultValue), new Action(ConfigElementLevelByLevel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000E57 RID: 3671 RVA: 0x000AA798 File Offset: 0x000A8998
+		// Token: 0x06000ECF RID: 3791 RVA: 0x000B0A5C File Offset: 0x000AEC5C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigElementLevelByLevel.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000E58 RID: 3672 RVA: 0x000AA817 File Offset: 0x000A8A17
+		// Token: 0x06000ED0 RID: 3792 RVA: 0x000B0ADB File Offset: 0x000AECDB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigElementLevelByLevel.LogPair = null;
 			ConfigElementLevelByLevel.HandleId = 0;
 		}
 
-		// Token: 0x06000E59 RID: 3673 RVA: 0x000AA825 File Offset: 0x000A8A25
+		// Token: 0x06000ED1 RID: 3793 RVA: 0x000B0AE9 File Offset: 0x000AECE9
 		public static void Init()
 		{
 			ConfigElementLevelByLevel.HandleId = ConfigCommon.InitDataStatement(ConfigElementLevelByLevel.HandleId, "db_rogue.db", "select BinData from `ElementLevel` where Level=?");
 		}
 
-		// Token: 0x06000E5A RID: 3674 RVA: 0x000AA840 File Offset: 0x000A8A40
+		// Token: 0x06000ED2 RID: 3794 RVA: 0x000B0B04 File Offset: 0x000AED04
 		public static ElementLevel? GetConfig(int p0Level, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigElementLevelByLevel.HandleId, ConfigElementLevelByLevel.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new ElementLevel?(rootAsElementLevel);
 		}
 
-		// Token: 0x04001099 RID: 4249
+		// Token: 0x04001125 RID: 4389
 		private const string DB = "db_rogue.db";
 
-		// Token: 0x0400109A RID: 4250
+		// Token: 0x04001126 RID: 4390
 		private const string FILE = "r.肉鸽.xlsx";
 
-		// Token: 0x0400109B RID: 4251
+		// Token: 0x04001127 RID: 4391
 		private const string TABLE = "ElementLevel";
 
-		// Token: 0x0400109C RID: 4252
+		// Token: 0x04001128 RID: 4392
 		private const string COMMAND = "select BinData from `ElementLevel` where Level=?";
 
-		// Token: 0x0400109D RID: 4253
+		// Token: 0x04001129 RID: 4393
 		private const string KEY_PREFIX = "ElementLevelByLevel";
 
-		// Token: 0x0400109E RID: 4254
+		// Token: 0x0400112A RID: 4394
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400109F RID: 4255
+		// Token: 0x0400112B RID: 4395
 		private static int HandleId;
 	}
 }

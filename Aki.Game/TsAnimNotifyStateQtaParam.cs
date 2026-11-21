@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000152 RID: 338
+// Token: 0x02000156 RID: 342
 internal class TsAnimNotifyStateQtaParam
 {
-	// Token: 0x0600150C RID: 5388 RVA: 0x00074851 File Offset: 0x00072A51
+	// Token: 0x060015A9 RID: 5545 RVA: 0x00079D6D File Offset: 0x00077F6D
 	public TsAnimNotifyStateQtaParam(int qtaHandleId)
 	{
 		this.QtaHandleId = qtaHandleId;
 	}
 
-	// Token: 0x0600150D RID: 5389 RVA: 0x00074860 File Offset: 0x00072A60
+	// Token: 0x060015AA RID: 5546 RVA: 0x00079D7C File Offset: 0x00077F7C
 	[NullableContext(1)]
 	public static string GetKey(int entityId, int notifyId)
 	{
@@ -22,6 +22,6 @@ internal class TsAnimNotifyStateQtaParam
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x04000EF7 RID: 3831
+	// Token: 0x04000F3A RID: 3898
 	public int QtaHandleId;
 }

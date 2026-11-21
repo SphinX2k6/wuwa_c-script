@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using Aki.Config;
 using UnrealEngine;
 
-// Token: 0x0200190D RID: 6413
+// Token: 0x02000DC6 RID: 3526
 public class MediumItemGridDangoPluginIconComponent : MediumItemGridComponent
 {
-	// Token: 0x0600BBF0 RID: 48112 RVA: 0x002A9954 File Offset: 0x002A7B54
+	// Token: 0x06008FDA RID: 36826 RVA: 0x002B40B0 File Offset: 0x002B22B0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -22,27 +22,27 @@ public class MediumItemGridDangoPluginIconComponent : MediumItemGridComponent
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BBF1 RID: 48113 RVA: 0x002A99BD File Offset: 0x002A7BBD
+	// Token: 0x06008FDB RID: 36827 RVA: 0x002B4119 File Offset: 0x002B2319
 	public override EItemGridComponentLayoutLevel GetLayoutLevel()
 	{
 		return EItemGridComponentLayoutLevel.UnderText;
 	}
 
-	// Token: 0x0600BBF2 RID: 48114 RVA: 0x002A99C0 File Offset: 0x002A7BC0
+	// Token: 0x06008FDC RID: 36828 RVA: 0x002B411C File Offset: 0x002B231C
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_ItemChipIcon";
 	}
 
-	// Token: 0x0600BBF3 RID: 48115 RVA: 0x002A99C7 File Offset: 0x002A7BC7
+	// Token: 0x06008FDD RID: 36829 RVA: 0x002B4123 File Offset: 0x002B2323
 	[NullableContext(1)]
 	public void RefreshByInfo(IDangoPluginIconInfo dangoPluginIconInfo)
 	{
 		this.OnRefresh(dangoPluginIconInfo);
 	}
 
-	// Token: 0x0600BBF4 RID: 48116 RVA: 0x002A99D0 File Offset: 0x002A7BD0
+	// Token: 0x06008FDE RID: 36830 RVA: 0x002B412C File Offset: 0x002B232C
 	[NullableContext(2)]
 	protected override void OnRefresh(object data)
 	{
@@ -78,13 +78,13 @@ public class MediumItemGridDangoPluginIconComponent : MediumItemGridComponent
 		this.SetActive(true);
 	}
 
-	// Token: 0x02007E80 RID: 32384
+	// Token: 0x02007007 RID: 28679
 	private class EChildType
 	{
-		// Token: 0x04029645 RID: 169541
+		// Token: 0x04024971 RID: 149873
 		public const int TextureQuality = 0;
 
-		// Token: 0x04029646 RID: 169542
+		// Token: 0x04024972 RID: 149874
 		public const int TextureMain = 1;
 	}
 }

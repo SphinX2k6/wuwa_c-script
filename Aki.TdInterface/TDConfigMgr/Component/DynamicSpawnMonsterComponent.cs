@@ -6,11 +6,9 @@ using Aki.TDConfigMgr.Component.Fb;
 namespace Aki.TDConfigMgr.Component
 {
 	// Token: 0x02000062 RID: 98
-	[NullableContext(1)]
-	[Nullable(0)]
 	public class DynamicSpawnMonsterComponent : IComponentBase
 	{
-		// Token: 0x0600032E RID: 814 RVA: 0x0001B430 File Offset: 0x00019630
+		// Token: 0x06000332 RID: 818 RVA: 0x0001BDA4 File Offset: 0x00019FA4
 		private DynamicSpawnMonsterComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600032F RID: 815 RVA: 0x0001B468 File Offset: 0x00019668
+		// Token: 0x06000333 RID: 819 RVA: 0x0001BDDC File Offset: 0x00019FDC
 		public static DynamicSpawnMonsterComponent Create([Nullable(2)] DynamicSpawnMonsterComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000330 RID: 816 RVA: 0x0001B47B File Offset: 0x0001967B
+		// Token: 0x06000334 RID: 820 RVA: 0x0001BDEF File Offset: 0x00019FEF
 		public static DynamicSpawnMonsterComponent CreateFromSetValue([Nullable(2)] DynamicSpawnMonsterComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000331 RID: 817 RVA: 0x0001B48E File Offset: 0x0001968E
+		// Token: 0x06000335 RID: 821 RVA: 0x0001BE02 File Offset: 0x0001A002
 		public new DynamicSpawnMonsterComponent_SetValue ToSetValue()
 		{
 			return new DynamicSpawnMonsterComponent_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000116 RID: 278
-		// (get) Token: 0x06000332 RID: 818 RVA: 0x0001B4BC File Offset: 0x000196BC
-		// (set) Token: 0x06000333 RID: 819 RVA: 0x0001B4F6 File Offset: 0x000196F6
+		// Token: 0x17000118 RID: 280
+		// (get) Token: 0x06000336 RID: 822 RVA: 0x0001BE30 File Offset: 0x0001A030
+		// (set) Token: 0x06000337 RID: 823 RVA: 0x0001BE6A File Offset: 0x0001A06A
 		public override bool? Disabled
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000117 RID: 279
-		// (get) Token: 0x06000334 RID: 820 RVA: 0x0001B504 File Offset: 0x00019704
-		// (set) Token: 0x06000335 RID: 821 RVA: 0x0001B52E File Offset: 0x0001972E
+		// Token: 0x17000119 RID: 281
+		// (get) Token: 0x06000338 RID: 824 RVA: 0x0001BE78 File Offset: 0x0001A078
+		// (set) Token: 0x06000339 RID: 825 RVA: 0x0001BEA2 File Offset: 0x0001A0A2
 		public override bool? EdIsLocked
 		{
 			get
@@ -105,9 +103,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000118 RID: 280
-		// (get) Token: 0x06000336 RID: 822 RVA: 0x0001B53C File Offset: 0x0001973C
-		// (set) Token: 0x06000337 RID: 823 RVA: 0x0001B5CF File Offset: 0x000197CF
+		// Token: 0x1700011A RID: 282
+		// (get) Token: 0x0600033A RID: 826 RVA: 0x0001BEB0 File Offset: 0x0001A0B0
+		// (set) Token: 0x0600033B RID: 827 RVA: 0x0001BF43 File Offset: 0x0001A143
 		public virtual List<IConditionSpawnMonster> Group
 		{
 			get
@@ -143,18 +141,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000203 RID: 515
+		// Token: 0x04000208 RID: 520
 		[Nullable(2)]
 		protected new DynamicSpawnMonsterComponent FbInstance;
 
-		// Token: 0x04000204 RID: 516
+		// Token: 0x04000209 RID: 521
 		[Nullable(2)]
 		protected new DynamicSpawnMonsterComponent_SetValue PocoInterface;
 
-		// Token: 0x04000205 RID: 517
+		// Token: 0x0400020A RID: 522
 		private List<IConditionSpawnMonster> _GroupCache;
 
-		// Token: 0x04000206 RID: 518
+		// Token: 0x0400020B RID: 523
 		private bool _GroupInited;
 	}
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -8,19 +7,19 @@ using CSharpScript.Game.Common;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 
-// Token: 0x0200173C RID: 5948
+// Token: 0x02000BF5 RID: 3061
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class CalabashModel : ModelBase
 {
-	// Token: 0x0600ABDF RID: 43999 RVA: 0x00268420 File Offset: 0x00266620
+	// Token: 0x06007FC6 RID: 32710 RVA: 0x00272834 File Offset: 0x00270A34
 	public CalabashModel()
 	{
 		this.UnlockTipsList = new List<VisionUnlockQualityData>();
 	}
 
-	// Token: 0x0600ABE0 RID: 44000 RVA: 0x00268434 File Offset: 0x00266634
+	// Token: 0x06007FC7 RID: 32711 RVA: 0x00272848 File Offset: 0x00270A48
 	protected override bool OnInit()
 	{
 		this.DirectionalFusionTimeMax = ConfigCommonParamById.GetIntConfig("PhantomDirectRefiningWeekTimes").Value;
@@ -28,7 +27,7 @@ public class CalabashModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600ABE1 RID: 44001 RVA: 0x00268461 File Offset: 0x00266661
+	// Token: 0x06007FC8 RID: 32712 RVA: 0x00272875 File Offset: 0x00270A75
 	private void InitCalabashInstance()
 	{
 		this.CalabashInstance = new CalabashInstance();
@@ -36,7 +35,7 @@ public class CalabashModel : ModelBase
 		this.InitMonsterIdRecord();
 	}
 
-	// Token: 0x0600ABE2 RID: 44002 RVA: 0x0026847C File Offset: 0x0026667C
+	// Token: 0x06007FC9 RID: 32713 RVA: 0x00272890 File Offset: 0x00270A90
 	private void InitCalabashDevelopRewardData()
 	{
 		IEnumerable<CalabashDevelopReward> calabashDevelopList = CalabashConfig.Instance.GetCalabashDevelopList();
@@ -55,7 +54,7 @@ public class CalabashModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600ABE3 RID: 44003 RVA: 0x00268520 File Offset: 0x00266720
+	// Token: 0x06007FCA RID: 32714 RVA: 0x00272934 File Offset: 0x00270B34
 	public void UpdateCalabashDevelopRewardData()
 	{
 		foreach (KeyValuePair<int, List<ICalabashDevelopConditionState>> keyValuePair in this.GetUnlockCalabashDevelopRewards())
@@ -68,7 +67,7 @@ public class CalabashModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.HasCalabashExp);
 	}
 
-	// Token: 0x0600ABE4 RID: 44004 RVA: 0x002685B4 File Offset: 0x002667B4
+	// Token: 0x06007FCB RID: 32715 RVA: 0x002729C8 File Offset: 0x00270BC8
 	public CalabashDevelopRewardData[] GetCalabashDevelopRewardSortData()
 	{
 		List<CalabashDevelopRewardData> list = new List<CalabashDevelopRewardData>();
@@ -80,13 +79,13 @@ public class CalabashModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x0600ABE5 RID: 44005 RVA: 0x0026862C File Offset: 0x0026682C
+	// Token: 0x06007FCC RID: 32716 RVA: 0x00272A40 File Offset: 0x00270C40
 	private int SortByDevelopRewardSortId(CalabashDevelopRewardData a, CalabashDevelopRewardData b)
 	{
 		return a.DevelopReward.SortId - b.DevelopReward.SortId;
 	}
 
-	// Token: 0x0600ABE6 RID: 44006 RVA: 0x00268645 File Offset: 0x00266845
+	// Token: 0x06007FCD RID: 32717 RVA: 0x00272A59 File Offset: 0x00270C59
 	public void SetCalabashInstanceBaseInfo(CalabashMsg baseInfo)
 	{
 		if (this.CalabashInstance == null)
@@ -96,7 +95,7 @@ public class CalabashModel : ModelBase
 		this.CalabashInstance.SetBaseInfo(baseInfo);
 	}
 
-	// Token: 0x0600ABE7 RID: 44007 RVA: 0x00268661 File Offset: 0x00266861
+	// Token: 0x06007FCE RID: 32718 RVA: 0x00272A75 File Offset: 0x00270C75
 	public void SetCalabashInstanceConfigInfo(CalabashCfg configInfo)
 	{
 		if (this.CalabashInstance == null)
@@ -106,7 +105,7 @@ public class CalabashModel : ModelBase
 		this.CalabashInstance.SetConfigInfo(configInfo);
 	}
 
-	// Token: 0x0600ABE8 RID: 44008 RVA: 0x00268680 File Offset: 0x00266880
+	// Token: 0x06007FCF RID: 32719 RVA: 0x00272A94 File Offset: 0x00270C94
 	public void InitMonsterIdRecord()
 	{
 		this.MonsterIdRecordList = (LocalStorage.GetPlayer<List<int>>(ELocalStoragePlayerKey.CalabashCollect, null) ?? new List<int>());
@@ -117,38 +116,38 @@ public class CalabashModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600ABE9 RID: 44009 RVA: 0x002686FC File Offset: 0x002668FC
+	// Token: 0x06007FD0 RID: 32720 RVA: 0x00272B10 File Offset: 0x00270D10
 	public void SetCalabashLevel(int level)
 	{
 		this.CalabashInstance.CalabashCurrentLevel = level;
 		EventSystem.Instance.Emit(EEventName.CalabashLevelUpdate);
 	}
 
-	// Token: 0x0600ABEA RID: 44010 RVA: 0x0026871A File Offset: 0x0026691A
+	// Token: 0x06007FD1 RID: 32721 RVA: 0x00272B2E File Offset: 0x00270D2E
 	public int GetCalabashLevel()
 	{
 		return this.CalabashInstance.CalabashCurrentLevel;
 	}
 
-	// Token: 0x0600ABEB RID: 44011 RVA: 0x00268727 File Offset: 0x00266927
+	// Token: 0x06007FD2 RID: 32722 RVA: 0x00272B3B File Offset: 0x00270D3B
 	public int GetCalabashMaxLevel()
 	{
 		return this.CalabashInstance.CalabashMaxLevel;
 	}
 
-	// Token: 0x0600ABEC RID: 44012 RVA: 0x00268734 File Offset: 0x00266934
+	// Token: 0x06007FD3 RID: 32723 RVA: 0x00272B48 File Offset: 0x00270D48
 	public int GetIdentifyGuaranteeCount()
 	{
 		return this.CalabashInstance.IdentifyGuaranteeCount;
 	}
 
-	// Token: 0x0600ABED RID: 44013 RVA: 0x00268741 File Offset: 0x00266941
+	// Token: 0x06007FD4 RID: 32724 RVA: 0x00272B55 File Offset: 0x00270D55
 	public int GetLowCostIdentifyGuaranteeCount()
 	{
 		return this.CalabashInstance.LowCostIdentifyGuaranteeCount;
 	}
 
-	// Token: 0x0600ABEE RID: 44014 RVA: 0x00268750 File Offset: 0x00266950
+	// Token: 0x06007FD5 RID: 32725 RVA: 0x00272B64 File Offset: 0x00270D64
 	public int GetLeftIntensifyCaptureGuarantee()
 	{
 		int calabashCurrentLevel = this.CalabashInstance.CalabashCurrentLevel;
@@ -158,54 +157,54 @@ public class CalabashModel : ModelBase
 		return Math.Max(num - identifyGuaranteeCount, 0);
 	}
 
-	// Token: 0x0600ABEF RID: 44015 RVA: 0x002687A0 File Offset: 0x002669A0
+	// Token: 0x06007FD6 RID: 32726 RVA: 0x00272BB4 File Offset: 0x00270DB4
 	public int GetLeftLowCostIntensifyCaptureGuarantee()
 	{
 		int calabashCurrentLevel = this.CalabashInstance.CalabashCurrentLevel;
 		CalabashLevel? calabashConfigByLevel = CalabashConfig.Instance.GetCalabashConfigByLevel(calabashCurrentLevel);
-		int num = (calabashConfigByLevel != null) ? calabashConfigByLevel.GetValueOrDefault().IntensifyCaptureGuarantee : 0;
+		int num = (calabashConfigByLevel != null) ? calabashConfigByLevel.GetValueOrDefault().LowCostIntensifyCaptureGuarantee : 0;
 		int lowCostIdentifyGuaranteeCount = this.GetLowCostIdentifyGuaranteeCount();
 		return Math.Max(num - lowCostIdentifyGuaranteeCount, 0);
 	}
 
-	// Token: 0x0600ABF0 RID: 44016 RVA: 0x002687EF File Offset: 0x002669EF
+	// Token: 0x06007FD7 RID: 32727 RVA: 0x00272C03 File Offset: 0x00270E03
 	public void SetCurrentExp(int curExp)
 	{
 		this.CalabashInstance.CalabashCurrentExp = curExp;
 	}
 
-	// Token: 0x0600ABF1 RID: 44017 RVA: 0x002687FD File Offset: 0x002669FD
+	// Token: 0x06007FD8 RID: 32728 RVA: 0x00272C11 File Offset: 0x00270E11
 	public int GetCurrentExp()
 	{
 		return this.CalabashInstance.CalabashCurrentExp;
 	}
 
-	// Token: 0x0600ABF2 RID: 44018 RVA: 0x0026880A File Offset: 0x00266A0A
+	// Token: 0x06007FD9 RID: 32729 RVA: 0x00272C1E File Offset: 0x00270E1E
 	public void SetUnlockCalabashDevelopReward(CalabashDevelopInfo developReward)
 	{
 		this.CalabashInstance.SetUnlockCalabashDevelopReward(developReward);
 	}
 
-	// Token: 0x0600ABF3 RID: 44019 RVA: 0x00268818 File Offset: 0x00266A18
+	// Token: 0x06007FDA RID: 32730 RVA: 0x00272C2C File Offset: 0x00270E2C
 	public Dictionary<int, List<ICalabashDevelopConditionState>> GetUnlockCalabashDevelopRewards()
 	{
 		return this.CalabashInstance.GetUnlockCalabashDevelopRewards();
 	}
 
-	// Token: 0x0600ABF4 RID: 44020 RVA: 0x00268828 File Offset: 0x00266A28
+	// Token: 0x06007FDB RID: 32731 RVA: 0x00272C3C File Offset: 0x00270E3C
 	public bool CheckCalabashMonsterUnlocked(int monsterId)
 	{
 		CalabashDevelopRewardData calabashDevelopRewardData;
 		return this.CalabashDevelopRewardDataMap.TryGetValue(monsterId, out calabashDevelopRewardData) && calabashDevelopRewardData.UnlockData;
 	}
 
-	// Token: 0x0600ABF5 RID: 44021 RVA: 0x0026884D File Offset: 0x00266A4D
+	// Token: 0x06007FDC RID: 32732 RVA: 0x00272C61 File Offset: 0x00270E61
 	public string GetMonsterName(string id)
 	{
 		return "CalabashCatchGain_" + id;
 	}
 
-	// Token: 0x0600ABF6 RID: 44022 RVA: 0x0026885C File Offset: 0x00266A5C
+	// Token: 0x06007FDD RID: 32733 RVA: 0x00272C70 File Offset: 0x00270E70
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -235,7 +234,7 @@ public class CalabashModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x0600ABF7 RID: 44023 RVA: 0x00268904 File Offset: 0x00266B04
+	// Token: 0x06007FDE RID: 32734 RVA: 0x00272D18 File Offset: 0x00270F18
 	public unsafe int GetCalabashDevelopRewardExpByMonsterId(int monsterId)
 	{
 		int num = 0;
@@ -258,7 +257,7 @@ public class CalabashModel : ModelBase
 		return num;
 	}
 
-	// Token: 0x0600ABF8 RID: 44024 RVA: 0x00268988 File Offset: 0x00266B88
+	// Token: 0x06007FDF RID: 32735 RVA: 0x00272D9C File Offset: 0x00270F9C
 	public int GetCalabashAllSchedule()
 	{
 		int num = 0;
@@ -269,7 +268,7 @@ public class CalabashModel : ModelBase
 		return num;
 	}
 
-	// Token: 0x0600ABF9 RID: 44025 RVA: 0x002689E8 File Offset: 0x00266BE8
+	// Token: 0x06007FE0 RID: 32736 RVA: 0x00272DFC File Offset: 0x00270FFC
 	public int GetCalabashOwnSchedule()
 	{
 		int num = 0;
@@ -280,9 +279,9 @@ public class CalabashModel : ModelBase
 		return num;
 	}
 
-	// Token: 0x17000E5E RID: 3678
-	// (get) Token: 0x0600ABFA RID: 44026 RVA: 0x00268A48 File Offset: 0x00266C48
-	// (set) Token: 0x0600ABFB RID: 44027 RVA: 0x00268A50 File Offset: 0x00266C50
+	// Token: 0x17000E81 RID: 3713
+	// (get) Token: 0x06007FE1 RID: 32737 RVA: 0x00272E5C File Offset: 0x0027105C
+	// (set) Token: 0x06007FE2 RID: 32738 RVA: 0x00272E64 File Offset: 0x00271064
 	public CalabashInstance CalabashInstance
 	{
 		get
@@ -295,8 +294,8 @@ public class CalabashModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000E5F RID: 3679
-	// (get) Token: 0x0600ABFC RID: 44028 RVA: 0x00268A59 File Offset: 0x00266C59
+	// Token: 0x17000E82 RID: 3714
+	// (get) Token: 0x06007FE3 RID: 32739 RVA: 0x00272E6D File Offset: 0x0027106D
 	public List<VisionUnlockQualityData> CalabashUnlockTipsList
 	{
 		get
@@ -305,7 +304,7 @@ public class CalabashModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600ABFD RID: 44029 RVA: 0x00268A64 File Offset: 0x00266C64
+	// Token: 0x06007FE4 RID: 32740 RVA: 0x00272E78 File Offset: 0x00271078
 	public void AddCalabashUnlockTipsList(int monsterItemId, int unlockQuality)
 	{
 		VisionUnlockQualityData visionUnlockQualityData = new VisionUnlockQualityData();
@@ -314,14 +313,14 @@ public class CalabashModel : ModelBase
 		this.UnlockTipsList.Add(visionUnlockQualityData);
 	}
 
-	// Token: 0x0600ABFE RID: 44030 RVA: 0x00268A91 File Offset: 0x00266C91
+	// Token: 0x06007FE5 RID: 32741 RVA: 0x00272EA5 File Offset: 0x002710A5
 	public void SetCalabashLevelsReward(List<int> levelList)
 	{
 		this.CalabashInstance.SetRewardedLevelsSet(levelList);
 		EventSystem.Instance.Emit(EEventName.GetCalabashReward);
 	}
 
-	// Token: 0x0600ABFF RID: 44031 RVA: 0x00268AB0 File Offset: 0x00266CB0
+	// Token: 0x06007FE6 RID: 32742 RVA: 0x00272EC4 File Offset: 0x002710C4
 	public int GetCurrentExpByLevel(int level)
 	{
 		if (level < this.CalabashInstance.CalabashCurrentLevel)
@@ -335,13 +334,13 @@ public class CalabashModel : ModelBase
 		return 0;
 	}
 
-	// Token: 0x0600AC00 RID: 44032 RVA: 0x00268B04 File Offset: 0x00266D04
+	// Token: 0x06007FE7 RID: 32743 RVA: 0x00272F18 File Offset: 0x00271118
 	public int GetMaxExpByLevel(int level)
 	{
 		return CalabashConfig.Instance.GetCalabashConfigByLevel(level).Value.LevelUpExp;
 	}
 
-	// Token: 0x0600AC01 RID: 44033 RVA: 0x00268B2C File Offset: 0x00266D2C
+	// Token: 0x06007FE8 RID: 32744 RVA: 0x00272F40 File Offset: 0x00271140
 	public ECalabashRewardState GetReceiveRewardStateByLevel(int level)
 	{
 		if (level == 0)
@@ -359,7 +358,7 @@ public class CalabashModel : ModelBase
 		return ECalabashRewardState.CanReceive;
 	}
 
-	// Token: 0x0600AC02 RID: 44034 RVA: 0x00268B54 File Offset: 0x00266D54
+	// Token: 0x06007FE9 RID: 32745 RVA: 0x00272F68 File Offset: 0x00271168
 	public bool IsLimitToLevelUp(int level)
 	{
 		if (level != this.CalabashInstance.CalabashCurrentLevel)
@@ -370,13 +369,13 @@ public class CalabashModel : ModelBase
 		return this.CalabashInstance.CalabashCurrentExp >= calabashConfigByLevel.Value.LevelUpExp;
 	}
 
-	// Token: 0x0600AC03 RID: 44035 RVA: 0x00268B9C File Offset: 0x00266D9C
+	// Token: 0x06007FEA RID: 32746 RVA: 0x00272FB0 File Offset: 0x002711B0
 	public int GetCatchGainByLevel(int level)
 	{
 		return this.CalabashInstance.GetCatchGainByLevel(level).GetValueOrDefault();
 	}
 
-	// Token: 0x0600AC04 RID: 44036 RVA: 0x00268BC0 File Offset: 0x00266DC0
+	// Token: 0x06007FEB RID: 32747 RVA: 0x00272FD4 File Offset: 0x002711D4
 	public bool CheckCanReceiveReward()
 	{
 		if (this.CalabashInstance == null)
@@ -393,7 +392,7 @@ public class CalabashModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600AC05 RID: 44037 RVA: 0x00268BFA File Offset: 0x00266DFA
+	// Token: 0x06007FEC RID: 32748 RVA: 0x0027300E File Offset: 0x0027120E
 	public bool RecordMonsterId(int monsterId)
 	{
 		HashSet<int> monsterIdRecordSet = this.MonsterIdRecordSet;
@@ -410,13 +409,13 @@ public class CalabashModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0600AC06 RID: 44038 RVA: 0x00268C34 File Offset: 0x00266E34
+	// Token: 0x06007FED RID: 32749 RVA: 0x00273048 File Offset: 0x00271248
 	public bool CheckMonsterIdInRecord(int monsterId)
 	{
 		return this.MonsterIdRecordSet.Contains(monsterId);
 	}
 
-	// Token: 0x0600AC07 RID: 44039 RVA: 0x00268C44 File Offset: 0x00266E44
+	// Token: 0x06007FEE RID: 32750 RVA: 0x00273058 File Offset: 0x00271258
 	public void CheckSimpleStateSave()
 	{
 		if (LocalStorage.GetPlayer<bool?>(ELocalStoragePlayerKey.CalabashCollectIsSimpleDetail, null) == null)
@@ -425,13 +424,13 @@ public class CalabashModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600AC08 RID: 44040 RVA: 0x00268C74 File Offset: 0x00266E74
+	// Token: 0x06007FEF RID: 32751 RVA: 0x00273088 File Offset: 0x00271288
 	public bool GetIfSimpleState()
 	{
 		return LocalStorage.GetPlayer<bool?>(ELocalStoragePlayerKey.CalabashCollectIsSimpleDetail, null).GetValueOrDefault();
 	}
 
-	// Token: 0x0600AC09 RID: 44041 RVA: 0x00268C9C File Offset: 0x00266E9C
+	// Token: 0x06007FF0 RID: 32752 RVA: 0x002730B0 File Offset: 0x002712B0
 	public void SaveIfSimpleState(bool state)
 	{
 		bool? player = LocalStorage.GetPlayer<bool?>(ELocalStoragePlayerKey.CalabashCollectIsSimpleDetail, null);
@@ -447,7 +446,7 @@ public class CalabashModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.ChangeCalabashCollectSimplyState);
 	}
 
-	// Token: 0x0600AC0A RID: 44042 RVA: 0x00268CF8 File Offset: 0x00266EF8
+	// Token: 0x06007FF1 RID: 32753 RVA: 0x0027310C File Offset: 0x0027130C
 	public UiDynamicTab[] GetViewTabList()
 	{
 		List<UiDynamicTab> viewTabList = DynamicTabConfig.Instance.GetViewTabList(EUiViewName.CalabashRootView);
@@ -474,7 +473,7 @@ public class CalabashModel : ModelBase
 		return list2.ToArray();
 	}
 
-	// Token: 0x0600AC0B RID: 44043 RVA: 0x00268DF0 File Offset: 0x00266FF0
+	// Token: 0x06007FF2 RID: 32754 RVA: 0x00273204 File Offset: 0x00271404
 	public PhantomFetterGroup[] GetPhantomFetterGroupList()
 	{
 		if (!this.OnlyShowBattleFettersTab)
@@ -494,13 +493,13 @@ public class CalabashModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x0600AC0C RID: 44044 RVA: 0x00268E65 File Offset: 0x00267065
+	// Token: 0x06007FF3 RID: 32755 RVA: 0x00273279 File Offset: 0x00271479
 	public void GmClearData()
 	{
 		this.UnlockTipsList.Clear();
 	}
 
-	// Token: 0x0600AC0D RID: 44045 RVA: 0x00268E74 File Offset: 0x00267074
+	// Token: 0x06007FF4 RID: 32756 RVA: 0x00273288 File Offset: 0x00271488
 	public int[] GetVisionRefineRecommendAttributes(int cost, int fetter)
 	{
 		IReadOnlyList<RefineRecommend> configList = ConfigRefineRecommendByCost.GetConfigList(cost, true);
@@ -516,30 +515,36 @@ public class CalabashModel : ModelBase
 		}
 		foreach (RefineRecommend refineRecommend in configList)
 		{
-			if (refineRecommend.FetterArray().Contains(fetter))
+			if (Array.IndexOf<int>(refineRecommend.FetterArray(), fetter) >= 0)
 			{
-				return refineRecommend.PropertyArray().ToArray<int>();
+				int[] array = refineRecommend.PropertyArray();
+				int[] array2 = new int[array.Length];
+				for (int i = 0; i < array2.Length; i++)
+				{
+					array2[i] = array[i];
+				}
+				return array2;
 			}
 		}
 		return new int[0];
 	}
 
-	// Token: 0x0600AC0E RID: 44046 RVA: 0x00268F24 File Offset: 0x00267124
+	// Token: 0x06007FF5 RID: 32757 RVA: 0x00273360 File Offset: 0x00271560
 	public void ClearOnlyShowData()
 	{
 		this.OnlyShowBattleFettersTab = false;
 		this.OnlyMonsterCostShowMaxLevel = null;
 	}
 
-	// Token: 0x0600AC0F RID: 44047 RVA: 0x00268F39 File Offset: 0x00267139
+	// Token: 0x06007FF6 RID: 32758 RVA: 0x00273375 File Offset: 0x00271575
 	public void SetDirectionalFusionTargetFetter(int fetterId)
 	{
 		this.DirectionalFusionTargetFetterGroup = fetterId;
 		EventSystem.Instance.Emit(EEventName.SelectDirectionalFusionTarget);
 	}
 
-	// Token: 0x17000E60 RID: 3680
-	// (get) Token: 0x0600AC10 RID: 44048 RVA: 0x00268F52 File Offset: 0x00267152
+	// Token: 0x17000E83 RID: 3715
+	// (get) Token: 0x06007FF7 RID: 32759 RVA: 0x0027338E File Offset: 0x0027158E
 	public static CalabashModel Instance
 	{
 		get
@@ -548,7 +553,7 @@ public class CalabashModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600AC11 RID: 44049 RVA: 0x00268F59 File Offset: 0x00267159
+	// Token: 0x06007FF8 RID: 32760 RVA: 0x00273395 File Offset: 0x00271595
 	public static CalabashModel GetOrCreateInstance()
 	{
 		if (CalabashModel._Instance == null)
@@ -558,7 +563,7 @@ public class CalabashModel : ModelBase
 		return CalabashModel._Instance;
 	}
 
-	// Token: 0x0600AC12 RID: 44050 RVA: 0x00268F6D File Offset: 0x0026716D
+	// Token: 0x06007FF9 RID: 32761 RVA: 0x002733A9 File Offset: 0x002715A9
 	public static bool CreateInstance()
 	{
 		if (CalabashModel._Instance != null)
@@ -569,38 +574,38 @@ public class CalabashModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600AC13 RID: 44051 RVA: 0x00268F83 File Offset: 0x00267183
+	// Token: 0x06007FFA RID: 32762 RVA: 0x002733BF File Offset: 0x002715BF
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600AC14 RID: 44052 RVA: 0x00268F85 File Offset: 0x00267185
+	// Token: 0x06007FFB RID: 32763 RVA: 0x002733C1 File Offset: 0x002715C1
 	public static void ResetStaticDefaultValue()
 	{
 		CalabashModel._Instance = null;
 	}
 
-	// Token: 0x0600AC15 RID: 44053 RVA: 0x00268F8D File Offset: 0x0026718D
+	// Token: 0x06007FFC RID: 32764 RVA: 0x002733C9 File Offset: 0x002715C9
 	static CalabashModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CalabashModel.CreateStaticDefaultValue), new Action(CalabashModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04004E03 RID: 19971
+	// Token: 0x04004EAC RID: 20140
 	public bool OnlyShowBattleFettersTab;
 
-	// Token: 0x04004E04 RID: 19972
+	// Token: 0x04004EAD RID: 20141
 	public int? OnlyMonsterCostShowMaxLevel;
 
-	// Token: 0x04004E05 RID: 19973
+	// Token: 0x04004EAE RID: 20142
 	[Nullable(2)]
 	public int[] OnlyShowPhantomFetterGroupIdList;
 
-	// Token: 0x04004E06 RID: 19974
+	// Token: 0x04004EAF RID: 20143
 	[Nullable(2)]
 	private CalabashInstance CalabashInstanceInternal;
 
-	// Token: 0x04004E07 RID: 19975
+	// Token: 0x04004EB0 RID: 20144
 	[Nullable(new byte[]
 	{
 		2,
@@ -608,33 +613,33 @@ public class CalabashModel : ModelBase
 	})]
 	private Dictionary<int, CalabashDevelopRewardData> CalabashDevelopRewardDataMap;
 
-	// Token: 0x04004E08 RID: 19976
+	// Token: 0x04004EB1 RID: 20145
 	[Nullable(2)]
 	private HashSet<int> MonsterIdRecordSet;
 
-	// Token: 0x04004E09 RID: 19977
+	// Token: 0x04004EB2 RID: 20146
 	[Nullable(2)]
 	private List<int> MonsterIdRecordList;
 
-	// Token: 0x04004E0A RID: 19978
+	// Token: 0x04004EB3 RID: 20147
 	public bool HideVisionRecoveryConfirmBox;
 
-	// Token: 0x04004E0B RID: 19979
+	// Token: 0x04004EB4 RID: 20148
 	public bool IsNeedRefineSubConfirmBox;
 
-	// Token: 0x04004E0C RID: 19980
+	// Token: 0x04004EB5 RID: 20149
 	public int DirectionalFusionTime;
 
-	// Token: 0x04004E0D RID: 19981
+	// Token: 0x04004EB6 RID: 20150
 	public int DirectionalFusionTimeMax;
 
-	// Token: 0x04004E0E RID: 19982
+	// Token: 0x04004EB7 RID: 20151
 	public int DirectionalFusionTargetFetterGroup;
 
-	// Token: 0x04004E0F RID: 19983
+	// Token: 0x04004EB8 RID: 20152
 	private readonly List<VisionUnlockQualityData> UnlockTipsList;
 
-	// Token: 0x04004E10 RID: 19984
+	// Token: 0x04004EB9 RID: 20153
 	[Nullable(2)]
 	private static CalabashModel _Instance;
 }

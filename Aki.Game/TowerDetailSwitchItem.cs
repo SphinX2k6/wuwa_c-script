@@ -6,17 +6,17 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002BED RID: 11245
+// Token: 0x02002168 RID: 8552
 public class TowerDetailSwitchItem : UiPanelBase
 {
-	// Token: 0x060175AE RID: 95662 RVA: 0x005F0B86 File Offset: 0x005EED86
+	// Token: 0x06014FDF RID: 85983 RVA: 0x0061D6E6 File Offset: 0x0061B8E6
 	[NullableContext(1)]
 	public TowerDetailSwitchItem(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x060175AF RID: 95663 RVA: 0x005F0B9C File Offset: 0x005EED9C
+	// Token: 0x06014FE0 RID: 85984 RVA: 0x0061D6FC File Offset: 0x0061B8FC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -37,7 +37,7 @@ public class TowerDetailSwitchItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060175B0 RID: 95664 RVA: 0x005F0C42 File Offset: 0x005EEE42
+	// Token: 0x06014FE1 RID: 85985 RVA: 0x0061D7A2 File Offset: 0x0061B9A2
 	protected override void OnStart()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -46,13 +46,13 @@ public class TowerDetailSwitchItem : UiPanelBase
 		extendToggle.CanExecuteChange.Bind(new Func<bool>(this.CanExecuteChange));
 	}
 
-	// Token: 0x060175B1 RID: 95665 RVA: 0x005F0C73 File Offset: 0x005EEE73
+	// Token: 0x06014FE2 RID: 85986 RVA: 0x0061D7D3 File Offset: 0x0061B9D3
 	private bool CanExecuteChange()
 	{
 		return TowerDetailModel.Instance.CurrentSelectDetailId != this.TowerSwitchData.Index;
 	}
 
-	// Token: 0x060175B2 RID: 95666 RVA: 0x005F0C90 File Offset: 0x005EEE90
+	// Token: 0x06014FE3 RID: 85987 RVA: 0x0061D7F0 File Offset: 0x0061B9F0
 	[NullableContext(1)]
 	public void Update(TowerSwitchData data)
 	{
@@ -62,7 +62,7 @@ public class TowerDetailSwitchItem : UiPanelBase
 		this.RefreshView();
 	}
 
-	// Token: 0x060175B3 RID: 95667 RVA: 0x005F0CBF File Offset: 0x005EEEBF
+	// Token: 0x06014FE4 RID: 85988 RVA: 0x0061D81F File Offset: 0x0061BA1F
 	private void RefreshView()
 	{
 		if (TowerDetailModel.Instance.CurrentSelectDetailId != this.TowerSwitchData.Index)
@@ -73,24 +73,24 @@ public class TowerDetailSwitchItem : UiPanelBase
 		base.GetExtendToggle(0).SetToggleStateForce(EToggleState.ETT_Checked, false, false, false);
 	}
 
-	// Token: 0x060175B4 RID: 95668 RVA: 0x005F0CF9 File Offset: 0x005EEEF9
+	// Token: 0x06014FE5 RID: 85989 RVA: 0x0061D859 File Offset: 0x0061BA59
 	private void OnClickSwitchToggle(EToggleState toggleState)
 	{
 		TowerDetailModel.Instance.CurrentSelectDetailId = this.TowerSwitchData.Index;
 		EventSystem.Instance.Emit(EEventName.OnClickSingleTimeTowerDetailSwitchBtn);
 	}
 
-	// Token: 0x0400AECC RID: 44748
+	// Token: 0x0400B2D1 RID: 45777
 	[Nullable(2)]
 	private TowerSwitchData TowerSwitchData;
 
-	// Token: 0x020091AA RID: 37290
+	// Token: 0x020083ED RID: 33773
 	private class EChildType
 	{
-		// Token: 0x0402F216 RID: 193046
+		// Token: 0x0402A917 RID: 174359
 		public const int SwitchToggle = 0;
 
-		// Token: 0x0402F217 RID: 193047
+		// Token: 0x0402A918 RID: 174360
 		public const int TitleText = 1;
 	}
 }

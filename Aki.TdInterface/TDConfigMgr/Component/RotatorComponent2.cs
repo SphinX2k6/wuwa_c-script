@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000885 RID: 2181
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000928 RID: 2344
 	public class RotatorComponent2 : IComponentBase
 	{
-		// Token: 0x0600308D RID: 12429 RVA: 0x0007CDF4 File Offset: 0x0007AFF4
+		// Token: 0x060033C9 RID: 13257 RVA: 0x000842DC File Offset: 0x000824DC
 		private RotatorComponent2_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600308E RID: 12430 RVA: 0x0007CE2C File Offset: 0x0007B02C
+		// Token: 0x060033CA RID: 13258 RVA: 0x00084314 File Offset: 0x00082514
 		public static RotatorComponent2 Create([Nullable(2)] RotatorComponent2 instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600308F RID: 12431 RVA: 0x0007CE3F File Offset: 0x0007B03F
+		// Token: 0x060033CB RID: 13259 RVA: 0x00084327 File Offset: 0x00082527
 		public static RotatorComponent2 CreateFromSetValue([Nullable(2)] RotatorComponent2_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003090 RID: 12432 RVA: 0x0007CE52 File Offset: 0x0007B052
+		// Token: 0x060033CC RID: 13260 RVA: 0x0008433A File Offset: 0x0008253A
 		public new RotatorComponent2_SetValue ToSetValue()
 		{
 			return new RotatorComponent2_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000CE2 RID: 3298
-		// (get) Token: 0x06003091 RID: 12433 RVA: 0x0007CE80 File Offset: 0x0007B080
-		// (set) Token: 0x06003092 RID: 12434 RVA: 0x0007CEBA File Offset: 0x0007B0BA
+		// Token: 0x17000DAB RID: 3499
+		// (get) Token: 0x060033CD RID: 13261 RVA: 0x00084368 File Offset: 0x00082568
+		// (set) Token: 0x060033CE RID: 13262 RVA: 0x000843A2 File Offset: 0x000825A2
 		public override bool? Disabled
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CE3 RID: 3299
-		// (get) Token: 0x06003093 RID: 12435 RVA: 0x0007CEC8 File Offset: 0x0007B0C8
-		// (set) Token: 0x06003094 RID: 12436 RVA: 0x0007CEF2 File Offset: 0x0007B0F2
+		// Token: 0x17000DAC RID: 3500
+		// (get) Token: 0x060033CF RID: 13263 RVA: 0x000843B0 File Offset: 0x000825B0
+		// (set) Token: 0x060033D0 RID: 13264 RVA: 0x000843DA File Offset: 0x000825DA
 		public override bool? EdIsLocked
 		{
 			get
@@ -105,9 +103,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CE4 RID: 3300
-		// (get) Token: 0x06003095 RID: 12437 RVA: 0x0007CF00 File Offset: 0x0007B100
-		// (set) Token: 0x06003096 RID: 12438 RVA: 0x0007CF93 File Offset: 0x0007B193
+		// Token: 0x17000DAD RID: 3501
+		// (get) Token: 0x060033D1 RID: 13265 RVA: 0x000843E8 File Offset: 0x000825E8
+		// (set) Token: 0x060033D2 RID: 13266 RVA: 0x0008447B File Offset: 0x0008267B
 		public virtual List<IStateRotationConfig> Config
 		{
 			get
@@ -143,18 +141,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001FEE RID: 8174
+		// Token: 0x04002200 RID: 8704
 		[Nullable(2)]
 		protected new RotatorComponent2 FbInstance;
 
-		// Token: 0x04001FEF RID: 8175
+		// Token: 0x04002201 RID: 8705
 		[Nullable(2)]
 		protected new RotatorComponent2_SetValue PocoInterface;
 
-		// Token: 0x04001FF0 RID: 8176
+		// Token: 0x04002202 RID: 8706
 		private List<IStateRotationConfig> _ConfigCache;
 
-		// Token: 0x04001FF1 RID: 8177
+		// Token: 0x04002203 RID: 8707
 		private bool _ConfigInited;
 	}
 }

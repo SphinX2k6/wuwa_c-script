@@ -4,41 +4,41 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Util
 {
-	// Token: 0x020048C6 RID: 18630
+	// Token: 0x0200383D RID: 14397
 	[NullableContext(2)]
 	public interface IGridPreserver
 	{
-		// Token: 0x06030B1E RID: 199454
+		// Token: 0x0602564A RID: 153162
 		int GetDisplayGridNum();
 
-		// Token: 0x06030B1F RID: 199455
+		// Token: 0x0602564B RID: 153163
 		int GetPreservedGridNum();
 
-		// Token: 0x06030B20 RID: 199456
+		// Token: 0x0602564C RID: 153164
 		int GetDisplayGridStartIndex();
 
-		// Token: 0x06030B21 RID: 199457
+		// Token: 0x0602564D RID: 153165
 		int GetDisplayGridEndIndex();
 
-		// Token: 0x06030B22 RID: 199458
+		// Token: 0x0602564E RID: 153166
 		UUIItem GetGrid(int gridIndex);
 
-		// Token: 0x06030B23 RID: 199459
+		// Token: 0x0602564F RID: 153167
 		UUIItem GetGridByDisplayIndex(int displayIndex);
 
-		// Token: 0x06030B24 RID: 199460
+		// Token: 0x06025650 RID: 153168
 		float GetGridAnimationInterval();
 
-		// Token: 0x06030B25 RID: 199461
+		// Token: 0x06025651 RID: 153169
 		float GetGridAnimationStartTime();
 
-		// Token: 0x06030B26 RID: 199462
+		// Token: 0x06025652 RID: 153170
 		void NotifyAnimationStart();
 
-		// Token: 0x06030B27 RID: 199463
+		// Token: 0x06025653 RID: 153171
 		void NotifyAnimationEnd();
 
-		// Token: 0x06030B28 RID: 199464
+		// Token: 0x06025654 RID: 153172
 		UUIInturnAnimController GetUiAnimController();
 	}
 }

@@ -4,34 +4,34 @@ using AkiClient.Game.Aki.Character.BaseCharacter.Camera;
 
 namespace CSharpScript.Game.Camera.SceneCameraRotator
 {
-	// Token: 0x020072E9 RID: 29417
+	// Token: 0x0200646C RID: 25708
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class SceneCameraRotatorBase
 	{
-		// Token: 0x0604832C RID: 295724
+		// Token: 0x0603E778 RID: 255864
 		public abstract bool IsValid();
 
-		// Token: 0x0604832D RID: 295725
+		// Token: 0x0603E779 RID: 255865
 		public abstract void ComputeExpectRotation();
 
-		// Token: 0x0604832E RID: 295726
+		// Token: 0x0603E77A RID: 255866
 		public abstract void ApplyRotationLimit();
 
-		// Token: 0x0604832F RID: 295727
+		// Token: 0x0603E77B RID: 255867
 		public abstract void ApplyRotationToCameraActor();
 
-		// Token: 0x06048330 RID: 295728 RVA: 0x0128AA6A File Offset: 0x01288C6A
+		// Token: 0x0603E77C RID: 255868 RVA: 0x0122D416 File Offset: 0x0122B616
 		public virtual void OnActivate()
 		{
 		}
 
-		// Token: 0x06048331 RID: 295729 RVA: 0x0128AA6C File Offset: 0x01288C6C
+		// Token: 0x0603E77D RID: 255869 RVA: 0x0122D418 File Offset: 0x0122B618
 		public virtual void OnDeactivate()
 		{
 		}
 
-		// Token: 0x06048332 RID: 295730 RVA: 0x0128AA6E File Offset: 0x01288C6E
+		// Token: 0x0603E77E RID: 255870 RVA: 0x0122D41A File Offset: 0x0122B61A
 		[NullableContext(2)]
 		public virtual void OnTick(SceneSubCamera subCamera, FightCameraLogicComponent fightCameraLogicComp, float deltaTime)
 		{
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Camera.SceneCameraRotator
 			this.ApplyRotationToCameraActor();
 		}
 
-		// Token: 0x06048333 RID: 295731 RVA: 0x0128AA8C File Offset: 0x01288C8C
+		// Token: 0x0603E77F RID: 255871 RVA: 0x0122D438 File Offset: 0x0122B638
 		[NullableContext(2)]
 		public virtual void PrepareFrame(SceneSubCamera subCamera, FightCameraLogicComponent fightCameraLogicComp, float deltaTime)
 		{
@@ -58,14 +58,14 @@ namespace CSharpScript.Game.Camera.SceneCameraRotator
 			this.GravityUp.DeepCopy(this.IsNormalGravity ? Vector.UpVectorProxy : fightCameraLogicComp.GravityUp);
 		}
 
-		// Token: 0x06048334 RID: 295732 RVA: 0x0128AB04 File Offset: 0x01288D04
+		// Token: 0x0603E780 RID: 255872 RVA: 0x0122D4B0 File Offset: 0x0122B6B0
 		protected void ClearCameraGravityRoll()
 		{
 			this.WorkingQuat.RotateVector(Vector.ForwardVectorProxy, this.ScratchVector1);
 			MathUtils.Instance.LookRotationForwardFirst(this.ScratchVector1, this.GravityUp, this.WorkingQuat);
 		}
 
-		// Token: 0x06048335 RID: 295733 RVA: 0x0128AB38 File Offset: 0x01288D38
+		// Token: 0x0603E781 RID: 255873 RVA: 0x0122D4E4 File Offset: 0x0122B6E4
 		protected float ClampAngleByStartRotator(float angle, float startAngle, float minLimit, float maxLimit)
 		{
 			float currentValue = MathUtils.Instance.WrapAngle(angle - startAngle);
@@ -73,14 +73,14 @@ namespace CSharpScript.Game.Camera.SceneCameraRotator
 			return MathUtils.Instance.WrapAngle(num + startAngle);
 		}
 
-		// Token: 0x06048336 RID: 295734 RVA: 0x0128AB70 File Offset: 0x01288D70
+		// Token: 0x0603E782 RID: 255874 RVA: 0x0122D51C File Offset: 0x0122B71C
 		protected void ApplyRotatorInputLimits(SceneFixInputData fixInput, Rotator startRot)
 		{
 			this.WorkingRotator.Pitch = this.ClampAngleByStartRotator(this.WorkingRotator.Pitch, startRot.Pitch, fixInput.PitchLimitMin, fixInput.PitchLimitMax);
 			this.WorkingRotator.Yaw = this.ClampAngleByStartRotator(this.WorkingRotator.Yaw, startRot.Yaw, fixInput.YawLimitMin, fixInput.YawLimitMax);
 		}
 
-		// Token: 0x06048337 RID: 295735 RVA: 0x0128ABDC File Offset: 0x01288DDC
+		// Token: 0x0603E783 RID: 255875 RVA: 0x0122D588 File Offset: 0x0122B788
 		protected void FixCameraPitchInSpecialGravity(float pitchMin, float pitchMax)
 		{
 			this.StartQuat.RotateVector(Vector.ForwardVectorProxy, this.ScratchVector1);
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Camera.SceneCameraRotator
 			}
 		}
 
-		// Token: 0x06048338 RID: 295736 RVA: 0x0128AD04 File Offset: 0x01288F04
+		// Token: 0x0603E784 RID: 255876 RVA: 0x0122D6B0 File Offset: 0x0122B8B0
 		protected void FixCameraYawInSpecialGravity(float yawMin, float yawMax)
 		{
 			this.StartQuat.RotateVector(Vector.ForwardVectorProxy, this.ScratchVector1);
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Camera.SceneCameraRotator
 			}
 		}
 
-		// Token: 0x06048339 RID: 295737 RVA: 0x0128AEA0 File Offset: 0x012890A0
+		// Token: 0x0603E785 RID: 255877 RVA: 0x0122D854 File Offset: 0x0122BA54
 		protected void WriteCameraRotation()
 		{
 			SceneSubCamera subCamera = this.SubCamera;
@@ -138,51 +138,51 @@ namespace CSharpScript.Game.Camera.SceneCameraRotator
 			bp_CineCamera_C.K2_SetActorRotation(this.WorkingRotator.ToUeRotator(), false);
 		}
 
-		// Token: 0x0402620B RID: 156171
+		// Token: 0x040214F6 RID: 136438
 		[Nullable(2)]
 		protected SceneSubCamera SubCamera;
 
-		// Token: 0x0402620C RID: 156172
+		// Token: 0x040214F7 RID: 136439
 		[Nullable(2)]
 		protected FightCameraLogicComponent FightCameraLogicComp;
 
-		// Token: 0x0402620D RID: 156173
+		// Token: 0x040214F8 RID: 136440
 		protected float DeltaTime;
 
-		// Token: 0x0402620E RID: 156174
+		// Token: 0x040214F9 RID: 136441
 		protected bool IsNormalGravity = true;
 
-		// Token: 0x0402620F RID: 156175
+		// Token: 0x040214FA RID: 136442
 		protected readonly Vector GravityUp = Vector.Create(0.0, 0.0, 1.0);
 
-		// Token: 0x04026210 RID: 156176
+		// Token: 0x040214FB RID: 136443
 		protected readonly Rotator StartRotator = Rotator.Create();
 
-		// Token: 0x04026211 RID: 156177
+		// Token: 0x040214FC RID: 136444
 		protected readonly Quat StartQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x04026212 RID: 156178
+		// Token: 0x040214FD RID: 136445
 		protected readonly Rotator WorkingRotator = Rotator.Create();
 
-		// Token: 0x04026213 RID: 156179
+		// Token: 0x040214FE RID: 136446
 		protected readonly Quat WorkingQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x04026214 RID: 156180
+		// Token: 0x040214FF RID: 136447
 		protected readonly Rotator ScratchRotator = Rotator.Create();
 
-		// Token: 0x04026215 RID: 156181
+		// Token: 0x04021500 RID: 136448
 		protected readonly Quat ScratchQuat1 = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x04026216 RID: 156182
+		// Token: 0x04021501 RID: 136449
 		protected readonly Quat ScratchQuat2 = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x04026217 RID: 156183
+		// Token: 0x04021502 RID: 136450
 		protected readonly Vector ScratchVector1 = Vector.Create();
 
-		// Token: 0x04026218 RID: 156184
+		// Token: 0x04021503 RID: 136451
 		protected readonly Vector ScratchVector2 = Vector.Create();
 
-		// Token: 0x04026219 RID: 156185
+		// Token: 0x04021504 RID: 136452
 		protected readonly Vector ScratchVector3 = Vector.Create();
 	}
 }

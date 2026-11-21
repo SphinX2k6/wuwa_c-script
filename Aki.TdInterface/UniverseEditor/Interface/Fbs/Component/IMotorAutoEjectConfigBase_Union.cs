@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020055A8 RID: 21928
+	// Token: 0x02005B46 RID: 23366
 	public enum IMotorAutoEjectConfigBase_Union : byte
 	{
-		// Token: 0x0400E8DA RID: 59610
+		// Token: 0x0400F53C RID: 62780
 		NONE,
-		// Token: 0x0400E8DB RID: 59611
+		// Token: 0x0400F53D RID: 62781
 		IMotorAutoEjectConfigBase,
-		// Token: 0x0400E8DC RID: 59612
+		// Token: 0x0400F53E RID: 62782
 		IMotorAutoEjectNextHookConfig,
-		// Token: 0x0400E8DD RID: 59613
+		// Token: 0x0400F53F RID: 62783
 		IMotorAutoEjectPositionEntityConfig
 	}
 }

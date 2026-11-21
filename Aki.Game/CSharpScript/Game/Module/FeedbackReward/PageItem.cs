@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.FeedbackReward
 {
-	// Token: 0x02005A89 RID: 23177
+	// Token: 0x02004A65 RID: 19045
 	public class PageItem : UiPanelBase
 	{
-		// Token: 0x0603AB44 RID: 240452 RVA: 0x00DFBC70 File Offset: 0x00DF9E70
+		// Token: 0x0602FA8D RID: 195213 RVA: 0x00D4C204 File Offset: 0x00D4A404
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -23,18 +23,18 @@ namespace CSharpScript.Game.Module.FeedbackReward
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603AB45 RID: 240453 RVA: 0x00DFBCD9 File Offset: 0x00DF9ED9
+		// Token: 0x0602FA8E RID: 195214 RVA: 0x00D4C26D File Offset: 0x00D4A46D
 		public void RefreshItem(bool isShow)
 		{
 			base.GetItem(1).SetUIActive(isShow);
 		}
 
-		// Token: 0x0200BCC1 RID: 48321
+		// Token: 0x0200A6CA RID: 42698
 		private enum EPageItem
 		{
-			// Token: 0x04038F14 RID: 233236
+			// Token: 0x040338DF RID: 211167
 			BgItem,
-			// Token: 0x04038F15 RID: 233237
+			// Token: 0x040338E0 RID: 211168
 			ShowItem
 		}
 	}

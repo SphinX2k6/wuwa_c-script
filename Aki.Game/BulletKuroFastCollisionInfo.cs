@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002E13 RID: 11795
+// Token: 0x0200236F RID: 9071
 [NullableContext(2)]
 [Nullable(0)]
 public class BulletKuroFastCollisionInfo
 {
-	// Token: 0x06018CF6 RID: 101622 RVA: 0x0065BF98 File Offset: 0x0065A198
+	// Token: 0x060165B7 RID: 91575 RVA: 0x006820F8 File Offset: 0x006802F8
 	[NullableContext(1)]
 	public unsafe void RegisterCollision(BulletInfo bulletInfo, UKuroFastCollisionAlgorithm algorithm)
 	{
@@ -56,7 +56,7 @@ public class BulletKuroFastCollisionInfo
 		this.WorldBulletComponent = uworldBulletComponent;
 	}
 
-	// Token: 0x06018CF7 RID: 101623 RVA: 0x0065C140 File Offset: 0x0065A340
+	// Token: 0x060165B8 RID: 91576 RVA: 0x006822A0 File Offset: 0x006804A0
 	public void UnregisterCollision()
 	{
 		if (this.RegisteredShape == null)
@@ -76,7 +76,7 @@ public class BulletKuroFastCollisionInfo
 		}
 	}
 
-	// Token: 0x06018CF8 RID: 101624 RVA: 0x0065C18D File Offset: 0x0065A38D
+	// Token: 0x060165B9 RID: 91577 RVA: 0x006822ED File Offset: 0x006804ED
 	public void SetWorldBulletComponentEnable(bool value)
 	{
 		if (this.WorldBulletComponent == null)
@@ -91,18 +91,18 @@ public class BulletKuroFastCollisionInfo
 		this.WorldBulletComponent.bEnable = value;
 	}
 
-	// Token: 0x06018CF9 RID: 101625 RVA: 0x0065C1B5 File Offset: 0x0065A3B5
+	// Token: 0x060165BA RID: 91578 RVA: 0x00682315 File Offset: 0x00680515
 	public void Clear()
 	{
 		this.UnregisterCollision();
 	}
 
-	// Token: 0x0400B9E7 RID: 47591
+	// Token: 0x0400BD75 RID: 48501
 	private UShapeComponent RegisteredShape;
 
-	// Token: 0x0400B9E8 RID: 47592
+	// Token: 0x0400BD76 RID: 48502
 	public UWorldBulletComponent WorldBulletComponent;
 
-	// Token: 0x0400B9E9 RID: 47593
+	// Token: 0x0400BD77 RID: 48503
 	private bool WorldBulletComponentEnable;
 }

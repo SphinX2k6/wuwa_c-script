@@ -4,12 +4,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200246E RID: 9326
+// Token: 0x02001953 RID: 6483
 [NullableContext(2)]
 [Nullable(0)]
 public class PhantomInteractDetailPanelGroup
 {
-	// Token: 0x06012B9B RID: 76699 RVA: 0x0049E8C0 File Offset: 0x0049CAC0
+	// Token: 0x06010053 RID: 65619 RVA: 0x004AC02C File Offset: 0x004AA22C
 	[NullableContext(1)]
 	public UniTask CreateWithParent(UUIItem parent)
 	{
@@ -22,7 +22,7 @@ public class PhantomInteractDetailPanelGroup
 		return <CreateWithParent>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012B9C RID: 76700 RVA: 0x0049E90C File Offset: 0x0049CB0C
+	// Token: 0x06010054 RID: 65620 RVA: 0x004AC078 File Offset: 0x004AA278
 	public void RefreshDetailPanel(bool isShow, PhantomInteractDetailViewModel viewModel = null)
 	{
 		if (!isShow)
@@ -57,7 +57,7 @@ public class PhantomInteractDetailPanelGroup
 		this.RefreshPanelAsync(viewModel);
 	}
 
-	// Token: 0x06012B9D RID: 76701 RVA: 0x0049E978 File Offset: 0x0049CB78
+	// Token: 0x06010055 RID: 65621 RVA: 0x004AC0E4 File Offset: 0x004AA2E4
 	[NullableContext(1)]
 	private UniTask RefreshPanelAsync(PhantomInteractDetailViewModel viewModel)
 	{
@@ -70,15 +70,15 @@ public class PhantomInteractDetailPanelGroup
 		return <RefreshPanelAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x04008D06 RID: 36102
+	// Token: 0x04008E4D RID: 36429
 	private PhantomInteractDetailPanel SpecialContentPanel;
 
-	// Token: 0x04008D07 RID: 36103
+	// Token: 0x04008E4E RID: 36430
 	private PhantomInteractDetailPanel NormalContentPanel;
 
-	// Token: 0x04008D08 RID: 36104
+	// Token: 0x04008E4F RID: 36431
 	private int CurrentMonsterId;
 
-	// Token: 0x04008D09 RID: 36105
+	// Token: 0x04008E50 RID: 36432
 	private bool IsSpecial;
 }

@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003BFE RID: 15358
+	// Token: 0x0200400A RID: 16394
 	public struct ICombinationTriggerShape : IFlatbufferObject
 	{
-		// Token: 0x17006978 RID: 27000
-		// (get) Token: 0x06015239 RID: 86585 RVA: 0x003100A7 File Offset: 0x0030E2A7
+		// Token: 0x17006F20 RID: 28448
+		// (get) Token: 0x0601672F RID: 91951 RVA: 0x00336C2F File Offset: 0x00334E2F
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x0601523A RID: 86586 RVA: 0x003100B4 File Offset: 0x0030E2B4
+		// Token: 0x06016730 RID: 91952 RVA: 0x00336C3C File Offset: 0x00334E3C
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601523B RID: 86587 RVA: 0x003100BC File Offset: 0x0030E2BC
+		// Token: 0x06016731 RID: 91953 RVA: 0x00336C44 File Offset: 0x00334E44
 		public static ICombinationTriggerShape GetRootAsICombinationTriggerShape(ByteBuffer _bb)
 		{
 			return ICombinationTriggerShape.GetRootAsICombinationTriggerShape(_bb, default(ICombinationTriggerShape));
 		}
 
-		// Token: 0x0601523C RID: 86588 RVA: 0x003100D8 File Offset: 0x0030E2D8
+		// Token: 0x06016732 RID: 91954 RVA: 0x00336C60 File Offset: 0x00334E60
 		public static ICombinationTriggerShape GetRootAsICombinationTriggerShape(ByteBuffer _bb, ICombinationTriggerShape obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601523D RID: 86589 RVA: 0x003100F5 File Offset: 0x0030E2F5
+		// Token: 0x06016733 RID: 91955 RVA: 0x00336C7D File Offset: 0x00334E7D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601523E RID: 86590 RVA: 0x00310104 File Offset: 0x0030E304
+		// Token: 0x06016734 RID: 91956 RVA: 0x00336C8C File Offset: 0x00334E8C
 		public ICombinationTriggerShape __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006979 RID: 27001
-		// (get) Token: 0x0601523F RID: 86591 RVA: 0x00310114 File Offset: 0x0030E314
+		// Token: 0x17006F21 RID: 28449
+		// (get) Token: 0x06016735 RID: 91957 RVA: 0x00336C9C File Offset: 0x00334E9C
 		public ETriggerShape Type
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x06015240 RID: 86592 RVA: 0x00310150 File Offset: 0x0030E350
+		// Token: 0x06016736 RID: 91958 RVA: 0x00336CD8 File Offset: 0x00334ED8
 		public TCombinationTriggerShape CombinationShapesType(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return (TCombinationTriggerShape)this.__p.bb.Get(this.__p.__vector(num) + j);
 		}
 
-		// Token: 0x1700697A RID: 27002
-		// (get) Token: 0x06015241 RID: 86593 RVA: 0x00310190 File Offset: 0x0030E390
+		// Token: 0x17006F22 RID: 28450
+		// (get) Token: 0x06016737 RID: 91959 RVA: 0x00336D18 File Offset: 0x00334F18
 		public int CombinationShapesTypeLength
 		{
 			get
@@ -89,13 +89,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x06015242 RID: 86594 RVA: 0x003101BB File Offset: 0x0030E3BB
+		// Token: 0x06016738 RID: 91960 RVA: 0x00336D43 File Offset: 0x00334F43
 		public Span<TCombinationTriggerShape> GetCombinationShapesTypeBytes()
 		{
 			return this.__p.__vector_as_span<TCombinationTriggerShape>(6, 1);
 		}
 
-		// Token: 0x06015243 RID: 86595 RVA: 0x003101CC File Offset: 0x0030E3CC
+		// Token: 0x06016739 RID: 91961 RVA: 0x00336D54 File Offset: 0x00334F54
 		public TCombinationTriggerShape[] GetCombinationShapesTypeArray()
 		{
 			int num = this.__p.__offset(6);
@@ -113,7 +113,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return array;
 		}
 
-		// Token: 0x06015244 RID: 86596 RVA: 0x00310238 File Offset: 0x0030E438
+		// Token: 0x0601673A RID: 91962 RVA: 0x00336DC0 File Offset: 0x00334FC0
 		public TTable? CombinationShapes<TTable>(int j) where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -124,8 +124,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return new TTable?(this.__p.__union<TTable>(this.__p.__vector(num) + j * 4));
 		}
 
-		// Token: 0x1700697B RID: 27003
-		// (get) Token: 0x06015245 RID: 86597 RVA: 0x00310280 File Offset: 0x0030E480
+		// Token: 0x17006F23 RID: 28451
+		// (get) Token: 0x0601673B RID: 91963 RVA: 0x00336E08 File Offset: 0x00335008
 		public int CombinationShapesLength
 		{
 			get
@@ -139,7 +139,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x06015246 RID: 86598 RVA: 0x003102AB File Offset: 0x0030E4AB
+		// Token: 0x0601673C RID: 91964 RVA: 0x00336E33 File Offset: 0x00335033
 		public static Offset<ICombinationTriggerShape> CreateICombinationTriggerShape(FlatBufferBuilder builder, ETriggerShape Type = ETriggerShape.Box, VectorOffset CombinationShapes_typeOffset = default(VectorOffset), VectorOffset CombinationShapesOffset = default(VectorOffset))
 		{
 			builder.StartTable(3);
@@ -149,25 +149,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return ICombinationTriggerShape.EndICombinationTriggerShape(builder);
 		}
 
-		// Token: 0x06015247 RID: 86599 RVA: 0x003102CF File Offset: 0x0030E4CF
+		// Token: 0x0601673D RID: 91965 RVA: 0x00336E57 File Offset: 0x00335057
 		public static void StartICombinationTriggerShape(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06015248 RID: 86600 RVA: 0x003102D8 File Offset: 0x0030E4D8
+		// Token: 0x0601673E RID: 91966 RVA: 0x00336E60 File Offset: 0x00335060
 		public static void AddType(FlatBufferBuilder builder, ETriggerShape type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06015249 RID: 86601 RVA: 0x003102E3 File Offset: 0x0030E4E3
+		// Token: 0x0601673F RID: 91967 RVA: 0x00336E6B File Offset: 0x0033506B
 		public static void AddCombinationShapesType(FlatBufferBuilder builder, VectorOffset combinationShapesTypeOffset)
 		{
 			builder.AddOffset(1, combinationShapesTypeOffset.Value, 0);
 		}
 
-		// Token: 0x0601524A RID: 86602 RVA: 0x003102F4 File Offset: 0x0030E4F4
+		// Token: 0x06016740 RID: 91968 RVA: 0x00336E7C File Offset: 0x0033507C
 		public static VectorOffset CreateCombinationShapesTypeVector(FlatBufferBuilder builder, TCombinationTriggerShape[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -178,7 +178,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601524B RID: 86603 RVA: 0x0031032B File Offset: 0x0030E52B
+		// Token: 0x06016741 RID: 91969 RVA: 0x00336EB3 File Offset: 0x003350B3
 		public static VectorOffset CreateCombinationShapesTypeVectorBlock(FlatBufferBuilder builder, TCombinationTriggerShape[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -186,7 +186,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601524C RID: 86604 RVA: 0x00310345 File Offset: 0x0030E545
+		// Token: 0x06016742 RID: 91970 RVA: 0x00336ECD File Offset: 0x003350CD
 		public static VectorOffset CreateCombinationShapesTypeVectorBlock(FlatBufferBuilder builder, ArraySegment<TCombinationTriggerShape> data)
 		{
 			builder.StartVector(1, data.Count, 1);
@@ -194,7 +194,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601524D RID: 86605 RVA: 0x00310363 File Offset: 0x0030E563
+		// Token: 0x06016743 RID: 91971 RVA: 0x00336EEB File Offset: 0x003350EB
 		public static VectorOffset CreateCombinationShapesTypeVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -202,19 +202,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601524E RID: 86606 RVA: 0x0031037C File Offset: 0x0030E57C
+		// Token: 0x06016744 RID: 91972 RVA: 0x00336F04 File Offset: 0x00335104
 		public static void StartCombinationShapesTypeVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(1, numElems, 1);
 		}
 
-		// Token: 0x0601524F RID: 86607 RVA: 0x00310387 File Offset: 0x0030E587
+		// Token: 0x06016745 RID: 91973 RVA: 0x00336F0F File Offset: 0x0033510F
 		public static void AddCombinationShapes(FlatBufferBuilder builder, VectorOffset combinationShapesOffset)
 		{
 			builder.AddOffset(2, combinationShapesOffset.Value, 0);
 		}
 
-		// Token: 0x06015250 RID: 86608 RVA: 0x00310398 File Offset: 0x0030E598
+		// Token: 0x06016746 RID: 91974 RVA: 0x00336F20 File Offset: 0x00335120
 		public static VectorOffset CreateCombinationShapesVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -225,7 +225,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return builder.EndVector();
 		}
 
-		// Token: 0x06015251 RID: 86609 RVA: 0x003103CF File Offset: 0x0030E5CF
+		// Token: 0x06016747 RID: 91975 RVA: 0x00336F57 File Offset: 0x00335157
 		public static VectorOffset CreateCombinationShapesVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -233,7 +233,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return builder.EndVector();
 		}
 
-		// Token: 0x06015252 RID: 86610 RVA: 0x003103E9 File Offset: 0x0030E5E9
+		// Token: 0x06016748 RID: 91976 RVA: 0x00336F71 File Offset: 0x00335171
 		public static VectorOffset CreateCombinationShapesVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -241,7 +241,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return builder.EndVector();
 		}
 
-		// Token: 0x06015253 RID: 86611 RVA: 0x00310407 File Offset: 0x0030E607
+		// Token: 0x06016749 RID: 91977 RVA: 0x00336F8F File Offset: 0x0033518F
 		public static VectorOffset CreateCombinationShapesVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -249,19 +249,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return builder.EndVector();
 		}
 
-		// Token: 0x06015254 RID: 86612 RVA: 0x00310420 File Offset: 0x0030E620
+		// Token: 0x0601674A RID: 91978 RVA: 0x00336FA8 File Offset: 0x003351A8
 		public static void StartCombinationShapesVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06015255 RID: 86613 RVA: 0x0031042B File Offset: 0x0030E62B
+		// Token: 0x0601674B RID: 91979 RVA: 0x00336FB3 File Offset: 0x003351B3
 		public static Offset<ICombinationTriggerShape> EndICombinationTriggerShape(FlatBufferBuilder builder)
 		{
 			return new Offset<ICombinationTriggerShape>(builder.EndTable());
 		}
 
-		// Token: 0x06015256 RID: 86614 RVA: 0x00310438 File Offset: 0x0030E638
+		// Token: 0x0601674C RID: 91980 RVA: 0x00336FC0 File Offset: 0x003351C0
 		public ICombinationTriggerShapeT UnPack()
 		{
 			ICombinationTriggerShapeT combinationTriggerShapeT = new ICombinationTriggerShapeT();
@@ -269,7 +269,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return combinationTriggerShapeT;
 		}
 
-		// Token: 0x06015257 RID: 86615 RVA: 0x00310454 File Offset: 0x0030E654
+		// Token: 0x0601674D RID: 91981 RVA: 0x00336FDC File Offset: 0x003351DC
 		public void UnPackTo(ICombinationTriggerShapeT _o)
 		{
 			_o.Type = this.Type;
@@ -318,7 +318,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x06015258 RID: 86616 RVA: 0x00310758 File Offset: 0x0030E958
+		// Token: 0x0601674E RID: 91982 RVA: 0x003372E0 File Offset: 0x003354E0
 		public static Offset<ICombinationTriggerShape> Pack(FlatBufferBuilder builder, ICombinationTriggerShapeT _o)
 		{
 			if (_o == null)
@@ -348,7 +348,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return ICombinationTriggerShape.CreateICombinationTriggerShape(builder, _o.Type, combinationShapes_typeOffset, combinationShapesOffset);
 		}
 
-		// Token: 0x0400B1D0 RID: 45520
+		// Token: 0x0400BB5B RID: 47963
 		private Table __p;
 	}
 }

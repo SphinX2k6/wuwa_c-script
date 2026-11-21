@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029BF RID: 10687
+	// Token: 0x02002CAC RID: 11436
 	public class IExitVehicleSeatStandUp : IExitVehicleType
 	{
-		// Token: 0x0600EC50 RID: 60496 RVA: 0x002283CF File Offset: 0x002265CF
-		[NullableContext(1)]
+		// Token: 0x0600FAE7 RID: 64231 RVA: 0x00245D53 File Offset: 0x00243F53
 		public static IExitVehicleSeatStandUp Create(IExitVehicleSeatStandUp? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004A94 RID: 19092
-		// (get) Token: 0x0600EC51 RID: 60497 RVA: 0x002283EE File Offset: 0x002265EE
+		// Token: 0x17004E3D RID: 20029
+		// (get) Token: 0x0600FAE8 RID: 64232 RVA: 0x00245D72 File Offset: 0x00243F72
 		public override EExitVehicleType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400821B RID: 33307
+		// Token: 0x0400890C RID: 35084
 		private IExitVehicleSeatStandUp Instance;
 	}
 }

@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200276D RID: 10093
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A3F RID: 10815
 	public class ServerForceEnableLevelPlay : ActionParams
 	{
-		// Token: 0x0600E0C8 RID: 57544 RVA: 0x002137C6 File Offset: 0x002119C6
+		// Token: 0x0600EEE6 RID: 61158 RVA: 0x0023055A File Offset: 0x0022E75A
 		public static ServerForceEnableLevelPlay Create(IServerForceEnableLevelPlay? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170043B0 RID: 17328
-		// (get) Token: 0x0600E0C9 RID: 57545 RVA: 0x002137E8 File Offset: 0x002119E8
+		// Token: 0x17004716 RID: 18198
+		// (get) Token: 0x0600EEE7 RID: 61159 RVA: 0x0023057C File Offset: 0x0022E77C
 		public virtual List<IEnableLevelPlayConfig> Configs
 		{
 			get
@@ -44,13 +41,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C77 RID: 31863
+		// Token: 0x0400832D RID: 33581
 		private IServerForceEnableLevelPlay Instance;
 
-		// Token: 0x04007C78 RID: 31864
+		// Token: 0x0400832E RID: 33582
 		private List<IEnableLevelPlayConfig> _ConfigsCache;
 
-		// Token: 0x04007C79 RID: 31865
+		// Token: 0x0400832F RID: 33583
 		private bool _ConfigsInited;
 	}
 }

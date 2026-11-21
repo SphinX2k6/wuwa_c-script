@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02001776 RID: 6006
+// Token: 0x02000C2F RID: 3119
 internal enum EButtonComponent
 {
-	// Token: 0x04004F2C RID: 20268
+	// Token: 0x04004FD6 RID: 20438
 	Button,
-	// Token: 0x04004F2D RID: 20269
+	// Token: 0x04004FD7 RID: 20439
 	Text,
-	// Token: 0x04004F2E RID: 20270
+	// Token: 0x04004FD8 RID: 20440
 	RedDotItem
 }

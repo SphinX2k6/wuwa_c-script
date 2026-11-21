@@ -3,21 +3,21 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball
 {
-	// Token: 0x020062C9 RID: 25289
+	// Token: 0x02005247 RID: 21063
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class EPinballMainChildViewName
 	{
-		// Token: 0x04021422 RID: 136226
+		// Token: 0x0401BD51 RID: 114001
 		public const string PinballMainView = "PinballMainView";
 
-		// Token: 0x04021423 RID: 136227
+		// Token: 0x0401BD52 RID: 114002
 		public const string PinballLevelView = "PinballLevelView";
 
-		// Token: 0x04021424 RID: 136228
+		// Token: 0x0401BD53 RID: 114003
 		public const string PinballTowerLevelView = "PinballTowerLevelView";
 
-		// Token: 0x04021425 RID: 136229
+		// Token: 0x0401BD54 RID: 114004
 		public const string PinballDailyLevelView = "PinballDailyLevelView";
 	}
 }

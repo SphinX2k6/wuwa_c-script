@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DAA RID: 23978
+	// Token: 0x02004D8E RID: 19854
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class QuickHackBuffItem : BuffItemBase
 	{
-		// Token: 0x0603CE38 RID: 249400 RVA: 0x00EA078C File Offset: 0x00E9E98C
+		// Token: 0x06031DAF RID: 204207 RVA: 0x00DF1638 File Offset: 0x00DEF838
 		[NullableContext(1)]
 		public QuickHackBuffItem(USceneComponent parentItem)
 		{
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.CreateThenShowByActor(quickHackBuffItem, null);
 		}
 
-		// Token: 0x0603CE39 RID: 249401 RVA: 0x00EA07B8 File Offset: 0x00E9E9B8
+		// Token: 0x06031DB0 RID: 204208 RVA: 0x00DF1664 File Offset: 0x00DEF864
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603CE3A RID: 249402 RVA: 0x00EA0864 File Offset: 0x00E9EA64
+		// Token: 0x06031DB1 RID: 204209 RVA: 0x00DF1710 File Offset: 0x00DEF910
 		protected override void OnStart()
 		{
 			this.BarTexture = base.GetTexture(1);
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.IconMaskTexture.SetFillAmount(0f);
 		}
 
-		// Token: 0x0603CE3B RID: 249403 RVA: 0x00EA08B8 File Offset: 0x00E9EAB8
+		// Token: 0x06031DB2 RID: 204210 RVA: 0x00DF1764 File Offset: 0x00DEF964
 		public override void Activate(GameplayCue buffCueConfig, IActiveBuff buff, bool playAnim, int buffNum)
 		{
 			this.Buff = buff;
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			});
 		}
 
-		// Token: 0x0603CE3C RID: 249404 RVA: 0x00EA09A4 File Offset: 0x00E9EBA4
+		// Token: 0x06031DB3 RID: 204211 RVA: 0x00DF1850 File Offset: 0x00DEFA50
 		public override void Tick(float delta)
 		{
 			if (this.FillFinishTime > 0.0)
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CE3D RID: 249405 RVA: 0x00EA0A00 File Offset: 0x00E9EC00
+		// Token: 0x06031DB4 RID: 204212 RVA: 0x00DF18AC File Offset: 0x00DEFAAC
 		private void TickFill()
 		{
 			double now = Time.Instance.Now;
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetPercent(num);
 		}
 
-		// Token: 0x0603CE3E RID: 249406 RVA: 0x00EA0A76 File Offset: 0x00E9EC76
+		// Token: 0x06031DB5 RID: 204213 RVA: 0x00DF1922 File Offset: 0x00DEFB22
 		private void SetPercent(float percent)
 		{
 			if (percent == this.Percent)
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			iconMaskTexture.SetFillAmount(percent);
 		}
 
-		// Token: 0x0603CE3F RID: 249407 RVA: 0x00EA0AAC File Offset: 0x00E9ECAC
+		// Token: 0x06031DB6 RID: 204214 RVA: 0x00DF1958 File Offset: 0x00DEFB58
 		public override bool TickHiding(float delta)
 		{
 			if (this.FillFinishTime > 0.0)
@@ -158,19 +158,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return false;
 		}
 
-		// Token: 0x0603CE40 RID: 249408 RVA: 0x00EA0ACF File Offset: 0x00E9ECCF
+		// Token: 0x06031DB7 RID: 204215 RVA: 0x00DF197B File Offset: 0x00DEFB7B
 		public override void Deactivate()
 		{
 			base.SetUiActive(false);
 			this.FillFinishTime = 0.0;
 		}
 
-		// Token: 0x0603CE41 RID: 249409 RVA: 0x00EA0AE7 File Offset: 0x00E9ECE7
+		// Token: 0x06031DB8 RID: 204216 RVA: 0x00DF1993 File Offset: 0x00DEFB93
 		public override void DeactivateWithCloseAnim()
 		{
 		}
 
-		// Token: 0x0603CE42 RID: 249410 RVA: 0x00EA0AE9 File Offset: 0x00E9ECE9
+		// Token: 0x06031DB9 RID: 204217 RVA: 0x00DF1995 File Offset: 0x00DEFB95
 		protected override bool DestroyOverride()
 		{
 			if (this.RootActor != null)
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return true;
 		}
 
-		// Token: 0x0603CE43 RID: 249411 RVA: 0x00EA0B0C File Offset: 0x00E9ED0C
+		// Token: 0x06031DBA RID: 204218 RVA: 0x00DF19B8 File Offset: 0x00DEFBB8
 		private void StartLoopAudio()
 		{
 			if (this.LoopAudioEventHandle != 0)
@@ -195,13 +195,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CE44 RID: 249412 RVA: 0x00EA0B58 File Offset: 0x00E9ED58
+		// Token: 0x06031DBB RID: 204219 RVA: 0x00DF1A04 File Offset: 0x00DEFC04
 		private void OnQuickHackClose()
 		{
 			this.StopLoopAudio();
 		}
 
-		// Token: 0x0603CE45 RID: 249413 RVA: 0x00EA0B60 File Offset: 0x00E9ED60
+		// Token: 0x06031DBC RID: 204220 RVA: 0x00DF1A0C File Offset: 0x00DEFC0C
 		private void StopLoopAudio()
 		{
 			if (this.LoopAudioEventHandle == 0)
@@ -213,44 +213,44 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Remove(EEventName.OnQuickHackClose, new Action(this.OnQuickHackClose));
 		}
 
-		// Token: 0x0401FB71 RID: 129905
+		// Token: 0x0401A62E RID: 108078
 		private const double ACTIVATE_FILL_TIME = 200.0;
 
-		// Token: 0x0401FB72 RID: 129906
+		// Token: 0x0401A62F RID: 108079
 		private IActiveBuff Buff;
 
-		// Token: 0x0401FB73 RID: 129907
+		// Token: 0x0401A630 RID: 108080
 		private UUITexture BarTexture;
 
-		// Token: 0x0401FB74 RID: 129908
+		// Token: 0x0401A631 RID: 108081
 		private UUITexture IconTexture;
 
-		// Token: 0x0401FB75 RID: 129909
+		// Token: 0x0401A632 RID: 108082
 		private UUITexture IconMaskTexture;
 
-		// Token: 0x0401FB76 RID: 129910
+		// Token: 0x0401A633 RID: 108083
 		private float Percent;
 
-		// Token: 0x0401FB77 RID: 129911
+		// Token: 0x0401A634 RID: 108084
 		private double FillFinishTime;
 
-		// Token: 0x0401FB78 RID: 129912
+		// Token: 0x0401A635 RID: 108085
 		private int LoopAudioEventHandle;
 
-		// Token: 0x0200C085 RID: 49285
+		// Token: 0x0200AA8F RID: 43663
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x0403A18D RID: 237965
+			// Token: 0x04034B61 RID: 215905
 			public const int BgTexture = 0;
 
-			// Token: 0x0403A18E RID: 237966
+			// Token: 0x04034B62 RID: 215906
 			public const int BarTexture = 1;
 
-			// Token: 0x0403A18F RID: 237967
+			// Token: 0x04034B63 RID: 215907
 			public const int IconTexture = 2;
 
-			// Token: 0x0403A190 RID: 237968
+			// Token: 0x04034B64 RID: 215908
 			public const int IconMaskTexture = 3;
 		}
 	}

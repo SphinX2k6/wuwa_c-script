@@ -6,38 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001C6F RID: 7279
+	// Token: 0x02000515 RID: 1301
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroRopeEffect.ArcRopeComponent")]
 	[UnrealStructLayout(2160, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 2160)]
-	public class UArcRopeComponent : USplineComponent, IUnrealUObject, IUnrealObject, INiagaraParticleCallbackHandler, IUnrealNativeInterface, IUnrealInterface
+	public class UArcRopeComponent : USplineComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601C380 RID: 115584 RVA: 0x00299B92 File Offset: 0x00297D92
+		// Token: 0x0600797C RID: 31100 RVA: 0x000B256A File Offset: 0x000B076A
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UArcRopeComponent._ClassPtr;
 		}
 
-		// Token: 0x0601C381 RID: 115585 RVA: 0x00299B9E File Offset: 0x00297D9E
-		int INiagaraParticleCallbackHandler.InterfaceOffset()
-		{
-			return UArcRopeComponent.__InterfaceOffset_INiagaraParticleCallbackHandler;
-		}
-
-		// Token: 0x0601C382 RID: 115586 RVA: 0x00299BA8 File Offset: 0x00297DA8
+		// Token: 0x0600797D RID: 31101 RVA: 0x000B2578 File Offset: 0x000B0778
 		public UArcRopeComponent() : this(BuiltinUtils.AllocNativeUObject(UArcRopeComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601C383 RID: 115587 RVA: 0x00299BD0 File Offset: 0x00297DD0
+		// Token: 0x0600797E RID: 31102 RVA: 0x000B25A0 File Offset: 0x000B07A0
 		public UArcRopeComponent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UArcRopeComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17007200 RID: 29184
-		// (get) Token: 0x0601C384 RID: 115588 RVA: 0x00299C03 File Offset: 0x00297E03
-		// (set) Token: 0x0601C385 RID: 115589 RVA: 0x00299C13 File Offset: 0x00297E13
+		// Token: 0x17001782 RID: 6018
+		// (get) Token: 0x0600797F RID: 31103 RVA: 0x000B25D3 File Offset: 0x000B07D3
+		// (set) Token: 0x06007980 RID: 31104 RVA: 0x000B25E3 File Offset: 0x000B07E3
 		public unsafe bool bContinuousDrive
 		{
 			get
@@ -50,9 +44,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007201 RID: 29185
-		// (get) Token: 0x0601C386 RID: 115590 RVA: 0x00299C24 File Offset: 0x00297E24
-		// (set) Token: 0x0601C387 RID: 115591 RVA: 0x00299C34 File Offset: 0x00297E34
+		// Token: 0x17001783 RID: 6019
+		// (get) Token: 0x06007981 RID: 31105 RVA: 0x000B25F4 File Offset: 0x000B07F4
+		// (set) Token: 0x06007982 RID: 31106 RVA: 0x000B2604 File Offset: 0x000B0804
 		public unsafe bool bResampleUniform
 		{
 			get
@@ -65,9 +59,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007202 RID: 29186
-		// (get) Token: 0x0601C388 RID: 115592 RVA: 0x00299C45 File Offset: 0x00297E45
-		// (set) Token: 0x0601C389 RID: 115593 RVA: 0x00299C55 File Offset: 0x00297E55
+		// Token: 0x17001784 RID: 6020
+		// (get) Token: 0x06007983 RID: 31107 RVA: 0x000B2615 File Offset: 0x000B0815
+		// (set) Token: 0x06007984 RID: 31108 RVA: 0x000B2625 File Offset: 0x000B0825
 		public unsafe int ResampleSegmentCount
 		{
 			get
@@ -80,9 +74,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007203 RID: 29187
-		// (get) Token: 0x0601C38A RID: 115594 RVA: 0x00299C66 File Offset: 0x00297E66
-		// (set) Token: 0x0601C38B RID: 115595 RVA: 0x00299C76 File Offset: 0x00297E76
+		// Token: 0x17001785 RID: 6021
+		// (get) Token: 0x06007985 RID: 31109 RVA: 0x000B2636 File Offset: 0x000B0836
+		// (set) Token: 0x06007986 RID: 31110 RVA: 0x000B2646 File Offset: 0x000B0846
 		public unsafe bool bReinitOnReplay
 		{
 			get
@@ -95,9 +89,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007204 RID: 29188
-		// (get) Token: 0x0601C38C RID: 115596 RVA: 0x00299C87 File Offset: 0x00297E87
-		// (set) Token: 0x0601C38D RID: 115597 RVA: 0x00299C97 File Offset: 0x00297E97
+		// Token: 0x17001786 RID: 6022
+		// (get) Token: 0x06007987 RID: 31111 RVA: 0x000B2657 File Offset: 0x000B0857
+		// (set) Token: 0x06007988 RID: 31112 RVA: 0x000B2667 File Offset: 0x000B0867
 		public unsafe float ReinitGapThreshold
 		{
 			get
@@ -110,9 +104,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007205 RID: 29189
-		// (get) Token: 0x0601C38E RID: 115598 RVA: 0x00299CA8 File Offset: 0x00297EA8
-		// (set) Token: 0x0601C38F RID: 115599 RVA: 0x00299CB8 File Offset: 0x00297EB8
+		// Token: 0x17001787 RID: 6023
+		// (get) Token: 0x06007989 RID: 31113 RVA: 0x000B2678 File Offset: 0x000B0878
+		// (set) Token: 0x0600798A RID: 31114 RVA: 0x000B2688 File Offset: 0x000B0888
 		public unsafe bool bSimpleWhipMode
 		{
 			get
@@ -125,9 +119,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007206 RID: 29190
-		// (get) Token: 0x0601C390 RID: 115600 RVA: 0x00299CC9 File Offset: 0x00297EC9
-		// (set) Token: 0x0601C391 RID: 115601 RVA: 0x00299CD9 File Offset: 0x00297ED9
+		// Token: 0x17001788 RID: 6024
+		// (get) Token: 0x0600798B RID: 31115 RVA: 0x000B2699 File Offset: 0x000B0899
+		// (set) Token: 0x0600798C RID: 31116 RVA: 0x000B26A9 File Offset: 0x000B08A9
 		public unsafe float WhipStraightenStiffness
 		{
 			get
@@ -140,9 +134,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007207 RID: 29191
-		// (get) Token: 0x0601C392 RID: 115602 RVA: 0x00299CEA File Offset: 0x00297EEA
-		// (set) Token: 0x0601C393 RID: 115603 RVA: 0x00299CFA File Offset: 0x00297EFA
+		// Token: 0x17001789 RID: 6025
+		// (get) Token: 0x0600798D RID: 31117 RVA: 0x000B26BA File Offset: 0x000B08BA
+		// (set) Token: 0x0600798E RID: 31118 RVA: 0x000B26CA File Offset: 0x000B08CA
 		public unsafe float WhipSwing
 		{
 			get
@@ -155,9 +149,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007208 RID: 29192
-		// (get) Token: 0x0601C394 RID: 115604 RVA: 0x00299D0B File Offset: 0x00297F0B
-		// (set) Token: 0x0601C395 RID: 115605 RVA: 0x00299D1B File Offset: 0x00297F1B
+		// Token: 0x1700178A RID: 6026
+		// (get) Token: 0x0600798F RID: 31119 RVA: 0x000B26DB File Offset: 0x000B08DB
+		// (set) Token: 0x06007990 RID: 31120 RVA: 0x000B26EB File Offset: 0x000B08EB
 		public unsafe float WhipSmoothing
 		{
 			get
@@ -170,9 +164,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007209 RID: 29193
-		// (get) Token: 0x0601C396 RID: 115606 RVA: 0x00299D2C File Offset: 0x00297F2C
-		// (set) Token: 0x0601C397 RID: 115607 RVA: 0x00299D3C File Offset: 0x00297F3C
+		// Token: 0x1700178B RID: 6027
+		// (get) Token: 0x06007991 RID: 31121 RVA: 0x000B26FC File Offset: 0x000B08FC
+		// (set) Token: 0x06007992 RID: 31122 RVA: 0x000B270C File Offset: 0x000B090C
 		public unsafe int WhipSmoothingIterations
 		{
 			get
@@ -185,9 +179,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700720A RID: 29194
-		// (get) Token: 0x0601C398 RID: 115608 RVA: 0x00299D4D File Offset: 0x00297F4D
-		// (set) Token: 0x0601C399 RID: 115609 RVA: 0x00299D5D File Offset: 0x00297F5D
+		// Token: 0x1700178C RID: 6028
+		// (get) Token: 0x06007993 RID: 31123 RVA: 0x000B271D File Offset: 0x000B091D
+		// (set) Token: 0x06007994 RID: 31124 RVA: 0x000B272D File Offset: 0x000B092D
 		public unsafe float WhipSag
 		{
 			get
@@ -200,9 +194,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700720B RID: 29195
-		// (get) Token: 0x0601C39A RID: 115610 RVA: 0x00299D6E File Offset: 0x00297F6E
-		// (set) Token: 0x0601C39B RID: 115611 RVA: 0x00299D7E File Offset: 0x00297F7E
+		// Token: 0x1700178D RID: 6029
+		// (get) Token: 0x06007995 RID: 31125 RVA: 0x000B273E File Offset: 0x000B093E
+		// (set) Token: 0x06007996 RID: 31126 RVA: 0x000B274E File Offset: 0x000B094E
 		public unsafe float WhipStartDirInfluence
 		{
 			get
@@ -215,9 +209,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700720C RID: 29196
-		// (get) Token: 0x0601C39C RID: 115612 RVA: 0x00299D8F File Offset: 0x00297F8F
-		// (set) Token: 0x0601C39D RID: 115613 RVA: 0x00299D9F File Offset: 0x00297F9F
+		// Token: 0x1700178E RID: 6030
+		// (get) Token: 0x06007997 RID: 31127 RVA: 0x000B275F File Offset: 0x000B095F
+		// (set) Token: 0x06007998 RID: 31128 RVA: 0x000B276F File Offset: 0x000B096F
 		public unsafe float WhipEndDirInfluence
 		{
 			get
@@ -230,9 +224,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700720D RID: 29197
-		// (get) Token: 0x0601C39E RID: 115614 RVA: 0x00299DB0 File Offset: 0x00297FB0
-		// (set) Token: 0x0601C39F RID: 115615 RVA: 0x00299DC0 File Offset: 0x00297FC0
+		// Token: 0x1700178F RID: 6031
+		// (get) Token: 0x06007999 RID: 31129 RVA: 0x000B2780 File Offset: 0x000B0980
+		// (set) Token: 0x0600799A RID: 31130 RVA: 0x000B2790 File Offset: 0x000B0990
 		public unsafe bool bEnablePhysics
 		{
 			get
@@ -245,9 +239,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700720E RID: 29198
-		// (get) Token: 0x0601C3A0 RID: 115616 RVA: 0x00299DD1 File Offset: 0x00297FD1
-		// (set) Token: 0x0601C3A1 RID: 115617 RVA: 0x00299DE1 File Offset: 0x00297FE1
+		// Token: 0x17001790 RID: 6032
+		// (get) Token: 0x0600799B RID: 31131 RVA: 0x000B27A1 File Offset: 0x000B09A1
+		// (set) Token: 0x0600799C RID: 31132 RVA: 0x000B27B1 File Offset: 0x000B09B1
 		public unsafe bool bPinStart
 		{
 			get
@@ -260,9 +254,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700720F RID: 29199
-		// (get) Token: 0x0601C3A2 RID: 115618 RVA: 0x00299DF2 File Offset: 0x00297FF2
-		// (set) Token: 0x0601C3A3 RID: 115619 RVA: 0x00299E02 File Offset: 0x00298002
+		// Token: 0x17001791 RID: 6033
+		// (get) Token: 0x0600799D RID: 31133 RVA: 0x000B27C2 File Offset: 0x000B09C2
+		// (set) Token: 0x0600799E RID: 31134 RVA: 0x000B27D2 File Offset: 0x000B09D2
 		public unsafe bool bPinEnd
 		{
 			get
@@ -275,9 +269,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007210 RID: 29200
-		// (get) Token: 0x0601C3A4 RID: 115620 RVA: 0x00299E13 File Offset: 0x00298013
-		// (set) Token: 0x0601C3A5 RID: 115621 RVA: 0x00299E27 File Offset: 0x00298027
+		// Token: 0x17001792 RID: 6034
+		// (get) Token: 0x0600799F RID: 31135 RVA: 0x000B27E3 File Offset: 0x000B09E3
+		// (set) Token: 0x060079A0 RID: 31136 RVA: 0x000B27F7 File Offset: 0x000B09F7
 		public unsafe FVector Gravity
 		{
 			get
@@ -290,9 +284,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007211 RID: 29201
-		// (get) Token: 0x0601C3A6 RID: 115622 RVA: 0x00299E3C File Offset: 0x0029803C
-		// (set) Token: 0x0601C3A7 RID: 115623 RVA: 0x00299E4C File Offset: 0x0029804C
+		// Token: 0x17001793 RID: 6035
+		// (get) Token: 0x060079A1 RID: 31137 RVA: 0x000B280C File Offset: 0x000B0A0C
+		// (set) Token: 0x060079A2 RID: 31138 RVA: 0x000B281C File Offset: 0x000B0A1C
 		public unsafe float Damping
 		{
 			get
@@ -305,9 +299,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007212 RID: 29202
-		// (get) Token: 0x0601C3A8 RID: 115624 RVA: 0x00299E5D File Offset: 0x0029805D
-		// (set) Token: 0x0601C3A9 RID: 115625 RVA: 0x00299E6D File Offset: 0x0029806D
+		// Token: 0x17001794 RID: 6036
+		// (get) Token: 0x060079A3 RID: 31139 RVA: 0x000B282D File Offset: 0x000B0A2D
+		// (set) Token: 0x060079A4 RID: 31140 RVA: 0x000B283D File Offset: 0x000B0A3D
 		public unsafe int ConstraintIterations
 		{
 			get
@@ -320,9 +314,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007213 RID: 29203
-		// (get) Token: 0x0601C3AA RID: 115626 RVA: 0x00299E7E File Offset: 0x0029807E
-		// (set) Token: 0x0601C3AB RID: 115627 RVA: 0x00299E8E File Offset: 0x0029808E
+		// Token: 0x17001795 RID: 6037
+		// (get) Token: 0x060079A5 RID: 31141 RVA: 0x000B284E File Offset: 0x000B0A4E
+		// (set) Token: 0x060079A6 RID: 31142 RVA: 0x000B285E File Offset: 0x000B0A5E
 		public unsafe float Stiffness
 		{
 			get
@@ -335,9 +329,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007214 RID: 29204
-		// (get) Token: 0x0601C3AC RID: 115628 RVA: 0x00299E9F File Offset: 0x0029809F
-		// (set) Token: 0x0601C3AD RID: 115629 RVA: 0x00299EAF File Offset: 0x002980AF
+		// Token: 0x17001796 RID: 6038
+		// (get) Token: 0x060079A7 RID: 31143 RVA: 0x000B286F File Offset: 0x000B0A6F
+		// (set) Token: 0x060079A8 RID: 31144 RVA: 0x000B287F File Offset: 0x000B0A7F
 		public unsafe float BendStiffness
 		{
 			get
@@ -350,9 +344,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007215 RID: 29205
-		// (get) Token: 0x0601C3AE RID: 115630 RVA: 0x00299EC0 File Offset: 0x002980C0
-		// (set) Token: 0x0601C3AF RID: 115631 RVA: 0x00299ED0 File Offset: 0x002980D0
+		// Token: 0x17001797 RID: 6039
+		// (get) Token: 0x060079A9 RID: 31145 RVA: 0x000B2890 File Offset: 0x000B0A90
+		// (set) Token: 0x060079AA RID: 31146 RVA: 0x000B28A0 File Offset: 0x000B0AA0
 		public unsafe float MaxTimeStep
 		{
 			get
@@ -365,9 +359,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007216 RID: 29206
-		// (get) Token: 0x0601C3B0 RID: 115632 RVA: 0x00299EE1 File Offset: 0x002980E1
-		// (set) Token: 0x0601C3B1 RID: 115633 RVA: 0x00299EF1 File Offset: 0x002980F1
+		// Token: 0x17001798 RID: 6040
+		// (get) Token: 0x060079AB RID: 31147 RVA: 0x000B28B1 File Offset: 0x000B0AB1
+		// (set) Token: 0x060079AC RID: 31148 RVA: 0x000B28C1 File Offset: 0x000B0AC1
 		public unsafe float TensionPropagation
 		{
 			get
@@ -380,9 +374,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007217 RID: 29207
-		// (get) Token: 0x0601C3B2 RID: 115634 RVA: 0x00299F02 File Offset: 0x00298102
-		// (set) Token: 0x0601C3B3 RID: 115635 RVA: 0x00299F12 File Offset: 0x00298112
+		// Token: 0x17001799 RID: 6041
+		// (get) Token: 0x060079AD RID: 31149 RVA: 0x000B28D2 File Offset: 0x000B0AD2
+		// (set) Token: 0x060079AE RID: 31150 RVA: 0x000B28E2 File Offset: 0x000B0AE2
 		public unsafe float TensionStrength
 		{
 			get
@@ -395,9 +389,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007218 RID: 29208
-		// (get) Token: 0x0601C3B4 RID: 115636 RVA: 0x00299F24 File Offset: 0x00298124
-		// (set) Token: 0x0601C3B5 RID: 115637 RVA: 0x00299F5D File Offset: 0x0029815D
+		// Token: 0x1700179A RID: 6042
+		// (get) Token: 0x060079AF RID: 31151 RVA: 0x000B28F4 File Offset: 0x000B0AF4
+		// (set) Token: 0x060079B0 RID: 31152 RVA: 0x000B292D File Offset: 0x000B0B2D
 		public FOnArcRopeInitialized OnRopeInitialized
 		{
 			get
@@ -416,30 +410,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007219 RID: 29209
-		// (get) Token: 0x0601C3B6 RID: 115638 RVA: 0x00299F80 File Offset: 0x00298180
-		// (set) Token: 0x0601C3B7 RID: 115639 RVA: 0x00299FB9 File Offset: 0x002981B9
-		public TArray<FArcRopeParticle> Particles
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<FArcRopeParticle> result;
-				if ((result = this._Particles) == null)
-				{
-					result = (this._Particles = new TArray<FArcRopeParticle>(base.NativePtr + (IntPtr)UArcRopeComponent.__PropertyOffset_Particles, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.Particles.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x1700721A RID: 29210
-		// (get) Token: 0x0601C3B8 RID: 115640 RVA: 0x00299FC7 File Offset: 0x002981C7
-		// (set) Token: 0x0601C3B9 RID: 115641 RVA: 0x00299FDB File Offset: 0x002981DB
+		// Token: 0x1700179B RID: 6043
+		// (get) Token: 0x060079B1 RID: 31153 RVA: 0x000B294E File Offset: 0x000B0B4E
+		// (set) Token: 0x060079B2 RID: 31154 RVA: 0x000B2962 File Offset: 0x000B0B62
 		[Nullable(2)]
 		public unsafe UNiagaraComponent RopeNiagaraComponent
 		{
@@ -455,9 +428,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700721B RID: 29211
-		// (get) Token: 0x0601C3BA RID: 115642 RVA: 0x00299FF0 File Offset: 0x002981F0
-		// (set) Token: 0x0601C3BB RID: 115643 RVA: 0x0029A029 File Offset: 0x00298229
+		// Token: 0x1700179C RID: 6044
+		// (get) Token: 0x060079B3 RID: 31155 RVA: 0x000B2978 File Offset: 0x000B0B78
+		// (set) Token: 0x060079B4 RID: 31156 RVA: 0x000B29B1 File Offset: 0x000B0BB1
 		public TArray<float> RestLengths
 		{
 			get
@@ -476,9 +449,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700721C RID: 29212
-		// (get) Token: 0x0601C3BC RID: 115644 RVA: 0x0029A038 File Offset: 0x00298238
-		// (set) Token: 0x0601C3BD RID: 115645 RVA: 0x0029A071 File Offset: 0x00298271
+		// Token: 0x1700179D RID: 6045
+		// (get) Token: 0x060079B5 RID: 31157 RVA: 0x000B29C0 File Offset: 0x000B0BC0
+		// (set) Token: 0x060079B6 RID: 31158 RVA: 0x000B29F9 File Offset: 0x000B0BF9
 		public TArray<float> BendRestLengths
 		{
 			get
@@ -497,9 +470,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700721D RID: 29213
-		// (get) Token: 0x0601C3BE RID: 115646 RVA: 0x0029A07F File Offset: 0x0029827F
-		// (set) Token: 0x0601C3BF RID: 115647 RVA: 0x0029A08F File Offset: 0x0029828F
+		// Token: 0x1700179E RID: 6046
+		// (get) Token: 0x060079B7 RID: 31159 RVA: 0x000B2A07 File Offset: 0x000B0C07
+		// (set) Token: 0x060079B8 RID: 31160 RVA: 0x000B2A17 File Offset: 0x000B0C17
 		public unsafe bool bInitialized
 		{
 			get
@@ -512,250 +485,225 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601C3C0 RID: 115648 RVA: 0x0029A0A0 File Offset: 0x002982A0
+		// Token: 0x060079B9 RID: 31161 RVA: 0x000B2A28 File Offset: 0x000B0C28
 		[NullableContext(2)]
 		public void SetupNiagara(UNiagaraSystem NiagaraAsset, in FVector InitStart, in FVector InitEnd)
 		{
 			UArcRopeComponent.__SetupNiagara_Internal(base.NativePtr, (NiagaraAsset != null) ? NiagaraAsset.NativePtr : IntPtr.Zero, InitStart, InitEnd);
 		}
 
-		// Token: 0x0601C3C1 RID: 115649 RVA: 0x0029A0BF File Offset: 0x002982BF
+		// Token: 0x060079BA RID: 31162 RVA: 0x000B2A47 File Offset: 0x000B0C47
 		public void SetStartPosition(in FVector WorldPosition)
 		{
 			UArcRopeComponent.__SetStartPosition_Internal(base.NativePtr, WorldPosition);
 		}
 
-		// Token: 0x0601C3C2 RID: 115650 RVA: 0x0029A0CD File Offset: 0x002982CD
+		// Token: 0x060079BB RID: 31163 RVA: 0x000B2A55 File Offset: 0x000B0C55
 		public void SetStartDirection(in FVector WorldDirection)
 		{
 			UArcRopeComponent.__SetStartDirection_Internal(base.NativePtr, WorldDirection);
 		}
 
-		// Token: 0x0601C3C3 RID: 115651 RVA: 0x0029A0DB File Offset: 0x002982DB
+		// Token: 0x060079BC RID: 31164 RVA: 0x000B2A63 File Offset: 0x000B0C63
 		public void SetEndPosition(in FVector WorldPosition)
 		{
 			UArcRopeComponent.__SetEndPosition_Internal(base.NativePtr, WorldPosition);
 		}
 
-		// Token: 0x0601C3C4 RID: 115652 RVA: 0x0029A0E9 File Offset: 0x002982E9
+		// Token: 0x060079BD RID: 31165 RVA: 0x000B2A71 File Offset: 0x000B0C71
 		public void SetEndpoints(in FVector Start, in FVector End)
 		{
 			UArcRopeComponent.__SetEndpoints_Internal(base.NativePtr, Start, End);
 		}
 
-		// Token: 0x0601C3C5 RID: 115653 RVA: 0x0029A0F8 File Offset: 0x002982F8
+		// Token: 0x060079BE RID: 31166 RVA: 0x000B2A80 File Offset: 0x000B0C80
 		public void SetEndDirection(in FVector WorldDirection)
 		{
 			UArcRopeComponent.__SetEndDirection_Internal(base.NativePtr, WorldDirection);
 		}
 
-		// Token: 0x0601C3C6 RID: 115654 RVA: 0x0029A106 File Offset: 0x00298306
+		// Token: 0x060079BF RID: 31167 RVA: 0x000B2A8E File Offset: 0x000B0C8E
 		public void ResetRope()
 		{
 			UArcRopeComponent.__ResetRope_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601C3C7 RID: 115655 RVA: 0x0029A113 File Offset: 0x00298313
+		// Token: 0x060079C0 RID: 31168 RVA: 0x000B2A9B File Offset: 0x000B0C9B
 		public bool IsInitialized()
 		{
 			return UArcRopeComponent.__IsInitialized_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601C3C8 RID: 115656 RVA: 0x0029A120 File Offset: 0x00298320
+		// Token: 0x060079C1 RID: 31169 RVA: 0x000B2AA8 File Offset: 0x000B0CA8
 		public int GetParticleCount()
 		{
 			return UArcRopeComponent.__GetParticleCount_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601C3C9 RID: 115657 RVA: 0x0029A12D File Offset: 0x0029832D
-		[NullableContext(2)]
-		public void ApplyParams(in FArcRopeParams InParams)
-		{
-			UArcRopeComponent.__ApplyParams_Internal(base.NativePtr, (InParams ?? new FArcRopeParams()).NativePtr);
-		}
-
-		// Token: 0x0601C3CA RID: 115658 RVA: 0x0029A14A File Offset: 0x0029834A
+		// Token: 0x060079C2 RID: 31170 RVA: 0x000B2AB5 File Offset: 0x000B0CB5
 		[NullableContext(2)]
 		public void ApplyDataAsset(UArcRopeDataAsset DataAsset)
 		{
 			UArcRopeComponent.__ApplyDataAsset_Internal(base.NativePtr, (DataAsset != null) ? DataAsset.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0601C3CB RID: 115659
+		// Token: 0x060079C3 RID: 31171
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetupNiagara_Internal(IntPtr @this, IntPtr NiagaraAsset, in FVector InitStart, in FVector InitEnd);
 
-		// Token: 0x0601C3CC RID: 115660
+		// Token: 0x060079C4 RID: 31172
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetStartPosition_Internal(IntPtr @this, in FVector WorldPosition);
 
-		// Token: 0x0601C3CD RID: 115661
+		// Token: 0x060079C5 RID: 31173
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetStartDirection_Internal(IntPtr @this, in FVector WorldDirection);
 
-		// Token: 0x0601C3CE RID: 115662
+		// Token: 0x060079C6 RID: 31174
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetEndPosition_Internal(IntPtr @this, in FVector WorldPosition);
 
-		// Token: 0x0601C3CF RID: 115663
+		// Token: 0x060079C7 RID: 31175
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetEndpoints_Internal(IntPtr @this, in FVector Start, in FVector End);
 
-		// Token: 0x0601C3D0 RID: 115664
+		// Token: 0x060079C8 RID: 31176
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetEndDirection_Internal(IntPtr @this, in FVector WorldDirection);
 
-		// Token: 0x0601C3D1 RID: 115665
+		// Token: 0x060079C9 RID: 31177
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ResetRope_Internal(IntPtr @this);
 
-		// Token: 0x0601C3D2 RID: 115666
+		// Token: 0x060079CA RID: 31178
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsInitialized_Internal(IntPtr @this);
 
-		// Token: 0x0601C3D3 RID: 115667
+		// Token: 0x060079CB RID: 31179
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetParticleCount_Internal(IntPtr @this);
 
-		// Token: 0x0601C3D4 RID: 115668
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __ApplyParams_Internal(IntPtr @this, IntPtr InParams);
-
-		// Token: 0x0601C3D5 RID: 115669
+		// Token: 0x060079CC RID: 31180
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ApplyDataAsset_Internal(IntPtr @this, IntPtr DataAsset);
 
-		// Token: 0x0601C3D6 RID: 115670 RVA: 0x0029A167 File Offset: 0x00298367
+		// Token: 0x060079CD RID: 31181 RVA: 0x000B2AD2 File Offset: 0x000B0CD2
 		static UArcRopeComponent()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroRopeEffect.ArcRopeComponent");
 		}
 
-		// Token: 0x0601C3D7 RID: 115671 RVA: 0x0029A175 File Offset: 0x00298375
+		// Token: 0x060079CE RID: 31182 RVA: 0x000B2AE0 File Offset: 0x000B0CE0
 		protected UArcRopeComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400F2D1 RID: 62161
-		internal static int __InterfaceOffset_INiagaraParticleCallbackHandler;
-
-		// Token: 0x0400F2D2 RID: 62162
+		// Token: 0x0400339C RID: 13212
 		public new const string __ObjectPath = "/Script/KuroRopeEffect.ArcRopeComponent";
 
-		// Token: 0x0400F2D3 RID: 62163
+		// Token: 0x0400339D RID: 13213
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400F2D4 RID: 62164
+		// Token: 0x0400339E RID: 13214
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400F2D5 RID: 62165
+		// Token: 0x0400339F RID: 13215
 		internal static int __PropertyOffset_bContinuousDrive;
 
-		// Token: 0x0400F2D6 RID: 62166
+		// Token: 0x040033A0 RID: 13216
 		internal static int __PropertyOffset_bResampleUniform;
 
-		// Token: 0x0400F2D7 RID: 62167
+		// Token: 0x040033A1 RID: 13217
 		internal static int __PropertyOffset_ResampleSegmentCount;
 
-		// Token: 0x0400F2D8 RID: 62168
+		// Token: 0x040033A2 RID: 13218
 		internal static int __PropertyOffset_bReinitOnReplay;
 
-		// Token: 0x0400F2D9 RID: 62169
+		// Token: 0x040033A3 RID: 13219
 		internal static int __PropertyOffset_ReinitGapThreshold;
 
-		// Token: 0x0400F2DA RID: 62170
+		// Token: 0x040033A4 RID: 13220
 		internal static int __PropertyOffset_bSimpleWhipMode;
 
-		// Token: 0x0400F2DB RID: 62171
+		// Token: 0x040033A5 RID: 13221
 		internal static int __PropertyOffset_WhipStraightenStiffness;
 
-		// Token: 0x0400F2DC RID: 62172
+		// Token: 0x040033A6 RID: 13222
 		internal static int __PropertyOffset_WhipSwing;
 
-		// Token: 0x0400F2DD RID: 62173
+		// Token: 0x040033A7 RID: 13223
 		internal static int __PropertyOffset_WhipSmoothing;
 
-		// Token: 0x0400F2DE RID: 62174
+		// Token: 0x040033A8 RID: 13224
 		internal static int __PropertyOffset_WhipSmoothingIterations;
 
-		// Token: 0x0400F2DF RID: 62175
+		// Token: 0x040033A9 RID: 13225
 		internal static int __PropertyOffset_WhipSag;
 
-		// Token: 0x0400F2E0 RID: 62176
+		// Token: 0x040033AA RID: 13226
 		internal static int __PropertyOffset_WhipStartDirInfluence;
 
-		// Token: 0x0400F2E1 RID: 62177
+		// Token: 0x040033AB RID: 13227
 		internal static int __PropertyOffset_WhipEndDirInfluence;
 
-		// Token: 0x0400F2E2 RID: 62178
+		// Token: 0x040033AC RID: 13228
 		internal static int __PropertyOffset_bEnablePhysics;
 
-		// Token: 0x0400F2E3 RID: 62179
+		// Token: 0x040033AD RID: 13229
 		internal static int __PropertyOffset_bPinStart;
 
-		// Token: 0x0400F2E4 RID: 62180
+		// Token: 0x040033AE RID: 13230
 		internal static int __PropertyOffset_bPinEnd;
 
-		// Token: 0x0400F2E5 RID: 62181
+		// Token: 0x040033AF RID: 13231
 		internal static int __PropertyOffset_Gravity;
 
-		// Token: 0x0400F2E6 RID: 62182
+		// Token: 0x040033B0 RID: 13232
 		internal static int __PropertyOffset_Damping;
 
-		// Token: 0x0400F2E7 RID: 62183
+		// Token: 0x040033B1 RID: 13233
 		internal static int __PropertyOffset_ConstraintIterations;
 
-		// Token: 0x0400F2E8 RID: 62184
+		// Token: 0x040033B2 RID: 13234
 		internal static int __PropertyOffset_Stiffness;
 
-		// Token: 0x0400F2E9 RID: 62185
+		// Token: 0x040033B3 RID: 13235
 		internal static int __PropertyOffset_BendStiffness;
 
-		// Token: 0x0400F2EA RID: 62186
+		// Token: 0x040033B4 RID: 13236
 		internal static int __PropertyOffset_MaxTimeStep;
 
-		// Token: 0x0400F2EB RID: 62187
+		// Token: 0x040033B5 RID: 13237
 		internal static int __PropertyOffset_TensionPropagation;
 
-		// Token: 0x0400F2EC RID: 62188
+		// Token: 0x040033B6 RID: 13238
 		internal static int __PropertyOffset_TensionStrength;
 
-		// Token: 0x0400F2ED RID: 62189
+		// Token: 0x040033B7 RID: 13239
 		internal static int __PropertyOffset_OnRopeInitialized;
 
-		// Token: 0x0400F2EE RID: 62190
+		// Token: 0x040033B8 RID: 13240
 		[Nullable(2)]
 		private FOnArcRopeInitialized _OnRopeInitialized;
 
-		// Token: 0x0400F2EF RID: 62191
-		internal static int __PropertyOffset_Particles;
-
-		// Token: 0x0400F2F0 RID: 62192
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<FArcRopeParticle> _Particles;
-
-		// Token: 0x0400F2F1 RID: 62193
+		// Token: 0x040033B9 RID: 13241
 		internal static int __PropertyOffset_RopeNiagaraComponent;
 
-		// Token: 0x0400F2F2 RID: 62194
+		// Token: 0x040033BA RID: 13242
 		internal static int __PropertyOffset_RestLengths;
 
-		// Token: 0x0400F2F3 RID: 62195
+		// Token: 0x040033BB RID: 13243
 		[Nullable(2)]
 		private TArray<float> _RestLengths;
 
-		// Token: 0x0400F2F4 RID: 62196
+		// Token: 0x040033BC RID: 13244
 		internal static int __PropertyOffset_BendRestLengths;
 
-		// Token: 0x0400F2F5 RID: 62197
+		// Token: 0x040033BD RID: 13245
 		[Nullable(2)]
 		private TArray<float> _BendRestLengths;
 
-		// Token: 0x0400F2F6 RID: 62198
+		// Token: 0x040033BE RID: 13246
 		internal static int __PropertyOffset_bInitialized;
 	}
 }

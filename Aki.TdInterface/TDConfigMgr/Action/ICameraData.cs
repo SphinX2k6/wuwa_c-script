@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200183A RID: 6202
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020019C5 RID: 6597
 	public class ICameraData
 	{
-		// Token: 0x06008513 RID: 34067 RVA: 0x0013C9CC File Offset: 0x0013ABCC
+		// Token: 0x06008C39 RID: 35897 RVA: 0x0014C1C0 File Offset: 0x0014A3C0
 		private ICameraData_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008514 RID: 34068 RVA: 0x0013CA04 File Offset: 0x0013AC04
+		// Token: 0x06008C3A RID: 35898 RVA: 0x0014C1F8 File Offset: 0x0014A3F8
 		public static ICameraData Create([Nullable(2)] ICameraData instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008515 RID: 34069 RVA: 0x0013CA17 File Offset: 0x0013AC17
+		// Token: 0x06008C3B RID: 35899 RVA: 0x0014C20B File Offset: 0x0014A40B
 		public static ICameraData CreateFromSetValue([Nullable(2)] ICameraData_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008516 RID: 34070 RVA: 0x0013CA2A File Offset: 0x0013AC2A
+		// Token: 0x06008C3C RID: 35900 RVA: 0x0014C21E File Offset: 0x0014A41E
 		public ICameraData_SetValue ToSetValue()
 		{
 			return new ICameraData_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002B87 RID: 11143
-		// (get) Token: 0x06008517 RID: 34071 RVA: 0x0013CA4C File Offset: 0x0013AC4C
-		// (set) Token: 0x06008518 RID: 34072 RVA: 0x0013CAAD File Offset: 0x0013ACAD
+		// Token: 0x17002D81 RID: 11649
+		// (get) Token: 0x06008C3D RID: 35901 RVA: 0x0014C240 File Offset: 0x0014A440
+		// (set) Token: 0x06008C3E RID: 35902 RVA: 0x0014C2A1 File Offset: 0x0014A4A1
 		public virtual IFlowTemplateMode Camera
 		{
 			get
@@ -90,9 +88,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B88 RID: 11144
-		// (get) Token: 0x06008519 RID: 34073 RVA: 0x0013CAC4 File Offset: 0x0013ACC4
-		// (set) Token: 0x0600851A RID: 34074 RVA: 0x0013CB25 File Offset: 0x0013AD25
+		// Token: 0x17002D82 RID: 11650
+		// (get) Token: 0x06008C3F RID: 35903 RVA: 0x0014C2B8 File Offset: 0x0014A4B8
+		// (set) Token: 0x06008C40 RID: 35904 RVA: 0x0014C319 File Offset: 0x0014A519
 		[Nullable(2)]
 		public virtual SetCameraAnim CameraAnim
 		{
@@ -123,24 +121,24 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005418 RID: 21528
+		// Token: 0x04005864 RID: 22628
 		[Nullable(2)]
 		protected ICameraData FbInstance;
 
-		// Token: 0x04005419 RID: 21529
+		// Token: 0x04005865 RID: 22629
 		[Nullable(2)]
 		protected ICameraData_SetValue PocoInterface;
 
-		// Token: 0x0400541A RID: 21530
+		// Token: 0x04005866 RID: 22630
 		private IFlowTemplateMode _CameraCache;
 
-		// Token: 0x0400541B RID: 21531
+		// Token: 0x04005867 RID: 22631
 		private bool _CameraInited;
 
-		// Token: 0x0400541C RID: 21532
+		// Token: 0x04005868 RID: 22632
 		private SetCameraAnim _CameraAnimCache;
 
-		// Token: 0x0400541D RID: 21533
+		// Token: 0x04005869 RID: 22633
 		private bool _CameraAnimInited;
 	}
 }

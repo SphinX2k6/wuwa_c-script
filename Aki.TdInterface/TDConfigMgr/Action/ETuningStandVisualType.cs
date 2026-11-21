@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016EA RID: 5866
+	// Token: 0x02001866 RID: 6246
 	[EnumExtensions]
 	public enum ETuningStandVisualType
 	{
-		// Token: 0x04004F61 RID: 20321
+		// Token: 0x0400538E RID: 21390
 		Tuning,
-		// Token: 0x04004F62 RID: 20322
+		// Token: 0x0400538F RID: 21391
 		Challenge
 	}
 }

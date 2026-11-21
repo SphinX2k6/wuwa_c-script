@@ -1,20 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200023A RID: 570
+	// Token: 0x02000261 RID: 609
 	public class ICheckGearHit_SetValue
 	{
-		// Token: 0x04000A37 RID: 2615
+		// Token: 0x04000AC1 RID: 2753
 		public int HitIndex;
 
-		// Token: 0x04000A38 RID: 2616
-		[Nullable(1)]
+		// Token: 0x04000AC2 RID: 2754
 		public List<int> AffectIndex;
 
-		// Token: 0x04000A39 RID: 2617
+		// Token: 0x04000AC3 RID: 2755
 		public EGearHitAffectType AffectType;
 	}
 }

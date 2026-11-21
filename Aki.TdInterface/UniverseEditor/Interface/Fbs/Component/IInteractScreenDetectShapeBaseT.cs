@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200546B RID: 21611
+	// Token: 0x020059F1 RID: 23025
 	public class IInteractScreenDetectShapeBaseT
 	{
-		// Token: 0x17009F19 RID: 40729
-		// (get) Token: 0x060238D9 RID: 145625 RVA: 0x004EAD7E File Offset: 0x004E8F7E
-		// (set) Token: 0x060238DA RID: 145626 RVA: 0x004EAD86 File Offset: 0x004E8F86
+		// Token: 0x1700A753 RID: 42835
+		// (get) Token: 0x06025991 RID: 154001 RVA: 0x00527DF2 File Offset: 0x00525FF2
+		// (set) Token: 0x06025992 RID: 154002 RVA: 0x00527DFA File Offset: 0x00525FFA
 		public EInteractScreenDetectShape Type { get; set; }
 
-		// Token: 0x060238DB RID: 145627 RVA: 0x004EAD8F File Offset: 0x004E8F8F
+		// Token: 0x06025993 RID: 154003 RVA: 0x00527E03 File Offset: 0x00526003
 		public IInteractScreenDetectShapeBaseT()
 		{
 			this.Type = EInteractScreenDetectShape.Circle;

@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E0A RID: 19978
+	// Token: 0x02003DD3 RID: 15827
 	public class RoguelikeBlackFlowerInstanceItem : UiPanelBase
 	{
-		// Token: 0x060338B6 RID: 211126 RVA: 0x00C0C1E0 File Offset: 0x00C0A3E0
+		// Token: 0x06028721 RID: 165665 RVA: 0x00B556EC File Offset: 0x00B538EC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -35,13 +35,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060338B7 RID: 211127 RVA: 0x00C0C2A7 File Offset: 0x00C0A4A7
+		// Token: 0x06028722 RID: 165666 RVA: 0x00B557B3 File Offset: 0x00B539B3
 		protected override void OnBeforeShow()
 		{
 			this.RefreshHandle();
 		}
 
-		// Token: 0x060338B8 RID: 211128 RVA: 0x00C0C2B0 File Offset: 0x00C0A4B0
+		// Token: 0x06028723 RID: 165667 RVA: 0x00B557BC File Offset: 0x00B539BC
 		private void OnClickHelp()
 		{
 			RogueParam? paramConfigBySeasonId = RoguelikeModel.Instance.GetParamConfigBySeasonId(null);
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			UiManager.Instance.OpenView(EUiViewName.RoguelikeBlackFlowerPreviewView, roguelikeBlackFlowerOpenParam, null);
 		}
 
-		// Token: 0x060338B9 RID: 211129 RVA: 0x00C0C308 File Offset: 0x00C0A508
+		// Token: 0x06028724 RID: 165668 RVA: 0x00B55814 File Offset: 0x00B53A14
 		private void RefreshHandle()
 		{
 			ActivityRogueData currentActivityData = ActivityRogueController.Instance.GetCurrentActivityData();
@@ -73,16 +73,16 @@ namespace CSharpScript.Game.Module.Roguelike
 			}));
 		}
 
-		// Token: 0x0200AF9D RID: 44957
+		// Token: 0x020099D2 RID: 39378
 		private class EItemComponentDefine
 		{
-			// Token: 0x04035518 RID: 218392
+			// Token: 0x0402FF4B RID: 196427
 			public const int TxtTitle = 0;
 
-			// Token: 0x04035519 RID: 218393
+			// Token: 0x0402FF4C RID: 196428
 			public const int TxtContent = 1;
 
-			// Token: 0x0403551A RID: 218394
+			// Token: 0x0402FF4D RID: 196429
 			public const int BtnHelp = 2;
 		}
 	}

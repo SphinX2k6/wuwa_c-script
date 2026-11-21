@@ -1,47 +1,47 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002886 RID: 10374
+// Token: 0x02001E01 RID: 7681
 [NullableContext(2)]
 public interface IAttributeInfo
 {
-	// Token: 0x17001C89 RID: 7305
-	// (get) Token: 0x06015593 RID: 87443
-	// (set) Token: 0x06015594 RID: 87444
+	// Token: 0x17001CE1 RID: 7393
+	// (get) Token: 0x06012F91 RID: 77713
+	// (set) Token: 0x06012F92 RID: 77714
 	string Name { get; set; }
 
-	// Token: 0x17001C8A RID: 7306
-	// (get) Token: 0x06015595 RID: 87445
-	// (set) Token: 0x06015596 RID: 87446
+	// Token: 0x17001CE2 RID: 7394
+	// (get) Token: 0x06012F93 RID: 77715
+	// (set) Token: 0x06012F94 RID: 77716
 	string IconPath { get; set; }
 
-	// Token: 0x17001C8B RID: 7307
-	// (get) Token: 0x06015597 RID: 87447
-	// (set) Token: 0x06015598 RID: 87448
+	// Token: 0x17001CE3 RID: 7395
+	// (get) Token: 0x06012F95 RID: 77717
+	// (set) Token: 0x06012F96 RID: 77718
 	bool? ShowArrow { get; set; }
 
-	// Token: 0x17001C8C RID: 7308
-	// (get) Token: 0x06015599 RID: 87449
-	// (set) Token: 0x0601559A RID: 87450
+	// Token: 0x17001CE4 RID: 7396
+	// (get) Token: 0x06012F97 RID: 77719
+	// (set) Token: 0x06012F98 RID: 77720
 	string PreText { get; set; }
 
-	// Token: 0x17001C8D RID: 7309
-	// (get) Token: 0x0601559B RID: 87451
-	// (set) Token: 0x0601559C RID: 87452
+	// Token: 0x17001CE5 RID: 7397
+	// (get) Token: 0x06012F99 RID: 77721
+	// (set) Token: 0x06012F9A RID: 77722
 	string CurText { get; set; }
 
-	// Token: 0x17001C8E RID: 7310
-	// (get) Token: 0x0601559D RID: 87453
-	// (set) Token: 0x0601559E RID: 87454
+	// Token: 0x17001CE6 RID: 7398
+	// (get) Token: 0x06012F9B RID: 77723
+	// (set) Token: 0x06012F9C RID: 77724
 	bool? IsNormalBg { get; set; }
 
-	// Token: 0x17001C8F RID: 7311
-	// (get) Token: 0x0601559F RID: 87455
-	// (set) Token: 0x060155A0 RID: 87456
+	// Token: 0x17001CE7 RID: 7399
+	// (get) Token: 0x06012F9D RID: 77725
+	// (set) Token: 0x06012F9E RID: 77726
 	bool? InnerShowBg { get; set; }
 
-	// Token: 0x17001C90 RID: 7312
-	// (get) Token: 0x060155A1 RID: 87457
-	// (set) Token: 0x060155A2 RID: 87458
+	// Token: 0x17001CE8 RID: 7400
+	// (get) Token: 0x06012F9F RID: 77727
+	// (set) Token: 0x06012FA0 RID: 77728
 	bool? IsLine { get; set; }
 }

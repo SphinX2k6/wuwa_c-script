@@ -6,7 +6,7 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002745 RID: 10053
+	// Token: 0x020007F9 RID: 2041
 	[NullableContext(1)]
 	[Nullable(0)]
 	[HasGetTypeHash]
@@ -14,15 +14,15 @@ namespace UnrealEngine
 	[UnrealStructLayout(1456, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 1456)]
 	public class FSharpherealTestStruct_UObject : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602544A RID: 152650 RVA: 0x0037494C File Offset: 0x00372B4C
+		// Token: 0x0600AF28 RID: 44840 RVA: 0x001043D9 File Offset: 0x001025D9
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FSharpherealTestStruct_UObject._ScriptStructPtr != 0) ? FSharpherealTestStruct_UObject._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/SharpherealTest.SharpherealTestStruct_UObject", ref FSharpherealTestStruct_UObject._ScriptStructPtr);
 		}
 
-		// Token: 0x17008FFA RID: 36858
-		// (get) Token: 0x0602544B RID: 152651 RVA: 0x00374970 File Offset: 0x00372B70
-		// (set) Token: 0x0602544C RID: 152652 RVA: 0x00374984 File Offset: 0x00372B84
+		// Token: 0x170020E2 RID: 8418
+		// (get) Token: 0x0600AF29 RID: 44841 RVA: 0x001043FD File Offset: 0x001025FD
+		// (set) Token: 0x0600AF2A RID: 44842 RVA: 0x00104411 File Offset: 0x00102611
 		[Nullable(2)]
 		public unsafe UObject Object
 		{
@@ -38,9 +38,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FFB RID: 36859
-		// (get) Token: 0x0602544D RID: 152653 RVA: 0x00374999 File Offset: 0x00372B99
-		// (set) Token: 0x0602544E RID: 152654 RVA: 0x003749AD File Offset: 0x00372BAD
+		// Token: 0x170020E3 RID: 8419
+		// (get) Token: 0x0600AF2B RID: 44843 RVA: 0x00104426 File Offset: 0x00102626
+		// (set) Token: 0x0600AF2C RID: 44844 RVA: 0x0010443A File Offset: 0x0010263A
 		[Nullable(2)]
 		public unsafe USharpherealTestSimpleClass SimpleObject
 		{
@@ -56,9 +56,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FFC RID: 36860
-		// (get) Token: 0x0602544F RID: 152655 RVA: 0x003749C2 File Offset: 0x00372BC2
-		// (set) Token: 0x06025450 RID: 152656 RVA: 0x003749D6 File Offset: 0x00372BD6
+		// Token: 0x170020E4 RID: 8420
+		// (get) Token: 0x0600AF2D RID: 44845 RVA: 0x0010444F File Offset: 0x0010264F
+		// (set) Token: 0x0600AF2E RID: 44846 RVA: 0x00104463 File Offset: 0x00102663
 		[Nullable(new byte[]
 		{
 			0,
@@ -86,9 +86,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FFD RID: 36861
-		// (get) Token: 0x06025451 RID: 152657 RVA: 0x003749EB File Offset: 0x00372BEB
-		// (set) Token: 0x06025452 RID: 152658 RVA: 0x00374A0A File Offset: 0x00372C0A
+		// Token: 0x170020E5 RID: 8421
+		// (get) Token: 0x0600AF2F RID: 44847 RVA: 0x00104478 File Offset: 0x00102678
+		// (set) Token: 0x0600AF30 RID: 44848 RVA: 0x00104497 File Offset: 0x00102697
 		public TSoftObjectPtr<USharpherealTestSimpleClass> SoftObject
 		{
 			get
@@ -101,9 +101,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FFE RID: 36862
-		// (get) Token: 0x06025453 RID: 152659 RVA: 0x00374A2F File Offset: 0x00372C2F
-		// (set) Token: 0x06025454 RID: 152660 RVA: 0x00374A43 File Offset: 0x00372C43
+		// Token: 0x170020E6 RID: 8422
+		// (get) Token: 0x0600AF31 RID: 44849 RVA: 0x001044BC File Offset: 0x001026BC
+		// (set) Token: 0x0600AF32 RID: 44850 RVA: 0x001044D0 File Offset: 0x001026D0
 		[Nullable(new byte[]
 		{
 			0,
@@ -131,9 +131,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008FFF RID: 36863
-		// (get) Token: 0x06025455 RID: 152661 RVA: 0x00374A58 File Offset: 0x00372C58
-		// (set) Token: 0x06025456 RID: 152662 RVA: 0x00374A9B File Offset: 0x00372C9B
+		// Token: 0x170020E7 RID: 8423
+		// (get) Token: 0x0600AF33 RID: 44851 RVA: 0x001044E8 File Offset: 0x001026E8
+		// (set) Token: 0x0600AF34 RID: 44852 RVA: 0x0010452B File Offset: 0x0010272B
 		public FSoftObjectPath ObjectPath
 		{
 			get
@@ -152,9 +152,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009000 RID: 36864
-		// (get) Token: 0x06025457 RID: 152663 RVA: 0x00374ABC File Offset: 0x00372CBC
-		// (set) Token: 0x06025458 RID: 152664 RVA: 0x00374AFF File Offset: 0x00372CFF
+		// Token: 0x170020E8 RID: 8424
+		// (get) Token: 0x0600AF35 RID: 44853 RVA: 0x0010454C File Offset: 0x0010274C
+		// (set) Token: 0x0600AF36 RID: 44854 RVA: 0x0010458F File Offset: 0x0010278F
 		public TArray<UObject> ObjectArray
 		{
 			get
@@ -173,9 +173,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009001 RID: 36865
-		// (get) Token: 0x06025459 RID: 152665 RVA: 0x00374B10 File Offset: 0x00372D10
-		// (set) Token: 0x0602545A RID: 152666 RVA: 0x00374B53 File Offset: 0x00372D53
+		// Token: 0x170020E9 RID: 8425
+		// (get) Token: 0x0600AF37 RID: 44855 RVA: 0x001045A0 File Offset: 0x001027A0
+		// (set) Token: 0x0600AF38 RID: 44856 RVA: 0x001045E3 File Offset: 0x001027E3
 		public TArray<USharpherealTestSimpleClass> SimpleObjectArray
 		{
 			get
@@ -194,9 +194,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009002 RID: 36866
-		// (get) Token: 0x0602545B RID: 152667 RVA: 0x00374B64 File Offset: 0x00372D64
-		// (set) Token: 0x0602545C RID: 152668 RVA: 0x00374BA7 File Offset: 0x00372DA7
+		// Token: 0x170020EA RID: 8426
+		// (get) Token: 0x0600AF39 RID: 44857 RVA: 0x001045F4 File Offset: 0x001027F4
+		// (set) Token: 0x0600AF3A RID: 44858 RVA: 0x00104637 File Offset: 0x00102837
 		[Nullable(new byte[]
 		{
 			1,
@@ -233,9 +233,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009003 RID: 36867
-		// (get) Token: 0x0602545D RID: 152669 RVA: 0x00374BB8 File Offset: 0x00372DB8
-		// (set) Token: 0x0602545E RID: 152670 RVA: 0x00374BFB File Offset: 0x00372DFB
+		// Token: 0x170020EB RID: 8427
+		// (get) Token: 0x0600AF3B RID: 44859 RVA: 0x00104648 File Offset: 0x00102848
+		// (set) Token: 0x0600AF3C RID: 44860 RVA: 0x0010468B File Offset: 0x0010288B
 		public TArray<TSoftObjectPtr<USharpherealTestSimpleClass>> SoftObjectArray
 		{
 			get
@@ -254,9 +254,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009004 RID: 36868
-		// (get) Token: 0x0602545F RID: 152671 RVA: 0x00374C0C File Offset: 0x00372E0C
-		// (set) Token: 0x06025460 RID: 152672 RVA: 0x00374C4F File Offset: 0x00372E4F
+		// Token: 0x170020EC RID: 8428
+		// (get) Token: 0x0600AF3D RID: 44861 RVA: 0x0010469C File Offset: 0x0010289C
+		// (set) Token: 0x0600AF3E RID: 44862 RVA: 0x001046DF File Offset: 0x001028DF
 		[Nullable(new byte[]
 		{
 			1,
@@ -293,9 +293,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009005 RID: 36869
-		// (get) Token: 0x06025461 RID: 152673 RVA: 0x00374C60 File Offset: 0x00372E60
-		// (set) Token: 0x06025462 RID: 152674 RVA: 0x00374CA3 File Offset: 0x00372EA3
+		// Token: 0x170020ED RID: 8429
+		// (get) Token: 0x0600AF3F RID: 44863 RVA: 0x001046F0 File Offset: 0x001028F0
+		// (set) Token: 0x0600AF40 RID: 44864 RVA: 0x00104733 File Offset: 0x00102933
 		public TArray<FSoftObjectPath> ObjectPathArray
 		{
 			get
@@ -314,9 +314,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009006 RID: 36870
-		// (get) Token: 0x06025463 RID: 152675 RVA: 0x00374CB4 File Offset: 0x00372EB4
-		// (set) Token: 0x06025464 RID: 152676 RVA: 0x00374CF8 File Offset: 0x00372EF8
+		// Token: 0x170020EE RID: 8430
+		// (get) Token: 0x0600AF41 RID: 44865 RVA: 0x00104744 File Offset: 0x00102944
+		// (set) Token: 0x0600AF42 RID: 44866 RVA: 0x00104788 File Offset: 0x00102988
 		public TFixedArray<UObject> ObjectFixedArray
 		{
 			get
@@ -335,9 +335,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009007 RID: 36871
-		// (get) Token: 0x06025465 RID: 152677 RVA: 0x00374D08 File Offset: 0x00372F08
-		// (set) Token: 0x06025466 RID: 152678 RVA: 0x00374D4C File Offset: 0x00372F4C
+		// Token: 0x170020EF RID: 8431
+		// (get) Token: 0x0600AF43 RID: 44867 RVA: 0x00104798 File Offset: 0x00102998
+		// (set) Token: 0x0600AF44 RID: 44868 RVA: 0x001047DC File Offset: 0x001029DC
 		public TFixedArray<USharpherealTestSimpleClass> SimpleObjectFixedArray
 		{
 			get
@@ -356,9 +356,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009008 RID: 36872
-		// (get) Token: 0x06025467 RID: 152679 RVA: 0x00374D5C File Offset: 0x00372F5C
-		// (set) Token: 0x06025468 RID: 152680 RVA: 0x00374DA0 File Offset: 0x00372FA0
+		// Token: 0x170020F0 RID: 8432
+		// (get) Token: 0x0600AF45 RID: 44869 RVA: 0x001047EC File Offset: 0x001029EC
+		// (set) Token: 0x0600AF46 RID: 44870 RVA: 0x00104830 File Offset: 0x00102A30
 		[Nullable(new byte[]
 		{
 			1,
@@ -395,9 +395,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009009 RID: 36873
-		// (get) Token: 0x06025469 RID: 152681 RVA: 0x00374DB0 File Offset: 0x00372FB0
-		// (set) Token: 0x0602546A RID: 152682 RVA: 0x00374DF4 File Offset: 0x00372FF4
+		// Token: 0x170020F1 RID: 8433
+		// (get) Token: 0x0600AF47 RID: 44871 RVA: 0x00104840 File Offset: 0x00102A40
+		// (set) Token: 0x0600AF48 RID: 44872 RVA: 0x00104884 File Offset: 0x00102A84
 		public TFixedArray<TSoftObjectPtr<USharpherealTestSimpleClass>> SoftObjectFixedArray
 		{
 			get
@@ -416,9 +416,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700900A RID: 36874
-		// (get) Token: 0x0602546B RID: 152683 RVA: 0x00374E04 File Offset: 0x00373004
-		// (set) Token: 0x0602546C RID: 152684 RVA: 0x00374E48 File Offset: 0x00373048
+		// Token: 0x170020F2 RID: 8434
+		// (get) Token: 0x0600AF49 RID: 44873 RVA: 0x00104894 File Offset: 0x00102A94
+		// (set) Token: 0x0600AF4A RID: 44874 RVA: 0x001048D8 File Offset: 0x00102AD8
 		[Nullable(new byte[]
 		{
 			1,
@@ -455,9 +455,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700900B RID: 36875
-		// (get) Token: 0x0602546D RID: 152685 RVA: 0x00374E58 File Offset: 0x00373058
-		// (set) Token: 0x0602546E RID: 152686 RVA: 0x00374E9C File Offset: 0x0037309C
+		// Token: 0x170020F3 RID: 8435
+		// (get) Token: 0x0600AF4B RID: 44875 RVA: 0x001048E8 File Offset: 0x00102AE8
+		// (set) Token: 0x0600AF4C RID: 44876 RVA: 0x0010492C File Offset: 0x00102B2C
 		public TFixedArray<FSoftObjectPath> ObjectPathFixedArray
 		{
 			get
@@ -476,9 +476,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700900C RID: 36876
-		// (get) Token: 0x0602546F RID: 152687 RVA: 0x00374EAC File Offset: 0x003730AC
-		// (set) Token: 0x06025470 RID: 152688 RVA: 0x00374EEF File Offset: 0x003730EF
+		// Token: 0x170020F4 RID: 8436
+		// (get) Token: 0x0600AF4D RID: 44877 RVA: 0x0010493C File Offset: 0x00102B3C
+		// (set) Token: 0x0600AF4E RID: 44878 RVA: 0x0010497F File Offset: 0x00102B7F
 		public TSet<UObject> ObjectSet
 		{
 			get
@@ -497,9 +497,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700900D RID: 36877
-		// (get) Token: 0x06025471 RID: 152689 RVA: 0x00374F00 File Offset: 0x00373100
-		// (set) Token: 0x06025472 RID: 152690 RVA: 0x00374F43 File Offset: 0x00373143
+		// Token: 0x170020F5 RID: 8437
+		// (get) Token: 0x0600AF4F RID: 44879 RVA: 0x00104990 File Offset: 0x00102B90
+		// (set) Token: 0x0600AF50 RID: 44880 RVA: 0x001049D3 File Offset: 0x00102BD3
 		public TSet<USharpherealTestSimpleClass> SimpleObjectSet
 		{
 			get
@@ -518,9 +518,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700900E RID: 36878
-		// (get) Token: 0x06025473 RID: 152691 RVA: 0x00374F54 File Offset: 0x00373154
-		// (set) Token: 0x06025474 RID: 152692 RVA: 0x00374F97 File Offset: 0x00373197
+		// Token: 0x170020F6 RID: 8438
+		// (get) Token: 0x0600AF51 RID: 44881 RVA: 0x001049E4 File Offset: 0x00102BE4
+		// (set) Token: 0x0600AF52 RID: 44882 RVA: 0x00104A27 File Offset: 0x00102C27
 		[Nullable(new byte[]
 		{
 			1,
@@ -557,9 +557,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700900F RID: 36879
-		// (get) Token: 0x06025475 RID: 152693 RVA: 0x00374FA8 File Offset: 0x003731A8
-		// (set) Token: 0x06025476 RID: 152694 RVA: 0x00374FEB File Offset: 0x003731EB
+		// Token: 0x170020F7 RID: 8439
+		// (get) Token: 0x0600AF53 RID: 44883 RVA: 0x00104A38 File Offset: 0x00102C38
+		// (set) Token: 0x0600AF54 RID: 44884 RVA: 0x00104A7B File Offset: 0x00102C7B
 		public TSet<TSoftObjectPtr<USharpherealTestSimpleClass>> SoftObjectSet
 		{
 			get
@@ -578,9 +578,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009010 RID: 36880
-		// (get) Token: 0x06025477 RID: 152695 RVA: 0x00374FFC File Offset: 0x003731FC
-		// (set) Token: 0x06025478 RID: 152696 RVA: 0x0037503F File Offset: 0x0037323F
+		// Token: 0x170020F8 RID: 8440
+		// (get) Token: 0x0600AF55 RID: 44885 RVA: 0x00104A8C File Offset: 0x00102C8C
+		// (set) Token: 0x0600AF56 RID: 44886 RVA: 0x00104ACF File Offset: 0x00102CCF
 		[Nullable(new byte[]
 		{
 			1,
@@ -617,9 +617,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009011 RID: 36881
-		// (get) Token: 0x06025479 RID: 152697 RVA: 0x00375050 File Offset: 0x00373250
-		// (set) Token: 0x0602547A RID: 152698 RVA: 0x00375093 File Offset: 0x00373293
+		// Token: 0x170020F9 RID: 8441
+		// (get) Token: 0x0600AF57 RID: 44887 RVA: 0x00104AE0 File Offset: 0x00102CE0
+		// (set) Token: 0x0600AF58 RID: 44888 RVA: 0x00104B23 File Offset: 0x00102D23
 		public TSet<FSoftObjectPath> ObjectPathSet
 		{
 			get
@@ -638,9 +638,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009012 RID: 36882
-		// (get) Token: 0x0602547B RID: 152699 RVA: 0x003750A4 File Offset: 0x003732A4
-		// (set) Token: 0x0602547C RID: 152700 RVA: 0x003750E7 File Offset: 0x003732E7
+		// Token: 0x170020FA RID: 8442
+		// (get) Token: 0x0600AF59 RID: 44889 RVA: 0x00104B34 File Offset: 0x00102D34
+		// (set) Token: 0x0600AF5A RID: 44890 RVA: 0x00104B77 File Offset: 0x00102D77
 		public TMap<UObject, int> ObjectMap
 		{
 			get
@@ -659,9 +659,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009013 RID: 36883
-		// (get) Token: 0x0602547D RID: 152701 RVA: 0x003750F8 File Offset: 0x003732F8
-		// (set) Token: 0x0602547E RID: 152702 RVA: 0x0037513B File Offset: 0x0037333B
+		// Token: 0x170020FB RID: 8443
+		// (get) Token: 0x0600AF5B RID: 44891 RVA: 0x00104B88 File Offset: 0x00102D88
+		// (set) Token: 0x0600AF5C RID: 44892 RVA: 0x00104BCB File Offset: 0x00102DCB
 		public TMap<USharpherealTestSimpleClass, int> SimpleObjectMap
 		{
 			get
@@ -680,9 +680,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009014 RID: 36884
-		// (get) Token: 0x0602547F RID: 152703 RVA: 0x0037514C File Offset: 0x0037334C
-		// (set) Token: 0x06025480 RID: 152704 RVA: 0x0037518F File Offset: 0x0037338F
+		// Token: 0x170020FC RID: 8444
+		// (get) Token: 0x0600AF5D RID: 44893 RVA: 0x00104BDC File Offset: 0x00102DDC
+		// (set) Token: 0x0600AF5E RID: 44894 RVA: 0x00104C1F File Offset: 0x00102E1F
 		[Nullable(new byte[]
 		{
 			1,
@@ -719,9 +719,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009015 RID: 36885
-		// (get) Token: 0x06025481 RID: 152705 RVA: 0x003751A0 File Offset: 0x003733A0
-		// (set) Token: 0x06025482 RID: 152706 RVA: 0x003751E3 File Offset: 0x003733E3
+		// Token: 0x170020FD RID: 8445
+		// (get) Token: 0x0600AF5F RID: 44895 RVA: 0x00104C30 File Offset: 0x00102E30
+		// (set) Token: 0x0600AF60 RID: 44896 RVA: 0x00104C73 File Offset: 0x00102E73
 		public TMap<TSoftObjectPtr<USharpherealTestSimpleClass>, int> SoftObjectMap
 		{
 			get
@@ -740,9 +740,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009016 RID: 36886
-		// (get) Token: 0x06025483 RID: 152707 RVA: 0x003751F4 File Offset: 0x003733F4
-		// (set) Token: 0x06025484 RID: 152708 RVA: 0x00375237 File Offset: 0x00373437
+		// Token: 0x170020FE RID: 8446
+		// (get) Token: 0x0600AF61 RID: 44897 RVA: 0x00104C84 File Offset: 0x00102E84
+		// (set) Token: 0x0600AF62 RID: 44898 RVA: 0x00104CC7 File Offset: 0x00102EC7
 		[Nullable(new byte[]
 		{
 			1,
@@ -779,9 +779,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009017 RID: 36887
-		// (get) Token: 0x06025485 RID: 152709 RVA: 0x00375248 File Offset: 0x00373448
-		// (set) Token: 0x06025486 RID: 152710 RVA: 0x0037528B File Offset: 0x0037348B
+		// Token: 0x170020FF RID: 8447
+		// (get) Token: 0x0600AF63 RID: 44899 RVA: 0x00104CD8 File Offset: 0x00102ED8
+		// (set) Token: 0x0600AF64 RID: 44900 RVA: 0x00104D1B File Offset: 0x00102F1B
 		public TMap<FSoftObjectPath, int> ObjectPathMap
 		{
 			get
@@ -800,155 +800,72 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06025487 RID: 152711 RVA: 0x00375299 File Offset: 0x00373499
+		// Token: 0x0600AF65 RID: 44901 RVA: 0x00104D29 File Offset: 0x00102F29
 		public FSharpherealTestStruct_UObject()
 		{
 		}
 
-		// Token: 0x06025488 RID: 152712 RVA: 0x003752A4 File Offset: 0x003734A4
-		public FSharpherealTestStruct_UObject(UObject Object, USharpherealTestSimpleClass SimpleObject, [Nullable(new byte[]
-		{
-			0,
-			1
-		})] TWeakObjectPtr<USharpherealTestSimpleClass> WeakObject, TSoftObjectPtr<USharpherealTestSimpleClass> SoftObject, [Nullable(new byte[]
-		{
-			0,
-			1
-		})] TLazyObjectPtr<USharpherealTestSimpleClass> LazyObject, FSoftObjectPath ObjectPath, TArray<UObject> ObjectArray, TArray<USharpherealTestSimpleClass> SimpleObjectArray, [Nullable(new byte[]
-		{
-			1,
-			0,
-			1
-		})] TArray<TWeakObjectPtr<USharpherealTestSimpleClass>> WeakObjectArray, TArray<TSoftObjectPtr<USharpherealTestSimpleClass>> SoftObjectArray, [Nullable(new byte[]
-		{
-			1,
-			0,
-			1
-		})] TArray<TLazyObjectPtr<USharpherealTestSimpleClass>> LazyObjectArray, TArray<FSoftObjectPath> ObjectPathArray, TFixedArray<UObject> ObjectFixedArray, TFixedArray<USharpherealTestSimpleClass> SimpleObjectFixedArray, [Nullable(new byte[]
-		{
-			1,
-			0,
-			1
-		})] TFixedArray<TWeakObjectPtr<USharpherealTestSimpleClass>> WeakObjectFixedArray, TFixedArray<TSoftObjectPtr<USharpherealTestSimpleClass>> SoftObjectFixedArray, [Nullable(new byte[]
-		{
-			1,
-			0,
-			1
-		})] TFixedArray<TLazyObjectPtr<USharpherealTestSimpleClass>> LazyObjectFixedArray, TFixedArray<FSoftObjectPath> ObjectPathFixedArray, TSet<UObject> ObjectSet, TSet<USharpherealTestSimpleClass> SimpleObjectSet, [Nullable(new byte[]
-		{
-			1,
-			0,
-			1
-		})] TSet<TWeakObjectPtr<USharpherealTestSimpleClass>> WeakObjectSet, TSet<TSoftObjectPtr<USharpherealTestSimpleClass>> SoftObjectSet, [Nullable(new byte[]
-		{
-			1,
-			0,
-			1
-		})] TSet<TLazyObjectPtr<USharpherealTestSimpleClass>> LazyObjectSet, TSet<FSoftObjectPath> ObjectPathSet, TMap<UObject, int> ObjectMap, TMap<USharpherealTestSimpleClass, int> SimpleObjectMap, [Nullable(new byte[]
-		{
-			1,
-			0,
-			1
-		})] TMap<TWeakObjectPtr<USharpherealTestSimpleClass>, int> WeakObjectMap, TMap<TSoftObjectPtr<USharpherealTestSimpleClass>, int> SoftObjectMap, [Nullable(new byte[]
-		{
-			1,
-			0,
-			1
-		})] TMap<TLazyObjectPtr<USharpherealTestSimpleClass>, int> LazyObjectMap, TMap<FSoftObjectPath, int> ObjectPathMap)
-		{
-			this.Object = Object;
-			this.SimpleObject = SimpleObject;
-			this.WeakObject = WeakObject;
-			this.SoftObject = SoftObject;
-			this.LazyObject = LazyObject;
-			this.ObjectPath = ObjectPath;
-			this.ObjectArray = ObjectArray;
-			this.SimpleObjectArray = SimpleObjectArray;
-			this.WeakObjectArray = WeakObjectArray;
-			this.SoftObjectArray = SoftObjectArray;
-			this.LazyObjectArray = LazyObjectArray;
-			this.ObjectPathArray = ObjectPathArray;
-			this.ObjectFixedArray = ObjectFixedArray;
-			this.SimpleObjectFixedArray = SimpleObjectFixedArray;
-			this.WeakObjectFixedArray = WeakObjectFixedArray;
-			this.SoftObjectFixedArray = SoftObjectFixedArray;
-			this.LazyObjectFixedArray = LazyObjectFixedArray;
-			this.ObjectPathFixedArray = ObjectPathFixedArray;
-			this.ObjectSet = ObjectSet;
-			this.SimpleObjectSet = SimpleObjectSet;
-			this.WeakObjectSet = WeakObjectSet;
-			this.SoftObjectSet = SoftObjectSet;
-			this.LazyObjectSet = LazyObjectSet;
-			this.ObjectPathSet = ObjectPathSet;
-			this.ObjectMap = ObjectMap;
-			this.SimpleObjectMap = SimpleObjectMap;
-			this.WeakObjectMap = WeakObjectMap;
-			this.SoftObjectMap = SoftObjectMap;
-			this.LazyObjectMap = LazyObjectMap;
-			this.ObjectPathMap = ObjectPathMap;
-		}
-
-		// Token: 0x06025489 RID: 152713 RVA: 0x003753A4 File Offset: 0x003735A4
+		// Token: 0x0600AF66 RID: 44902 RVA: 0x00104D31 File Offset: 0x00102F31
 		protected override IntPtr GetUStructPtr()
 		{
 			return FSharpherealTestStruct_UObject.StaticStruct();
 		}
 
-		// Token: 0x0602548A RID: 152714 RVA: 0x003753B0 File Offset: 0x003735B0
+		// Token: 0x0600AF67 RID: 44903 RVA: 0x00104D3D File Offset: 0x00102F3D
 		[NullableContext(2)]
 		public FSharpherealTestStruct_UObject(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602548B RID: 152715 RVA: 0x003753BA File Offset: 0x003735BA
+		// Token: 0x0600AF68 RID: 44904 RVA: 0x00104D47 File Offset: 0x00102F47
 		public FSharpherealTestStruct_UObject(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602548C RID: 152716 RVA: 0x003753C5 File Offset: 0x003735C5
+		// Token: 0x0600AF69 RID: 44905 RVA: 0x00104D52 File Offset: 0x00102F52
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FSharpherealTestStruct_UObject(Pointer, false, true);
 		}
 
-		// Token: 0x0602548D RID: 152717 RVA: 0x003753CF File Offset: 0x003735CF
+		// Token: 0x0600AF6A RID: 44906 RVA: 0x00104D5C File Offset: 0x00102F5C
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FSharpherealTestStruct_UObject(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x040141B8 RID: 82360
+		// Token: 0x04004C17 RID: 19479
 		public const string __ObjectPath = "/Script/SharpherealTest.SharpherealTestStruct_UObject";
 
-		// Token: 0x040141B9 RID: 82361
+		// Token: 0x04004C18 RID: 19480
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040141BA RID: 82362
+		// Token: 0x04004C19 RID: 19481
 		internal static int __PropertyOffset_Object;
 
-		// Token: 0x040141BB RID: 82363
+		// Token: 0x04004C1A RID: 19482
 		internal static int __PropertyOffset_SimpleObject;
 
-		// Token: 0x040141BC RID: 82364
+		// Token: 0x04004C1B RID: 19483
 		internal static int __PropertyOffset_WeakObject;
 
-		// Token: 0x040141BD RID: 82365
+		// Token: 0x04004C1C RID: 19484
 		internal static int __PropertyOffset_SoftObject;
 
-		// Token: 0x040141BE RID: 82366
+		// Token: 0x04004C1D RID: 19485
 		internal static int __PropertyOffset_LazyObject;
 
-		// Token: 0x040141BF RID: 82367
+		// Token: 0x04004C1E RID: 19486
 		internal static int __PropertyOffset_ObjectPath;
 
-		// Token: 0x040141C0 RID: 82368
+		// Token: 0x04004C1F RID: 19487
 		[Nullable(2)]
 		private FSoftObjectPath _ObjectPath;
 
-		// Token: 0x040141C1 RID: 82369
+		// Token: 0x04004C20 RID: 19488
 		internal static int __PropertyOffset_ObjectArray;
 
-		// Token: 0x040141C2 RID: 82370
+		// Token: 0x04004C21 RID: 19489
 		[Nullable(new byte[]
 		{
 			2,
@@ -956,10 +873,10 @@ namespace UnrealEngine
 		})]
 		private TArray<UObject> _ObjectArray;
 
-		// Token: 0x040141C3 RID: 82371
+		// Token: 0x04004C22 RID: 19490
 		internal static int __PropertyOffset_SimpleObjectArray;
 
-		// Token: 0x040141C4 RID: 82372
+		// Token: 0x04004C23 RID: 19491
 		[Nullable(new byte[]
 		{
 			2,
@@ -967,10 +884,10 @@ namespace UnrealEngine
 		})]
 		private TArray<USharpherealTestSimpleClass> _SimpleObjectArray;
 
-		// Token: 0x040141C5 RID: 82373
+		// Token: 0x04004C24 RID: 19492
 		internal static int __PropertyOffset_WeakObjectArray;
 
-		// Token: 0x040141C6 RID: 82374
+		// Token: 0x04004C25 RID: 19493
 		[Nullable(new byte[]
 		{
 			2,
@@ -979,10 +896,10 @@ namespace UnrealEngine
 		})]
 		private TArray<TWeakObjectPtr<USharpherealTestSimpleClass>> _WeakObjectArray;
 
-		// Token: 0x040141C7 RID: 82375
+		// Token: 0x04004C26 RID: 19494
 		internal static int __PropertyOffset_SoftObjectArray;
 
-		// Token: 0x040141C8 RID: 82376
+		// Token: 0x04004C27 RID: 19495
 		[Nullable(new byte[]
 		{
 			2,
@@ -991,10 +908,10 @@ namespace UnrealEngine
 		})]
 		private TArray<TSoftObjectPtr<USharpherealTestSimpleClass>> _SoftObjectArray;
 
-		// Token: 0x040141C9 RID: 82377
+		// Token: 0x04004C28 RID: 19496
 		internal static int __PropertyOffset_LazyObjectArray;
 
-		// Token: 0x040141CA RID: 82378
+		// Token: 0x04004C29 RID: 19497
 		[Nullable(new byte[]
 		{
 			2,
@@ -1003,10 +920,10 @@ namespace UnrealEngine
 		})]
 		private TArray<TLazyObjectPtr<USharpherealTestSimpleClass>> _LazyObjectArray;
 
-		// Token: 0x040141CB RID: 82379
+		// Token: 0x04004C2A RID: 19498
 		internal static int __PropertyOffset_ObjectPathArray;
 
-		// Token: 0x040141CC RID: 82380
+		// Token: 0x04004C2B RID: 19499
 		[Nullable(new byte[]
 		{
 			2,
@@ -1014,10 +931,10 @@ namespace UnrealEngine
 		})]
 		private TArray<FSoftObjectPath> _ObjectPathArray;
 
-		// Token: 0x040141CD RID: 82381
+		// Token: 0x04004C2C RID: 19500
 		internal static int __PropertyOffset_ObjectFixedArray;
 
-		// Token: 0x040141CE RID: 82382
+		// Token: 0x04004C2D RID: 19501
 		[Nullable(new byte[]
 		{
 			2,
@@ -1025,10 +942,10 @@ namespace UnrealEngine
 		})]
 		private TFixedArray<UObject> _ObjectFixedArray;
 
-		// Token: 0x040141CF RID: 82383
+		// Token: 0x04004C2E RID: 19502
 		internal static int __PropertyOffset_SimpleObjectFixedArray;
 
-		// Token: 0x040141D0 RID: 82384
+		// Token: 0x04004C2F RID: 19503
 		[Nullable(new byte[]
 		{
 			2,
@@ -1036,10 +953,10 @@ namespace UnrealEngine
 		})]
 		private TFixedArray<USharpherealTestSimpleClass> _SimpleObjectFixedArray;
 
-		// Token: 0x040141D1 RID: 82385
+		// Token: 0x04004C30 RID: 19504
 		internal static int __PropertyOffset_WeakObjectFixedArray;
 
-		// Token: 0x040141D2 RID: 82386
+		// Token: 0x04004C31 RID: 19505
 		[Nullable(new byte[]
 		{
 			2,
@@ -1048,10 +965,10 @@ namespace UnrealEngine
 		})]
 		private TFixedArray<TWeakObjectPtr<USharpherealTestSimpleClass>> _WeakObjectFixedArray;
 
-		// Token: 0x040141D3 RID: 82387
+		// Token: 0x04004C32 RID: 19506
 		internal static int __PropertyOffset_SoftObjectFixedArray;
 
-		// Token: 0x040141D4 RID: 82388
+		// Token: 0x04004C33 RID: 19507
 		[Nullable(new byte[]
 		{
 			2,
@@ -1060,10 +977,10 @@ namespace UnrealEngine
 		})]
 		private TFixedArray<TSoftObjectPtr<USharpherealTestSimpleClass>> _SoftObjectFixedArray;
 
-		// Token: 0x040141D5 RID: 82389
+		// Token: 0x04004C34 RID: 19508
 		internal static int __PropertyOffset_LazyObjectFixedArray;
 
-		// Token: 0x040141D6 RID: 82390
+		// Token: 0x04004C35 RID: 19509
 		[Nullable(new byte[]
 		{
 			2,
@@ -1072,10 +989,10 @@ namespace UnrealEngine
 		})]
 		private TFixedArray<TLazyObjectPtr<USharpherealTestSimpleClass>> _LazyObjectFixedArray;
 
-		// Token: 0x040141D7 RID: 82391
+		// Token: 0x04004C36 RID: 19510
 		internal static int __PropertyOffset_ObjectPathFixedArray;
 
-		// Token: 0x040141D8 RID: 82392
+		// Token: 0x04004C37 RID: 19511
 		[Nullable(new byte[]
 		{
 			2,
@@ -1083,10 +1000,10 @@ namespace UnrealEngine
 		})]
 		private TFixedArray<FSoftObjectPath> _ObjectPathFixedArray;
 
-		// Token: 0x040141D9 RID: 82393
+		// Token: 0x04004C38 RID: 19512
 		internal static int __PropertyOffset_ObjectSet;
 
-		// Token: 0x040141DA RID: 82394
+		// Token: 0x04004C39 RID: 19513
 		[Nullable(new byte[]
 		{
 			2,
@@ -1094,10 +1011,10 @@ namespace UnrealEngine
 		})]
 		private TSet<UObject> _ObjectSet;
 
-		// Token: 0x040141DB RID: 82395
+		// Token: 0x04004C3A RID: 19514
 		internal static int __PropertyOffset_SimpleObjectSet;
 
-		// Token: 0x040141DC RID: 82396
+		// Token: 0x04004C3B RID: 19515
 		[Nullable(new byte[]
 		{
 			2,
@@ -1105,10 +1022,10 @@ namespace UnrealEngine
 		})]
 		private TSet<USharpherealTestSimpleClass> _SimpleObjectSet;
 
-		// Token: 0x040141DD RID: 82397
+		// Token: 0x04004C3C RID: 19516
 		internal static int __PropertyOffset_WeakObjectSet;
 
-		// Token: 0x040141DE RID: 82398
+		// Token: 0x04004C3D RID: 19517
 		[Nullable(new byte[]
 		{
 			2,
@@ -1117,10 +1034,10 @@ namespace UnrealEngine
 		})]
 		private TSet<TWeakObjectPtr<USharpherealTestSimpleClass>> _WeakObjectSet;
 
-		// Token: 0x040141DF RID: 82399
+		// Token: 0x04004C3E RID: 19518
 		internal static int __PropertyOffset_SoftObjectSet;
 
-		// Token: 0x040141E0 RID: 82400
+		// Token: 0x04004C3F RID: 19519
 		[Nullable(new byte[]
 		{
 			2,
@@ -1129,10 +1046,10 @@ namespace UnrealEngine
 		})]
 		private TSet<TSoftObjectPtr<USharpherealTestSimpleClass>> _SoftObjectSet;
 
-		// Token: 0x040141E1 RID: 82401
+		// Token: 0x04004C40 RID: 19520
 		internal static int __PropertyOffset_LazyObjectSet;
 
-		// Token: 0x040141E2 RID: 82402
+		// Token: 0x04004C41 RID: 19521
 		[Nullable(new byte[]
 		{
 			2,
@@ -1141,10 +1058,10 @@ namespace UnrealEngine
 		})]
 		private TSet<TLazyObjectPtr<USharpherealTestSimpleClass>> _LazyObjectSet;
 
-		// Token: 0x040141E3 RID: 82403
+		// Token: 0x04004C42 RID: 19522
 		internal static int __PropertyOffset_ObjectPathSet;
 
-		// Token: 0x040141E4 RID: 82404
+		// Token: 0x04004C43 RID: 19523
 		[Nullable(new byte[]
 		{
 			2,
@@ -1152,10 +1069,10 @@ namespace UnrealEngine
 		})]
 		private TSet<FSoftObjectPath> _ObjectPathSet;
 
-		// Token: 0x040141E5 RID: 82405
+		// Token: 0x04004C44 RID: 19524
 		internal static int __PropertyOffset_ObjectMap;
 
-		// Token: 0x040141E6 RID: 82406
+		// Token: 0x04004C45 RID: 19525
 		[Nullable(new byte[]
 		{
 			2,
@@ -1163,10 +1080,10 @@ namespace UnrealEngine
 		})]
 		private TMap<UObject, int> _ObjectMap;
 
-		// Token: 0x040141E7 RID: 82407
+		// Token: 0x04004C46 RID: 19526
 		internal static int __PropertyOffset_SimpleObjectMap;
 
-		// Token: 0x040141E8 RID: 82408
+		// Token: 0x04004C47 RID: 19527
 		[Nullable(new byte[]
 		{
 			2,
@@ -1174,10 +1091,10 @@ namespace UnrealEngine
 		})]
 		private TMap<USharpherealTestSimpleClass, int> _SimpleObjectMap;
 
-		// Token: 0x040141E9 RID: 82409
+		// Token: 0x04004C48 RID: 19528
 		internal static int __PropertyOffset_WeakObjectMap;
 
-		// Token: 0x040141EA RID: 82410
+		// Token: 0x04004C49 RID: 19529
 		[Nullable(new byte[]
 		{
 			2,
@@ -1186,10 +1103,10 @@ namespace UnrealEngine
 		})]
 		private TMap<TWeakObjectPtr<USharpherealTestSimpleClass>, int> _WeakObjectMap;
 
-		// Token: 0x040141EB RID: 82411
+		// Token: 0x04004C4A RID: 19530
 		internal static int __PropertyOffset_SoftObjectMap;
 
-		// Token: 0x040141EC RID: 82412
+		// Token: 0x04004C4B RID: 19531
 		[Nullable(new byte[]
 		{
 			2,
@@ -1198,10 +1115,10 @@ namespace UnrealEngine
 		})]
 		private TMap<TSoftObjectPtr<USharpherealTestSimpleClass>, int> _SoftObjectMap;
 
-		// Token: 0x040141ED RID: 82413
+		// Token: 0x04004C4C RID: 19532
 		internal static int __PropertyOffset_LazyObjectMap;
 
-		// Token: 0x040141EE RID: 82414
+		// Token: 0x04004C4D RID: 19533
 		[Nullable(new byte[]
 		{
 			2,
@@ -1210,10 +1127,10 @@ namespace UnrealEngine
 		})]
 		private TMap<TLazyObjectPtr<USharpherealTestSimpleClass>, int> _LazyObjectMap;
 
-		// Token: 0x040141EF RID: 82415
+		// Token: 0x04004C4E RID: 19534
 		internal static int __PropertyOffset_ObjectPathMap;
 
-		// Token: 0x040141F0 RID: 82416
+		// Token: 0x04004C4F RID: 19535
 		[Nullable(new byte[]
 		{
 			2,

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002355 RID: 9045
+	// Token: 0x020025CA RID: 9674
 	public static class EHighlightExploreSkillIconTypeExtensions
 	{
-		// Token: 0x0600C57D RID: 50557 RVA: 0x001CD2E4 File Offset: 0x001CB4E4
+		// Token: 0x0600D167 RID: 53607 RVA: 0x001E55C4 File Offset: 0x001E37C4
 		public static string ToEnumString(this EHighlightExploreSkillIconType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C57E RID: 50558 RVA: 0x001CD32C File Offset: 0x001CB52C
+		// Token: 0x0600D168 RID: 53608 RVA: 0x001E560C File Offset: 0x001E380C
 		public static EHighlightExploreSkillIconType FromString(string name)
 		{
 			EHighlightExploreSkillIconType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C57F RID: 50559 RVA: 0x001CD358 File Offset: 0x001CB558
+		// Token: 0x0600D169 RID: 53609 RVA: 0x001E5638 File Offset: 0x001E3838
 		public static bool TryFromString(string name, out EHighlightExploreSkillIconType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C580 RID: 50560 RVA: 0x001CD3AE File Offset: 0x001CB5AE
+		// Token: 0x0600D16A RID: 53610 RVA: 0x001E568E File Offset: 0x001E388E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C581 RID: 50561 RVA: 0x001CD3CE File Offset: 0x001CB5CE
+		// Token: 0x0600D16B RID: 53611 RVA: 0x001E56AE File Offset: 0x001E38AE
 		public static EHighlightExploreSkillIconType[] GetValues()
 		{
 			return new EHighlightExploreSkillIconType[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C582 RID: 50562 RVA: 0x001CD3DE File Offset: 0x001CB5DE
+		// Token: 0x0600D16C RID: 53612 RVA: 0x001E56BE File Offset: 0x001E38BE
 		public static string[] GetNames()
 		{
 			return new string[]

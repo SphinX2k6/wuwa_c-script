@@ -4,23 +4,23 @@ using Aki.TDConfigMgr.Quest;
 
 namespace CSharpScript.Game.Module.SlidingBlocks
 {
-	// Token: 0x02004B7A RID: 19322
+	// Token: 0x02003B24 RID: 15140
 	[NullableContext(1)]
 	public interface ITetrominoConfig
 	{
-		// Token: 0x17007C32 RID: 31794
-		// (get) Token: 0x06032139 RID: 205113
-		// (set) Token: 0x0603213A RID: 205114
+		// Token: 0x17004FDC RID: 20444
+		// (get) Token: 0x06026ECA RID: 159434
+		// (set) Token: 0x06026ECB RID: 159435
 		string ShapeName { get; set; }
 
-		// Token: 0x17007C33 RID: 31795
-		// (get) Token: 0x0603213B RID: 205115
-		// (set) Token: 0x0603213C RID: 205116
+		// Token: 0x17004FDD RID: 20445
+		// (get) Token: 0x06026ECC RID: 159436
+		// (set) Token: 0x06026ECD RID: 159437
 		SlidingBlocksDefine.ETetrominoType Type { get; set; }
 
-		// Token: 0x17007C34 RID: 31796
-		// (get) Token: 0x0603213D RID: 205117
-		// (set) Token: 0x0603213E RID: 205118
+		// Token: 0x17004FDE RID: 20446
+		// (get) Token: 0x06026ECE RID: 159438
+		// (set) Token: 0x06026ECF RID: 159439
 		ITetrisBoard Board { get; set; }
 	}
 }

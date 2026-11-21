@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013CD RID: 5069
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001524 RID: 5412
 	public class IAssignLoadingBackground : IOperation
 	{
-		// Token: 0x060073BC RID: 29628 RVA: 0x0011594D File Offset: 0x00113B4D
+		// Token: 0x06007A7D RID: 31357 RVA: 0x00124331 File Offset: 0x00122531
 		public static IAssignLoadingBackground Create(IAssignLoadingBackground? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170025F5 RID: 9717
-		// (get) Token: 0x060073BD RID: 29629 RVA: 0x0011596C File Offset: 0x00113B6C
+		// Token: 0x170027D7 RID: 10199
+		// (get) Token: 0x06007A7E RID: 31358 RVA: 0x00124350 File Offset: 0x00122550
 		public override EOperation Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170025F6 RID: 9718
-		// (get) Token: 0x060073BE RID: 29630 RVA: 0x00115979 File Offset: 0x00113B79
+		// Token: 0x170027D8 RID: 10200
+		// (get) Token: 0x06007A7F RID: 31359 RVA: 0x0012435D File Offset: 0x0012255D
 		public virtual string ImagePath
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004301 RID: 17153
+		// Token: 0x04004692 RID: 18066
 		private IAssignLoadingBackground Instance;
 	}
 }

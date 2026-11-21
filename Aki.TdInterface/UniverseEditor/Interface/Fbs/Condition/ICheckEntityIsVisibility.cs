@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004A09 RID: 18953
+	// Token: 0x02004EC9 RID: 20169
 	public struct ICheckEntityIsVisibility : IFlatbufferObject
 	{
-		// Token: 0x1700892B RID: 35115
-		// (get) Token: 0x0601DA42 RID: 121410 RVA: 0x0042BE6A File Offset: 0x0042A06A
+		// Token: 0x17008FFB RID: 36859
+		// (get) Token: 0x0601F4B5 RID: 128181 RVA: 0x0045CAD6 File Offset: 0x0045ACD6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DA43 RID: 121411 RVA: 0x0042BE77 File Offset: 0x0042A077
+		// Token: 0x0601F4B6 RID: 128182 RVA: 0x0045CAE3 File Offset: 0x0045ACE3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601DA44 RID: 121412 RVA: 0x0042BE80 File Offset: 0x0042A080
+		// Token: 0x0601F4B7 RID: 128183 RVA: 0x0045CAEC File Offset: 0x0045ACEC
 		public static ICheckEntityIsVisibility GetRootAsICheckEntityIsVisibility(ByteBuffer _bb)
 		{
 			return ICheckEntityIsVisibility.GetRootAsICheckEntityIsVisibility(_bb, default(ICheckEntityIsVisibility));
 		}
 
-		// Token: 0x0601DA45 RID: 121413 RVA: 0x0042BE9C File Offset: 0x0042A09C
+		// Token: 0x0601F4B8 RID: 128184 RVA: 0x0045CB08 File Offset: 0x0045AD08
 		public static ICheckEntityIsVisibility GetRootAsICheckEntityIsVisibility(ByteBuffer _bb, ICheckEntityIsVisibility obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601DA46 RID: 121414 RVA: 0x0042BEB9 File Offset: 0x0042A0B9
+		// Token: 0x0601F4B9 RID: 128185 RVA: 0x0045CB25 File Offset: 0x0045AD25
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601DA47 RID: 121415 RVA: 0x0042BEC8 File Offset: 0x0042A0C8
+		// Token: 0x0601F4BA RID: 128186 RVA: 0x0045CB34 File Offset: 0x0045AD34
 		public ICheckEntityIsVisibility __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700892C RID: 35116
-		// (get) Token: 0x0601DA48 RID: 121416 RVA: 0x0042BED8 File Offset: 0x0042A0D8
+		// Token: 0x17008FFC RID: 36860
+		// (get) Token: 0x0601F4BB RID: 128187 RVA: 0x0045CB44 File Offset: 0x0045AD44
 		public ECondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x1700892D RID: 35117
-		// (get) Token: 0x0601DA49 RID: 121417 RVA: 0x0042BF14 File Offset: 0x0042A114
+		// Token: 0x17008FFD RID: 36861
+		// (get) Token: 0x0601F4BC RID: 128188 RVA: 0x0045CB80 File Offset: 0x0045AD80
 		public int EntityId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x1700892E RID: 35118
-		// (get) Token: 0x0601DA4A RID: 121418 RVA: 0x0042BF50 File Offset: 0x0042A150
+		// Token: 0x17008FFE RID: 36862
+		// (get) Token: 0x0601F4BD RID: 128189 RVA: 0x0045CBBC File Offset: 0x0045ADBC
 		public bool IsVisible
 		{
 			get
@@ -88,7 +88,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DA4B RID: 121419 RVA: 0x0042BF8F File Offset: 0x0042A18F
+		// Token: 0x0601F4BE RID: 128190 RVA: 0x0045CBFB File Offset: 0x0045ADFB
 		public static Offset<ICheckEntityIsVisibility> CreateICheckEntityIsVisibility(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, int EntityId = 0, bool IsVisible = false)
 		{
 			builder.StartTable(3);
@@ -98,37 +98,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckEntityIsVisibility.EndICheckEntityIsVisibility(builder);
 		}
 
-		// Token: 0x0601DA4C RID: 121420 RVA: 0x0042BFB3 File Offset: 0x0042A1B3
+		// Token: 0x0601F4BF RID: 128191 RVA: 0x0045CC1F File Offset: 0x0045AE1F
 		public static void StartICheckEntityIsVisibility(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601DA4D RID: 121421 RVA: 0x0042BFBC File Offset: 0x0042A1BC
+		// Token: 0x0601F4C0 RID: 128192 RVA: 0x0045CC28 File Offset: 0x0045AE28
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601DA4E RID: 121422 RVA: 0x0042BFC7 File Offset: 0x0042A1C7
+		// Token: 0x0601F4C1 RID: 128193 RVA: 0x0045CC33 File Offset: 0x0045AE33
 		public static void AddEntityId(FlatBufferBuilder builder, int entityId)
 		{
 			builder.AddInt(1, entityId, 0);
 		}
 
-		// Token: 0x0601DA4F RID: 121423 RVA: 0x0042BFD2 File Offset: 0x0042A1D2
+		// Token: 0x0601F4C2 RID: 128194 RVA: 0x0045CC3E File Offset: 0x0045AE3E
 		public static void AddIsVisible(FlatBufferBuilder builder, bool isVisible)
 		{
 			builder.AddBool(2, isVisible, false);
 		}
 
-		// Token: 0x0601DA50 RID: 121424 RVA: 0x0042BFDD File Offset: 0x0042A1DD
+		// Token: 0x0601F4C3 RID: 128195 RVA: 0x0045CC49 File Offset: 0x0045AE49
 		public static Offset<ICheckEntityIsVisibility> EndICheckEntityIsVisibility(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckEntityIsVisibility>(builder.EndTable());
 		}
 
-		// Token: 0x0601DA51 RID: 121425 RVA: 0x0042BFEC File Offset: 0x0042A1EC
+		// Token: 0x0601F4C4 RID: 128196 RVA: 0x0045CC58 File Offset: 0x0045AE58
 		public ICheckEntityIsVisibilityT UnPack()
 		{
 			ICheckEntityIsVisibilityT checkEntityIsVisibilityT = new ICheckEntityIsVisibilityT();
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkEntityIsVisibilityT;
 		}
 
-		// Token: 0x0601DA52 RID: 121426 RVA: 0x0042C007 File Offset: 0x0042A207
+		// Token: 0x0601F4C5 RID: 128197 RVA: 0x0045CC73 File Offset: 0x0045AE73
 		public void UnPackTo(ICheckEntityIsVisibilityT _o)
 		{
 			_o.Type = this.Type;
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.IsVisible = this.IsVisible;
 		}
 
-		// Token: 0x0601DA53 RID: 121427 RVA: 0x0042C030 File Offset: 0x0042A230
+		// Token: 0x0601F4C6 RID: 128198 RVA: 0x0045CC9C File Offset: 0x0045AE9C
 		public static Offset<ICheckEntityIsVisibility> Pack(FlatBufferBuilder builder, ICheckEntityIsVisibilityT _o)
 		{
 			if (_o == null)
@@ -154,7 +154,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckEntityIsVisibility.CreateICheckEntityIsVisibility(builder, _o.Type, _o.EntityId, _o.IsVisible);
 		}
 
-		// Token: 0x0400D24F RID: 53839
+		// Token: 0x0400DD23 RID: 56611
 		private Table __p;
 	}
 }

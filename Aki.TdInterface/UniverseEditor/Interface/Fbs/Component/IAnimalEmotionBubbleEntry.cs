@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004EA7 RID: 20135
+	// Token: 0x020053D0 RID: 21456
 	public struct IAnimalEmotionBubbleEntry : IFlatbufferObject
 	{
-		// Token: 0x17009075 RID: 36981
-		// (get) Token: 0x0601FB3C RID: 129852 RVA: 0x0046A1D4 File Offset: 0x004683D4
+		// Token: 0x170097D6 RID: 38870
+		// (get) Token: 0x0602183D RID: 137277 RVA: 0x0049F64D File Offset: 0x0049D84D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601FB3D RID: 129853 RVA: 0x0046A1E1 File Offset: 0x004683E1
+		// Token: 0x0602183E RID: 137278 RVA: 0x0049F65A File Offset: 0x0049D85A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601FB3E RID: 129854 RVA: 0x0046A1E8 File Offset: 0x004683E8
+		// Token: 0x0602183F RID: 137279 RVA: 0x0049F664 File Offset: 0x0049D864
 		public static IAnimalEmotionBubbleEntry GetRootAsIAnimalEmotionBubbleEntry(ByteBuffer _bb)
 		{
 			return IAnimalEmotionBubbleEntry.GetRootAsIAnimalEmotionBubbleEntry(_bb, default(IAnimalEmotionBubbleEntry));
 		}
 
-		// Token: 0x0601FB3F RID: 129855 RVA: 0x0046A204 File Offset: 0x00468404
+		// Token: 0x06021840 RID: 137280 RVA: 0x0049F680 File Offset: 0x0049D880
 		public static IAnimalEmotionBubbleEntry GetRootAsIAnimalEmotionBubbleEntry(ByteBuffer _bb, IAnimalEmotionBubbleEntry obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601FB40 RID: 129856 RVA: 0x0046A221 File Offset: 0x00468421
+		// Token: 0x06021841 RID: 137281 RVA: 0x0049F69D File Offset: 0x0049D89D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601FB41 RID: 129857 RVA: 0x0046A230 File Offset: 0x00468430
+		// Token: 0x06021842 RID: 137282 RVA: 0x0049F6AC File Offset: 0x0049D8AC
 		public IAnimalEmotionBubbleEntry __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009076 RID: 36982
-		// (get) Token: 0x0601FB42 RID: 129858 RVA: 0x0046A240 File Offset: 0x00468440
+		// Token: 0x170097D7 RID: 38871
+		// (get) Token: 0x06021843 RID: 137283 RVA: 0x0049F6BC File Offset: 0x0049D8BC
 		public string MontagePath
 		{
 			get
@@ -62,20 +62,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601FB43 RID: 129859 RVA: 0x0046A277 File Offset: 0x00468477
+		// Token: 0x06021844 RID: 137284 RVA: 0x0049F6F3 File Offset: 0x0049D8F3
 		public Span<byte> GetMontagePathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x0601FB44 RID: 129860 RVA: 0x0046A286 File Offset: 0x00468486
+		// Token: 0x06021845 RID: 137285 RVA: 0x0049F702 File Offset: 0x0049D902
 		public byte[] GetMontagePathArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x17009077 RID: 36983
-		// (get) Token: 0x0601FB45 RID: 129861 RVA: 0x0046A294 File Offset: 0x00468494
+		// Token: 0x170097D8 RID: 38872
+		// (get) Token: 0x06021846 RID: 137286 RVA: 0x0049F710 File Offset: 0x0049D910
 		public string EmotionName
 		{
 			get
@@ -89,19 +89,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601FB46 RID: 129862 RVA: 0x0046A2CB File Offset: 0x004684CB
+		// Token: 0x06021847 RID: 137287 RVA: 0x0049F747 File Offset: 0x0049D947
 		public Span<byte> GetEmotionNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0601FB47 RID: 129863 RVA: 0x0046A2DA File Offset: 0x004684DA
+		// Token: 0x06021848 RID: 137288 RVA: 0x0049F756 File Offset: 0x0049D956
 		public byte[] GetEmotionNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x0601FB48 RID: 129864 RVA: 0x0046A2E8 File Offset: 0x004684E8
+		// Token: 0x06021849 RID: 137289 RVA: 0x0049F764 File Offset: 0x0049D964
 		public static Offset<IAnimalEmotionBubbleEntry> CreateIAnimalEmotionBubbleEntry(FlatBufferBuilder builder, StringOffset MontagePathOffset = default(StringOffset), StringOffset EmotionNameOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -110,31 +110,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IAnimalEmotionBubbleEntry.EndIAnimalEmotionBubbleEntry(builder);
 		}
 
-		// Token: 0x0601FB49 RID: 129865 RVA: 0x0046A305 File Offset: 0x00468505
+		// Token: 0x0602184A RID: 137290 RVA: 0x0049F781 File Offset: 0x0049D981
 		public static void StartIAnimalEmotionBubbleEntry(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601FB4A RID: 129866 RVA: 0x0046A30E File Offset: 0x0046850E
+		// Token: 0x0602184B RID: 137291 RVA: 0x0049F78A File Offset: 0x0049D98A
 		public static void AddMontagePath(FlatBufferBuilder builder, StringOffset montagePathOffset)
 		{
 			builder.AddOffset(0, montagePathOffset.Value, 0);
 		}
 
-		// Token: 0x0601FB4B RID: 129867 RVA: 0x0046A31E File Offset: 0x0046851E
+		// Token: 0x0602184C RID: 137292 RVA: 0x0049F79A File Offset: 0x0049D99A
 		public static void AddEmotionName(FlatBufferBuilder builder, StringOffset emotionNameOffset)
 		{
 			builder.AddOffset(1, emotionNameOffset.Value, 0);
 		}
 
-		// Token: 0x0601FB4C RID: 129868 RVA: 0x0046A32E File Offset: 0x0046852E
+		// Token: 0x0602184D RID: 137293 RVA: 0x0049F7AA File Offset: 0x0049D9AA
 		public static Offset<IAnimalEmotionBubbleEntry> EndIAnimalEmotionBubbleEntry(FlatBufferBuilder builder)
 		{
 			return new Offset<IAnimalEmotionBubbleEntry>(builder.EndTable());
 		}
 
-		// Token: 0x0601FB4D RID: 129869 RVA: 0x0046A33C File Offset: 0x0046853C
+		// Token: 0x0602184E RID: 137294 RVA: 0x0049F7B8 File Offset: 0x0049D9B8
 		public IAnimalEmotionBubbleEntryT UnPack()
 		{
 			IAnimalEmotionBubbleEntryT animalEmotionBubbleEntryT = new IAnimalEmotionBubbleEntryT();
@@ -142,14 +142,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return animalEmotionBubbleEntryT;
 		}
 
-		// Token: 0x0601FB4E RID: 129870 RVA: 0x0046A357 File Offset: 0x00468557
+		// Token: 0x0602184F RID: 137295 RVA: 0x0049F7D3 File Offset: 0x0049D9D3
 		public void UnPackTo(IAnimalEmotionBubbleEntryT _o)
 		{
 			_o.MontagePath = this.MontagePath;
 			_o.EmotionName = this.EmotionName;
 		}
 
-		// Token: 0x0601FB4F RID: 129871 RVA: 0x0046A374 File Offset: 0x00468574
+		// Token: 0x06021850 RID: 137296 RVA: 0x0049F7F0 File Offset: 0x0049D9F0
 		public static Offset<IAnimalEmotionBubbleEntry> Pack(FlatBufferBuilder builder, IAnimalEmotionBubbleEntryT _o)
 		{
 			if (_o == null)
@@ -161,7 +161,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IAnimalEmotionBubbleEntry.CreateIAnimalEmotionBubbleEntry(builder, montagePathOffset, emotionNameOffset);
 		}
 
-		// Token: 0x0400DC8A RID: 56458
+		// Token: 0x0400E826 RID: 59430
 		private Table __p;
 	}
 }

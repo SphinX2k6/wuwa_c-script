@@ -4,19 +4,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component
 {
-	// Token: 0x020070D7 RID: 28887
+	// Token: 0x0200633B RID: 25403
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class StackableChessComponent : EntityComponent, IStackableChessAgent, IChessAgent
 	{
-		// Token: 0x060467C5 RID: 288709 RVA: 0x011B389D File Offset: 0x011B1A9D
+		// Token: 0x0603D8CC RID: 252108 RVA: 0x011D293D File Offset: 0x011D0B3D
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.CheckGetComponent<BaseActorComponent>();
 			return true;
 		}
 
-		// Token: 0x060467C6 RID: 288710 RVA: 0x011B38B1 File Offset: 0x011B1AB1
+		// Token: 0x0603D8CD RID: 252109 RVA: 0x011D2951 File Offset: 0x011D0B51
 		[NullableContext(2)]
 		public virtual Vector GetStackableLocation()
 		{
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return actorComp.ActorLocationProxy;
 		}
 
-		// Token: 0x060467C7 RID: 288711 RVA: 0x011B38C4 File Offset: 0x011B1AC4
+		// Token: 0x0603D8CE RID: 252110 RVA: 0x011D2964 File Offset: 0x011D0B64
 		[NullableContext(2)]
 		public virtual Rotator GetStackableRotator(bool isSameDirection)
 		{
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return this.TargetRotator;
 		}
 
-		// Token: 0x060467C8 RID: 288712 RVA: 0x011B3954 File Offset: 0x011B1B54
+		// Token: 0x0603D8CF RID: 252111 RVA: 0x011D29F4 File Offset: 0x011D0BF4
 		public void AttachToTarget(IStackableChessAgent target)
 		{
 			BaseActorComponent actorComp = ((StackableChessComponent)target).ActorComp;
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			owner.K2_AttachToComponent(actorComp.SkeletalMesh, attachSocketName.Value, EAttachmentRule.KeepWorld, EAttachmentRule.KeepWorld, EAttachmentRule.KeepWorld, false, true);
 		}
 
-		// Token: 0x060467C9 RID: 288713 RVA: 0x011B39CE File Offset: 0x011B1BCE
+		// Token: 0x0603D8D0 RID: 252112 RVA: 0x011D2A6E File Offset: 0x011D0C6E
 		public void DetachFromTarget(IStackableChessAgent target)
 		{
 			BaseActorComponent actorComp = this.ActorComp;
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			owner.K2_DetachFromActor(EDetachmentRule.KeepWorld, EDetachmentRule.KeepWorld, EDetachmentRule.KeepWorld);
 		}
 
-		// Token: 0x060467CA RID: 288714 RVA: 0x011B3A00 File Offset: 0x011B1C00
+		// Token: 0x0603D8D1 RID: 252113 RVA: 0x011D2AA0 File Offset: 0x011D0CA0
 		public virtual void Move(Vector location, Rotator rotator, bool performIsForward, Action finishCallback)
 		{
 			BaseActorComponent actorComp = this.ActorComp;
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			finishCallback();
 		}
 
-		// Token: 0x060467CB RID: 288715 RVA: 0x011B3A44 File Offset: 0x011B1C44
+		// Token: 0x0603D8D2 RID: 252114 RVA: 0x011D2AE4 File Offset: 0x011D0CE4
 		public virtual void Teleport(Vector location, Rotator rotator)
 		{
 			BaseActorComponent actorComp = this.ActorComp;
@@ -115,29 +115,29 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			actorComp.SetActorLocationAndRotation(location.ToUeVector(false), rotator.ToUeRotator(), "ChessTeleport", false, null);
 		}
 
-		// Token: 0x060467CC RID: 288716 RVA: 0x011B3A7E File Offset: 0x011B1C7E
+		// Token: 0x0603D8D3 RID: 252115 RVA: 0x011D2B1E File Offset: 0x011D0D1E
 		public virtual void OnPreviousMoveStateChange(IStackableChessAgent agent, bool isMoving, bool previousIsForward, bool isSameDirection)
 		{
 		}
 
-		// Token: 0x060467CD RID: 288717 RVA: 0x011B3A80 File Offset: 0x011B1C80
+		// Token: 0x0603D8D4 RID: 252116 RVA: 0x011D2B20 File Offset: 0x011D0D20
 		public virtual bool IsPerformRecursion(int type)
 		{
 			return false;
 		}
 
-		// Token: 0x060467CE RID: 288718 RVA: 0x011B3A83 File Offset: 0x011B1C83
+		// Token: 0x0603D8D5 RID: 252117 RVA: 0x011D2B23 File Offset: 0x011D0D23
 		public virtual void Perform(int type, [Nullable(2)] Vector pointLocation, Action finishCallback)
 		{
 			finishCallback();
 		}
 
-		// Token: 0x060467CF RID: 288719 RVA: 0x011B3A8B File Offset: 0x011B1C8B
+		// Token: 0x0603D8D6 RID: 252118 RVA: 0x011D2B2B File Offset: 0x011D0D2B
 		public virtual void OnPreviousPerformStateChange(IStackableChessAgent agent, int type, bool isPerforming)
 		{
 		}
 
-		// Token: 0x060467D0 RID: 288720 RVA: 0x011B3A8D File Offset: 0x011B1C8D
+		// Token: 0x0603D8D7 RID: 252119 RVA: 0x011D2B2D File Offset: 0x011D0D2D
 		[NullableContext(2)]
 		public Vector GetLocation()
 		{
@@ -149,13 +149,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 			return actorComp.ActorLocationProxy;
 		}
 
-		// Token: 0x060467D1 RID: 288721 RVA: 0x011B3AA0 File Offset: 0x011B1CA0
+		// Token: 0x0603D8D8 RID: 252120 RVA: 0x011D2B40 File Offset: 0x011D0D40
 		protected virtual FName? GetAttachSocketName()
 		{
 			return null;
 		}
 
-		// Token: 0x060467D2 RID: 288722 RVA: 0x011B3AB8 File Offset: 0x011B1CB8
+		// Token: 0x0603D8D9 RID: 252121 RVA: 0x011D2B58 File Offset: 0x011D0D58
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -163,51 +163,52 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component
 				return false;
 			}
 			StackableChessComponent stackableChessComponent = (StackableChessComponent)componentTemplate;
-			if (base.CanResetComponentProperty("ActorComp"))
+			if (stackableChessComponent.ActorComp == null)
 			{
-				if (stackableChessComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("TargetVector"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				if (stackableChessComponent.TargetVector == null)
-				{
-					this.TargetVector = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TargetVector), "TargetVector"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("TargetRotator"))
+			if (stackableChessComponent.TargetVector == null)
 			{
-				if (stackableChessComponent.TargetRotator == null)
-				{
-					this.TargetRotator = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Rotator>(this.TargetRotator), "TargetRotator"))
-				{
-					return false;
-				}
+				this.TargetVector = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TargetVector), "TargetVector"))
+			{
+				return false;
+			}
+			if (stackableChessComponent.TargetRotator == null)
+			{
+				this.TargetRotator = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TargetRotator), "TargetRotator"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x04024F26 RID: 151334
+		// Token: 0x170074D5 RID: 29909
+		// (get) Token: 0x0603D8DA RID: 252122 RVA: 0x011D2BF9 File Offset: 0x011D0DF9
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020A65 RID: 133733
 		[Nullable(2)]
 		protected BaseActorComponent ActorComp;
 
-		// Token: 0x04024F27 RID: 151335
+		// Token: 0x04020A66 RID: 133734
 		[Nullable(2)]
 		private Vector TargetVector;
 
-		// Token: 0x04024F28 RID: 151336
+		// Token: 0x04020A67 RID: 133735
 		[Nullable(2)]
 		private Rotator TargetRotator;
 	}

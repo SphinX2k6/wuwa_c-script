@@ -3,17 +3,17 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardDetail
 {
-	// Token: 0x02005205 RID: 20997
+	// Token: 0x020041D5 RID: 16853
 	public class CardDetailAttributeItemData
 	{
-		// Token: 0x0401C7AA RID: 116650
+		// Token: 0x040171DF RID: 94687
 		[Nullable(1)]
 		public string AttributeName = "";
 
-		// Token: 0x0401C7AB RID: 116651
+		// Token: 0x040171E0 RID: 94688
 		public int AttributeValue;
 
-		// Token: 0x0401C7AC RID: 116652
+		// Token: 0x040171E1 RID: 94689
 		public bool IsHighLight;
 	}
 }

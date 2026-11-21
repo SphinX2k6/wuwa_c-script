@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Interaction
 {
-	// Token: 0x02005854 RID: 22612
+	// Token: 0x0200482C RID: 18476
 	public class InteractionGuide : UiPanelBase
 	{
-		// Token: 0x060397AE RID: 235438 RVA: 0x00DA58C8 File Offset: 0x00DA3AC8
+		// Token: 0x0602E6CB RID: 190155 RVA: 0x00CF45F0 File Offset: 0x00CF27F0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -24,18 +24,18 @@ namespace CSharpScript.Game.Module.Interaction
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060397AF RID: 235439 RVA: 0x00DA5931 File Offset: 0x00DA3B31
+		// Token: 0x0602E6CC RID: 190156 RVA: 0x00CF4659 File Offset: 0x00CF2859
 		protected override void OnStart()
 		{
 			this.SetActive(false);
 		}
 
-		// Token: 0x060397B0 RID: 235440 RVA: 0x00DA593A File Offset: 0x00DA3B3A
+		// Token: 0x0602E6CD RID: 190157 RVA: 0x00CF4662 File Offset: 0x00CF2862
 		protected override void OnBeforeDestroy()
 		{
 		}
 
-		// Token: 0x060397B1 RID: 235441 RVA: 0x00DA593C File Offset: 0x00DA3B3C
+		// Token: 0x0602E6CE RID: 190158 RVA: 0x00CF4664 File Offset: 0x00CF2864
 		[NullableContext(1)]
 		public void Refresh(string textId)
 		{
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.SetActive(true);
 		}
 
-		// Token: 0x060397B2 RID: 235442 RVA: 0x00DA5974 File Offset: 0x00DA3B74
+		// Token: 0x0602E6CF RID: 190159 RVA: 0x00CF469C File Offset: 0x00CF289C
 		public void RefreshTextWidth()
 		{
 			UUIText text = base.GetText(1);
@@ -60,16 +60,16 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x0401E0E4 RID: 123108
+		// Token: 0x04018B81 RID: 101249
 		private const int INTERACT_GUIDE_MAX_TEXT_WIDTH = 760;
 
-		// Token: 0x0200BA78 RID: 47736
+		// Token: 0x0200A48F RID: 42127
 		internal class EChildType
 		{
-			// Token: 0x040385DE RID: 230878
+			// Token: 0x04032FD5 RID: 208853
 			public const int GuideItem = 0;
 
-			// Token: 0x040385DF RID: 230879
+			// Token: 0x04032FD6 RID: 208854
 			public const int GuideText = 1;
 		}
 	}

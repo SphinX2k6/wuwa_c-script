@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E02 RID: 3586
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000EFE RID: 3838
 	public class IWuWaGoRoleInfo
 	{
-		// Token: 0x06005136 RID: 20790 RVA: 0x000C86E9 File Offset: 0x000C68E9
+		// Token: 0x0600565D RID: 22109 RVA: 0x000D3FB1 File Offset: 0x000D21B1
 		public static IWuWaGoRoleInfo Create(IWuWaGoRoleInfo? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001AEF RID: 6895
-		// (get) Token: 0x06005137 RID: 20791 RVA: 0x000C8708 File Offset: 0x000C6908
+		// Token: 0x17001C5C RID: 7260
+		// (get) Token: 0x0600565E RID: 22110 RVA: 0x000D3FD0 File Offset: 0x000D21D0
 		public virtual EWuWaGoRoleType RoleType
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AF0 RID: 6896
-		// (get) Token: 0x06005138 RID: 20792 RVA: 0x000C8715 File Offset: 0x000C6915
+		// Token: 0x17001C5D RID: 7261
+		// (get) Token: 0x0600565F RID: 22111 RVA: 0x000D3FDD File Offset: 0x000D21DD
 		public virtual VectorInfo Position
 		{
 			get
@@ -49,8 +47,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AF1 RID: 6897
-		// (get) Token: 0x06005139 RID: 20793 RVA: 0x000C8749 File Offset: 0x000C6949
+		// Token: 0x17001C5E RID: 7262
+		// (get) Token: 0x06005660 RID: 22112 RVA: 0x000D4011 File Offset: 0x000D2211
 		public virtual VectorInfo Rotation
 		{
 			get
@@ -65,21 +63,21 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002EBB RID: 11963
+		// Token: 0x04003183 RID: 12675
 		private IWuWaGoRoleInfo Instance;
 
-		// Token: 0x04002EBC RID: 11964
+		// Token: 0x04003184 RID: 12676
 		[Nullable(2)]
 		private VectorInfo _PositionCache;
 
-		// Token: 0x04002EBD RID: 11965
+		// Token: 0x04003185 RID: 12677
 		private bool _PositionInited;
 
-		// Token: 0x04002EBE RID: 11966
+		// Token: 0x04003186 RID: 12678
 		[Nullable(2)]
 		private VectorInfo _RotationCache;
 
-		// Token: 0x04002EBF RID: 11967
+		// Token: 0x04003187 RID: 12679
 		private bool _RotationInited;
 	}
 }

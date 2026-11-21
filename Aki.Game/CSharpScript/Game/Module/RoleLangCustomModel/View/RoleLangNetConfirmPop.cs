@@ -8,16 +8,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 {
-	// Token: 0x02004D7C RID: 19836
+	// Token: 0x02003D45 RID: 15685
 	public class RoleLangNetConfirmPop : UiTickViewBase
 	{
-		// Token: 0x06033466 RID: 210022 RVA: 0x00BF62D4 File Offset: 0x00BF44D4
+		// Token: 0x060282D3 RID: 164563 RVA: 0x00B3F8AD File Offset: 0x00B3DAAD
 		[NullableContext(1)]
 		public RoleLangNetConfirmPop(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06033467 RID: 210023 RVA: 0x00BF62F4 File Offset: 0x00BF44F4
+		// Token: 0x060282D4 RID: 164564 RVA: 0x00B3F8CC File Offset: 0x00B3DACC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 13;
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06033468 RID: 210024 RVA: 0x00BF6574 File Offset: 0x00BF4774
+		// Token: 0x060282D5 RID: 164565 RVA: 0x00B3FB4C File Offset: 0x00B3DD4C
 		protected override void OnStart()
 		{
 			this.FromSettingAll = (bool)this.OpenParam;
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			this.InitBtnState();
 		}
 
-		// Token: 0x06033469 RID: 210025 RVA: 0x00BF663B File Offset: 0x00BF483B
+		// Token: 0x060282D6 RID: 164566 RVA: 0x00B3FC13 File Offset: 0x00B3DE13
 		protected override void OnTick(float deltaTime)
 		{
 			if (!this.NeedTick)
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			this.RefreshDownloadProgress();
 		}
 
-		// Token: 0x0603346A RID: 210026 RVA: 0x00BF6664 File Offset: 0x00BF4864
+		// Token: 0x060282D7 RID: 164567 RVA: 0x00B3FC3C File Offset: 0x00B3DE3C
 		private void InitData()
 		{
 			this.NoResourceInfo = RoleLangCustomModel.Instance.CheckNoResourceInfo();
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			item3.SetUIActive(false);
 		}
 
-		// Token: 0x0603346B RID: 210027 RVA: 0x00BF66D0 File Offset: 0x00BF48D0
+		// Token: 0x060282D8 RID: 164568 RVA: 0x00B3FCA8 File Offset: 0x00B3DEA8
 		private void InitBtnState()
 		{
 			bool flag = this.NoResourceInfo.Count > 0;
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			this.RefreshButtonState(true);
 		}
 
-		// Token: 0x0603346C RID: 210028 RVA: 0x00BF6724 File Offset: 0x00BF4924
+		// Token: 0x060282D9 RID: 164569 RVA: 0x00B3FCFC File Offset: 0x00B3DEFC
 		private void RefreshButtonState(bool isInit = false)
 		{
 			bool flag = this.DownloadState == RoleLangNetConfirmPop.EDownloadState.None;
@@ -191,7 +191,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			this.RefreshConfirm();
 		}
 
-		// Token: 0x0603346D RID: 210029 RVA: 0x00BF682C File Offset: 0x00BF4A2C
+		// Token: 0x060282DA RID: 164570 RVA: 0x00B3FE04 File Offset: 0x00B3E004
 		private void RefreshConfirm()
 		{
 			switch (this.DownloadState)
@@ -224,7 +224,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			}
 		}
 
-		// Token: 0x0603346E RID: 210030 RVA: 0x00BF68FC File Offset: 0x00BF4AFC
+		// Token: 0x060282DB RID: 164571 RVA: 0x00B3FED4 File Offset: 0x00B3E0D4
 		private void GetPackageSize()
 		{
 			long num = 0L;
@@ -248,7 +248,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			text.SetText(this.TotalSizeTxt + "MB", true);
 		}
 
-		// Token: 0x0603346F RID: 210031 RVA: 0x00BF69C8 File Offset: 0x00BF4BC8
+		// Token: 0x060282DC RID: 164572 RVA: 0x00B3FFA0 File Offset: 0x00B3E1A0
 		private void RefreshDownloadProgress()
 		{
 			long num = 0L;
@@ -285,7 +285,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			}
 		}
 
-		// Token: 0x06033470 RID: 210032 RVA: 0x00BF6AC0 File Offset: 0x00BF4CC0
+		// Token: 0x060282DD RID: 164573 RVA: 0x00B40098 File Offset: 0x00B3E298
 		private void RefreshState(bool needButtonRefresh = true)
 		{
 			if (this.NoResourceInfo.Count == 0)
@@ -347,7 +347,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			}
 		}
 
-		// Token: 0x06033471 RID: 210033 RVA: 0x00BF6BE8 File Offset: 0x00BF4DE8
+		// Token: 0x060282DE RID: 164574 RVA: 0x00B401C0 File Offset: 0x00B3E3C0
 		private bool CheckSpaceEnough()
 		{
 			long num = 0L;
@@ -369,7 +369,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			return num2 >= num + 10485760L;
 		}
 
-		// Token: 0x06033472 RID: 210034 RVA: 0x00BF6C94 File Offset: 0x00BF4E94
+		// Token: 0x060282DF RID: 164575 RVA: 0x00B4026C File Offset: 0x00B3E46C
 		protected void BeforeCloseConfirmBox()
 		{
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.RoleLangCustomConfirm);
@@ -394,7 +394,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x06033473 RID: 210035 RVA: 0x00BF6D20 File Offset: 0x00BF4F20
+		// Token: 0x060282E0 RID: 164576 RVA: 0x00B402F8 File Offset: 0x00B3E4F8
 		protected void FinishedCloseConfirmBox()
 		{
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.RoleLangCustomConfirm);
@@ -419,7 +419,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x06033474 RID: 210036 RVA: 0x00BF6DAC File Offset: 0x00BF4FAC
+		// Token: 0x060282E1 RID: 164577 RVA: 0x00B40384 File Offset: 0x00B3E584
 		protected void DownloadingConfirmBox()
 		{
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.RoleLangCustomConfirm);
@@ -445,7 +445,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x06033475 RID: 210037 RVA: 0x00BF6E38 File Offset: 0x00BF5038
+		// Token: 0x060282E2 RID: 164578 RVA: 0x00B40410 File Offset: 0x00B3E610
 		protected void DeleteConfirmBox()
 		{
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.RoleLangCustomConfirm);
@@ -477,7 +477,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x06033476 RID: 210038 RVA: 0x00BF6EC4 File Offset: 0x00BF50C4
+		// Token: 0x060282E3 RID: 164579 RVA: 0x00B4049C File Offset: 0x00B3E69C
 		protected void AfterDownloadKeepLocalConfirmBox()
 		{
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.RoleLangCustomConfirm);
@@ -498,7 +498,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x06033477 RID: 210039 RVA: 0x00BF6F50 File Offset: 0x00BF5150
+		// Token: 0x060282E4 RID: 164580 RVA: 0x00B40528 File Offset: 0x00B3E728
 		protected void ApplyLocalWhileDownloadingConfirmBox()
 		{
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.RoleLangCustomConfirm);
@@ -521,7 +521,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x06033478 RID: 210040 RVA: 0x00BF6FE3 File Offset: 0x00BF51E3
+		// Token: 0x060282E5 RID: 164581 RVA: 0x00B405BB File Offset: 0x00B3E7BB
 		private void OnClickedClose()
 		{
 			if (!this.HaveStarted)
@@ -537,7 +537,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			this.DownloadingConfirmBox();
 		}
 
-		// Token: 0x06033479 RID: 210041 RVA: 0x00BF700A File Offset: 0x00BF520A
+		// Token: 0x060282E6 RID: 164582 RVA: 0x00B405E2 File Offset: 0x00B3E7E2
 		private void OnClickedBtnVersionDel()
 		{
 			if (this.DownloadState == RoleLangNetConfirmPop.EDownloadState.Downloading)
@@ -547,14 +547,14 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			this.DeleteConfirmBox();
 		}
 
-		// Token: 0x0603347A RID: 210042 RVA: 0x00BF7021 File Offset: 0x00BF5221
+		// Token: 0x060282E7 RID: 164583 RVA: 0x00B405F9 File Offset: 0x00B3E7F9
 		private void OnClickedBtnVersionPause()
 		{
 			RoleLangCustomModel.Instance.PauseDownloadingList();
 			this.RefreshState(true);
 		}
 
-		// Token: 0x0603347B RID: 210043 RVA: 0x00BF7034 File Offset: 0x00BF5234
+		// Token: 0x060282E8 RID: 164584 RVA: 0x00B4060C File Offset: 0x00B3E80C
 		private void OnClickedBtnVersionStar()
 		{
 			if (!this.CheckSpaceEnough())
@@ -568,7 +568,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			this.RefreshButtonState(false);
 		}
 
-		// Token: 0x0603347C RID: 210044 RVA: 0x00BF7084 File Offset: 0x00BF5284
+		// Token: 0x060282E9 RID: 164585 RVA: 0x00B4065C File Offset: 0x00B3E85C
 		private void OnClickedBtnVersionDownload()
 		{
 			if (!this.CheckSpaceEnough())
@@ -583,7 +583,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			this.RefreshButtonState(false);
 		}
 
-		// Token: 0x0603347D RID: 210045 RVA: 0x00BF70DA File Offset: 0x00BF52DA
+		// Token: 0x060282EA RID: 164586 RVA: 0x00B406B2 File Offset: 0x00B3E8B2
 		private void OnClickedBtnCancel(int data)
 		{
 			if (!this.HaveStarted)
@@ -600,7 +600,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			this.ApplyLocalWhileDownloadingConfirmBox();
 		}
 
-		// Token: 0x0603347E RID: 210046 RVA: 0x00BF710C File Offset: 0x00BF530C
+		// Token: 0x060282EB RID: 164587 RVA: 0x00B406E4 File Offset: 0x00B3E8E4
 		private void OnClickedBtnConfirm(int data)
 		{
 			if (this.NoResourceInfo.Count == 0)
@@ -623,80 +623,80 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View
 			this.OnClickedBtnVersionDownload();
 		}
 
-		// Token: 0x0401B366 RID: 111462
+		// Token: 0x04015D39 RID: 89401
 		[Nullable(2)]
 		protected ButtonItem CancelBtn;
 
-		// Token: 0x0401B367 RID: 111463
+		// Token: 0x04015D3A RID: 89402
 		[Nullable(2)]
 		protected ButtonItem ConfirmBtn;
 
-		// Token: 0x0401B368 RID: 111464
+		// Token: 0x04015D3B RID: 89403
 		protected bool FromSettingAll;
 
-		// Token: 0x0401B369 RID: 111465
+		// Token: 0x04015D3C RID: 89404
 		[Nullable(1)]
 		protected List<IRoleLangCustomLangPackageInfo> NoResourceInfo = new List<IRoleLangCustomLangPackageInfo>();
 
-		// Token: 0x0401B36A RID: 111466
+		// Token: 0x04015D3D RID: 89405
 		protected long TotalSize;
 
-		// Token: 0x0401B36B RID: 111467
+		// Token: 0x04015D3E RID: 89406
 		[Nullable(1)]
 		protected string TotalSizeTxt = "";
 
-		// Token: 0x0401B36C RID: 111468
+		// Token: 0x04015D3F RID: 89407
 		protected bool NeedTick;
 
-		// Token: 0x0401B36D RID: 111469
+		// Token: 0x04015D40 RID: 89408
 		protected RoleLangNetConfirmPop.EDownloadState DownloadState;
 
-		// Token: 0x0401B36E RID: 111470
+		// Token: 0x04015D41 RID: 89409
 		protected bool HaveStarted;
 
-		// Token: 0x0200AEF0 RID: 44784
+		// Token: 0x02009924 RID: 39204
 		private enum EDefine
 		{
-			// Token: 0x04035215 RID: 217621
+			// Token: 0x0402FC49 RID: 195657
 			SpriteInfoBg,
-			// Token: 0x04035216 RID: 217622
+			// Token: 0x0402FC4A RID: 195658
 			TxtDesc,
-			// Token: 0x04035217 RID: 217623
+			// Token: 0x0402FC4B RID: 195659
 			TxtValue,
-			// Token: 0x04035218 RID: 217624
+			// Token: 0x0402FC4C RID: 195660
 			BtnVersionDel,
-			// Token: 0x04035219 RID: 217625
+			// Token: 0x0402FC4D RID: 195661
 			BtnVersionPause,
-			// Token: 0x0403521A RID: 217626
+			// Token: 0x0402FC4E RID: 195662
 			BtnVersionStar,
-			// Token: 0x0403521B RID: 217627
+			// Token: 0x0402FC4F RID: 195663
 			BtnVersionDownload,
-			// Token: 0x0403521C RID: 217628
+			// Token: 0x0402FC50 RID: 195664
 			PanelDone,
-			// Token: 0x0403521D RID: 217629
+			// Token: 0x0402FC51 RID: 195665
 			PanelActiveB,
-			// Token: 0x0403521E RID: 217630
+			// Token: 0x0402FC52 RID: 195666
 			TxtActivated,
-			// Token: 0x0403521F RID: 217631
+			// Token: 0x0402FC53 RID: 195667
 			BtnCancel,
-			// Token: 0x04035220 RID: 217632
+			// Token: 0x0402FC54 RID: 195668
 			BtnConfirm,
-			// Token: 0x04035221 RID: 217633
+			// Token: 0x0402FC55 RID: 195669
 			PanelAssetInfo
 		}
 
-		// Token: 0x0200AEF1 RID: 44785
+		// Token: 0x02009925 RID: 39205
 		protected enum EDownloadState
 		{
-			// Token: 0x04035223 RID: 217635
+			// Token: 0x0402FC57 RID: 195671
 			None,
-			// Token: 0x04035224 RID: 217636
+			// Token: 0x0402FC58 RID: 195672
 			Downloading,
-			// Token: 0x04035225 RID: 217637
+			// Token: 0x0402FC59 RID: 195673
 			Pause,
-			// Token: 0x04035226 RID: 217638
+			// Token: 0x0402FC5A RID: 195674
 			Done,
-			// Token: 0x04035227 RID: 217639
+			// Token: 0x0402FC5B RID: 195675
 			NoSpace
 		}
 	}

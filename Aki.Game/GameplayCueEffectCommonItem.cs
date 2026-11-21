@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Effect;
 using UnrealEngine;
 
-// Token: 0x02002FAA RID: 12202
+// Token: 0x020024FE RID: 9470
 [NullableContext(1)]
 [Nullable(0)]
 public class GameplayCueEffectCommonItem
 {
-	// Token: 0x06019E02 RID: 105986 RVA: 0x006C394A File Offset: 0x006C1B4A
+	// Token: 0x06017714 RID: 96020 RVA: 0x006EA1E6 File Offset: 0x006E83E6
 	private GameplayCueEffectCommonItem(ABaseCharacter owner, FVectorDouble targetPosition, string[] paths)
 	{
 		this.Owner = owner;
@@ -16,7 +16,7 @@ public class GameplayCueEffectCommonItem
 		this.Paths = paths;
 	}
 
-	// Token: 0x06019E03 RID: 105987 RVA: 0x006C3970 File Offset: 0x006C1B70
+	// Token: 0x06017715 RID: 96021 RVA: 0x006EA20C File Offset: 0x006E840C
 	[return: Nullable(2)]
 	public static GameplayCueEffectCommonItem Spawn(ABaseCharacter owner, FVectorDouble targetPosition, string[] paths)
 	{
@@ -31,7 +31,7 @@ public class GameplayCueEffectCommonItem
 		return null;
 	}
 
-	// Token: 0x06019E04 RID: 105988 RVA: 0x006C39AC File Offset: 0x006C1BAC
+	// Token: 0x06017716 RID: 96022 RVA: 0x006EA248 File Offset: 0x006E8448
 	public void Destroy()
 	{
 		this.EffectActor.Clear();
@@ -41,7 +41,7 @@ public class GameplayCueEffectCommonItem
 		}
 	}
 
-	// Token: 0x06019E05 RID: 105989 RVA: 0x006C39F8 File Offset: 0x006C1BF8
+	// Token: 0x06017717 RID: 96023 RVA: 0x006EA294 File Offset: 0x006E8494
 	[NullableContext(2)]
 	public void Refresh(bool visible, Vector location = null, Rotator rotation = null)
 	{
@@ -72,7 +72,7 @@ public class GameplayCueEffectCommonItem
 		}
 	}
 
-	// Token: 0x06019E06 RID: 105990 RVA: 0x006C3A76 File Offset: 0x006C1C76
+	// Token: 0x06017718 RID: 96024 RVA: 0x006EA312 File Offset: 0x006E8512
 	public void SetVisible(bool visible)
 	{
 		if (this.IsVisible == visible)
@@ -83,7 +83,7 @@ public class GameplayCueEffectCommonItem
 		this.EffectActor.SetActorHiddenInGame(!visible);
 	}
 
-	// Token: 0x06019E07 RID: 105991 RVA: 0x006C3A98 File Offset: 0x006C1C98
+	// Token: 0x06017719 RID: 96025 RVA: 0x006EA334 File Offset: 0x006E8534
 	private int CreateEffect()
 	{
 		if (this.Paths.Length == 0)
@@ -118,10 +118,10 @@ public class GameplayCueEffectCommonItem
 		return num;
 	}
 
-	// Token: 0x0400C3A4 RID: 50084
+	// Token: 0x0400C74D RID: 51021
 	private int EffectViewHandle;
 
-	// Token: 0x0400C3A5 RID: 50085
+	// Token: 0x0400C74E RID: 51022
 	[Nullable(new byte[]
 	{
 		0,
@@ -130,15 +130,15 @@ public class GameplayCueEffectCommonItem
 	})]
 	private OneOf<KuroEffectActorHandle, AActor> EffectActor;
 
-	// Token: 0x0400C3A6 RID: 50086
+	// Token: 0x0400C74F RID: 51023
 	private bool IsVisible = true;
 
-	// Token: 0x0400C3A7 RID: 50087
+	// Token: 0x0400C750 RID: 51024
 	private readonly ABaseCharacter Owner;
 
-	// Token: 0x0400C3A8 RID: 50088
+	// Token: 0x0400C751 RID: 51025
 	public readonly FVectorDouble TargetPosition;
 
-	// Token: 0x0400C3A9 RID: 50089
+	// Token: 0x0400C752 RID: 51026
 	public readonly string[] Paths;
 }

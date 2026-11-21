@@ -5,10 +5,10 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020015C6 RID: 5574
+// Token: 0x02000A7E RID: 2686
 public class WheelTowerSmallBuffItem : UiPanelBase
 {
-	// Token: 0x06009E01 RID: 40449 RVA: 0x0022609C File Offset: 0x0022429C
+	// Token: 0x060071DF RID: 29151 RVA: 0x0022FE4C File Offset: 0x0022E04C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -33,7 +33,7 @@ public class WheelTowerSmallBuffItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009E02 RID: 40450 RVA: 0x00226184 File Offset: 0x00224384
+	// Token: 0x060071E0 RID: 29152 RVA: 0x0022FF34 File Offset: 0x0022E134
 	public void Refresh(int buffId)
 	{
 		bool flag = buffId > 0;
@@ -59,7 +59,7 @@ public class WheelTowerSmallBuffItem : UiPanelBase
 		base.SetTextureByPath(buffConfigById.Value.Icon, base.GetTexture(3), null, null);
 	}
 
-	// Token: 0x06009E03 RID: 40451 RVA: 0x002261FF File Offset: 0x002243FF
+	// Token: 0x060071E1 RID: 29153 RVA: 0x0022FFAF File Offset: 0x0022E1AF
 	private void OnBtnClick()
 	{
 		UiManager.Instance.OpenView(EUiViewName.WheelTowerBuffSelectView, 32, null);

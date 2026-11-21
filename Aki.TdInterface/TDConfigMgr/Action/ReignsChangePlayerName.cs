@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200213D RID: 8509
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200239E RID: 9118
 	public class ReignsChangePlayerName : ActionParams
 	{
-		// Token: 0x0600BB5E RID: 47966 RVA: 0x001B0AF4 File Offset: 0x001AECF4
+		// Token: 0x0600C6EC RID: 50924 RVA: 0x001C7CA8 File Offset: 0x001C5EA8
 		private ReignsChangePlayerName_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BB5F RID: 47967 RVA: 0x001B0B2C File Offset: 0x001AED2C
+		// Token: 0x0600C6ED RID: 50925 RVA: 0x001C7CE0 File Offset: 0x001C5EE0
 		public static ReignsChangePlayerName Create([Nullable(2)] ReignsChangePlayerName instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BB60 RID: 47968 RVA: 0x001B0B3F File Offset: 0x001AED3F
+		// Token: 0x0600C6EE RID: 50926 RVA: 0x001C7CF3 File Offset: 0x001C5EF3
 		public static ReignsChangePlayerName CreateFromSetValue([Nullable(2)] ReignsChangePlayerName_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BB61 RID: 47969 RVA: 0x001B0B52 File Offset: 0x001AED52
+		// Token: 0x0600C6EF RID: 50927 RVA: 0x001C7D06 File Offset: 0x001C5F06
 		public ReignsChangePlayerName_SetValue ToSetValue()
 		{
 			return new ReignsChangePlayerName_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003930 RID: 14640
-		// (get) Token: 0x0600BB62 RID: 47970 RVA: 0x001B0B65 File Offset: 0x001AED65
-		// (set) Token: 0x0600BB63 RID: 47971 RVA: 0x001B0B90 File Offset: 0x001AED90
+		// Token: 0x17003C1D RID: 15389
+		// (get) Token: 0x0600C6F0 RID: 50928 RVA: 0x001C7D19 File Offset: 0x001C5F19
+		// (set) Token: 0x0600C6F1 RID: 50929 RVA: 0x001C7D44 File Offset: 0x001C5F44
 		public virtual string PlayerNameId
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400700F RID: 28687
+		// Token: 0x04007644 RID: 30276
 		[Nullable(2)]
 		protected new ReignsChangePlayerName FbInstance;
 
-		// Token: 0x04007010 RID: 28688
+		// Token: 0x04007645 RID: 30277
 		[Nullable(2)]
 		protected ReignsChangePlayerName_SetValue PocoInterface;
 	}

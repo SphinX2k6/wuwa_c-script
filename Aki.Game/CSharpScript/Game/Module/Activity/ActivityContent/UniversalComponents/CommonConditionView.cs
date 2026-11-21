@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalComponents
 {
-	// Token: 0x02005F75 RID: 24437
+	// Token: 0x02004F5C RID: 20316
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CommonConditionView : UiViewBase
 	{
-		// Token: 0x0603E079 RID: 254073 RVA: 0x00EF9D70 File Offset: 0x00EF7F70
+		// Token: 0x06033013 RID: 208915 RVA: 0x00E4BA58 File Offset: 0x00E49C58
 		public CommonConditionView(UiViewInfo info) : base(info)
 		{
 			this.TextIdMap.Add("FinishAllConditionOpen", "TaskNotOpen_Tips01");
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalComponents
 			this.TextIdMap.Add("FinishAnyConditionPreOpen", "TaskNotPreOpen_Tips02");
 		}
 
-		// Token: 0x0603E07A RID: 254074 RVA: 0x00EF9DE4 File Offset: 0x00EF7FE4
+		// Token: 0x06033014 RID: 208916 RVA: 0x00E4BACC File Offset: 0x00E49CCC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -41,14 +41,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalComponents
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603E07B RID: 254075 RVA: 0x00EF9E8F File Offset: 0x00EF808F
+		// Token: 0x06033015 RID: 208917 RVA: 0x00E4BB77 File Offset: 0x00E49D77
 		protected override void OnStart()
 		{
 			this.ConditionGroupData = (this.OpenParam as ConditionGroupData);
 			this.CreateConditionLayout();
 		}
 
-		// Token: 0x0603E07C RID: 254076 RVA: 0x00EF9EA8 File Offset: 0x00EF80A8
+		// Token: 0x06033016 RID: 208918 RVA: 0x00E4BB90 File Offset: 0x00E49D90
 		protected override void OnBeforeShow()
 		{
 			if (this.ConditionGroupData == null)
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalComponents
 			this.SetDescription();
 		}
 
-		// Token: 0x0603E07D RID: 254077 RVA: 0x00EF9EE8 File Offset: 0x00EF80E8
+		// Token: 0x06033017 RID: 208919 RVA: 0x00E4BBD0 File Offset: 0x00E49DD0
 		protected void CreateConditionLayout()
 		{
 			UUILoopScrollViewComponent loopScrollViewComponent = base.GetLoopScrollViewComponent(2);
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalComponents
 			this.ConditionLayout = new LoopScrollView<ActivityConditionItem, IActivityConditionData>(loopScrollViewComponent, item.GetOwner() as AUIBaseActor, new Func<ActivityConditionItem>(this.CreateConditionItem), false);
 		}
 
-		// Token: 0x0603E07E RID: 254078 RVA: 0x00EF9F2C File Offset: 0x00EF812C
+		// Token: 0x06033018 RID: 208920 RVA: 0x00E4BC14 File Offset: 0x00E49E14
 		private void SetDescription()
 		{
 			ConditionGroupData conditionGroupData = this.ConditionGroupData;
@@ -94,17 +94,17 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalComponents
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), textStringId, new <>z__ReadOnlySingleElementList<object>(item));
 		}
 
-		// Token: 0x0603E07F RID: 254079 RVA: 0x00EFA026 File Offset: 0x00EF8226
+		// Token: 0x06033019 RID: 208921 RVA: 0x00E4BD0E File Offset: 0x00E49F0E
 		private ActivityConditionItem CreateConditionItem()
 		{
 			return new ActivityConditionItem();
 		}
 
-		// Token: 0x04020647 RID: 132679
+		// Token: 0x0401B119 RID: 110873
 		[Nullable(2)]
 		protected ConditionGroupData ConditionGroupData;
 
-		// Token: 0x04020648 RID: 132680
+		// Token: 0x0401B11A RID: 110874
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,23 +113,23 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalComponents
 		})]
 		private LoopScrollView<ActivityConditionItem, IActivityConditionData> ConditionLayout;
 
-		// Token: 0x04020649 RID: 132681
+		// Token: 0x0401B11B RID: 110875
 		protected Dictionary<string, string> TextIdMap = new Dictionary<string, string>();
 
-		// Token: 0x0200C270 RID: 49776
+		// Token: 0x0200AC7B RID: 44155
 		[NullableContext(0)]
 		internal class EComponents
 		{
-			// Token: 0x0403ABCE RID: 240590
+			// Token: 0x040355AA RID: 218538
 			public const int Title = 0;
 
-			// Token: 0x0403ABCF RID: 240591
+			// Token: 0x040355AB RID: 218539
 			public const int TxtTips = 1;
 
-			// Token: 0x0403ABD0 RID: 240592
+			// Token: 0x040355AC RID: 218540
 			public const int ConditionLayout = 2;
 
-			// Token: 0x0403ABD1 RID: 240593
+			// Token: 0x040355AD RID: 218541
 			public const int ConditionItem = 3;
 		}
 	}

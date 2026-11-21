@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 {
-	// Token: 0x02005259 RID: 21081
+	// Token: 0x02004229 RID: 16937
 	public class HpItem : UiPanelBase
 	{
-		// Token: 0x06035E04 RID: 220676 RVA: 0x00CBFEC6 File Offset: 0x00CBE0C6
+		// Token: 0x0602ACFF RID: 175359 RVA: 0x00C0D556 File Offset: 0x00C0B756
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -20,20 +20,20 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			};
 		}
 
-		// Token: 0x06035E05 RID: 220677 RVA: 0x00CBFEE9 File Offset: 0x00CBE0E9
+		// Token: 0x0602AD00 RID: 175360 RVA: 0x00C0D579 File Offset: 0x00C0B779
 		protected override void OnStart()
 		{
 			this.Sequence = new UiSequencePlayer(this.RootItem);
 			this.Sequence.BindOnEndSequenceEvent(new Action<string>(this.SequenceEnd));
 		}
 
-		// Token: 0x06035E06 RID: 220678 RVA: 0x00CBFF13 File Offset: 0x00CBE113
+		// Token: 0x0602AD01 RID: 175361 RVA: 0x00C0D5A3 File Offset: 0x00C0B7A3
 		protected override void OnDestroy()
 		{
 			this.Sequence.Clear();
 		}
 
-		// Token: 0x06035E07 RID: 220679 RVA: 0x00CBFF20 File Offset: 0x00CBE120
+		// Token: 0x0602AD02 RID: 175362 RVA: 0x00C0D5B0 File Offset: 0x00C0B7B0
 		[NullableContext(1)]
 		private void SequenceEnd(string sequenceName)
 		{
@@ -48,13 +48,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			}
 		}
 
-		// Token: 0x06035E08 RID: 220680 RVA: 0x00CBFF4A File Offset: 0x00CBE14A
+		// Token: 0x0602AD03 RID: 175363 RVA: 0x00C0D5DA File Offset: 0x00C0B7DA
 		public void RefreshHpNum(int cost)
 		{
 			base.GetText(0).SetText(cost.ToString(), true);
 		}
 
-		// Token: 0x06035E09 RID: 220681 RVA: 0x00CBFF60 File Offset: 0x00CBE160
+		// Token: 0x0602AD04 RID: 175364 RVA: 0x00C0D5F0 File Offset: 0x00C0B7F0
 		public UniTask PlayStart()
 		{
 			HpItem.<PlayStart>d__7 <PlayStart>d__;
@@ -65,21 +65,21 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			return <PlayStart>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035E0A RID: 220682 RVA: 0x00CBFFA3 File Offset: 0x00CBE1A3
+		// Token: 0x0602AD05 RID: 175365 RVA: 0x00C0D633 File Offset: 0x00C0B833
 		public void PlayClose()
 		{
 			this.Sequence.StopPrevSequence(false, true);
 			this.Sequence.PlaySequencePurely("Close", false, false);
 		}
 
-		// Token: 0x0401C8D0 RID: 116944
+		// Token: 0x04017305 RID: 94981
 		[Nullable(1)]
 		protected UiSequencePlayer Sequence;
 
-		// Token: 0x0200B417 RID: 46103
+		// Token: 0x02009E4F RID: 40527
 		private class EHpItem
 		{
-			// Token: 0x04036917 RID: 223511
+			// Token: 0x0403136A RID: 201578
 			public const int NumText = 0;
 		}
 	}

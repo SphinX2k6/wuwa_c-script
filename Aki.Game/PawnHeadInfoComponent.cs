@@ -17,14 +17,14 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02003110 RID: 12560
+// Token: 0x0200266B RID: 9835
 [NullableContext(1)]
 [Nullable(0)]
-public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction, IComponentDependency
+public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction
 {
-	// Token: 0x1700254F RID: 9551
-	// (get) Token: 0x0601AFC1 RID: 110529 RVA: 0x00753560 File Offset: 0x00751760
-	public static Type[] Dependencies
+	// Token: 0x170026F4 RID: 9972
+	// (get) Token: 0x06018A17 RID: 100887 RVA: 0x00779698 File Offset: 0x00777898
+	public override Type[] Dependencies
 	{
 		get
 		{
@@ -36,7 +36,7 @@ public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction, ICompone
 		}
 	}
 
-	// Token: 0x0601AFC2 RID: 110530 RVA: 0x00753584 File Offset: 0x00751784
+	// Token: 0x06018A18 RID: 100888 RVA: 0x007796BC File Offset: 0x007778BC
 	protected override bool OnStart()
 	{
 		this.PawnInfoManageComp = base.Entity.GetComponent<PawnInfoManageComponent>();
@@ -69,7 +69,7 @@ public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction, ICompone
 		return true;
 	}
 
-	// Token: 0x0601AFC3 RID: 110531 RVA: 0x00753740 File Offset: 0x00751940
+	// Token: 0x06018A19 RID: 100889 RVA: 0x00779878 File Offset: 0x00777A78
 	private void InitBaseInfo()
 	{
 		CreatureDataComponent creatureData = this.ActorComp.CreatureData;
@@ -81,7 +81,7 @@ public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction, ICompone
 		this.IsShowNameOnHead = ((baseInfo != null) ? baseInfo.IsShowNameOnHead : null).GetValueOrDefault();
 	}
 
-	// Token: 0x0601AFC4 RID: 110532 RVA: 0x00753786 File Offset: 0x00751986
+	// Token: 0x06018A1A RID: 100890 RVA: 0x007798BE File Offset: 0x00777ABE
 	private void OnCharBornFinished(int _)
 	{
 		EventSystem.Instance.RemoveWithTarget<int>(base.Entity, EEventName.CharBornFinished, new Action<int>(this.OnCharBornFinished));
@@ -89,7 +89,7 @@ public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction, ICompone
 		this.InitHeadIcon();
 	}
 
-	// Token: 0x0601AFC5 RID: 110533 RVA: 0x007537B8 File Offset: 0x007519B8
+	// Token: 0x06018A1B RID: 100891 RVA: 0x007798F0 File Offset: 0x00777AF0
 	private void InitHeadIcon()
 	{
 		bool isPendingCreateBeforeFixBorn = this.IsPendingCreateBeforeFixBorn;
@@ -130,7 +130,7 @@ public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction, ICompone
 		}
 	}
 
-	// Token: 0x0601AFC6 RID: 110534 RVA: 0x007538E0 File Offset: 0x00751AE0
+	// Token: 0x06018A1C RID: 100892 RVA: 0x00779A18 File Offset: 0x00777C18
 	protected void DestroyPlayerNearbyEvent()
 	{
 		if (this.PlayerNearbyEvent != null)
@@ -140,7 +140,7 @@ public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction, ICompone
 		}
 	}
 
-	// Token: 0x0601AFC7 RID: 110535 RVA: 0x00753901 File Offset: 0x00751B01
+	// Token: 0x06018A1D RID: 100893 RVA: 0x00779A39 File Offset: 0x00777C39
 	private void TryCreateIconComponent()
 	{
 		if (this.IconCompCreatedPromise != null)
@@ -156,7 +156,7 @@ public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction, ICompone
 		this.CreateIconComponent();
 	}
 
-	// Token: 0x0601AFC8 RID: 110536 RVA: 0x00753930 File Offset: 0x00751B30
+	// Token: 0x06018A1E RID: 100894 RVA: 0x00779A68 File Offset: 0x00777C68
 	protected void TryDestroyIconComponent(float delta)
 	{
 		if (!this.AutoDestroyCheck)
@@ -195,7 +195,7 @@ public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction, ICompone
 		}
 	}
 
-	// Token: 0x0601AFC9 RID: 110537 RVA: 0x007539E0 File Offset: 0x00751BE0
+	// Token: 0x06018A1F RID: 100895 RVA: 0x00779B18 File Offset: 0x00777D18
 	protected void DestroyIconComponent()
 	{
 		if (this.IconCompCreatedPromise == null)
@@ -205,6 +205,11 @@ public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction, ICompone
 		if (this.IconCompCreatedPromise.IsPending)
 		{
 			this.IconCompCreatedPromise.SetResult();
+		}
+		if (this.CreatingIconComponent != null)
+		{
+			this.CreatingIconComponent.Destroy();
+			this.CreatingIconComponent = null;
 		}
 		this.IconCompCreatedPromise = null;
 		NpcIconComponent iconComponent = this.IconComponent;
@@ -221,29 +226,30 @@ public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction, ICompone
 		EventSystem.Instance.Remove(EEventName.DisActiveBattleView, new Action(this.DisActiveBattleView));
 	}
 
-	// Token: 0x0601AFCA RID: 110538 RVA: 0x00753A60 File Offset: 0x00751C60
+	// Token: 0x06018A20 RID: 100896 RVA: 0x00779BB4 File Offset: 0x00777DB4
 	private UniTask CreateIconComponent()
 	{
-		PawnHeadInfoComponent.<CreateIconComponent>d__38 <CreateIconComponent>d__;
+		PawnHeadInfoComponent.<CreateIconComponent>d__39 <CreateIconComponent>d__;
 		<CreateIconComponent>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<CreateIconComponent>d__.<>4__this = this;
 		<CreateIconComponent>d__.<>1__state = -1;
-		<CreateIconComponent>d__.<>t__builder.Start<PawnHeadInfoComponent.<CreateIconComponent>d__38>(ref <CreateIconComponent>d__);
+		<CreateIconComponent>d__.<>t__builder.Start<PawnHeadInfoComponent.<CreateIconComponent>d__39>(ref <CreateIconComponent>d__);
 		return <CreateIconComponent>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601AFCB RID: 110539 RVA: 0x00753AA4 File Offset: 0x00751CA4
-	private UniTask CreateIconComponentImp()
+	// Token: 0x06018A21 RID: 100897 RVA: 0x00779BF8 File Offset: 0x00777DF8
+	[NullableContext(0)]
+	private UniTask<bool> CreateIconComponentImp()
 	{
-		PawnHeadInfoComponent.<CreateIconComponentImp>d__39 <CreateIconComponentImp>d__;
-		<CreateIconComponentImp>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
+		PawnHeadInfoComponent.<CreateIconComponentImp>d__40 <CreateIconComponentImp>d__;
+		<CreateIconComponentImp>d__.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
 		<CreateIconComponentImp>d__.<>4__this = this;
 		<CreateIconComponentImp>d__.<>1__state = -1;
-		<CreateIconComponentImp>d__.<>t__builder.Start<PawnHeadInfoComponent.<CreateIconComponentImp>d__39>(ref <CreateIconComponentImp>d__);
+		<CreateIconComponentImp>d__.<>t__builder.Start<PawnHeadInfoComponent.<CreateIconComponentImp>d__40>(ref <CreateIconComponentImp>d__);
 		return <CreateIconComponentImp>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601AFCC RID: 110540 RVA: 0x00753AE8 File Offset: 0x00751CE8
+	// Token: 0x06018A22 RID: 100898 RVA: 0x00779C3C File Offset: 0x00777E3C
 	protected override bool OnEnd()
 	{
 		this.DestroyIconComponent();
@@ -283,7 +289,7 @@ public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction, ICompone
 		return true;
 	}
 
-	// Token: 0x0601AFCD RID: 110541 RVA: 0x00753D28 File Offset: 0x00751F28
+	// Token: 0x06018A23 RID: 100899 RVA: 0x00779E7C File Offset: 0x0077807C
 	public override void OnEntityWasRecentlyRenderedOnScreenChange(bool wasRecentlyRenderedOnScreen)
 	{
 		if (this.GetEntityType() == EEntityType.SceneItem)
@@ -308,7 +314,7 @@ public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction, ICompone
 		iconComponent2.OnNpcWasRecentlyRenderedOnScreenChange(wasRecentlyRenderedOnScreen);
 	}
 
-	// Token: 0x0601AFCE RID: 110542 RVA: 0x00753D8A File Offset: 0x00751F8A
+	// Token: 0x06018A24 RID: 100900 RVA: 0x00779EDE File Offset: 0x007780DE
 	private void InitNpcIcon()
 	{
 		this.SetCharacterIconLocation();
@@ -322,7 +328,7 @@ public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction, ICompone
 		iconComponent.SetInteractionSpotVisible(this.PendingInteractionSpotVisible);
 	}
 
-	// Token: 0x0601AFCF RID: 110543 RVA: 0x00753DB4 File Offset: 0x00751FB4
+	// Token: 0x06018A25 RID: 100901 RVA: 0x00779F08 File Offset: 0x00778108
 	protected void SetCharacterIconLocation()
 	{
 		NpcIconComponent iconComponent = this.IconComponent;
@@ -333,7 +339,7 @@ public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction, ICompone
 		iconComponent.SetCharacterIconLocation();
 	}
 
-	// Token: 0x0601AFD0 RID: 110544 RVA: 0x00753DC6 File Offset: 0x00751FC6
+	// Token: 0x06018A26 RID: 100902 RVA: 0x00779F1A File Offset: 0x0077811A
 	private void ResetCharacterInfo()
 	{
 		this.TryCreateIconComponent();
@@ -347,7 +353,7 @@ public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction, ICompone
 		this.SetCharacterFunctionIcon();
 	}
 
-	// Token: 0x0601AFD1 RID: 110545 RVA: 0x00753DF1 File Offset: 0x00751FF1
+	// Token: 0x06018A27 RID: 100903 RVA: 0x00779F45 File Offset: 0x00778145
 	private void SetCharacterName()
 	{
 		NpcIconComponent iconComponent = this.IconComponent;
@@ -359,7 +365,7 @@ public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction, ICompone
 		iconComponent.SetCharacterName((pawnInfoManageComp != null) ? pawnInfoManageComp.PawnName : null);
 	}
 
-	// Token: 0x0601AFD2 RID: 110546 RVA: 0x00753E15 File Offset: 0x00752015
+	// Token: 0x06018A28 RID: 100904 RVA: 0x00779F69 File Offset: 0x00778169
 	protected void SetCharacterSecondName()
 	{
 		NpcIconComponent iconComponent = this.IconComponent;
@@ -371,7 +377,7 @@ public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction, ICompone
 		iconComponent.SetCharacterSecondName((pawnInfoManageComp != null) ? pawnInfoManageComp.SecondName : null);
 	}
 
-	// Token: 0x0601AFD3 RID: 110547 RVA: 0x00753E39 File Offset: 0x00752039
+	// Token: 0x06018A29 RID: 100905 RVA: 0x00779F8D File Offset: 0x0077818D
 	protected void SetCharacterFunctionIcon()
 	{
 		if (this.IsQuestIconInUse)
@@ -387,24 +393,21 @@ public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction, ICompone
 		iconComponent.SetCharacterFunctionIcon((pawnInfoManageComp != null) ? pawnInfoManageComp.FunctionIcon : null);
 	}
 
-	// Token: 0x0601AFD4 RID: 110548 RVA: 0x00753E66 File Offset: 0x00752066
+	// Token: 0x06018A2A RID: 100906 RVA: 0x00779FBA File Offset: 0x007781BA
 	protected void SetCharacterQuestIcon(TaskMark mark)
 	{
 		if (!this.IsQuestIconInUse)
 		{
 			return;
 		}
-		this.IconComponent.SetNpcQuest(mark.NpcTaskIcon);
-		this.IconComponent.MaxShowQuestDisSquared = (float)mark.IconDistant;
+		if (this.IconComponent != null)
+		{
+			this.IconComponent.SetNpcQuest(mark.NpcTaskIcon);
+			this.IconComponent.MaxShowQuestDisSquared = (float)mark.IconDistant;
+		}
 	}
 
-	// Token: 0x0601AFD5 RID: 110549 RVA: 0x00753E96 File Offset: 0x00752096
-	protected void SetPlayerInfoIcon(string path)
-	{
-		this.IconComponent.SetPlayerInfoIcon(path);
-	}
-
-	// Token: 0x0601AFD6 RID: 110550 RVA: 0x00753EA4 File Offset: 0x007520A4
+	// Token: 0x06018A2B RID: 100907 RVA: 0x00779FF2 File Offset: 0x007781F2
 	protected override void OnEnable()
 	{
 		NpcIconComponent iconComponent = this.IconComponent;
@@ -415,7 +418,7 @@ public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction, ICompone
 		iconComponent.SetHeadItemState(true);
 	}
 
-	// Token: 0x0601AFD7 RID: 110551 RVA: 0x00753EB7 File Offset: 0x007520B7
+	// Token: 0x06018A2C RID: 100908 RVA: 0x0077A005 File Offset: 0x00778205
 	protected override void OnDisable(string reason)
 	{
 		NpcIconComponent iconComponent = this.IconComponent;
@@ -426,20 +429,20 @@ public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction, ICompone
 		iconComponent.SetHeadItemState(false);
 	}
 
-	// Token: 0x0601AFD8 RID: 110552 RVA: 0x00753ECA File Offset: 0x007520CA
+	// Token: 0x06018A2D RID: 100909 RVA: 0x0077A018 File Offset: 0x00778218
 	private EEntityType GetEntityType()
 	{
 		return base.Entity.GetComponent<CreatureDataComponent>().GetEntityType();
 	}
 
-	// Token: 0x0601AFD9 RID: 110553 RVA: 0x00753EDC File Offset: 0x007520DC
+	// Token: 0x06018A2E RID: 100910 RVA: 0x0077A02A File Offset: 0x0077822A
 	private void OnTextLanguageChange(string oldLang, string newLang)
 	{
 		this.SetCharacterName();
 		this.SetCharacterSecondName();
 	}
 
-	// Token: 0x0601AFDA RID: 110554 RVA: 0x00753EEA File Offset: 0x007520EA
+	// Token: 0x06018A2F RID: 100911 RVA: 0x0077A038 File Offset: 0x00778238
 	private void DisActiveBattleView()
 	{
 		NpcIconComponent iconComponent = this.IconComponent;
@@ -450,7 +453,7 @@ public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction, ICompone
 		iconComponent.SetRootItemState(false);
 	}
 
-	// Token: 0x0601AFDB RID: 110555 RVA: 0x00753F00 File Offset: 0x00752100
+	// Token: 0x06018A30 RID: 100912 RVA: 0x0077A04C File Offset: 0x0077824C
 	protected override void OnTick(float deltaTime)
 	{
 		base.OnTick(deltaTime);
@@ -466,13 +469,13 @@ public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction, ICompone
 		this.TryDestroyIconComponent(deltaTime);
 	}
 
-	// Token: 0x0601AFDC RID: 110556 RVA: 0x00753F56 File Offset: 0x00752156
+	// Token: 0x06018A31 RID: 100913 RVA: 0x0077A0A2 File Offset: 0x007782A2
 	private void OnUpdateQuestIcon(int id, QuestState status, EQuestStatusUpdateReason _)
 	{
 		this.UpdateQuestIcon();
 	}
 
-	// Token: 0x0601AFDD RID: 110557 RVA: 0x00753F60 File Offset: 0x00752160
+	// Token: 0x06018A32 RID: 100914 RVA: 0x0077A0AC File Offset: 0x007782AC
 	private void UpdateQuestIcon()
 	{
 		PawnInteractNewComponent pawnInteractComp = this.PawnInteractComp;
@@ -506,7 +509,7 @@ public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction, ICompone
 		}
 	}
 
-	// Token: 0x0601AFDE RID: 110558 RVA: 0x00754058 File Offset: 0x00752258
+	// Token: 0x06018A33 RID: 100915 RVA: 0x0077A1A4 File Offset: 0x007783A4
 	private UniTask RefreshNpcQuest(int? markId = null)
 	{
 		PawnHeadInfoComponent.<RefreshNpcQuest>d__58 <RefreshNpcQuest>d__;
@@ -518,7 +521,7 @@ public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction, ICompone
 		return <RefreshNpcQuest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601AFDF RID: 110559 RVA: 0x007540A4 File Offset: 0x007522A4
+	// Token: 0x06018A34 RID: 100916 RVA: 0x0077A1F0 File Offset: 0x007783F0
 	private int? GetQuestMarkIdByContext(GeneralContext context)
 	{
 		int? result = null;
@@ -559,7 +562,7 @@ public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction, ICompone
 		return result;
 	}
 
-	// Token: 0x0601AFE0 RID: 110560 RVA: 0x007541A3 File Offset: 0x007523A3
+	// Token: 0x06018A35 RID: 100917 RVA: 0x0077A2EF File Offset: 0x007784EF
 	private void UpdateInteractionSpotVisible(bool isVisible)
 	{
 		if (this.IconComponent != null)
@@ -570,7 +573,7 @@ public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction, ICompone
 		this.PendingInteractionSpotVisible = isVisible;
 	}
 
-	// Token: 0x0601AFE1 RID: 110561 RVA: 0x007541C4 File Offset: 0x007523C4
+	// Token: 0x06018A36 RID: 100918 RVA: 0x0077A310 File Offset: 0x00778510
 	public UniTask SetDialogueText(string text, float removeSeconds = -1f, bool redDot = false)
 	{
 		PawnHeadInfoComponent.<SetDialogueText>d__61 <SetDialogueText>d__;
@@ -584,13 +587,13 @@ public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction, ICompone
 		return <SetDialogueText>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601AFE2 RID: 110562 RVA: 0x0075421F File Offset: 0x0075241F
+	// Token: 0x06018A37 RID: 100919 RVA: 0x0077A36B File Offset: 0x0077856B
 	public void UpdateDialogUseState(bool value)
 	{
 		this.IsDialogIconInUse = value;
 	}
 
-	// Token: 0x0601AFE3 RID: 110563 RVA: 0x00754228 File Offset: 0x00752428
+	// Token: 0x06018A38 RID: 100920 RVA: 0x0077A374 File Offset: 0x00778574
 	public void UpdateDialogScale(float newScale)
 	{
 		if (newScale <= 0f || this.DialogWorldScale3D == newScale)
@@ -606,13 +609,13 @@ public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction, ICompone
 		iconComponent.UpdateDialogWorldScale();
 	}
 
-	// Token: 0x0601AFE4 RID: 110564 RVA: 0x00754253 File Offset: 0x00752453
+	// Token: 0x06018A39 RID: 100921 RVA: 0x0077A39F File Offset: 0x0077859F
 	public float GetDialogWorldScale3D()
 	{
 		return this.DialogWorldScale3D;
 	}
 
-	// Token: 0x0601AFE5 RID: 110565 RVA: 0x0075425B File Offset: 0x0075245B
+	// Token: 0x06018A3A RID: 100922 RVA: 0x0077A3A7 File Offset: 0x007785A7
 	public void HideDialogueText()
 	{
 		NpcIconComponent iconComponent = this.IconComponent;
@@ -623,13 +626,13 @@ public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction, ICompone
 		iconComponent.HideDialogueText();
 	}
 
-	// Token: 0x0601AFE6 RID: 110566 RVA: 0x0075426D File Offset: 0x0075246D
+	// Token: 0x06018A3B RID: 100923 RVA: 0x0077A3B9 File Offset: 0x007785B9
 	public global::Vector GetSelfLocation()
 	{
 		return this.ActorComp.ActorLocationProxy;
 	}
 
-	// Token: 0x0601AFE7 RID: 110567 RVA: 0x0075427C File Offset: 0x0075247C
+	// Token: 0x06018A3C RID: 100924 RVA: 0x0077A3C8 File Offset: 0x007785C8
 	[NullableContext(2)]
 	public UPrimitiveComponent GetAttachToMeshComponent()
 	{
@@ -645,14 +648,14 @@ public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction, ICompone
 		return (this.ActorComp as SceneItemActorComponent).GetStaticMeshComponent();
 	}
 
-	// Token: 0x0601AFE8 RID: 110568 RVA: 0x007542CC File Offset: 0x007524CC
+	// Token: 0x06018A3D RID: 100925 RVA: 0x0077A418 File Offset: 0x00778618
 	public string GetAttachToSocketName()
 	{
 		PawnInfoManageComponent pawnInfoManageComp = this.PawnInfoManageComp;
 		return ((pawnInfoManageComp != null) ? pawnInfoManageComp.GetHeadStateSocketName() : null) ?? NpcIconConfig.Instance.GetNpcIconSocketName();
 	}
 
-	// Token: 0x0601AFE9 RID: 110569 RVA: 0x007542F0 File Offset: 0x007524F0
+	// Token: 0x06018A3E RID: 100926 RVA: 0x0077A43C File Offset: 0x0077863C
 	public unsafe void GetAttachToLocation(global::Vector outVec)
 	{
 		BaseCharacterComponent baseCharacterComponent = this.ActorComp as BaseCharacterComponent;
@@ -690,39 +693,39 @@ public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction, ICompone
 		outVec.FromUeVector(fvectorDouble2);
 	}
 
-	// Token: 0x0601AFEA RID: 110570 RVA: 0x00754445 File Offset: 0x00752645
+	// Token: 0x06018A3F RID: 100927 RVA: 0x0077A591 File Offset: 0x00778791
 	public double GetAddOffsetZ()
 	{
 		PawnInfoManageComponent pawnInfoManageComp = this.PawnInfoManageComp;
 		return (double)((pawnInfoManageComp != null) ? pawnInfoManageComp.GetHeadStateOffset() : 0f);
 	}
 
-	// Token: 0x0601AFEB RID: 110571 RVA: 0x0075445E File Offset: 0x0075265E
+	// Token: 0x06018A40 RID: 100928 RVA: 0x0077A5AA File Offset: 0x007787AA
 	public bool IsShowNameInfo()
 	{
 		return this.IsShowNameOnHead;
 	}
 
-	// Token: 0x0601AFEC RID: 110572 RVA: 0x00754466 File Offset: 0x00752666
+	// Token: 0x06018A41 RID: 100929 RVA: 0x0077A5B2 File Offset: 0x007787B2
 	public bool IsShowPlayerInfo()
 	{
 		return this.IsPlayerInfoInUse;
 	}
 
-	// Token: 0x0601AFED RID: 110573 RVA: 0x0075446E File Offset: 0x0075266E
+	// Token: 0x06018A42 RID: 100930 RVA: 0x0077A5BA File Offset: 0x007787BA
 	public bool IsShowQuestInfo()
 	{
 		return this.InternalIsShowQuestInfo;
 	}
 
-	// Token: 0x0601AFEE RID: 110574 RVA: 0x00754476 File Offset: 0x00752676
+	// Token: 0x06018A43 RID: 100931 RVA: 0x0077A5C2 File Offset: 0x007787C2
 	public bool IsDialogTextActive()
 	{
 		NpcIconComponent iconComponent = this.IconComponent;
 		return iconComponent != null && iconComponent.IsDialogueTextActive();
 	}
 
-	// Token: 0x0601AFEF RID: 110575 RVA: 0x0075448C File Offset: 0x0075268C
+	// Token: 0x06018A44 RID: 100932 RVA: 0x0077A5D8 File Offset: 0x007787D8
 	public bool CanTick(float deltaTime)
 	{
 		if (this.IconComponent == null)
@@ -743,13 +746,13 @@ public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction, ICompone
 		return true;
 	}
 
-	// Token: 0x0601AFF0 RID: 110576 RVA: 0x007544EC File Offset: 0x007526EC
+	// Token: 0x06018A45 RID: 100933 RVA: 0x0077A638 File Offset: 0x00778838
 	public bool CanShowHeadItem()
 	{
 		return this.ShowHeadInfo && !PlotModel.Instance.IsInHighLevelPlot() && UiModel.Instance.IsInMainView && base.Entity.Active;
 	}
 
-	// Token: 0x0601AFF1 RID: 110577 RVA: 0x00754524 File Offset: 0x00752724
+	// Token: 0x06018A46 RID: 100934 RVA: 0x0077A670 File Offset: 0x00778870
 	public bool IsInHeadItemShowRange(double disSquared, double maxShowRangeDisSquared, double minShowRangeDisSquared)
 	{
 		CreatureDataComponent component = base.Entity.GetComponent<CreatureDataComponent>();
@@ -771,7 +774,7 @@ public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction, ICompone
 		return disSquared < maxShowRangeDisSquared && disSquared > minShowRangeDisSquared;
 	}
 
-	// Token: 0x0601AFF2 RID: 110578 RVA: 0x00754663 File Offset: 0x00752863
+	// Token: 0x06018A47 RID: 100935 RVA: 0x0077A7AF File Offset: 0x007789AF
 	public bool TryGetHeadStateFollowData(HeadStateFollowData outData)
 	{
 		BattleView battleView = UiManager.Instance.GetViewByName(EUiViewName.BattleView) as BattleView;
@@ -779,14 +782,14 @@ public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction, ICompone
 		return battleHeadStatePanel != null && battleHeadStatePanel.TryGetFollowData(base.Entity.Id, outData);
 	}
 
-	// Token: 0x0601AFF3 RID: 110579 RVA: 0x007546A1 File Offset: 0x007528A1
+	// Token: 0x06018A48 RID: 100936 RVA: 0x0077A7ED File Offset: 0x007789ED
 	public bool GetRootItemState()
 	{
 		NpcIconComponent iconComponent = this.IconComponent;
 		return iconComponent != null && iconComponent.GetRootItemState();
 	}
 
-	// Token: 0x0601AFF4 RID: 110580 RVA: 0x007546B4 File Offset: 0x007528B4
+	// Token: 0x06018A49 RID: 100937 RVA: 0x0077A800 File Offset: 0x00778A00
 	public void EnableHeadInfo(bool enable)
 	{
 		if (this.ShowHeadInfo == enable)
@@ -796,7 +799,7 @@ public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction, ICompone
 		this.ShowHeadInfo = enable;
 	}
 
-	// Token: 0x0601AFF5 RID: 110581 RVA: 0x007546C8 File Offset: 0x007528C8
+	// Token: 0x06018A4A RID: 100938 RVA: 0x0077A814 File Offset: 0x00778A14
 	public bool CanShowPlayerInfo()
 	{
 		BaseActorComponent actorComp = this.ActorComp;
@@ -814,7 +817,7 @@ public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction, ICompone
 		return !(id.GetValueOrDefault() == num & id != null) && OnlineModel.Instance.GetCurrentTeamListById(playerId) != null;
 	}
 
-	// Token: 0x0601AFF6 RID: 110582 RVA: 0x00754748 File Offset: 0x00752948
+	// Token: 0x06018A4B RID: 100939 RVA: 0x0077A894 File Offset: 0x00778A94
 	public void RefreshPlayerInfoState()
 	{
 		bool flag = GameSettingsManager.Instance.GetCurrentValue(EFunction.ShowOtherName, true, true) > 0 && this.CanShowPlayerInfo();
@@ -826,13 +829,13 @@ public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction, ICompone
 		this.UpdatePlayerInfoIcon(flag);
 	}
 
-	// Token: 0x0601AFF7 RID: 110583 RVA: 0x007547A2 File Offset: 0x007529A2
+	// Token: 0x06018A4C RID: 100940 RVA: 0x0077A8EE File Offset: 0x00778AEE
 	private void OnCharacterMorphTypeChanged(Entity entity, EMorphType newMorphType, EMorphType oldMorphType)
 	{
 		this.SetCharacterIconLocation();
 	}
 
-	// Token: 0x0601AFF8 RID: 110584 RVA: 0x007547AC File Offset: 0x007529AC
+	// Token: 0x06018A4D RID: 100941 RVA: 0x0077A8F8 File Offset: 0x00778AF8
 	protected UniTask UpdatePlayerInfoIcon(bool active)
 	{
 		PawnHeadInfoComponent.<UpdatePlayerInfoIcon>d__84 <UpdatePlayerInfoIcon>d__;
@@ -844,7 +847,7 @@ public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction, ICompone
 		return <UpdatePlayerInfoIcon>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601AFF9 RID: 110585 RVA: 0x007547F8 File Offset: 0x007529F8
+	// Token: 0x06018A4E RID: 100942 RVA: 0x0077A944 File Offset: 0x00778B44
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -852,166 +855,168 @@ public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction, ICompone
 			return false;
 		}
 		PawnHeadInfoComponent pawnHeadInfoComponent = (PawnHeadInfoComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ActorComp"))
+		if (pawnHeadInfoComponent.ActorComp == null)
 		{
-			if (pawnHeadInfoComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("PawnInfoManageComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
-			if (pawnHeadInfoComponent.PawnInfoManageComp == null)
-			{
-				this.PawnInfoManageComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PawnInfoManageComponent>(this.PawnInfoManageComp), "PawnInfoManageComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("PawnPerceptionComp"))
+		if (pawnHeadInfoComponent.PawnInfoManageComp == null)
 		{
-			if (pawnHeadInfoComponent.PawnPerceptionComp == null)
-			{
-				this.PawnPerceptionComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PawnPerceptionComponent>(this.PawnPerceptionComp), "PawnPerceptionComp"))
-			{
-				return false;
-			}
+			this.PawnInfoManageComp = null;
 		}
-		if (base.CanResetComponentProperty("PawnInteractComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PawnInfoManageComp), "PawnInfoManageComp"))
 		{
-			if (pawnHeadInfoComponent.PawnInteractComp == null)
-			{
-				this.PawnInteractComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PawnInteractNewComponent>(this.PawnInteractComp), "PawnInteractComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("SelfLocationVector"))
+		if (pawnHeadInfoComponent.PawnPerceptionComp == null)
 		{
-			if (pawnHeadInfoComponent.SelfLocationVector == null)
-			{
-				this.SelfLocationVector = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.SelfLocationVector), "SelfLocationVector"))
-			{
-				return false;
-			}
+			this.PawnPerceptionComp = null;
 		}
-		if (base.CanResetComponentProperty("IconComponent"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PawnPerceptionComp), "PawnPerceptionComp"))
 		{
-			if (pawnHeadInfoComponent.IconComponent == null)
-			{
-				this.IconComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<NpcIconComponent>(this.IconComponent), "IconComponent"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("IconCompCreatedPromise"))
+		if (pawnHeadInfoComponent.PawnInteractComp == null)
 		{
-			if (pawnHeadInfoComponent.IconCompCreatedPromise == null)
-			{
-				this.IconCompCreatedPromise = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CustomPromise>(this.IconCompCreatedPromise), "IconCompCreatedPromise"))
-			{
-				return false;
-			}
+			this.PawnInteractComp = null;
 		}
-		if (base.CanResetComponentProperty("PlayerNearbyEvent"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PawnInteractComp), "PawnInteractComp"))
 		{
-			if (pawnHeadInfoComponent.PlayerNearbyEvent == null)
-			{
-				this.PlayerNearbyEvent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PlayerPerceptionEvent>(this.PlayerNearbyEvent), "PlayerNearbyEvent"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("AutoDestroyCheck"))
+		if (pawnHeadInfoComponent.SelfLocationVector == null)
 		{
-			this.AutoDestroyCheck = pawnHeadInfoComponent.AutoDestroyCheck;
+			this.SelfLocationVector = null;
 		}
-		if (base.CanResetComponentProperty("DestroyIconCompCountDown"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SelfLocationVector), "SelfLocationVector"))
 		{
-			this.DestroyIconCompCountDown = pawnHeadInfoComponent.DestroyIconCompCountDown;
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsFixBornFinish"))
+		if (pawnHeadInfoComponent.IconComponent == null)
 		{
-			this.IsFixBornFinish = pawnHeadInfoComponent.IsFixBornFinish;
+			this.IconComponent = null;
 		}
-		if (base.CanResetComponentProperty("IsPendingCreateBeforeFixBorn"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.IconComponent), "IconComponent"))
 		{
-			this.IsPendingCreateBeforeFixBorn = pawnHeadInfoComponent.IsPendingCreateBeforeFixBorn;
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsQuestIconInUse"))
+		if (pawnHeadInfoComponent.CreatingIconComponent == null)
 		{
-			this.IsQuestIconInUse = pawnHeadInfoComponent.IsQuestIconInUse;
+			this.CreatingIconComponent = null;
 		}
-		if (base.CanResetComponentProperty("IsDialogIconInUse"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatingIconComponent), "CreatingIconComponent"))
 		{
-			this.IsDialogIconInUse = pawnHeadInfoComponent.IsDialogIconInUse;
+			return false;
 		}
-		if (base.CanResetComponentProperty("DialogWorldScale3D"))
+		if (pawnHeadInfoComponent.IconCompCreatedPromise == null)
 		{
-			this.DialogWorldScale3D = pawnHeadInfoComponent.DialogWorldScale3D;
+			this.IconCompCreatedPromise = null;
 		}
-		if (base.CanResetComponentProperty("IsHeadNameInUse"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.IconCompCreatedPromise), "IconCompCreatedPromise"))
 		{
-			this.IsHeadNameInUse = pawnHeadInfoComponent.IsHeadNameInUse;
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsPlayerInfoInUse"))
+		if (pawnHeadInfoComponent.PlayerNearbyEvent == null)
 		{
-			this.IsPlayerInfoInUse = pawnHeadInfoComponent.IsPlayerInfoInUse;
+			this.PlayerNearbyEvent = null;
 		}
-		if (base.CanResetComponentProperty("IsShowNameOnHead"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PlayerNearbyEvent), "PlayerNearbyEvent"))
 		{
-			this.IsShowNameOnHead = pawnHeadInfoComponent.IsShowNameOnHead;
+			return false;
 		}
-		if (base.CanResetComponentProperty("ShowHeadInfo"))
-		{
-			this.ShowHeadInfo = pawnHeadInfoComponent.ShowHeadInfo;
-		}
-		if (base.CanResetComponentProperty("TickTime"))
-		{
-			this.TickTime = pawnHeadInfoComponent.TickTime;
-		}
-		if (base.CanResetComponentProperty("IsNeedTickCheckQuestIcon"))
-		{
-			this.IsNeedTickCheckQuestIcon = pawnHeadInfoComponent.IsNeedTickCheckQuestIcon;
-		}
-		if (base.CanResetComponentProperty("PendingInteractionSpotVisible"))
-		{
-			this.PendingInteractionSpotVisible = pawnHeadInfoComponent.PendingInteractionSpotVisible;
-		}
+		this.AutoDestroyCheck = pawnHeadInfoComponent.AutoDestroyCheck;
+		this.DestroyIconCompCountDown = pawnHeadInfoComponent.DestroyIconCompCountDown;
+		this.IsFixBornFinish = pawnHeadInfoComponent.IsFixBornFinish;
+		this.IsPendingCreateBeforeFixBorn = pawnHeadInfoComponent.IsPendingCreateBeforeFixBorn;
+		this.IsQuestIconInUse = pawnHeadInfoComponent.IsQuestIconInUse;
+		this.IsDialogIconInUse = pawnHeadInfoComponent.IsDialogIconInUse;
+		this.DialogWorldScale3D = pawnHeadInfoComponent.DialogWorldScale3D;
+		this.IsHeadNameInUse = pawnHeadInfoComponent.IsHeadNameInUse;
+		this.IsPlayerInfoInUse = pawnHeadInfoComponent.IsPlayerInfoInUse;
+		this.IsShowNameOnHead = pawnHeadInfoComponent.IsShowNameOnHead;
+		this.ShowHeadInfo = pawnHeadInfoComponent.ShowHeadInfo;
+		this.TickTime = pawnHeadInfoComponent.TickTime;
+		this.IsNeedTickCheckQuestIcon = pawnHeadInfoComponent.IsNeedTickCheckQuestIcon;
+		this.PendingInteractionSpotVisible = pawnHeadInfoComponent.PendingInteractionSpotVisible;
 		return true;
 	}
 
-	// Token: 0x0400D1DB RID: 53723
+	// Token: 0x170026F5 RID: 9973
+	// (get) Token: 0x06018A4F RID: 100943 RVA: 0x0077AB8F File Offset: 0x00778D8F
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170026F6 RID: 9974
+	// (get) Token: 0x06018A50 RID: 100944 RVA: 0x0077AB92 File Offset: 0x00778D92
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170026F7 RID: 9975
+	// (get) Token: 0x06018A51 RID: 100945 RVA: 0x0077AB95 File Offset: 0x00778D95
+	public override bool NeedEnableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170026F8 RID: 9976
+	// (get) Token: 0x06018A52 RID: 100946 RVA: 0x0077AB98 File Offset: 0x00778D98
+	public override bool NeedDisableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170026F9 RID: 9977
+	// (get) Token: 0x06018A53 RID: 100947 RVA: 0x0077AB9B File Offset: 0x00778D9B
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170026FA RID: 9978
+	// (get) Token: 0x06018A54 RID: 100948 RVA: 0x0077AB9E File Offset: 0x00778D9E
+	public override bool NeedEntityWasRecentlyRenderedOnScreenChangeInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400D5FC RID: 54780
 	private const int CHECK_QUEST_ICON_INTERVAL = 1000;
 
-	// Token: 0x0400D1DC RID: 53724
+	// Token: 0x0400D5FD RID: 54781
 	private const int DESTROY_ICON_COMP_TIME = 6000;
 
-	// Token: 0x0400D1DD RID: 53725
+	// Token: 0x0400D5FE RID: 54782
 	private const int MAX_ICON_COMP_DISTANCE = 3000;
 
-	// Token: 0x0400D1DE RID: 53726
+	// Token: 0x0400D5FF RID: 54783
 	private const string PLAYER_INFO_DECORATOR_KEY = "PrefabTextItem_PlayerName_Text";
 
-	// Token: 0x0400D1DF RID: 53727
+	// Token: 0x0400D600 RID: 54784
 	[StaticVariableRuleIgnore]
 	private static readonly string[] playerInfoIconPaths = new string[]
 	{
@@ -1020,80 +1025,84 @@ public class PawnHeadInfoComponent : EntityComponent, INpcIconFunction, ICompone
 		"/Game/Aki/UI/UIResources/Common/Atlas/SP_Common3P.SP_Common3P"
 	};
 
-	// Token: 0x0400D1E0 RID: 53728
+	// Token: 0x0400D601 RID: 54785
 	[Nullable(2)]
 	private BaseActorComponent ActorComp;
 
-	// Token: 0x0400D1E1 RID: 53729
+	// Token: 0x0400D602 RID: 54786
 	[Nullable(2)]
 	private PawnInfoManageComponent PawnInfoManageComp;
 
-	// Token: 0x0400D1E2 RID: 53730
+	// Token: 0x0400D603 RID: 54787
 	[Nullable(2)]
 	private PawnPerceptionComponent PawnPerceptionComp;
 
-	// Token: 0x0400D1E3 RID: 53731
+	// Token: 0x0400D604 RID: 54788
 	[Nullable(2)]
 	private PawnInteractNewComponent PawnInteractComp;
 
-	// Token: 0x0400D1E4 RID: 53732
+	// Token: 0x0400D605 RID: 54789
 	[Nullable(2)]
 	private global::Vector SelfLocationVector;
 
-	// Token: 0x0400D1E5 RID: 53733
+	// Token: 0x0400D606 RID: 54790
 	[Nullable(2)]
 	private NpcIconComponent IconComponent;
 
-	// Token: 0x0400D1E6 RID: 53734
+	// Token: 0x0400D607 RID: 54791
+	[Nullable(2)]
+	private NpcIconComponent CreatingIconComponent;
+
+	// Token: 0x0400D608 RID: 54792
 	[Nullable(2)]
 	private CustomPromise IconCompCreatedPromise;
 
-	// Token: 0x0400D1E7 RID: 53735
+	// Token: 0x0400D609 RID: 54793
 	[Nullable(2)]
 	private PlayerPerceptionEvent PlayerNearbyEvent;
 
-	// Token: 0x0400D1E8 RID: 53736
+	// Token: 0x0400D60A RID: 54794
 	private bool AutoDestroyCheck = true;
 
-	// Token: 0x0400D1E9 RID: 53737
+	// Token: 0x0400D60B RID: 54795
 	private float DestroyIconCompCountDown;
 
-	// Token: 0x0400D1EA RID: 53738
+	// Token: 0x0400D60C RID: 54796
 	private bool IsFixBornFinish;
 
-	// Token: 0x0400D1EB RID: 53739
+	// Token: 0x0400D60D RID: 54797
 	private bool IsPendingCreateBeforeFixBorn;
 
-	// Token: 0x0400D1EC RID: 53740
+	// Token: 0x0400D60E RID: 54798
 	private bool IsQuestIconInUse;
 
-	// Token: 0x0400D1ED RID: 53741
+	// Token: 0x0400D60F RID: 54799
 	protected bool IsDialogIconInUse;
 
-	// Token: 0x0400D1EE RID: 53742
+	// Token: 0x0400D610 RID: 54800
 	protected float DialogWorldScale3D = 0.5f;
 
-	// Token: 0x0400D1EF RID: 53743
+	// Token: 0x0400D611 RID: 54801
 	private bool IsHeadNameInUse;
 
-	// Token: 0x0400D1F0 RID: 53744
+	// Token: 0x0400D612 RID: 54802
 	private bool IsPlayerInfoInUse;
 
-	// Token: 0x0400D1F1 RID: 53745
+	// Token: 0x0400D613 RID: 54803
 	private readonly bool InternalIsShowQuestInfo;
 
-	// Token: 0x0400D1F2 RID: 53746
+	// Token: 0x0400D614 RID: 54804
 	private bool IsShowNameOnHead;
 
-	// Token: 0x0400D1F3 RID: 53747
+	// Token: 0x0400D615 RID: 54805
 	private bool ShowHeadInfo = true;
 
-	// Token: 0x0400D1F4 RID: 53748
+	// Token: 0x0400D616 RID: 54806
 	private float TickTime;
 
-	// Token: 0x0400D1F5 RID: 53749
+	// Token: 0x0400D617 RID: 54807
 	private bool IsNeedTickCheckQuestIcon;
 
-	// Token: 0x0400D1F6 RID: 53750
+	// Token: 0x0400D618 RID: 54808
 	private bool PendingInteractionSpotVisible;
 }

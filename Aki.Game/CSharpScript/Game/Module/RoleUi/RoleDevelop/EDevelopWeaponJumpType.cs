@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 {
-	// Token: 0x02004D0D RID: 19725
+	// Token: 0x02003CC0 RID: 15552
 	public enum EDevelopWeaponJumpType
 	{
-		// Token: 0x0401B1E3 RID: 111075
+		// Token: 0x04015B6E RID: 88942
 		FiveStarLimited = 1,
-		// Token: 0x0401B1E4 RID: 111076
+		// Token: 0x04015B6F RID: 88943
 		FiveStarRegular,
-		// Token: 0x0401B1E5 RID: 111077
+		// Token: 0x04015B70 RID: 88944
 		ItemAccess,
-		// Token: 0x0401B1E6 RID: 111078
+		// Token: 0x04015B71 RID: 88945
 		Inaccessible
 	}
 }

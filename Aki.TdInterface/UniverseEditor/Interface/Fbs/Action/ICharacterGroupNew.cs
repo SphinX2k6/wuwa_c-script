@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006337 RID: 25399
+	// Token: 0x020069A8 RID: 27048
 	public struct ICharacterGroupNew : IFlatbufferObject
 	{
-		// Token: 0x1700BD8E RID: 48526
-		// (get) Token: 0x0602BEED RID: 179949 RVA: 0x00609ED6 File Offset: 0x006080D6
+		// Token: 0x1700C716 RID: 50966
+		// (get) Token: 0x0602E657 RID: 190039 RVA: 0x0065502A File Offset: 0x0065322A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602BEEE RID: 179950 RVA: 0x00609EE3 File Offset: 0x006080E3
+		// Token: 0x0602E658 RID: 190040 RVA: 0x00655037 File Offset: 0x00653237
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602BEEF RID: 179951 RVA: 0x00609EEC File Offset: 0x006080EC
+		// Token: 0x0602E659 RID: 190041 RVA: 0x00655040 File Offset: 0x00653240
 		public static ICharacterGroupNew GetRootAsICharacterGroupNew(ByteBuffer _bb)
 		{
 			return ICharacterGroupNew.GetRootAsICharacterGroupNew(_bb, default(ICharacterGroupNew));
 		}
 
-		// Token: 0x0602BEF0 RID: 179952 RVA: 0x00609F08 File Offset: 0x00608108
+		// Token: 0x0602E65A RID: 190042 RVA: 0x0065505C File Offset: 0x0065325C
 		public static ICharacterGroupNew GetRootAsICharacterGroupNew(ByteBuffer _bb, ICharacterGroupNew obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602BEF1 RID: 179953 RVA: 0x00609F25 File Offset: 0x00608125
+		// Token: 0x0602E65B RID: 190043 RVA: 0x00655079 File Offset: 0x00653279
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602BEF2 RID: 179954 RVA: 0x00609F34 File Offset: 0x00608134
+		// Token: 0x0602E65C RID: 190044 RVA: 0x00655088 File Offset: 0x00653288
 		public ICharacterGroupNew __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BD8F RID: 48527
-		// (get) Token: 0x0602BEF3 RID: 179955 RVA: 0x00609F44 File Offset: 0x00608144
+		// Token: 0x1700C717 RID: 50967
+		// (get) Token: 0x0602E65D RID: 190045 RVA: 0x00655098 File Offset: 0x00653298
 		public int CharacterId
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BD90 RID: 48528
-		// (get) Token: 0x0602BEF4 RID: 179956 RVA: 0x00609F80 File Offset: 0x00608180
+		// Token: 0x1700C718 RID: 50968
+		// (get) Token: 0x0602E65E RID: 190046 RVA: 0x006550D4 File Offset: 0x006532D4
 		public bool IsAiCharacter
 		{
 			get
@@ -73,7 +73,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602BEF5 RID: 179957 RVA: 0x00609FBF File Offset: 0x006081BF
+		// Token: 0x0602E65F RID: 190047 RVA: 0x00655113 File Offset: 0x00653313
 		public static Offset<ICharacterGroupNew> CreateICharacterGroupNew(FlatBufferBuilder builder, int CharacterId = 0, bool IsAiCharacter = false)
 		{
 			builder.StartTable(2);
@@ -82,31 +82,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ICharacterGroupNew.EndICharacterGroupNew(builder);
 		}
 
-		// Token: 0x0602BEF6 RID: 179958 RVA: 0x00609FDC File Offset: 0x006081DC
+		// Token: 0x0602E660 RID: 190048 RVA: 0x00655130 File Offset: 0x00653330
 		public static void StartICharacterGroupNew(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602BEF7 RID: 179959 RVA: 0x00609FE5 File Offset: 0x006081E5
+		// Token: 0x0602E661 RID: 190049 RVA: 0x00655139 File Offset: 0x00653339
 		public static void AddCharacterId(FlatBufferBuilder builder, int characterId)
 		{
 			builder.AddInt(0, characterId, 0);
 		}
 
-		// Token: 0x0602BEF8 RID: 179960 RVA: 0x00609FF0 File Offset: 0x006081F0
+		// Token: 0x0602E662 RID: 190050 RVA: 0x00655144 File Offset: 0x00653344
 		public static void AddIsAiCharacter(FlatBufferBuilder builder, bool isAiCharacter)
 		{
 			builder.AddBool(1, isAiCharacter, false);
 		}
 
-		// Token: 0x0602BEF9 RID: 179961 RVA: 0x00609FFB File Offset: 0x006081FB
+		// Token: 0x0602E663 RID: 190051 RVA: 0x0065514F File Offset: 0x0065334F
 		public static Offset<ICharacterGroupNew> EndICharacterGroupNew(FlatBufferBuilder builder)
 		{
 			return new Offset<ICharacterGroupNew>(builder.EndTable());
 		}
 
-		// Token: 0x0602BEFA RID: 179962 RVA: 0x0060A008 File Offset: 0x00608208
+		// Token: 0x0602E664 RID: 190052 RVA: 0x0065515C File Offset: 0x0065335C
 		public ICharacterGroupNewT UnPack()
 		{
 			ICharacterGroupNewT characterGroupNewT = new ICharacterGroupNewT();
@@ -114,14 +114,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return characterGroupNewT;
 		}
 
-		// Token: 0x0602BEFB RID: 179963 RVA: 0x0060A023 File Offset: 0x00608223
+		// Token: 0x0602E665 RID: 190053 RVA: 0x00655177 File Offset: 0x00653377
 		public void UnPackTo(ICharacterGroupNewT _o)
 		{
 			_o.CharacterId = this.CharacterId;
 			_o.IsAiCharacter = this.IsAiCharacter;
 		}
 
-		// Token: 0x0602BEFC RID: 179964 RVA: 0x0060A040 File Offset: 0x00608240
+		// Token: 0x0602E666 RID: 190054 RVA: 0x00655194 File Offset: 0x00653394
 		public static Offset<ICharacterGroupNew> Pack(FlatBufferBuilder builder, ICharacterGroupNewT _o)
 		{
 			if (_o == null)
@@ -131,7 +131,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ICharacterGroupNew.CreateICharacterGroupNew(builder, _o.CharacterId, _o.IsAiCharacter);
 		}
 
-		// Token: 0x040108FE RID: 67838
+		// Token: 0x04011713 RID: 71443
 		private Table __p;
 	}
 }

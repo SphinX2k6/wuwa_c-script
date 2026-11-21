@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.FixProcessor
 {
-	// Token: 0x0200475A RID: 18266
+	// Token: 0x02004BC2 RID: 19394
 	public struct IGlobalFix : IFlatbufferObject
 	{
-		// Token: 0x17008308 RID: 33544
-		// (get) Token: 0x0601C1CF RID: 115151 RVA: 0x003FBB0B File Offset: 0x003F9D0B
+		// Token: 0x17008949 RID: 35145
+		// (get) Token: 0x0601D9A4 RID: 121252 RVA: 0x00427DA7 File Offset: 0x00425FA7
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.FixProcessor
 			}
 		}
 
-		// Token: 0x0601C1D0 RID: 115152 RVA: 0x003FBB18 File Offset: 0x003F9D18
+		// Token: 0x0601D9A5 RID: 121253 RVA: 0x00427DB4 File Offset: 0x00425FB4
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601C1D1 RID: 115153 RVA: 0x003FBB20 File Offset: 0x003F9D20
+		// Token: 0x0601D9A6 RID: 121254 RVA: 0x00427DBC File Offset: 0x00425FBC
 		public static IGlobalFix GetRootAsIGlobalFix(ByteBuffer _bb)
 		{
 			return IGlobalFix.GetRootAsIGlobalFix(_bb, default(IGlobalFix));
 		}
 
-		// Token: 0x0601C1D2 RID: 115154 RVA: 0x003FBB3C File Offset: 0x003F9D3C
+		// Token: 0x0601D9A7 RID: 121255 RVA: 0x00427DD8 File Offset: 0x00425FD8
 		public static IGlobalFix GetRootAsIGlobalFix(ByteBuffer _bb, IGlobalFix obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601C1D3 RID: 115155 RVA: 0x003FBB59 File Offset: 0x003F9D59
+		// Token: 0x0601D9A8 RID: 121256 RVA: 0x00427DF5 File Offset: 0x00425FF5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601C1D4 RID: 115156 RVA: 0x003FBB68 File Offset: 0x003F9D68
+		// Token: 0x0601D9A9 RID: 121257 RVA: 0x00427E04 File Offset: 0x00426004
 		public IGlobalFix __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008309 RID: 33545
-		// (get) Token: 0x0601C1D5 RID: 115157 RVA: 0x003FBB78 File Offset: 0x003F9D78
+		// Token: 0x1700894A RID: 35146
+		// (get) Token: 0x0601D9AA RID: 121258 RVA: 0x00427E14 File Offset: 0x00426014
 		public int Id
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.FixProcessor
 			}
 		}
 
-		// Token: 0x1700830A RID: 33546
-		// (get) Token: 0x0601C1D6 RID: 115158 RVA: 0x003FBBB4 File Offset: 0x003F9DB4
+		// Token: 0x1700894B RID: 35147
+		// (get) Token: 0x0601D9AB RID: 121259 RVA: 0x00427E50 File Offset: 0x00426050
 		public int DungeonId
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.FixProcessor
 			}
 		}
 
-		// Token: 0x1700830B RID: 33547
-		// (get) Token: 0x0601C1D7 RID: 115159 RVA: 0x003FBBF0 File Offset: 0x003F9DF0
+		// Token: 0x1700894C RID: 35148
+		// (get) Token: 0x0601D9AC RID: 121260 RVA: 0x00427E8C File Offset: 0x0042608C
 		public int ExecuteCount
 		{
 			get
@@ -93,8 +93,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.FixProcessor
 			}
 		}
 
-		// Token: 0x1700830C RID: 33548
-		// (get) Token: 0x0601C1D8 RID: 115160 RVA: 0x003FBC2C File Offset: 0x003F9E2C
+		// Token: 0x1700894D RID: 35149
+		// (get) Token: 0x0601D9AD RID: 121261 RVA: 0x00427EC8 File Offset: 0x004260C8
 		public int ExecuteCycle
 		{
 			get
@@ -108,8 +108,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.FixProcessor
 			}
 		}
 
-		// Token: 0x1700830D RID: 33549
-		// (get) Token: 0x0601C1D9 RID: 115161 RVA: 0x003FBC6C File Offset: 0x003F9E6C
+		// Token: 0x1700894E RID: 35150
+		// (get) Token: 0x0601D9AE RID: 121262 RVA: 0x00427F08 File Offset: 0x00426108
 		public IConditionGroup? Conditions
 		{
 			get
@@ -123,8 +123,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.FixProcessor
 			}
 		}
 
-		// Token: 0x1700830E RID: 33550
-		// (get) Token: 0x0601C1DA RID: 115162 RVA: 0x003FBCCC File Offset: 0x003F9ECC
+		// Token: 0x1700894F RID: 35151
+		// (get) Token: 0x0601D9AF RID: 121263 RVA: 0x00427F68 File Offset: 0x00426168
 		public IGlobalFixActions? Actions
 		{
 			get
@@ -138,7 +138,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.FixProcessor
 			}
 		}
 
-		// Token: 0x0601C1DB RID: 115163 RVA: 0x003FBD2A File Offset: 0x003F9F2A
+		// Token: 0x0601D9B0 RID: 121264 RVA: 0x00427FC6 File Offset: 0x004261C6
 		public static Offset<IGlobalFix> CreateIGlobalFix(FlatBufferBuilder builder, int Id = 0, int DungeonId = 0, int ExecuteCount = 0, int ExecuteCycle = 0, Offset<IConditionGroup> ConditionsOffset = default(Offset<IConditionGroup>), Offset<IGlobalFixActions> ActionsOffset = default(Offset<IGlobalFixActions>))
 		{
 			builder.StartTable(6);
@@ -151,55 +151,55 @@ namespace Aki.UniverseEditor.Interface.Fbs.FixProcessor
 			return IGlobalFix.EndIGlobalFix(builder);
 		}
 
-		// Token: 0x0601C1DC RID: 115164 RVA: 0x003FBD66 File Offset: 0x003F9F66
+		// Token: 0x0601D9B1 RID: 121265 RVA: 0x00428002 File Offset: 0x00426202
 		public static void StartIGlobalFix(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x0601C1DD RID: 115165 RVA: 0x003FBD6F File Offset: 0x003F9F6F
+		// Token: 0x0601D9B2 RID: 121266 RVA: 0x0042800B File Offset: 0x0042620B
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(0, id, 0);
 		}
 
-		// Token: 0x0601C1DE RID: 115166 RVA: 0x003FBD7A File Offset: 0x003F9F7A
+		// Token: 0x0601D9B3 RID: 121267 RVA: 0x00428016 File Offset: 0x00426216
 		public static void AddDungeonId(FlatBufferBuilder builder, int dungeonId)
 		{
 			builder.AddInt(1, dungeonId, 0);
 		}
 
-		// Token: 0x0601C1DF RID: 115167 RVA: 0x003FBD85 File Offset: 0x003F9F85
+		// Token: 0x0601D9B4 RID: 121268 RVA: 0x00428021 File Offset: 0x00426221
 		public static void AddExecuteCount(FlatBufferBuilder builder, int executeCount)
 		{
 			builder.AddInt(2, executeCount, 0);
 		}
 
-		// Token: 0x0601C1E0 RID: 115168 RVA: 0x003FBD90 File Offset: 0x003F9F90
+		// Token: 0x0601D9B5 RID: 121269 RVA: 0x0042802C File Offset: 0x0042622C
 		public static void AddExecuteCycle(FlatBufferBuilder builder, int executeCycle)
 		{
 			builder.AddInt(3, executeCycle, 0);
 		}
 
-		// Token: 0x0601C1E1 RID: 115169 RVA: 0x003FBD9B File Offset: 0x003F9F9B
+		// Token: 0x0601D9B6 RID: 121270 RVA: 0x00428037 File Offset: 0x00426237
 		public static void AddConditions(FlatBufferBuilder builder, Offset<IConditionGroup> conditionsOffset)
 		{
 			builder.AddOffset(4, conditionsOffset.Value, 0);
 		}
 
-		// Token: 0x0601C1E2 RID: 115170 RVA: 0x003FBDAB File Offset: 0x003F9FAB
+		// Token: 0x0601D9B7 RID: 121271 RVA: 0x00428047 File Offset: 0x00426247
 		public static void AddActions(FlatBufferBuilder builder, Offset<IGlobalFixActions> actionsOffset)
 		{
 			builder.AddOffset(5, actionsOffset.Value, 0);
 		}
 
-		// Token: 0x0601C1E3 RID: 115171 RVA: 0x003FBDBB File Offset: 0x003F9FBB
+		// Token: 0x0601D9B8 RID: 121272 RVA: 0x00428057 File Offset: 0x00426257
 		public static Offset<IGlobalFix> EndIGlobalFix(FlatBufferBuilder builder)
 		{
 			return new Offset<IGlobalFix>(builder.EndTable());
 		}
 
-		// Token: 0x0601C1E4 RID: 115172 RVA: 0x003FBDC8 File Offset: 0x003F9FC8
+		// Token: 0x0601D9B9 RID: 121273 RVA: 0x00428064 File Offset: 0x00426264
 		public IGlobalFixT UnPack()
 		{
 			IGlobalFixT globalFixT = new IGlobalFixT();
@@ -207,7 +207,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.FixProcessor
 			return globalFixT;
 		}
 
-		// Token: 0x0601C1E5 RID: 115173 RVA: 0x003FBDE4 File Offset: 0x003F9FE4
+		// Token: 0x0601D9BA RID: 121274 RVA: 0x00428080 File Offset: 0x00426280
 		public void UnPackTo(IGlobalFixT _o)
 		{
 			_o.Id = this.Id;
@@ -218,7 +218,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.FixProcessor
 			_o.Actions = ((this.Actions != null) ? this.Actions.Value.UnPack() : null);
 		}
 
-		// Token: 0x0601C1E6 RID: 115174 RVA: 0x003FBE80 File Offset: 0x003FA080
+		// Token: 0x0601D9BB RID: 121275 RVA: 0x0042811C File Offset: 0x0042631C
 		public static Offset<IGlobalFix> Pack(FlatBufferBuilder builder, IGlobalFixT _o)
 		{
 			if (_o == null)
@@ -230,7 +230,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.FixProcessor
 			return IGlobalFix.CreateIGlobalFix(builder, _o.Id, _o.DungeonId, _o.ExecuteCount, _o.ExecuteCycle, conditionsOffset, actionsOffset);
 		}
 
-		// Token: 0x0400CA57 RID: 51799
+		// Token: 0x0400D486 RID: 54406
 		private Table __p;
 	}
 }

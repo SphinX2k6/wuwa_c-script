@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200291B RID: 10523
+	// Token: 0x02002BF7 RID: 11255
 	public class IMp4GamepadShakeFadeInConfig
 	{
-		// Token: 0x0600E990 RID: 59792 RVA: 0x00223BAA File Offset: 0x00221DAA
-		[NullableContext(1)]
+		// Token: 0x0600F7E2 RID: 63458 RVA: 0x00240F02 File Offset: 0x0023F102
 		public static IMp4GamepadShakeFadeInConfig Create(IMp4GamepadShakeFadeInConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700491C RID: 18716
-		// (get) Token: 0x0600E991 RID: 59793 RVA: 0x00223BCC File Offset: 0x00221DCC
+		// Token: 0x17004CA2 RID: 19618
+		// (get) Token: 0x0600F7E3 RID: 63459 RVA: 0x00240F24 File Offset: 0x0023F124
 		public virtual float? FadeInTime
 		{
 			get
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700491D RID: 18717
-		// (get) Token: 0x0600E992 RID: 59794 RVA: 0x00223C04 File Offset: 0x00221E04
+		// Token: 0x17004CA3 RID: 19619
+		// (get) Token: 0x0600F7E4 RID: 63460 RVA: 0x00240F5C File Offset: 0x0023F15C
 		public virtual EMp4GamepadShakeCurve? FadeInCurve
 		{
 			get
@@ -49,7 +47,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040080E1 RID: 32993
+		// Token: 0x040087AF RID: 34735
 		private IMp4GamepadShakeFadeInConfig Instance;
 	}
 }

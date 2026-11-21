@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020002AA RID: 682
+	// Token: 0x020002BF RID: 703
 	public class ConfigFarmGoldActivityAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001001 RID: 4097 RVA: 0x000B3E88 File Offset: 0x000B2088
+		// Token: 0x0600107F RID: 4223 RVA: 0x000BA394 File Offset: 0x000B8594
 		static ConfigFarmGoldActivityAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigFarmGoldActivityAll.CreateStaticDefaultValue), new Action(ConfigFarmGoldActivityAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001002 RID: 4098 RVA: 0x000B3EA8 File Offset: 0x000B20A8
+		// Token: 0x06001080 RID: 4224 RVA: 0x000BA3B4 File Offset: 0x000B85B4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigFarmGoldActivityAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001003 RID: 4099 RVA: 0x000B3F27 File Offset: 0x000B2127
+		// Token: 0x06001081 RID: 4225 RVA: 0x000BA433 File Offset: 0x000B8633
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigFarmGoldActivityAll.LogPair = null;
 			ConfigFarmGoldActivityAll.HandleId = 0;
 		}
 
-		// Token: 0x06001004 RID: 4100 RVA: 0x000B3F35 File Offset: 0x000B2135
+		// Token: 0x06001082 RID: 4226 RVA: 0x000BA441 File Offset: 0x000B8641
 		public static void Init()
 		{
 			ConfigFarmGoldActivityAll.HandleId = ConfigCommon.InitDataStatement(ConfigFarmGoldActivityAll.HandleId, "db_farmgold.db", "select BinData from `FarmGoldActivity`");
 		}
 
-		// Token: 0x06001005 RID: 4101 RVA: 0x000B3F50 File Offset: 0x000B2150
+		// Token: 0x06001083 RID: 4227 RVA: 0x000BA45C File Offset: 0x000B865C
 		[NullableContext(2)]
 		public static IReadOnlyList<FarmGoldActivity> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x0400128A RID: 4746
+		// Token: 0x0400131D RID: 4893
 		private const string DB = "db_farmgold.db";
 
-		// Token: 0x0400128B RID: 4747
+		// Token: 0x0400131E RID: 4894
 		private const string FILE = "b.爆金币活动.xlsx";
 
-		// Token: 0x0400128C RID: 4748
+		// Token: 0x0400131F RID: 4895
 		private const string TABLE = "FarmGoldActivity";
 
-		// Token: 0x0400128D RID: 4749
+		// Token: 0x04001320 RID: 4896
 		private const string COMMAND = "select BinData from `FarmGoldActivity`";
 
-		// Token: 0x0400128E RID: 4750
+		// Token: 0x04001321 RID: 4897
 		private const string KEY_PREFIX = "FarmGoldActivityAll";
 
-		// Token: 0x0400128F RID: 4751
+		// Token: 0x04001322 RID: 4898
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001290 RID: 4752
+		// Token: 0x04001323 RID: 4899
 		private static int HandleId;
 	}
 }

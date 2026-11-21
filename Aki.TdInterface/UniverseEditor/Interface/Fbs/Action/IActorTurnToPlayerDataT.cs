@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006108 RID: 24840
+	// Token: 0x0200676A RID: 26474
 	public class IActorTurnToPlayerDataT
 	{
-		// Token: 0x1700B712 RID: 46866
-		// (get) Token: 0x0602A713 RID: 173843 RVA: 0x005D8C4A File Offset: 0x005D6E4A
-		// (set) Token: 0x0602A714 RID: 173844 RVA: 0x005D8C52 File Offset: 0x005D6E52
+		// Token: 0x1700C07D RID: 49277
+		// (get) Token: 0x0602CDF4 RID: 183796 RVA: 0x00622BF2 File Offset: 0x00620DF2
+		// (set) Token: 0x0602CDF5 RID: 183797 RVA: 0x00622BFA File Offset: 0x00620DFA
 		public EActorTurnToMode Type { get; set; }
 
-		// Token: 0x0602A715 RID: 173845 RVA: 0x005D8C5B File Offset: 0x005D6E5B
+		// Token: 0x0602CDF6 RID: 183798 RVA: 0x00622C03 File Offset: 0x00620E03
 		public IActorTurnToPlayerDataT()
 		{
 			this.Type = EActorTurnToMode.Talker;

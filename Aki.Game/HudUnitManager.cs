@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02001F40 RID: 8000
+// Token: 0x02001402 RID: 5122
 [NullableContext(1)]
 [Nullable(0)]
 public class HudUnitManager : Singleton
 {
-	// Token: 0x0600F724 RID: 63268 RVA: 0x003BB58C File Offset: 0x003B978C
+	// Token: 0x0600CB43 RID: 52035 RVA: 0x003C7078 File Offset: 0x003C5278
 	public bool GetIsInitHud()
 	{
 		return this.IsInitHud;
 	}
 
-	// Token: 0x0600F725 RID: 63269 RVA: 0x003BB594 File Offset: 0x003B9794
+	// Token: 0x0600CB44 RID: 52036 RVA: 0x003C7080 File Offset: 0x003C5280
 	public HudUnitHandleBase New(Type hudUnitHandleClass)
 	{
 		HudUnitHandleBase hudUnitHandleBase = Activator.CreateInstance(hudUnitHandleClass) as HudUnitHandleBase;
@@ -24,7 +24,7 @@ public class HudUnitManager : Singleton
 		return hudUnitHandleBase;
 	}
 
-	// Token: 0x0600F726 RID: 63270 RVA: 0x003BB5C8 File Offset: 0x003B97C8
+	// Token: 0x0600CB45 RID: 52037 RVA: 0x003C70B4 File Offset: 0x003C52B4
 	public void TryNew(Type hudUnitHandleClass)
 	{
 		if (this.Get(hudUnitHandleClass) != null)
@@ -34,7 +34,7 @@ public class HudUnitManager : Singleton
 		this.New(hudUnitHandleClass).OnShowHud();
 	}
 
-	// Token: 0x0600F727 RID: 63271 RVA: 0x003BB5E0 File Offset: 0x003B97E0
+	// Token: 0x0600CB46 RID: 52038 RVA: 0x003C70CC File Offset: 0x003C52CC
 	public void Destroy(Type hudUnitHandleClass)
 	{
 		HudUnitHandleBase hudUnitHandleBase = this.Get(hudUnitHandleClass);
@@ -46,7 +46,7 @@ public class HudUnitManager : Singleton
 		this.HudUnitHandleMap.Remove(name);
 	}
 
-	// Token: 0x0600F728 RID: 63272 RVA: 0x003BB614 File Offset: 0x003B9814
+	// Token: 0x0600CB47 RID: 52039 RVA: 0x003C7100 File Offset: 0x003C5300
 	public void ShowHud()
 	{
 		if (!this.IsInitHud)
@@ -64,7 +64,7 @@ public class HudUnitManager : Singleton
 		}
 	}
 
-	// Token: 0x0600F729 RID: 63273 RVA: 0x003BB6AC File Offset: 0x003B98AC
+	// Token: 0x0600CB48 RID: 52040 RVA: 0x003C7198 File Offset: 0x003C5398
 	public void HideHud()
 	{
 		foreach (HudUnitHandleBase hudUnitHandleBase in this.HudUnitHandleMap.Values)
@@ -73,7 +73,7 @@ public class HudUnitManager : Singleton
 		}
 	}
 
-	// Token: 0x0600F72A RID: 63274 RVA: 0x003BB704 File Offset: 0x003B9904
+	// Token: 0x0600CB49 RID: 52041 RVA: 0x003C71F0 File Offset: 0x003C53F0
 	[return: Nullable(2)]
 	public HudUnitHandleBase Get(Type hudUnitHandleClass)
 	{
@@ -83,7 +83,7 @@ public class HudUnitManager : Singleton
 		return result;
 	}
 
-	// Token: 0x0600F72B RID: 63275 RVA: 0x003BB728 File Offset: 0x003B9928
+	// Token: 0x0600CB4A RID: 52042 RVA: 0x003C7214 File Offset: 0x003C5414
 	public void Clear()
 	{
 		foreach (HudUnitHandleBase hudUnitHandleBase in this.HudUnitHandleMap.Values)
@@ -94,7 +94,7 @@ public class HudUnitManager : Singleton
 		this.IsInitHud = false;
 	}
 
-	// Token: 0x0600F72C RID: 63276 RVA: 0x003BB790 File Offset: 0x003B9990
+	// Token: 0x0600CB4B RID: 52043 RVA: 0x003C727C File Offset: 0x003C547C
 	public void RefreshHudOnInputControllerChanged(EInputControllerType last, EInputControllerType now)
 	{
 		foreach (HudUnitHandleBase hudUnitHandleBase in this.HudUnitHandleMap.Values)
@@ -103,7 +103,7 @@ public class HudUnitManager : Singleton
 		}
 	}
 
-	// Token: 0x0600F72D RID: 63277 RVA: 0x003BB7E8 File Offset: 0x003B99E8
+	// Token: 0x0600CB4C RID: 52044 RVA: 0x003C72D4 File Offset: 0x003C54D4
 	public void Tick(float delta)
 	{
 		foreach (HudUnitHandleBase hudUnitHandleBase in this.HudUnitHandleMap.Values)
@@ -113,7 +113,7 @@ public class HudUnitManager : Singleton
 		this.TickCount++;
 	}
 
-	// Token: 0x0600F72E RID: 63278 RVA: 0x003BB84C File Offset: 0x003B9A4C
+	// Token: 0x0600CB4D RID: 52045 RVA: 0x003C7338 File Offset: 0x003C5538
 	public void AfterTick(float delta)
 	{
 		foreach (HudUnitHandleBase hudUnitHandleBase in this.HudUnitHandleMap.Values)
@@ -122,8 +122,8 @@ public class HudUnitManager : Singleton
 		}
 	}
 
-	// Token: 0x17001338 RID: 4920
-	// (get) Token: 0x0600F72F RID: 63279 RVA: 0x003BB8A4 File Offset: 0x003B9AA4
+	// Token: 0x17001362 RID: 4962
+	// (get) Token: 0x0600CB4E RID: 52046 RVA: 0x003C7390 File Offset: 0x003C5590
 	public static HudUnitManager Instance
 	{
 		get
@@ -137,12 +137,12 @@ public class HudUnitManager : Singleton
 		}
 	}
 
-	// Token: 0x0600F730 RID: 63280 RVA: 0x003BB8C7 File Offset: 0x003B9AC7
+	// Token: 0x0600CB4F RID: 52047 RVA: 0x003C73B3 File Offset: 0x003C55B3
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600F731 RID: 63281 RVA: 0x003BB8C9 File Offset: 0x003B9AC9
+	// Token: 0x0600CB50 RID: 52048 RVA: 0x003C73B5 File Offset: 0x003C55B5
 	public static void ResetStaticDefaultValue()
 	{
 		HudUnitManager instance = HudUnitManager._instance;
@@ -153,28 +153,28 @@ public class HudUnitManager : Singleton
 		HudUnitManager._instance = null;
 	}
 
-	// Token: 0x0600F732 RID: 63282 RVA: 0x003BB8E2 File Offset: 0x003B9AE2
+	// Token: 0x0600CB51 RID: 52049 RVA: 0x003C73CE File Offset: 0x003C55CE
 	static HudUnitManager()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(HudUnitManager.CreateStaticDefaultValue), new Action(HudUnitManager.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04007266 RID: 29286
+	// Token: 0x04007347 RID: 29511
 	public Type[] HudUnitHandleClassArray = new Type[0];
 
-	// Token: 0x04007267 RID: 29287
+	// Token: 0x04007348 RID: 29512
 	public Dictionary<EHudUnitType, Type> HudUnitHandleClassMap = new Dictionary<EHudUnitType, Type>();
 
-	// Token: 0x04007268 RID: 29288
+	// Token: 0x04007349 RID: 29513
 	private readonly Dictionary<string, HudUnitHandleBase> HudUnitHandleMap = new Dictionary<string, HudUnitHandleBase>();
 
-	// Token: 0x04007269 RID: 29289
+	// Token: 0x0400734A RID: 29514
 	private bool IsInitHud;
 
-	// Token: 0x0400726A RID: 29290
+	// Token: 0x0400734B RID: 29515
 	public int TickCount;
 
-	// Token: 0x0400726B RID: 29291
+	// Token: 0x0400734C RID: 29516
 	[Nullable(2)]
 	private static HudUnitManager _instance;
 }

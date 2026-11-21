@@ -3,17 +3,16 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001517 RID: 5399
+	// Token: 0x02001670 RID: 5744
 	public class CommonTip_SetValue
 	{
-		// Token: 0x04004703 RID: 18179
-		[Nullable(1)]
+		// Token: 0x04004A9F RID: 19103
 		public ICommonTipType TipOption;
 
-		// Token: 0x04004704 RID: 18180
+		// Token: 0x04004AA0 RID: 19104
 		public int? Duration;
 
-		// Token: 0x04004705 RID: 18181
+		// Token: 0x04004AA1 RID: 19105
 		[Nullable(2)]
 		public string Token;
 	}

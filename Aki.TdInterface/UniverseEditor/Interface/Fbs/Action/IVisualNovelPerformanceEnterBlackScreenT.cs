@@ -3,40 +3,40 @@ using Aki.UniverseEditor.Interface.Fbs.Common;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020075A8 RID: 30120
+	// Token: 0x02007DA1 RID: 32161
 	public class IVisualNovelPerformanceEnterBlackScreenT
 	{
-		// Token: 0x1700E482 RID: 58498
-		// (get) Token: 0x06036D18 RID: 224536 RVA: 0x00771107 File Offset: 0x0076F307
-		// (set) Token: 0x06036D19 RID: 224537 RVA: 0x0077110F File Offset: 0x0076F30F
+		// Token: 0x1700F0AF RID: 61615
+		// (get) Token: 0x0603A146 RID: 237894 RVA: 0x007D4687 File Offset: 0x007D2887
+		// (set) Token: 0x0603A147 RID: 237895 RVA: 0x007D468F File Offset: 0x007D288F
 		public EVisualNovelPerformanceType Type { get; set; }
 
-		// Token: 0x1700E483 RID: 58499
-		// (get) Token: 0x06036D1A RID: 224538 RVA: 0x00771118 File Offset: 0x0076F318
-		// (set) Token: 0x06036D1B RID: 224539 RVA: 0x00771120 File Offset: 0x0076F320
+		// Token: 0x1700F0B0 RID: 61616
+		// (get) Token: 0x0603A148 RID: 237896 RVA: 0x007D4698 File Offset: 0x007D2898
+		// (set) Token: 0x0603A149 RID: 237897 RVA: 0x007D46A0 File Offset: 0x007D28A0
 		public float StartTime { get; set; }
 
-		// Token: 0x1700E484 RID: 58500
-		// (get) Token: 0x06036D1C RID: 224540 RVA: 0x00771129 File Offset: 0x0076F329
-		// (set) Token: 0x06036D1D RID: 224541 RVA: 0x00771131 File Offset: 0x0076F331
+		// Token: 0x1700F0B1 RID: 61617
+		// (get) Token: 0x0603A14A RID: 237898 RVA: 0x007D46A9 File Offset: 0x007D28A9
+		// (set) Token: 0x0603A14B RID: 237899 RVA: 0x007D46B1 File Offset: 0x007D28B1
 		public TEaseCurveTypeUnion EaseCurve { get; set; }
 
-		// Token: 0x1700E485 RID: 58501
-		// (get) Token: 0x06036D1E RID: 224542 RVA: 0x0077113A File Offset: 0x0076F33A
-		// (set) Token: 0x06036D1F RID: 224543 RVA: 0x00771142 File Offset: 0x0076F342
+		// Token: 0x1700F0B2 RID: 61618
+		// (get) Token: 0x0603A14C RID: 237900 RVA: 0x007D46BA File Offset: 0x007D28BA
+		// (set) Token: 0x0603A14D RID: 237901 RVA: 0x007D46C2 File Offset: 0x007D28C2
 		public float FadeInTime { get; set; }
 
-		// Token: 0x1700E486 RID: 58502
-		// (get) Token: 0x06036D20 RID: 224544 RVA: 0x0077114B File Offset: 0x0076F34B
-		// (set) Token: 0x06036D21 RID: 224545 RVA: 0x00771153 File Offset: 0x0076F353
+		// Token: 0x1700F0B3 RID: 61619
+		// (get) Token: 0x0603A14E RID: 237902 RVA: 0x007D46CB File Offset: 0x007D28CB
+		// (set) Token: 0x0603A14F RID: 237903 RVA: 0x007D46D3 File Offset: 0x007D28D3
 		public EVisualNovelBlackScreenType ScreenType { get; set; }
 
-		// Token: 0x1700E487 RID: 58503
-		// (get) Token: 0x06036D22 RID: 224546 RVA: 0x0077115C File Offset: 0x0076F35C
-		// (set) Token: 0x06036D23 RID: 224547 RVA: 0x00771164 File Offset: 0x0076F364
+		// Token: 0x1700F0B4 RID: 61620
+		// (get) Token: 0x0603A150 RID: 237904 RVA: 0x007D46DC File Offset: 0x007D28DC
+		// (set) Token: 0x0603A151 RID: 237905 RVA: 0x007D46E4 File Offset: 0x007D28E4
 		public byte NullMask { get; set; }
 
-		// Token: 0x06036D24 RID: 224548 RVA: 0x0077116D File Offset: 0x0076F36D
+		// Token: 0x0603A152 RID: 237906 RVA: 0x007D46ED File Offset: 0x007D28ED
 		public IVisualNovelPerformanceEnterBlackScreenT()
 		{
 			this.Type = EVisualNovelPerformanceType.Enter;

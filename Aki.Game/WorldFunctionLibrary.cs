@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -26,6 +25,7 @@ using CSharpScript.Game.LevelGamePlay.LivingCharMeteor;
 using CSharpScript.Game.LevelGamePlay.SceneInteract;
 using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Module.TowerDefenseEvent;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Module.WuYinArea;
 using CSharpScript.Game.NewWorld.Character.Common.Component;
 using CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow;
@@ -41,44 +41,44 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x020034D1 RID: 13521
+// Token: 0x02002A45 RID: 10821
 [UClass("/Game/Aki/TypeScript/Game/World/Bridge/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/World/Bridge/WorldFunctionLibrary.WorldFunctionLibrary_C")]
 public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableResetter, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x0601D722 RID: 120610 RVA: 0x00837ED5 File Offset: 0x008360D5
+	// Token: 0x0601B421 RID: 111649 RVA: 0x0085F37D File Offset: 0x0085D57D
 	static WorldFunctionLibrary()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(WorldFunctionLibrary.CreateStaticDefaultValue), new Action(WorldFunctionLibrary.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601D723 RID: 120611 RVA: 0x00837EF4 File Offset: 0x008360F4
+	// Token: 0x0601B422 RID: 111650 RVA: 0x0085F39C File Offset: 0x0085D59C
 	public static void SetChangeFootStep(bool isChangeFootStep)
 	{
 		WorldFunctionLibrary.IsChangeFootStep = isChangeFootStep;
 	}
 
-	// Token: 0x0601D724 RID: 120612 RVA: 0x00837EFC File Offset: 0x008360FC
+	// Token: 0x0601B423 RID: 111651 RVA: 0x0085F3A4 File Offset: 0x0085D5A4
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool GetChangeFootStep()
 	{
 		return WorldFunctionLibrary.IsChangeFootStep;
 	}
 
-	// Token: 0x0601D725 RID: 120613 RVA: 0x00837F03 File Offset: 0x00836103
+	// Token: 0x0601B424 RID: 111652 RVA: 0x0085F3AB File Offset: 0x0085D5AB
 	public static void SetChangeFootStepMaterialId(int footStepMaterialId)
 	{
 		WorldFunctionLibrary.ChangeFootStepMaterialId = footStepMaterialId;
 	}
 
-	// Token: 0x0601D726 RID: 120614 RVA: 0x00837F0B File Offset: 0x0083610B
+	// Token: 0x0601B425 RID: 111653 RVA: 0x0085F3B3 File Offset: 0x0085D5B3
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static int GetChangeFootStepMaterialId()
 	{
 		return WorldFunctionLibrary.ChangeFootStepMaterialId;
 	}
 
-	// Token: 0x0601D727 RID: 120615 RVA: 0x00837F14 File Offset: 0x00836114
+	// Token: 0x0601B426 RID: 111654 RVA: 0x0085F3BC File Offset: 0x0085D5BC
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool CheckConfigIdByActor(AActor actor, float configId)
@@ -87,7 +87,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return component != null && (float)component.GetPbDataId() == configId;
 	}
 
-	// Token: 0x0601D728 RID: 120616 RVA: 0x00837F42 File Offset: 0x00836142
+	// Token: 0x0601B427 RID: 111655 RVA: 0x0085F3EA File Offset: 0x0085D5EA
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool ActorHasSceneItemTag(AActor actor, float tag)
@@ -95,7 +95,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return ActorUtils.GetEntityByActor(actor, true).Entity.GetComponent<LevelTagComponent>().HasTag((int)tag);
 	}
 
-	// Token: 0x0601D729 RID: 120617 RVA: 0x00837F5C File Offset: 0x0083615C
+	// Token: 0x0601B428 RID: 111656 RVA: 0x0085F404 File Offset: 0x0085D604
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static int GetControlVisionEntityId(int ownerEntityId)
 	{
@@ -120,7 +120,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return 0;
 	}
 
-	// Token: 0x0601D72A RID: 120618 RVA: 0x00837FB8 File Offset: 0x008361B8
+	// Token: 0x0601B429 RID: 111657 RVA: 0x0085F460 File Offset: 0x0085D660
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static int GetVisionEntityId(int ownerEntityId)
 	{
@@ -145,7 +145,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return 0;
 	}
 
-	// Token: 0x0601D72B RID: 120619 RVA: 0x00838014 File Offset: 0x00836214
+	// Token: 0x0601B42A RID: 111658 RVA: 0x0085F4BC File Offset: 0x0085D6BC
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static TArray<int> GetVisionEntityIdList(int ownerEntityId)
@@ -178,7 +178,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return tarray;
 	}
 
-	// Token: 0x0601D72C RID: 120620 RVA: 0x008380E0 File Offset: 0x008362E0
+	// Token: 0x0601B42B RID: 111659 RVA: 0x0085F588 File Offset: 0x0085D788
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetVisionEnable(int ownerEntityId, bool enable)
 	{
@@ -196,14 +196,14 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x0601D72D RID: 120621 RVA: 0x00838135 File Offset: 0x00836335
+	// Token: 0x0601B42C RID: 111660 RVA: 0x0085F5DD File Offset: 0x0085D7DD
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static int GetCustomEntityId(int ownerEntityId, int pos)
 	{
 		return WorldController.Instance.GetCustomEntityId(ownerEntityId, pos);
 	}
 
-	// Token: 0x0601D72E RID: 120622 RVA: 0x00838144 File Offset: 0x00836344
+	// Token: 0x0601B42D RID: 111661 RVA: 0x0085F5EC File Offset: 0x0085D7EC
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public unsafe static void SetCustomEntityEnable(int ownerEntityId, int pos, bool enable, [Nullable(2)] UObject callObject, string reason)
@@ -261,14 +261,14 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		instance4.Error(module4, author4, message4, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 3));
 	}
 
-	// Token: 0x0601D72F RID: 120623 RVA: 0x00838313 File Offset: 0x00836513
+	// Token: 0x0601B42E RID: 111662 RVA: 0x0085F7BB File Offset: 0x0085D9BB
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void ChangeCustomEntityState(int ownerEntityId, int pos, int skillId, FGameplayTag stateTag)
 	{
 		WorldController.Instance.ChangeCustomEntityState(ownerEntityId, pos, skillId, stateTag.TagId());
 	}
 
-	// Token: 0x0601D730 RID: 120624 RVA: 0x00838328 File Offset: 0x00836528
+	// Token: 0x0601B42F RID: 111663 RVA: 0x0085F7D0 File Offset: 0x0085D9D0
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void StartCustomSceneItemEntityTrackPlayer(int ownerEntityId, int pos, float moveSpeed, FRotator initRotatorOffset, float angleSpeed)
 	{
@@ -280,7 +280,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		custionSceneItemMoveComp.StartTrackPlayer(moveSpeed, initRotatorOffset, angleSpeed);
 	}
 
-	// Token: 0x0601D731 RID: 120625 RVA: 0x00838340 File Offset: 0x00836540
+	// Token: 0x0601B430 RID: 111664 RVA: 0x0085F7E8 File Offset: 0x0085D9E8
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void StopCustomSceneItemEntityTrackPlayer(int ownerEntityId, int pos)
 	{
@@ -292,7 +292,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		custionSceneItemMoveComp.StopMove(true, true);
 	}
 
-	// Token: 0x0601D732 RID: 120626 RVA: 0x00838358 File Offset: 0x00836558
+	// Token: 0x0601B431 RID: 111665 RVA: 0x0085F800 File Offset: 0x0085DA00
 	[NullableContext(2)]
 	private unsafe static SceneItemMoveComponent GetCustionSceneItemMoveComp(int ownerEntityId, int pos)
 	{
@@ -328,7 +328,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return entity2.GetComponent<SceneItemMoveComponent>();
 	}
 
-	// Token: 0x0601D733 RID: 120627 RVA: 0x0083842C File Offset: 0x0083662C
+	// Token: 0x0601B432 RID: 111666 RVA: 0x0085F8D4 File Offset: 0x0085DAD4
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static int GetSummonerEntityId(int visionEntityId)
 	{
@@ -347,7 +347,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return CreatureModel.Instance.GetEntityId(component.GetSummonerId());
 	}
 
-	// Token: 0x0601D734 RID: 120628 RVA: 0x0083849C File Offset: 0x0083669C
+	// Token: 0x0601B433 RID: 111667 RVA: 0x0085F944 File Offset: 0x0085DB44
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static int GetVisionId(int visionEntityId)
 	{
@@ -371,7 +371,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return visionComponent.VisionId;
 	}
 
-	// Token: 0x0601D735 RID: 120629 RVA: 0x00838511 File Offset: 0x00836711
+	// Token: 0x0601B434 RID: 111668 RVA: 0x0085F9B9 File Offset: 0x0085DBB9
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetVisionPos(int ownerEntityId, int pos)
 	{
@@ -384,7 +384,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		characterVisionComponent.SetCurrentPosition(pos);
 	}
 
-	// Token: 0x0601D736 RID: 120630 RVA: 0x00838535 File Offset: 0x00836735
+	// Token: 0x0601B435 RID: 111669 RVA: 0x0085F9DD File Offset: 0x0085DBDD
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static int GetVisionPos(int ownerEntityId)
 	{
@@ -397,7 +397,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return characterVisionComponent.GetCurrentPosition();
 	}
 
-	// Token: 0x0601D737 RID: 120631 RVA: 0x0083855C File Offset: 0x0083675C
+	// Token: 0x0601B436 RID: 111670 RVA: 0x0085FA04 File Offset: 0x0085DC04
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static TArray<int> GetSummonEntityIds(int ownerEntityId)
@@ -415,19 +415,24 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		}
 		CreatureDataComponent component = entity.GetComponent<CreatureDataComponent>();
 		TArray<int> tarray = new TArray<int>();
-		WorldGlobal.ToUeInt32Array((from creatureDataId in component.SummonEntityIds
-		select CreatureModel.Instance.GetEntityId(creatureDataId)).ToArray<int>(), tarray);
+		List<long> summonEntityIds = component.SummonEntityIds;
+		int[] array = new int[summonEntityIds.Count];
+		for (int i = 0; i < array.Length; i++)
+		{
+			array[i] = CreatureModel.Instance.GetEntityId(summonEntityIds[i]);
+		}
+		WorldGlobal.ToUeInt32Array(array, tarray);
 		return tarray;
 	}
 
-	// Token: 0x0601D738 RID: 120632 RVA: 0x008385EB File Offset: 0x008367EB
+	// Token: 0x0601B437 RID: 111671 RVA: 0x0085FAA0 File Offset: 0x0085DCA0
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SummonChair(int ownerEntityId)
 	{
 		FollowUtils.SummonChairByOwnerEntity(ownerEntityId);
 	}
 
-	// Token: 0x0601D739 RID: 120633 RVA: 0x008385F4 File Offset: 0x008367F4
+	// Token: 0x0601B438 RID: 111672 RVA: 0x0085FAAC File Offset: 0x0085DCAC
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static long SummonRequest(int skillId, bool isVisible, FTransformDouble transform, int summonerId, int summonConfigId)
 	{
@@ -439,14 +444,14 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return 0L;
 	}
 
-	// Token: 0x0601D73A RID: 120634 RVA: 0x00838626 File Offset: 0x00836826
+	// Token: 0x0601B439 RID: 111673 RVA: 0x0085FADE File Offset: 0x0085DCDE
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SummonRandomRequest(int summonerId, int index, FTransformDouble transform, int skillId, bool isVisible)
 	{
 		CreatureController.Instance.SummonRandomRequest(summonerId, index, transform, skillId, isVisible);
 	}
 
-	// Token: 0x0601D73B RID: 120635 RVA: 0x00838638 File Offset: 0x00836838
+	// Token: 0x0601B43A RID: 111674 RVA: 0x0085FAF0 File Offset: 0x0085DCF0
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static int GetSummonRandomEntity(int summonerId, int index)
 	{
@@ -469,7 +474,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return entity2.Id;
 	}
 
-	// Token: 0x0601D73C RID: 120636 RVA: 0x00838680 File Offset: 0x00836880
+	// Token: 0x0601B43B RID: 111675 RVA: 0x0085FB38 File Offset: 0x0085DD38
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static long GetServerIdByEntityId(int entityId)
 	{
@@ -482,14 +487,14 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return 0L;
 	}
 
-	// Token: 0x0601D73D RID: 120637 RVA: 0x008386C6 File Offset: 0x008368C6
+	// Token: 0x0601B43C RID: 111676 RVA: 0x0085FB7E File Offset: 0x0085DD7E
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void RemoveSummonEntityRequest(int skillId, int summonerId, int removeId)
 	{
 		CreatureController.Instance.RemoveSummonEntityRequest(skillId, summonerId, removeId);
 	}
 
-	// Token: 0x0601D73E RID: 120638 RVA: 0x008386D8 File Offset: 0x008368D8
+	// Token: 0x0601B43D RID: 111677 RVA: 0x0085FB90 File Offset: 0x0085DD90
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool EntityIsInit(int entityId)
 	{
@@ -497,7 +502,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return entity != null && entity.IsInit;
 	}
 
-	// Token: 0x0601D73F RID: 120639 RVA: 0x008386FC File Offset: 0x008368FC
+	// Token: 0x0601B43E RID: 111678 RVA: 0x0085FBB4 File Offset: 0x0085DDB4
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool GetEntityEnable(int entityId)
 	{
@@ -505,7 +510,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return entity != null && entity.Active;
 	}
 
-	// Token: 0x0601D740 RID: 120640 RVA: 0x00838720 File Offset: 0x00836920
+	// Token: 0x0601B43F RID: 111679 RVA: 0x0085FBD8 File Offset: 0x0085DDD8
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool IsNeedPostEffect(AActor actor)
@@ -516,14 +521,14 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 			CreatureDataComponent creatureDataComponent = (entity != null) ? entity.GetComponent<CreatureDataComponent>() : null;
 			if (creatureDataComponent != null)
 			{
-				if (creatureDataComponent.GetEntityType() == Aki.Protocol.EEntityType.Player && !entity.GetComponent<CharacterActorComponent>().IsAutonomousProxy)
+				if (creatureDataComponent.GetEntityType() == EEntityType.Player && !entity.GetComponent<CharacterActorComponent>().IsAutonomousProxy)
 				{
 					return false;
 				}
 				int entityId = CreatureModel.Instance.GetEntityId(creatureDataComponent.GetSummonerId());
 				Entity entity2 = EntitySystem.Instance.Get(entityId);
 				CreatureDataComponent creatureDataComponent2 = (entity2 != null) ? entity2.GetComponent<CreatureDataComponent>() : null;
-				if (creatureDataComponent2 != null && creatureDataComponent2.GetEntityType() == Aki.Protocol.EEntityType.Player && !entity.GetComponent<CharacterActorComponent>().IsAutonomousProxy)
+				if (creatureDataComponent2 != null && creatureDataComponent2.GetEntityType() == EEntityType.Player && !entity.GetComponent<CharacterActorComponent>().IsAutonomousProxy)
 				{
 					return false;
 				}
@@ -532,7 +537,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return true;
 	}
 
-	// Token: 0x0601D741 RID: 120641 RVA: 0x008387C4 File Offset: 0x008369C4
+	// Token: 0x0601B440 RID: 111680 RVA: 0x0085FC7C File Offset: 0x0085DE7C
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static int GetEntityTypeByEntity(int entityId)
 	{
@@ -549,7 +554,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return (int)component.GetEntityType();
 	}
 
-	// Token: 0x0601D742 RID: 120642 RVA: 0x008387F4 File Offset: 0x008369F4
+	// Token: 0x0601B441 RID: 111681 RVA: 0x0085FCAC File Offset: 0x0085DEAC
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static int GetEntityTypeByActor(AActor actor)
@@ -580,7 +585,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return (int)component.GetEntityType();
 	}
 
-	// Token: 0x0601D743 RID: 120643 RVA: 0x00838870 File Offset: 0x00836A70
+	// Token: 0x0601B442 RID: 111682 RVA: 0x0085FD28 File Offset: 0x0085DF28
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static int GetMonsterType(AActor actor)
@@ -612,7 +617,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return (int)baseInfo.Category.MonsterMatchType.GetValueOrDefault();
 	}
 
-	// Token: 0x0601D744 RID: 120644 RVA: 0x00838900 File Offset: 0x00836B00
+	// Token: 0x0601B443 RID: 111683 RVA: 0x0085FDB8 File Offset: 0x0085DFB8
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static int GetConfigIdByActor(AActor actor)
@@ -639,7 +644,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return component.GetPbDataId();
 	}
 
-	// Token: 0x0601D745 RID: 120645 RVA: 0x00838975 File Offset: 0x00836B75
+	// Token: 0x0601B444 RID: 111684 RVA: 0x0085FE2D File Offset: 0x0085E02D
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	[return: Nullable(2)]
@@ -653,7 +658,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return instance.GetEntityActorByChildActor(childActor);
 	}
 
-	// Token: 0x0601D746 RID: 120646 RVA: 0x00838988 File Offset: 0x00836B88
+	// Token: 0x0601B445 RID: 111685 RVA: 0x0085FE40 File Offset: 0x0085E040
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool GetEntityDestructible(int entityId)
 	{
@@ -671,7 +676,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return false;
 	}
 
-	// Token: 0x0601D747 RID: 120647 RVA: 0x008389DC File Offset: 0x00836BDC
+	// Token: 0x0601B446 RID: 111686 RVA: 0x0085FE94 File Offset: 0x0085E094
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void AddPrivateTags(float entityId, ref TArray<string> tags)
@@ -681,7 +686,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		CreatureController.Instance.AddPublicTags((int)entityId, list);
 	}
 
-	// Token: 0x0601D748 RID: 120648 RVA: 0x00838A04 File Offset: 0x00836C04
+	// Token: 0x0601B447 RID: 111687 RVA: 0x0085FEBC File Offset: 0x0085E0BC
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void RemovePrivateTags(float entityId, ref TArray<string> tags)
@@ -691,7 +696,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		CreatureController.Instance.RemovePublicTags((int)entityId, list);
 	}
 
-	// Token: 0x0601D749 RID: 120649 RVA: 0x00838A2C File Offset: 0x00836C2C
+	// Token: 0x0601B448 RID: 111688 RVA: 0x0085FEE4 File Offset: 0x0085E0E4
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void AddPublicTags(float entityId, ref TArray<string> tags)
@@ -701,7 +706,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		CreatureController.Instance.AddPublicTags((int)entityId, list);
 	}
 
-	// Token: 0x0601D74A RID: 120650 RVA: 0x00838A54 File Offset: 0x00836C54
+	// Token: 0x0601B449 RID: 111689 RVA: 0x0085FF0C File Offset: 0x0085E10C
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void RemovePublicTags(float entityId, ref TArray<string> tags)
@@ -711,7 +716,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		CreatureController.Instance.RemovePublicTags((int)entityId, list);
 	}
 
-	// Token: 0x0601D74B RID: 120651 RVA: 0x00838A7C File Offset: 0x00836C7C
+	// Token: 0x0601B44A RID: 111690 RVA: 0x0085FF34 File Offset: 0x0085E134
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static int GetIntValueByEntity(int entityId, string key)
@@ -719,7 +724,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return BlackboardController.Instance.GetIntValueByEntity(entityId, key).GetValueOrDefault();
 	}
 
-	// Token: 0x0601D74C RID: 120652 RVA: 0x00838AA0 File Offset: 0x00836CA0
+	// Token: 0x0601B44B RID: 111691 RVA: 0x0085FF58 File Offset: 0x0085E158
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static int GetIntValueByEntityWithCharacter(TsBaseCharacter entity, string key)
@@ -731,7 +736,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return BlackboardController.Instance.GetIntValueByEntity(entity.GetEntityIdNoBlueprint(), key).GetValueOrDefault();
 	}
 
-	// Token: 0x0601D74D RID: 120653 RVA: 0x00838AD0 File Offset: 0x00836CD0
+	// Token: 0x0601B44C RID: 111692 RVA: 0x0085FF88 File Offset: 0x0085E188
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetIntValueByEntity(int entityId, string key, int value)
@@ -739,7 +744,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		BlackboardController.Instance.SetIntValueByEntity(entityId, key, value);
 	}
 
-	// Token: 0x0601D74E RID: 120654 RVA: 0x00838ADF File Offset: 0x00836CDF
+	// Token: 0x0601B44D RID: 111693 RVA: 0x0085FF97 File Offset: 0x0085E197
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetIntValueByEntityWithCharacter(TsBaseCharacter entity, string key, int value)
@@ -751,7 +756,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		BlackboardController.Instance.SetIntValueByEntity(entity.GetEntityIdNoBlueprint(), key, value);
 	}
 
-	// Token: 0x0601D74F RID: 120655 RVA: 0x00838AFC File Offset: 0x00836CFC
+	// Token: 0x0601B44E RID: 111694 RVA: 0x0085FFB4 File Offset: 0x0085E1B4
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static TArray<int> GetIntValuesByEntity(int entityId, string key)
@@ -766,7 +771,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return tarray;
 	}
 
-	// Token: 0x0601D750 RID: 120656 RVA: 0x00838B30 File Offset: 0x00836D30
+	// Token: 0x0601B44F RID: 111695 RVA: 0x0085FFE8 File Offset: 0x0085E1E8
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetIntValuesByEntity(int entityId, string key, ref TArray<int> values)
@@ -776,7 +781,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		BlackboardController.Instance.SetIntValuesByEntity(entityId, key, list);
 	}
 
-	// Token: 0x0601D751 RID: 120657 RVA: 0x00838B58 File Offset: 0x00836D58
+	// Token: 0x0601B450 RID: 111696 RVA: 0x00860010 File Offset: 0x0085E210
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static long GetLongValueByEntity(int entityId, string key)
@@ -784,7 +789,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return BlackboardController.Instance.GetLongValueByEntity(entityId, key).GetValueOrDefault();
 	}
 
-	// Token: 0x0601D752 RID: 120658 RVA: 0x00838B79 File Offset: 0x00836D79
+	// Token: 0x0601B451 RID: 111697 RVA: 0x00860031 File Offset: 0x0085E231
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetLongValueByEntity(int entityId, string key, long value)
@@ -792,7 +797,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		BlackboardController.Instance.SetLongValueByEntity(entityId, key, value);
 	}
 
-	// Token: 0x0601D753 RID: 120659 RVA: 0x00838B88 File Offset: 0x00836D88
+	// Token: 0x0601B452 RID: 111698 RVA: 0x00860040 File Offset: 0x0085E240
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static TArray<long> GetLongValuesByEntity(int entityId, string key)
@@ -807,7 +812,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return tarray;
 	}
 
-	// Token: 0x0601D754 RID: 120660 RVA: 0x00838BBC File Offset: 0x00836DBC
+	// Token: 0x0601B453 RID: 111699 RVA: 0x00860074 File Offset: 0x0085E274
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetLongValuesByEntity(int entityId, string key, ref TArray<long> values)
@@ -817,7 +822,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		BlackboardController.Instance.SetLongValuesByEntity(entityId, key, list);
 	}
 
-	// Token: 0x0601D755 RID: 120661 RVA: 0x00838BE4 File Offset: 0x00836DE4
+	// Token: 0x0601B454 RID: 111700 RVA: 0x0086009C File Offset: 0x0085E29C
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool GetBooleanValueByEntity(int entityId, string key)
@@ -825,7 +830,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return BlackboardController.Instance.GetBooleanValueByEntity(entityId, key).GetValueOrDefault();
 	}
 
-	// Token: 0x0601D756 RID: 120662 RVA: 0x00838C05 File Offset: 0x00836E05
+	// Token: 0x0601B455 RID: 111701 RVA: 0x008600BD File Offset: 0x0085E2BD
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetBooleanValueByEntity(int entityId, string key, bool value)
@@ -833,7 +838,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		BlackboardController.Instance.SetBooleanValueByEntity(entityId, key, value);
 	}
 
-	// Token: 0x0601D757 RID: 120663 RVA: 0x00838C14 File Offset: 0x00836E14
+	// Token: 0x0601B456 RID: 111702 RVA: 0x008600CC File Offset: 0x0085E2CC
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static float GetFloatValueByEntity(int entityId, string key)
@@ -846,7 +851,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return 0f;
 	}
 
-	// Token: 0x0601D758 RID: 120664 RVA: 0x00838C44 File Offset: 0x00836E44
+	// Token: 0x0601B457 RID: 111703 RVA: 0x008600FC File Offset: 0x0085E2FC
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetFloatValueByEntity(int entityId, string key, float value)
@@ -854,7 +859,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		BlackboardController.Instance.SetFloatValueByEntity(entityId, key, value);
 	}
 
-	// Token: 0x0601D759 RID: 120665 RVA: 0x00838C54 File Offset: 0x00836E54
+	// Token: 0x0601B458 RID: 111704 RVA: 0x0086010C File Offset: 0x0085E30C
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static TArray<float> GetFloatValuesByEntity(int entityId, string key)
@@ -869,7 +874,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return tarray;
 	}
 
-	// Token: 0x0601D75A RID: 120666 RVA: 0x00838C88 File Offset: 0x00836E88
+	// Token: 0x0601B459 RID: 111705 RVA: 0x00860140 File Offset: 0x0085E340
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetFloatValuesByEntity(int entityId, string key, ref TArray<float> values)
@@ -879,7 +884,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		BlackboardController.Instance.SetFloatValuesByEntity(entityId, key, list);
 	}
 
-	// Token: 0x0601D75B RID: 120667 RVA: 0x00838CB0 File Offset: 0x00836EB0
+	// Token: 0x0601B45A RID: 111706 RVA: 0x00860168 File Offset: 0x0085E368
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static string GetStringValueByEntity(int entityId, string key)
@@ -892,7 +897,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return "";
 	}
 
-	// Token: 0x0601D75C RID: 120668 RVA: 0x00838CD4 File Offset: 0x00836ED4
+	// Token: 0x0601B45B RID: 111707 RVA: 0x0086018C File Offset: 0x0085E38C
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetStringValueByEntity(int entityId, string key, string value)
@@ -900,7 +905,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		BlackboardController.Instance.SetStringValueByEntity(entityId, key, value);
 	}
 
-	// Token: 0x0601D75D RID: 120669 RVA: 0x00838CE4 File Offset: 0x00836EE4
+	// Token: 0x0601B45C RID: 111708 RVA: 0x0086019C File Offset: 0x0085E39C
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static TArray<string> GetStringValuesByEntity(int entityId, string key)
@@ -915,7 +920,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return tarray;
 	}
 
-	// Token: 0x0601D75E RID: 120670 RVA: 0x00838D18 File Offset: 0x00836F18
+	// Token: 0x0601B45D RID: 111709 RVA: 0x008601D0 File Offset: 0x0085E3D0
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetStringValuesByEntity(int entityId, string key, ref TArray<string> values)
@@ -925,7 +930,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		BlackboardController.Instance.SetStringValuesByEntity(entityId, key, list);
 	}
 
-	// Token: 0x0601D75F RID: 120671 RVA: 0x00838D40 File Offset: 0x00836F40
+	// Token: 0x0601B45E RID: 111710 RVA: 0x008601F8 File Offset: 0x0085E3F8
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void RemoveValueByEntity(int entityId, string key)
@@ -933,7 +938,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		BlackboardController.Instance.RemoveValueByEntity(entityId, key);
 	}
 
-	// Token: 0x0601D760 RID: 120672 RVA: 0x00838D4E File Offset: 0x00836F4E
+	// Token: 0x0601B45F RID: 111711 RVA: 0x00860206 File Offset: 0x0085E406
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool HasValueByEntity(int entityId, string key)
@@ -941,7 +946,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return BlackboardController.Instance.HasValueByEntity(entityId, key);
 	}
 
-	// Token: 0x0601D761 RID: 120673 RVA: 0x00838D5C File Offset: 0x00836F5C
+	// Token: 0x0601B460 RID: 111712 RVA: 0x00860214 File Offset: 0x0085E414
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static FVectorDouble GetVectorValueByEntity(int entityId, string key)
@@ -957,7 +962,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return result;
 	}
 
-	// Token: 0x0601D762 RID: 120674 RVA: 0x00838DAB File Offset: 0x00836FAB
+	// Token: 0x0601B461 RID: 111713 RVA: 0x00860263 File Offset: 0x0085E463
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetVectorValueByEntity(int entityId, string key, FVectorDouble value)
@@ -965,7 +970,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		BlackboardController.Instance.SetVectorValueByEntity(entityId, key, (double)((float)value.X), (double)((float)value.Y), (double)((float)value.Z));
 	}
 
-	// Token: 0x0601D763 RID: 120675 RVA: 0x00838DD4 File Offset: 0x00836FD4
+	// Token: 0x0601B462 RID: 111714 RVA: 0x0086028C File Offset: 0x0085E48C
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static TArray<FVectorDouble> GetVectorValuesByEntity(int entityId, string key)
@@ -983,7 +988,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return tarray;
 	}
 
-	// Token: 0x0601D764 RID: 120676 RVA: 0x00838E38 File Offset: 0x00837038
+	// Token: 0x0601B463 RID: 111715 RVA: 0x008602F0 File Offset: 0x0085E4F0
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetVectorValuesByEntity(int entityId, string key, ref TArray<FVectorDouble> values)
@@ -997,7 +1002,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		BlackboardController.Instance.SetVectorValuesByEntity(entityId, key, list);
 	}
 
-	// Token: 0x0601D765 RID: 120677 RVA: 0x00838E80 File Offset: 0x00837080
+	// Token: 0x0601B464 RID: 111716 RVA: 0x00860338 File Offset: 0x0085E538
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static FRotator GetRotatorValueByEntity(int entityId, string key)
@@ -1010,7 +1015,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return new FRotator();
 	}
 
-	// Token: 0x0601D766 RID: 120678 RVA: 0x00838EA9 File Offset: 0x008370A9
+	// Token: 0x0601B465 RID: 111717 RVA: 0x00860361 File Offset: 0x0085E561
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetRotatorValueByEntity(int entityId, string key, FRotator value)
@@ -1018,7 +1023,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		BlackboardController.Instance.SetRotatorValueByEntity(entityId, key, value.Pitch, value.Roll, value.Yaw);
 	}
 
-	// Token: 0x0601D767 RID: 120679 RVA: 0x00838ECC File Offset: 0x008370CC
+	// Token: 0x0601B466 RID: 111718 RVA: 0x00860384 File Offset: 0x0085E584
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static TArray<FRotator> GetRotatorValuesByEntity(int entityId, string key)
@@ -1036,7 +1041,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return tarray;
 	}
 
-	// Token: 0x0601D768 RID: 120680 RVA: 0x00838F30 File Offset: 0x00837130
+	// Token: 0x0601B467 RID: 111719 RVA: 0x008603E8 File Offset: 0x0085E5E8
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetRotatorValuesByEntity(int entityId, string key, ref TArray<FRotator> values)
@@ -1050,7 +1055,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		BlackboardController.Instance.SetRotatorValuesByEntity(entityId, key, list);
 	}
 
-	// Token: 0x0601D769 RID: 120681 RVA: 0x00838F78 File Offset: 0x00837178
+	// Token: 0x0601B468 RID: 111720 RVA: 0x00860430 File Offset: 0x0085E630
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static int GetEntityIdByEntity(int entityId, string key)
@@ -1058,7 +1063,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return BlackboardController.Instance.GetEntityIdByEntity(entityId, key).GetValueOrDefault();
 	}
 
-	// Token: 0x0601D76A RID: 120682 RVA: 0x00838F99 File Offset: 0x00837199
+	// Token: 0x0601B469 RID: 111721 RVA: 0x00860451 File Offset: 0x0085E651
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetEntityIdByEntity(int entityId, string key, int value)
@@ -1066,7 +1071,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		BlackboardController.Instance.SetEntityIdByEntity(entityId, key, value);
 	}
 
-	// Token: 0x0601D76B RID: 120683 RVA: 0x00838FA8 File Offset: 0x008371A8
+	// Token: 0x0601B46A RID: 111722 RVA: 0x00860460 File Offset: 0x0085E660
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static TArray<int> GetEntityIdsByEntity(int entityId, string key)
@@ -1077,7 +1082,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return tarray;
 	}
 
-	// Token: 0x0601D76C RID: 120684 RVA: 0x00838FD0 File Offset: 0x008371D0
+	// Token: 0x0601B46B RID: 111723 RVA: 0x00860488 File Offset: 0x0085E688
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetEntityIdsByEntity(int entityId, string key, ref TArray<int> values)
@@ -1087,7 +1092,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		BlackboardController.Instance.SetEntityIdsByEntity(entityId, key, list);
 	}
 
-	// Token: 0x0601D76D RID: 120685 RVA: 0x00838FF8 File Offset: 0x008371F8
+	// Token: 0x0601B46C RID: 111724 RVA: 0x008604B0 File Offset: 0x0085E6B0
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static string GetBlackboardInfosByEntity(int entityId)
@@ -1100,14 +1105,14 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return entity.GetComponent<CreatureDataComponent>().GetBlackboard().ToString();
 	}
 
-	// Token: 0x0601D76E RID: 120686 RVA: 0x0083902A File Offset: 0x0083722A
+	// Token: 0x0601B46D RID: 111725 RVA: 0x008604E2 File Offset: 0x0085E6E2
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void RemoveStandaloneEntity(int entityId, int removeEntityType)
 	{
 		CreatureController.Instance.RemoveStandaloneEntity(entityId, (ERemoveEntityType)removeEntityType);
 	}
 
-	// Token: 0x0601D76F RID: 120687 RVA: 0x00839038 File Offset: 0x00837238
+	// Token: 0x0601B46E RID: 111726 RVA: 0x008604F0 File Offset: 0x0085E6F0
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static AActor GetDynamicEntity(int entityId)
@@ -1121,21 +1126,21 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return null;
 	}
 
-	// Token: 0x0601D770 RID: 120688 RVA: 0x00839070 File Offset: 0x00837270
+	// Token: 0x0601B46F RID: 111727 RVA: 0x00860528 File Offset: 0x0085E728
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static int GetWorldOwner()
 	{
 		return CreatureModel.Instance.GetWorldOwner();
 	}
 
-	// Token: 0x0601D771 RID: 120689 RVA: 0x0083907C File Offset: 0x0083727C
+	// Token: 0x0601B470 RID: 111728 RVA: 0x00860534 File Offset: 0x0085E734
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static long GenUniqueId()
 	{
 		return CreatureController.Instance.GenUniqueId();
 	}
 
-	// Token: 0x0601D772 RID: 120690 RVA: 0x00839088 File Offset: 0x00837288
+	// Token: 0x0601B471 RID: 111729 RVA: 0x00860540 File Offset: 0x0085E740
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static int GetEntityIdByCreature(long creatureDataId)
 	{
@@ -1147,7 +1152,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return entity.Id;
 	}
 
-	// Token: 0x0601D773 RID: 120691 RVA: 0x008390A0 File Offset: 0x008372A0
+	// Token: 0x0601B472 RID: 111730 RVA: 0x00860558 File Offset: 0x0085E758
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static long GetCreatureDataIdByEntity(int entityId)
 	{
@@ -1160,7 +1165,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return 0L;
 	}
 
-	// Token: 0x0601D774 RID: 120692 RVA: 0x008390E0 File Offset: 0x008372E0
+	// Token: 0x0601B473 RID: 111731 RVA: 0x00860598 File Offset: 0x0085E798
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static int GetPlayerIdByEntity(int entityId)
 	{
@@ -1172,7 +1177,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return entity.GetComponent<CreatureDataComponent>().GetPlayerId();
 	}
 
-	// Token: 0x0601D775 RID: 120693 RVA: 0x00839110 File Offset: 0x00837310
+	// Token: 0x0601B474 RID: 111732 RVA: 0x008605C8 File Offset: 0x0085E7C8
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static int GetRoleElementId(int entityId)
 	{
@@ -1189,7 +1194,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return roleConfig.Value.ElementId;
 	}
 
-	// Token: 0x0601D776 RID: 120694 RVA: 0x00839164 File Offset: 0x00837364
+	// Token: 0x0601B475 RID: 111733 RVA: 0x0086061C File Offset: 0x0085E81C
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static int GetRoleId(int entityId)
 	{
@@ -1206,7 +1211,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return component.GetRoleId();
 	}
 
-	// Token: 0x0601D777 RID: 120695 RVA: 0x008391A8 File Offset: 0x008373A8
+	// Token: 0x0601B476 RID: 111734 RVA: 0x00860660 File Offset: 0x0085E860
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static int GetRoleIdIgnoreTrial(int entityId)
 	{
@@ -1228,7 +1233,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return roleId;
 	}
 
-	// Token: 0x0601D778 RID: 120696 RVA: 0x0083921C File Offset: 0x0083741C
+	// Token: 0x0601B477 RID: 111735 RVA: 0x008606D4 File Offset: 0x0085E8D4
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static long GetOwnerIdByEntity(int entityId)
 	{
@@ -1240,7 +1245,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return entity.GetComponent<CreatureDataComponent>().GetOwnerId();
 	}
 
-	// Token: 0x0601D779 RID: 120697 RVA: 0x00839254 File Offset: 0x00837454
+	// Token: 0x0601B478 RID: 111736 RVA: 0x0086070C File Offset: 0x0085E90C
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void JumpToMarkLevelSequence([Nullable(2)] ULevelSequenceDirector director, string markName)
@@ -1255,7 +1260,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x0601D77A RID: 120698 RVA: 0x00839282 File Offset: 0x00837482
+	// Token: 0x0601B479 RID: 111737 RVA: 0x0086073A File Offset: 0x0085E93A
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static TArray<string> GetWuYinQuDebugInfo()
@@ -1263,7 +1268,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return RenderModuleController.Instance.GetWuYinQuBattleDebugInfo();
 	}
 
-	// Token: 0x0601D77B RID: 120699 RVA: 0x0083928E File Offset: 0x0083748E
+	// Token: 0x0601B47A RID: 111738 RVA: 0x00860746 File Offset: 0x0085E946
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void ChangeBattleState([Nullable(2)] ULevelSequenceDirector director, string battleActorName, AkiClient.Game.Aki.Render.RuntimeBP.Battle.EWuYinQuState targetState)
@@ -1278,14 +1283,14 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x0601D77C RID: 120700 RVA: 0x008392BC File Offset: 0x008374BC
+	// Token: 0x0601B47B RID: 111739 RVA: 0x00860774 File Offset: 0x0085E974
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetNewUiSceneDebugOpen(bool useNewUiSceneWorkflow)
 	{
 		RenderModuleController.Instance.DebugNewUiSceneWorkflow = useNewUiSceneWorkflow;
 	}
 
-	// Token: 0x0601D77D RID: 120701 RVA: 0x008392C9 File Offset: 0x008374C9
+	// Token: 0x0601B47C RID: 111740 RVA: 0x00860781 File Offset: 0x0085E981
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void AiChangeBattleState(string battleActorName, AkiClient.Game.Aki.Render.RuntimeBP.Battle.EWuYinQuState targetState)
@@ -1293,7 +1298,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		RenderModuleController.Instance.SetBattleState(battleActorName, targetState, false);
 	}
 
-	// Token: 0x0601D77E RID: 120702 RVA: 0x008392D8 File Offset: 0x008374D8
+	// Token: 0x0601B47D RID: 111741 RVA: 0x00860790 File Offset: 0x0085E990
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void PlayWuYinLevelSequence(int loopStartFrame, ULevelSequenceDirector director, string sequenceActorName)
@@ -1302,12 +1307,25 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		EWuYinSequencePlayState ewuYinSequencePlayState = EWuYinSequencePlayState.Play;
 		if (wuYinLevelSequenceState.GetValueOrDefault() == ewuYinSequencePlayState & wuYinLevelSequenceState != null)
 		{
-			FMovieSceneSequencePlaybackParams playbackPosition = new FMovieSceneSequencePlaybackParams(new FFrameTime(new FFrameNumber(loopStartFrame), 0f), 0f, "", EMovieScenePositionType.Frame, EUpdatePositionMethod.Play);
+			FFrameNumber frameNumber = new FFrameNumber
+			{
+				Value = loopStartFrame
+			};
+			FFrameTime frame = new FFrameTime
+			{
+				FrameNumber = frameNumber
+			};
+			FMovieSceneSequencePlaybackParams playbackPosition = new FMovieSceneSequencePlaybackParams
+			{
+				Frame = frame,
+				PositionType = EMovieScenePositionType.Frame,
+				UpdateMethod = EUpdatePositionMethod.Play
+			};
 			director.Player.SetPlaybackPosition(playbackPosition);
 		}
 	}
 
-	// Token: 0x0601D77F RID: 120703 RVA: 0x00839335 File Offset: 0x00837535
+	// Token: 0x0601B47E RID: 111742 RVA: 0x00860802 File Offset: 0x0085EA02
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void PlayWuYinSequence(string sequenceName)
@@ -1315,28 +1333,28 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		WuYinAreaModel.Instance.PlayWuYinSequence(sequenceName, "Play");
 	}
 
-	// Token: 0x0601D780 RID: 120704 RVA: 0x00839347 File Offset: 0x00837547
+	// Token: 0x0601B47F RID: 111743 RVA: 0x00860814 File Offset: 0x0085EA14
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void StartStandalone()
 	{
 		WorldModel.Instance.IsStandalone = true;
 	}
 
-	// Token: 0x0601D781 RID: 120705 RVA: 0x00839354 File Offset: 0x00837554
+	// Token: 0x0601B480 RID: 111744 RVA: 0x00860821 File Offset: 0x0085EA21
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool IsOpenWorld()
 	{
 		return GameModeModel.Instance.InstanceType == InstanceType.BigWorldInstance;
 	}
 
-	// Token: 0x0601D782 RID: 120706 RVA: 0x00839363 File Offset: 0x00837563
+	// Token: 0x0601B481 RID: 111745 RVA: 0x00860830 File Offset: 0x0085EA30
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool GetBattleMode()
 	{
 		return BattleSetting.IsModuleClientControl(BattleModule.Damage);
 	}
 
-	// Token: 0x0601D783 RID: 120707 RVA: 0x0083936B File Offset: 0x0083756B
+	// Token: 0x0601B482 RID: 111746 RVA: 0x00860838 File Offset: 0x0085EA38
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SwitchBattleMode()
 	{
@@ -1344,27 +1362,27 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		BattleSetting.RequestSetModuleNetworkState((BattleModule)module, !BattleSetting.IsModuleClientControl((BattleModule)module));
 	}
 
-	// Token: 0x0601D784 RID: 120708 RVA: 0x0083937C File Offset: 0x0083757C
+	// Token: 0x0601B483 RID: 111747 RVA: 0x00860849 File Offset: 0x0085EA49
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool GetBuffSyncMode()
 	{
 		return false;
 	}
 
-	// Token: 0x0601D785 RID: 120709 RVA: 0x0083937F File Offset: 0x0083757F
+	// Token: 0x0601B484 RID: 111748 RVA: 0x0086084C File Offset: 0x0085EA4C
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SwitchBuffSyncMode()
 	{
 	}
 
-	// Token: 0x0601D786 RID: 120710 RVA: 0x00839381 File Offset: 0x00837581
+	// Token: 0x0601B485 RID: 111749 RVA: 0x0086084E File Offset: 0x0085EA4E
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool GetServerLogMode()
 	{
 		return BattleSetting.IsModuleClientControl(BattleModule.Log);
 	}
 
-	// Token: 0x0601D787 RID: 120711 RVA: 0x00839389 File Offset: 0x00837589
+	// Token: 0x0601B486 RID: 111750 RVA: 0x00860856 File Offset: 0x0085EA56
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SwitchServerLogMode()
 	{
@@ -1372,21 +1390,21 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		BattleSetting.RequestSetModuleNetworkState((BattleModule)module, !BattleSetting.IsModuleClientControl((BattleModule)module));
 	}
 
-	// Token: 0x0601D788 RID: 120712 RVA: 0x0083939A File Offset: 0x0083759A
+	// Token: 0x0601B487 RID: 111751 RVA: 0x00860867 File Offset: 0x0085EA67
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static float GetCurrentDayState()
 	{
 		return (float)TimeOfDayModel.Instance.GameTime.DayState;
 	}
 
-	// Token: 0x0601D789 RID: 120713 RVA: 0x008393AC File Offset: 0x008375AC
+	// Token: 0x0601B488 RID: 111752 RVA: 0x00860879 File Offset: 0x0085EA79
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static EWeatherState GetCurrentWeatherState()
 	{
 		return EWeatherState.晴天;
 	}
 
-	// Token: 0x0601D78A RID: 120714 RVA: 0x008393B0 File Offset: 0x008375B0
+	// Token: 0x0601B489 RID: 111753 RVA: 0x0086087C File Offset: 0x0085EA7C
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void ChangeEntityState(int entityId, string state, AActor changersActor, int changersEntityId)
@@ -1398,7 +1416,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		}, EntityContext.Create(changersEntityId, null));
 	}
 
-	// Token: 0x0601D78B RID: 120715 RVA: 0x008393E4 File Offset: 0x008375E4
+	// Token: 0x0601B48A RID: 111754 RVA: 0x008608B0 File Offset: 0x0085EAB0
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void TestSpawnTemplateEntityPush(long creatureDataId, int configId, int level, FTransform transform, int extraRatioConfigId)
 	{
@@ -1414,7 +1432,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		Net.Instance.Send(EPushMessageId.TestSpawnTemplateEntityPush, testSpawnTemplateEntityPush);
 	}
 
-	// Token: 0x0601D78C RID: 120716 RVA: 0x00839450 File Offset: 0x00837650
+	// Token: 0x0601B48B RID: 111755 RVA: 0x0086091C File Offset: 0x0085EB1C
 	[UFunction(EFunctionFlags.FUNC_None)]
 	[return: Nullable(new byte[]
 	{
@@ -1447,7 +1465,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return tarray;
 	}
 
-	// Token: 0x0601D78D RID: 120717 RVA: 0x0083950C File Offset: 0x0083770C
+	// Token: 0x0601B48C RID: 111756 RVA: 0x008609D8 File Offset: 0x0085EBD8
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static TsEntityDebugInfoManager GetEntityDebugInfoManager()
@@ -1455,7 +1473,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return TsEntityDebugInfoManager.GetInstance();
 	}
 
-	// Token: 0x0601D78E RID: 120718 RVA: 0x00839514 File Offset: 0x00837714
+	// Token: 0x0601B48D RID: 111757 RVA: 0x008609E0 File Offset: 0x0085EBE0
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void ChangeSubLevel(ref TArray<string> unloadLevels, ref TArray<string> levels, int screenEffect, FVectorDouble location, FRotator rotator)
@@ -1469,7 +1487,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		SubLevelController.Instance.ChangeSubLevel(list, list2, (EScreenEffectType)screenEffect, location2, rotator2, null, null, null);
 	}
 
-	// Token: 0x0601D78F RID: 120719 RVA: 0x00839568 File Offset: 0x00837768
+	// Token: 0x0601B48E RID: 111758 RVA: 0x00860A34 File Offset: 0x0085EC34
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static AActor GetActorByCreatureDataId(long creatureDataId)
@@ -1487,7 +1505,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return component.Owner;
 	}
 
-	// Token: 0x0601D790 RID: 120720 RVA: 0x008395AC File Offset: 0x008377AC
+	// Token: 0x0601B48F RID: 111759 RVA: 0x00860A78 File Offset: 0x0085EC78
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetEntityLocation(int entityId, FVectorDouble location, bool sweep = true, bool teleport = false)
 	{
@@ -1506,7 +1524,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x0601D791 RID: 120721 RVA: 0x00839614 File Offset: 0x00837814
+	// Token: 0x0601B490 RID: 111760 RVA: 0x00860AE0 File Offset: 0x0085ECE0
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetEntityRotation(int entityId, FRotator rotation, bool sweep = true)
 	{
@@ -1522,7 +1540,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x0601D792 RID: 120722 RVA: 0x00839648 File Offset: 0x00837848
+	// Token: 0x0601B491 RID: 111761 RVA: 0x00860B14 File Offset: 0x0085ED14
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetEntityLocationAndRotation(int entityId, FVectorDouble location, FRotator rotation, bool sweep = false)
 	{
@@ -1538,7 +1556,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x0601D793 RID: 120723 RVA: 0x00839688 File Offset: 0x00837888
+	// Token: 0x0601B492 RID: 111762 RVA: 0x00860B54 File Offset: 0x0085ED54
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static AActor GetActorByPbDataId(int pbDataId)
@@ -1556,7 +1574,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return component.Owner;
 	}
 
-	// Token: 0x0601D794 RID: 120724 RVA: 0x008396CC File Offset: 0x008378CC
+	// Token: 0x0601B493 RID: 111763 RVA: 0x00860B98 File Offset: 0x0085ED98
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static AActor GetActorByEntityId(int entityId)
@@ -1574,7 +1592,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return component.Owner;
 	}
 
-	// Token: 0x0601D795 RID: 120725 RVA: 0x0083970C File Offset: 0x0083790C
+	// Token: 0x0601B494 RID: 111764 RVA: 0x00860BD8 File Offset: 0x0085EDD8
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static TArray<AActor> GetActorsByPbDataIdArray(ref TArray<int> pbDataIdArray)
@@ -1598,7 +1616,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return tarray;
 	}
 
-	// Token: 0x0601D796 RID: 120726 RVA: 0x008397AC File Offset: 0x008379AC
+	// Token: 0x0601B495 RID: 111765 RVA: 0x00860C78 File Offset: 0x0085EE78
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static TArray<AActor> GetLivingCharMeteorAttackTargets()
@@ -1608,14 +1626,14 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return tarray;
 	}
 
-	// Token: 0x0601D797 RID: 120727 RVA: 0x008397CB File Offset: 0x008379CB
+	// Token: 0x0601B496 RID: 111766 RVA: 0x00860C97 File Offset: 0x0085EE97
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void MonsterBoomRequest(long creatureDataId, float delay)
 	{
 		CreatureController.Instance.MonsterBoomRequest((long)((int)creatureDataId), (int)delay);
 	}
 
-	// Token: 0x0601D798 RID: 120728 RVA: 0x008397DC File Offset: 0x008379DC
+	// Token: 0x0601B497 RID: 111767 RVA: 0x00860CA8 File Offset: 0x0085EEA8
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static string EvalScript(string script)
@@ -1623,7 +1641,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return "";
 	}
 
-	// Token: 0x0601D799 RID: 120729 RVA: 0x008397E4 File Offset: 0x008379E4
+	// Token: 0x0601B498 RID: 111768 RVA: 0x00860CB0 File Offset: 0x0085EEB0
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static FVectorDouble GetInitPositionByEntity(int entityId)
 	{
@@ -1635,7 +1653,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return new FVectorDouble();
 	}
 
-	// Token: 0x0601D79A RID: 120730 RVA: 0x00839818 File Offset: 0x00837A18
+	// Token: 0x0601B499 RID: 111769 RVA: 0x00860CE4 File Offset: 0x0085EEE4
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public unsafe static int DisableCreatureActor(AActor actor, UObject callObject, [Nullable(1)] string reason)
@@ -1677,7 +1695,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return EntitySystem.Instance.Get(ibpi_CreatureInterface_C.GetEntityId()).GetComponent<BaseActorComponent>().DisableActor(text);
 	}
 
-	// Token: 0x0601D79B RID: 120731 RVA: 0x0083992C File Offset: 0x00837B2C
+	// Token: 0x0601B49A RID: 111770 RVA: 0x00860DF8 File Offset: 0x0085EFF8
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public unsafe static bool EnableCreatureActor(AActor actor, UObject callObject, int handle)
@@ -1713,7 +1731,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return EntitySystem.Instance.Get(ibpi_CreatureInterface_C.GetEntityId()).GetComponent<BaseActorComponent>().EnableActor(handle);
 	}
 
-	// Token: 0x0601D79C RID: 120732 RVA: 0x00839A28 File Offset: 0x00837C28
+	// Token: 0x0601B49B RID: 111771 RVA: 0x00860EF4 File Offset: 0x0085F0F4
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public unsafe static int DisableCreatureCollision(AActor actor, UObject callObject, [Nullable(1)] string reason)
@@ -1755,7 +1773,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return EntitySystem.Instance.Get(ibpi_CreatureInterface_C.GetEntityId()).GetComponent<BaseActorComponent>().DisableCollision(text);
 	}
 
-	// Token: 0x0601D79D RID: 120733 RVA: 0x00839B3C File Offset: 0x00837D3C
+	// Token: 0x0601B49C RID: 111772 RVA: 0x00861008 File Offset: 0x0085F208
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public unsafe static bool EnableCreatureCollision(AActor actor, UObject callObject, int handle)
@@ -1791,14 +1809,14 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return EntitySystem.Instance.Get(ibpi_CreatureInterface_C.GetEntityId()).GetComponent<BaseActorComponent>().EnableCollision(handle);
 	}
 
-	// Token: 0x0601D79E RID: 120734 RVA: 0x00839C38 File Offset: 0x00837E38
+	// Token: 0x0601B49D RID: 111773 RVA: 0x00861104 File Offset: 0x0085F304
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetCameraShakeModify(float modify)
 	{
 		CameraModel.Instance.MainModel.SetCameraShakeModify((double)modify);
 	}
 
-	// Token: 0x0601D79F RID: 120735 RVA: 0x00839C4C File Offset: 0x00837E4C
+	// Token: 0x0601B49E RID: 111774 RVA: 0x00861118 File Offset: 0x0085F318
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static TMap<int, bool> GetFormationAllEntityId()
@@ -1815,7 +1833,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return tmap;
 	}
 
-	// Token: 0x0601D7A0 RID: 120736 RVA: 0x00839CD0 File Offset: 0x00837ED0
+	// Token: 0x0601B49F RID: 111775 RVA: 0x0086119C File Offset: 0x0085F39C
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static TArray<AActor> GetFormationControlledRoles()
@@ -1839,7 +1857,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return tarray;
 	}
 
-	// Token: 0x0601D7A1 RID: 120737 RVA: 0x00839D64 File Offset: 0x00837F64
+	// Token: 0x0601B4A0 RID: 111776 RVA: 0x00861230 File Offset: 0x0085F430
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static TArray<AActor> GetFormationActors()
@@ -1860,21 +1878,21 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return tarray;
 	}
 
-	// Token: 0x0601D7A2 RID: 120738 RVA: 0x00839DE8 File Offset: 0x00837FE8
+	// Token: 0x0601B4A1 RID: 111777 RVA: 0x008612B4 File Offset: 0x0085F4B4
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool IsGameRunning()
 	{
 		return Info.Instance.IsGameRunning();
 	}
 
-	// Token: 0x0601D7A3 RID: 120739 RVA: 0x00839DF4 File Offset: 0x00837FF4
+	// Token: 0x0601B4A2 RID: 111778 RVA: 0x008612C0 File Offset: 0x0085F4C0
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetCollisionResponseToPawn([Nullable(1)] TsBaseCharacter actor, EPawnChannel pawnChannel, TEnumAsByte<ECollisionResponse> newResponse)
 	{
 		CollisionUtils.Instance.SetCollisionResponseToPawn(actor.CapsuleComponent, pawnChannel, newResponse);
 	}
 
-	// Token: 0x0601D7A4 RID: 120740 RVA: 0x00839E10 File Offset: 0x00838010
+	// Token: 0x0601B4A3 RID: 111779 RVA: 0x008612DC File Offset: 0x0085F4DC
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void ShowCharacterCollision(bool isShow, int entityId)
 	{
@@ -1885,7 +1903,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x0601D7A5 RID: 120741 RVA: 0x00839E38 File Offset: 0x00838038
+	// Token: 0x0601B4A4 RID: 111780 RVA: 0x00861304 File Offset: 0x0085F504
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool GetEnableCollisionDebug(int entityId)
 	{
@@ -1893,20 +1911,20 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return entity != null && entity.GetComponent<CharacterGasDebugComponent>().EnableCollisionDebugDraw;
 	}
 
-	// Token: 0x0601D7A6 RID: 120742 RVA: 0x00839E61 File Offset: 0x00838061
+	// Token: 0x0601B4A5 RID: 111781 RVA: 0x0086132D File Offset: 0x0085F52D
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void ChangeRole(int pos)
 	{
 	}
 
-	// Token: 0x0601D7A7 RID: 120743 RVA: 0x00839E63 File Offset: 0x00838063
+	// Token: 0x0601B4A6 RID: 111782 RVA: 0x0086132F File Offset: 0x0085F52F
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void ChangeRoleInExitSkill(AActor goDownPlayer, AActor goBattlePlayer)
 	{
 	}
 
-	// Token: 0x0601D7A8 RID: 120744 RVA: 0x00839E65 File Offset: 0x00838065
+	// Token: 0x0601B4A7 RID: 111783 RVA: 0x00861331 File Offset: 0x0085F531
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	[return: Nullable(2)]
@@ -1915,43 +1933,43 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return GameSplineUtils.InitGameSplineBySplineEntity(pbDataId, inSplineActor);
 	}
 
-	// Token: 0x0601D7A9 RID: 120745 RVA: 0x00839E6E File Offset: 0x0083806E
+	// Token: 0x0601B4A8 RID: 111784 RVA: 0x0086133A File Offset: 0x0085F53A
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void UiCameraAnimationDisablePlayerActor()
 	{
-		UiCameraAnimationManager.Instance.DisablePlayerActor();
+		UiCameraModel.Instance.DisablePlayerActor();
 	}
 
-	// Token: 0x0601D7AA RID: 120746 RVA: 0x00839E7A File Offset: 0x0083807A
+	// Token: 0x0601B4A9 RID: 111785 RVA: 0x00861346 File Offset: 0x0085F546
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void UiCameraAnimationEnablePlayerActor()
 	{
-		UiCameraAnimationManager.Instance.EnablePlayerActor();
+		UiCameraModel.Instance.EnablePlayerActor();
 	}
 
-	// Token: 0x0601D7AB RID: 120747 RVA: 0x00839E86 File Offset: 0x00838086
+	// Token: 0x0601B4AA RID: 111786 RVA: 0x00861352 File Offset: 0x0085F552
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void UiCameraAnimationDisableCustomCreatureActor(int position)
 	{
-		UiCameraAnimationManager.Instance.DisableCustomCreatureActor(position);
+		UiCameraModel.Instance.DisableCustomCreatureActor(position);
 	}
 
-	// Token: 0x0601D7AC RID: 120748 RVA: 0x00839E93 File Offset: 0x00838093
+	// Token: 0x0601B4AB RID: 111787 RVA: 0x0086135F File Offset: 0x0085F55F
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void UiCameraAnimationEnableCustomCreatureActor()
 	{
-		UiCameraAnimationManager.Instance.EnableCustomCreatureActor();
+		UiCameraModel.Instance.EnableCustomCreatureActor();
 	}
 
-	// Token: 0x0601D7AD RID: 120749 RVA: 0x00839E9F File Offset: 0x0083809F
+	// Token: 0x0601B4AC RID: 111788 RVA: 0x0086136B File Offset: 0x0085F56B
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void UiCameraAnimationBroadSequenceEvent(string sequenceEventName)
 	{
-		UiCameraAnimationManager.Instance.BroadUiCameraSequenceEvent(sequenceEventName);
+		UiCameraModel.Instance.BroadUiCameraSequenceEvent(sequenceEventName);
 	}
 
-	// Token: 0x0601D7AE RID: 120750 RVA: 0x00839EAC File Offset: 0x008380AC
+	// Token: 0x0601B4AD RID: 111789 RVA: 0x00861378 File Offset: 0x0085F578
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetTimeDilation(float timeDilation)
 	{
@@ -1961,7 +1979,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		Net.Instance.Send(EPushMessageId.TimeStopPush, timeStopPush);
 	}
 
-	// Token: 0x0601D7AF RID: 120751 RVA: 0x00839EEC File Offset: 0x008380EC
+	// Token: 0x0601B4AE RID: 111790 RVA: 0x008613B8 File Offset: 0x0085F5B8
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static float GetTimeDilation()
 	{
@@ -1972,7 +1990,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return UGameplayStatics.GetGlobalTimeDilation(GlobalData.GameInstance);
 	}
 
-	// Token: 0x0601D7B0 RID: 120752 RVA: 0x00839F08 File Offset: 0x00838108
+	// Token: 0x0601B4AF RID: 111791 RVA: 0x008613D4 File Offset: 0x0085F5D4
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static TArray<int> GetEntitiesInRange(int distance, ERelation relation)
@@ -1992,7 +2010,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return tarray;
 	}
 
-	// Token: 0x0601D7B1 RID: 120753 RVA: 0x00839FB0 File Offset: 0x008381B0
+	// Token: 0x0601B4B0 RID: 111792 RVA: 0x0086147C File Offset: 0x0085F67C
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool AttachToActor([Nullable(2)] UObject callObject, AActor actor, AActor parentActor, AkiClient.Game.Aki.Data.Entity.Enum.EDetachType detachType, string reason, FName socketName, EAttachmentRule locationRule, EAttachmentRule rotationRule, EAttachmentRule scaleRule, bool bWeldSimulatedBodies, bool doAttach)
@@ -2011,7 +2029,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return AttachToActorController.Instance.AttachToActor(actor, parentActor, (global::EDetachType)detachType, reason2, new FName?(socketName), locationRule, rotationRule, scaleRule, bWeldSimulatedBodies, doAttach, false, false, false);
 	}
 
-	// Token: 0x0601D7B2 RID: 120754 RVA: 0x0083A034 File Offset: 0x00838234
+	// Token: 0x0601B4B1 RID: 111793 RVA: 0x00861500 File Offset: 0x0085F700
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool AttachToComponent([Nullable(2)] UObject callObject, AActor actor, USceneComponent parentComponent, AkiClient.Game.Aki.Data.Entity.Enum.EDetachType detachType, string reason, FName socketName, EAttachmentRule locationRule, EAttachmentRule rotationRule, EAttachmentRule scaleRule, bool bWeldSimulatedBodies, bool doAttach)
@@ -2030,7 +2048,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return AttachToActorController.Instance.AttachToComponent(actor, parentComponent, (global::EDetachType)detachType, reason2, new FName?(socketName), locationRule, rotationRule, scaleRule, bWeldSimulatedBodies, doAttach, false, false, false);
 	}
 
-	// Token: 0x0601D7B3 RID: 120755 RVA: 0x0083A0B8 File Offset: 0x008382B8
+	// Token: 0x0601B4B2 RID: 111794 RVA: 0x00861584 File Offset: 0x0085F784
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool DetachActor([Nullable(2)] UObject callObject, AActor srcActor, bool destroy, string reason, EDetachmentRule locationRule, EDetachmentRule rotationRule, EDetachmentRule scaleRule)
@@ -2049,7 +2067,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return AttachToActorController.Instance.DetachActor(srcActor, destroy, reason2, locationRule, rotationRule, scaleRule);
 	}
 
-	// Token: 0x0601D7B4 RID: 120756 RVA: 0x0083A128 File Offset: 0x00838328
+	// Token: 0x0601B4B3 RID: 111795 RVA: 0x008615F4 File Offset: 0x0085F7F4
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static int GetPlayerFollower()
 	{
@@ -2068,21 +2086,21 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return num2.GetValueOrDefault();
 	}
 
-	// Token: 0x0601D7B5 RID: 120757 RVA: 0x0083A179 File Offset: 0x00838379
+	// Token: 0x0601B4B4 RID: 111796 RVA: 0x00861645 File Offset: 0x0085F845
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool IsPlayerFollowerEnable()
 	{
 		return FollowUtils.IsFollowShooterEnable(CreatureModel.Instance.GetPlayerId());
 	}
 
-	// Token: 0x0601D7B6 RID: 120758 RVA: 0x0083A18A File Offset: 0x0083838A
+	// Token: 0x0601B4B5 RID: 111797 RVA: 0x00861656 File Offset: 0x0085F856
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetPlayerFollowerEnable(bool enable, BPEEnableFollowShooter enableType = BPEEnableFollowShooter.GameAbility)
 	{
 		FollowUtils.SetPlayerFollowShooterEnable(CreatureModel.Instance.GetPlayerId(), enable, enableType, "WorldFunctionLibrary.SetPlayerFollowerEnable");
 	}
 
-	// Token: 0x0601D7B7 RID: 120759 RVA: 0x0083A1A3 File Offset: 0x008383A3
+	// Token: 0x0601B4B6 RID: 111798 RVA: 0x0086166F File Offset: 0x0085F86F
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetPlayerFollowerCustomEntityId(string customKey, int entityId)
@@ -2095,7 +2113,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		playerFollowHandler.AddFollowShooterCustomEntityId(customKey, entityId);
 	}
 
-	// Token: 0x0601D7B8 RID: 120760 RVA: 0x0083A1C0 File Offset: 0x008383C0
+	// Token: 0x0601B4B7 RID: 111799 RVA: 0x0086168C File Offset: 0x0085F88C
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void RemovePlayerFollowerCustomEntityId(string customKey)
@@ -2108,7 +2126,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		playerFollowHandler.RemoveFollowShooterCustomEntityId(customKey);
 	}
 
-	// Token: 0x0601D7B9 RID: 120761 RVA: 0x0083A1DD File Offset: 0x008383DD
+	// Token: 0x0601B4B8 RID: 111800 RVA: 0x008616A9 File Offset: 0x0085F8A9
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static BP_FollowShooterConfig_C GetFollowerShooterConfig(int entityId)
@@ -2126,7 +2144,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return followShooterComponent.FollowShooterConfig;
 	}
 
-	// Token: 0x0601D7BA RID: 120762 RVA: 0x0083A200 File Offset: 0x00838400
+	// Token: 0x0601B4B9 RID: 111801 RVA: 0x008616CC File Offset: 0x0085F8CC
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static int GetPlayerFollowerMotor()
 	{
@@ -2145,7 +2163,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return num2.GetValueOrDefault();
 	}
 
-	// Token: 0x0601D7BB RID: 120763 RVA: 0x0083A254 File Offset: 0x00838454
+	// Token: 0x0601B4BA RID: 111802 RVA: 0x00861720 File Offset: 0x0085F920
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool IsPlayerFollowerMotorEnable()
 	{
@@ -2164,7 +2182,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return playerFollowVehicle.Entity.Active;
 	}
 
-	// Token: 0x0601D7BC RID: 120764 RVA: 0x0083A2BC File Offset: 0x008384BC
+	// Token: 0x0601B4BB RID: 111803 RVA: 0x00861788 File Offset: 0x0085F988
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetPlayerFollowerMotorEnable(bool enable)
 	{
@@ -2183,21 +2201,21 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		CreatureController.Instance.SetEntityEnable(playerFollowVehicle.Entity, enable, "WorldFunctionLibrary.SetPlayerFollowerMotorEnable", true);
 	}
 
-	// Token: 0x0601D7BD RID: 120765 RVA: 0x0083A32E File Offset: 0x0083852E
+	// Token: 0x0601B4BC RID: 111804 RVA: 0x008617FA File Offset: 0x0085F9FA
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool IsPlayerFollowerNeedInput(EInputAction action, EInputState state)
 	{
 		return false;
 	}
 
-	// Token: 0x0601D7BE RID: 120766 RVA: 0x0083A331 File Offset: 0x00838531
+	// Token: 0x0601B4BD RID: 111805 RVA: 0x008617FD File Offset: 0x0085F9FD
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static FName GetGameplayTagOriginName(FGameplayTag gameplayTag)
 	{
 		return gameplayTag.OriginalTagName();
 	}
 
-	// Token: 0x0601D7BF RID: 120767 RVA: 0x0083A339 File Offset: 0x00838539
+	// Token: 0x0601B4BE RID: 111806 RVA: 0x00861805 File Offset: 0x0085FA05
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void RegisterToBpActorController(FName groupTag, IBPI_SceneBp_C sceneBp)
@@ -2205,7 +2223,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		BpActorController.Instance.RegisterBpActor(groupTag, sceneBp);
 	}
 
-	// Token: 0x0601D7C0 RID: 120768 RVA: 0x0083A347 File Offset: 0x00838547
+	// Token: 0x0601B4BF RID: 111807 RVA: 0x00861813 File Offset: 0x0085FA13
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void UnregisterToBpActorController(FName groupTag, IBPI_SceneBp_C sceneBp)
@@ -2213,7 +2231,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		BpActorController.Instance.UnregisterBpActor(groupTag, sceneBp);
 	}
 
-	// Token: 0x0601D7C1 RID: 120769 RVA: 0x0083A355 File Offset: 0x00838555
+	// Token: 0x0601B4C0 RID: 111808 RVA: 0x00861821 File Offset: 0x0085FA21
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void RegisterDayNightBpToBpActorController(IBPI_DayNightEvent_C dayNightBp)
@@ -2226,7 +2244,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		instance.RegisterDayNightActor(dayNightBp);
 	}
 
-	// Token: 0x0601D7C2 RID: 120770 RVA: 0x0083A367 File Offset: 0x00838567
+	// Token: 0x0601B4C1 RID: 111809 RVA: 0x00861833 File Offset: 0x0085FA33
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void UnregisterDayNightBpToBpActorController(IBPI_DayNightEvent_C dayNightBp)
@@ -2239,7 +2257,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		instance.UnregisterDayNightActor(dayNightBp);
 	}
 
-	// Token: 0x0601D7C3 RID: 120771 RVA: 0x0083A37C File Offset: 0x0083857C
+	// Token: 0x0601B4C2 RID: 111810 RVA: 0x00861848 File Offset: 0x0085FA48
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static TArray<int> GetEntityBindGroup(int entityId)
@@ -2260,21 +2278,21 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return tarray;
 	}
 
-	// Token: 0x0601D7C4 RID: 120772 RVA: 0x0083A404 File Offset: 0x00838604
+	// Token: 0x0601B4C3 RID: 111811 RVA: 0x008618D0 File Offset: 0x0085FAD0
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool GetTrapDefenseUseBpUsing()
 	{
 		return TowerDefenseEventController.Instance.TestBpUsing;
 	}
 
-	// Token: 0x0601D7C5 RID: 120773 RVA: 0x0083A410 File Offset: 0x00838610
+	// Token: 0x0601B4C4 RID: 111812 RVA: 0x008618DC File Offset: 0x0085FADC
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void DisableAllRoleWithoutControl(bool needEffect)
 	{
 		SceneTeamController.Instance.DisableAllRoleWithoutControl(null, null, needEffect);
 	}
 
-	// Token: 0x0601D7C6 RID: 120774 RVA: 0x0083A434 File Offset: 0x00838634
+	// Token: 0x0601B4C5 RID: 111813 RVA: 0x00861900 File Offset: 0x0085FB00
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static int PlayerEntityId()
 	{
@@ -2287,7 +2305,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return playerEntity.Id;
 	}
 
-	// Token: 0x0601D7C7 RID: 120775 RVA: 0x0083A474 File Offset: 0x00838674
+	// Token: 0x0601B4C6 RID: 111814 RVA: 0x00861940 File Offset: 0x0085FB40
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static int CurrentFrontRoleEntityId()
 	{
@@ -2303,7 +2321,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return getCurrentEntity.Entity.Id;
 	}
 
-	// Token: 0x0601D7C8 RID: 120776 RVA: 0x0083A4BB File Offset: 0x008386BB
+	// Token: 0x0601B4C7 RID: 111815 RVA: 0x00861987 File Offset: 0x0085FB87
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void ShowTipsByTextId(string textId)
@@ -2311,7 +2329,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		ScrollingTipsController.Instance.ShowTipsByTextId(textId, Array.Empty<object>());
 	}
 
-	// Token: 0x0601D7C9 RID: 120777 RVA: 0x0083A4D0 File Offset: 0x008386D0
+	// Token: 0x0601B4C8 RID: 111816 RVA: 0x0086199C File Offset: 0x0085FB9C
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool IsBulletCreateByFollowShooter(int bulletId)
 	{
@@ -2331,7 +2349,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return entity2 != null && entity2.Valid && entity2.GetComponent<CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow.FollowShooterComponent>() != null;
 	}
 
-	// Token: 0x0601D7CA RID: 120778 RVA: 0x0083A539 File Offset: 0x00838739
+	// Token: 0x0601B4C9 RID: 111817 RVA: 0x00861A05 File Offset: 0x0085FC05
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool CheckIsRoleTriggerActor(AActor actor)
@@ -2339,14 +2357,14 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return actor == RoleTriggerController.Instance.GetMyRoleTrigger();
 	}
 
-	// Token: 0x0601D7CB RID: 120779 RVA: 0x0083A548 File Offset: 0x00838748
+	// Token: 0x0601B4CA RID: 111818 RVA: 0x00861A14 File Offset: 0x0085FC14
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool IsMale()
 	{
 		return PlayerInfoModel.Instance.GetPlayerGender() == EPlayerGender.Male;
 	}
 
-	// Token: 0x0601D7CC RID: 120780 RVA: 0x0083A557 File Offset: 0x00838757
+	// Token: 0x0601B4CB RID: 111819 RVA: 0x00861A23 File Offset: 0x0085FC23
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void ReleaseFromMediaPlayActor([Nullable(new byte[]
 	{
@@ -2357,7 +2375,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		BpActorController.Instance.ReleaseFromMediaPlayActor(sceneBpActor.ToInterface<IBPI_SceneBp_C>());
 	}
 
-	// Token: 0x0601D7CD RID: 120781 RVA: 0x0083A56C File Offset: 0x0083876C
+	// Token: 0x0601B4CC RID: 111820 RVA: 0x00861A38 File Offset: 0x0085FC38
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool IsPlayerElementalFieldOpened()
 	{
@@ -2366,7 +2384,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return playerEntity != null && playerEntity.GetComponent<PlayerElementalCasketComponent>().FieldOpened;
 	}
 
-	// Token: 0x0601D7CE RID: 120782 RVA: 0x0083A5A0 File Offset: 0x008387A0
+	// Token: 0x0601B4CD RID: 111821 RVA: 0x00861A6C File Offset: 0x0085FC6C
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void UpdatePlayerElementalField(bool isOpen)
 	{
@@ -2378,7 +2396,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x0601D7CF RID: 120783 RVA: 0x0083A5D4 File Offset: 0x008387D4
+	// Token: 0x0601B4CE RID: 111822 RVA: 0x00861AA0 File Offset: 0x0085FCA0
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool StartPlayerInteractCoreFoundation(int entityId, UKuroBooleanEventBinder eventBinder)
@@ -2399,7 +2417,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return ElementalCasketController.Instance.StartInteractCoreFoundation(entity, eventBinder);
 	}
 
-	// Token: 0x0601D7D0 RID: 120784 RVA: 0x0083A65C File Offset: 0x0083885C
+	// Token: 0x0601B4CF RID: 111823 RVA: 0x00861B28 File Offset: 0x0085FD28
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool IsPlayerDrawingElementalCore()
 	{
@@ -2408,14 +2426,14 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return playerEntity != null && playerEntity.GetComponent<PlayerElementalCasketComponent>().IsCoreDrawing();
 	}
 
-	// Token: 0x0601D7D1 RID: 120785 RVA: 0x0083A690 File Offset: 0x00838890
+	// Token: 0x0601B4D0 RID: 111824 RVA: 0x00861B5C File Offset: 0x0085FD5C
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void PlayerElementalFieldBurst()
 	{
 		ElementalCasketController.Instance.PlayerElementalFieldBurst();
 	}
 
-	// Token: 0x0601D7D2 RID: 120786 RVA: 0x0083A69C File Offset: 0x0083889C
+	// Token: 0x0601B4D1 RID: 111825 RVA: 0x00861B68 File Offset: 0x0085FD68
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static FVectorDouble GetPlayerSceneInteractPointLocation()
 	{
@@ -2444,21 +2462,21 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return fvectorDouble2.GetValueOrDefault();
 	}
 
-	// Token: 0x0601D7D3 RID: 120787 RVA: 0x0083A719 File Offset: 0x00838919
+	// Token: 0x0601B4D2 RID: 111826 RVA: 0x00861BE5 File Offset: 0x0085FDE5
 	public static void CreateStaticDefaultValue()
 	{
 		WorldFunctionLibrary.IsChangeFootStep = false;
 		WorldFunctionLibrary.ChangeFootStepMaterialId = 0;
 	}
 
-	// Token: 0x0601D7D4 RID: 120788 RVA: 0x0083A727 File Offset: 0x00838927
+	// Token: 0x0601B4D3 RID: 111827 RVA: 0x00861BF3 File Offset: 0x0085FDF3
 	public static void ResetStaticDefaultValue()
 	{
 		WorldFunctionLibrary.IsChangeFootStep = false;
 		WorldFunctionLibrary.ChangeFootStepMaterialId = 0;
 	}
 
-	// Token: 0x0601D7D5 RID: 120789 RVA: 0x0083A735 File Offset: 0x00838935
+	// Token: 0x0601B4D4 RID: 111828 RVA: 0x00861C01 File Offset: 0x0085FE01
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (WorldFunctionLibrary._ClassPtr == IntPtr.Zero)
@@ -2468,61 +2486,61 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		return WorldFunctionLibrary._ClassPtr;
 	}
 
-	// Token: 0x0601D7D6 RID: 120790 RVA: 0x0083A75C File Offset: 0x0083895C
+	// Token: 0x0601B4D5 RID: 111829 RVA: 0x00861C28 File Offset: 0x0085FE28
 	public WorldFunctionLibrary() : this(BuiltinUtils.AllocNativeUObject(WorldFunctionLibrary.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0601D7D7 RID: 120791 RVA: 0x0083A784 File Offset: 0x00838984
+	// Token: 0x0601B4D6 RID: 111830 RVA: 0x00861C50 File Offset: 0x0085FE50
 	[NullableContext(1)]
 	public WorldFunctionLibrary(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(WorldFunctionLibrary.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601D7D8 RID: 120792 RVA: 0x0083A7B7 File Offset: 0x008389B7
+	// Token: 0x0601B4D7 RID: 111831 RVA: 0x00861C83 File Offset: 0x0085FE83
 	protected WorldFunctionLibrary(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0601D7D9 RID: 120793 RVA: 0x0083A7C0 File Offset: 0x008389C0
+	// Token: 0x0601B4D8 RID: 111832 RVA: 0x00861C8C File Offset: 0x0085FE8C
 	protected unsafe static void __CPPCALL_GetChangeFootStep_Implementation(WorldFunctionLibrary.__GetChangeFootStep_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.GetChangeFootStep();
 	}
 
-	// Token: 0x0601D7DA RID: 120794 RVA: 0x0083A7CD File Offset: 0x008389CD
+	// Token: 0x0601B4D9 RID: 111833 RVA: 0x00861C99 File Offset: 0x0085FE99
 	protected unsafe static void __CPPCALL_GetChangeFootStepMaterialId_Implementation(WorldFunctionLibrary.__GetChangeFootStepMaterialId_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.GetChangeFootStepMaterialId();
 	}
 
-	// Token: 0x0601D7DB RID: 120795 RVA: 0x0083A7DC File Offset: 0x008389DC
+	// Token: 0x0601B4DA RID: 111834 RVA: 0x00861CA8 File Offset: 0x0085FEA8
 	protected unsafe static void __CPPCALL_CheckConfigIdByActor_Implementation(WorldFunctionLibrary.__CheckConfigIdByActor_FunctionParams* __Params)
 	{
 		AActor orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AActor>(__Params->actor);
 		__Params->__Result = WorldFunctionLibrary.CheckConfigIdByActor(orCreateUObjectByNativePointer, __Params->configId);
 	}
 
-	// Token: 0x0601D7DC RID: 120796 RVA: 0x0083A808 File Offset: 0x00838A08
+	// Token: 0x0601B4DB RID: 111835 RVA: 0x00861CD4 File Offset: 0x0085FED4
 	protected unsafe static void __CPPCALL_ActorHasSceneItemTag_Implementation(WorldFunctionLibrary.__ActorHasSceneItemTag_FunctionParams* __Params)
 	{
 		AActor orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AActor>(__Params->actor);
 		__Params->__Result = WorldFunctionLibrary.ActorHasSceneItemTag(orCreateUObjectByNativePointer, __Params->tag);
 	}
 
-	// Token: 0x0601D7DD RID: 120797 RVA: 0x0083A833 File Offset: 0x00838A33
+	// Token: 0x0601B4DC RID: 111836 RVA: 0x00861CFF File Offset: 0x0085FEFF
 	protected unsafe static void __CPPCALL_GetControlVisionEntityId_Implementation(WorldFunctionLibrary.__GetControlVisionEntityId_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.GetControlVisionEntityId(__Params->ownerEntityId);
 	}
 
-	// Token: 0x0601D7DE RID: 120798 RVA: 0x0083A846 File Offset: 0x00838A46
+	// Token: 0x0601B4DD RID: 111837 RVA: 0x00861D12 File Offset: 0x0085FF12
 	protected unsafe static void __CPPCALL_GetVisionEntityId_Implementation(WorldFunctionLibrary.__GetVisionEntityId_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.GetVisionEntityId(__Params->ownerEntityId);
 	}
 
-	// Token: 0x0601D7DF RID: 120799 RVA: 0x0083A85C File Offset: 0x00838A5C
+	// Token: 0x0601B4DE RID: 111838 RVA: 0x00861D28 File Offset: 0x0085FF28
 	protected unsafe static void __CPPCALL_GetVisionEntityIdList_Implementation(WorldFunctionLibrary.__GetVisionEntityIdList_FunctionParams* __Params)
 	{
 		TArray<int> visionEntityIdList = WorldFunctionLibrary.GetVisionEntityIdList(__Params->ownerEntityId);
@@ -2533,19 +2551,19 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		visionEntityIdList.CopyTo(&__Params->__Result, default(UScriptStructStackOnlyPtr));
 	}
 
-	// Token: 0x0601D7E0 RID: 120800 RVA: 0x0083A88E File Offset: 0x00838A8E
+	// Token: 0x0601B4DF RID: 111839 RVA: 0x00861D5A File Offset: 0x0085FF5A
 	protected unsafe static void __CPPCALL_SetVisionEnable_Implementation(WorldFunctionLibrary.__SetVisionEnable_FunctionParams* __Params)
 	{
 		WorldFunctionLibrary.SetVisionEnable(__Params->ownerEntityId, __Params->enable);
 	}
 
-	// Token: 0x0601D7E1 RID: 120801 RVA: 0x0083A8A1 File Offset: 0x00838AA1
+	// Token: 0x0601B4E0 RID: 111840 RVA: 0x00861D6D File Offset: 0x0085FF6D
 	protected unsafe static void __CPPCALL_GetCustomEntityId_Implementation(WorldFunctionLibrary.__GetCustomEntityId_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.GetCustomEntityId(__Params->ownerEntityId, __Params->pos);
 	}
 
-	// Token: 0x0601D7E2 RID: 120802 RVA: 0x0083A8BC File Offset: 0x00838ABC
+	// Token: 0x0601B4E1 RID: 111841 RVA: 0x00861D88 File Offset: 0x0085FF88
 	protected unsafe static void __CPPCALL_SetCustomEntityEnable_Implementation(WorldFunctionLibrary.__SetCustomEntityEnable_FunctionParams* __Params)
 	{
 		UObject orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<UObject>(__Params->callObject);
@@ -2553,49 +2571,49 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		WorldFunctionLibrary.SetCustomEntityEnable(__Params->ownerEntityId, __Params->pos, __Params->enable, orCreateUObjectByNativePointer, reason);
 	}
 
-	// Token: 0x0601D7E3 RID: 120803 RVA: 0x0083A8FB File Offset: 0x00838AFB
+	// Token: 0x0601B4E2 RID: 111842 RVA: 0x00861DC7 File Offset: 0x0085FFC7
 	protected unsafe static void __CPPCALL_ChangeCustomEntityState_Implementation(WorldFunctionLibrary.__ChangeCustomEntityState_FunctionParams* __Params)
 	{
 		WorldFunctionLibrary.ChangeCustomEntityState(__Params->ownerEntityId, __Params->pos, __Params->skillId, __Params->stateTag);
 	}
 
-	// Token: 0x0601D7E4 RID: 120804 RVA: 0x0083A91A File Offset: 0x00838B1A
+	// Token: 0x0601B4E3 RID: 111843 RVA: 0x00861DE6 File Offset: 0x0085FFE6
 	protected unsafe static void __CPPCALL_StartCustomSceneItemEntityTrackPlayer_Implementation(WorldFunctionLibrary.__StartCustomSceneItemEntityTrackPlayer_FunctionParams* __Params)
 	{
 		WorldFunctionLibrary.StartCustomSceneItemEntityTrackPlayer(__Params->ownerEntityId, __Params->pos, __Params->moveSpeed, __Params->initRotatorOffset, __Params->angleSpeed);
 	}
 
-	// Token: 0x0601D7E5 RID: 120805 RVA: 0x0083A93F File Offset: 0x00838B3F
+	// Token: 0x0601B4E4 RID: 111844 RVA: 0x00861E0B File Offset: 0x0086000B
 	protected unsafe static void __CPPCALL_StopCustomSceneItemEntityTrackPlayer_Implementation(WorldFunctionLibrary.__StopCustomSceneItemEntityTrackPlayer_FunctionParams* __Params)
 	{
 		WorldFunctionLibrary.StopCustomSceneItemEntityTrackPlayer(__Params->ownerEntityId, __Params->pos);
 	}
 
-	// Token: 0x0601D7E6 RID: 120806 RVA: 0x0083A952 File Offset: 0x00838B52
+	// Token: 0x0601B4E5 RID: 111845 RVA: 0x00861E1E File Offset: 0x0086001E
 	protected unsafe static void __CPPCALL_GetSummonerEntityId_Implementation(WorldFunctionLibrary.__GetSummonerEntityId_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.GetSummonerEntityId(__Params->visionEntityId);
 	}
 
-	// Token: 0x0601D7E7 RID: 120807 RVA: 0x0083A965 File Offset: 0x00838B65
+	// Token: 0x0601B4E6 RID: 111846 RVA: 0x00861E31 File Offset: 0x00860031
 	protected unsafe static void __CPPCALL_GetVisionId_Implementation(WorldFunctionLibrary.__GetVisionId_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.GetVisionId(__Params->visionEntityId);
 	}
 
-	// Token: 0x0601D7E8 RID: 120808 RVA: 0x0083A978 File Offset: 0x00838B78
+	// Token: 0x0601B4E7 RID: 111847 RVA: 0x00861E44 File Offset: 0x00860044
 	protected unsafe static void __CPPCALL_SetVisionPos_Implementation(WorldFunctionLibrary.__SetVisionPos_FunctionParams* __Params)
 	{
 		WorldFunctionLibrary.SetVisionPos(__Params->ownerEntityId, __Params->pos);
 	}
 
-	// Token: 0x0601D7E9 RID: 120809 RVA: 0x0083A98B File Offset: 0x00838B8B
+	// Token: 0x0601B4E8 RID: 111848 RVA: 0x00861E57 File Offset: 0x00860057
 	protected unsafe static void __CPPCALL_GetVisionPos_Implementation(WorldFunctionLibrary.__GetVisionPos_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.GetVisionPos(__Params->ownerEntityId);
 	}
 
-	// Token: 0x0601D7EA RID: 120810 RVA: 0x0083A9A0 File Offset: 0x00838BA0
+	// Token: 0x0601B4E9 RID: 111849 RVA: 0x00861E6C File Offset: 0x0086006C
 	protected unsafe static void __CPPCALL_GetSummonEntityIds_Implementation(WorldFunctionLibrary.__GetSummonEntityIds_FunctionParams* __Params)
 	{
 		TArray<int> summonEntityIds = WorldFunctionLibrary.GetSummonEntityIds(__Params->ownerEntityId);
@@ -2606,89 +2624,89 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		summonEntityIds.CopyTo(&__Params->__Result, default(UScriptStructStackOnlyPtr));
 	}
 
-	// Token: 0x0601D7EB RID: 120811 RVA: 0x0083A9D2 File Offset: 0x00838BD2
+	// Token: 0x0601B4EA RID: 111850 RVA: 0x00861E9E File Offset: 0x0086009E
 	protected unsafe static void __CPPCALL_SummonChair_Implementation(WorldFunctionLibrary.__SummonChair_FunctionParams* __Params)
 	{
 		WorldFunctionLibrary.SummonChair(__Params->ownerEntityId);
 	}
 
-	// Token: 0x0601D7EC RID: 120812 RVA: 0x0083A9DF File Offset: 0x00838BDF
+	// Token: 0x0601B4EB RID: 111851 RVA: 0x00861EAB File Offset: 0x008600AB
 	protected unsafe static void __CPPCALL_SummonRequest_Implementation(WorldFunctionLibrary.__SummonRequest_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.SummonRequest(__Params->skillId, __Params->isVisible, __Params->transform, __Params->summonerId, __Params->summonConfigId);
 	}
 
-	// Token: 0x0601D7ED RID: 120813 RVA: 0x0083AA0A File Offset: 0x00838C0A
+	// Token: 0x0601B4EC RID: 111852 RVA: 0x00861ED6 File Offset: 0x008600D6
 	protected unsafe static void __CPPCALL_SummonRandomRequest_Implementation(WorldFunctionLibrary.__SummonRandomRequest_FunctionParams* __Params)
 	{
 		WorldFunctionLibrary.SummonRandomRequest(__Params->summonerId, __Params->index, __Params->transform, __Params->skillId, __Params->isVisible);
 	}
 
-	// Token: 0x0601D7EE RID: 120814 RVA: 0x0083AA2F File Offset: 0x00838C2F
+	// Token: 0x0601B4ED RID: 111853 RVA: 0x00861EFB File Offset: 0x008600FB
 	protected unsafe static void __CPPCALL_GetSummonRandomEntity_Implementation(WorldFunctionLibrary.__GetSummonRandomEntity_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.GetSummonRandomEntity(__Params->summonerId, __Params->index);
 	}
 
-	// Token: 0x0601D7EF RID: 120815 RVA: 0x0083AA48 File Offset: 0x00838C48
+	// Token: 0x0601B4EE RID: 111854 RVA: 0x00861F14 File Offset: 0x00860114
 	protected unsafe static void __CPPCALL_GetServerIdByEntityId_Implementation(WorldFunctionLibrary.__GetServerIdByEntityId_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.GetServerIdByEntityId(__Params->entityId);
 	}
 
-	// Token: 0x0601D7F0 RID: 120816 RVA: 0x0083AA5B File Offset: 0x00838C5B
+	// Token: 0x0601B4EF RID: 111855 RVA: 0x00861F27 File Offset: 0x00860127
 	protected unsafe static void __CPPCALL_RemoveSummonEntityRequest_Implementation(WorldFunctionLibrary.__RemoveSummonEntityRequest_FunctionParams* __Params)
 	{
 		WorldFunctionLibrary.RemoveSummonEntityRequest(__Params->skillId, __Params->summonerId, __Params->removeId);
 	}
 
-	// Token: 0x0601D7F1 RID: 120817 RVA: 0x0083AA74 File Offset: 0x00838C74
+	// Token: 0x0601B4F0 RID: 111856 RVA: 0x00861F40 File Offset: 0x00860140
 	protected unsafe static void __CPPCALL_EntityIsInit_Implementation(WorldFunctionLibrary.__EntityIsInit_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.EntityIsInit(__Params->entityId);
 	}
 
-	// Token: 0x0601D7F2 RID: 120818 RVA: 0x0083AA87 File Offset: 0x00838C87
+	// Token: 0x0601B4F1 RID: 111857 RVA: 0x00861F53 File Offset: 0x00860153
 	protected unsafe static void __CPPCALL_GetEntityEnable_Implementation(WorldFunctionLibrary.__GetEntityEnable_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.GetEntityEnable(__Params->entityId);
 	}
 
-	// Token: 0x0601D7F3 RID: 120819 RVA: 0x0083AA9C File Offset: 0x00838C9C
+	// Token: 0x0601B4F2 RID: 111858 RVA: 0x00861F68 File Offset: 0x00860168
 	protected unsafe static void __CPPCALL_IsNeedPostEffect_Implementation(WorldFunctionLibrary.__IsNeedPostEffect_FunctionParams* __Params)
 	{
 		AActor orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AActor>(__Params->actor);
 		__Params->__Result = WorldFunctionLibrary.IsNeedPostEffect(orCreateUObjectByNativePointer);
 	}
 
-	// Token: 0x0601D7F4 RID: 120820 RVA: 0x0083AAC1 File Offset: 0x00838CC1
+	// Token: 0x0601B4F3 RID: 111859 RVA: 0x00861F8D File Offset: 0x0086018D
 	protected unsafe static void __CPPCALL_GetEntityTypeByEntity_Implementation(WorldFunctionLibrary.__GetEntityTypeByEntity_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.GetEntityTypeByEntity(__Params->entityId);
 	}
 
-	// Token: 0x0601D7F5 RID: 120821 RVA: 0x0083AAD4 File Offset: 0x00838CD4
+	// Token: 0x0601B4F4 RID: 111860 RVA: 0x00861FA0 File Offset: 0x008601A0
 	protected unsafe static void __CPPCALL_GetEntityTypeByActor_Implementation(WorldFunctionLibrary.__GetEntityTypeByActor_FunctionParams* __Params)
 	{
 		AActor orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AActor>(__Params->actor);
 		__Params->__Result = WorldFunctionLibrary.GetEntityTypeByActor(orCreateUObjectByNativePointer);
 	}
 
-	// Token: 0x0601D7F6 RID: 120822 RVA: 0x0083AAFC File Offset: 0x00838CFC
+	// Token: 0x0601B4F5 RID: 111861 RVA: 0x00861FC8 File Offset: 0x008601C8
 	protected unsafe static void __CPPCALL_GetMonsterType_Implementation(WorldFunctionLibrary.__GetMonsterType_FunctionParams* __Params)
 	{
 		AActor orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AActor>(__Params->actor);
 		__Params->__Result = WorldFunctionLibrary.GetMonsterType(orCreateUObjectByNativePointer);
 	}
 
-	// Token: 0x0601D7F7 RID: 120823 RVA: 0x0083AB24 File Offset: 0x00838D24
+	// Token: 0x0601B4F6 RID: 111862 RVA: 0x00861FF0 File Offset: 0x008601F0
 	protected unsafe static void __CPPCALL_GetConfigIdByActor_Implementation(WorldFunctionLibrary.__GetConfigIdByActor_FunctionParams* __Params)
 	{
 		AActor orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AActor>(__Params->actor);
 		__Params->__Result = WorldFunctionLibrary.GetConfigIdByActor(orCreateUObjectByNativePointer);
 	}
 
-	// Token: 0x0601D7F8 RID: 120824 RVA: 0x0083AB4C File Offset: 0x00838D4C
+	// Token: 0x0601B4F7 RID: 111863 RVA: 0x00862018 File Offset: 0x00860218
 	protected unsafe static void __CPPCALL_GetEntityActorByChildActor_Implementation(WorldFunctionLibrary.__GetEntityActorByChildActor_FunctionParams* __Params)
 	{
 		AActor orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AActor>(__Params->childActor);
@@ -2697,13 +2715,13 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		ptr = ((entityActorByChildActor != null) ? entityActorByChildActor.NativePtr : ((IntPtr)0));
 	}
 
-	// Token: 0x0601D7F9 RID: 120825 RVA: 0x0083AB80 File Offset: 0x00838D80
+	// Token: 0x0601B4F8 RID: 111864 RVA: 0x0086204C File Offset: 0x0086024C
 	protected unsafe static void __CPPCALL_GetEntityDestructible_Implementation(WorldFunctionLibrary.__GetEntityDestructible_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.GetEntityDestructible(__Params->entityId);
 	}
 
-	// Token: 0x0601D7FA RID: 120826 RVA: 0x0083AB94 File Offset: 0x00838D94
+	// Token: 0x0601B4F9 RID: 111865 RVA: 0x00862060 File Offset: 0x00860260
 	protected unsafe static void __CPPCALL_AddPrivateTags_Implementation(WorldFunctionLibrary.__AddPrivateTags_FunctionParams* __Params)
 	{
 		TArray<string> tarray = new TArray<string>(&__Params->tags, true, true);
@@ -2714,7 +2732,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x0601D7FB RID: 120827 RVA: 0x0083ABD8 File Offset: 0x00838DD8
+	// Token: 0x0601B4FA RID: 111866 RVA: 0x008620A4 File Offset: 0x008602A4
 	protected unsafe static void __CPPCALL_RemovePrivateTags_Implementation(WorldFunctionLibrary.__RemovePrivateTags_FunctionParams* __Params)
 	{
 		TArray<string> tarray = new TArray<string>(&__Params->tags, true, true);
@@ -2725,7 +2743,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x0601D7FC RID: 120828 RVA: 0x0083AC1C File Offset: 0x00838E1C
+	// Token: 0x0601B4FB RID: 111867 RVA: 0x008620E8 File Offset: 0x008602E8
 	protected unsafe static void __CPPCALL_AddPublicTags_Implementation(WorldFunctionLibrary.__AddPublicTags_FunctionParams* __Params)
 	{
 		TArray<string> tarray = new TArray<string>(&__Params->tags, true, true);
@@ -2736,7 +2754,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x0601D7FD RID: 120829 RVA: 0x0083AC60 File Offset: 0x00838E60
+	// Token: 0x0601B4FC RID: 111868 RVA: 0x0086212C File Offset: 0x0086032C
 	protected unsafe static void __CPPCALL_RemovePublicTags_Implementation(WorldFunctionLibrary.__RemovePublicTags_FunctionParams* __Params)
 	{
 		TArray<string> tarray = new TArray<string>(&__Params->tags, true, true);
@@ -2747,14 +2765,14 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x0601D7FE RID: 120830 RVA: 0x0083ACA4 File Offset: 0x00838EA4
+	// Token: 0x0601B4FD RID: 111869 RVA: 0x00862170 File Offset: 0x00860370
 	protected unsafe static void __CPPCALL_GetIntValueByEntity_Implementation(WorldFunctionLibrary.__GetIntValueByEntity_FunctionParams* __Params)
 	{
 		string key = FString.ToString((void*)(&__Params->key));
 		__Params->__Result = WorldFunctionLibrary.GetIntValueByEntity(__Params->entityId, key);
 	}
 
-	// Token: 0x0601D7FF RID: 120831 RVA: 0x0083ACD0 File Offset: 0x00838ED0
+	// Token: 0x0601B4FE RID: 111870 RVA: 0x0086219C File Offset: 0x0086039C
 	protected unsafe static void __CPPCALL_GetIntValueByEntityWithCharacter_Implementation(WorldFunctionLibrary.__GetIntValueByEntityWithCharacter_FunctionParams* __Params)
 	{
 		TsBaseCharacter orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<TsBaseCharacter>(__Params->entity);
@@ -2762,14 +2780,14 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		__Params->__Result = WorldFunctionLibrary.GetIntValueByEntityWithCharacter(orCreateUObjectByNativePointer, key);
 	}
 
-	// Token: 0x0601D800 RID: 120832 RVA: 0x0083AD04 File Offset: 0x00838F04
+	// Token: 0x0601B4FF RID: 111871 RVA: 0x008621D0 File Offset: 0x008603D0
 	protected unsafe static void __CPPCALL_SetIntValueByEntity_Implementation(WorldFunctionLibrary.__SetIntValueByEntity_FunctionParams* __Params)
 	{
 		string key = FString.ToString((void*)(&__Params->key));
 		WorldFunctionLibrary.SetIntValueByEntity(__Params->entityId, key, __Params->value);
 	}
 
-	// Token: 0x0601D801 RID: 120833 RVA: 0x0083AD30 File Offset: 0x00838F30
+	// Token: 0x0601B500 RID: 111872 RVA: 0x008621FC File Offset: 0x008603FC
 	protected unsafe static void __CPPCALL_SetIntValueByEntityWithCharacter_Implementation(WorldFunctionLibrary.__SetIntValueByEntityWithCharacter_FunctionParams* __Params)
 	{
 		TsBaseCharacter orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<TsBaseCharacter>(__Params->entity);
@@ -2777,7 +2795,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		WorldFunctionLibrary.SetIntValueByEntityWithCharacter(orCreateUObjectByNativePointer, key, __Params->value);
 	}
 
-	// Token: 0x0601D802 RID: 120834 RVA: 0x0083AD64 File Offset: 0x00838F64
+	// Token: 0x0601B501 RID: 111873 RVA: 0x00862230 File Offset: 0x00860430
 	protected unsafe static void __CPPCALL_GetIntValuesByEntity_Implementation(WorldFunctionLibrary.__GetIntValuesByEntity_FunctionParams* __Params)
 	{
 		string key = FString.ToString((void*)(&__Params->key));
@@ -2789,7 +2807,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		intValuesByEntity.CopyTo(&__Params->__Result, default(UScriptStructStackOnlyPtr));
 	}
 
-	// Token: 0x0601D803 RID: 120835 RVA: 0x0083ADA4 File Offset: 0x00838FA4
+	// Token: 0x0601B502 RID: 111874 RVA: 0x00862270 File Offset: 0x00860470
 	protected unsafe static void __CPPCALL_SetIntValuesByEntity_Implementation(WorldFunctionLibrary.__SetIntValuesByEntity_FunctionParams* __Params)
 	{
 		string key = FString.ToString((void*)(&__Params->key));
@@ -2801,21 +2819,21 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x0601D804 RID: 120836 RVA: 0x0083ADF4 File Offset: 0x00838FF4
+	// Token: 0x0601B503 RID: 111875 RVA: 0x008622C0 File Offset: 0x008604C0
 	protected unsafe static void __CPPCALL_GetLongValueByEntity_Implementation(WorldFunctionLibrary.__GetLongValueByEntity_FunctionParams* __Params)
 	{
 		string key = FString.ToString((void*)(&__Params->key));
 		__Params->__Result = WorldFunctionLibrary.GetLongValueByEntity(__Params->entityId, key);
 	}
 
-	// Token: 0x0601D805 RID: 120837 RVA: 0x0083AE20 File Offset: 0x00839020
+	// Token: 0x0601B504 RID: 111876 RVA: 0x008622EC File Offset: 0x008604EC
 	protected unsafe static void __CPPCALL_SetLongValueByEntity_Implementation(WorldFunctionLibrary.__SetLongValueByEntity_FunctionParams* __Params)
 	{
 		string key = FString.ToString((void*)(&__Params->key));
 		WorldFunctionLibrary.SetLongValueByEntity(__Params->entityId, key, __Params->value);
 	}
 
-	// Token: 0x0601D806 RID: 120838 RVA: 0x0083AE4C File Offset: 0x0083904C
+	// Token: 0x0601B505 RID: 111877 RVA: 0x00862318 File Offset: 0x00860518
 	protected unsafe static void __CPPCALL_GetLongValuesByEntity_Implementation(WorldFunctionLibrary.__GetLongValuesByEntity_FunctionParams* __Params)
 	{
 		string key = FString.ToString((void*)(&__Params->key));
@@ -2827,7 +2845,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		longValuesByEntity.CopyTo(&__Params->__Result, default(UScriptStructStackOnlyPtr));
 	}
 
-	// Token: 0x0601D807 RID: 120839 RVA: 0x0083AE8C File Offset: 0x0083908C
+	// Token: 0x0601B506 RID: 111878 RVA: 0x00862358 File Offset: 0x00860558
 	protected unsafe static void __CPPCALL_SetLongValuesByEntity_Implementation(WorldFunctionLibrary.__SetLongValuesByEntity_FunctionParams* __Params)
 	{
 		string key = FString.ToString((void*)(&__Params->key));
@@ -2839,35 +2857,35 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x0601D808 RID: 120840 RVA: 0x0083AEDC File Offset: 0x008390DC
+	// Token: 0x0601B507 RID: 111879 RVA: 0x008623A8 File Offset: 0x008605A8
 	protected unsafe static void __CPPCALL_GetBooleanValueByEntity_Implementation(WorldFunctionLibrary.__GetBooleanValueByEntity_FunctionParams* __Params)
 	{
 		string key = FString.ToString((void*)(&__Params->key));
 		__Params->__Result = WorldFunctionLibrary.GetBooleanValueByEntity(__Params->entityId, key);
 	}
 
-	// Token: 0x0601D809 RID: 120841 RVA: 0x0083AF08 File Offset: 0x00839108
+	// Token: 0x0601B508 RID: 111880 RVA: 0x008623D4 File Offset: 0x008605D4
 	protected unsafe static void __CPPCALL_SetBooleanValueByEntity_Implementation(WorldFunctionLibrary.__SetBooleanValueByEntity_FunctionParams* __Params)
 	{
 		string key = FString.ToString((void*)(&__Params->key));
 		WorldFunctionLibrary.SetBooleanValueByEntity(__Params->entityId, key, __Params->value);
 	}
 
-	// Token: 0x0601D80A RID: 120842 RVA: 0x0083AF34 File Offset: 0x00839134
+	// Token: 0x0601B509 RID: 111881 RVA: 0x00862400 File Offset: 0x00860600
 	protected unsafe static void __CPPCALL_GetFloatValueByEntity_Implementation(WorldFunctionLibrary.__GetFloatValueByEntity_FunctionParams* __Params)
 	{
 		string key = FString.ToString((void*)(&__Params->key));
 		__Params->__Result = WorldFunctionLibrary.GetFloatValueByEntity(__Params->entityId, key);
 	}
 
-	// Token: 0x0601D80B RID: 120843 RVA: 0x0083AF60 File Offset: 0x00839160
+	// Token: 0x0601B50A RID: 111882 RVA: 0x0086242C File Offset: 0x0086062C
 	protected unsafe static void __CPPCALL_SetFloatValueByEntity_Implementation(WorldFunctionLibrary.__SetFloatValueByEntity_FunctionParams* __Params)
 	{
 		string key = FString.ToString((void*)(&__Params->key));
 		WorldFunctionLibrary.SetFloatValueByEntity(__Params->entityId, key, __Params->value);
 	}
 
-	// Token: 0x0601D80C RID: 120844 RVA: 0x0083AF8C File Offset: 0x0083918C
+	// Token: 0x0601B50B RID: 111883 RVA: 0x00862458 File Offset: 0x00860658
 	protected unsafe static void __CPPCALL_GetFloatValuesByEntity_Implementation(WorldFunctionLibrary.__GetFloatValuesByEntity_FunctionParams* __Params)
 	{
 		string key = FString.ToString((void*)(&__Params->key));
@@ -2879,7 +2897,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		floatValuesByEntity.CopyTo(&__Params->__Result, default(UScriptStructStackOnlyPtr));
 	}
 
-	// Token: 0x0601D80D RID: 120845 RVA: 0x0083AFCC File Offset: 0x008391CC
+	// Token: 0x0601B50C RID: 111884 RVA: 0x00862498 File Offset: 0x00860698
 	protected unsafe static void __CPPCALL_SetFloatValuesByEntity_Implementation(WorldFunctionLibrary.__SetFloatValuesByEntity_FunctionParams* __Params)
 	{
 		string key = FString.ToString((void*)(&__Params->key));
@@ -2891,14 +2909,14 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x0601D80E RID: 120846 RVA: 0x0083B01C File Offset: 0x0083921C
+	// Token: 0x0601B50D RID: 111885 RVA: 0x008624E8 File Offset: 0x008606E8
 	protected unsafe static void __CPPCALL_GetStringValueByEntity_Implementation(WorldFunctionLibrary.__GetStringValueByEntity_FunctionParams* __Params)
 	{
 		string key = FString.ToString((void*)(&__Params->key));
 		FString.CopyFrom((void*)(&__Params->__Result), WorldFunctionLibrary.GetStringValueByEntity(__Params->entityId, key));
 	}
 
-	// Token: 0x0601D80F RID: 120847 RVA: 0x0083B050 File Offset: 0x00839250
+	// Token: 0x0601B50E RID: 111886 RVA: 0x0086251C File Offset: 0x0086071C
 	protected unsafe static void __CPPCALL_SetStringValueByEntity_Implementation(WorldFunctionLibrary.__SetStringValueByEntity_FunctionParams* __Params)
 	{
 		string key = FString.ToString((void*)(&__Params->key));
@@ -2906,7 +2924,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		WorldFunctionLibrary.SetStringValueByEntity(__Params->entityId, key, value);
 	}
 
-	// Token: 0x0601D810 RID: 120848 RVA: 0x0083B084 File Offset: 0x00839284
+	// Token: 0x0601B50F RID: 111887 RVA: 0x00862550 File Offset: 0x00860750
 	protected unsafe static void __CPPCALL_GetStringValuesByEntity_Implementation(WorldFunctionLibrary.__GetStringValuesByEntity_FunctionParams* __Params)
 	{
 		string key = FString.ToString((void*)(&__Params->key));
@@ -2918,7 +2936,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		stringValuesByEntity.CopyTo(&__Params->__Result, default(UScriptStructStackOnlyPtr));
 	}
 
-	// Token: 0x0601D811 RID: 120849 RVA: 0x0083B0C4 File Offset: 0x008392C4
+	// Token: 0x0601B510 RID: 111888 RVA: 0x00862590 File Offset: 0x00860790
 	protected unsafe static void __CPPCALL_SetStringValuesByEntity_Implementation(WorldFunctionLibrary.__SetStringValuesByEntity_FunctionParams* __Params)
 	{
 		string key = FString.ToString((void*)(&__Params->key));
@@ -2930,35 +2948,35 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x0601D812 RID: 120850 RVA: 0x0083B114 File Offset: 0x00839314
+	// Token: 0x0601B511 RID: 111889 RVA: 0x008625E0 File Offset: 0x008607E0
 	protected unsafe static void __CPPCALL_RemoveValueByEntity_Implementation(WorldFunctionLibrary.__RemoveValueByEntity_FunctionParams* __Params)
 	{
 		string key = FString.ToString((void*)(&__Params->key));
 		WorldFunctionLibrary.RemoveValueByEntity(__Params->entityId, key);
 	}
 
-	// Token: 0x0601D813 RID: 120851 RVA: 0x0083B13C File Offset: 0x0083933C
+	// Token: 0x0601B512 RID: 111890 RVA: 0x00862608 File Offset: 0x00860808
 	protected unsafe static void __CPPCALL_HasValueByEntity_Implementation(WorldFunctionLibrary.__HasValueByEntity_FunctionParams* __Params)
 	{
 		string key = FString.ToString((void*)(&__Params->key));
 		__Params->__Result = WorldFunctionLibrary.HasValueByEntity(__Params->entityId, key);
 	}
 
-	// Token: 0x0601D814 RID: 120852 RVA: 0x0083B168 File Offset: 0x00839368
+	// Token: 0x0601B513 RID: 111891 RVA: 0x00862634 File Offset: 0x00860834
 	protected unsafe static void __CPPCALL_GetVectorValueByEntity_Implementation(WorldFunctionLibrary.__GetVectorValueByEntity_FunctionParams* __Params)
 	{
 		string key = FString.ToString((void*)(&__Params->key));
 		__Params->__Result = WorldFunctionLibrary.GetVectorValueByEntity(__Params->entityId, key);
 	}
 
-	// Token: 0x0601D815 RID: 120853 RVA: 0x0083B194 File Offset: 0x00839394
+	// Token: 0x0601B514 RID: 111892 RVA: 0x00862660 File Offset: 0x00860860
 	protected unsafe static void __CPPCALL_SetVectorValueByEntity_Implementation(WorldFunctionLibrary.__SetVectorValueByEntity_FunctionParams* __Params)
 	{
 		string key = FString.ToString((void*)(&__Params->key));
 		WorldFunctionLibrary.SetVectorValueByEntity(__Params->entityId, key, __Params->value);
 	}
 
-	// Token: 0x0601D816 RID: 120854 RVA: 0x0083B1C0 File Offset: 0x008393C0
+	// Token: 0x0601B515 RID: 111893 RVA: 0x0086268C File Offset: 0x0086088C
 	protected unsafe static void __CPPCALL_GetVectorValuesByEntity_Implementation(WorldFunctionLibrary.__GetVectorValuesByEntity_FunctionParams* __Params)
 	{
 		string key = FString.ToString((void*)(&__Params->key));
@@ -2970,7 +2988,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		vectorValuesByEntity.CopyTo(&__Params->__Result, default(UScriptStructStackOnlyPtr));
 	}
 
-	// Token: 0x0601D817 RID: 120855 RVA: 0x0083B200 File Offset: 0x00839400
+	// Token: 0x0601B516 RID: 111894 RVA: 0x008626CC File Offset: 0x008608CC
 	protected unsafe static void __CPPCALL_SetVectorValuesByEntity_Implementation(WorldFunctionLibrary.__SetVectorValuesByEntity_FunctionParams* __Params)
 	{
 		string key = FString.ToString((void*)(&__Params->key));
@@ -2982,21 +3000,21 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x0601D818 RID: 120856 RVA: 0x0083B250 File Offset: 0x00839450
+	// Token: 0x0601B517 RID: 111895 RVA: 0x0086271C File Offset: 0x0086091C
 	protected unsafe static void __CPPCALL_GetRotatorValueByEntity_Implementation(WorldFunctionLibrary.__GetRotatorValueByEntity_FunctionParams* __Params)
 	{
 		string key = FString.ToString((void*)(&__Params->key));
 		__Params->__Result = WorldFunctionLibrary.GetRotatorValueByEntity(__Params->entityId, key);
 	}
 
-	// Token: 0x0601D819 RID: 120857 RVA: 0x0083B27C File Offset: 0x0083947C
+	// Token: 0x0601B518 RID: 111896 RVA: 0x00862748 File Offset: 0x00860948
 	protected unsafe static void __CPPCALL_SetRotatorValueByEntity_Implementation(WorldFunctionLibrary.__SetRotatorValueByEntity_FunctionParams* __Params)
 	{
 		string key = FString.ToString((void*)(&__Params->key));
 		WorldFunctionLibrary.SetRotatorValueByEntity(__Params->entityId, key, __Params->value);
 	}
 
-	// Token: 0x0601D81A RID: 120858 RVA: 0x0083B2A8 File Offset: 0x008394A8
+	// Token: 0x0601B519 RID: 111897 RVA: 0x00862774 File Offset: 0x00860974
 	protected unsafe static void __CPPCALL_GetRotatorValuesByEntity_Implementation(WorldFunctionLibrary.__GetRotatorValuesByEntity_FunctionParams* __Params)
 	{
 		string key = FString.ToString((void*)(&__Params->key));
@@ -3008,7 +3026,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		rotatorValuesByEntity.CopyTo(&__Params->__Result, default(UScriptStructStackOnlyPtr));
 	}
 
-	// Token: 0x0601D81B RID: 120859 RVA: 0x0083B2E8 File Offset: 0x008394E8
+	// Token: 0x0601B51A RID: 111898 RVA: 0x008627B4 File Offset: 0x008609B4
 	protected unsafe static void __CPPCALL_SetRotatorValuesByEntity_Implementation(WorldFunctionLibrary.__SetRotatorValuesByEntity_FunctionParams* __Params)
 	{
 		string key = FString.ToString((void*)(&__Params->key));
@@ -3020,21 +3038,21 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x0601D81C RID: 120860 RVA: 0x0083B338 File Offset: 0x00839538
+	// Token: 0x0601B51B RID: 111899 RVA: 0x00862804 File Offset: 0x00860A04
 	protected unsafe static void __CPPCALL_GetEntityIdByEntity_Implementation(WorldFunctionLibrary.__GetEntityIdByEntity_FunctionParams* __Params)
 	{
 		string key = FString.ToString((void*)(&__Params->key));
 		__Params->__Result = WorldFunctionLibrary.GetEntityIdByEntity(__Params->entityId, key);
 	}
 
-	// Token: 0x0601D81D RID: 120861 RVA: 0x0083B364 File Offset: 0x00839564
+	// Token: 0x0601B51C RID: 111900 RVA: 0x00862830 File Offset: 0x00860A30
 	protected unsafe static void __CPPCALL_SetEntityIdByEntity_Implementation(WorldFunctionLibrary.__SetEntityIdByEntity_FunctionParams* __Params)
 	{
 		string key = FString.ToString((void*)(&__Params->key));
 		WorldFunctionLibrary.SetEntityIdByEntity(__Params->entityId, key, __Params->value);
 	}
 
-	// Token: 0x0601D81E RID: 120862 RVA: 0x0083B390 File Offset: 0x00839590
+	// Token: 0x0601B51D RID: 111901 RVA: 0x0086285C File Offset: 0x00860A5C
 	protected unsafe static void __CPPCALL_GetEntityIdsByEntity_Implementation(WorldFunctionLibrary.__GetEntityIdsByEntity_FunctionParams* __Params)
 	{
 		string key = FString.ToString((void*)(&__Params->key));
@@ -3046,7 +3064,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		entityIdsByEntity.CopyTo(&__Params->__Result, default(UScriptStructStackOnlyPtr));
 	}
 
-	// Token: 0x0601D81F RID: 120863 RVA: 0x0083B3D0 File Offset: 0x008395D0
+	// Token: 0x0601B51E RID: 111902 RVA: 0x0086289C File Offset: 0x00860A9C
 	protected unsafe static void __CPPCALL_SetEntityIdsByEntity_Implementation(WorldFunctionLibrary.__SetEntityIdsByEntity_FunctionParams* __Params)
 	{
 		string key = FString.ToString((void*)(&__Params->key));
@@ -3058,19 +3076,19 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x0601D820 RID: 120864 RVA: 0x0083B420 File Offset: 0x00839620
+	// Token: 0x0601B51F RID: 111903 RVA: 0x008628EC File Offset: 0x00860AEC
 	protected unsafe static void __CPPCALL_GetBlackboardInfosByEntity_Implementation(WorldFunctionLibrary.__GetBlackboardInfosByEntity_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), WorldFunctionLibrary.GetBlackboardInfosByEntity(__Params->entityId));
 	}
 
-	// Token: 0x0601D821 RID: 120865 RVA: 0x0083B439 File Offset: 0x00839639
+	// Token: 0x0601B520 RID: 111904 RVA: 0x00862905 File Offset: 0x00860B05
 	protected unsafe static void __CPPCALL_RemoveStandaloneEntity_Implementation(WorldFunctionLibrary.__RemoveStandaloneEntity_FunctionParams* __Params)
 	{
 		WorldFunctionLibrary.RemoveStandaloneEntity(__Params->entityId, __Params->removeEntityType);
 	}
 
-	// Token: 0x0601D822 RID: 120866 RVA: 0x0083B44C File Offset: 0x0083964C
+	// Token: 0x0601B521 RID: 111905 RVA: 0x00862918 File Offset: 0x00860B18
 	protected unsafe static void __CPPCALL_GetDynamicEntity_Implementation(WorldFunctionLibrary.__GetDynamicEntity_FunctionParams* __Params)
 	{
 		ref IntPtr ptr = ref *(&__Params->__Result);
@@ -3078,61 +3096,61 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		ptr = ((dynamicEntity != null) ? dynamicEntity.NativePtr : ((IntPtr)0));
 	}
 
-	// Token: 0x0601D823 RID: 120867 RVA: 0x0083B46E File Offset: 0x0083966E
+	// Token: 0x0601B522 RID: 111906 RVA: 0x0086293A File Offset: 0x00860B3A
 	protected unsafe static void __CPPCALL_GetWorldOwner_Implementation(WorldFunctionLibrary.__GetWorldOwner_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.GetWorldOwner();
 	}
 
-	// Token: 0x0601D824 RID: 120868 RVA: 0x0083B47B File Offset: 0x0083967B
+	// Token: 0x0601B523 RID: 111907 RVA: 0x00862947 File Offset: 0x00860B47
 	protected unsafe static void __CPPCALL_GenUniqueId_Implementation(WorldFunctionLibrary.__GenUniqueId_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.GenUniqueId();
 	}
 
-	// Token: 0x0601D825 RID: 120869 RVA: 0x0083B488 File Offset: 0x00839688
+	// Token: 0x0601B524 RID: 111908 RVA: 0x00862954 File Offset: 0x00860B54
 	protected unsafe static void __CPPCALL_GetEntityIdByCreature_Implementation(WorldFunctionLibrary.__GetEntityIdByCreature_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.GetEntityIdByCreature(__Params->creatureDataId);
 	}
 
-	// Token: 0x0601D826 RID: 120870 RVA: 0x0083B49B File Offset: 0x0083969B
+	// Token: 0x0601B525 RID: 111909 RVA: 0x00862967 File Offset: 0x00860B67
 	protected unsafe static void __CPPCALL_GetCreatureDataIdByEntity_Implementation(WorldFunctionLibrary.__GetCreatureDataIdByEntity_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.GetCreatureDataIdByEntity(__Params->entityId);
 	}
 
-	// Token: 0x0601D827 RID: 120871 RVA: 0x0083B4AE File Offset: 0x008396AE
+	// Token: 0x0601B526 RID: 111910 RVA: 0x0086297A File Offset: 0x00860B7A
 	protected unsafe static void __CPPCALL_GetPlayerIdByEntity_Implementation(WorldFunctionLibrary.__GetPlayerIdByEntity_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.GetPlayerIdByEntity(__Params->entityId);
 	}
 
-	// Token: 0x0601D828 RID: 120872 RVA: 0x0083B4C1 File Offset: 0x008396C1
+	// Token: 0x0601B527 RID: 111911 RVA: 0x0086298D File Offset: 0x00860B8D
 	protected unsafe static void __CPPCALL_GetRoleElementId_Implementation(WorldFunctionLibrary.__GetRoleElementId_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.GetRoleElementId(__Params->entityId);
 	}
 
-	// Token: 0x0601D829 RID: 120873 RVA: 0x0083B4D4 File Offset: 0x008396D4
+	// Token: 0x0601B528 RID: 111912 RVA: 0x008629A0 File Offset: 0x00860BA0
 	protected unsafe static void __CPPCALL_GetRoleId_Implementation(WorldFunctionLibrary.__GetRoleId_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.GetRoleId(__Params->entityId);
 	}
 
-	// Token: 0x0601D82A RID: 120874 RVA: 0x0083B4E7 File Offset: 0x008396E7
+	// Token: 0x0601B529 RID: 111913 RVA: 0x008629B3 File Offset: 0x00860BB3
 	protected unsafe static void __CPPCALL_GetRoleIdIgnoreTrial_Implementation(WorldFunctionLibrary.__GetRoleIdIgnoreTrial_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.GetRoleIdIgnoreTrial(__Params->entityId);
 	}
 
-	// Token: 0x0601D82B RID: 120875 RVA: 0x0083B4FA File Offset: 0x008396FA
+	// Token: 0x0601B52A RID: 111914 RVA: 0x008629C6 File Offset: 0x00860BC6
 	protected unsafe static void __CPPCALL_GetOwnerIdByEntity_Implementation(WorldFunctionLibrary.__GetOwnerIdByEntity_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.GetOwnerIdByEntity(__Params->entityId);
 	}
 
-	// Token: 0x0601D82C RID: 120876 RVA: 0x0083B510 File Offset: 0x00839710
+	// Token: 0x0601B52B RID: 111915 RVA: 0x008629DC File Offset: 0x00860BDC
 	protected unsafe static void __CPPCALL_JumpToMarkLevelSequence_Implementation(WorldFunctionLibrary.__JumpToMarkLevelSequence_FunctionParams* __Params)
 	{
 		ULevelSequenceDirector orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<ULevelSequenceDirector>(__Params->director);
@@ -3140,7 +3158,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		WorldFunctionLibrary.JumpToMarkLevelSequence(orCreateUObjectByNativePointer, markName);
 	}
 
-	// Token: 0x0601D82D RID: 120877 RVA: 0x0083B53C File Offset: 0x0083973C
+	// Token: 0x0601B52C RID: 111916 RVA: 0x00862A08 File Offset: 0x00860C08
 	protected unsafe static void __CPPCALL_GetWuYinQuDebugInfo_Implementation(WorldFunctionLibrary.__GetWuYinQuDebugInfo_FunctionParams* __Params)
 	{
 		TArray<string> wuYinQuDebugInfo = WorldFunctionLibrary.GetWuYinQuDebugInfo();
@@ -3151,7 +3169,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		wuYinQuDebugInfo.CopyTo(&__Params->__Result, default(UScriptStructStackOnlyPtr));
 	}
 
-	// Token: 0x0601D82E RID: 120878 RVA: 0x0083B568 File Offset: 0x00839768
+	// Token: 0x0601B52D RID: 111917 RVA: 0x00862A34 File Offset: 0x00860C34
 	protected unsafe static void __CPPCALL_ChangeBattleState_Implementation(WorldFunctionLibrary.__ChangeBattleState_FunctionParams* __Params)
 	{
 		ULevelSequenceDirector orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<ULevelSequenceDirector>(__Params->director);
@@ -3160,13 +3178,13 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		WorldFunctionLibrary.ChangeBattleState(orCreateUObjectByNativePointer, battleActorName, targetState);
 	}
 
-	// Token: 0x0601D82F RID: 120879 RVA: 0x0083B59B File Offset: 0x0083979B
+	// Token: 0x0601B52E RID: 111918 RVA: 0x00862A67 File Offset: 0x00860C67
 	protected unsafe static void __CPPCALL_SetNewUiSceneDebugOpen_Implementation(WorldFunctionLibrary.__SetNewUiSceneDebugOpen_FunctionParams* __Params)
 	{
 		WorldFunctionLibrary.SetNewUiSceneDebugOpen(__Params->useNewUiSceneWorkflow);
 	}
 
-	// Token: 0x0601D830 RID: 120880 RVA: 0x0083B5A8 File Offset: 0x008397A8
+	// Token: 0x0601B52F RID: 111919 RVA: 0x00862A74 File Offset: 0x00860C74
 	protected unsafe static void __CPPCALL_AiChangeBattleState_Implementation(WorldFunctionLibrary.__AiChangeBattleState_FunctionParams* __Params)
 	{
 		string battleActorName = FString.ToString((void*)(&__Params->battleActorName));
@@ -3174,7 +3192,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		WorldFunctionLibrary.AiChangeBattleState(battleActorName, targetState);
 	}
 
-	// Token: 0x0601D831 RID: 120881 RVA: 0x0083B5D0 File Offset: 0x008397D0
+	// Token: 0x0601B530 RID: 111920 RVA: 0x00862A9C File Offset: 0x00860C9C
 	protected unsafe static void __CPPCALL_PlayWuYinLevelSequence_Implementation(WorldFunctionLibrary.__PlayWuYinLevelSequence_FunctionParams* __Params)
 	{
 		ULevelSequenceDirector orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<ULevelSequenceDirector>(__Params->director);
@@ -3182,73 +3200,73 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		WorldFunctionLibrary.PlayWuYinLevelSequence(__Params->loopStartFrame, orCreateUObjectByNativePointer, sequenceActorName);
 	}
 
-	// Token: 0x0601D832 RID: 120882 RVA: 0x0083B603 File Offset: 0x00839803
+	// Token: 0x0601B531 RID: 111921 RVA: 0x00862ACF File Offset: 0x00860CCF
 	protected unsafe static void __CPPCALL_PlayWuYinSequence_Implementation(WorldFunctionLibrary.__PlayWuYinSequence_FunctionParams* __Params)
 	{
 		WorldFunctionLibrary.PlayWuYinSequence(FString.ToString((void*)(&__Params->sequenceName)));
 	}
 
-	// Token: 0x0601D833 RID: 120883 RVA: 0x0083B616 File Offset: 0x00839816
+	// Token: 0x0601B532 RID: 111922 RVA: 0x00862AE2 File Offset: 0x00860CE2
 	protected unsafe static void __CPPCALL_StartStandalone_Implementation(WorldFunctionLibrary.__StartStandalone_FunctionParams* __Params)
 	{
 		WorldFunctionLibrary.StartStandalone();
 	}
 
-	// Token: 0x0601D834 RID: 120884 RVA: 0x0083B61D File Offset: 0x0083981D
+	// Token: 0x0601B533 RID: 111923 RVA: 0x00862AE9 File Offset: 0x00860CE9
 	protected unsafe static void __CPPCALL_IsOpenWorld_Implementation(WorldFunctionLibrary.__IsOpenWorld_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.IsOpenWorld();
 	}
 
-	// Token: 0x0601D835 RID: 120885 RVA: 0x0083B62A File Offset: 0x0083982A
+	// Token: 0x0601B534 RID: 111924 RVA: 0x00862AF6 File Offset: 0x00860CF6
 	protected unsafe static void __CPPCALL_GetBattleMode_Implementation(WorldFunctionLibrary.__GetBattleMode_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.GetBattleMode();
 	}
 
-	// Token: 0x0601D836 RID: 120886 RVA: 0x0083B637 File Offset: 0x00839837
+	// Token: 0x0601B535 RID: 111925 RVA: 0x00862B03 File Offset: 0x00860D03
 	protected unsafe static void __CPPCALL_SwitchBattleMode_Implementation(WorldFunctionLibrary.__SwitchBattleMode_FunctionParams* __Params)
 	{
 		WorldFunctionLibrary.SwitchBattleMode();
 	}
 
-	// Token: 0x0601D837 RID: 120887 RVA: 0x0083B63E File Offset: 0x0083983E
+	// Token: 0x0601B536 RID: 111926 RVA: 0x00862B0A File Offset: 0x00860D0A
 	protected unsafe static void __CPPCALL_GetBuffSyncMode_Implementation(WorldFunctionLibrary.__GetBuffSyncMode_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.GetBuffSyncMode();
 	}
 
-	// Token: 0x0601D838 RID: 120888 RVA: 0x0083B64B File Offset: 0x0083984B
+	// Token: 0x0601B537 RID: 111927 RVA: 0x00862B17 File Offset: 0x00860D17
 	protected unsafe static void __CPPCALL_SwitchBuffSyncMode_Implementation(WorldFunctionLibrary.__SwitchBuffSyncMode_FunctionParams* __Params)
 	{
 		WorldFunctionLibrary.SwitchBuffSyncMode();
 	}
 
-	// Token: 0x0601D839 RID: 120889 RVA: 0x0083B652 File Offset: 0x00839852
+	// Token: 0x0601B538 RID: 111928 RVA: 0x00862B1E File Offset: 0x00860D1E
 	protected unsafe static void __CPPCALL_GetServerLogMode_Implementation(WorldFunctionLibrary.__GetServerLogMode_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.GetServerLogMode();
 	}
 
-	// Token: 0x0601D83A RID: 120890 RVA: 0x0083B65F File Offset: 0x0083985F
+	// Token: 0x0601B539 RID: 111929 RVA: 0x00862B2B File Offset: 0x00860D2B
 	protected unsafe static void __CPPCALL_SwitchServerLogMode_Implementation(WorldFunctionLibrary.__SwitchServerLogMode_FunctionParams* __Params)
 	{
 		WorldFunctionLibrary.SwitchServerLogMode();
 	}
 
-	// Token: 0x0601D83B RID: 120891 RVA: 0x0083B666 File Offset: 0x00839866
+	// Token: 0x0601B53A RID: 111930 RVA: 0x00862B32 File Offset: 0x00860D32
 	protected unsafe static void __CPPCALL_GetCurrentDayState_Implementation(WorldFunctionLibrary.__GetCurrentDayState_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.GetCurrentDayState();
 	}
 
-	// Token: 0x0601D83C RID: 120892 RVA: 0x0083B673 File Offset: 0x00839873
+	// Token: 0x0601B53B RID: 111931 RVA: 0x00862B3F File Offset: 0x00860D3F
 	protected unsafe static void __CPPCALL_GetCurrentWeatherState_Implementation(WorldFunctionLibrary.__GetCurrentWeatherState_FunctionParams* __Params)
 	{
 		*(&__Params->__Result) = (byte)WorldFunctionLibrary.GetCurrentWeatherState();
 	}
 
-	// Token: 0x0601D83D RID: 120893 RVA: 0x0083B684 File Offset: 0x00839884
+	// Token: 0x0601B53C RID: 111932 RVA: 0x00862B50 File Offset: 0x00860D50
 	protected unsafe static void __CPPCALL_ChangeEntityState_Implementation(WorldFunctionLibrary.__ChangeEntityState_FunctionParams* __Params)
 	{
 		string state = FString.ToString((void*)(&__Params->state));
@@ -3256,13 +3274,13 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		WorldFunctionLibrary.ChangeEntityState(__Params->entityId, state, orCreateUObjectByNativePointer, __Params->changersEntityId);
 	}
 
-	// Token: 0x0601D83E RID: 120894 RVA: 0x0083B6BD File Offset: 0x008398BD
+	// Token: 0x0601B53D RID: 111933 RVA: 0x00862B89 File Offset: 0x00860D89
 	protected unsafe static void __CPPCALL_TestSpawnTemplateEntityPush_Implementation(WorldFunctionLibrary.__TestSpawnTemplateEntityPush_FunctionParams* __Params)
 	{
 		WorldFunctionLibrary.TestSpawnTemplateEntityPush(__Params->creatureDataId, __Params->configId, __Params->level, __Params->transform, __Params->extraRatioConfigId);
 	}
 
-	// Token: 0x0601D83F RID: 120895 RVA: 0x0083B6E4 File Offset: 0x008398E4
+	// Token: 0x0601B53E RID: 111934 RVA: 0x00862BB0 File Offset: 0x00860DB0
 	protected unsafe static void __CPPCALL_GetTestSpawnTemplateEntityString_Implementation(WorldFunctionLibrary.__GetTestSpawnTemplateEntityString_FunctionParams* __Params)
 	{
 		TArray<string> testSpawnTemplateEntityString = WorldFunctionLibrary.GetTestSpawnTemplateEntityString();
@@ -3273,7 +3291,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		testSpawnTemplateEntityString.CopyTo(&__Params->__Result, default(UScriptStructStackOnlyPtr));
 	}
 
-	// Token: 0x0601D840 RID: 120896 RVA: 0x0083B710 File Offset: 0x00839910
+	// Token: 0x0601B53F RID: 111935 RVA: 0x00862BDC File Offset: 0x00860DDC
 	protected unsafe static void __CPPCALL_GetEntityDebugInfoManager_Implementation(WorldFunctionLibrary.__GetEntityDebugInfoManager_FunctionParams* __Params)
 	{
 		ref IntPtr ptr = ref *(&__Params->__Result);
@@ -3281,7 +3299,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		ptr = ((entityDebugInfoManager != null) ? entityDebugInfoManager.NativePtr : ((IntPtr)0));
 	}
 
-	// Token: 0x0601D841 RID: 120897 RVA: 0x0083B72C File Offset: 0x0083992C
+	// Token: 0x0601B540 RID: 111936 RVA: 0x00862BF8 File Offset: 0x00860DF8
 	protected unsafe static void __CPPCALL_ChangeSubLevel_Implementation(WorldFunctionLibrary.__ChangeSubLevel_FunctionParams* __Params)
 	{
 		TArray<string> tarray = new TArray<string>(&__Params->unloadLevels, true, true);
@@ -3297,7 +3315,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x0601D842 RID: 120898 RVA: 0x0083B7A4 File Offset: 0x008399A4
+	// Token: 0x0601B541 RID: 111937 RVA: 0x00862C70 File Offset: 0x00860E70
 	protected unsafe static void __CPPCALL_GetActorByCreatureDataId_Implementation(WorldFunctionLibrary.__GetActorByCreatureDataId_FunctionParams* __Params)
 	{
 		ref IntPtr ptr = ref *(&__Params->__Result);
@@ -3305,25 +3323,25 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		ptr = ((actorByCreatureDataId != null) ? actorByCreatureDataId.NativePtr : ((IntPtr)0));
 	}
 
-	// Token: 0x0601D843 RID: 120899 RVA: 0x0083B7C6 File Offset: 0x008399C6
+	// Token: 0x0601B542 RID: 111938 RVA: 0x00862C92 File Offset: 0x00860E92
 	protected unsafe static void __CPPCALL_SetEntityLocation_Implementation(WorldFunctionLibrary.__SetEntityLocation_FunctionParams* __Params)
 	{
 		WorldFunctionLibrary.SetEntityLocation(__Params->entityId, __Params->location, __Params->sweep, __Params->teleport);
 	}
 
-	// Token: 0x0601D844 RID: 120900 RVA: 0x0083B7E5 File Offset: 0x008399E5
+	// Token: 0x0601B543 RID: 111939 RVA: 0x00862CB1 File Offset: 0x00860EB1
 	protected unsafe static void __CPPCALL_SetEntityRotation_Implementation(WorldFunctionLibrary.__SetEntityRotation_FunctionParams* __Params)
 	{
 		WorldFunctionLibrary.SetEntityRotation(__Params->entityId, __Params->rotation, __Params->sweep);
 	}
 
-	// Token: 0x0601D845 RID: 120901 RVA: 0x0083B7FE File Offset: 0x008399FE
+	// Token: 0x0601B544 RID: 111940 RVA: 0x00862CCA File Offset: 0x00860ECA
 	protected unsafe static void __CPPCALL_SetEntityLocationAndRotation_Implementation(WorldFunctionLibrary.__SetEntityLocationAndRotation_FunctionParams* __Params)
 	{
 		WorldFunctionLibrary.SetEntityLocationAndRotation(__Params->entityId, __Params->location, __Params->rotation, __Params->sweep);
 	}
 
-	// Token: 0x0601D846 RID: 120902 RVA: 0x0083B81D File Offset: 0x00839A1D
+	// Token: 0x0601B545 RID: 111941 RVA: 0x00862CE9 File Offset: 0x00860EE9
 	protected unsafe static void __CPPCALL_GetActorByPbDataId_Implementation(WorldFunctionLibrary.__GetActorByPbDataId_FunctionParams* __Params)
 	{
 		ref IntPtr ptr = ref *(&__Params->__Result);
@@ -3331,7 +3349,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		ptr = ((actorByPbDataId != null) ? actorByPbDataId.NativePtr : ((IntPtr)0));
 	}
 
-	// Token: 0x0601D847 RID: 120903 RVA: 0x0083B83F File Offset: 0x00839A3F
+	// Token: 0x0601B546 RID: 111942 RVA: 0x00862D0B File Offset: 0x00860F0B
 	protected unsafe static void __CPPCALL_GetActorByEntityId_Implementation(WorldFunctionLibrary.__GetActorByEntityId_FunctionParams* __Params)
 	{
 		ref IntPtr ptr = ref *(&__Params->__Result);
@@ -3339,7 +3357,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		ptr = ((actorByEntityId != null) ? actorByEntityId.NativePtr : ((IntPtr)0));
 	}
 
-	// Token: 0x0601D848 RID: 120904 RVA: 0x0083B864 File Offset: 0x00839A64
+	// Token: 0x0601B547 RID: 111943 RVA: 0x00862D30 File Offset: 0x00860F30
 	protected unsafe static void __CPPCALL_GetActorsByPbDataIdArray_Implementation(WorldFunctionLibrary.__GetActorsByPbDataIdArray_FunctionParams* __Params)
 	{
 		TArray<int> tarray = new TArray<int>(&__Params->pbDataIdArray, true, true);
@@ -3354,7 +3372,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		}
 	}
 
-	// Token: 0x0601D849 RID: 120905 RVA: 0x0083B8BC File Offset: 0x00839ABC
+	// Token: 0x0601B548 RID: 111944 RVA: 0x00862D88 File Offset: 0x00860F88
 	protected unsafe static void __CPPCALL_GetLivingCharMeteorAttackTargets_Implementation(WorldFunctionLibrary.__GetLivingCharMeteorAttackTargets_FunctionParams* __Params)
 	{
 		TArray<AActor> livingCharMeteorAttackTargets = WorldFunctionLibrary.GetLivingCharMeteorAttackTargets();
@@ -3365,26 +3383,26 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		livingCharMeteorAttackTargets.CopyTo(&__Params->__Result, default(UScriptStructStackOnlyPtr));
 	}
 
-	// Token: 0x0601D84A RID: 120906 RVA: 0x0083B8E8 File Offset: 0x00839AE8
+	// Token: 0x0601B549 RID: 111945 RVA: 0x00862DB4 File Offset: 0x00860FB4
 	protected unsafe static void __CPPCALL_MonsterBoomRequest_Implementation(WorldFunctionLibrary.__MonsterBoomRequest_FunctionParams* __Params)
 	{
 		WorldFunctionLibrary.MonsterBoomRequest(__Params->creatureDataId, __Params->delay);
 	}
 
-	// Token: 0x0601D84B RID: 120907 RVA: 0x0083B8FC File Offset: 0x00839AFC
+	// Token: 0x0601B54A RID: 111946 RVA: 0x00862DC8 File Offset: 0x00860FC8
 	protected unsafe static void __CPPCALL_EvalScript_Implementation(WorldFunctionLibrary.__EvalScript_FunctionParams* __Params)
 	{
 		string script = FString.ToString((void*)(&__Params->script));
 		FString.CopyFrom((void*)(&__Params->__Result), WorldFunctionLibrary.EvalScript(script));
 	}
 
-	// Token: 0x0601D84C RID: 120908 RVA: 0x0083B928 File Offset: 0x00839B28
+	// Token: 0x0601B54B RID: 111947 RVA: 0x00862DF4 File Offset: 0x00860FF4
 	protected unsafe static void __CPPCALL_GetInitPositionByEntity_Implementation(WorldFunctionLibrary.__GetInitPositionByEntity_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.GetInitPositionByEntity(__Params->entityId);
 	}
 
-	// Token: 0x0601D84D RID: 120909 RVA: 0x0083B93C File Offset: 0x00839B3C
+	// Token: 0x0601B54C RID: 111948 RVA: 0x00862E08 File Offset: 0x00861008
 	protected unsafe static void __CPPCALL_DisableCreatureActor_Implementation(WorldFunctionLibrary.__DisableCreatureActor_FunctionParams* __Params)
 	{
 		AActor orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AActor>(__Params->actor);
@@ -3393,7 +3411,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		__Params->__Result = WorldFunctionLibrary.DisableCreatureActor(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, reason);
 	}
 
-	// Token: 0x0601D84E RID: 120910 RVA: 0x0083B97C File Offset: 0x00839B7C
+	// Token: 0x0601B54D RID: 111949 RVA: 0x00862E48 File Offset: 0x00861048
 	protected unsafe static void __CPPCALL_EnableCreatureActor_Implementation(WorldFunctionLibrary.__EnableCreatureActor_FunctionParams* __Params)
 	{
 		AActor orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AActor>(__Params->actor);
@@ -3401,7 +3419,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		__Params->__Result = WorldFunctionLibrary.EnableCreatureActor(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->handle);
 	}
 
-	// Token: 0x0601D84F RID: 120911 RVA: 0x0083B9B4 File Offset: 0x00839BB4
+	// Token: 0x0601B54E RID: 111950 RVA: 0x00862E80 File Offset: 0x00861080
 	protected unsafe static void __CPPCALL_DisableCreatureCollision_Implementation(WorldFunctionLibrary.__DisableCreatureCollision_FunctionParams* __Params)
 	{
 		AActor orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AActor>(__Params->actor);
@@ -3410,7 +3428,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		__Params->__Result = WorldFunctionLibrary.DisableCreatureCollision(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, reason);
 	}
 
-	// Token: 0x0601D850 RID: 120912 RVA: 0x0083B9F4 File Offset: 0x00839BF4
+	// Token: 0x0601B54F RID: 111951 RVA: 0x00862EC0 File Offset: 0x008610C0
 	protected unsafe static void __CPPCALL_EnableCreatureCollision_Implementation(WorldFunctionLibrary.__EnableCreatureCollision_FunctionParams* __Params)
 	{
 		AActor orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AActor>(__Params->actor);
@@ -3418,13 +3436,13 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		__Params->__Result = WorldFunctionLibrary.EnableCreatureCollision(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->handle);
 	}
 
-	// Token: 0x0601D851 RID: 120913 RVA: 0x0083BA2C File Offset: 0x00839C2C
+	// Token: 0x0601B550 RID: 111952 RVA: 0x00862EF8 File Offset: 0x008610F8
 	protected unsafe static void __CPPCALL_SetCameraShakeModify_Implementation(WorldFunctionLibrary.__SetCameraShakeModify_FunctionParams* __Params)
 	{
 		WorldFunctionLibrary.SetCameraShakeModify(__Params->modify);
 	}
 
-	// Token: 0x0601D852 RID: 120914 RVA: 0x0083BA3C File Offset: 0x00839C3C
+	// Token: 0x0601B551 RID: 111953 RVA: 0x00862F08 File Offset: 0x00861108
 	protected unsafe static void __CPPCALL_GetFormationAllEntityId_Implementation(WorldFunctionLibrary.__GetFormationAllEntityId_FunctionParams* __Params)
 	{
 		TMap<int, bool> formationAllEntityId = WorldFunctionLibrary.GetFormationAllEntityId();
@@ -3435,7 +3453,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		formationAllEntityId.CopyTo(&__Params->__Result, default(UScriptStructStackOnlyPtr));
 	}
 
-	// Token: 0x0601D853 RID: 120915 RVA: 0x0083BA68 File Offset: 0x00839C68
+	// Token: 0x0601B552 RID: 111954 RVA: 0x00862F34 File Offset: 0x00861134
 	protected unsafe static void __CPPCALL_GetFormationControlledRoles_Implementation(WorldFunctionLibrary.__GetFormationControlledRoles_FunctionParams* __Params)
 	{
 		TArray<AActor> formationControlledRoles = WorldFunctionLibrary.GetFormationControlledRoles();
@@ -3446,7 +3464,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		formationControlledRoles.CopyTo(&__Params->__Result, default(UScriptStructStackOnlyPtr));
 	}
 
-	// Token: 0x0601D854 RID: 120916 RVA: 0x0083BA94 File Offset: 0x00839C94
+	// Token: 0x0601B553 RID: 111955 RVA: 0x00862F60 File Offset: 0x00861160
 	protected unsafe static void __CPPCALL_GetFormationActors_Implementation(WorldFunctionLibrary.__GetFormationActors_FunctionParams* __Params)
 	{
 		TArray<AActor> formationActors = WorldFunctionLibrary.GetFormationActors();
@@ -3457,13 +3475,13 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		formationActors.CopyTo(&__Params->__Result, default(UScriptStructStackOnlyPtr));
 	}
 
-	// Token: 0x0601D855 RID: 120917 RVA: 0x0083BAC0 File Offset: 0x00839CC0
+	// Token: 0x0601B554 RID: 111956 RVA: 0x00862F8C File Offset: 0x0086118C
 	protected unsafe static void __CPPCALL_IsGameRunning_Implementation(WorldFunctionLibrary.__IsGameRunning_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.IsGameRunning();
 	}
 
-	// Token: 0x0601D856 RID: 120918 RVA: 0x0083BAD0 File Offset: 0x00839CD0
+	// Token: 0x0601B555 RID: 111957 RVA: 0x00862F9C File Offset: 0x0086119C
 	protected unsafe static void __CPPCALL_SetCollisionResponseToPawn_Implementation(WorldFunctionLibrary.__SetCollisionResponseToPawn_FunctionParams* __Params)
 	{
 		TsBaseCharacter orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<TsBaseCharacter>(__Params->actor);
@@ -3471,25 +3489,25 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		WorldFunctionLibrary.SetCollisionResponseToPawn(orCreateUObjectByNativePointer, pawnChannel, __Params->newResponse);
 	}
 
-	// Token: 0x0601D857 RID: 120919 RVA: 0x0083BAFB File Offset: 0x00839CFB
+	// Token: 0x0601B556 RID: 111958 RVA: 0x00862FC7 File Offset: 0x008611C7
 	protected unsafe static void __CPPCALL_ShowCharacterCollision_Implementation(WorldFunctionLibrary.__ShowCharacterCollision_FunctionParams* __Params)
 	{
 		WorldFunctionLibrary.ShowCharacterCollision(__Params->isShow, __Params->entityId);
 	}
 
-	// Token: 0x0601D858 RID: 120920 RVA: 0x0083BB0E File Offset: 0x00839D0E
+	// Token: 0x0601B557 RID: 111959 RVA: 0x00862FDA File Offset: 0x008611DA
 	protected unsafe static void __CPPCALL_GetEnableCollisionDebug_Implementation(WorldFunctionLibrary.__GetEnableCollisionDebug_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.GetEnableCollisionDebug(__Params->entityId);
 	}
 
-	// Token: 0x0601D859 RID: 120921 RVA: 0x0083BB21 File Offset: 0x00839D21
+	// Token: 0x0601B558 RID: 111960 RVA: 0x00862FED File Offset: 0x008611ED
 	protected unsafe static void __CPPCALL_ChangeRole_Implementation(WorldFunctionLibrary.__ChangeRole_FunctionParams* __Params)
 	{
 		WorldFunctionLibrary.ChangeRole(__Params->pos);
 	}
 
-	// Token: 0x0601D85A RID: 120922 RVA: 0x0083BB30 File Offset: 0x00839D30
+	// Token: 0x0601B559 RID: 111961 RVA: 0x00862FFC File Offset: 0x008611FC
 	protected unsafe static void __CPPCALL_ChangeRoleInExitSkill_Implementation(WorldFunctionLibrary.__ChangeRoleInExitSkill_FunctionParams* __Params)
 	{
 		AActor orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AActor>(__Params->goDownPlayer);
@@ -3497,7 +3515,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		WorldFunctionLibrary.ChangeRoleInExitSkill(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x0601D85B RID: 120923 RVA: 0x0083BB5C File Offset: 0x00839D5C
+	// Token: 0x0601B55A RID: 111962 RVA: 0x00863028 File Offset: 0x00861228
 	protected unsafe static void __CPPCALL_InitGameSplineBySplineEntity_Implementation(WorldFunctionLibrary.__InitGameSplineBySplineEntity_FunctionParams* __Params)
 	{
 		TsGameSplineActor orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<TsGameSplineActor>(__Params->inSplineActor);
@@ -3506,49 +3524,49 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		ptr = ((usplineComponent != null) ? usplineComponent.NativePtr : ((IntPtr)0));
 	}
 
-	// Token: 0x0601D85C RID: 120924 RVA: 0x0083BB96 File Offset: 0x00839D96
+	// Token: 0x0601B55B RID: 111963 RVA: 0x00863062 File Offset: 0x00861262
 	protected unsafe static void __CPPCALL_UiCameraAnimationDisablePlayerActor_Implementation(WorldFunctionLibrary.__UiCameraAnimationDisablePlayerActor_FunctionParams* __Params)
 	{
 		WorldFunctionLibrary.UiCameraAnimationDisablePlayerActor();
 	}
 
-	// Token: 0x0601D85D RID: 120925 RVA: 0x0083BB9D File Offset: 0x00839D9D
+	// Token: 0x0601B55C RID: 111964 RVA: 0x00863069 File Offset: 0x00861269
 	protected unsafe static void __CPPCALL_UiCameraAnimationEnablePlayerActor_Implementation(WorldFunctionLibrary.__UiCameraAnimationEnablePlayerActor_FunctionParams* __Params)
 	{
 		WorldFunctionLibrary.UiCameraAnimationEnablePlayerActor();
 	}
 
-	// Token: 0x0601D85E RID: 120926 RVA: 0x0083BBA4 File Offset: 0x00839DA4
+	// Token: 0x0601B55D RID: 111965 RVA: 0x00863070 File Offset: 0x00861270
 	protected unsafe static void __CPPCALL_UiCameraAnimationDisableCustomCreatureActor_Implementation(WorldFunctionLibrary.__UiCameraAnimationDisableCustomCreatureActor_FunctionParams* __Params)
 	{
 		WorldFunctionLibrary.UiCameraAnimationDisableCustomCreatureActor(__Params->position);
 	}
 
-	// Token: 0x0601D85F RID: 120927 RVA: 0x0083BBB1 File Offset: 0x00839DB1
+	// Token: 0x0601B55E RID: 111966 RVA: 0x0086307D File Offset: 0x0086127D
 	protected unsafe static void __CPPCALL_UiCameraAnimationEnableCustomCreatureActor_Implementation(WorldFunctionLibrary.__UiCameraAnimationEnableCustomCreatureActor_FunctionParams* __Params)
 	{
 		WorldFunctionLibrary.UiCameraAnimationEnableCustomCreatureActor();
 	}
 
-	// Token: 0x0601D860 RID: 120928 RVA: 0x0083BBB8 File Offset: 0x00839DB8
+	// Token: 0x0601B55F RID: 111967 RVA: 0x00863084 File Offset: 0x00861284
 	protected unsafe static void __CPPCALL_UiCameraAnimationBroadSequenceEvent_Implementation(WorldFunctionLibrary.__UiCameraAnimationBroadSequenceEvent_FunctionParams* __Params)
 	{
 		WorldFunctionLibrary.UiCameraAnimationBroadSequenceEvent(FString.ToString((void*)(&__Params->sequenceEventName)));
 	}
 
-	// Token: 0x0601D861 RID: 120929 RVA: 0x0083BBCB File Offset: 0x00839DCB
+	// Token: 0x0601B560 RID: 111968 RVA: 0x00863097 File Offset: 0x00861297
 	protected unsafe static void __CPPCALL_SetTimeDilation_Implementation(WorldFunctionLibrary.__SetTimeDilation_FunctionParams* __Params)
 	{
 		WorldFunctionLibrary.SetTimeDilation(__Params->timeDilation);
 	}
 
-	// Token: 0x0601D862 RID: 120930 RVA: 0x0083BBD8 File Offset: 0x00839DD8
+	// Token: 0x0601B561 RID: 111969 RVA: 0x008630A4 File Offset: 0x008612A4
 	protected unsafe static void __CPPCALL_GetTimeDilation_Implementation(WorldFunctionLibrary.__GetTimeDilation_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.GetTimeDilation();
 	}
 
-	// Token: 0x0601D863 RID: 120931 RVA: 0x0083BBE8 File Offset: 0x00839DE8
+	// Token: 0x0601B562 RID: 111970 RVA: 0x008630B4 File Offset: 0x008612B4
 	protected unsafe static void __CPPCALL_GetEntitiesInRange_Implementation(WorldFunctionLibrary.__GetEntitiesInRange_FunctionParams* __Params)
 	{
 		ERelation relation = (ERelation)__Params->relation;
@@ -3560,7 +3578,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		entitiesInRange.CopyTo(&__Params->__Result, default(UScriptStructStackOnlyPtr));
 	}
 
-	// Token: 0x0601D864 RID: 120932 RVA: 0x0083BC24 File Offset: 0x00839E24
+	// Token: 0x0601B563 RID: 111971 RVA: 0x008630F0 File Offset: 0x008612F0
 	protected unsafe static void __CPPCALL_AttachToActor_Implementation(WorldFunctionLibrary.__AttachToActor_FunctionParams* __Params)
 	{
 		UObject orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<UObject>(__Params->callObject);
@@ -3574,7 +3592,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		__Params->__Result = WorldFunctionLibrary.AttachToActor(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, orCreateUObjectByNativePointer3, detachType, reason, __Params->socketName, locationRule, rotationRule, scaleRule, __Params->bWeldSimulatedBodies, __Params->doAttach);
 	}
 
-	// Token: 0x0601D865 RID: 120933 RVA: 0x0083BCAC File Offset: 0x00839EAC
+	// Token: 0x0601B564 RID: 111972 RVA: 0x00863178 File Offset: 0x00861378
 	protected unsafe static void __CPPCALL_AttachToComponent_Implementation(WorldFunctionLibrary.__AttachToComponent_FunctionParams* __Params)
 	{
 		UObject orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<UObject>(__Params->callObject);
@@ -3588,7 +3606,7 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		__Params->__Result = WorldFunctionLibrary.AttachToComponent(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, orCreateUObjectByNativePointer3, detachType, reason, __Params->socketName, locationRule, rotationRule, scaleRule, __Params->bWeldSimulatedBodies, __Params->doAttach);
 	}
 
-	// Token: 0x0601D866 RID: 120934 RVA: 0x0083BD34 File Offset: 0x00839F34
+	// Token: 0x0601B565 RID: 111973 RVA: 0x00863200 File Offset: 0x00861400
 	protected unsafe static void __CPPCALL_DetachActor_Implementation(WorldFunctionLibrary.__DetachActor_FunctionParams* __Params)
 	{
 		UObject orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<UObject>(__Params->callObject);
@@ -3600,38 +3618,38 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		__Params->__Result = WorldFunctionLibrary.DetachActor(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->destroy, reason, locationRule, rotationRule, scaleRule);
 	}
 
-	// Token: 0x0601D867 RID: 120935 RVA: 0x0083BD96 File Offset: 0x00839F96
+	// Token: 0x0601B566 RID: 111974 RVA: 0x00863262 File Offset: 0x00861462
 	protected unsafe static void __CPPCALL_GetPlayerFollower_Implementation(WorldFunctionLibrary.__GetPlayerFollower_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.GetPlayerFollower();
 	}
 
-	// Token: 0x0601D868 RID: 120936 RVA: 0x0083BDA3 File Offset: 0x00839FA3
+	// Token: 0x0601B567 RID: 111975 RVA: 0x0086326F File Offset: 0x0086146F
 	protected unsafe static void __CPPCALL_IsPlayerFollowerEnable_Implementation(WorldFunctionLibrary.__IsPlayerFollowerEnable_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.IsPlayerFollowerEnable();
 	}
 
-	// Token: 0x0601D869 RID: 120937 RVA: 0x0083BDB0 File Offset: 0x00839FB0
+	// Token: 0x0601B568 RID: 111976 RVA: 0x0086327C File Offset: 0x0086147C
 	protected unsafe static void __CPPCALL_SetPlayerFollowerEnable_Implementation(WorldFunctionLibrary.__SetPlayerFollowerEnable_FunctionParams* __Params)
 	{
 		BPEEnableFollowShooter enableType = (BPEEnableFollowShooter)__Params->enableType;
 		WorldFunctionLibrary.SetPlayerFollowerEnable(__Params->enable, enableType);
 	}
 
-	// Token: 0x0601D86A RID: 120938 RVA: 0x0083BDD0 File Offset: 0x00839FD0
+	// Token: 0x0601B569 RID: 111977 RVA: 0x0086329C File Offset: 0x0086149C
 	protected unsafe static void __CPPCALL_SetPlayerFollowerCustomEntityId_Implementation(WorldFunctionLibrary.__SetPlayerFollowerCustomEntityId_FunctionParams* __Params)
 	{
 		WorldFunctionLibrary.SetPlayerFollowerCustomEntityId(FString.ToString((void*)(&__Params->customKey)), __Params->entityId);
 	}
 
-	// Token: 0x0601D86B RID: 120939 RVA: 0x0083BDE9 File Offset: 0x00839FE9
+	// Token: 0x0601B56A RID: 111978 RVA: 0x008632B5 File Offset: 0x008614B5
 	protected unsafe static void __CPPCALL_RemovePlayerFollowerCustomEntityId_Implementation(WorldFunctionLibrary.__RemovePlayerFollowerCustomEntityId_FunctionParams* __Params)
 	{
 		WorldFunctionLibrary.RemovePlayerFollowerCustomEntityId(FString.ToString((void*)(&__Params->customKey)));
 	}
 
-	// Token: 0x0601D86C RID: 120940 RVA: 0x0083BDFC File Offset: 0x00839FFC
+	// Token: 0x0601B56B RID: 111979 RVA: 0x008632C8 File Offset: 0x008614C8
 	protected unsafe static void __CPPCALL_GetFollowerShooterConfig_Implementation(WorldFunctionLibrary.__GetFollowerShooterConfig_FunctionParams* __Params)
 	{
 		ref IntPtr ptr = ref *(&__Params->__Result);
@@ -3639,25 +3657,25 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		ptr = ((followerShooterConfig != null) ? followerShooterConfig.NativePtr : ((IntPtr)0));
 	}
 
-	// Token: 0x0601D86D RID: 120941 RVA: 0x0083BE1E File Offset: 0x0083A01E
+	// Token: 0x0601B56C RID: 111980 RVA: 0x008632EA File Offset: 0x008614EA
 	protected unsafe static void __CPPCALL_GetPlayerFollowerMotor_Implementation(WorldFunctionLibrary.__GetPlayerFollowerMotor_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.GetPlayerFollowerMotor();
 	}
 
-	// Token: 0x0601D86E RID: 120942 RVA: 0x0083BE2B File Offset: 0x0083A02B
+	// Token: 0x0601B56D RID: 111981 RVA: 0x008632F7 File Offset: 0x008614F7
 	protected unsafe static void __CPPCALL_IsPlayerFollowerMotorEnable_Implementation(WorldFunctionLibrary.__IsPlayerFollowerMotorEnable_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.IsPlayerFollowerMotorEnable();
 	}
 
-	// Token: 0x0601D86F RID: 120943 RVA: 0x0083BE38 File Offset: 0x0083A038
+	// Token: 0x0601B56E RID: 111982 RVA: 0x00863304 File Offset: 0x00861504
 	protected unsafe static void __CPPCALL_SetPlayerFollowerMotorEnable_Implementation(WorldFunctionLibrary.__SetPlayerFollowerMotorEnable_FunctionParams* __Params)
 	{
 		WorldFunctionLibrary.SetPlayerFollowerMotorEnable(__Params->enable);
 	}
 
-	// Token: 0x0601D870 RID: 120944 RVA: 0x0083BE48 File Offset: 0x0083A048
+	// Token: 0x0601B56F RID: 111983 RVA: 0x00863314 File Offset: 0x00861514
 	protected unsafe static void __CPPCALL_IsPlayerFollowerNeedInput_Implementation(WorldFunctionLibrary.__IsPlayerFollowerNeedInput_FunctionParams* __Params)
 	{
 		EInputAction action = (EInputAction)__Params->action;
@@ -3665,39 +3683,39 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		__Params->__Result = WorldFunctionLibrary.IsPlayerFollowerNeedInput(action, state);
 	}
 
-	// Token: 0x0601D871 RID: 120945 RVA: 0x0083BE70 File Offset: 0x0083A070
+	// Token: 0x0601B570 RID: 111984 RVA: 0x0086333C File Offset: 0x0086153C
 	protected unsafe static void __CPPCALL_GetGameplayTagOriginName_Implementation(WorldFunctionLibrary.__GetGameplayTagOriginName_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.GetGameplayTagOriginName(__Params->gameplayTag);
 	}
 
-	// Token: 0x0601D872 RID: 120946 RVA: 0x0083BE84 File Offset: 0x0083A084
+	// Token: 0x0601B571 RID: 111985 RVA: 0x00863350 File Offset: 0x00861550
 	protected unsafe static void __CPPCALL_RegisterToBpActorController_Implementation(WorldFunctionLibrary.__RegisterToBpActorController_FunctionParams* __Params)
 	{
 		IBPI_SceneBp_C sceneBp = __Params->sceneBp.ToUObject() as IBPI_SceneBp_C;
 		WorldFunctionLibrary.RegisterToBpActorController(__Params->groupTag, sceneBp);
 	}
 
-	// Token: 0x0601D873 RID: 120947 RVA: 0x0083BEB0 File Offset: 0x0083A0B0
+	// Token: 0x0601B572 RID: 111986 RVA: 0x0086337C File Offset: 0x0086157C
 	protected unsafe static void __CPPCALL_UnregisterToBpActorController_Implementation(WorldFunctionLibrary.__UnregisterToBpActorController_FunctionParams* __Params)
 	{
 		IBPI_SceneBp_C sceneBp = __Params->sceneBp.ToUObject() as IBPI_SceneBp_C;
 		WorldFunctionLibrary.UnregisterToBpActorController(__Params->groupTag, sceneBp);
 	}
 
-	// Token: 0x0601D874 RID: 120948 RVA: 0x0083BEDA File Offset: 0x0083A0DA
+	// Token: 0x0601B573 RID: 111987 RVA: 0x008633A6 File Offset: 0x008615A6
 	protected unsafe static void __CPPCALL_RegisterDayNightBpToBpActorController_Implementation(WorldFunctionLibrary.__RegisterDayNightBpToBpActorController_FunctionParams* __Params)
 	{
 		WorldFunctionLibrary.RegisterDayNightBpToBpActorController(__Params->dayNightBp.ToUObject() as IBPI_DayNightEvent_C);
 	}
 
-	// Token: 0x0601D875 RID: 120949 RVA: 0x0083BEF1 File Offset: 0x0083A0F1
+	// Token: 0x0601B574 RID: 111988 RVA: 0x008633BD File Offset: 0x008615BD
 	protected unsafe static void __CPPCALL_UnregisterDayNightBpToBpActorController_Implementation(WorldFunctionLibrary.__UnregisterDayNightBpToBpActorController_FunctionParams* __Params)
 	{
 		WorldFunctionLibrary.UnregisterDayNightBpToBpActorController(__Params->dayNightBp.ToUObject() as IBPI_DayNightEvent_C);
 	}
 
-	// Token: 0x0601D876 RID: 120950 RVA: 0x0083BF08 File Offset: 0x0083A108
+	// Token: 0x0601B575 RID: 111989 RVA: 0x008633D4 File Offset: 0x008615D4
 	protected unsafe static void __CPPCALL_GetEntityBindGroup_Implementation(WorldFunctionLibrary.__GetEntityBindGroup_FunctionParams* __Params)
 	{
 		TArray<int> entityBindGroup = WorldFunctionLibrary.GetEntityBindGroup(__Params->entityId);
@@ -3708,3312 +3726,3312 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		entityBindGroup.CopyTo(&__Params->__Result, default(UScriptStructStackOnlyPtr));
 	}
 
-	// Token: 0x0601D877 RID: 120951 RVA: 0x0083BF3A File Offset: 0x0083A13A
+	// Token: 0x0601B576 RID: 111990 RVA: 0x00863406 File Offset: 0x00861606
 	protected unsafe static void __CPPCALL_GetTrapDefenseUseBpUsing_Implementation(WorldFunctionLibrary.__GetTrapDefenseUseBpUsing_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.GetTrapDefenseUseBpUsing();
 	}
 
-	// Token: 0x0601D878 RID: 120952 RVA: 0x0083BF47 File Offset: 0x0083A147
+	// Token: 0x0601B577 RID: 111991 RVA: 0x00863413 File Offset: 0x00861613
 	protected unsafe static void __CPPCALL_DisableAllRoleWithoutControl_Implementation(WorldFunctionLibrary.__DisableAllRoleWithoutControl_FunctionParams* __Params)
 	{
 		WorldFunctionLibrary.DisableAllRoleWithoutControl(__Params->needEffect);
 	}
 
-	// Token: 0x0601D879 RID: 120953 RVA: 0x0083BF54 File Offset: 0x0083A154
+	// Token: 0x0601B578 RID: 111992 RVA: 0x00863420 File Offset: 0x00861620
 	protected unsafe static void __CPPCALL_PlayerEntityId_Implementation(WorldFunctionLibrary.__PlayerEntityId_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.PlayerEntityId();
 	}
 
-	// Token: 0x0601D87A RID: 120954 RVA: 0x0083BF61 File Offset: 0x0083A161
+	// Token: 0x0601B579 RID: 111993 RVA: 0x0086342D File Offset: 0x0086162D
 	protected unsafe static void __CPPCALL_CurrentFrontRoleEntityId_Implementation(WorldFunctionLibrary.__CurrentFrontRoleEntityId_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.CurrentFrontRoleEntityId();
 	}
 
-	// Token: 0x0601D87B RID: 120955 RVA: 0x0083BF6E File Offset: 0x0083A16E
+	// Token: 0x0601B57A RID: 111994 RVA: 0x0086343A File Offset: 0x0086163A
 	protected unsafe static void __CPPCALL_ShowTipsByTextId_Implementation(WorldFunctionLibrary.__ShowTipsByTextId_FunctionParams* __Params)
 	{
 		WorldFunctionLibrary.ShowTipsByTextId(FString.ToString((void*)(&__Params->textId)));
 	}
 
-	// Token: 0x0601D87C RID: 120956 RVA: 0x0083BF81 File Offset: 0x0083A181
+	// Token: 0x0601B57B RID: 111995 RVA: 0x0086344D File Offset: 0x0086164D
 	protected unsafe static void __CPPCALL_IsBulletCreateByFollowShooter_Implementation(WorldFunctionLibrary.__IsBulletCreateByFollowShooter_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.IsBulletCreateByFollowShooter(__Params->bulletId);
 	}
 
-	// Token: 0x0601D87D RID: 120957 RVA: 0x0083BF94 File Offset: 0x0083A194
+	// Token: 0x0601B57C RID: 111996 RVA: 0x00863460 File Offset: 0x00861660
 	protected unsafe static void __CPPCALL_CheckIsRoleTriggerActor_Implementation(WorldFunctionLibrary.__CheckIsRoleTriggerActor_FunctionParams* __Params)
 	{
 		AActor orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AActor>(__Params->actor);
 		__Params->__Result = WorldFunctionLibrary.CheckIsRoleTriggerActor(orCreateUObjectByNativePointer);
 	}
 
-	// Token: 0x0601D87E RID: 120958 RVA: 0x0083BFB9 File Offset: 0x0083A1B9
+	// Token: 0x0601B57D RID: 111997 RVA: 0x00863485 File Offset: 0x00861685
 	protected unsafe static void __CPPCALL_IsMale_Implementation(WorldFunctionLibrary.__IsMale_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.IsMale();
 	}
 
-	// Token: 0x0601D87F RID: 120959 RVA: 0x0083BFC6 File Offset: 0x0083A1C6
+	// Token: 0x0601B57E RID: 111998 RVA: 0x00863492 File Offset: 0x00861692
 	protected unsafe static void __CPPCALL_ReleaseFromMediaPlayActor_Implementation(WorldFunctionLibrary.__ReleaseFromMediaPlayActor_FunctionParams* __Params)
 	{
 		WorldFunctionLibrary.ReleaseFromMediaPlayActor(__Params->sceneBpActor);
 	}
 
-	// Token: 0x0601D880 RID: 120960 RVA: 0x0083BFD3 File Offset: 0x0083A1D3
+	// Token: 0x0601B57F RID: 111999 RVA: 0x0086349F File Offset: 0x0086169F
 	protected unsafe static void __CPPCALL_IsPlayerElementalFieldOpened_Implementation(WorldFunctionLibrary.__IsPlayerElementalFieldOpened_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.IsPlayerElementalFieldOpened();
 	}
 
-	// Token: 0x0601D881 RID: 120961 RVA: 0x0083BFE0 File Offset: 0x0083A1E0
+	// Token: 0x0601B580 RID: 112000 RVA: 0x008634AC File Offset: 0x008616AC
 	protected unsafe static void __CPPCALL_UpdatePlayerElementalField_Implementation(WorldFunctionLibrary.__UpdatePlayerElementalField_FunctionParams* __Params)
 	{
 		WorldFunctionLibrary.UpdatePlayerElementalField(__Params->isOpen);
 	}
 
-	// Token: 0x0601D882 RID: 120962 RVA: 0x0083BFF0 File Offset: 0x0083A1F0
+	// Token: 0x0601B581 RID: 112001 RVA: 0x008634BC File Offset: 0x008616BC
 	protected unsafe static void __CPPCALL_StartPlayerInteractCoreFoundation_Implementation(WorldFunctionLibrary.__StartPlayerInteractCoreFoundation_FunctionParams* __Params)
 	{
 		UKuroBooleanEventBinder orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<UKuroBooleanEventBinder>(__Params->eventBinder);
 		__Params->__Result = WorldFunctionLibrary.StartPlayerInteractCoreFoundation(__Params->entityId, orCreateUObjectByNativePointer);
 	}
 
-	// Token: 0x0601D883 RID: 120963 RVA: 0x0083C01B File Offset: 0x0083A21B
+	// Token: 0x0601B582 RID: 112002 RVA: 0x008634E7 File Offset: 0x008616E7
 	protected unsafe static void __CPPCALL_IsPlayerDrawingElementalCore_Implementation(WorldFunctionLibrary.__IsPlayerDrawingElementalCore_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.IsPlayerDrawingElementalCore();
 	}
 
-	// Token: 0x0601D884 RID: 120964 RVA: 0x0083C028 File Offset: 0x0083A228
+	// Token: 0x0601B583 RID: 112003 RVA: 0x008634F4 File Offset: 0x008616F4
 	protected unsafe static void __CPPCALL_PlayerElementalFieldBurst_Implementation(WorldFunctionLibrary.__PlayerElementalFieldBurst_FunctionParams* __Params)
 	{
 		WorldFunctionLibrary.PlayerElementalFieldBurst();
 	}
 
-	// Token: 0x0601D885 RID: 120965 RVA: 0x0083C02F File Offset: 0x0083A22F
+	// Token: 0x0601B584 RID: 112004 RVA: 0x008634FB File Offset: 0x008616FB
 	protected unsafe static void __CPPCALL_GetPlayerSceneInteractPointLocation_Implementation(WorldFunctionLibrary.__GetPlayerSceneInteractPointLocation_FunctionParams* __Params)
 	{
 		__Params->__Result = WorldFunctionLibrary.GetPlayerSceneInteractPointLocation();
 	}
 
-	// Token: 0x0400E801 RID: 59393
+	// Token: 0x0400ECB5 RID: 60597
 	private static bool IsChangeFootStep;
 
-	// Token: 0x0400E802 RID: 59394
+	// Token: 0x0400ECB6 RID: 60598
 	private static int ChangeFootStepMaterialId;
 
-	// Token: 0x0400E803 RID: 59395
+	// Token: 0x0400ECB7 RID: 60599
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/World/Bridge/WorldFunctionLibrary.WorldFunctionLibrary_C";
 
-	// Token: 0x0400E804 RID: 59396
+	// Token: 0x0400ECB8 RID: 60600
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400E805 RID: 59397
+	// Token: 0x0400ECB9 RID: 60601
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x02009879 RID: 39033
+	// Token: 0x02008A93 RID: 35475
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __GetChangeFootStep_FunctionParams
 	{
-		// Token: 0x04030942 RID: 198978
+		// Token: 0x0402BFC5 RID: 180165
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030943 RID: 198979
+		// Token: 0x0402BFC6 RID: 180166
 		[FieldOffset(8)]
 		public bool __Result;
 	}
 
-	// Token: 0x0200987A RID: 39034
+	// Token: 0x02008A94 RID: 35476
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __GetChangeFootStepMaterialId_FunctionParams
 	{
-		// Token: 0x04030944 RID: 198980
+		// Token: 0x0402BFC7 RID: 180167
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030945 RID: 198981
+		// Token: 0x0402BFC8 RID: 180168
 		[FieldOffset(8)]
 		public int __Result;
 	}
 
-	// Token: 0x0200987B RID: 39035
+	// Token: 0x02008A95 RID: 35477
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __CheckConfigIdByActor_FunctionParams
 	{
-		// Token: 0x04030946 RID: 198982
+		// Token: 0x0402BFC9 RID: 180169
 		[FieldOffset(0)]
 		public IntPtr actor;
 
-		// Token: 0x04030947 RID: 198983
+		// Token: 0x0402BFCA RID: 180170
 		[FieldOffset(8)]
 		public float configId;
 
-		// Token: 0x04030948 RID: 198984
+		// Token: 0x0402BFCB RID: 180171
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030949 RID: 198985
+		// Token: 0x0402BFCC RID: 180172
 		[FieldOffset(24)]
 		public bool __Result;
 	}
 
-	// Token: 0x0200987C RID: 39036
+	// Token: 0x02008A96 RID: 35478
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __ActorHasSceneItemTag_FunctionParams
 	{
-		// Token: 0x0403094A RID: 198986
+		// Token: 0x0402BFCD RID: 180173
 		[FieldOffset(0)]
 		public IntPtr actor;
 
-		// Token: 0x0403094B RID: 198987
+		// Token: 0x0402BFCE RID: 180174
 		[FieldOffset(8)]
 		public float tag;
 
-		// Token: 0x0403094C RID: 198988
+		// Token: 0x0402BFCF RID: 180175
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0403094D RID: 198989
+		// Token: 0x0402BFD0 RID: 180176
 		[FieldOffset(24)]
 		public bool __Result;
 	}
 
-	// Token: 0x0200987D RID: 39037
+	// Token: 0x02008A97 RID: 35479
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetControlVisionEntityId_FunctionParams
 	{
-		// Token: 0x0403094E RID: 198990
+		// Token: 0x0402BFD1 RID: 180177
 		[FieldOffset(0)]
 		public int ownerEntityId;
 
-		// Token: 0x0403094F RID: 198991
+		// Token: 0x0402BFD2 RID: 180178
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030950 RID: 198992
+		// Token: 0x0402BFD3 RID: 180179
 		[FieldOffset(16)]
 		public int __Result;
 	}
 
-	// Token: 0x0200987E RID: 39038
+	// Token: 0x02008A98 RID: 35480
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetVisionEntityId_FunctionParams
 	{
-		// Token: 0x04030951 RID: 198993
+		// Token: 0x0402BFD4 RID: 180180
 		[FieldOffset(0)]
 		public int ownerEntityId;
 
-		// Token: 0x04030952 RID: 198994
+		// Token: 0x0402BFD5 RID: 180181
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030953 RID: 198995
+		// Token: 0x0402BFD6 RID: 180182
 		[FieldOffset(16)]
 		public int __Result;
 	}
 
-	// Token: 0x0200987F RID: 39039
+	// Token: 0x02008A99 RID: 35481
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __GetVisionEntityIdList_FunctionParams
 	{
-		// Token: 0x04030954 RID: 198996
+		// Token: 0x0402BFD7 RID: 180183
 		[FieldOffset(0)]
 		public int ownerEntityId;
 
-		// Token: 0x04030955 RID: 198997
+		// Token: 0x0402BFD8 RID: 180184
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030956 RID: 198998
+		// Token: 0x0402BFD9 RID: 180185
 		[FieldOffset(16)]
 		public byte __Result;
 	}
 
-	// Token: 0x02009880 RID: 39040
+	// Token: 0x02008A9A RID: 35482
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __SetVisionEnable_FunctionParams
 	{
-		// Token: 0x04030957 RID: 198999
+		// Token: 0x0402BFDA RID: 180186
 		[FieldOffset(0)]
 		public int ownerEntityId;
 
-		// Token: 0x04030958 RID: 199000
+		// Token: 0x0402BFDB RID: 180187
 		[FieldOffset(4)]
 		public bool enable;
 
-		// Token: 0x04030959 RID: 199001
+		// Token: 0x0402BFDC RID: 180188
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009881 RID: 39041
+	// Token: 0x02008A9B RID: 35483
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetCustomEntityId_FunctionParams
 	{
-		// Token: 0x0403095A RID: 199002
+		// Token: 0x0402BFDD RID: 180189
 		[FieldOffset(0)]
 		public int ownerEntityId;
 
-		// Token: 0x0403095B RID: 199003
+		// Token: 0x0402BFDE RID: 180190
 		[FieldOffset(4)]
 		public int pos;
 
-		// Token: 0x0403095C RID: 199004
+		// Token: 0x0402BFDF RID: 180191
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0403095D RID: 199005
+		// Token: 0x0402BFE0 RID: 180192
 		[FieldOffset(16)]
 		public int __Result;
 	}
 
-	// Token: 0x02009882 RID: 39042
+	// Token: 0x02008A9C RID: 35484
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __SetCustomEntityEnable_FunctionParams
 	{
-		// Token: 0x0403095E RID: 199006
+		// Token: 0x0402BFE1 RID: 180193
 		[FieldOffset(0)]
 		public int ownerEntityId;
 
-		// Token: 0x0403095F RID: 199007
+		// Token: 0x0402BFE2 RID: 180194
 		[FieldOffset(4)]
 		public int pos;
 
-		// Token: 0x04030960 RID: 199008
+		// Token: 0x0402BFE3 RID: 180195
 		[FieldOffset(8)]
 		public bool enable;
 
-		// Token: 0x04030961 RID: 199009
+		// Token: 0x0402BFE4 RID: 180196
 		[FieldOffset(16)]
 		public IntPtr callObject;
 
-		// Token: 0x04030962 RID: 199010
+		// Token: 0x0402BFE5 RID: 180197
 		[FieldOffset(24)]
 		public FString reason;
 
-		// Token: 0x04030963 RID: 199011
+		// Token: 0x0402BFE6 RID: 180198
 		[FieldOffset(40)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009883 RID: 39043
+	// Token: 0x02008A9D RID: 35485
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __ChangeCustomEntityState_FunctionParams
 	{
-		// Token: 0x04030964 RID: 199012
+		// Token: 0x0402BFE7 RID: 180199
 		[FieldOffset(0)]
 		public int ownerEntityId;
 
-		// Token: 0x04030965 RID: 199013
+		// Token: 0x0402BFE8 RID: 180200
 		[FieldOffset(4)]
 		public int pos;
 
-		// Token: 0x04030966 RID: 199014
+		// Token: 0x0402BFE9 RID: 180201
 		[FieldOffset(8)]
 		public int skillId;
 
-		// Token: 0x04030967 RID: 199015
+		// Token: 0x0402BFEA RID: 180202
 		[FieldOffset(12)]
 		public FGameplayTag stateTag;
 
-		// Token: 0x04030968 RID: 199016
+		// Token: 0x0402BFEB RID: 180203
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009884 RID: 39044
+	// Token: 0x02008A9E RID: 35486
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __StartCustomSceneItemEntityTrackPlayer_FunctionParams
 	{
-		// Token: 0x04030969 RID: 199017
+		// Token: 0x0402BFEC RID: 180204
 		[FieldOffset(0)]
 		public int ownerEntityId;
 
-		// Token: 0x0403096A RID: 199018
+		// Token: 0x0402BFED RID: 180205
 		[FieldOffset(4)]
 		public int pos;
 
-		// Token: 0x0403096B RID: 199019
+		// Token: 0x0402BFEE RID: 180206
 		[FieldOffset(8)]
 		public float moveSpeed;
 
-		// Token: 0x0403096C RID: 199020
+		// Token: 0x0402BFEF RID: 180207
 		[FieldOffset(12)]
 		public FRotator initRotatorOffset;
 
-		// Token: 0x0403096D RID: 199021
+		// Token: 0x0402BFF0 RID: 180208
 		[FieldOffset(24)]
 		public float angleSpeed;
 
-		// Token: 0x0403096E RID: 199022
+		// Token: 0x0402BFF1 RID: 180209
 		[FieldOffset(32)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009885 RID: 39045
+	// Token: 0x02008A9F RID: 35487
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __StopCustomSceneItemEntityTrackPlayer_FunctionParams
 	{
-		// Token: 0x0403096F RID: 199023
+		// Token: 0x0402BFF2 RID: 180210
 		[FieldOffset(0)]
 		public int ownerEntityId;
 
-		// Token: 0x04030970 RID: 199024
+		// Token: 0x0402BFF3 RID: 180211
 		[FieldOffset(4)]
 		public int pos;
 
-		// Token: 0x04030971 RID: 199025
+		// Token: 0x0402BFF4 RID: 180212
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009886 RID: 39046
+	// Token: 0x02008AA0 RID: 35488
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetSummonerEntityId_FunctionParams
 	{
-		// Token: 0x04030972 RID: 199026
+		// Token: 0x0402BFF5 RID: 180213
 		[FieldOffset(0)]
 		public int visionEntityId;
 
-		// Token: 0x04030973 RID: 199027
+		// Token: 0x0402BFF6 RID: 180214
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030974 RID: 199028
+		// Token: 0x0402BFF7 RID: 180215
 		[FieldOffset(16)]
 		public int __Result;
 	}
 
-	// Token: 0x02009887 RID: 39047
+	// Token: 0x02008AA1 RID: 35489
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetVisionId_FunctionParams
 	{
-		// Token: 0x04030975 RID: 199029
+		// Token: 0x0402BFF8 RID: 180216
 		[FieldOffset(0)]
 		public int visionEntityId;
 
-		// Token: 0x04030976 RID: 199030
+		// Token: 0x0402BFF9 RID: 180217
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030977 RID: 199031
+		// Token: 0x0402BFFA RID: 180218
 		[FieldOffset(16)]
 		public int __Result;
 	}
 
-	// Token: 0x02009888 RID: 39048
+	// Token: 0x02008AA2 RID: 35490
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __SetVisionPos_FunctionParams
 	{
-		// Token: 0x04030978 RID: 199032
+		// Token: 0x0402BFFB RID: 180219
 		[FieldOffset(0)]
 		public int ownerEntityId;
 
-		// Token: 0x04030979 RID: 199033
+		// Token: 0x0402BFFC RID: 180220
 		[FieldOffset(4)]
 		public int pos;
 
-		// Token: 0x0403097A RID: 199034
+		// Token: 0x0402BFFD RID: 180221
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009889 RID: 39049
+	// Token: 0x02008AA3 RID: 35491
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetVisionPos_FunctionParams
 	{
-		// Token: 0x0403097B RID: 199035
+		// Token: 0x0402BFFE RID: 180222
 		[FieldOffset(0)]
 		public int ownerEntityId;
 
-		// Token: 0x0403097C RID: 199036
+		// Token: 0x0402BFFF RID: 180223
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0403097D RID: 199037
+		// Token: 0x0402C000 RID: 180224
 		[FieldOffset(16)]
 		public int __Result;
 	}
 
-	// Token: 0x0200988A RID: 39050
+	// Token: 0x02008AA4 RID: 35492
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __GetSummonEntityIds_FunctionParams
 	{
-		// Token: 0x0403097E RID: 199038
+		// Token: 0x0402C001 RID: 180225
 		[FieldOffset(0)]
 		public int ownerEntityId;
 
-		// Token: 0x0403097F RID: 199039
+		// Token: 0x0402C002 RID: 180226
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030980 RID: 199040
+		// Token: 0x0402C003 RID: 180227
 		[FieldOffset(16)]
 		public byte __Result;
 	}
 
-	// Token: 0x0200988B RID: 39051
+	// Token: 0x02008AA5 RID: 35493
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __SummonChair_FunctionParams
 	{
-		// Token: 0x04030981 RID: 199041
+		// Token: 0x0402C004 RID: 180228
 		[FieldOffset(0)]
 		public int ownerEntityId;
 
-		// Token: 0x04030982 RID: 199042
+		// Token: 0x0402C005 RID: 180229
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x0200988C RID: 39052
+	// Token: 0x02008AA6 RID: 35494
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 112)]
 	protected ref struct __SummonRequest_FunctionParams
 	{
-		// Token: 0x04030983 RID: 199043
+		// Token: 0x0402C006 RID: 180230
 		[FieldOffset(0)]
 		public int skillId;
 
-		// Token: 0x04030984 RID: 199044
+		// Token: 0x0402C007 RID: 180231
 		[FieldOffset(4)]
 		public bool isVisible;
 
-		// Token: 0x04030985 RID: 199045
+		// Token: 0x0402C008 RID: 180232
 		[FieldOffset(16)]
 		public FTransformDouble transform;
 
-		// Token: 0x04030986 RID: 199046
+		// Token: 0x0402C009 RID: 180233
 		[FieldOffset(80)]
 		public int summonerId;
 
-		// Token: 0x04030987 RID: 199047
+		// Token: 0x0402C00A RID: 180234
 		[FieldOffset(84)]
 		public int summonConfigId;
 
-		// Token: 0x04030988 RID: 199048
+		// Token: 0x0402C00B RID: 180235
 		[FieldOffset(88)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030989 RID: 199049
+		// Token: 0x0402C00C RID: 180236
 		[FieldOffset(96)]
 		public long __Result;
 	}
 
-	// Token: 0x0200988D RID: 39053
+	// Token: 0x02008AA7 RID: 35495
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 96)]
 	protected ref struct __SummonRandomRequest_FunctionParams
 	{
-		// Token: 0x0403098A RID: 199050
+		// Token: 0x0402C00D RID: 180237
 		[FieldOffset(0)]
 		public int summonerId;
 
-		// Token: 0x0403098B RID: 199051
+		// Token: 0x0402C00E RID: 180238
 		[FieldOffset(4)]
 		public int index;
 
-		// Token: 0x0403098C RID: 199052
+		// Token: 0x0402C00F RID: 180239
 		[FieldOffset(16)]
 		public FTransformDouble transform;
 
-		// Token: 0x0403098D RID: 199053
+		// Token: 0x0402C010 RID: 180240
 		[FieldOffset(80)]
 		public int skillId;
 
-		// Token: 0x0403098E RID: 199054
+		// Token: 0x0402C011 RID: 180241
 		[FieldOffset(84)]
 		public bool isVisible;
 
-		// Token: 0x0403098F RID: 199055
+		// Token: 0x0402C012 RID: 180242
 		[FieldOffset(88)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x0200988E RID: 39054
+	// Token: 0x02008AA8 RID: 35496
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetSummonRandomEntity_FunctionParams
 	{
-		// Token: 0x04030990 RID: 199056
+		// Token: 0x0402C013 RID: 180243
 		[FieldOffset(0)]
 		public int summonerId;
 
-		// Token: 0x04030991 RID: 199057
+		// Token: 0x0402C014 RID: 180244
 		[FieldOffset(4)]
 		public int index;
 
-		// Token: 0x04030992 RID: 199058
+		// Token: 0x0402C015 RID: 180245
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030993 RID: 199059
+		// Token: 0x0402C016 RID: 180246
 		[FieldOffset(16)]
 		public int __Result;
 	}
 
-	// Token: 0x0200988F RID: 39055
+	// Token: 0x02008AA9 RID: 35497
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetServerIdByEntityId_FunctionParams
 	{
-		// Token: 0x04030994 RID: 199060
+		// Token: 0x0402C017 RID: 180247
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030995 RID: 199061
+		// Token: 0x0402C018 RID: 180248
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030996 RID: 199062
+		// Token: 0x0402C019 RID: 180249
 		[FieldOffset(16)]
 		public long __Result;
 	}
 
-	// Token: 0x02009890 RID: 39056
+	// Token: 0x02008AAA RID: 35498
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __RemoveSummonEntityRequest_FunctionParams
 	{
-		// Token: 0x04030997 RID: 199063
+		// Token: 0x0402C01A RID: 180250
 		[FieldOffset(0)]
 		public int skillId;
 
-		// Token: 0x04030998 RID: 199064
+		// Token: 0x0402C01B RID: 180251
 		[FieldOffset(4)]
 		public int summonerId;
 
-		// Token: 0x04030999 RID: 199065
+		// Token: 0x0402C01C RID: 180252
 		[FieldOffset(8)]
 		public int removeId;
 
-		// Token: 0x0403099A RID: 199066
+		// Token: 0x0402C01D RID: 180253
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009891 RID: 39057
+	// Token: 0x02008AAB RID: 35499
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __EntityIsInit_FunctionParams
 	{
-		// Token: 0x0403099B RID: 199067
+		// Token: 0x0402C01E RID: 180254
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0403099C RID: 199068
+		// Token: 0x0402C01F RID: 180255
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0403099D RID: 199069
+		// Token: 0x0402C020 RID: 180256
 		[FieldOffset(16)]
 		public bool __Result;
 	}
 
-	// Token: 0x02009892 RID: 39058
+	// Token: 0x02008AAC RID: 35500
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetEntityEnable_FunctionParams
 	{
-		// Token: 0x0403099E RID: 199070
+		// Token: 0x0402C021 RID: 180257
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0403099F RID: 199071
+		// Token: 0x0402C022 RID: 180258
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x040309A0 RID: 199072
+		// Token: 0x0402C023 RID: 180259
 		[FieldOffset(16)]
 		public bool __Result;
 	}
 
-	// Token: 0x02009893 RID: 39059
+	// Token: 0x02008AAD RID: 35501
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __IsNeedPostEffect_FunctionParams
 	{
-		// Token: 0x040309A1 RID: 199073
+		// Token: 0x0402C024 RID: 180260
 		[FieldOffset(0)]
 		public IntPtr actor;
 
-		// Token: 0x040309A2 RID: 199074
+		// Token: 0x0402C025 RID: 180261
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x040309A3 RID: 199075
+		// Token: 0x0402C026 RID: 180262
 		[FieldOffset(16)]
 		public bool __Result;
 	}
 
-	// Token: 0x02009894 RID: 39060
+	// Token: 0x02008AAE RID: 35502
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetEntityTypeByEntity_FunctionParams
 	{
-		// Token: 0x040309A4 RID: 199076
+		// Token: 0x0402C027 RID: 180263
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x040309A5 RID: 199077
+		// Token: 0x0402C028 RID: 180264
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x040309A6 RID: 199078
+		// Token: 0x0402C029 RID: 180265
 		[FieldOffset(16)]
 		public int __Result;
 	}
 
-	// Token: 0x02009895 RID: 39061
+	// Token: 0x02008AAF RID: 35503
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetEntityTypeByActor_FunctionParams
 	{
-		// Token: 0x040309A7 RID: 199079
+		// Token: 0x0402C02A RID: 180266
 		[FieldOffset(0)]
 		public IntPtr actor;
 
-		// Token: 0x040309A8 RID: 199080
+		// Token: 0x0402C02B RID: 180267
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x040309A9 RID: 199081
+		// Token: 0x0402C02C RID: 180268
 		[FieldOffset(16)]
 		public int __Result;
 	}
 
-	// Token: 0x02009896 RID: 39062
+	// Token: 0x02008AB0 RID: 35504
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetMonsterType_FunctionParams
 	{
-		// Token: 0x040309AA RID: 199082
+		// Token: 0x0402C02D RID: 180269
 		[FieldOffset(0)]
 		public IntPtr actor;
 
-		// Token: 0x040309AB RID: 199083
+		// Token: 0x0402C02E RID: 180270
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x040309AC RID: 199084
+		// Token: 0x0402C02F RID: 180271
 		[FieldOffset(16)]
 		public int __Result;
 	}
 
-	// Token: 0x02009897 RID: 39063
+	// Token: 0x02008AB1 RID: 35505
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetConfigIdByActor_FunctionParams
 	{
-		// Token: 0x040309AD RID: 199085
+		// Token: 0x0402C030 RID: 180272
 		[FieldOffset(0)]
 		public IntPtr actor;
 
-		// Token: 0x040309AE RID: 199086
+		// Token: 0x0402C031 RID: 180273
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x040309AF RID: 199087
+		// Token: 0x0402C032 RID: 180274
 		[FieldOffset(16)]
 		public int __Result;
 	}
 
-	// Token: 0x02009898 RID: 39064
+	// Token: 0x02008AB2 RID: 35506
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetEntityActorByChildActor_FunctionParams
 	{
-		// Token: 0x040309B0 RID: 199088
+		// Token: 0x0402C033 RID: 180275
 		[FieldOffset(0)]
 		public IntPtr childActor;
 
-		// Token: 0x040309B1 RID: 199089
+		// Token: 0x0402C034 RID: 180276
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x040309B2 RID: 199090
+		// Token: 0x0402C035 RID: 180277
 		[FieldOffset(16)]
 		public IntPtr __Result;
 	}
 
-	// Token: 0x02009899 RID: 39065
+	// Token: 0x02008AB3 RID: 35507
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetEntityDestructible_FunctionParams
 	{
-		// Token: 0x040309B3 RID: 199091
+		// Token: 0x0402C036 RID: 180278
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x040309B4 RID: 199092
+		// Token: 0x0402C037 RID: 180279
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x040309B5 RID: 199093
+		// Token: 0x0402C038 RID: 180280
 		[FieldOffset(16)]
 		public bool __Result;
 	}
 
-	// Token: 0x0200989A RID: 39066
+	// Token: 0x02008AB4 RID: 35508
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __AddPrivateTags_FunctionParams
 	{
-		// Token: 0x040309B6 RID: 199094
+		// Token: 0x0402C039 RID: 180281
 		[FieldOffset(0)]
 		public float entityId;
 
-		// Token: 0x040309B7 RID: 199095
+		// Token: 0x0402C03A RID: 180282
 		[FieldOffset(8)]
 		public byte tags;
 
-		// Token: 0x040309B8 RID: 199096
+		// Token: 0x0402C03B RID: 180283
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x0200989B RID: 39067
+	// Token: 0x02008AB5 RID: 35509
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __RemovePrivateTags_FunctionParams
 	{
-		// Token: 0x040309B9 RID: 199097
+		// Token: 0x0402C03C RID: 180284
 		[FieldOffset(0)]
 		public float entityId;
 
-		// Token: 0x040309BA RID: 199098
+		// Token: 0x0402C03D RID: 180285
 		[FieldOffset(8)]
 		public byte tags;
 
-		// Token: 0x040309BB RID: 199099
+		// Token: 0x0402C03E RID: 180286
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x0200989C RID: 39068
+	// Token: 0x02008AB6 RID: 35510
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __AddPublicTags_FunctionParams
 	{
-		// Token: 0x040309BC RID: 199100
+		// Token: 0x0402C03F RID: 180287
 		[FieldOffset(0)]
 		public float entityId;
 
-		// Token: 0x040309BD RID: 199101
+		// Token: 0x0402C040 RID: 180288
 		[FieldOffset(8)]
 		public byte tags;
 
-		// Token: 0x040309BE RID: 199102
+		// Token: 0x0402C041 RID: 180289
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x0200989D RID: 39069
+	// Token: 0x02008AB7 RID: 35511
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __RemovePublicTags_FunctionParams
 	{
-		// Token: 0x040309BF RID: 199103
+		// Token: 0x0402C042 RID: 180290
 		[FieldOffset(0)]
 		public float entityId;
 
-		// Token: 0x040309C0 RID: 199104
+		// Token: 0x0402C043 RID: 180291
 		[FieldOffset(8)]
 		public byte tags;
 
-		// Token: 0x040309C1 RID: 199105
+		// Token: 0x0402C044 RID: 180292
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x0200989E RID: 39070
+	// Token: 0x02008AB8 RID: 35512
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __GetIntValueByEntity_FunctionParams
 	{
-		// Token: 0x040309C2 RID: 199106
+		// Token: 0x0402C045 RID: 180293
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x040309C3 RID: 199107
+		// Token: 0x0402C046 RID: 180294
 		[FieldOffset(8)]
 		public FString key;
 
-		// Token: 0x040309C4 RID: 199108
+		// Token: 0x0402C047 RID: 180295
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x040309C5 RID: 199109
+		// Token: 0x0402C048 RID: 180296
 		[FieldOffset(32)]
 		public int __Result;
 	}
 
-	// Token: 0x0200989F RID: 39071
+	// Token: 0x02008AB9 RID: 35513
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __GetIntValueByEntityWithCharacter_FunctionParams
 	{
-		// Token: 0x040309C6 RID: 199110
+		// Token: 0x0402C049 RID: 180297
 		[FieldOffset(0)]
 		public IntPtr entity;
 
-		// Token: 0x040309C7 RID: 199111
+		// Token: 0x0402C04A RID: 180298
 		[FieldOffset(8)]
 		public FString key;
 
-		// Token: 0x040309C8 RID: 199112
+		// Token: 0x0402C04B RID: 180299
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x040309C9 RID: 199113
+		// Token: 0x0402C04C RID: 180300
 		[FieldOffset(32)]
 		public int __Result;
 	}
 
-	// Token: 0x020098A0 RID: 39072
+	// Token: 0x02008ABA RID: 35514
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __SetIntValueByEntity_FunctionParams
 	{
-		// Token: 0x040309CA RID: 199114
+		// Token: 0x0402C04D RID: 180301
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x040309CB RID: 199115
+		// Token: 0x0402C04E RID: 180302
 		[FieldOffset(8)]
 		public FString key;
 
-		// Token: 0x040309CC RID: 199116
+		// Token: 0x0402C04F RID: 180303
 		[FieldOffset(24)]
 		public int value;
 
-		// Token: 0x040309CD RID: 199117
+		// Token: 0x0402C050 RID: 180304
 		[FieldOffset(32)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098A1 RID: 39073
+	// Token: 0x02008ABB RID: 35515
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __SetIntValueByEntityWithCharacter_FunctionParams
 	{
-		// Token: 0x040309CE RID: 199118
+		// Token: 0x0402C051 RID: 180305
 		[FieldOffset(0)]
 		public IntPtr entity;
 
-		// Token: 0x040309CF RID: 199119
+		// Token: 0x0402C052 RID: 180306
 		[FieldOffset(8)]
 		public FString key;
 
-		// Token: 0x040309D0 RID: 199120
+		// Token: 0x0402C053 RID: 180307
 		[FieldOffset(24)]
 		public int value;
 
-		// Token: 0x040309D1 RID: 199121
+		// Token: 0x0402C054 RID: 180308
 		[FieldOffset(32)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098A2 RID: 39074
+	// Token: 0x02008ABC RID: 35516
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __GetIntValuesByEntity_FunctionParams
 	{
-		// Token: 0x040309D2 RID: 199122
+		// Token: 0x0402C055 RID: 180309
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x040309D3 RID: 199123
+		// Token: 0x0402C056 RID: 180310
 		[FieldOffset(8)]
 		public FString key;
 
-		// Token: 0x040309D4 RID: 199124
+		// Token: 0x0402C057 RID: 180311
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x040309D5 RID: 199125
+		// Token: 0x0402C058 RID: 180312
 		[FieldOffset(32)]
 		public byte __Result;
 	}
 
-	// Token: 0x020098A3 RID: 39075
+	// Token: 0x02008ABD RID: 35517
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __SetIntValuesByEntity_FunctionParams
 	{
-		// Token: 0x040309D6 RID: 199126
+		// Token: 0x0402C059 RID: 180313
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x040309D7 RID: 199127
+		// Token: 0x0402C05A RID: 180314
 		[FieldOffset(8)]
 		public FString key;
 
-		// Token: 0x040309D8 RID: 199128
+		// Token: 0x0402C05B RID: 180315
 		[FieldOffset(24)]
 		public byte values;
 
-		// Token: 0x040309D9 RID: 199129
+		// Token: 0x0402C05C RID: 180316
 		[FieldOffset(40)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098A4 RID: 39076
+	// Token: 0x02008ABE RID: 35518
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __GetLongValueByEntity_FunctionParams
 	{
-		// Token: 0x040309DA RID: 199130
+		// Token: 0x0402C05D RID: 180317
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x040309DB RID: 199131
+		// Token: 0x0402C05E RID: 180318
 		[FieldOffset(8)]
 		public FString key;
 
-		// Token: 0x040309DC RID: 199132
+		// Token: 0x0402C05F RID: 180319
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x040309DD RID: 199133
+		// Token: 0x0402C060 RID: 180320
 		[FieldOffset(32)]
 		public long __Result;
 	}
 
-	// Token: 0x020098A5 RID: 39077
+	// Token: 0x02008ABF RID: 35519
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __SetLongValueByEntity_FunctionParams
 	{
-		// Token: 0x040309DE RID: 199134
+		// Token: 0x0402C061 RID: 180321
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x040309DF RID: 199135
+		// Token: 0x0402C062 RID: 180322
 		[FieldOffset(8)]
 		public FString key;
 
-		// Token: 0x040309E0 RID: 199136
+		// Token: 0x0402C063 RID: 180323
 		[FieldOffset(24)]
 		public long value;
 
-		// Token: 0x040309E1 RID: 199137
+		// Token: 0x0402C064 RID: 180324
 		[FieldOffset(32)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098A6 RID: 39078
+	// Token: 0x02008AC0 RID: 35520
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __GetLongValuesByEntity_FunctionParams
 	{
-		// Token: 0x040309E2 RID: 199138
+		// Token: 0x0402C065 RID: 180325
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x040309E3 RID: 199139
+		// Token: 0x0402C066 RID: 180326
 		[FieldOffset(8)]
 		public FString key;
 
-		// Token: 0x040309E4 RID: 199140
+		// Token: 0x0402C067 RID: 180327
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x040309E5 RID: 199141
+		// Token: 0x0402C068 RID: 180328
 		[FieldOffset(32)]
 		public byte __Result;
 	}
 
-	// Token: 0x020098A7 RID: 39079
+	// Token: 0x02008AC1 RID: 35521
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __SetLongValuesByEntity_FunctionParams
 	{
-		// Token: 0x040309E6 RID: 199142
+		// Token: 0x0402C069 RID: 180329
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x040309E7 RID: 199143
+		// Token: 0x0402C06A RID: 180330
 		[FieldOffset(8)]
 		public FString key;
 
-		// Token: 0x040309E8 RID: 199144
+		// Token: 0x0402C06B RID: 180331
 		[FieldOffset(24)]
 		public byte values;
 
-		// Token: 0x040309E9 RID: 199145
+		// Token: 0x0402C06C RID: 180332
 		[FieldOffset(40)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098A8 RID: 39080
+	// Token: 0x02008AC2 RID: 35522
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __GetBooleanValueByEntity_FunctionParams
 	{
-		// Token: 0x040309EA RID: 199146
+		// Token: 0x0402C06D RID: 180333
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x040309EB RID: 199147
+		// Token: 0x0402C06E RID: 180334
 		[FieldOffset(8)]
 		public FString key;
 
-		// Token: 0x040309EC RID: 199148
+		// Token: 0x0402C06F RID: 180335
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x040309ED RID: 199149
+		// Token: 0x0402C070 RID: 180336
 		[FieldOffset(32)]
 		public bool __Result;
 	}
 
-	// Token: 0x020098A9 RID: 39081
+	// Token: 0x02008AC3 RID: 35523
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __SetBooleanValueByEntity_FunctionParams
 	{
-		// Token: 0x040309EE RID: 199150
+		// Token: 0x0402C071 RID: 180337
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x040309EF RID: 199151
+		// Token: 0x0402C072 RID: 180338
 		[FieldOffset(8)]
 		public FString key;
 
-		// Token: 0x040309F0 RID: 199152
+		// Token: 0x0402C073 RID: 180339
 		[FieldOffset(24)]
 		public bool value;
 
-		// Token: 0x040309F1 RID: 199153
+		// Token: 0x0402C074 RID: 180340
 		[FieldOffset(32)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098AA RID: 39082
+	// Token: 0x02008AC4 RID: 35524
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __GetFloatValueByEntity_FunctionParams
 	{
-		// Token: 0x040309F2 RID: 199154
+		// Token: 0x0402C075 RID: 180341
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x040309F3 RID: 199155
+		// Token: 0x0402C076 RID: 180342
 		[FieldOffset(8)]
 		public FString key;
 
-		// Token: 0x040309F4 RID: 199156
+		// Token: 0x0402C077 RID: 180343
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x040309F5 RID: 199157
+		// Token: 0x0402C078 RID: 180344
 		[FieldOffset(32)]
 		public float __Result;
 	}
 
-	// Token: 0x020098AB RID: 39083
+	// Token: 0x02008AC5 RID: 35525
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __SetFloatValueByEntity_FunctionParams
 	{
-		// Token: 0x040309F6 RID: 199158
+		// Token: 0x0402C079 RID: 180345
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x040309F7 RID: 199159
+		// Token: 0x0402C07A RID: 180346
 		[FieldOffset(8)]
 		public FString key;
 
-		// Token: 0x040309F8 RID: 199160
+		// Token: 0x0402C07B RID: 180347
 		[FieldOffset(24)]
 		public float value;
 
-		// Token: 0x040309F9 RID: 199161
+		// Token: 0x0402C07C RID: 180348
 		[FieldOffset(32)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098AC RID: 39084
+	// Token: 0x02008AC6 RID: 35526
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __GetFloatValuesByEntity_FunctionParams
 	{
-		// Token: 0x040309FA RID: 199162
+		// Token: 0x0402C07D RID: 180349
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x040309FB RID: 199163
+		// Token: 0x0402C07E RID: 180350
 		[FieldOffset(8)]
 		public FString key;
 
-		// Token: 0x040309FC RID: 199164
+		// Token: 0x0402C07F RID: 180351
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x040309FD RID: 199165
+		// Token: 0x0402C080 RID: 180352
 		[FieldOffset(32)]
 		public byte __Result;
 	}
 
-	// Token: 0x020098AD RID: 39085
+	// Token: 0x02008AC7 RID: 35527
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __SetFloatValuesByEntity_FunctionParams
 	{
-		// Token: 0x040309FE RID: 199166
+		// Token: 0x0402C081 RID: 180353
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x040309FF RID: 199167
+		// Token: 0x0402C082 RID: 180354
 		[FieldOffset(8)]
 		public FString key;
 
-		// Token: 0x04030A00 RID: 199168
+		// Token: 0x0402C083 RID: 180355
 		[FieldOffset(24)]
 		public byte values;
 
-		// Token: 0x04030A01 RID: 199169
+		// Token: 0x0402C084 RID: 180356
 		[FieldOffset(40)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098AE RID: 39086
+	// Token: 0x02008AC8 RID: 35528
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __GetStringValueByEntity_FunctionParams
 	{
-		// Token: 0x04030A02 RID: 199170
+		// Token: 0x0402C085 RID: 180357
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030A03 RID: 199171
+		// Token: 0x0402C086 RID: 180358
 		[FieldOffset(8)]
 		public FString key;
 
-		// Token: 0x04030A04 RID: 199172
+		// Token: 0x0402C087 RID: 180359
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030A05 RID: 199173
+		// Token: 0x0402C088 RID: 180360
 		[FieldOffset(32)]
 		public FString __Result;
 	}
 
-	// Token: 0x020098AF RID: 39087
+	// Token: 0x02008AC9 RID: 35529
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __SetStringValueByEntity_FunctionParams
 	{
-		// Token: 0x04030A06 RID: 199174
+		// Token: 0x0402C089 RID: 180361
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030A07 RID: 199175
+		// Token: 0x0402C08A RID: 180362
 		[FieldOffset(8)]
 		public FString key;
 
-		// Token: 0x04030A08 RID: 199176
+		// Token: 0x0402C08B RID: 180363
 		[FieldOffset(24)]
 		public FString value;
 
-		// Token: 0x04030A09 RID: 199177
+		// Token: 0x0402C08C RID: 180364
 		[FieldOffset(40)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098B0 RID: 39088
+	// Token: 0x02008ACA RID: 35530
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __GetStringValuesByEntity_FunctionParams
 	{
-		// Token: 0x04030A0A RID: 199178
+		// Token: 0x0402C08D RID: 180365
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030A0B RID: 199179
+		// Token: 0x0402C08E RID: 180366
 		[FieldOffset(8)]
 		public FString key;
 
-		// Token: 0x04030A0C RID: 199180
+		// Token: 0x0402C08F RID: 180367
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030A0D RID: 199181
+		// Token: 0x0402C090 RID: 180368
 		[FieldOffset(32)]
 		public byte __Result;
 	}
 
-	// Token: 0x020098B1 RID: 39089
+	// Token: 0x02008ACB RID: 35531
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __SetStringValuesByEntity_FunctionParams
 	{
-		// Token: 0x04030A0E RID: 199182
+		// Token: 0x0402C091 RID: 180369
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030A0F RID: 199183
+		// Token: 0x0402C092 RID: 180370
 		[FieldOffset(8)]
 		public FString key;
 
-		// Token: 0x04030A10 RID: 199184
+		// Token: 0x0402C093 RID: 180371
 		[FieldOffset(24)]
 		public byte values;
 
-		// Token: 0x04030A11 RID: 199185
+		// Token: 0x0402C094 RID: 180372
 		[FieldOffset(40)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098B2 RID: 39090
+	// Token: 0x02008ACC RID: 35532
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __RemoveValueByEntity_FunctionParams
 	{
-		// Token: 0x04030A12 RID: 199186
+		// Token: 0x0402C095 RID: 180373
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030A13 RID: 199187
+		// Token: 0x0402C096 RID: 180374
 		[FieldOffset(8)]
 		public FString key;
 
-		// Token: 0x04030A14 RID: 199188
+		// Token: 0x0402C097 RID: 180375
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098B3 RID: 39091
+	// Token: 0x02008ACD RID: 35533
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __HasValueByEntity_FunctionParams
 	{
-		// Token: 0x04030A15 RID: 199189
+		// Token: 0x0402C098 RID: 180376
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030A16 RID: 199190
+		// Token: 0x0402C099 RID: 180377
 		[FieldOffset(8)]
 		public FString key;
 
-		// Token: 0x04030A17 RID: 199191
+		// Token: 0x0402C09A RID: 180378
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030A18 RID: 199192
+		// Token: 0x0402C09B RID: 180379
 		[FieldOffset(32)]
 		public bool __Result;
 	}
 
-	// Token: 0x020098B4 RID: 39092
+	// Token: 0x02008ACE RID: 35534
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 56)]
 	protected ref struct __GetVectorValueByEntity_FunctionParams
 	{
-		// Token: 0x04030A19 RID: 199193
+		// Token: 0x0402C09C RID: 180380
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030A1A RID: 199194
+		// Token: 0x0402C09D RID: 180381
 		[FieldOffset(8)]
 		public FString key;
 
-		// Token: 0x04030A1B RID: 199195
+		// Token: 0x0402C09E RID: 180382
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030A1C RID: 199196
+		// Token: 0x0402C09F RID: 180383
 		[FieldOffset(32)]
 		public FVectorDouble __Result;
 	}
 
-	// Token: 0x020098B5 RID: 39093
+	// Token: 0x02008ACF RID: 35535
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 56)]
 	protected ref struct __SetVectorValueByEntity_FunctionParams
 	{
-		// Token: 0x04030A1D RID: 199197
+		// Token: 0x0402C0A0 RID: 180384
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030A1E RID: 199198
+		// Token: 0x0402C0A1 RID: 180385
 		[FieldOffset(8)]
 		public FString key;
 
-		// Token: 0x04030A1F RID: 199199
+		// Token: 0x0402C0A2 RID: 180386
 		[FieldOffset(24)]
 		public FVectorDouble value;
 
-		// Token: 0x04030A20 RID: 199200
+		// Token: 0x0402C0A3 RID: 180387
 		[FieldOffset(48)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098B6 RID: 39094
+	// Token: 0x02008AD0 RID: 35536
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __GetVectorValuesByEntity_FunctionParams
 	{
-		// Token: 0x04030A21 RID: 199201
+		// Token: 0x0402C0A4 RID: 180388
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030A22 RID: 199202
+		// Token: 0x0402C0A5 RID: 180389
 		[FieldOffset(8)]
 		public FString key;
 
-		// Token: 0x04030A23 RID: 199203
+		// Token: 0x0402C0A6 RID: 180390
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030A24 RID: 199204
+		// Token: 0x0402C0A7 RID: 180391
 		[FieldOffset(32)]
 		public byte __Result;
 	}
 
-	// Token: 0x020098B7 RID: 39095
+	// Token: 0x02008AD1 RID: 35537
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __SetVectorValuesByEntity_FunctionParams
 	{
-		// Token: 0x04030A25 RID: 199205
+		// Token: 0x0402C0A8 RID: 180392
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030A26 RID: 199206
+		// Token: 0x0402C0A9 RID: 180393
 		[FieldOffset(8)]
 		public FString key;
 
-		// Token: 0x04030A27 RID: 199207
+		// Token: 0x0402C0AA RID: 180394
 		[FieldOffset(24)]
 		public byte values;
 
-		// Token: 0x04030A28 RID: 199208
+		// Token: 0x0402C0AB RID: 180395
 		[FieldOffset(40)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098B8 RID: 39096
+	// Token: 0x02008AD2 RID: 35538
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __GetRotatorValueByEntity_FunctionParams
 	{
-		// Token: 0x04030A29 RID: 199209
+		// Token: 0x0402C0AC RID: 180396
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030A2A RID: 199210
+		// Token: 0x0402C0AD RID: 180397
 		[FieldOffset(8)]
 		public FString key;
 
-		// Token: 0x04030A2B RID: 199211
+		// Token: 0x0402C0AE RID: 180398
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030A2C RID: 199212
+		// Token: 0x0402C0AF RID: 180399
 		[FieldOffset(32)]
 		public FRotator __Result;
 	}
 
-	// Token: 0x020098B9 RID: 39097
+	// Token: 0x02008AD3 RID: 35539
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __SetRotatorValueByEntity_FunctionParams
 	{
-		// Token: 0x04030A2D RID: 199213
+		// Token: 0x0402C0B0 RID: 180400
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030A2E RID: 199214
+		// Token: 0x0402C0B1 RID: 180401
 		[FieldOffset(8)]
 		public FString key;
 
-		// Token: 0x04030A2F RID: 199215
+		// Token: 0x0402C0B2 RID: 180402
 		[FieldOffset(24)]
 		public FRotator value;
 
-		// Token: 0x04030A30 RID: 199216
+		// Token: 0x0402C0B3 RID: 180403
 		[FieldOffset(40)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098BA RID: 39098
+	// Token: 0x02008AD4 RID: 35540
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __GetRotatorValuesByEntity_FunctionParams
 	{
-		// Token: 0x04030A31 RID: 199217
+		// Token: 0x0402C0B4 RID: 180404
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030A32 RID: 199218
+		// Token: 0x0402C0B5 RID: 180405
 		[FieldOffset(8)]
 		public FString key;
 
-		// Token: 0x04030A33 RID: 199219
+		// Token: 0x0402C0B6 RID: 180406
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030A34 RID: 199220
+		// Token: 0x0402C0B7 RID: 180407
 		[FieldOffset(32)]
 		public byte __Result;
 	}
 
-	// Token: 0x020098BB RID: 39099
+	// Token: 0x02008AD5 RID: 35541
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __SetRotatorValuesByEntity_FunctionParams
 	{
-		// Token: 0x04030A35 RID: 199221
+		// Token: 0x0402C0B8 RID: 180408
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030A36 RID: 199222
+		// Token: 0x0402C0B9 RID: 180409
 		[FieldOffset(8)]
 		public FString key;
 
-		// Token: 0x04030A37 RID: 199223
+		// Token: 0x0402C0BA RID: 180410
 		[FieldOffset(24)]
 		public byte values;
 
-		// Token: 0x04030A38 RID: 199224
+		// Token: 0x0402C0BB RID: 180411
 		[FieldOffset(40)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098BC RID: 39100
+	// Token: 0x02008AD6 RID: 35542
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __GetEntityIdByEntity_FunctionParams
 	{
-		// Token: 0x04030A39 RID: 199225
+		// Token: 0x0402C0BC RID: 180412
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030A3A RID: 199226
+		// Token: 0x0402C0BD RID: 180413
 		[FieldOffset(8)]
 		public FString key;
 
-		// Token: 0x04030A3B RID: 199227
+		// Token: 0x0402C0BE RID: 180414
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030A3C RID: 199228
+		// Token: 0x0402C0BF RID: 180415
 		[FieldOffset(32)]
 		public int __Result;
 	}
 
-	// Token: 0x020098BD RID: 39101
+	// Token: 0x02008AD7 RID: 35543
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __SetEntityIdByEntity_FunctionParams
 	{
-		// Token: 0x04030A3D RID: 199229
+		// Token: 0x0402C0C0 RID: 180416
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030A3E RID: 199230
+		// Token: 0x0402C0C1 RID: 180417
 		[FieldOffset(8)]
 		public FString key;
 
-		// Token: 0x04030A3F RID: 199231
+		// Token: 0x0402C0C2 RID: 180418
 		[FieldOffset(24)]
 		public int value;
 
-		// Token: 0x04030A40 RID: 199232
+		// Token: 0x0402C0C3 RID: 180419
 		[FieldOffset(32)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098BE RID: 39102
+	// Token: 0x02008AD8 RID: 35544
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __GetEntityIdsByEntity_FunctionParams
 	{
-		// Token: 0x04030A41 RID: 199233
+		// Token: 0x0402C0C4 RID: 180420
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030A42 RID: 199234
+		// Token: 0x0402C0C5 RID: 180421
 		[FieldOffset(8)]
 		public FString key;
 
-		// Token: 0x04030A43 RID: 199235
+		// Token: 0x0402C0C6 RID: 180422
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030A44 RID: 199236
+		// Token: 0x0402C0C7 RID: 180423
 		[FieldOffset(32)]
 		public byte __Result;
 	}
 
-	// Token: 0x020098BF RID: 39103
+	// Token: 0x02008AD9 RID: 35545
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __SetEntityIdsByEntity_FunctionParams
 	{
-		// Token: 0x04030A45 RID: 199237
+		// Token: 0x0402C0C8 RID: 180424
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030A46 RID: 199238
+		// Token: 0x0402C0C9 RID: 180425
 		[FieldOffset(8)]
 		public FString key;
 
-		// Token: 0x04030A47 RID: 199239
+		// Token: 0x0402C0CA RID: 180426
 		[FieldOffset(24)]
 		public byte values;
 
-		// Token: 0x04030A48 RID: 199240
+		// Token: 0x0402C0CB RID: 180427
 		[FieldOffset(40)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098C0 RID: 39104
+	// Token: 0x02008ADA RID: 35546
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __GetBlackboardInfosByEntity_FunctionParams
 	{
-		// Token: 0x04030A49 RID: 199241
+		// Token: 0x0402C0CC RID: 180428
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030A4A RID: 199242
+		// Token: 0x0402C0CD RID: 180429
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030A4B RID: 199243
+		// Token: 0x0402C0CE RID: 180430
 		[FieldOffset(16)]
 		public FString __Result;
 	}
 
-	// Token: 0x020098C1 RID: 39105
+	// Token: 0x02008ADB RID: 35547
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __RemoveStandaloneEntity_FunctionParams
 	{
-		// Token: 0x04030A4C RID: 199244
+		// Token: 0x0402C0CF RID: 180431
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030A4D RID: 199245
+		// Token: 0x0402C0D0 RID: 180432
 		[FieldOffset(4)]
 		public int removeEntityType;
 
-		// Token: 0x04030A4E RID: 199246
+		// Token: 0x0402C0D1 RID: 180433
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098C2 RID: 39106
+	// Token: 0x02008ADC RID: 35548
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetDynamicEntity_FunctionParams
 	{
-		// Token: 0x04030A4F RID: 199247
+		// Token: 0x0402C0D2 RID: 180434
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030A50 RID: 199248
+		// Token: 0x0402C0D3 RID: 180435
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030A51 RID: 199249
+		// Token: 0x0402C0D4 RID: 180436
 		[FieldOffset(16)]
 		public IntPtr __Result;
 	}
 
-	// Token: 0x020098C3 RID: 39107
+	// Token: 0x02008ADD RID: 35549
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __GetWorldOwner_FunctionParams
 	{
-		// Token: 0x04030A52 RID: 199250
+		// Token: 0x0402C0D5 RID: 180437
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030A53 RID: 199251
+		// Token: 0x0402C0D6 RID: 180438
 		[FieldOffset(8)]
 		public int __Result;
 	}
 
-	// Token: 0x020098C4 RID: 39108
+	// Token: 0x02008ADE RID: 35550
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __GenUniqueId_FunctionParams
 	{
-		// Token: 0x04030A54 RID: 199252
+		// Token: 0x0402C0D7 RID: 180439
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030A55 RID: 199253
+		// Token: 0x0402C0D8 RID: 180440
 		[FieldOffset(8)]
 		public long __Result;
 	}
 
-	// Token: 0x020098C5 RID: 39109
+	// Token: 0x02008ADF RID: 35551
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetEntityIdByCreature_FunctionParams
 	{
-		// Token: 0x04030A56 RID: 199254
+		// Token: 0x0402C0D9 RID: 180441
 		[FieldOffset(0)]
 		public long creatureDataId;
 
-		// Token: 0x04030A57 RID: 199255
+		// Token: 0x0402C0DA RID: 180442
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030A58 RID: 199256
+		// Token: 0x0402C0DB RID: 180443
 		[FieldOffset(16)]
 		public int __Result;
 	}
 
-	// Token: 0x020098C6 RID: 39110
+	// Token: 0x02008AE0 RID: 35552
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetCreatureDataIdByEntity_FunctionParams
 	{
-		// Token: 0x04030A59 RID: 199257
+		// Token: 0x0402C0DC RID: 180444
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030A5A RID: 199258
+		// Token: 0x0402C0DD RID: 180445
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030A5B RID: 199259
+		// Token: 0x0402C0DE RID: 180446
 		[FieldOffset(16)]
 		public long __Result;
 	}
 
-	// Token: 0x020098C7 RID: 39111
+	// Token: 0x02008AE1 RID: 35553
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetPlayerIdByEntity_FunctionParams
 	{
-		// Token: 0x04030A5C RID: 199260
+		// Token: 0x0402C0DF RID: 180447
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030A5D RID: 199261
+		// Token: 0x0402C0E0 RID: 180448
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030A5E RID: 199262
+		// Token: 0x0402C0E1 RID: 180449
 		[FieldOffset(16)]
 		public int __Result;
 	}
 
-	// Token: 0x020098C8 RID: 39112
+	// Token: 0x02008AE2 RID: 35554
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetRoleElementId_FunctionParams
 	{
-		// Token: 0x04030A5F RID: 199263
+		// Token: 0x0402C0E2 RID: 180450
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030A60 RID: 199264
+		// Token: 0x0402C0E3 RID: 180451
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030A61 RID: 199265
+		// Token: 0x0402C0E4 RID: 180452
 		[FieldOffset(16)]
 		public int __Result;
 	}
 
-	// Token: 0x020098C9 RID: 39113
+	// Token: 0x02008AE3 RID: 35555
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetRoleId_FunctionParams
 	{
-		// Token: 0x04030A62 RID: 199266
+		// Token: 0x0402C0E5 RID: 180453
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030A63 RID: 199267
+		// Token: 0x0402C0E6 RID: 180454
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030A64 RID: 199268
+		// Token: 0x0402C0E7 RID: 180455
 		[FieldOffset(16)]
 		public int __Result;
 	}
 
-	// Token: 0x020098CA RID: 39114
+	// Token: 0x02008AE4 RID: 35556
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetRoleIdIgnoreTrial_FunctionParams
 	{
-		// Token: 0x04030A65 RID: 199269
+		// Token: 0x0402C0E8 RID: 180456
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030A66 RID: 199270
+		// Token: 0x0402C0E9 RID: 180457
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030A67 RID: 199271
+		// Token: 0x0402C0EA RID: 180458
 		[FieldOffset(16)]
 		public int __Result;
 	}
 
-	// Token: 0x020098CB RID: 39115
+	// Token: 0x02008AE5 RID: 35557
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetOwnerIdByEntity_FunctionParams
 	{
-		// Token: 0x04030A68 RID: 199272
+		// Token: 0x0402C0EB RID: 180459
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030A69 RID: 199273
+		// Token: 0x0402C0EC RID: 180460
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030A6A RID: 199274
+		// Token: 0x0402C0ED RID: 180461
 		[FieldOffset(16)]
 		public long __Result;
 	}
 
-	// Token: 0x020098CC RID: 39116
+	// Token: 0x02008AE6 RID: 35558
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __JumpToMarkLevelSequence_FunctionParams
 	{
-		// Token: 0x04030A6B RID: 199275
+		// Token: 0x0402C0EE RID: 180462
 		[FieldOffset(0)]
 		public IntPtr director;
 
-		// Token: 0x04030A6C RID: 199276
+		// Token: 0x0402C0EF RID: 180463
 		[FieldOffset(8)]
 		public FString markName;
 
-		// Token: 0x04030A6D RID: 199277
+		// Token: 0x0402C0F0 RID: 180464
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098CD RID: 39117
+	// Token: 0x02008AE7 RID: 35559
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetWuYinQuDebugInfo_FunctionParams
 	{
-		// Token: 0x04030A6E RID: 199278
+		// Token: 0x0402C0F1 RID: 180465
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030A6F RID: 199279
+		// Token: 0x0402C0F2 RID: 180466
 		[FieldOffset(8)]
 		public byte __Result;
 	}
 
-	// Token: 0x020098CE RID: 39118
+	// Token: 0x02008AE8 RID: 35560
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __ChangeBattleState_FunctionParams
 	{
-		// Token: 0x04030A70 RID: 199280
+		// Token: 0x0402C0F3 RID: 180467
 		[FieldOffset(0)]
 		public IntPtr director;
 
-		// Token: 0x04030A71 RID: 199281
+		// Token: 0x0402C0F4 RID: 180468
 		[FieldOffset(8)]
 		public FString battleActorName;
 
-		// Token: 0x04030A72 RID: 199282
+		// Token: 0x0402C0F5 RID: 180469
 		[FieldOffset(24)]
 		public byte targetState;
 
-		// Token: 0x04030A73 RID: 199283
+		// Token: 0x0402C0F6 RID: 180470
 		[FieldOffset(32)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098CF RID: 39119
+	// Token: 0x02008AE9 RID: 35561
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __SetNewUiSceneDebugOpen_FunctionParams
 	{
-		// Token: 0x04030A74 RID: 199284
+		// Token: 0x0402C0F7 RID: 180471
 		[FieldOffset(0)]
 		public bool useNewUiSceneWorkflow;
 
-		// Token: 0x04030A75 RID: 199285
+		// Token: 0x0402C0F8 RID: 180472
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098D0 RID: 39120
+	// Token: 0x02008AEA RID: 35562
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __AiChangeBattleState_FunctionParams
 	{
-		// Token: 0x04030A76 RID: 199286
+		// Token: 0x0402C0F9 RID: 180473
 		[FieldOffset(0)]
 		public FString battleActorName;
 
-		// Token: 0x04030A77 RID: 199287
+		// Token: 0x0402C0FA RID: 180474
 		[FieldOffset(16)]
 		public byte targetState;
 
-		// Token: 0x04030A78 RID: 199288
+		// Token: 0x0402C0FB RID: 180475
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098D1 RID: 39121
+	// Token: 0x02008AEB RID: 35563
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __PlayWuYinLevelSequence_FunctionParams
 	{
-		// Token: 0x04030A79 RID: 199289
+		// Token: 0x0402C0FC RID: 180476
 		[FieldOffset(0)]
 		public int loopStartFrame;
 
-		// Token: 0x04030A7A RID: 199290
+		// Token: 0x0402C0FD RID: 180477
 		[FieldOffset(8)]
 		public IntPtr director;
 
-		// Token: 0x04030A7B RID: 199291
+		// Token: 0x0402C0FE RID: 180478
 		[FieldOffset(16)]
 		public FString sequenceActorName;
 
-		// Token: 0x04030A7C RID: 199292
+		// Token: 0x0402C0FF RID: 180479
 		[FieldOffset(32)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098D2 RID: 39122
+	// Token: 0x02008AEC RID: 35564
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __PlayWuYinSequence_FunctionParams
 	{
-		// Token: 0x04030A7D RID: 199293
+		// Token: 0x0402C100 RID: 180480
 		[FieldOffset(0)]
 		public FString sequenceName;
 
-		// Token: 0x04030A7E RID: 199294
+		// Token: 0x0402C101 RID: 180481
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098D3 RID: 39123
+	// Token: 0x02008AED RID: 35565
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __StartStandalone_FunctionParams
 	{
-		// Token: 0x04030A7F RID: 199295
+		// Token: 0x0402C102 RID: 180482
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098D4 RID: 39124
+	// Token: 0x02008AEE RID: 35566
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __IsOpenWorld_FunctionParams
 	{
-		// Token: 0x04030A80 RID: 199296
+		// Token: 0x0402C103 RID: 180483
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030A81 RID: 199297
+		// Token: 0x0402C104 RID: 180484
 		[FieldOffset(8)]
 		public bool __Result;
 	}
 
-	// Token: 0x020098D5 RID: 39125
+	// Token: 0x02008AEF RID: 35567
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __GetBattleMode_FunctionParams
 	{
-		// Token: 0x04030A82 RID: 199298
+		// Token: 0x0402C105 RID: 180485
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030A83 RID: 199299
+		// Token: 0x0402C106 RID: 180486
 		[FieldOffset(8)]
 		public bool __Result;
 	}
 
-	// Token: 0x020098D6 RID: 39126
+	// Token: 0x02008AF0 RID: 35568
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __SwitchBattleMode_FunctionParams
 	{
-		// Token: 0x04030A84 RID: 199300
+		// Token: 0x0402C107 RID: 180487
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098D7 RID: 39127
+	// Token: 0x02008AF1 RID: 35569
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __GetBuffSyncMode_FunctionParams
 	{
-		// Token: 0x04030A85 RID: 199301
+		// Token: 0x0402C108 RID: 180488
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030A86 RID: 199302
+		// Token: 0x0402C109 RID: 180489
 		[FieldOffset(8)]
 		public bool __Result;
 	}
 
-	// Token: 0x020098D8 RID: 39128
+	// Token: 0x02008AF2 RID: 35570
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __SwitchBuffSyncMode_FunctionParams
 	{
-		// Token: 0x04030A87 RID: 199303
+		// Token: 0x0402C10A RID: 180490
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098D9 RID: 39129
+	// Token: 0x02008AF3 RID: 35571
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __GetServerLogMode_FunctionParams
 	{
-		// Token: 0x04030A88 RID: 199304
+		// Token: 0x0402C10B RID: 180491
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030A89 RID: 199305
+		// Token: 0x0402C10C RID: 180492
 		[FieldOffset(8)]
 		public bool __Result;
 	}
 
-	// Token: 0x020098DA RID: 39130
+	// Token: 0x02008AF4 RID: 35572
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __SwitchServerLogMode_FunctionParams
 	{
-		// Token: 0x04030A8A RID: 199306
+		// Token: 0x0402C10D RID: 180493
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098DB RID: 39131
+	// Token: 0x02008AF5 RID: 35573
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __GetCurrentDayState_FunctionParams
 	{
-		// Token: 0x04030A8B RID: 199307
+		// Token: 0x0402C10E RID: 180494
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030A8C RID: 199308
+		// Token: 0x0402C10F RID: 180495
 		[FieldOffset(8)]
 		public float __Result;
 	}
 
-	// Token: 0x020098DC RID: 39132
+	// Token: 0x02008AF6 RID: 35574
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __GetCurrentWeatherState_FunctionParams
 	{
-		// Token: 0x04030A8D RID: 199309
+		// Token: 0x0402C110 RID: 180496
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030A8E RID: 199310
+		// Token: 0x0402C111 RID: 180497
 		[FieldOffset(8)]
 		public byte __Result;
 	}
 
-	// Token: 0x020098DD RID: 39133
+	// Token: 0x02008AF7 RID: 35575
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __ChangeEntityState_FunctionParams
 	{
-		// Token: 0x04030A8F RID: 199311
+		// Token: 0x0402C112 RID: 180498
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030A90 RID: 199312
+		// Token: 0x0402C113 RID: 180499
 		[FieldOffset(8)]
 		public FString state;
 
-		// Token: 0x04030A91 RID: 199313
+		// Token: 0x0402C114 RID: 180500
 		[FieldOffset(24)]
 		public IntPtr changersActor;
 
-		// Token: 0x04030A92 RID: 199314
+		// Token: 0x0402C115 RID: 180501
 		[FieldOffset(32)]
 		public int changersEntityId;
 
-		// Token: 0x04030A93 RID: 199315
+		// Token: 0x0402C116 RID: 180502
 		[FieldOffset(40)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098DE RID: 39134
+	// Token: 0x02008AF8 RID: 35576
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 80)]
 	protected ref struct __TestSpawnTemplateEntityPush_FunctionParams
 	{
-		// Token: 0x04030A94 RID: 199316
+		// Token: 0x0402C117 RID: 180503
 		[FieldOffset(0)]
 		public long creatureDataId;
 
-		// Token: 0x04030A95 RID: 199317
+		// Token: 0x0402C118 RID: 180504
 		[FieldOffset(8)]
 		public int configId;
 
-		// Token: 0x04030A96 RID: 199318
+		// Token: 0x0402C119 RID: 180505
 		[FieldOffset(12)]
 		public int level;
 
-		// Token: 0x04030A97 RID: 199319
+		// Token: 0x0402C11A RID: 180506
 		[FieldOffset(16)]
 		public FTransform transform;
 
-		// Token: 0x04030A98 RID: 199320
+		// Token: 0x0402C11B RID: 180507
 		[FieldOffset(64)]
 		public int extraRatioConfigId;
 
-		// Token: 0x04030A99 RID: 199321
+		// Token: 0x0402C11C RID: 180508
 		[FieldOffset(72)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098DF RID: 39135
+	// Token: 0x02008AF9 RID: 35577
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetTestSpawnTemplateEntityString_FunctionParams
 	{
-		// Token: 0x04030A9A RID: 199322
+		// Token: 0x0402C11D RID: 180509
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030A9B RID: 199323
+		// Token: 0x0402C11E RID: 180510
 		[FieldOffset(8)]
 		public byte __Result;
 	}
 
-	// Token: 0x020098E0 RID: 39136
+	// Token: 0x02008AFA RID: 35578
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __GetEntityDebugInfoManager_FunctionParams
 	{
-		// Token: 0x04030A9C RID: 199324
+		// Token: 0x0402C11F RID: 180511
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030A9D RID: 199325
+		// Token: 0x0402C120 RID: 180512
 		[FieldOffset(8)]
 		public IntPtr __Result;
 	}
 
-	// Token: 0x020098E1 RID: 39137
+	// Token: 0x02008AFB RID: 35579
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 88)]
 	protected ref struct __ChangeSubLevel_FunctionParams
 	{
-		// Token: 0x04030A9E RID: 199326
+		// Token: 0x0402C121 RID: 180513
 		[FieldOffset(0)]
 		public byte unloadLevels;
 
-		// Token: 0x04030A9F RID: 199327
+		// Token: 0x0402C122 RID: 180514
 		[FieldOffset(16)]
 		public byte levels;
 
-		// Token: 0x04030AA0 RID: 199328
+		// Token: 0x0402C123 RID: 180515
 		[FieldOffset(32)]
 		public int screenEffect;
 
-		// Token: 0x04030AA1 RID: 199329
+		// Token: 0x0402C124 RID: 180516
 		[FieldOffset(40)]
 		public FVectorDouble location;
 
-		// Token: 0x04030AA2 RID: 199330
+		// Token: 0x0402C125 RID: 180517
 		[FieldOffset(64)]
 		public FRotator rotator;
 
-		// Token: 0x04030AA3 RID: 199331
+		// Token: 0x0402C126 RID: 180518
 		[FieldOffset(80)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098E2 RID: 39138
+	// Token: 0x02008AFC RID: 35580
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetActorByCreatureDataId_FunctionParams
 	{
-		// Token: 0x04030AA4 RID: 199332
+		// Token: 0x0402C127 RID: 180519
 		[FieldOffset(0)]
 		public long creatureDataId;
 
-		// Token: 0x04030AA5 RID: 199333
+		// Token: 0x0402C128 RID: 180520
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030AA6 RID: 199334
+		// Token: 0x0402C129 RID: 180521
 		[FieldOffset(16)]
 		public IntPtr __Result;
 	}
 
-	// Token: 0x020098E3 RID: 39139
+	// Token: 0x02008AFD RID: 35581
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __SetEntityLocation_FunctionParams
 	{
-		// Token: 0x04030AA7 RID: 199335
+		// Token: 0x0402C12A RID: 180522
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030AA8 RID: 199336
+		// Token: 0x0402C12B RID: 180523
 		[FieldOffset(8)]
 		public FVectorDouble location;
 
-		// Token: 0x04030AA9 RID: 199337
+		// Token: 0x0402C12C RID: 180524
 		[FieldOffset(32)]
 		public bool sweep;
 
-		// Token: 0x04030AAA RID: 199338
+		// Token: 0x0402C12D RID: 180525
 		[FieldOffset(33)]
 		public bool teleport;
 
-		// Token: 0x04030AAB RID: 199339
+		// Token: 0x0402C12E RID: 180526
 		[FieldOffset(40)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098E4 RID: 39140
+	// Token: 0x02008AFE RID: 35582
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __SetEntityRotation_FunctionParams
 	{
-		// Token: 0x04030AAC RID: 199340
+		// Token: 0x0402C12F RID: 180527
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030AAD RID: 199341
+		// Token: 0x0402C130 RID: 180528
 		[FieldOffset(4)]
 		public FRotator rotation;
 
-		// Token: 0x04030AAE RID: 199342
+		// Token: 0x0402C131 RID: 180529
 		[FieldOffset(16)]
 		public bool sweep;
 
-		// Token: 0x04030AAF RID: 199343
+		// Token: 0x0402C132 RID: 180530
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098E5 RID: 39141
+	// Token: 0x02008AFF RID: 35583
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 56)]
 	protected ref struct __SetEntityLocationAndRotation_FunctionParams
 	{
-		// Token: 0x04030AB0 RID: 199344
+		// Token: 0x0402C133 RID: 180531
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030AB1 RID: 199345
+		// Token: 0x0402C134 RID: 180532
 		[FieldOffset(8)]
 		public FVectorDouble location;
 
-		// Token: 0x04030AB2 RID: 199346
+		// Token: 0x0402C135 RID: 180533
 		[FieldOffset(32)]
 		public FRotator rotation;
 
-		// Token: 0x04030AB3 RID: 199347
+		// Token: 0x0402C136 RID: 180534
 		[FieldOffset(44)]
 		public bool sweep;
 
-		// Token: 0x04030AB4 RID: 199348
+		// Token: 0x0402C137 RID: 180535
 		[FieldOffset(48)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098E6 RID: 39142
+	// Token: 0x02008B00 RID: 35584
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetActorByPbDataId_FunctionParams
 	{
-		// Token: 0x04030AB5 RID: 199349
+		// Token: 0x0402C138 RID: 180536
 		[FieldOffset(0)]
 		public int pbDataId;
 
-		// Token: 0x04030AB6 RID: 199350
+		// Token: 0x0402C139 RID: 180537
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030AB7 RID: 199351
+		// Token: 0x0402C13A RID: 180538
 		[FieldOffset(16)]
 		public IntPtr __Result;
 	}
 
-	// Token: 0x020098E7 RID: 39143
+	// Token: 0x02008B01 RID: 35585
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetActorByEntityId_FunctionParams
 	{
-		// Token: 0x04030AB8 RID: 199352
+		// Token: 0x0402C13B RID: 180539
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030AB9 RID: 199353
+		// Token: 0x0402C13C RID: 180540
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030ABA RID: 199354
+		// Token: 0x0402C13D RID: 180541
 		[FieldOffset(16)]
 		public IntPtr __Result;
 	}
 
-	// Token: 0x020098E8 RID: 39144
+	// Token: 0x02008B02 RID: 35586
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __GetActorsByPbDataIdArray_FunctionParams
 	{
-		// Token: 0x04030ABB RID: 199355
+		// Token: 0x0402C13E RID: 180542
 		[FieldOffset(0)]
 		public byte pbDataIdArray;
 
-		// Token: 0x04030ABC RID: 199356
+		// Token: 0x0402C13F RID: 180543
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030ABD RID: 199357
+		// Token: 0x0402C140 RID: 180544
 		[FieldOffset(24)]
 		public byte __Result;
 	}
 
-	// Token: 0x020098E9 RID: 39145
+	// Token: 0x02008B03 RID: 35587
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetLivingCharMeteorAttackTargets_FunctionParams
 	{
-		// Token: 0x04030ABE RID: 199358
+		// Token: 0x0402C141 RID: 180545
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030ABF RID: 199359
+		// Token: 0x0402C142 RID: 180546
 		[FieldOffset(8)]
 		public byte __Result;
 	}
 
-	// Token: 0x020098EA RID: 39146
+	// Token: 0x02008B04 RID: 35588
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __MonsterBoomRequest_FunctionParams
 	{
-		// Token: 0x04030AC0 RID: 199360
+		// Token: 0x0402C143 RID: 180547
 		[FieldOffset(0)]
 		public long creatureDataId;
 
-		// Token: 0x04030AC1 RID: 199361
+		// Token: 0x0402C144 RID: 180548
 		[FieldOffset(8)]
 		public float delay;
 
-		// Token: 0x04030AC2 RID: 199362
+		// Token: 0x0402C145 RID: 180549
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098EB RID: 39147
+	// Token: 0x02008B05 RID: 35589
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __EvalScript_FunctionParams
 	{
-		// Token: 0x04030AC3 RID: 199363
+		// Token: 0x0402C146 RID: 180550
 		[FieldOffset(0)]
 		public FString script;
 
-		// Token: 0x04030AC4 RID: 199364
+		// Token: 0x0402C147 RID: 180551
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030AC5 RID: 199365
+		// Token: 0x0402C148 RID: 180552
 		[FieldOffset(24)]
 		public FString __Result;
 	}
 
-	// Token: 0x020098EC RID: 39148
+	// Token: 0x02008B06 RID: 35590
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __GetInitPositionByEntity_FunctionParams
 	{
-		// Token: 0x04030AC6 RID: 199366
+		// Token: 0x0402C149 RID: 180553
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030AC7 RID: 199367
+		// Token: 0x0402C14A RID: 180554
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030AC8 RID: 199368
+		// Token: 0x0402C14B RID: 180555
 		[FieldOffset(16)]
 		public FVectorDouble __Result;
 	}
 
-	// Token: 0x020098ED RID: 39149
+	// Token: 0x02008B07 RID: 35591
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __DisableCreatureActor_FunctionParams
 	{
-		// Token: 0x04030AC9 RID: 199369
+		// Token: 0x0402C14C RID: 180556
 		[FieldOffset(0)]
 		public IntPtr actor;
 
-		// Token: 0x04030ACA RID: 199370
+		// Token: 0x0402C14D RID: 180557
 		[FieldOffset(8)]
 		public IntPtr callObject;
 
-		// Token: 0x04030ACB RID: 199371
+		// Token: 0x0402C14E RID: 180558
 		[FieldOffset(16)]
 		public FString reason;
 
-		// Token: 0x04030ACC RID: 199372
+		// Token: 0x0402C14F RID: 180559
 		[FieldOffset(32)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030ACD RID: 199373
+		// Token: 0x0402C150 RID: 180560
 		[FieldOffset(40)]
 		public int __Result;
 	}
 
-	// Token: 0x020098EE RID: 39150
+	// Token: 0x02008B08 RID: 35592
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __EnableCreatureActor_FunctionParams
 	{
-		// Token: 0x04030ACE RID: 199374
+		// Token: 0x0402C151 RID: 180561
 		[FieldOffset(0)]
 		public IntPtr actor;
 
-		// Token: 0x04030ACF RID: 199375
+		// Token: 0x0402C152 RID: 180562
 		[FieldOffset(8)]
 		public IntPtr callObject;
 
-		// Token: 0x04030AD0 RID: 199376
+		// Token: 0x0402C153 RID: 180563
 		[FieldOffset(16)]
 		public int handle;
 
-		// Token: 0x04030AD1 RID: 199377
+		// Token: 0x0402C154 RID: 180564
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030AD2 RID: 199378
+		// Token: 0x0402C155 RID: 180565
 		[FieldOffset(32)]
 		public bool __Result;
 	}
 
-	// Token: 0x020098EF RID: 39151
+	// Token: 0x02008B09 RID: 35593
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __DisableCreatureCollision_FunctionParams
 	{
-		// Token: 0x04030AD3 RID: 199379
+		// Token: 0x0402C156 RID: 180566
 		[FieldOffset(0)]
 		public IntPtr actor;
 
-		// Token: 0x04030AD4 RID: 199380
+		// Token: 0x0402C157 RID: 180567
 		[FieldOffset(8)]
 		public IntPtr callObject;
 
-		// Token: 0x04030AD5 RID: 199381
+		// Token: 0x0402C158 RID: 180568
 		[FieldOffset(16)]
 		public FString reason;
 
-		// Token: 0x04030AD6 RID: 199382
+		// Token: 0x0402C159 RID: 180569
 		[FieldOffset(32)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030AD7 RID: 199383
+		// Token: 0x0402C15A RID: 180570
 		[FieldOffset(40)]
 		public int __Result;
 	}
 
-	// Token: 0x020098F0 RID: 39152
+	// Token: 0x02008B0A RID: 35594
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __EnableCreatureCollision_FunctionParams
 	{
-		// Token: 0x04030AD8 RID: 199384
+		// Token: 0x0402C15B RID: 180571
 		[FieldOffset(0)]
 		public IntPtr actor;
 
-		// Token: 0x04030AD9 RID: 199385
+		// Token: 0x0402C15C RID: 180572
 		[FieldOffset(8)]
 		public IntPtr callObject;
 
-		// Token: 0x04030ADA RID: 199386
+		// Token: 0x0402C15D RID: 180573
 		[FieldOffset(16)]
 		public int handle;
 
-		// Token: 0x04030ADB RID: 199387
+		// Token: 0x0402C15E RID: 180574
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030ADC RID: 199388
+		// Token: 0x0402C15F RID: 180575
 		[FieldOffset(32)]
 		public bool __Result;
 	}
 
-	// Token: 0x020098F1 RID: 39153
+	// Token: 0x02008B0B RID: 35595
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __SetCameraShakeModify_FunctionParams
 	{
-		// Token: 0x04030ADD RID: 199389
+		// Token: 0x0402C160 RID: 180576
 		[FieldOffset(0)]
 		public float modify;
 
-		// Token: 0x04030ADE RID: 199390
+		// Token: 0x0402C161 RID: 180577
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098F2 RID: 39154
+	// Token: 0x02008B0C RID: 35596
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 88)]
 	protected ref struct __GetFormationAllEntityId_FunctionParams
 	{
-		// Token: 0x04030ADF RID: 199391
+		// Token: 0x0402C162 RID: 180578
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030AE0 RID: 199392
+		// Token: 0x0402C163 RID: 180579
 		[FieldOffset(8)]
 		public byte __Result;
 	}
 
-	// Token: 0x020098F3 RID: 39155
+	// Token: 0x02008B0D RID: 35597
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetFormationControlledRoles_FunctionParams
 	{
-		// Token: 0x04030AE1 RID: 199393
+		// Token: 0x0402C164 RID: 180580
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030AE2 RID: 199394
+		// Token: 0x0402C165 RID: 180581
 		[FieldOffset(8)]
 		public byte __Result;
 	}
 
-	// Token: 0x020098F4 RID: 39156
+	// Token: 0x02008B0E RID: 35598
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetFormationActors_FunctionParams
 	{
-		// Token: 0x04030AE3 RID: 199395
+		// Token: 0x0402C166 RID: 180582
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030AE4 RID: 199396
+		// Token: 0x0402C167 RID: 180583
 		[FieldOffset(8)]
 		public byte __Result;
 	}
 
-	// Token: 0x020098F5 RID: 39157
+	// Token: 0x02008B0F RID: 35599
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __IsGameRunning_FunctionParams
 	{
-		// Token: 0x04030AE5 RID: 199397
+		// Token: 0x0402C168 RID: 180584
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030AE6 RID: 199398
+		// Token: 0x0402C169 RID: 180585
 		[FieldOffset(8)]
 		public bool __Result;
 	}
 
-	// Token: 0x020098F6 RID: 39158
+	// Token: 0x02008B10 RID: 35600
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __SetCollisionResponseToPawn_FunctionParams
 	{
-		// Token: 0x04030AE7 RID: 199399
+		// Token: 0x0402C16A RID: 180586
 		[FieldOffset(0)]
 		public IntPtr actor;
 
-		// Token: 0x04030AE8 RID: 199400
+		// Token: 0x0402C16B RID: 180587
 		[FieldOffset(8)]
 		public byte pawnChannel;
 
-		// Token: 0x04030AE9 RID: 199401
+		// Token: 0x0402C16C RID: 180588
 		[FieldOffset(9)]
 		public TEnumAsByte<ECollisionResponse> newResponse;
 
-		// Token: 0x04030AEA RID: 199402
+		// Token: 0x0402C16D RID: 180589
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098F7 RID: 39159
+	// Token: 0x02008B11 RID: 35601
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __ShowCharacterCollision_FunctionParams
 	{
-		// Token: 0x04030AEB RID: 199403
+		// Token: 0x0402C16E RID: 180590
 		[FieldOffset(0)]
 		public bool isShow;
 
-		// Token: 0x04030AEC RID: 199404
+		// Token: 0x0402C16F RID: 180591
 		[FieldOffset(4)]
 		public int entityId;
 
-		// Token: 0x04030AED RID: 199405
+		// Token: 0x0402C170 RID: 180592
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098F8 RID: 39160
+	// Token: 0x02008B12 RID: 35602
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetEnableCollisionDebug_FunctionParams
 	{
-		// Token: 0x04030AEE RID: 199406
+		// Token: 0x0402C171 RID: 180593
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030AEF RID: 199407
+		// Token: 0x0402C172 RID: 180594
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030AF0 RID: 199408
+		// Token: 0x0402C173 RID: 180595
 		[FieldOffset(16)]
 		public bool __Result;
 	}
 
-	// Token: 0x020098F9 RID: 39161
+	// Token: 0x02008B13 RID: 35603
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __ChangeRole_FunctionParams
 	{
-		// Token: 0x04030AF1 RID: 199409
+		// Token: 0x0402C174 RID: 180596
 		[FieldOffset(0)]
 		public int pos;
 
-		// Token: 0x04030AF2 RID: 199410
+		// Token: 0x0402C175 RID: 180597
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098FA RID: 39162
+	// Token: 0x02008B14 RID: 35604
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __ChangeRoleInExitSkill_FunctionParams
 	{
-		// Token: 0x04030AF3 RID: 199411
+		// Token: 0x0402C176 RID: 180598
 		[FieldOffset(0)]
 		public IntPtr goDownPlayer;
 
-		// Token: 0x04030AF4 RID: 199412
+		// Token: 0x0402C177 RID: 180599
 		[FieldOffset(8)]
 		public IntPtr goBattlePlayer;
 
-		// Token: 0x04030AF5 RID: 199413
+		// Token: 0x0402C178 RID: 180600
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098FB RID: 39163
+	// Token: 0x02008B15 RID: 35605
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __InitGameSplineBySplineEntity_FunctionParams
 	{
-		// Token: 0x04030AF6 RID: 199414
+		// Token: 0x0402C179 RID: 180601
 		[FieldOffset(0)]
 		public int pbDataId;
 
-		// Token: 0x04030AF7 RID: 199415
+		// Token: 0x0402C17A RID: 180602
 		[FieldOffset(8)]
 		public IntPtr inSplineActor;
 
-		// Token: 0x04030AF8 RID: 199416
+		// Token: 0x0402C17B RID: 180603
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030AF9 RID: 199417
+		// Token: 0x0402C17C RID: 180604
 		[FieldOffset(24)]
 		public IntPtr __Result;
 	}
 
-	// Token: 0x020098FC RID: 39164
+	// Token: 0x02008B16 RID: 35606
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __UiCameraAnimationDisablePlayerActor_FunctionParams
 	{
-		// Token: 0x04030AFA RID: 199418
+		// Token: 0x0402C17D RID: 180605
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098FD RID: 39165
+	// Token: 0x02008B17 RID: 35607
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __UiCameraAnimationEnablePlayerActor_FunctionParams
 	{
-		// Token: 0x04030AFB RID: 199419
+		// Token: 0x0402C17E RID: 180606
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098FE RID: 39166
+	// Token: 0x02008B18 RID: 35608
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __UiCameraAnimationDisableCustomCreatureActor_FunctionParams
 	{
-		// Token: 0x04030AFC RID: 199420
+		// Token: 0x0402C17F RID: 180607
 		[FieldOffset(0)]
 		public int position;
 
-		// Token: 0x04030AFD RID: 199421
+		// Token: 0x0402C180 RID: 180608
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020098FF RID: 39167
+	// Token: 0x02008B19 RID: 35609
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __UiCameraAnimationEnableCustomCreatureActor_FunctionParams
 	{
-		// Token: 0x04030AFE RID: 199422
+		// Token: 0x0402C181 RID: 180609
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009900 RID: 39168
+	// Token: 0x02008B1A RID: 35610
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __UiCameraAnimationBroadSequenceEvent_FunctionParams
 	{
-		// Token: 0x04030AFF RID: 199423
+		// Token: 0x0402C182 RID: 180610
 		[FieldOffset(0)]
 		public FString sequenceEventName;
 
-		// Token: 0x04030B00 RID: 199424
+		// Token: 0x0402C183 RID: 180611
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009901 RID: 39169
+	// Token: 0x02008B1B RID: 35611
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __SetTimeDilation_FunctionParams
 	{
-		// Token: 0x04030B01 RID: 199425
+		// Token: 0x0402C184 RID: 180612
 		[FieldOffset(0)]
 		public float timeDilation;
 
-		// Token: 0x04030B02 RID: 199426
+		// Token: 0x0402C185 RID: 180613
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009902 RID: 39170
+	// Token: 0x02008B1C RID: 35612
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __GetTimeDilation_FunctionParams
 	{
-		// Token: 0x04030B03 RID: 199427
+		// Token: 0x0402C186 RID: 180614
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030B04 RID: 199428
+		// Token: 0x0402C187 RID: 180615
 		[FieldOffset(8)]
 		public float __Result;
 	}
 
-	// Token: 0x02009903 RID: 39171
+	// Token: 0x02008B1D RID: 35613
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __GetEntitiesInRange_FunctionParams
 	{
-		// Token: 0x04030B05 RID: 199429
+		// Token: 0x0402C188 RID: 180616
 		[FieldOffset(0)]
 		public int distance;
 
-		// Token: 0x04030B06 RID: 199430
+		// Token: 0x0402C189 RID: 180617
 		[FieldOffset(4)]
 		public byte relation;
 
-		// Token: 0x04030B07 RID: 199431
+		// Token: 0x0402C18A RID: 180618
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030B08 RID: 199432
+		// Token: 0x0402C18B RID: 180619
 		[FieldOffset(16)]
 		public byte __Result;
 	}
 
-	// Token: 0x02009904 RID: 39172
+	// Token: 0x02008B1E RID: 35614
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 88)]
 	protected ref struct __AttachToActor_FunctionParams
 	{
-		// Token: 0x04030B09 RID: 199433
+		// Token: 0x0402C18C RID: 180620
 		[FieldOffset(0)]
 		public IntPtr callObject;
 
-		// Token: 0x04030B0A RID: 199434
+		// Token: 0x0402C18D RID: 180621
 		[FieldOffset(8)]
 		public IntPtr actor;
 
-		// Token: 0x04030B0B RID: 199435
+		// Token: 0x0402C18E RID: 180622
 		[FieldOffset(16)]
 		public IntPtr parentActor;
 
-		// Token: 0x04030B0C RID: 199436
+		// Token: 0x0402C18F RID: 180623
 		[FieldOffset(24)]
 		public byte detachType;
 
-		// Token: 0x04030B0D RID: 199437
+		// Token: 0x0402C190 RID: 180624
 		[FieldOffset(32)]
 		public FString reason;
 
-		// Token: 0x04030B0E RID: 199438
+		// Token: 0x0402C191 RID: 180625
 		[FieldOffset(48)]
 		public FName socketName;
 
-		// Token: 0x04030B0F RID: 199439
+		// Token: 0x0402C192 RID: 180626
 		[FieldOffset(60)]
 		public byte locationRule;
 
-		// Token: 0x04030B10 RID: 199440
+		// Token: 0x0402C193 RID: 180627
 		[FieldOffset(61)]
 		public byte rotationRule;
 
-		// Token: 0x04030B11 RID: 199441
+		// Token: 0x0402C194 RID: 180628
 		[FieldOffset(62)]
 		public byte scaleRule;
 
-		// Token: 0x04030B12 RID: 199442
+		// Token: 0x0402C195 RID: 180629
 		[FieldOffset(63)]
 		public bool bWeldSimulatedBodies;
 
-		// Token: 0x04030B13 RID: 199443
+		// Token: 0x0402C196 RID: 180630
 		[FieldOffset(64)]
 		public bool doAttach;
 
-		// Token: 0x04030B14 RID: 199444
+		// Token: 0x0402C197 RID: 180631
 		[FieldOffset(72)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030B15 RID: 199445
+		// Token: 0x0402C198 RID: 180632
 		[FieldOffset(80)]
 		public bool __Result;
 	}
 
-	// Token: 0x02009905 RID: 39173
+	// Token: 0x02008B1F RID: 35615
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 88)]
 	protected ref struct __AttachToComponent_FunctionParams
 	{
-		// Token: 0x04030B16 RID: 199446
+		// Token: 0x0402C199 RID: 180633
 		[FieldOffset(0)]
 		public IntPtr callObject;
 
-		// Token: 0x04030B17 RID: 199447
+		// Token: 0x0402C19A RID: 180634
 		[FieldOffset(8)]
 		public IntPtr actor;
 
-		// Token: 0x04030B18 RID: 199448
+		// Token: 0x0402C19B RID: 180635
 		[FieldOffset(16)]
 		public IntPtr parentComponent;
 
-		// Token: 0x04030B19 RID: 199449
+		// Token: 0x0402C19C RID: 180636
 		[FieldOffset(24)]
 		public byte detachType;
 
-		// Token: 0x04030B1A RID: 199450
+		// Token: 0x0402C19D RID: 180637
 		[FieldOffset(32)]
 		public FString reason;
 
-		// Token: 0x04030B1B RID: 199451
+		// Token: 0x0402C19E RID: 180638
 		[FieldOffset(48)]
 		public FName socketName;
 
-		// Token: 0x04030B1C RID: 199452
+		// Token: 0x0402C19F RID: 180639
 		[FieldOffset(60)]
 		public byte locationRule;
 
-		// Token: 0x04030B1D RID: 199453
+		// Token: 0x0402C1A0 RID: 180640
 		[FieldOffset(61)]
 		public byte rotationRule;
 
-		// Token: 0x04030B1E RID: 199454
+		// Token: 0x0402C1A1 RID: 180641
 		[FieldOffset(62)]
 		public byte scaleRule;
 
-		// Token: 0x04030B1F RID: 199455
+		// Token: 0x0402C1A2 RID: 180642
 		[FieldOffset(63)]
 		public bool bWeldSimulatedBodies;
 
-		// Token: 0x04030B20 RID: 199456
+		// Token: 0x0402C1A3 RID: 180643
 		[FieldOffset(64)]
 		public bool doAttach;
 
-		// Token: 0x04030B21 RID: 199457
+		// Token: 0x0402C1A4 RID: 180644
 		[FieldOffset(72)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030B22 RID: 199458
+		// Token: 0x0402C1A5 RID: 180645
 		[FieldOffset(80)]
 		public bool __Result;
 	}
 
-	// Token: 0x02009906 RID: 39174
+	// Token: 0x02008B20 RID: 35616
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 64)]
 	protected ref struct __DetachActor_FunctionParams
 	{
-		// Token: 0x04030B23 RID: 199459
+		// Token: 0x0402C1A6 RID: 180646
 		[FieldOffset(0)]
 		public IntPtr callObject;
 
-		// Token: 0x04030B24 RID: 199460
+		// Token: 0x0402C1A7 RID: 180647
 		[FieldOffset(8)]
 		public IntPtr srcActor;
 
-		// Token: 0x04030B25 RID: 199461
+		// Token: 0x0402C1A8 RID: 180648
 		[FieldOffset(16)]
 		public bool destroy;
 
-		// Token: 0x04030B26 RID: 199462
+		// Token: 0x0402C1A9 RID: 180649
 		[FieldOffset(24)]
 		public FString reason;
 
-		// Token: 0x04030B27 RID: 199463
+		// Token: 0x0402C1AA RID: 180650
 		[FieldOffset(40)]
 		public byte locationRule;
 
-		// Token: 0x04030B28 RID: 199464
+		// Token: 0x0402C1AB RID: 180651
 		[FieldOffset(41)]
 		public byte rotationRule;
 
-		// Token: 0x04030B29 RID: 199465
+		// Token: 0x0402C1AC RID: 180652
 		[FieldOffset(42)]
 		public byte scaleRule;
 
-		// Token: 0x04030B2A RID: 199466
+		// Token: 0x0402C1AD RID: 180653
 		[FieldOffset(48)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030B2B RID: 199467
+		// Token: 0x0402C1AE RID: 180654
 		[FieldOffset(56)]
 		public bool __Result;
 	}
 
-	// Token: 0x02009907 RID: 39175
+	// Token: 0x02008B21 RID: 35617
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __GetPlayerFollower_FunctionParams
 	{
-		// Token: 0x04030B2C RID: 199468
+		// Token: 0x0402C1AF RID: 180655
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030B2D RID: 199469
+		// Token: 0x0402C1B0 RID: 180656
 		[FieldOffset(8)]
 		public int __Result;
 	}
 
-	// Token: 0x02009908 RID: 39176
+	// Token: 0x02008B22 RID: 35618
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __IsPlayerFollowerEnable_FunctionParams
 	{
-		// Token: 0x04030B2E RID: 199470
+		// Token: 0x0402C1B1 RID: 180657
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030B2F RID: 199471
+		// Token: 0x0402C1B2 RID: 180658
 		[FieldOffset(8)]
 		public bool __Result;
 	}
 
-	// Token: 0x02009909 RID: 39177
+	// Token: 0x02008B23 RID: 35619
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __SetPlayerFollowerEnable_FunctionParams
 	{
-		// Token: 0x04030B30 RID: 199472
+		// Token: 0x0402C1B3 RID: 180659
 		[FieldOffset(0)]
 		public bool enable;
 
-		// Token: 0x04030B31 RID: 199473
+		// Token: 0x0402C1B4 RID: 180660
 		[FieldOffset(1)]
 		public byte enableType;
 
-		// Token: 0x04030B32 RID: 199474
+		// Token: 0x0402C1B5 RID: 180661
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x0200990A RID: 39178
+	// Token: 0x02008B24 RID: 35620
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __SetPlayerFollowerCustomEntityId_FunctionParams
 	{
-		// Token: 0x04030B33 RID: 199475
+		// Token: 0x0402C1B6 RID: 180662
 		[FieldOffset(0)]
 		public FString customKey;
 
-		// Token: 0x04030B34 RID: 199476
+		// Token: 0x0402C1B7 RID: 180663
 		[FieldOffset(16)]
 		public int entityId;
 
-		// Token: 0x04030B35 RID: 199477
+		// Token: 0x0402C1B8 RID: 180664
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x0200990B RID: 39179
+	// Token: 0x02008B25 RID: 35621
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __RemovePlayerFollowerCustomEntityId_FunctionParams
 	{
-		// Token: 0x04030B36 RID: 199478
+		// Token: 0x0402C1B9 RID: 180665
 		[FieldOffset(0)]
 		public FString customKey;
 
-		// Token: 0x04030B37 RID: 199479
+		// Token: 0x0402C1BA RID: 180666
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x0200990C RID: 39180
+	// Token: 0x02008B26 RID: 35622
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetFollowerShooterConfig_FunctionParams
 	{
-		// Token: 0x04030B38 RID: 199480
+		// Token: 0x0402C1BB RID: 180667
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030B39 RID: 199481
+		// Token: 0x0402C1BC RID: 180668
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030B3A RID: 199482
+		// Token: 0x0402C1BD RID: 180669
 		[FieldOffset(16)]
 		public IntPtr __Result;
 	}
 
-	// Token: 0x0200990D RID: 39181
+	// Token: 0x02008B27 RID: 35623
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __GetPlayerFollowerMotor_FunctionParams
 	{
-		// Token: 0x04030B3B RID: 199483
+		// Token: 0x0402C1BE RID: 180670
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030B3C RID: 199484
+		// Token: 0x0402C1BF RID: 180671
 		[FieldOffset(8)]
 		public int __Result;
 	}
 
-	// Token: 0x0200990E RID: 39182
+	// Token: 0x02008B28 RID: 35624
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __IsPlayerFollowerMotorEnable_FunctionParams
 	{
-		// Token: 0x04030B3D RID: 199485
+		// Token: 0x0402C1C0 RID: 180672
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030B3E RID: 199486
+		// Token: 0x0402C1C1 RID: 180673
 		[FieldOffset(8)]
 		public bool __Result;
 	}
 
-	// Token: 0x0200990F RID: 39183
+	// Token: 0x02008B29 RID: 35625
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __SetPlayerFollowerMotorEnable_FunctionParams
 	{
-		// Token: 0x04030B3F RID: 199487
+		// Token: 0x0402C1C2 RID: 180674
 		[FieldOffset(0)]
 		public bool enable;
 
-		// Token: 0x04030B40 RID: 199488
+		// Token: 0x0402C1C3 RID: 180675
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009910 RID: 39184
+	// Token: 0x02008B2A RID: 35626
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __IsPlayerFollowerNeedInput_FunctionParams
 	{
-		// Token: 0x04030B41 RID: 199489
+		// Token: 0x0402C1C4 RID: 180676
 		[FieldOffset(0)]
 		public byte action;
 
-		// Token: 0x04030B42 RID: 199490
+		// Token: 0x0402C1C5 RID: 180677
 		[FieldOffset(1)]
 		public byte state;
 
-		// Token: 0x04030B43 RID: 199491
+		// Token: 0x0402C1C6 RID: 180678
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030B44 RID: 199492
+		// Token: 0x0402C1C7 RID: 180679
 		[FieldOffset(16)]
 		public bool __Result;
 	}
 
-	// Token: 0x02009911 RID: 39185
+	// Token: 0x02008B2B RID: 35627
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __GetGameplayTagOriginName_FunctionParams
 	{
-		// Token: 0x04030B45 RID: 199493
+		// Token: 0x0402C1C8 RID: 180680
 		[FieldOffset(0)]
 		public FGameplayTag gameplayTag;
 
-		// Token: 0x04030B46 RID: 199494
+		// Token: 0x0402C1C9 RID: 180681
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030B47 RID: 199495
+		// Token: 0x0402C1CA RID: 180682
 		[FieldOffset(24)]
 		public FName __Result;
 	}
 
-	// Token: 0x02009912 RID: 39186
+	// Token: 0x02008B2C RID: 35628
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __RegisterToBpActorController_FunctionParams
 	{
-		// Token: 0x04030B48 RID: 199496
+		// Token: 0x0402C1CB RID: 180683
 		[FieldOffset(0)]
 		public FName groupTag;
 
-		// Token: 0x04030B49 RID: 199497
+		// Token: 0x0402C1CC RID: 180684
 		[FieldOffset(16)]
 		public FScriptInterface sceneBp;
 
-		// Token: 0x04030B4A RID: 199498
+		// Token: 0x0402C1CD RID: 180685
 		[FieldOffset(32)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009913 RID: 39187
+	// Token: 0x02008B2D RID: 35629
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __UnregisterToBpActorController_FunctionParams
 	{
-		// Token: 0x04030B4B RID: 199499
+		// Token: 0x0402C1CE RID: 180686
 		[FieldOffset(0)]
 		public FName groupTag;
 
-		// Token: 0x04030B4C RID: 199500
+		// Token: 0x0402C1CF RID: 180687
 		[FieldOffset(16)]
 		public FScriptInterface sceneBp;
 
-		// Token: 0x04030B4D RID: 199501
+		// Token: 0x0402C1D0 RID: 180688
 		[FieldOffset(32)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009914 RID: 39188
+	// Token: 0x02008B2E RID: 35630
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __RegisterDayNightBpToBpActorController_FunctionParams
 	{
-		// Token: 0x04030B4E RID: 199502
+		// Token: 0x0402C1D1 RID: 180689
 		[FieldOffset(0)]
 		public FScriptInterface dayNightBp;
 
-		// Token: 0x04030B4F RID: 199503
+		// Token: 0x0402C1D2 RID: 180690
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009915 RID: 39189
+	// Token: 0x02008B2F RID: 35631
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __UnregisterDayNightBpToBpActorController_FunctionParams
 	{
-		// Token: 0x04030B50 RID: 199504
+		// Token: 0x0402C1D3 RID: 180691
 		[FieldOffset(0)]
 		public FScriptInterface dayNightBp;
 
-		// Token: 0x04030B51 RID: 199505
+		// Token: 0x0402C1D4 RID: 180692
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009916 RID: 39190
+	// Token: 0x02008B30 RID: 35632
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __GetEntityBindGroup_FunctionParams
 	{
-		// Token: 0x04030B52 RID: 199506
+		// Token: 0x0402C1D5 RID: 180693
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030B53 RID: 199507
+		// Token: 0x0402C1D6 RID: 180694
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030B54 RID: 199508
+		// Token: 0x0402C1D7 RID: 180695
 		[FieldOffset(16)]
 		public byte __Result;
 	}
 
-	// Token: 0x02009917 RID: 39191
+	// Token: 0x02008B31 RID: 35633
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __GetTrapDefenseUseBpUsing_FunctionParams
 	{
-		// Token: 0x04030B55 RID: 199509
+		// Token: 0x0402C1D8 RID: 180696
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030B56 RID: 199510
+		// Token: 0x0402C1D9 RID: 180697
 		[FieldOffset(8)]
 		public bool __Result;
 	}
 
-	// Token: 0x02009918 RID: 39192
+	// Token: 0x02008B32 RID: 35634
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __DisableAllRoleWithoutControl_FunctionParams
 	{
-		// Token: 0x04030B57 RID: 199511
+		// Token: 0x0402C1DA RID: 180698
 		[FieldOffset(0)]
 		public bool needEffect;
 
-		// Token: 0x04030B58 RID: 199512
+		// Token: 0x0402C1DB RID: 180699
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009919 RID: 39193
+	// Token: 0x02008B33 RID: 35635
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __PlayerEntityId_FunctionParams
 	{
-		// Token: 0x04030B59 RID: 199513
+		// Token: 0x0402C1DC RID: 180700
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030B5A RID: 199514
+		// Token: 0x0402C1DD RID: 180701
 		[FieldOffset(8)]
 		public int __Result;
 	}
 
-	// Token: 0x0200991A RID: 39194
+	// Token: 0x02008B34 RID: 35636
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __CurrentFrontRoleEntityId_FunctionParams
 	{
-		// Token: 0x04030B5B RID: 199515
+		// Token: 0x0402C1DE RID: 180702
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030B5C RID: 199516
+		// Token: 0x0402C1DF RID: 180703
 		[FieldOffset(8)]
 		public int __Result;
 	}
 
-	// Token: 0x0200991B RID: 39195
+	// Token: 0x02008B35 RID: 35637
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __ShowTipsByTextId_FunctionParams
 	{
-		// Token: 0x04030B5D RID: 199517
+		// Token: 0x0402C1E0 RID: 180704
 		[FieldOffset(0)]
 		public FString textId;
 
-		// Token: 0x04030B5E RID: 199518
+		// Token: 0x0402C1E1 RID: 180705
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x0200991C RID: 39196
+	// Token: 0x02008B36 RID: 35638
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __IsBulletCreateByFollowShooter_FunctionParams
 	{
-		// Token: 0x04030B5F RID: 199519
+		// Token: 0x0402C1E2 RID: 180706
 		[FieldOffset(0)]
 		public int bulletId;
 
-		// Token: 0x04030B60 RID: 199520
+		// Token: 0x0402C1E3 RID: 180707
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030B61 RID: 199521
+		// Token: 0x0402C1E4 RID: 180708
 		[FieldOffset(16)]
 		public bool __Result;
 	}
 
-	// Token: 0x0200991D RID: 39197
+	// Token: 0x02008B37 RID: 35639
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __CheckIsRoleTriggerActor_FunctionParams
 	{
-		// Token: 0x04030B62 RID: 199522
+		// Token: 0x0402C1E5 RID: 180709
 		[FieldOffset(0)]
 		public IntPtr actor;
 
-		// Token: 0x04030B63 RID: 199523
+		// Token: 0x0402C1E6 RID: 180710
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030B64 RID: 199524
+		// Token: 0x0402C1E7 RID: 180711
 		[FieldOffset(16)]
 		public bool __Result;
 	}
 
-	// Token: 0x0200991E RID: 39198
+	// Token: 0x02008B38 RID: 35640
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __IsMale_FunctionParams
 	{
-		// Token: 0x04030B65 RID: 199525
+		// Token: 0x0402C1E8 RID: 180712
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030B66 RID: 199526
+		// Token: 0x0402C1E9 RID: 180713
 		[FieldOffset(8)]
 		public bool __Result;
 	}
 
-	// Token: 0x0200991F RID: 39199
+	// Token: 0x02008B39 RID: 35641
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __ReleaseFromMediaPlayActor_FunctionParams
 	{
-		// Token: 0x04030B67 RID: 199527
+		// Token: 0x0402C1EA RID: 180714
 		[Nullable(new byte[]
 		{
 			0,
@@ -7022,95 +7040,95 @@ public class WorldFunctionLibrary : UBlueprintFunctionLibrary, IStaticVariableRe
 		[FieldOffset(0)]
 		public TScriptInterface<IBPI_SceneBp_C> sceneBpActor;
 
-		// Token: 0x04030B68 RID: 199528
+		// Token: 0x0402C1EB RID: 180715
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009920 RID: 39200
+	// Token: 0x02008B3A RID: 35642
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __IsPlayerElementalFieldOpened_FunctionParams
 	{
-		// Token: 0x04030B69 RID: 199529
+		// Token: 0x0402C1EC RID: 180716
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030B6A RID: 199530
+		// Token: 0x0402C1ED RID: 180717
 		[FieldOffset(8)]
 		public bool __Result;
 	}
 
-	// Token: 0x02009921 RID: 39201
+	// Token: 0x02008B3B RID: 35643
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __UpdatePlayerElementalField_FunctionParams
 	{
-		// Token: 0x04030B6B RID: 199531
+		// Token: 0x0402C1EE RID: 180718
 		[FieldOffset(0)]
 		public bool isOpen;
 
-		// Token: 0x04030B6C RID: 199532
+		// Token: 0x0402C1EF RID: 180719
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009922 RID: 39202
+	// Token: 0x02008B3C RID: 35644
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __StartPlayerInteractCoreFoundation_FunctionParams
 	{
-		// Token: 0x04030B6D RID: 199533
+		// Token: 0x0402C1F0 RID: 180720
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x04030B6E RID: 199534
+		// Token: 0x0402C1F1 RID: 180721
 		[FieldOffset(8)]
 		public IntPtr eventBinder;
 
-		// Token: 0x04030B6F RID: 199535
+		// Token: 0x0402C1F2 RID: 180722
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030B70 RID: 199536
+		// Token: 0x0402C1F3 RID: 180723
 		[FieldOffset(24)]
 		public bool __Result;
 	}
 
-	// Token: 0x02009923 RID: 39203
+	// Token: 0x02008B3D RID: 35645
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __IsPlayerDrawingElementalCore_FunctionParams
 	{
-		// Token: 0x04030B71 RID: 199537
+		// Token: 0x0402C1F4 RID: 180724
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030B72 RID: 199538
+		// Token: 0x0402C1F5 RID: 180725
 		[FieldOffset(8)]
 		public bool __Result;
 	}
 
-	// Token: 0x02009924 RID: 39204
+	// Token: 0x02008B3E RID: 35646
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __PlayerElementalFieldBurst_FunctionParams
 	{
-		// Token: 0x04030B73 RID: 199539
+		// Token: 0x0402C1F6 RID: 180726
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02009925 RID: 39205
+	// Token: 0x02008B3F RID: 35647
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __GetPlayerSceneInteractPointLocation_FunctionParams
 	{
-		// Token: 0x04030B74 RID: 199540
+		// Token: 0x0402C1F7 RID: 180727
 		[FieldOffset(0)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04030B75 RID: 199541
+		// Token: 0x0402C1F8 RID: 180728
 		[FieldOffset(8)]
 		public FVectorDouble __Result;
 	}

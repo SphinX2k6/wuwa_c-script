@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001366 RID: 4966
+	// Token: 0x020014B6 RID: 5302
 	public class IUseSkillCheckByVisionSummonId : IUseSkillCheckBase
 	{
-		// Token: 0x060071A3 RID: 29091 RVA: 0x00111BC0 File Offset: 0x0010FDC0
-		[NullableContext(1)]
+		// Token: 0x06007843 RID: 30787 RVA: 0x0012012C File Offset: 0x0011E32C
 		public static IUseSkillCheckByVisionSummonId Create(IUseSkillCheckByVisionSummonId? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170024AA RID: 9386
-		// (get) Token: 0x060071A4 RID: 29092 RVA: 0x00111BDF File Offset: 0x0010FDDF
+		// Token: 0x17002679 RID: 9849
+		// (get) Token: 0x06007844 RID: 30788 RVA: 0x0012014B File Offset: 0x0011E34B
 		public override EUseSkillCheckType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170024AB RID: 9387
-		// (get) Token: 0x060071A5 RID: 29093 RVA: 0x00111BEC File Offset: 0x0010FDEC
+		// Token: 0x1700267A RID: 9850
+		// (get) Token: 0x06007845 RID: 30789 RVA: 0x00120158 File Offset: 0x0011E358
 		public virtual int VisionId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040041A6 RID: 16806
+		// Token: 0x04004522 RID: 17698
 		private IUseSkillCheckByVisionSummonId Instance;
 	}
 }

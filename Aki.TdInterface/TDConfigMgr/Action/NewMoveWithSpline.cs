@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020E4 RID: 8420
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002345 RID: 9029
 	public class NewMoveWithSpline : ActionParams
 	{
-		// Token: 0x0600B90C RID: 47372 RVA: 0x001ABEB4 File Offset: 0x001AA0B4
+		// Token: 0x0600C496 RID: 50326 RVA: 0x001C2F90 File Offset: 0x001C1190
 		private NewMoveWithSpline_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B90D RID: 47373 RVA: 0x001ABEEC File Offset: 0x001AA0EC
+		// Token: 0x0600C497 RID: 50327 RVA: 0x001C2FC8 File Offset: 0x001C11C8
 		public static NewMoveWithSpline Create([Nullable(2)] NewMoveWithSpline instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B90E RID: 47374 RVA: 0x001ABEFF File Offset: 0x001AA0FF
+		// Token: 0x0600C498 RID: 50328 RVA: 0x001C2FDB File Offset: 0x001C11DB
 		public static NewMoveWithSpline CreateFromSetValue([Nullable(2)] NewMoveWithSpline_SetValue value)
 		{
 			if (value == null)
@@ -50,12 +48,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B90F RID: 47375 RVA: 0x001ABF14 File Offset: 0x001AA114
+		// Token: 0x0600C499 RID: 50329 RVA: 0x001C2FF0 File Offset: 0x001C11F0
 		public NewMoveWithSpline_SetValue ToSetValue()
 		{
 			return new NewMoveWithSpline_SetValue
 			{
 				MoveTarget = this.MoveTarget,
+				Move = this.Move,
 				SplineEntityId = this.SplineEntityId,
 				StartPointIndex = this.StartPointIndex,
 				EndPointIndex = this.EndPointIndex,
@@ -64,9 +63,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003889 RID: 14473
-		// (get) Token: 0x0600B910 RID: 47376 RVA: 0x001ABF6E File Offset: 0x001AA16E
-		// (set) Token: 0x0600B911 RID: 47377 RVA: 0x001ABF95 File Offset: 0x001AA195
+		// Token: 0x17003B74 RID: 15220
+		// (get) Token: 0x0600C49A RID: 50330 RVA: 0x001C3056 File Offset: 0x001C1256
+		// (set) Token: 0x0600C49B RID: 50331 RVA: 0x001C307D File Offset: 0x001C127D
 		public virtual INewSplineMoveTarget MoveTarget
 		{
 			get
@@ -88,9 +87,42 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700388A RID: 14474
-		// (get) Token: 0x0600B912 RID: 47378 RVA: 0x001ABFA3 File Offset: 0x001AA1A3
-		// (set) Token: 0x0600B913 RID: 47379 RVA: 0x001ABFCE File Offset: 0x001AA1CE
+		// Token: 0x17003B75 RID: 15221
+		// (get) Token: 0x0600C49C RID: 50332 RVA: 0x001C308C File Offset: 0x001C128C
+		// (set) Token: 0x0600C49D RID: 50333 RVA: 0x001C30ED File Offset: 0x001C12ED
+		[Nullable(2)]
+		public virtual IFrontAxleTrackingSplineMove Move
+		{
+			[NullableContext(2)]
+			get
+			{
+				if (this._MoveInited)
+				{
+					return this._MoveCache;
+				}
+				this._MoveInited = true;
+				if (this.FbInstance != null)
+				{
+					this._MoveCache = IFrontAxleTrackingSplineMove.Create(this.FbInstance.Move);
+				}
+				else
+				{
+					NewMoveWithSpline_SetValue pocoInterface = this.PocoInterface;
+					this._MoveCache = ((pocoInterface != null) ? pocoInterface.Move : null);
+				}
+				return this._MoveCache;
+			}
+			[NullableContext(2)]
+			set
+			{
+				this.GetOrCreatePoco().Move = value;
+				this._MoveInited = false;
+			}
+		}
+
+		// Token: 0x17003B76 RID: 15222
+		// (get) Token: 0x0600C49E RID: 50334 RVA: 0x001C3102 File Offset: 0x001C1302
+		// (set) Token: 0x0600C49F RID: 50335 RVA: 0x001C312D File Offset: 0x001C132D
 		public virtual int SplineEntityId
 		{
 			get
@@ -111,9 +143,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700388B RID: 14475
-		// (get) Token: 0x0600B914 RID: 47380 RVA: 0x001ABFDC File Offset: 0x001AA1DC
-		// (set) Token: 0x0600B915 RID: 47381 RVA: 0x001AC016 File Offset: 0x001AA216
+		// Token: 0x17003B77 RID: 15223
+		// (get) Token: 0x0600C4A0 RID: 50336 RVA: 0x001C313C File Offset: 0x001C133C
+		// (set) Token: 0x0600C4A1 RID: 50337 RVA: 0x001C3176 File Offset: 0x001C1376
 		public virtual int? StartPointIndex
 		{
 			get
@@ -135,9 +167,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700388C RID: 14476
-		// (get) Token: 0x0600B916 RID: 47382 RVA: 0x001AC024 File Offset: 0x001AA224
-		// (set) Token: 0x0600B917 RID: 47383 RVA: 0x001AC05E File Offset: 0x001AA25E
+		// Token: 0x17003B78 RID: 15224
+		// (get) Token: 0x0600C4A2 RID: 50338 RVA: 0x001C3184 File Offset: 0x001C1384
+		// (set) Token: 0x0600C4A3 RID: 50339 RVA: 0x001C31BE File Offset: 0x001C13BE
 		public virtual int? EndPointIndex
 		{
 			get
@@ -159,9 +191,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700388D RID: 14477
-		// (get) Token: 0x0600B918 RID: 47384 RVA: 0x001AC06C File Offset: 0x001AA26C
-		// (set) Token: 0x0600B919 RID: 47385 RVA: 0x001AC0A6 File Offset: 0x001AA2A6
+		// Token: 0x17003B79 RID: 15225
+		// (get) Token: 0x0600C4A4 RID: 50340 RVA: 0x001C31CC File Offset: 0x001C13CC
+		// (set) Token: 0x0600C4A5 RID: 50341 RVA: 0x001C3206 File Offset: 0x001C1406
 		public virtual bool? IsStartFromCurrentPos
 		{
 			get
@@ -183,9 +215,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700388E RID: 14478
-		// (get) Token: 0x0600B91A RID: 47386 RVA: 0x001AC0B4 File Offset: 0x001AA2B4
-		// (set) Token: 0x0600B91B RID: 47387 RVA: 0x001AC0EE File Offset: 0x001AA2EE
+		// Token: 0x17003B7A RID: 15226
+		// (get) Token: 0x0600C4A6 RID: 50342 RVA: 0x001C3214 File Offset: 0x001C1414
+		// (set) Token: 0x0600C4A7 RID: 50343 RVA: 0x001C324E File Offset: 0x001C144E
 		public virtual bool? IsFollowStrictly
 		{
 			get
@@ -207,12 +239,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006ED7 RID: 28375
+		// Token: 0x04007508 RID: 29960
 		[Nullable(2)]
 		protected new NewMoveWithSpline FbInstance;
 
-		// Token: 0x04006ED8 RID: 28376
+		// Token: 0x04007509 RID: 29961
 		[Nullable(2)]
 		protected NewMoveWithSpline_SetValue PocoInterface;
+
+		// Token: 0x0400750A RID: 29962
+		private IFrontAxleTrackingSplineMove _MoveCache;
+
+		// Token: 0x0400750B RID: 29963
+		private bool _MoveInited;
 	}
 }

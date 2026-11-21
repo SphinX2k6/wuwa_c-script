@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x02002B31 RID: 11057
+// Token: 0x020020AD RID: 8365
 internal enum <SurvivorsWeaponTabView>F144F8E39FB757FBA5205669980E3E0607C8012437077C69232682899BCBAD020__EGridComponents
 {
-	// Token: 0x0400AAE2 RID: 43746
+	// Token: 0x0400AEE8 RID: 44776
 	Toggle,
-	// Token: 0x0400AAE3 RID: 43747
+	// Token: 0x0400AEE9 RID: 44777
 	TexIcon,
-	// Token: 0x0400AAE4 RID: 43748
+	// Token: 0x0400AEEA RID: 44778
 	TexIconLock,
-	// Token: 0x0400AAE5 RID: 43749
+	// Token: 0x0400AEEB RID: 44779
 	TxtName,
-	// Token: 0x0400AAE6 RID: 43750
+	// Token: 0x0400AEEC RID: 44780
 	PanelLock,
-	// Token: 0x0400AAE7 RID: 43751
+	// Token: 0x0400AEED RID: 44781
 	PanelNew
 }

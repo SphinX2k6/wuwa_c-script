@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000168 RID: 360
+	// Token: 0x0200017D RID: 381
 	public class ExhibitComponent_SetValue
 	{
-		// Token: 0x040006D2 RID: 1746
+		// Token: 0x0400071F RID: 1823
 		public bool? Disabled;
 
-		// Token: 0x040006D3 RID: 1747
+		// Token: 0x04000720 RID: 1824
 		public bool? EdIsLocked;
 
-		// Token: 0x040006D4 RID: 1748
-		[Nullable(1)]
+		// Token: 0x04000721 RID: 1825
 		public IExhibitItemType ExhibitConfig;
 	}
 }

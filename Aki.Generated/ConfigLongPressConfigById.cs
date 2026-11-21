@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020004EA RID: 1258
+	// Token: 0x02000500 RID: 1280
 	public class ConfigLongPressConfigById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001D87 RID: 7559 RVA: 0x001001D4 File Offset: 0x000FE3D4
+		// Token: 0x06001E0B RID: 7691 RVA: 0x00106928 File Offset: 0x00104B28
 		static ConfigLongPressConfigById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigLongPressConfigById.CreateStaticDefaultValue), new Action(ConfigLongPressConfigById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001D88 RID: 7560 RVA: 0x001001F4 File Offset: 0x000FE3F4
+		// Token: 0x06001E0C RID: 7692 RVA: 0x00106948 File Offset: 0x00104B48
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigLongPressConfigById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001D89 RID: 7561 RVA: 0x00100273 File Offset: 0x000FE473
+		// Token: 0x06001E0D RID: 7693 RVA: 0x001069C7 File Offset: 0x00104BC7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigLongPressConfigById.LogPair = null;
 			ConfigLongPressConfigById.HandleId = 0;
 		}
 
-		// Token: 0x06001D8A RID: 7562 RVA: 0x00100281 File Offset: 0x000FE481
+		// Token: 0x06001E0E RID: 7694 RVA: 0x001069D5 File Offset: 0x00104BD5
 		public static void Init()
 		{
 			ConfigLongPressConfigById.HandleId = ConfigCommon.InitDataStatement(ConfigLongPressConfigById.HandleId, "db_longpress_config.db", "select BinData from `LongPressConfig` where Id = ?");
 		}
 
-		// Token: 0x06001D8B RID: 7563 RVA: 0x0010029C File Offset: 0x000FE49C
+		// Token: 0x06001E0F RID: 7695 RVA: 0x001069F0 File Offset: 0x00104BF0
 		public static LongPressConfig? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigLongPressConfigById.HandleId, ConfigLongPressConfigById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new LongPressConfig?(rootAsLongPressConfig);
 		}
 
-		// Token: 0x0400224A RID: 8778
+		// Token: 0x040022E4 RID: 8932
 		private const string DB = "db_longpress_config.db";
 
-		// Token: 0x0400224B RID: 8779
+		// Token: 0x040022E5 RID: 8933
 		private const string FILE = "c.长按组件配置.xlsx";
 
-		// Token: 0x0400224C RID: 8780
+		// Token: 0x040022E6 RID: 8934
 		private const string TABLE = "LongPressConfig";
 
-		// Token: 0x0400224D RID: 8781
+		// Token: 0x040022E7 RID: 8935
 		private const string COMMAND = "select BinData from `LongPressConfig` where Id = ?";
 
-		// Token: 0x0400224E RID: 8782
+		// Token: 0x040022E8 RID: 8936
 		private const string KEY_PREFIX = "LongPressConfigById";
 
-		// Token: 0x0400224F RID: 8783
+		// Token: 0x040022E9 RID: 8937
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002250 RID: 8784
+		// Token: 0x040022EA RID: 8938
 		private static int HandleId;
 	}
 }

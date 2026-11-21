@@ -4,19 +4,19 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.Views
 {
-	// Token: 0x020066F2 RID: 26354
+	// Token: 0x02005642 RID: 22082
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class DropCatchGameplayCountDownView : UiPanelBase
 	{
-		// Token: 0x06041DB1 RID: 269745 RVA: 0x00FF87BA File Offset: 0x00FF69BA
+		// Token: 0x060368FD RID: 223485 RVA: 0x00F39BAE File Offset: 0x00F37DAE
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new UiSequencePlayer(this.RootItem);
 			this.SequencePlayer.BindOnEndSequenceEvent(new Action<string>(this.OnEndSequence));
 		}
 
-		// Token: 0x06041DB2 RID: 269746 RVA: 0x00FF87E4 File Offset: 0x00FF69E4
+		// Token: 0x060368FE RID: 223486 RVA: 0x00F39BD8 File Offset: 0x00F37DD8
 		protected override void OnAfterShow()
 		{
 			UiSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			sequencePlayer.PlaySequence("Start", false, null);
 		}
 
-		// Token: 0x06041DB3 RID: 269747 RVA: 0x00FF8810 File Offset: 0x00FF6A10
+		// Token: 0x060368FF RID: 223487 RVA: 0x00F39C04 File Offset: 0x00F37E04
 		[NullableContext(1)]
 		private void OnEndSequence(string sequenceName)
 		{
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			base.Destroy(null);
 		}
 
-		// Token: 0x06041DB4 RID: 269748 RVA: 0x00FF8820 File Offset: 0x00FF6A20
+		// Token: 0x06036900 RID: 223488 RVA: 0x00F39C14 File Offset: 0x00F37E14
 		public void Pause()
 		{
 			UiSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			sequencePlayer.PauseSequence();
 		}
 
-		// Token: 0x06041DB5 RID: 269749 RVA: 0x00FF8832 File Offset: 0x00FF6A32
+		// Token: 0x06036901 RID: 223489 RVA: 0x00F39C26 File Offset: 0x00F37E26
 		public void Resume()
 		{
 			UiSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			sequencePlayer.ResumeSequence();
 		}
 
-		// Token: 0x06041DB6 RID: 269750 RVA: 0x00FF8844 File Offset: 0x00FF6A44
+		// Token: 0x06036902 RID: 223490 RVA: 0x00F39C38 File Offset: 0x00F37E38
 		protected override void OnBeforeDestroy()
 		{
 			if (this.IsFinished)
@@ -77,13 +77,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay.V
 			this.SequencePlayer = null;
 		}
 
-		// Token: 0x040224D1 RID: 140497
+		// Token: 0x0401CD2A RID: 118058
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x040224D2 RID: 140498
+		// Token: 0x0401CD2B RID: 118059
 		public Action CloseCallback;
 
-		// Token: 0x040224D3 RID: 140499
+		// Token: 0x0401CD2C RID: 118060
 		private bool IsFinished;
 	}
 }

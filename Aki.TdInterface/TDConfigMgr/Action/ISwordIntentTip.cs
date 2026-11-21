@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F0D RID: 7949
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002146 RID: 8518
 	public class ISwordIntentTip : ICommonTipType
 	{
-		// Token: 0x0600AA02 RID: 43522 RVA: 0x0017EFF4 File Offset: 0x0017D1F4
+		// Token: 0x0600B4D4 RID: 46292 RVA: 0x00194FEC File Offset: 0x001931EC
 		private ISwordIntentTip_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600AA03 RID: 43523 RVA: 0x0017F02C File Offset: 0x0017D22C
+		// Token: 0x0600B4D5 RID: 46293 RVA: 0x00195024 File Offset: 0x00193224
 		public static ISwordIntentTip Create([Nullable(2)] ISwordIntentTip instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600AA04 RID: 43524 RVA: 0x0017F03F File Offset: 0x0017D23F
+		// Token: 0x0600B4D6 RID: 46294 RVA: 0x00195037 File Offset: 0x00193237
 		public static ISwordIntentTip CreateFromSetValue([Nullable(2)] ISwordIntentTip_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600AA05 RID: 43525 RVA: 0x0017F052 File Offset: 0x0017D252
+		// Token: 0x0600B4D7 RID: 46295 RVA: 0x0019504A File Offset: 0x0019324A
 		public new ISwordIntentTip_SetValue ToSetValue()
 		{
 			return new ISwordIntentTip_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170033C5 RID: 13253
-		// (get) Token: 0x0600AA06 RID: 43526 RVA: 0x0017F065 File Offset: 0x0017D265
-		// (set) Token: 0x0600AA07 RID: 43527 RVA: 0x0017F090 File Offset: 0x0017D290
+		// Token: 0x17003690 RID: 13968
+		// (get) Token: 0x0600B4D8 RID: 46296 RVA: 0x0019505D File Offset: 0x0019325D
+		// (set) Token: 0x0600B4D9 RID: 46297 RVA: 0x00195088 File Offset: 0x00193288
 		public override ECommonTipType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400650A RID: 25866
+		// Token: 0x04006AF9 RID: 27385
 		[Nullable(2)]
 		protected new ISwordIntentTip FbInstance;
 
-		// Token: 0x0400650B RID: 25867
+		// Token: 0x04006AFA RID: 27386
 		[Nullable(2)]
 		protected new ISwordIntentTip_SetValue PocoInterface;
 	}

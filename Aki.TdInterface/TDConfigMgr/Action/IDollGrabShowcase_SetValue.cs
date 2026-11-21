@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019BF RID: 6591
+	// Token: 0x02001B4C RID: 6988
 	public class IDollGrabShowcase_SetValue
 	{
-		// Token: 0x040057C4 RID: 22468
+		// Token: 0x04005C19 RID: 23577
 		public ESimpleGameplayType Type;
 
-		// Token: 0x040057C5 RID: 22469
+		// Token: 0x04005C1A RID: 23578
 		public int ShowcaseEntityId;
 	}
 }

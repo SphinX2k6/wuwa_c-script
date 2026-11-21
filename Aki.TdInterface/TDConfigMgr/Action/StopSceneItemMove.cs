@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002222 RID: 8738
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200248D RID: 9357
 	public class StopSceneItemMove : ActionParams
 	{
-		// Token: 0x0600BFD0 RID: 49104 RVA: 0x001B8E58 File Offset: 0x001B7058
+		// Token: 0x0600CB8E RID: 52110 RVA: 0x001D0524 File Offset: 0x001CE724
 		private StopSceneItemMove_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BFD1 RID: 49105 RVA: 0x001B8E90 File Offset: 0x001B7090
+		// Token: 0x0600CB8F RID: 52111 RVA: 0x001D055C File Offset: 0x001CE75C
 		public static StopSceneItemMove Create([Nullable(2)] StopSceneItemMove instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BFD2 RID: 49106 RVA: 0x001B8EA3 File Offset: 0x001B70A3
+		// Token: 0x0600CB90 RID: 52112 RVA: 0x001D056F File Offset: 0x001CE76F
 		public static StopSceneItemMove CreateFromSetValue([Nullable(2)] StopSceneItemMove_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BFD3 RID: 49107 RVA: 0x001B8EB6 File Offset: 0x001B70B6
+		// Token: 0x0600CB91 RID: 52113 RVA: 0x001D0582 File Offset: 0x001CE782
 		public StopSceneItemMove_SetValue ToSetValue()
 		{
 			return new StopSceneItemMove_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003A1A RID: 14874
-		// (get) Token: 0x0600BFD4 RID: 49108 RVA: 0x001B8ED5 File Offset: 0x001B70D5
-		// (set) Token: 0x0600BFD5 RID: 49109 RVA: 0x001B8EFC File Offset: 0x001B70FC
+		// Token: 0x17003D10 RID: 15632
+		// (get) Token: 0x0600CB92 RID: 52114 RVA: 0x001D05A1 File Offset: 0x001CE7A1
+		// (set) Token: 0x0600CB93 RID: 52115 RVA: 0x001D05C8 File Offset: 0x001CE7C8
 		public virtual List<int> EntityIds
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A1B RID: 14875
-		// (get) Token: 0x0600BFD6 RID: 49110 RVA: 0x001B8F0C File Offset: 0x001B710C
-		// (set) Token: 0x0600BFD7 RID: 49111 RVA: 0x001B8F46 File Offset: 0x001B7146
+		// Token: 0x17003D11 RID: 15633
+		// (get) Token: 0x0600CB94 RID: 52116 RVA: 0x001D05D8 File Offset: 0x001CE7D8
+		// (set) Token: 0x0600CB95 RID: 52117 RVA: 0x001D0612 File Offset: 0x001CE812
 		public virtual EStopSceneItemMoveType? StopType
 		{
 			get
@@ -109,11 +107,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04007262 RID: 29282
+		// Token: 0x040078AC RID: 30892
 		[Nullable(2)]
 		protected new StopSceneItemMove FbInstance;
 
-		// Token: 0x04007263 RID: 29283
+		// Token: 0x040078AD RID: 30893
 		[Nullable(2)]
 		protected StopSceneItemMove_SetValue PocoInterface;
 	}

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.RoleUi;
@@ -12,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 {
-	// Token: 0x02006902 RID: 26882
+	// Token: 0x02005852 RID: 22610
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class TeamItem : UiPanelBase
 	{
-		// Token: 0x06043099 RID: 274585 RVA: 0x01054BA0 File Offset: 0x01052DA0
+		// Token: 0x06037BF1 RID: 228337 RVA: 0x00F961C8 File Offset: 0x00F943C8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,13 +35,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			};
 		}
 
-		// Token: 0x0604309A RID: 274586 RVA: 0x01054C75 File Offset: 0x01052E75
+		// Token: 0x06037BF2 RID: 228338 RVA: 0x00F9629D File Offset: 0x00F9449D
 		private void OnClickButton()
 		{
 			UiManager.Instance.OpenView(EUiViewName.MultiTeamRoleSelectView, this.GetSelectViewData(), null);
 		}
 
-		// Token: 0x0604309B RID: 274587 RVA: 0x01054C90 File Offset: 0x01052E90
+		// Token: 0x06037BF3 RID: 228339 RVA: 0x00F962B8 File Offset: 0x00F944B8
 		private MultiTeamRoleSelectData GetSelectViewData()
 		{
 			RoleInstance[] roleList = RoleModel.Instance.GetRoleList();
@@ -51,7 +50,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			{
 				if (roleInstance.GetRoleId() != 0)
 				{
-					MultiTeamRoleGridData item = MultiTeamRoleGridData.Phrase(roleInstance, false, false, false, false);
+					MultiTeamRoleGridData item = MultiTeamRoleGridData.Phrase(roleInstance, false, false, false, false, null, false, false, false);
 					list.Add(item);
 				}
 			}
@@ -72,7 +71,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 						RoleDataBase roleDataById = RoleModel.Instance.GetRoleDataById(trialRoleConfigByGroupId.Value.Id, true);
 						if (roleDataById != null)
 						{
-							list2.Add(MultiTeamRoleGridData.Phrase(roleDataById, false, false, false, false));
+							list2.Add(MultiTeamRoleGridData.Phrase(roleDataById, false, false, false, false, null, false, false, false));
 						}
 					}
 				}
@@ -105,7 +104,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			return multiTeamRoleSelectData;
 		}
 
-		// Token: 0x0604309C RID: 274588 RVA: 0x01054E40 File Offset: 0x01053040
+		// Token: 0x06037BF4 RID: 228340 RVA: 0x00F96470 File Offset: 0x00F94670
 		private MultiTeamRoleSelectData CreateMultiTeamRoleSelectData(List<MultiTeamRoleData> teamRoleDataList, List<MultiTeamRoleGridData> currentRoleTeamRoleGridData)
 		{
 			MultiTeamRoleData item = MultiTeamRoleData.Phrase("BossRushNormalRole", currentRoleTeamRoleGridData);
@@ -134,16 +133,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			}, null, teamRoleDataList, null, "", "");
 		}
 
-		// Token: 0x0604309D RID: 274589 RVA: 0x01054EA3 File Offset: 0x010530A3
+		// Token: 0x06037BF5 RID: 228341 RVA: 0x00F964D3 File Offset: 0x00F946D3
 		public void BindOnSelectRoleCall(Action callBack)
 		{
 			this.OnChangeRoleCallBack = callBack;
 		}
 
-		// Token: 0x0604309E RID: 274590 RVA: 0x01054EAC File Offset: 0x010530AC
+		// Token: 0x06037BF6 RID: 228342 RVA: 0x00F964DC File Offset: 0x00F946DC
 		private bool IfCanSelectCheck(int roleConfigId, int[] selectedRoleList)
 		{
-			if (selectedRoleList.Contains(roleConfigId))
+			if (Array.IndexOf<int>(selectedRoleList, roleConfigId) >= 0)
 			{
 				return true;
 			}
@@ -167,7 +166,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 					break;
 				}
 			}
-			if (num != roleConfigId && selectedRoleList.Contains(num))
+			if (num != roleConfigId && Array.IndexOf<int>(selectedRoleList, num) >= 0)
 			{
 				ScrollingTipsController.Instance.ShowTipsByTextId("BossRushSameFormation", Array.Empty<object>());
 				return false;
@@ -189,7 +188,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			return true;
 		}
 
-		// Token: 0x0604309F RID: 274591 RVA: 0x01055008 File Offset: 0x01053208
+		// Token: 0x06037BF7 RID: 228343 RVA: 0x00F9663C File Offset: 0x00F9483C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TeamItem.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -200,13 +199,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060430A0 RID: 274592 RVA: 0x0105504B File Offset: 0x0105324B
+		// Token: 0x06037BF8 RID: 228344 RVA: 0x00F9667F File Offset: 0x00F9487F
 		private BossRushTeamRoleItem CreateTeamRoleItem()
 		{
 			return new BossRushTeamRoleItem();
 		}
 
-		// Token: 0x060430A1 RID: 274593 RVA: 0x01055052 File Offset: 0x01053252
+		// Token: 0x06037BF9 RID: 228345 RVA: 0x00F96686 File Offset: 0x00F94886
 		public void Refresh(BossRushTeamInfo data)
 		{
 			this.CurrentTeamData = data;
@@ -216,7 +215,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			this.RefreshRecommendElementText(data);
 		}
 
-		// Token: 0x060430A2 RID: 274594 RVA: 0x01055078 File Offset: 0x01053278
+		// Token: 0x06037BFA RID: 228346 RVA: 0x00F966AC File Offset: 0x00F948AC
 		private void RefreshRecommendElementText(BossRushTeamInfo data)
 		{
 			if (data == null || data.GetCurrentSelectLevel() == null)
@@ -227,13 +226,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(2), textStringId, Array.Empty<object>());
 		}
 
-		// Token: 0x060430A3 RID: 274595 RVA: 0x010550C4 File Offset: 0x010532C4
+		// Token: 0x06037BFB RID: 228347 RVA: 0x00F966F8 File Offset: 0x00F948F8
 		private void RefreshRecommendLevelText(BossRushTeamInfo data)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), "BossRushRecommendLevel", new <>z__ReadOnlySingleElementList<object>(data.GetRecommendLevel().ToString()));
 		}
 
-		// Token: 0x060430A4 RID: 274596 RVA: 0x010550FC File Offset: 0x010532FC
+		// Token: 0x06037BFC RID: 228348 RVA: 0x00F96730 File Offset: 0x00F94930
 		private void RefreshElementItem(BossRushTeamInfo data)
 		{
 			foreach (CommonElementItem commonElementItem in this.ElementItemArray)
@@ -255,7 +254,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			}
 		}
 
-		// Token: 0x060430A5 RID: 274597 RVA: 0x010551B0 File Offset: 0x010533B0
+		// Token: 0x06037BFD RID: 228349 RVA: 0x00F967E4 File Offset: 0x00F949E4
 		private void OnSelectTeamRole()
 		{
 			Action onChangeRoleCallBack = this.OnChangeRoleCallBack;
@@ -266,7 +265,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			onChangeRoleCallBack();
 		}
 
-		// Token: 0x060430A6 RID: 274598 RVA: 0x010551C4 File Offset: 0x010533C4
+		// Token: 0x06037BFE RID: 228350 RVA: 0x00F967F8 File Offset: 0x00F949F8
 		public void RefreshTeamRole(BossRushTeamInfo data)
 		{
 			if (data == null || this.TeamLayout == null)
@@ -297,26 +296,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.BossRush
 			this.TeamLayout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x04022E60 RID: 142944
+		// Token: 0x0401D6BC RID: 120508
 		[Nullable(2)]
 		private CommonElementItem ElementItem1;
 
-		// Token: 0x04022E61 RID: 142945
+		// Token: 0x0401D6BD RID: 120509
 		[Nullable(2)]
 		private CommonElementItem ElementItem2;
 
-		// Token: 0x04022E62 RID: 142946
+		// Token: 0x0401D6BE RID: 120510
 		private readonly List<CommonElementItem> ElementItemArray = new List<CommonElementItem>();
 
-		// Token: 0x04022E63 RID: 142947
+		// Token: 0x0401D6BF RID: 120511
 		[Nullable(2)]
 		private Action OnChangeRoleCallBack;
 
-		// Token: 0x04022E64 RID: 142948
+		// Token: 0x0401D6C0 RID: 120512
 		[Nullable(2)]
 		protected BossRushTeamInfo CurrentTeamData;
 
-		// Token: 0x04022E65 RID: 142949
+		// Token: 0x0401D6C1 RID: 120513
 		[Nullable(new byte[]
 		{
 			2,

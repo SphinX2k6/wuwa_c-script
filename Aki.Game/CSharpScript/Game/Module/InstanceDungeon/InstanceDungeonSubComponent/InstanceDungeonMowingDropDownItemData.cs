@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonSubComponent
 {
-	// Token: 0x0200589E RID: 22686
+	// Token: 0x02004876 RID: 18550
 	public class InstanceDungeonMowingDropDownItemData
 	{
-		// Token: 0x17008A93 RID: 35475
-		// (get) Token: 0x06039B88 RID: 236424 RVA: 0x00DB7DD3 File Offset: 0x00DB5FD3
-		// (set) Token: 0x06039B89 RID: 236425 RVA: 0x00DB7DDB File Offset: 0x00DB5FDB
+		// Token: 0x17005E5F RID: 24159
+		// (get) Token: 0x0602EAAB RID: 191147 RVA: 0x00D06CEB File Offset: 0x00D04EEB
+		// (set) Token: 0x0602EAAC RID: 191148 RVA: 0x00D06CF3 File Offset: 0x00D04EF3
 		public int InstanceId { get; set; }
 	}
 }

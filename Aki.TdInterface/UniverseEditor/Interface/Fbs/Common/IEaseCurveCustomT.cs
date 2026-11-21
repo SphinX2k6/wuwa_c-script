@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005D95 RID: 23957
+	// Token: 0x020063D2 RID: 25554
 	public class IEaseCurveCustomT
 	{
-		// Token: 0x1700B36F RID: 45935
-		// (get) Token: 0x06029006 RID: 167942 RVA: 0x005A1AC3 File Offset: 0x0059FCC3
-		// (set) Token: 0x06029007 RID: 167943 RVA: 0x005A1ACB File Offset: 0x0059FCCB
+		// Token: 0x1700BCD5 RID: 48341
+		// (get) Token: 0x0602B690 RID: 177808 RVA: 0x005EA7F3 File Offset: 0x005E89F3
+		// (set) Token: 0x0602B691 RID: 177809 RVA: 0x005EA7FB File Offset: 0x005E89FB
 		public EEaseCurveType Type { get; set; }
 
-		// Token: 0x1700B370 RID: 45936
-		// (get) Token: 0x06029008 RID: 167944 RVA: 0x005A1AD4 File Offset: 0x0059FCD4
-		// (set) Token: 0x06029009 RID: 167945 RVA: 0x005A1ADC File Offset: 0x0059FCDC
+		// Token: 0x1700BCD6 RID: 48342
+		// (get) Token: 0x0602B692 RID: 177810 RVA: 0x005EA804 File Offset: 0x005E8A04
+		// (set) Token: 0x0602B693 RID: 177811 RVA: 0x005EA80C File Offset: 0x005E8A0C
 		public string CustomCurve { get; set; }
 
-		// Token: 0x0602900A RID: 167946 RVA: 0x005A1AE5 File Offset: 0x0059FCE5
+		// Token: 0x0602B694 RID: 177812 RVA: 0x005EA815 File Offset: 0x005E8A15
 		public IEaseCurveCustomT()
 		{
 			this.Type = EEaseCurveType.Preset;

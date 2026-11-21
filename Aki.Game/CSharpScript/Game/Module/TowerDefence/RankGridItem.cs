@@ -12,7 +12,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B1A RID: 19226
+	// Token: 0x02003AC2 RID: 15042
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 	})]
 	public class RankGridItem : GridProxyAbstract<TowerDefenseRankRoleData>
 	{
-		// Token: 0x06031CDE RID: 203998 RVA: 0x00B8F9CC File Offset: 0x00B8DBCC
+		// Token: 0x06026A6E RID: 158318 RVA: 0x00AD3A30 File Offset: 0x00AD1C30
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06031CDF RID: 203999 RVA: 0x00B8FA98 File Offset: 0x00B8DC98
+		// Token: 0x06026A6F RID: 158319 RVA: 0x00AD3AFC File Offset: 0x00AD1CFC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RankGridItem.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031CE0 RID: 204000 RVA: 0x00B8FADC File Offset: 0x00B8DCDC
+		// Token: 0x06026A70 RID: 158320 RVA: 0x00AD3B40 File Offset: 0x00AD1D40
 		private void RefreshPosTexture()
 		{
 			UUITexture texture = base.GetTexture(2);
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031CE1 RID: 204001 RVA: 0x00B8FB54 File Offset: 0x00B8DD54
+		// Token: 0x06026A71 RID: 158321 RVA: 0x00AD3BB8 File Offset: 0x00AD1DB8
 		private void RefreshItemGrid()
 		{
 			RoleSkin? roleSkinConfig = SkinConfig.Instance.GetRoleSkinConfig(this.Data.RoleSkinId);
@@ -96,14 +96,14 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.ItemGrid.Apply<CharacterSmallItemGrid>(this.CacheGridData);
 		}
 
-		// Token: 0x06031CE2 RID: 204002 RVA: 0x00B8FC4C File Offset: 0x00B8DE4C
+		// Token: 0x06026A72 RID: 158322 RVA: 0x00AD3CB0 File Offset: 0x00AD1EB0
 		private void RefreshPhantomIcon()
 		{
 			TowerDefencePhantom? towerDefensePhantomById = InstanceDungeonConfig.Instance.GetTowerDefensePhantomById(this.Data.PhantomId);
 			base.SetTextureByPath(PhantomBattleConfig.Instance.GetPhantomItemById(towerDefensePhantomById.Value.PhantomItemId).Value.IconMiddle, base.GetTexture(1), null, null);
 		}
 
-		// Token: 0x06031CE3 RID: 204003 RVA: 0x00B8FCB0 File Offset: 0x00B8DEB0
+		// Token: 0x06026A73 RID: 158323 RVA: 0x00AD3D14 File Offset: 0x00AD1F14
 		public override void Refresh(TowerDefenseRankRoleData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -126,32 +126,32 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x0401A942 RID: 108866
+		// Token: 0x04015294 RID: 86676
 		private TowerDefenseRankRoleData Data;
 
-		// Token: 0x0401A943 RID: 108867
+		// Token: 0x04015295 RID: 86677
 		private SmallItemGrid ItemGrid;
 
-		// Token: 0x0401A944 RID: 108868
+		// Token: 0x04015296 RID: 86678
 		private CharacterSmallItemGrid CacheGridData;
 
-		// Token: 0x0200AC9D RID: 44189
+		// Token: 0x020096BD RID: 38589
 		[NullableContext(0)]
 		private class ERankGridItem
 		{
-			// Token: 0x0403472A RID: 214826
+			// Token: 0x0402F0DB RID: 192731
 			public const int GridItem = 0;
 
-			// Token: 0x0403472B RID: 214827
+			// Token: 0x0402F0DC RID: 192732
 			public const int PhantomTexture = 1;
 
-			// Token: 0x0403472C RID: 214828
+			// Token: 0x0402F0DD RID: 192733
 			public const int PosTexture = 2;
 
-			// Token: 0x0403472D RID: 214829
+			// Token: 0x0402F0DE RID: 192734
 			public const int ContentItem = 3;
 
-			// Token: 0x0403472E RID: 214830
+			// Token: 0x0402F0DF RID: 192735
 			public const int EmptyItem = 4;
 		}
 	}

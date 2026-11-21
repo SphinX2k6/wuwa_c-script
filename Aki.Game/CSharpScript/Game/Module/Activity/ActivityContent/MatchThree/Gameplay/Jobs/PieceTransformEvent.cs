@@ -4,12 +4,12 @@ using CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Core
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Jobs
 {
-	// Token: 0x0200650A RID: 25866
+	// Token: 0x02005488 RID: 21640
 	[NullableContext(1)]
 	[Nullable(0)]
 	public struct PieceTransformEvent
 	{
-		// Token: 0x06040EA0 RID: 265888 RVA: 0x00FBB653 File Offset: 0x00FB9853
+		// Token: 0x06035B64 RID: 220004 RVA: 0x00F02683 File Offset: 0x00F00883
 		public PieceTransformEvent(GridPosition pos, EPieceType type, Piece piece)
 		{
 			this.Pos = pos;
@@ -17,13 +17,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			this.Piece = piece;
 		}
 
-		// Token: 0x04021D8A RID: 138634
+		// Token: 0x0401C6BB RID: 116411
 		public GridPosition Pos;
 
-		// Token: 0x04021D8B RID: 138635
+		// Token: 0x0401C6BC RID: 116412
 		public EPieceType Type;
 
-		// Token: 0x04021D8C RID: 138636
+		// Token: 0x0401C6BD RID: 116413
 		public Piece Piece;
 	}
 }

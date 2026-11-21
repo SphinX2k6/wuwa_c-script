@@ -7,12 +7,12 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02002C58 RID: 11352
+// Token: 0x020021B1 RID: 8625
 [UClass("/Game/Aki/TypeScript/Game/Module/UiComponent/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Module/UiComponent/TsUiSceneRoleActor.TsUiSceneRoleActor_C")]
 public class TsUiSceneRoleActor : AActor, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x06017B23 RID: 97059 RVA: 0x006065F0 File Offset: 0x006047F0
+	// Token: 0x06015398 RID: 86936 RVA: 0x0062C098 File Offset: 0x0062A298
 	public void Init(int roleActorIndex, EUiModelUseWay useWay)
 	{
 		this.RoleActorIndex = roleActorIndex;
@@ -34,28 +34,25 @@ public class TsUiSceneRoleActor : AActor, IUnrealUObject, IUnrealObject
 		base.SetPrimitiveEntityType(1U);
 	}
 
-	// Token: 0x06017B24 RID: 97060 RVA: 0x00606664 File Offset: 0x00604864
+	// Token: 0x06015399 RID: 86937 RVA: 0x0062C10C File Offset: 0x0062A30C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveTick(float deltaSeconds)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveTick"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		AActor.__ReceiveTick_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsUiSceneRoleActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveTick"), TsUiSceneRoleActor.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((AActor.__ReceiveTick_FunctionParams*)ptr + 15L / (long)sizeof(AActor.__ReceiveTick_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->DeltaSeconds = deltaSeconds;
+			this.ReceiveTick_Implementation(deltaSeconds);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		AActor.__ReceiveTick_FunctionParams* ptr = stackalloc AActor.__ReceiveTick_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(AActor.__ReceiveTick_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->DeltaSeconds = deltaSeconds;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06017B25 RID: 97061 RVA: 0x006066DA File Offset: 0x006048DA
+	// Token: 0x0601539A RID: 86938 RVA: 0x0062C198 File Offset: 0x0062A398
 	protected virtual void ReceiveTick_Implementation(float deltaSeconds)
 	{
 		UiModelBase model = this.Model;
@@ -66,13 +63,13 @@ public class TsUiSceneRoleActor : AActor, IUnrealUObject, IUnrealObject
 		model.Tick(deltaSeconds);
 	}
 
-	// Token: 0x06017B26 RID: 97062 RVA: 0x006066ED File Offset: 0x006048ED
+	// Token: 0x0601539B RID: 86939 RVA: 0x0062C1AB File Offset: 0x0062A3AB
 	public int GetRoleActorIndex()
 	{
 		return this.RoleActorIndex;
 	}
 
-	// Token: 0x06017B27 RID: 97063 RVA: 0x006066F5 File Offset: 0x006048F5
+	// Token: 0x0601539C RID: 86940 RVA: 0x0062C1B3 File Offset: 0x0062A3B3
 	public void Destroy()
 	{
 		UiModelBase model = this.Model;
@@ -90,35 +87,31 @@ public class TsUiSceneRoleActor : AActor, IUnrealUObject, IUnrealObject
 		UKuroActorManager.DestroyActor(this);
 	}
 
-	// Token: 0x06017B28 RID: 97064 RVA: 0x00606730 File Offset: 0x00604930
+	// Token: 0x0601539D RID: 86941 RVA: 0x0062C1EC File Offset: 0x0062A3EC
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual bool IsShowUiWepaonEffect()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("IsShowUiWepaonEffect"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsUiSceneRoleActor.__IsShowUiWepaonEffect_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsUiSceneRoleActor) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("IsShowUiWepaonEffect"), TsUiSceneRoleActor.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsUiSceneRoleActor.__IsShowUiWepaonEffect_FunctionParams*)ptr + 15L / (long)sizeof(TsUiSceneRoleActor.__IsShowUiWepaonEffect_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.IsShowUiWepaonEffect_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsUiSceneRoleActor.__IsShowUiWepaonEffect_FunctionParams* ptr = stackalloc TsUiSceneRoleActor.__IsShowUiWepaonEffect_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsUiSceneRoleActor.__IsShowUiWepaonEffect_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x06017B29 RID: 97065 RVA: 0x006067A5 File Offset: 0x006049A5
+	// Token: 0x0601539E RID: 86942 RVA: 0x0062C276 File Offset: 0x0062A476
 	protected bool IsShowUiWepaonEffect_Implementation()
 	{
 		return true;
 	}
 
-	// Token: 0x06017B2A RID: 97066 RVA: 0x006067A8 File Offset: 0x006049A8
+	// Token: 0x0601539F RID: 86943 RVA: 0x0062C27C File Offset: 0x0062A47C
 	public void SetMoveOutActor()
 	{
 		this.BeforeMoveOutPos = base.D_K2_GetActorLocation();
@@ -126,14 +119,14 @@ public class TsUiSceneRoleActor : AActor, IUnrealUObject, IUnrealObject
 		base.D_K2_SetActorLocation(Vector.ZeroVectorDouble, false, ref fhitResult, false);
 	}
 
-	// Token: 0x06017B2B RID: 97067 RVA: 0x006067D4 File Offset: 0x006049D4
+	// Token: 0x060153A0 RID: 86944 RVA: 0x0062C2A8 File Offset: 0x0062A4A8
 	public void SetMoveInActor()
 	{
 		FHitResult fhitResult = null;
 		base.D_K2_SetActorLocation(this.BeforeMoveOutPos, false, ref fhitResult, false);
 	}
 
-	// Token: 0x06017B2C RID: 97068 RVA: 0x006067F4 File Offset: 0x006049F4
+	// Token: 0x060153A1 RID: 86945 RVA: 0x0062C2C8 File Offset: 0x0062A4C8
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsUiSceneRoleActor._ClassPtr == IntPtr.Zero)
@@ -143,36 +136,24 @@ public class TsUiSceneRoleActor : AActor, IUnrealUObject, IUnrealObject
 		return TsUiSceneRoleActor._ClassPtr;
 	}
 
-	// Token: 0x06017B2D RID: 97069 RVA: 0x00606818 File Offset: 0x00604A18
+	// Token: 0x060153A2 RID: 86946 RVA: 0x0062C2EC File Offset: 0x0062A4EC
 	public TsUiSceneRoleActor() : this(BuiltinUtils.AllocNativeUObject(TsUiSceneRoleActor.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06017B2E RID: 97070 RVA: 0x00606840 File Offset: 0x00604A40
+	// Token: 0x060153A3 RID: 86947 RVA: 0x0062C314 File Offset: 0x0062A514
 	[NullableContext(1)]
 	public TsUiSceneRoleActor(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsUiSceneRoleActor.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06017B2F RID: 97071 RVA: 0x00606873 File Offset: 0x00604A73
+	// Token: 0x060153A4 RID: 86948 RVA: 0x0062C347 File Offset: 0x0062A547
 	protected TsUiSceneRoleActor(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x17001FD4 RID: 8148
-	// (get) Token: 0x06017B30 RID: 97072 RVA: 0x00606887 File Offset: 0x00604A87
-	[Nullable(1)]
-	public unsafe FPointerToUberGraphFrame UberGraphFrame
-	{
-		[NullableContext(1)]
-		get
-		{
-			return *(base.NativePtr + (IntPtr)TsUiSceneRoleActor.__PropertyOffset_UberGraphFrame);
-		}
-	}
-
-	// Token: 0x17001FD5 RID: 8149
-	// (get) Token: 0x06017B31 RID: 97073 RVA: 0x00606897 File Offset: 0x00604A97
+	// Token: 0x17002026 RID: 8230
+	// (get) Token: 0x060153A5 RID: 86949 RVA: 0x0062C35B File Offset: 0x0062A55B
 	[Nullable(2)]
 	public unsafe USceneComponent DefaultSceneRoot
 	{
@@ -183,50 +164,47 @@ public class TsUiSceneRoleActor : AActor, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x06017B32 RID: 97074 RVA: 0x006068AB File Offset: 0x00604AAB
+	// Token: 0x060153A6 RID: 86950 RVA: 0x0062C36F File Offset: 0x0062A56F
 	protected unsafe virtual void __CPPCALL_ReceiveTick_Implementation(AActor.__ReceiveTick_FunctionParams* __Params)
 	{
 		this.ReceiveTick_Implementation(__Params->DeltaSeconds);
 	}
 
-	// Token: 0x06017B33 RID: 97075 RVA: 0x006068B9 File Offset: 0x00604AB9
+	// Token: 0x060153A7 RID: 86951 RVA: 0x0062C37D File Offset: 0x0062A57D
 	protected unsafe virtual void __CPPCALL_IsShowUiWepaonEffect_Implementation(TsUiSceneRoleActor.__IsShowUiWepaonEffect_FunctionParams* __Params)
 	{
 		__Params->__Result = this.IsShowUiWepaonEffect_Implementation();
 	}
 
-	// Token: 0x0400B088 RID: 45192
+	// Token: 0x0400B3F5 RID: 46069
 	[Nullable(2)]
 	public UiModelBase Model;
 
-	// Token: 0x0400B089 RID: 45193
+	// Token: 0x0400B3F6 RID: 46070
 	private int RoleActorIndex;
 
-	// Token: 0x0400B08A RID: 45194
+	// Token: 0x0400B3F7 RID: 46071
 	private FVectorDouble BeforeMoveOutPos = Vector.ZeroVectorDouble;
 
-	// Token: 0x0400B08B RID: 45195
+	// Token: 0x0400B3F8 RID: 46072
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Module/UiComponent/TsUiSceneRoleActor.TsUiSceneRoleActor_C";
 
-	// Token: 0x0400B08C RID: 45196
+	// Token: 0x0400B3F9 RID: 46073
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400B08D RID: 45197
+	// Token: 0x0400B3FA RID: 46074
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400B08E RID: 45198
-	private static int __PropertyOffset_UberGraphFrame;
-
-	// Token: 0x0400B08F RID: 45199
+	// Token: 0x0400B3FB RID: 46075
 	private static int __PropertyOffset_DefaultSceneRoot;
 
-	// Token: 0x0200923C RID: 37436
+	// Token: 0x02008466 RID: 33894
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 1)]
 	protected ref struct __IsShowUiWepaonEffect_FunctionParams
 	{
-		// Token: 0x0402F4C1 RID: 193729
+		// Token: 0x0402AB4D RID: 174925
 		[FieldOffset(0)]
 		public bool __Result;
 	}

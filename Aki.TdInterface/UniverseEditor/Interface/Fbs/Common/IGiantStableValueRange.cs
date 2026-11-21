@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005DD3 RID: 24019
+	// Token: 0x02006410 RID: 25616
 	public struct IGiantStableValueRange : IFlatbufferObject
 	{
-		// Token: 0x1700B3CF RID: 46031
-		// (get) Token: 0x060291C6 RID: 168390 RVA: 0x005A4712 File Offset: 0x005A2912
+		// Token: 0x1700BD35 RID: 48437
+		// (get) Token: 0x0602B850 RID: 178256 RVA: 0x005ED442 File Offset: 0x005EB642
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x060291C7 RID: 168391 RVA: 0x005A471F File Offset: 0x005A291F
+		// Token: 0x0602B851 RID: 178257 RVA: 0x005ED44F File Offset: 0x005EB64F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060291C8 RID: 168392 RVA: 0x005A4728 File Offset: 0x005A2928
+		// Token: 0x0602B852 RID: 178258 RVA: 0x005ED458 File Offset: 0x005EB658
 		public static IGiantStableValueRange GetRootAsIGiantStableValueRange(ByteBuffer _bb)
 		{
 			return IGiantStableValueRange.GetRootAsIGiantStableValueRange(_bb, default(IGiantStableValueRange));
 		}
 
-		// Token: 0x060291C9 RID: 168393 RVA: 0x005A4744 File Offset: 0x005A2944
+		// Token: 0x0602B853 RID: 178259 RVA: 0x005ED474 File Offset: 0x005EB674
 		public static IGiantStableValueRange GetRootAsIGiantStableValueRange(ByteBuffer _bb, IGiantStableValueRange obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060291CA RID: 168394 RVA: 0x005A4761 File Offset: 0x005A2961
+		// Token: 0x0602B854 RID: 178260 RVA: 0x005ED491 File Offset: 0x005EB691
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060291CB RID: 168395 RVA: 0x005A4770 File Offset: 0x005A2970
+		// Token: 0x0602B855 RID: 178261 RVA: 0x005ED4A0 File Offset: 0x005EB6A0
 		public IGiantStableValueRange __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B3D0 RID: 46032
-		// (get) Token: 0x060291CC RID: 168396 RVA: 0x005A4780 File Offset: 0x005A2980
+		// Token: 0x1700BD36 RID: 48438
+		// (get) Token: 0x0602B856 RID: 178262 RVA: 0x005ED4B0 File Offset: 0x005EB6B0
 		public IGiantStableValue? MinValue
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x1700B3D1 RID: 46033
-		// (get) Token: 0x060291CD RID: 168397 RVA: 0x005A47E0 File Offset: 0x005A29E0
+		// Token: 0x1700BD37 RID: 48439
+		// (get) Token: 0x0602B857 RID: 178263 RVA: 0x005ED510 File Offset: 0x005EB710
 		public IGiantStableValue? MaxValue
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x060291CE RID: 168398 RVA: 0x005A483D File Offset: 0x005A2A3D
+		// Token: 0x0602B858 RID: 178264 RVA: 0x005ED56D File Offset: 0x005EB76D
 		public static Offset<IGiantStableValueRange> CreateIGiantStableValueRange(FlatBufferBuilder builder, Offset<IGiantStableValue> MinValueOffset = default(Offset<IGiantStableValue>), Offset<IGiantStableValue> MaxValueOffset = default(Offset<IGiantStableValue>))
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IGiantStableValueRange.EndIGiantStableValueRange(builder);
 		}
 
-		// Token: 0x060291CF RID: 168399 RVA: 0x005A485A File Offset: 0x005A2A5A
+		// Token: 0x0602B859 RID: 178265 RVA: 0x005ED58A File Offset: 0x005EB78A
 		public static void StartIGiantStableValueRange(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060291D0 RID: 168400 RVA: 0x005A4863 File Offset: 0x005A2A63
+		// Token: 0x0602B85A RID: 178266 RVA: 0x005ED593 File Offset: 0x005EB793
 		public static void AddMinValue(FlatBufferBuilder builder, Offset<IGiantStableValue> minValueOffset)
 		{
 			builder.AddOffset(0, minValueOffset.Value, 0);
 		}
 
-		// Token: 0x060291D1 RID: 168401 RVA: 0x005A4873 File Offset: 0x005A2A73
+		// Token: 0x0602B85B RID: 178267 RVA: 0x005ED5A3 File Offset: 0x005EB7A3
 		public static void AddMaxValue(FlatBufferBuilder builder, Offset<IGiantStableValue> maxValueOffset)
 		{
 			builder.AddOffset(1, maxValueOffset.Value, 0);
 		}
 
-		// Token: 0x060291D2 RID: 168402 RVA: 0x005A4883 File Offset: 0x005A2A83
+		// Token: 0x0602B85C RID: 178268 RVA: 0x005ED5B3 File Offset: 0x005EB7B3
 		public static Offset<IGiantStableValueRange> EndIGiantStableValueRange(FlatBufferBuilder builder)
 		{
 			return new Offset<IGiantStableValueRange>(builder.EndTable());
 		}
 
-		// Token: 0x060291D3 RID: 168403 RVA: 0x005A4890 File Offset: 0x005A2A90
+		// Token: 0x0602B85D RID: 178269 RVA: 0x005ED5C0 File Offset: 0x005EB7C0
 		public IGiantStableValueRangeT UnPack()
 		{
 			IGiantStableValueRangeT giantStableValueRangeT = new IGiantStableValueRangeT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return giantStableValueRangeT;
 		}
 
-		// Token: 0x060291D4 RID: 168404 RVA: 0x005A48AC File Offset: 0x005A2AAC
+		// Token: 0x0602B85E RID: 178270 RVA: 0x005ED5DC File Offset: 0x005EB7DC
 		public void UnPackTo(IGiantStableValueRangeT _o)
 		{
 			_o.MinValue = ((this.MinValue != null) ? this.MinValue.Value.UnPack() : null);
 			_o.MaxValue = ((this.MaxValue != null) ? this.MaxValue.Value.UnPack() : null);
 		}
 
-		// Token: 0x060291D5 RID: 168405 RVA: 0x005A4918 File Offset: 0x005A2B18
+		// Token: 0x0602B85F RID: 178271 RVA: 0x005ED648 File Offset: 0x005EB848
 		public static Offset<IGiantStableValueRange> Pack(FlatBufferBuilder builder, IGiantStableValueRangeT _o)
 		{
 			if (_o == null)
@@ -137,7 +137,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IGiantStableValueRange.CreateIGiantStableValueRange(builder, minValueOffset, maxValueOffset);
 		}
 
-		// Token: 0x0400F7B9 RID: 63417
+		// Token: 0x04010514 RID: 66836
 		private Table __p;
 	}
 }

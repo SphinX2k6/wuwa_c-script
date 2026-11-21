@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02002286 RID: 8838
+// Token: 0x0200176A RID: 5994
 public enum EOutlookType
 {
-	// Token: 0x04008346 RID: 33606
+	// Token: 0x04008484 RID: 33924
 	None,
-	// Token: 0x04008347 RID: 33607
+	// Token: 0x04008485 RID: 33925
 	Frame,
-	// Token: 0x04008348 RID: 33608
+	// Token: 0x04008486 RID: 33926
 	Sticker,
-	// Token: 0x04008349 RID: 33609
+	// Token: 0x04008487 RID: 33927
 	Decoration
 }

@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x02000EF3 RID: 3827
+// Token: 0x020003A8 RID: 936
 public enum EModelRegister
 {
 

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000ECC RID: 3788
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000FE2 RID: 4066
 	public class IAssignLoadingBackground : IOperation
 	{
-		// Token: 0x060053A2 RID: 21410 RVA: 0x000CDABC File Offset: 0x000CBCBC
+		// Token: 0x0600591E RID: 22814 RVA: 0x000D9C64 File Offset: 0x000D7E64
 		private IAssignLoadingBackground_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060053A3 RID: 21411 RVA: 0x000CDAF4 File Offset: 0x000CBCF4
+		// Token: 0x0600591F RID: 22815 RVA: 0x000D9C9C File Offset: 0x000D7E9C
 		public static IAssignLoadingBackground Create([Nullable(2)] IAssignLoadingBackground instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060053A4 RID: 21412 RVA: 0x000CDB07 File Offset: 0x000CBD07
+		// Token: 0x06005920 RID: 22816 RVA: 0x000D9CAF File Offset: 0x000D7EAF
 		public static IAssignLoadingBackground CreateFromSetValue([Nullable(2)] IAssignLoadingBackground_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060053A5 RID: 21413 RVA: 0x000CDB1A File Offset: 0x000CBD1A
+		// Token: 0x06005921 RID: 22817 RVA: 0x000D9CC2 File Offset: 0x000D7EC2
 		public new IAssignLoadingBackground_SetValue ToSetValue()
 		{
 			return new IAssignLoadingBackground_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001C1E RID: 7198
-		// (get) Token: 0x060053A6 RID: 21414 RVA: 0x000CDB39 File Offset: 0x000CBD39
-		// (set) Token: 0x060053A7 RID: 21415 RVA: 0x000CDB64 File Offset: 0x000CBD64
+		// Token: 0x17001DB6 RID: 7606
+		// (get) Token: 0x06005922 RID: 22818 RVA: 0x000D9CE1 File Offset: 0x000D7EE1
+		// (set) Token: 0x06005923 RID: 22819 RVA: 0x000D9D0C File Offset: 0x000D7F0C
 		public override EOperation Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C1F RID: 7199
-		// (get) Token: 0x060053A8 RID: 21416 RVA: 0x000CDB72 File Offset: 0x000CBD72
-		// (set) Token: 0x060053A9 RID: 21417 RVA: 0x000CDB9D File Offset: 0x000CBD9D
+		// Token: 0x17001DB7 RID: 7607
+		// (get) Token: 0x06005924 RID: 22820 RVA: 0x000D9D1A File Offset: 0x000D7F1A
+		// (set) Token: 0x06005925 RID: 22821 RVA: 0x000D9D45 File Offset: 0x000D7F45
 		public virtual string ImagePath
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040032A6 RID: 12966
+		// Token: 0x040035B3 RID: 13747
 		[Nullable(2)]
 		protected new IAssignLoadingBackground FbInstance;
 
-		// Token: 0x040032A7 RID: 12967
+		// Token: 0x040035B4 RID: 13748
 		[Nullable(2)]
 		protected new IAssignLoadingBackground_SetValue PocoInterface;
 	}

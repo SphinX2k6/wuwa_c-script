@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005776 RID: 22390
+	// Token: 0x02005D7D RID: 23933
 	public class IPrefabCompTransformT
 	{
-		// Token: 0x1700A703 RID: 42755
-		// (get) Token: 0x06025883 RID: 153731 RVA: 0x0052D975 File Offset: 0x0052BB75
-		// (set) Token: 0x06025884 RID: 153732 RVA: 0x0052D97D File Offset: 0x0052BB7D
+		// Token: 0x1700B027 RID: 45095
+		// (get) Token: 0x06027DA3 RID: 163235 RVA: 0x00573B01 File Offset: 0x00571D01
+		// (set) Token: 0x06027DA4 RID: 163236 RVA: 0x00573B09 File Offset: 0x00571D09
 		public string ReferenceActorKey { get; set; }
 
-		// Token: 0x1700A704 RID: 42756
-		// (get) Token: 0x06025885 RID: 153733 RVA: 0x0052D986 File Offset: 0x0052BB86
-		// (set) Token: 0x06025886 RID: 153734 RVA: 0x0052D98E File Offset: 0x0052BB8E
+		// Token: 0x1700B028 RID: 45096
+		// (get) Token: 0x06027DA5 RID: 163237 RVA: 0x00573B12 File Offset: 0x00571D12
+		// (set) Token: 0x06027DA6 RID: 163238 RVA: 0x00573B1A File Offset: 0x00571D1A
 		public IPrefabCompTransformItemT Location { get; set; }
 
-		// Token: 0x1700A705 RID: 42757
-		// (get) Token: 0x06025887 RID: 153735 RVA: 0x0052D997 File Offset: 0x0052BB97
-		// (set) Token: 0x06025888 RID: 153736 RVA: 0x0052D99F File Offset: 0x0052BB9F
+		// Token: 0x1700B029 RID: 45097
+		// (get) Token: 0x06027DA7 RID: 163239 RVA: 0x00573B23 File Offset: 0x00571D23
+		// (set) Token: 0x06027DA8 RID: 163240 RVA: 0x00573B2B File Offset: 0x00571D2B
 		public IPrefabCompTransformItemT Rotation { get; set; }
 
-		// Token: 0x1700A706 RID: 42758
-		// (get) Token: 0x06025889 RID: 153737 RVA: 0x0052D9A8 File Offset: 0x0052BBA8
-		// (set) Token: 0x0602588A RID: 153738 RVA: 0x0052D9B0 File Offset: 0x0052BBB0
+		// Token: 0x1700B02A RID: 45098
+		// (get) Token: 0x06027DA9 RID: 163241 RVA: 0x00573B34 File Offset: 0x00571D34
+		// (set) Token: 0x06027DAA RID: 163242 RVA: 0x00573B3C File Offset: 0x00571D3C
 		public IPrefabCompTransformItemT Scale { get; set; }
 
-		// Token: 0x0602588B RID: 153739 RVA: 0x0052D9B9 File Offset: 0x0052BBB9
+		// Token: 0x06027DAB RID: 163243 RVA: 0x00573B45 File Offset: 0x00571D45
 		public IPrefabCompTransformT()
 		{
 			this.ReferenceActorKey = null;

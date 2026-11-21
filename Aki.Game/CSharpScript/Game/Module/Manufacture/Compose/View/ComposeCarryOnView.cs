@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -24,17 +23,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Manufacture.Compose.View
 {
-	// Token: 0x0200566D RID: 22125
+	// Token: 0x02004643 RID: 17987
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ComposeCarryOnView : UiViewBase
 	{
-		// Token: 0x0603845F RID: 230495 RVA: 0x00D5654C File Offset: 0x00D5474C
+		// Token: 0x0602D35D RID: 185181 RVA: 0x00CA44D8 File Offset: 0x00CA26D8
 		public ComposeCarryOnView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06038460 RID: 230496 RVA: 0x00D565B4 File Offset: 0x00D547B4
+		// Token: 0x0602D35E RID: 185182 RVA: 0x00CA4540 File Offset: 0x00CA2740
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 46;
@@ -147,7 +146,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06038461 RID: 230497 RVA: 0x00D56C74 File Offset: 0x00D54E74
+		// Token: 0x0602D35F RID: 185183 RVA: 0x00CA4C00 File Offset: 0x00CA2E00
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.ComposeSuccess, new Action(this.OnCookResponse));
@@ -159,7 +158,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.RefreshTimer = TimerSystem.Instance.Forever(new TTimerAction(this.OnSecondTimerRefresh), 1000f, 1f, null, null, true);
 		}
 
-		// Token: 0x06038462 RID: 230498 RVA: 0x00D56D50 File Offset: 0x00D54F50
+		// Token: 0x0602D360 RID: 185184 RVA: 0x00CA4CDC File Offset: 0x00CA2EDC
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.ComposeSuccess, new Action(this.OnCookResponse));
@@ -175,7 +174,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			}
 		}
 
-		// Token: 0x06038463 RID: 230499 RVA: 0x00D56E34 File Offset: 0x00D55034
+		// Token: 0x0602D361 RID: 185185 RVA: 0x00CA4DC0 File Offset: 0x00CA2FC0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ComposeCarryOnView.<OnBeforeStartAsync>d__41 <OnBeforeStartAsync>d__;
@@ -186,13 +185,13 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038464 RID: 230500 RVA: 0x00D56E77 File Offset: 0x00D55077
+		// Token: 0x0602D362 RID: 185186 RVA: 0x00CA4E03 File Offset: 0x00CA3003
 		protected override void OnStart()
 		{
 			CommonManager.Instance.SetCurrentSystem(ESystemType.ComposeSystem);
 		}
 
-		// Token: 0x06038465 RID: 230501 RVA: 0x00D56E84 File Offset: 0x00D55084
+		// Token: 0x0602D363 RID: 185187 RVA: 0x00CA4E10 File Offset: 0x00CA3010
 		protected override void OnBeforeShow()
 		{
 			ComposeViewOpenData composeViewOpenData = this.OpenParam as ComposeViewOpenData;
@@ -204,13 +203,13 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.TargetItem = 0;
 		}
 
-		// Token: 0x06038466 RID: 230502 RVA: 0x00D56F05 File Offset: 0x00D55105
+		// Token: 0x0602D364 RID: 185188 RVA: 0x00CA4E91 File Offset: 0x00CA3091
 		protected override void OnBeforeDestroy()
 		{
 			ComposeModel.Instance.CurrentComposeListType = EComposeListType.Purification;
 		}
 
-		// Token: 0x06038467 RID: 230503 RVA: 0x00D56F14 File Offset: 0x00D55114
+		// Token: 0x0602D365 RID: 185189 RVA: 0x00CA4EA0 File Offset: 0x00CA30A0
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -251,7 +250,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			};
 		}
 
-		// Token: 0x06038468 RID: 230504 RVA: 0x00D56F78 File Offset: 0x00D55178
+		// Token: 0x0602D366 RID: 185190 RVA: 0x00CA4F04 File Offset: 0x00CA3104
 		private void SetSum(int sum)
 		{
 			this.Count = sum;
@@ -267,7 +266,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			}
 		}
 
-		// Token: 0x06038469 RID: 230505 RVA: 0x00D57028 File Offset: 0x00D55228
+		// Token: 0x0602D367 RID: 185191 RVA: 0x00CA4FB4 File Offset: 0x00CA31B4
 		private bool CanToggleChange(int arg1, bool? arg2)
 		{
 			if (this.NoCircleExhibitionView.MovingState())
@@ -282,7 +281,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return this.LastClickTime == 0.0 || Time.Instance.Now - this.LastClickTime >= (double)intConfig.Value;
 		}
 
-		// Token: 0x0603846A RID: 230506 RVA: 0x00D5708C File Offset: 0x00D5528C
+		// Token: 0x0602D368 RID: 185192 RVA: 0x00CA5018 File Offset: 0x00CA3218
 		private void RefreshProficiency(bool isVisible)
 		{
 			if (!isVisible)
@@ -298,40 +297,52 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.SetExpNum(reagentProductionData.ComposeCount, proficiency, maxProficiencyCount, this.Count);
 		}
 
-		// Token: 0x0603846B RID: 230507 RVA: 0x00D5710C File Offset: 0x00D5530C
+		// Token: 0x0602D369 RID: 185193 RVA: 0x00CA5098 File Offset: 0x00CA3298
 		private void RefreshMaterialNeedNum()
 		{
 			this.RefreshCost(this.HasCoin, this.SingleNeedCoinCount * this.Count);
 			if (this.ItemData != null && ComposeModel.Instance.IsInPurificationList())
 			{
-				List<IComposeItemData> source = ComposeModel.Instance.CalculateNeedComposeMaterialList(this.ItemData.ConfigId, this.Count);
-				ComposeModel.Instance.SetCurrentComposeMaterialList((from item in source
-				select new SingleItemInfo
+				List<IComposeItemData> list = ComposeModel.Instance.CalculateNeedComposeMaterialList(this.ItemData.ConfigId, this.Count);
+				List<SingleItemInfo> list2 = new List<SingleItemInfo>(list.Count);
+				foreach (IComposeItemData composeItemData in list)
 				{
-					ItemId = item.ItemId,
-					ItemNum = item.RequiredNum
-				}).ToList<SingleItemInfo>());
-				List<IComposeItemData> uiList = source.AsEnumerable<IComposeItemData>().Reverse<IComposeItemData>().ToList<IComposeItemData>();
+					list2.Add(new SingleItemInfo
+					{
+						ItemId = composeItemData.ItemId,
+						ItemNum = composeItemData.RequiredNum
+					});
+				}
+				ComposeModel.Instance.SetCurrentComposeMaterialList(list2);
+				List<IComposeItemData> uiList = new List<IComposeItemData>(list.Count);
+				for (int i = list.Count - 1; i >= 0; i--)
+				{
+					uiList.Add(list[i]);
+				}
+				List<ISingleItemInfo> list3 = new List<ISingleItemInfo>(uiList.Count);
+				foreach (IComposeItemData composeItemData2 in uiList)
+				{
+					list3.Add(new ISingleItemInfo
+					{
+						Proto_ItemId = composeItemData2.ItemId,
+						Proto_ItemNum = composeItemData2.RequiredNum,
+						Proto_IsUnlock = true
+					});
+				}
 				GenericScrollViewNew<ManufactureMaterialItem, ISingleItemInfo> materialScrollView = this.MaterialScrollView;
 				if (materialScrollView == null)
 				{
 					return;
 				}
-				materialScrollView.RefreshByData((from item in uiList
-				select new ISingleItemInfo
-				{
-					Proto_ItemId = item.ItemId,
-					Proto_ItemNum = item.RequiredNum,
-					Proto_IsUnlock = true
-				}).ToList<ISingleItemInfo>(), delegate
+				materialScrollView.RefreshByData(list3, delegate
 				{
 					GenericScrollViewNew<ManufactureMaterialItem, ISingleItemInfo> materialScrollView3 = this.MaterialScrollView;
-					List<ManufactureMaterialItem> list2 = (materialScrollView3 != null) ? materialScrollView3.GetScrollItemList() : null;
-					if (list2 != null)
+					List<ManufactureMaterialItem> list5 = (materialScrollView3 != null) ? materialScrollView3.GetScrollItemList() : null;
+					if (list5 != null)
 					{
-						for (int i = 0; i < list2.Count; i++)
+						for (int j = 0; j < list5.Count; j++)
 						{
-							list2[i].SetNeedNum(uiList[i].RequiredNum);
+							list5[j].SetNeedNum(uiList[j].RequiredNum);
 						}
 					}
 				}, false);
@@ -340,12 +351,12 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			else
 			{
 				GenericScrollViewNew<ManufactureMaterialItem, ISingleItemInfo> materialScrollView2 = this.MaterialScrollView;
-				List<ManufactureMaterialItem> list = (materialScrollView2 != null) ? materialScrollView2.GetScrollItemList() : null;
-				if (list == null)
+				List<ManufactureMaterialItem> list4 = (materialScrollView2 != null) ? materialScrollView2.GetScrollItemList() : null;
+				if (list4 == null)
 				{
 					return;
 				}
-				foreach (ManufactureMaterialItem manufactureMaterialItem in list)
+				foreach (ManufactureMaterialItem manufactureMaterialItem in list4)
 				{
 					manufactureMaterialItem.SetUiActive(true);
 					manufactureMaterialItem.SetTimes(this.Count);
@@ -354,7 +365,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			}
 		}
 
-		// Token: 0x0603846C RID: 230508 RVA: 0x00D57270 File Offset: 0x00D55470
+		// Token: 0x0602D36A RID: 185194 RVA: 0x00CA52B0 File Offset: 0x00CA34B0
 		private void RefreshCost(bool hasCoin, int count)
 		{
 			if (!hasCoin)
@@ -389,7 +400,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			base.SetTextureByPath(config.Value.IconSmall, base.GetTexture(32), null, null);
 		}
 
-		// Token: 0x0603846D RID: 230509 RVA: 0x00D57358 File Offset: 0x00D55558
+		// Token: 0x0602D36B RID: 185195 RVA: 0x00CA5398 File Offset: 0x00CA3598
 		private unsafe void SetExpNum(int count, int single, int sum, int times)
 		{
 			int num = single * sum;
@@ -435,7 +446,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			base.GetText(14).SetText(newText2, true);
 		}
 
-		// Token: 0x0603846E RID: 230510 RVA: 0x00D574F0 File Offset: 0x00D556F0
+		// Token: 0x0602D36C RID: 185196 RVA: 0x00CA5530 File Offset: 0x00CA3730
 		private ManufactureMaterialItem OnMaterialItemCreate()
 		{
 			ManufactureMaterialItem manufactureMaterialItem = new ManufactureMaterialItem();
@@ -448,7 +459,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 					this.OpenLeftPopView();
 					return;
 				}
-				ItemController.Instance.OpenItemTipsByItemId(singleItemInfo.Proto_ItemId, true, null);
+				ItemController.Instance.OpenItemTipsByItemId(singleItemInfo.Proto_ItemId, true, null, false);
 			});
 			manufactureMaterialItem.BindEmptySlotButtonCallback(delegate(MediumItemGridButtonCallback _)
 			{
@@ -457,7 +468,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return manufactureMaterialItem;
 		}
 
-		// Token: 0x0603846F RID: 230511 RVA: 0x00D5754B File Offset: 0x00D5574B
+		// Token: 0x0602D36D RID: 185197 RVA: 0x00CA558B File Offset: 0x00CA378B
 		private ComposeExchangeItem OnExchangeMaterialItemCreate()
 		{
 			ComposeExchangeItem composeExchangeItem = new ComposeExchangeItem();
@@ -473,7 +484,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 				int exchangeCountByTargetId = ComposeModel.Instance.GetExchangeCountByTargetId(this.ItemData.ConfigId);
 				if (singleItemInfo.Proto_ItemNum < exchangeCountByTargetId)
 				{
-					ItemController.Instance.OpenItemTipsByItemId(singleItemInfo.Proto_ItemId, true, null);
+					ItemController.Instance.OpenItemTipsByItemId(singleItemInfo.Proto_ItemId, true, null, false);
 					return;
 				}
 				this.CurrentSelectExchangeMaterialItem = singleItemInfo.Proto_ItemId;
@@ -482,41 +493,46 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return composeExchangeItem;
 		}
 
-		// Token: 0x06038470 RID: 230512 RVA: 0x00D57564 File Offset: 0x00D55764
+		// Token: 0x0602D36E RID: 185198 RVA: 0x00CA55A4 File Offset: 0x00CA37A4
 		private void OnFilterSortRefresh(List<IBaseItemData> list, bool arg1, EFilterSortType arg2)
 		{
-			IEnumerable<IBaseItemData> source = from data in list
-			where data.ExistStartTime <= 0.0 || TimeUtil.Instance.IsInTimeSpan(data.ExistStartTime, data.ExistEndTime)
-			select data;
+			List<IBaseItemData> list2 = new List<IBaseItemData>(list.Count);
+			foreach (IBaseItemData baseItemData in list)
+			{
+				if (baseItemData.ExistStartTime <= 0.0 || TimeUtil.Instance.IsInTimeSpan(baseItemData.ExistStartTime, baseItemData.ExistEndTime))
+				{
+					list2.Add(baseItemData);
+				}
+			}
 			this.SelectedItemId = 0;
 			switch (ComposeModel.Instance.CurrentComposeListType)
 			{
 			case EComposeListType.ReagentProduction:
-				this.ReagentProductionDataList = source.Cast<IReagentProductionData>().ToList<IReagentProductionData>();
+				this.ReagentProductionDataList = list2.ConvertAll<IReagentProductionData>(([Nullable(1)] IBaseItemData data) => (IReagentProductionData)data);
 				break;
 			case EComposeListType.Structure:
-				this.StructureDataList = source.Cast<IStructureData>().ToList<IStructureData>();
+				this.StructureDataList = list2.ConvertAll<IStructureData>(([Nullable(1)] IBaseItemData data) => (IStructureData)data);
 				break;
 			case EComposeListType.Purification:
-				this.PurificationDataList = source.Cast<IPurificationData>().ToList<IPurificationData>();
+				this.PurificationDataList = list2.ConvertAll<IPurificationData>(([Nullable(1)] IBaseItemData data) => (IPurificationData)data);
 				break;
 			case EComposeListType.Exchange:
-				this.ExchangeDataList = source.Cast<IExchangeData>().ToList<IExchangeData>();
+				this.ExchangeDataList = list2.ConvertAll<IExchangeData>(([Nullable(1)] IBaseItemData data) => (IExchangeData)data);
 				break;
 			case EComposeListType.Collect:
-				this.CollectDataList = source.Cast<ICollectData>().ToList<ICollectData>();
+				this.CollectDataList = list2.ConvertAll<ICollectData>(([Nullable(1)] IBaseItemData data) => (ICollectData)data);
 				break;
 			}
 			this.ComposeScrollPanel.DeselectCurrentGridProxy(false);
 			this.RefreshItemScrollView();
-			if (source.Count<IBaseItemData>() == 0)
+			if (list2.Count == 0)
 			{
 				return;
 			}
 			this.SetSelectedComposeItem(true);
 		}
 
-		// Token: 0x06038471 RID: 230513 RVA: 0x00D57648 File Offset: 0x00D55848
+		// Token: 0x0602D36F RID: 185199 RVA: 0x00CA5764 File Offset: 0x00CA3964
 		private void RefreshItemScrollView()
 		{
 			switch (ComposeModel.Instance.CurrentComposeListType)
@@ -541,7 +557,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			}
 		}
 
-		// Token: 0x06038472 RID: 230514 RVA: 0x00D5776C File Offset: 0x00D5596C
+		// Token: 0x0602D370 RID: 185200 RVA: 0x00CA5888 File Offset: 0x00CA3A88
 		private void ShowComposeMainView(int selectNumber = 0)
 		{
 			if (selectNumber == 0)
@@ -565,7 +581,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.SwitchComposeLevelShow();
 		}
 
-		// Token: 0x06038473 RID: 230515 RVA: 0x00D57815 File Offset: 0x00D55A15
+		// Token: 0x0602D371 RID: 185201 RVA: 0x00CA5931 File Offset: 0x00CA3B31
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -576,7 +592,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return this.GetItemListByType(ComposeModel.Instance.CurrentComposeListType);
 		}
 
-		// Token: 0x06038474 RID: 230516 RVA: 0x00D57828 File Offset: 0x00D55A28
+		// Token: 0x0602D372 RID: 185202 RVA: 0x00CA5944 File Offset: 0x00CA3B44
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -668,7 +684,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return result;
 		}
 
-		// Token: 0x06038475 RID: 230517 RVA: 0x00D5797C File Offset: 0x00D55B7C
+		// Token: 0x0602D373 RID: 185203 RVA: 0x00CA5A98 File Offset: 0x00CA3C98
 		private void SwitchComposeLevelShow()
 		{
 			(base.GetButton(4).GetOwner() as AUIBaseActor).GetUIItem().SetUIActive(ComposeModel.Instance.CurrentComposeListType == EComposeListType.ReagentProduction);
@@ -678,7 +694,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.SetComposeLevelSprite();
 		}
 
-		// Token: 0x06038476 RID: 230518 RVA: 0x00D579E6 File Offset: 0x00D55BE6
+		// Token: 0x0602D374 RID: 185204 RVA: 0x00CA5B02 File Offset: 0x00CA3D02
 		private void OnCommonItemCountAnyChange(int i, int i1)
 		{
 			if (ComposeModel.Instance.CurrentComposeListType == EComposeListType.Exchange)
@@ -691,7 +707,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.TargetItem = 0;
 		}
 
-		// Token: 0x06038477 RID: 230519 RVA: 0x00D57A18 File Offset: 0x00D55C18
+		// Token: 0x0602D375 RID: 185205 RVA: 0x00CA5B34 File Offset: 0x00CA3D34
 		private void SetComposeLevelSprite()
 		{
 			if (ComposeModel.Instance.CurrentComposeListType == EComposeListType.ReagentProduction)
@@ -701,13 +717,13 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			}
 		}
 
-		// Token: 0x06038478 RID: 230520 RVA: 0x00D57A5C File Offset: 0x00D55C5C
+		// Token: 0x0602D376 RID: 185206 RVA: 0x00CA5B78 File Offset: 0x00CA3D78
 		private void OnShowRedDot()
 		{
 			RedDotController.Instance.BindRedDot(ERedDotName.ComposeReagentProduction, base.GetItem(34), null, 0);
 		}
 
-		// Token: 0x06038479 RID: 230521 RVA: 0x00D57A74 File Offset: 0x00D55C74
+		// Token: 0x0602D377 RID: 185207 RVA: 0x00CA5B90 File Offset: 0x00CA3D90
 		private void RefreshLimitTime()
 		{
 			if (this.ItemData.ExistEndTime <= 0.0 && this.ItemData.TotalMakeCountInLimitTime <= 0)
@@ -740,7 +756,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			}
 		}
 
-		// Token: 0x0603847A RID: 230522 RVA: 0x00D57B48 File Offset: 0x00D55D48
+		// Token: 0x0602D378 RID: 185208 RVA: 0x00CA5C64 File Offset: 0x00CA3E64
 		private void RefreshMaterial()
 		{
 			this.Count = 1;
@@ -820,7 +836,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.UnlockMaterialComponent.Apply<PropMediumItemGrid>(parameters);
 		}
 
-		// Token: 0x0603847B RID: 230523 RVA: 0x00D57E88 File Offset: 0x00D56088
+		// Token: 0x0602D379 RID: 185209 RVA: 0x00CA5FA4 File Offset: 0x00CA41A4
 		private void RefreshExchangeMaterial()
 		{
 			this.Count = 1;
@@ -848,7 +864,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.NumberSelect.Refresh(0);
 		}
 
-		// Token: 0x0603847C RID: 230524 RVA: 0x00D57F54 File Offset: 0x00D56154
+		// Token: 0x0602D37A RID: 185210 RVA: 0x00CA6070 File Offset: 0x00CA4270
 		[NullableContext(2)]
 		private void RefreshExchangeMaterialBySelect(Action callback = null)
 		{
@@ -876,7 +892,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			text.SetUIActive(false);
 		}
 
-		// Token: 0x0603847D RID: 230525 RVA: 0x00D57FE0 File Offset: 0x00D561E0
+		// Token: 0x0602D37B RID: 185211 RVA: 0x00CA60FC File Offset: 0x00CA42FC
 		[return: TupleElementNames(new string[]
 		{
 			"hasCoin",
@@ -891,22 +907,25 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 		})]
 		private ValueTuple<bool, int, List<ISingleItemInfo>> FilterMaterialList(List<ISingleItemInfo> list)
 		{
-			bool hasCoin = false;
-			int coinCount = 0;
-			List<ISingleItemInfo> item = list.Where(delegate(ISingleItemInfo value)
+			bool item = false;
+			int item2 = 0;
+			List<ISingleItemInfo> list2 = new List<ISingleItemInfo>(list.Count);
+			foreach (ISingleItemInfo singleItemInfo in list)
 			{
-				if (value.Proto_ItemId != ComposeController.Instance.ComposeCoinId)
+				if (singleItemInfo.Proto_ItemId != ComposeController.Instance.ComposeCoinId)
 				{
-					return true;
+					list2.Add(singleItemInfo);
 				}
-				hasCoin = true;
-				coinCount = value.Proto_ItemNum;
-				return false;
-			}).ToList<ISingleItemInfo>();
-			return new ValueTuple<bool, int, List<ISingleItemInfo>>(hasCoin, coinCount, item);
+				else
+				{
+					item = true;
+					item2 = singleItemInfo.Proto_ItemNum;
+				}
+			}
+			return new ValueTuple<bool, int, List<ISingleItemInfo>>(item, item2, list2);
 		}
 
-		// Token: 0x0603847E RID: 230526 RVA: 0x00D5802C File Offset: 0x00D5622C
+		// Token: 0x0602D37C RID: 185212 RVA: 0x00CA6184 File Offset: 0x00CA4384
 		private void SetSelectedComposeItem(bool isNeedScroll = false)
 		{
 			int num = 0;
@@ -918,7 +937,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			{
 			case EComposeListType.ReagentProduction:
 			{
-				num = ((this.TargetItem != 0) ? this.GetTargetItemIndex(this.ReagentProductionDataList.Cast<IBaseItemData>().ToArray<IBaseItemData>()) : this.GetKeepSelectItemIndex(this.ReagentProductionDataList.Cast<IBaseItemData>().ToArray<IBaseItemData>()));
+				num = ((this.TargetItem != 0) ? this.GetTargetItemIndex(this.ReagentProductionDataList) : this.GetKeepSelectItemIndex(this.ReagentProductionDataList));
 				IReagentProductionData reagentProductionData = this.ReagentProductionDataList[num];
 				this.RefreshTips(reagentProductionData, true);
 				this.SelectedItemId = ComposeConfig.Instance.GetSynthesisFormulaById(reagentProductionData.ConfigId).Value.ItemId;
@@ -926,7 +945,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			}
 			case EComposeListType.Structure:
 			{
-				num = ((this.TargetItem != 0) ? this.GetTargetItemIndex(this.StructureDataList.Cast<IBaseItemData>().ToArray<IBaseItemData>()) : this.GetKeepSelectItemIndex(this.StructureDataList.Cast<IBaseItemData>().ToArray<IBaseItemData>()));
+				num = ((this.TargetItem != 0) ? this.GetTargetItemIndex(this.StructureDataList) : this.GetKeepSelectItemIndex(this.StructureDataList));
 				IStructureData structureData = this.StructureDataList[num];
 				this.RefreshTips(structureData, true);
 				this.SelectedItemId = ComposeConfig.Instance.GetSynthesisFormulaById(structureData.ConfigId).Value.ItemId;
@@ -934,7 +953,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			}
 			case EComposeListType.Purification:
 			{
-				num = ((this.TargetItem != 0) ? this.GetTargetItemIndex(this.PurificationDataList.Cast<IBaseItemData>().ToArray<IBaseItemData>()) : this.GetKeepSelectItemIndex(this.PurificationDataList.Cast<IBaseItemData>().ToArray<IBaseItemData>()));
+				num = ((this.TargetItem != 0) ? this.GetTargetItemIndex(this.PurificationDataList) : this.GetKeepSelectItemIndex(this.PurificationDataList));
 				IPurificationData purificationData = this.PurificationDataList[num];
 				this.RefreshTips(purificationData, true);
 				this.SelectedItemId = ComposeConfig.Instance.GetSynthesisFormulaById(purificationData.ConfigId).Value.ItemId;
@@ -942,7 +961,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			}
 			case EComposeListType.Exchange:
 			{
-				num = ((this.TargetItem != 0) ? this.GetExchangeTargetItemIndex(this.ExchangeDataList.Cast<IBaseItemData>().ToArray<IBaseItemData>()) : this.GetExchangeKeepSelectItemIndex(this.ExchangeDataList.Cast<IBaseItemData>().ToArray<IBaseItemData>()));
+				num = ((this.TargetItem != 0) ? this.GetExchangeTargetItemIndex(this.ExchangeDataList) : this.GetExchangeKeepSelectItemIndex(this.ExchangeDataList));
 				IExchangeData exchangeData = this.ExchangeDataList[num];
 				this.RefreshTips(exchangeData, true);
 				this.SelectedItemId = exchangeData.ConfigId;
@@ -950,7 +969,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			}
 			case EComposeListType.Collect:
 			{
-				num = ((this.TargetItem != 0) ? this.GetTargetItemIndex(this.CollectDataList.Cast<IBaseItemData>().ToArray<IBaseItemData>()) : this.GetKeepSelectItemIndex(this.CollectDataList.Cast<IBaseItemData>().ToArray<IBaseItemData>()));
+				num = ((this.TargetItem != 0) ? this.GetTargetItemIndex(this.CollectDataList) : this.GetKeepSelectItemIndex(this.CollectDataList));
 				ICollectData collectData = this.CollectDataList[num];
 				this.RefreshTips(collectData, true);
 				this.SelectedItemId = ComposeConfig.Instance.GetSynthesisFormulaById(collectData.ConfigId).Value.ItemId;
@@ -979,10 +998,10 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			}
 		}
 
-		// Token: 0x0603847F RID: 230527 RVA: 0x00D58354 File Offset: 0x00D56554
-		private int GetExchangeTargetItemIndex(IBaseItemData[] itemList)
+		// Token: 0x0602D37D RID: 185213 RVA: 0x00CA6448 File Offset: 0x00CA4648
+		private int GetExchangeTargetItemIndex(IReadOnlyList<IBaseItemData> itemList)
 		{
-			int num = Array.FindIndex<IBaseItemData>(itemList, (IBaseItemData data) => data.ConfigId == this.TargetItem);
+			int num = NoLinq.FindIndex<IBaseItemData>(itemList, (IBaseItemData data) => data.ConfigId == this.TargetItem);
 			if (num < 0)
 			{
 				return 0;
@@ -990,10 +1009,10 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return num;
 		}
 
-		// Token: 0x06038480 RID: 230528 RVA: 0x00D5837C File Offset: 0x00D5657C
-		private int GetExchangeKeepSelectItemIndex(IBaseItemData[] itemList)
+		// Token: 0x0602D37E RID: 185214 RVA: 0x00CA6470 File Offset: 0x00CA4670
+		private int GetExchangeKeepSelectItemIndex(IReadOnlyList<IBaseItemData> itemList)
 		{
-			int num = Array.FindIndex<IBaseItemData>(itemList, (IBaseItemData data) => data.ConfigId == this.SelectedItemId);
+			int num = NoLinq.FindIndex<IBaseItemData>(itemList, (IBaseItemData data) => data.ConfigId == this.SelectedItemId);
 			if (num >= 0)
 			{
 				return num;
@@ -1001,7 +1020,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			int firstConfigId = this.ComposeScrollPanel.GetFirstItemConfigId();
 			if (firstConfigId > 0)
 			{
-				int num2 = Array.FindIndex<IBaseItemData>(itemList, (IBaseItemData data) => data.ConfigId == firstConfigId);
+				int num2 = NoLinq.FindIndex<IBaseItemData>(itemList, (IBaseItemData data) => data.ConfigId == firstConfigId);
 				if (num2 >= 0)
 				{
 					return num2;
@@ -1010,10 +1029,10 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return 0;
 		}
 
-		// Token: 0x06038481 RID: 230529 RVA: 0x00D583E4 File Offset: 0x00D565E4
-		private int GetTargetItemIndex(IBaseItemData[] itemList)
+		// Token: 0x0602D37F RID: 185215 RVA: 0x00CA64D8 File Offset: 0x00CA46D8
+		private int GetTargetItemIndex(IReadOnlyList<IBaseItemData> itemList)
 		{
-			int num = Array.FindIndex<IBaseItemData>(itemList, delegate(IBaseItemData data)
+			int num = NoLinq.FindIndex<IBaseItemData>(itemList, delegate(IBaseItemData data)
 			{
 				SynthesisFormula? synthesisFormula;
 				int? num2 = (ComposeConfig.Instance.GetSynthesisFormulaById(data.ConfigId) != null) ? new int?(synthesisFormula.GetValueOrDefault().ItemId) : null;
@@ -1027,10 +1046,10 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return num;
 		}
 
-		// Token: 0x06038482 RID: 230530 RVA: 0x00D5840C File Offset: 0x00D5660C
-		private int GetKeepSelectItemIndex(IBaseItemData[] itemList)
+		// Token: 0x0602D380 RID: 185216 RVA: 0x00CA6500 File Offset: 0x00CA4700
+		private int GetKeepSelectItemIndex(IReadOnlyList<IBaseItemData> itemList)
 		{
-			int num = Array.FindIndex<IBaseItemData>(itemList, delegate(IBaseItemData data)
+			int num = NoLinq.FindIndex<IBaseItemData>(itemList, delegate(IBaseItemData data)
 			{
 				SynthesisFormula? synthesisFormula;
 				int? num2 = (ComposeConfig.Instance.GetSynthesisFormulaById(data.ConfigId) != null) ? new int?(synthesisFormula.GetValueOrDefault().ItemId) : null;
@@ -1044,7 +1063,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return num;
 		}
 
-		// Token: 0x06038483 RID: 230531 RVA: 0x00D58434 File Offset: 0x00D56634
+		// Token: 0x0602D381 RID: 185217 RVA: 0x00CA6528 File Offset: 0x00CA4728
 		private void OnComposeItemClick(MediumItemGridExtendCallback callbackParameter)
 		{
 			IBaseItemData baseItemData = callbackParameter.Data as IBaseItemData;
@@ -1094,19 +1113,19 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.RefreshTips(baseItemData, true);
 		}
 
-		// Token: 0x06038484 RID: 230532 RVA: 0x00D5862E File Offset: 0x00D5682E
+		// Token: 0x0602D382 RID: 185218 RVA: 0x00CA6722 File Offset: 0x00CA4922
 		private void BackClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06038485 RID: 230533 RVA: 0x00D58637 File Offset: 0x00D56837
+		// Token: 0x0602D383 RID: 185219 RVA: 0x00CA672B File Offset: 0x00CA492B
 		private CommonTabItem TabItemProxyCreate([Nullable(2)] UUIItem uiItem, int? index)
 		{
 			return new CommonTabItem();
 		}
 
-		// Token: 0x06038486 RID: 230534 RVA: 0x00D58640 File Offset: 0x00D56840
+		// Token: 0x0602D384 RID: 185220 RVA: 0x00CA6734 File Offset: 0x00CA4934
 		private void ToggleCallBack(int index)
 		{
 			this.LastClickTime = Time.Instance.Now;
@@ -1129,7 +1148,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			}
 		}
 
-		// Token: 0x06038487 RID: 230535 RVA: 0x00D586CC File Offset: 0x00D568CC
+		// Token: 0x0602D385 RID: 185221 RVA: 0x00CA67C0 File Offset: 0x00CA49C0
 		private void SwitchComposeItemScroll()
 		{
 			this.FilterComponent.SetActive(false);
@@ -1181,7 +1200,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			}
 		}
 
-		// Token: 0x06038488 RID: 230536 RVA: 0x00D588A4 File Offset: 0x00D56AA4
+		// Token: 0x0602D386 RID: 185222 RVA: 0x00CA6998 File Offset: 0x00CA4B98
 		public void RefreshTips(IBaseItemData data, bool refreshDrag = true)
 		{
 			if (this.ItemData != null && this.ItemData.ConfigId != data.ConfigId)
@@ -1216,7 +1235,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.IsRefreshByClick = false;
 		}
 
-		// Token: 0x06038489 RID: 230537 RVA: 0x00D58960 File Offset: 0x00D56B60
+		// Token: 0x0602D387 RID: 185223 RVA: 0x00CA6A54 File Offset: 0x00CA4C54
 		private void CheckCanInteractConfirm()
 		{
 			ComposeModel instance = ComposeModel.Instance;
@@ -1236,7 +1255,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			base.GetButton(24).RootUIComp.Get().SetUIActive(flag2 && flag && flag3);
 		}
 
-		// Token: 0x0603848A RID: 230538 RVA: 0x00D58A19 File Offset: 0x00D56C19
+		// Token: 0x0602D388 RID: 185224 RVA: 0x00CA6B0D File Offset: 0x00CA4D0D
 		public void RefreshReagentProduction()
 		{
 			this.RefreshTopB();
@@ -1244,7 +1263,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.RefreshMaterial();
 		}
 
-		// Token: 0x0603848B RID: 230539 RVA: 0x00D58A2E File Offset: 0x00D56C2E
+		// Token: 0x0602D389 RID: 185225 RVA: 0x00CA6B22 File Offset: 0x00CA4D22
 		public void RefreshStructure()
 		{
 			this.RefreshTopB();
@@ -1252,7 +1271,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.RefreshMaterial();
 		}
 
-		// Token: 0x0603848C RID: 230540 RVA: 0x00D58A43 File Offset: 0x00D56C43
+		// Token: 0x0602D38A RID: 185226 RVA: 0x00CA6B37 File Offset: 0x00CA4D37
 		public void RefreshPurification(bool refreshDrag = true)
 		{
 			this.RefreshTopA(refreshDrag);
@@ -1264,7 +1283,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.RefreshDragAbout();
 		}
 
-		// Token: 0x0603848D RID: 230541 RVA: 0x00D58A72 File Offset: 0x00D56C72
+		// Token: 0x0602D38B RID: 185227 RVA: 0x00CA6B66 File Offset: 0x00CA4D66
 		public void RefreshCollect(bool refreshDrag = true)
 		{
 			this.RefreshTopA(refreshDrag);
@@ -1276,7 +1295,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.RefreshDragAbout();
 		}
 
-		// Token: 0x0603848E RID: 230542 RVA: 0x00D58AA1 File Offset: 0x00D56CA1
+		// Token: 0x0602D38C RID: 185228 RVA: 0x00CA6B95 File Offset: 0x00CA4D95
 		public void RefreshExchange(bool refreshDrag = true)
 		{
 			this.RefreshTopA(refreshDrag);
@@ -1288,7 +1307,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.RefreshDragAbout();
 		}
 
-		// Token: 0x0603848F RID: 230543 RVA: 0x00D58AD0 File Offset: 0x00D56CD0
+		// Token: 0x0602D38D RID: 185229 RVA: 0x00CA6BC4 File Offset: 0x00CA4DC4
 		private void RefreshTopA(bool refreshDrag = true)
 		{
 			UUIItem item = base.GetItem(5);
@@ -1338,7 +1357,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.DragList = list;
 		}
 
-		// Token: 0x06038490 RID: 230544 RVA: 0x00D58BF8 File Offset: 0x00D56DF8
+		// Token: 0x0602D38E RID: 185230 RVA: 0x00CA6CEC File Offset: 0x00CA4EEC
 		[NullableContext(2)]
 		private bool IsSingleDirectionExchange(IBaseItemData data)
 		{
@@ -1346,7 +1365,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return exchangeData != null && data.MainType == EComposeListType.Exchange && exchangeData.IsSingleDirection;
 		}
 
-		// Token: 0x06038491 RID: 230545 RVA: 0x00D58C20 File Offset: 0x00D56E20
+		// Token: 0x0602D38F RID: 185231 RVA: 0x00CA6D14 File Offset: 0x00CA4F14
 		private void RefreshTopB()
 		{
 			UUIItem item = base.GetItem(9);
@@ -1384,7 +1403,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.SetSpriteByPath(qualityConfig.Value.ComposeQualityBg, base.GetSprite(10), false, null, null);
 		}
 
-		// Token: 0x06038492 RID: 230546 RVA: 0x00D58DAC File Offset: 0x00D56FAC
+		// Token: 0x0602D390 RID: 185232 RVA: 0x00CA6EA0 File Offset: 0x00CA50A0
 		private string GetDisableText(bool isUnlock, bool isMatEnough, bool isCoinEnough, bool isMakeCountEnough)
 		{
 			if (!isUnlock)
@@ -1424,7 +1443,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			}
 		}
 
-		// Token: 0x06038493 RID: 230547 RVA: 0x00D58E58 File Offset: 0x00D57058
+		// Token: 0x0602D391 RID: 185233 RVA: 0x00CA6F4C File Offset: 0x00CA514C
 		private void RefreshLimitCount()
 		{
 			IBaseItemData itemData = this.ItemData;
@@ -1453,7 +1472,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			}));
 		}
 
-		// Token: 0x06038494 RID: 230548 RVA: 0x00D58F20 File Offset: 0x00D57120
+		// Token: 0x0602D392 RID: 185234 RVA: 0x00CA7014 File Offset: 0x00CA5214
 		private bool ShouldShowBottomMiddleTips()
 		{
 			if (this.TipsItemData == null || this.TipsItemData.Count <= 0)
@@ -1470,7 +1489,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return num.GetValueOrDefault() == itemId & num != null;
 		}
 
-		// Token: 0x06038495 RID: 230549 RVA: 0x00D58FCC File Offset: 0x00D571CC
+		// Token: 0x0602D393 RID: 185235 RVA: 0x00CA70C0 File Offset: 0x00CA52C0
 		private void RefreshBottomMiddleTips()
 		{
 			if (this.ShouldShowBottomMiddleTips())
@@ -1534,13 +1553,13 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			text4.SetUIActive(this.ItemData.MainType == EComposeListType.Exchange && this.CurrentSelectExchangeMaterialItem == 0 && !this.IsSingleDirectionExchange(this.ItemData));
 		}
 
-		// Token: 0x06038496 RID: 230550 RVA: 0x00D5912C File Offset: 0x00D5732C
+		// Token: 0x0602D394 RID: 185236 RVA: 0x00CA7220 File Offset: 0x00CA5420
 		private void RefreshBottomText()
 		{
 			base.GetItem(37).SetUIActive(this.BottomTextNeedShow);
 		}
 
-		// Token: 0x06038497 RID: 230551 RVA: 0x00D59144 File Offset: 0x00D57344
+		// Token: 0x0602D395 RID: 185237 RVA: 0x00CA7238 File Offset: 0x00CA5438
 		[NullableContext(2)]
 		private void MoveDragGrid(IBaseItemData data, EComposeListType type, bool? isFormClick = false)
 		{
@@ -1581,7 +1600,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			}
 		}
 
-		// Token: 0x06038498 RID: 230552 RVA: 0x00D59274 File Offset: 0x00D57474
+		// Token: 0x0602D396 RID: 185238 RVA: 0x00CA7368 File Offset: 0x00CA5568
 		private void RefreshDragAbout()
 		{
 			UUIItem item = base.GetItem(39);
@@ -1619,7 +1638,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			}
 		}
 
-		// Token: 0x06038499 RID: 230553 RVA: 0x00D59368 File Offset: 0x00D57568
+		// Token: 0x0602D397 RID: 185239 RVA: 0x00CA745C File Offset: 0x00CA565C
 		private void NoCircleExhibitionViewAttachTo()
 		{
 			int showItemIndex = 0;
@@ -1639,26 +1658,26 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			noCircleExhibitionView.AttachToIndex(showItemIndex, false);
 		}
 
-		// Token: 0x0603849A RID: 230554 RVA: 0x00D593B8 File Offset: 0x00D575B8
+		// Token: 0x0602D398 RID: 185240 RVA: 0x00CA74AC File Offset: 0x00CA56AC
 		private void SelectComposeItem()
 		{
 			int num = 0;
 			switch (ComposeModel.Instance.CurrentComposeListType)
 			{
 			case EComposeListType.ReagentProduction:
-				num = this.GetScrollItemIndex(this.ReagentProductionDataList.Cast<IBaseItemData>().ToArray<IBaseItemData>());
+				num = this.GetScrollItemIndex(this.ReagentProductionDataList);
 				break;
 			case EComposeListType.Structure:
-				num = this.GetScrollItemIndex(this.StructureDataList.Cast<IBaseItemData>().ToArray<IBaseItemData>());
+				num = this.GetScrollItemIndex(this.StructureDataList);
 				break;
 			case EComposeListType.Purification:
-				num = this.GetScrollItemIndex(this.PurificationDataList.Cast<IBaseItemData>().ToArray<IBaseItemData>());
+				num = this.GetScrollItemIndex(this.PurificationDataList);
 				break;
 			case EComposeListType.Exchange:
-				num = this.GetScrollItemIndex(this.ExchangeDataList.Cast<IBaseItemData>().ToArray<IBaseItemData>());
+				num = this.GetScrollItemIndex(this.ExchangeDataList);
 				break;
 			case EComposeListType.Collect:
-				num = this.GetScrollItemIndex(this.CollectDataList.Cast<IBaseItemData>().ToArray<IBaseItemData>());
+				num = this.GetScrollItemIndex(this.CollectDataList);
 				break;
 			}
 			int num3;
@@ -1684,13 +1703,13 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			}
 		}
 
-		// Token: 0x0603849B RID: 230555 RVA: 0x00D59518 File Offset: 0x00D57718
-		private int GetScrollItemIndex(IBaseItemData[] dataList)
+		// Token: 0x0602D399 RID: 185241 RVA: 0x00CA75DC File Offset: 0x00CA57DC
+		private int GetScrollItemIndex(IReadOnlyList<IBaseItemData> dataList)
 		{
-			int num = Array.IndexOf<IBaseItemData>(dataList, this.ItemData);
+			int num = NoLinq.IndexOf<IBaseItemData>(dataList, this.ItemData);
 			if (num < 0)
 			{
-				for (int i = 0; i < dataList.Length; i++)
+				for (int i = 0; i < dataList.Count; i++)
 				{
 					if (dataList[i].ConfigId == this.ItemData.ConfigId)
 					{
@@ -1701,7 +1720,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return num;
 		}
 
-		// Token: 0x0603849C RID: 230556 RVA: 0x00D5955C File Offset: 0x00D5775C
+		// Token: 0x0602D39A RID: 185242 RVA: 0x00CA7628 File Offset: 0x00CA5828
 		private void OpenLeftPopView()
 		{
 			UUIItem item = base.GetItem(26);
@@ -1732,18 +1751,23 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			EventSystem.Instance.Emit<string>(EEventName.FinishGuideStepByEvent, "ComposeCarryOnView");
 		}
 
-		// Token: 0x0603849D RID: 230557 RVA: 0x00D595F0 File Offset: 0x00D577F0
+		// Token: 0x0602D39B RID: 185243 RVA: 0x00CA76BC File Offset: 0x00CA58BC
 		private void RefreshExchangeView()
 		{
 			if (!base.GetItem(26).bIsUIActive)
 			{
 				return;
 			}
-			IEnumerable<ISingleItemInfo> exchangeMaterialListByGroupId = ComposeModel.Instance.GetExchangeMaterialListByGroupId((this.ItemData as IExchangeData).ExchangeGroupId);
+			List<ISingleItemInfo> exchangeMaterialListByGroupId = ComposeModel.Instance.GetExchangeMaterialListByGroupId((this.ItemData as IExchangeData).ExchangeGroupId);
 			ComposeModel.Instance.CurrentExchangeConsume = ComposeModel.Instance.GetExchangeCountByTargetId(this.ItemData.ConfigId);
-			List<ISingleItemInfo> list = (from item in exchangeMaterialListByGroupId
-			where item.Proto_ItemId != this.ItemData.ConfigId
-			select item).ToList<ISingleItemInfo>();
+			List<ISingleItemInfo> list = new List<ISingleItemInfo>(exchangeMaterialListByGroupId.Count);
+			foreach (ISingleItemInfo singleItemInfo in exchangeMaterialListByGroupId)
+			{
+				if (singleItemInfo.Proto_ItemId != this.ItemData.ConfigId)
+				{
+					list.Add(singleItemInfo);
+				}
+			}
 			list.Sort(delegate(ISingleItemInfo a, ISingleItemInfo b)
 			{
 				if (a.Proto_ItemNum != b.Proto_ItemNum)
@@ -1760,7 +1784,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			exchangeScrollView.RefreshByData(list, false, null, false);
 		}
 
-		// Token: 0x0603849E RID: 230558 RVA: 0x00D59696 File Offset: 0x00D57896
+		// Token: 0x0602D39C RID: 185244 RVA: 0x00CA77AC File Offset: 0x00CA59AC
 		private void OnSecondTimerRefresh(float _)
 		{
 			this.RefreshItemLimitTime();
@@ -1775,7 +1799,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			}
 		}
 
-		// Token: 0x0603849F RID: 230559 RVA: 0x00D596C8 File Offset: 0x00D578C8
+		// Token: 0x0602D39D RID: 185245 RVA: 0x00CA77DC File Offset: 0x00CA59DC
 		private bool CheckHasItemTimeOut()
 		{
 			List<IBaseItemData> itemList = this.GetItemList();
@@ -1793,7 +1817,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return false;
 		}
 
-		// Token: 0x060384A0 RID: 230560 RVA: 0x00D5974C File Offset: 0x00D5794C
+		// Token: 0x0602D39E RID: 185246 RVA: 0x00CA7860 File Offset: 0x00CA5A60
 		private void OnCookResponse()
 		{
 			this.TargetItem = this.SelectedItemId;
@@ -1802,13 +1826,13 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.TargetItem = 0;
 		}
 
-		// Token: 0x060384A1 RID: 230561 RVA: 0x00D5976D File Offset: 0x00D5796D
+		// Token: 0x0602D39F RID: 185247 RVA: 0x00CA7881 File Offset: 0x00CA5A81
 		private bool CheckIsLimitCountRefresh()
 		{
 			return ComposeModel.Instance.GetRefreshLimitTimeValue() <= 0.0;
 		}
 
-		// Token: 0x060384A2 RID: 230562 RVA: 0x00D59787 File Offset: 0x00D57987
+		// Token: 0x0602D3A0 RID: 185248 RVA: 0x00CA789B File Offset: 0x00CA5A9B
 		private void RefreshItemLimitTime()
 		{
 			if (this.ItemData != null && this.ItemData.ExistEndTime > 0.0)
@@ -1818,7 +1842,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			}
 		}
 
-		// Token: 0x060384A3 RID: 230563 RVA: 0x00D597B4 File Offset: 0x00D579B4
+		// Token: 0x0602D3A1 RID: 185249 RVA: 0x00CA78C8 File Offset: 0x00CA5AC8
 		private void OnCloseView(EUiViewName viewName, int viewId)
 		{
 			if (viewName != EUiViewName.CompositeRewardView)
@@ -1838,7 +1862,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			EventSystem.Instance.Emit<bool>(EEventName.HangPlotViewHud, false);
 		}
 
-		// Token: 0x060384A4 RID: 230564 RVA: 0x00D59810 File Offset: 0x00D57A10
+		// Token: 0x0602D3A2 RID: 185250 RVA: 0x00CA7924 File Offset: 0x00CA5B24
 		private void ComposeSwitchType(EComposeListType type, int itemId)
 		{
 			if (ComposeModel.Instance.CurrentComposeListType == type)
@@ -1860,13 +1884,13 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.OnClickLeftPopItemCloseBtn();
 		}
 
-		// Token: 0x060384A5 RID: 230565 RVA: 0x00D59884 File Offset: 0x00D57A84
+		// Token: 0x0602D3A3 RID: 185251 RVA: 0x00CA7998 File Offset: 0x00CA5B98
 		private CommonTabData GetCommonData(int index)
 		{
 			return new CommonTabData(UiResourceConfig.Instance.GetResourcePath(ComposeDefine.ComposeTypeSprite[this.TabList[index]]), new CommonTabTitleData(ComposeDefine.ComposeTypeName[this.TabList[index]], Array.Empty<object>()), null);
 		}
 
-		// Token: 0x060384A6 RID: 230566 RVA: 0x00D598D8 File Offset: 0x00D57AD8
+		// Token: 0x0602D3A4 RID: 185252 RVA: 0x00CA79EC File Offset: 0x00CA5BEC
 		private ComposeCircleItem CreateCircleItem(AActor actor, int index, int showNum)
 		{
 			ComposeCircleItem composeCircleItem = new ComposeCircleItem();
@@ -1877,20 +1901,20 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return composeCircleItem;
 		}
 
-		// Token: 0x060384A7 RID: 230567 RVA: 0x00D59924 File Offset: 0x00D57B24
+		// Token: 0x0602D3A5 RID: 185253 RVA: 0x00CA7A38 File Offset: 0x00CA5C38
 		private bool CheckToggleCanClick()
 		{
 			return !this.NoCircleExhibitionView.MovingState();
 		}
 
-		// Token: 0x060384A8 RID: 230568 RVA: 0x00D59936 File Offset: 0x00D57B36
+		// Token: 0x0602D3A6 RID: 185254 RVA: 0x00CA7A4A File Offset: 0x00CA5C4A
 		private void OnClickComposeLevelBtn()
 		{
 			ComposeModel.Instance.CurrentComposeViewType = EComposeViewType.ComposeLevelType;
 			UiManager.Instance.OpenView(EUiViewName.ComposeLevelView, null, null);
 		}
 
-		// Token: 0x060384A9 RID: 230569 RVA: 0x00D59954 File Offset: 0x00D57B54
+		// Token: 0x0602D3A7 RID: 185255 RVA: 0x00CA7A68 File Offset: 0x00CA5C68
 		private void OnClickConfirmBtn()
 		{
 			int exchangeCountByTargetId = ComposeModel.Instance.GetExchangeCountByTargetId(this.ItemData.ConfigId);
@@ -1917,7 +1941,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.<OnClickConfirmBtn>g__SendExchangeAsync|111_0(exchangeCountByTargetId).Forget();
 		}
 
-		// Token: 0x060384AA RID: 230570 RVA: 0x00D59A04 File Offset: 0x00D57C04
+		// Token: 0x0602D3A8 RID: 185256 RVA: 0x00CA7B18 File Offset: 0x00CA5D18
 		private void OnClickLeftPopItemCloseBtn()
 		{
 			UUIItem item = base.GetItem(26);
@@ -1950,7 +1974,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			levelSequencePlayer.PlayLevelSequenceByName("PopupHide", true, null, false);
 		}
 
-		// Token: 0x060384B3 RID: 230579 RVA: 0x00D59C80 File Offset: 0x00D57E80
+		// Token: 0x0602D3B0 RID: 185264 RVA: 0x00CA7D80 File Offset: 0x00CA5F80
 		[CompilerGenerated]
 		private UniTask <OnSecondTimerRefresh>g__Temp|100_0()
 		{
@@ -1962,7 +1986,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return <<OnSecondTimerRefresh>g__Temp|100_0>d.<>t__builder.Task;
 		}
 
-		// Token: 0x060384B4 RID: 230580 RVA: 0x00D59CC4 File Offset: 0x00D57EC4
+		// Token: 0x0602D3B1 RID: 185265 RVA: 0x00CA7DC4 File Offset: 0x00CA5FC4
 		[CompilerGenerated]
 		private UniTask <OnSecondTimerRefresh>g__Temp|100_1()
 		{
@@ -1974,7 +1998,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return <<OnSecondTimerRefresh>g__Temp|100_1>d.<>t__builder.Task;
 		}
 
-		// Token: 0x060384B5 RID: 230581 RVA: 0x00D59D08 File Offset: 0x00D57F08
+		// Token: 0x0602D3B2 RID: 185266 RVA: 0x00CA7E08 File Offset: 0x00CA6008
 		[CompilerGenerated]
 		private UniTask <OnClickConfirmBtn>g__SendExchangeAsync|111_0(int itemNum)
 		{
@@ -1987,7 +2011,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return <<OnClickConfirmBtn>g__SendExchangeAsync|111_0>d.<>t__builder.Task;
 		}
 
-		// Token: 0x060384B6 RID: 230582 RVA: 0x00D59D54 File Offset: 0x00D57F54
+		// Token: 0x0602D3B3 RID: 185267 RVA: 0x00CA7E54 File Offset: 0x00CA6054
 		[CompilerGenerated]
 		private UniTask <OnClickConfirmBtn>g__SendManufactureAsync|111_1()
 		{
@@ -1999,13 +2023,13 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			return <<OnClickConfirmBtn>g__SendManufactureAsync|111_1>d.<>t__builder.Task;
 		}
 
-		// Token: 0x0401D967 RID: 121191
+		// Token: 0x040183F2 RID: 99314
 		private const int GAP = 112;
 
-		// Token: 0x0401D968 RID: 121192
+		// Token: 0x040183F3 RID: 99315
 		private const int TIMERGAP = 1000;
 
-		// Token: 0x0401D969 RID: 121193
+		// Token: 0x040183F4 RID: 99316
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<EUiViewName, string> SkipViewPrefixMap = new Dictionary<EUiViewName, string>
 		{
@@ -2023,7 +2047,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			}
 		};
 
-		// Token: 0x0401D96A RID: 121194
+		// Token: 0x040183F5 RID: 99317
 		[Nullable(new byte[]
 		{
 			2,
@@ -2031,11 +2055,11 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 		})]
 		private TabComponentWithCaptionItem<CommonTabItem> TabComponent;
 
-		// Token: 0x0401D96B RID: 121195
+		// Token: 0x040183F6 RID: 99318
 		[Nullable(2)]
 		private NumberSelectComponent NumberSelect;
 
-		// Token: 0x0401D96C RID: 121196
+		// Token: 0x040183F7 RID: 99319
 		[Nullable(new byte[]
 		{
 			2,
@@ -2043,7 +2067,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 		})]
 		private FilterEntrance<IBaseItemData> FilterComponent;
 
-		// Token: 0x0401D96D RID: 121197
+		// Token: 0x040183F8 RID: 99320
 		[Nullable(new byte[]
 		{
 			2,
@@ -2051,7 +2075,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 		})]
 		private SortEntrance<IBaseItemData> SortComponent;
 
-		// Token: 0x0401D96E RID: 121198
+		// Token: 0x040183F9 RID: 99321
 		[Nullable(new byte[]
 		{
 			2,
@@ -2060,19 +2084,19 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 		})]
 		private GenericScrollViewNew<ManufactureMaterialItem, ISingleItemInfo> MaterialScrollView;
 
-		// Token: 0x0401D96F RID: 121199
+		// Token: 0x040183FA RID: 99322
 		[Nullable(2)]
 		private ComposeCarryOnMultiTemplatePanel ComposeScrollPanel;
 
-		// Token: 0x0401D970 RID: 121200
+		// Token: 0x040183FB RID: 99323
 		[Nullable(2)]
 		private StarLevelComponent StartLevelComponent;
 
-		// Token: 0x0401D971 RID: 121201
+		// Token: 0x040183FC RID: 99324
 		[Nullable(2)]
 		private MediumItemGrid UnlockMaterialComponent;
 
-		// Token: 0x0401D972 RID: 121202
+		// Token: 0x040183FD RID: 99325
 		[Nullable(new byte[]
 		{
 			2,
@@ -2081,7 +2105,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 		})]
 		private NoCircleAttachView<IBaseItemData, ComposeCircleItem> NoCircleExhibitionView;
 
-		// Token: 0x0401D973 RID: 121203
+		// Token: 0x040183FE RID: 99326
 		[Nullable(new byte[]
 		{
 			2,
@@ -2090,221 +2114,221 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 		})]
 		private LoopScrollView<ComposeExchangeItem, ISingleItemInfo> ExchangeScrollView;
 
-		// Token: 0x0401D974 RID: 121204
+		// Token: 0x040183FF RID: 99327
 		[Nullable(2)]
 		private UUIExtendToggle CurrentSelectExchangeScrollToggle;
 
-		// Token: 0x0401D975 RID: 121205
+		// Token: 0x04018400 RID: 99328
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401D976 RID: 121206
+		// Token: 0x04018401 RID: 99329
 		[Nullable(2)]
 		private IBaseItemData ItemData;
 
-		// Token: 0x0401D977 RID: 121207
+		// Token: 0x04018402 RID: 99330
 		private bool HasCoin;
 
-		// Token: 0x0401D978 RID: 121208
+		// Token: 0x04018403 RID: 99331
 		private int SingleNeedCoinCount;
 
-		// Token: 0x0401D979 RID: 121209
+		// Token: 0x04018404 RID: 99332
 		private int Count = 1;
 
-		// Token: 0x0401D97A RID: 121210
+		// Token: 0x04018405 RID: 99333
 		private int SelectedItemId;
 
-		// Token: 0x0401D97B RID: 121211
+		// Token: 0x04018406 RID: 99334
 		private List<IReagentProductionData> ReagentProductionDataList = new List<IReagentProductionData>();
 
-		// Token: 0x0401D97C RID: 121212
+		// Token: 0x04018407 RID: 99335
 		private List<IStructureData> StructureDataList = new List<IStructureData>();
 
-		// Token: 0x0401D97D RID: 121213
+		// Token: 0x04018408 RID: 99336
 		private List<IPurificationData> PurificationDataList = new List<IPurificationData>();
 
-		// Token: 0x0401D97E RID: 121214
+		// Token: 0x04018409 RID: 99337
 		private List<ICollectData> CollectDataList = new List<ICollectData>();
 
-		// Token: 0x0401D97F RID: 121215
+		// Token: 0x0401840A RID: 99338
 		private List<IExchangeData> ExchangeDataList = new List<IExchangeData>();
 
-		// Token: 0x0401D980 RID: 121216
+		// Token: 0x0401840B RID: 99339
 		private List<EComposeListType> TabList = new List<EComposeListType>();
 
-		// Token: 0x0401D981 RID: 121217
+		// Token: 0x0401840C RID: 99340
 		private bool BottomTextNeedShow;
 
-		// Token: 0x0401D982 RID: 121218
+		// Token: 0x0401840D RID: 99341
 		[Nullable(2)]
 		private UCurveFloat ItemCurve;
 
-		// Token: 0x0401D983 RID: 121219
+		// Token: 0x0401840E RID: 99342
 		private bool IsRefreshByClick;
 
-		// Token: 0x0401D984 RID: 121220
+		// Token: 0x0401840F RID: 99343
 		private int CurrentSelectExchangeMaterialItem;
 
-		// Token: 0x0401D985 RID: 121221
+		// Token: 0x04018410 RID: 99344
 		[Nullable(2)]
 		private TimerHandle RefreshTimer;
 
-		// Token: 0x0401D986 RID: 121222
+		// Token: 0x04018411 RID: 99345
 		[Nullable(2)]
 		private ISelectedData TipsItemData;
 
-		// Token: 0x0401D987 RID: 121223
+		// Token: 0x04018412 RID: 99346
 		private int TargetItem;
 
-		// Token: 0x0401D988 RID: 121224
+		// Token: 0x04018413 RID: 99347
 		private double LastClickTime;
 
-		// Token: 0x0401D989 RID: 121225
+		// Token: 0x04018414 RID: 99348
 		private List<IBaseItemData> DragList = new List<IBaseItemData>();
 
-		// Token: 0x0401D98A RID: 121226
+		// Token: 0x04018415 RID: 99349
 		private EUiViewName? SkipSourceView;
 
-		// Token: 0x0200B824 RID: 47140
+		// Token: 0x0200A24D RID: 41549
 		[NullableContext(0)]
 		public class EComponentDefine
 		{
-			// Token: 0x04037B78 RID: 228216
+			// Token: 0x04032596 RID: 206230
 			public const int CaptionItem = 0;
 
-			// Token: 0x04037B79 RID: 228217
+			// Token: 0x04032597 RID: 206231
 			public const int LeftMultiTemplateScrollView = 1;
 
-			// Token: 0x04037B7A RID: 228218
+			// Token: 0x04032598 RID: 206232
 			public const int LeftScrollItem = 2;
 
-			// Token: 0x04037B7B RID: 228219
+			// Token: 0x04032599 RID: 206233
 			public const int SortItem = 3;
 
-			// Token: 0x04037B7C RID: 228220
+			// Token: 0x0403259A RID: 206234
 			public const int ComposeLevelBtn = 4;
 
-			// Token: 0x04037B7D RID: 228221
+			// Token: 0x0403259B RID: 206235
 			public const int DragRootItem = 5;
 
-			// Token: 0x04037B7E RID: 228222
+			// Token: 0x0403259C RID: 206236
 			public const int DragItemNameText = 6;
 
-			// Token: 0x04037B7F RID: 228223
+			// Token: 0x0403259D RID: 206237
 			public const int DragComponent = 7;
 
-			// Token: 0x04037B80 RID: 228224
+			// Token: 0x0403259E RID: 206238
 			public const int DragItem = 8;
 
-			// Token: 0x04037B81 RID: 228225
+			// Token: 0x0403259F RID: 206239
 			public const int ItemDesRootItem = 9;
 
-			// Token: 0x04037B82 RID: 228226
+			// Token: 0x040325A0 RID: 206240
 			public const int ItemDesQualitySprint = 10;
 
-			// Token: 0x04037B83 RID: 228227
+			// Token: 0x040325A1 RID: 206241
 			public const int ItemDesTexture = 11;
 
-			// Token: 0x04037B84 RID: 228228
+			// Token: 0x040325A2 RID: 206242
 			public const int ItemDesNumText = 12;
 
-			// Token: 0x04037B85 RID: 228229
+			// Token: 0x040325A3 RID: 206243
 			public const int ItemDesNameText = 13;
 
-			// Token: 0x04037B86 RID: 228230
+			// Token: 0x040325A4 RID: 206244
 			public const int ItemDesSubTitleText = 14;
 
-			// Token: 0x04037B87 RID: 228231
+			// Token: 0x040325A5 RID: 206245
 			public const int ItemDesMainText = 15;
 
-			// Token: 0x04037B88 RID: 228232
+			// Token: 0x040325A6 RID: 206246
 			public const int BottomLockItem = 16;
 
-			// Token: 0x04037B89 RID: 228233
+			// Token: 0x040325A7 RID: 206247
 			public const int BottomScrollView = 17;
 
-			// Token: 0x04037B8A RID: 228234
+			// Token: 0x040325A8 RID: 206248
 			public const int BottomScrollItem = 18;
 
-			// Token: 0x04037B8B RID: 228235
+			// Token: 0x040325A9 RID: 206249
 			public const int BottomAddItem = 19;
 
-			// Token: 0x04037B8C RID: 228236
+			// Token: 0x040325AA RID: 206250
 			public const int BottomDesText = 20;
 
-			// Token: 0x04037B8D RID: 228237
+			// Token: 0x040325AB RID: 206251
 			public const int BottomLeftText = 21;
 
-			// Token: 0x04037B8E RID: 228238
+			// Token: 0x040325AC RID: 206252
 			public const int BottomMidText = 22;
 
-			// Token: 0x04037B8F RID: 228239
+			// Token: 0x040325AD RID: 206253
 			public const int BottomTimeText = 23;
 
-			// Token: 0x04037B90 RID: 228240
+			// Token: 0x040325AE RID: 206254
 			public const int ConfirmBtn = 24;
 
-			// Token: 0x04037B91 RID: 228241
+			// Token: 0x040325AF RID: 206255
 			public const int LockItem = 25;
 
-			// Token: 0x04037B92 RID: 228242
+			// Token: 0x040325B0 RID: 206256
 			public const int LeftPopItem = 26;
 
-			// Token: 0x04037B93 RID: 228243
+			// Token: 0x040325B1 RID: 206257
 			public const int LeftPopItemCloseBtn = 27;
 
-			// Token: 0x04037B94 RID: 228244
+			// Token: 0x040325B2 RID: 206258
 			public const int LeftPopItemScrollView = 28;
 
-			// Token: 0x04037B95 RID: 228245
+			// Token: 0x040325B3 RID: 206259
 			public const int LeftPopItemScrollItem = 29;
 
-			// Token: 0x04037B96 RID: 228246
+			// Token: 0x040325B4 RID: 206260
 			public const int MakeCountText = 30;
 
-			// Token: 0x04037B97 RID: 228247
+			// Token: 0x040325B5 RID: 206261
 			public const int CostTxt = 31;
 
-			// Token: 0x04037B98 RID: 228248
+			// Token: 0x040325B6 RID: 206262
 			public const int CostIconTexture = 32;
 
-			// Token: 0x04037B99 RID: 228249
+			// Token: 0x040325B7 RID: 206263
 			public const int FilterItem = 33;
 
-			// Token: 0x04037B9A RID: 228250
+			// Token: 0x040325B8 RID: 206264
 			public const int RedDotItem = 34;
 
-			// Token: 0x04037B9B RID: 228251
+			// Token: 0x040325B9 RID: 206265
 			public const int ComposeLevelSprite = 35;
 
-			// Token: 0x04037B9C RID: 228252
+			// Token: 0x040325BA RID: 206266
 			public const int StarLayout = 36;
 
-			// Token: 0x04037B9D RID: 228253
+			// Token: 0x040325BB RID: 206267
 			public const int BottomTextRootItem = 37;
 
-			// Token: 0x04037B9E RID: 228254
+			// Token: 0x040325BC RID: 206268
 			public const int TxtActivate = 38;
 
-			// Token: 0x04037B9F RID: 228255
+			// Token: 0x040325BD RID: 206269
 			public const int DragLeftItem = 39;
 
-			// Token: 0x04037BA0 RID: 228256
+			// Token: 0x040325BE RID: 206270
 			public const int DragRightItem = 40;
 
-			// Token: 0x04037BA1 RID: 228257
+			// Token: 0x040325BF RID: 206271
 			public const int DragContentItem = 41;
 
-			// Token: 0x04037BA2 RID: 228258
+			// Token: 0x040325C0 RID: 206272
 			public const int SprCheck = 42;
 
-			// Token: 0x04037BA3 RID: 228259
+			// Token: 0x040325C1 RID: 206273
 			public const int TxtTips = 43;
 
-			// Token: 0x04037BA4 RID: 228260
+			// Token: 0x040325C2 RID: 206274
 			public const int PnlTitle = 44;
 
-			// Token: 0x04037BA5 RID: 228261
+			// Token: 0x040325C3 RID: 206275
 			public const int TxtTitle = 45;
 		}
 	}

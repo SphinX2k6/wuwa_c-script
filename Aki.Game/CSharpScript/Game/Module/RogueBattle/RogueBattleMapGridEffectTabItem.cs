@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E69 RID: 20073
+	// Token: 0x02003E32 RID: 15922
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 	})]
 	public class RogueBattleMapGridEffectTabItem : GridProxyAbstract<IRogueBattleMapGridEffectInfo>
 	{
-		// Token: 0x06033AFF RID: 211711 RVA: 0x00C1A9A0 File Offset: 0x00C18BA0
+		// Token: 0x0602896A RID: 166250 RVA: 0x00B63EC8 File Offset: 0x00B620C8
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033B00 RID: 211712 RVA: 0x00C1AA10 File Offset: 0x00C18C10
+		// Token: 0x0602896B RID: 166251 RVA: 0x00B63F38 File Offset: 0x00B62138
 		protected override void OnStart()
 		{
 			UUIItem item = base.GetItem(1);
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			item.SetUIActive(false);
 		}
 
-		// Token: 0x06033B01 RID: 211713 RVA: 0x00C1AA24 File Offset: 0x00C18C24
+		// Token: 0x0602896C RID: 166252 RVA: 0x00B63F4C File Offset: 0x00B6214C
 		public override void Refresh(IRogueBattleMapGridEffectInfo data, bool isSelected, int gridIndex)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(3), data.TagKey, Array.Empty<object>());

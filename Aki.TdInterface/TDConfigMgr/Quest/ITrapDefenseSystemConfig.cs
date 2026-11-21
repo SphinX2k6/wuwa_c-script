@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020011DA RID: 4570
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001316 RID: 4886
 	public class ITrapDefenseSystemConfig : IEnableSystemConfig
 	{
-		// Token: 0x060067CE RID: 26574 RVA: 0x000F8484 File Offset: 0x000F6684
+		// Token: 0x06006E0F RID: 28175 RVA: 0x00105D90 File Offset: 0x00103F90
 		private ITrapDefenseSystemConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060067CF RID: 26575 RVA: 0x000F84BC File Offset: 0x000F66BC
+		// Token: 0x06006E10 RID: 28176 RVA: 0x00105DC8 File Offset: 0x00103FC8
 		public static ITrapDefenseSystemConfig Create([Nullable(2)] ITrapDefenseSystemConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060067D0 RID: 26576 RVA: 0x000F84CF File Offset: 0x000F66CF
+		// Token: 0x06006E11 RID: 28177 RVA: 0x00105DDB File Offset: 0x00103FDB
 		public static ITrapDefenseSystemConfig CreateFromSetValue([Nullable(2)] ITrapDefenseSystemConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060067D1 RID: 26577 RVA: 0x000F84E2 File Offset: 0x000F66E2
+		// Token: 0x06006E12 RID: 28178 RVA: 0x00105DEE File Offset: 0x00103FEE
 		public new ITrapDefenseSystemConfig_SetValue ToSetValue()
 		{
 			return new ITrapDefenseSystemConfig_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x170021A5 RID: 8613
-		// (get) Token: 0x060067D2 RID: 26578 RVA: 0x000F850D File Offset: 0x000F670D
-		// (set) Token: 0x060067D3 RID: 26579 RVA: 0x000F8538 File Offset: 0x000F6738
+		// Token: 0x17002366 RID: 9062
+		// (get) Token: 0x06006E13 RID: 28179 RVA: 0x00105E19 File Offset: 0x00104019
+		// (set) Token: 0x06006E14 RID: 28180 RVA: 0x00105E44 File Offset: 0x00104044
 		public override EEnableSystemType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170021A6 RID: 8614
-		// (get) Token: 0x060067D4 RID: 26580 RVA: 0x000F8546 File Offset: 0x000F6746
-		// (set) Token: 0x060067D5 RID: 26581 RVA: 0x000F8571 File Offset: 0x000F6771
+		// Token: 0x17002367 RID: 9063
+		// (get) Token: 0x06006E15 RID: 28181 RVA: 0x00105E52 File Offset: 0x00104052
+		// (set) Token: 0x06006E16 RID: 28182 RVA: 0x00105E7D File Offset: 0x0010407D
 		public virtual int TrapDefenseId
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170021A7 RID: 8615
-		// (get) Token: 0x060067D6 RID: 26582 RVA: 0x000F8580 File Offset: 0x000F6780
-		// (set) Token: 0x060067D7 RID: 26583 RVA: 0x000F8613 File Offset: 0x000F6813
+		// Token: 0x17002368 RID: 9064
+		// (get) Token: 0x06006E17 RID: 28183 RVA: 0x00105E8C File Offset: 0x0010408C
+		// (set) Token: 0x06006E18 RID: 28184 RVA: 0x00105F1F File Offset: 0x0010411F
 		public virtual List<ITrapDefenseSystemVar> Vars
 		{
 			get
@@ -146,18 +144,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003E40 RID: 15936
+		// Token: 0x040041AE RID: 16814
 		[Nullable(2)]
 		protected new ITrapDefenseSystemConfig FbInstance;
 
-		// Token: 0x04003E41 RID: 15937
+		// Token: 0x040041AF RID: 16815
 		[Nullable(2)]
 		protected new ITrapDefenseSystemConfig_SetValue PocoInterface;
 
-		// Token: 0x04003E42 RID: 15938
+		// Token: 0x040041B0 RID: 16816
 		private List<ITrapDefenseSystemVar> _VarsCache;
 
-		// Token: 0x04003E43 RID: 15939
+		// Token: 0x040041B1 RID: 16817
 		private bool _VarsInited;
 	}
 }

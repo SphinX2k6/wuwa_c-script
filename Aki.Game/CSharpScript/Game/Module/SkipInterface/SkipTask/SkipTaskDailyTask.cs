@@ -9,10 +9,10 @@ using CSharpScript.Game.Module.WorldMap;
 
 namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 {
-	// Token: 0x02004BA9 RID: 19369
+	// Token: 0x02003B53 RID: 15187
 	public class SkipTaskDailyTask : SkipTask
 	{
-		// Token: 0x060322D1 RID: 205521 RVA: 0x00BA8898 File Offset: 0x00BA6A98
+		// Token: 0x06027062 RID: 159842 RVA: 0x00AECB0C File Offset: 0x00AEAD0C
 		protected override void OnRun([Nullable(new byte[]
 		{
 			1,
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 			base.Finish();
 		}
 
-		// Token: 0x0401AB84 RID: 109444
+		// Token: 0x040154D9 RID: 87257
 		[Nullable(1)]
 		private const string DEFAULT_TASK_ID = "0";
 	}

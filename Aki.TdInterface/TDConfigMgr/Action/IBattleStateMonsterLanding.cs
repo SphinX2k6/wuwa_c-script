@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001802 RID: 6146
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200198B RID: 6539
 	public class IBattleStateMonsterLanding : ISetBattleTagType
 	{
-		// Token: 0x060083F9 RID: 33785 RVA: 0x0013ABE8 File Offset: 0x00138DE8
+		// Token: 0x06008B15 RID: 35605 RVA: 0x0014A2D0 File Offset: 0x001484D0
 		private IBattleStateMonsterLanding_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060083FA RID: 33786 RVA: 0x0013AC20 File Offset: 0x00138E20
+		// Token: 0x06008B16 RID: 35606 RVA: 0x0014A308 File Offset: 0x00148508
 		public static IBattleStateMonsterLanding Create([Nullable(2)] IBattleStateMonsterLanding instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060083FB RID: 33787 RVA: 0x0013AC33 File Offset: 0x00138E33
+		// Token: 0x06008B17 RID: 35607 RVA: 0x0014A31B File Offset: 0x0014851B
 		public static IBattleStateMonsterLanding CreateFromSetValue([Nullable(2)] IBattleStateMonsterLanding_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060083FC RID: 33788 RVA: 0x0013AC46 File Offset: 0x00138E46
+		// Token: 0x06008B18 RID: 35608 RVA: 0x0014A32E File Offset: 0x0014852E
 		public new IBattleStateMonsterLanding_SetValue ToSetValue()
 		{
 			return new IBattleStateMonsterLanding_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002B4E RID: 11086
-		// (get) Token: 0x060083FD RID: 33789 RVA: 0x0013AC59 File Offset: 0x00138E59
-		// (set) Token: 0x060083FE RID: 33790 RVA: 0x0013AC84 File Offset: 0x00138E84
+		// Token: 0x17002D46 RID: 11590
+		// (get) Token: 0x06008B19 RID: 35609 RVA: 0x0014A341 File Offset: 0x00148541
+		// (set) Token: 0x06008B1A RID: 35610 RVA: 0x0014A36C File Offset: 0x0014856C
 		public override ESetBattleTagType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400539F RID: 21407
+		// Token: 0x040057E7 RID: 22503
 		[Nullable(2)]
 		protected new IBattleStateMonsterLanding FbInstance;
 
-		// Token: 0x040053A0 RID: 21408
+		// Token: 0x040057E8 RID: 22504
 		[Nullable(2)]
 		protected new IBattleStateMonsterLanding_SetValue PocoInterface;
 	}

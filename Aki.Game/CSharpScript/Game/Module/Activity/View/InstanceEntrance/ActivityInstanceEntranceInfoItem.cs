@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 {
-	// Token: 0x02005F14 RID: 24340
+	// Token: 0x02004EFB RID: 20219
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ActivityInstanceEntranceInfoItem : UiPanelBase
 	{
-		// Token: 0x0603DD6C RID: 253292 RVA: 0x00EF2110 File Offset: 0x00EF0310
+		// Token: 0x06032D07 RID: 208135 RVA: 0x00E43E18 File Offset: 0x00E42018
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603DD6D RID: 253293 RVA: 0x00EF219C File Offset: 0x00EF039C
+		// Token: 0x06032D08 RID: 208136 RVA: 0x00E43EA4 File Offset: 0x00E420A4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ActivityInstanceEntranceInfoItem.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603DD6E RID: 253294 RVA: 0x00EF21DF File Offset: 0x00EF03DF
+		// Token: 0x06032D09 RID: 208137 RVA: 0x00E43EE7 File Offset: 0x00E420E7
 		public void RefreshView(ActivityInstanceEntranceData data)
 		{
 			this.RefreshTitleItem(data);
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			this.RefreshMonsterTipsItem(data).Forget();
 		}
 
-		// Token: 0x0603DD6F RID: 253295 RVA: 0x00EF221C File Offset: 0x00EF041C
+		// Token: 0x06032D0A RID: 208138 RVA: 0x00E43F24 File Offset: 0x00E42124
 		private void RefreshTitleItem(ActivityInstanceEntranceData data)
 		{
 			if (data == null || data.GetActivityEntranceDescInfoData() == null)
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			}
 		}
 
-		// Token: 0x0603DD70 RID: 253296 RVA: 0x00EF22E4 File Offset: 0x00EF04E4
+		// Token: 0x06032D0B RID: 208139 RVA: 0x00E43FEC File Offset: 0x00E421EC
 		private void RefreshStartItem(ActivityInstanceEntranceData data)
 		{
 			ActivityInstanceEntranceInfoItem.<>c__DisplayClass14_0 CS$<>8__locals1 = new ActivityInstanceEntranceInfoItem.<>c__DisplayClass14_0();
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			instanceDungeonStartButtonItem.SetActive(!lockState);
 		}
 
-		// Token: 0x0603DD71 RID: 253297 RVA: 0x00EF2378 File Offset: 0x00EF0578
+		// Token: 0x06032D0C RID: 208140 RVA: 0x00E44080 File Offset: 0x00E42280
 		private void RefreshLockItem(ActivityInstanceEntranceData data)
 		{
 			if (data == null)
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			}
 		}
 
-		// Token: 0x0603DD72 RID: 253298 RVA: 0x00EF23F0 File Offset: 0x00EF05F0
+		// Token: 0x06032D0D RID: 208141 RVA: 0x00E440F8 File Offset: 0x00E422F8
 		public UniTask RefreshDropDownItem(ActivityInstanceEntranceData data)
 		{
 			ActivityInstanceEntranceInfoItem.<RefreshDropDownItem>d__16 <RefreshDropDownItem>d__;
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			return <RefreshDropDownItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603DD73 RID: 253299 RVA: 0x00EF243C File Offset: 0x00EF063C
+		// Token: 0x06032D0E RID: 208142 RVA: 0x00E44144 File Offset: 0x00E42344
 		public UniTask RefreshRecommendLevelItem(ActivityInstanceEntranceData data)
 		{
 			ActivityInstanceEntranceInfoItem.<RefreshRecommendLevelItem>d__17 <RefreshRecommendLevelItem>d__;
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			return <RefreshRecommendLevelItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603DD74 RID: 253300 RVA: 0x00EF2488 File Offset: 0x00EF0688
+		// Token: 0x06032D0F RID: 208143 RVA: 0x00E44190 File Offset: 0x00E42390
 		public UniTask RefreshMonsterTipsItem(ActivityInstanceEntranceData data)
 		{
 			ActivityInstanceEntranceInfoItem.<RefreshMonsterTipsItem>d__18 <RefreshMonsterTipsItem>d__;
@@ -195,42 +195,42 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			return <RefreshMonsterTipsItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x040204C8 RID: 132296
+		// Token: 0x0401AF9A RID: 110490
 		private InstanceDungeonRightTitleItem InstanceDungeonRightTitleItem;
 
-		// Token: 0x040204C9 RID: 132297
+		// Token: 0x0401AF9B RID: 110491
 		private InstanceDungeonStartButtonItem InstanceDungeonStartButtonItem;
 
-		// Token: 0x040204CA RID: 132298
+		// Token: 0x0401AF9C RID: 110492
 		private InstanceDungeonLockItem InstanceDungeonLockItem;
 
-		// Token: 0x040204CB RID: 132299
+		// Token: 0x0401AF9D RID: 110493
 		private InstanceDungeonRecommendLevelItem InstanceDungeonRecommendLevelItem;
 
-		// Token: 0x040204CC RID: 132300
+		// Token: 0x0401AF9E RID: 110494
 		private ActivityInstanceEntranceDropDownItem ActivityInstanceEntranceDropDownItem;
 
-		// Token: 0x040204CD RID: 132301
+		// Token: 0x0401AF9F RID: 110495
 		private ActivityInstanceEntranceMonsterTipsItem ActivityInstanceEntranceMonsterTipsItem;
 
-		// Token: 0x040204CE RID: 132302
+		// Token: 0x0401AFA0 RID: 110496
 		private CustomPromise ActivityInstanceEntranceDropDownItemPromise;
 
-		// Token: 0x040204CF RID: 132303
+		// Token: 0x0401AFA1 RID: 110497
 		private CustomPromise InstanceDungeonRecommendLevelItemPromise;
 
-		// Token: 0x040204D0 RID: 132304
+		// Token: 0x0401AFA2 RID: 110498
 		private CustomPromise ActivityInstanceEntranceMonsterTipsItemPromise;
 
-		// Token: 0x0200C244 RID: 49732
+		// Token: 0x0200AC51 RID: 44113
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403AB05 RID: 240389
+			// Token: 0x040354F7 RID: 218359
 			TopItem,
-			// Token: 0x0403AB06 RID: 240390
+			// Token: 0x040354F8 RID: 218360
 			BottomItem,
-			// Token: 0x0403AB07 RID: 240391
+			// Token: 0x040354F9 RID: 218361
 			ButtonItem
 		}
 	}

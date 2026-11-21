@@ -5,19 +5,19 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.Define
 {
-	// Token: 0x020058BF RID: 22719
+	// Token: 0x02004897 RID: 18583
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class IInstanceDungeonEntranceAbility : UiPanelBase
 	{
-		// Token: 0x17008AA5 RID: 35493
-		// (get) Token: 0x06039C30 RID: 236592
+		// Token: 0x17005E71 RID: 24177
+		// (get) Token: 0x0602EB53 RID: 191315
 		public abstract string ResourceId { get; }
 
-		// Token: 0x06039C31 RID: 236593
+		// Token: 0x0602EB54 RID: 191316
 		public abstract UniTask RefreshExternalAsync();
 
-		// Token: 0x06039C32 RID: 236594 RVA: 0x00DBA1EB File Offset: 0x00DB83EB
+		// Token: 0x0602EB55 RID: 191317 RVA: 0x00D09103 File Offset: 0x00D07303
 		public virtual void RefreshOnTick()
 		{
 		}

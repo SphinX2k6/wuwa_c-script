@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000B96 RID: 2966
+	// Token: 0x02000B86 RID: 2950
 	[NetMessage(EMessageId.OnlineMotorActivityLevelRequest)]
 	public sealed class OnlineMotorActivityLevelRequest : IMessage<OnlineMotorActivityLevelRequest>, IMessage, IEquatable<OnlineMotorActivityLevelRequest>, IDeepCloneable<OnlineMotorActivityLevelRequest>, IBufferMessage
 	{
-		// Token: 0x06010155 RID: 65877 RVA: 0x00259155 File Offset: 0x00257355
+		// Token: 0x06010051 RID: 65617 RVA: 0x00257285 File Offset: 0x00255485
 		[NullableContext(1)]
 		public static OnlineMotorActivityLevelRequest Create()
 		{
 			return new OnlineMotorActivityLevelRequest();
 		}
 
-		// Token: 0x170034B2 RID: 13490
-		// (get) Token: 0x06010156 RID: 65878 RVA: 0x0025915C File Offset: 0x0025735C
+		// Token: 0x17003479 RID: 13433
+		// (get) Token: 0x06010052 RID: 65618 RVA: 0x0025728C File Offset: 0x0025548C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170034B3 RID: 13491
-		// (get) Token: 0x06010157 RID: 65879 RVA: 0x0025915F File Offset: 0x0025735F
+		// Token: 0x1700347A RID: 13434
+		// (get) Token: 0x06010053 RID: 65619 RVA: 0x0025728F File Offset: 0x0025548F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06010158 RID: 65880 RVA: 0x00259166 File Offset: 0x00257366
+		// Token: 0x06010054 RID: 65620 RVA: 0x00257296 File Offset: 0x00255496
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public OnlineMotorActivityLevelRequest()
 		{
 		}
 
-		// Token: 0x06010159 RID: 65881 RVA: 0x00259179 File Offset: 0x00257379
+		// Token: 0x06010055 RID: 65621 RVA: 0x002572A9 File Offset: 0x002554A9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public OnlineMotorActivityLevelRequest(OnlineMotorActivityLevelRequest other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601015A RID: 65882 RVA: 0x002591AF File Offset: 0x002573AF
+		// Token: 0x06010056 RID: 65622 RVA: 0x002572DF File Offset: 0x002554DF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public OnlineMotorActivityLevelRequest Clone()
@@ -68,8 +68,8 @@ namespace Aki.Protocol
 			return new OnlineMotorActivityLevelRequest(this);
 		}
 
-		// Token: 0x170034B4 RID: 13492
-		// (get) Token: 0x0601015B RID: 65883 RVA: 0x002591B7 File Offset: 0x002573B7
+		// Token: 0x1700347B RID: 13435
+		// (get) Token: 0x06010057 RID: 65623 RVA: 0x002572E7 File Offset: 0x002554E7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> RewardIds
@@ -80,9 +80,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170034B5 RID: 13493
-		// (get) Token: 0x0601015C RID: 65884 RVA: 0x002591BF File Offset: 0x002573BF
-		// (set) Token: 0x0601015D RID: 65885 RVA: 0x002591C7 File Offset: 0x002573C7
+		// Token: 0x1700347C RID: 13436
+		// (get) Token: 0x06010058 RID: 65624 RVA: 0x002572EF File Offset: 0x002554EF
+		// (set) Token: 0x06010059 RID: 65625 RVA: 0x002572F7 File Offset: 0x002554F7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public OnlineMotorRewardType RewardType
@@ -97,7 +97,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601015E RID: 65886 RVA: 0x002591D0 File Offset: 0x002573D0
+		// Token: 0x0601005A RID: 65626 RVA: 0x00257300 File Offset: 0x00255500
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -105,7 +105,7 @@ namespace Aki.Protocol
 			return this.Equals(other as OnlineMotorActivityLevelRequest);
 		}
 
-		// Token: 0x0601015F RID: 65887 RVA: 0x002591E0 File Offset: 0x002573E0
+		// Token: 0x0601005B RID: 65627 RVA: 0x00257310 File Offset: 0x00255510
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(OnlineMotorActivityLevelRequest other)
@@ -113,7 +113,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.rewardIds_.Equals(other.rewardIds_) && this.RewardType == other.RewardType && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06010160 RID: 65888 RVA: 0x00259230 File Offset: 0x00257430
+		// Token: 0x0601005C RID: 65628 RVA: 0x00257360 File Offset: 0x00255560
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06010161 RID: 65889 RVA: 0x00259283 File Offset: 0x00257483
+		// Token: 0x0601005D RID: 65629 RVA: 0x002573B3 File Offset: 0x002555B3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -139,7 +139,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06010162 RID: 65890 RVA: 0x00259290 File Offset: 0x00257490
+		// Token: 0x0601005E RID: 65630 RVA: 0x002573C0 File Offset: 0x002555C0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -147,14 +147,14 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06010163 RID: 65891 RVA: 0x0025929C File Offset: 0x0025749C
+		// Token: 0x0601005F RID: 65631 RVA: 0x002573CC File Offset: 0x002555CC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			if (this.RewardType != OnlineMotorRewardType.LevelReward)
 			{
-				output.WriteRawTag(32);
+				output.WriteRawTag(24);
 				output.WriteEnum((int)this.RewardType);
 			}
 			this.rewardIds_.WriteTo(ref output, OnlineMotorActivityLevelRequest._repeated_rewardIds_codec);
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06010164 RID: 65892 RVA: 0x002592EC File Offset: 0x002574EC
+		// Token: 0x06010060 RID: 65632 RVA: 0x0025741C File Offset: 0x0025561C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -182,7 +182,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06010165 RID: 65893 RVA: 0x00259340 File Offset: 0x00257540
+		// Token: 0x06010061 RID: 65633 RVA: 0x00257470 File Offset: 0x00255670
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(OnlineMotorActivityLevelRequest other)
@@ -199,7 +199,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06010166 RID: 65894 RVA: 0x0025938D File Offset: 0x0025758D
+		// Token: 0x06010062 RID: 65634 RVA: 0x002574BD File Offset: 0x002556BD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -207,7 +207,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06010167 RID: 65895 RVA: 0x00259398 File Offset: 0x00257598
+		// Token: 0x06010063 RID: 65635 RVA: 0x002574C8 File Offset: 0x002556C8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -219,9 +219,9 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 32U)
+				if (num != 24U)
 				{
-					if (num != 120U && num != 122U)
+					if (num != 40U && num != 42U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
@@ -237,22 +237,22 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400668F RID: 26255
+		// Token: 0x0400669F RID: 26271
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04006690 RID: 26256
-		public const int RewardIdsFieldNumber = 15;
+		// Token: 0x040066A0 RID: 26272
+		public const int RewardIdsFieldNumber = 5;
 
-		// Token: 0x04006691 RID: 26257
-		private static readonly FieldCodec<int> _repeated_rewardIds_codec = FieldCodec.ForInt32(122U);
+		// Token: 0x040066A1 RID: 26273
+		private static readonly FieldCodec<int> _repeated_rewardIds_codec = FieldCodec.ForInt32(42U);
 
-		// Token: 0x04006692 RID: 26258
+		// Token: 0x040066A2 RID: 26274
 		private readonly RepeatedField<int> rewardIds_ = new RepeatedField<int>();
 
-		// Token: 0x04006693 RID: 26259
-		public const int RewardTypeFieldNumber = 4;
+		// Token: 0x040066A3 RID: 26275
+		public const int RewardTypeFieldNumber = 3;
 
-		// Token: 0x04006694 RID: 26260
+		// Token: 0x040066A4 RID: 26276
 		private OnlineMotorRewardType rewardType_;
 	}
 }

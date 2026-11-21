@@ -5,15 +5,15 @@ using CSharpScript.Game.Camera;
 using CSharpScript.Game.Render;
 using UnrealEngine;
 
-// Token: 0x02002D93 RID: 11667
+// Token: 0x020022ED RID: 8941
 public class BulletActionInitRender : BulletActionBase
 {
-	// Token: 0x06018833 RID: 100403 RVA: 0x00641D89 File Offset: 0x0063FF89
+	// Token: 0x060160D7 RID: 90327 RVA: 0x00667B45 File Offset: 0x00665D45
 	public BulletActionInitRender(EBulletAction type) : base(type)
 	{
 	}
 
-	// Token: 0x06018834 RID: 100404 RVA: 0x00641D94 File Offset: 0x0063FF94
+	// Token: 0x060160D8 RID: 90328 RVA: 0x00667B50 File Offset: 0x00665D50
 	protected override void OnExecute()
 	{
 		BulletDataMain bulletDataMain = this.BulletInfo.BulletDataMain;
@@ -32,13 +32,13 @@ public class BulletActionInitRender : BulletActionBase
 				ResourceSystem.Instance.LoadAsync<UClass>(attackerCameraShakeOnStart.ToString(), delegate([Nullable(2)] UClass shakeType, string _)
 				{
 					FVectorDouble value = Global.CharacterCameraManager.D_GetCameraLocation();
-					CameraController.Instance.PlayWorldCameraShake(shakeType, new FVectorDouble?(value), 0f, 100f, 1f, false, "MainCamera");
+					CameraController.Instance.PlayWorldCameraShake(new TSubclassOf<UCameraShakeBase>?(shakeType), new FVectorDouble?(value), 0f, 100f, 1f, false, "MainCamera");
 				}, 100, "js_undefined");
 			}
 		}
 	}
 
-	// Token: 0x06018835 RID: 100405 RVA: 0x00641E90 File Offset: 0x00640090
+	// Token: 0x060160D9 RID: 90329 RVA: 0x00667C4C File Offset: 0x00665E4C
 	public float GetSize()
 	{
 		if (this.BulletInfo.BulletDataMain.Base.Shape == EBulletShape.Cube)
@@ -48,7 +48,7 @@ public class BulletActionInitRender : BulletActionBase
 		return (float)this.BulletInfo.Size.X;
 	}
 
-	// Token: 0x06018836 RID: 100406 RVA: 0x00641EEC File Offset: 0x006400EC
+	// Token: 0x060160DA RID: 90330 RVA: 0x00667CA8 File Offset: 0x00665EA8
 	public override void Clear()
 	{
 		base.Clear();
@@ -59,7 +59,7 @@ public class BulletActionInitRender : BulletActionBase
 		}
 	}
 
-	// Token: 0x0400B5D2 RID: 46546
+	// Token: 0x0400B948 RID: 47432
 	[Nullable(2)]
 	private SceneObjectAirWallEffect AirWallEffect;
 }

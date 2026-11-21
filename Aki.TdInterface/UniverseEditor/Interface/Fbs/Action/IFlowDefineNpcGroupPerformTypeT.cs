@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006802 RID: 26626
+	// Token: 0x02006E82 RID: 28290
 	public class IFlowDefineNpcGroupPerformTypeT
 	{
-		// Token: 0x1700C5A0 RID: 50592
-		// (get) Token: 0x0602E5DA RID: 189914 RVA: 0x006541BA File Offset: 0x006523BA
-		// (set) Token: 0x0602E5DB RID: 189915 RVA: 0x006541C2 File Offset: 0x006523C2
+		// Token: 0x1700CF56 RID: 53078
+		// (get) Token: 0x06030E20 RID: 200224 RVA: 0x006A18FE File Offset: 0x0069FAFE
+		// (set) Token: 0x06030E21 RID: 200225 RVA: 0x006A1906 File Offset: 0x0069FB06
 		public ENpcGroupPerformType Type { get; set; }
 
-		// Token: 0x0602E5DC RID: 189916 RVA: 0x006541CB File Offset: 0x006523CB
+		// Token: 0x06030E22 RID: 200226 RVA: 0x006A190F File Offset: 0x0069FB0F
 		public IFlowDefineNpcGroupPerformTypeT()
 		{
 			this.Type = ENpcGroupPerformType.HandInHand;

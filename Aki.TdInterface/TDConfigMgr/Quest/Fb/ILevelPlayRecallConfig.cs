@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001458 RID: 5208
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020015B1 RID: 5553
 	public class ILevelPlayRecallConfig : IRecallConfig
 	{
-		// Token: 0x0600765F RID: 30303 RVA: 0x0011AB59 File Offset: 0x00118D59
+		// Token: 0x06007D2C RID: 32044 RVA: 0x0012973D File Offset: 0x0012793D
 		public static ILevelPlayRecallConfig Create(ILevelPlayRecallConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002782 RID: 10114
-		// (get) Token: 0x06007660 RID: 30304 RVA: 0x0011AB78 File Offset: 0x00118D78
+		// Token: 0x1700296C RID: 10604
+		// (get) Token: 0x06007D2D RID: 32045 RVA: 0x0012975C File Offset: 0x0012795C
 		public override int RecallId
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002783 RID: 10115
-		// (get) Token: 0x06007661 RID: 30305 RVA: 0x0011AB88 File Offset: 0x00118D88
+		// Token: 0x1700296D RID: 10605
+		// (get) Token: 0x06007D2E RID: 32046 RVA: 0x0012976C File Offset: 0x0012796C
 		public virtual List<int> RecallEntityList
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040044BA RID: 17594
+		// Token: 0x04004853 RID: 18515
 		private ILevelPlayRecallConfig Instance;
 
-		// Token: 0x040044BB RID: 17595
+		// Token: 0x04004854 RID: 18516
 		private List<int> _RecallEntityListCache;
 
-		// Token: 0x040044BC RID: 17596
+		// Token: 0x04004855 RID: 18517
 		private bool _RecallEntityListInited;
 	}
 }

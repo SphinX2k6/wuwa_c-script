@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Kurotato
 {
-	// Token: 0x02005704 RID: 22276
+	// Token: 0x020046DB RID: 18139
 	public enum EKurotatoWaveStatus
 	{
-		// Token: 0x0401DBB7 RID: 121783
+		// Token: 0x0401864D RID: 99917
 		Current = -1,
-		// Token: 0x0401DBB8 RID: 121784
+		// Token: 0x0401864E RID: 99918
 		Completed,
-		// Token: 0x0401DBB9 RID: 121785
+		// Token: 0x0401864F RID: 99919
 		NotCompleted
 	}
 }

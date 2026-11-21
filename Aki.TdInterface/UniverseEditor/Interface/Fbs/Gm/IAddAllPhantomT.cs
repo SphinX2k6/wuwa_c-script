@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x02004631 RID: 17969
+	// Token: 0x02004A99 RID: 19097
 	public class IAddAllPhantomT
 	{
-		// Token: 0x17007F86 RID: 32646
-		// (get) Token: 0x0601B371 RID: 111473 RVA: 0x003DFEB2 File Offset: 0x003DE0B2
-		// (set) Token: 0x0601B372 RID: 111474 RVA: 0x003DFEBA File Offset: 0x003DE0BA
+		// Token: 0x170085C7 RID: 34247
+		// (get) Token: 0x0601CB46 RID: 117574 RVA: 0x0040C14E File Offset: 0x0040A34E
+		// (set) Token: 0x0601CB47 RID: 117575 RVA: 0x0040C156 File Offset: 0x0040A356
 		public EGmCommand Type { get; set; }
 
-		// Token: 0x0601B373 RID: 111475 RVA: 0x003DFEC3 File Offset: 0x003DE0C3
+		// Token: 0x0601CB48 RID: 117576 RVA: 0x0040C15F File Offset: 0x0040A35F
 		public IAddAllPhantomT()
 		{
 			this.Type = EGmCommand.SkipToLevelPlayNode;

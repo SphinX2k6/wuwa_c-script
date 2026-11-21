@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x0200145E RID: 5214
+// Token: 0x02000912 RID: 2322
 public enum EReportLogEventNewType
 {
-	// Token: 0x04004159 RID: 16729
+	// Token: 0x040041F1 RID: 16881
 	Sign,
-	// Token: 0x0400415A RID: 16730
+	// Token: 0x040041F2 RID: 16882
 	Adventure,
-	// Token: 0x0400415B RID: 16731
+	// Token: 0x040041F3 RID: 16883
 	BattlePass,
-	// Token: 0x0400415C RID: 16732
+	// Token: 0x040041F4 RID: 16884
 	NewVersion,
-	// Token: 0x0400415D RID: 16733
+	// Token: 0x040041F5 RID: 16885
 	TrialRole,
-	// Token: 0x0400415E RID: 16734
+	// Token: 0x040041F6 RID: 16886
 	DoubleDrop,
-	// Token: 0x0400415F RID: 16735
+	// Token: 0x040041F7 RID: 16887
 	Recommend
 }

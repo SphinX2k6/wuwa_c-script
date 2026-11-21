@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
@@ -10,13 +9,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 
-// Token: 0x02001670 RID: 5744
+// Token: 0x02000B28 RID: 2856
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class ActivityController : ControllerBase
 {
-	// Token: 0x0600A1E7 RID: 41447 RVA: 0x0023C0E8 File Offset: 0x0023A2E8
+	// Token: 0x060075C5 RID: 30149 RVA: 0x00245F84 File Offset: 0x00244184
 	protected override bool OnInit()
 	{
 		this.OnAddEvents();
@@ -28,7 +27,7 @@ public class ActivityController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0600A1E8 RID: 41448 RVA: 0x0023C124 File Offset: 0x0023A324
+	// Token: 0x060075C6 RID: 30150 RVA: 0x00245FC0 File Offset: 0x002441C0
 	protected override bool OnClear()
 	{
 		this.OnRemoveEvents();
@@ -41,7 +40,7 @@ public class ActivityController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0600A1E9 RID: 41449 RVA: 0x0023C151 File Offset: 0x0023A351
+	// Token: 0x060075C7 RID: 30151 RVA: 0x00245FED File Offset: 0x002441ED
 	public void EnableRefreshTimer(float interval)
 	{
 		if (this.RefreshTimer != null)
@@ -51,7 +50,7 @@ public class ActivityController : ControllerBase
 		this.RefreshTimer = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.OnRefreshTimer), interval, 1f, null, null, true);
 	}
 
-	// Token: 0x0600A1EA RID: 41450 RVA: 0x0023C181 File Offset: 0x0023A381
+	// Token: 0x060075C8 RID: 30152 RVA: 0x0024601D File Offset: 0x0024421D
 	public void DisableRefreshTimer()
 	{
 		if (this.RefreshTimer == null)
@@ -63,19 +62,19 @@ public class ActivityController : ControllerBase
 		this.RefreshTimer = null;
 	}
 
-	// Token: 0x0600A1EB RID: 41451 RVA: 0x0023C1AF File Offset: 0x0023A3AF
+	// Token: 0x060075C9 RID: 30153 RVA: 0x0024604B File Offset: 0x0024424B
 	public void RegisterRefreshTimerDelegate(Action<float> @delegate)
 	{
 		this.RefreshTimerDelegateSet.Add(@delegate);
 	}
 
-	// Token: 0x0600A1EC RID: 41452 RVA: 0x0023C1BE File Offset: 0x0023A3BE
+	// Token: 0x060075CA RID: 30154 RVA: 0x0024605A File Offset: 0x0024425A
 	public void UnregisterRefreshTimerDelegate(Action<float> @delegate)
 	{
 		this.RefreshTimerDelegateSet.Remove(@delegate);
 	}
 
-	// Token: 0x0600A1ED RID: 41453 RVA: 0x0023C1D0 File Offset: 0x0023A3D0
+	// Token: 0x060075CB RID: 30155 RVA: 0x0024606C File Offset: 0x0024426C
 	private void OnRefreshTimer(float delta)
 	{
 		if (this.RefreshTimerDelegateSet.Count == 0)
@@ -88,25 +87,25 @@ public class ActivityController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600A1EE RID: 41454 RVA: 0x0023C230 File Offset: 0x0023A430
+	// Token: 0x060075CC RID: 30156 RVA: 0x002460CC File Offset: 0x002442CC
 	private void OpenActivityView()
 	{
 		this.OpenActivityById(0, EActivityViewOpenType.HotKey, null, null);
 	}
 
-	// Token: 0x0600A1EF RID: 41455 RVA: 0x0023C23D File Offset: 0x0023A43D
+	// Token: 0x060075CD RID: 30157 RVA: 0x002460D9 File Offset: 0x002442D9
 	protected void OnAddOpenViewCheckFunction()
 	{
 		UiManager.Instance.AddOpenViewCheckFunction(EUiViewName.CommonActivityView, new Func<EUiViewName, object, bool>(this.CheckCanOpen), "ActivityController.CheckCanOpen");
 	}
 
-	// Token: 0x0600A1F0 RID: 41456 RVA: 0x0023C25F File Offset: 0x0023A45F
+	// Token: 0x060075CE RID: 30158 RVA: 0x002460FB File Offset: 0x002442FB
 	protected void OnRemoveOpenViewCheckFunction()
 	{
 		UiManager.Instance.RemoveOpenViewCheckFunction(EUiViewName.CommonActivityView, new Func<EUiViewName, object, bool>(this.CheckCanOpen));
 	}
 
-	// Token: 0x0600A1F1 RID: 41457 RVA: 0x0023C27C File Offset: 0x0023A47C
+	// Token: 0x060075CF RID: 30159 RVA: 0x00246118 File Offset: 0x00244318
 	public bool CheckCanOpen(EUiViewName viewName, object param)
 	{
 		if (!FunctionModel.Instance.IsOpen(10053))
@@ -117,19 +116,19 @@ public class ActivityController : ControllerBase
 		return ActivityModel.Instance.GetCurrentShowingActivities().Count != 0;
 	}
 
-	// Token: 0x0600A1F2 RID: 41458 RVA: 0x0023C2B7 File Offset: 0x0023A4B7
+	// Token: 0x060075D0 RID: 30160 RVA: 0x00246153 File Offset: 0x00244353
 	public bool CheckCanOpenWithoutPrompt()
 	{
 		return FunctionModel.Instance.IsOpen(10053) && ActivityModel.Instance.GetCurrentShowingActivities().Count != 0;
 	}
 
-	// Token: 0x0600A1F3 RID: 41459 RVA: 0x0023C2DE File Offset: 0x0023A4DE
+	// Token: 0x060075D1 RID: 30161 RVA: 0x0024617A File Offset: 0x0024437A
 	private void CheckActivityActiveState()
 	{
 		ActivityModel.Instance.RefreshShowingActivities();
 	}
 
-	// Token: 0x0600A1F4 RID: 41460 RVA: 0x0023C2EC File Offset: 0x0023A4EC
+	// Token: 0x060075D2 RID: 30162 RVA: 0x00246188 File Offset: 0x00244388
 	public void ShowActivityRefreshAndBackToBattleView()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.ActivityEnd);
@@ -138,14 +137,14 @@ public class ActivityController : ControllerBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x0600A1F5 RID: 41461 RVA: 0x0023C340 File Offset: 0x0023A540
+	// Token: 0x060075D3 RID: 30163 RVA: 0x002461DC File Offset: 0x002443DC
 	private void ShowActivityClose()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.AllActivityClose);
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x0600A1F6 RID: 41462 RVA: 0x0023C364 File Offset: 0x0023A564
+	// Token: 0x060075D4 RID: 30164 RVA: 0x00246200 File Offset: 0x00244400
 	private void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.OnLoadingNetDataDone, new Action(this.OnDataDone));
@@ -156,7 +155,7 @@ public class ActivityController : ControllerBase
 		EventSystem.Instance.Add(EEventName.CrossDay, new Action(this.OnCrossDay));
 	}
 
-	// Token: 0x0600A1F7 RID: 41463 RVA: 0x0023C41C File Offset: 0x0023A61C
+	// Token: 0x060075D5 RID: 30165 RVA: 0x002462B8 File Offset: 0x002444B8
 	private void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OnLoadingNetDataDone, new Action(this.OnDataDone));
@@ -167,44 +166,44 @@ public class ActivityController : ControllerBase
 		EventSystem.Instance.Remove(EEventName.CrossDay, new Action(this.OnCrossDay));
 	}
 
-	// Token: 0x0600A1F8 RID: 41464 RVA: 0x0023C4D1 File Offset: 0x0023A6D1
+	// Token: 0x060075D6 RID: 30166 RVA: 0x0024636D File Offset: 0x0024456D
 	private void OnReceiveActivityData(int type, IReadOnlyList<int> activityIds)
 	{
 		this.InitActivity(type);
 	}
 
-	// Token: 0x0600A1F9 RID: 41465 RVA: 0x0023C4DA File Offset: 0x0023A6DA
+	// Token: 0x060075D7 RID: 30167 RVA: 0x00246376 File Offset: 0x00244576
 	public void InitActivity(int type)
 	{
 	}
 
-	// Token: 0x0600A1FA RID: 41466 RVA: 0x0023C4DC File Offset: 0x0023A6DC
+	// Token: 0x060075D8 RID: 30168 RVA: 0x00246378 File Offset: 0x00244578
 	private void InitActivityLocalRedPointData()
 	{
 		ActivityModel.Instance.InitCache();
 	}
 
-	// Token: 0x0600A1FB RID: 41467 RVA: 0x0023C4E8 File Offset: 0x0023A6E8
+	// Token: 0x060075D9 RID: 30169 RVA: 0x00246384 File Offset: 0x00244584
 	protected void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.ActivityUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnActivityUpdateNotify));
 		Net.Instance.Register(ENotifyMessageId.ActivityDisableNotify, new Action<IMessage, Net.CallbackStatus>(this.OnActivityDisableNotify));
 	}
 
-	// Token: 0x0600A1FC RID: 41468 RVA: 0x0023C522 File Offset: 0x0023A722
+	// Token: 0x060075DA RID: 30170 RVA: 0x002463BE File Offset: 0x002445BE
 	protected void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.ActivityUpdateNotify);
 		Net.Instance.UnRegister(ENotifyMessageId.ActivityDisableNotify);
 	}
 
-	// Token: 0x0600A1FD RID: 41469 RVA: 0x0023C544 File Offset: 0x0023A744
+	// Token: 0x060075DB RID: 30171 RVA: 0x002463E0 File Offset: 0x002445E0
 	private void OnDataDone()
 	{
 		this.InitTimer();
 	}
 
-	// Token: 0x0600A1FE RID: 41470 RVA: 0x0023C54C File Offset: 0x0023A74C
+	// Token: 0x060075DC RID: 30172 RVA: 0x002463E8 File Offset: 0x002445E8
 	private void OnWorldDone()
 	{
 		if (!this.IsDataInit)
@@ -214,7 +213,7 @@ public class ActivityController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600A1FF RID: 41471 RVA: 0x0023C578 File Offset: 0x0023A778
+	// Token: 0x060075DD RID: 30173 RVA: 0x00246414 File Offset: 0x00244614
 	private UniTask InitActivityDataOnWorldDone()
 	{
 		ActivityController.<InitActivityDataOnWorldDone>d__28 <InitActivityDataOnWorldDone>d__;
@@ -225,7 +224,7 @@ public class ActivityController : ControllerBase
 		return <InitActivityDataOnWorldDone>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A200 RID: 41472 RVA: 0x0023C5BC File Offset: 0x0023A7BC
+	// Token: 0x060075DE RID: 30174 RVA: 0x00246458 File Offset: 0x00244658
 	private void OnActivityClose(IReadOnlySet<int> closeActivities)
 	{
 		foreach (int id in closeActivities)
@@ -239,7 +238,7 @@ public class ActivityController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600A201 RID: 41473 RVA: 0x0023C624 File Offset: 0x0023A824
+	// Token: 0x060075DF RID: 30175 RVA: 0x002464C0 File Offset: 0x002446C0
 	private void OnCrossDay()
 	{
 		this.RequestActivityData().ContinueWith(delegate(bool success)
@@ -253,7 +252,7 @@ public class ActivityController : ControllerBase
 		});
 	}
 
-	// Token: 0x0600A202 RID: 41474 RVA: 0x0023C651 File Offset: 0x0023A851
+	// Token: 0x060075E0 RID: 30176 RVA: 0x002464ED File Offset: 0x002446ED
 	private void CancelTimer()
 	{
 		if (this.CheckActivityTimer != null)
@@ -263,20 +262,20 @@ public class ActivityController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600A203 RID: 41475 RVA: 0x0023C673 File Offset: 0x0023A873
+	// Token: 0x060075E1 RID: 30177 RVA: 0x0024650F File Offset: 0x0024470F
 	private void InitTimer()
 	{
 		this.CancelTimer();
 		this.CheckActivityTimer = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.OnCheckActivityTimer), 600000f, 1f, null, null, false);
 	}
 
-	// Token: 0x0600A204 RID: 41476 RVA: 0x0023C6A4 File Offset: 0x0023A8A4
+	// Token: 0x060075E2 RID: 30178 RVA: 0x00246540 File Offset: 0x00244740
 	private void OnCheckActivityTimer(float delta)
 	{
 		this.RequestActivityData();
 	}
 
-	// Token: 0x0600A205 RID: 41477 RVA: 0x0023C6B0 File Offset: 0x0023A8B0
+	// Token: 0x060075E3 RID: 30179 RVA: 0x0024654C File Offset: 0x0024474C
 	[NullableContext(2)]
 	public bool OpenActivityById(int id = 0, EActivityViewOpenType openType = EActivityViewOpenType.Other, object activityOpenParam = null, Action<bool> finishCallback = null)
 	{
@@ -314,13 +313,13 @@ public class ActivityController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0600A206 RID: 41478 RVA: 0x0023C767 File Offset: 0x0023A967
+	// Token: 0x060075E4 RID: 30180 RVA: 0x00246603 File Offset: 0x00244803
 	public void OpenActivityContentView(ActivityBaseData data)
 	{
 		ActivityManager.GetActivityController(data.Type).OpenView(data);
 	}
 
-	// Token: 0x0600A207 RID: 41479 RVA: 0x0023C77C File Offset: 0x0023A97C
+	// Token: 0x060075E5 RID: 30181 RVA: 0x00246618 File Offset: 0x00244818
 	[NullableContext(2)]
 	public void JumpToViewOrOpenPreGuideQuest([Nullable(1)] ActivityBaseData data, EUiViewName unlockedJumpToViewName, object param = null, TOpenViewCallBack finishCallback = null)
 	{
@@ -337,7 +336,7 @@ public class ActivityController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600A208 RID: 41480 RVA: 0x0023C7C8 File Offset: 0x0023A9C8
+	// Token: 0x060075E6 RID: 30182 RVA: 0x00246664 File Offset: 0x00244864
 	[NullableContext(2)]
 	public void JumpAndLog([Nullable(1)] ActivityBaseData data, EUiViewName unlockedJumpToViewName, object param = null, TOpenViewCallBack finishCallback = null)
 	{
@@ -345,14 +344,14 @@ public class ActivityController : ControllerBase
 		ActivityModel.Instance.SendActivityViewJumpClickLogData(data);
 	}
 
-	// Token: 0x0600A209 RID: 41481 RVA: 0x0023C7E5 File Offset: 0x0023A9E5
+	// Token: 0x060075E7 RID: 30183 RVA: 0x00246681 File Offset: 0x00244881
 	public void JumpAndLog(ActivityBaseData data, Action onClicked)
 	{
 		onClicked();
 		ActivityModel.Instance.SendActivityViewJumpClickLogData(data);
 	}
 
-	// Token: 0x0600A20A RID: 41482 RVA: 0x0023C7F8 File Offset: 0x0023A9F8
+	// Token: 0x060075E8 RID: 30184 RVA: 0x00246694 File Offset: 0x00244894
 	public void JumpAndLog(ActivityBaseData data, Action<ActivityViewJumpClickLogData> onClicked)
 	{
 		ActivityViewJumpClickLogData defaultActivityViewJumpClickLogData = ActivityModel.Instance.GetDefaultActivityViewJumpClickLogData(data);
@@ -360,7 +359,7 @@ public class ActivityController : ControllerBase
 		ActivityModel.Instance.SendActivityViewJumpClickLogData(defaultActivityViewJumpClickLogData);
 	}
 
-	// Token: 0x0600A20B RID: 41483 RVA: 0x0023C824 File Offset: 0x0023AA24
+	// Token: 0x060075E9 RID: 30185 RVA: 0x002466C0 File Offset: 0x002448C0
 	[NullableContext(0)]
 	public UniTask<bool> RequestActivityData()
 	{
@@ -371,7 +370,7 @@ public class ActivityController : ControllerBase
 		return <RequestActivityData>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A20C RID: 41484 RVA: 0x0023C860 File Offset: 0x0023AA60
+	// Token: 0x060075EA RID: 30186 RVA: 0x002466FC File Offset: 0x002448FC
 	[NullableContext(2)]
 	public void RequestReadActivity(ActivityBaseData activityData)
 	{
@@ -389,7 +388,7 @@ public class ActivityController : ControllerBase
 				}
 				if (activityFirstReadResponse.ErrorCode != ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(activityFirstReadResponse.ErrorCode, 25958, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(activityFirstReadResponse.ErrorCode, 19193, null, true, true);
 				}
 				ActivityModel.Instance.OnReceiveActivityRead(activityData.Id);
 			}, 0);
@@ -397,7 +396,7 @@ public class ActivityController : ControllerBase
 		ActivityModel.Instance.OnReceiveActivityRead(activityData.Id);
 	}
 
-	// Token: 0x0600A20D RID: 41485 RVA: 0x0023C8D8 File Offset: 0x0023AAD8
+	// Token: 0x060075EB RID: 30187 RVA: 0x00246774 File Offset: 0x00244974
 	[NullableContext(2)]
 	public void RequestPreOpenActivity(ActivityBaseData activityData, Action<bool> callback)
 	{
@@ -423,7 +422,7 @@ public class ActivityController : ControllerBase
 			}
 			else if (activityPreOpenResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(activityPreOpenResponse.ErrorCode, 26244, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(activityPreOpenResponse.ErrorCode, 26181, null, true, true);
 				Action<bool> callback3 = callback;
 				if (callback3 == null)
 				{
@@ -446,38 +445,38 @@ public class ActivityController : ControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600A20E RID: 41486 RVA: 0x0023C948 File Offset: 0x0023AB48
+	// Token: 0x060075EC RID: 30188 RVA: 0x002467E4 File Offset: 0x002449E4
 	[NullableContext(2)]
 	private void OnActivityUpdateNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		ActivityUpdateNotify activityUpdateNotify = (ActivityUpdateNotify)msg;
-		ActivityModel.Instance.OnActivityUpdate(activityUpdateNotify.Activities.ToArray<ActivityData>());
+		ActivityModel.Instance.OnActivityUpdate(activityUpdateNotify.Activities);
 		this.CheckActivityActiveState();
 	}
 
-	// Token: 0x0600A20F RID: 41487 RVA: 0x0023C978 File Offset: 0x0023AB78
+	// Token: 0x060075ED RID: 30189 RVA: 0x00246810 File Offset: 0x00244A10
 	[NullableContext(2)]
 	private void OnActivityDisableNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		ActivityDisableNotify activityDisableNotify = (ActivityDisableNotify)msg;
-		ActivityModel.Instance.OnDisableActivity(activityDisableNotify.ActivityIds.ToArray<int>());
+		ActivityModel.Instance.OnDisableActivity(activityDisableNotify.ActivityIds);
 		this.CheckActivityActiveState();
 	}
 
-	// Token: 0x0600A210 RID: 41488 RVA: 0x0023C9A7 File Offset: 0x0023ABA7
+	// Token: 0x060075EE RID: 30190 RVA: 0x0024683A File Offset: 0x00244A3A
 	public ActivityBaseData CreateActivityData(ActivityData data)
 	{
 		return ActivityManager.GetActivityController(data.Type).CreateActivityData(data);
 	}
 
-	// Token: 0x0600A211 RID: 41489 RVA: 0x0023C9BA File Offset: 0x0023ABBA
+	// Token: 0x060075EF RID: 30191 RVA: 0x0024684D File Offset: 0x00244A4D
 	public bool IsOpeningActivityRelativeView(int type)
 	{
 		IActivityControllerBase activityController = ActivityManager.GetActivityController(type);
 		return activityController != null && activityController.GetIsOpeningActivityRelativeView();
 	}
 
-	// Token: 0x0600A212 RID: 41490 RVA: 0x0023C9D0 File Offset: 0x0023ABD0
+	// Token: 0x060075F0 RID: 30192 RVA: 0x00246860 File Offset: 0x00244A60
 	public void OpenActivityConditionView(int activityId)
 	{
 		if (activityId != 0)
@@ -487,7 +486,7 @@ public class ActivityController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600A213 RID: 41491 RVA: 0x0023C9F8 File Offset: 0x0023ABF8
+	// Token: 0x060075F1 RID: 30193 RVA: 0x00246888 File Offset: 0x00244A88
 	public void CheckIsActivityClose(int? type = null, int? activityId = null)
 	{
 		if (activityId != null)
@@ -516,8 +515,8 @@ public class ActivityController : ControllerBase
 		}
 	}
 
-	// Token: 0x17000DA6 RID: 3494
-	// (get) Token: 0x0600A214 RID: 41492 RVA: 0x0023CA98 File Offset: 0x0023AC98
+	// Token: 0x17000DC7 RID: 3527
+	// (get) Token: 0x060075F2 RID: 30194 RVA: 0x00246928 File Offset: 0x00244B28
 	public static ActivityController Instance
 	{
 		get
@@ -526,7 +525,7 @@ public class ActivityController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600A215 RID: 41493 RVA: 0x0023CA9F File Offset: 0x0023AC9F
+	// Token: 0x060075F3 RID: 30195 RVA: 0x0024692F File Offset: 0x00244B2F
 	public static ActivityController GetOrCreateInstance()
 	{
 		if (ActivityController._Instance == null)
@@ -536,7 +535,7 @@ public class ActivityController : ControllerBase
 		return ActivityController._Instance;
 	}
 
-	// Token: 0x0600A216 RID: 41494 RVA: 0x0023CAB3 File Offset: 0x0023ACB3
+	// Token: 0x060075F4 RID: 30196 RVA: 0x00246943 File Offset: 0x00244B43
 	public static bool CreateInstance()
 	{
 		if (ActivityController._Instance != null)
@@ -547,45 +546,45 @@ public class ActivityController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0600A217 RID: 41495 RVA: 0x0023CAC9 File Offset: 0x0023ACC9
+	// Token: 0x060075F5 RID: 30197 RVA: 0x00246959 File Offset: 0x00244B59
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600A218 RID: 41496 RVA: 0x0023CACB File Offset: 0x0023ACCB
+	// Token: 0x060075F6 RID: 30198 RVA: 0x0024695B File Offset: 0x00244B5B
 	public static void ResetStaticDefaultValue()
 	{
 		ActivityController._Instance = null;
 	}
 
-	// Token: 0x0600A219 RID: 41497 RVA: 0x0023CAD3 File Offset: 0x0023ACD3
+	// Token: 0x060075F7 RID: 30199 RVA: 0x00246963 File Offset: 0x00244B63
 	static ActivityController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActivityController.CreateStaticDefaultValue), new Action(ActivityController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600A21B RID: 41499 RVA: 0x0023CB05 File Offset: 0x0023AD05
+	// Token: 0x060075F9 RID: 30201 RVA: 0x00246995 File Offset: 0x00244B95
 	[CompilerGenerated]
 	internal static void <ShowActivityRefreshAndBackToBattleView>g__ConfirmCallback|17_0()
 	{
 		UiManager.Instance.ResetToBattleView(null);
 	}
 
-	// Token: 0x040049C7 RID: 18887
+	// Token: 0x04004A6D RID: 19053
 	[Nullable(2)]
 	private TimerHandle CheckActivityTimer;
 
-	// Token: 0x040049C8 RID: 18888
+	// Token: 0x04004A6E RID: 19054
 	private bool IsDataInit;
 
-	// Token: 0x040049C9 RID: 18889
+	// Token: 0x04004A6F RID: 19055
 	[Nullable(2)]
 	private TimerHandle RefreshTimer;
 
-	// Token: 0x040049CA RID: 18890
+	// Token: 0x04004A70 RID: 19056
 	private HashSet<Action<float>> RefreshTimerDelegateSet = new HashSet<Action<float>>();
 
-	// Token: 0x040049CB RID: 18891
+	// Token: 0x04004A71 RID: 19057
 	[Nullable(2)]
 	private static ActivityController _Instance;
 }

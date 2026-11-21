@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CBB RID: 23739
+	// Token: 0x02004C9D RID: 19613
 	public class CommonTopButtonPanel : BattleEntranceButton
 	{
-		// Token: 0x0603C014 RID: 245780 RVA: 0x00E585AC File Offset: 0x00E567AC
+		// Token: 0x06030F67 RID: 200551 RVA: 0x00DA8C54 File Offset: 0x00DA6E54
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603C015 RID: 245781 RVA: 0x00E58674 File Offset: 0x00E56874
+		// Token: 0x06030F68 RID: 200552 RVA: 0x00DA8D1C File Offset: 0x00DA6F1C
 		[NullableContext(2)]
 		public override void Initialize(object param = null)
 		{
@@ -48,14 +48,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.Initialize(param);
 		}
 
-		// Token: 0x0200BEAB RID: 48811
+		// Token: 0x0200A8B1 RID: 43185
 		private enum EBtn
 		{
-			// Token: 0x040397FE RID: 235518
+			// Token: 0x040341BF RID: 213439
 			Btn,
-			// Token: 0x040397FF RID: 235519
+			// Token: 0x040341C0 RID: 213440
 			RedDot,
-			// Token: 0x04039800 RID: 235520
+			// Token: 0x040341C1 RID: 213441
 			Icon
 		}
 	}

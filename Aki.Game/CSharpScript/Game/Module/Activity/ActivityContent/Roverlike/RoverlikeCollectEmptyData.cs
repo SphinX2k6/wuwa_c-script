@@ -3,14 +3,14 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006197 RID: 24983
+	// Token: 0x02005115 RID: 20757
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RoverlikeCollectEmptyData : IRoverlikeCollectEmptyData
 	{
-		// Token: 0x170091FB RID: 37371
-		// (get) Token: 0x0603F1E3 RID: 258531 RVA: 0x00F3F2F1 File Offset: 0x00F3D4F1
-		// (set) Token: 0x0603F1E4 RID: 258532 RVA: 0x00F3F2F9 File Offset: 0x00F3D4F9
+		// Token: 0x1700655D RID: 25949
+		// (get) Token: 0x06033EA3 RID: 212643 RVA: 0x00E861B9 File Offset: 0x00E843B9
+		// (set) Token: 0x06033EA4 RID: 212644 RVA: 0x00E861C1 File Offset: 0x00E843C1
 		public string Txt { get; set; }
 	}
 }

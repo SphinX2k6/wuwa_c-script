@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D12 RID: 23826
+	// Token: 0x02004CF4 RID: 19700
 	public enum ECustomStyleBuffItemType
 	{
-		// Token: 0x0401F77F RID: 128895
+		// Token: 0x0401A238 RID: 107064
 		QuickHack
 	}
 }

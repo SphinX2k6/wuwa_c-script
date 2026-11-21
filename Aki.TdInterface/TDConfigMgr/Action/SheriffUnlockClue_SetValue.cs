@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021FA RID: 8698
+	// Token: 0x02002465 RID: 9317
 	public class SheriffUnlockClue_SetValue
 	{
-		// Token: 0x040071E5 RID: 29157
+		// Token: 0x0400782E RID: 30766
 		public int ClueId;
 	}
 }

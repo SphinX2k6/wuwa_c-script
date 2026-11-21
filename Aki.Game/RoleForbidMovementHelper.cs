@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02003233 RID: 12851
+// Token: 0x020027A2 RID: 10146
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleForbidMovementHelper
 {
-	// Token: 0x0601BB67 RID: 113511 RVA: 0x007A0C64 File Offset: 0x0079EE64
+	// Token: 0x060196EC RID: 104172 RVA: 0x007C9570 File Offset: 0x007C7770
 	public void RegisterMutuallyTags(List<int> mutuallyTags)
 	{
 		foreach (int key in mutuallyTags)
@@ -26,7 +26,7 @@ public class RoleForbidMovementHelper
 		}
 	}
 
-	// Token: 0x0601BB68 RID: 113512 RVA: 0x007A0D0C File Offset: 0x0079EF0C
+	// Token: 0x060196ED RID: 104173 RVA: 0x007C9618 File Offset: 0x007C7818
 	public void Awake()
 	{
 		foreach (KeyValuePair<int, LimitTagHandler> keyValuePair in this.Handlers)
@@ -36,7 +36,7 @@ public class RoleForbidMovementHelper
 		}
 	}
 
-	// Token: 0x0601BB69 RID: 113513 RVA: 0x007A0D7C File Offset: 0x0079EF7C
+	// Token: 0x060196EE RID: 104174 RVA: 0x007C9688 File Offset: 0x007C7888
 	public void ActiveHandler(LimitTagHandler activeHandler, bool active)
 	{
 		activeHandler.Active = active;
@@ -54,7 +54,7 @@ public class RoleForbidMovementHelper
 		this.CurrentActiveHandlers.RemoveAt(num);
 	}
 
-	// Token: 0x0601BB6A RID: 113514 RVA: 0x007A0DCC File Offset: 0x0079EFCC
+	// Token: 0x060196EF RID: 104175 RVA: 0x007C96D8 File Offset: 0x007C78D8
 	private void TagCallback(int addOrRemoveTagId, bool gameplayTagExist)
 	{
 		LimitTagHandler valueOrDefault = this.Handlers.GetValueOrDefault(addOrRemoveTagId);
@@ -122,7 +122,7 @@ public class RoleForbidMovementHelper
 		this.ActiveHandler(valueOrDefault, true);
 	}
 
-	// Token: 0x0601BB6B RID: 113515 RVA: 0x007A0F58 File Offset: 0x0079F158
+	// Token: 0x060196F0 RID: 104176 RVA: 0x007C9864 File Offset: 0x007C7A64
 	public void CreateTagHandler(int tagId, int priority, Action<bool> callBack)
 	{
 		bool tagExist = this.TagComp.HasTag(tagId);
@@ -130,7 +130,7 @@ public class RoleForbidMovementHelper
 		this.TagListeners.Add(this.TagComp.ListenForTagAddOrRemove(new int?(tagId), new BaseTagComponent.TTagSwitchedCallback(this.TagCallback), null));
 	}
 
-	// Token: 0x0601BB6C RID: 113516 RVA: 0x007A0FB0 File Offset: 0x0079F1B0
+	// Token: 0x060196F1 RID: 104177 RVA: 0x007C98BC File Offset: 0x007C7ABC
 	public void Clear()
 	{
 		this.CurrentActiveHandlers.Clear();
@@ -142,16 +142,16 @@ public class RoleForbidMovementHelper
 		this.TagListeners.Clear();
 	}
 
-	// Token: 0x0400DA52 RID: 55890
+	// Token: 0x0400DEF1 RID: 57073
 	[Nullable(2)]
 	public BaseTagComponent TagComp;
 
-	// Token: 0x0400DA53 RID: 55891
+	// Token: 0x0400DEF2 RID: 57074
 	private readonly List<ITagTask> TagListeners = new List<ITagTask>();
 
-	// Token: 0x0400DA54 RID: 55892
+	// Token: 0x0400DEF3 RID: 57075
 	public List<LimitTagHandler> CurrentActiveHandlers = new List<LimitTagHandler>();
 
-	// Token: 0x0400DA55 RID: 55893
+	// Token: 0x0400DEF4 RID: 57076
 	public Dictionary<int, LimitTagHandler> Handlers = new Dictionary<int, LimitTagHandler>();
 }

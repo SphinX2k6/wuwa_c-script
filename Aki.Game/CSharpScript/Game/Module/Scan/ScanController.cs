@@ -8,13 +8,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Scan
 {
-	// Token: 0x02004C93 RID: 19603
+	// Token: 0x02003C44 RID: 15428
 	[NullableContext(1)]
 	[Nullable(0)]
 	[TickController(0)]
 	public class ScanController : ControllerBase
 	{
-		// Token: 0x06032AAA RID: 207530 RVA: 0x00BD18FC File Offset: 0x00BCFAFC
+		// Token: 0x0602785D RID: 161885 RVA: 0x00B16560 File Offset: 0x00B14760
 		public void StartScan()
 		{
 			LevelGamePlayConfig instance = LevelGamePlayConfig.Instance;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.Scan
 			this.ScanDataCache[scanData.Id] = scanData;
 		}
 
-		// Token: 0x06032AAB RID: 207531 RVA: 0x00BD1A1C File Offset: 0x00BCFC1C
+		// Token: 0x0602785E RID: 161886 RVA: 0x00B16680 File Offset: 0x00B14880
 		private bool ScanEffectTick(float delta, int id)
 		{
 			ScanData scanData;
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.Scan
 			return false;
 		}
 
-		// Token: 0x06032AAC RID: 207532 RVA: 0x00BD1A98 File Offset: 0x00BCFC98
+		// Token: 0x0602785F RID: 161887 RVA: 0x00B166FC File Offset: 0x00B148FC
 		protected override void OnTick(float delta)
 		{
 			List<int> list = new List<int>();
@@ -91,8 +91,8 @@ namespace CSharpScript.Game.Module.Scan
 			}
 		}
 
-		// Token: 0x17007D03 RID: 32003
-		// (get) Token: 0x06032AAD RID: 207533 RVA: 0x00BD1B50 File Offset: 0x00BCFD50
+		// Token: 0x170050AD RID: 20653
+		// (get) Token: 0x06027860 RID: 161888 RVA: 0x00B167B4 File Offset: 0x00B149B4
 		public static ScanController Instance
 		{
 			get
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.Scan
 			}
 		}
 
-		// Token: 0x06032AAE RID: 207534 RVA: 0x00BD1B57 File Offset: 0x00BCFD57
+		// Token: 0x06027861 RID: 161889 RVA: 0x00B167BB File Offset: 0x00B149BB
 		public static ScanController GetOrCreateInstance()
 		{
 			if (ScanController._Instance == null)
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.Scan
 			return ScanController._Instance;
 		}
 
-		// Token: 0x06032AAF RID: 207535 RVA: 0x00BD1B6B File Offset: 0x00BCFD6B
+		// Token: 0x06027862 RID: 161890 RVA: 0x00B167CF File Offset: 0x00B149CF
 		public static bool CreateInstance()
 		{
 			if (ScanController._Instance != null)
@@ -122,33 +122,33 @@ namespace CSharpScript.Game.Module.Scan
 			return true;
 		}
 
-		// Token: 0x06032AB0 RID: 207536 RVA: 0x00BD1B81 File Offset: 0x00BCFD81
+		// Token: 0x06027863 RID: 161891 RVA: 0x00B167E5 File Offset: 0x00B149E5
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06032AB1 RID: 207537 RVA: 0x00BD1B83 File Offset: 0x00BCFD83
+		// Token: 0x06027864 RID: 161892 RVA: 0x00B167E7 File Offset: 0x00B149E7
 		public static void ResetStaticDefaultValue()
 		{
 			ScanController._Instance = null;
 		}
 
-		// Token: 0x06032AB2 RID: 207538 RVA: 0x00BD1B8B File Offset: 0x00BCFD8B
+		// Token: 0x06027865 RID: 161893 RVA: 0x00B167EF File Offset: 0x00B149EF
 		static ScanController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ScanController.CreateStaticDefaultValue), new Action(ScanController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401AF8E RID: 110478
+		// Token: 0x040158EB RID: 88299
 		private readonly Dictionary<int, ScanData> ScanDataCache = new Dictionary<int, ScanData>();
 
-		// Token: 0x0401AF8F RID: 110479
+		// Token: 0x040158EC RID: 88300
 		private readonly Stat SpawnStat = Stat.Create("ScanController.StartScan", "", "");
 
-		// Token: 0x0401AF90 RID: 110480
+		// Token: 0x040158ED RID: 88301
 		private readonly Stat TickStat = Stat.Create("ScanController.Tick", "", "");
 
-		// Token: 0x0401AF91 RID: 110481
+		// Token: 0x040158EE RID: 88302
 		[Nullable(2)]
 		private static ScanController _Instance;
 	}

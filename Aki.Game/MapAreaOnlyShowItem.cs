@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001ABD RID: 6845
+// Token: 0x02000F7C RID: 3964
 [NullableContext(1)]
 [Nullable(0)]
 public class MapAreaOnlyShowItem : UiPanelBase
 {
-	// Token: 0x0600CAE6 RID: 51942 RVA: 0x002E3DA0 File Offset: 0x002E1FA0
+	// Token: 0x06009EF7 RID: 40695 RVA: 0x002EEF24 File Offset: 0x002ED124
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -32,7 +32,7 @@ public class MapAreaOnlyShowItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600CAE7 RID: 51943 RVA: 0x002E3E8D File Offset: 0x002E208D
+	// Token: 0x06009EF8 RID: 40696 RVA: 0x002EF011 File Offset: 0x002ED211
 	protected override void OnBeforeCreate()
 	{
 		this.Sequence = new LevelSequencePlayer(this.RootItem);
@@ -44,7 +44,7 @@ public class MapAreaOnlyShowItem : UiPanelBase
 		sequence.BindSequenceCloseEvent(new TSequenceEndEvent(this.SequenceCloseEvent), false);
 	}
 
-	// Token: 0x0600CAE8 RID: 51944 RVA: 0x002E3EC0 File Offset: 0x002E20C0
+	// Token: 0x06009EF9 RID: 40697 RVA: 0x002EF044 File Offset: 0x002ED244
 	public void Refresh(IMapAreaOnlyShowItemData data, int? index = null)
 	{
 		this.Index = index.GetValueOrDefault();
@@ -80,7 +80,7 @@ public class MapAreaOnlyShowItem : UiPanelBase
 		sprite2.SetUIActive(uiactive);
 	}
 
-	// Token: 0x0600CAE9 RID: 51945 RVA: 0x002E3FA3 File Offset: 0x002E21A3
+	// Token: 0x06009EFA RID: 40698 RVA: 0x002EF127 File Offset: 0x002ED327
 	protected override void OnBeforeDestroy()
 	{
 		LevelSequencePlayer sequence = this.Sequence;
@@ -91,7 +91,7 @@ public class MapAreaOnlyShowItem : UiPanelBase
 		this.Sequence = null;
 	}
 
-	// Token: 0x0600CAEA RID: 51946 RVA: 0x002E3FC0 File Offset: 0x002E21C0
+	// Token: 0x06009EFB RID: 40699 RVA: 0x002EF144 File Offset: 0x002ED344
 	private void SequenceCloseEvent(string sequenceName)
 	{
 		if (!(sequenceName != "Unlock04".ToString()))
@@ -119,7 +119,7 @@ public class MapAreaOnlyShowItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600CAEB RID: 51947 RVA: 0x002E403C File Offset: 0x002E223C
+	// Token: 0x06009EFC RID: 40700 RVA: 0x002EF1C0 File Offset: 0x002ED3C0
 	public void StopSequenceToFirst()
 	{
 		LevelSequencePlayer sequence = this.Sequence;
@@ -135,7 +135,7 @@ public class MapAreaOnlyShowItem : UiPanelBase
 		sequence2.PlayLevelSequenceByName("FirstStart", false, null, false);
 	}
 
-	// Token: 0x04005D62 RID: 23906
+	// Token: 0x04005E31 RID: 24113
 	[StaticVariableRuleIgnore]
 	private static readonly string[] lockKeys = new string[]
 	{
@@ -145,32 +145,32 @@ public class MapAreaOnlyShowItem : UiPanelBase
 		"Unlock04"
 	};
 
-	// Token: 0x04005D63 RID: 23907
+	// Token: 0x04005E32 RID: 24114
 	[Nullable(2)]
 	private LevelSequencePlayer Sequence;
 
-	// Token: 0x04005D64 RID: 23908
+	// Token: 0x04005E33 RID: 24115
 	private int Index;
 
-	// Token: 0x04005D65 RID: 23909
+	// Token: 0x04005E34 RID: 24116
 	[Nullable(2)]
 	private IMapAreaOnlyShowItemData Data;
 
-	// Token: 0x02008015 RID: 32789
+	// Token: 0x020071A4 RID: 29092
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x04029D03 RID: 171267
+		// Token: 0x0402503C RID: 151612
 		TextureAreaIcon,
-		// Token: 0x04029D04 RID: 171268
+		// Token: 0x0402503D RID: 151613
 		SpriteMask1,
-		// Token: 0x04029D05 RID: 171269
+		// Token: 0x0402503E RID: 151614
 		SpriteMask2,
-		// Token: 0x04029D06 RID: 171270
+		// Token: 0x0402503F RID: 151615
 		SpriteMask3,
-		// Token: 0x04029D07 RID: 171271
+		// Token: 0x04025040 RID: 151616
 		SpriteMask4,
-		// Token: 0x04029D08 RID: 171272
+		// Token: 0x04025041 RID: 151617
 		SpriteMaskLine
 	}
 }

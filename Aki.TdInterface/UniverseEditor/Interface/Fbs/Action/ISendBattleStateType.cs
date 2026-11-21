@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006F69 RID: 28521
+	// Token: 0x0200772C RID: 30508
 	public struct ISendBattleStateType : IFlatbufferObject
 	{
-		// Token: 0x1700D3E6 RID: 54246
-		// (get) Token: 0x0603263B RID: 206395 RVA: 0x006CD758 File Offset: 0x006CB958
+		// Token: 0x1700DFB2 RID: 57266
+		// (get) Token: 0x06035879 RID: 219257 RVA: 0x0072CF98 File Offset: 0x0072B198
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603263C RID: 206396 RVA: 0x006CD765 File Offset: 0x006CB965
+		// Token: 0x0603587A RID: 219258 RVA: 0x0072CFA5 File Offset: 0x0072B1A5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0603263D RID: 206397 RVA: 0x006CD76C File Offset: 0x006CB96C
+		// Token: 0x0603587B RID: 219259 RVA: 0x0072CFAC File Offset: 0x0072B1AC
 		public static ISendBattleStateType GetRootAsISendBattleStateType(ByteBuffer _bb)
 		{
 			return ISendBattleStateType.GetRootAsISendBattleStateType(_bb, default(ISendBattleStateType));
 		}
 
-		// Token: 0x0603263E RID: 206398 RVA: 0x006CD788 File Offset: 0x006CB988
+		// Token: 0x0603587C RID: 219260 RVA: 0x0072CFC8 File Offset: 0x0072B1C8
 		public static ISendBattleStateType GetRootAsISendBattleStateType(ByteBuffer _bb, ISendBattleStateType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0603263F RID: 206399 RVA: 0x006CD7A5 File Offset: 0x006CB9A5
+		// Token: 0x0603587D RID: 219261 RVA: 0x0072CFE5 File Offset: 0x0072B1E5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06032640 RID: 206400 RVA: 0x006CD7B4 File Offset: 0x006CB9B4
+		// Token: 0x0603587E RID: 219262 RVA: 0x0072CFF4 File Offset: 0x0072B1F4
 		public ISendBattleStateType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D3E7 RID: 54247
-		// (get) Token: 0x06032641 RID: 206401 RVA: 0x006CD7C4 File Offset: 0x006CB9C4
+		// Token: 0x1700DFB3 RID: 57267
+		// (get) Token: 0x0603587F RID: 219263 RVA: 0x0072D004 File Offset: 0x0072B204
 		public ESetBattleStateType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032642 RID: 206402 RVA: 0x006CD800 File Offset: 0x006CBA00
+		// Token: 0x06035880 RID: 219264 RVA: 0x0072D040 File Offset: 0x0072B240
 		public static Offset<ISendBattleStateType> CreateISendBattleStateType(FlatBufferBuilder builder, ESetBattleStateType Type = ESetBattleStateType.SetBattleTag)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISendBattleStateType.EndISendBattleStateType(builder);
 		}
 
-		// Token: 0x06032643 RID: 206403 RVA: 0x006CD816 File Offset: 0x006CBA16
+		// Token: 0x06035881 RID: 219265 RVA: 0x0072D056 File Offset: 0x0072B256
 		public static void StartISendBattleStateType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06032644 RID: 206404 RVA: 0x006CD81F File Offset: 0x006CBA1F
+		// Token: 0x06035882 RID: 219266 RVA: 0x0072D05F File Offset: 0x0072B25F
 		public static void AddType(FlatBufferBuilder builder, ESetBattleStateType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06032645 RID: 206405 RVA: 0x006CD82A File Offset: 0x006CBA2A
+		// Token: 0x06035883 RID: 219267 RVA: 0x0072D06A File Offset: 0x0072B26A
 		public static Offset<ISendBattleStateType> EndISendBattleStateType(FlatBufferBuilder builder)
 		{
 			return new Offset<ISendBattleStateType>(builder.EndTable());
 		}
 
-		// Token: 0x06032646 RID: 206406 RVA: 0x006CD838 File Offset: 0x006CBA38
+		// Token: 0x06035884 RID: 219268 RVA: 0x0072D078 File Offset: 0x0072B278
 		public ISendBattleStateTypeT UnPack()
 		{
 			ISendBattleStateTypeT sendBattleStateTypeT = new ISendBattleStateTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return sendBattleStateTypeT;
 		}
 
-		// Token: 0x06032647 RID: 206407 RVA: 0x006CD853 File Offset: 0x006CBA53
+		// Token: 0x06035885 RID: 219269 RVA: 0x0072D093 File Offset: 0x0072B293
 		public void UnPackTo(ISendBattleStateTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x06032648 RID: 206408 RVA: 0x006CD864 File Offset: 0x006CBA64
+		// Token: 0x06035886 RID: 219270 RVA: 0x0072D0A4 File Offset: 0x0072B2A4
 		public static Offset<ISendBattleStateType> Pack(FlatBufferBuilder builder, ISendBattleStateTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISendBattleStateType.CreateISendBattleStateType(builder, _o.Type);
 		}
 
-		// Token: 0x04011963 RID: 72035
+		// Token: 0x04012943 RID: 76099
 		private Table __p;
 	}
 }

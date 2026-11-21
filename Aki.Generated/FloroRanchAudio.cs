@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000CA0 RID: 3232
+	// Token: 0x02000D84 RID: 3460
 	public struct FloroRanchAudio : IFlatbufferObject
 	{
-		// Token: 0x17001299 RID: 4761
-		// (get) Token: 0x06007263 RID: 29283 RVA: 0x00238C2D File Offset: 0x00236E2D
+		// Token: 0x170012F6 RID: 4854
+		// (get) Token: 0x0600786E RID: 30830 RVA: 0x00257BD9 File Offset: 0x00255DD9
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007264 RID: 29284 RVA: 0x00238C3A File Offset: 0x00236E3A
+		// Token: 0x0600786F RID: 30831 RVA: 0x00257BE6 File Offset: 0x00255DE6
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06007265 RID: 29285 RVA: 0x00238C44 File Offset: 0x00236E44
+		// Token: 0x06007870 RID: 30832 RVA: 0x00257BF0 File Offset: 0x00255DF0
 		public static FloroRanchAudio GetRootAsFloroRanchAudio(ByteBuffer _bb)
 		{
 			return FloroRanchAudio.GetRootAsFloroRanchAudio(_bb, default(FloroRanchAudio));
 		}
 
-		// Token: 0x06007266 RID: 29286 RVA: 0x00238C60 File Offset: 0x00236E60
+		// Token: 0x06007871 RID: 30833 RVA: 0x00257C0C File Offset: 0x00255E0C
 		public static FloroRanchAudio GetRootAsFloroRanchAudio(ByteBuffer _bb, FloroRanchAudio obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06007267 RID: 29287 RVA: 0x00238C7D File Offset: 0x00236E7D
+		// Token: 0x06007872 RID: 30834 RVA: 0x00257C29 File Offset: 0x00255E29
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06007268 RID: 29288 RVA: 0x00238C8C File Offset: 0x00236E8C
+		// Token: 0x06007873 RID: 30835 RVA: 0x00257C38 File Offset: 0x00255E38
 		public FloroRanchAudio __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700129A RID: 4762
-		// (get) Token: 0x06007269 RID: 29289 RVA: 0x00238C9C File Offset: 0x00236E9C
+		// Token: 0x170012F7 RID: 4855
+		// (get) Token: 0x06007874 RID: 30836 RVA: 0x00257C48 File Offset: 0x00255E48
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700129B RID: 4763
-		// (get) Token: 0x0600726A RID: 29290 RVA: 0x00238CD8 File Offset: 0x00236ED8
+		// Token: 0x170012F8 RID: 4856
+		// (get) Token: 0x06007875 RID: 30837 RVA: 0x00257C84 File Offset: 0x00255E84
 		public int CharacterType
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700129C RID: 4764
-		// (get) Token: 0x0600726B RID: 29291 RVA: 0x00238D14 File Offset: 0x00236F14
+		// Token: 0x170012F9 RID: 4857
+		// (get) Token: 0x06007876 RID: 30838 RVA: 0x00257CC0 File Offset: 0x00255EC0
 		public int Type
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700129D RID: 4765
-		// (get) Token: 0x0600726C RID: 29292 RVA: 0x00238D50 File Offset: 0x00236F50
+		// Token: 0x170012FA RID: 4858
+		// (get) Token: 0x06007877 RID: 30839 RVA: 0x00257CFC File Offset: 0x00255EFC
 		public string Text
 		{
 			get
@@ -107,20 +107,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600726D RID: 29293 RVA: 0x00238D88 File Offset: 0x00236F88
+		// Token: 0x06007878 RID: 30840 RVA: 0x00257D34 File Offset: 0x00255F34
 		public Span<byte> GetTextBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0600726E RID: 29294 RVA: 0x00238D98 File Offset: 0x00236F98
+		// Token: 0x06007879 RID: 30841 RVA: 0x00257D44 File Offset: 0x00255F44
 		public byte[] GetTextArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700129E RID: 4766
-		// (get) Token: 0x0600726F RID: 29295 RVA: 0x00238DB0 File Offset: 0x00236FB0
+		// Token: 0x170012FB RID: 4859
+		// (get) Token: 0x0600787A RID: 30842 RVA: 0x00257D5C File Offset: 0x00255F5C
 		public string AudioEvent
 		{
 			get
@@ -134,19 +134,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007270 RID: 29296 RVA: 0x00238DE8 File Offset: 0x00236FE8
+		// Token: 0x0600787B RID: 30843 RVA: 0x00257D94 File Offset: 0x00255F94
 		public Span<byte> GetAudioEventBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x06007271 RID: 29297 RVA: 0x00238DF8 File Offset: 0x00236FF8
+		// Token: 0x0600787C RID: 30844 RVA: 0x00257DA4 File Offset: 0x00255FA4
 		public byte[] GetAudioEventArray()
 		{
 			return this.__p.__vector_as_array<byte>(12) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04004CFE RID: 19710
+		// Token: 0x040052E2 RID: 21218
 		private Table __p;
 	}
 }

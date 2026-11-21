@@ -7,13 +7,13 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 {
-	// Token: 0x0200637D RID: 25469
+	// Token: 0x020052FB RID: 21243
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class NewbieMainData : ActivityBaseData
 	{
-		// Token: 0x17009351 RID: 37713
-		// (get) Token: 0x060400FB RID: 262395 RVA: 0x00F7FF78 File Offset: 0x00F7E178
+		// Token: 0x170066B3 RID: 26291
+		// (get) Token: 0x06034DBC RID: 216508 RVA: 0x00EC6EDC File Offset: 0x00EC50DC
 		public int ProgressScore
 		{
 			get
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			}
 		}
 
-		// Token: 0x060400FC RID: 262396 RVA: 0x00F7FF80 File Offset: 0x00F7E180
+		// Token: 0x06034DBD RID: 216509 RVA: 0x00EC6EE4 File Offset: 0x00EC50E4
 		protected override void PhraseEx(ActivityData data)
 		{
 			NewbieMainActivityPb newbieMainActivityPb = data.NewbieMainActivityPb;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			this.ProgressScoreInternal = newbieMainActivityPb.ProgressScore;
 		}
 
-		// Token: 0x060400FD RID: 262397 RVA: 0x00F7FFBC File Offset: 0x00F7E1BC
+		// Token: 0x06034DBE RID: 216510 RVA: 0x00EC6F20 File Offset: 0x00EC5120
 		private void ParseTabs(IList<NewbieMainTabPb> tabs)
 		{
 			this.TabDataMap.Clear();
@@ -51,13 +51,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			}
 		}
 
-		// Token: 0x060400FE RID: 262398 RVA: 0x00F80038 File Offset: 0x00F7E238
+		// Token: 0x06034DBF RID: 216511 RVA: 0x00EC6F9C File Offset: 0x00EC519C
 		private void ParseTakenRewards(IList<int> ids)
 		{
 			this.TakenScoreRewardIds = new HashSet<int>(ids ?? new List<int>());
 		}
 
-		// Token: 0x060400FF RID: 262399 RVA: 0x00F80050 File Offset: 0x00F7E250
+		// Token: 0x06034DC0 RID: 216512 RVA: 0x00EC6FB4 File Offset: 0x00EC51B4
 		public void UpdateTabs(IList<NewbieMainTabPb> tabs)
 		{
 			if (tabs == null)
@@ -76,13 +76,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			}
 		}
 
-		// Token: 0x06040100 RID: 262400 RVA: 0x00F800D4 File Offset: 0x00F7E2D4
+		// Token: 0x06034DC1 RID: 216513 RVA: 0x00EC7038 File Offset: 0x00EC5238
 		public void UpdateProgressScore(int score)
 		{
 			this.ProgressScoreInternal = score;
 		}
 
-		// Token: 0x06040101 RID: 262401 RVA: 0x00F800E0 File Offset: 0x00F7E2E0
+		// Token: 0x06034DC2 RID: 216514 RVA: 0x00EC7044 File Offset: 0x00EC5244
 		public void AddTakenScoreRewardIds(IList<int> ids)
 		{
 			foreach (int item in ids)
@@ -92,19 +92,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 		}
 
-		// Token: 0x06040102 RID: 262402 RVA: 0x00F80144 File Offset: 0x00F7E344
+		// Token: 0x06034DC3 RID: 216515 RVA: 0x00EC70A8 File Offset: 0x00EC52A8
 		public bool IsScoreRewardTaken(int rewardId)
 		{
 			return this.TakenScoreRewardIds.Contains(rewardId);
 		}
 
-		// Token: 0x06040103 RID: 262403 RVA: 0x00F80152 File Offset: 0x00F7E352
+		// Token: 0x06034DC4 RID: 216516 RVA: 0x00EC70B6 File Offset: 0x00EC52B6
 		public HashSet<int> GetTakenScoreRewardIds()
 		{
 			return this.TakenScoreRewardIds;
 		}
 
-		// Token: 0x06040104 RID: 262404 RVA: 0x00F8015C File Offset: 0x00F7E35C
+		// Token: 0x06034DC5 RID: 216517 RVA: 0x00EC70C0 File Offset: 0x00EC52C0
 		[NullableContext(2)]
 		public NewbieMainTabData GetTabData(int tabId)
 		{
@@ -116,13 +116,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			return result;
 		}
 
-		// Token: 0x06040105 RID: 262405 RVA: 0x00F8017C File Offset: 0x00F7E37C
+		// Token: 0x06034DC6 RID: 216518 RVA: 0x00EC70E0 File Offset: 0x00EC52E0
 		public Dictionary<int, NewbieMainTabData> GetAllTabData()
 		{
 			return this.TabDataMap;
 		}
 
-		// Token: 0x06040106 RID: 262406 RVA: 0x00F80184 File Offset: 0x00F7E384
+		// Token: 0x06034DC7 RID: 216519 RVA: 0x00EC70E8 File Offset: 0x00EC52E8
 		public override bool GetExDataRedPointShowState()
 		{
 			IReadOnlyList<NewbieMainActReward> rewardListByActivityId = NewbieMainConfig.Instance.GetRewardListByActivityId(base.Id);
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			return false;
 		}
 
-		// Token: 0x06040107 RID: 262407 RVA: 0x00F80208 File Offset: 0x00F7E408
+		// Token: 0x06034DC8 RID: 216520 RVA: 0x00EC716C File Offset: 0x00EC536C
 		protected override bool GetExDataFinishShowState()
 		{
 			IReadOnlyList<NewbieMainActReward> rewardListByActivityId = NewbieMainConfig.Instance.GetRewardListByActivityId(base.Id);
@@ -158,13 +158,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.NewbieMain
 			return true;
 		}
 
-		// Token: 0x04021617 RID: 136727
+		// Token: 0x0401BF46 RID: 114502
 		private readonly Dictionary<int, NewbieMainTabData> TabDataMap = new Dictionary<int, NewbieMainTabData>();
 
-		// Token: 0x04021618 RID: 136728
+		// Token: 0x0401BF47 RID: 114503
 		private HashSet<int> TakenScoreRewardIds = new HashSet<int>();
 
-		// Token: 0x04021619 RID: 136729
+		// Token: 0x0401BF48 RID: 114504
 		private int ProgressScoreInternal;
 	}
 }

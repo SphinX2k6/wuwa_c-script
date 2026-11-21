@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 {
-	// Token: 0x020051D1 RID: 20945
+	// Token: 0x020041A1 RID: 16801
 	public class CardElementItem : GridProxyAbstract<ECardElement>
 	{
-		// Token: 0x060359CC RID: 219596 RVA: 0x00CB3B24 File Offset: 0x00CB1D24
+		// Token: 0x0602A8C7 RID: 174279 RVA: 0x00C01160 File Offset: 0x00BFF360
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -19,13 +19,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 			};
 		}
 
-		// Token: 0x060359CD RID: 219597 RVA: 0x00CB3B5D File Offset: 0x00CB1D5D
+		// Token: 0x0602A8C8 RID: 174280 RVA: 0x00C01199 File Offset: 0x00BFF399
 		public override void Refresh(ECardElement data, bool isSelected = false, int gridIndex = 0)
 		{
 			this.RefreshElement(data);
 		}
 
-		// Token: 0x060359CE RID: 219598 RVA: 0x00CB3B68 File Offset: 0x00CB1D68
+		// Token: 0x0602A8C9 RID: 174281 RVA: 0x00C011A4 File Offset: 0x00BFF3A4
 		public void RefreshElement(ECardElement elementId)
 		{
 			if (elementId == ECardElement.Physical)
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 			base.SetTextureByPath(phantomBattleElementConfig.CardElementIcon, texture, null, null);
 		}
 
-		// Token: 0x060359CF RID: 219599 RVA: 0x00CB3BD4 File Offset: 0x00CB1DD4
+		// Token: 0x0602A8CA RID: 174282 RVA: 0x00C01210 File Offset: 0x00BFF410
 		public void RefreshElementTabIcon(ECardElement elementId)
 		{
 			if (elementId == ECardElement.Physical)
@@ -65,13 +65,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 			base.SetTextureByPath(phantomBattleElementConfig.TabIcon, texture, null, null);
 		}
 
-		// Token: 0x0200B361 RID: 45921
+		// Token: 0x02009D99 RID: 40345
 		private static class EElementItem
 		{
-			// Token: 0x040365ED RID: 222701
+			// Token: 0x04031040 RID: 200768
 			public const int BgSprite = 0;
 
-			// Token: 0x040365EE RID: 222702
+			// Token: 0x04031041 RID: 200769
 			public const int ElementTexture = 1;
 		}
 	}

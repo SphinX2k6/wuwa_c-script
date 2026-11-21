@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002878 RID: 10360
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B4E RID: 11086
 	public class ITuningStandGridBoard
 	{
-		// Token: 0x0600E585 RID: 58757 RVA: 0x0021BE05 File Offset: 0x0021A005
+		// Token: 0x0600F3B6 RID: 62390 RVA: 0x00238D59 File Offset: 0x00236F59
 		public static ITuningStandGridBoard Create(ITuningStandGridBoard? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004657 RID: 18007
-		// (get) Token: 0x0600E586 RID: 58758 RVA: 0x0021BE24 File Offset: 0x0021A024
+		// Token: 0x170049C8 RID: 18888
+		// (get) Token: 0x0600F3B7 RID: 62391 RVA: 0x00238D78 File Offset: 0x00236F78
 		public virtual List<ETuningStandGridType> Grids
 		{
 			get
@@ -44,13 +41,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007EEA RID: 32490
+		// Token: 0x040085AA RID: 34218
 		private ITuningStandGridBoard Instance;
 
-		// Token: 0x04007EEB RID: 32491
+		// Token: 0x040085AB RID: 34219
 		private List<ETuningStandGridType> _GridsCache;
 
-		// Token: 0x04007EEC RID: 32492
+		// Token: 0x040085AC RID: 34220
 		private bool _GridsInited;
 	}
 }

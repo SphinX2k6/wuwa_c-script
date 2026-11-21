@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.HonamiStory
 {
-	// Token: 0x0200594C RID: 22860
+	// Token: 0x02004925 RID: 18725
 	public enum EHonamiStoryTalentType
 	{
-		// Token: 0x0401E43D RID: 123965
+		// Token: 0x04018EDA RID: 102106
 		Core = 1,
-		// Token: 0x0401E43E RID: 123966
+		// Token: 0x04018EDB RID: 102107
 		Important,
-		// Token: 0x0401E43F RID: 123967
+		// Token: 0x04018EDC RID: 102108
 		Secondary
 	}
 }

@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x020010B4 RID: 4276
+// Token: 0x02000568 RID: 1384
 [NullableContext(1)]
 [Nullable(0)]
 public class TaskStateResolver : IStaticVariableResetter
 {
-	// Token: 0x06006F47 RID: 28487 RVA: 0x0016B61A File Offset: 0x0016981A
+	// Token: 0x060042DD RID: 17117 RVA: 0x00173F92 File Offset: 0x00172192
 	static TaskStateResolver()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TaskStateResolver.CreateStaticDefaultValue), new Action(TaskStateResolver.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06006F48 RID: 28488 RVA: 0x0016B63C File Offset: 0x0016983C
+	// Token: 0x060042DE RID: 17118 RVA: 0x00173FB4 File Offset: 0x001721B4
 	public static void CreateStaticDefaultValue()
 	{
 		TaskStateResolver.TaskState = new Dictionary<ActivityTaskState, EActivityTaskState>
@@ -64,7 +64,7 @@ public class TaskStateResolver : IStaticVariableResetter
 		};
 	}
 
-	// Token: 0x06006F49 RID: 28489 RVA: 0x0016B6AF File Offset: 0x001698AF
+	// Token: 0x060042DF RID: 17119 RVA: 0x00174027 File Offset: 0x00172227
 	public static void ResetStaticDefaultValue()
 	{
 		TaskStateResolver.TaskState = null;
@@ -72,12 +72,12 @@ public class TaskStateResolver : IStaticVariableResetter
 		TaskStateResolver.TrackMoonTargetState = null;
 	}
 
-	// Token: 0x040033C4 RID: 13252
+	// Token: 0x0400345D RID: 13405
 	public static Dictionary<ActivityTaskState, EActivityTaskState> TaskState;
 
-	// Token: 0x040033C5 RID: 13253
+	// Token: 0x0400345E RID: 13406
 	public static Dictionary<ConditionTaskState, EActivityTaskState> ConditionState;
 
-	// Token: 0x040033C6 RID: 13254
+	// Token: 0x0400345F RID: 13407
 	public static Dictionary<TrackMoonTargetState, EActivityTaskState> TrackMoonTargetState;
 }

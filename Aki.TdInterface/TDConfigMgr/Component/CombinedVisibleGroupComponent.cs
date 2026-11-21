@@ -6,11 +6,9 @@ using Aki.TDConfigMgr.Component.Fb;
 namespace Aki.TDConfigMgr.Component
 {
 	// Token: 0x02000046 RID: 70
-	[NullableContext(1)]
-	[Nullable(0)]
 	public class CombinedVisibleGroupComponent : IComponentBase
 	{
-		// Token: 0x06000254 RID: 596 RVA: 0x000193DC File Offset: 0x000175DC
+		// Token: 0x06000258 RID: 600 RVA: 0x00019D50 File Offset: 0x00017F50
 		private CombinedVisibleGroupComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000255 RID: 597 RVA: 0x00019414 File Offset: 0x00017614
+		// Token: 0x06000259 RID: 601 RVA: 0x00019D88 File Offset: 0x00017F88
 		public static CombinedVisibleGroupComponent Create([Nullable(2)] CombinedVisibleGroupComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000256 RID: 598 RVA: 0x00019427 File Offset: 0x00017627
+		// Token: 0x0600025A RID: 602 RVA: 0x00019D9B File Offset: 0x00017F9B
 		public static CombinedVisibleGroupComponent CreateFromSetValue([Nullable(2)] CombinedVisibleGroupComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000257 RID: 599 RVA: 0x0001943C File Offset: 0x0001763C
+		// Token: 0x0600025B RID: 603 RVA: 0x00019DB0 File Offset: 0x00017FB0
 		public new CombinedVisibleGroupComponent_SetValue ToSetValue()
 		{
 			return new CombinedVisibleGroupComponent_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170000D3 RID: 211
-		// (get) Token: 0x06000258 RID: 600 RVA: 0x0001948C File Offset: 0x0001768C
-		// (set) Token: 0x06000259 RID: 601 RVA: 0x000194C6 File Offset: 0x000176C6
+		// Token: 0x170000D5 RID: 213
+		// (get) Token: 0x0600025C RID: 604 RVA: 0x00019E00 File Offset: 0x00018000
+		// (set) Token: 0x0600025D RID: 605 RVA: 0x00019E3A File Offset: 0x0001803A
 		public override bool? Disabled
 		{
 			get
@@ -88,9 +86,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000D4 RID: 212
-		// (get) Token: 0x0600025A RID: 602 RVA: 0x000194D4 File Offset: 0x000176D4
-		// (set) Token: 0x0600025B RID: 603 RVA: 0x000194FE File Offset: 0x000176FE
+		// Token: 0x170000D6 RID: 214
+		// (get) Token: 0x0600025E RID: 606 RVA: 0x00019E48 File Offset: 0x00018048
+		// (set) Token: 0x0600025F RID: 607 RVA: 0x00019E72 File Offset: 0x00018072
 		public override bool? EdIsLocked
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000D5 RID: 213
-		// (get) Token: 0x0600025C RID: 604 RVA: 0x0001950C File Offset: 0x0001770C
-		// (set) Token: 0x0600025D RID: 605 RVA: 0x00019533 File Offset: 0x00017733
+		// Token: 0x170000D7 RID: 215
+		// (get) Token: 0x06000260 RID: 608 RVA: 0x00019E80 File Offset: 0x00018080
+		// (set) Token: 0x06000261 RID: 609 RVA: 0x00019EA7 File Offset: 0x000180A7
 		public virtual List<int> AreaIds
 		{
 			get
@@ -131,9 +129,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000D6 RID: 214
-		// (get) Token: 0x0600025E RID: 606 RVA: 0x00019541 File Offset: 0x00017741
-		// (set) Token: 0x0600025F RID: 607 RVA: 0x0001956C File Offset: 0x0001776C
+		// Token: 0x170000D8 RID: 216
+		// (get) Token: 0x06000262 RID: 610 RVA: 0x00019EB5 File Offset: 0x000180B5
+		// (set) Token: 0x06000263 RID: 611 RVA: 0x00019EE0 File Offset: 0x000180E0
 		public virtual bool IncludeSubArea
 		{
 			get
@@ -150,9 +148,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170000D7 RID: 215
-		// (get) Token: 0x06000260 RID: 608 RVA: 0x0001957A File Offset: 0x0001777A
-		// (set) Token: 0x06000261 RID: 609 RVA: 0x000195A1 File Offset: 0x000177A1
+		// Token: 0x170000D9 RID: 217
+		// (get) Token: 0x06000264 RID: 612 RVA: 0x00019EEE File Offset: 0x000180EE
+		// (set) Token: 0x06000265 RID: 613 RVA: 0x00019F15 File Offset: 0x00018115
 		public virtual List<int> EntityIds
 		{
 			get
@@ -174,11 +172,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400017A RID: 378
+		// Token: 0x0400017F RID: 383
 		[Nullable(2)]
 		protected new CombinedVisibleGroupComponent FbInstance;
 
-		// Token: 0x0400017B RID: 379
+		// Token: 0x04000180 RID: 384
 		[Nullable(2)]
 		protected new CombinedVisibleGroupComponent_SetValue PocoInterface;
 	}

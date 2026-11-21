@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005FBA RID: 24506
+	// Token: 0x0200660C RID: 26124
 	public enum EMp4BackgroundColor : byte
 	{
-		// Token: 0x0400FEEB RID: 65259
+		// Token: 0x04010CA3 RID: 68771
 		Black,
-		// Token: 0x0400FEEC RID: 65260
+		// Token: 0x04010CA4 RID: 68772
 		White
 	}
 }

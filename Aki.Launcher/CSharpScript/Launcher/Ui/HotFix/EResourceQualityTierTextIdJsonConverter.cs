@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace CSharpScript.Launcher.Ui.HotFix
 {
-	// Token: 0x020000F1 RID: 241
+	// Token: 0x020000F5 RID: 245
 	public class EResourceQualityTierTextIdJsonConverter : JsonConverter<EResourceQualityTierTextId>
 	{
-		// Token: 0x060007F4 RID: 2036 RVA: 0x0003CEC8 File Offset: 0x0003B0C8
+		// Token: 0x06000828 RID: 2088 RVA: 0x0003F268 File Offset: 0x0003D468
 		public override EResourceQualityTierTextId Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace CSharpScript.Launcher.Ui.HotFix
 			return EResourceQualityTierTextIdExtensions.FromString(@string);
 		}
 
-		// Token: 0x060007F5 RID: 2037 RVA: 0x0003CEEC File Offset: 0x0003B0EC
+		// Token: 0x06000829 RID: 2089 RVA: 0x0003F28C File Offset: 0x0003D48C
 		public override void Write(Utf8JsonWriter writer, EResourceQualityTierTextId value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

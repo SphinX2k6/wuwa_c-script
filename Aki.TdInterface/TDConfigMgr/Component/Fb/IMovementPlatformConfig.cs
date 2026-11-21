@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C28 RID: 3112
+	// Token: 0x02000CFB RID: 3323
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IMovementPlatformConfig
 	{
-		// Token: 0x0600474D RID: 18253 RVA: 0x000B38B3 File Offset: 0x000B1AB3
-		[NullableContext(1)]
+		// Token: 0x06004BBD RID: 19389 RVA: 0x000BDC65 File Offset: 0x000BBE65
+		[NullableContext(0)]
 		public static IMovementPlatformConfig Create(IMovementPlatformConfig? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170014BA RID: 5306
-		// (get) Token: 0x0600474E RID: 18254 RVA: 0x000B38D4 File Offset: 0x000B1AD4
+		// Token: 0x170015C2 RID: 5570
+		// (get) Token: 0x06004BBE RID: 19390 RVA: 0x000BDC84 File Offset: 0x000BBE84
 		public virtual List<int> PlayerAttachTags
 		{
 			get
@@ -49,8 +49,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170014BB RID: 5307
-		// (get) Token: 0x0600474F RID: 18255 RVA: 0x000B394C File Offset: 0x000B1B4C
+		// Token: 0x170015C3 RID: 5571
+		// (get) Token: 0x06004BBF RID: 19391 RVA: 0x000BDCFC File Offset: 0x000BBEFC
 		public virtual int? SafePointId
 		{
 			get
@@ -63,13 +63,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002877 RID: 10359
+		// Token: 0x04002ACC RID: 10956
 		private IMovementPlatformConfig Instance;
 
-		// Token: 0x04002878 RID: 10360
+		// Token: 0x04002ACD RID: 10957
 		private List<int> _PlayerAttachTagsCache;
 
-		// Token: 0x04002879 RID: 10361
+		// Token: 0x04002ACE RID: 10958
 		private bool _PlayerAttachTagsInited;
 	}
 }

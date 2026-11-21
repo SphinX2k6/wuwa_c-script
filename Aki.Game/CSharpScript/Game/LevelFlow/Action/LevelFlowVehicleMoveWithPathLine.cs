@@ -6,19 +6,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006FA7 RID: 28583
+	// Token: 0x02006128 RID: 24872
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelFlowVehicleMoveWithPathLine : LevelFlowActionBase
 	{
-		// Token: 0x06045794 RID: 284564 RVA: 0x0113BEE0 File Offset: 0x0113A0E0
+		// Token: 0x0603B942 RID: 244034 RVA: 0x010E5CE4 File Offset: 0x010E3EE4
 		public LevelFlowVehicleMoveWithPathLine Init(VehicleMoveWithPathLine params_)
 		{
 			this.Params = params_;
 			return this;
 		}
 
-		// Token: 0x06045795 RID: 284565 RVA: 0x0113BEEC File Offset: 0x0113A0EC
+		// Token: 0x0603B943 RID: 244035 RVA: 0x010E5CF0 File Offset: 0x010E3EF0
 		protected override void OnExecute()
 		{
 			if (this.Params == null)
@@ -47,14 +47,14 @@ namespace CSharpScript.Game.LevelFlow.Action
 			base.CreateWaitEntityTask(appointedVehicle.VehicleId);
 		}
 
-		// Token: 0x06045796 RID: 284566 RVA: 0x0113BF94 File Offset: 0x0113A194
+		// Token: 0x0603B944 RID: 244036 RVA: 0x010E5D98 File Offset: 0x010E3F98
 		protected override void ExecuteWhenEntitiesReady()
 		{
 			this.GetTargetVehicleEntity(this.Params.TargetVehicle);
 			this.ChangeControlState();
 		}
 
-		// Token: 0x06045797 RID: 284567 RVA: 0x0113BFB0 File Offset: 0x0113A1B0
+		// Token: 0x0603B945 RID: 244037 RVA: 0x010E5DB4 File Offset: 0x010E3FB4
 		private void GetTargetVehicleEntity(ITargetVehicle config)
 		{
 			ETargetVehicle type = config.Type;
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			this.Entity_ = ((entityById != null) ? entityById.Entity : null);
 		}
 
-		// Token: 0x06045798 RID: 284568 RVA: 0x0113C034 File Offset: 0x0113A234
+		// Token: 0x0603B946 RID: 244038 RVA: 0x010E5E38 File Offset: 0x010E4038
 		[NullableContext(2)]
 		private Entity GetVehicleEntityFromPlayerRole()
 		{
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			return characterDriveVehicleComponent.VehicleEntity;
 		}
 
-		// Token: 0x06045799 RID: 284569 RVA: 0x0113C08C File Offset: 0x0113A28C
+		// Token: 0x0603B947 RID: 244039 RVA: 0x010E5E90 File Offset: 0x010E4090
 		private void ChangeControlState()
 		{
 			if (this.Entity_ == null)
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			base.FinishExecute(true);
 		}
 
-		// Token: 0x0604579A RID: 284570 RVA: 0x0113C1B0 File Offset: 0x0113A3B0
+		// Token: 0x0603B948 RID: 244040 RVA: 0x010E5FB4 File Offset: 0x010E41B4
 		protected unsafe override void LogExecuteInfo()
 		{
 			global::Log instance = global::Log.Instance;
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 4));
 		}
 
-		// Token: 0x0604579B RID: 284571 RVA: 0x0113C27C File Offset: 0x0113A47C
+		// Token: 0x0603B949 RID: 244041 RVA: 0x010E6080 File Offset: 0x010E4280
 		private void DrawDebugInfo(USplineComponent splineComponent, float radius)
 		{
 			float splineLength = splineComponent.GetSplineLength();
@@ -199,11 +199,11 @@ namespace CSharpScript.Game.LevelFlow.Action
 			}
 		}
 
-		// Token: 0x04024402 RID: 148482
+		// Token: 0x0401F6B7 RID: 128695
 		[Nullable(2)]
 		private Entity Entity_;
 
-		// Token: 0x04024403 RID: 148483
+		// Token: 0x0401F6B8 RID: 128696
 		[Nullable(2)]
 		private VehicleMoveWithPathLine Params;
 	}

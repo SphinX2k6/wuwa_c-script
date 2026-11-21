@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Birthday.View
 {
-	// Token: 0x02005C2E RID: 23598
+	// Token: 0x02004C0E RID: 19470
 	public class BirthdayRoleHeadItem : GridProxyAbstract<int>
 	{
-		// Token: 0x0603B9C1 RID: 244161 RVA: 0x00E3909C File Offset: 0x00E3729C
+		// Token: 0x0603090C RID: 198924 RVA: 0x00D8940C File Offset: 0x00D8760C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -32,13 +32,13 @@ namespace CSharpScript.Game.Module.Birthday.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B9C2 RID: 244162 RVA: 0x00E39142 File Offset: 0x00E37342
+		// Token: 0x0603090D RID: 198925 RVA: 0x00D894B2 File Offset: 0x00D876B2
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(0).CanExecuteChange.Bind(() => true);
 		}
 
-		// Token: 0x0603B9C3 RID: 244163 RVA: 0x00E39174 File Offset: 0x00E37374
+		// Token: 0x0603090E RID: 198926 RVA: 0x00D894E4 File Offset: 0x00D876E4
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			this.RoleId = data;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Birthday.View
 			this.SetToggleState(isSelected);
 		}
 
-		// Token: 0x0603B9C4 RID: 244164 RVA: 0x00E3922A File Offset: 0x00E3742A
+		// Token: 0x0603090F RID: 198927 RVA: 0x00D8959A File Offset: 0x00D8779A
 		private void OnToggleClick(EToggleState state)
 		{
 			if (this.OnToggleClickCallBack != null)
@@ -66,39 +66,39 @@ namespace CSharpScript.Game.Module.Birthday.View
 			}
 		}
 
-		// Token: 0x0603B9C5 RID: 244165 RVA: 0x00E3924C File Offset: 0x00E3744C
+		// Token: 0x06030910 RID: 198928 RVA: 0x00D895BC File Offset: 0x00D877BC
 		public void SetToggleState(bool state)
 		{
 			EToggleState state2 = state ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 			base.GetExtendToggle(0).SetToggleState(state2, false, false, false);
 		}
 
-		// Token: 0x0603B9C6 RID: 244166 RVA: 0x00E39272 File Offset: 0x00E37472
+		// Token: 0x06030911 RID: 198929 RVA: 0x00D895E2 File Offset: 0x00D877E2
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetToggleState(true);
 		}
 
-		// Token: 0x0603B9C7 RID: 244167 RVA: 0x00E3927B File Offset: 0x00E3747B
+		// Token: 0x06030912 RID: 198930 RVA: 0x00D895EB File Offset: 0x00D877EB
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetToggleState(false);
 		}
 
-		// Token: 0x0401F08C RID: 127116
+		// Token: 0x04019B3D RID: 105277
 		private int RoleId;
 
-		// Token: 0x0401F08D RID: 127117
+		// Token: 0x04019B3E RID: 105278
 		[Nullable(2)]
 		public Action<int, int> OnToggleClickCallBack;
 
-		// Token: 0x0200BE1C RID: 48668
+		// Token: 0x0200A824 RID: 43044
 		private class EComponents
 		{
-			// Token: 0x04039544 RID: 234820
+			// Token: 0x04033F07 RID: 212743
 			public const int ToggleRoot = 0;
 
-			// Token: 0x04039545 RID: 234821
+			// Token: 0x04033F08 RID: 212744
 			public const int TextureRoleIcon = 1;
 		}
 	}

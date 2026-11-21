@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D5A RID: 23898
+	// Token: 0x02004D3C RID: 19772
 	public class HonamiStoryView : HonamiStoryViewBase
 	{
-		// Token: 0x0603CAB7 RID: 248503 RVA: 0x00E902A0 File Offset: 0x00E8E4A0
+		// Token: 0x06031A10 RID: 203280 RVA: 0x00DE0A54 File Offset: 0x00DDEC54
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603CAB8 RID: 248504 RVA: 0x00E903F1 File Offset: 0x00E8E5F1
+		// Token: 0x06031A11 RID: 203281 RVA: 0x00DE0BA5 File Offset: 0x00DDEDA5
 		protected override void OnInitData()
 		{
 			this.HpTextType = 4;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ShowFunctionType = new EFunctionType?(EFunctionType.HonamiStoryLifeSupport);
 		}
 
-		// Token: 0x0603CAB9 RID: 248505 RVA: 0x00E90424 File Offset: 0x00E8E624
+		// Token: 0x06031A12 RID: 203282 RVA: 0x00DE0BD8 File Offset: 0x00DDEDD8
 		protected override void OnRefreshAttribute(float percent, EHpStateType state)
 		{
 			if (state == EHpStateType.Normal)
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetSprite(2).SetFillAmount(fillAmount2);
 		}
 
-		// Token: 0x0603CABA RID: 248506 RVA: 0x00E90484 File Offset: 0x00E8E684
+		// Token: 0x06031A13 RID: 203283 RVA: 0x00DE0C38 File Offset: 0x00DDEE38
 		protected override void OnRefreshState(EHpStateType state)
 		{
 			bool flag = state == EHpStateType.Normal;
@@ -85,26 +85,26 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.GetSprite(2).SetColor(color2);
 		}
 
-		// Token: 0x0200C00C RID: 49164
+		// Token: 0x0200AA12 RID: 43538
 		private enum EComponentType
 		{
-			// Token: 0x04039F3A RID: 237370
+			// Token: 0x040348FC RID: 215292
 			DangerBarLeft,
-			// Token: 0x04039F3B RID: 237371
+			// Token: 0x040348FD RID: 215293
 			NormalBarLeft,
-			// Token: 0x04039F3C RID: 237372
+			// Token: 0x040348FE RID: 215294
 			DangerBarRight,
-			// Token: 0x04039F3D RID: 237373
+			// Token: 0x040348FF RID: 215295
 			NormalBarRight,
-			// Token: 0x04039F3E RID: 237374
+			// Token: 0x04034900 RID: 215296
 			HpText,
-			// Token: 0x04039F3F RID: 237375
+			// Token: 0x04034901 RID: 215297
 			NormalItem,
-			// Token: 0x04039F40 RID: 237376
+			// Token: 0x04034902 RID: 215298
 			DangerItem,
-			// Token: 0x04039F41 RID: 237377
+			// Token: 0x04034903 RID: 215299
 			InTween,
-			// Token: 0x04039F42 RID: 237378
+			// Token: 0x04034904 RID: 215300
 			OutTween
 		}
 	}

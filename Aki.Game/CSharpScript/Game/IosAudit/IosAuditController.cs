@@ -21,13 +21,13 @@ using UnrealEngine.Extension;
 
 namespace CSharpScript.Game.IosAudit
 {
-	// Token: 0x02006FC5 RID: 28613
+	// Token: 0x02006146 RID: 24902
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class IosAuditController : ControllerBase
 	{
-		// Token: 0x0604592B RID: 284971 RVA: 0x011457DC File Offset: 0x011439DC
+		// Token: 0x0603BADB RID: 244443 RVA: 0x010EF5BC File Offset: 0x010ED7BC
 		[NullableContext(0)]
 		private UniTask RunAfter(UniTask<bool> promise, [Nullable(2)] Action<bool> after)
 		{
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.IosAudit
 			return <RunAfter>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604592C RID: 284972 RVA: 0x01145828 File Offset: 0x01143A28
+		// Token: 0x0603BADC RID: 244444 RVA: 0x010EF608 File Offset: 0x010ED808
 		[NullableContext(0)]
 		private UniTask<bool> RunLoadGroupAsync([TupleElementNames(new string[]
 		{
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.IosAudit
 			return <RunLoadGroupAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604592D RID: 284973 RVA: 0x01145874 File Offset: 0x01143A74
+		// Token: 0x0603BADD RID: 244445 RVA: 0x010EF654 File Offset: 0x010ED854
 		[return: Nullable(0)]
 		private UniTask<bool> WatchOneControllerPreload(string name, CustomPromise<bool> promise)
 		{
@@ -81,13 +81,13 @@ namespace CSharpScript.Game.IosAudit
 			return <WatchOneControllerPreload>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604592E RID: 284974 RVA: 0x011458BF File Offset: 0x01143ABF
+		// Token: 0x0603BADE RID: 244446 RVA: 0x010EF69F File Offset: 0x010ED89F
 		public void Start(SceneInformation sceneInformation)
 		{
 			this.StartAsync(sceneInformation).Forget();
 		}
 
-		// Token: 0x0604592F RID: 284975 RVA: 0x011458D0 File Offset: 0x01143AD0
+		// Token: 0x0603BADF RID: 244447 RVA: 0x010EF6B0 File Offset: 0x010ED8B0
 		public UniTask StartAsync(SceneInformation sceneInformation)
 		{
 			IosAuditController.<StartAsync>d__16 <StartAsync>d__;
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.IosAudit
 			return <StartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045930 RID: 284976 RVA: 0x0114591C File Offset: 0x01143B1C
+		// Token: 0x0603BAE0 RID: 244448 RVA: 0x010EF6FC File Offset: 0x010ED8FC
 		private UniTask ExecuteWorldDoneBlockers()
 		{
 			IosAuditController.<ExecuteWorldDoneBlockers>d__17 <ExecuteWorldDoneBlockers>d__;
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.IosAudit
 			return <ExecuteWorldDoneBlockers>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045931 RID: 284977 RVA: 0x01145960 File Offset: 0x01143B60
+		// Token: 0x0603BAE1 RID: 244449 RVA: 0x010EF740 File Offset: 0x010ED940
 		private UniTask RunWorldDoneBlockerAsync([TupleElementNames(new string[]
 		{
 			"Blocker",
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.IosAudit
 			return <RunWorldDoneBlockerAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045932 RID: 284978 RVA: 0x011459B4 File Offset: 0x01143BB4
+		// Token: 0x0603BAE2 RID: 244450 RVA: 0x010EF794 File Offset: 0x010ED994
 		private UniTask RunBlockerWithCatch(Func<UniTask> blocker, int index)
 		{
 			IosAuditController.<RunBlockerWithCatch>d__19 <RunBlockerWithCatch>d__;
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.IosAudit
 			return <RunBlockerWithCatch>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045933 RID: 284979 RVA: 0x011459FF File Offset: 0x01143BFF
+		// Token: 0x0603BAE3 RID: 244451 RVA: 0x010EF7DF File Offset: 0x010ED9DF
 		protected override bool OnLeaveLevel()
 		{
 			UHoldPreloadObject holdPreloadObject = this.HoldPreloadObject;
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.IosAudit
 			return true;
 		}
 
-		// Token: 0x06045934 RID: 284980 RVA: 0x01145A1C File Offset: 0x01143C1C
+		// Token: 0x0603BAE4 RID: 244452 RVA: 0x010EF7FC File Offset: 0x010ED9FC
 		private void ForceLowMemDeviceStreamingLowIfSanWangFengInstance(bool isSet)
 		{
 			if (!UKuroStaticLibrary.IsLowMemoryDevice())
@@ -191,7 +191,7 @@ namespace CSharpScript.Game.IosAudit
 			}
 		}
 
-		// Token: 0x06045935 RID: 284981 RVA: 0x01145B10 File Offset: 0x01143D10
+		// Token: 0x0603BAE5 RID: 244453 RVA: 0x010EF8F0 File Offset: 0x010EDAF0
 		[NullableContext(0)]
 		public UniTask<bool> PreloadIosAudit()
 		{
@@ -203,7 +203,7 @@ namespace CSharpScript.Game.IosAudit
 			return <PreloadIosAudit>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045936 RID: 284982 RVA: 0x01145B54 File Offset: 0x01143D54
+		// Token: 0x0603BAE6 RID: 244454 RVA: 0x010EF934 File Offset: 0x010EDB34
 		public UniTask Load(SceneInformation sceneInformation)
 		{
 			IosAuditController.<Load>d__23 <Load>d__;
@@ -215,13 +215,13 @@ namespace CSharpScript.Game.IosAudit
 			return <Load>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045937 RID: 284983 RVA: 0x01145B9F File Offset: 0x01143D9F
+		// Token: 0x0603BAE7 RID: 244455 RVA: 0x010EF97F File Offset: 0x010EDB7F
 		private void CreateStat(string name)
 		{
 			Stat.CreateNoFlameGraph(name, "", "");
 		}
 
-		// Token: 0x06045938 RID: 284984 RVA: 0x01145BB4 File Offset: 0x01143DB4
+		// Token: 0x0603BAE8 RID: 244456 RVA: 0x010EF994 File Offset: 0x010EDB94
 		public void RegisterDataLayerChange()
 		{
 			GameModeModel instance = GameModeModel.Instance;
@@ -251,7 +251,7 @@ namespace CSharpScript.Game.IosAudit
 			}
 		}
 
-		// Token: 0x06045939 RID: 284985 RVA: 0x01145CC8 File Offset: 0x01143EC8
+		// Token: 0x0603BAE9 RID: 244457 RVA: 0x010EFAA8 File Offset: 0x010EDCA8
 		private void OnDatalayerChange(FName datalayerLabel, bool bIsActive)
 		{
 			if (bIsActive && datalayerLabel != null && (datalayerLabel == WorldDefine.SpecificVolumeDatalayer1 || datalayerLabel == WorldDefine.SpecificVolumeDatalayer2) && !GameModeModel.Instance.HasDataLayer(datalayerLabel.ToString()))
@@ -266,7 +266,7 @@ namespace CSharpScript.Game.IosAudit
 			}
 		}
 
-		// Token: 0x0604593A RID: 284986 RVA: 0x01145D64 File Offset: 0x01143F64
+		// Token: 0x0603BAEA RID: 244458 RVA: 0x010EFB44 File Offset: 0x010EDD44
 		public void PreventEntityFalling()
 		{
 			DeadReviveModel.Instance.SetSkipFallInjure(ESkipFallInjureReason.IosAudit, true);
@@ -293,7 +293,7 @@ namespace CSharpScript.Game.IosAudit
 			}
 		}
 
-		// Token: 0x0604593B RID: 284987 RVA: 0x01145DFC File Offset: 0x01143FFC
+		// Token: 0x0603BAEB RID: 244459 RVA: 0x010EFBDC File Offset: 0x010EDDDC
 		public void EnableEntityFalling()
 		{
 			DeadReviveModel.Instance.SetSkipFallInjure(ESkipFallInjureReason.IosAudit, false);
@@ -320,7 +320,7 @@ namespace CSharpScript.Game.IosAudit
 			}
 		}
 
-		// Token: 0x0604593C RID: 284988 RVA: 0x01145EA8 File Offset: 0x011440A8
+		// Token: 0x0603BAEC RID: 244460 RVA: 0x010EFC88 File Offset: 0x010EDE88
 		public void PrintWorldPartitionDebugInfo(UWorldPartitionStreamingSourceComponent streamingSourceComponent, [Nullable(2)] TArray<FName> inDataLayerLabels, bool bUseGridLoadingRange, float radius, bool bRequirePhysics)
 		{
 			if (streamingSourceComponent == null)
@@ -335,21 +335,21 @@ namespace CSharpScript.Game.IosAudit
 			streamingSourceComponent.LogStreamingStuckInfo2(inDataLayerLabels, bUseGridLoadingRange, radius, bRequirePhysics);
 		}
 
-		// Token: 0x0604593D RID: 284989 RVA: 0x01145F1E File Offset: 0x0114411E
+		// Token: 0x0603BAED RID: 244461 RVA: 0x010EFCFE File Offset: 0x010EDEFE
 		[NullableContext(2)]
 		public void SwitchDataLayer([Nullable(1)] string[] unloadDataLayers, [Nullable(1)] string[] activateDataLayers, Action<bool> callback = null, string sequencePath = null, string sequenceMarkBeforeModifyMaterial = null, string materialDataForLoadedLayers = null, string materialDataForUnloadLayers = null)
 		{
 			this.AwaitSwitchDataLayer(unloadDataLayers, activateDataLayers, callback, sequencePath, sequenceMarkBeforeModifyMaterial, materialDataForLoadedLayers, materialDataForUnloadLayers).Forget();
 		}
 
-		// Token: 0x0604593E RID: 284990 RVA: 0x01145F38 File Offset: 0x01144138
+		// Token: 0x0603BAEE RID: 244462 RVA: 0x010EFD18 File Offset: 0x010EDF18
 		private static void OnInterruptDataLayerSwitchTask()
 		{
 			Log.Instance.Info(ELogModule.IosAudit, ELogAuthor.ZYL, "IosAudit:Task被打断,触发OnInterrupt收尾", default(ReadOnlySpan<ValueTuple<string, object>>));
 			IosAuditController.InterruptDataLayerSwitch();
 		}
 
-		// Token: 0x0604593F RID: 284991 RVA: 0x01145F6C File Offset: 0x0114416C
+		// Token: 0x0603BAEF RID: 244463 RVA: 0x010EFD4C File Offset: 0x010EDF4C
 		public static void InterruptDataLayerSwitch()
 		{
 			Log.Instance.Info(ELogModule.IosAudit, ELogAuthor.ZYL, "IosAudit:打断DataLayer切换(InterruptDataLayerSwitch)", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -361,7 +361,7 @@ namespace CSharpScript.Game.IosAudit
 			instance.SwitchDataLayerContext.AbortDataLayerSwitch();
 		}
 
-		// Token: 0x06045940 RID: 284992 RVA: 0x01145FAC File Offset: 0x011441AC
+		// Token: 0x0603BAF0 RID: 244464 RVA: 0x010EFD8C File Offset: 0x010EDF8C
 		[NullableContext(2)]
 		public UniTask AwaitSwitchDataLayer([Nullable(1)] string[] unloadDataLayers, [Nullable(1)] string[] activateDataLayers, Action<bool> callback = null, string sequencePath = null, string sequenceMarkBeforeModifyMaterial = null, string materialDataForLoadedLayers = null, string materialDataForUnloadLayers = null)
 		{
@@ -380,7 +380,7 @@ namespace CSharpScript.Game.IosAudit
 			return <AwaitSwitchDataLayer>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045941 RID: 284993 RVA: 0x0114602C File Offset: 0x0114422C
+		// Token: 0x0603BAF1 RID: 244465 RVA: 0x010EFE0C File Offset: 0x010EE00C
 		[NullableContext(2)]
 		[return: Nullable(1)]
 		private AsyncTask CreateSwitchDataLayerTask([Nullable(1)] string[] unloadDataLayers, [Nullable(1)] string[] activateDataLayers, Action<bool> callback = null, string sequencePath = null, string sequenceMarkBeforeModifyMaterial = null, string materialDataForLoadedLayers = null, string materialDataForUnloadLayers = null)
@@ -431,7 +431,7 @@ namespace CSharpScript.Game.IosAudit
 			return new AsyncTask(name, runHandle, initHandle, finishedCallback, new TaskInterruptOptions(priority, interruptible, onInterrupt));
 		}
 
-		// Token: 0x06045942 RID: 284994 RVA: 0x01146174 File Offset: 0x01144374
+		// Token: 0x0603BAF2 RID: 244466 RVA: 0x010EFF54 File Offset: 0x010EE154
 		private void PrepareSwitchDataLayer()
 		{
 			Log instance = Log.Instance;
@@ -461,7 +461,7 @@ namespace CSharpScript.Game.IosAudit
 			switchDataLayerContext.BeginDataLayerSwitch((instanceDungeon != null) ? instanceDungeon.GetValueOrDefault().Id : 0);
 		}
 
-		// Token: 0x06045943 RID: 284995 RVA: 0x011462C6 File Offset: 0x011444C6
+		// Token: 0x0603BAF3 RID: 244467 RVA: 0x010F00A6 File Offset: 0x010EE2A6
 		private bool CheckAndTryFakeSwitchDataLayer(string[] unloadDataLayers, string[] activateDataLayers, [Nullable(2)] Action<bool> callback = null)
 		{
 			AutoRunModel instance = AutoRunModel.Instance;
@@ -473,7 +473,7 @@ namespace CSharpScript.Game.IosAudit
 			return false;
 		}
 
-		// Token: 0x06045944 RID: 284996 RVA: 0x011462F8 File Offset: 0x011444F8
+		// Token: 0x0603BAF4 RID: 244468 RVA: 0x010F00D8 File Offset: 0x010EE2D8
 		private UniTask RunNormalSwitchTask(string[] unloadDataLayers, string[] activateDataLayers, [Nullable(2)] Action<bool> callback = null)
 		{
 			IosAuditController.<RunNormalSwitchTask>d__37 <RunNormalSwitchTask>d__;
@@ -487,7 +487,7 @@ namespace CSharpScript.Game.IosAudit
 			return <RunNormalSwitchTask>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045945 RID: 284997 RVA: 0x01146354 File Offset: 0x01144554
+		// Token: 0x0603BAF5 RID: 244469 RVA: 0x010F0134 File Offset: 0x010EE334
 		private UniTask RunLevelSeqSwitchTask(string[] unloadDataLayers, string[] activateDataLayers, string sequencePath, [Nullable(2)] Action<bool> callback = null)
 		{
 			IosAuditController.<RunLevelSeqSwitchTask>d__38 <RunLevelSeqSwitchTask>d__;
@@ -502,7 +502,7 @@ namespace CSharpScript.Game.IosAudit
 			return <RunLevelSeqSwitchTask>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045946 RID: 284998 RVA: 0x011463B8 File Offset: 0x011445B8
+		// Token: 0x0603BAF6 RID: 244470 RVA: 0x010F0198 File Offset: 0x010EE398
 		[NullableContext(2)]
 		private UniTask RunMaterialSwitchTask([Nullable(1)] string[] unloadDataLayers, [Nullable(1)] string[] activateDataLayers, Action<bool> callback = null, string sequencePath = null, string sequenceMarkBeforeModifyMaterial = null, string materialDataForLoadedLayers = null, string materialDataForUnloadLayers = null)
 		{
@@ -521,7 +521,7 @@ namespace CSharpScript.Game.IosAudit
 			return <RunMaterialSwitchTask>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045947 RID: 284999 RVA: 0x01146438 File Offset: 0x01144638
+		// Token: 0x0603BAF7 RID: 244471 RVA: 0x010F0218 File Offset: 0x010EE418
 		private UniTask NormalSwitchDataLayerInternal(string[] unloadDataLayers, string[] activateDataLayers, bool bEnterLoadingMode = true, bool bWaitingRenderAssetDone = true)
 		{
 			IosAuditController.<NormalSwitchDataLayerInternal>d__40 <NormalSwitchDataLayerInternal>d__;
@@ -536,7 +536,7 @@ namespace CSharpScript.Game.IosAudit
 			return <NormalSwitchDataLayerInternal>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045948 RID: 285000 RVA: 0x0114649C File Offset: 0x0114469C
+		// Token: 0x0603BAF8 RID: 244472 RVA: 0x010F027C File Offset: 0x010EE47C
 		private unsafe void FakeSwitchDataLayerInternal(string[] unloadDataLayers, string[] activateDataLayers, int instId, [Nullable(2)] Action<bool> callback = null)
 		{
 			Log instance = Log.Instance;
@@ -567,20 +567,20 @@ namespace CSharpScript.Game.IosAudit
 			}
 		}
 
-		// Token: 0x06045949 RID: 285001 RVA: 0x011465C5 File Offset: 0x011447C5
+		// Token: 0x0603BAF9 RID: 244473 RVA: 0x010F03A5 File Offset: 0x010EE5A5
 		public bool IsInInstance()
 		{
 			return GameModeModel.Instance.InstanceType >= InstanceType.NormalInstance;
 		}
 
-		// Token: 0x0604594A RID: 285002 RVA: 0x011465D8 File Offset: 0x011447D8
+		// Token: 0x0603BAFA RID: 244474 RVA: 0x010F03B8 File Offset: 0x010EE5B8
 		public bool CanLoadEntity()
 		{
 			GameModeModel instance = GameModeModel.Instance;
 			return instance.WorldDone && !instance.IsTeleport && !instance.ChangeModeState;
 		}
 
-		// Token: 0x0604594B RID: 285003 RVA: 0x01146608 File Offset: 0x01144808
+		// Token: 0x0603BAFB RID: 244475 RVA: 0x010F03E8 File Offset: 0x010EE5E8
 		public void InitAllPlayerStarts()
 		{
 			TArray<AActor> tarray = new TArray<AActor>();
@@ -595,7 +595,7 @@ namespace CSharpScript.Game.IosAudit
 			}
 		}
 
-		// Token: 0x0604594C RID: 285004 RVA: 0x0114666C File Offset: 0x0114486C
+		// Token: 0x0603BAFC RID: 244476 RVA: 0x010F044C File Offset: 0x010EE64C
 		public unsafe void PrintLoadDetail(FVectorDouble bornLocation)
 		{
 			LogProfiler loadWorldProfiler = GameModeModel.Instance.LoadWorldProfiler;
@@ -632,7 +632,7 @@ namespace CSharpScript.Game.IosAudit
 				dictionary["BornLocation"] = bornLocation.ToString();
 				dictionary["TestName"] = value2;
 				dictionary["PipelineTag"] = value;
-				string text = Json.Stringify<Dictionary<string, string>>(dictionary, null);
+				string text = Json.Stringify(dictionary, null);
 				Log instance2 = Log.Instance;
 				ELogModule module2 = ELogModule.IosAudit;
 				ELogAuthor author2 = ELogAuthor.HMH;
@@ -689,7 +689,7 @@ namespace CSharpScript.Game.IosAudit
 			PreloadModelNew.Instance.ClearResourcesLoadTime();
 		}
 
-		// Token: 0x0604594D RID: 285005 RVA: 0x0114697C File Offset: 0x01144B7C
+		// Token: 0x0603BAFD RID: 244477 RVA: 0x010F075C File Offset: 0x010EE95C
 		public unsafe void SetTimeDilation(float timeDilation, ETimeDilationType timeDilationType = ETimeDilationType.Default)
 		{
 			Log instance = Log.Instance;
@@ -762,7 +762,7 @@ namespace CSharpScript.Game.IosAudit
 			this.BroadcastTimeDilation(num);
 		}
 
-		// Token: 0x0604594E RID: 285006 RVA: 0x01146BC8 File Offset: 0x01144DC8
+		// Token: 0x0603BAFE RID: 244478 RVA: 0x010F09A8 File Offset: 0x010EEBA8
 		private void BroadcastTimeDilation(float finalDilation)
 		{
 			GameModeModel.Instance.ClearCacheTimeDilationValue();
@@ -788,7 +788,7 @@ namespace CSharpScript.Game.IosAudit
 			EventSystem.Instance.Emit(EEventName.TriggerUiTimeDilation);
 		}
 
-		// Token: 0x0604594F RID: 285007 RVA: 0x01146C98 File Offset: 0x01144E98
+		// Token: 0x0603BAFF RID: 244479 RVA: 0x010F0A78 File Offset: 0x010EEC78
 		[NullableContext(2)]
 		public void FixBornLocation(global::Vector target = null)
 		{
@@ -838,7 +838,7 @@ namespace CSharpScript.Game.IosAudit
 			component3.ResetCharState();
 		}
 
-		// Token: 0x06045950 RID: 285008 RVA: 0x01146D74 File Offset: 0x01144F74
+		// Token: 0x0603BB00 RID: 244480 RVA: 0x010F0B54 File Offset: 0x010EED54
 		public unsafe void LoadDataLayers(SceneInformation sceneInformation)
 		{
 			bool flag = UKuroStaticLibrary.IsLowMemoryDevice();
@@ -903,21 +903,21 @@ namespace CSharpScript.Game.IosAudit
 			}
 		}
 
-		// Token: 0x06045951 RID: 285009 RVA: 0x01146F78 File Offset: 0x01145178
+		// Token: 0x0603BB01 RID: 244481 RVA: 0x010F0D58 File Offset: 0x010EEF58
 		private void ActivateDataLayer(string dataLayerPath)
 		{
 			GameModeModel.Instance.AddDataLayer(dataLayerPath);
 			RenderModuleController.Instance.SetWorldPartitionDataLayerState(dataLayerPath, true, false);
 		}
 
-		// Token: 0x06045952 RID: 285010 RVA: 0x01146F93 File Offset: 0x01145193
+		// Token: 0x0603BB02 RID: 244482 RVA: 0x010F0D73 File Offset: 0x010EEF73
 		private void UnloadDataLayer(string dataLayerPath)
 		{
 			GameModeModel.Instance.RemoveDataLayer(dataLayerPath);
 			RenderModuleController.Instance.SetWorldPartitionDataLayerState(dataLayerPath, false, false);
 		}
 
-		// Token: 0x06045953 RID: 285011 RVA: 0x01146FB0 File Offset: 0x011451B0
+		// Token: 0x0603BB03 RID: 244483 RVA: 0x010F0D90 File Offset: 0x010EEF90
 		private void ChangeDataLayerFinishRequest(int instId)
 		{
 			ChangeDataLayerFinishRequest changeDataLayerFinishRequest = Aki.Protocol.ChangeDataLayerFinishRequest.Create();
@@ -932,7 +932,7 @@ namespace CSharpScript.Game.IosAudit
 			}, 0);
 		}
 
-		// Token: 0x06045954 RID: 285012 RVA: 0x01146FFC File Offset: 0x011451FC
+		// Token: 0x0603BB04 RID: 244484 RVA: 0x010F0DDC File Offset: 0x010EEFDC
 		public unsafe void ApplyMaterialParameterCollection(IDictionary<int, int> protoAreaMpc)
 		{
 			GameModeModel.Instance.MaterialParameterCollectionMap.Clear();
@@ -983,7 +983,7 @@ namespace CSharpScript.Game.IosAudit
 			}
 		}
 
-		// Token: 0x06045955 RID: 285013 RVA: 0x011471B4 File Offset: 0x011453B4
+		// Token: 0x0603BB05 RID: 244485 RVA: 0x010F0F94 File Offset: 0x010EF194
 		private void CheckMaterialParameterCollectionLoaded()
 		{
 			bool flag = true;
@@ -997,7 +997,7 @@ namespace CSharpScript.Game.IosAudit
 			}
 		}
 
-		// Token: 0x06045956 RID: 285014 RVA: 0x01147220 File Offset: 0x01145420
+		// Token: 0x0603BB06 RID: 244486 RVA: 0x010F1000 File Offset: 0x010EF200
 		public UniTask SwitchStreamingSource(AActor actor, bool waitForStreaming, bool bLockMovementDuringStreaming, EMovementLockMode? movementLockModeAfterStreaming)
 		{
 			IosAuditController.<SwitchStreamingSource>d__55 <SwitchStreamingSource>d__;
@@ -1012,7 +1012,7 @@ namespace CSharpScript.Game.IosAudit
 			return <SwitchStreamingSource>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045957 RID: 285015 RVA: 0x01147284 File Offset: 0x01145484
+		// Token: 0x0603BB07 RID: 244487 RVA: 0x010F1064 File Offset: 0x010EF264
 		private UniTask CheckWorldPartitionStreamingCompleted(CustomPromise<bool> voxelPromise, CustomPromise<bool> streamingPromise, [Nullable(2)] Func<bool> abortCheckCondition = null)
 		{
 			IosAuditController.<CheckWorldPartitionStreamingCompleted>d__56 <CheckWorldPartitionStreamingCompleted>d__;
@@ -1026,7 +1026,7 @@ namespace CSharpScript.Game.IosAudit
 			return <CheckWorldPartitionStreamingCompleted>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045958 RID: 285016 RVA: 0x011472E0 File Offset: 0x011454E0
+		// Token: 0x0603BB08 RID: 244488 RVA: 0x010F10C0 File Offset: 0x010EF2C0
 		[NullableContext(2)]
 		[return: Nullable(1)]
 		private unsafe TimerHandle CheckTargetStreamingCompleted([Nullable(1)] UWorldPartitionStreamingSourceComponent streamingSourceComponent, [Nullable(new byte[]
@@ -1102,7 +1102,7 @@ namespace CSharpScript.Game.IosAudit
 			return timerId;
 		}
 
-		// Token: 0x06045959 RID: 285017 RVA: 0x01147420 File Offset: 0x01145620
+		// Token: 0x0603BB09 RID: 244489 RVA: 0x010F1200 File Offset: 0x010EF400
 		public void InitStreamingSources()
 		{
 			GameModeModel instance = GameModeModel.Instance;
@@ -1113,7 +1113,7 @@ namespace CSharpScript.Game.IosAudit
 			instance.InitStreamingSources();
 		}
 
-		// Token: 0x0604595A RID: 285018 RVA: 0x01147460 File Offset: 0x01145660
+		// Token: 0x0603BB0A RID: 244490 RVA: 0x010F1240 File Offset: 0x010EF440
 		public UniTask CheckVoxelStreamingCompleted(float relativeProgress, int maxProgress)
 		{
 			IosAuditController.<CheckVoxelStreamingCompleted>d__59 <CheckVoxelStreamingCompleted>d__;
@@ -1126,7 +1126,7 @@ namespace CSharpScript.Game.IosAudit
 			return <CheckVoxelStreamingCompleted>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604595B RID: 285019 RVA: 0x011474B4 File Offset: 0x011456B4
+		// Token: 0x0603BB0B RID: 244491 RVA: 0x010F1294 File Offset: 0x010EF494
 		public void AppendAllBaseDatalayers(TArray<FName> dataLayerLabels)
 		{
 			foreach (FName value in WorldDefine.allBaseDataLayers)
@@ -1135,7 +1135,7 @@ namespace CSharpScript.Game.IosAudit
 			}
 		}
 
-		// Token: 0x0604595C RID: 285020 RVA: 0x011474E4 File Offset: 0x011456E4
+		// Token: 0x0603BB0C RID: 244492 RVA: 0x010F12C4 File Offset: 0x010EF4C4
 		public UniTask CheckStreamingCompleted(float relativeProgress, int maxProgress)
 		{
 			IosAuditController.<CheckStreamingCompleted>d__61 <CheckStreamingCompleted>d__;
@@ -1148,7 +1148,7 @@ namespace CSharpScript.Game.IosAudit
 			return <CheckStreamingCompleted>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604595D RID: 285021 RVA: 0x01147538 File Offset: 0x01145738
+		// Token: 0x0603BB0D RID: 244493 RVA: 0x010F1318 File Offset: 0x010EF518
 		public void AddOrRemoveRenderAssetsQueryViewInfo(FVectorDouble viewOrigin, float duration)
 		{
 			if (!GlobalData.World.GetWorld().K2_GetWorldSettings().bEnableWorldPartition)
@@ -1163,7 +1163,7 @@ namespace CSharpScript.Game.IosAudit
 			uworldPartitionSubsystem.D_AddOrRemoveRenderAssetsQueryViewInfo(viewOrigin, duration, 1.2f);
 		}
 
-		// Token: 0x0604595E RID: 285022 RVA: 0x01147598 File Offset: 0x01145798
+		// Token: 0x0603BB0E RID: 244494 RVA: 0x010F1378 File Offset: 0x010EF578
 		[NullableContext(2)]
 		private void ResetRenderAssetsQuery(UWorldPartitionSubsystem worldPartitionSubsystem = null, FWorldPartitionStreamingQuerySource querySource = null, bool? raiseError = null)
 		{
@@ -1194,7 +1194,7 @@ namespace CSharpScript.Game.IosAudit
 			}
 		}
 
-		// Token: 0x0604595F RID: 285023 RVA: 0x0114764C File Offset: 0x0114584C
+		// Token: 0x0603BB0F RID: 244495 RVA: 0x010F142C File Offset: 0x010EF62C
 		[NullableContext(0)]
 		public UniTask<bool> CheckRenderAssetsStreamingCompleted(FVectorDouble viewOrigin, [Nullable(1)] string reason, [Nullable(2)] Func<bool> abortCheckCondition = null)
 		{
@@ -1209,7 +1209,7 @@ namespace CSharpScript.Game.IosAudit
 			return <CheckRenderAssetsStreamingCompleted>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045960 RID: 285024 RVA: 0x011476A8 File Offset: 0x011458A8
+		// Token: 0x0603BB10 RID: 244496 RVA: 0x010F1488 File Offset: 0x010EF688
 		public void CheckPreload(Action<bool> commonCallback, [Nullable(2)] Action<bool> callback = null)
 		{
 			PreloadControllerNew.Instance.DoPreload(delegate(bool commonResult)
@@ -1232,7 +1232,7 @@ namespace CSharpScript.Game.IosAudit
 			});
 		}
 
-		// Token: 0x06045961 RID: 285025 RVA: 0x011476F4 File Offset: 0x011458F4
+		// Token: 0x0603BB11 RID: 244497 RVA: 0x010F14D4 File Offset: 0x010EF6D4
 		[NullableContext(0)]
 		public UniTask<bool> OpenLoading()
 		{
@@ -1243,7 +1243,7 @@ namespace CSharpScript.Game.IosAudit
 			return <OpenLoading>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045962 RID: 285026 RVA: 0x0114772F File Offset: 0x0114592F
+		// Token: 0x0603BB12 RID: 244498 RVA: 0x010F150F File Offset: 0x010EF70F
 		[NullableContext(2)]
 		public void SetTravelMp4(bool play, string path = null)
 		{
@@ -1255,7 +1255,7 @@ namespace CSharpScript.Game.IosAudit
 			GameModeModel.Instance.TravelMp4Path = path;
 		}
 
-		// Token: 0x06045963 RID: 285027 RVA: 0x01147750 File Offset: 0x01145950
+		// Token: 0x0603BB13 RID: 244499 RVA: 0x010F1530 File Offset: 0x010EF730
 		public unsafe void UpdateStreamingQualityLevel()
 		{
 			AWorldSettings aworldSettings = GlobalData.World.GetWorld().K2_GetWorldSettings();
@@ -1299,7 +1299,7 @@ namespace CSharpScript.Game.IosAudit
 			instance2.Info(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 4));
 		}
 
-		// Token: 0x06045964 RID: 285028 RVA: 0x0114793C File Offset: 0x01145B3C
+		// Token: 0x0603BB14 RID: 244500 RVA: 0x010F171C File Offset: 0x010EF91C
 		private void LoadAssetAsyncInternal(string path, ResourceSystem.EResourceLoadPriority priority, [Nullable(new byte[]
 		{
 			1,
@@ -1320,29 +1320,24 @@ namespace CSharpScript.Game.IosAudit
 						ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("Path", assetPath);
 						instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 						Action<bool, string, UObject> loadCallback3 = loadCallback;
-						if (loadCallback3 != null)
+						if (loadCallback3 == null)
 						{
-							loadCallback3(false, path, null);
+							return;
 						}
-						if (!Info.Instance.IsBuildShipping)
-						{
-							ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.PreloadFailConfirm);
-							confirmBoxDataNew.SetTitle("[IosAudit][预加载] 预加载资源失败");
-							confirmBoxDataNew.TextArgs = new string[]
-							{
-								assetPath ?? ""
-							};
-							ConfirmBoxController.Instance.ShowNetWorkConfirmBoxView(confirmBoxDataNew, null);
-						}
+						loadCallback3(false, path, null);
 						return;
 					}
-					this.HoldPreloadObject.AddCommonAsset(assetObject);
-					Action<bool, string, UObject> loadCallback4 = loadCallback;
-					if (loadCallback4 == null)
+					else
 					{
+						this.HoldPreloadObject.AddCommonAsset(assetObject);
+						Action<bool, string, UObject> loadCallback4 = loadCallback;
+						if (loadCallback4 == null)
+						{
+							return;
+						}
+						loadCallback4(true, path, assetObject);
 						return;
 					}
-					loadCallback4(true, path, assetObject);
 				}, priority, "js_undefined");
 				return;
 			}
@@ -1355,8 +1350,8 @@ namespace CSharpScript.Game.IosAudit
 			loadCallback2(false, path, null);
 		}
 
-		// Token: 0x17009B8E RID: 39822
-		// (get) Token: 0x06045965 RID: 285029 RVA: 0x011479C8 File Offset: 0x01145BC8
+		// Token: 0x170070CE RID: 28878
+		// (get) Token: 0x0603BB15 RID: 244501 RVA: 0x010F17A8 File Offset: 0x010EF9A8
 		public static IosAuditController Instance
 		{
 			get
@@ -1365,7 +1360,7 @@ namespace CSharpScript.Game.IosAudit
 			}
 		}
 
-		// Token: 0x06045966 RID: 285030 RVA: 0x011479CF File Offset: 0x01145BCF
+		// Token: 0x0603BB16 RID: 244502 RVA: 0x010F17AF File Offset: 0x010EF9AF
 		public static IosAuditController GetOrCreateInstance()
 		{
 			if (IosAuditController._Instance == null)
@@ -1375,7 +1370,7 @@ namespace CSharpScript.Game.IosAudit
 			return IosAuditController._Instance;
 		}
 
-		// Token: 0x06045967 RID: 285031 RVA: 0x011479E3 File Offset: 0x01145BE3
+		// Token: 0x0603BB17 RID: 244503 RVA: 0x010F17C3 File Offset: 0x010EF9C3
 		public static bool CreateInstance()
 		{
 			if (IosAuditController._Instance != null)
@@ -1386,24 +1381,24 @@ namespace CSharpScript.Game.IosAudit
 			return true;
 		}
 
-		// Token: 0x06045968 RID: 285032 RVA: 0x011479F9 File Offset: 0x01145BF9
+		// Token: 0x0603BB18 RID: 244504 RVA: 0x010F17D9 File Offset: 0x010EF9D9
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06045969 RID: 285033 RVA: 0x011479FB File Offset: 0x01145BFB
+		// Token: 0x0603BB19 RID: 244505 RVA: 0x010F17DB File Offset: 0x010EF9DB
 		public static void ResetStaticDefaultValue()
 		{
 			IosAuditController._Instance = null;
 		}
 
-		// Token: 0x0604596A RID: 285034 RVA: 0x01147A03 File Offset: 0x01145C03
+		// Token: 0x0603BB1A RID: 244506 RVA: 0x010F17E3 File Offset: 0x010EF9E3
 		static IosAuditController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(IosAuditController.CreateStaticDefaultValue), new Action(IosAuditController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0604596C RID: 285036 RVA: 0x01147A48 File Offset: 0x01145C48
+		// Token: 0x0603BB1C RID: 244508 RVA: 0x010F1828 File Offset: 0x010EFA28
 		[CompilerGenerated]
 		internal static string <PrintLoadDetail>g__GetCmdValue|45_1(string cmd, string startStr)
 		{
@@ -1416,25 +1411,25 @@ namespace CSharpScript.Game.IosAudit
 			return "";
 		}
 
-		// Token: 0x040244EC RID: 148716
+		// Token: 0x0401F7A1 RID: 128929
 		private const int ONE_SECOND = 1000;
 
-		// Token: 0x040244ED RID: 148717
+		// Token: 0x0401F7A2 RID: 128930
 		private const int GAME_MODE_CTRL_THINKING_INDEX = 21;
 
-		// Token: 0x040244EE RID: 148718
+		// Token: 0x0401F7A3 RID: 128931
 		private const int SANWANGFENG_INSTANCEID = 1550;
 
-		// Token: 0x040244EF RID: 148719
+		// Token: 0x0401F7A4 RID: 128932
 		private const int RENDER_ASSET_ABORT_CHECK_DISTANCE_SQUARE = 10000;
 
-		// Token: 0x040244F0 RID: 148720
+		// Token: 0x0401F7A5 RID: 128933
 		public const int LOG_STREAMING_STUCK_INTERVAL = 60000;
 
-		// Token: 0x040244F1 RID: 148721
+		// Token: 0x0401F7A6 RID: 128934
 		private float cellProgress;
 
-		// Token: 0x040244F2 RID: 148722
+		// Token: 0x0401F7A7 RID: 128935
 		[TupleElementNames(new string[]
 		{
 			"Blocker",
@@ -1448,31 +1443,31 @@ namespace CSharpScript.Game.IosAudit
 		})]
 		private readonly List<ValueTuple<Func<UniTask>, int>> WorldDoneBlockers = new List<ValueTuple<Func<UniTask>, int>>();
 
-		// Token: 0x040244F3 RID: 148723
+		// Token: 0x0401F7A8 RID: 128936
 		protected bool IsWorldDoneBlockersExecuted;
 
-		// Token: 0x040244F4 RID: 148724
+		// Token: 0x0401F7A9 RID: 128937
 		[Nullable(2)]
 		private UHoldPreloadObject HoldPreloadObject;
 
-		// Token: 0x040244F5 RID: 148725
+		// Token: 0x0401F7AA RID: 128938
 		private bool HasOverrideQuality;
 
-		// Token: 0x040244F6 RID: 148726
+		// Token: 0x0401F7AB RID: 128939
 		private int LastGameQualityLevel = -1;
 
-		// Token: 0x040244F7 RID: 148727
+		// Token: 0x0401F7AC RID: 128940
 		private readonly global::Vector TmpLocation = global::Vector.Create();
 
-		// Token: 0x040244F8 RID: 148728
+		// Token: 0x0401F7AD RID: 128941
 		[Nullable(2)]
 		private static IosAuditController _Instance;
 
-		// Token: 0x0200CDDE RID: 52702
+		// Token: 0x0200B9D0 RID: 47568
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0403E023 RID: 253987
+			// Token: 0x04039451 RID: 234577
 			[Nullable(0)]
 			public static Action <0>__OnInterruptDataLayerSwitchTask;
 		}

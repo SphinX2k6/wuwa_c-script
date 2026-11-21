@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005B5F RID: 23391
+	// Token: 0x02006175 RID: 24949
 	public struct IWaySplinePointType : IFlatbufferObject
 	{
-		// Token: 0x1700B0BD RID: 45245
-		// (get) Token: 0x0602806D RID: 163949 RVA: 0x00580EDE File Offset: 0x0057F0DE
+		// Token: 0x1700BA05 RID: 47621
+		// (get) Token: 0x0602A631 RID: 173617 RVA: 0x005C896E File Offset: 0x005C6B6E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602806E RID: 163950 RVA: 0x00580EEB File Offset: 0x0057F0EB
+		// Token: 0x0602A632 RID: 173618 RVA: 0x005C897B File Offset: 0x005C6B7B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602806F RID: 163951 RVA: 0x00580EF4 File Offset: 0x0057F0F4
+		// Token: 0x0602A633 RID: 173619 RVA: 0x005C8984 File Offset: 0x005C6B84
 		public static IWaySplinePointType GetRootAsIWaySplinePointType(ByteBuffer _bb)
 		{
 			return IWaySplinePointType.GetRootAsIWaySplinePointType(_bb, default(IWaySplinePointType));
 		}
 
-		// Token: 0x06028070 RID: 163952 RVA: 0x00580F10 File Offset: 0x0057F110
+		// Token: 0x0602A634 RID: 173620 RVA: 0x005C89A0 File Offset: 0x005C6BA0
 		public static IWaySplinePointType GetRootAsIWaySplinePointType(ByteBuffer _bb, IWaySplinePointType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06028071 RID: 163953 RVA: 0x00580F2D File Offset: 0x0057F12D
+		// Token: 0x0602A635 RID: 173621 RVA: 0x005C89BD File Offset: 0x005C6BBD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06028072 RID: 163954 RVA: 0x00580F3C File Offset: 0x0057F13C
+		// Token: 0x0602A636 RID: 173622 RVA: 0x005C89CC File Offset: 0x005C6BCC
 		public IWaySplinePointType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B0BE RID: 45246
-		// (get) Token: 0x06028073 RID: 163955 RVA: 0x00580F4C File Offset: 0x0057F14C
+		// Token: 0x1700BA06 RID: 47622
+		// (get) Token: 0x0602A637 RID: 173623 RVA: 0x005C89DC File Offset: 0x005C6BDC
 		public EWaySplinePointType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06028074 RID: 163956 RVA: 0x00580F88 File Offset: 0x0057F188
+		// Token: 0x0602A638 RID: 173624 RVA: 0x005C8A18 File Offset: 0x005C6C18
 		public static Offset<IWaySplinePointType> CreateIWaySplinePointType(FlatBufferBuilder builder, EWaySplinePointType Type = EWaySplinePointType.Common)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IWaySplinePointType.EndIWaySplinePointType(builder);
 		}
 
-		// Token: 0x06028075 RID: 163957 RVA: 0x00580F9E File Offset: 0x0057F19E
+		// Token: 0x0602A639 RID: 173625 RVA: 0x005C8A2E File Offset: 0x005C6C2E
 		public static void StartIWaySplinePointType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06028076 RID: 163958 RVA: 0x00580FA7 File Offset: 0x0057F1A7
+		// Token: 0x0602A63A RID: 173626 RVA: 0x005C8A37 File Offset: 0x005C6C37
 		public static void AddType(FlatBufferBuilder builder, EWaySplinePointType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06028077 RID: 163959 RVA: 0x00580FB2 File Offset: 0x0057F1B2
+		// Token: 0x0602A63B RID: 173627 RVA: 0x005C8A42 File Offset: 0x005C6C42
 		public static Offset<IWaySplinePointType> EndIWaySplinePointType(FlatBufferBuilder builder)
 		{
 			return new Offset<IWaySplinePointType>(builder.EndTable());
 		}
 
-		// Token: 0x06028078 RID: 163960 RVA: 0x00580FC0 File Offset: 0x0057F1C0
+		// Token: 0x0602A63C RID: 173628 RVA: 0x005C8A50 File Offset: 0x005C6C50
 		public IWaySplinePointTypeT UnPack()
 		{
 			IWaySplinePointTypeT waySplinePointTypeT = new IWaySplinePointTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return waySplinePointTypeT;
 		}
 
-		// Token: 0x06028079 RID: 163961 RVA: 0x00580FDB File Offset: 0x0057F1DB
+		// Token: 0x0602A63D RID: 173629 RVA: 0x005C8A6B File Offset: 0x005C6C6B
 		public void UnPackTo(IWaySplinePointTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602807A RID: 163962 RVA: 0x00580FEC File Offset: 0x0057F1EC
+		// Token: 0x0602A63E RID: 173630 RVA: 0x005C8A7C File Offset: 0x005C6C7C
 		public static Offset<IWaySplinePointType> Pack(FlatBufferBuilder builder, IWaySplinePointTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IWaySplinePointType.CreateIWaySplinePointType(builder, _o.Type);
 		}
 
-		// Token: 0x0400F2AA RID: 62122
+		// Token: 0x0400FFB0 RID: 65456
 		private Table __p;
 	}
 }

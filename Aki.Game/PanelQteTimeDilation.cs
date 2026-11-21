@@ -3,22 +3,22 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.NewWorld.Pawn.Component;
 
-// Token: 0x02002302 RID: 8962
+// Token: 0x020017E6 RID: 6118
 public class PanelQteTimeDilation
 {
-	// Token: 0x06011AE6 RID: 72422 RVA: 0x004586B9 File Offset: 0x004568B9
+	// Token: 0x0600EF7E RID: 61310 RVA: 0x00465399 File Offset: 0x00463599
 	public void Init()
 	{
 		this.WorldTimeDilation = 1f;
 		this.EntityTimeDilation = 1;
 	}
 
-	// Token: 0x06011AE7 RID: 72423 RVA: 0x004586D2 File Offset: 0x004568D2
+	// Token: 0x0600EF7F RID: 61311 RVA: 0x004653B2 File Offset: 0x004635B2
 	public void Clear()
 	{
 	}
 
-	// Token: 0x06011AE8 RID: 72424 RVA: 0x004586D4 File Offset: 0x004568D4
+	// Token: 0x0600EF80 RID: 61312 RVA: 0x004653B4 File Offset: 0x004635B4
 	[NullableContext(1)]
 	public void Start(PanelQteContext context)
 	{
@@ -50,7 +50,7 @@ public class PanelQteTimeDilation
 		}
 	}
 
-	// Token: 0x06011AE9 RID: 72425 RVA: 0x004587B4 File Offset: 0x004569B4
+	// Token: 0x0600EF81 RID: 61313 RVA: 0x00465494 File Offset: 0x00463694
 	public void Stop()
 	{
 		if (this.WorldTimeDilation != 1f)
@@ -75,34 +75,34 @@ public class PanelQteTimeDilation
 		}
 	}
 
-	// Token: 0x06011AEA RID: 72426 RVA: 0x00458859 File Offset: 0x00456A59
+	// Token: 0x0600EF82 RID: 61314 RVA: 0x00465539 File Offset: 0x00463739
 	public Number GetWorldTimeDilation()
 	{
 		return this.WorldTimeDilation;
 	}
 
-	// Token: 0x06011AEB RID: 72427 RVA: 0x00458866 File Offset: 0x00456A66
+	// Token: 0x0600EF83 RID: 61315 RVA: 0x00465546 File Offset: 0x00463746
 	public Number GetEntityTimeDilation()
 	{
 		return this.EntityTimeDilation;
 	}
 
-	// Token: 0x04008626 RID: 34342
+	// Token: 0x04008764 RID: 34660
 	private float WorldTimeDilation;
 
-	// Token: 0x04008627 RID: 34343
+	// Token: 0x04008765 RID: 34661
 	private Number EntityTimeDilation = 0;
 
-	// Token: 0x04008628 RID: 34344
+	// Token: 0x04008766 RID: 34662
 	[Nullable(2)]
 	private EntityHandle EntityHandle;
 
-	// Token: 0x04008629 RID: 34345
+	// Token: 0x04008767 RID: 34663
 	private int TimeScaleId;
 
-	// Token: 0x0400862A RID: 34346
+	// Token: 0x04008768 RID: 34664
 	private const int MAX_TIME_SCALE_TIME = 20;
 
-	// Token: 0x0400862B RID: 34347
+	// Token: 0x04008769 RID: 34665
 	private const int TIME_SCALE_PRIORITY = 100;
 }

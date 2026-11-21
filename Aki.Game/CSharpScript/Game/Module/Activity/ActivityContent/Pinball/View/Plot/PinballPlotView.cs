@@ -18,18 +18,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 {
-	// Token: 0x02006326 RID: 25382
+	// Token: 0x020052A4 RID: 21156
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballPlotView : UiTickViewBase, IPlotAvgPerformHandler
 	{
-		// Token: 0x0603FD87 RID: 261511 RVA: 0x00F71F07 File Offset: 0x00F70107
+		// Token: 0x06034A48 RID: 215624 RVA: 0x00EB8E63 File Offset: 0x00EB7063
 		public PinballPlotView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x170092F0 RID: 37616
-		// (get) Token: 0x0603FD88 RID: 261512 RVA: 0x00F71F10 File Offset: 0x00F70110
+		// Token: 0x17006652 RID: 26194
+		// (get) Token: 0x06034A49 RID: 215625 RVA: 0x00EB8E6C File Offset: 0x00EB706C
 		[Nullable(new byte[]
 		{
 			2,
@@ -57,8 +57,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			}
 		}
 
-		// Token: 0x170092F1 RID: 37617
-		// (get) Token: 0x0603FD89 RID: 261513 RVA: 0x00F71F34 File Offset: 0x00F70134
+		// Token: 0x17006653 RID: 26195
+		// (get) Token: 0x06034A4A RID: 215626 RVA: 0x00EB8E90 File Offset: 0x00EB7090
 		protected bool HasOptions
 		{
 			get
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			}
 		}
 
-		// Token: 0x0603FD8A RID: 261514 RVA: 0x00F71F54 File Offset: 0x00F70154
+		// Token: 0x06034A4B RID: 215627 RVA: 0x00EB8EB0 File Offset: 0x00EB70B0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 29;
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603FD8B RID: 261515 RVA: 0x00F723B0 File Offset: 0x00F705B0
+		// Token: 0x06034A4C RID: 215628 RVA: 0x00EB930C File Offset: 0x00EB750C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PinballPlotView.<OnBeforeStartAsync>d__23 <OnBeforeStartAsync>d__;
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FD8C RID: 261516 RVA: 0x00F723F4 File Offset: 0x00F705F4
+		// Token: 0x06034A4D RID: 215629 RVA: 0x00EB9350 File Offset: 0x00EB7550
 		protected override void OnStart()
 		{
 			UUILayoutBase layoutBase = base.GetLayoutBase(20);
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			this.RootActor.OnSequencePlayEvent.Bind(new Action<string, string>(this.OnEventSequence));
 		}
 
-		// Token: 0x0603FD8D RID: 261517 RVA: 0x00F724C9 File Offset: 0x00F706C9
+		// Token: 0x06034A4E RID: 215630 RVA: 0x00EB9425 File Offset: 0x00EB7625
 		private void OnEventSequence(string sequenceName, string eventName)
 		{
 			if (eventName == "Switch_In")
@@ -189,13 +189,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			}
 		}
 
-		// Token: 0x0603FD8E RID: 261518 RVA: 0x00F724E8 File Offset: 0x00F706E8
+		// Token: 0x06034A4F RID: 215631 RVA: 0x00EB9444 File Offset: 0x00EB7644
 		private void OnSceneOutSeqEnd()
 		{
 			base.GetItem(7).SetUIActive(false);
 		}
 
-		// Token: 0x0603FD8F RID: 261519 RVA: 0x00F724F8 File Offset: 0x00F706F8
+		// Token: 0x06034A50 RID: 215632 RVA: 0x00EB9454 File Offset: 0x00EB7654
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.PlotConfigChanged, new Action(this.UpdateByPlotConfig));
@@ -207,7 +207,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			this.SkipComp.AddEventListener();
 		}
 
-		// Token: 0x0603FD90 RID: 261520 RVA: 0x00F725B8 File Offset: 0x00F707B8
+		// Token: 0x06034A51 RID: 215633 RVA: 0x00EB9514 File Offset: 0x00EB7714
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.PlotConfigChanged, new Action(this.UpdateByPlotConfig));
@@ -219,19 +219,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			this.SkipComp.RemoveEventListener();
 		}
 
-		// Token: 0x0603FD91 RID: 261521 RVA: 0x00F72678 File Offset: 0x00F70878
+		// Token: 0x06034A52 RID: 215634 RVA: 0x00EB95D4 File Offset: 0x00EB77D4
 		protected override void OnAfterShow()
 		{
 			EventSystem.Instance.Emit<EUiViewName, bool>(EEventName.PlotViewChange, this.ViewInfo.Name, true);
 		}
 
-		// Token: 0x0603FD92 RID: 261522 RVA: 0x00F72696 File Offset: 0x00F70896
+		// Token: 0x06034A53 RID: 215635 RVA: 0x00EB95F2 File Offset: 0x00EB77F2
 		protected override void OnBeforeHide()
 		{
 			EventSystem.Instance.Emit<EUiViewName, bool>(EEventName.PlotViewChange, this.ViewInfo.Name, false);
 		}
 
-		// Token: 0x0603FD93 RID: 261523 RVA: 0x00F726B4 File Offset: 0x00F708B4
+		// Token: 0x06034A54 RID: 215636 RVA: 0x00EB9610 File Offset: 0x00EB7810
 		protected override void OnBeforeDestroy()
 		{
 			this.TextScrollComponent.Clear();
@@ -246,7 +246,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			this.AvgCharacterMap.Clear();
 		}
 
-		// Token: 0x0603FD94 RID: 261524 RVA: 0x00F7274C File Offset: 0x00F7094C
+		// Token: 0x06034A55 RID: 215637 RVA: 0x00EB96A8 File Offset: 0x00EB78A8
 		private void InitSkipComponent()
 		{
 			base.GetButton(2).RootUIComp.Get().SetUIActive(false);
@@ -254,7 +254,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			this.SkipComp.EnableSkipButton(false);
 		}
 
-		// Token: 0x0603FD95 RID: 261525 RVA: 0x00F727C4 File Offset: 0x00F709C4
+		// Token: 0x06034A56 RID: 215638 RVA: 0x00EB9720 File Offset: 0x00EB7920
 		private void InitTextScrollComponent()
 		{
 			PlotTextScrollComponentContext context = new PlotTextScrollComponentContext
@@ -265,7 +265,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			this.TextScrollComponent.Init(context);
 		}
 
-		// Token: 0x0603FD96 RID: 261526 RVA: 0x00F72800 File Offset: 0x00F70A00
+		// Token: 0x06034A57 RID: 215639 RVA: 0x00EB975C File Offset: 0x00EB795C
 		private void InitDialogTextWriterComponent()
 		{
 			UUIText text = base.GetText(10);
@@ -283,7 +283,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			this.DialogTextWriterComponent.Init(context);
 		}
 
-		// Token: 0x0603FD97 RID: 261527 RVA: 0x00F72894 File Offset: 0x00F70A94
+		// Token: 0x06034A58 RID: 215640 RVA: 0x00EB97F0 File Offset: 0x00EB79F0
 		private void InitCenterTextWriterComponent()
 		{
 			UUIText text = base.GetText(26);
@@ -301,7 +301,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			this.CenterTextWriterComponent.Init(context);
 		}
 
-		// Token: 0x0603FD98 RID: 261528 RVA: 0x00F72928 File Offset: 0x00F70B28
+		// Token: 0x06034A59 RID: 215641 RVA: 0x00EB9884 File Offset: 0x00EB7A84
 		private void InitOptionComponent()
 		{
 			PlotOptionComponentContext context = new PlotOptionComponentContext
@@ -313,7 +313,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			this.OptionComponent.Init(context);
 		}
 
-		// Token: 0x0603FD99 RID: 261529 RVA: 0x00F72980 File Offset: 0x00F70B80
+		// Token: 0x06034A5A RID: 215642 RVA: 0x00EB98DC File Offset: 0x00EB7ADC
 		private void InitWaitingProxyComponent()
 		{
 			PlotWaitingProxyComponentContext context = new PlotWaitingProxyComponentContext
@@ -325,13 +325,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			this.WaitingProxyComponent.Init(context);
 		}
 
-		// Token: 0x0603FD9A RID: 261530 RVA: 0x00F729D5 File Offset: 0x00F70BD5
+		// Token: 0x06034A5B RID: 215643 RVA: 0x00EB9931 File Offset: 0x00EB7B31
 		private void InitWaitingItemSeqPlayer()
 		{
 			this.WaitingItemSeqPlayer = new LevelSequencePlayer(base.GetItem(23));
 		}
 
-		// Token: 0x0603FD9B RID: 261531 RVA: 0x00F729EC File Offset: 0x00F70BEC
+		// Token: 0x06034A5C RID: 215644 RVA: 0x00EB9948 File Offset: 0x00EB7B48
 		private void InitAutoPlayComponent()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(1);
@@ -347,13 +347,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			this.AutoPlayComponent.Init(context);
 		}
 
-		// Token: 0x0603FD9C RID: 261532 RVA: 0x00F72A60 File Offset: 0x00F70C60
+		// Token: 0x06034A5D RID: 215645 RVA: 0x00EB99BC File Offset: 0x00EB7BBC
 		protected override void OnTick(float delta)
 		{
 			this.WaitingProxyComponent.OnTick(delta);
 		}
 
-		// Token: 0x0603FD9D RID: 261533 RVA: 0x00F72A70 File Offset: 0x00F70C70
+		// Token: 0x06034A5E RID: 215646 RVA: 0x00EB99CC File Offset: 0x00EB7BCC
 		private void UpdateByPlotConfig()
 		{
 			this.SkipComp.EnableSkipButton(false);
@@ -362,7 +362,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			this.AutoPlayComponent.UpdateAutoPlayToggle();
 		}
 
-		// Token: 0x0603FD9E RID: 261534 RVA: 0x00F72AB0 File Offset: 0x00F70CB0
+		// Token: 0x06034A5F RID: 215647 RVA: 0x00EB9A0C File Offset: 0x00EB7C0C
 		private void OnShowTalkStart(ShowTalk inShowTalk)
 		{
 			PlotSkipComponent skipComp = this.SkipComp;
@@ -373,7 +373,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			skipComp.AddSummary(inShowTalk.TalkOutline);
 		}
 
-		// Token: 0x0603FD9F RID: 261535 RVA: 0x00F72AC8 File Offset: 0x00F70CC8
+		// Token: 0x06034A60 RID: 215648 RVA: 0x00EB9A24 File Offset: 0x00EB7C24
 		private void PlayTalk(ITalkItem talkItem)
 		{
 			this.ClearTalk();
@@ -381,7 +381,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			this.HandleTextLogic();
 		}
 
-		// Token: 0x0603FDA0 RID: 261536 RVA: 0x00F72AE0 File Offset: 0x00F70CE0
+		// Token: 0x06034A61 RID: 215649 RVA: 0x00EB9A3C File Offset: 0x00EB7C3C
 		private void HandleTextLogic()
 		{
 			if (this.CurrentContent == null)
@@ -451,7 +451,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			this.PlotTextAkComponent.PlayTalkItemStartEvent(currentContent);
 		}
 
-		// Token: 0x0603FDA1 RID: 261537 RVA: 0x00F72CD8 File Offset: 0x00F70ED8
+		// Token: 0x06034A62 RID: 215650 RVA: 0x00EB9C34 File Offset: 0x00EB7E34
 		private void HandleAvgCenterText(ITalkItem talkItem)
 		{
 			UUIText textComponent = this.CenterTextWriterComponent.GetTextComponent();
@@ -467,7 +467,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			this.CenterTextWriterComponent.Play();
 		}
 
-		// Token: 0x0603FDA2 RID: 261538 RVA: 0x00F72D3C File Offset: 0x00F70F3C
+		// Token: 0x06034A63 RID: 215651 RVA: 0x00EB9C98 File Offset: 0x00EB7E98
 		private HashSet<int> HandleAvgCharacterActions(ITalkItem talkItem, int? whoId, AvgTalkerConfig? avgTalkerConfig)
 		{
 			HashSet<int> hashSet = new HashSet<int>();
@@ -490,7 +490,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			return hashSet;
 		}
 
-		// Token: 0x0603FDA3 RID: 261539 RVA: 0x00F72DAC File Offset: 0x00F70FAC
+		// Token: 0x06034A64 RID: 215652 RVA: 0x00EB9D08 File Offset: 0x00EB7F08
 		private void HandleAvgTalk(ITalkItemAvgTalk avgTalkItem, int? whoId, AvgTalkerConfig? avgTalkerConfig, HashSet<int> speakerSet)
 		{
 			EAvgRolePosition positionConfig = avgTalkItem.PositionConfig;
@@ -509,7 +509,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			this.HandleSingleDialog(whoId.Value, positionConfig, animationType, valueOrDefault, speakerSet);
 		}
 
-		// Token: 0x0603FDA4 RID: 261540 RVA: 0x00F72E28 File Offset: 0x00F71028
+		// Token: 0x06034A65 RID: 215653 RVA: 0x00EB9D84 File Offset: 0x00EB7F84
 		private void HandleGroupDialog(ITalkItemAvgTalk avgTalkItem, HashSet<int> speakerSet)
 		{
 			List<ActionInfo> actions = avgTalkItem.Actions;
@@ -540,7 +540,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			}
 		}
 
-		// Token: 0x0603FDA5 RID: 261541 RVA: 0x00F72F60 File Offset: 0x00F71160
+		// Token: 0x06034A66 RID: 215654 RVA: 0x00EB9EBC File Offset: 0x00EB80BC
 		private void HandleSingleDialog(int whoId, EAvgRolePosition positionConfig, EAvgRoleAnimationType animationType, bool isLoop, HashSet<int> speakerSet)
 		{
 			speakerSet.Add(whoId);
@@ -554,7 +554,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			PlotModel.Instance.PlotAvg.AvgCharacterEnterOrChangeAnim(context).Forget();
 		}
 
-		// Token: 0x0603FDA6 RID: 261542 RVA: 0x00F72FB0 File Offset: 0x00F711B0
+		// Token: 0x06034A67 RID: 215655 RVA: 0x00EB9F0C File Offset: 0x00EB810C
 		private void HandleAvgEnter(ITalkItemAvgEnter avgTalkItem, HashSet<int> speakerSet)
 		{
 			int? whoId = avgTalkItem.WhoId;
@@ -576,7 +576,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			PlotModel.Instance.PlotAvg.AvgCharacterEnterAsync(context).Forget<bool>();
 		}
 
-		// Token: 0x0603FDA7 RID: 261543 RVA: 0x00F73044 File Offset: 0x00F71244
+		// Token: 0x06034A68 RID: 215656 RVA: 0x00EB9FA0 File Offset: 0x00EB81A0
 		private void HandleAvgExit(ITalkItemAvgExit avgTalkItem)
 		{
 			int? whoId = avgTalkItem.WhoId;
@@ -587,7 +587,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			PlotModel.Instance.PlotAvg.AvgCharacterExitAsync(whoId.Value).Forget<bool>();
 		}
 
-		// Token: 0x0603FDA8 RID: 261544 RVA: 0x00F73088 File Offset: 0x00F71288
+		// Token: 0x06034A69 RID: 215657 RVA: 0x00EB9FE4 File Offset: 0x00EB81E4
 		private void ClearTalk()
 		{
 			if (this.CurrentContent != null)
@@ -602,7 +602,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			this.WaitingProxyComponent.Cancel();
 		}
 
-		// Token: 0x0603FDA9 RID: 261545 RVA: 0x00F730EC File Offset: 0x00F712EC
+		// Token: 0x06034A6A RID: 215658 RVA: 0x00EBA048 File Offset: 0x00EB8248
 		private void TryContinue()
 		{
 			if (this.CurrentContent == null)
@@ -626,20 +626,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			this.ContinueInternal();
 		}
 
-		// Token: 0x0603FDAA RID: 261546 RVA: 0x00F73150 File Offset: 0x00F71350
+		// Token: 0x06034A6B RID: 215659 RVA: 0x00EBA0AC File Offset: 0x00EB82AC
 		private void ContinueInternal()
 		{
 			FlowController.Instance.FlowShowTalk.SubmitSubtitle(this.CurrentContent);
 		}
 
-		// Token: 0x0603FDAB RID: 261547 RVA: 0x00F73167 File Offset: 0x00F71367
+		// Token: 0x06034A6C RID: 215660 RVA: 0x00EBA0C3 File Offset: 0x00EB82C3
 		private void JumpToEnd()
 		{
 			this.DialogTextWriterComponent.JumpToEnd();
 			this.TextScrollComponent.JumpToEnd();
 		}
 
-		// Token: 0x0603FDAC RID: 261548 RVA: 0x00F73180 File Offset: 0x00F71380
+		// Token: 0x06034A6D RID: 215661 RVA: 0x00EBA0DC File Offset: 0x00EB82DC
 		public void ShowOptions()
 		{
 			if (this.CurrentContent == null || this.CurrentContent.Options == null || this.CurrentContent.Options.Count == 0)
@@ -652,25 +652,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			optionComponent.RefreshOptions((options != null) ? options.ToArray() : null);
 		}
 
-		// Token: 0x0603FDAD RID: 261549 RVA: 0x00F731E2 File Offset: 0x00F713E2
+		// Token: 0x06034A6E RID: 215662 RVA: 0x00EBA13E File Offset: 0x00EB833E
 		private void ClearPlotSubtitle()
 		{
 			this.CurrentContent = null;
 			this.ClearPlotView();
 		}
 
-		// Token: 0x0603FDAE RID: 261550 RVA: 0x00F731F1 File Offset: 0x00F713F1
+		// Token: 0x06034A6F RID: 215663 RVA: 0x00EBA14D File Offset: 0x00EB834D
 		private void ClearPlotView()
 		{
 			this.TextScrollComponent.Clear();
 		}
 
-		// Token: 0x0603FDAF RID: 261551 RVA: 0x00F731FE File Offset: 0x00F713FE
+		// Token: 0x06034A70 RID: 215664 RVA: 0x00EBA15A File Offset: 0x00EB835A
 		private void HideAll(bool isHidden)
 		{
 		}
 
-		// Token: 0x0603FDB0 RID: 261552 RVA: 0x00F73200 File Offset: 0x00F71400
+		// Token: 0x06034A71 RID: 215665 RVA: 0x00EBA15C File Offset: 0x00EB835C
 		private void BuildOptionItemDataList(ITalkOption[] options)
 		{
 			this.OptionItemDataList.Clear();
@@ -690,44 +690,44 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			}
 		}
 
-		// Token: 0x0603FDB1 RID: 261553 RVA: 0x00F7326E File Offset: 0x00F7146E
+		// Token: 0x06034A72 RID: 215666 RVA: 0x00EBA1CA File Offset: 0x00EB83CA
 		private void SetOptionRootItemActive(bool active)
 		{
 			base.GetItem(22).SetUIActive(active);
 		}
 
-		// Token: 0x0603FDB2 RID: 261554 RVA: 0x00F7327E File Offset: 0x00F7147E
+		// Token: 0x06034A73 RID: 215667 RVA: 0x00EBA1DA File Offset: 0x00EB83DA
 		private void OnRefreshOptions(ITalkOption[] options)
 		{
 			this.BuildOptionItemDataList(options);
 			this.OptionLayout.RefreshByData(this.OptionItemDataList, null, false);
 		}
 
-		// Token: 0x0603FDB3 RID: 261555 RVA: 0x00F7329A File Offset: 0x00F7149A
+		// Token: 0x06034A74 RID: 215668 RVA: 0x00EBA1F6 File Offset: 0x00EB83F6
 		private void OnOptionsShow()
 		{
 			this.SetOptionRootItemActive(true);
 		}
 
-		// Token: 0x0603FDB4 RID: 261556 RVA: 0x00F732A3 File Offset: 0x00F714A3
+		// Token: 0x06034A75 RID: 215669 RVA: 0x00EBA1FF File Offset: 0x00EB83FF
 		private void OnOptionsHide()
 		{
 			this.SetOptionRootItemActive(false);
 		}
 
-		// Token: 0x0603FDB5 RID: 261557 RVA: 0x00F732AC File Offset: 0x00F714AC
+		// Token: 0x06034A76 RID: 215670 RVA: 0x00EBA208 File Offset: 0x00EB8408
 		private void OnOptionClick(int optionIndex)
 		{
 			this.OptionComponent.SelectOption(optionIndex);
 		}
 
-		// Token: 0x0603FDB6 RID: 261558 RVA: 0x00F732BA File Offset: 0x00F714BA
+		// Token: 0x06034A77 RID: 215671 RVA: 0x00EBA216 File Offset: 0x00EB8416
 		private void OnSelectionItemClick(int optionIndex)
 		{
 			this.OptionComponent.SelectOption(optionIndex);
 		}
 
-		// Token: 0x0603FDB7 RID: 261559 RVA: 0x00F732C8 File Offset: 0x00F714C8
+		// Token: 0x06034A78 RID: 215672 RVA: 0x00EBA224 File Offset: 0x00EB8424
 		protected void SetContinueArrowActive(bool active)
 		{
 			PlotModel.Instance.CanClick = active;
@@ -740,7 +740,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			this.UiViewSequence.StopSequenceByKey("Page", false, false);
 		}
 
-		// Token: 0x0603FDB8 RID: 261560 RVA: 0x00F73320 File Offset: 0x00F71520
+		// Token: 0x06034A79 RID: 215673 RVA: 0x00EBA27C File Offset: 0x00EB847C
 		private void ShowWaiting()
 		{
 			base.GetItem(23).SetUIActive(true);
@@ -748,7 +748,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			this.SetContinueArrowActive(false);
 		}
 
-		// Token: 0x0603FDB9 RID: 261561 RVA: 0x00F7335C File Offset: 0x00F7155C
+		// Token: 0x06034A7A RID: 215674 RVA: 0x00EBA2B8 File Offset: 0x00EB84B8
 		private void HideWaiting()
 		{
 			base.GetItem(23).SetUIActive(false);
@@ -756,80 +756,80 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			this.SetContinueArrowActive(true);
 		}
 
-		// Token: 0x0603FDBA RID: 261562 RVA: 0x00F73385 File Offset: 0x00F71585
+		// Token: 0x06034A7B RID: 215675 RVA: 0x00EBA2E1 File Offset: 0x00EB84E1
 		private void OnWaitingStart()
 		{
 			this.ShowWaiting();
 		}
 
-		// Token: 0x0603FDBB RID: 261563 RVA: 0x00F7338D File Offset: 0x00F7158D
+		// Token: 0x06034A7C RID: 215676 RVA: 0x00EBA2E9 File Offset: 0x00EB84E9
 		private void OnWaitingComplete()
 		{
 			this.HideWaiting();
 			this.AutoPlayComponent.TryDelayPlayNextTalk();
 		}
 
-		// Token: 0x0603FDBC RID: 261564 RVA: 0x00F733A1 File Offset: 0x00F715A1
+		// Token: 0x06034A7D RID: 215677 RVA: 0x00EBA2FD File Offset: 0x00EB84FD
 		private void OnWaitingCancel()
 		{
 			this.HideWaiting();
 		}
 
-		// Token: 0x0603FDBD RID: 261565 RVA: 0x00F733A9 File Offset: 0x00F715A9
+		// Token: 0x06034A7E RID: 215678 RVA: 0x00EBA305 File Offset: 0x00EB8505
 		private PinballPlotOptionItem CreateOptionItem()
 		{
 			return new PinballPlotOptionItem();
 		}
 
-		// Token: 0x0603FDBE RID: 261566 RVA: 0x00F733B0 File Offset: 0x00F715B0
+		// Token: 0x06034A7F RID: 215679 RVA: 0x00EBA30C File Offset: 0x00EB850C
 		private void OnSkip()
 		{
 			FlowController.Instance.BackgroundFlow("UI点击跳过(PlotSubtitleView)", true, false, false);
 		}
 
-		// Token: 0x0603FDBF RID: 261567 RVA: 0x00F733C4 File Offset: 0x00F715C4
+		// Token: 0x06034A80 RID: 215680 RVA: 0x00EBA320 File Offset: 0x00EB8520
 		private void OnSkipPop()
 		{
 			this.AutoPlayComponent.MuteAutoPlay(true);
 		}
 
-		// Token: 0x0603FDC0 RID: 261568 RVA: 0x00F733D2 File Offset: 0x00F715D2
+		// Token: 0x06034A81 RID: 215681 RVA: 0x00EBA32E File Offset: 0x00EB852E
 		private void OnSkipCancel()
 		{
 			this.AutoPlayComponent.MuteAutoPlay(false);
 		}
 
-		// Token: 0x0603FDC1 RID: 261569 RVA: 0x00F733E0 File Offset: 0x00F715E0
+		// Token: 0x06034A82 RID: 215682 RVA: 0x00EBA33C File Offset: 0x00EB853C
 		private void OnNextButtonClick()
 		{
 			this.TryContinue();
 		}
 
-		// Token: 0x0603FDC2 RID: 261570 RVA: 0x00F733E8 File Offset: 0x00F715E8
+		// Token: 0x06034A83 RID: 215683 RVA: 0x00EBA344 File Offset: 0x00EB8544
 		private void OnContinueButtonClick()
 		{
 			this.TryContinue();
 		}
 
-		// Token: 0x0603FDC3 RID: 261571 RVA: 0x00F733F0 File Offset: 0x00F715F0
+		// Token: 0x06034A84 RID: 215684 RVA: 0x00EBA34C File Offset: 0x00EB854C
 		private bool CheckTalkFinished()
 		{
 			return !this.TextScrollComponent.GetIsPlaying() && !this.DialogTextWriterComponent.GetIsPlaying() && !this.CenterTextWriterComponent.GetIsPlaying() && !this.WaitingProxyComponent.GetIsWaiting();
 		}
 
-		// Token: 0x0603FDC4 RID: 261572 RVA: 0x00F73429 File Offset: 0x00F71629
+		// Token: 0x06034A85 RID: 215685 RVA: 0x00EBA385 File Offset: 0x00EB8585
 		private void ContinueToNextTalk()
 		{
 			this.ContinueInternal();
 		}
 
-		// Token: 0x0603FDC5 RID: 261573 RVA: 0x00F73431 File Offset: 0x00F71631
+		// Token: 0x06034A86 RID: 215686 RVA: 0x00EBA38D File Offset: 0x00EB858D
 		private void OnTextWriterEnd()
 		{
 			this.AutoPlayComponent.TryDelayPlayNextTalk();
 		}
 
-		// Token: 0x0603FDC6 RID: 261574 RVA: 0x00F73440 File Offset: 0x00F71640
+		// Token: 0x06034A87 RID: 215687 RVA: 0x00EBA39C File Offset: 0x00EB859C
 		public UniTask PlayCharacterEnterPerformAsync(AvgTalkerEnterActionContext context)
 		{
 			PinballPlotView.<PlayCharacterEnterPerformAsync>d__82 <PlayCharacterEnterPerformAsync>d__;
@@ -841,7 +841,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			return <PlayCharacterEnterPerformAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FDC7 RID: 261575 RVA: 0x00F7348C File Offset: 0x00F7168C
+		// Token: 0x06034A88 RID: 215688 RVA: 0x00EBA3E8 File Offset: 0x00EB85E8
 		public UniTask PlayCharacterExitPerformAsync(int characterId)
 		{
 			PinballPlotView.<PlayCharacterExitPerformAsync>d__83 <PlayCharacterExitPerformAsync>d__;
@@ -853,7 +853,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			return <PlayCharacterExitPerformAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FDC8 RID: 261576 RVA: 0x00F734D8 File Offset: 0x00F716D8
+		// Token: 0x06034A89 RID: 215689 RVA: 0x00EBA434 File Offset: 0x00EB8634
 		public UniTask PlayCharacterMovePerformAsync(AvgTalkerMoveActionContext context)
 		{
 			PinballPlotView.<PlayCharacterMovePerformAsync>d__84 <PlayCharacterMovePerformAsync>d__;
@@ -865,7 +865,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			return <PlayCharacterMovePerformAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603FDC9 RID: 261577 RVA: 0x00F73524 File Offset: 0x00F71724
+		// Token: 0x06034A8A RID: 215690 RVA: 0x00EBA480 File Offset: 0x00EB8680
 		public void ChangeCharacterAnim(int characterId, EAvgRoleAnimationType animationType, bool isLoop)
 		{
 			PinballAvgCharacter pinballAvgCharacter;
@@ -881,7 +881,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			pinballAvgCharacter.PlayAnimation(character.Direction, animationType, isLoop);
 		}
 
-		// Token: 0x0603FDCA RID: 261578 RVA: 0x00F73568 File Offset: 0x00F71768
+		// Token: 0x06034A8B RID: 215691 RVA: 0x00EBA4C4 File Offset: 0x00EB86C4
 		private void UpdateTalkerSpeakState(HashSet<int> speakerList)
 		{
 			foreach (KeyValuePair<int, PinballAvgCharacter> keyValuePair in this.AvgCharacterMap)
@@ -890,26 +890,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 			}
 		}
 
-		// Token: 0x040214FF RID: 136447
+		// Token: 0x0401BE2E RID: 114222
 		[Nullable(2)]
 		protected ITalkItem CurrentContent;
 
-		// Token: 0x04021500 RID: 136448
+		// Token: 0x0401BE2F RID: 114223
 		protected List<IPinballPlotOptionItemData> OptionItemDataList;
 
-		// Token: 0x04021501 RID: 136449
+		// Token: 0x0401BE30 RID: 114224
 		protected List<IPinballPlotSelectionItemData> SelectionItemDataList;
 
-		// Token: 0x04021502 RID: 136450
+		// Token: 0x0401BE31 RID: 114225
 		protected Dictionary<int, PinballAvgCharacter> AvgCharacterMap;
 
-		// Token: 0x04021503 RID: 136451
+		// Token: 0x0401BE32 RID: 114226
 		protected Dictionary<EAvgRolePosition, UUIItem> PosItemMap;
 
-		// Token: 0x04021504 RID: 136452
+		// Token: 0x0401BE33 RID: 114227
 		protected List<PinballPlotSelectionItem> SelectionItemList;
 
-		// Token: 0x04021505 RID: 136453
+		// Token: 0x0401BE34 RID: 114228
 		[Nullable(new byte[]
 		{
 			2,
@@ -918,96 +918,96 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Plot
 		})]
 		protected GenericLayout<PinballPlotOptionItem, IPinballPlotOptionItemData> OptionLayout;
 
-		// Token: 0x04021506 RID: 136454
+		// Token: 0x0401BE35 RID: 114229
 		protected PlotTextScrollComponent TextScrollComponent;
 
-		// Token: 0x04021507 RID: 136455
+		// Token: 0x0401BE36 RID: 114230
 		protected PlotOptionComponent OptionComponent;
 
-		// Token: 0x04021508 RID: 136456
+		// Token: 0x0401BE37 RID: 114231
 		protected PlotTextWriterComponent DialogTextWriterComponent;
 
-		// Token: 0x04021509 RID: 136457
+		// Token: 0x0401BE38 RID: 114232
 		protected PlotTextWriterComponent CenterTextWriterComponent;
 
-		// Token: 0x0402150A RID: 136458
+		// Token: 0x0401BE39 RID: 114233
 		protected PlotWaitingProxyComponent WaitingProxyComponent;
 
-		// Token: 0x0402150B RID: 136459
+		// Token: 0x0401BE3A RID: 114234
 		protected PlotAutoPlayComponent AutoPlayComponent;
 
-		// Token: 0x0402150C RID: 136460
+		// Token: 0x0401BE3B RID: 114235
 		protected PlotTextAudioComponent PlotTextAkComponent;
 
-		// Token: 0x0402150D RID: 136461
+		// Token: 0x0401BE3C RID: 114236
 		[Nullable(2)]
 		protected PlotSkipComponent SkipComp;
 
-		// Token: 0x0402150E RID: 136462
+		// Token: 0x0401BE3D RID: 114237
 		[Nullable(2)]
 		protected LevelSequencePlayer WaitingItemSeqPlayer;
 
-		// Token: 0x0200C520 RID: 50464
+		// Token: 0x0200AF07 RID: 44807
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403B7D2 RID: 243666
+			// Token: 0x04036134 RID: 221492
 			CaptionItem,
-			// Token: 0x0403B7D3 RID: 243667
+			// Token: 0x04036135 RID: 221493
 			AutoPlayToggle,
-			// Token: 0x0403B7D4 RID: 243668
+			// Token: 0x04036136 RID: 221494
 			SkipButton,
-			// Token: 0x0403B7D5 RID: 243669
+			// Token: 0x04036137 RID: 221495
 			SelectionItemA,
-			// Token: 0x0403B7D6 RID: 243670
+			// Token: 0x04036138 RID: 221496
 			SelectionItemB,
-			// Token: 0x0403B7D7 RID: 243671
+			// Token: 0x04036139 RID: 221497
 			SelectionItemC,
-			// Token: 0x0403B7D8 RID: 243672
+			// Token: 0x0403613A RID: 221498
 			NextButton,
-			// Token: 0x0403B7D9 RID: 243673
+			// Token: 0x0403613B RID: 221499
 			ContentRootItem,
-			// Token: 0x0403B7DA RID: 243674
+			// Token: 0x0403613C RID: 221500
 			SpeakerNameText,
-			// Token: 0x0403B7DB RID: 243675
+			// Token: 0x0403613D RID: 221501
 			DialogScrollView,
-			// Token: 0x0403B7DC RID: 243676
+			// Token: 0x0403613E RID: 221502
 			DialogText,
-			// Token: 0x0403B7DD RID: 243677
+			// Token: 0x0403613F RID: 221503
 			ContinueArrowSprite,
-			// Token: 0x0403B7DE RID: 243678
+			// Token: 0x04036140 RID: 221504
 			ContinueButton,
-			// Token: 0x0403B7DF RID: 243679
+			// Token: 0x04036141 RID: 221505
 			SpineRootItem,
-			// Token: 0x0403B7E0 RID: 243680
+			// Token: 0x04036142 RID: 221506
 			LeftPosItemA,
-			// Token: 0x0403B7E1 RID: 243681
+			// Token: 0x04036143 RID: 221507
 			LeftPosItemB,
-			// Token: 0x0403B7E2 RID: 243682
+			// Token: 0x04036144 RID: 221508
 			CenterPosItem,
-			// Token: 0x0403B7E3 RID: 243683
+			// Token: 0x04036145 RID: 221509
 			RightPosItemB,
-			// Token: 0x0403B7E4 RID: 243684
+			// Token: 0x04036146 RID: 221510
 			RightPosItemA,
-			// Token: 0x0403B7E5 RID: 243685
+			// Token: 0x04036147 RID: 221511
 			SpineTemplateItem,
-			// Token: 0x0403B7E6 RID: 243686
+			// Token: 0x04036148 RID: 221512
 			OptionLayout,
-			// Token: 0x0403B7E7 RID: 243687
+			// Token: 0x04036149 RID: 221513
 			OptionItem,
-			// Token: 0x0403B7E8 RID: 243688
+			// Token: 0x0403614A RID: 221514
 			OptionRootItem,
-			// Token: 0x0403B7E9 RID: 243689
+			// Token: 0x0403614B RID: 221515
 			WaitingItem,
-			// Token: 0x0403B7EA RID: 243690
+			// Token: 0x0403614C RID: 221516
 			SpeakerNameRootItem,
-			// Token: 0x0403B7EB RID: 243691
+			// Token: 0x0403614D RID: 221517
 			BlackScreenRootItem,
-			// Token: 0x0403B7EC RID: 243692
+			// Token: 0x0403614E RID: 221518
 			CenterText,
-			// Token: 0x0403B7ED RID: 243693
+			// Token: 0x0403614F RID: 221519
 			BgTexture,
-			// Token: 0x0403B7EE RID: 243694
+			// Token: 0x04036150 RID: 221520
 			DecorationTexture
 		}
 	}

@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004998 RID: 18840
+	// Token: 0x02004E4F RID: 20047
 	public class ICheckChessWinnerT
 	{
-		// Token: 0x1700881F RID: 34847
-		// (get) Token: 0x0601D62A RID: 120362 RVA: 0x0042457A File Offset: 0x0042277A
-		// (set) Token: 0x0601D62B RID: 120363 RVA: 0x00424582 File Offset: 0x00422782
+		// Token: 0x17008EDA RID: 36570
+		// (get) Token: 0x0601F04F RID: 127055 RVA: 0x00454A2E File Offset: 0x00452C2E
+		// (set) Token: 0x0601F050 RID: 127056 RVA: 0x00454A36 File Offset: 0x00452C36
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008820 RID: 34848
-		// (get) Token: 0x0601D62C RID: 120364 RVA: 0x0042458B File Offset: 0x0042278B
-		// (set) Token: 0x0601D62D RID: 120365 RVA: 0x00424593 File Offset: 0x00422793
+		// Token: 0x17008EDB RID: 36571
+		// (get) Token: 0x0601F051 RID: 127057 RVA: 0x00454A3F File Offset: 0x00452C3F
+		// (set) Token: 0x0601F052 RID: 127058 RVA: 0x00454A47 File Offset: 0x00452C47
 		public int ChessboardId { get; set; }
 
-		// Token: 0x17008821 RID: 34849
-		// (get) Token: 0x0601D62E RID: 120366 RVA: 0x0042459C File Offset: 0x0042279C
-		// (set) Token: 0x0601D62F RID: 120367 RVA: 0x004245A4 File Offset: 0x004227A4
+		// Token: 0x17008EDC RID: 36572
+		// (get) Token: 0x0601F053 RID: 127059 RVA: 0x00454A50 File Offset: 0x00452C50
+		// (set) Token: 0x0601F054 RID: 127060 RVA: 0x00454A58 File Offset: 0x00452C58
 		public ERenjuController Winner { get; set; }
 
-		// Token: 0x0601D630 RID: 120368 RVA: 0x004245AD File Offset: 0x004227AD
+		// Token: 0x0601F055 RID: 127061 RVA: 0x00454A61 File Offset: 0x00452C61
 		public ICheckChessWinnerT()
 		{
 			this.Type = ECondition.CompareVar;

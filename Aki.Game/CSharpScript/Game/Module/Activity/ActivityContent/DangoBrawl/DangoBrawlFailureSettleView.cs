@@ -13,16 +13,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006835 RID: 26677
+	// Token: 0x02005785 RID: 22405
 	public class DangoBrawlFailureSettleView : UiViewBase
 	{
-		// Token: 0x06042961 RID: 272737 RVA: 0x0102F7BE File Offset: 0x0102D9BE
+		// Token: 0x060374B5 RID: 226485 RVA: 0x00F70CCA File Offset: 0x00F6EECA
 		[NullableContext(1)]
 		public DangoBrawlFailureSettleView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06042962 RID: 272738 RVA: 0x0102F7C8 File Offset: 0x0102D9C8
+		// Token: 0x060374B6 RID: 226486 RVA: 0x00F70CD4 File Offset: 0x00F6EED4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 11;
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06042963 RID: 272739 RVA: 0x0102F9C0 File Offset: 0x0102DBC0
+		// Token: 0x060374B7 RID: 226487 RVA: 0x00F70ECC File Offset: 0x00F6F0CC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DangoBrawlFailureSettleView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -74,21 +74,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042964 RID: 272740 RVA: 0x0102FA03 File Offset: 0x0102DC03
+		// Token: 0x060374B8 RID: 226488 RVA: 0x00F70F0F File Offset: 0x00F6F10F
 		protected override void OnStart()
 		{
 			this.InitLevelInfo();
 			this.RefreshInfo();
 		}
 
-		// Token: 0x06042965 RID: 272741 RVA: 0x0102FA11 File Offset: 0x0102DC11
+		// Token: 0x060374B9 RID: 226489 RVA: 0x00F70F1D File Offset: 0x00F6F11D
 		protected override void OnAfterShow()
 		{
 			base.OnAfterShow();
 			this.PostDefeatedAudio();
 		}
 
-		// Token: 0x06042966 RID: 272742 RVA: 0x0102FA20 File Offset: 0x0102DC20
+		// Token: 0x060374BA RID: 226490 RVA: 0x00F70F2C File Offset: 0x00F6F12C
 		private void PostDefeatedAudio()
 		{
 			DangoBrawlBattleManager battleManager = DangoBrawlModel.Instance.GetBattleManager(false);
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			AudioSystem.Instance.PostEvent(text);
 		}
 
-		// Token: 0x06042967 RID: 272743 RVA: 0x0102FA83 File Offset: 0x0102DC83
+		// Token: 0x060374BB RID: 226491 RVA: 0x00F70F8F File Offset: 0x00F6F18F
 		protected override void OnBeforeDestroy()
 		{
 			DangoBrawlBattleManager battleManager = DangoBrawlModel.Instance.GetBattleManager(false);
@@ -117,14 +117,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			base.OnBeforeDestroy();
 		}
 
-		// Token: 0x06042968 RID: 272744 RVA: 0x0102FAB2 File Offset: 0x0102DCB2
+		// Token: 0x060374BC RID: 226492 RVA: 0x00F70FBE File Offset: 0x00F6F1BE
 		[NullableContext(1)]
 		private DangoBrawlRetryCountItem CreateRetryCountItem()
 		{
 			return new DangoBrawlRetryCountItem();
 		}
 
-		// Token: 0x06042969 RID: 272745 RVA: 0x0102FABC File Offset: 0x0102DCBC
+		// Token: 0x060374BD RID: 226493 RVA: 0x00F70FC8 File Offset: 0x00F6F1C8
 		private void InitLevelInfo()
 		{
 			ActivityDangoBrawlData myActivityData = ActivityDangoBrawlController.Instance.MyActivityData;
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.IsNormalMode = (dangoBrawlLevelData == null || dangoBrawlLevelData.IsNormalMode);
 		}
 
-		// Token: 0x0604296A RID: 272746 RVA: 0x0102FB40 File Offset: 0x0102DD40
+		// Token: 0x060374BE RID: 226494 RVA: 0x00F7104C File Offset: 0x00F6F24C
 		private void RefreshInfo()
 		{
 			ActivityDangoBrawlData myActivityData = ActivityDangoBrawlController.Instance.MyActivityData;
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(4), textStringId, Array.Empty<object>());
 		}
 
-		// Token: 0x0604296B RID: 272747 RVA: 0x0102FCB0 File Offset: 0x0102DEB0
+		// Token: 0x060374BF RID: 226495 RVA: 0x00F711BC File Offset: 0x00F6F3BC
 		private void OnClickBack()
 		{
 			AfterLeaveInstanceDungeonOpenViewParam openParam = new AfterLeaveInstanceDungeonOpenViewParam
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			ActivityDangoBrawlController.Instance.RequestLeaveInstanceDungeon(openParam).Forget<bool>();
 		}
 
-		// Token: 0x0604296C RID: 272748 RVA: 0x0102FCE0 File Offset: 0x0102DEE0
+		// Token: 0x060374C0 RID: 226496 RVA: 0x00F711EC File Offset: 0x00F6F3EC
 		private void OnClickRetry()
 		{
 			if (ActivityDangoBrawlController.Instance.TryLeaveIfActivityClosed())
@@ -207,13 +207,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			ActivityDangoBrawlController.Instance.RestartInstanceDungeon(false).Forget();
 		}
 
-		// Token: 0x0604296D RID: 272749 RVA: 0x0102FD41 File Offset: 0x0102DF41
+		// Token: 0x060374C1 RID: 226497 RVA: 0x00F7124D File Offset: 0x00F6F44D
 		private void OnClickAdjustRole(EToggleState state)
 		{
 			this.IsAdjustRoleEnabled = (state == EToggleState.ETT_Checked);
 		}
 
-		// Token: 0x0604296E RID: 272750 RVA: 0x0102FD4D File Offset: 0x0102DF4D
+		// Token: 0x060374C2 RID: 226498 RVA: 0x00F71259 File Offset: 0x00F6F459
 		private void OnClickBackpackDetail(EToggleState state)
 		{
 			UiManager.Instance.OpenView(EUiViewName.DangoBrawlSettleRoleBagDetailView, null, null);
@@ -225,7 +225,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			extendToggle.SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x04022AFE RID: 142078
+		// Token: 0x0401D35B RID: 119643
 		[Nullable(new byte[]
 		{
 			2,
@@ -234,50 +234,50 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 		})]
 		private GenericLayout<DangoBrawlRetryCountItem, DangoBrawlRetryCountInfo> HeartLayout;
 
-		// Token: 0x04022AFF RID: 142079
+		// Token: 0x0401D35C RID: 119644
 		[Nullable(2)]
 		private DangoBrawlFinalSettleButton BackBtn;
 
-		// Token: 0x04022B00 RID: 142080
+		// Token: 0x0401D35D RID: 119645
 		[Nullable(2)]
 		private DangoBrawlFinalSettleButton RetryBtn;
 
-		// Token: 0x04022B01 RID: 142081
+		// Token: 0x0401D35E RID: 119646
 		private int CurrentLevelId;
 
-		// Token: 0x04022B02 RID: 142082
+		// Token: 0x0401D35F RID: 119647
 		private int CurrentRoleId;
 
-		// Token: 0x04022B03 RID: 142083
+		// Token: 0x0401D360 RID: 119648
 		private bool IsNormalMode;
 
-		// Token: 0x04022B04 RID: 142084
+		// Token: 0x0401D361 RID: 119649
 		private bool IsAdjustRoleEnabled;
 
-		// Token: 0x0200C9F4 RID: 51700
+		// Token: 0x0200B3C0 RID: 46016
 		private enum EComponent
 		{
-			// Token: 0x0403D047 RID: 249927
+			// Token: 0x04037930 RID: 227632
 			TxtNum,
-			// Token: 0x0403D048 RID: 249928
+			// Token: 0x04037931 RID: 227633
 			PnlHeartLayout,
-			// Token: 0x0403D049 RID: 249929
+			// Token: 0x04037932 RID: 227634
 			SprHeart,
-			// Token: 0x0403D04A RID: 249930
+			// Token: 0x04037933 RID: 227635
 			SvInfo,
-			// Token: 0x0403D04B RID: 249931
+			// Token: 0x04037934 RID: 227636
 			TxtWinConditionDesc,
-			// Token: 0x0403D04C RID: 249932
+			// Token: 0x04037935 RID: 227637
 			BtnBack,
-			// Token: 0x0403D04D RID: 249933
+			// Token: 0x04037936 RID: 227638
 			BtnNext,
-			// Token: 0x0403D04E RID: 249934
+			// Token: 0x04037937 RID: 227639
 			TogDetail,
-			// Token: 0x0403D04F RID: 249935
+			// Token: 0x04037938 RID: 227640
 			TogTabG,
-			// Token: 0x0403D050 RID: 249936
+			// Token: 0x04037939 RID: 227641
 			UIView_BrawlSettlementFailure,
-			// Token: 0x0403D051 RID: 249937
+			// Token: 0x0403793A RID: 227642
 			TxtTitle
 		}
 	}

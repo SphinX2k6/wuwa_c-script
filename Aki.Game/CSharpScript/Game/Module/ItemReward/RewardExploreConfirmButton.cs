@@ -8,19 +8,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x020057FC RID: 22524
+	// Token: 0x020047D3 RID: 18387
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RewardExploreConfirmButton : UiPanelBase
 	{
-		// Token: 0x0603943E RID: 234558 RVA: 0x00D944A7 File Offset: 0x00D926A7
+		// Token: 0x0602E352 RID: 189266 RVA: 0x00CE32EF File Offset: 0x00CE14EF
 		public RewardExploreConfirmButton(AActor rootActor, int buttonIndex)
 		{
 			this.ButtonIndex = buttonIndex;
 			base.CreateThenShowByActor(rootActor, null);
 		}
 
-		// Token: 0x0603943F RID: 234559 RVA: 0x00D944C0 File Offset: 0x00D926C0
+		// Token: 0x0602E353 RID: 189267 RVA: 0x00CE3308 File Offset: 0x00CE1508
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -45,14 +45,14 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06039440 RID: 234560 RVA: 0x00D945A8 File Offset: 0x00D927A8
+		// Token: 0x0602E354 RID: 189268 RVA: 0x00CE33F0 File Offset: 0x00CE15F0
 		protected override void OnBeforeDestroy()
 		{
 			this.RemoveTimeDown();
 			this.ButtonData = null;
 		}
 
-		// Token: 0x06039441 RID: 234561 RVA: 0x00D945B8 File Offset: 0x00D927B8
+		// Token: 0x0602E355 RID: 189269 RVA: 0x00CE3400 File Offset: 0x00CE1600
 		public void Refresh(IRewardExploreConfirmButton buttonData)
 		{
 			this.ButtonData = buttonData;
@@ -65,14 +65,14 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x06039442 RID: 234562 RVA: 0x00D945F8 File Offset: 0x00D927F8
+		// Token: 0x0602E356 RID: 189270 RVA: 0x00CE3440 File Offset: 0x00CE1640
 		private void SetButtonText(string textId)
 		{
 			UUIText text = base.GetText(0);
 			LguiUtil.Instance.SetLocalTextNew(text, textId, Array.Empty<object>());
 		}
 
-		// Token: 0x06039443 RID: 234563 RVA: 0x00D9461E File Offset: 0x00D9281E
+		// Token: 0x0602E357 RID: 189271 RVA: 0x00CE3466 File Offset: 0x00CE1666
 		private void SetButtonDescriptionVisible(bool bVisible)
 		{
 			UUIItem item = base.GetItem(1);
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			item.SetUIActive(bVisible);
 		}
 
-		// Token: 0x06039444 RID: 234564 RVA: 0x00D94634 File Offset: 0x00D92834
+		// Token: 0x0602E358 RID: 189272 RVA: 0x00CE347C File Offset: 0x00CE167C
 		private void RefreshButtonDescription()
 		{
 			string descriptionTextId = this.ButtonData.DescriptionTextId;
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			LguiUtil.Instance.SetLocalTextNew(text, descriptionTextId, descriptionArgs);
 		}
 
-		// Token: 0x06039445 RID: 234565 RVA: 0x00D946F4 File Offset: 0x00D928F4
+		// Token: 0x0602E359 RID: 189273 RVA: 0x00CE353C File Offset: 0x00CE173C
 		private void AddTimeDown(int timeDown)
 		{
 			if (this.TimeDown == 0)
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.TimeDownTimerId = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.OnTimeDownRefresh), 1000f, 1f, null, null, true);
 		}
 
-		// Token: 0x06039446 RID: 234566 RVA: 0x00D94744 File Offset: 0x00D92944
+		// Token: 0x0602E35A RID: 189274 RVA: 0x00CE358C File Offset: 0x00CE178C
 		private void RemoveTimeDown()
 		{
 			if (this.TimeDownTimerId != null && TimerSystem.GameplayTimeInstance.Has(this.TimeDownTimerId))
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x06039447 RID: 234567 RVA: 0x00D94778 File Offset: 0x00D92978
+		// Token: 0x0602E35B RID: 189275 RVA: 0x00CE35C0 File Offset: 0x00CE17C0
 		private void OnTimeDownRefresh(float _)
 		{
 			this.TimeDown--;
@@ -143,14 +143,14 @@ namespace CSharpScript.Game.Module.ItemReward
 			LguiUtil.Instance.SetLocalTextNew(text, descriptionTextId, new <>z__ReadOnlySingleElementList<object>(this.TimeDown));
 		}
 
-		// Token: 0x06039448 RID: 234568 RVA: 0x00D9480C File Offset: 0x00D92A0C
+		// Token: 0x0602E35C RID: 189276 RVA: 0x00CE3654 File Offset: 0x00CE1854
 		private void AddCdTimer(int cdTime)
 		{
 			this.CdTimeDown = cdTime / TimeUtil.Instance.InverseMillisecond;
 			this.CdTimerId = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.OnCdTimeRefresh), 1000f, 1f, null, null, true);
 		}
 
-		// Token: 0x06039449 RID: 234569 RVA: 0x00D94849 File Offset: 0x00D92A49
+		// Token: 0x0602E35D RID: 189277 RVA: 0x00CE3691 File Offset: 0x00CE1891
 		private void RemoveCdTimer()
 		{
 			if (this.CdTimerId != null && TimerSystem.GameplayTimeInstance.Has(this.CdTimerId))
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x0603944A RID: 234570 RVA: 0x00D94880 File Offset: 0x00D92A80
+		// Token: 0x0602E35E RID: 189278 RVA: 0x00CE36C8 File Offset: 0x00CE18C8
 		private void OnCdTimeRefresh(float _)
 		{
 			this.CdTimeDown--;
@@ -189,7 +189,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			button.SetSelfInteractive(true);
 		}
 
-		// Token: 0x0603944B RID: 234571 RVA: 0x00D94920 File Offset: 0x00D92B20
+		// Token: 0x0602E35F RID: 189279 RVA: 0x00CE3768 File Offset: 0x00CE1968
 		private void OnClickedButton()
 		{
 			Action<int> onClickedCallback = this.ButtonData.OnClickedCallback;
@@ -226,41 +226,41 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x0401DF34 RID: 122676
+		// Token: 0x040189CB RID: 100811
 		[Nullable(2)]
 		private IRewardExploreConfirmButton ButtonData;
 
-		// Token: 0x0401DF35 RID: 122677
+		// Token: 0x040189CC RID: 100812
 		private int TimeDown;
 
-		// Token: 0x0401DF36 RID: 122678
+		// Token: 0x040189CD RID: 100813
 		[Nullable(2)]
 		private TimerHandle TimeDownTimerId;
 
-		// Token: 0x0401DF37 RID: 122679
+		// Token: 0x040189CE RID: 100814
 		private int CdTimeDown;
 
-		// Token: 0x0401DF38 RID: 122680
+		// Token: 0x040189CF RID: 100815
 		[Nullable(2)]
 		private TimerHandle CdTimerId;
 
-		// Token: 0x0401DF39 RID: 122681
+		// Token: 0x040189D0 RID: 100816
 		private readonly int ButtonIndex;
 
-		// Token: 0x0200B9F1 RID: 47601
+		// Token: 0x0200A407 RID: 41991
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x04038369 RID: 230249
+			// Token: 0x04032D56 RID: 208214
 			public const int ButtonText = 0;
 
-			// Token: 0x0403836A RID: 230250
+			// Token: 0x04032D57 RID: 208215
 			public const int DescriptionItem = 1;
 
-			// Token: 0x0403836B RID: 230251
+			// Token: 0x04032D58 RID: 208216
 			public const int DescriptionText = 2;
 
-			// Token: 0x0403836C RID: 230252
+			// Token: 0x04032D59 RID: 208217
 			public const int Button = 3;
 		}
 	}

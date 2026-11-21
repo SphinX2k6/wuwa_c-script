@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CC0 RID: 7360
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001EC7 RID: 7879
 	public class IParticipateGroupPatrol : ILeisureInteractType
 	{
-		// Token: 0x06009E01 RID: 40449 RVA: 0x00169940 File Offset: 0x00167B40
+		// Token: 0x0600A7AF RID: 42927 RVA: 0x0017D5A0 File Offset: 0x0017B7A0
 		private IParticipateGroupPatrol_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009E02 RID: 40450 RVA: 0x00169978 File Offset: 0x00167B78
+		// Token: 0x0600A7B0 RID: 42928 RVA: 0x0017D5D8 File Offset: 0x0017B7D8
 		public static IParticipateGroupPatrol Create([Nullable(2)] IParticipateGroupPatrol instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009E03 RID: 40451 RVA: 0x0016998B File Offset: 0x00167B8B
+		// Token: 0x0600A7B1 RID: 42929 RVA: 0x0017D5EB File Offset: 0x0017B7EB
 		public static IParticipateGroupPatrol CreateFromSetValue([Nullable(2)] IParticipateGroupPatrol_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009E04 RID: 40452 RVA: 0x0016999E File Offset: 0x00167B9E
+		// Token: 0x0600A7B2 RID: 42930 RVA: 0x0017D5FE File Offset: 0x0017B7FE
 		public new IParticipateGroupPatrol_SetValue ToSetValue()
 		{
 			return new IParticipateGroupPatrol_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003137 RID: 12599
-		// (get) Token: 0x06009E05 RID: 40453 RVA: 0x001699BD File Offset: 0x00167BBD
-		// (set) Token: 0x06009E06 RID: 40454 RVA: 0x001699E8 File Offset: 0x00167BE8
+		// Token: 0x170033BB RID: 13243
+		// (get) Token: 0x0600A7B3 RID: 42931 RVA: 0x0017D61D File Offset: 0x0017B81D
+		// (set) Token: 0x0600A7B4 RID: 42932 RVA: 0x0017D648 File Offset: 0x0017B848
 		public override ELeisureInteract Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003138 RID: 12600
-		// (get) Token: 0x06009E07 RID: 40455 RVA: 0x001699F6 File Offset: 0x00167BF6
-		// (set) Token: 0x06009E08 RID: 40456 RVA: 0x00169A21 File Offset: 0x00167C21
+		// Token: 0x170033BC RID: 13244
+		// (get) Token: 0x0600A7B5 RID: 42933 RVA: 0x0017D656 File Offset: 0x0017B856
+		// (set) Token: 0x0600A7B6 RID: 42934 RVA: 0x0017D681 File Offset: 0x0017B881
 		public virtual int GroupAiEntityId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005F90 RID: 24464
+		// Token: 0x040064EC RID: 25836
 		[Nullable(2)]
 		protected new IParticipateGroupPatrol FbInstance;
 
-		// Token: 0x04005F91 RID: 24465
+		// Token: 0x040064ED RID: 25837
 		[Nullable(2)]
 		protected new IParticipateGroupPatrol_SetValue PocoInterface;
 	}

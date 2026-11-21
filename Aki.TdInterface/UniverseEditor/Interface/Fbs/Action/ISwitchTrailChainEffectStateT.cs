@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007275 RID: 29301
+	// Token: 0x02007A4A RID: 31306
 	public class ISwitchTrailChainEffectStateT
 	{
-		// Token: 0x1700D969 RID: 55657
-		// (get) Token: 0x06033FD3 RID: 212947 RVA: 0x006FDD3D File Offset: 0x006FBF3D
-		// (set) Token: 0x06033FD4 RID: 212948 RVA: 0x006FDD45 File Offset: 0x006FBF45
+		// Token: 0x1700E562 RID: 58722
+		// (get) Token: 0x060372D5 RID: 226005 RVA: 0x0075F09D File Offset: 0x0075D29D
+		// (set) Token: 0x060372D6 RID: 226006 RVA: 0x0075F0A5 File Offset: 0x0075D2A5
 		public ESwitchEffectStateEffectType Type { get; set; }
 
-		// Token: 0x1700D96A RID: 55658
-		// (get) Token: 0x06033FD5 RID: 212949 RVA: 0x006FDD4E File Offset: 0x006FBF4E
-		// (set) Token: 0x06033FD6 RID: 212950 RVA: 0x006FDD56 File Offset: 0x006FBF56
+		// Token: 0x1700E563 RID: 58723
+		// (get) Token: 0x060372D7 RID: 226007 RVA: 0x0075F0AE File Offset: 0x0075D2AE
+		// (set) Token: 0x060372D8 RID: 226008 RVA: 0x0075F0B6 File Offset: 0x0075D2B6
 		public int Count { get; set; }
 
-		// Token: 0x1700D96B RID: 55659
-		// (get) Token: 0x06033FD7 RID: 212951 RVA: 0x006FDD5F File Offset: 0x006FBF5F
-		// (set) Token: 0x06033FD8 RID: 212952 RVA: 0x006FDD67 File Offset: 0x006FBF67
+		// Token: 0x1700E564 RID: 58724
+		// (get) Token: 0x060372D9 RID: 226009 RVA: 0x0075F0BF File Offset: 0x0075D2BF
+		// (set) Token: 0x060372DA RID: 226010 RVA: 0x0075F0C7 File Offset: 0x0075D2C7
 		public TPos2Union Pos { get; set; }
 
-		// Token: 0x06033FD9 RID: 212953 RVA: 0x006FDD70 File Offset: 0x006FBF70
+		// Token: 0x060372DB RID: 226011 RVA: 0x0075F0D0 File Offset: 0x0075D2D0
 		public ISwitchTrailChainEffectStateT()
 		{
 			this.Type = ESwitchEffectStateEffectType.ScreenEffect;

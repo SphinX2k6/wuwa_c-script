@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E0E RID: 19982
+	// Token: 0x0200531B RID: 21275
 	public enum ESceneItemAiType : byte
 	{
-		// Token: 0x0400DB16 RID: 56086
+		// Token: 0x0400E67F RID: 59007
 		SceneItemPatrol
 	}
 }

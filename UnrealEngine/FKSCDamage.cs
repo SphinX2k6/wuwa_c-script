@@ -5,22 +5,22 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001CF1 RID: 7409
+	// Token: 0x02000559 RID: 1369
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroSimpleCombat.KSCDamage")]
 	[UnrealStructLayout(40, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 40)]
 	public class FKSCDamage : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0601C7F8 RID: 116728 RVA: 0x002A24D7 File Offset: 0x002A06D7
+		// Token: 0x06007D1E RID: 32030 RVA: 0x000B9BCA File Offset: 0x000B7DCA
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FKSCDamage._ScriptStructPtr != 0) ? FKSCDamage._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroSimpleCombat.KSCDamage", ref FKSCDamage._ScriptStructPtr);
 		}
 
-		// Token: 0x170072CC RID: 29388
-		// (get) Token: 0x0601C7F9 RID: 116729 RVA: 0x002A24FB File Offset: 0x002A06FB
-		// (set) Token: 0x0601C7FA RID: 116730 RVA: 0x002A250B File Offset: 0x002A070B
+		// Token: 0x17001819 RID: 6169
+		// (get) Token: 0x06007D1F RID: 32031 RVA: 0x000B9BEE File Offset: 0x000B7DEE
+		// (set) Token: 0x06007D20 RID: 32032 RVA: 0x000B9BFE File Offset: 0x000B7DFE
 		public unsafe int DamageID
 		{
 			get
@@ -33,9 +33,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170072CD RID: 29389
-		// (get) Token: 0x0601C7FB RID: 116731 RVA: 0x002A251C File Offset: 0x002A071C
-		// (set) Token: 0x0601C7FC RID: 116732 RVA: 0x002A252C File Offset: 0x002A072C
+		// Token: 0x1700181A RID: 6170
+		// (get) Token: 0x06007D21 RID: 32033 RVA: 0x000B9C0F File Offset: 0x000B7E0F
+		// (set) Token: 0x06007D22 RID: 32034 RVA: 0x000B9C1F File Offset: 0x000B7E1F
 		public unsafe bool Knocked
 		{
 			get
@@ -48,9 +48,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170072CE RID: 29390
-		// (get) Token: 0x0601C7FD RID: 116733 RVA: 0x002A253D File Offset: 0x002A073D
-		// (set) Token: 0x0601C7FE RID: 116734 RVA: 0x002A254D File Offset: 0x002A074D
+		// Token: 0x1700181B RID: 6171
+		// (get) Token: 0x06007D23 RID: 32035 RVA: 0x000B9C30 File Offset: 0x000B7E30
+		// (set) Token: 0x06007D24 RID: 32036 RVA: 0x000B9C40 File Offset: 0x000B7E40
 		public unsafe EKSC_CalculateType CalculateType
 		{
 			get
@@ -63,9 +63,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170072CF RID: 29391
-		// (get) Token: 0x0601C7FF RID: 116735 RVA: 0x002A255E File Offset: 0x002A075E
-		// (set) Token: 0x0601C800 RID: 116736 RVA: 0x002A256E File Offset: 0x002A076E
+		// Token: 0x1700181C RID: 6172
+		// (get) Token: 0x06007D25 RID: 32037 RVA: 0x000B9C51 File Offset: 0x000B7E51
+		// (set) Token: 0x06007D26 RID: 32038 RVA: 0x000B9C61 File Offset: 0x000B7E61
 		public unsafe EKSC_Element Element
 		{
 			get
@@ -78,9 +78,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170072D0 RID: 29392
-		// (get) Token: 0x0601C801 RID: 116737 RVA: 0x002A257F File Offset: 0x002A077F
-		// (set) Token: 0x0601C802 RID: 116738 RVA: 0x002A258F File Offset: 0x002A078F
+		// Token: 0x1700181D RID: 6173
+		// (get) Token: 0x06007D27 RID: 32039 RVA: 0x000B9C72 File Offset: 0x000B7E72
+		// (set) Token: 0x06007D28 RID: 32040 RVA: 0x000B9C82 File Offset: 0x000B7E82
 		public unsafe float Amplify
 		{
 			get
@@ -93,9 +93,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170072D1 RID: 29393
-		// (get) Token: 0x0601C803 RID: 116739 RVA: 0x002A25A0 File Offset: 0x002A07A0
-		// (set) Token: 0x0601C804 RID: 116740 RVA: 0x002A25B0 File Offset: 0x002A07B0
+		// Token: 0x1700181E RID: 6174
+		// (get) Token: 0x06007D29 RID: 32041 RVA: 0x000B9C93 File Offset: 0x000B7E93
+		// (set) Token: 0x06007D2A RID: 32042 RVA: 0x000B9CA3 File Offset: 0x000B7EA3
 		public unsafe EKSC_AttrType RelatedProperty
 		{
 			get
@@ -108,9 +108,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170072D2 RID: 29394
-		// (get) Token: 0x0601C805 RID: 116741 RVA: 0x002A25C4 File Offset: 0x002A07C4
-		// (set) Token: 0x0601C806 RID: 116742 RVA: 0x002A2607 File Offset: 0x002A0807
+		// Token: 0x1700181F RID: 6175
+		// (get) Token: 0x06007D2B RID: 32043 RVA: 0x000B9CB4 File Offset: 0x000B7EB4
+		// (set) Token: 0x06007D2C RID: 32044 RVA: 0x000B9CF7 File Offset: 0x000B7EF7
 		public TArray<FKSCDamageRelated> RelatedInfos
 		{
 			get
@@ -129,9 +129,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170072D3 RID: 29395
-		// (get) Token: 0x0601C807 RID: 116743 RVA: 0x002A2615 File Offset: 0x002A0815
-		// (set) Token: 0x0601C808 RID: 116744 RVA: 0x002A2625 File Offset: 0x002A0825
+		// Token: 0x17001820 RID: 6176
+		// (get) Token: 0x06007D2D RID: 32045 RVA: 0x000B9D05 File Offset: 0x000B7F05
+		// (set) Token: 0x06007D2E RID: 32046 RVA: 0x000B9D15 File Offset: 0x000B7F15
 		public unsafe float BaseValue
 		{
 			get
@@ -144,9 +144,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170072D4 RID: 29396
-		// (get) Token: 0x0601C809 RID: 116745 RVA: 0x002A2636 File Offset: 0x002A0836
-		// (set) Token: 0x0601C80A RID: 116746 RVA: 0x002A2646 File Offset: 0x002A0846
+		// Token: 0x17001821 RID: 6177
+		// (get) Token: 0x06007D2F RID: 32047 RVA: 0x000B9D26 File Offset: 0x000B7F26
+		// (set) Token: 0x06007D30 RID: 32048 RVA: 0x000B9D36 File Offset: 0x000B7F36
 		public unsafe EKSC_AttrType CritAttrType
 		{
 			get
@@ -159,82 +159,68 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601C80B RID: 116747 RVA: 0x002A2657 File Offset: 0x002A0857
+		// Token: 0x06007D31 RID: 32049 RVA: 0x000B9D47 File Offset: 0x000B7F47
 		public FKSCDamage()
 		{
 		}
 
-		// Token: 0x0601C80C RID: 116748 RVA: 0x002A2660 File Offset: 0x002A0860
-		public FKSCDamage(int DamageID, bool Knocked, EKSC_CalculateType CalculateType, EKSC_Element Element, float Amplify, EKSC_AttrType RelatedProperty, TArray<FKSCDamageRelated> RelatedInfos, float BaseValue, EKSC_AttrType CritAttrType)
-		{
-			this.DamageID = DamageID;
-			this.Knocked = Knocked;
-			this.CalculateType = CalculateType;
-			this.Element = Element;
-			this.Amplify = Amplify;
-			this.RelatedProperty = RelatedProperty;
-			this.RelatedInfos = RelatedInfos;
-			this.BaseValue = BaseValue;
-			this.CritAttrType = CritAttrType;
-		}
-
-		// Token: 0x0601C80D RID: 116749 RVA: 0x002A26B8 File Offset: 0x002A08B8
+		// Token: 0x06007D32 RID: 32050 RVA: 0x000B9D4F File Offset: 0x000B7F4F
 		protected override IntPtr GetUStructPtr()
 		{
 			return FKSCDamage.StaticStruct();
 		}
 
-		// Token: 0x0601C80E RID: 116750 RVA: 0x002A26C4 File Offset: 0x002A08C4
+		// Token: 0x06007D33 RID: 32051 RVA: 0x000B9D5B File Offset: 0x000B7F5B
 		[NullableContext(2)]
 		public FKSCDamage(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601C80F RID: 116751 RVA: 0x002A26CE File Offset: 0x002A08CE
+		// Token: 0x06007D34 RID: 32052 RVA: 0x000B9D65 File Offset: 0x000B7F65
 		public FKSCDamage(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601C810 RID: 116752 RVA: 0x002A26D9 File Offset: 0x002A08D9
+		// Token: 0x06007D35 RID: 32053 RVA: 0x000B9D70 File Offset: 0x000B7F70
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FKSCDamage(Pointer, false, true);
 		}
 
-		// Token: 0x0601C811 RID: 116753 RVA: 0x002A26E3 File Offset: 0x002A08E3
+		// Token: 0x06007D36 RID: 32054 RVA: 0x000B9D7A File Offset: 0x000B7F7A
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FKSCDamage(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0400F744 RID: 63300
+		// Token: 0x0400368A RID: 13962
 		public const string __ObjectPath = "/Script/KuroSimpleCombat.KSCDamage";
 
-		// Token: 0x0400F745 RID: 63301
+		// Token: 0x0400368B RID: 13963
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0400F746 RID: 63302
+		// Token: 0x0400368C RID: 13964
 		internal static int __PropertyOffset_DamageID;
 
-		// Token: 0x0400F747 RID: 63303
+		// Token: 0x0400368D RID: 13965
 		internal static int __PropertyOffset_Knocked;
 
-		// Token: 0x0400F748 RID: 63304
+		// Token: 0x0400368E RID: 13966
 		internal static int __PropertyOffset_CalculateType;
 
-		// Token: 0x0400F749 RID: 63305
+		// Token: 0x0400368F RID: 13967
 		internal static int __PropertyOffset_Element;
 
-		// Token: 0x0400F74A RID: 63306
+		// Token: 0x04003690 RID: 13968
 		internal static int __PropertyOffset_Amplify;
 
-		// Token: 0x0400F74B RID: 63307
+		// Token: 0x04003691 RID: 13969
 		internal static int __PropertyOffset_RelatedProperty;
 
-		// Token: 0x0400F74C RID: 63308
+		// Token: 0x04003692 RID: 13970
 		internal static int __PropertyOffset_RelatedInfos;
 
-		// Token: 0x0400F74D RID: 63309
+		// Token: 0x04003693 RID: 13971
 		[Nullable(new byte[]
 		{
 			2,
@@ -242,10 +228,10 @@ namespace UnrealEngine
 		})]
 		private TArray<FKSCDamageRelated> _RelatedInfos;
 
-		// Token: 0x0400F74E RID: 63310
+		// Token: 0x04003694 RID: 13972
 		internal static int __PropertyOffset_BaseValue;
 
-		// Token: 0x0400F74F RID: 63311
+		// Token: 0x04003695 RID: 13973
 		internal static int __PropertyOffset_CritAttrType;
 	}
 }

@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002D85 RID: 11653
+// Token: 0x020022DF RID: 8927
 public class BulletActionChild : BulletActionBase
 {
-	// Token: 0x060187DC RID: 100316 RVA: 0x0063BE2A File Offset: 0x0063A02A
+	// Token: 0x0601607E RID: 90238 RVA: 0x00661B63 File Offset: 0x0065FD63
 	public BulletActionChild(EBulletAction type) : base(type)
 	{
 	}
 
-	// Token: 0x060187DD RID: 100317 RVA: 0x0063BE34 File Offset: 0x0063A034
+	// Token: 0x0601607F RID: 90239 RVA: 0x00661B6C File Offset: 0x0065FD6C
 	protected override void OnExecute()
 	{
 		this.ChildInfo = new BulletChildInfo();
@@ -26,7 +26,7 @@ public class BulletActionChild : BulletActionBase
 		this.SetSpecialChildrenBullet();
 	}
 
-	// Token: 0x060187DE RID: 100318 RVA: 0x0063BEAF File Offset: 0x0063A0AF
+	// Token: 0x06016080 RID: 90240 RVA: 0x00661BE7 File Offset: 0x0065FDE7
 	public override void Clear()
 	{
 		base.Clear();
@@ -34,7 +34,7 @@ public class BulletActionChild : BulletActionBase
 		this.ChildBulletData = null;
 	}
 
-	// Token: 0x060187DF RID: 100319 RVA: 0x0063BEC8 File Offset: 0x0063A0C8
+	// Token: 0x06016081 RID: 90241 RVA: 0x00661C00 File Offset: 0x0065FE00
 	private void SetSpecialChildrenBullet()
 	{
 		BulletDataChild[] childBulletData = this.ChildBulletData;
@@ -48,7 +48,7 @@ public class BulletActionChild : BulletActionBase
 		}
 	}
 
-	// Token: 0x060187E0 RID: 100320 RVA: 0x0063BF02 File Offset: 0x0063A102
+	// Token: 0x06016082 RID: 90242 RVA: 0x00661C3A File Offset: 0x0065FE3A
 	protected override void OnTick(float delta)
 	{
 		if (!this.BulletInfo.NeedDestroy)
@@ -57,7 +57,7 @@ public class BulletActionChild : BulletActionBase
 		}
 	}
 
-	// Token: 0x060187E1 RID: 100321 RVA: 0x0063BF18 File Offset: 0x0063A118
+	// Token: 0x06016083 RID: 90243 RVA: 0x00661C50 File Offset: 0x0065FE50
 	private void UpdateSummonChildBullet()
 	{
 		int num = this.ChildBulletData.Length;
@@ -112,11 +112,11 @@ public class BulletActionChild : BulletActionBase
 		}
 	}
 
-	// Token: 0x0400B586 RID: 46470
+	// Token: 0x0400B8FB RID: 47355
 	[Nullable(2)]
 	public BulletChildInfo ChildInfo;
 
-	// Token: 0x0400B587 RID: 46471
+	// Token: 0x0400B8FC RID: 47356
 	[Nullable(new byte[]
 	{
 		2,

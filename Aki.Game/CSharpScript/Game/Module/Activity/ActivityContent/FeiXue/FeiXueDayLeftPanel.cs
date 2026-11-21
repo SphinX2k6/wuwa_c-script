@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 {
-	// Token: 0x0200663F RID: 26175
+	// Token: 0x020055BD RID: 21949
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FeiXueDayLeftPanel : UiPanelBase
 	{
-		// Token: 0x060419AA RID: 268714 RVA: 0x00FE91DB File Offset: 0x00FE73DB
+		// Token: 0x0603666F RID: 222831 RVA: 0x00F30293 File Offset: 0x00F2E493
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			};
 		}
 
-		// Token: 0x060419AB RID: 268715 RVA: 0x00FE9214 File Offset: 0x00FE7414
+		// Token: 0x06036670 RID: 222832 RVA: 0x00F302CC File Offset: 0x00F2E4CC
 		public void SetPanelItemActive(bool isFinish)
 		{
 			base.GetSprite(1).SetUIActive(true);
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			base.GetSprite(1).SetColor(FColor.FromHex(this.FrameLockColor));
 		}
 
-		// Token: 0x060419AC RID: 268716 RVA: 0x00FE9286 File Offset: 0x00FE7486
+		// Token: 0x06036671 RID: 222833 RVA: 0x00F3033E File Offset: 0x00F2E53E
 		public void SetAllFinishState()
 		{
 			UUISprite sprite = base.GetSprite(0);
@@ -59,10 +59,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.FeiXue
 			sprite2.SetUIActive(false);
 		}
 
-		// Token: 0x04022218 RID: 139800
+		// Token: 0x0401CB49 RID: 117577
 		private string FrameLockColor = "#FFFFFFFF";
 
-		// Token: 0x04022219 RID: 139801
+		// Token: 0x0401CB4A RID: 117578
 		private string FrameFinishColor = "#F8EB57FF";
 	}
 }

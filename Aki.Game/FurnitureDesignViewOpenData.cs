@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02000F87 RID: 3975
+// Token: 0x0200043C RID: 1084
 public class FurnitureDesignViewOpenData : IFurnitureDesignViewOpenData
 {
-	// Token: 0x170007E4 RID: 2020
-	// (get) Token: 0x060065FB RID: 26107 RVA: 0x00143E82 File Offset: 0x00142082
-	// (set) Token: 0x060065FC RID: 26108 RVA: 0x00143E8A File Offset: 0x0014208A
+	// Token: 0x17000806 RID: 2054
+	// (get) Token: 0x06003993 RID: 14739 RVA: 0x0014C716 File Offset: 0x0014A916
+	// (set) Token: 0x06003994 RID: 14740 RVA: 0x0014C71E File Offset: 0x0014A91E
 	public int MapId { get; set; }
 
-	// Token: 0x170007E5 RID: 2021
-	// (get) Token: 0x060065FD RID: 26109 RVA: 0x00143E93 File Offset: 0x00142093
-	// (set) Token: 0x060065FE RID: 26110 RVA: 0x00143E9B File Offset: 0x0014209B
+	// Token: 0x17000807 RID: 2055
+	// (get) Token: 0x06003995 RID: 14741 RVA: 0x0014C727 File Offset: 0x0014A927
+	// (set) Token: 0x06003996 RID: 14742 RVA: 0x0014C72F File Offset: 0x0014A92F
 	public int ToSelectAreaId { get; set; }
 }

@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E0A RID: 3594
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000F06 RID: 3846
 	public class IWuWaGoPressureTrigger : IWuWaGoEntityBase
 	{
-		// Token: 0x0600515A RID: 20826 RVA: 0x000C8B51 File Offset: 0x000C6D51
+		// Token: 0x06005681 RID: 22145 RVA: 0x000D4419 File Offset: 0x000D2619
 		public static IWuWaGoPressureTrigger Create(IWuWaGoPressureTrigger? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001B03 RID: 6915
-		// (get) Token: 0x0600515B RID: 20827 RVA: 0x000C8B70 File Offset: 0x000C6D70
+		// Token: 0x17001C70 RID: 7280
+		// (get) Token: 0x06005682 RID: 22146 RVA: 0x000D4438 File Offset: 0x000D2638
 		public override EWuWaGoEntityType Type
 		{
 			get
@@ -34,8 +32,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B04 RID: 6916
-		// (get) Token: 0x0600515C RID: 20828 RVA: 0x000C8B7D File Offset: 0x000C6D7D
+		// Token: 0x17001C71 RID: 7281
+		// (get) Token: 0x06005683 RID: 22147 RVA: 0x000D4445 File Offset: 0x000D2645
 		public virtual IWuWaGoGridLinkData LinkData
 		{
 			get
@@ -50,8 +48,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B05 RID: 6917
-		// (get) Token: 0x0600515D RID: 20829 RVA: 0x000C8BB4 File Offset: 0x000C6DB4
+		// Token: 0x17001C72 RID: 7282
+		// (get) Token: 0x06005684 RID: 22148 RVA: 0x000D447C File Offset: 0x000D267C
 		public virtual List<ActionInfo> EnterActionList
 		{
 			get
@@ -71,8 +69,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B06 RID: 6918
-		// (get) Token: 0x0600515E RID: 20830 RVA: 0x000C8C20 File Offset: 0x000C6E20
+		// Token: 0x17001C73 RID: 7283
+		// (get) Token: 0x06005685 RID: 22149 RVA: 0x000D44E8 File Offset: 0x000D26E8
 		public virtual List<ActionInfo> ExitActionList
 		{
 			get
@@ -92,26 +90,26 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002ED5 RID: 11989
+		// Token: 0x0400319D RID: 12701
 		private IWuWaGoPressureTrigger Instance;
 
-		// Token: 0x04002ED6 RID: 11990
+		// Token: 0x0400319E RID: 12702
 		[Nullable(2)]
 		private IWuWaGoGridLinkData _LinkDataCache;
 
-		// Token: 0x04002ED7 RID: 11991
+		// Token: 0x0400319F RID: 12703
 		private bool _LinkDataInited;
 
-		// Token: 0x04002ED8 RID: 11992
+		// Token: 0x040031A0 RID: 12704
 		private List<ActionInfo> _EnterActionListCache;
 
-		// Token: 0x04002ED9 RID: 11993
+		// Token: 0x040031A1 RID: 12705
 		private bool _EnterActionListInited;
 
-		// Token: 0x04002EDA RID: 11994
+		// Token: 0x040031A2 RID: 12706
 		private List<ActionInfo> _ExitActionListCache;
 
-		// Token: 0x04002EDB RID: 11995
+		// Token: 0x040031A3 RID: 12707
 		private bool _ExitActionListInited;
 	}
 }

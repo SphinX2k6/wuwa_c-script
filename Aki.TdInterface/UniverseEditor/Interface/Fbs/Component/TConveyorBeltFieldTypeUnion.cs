@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005BFE RID: 23550
+	// Token: 0x0200621D RID: 25117
 	public class TConveyorBeltFieldTypeUnion
 	{
-		// Token: 0x1700B1D7 RID: 45527
-		// (get) Token: 0x06028661 RID: 165473 RVA: 0x0058FAD2 File Offset: 0x0058DCD2
-		// (set) Token: 0x06028662 RID: 165474 RVA: 0x0058FADA File Offset: 0x0058DCDA
+		// Token: 0x1700BB25 RID: 47909
+		// (get) Token: 0x0602AC51 RID: 175185 RVA: 0x005D7A1A File Offset: 0x005D5C1A
+		// (set) Token: 0x0602AC52 RID: 175186 RVA: 0x005D7A22 File Offset: 0x005D5C22
 		public TConveyorBeltFieldType Type { get; set; }
 
-		// Token: 0x1700B1D8 RID: 45528
-		// (get) Token: 0x06028663 RID: 165475 RVA: 0x0058FAE3 File Offset: 0x0058DCE3
-		// (set) Token: 0x06028664 RID: 165476 RVA: 0x0058FAEB File Offset: 0x0058DCEB
+		// Token: 0x1700BB26 RID: 47910
+		// (get) Token: 0x0602AC53 RID: 175187 RVA: 0x005D7A2B File Offset: 0x005D5C2B
+		// (set) Token: 0x0602AC54 RID: 175188 RVA: 0x005D7A33 File Offset: 0x005D5C33
 		public object Value { get; set; }
 
-		// Token: 0x06028665 RID: 165477 RVA: 0x0058FAF4 File Offset: 0x0058DCF4
+		// Token: 0x0602AC55 RID: 175189 RVA: 0x005D7A3C File Offset: 0x005D5C3C
 		public TConveyorBeltFieldTypeUnion()
 		{
 			this.Type = TConveyorBeltFieldType.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06028666 RID: 165478 RVA: 0x0058FB0A File Offset: 0x0058DD0A
+		// Token: 0x0602AC56 RID: 175190 RVA: 0x005D7A52 File Offset: 0x005D5C52
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06028667 RID: 165479 RVA: 0x0058FB1C File Offset: 0x0058DD1C
+		// Token: 0x0602AC57 RID: 175191 RVA: 0x005D7A64 File Offset: 0x005D5C64
 		public IDirectionalFieldT AsIDirectionalField()
 		{
 			return this.As<IDirectionalFieldT>();
 		}
 
-		// Token: 0x06028668 RID: 165480 RVA: 0x0058FB24 File Offset: 0x0058DD24
+		// Token: 0x0602AC58 RID: 175192 RVA: 0x005D7A6C File Offset: 0x005D5C6C
 		public static TConveyorBeltFieldTypeUnion FromIDirectionalField(IDirectionalFieldT _idirectionalfield)
 		{
 			return new TConveyorBeltFieldTypeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028669 RID: 165481 RVA: 0x0058FB39 File Offset: 0x0058DD39
+		// Token: 0x0602AC59 RID: 175193 RVA: 0x005D7A81 File Offset: 0x005D5C81
 		public IPointFieldT AsIPointField()
 		{
 			return this.As<IPointFieldT>();
 		}
 
-		// Token: 0x0602866A RID: 165482 RVA: 0x0058FB41 File Offset: 0x0058DD41
+		// Token: 0x0602AC5A RID: 175194 RVA: 0x005D7A89 File Offset: 0x005D5C89
 		public static TConveyorBeltFieldTypeUnion FromIPointField(IPointFieldT _ipointfield)
 		{
 			return new TConveyorBeltFieldTypeUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602866B RID: 165483 RVA: 0x0058FB58 File Offset: 0x0058DD58
+		// Token: 0x0602AC5B RID: 175195 RVA: 0x005D7AA0 File Offset: 0x005D5CA0
 		public static int Pack(FlatBufferBuilder builder, TConveyorBeltFieldTypeUnion _o)
 		{
 			TConveyorBeltFieldType type = _o.Type;

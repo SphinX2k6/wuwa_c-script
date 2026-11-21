@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021B6 RID: 8630
+	// Token: 0x02002421 RID: 9249
 	public class SetExploreState_SetValue
 	{
-		// Token: 0x0400710D RID: 28941
-		[Nullable(1)]
+		// Token: 0x04007755 RID: 30549
 		public ITeleControlConfig Config;
 	}
 }

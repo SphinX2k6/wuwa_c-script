@@ -1,28 +1,28 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200142E RID: 5166
+// Token: 0x020008E2 RID: 2274
 [NullableContext(1)]
 [Nullable(0)]
 public class PinballBattleLevelInfoViewParam : IPinballBattleLevelInfoViewParam
 {
-	// Token: 0x17000CBD RID: 3261
-	// (get) Token: 0x060091CB RID: 37323 RVA: 0x001F3123 File Offset: 0x001F1323
-	// (set) Token: 0x060091CC RID: 37324 RVA: 0x001F312B File Offset: 0x001F132B
+	// Token: 0x17000CDD RID: 3293
+	// (get) Token: 0x06006560 RID: 25952 RVA: 0x001FBC5F File Offset: 0x001F9E5F
+	// (set) Token: 0x06006561 RID: 25953 RVA: 0x001FBC67 File Offset: 0x001F9E67
 	public int LevelId { get; set; }
 
-	// Token: 0x17000CBE RID: 3262
-	// (get) Token: 0x060091CD RID: 37325 RVA: 0x001F3134 File Offset: 0x001F1334
-	// (set) Token: 0x060091CE RID: 37326 RVA: 0x001F313C File Offset: 0x001F133C
+	// Token: 0x17000CDE RID: 3294
+	// (get) Token: 0x06006562 RID: 25954 RVA: 0x001FBC70 File Offset: 0x001F9E70
+	// (set) Token: 0x06006563 RID: 25955 RVA: 0x001FBC78 File Offset: 0x001F9E78
 	public EPinballLevelShowType LevelType { get; set; }
 
-	// Token: 0x17000CBF RID: 3263
-	// (get) Token: 0x060091CF RID: 37327 RVA: 0x001F3145 File Offset: 0x001F1345
-	// (set) Token: 0x060091D0 RID: 37328 RVA: 0x001F314D File Offset: 0x001F134D
+	// Token: 0x17000CDF RID: 3295
+	// (get) Token: 0x06006564 RID: 25956 RVA: 0x001FBC81 File Offset: 0x001F9E81
+	// (set) Token: 0x06006565 RID: 25957 RVA: 0x001FBC89 File Offset: 0x001F9E89
 	public int Score { get; set; }
 
-	// Token: 0x17000CC0 RID: 3264
-	// (get) Token: 0x060091D1 RID: 37329 RVA: 0x001F3156 File Offset: 0x001F1356
-	// (set) Token: 0x060091D2 RID: 37330 RVA: 0x001F315E File Offset: 0x001F135E
+	// Token: 0x17000CE0 RID: 3296
+	// (get) Token: 0x06006566 RID: 25958 RVA: 0x001FBC92 File Offset: 0x001F9E92
+	// (set) Token: 0x06006567 RID: 25959 RVA: 0x001FBC9A File Offset: 0x001F9E9A
 	public int[] StarInfo { get; set; }
 }

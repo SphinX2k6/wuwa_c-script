@@ -7,32 +7,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001904 RID: 6404
+	// Token: 0x020003FE RID: 1022
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroGameplay.KuroRoadway")]
 	[UnrealStructLayout(136, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 136)]
 	public class UKuroRoadway : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06017C4C RID: 97356 RVA: 0x0022D157 File Offset: 0x0022B357
+		// Token: 0x06006441 RID: 25665 RVA: 0x0008F28B File Offset: 0x0008D48B
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroRoadway._ClassPtr;
 		}
 
-		// Token: 0x06017C4D RID: 97357 RVA: 0x0022D164 File Offset: 0x0022B364
+		// Token: 0x06006442 RID: 25666 RVA: 0x0008F298 File Offset: 0x0008D498
 		public UKuroRoadway() : this(BuiltinUtils.AllocNativeUObject(UKuroRoadway.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06017C4E RID: 97358 RVA: 0x0022D18C File Offset: 0x0022B38C
+		// Token: 0x06006443 RID: 25667 RVA: 0x0008F2C0 File Offset: 0x0008D4C0
 		public UKuroRoadway(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroRoadway.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005FA7 RID: 24487
-		// (get) Token: 0x06017C4F RID: 97359 RVA: 0x0022D1BF File Offset: 0x0022B3BF
-		// (set) Token: 0x06017C50 RID: 97360 RVA: 0x0022D1D3 File Offset: 0x0022B3D3
+		// Token: 0x17001420 RID: 5152
+		// (get) Token: 0x06006444 RID: 25668 RVA: 0x0008F2F3 File Offset: 0x0008D4F3
+		// (set) Token: 0x06006445 RID: 25669 RVA: 0x0008F307 File Offset: 0x0008D507
 		[Nullable(2)]
 		public unsafe USplineComponent RoadSpline
 		{
@@ -48,9 +48,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005FA8 RID: 24488
-		// (get) Token: 0x06017C51 RID: 97361 RVA: 0x0022D1E8 File Offset: 0x0022B3E8
-		// (set) Token: 0x06017C52 RID: 97362 RVA: 0x0022D1F8 File Offset: 0x0022B3F8
+		// Token: 0x17001421 RID: 5153
+		// (get) Token: 0x06006446 RID: 25670 RVA: 0x0008F31C File Offset: 0x0008D51C
+		// (set) Token: 0x06006447 RID: 25671 RVA: 0x0008F32C File Offset: 0x0008D52C
 		public unsafe int Id
 		{
 			get
@@ -63,9 +63,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005FA9 RID: 24489
-		// (get) Token: 0x06017C53 RID: 97363 RVA: 0x0022D209 File Offset: 0x0022B409
-		// (set) Token: 0x06017C54 RID: 97364 RVA: 0x0022D219 File Offset: 0x0022B419
+		// Token: 0x17001422 RID: 5154
+		// (get) Token: 0x06006448 RID: 25672 RVA: 0x0008F33D File Offset: 0x0008D53D
+		// (set) Token: 0x06006449 RID: 25673 RVA: 0x0008F34D File Offset: 0x0008D54D
 		public unsafe int OpposingId
 		{
 			get
@@ -78,9 +78,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005FAA RID: 24490
-		// (get) Token: 0x06017C55 RID: 97365 RVA: 0x0022D22A File Offset: 0x0022B42A
-		// (set) Token: 0x06017C56 RID: 97366 RVA: 0x0022D23A File Offset: 0x0022B43A
+		// Token: 0x17001423 RID: 5155
+		// (get) Token: 0x0600644A RID: 25674 RVA: 0x0008F35E File Offset: 0x0008D55E
+		// (set) Token: 0x0600644B RID: 25675 RVA: 0x0008F36E File Offset: 0x0008D56E
 		public unsafe int Width
 		{
 			get
@@ -93,9 +93,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005FAB RID: 24491
-		// (get) Token: 0x06017C57 RID: 97367 RVA: 0x0022D24B File Offset: 0x0022B44B
-		// (set) Token: 0x06017C58 RID: 97368 RVA: 0x0022D25B File Offset: 0x0022B45B
+		// Token: 0x17001424 RID: 5156
+		// (get) Token: 0x0600644C RID: 25676 RVA: 0x0008F37F File Offset: 0x0008D57F
+		// (set) Token: 0x0600644D RID: 25677 RVA: 0x0008F38F File Offset: 0x0008D58F
 		public unsafe int Length
 		{
 			get
@@ -108,9 +108,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005FAC RID: 24492
-		// (get) Token: 0x06017C59 RID: 97369 RVA: 0x0022D26C File Offset: 0x0022B46C
-		// (set) Token: 0x06017C5A RID: 97370 RVA: 0x0022D2A5 File Offset: 0x0022B4A5
+		// Token: 0x17001425 RID: 5157
+		// (get) Token: 0x0600644E RID: 25678 RVA: 0x0008F3A0 File Offset: 0x0008D5A0
+		// (set) Token: 0x0600644F RID: 25679 RVA: 0x0008F3D9 File Offset: 0x0008D5D9
 		public TArray<int> Nexts
 		{
 			get
@@ -129,9 +129,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005FAD RID: 24493
-		// (get) Token: 0x06017C5B RID: 97371 RVA: 0x0022D2B4 File Offset: 0x0022B4B4
-		// (set) Token: 0x06017C5C RID: 97372 RVA: 0x0022D2ED File Offset: 0x0022B4ED
+		// Token: 0x17001426 RID: 5158
+		// (get) Token: 0x06006450 RID: 25680 RVA: 0x0008F3E8 File Offset: 0x0008D5E8
+		// (set) Token: 0x06006451 RID: 25681 RVA: 0x0008F421 File Offset: 0x0008D621
 		public TArray<int> Lasts
 		{
 			get
@@ -150,9 +150,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005FAE RID: 24494
-		// (get) Token: 0x06017C5D RID: 97373 RVA: 0x0022D2FB File Offset: 0x0022B4FB
-		// (set) Token: 0x06017C5E RID: 97374 RVA: 0x0022D30B File Offset: 0x0022B50B
+		// Token: 0x17001427 RID: 5159
+		// (get) Token: 0x06006452 RID: 25682 RVA: 0x0008F42F File Offset: 0x0008D62F
+		// (set) Token: 0x06006453 RID: 25683 RVA: 0x0008F43F File Offset: 0x0008D63F
 		public unsafe bool bEnable
 		{
 			get
@@ -165,9 +165,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005FAF RID: 24495
-		// (get) Token: 0x06017C5F RID: 97375 RVA: 0x0022D31C File Offset: 0x0022B51C
-		// (set) Token: 0x06017C60 RID: 97376 RVA: 0x0022D32C File Offset: 0x0022B52C
+		// Token: 0x17001428 RID: 5160
+		// (get) Token: 0x06006454 RID: 25684 RVA: 0x0008F450 File Offset: 0x0008D650
+		// (set) Token: 0x06006455 RID: 25685 RVA: 0x0008F460 File Offset: 0x0008D660
 		public unsafe bool bAffectTerrain
 		{
 			get
@@ -180,9 +180,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005FB0 RID: 24496
-		// (get) Token: 0x06017C61 RID: 97377 RVA: 0x0022D33D File Offset: 0x0022B53D
-		// (set) Token: 0x06017C62 RID: 97378 RVA: 0x0022D34D File Offset: 0x0022B54D
+		// Token: 0x17001429 RID: 5161
+		// (get) Token: 0x06006456 RID: 25686 RVA: 0x0008F471 File Offset: 0x0008D671
+		// (set) Token: 0x06006457 RID: 25687 RVA: 0x0008F481 File Offset: 0x0008D681
 		public unsafe int PavedRoadConfig
 		{
 			get
@@ -195,9 +195,8 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06017C63 RID: 97379 RVA: 0x0022D360 File Offset: 0x0022B560
+		// Token: 0x06006458 RID: 25688 RVA: 0x0008F494 File Offset: 0x0008D694
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void DebugDraw(FLinearColor Color, float LifeTime, int StartPointIndex, int EndPointIndex = -1)
 		{
 			UKuroRoadway.__DebugDraw_FunctionParams* ptr = stackalloc UKuroRoadway.__DebugDraw_FunctionParams[(UIntPtr)43] + 15L / (long)sizeof(UKuroRoadway.__DebugDraw_FunctionParams) & -16L;
@@ -206,23 +205,21 @@ namespace UnrealEngine
 			ptr->LifeTime = LifeTime;
 			ptr->StartPointIndex = StartPointIndex;
 			ptr->EndPointIndex = EndPointIndex;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroRoadway.__DebugDraw_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroRoadway.__DebugDraw_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06017C64 RID: 97380 RVA: 0x0022D3C0 File Offset: 0x0022B5C0
+		// Token: 0x06006459 RID: 25689 RVA: 0x0008F4F0 File Offset: 0x0008D6F0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe FVectorDouble D_GetStartPosition()
 		{
 			UKuroRoadway.__D_GetStartPosition_FunctionParams* ptr = stackalloc UKuroRoadway.__D_GetStartPosition_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(UKuroRoadway.__D_GetStartPosition_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroRoadway.__D_GetStartPosition_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroRoadway.__D_GetStartPosition_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroRoadway.__D_GetStartPosition_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06017C65 RID: 97381 RVA: 0x0022D408 File Offset: 0x0022B608
+		// Token: 0x0600645A RID: 25690 RVA: 0x0008F538 File Offset: 0x0008D738
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void D_GetNearestPointToPosition(FVectorDouble WorldPosition, ref FVectorDouble OutputNearestPoint, ref float OutputNearestPointKey, ref float OutputDistance)
 		{
 			UKuroRoadway.__D_GetNearestPointToPosition_FunctionParams* ptr = stackalloc UKuroRoadway.__D_GetNearestPointToPosition_FunctionParams[(UIntPtr)71] + 15L / (long)sizeof(UKuroRoadway.__D_GetNearestPointToPosition_FunctionParams) & -16L;
@@ -231,157 +228,156 @@ namespace UnrealEngine
 			ptr->OutputNearestPoint = OutputNearestPoint;
 			ptr->OutputNearestPointKey = OutputNearestPointKey;
 			ptr->OutputDistance = OutputDistance;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroRoadway.__D_GetNearestPointToPosition_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroRoadway.__D_GetNearestPointToPosition_NativeFunctionPtr, (void*)ptr);
 			OutputNearestPoint = ptr->OutputNearestPoint;
 			OutputNearestPointKey = ptr->OutputNearestPointKey;
 			OutputDistance = ptr->OutputDistance;
 		}
 
-		// Token: 0x06017C66 RID: 97382 RVA: 0x0022D48C File Offset: 0x0022B68C
+		// Token: 0x0600645B RID: 25691 RVA: 0x0008F5B8 File Offset: 0x0008D7B8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe FVectorDouble D_GetEndPosition()
 		{
 			UKuroRoadway.__D_GetEndPosition_FunctionParams* ptr = stackalloc UKuroRoadway.__D_GetEndPosition_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(UKuroRoadway.__D_GetEndPosition_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroRoadway.__D_GetEndPosition_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroRoadway.__D_GetEndPosition_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroRoadway.__D_GetEndPosition_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06017C67 RID: 97383 RVA: 0x0022D4D2 File Offset: 0x0022B6D2
+		// Token: 0x0600645C RID: 25692 RVA: 0x0008F5FD File Offset: 0x0008D7FD
 		static UKuroRoadway()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroGameplay.KuroRoadway");
 		}
 
-		// Token: 0x06017C68 RID: 97384 RVA: 0x0022D4E0 File Offset: 0x0022B6E0
+		// Token: 0x0600645D RID: 25693 RVA: 0x0008F60B File Offset: 0x0008D80B
 		protected UKuroRoadway(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400CE42 RID: 52802
+		// Token: 0x04002A48 RID: 10824
 		public new const string __ObjectPath = "/Script/KuroGameplay.KuroRoadway";
 
-		// Token: 0x0400CE43 RID: 52803
+		// Token: 0x04002A49 RID: 10825
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400CE44 RID: 52804
+		// Token: 0x04002A4A RID: 10826
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400CE45 RID: 52805
+		// Token: 0x04002A4B RID: 10827
 		internal static int __PropertyOffset_RoadSpline;
 
-		// Token: 0x0400CE46 RID: 52806
+		// Token: 0x04002A4C RID: 10828
 		internal static int __PropertyOffset_Id;
 
-		// Token: 0x0400CE47 RID: 52807
+		// Token: 0x04002A4D RID: 10829
 		internal static int __PropertyOffset_OpposingId;
 
-		// Token: 0x0400CE48 RID: 52808
+		// Token: 0x04002A4E RID: 10830
 		internal static int __PropertyOffset_Width;
 
-		// Token: 0x0400CE49 RID: 52809
+		// Token: 0x04002A4F RID: 10831
 		internal static int __PropertyOffset_Length;
 
-		// Token: 0x0400CE4A RID: 52810
+		// Token: 0x04002A50 RID: 10832
 		internal static int __PropertyOffset_Nexts;
 
-		// Token: 0x0400CE4B RID: 52811
+		// Token: 0x04002A51 RID: 10833
 		[Nullable(2)]
 		private TArray<int> _Nexts;
 
-		// Token: 0x0400CE4C RID: 52812
+		// Token: 0x04002A52 RID: 10834
 		internal static int __PropertyOffset_Lasts;
 
-		// Token: 0x0400CE4D RID: 52813
+		// Token: 0x04002A53 RID: 10835
 		[Nullable(2)]
 		private TArray<int> _Lasts;
 
-		// Token: 0x0400CE4E RID: 52814
+		// Token: 0x04002A54 RID: 10836
 		internal static int __PropertyOffset_bEnable;
 
-		// Token: 0x0400CE4F RID: 52815
+		// Token: 0x04002A55 RID: 10837
 		internal static int __PropertyOffset_bAffectTerrain;
 
-		// Token: 0x0400CE50 RID: 52816
+		// Token: 0x04002A56 RID: 10838
 		internal static int __PropertyOffset_PavedRoadConfig;
 
-		// Token: 0x0400CE51 RID: 52817
+		// Token: 0x04002A57 RID: 10839
 		private static IntPtr __DebugDraw_NativeFunctionPtr;
 
-		// Token: 0x0400CE52 RID: 52818
+		// Token: 0x04002A58 RID: 10840
 		private static IntPtr __D_GetStartPosition_NativeFunctionPtr;
 
-		// Token: 0x0400CE53 RID: 52819
+		// Token: 0x04002A59 RID: 10841
 		private static IntPtr __D_GetNearestPointToPosition_NativeFunctionPtr;
 
-		// Token: 0x0400CE54 RID: 52820
+		// Token: 0x04002A5A RID: 10842
 		private static IntPtr __D_GetEndPosition_NativeFunctionPtr;
 
-		// Token: 0x02002FDA RID: 12250
+		// Token: 0x02000AEE RID: 2798
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 28)]
 		protected ref struct __DebugDraw_FunctionParams
 		{
-			// Token: 0x04016BCB RID: 93131
+			// Token: 0x04005B74 RID: 23412
 			[FieldOffset(0)]
 			public FLinearColor Color;
 
-			// Token: 0x04016BCC RID: 93132
+			// Token: 0x04005B75 RID: 23413
 			[FieldOffset(16)]
 			public float LifeTime;
 
-			// Token: 0x04016BCD RID: 93133
+			// Token: 0x04005B76 RID: 23414
 			[FieldOffset(20)]
 			public int StartPointIndex;
 
-			// Token: 0x04016BCE RID: 93134
+			// Token: 0x04005B77 RID: 23415
 			[FieldOffset(24)]
 			public int EndPointIndex;
 		}
 
-		// Token: 0x02002FDB RID: 12251
+		// Token: 0x02000AEF RID: 2799
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __D_GetStartPosition_FunctionParams
 		{
-			// Token: 0x04016BCF RID: 93135
+			// Token: 0x04005B78 RID: 23416
 			[FieldOffset(0)]
 			public FVectorDouble __Result;
 		}
 
-		// Token: 0x02002FDC RID: 12252
+		// Token: 0x02000AF0 RID: 2800
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 56)]
 		protected ref struct __D_GetNearestPointToPosition_FunctionParams
 		{
-			// Token: 0x04016BD0 RID: 93136
+			// Token: 0x04005B79 RID: 23417
 			[FieldOffset(0)]
 			public FVectorDouble WorldPosition;
 
-			// Token: 0x04016BD1 RID: 93137
+			// Token: 0x04005B7A RID: 23418
 			[FieldOffset(24)]
 			public FVectorDouble OutputNearestPoint;
 
-			// Token: 0x04016BD2 RID: 93138
+			// Token: 0x04005B7B RID: 23419
 			[FieldOffset(48)]
 			public float OutputNearestPointKey;
 
-			// Token: 0x04016BD3 RID: 93139
+			// Token: 0x04005B7C RID: 23420
 			[FieldOffset(52)]
 			public float OutputDistance;
 		}
 
-		// Token: 0x02002FDD RID: 12253
+		// Token: 0x02000AF1 RID: 2801
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __D_GetEndPosition_FunctionParams
 		{
-			// Token: 0x04016BD4 RID: 93140
+			// Token: 0x04005B7D RID: 23421
 			[FieldOffset(0)]
 			public FVectorDouble __Result;
 		}

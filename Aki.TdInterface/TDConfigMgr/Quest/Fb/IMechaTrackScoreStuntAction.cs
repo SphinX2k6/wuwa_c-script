@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001351 RID: 4945
+	// Token: 0x020014A1 RID: 5281
 	public class IMechaTrackScoreStuntAction : IMechaTrackScoreDetectionType
 	{
-		// Token: 0x06007148 RID: 29000 RVA: 0x001111CB File Offset: 0x0010F3CB
-		[NullableContext(1)]
+		// Token: 0x060077E8 RID: 30696 RVA: 0x0011F737 File Offset: 0x0011D937
 		public static IMechaTrackScoreStuntAction Create(IMechaTrackScoreStuntAction? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002479 RID: 9337
-		// (get) Token: 0x06007149 RID: 29001 RVA: 0x001111EA File Offset: 0x0010F3EA
+		// Token: 0x17002648 RID: 9800
+		// (get) Token: 0x060077E9 RID: 30697 RVA: 0x0011F756 File Offset: 0x0011D956
 		public override EMechaTrackScoreDetectionType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400416B RID: 16747
+		// Token: 0x040044E7 RID: 17639
 		private IMechaTrackScoreStuntAction Instance;
 	}
 }

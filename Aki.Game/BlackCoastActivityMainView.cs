@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Common.Event;
@@ -11,17 +10,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020011AF RID: 4527
+// Token: 0x02000663 RID: 1635
 [NullableContext(1)]
 [Nullable(0)]
 public class BlackCoastActivityMainView : UiViewBase
 {
-	// Token: 0x06007809 RID: 30729 RVA: 0x00191DDF File Offset: 0x0018FFDF
+	// Token: 0x06004BA0 RID: 19360 RVA: 0x0019A9BB File Offset: 0x00198BBB
 	public BlackCoastActivityMainView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0600780A RID: 30730 RVA: 0x00191DE8 File Offset: 0x0018FFE8
+	// Token: 0x06004BA1 RID: 19361 RVA: 0x0019A9C4 File Offset: 0x00198BC4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -62,7 +61,7 @@ public class BlackCoastActivityMainView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600780B RID: 30731 RVA: 0x00191FE0 File Offset: 0x001901E0
+	// Token: 0x06004BA2 RID: 19362 RVA: 0x0019ABBC File Offset: 0x00198DBC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		BlackCoastActivityMainView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -73,7 +72,7 @@ public class BlackCoastActivityMainView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600780C RID: 30732 RVA: 0x00192024 File Offset: 0x00190224
+	// Token: 0x06004BA3 RID: 19363 RVA: 0x0019AC00 File Offset: 0x00198E00
 	protected override void OnStart()
 	{
 		UUITexture textureIcon = base.GetTexture(2);
@@ -84,7 +83,7 @@ public class BlackCoastActivityMainView : UiViewBase
 		});
 	}
 
-	// Token: 0x0600780D RID: 30733 RVA: 0x0019207C File Offset: 0x0019027C
+	// Token: 0x06004BA4 RID: 19364 RVA: 0x0019AC58 File Offset: 0x00198E58
 	protected override void OnBeforeShow()
 	{
 		ActivityController.Instance.CheckIsActivityClose(null, new int?(this.ActivityBaseData.Id));
@@ -93,21 +92,21 @@ public class BlackCoastActivityMainView : UiViewBase
 		base.GetButton(6).RootUIComp.Get().SetUIActive(this.ActivityBaseData.GetCurrentLockQuestId() != null);
 	}
 
-	// Token: 0x0600780E RID: 30734 RVA: 0x001920E4 File Offset: 0x001902E4
+	// Token: 0x06004BA5 RID: 19365 RVA: 0x0019ACC0 File Offset: 0x00198EC0
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<RewardPopupData>(EEventName.RefreshRewardPopUp, new Action<RewardPopupData>(this.OnRefreshRewardPopUp));
 		EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshRewardLayout));
 	}
 
-	// Token: 0x0600780F RID: 30735 RVA: 0x0019211E File Offset: 0x0019031E
+	// Token: 0x06004BA6 RID: 19366 RVA: 0x0019ACFA File Offset: 0x00198EFA
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.RefreshRewardPopUp, new Action<RewardPopupData>(this.OnRefreshRewardPopUp));
 		EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshRewardLayout));
 	}
 
-	// Token: 0x06007810 RID: 30736 RVA: 0x00192158 File Offset: 0x00190358
+	// Token: 0x06004BA7 RID: 19367 RVA: 0x0019AD34 File Offset: 0x00198F34
 	private void RefreshDataProgress()
 	{
 		base.GetText(3).SetText(this.ActivityBaseData.GetProgressItemCount().ToString() + "/", true);
@@ -115,13 +114,13 @@ public class BlackCoastActivityMainView : UiViewBase
 		this.RewardPanel.Refresh();
 	}
 
-	// Token: 0x06007811 RID: 30737 RVA: 0x001921BA File Offset: 0x001903BA
+	// Token: 0x06004BA8 RID: 19368 RVA: 0x0019AD96 File Offset: 0x00198F96
 	private void RefreshStageLayout()
 	{
-		this.StageLayout.RefreshByData(this.ActivityBaseData.GetAllStages().ToList<BlackCoastStageInfo>(), null, false);
+		this.StageLayout.RefreshByData(this.ActivityBaseData.GetAllStages(), null, false);
 	}
 
-	// Token: 0x06007812 RID: 30738 RVA: 0x001921D9 File Offset: 0x001903D9
+	// Token: 0x06004BA9 RID: 19369 RVA: 0x0019ADB0 File Offset: 0x00198FB0
 	private BlackCoastStageItem OnCreateStageItem()
 	{
 		return new BlackCoastStageItem
@@ -131,7 +130,7 @@ public class BlackCoastActivityMainView : UiViewBase
 		};
 	}
 
-	// Token: 0x06007813 RID: 30739 RVA: 0x00192204 File Offset: 0x00190404
+	// Token: 0x06004BAA RID: 19370 RVA: 0x0019ADDB File Offset: 0x00198FDB
 	private void OnRefreshRewardLayout(int activityId)
 	{
 		if (this.ActivityBaseData != null && this.ActivityBaseData.Id == activityId)
@@ -140,19 +139,19 @@ public class BlackCoastActivityMainView : UiViewBase
 		}
 	}
 
-	// Token: 0x06007814 RID: 30740 RVA: 0x00192227 File Offset: 0x00190427
+	// Token: 0x06004BAB RID: 19371 RVA: 0x0019ADFE File Offset: 0x00198FFE
 	private void OnRefreshRewardPopUp(RewardPopupData data)
 	{
 		this.RewardPopup.Refresh(data);
 	}
 
-	// Token: 0x06007815 RID: 30741 RVA: 0x00192235 File Offset: 0x00190435
+	// Token: 0x06004BAC RID: 19372 RVA: 0x0019AE0C File Offset: 0x0019900C
 	private void OnCloseBtnClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06007816 RID: 30742 RVA: 0x0019223E File Offset: 0x0019043E
+	// Token: 0x06004BAD RID: 19373 RVA: 0x0019AE15 File Offset: 0x00199015
 	private void OnOpenTaskView(int stageId)
 	{
 		UiManager.Instance.OpenView(EUiViewName.BlackCoastActivityTaskView, new object[]
@@ -162,7 +161,7 @@ public class BlackCoastActivityMainView : UiViewBase
 		}, null);
 	}
 
-	// Token: 0x06007817 RID: 30743 RVA: 0x00192268 File Offset: 0x00190468
+	// Token: 0x06004BAE RID: 19374 RVA: 0x0019AE40 File Offset: 0x00199040
 	private void ButtonWeaponFunction()
 	{
 		WeaponPreviewViewParam weaponPreviewViewParam = new WeaponPreviewViewParam();
@@ -173,65 +172,65 @@ public class BlackCoastActivityMainView : UiViewBase
 		UiManager.Instance.OpenView(EUiViewName.WeaponPreviewView, param, null);
 	}
 
-	// Token: 0x06007818 RID: 30744 RVA: 0x001922A6 File Offset: 0x001904A6
+	// Token: 0x06004BAF RID: 19375 RVA: 0x0019AE7E File Offset: 0x0019907E
 	private void ButtonQuestFunction()
 	{
 		UiManager.Instance.OpenView(EUiViewName.QuestView, this.ActivityBaseData.GetCurrentLockQuestId(), null);
 	}
 
-	// Token: 0x06007819 RID: 30745 RVA: 0x001922C8 File Offset: 0x001904C8
+	// Token: 0x06004BB0 RID: 19376 RVA: 0x0019AEA0 File Offset: 0x001990A0
 	private void ButtonIconFunction()
 	{
-		ItemController.Instance.OpenItemTipsByItemId(this.ActivityBaseData.GetProgressItemId, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(this.ActivityBaseData.GetProgressItemId, true, null, false);
 	}
 
-	// Token: 0x04003741 RID: 14145
+	// Token: 0x040037DA RID: 14298
 	protected ActivityBlackCoastData ActivityBaseData;
 
-	// Token: 0x04003742 RID: 14146
+	// Token: 0x040037DB RID: 14299
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04003743 RID: 14147
+	// Token: 0x040037DC RID: 14300
 	private BlackCoastRewardPanel RewardPanel;
 
-	// Token: 0x04003744 RID: 14148
+	// Token: 0x040037DD RID: 14301
 	private CommonRewardPopup RewardPopup;
 
-	// Token: 0x04003745 RID: 14149
+	// Token: 0x040037DE RID: 14302
 	private GenericLayout<BlackCoastStageItem, BlackCoastStageInfo> StageLayout;
 
-	// Token: 0x0200778F RID: 30607
+	// Token: 0x0200691B RID: 26907
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x040276C2 RID: 161474
+		// Token: 0x040229F8 RID: 141816
 		public const int Caption = 0;
 
-		// Token: 0x040276C3 RID: 161475
+		// Token: 0x040229F9 RID: 141817
 		public const int ButtonWeapon = 1;
 
-		// Token: 0x040276C4 RID: 161476
+		// Token: 0x040229FA RID: 141818
 		public const int DataIcon = 2;
 
-		// Token: 0x040276C5 RID: 161477
+		// Token: 0x040229FB RID: 141819
 		public const int DataCount = 3;
 
-		// Token: 0x040276C6 RID: 161478
+		// Token: 0x040229FC RID: 141820
 		public const int DataTotal = 4;
 
-		// Token: 0x040276C7 RID: 161479
+		// Token: 0x040229FD RID: 141821
 		public const int ProgressBar = 5;
 
-		// Token: 0x040276C8 RID: 161480
+		// Token: 0x040229FE RID: 141822
 		public const int ButtonQuest = 6;
 
-		// Token: 0x040276C9 RID: 161481
+		// Token: 0x040229FF RID: 141823
 		public const int StageLayout = 7;
 
-		// Token: 0x040276CA RID: 161482
+		// Token: 0x04022A00 RID: 141824
 		public const int StageCard = 8;
 
-		// Token: 0x040276CB RID: 161483
+		// Token: 0x04022A01 RID: 141825
 		public const int ButtonIcon = 9;
 	}
 }

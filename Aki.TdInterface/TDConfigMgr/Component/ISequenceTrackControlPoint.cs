@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006C2 RID: 1730
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000763 RID: 1891
 	public class ISequenceTrackControlPoint
 	{
-		// Token: 0x06002530 RID: 9520 RVA: 0x000645A4 File Offset: 0x000627A4
+		// Token: 0x06002850 RID: 10320 RVA: 0x0006B614 File Offset: 0x00069814
 		private ISequenceTrackControlPoint_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002531 RID: 9521 RVA: 0x000645DC File Offset: 0x000627DC
+		// Token: 0x06002851 RID: 10321 RVA: 0x0006B64C File Offset: 0x0006984C
 		public static ISequenceTrackControlPoint Create([Nullable(2)] ISequenceTrackControlPoint instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002532 RID: 9522 RVA: 0x000645EF File Offset: 0x000627EF
+		// Token: 0x06002852 RID: 10322 RVA: 0x0006B65F File Offset: 0x0006985F
 		public static ISequenceTrackControlPoint CreateFromSetValue([Nullable(2)] ISequenceTrackControlPoint_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002533 RID: 9523 RVA: 0x00064602 File Offset: 0x00062802
+		// Token: 0x06002853 RID: 10323 RVA: 0x0006B672 File Offset: 0x00069872
 		public ISequenceTrackControlPoint_SetValue ToSetValue()
 		{
 			return new ISequenceTrackControlPoint_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170009D4 RID: 2516
-		// (get) Token: 0x06002534 RID: 9524 RVA: 0x00064615 File Offset: 0x00062815
-		// (set) Token: 0x06002535 RID: 9525 RVA: 0x00064640 File Offset: 0x00062840
+		// Token: 0x17000A92 RID: 2706
+		// (get) Token: 0x06002854 RID: 10324 RVA: 0x0006B685 File Offset: 0x00069885
+		// (set) Token: 0x06002855 RID: 10325 RVA: 0x0006B6B0 File Offset: 0x000698B0
 		public virtual string Mark
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001970 RID: 6512
+		// Token: 0x04001B6F RID: 7023
 		[Nullable(2)]
 		protected ISequenceTrackControlPoint FbInstance;
 
-		// Token: 0x04001971 RID: 6513
+		// Token: 0x04001B70 RID: 7024
 		[Nullable(2)]
 		protected ISequenceTrackControlPoint_SetValue PocoInterface;
 	}

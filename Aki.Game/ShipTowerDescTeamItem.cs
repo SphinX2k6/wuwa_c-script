@@ -8,7 +8,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020029A9 RID: 10665
+// Token: 0x02001F24 RID: 7972
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -17,7 +17,7 @@ using UnrealEngine;
 })]
 public class ShipTowerDescTeamItem : GridProxyAbstract<ShipTowerTeamData>
 {
-	// Token: 0x060161BE RID: 90558 RVA: 0x0059713C File Offset: 0x0059533C
+	// Token: 0x06013BC4 RID: 80836 RVA: 0x005C20FC File Offset: 0x005C02FC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -48,7 +48,7 @@ public class ShipTowerDescTeamItem : GridProxyAbstract<ShipTowerTeamData>
 		};
 	}
 
-	// Token: 0x060161BF RID: 90559 RVA: 0x00597328 File Offset: 0x00595528
+	// Token: 0x06013BC5 RID: 80837 RVA: 0x005C22E8 File Offset: 0x005C04E8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ShipTowerDescTeamItem.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -59,28 +59,28 @@ public class ShipTowerDescTeamItem : GridProxyAbstract<ShipTowerTeamData>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060161C0 RID: 90560 RVA: 0x0059736B File Offset: 0x0059556B
+	// Token: 0x06013BC6 RID: 80838 RVA: 0x005C232B File Offset: 0x005C052B
 	protected override void OnBeforeCreate()
 	{
 	}
 
-	// Token: 0x060161C1 RID: 90561 RVA: 0x0059736D File Offset: 0x0059556D
+	// Token: 0x06013BC7 RID: 80839 RVA: 0x005C232D File Offset: 0x005C052D
 	protected override void OnStart()
 	{
 	}
 
-	// Token: 0x060161C2 RID: 90562 RVA: 0x0059736F File Offset: 0x0059556F
+	// Token: 0x06013BC8 RID: 80840 RVA: 0x005C232F File Offset: 0x005C052F
 	protected override void OnBeforeDestroy()
 	{
 	}
 
-	// Token: 0x060161C3 RID: 90563 RVA: 0x00597371 File Offset: 0x00595571
+	// Token: 0x06013BC9 RID: 80841 RVA: 0x005C2331 File Offset: 0x005C0531
 	public override void Refresh(ShipTowerTeamData data, bool isSelected, int gridIndex)
 	{
 		this.Refresh(data);
 	}
 
-	// Token: 0x060161C4 RID: 90564 RVA: 0x0059737C File Offset: 0x0059557C
+	// Token: 0x06013BCA RID: 80842 RVA: 0x005C233C File Offset: 0x005C053C
 	public void Refresh(ShipTowerTeamData data)
 	{
 		this.ItemData = data;
@@ -116,7 +116,7 @@ public class ShipTowerDescTeamItem : GridProxyAbstract<ShipTowerTeamData>
 		this.UpdateBuff();
 	}
 
-	// Token: 0x060161C5 RID: 90565 RVA: 0x00597527 File Offset: 0x00595727
+	// Token: 0x06013BCB RID: 80843 RVA: 0x005C24E7 File Offset: 0x005C06E7
 	private void OnClickMechanismDetail()
 	{
 		Action<ShipTowerTeamData> mechanismClickCallBack = this.MechanismClickCallBack;
@@ -127,7 +127,7 @@ public class ShipTowerDescTeamItem : GridProxyAbstract<ShipTowerTeamData>
 		mechanismClickCallBack(this.ItemData);
 	}
 
-	// Token: 0x060161C6 RID: 90566 RVA: 0x0059753F File Offset: 0x0059573F
+	// Token: 0x06013BCC RID: 80844 RVA: 0x005C24FF File Offset: 0x005C06FF
 	private void OnClickTeamRoot(EToggleState toggleState)
 	{
 		Action<ShipTowerTeamData> roleClickCallBack = this.RoleClickCallBack;
@@ -138,7 +138,7 @@ public class ShipTowerDescTeamItem : GridProxyAbstract<ShipTowerTeamData>
 		roleClickCallBack(this.ItemData);
 	}
 
-	// Token: 0x060161C7 RID: 90567 RVA: 0x00597558 File Offset: 0x00595758
+	// Token: 0x06013BCD RID: 80845 RVA: 0x005C2518 File Offset: 0x005C0718
 	public void SetTeamToggleIsSelect(bool isSelect)
 	{
 		EToggleState state = isSelect ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
@@ -150,7 +150,7 @@ public class ShipTowerDescTeamItem : GridProxyAbstract<ShipTowerTeamData>
 		extendToggle.SetToggleStateForce(state, false, false, false);
 	}
 
-	// Token: 0x060161C8 RID: 90568 RVA: 0x00597584 File Offset: 0x00595784
+	// Token: 0x06013BCE RID: 80846 RVA: 0x005C2544 File Offset: 0x005C0744
 	private void UpdateWords(List<int> buffIdList)
 	{
 		string text = "GhostShipMonster_Text2";
@@ -165,13 +165,13 @@ public class ShipTowerDescTeamItem : GridProxyAbstract<ShipTowerTeamData>
 		this.WordLayout.RefreshByData(this.ItemData.GetWordInfoList(), null, false);
 	}
 
-	// Token: 0x060161C9 RID: 90569 RVA: 0x005975F2 File Offset: 0x005957F2
+	// Token: 0x06013BCF RID: 80847 RVA: 0x005C25B2 File Offset: 0x005C07B2
 	public void UpdateRoleList()
 	{
 		this.RoleLayout.RefreshByData(this.ItemData.GetUseRoleList(), null, false);
 	}
 
-	// Token: 0x060161CA RID: 90570 RVA: 0x0059760C File Offset: 0x0059580C
+	// Token: 0x06013BD0 RID: 80848 RVA: 0x005C25CC File Offset: 0x005C07CC
 	public void UpdateBuff()
 	{
 		ShipTowerBuffData buffDataEdit = this.ItemData.BuffDataEdit;
@@ -189,7 +189,7 @@ public class ShipTowerDescTeamItem : GridProxyAbstract<ShipTowerTeamData>
 		this.BuffItem.Apply<EmptySmallItemGrid>(new EmptySmallItemGrid());
 	}
 
-	// Token: 0x060161CB RID: 90571 RVA: 0x00597670 File Offset: 0x00595870
+	// Token: 0x06013BD1 RID: 80849 RVA: 0x005C2630 File Offset: 0x005C0830
 	[NullableContext(2)]
 	private void OnClickBuff(MediumItemGridExtendCallback _)
 	{
@@ -202,19 +202,19 @@ public class ShipTowerDescTeamItem : GridProxyAbstract<ShipTowerTeamData>
 		buffClickCallBack(this.ItemData);
 	}
 
-	// Token: 0x060161CC RID: 90572 RVA: 0x00597695 File Offset: 0x00595895
+	// Token: 0x06013BD2 RID: 80850 RVA: 0x005C2655 File Offset: 0x005C0855
 	private ShipTowerRoleItem CreateRoleItem()
 	{
 		return new ShipTowerRoleItem();
 	}
 
-	// Token: 0x060161CD RID: 90573 RVA: 0x0059769C File Offset: 0x0059589C
+	// Token: 0x06013BD3 RID: 80851 RVA: 0x005C265C File Offset: 0x005C085C
 	private ShipTowerWordItem CreateWordItem()
 	{
 		return new ShipTowerWordItem();
 	}
 
-	// Token: 0x060161CE RID: 90574 RVA: 0x005976A4 File Offset: 0x005958A4
+	// Token: 0x06013BD4 RID: 80852 RVA: 0x005C2664 File Offset: 0x005C0864
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -262,20 +262,20 @@ public class ShipTowerDescTeamItem : GridProxyAbstract<ShipTowerTeamData>
 		};
 	}
 
-	// Token: 0x0400A4C7 RID: 42183
+	// Token: 0x0400A8B1 RID: 43185
 	[Nullable(2)]
 	private ShipTowerTeamData ItemData;
 
-	// Token: 0x0400A4C8 RID: 42184
+	// Token: 0x0400A8B2 RID: 43186
 	private GenericLayout<ShipTowerRoleItem, ShipTowerRoleData> RoleLayout;
 
-	// Token: 0x0400A4C9 RID: 42185
+	// Token: 0x0400A8B3 RID: 43187
 	private GenericLayout<ShipTowerWordItem, ShipTowerWordItemData> WordLayout;
 
-	// Token: 0x0400A4CA RID: 42186
+	// Token: 0x0400A8B4 RID: 43188
 	private SmallItemGrid BuffItem;
 
-	// Token: 0x0400A4CB RID: 42187
+	// Token: 0x0400A8B5 RID: 43189
 	[Nullable(new byte[]
 	{
 		2,
@@ -283,7 +283,7 @@ public class ShipTowerDescTeamItem : GridProxyAbstract<ShipTowerTeamData>
 	})]
 	public Action<ShipTowerTeamData> RoleClickCallBack;
 
-	// Token: 0x0400A4CC RID: 42188
+	// Token: 0x0400A8B6 RID: 43190
 	[Nullable(new byte[]
 	{
 		2,
@@ -291,7 +291,7 @@ public class ShipTowerDescTeamItem : GridProxyAbstract<ShipTowerTeamData>
 	})]
 	public Action<ShipTowerTeamData> BuffClickCallBack;
 
-	// Token: 0x0400A4CD RID: 42189
+	// Token: 0x0400A8B7 RID: 43191
 	[Nullable(new byte[]
 	{
 		2,
@@ -299,62 +299,62 @@ public class ShipTowerDescTeamItem : GridProxyAbstract<ShipTowerTeamData>
 	})]
 	public Action<ShipTowerTeamData> MechanismClickCallBack;
 
-	// Token: 0x02008FBA RID: 36794
+	// Token: 0x02008203 RID: 33283
 	[NullableContext(0)]
 	private static class EChildType
 	{
-		// Token: 0x0402E8C5 RID: 190661
+		// Token: 0x04029FC4 RID: 171972
 		public const int TxtTitle = 0;
 
-		// Token: 0x0402E8C6 RID: 190662
+		// Token: 0x04029FC5 RID: 171973
 		public const int TxtScore = 1;
 
-		// Token: 0x0402E8C7 RID: 190663
+		// Token: 0x04029FC6 RID: 171974
 		public const int TxtWord = 2;
 
-		// Token: 0x0402E8C8 RID: 190664
+		// Token: 0x04029FC7 RID: 171975
 		public const int TxtMechanismTitle = 3;
 
-		// Token: 0x0402E8C9 RID: 190665
+		// Token: 0x04029FC8 RID: 171976
 		public const int BtnMechanismDetail = 4;
 
-		// Token: 0x0402E8CA RID: 190666
+		// Token: 0x04029FC9 RID: 171977
 		public const int VLayoutMechanismList = 5;
 
-		// Token: 0x0402E8CB RID: 190667
+		// Token: 0x04029FCA RID: 171978
 		public const int SpriteTeamBg = 6;
 
-		// Token: 0x0402E8CC RID: 190668
+		// Token: 0x04029FCB RID: 171979
 		public const int SpriteTeamSelect = 7;
 
-		// Token: 0x0402E8CD RID: 190669
+		// Token: 0x04029FCC RID: 171980
 		public const int TextureTeamIndex = 8;
 
-		// Token: 0x0402E8CE RID: 190670
+		// Token: 0x04029FCD RID: 171981
 		public const int TxtTeamRecommendLv = 9;
 
-		// Token: 0x0402E8CF RID: 190671
+		// Token: 0x04029FCE RID: 171982
 		public const int HLayoutRoleList = 10;
 
-		// Token: 0x0402E8D0 RID: 190672
+		// Token: 0x04029FCF RID: 171983
 		public const int ItemBuff = 11;
 
-		// Token: 0x0402E8D1 RID: 190673
+		// Token: 0x04029FD0 RID: 171984
 		public const int ToggleTeamRoot = 12;
 
-		// Token: 0x0402E8D2 RID: 190674
+		// Token: 0x04029FD1 RID: 171985
 		public const int TxtMechanismDesc = 13;
 
-		// Token: 0x0402E8D3 RID: 190675
+		// Token: 0x04029FD2 RID: 171986
 		public const int MLayout = 14;
 
-		// Token: 0x0402E8D4 RID: 190676
+		// Token: 0x04029FD3 RID: 171987
 		public const int ItemWord = 15;
 
-		// Token: 0x0402E8D5 RID: 190677
+		// Token: 0x04029FD4 RID: 171988
 		public const int TxtTeamName = 16;
 
-		// Token: 0x0402E8D6 RID: 190678
+		// Token: 0x04029FD5 RID: 171989
 		public const int QuickPassItem = 17;
 	}
 }

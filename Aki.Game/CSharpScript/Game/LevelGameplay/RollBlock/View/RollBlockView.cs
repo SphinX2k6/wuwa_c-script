@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -11,18 +10,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.RollBlock.View
 {
-	// Token: 0x02006AAA RID: 27306
+	// Token: 0x02005C07 RID: 23559
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RollBlockView : UiViewBase
 	{
-		// Token: 0x06043D61 RID: 277857 RVA: 0x0109E920 File Offset: 0x0109CB20
+		// Token: 0x06039DB6 RID: 236982 RVA: 0x01043070 File Offset: 0x01041270
 		[NullableContext(1)]
 		public RollBlockView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06043D62 RID: 277858 RVA: 0x0109E92C File Offset: 0x0109CB2C
+		// Token: 0x06039DB7 RID: 236983 RVA: 0x0104307C File Offset: 0x0104127C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 17;
@@ -81,7 +80,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06043D63 RID: 277859 RVA: 0x0109EC58 File Offset: 0x0109CE58
+		// Token: 0x06039DB8 RID: 236984 RVA: 0x010433A8 File Offset: 0x010415A8
 		protected void AddEventListener()
 		{
 			if (this.IsAddedEventListener)
@@ -98,7 +97,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.View
 			}
 		}
 
-		// Token: 0x06043D64 RID: 277860 RVA: 0x0109ECD8 File Offset: 0x0109CED8
+		// Token: 0x06039DB9 RID: 236985 RVA: 0x01043428 File Offset: 0x01041628
 		protected void RemoveEventListener(bool removeByReset = false)
 		{
 			this.IsAddedEventListener = false;
@@ -114,13 +113,13 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.View
 			}
 		}
 
-		// Token: 0x06043D65 RID: 277861 RVA: 0x0109ED50 File Offset: 0x0109CF50
+		// Token: 0x06039DBA RID: 236986 RVA: 0x010434A0 File Offset: 0x010416A0
 		protected override void OnRemoveEventListener()
 		{
 			this.RemoveEventListener(false);
 		}
 
-		// Token: 0x06043D66 RID: 277862 RVA: 0x0109ED5C File Offset: 0x0109CF5C
+		// Token: 0x06039DBB RID: 236987 RVA: 0x010434AC File Offset: 0x010416AC
 		private void AddInputEvent()
 		{
 			InputDistributeController.Instance.BindAxis("NavigationTopDown", new TInputHandle<float>(this.OnAxis));
@@ -131,7 +130,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.View
 			InputDistributeController.Instance.BindAction("UI方向右", new TInputHandle<InputDistributeDefine.EActionType>(this.OnInput));
 		}
 
-		// Token: 0x06043D67 RID: 277863 RVA: 0x0109EE0C File Offset: 0x0109D00C
+		// Token: 0x06039DBC RID: 236988 RVA: 0x0104355C File Offset: 0x0104175C
 		private void RemoveInputEvent()
 		{
 			InputDistributeController.Instance.UnBindAxis("NavigationTopDown", new TInputHandle<float>(this.OnAxis));
@@ -142,7 +141,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.View
 			InputDistributeController.Instance.UnBindAction("UI方向右", new TInputHandle<InputDistributeDefine.EActionType>(this.OnInput));
 		}
 
-		// Token: 0x06043D68 RID: 277864 RVA: 0x0109EEBC File Offset: 0x0109D0BC
+		// Token: 0x06039DBD RID: 236989 RVA: 0x0104360C File Offset: 0x0104180C
 		private void BindButtonEvent()
 		{
 			UUIButtonComponent button = base.GetButton(1);
@@ -212,7 +211,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.View
 			});
 		}
 
-		// Token: 0x06043D69 RID: 277865 RVA: 0x0109F078 File Offset: 0x0109D278
+		// Token: 0x06039DBE RID: 236990 RVA: 0x010437C8 File Offset: 0x010419C8
 		private void RemoveButtonEvent()
 		{
 			UUIButtonComponent button = base.GetButton(1);
@@ -258,14 +257,16 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.View
 			button8.OnPointUpCallBack.Unbind();
 		}
 
-		// Token: 0x06043D6A RID: 277866 RVA: 0x0109F13C File Offset: 0x0109D33C
+		// Token: 0x06039DBF RID: 236991 RVA: 0x0104388C File Offset: 0x01041A8C
 		private bool CanInput()
 		{
-			EUiViewName[] array = InputDistributeModel.Instance.GetNotAllowFightInputViewNameSet().ToArray<EUiViewName>();
+			HashSet<EUiViewName> notAllowFightInputViewNameSet = InputDistributeModel.Instance.GetNotAllowFightInputViewNameSet();
+			EUiViewName[] array = new EUiViewName[notAllowFightInputViewNameSet.Count];
+			notAllowFightInputViewNameSet.CopyTo(array);
 			return array.Length != 0 && !(array[array.Length - 1] != this.ViewInfo.Name);
 		}
 
-		// Token: 0x06043D6B RID: 277867 RVA: 0x0109F180 File Offset: 0x0109D380
+		// Token: 0x06039DC0 RID: 236992 RVA: 0x010438DC File Offset: 0x01041ADC
 		[NullableContext(1)]
 		private void OnAxis(string axisName, float value, InputIdentification inputIdentification)
 		{
@@ -324,7 +325,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.View
 			}
 		}
 
-		// Token: 0x06043D6C RID: 277868 RVA: 0x0109F3A0 File Offset: 0x0109D5A0
+		// Token: 0x06039DC1 RID: 236993 RVA: 0x01043AFC File Offset: 0x01041CFC
 		[NullableContext(1)]
 		private unsafe void OnInput(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 		{
@@ -358,7 +359,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.View
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x06043D6D RID: 277869 RVA: 0x0109F498 File Offset: 0x0109D698
+		// Token: 0x06039DC2 RID: 236994 RVA: 0x01043BF4 File Offset: 0x01041DF4
 		private void ShowRollBlockTips()
 		{
 			UUIItem pnlTips = this.PnlTips;
@@ -379,7 +380,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.View
 			sequencePlayer.PlayLevelSequenceByName("TipsIn", false, null, false);
 		}
 
-		// Token: 0x06043D6E RID: 277870 RVA: 0x0109F4EC File Offset: 0x0109D6EC
+		// Token: 0x06039DC3 RID: 236995 RVA: 0x01043C48 File Offset: 0x01041E48
 		private void OnRollBlockReseting(ERollBlockResetPhase resetPhase)
 		{
 			switch (resetPhase)
@@ -405,7 +406,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.View
 			}
 		}
 
-		// Token: 0x06043D6F RID: 277871 RVA: 0x0109F54C File Offset: 0x0109D74C
+		// Token: 0x06039DC4 RID: 236996 RVA: 0x01043CA8 File Offset: 0x01041EA8
 		protected override void OnBeforeShow()
 		{
 			this.PnlAll = base.GetItem(13);
@@ -475,7 +476,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.View
 			EventSystem.Instance.Once(EEventName.RollBlockAllCompleted, new Action(this.OnRollBlockAllCompleted));
 		}
 
-		// Token: 0x06043D70 RID: 277872 RVA: 0x0109F717 File Offset: 0x0109D917
+		// Token: 0x06039DC5 RID: 236997 RVA: 0x01043E73 File Offset: 0x01042073
 		protected override void OnBeforeDestroy()
 		{
 			if (this.ResetButtonCDTimerHandle != null)
@@ -485,7 +486,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.View
 			this.ResetButtonCDTimerHandle = null;
 		}
 
-		// Token: 0x06043D71 RID: 277873 RVA: 0x0109F739 File Offset: 0x0109D939
+		// Token: 0x06039DC6 RID: 236998 RVA: 0x01043E95 File Offset: 0x01042095
 		[NullableContext(1)]
 		private void OnSequenceClose(string sequenceName)
 		{
@@ -495,7 +496,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.View
 			}
 		}
 
-		// Token: 0x06043D72 RID: 277874 RVA: 0x0109F750 File Offset: 0x0109D950
+		// Token: 0x06039DC7 RID: 236999 RVA: 0x01043EAC File Offset: 0x010420AC
 		private void OnRollBlockAllCompleted()
 		{
 			UUIButtonComponent button = base.GetButton(5);
@@ -542,58 +543,58 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.View
 			}, 4000f, null, null, true, 1f);
 		}
 
-		// Token: 0x06043D73 RID: 277875 RVA: 0x0109F82B File Offset: 0x0109DA2B
+		// Token: 0x06039DC8 RID: 237000 RVA: 0x01043F87 File Offset: 0x01042187
 		private void OnSwitchButtonClick()
 		{
 			RollBlockController.Instance.OnClickSwitch();
 		}
 
-		// Token: 0x06043D74 RID: 277876 RVA: 0x0109F837 File Offset: 0x0109DA37
+		// Token: 0x06039DC9 RID: 237001 RVA: 0x01043F93 File Offset: 0x01042193
 		private void OnResetButtonClick()
 		{
 			RollBlockController.Instance.OnClickReset(false, false);
 		}
 
-		// Token: 0x06043D75 RID: 277877 RVA: 0x0109F845 File Offset: 0x0109DA45
+		// Token: 0x06039DCA RID: 237002 RVA: 0x01043FA1 File Offset: 0x010421A1
 		private void OnBackButtonClick()
 		{
 			RollBlockController.Instance.OnClickEsc();
 		}
 
-		// Token: 0x06043D76 RID: 277878 RVA: 0x0109F851 File Offset: 0x0109DA51
+		// Token: 0x06039DCB RID: 237003 RVA: 0x01043FAD File Offset: 0x010421AD
 		private void OnTipButtonClick()
 		{
 			RollBlockController.Instance.OnClickTip();
 		}
 
-		// Token: 0x06043D77 RID: 277879 RVA: 0x0109F85D File Offset: 0x0109DA5D
+		// Token: 0x06039DCC RID: 237004 RVA: 0x01043FB9 File Offset: 0x010421B9
 		private void OnHelpButtonClick()
 		{
 			TutorialController.Instance.OpenExclusiveTutorial(EExclusiveTutorialType.RollBlock);
 		}
 
-		// Token: 0x04023740 RID: 145216
+		// Token: 0x0401E932 RID: 125234
 		private float ForwardInputValue;
 
-		// Token: 0x04023741 RID: 145217
+		// Token: 0x0401E933 RID: 125235
 		private float RightInputValue;
 
-		// Token: 0x04023742 RID: 145218
+		// Token: 0x0401E934 RID: 125236
 		private LevelSequencePlayer SequencePlayer;
 
-		// Token: 0x04023743 RID: 145219
+		// Token: 0x0401E935 RID: 125237
 		private UUIItem PnlAll;
 
-		// Token: 0x04023744 RID: 145220
+		// Token: 0x0401E936 RID: 125238
 		private UUIItem PnlTips;
 
-		// Token: 0x04023745 RID: 145221
+		// Token: 0x0401E937 RID: 125239
 		private UUIItem BtnReset;
 
-		// Token: 0x04023746 RID: 145222
+		// Token: 0x0401E938 RID: 125240
 		private bool IsAddedEventListener;
 
-		// Token: 0x04023747 RID: 145223
+		// Token: 0x0401E939 RID: 125241
 		private TimerHandle ResetButtonCDTimerHandle;
 	}
 }

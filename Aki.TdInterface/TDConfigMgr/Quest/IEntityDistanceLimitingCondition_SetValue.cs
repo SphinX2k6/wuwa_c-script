@@ -2,16 +2,16 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F5E RID: 3934
+	// Token: 0x02001088 RID: 4232
 	public class IEntityDistanceLimitingCondition_SetValue
 	{
-		// Token: 0x040034E1 RID: 13537
+		// Token: 0x04003812 RID: 14354
 		public int EntityId;
 
-		// Token: 0x040034E2 RID: 13538
+		// Token: 0x04003813 RID: 14355
 		public float MaxDistance;
 
-		// Token: 0x040034E3 RID: 13539
+		// Token: 0x04003814 RID: 14356
 		public float OverMaxCountdown;
 	}
 }

@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 {
-	// Token: 0x020051D9 RID: 20953
+	// Token: 0x020041A9 RID: 16809
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 	})]
 	public class DeckBuilderCardItem : CommonGridCardItem<DeckBuilderCardItemData>
 	{
-		// Token: 0x060359F8 RID: 219640 RVA: 0x00CB4328 File Offset: 0x00CB2528
+		// Token: 0x0602A8F3 RID: 174323 RVA: 0x00C01964 File Offset: 0x00BFFB64
 		protected override void OnRegisterCardComponent()
 		{
 			if (this.IsNewPhantomArenaActivity)
@@ -49,13 +49,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 			};
 		}
 
-		// Token: 0x060359F9 RID: 219641 RVA: 0x00CB443E File Offset: 0x00CB263E
+		// Token: 0x0602A8F4 RID: 174324 RVA: 0x00C01A7A File Offset: 0x00BFFC7A
 		protected override void OnStart()
 		{
 			base.GetComponent<CardCheckComponent>(ECardItemComponent.CardCheckComponent).SetActive(true);
 		}
 
-		// Token: 0x060359FA RID: 219642 RVA: 0x00CB4450 File Offset: 0x00CB2650
+		// Token: 0x0602A8F5 RID: 174325 RVA: 0x00C01A8C File Offset: 0x00BFFC8C
 		public override void Refresh(DeckBuilderCardItemData data)
 		{
 			DeckBuilderCardItem.<>c__DisplayClass6_0 CS$<>8__locals1 = new DeckBuilderCardItem.<>c__DisplayClass6_0();
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 			base.RunAsyncTask(task);
 		}
 
-		// Token: 0x060359FB RID: 219643 RVA: 0x00CB4494 File Offset: 0x00CB2694
+		// Token: 0x0602A8F6 RID: 174326 RVA: 0x00C01AD0 File Offset: 0x00BFFCD0
 		public override UniTask RefreshAsync(DeckBuilderCardItemData data, bool isSelected, int gridIndex)
 		{
 			DeckBuilderCardItem.<RefreshAsync>d__7 <RefreshAsync>d__;
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 			return <RefreshAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060359FC RID: 219644 RVA: 0x00CB44E0 File Offset: 0x00CB26E0
+		// Token: 0x0602A8F7 RID: 174327 RVA: 0x00C01B1C File Offset: 0x00BFFD1C
 		public void RefreshLeftCount()
 		{
 			CardCheckComponentData data = new CardCheckComponentData
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 			base.GetComponent<CardCheckComponent>(ECardItemComponent.CardCheckComponent).Refresh(data);
 		}
 
-		// Token: 0x060359FD RID: 219645 RVA: 0x00CB4534 File Offset: 0x00CB2734
+		// Token: 0x0602A8F8 RID: 174328 RVA: 0x00C01B70 File Offset: 0x00BFFD70
 		public void RefreshAllInDeckComponent()
 		{
 			CardAllInDeckComponentData data = new CardAllInDeckComponentData
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 			base.GetComponent<CardAllInDeckComponent>(ECardItemComponent.CardAllInDeckComponent).Refresh(data);
 		}
 
-		// Token: 0x060359FE RID: 219646 RVA: 0x00CB458C File Offset: 0x00CB278C
+		// Token: 0x0602A8F9 RID: 174329 RVA: 0x00C01BC8 File Offset: 0x00BFFDC8
 		public void RefreshDisabledComponent()
 		{
 			CardDisabledComponentData data = new CardDisabledComponentData
@@ -119,13 +119,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 			base.GetComponent<CardDisabledComponent>(ECardItemComponent.CardDisabledComponent).Refresh(data);
 		}
 
-		// Token: 0x060359FF RID: 219647 RVA: 0x00CB45EF File Offset: 0x00CB27EF
+		// Token: 0x0602A8FA RID: 174330 RVA: 0x00C01C2B File Offset: 0x00BFFE2B
 		public void RefreshLockComponent()
 		{
 			base.GetComponent<CardLockComponent>(ECardItemComponent.CardLockComponent).Refresh(this.Data.IsLocked);
 		}
 
-		// Token: 0x06035A00 RID: 219648 RVA: 0x00CB4608 File Offset: 0x00CB2808
+		// Token: 0x0602A8FB RID: 174331 RVA: 0x00C01C44 File Offset: 0x00BFFE44
 		public void RefreshOutlook()
 		{
 			ECardFaceType cardFaceType = PhantomArenaModel.Instance.GetCardFaceType(this.Data.CardId);
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 			base.GetComponent<CardSpineComponent>(ECardItemComponent.CardSpineComponent).Refresh(this.SpineComponentData);
 		}
 
-		// Token: 0x06035A01 RID: 219649 RVA: 0x00CB4690 File Offset: 0x00CB2890
+		// Token: 0x0602A8FC RID: 174332 RVA: 0x00C01CCC File Offset: 0x00BFFECC
 		private void OpenCardInfoViewInternal()
 		{
 			DeckBuilderCardItemData data = this.Data;
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 			openCardInfoView((data2 != null) ? data2.CardId : 0);
 		}
 
-		// Token: 0x06035A02 RID: 219650 RVA: 0x00CB46B9 File Offset: 0x00CB28B9
+		// Token: 0x0602A8FD RID: 174333 RVA: 0x00C01CF5 File Offset: 0x00BFFEF5
 		protected void OnPointerUp()
 		{
 			DeckBuilderCardItemData data = this.Data;
@@ -165,19 +165,19 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 			data.AddCardToDeck(this.Data.CardId, 1);
 		}
 
-		// Token: 0x06035A03 RID: 219651 RVA: 0x00CB46DC File Offset: 0x00CB28DC
+		// Token: 0x0602A8FE RID: 174334 RVA: 0x00C01D18 File Offset: 0x00BFFF18
 		private bool CanToggleChange()
 		{
 			return false;
 		}
 
-		// Token: 0x06035A04 RID: 219652 RVA: 0x00CB46DF File Offset: 0x00CB28DF
+		// Token: 0x0602A8FF RID: 174335 RVA: 0x00C01D1B File Offset: 0x00BFFF1B
 		public override object GetKey(DeckBuilderCardItemData data, int gridIndex)
 		{
 			return data.CardId;
 		}
 
-		// Token: 0x06035A05 RID: 219653 RVA: 0x00CB46EC File Offset: 0x00CB28EC
+		// Token: 0x0602A900 RID: 174336 RVA: 0x00C01D28 File Offset: 0x00BFFF28
 		public override UUIItem[] GetGuideUiItemAndUiItemForShowEx(string[] configParams)
 		{
 			if (configParams == null || configParams.Length == 0)
@@ -217,16 +217,16 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 			return null;
 		}
 
-		// Token: 0x0401C75A RID: 116570
+		// Token: 0x0401718F RID: 94607
 		protected DeckBuilderCardItemData Data;
 
-		// Token: 0x0401C75B RID: 116571
+		// Token: 0x04017190 RID: 94608
 		protected ICommonBaseCardComponentData CommonBaseCardComponentData;
 
-		// Token: 0x0401C75C RID: 116572
+		// Token: 0x04017191 RID: 94609
 		protected ICardSpineComponentData SpineComponentData;
 
-		// Token: 0x0401C75D RID: 116573
+		// Token: 0x04017192 RID: 94610
 		public bool IsNewPhantomArenaActivity;
 	}
 }

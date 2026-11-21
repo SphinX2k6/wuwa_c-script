@@ -1,34 +1,34 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020020C7 RID: 8391
+// Token: 0x0200159E RID: 5534
 [NullableContext(1)]
 [Nullable(0)]
 public class TriggerBuffDamageRecord : PlayerCommonLogData
 {
-	// Token: 0x17001471 RID: 5233
-	// (get) Token: 0x06010896 RID: 67734 RVA: 0x0040A62D File Offset: 0x0040882D
-	// (set) Token: 0x06010897 RID: 67735 RVA: 0x0040A635 File Offset: 0x00408835
+	// Token: 0x1700149E RID: 5278
+	// (get) Token: 0x0600DD06 RID: 56582 RVA: 0x00416D35 File Offset: 0x00414F35
+	// (set) Token: 0x0600DD07 RID: 56583 RVA: 0x00416D3D File Offset: 0x00414F3D
 	public override string event_id { get; set; } = "6";
 
-	// Token: 0x04007B07 RID: 31495
+	// Token: 0x04007C05 RID: 31749
 	public string i_area_id = "";
 
-	// Token: 0x04007B08 RID: 31496
+	// Token: 0x04007C06 RID: 31750
 	public string s_buff_id = "";
 
-	// Token: 0x04007B09 RID: 31497
+	// Token: 0x04007C07 RID: 31751
 	public string f_time = "";
 
-	// Token: 0x04007B0A RID: 31498
+	// Token: 0x04007C08 RID: 31752
 	public string f_player_pos_x = "";
 
-	// Token: 0x04007B0B RID: 31499
+	// Token: 0x04007C09 RID: 31753
 	public string f_player_pos_y = "";
 
-	// Token: 0x04007B0C RID: 31500
+	// Token: 0x04007C0A RID: 31754
 	public string f_player_pos_z = "";
 
-	// Token: 0x04007B0D RID: 31501
+	// Token: 0x04007C0B RID: 31755
 	public string i_damage = "";
 }

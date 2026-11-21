@@ -2,7 +2,7 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020067AE RID: 26542
+	// Token: 0x02006E2E RID: 28206
 	public class IFinishTalkT
 	{
 	}

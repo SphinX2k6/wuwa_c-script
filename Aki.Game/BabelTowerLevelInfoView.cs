@@ -10,17 +10,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001174 RID: 4468
+// Token: 0x02000628 RID: 1576
 [NullableContext(1)]
 [Nullable(0)]
 public class BabelTowerLevelInfoView : UiViewBase
 {
-	// Token: 0x060075F1 RID: 30193 RVA: 0x00186A17 File Offset: 0x00184C17
+	// Token: 0x06004988 RID: 18824 RVA: 0x0018F5BF File Offset: 0x0018D7BF
 	public BabelTowerLevelInfoView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060075F2 RID: 30194 RVA: 0x00186A20 File Offset: 0x00184C20
+	// Token: 0x06004989 RID: 18825 RVA: 0x0018F5C8 File Offset: 0x0018D7C8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -59,7 +59,7 @@ public class BabelTowerLevelInfoView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060075F3 RID: 30195 RVA: 0x00186BF4 File Offset: 0x00184DF4
+	// Token: 0x0600498A RID: 18826 RVA: 0x0018F79C File Offset: 0x0018D99C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		BabelTowerLevelInfoView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -70,20 +70,20 @@ public class BabelTowerLevelInfoView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060075F4 RID: 30196 RVA: 0x00186C37 File Offset: 0x00184E37
+	// Token: 0x0600498B RID: 18827 RVA: 0x0018F7DF File Offset: 0x0018D9DF
 	protected override void OnStart()
 	{
 		this.BabelTowerLevelInfo = (this.OpenParam as IBabelTowerLevelInfo);
 		EventSystem.Instance.Add(EEventName.OnRoleChangeEnd, new Action(this.OnRoleChangeEnd));
 	}
 
-	// Token: 0x060075F5 RID: 30197 RVA: 0x00186C66 File Offset: 0x00184E66
+	// Token: 0x0600498C RID: 18828 RVA: 0x0018F80E File Offset: 0x0018DA0E
 	protected override void OnBeforeDestroy()
 	{
 		EventSystem.Instance.Remove(EEventName.OnRoleChangeEnd, new Action(this.OnRoleChangeEnd));
 	}
 
-	// Token: 0x060075F6 RID: 30198 RVA: 0x00186C84 File Offset: 0x00184E84
+	// Token: 0x0600498D RID: 18829 RVA: 0x0018F82C File Offset: 0x0018DA2C
 	protected override void OnBeforeShow()
 	{
 		EPlayerGender playerGender = PlayerInfoModel.Instance.GetPlayerGender();
@@ -108,7 +108,7 @@ public class BabelTowerLevelInfoView : UiViewBase
 		this.RefreshView();
 	}
 
-	// Token: 0x060075F7 RID: 30199 RVA: 0x00186D65 File Offset: 0x00184F65
+	// Token: 0x0600498E RID: 18830 RVA: 0x0018F90D File Offset: 0x0018DB0D
 	private void OnClickButton()
 	{
 		if (!UiManager.Instance.IsViewShow(EUiViewName.MultiTeamRoleSelectView))
@@ -117,7 +117,7 @@ public class BabelTowerLevelInfoView : UiViewBase
 		}
 	}
 
-	// Token: 0x060075F8 RID: 30200 RVA: 0x00186D90 File Offset: 0x00184F90
+	// Token: 0x0600498F RID: 18831 RVA: 0x0018F938 File Offset: 0x0018DB38
 	private void OnRoleChangeEnd()
 	{
 		EPlayerGender playerGender = PlayerInfoModel.Instance.GetPlayerGender();
@@ -158,7 +158,7 @@ public class BabelTowerLevelInfoView : UiViewBase
 		this.BabelTowerLevelInfo.RoleList = list;
 	}
 
-	// Token: 0x060075F9 RID: 30201 RVA: 0x00186EC0 File Offset: 0x001850C0
+	// Token: 0x06004990 RID: 18832 RVA: 0x0018FA68 File Offset: 0x0018DC68
 	private MultiTeamRoleSelectData GetRoleSelectViewData()
 	{
 		int instanceId = this.BabelTowerLevelInfo.InstanceId;
@@ -177,7 +177,7 @@ public class BabelTowerLevelInfoView : UiViewBase
 			if (roleInstance.GetRoleId() != 0)
 			{
 				int weaponType = roleInstance.GetRoleConfig().WeaponType;
-				MultiTeamRoleGridData item = MultiTeamRoleGridData.Phrase(roleInstance, false, false, list2.Count > 0 && !list2.Contains(weaponType), false);
+				MultiTeamRoleGridData item = MultiTeamRoleGridData.Phrase(roleInstance, false, false, list2.Count > 0 && !list2.Contains(weaponType), false, null, false, false, false);
 				list.Add(item);
 			}
 		}
@@ -211,16 +211,16 @@ public class BabelTowerLevelInfoView : UiViewBase
 					}
 					if (!flag)
 					{
-						goto IL_21A;
+						goto IL_222;
 					}
 				}
 				RoleDataBase roleDataById = RoleModel.Instance.GetRoleDataById(trialRoleConfigByGroupId.Value.Id, true);
 				if (roleDataById != null)
 				{
-					list3.Add(MultiTeamRoleGridData.Phrase(roleDataById, false, false, false, false));
+					list3.Add(MultiTeamRoleGridData.Phrase(roleDataById, false, false, false, false, null, false, false, false));
 				}
 			}
-			IL_21A:;
+			IL_222:;
 		}
 		MultiTeamRoleData item2 = MultiTeamRoleData.Phrase("BossRushNormalRole", list);
 		List<MultiTeamRoleData> list5 = new List<MultiTeamRoleData>();
@@ -245,7 +245,7 @@ public class BabelTowerLevelInfoView : UiViewBase
 		return result;
 	}
 
-	// Token: 0x060075FA RID: 30202 RVA: 0x001871C8 File Offset: 0x001853C8
+	// Token: 0x06004991 RID: 18833 RVA: 0x0018FD78 File Offset: 0x0018DF78
 	private void OnEnsureFormation(int[] roleIdList, int[] tagList)
 	{
 		for (int i = 0; i < 3; i++)
@@ -260,7 +260,7 @@ public class BabelTowerLevelInfoView : UiViewBase
 		this.OnSelectTeamRole();
 	}
 
-	// Token: 0x060075FB RID: 30203 RVA: 0x00187220 File Offset: 0x00185420
+	// Token: 0x06004992 RID: 18834 RVA: 0x0018FDD0 File Offset: 0x0018DFD0
 	private bool OnCanChangeRole(int[] roleIdList)
 	{
 		List<int> list;
@@ -300,14 +300,14 @@ public class BabelTowerLevelInfoView : UiViewBase
 		return true;
 	}
 
-	// Token: 0x060075FC RID: 30204 RVA: 0x0018731B File Offset: 0x0018551B
+	// Token: 0x06004993 RID: 18835 RVA: 0x0018FECB File Offset: 0x0018E0CB
 	private void OnSelectTeamRole()
 	{
 		this.RefreshLowLevelTips();
 		this.RefreshTeamRole();
 	}
 
-	// Token: 0x060075FD RID: 30205 RVA: 0x0018732C File Offset: 0x0018552C
+	// Token: 0x06004994 RID: 18836 RVA: 0x0018FEDC File Offset: 0x0018E0DC
 	private void RefreshLowLevelTips()
 	{
 		int instanceId = this.BabelTowerLevelInfo.InstanceId;
@@ -315,7 +315,7 @@ public class BabelTowerLevelInfoView : UiViewBase
 		base.GetItem(8).SetUIActive(ifLevelTooLow);
 	}
 
-	// Token: 0x060075FE RID: 30206 RVA: 0x00187370 File Offset: 0x00185570
+	// Token: 0x06004995 RID: 18837 RVA: 0x0018FF20 File Offset: 0x0018E120
 	public void RefreshTeamRole()
 	{
 		List<int> list;
@@ -340,7 +340,7 @@ public class BabelTowerLevelInfoView : UiViewBase
 		this.TeamItem.RefreshItem(roleList, instanceId);
 	}
 
-	// Token: 0x060075FF RID: 30207 RVA: 0x00187424 File Offset: 0x00185624
+	// Token: 0x06004996 RID: 18838 RVA: 0x0018FFD4 File Offset: 0x0018E1D4
 	private void RefreshBuff()
 	{
 		List<int> buffList = this.BabelTowerLevelInfo.BuffList;
@@ -359,7 +359,7 @@ public class BabelTowerLevelInfoView : UiViewBase
 		babelTowerLevelBuffItem2.RefreshItem(this.BabelTowerLevelInfo.BuffCount < 2, buffId2);
 	}
 
-	// Token: 0x06007600 RID: 30208 RVA: 0x001874AC File Offset: 0x001856AC
+	// Token: 0x06004997 RID: 18839 RVA: 0x0019005C File Offset: 0x0018E25C
 	private void RefreshStar()
 	{
 		base.GetArtText(2).SetText(((this.BabelTowerLevelInfo.StarNumber < 10) ? "0" : "") + this.BabelTowerLevelInfo.StarNumber.ToString());
@@ -374,7 +374,7 @@ public class BabelTowerLevelInfoView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(4), babelTowerDifficulty.Value.DifficultyTextKey, Array.Empty<object>());
 	}
 
-	// Token: 0x06007601 RID: 30209 RVA: 0x0018757E File Offset: 0x0018577E
+	// Token: 0x06004998 RID: 18840 RVA: 0x0019012E File Offset: 0x0018E32E
 	private void RefreshView()
 	{
 		this.OnSelectTeamRole();
@@ -382,19 +382,19 @@ public class BabelTowerLevelInfoView : UiViewBase
 		this.RefreshStar();
 	}
 
-	// Token: 0x06007602 RID: 30210 RVA: 0x00187594 File Offset: 0x00185794
+	// Token: 0x06004999 RID: 18841 RVA: 0x00190144 File Offset: 0x0018E344
 	private void OnClickConfirmBtn()
 	{
 		BabelTowerController.Instance.BabelTowerStartRequest(this.BabelTowerLevelInfo.InstanceId, this.BabelTowerLevelInfo.RoleList, this.BabelTowerLevelInfo.BabelTowerLevelId, this.BabelTowerLevelInfo.BuffList, BabelTowerController.Instance.BuildSkillBranchListFromRoleList(this.BabelTowerLevelInfo.RoleList));
 	}
 
-	// Token: 0x06007603 RID: 30211 RVA: 0x001875EC File Offset: 0x001857EC
+	// Token: 0x0600499A RID: 18842 RVA: 0x0019019C File Offset: 0x0018E39C
 	private void OnClickLevelDetailBtn()
 	{
 		UiManager.Instance.OpenView(EUiViewName.InstanceDungeonMonsterPreView, this.BabelTowerLevelInfo.InstanceId, null);
 	}
 
-	// Token: 0x06007604 RID: 30212 RVA: 0x00187610 File Offset: 0x00185810
+	// Token: 0x0600499B RID: 18843 RVA: 0x001901C0 File Offset: 0x0018E3C0
 	private void OnClickBuffItem(int clickBuffId)
 	{
 		BabelTowerLevel babelTowerLevelConfig = BabelTowerConfig.Instance.GetBabelTowerLevelConfig(this.BabelTowerLevelInfo.BabelTowerLevelId);
@@ -458,68 +458,68 @@ public class BabelTowerLevelInfoView : UiViewBase
 		UiManager.Instance.OpenView(EUiViewName.BabelTowerBuffSelectView, param, null);
 	}
 
-	// Token: 0x06007605 RID: 30213 RVA: 0x001877C8 File Offset: 0x001859C8
+	// Token: 0x0600499C RID: 18844 RVA: 0x00190378 File Offset: 0x0018E578
 	private void OnBuffSelectConfirm(List<int> buffList)
 	{
 		this.BabelTowerLevelInfo.BuffList = buffList;
 		this.RefreshBuff();
 	}
 
-	// Token: 0x0400361E RID: 13854
+	// Token: 0x040036B7 RID: 14007
 	private const int ROLE_TEAM_SIZE = 3;
 
-	// Token: 0x0400361F RID: 13855
+	// Token: 0x040036B8 RID: 14008
 	[Nullable(2)]
 	private IBabelTowerLevelInfo BabelTowerLevelInfo;
 
-	// Token: 0x04003620 RID: 13856
+	// Token: 0x040036B9 RID: 14009
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04003621 RID: 13857
+	// Token: 0x040036BA RID: 14010
 	[Nullable(2)]
 	private BabelTowerLevelBuffItem BabelTowerLevelBuffItem1;
 
-	// Token: 0x04003622 RID: 13858
+	// Token: 0x040036BB RID: 14011
 	[Nullable(2)]
 	private BabelTowerLevelBuffItem BabelTowerLevelBuffItem2;
 
-	// Token: 0x04003623 RID: 13859
+	// Token: 0x040036BC RID: 14012
 	[Nullable(2)]
 	private BabelTowerTeamItem TeamItem;
 
-	// Token: 0x02007745 RID: 30533
+	// Token: 0x020068D2 RID: 26834
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x0402757C RID: 161148
+		// Token: 0x040228B5 RID: 141493
 		public const int CaptionItem = 0;
 
-		// Token: 0x0402757D RID: 161149
+		// Token: 0x040228B6 RID: 141494
 		public const int LevelDetailBtn = 1;
 
-		// Token: 0x0402757E RID: 161150
+		// Token: 0x040228B7 RID: 141495
 		public const int DeTermStarText = 2;
 
-		// Token: 0x0402757F RID: 161151
+		// Token: 0x040228B8 RID: 141496
 		public const int HardItem = 3;
 
-		// Token: 0x04027580 RID: 161152
+		// Token: 0x040228B9 RID: 141497
 		public const int HardText = 4;
 
-		// Token: 0x04027581 RID: 161153
+		// Token: 0x040228BA RID: 141498
 		public const int BuffItem1 = 5;
 
-		// Token: 0x04027582 RID: 161154
+		// Token: 0x040228BB RID: 141499
 		public const int BuffItem2 = 6;
 
-		// Token: 0x04027583 RID: 161155
+		// Token: 0x040228BC RID: 141500
 		public const int TeamItem = 7;
 
-		// Token: 0x04027584 RID: 161156
+		// Token: 0x040228BD RID: 141501
 		public const int LowLevelItem = 8;
 
-		// Token: 0x04027585 RID: 161157
+		// Token: 0x040228BE RID: 141502
 		public const int ConfirmBtn = 9;
 	}
 }

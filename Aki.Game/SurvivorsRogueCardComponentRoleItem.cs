@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002ACD RID: 10957
+// Token: 0x02002049 RID: 8265
 [NullableContext(2)]
 [Nullable(0)]
 public class SurvivorsRogueCardComponentRoleItem : SurvivorsRogueCardComponent
 {
-	// Token: 0x06016CC0 RID: 93376 RVA: 0x005C9E9B File Offset: 0x005C809B
+	// Token: 0x060146F1 RID: 83697 RVA: 0x005F69EF File Offset: 0x005F4BEF
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -21,7 +21,7 @@ public class SurvivorsRogueCardComponentRoleItem : SurvivorsRogueCardComponent
 		};
 	}
 
-	// Token: 0x06016CC1 RID: 93377 RVA: 0x005C9ED4 File Offset: 0x005C80D4
+	// Token: 0x060146F2 RID: 83698 RVA: 0x005F6A28 File Offset: 0x005F4C28
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SurvivorsRogueCardComponentRoleItem.<OnBeforeStartAsync>d__2 <OnBeforeStartAsync>d__;
@@ -32,19 +32,19 @@ public class SurvivorsRogueCardComponentRoleItem : SurvivorsRogueCardComponent
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016CC2 RID: 93378 RVA: 0x005C9F17 File Offset: 0x005C8117
+	// Token: 0x060146F3 RID: 83699 RVA: 0x005F6A6B File Offset: 0x005F4C6B
 	protected override string OnGetResourceId()
 	{
 		return "UiItem_SurvivorsCardRole";
 	}
 
-	// Token: 0x06016CC3 RID: 93379 RVA: 0x005C9F1E File Offset: 0x005C811E
+	// Token: 0x060146F4 RID: 83700 RVA: 0x005F6A72 File Offset: 0x005F4C72
 	public override ECardMountPos GetLayoutLevel()
 	{
 		return ECardMountPos.Center;
 	}
 
-	// Token: 0x06016CC4 RID: 93380 RVA: 0x005C9F24 File Offset: 0x005C8124
+	// Token: 0x060146F5 RID: 83701 RVA: 0x005F6A78 File Offset: 0x005F4C78
 	protected override void OnRefresh([Nullable(new byte[]
 	{
 		1,
@@ -77,6 +77,6 @@ public class SurvivorsRogueCardComponentRoleItem : SurvivorsRogueCardComponent
 		this.SetActive(true);
 	}
 
-	// Token: 0x0400A95C RID: 43356
+	// Token: 0x0400AD62 RID: 44386
 	private SurvivorsRogueCardAttributeItem AttributeItem;
 }

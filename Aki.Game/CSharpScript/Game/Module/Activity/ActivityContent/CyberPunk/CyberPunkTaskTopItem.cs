@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 {
-	// Token: 0x020068C3 RID: 26819
+	// Token: 0x02005813 RID: 22547
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CyberPunkTaskTopItem : UiPanelBase
 	{
-		// Token: 0x06042EE9 RID: 274153 RVA: 0x0104C9F4 File Offset: 0x0104ABF4
+		// Token: 0x06037A41 RID: 227905 RVA: 0x00F8E01C File Offset: 0x00F8C21C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -39,25 +39,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06042EEA RID: 274154 RVA: 0x0104CAFF File Offset: 0x0104ACFF
+		// Token: 0x06037A42 RID: 227906 RVA: 0x00F8E127 File Offset: 0x00F8C327
 		public void SetOnClose(Action callback)
 		{
 			this.CloseCallback = callback;
 		}
 
-		// Token: 0x06042EEB RID: 274155 RVA: 0x0104CB08 File Offset: 0x0104AD08
+		// Token: 0x06037A43 RID: 227907 RVA: 0x00F8E130 File Offset: 0x00F8C330
 		public void SetOnHelp(Action callback)
 		{
 			this.HelpCallback = callback;
 		}
 
-		// Token: 0x06042EEC RID: 274156 RVA: 0x0104CB11 File Offset: 0x0104AD11
+		// Token: 0x06037A44 RID: 227908 RVA: 0x00F8E139 File Offset: 0x00F8C339
 		public void SetTitleByTextId(string textId, params string[] args)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), textId, args);
 		}
 
-		// Token: 0x06042EED RID: 274157 RVA: 0x0104CB26 File Offset: 0x0104AD26
+		// Token: 0x06037A45 RID: 227909 RVA: 0x00F8E14E File Offset: 0x00F8C34E
 		public void SetTitleByText(string text)
 		{
 			UUIText text2 = base.GetText(1);
@@ -68,13 +68,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			text2.SetText(text, true);
 		}
 
-		// Token: 0x06042EEE RID: 274158 RVA: 0x0104CB3C File Offset: 0x0104AD3C
+		// Token: 0x06037A46 RID: 227910 RVA: 0x00F8E164 File Offset: 0x00F8C364
 		public void SetTitleIconByPath(string path)
 		{
 			this.SetSpriteByPath(path, base.GetSprite(0), false, null, null);
 		}
 
-		// Token: 0x06042EEF RID: 274159 RVA: 0x0104CB62 File Offset: 0x0104AD62
+		// Token: 0x06037A47 RID: 227911 RVA: 0x00F8E18A File Offset: 0x00F8C38A
 		private void OnClickHelp()
 		{
 			Action helpCallback = this.HelpCallback;
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			helpCallback();
 		}
 
-		// Token: 0x06042EF0 RID: 274160 RVA: 0x0104CB74 File Offset: 0x0104AD74
+		// Token: 0x06037A48 RID: 227912 RVA: 0x00F8E19C File Offset: 0x00F8C39C
 		private void OnClickBack()
 		{
 			Action closeCallback = this.CloseCallback;
@@ -96,28 +96,28 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			closeCallback();
 		}
 
-		// Token: 0x04022D1A RID: 142618
+		// Token: 0x0401D576 RID: 120182
 		[Nullable(2)]
 		private Action CloseCallback;
 
-		// Token: 0x04022D1B RID: 142619
+		// Token: 0x0401D577 RID: 120183
 		[Nullable(2)]
 		private Action HelpCallback;
 
-		// Token: 0x0200CA9C RID: 51868
+		// Token: 0x0200B464 RID: 46180
 		[NullableContext(0)]
 		private static class ETopItemComponent
 		{
-			// Token: 0x0403D3DD RID: 250845
+			// Token: 0x04037CB7 RID: 228535
 			public const int TitleSpriteIcon = 0;
 
-			// Token: 0x0403D3DE RID: 250846
+			// Token: 0x04037CB8 RID: 228536
 			public const int TxtTitle = 1;
 
-			// Token: 0x0403D3DF RID: 250847
+			// Token: 0x04037CB9 RID: 228537
 			public const int BtnHelpInfo = 2;
 
-			// Token: 0x0403D3E0 RID: 250848
+			// Token: 0x04037CBA RID: 228538
 			public const int BtnBack = 3;
 		}
 	}

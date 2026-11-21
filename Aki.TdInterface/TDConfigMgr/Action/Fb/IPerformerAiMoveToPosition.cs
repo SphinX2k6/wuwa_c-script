@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200298D RID: 10637
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002C74 RID: 11380
 	public class IPerformerAiMoveToPosition : IPerformerAiMoveConfig
 	{
-		// Token: 0x0600EB89 RID: 60297 RVA: 0x002272B6 File Offset: 0x002254B6
+		// Token: 0x0600FA07 RID: 64007 RVA: 0x00244A42 File Offset: 0x00242C42
 		public static IPerformerAiMoveToPosition Create(IPerformerAiMoveToPosition? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004A31 RID: 18993
-		// (get) Token: 0x0600EB8A RID: 60298 RVA: 0x002272D5 File Offset: 0x002254D5
+		// Token: 0x17004DCD RID: 19917
+		// (get) Token: 0x0600FA08 RID: 64008 RVA: 0x00244A61 File Offset: 0x00242C61
 		public override EPerformerAiMoveToType Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004A32 RID: 18994
-		// (get) Token: 0x0600EB8B RID: 60299 RVA: 0x002272E2 File Offset: 0x002254E2
+		// Token: 0x17004DCE RID: 19918
+		// (get) Token: 0x0600FA09 RID: 64009 RVA: 0x00244A6E File Offset: 0x00242C6E
 		public virtual VectorInfo Destination
 		{
 			get
@@ -49,14 +47,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040081B7 RID: 33207
+		// Token: 0x0400889C RID: 34972
 		private IPerformerAiMoveToPosition Instance;
 
-		// Token: 0x040081B8 RID: 33208
+		// Token: 0x0400889D RID: 34973
 		[Nullable(2)]
 		private VectorInfo _DestinationCache;
 
-		// Token: 0x040081B9 RID: 33209
+		// Token: 0x0400889E RID: 34974
 		private bool _DestinationInited;
 	}
 }

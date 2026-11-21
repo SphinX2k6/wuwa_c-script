@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006385 RID: 25477
+	// Token: 0x020069F6 RID: 27126
 	public struct IClearFishingCabinInSaleItems : IFlatbufferObject
 	{
-		// Token: 0x1700BDF3 RID: 48627
-		// (get) Token: 0x0602C10D RID: 180493 RVA: 0x0060D8AE File Offset: 0x0060BAAE
+		// Token: 0x1700C77B RID: 51067
+		// (get) Token: 0x0602E877 RID: 190583 RVA: 0x00658A02 File Offset: 0x00656C02
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,50 +16,50 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602C10E RID: 180494 RVA: 0x0060D8BB File Offset: 0x0060BABB
+		// Token: 0x0602E878 RID: 190584 RVA: 0x00658A0F File Offset: 0x00656C0F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602C10F RID: 180495 RVA: 0x0060D8C4 File Offset: 0x0060BAC4
+		// Token: 0x0602E879 RID: 190585 RVA: 0x00658A18 File Offset: 0x00656C18
 		public static IClearFishingCabinInSaleItems GetRootAsIClearFishingCabinInSaleItems(ByteBuffer _bb)
 		{
 			return IClearFishingCabinInSaleItems.GetRootAsIClearFishingCabinInSaleItems(_bb, default(IClearFishingCabinInSaleItems));
 		}
 
-		// Token: 0x0602C110 RID: 180496 RVA: 0x0060D8E0 File Offset: 0x0060BAE0
+		// Token: 0x0602E87A RID: 190586 RVA: 0x00658A34 File Offset: 0x00656C34
 		public static IClearFishingCabinInSaleItems GetRootAsIClearFishingCabinInSaleItems(ByteBuffer _bb, IClearFishingCabinInSaleItems obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602C111 RID: 180497 RVA: 0x0060D8FD File Offset: 0x0060BAFD
+		// Token: 0x0602E87B RID: 190587 RVA: 0x00658A51 File Offset: 0x00656C51
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602C112 RID: 180498 RVA: 0x0060D90C File Offset: 0x0060BB0C
+		// Token: 0x0602E87C RID: 190588 RVA: 0x00658A60 File Offset: 0x00656C60
 		public IClearFishingCabinInSaleItems __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x0602C113 RID: 180499 RVA: 0x0060D91C File Offset: 0x0060BB1C
+		// Token: 0x0602E87D RID: 190589 RVA: 0x00658A70 File Offset: 0x00656C70
 		public static void StartIClearFishingCabinInSaleItems(FlatBufferBuilder builder)
 		{
 			builder.StartTable(0);
 		}
 
-		// Token: 0x0602C114 RID: 180500 RVA: 0x0060D925 File Offset: 0x0060BB25
+		// Token: 0x0602E87E RID: 190590 RVA: 0x00658A79 File Offset: 0x00656C79
 		public static Offset<IClearFishingCabinInSaleItems> EndIClearFishingCabinInSaleItems(FlatBufferBuilder builder)
 		{
 			return new Offset<IClearFishingCabinInSaleItems>(builder.EndTable());
 		}
 
-		// Token: 0x0602C115 RID: 180501 RVA: 0x0060D934 File Offset: 0x0060BB34
+		// Token: 0x0602E87F RID: 190591 RVA: 0x00658A88 File Offset: 0x00656C88
 		public IClearFishingCabinInSaleItemsT UnPack()
 		{
 			IClearFishingCabinInSaleItemsT clearFishingCabinInSaleItemsT = new IClearFishingCabinInSaleItemsT();
@@ -67,12 +67,12 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return clearFishingCabinInSaleItemsT;
 		}
 
-		// Token: 0x0602C116 RID: 180502 RVA: 0x0060D94F File Offset: 0x0060BB4F
+		// Token: 0x0602E880 RID: 190592 RVA: 0x00658AA3 File Offset: 0x00656CA3
 		public void UnPackTo(IClearFishingCabinInSaleItemsT _o)
 		{
 		}
 
-		// Token: 0x0602C117 RID: 180503 RVA: 0x0060D954 File Offset: 0x0060BB54
+		// Token: 0x0602E881 RID: 190593 RVA: 0x00658AA8 File Offset: 0x00656CA8
 		public static Offset<IClearFishingCabinInSaleItems> Pack(FlatBufferBuilder builder, IClearFishingCabinInSaleItemsT _o)
 		{
 			if (_o == null)
@@ -83,7 +83,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IClearFishingCabinInSaleItems.EndIClearFishingCabinInSaleItems(builder);
 		}
 
-		// Token: 0x04010950 RID: 67920
+		// Token: 0x04011765 RID: 71525
 		private Table __p;
 	}
 }

@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001EF6 RID: 7926
+	// Token: 0x02000603 RID: 1539
 	public sealed class FOnXboxUserStoreIdResult : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601E1AF RID: 123311 RVA: 0x002CBAC8 File Offset: 0x002C9CC8
+		// Token: 0x060087FA RID: 34810 RVA: 0x000CCACC File Offset: 0x000CACCC
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnXboxUserStoreIdResult.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601E1B0 RID: 123312 RVA: 0x002CBAD4 File Offset: 0x002C9CD4
+		// Token: 0x060087FB RID: 34811 RVA: 0x000CCAD8 File Offset: 0x000CACD8
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnXboxUserStoreIdResult._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FOnXboxUserStoreIdResult._FunctionPtr;
 		}
 
-		// Token: 0x0601E1B1 RID: 123313 RVA: 0x002CBAF7 File Offset: 0x002C9CF7
+		// Token: 0x060087FC RID: 34812 RVA: 0x000CCAFB File Offset: 0x000CACFB
 		public FOnXboxUserStoreIdResult()
 		{
 		}
 
-		// Token: 0x0601E1B2 RID: 123314 RVA: 0x002CBAFF File Offset: 0x002C9CFF
+		// Token: 0x060087FD RID: 34813 RVA: 0x000CCB03 File Offset: 0x000CAD03
 		[NullableContext(2)]
 		public FOnXboxUserStoreIdResult(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601E1B3 RID: 123315 RVA: 0x002CBB09 File Offset: 0x002C9D09
+		// Token: 0x060087FE RID: 34814 RVA: 0x000CCB0D File Offset: 0x000CAD0D
 		public FOnXboxUserStoreIdResult(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601E1B4 RID: 123316 RVA: 0x002CBB14 File Offset: 0x002C9D14
+		// Token: 0x060087FF RID: 34815 RVA: 0x000CCB18 File Offset: 0x000CAD18
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<FXboxUserStoreIdResult>) ?? ((Action<FXboxUserStoreIdResult>)Delegate.CreateDelegate(typeof(Action<FXboxUserStoreIdResult>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601E1B5 RID: 123317 RVA: 0x002CBB46 File Offset: 0x002C9D46
+		// Token: 0x06008800 RID: 34816 RVA: 0x000CCB4A File Offset: 0x000CAD4A
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<FXboxUserStoreIdResult> Callback)
 		{
 			if (FOnXboxUserStoreIdResult.RegisterId == 0)
@@ -65,10 +64,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FOnXboxUserStoreIdResult.RegisterId);
 		}
 
-		// Token: 0x0601E1B6 RID: 123318 RVA: 0x002CBB80 File Offset: 0x002C9D80
+		// Token: 0x06008801 RID: 34817 RVA: 0x000CCB84 File Offset: 0x000CAD84
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(in FXboxUserStoreIdResult Result)
 		{
 			FOnXboxUserStoreIdResult.__FOnXboxUserStoreIdResult_DelegateParams* ptr = stackalloc FOnXboxUserStoreIdResult.__FOnXboxUserStoreIdResult_DelegateParams[(UIntPtr)39] + 15L / (long)sizeof(FOnXboxUserStoreIdResult.__FOnXboxUserStoreIdResult_DelegateParams) & -16L;
@@ -81,10 +79,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FOnXboxUserStoreIdResult._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601E1B7 RID: 123319 RVA: 0x002CBBEC File Offset: 0x002C9DEC
+		// Token: 0x06008802 RID: 34818 RVA: 0x000CCBF0 File Offset: 0x000CADF0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<FXboxUserStoreIdResult> action = target as Action<FXboxUserStoreIdResult>;
@@ -96,31 +93,31 @@ namespace UnrealEngine
 			action(obj);
 		}
 
-		// Token: 0x0401043C RID: 66620
+		// Token: 0x04003B14 RID: 15124
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0401043D RID: 66621
+		// Token: 0x04003B15 RID: 15125
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroUtility.OnXboxUserStoreIdResult__DelegateSignature";
 
-		// Token: 0x0401043E RID: 66622
+		// Token: 0x04003B16 RID: 15126
 		private static int RegisterId;
 
-		// Token: 0x020033D9 RID: 13273
+		// Token: 0x02000E26 RID: 3622
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
-		protected ref struct __FOnXboxUserStoreIdResult_DelegateParams
+		private ref struct __FOnXboxUserStoreIdResult_DelegateParams
 		{
-			// Token: 0x0401738E RID: 95118
+			// Token: 0x040061BB RID: 25019
 			[FieldOffset(0)]
 			public byte Result;
 		}
 
-		// Token: 0x020033DA RID: 13274
+		// Token: 0x02000E27 RID: 3623
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0401738F RID: 95119
+			// Token: 0x040061BC RID: 25020
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

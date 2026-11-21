@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Common.Event;
@@ -9,17 +8,17 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x020024EE RID: 9454
+// Token: 0x020019D5 RID: 6613
 [NullableContext(1)]
 [Nullable(0)]
 public class VisionRecommendView : UiViewBase
 {
-	// Token: 0x0601303A RID: 77882 RVA: 0x004B53AE File Offset: 0x004B35AE
+	// Token: 0x060104F9 RID: 66809 RVA: 0x004C305A File Offset: 0x004C125A
 	public VisionRecommendView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0601303B RID: 77883 RVA: 0x004B53B8 File Offset: 0x004B35B8
+	// Token: 0x060104FA RID: 66810 RVA: 0x004C3064 File Offset: 0x004C1264
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,7 +38,7 @@ public class VisionRecommendView : UiViewBase
 		};
 	}
 
-	// Token: 0x0601303C RID: 77884 RVA: 0x004B54A4 File Offset: 0x004B36A4
+	// Token: 0x060104FB RID: 66811 RVA: 0x004C3150 File Offset: 0x004C1350
 	protected override void OnStart()
 	{
 		IVisionRecommendViewOpenParam visionRecommendViewOpenParam = this.OpenParam as IVisionRecommendViewOpenParam;
@@ -58,7 +57,7 @@ public class VisionRecommendView : UiViewBase
 		this.RefreshButtonVisibility();
 	}
 
-	// Token: 0x0601303D RID: 77885 RVA: 0x004B5545 File Offset: 0x004B3745
+	// Token: 0x060104FC RID: 66812 RVA: 0x004C31F1 File Offset: 0x004C13F1
 	private void InitBtnConfirmChange()
 	{
 		this.BtnConfirmChange = new ButtonItem(base.GetItem(7));
@@ -66,7 +65,7 @@ public class VisionRecommendView : UiViewBase
 		this.BtnConfirmChange.SetFunction(new Action<int>(this.OnClickBtnConfirmChange));
 	}
 
-	// Token: 0x0601303E RID: 77886 RVA: 0x004B5585 File Offset: 0x004B3785
+	// Token: 0x060104FD RID: 66813 RVA: 0x004C3231 File Offset: 0x004C1431
 	private void InitBtnConfirmBox()
 	{
 		this.BtnConfirmBox = new ButtonItem(base.GetItem(6));
@@ -74,7 +73,7 @@ public class VisionRecommendView : UiViewBase
 		this.BtnConfirmBox.SetFunction(new Action<int>(this.OnClickConfirmBoxBtn));
 	}
 
-	// Token: 0x0601303F RID: 77887 RVA: 0x004B55C8 File Offset: 0x004B37C8
+	// Token: 0x060104FE RID: 66814 RVA: 0x004C3274 File Offset: 0x004C1474
 	private void RefreshButtonVisibility()
 	{
 		UUIItem item = base.GetItem(6);
@@ -104,25 +103,25 @@ public class VisionRecommendView : UiViewBase
 		}
 	}
 
-	// Token: 0x06013040 RID: 77888 RVA: 0x004B5616 File Offset: 0x004B3816
+	// Token: 0x060104FF RID: 66815 RVA: 0x004C32C2 File Offset: 0x004C14C2
 	private VisionFetterDescItem InitItem()
 	{
 		return new VisionFetterDescItem();
 	}
 
-	// Token: 0x06013041 RID: 77889 RVA: 0x004B561D File Offset: 0x004B381D
+	// Token: 0x06010500 RID: 66816 RVA: 0x004C32C9 File Offset: 0x004C14C9
 	private FetterItemContent InitGridItem()
 	{
 		return new FetterItemContent();
 	}
 
-	// Token: 0x06013042 RID: 77890 RVA: 0x004B5624 File Offset: 0x004B3824
+	// Token: 0x06010501 RID: 66817 RVA: 0x004C32D0 File Offset: 0x004C14D0
 	private void OnClickConfirmBoxBtn(int _)
 	{
 		this.TryOneKeyEquip();
 	}
 
-	// Token: 0x06013043 RID: 77891 RVA: 0x004B562C File Offset: 0x004B382C
+	// Token: 0x06010502 RID: 66818 RVA: 0x004C32D8 File Offset: 0x004C14D8
 	private void TryOneKeyEquip()
 	{
 		List<VisionFetterRecommendInfo> roleFetterRecommendInfo = VisionRecommendModel.Instance.GetRoleFetterRecommendInfo(this.CurrentSelectRoleId);
@@ -141,7 +140,7 @@ public class VisionRecommendView : UiViewBase
 			int[] recommendEquipUniqueIdList = VisionRecommendModel.Instance.GetRecommendEquipUniqueIdList(roleDataById.GetRoleId(), recommendInfo);
 			if (recommendEquipUniqueIdList != null)
 			{
-				PhantomBattleController.Instance.SendPhantomAutoPutRequest(roleDataById.GetRoleId(), recommendEquipUniqueIdList.ToList<int>(), null);
+				PhantomBattleController.Instance.SendPhantomAutoPutRequest(roleDataById.GetRoleId(), recommendEquipUniqueIdList, null);
 				UiManager.Instance.CloseView(EUiViewName.VisionRecommendView, null);
 				return;
 			}
@@ -152,7 +151,7 @@ public class VisionRecommendView : UiViewBase
 		}
 	}
 
-	// Token: 0x06013044 RID: 77892 RVA: 0x004B56D0 File Offset: 0x004B38D0
+	// Token: 0x06010503 RID: 66819 RVA: 0x004C3378 File Offset: 0x004C1578
 	private void DoOpenSupplementConfirmBox()
 	{
 		List<VisionFetterRecommendInfo> roleFetterRecommendInfo = VisionRecommendModel.Instance.GetRoleFetterRecommendInfo(this.CurrentSelectRoleId);
@@ -177,14 +176,14 @@ public class VisionRecommendView : UiViewBase
 			ConfirmBoxController.Instance.CloseConfirmBoxView();
 			if (recommendEquipUniqueIdList != null)
 			{
-				PhantomBattleController.Instance.SendPhantomAutoPutRequest(roleInstance.GetRoleId(), recommendEquipUniqueIdList.ToList<int>(), null);
+				PhantomBattleController.Instance.SendPhantomAutoPutRequest(roleInstance.GetRoleId(), recommendEquipUniqueIdList, null);
 			}
 			UiManager.Instance.CloseView(EUiViewName.VisionRecommendView, null);
 		});
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x06013045 RID: 77893 RVA: 0x004B5789 File Offset: 0x004B3989
+	// Token: 0x06010504 RID: 66820 RVA: 0x004C3431 File Offset: 0x004C1631
 	private void OnClickGoFetterGroupDetailViewBtn()
 	{
 		base.CloseMe(delegate(bool _)
@@ -201,7 +200,7 @@ public class VisionRecommendView : UiViewBase
 		});
 	}
 
-	// Token: 0x06013046 RID: 77894 RVA: 0x004B579D File Offset: 0x004B399D
+	// Token: 0x06010505 RID: 66821 RVA: 0x004C3445 File Offset: 0x004C1645
 	private void OnClickFetterGroupContentItem(FetterGroupContentData data)
 	{
 		this.CurrentSelectIndex = data.Index;
@@ -211,7 +210,7 @@ public class VisionRecommendView : UiViewBase
 		this.RefreshBtnConfirmChangeState();
 	}
 
-	// Token: 0x06013047 RID: 77895 RVA: 0x004B57C9 File Offset: 0x004B39C9
+	// Token: 0x06010506 RID: 66822 RVA: 0x004C3471 File Offset: 0x004C1671
 	protected override void OnBeforeShow()
 	{
 		this.CurrentSelectIndex = 0;
@@ -222,7 +221,7 @@ public class VisionRecommendView : UiViewBase
 		this.RefreshButtonVisibility();
 	}
 
-	// Token: 0x06013048 RID: 77896 RVA: 0x004B57F8 File Offset: 0x004B39F8
+	// Token: 0x06010507 RID: 66823 RVA: 0x004C34A0 File Offset: 0x004C16A0
 	private void RefreshFetterLayout()
 	{
 		List<VisionFetterRecommendInfo> roleFetterRecommendInfo = VisionRecommendModel.Instance.GetRoleFetterRecommendInfo(this.CurrentSelectRoleId);
@@ -250,7 +249,7 @@ public class VisionRecommendView : UiViewBase
 		fetterItemLayout.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x06013049 RID: 77897 RVA: 0x004B58B8 File Offset: 0x004B3AB8
+	// Token: 0x06010508 RID: 66824 RVA: 0x004C3560 File Offset: 0x004C1760
 	private void RefreshFetterInfoLayout(VisionFetterRecommendInfo data)
 	{
 		List<VisionFetterDescData> fetterDescByRecommendInfo = VisionRecommendModel.Instance.GetFetterDescByRecommendInfo(data);
@@ -265,7 +264,7 @@ public class VisionRecommendView : UiViewBase
 		}
 	}
 
-	// Token: 0x0601304A RID: 77898 RVA: 0x004B58E8 File Offset: 0x004B3AE8
+	// Token: 0x06010509 RID: 66825 RVA: 0x004C3590 File Offset: 0x004C1790
 	private void RefreshViewInfoByCurrentSelectIndex(int selectIndex)
 	{
 		List<VisionFetterRecommendInfo> roleFetterRecommendInfo = VisionRecommendModel.Instance.GetRoleFetterRecommendInfo(this.CurrentSelectRoleId);
@@ -277,7 +276,7 @@ public class VisionRecommendView : UiViewBase
 		this.RefreshFetterInfoLayout(data);
 	}
 
-	// Token: 0x0601304B RID: 77899 RVA: 0x004B5924 File Offset: 0x004B3B24
+	// Token: 0x0601050A RID: 66826 RVA: 0x004C35CC File Offset: 0x004C17CC
 	private void RefreshSelectGroupName()
 	{
 		List<VisionFetterRecommendInfo> roleFetterRecommendInfo = VisionRecommendModel.Instance.GetRoleFetterRecommendInfo(this.CurrentSelectRoleId);
@@ -290,7 +289,7 @@ public class VisionRecommendView : UiViewBase
 		base.GetText(2).ShowTextNew(fetterGroupById.FetterGroupName);
 	}
 
-	// Token: 0x0601304C RID: 77900 RVA: 0x004B5980 File Offset: 0x004B3B80
+	// Token: 0x0601050B RID: 66827 RVA: 0x004C3628 File Offset: 0x004C1828
 	private void RefreshBtnConfirmChangeState()
 	{
 		if (!this.IsFromRoleDev || this.GetSelectedPlanIdCallBack == null)
@@ -313,7 +312,7 @@ public class VisionRecommendView : UiViewBase
 		this.BtnConfirmChange.SetEnableClick(true);
 	}
 
-	// Token: 0x0601304D RID: 77901 RVA: 0x004B5A28 File Offset: 0x004B3C28
+	// Token: 0x0601050C RID: 66828 RVA: 0x004C36D0 File Offset: 0x004C18D0
 	private void OnClickBtnConfirmChange(int _)
 	{
 		if (!this.IsFromRoleDev)
@@ -334,21 +333,21 @@ public class VisionRecommendView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x04008F15 RID: 36629
+	// Token: 0x0400905F RID: 36959
 	[Nullable(2)]
 	private ButtonItem BtnConfirmChange;
 
-	// Token: 0x04008F16 RID: 36630
+	// Token: 0x04009060 RID: 36960
 	[Nullable(2)]
 	private ButtonItem BtnConfirmBox;
 
-	// Token: 0x04008F17 RID: 36631
+	// Token: 0x04009061 RID: 36961
 	private int CurrentSelectIndex;
 
-	// Token: 0x04008F18 RID: 36632
+	// Token: 0x04009062 RID: 36962
 	private int CurrentSelectRoleId;
 
-	// Token: 0x04008F19 RID: 36633
+	// Token: 0x04009063 RID: 36963
 	[Nullable(new byte[]
 	{
 		2,
@@ -357,7 +356,7 @@ public class VisionRecommendView : UiViewBase
 	})]
 	private GenericLayout<FetterItemContent, FetterGroupContentData> FetterItemLayout;
 
-	// Token: 0x04008F1A RID: 36634
+	// Token: 0x04009064 RID: 36964
 	[Nullable(new byte[]
 	{
 		2,
@@ -366,36 +365,36 @@ public class VisionRecommendView : UiViewBase
 	})]
 	private GenericLayout<VisionFetterDescItem, VisionFetterDescData> Layout;
 
-	// Token: 0x04008F1B RID: 36635
+	// Token: 0x04009065 RID: 36965
 	private bool IsFromRoleDev;
 
-	// Token: 0x04008F1C RID: 36636
+	// Token: 0x04009066 RID: 36966
 	[Nullable(2)]
 	private Action<int, int, int?> OnChangeFetterGroupSuccessCallBack;
 
-	// Token: 0x04008F1D RID: 36637
+	// Token: 0x04009067 RID: 36967
 	[Nullable(2)]
 	private Func<int, int> GetSelectedPlanIdCallBack;
 
-	// Token: 0x02008A82 RID: 35458
+	// Token: 0x02007C0A RID: 31754
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402CFA9 RID: 184233
+		// Token: 0x040282C1 RID: 164545
 		FetterGroupVerticalLayout,
-		// Token: 0x0402CFAA RID: 184234
+		// Token: 0x040282C2 RID: 164546
 		FetterGroupItem,
-		// Token: 0x0402CFAB RID: 184235
+		// Token: 0x040282C3 RID: 164547
 		SelectFetterGroupName,
-		// Token: 0x0402CFAC RID: 184236
+		// Token: 0x040282C4 RID: 164548
 		GoFetterGroupDetailViewBtn,
-		// Token: 0x0402CFAD RID: 184237
+		// Token: 0x040282C5 RID: 164549
 		FetterGroupContentVerticalLayout,
-		// Token: 0x0402CFAE RID: 184238
+		// Token: 0x040282C6 RID: 164550
 		FetterGroupContentItem,
-		// Token: 0x0402CFAF RID: 184239
+		// Token: 0x040282C7 RID: 164551
 		ConfirmBoxBtn,
-		// Token: 0x0402CFB0 RID: 184240
+		// Token: 0x040282C8 RID: 164552
 		BtnConfirmChange
 	}
 }

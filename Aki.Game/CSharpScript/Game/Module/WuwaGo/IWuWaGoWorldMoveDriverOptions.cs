@@ -4,61 +4,61 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.WuwaGo
 {
-	// Token: 0x0200470F RID: 18191
+	// Token: 0x0200363F RID: 13887
 	[NullableContext(1)]
 	public interface IWuWaGoWorldMoveDriverOptions
 	{
-		// Token: 0x170076CA RID: 30410
-		// (get) Token: 0x0602F89D RID: 194717
+		// Token: 0x17004986 RID: 18822
+		// (get) Token: 0x06024063 RID: 147555
 		IReadOnlyList<IWuWaGoWorldMoveTarget> Targets { get; }
 
-		// Token: 0x170076CB RID: 30411
-		// (get) Token: 0x0602F89E RID: 194718
+		// Token: 0x17004987 RID: 18823
+		// (get) Token: 0x06024064 RID: 147556
 		Vector FromWorldPosition { get; }
 
-		// Token: 0x170076CC RID: 30412
-		// (get) Token: 0x0602F89F RID: 194719
+		// Token: 0x17004988 RID: 18824
+		// (get) Token: 0x06024065 RID: 147557
 		Vector ToWorldPosition { get; }
 
-		// Token: 0x170076CD RID: 30413
-		// (get) Token: 0x0602F8A0 RID: 194720
+		// Token: 0x17004989 RID: 18825
+		// (get) Token: 0x06024066 RID: 147558
 		int? DurationMs { get; }
 
-		// Token: 0x170076CE RID: 30414
-		// (get) Token: 0x0602F8A1 RID: 194721
+		// Token: 0x1700498A RID: 18826
+		// (get) Token: 0x06024067 RID: 147559
 		float? Speed { get; }
 
-		// Token: 0x170076CF RID: 30415
-		// (get) Token: 0x0602F8A2 RID: 194722
+		// Token: 0x1700498B RID: 18827
+		// (get) Token: 0x06024068 RID: 147560
 		int? TimeoutMs { get; }
 
-		// Token: 0x170076D0 RID: 30416
-		// (get) Token: 0x0602F8A3 RID: 194723
+		// Token: 0x1700498C RID: 18828
+		// (get) Token: 0x06024069 RID: 147561
 		int? TickIntervalMs { get; }
 
-		// Token: 0x170076D1 RID: 30417
-		// (get) Token: 0x0602F8A4 RID: 194724
+		// Token: 0x1700498D RID: 18829
+		// (get) Token: 0x0602406A RID: 147562
 		int? SettleDurationMs { get; }
 
-		// Token: 0x170076D2 RID: 30418
-		// (get) Token: 0x0602F8A5 RID: 194725
+		// Token: 0x1700498E RID: 18830
+		// (get) Token: 0x0602406B RID: 147563
 		float? EarlyStopStepRatio { get; }
 
-		// Token: 0x170076D3 RID: 30419
-		// (get) Token: 0x0602F8A6 RID: 194726
+		// Token: 0x1700498F RID: 18831
+		// (get) Token: 0x0602406C RID: 147564
 		float? ArriveTolerance { get; }
 
-		// Token: 0x170076D4 RID: 30420
-		// (get) Token: 0x0602F8A7 RID: 194727
+		// Token: 0x17004990 RID: 18832
+		// (get) Token: 0x0602406D RID: 147565
 		[Nullable(2)]
 		Func<bool> ShouldAbort { [NullableContext(2)] get; }
 
-		// Token: 0x170076D5 RID: 30421
-		// (get) Token: 0x0602F8A8 RID: 194728
+		// Token: 0x17004991 RID: 18833
+		// (get) Token: 0x0602406E RID: 147566
 		EWuWaGoTimeStopPolicy? TimeStopPolicy { get; }
 
-		// Token: 0x170076D6 RID: 30422
-		// (get) Token: 0x0602F8A9 RID: 194729
+		// Token: 0x17004992 RID: 18834
+		// (get) Token: 0x0602406F RID: 147567
 		[Nullable(2)]
 		IWuWaGoWorldMoveHooks Hooks { [NullableContext(2)] get; }
 	}

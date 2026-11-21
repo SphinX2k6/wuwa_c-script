@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001214 RID: 4628
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001350 RID: 4944
 	public class IWordArtDefaultResourceType : IWordArtResourceType
 	{
-		// Token: 0x060068FC RID: 26876 RVA: 0x000FA5CC File Offset: 0x000F87CC
+		// Token: 0x06006F3D RID: 28477 RVA: 0x00107ED8 File Offset: 0x001060D8
 		private IWordArtDefaultResourceType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060068FD RID: 26877 RVA: 0x000FA604 File Offset: 0x000F8804
+		// Token: 0x06006F3E RID: 28478 RVA: 0x00107F10 File Offset: 0x00106110
 		public static IWordArtDefaultResourceType Create([Nullable(2)] IWordArtDefaultResourceType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060068FE RID: 26878 RVA: 0x000FA617 File Offset: 0x000F8817
+		// Token: 0x06006F3F RID: 28479 RVA: 0x00107F23 File Offset: 0x00106123
 		public static IWordArtDefaultResourceType CreateFromSetValue([Nullable(2)] IWordArtDefaultResourceType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060068FF RID: 26879 RVA: 0x000FA62A File Offset: 0x000F882A
+		// Token: 0x06006F40 RID: 28480 RVA: 0x00107F36 File Offset: 0x00106136
 		public new IWordArtDefaultResourceType_SetValue ToSetValue()
 		{
 			return new IWordArtDefaultResourceType_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x170021E5 RID: 8677
-		// (get) Token: 0x06006900 RID: 26880 RVA: 0x000FA649 File Offset: 0x000F8849
-		// (set) Token: 0x06006901 RID: 26881 RVA: 0x000FA674 File Offset: 0x000F8874
+		// Token: 0x170023A6 RID: 9126
+		// (get) Token: 0x06006F41 RID: 28481 RVA: 0x00107F55 File Offset: 0x00106155
+		// (set) Token: 0x06006F42 RID: 28482 RVA: 0x00107F80 File Offset: 0x00106180
 		public override EWordArtResourceType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170021E6 RID: 8678
-		// (get) Token: 0x06006902 RID: 26882 RVA: 0x000FA684 File Offset: 0x000F8884
-		// (set) Token: 0x06006903 RID: 26883 RVA: 0x000FA6BE File Offset: 0x000F88BE
+		// Token: 0x170023A7 RID: 9127
+		// (get) Token: 0x06006F43 RID: 28483 RVA: 0x00107F90 File Offset: 0x00106190
+		// (set) Token: 0x06006F44 RID: 28484 RVA: 0x00107FCA File Offset: 0x001061CA
 		public virtual float? Scale
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003ECC RID: 16076
+		// Token: 0x0400423A RID: 16954
 		[Nullable(2)]
 		protected new IWordArtDefaultResourceType FbInstance;
 
-		// Token: 0x04003ECD RID: 16077
+		// Token: 0x0400423B RID: 16955
 		[Nullable(2)]
 		protected new IWordArtDefaultResourceType_SetValue PocoInterface;
 	}

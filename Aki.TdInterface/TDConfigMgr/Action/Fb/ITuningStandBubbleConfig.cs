@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002877 RID: 10359
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B4D RID: 11085
 	public class ITuningStandBubbleConfig
 	{
-		// Token: 0x0600E581 RID: 58753 RVA: 0x0021BD9D File Offset: 0x00219F9D
+		// Token: 0x0600F3B2 RID: 62386 RVA: 0x00238CF1 File Offset: 0x00236EF1
 		public static ITuningStandBubbleConfig Create(ITuningStandBubbleConfig? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004655 RID: 18005
-		// (get) Token: 0x0600E582 RID: 58754 RVA: 0x0021BDBC File Offset: 0x00219FBC
+		// Token: 0x170049C6 RID: 18886
+		// (get) Token: 0x0600F3B3 RID: 62387 RVA: 0x00238D10 File Offset: 0x00236F10
 		public virtual ETuningStandBubbleTriggerType TriggerType
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004656 RID: 18006
-		// (get) Token: 0x0600E583 RID: 58755 RVA: 0x0021BDC9 File Offset: 0x00219FC9
+		// Token: 0x170049C7 RID: 18887
+		// (get) Token: 0x0600F3B4 RID: 62388 RVA: 0x00238D1D File Offset: 0x00236F1D
 		public virtual PlayFlow Flow
 		{
 			get
@@ -48,14 +46,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007EE7 RID: 32487
+		// Token: 0x040085A7 RID: 34215
 		private ITuningStandBubbleConfig Instance;
 
-		// Token: 0x04007EE8 RID: 32488
+		// Token: 0x040085A8 RID: 34216
 		[Nullable(2)]
 		private PlayFlow _FlowCache;
 
-		// Token: 0x04007EE9 RID: 32489
+		// Token: 0x040085A9 RID: 34217
 		private bool _FlowInited;
 	}
 }

@@ -15,9 +15,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskSetTag.TsTaskSetTag_C")]
 public class TsTaskSetTag : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x17000200 RID: 512
-	// (get) Token: 0x06000AF2 RID: 2802 RVA: 0x00036617 File Offset: 0x00034817
-	// (set) Token: 0x06000AF3 RID: 2803 RVA: 0x0003662B File Offset: 0x0003482B
+	// Token: 0x17000203 RID: 515
+	// (get) Token: 0x06000AF8 RID: 2808 RVA: 0x0003775B File Offset: 0x0003595B
+	// (set) Token: 0x06000AF9 RID: 2809 RVA: 0x0003776F File Offset: 0x0003596F
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FGameplayTag GameplayTag
 	{
@@ -31,9 +31,9 @@ public class TsTaskSetTag : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x17000201 RID: 513
-	// (get) Token: 0x06000AF4 RID: 2804 RVA: 0x00036640 File Offset: 0x00034840
-	// (set) Token: 0x06000AF5 RID: 2805 RVA: 0x00036654 File Offset: 0x00034854
+	// Token: 0x17000204 RID: 516
+	// (get) Token: 0x06000AFA RID: 2810 RVA: 0x00037784 File Offset: 0x00035984
+	// (set) Token: 0x06000AFB RID: 2811 RVA: 0x00037798 File Offset: 0x00035998
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string ActorTag
 	{
@@ -47,9 +47,9 @@ public class TsTaskSetTag : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x17000202 RID: 514
-	// (get) Token: 0x06000AF6 RID: 2806 RVA: 0x00036669 File Offset: 0x00034869
-	// (set) Token: 0x06000AF7 RID: 2807 RVA: 0x0003667D File Offset: 0x0003487D
+	// Token: 0x17000205 RID: 517
+	// (get) Token: 0x06000AFC RID: 2812 RVA: 0x000377AD File Offset: 0x000359AD
+	// (set) Token: 0x06000AFD RID: 2813 RVA: 0x000377C1 File Offset: 0x000359C1
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string TargetKey
 	{
@@ -63,9 +63,9 @@ public class TsTaskSetTag : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x17000203 RID: 515
-	// (get) Token: 0x06000AF8 RID: 2808 RVA: 0x00036692 File Offset: 0x00034892
-	// (set) Token: 0x06000AF9 RID: 2809 RVA: 0x000366A2 File Offset: 0x000348A2
+	// Token: 0x17000206 RID: 518
+	// (get) Token: 0x06000AFE RID: 2814 RVA: 0x000377D6 File Offset: 0x000359D6
+	// (set) Token: 0x06000AFF RID: 2815 RVA: 0x000377E6 File Offset: 0x000359E6
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool IsCommonTag
 	{
@@ -79,9 +79,9 @@ public class TsTaskSetTag : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x17000204 RID: 516
-	// (get) Token: 0x06000AFA RID: 2810 RVA: 0x000366B3 File Offset: 0x000348B3
-	// (set) Token: 0x06000AFB RID: 2811 RVA: 0x000366C3 File Offset: 0x000348C3
+	// Token: 0x17000207 RID: 519
+	// (get) Token: 0x06000B00 RID: 2816 RVA: 0x000377F7 File Offset: 0x000359F7
+	// (set) Token: 0x06000B01 RID: 2817 RVA: 0x00037807 File Offset: 0x00035A07
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool IsAdd
 	{
@@ -95,9 +95,9 @@ public class TsTaskSetTag : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x17000205 RID: 517
-	// (get) Token: 0x06000AFC RID: 2812 RVA: 0x000366D4 File Offset: 0x000348D4
-	// (set) Token: 0x06000AFD RID: 2813 RVA: 0x000366E4 File Offset: 0x000348E4
+	// Token: 0x17000208 RID: 520
+	// (get) Token: 0x06000B02 RID: 2818 RVA: 0x00037818 File Offset: 0x00035A18
+	// (set) Token: 0x06000B03 RID: 2819 RVA: 0x00037828 File Offset: 0x00035A28
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool SetToPlayer
 	{
@@ -111,7 +111,7 @@ public class TsTaskSetTag : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x06000AFE RID: 2814 RVA: 0x000366F8 File Offset: 0x000348F8
+	// Token: 0x06000B04 RID: 2820 RVA: 0x0003783C File Offset: 0x00035A3C
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -126,31 +126,28 @@ public class TsTaskSetTag : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x06000AFF RID: 2815 RVA: 0x00036770 File Offset: 0x00034970
+	// Token: 0x06000B05 RID: 2821 RVA: 0x000378B4 File Offset: 0x00035AB4
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveTickAI(AAIController ownerController, APawn controlledPawn, float deltaSeconds)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveTickAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskSetTag) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveTickAI"), TsTaskSetTag.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
-			ptr2->DeltaSeconds = deltaSeconds;
+			this.ReceiveTickAI_Implementation(ownerController, controlledPawn, deltaSeconds);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		ptr->DeltaSeconds = deltaSeconds;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000B00 RID: 2816 RVA: 0x00036810 File Offset: 0x00034A10
+	// Token: 0x06000B06 RID: 2822 RVA: 0x0003796C File Offset: 0x00035B6C
 	[NullableContext(2)]
 	protected virtual void ReceiveTickAI_Implementation(AAIController ownerController, APawn controlledPawn, float deltaSeconds)
 	{
@@ -231,7 +228,7 @@ public class TsTaskSetTag : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 		base.FinishExecute(true);
 	}
 
-	// Token: 0x06000B01 RID: 2817 RVA: 0x000369DC File Offset: 0x00034BDC
+	// Token: 0x06000B07 RID: 2823 RVA: 0x00037B38 File Offset: 0x00035D38
 	private void SetGameplayTag(Entity entity)
 	{
 		if (this.TsIsCommonTag)
@@ -268,7 +265,7 @@ public class TsTaskSetTag : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 		}
 	}
 
-	// Token: 0x06000B02 RID: 2818 RVA: 0x00036AA3 File Offset: 0x00034CA3
+	// Token: 0x06000B08 RID: 2824 RVA: 0x00037BFF File Offset: 0x00035DFF
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskSetTag._ClassPtr == IntPtr.Zero)
@@ -278,22 +275,22 @@ public class TsTaskSetTag : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 		return TsTaskSetTag._ClassPtr;
 	}
 
-	// Token: 0x06000B03 RID: 2819 RVA: 0x00036AC8 File Offset: 0x00034CC8
+	// Token: 0x06000B09 RID: 2825 RVA: 0x00037C24 File Offset: 0x00035E24
 	public TsTaskSetTag() : this(BuiltinUtils.AllocNativeUObject(TsTaskSetTag.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06000B04 RID: 2820 RVA: 0x00036AF0 File Offset: 0x00034CF0
+	// Token: 0x06000B0A RID: 2826 RVA: 0x00037C4C File Offset: 0x00035E4C
 	public TsTaskSetTag(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskSetTag.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06000B05 RID: 2821 RVA: 0x00036B23 File Offset: 0x00034D23
+	// Token: 0x06000B0B RID: 2827 RVA: 0x00037C7F File Offset: 0x00035E7F
 	protected TsTaskSetTag(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06000B06 RID: 2822 RVA: 0x00036B38 File Offset: 0x00034D38
+	// Token: 0x06000B0C RID: 2828 RVA: 0x00037C94 File Offset: 0x00035E94
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveTickAI_Implementation(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* __Params)
 	{
@@ -302,51 +299,51 @@ public class TsTaskSetTag : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealO
 		this.ReceiveTickAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->DeltaSeconds);
 	}
 
-	// Token: 0x04000890 RID: 2192
+	// Token: 0x04000898 RID: 2200
 	private bool IsInitTsVariables;
 
-	// Token: 0x04000891 RID: 2193
+	// Token: 0x04000899 RID: 2201
 	private FGameplayTag? TsGameplayTag;
 
-	// Token: 0x04000892 RID: 2194
+	// Token: 0x0400089A RID: 2202
 	private FName? TsActorTag;
 
-	// Token: 0x04000893 RID: 2195
+	// Token: 0x0400089B RID: 2203
 	private string TsTargetKey = "";
 
-	// Token: 0x04000894 RID: 2196
+	// Token: 0x0400089C RID: 2204
 	private bool TsIsCommonTag;
 
-	// Token: 0x04000895 RID: 2197
+	// Token: 0x0400089D RID: 2205
 	private bool TsIsAdd;
 
-	// Token: 0x04000896 RID: 2198
+	// Token: 0x0400089E RID: 2206
 	private bool TsSetToPlayer;
 
-	// Token: 0x04000897 RID: 2199
+	// Token: 0x0400089F RID: 2207
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskSetTag.TsTaskSetTag_C";
 
-	// Token: 0x04000898 RID: 2200
+	// Token: 0x040008A0 RID: 2208
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04000899 RID: 2201
+	// Token: 0x040008A1 RID: 2209
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400089A RID: 2202
+	// Token: 0x040008A2 RID: 2210
 	private static int __PropertyOffset_GameplayTag;
 
-	// Token: 0x0400089B RID: 2203
+	// Token: 0x040008A3 RID: 2211
 	private static int __PropertyOffset_ActorTag;
 
-	// Token: 0x0400089C RID: 2204
+	// Token: 0x040008A4 RID: 2212
 	private static int __PropertyOffset_TargetKey;
 
-	// Token: 0x0400089D RID: 2205
+	// Token: 0x040008A5 RID: 2213
 	private static int __PropertyOffset_IsCommonTag;
 
-	// Token: 0x0400089E RID: 2206
+	// Token: 0x040008A6 RID: 2214
 	private static int __PropertyOffset_IsAdd;
 
-	// Token: 0x0400089F RID: 2207
+	// Token: 0x040008A7 RID: 2215
 	private static int __PropertyOffset_SetToPlayer;
 }

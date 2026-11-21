@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014CF RID: 5327
+	// Token: 0x02001628 RID: 5672
 	public class ChangeEntityPrefabPerformance_SetValue
 	{
-		// Token: 0x04004667 RID: 18023
+		// Token: 0x04004A02 RID: 18946
 		public EChangeEntityPrefabPerformanceType Type;
 	}
 }

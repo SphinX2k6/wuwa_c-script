@@ -2,73 +2,73 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02003012 RID: 12306
+// Token: 0x02002568 RID: 9576
 [NullableContext(2)]
 [Nullable(0)]
 public class IPlayMontageParam : IActionParamMap
 {
-	// Token: 0x170023CD RID: 9165
-	// (get) Token: 0x0601A0FD RID: 106749 RVA: 0x006D4EF3 File Offset: 0x006D30F3
-	// (set) Token: 0x0601A0FE RID: 106750 RVA: 0x006D4EFB File Offset: 0x006D30FB
+	// Token: 0x1700249B RID: 9371
+	// (get) Token: 0x06017A45 RID: 96837 RVA: 0x006FCDFB File Offset: 0x006FAFFB
+	// (set) Token: 0x06017A46 RID: 96838 RVA: 0x006FCE03 File Offset: 0x006FB003
 	public string MontagePath { get; set; }
 
-	// Token: 0x170023CE RID: 9166
-	// (get) Token: 0x0601A0FF RID: 106751 RVA: 0x006D4F04 File Offset: 0x006D3104
-	// (set) Token: 0x0601A100 RID: 106752 RVA: 0x006D4F0C File Offset: 0x006D310C
+	// Token: 0x1700249C RID: 9372
+	// (get) Token: 0x06017A47 RID: 96839 RVA: 0x006FCE0C File Offset: 0x006FB00C
+	// (set) Token: 0x06017A48 RID: 96840 RVA: 0x006FCE14 File Offset: 0x006FB014
 	public UAnimMontage MontageAsset { get; set; }
 
-	// Token: 0x170023CF RID: 9167
-	// (get) Token: 0x0601A101 RID: 106753 RVA: 0x006D4F15 File Offset: 0x006D3115
-	// (set) Token: 0x0601A102 RID: 106754 RVA: 0x006D4F1D File Offset: 0x006D311D
+	// Token: 0x1700249D RID: 9373
+	// (get) Token: 0x06017A49 RID: 96841 RVA: 0x006FCE1D File Offset: 0x006FB01D
+	// (set) Token: 0x06017A4A RID: 96842 RVA: 0x006FCE25 File Offset: 0x006FB025
 	public bool? IsLoop { get; set; }
 
-	// Token: 0x170023D0 RID: 9168
-	// (get) Token: 0x0601A103 RID: 106755 RVA: 0x006D4F26 File Offset: 0x006D3126
-	// (set) Token: 0x0601A104 RID: 106756 RVA: 0x006D4F2E File Offset: 0x006D312E
+	// Token: 0x1700249E RID: 9374
+	// (get) Token: 0x06017A4B RID: 96843 RVA: 0x006FCE2E File Offset: 0x006FB02E
+	// (set) Token: 0x06017A4C RID: 96844 RVA: 0x006FCE36 File Offset: 0x006FB036
 	public Action<int, EPerformGroup> OnStartCallback { get; set; }
 
-	// Token: 0x170023D1 RID: 9169
-	// (get) Token: 0x0601A105 RID: 106757 RVA: 0x006D4F37 File Offset: 0x006D3137
-	// (set) Token: 0x0601A106 RID: 106758 RVA: 0x006D4F3F File Offset: 0x006D313F
+	// Token: 0x1700249F RID: 9375
+	// (get) Token: 0x06017A4D RID: 96845 RVA: 0x006FCE3F File Offset: 0x006FB03F
+	// (set) Token: 0x06017A4E RID: 96846 RVA: 0x006FCE47 File Offset: 0x006FB047
 	public Action<UAnimMontage, bool> OnEndCallback { get; set; }
 
-	// Token: 0x170023D2 RID: 9170
-	// (get) Token: 0x0601A107 RID: 106759 RVA: 0x006D4F48 File Offset: 0x006D3148
-	// (set) Token: 0x0601A108 RID: 106760 RVA: 0x006D4F50 File Offset: 0x006D3150
+	// Token: 0x170024A0 RID: 9376
+	// (get) Token: 0x06017A4F RID: 96847 RVA: 0x006FCE50 File Offset: 0x006FB050
+	// (set) Token: 0x06017A50 RID: 96848 RVA: 0x006FCE58 File Offset: 0x006FB058
 	public Action<UAnimMontage> OnPlayCallback { get; set; }
 
-	// Token: 0x170023D3 RID: 9171
-	// (get) Token: 0x0601A109 RID: 106761 RVA: 0x006D4F59 File Offset: 0x006D3159
-	// (set) Token: 0x0601A10A RID: 106762 RVA: 0x006D4F61 File Offset: 0x006D3161
+	// Token: 0x170024A1 RID: 9377
+	// (get) Token: 0x06017A51 RID: 96849 RVA: 0x006FCE61 File Offset: 0x006FB061
+	// (set) Token: 0x06017A52 RID: 96850 RVA: 0x006FCE69 File Offset: 0x006FB069
 	public FName? InSectionToStartMontageAt { get; set; }
 
-	// Token: 0x170023D4 RID: 9172
-	// (get) Token: 0x0601A10B RID: 106763 RVA: 0x006D4F6A File Offset: 0x006D316A
-	// (set) Token: 0x0601A10C RID: 106764 RVA: 0x006D4F72 File Offset: 0x006D3172
+	// Token: 0x170024A2 RID: 9378
+	// (get) Token: 0x06017A53 RID: 96851 RVA: 0x006FCE72 File Offset: 0x006FB072
+	// (set) Token: 0x06017A54 RID: 96852 RVA: 0x006FCE7A File Offset: 0x006FB07A
 	public float? Duration { get; set; }
 
-	// Token: 0x170023D5 RID: 9173
-	// (get) Token: 0x0601A10D RID: 106765 RVA: 0x006D4F7B File Offset: 0x006D317B
-	// (set) Token: 0x0601A10E RID: 106766 RVA: 0x006D4F83 File Offset: 0x006D3183
+	// Token: 0x170024A3 RID: 9379
+	// (get) Token: 0x06017A55 RID: 96853 RVA: 0x006FCE83 File Offset: 0x006FB083
+	// (set) Token: 0x06017A56 RID: 96854 RVA: 0x006FCE8B File Offset: 0x006FB08B
 	public bool? KeepOtherMontage { get; set; }
 
-	// Token: 0x170023D6 RID: 9174
-	// (get) Token: 0x0601A10F RID: 106767 RVA: 0x006D4F8C File Offset: 0x006D318C
-	// (set) Token: 0x0601A110 RID: 106768 RVA: 0x006D4F94 File Offset: 0x006D3194
+	// Token: 0x170024A4 RID: 9380
+	// (get) Token: 0x06017A57 RID: 96855 RVA: 0x006FCE94 File Offset: 0x006FB094
+	// (set) Token: 0x06017A58 RID: 96856 RVA: 0x006FCE9C File Offset: 0x006FB09C
 	public IAnimStateParam AnimStateParam { get; set; }
 
-	// Token: 0x170023D7 RID: 9175
-	// (get) Token: 0x0601A111 RID: 106769 RVA: 0x006D4F9D File Offset: 0x006D319D
-	// (set) Token: 0x0601A112 RID: 106770 RVA: 0x006D4FA5 File Offset: 0x006D31A5
+	// Token: 0x170024A5 RID: 9381
+	// (get) Token: 0x06017A59 RID: 96857 RVA: 0x006FCEA5 File Offset: 0x006FB0A5
+	// (set) Token: 0x06017A5A RID: 96858 RVA: 0x006FCEAD File Offset: 0x006FB0AD
 	public bool? DisableBlinkCurve { get; set; }
 
-	// Token: 0x170023D8 RID: 9176
-	// (get) Token: 0x0601A113 RID: 106771 RVA: 0x006D4FAE File Offset: 0x006D31AE
-	// (set) Token: 0x0601A114 RID: 106772 RVA: 0x006D4FB6 File Offset: 0x006D31B6
+	// Token: 0x170024A6 RID: 9382
+	// (get) Token: 0x06017A5B RID: 96859 RVA: 0x006FCEB6 File Offset: 0x006FB0B6
+	// (set) Token: 0x06017A5C RID: 96860 RVA: 0x006FCEBE File Offset: 0x006FB0BE
 	public Action<UAnimMontage, bool> OnBlendOutCallback { get; set; }
 
-	// Token: 0x170023D9 RID: 9177
-	// (get) Token: 0x0601A115 RID: 106773 RVA: 0x006D4FBF File Offset: 0x006D31BF
-	// (set) Token: 0x0601A116 RID: 106774 RVA: 0x006D4FC7 File Offset: 0x006D31C7
+	// Token: 0x170024A7 RID: 9383
+	// (get) Token: 0x06017A5D RID: 96861 RVA: 0x006FCEC7 File Offset: 0x006FB0C7
+	// (set) Token: 0x06017A5E RID: 96862 RVA: 0x006FCECF File Offset: 0x006FB0CF
 	public bool? EndActionOnBlendOut { get; set; }
 }

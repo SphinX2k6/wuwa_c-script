@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020019F6 RID: 6646
+	// Token: 0x0200047C RID: 1148
 	public sealed class FKuroHttpRequestHandle : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06018A1B RID: 100891 RVA: 0x00245173 File Offset: 0x00243373
+		// Token: 0x06006C98 RID: 27800 RVA: 0x0009E976 File Offset: 0x0009CB76
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FKuroHttpRequestHandle.StaticFunctionPtr();
 		}
 
-		// Token: 0x06018A1C RID: 100892 RVA: 0x0024517F File Offset: 0x0024337F
+		// Token: 0x06006C99 RID: 27801 RVA: 0x0009E982 File Offset: 0x0009CB82
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FKuroHttpRequestHandle._FunctionPtr == IntPtr.Zero)
@@ -25,31 +25,30 @@ namespace UnrealEngine
 			return FKuroHttpRequestHandle._FunctionPtr;
 		}
 
-		// Token: 0x06018A1D RID: 100893 RVA: 0x002451A2 File Offset: 0x002433A2
+		// Token: 0x06006C9A RID: 27802 RVA: 0x0009E9A5 File Offset: 0x0009CBA5
 		public FKuroHttpRequestHandle()
 		{
 		}
 
-		// Token: 0x06018A1E RID: 100894 RVA: 0x002451AA File Offset: 0x002433AA
+		// Token: 0x06006C9B RID: 27803 RVA: 0x0009E9AD File Offset: 0x0009CBAD
 		[NullableContext(2)]
 		public FKuroHttpRequestHandle(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06018A1F RID: 100895 RVA: 0x002451B4 File Offset: 0x002433B4
+		// Token: 0x06006C9C RID: 27804 RVA: 0x0009E9B7 File Offset: 0x0009CBB7
 		public FKuroHttpRequestHandle(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06018A20 RID: 100896 RVA: 0x002451BF File Offset: 0x002433BF
+		// Token: 0x06006C9D RID: 27805 RVA: 0x0009E9C2 File Offset: 0x0009CBC2
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<string, UKuroHttpServerRequestProxy>) ?? ((Action<string, UKuroHttpServerRequestProxy>)Delegate.CreateDelegate(typeof(Action<string, UKuroHttpServerRequestProxy>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06018A21 RID: 100897 RVA: 0x002451F1 File Offset: 0x002433F1
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x06006C9E RID: 27806 RVA: 0x0009E9F4 File Offset: 0x0009CBF4
 		public void Bind([Nullable(new byte[]
 		{
 			1,
@@ -69,10 +68,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FKuroHttpRequestHandle.RegisterId);
 		}
 
-		// Token: 0x06018A22 RID: 100898 RVA: 0x0024522C File Offset: 0x0024342C
+		// Token: 0x06006C9F RID: 27807 RVA: 0x0009EA30 File Offset: 0x0009CC30
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(string ModuleName, [Nullable(2)] UKuroHttpServerRequestProxy RequestProxy)
 		{
 			FKuroHttpRequestHandle.__FKuroHttpRequestHandle_DelegateParams* ptr = stackalloc FKuroHttpRequestHandle.__FKuroHttpRequestHandle_DelegateParams[(UIntPtr)39] + 15L / (long)sizeof(FKuroHttpRequestHandle.__FKuroHttpRequestHandle_DelegateParams) & -16L;
@@ -83,10 +81,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FKuroHttpRequestHandle._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06018A23 RID: 100899 RVA: 0x00245298 File Offset: 0x00243498
+		// Token: 0x06006CA0 RID: 27808 RVA: 0x0009EA9C File Offset: 0x0009CC9C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<string, UKuroHttpServerRequestProxy> action = target as Action<string, UKuroHttpServerRequestProxy>;
@@ -99,35 +96,35 @@ namespace UnrealEngine
 			action(arg, orCreateUObjectByNativePointer);
 		}
 
-		// Token: 0x0400D507 RID: 54535
+		// Token: 0x04002E69 RID: 11881
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400D508 RID: 54536
+		// Token: 0x04002E6A RID: 11882
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroNetwork.KuroHttpRequestHandle__DelegateSignature";
 
-		// Token: 0x0400D509 RID: 54537
+		// Token: 0x04002E6B RID: 11883
 		private static int RegisterId;
 
-		// Token: 0x020030A8 RID: 12456
+		// Token: 0x02000B88 RID: 2952
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
-		protected ref struct __FKuroHttpRequestHandle_DelegateParams
+		private ref struct __FKuroHttpRequestHandle_DelegateParams
 		{
-			// Token: 0x04016DE8 RID: 93672
+			// Token: 0x04005CF9 RID: 23801
 			[FieldOffset(0)]
 			public FString ModuleName;
 
-			// Token: 0x04016DE9 RID: 93673
+			// Token: 0x04005CFA RID: 23802
 			[FieldOffset(16)]
 			public IntPtr RequestProxy;
 		}
 
-		// Token: 0x020030A9 RID: 12457
+		// Token: 0x02000B89 RID: 2953
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016DEA RID: 93674
+			// Token: 0x04005CFB RID: 23803
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

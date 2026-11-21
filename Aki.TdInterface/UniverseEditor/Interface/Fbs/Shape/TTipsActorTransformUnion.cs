@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003C80 RID: 15488
+	// Token: 0x02004092 RID: 16530
 	public class TTipsActorTransformUnion
 	{
-		// Token: 0x17006AC4 RID: 27332
-		// (get) Token: 0x0601571D RID: 87837 RVA: 0x003194EB File Offset: 0x003176EB
-		// (set) Token: 0x0601571E RID: 87838 RVA: 0x003194F3 File Offset: 0x003176F3
+		// Token: 0x1700707E RID: 28798
+		// (get) Token: 0x06016C55 RID: 93269 RVA: 0x00340761 File Offset: 0x0033E961
+		// (set) Token: 0x06016C56 RID: 93270 RVA: 0x00340769 File Offset: 0x0033E969
 		public TTipsActorTransform Type { get; set; }
 
-		// Token: 0x17006AC5 RID: 27333
-		// (get) Token: 0x0601571F RID: 87839 RVA: 0x003194FC File Offset: 0x003176FC
-		// (set) Token: 0x06015720 RID: 87840 RVA: 0x00319504 File Offset: 0x00317704
+		// Token: 0x1700707F RID: 28799
+		// (get) Token: 0x06016C57 RID: 93271 RVA: 0x00340772 File Offset: 0x0033E972
+		// (set) Token: 0x06016C58 RID: 93272 RVA: 0x0034077A File Offset: 0x0033E97A
 		public object Value { get; set; }
 
-		// Token: 0x06015721 RID: 87841 RVA: 0x0031950D File Offset: 0x0031770D
+		// Token: 0x06016C59 RID: 93273 RVA: 0x00340783 File Offset: 0x0033E983
 		public TTipsActorTransformUnion()
 		{
 			this.Type = TTipsActorTransform.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06015722 RID: 87842 RVA: 0x00319523 File Offset: 0x00317723
+		// Token: 0x06016C5A RID: 93274 RVA: 0x00340799 File Offset: 0x0033E999
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06015723 RID: 87843 RVA: 0x00319535 File Offset: 0x00317735
+		// Token: 0x06016C5B RID: 93275 RVA: 0x003407AB File Offset: 0x0033E9AB
 		public IAbsoluteTipActorTransformT AsIAbsoluteTipActorTransform()
 		{
 			return this.As<IAbsoluteTipActorTransformT>();
 		}
 
-		// Token: 0x06015724 RID: 87844 RVA: 0x0031953D File Offset: 0x0031773D
+		// Token: 0x06016C5C RID: 93276 RVA: 0x003407B3 File Offset: 0x0033E9B3
 		public static TTipsActorTransformUnion FromIAbsoluteTipActorTransform(IAbsoluteTipActorTransformT _iabsolutetipactortransform)
 		{
 			return new TTipsActorTransformUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			};
 		}
 
-		// Token: 0x06015725 RID: 87845 RVA: 0x00319552 File Offset: 0x00317752
+		// Token: 0x06016C5D RID: 93277 RVA: 0x003407C8 File Offset: 0x0033E9C8
 		public IRelativeTipActorTransformT AsIRelativeTipActorTransform()
 		{
 			return this.As<IRelativeTipActorTransformT>();
 		}
 
-		// Token: 0x06015726 RID: 87846 RVA: 0x0031955A File Offset: 0x0031775A
+		// Token: 0x06016C5E RID: 93278 RVA: 0x003407D0 File Offset: 0x0033E9D0
 		public static TTipsActorTransformUnion FromIRelativeTipActorTransform(IRelativeTipActorTransformT _irelativetipactortransform)
 		{
 			return new TTipsActorTransformUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			};
 		}
 
-		// Token: 0x06015727 RID: 87847 RVA: 0x00319570 File Offset: 0x00317770
+		// Token: 0x06016C5F RID: 93279 RVA: 0x003407E8 File Offset: 0x0033E9E8
 		public static int Pack(FlatBufferBuilder builder, TTipsActorTransformUnion _o)
 		{
 			TTipsActorTransform type = _o.Type;

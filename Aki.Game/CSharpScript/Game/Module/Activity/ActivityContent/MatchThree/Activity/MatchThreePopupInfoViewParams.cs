@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 {
-	// Token: 0x02006549 RID: 25929
+	// Token: 0x020054C7 RID: 21703
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MatchThreePopupInfoViewParams
 	{
-		// Token: 0x1700953B RID: 38203
-		// (get) Token: 0x06040FD0 RID: 266192 RVA: 0x00FBF9D4 File Offset: 0x00FBDBD4
+		// Token: 0x1700689D RID: 26781
+		// (get) Token: 0x06035C95 RID: 220309 RVA: 0x00F069C4 File Offset: 0x00F04BC4
 		public bool HasTile
 		{
 			get
@@ -19,8 +19,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			}
 		}
 
-		// Token: 0x1700953C RID: 38204
-		// (get) Token: 0x06040FD1 RID: 266193 RVA: 0x00FBF9E4 File Offset: 0x00FBDBE4
+		// Token: 0x1700689E RID: 26782
+		// (get) Token: 0x06035C96 RID: 220310 RVA: 0x00F069D4 File Offset: 0x00F04BD4
 		public bool HasEnv
 		{
 			get
@@ -29,8 +29,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			}
 		}
 
-		// Token: 0x1700953D RID: 38205
-		// (get) Token: 0x06040FD2 RID: 266194 RVA: 0x00FBF9F4 File Offset: 0x00FBDBF4
+		// Token: 0x1700689F RID: 26783
+		// (get) Token: 0x06035C97 RID: 220311 RVA: 0x00F069E4 File Offset: 0x00F04BE4
 		public bool HasAny
 		{
 			get
@@ -39,8 +39,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			}
 		}
 
-		// Token: 0x1700953E RID: 38206
-		// (get) Token: 0x06040FD3 RID: 266195 RVA: 0x00FBFA06 File Offset: 0x00FBDC06
+		// Token: 0x170068A0 RID: 26784
+		// (get) Token: 0x06035C98 RID: 220312 RVA: 0x00F069F6 File Offset: 0x00F04BF6
 		public bool HasFocus
 		{
 			get
@@ -49,16 +49,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Activity
 			}
 		}
 
-		// Token: 0x04021E29 RID: 138793
+		// Token: 0x0401C75A RID: 116570
 		public List<MatchThreeInfoItemData> TileList = new List<MatchThreeInfoItemData>();
 
-		// Token: 0x04021E2A RID: 138794
+		// Token: 0x0401C75B RID: 116571
 		public List<MatchThreeInfoItemData> EnvList = new List<MatchThreeInfoItemData>();
 
-		// Token: 0x04021E2B RID: 138795
+		// Token: 0x0401C75C RID: 116572
 		public int FocusTileIndex = -1;
 
-		// Token: 0x04021E2C RID: 138796
+		// Token: 0x0401C75D RID: 116573
 		public int FocusEnvIndex = -1;
 	}
 }

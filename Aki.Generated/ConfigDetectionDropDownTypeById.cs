@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020001FF RID: 511
+	// Token: 0x02000211 RID: 529
 	public class ConfigDetectionDropDownTypeById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000BFD RID: 3069 RVA: 0x0009D678 File Offset: 0x0009B878
+		// Token: 0x06000C69 RID: 3177 RVA: 0x000A35B0 File Offset: 0x000A17B0
 		static ConfigDetectionDropDownTypeById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDetectionDropDownTypeById.CreateStaticDefaultValue), new Action(ConfigDetectionDropDownTypeById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000BFE RID: 3070 RVA: 0x0009D698 File Offset: 0x0009B898
+		// Token: 0x06000C6A RID: 3178 RVA: 0x000A35D0 File Offset: 0x000A17D0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDetectionDropDownTypeById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000BFF RID: 3071 RVA: 0x0009D717 File Offset: 0x0009B917
+		// Token: 0x06000C6B RID: 3179 RVA: 0x000A364F File Offset: 0x000A184F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDetectionDropDownTypeById.LogPair = null;
 			ConfigDetectionDropDownTypeById.HandleId = 0;
 		}
 
-		// Token: 0x06000C00 RID: 3072 RVA: 0x0009D725 File Offset: 0x0009B925
+		// Token: 0x06000C6C RID: 3180 RVA: 0x000A365D File Offset: 0x000A185D
 		public static void Init()
 		{
 			ConfigDetectionDropDownTypeById.HandleId = ConfigCommon.InitDataStatement(ConfigDetectionDropDownTypeById.HandleId, "db_adventure_detect.db", "select BinData from `DetectionDropDownType` where Id=?");
 		}
 
-		// Token: 0x06000C01 RID: 3073 RVA: 0x0009D740 File Offset: 0x0009B940
+		// Token: 0x06000C6D RID: 3181 RVA: 0x000A3678 File Offset: 0x000A1878
 		public static DetectionDropDownType? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigDetectionDropDownTypeById.HandleId, ConfigDetectionDropDownTypeById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new DetectionDropDownType?(rootAsDetectionDropDownType);
 		}
 
-		// Token: 0x04000DDD RID: 3549
+		// Token: 0x04000E5B RID: 3675
 		private const string DB = "db_adventure_detect.db";
 
-		// Token: 0x04000DDE RID: 3550
+		// Token: 0x04000E5C RID: 3676
 		private const string FILE = "k.开拓探测.xlsx";
 
-		// Token: 0x04000DDF RID: 3551
+		// Token: 0x04000E5D RID: 3677
 		private const string TABLE = "DetectionDropDownType";
 
-		// Token: 0x04000DE0 RID: 3552
+		// Token: 0x04000E5E RID: 3678
 		private const string COMMAND = "select BinData from `DetectionDropDownType` where Id=?";
 
-		// Token: 0x04000DE1 RID: 3553
+		// Token: 0x04000E5F RID: 3679
 		private const string KEY_PREFIX = "DetectionDropDownTypeById";
 
-		// Token: 0x04000DE2 RID: 3554
+		// Token: 0x04000E60 RID: 3680
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000DE3 RID: 3555
+		// Token: 0x04000E61 RID: 3681
 		private static int HandleId;
 	}
 }

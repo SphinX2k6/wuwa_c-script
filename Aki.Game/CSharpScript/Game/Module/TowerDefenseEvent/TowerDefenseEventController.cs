@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -17,14 +16,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TowerDefenseEvent
 {
-	// Token: 0x02004B03 RID: 19203
+	// Token: 0x02003AAB RID: 15019
 	[NullableContext(1)]
 	[Nullable(0)]
 	[TickController(0)]
 	public class TowerDefenseEventController : ControllerBase
 	{
-		// Token: 0x17007B03 RID: 31491
-		// (get) Token: 0x06031BB5 RID: 203701 RVA: 0x00B8CB8F File Offset: 0x00B8AD8F
+		// Token: 0x17004EB0 RID: 20144
+		// (get) Token: 0x06026945 RID: 158021 RVA: 0x00AD0BF3 File Offset: 0x00ACEDF3
 		public ETowerDefenseEventProcessStatus ProcessStatus
 		{
 			get
@@ -33,32 +32,32 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent
 			}
 		}
 
-		// Token: 0x06031BB6 RID: 203702 RVA: 0x00B8CB97 File Offset: 0x00B8AD97
+		// Token: 0x06026946 RID: 158022 RVA: 0x00AD0BFB File Offset: 0x00ACEDFB
 		public bool IsInPreview()
 		{
 			return this.ProcessStatusInternal == ETowerDefenseEventProcessStatus.Ready;
 		}
 
-		// Token: 0x06031BB7 RID: 203703 RVA: 0x00B8CBA2 File Offset: 0x00B8ADA2
+		// Token: 0x06026947 RID: 158023 RVA: 0x00AD0C06 File Offset: 0x00ACEE06
 		public bool IsFighting()
 		{
 			return this.ProcessStatusInternal == ETowerDefenseEventProcessStatus.Fighting;
 		}
 
-		// Token: 0x06031BB8 RID: 203704 RVA: 0x00B8CBAD File Offset: 0x00B8ADAD
+		// Token: 0x06026948 RID: 158024 RVA: 0x00AD0C11 File Offset: 0x00ACEE11
 		public void ResetWorldAttr()
 		{
 			this.GoldNum = 0L;
 			this.BattleWave = 0;
 		}
 
-		// Token: 0x06031BB9 RID: 203705 RVA: 0x00B8CBC0 File Offset: 0x00B8ADC0
+		// Token: 0x06026949 RID: 158025 RVA: 0x00AD0C24 File Offset: 0x00ACEE24
 		public bool IsTowerDefenseEventInstance()
 		{
 			return GameModeController.Instance.IsInInstance() && GameModeModel.Instance.InstanceDungeon != null && GameModeModel.Instance.InstanceDungeon.Value.InstSubType == 37;
 		}
 
-		// Token: 0x06031BBA RID: 203706 RVA: 0x00B8CC0F File Offset: 0x00B8AE0F
+		// Token: 0x0602694A RID: 158026 RVA: 0x00AD0C73 File Offset: 0x00ACEE73
 		public void InitMap()
 		{
 			this.InitTowerDefenseEventInstance();
@@ -66,14 +65,14 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent
 			Net.Instance.Register(ENotifyMessageId.TrapDefenseEntityDataChangeNotify, new Action<IMessage, Net.CallbackStatus>(this.OnEntityDataChanged));
 		}
 
-		// Token: 0x06031BBB RID: 203707 RVA: 0x00B8CC4F File Offset: 0x00B8AE4F
+		// Token: 0x0602694B RID: 158027 RVA: 0x00AD0CB3 File Offset: 0x00ACEEB3
 		public void OnWorldDone()
 		{
 			this.IsWorldInit = true;
 			this.ResetWorldAttr();
 		}
 
-		// Token: 0x06031BBC RID: 203708 RVA: 0x00B8CC5E File Offset: 0x00B8AE5E
+		// Token: 0x0602694C RID: 158028 RVA: 0x00AD0CC2 File Offset: 0x00ACEEC2
 		public void OnWorldReset()
 		{
 			if (!this.IsWorldInit)
@@ -86,7 +85,7 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent
 			this.ResetTowerDefenseEventInstance();
 		}
 
-		// Token: 0x06031BBD RID: 203709 RVA: 0x00B8CC98 File Offset: 0x00B8AE98
+		// Token: 0x0602694D RID: 158029 RVA: 0x00AD0CFC File Offset: 0x00ACEEFC
 		[NullableContext(2)]
 		private void OnEntityDataChanged(IMessage msg, Net.CallbackStatus _)
 		{
@@ -97,7 +96,7 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent
 			}
 		}
 
-		// Token: 0x06031BBE RID: 203710 RVA: 0x00B8CCBC File Offset: 0x00B8AEBC
+		// Token: 0x0602694E RID: 158030 RVA: 0x00AD0D20 File Offset: 0x00ACEF20
 		public unsafe void OnEntityRemoved(KscRemoveContext context, Dictionary<long, SimpleCombatEntityDieContext> protoContexts)
 		{
 			if (context.IsPreview)
@@ -182,7 +181,7 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent
 			protoContexts[context.CreatureDataId] = simpleCombatEntityDieContext;
 		}
 
-		// Token: 0x06031BBF RID: 203711 RVA: 0x00B8CFC8 File Offset: 0x00B8B1C8
+		// Token: 0x0602694F RID: 158031 RVA: 0x00AD102C File Offset: 0x00ACF22C
 		private void DoLandFire(ITowerDefenseEventCombatInfo model, [Nullable(2)] TMap<EKSC_AttrType, int> @params)
 		{
 			if (@params == null || @params.Num() <= 0)
@@ -207,7 +206,7 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent
 			model.ExtraInfo = dictionary;
 		}
 
-		// Token: 0x06031BC0 RID: 203712 RVA: 0x00B8D054 File Offset: 0x00B8B254
+		// Token: 0x06026950 RID: 158032 RVA: 0x00AD10C0 File Offset: 0x00ACF2C0
 		private List<GridPlacementPbInfo> DoDeathRattle(ITowerDefenseEventCombatInfo model)
 		{
 			ITowerDefenseEventMonsterInfo towerDefenseEventMonsterInfo = model as ITowerDefenseEventMonsterInfo;
@@ -222,14 +221,14 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent
 			return new List<GridPlacementPbInfo>();
 		}
 
-		// Token: 0x06031BC1 RID: 203713 RVA: 0x00B8D098 File Offset: 0x00B8B298
+		// Token: 0x06026951 RID: 158033 RVA: 0x00AD1104 File Offset: 0x00ACF304
 		private void InitTowerDefenseEventInstance()
 		{
 			TrapDefenseActivity? config = ConfigTrapDefenseActivityByInstId.GetConfig(GameModeModel.Instance.InstanceDungeon.Value.Id, true);
 			TowerDefenseEventModel.Instance.InitInstance(config);
 		}
 
-		// Token: 0x06031BC2 RID: 203714 RVA: 0x00B8D0D4 File Offset: 0x00B8B2D4
+		// Token: 0x06026952 RID: 158034 RVA: 0x00AD1140 File Offset: 0x00ACF340
 		private void ResetTowerDefenseEventInstance()
 		{
 			this.ProcessStatusInternal = ETowerDefenseEventProcessStatus.None;
@@ -241,7 +240,7 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent
 			this.PreviewMonsterSpawner.Clear();
 		}
 
-		// Token: 0x06031BC3 RID: 203715 RVA: 0x00B8D124 File Offset: 0x00B8B324
+		// Token: 0x06026953 RID: 158035 RVA: 0x00AD1190 File Offset: 0x00ACF390
 		[NullableContext(2)]
 		private void OnStepUpdateNotify(IMessage msg, Net.CallbackStatus _)
 		{
@@ -301,10 +300,10 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent
 			EventSystem.Instance.Emit<ETowerDefenseEventProcessStatus>(EEventName.TowerDefenseEventStepUpdate, this.ProcessStatusInternal);
 		}
 
-		// Token: 0x06031BC4 RID: 203716 RVA: 0x00B8D280 File Offset: 0x00B8B480
+		// Token: 0x06026954 RID: 158036 RVA: 0x00AD12EC File Offset: 0x00ACF4EC
 		private void OnPreviewStepUpdate(TrapDefensePreviewStepPbData data)
 		{
-			this.PreviewMonsterSpawner.Init(data.MonsterRoutesPreviewInfo.ToDictionary<int, TrapDefenseMonsterPbGroup>());
+			this.PreviewMonsterSpawner.Init(new Dictionary<int, TrapDefenseMonsterPbGroup>(data.MonsterRoutesPreviewInfo));
 			if (data.ShopInfo != null)
 			{
 				TrapDefenseModel.Instance.BattleData.SetShopOpen(data.ShopInfo.ShopProductPbInfos.Count > 0);
@@ -320,7 +319,7 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent
 			}
 		}
 
-		// Token: 0x06031BC5 RID: 203717 RVA: 0x00B8D318 File Offset: 0x00B8B518
+		// Token: 0x06026955 RID: 158037 RVA: 0x00AD1384 File Offset: 0x00ACF584
 		private void OnFightingStepUpdate(TrapDefenseSpawnMonsterStepPbData data)
 		{
 			this.PreviewMonsterSpawner.Reset();
@@ -329,13 +328,13 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent
 			Log.Instance.Info(ELogModule.TowerDefenseEvent, ELogAuthor.XXJ, "塔防进入战斗阶段", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x06031BC6 RID: 203718 RVA: 0x00B8D37A File Offset: 0x00B8B57A
+		// Token: 0x06026956 RID: 158038 RVA: 0x00AD13E6 File Offset: 0x00ACF5E6
 		public void ControllerTick(float delta)
 		{
 			this.OnTick(delta);
 		}
 
-		// Token: 0x06031BC7 RID: 203719 RVA: 0x00B8D384 File Offset: 0x00B8B584
+		// Token: 0x06026957 RID: 158039 RVA: 0x00AD13F0 File Offset: 0x00ACF5F0
 		protected override void OnTick(float delta)
 		{
 			if (this.IsInPreview())
@@ -409,7 +408,7 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent
 			}
 		}
 
-		// Token: 0x06031BC8 RID: 203720 RVA: 0x00B8D584 File Offset: 0x00B8B784
+		// Token: 0x06026958 RID: 158040 RVA: 0x00AD15F0 File Offset: 0x00ACF7F0
 		private void HidePreviewTrap()
 		{
 			if (!this.TrapTemplateInfo.IsInPreview())
@@ -422,8 +421,8 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent
 			}
 		}
 
-		// Token: 0x17007B04 RID: 31492
-		// (get) Token: 0x06031BC9 RID: 203721 RVA: 0x00B8D5B4 File Offset: 0x00B8B7B4
+		// Token: 0x17004EB1 RID: 20145
+		// (get) Token: 0x06026959 RID: 158041 RVA: 0x00AD1620 File Offset: 0x00ACF820
 		public ETrapDefenseBuildTipsType BuildTipsType
 		{
 			get
@@ -432,7 +431,7 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent
 			}
 		}
 
-		// Token: 0x06031BCA RID: 203722 RVA: 0x00B8D5BC File Offset: 0x00B8B7BC
+		// Token: 0x0602695A RID: 158042 RVA: 0x00AD1628 File Offset: 0x00ACF828
 		private void UpdateRaycastState()
 		{
 			ETrapDefenseBuildTipsType etrapDefenseBuildTipsType = ETrapDefenseBuildTipsType.None;
@@ -463,7 +462,7 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent
 			}
 		}
 
-		// Token: 0x06031BCB RID: 203723 RVA: 0x00B8D658 File Offset: 0x00B8B858
+		// Token: 0x0602695B RID: 158043 RVA: 0x00AD16C4 File Offset: 0x00ACF8C4
 		[NullableContext(0)]
 		private UniTask<bool> StartFighting()
 		{
@@ -475,7 +474,7 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent
 			return <StartFighting>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031BCC RID: 203724 RVA: 0x00B8D69C File Offset: 0x00B8B89C
+		// Token: 0x0602695C RID: 158044 RVA: 0x00AD1708 File Offset: 0x00ACF908
 		private void DoSelectAction(int index)
 		{
 			int? machineIdByIndex = TowerDefenseEventModel.Instance.GetMachineIdByIndex(index);
@@ -490,14 +489,14 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent
 			this.PreviewTrap(machineIdByIndex.Value);
 		}
 
-		// Token: 0x06031BCD RID: 203725 RVA: 0x00B8D6EB File Offset: 0x00B8B8EB
+		// Token: 0x0602695D RID: 158045 RVA: 0x00AD1757 File Offset: 0x00ACF957
 		public void HandleTowerDefenseSelect(int index)
 		{
 			TowerDefensePlayerController.EnablePlayerFollower(false);
 			this.DoSelectAction(index);
 		}
 
-		// Token: 0x06031BCE RID: 203726 RVA: 0x00B8D6FC File Offset: 0x00B8B8FC
+		// Token: 0x0602695E RID: 158046 RVA: 0x00AD1768 File Offset: 0x00ACF968
 		public void CancelCurrentPreviewTrap()
 		{
 			if (this.PreviewTrapActor == null)
@@ -516,7 +515,7 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent
 			}
 		}
 
-		// Token: 0x06031BCF RID: 203727 RVA: 0x00B8D74C File Offset: 0x00B8B94C
+		// Token: 0x0602695F RID: 158047 RVA: 0x00AD17B8 File Offset: 0x00ACF9B8
 		[NullableContext(0)]
 		public UniTask<bool> ExecuteStartFighting()
 		{
@@ -528,7 +527,7 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent
 			return <ExecuteStartFighting>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031BD0 RID: 203728 RVA: 0x00B8D790 File Offset: 0x00B8B990
+		// Token: 0x06026960 RID: 158048 RVA: 0x00AD17FC File Offset: 0x00ACF9FC
 		[NullableContext(0)]
 		public UniTask<bool> ExecuteOccupyTrap()
 		{
@@ -540,7 +539,7 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent
 			return <ExecuteOccupyTrap>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031BD1 RID: 203729 RVA: 0x00B8D7D4 File Offset: 0x00B8B9D4
+		// Token: 0x06026961 RID: 158049 RVA: 0x00AD1840 File Offset: 0x00ACFA40
 		[NullableContext(0)]
 		public UniTask<bool> ExecuteUnOccupyTrap()
 		{
@@ -552,13 +551,13 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent
 			return <ExecuteUnOccupyTrap>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031BD2 RID: 203730 RVA: 0x00B8D817 File Offset: 0x00B8BA17
+		// Token: 0x06026962 RID: 158050 RVA: 0x00AD1883 File Offset: 0x00ACFA83
 		public void ExecuteRotateTrap()
 		{
 			this.RotateTrap();
 		}
 
-		// Token: 0x06031BD3 RID: 203731 RVA: 0x00B8D820 File Offset: 0x00B8BA20
+		// Token: 0x06026963 RID: 158051 RVA: 0x00AD188C File Offset: 0x00ACFA8C
 		public unsafe bool PreviewTrap(int configId)
 		{
 			this.RaycastResult.Reset();
@@ -588,7 +587,7 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent
 			return true;
 		}
 
-		// Token: 0x06031BD4 RID: 203732 RVA: 0x00B8D9D4 File Offset: 0x00B8BBD4
+		// Token: 0x06026964 RID: 158052 RVA: 0x00AD1A40 File Offset: 0x00ACFC40
 		private void InitPreviewTrapActor()
 		{
 			if (this.PreviewTrapActor == null)
@@ -598,7 +597,7 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent
 			this.PreviewTrapActor.Init(this.TrapTemplateInfo, null);
 		}
 
-		// Token: 0x06031BD5 RID: 203733 RVA: 0x00B8DA22 File Offset: 0x00B8BC22
+		// Token: 0x06026965 RID: 158053 RVA: 0x00AD1A8E File Offset: 0x00ACFC8E
 		private void DestroyPreviewTrapActor(string reason)
 		{
 			if (this.PreviewTrapActor != null && this.PreviewTrapActor.IsValid())
@@ -608,19 +607,19 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent
 			this.PreviewTrapActor = null;
 		}
 
-		// Token: 0x06031BD6 RID: 203734 RVA: 0x00B8DA4C File Offset: 0x00B8BC4C
+		// Token: 0x06026966 RID: 158054 RVA: 0x00AD1AB8 File Offset: 0x00ACFCB8
 		public void RotateTrap()
 		{
 			this.TrapTemplateInfo.Rotate();
 		}
 
-		// Token: 0x06031BD7 RID: 203735 RVA: 0x00B8DA59 File Offset: 0x00B8BC59
+		// Token: 0x06026967 RID: 158055 RVA: 0x00AD1AC5 File Offset: 0x00ACFCC5
 		public bool IsEnoughGoldToBuildTrap()
 		{
 			return TowerDefenseEventModel.Instance.IsEnoughGoldToBuildTrap(this.TrapTemplateInfo);
 		}
 
-		// Token: 0x06031BD8 RID: 203736 RVA: 0x00B8DA6C File Offset: 0x00B8BC6C
+		// Token: 0x06026968 RID: 158056 RVA: 0x00AD1AD8 File Offset: 0x00ACFCD8
 		[NullableContext(0)]
 		public UniTask<bool> OccupyTrap()
 		{
@@ -632,7 +631,7 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent
 			return <OccupyTrap>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031BD9 RID: 203737 RVA: 0x00B8DAB0 File Offset: 0x00B8BCB0
+		// Token: 0x06026969 RID: 158057 RVA: 0x00AD1B1C File Offset: 0x00ACFD1C
 		[NullableContext(0)]
 		private UniTask<Aki.Protocol.ErrorCode?> RequestOccupyTrap([Nullable(1)] ITowerDefenseEventTrapInfo trapInfo)
 		{
@@ -644,7 +643,7 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent
 			return <RequestOccupyTrap>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031BDA RID: 203738 RVA: 0x00B8DAF4 File Offset: 0x00B8BCF4
+		// Token: 0x0602696A RID: 158058 RVA: 0x00AD1B60 File Offset: 0x00ACFD60
 		[NullableContext(0)]
 		public UniTask<bool> UnOccupyTrap()
 		{
@@ -656,7 +655,7 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent
 			return <UnOccupyTrap>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031BDB RID: 203739 RVA: 0x00B8DB38 File Offset: 0x00B8BD38
+		// Token: 0x0602696B RID: 158059 RVA: 0x00AD1BA4 File Offset: 0x00ACFDA4
 		[NullableContext(0)]
 		private UniTask<Aki.Protocol.ErrorCode?> RequestUnoccupyTrap([Nullable(1)] ITowerDefenseEventTrapInfo trapInfo)
 		{
@@ -668,7 +667,7 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent
 			return <RequestUnoccupyTrap>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031BDC RID: 203740 RVA: 0x00B8DB7C File Offset: 0x00B8BD7C
+		// Token: 0x0602696C RID: 158060 RVA: 0x00AD1BE8 File Offset: 0x00ACFDE8
 		private void CheckRaycastOnOrgan()
 		{
 			TsTowerDefenseEventActor raycastTarget = this.RaycastResult.RaycastTarget;
@@ -686,8 +685,8 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent
 			}
 		}
 
-		// Token: 0x17007B05 RID: 31493
-		// (get) Token: 0x06031BDD RID: 203741 RVA: 0x00B8DC2F File Offset: 0x00B8BE2F
+		// Token: 0x17004EB2 RID: 20146
+		// (get) Token: 0x0602696D RID: 158061 RVA: 0x00AD1C9B File Offset: 0x00ACFE9B
 		public static TowerDefenseEventController Instance
 		{
 			get
@@ -696,7 +695,7 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent
 			}
 		}
 
-		// Token: 0x06031BDE RID: 203742 RVA: 0x00B8DC36 File Offset: 0x00B8BE36
+		// Token: 0x0602696E RID: 158062 RVA: 0x00AD1CA2 File Offset: 0x00ACFEA2
 		public static TowerDefenseEventController GetOrCreateInstance()
 		{
 			if (TowerDefenseEventController._Instance == null)
@@ -706,7 +705,7 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent
 			return TowerDefenseEventController._Instance;
 		}
 
-		// Token: 0x06031BDF RID: 203743 RVA: 0x00B8DC4A File Offset: 0x00B8BE4A
+		// Token: 0x0602696F RID: 158063 RVA: 0x00AD1CB6 File Offset: 0x00ACFEB6
 		public static bool CreateInstance()
 		{
 			if (TowerDefenseEventController._Instance != null)
@@ -717,74 +716,74 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent
 			return true;
 		}
 
-		// Token: 0x06031BE0 RID: 203744 RVA: 0x00B8DC60 File Offset: 0x00B8BE60
+		// Token: 0x06026970 RID: 158064 RVA: 0x00AD1CCC File Offset: 0x00ACFECC
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06031BE1 RID: 203745 RVA: 0x00B8DC62 File Offset: 0x00B8BE62
+		// Token: 0x06026971 RID: 158065 RVA: 0x00AD1CCE File Offset: 0x00ACFECE
 		public static void ResetStaticDefaultValue()
 		{
 			TowerDefenseEventController._Instance = null;
 		}
 
-		// Token: 0x06031BE2 RID: 203746 RVA: 0x00B8DC6A File Offset: 0x00B8BE6A
+		// Token: 0x06026972 RID: 158066 RVA: 0x00AD1CD6 File Offset: 0x00ACFED6
 		static TowerDefenseEventController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(TowerDefenseEventController.CreateStaticDefaultValue), new Action(TowerDefenseEventController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401A8E8 RID: 108776
+		// Token: 0x0401523A RID: 86586
 		private readonly Stat StepUpdateNotifyStat = Stat.Create("TowerDefenseEventController.StepUpdateNotify", "", "");
 
-		// Token: 0x0401A8E9 RID: 108777
+		// Token: 0x0401523B RID: 86587
 		private readonly Stat RaycastStateChangedStat = Stat.Create("TowerDefenseEventController.RaycastStateChanged", "", "");
 
-		// Token: 0x0401A8EA RID: 108778
+		// Token: 0x0401523C RID: 86588
 		private long? CurRaycastOrgan;
 
-		// Token: 0x0401A8EB RID: 108779
+		// Token: 0x0401523D RID: 86589
 		protected bool IsWorldInit;
 
-		// Token: 0x0401A8EC RID: 108780
+		// Token: 0x0401523E RID: 86590
 		public bool TestBpUsing;
 
-		// Token: 0x0401A8ED RID: 108781
+		// Token: 0x0401523F RID: 86591
 		private ETowerDefenseEventProcessStatus ProcessStatusInternal;
 
-		// Token: 0x0401A8EE RID: 108782
+		// Token: 0x04015240 RID: 86592
 		private ETrapDefenseBuildTipsType BuildTipsTypeInternal;
 
-		// Token: 0x0401A8EF RID: 108783
+		// Token: 0x04015241 RID: 86593
 		public readonly TowerDefenseEventEntityRedirectFilter EntityRedirectFilter = new TowerDefenseEventEntityRedirectFilter();
 
-		// Token: 0x0401A8F0 RID: 108784
+		// Token: 0x04015242 RID: 86594
 		private readonly TowerDefenseTrapTemplateInfo TrapTemplateInfo = new TowerDefenseTrapTemplateInfo();
 
-		// Token: 0x0401A8F1 RID: 108785
+		// Token: 0x04015243 RID: 86595
 		[Nullable(2)]
 		private TsTowerDefenseEventActor PreviewTrapActor;
 
-		// Token: 0x0401A8F2 RID: 108786
+		// Token: 0x04015244 RID: 86596
 		[Nullable(2)]
 		private TsTowerDefenseEventActor PrepareRemoveTrapActor;
 
-		// Token: 0x0401A8F3 RID: 108787
+		// Token: 0x04015245 RID: 86597
 		public readonly TowerDefenseEventRaycastResult RaycastResult = new TowerDefenseEventRaycastResult();
 
-		// Token: 0x0401A8F4 RID: 108788
+		// Token: 0x04015246 RID: 86598
 		private bool IsRaycast;
 
-		// Token: 0x0401A8F5 RID: 108789
+		// Token: 0x04015247 RID: 86599
 		private readonly TowerDefenseEventPreviewMonsterSpawner PreviewMonsterSpawner = new TowerDefenseEventPreviewMonsterSpawner();
 
-		// Token: 0x0401A8F6 RID: 108790
+		// Token: 0x04015248 RID: 86600
 		private long GoldNum;
 
-		// Token: 0x0401A8F7 RID: 108791
+		// Token: 0x04015249 RID: 86601
 		private int BattleWave;
 
-		// Token: 0x0401A8F8 RID: 108792
+		// Token: 0x0401524A RID: 86602
 		[Nullable(2)]
 		private static TowerDefenseEventController _Instance;
 	}

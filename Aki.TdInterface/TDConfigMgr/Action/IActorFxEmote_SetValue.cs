@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001767 RID: 5991
+	// Token: 0x020018E8 RID: 6376
 	public class IActorFxEmote_SetValue
 	{
-		// Token: 0x040050B4 RID: 20660
+		// Token: 0x040054EA RID: 21738
 		public int ActorIndex;
 
-		// Token: 0x040050B5 RID: 20661
-		[Nullable(1)]
+		// Token: 0x040054EB RID: 21739
 		public IActorFxEmoteType FxEmote;
 	}
 }

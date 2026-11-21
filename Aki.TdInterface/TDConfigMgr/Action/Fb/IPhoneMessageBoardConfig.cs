@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002AC6 RID: 10950
+	// Token: 0x02002DBA RID: 11706
 	public class IPhoneMessageBoardConfig
 	{
-		// Token: 0x0600F041 RID: 61505 RVA: 0x0022E44A File Offset: 0x0022C64A
-		[NullableContext(1)]
+		// Token: 0x0600FEF7 RID: 65271 RVA: 0x0024C156 File Offset: 0x0024A356
 		public static IPhoneMessageBoardConfig Create(IPhoneMessageBoardConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004C77 RID: 19575
-		// (get) Token: 0x0600F042 RID: 61506 RVA: 0x0022E46C File Offset: 0x0022C66C
+		// Token: 0x17005031 RID: 20529
+		// (get) Token: 0x0600FEF8 RID: 65272 RVA: 0x0024C178 File Offset: 0x0024A378
 		public virtual int? PhoneMessageId
 		{
 			get
@@ -35,7 +33,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008424 RID: 33828
+		// Token: 0x04008B28 RID: 35624
 		private IPhoneMessageBoardConfig Instance;
 	}
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200098F RID: 2447
+	// Token: 0x02000A64 RID: 2660
 	public class ConfigStateByStateId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600396E RID: 14702 RVA: 0x0019E3EC File Offset: 0x0019C5EC
+		// Token: 0x06003E6C RID: 15980 RVA: 0x001BD780 File Offset: 0x001BB980
 		static ConfigStateByStateId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigStateByStateId.CreateStaticDefaultValue), new Action(ConfigStateByStateId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600396F RID: 14703 RVA: 0x0019E40C File Offset: 0x0019C60C
+		// Token: 0x06003E6D RID: 15981 RVA: 0x001BD7A0 File Offset: 0x001BB9A0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigStateByStateId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003970 RID: 14704 RVA: 0x0019E48B File Offset: 0x0019C68B
+		// Token: 0x06003E6E RID: 15982 RVA: 0x001BD81F File Offset: 0x001BBA1F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigStateByStateId.LogPair = null;
 			ConfigStateByStateId.HandleId = 0;
 		}
 
-		// Token: 0x06003971 RID: 14705 RVA: 0x0019E499 File Offset: 0x0019C699
+		// Token: 0x06003E6F RID: 15983 RVA: 0x001BD82D File Offset: 0x001BBA2D
 		public static void Init()
 		{
 			ConfigStateByStateId.HandleId = ConfigCommon.InitDataStatement(ConfigStateByStateId.HandleId, "db_area.db", "select BinData from `State` where StateId = ?");
 		}
 
-		// Token: 0x06003972 RID: 14706 RVA: 0x0019E4B4 File Offset: 0x0019C6B4
+		// Token: 0x06003E70 RID: 15984 RVA: 0x001BD848 File Offset: 0x001BBA48
 		public static State? GetConfig(int p0StateId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigStateByStateId.HandleId, ConfigStateByStateId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new State?(rootAsState);
 		}
 
-		// Token: 0x040042CF RID: 17103
+		// Token: 0x040048A2 RID: 18594
 		private const string DB = "db_area.db";
 
-		// Token: 0x040042D0 RID: 17104
+		// Token: 0x040048A3 RID: 18595
 		private const string FILE = "q.区域.xlsx";
 
-		// Token: 0x040042D1 RID: 17105
+		// Token: 0x040048A4 RID: 18596
 		private const string TABLE = "State";
 
-		// Token: 0x040042D2 RID: 17106
+		// Token: 0x040048A5 RID: 18597
 		private const string COMMAND = "select BinData from `State` where StateId = ?";
 
-		// Token: 0x040042D3 RID: 17107
+		// Token: 0x040048A6 RID: 18598
 		private const string KEY_PREFIX = "StateByStateId";
 
-		// Token: 0x040042D4 RID: 17108
+		// Token: 0x040048A7 RID: 18599
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040042D5 RID: 17109
+		// Token: 0x040048A8 RID: 18600
 		private static int HandleId;
 	}
 }

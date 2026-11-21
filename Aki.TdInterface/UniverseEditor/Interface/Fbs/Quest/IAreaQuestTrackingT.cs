@@ -3,25 +3,25 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003D11 RID: 15633
+	// Token: 0x02004128 RID: 16680
 	public class IAreaQuestTrackingT
 	{
-		// Token: 0x17006B3F RID: 27455
-		// (get) Token: 0x0601591B RID: 88347 RVA: 0x0031D915 File Offset: 0x0031BB15
-		// (set) Token: 0x0601591C RID: 88348 RVA: 0x0031D91D File Offset: 0x0031BB1D
+		// Token: 0x170070F9 RID: 28921
+		// (get) Token: 0x06016E53 RID: 93779 RVA: 0x00344B8D File Offset: 0x00342D8D
+		// (set) Token: 0x06016E54 RID: 93780 RVA: 0x00344B95 File Offset: 0x00342D95
 		public int QuestId { get; set; }
 
-		// Token: 0x17006B40 RID: 27456
-		// (get) Token: 0x0601591D RID: 88349 RVA: 0x0031D926 File Offset: 0x0031BB26
-		// (set) Token: 0x0601591E RID: 88350 RVA: 0x0031D92E File Offset: 0x0031BB2E
+		// Token: 0x170070FA RID: 28922
+		// (get) Token: 0x06016E55 RID: 93781 RVA: 0x00344B9E File Offset: 0x00342D9E
+		// (set) Token: 0x06016E56 RID: 93782 RVA: 0x00344BA6 File Offset: 0x00342DA6
 		public int NodeId { get; set; }
 
-		// Token: 0x17006B41 RID: 27457
-		// (get) Token: 0x0601591F RID: 88351 RVA: 0x0031D937 File Offset: 0x0031BB37
-		// (set) Token: 0x06015920 RID: 88352 RVA: 0x0031D93F File Offset: 0x0031BB3F
+		// Token: 0x170070FB RID: 28923
+		// (get) Token: 0x06016E57 RID: 93783 RVA: 0x00344BAF File Offset: 0x00342DAF
+		// (set) Token: 0x06016E58 RID: 93784 RVA: 0x00344BB7 File Offset: 0x00342DB7
 		public List<int> AreaIds { get; set; }
 
-		// Token: 0x06015921 RID: 88353 RVA: 0x0031D948 File Offset: 0x0031BB48
+		// Token: 0x06016E59 RID: 93785 RVA: 0x00344BC0 File Offset: 0x00342DC0
 		public IAreaQuestTrackingT()
 		{
 			this.QuestId = 0;

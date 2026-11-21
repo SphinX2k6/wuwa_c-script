@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000DD7 RID: 3543
+	// Token: 0x02000EBC RID: 3772
 	public struct LockOnConfig : IFlatbufferObject
 	{
-		// Token: 0x17001D47 RID: 7495
-		// (get) Token: 0x06008F40 RID: 36672 RVA: 0x0027A650 File Offset: 0x00278850
+		// Token: 0x17001DAB RID: 7595
+		// (get) Token: 0x0600955C RID: 38236 RVA: 0x002989C8 File Offset: 0x00296BC8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008F41 RID: 36673 RVA: 0x0027A65D File Offset: 0x0027885D
+		// Token: 0x0600955D RID: 38237 RVA: 0x002989D5 File Offset: 0x00296BD5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06008F42 RID: 36674 RVA: 0x0027A664 File Offset: 0x00278864
+		// Token: 0x0600955E RID: 38238 RVA: 0x002989DC File Offset: 0x00296BDC
 		public static LockOnConfig GetRootAsLockOnConfig(ByteBuffer _bb)
 		{
 			return LockOnConfig.GetRootAsLockOnConfig(_bb, default(LockOnConfig));
 		}
 
-		// Token: 0x06008F43 RID: 36675 RVA: 0x0027A680 File Offset: 0x00278880
+		// Token: 0x0600955F RID: 38239 RVA: 0x002989F8 File Offset: 0x00296BF8
 		public static LockOnConfig GetRootAsLockOnConfig(ByteBuffer _bb, LockOnConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06008F44 RID: 36676 RVA: 0x0027A69D File Offset: 0x0027889D
+		// Token: 0x06009560 RID: 38240 RVA: 0x00298A15 File Offset: 0x00296C15
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06008F45 RID: 36677 RVA: 0x0027A6AC File Offset: 0x002788AC
+		// Token: 0x06009561 RID: 38241 RVA: 0x00298A24 File Offset: 0x00296C24
 		public LockOnConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001D48 RID: 7496
-		// (get) Token: 0x06008F46 RID: 36678 RVA: 0x0027A6BC File Offset: 0x002788BC
+		// Token: 0x17001DAC RID: 7596
+		// (get) Token: 0x06009562 RID: 38242 RVA: 0x00298A34 File Offset: 0x00296C34
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001D49 RID: 7497
-		// (get) Token: 0x06008F47 RID: 36679 RVA: 0x0027A6F8 File Offset: 0x002788F8
+		// Token: 0x17001DAD RID: 7597
+		// (get) Token: 0x06009563 RID: 38243 RVA: 0x00298A70 File Offset: 0x00296C70
 		public int Distance
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001D4A RID: 7498
-		// (get) Token: 0x06008F48 RID: 36680 RVA: 0x0027A734 File Offset: 0x00278934
+		// Token: 0x17001DAE RID: 7598
+		// (get) Token: 0x06009564 RID: 38244 RVA: 0x00298AAC File Offset: 0x00296CAC
 		public int UpDistance
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001D4B RID: 7499
-		// (get) Token: 0x06008F49 RID: 36681 RVA: 0x0027A774 File Offset: 0x00278974
+		// Token: 0x17001DAF RID: 7599
+		// (get) Token: 0x06009565 RID: 38245 RVA: 0x00298AEC File Offset: 0x00296CEC
 		public int DownDistance
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001D4C RID: 7500
-		// (get) Token: 0x06008F4A RID: 36682 RVA: 0x0027A7B8 File Offset: 0x002789B8
+		// Token: 0x17001DB0 RID: 7600
+		// (get) Token: 0x06009566 RID: 38246 RVA: 0x00298B30 File Offset: 0x00296D30
 		public int SectorRadius
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001D4D RID: 7501
-		// (get) Token: 0x06008F4B RID: 36683 RVA: 0x0027A7F8 File Offset: 0x002789F8
+		// Token: 0x17001DB1 RID: 7601
+		// (get) Token: 0x06009567 RID: 38247 RVA: 0x00298B70 File Offset: 0x00296D70
 		public int SectorAngle
 		{
 			get
@@ -137,8 +137,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001D4E RID: 7502
-		// (get) Token: 0x06008F4C RID: 36684 RVA: 0x0027A838 File Offset: 0x00278A38
+		// Token: 0x17001DB2 RID: 7602
+		// (get) Token: 0x06009568 RID: 38248 RVA: 0x00298BB0 File Offset: 0x00296DB0
 		public float ToleranceAngle
 		{
 			get
@@ -152,7 +152,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004E72 RID: 20082
+		// Token: 0x04005457 RID: 21591
 		private Table __p;
 	}
 }

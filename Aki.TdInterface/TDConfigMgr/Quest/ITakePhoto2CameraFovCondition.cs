@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001168 RID: 4456
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200129A RID: 4762
 	public class ITakePhoto2CameraFovCondition
 	{
-		// Token: 0x0600651E RID: 25886 RVA: 0x000F2AC0 File Offset: 0x000F0CC0
+		// Token: 0x06006B2F RID: 27439 RVA: 0x000FFE80 File Offset: 0x000FE080
 		private ITakePhoto2CameraFovCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600651F RID: 25887 RVA: 0x000F2AF8 File Offset: 0x000F0CF8
+		// Token: 0x06006B30 RID: 27440 RVA: 0x000FFEB8 File Offset: 0x000FE0B8
 		public static ITakePhoto2CameraFovCondition Create([Nullable(2)] ITakePhoto2CameraFovCondition instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006520 RID: 25888 RVA: 0x000F2B0B File Offset: 0x000F0D0B
+		// Token: 0x06006B31 RID: 27441 RVA: 0x000FFECB File Offset: 0x000FE0CB
 		public static ITakePhoto2CameraFovCondition CreateFromSetValue([Nullable(2)] ITakePhoto2CameraFovCondition_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006521 RID: 25889 RVA: 0x000F2B1E File Offset: 0x000F0D1E
+		// Token: 0x06006B32 RID: 27442 RVA: 0x000FFEDE File Offset: 0x000FE0DE
 		public ITakePhoto2CameraFovCondition_SetValue ToSetValue()
 		{
 			return new ITakePhoto2CameraFovCondition_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x170020F8 RID: 8440
-		// (get) Token: 0x06006522 RID: 25890 RVA: 0x000F2B3D File Offset: 0x000F0D3D
-		// (set) Token: 0x06006523 RID: 25891 RVA: 0x000F2B68 File Offset: 0x000F0D68
+		// Token: 0x170022B0 RID: 8880
+		// (get) Token: 0x06006B33 RID: 27443 RVA: 0x000FFEFD File Offset: 0x000FE0FD
+		// (set) Token: 0x06006B34 RID: 27444 RVA: 0x000FFF28 File Offset: 0x000FE128
 		public virtual int MinFov
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170020F9 RID: 8441
-		// (get) Token: 0x06006524 RID: 25892 RVA: 0x000F2B76 File Offset: 0x000F0D76
-		// (set) Token: 0x06006525 RID: 25893 RVA: 0x000F2BA1 File Offset: 0x000F0DA1
+		// Token: 0x170022B1 RID: 8881
+		// (get) Token: 0x06006B35 RID: 27445 RVA: 0x000FFF36 File Offset: 0x000FE136
+		// (set) Token: 0x06006B36 RID: 27446 RVA: 0x000FFF61 File Offset: 0x000FE161
 		public virtual int MaxFov
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003CA7 RID: 15527
+		// Token: 0x04003FFE RID: 16382
 		[Nullable(2)]
 		protected ITakePhoto2CameraFovCondition FbInstance;
 
-		// Token: 0x04003CA8 RID: 15528
+		// Token: 0x04003FFF RID: 16383
 		[Nullable(2)]
 		protected ITakePhoto2CameraFovCondition_SetValue PocoInterface;
 	}

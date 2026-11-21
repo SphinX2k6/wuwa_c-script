@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -14,19 +13,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Transport
 {
-	// Token: 0x02004AF5 RID: 19189
+	// Token: 0x02003A9D RID: 15005
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class TransportNetworkController : ControllerBase
 	{
-		// Token: 0x06031B35 RID: 203573 RVA: 0x00B8A1AB File Offset: 0x00B883AB
+		// Token: 0x060268C5 RID: 157893 RVA: 0x00ACE15F File Offset: 0x00ACC35F
 		public UKuroTransportNetworkSubsystem GetTransportSystem()
 		{
 			return UKuroRenderingRuntimeBPPluginBPLibrary.GetSubsystem(GlobalData.World, UKuroTransportNetworkSubsystem.StaticClass()) as UKuroTransportNetworkSubsystem;
 		}
 
-		// Token: 0x06031B36 RID: 203574 RVA: 0x00B8A1C8 File Offset: 0x00B883C8
+		// Token: 0x060268C6 RID: 157894 RVA: 0x00ACE17C File Offset: 0x00ACC37C
 		protected override bool OnInit()
 		{
 			Net.Instance.Register(ENotifyMessageId.ChangeSceneRoadNotify, new Action<IMessage, Net.CallbackStatus>(this.ChangeSceneRoadNotify));
@@ -35,7 +34,7 @@ namespace CSharpScript.Game.Module.Transport
 			return true;
 		}
 
-		// Token: 0x06031B37 RID: 203575 RVA: 0x00B8A22A File Offset: 0x00B8842A
+		// Token: 0x060268C7 RID: 157895 RVA: 0x00ACE1DE File Offset: 0x00ACC3DE
 		protected override bool OnClear()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.ChangeSceneRoadNotify);
@@ -44,14 +43,14 @@ namespace CSharpScript.Game.Module.Transport
 			return true;
 		}
 
-		// Token: 0x06031B38 RID: 203576 RVA: 0x00B8A269 File Offset: 0x00B88469
+		// Token: 0x060268C8 RID: 157896 RVA: 0x00ACE21D File Offset: 0x00ACC41D
 		private void OnJoinSceneDone(SceneInformation sceneInfo)
 		{
 			this.IsJoinSceneDone = true;
 			this.LoadRoadway(sceneInfo.InstanceId);
 		}
 
-		// Token: 0x06031B39 RID: 203577 RVA: 0x00B8A280 File Offset: 0x00B88480
+		// Token: 0x060268C9 RID: 157897 RVA: 0x00ACE234 File Offset: 0x00ACC434
 		private void LoadRoadway(int instanceId)
 		{
 			if (!this.IsJoinSceneDone || this.IsLoadRoadway || this.RoadwayEnableCache.Count == 0)
@@ -61,7 +60,7 @@ namespace CSharpScript.Game.Module.Transport
 			InstanceDungeon? config = ConfigInstanceDungeonById.GetConfig(instanceId, true);
 			if (config != null && config.Value.MapConfigId != 0)
 			{
-				this.EntityLevelIds = config.Value.EntityLevelIdsIter().ToList<int>();
+				this.EntityLevelIds = new List<int>(config.Value.EntityLevelIdsIter());
 				List<int> roadZoneData = TransportDefine.getRoadZoneData(config.Value.MapConfigId);
 				if (roadZoneData.Count >= 1)
 				{
@@ -74,7 +73,7 @@ namespace CSharpScript.Game.Module.Transport
 			EventSystem.Instance.Emit(EEventName.TransportSystemInitDone);
 		}
 
-		// Token: 0x06031B3A RID: 203578 RVA: 0x00B8A33C File Offset: 0x00B8853C
+		// Token: 0x060268CA RID: 157898 RVA: 0x00ACE2F0 File Offset: 0x00ACC4F0
 		[NullableContext(2)]
 		private void InitRoadway(IMessage msg, Net.CallbackStatus _)
 		{
@@ -88,7 +87,7 @@ namespace CSharpScript.Game.Module.Transport
 			this.LoadRoadway(sceneRoadSyncNotify.InstanceId);
 		}
 
-		// Token: 0x06031B3B RID: 203579 RVA: 0x00B8A384 File Offset: 0x00B88584
+		// Token: 0x060268CB RID: 157899 RVA: 0x00ACE338 File Offset: 0x00ACC538
 		[NullableContext(2)]
 		private void ChangeSceneRoadNotify(IMessage msg, Net.CallbackStatus _)
 		{
@@ -96,7 +95,7 @@ namespace CSharpScript.Game.Module.Transport
 			this.SetKuroRoadwayEnable(changeSceneRoadNotify.EnabledRoads, changeSceneRoadNotify.IsEnable);
 		}
 
-		// Token: 0x06031B3C RID: 203580 RVA: 0x00B8A3AA File Offset: 0x00B885AA
+		// Token: 0x060268CC RID: 157900 RVA: 0x00ACE35E File Offset: 0x00ACC55E
 		protected override bool OnLeaveLevel()
 		{
 			this.GetTransportSystem().CleanUpTransportNetwork();
@@ -105,7 +104,7 @@ namespace CSharpScript.Game.Module.Transport
 			return true;
 		}
 
-		// Token: 0x06031B3D RID: 203581 RVA: 0x00B8A3C8 File Offset: 0x00B885C8
+		// Token: 0x060268CD RID: 157901 RVA: 0x00ACE37C File Offset: 0x00ACC57C
 		public void SetKuroRoadwayEnable(IList<int> pbDataIds, bool enable)
 		{
 			if (pbDataIds.Count <= 0)
@@ -130,7 +129,7 @@ namespace CSharpScript.Game.Module.Transport
 			transportSystem.SetRoadwayEnable(tarray, enable);
 		}
 
-		// Token: 0x06031B3E RID: 203582 RVA: 0x00B8A45C File Offset: 0x00B8865C
+		// Token: 0x060268CE RID: 157902 RVA: 0x00ACE410 File Offset: 0x00ACC610
 		public void CreateKuroRoadwayData(UKuroTransportNetworkSubsystem transportSystem, List<int> pbDataIds)
 		{
 			foreach (int value in pbDataIds)
@@ -155,7 +154,7 @@ namespace CSharpScript.Game.Module.Transport
 			}
 		}
 
-		// Token: 0x06031B3F RID: 203583 RVA: 0x00B8A510 File Offset: 0x00B88710
+		// Token: 0x060268CF RID: 157903 RVA: 0x00ACE4C4 File Offset: 0x00ACC6C4
 		[return: Nullable(2)]
 		public unsafe FRoadwayCreateParam PackRoadWayCreateParamByEntity(IEntityData entityData)
 		{
@@ -274,27 +273,35 @@ namespace CSharpScript.Game.Module.Transport
 			{
 				pavedRoadConfig = (waySpline.PavedWayConfig.AutoSprint ? ERoadwaySprintProperty.AutoSprint : ERoadwaySprintProperty.UnlimitedNitro);
 			}
-			TArray<FSplinePoint> tarray = GameSplineUtils.CreateCommonPoints(waySpline.Points.Cast<IBaseSplinePointType>().ToList<IBaseSplinePointType>());
+			List<IBaseSplinePointType> list = new List<IBaseSplinePointType>();
+			foreach (IWaySplinePoint item in waySpline.Points)
+			{
+				list.Add(item);
+			}
+			TArray<FSplinePoint> tarray = GameSplineUtils.CreateCommonPoints(list);
 			if (vector != null)
 			{
-				FVector position = vector.ToUeVectorOld();
-				FRotator rotator2 = rotator.ToUeRotator();
-				TArray<FSplinePoint> splineData = tarray;
-				int id = entityData.Id;
-				int roadwayWidth = (int)waySpline.Width;
-				bool valueOrDefault3 = waySpline.NoEntry.GetValueOrDefault();
-				int valueOrDefault4 = waySpline.Opposite.GetValueOrDefault();
+				FRoadwayCreateParam froadwayCreateParam = new FRoadwayCreateParam();
+				froadwayCreateParam.Position = vector.ToUeVectorOld();
+				froadwayCreateParam.Rotator = rotator.ToUeRotator();
+				froadwayCreateParam.SplineData = tarray;
+				froadwayCreateParam.RoadwayId = entityData.Id;
+				froadwayCreateParam.RoadwayWidth = (int)waySpline.Width;
+				froadwayCreateParam.bAffectTerrain = waySpline.NoEntry.GetValueOrDefault();
+				froadwayCreateParam.OpposingRoadId = waySpline.Opposite.GetValueOrDefault();
 				List<int> last = waySpline.Last;
-				int valueOrDefault5 = ((last != null) ? last.GetValueOrNull(0) : null).GetValueOrDefault();
+				froadwayCreateParam.LastRoadId = ((last != null) ? last.GetValueOrNull(0) : null).GetValueOrDefault();
 				List<int> next = waySpline.Next;
-				FRoadwayCreateParam froadwayCreateParam = new FRoadwayCreateParam(position, rotator2, splineData, id, roadwayWidth, valueOrDefault3, valueOrDefault4, valueOrDefault5, ((next != null) ? next.GetValueOrNull(0) : null).GetValueOrDefault(), (int)pavedRoadConfig, intersectCells);
+				froadwayCreateParam.NextRoadId = ((next != null) ? next.GetValueOrNull(0) : null).GetValueOrDefault();
+				froadwayCreateParam.PavedRoadConfig = (int)pavedRoadConfig;
+				froadwayCreateParam.IntersectCells = intersectCells;
 				froadwayCreateParam.SplineData.CopyAssign(tarray);
 				return froadwayCreateParam;
 			}
 			return null;
 		}
 
-		// Token: 0x06031B40 RID: 203584 RVA: 0x00B8A8A4 File Offset: 0x00B88AA4
+		// Token: 0x060268D0 RID: 157904 RVA: 0x00ACE8D8 File Offset: 0x00ACCAD8
 		[return: Nullable(2)]
 		public ITransportFindPathResult FindPath(global::Vector sourcePosition, global::Vector destPosition, bool isFindPathForAutopilotRoute = false, bool isEmitEvent = false, bool isDebugDraw = false)
 		{
@@ -343,7 +350,7 @@ namespace CSharpScript.Game.Module.Transport
 			return transportFindPathResult;
 		}
 
-		// Token: 0x06031B41 RID: 203585 RVA: 0x00B8AA0C File Offset: 0x00B88C0C
+		// Token: 0x060268D1 RID: 157905 RVA: 0x00ACEA40 File Offset: 0x00ACCC40
 		[return: Nullable(2)]
 		public UAutopilotRoute GetAssembleAutopilotRoute(IEnumerable<int> idList, bool isLoop = true, bool isDebugDraw = false)
 		{
@@ -355,7 +362,7 @@ namespace CSharpScript.Game.Module.Transport
 			return this.GetTransportSystem().GetAssembleAutopilotRoute(tarray, isLoop, isDebugDraw, 60f);
 		}
 
-		// Token: 0x06031B42 RID: 203586 RVA: 0x00B8AA70 File Offset: 0x00B88C70
+		// Token: 0x060268D2 RID: 157906 RVA: 0x00ACEAA4 File Offset: 0x00ACCCA4
 		public void TestAddData(IList<int> pbDataIds)
 		{
 			UKuroTransportNetworkSubsystem transportSystem = this.GetTransportSystem();
@@ -371,7 +378,7 @@ namespace CSharpScript.Game.Module.Transport
 			this.CreateKuroRoadwayData(transportSystem, list);
 		}
 
-		// Token: 0x06031B43 RID: 203587 RVA: 0x00B8AAC8 File Offset: 0x00B88CC8
+		// Token: 0x060268D3 RID: 157907 RVA: 0x00ACEAFC File Offset: 0x00ACCCFC
 		public void DebugDrawRoadWay(IEnumerable<int> roadwayIds)
 		{
 			UKuroTransportNetworkSubsystem transportSystem = this.GetTransportSystem();
@@ -389,7 +396,7 @@ namespace CSharpScript.Game.Module.Transport
 			}
 		}
 
-		// Token: 0x06031B44 RID: 203588 RVA: 0x00B8AB48 File Offset: 0x00B88D48
+		// Token: 0x060268D4 RID: 157908 RVA: 0x00ACEB7C File Offset: 0x00ACCD7C
 		public void DebugDrawRoadwaysAtSameIntersection(int intersectionId)
 		{
 			UKuroTransportNetworkSubsystem transportSystem = this.GetTransportSystem();
@@ -409,7 +416,7 @@ namespace CSharpScript.Game.Module.Transport
 			}
 		}
 
-		// Token: 0x06031B45 RID: 203589 RVA: 0x00B8AB9C File Offset: 0x00B88D9C
+		// Token: 0x060268D5 RID: 157909 RVA: 0x00ACEBD0 File Offset: 0x00ACCDD0
 		public void DebugDrawCrossingRoads(int roadwayId)
 		{
 			UKuroTransportNetworkSubsystem transportSystem = this.GetTransportSystem();
@@ -429,8 +436,8 @@ namespace CSharpScript.Game.Module.Transport
 			}
 		}
 
-		// Token: 0x17007AF4 RID: 31476
-		// (get) Token: 0x06031B46 RID: 203590 RVA: 0x00B8ABF0 File Offset: 0x00B88DF0
+		// Token: 0x17004EA1 RID: 20129
+		// (get) Token: 0x060268D6 RID: 157910 RVA: 0x00ACEC24 File Offset: 0x00ACCE24
 		public static TransportNetworkController Instance
 		{
 			get
@@ -439,7 +446,7 @@ namespace CSharpScript.Game.Module.Transport
 			}
 		}
 
-		// Token: 0x06031B47 RID: 203591 RVA: 0x00B8ABF7 File Offset: 0x00B88DF7
+		// Token: 0x060268D7 RID: 157911 RVA: 0x00ACEC2B File Offset: 0x00ACCE2B
 		public static TransportNetworkController GetOrCreateInstance()
 		{
 			if (TransportNetworkController._Instance == null)
@@ -449,7 +456,7 @@ namespace CSharpScript.Game.Module.Transport
 			return TransportNetworkController._Instance;
 		}
 
-		// Token: 0x06031B48 RID: 203592 RVA: 0x00B8AC0B File Offset: 0x00B88E0B
+		// Token: 0x060268D8 RID: 157912 RVA: 0x00ACEC3F File Offset: 0x00ACCE3F
 		public static bool CreateInstance()
 		{
 			if (TransportNetworkController._Instance != null)
@@ -460,36 +467,36 @@ namespace CSharpScript.Game.Module.Transport
 			return true;
 		}
 
-		// Token: 0x06031B49 RID: 203593 RVA: 0x00B8AC21 File Offset: 0x00B88E21
+		// Token: 0x060268D9 RID: 157913 RVA: 0x00ACEC55 File Offset: 0x00ACCE55
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06031B4A RID: 203594 RVA: 0x00B8AC23 File Offset: 0x00B88E23
+		// Token: 0x060268DA RID: 157914 RVA: 0x00ACEC57 File Offset: 0x00ACCE57
 		public static void ResetStaticDefaultValue()
 		{
 			TransportNetworkController._Instance = null;
 		}
 
-		// Token: 0x06031B4B RID: 203595 RVA: 0x00B8AC2B File Offset: 0x00B88E2B
+		// Token: 0x060268DB RID: 157915 RVA: 0x00ACEC5F File Offset: 0x00ACCE5F
 		static TransportNetworkController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(TransportNetworkController.CreateStaticDefaultValue), new Action(TransportNetworkController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401A89F RID: 108703
+		// Token: 0x040151F1 RID: 86513
 		private bool IsLoadRoadway;
 
-		// Token: 0x0401A8A0 RID: 108704
+		// Token: 0x040151F2 RID: 86514
 		private bool IsJoinSceneDone;
 
-		// Token: 0x0401A8A1 RID: 108705
+		// Token: 0x040151F3 RID: 86515
 		private List<int> RoadwayEnableCache = new List<int>();
 
-		// Token: 0x0401A8A2 RID: 108706
+		// Token: 0x040151F4 RID: 86516
 		private List<int> EntityLevelIds = new List<int>();
 
-		// Token: 0x0401A8A3 RID: 108707
+		// Token: 0x040151F5 RID: 86517
 		[Nullable(2)]
 		private static TransportNetworkController _Instance;
 	}

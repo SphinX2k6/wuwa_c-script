@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E21 RID: 20001
+	// Token: 0x02005330 RID: 21296
 	public enum EStreamingSourceMode : byte
 	{
-		// Token: 0x0400DB5E RID: 56158
+		// Token: 0x0400E6D0 RID: 59088
 		Fixed,
-		// Token: 0x0400DB5F RID: 56159
+		// Token: 0x0400E6D1 RID: 59089
 		Conditional
 	}
 }

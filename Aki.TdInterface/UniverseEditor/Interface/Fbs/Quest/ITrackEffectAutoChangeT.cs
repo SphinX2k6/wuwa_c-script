@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020041F4 RID: 16884
+	// Token: 0x0200464D RID: 17997
 	public class ITrackEffectAutoChangeT
 	{
-		// Token: 0x170077D8 RID: 30680
-		// (get) Token: 0x06018E94 RID: 102036 RVA: 0x00395AE2 File Offset: 0x00393CE2
-		// (set) Token: 0x06018E95 RID: 102037 RVA: 0x00395AEA File Offset: 0x00393CEA
+		// Token: 0x17007E06 RID: 32262
+		// (get) Token: 0x0601A5EE RID: 108014 RVA: 0x003C1042 File Offset: 0x003BF242
+		// (set) Token: 0x0601A5EF RID: 108015 RVA: 0x003C104A File Offset: 0x003BF24A
 		public ETrackEffectType Type { get; set; }
 
-		// Token: 0x170077D9 RID: 30681
-		// (get) Token: 0x06018E96 RID: 102038 RVA: 0x00395AF3 File Offset: 0x00393CF3
-		// (set) Token: 0x06018E97 RID: 102039 RVA: 0x00395AFB File Offset: 0x00393CFB
+		// Token: 0x17007E07 RID: 32263
+		// (get) Token: 0x0601A5F0 RID: 108016 RVA: 0x003C1053 File Offset: 0x003BF253
+		// (set) Token: 0x0601A5F1 RID: 108017 RVA: 0x003C105B File Offset: 0x003BF25B
 		public int EnterRange { get; set; }
 
-		// Token: 0x170077DA RID: 30682
-		// (get) Token: 0x06018E98 RID: 102040 RVA: 0x00395B04 File Offset: 0x00393D04
-		// (set) Token: 0x06018E99 RID: 102041 RVA: 0x00395B0C File Offset: 0x00393D0C
+		// Token: 0x17007E08 RID: 32264
+		// (get) Token: 0x0601A5F2 RID: 108018 RVA: 0x003C1064 File Offset: 0x003BF264
+		// (set) Token: 0x0601A5F3 RID: 108019 RVA: 0x003C106C File Offset: 0x003BF26C
 		public int LeaveRange { get; set; }
 
-		// Token: 0x06018E9A RID: 102042 RVA: 0x00395B15 File Offset: 0x00393D15
+		// Token: 0x0601A5F4 RID: 108020 RVA: 0x003C1075 File Offset: 0x003BF275
 		public ITrackEffectAutoChangeT()
 		{
 			this.Type = ETrackEffectType.AutoChange;

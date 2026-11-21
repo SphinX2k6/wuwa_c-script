@@ -4,12 +4,12 @@ using CSharpScript.Game.Effect;
 using CSharpScript.Game.Utils;
 using UnrealEngine;
 
-// Token: 0x02002FAB RID: 12203
+// Token: 0x020024FF RID: 9471
 [NullableContext(1)]
 [Nullable(0)]
 public class GameplayCueHookCommonItem
 {
-	// Token: 0x06019E08 RID: 105992 RVA: 0x006C3B4D File Offset: 0x006C1D4D
+	// Token: 0x0601771A RID: 96026 RVA: 0x006EA3E9 File Offset: 0x006E85E9
 	private GameplayCueHookCommonItem(ABaseCharacter owner, FName socket, FVectorDouble targetPosition, string[] paths)
 	{
 		this.Owner = owner;
@@ -18,7 +18,7 @@ public class GameplayCueHookCommonItem
 		this.Paths = paths;
 	}
 
-	// Token: 0x06019E09 RID: 105993 RVA: 0x006C3B72 File Offset: 0x006C1D72
+	// Token: 0x0601771B RID: 96027 RVA: 0x006EA40E File Offset: 0x006E860E
 	public static GameplayCueHookCommonItem Spawn(ABaseCharacter owner, FName socket, FVectorDouble targetPosition, string[] paths, bool lineAttach = true)
 	{
 		GameplayCueHookCommonItem gameplayCueHookCommonItem = new GameplayCueHookCommonItem(owner, socket, targetPosition, paths);
@@ -28,7 +28,7 @@ public class GameplayCueHookCommonItem
 		return gameplayCueHookCommonItem;
 	}
 
-	// Token: 0x06019E0A RID: 105994 RVA: 0x006C3BA0 File Offset: 0x006C1DA0
+	// Token: 0x0601771C RID: 96028 RVA: 0x006EA43C File Offset: 0x006E863C
 	public void Destroy()
 	{
 		this.IsActive = false;
@@ -41,7 +41,7 @@ public class GameplayCueHookCommonItem
 		this.DestroyBallEffect();
 	}
 
-	// Token: 0x06019E0B RID: 105995 RVA: 0x006C3C0C File Offset: 0x006C1E0C
+	// Token: 0x0601771D RID: 96029 RVA: 0x006EA4A8 File Offset: 0x006E86A8
 	public void Tick(FVectorDouble position)
 	{
 		this.TargetPosition.Set(position.X, position.Y, position.Z);
@@ -58,7 +58,7 @@ public class GameplayCueHookCommonItem
 		niagaraComp.SetNiagaraVariableVec3("end", inValue);
 	}
 
-	// Token: 0x06019E0C RID: 105996 RVA: 0x006C3C8C File Offset: 0x006C1E8C
+	// Token: 0x0601771E RID: 96030 RVA: 0x006EA528 File Offset: 0x006E8728
 	private AActor SpawnHookActor(bool needAttach = true)
 	{
 		AActor actor = ActorSystem.Instance.Get(AActor.StaticClass(), this.Owner.D_GetTransform(), null, true);
@@ -100,7 +100,7 @@ public class GameplayCueHookCommonItem
 		return actor;
 	}
 
-	// Token: 0x06019E0D RID: 105997 RVA: 0x006C3CFC File Offset: 0x006C1EFC
+	// Token: 0x0601771F RID: 96031 RVA: 0x006EA598 File Offset: 0x006E8798
 	private int CreateBallEffect()
 	{
 		if (this.Paths.Length < 2)
@@ -135,7 +135,7 @@ public class GameplayCueHookCommonItem
 		return num2;
 	}
 
-	// Token: 0x06019E0E RID: 105998 RVA: 0x006C3DAC File Offset: 0x006C1FAC
+	// Token: 0x06017720 RID: 96032 RVA: 0x006EA648 File Offset: 0x006E8848
 	private void DestroyBallEffect()
 	{
 		if (this.Paths.Length < 3)
@@ -169,29 +169,29 @@ public class GameplayCueHookCommonItem
 		EffectUtil.SetAdditionalEffectTimeScaleByEntity(CreatureModel.Instance.GetEntityById(num), effectId);
 	}
 
-	// Token: 0x0400C3AA RID: 50090
+	// Token: 0x0400C753 RID: 51027
 	[Nullable(2)]
 	private AActor HookActor;
 
-	// Token: 0x0400C3AB RID: 50091
+	// Token: 0x0400C754 RID: 51028
 	private int EffectViewHandle;
 
-	// Token: 0x0400C3AC RID: 50092
+	// Token: 0x0400C755 RID: 51029
 	private bool IsActive;
 
-	// Token: 0x0400C3AD RID: 50093
+	// Token: 0x0400C756 RID: 51030
 	[Nullable(2)]
 	private UNiagaraComponent NiagaraComp;
 
-	// Token: 0x0400C3AE RID: 50094
+	// Token: 0x0400C757 RID: 51031
 	private readonly ABaseCharacter Owner;
 
-	// Token: 0x0400C3AF RID: 50095
+	// Token: 0x0400C758 RID: 51032
 	private readonly FName Socket;
 
-	// Token: 0x0400C3B0 RID: 50096
+	// Token: 0x0400C759 RID: 51033
 	public FVectorDouble TargetPosition;
 
-	// Token: 0x0400C3B1 RID: 50097
+	// Token: 0x0400C75A RID: 51034
 	public readonly string[] Paths;
 }

@@ -4,12 +4,13 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.RoleUi;
+using CSharpScript.Game.Module.RoleUi.RoleDevelop;
 using CSharpScript.Game.Module.Util;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200279D RID: 10141
+// Token: 0x02001D17 RID: 7447
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -18,7 +19,7 @@ using UnrealEngine;
 })]
 public class RoleListItem : GridProxyAbstract<RoleListItemData>
 {
-	// Token: 0x06014D20 RID: 85280 RVA: 0x005484FC File Offset: 0x005466FC
+	// Token: 0x060126F3 RID: 75507 RVA: 0x005725F0 File Offset: 0x005707F0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,7 +33,8 @@ public class RoleListItem : GridProxyAbstract<RoleListItemData>
 			new ValueTuple<int, Type>(6, typeof(UUIItem)),
 			new ValueTuple<int, Type>(7, typeof(UUIItem)),
 			new ValueTuple<int, Type>(8, typeof(UUISprite)),
-			new ValueTuple<int, Type>(9, typeof(UUIItem))
+			new ValueTuple<int, Type>(9, typeof(UUIItem)),
+			new ValueTuple<int, Type>(10, typeof(UUIItem))
 		};
 		this.BtnBindInfo = new List<ValueTuple<int, Delegate>>
 		{
@@ -40,7 +42,7 @@ public class RoleListItem : GridProxyAbstract<RoleListItemData>
 		};
 	}
 
-	// Token: 0x06014D21 RID: 85281 RVA: 0x00548614 File Offset: 0x00546814
+	// Token: 0x060126F4 RID: 75508 RVA: 0x00572720 File Offset: 0x00570920
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RoleListItem.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -51,7 +53,7 @@ public class RoleListItem : GridProxyAbstract<RoleListItemData>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014D22 RID: 85282 RVA: 0x00548658 File Offset: 0x00546858
+	// Token: 0x060126F5 RID: 75509 RVA: 0x00572764 File Offset: 0x00570964
 	protected override void OnStart()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -62,7 +64,7 @@ public class RoleListItem : GridProxyAbstract<RoleListItemData>
 		}
 	}
 
-	// Token: 0x06014D23 RID: 85283 RVA: 0x00548692 File Offset: 0x00546892
+	// Token: 0x060126F6 RID: 75510 RVA: 0x0057279E File Offset: 0x0057099E
 	private void ToggleCallBackInternal(EToggleState toggleState)
 	{
 		if (this.ToggleCallBack != null)
@@ -71,13 +73,13 @@ public class RoleListItem : GridProxyAbstract<RoleListItemData>
 		}
 	}
 
-	// Token: 0x06014D24 RID: 85284 RVA: 0x005486AD File Offset: 0x005468AD
+	// Token: 0x060126F7 RID: 75511 RVA: 0x005727B9 File Offset: 0x005709B9
 	public bool CanToggleExecuteChangeInternal()
 	{
 		return this.CanToggleExecuteChange == null || this.CanToggleExecuteChange(base.GridIndex);
 	}
 
-	// Token: 0x06014D25 RID: 85285 RVA: 0x005486CC File Offset: 0x005468CC
+	// Token: 0x060126F8 RID: 75512 RVA: 0x005727D8 File Offset: 0x005709D8
 	private void UpdateRoleItem(RoleDataBase roleInstance, bool needTrial = true)
 	{
 		this.RoleIconItem.Refresh(roleInstance);
@@ -100,7 +102,7 @@ public class RoleListItem : GridProxyAbstract<RoleListItemData>
 		}
 	}
 
-	// Token: 0x06014D26 RID: 85286 RVA: 0x00548748 File Offset: 0x00546948
+	// Token: 0x060126F9 RID: 75513 RVA: 0x00572854 File Offset: 0x00570A54
 	private void UpdateRoleTeamItem(RoleListItemData data)
 	{
 		int dataId = this.DataId;
@@ -118,7 +120,7 @@ public class RoleListItem : GridProxyAbstract<RoleListItemData>
 		this.UpdateRoleTeamRoleSelect(dataId);
 	}
 
-	// Token: 0x06014D27 RID: 85287 RVA: 0x00548784 File Offset: 0x00546984
+	// Token: 0x060126FA RID: 75514 RVA: 0x00572890 File Offset: 0x00570A90
 	private void UpdateRoleTeamNormal(int roleId)
 	{
 		List<SceneTeamItem> teamItems = SceneTeamModel.Instance.GetTeamItems(true);
@@ -142,7 +144,7 @@ public class RoleListItem : GridProxyAbstract<RoleListItemData>
 		this.SetRoleTeamItemRes(pos, false);
 	}
 
-	// Token: 0x06014D28 RID: 85288 RVA: 0x005487F4 File Offset: 0x005469F4
+	// Token: 0x060126FB RID: 75515 RVA: 0x00572900 File Offset: 0x00570B00
 	private void UpdateRoleTeamEditFormation(int roleId)
 	{
 		int roleIndex = RoleSelectModel.Instance.GetRoleIndex(roleId);
@@ -155,7 +157,7 @@ public class RoleListItem : GridProxyAbstract<RoleListItemData>
 		this.SetRoleTeamItemRes(pos, true);
 	}
 
-	// Token: 0x06014D29 RID: 85289 RVA: 0x00548838 File Offset: 0x00546A38
+	// Token: 0x060126FC RID: 75516 RVA: 0x00572944 File Offset: 0x00570B44
 	private void UpdateRoleTeamRoleSelect(int roleId)
 	{
 		int roleIndex = RoleSelectModel.Instance.GetRoleIndex(roleId);
@@ -167,14 +169,27 @@ public class RoleListItem : GridProxyAbstract<RoleListItemData>
 		this.SetRoleTeamItemRes(roleIndex, true);
 	}
 
-	// Token: 0x06014D2A RID: 85290 RVA: 0x00548868 File Offset: 0x00546A68
+	// Token: 0x060126FD RID: 75517 RVA: 0x00572974 File Offset: 0x00570B74
 	private void UpdateIsNewRole()
 	{
 		RoleDataBase roleDataById = RoleModel.Instance.GetRoleDataById(this.DataId, true);
-		base.GetItem(7).SetUIActive(roleDataById.GetIsNew());
+		base.GetItem(7).SetUIActive(roleDataById.GetIsNew() && !this.IsDevelopTarget());
 	}
 
-	// Token: 0x06014D2B RID: 85291 RVA: 0x0054889C File Offset: 0x00546A9C
+	// Token: 0x060126FE RID: 75518 RVA: 0x005729B4 File Offset: 0x00570BB4
+	private bool IsDevelopTarget()
+	{
+		int devTargetRoleId = RoleDevelopModel.Instance.DevTargetRoleId;
+		return devTargetRoleId > 0 && this.DataId == devTargetRoleId;
+	}
+
+	// Token: 0x060126FF RID: 75519 RVA: 0x005729DB File Offset: 0x00570BDB
+	private void UpdateDevelopItem()
+	{
+		base.GetItem(10).SetUIActive(this.IsDevelopTarget());
+	}
+
+	// Token: 0x06012700 RID: 75520 RVA: 0x005729F0 File Offset: 0x00570BF0
 	private void UpdateWarningItem(RoleListItemData data)
 	{
 		if (data.Source == ERoleViewSource.WheelTower)
@@ -186,7 +201,7 @@ public class RoleListItem : GridProxyAbstract<RoleListItemData>
 		base.GetItem(9).SetUIActive(false);
 	}
 
-	// Token: 0x06014D2C RID: 85292 RVA: 0x005488E4 File Offset: 0x00546AE4
+	// Token: 0x06012701 RID: 75521 RVA: 0x00572A38 File Offset: 0x00570C38
 	private void SetRoleTeamItemRes(int pos = 0, bool setSize = false)
 	{
 		bool flag = pos > 0;
@@ -203,14 +218,14 @@ public class RoleListItem : GridProxyAbstract<RoleListItemData>
 		text.text = defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06014D2D RID: 85293 RVA: 0x00548944 File Offset: 0x00546B44
+	// Token: 0x06012702 RID: 75522 RVA: 0x00572A98 File Offset: 0x00570C98
 	[NullableContext(2)]
 	public UUIItem GetRedDotItem()
 	{
 		return base.GetItem(6);
 	}
 
-	// Token: 0x06014D2E RID: 85294 RVA: 0x00548950 File Offset: 0x00546B50
+	// Token: 0x06012703 RID: 75523 RVA: 0x00572AA4 File Offset: 0x00570CA4
 	public void SetToggleState(EToggleState state, bool force = false)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -222,7 +237,7 @@ public class RoleListItem : GridProxyAbstract<RoleListItemData>
 		extendToggle.SetToggleState(state, false, false, false);
 	}
 
-	// Token: 0x06014D2F RID: 85295 RVA: 0x00548980 File Offset: 0x00546B80
+	// Token: 0x06012704 RID: 75524 RVA: 0x00572AD4 File Offset: 0x00570CD4
 	public override void Refresh(RoleListItemData data, bool isSelected, int gridIndex)
 	{
 		this.DataId = data.RoleDataId;
@@ -230,6 +245,7 @@ public class RoleListItem : GridProxyAbstract<RoleListItemData>
 		this.UpdateRoleItem(roleDataById, data.NeedShowTrial);
 		this.UpdateRoleTeamItem(data);
 		this.UpdateIsNewRole();
+		this.UpdateDevelopItem();
 		this.UpdateWarningItem(data);
 		if (data.NeedRedDot)
 		{
@@ -247,7 +263,7 @@ public class RoleListItem : GridProxyAbstract<RoleListItemData>
 		this.OnDeselected(false);
 	}
 
-	// Token: 0x06014D30 RID: 85296 RVA: 0x00548A0C File Offset: 0x00546C0C
+	// Token: 0x06012705 RID: 75525 RVA: 0x00572B66 File Offset: 0x00570D66
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetToggleState(EToggleState.ETT_Checked, true);
@@ -261,7 +277,7 @@ public class RoleListItem : GridProxyAbstract<RoleListItemData>
 		roleIconItem.PlaySelectSequence();
 	}
 
-	// Token: 0x06014D31 RID: 85297 RVA: 0x00548A38 File Offset: 0x00546C38
+	// Token: 0x06012706 RID: 75526 RVA: 0x00572B94 File Offset: 0x00570D94
 	private void TryRemoveRoleNewFlag(int roleId)
 	{
 		RoleDataBase roleDataById = RoleModel.Instance.GetRoleDataById(roleId, true);
@@ -277,7 +293,7 @@ public class RoleListItem : GridProxyAbstract<RoleListItemData>
 		EventSystem.Instance.Emit(EEventName.RoleSelectionListUpdate);
 	}
 
-	// Token: 0x06014D32 RID: 85298 RVA: 0x00548A7C File Offset: 0x00546C7C
+	// Token: 0x06012707 RID: 75527 RVA: 0x00572BD8 File Offset: 0x00570DD8
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetToggleState(EToggleState.ETT_UnChecked, true);
@@ -289,53 +305,55 @@ public class RoleListItem : GridProxyAbstract<RoleListItemData>
 		roleIconItem.StopSelectSequence();
 	}
 
-	// Token: 0x06014D33 RID: 85299 RVA: 0x00548A96 File Offset: 0x00546C96
+	// Token: 0x06012708 RID: 75528 RVA: 0x00572BF2 File Offset: 0x00570DF2
 	public UUIExtendToggle GetToggleForGuide()
 	{
 		return base.GetExtendToggle(0);
 	}
 
-	// Token: 0x04009CBC RID: 40124
+	// Token: 0x0400A08A RID: 41098
 	private const int ROLE_MAX_POSITION = 4;
 
-	// Token: 0x04009CBD RID: 40125
+	// Token: 0x0400A08B RID: 41099
 	protected int DataId;
 
-	// Token: 0x04009CBE RID: 40126
+	// Token: 0x0400A08C RID: 41100
 	[Nullable(2)]
 	public RoleIconItem RoleIconItem;
 
-	// Token: 0x04009CBF RID: 40127
+	// Token: 0x0400A08D RID: 41101
 	[Nullable(2)]
 	public Action<int> ToggleCallBack;
 
-	// Token: 0x04009CC0 RID: 40128
+	// Token: 0x0400A08E RID: 41102
 	[Nullable(2)]
 	public Func<int, bool> CanToggleExecuteChange;
 
-	// Token: 0x02008E12 RID: 36370
+	// Token: 0x02008057 RID: 32855
 	[NullableContext(0)]
 	private enum ERoleListItemDefine
 	{
-		// Token: 0x0402E182 RID: 188802
+		// Token: 0x0402985D RID: 170077
 		Toggle,
-		// Token: 0x0402E183 RID: 188803
+		// Token: 0x0402985E RID: 170078
 		RoleIconItem,
-		// Token: 0x0402E184 RID: 188804
+		// Token: 0x0402985F RID: 170079
 		PositionItem,
-		// Token: 0x0402E185 RID: 188805
+		// Token: 0x04029860 RID: 170080
 		PositionText,
-		// Token: 0x0402E186 RID: 188806
+		// Token: 0x04029861 RID: 170081
 		TrialItem,
-		// Token: 0x0402E187 RID: 188807
+		// Token: 0x04029862 RID: 170082
 		TeamItem,
-		// Token: 0x0402E188 RID: 188808
+		// Token: 0x04029863 RID: 170083
 		RedDotItem,
-		// Token: 0x0402E189 RID: 188809
+		// Token: 0x04029864 RID: 170084
 		IsNewItem,
-		// Token: 0x0402E18A RID: 188810
+		// Token: 0x04029865 RID: 170085
 		TrialSprite,
-		// Token: 0x0402E18B RID: 188811
-		ItemWarning
+		// Token: 0x04029866 RID: 170086
+		ItemWarning,
+		// Token: 0x04029867 RID: 170087
+		DevelopItem
 	}
 }

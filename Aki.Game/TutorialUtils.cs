@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02002C2B RID: 11307
+// Token: 0x020021A6 RID: 8614
 [NullableContext(1)]
 [Nullable(0)]
 public class TutorialUtils : IStaticVariableResetter
 {
-	// Token: 0x060178DF RID: 96479 RVA: 0x005FD0F2 File Offset: 0x005FB2F2
+	// Token: 0x06015311 RID: 86801 RVA: 0x00629B16 File Offset: 0x00627D16
 	static TutorialUtils()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TutorialUtils.CreateStaticDefaultValue), new Action(TutorialUtils.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x060178E0 RID: 96480 RVA: 0x005FD114 File Offset: 0x005FB314
+	// Token: 0x06015312 RID: 86802 RVA: 0x00629B38 File Offset: 0x00627D38
 	public static string AddSearchHighlight(string text)
 	{
 		string stringConfig = ConfigCommonParamById.GetStringConfig("TutorialSearchColor");
@@ -27,8 +27,8 @@ public class TutorialUtils : IStaticVariableResetter
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x17001FBA RID: 8122
-	// (get) Token: 0x060178E1 RID: 96481 RVA: 0x005FD176 File Offset: 0x005FB376
+	// Token: 0x17002012 RID: 8210
+	// (get) Token: 0x06015313 RID: 86803 RVA: 0x00629B9A File Offset: 0x00627D9A
 	public static int? MaxLatestTutorial
 	{
 		get
@@ -37,7 +37,7 @@ public class TutorialUtils : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x060178E2 RID: 96482 RVA: 0x005FD184 File Offset: 0x005FB384
+	// Token: 0x06015314 RID: 86804 RVA: 0x00629BA8 File Offset: 0x00627DA8
 	public static void CreateStaticDefaultValue()
 	{
 		TutorialUtils.TutorialTypeTxtMap = new Dictionary<ETutorialType, string>
@@ -97,7 +97,7 @@ public class TutorialUtils : IStaticVariableResetter
 		TutorialUtils.FixedDropDropShowPlanId = 1;
 	}
 
-	// Token: 0x060178E3 RID: 96483 RVA: 0x005FD23B File Offset: 0x005FB43B
+	// Token: 0x06015315 RID: 86805 RVA: 0x00629C5F File Offset: 0x00627E5F
 	public static void ResetStaticDefaultValue()
 	{
 		TutorialUtils.TutorialTypeTxtMap = null;
@@ -105,7 +105,7 @@ public class TutorialUtils : IStaticVariableResetter
 		TutorialUtils.FixedDropDropShowPlanId = 0;
 	}
 
-	// Token: 0x060178E4 RID: 96484 RVA: 0x005FD250 File Offset: 0x005FB450
+	// Token: 0x06015316 RID: 86806 RVA: 0x00629C74 File Offset: 0x00627E74
 	[NullableContext(2)]
 	public static string GetTutorialTypeIconPath(ETutorialType type)
 	{
@@ -117,7 +117,7 @@ public class TutorialUtils : IStaticVariableResetter
 		return null;
 	}
 
-	// Token: 0x060178E5 RID: 96485 RVA: 0x005FD283 File Offset: 0x005FB483
+	// Token: 0x06015317 RID: 86807 RVA: 0x00629CA7 File Offset: 0x00627EA7
 	[NullableContext(2)]
 	public static string GetTutorialTypeTxt(ETutorialType type)
 	{
@@ -128,12 +128,12 @@ public class TutorialUtils : IStaticVariableResetter
 		return null;
 	}
 
-	// Token: 0x0400AFB8 RID: 44984
+	// Token: 0x0400B3BD RID: 46013
 	public static int FixedDropDropShowPlanId;
 
-	// Token: 0x0400AFB9 RID: 44985
+	// Token: 0x0400B3BE RID: 46014
 	private static Dictionary<ETutorialType, string> TutorialTypeIconMap;
 
-	// Token: 0x0400AFBA RID: 44986
+	// Token: 0x0400B3BF RID: 46015
 	private static Dictionary<ETutorialType, string> TutorialTypeTxtMap;
 }

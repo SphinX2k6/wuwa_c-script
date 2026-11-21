@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020001E4 RID: 484
+	// Token: 0x020001F6 RID: 502
 	public class ConfigDangoBroadcastById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000B5B RID: 2907 RVA: 0x00099CB4 File Offset: 0x00097EB4
+		// Token: 0x06000BC7 RID: 3015 RVA: 0x0009FBEC File Offset: 0x0009DDEC
 		static ConfigDangoBroadcastById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDangoBroadcastById.CreateStaticDefaultValue), new Action(ConfigDangoBroadcastById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000B5C RID: 2908 RVA: 0x00099CD4 File Offset: 0x00097ED4
+		// Token: 0x06000BC8 RID: 3016 RVA: 0x0009FC0C File Offset: 0x0009DE0C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDangoBroadcastById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000B5D RID: 2909 RVA: 0x00099D53 File Offset: 0x00097F53
+		// Token: 0x06000BC9 RID: 3017 RVA: 0x0009FC8B File Offset: 0x0009DE8B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDangoBroadcastById.LogPair = null;
 			ConfigDangoBroadcastById.HandleId = 0;
 		}
 
-		// Token: 0x06000B5E RID: 2910 RVA: 0x00099D61 File Offset: 0x00097F61
+		// Token: 0x06000BCA RID: 3018 RVA: 0x0009FC99 File Offset: 0x0009DE99
 		public static void Init()
 		{
 			ConfigDangoBroadcastById.HandleId = ConfigCommon.InitDataStatement(ConfigDangoBroadcastById.HandleId, "db_racingbets.db", "select BinData from `DangoBroadcast` where Id=?");
 		}
 
-		// Token: 0x06000B5F RID: 2911 RVA: 0x00099D7C File Offset: 0x00097F7C
+		// Token: 0x06000BCB RID: 3019 RVA: 0x0009FCB4 File Offset: 0x0009DEB4
 		public static DangoBroadcast? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigDangoBroadcastById.HandleId, ConfigDangoBroadcastById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new DangoBroadcast?(rootAsDangoBroadcast);
 		}
 
-		// Token: 0x04000D20 RID: 3360
+		// Token: 0x04000D9E RID: 3486
 		private const string DB = "db_racingbets.db";
 
-		// Token: 0x04000D21 RID: 3361
+		// Token: 0x04000D9F RID: 3487
 		private const string FILE = "q.全服赌马.xlsx";
 
-		// Token: 0x04000D22 RID: 3362
+		// Token: 0x04000DA0 RID: 3488
 		private const string TABLE = "DangoBroadcast";
 
-		// Token: 0x04000D23 RID: 3363
+		// Token: 0x04000DA1 RID: 3489
 		private const string COMMAND = "select BinData from `DangoBroadcast` where Id=?";
 
-		// Token: 0x04000D24 RID: 3364
+		// Token: 0x04000DA2 RID: 3490
 		private const string KEY_PREFIX = "DangoBroadcastById";
 
-		// Token: 0x04000D25 RID: 3365
+		// Token: 0x04000DA3 RID: 3491
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000D26 RID: 3366
+		// Token: 0x04000DA4 RID: 3492
 		private static int HandleId;
 	}
 }

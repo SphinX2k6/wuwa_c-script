@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A2C RID: 10796
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002D19 RID: 11545
 	public class BvbPlayerOperationConstraint : ActionParams
 	{
-		// Token: 0x0600EDE2 RID: 60898 RVA: 0x0022AA15 File Offset: 0x00228C15
+		// Token: 0x0600FC7A RID: 64634 RVA: 0x002483C9 File Offset: 0x002465C9
 		public static BvbPlayerOperationConstraint Create(IBvbPlayerOperationConstraint? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B4C RID: 19276
-		// (get) Token: 0x0600EDE3 RID: 60899 RVA: 0x0022AA34 File Offset: 0x00228C34
+		// Token: 0x17004EF6 RID: 20214
+		// (get) Token: 0x0600FC7B RID: 64635 RVA: 0x002483E8 File Offset: 0x002465E8
 		public virtual IBvbPlayerOperationType EnableOperation
 		{
 			get
@@ -38,8 +36,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004B4D RID: 19277
-		// (get) Token: 0x0600EDE4 RID: 60900 RVA: 0x0022AA64 File Offset: 0x00228C64
+		// Token: 0x17004EF7 RID: 20215
+		// (get) Token: 0x0600FC7C RID: 64636 RVA: 0x00248418 File Offset: 0x00246618
 		public virtual bool? IsTheLast
 		{
 			get
@@ -52,8 +50,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004B4E RID: 19278
-		// (get) Token: 0x0600EDE5 RID: 60901 RVA: 0x0022AA9A File Offset: 0x00228C9A
+		// Token: 0x17004EF8 RID: 20216
+		// (get) Token: 0x0600FC7D RID: 64637 RVA: 0x0024844E File Offset: 0x0024664E
 		public virtual string TidPromptTxt
 		{
 			get
@@ -62,8 +60,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004B4F RID: 19279
-		// (get) Token: 0x0600EDE6 RID: 60902 RVA: 0x0022AAA7 File Offset: 0x00228CA7
+		// Token: 0x17004EF9 RID: 20217
+		// (get) Token: 0x0600FC7E RID: 64638 RVA: 0x0024845B File Offset: 0x0024665B
 		[Nullable(2)]
 		public virtual string EdTidPromptTxt
 		{
@@ -74,13 +72,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040082EE RID: 33518
+		// Token: 0x040089E1 RID: 35297
 		private IBvbPlayerOperationConstraint Instance;
 
-		// Token: 0x040082EF RID: 33519
+		// Token: 0x040089E2 RID: 35298
 		private IBvbPlayerOperationType _EnableOperationCache;
 
-		// Token: 0x040082F0 RID: 33520
+		// Token: 0x040089E3 RID: 35299
 		private bool _EnableOperationInited;
 	}
 }

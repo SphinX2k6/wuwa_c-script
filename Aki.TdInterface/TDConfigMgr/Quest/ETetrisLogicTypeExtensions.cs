@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020012A2 RID: 4770
+	// Token: 0x020013E8 RID: 5096
 	public static class ETetrisLogicTypeExtensions
 	{
-		// Token: 0x06006B80 RID: 27520 RVA: 0x00102420 File Offset: 0x00100620
+		// Token: 0x060071EE RID: 29166 RVA: 0x001103E8 File Offset: 0x0010E5E8
 		public static string ToEnumString(this ETetrisLogicType value)
 		{
 			string result;
@@ -102,7 +102,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006B81 RID: 27521 RVA: 0x001025C0 File Offset: 0x001007C0
+		// Token: 0x060071EF RID: 29167 RVA: 0x00110588 File Offset: 0x0010E788
 		public static ETetrisLogicType FromString(string name)
 		{
 			ETetrisLogicType result;
@@ -113,7 +113,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006B82 RID: 27522 RVA: 0x001025EC File Offset: 0x001007EC
+		// Token: 0x060071F0 RID: 29168 RVA: 0x001105B4 File Offset: 0x0010E7B4
 		public static bool TryFromString(string name, out ETetrisLogicType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -369,7 +369,7 @@ namespace Aki.TDConfigMgr.Quest
 			return false;
 		}
 
-		// Token: 0x06006B83 RID: 27523 RVA: 0x00102A00 File Offset: 0x00100C00
+		// Token: 0x060071F1 RID: 29169 RVA: 0x001109C8 File Offset: 0x0010EBC8
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -405,7 +405,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006B84 RID: 27524 RVA: 0x00102B07 File Offset: 0x00100D07
+		// Token: 0x060071F2 RID: 29170 RVA: 0x00110ACF File Offset: 0x0010ECCF
 		public static ETetrisLogicType[] GetValues()
 		{
 			return new ETetrisLogicType[]
@@ -441,7 +441,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006B85 RID: 27525 RVA: 0x00102B1C File Offset: 0x00100D1C
+		// Token: 0x060071F3 RID: 29171 RVA: 0x00110AE4 File Offset: 0x0010ECE4
 		public static string[] GetNames()
 		{
 			return new string[]

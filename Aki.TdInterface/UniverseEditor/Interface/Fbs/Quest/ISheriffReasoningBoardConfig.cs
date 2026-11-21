@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004118 RID: 16664
+	// Token: 0x02004559 RID: 17753
 	public struct ISheriffReasoningBoardConfig : IFlatbufferObject
 	{
-		// Token: 0x17007604 RID: 30212
-		// (get) Token: 0x06018667 RID: 99943 RVA: 0x003850A2 File Offset: 0x003832A2
+		// Token: 0x17007C0A RID: 31754
+		// (get) Token: 0x06019D0A RID: 105738 RVA: 0x003AF0AA File Offset: 0x003AD2AA
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018668 RID: 99944 RVA: 0x003850AF File Offset: 0x003832AF
+		// Token: 0x06019D0B RID: 105739 RVA: 0x003AF0B7 File Offset: 0x003AD2B7
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06018669 RID: 99945 RVA: 0x003850B8 File Offset: 0x003832B8
+		// Token: 0x06019D0C RID: 105740 RVA: 0x003AF0C0 File Offset: 0x003AD2C0
 		public static ISheriffReasoningBoardConfig GetRootAsISheriffReasoningBoardConfig(ByteBuffer _bb)
 		{
 			return ISheriffReasoningBoardConfig.GetRootAsISheriffReasoningBoardConfig(_bb, default(ISheriffReasoningBoardConfig));
 		}
 
-		// Token: 0x0601866A RID: 99946 RVA: 0x003850D4 File Offset: 0x003832D4
+		// Token: 0x06019D0D RID: 105741 RVA: 0x003AF0DC File Offset: 0x003AD2DC
 		public static ISheriffReasoningBoardConfig GetRootAsISheriffReasoningBoardConfig(ByteBuffer _bb, ISheriffReasoningBoardConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601866B RID: 99947 RVA: 0x003850F1 File Offset: 0x003832F1
+		// Token: 0x06019D0E RID: 105742 RVA: 0x003AF0F9 File Offset: 0x003AD2F9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601866C RID: 99948 RVA: 0x00385100 File Offset: 0x00383300
+		// Token: 0x06019D0F RID: 105743 RVA: 0x003AF108 File Offset: 0x003AD308
 		public ISheriffReasoningBoardConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007605 RID: 30213
-		// (get) Token: 0x0601866D RID: 99949 RVA: 0x00385110 File Offset: 0x00383310
+		// Token: 0x17007C0B RID: 31755
+		// (get) Token: 0x06019D10 RID: 105744 RVA: 0x003AF118 File Offset: 0x003AD318
 		public int Id
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601866E RID: 99950 RVA: 0x0038514C File Offset: 0x0038334C
+		// Token: 0x06019D11 RID: 105745 RVA: 0x003AF154 File Offset: 0x003AD354
 		public static Offset<ISheriffReasoningBoardConfig> CreateISheriffReasoningBoardConfig(FlatBufferBuilder builder, int Id = 0)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ISheriffReasoningBoardConfig.EndISheriffReasoningBoardConfig(builder);
 		}
 
-		// Token: 0x0601866F RID: 99951 RVA: 0x00385162 File Offset: 0x00383362
+		// Token: 0x06019D12 RID: 105746 RVA: 0x003AF16A File Offset: 0x003AD36A
 		public static void StartISheriffReasoningBoardConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06018670 RID: 99952 RVA: 0x0038516B File Offset: 0x0038336B
+		// Token: 0x06019D13 RID: 105747 RVA: 0x003AF173 File Offset: 0x003AD373
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(0, id, 0);
 		}
 
-		// Token: 0x06018671 RID: 99953 RVA: 0x00385176 File Offset: 0x00383376
+		// Token: 0x06019D14 RID: 105748 RVA: 0x003AF17E File Offset: 0x003AD37E
 		public static Offset<ISheriffReasoningBoardConfig> EndISheriffReasoningBoardConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<ISheriffReasoningBoardConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06018672 RID: 99954 RVA: 0x00385184 File Offset: 0x00383384
+		// Token: 0x06019D15 RID: 105749 RVA: 0x003AF18C File Offset: 0x003AD38C
 		public ISheriffReasoningBoardConfigT UnPack()
 		{
 			ISheriffReasoningBoardConfigT sheriffReasoningBoardConfigT = new ISheriffReasoningBoardConfigT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return sheriffReasoningBoardConfigT;
 		}
 
-		// Token: 0x06018673 RID: 99955 RVA: 0x0038519F File Offset: 0x0038339F
+		// Token: 0x06019D16 RID: 105750 RVA: 0x003AF1A7 File Offset: 0x003AD3A7
 		public void UnPackTo(ISheriffReasoningBoardConfigT _o)
 		{
 			_o.Id = this.Id;
 		}
 
-		// Token: 0x06018674 RID: 99956 RVA: 0x003851B0 File Offset: 0x003833B0
+		// Token: 0x06019D17 RID: 105751 RVA: 0x003AF1B8 File Offset: 0x003AD3B8
 		public static Offset<ISheriffReasoningBoardConfig> Pack(FlatBufferBuilder builder, ISheriffReasoningBoardConfigT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ISheriffReasoningBoardConfig.CreateISheriffReasoningBoardConfig(builder, _o.Id);
 		}
 
-		// Token: 0x0400BD04 RID: 48388
+		// Token: 0x0400C6ED RID: 50925
 		private Table __p;
 	}
 }

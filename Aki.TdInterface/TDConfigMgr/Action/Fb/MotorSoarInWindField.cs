@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002AB0 RID: 10928
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002DA4 RID: 11684
 	public class MotorSoarInWindField : ActionParams
 	{
-		// Token: 0x0600EFE8 RID: 61416 RVA: 0x0022DBF2 File Offset: 0x0022BDF2
+		// Token: 0x0600FE9E RID: 65182 RVA: 0x0024B8FE File Offset: 0x00249AFE
 		public static MotorSoarInWindField Create(IMotorSoarInWindField? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004C4A RID: 19530
-		// (get) Token: 0x0600EFE9 RID: 61417 RVA: 0x0022DC11 File Offset: 0x0022BE11
+		// Token: 0x17005004 RID: 20484
+		// (get) Token: 0x0600FE9F RID: 65183 RVA: 0x0024B91D File Offset: 0x00249B1D
 		public virtual IMotorSoarInWindFieldControlType ControlType
 		{
 			get
@@ -38,13 +35,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040083FA RID: 33786
+		// Token: 0x04008AFE RID: 35582
 		private IMotorSoarInWindField Instance;
 
-		// Token: 0x040083FB RID: 33787
+		// Token: 0x04008AFF RID: 35583
 		private IMotorSoarInWindFieldControlType _ControlTypeCache;
 
-		// Token: 0x040083FC RID: 33788
+		// Token: 0x04008B00 RID: 35584
 		private bool _ControlTypeInited;
 	}
 }

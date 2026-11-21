@@ -9,12 +9,12 @@ using CSharpScript.Game.Module.GenericPrompt;
 using CSharpScript.Typing;
 using UnrealEngine;
 
-// Token: 0x02000E5D RID: 3677
+// Token: 0x02000312 RID: 786
 [NullableContext(1)]
 [Nullable(0)]
 public class PlatformSdkWindowsGlobal : PlatformSdkBase
 {
-	// Token: 0x06005944 RID: 22852 RVA: 0x00103A55 File Offset: 0x00101C55
+	// Token: 0x06002CDB RID: 11483 RVA: 0x0010B715 File Offset: 0x00109915
 	protected override void OnInit()
 	{
 		this.CurrentDid = UKuroSDKManager.GetBasicInfo().DeviceId;
@@ -22,7 +22,7 @@ public class PlatformSdkWindowsGlobal : PlatformSdkBase
 		FCrashSightProxy.SetCustomData("SdkChannelId", this.GetChannelId());
 	}
 
-	// Token: 0x06005945 RID: 22853 RVA: 0x00103A88 File Offset: 0x00101C88
+	// Token: 0x06002CDC RID: 11484 RVA: 0x0010B748 File Offset: 0x00109948
 	protected override void BindSpecialEvent()
 	{
 		UKuroSDKManager.Get().AnnounceInitDelegate.Clear();
@@ -35,7 +35,7 @@ public class PlatformSdkWindowsGlobal : PlatformSdkBase
 		UKuroSDKManager.Get().OnLoginDelegate.Add(this.OnLoginCallBack);
 	}
 
-	// Token: 0x06005946 RID: 22854 RVA: 0x00103B2C File Offset: 0x00101D2C
+	// Token: 0x06002CDD RID: 11485 RVA: 0x0010B7EC File Offset: 0x001099EC
 	public void CustomerServiceResultCallBack(string result)
 	{
 		WindowsSdkCustomerServiceSt windowsSdkCustomerServiceSt = Json.Parse<WindowsSdkCustomerServiceSt>(result, null);
@@ -47,7 +47,7 @@ public class PlatformSdkWindowsGlobal : PlatformSdkBase
 		EventSystem.Instance.Emit(EEventName.SdkCustomerRedPointRefresh);
 	}
 
-	// Token: 0x06005947 RID: 22855 RVA: 0x00103B70 File Offset: 0x00101D70
+	// Token: 0x06002CDE RID: 11486 RVA: 0x0010B830 File Offset: 0x00109A30
 	public override void OpenWebView(string title, string url, bool isLandscape, bool transparent, bool webAccelerated, string identifier)
 	{
 		OpenWebViewParamWindows openWebViewParamWindows = new OpenWebViewParamWindows();
@@ -73,7 +73,7 @@ public class PlatformSdkWindowsGlobal : PlatformSdkBase
 		UKuroSDKManager.OpenWebView(title, url, isLandscape, transparent, webAccelerated, identifier, text ?? "");
 	}
 
-	// Token: 0x06005948 RID: 22856 RVA: 0x00103C20 File Offset: 0x00101E20
+	// Token: 0x06002CDF RID: 11487 RVA: 0x0010B8E0 File Offset: 0x00109AE0
 	[return: Nullable(2)]
 	public override string GetSdkOpenUrlWndInfo(string title, string url)
 	{
@@ -95,17 +95,17 @@ public class PlatformSdkWindowsGlobal : PlatformSdkBase
 		return text;
 	}
 
-	// Token: 0x06005949 RID: 22857 RVA: 0x00103C90 File Offset: 0x00101E90
+	// Token: 0x06002CE0 RID: 11488 RVA: 0x0010B950 File Offset: 0x00109B50
 	public override void SdkExit()
 	{
 		KuroApplication.ExitWithReason(false, "SdkExit");
 	}
 
-	// Token: 0x0600594A RID: 22858 RVA: 0x00103CA0 File Offset: 0x00101EA0
+	// Token: 0x06002CE1 RID: 11489 RVA: 0x0010B960 File Offset: 0x00109B60
 	public override void InitializePostWebView()
 	{
 		string currentSelectServerId = this.GetCurrentSelectServerId();
-		string text = Json.Stringify<InitializePostWebViewParam>(new InitializePostWebViewParam
+		string text = Json.Stringify(new InitializePostWebViewParam
 		{
 			language = LanguageSystem.Instance.PackageLanguage,
 			cdn = new string[]
@@ -124,7 +124,7 @@ public class PlatformSdkWindowsGlobal : PlatformSdkBase
 		UKuroSDKManager.KuroSDKEvent(ukuroSDKEventType, text);
 	}
 
-	// Token: 0x0600594B RID: 22859 RVA: 0x00103D40 File Offset: 0x00101F40
+	// Token: 0x06002CE2 RID: 11490 RVA: 0x0010BA00 File Offset: 0x00109C00
 	public override void SdkPay(ISDKPayment paymentInfo)
 	{
 		if (KuroSdkController.Instance.CanUseSdk())
@@ -136,7 +136,7 @@ public class PlatformSdkWindowsGlobal : PlatformSdkBase
 		}
 	}
 
-	// Token: 0x0600594C RID: 22860 RVA: 0x00103D74 File Offset: 0x00101F74
+	// Token: 0x06002CE3 RID: 11491 RVA: 0x0010BA34 File Offset: 0x00109C34
 	private string GetPaymentInfo(ISDKPayment payment, ISDKPayRole roleInfo)
 	{
 		return JsonSerializer.Serialize<PayInfoWindowsGlobal>(new PayInfoWindowsGlobal
@@ -156,7 +156,7 @@ public class PlatformSdkWindowsGlobal : PlatformSdkBase
 		}, KuroSdkJsonOptions.Unescaped);
 	}
 
-	// Token: 0x0600594D RID: 22861 RVA: 0x00103E58 File Offset: 0x00102058
+	// Token: 0x06002CE4 RID: 11492 RVA: 0x0010BB18 File Offset: 0x00109D18
 	public override void OpenCustomerService(EKuroSdkOpenCustomerServerType fromType)
 	{
 		LoginModel instance = LoginModel.Instance;
@@ -169,7 +169,7 @@ public class PlatformSdkWindowsGlobal : PlatformSdkBase
 		}, KuroSdkJsonOptions.Unescaped));
 	}
 
-	// Token: 0x0600594E RID: 22862 RVA: 0x00103EAC File Offset: 0x001020AC
+	// Token: 0x06002CE5 RID: 11493 RVA: 0x0010BB6C File Offset: 0x00109D6C
 	public override void SdkSelectRole()
 	{
 		Log.Instance.Info(ELogModule.KuroSdk, ELogAuthor.YZY, "上报选择角色", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -181,7 +181,7 @@ public class PlatformSdkWindowsGlobal : PlatformSdkBase
 		}
 	}
 
-	// Token: 0x0600594F RID: 22863 RVA: 0x00103EF4 File Offset: 0x001020F4
+	// Token: 0x06002CE6 RID: 11494 RVA: 0x0010BBB4 File Offset: 0x00109DB4
 	public override void SdkCreateRole()
 	{
 		Log.Instance.Info(ELogModule.KuroSdk, ELogAuthor.YZY, "上报创建新角色", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -193,7 +193,7 @@ public class PlatformSdkWindowsGlobal : PlatformSdkBase
 		}
 	}
 
-	// Token: 0x06005950 RID: 22864 RVA: 0x00103F3C File Offset: 0x0010213C
+	// Token: 0x06002CE7 RID: 11495 RVA: 0x0010BBFC File Offset: 0x00109DFC
 	public override void SdkLevelUpRole()
 	{
 		Log.Instance.Info(ELogModule.KuroSdk, ELogAuthor.YZY, "上报角色升级", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -205,7 +205,7 @@ public class PlatformSdkWindowsGlobal : PlatformSdkBase
 		}
 	}
 
-	// Token: 0x06005951 RID: 22865 RVA: 0x00103F84 File Offset: 0x00102184
+	// Token: 0x06002CE8 RID: 11496 RVA: 0x0010BC44 File Offset: 0x00109E44
 	private string GetCreateRoleInfo()
 	{
 		LoginModel instance = LoginModel.Instance;
@@ -229,7 +229,7 @@ public class PlatformSdkWindowsGlobal : PlatformSdkBase
 		return JsonSerializer.Serialize<RoleInfoWindows>(roleInfoWindows, options);
 	}
 
-	// Token: 0x06005952 RID: 22866 RVA: 0x00104074 File Offset: 0x00102274
+	// Token: 0x06002CE9 RID: 11497 RVA: 0x0010BD34 File Offset: 0x00109F34
 	private string GetRoleInfo()
 	{
 		FunctionModel instance = FunctionModel.Instance;
@@ -255,13 +255,13 @@ public class PlatformSdkWindowsGlobal : PlatformSdkBase
 		return JsonSerializer.Serialize<RoleInfoWindows>(roleInfoWindows, options);
 	}
 
-	// Token: 0x06005953 RID: 22867 RVA: 0x00104174 File Offset: 0x00102374
+	// Token: 0x06002CEA RID: 11498 RVA: 0x0010BE34 File Offset: 0x0010A034
 	public override void OpenUserCenter()
 	{
 		UKuroSDKManager.BindAccount();
 	}
 
-	// Token: 0x06005954 RID: 22868 RVA: 0x0010417C File Offset: 0x0010237C
+	// Token: 0x06002CEB RID: 11499 RVA: 0x0010BE3C File Offset: 0x0010A03C
 	public override void QueryProduct(string[] productList, string channelId)
 	{
 		string text = "";
@@ -274,14 +274,14 @@ public class PlatformSdkWindowsGlobal : PlatformSdkBase
 				text += ",";
 			}
 		}
-		UKuroSDKManager.QueryProductInfo(Json.Stringify<QueryProductInfoParamWindows>(new QueryProductInfoParamWindows
+		UKuroSDKManager.QueryProductInfo(Json.Stringify(new QueryProductInfoParamWindows
 		{
 			goodsIds = text,
 			payChannel = channelId
 		}, null) ?? "");
 	}
 
-	// Token: 0x06005955 RID: 22869 RVA: 0x001041E4 File Offset: 0x001023E4
+	// Token: 0x06002CEC RID: 11500 RVA: 0x0010BEA4 File Offset: 0x0010A0A4
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -309,7 +309,7 @@ public class PlatformSdkWindowsGlobal : PlatformSdkBase
 		return list.ToArray();
 	}
 
-	// Token: 0x06005956 RID: 22870 RVA: 0x00104298 File Offset: 0x00102498
+	// Token: 0x06002CED RID: 11501 RVA: 0x0010BF58 File Offset: 0x0010A158
 	public override void SetFont()
 	{
 		SetFontParamWindows setFontParamWindows = new SetFontParamWindows();
@@ -332,37 +332,37 @@ public class PlatformSdkWindowsGlobal : PlatformSdkBase
 		UKuroSDKManager.SetFont(text);
 	}
 
-	// Token: 0x06005957 RID: 22871 RVA: 0x00104329 File Offset: 0x00102529
+	// Token: 0x06002CEE RID: 11502 RVA: 0x0010BFE9 File Offset: 0x0010A1E9
 	public override string GetChannelId()
 	{
 		return UKuroSDKManager.GetSdkParams("channel_id");
 	}
 
-	// Token: 0x06005958 RID: 22872 RVA: 0x00104335 File Offset: 0x00102535
+	// Token: 0x06002CEF RID: 11503 RVA: 0x0010BFF5 File Offset: 0x0010A1F5
 	public override string GetChannelName()
 	{
 		return UKuroSDKManager.GetSdkParams("channel_name");
 	}
 
-	// Token: 0x06005959 RID: 22873 RVA: 0x00104341 File Offset: 0x00102541
+	// Token: 0x06002CF0 RID: 11504 RVA: 0x0010C001 File Offset: 0x0010A201
 	public override string GetGameId()
 	{
 		return UKuroSDKManager.GetSdkParams("project_id");
 	}
 
-	// Token: 0x0600595A RID: 22874 RVA: 0x0010434D File Offset: 0x0010254D
+	// Token: 0x06002CF1 RID: 11505 RVA: 0x0010C00D File Offset: 0x0010A20D
 	public override string GetDid()
 	{
 		return UKuroSDKManager.GetSdkParams("did");
 	}
 
-	// Token: 0x0600595B RID: 22875 RVA: 0x00104359 File Offset: 0x00102559
+	// Token: 0x06002CF2 RID: 11506 RVA: 0x0010C019 File Offset: 0x0010A219
 	public override string GetAccessToken()
 	{
 		return UKuroSDKManager.GetSdkParams("token");
 	}
 
-	// Token: 0x0600595C RID: 22876 RVA: 0x00104368 File Offset: 0x00102568
+	// Token: 0x06002CF3 RID: 11507 RVA: 0x0010C028 File Offset: 0x0010A228
 	public override void SdkOpenUrlWnd(string title, string url, bool isLandscape, bool transparent, bool webAccelerated = true)
 	{
 		if (this.LastOpenTime != 0.0 && Time.Instance.Now - this.LastOpenTime <= 5000.0)
@@ -374,13 +374,13 @@ public class PlatformSdkWindowsGlobal : PlatformSdkBase
 		this.OpenWebView(title, url, isLandscape, transparent, webAccelerated, string.Empty);
 	}
 
-	// Token: 0x0600595D RID: 22877 RVA: 0x001043D9 File Offset: 0x001025D9
+	// Token: 0x06002CF4 RID: 11508 RVA: 0x0010C099 File Offset: 0x0010A299
 	public override bool GetProtocolState()
 	{
 		return true;
 	}
 
-	// Token: 0x0600595E RID: 22878 RVA: 0x001043DC File Offset: 0x001025DC
+	// Token: 0x06002CF5 RID: 11509 RVA: 0x0010C09C File Offset: 0x0010A29C
 	protected override void OnPaymentCallBack(FPaymentStruct payment, string strResult, Action<bool, string> paymentFunction)
 	{
 		WindowsPaymentSt windowsPaymentSt = Json.Parse<WindowsPaymentSt>(strResult, null);
@@ -393,15 +393,15 @@ public class PlatformSdkWindowsGlobal : PlatformSdkBase
 		paymentFunction(arg, strResult);
 	}
 
-	// Token: 0x040028D6 RID: 10454
+	// Token: 0x04002971 RID: 10609
 	private const int WEBVIEWCD = 5000;
 
-	// Token: 0x040028D7 RID: 10455
+	// Token: 0x04002972 RID: 10610
 	public readonly Action<string> OnAnnounceInitCallBack = delegate(string result)
 	{
 	};
 
-	// Token: 0x040028D8 RID: 10456
+	// Token: 0x04002973 RID: 10611
 	public readonly Action<string> AnnounceRedPointCallBack = delegate(string result)
 	{
 		WindowsSdkRedPointContentSt windowsSdkRedPointContentSt = Json.Parse<WindowsSdkRedPointContentSt>(Json.Parse<WindowsSdkRedPointSt>(result, null).data, null);
@@ -409,7 +409,7 @@ public class PlatformSdkWindowsGlobal : PlatformSdkBase
 		EventSystem.Instance.Emit(EEventName.SdkPostWebViewRedPointRefresh);
 	};
 
-	// Token: 0x040028D9 RID: 10457
+	// Token: 0x04002974 RID: 10612
 	public readonly Action<string> OnLoginCallBack = delegate(string result)
 	{
 	};

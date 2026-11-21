@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004D1F RID: 19743
+	// Token: 0x0200521B RID: 21019
 	public class IWeaponLevelTypeT
 	{
-		// Token: 0x17008F27 RID: 36647
-		// (get) Token: 0x0601F56C RID: 128364 RVA: 0x0045E9F6 File Offset: 0x0045CBF6
-		// (set) Token: 0x0601F56D RID: 128365 RVA: 0x0045E9FE File Offset: 0x0045CBFE
+		// Token: 0x17009660 RID: 38496
+		// (get) Token: 0x060211B3 RID: 135603 RVA: 0x00492986 File Offset: 0x00490B86
+		// (set) Token: 0x060211B4 RID: 135604 RVA: 0x0049298E File Offset: 0x00490B8E
 		public EWeaponLevelType Type { get; set; }
 
-		// Token: 0x0601F56E RID: 128366 RVA: 0x0045EA07 File Offset: 0x0045CC07
+		// Token: 0x060211B5 RID: 135605 RVA: 0x00492997 File Offset: 0x00490B97
 		public IWeaponLevelTypeT()
 		{
 			this.Type = EWeaponLevelType.SpecifyRole;

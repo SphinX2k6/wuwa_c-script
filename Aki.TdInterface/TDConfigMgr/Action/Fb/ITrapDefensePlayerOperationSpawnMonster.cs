@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A8D RID: 10893
+	// Token: 0x02002D81 RID: 11649
 	public class ITrapDefensePlayerOperationSpawnMonster : ITrapDefensePlayerOperationType
 	{
-		// Token: 0x0600EF54 RID: 61268 RVA: 0x0022CC2C File Offset: 0x0022AE2C
-		[NullableContext(1)]
+		// Token: 0x0600FE0A RID: 65034 RVA: 0x0024A938 File Offset: 0x00248B38
 		public static ITrapDefensePlayerOperationSpawnMonster Create(ITrapDefensePlayerOperationSpawnMonster? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004BFC RID: 19452
-		// (get) Token: 0x0600EF55 RID: 61269 RVA: 0x0022CC4B File Offset: 0x0022AE4B
+		// Token: 0x17004FB6 RID: 20406
+		// (get) Token: 0x0600FE0B RID: 65035 RVA: 0x0024A957 File Offset: 0x00248B57
 		public override ETrapDefensePlayerOperationType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040083AD RID: 33709
+		// Token: 0x04008AB1 RID: 35505
 		private ITrapDefensePlayerOperationSpawnMonster Instance;
 	}
 }

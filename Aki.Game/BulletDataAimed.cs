@@ -1,11 +1,11 @@
 ﻿using System;
 using AkiClient.Game.Aki.Core.Fight;
 
-// Token: 0x02002DA8 RID: 11688
+// Token: 0x02002302 RID: 8962
 public class BulletDataAimed
 {
-	// Token: 0x17002123 RID: 8483
-	// (get) Token: 0x060188F6 RID: 100598 RVA: 0x00646D6E File Offset: 0x00644F6E
+	// Token: 0x1700217E RID: 8574
+	// (get) Token: 0x0601619D RID: 90525 RVA: 0x0066CC15 File Offset: 0x0066AE15
 	public bool AimedCtrlDir
 	{
 		get
@@ -18,8 +18,8 @@ public class BulletDataAimed
 		}
 	}
 
-	// Token: 0x17002124 RID: 8484
-	// (get) Token: 0x060188F7 RID: 100599 RVA: 0x00646D9E File Offset: 0x00644F9E
+	// Token: 0x1700217F RID: 8575
+	// (get) Token: 0x0601619E RID: 90526 RVA: 0x0066CC45 File Offset: 0x0066AE45
 	public float AngleOffset
 	{
 		get
@@ -32,8 +32,8 @@ public class BulletDataAimed
 		}
 	}
 
-	// Token: 0x17002125 RID: 8485
-	// (get) Token: 0x060188F8 RID: 100600 RVA: 0x00646DCE File Offset: 0x00644FCE
+	// Token: 0x17002180 RID: 8576
+	// (get) Token: 0x0601619F RID: 90527 RVA: 0x0066CC75 File Offset: 0x0066AE75
 	public float DistLimit
 	{
 		get
@@ -46,21 +46,21 @@ public class BulletDataAimed
 		}
 	}
 
-	// Token: 0x060188F9 RID: 100601 RVA: 0x00646DFE File Offset: 0x00644FFE
+	// Token: 0x060161A0 RID: 90528 RVA: 0x0066CCA5 File Offset: 0x0066AEA5
 	public BulletDataAimed(SReBulletDataAimed data)
 	{
 		this.Data = data;
 	}
 
-	// Token: 0x0400B609 RID: 46601
+	// Token: 0x0400B982 RID: 47490
 	private readonly SReBulletDataAimed Data;
 
-	// Token: 0x0400B60A RID: 46602
+	// Token: 0x0400B983 RID: 47491
 	private bool? AimedCtrlDirInternal;
 
-	// Token: 0x0400B60B RID: 46603
+	// Token: 0x0400B984 RID: 47492
 	private float? AngleOffsetInternal;
 
-	// Token: 0x0400B60C RID: 46604
+	// Token: 0x0400B985 RID: 47493
 	private float? DistLimitInternal;
 }

@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000FA1 RID: 4001
+// Token: 0x02000456 RID: 1110
 [NullableContext(1)]
 [Nullable(0)]
 public class FurniturePlaceToNewSlotContext : IFurniturePlaceToNewSlotContext
 {
-	// Token: 0x1700081C RID: 2076
-	// (get) Token: 0x0600665A RID: 26202 RVA: 0x001440B6 File Offset: 0x001422B6
-	// (set) Token: 0x0600665B RID: 26203 RVA: 0x001440BE File Offset: 0x001422BE
+	// Token: 0x1700083E RID: 2110
+	// (get) Token: 0x060039F2 RID: 14834 RVA: 0x0014C94A File Offset: 0x0014AB4A
+	// (set) Token: 0x060039F3 RID: 14835 RVA: 0x0014C952 File Offset: 0x0014AB52
 	public IFurnitureAreaSlotContext SourceContext { get; set; }
 
-	// Token: 0x1700081D RID: 2077
-	// (get) Token: 0x0600665C RID: 26204 RVA: 0x001440C7 File Offset: 0x001422C7
-	// (set) Token: 0x0600665D RID: 26205 RVA: 0x001440CF File Offset: 0x001422CF
+	// Token: 0x1700083F RID: 2111
+	// (get) Token: 0x060039F4 RID: 14836 RVA: 0x0014C95B File Offset: 0x0014AB5B
+	// (set) Token: 0x060039F5 RID: 14837 RVA: 0x0014C963 File Offset: 0x0014AB63
 	public IFurnitureAreaSlotContext TargetContext { get; set; }
 }

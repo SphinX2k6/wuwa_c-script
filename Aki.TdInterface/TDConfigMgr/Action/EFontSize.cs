@@ -3,15 +3,15 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020015E9 RID: 5609
+	// Token: 0x0200174A RID: 5962
 	[EnumExtensions]
 	public enum EFontSize
 	{
-		// Token: 0x04004AD4 RID: 19156
+		// Token: 0x04004E97 RID: 20119
 		Small,
-		// Token: 0x04004AD5 RID: 19157
+		// Token: 0x04004E98 RID: 20120
 		Middle,
-		// Token: 0x04004AD6 RID: 19158
+		// Token: 0x04004E99 RID: 20121
 		Big
 	}
 }

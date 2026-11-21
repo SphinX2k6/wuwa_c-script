@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 {
-	// Token: 0x02005FA7 RID: 24487
+	// Token: 0x02004F8E RID: 20366
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TotalTopUpPreviewPersonalizedSubView : TotalTopUpPreviewSubViewBase
 	{
-		// Token: 0x0603E18C RID: 254348 RVA: 0x00EFEBE8 File Offset: 0x00EFCDE8
+		// Token: 0x06033126 RID: 209190 RVA: 0x00E508A4 File Offset: 0x00E4EAA4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			};
 		}
 
-		// Token: 0x0603E18D RID: 254349 RVA: 0x00EFEC44 File Offset: 0x00EFCE44
+		// Token: 0x06033127 RID: 209191 RVA: 0x00E50900 File Offset: 0x00E4EB00
 		public override void ShowPreview(ITotalTopUpPreviewViewParam param)
 		{
 			IEnumerable<int> enumerable;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			}
 		}
 
-		// Token: 0x0603E18E RID: 254350 RVA: 0x00EFECEC File Offset: 0x00EFCEEC
+		// Token: 0x06033128 RID: 209192 RVA: 0x00E509A8 File Offset: 0x00E4EBA8
 		private void OnClick(int index)
 		{
 			int num = this.ItemIdList[index];
@@ -80,10 +80,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 					return;
 				}
 			}
-			ItemController.Instance.OpenItemTipsByItemId(num, false, null);
+			ItemController.Instance.OpenItemTipsByItemId(num, false, null, false);
 		}
 
-		// Token: 0x04020703 RID: 132867
+		// Token: 0x0401B1D5 RID: 111061
 		[StaticVariableRuleIgnore]
 		private static readonly int[] BUTTON_NODES = new int[]
 		{
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			2
 		};
 
-		// Token: 0x04020704 RID: 132868
+		// Token: 0x0401B1D6 RID: 111062
 		private List<int> ItemIdList = new List<int>();
 	}
 }

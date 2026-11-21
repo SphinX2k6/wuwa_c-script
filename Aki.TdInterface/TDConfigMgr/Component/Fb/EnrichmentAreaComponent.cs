@@ -6,13 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D53 RID: 3411
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02000E4D RID: 3661
 	public class EnrichmentAreaComponent : IComponentBase
 	{
-		// Token: 0x06004DBC RID: 19900 RVA: 0x000C13B1 File Offset: 0x000BF5B1
-		[NullableContext(1)]
+		// Token: 0x060052D8 RID: 21208 RVA: 0x000CCAF5 File Offset: 0x000CACF5
 		public static EnrichmentAreaComponent Create(IEnrichmentAreaComponent? instance)
 		{
 			if (instance == null)
@@ -25,8 +22,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170018D3 RID: 6355
-		// (get) Token: 0x06004DBD RID: 19901 RVA: 0x000C13D0 File Offset: 0x000BF5D0
+		// Token: 0x17001A39 RID: 6713
+		// (get) Token: 0x060052D9 RID: 21209 RVA: 0x000CCB14 File Offset: 0x000CAD14
 		public override bool? Disabled
 		{
 			get
@@ -39,8 +36,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170018D4 RID: 6356
-		// (get) Token: 0x06004DBE RID: 19902 RVA: 0x000C1408 File Offset: 0x000BF608
+		// Token: 0x17001A3A RID: 6714
+		// (get) Token: 0x060052DA RID: 21210 RVA: 0x000CCB4C File Offset: 0x000CAD4C
 		public override bool? EdIsLocked
 		{
 			get
@@ -49,8 +46,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170018D5 RID: 6357
-		// (get) Token: 0x06004DBF RID: 19903 RVA: 0x000C1420 File Offset: 0x000BF620
+		// Token: 0x17001A3B RID: 6715
+		// (get) Token: 0x060052DB RID: 21211 RVA: 0x000CCB64 File Offset: 0x000CAD64
 		public virtual EEnrichmentAreaType? EnrichmentAreaType
 		{
 			get
@@ -63,12 +60,10 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170018D6 RID: 6358
-		// (get) Token: 0x06004DC0 RID: 19904 RVA: 0x000C1458 File Offset: 0x000BF658
-		[Nullable(1)]
+		// Token: 0x17001A3C RID: 6716
+		// (get) Token: 0x060052DC RID: 21212 RVA: 0x000CCB9C File Offset: 0x000CAD9C
 		public virtual List<int> RefEntityIds
 		{
-			[NullableContext(1)]
 			get
 			{
 				if (this._RefEntityIdsInited)
@@ -86,10 +81,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170018D7 RID: 6359
-		// (get) Token: 0x06004DC1 RID: 19905 RVA: 0x000C14BC File Offset: 0x000BF6BC
+		// Token: 0x17001A3D RID: 6717
+		// (get) Token: 0x060052DD RID: 21213 RVA: 0x000CCC00 File Offset: 0x000CAE00
+		[Nullable(2)]
 		public virtual List<int> FogIds
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this._FogIdsInited)
@@ -111,30 +108,32 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170018D8 RID: 6360
-		// (get) Token: 0x06004DC2 RID: 19906 RVA: 0x000C1531 File Offset: 0x000BF731
+		// Token: 0x17001A3E RID: 6718
+		// (get) Token: 0x060052DE RID: 21214 RVA: 0x000CCC75 File Offset: 0x000CAE75
+		[Nullable(2)]
 		public virtual IEnrichmentEntitySearchTool EdEntitySearchTool
 		{
+			[NullableContext(2)]
 			get
 			{
 				return null;
 			}
 		}
 
-		// Token: 0x04002C90 RID: 11408
+		// Token: 0x04002F50 RID: 12112
 		private IEnrichmentAreaComponent Instance;
 
-		// Token: 0x04002C91 RID: 11409
-		[Nullable(1)]
+		// Token: 0x04002F51 RID: 12113
 		private List<int> _RefEntityIdsCache;
 
-		// Token: 0x04002C92 RID: 11410
+		// Token: 0x04002F52 RID: 12114
 		private bool _RefEntityIdsInited;
 
-		// Token: 0x04002C93 RID: 11411
+		// Token: 0x04002F53 RID: 12115
+		[Nullable(2)]
 		private List<int> _FogIdsCache;
 
-		// Token: 0x04002C94 RID: 11412
+		// Token: 0x04002F54 RID: 12116
 		private bool _FogIdsInited;
 	}
 }

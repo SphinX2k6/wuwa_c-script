@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x02000010 RID: 16
+// Token: 0x02000011 RID: 17
 public static class ELogModuleExtensions
 {
-	// Token: 0x0600009D RID: 157 RVA: 0x000046C0 File Offset: 0x000028C0
+	// Token: 0x0600010A RID: 266 RVA: 0x00007DDC File Offset: 0x00005FDC
 	public static string ToEnumString(this ELogModule value)
 	{
 		string result;
@@ -147,11 +147,8 @@ public static class ELogModuleExtensions
 		case ELogModule.Formation:
 			result = "Formation";
 			break;
-		case ELogModule.DarkTide:
-			result = "DarkTide";
-			break;
-		case ELogModule.DarkTideRing:
-			result = "DarkTideRing";
+		case ELogModule.PianoGameplay:
+			result = "PianoGameplay";
 			break;
 		case ELogModule.ErrorCode:
 			result = "ErrorCode";
@@ -374,6 +371,9 @@ public static class ELogModuleExtensions
 			break;
 		case ELogModule.LevelCondition:
 			result = "LevelCondition";
+			break;
+		case ELogModule.ActivityCondition:
+			result = "ActivityCondition";
 			break;
 		case ELogModule.LevelConditionRegistry:
 			result = "LevelConditionRegistry";
@@ -1065,6 +1065,12 @@ public static class ELogModuleExtensions
 		case ELogModule.ComboTimeline:
 			result = "ComboTimeline";
 			break;
+		case ELogModule.SolarSchool:
+			result = "SolarSchool";
+			break;
+		case ELogModule.VisualNovel:
+			result = "VisualNovel";
+			break;
 		default:
 			result = value.ToString();
 			break;
@@ -1072,7 +1078,7 @@ public static class ELogModuleExtensions
 		return result;
 	}
 
-	// Token: 0x0600009E RID: 158 RVA: 0x00005B5C File Offset: 0x00003D5C
+	// Token: 0x0600010B RID: 267 RVA: 0x00009294 File Offset: 0x00007494
 	public static ELogModule FromString(string name)
 	{
 		ELogModule result;
@@ -1083,7 +1089,7 @@ public static class ELogModuleExtensions
 		return result;
 	}
 
-	// Token: 0x0600009F RID: 159 RVA: 0x00005B88 File Offset: 0x00003D88
+	// Token: 0x0600010C RID: 268 RVA: 0x000092C0 File Offset: 0x000074C0
 	public static bool TryFromString(string name, out ELogModule value)
 	{
 		if (string.IsNullOrEmpty(name))
@@ -1781,202 +1787,198 @@ public static class ELogModuleExtensions
 						return true;
 					}
 				}
-				else if (c != 'M')
+				else if (c <= 'S')
+				{
+					if (c != 'M')
+					{
+						if (c == 'S')
+						{
+							if (name == "MingSuTi")
+							{
+								value = ELogModule.MingSuTi;
+								return true;
+							}
+							if (name == "RoleSkin")
+							{
+								value = ELogModule.RoleSkin;
+								return true;
+							}
+							if (name == "KingShip")
+							{
+								value = ELogModule.KingShip;
+								return true;
+							}
+						}
+					}
+					else if (name == "GameMode")
+					{
+						value = ELogModule.GameMode;
+						return true;
+					}
+				}
+				else if (c != 'U')
 				{
 					switch (c)
 					{
-					case 'S':
-						if (name == "MingSuTi")
+					case 'a':
+						if (name == "HotPatch")
 						{
-							value = ELogModule.MingSuTi;
-							return true;
-						}
-						if (name == "RoleSkin")
-						{
-							value = ELogModule.RoleSkin;
-							return true;
-						}
-						if (name == "KingShip")
-						{
-							value = ELogModule.KingShip;
+							value = ELogModule.HotPatch;
 							return true;
 						}
 						break;
-					case 'T':
-						if (name == "DarkTide")
+					case 'b':
+						if (name == "Calabash")
 						{
-							value = ELogModule.DarkTide;
+							value = ELogModule.Calabash;
 							return true;
 						}
 						break;
-					case 'U':
-						if (name == "TextUtil")
+					case 'e':
+						if (name == "RenderGI")
 						{
-							value = ELogModule.TextUtil;
-							return true;
-						}
-						if (name == "SaveUtil")
-						{
-							value = ELogModule.SaveUtil;
-							return true;
-						}
-						if (name == "TimeUtil")
-						{
-							value = ELogModule.TimeUtil;
-							return true;
-						}
-						if (name == "LguiUtil")
-						{
-							value = ELogModule.LguiUtil;
+							value = ELogModule.RenderGI;
 							return true;
 						}
 						break;
-					default:
-						switch (c)
+					case 'f':
+						if (name == "Platform")
 						{
-						case 'a':
-							if (name == "HotPatch")
-							{
-								value = ELogModule.HotPatch;
-								return true;
-							}
-							break;
-						case 'b':
-							if (name == "Calabash")
-							{
-								value = ELogModule.Calabash;
-								return true;
-							}
-							break;
-						case 'e':
-							if (name == "RenderGI")
-							{
-								value = ELogModule.RenderGI;
-								return true;
-							}
-							break;
-						case 'f':
-							if (name == "Platform")
-							{
-								value = ELogModule.Platform;
-								return true;
-							}
-							break;
-						case 'i':
-							if (name == "UiEditor")
-							{
-								value = ELogModule.UiEditor;
-								return true;
-							}
-							if (name == "BpBridge")
-							{
-								value = ELogModule.BpBridge;
-								return true;
-							}
-							break;
-						case 'l':
-							if (name == "PanelQte")
-							{
-								value = ELogModule.PanelQte;
-								return true;
-							}
-							break;
-						case 'm':
-							if (name == "UiCommon")
-							{
-								value = ELogModule.UiCommon;
-								return true;
-							}
-							if (name == "UiCamera")
-							{
-								value = ELogModule.UiCamera;
-								return true;
-							}
-							if (name == "Movement")
-							{
-								value = ELogModule.Movement;
-								return true;
-							}
-							break;
-						case 'n':
-							if (name == "Spring25")
-							{
-								value = ELogModule.Spring25;
-								return true;
-							}
-							break;
-						case 'o':
-							if (name == "Personal")
-							{
-								value = ELogModule.Personal;
-								return true;
-							}
-							break;
-						case 'p':
-							if (name == "Teleport")
-							{
-								value = ELogModule.Teleport;
-								return true;
-							}
-							break;
-						case 'r':
-							if (name == "Tutorial")
-							{
-								value = ELogModule.Tutorial;
-								return true;
-							}
-							if (name == "Recorder")
-							{
-								value = ELogModule.Recorder;
-								return true;
-							}
-							if (name == "Encircle")
-							{
-								value = ELogModule.Encircle;
-								return true;
-							}
-							break;
-						case 't':
-							if (name == "Kurotato")
-							{
-								value = ELogModule.Kurotato;
-								return true;
-							}
-							break;
-						case 'u':
-							if (name == "Resource")
-							{
-								value = ELogModule.Resource;
-								return true;
-							}
-							if (name == "IosAudit")
-							{
-								value = ELogModule.IosAudit;
-								return true;
-							}
-							break;
-						case 'v':
-							if (name == "Activity")
-							{
-								value = ELogModule.Activity;
-								return true;
-							}
-							break;
-						case 'y':
-							if (name == "Dockyard")
-							{
-								value = ELogModule.Dockyard;
-								return true;
-							}
-							break;
+							value = ELogModule.Platform;
+							return true;
+						}
+						break;
+					case 'i':
+						if (name == "UiEditor")
+						{
+							value = ELogModule.UiEditor;
+							return true;
+						}
+						if (name == "BpBridge")
+						{
+							value = ELogModule.BpBridge;
+							return true;
+						}
+						break;
+					case 'l':
+						if (name == "PanelQte")
+						{
+							value = ELogModule.PanelQte;
+							return true;
+						}
+						break;
+					case 'm':
+						if (name == "UiCommon")
+						{
+							value = ELogModule.UiCommon;
+							return true;
+						}
+						if (name == "UiCamera")
+						{
+							value = ELogModule.UiCamera;
+							return true;
+						}
+						if (name == "Movement")
+						{
+							value = ELogModule.Movement;
+							return true;
+						}
+						break;
+					case 'n':
+						if (name == "Spring25")
+						{
+							value = ELogModule.Spring25;
+							return true;
+						}
+						break;
+					case 'o':
+						if (name == "Personal")
+						{
+							value = ELogModule.Personal;
+							return true;
+						}
+						break;
+					case 'p':
+						if (name == "Teleport")
+						{
+							value = ELogModule.Teleport;
+							return true;
+						}
+						break;
+					case 'r':
+						if (name == "Tutorial")
+						{
+							value = ELogModule.Tutorial;
+							return true;
+						}
+						if (name == "Recorder")
+						{
+							value = ELogModule.Recorder;
+							return true;
+						}
+						if (name == "Encircle")
+						{
+							value = ELogModule.Encircle;
+							return true;
+						}
+						break;
+					case 't':
+						if (name == "Kurotato")
+						{
+							value = ELogModule.Kurotato;
+							return true;
+						}
+						break;
+					case 'u':
+						if (name == "Resource")
+						{
+							value = ELogModule.Resource;
+							return true;
+						}
+						if (name == "IosAudit")
+						{
+							value = ELogModule.IosAudit;
+							return true;
+						}
+						break;
+					case 'v':
+						if (name == "Activity")
+						{
+							value = ELogModule.Activity;
+							return true;
+						}
+						break;
+					case 'y':
+						if (name == "Dockyard")
+						{
+							value = ELogModule.Dockyard;
+							return true;
 						}
 						break;
 					}
 				}
-				else if (name == "GameMode")
+				else
 				{
-					value = ELogModule.GameMode;
-					return true;
+					if (name == "TextUtil")
+					{
+						value = ELogModule.TextUtil;
+						return true;
+					}
+					if (name == "SaveUtil")
+					{
+						value = ELogModule.SaveUtil;
+						return true;
+					}
+					if (name == "TimeUtil")
+					{
+						value = ELogModule.TimeUtil;
+						return true;
+					}
+					if (name == "LguiUtil")
+					{
+						value = ELogModule.LguiUtil;
+						return true;
+					}
 				}
 				break;
 			}
@@ -2464,6 +2466,11 @@ public static class ELogModuleExtensions
 								value = ELogModule.VillageInfr;
 								return true;
 							}
+							if (name == "VisualNovel")
+							{
+								value = ELogModule.VisualNovel;
+								return true;
+							}
 							break;
 						case 'b':
 							if (name == "UiTabModule")
@@ -2615,6 +2622,11 @@ public static class ELogModuleExtensions
 								value = ELogModule.ActorSystem;
 								return true;
 							}
+							if (name == "SolarSchool")
+							{
+								value = ELogModule.SolarSchool;
+								return true;
+							}
 							break;
 						case 't':
 							if (name == "QuestRecall")
@@ -2648,179 +2660,169 @@ public static class ELogModuleExtensions
 			case 12:
 			{
 				char c = name[8];
-				switch (c)
+				if (c <= 'M')
 				{
-				case 'L':
-					if (name == "UiPrefabLoad")
+					if (c != 'L')
+					{
+						if (c == 'M')
+						{
+							if (name == "TeleportMisc")
+							{
+								value = ELogModule.TeleportMisc;
+								return true;
+							}
+						}
+					}
+					else if (name == "UiPrefabLoad")
 					{
 						value = ELogModule.UiPrefabLoad;
 						return true;
 					}
-					break;
-				case 'M':
-					if (name == "TeleportMisc")
+				}
+				else if (c != 'S')
+				{
+					if (c != 'T')
 					{
-						value = ELogModule.TeleportMisc;
-						return true;
+						switch (c)
+						{
+						case 'a':
+							if (name == "InputManager")
+							{
+								value = ELogModule.InputManager;
+								return true;
+							}
+							if (name == "ItemExchange")
+							{
+								value = ELogModule.ItemExchange;
+								return true;
+							}
+							break;
+						case 'c':
+							if (name == "CollectActor")
+							{
+								value = ELogModule.CollectActor;
+								return true;
+							}
+							break;
+						case 'e':
+							if (name == "TowerDefense")
+							{
+								value = ELogModule.TowerDefense;
+								return true;
+							}
+							if (name == "ExploreLevel")
+							{
+								value = ELogModule.ExploreLevel;
+								return true;
+							}
+							break;
+						case 'f':
+							if (name == "RenderEffect")
+							{
+								value = ELogModule.RenderEffect;
+								return true;
+							}
+							break;
+						case 'g':
+							if (name == "GridDelegate")
+							{
+								value = ELogModule.GridDelegate;
+								return true;
+							}
+							break;
+						case 'h':
+							if (name == "StateMachine")
+							{
+								value = ELogModule.StateMachine;
+								return true;
+							}
+							break;
+						case 'i':
+							if (name == "GameSettings")
+							{
+								value = ELogModule.GameSettings;
+								return true;
+							}
+							break;
+						case 'k':
+							if (name == "MotorParkour")
+							{
+								value = ELogModule.MotorParkour;
+								return true;
+							}
+							if (name == "GolemHacking")
+							{
+								value = ELogModule.GolemHacking;
+								return true;
+							}
+							break;
+						case 'm':
+							if (name == "RoleOrnament")
+							{
+								value = ELogModule.RoleOrnament;
+								return true;
+							}
+							break;
+						case 'o':
+							if (name == "UiModelMorph")
+							{
+								value = ELogModule.UiModelMorph;
+								return true;
+							}
+							break;
+						case 'r':
+							if (name == "LocalStorage")
+							{
+								value = ELogModule.LocalStorage;
+								return true;
+							}
+							if (name == "PhantomArena")
+							{
+								value = ELogModule.PhantomArena;
+								return true;
+							}
+							break;
+						case 't':
+							if (name == "RenderBattle")
+							{
+								value = ELogModule.RenderBattle;
+								return true;
+							}
+							if (name == "UiNavigation")
+							{
+								value = ELogModule.UiNavigation;
+								return true;
+							}
+							if (name == "Optimization")
+							{
+								value = ELogModule.Optimization;
+								return true;
+							}
+							if (name == "TimeDilation")
+							{
+								value = ELogModule.TimeDilation;
+								return true;
+							}
+							break;
+						case 'w':
+							if (name == "InviteNewbie")
+							{
+								value = ELogModule.InviteNewbie;
+								return true;
+							}
+							break;
+						}
 					}
-					break;
-				case 'N':
-				case 'O':
-				case 'P':
-				case 'Q':
-					break;
-				case 'R':
-					if (name == "DarkTideRing")
-					{
-						value = ELogModule.DarkTideRing;
-						return true;
-					}
-					break;
-				case 'S':
-					if (name == "CalabashSkin")
-					{
-						value = ELogModule.CalabashSkin;
-						return true;
-					}
-					break;
-				case 'T':
-					if (name == "BehaviorTree")
+					else if (name == "BehaviorTree")
 					{
 						value = ELogModule.BehaviorTree;
 						return true;
 					}
-					break;
-				default:
-					switch (c)
-					{
-					case 'a':
-						if (name == "InputManager")
-						{
-							value = ELogModule.InputManager;
-							return true;
-						}
-						if (name == "ItemExchange")
-						{
-							value = ELogModule.ItemExchange;
-							return true;
-						}
-						break;
-					case 'c':
-						if (name == "CollectActor")
-						{
-							value = ELogModule.CollectActor;
-							return true;
-						}
-						break;
-					case 'e':
-						if (name == "TowerDefense")
-						{
-							value = ELogModule.TowerDefense;
-							return true;
-						}
-						if (name == "ExploreLevel")
-						{
-							value = ELogModule.ExploreLevel;
-							return true;
-						}
-						break;
-					case 'f':
-						if (name == "RenderEffect")
-						{
-							value = ELogModule.RenderEffect;
-							return true;
-						}
-						break;
-					case 'g':
-						if (name == "GridDelegate")
-						{
-							value = ELogModule.GridDelegate;
-							return true;
-						}
-						break;
-					case 'h':
-						if (name == "StateMachine")
-						{
-							value = ELogModule.StateMachine;
-							return true;
-						}
-						break;
-					case 'i':
-						if (name == "GameSettings")
-						{
-							value = ELogModule.GameSettings;
-							return true;
-						}
-						break;
-					case 'k':
-						if (name == "MotorParkour")
-						{
-							value = ELogModule.MotorParkour;
-							return true;
-						}
-						if (name == "GolemHacking")
-						{
-							value = ELogModule.GolemHacking;
-							return true;
-						}
-						break;
-					case 'm':
-						if (name == "RoleOrnament")
-						{
-							value = ELogModule.RoleOrnament;
-							return true;
-						}
-						break;
-					case 'o':
-						if (name == "UiModelMorph")
-						{
-							value = ELogModule.UiModelMorph;
-							return true;
-						}
-						break;
-					case 'r':
-						if (name == "LocalStorage")
-						{
-							value = ELogModule.LocalStorage;
-							return true;
-						}
-						if (name == "PhantomArena")
-						{
-							value = ELogModule.PhantomArena;
-							return true;
-						}
-						break;
-					case 't':
-						if (name == "RenderBattle")
-						{
-							value = ELogModule.RenderBattle;
-							return true;
-						}
-						if (name == "UiNavigation")
-						{
-							value = ELogModule.UiNavigation;
-							return true;
-						}
-						if (name == "Optimization")
-						{
-							value = ELogModule.Optimization;
-							return true;
-						}
-						if (name == "TimeDilation")
-						{
-							value = ELogModule.TimeDilation;
-							return true;
-						}
-						break;
-					case 'w':
-						if (name == "InviteNewbie")
-						{
-							value = ELogModule.InviteNewbie;
-							return true;
-						}
-						break;
-					}
-					break;
+				}
+				else if (name == "CalabashSkin")
+				{
+					value = ELogModule.CalabashSkin;
+					return true;
 				}
 				break;
 			}
@@ -2944,6 +2946,11 @@ public static class ELogModuleExtensions
 					switch (c)
 					{
 					case 'o':
+						if (name == "PianoGameplay")
+						{
+							value = ELogModule.PianoGameplay;
+							return true;
+						}
 						if (name == "ComboTeaching")
 						{
 							value = ELogModule.ComboTeaching;
@@ -3417,33 +3424,43 @@ public static class ELogModuleExtensions
 			case 17:
 			{
 				char c = name[8];
-				switch (c)
+				if (c <= 'e')
 				{
-				case 'a':
-					if (name == "DynamicMaskButton")
+					if (c != 'C')
 					{
-						value = ELogModule.DynamicMaskButton;
+						switch (c)
+						{
+						case 'a':
+							if (name == "DynamicMaskButton")
+							{
+								value = ELogModule.DynamicMaskButton;
+								return true;
+							}
+							break;
+						case 'd':
+							if (name == "PsGamepadFeedback")
+							{
+								value = ELogModule.PsGamepadFeedback;
+								return true;
+							}
+							break;
+						case 'e':
+							if (name == "TowerDefenseEvent")
+							{
+								value = ELogModule.TowerDefenseEvent;
+								return true;
+							}
+							break;
+						}
+					}
+					else if (name == "ActivityCondition")
+					{
+						value = ELogModule.ActivityCondition;
 						return true;
 					}
-					break;
-				case 'b':
-				case 'c':
-					break;
-				case 'd':
-					if (name == "PsGamepadFeedback")
-					{
-						value = ELogModule.PsGamepadFeedback;
-						return true;
-					}
-					break;
-				case 'e':
-					if (name == "TowerDefenseEvent")
-					{
-						value = ELogModule.TowerDefenseEvent;
-						return true;
-					}
-					break;
-				default:
+				}
+				else
+				{
 					switch (c)
 					{
 					case 'n':
@@ -3496,7 +3513,6 @@ public static class ELogModuleExtensions
 						}
 						break;
 					}
-					break;
 				}
 				break;
 			}
@@ -3755,7 +3771,7 @@ public static class ELogModuleExtensions
 		return false;
 	}
 
-	// Token: 0x060000A0 RID: 160 RVA: 0x00008B70 File Offset: 0x00006D70
+	// Token: 0x0600010D RID: 269 RVA: 0x0000C2E8 File Offset: 0x0000A4E8
 	public static string[] GetStringValues()
 	{
 		return new string[]
@@ -3806,8 +3822,7 @@ public static class ELogModuleExtensions
 			"SceneTeam",
 			"MultiPlayerTeam",
 			"Formation",
-			"DarkTide",
-			"DarkTideRing",
+			"PianoGameplay",
 			"ErrorCode",
 			"Functional",
 			"Gm",
@@ -3882,6 +3897,7 @@ public static class ELogModuleExtensions
 			"ProtocolMonitor",
 			"LevelEvent",
 			"LevelCondition",
+			"ActivityCondition",
 			"LevelConditionRegistry",
 			"UiSceneManager",
 			"Loading",
@@ -4111,11 +4127,13 @@ public static class ELogModuleExtensions
 			"WuWaGo",
 			"Season",
 			"Kurotato",
-			"ComboTimeline"
+			"ComboTimeline",
+			"SolarSchool",
+			"VisualNovel"
 		};
 	}
 
-	// Token: 0x060000A1 RID: 161 RVA: 0x00009A7E File Offset: 0x00007C7E
+	// Token: 0x0600010E RID: 270 RVA: 0x0000D20E File Offset: 0x0000B40E
 	public static ELogModule[] GetValues()
 	{
 		return new ELogModule[]
@@ -4166,8 +4184,7 @@ public static class ELogModuleExtensions
 			ELogModule.SceneTeam,
 			ELogModule.MultiPlayerTeam,
 			ELogModule.Formation,
-			ELogModule.DarkTide,
-			ELogModule.DarkTideRing,
+			ELogModule.PianoGameplay,
 			ELogModule.ErrorCode,
 			ELogModule.Functional,
 			ELogModule.Gm,
@@ -4242,6 +4259,7 @@ public static class ELogModuleExtensions
 			ELogModule.ProtocolMonitor,
 			ELogModule.LevelEvent,
 			ELogModule.LevelCondition,
+			ELogModule.ActivityCondition,
 			ELogModule.LevelConditionRegistry,
 			ELogModule.UiSceneManager,
 			ELogModule.Loading,
@@ -4471,11 +4489,13 @@ public static class ELogModuleExtensions
 			ELogModule.WuWaGo,
 			ELogModule.Season,
 			ELogModule.Kurotato,
-			ELogModule.ComboTimeline
+			ELogModule.ComboTimeline,
+			ELogModule.SolarSchool,
+			ELogModule.VisualNovel
 		};
 	}
 
-	// Token: 0x060000A2 RID: 162 RVA: 0x00009A98 File Offset: 0x00007C98
+	// Token: 0x0600010F RID: 271 RVA: 0x0000D228 File Offset: 0x0000B428
 	public static string[] GetNames()
 	{
 		return new string[]
@@ -4526,8 +4546,7 @@ public static class ELogModuleExtensions
 			"SceneTeam",
 			"MultiPlayerTeam",
 			"Formation",
-			"DarkTide",
-			"DarkTideRing",
+			"PianoGameplay",
 			"ErrorCode",
 			"Functional",
 			"Gm",
@@ -4602,6 +4621,7 @@ public static class ELogModuleExtensions
 			"ProtocolMonitor",
 			"LevelEvent",
 			"LevelCondition",
+			"ActivityCondition",
 			"LevelConditionRegistry",
 			"UiSceneManager",
 			"Loading",
@@ -4831,7 +4851,9 @@ public static class ELogModuleExtensions
 			"WuWaGo",
 			"Season",
 			"Kurotato",
-			"ComboTimeline"
+			"ComboTimeline",
+			"SolarSchool",
+			"VisualNovel"
 		};
 	}
 }

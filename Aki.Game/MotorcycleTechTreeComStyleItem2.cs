@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200223E RID: 8766
+// Token: 0x02001722 RID: 5922
 [NullableContext(1)]
 [Nullable(0)]
 public class MotorcycleTechTreeComStyleItem2 : UiPanelBase
 {
-	// Token: 0x060111A8 RID: 70056 RVA: 0x0042C470 File Offset: 0x0042A670
+	// Token: 0x0600E63E RID: 58942 RVA: 0x00439014 File Offset: 0x00437214
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,20 +24,20 @@ public class MotorcycleTechTreeComStyleItem2 : UiPanelBase
 		};
 	}
 
-	// Token: 0x060111A9 RID: 70057 RVA: 0x0042C4E0 File Offset: 0x0042A6E0
+	// Token: 0x0600E63F RID: 58943 RVA: 0x00439084 File Offset: 0x00437284
 	protected override void OnStart()
 	{
 		this.LeftLayout = new GenericLayout<MotorcycleTechTreeComNodeItem, MotorTechTreeNode>(base.GetVerticalLayout(0), new Func<MotorcycleTechTreeComNodeItem>(this.InitComNodeItem), null, false, true);
 		this.RightLayout = new GenericLayout<MotorcycleTechTreeComNodeItem, MotorTechTreeNode>(base.GetVerticalLayout(2), new Func<MotorcycleTechTreeComNodeItem>(this.InitComNodeItem), null, false, true);
 	}
 
-	// Token: 0x060111AA RID: 70058 RVA: 0x0042C52F File Offset: 0x0042A72F
+	// Token: 0x0600E640 RID: 58944 RVA: 0x004390D3 File Offset: 0x004372D3
 	private MotorcycleTechTreeComNodeItem InitComNodeItem()
 	{
 		return new MotorcycleTechTreeComNodeItem();
 	}
 
-	// Token: 0x060111AB RID: 70059 RVA: 0x0042C538 File Offset: 0x0042A738
+	// Token: 0x0600E641 RID: 58945 RVA: 0x004390DC File Offset: 0x004372DC
 	public void SetNodeClick(Action<MotorTechTreeNode, UUIExtendToggle> nodeClick)
 	{
 		GenericLayout<MotorcycleTechTreeComNodeItem, MotorTechTreeNode> leftLayout = this.LeftLayout;
@@ -60,7 +60,7 @@ public class MotorcycleTechTreeComStyleItem2 : UiPanelBase
 		}
 	}
 
-	// Token: 0x060111AC RID: 70060 RVA: 0x0042C5B0 File Offset: 0x0042A7B0
+	// Token: 0x0600E642 RID: 58946 RVA: 0x00439154 File Offset: 0x00437354
 	[NullableContext(2)]
 	public MotorcycleTechTreeComNodeItem GetGuideNodeItem(int index)
 	{
@@ -80,7 +80,7 @@ public class MotorcycleTechTreeComStyleItem2 : UiPanelBase
 		return null;
 	}
 
-	// Token: 0x060111AD RID: 70061 RVA: 0x0042C620 File Offset: 0x0042A820
+	// Token: 0x0600E643 RID: 58947 RVA: 0x004391C4 File Offset: 0x004373C4
 	public UniTask RefreshCommonNodeItemAsync(int[] nodeIds)
 	{
 		MotorcycleTechTreeComStyleItem2.<RefreshCommonNodeItemAsync>d__11 <RefreshCommonNodeItemAsync>d__;
@@ -92,10 +92,10 @@ public class MotorcycleTechTreeComStyleItem2 : UiPanelBase
 		return <RefreshCommonNodeItemAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x04008241 RID: 33345
+	// Token: 0x0400837F RID: 33663
 	private const int LEFT_NODE_MAX_COUNT = 4;
 
-	// Token: 0x04008242 RID: 33346
+	// Token: 0x04008380 RID: 33664
 	[Nullable(new byte[]
 	{
 		2,
@@ -104,7 +104,7 @@ public class MotorcycleTechTreeComStyleItem2 : UiPanelBase
 	})]
 	private GenericLayout<MotorcycleTechTreeComNodeItem, MotorTechTreeNode> LeftLayout;
 
-	// Token: 0x04008243 RID: 33347
+	// Token: 0x04008381 RID: 33665
 	[Nullable(new byte[]
 	{
 		2,
@@ -113,26 +113,26 @@ public class MotorcycleTechTreeComStyleItem2 : UiPanelBase
 	})]
 	private GenericLayout<MotorcycleTechTreeComNodeItem, MotorTechTreeNode> RightLayout;
 
-	// Token: 0x04008244 RID: 33348
+	// Token: 0x04008382 RID: 33666
 	private List<MotorTechTreeNode> LeftDataList = new List<MotorTechTreeNode>();
 
-	// Token: 0x04008245 RID: 33349
+	// Token: 0x04008383 RID: 33667
 	private List<MotorTechTreeNode> RightDataList = new List<MotorTechTreeNode>();
 
-	// Token: 0x02008777 RID: 34679
+	// Token: 0x02007900 RID: 30976
 	[NullableContext(0)]
 	private static class EMotorTreeComStyleItemComponent
 	{
-		// Token: 0x0402C087 RID: 180359
+		// Token: 0x0402739F RID: 160671
 		public const int LeftLayout = 0;
 
-		// Token: 0x0402C088 RID: 180360
+		// Token: 0x040273A0 RID: 160672
 		public const int LeftItem = 1;
 
-		// Token: 0x0402C089 RID: 180361
+		// Token: 0x040273A1 RID: 160673
 		public const int RightLayout = 2;
 
-		// Token: 0x0402C08A RID: 180362
+		// Token: 0x040273A2 RID: 160674
 		public const int RightItem = 3;
 	}
 }

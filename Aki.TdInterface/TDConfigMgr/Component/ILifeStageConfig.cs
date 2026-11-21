@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004C6 RID: 1222
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200051F RID: 1311
 	public class ILifeStageConfig
 	{
-		// Token: 0x060018D4 RID: 6356 RVA: 0x0004A07C File Offset: 0x0004827C
+		// Token: 0x06001A6E RID: 6766 RVA: 0x0004DDC4 File Offset: 0x0004BFC4
 		private ILifeStageConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060018D5 RID: 6357 RVA: 0x0004A0B4 File Offset: 0x000482B4
+		// Token: 0x06001A6F RID: 6767 RVA: 0x0004DDFC File Offset: 0x0004BFFC
 		public static ILifeStageConfig Create([Nullable(2)] ILifeStageConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060018D6 RID: 6358 RVA: 0x0004A0C7 File Offset: 0x000482C7
+		// Token: 0x06001A70 RID: 6768 RVA: 0x0004DE0F File Offset: 0x0004C00F
 		public static ILifeStageConfig CreateFromSetValue([Nullable(2)] ILifeStageConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060018D7 RID: 6359 RVA: 0x0004A0DA File Offset: 0x000482DA
+		// Token: 0x06001A71 RID: 6769 RVA: 0x0004DE22 File Offset: 0x0004C022
 		public ILifeStageConfig_SetValue ToSetValue()
 		{
 			return new ILifeStageConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170006A0 RID: 1696
-		// (get) Token: 0x060018D8 RID: 6360 RVA: 0x0004A0F0 File Offset: 0x000482F0
-		// (set) Token: 0x060018D9 RID: 6361 RVA: 0x0004A12A File Offset: 0x0004832A
+		// Token: 0x17000707 RID: 1799
+		// (get) Token: 0x06001A72 RID: 6770 RVA: 0x0004DE38 File Offset: 0x0004C038
+		// (set) Token: 0x06001A73 RID: 6771 RVA: 0x0004DE72 File Offset: 0x0004C072
 		public virtual float? PerformDuration
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400125E RID: 4702
+		// Token: 0x04001380 RID: 4992
 		[Nullable(2)]
 		protected ILifeStageConfig FbInstance;
 
-		// Token: 0x0400125F RID: 4703
+		// Token: 0x04001381 RID: 4993
 		[Nullable(2)]
 		protected ILifeStageConfig_SetValue PocoInterface;
 	}

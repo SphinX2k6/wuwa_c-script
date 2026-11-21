@@ -11,18 +11,18 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 {
-	// Token: 0x02004778 RID: 18296
+	// Token: 0x020036A9 RID: 13993
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SpikeTrapController : GameplayEntityControllerBase
 	{
-		// Token: 0x0602FD4D RID: 195917 RVA: 0x00B153E8 File Offset: 0x00B135E8
+		// Token: 0x06024517 RID: 148759 RVA: 0x00A45448 File Offset: 0x00A43648
 		public SpikeTrapController(WuWaGoGameplayEntityBase entity, WuWaGoGameData gameData, WuWaGoGameModeBase gameMode) : base(entity, gameData, gameMode)
 		{
 		}
 
-		// Token: 0x17007776 RID: 30582
-		// (get) Token: 0x0602FD4E RID: 195918 RVA: 0x00B153F3 File Offset: 0x00B135F3
+		// Token: 0x17004A32 RID: 18994
+		// (get) Token: 0x06024518 RID: 148760 RVA: 0x00A45453 File Offset: 0x00A43653
 		private WuWaGoSpikeTrapEntity SpikeTrap
 		{
 			get
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			}
 		}
 
-		// Token: 0x0602FD4F RID: 195919 RVA: 0x00B15400 File Offset: 0x00B13600
+		// Token: 0x06024519 RID: 148761 RVA: 0x00A45460 File Offset: 0x00A43660
 		protected override bool OnCreate()
 		{
 			if (!base.OnCreate())
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			return true;
 		}
 
-		// Token: 0x0602FD50 RID: 195920 RVA: 0x00B15467 File Offset: 0x00B13667
+		// Token: 0x0602451A RID: 148762 RVA: 0x00A454C7 File Offset: 0x00A436C7
 		protected override void OnDestroy()
 		{
 			base.OnDestroy();
@@ -55,13 +55,13 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			base.UnregisterAttachedGridMoveParticipant();
 		}
 
-		// Token: 0x0602FD51 RID: 195921 RVA: 0x00B1548A File Offset: 0x00B1368A
+		// Token: 0x0602451B RID: 148763 RVA: 0x00A454EA File Offset: 0x00A436EA
 		public override void OnRollbackRestore()
 		{
 			this.SinkPresentationCancelToken++;
 		}
 
-		// Token: 0x0602FD52 RID: 195922 RVA: 0x00B1549C File Offset: 0x00B1369C
+		// Token: 0x0602451C RID: 148764 RVA: 0x00A454FC File Offset: 0x00A436FC
 		protected override UniTask OnExecuteAction()
 		{
 			SpikeTrapController.<OnExecuteAction>d__14 <OnExecuteAction>d__;
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			return <OnExecuteAction>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FD53 RID: 195923 RVA: 0x00B154E0 File Offset: 0x00B136E0
+		// Token: 0x0602451D RID: 148765 RVA: 0x00A45540 File Offset: 0x00A43740
 		private int GetFirstSinkDepthCm()
 		{
 			BP_WuWaGo_C setting = WuWaGoGlobal.Setting;
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			return SpikeTrapController.DefaultFirstSinkDepthCm;
 		}
 
-		// Token: 0x0602FD54 RID: 195924 RVA: 0x00B1552C File Offset: 0x00B1372C
+		// Token: 0x0602451E RID: 148766 RVA: 0x00A4558C File Offset: 0x00A4378C
 		private UniTask TakeAttackOnRole(WuWaGoRole role)
 		{
 			SpikeTrapController.<TakeAttackOnRole>d__16 <TakeAttackOnRole>d__;
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			return <TakeAttackOnRole>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FD55 RID: 195925 RVA: 0x00B15578 File Offset: 0x00B13778
+		// Token: 0x0602451F RID: 148767 RVA: 0x00A455D8 File Offset: 0x00A437D8
 		private UniTask PlaySinkOnRole(WuWaGoRole role, int depthCm, int durationMs)
 		{
 			SpikeTrapController.<PlaySinkOnRole>d__17 <PlaySinkOnRole>d__;
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			return <PlaySinkOnRole>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FD56 RID: 195926 RVA: 0x00B155D4 File Offset: 0x00B137D4
+		// Token: 0x06024520 RID: 148768 RVA: 0x00A45634 File Offset: 0x00A43834
 		[NullableContext(0)]
 		private UniTask<bool> WaitSinkStartDelay(int expectedToken)
 		{
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			return <WaitSinkStartDelay>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602FD57 RID: 195927 RVA: 0x00B15620 File Offset: 0x00B13820
+		// Token: 0x06024521 RID: 148769 RVA: 0x00A45680 File Offset: 0x00A43880
 		private bool TryResolveSinkTargetWorldPosition(WuWaGoRole role, int depthCm, Vector @out)
 		{
 			WuWaGoGrid gridById = this.GameData.GetGridById(role.StandGridId);
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			return true;
 		}
 
-		// Token: 0x0602FD58 RID: 195928 RVA: 0x00B156A4 File Offset: 0x00B138A4
+		// Token: 0x06024522 RID: 148770 RVA: 0x00A45704 File Offset: 0x00A43904
 		private bool TryResolveGridSurfaceNormalLocal(WuWaGoGrid grid, Vector @out)
 		{
 			EGridShape gridShape = grid.GridShape;
@@ -168,28 +168,28 @@ namespace CSharpScript.Game.Module.WuwaGo.Controller.GameplayEntity
 			}
 		}
 
-		// Token: 0x04019CD0 RID: 105680
+		// Token: 0x04014380 RID: 82816
 		private static readonly int SinkStartDelayMs = 300;
 
-		// Token: 0x04019CD1 RID: 105681
+		// Token: 0x04014381 RID: 82817
 		private static readonly int DefaultFirstSinkDepthCm = 40;
 
-		// Token: 0x04019CD2 RID: 105682
+		// Token: 0x04014382 RID: 82818
 		private static readonly int FirstSinkDurationMs = 50;
 
-		// Token: 0x04019CD3 RID: 105683
+		// Token: 0x04014383 RID: 82819
 		private static readonly int FallSinkDepthCm = 180;
 
-		// Token: 0x04019CD4 RID: 105684
+		// Token: 0x04014384 RID: 82820
 		private static readonly int FallSinkDurationMs = 100;
 
-		// Token: 0x04019CD5 RID: 105685
+		// Token: 0x04014385 RID: 82821
 		private static readonly int SinkTickIntervalMs = 20;
 
-		// Token: 0x04019CD6 RID: 105686
+		// Token: 0x04014386 RID: 82822
 		private bool IsDestroyed;
 
-		// Token: 0x04019CD7 RID: 105687
+		// Token: 0x04014387 RID: 82823
 		private int SinkPresentationCancelToken;
 	}
 }

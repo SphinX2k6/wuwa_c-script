@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DA0 RID: 23968
+	// Token: 0x02004D82 RID: 19842
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MotorcycleShieldItem : UiPanelBase
 	{
-		// Token: 0x0603CD9C RID: 249244 RVA: 0x00E9DBF0 File Offset: 0x00E9BDF0
+		// Token: 0x06031CF9 RID: 204025 RVA: 0x00DEE4A8 File Offset: 0x00DEC6A8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603CD9D RID: 249245 RVA: 0x00E9DC5C File Offset: 0x00E9BE5C
+		// Token: 0x06031CFA RID: 204026 RVA: 0x00DEE514 File Offset: 0x00DEC714
 		protected override void OnStart()
 		{
 			this.PercentMachine.Duration = 200;
@@ -37,14 +37,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AddEvents();
 		}
 
-		// Token: 0x0603CD9E RID: 249246 RVA: 0x00E9DCAC File Offset: 0x00E9BEAC
+		// Token: 0x06031CFB RID: 204027 RVA: 0x00DEE564 File Offset: 0x00DEC764
 		protected override void OnAfterHide()
 		{
 			base.OnAfterHide();
 			this.StopBreakEffect();
 		}
 
-		// Token: 0x0603CD9F RID: 249247 RVA: 0x00E9DCBA File Offset: 0x00E9BEBA
+		// Token: 0x06031CFC RID: 204028 RVA: 0x00DEE572 File Offset: 0x00DEC772
 		protected override void OnBeforeDestroy()
 		{
 			this.RemoveEvents();
@@ -52,27 +52,27 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ExistShieldChanged = null;
 		}
 
-		// Token: 0x0603CDA0 RID: 249248 RVA: 0x00E9DCD0 File Offset: 0x00E9BED0
+		// Token: 0x06031CFD RID: 204029 RVA: 0x00DEE588 File Offset: 0x00DEC788
 		private void AddEvents()
 		{
 			FormationAttributeController.Instance.AddValueListener(EFormationAttributeId.MotorcycleShield, new TValueListener(this.OnMotorcycleShieldChanged), null);
 			FormationAttributeController.Instance.AddMaxListener(EFormationAttributeId.MotorcycleShield, new TValueListener(this.OnMotorcycleShieldChanged), null);
 		}
 
-		// Token: 0x0603CDA1 RID: 249249 RVA: 0x00E9DD04 File Offset: 0x00E9BF04
+		// Token: 0x06031CFE RID: 204030 RVA: 0x00DEE5BC File Offset: 0x00DEC7BC
 		private void RemoveEvents()
 		{
 			FormationAttributeController.Instance.RemoveValueListener(EFormationAttributeId.MotorcycleShield, new TValueListener(this.OnMotorcycleShieldChanged));
 			FormationAttributeController.Instance.RemoveMaxListener(EFormationAttributeId.MotorcycleShield, new TValueListener(this.OnMotorcycleShieldChanged));
 		}
 
-		// Token: 0x0603CDA2 RID: 249250 RVA: 0x00E9DD36 File Offset: 0x00E9BF36
+		// Token: 0x06031CFF RID: 204031 RVA: 0x00DEE5EE File Offset: 0x00DEC7EE
 		private void OnMotorcycleShieldChanged(EFormationAttributeId attributeId, float newValue, float oldValue)
 		{
 			this.RefreshBar(false);
 		}
 
-		// Token: 0x0603CDA3 RID: 249251 RVA: 0x00E9DD40 File Offset: 0x00E9BF40
+		// Token: 0x06031D00 RID: 204032 RVA: 0x00DEE5F8 File Offset: 0x00DEC7F8
 		private void RefreshBar(bool isStart = false)
 		{
 			float value = FormationAttributeController.Instance.GetValue(EFormationAttributeId.MotorcycleShield);
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetExistShield(num > 0f);
 		}
 
-		// Token: 0x0603CDA4 RID: 249252 RVA: 0x00E9DDF8 File Offset: 0x00E9BFF8
+		// Token: 0x06031D01 RID: 204033 RVA: 0x00DEE6B0 File Offset: 0x00DEC8B0
 		private void SetExistShield(bool existShield)
 		{
 			if (this.ExistShield != existShield)
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CDA5 RID: 249253 RVA: 0x00E9DE1A File Offset: 0x00E9C01A
+		// Token: 0x06031D02 RID: 204034 RVA: 0x00DEE6D2 File Offset: 0x00DEC8D2
 		private void SetBarPercent(float percent)
 		{
 			UUISprite barSprite = this.BarSprite;
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			barSprite.SetFillAmount(percent);
 		}
 
-		// Token: 0x0603CDA6 RID: 249254 RVA: 0x00E9DE30 File Offset: 0x00E9C030
+		// Token: 0x06031D03 RID: 204035 RVA: 0x00DEE6E8 File Offset: 0x00DEC8E8
 		private void PlayBreakEffect()
 		{
 			if (this.IsPlayingBreakEffect)
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}, 900f, null, null, true, 1f);
 		}
 
-		// Token: 0x0603CDA7 RID: 249255 RVA: 0x00E9DE88 File Offset: 0x00E9C088
+		// Token: 0x06031D04 RID: 204036 RVA: 0x00DEE740 File Offset: 0x00DEC940
 		private void StopBreakEffect()
 		{
 			if (!this.IsPlayingBreakEffect)
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			breakEffect.SetUIActive(false);
 		}
 
-		// Token: 0x0603CDA8 RID: 249256 RVA: 0x00E9DED8 File Offset: 0x00E9C0D8
+		// Token: 0x06031D05 RID: 204037 RVA: 0x00DEE790 File Offset: 0x00DEC990
 		public void Tick(float delta)
 		{
 			if (this.PercentMachine.Update(delta))
@@ -182,38 +182,38 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401FB35 RID: 129845
+		// Token: 0x0401A5ED RID: 108013
 		private const int BREAK_ANIM_TIME = 900;
 
-		// Token: 0x0401FB36 RID: 129846
+		// Token: 0x0401A5EE RID: 108014
 		private UUISprite BarSprite;
 
-		// Token: 0x0401FB37 RID: 129847
+		// Token: 0x0401A5EF RID: 108015
 		private UUINiagara BreakEffect;
 
-		// Token: 0x0401FB38 RID: 129848
+		// Token: 0x0401A5F0 RID: 108016
 		private bool IsPlayingBreakEffect;
 
-		// Token: 0x0401FB39 RID: 129849
+		// Token: 0x0401A5F1 RID: 108017
 		private TimerHandle BreakEffectTimer;
 
-		// Token: 0x0401FB3A RID: 129850
+		// Token: 0x0401A5F2 RID: 108018
 		[Nullable(1)]
 		private readonly MotorcycleShieldPercentMachine PercentMachine = new MotorcycleShieldPercentMachine();
 
-		// Token: 0x0401FB3B RID: 129851
+		// Token: 0x0401A5F3 RID: 108019
 		public bool ExistShield;
 
-		// Token: 0x0401FB3C RID: 129852
+		// Token: 0x0401A5F4 RID: 108020
 		public Action ExistShieldChanged;
 
-		// Token: 0x0200C079 RID: 49273
+		// Token: 0x0200AA7F RID: 43647
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x0403A14E RID: 237902
+			// Token: 0x04034B11 RID: 215825
 			BarSprite,
-			// Token: 0x0403A14F RID: 237903
+			// Token: 0x04034B12 RID: 215826
 			BreakEffect
 		}
 	}

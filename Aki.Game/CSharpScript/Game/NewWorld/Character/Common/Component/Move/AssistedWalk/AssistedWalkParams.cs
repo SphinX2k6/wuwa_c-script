@@ -7,16 +7,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AssistedWalk
 {
-	// Token: 0x0200710A RID: 28938
+	// Token: 0x020063BA RID: 25530
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AssistedWalkParams : AttachMoveParams
 	{
-		// Token: 0x17009D0B RID: 40203
-		// (get) Token: 0x06046A56 RID: 289366 RVA: 0x011C81E8 File Offset: 0x011C63E8
+		// Token: 0x1700759A RID: 30106
+		// (get) Token: 0x0603DE55 RID: 253525 RVA: 0x011F7208 File Offset: 0x011F5408
 		public static AssistedWalkParams Default { get; } = new AssistedWalkParams(null);
 
-		// Token: 0x06046A57 RID: 289367 RVA: 0x011C81F0 File Offset: 0x011C63F0
+		// Token: 0x0603DE56 RID: 253526 RVA: 0x011F7210 File Offset: 0x011F5410
 		[NullableContext(2)]
 		public AssistedWalkParams(BP_AssistedWalkConfig_C data = null) : base(data)
 		{
@@ -36,19 +36,19 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move.AssistedWal
 			}
 		}
 
-		// Token: 0x04025156 RID: 151894
+		// Token: 0x04020DEB RID: 134635
 		public List<int> LeaderGameplayTagList = new List<int>();
 
-		// Token: 0x04025157 RID: 151895
+		// Token: 0x04020DEC RID: 134636
 		public float BaseMoveSpeed = 45f;
 
-		// Token: 0x04025158 RID: 151896
+		// Token: 0x04020DED RID: 134637
 		public float LeaderTurnSpeed = 30f;
 
-		// Token: 0x04025159 RID: 151897
+		// Token: 0x04020DEE RID: 134638
 		public Vector2D AnimSpeedRateRange = new Vector2D(1.0, 1.0);
 
-		// Token: 0x0402515A RID: 151898
+		// Token: 0x04020DEF RID: 134639
 		public Transform StartTransform = Transform.Create();
 	}
 }

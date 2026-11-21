@@ -15,9 +15,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskPlayPlot.TsTaskPlayPlot_C")]
 public class TsTaskPlayPlot : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170001C8 RID: 456
-	// (get) Token: 0x06000A0D RID: 2573 RVA: 0x000328B1 File Offset: 0x00030AB1
-	// (set) Token: 0x06000A0E RID: 2574 RVA: 0x000328C5 File Offset: 0x00030AC5
+	// Token: 0x170001CB RID: 459
+	// (get) Token: 0x06000A13 RID: 2579 RVA: 0x000339D5 File Offset: 0x00031BD5
+	// (set) Token: 0x06000A14 RID: 2580 RVA: 0x000339E9 File Offset: 0x00031BE9
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string SeqNetworkId
 	{
@@ -31,9 +31,9 @@ public class TsTaskPlayPlot : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x170001C9 RID: 457
-	// (get) Token: 0x06000A0F RID: 2575 RVA: 0x000328DA File Offset: 0x00030ADA
-	// (set) Token: 0x06000A10 RID: 2576 RVA: 0x000328EE File Offset: 0x00030AEE
+	// Token: 0x170001CC RID: 460
+	// (get) Token: 0x06000A15 RID: 2581 RVA: 0x000339FE File Offset: 0x00031BFE
+	// (set) Token: 0x06000A16 RID: 2582 RVA: 0x00033A12 File Offset: 0x00031C12
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string SeqNetworkRes
 	{
@@ -47,9 +47,9 @@ public class TsTaskPlayPlot : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x170001CA RID: 458
-	// (get) Token: 0x06000A11 RID: 2577 RVA: 0x00032903 File Offset: 0x00030B03
-	// (set) Token: 0x06000A12 RID: 2578 RVA: 0x00032917 File Offset: 0x00030B17
+	// Token: 0x170001CD RID: 461
+	// (get) Token: 0x06000A17 RID: 2583 RVA: 0x00033A27 File Offset: 0x00031C27
+	// (set) Token: 0x06000A18 RID: 2584 RVA: 0x00033A3B File Offset: 0x00031C3B
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string PlotConfigRes
 	{
@@ -63,9 +63,9 @@ public class TsTaskPlayPlot : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x170001CB RID: 459
-	// (get) Token: 0x06000A13 RID: 2579 RVA: 0x0003292C File Offset: 0x00030B2C
-	// (set) Token: 0x06000A14 RID: 2580 RVA: 0x0003293C File Offset: 0x00030B3C
+	// Token: 0x170001CE RID: 462
+	// (get) Token: 0x06000A19 RID: 2585 RVA: 0x00033A50 File Offset: 0x00031C50
+	// (set) Token: 0x06000A1A RID: 2586 RVA: 0x00033A60 File Offset: 0x00031C60
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float WaitTickCount
 	{
@@ -79,7 +79,7 @@ public class TsTaskPlayPlot : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x06000A15 RID: 2581 RVA: 0x00032950 File Offset: 0x00030B50
+	// Token: 0x06000A1B RID: 2587 RVA: 0x00033A74 File Offset: 0x00031C74
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -92,30 +92,27 @@ public class TsTaskPlayPlot : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x06000A16 RID: 2582 RVA: 0x000329A4 File Offset: 0x00030BA4
+	// Token: 0x06000A1C RID: 2588 RVA: 0x00033AC8 File Offset: 0x00031CC8
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveExecuteAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskPlayPlot) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveExecuteAI"), TsTaskPlayPlot.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			this.ReceiveExecuteAI_Implementation(ownerController, controlledPawn);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000A17 RID: 2583 RVA: 0x00032A40 File Offset: 0x00030C40
+	// Token: 0x06000A1D RID: 2589 RVA: 0x00033B78 File Offset: 0x00031D78
 	[NullableContext(2)]
 	protected virtual void ReceiveExecuteAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -146,31 +143,28 @@ public class TsTaskPlayPlot : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x06000A18 RID: 2584 RVA: 0x00032B08 File Offset: 0x00030D08
+	// Token: 0x06000A1E RID: 2590 RVA: 0x00033C40 File Offset: 0x00031E40
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveTickAI(AAIController ownerController, APawn controlledPawn, float deltaSeconds)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveTickAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskPlayPlot) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveTickAI"), TsTaskPlayPlot.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
-			ptr2->DeltaSeconds = deltaSeconds;
+			this.ReceiveTickAI_Implementation(ownerController, controlledPawn, deltaSeconds);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		ptr->DeltaSeconds = deltaSeconds;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000A19 RID: 2585 RVA: 0x00032BA8 File Offset: 0x00030DA8
+	// Token: 0x06000A1F RID: 2591 RVA: 0x00033CF8 File Offset: 0x00031EF8
 	[NullableContext(2)]
 	protected virtual void ReceiveTickAI_Implementation(AAIController ownerController, APawn controlledPawn, float deltaSeconds)
 	{
@@ -193,7 +187,7 @@ public class TsTaskPlayPlot : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrea
 		}
 	}
 
-	// Token: 0x06000A1A RID: 2586 RVA: 0x00032C24 File Offset: 0x00030E24
+	// Token: 0x06000A20 RID: 2592 RVA: 0x00033D74 File Offset: 0x00031F74
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskPlayPlot._ClassPtr == IntPtr.Zero)
@@ -203,22 +197,22 @@ public class TsTaskPlayPlot : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrea
 		return TsTaskPlayPlot._ClassPtr;
 	}
 
-	// Token: 0x06000A1B RID: 2587 RVA: 0x00032C48 File Offset: 0x00030E48
+	// Token: 0x06000A21 RID: 2593 RVA: 0x00033D98 File Offset: 0x00031F98
 	public TsTaskPlayPlot() : this(BuiltinUtils.AllocNativeUObject(TsTaskPlayPlot.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06000A1C RID: 2588 RVA: 0x00032C70 File Offset: 0x00030E70
+	// Token: 0x06000A22 RID: 2594 RVA: 0x00033DC0 File Offset: 0x00031FC0
 	public TsTaskPlayPlot(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskPlayPlot.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06000A1D RID: 2589 RVA: 0x00032CA3 File Offset: 0x00030EA3
+	// Token: 0x06000A23 RID: 2595 RVA: 0x00033DF3 File Offset: 0x00031FF3
 	protected TsTaskPlayPlot(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06000A1E RID: 2590 RVA: 0x00032CD0 File Offset: 0x00030ED0
+	// Token: 0x06000A24 RID: 2596 RVA: 0x00033E20 File Offset: 0x00032020
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
@@ -227,7 +221,7 @@ public class TsTaskPlayPlot : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrea
 		this.ReceiveExecuteAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x06000A1F RID: 2591 RVA: 0x00032D00 File Offset: 0x00030F00
+	// Token: 0x06000A25 RID: 2597 RVA: 0x00033E50 File Offset: 0x00032050
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveTickAI_Implementation(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* __Params)
 	{
@@ -236,48 +230,48 @@ public class TsTaskPlayPlot : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrea
 		this.ReceiveTickAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->DeltaSeconds);
 	}
 
-	// Token: 0x040007C1 RID: 1985
+	// Token: 0x040007C9 RID: 1993
 	private const int DEFAULT_WAIT_TICK = 5;
 
-	// Token: 0x040007C2 RID: 1986
+	// Token: 0x040007CA RID: 1994
 	private bool IsInitTsVariables;
 
-	// Token: 0x040007C3 RID: 1987
+	// Token: 0x040007CB RID: 1995
 	private string TsSeqNetworkId = "";
 
-	// Token: 0x040007C4 RID: 1988
+	// Token: 0x040007CC RID: 1996
 	private string TsSeqNetworkRes = "";
 
-	// Token: 0x040007C5 RID: 1989
+	// Token: 0x040007CD RID: 1997
 	private string TsPlotConfigRes = "";
 
-	// Token: 0x040007C6 RID: 1990
+	// Token: 0x040007CE RID: 1998
 	private int TsWaitTickCount;
 
-	// Token: 0x040007C7 RID: 1991
+	// Token: 0x040007CF RID: 1999
 	private bool IsPlotStart;
 
-	// Token: 0x040007C8 RID: 1992
+	// Token: 0x040007D0 RID: 2000
 	private int TickRemain;
 
-	// Token: 0x040007C9 RID: 1993
+	// Token: 0x040007D1 RID: 2001
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskPlayPlot.TsTaskPlayPlot_C";
 
-	// Token: 0x040007CA RID: 1994
+	// Token: 0x040007D2 RID: 2002
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x040007CB RID: 1995
+	// Token: 0x040007D3 RID: 2003
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x040007CC RID: 1996
+	// Token: 0x040007D4 RID: 2004
 	private static int __PropertyOffset_SeqNetworkId;
 
-	// Token: 0x040007CD RID: 1997
+	// Token: 0x040007D5 RID: 2005
 	private static int __PropertyOffset_SeqNetworkRes;
 
-	// Token: 0x040007CE RID: 1998
+	// Token: 0x040007D6 RID: 2006
 	private static int __PropertyOffset_PlotConfigRes;
 
-	// Token: 0x040007CF RID: 1999
+	// Token: 0x040007D7 RID: 2007
 	private static int __PropertyOffset_WaitTickCount;
 }

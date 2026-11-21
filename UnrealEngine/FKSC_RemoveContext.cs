@@ -5,20 +5,20 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001E15 RID: 7701
+	// Token: 0x02000583 RID: 1411
 	[UnrealObjectPath("/Script/KuroSimpleCombat.KSC_RemoveContext")]
 	[UnrealStructLayout(80, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 80)]
 	public class FKSC_RemoveContext : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0601D621 RID: 120353 RVA: 0x002B5F74 File Offset: 0x002B4174
+		// Token: 0x06008009 RID: 32777 RVA: 0x000BD490 File Offset: 0x000BB690
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FKSC_RemoveContext._ScriptStructPtr != 0) ? FKSC_RemoveContext._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroSimpleCombat.KSC_RemoveContext", ref FKSC_RemoveContext._ScriptStructPtr);
 		}
 
-		// Token: 0x17007684 RID: 30340
-		// (get) Token: 0x0601D622 RID: 120354 RVA: 0x002B5F98 File Offset: 0x002B4198
-		// (set) Token: 0x0601D623 RID: 120355 RVA: 0x002B5FA8 File Offset: 0x002B41A8
+		// Token: 0x170018E7 RID: 6375
+		// (get) Token: 0x0600800A RID: 32778 RVA: 0x000BD4B4 File Offset: 0x000BB6B4
+		// (set) Token: 0x0600800B RID: 32779 RVA: 0x000BD4C4 File Offset: 0x000BB6C4
 		public unsafe int EntityId
 		{
 			get
@@ -31,9 +31,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007685 RID: 30341
-		// (get) Token: 0x0601D624 RID: 120356 RVA: 0x002B5FB9 File Offset: 0x002B41B9
-		// (set) Token: 0x0601D625 RID: 120357 RVA: 0x002B5FCD File Offset: 0x002B41CD
+		// Token: 0x170018E8 RID: 6376
+		// (get) Token: 0x0600800C RID: 32780 RVA: 0x000BD4D5 File Offset: 0x000BB6D5
+		// (set) Token: 0x0600800D RID: 32781 RVA: 0x000BD4E9 File Offset: 0x000BB6E9
 		public unsafe FName EntityTypeName
 		{
 			get
@@ -46,9 +46,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007686 RID: 30342
-		// (get) Token: 0x0601D626 RID: 120358 RVA: 0x002B5FE2 File Offset: 0x002B41E2
-		// (set) Token: 0x0601D627 RID: 120359 RVA: 0x002B5FF6 File Offset: 0x002B41F6
+		// Token: 0x170018E9 RID: 6377
+		// (get) Token: 0x0600800E RID: 32782 RVA: 0x000BD4FE File Offset: 0x000BB6FE
+		// (set) Token: 0x0600800F RID: 32783 RVA: 0x000BD512 File Offset: 0x000BB712
 		public unsafe FName ReasonName
 		{
 			get
@@ -61,9 +61,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007687 RID: 30343
-		// (get) Token: 0x0601D628 RID: 120360 RVA: 0x002B600B File Offset: 0x002B420B
-		// (set) Token: 0x0601D629 RID: 120361 RVA: 0x002B601F File Offset: 0x002B421F
+		// Token: 0x170018EA RID: 6378
+		// (get) Token: 0x06008010 RID: 32784 RVA: 0x000BD527 File Offset: 0x000BB727
+		// (set) Token: 0x06008011 RID: 32785 RVA: 0x000BD53B File Offset: 0x000BB73B
 		public unsafe FVectorDouble Location
 		{
 			get
@@ -76,9 +76,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007688 RID: 30344
-		// (get) Token: 0x0601D62A RID: 120362 RVA: 0x002B6034 File Offset: 0x002B4234
-		// (set) Token: 0x0601D62B RID: 120363 RVA: 0x002B6044 File Offset: 0x002B4244
+		// Token: 0x170018EB RID: 6379
+		// (get) Token: 0x06008012 RID: 32786 RVA: 0x000BD550 File Offset: 0x000BB750
+		// (set) Token: 0x06008013 RID: 32787 RVA: 0x000BD560 File Offset: 0x000BB760
 		public unsafe bool IsPreview
 		{
 			get
@@ -91,9 +91,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007689 RID: 30345
-		// (get) Token: 0x0601D62C RID: 120364 RVA: 0x002B6055 File Offset: 0x002B4255
-		// (set) Token: 0x0601D62D RID: 120365 RVA: 0x002B6065 File Offset: 0x002B4265
+		// Token: 0x170018EC RID: 6380
+		// (get) Token: 0x06008014 RID: 32788 RVA: 0x000BD571 File Offset: 0x000BB771
+		// (set) Token: 0x06008015 RID: 32789 RVA: 0x000BD581 File Offset: 0x000BB781
 		public unsafe int EntityIdKillBy
 		{
 			get
@@ -106,9 +106,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700768A RID: 30346
-		// (get) Token: 0x0601D62E RID: 120366 RVA: 0x002B6076 File Offset: 0x002B4276
-		// (set) Token: 0x0601D62F RID: 120367 RVA: 0x002B608A File Offset: 0x002B428A
+		// Token: 0x170018ED RID: 6381
+		// (get) Token: 0x06008016 RID: 32790 RVA: 0x000BD592 File Offset: 0x000BB792
+		// (set) Token: 0x06008017 RID: 32791 RVA: 0x000BD5A6 File Offset: 0x000BB7A6
 		public unsafe FName EntityTypeKillBy
 		{
 			get
@@ -121,80 +121,68 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601D630 RID: 120368 RVA: 0x002B609F File Offset: 0x002B429F
+		// Token: 0x06008018 RID: 32792 RVA: 0x000BD5BB File Offset: 0x000BB7BB
 		public FKSC_RemoveContext()
 		{
 		}
 
-		// Token: 0x0601D631 RID: 120369 RVA: 0x002B60A7 File Offset: 0x002B42A7
-		public FKSC_RemoveContext(int EntityId, FName EntityTypeName, FName ReasonName, FVectorDouble Location, bool IsPreview, int EntityIdKillBy, FName EntityTypeKillBy)
-		{
-			this.EntityId = EntityId;
-			this.EntityTypeName = EntityTypeName;
-			this.ReasonName = ReasonName;
-			this.Location = Location;
-			this.IsPreview = IsPreview;
-			this.EntityIdKillBy = EntityIdKillBy;
-			this.EntityTypeKillBy = EntityTypeKillBy;
-		}
-
-		// Token: 0x0601D632 RID: 120370 RVA: 0x002B60E4 File Offset: 0x002B42E4
+		// Token: 0x06008019 RID: 32793 RVA: 0x000BD5C3 File Offset: 0x000BB7C3
 		protected override IntPtr GetUStructPtr()
 		{
 			return FKSC_RemoveContext.StaticStruct();
 		}
 
-		// Token: 0x0601D633 RID: 120371 RVA: 0x002B60F0 File Offset: 0x002B42F0
+		// Token: 0x0600801A RID: 32794 RVA: 0x000BD5CF File Offset: 0x000BB7CF
 		[NullableContext(2)]
 		public FKSC_RemoveContext(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601D634 RID: 120372 RVA: 0x002B60FA File Offset: 0x002B42FA
+		// Token: 0x0600801B RID: 32795 RVA: 0x000BD5D9 File Offset: 0x000BB7D9
 		public FKSC_RemoveContext(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601D635 RID: 120373 RVA: 0x002B6105 File Offset: 0x002B4305
+		// Token: 0x0600801C RID: 32796 RVA: 0x000BD5E4 File Offset: 0x000BB7E4
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FKSC_RemoveContext(Pointer, false, true);
 		}
 
-		// Token: 0x0601D636 RID: 120374 RVA: 0x002B610F File Offset: 0x002B430F
+		// Token: 0x0600801D RID: 32797 RVA: 0x000BD5EE File Offset: 0x000BB7EE
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FKSC_RemoveContext(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0400FEFA RID: 65274
+		// Token: 0x040037E4 RID: 14308
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroSimpleCombat.KSC_RemoveContext";
 
-		// Token: 0x0400FEFB RID: 65275
+		// Token: 0x040037E5 RID: 14309
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0400FEFC RID: 65276
+		// Token: 0x040037E6 RID: 14310
 		internal static int __PropertyOffset_EntityId;
 
-		// Token: 0x0400FEFD RID: 65277
+		// Token: 0x040037E7 RID: 14311
 		internal static int __PropertyOffset_EntityTypeName;
 
-		// Token: 0x0400FEFE RID: 65278
+		// Token: 0x040037E8 RID: 14312
 		internal static int __PropertyOffset_ReasonName;
 
-		// Token: 0x0400FEFF RID: 65279
+		// Token: 0x040037E9 RID: 14313
 		internal static int __PropertyOffset_Location;
 
-		// Token: 0x0400FF00 RID: 65280
+		// Token: 0x040037EA RID: 14314
 		internal static int __PropertyOffset_IsPreview;
 
-		// Token: 0x0400FF01 RID: 65281
+		// Token: 0x040037EB RID: 14315
 		internal static int __PropertyOffset_EntityIdKillBy;
 
-		// Token: 0x0400FF02 RID: 65282
+		// Token: 0x040037EC RID: 14316
 		internal static int __PropertyOffset_EntityTypeKillBy;
 	}
 }

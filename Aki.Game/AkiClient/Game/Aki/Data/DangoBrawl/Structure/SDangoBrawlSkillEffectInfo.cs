@@ -7,280 +7,280 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Data.DangoBrawl.Structure
 {
-	// Token: 0x02003F9C RID: 16284
+	// Token: 0x0200322A RID: 12842
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Data/DangoBrawl/Structure/SDangoBrawlSkillEffectInfo.SDangoBrawlSkillEffectInfo")]
 	[UnrealStructLayout(296, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 289)]
 	public class SDangoBrawlSkillEffectInfo : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06029971 RID: 170353 RVA: 0x009C80E4 File Offset: 0x009C62E4
+		// Token: 0x060200DB RID: 131291 RVA: 0x0093C251 File Offset: 0x0093A451
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SDangoBrawlSkillEffectInfo._ScriptStructPtr != 0) ? SDangoBrawlSkillEffectInfo._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Data/DangoBrawl/Structure/SDangoBrawlSkillEffectInfo.SDangoBrawlSkillEffectInfo", ref SDangoBrawlSkillEffectInfo._ScriptStructPtr);
 		}
 
-		// Token: 0x17006418 RID: 25624
-		// (get) Token: 0x06029972 RID: 170354 RVA: 0x009C8108 File Offset: 0x009C6308
-		// (set) Token: 0x06029973 RID: 170355 RVA: 0x009C8118 File Offset: 0x009C6318
+		// Token: 0x17003D06 RID: 15622
+		// (get) Token: 0x060200DC RID: 131292 RVA: 0x0093C275 File Offset: 0x0093A475
+		// (set) Token: 0x060200DD RID: 131293 RVA: 0x0093C285 File Offset: 0x0093A485
 		public unsafe int Id
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_Id);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_Id) = value;
 			}
 		}
 
-		// Token: 0x17006419 RID: 25625
-		// (get) Token: 0x06029974 RID: 170356 RVA: 0x009C8129 File Offset: 0x009C6329
-		// (set) Token: 0x06029975 RID: 170357 RVA: 0x009C8148 File Offset: 0x009C6348
+		// Token: 0x17003D07 RID: 15623
+		// (get) Token: 0x060200DE RID: 131294 RVA: 0x0093C296 File Offset: 0x0093A496
+		// (set) Token: 0x060200DF RID: 131295 RVA: 0x0093C2B5 File Offset: 0x0093A4B5
 		public TSoftObjectPtr<UPrimaryDataAsset> WeaponAssetPath
 		{
 			get
 			{
-				return new TSoftObjectPtr<UPrimaryDataAsset>(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_1, base.MemoryOwner ?? this);
+				return new TSoftObjectPtr<UPrimaryDataAsset>(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_WeaponAssetPath, base.MemoryOwner ?? this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_1, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_WeaponAssetPath, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x1700641A RID: 25626
-		// (get) Token: 0x06029976 RID: 170358 RVA: 0x009C816D File Offset: 0x009C636D
-		// (set) Token: 0x06029977 RID: 170359 RVA: 0x009C817D File Offset: 0x009C637D
+		// Token: 0x17003D08 RID: 15624
+		// (get) Token: 0x060200E0 RID: 131296 RVA: 0x0093C2DA File Offset: 0x0093A4DA
+		// (set) Token: 0x060200E1 RID: 131297 RVA: 0x0093C2EA File Offset: 0x0093A4EA
 		public unsafe bool WeaponTargetSelf
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_2) != 0;
+				return *(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_WeaponTargetSelf) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_2) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_WeaponTargetSelf) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x1700641B RID: 25627
-		// (get) Token: 0x06029978 RID: 170360 RVA: 0x009C818E File Offset: 0x009C638E
-		// (set) Token: 0x06029979 RID: 170361 RVA: 0x009C81A2 File Offset: 0x009C63A2
+		// Token: 0x17003D09 RID: 15625
+		// (get) Token: 0x060200E2 RID: 131298 RVA: 0x0093C2FB File Offset: 0x0093A4FB
+		// (set) Token: 0x060200E3 RID: 131299 RVA: 0x0093C30F File Offset: 0x0093A50F
 		public unsafe FVector WeaponOffset
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_WeaponOffset);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_WeaponOffset) = value;
 			}
 		}
 
-		// Token: 0x1700641C RID: 25628
-		// (get) Token: 0x0602997A RID: 170362 RVA: 0x009C81B7 File Offset: 0x009C63B7
-		// (set) Token: 0x0602997B RID: 170363 RVA: 0x009C81D6 File Offset: 0x009C63D6
+		// Token: 0x17003D0A RID: 15626
+		// (get) Token: 0x060200E4 RID: 131300 RVA: 0x0093C324 File Offset: 0x0093A524
+		// (set) Token: 0x060200E5 RID: 131301 RVA: 0x0093C343 File Offset: 0x0093A543
 		public TSoftObjectPtr<UPrimaryDataAsset> SkillAssetPath
 		{
 			get
 			{
-				return new TSoftObjectPtr<UPrimaryDataAsset>(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_4, base.MemoryOwner ?? this);
+				return new TSoftObjectPtr<UPrimaryDataAsset>(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_SkillAssetPath, base.MemoryOwner ?? this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_4, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_SkillAssetPath, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x1700641D RID: 25629
-		// (get) Token: 0x0602997C RID: 170364 RVA: 0x009C81FB File Offset: 0x009C63FB
-		// (set) Token: 0x0602997D RID: 170365 RVA: 0x009C820B File Offset: 0x009C640B
+		// Token: 0x17003D0B RID: 15627
+		// (get) Token: 0x060200E6 RID: 131302 RVA: 0x0093C368 File Offset: 0x0093A568
+		// (set) Token: 0x060200E7 RID: 131303 RVA: 0x0093C378 File Offset: 0x0093A578
 		public unsafe bool SkillTargetSelf
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_5) != 0;
+				return *(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_SkillTargetSelf) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_5) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_SkillTargetSelf) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x1700641E RID: 25630
-		// (get) Token: 0x0602997E RID: 170366 RVA: 0x009C821C File Offset: 0x009C641C
-		// (set) Token: 0x0602997F RID: 170367 RVA: 0x009C8230 File Offset: 0x009C6430
+		// Token: 0x17003D0C RID: 15628
+		// (get) Token: 0x060200E8 RID: 131304 RVA: 0x0093C389 File Offset: 0x0093A589
+		// (set) Token: 0x060200E9 RID: 131305 RVA: 0x0093C39D File Offset: 0x0093A59D
 		public unsafe FVector SkillOffset
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_6);
+				return *(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_SkillOffset);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_6) = value;
+				*(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_SkillOffset) = value;
 			}
 		}
 
-		// Token: 0x1700641F RID: 25631
-		// (get) Token: 0x06029980 RID: 170368 RVA: 0x009C8245 File Offset: 0x009C6445
-		// (set) Token: 0x06029981 RID: 170369 RVA: 0x009C8255 File Offset: 0x009C6455
+		// Token: 0x17003D0D RID: 15629
+		// (get) Token: 0x060200EA RID: 131306 RVA: 0x0093C3B2 File Offset: 0x0093A5B2
+		// (set) Token: 0x060200EB RID: 131307 RVA: 0x0093C3C2 File Offset: 0x0093A5C2
 		public unsafe float SkillMoveTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_7);
+				return *(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_SkillMoveTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_7) = value;
+				*(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_SkillMoveTime) = value;
 			}
 		}
 
-		// Token: 0x17006420 RID: 25632
-		// (get) Token: 0x06029982 RID: 170370 RVA: 0x009C8266 File Offset: 0x009C6466
-		// (set) Token: 0x06029983 RID: 170371 RVA: 0x009C827A File Offset: 0x009C647A
+		// Token: 0x17003D0E RID: 15630
+		// (get) Token: 0x060200EC RID: 131308 RVA: 0x0093C3D3 File Offset: 0x0093A5D3
+		// (set) Token: 0x060200ED RID: 131309 RVA: 0x0093C3E7 File Offset: 0x0093A5E7
 		[Nullable(2)]
 		public unsafe UCurveFloat SkillCurve
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UCurveFloat>(base.NativePtr / (IntPtr)sizeof(void*) + SDangoBrawlSkillEffectInfo.__PropertyOffset_8);
+				return BuiltinUtils.ObjectPropertyGetter<UCurveFloat>(base.NativePtr / (IntPtr)sizeof(void*) + SDangoBrawlSkillEffectInfo.__PropertyOffset_SkillCurve);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + SDangoBrawlSkillEffectInfo.__PropertyOffset_8, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + SDangoBrawlSkillEffectInfo.__PropertyOffset_SkillCurve, value);
 			}
 		}
 
-		// Token: 0x17006421 RID: 25633
-		// (get) Token: 0x06029984 RID: 170372 RVA: 0x009C828F File Offset: 0x009C648F
-		// (set) Token: 0x06029985 RID: 170373 RVA: 0x009C82AE File Offset: 0x009C64AE
+		// Token: 0x17003D0F RID: 15631
+		// (get) Token: 0x060200EE RID: 131310 RVA: 0x0093C3FC File Offset: 0x0093A5FC
+		// (set) Token: 0x060200EF RID: 131311 RVA: 0x0093C41B File Offset: 0x0093A61B
 		public TSoftObjectPtr<UPrimaryDataAsset> HitAssetPath
 		{
 			get
 			{
-				return new TSoftObjectPtr<UPrimaryDataAsset>(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_9, base.MemoryOwner ?? this);
+				return new TSoftObjectPtr<UPrimaryDataAsset>(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_HitAssetPath, base.MemoryOwner ?? this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_9, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_HitAssetPath, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x17006422 RID: 25634
-		// (get) Token: 0x06029986 RID: 170374 RVA: 0x009C82D3 File Offset: 0x009C64D3
-		// (set) Token: 0x06029987 RID: 170375 RVA: 0x009C82E3 File Offset: 0x009C64E3
+		// Token: 0x17003D10 RID: 15632
+		// (get) Token: 0x060200F0 RID: 131312 RVA: 0x0093C440 File Offset: 0x0093A640
+		// (set) Token: 0x060200F1 RID: 131313 RVA: 0x0093C450 File Offset: 0x0093A650
 		public unsafe bool HitTargetSelf
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_10) != 0;
+				return *(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_HitTargetSelf) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_10) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_HitTargetSelf) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17006423 RID: 25635
-		// (get) Token: 0x06029988 RID: 170376 RVA: 0x009C82F4 File Offset: 0x009C64F4
-		// (set) Token: 0x06029989 RID: 170377 RVA: 0x009C8308 File Offset: 0x009C6508
+		// Token: 0x17003D11 RID: 15633
+		// (get) Token: 0x060200F2 RID: 131314 RVA: 0x0093C461 File Offset: 0x0093A661
+		// (set) Token: 0x060200F3 RID: 131315 RVA: 0x0093C475 File Offset: 0x0093A675
 		public unsafe FVector HitOffset
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_11);
+				return *(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_HitOffset);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_11) = value;
+				*(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_HitOffset) = value;
 			}
 		}
 
-		// Token: 0x17006424 RID: 25636
-		// (get) Token: 0x0602998A RID: 170378 RVA: 0x009C831D File Offset: 0x009C651D
-		// (set) Token: 0x0602998B RID: 170379 RVA: 0x009C8331 File Offset: 0x009C6531
+		// Token: 0x17003D12 RID: 15634
+		// (get) Token: 0x060200F4 RID: 131316 RVA: 0x0093C48A File Offset: 0x0093A68A
+		// (set) Token: 0x060200F5 RID: 131317 RVA: 0x0093C49E File Offset: 0x0093A69E
 		public unsafe string OffsetGroupName
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_12)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_OffsetGroupName)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_12)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_OffsetGroupName)), value);
 			}
 		}
 
-		// Token: 0x17006425 RID: 25637
-		// (get) Token: 0x0602998C RID: 170380 RVA: 0x009C8346 File Offset: 0x009C6546
-		// (set) Token: 0x0602998D RID: 170381 RVA: 0x009C8356 File Offset: 0x009C6556
+		// Token: 0x17003D13 RID: 15635
+		// (get) Token: 0x060200F6 RID: 131318 RVA: 0x0093C4B3 File Offset: 0x0093A6B3
+		// (set) Token: 0x060200F7 RID: 131319 RVA: 0x0093C4C3 File Offset: 0x0093A6C3
 		public unsafe float RandomDistance
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_13);
+				return *(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_RandomDistance);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_13) = value;
+				*(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_RandomDistance) = value;
 			}
 		}
 
-		// Token: 0x17006426 RID: 25638
-		// (get) Token: 0x0602998E RID: 170382 RVA: 0x009C8367 File Offset: 0x009C6567
-		// (set) Token: 0x0602998F RID: 170383 RVA: 0x009C837B File Offset: 0x009C657B
+		// Token: 0x17003D14 RID: 15636
+		// (get) Token: 0x060200F8 RID: 131320 RVA: 0x0093C4D4 File Offset: 0x0093A6D4
+		// (set) Token: 0x060200F9 RID: 131321 RVA: 0x0093C4E8 File Offset: 0x0093A6E8
 		public unsafe FVector OffsetMax
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_14);
+				return *(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_OffsetMax);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_14) = value;
+				*(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_OffsetMax) = value;
 			}
 		}
 
-		// Token: 0x17006427 RID: 25639
-		// (get) Token: 0x06029990 RID: 170384 RVA: 0x009C8390 File Offset: 0x009C6590
-		// (set) Token: 0x06029991 RID: 170385 RVA: 0x009C83A4 File Offset: 0x009C65A4
+		// Token: 0x17003D15 RID: 15637
+		// (get) Token: 0x060200FA RID: 131322 RVA: 0x0093C4FD File Offset: 0x0093A6FD
+		// (set) Token: 0x060200FB RID: 131323 RVA: 0x0093C511 File Offset: 0x0093A711
 		public unsafe FVector OffsetMin
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_15);
+				return *(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_OffsetMin);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_15) = value;
+				*(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_OffsetMin) = value;
 			}
 		}
 
-		// Token: 0x17006428 RID: 25640
-		// (get) Token: 0x06029992 RID: 170386 RVA: 0x009C83B9 File Offset: 0x009C65B9
-		// (set) Token: 0x06029993 RID: 170387 RVA: 0x009C83C9 File Offset: 0x009C65C9
+		// Token: 0x17003D16 RID: 15638
+		// (get) Token: 0x060200FC RID: 131324 RVA: 0x0093C526 File Offset: 0x0093A726
+		// (set) Token: 0x060200FD RID: 131325 RVA: 0x0093C536 File Offset: 0x0093A736
 		public unsafe float PlayTimeDelay
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_16);
+				return *(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_PlayTimeDelay);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_16) = value;
+				*(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_PlayTimeDelay) = value;
 			}
 		}
 
-		// Token: 0x17006429 RID: 25641
-		// (get) Token: 0x06029994 RID: 170388 RVA: 0x009C83DC File Offset: 0x009C65DC
-		// (set) Token: 0x06029995 RID: 170389 RVA: 0x009C841F File Offset: 0x009C661F
+		// Token: 0x17003D17 RID: 15639
+		// (get) Token: 0x060200FE RID: 131326 RVA: 0x0093C548 File Offset: 0x0093A748
+		// (set) Token: 0x060200FF RID: 131327 RVA: 0x0093C58B File Offset: 0x0093A78B
 		public TArray<float> DamageHitDelay
 		{
 			get
@@ -289,7 +289,7 @@ namespace AkiClient.Game.Aki.Data.DangoBrawl.Structure
 				TArray<float> result;
 				if ((result = this._DamageHitDelay) == null)
 				{
-					result = (this._DamageHitDelay = new TArray<float>(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_17, base.MemoryOwner ?? this));
+					result = (this._DamageHitDelay = new TArray<float>(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_DamageHitDelay, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -299,182 +299,156 @@ namespace AkiClient.Game.Aki.Data.DangoBrawl.Structure
 			}
 		}
 
-		// Token: 0x1700642A RID: 25642
-		// (get) Token: 0x06029996 RID: 170390 RVA: 0x009C842D File Offset: 0x009C662D
-		// (set) Token: 0x06029997 RID: 170391 RVA: 0x009C843D File Offset: 0x009C663D
+		// Token: 0x17003D18 RID: 15640
+		// (get) Token: 0x06020100 RID: 131328 RVA: 0x0093C599 File Offset: 0x0093A799
+		// (set) Token: 0x06020101 RID: 131329 RVA: 0x0093C5A9 File Offset: 0x0093A7A9
 		public unsafe float PlayRate
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_18);
+				return *(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_PlayRate);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_18) = value;
+				*(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_PlayRate) = value;
 			}
 		}
 
-		// Token: 0x1700642B RID: 25643
-		// (get) Token: 0x06029998 RID: 170392 RVA: 0x009C844E File Offset: 0x009C664E
-		// (set) Token: 0x06029999 RID: 170393 RVA: 0x009C845E File Offset: 0x009C665E
+		// Token: 0x17003D19 RID: 15641
+		// (get) Token: 0x06020102 RID: 131330 RVA: 0x0093C5BA File Offset: 0x0093A7BA
+		// (set) Token: 0x06020103 RID: 131331 RVA: 0x0093C5CA File Offset: 0x0093A7CA
 		public unsafe float MontageLoopTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_19);
+				return *(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_MontageLoopTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_19) = value;
+				*(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_MontageLoopTime) = value;
 			}
 		}
 
-		// Token: 0x1700642C RID: 25644
-		// (get) Token: 0x0602999A RID: 170394 RVA: 0x009C846F File Offset: 0x009C666F
-		// (set) Token: 0x0602999B RID: 170395 RVA: 0x009C847F File Offset: 0x009C667F
+		// Token: 0x17003D1A RID: 15642
+		// (get) Token: 0x06020104 RID: 131332 RVA: 0x0093C5DB File Offset: 0x0093A7DB
+		// (set) Token: 0x06020105 RID: 131333 RVA: 0x0093C5EB File Offset: 0x0093A7EB
 		public unsafe bool TowardOpposite
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_20) != 0;
+				return *(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_TowardOpposite) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_20) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SDangoBrawlSkillEffectInfo.__PropertyOffset_TowardOpposite) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x0602999C RID: 170396 RVA: 0x009C8490 File Offset: 0x009C6690
+		// Token: 0x06020106 RID: 131334 RVA: 0x0093C5FC File Offset: 0x0093A7FC
 		public SDangoBrawlSkillEffectInfo()
 		{
 		}
 
-		// Token: 0x0602999D RID: 170397 RVA: 0x009C8498 File Offset: 0x009C6698
-		public SDangoBrawlSkillEffectInfo(int Id, TSoftObjectPtr<UPrimaryDataAsset> WeaponAssetPath, bool WeaponTargetSelf, FVector WeaponOffset, TSoftObjectPtr<UPrimaryDataAsset> SkillAssetPath, bool SkillTargetSelf, FVector SkillOffset, float SkillMoveTime, UCurveFloat SkillCurve, TSoftObjectPtr<UPrimaryDataAsset> HitAssetPath, bool HitTargetSelf, FVector HitOffset, string OffsetGroupName, float RandomDistance, FVector OffsetMax, FVector OffsetMin, float PlayTimeDelay, TArray<float> DamageHitDelay, float PlayRate, float MontageLoopTime, bool TowardOpposite)
-		{
-			this.Id = Id;
-			this.WeaponAssetPath = WeaponAssetPath;
-			this.WeaponTargetSelf = WeaponTargetSelf;
-			this.WeaponOffset = WeaponOffset;
-			this.SkillAssetPath = SkillAssetPath;
-			this.SkillTargetSelf = SkillTargetSelf;
-			this.SkillOffset = SkillOffset;
-			this.SkillMoveTime = SkillMoveTime;
-			this.SkillCurve = SkillCurve;
-			this.HitAssetPath = HitAssetPath;
-			this.HitTargetSelf = HitTargetSelf;
-			this.HitOffset = HitOffset;
-			this.OffsetGroupName = OffsetGroupName;
-			this.RandomDistance = RandomDistance;
-			this.OffsetMax = OffsetMax;
-			this.OffsetMin = OffsetMin;
-			this.PlayTimeDelay = PlayTimeDelay;
-			this.DamageHitDelay = DamageHitDelay;
-			this.PlayRate = PlayRate;
-			this.MontageLoopTime = MontageLoopTime;
-			this.TowardOpposite = TowardOpposite;
-		}
-
-		// Token: 0x0602999E RID: 170398 RVA: 0x009C8550 File Offset: 0x009C6750
+		// Token: 0x06020107 RID: 131335 RVA: 0x0093C604 File Offset: 0x0093A804
 		protected override IntPtr GetUStructPtr()
 		{
 			return SDangoBrawlSkillEffectInfo.StaticStruct();
 		}
 
-		// Token: 0x0602999F RID: 170399 RVA: 0x009C855C File Offset: 0x009C675C
+		// Token: 0x06020108 RID: 131336 RVA: 0x0093C610 File Offset: 0x0093A810
 		[NullableContext(2)]
 		public SDangoBrawlSkillEffectInfo(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060299A0 RID: 170400 RVA: 0x009C8566 File Offset: 0x009C6766
+		// Token: 0x06020109 RID: 131337 RVA: 0x0093C61A File Offset: 0x0093A81A
 		public SDangoBrawlSkillEffectInfo(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060299A1 RID: 170401 RVA: 0x009C8571 File Offset: 0x009C6771
+		// Token: 0x0602010A RID: 131338 RVA: 0x0093C625 File Offset: 0x0093A825
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SDangoBrawlSkillEffectInfo(Pointer, false, true);
 		}
 
-		// Token: 0x060299A2 RID: 170402 RVA: 0x009C857B File Offset: 0x009C677B
+		// Token: 0x0602010B RID: 131339 RVA: 0x0093C62F File Offset: 0x0093A82F
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SDangoBrawlSkillEffectInfo(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04015572 RID: 87410
+		// Token: 0x040113BB RID: 70587
 		public const string __ObjectPath = "/Game/Aki/Data/DangoBrawl/Structure/SDangoBrawlSkillEffectInfo.SDangoBrawlSkillEffectInfo";
 
-		// Token: 0x04015573 RID: 87411
+		// Token: 0x040113BC RID: 70588
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04015574 RID: 87412
-		internal static int __PropertyOffset_0;
+		// Token: 0x040113BD RID: 70589
+		internal static int __PropertyOffset_Id;
 
-		// Token: 0x04015575 RID: 87413
-		internal static int __PropertyOffset_1;
+		// Token: 0x040113BE RID: 70590
+		internal static int __PropertyOffset_WeaponAssetPath;
 
-		// Token: 0x04015576 RID: 87414
-		internal static int __PropertyOffset_2;
+		// Token: 0x040113BF RID: 70591
+		internal static int __PropertyOffset_WeaponTargetSelf;
 
-		// Token: 0x04015577 RID: 87415
-		internal static int __PropertyOffset_3;
+		// Token: 0x040113C0 RID: 70592
+		internal static int __PropertyOffset_WeaponOffset;
 
-		// Token: 0x04015578 RID: 87416
-		internal static int __PropertyOffset_4;
+		// Token: 0x040113C1 RID: 70593
+		internal static int __PropertyOffset_SkillAssetPath;
 
-		// Token: 0x04015579 RID: 87417
-		internal static int __PropertyOffset_5;
+		// Token: 0x040113C2 RID: 70594
+		internal static int __PropertyOffset_SkillTargetSelf;
 
-		// Token: 0x0401557A RID: 87418
-		internal static int __PropertyOffset_6;
+		// Token: 0x040113C3 RID: 70595
+		internal static int __PropertyOffset_SkillOffset;
 
-		// Token: 0x0401557B RID: 87419
-		internal static int __PropertyOffset_7;
+		// Token: 0x040113C4 RID: 70596
+		internal static int __PropertyOffset_SkillMoveTime;
 
-		// Token: 0x0401557C RID: 87420
-		internal static int __PropertyOffset_8;
+		// Token: 0x040113C5 RID: 70597
+		internal static int __PropertyOffset_SkillCurve;
 
-		// Token: 0x0401557D RID: 87421
-		internal static int __PropertyOffset_9;
+		// Token: 0x040113C6 RID: 70598
+		internal static int __PropertyOffset_HitAssetPath;
 
-		// Token: 0x0401557E RID: 87422
-		internal static int __PropertyOffset_10;
+		// Token: 0x040113C7 RID: 70599
+		internal static int __PropertyOffset_HitTargetSelf;
 
-		// Token: 0x0401557F RID: 87423
-		internal static int __PropertyOffset_11;
+		// Token: 0x040113C8 RID: 70600
+		internal static int __PropertyOffset_HitOffset;
 
-		// Token: 0x04015580 RID: 87424
-		internal static int __PropertyOffset_12;
+		// Token: 0x040113C9 RID: 70601
+		internal static int __PropertyOffset_OffsetGroupName;
 
-		// Token: 0x04015581 RID: 87425
-		internal static int __PropertyOffset_13;
+		// Token: 0x040113CA RID: 70602
+		internal static int __PropertyOffset_RandomDistance;
 
-		// Token: 0x04015582 RID: 87426
-		internal static int __PropertyOffset_14;
+		// Token: 0x040113CB RID: 70603
+		internal static int __PropertyOffset_OffsetMax;
 
-		// Token: 0x04015583 RID: 87427
-		internal static int __PropertyOffset_15;
+		// Token: 0x040113CC RID: 70604
+		internal static int __PropertyOffset_OffsetMin;
 
-		// Token: 0x04015584 RID: 87428
-		internal static int __PropertyOffset_16;
+		// Token: 0x040113CD RID: 70605
+		internal static int __PropertyOffset_PlayTimeDelay;
 
-		// Token: 0x04015585 RID: 87429
-		internal static int __PropertyOffset_17;
+		// Token: 0x040113CE RID: 70606
+		internal static int __PropertyOffset_DamageHitDelay;
 
-		// Token: 0x04015586 RID: 87430
+		// Token: 0x040113CF RID: 70607
 		[Nullable(2)]
 		private TArray<float> _DamageHitDelay;
 
-		// Token: 0x04015587 RID: 87431
-		internal static int __PropertyOffset_18;
+		// Token: 0x040113D0 RID: 70608
+		internal static int __PropertyOffset_PlayRate;
 
-		// Token: 0x04015588 RID: 87432
-		internal static int __PropertyOffset_19;
+		// Token: 0x040113D1 RID: 70609
+		internal static int __PropertyOffset_MontageLoopTime;
 
-		// Token: 0x04015589 RID: 87433
-		internal static int __PropertyOffset_20;
+		// Token: 0x040113D2 RID: 70610
+		internal static int __PropertyOffset_TowardOpposite;
 	}
 }

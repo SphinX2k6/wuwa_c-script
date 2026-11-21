@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000E1C RID: 3612
+	// Token: 0x02000E0C RID: 3596
 	[NetMessage(EMessageId.QuestLockInfoNotify)]
 	public sealed class QuestLockInfoNotify : IMessage<QuestLockInfoNotify>, IMessage, IEquatable<QuestLockInfoNotify>, IDeepCloneable<QuestLockInfoNotify>, IBufferMessage
 	{
-		// Token: 0x06013679 RID: 79481 RVA: 0x002D27DA File Offset: 0x002D09DA
+		// Token: 0x06013594 RID: 79252 RVA: 0x002D1116 File Offset: 0x002CF316
 		[NullableContext(1)]
 		public static QuestLockInfoNotify Create()
 		{
 			return new QuestLockInfoNotify();
 		}
 
-		// Token: 0x17004059 RID: 16473
-		// (get) Token: 0x0601367A RID: 79482 RVA: 0x002D27E1 File Offset: 0x002D09E1
+		// Token: 0x1700402F RID: 16431
+		// (get) Token: 0x06013595 RID: 79253 RVA: 0x002D111D File Offset: 0x002CF31D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700405A RID: 16474
-		// (get) Token: 0x0601367B RID: 79483 RVA: 0x002D27E4 File Offset: 0x002D09E4
+		// Token: 0x17004030 RID: 16432
+		// (get) Token: 0x06013596 RID: 79254 RVA: 0x002D1120 File Offset: 0x002CF320
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601367C RID: 79484 RVA: 0x002D27EB File Offset: 0x002D09EB
+		// Token: 0x06013597 RID: 79255 RVA: 0x002D1127 File Offset: 0x002CF327
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public QuestLockInfoNotify()
 		{
 		}
 
-		// Token: 0x0601367D RID: 79485 RVA: 0x002D27FE File Offset: 0x002D09FE
+		// Token: 0x06013598 RID: 79256 RVA: 0x002D113A File Offset: 0x002CF33A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public QuestLockInfoNotify(QuestLockInfoNotify other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601367E RID: 79486 RVA: 0x002D2828 File Offset: 0x002D0A28
+		// Token: 0x06013599 RID: 79257 RVA: 0x002D1164 File Offset: 0x002CF364
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public QuestLockInfoNotify Clone()
@@ -67,8 +67,8 @@ namespace Aki.Protocol
 			return new QuestLockInfoNotify(this);
 		}
 
-		// Token: 0x1700405B RID: 16475
-		// (get) Token: 0x0601367F RID: 79487 RVA: 0x002D2830 File Offset: 0x002D0A30
+		// Token: 0x17004031 RID: 16433
+		// (get) Token: 0x0601359A RID: 79258 RVA: 0x002D116C File Offset: 0x002CF36C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<QuestLockInfo> QuestLockInfos
@@ -79,7 +79,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06013680 RID: 79488 RVA: 0x002D2838 File Offset: 0x002D0A38
+		// Token: 0x0601359B RID: 79259 RVA: 0x002D1174 File Offset: 0x002CF374
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -87,7 +87,7 @@ namespace Aki.Protocol
 			return this.Equals(other as QuestLockInfoNotify);
 		}
 
-		// Token: 0x06013681 RID: 79489 RVA: 0x002D2846 File Offset: 0x002D0A46
+		// Token: 0x0601359C RID: 79260 RVA: 0x002D1182 File Offset: 0x002CF382
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(QuestLockInfoNotify other)
@@ -95,7 +95,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.questLockInfos_.Equals(other.questLockInfos_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06013682 RID: 79490 RVA: 0x002D287C File Offset: 0x002D0A7C
+		// Token: 0x0601359D RID: 79261 RVA: 0x002D11B8 File Offset: 0x002CF3B8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06013683 RID: 79491 RVA: 0x002D28B0 File Offset: 0x002D0AB0
+		// Token: 0x0601359E RID: 79262 RVA: 0x002D11EC File Offset: 0x002CF3EC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06013684 RID: 79492 RVA: 0x002D28BD File Offset: 0x002D0ABD
+		// Token: 0x0601359F RID: 79263 RVA: 0x002D11F9 File Offset: 0x002CF3F9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -125,7 +125,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06013685 RID: 79493 RVA: 0x002D28C6 File Offset: 0x002D0AC6
+		// Token: 0x060135A0 RID: 79264 RVA: 0x002D1202 File Offset: 0x002CF402
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -137,7 +137,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06013686 RID: 79494 RVA: 0x002D28F0 File Offset: 0x002D0AF0
+		// Token: 0x060135A1 RID: 79265 RVA: 0x002D122C File Offset: 0x002CF42C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -151,7 +151,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06013687 RID: 79495 RVA: 0x002D2929 File Offset: 0x002D0B29
+		// Token: 0x060135A2 RID: 79266 RVA: 0x002D1265 File Offset: 0x002CF465
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(QuestLockInfoNotify other)
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06013688 RID: 79496 RVA: 0x002D2957 File Offset: 0x002D0B57
+		// Token: 0x060135A3 RID: 79267 RVA: 0x002D1293 File Offset: 0x002CF493
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -172,7 +172,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06013689 RID: 79497 RVA: 0x002D2960 File Offset: 0x002D0B60
+		// Token: 0x060135A4 RID: 79268 RVA: 0x002D129C File Offset: 0x002CF49C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -184,7 +184,7 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 58U)
+				if (num != 114U)
 				{
 					this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 				}
@@ -195,16 +195,16 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400770A RID: 30474
+		// Token: 0x04007734 RID: 30516
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400770B RID: 30475
-		public const int QuestLockInfosFieldNumber = 7;
+		// Token: 0x04007735 RID: 30517
+		public const int QuestLockInfosFieldNumber = 14;
 
-		// Token: 0x0400770C RID: 30476
-		private static readonly FieldCodec<QuestLockInfo> _repeated_questLockInfos_codec = FieldCodec.ForMessage<QuestLockInfo>(58U, QuestLockInfo.Parser);
+		// Token: 0x04007736 RID: 30518
+		private static readonly FieldCodec<QuestLockInfo> _repeated_questLockInfos_codec = FieldCodec.ForMessage<QuestLockInfo>(114U, QuestLockInfo.Parser);
 
-		// Token: 0x0400770D RID: 30477
+		// Token: 0x04007737 RID: 30519
 		private readonly RepeatedField<QuestLockInfo> questLockInfos_ = new RepeatedField<QuestLockInfo>();
 	}
 }

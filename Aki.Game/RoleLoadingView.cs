@@ -6,16 +6,16 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002081 RID: 8321
+// Token: 0x02001554 RID: 5460
 public class RoleLoadingView : LoadingViewBase
 {
-	// Token: 0x06010638 RID: 67128 RVA: 0x003FF05D File Offset: 0x003FD25D
+	// Token: 0x0600DAA0 RID: 55968 RVA: 0x0040B4A5 File Offset: 0x004096A5
 	[NullableContext(1)]
 	public RoleLoadingView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06010639 RID: 67129 RVA: 0x003FF068 File Offset: 0x003FD268
+	// Token: 0x0600DAA1 RID: 55969 RVA: 0x0040B4B0 File Offset: 0x004096B0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -35,14 +35,14 @@ public class RoleLoadingView : LoadingViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0601063A RID: 67130 RVA: 0x003FF134 File Offset: 0x003FD334
+	// Token: 0x0600DAA2 RID: 55970 RVA: 0x0040B57C File Offset: 0x0040977C
 	protected override void OnStart()
 	{
 		base.OnStart();
 		this.InitContent();
 	}
 
-	// Token: 0x0601063B RID: 67131 RVA: 0x003FF144 File Offset: 0x003FD344
+	// Token: 0x0600DAA3 RID: 55971 RVA: 0x0040B58C File Offset: 0x0040978C
 	private void InitContent()
 	{
 		CharacterDisplayStyle? roleLoading = LoadingModel.Instance.RoleLoading;
@@ -68,34 +68,34 @@ public class RoleLoadingView : LoadingViewBase
 		LoadingModel.Instance.ClearRoleLoadingInfo();
 	}
 
-	// Token: 0x0601063C RID: 67132 RVA: 0x003FF247 File Offset: 0x003FD447
+	// Token: 0x0600DAA4 RID: 55972 RVA: 0x0040B68F File Offset: 0x0040988F
 	protected override void UpdateProgressRate(float rate)
 	{
 		base.GetSprite(0).SetFillAmount(rate);
 	}
 
-	// Token: 0x0601063D RID: 67133 RVA: 0x003FF256 File Offset: 0x003FD456
+	// Token: 0x0600DAA5 RID: 55973 RVA: 0x0040B69E File Offset: 0x0040989E
 	protected override void UpdateProgressValue(float value)
 	{
 		this.SetTextProgressValue(1, value, "%");
 	}
 
-	// Token: 0x02008669 RID: 34409
+	// Token: 0x020077F0 RID: 30704
 	private class EChildType
 	{
-		// Token: 0x0402BBAE RID: 179118
+		// Token: 0x04026EBD RID: 159421
 		public const int Progress = 0;
 
-		// Token: 0x0402BBAF RID: 179119
+		// Token: 0x04026EBE RID: 159422
 		public const int ProgressText = 1;
 
-		// Token: 0x0402BBB0 RID: 179120
+		// Token: 0x04026EBF RID: 159423
 		public const int Tips = 2;
 
-		// Token: 0x0402BBB1 RID: 179121
+		// Token: 0x04026EC0 RID: 159424
 		public const int RoleTexture = 3;
 
-		// Token: 0x0402BBB2 RID: 179122
+		// Token: 0x04026EC1 RID: 159425
 		public const int RoleName = 4;
 	}
 }

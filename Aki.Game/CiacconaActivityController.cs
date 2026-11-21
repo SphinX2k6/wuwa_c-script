@@ -2,43 +2,43 @@
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x020011DD RID: 4573
+// Token: 0x02000691 RID: 1681
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class CiacconaActivityController : ActivityControllerBase
 {
-	// Token: 0x060079DD RID: 31197 RVA: 0x0019A710 File Offset: 0x00198910
+	// Token: 0x06004D74 RID: 19828 RVA: 0x001A33C0 File Offset: 0x001A15C0
 	protected override bool OnGetIsOpeningActivityRelativeView()
 	{
 		return false;
 	}
 
-	// Token: 0x060079DE RID: 31198 RVA: 0x0019A713 File Offset: 0x00198913
+	// Token: 0x06004D75 RID: 19829 RVA: 0x001A33C3 File Offset: 0x001A15C3
 	protected override void OnOpenView(ActivityBaseData data)
 	{
 	}
 
-	// Token: 0x060079DF RID: 31199 RVA: 0x0019A715 File Offset: 0x00198915
+	// Token: 0x06004D76 RID: 19830 RVA: 0x001A33C5 File Offset: 0x001A15C5
 	protected override string OnGetActivityResource(ActivityBaseData data)
 	{
 		return "UiItem_ActivityXiaMain";
 	}
 
-	// Token: 0x060079E0 RID: 31200 RVA: 0x0019A71C File Offset: 0x0019891C
+	// Token: 0x06004D77 RID: 19831 RVA: 0x001A33CC File Offset: 0x001A15CC
 	protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 	{
 		return new CiacconaActivitySubView();
 	}
 
-	// Token: 0x060079E1 RID: 31201 RVA: 0x0019A723 File Offset: 0x00198923
+	// Token: 0x06004D78 RID: 19832 RVA: 0x001A33D3 File Offset: 0x001A15D3
 	protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 	{
 		return new CiacconaActivityData();
 	}
 
-	// Token: 0x17000A69 RID: 2665
-	// (get) Token: 0x060079E2 RID: 31202 RVA: 0x0019A72A File Offset: 0x0019892A
+	// Token: 0x17000A89 RID: 2697
+	// (get) Token: 0x06004D79 RID: 19833 RVA: 0x001A33DA File Offset: 0x001A15DA
 	public static CiacconaActivityController Instance
 	{
 		get
@@ -47,7 +47,7 @@ public class CiacconaActivityController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x060079E3 RID: 31203 RVA: 0x0019A731 File Offset: 0x00198931
+	// Token: 0x06004D7A RID: 19834 RVA: 0x001A33E1 File Offset: 0x001A15E1
 	public static CiacconaActivityController GetOrCreateInstance()
 	{
 		if (CiacconaActivityController._Instance == null)
@@ -57,7 +57,7 @@ public class CiacconaActivityController : ActivityControllerBase
 		return CiacconaActivityController._Instance;
 	}
 
-	// Token: 0x060079E4 RID: 31204 RVA: 0x0019A745 File Offset: 0x00198945
+	// Token: 0x06004D7B RID: 19835 RVA: 0x001A33F5 File Offset: 0x001A15F5
 	public static bool CreateInstance()
 	{
 		if (CiacconaActivityController._Instance != null)
@@ -68,24 +68,24 @@ public class CiacconaActivityController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x060079E5 RID: 31205 RVA: 0x0019A75B File Offset: 0x0019895B
+	// Token: 0x06004D7C RID: 19836 RVA: 0x001A340B File Offset: 0x001A160B
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060079E6 RID: 31206 RVA: 0x0019A75D File Offset: 0x0019895D
+	// Token: 0x06004D7D RID: 19837 RVA: 0x001A340D File Offset: 0x001A160D
 	public static void ResetStaticDefaultValue()
 	{
 		CiacconaActivityController._Instance = null;
 	}
 
-	// Token: 0x060079E7 RID: 31207 RVA: 0x0019A765 File Offset: 0x00198965
+	// Token: 0x06004D7E RID: 19838 RVA: 0x001A3415 File Offset: 0x001A1615
 	static CiacconaActivityController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CiacconaActivityController.CreateStaticDefaultValue), new Action(CiacconaActivityController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040037FD RID: 14333
+	// Token: 0x04003896 RID: 14486
 	[Nullable(2)]
 	private static CiacconaActivityController _Instance;
 }

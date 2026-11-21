@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AE6 RID: 2790
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000BB0 RID: 2992
 	public class ICountDownTextTip : ITrampleTipType
 	{
-		// Token: 0x06004037 RID: 16439 RVA: 0x000A3EC1 File Offset: 0x000A20C1
+		// Token: 0x06004461 RID: 17505 RVA: 0x000AD4B5 File Offset: 0x000AB6B5
 		public static ICountDownTextTip Create(ICountDownTextTip? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001028 RID: 4136
-		// (get) Token: 0x06004038 RID: 16440 RVA: 0x000A3EE0 File Offset: 0x000A20E0
+		// Token: 0x170010FC RID: 4348
+		// (get) Token: 0x06004462 RID: 17506 RVA: 0x000AD4D4 File Offset: 0x000AB6D4
 		public override ETrampleTipType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001029 RID: 4137
-		// (get) Token: 0x06004039 RID: 16441 RVA: 0x000A3EED File Offset: 0x000A20ED
+		// Token: 0x170010FD RID: 4349
+		// (get) Token: 0x06004463 RID: 17507 RVA: 0x000AD4E1 File Offset: 0x000AB6E1
 		public virtual string TidCountDownTip
 		{
 			get
@@ -42,8 +40,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700102A RID: 4138
-		// (get) Token: 0x0600403A RID: 16442 RVA: 0x000A3EFA File Offset: 0x000A20FA
+		// Token: 0x170010FE RID: 4350
+		// (get) Token: 0x06004464 RID: 17508 RVA: 0x000AD4EE File Offset: 0x000AB6EE
 		[Nullable(2)]
 		public virtual string EdTidCountDownTip
 		{
@@ -54,7 +52,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040023B9 RID: 9145
+		// Token: 0x040025D5 RID: 9685
 		private ICountDownTextTip Instance;
 	}
 }

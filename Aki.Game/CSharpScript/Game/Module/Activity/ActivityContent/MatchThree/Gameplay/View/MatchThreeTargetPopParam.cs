@@ -5,22 +5,22 @@ using CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Goal
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.View
 {
-	// Token: 0x020064E6 RID: 25830
+	// Token: 0x02005464 RID: 21604
 	[NullableContext(1)]
 	[Nullable(0)]
 	public sealed class MatchThreeTargetPopParam
 	{
-		// Token: 0x06040D72 RID: 265586 RVA: 0x00FB4F2E File Offset: 0x00FB312E
+		// Token: 0x06035A36 RID: 219702 RVA: 0x00EFBF5E File Offset: 0x00EFA15E
 		public MatchThreeTargetPopParam(IReadOnlyList<LevelGoal> goals, Action onClosed)
 		{
 		}
 
-		// Token: 0x170094DE RID: 38110
-		// (get) Token: 0x06040D73 RID: 265587 RVA: 0x00FB4F44 File Offset: 0x00FB3144
+		// Token: 0x17006840 RID: 26688
+		// (get) Token: 0x06035A37 RID: 219703 RVA: 0x00EFBF74 File Offset: 0x00EFA174
 		public IReadOnlyList<LevelGoal> Goals { get; } = goals;
 
-		// Token: 0x170094DF RID: 38111
-		// (get) Token: 0x06040D74 RID: 265588 RVA: 0x00FB4F4C File Offset: 0x00FB314C
+		// Token: 0x17006841 RID: 26689
+		// (get) Token: 0x06035A38 RID: 219704 RVA: 0x00EFBF7C File Offset: 0x00EFA17C
 		public Action OnClosed { get; } = onClosed;
 	}
 }

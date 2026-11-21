@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003C73 RID: 15475
+	// Token: 0x02004085 RID: 16517
 	public struct IVolumeTriggerShape : IFlatbufferObject
 	{
-		// Token: 0x17006AB9 RID: 27321
-		// (get) Token: 0x060156AF RID: 87727 RVA: 0x00318928 File Offset: 0x00316B28
+		// Token: 0x17007073 RID: 28787
+		// (get) Token: 0x06016BE3 RID: 93155 RVA: 0x0033FB14 File Offset: 0x0033DD14
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x060156B0 RID: 87728 RVA: 0x00318935 File Offset: 0x00316B35
+		// Token: 0x06016BE4 RID: 93156 RVA: 0x0033FB21 File Offset: 0x0033DD21
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060156B1 RID: 87729 RVA: 0x0031893C File Offset: 0x00316B3C
+		// Token: 0x06016BE5 RID: 93157 RVA: 0x0033FB28 File Offset: 0x0033DD28
 		public static IVolumeTriggerShape GetRootAsIVolumeTriggerShape(ByteBuffer _bb)
 		{
 			return IVolumeTriggerShape.GetRootAsIVolumeTriggerShape(_bb, default(IVolumeTriggerShape));
 		}
 
-		// Token: 0x060156B2 RID: 87730 RVA: 0x00318958 File Offset: 0x00316B58
+		// Token: 0x06016BE6 RID: 93158 RVA: 0x0033FB44 File Offset: 0x0033DD44
 		public static IVolumeTriggerShape GetRootAsIVolumeTriggerShape(ByteBuffer _bb, IVolumeTriggerShape obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060156B3 RID: 87731 RVA: 0x00318975 File Offset: 0x00316B75
+		// Token: 0x06016BE7 RID: 93159 RVA: 0x0033FB61 File Offset: 0x0033DD61
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060156B4 RID: 87732 RVA: 0x00318984 File Offset: 0x00316B84
+		// Token: 0x06016BE8 RID: 93160 RVA: 0x0033FB70 File Offset: 0x0033DD70
 		public IVolumeTriggerShape __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006ABA RID: 27322
-		// (get) Token: 0x060156B5 RID: 87733 RVA: 0x00318994 File Offset: 0x00316B94
+		// Token: 0x17007074 RID: 28788
+		// (get) Token: 0x06016BE9 RID: 93161 RVA: 0x0033FB80 File Offset: 0x0033DD80
 		public ETriggerShape Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x17006ABB RID: 27323
-		// (get) Token: 0x060156B6 RID: 87734 RVA: 0x003189D0 File Offset: 0x00316BD0
+		// Token: 0x17007075 RID: 28789
+		// (get) Token: 0x06016BEA RID: 93162 RVA: 0x0033FBBC File Offset: 0x0033DDBC
 		public string VolumeKey
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x060156B7 RID: 87735 RVA: 0x00318A07 File Offset: 0x00316C07
+		// Token: 0x06016BEB RID: 93163 RVA: 0x0033FBF3 File Offset: 0x0033DDF3
 		public Span<byte> GetVolumeKeyBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x060156B8 RID: 87736 RVA: 0x00318A16 File Offset: 0x00316C16
+		// Token: 0x06016BEC RID: 93164 RVA: 0x0033FC02 File Offset: 0x0033DE02
 		public byte[] GetVolumeKeyArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x060156B9 RID: 87737 RVA: 0x00318A24 File Offset: 0x00316C24
+		// Token: 0x06016BED RID: 93165 RVA: 0x0033FC10 File Offset: 0x0033DE10
 		public static Offset<IVolumeTriggerShape> CreateIVolumeTriggerShape(FlatBufferBuilder builder, ETriggerShape Type = ETriggerShape.Box, StringOffset VolumeKeyOffset = default(StringOffset))
 		{
 			builder.StartTable(2);
@@ -98,31 +98,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return IVolumeTriggerShape.EndIVolumeTriggerShape(builder);
 		}
 
-		// Token: 0x060156BA RID: 87738 RVA: 0x00318A41 File Offset: 0x00316C41
+		// Token: 0x06016BEE RID: 93166 RVA: 0x0033FC2D File Offset: 0x0033DE2D
 		public static void StartIVolumeTriggerShape(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060156BB RID: 87739 RVA: 0x00318A4A File Offset: 0x00316C4A
+		// Token: 0x06016BEF RID: 93167 RVA: 0x0033FC36 File Offset: 0x0033DE36
 		public static void AddType(FlatBufferBuilder builder, ETriggerShape type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060156BC RID: 87740 RVA: 0x00318A55 File Offset: 0x00316C55
+		// Token: 0x06016BF0 RID: 93168 RVA: 0x0033FC41 File Offset: 0x0033DE41
 		public static void AddVolumeKey(FlatBufferBuilder builder, StringOffset volumeKeyOffset)
 		{
 			builder.AddOffset(1, volumeKeyOffset.Value, 0);
 		}
 
-		// Token: 0x060156BD RID: 87741 RVA: 0x00318A65 File Offset: 0x00316C65
+		// Token: 0x06016BF1 RID: 93169 RVA: 0x0033FC51 File Offset: 0x0033DE51
 		public static Offset<IVolumeTriggerShape> EndIVolumeTriggerShape(FlatBufferBuilder builder)
 		{
 			return new Offset<IVolumeTriggerShape>(builder.EndTable());
 		}
 
-		// Token: 0x060156BE RID: 87742 RVA: 0x00318A74 File Offset: 0x00316C74
+		// Token: 0x06016BF2 RID: 93170 RVA: 0x0033FC60 File Offset: 0x0033DE60
 		public IVolumeTriggerShapeT UnPack()
 		{
 			IVolumeTriggerShapeT volumeTriggerShapeT = new IVolumeTriggerShapeT();
@@ -130,14 +130,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return volumeTriggerShapeT;
 		}
 
-		// Token: 0x060156BF RID: 87743 RVA: 0x00318A8F File Offset: 0x00316C8F
+		// Token: 0x06016BF3 RID: 93171 RVA: 0x0033FC7B File Offset: 0x0033DE7B
 		public void UnPackTo(IVolumeTriggerShapeT _o)
 		{
 			_o.Type = this.Type;
 			_o.VolumeKey = this.VolumeKey;
 		}
 
-		// Token: 0x060156C0 RID: 87744 RVA: 0x00318AAC File Offset: 0x00316CAC
+		// Token: 0x06016BF4 RID: 93172 RVA: 0x0033FC98 File Offset: 0x0033DE98
 		public static Offset<IVolumeTriggerShape> Pack(FlatBufferBuilder builder, IVolumeTriggerShapeT _o)
 		{
 			if (_o == null)
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return IVolumeTriggerShape.CreateIVolumeTriggerShape(builder, _o.Type, volumeKeyOffset);
 		}
 
-		// Token: 0x0400B2A9 RID: 45737
+		// Token: 0x0400BC3E RID: 48190
 		private Table __p;
 	}
 }

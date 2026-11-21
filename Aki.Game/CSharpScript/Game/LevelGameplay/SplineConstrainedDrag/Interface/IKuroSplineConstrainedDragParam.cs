@@ -7,36 +7,36 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag.Interface
 {
-	// Token: 0x02006A37 RID: 27191
+	// Token: 0x02005B94 RID: 23444
 	[NullableContext(2)]
 	public interface IKuroSplineConstrainedDragParam
 	{
-		// Token: 0x170098E8 RID: 39144
-		// (get) Token: 0x06043A39 RID: 277049
-		// (set) Token: 0x06043A3A RID: 277050
+		// Token: 0x17006DCD RID: 28109
+		// (get) Token: 0x06039A87 RID: 236167
+		// (set) Token: 0x06039A88 RID: 236168
 		[Nullable(1)]
 		string ActorKey { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-		// Token: 0x170098E9 RID: 39145
-		// (get) Token: 0x06043A3B RID: 277051
-		// (set) Token: 0x06043A3C RID: 277052
+		// Token: 0x17006DCE RID: 28110
+		// (get) Token: 0x06039A89 RID: 236169
+		// (set) Token: 0x06039A8A RID: 236170
 		[Nullable(1)]
 		USplineComponent ConstraintSpline { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-		// Token: 0x170098EA RID: 39146
-		// (get) Token: 0x06043A3D RID: 277053
-		// (set) Token: 0x06043A3E RID: 277054
+		// Token: 0x17006DCF RID: 28111
+		// (get) Token: 0x06039A8B RID: 236171
+		// (set) Token: 0x06039A8C RID: 236172
 		[Nullable(1)]
 		AActor Actor { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-		// Token: 0x170098EB RID: 39147
-		// (get) Token: 0x06043A3F RID: 277055
-		// (set) Token: 0x06043A40 RID: 277056
+		// Token: 0x17006DD0 RID: 28112
+		// (get) Token: 0x06039A8D RID: 236173
+		// (set) Token: 0x06039A8E RID: 236174
 		ISequenceProgressController SequenceProgressController { get; set; }
 
-		// Token: 0x170098EC RID: 39148
-		// (get) Token: 0x06043A41 RID: 277057
-		// (set) Token: 0x06043A42 RID: 277058
+		// Token: 0x17006DD1 RID: 28113
+		// (get) Token: 0x06039A8F RID: 236175
+		// (set) Token: 0x06039A90 RID: 236176
 		[Nullable(new byte[]
 		{
 			2,
@@ -52,54 +52,54 @@ namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag.Interface
 			1
 		})] set; }
 
-		// Token: 0x170098ED RID: 39149
-		// (get) Token: 0x06043A43 RID: 277059
-		// (set) Token: 0x06043A44 RID: 277060
+		// Token: 0x17006DD2 RID: 28114
+		// (get) Token: 0x06039A91 RID: 236177
+		// (set) Token: 0x06039A92 RID: 236178
 		long? CreatureDataId { get; set; }
 
-		// Token: 0x170098EE RID: 39150
-		// (get) Token: 0x06043A45 RID: 277061
-		// (set) Token: 0x06043A46 RID: 277062
+		// Token: 0x17006DD3 RID: 28115
+		// (get) Token: 0x06039A93 RID: 236179
+		// (set) Token: 0x06039A94 RID: 236180
 		float? MaxPlaySpeed { get; set; }
 
-		// Token: 0x170098EF RID: 39151
-		// (get) Token: 0x06043A47 RID: 277063
-		// (set) Token: 0x06043A48 RID: 277064
+		// Token: 0x17006DD4 RID: 28116
+		// (get) Token: 0x06039A95 RID: 236181
+		// (set) Token: 0x06039A96 RID: 236182
 		float? Stiffness { get; set; }
 
-		// Token: 0x170098F0 RID: 39152
-		// (get) Token: 0x06043A49 RID: 277065
-		// (set) Token: 0x06043A4A RID: 277066
+		// Token: 0x17006DD5 RID: 28117
+		// (get) Token: 0x06039A97 RID: 236183
+		// (set) Token: 0x06039A98 RID: 236184
 		float? Damping { get; set; }
 
-		// Token: 0x170098F1 RID: 39153
-		// (get) Token: 0x06043A4B RID: 277067
-		// (set) Token: 0x06043A4C RID: 277068
+		// Token: 0x17006DD6 RID: 28118
+		// (get) Token: 0x06039A99 RID: 236185
+		// (set) Token: 0x06039A9A RID: 236186
 		string DraggableActorEffectDa { get; set; }
 
-		// Token: 0x170098F2 RID: 39154
-		// (get) Token: 0x06043A4D RID: 277069
-		// (set) Token: 0x06043A4E RID: 277070
+		// Token: 0x17006DD7 RID: 28119
+		// (get) Token: 0x06039A9B RID: 236187
+		// (set) Token: 0x06039A9C RID: 236188
 		IConditionGroup Condition { get; set; }
 
-		// Token: 0x170098F3 RID: 39155
-		// (get) Token: 0x06043A4F RID: 277071
-		// (set) Token: 0x06043A50 RID: 277072
+		// Token: 0x17006DD8 RID: 28120
+		// (get) Token: 0x06039A9D RID: 236189
+		// (set) Token: 0x06039A9E RID: 236190
 		IDraggableStateApplier CustomStateApplier { get; set; }
 
-		// Token: 0x170098F4 RID: 39156
-		// (get) Token: 0x06043A51 RID: 277073
-		// (set) Token: 0x06043A52 RID: 277074
+		// Token: 0x17006DD9 RID: 28121
+		// (get) Token: 0x06039A9F RID: 236191
+		// (set) Token: 0x06039AA0 RID: 236192
 		bool? IgnoreRotation { get; set; }
 
-		// Token: 0x170098F5 RID: 39157
-		// (get) Token: 0x06043A53 RID: 277075
-		// (set) Token: 0x06043A54 RID: 277076
+		// Token: 0x17006DDA RID: 28122
+		// (get) Token: 0x06039AA1 RID: 236193
+		// (set) Token: 0x06039AA2 RID: 236194
 		string AkEvent { get; set; }
 
-		// Token: 0x170098F6 RID: 39158
-		// (get) Token: 0x06043A55 RID: 277077
-		// (set) Token: 0x06043A56 RID: 277078
+		// Token: 0x17006DDB RID: 28123
+		// (get) Token: 0x06039AA3 RID: 236195
+		// (set) Token: 0x06039AA4 RID: 236196
 		EDragHintType? DragHintType { get; set; }
 	}
 }

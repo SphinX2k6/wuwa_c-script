@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008F4 RID: 2292
+	// Token: 0x0200099D RID: 2461
 	public static class EAttachRuleTypeExtensions
 	{
-		// Token: 0x060033FB RID: 13307 RVA: 0x00084DC0 File Offset: 0x00082FC0
+		// Token: 0x06003755 RID: 14165 RVA: 0x0008C5EC File Offset: 0x0008A7EC
 		public static string ToEnumString(this EAttachRuleType value)
 		{
 			string result;
@@ -30,7 +30,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060033FC RID: 13308 RVA: 0x00084E14 File Offset: 0x00083014
+		// Token: 0x06003756 RID: 14166 RVA: 0x0008C640 File Offset: 0x0008A840
 		public static EAttachRuleType FromString(string name)
 		{
 			EAttachRuleType result;
@@ -41,7 +41,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060033FD RID: 13309 RVA: 0x00084E40 File Offset: 0x00083040
+		// Token: 0x06003757 RID: 14167 RVA: 0x0008C66C File Offset: 0x0008A86C
 		public static bool TryFromString(string name, out EAttachRuleType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -73,7 +73,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x060033FE RID: 13310 RVA: 0x00084EA8 File Offset: 0x000830A8
+		// Token: 0x06003758 RID: 14168 RVA: 0x0008C6D4 File Offset: 0x0008A8D4
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -85,7 +85,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060033FF RID: 13311 RVA: 0x00084ED0 File Offset: 0x000830D0
+		// Token: 0x06003759 RID: 14169 RVA: 0x0008C6FC File Offset: 0x0008A8FC
 		public static EAttachRuleType[] GetValues()
 		{
 			return new EAttachRuleType[]
@@ -97,7 +97,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003400 RID: 13312 RVA: 0x00084EE3 File Offset: 0x000830E3
+		// Token: 0x0600375A RID: 14170 RVA: 0x0008C70F File Offset: 0x0008A90F
 		public static string[] GetNames()
 		{
 			return new string[]

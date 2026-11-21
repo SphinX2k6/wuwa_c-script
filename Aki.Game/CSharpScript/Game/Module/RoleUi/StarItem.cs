@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleUi
 {
-	// Token: 0x02004CE9 RID: 19689
+	// Token: 0x02003C9B RID: 15515
 	[Nullable(new byte[]
 	{
 		0,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.RoleUi
 	})]
 	public class StarItem : GridProxyAbstract<IStarItemData>
 	{
-		// Token: 0x06032D94 RID: 208276 RVA: 0x00BD96C4 File Offset: 0x00BD78C4
+		// Token: 0x06027B6F RID: 162671 RVA: 0x00B1EFCC File Offset: 0x00B1D1CC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -35,14 +35,14 @@ namespace CSharpScript.Game.Module.RoleUi
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06032D95 RID: 208277 RVA: 0x00BD9790 File Offset: 0x00BD7990
+		// Token: 0x06027B70 RID: 162672 RVA: 0x00B1F098 File Offset: 0x00B1D298
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 			this.SetImgStarLoopItemActive(false);
 		}
 
-		// Token: 0x06032D96 RID: 208278 RVA: 0x00BD97AA File Offset: 0x00BD79AA
+		// Token: 0x06027B71 RID: 162673 RVA: 0x00B1F0B2 File Offset: 0x00B1D2B2
 		public override void SetActive(bool active)
 		{
 			UUIItem rootItem = this.RootItem;
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			rootItem.SetUIActive(active);
 		}
 
-		// Token: 0x06032D97 RID: 208279 RVA: 0x00BD97C0 File Offset: 0x00BD79C0
+		// Token: 0x06027B72 RID: 162674 RVA: 0x00B1F0C8 File Offset: 0x00B1D2C8
 		[NullableContext(1)]
 		public override void Refresh(IStarItemData data, bool isSelected, int gridIndex)
 		{
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			}
 		}
 
-		// Token: 0x06032D98 RID: 208280 RVA: 0x00BD9819 File Offset: 0x00BD7A19
+		// Token: 0x06027B73 RID: 162675 RVA: 0x00B1F121 File Offset: 0x00B1D321
 		public void SetImgStarOnActive(bool active)
 		{
 			UUIItem item = base.GetItem(0);
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			item.SetUIActive(active);
 		}
 
-		// Token: 0x06032D99 RID: 208281 RVA: 0x00BD982D File Offset: 0x00BD7A2D
+		// Token: 0x06027B74 RID: 162676 RVA: 0x00B1F135 File Offset: 0x00B1D335
 		public void SetImgStarOffActive(bool active)
 		{
 			UUIItem item = base.GetItem(1);
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			item.SetUIActive(active);
 		}
 
-		// Token: 0x06032D9A RID: 208282 RVA: 0x00BD9841 File Offset: 0x00BD7A41
+		// Token: 0x06027B75 RID: 162677 RVA: 0x00B1F149 File Offset: 0x00B1D349
 		public void SetImgStarNextActive(bool active)
 		{
 			UUIItem item = base.GetItem(2);
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			item.SetUIActive(active);
 		}
 
-		// Token: 0x06032D9B RID: 208283 RVA: 0x00BD9855 File Offset: 0x00BD7A55
+		// Token: 0x06027B76 RID: 162678 RVA: 0x00B1F15D File Offset: 0x00B1D35D
 		public void SetImgStarLoopItemActive(bool active)
 		{
 			UUIItem item = base.GetItem(4);
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			item.SetUIActive(active);
 		}
 
-		// Token: 0x06032D9C RID: 208284 RVA: 0x00BD986C File Offset: 0x00BD7A6C
+		// Token: 0x06027B77 RID: 162679 RVA: 0x00B1F174 File Offset: 0x00B1D374
 		public void PlayAutoLoopSequence()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.RoleUi
 			levelSequencePlayer.PlayLevelSequenceByName("AutoLoop", false, null, false);
 		}
 
-		// Token: 0x06032D9D RID: 208285 RVA: 0x00BD989C File Offset: 0x00BD7A9C
+		// Token: 0x06027B78 RID: 162680 RVA: 0x00B1F1A4 File Offset: 0x00B1D3A4
 		public void PlayActiveSequence()
 		{
 			this.SetImgStarOnActive(true);
@@ -139,26 +139,26 @@ namespace CSharpScript.Game.Module.RoleUi
 			levelSequencePlayer.PlayLevelSequenceByName("Active", false, null, false);
 		}
 
-		// Token: 0x0401B0E2 RID: 110818
+		// Token: 0x04015A67 RID: 88679
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200AE70 RID: 44656
+		// Token: 0x0200988E RID: 39054
 		private class EStarItemDefine
 		{
-			// Token: 0x04034F56 RID: 216918
+			// Token: 0x0402F8FE RID: 194814
 			public const int ImgStarOnItem = 0;
 
-			// Token: 0x04034F57 RID: 216919
+			// Token: 0x0402F8FF RID: 194815
 			public const int ImgStarOffItem = 1;
 
-			// Token: 0x04034F58 RID: 216920
+			// Token: 0x0402F900 RID: 194816
 			public const int ImgStarNextItem = 2;
 
-			// Token: 0x04034F59 RID: 216921
+			// Token: 0x0402F901 RID: 194817
 			public const int ActiveNiagara = 3;
 
-			// Token: 0x04034F5A RID: 216922
+			// Token: 0x0402F902 RID: 194818
 			public const int ImgStarLoopItem = 4;
 		}
 	}

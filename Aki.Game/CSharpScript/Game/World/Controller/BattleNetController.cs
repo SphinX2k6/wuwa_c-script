@@ -6,16 +6,16 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.World.Controller
 {
-	// Token: 0x02004536 RID: 17718
+	// Token: 0x0200345E RID: 13406
 	public class BattleNetController : IStaticVariableResetter
 	{
-		// Token: 0x0602DC72 RID: 187506 RVA: 0x00A84EAF File Offset: 0x00A830AF
+		// Token: 0x0602234F RID: 140111 RVA: 0x009B039F File Offset: 0x009AE59F
 		static BattleNetController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(BattleNetController.CreateStaticDefaultValue), new Action(BattleNetController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0602DC73 RID: 187507 RVA: 0x00A84ECE File Offset: 0x00A830CE
+		// Token: 0x06022350 RID: 140112 RVA: 0x009B03BE File Offset: 0x009AE5BE
 		public static void CreateStaticDefaultValue()
 		{
 			BattleNetController.LastRequestTime = 0.0;
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.World.Controller
 			BattleNetController.LastCollectRequestTime = 0.0;
 		}
 
-		// Token: 0x0602DC74 RID: 187508 RVA: 0x00A84EFA File Offset: 0x00A830FA
+		// Token: 0x06022351 RID: 140113 RVA: 0x009B03EA File Offset: 0x009AE5EA
 		public static void ResetStaticDefaultValue()
 		{
 			BattleNetController.LastRequestTime = 0.0;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.World.Controller
 			BattleNetController.LastCollectRequestTime = 0.0;
 		}
 
-		// Token: 0x0602DC75 RID: 187509 RVA: 0x00A84F28 File Offset: 0x00A83128
+		// Token: 0x06022352 RID: 140114 RVA: 0x009B0418 File Offset: 0x009AE618
 		public static UniTask<bool> RequestCaptureEntity(int entityId)
 		{
 			BattleNetController.<RequestCaptureEntity>d__6 <RequestCaptureEntity>d__;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.World.Controller
 			return <RequestCaptureEntity>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602DC76 RID: 187510 RVA: 0x00A84F6C File Offset: 0x00A8316C
+		// Token: 0x06022353 RID: 140115 RVA: 0x009B045C File Offset: 0x009AE65C
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.World.Controller
 			return <RequestBatchCaptureEntity>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602DC77 RID: 187511 RVA: 0x00A84FB0 File Offset: 0x00A831B0
+		// Token: 0x06022354 RID: 140116 RVA: 0x009B04A0 File Offset: 0x009AE6A0
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -76,16 +76,16 @@ namespace CSharpScript.Game.World.Controller
 			return <RequestBatchCollect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401872A RID: 100138
+		// Token: 0x04012D5D RID: 77149
 		private const int REQUEST_TIME_GAP = 2000;
 
-		// Token: 0x0401872B RID: 100139
+		// Token: 0x04012D5E RID: 77150
 		private static double LastRequestTime;
 
-		// Token: 0x0401872C RID: 100140
+		// Token: 0x04012D5F RID: 77151
 		private static double LastBatchRequestTime;
 
-		// Token: 0x0401872D RID: 100141
+		// Token: 0x04012D60 RID: 77152
 		private static double LastCollectRequestTime;
 	}
 }

@@ -1,26 +1,26 @@
 ﻿using System;
 
-// Token: 0x020015CC RID: 5580
+// Token: 0x02000A84 RID: 2692
 internal enum <WheelTowerTeamItem>F163FA0F9E5A07EDF01954A6DF615D2FA28607CE970CC9DE3DD6D7E235606ED4F__EWheelTowerRoleItemComponent
 {
-	// Token: 0x04004632 RID: 17970
+	// Token: 0x040046D8 RID: 18136
 	Button,
-	// Token: 0x04004633 RID: 17971
+	// Token: 0x040046D9 RID: 18137
 	Icon,
-	// Token: 0x04004634 RID: 17972
+	// Token: 0x040046DA RID: 18138
 	Cost,
-	// Token: 0x04004635 RID: 17973
+	// Token: 0x040046DB RID: 18139
 	CostNum,
-	// Token: 0x04004636 RID: 17974
+	// Token: 0x040046DC RID: 18140
 	UpArrow,
-	// Token: 0x04004637 RID: 17975
+	// Token: 0x040046DD RID: 18141
 	ItemIconPanel,
-	// Token: 0x04004638 RID: 17976
+	// Token: 0x040046DE RID: 18142
 	ItemCanClickEmptyPanel,
-	// Token: 0x04004639 RID: 17977
+	// Token: 0x040046DF RID: 18143
 	ItemWarningPanel,
-	// Token: 0x0400463A RID: 17978
+	// Token: 0x040046E0 RID: 18144
 	ItemEmptyPanel,
-	// Token: 0x0400463B RID: 17979
+	// Token: 0x040046E1 RID: 18145
 	ItemSkillBranch
 }

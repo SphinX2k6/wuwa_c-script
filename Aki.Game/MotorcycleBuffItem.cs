@@ -5,10 +5,10 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001CDB RID: 7387
+// Token: 0x0200119D RID: 4509
 public class MotorcycleBuffItem : UiPanelBase
 {
-	// Token: 0x0600DFD0 RID: 57296 RVA: 0x00346B84 File Offset: 0x00344D84
+	// Token: 0x0600B3ED RID: 46061 RVA: 0x003525AC File Offset: 0x003507AC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -20,7 +20,7 @@ public class MotorcycleBuffItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600DFD1 RID: 57297 RVA: 0x00346BF4 File Offset: 0x00344DF4
+	// Token: 0x0600B3EE RID: 46062 RVA: 0x0035261C File Offset: 0x0035081C
 	[NullableContext(1)]
 	public void SetDesc(IBuffGateDesc buffInfo)
 	{
@@ -40,19 +40,19 @@ public class MotorcycleBuffItem : UiPanelBase
 		sprite.SetColor(FColor.FromHex(config.Value.BgColor));
 	}
 
-	// Token: 0x020082E2 RID: 33506
+	// Token: 0x0200746B RID: 29803
 	private static class EBuffItemComponentDefine
 	{
-		// Token: 0x0402AB2A RID: 174890
+		// Token: 0x04025E52 RID: 155218
 		public const int Self = 0;
 
-		// Token: 0x0402AB2B RID: 174891
+		// Token: 0x04025E53 RID: 155219
 		public const int BgSprite = 1;
 
-		// Token: 0x0402AB2C RID: 174892
+		// Token: 0x04025E54 RID: 155220
 		public const int IconTexture = 2;
 
-		// Token: 0x0402AB2D RID: 174893
+		// Token: 0x04025E55 RID: 155221
 		public const int DescText = 3;
 	}
 }

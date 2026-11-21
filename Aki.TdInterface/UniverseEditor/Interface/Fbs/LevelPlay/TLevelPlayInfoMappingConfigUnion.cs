@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x02004609 RID: 17929
+	// Token: 0x02004A71 RID: 19057
 	public class TLevelPlayInfoMappingConfigUnion
 	{
-		// Token: 0x17007F65 RID: 32613
-		// (get) Token: 0x0601B291 RID: 111249 RVA: 0x003DE99C File Offset: 0x003DCB9C
-		// (set) Token: 0x0601B292 RID: 111250 RVA: 0x003DE9A4 File Offset: 0x003DCBA4
+		// Token: 0x170085A6 RID: 34214
+		// (get) Token: 0x0601CA66 RID: 117350 RVA: 0x0040AC38 File Offset: 0x00408E38
+		// (set) Token: 0x0601CA67 RID: 117351 RVA: 0x0040AC40 File Offset: 0x00408E40
 		public TLevelPlayInfoMappingConfig Type { get; set; }
 
-		// Token: 0x17007F66 RID: 32614
-		// (get) Token: 0x0601B293 RID: 111251 RVA: 0x003DE9AD File Offset: 0x003DCBAD
-		// (set) Token: 0x0601B294 RID: 111252 RVA: 0x003DE9B5 File Offset: 0x003DCBB5
+		// Token: 0x170085A7 RID: 34215
+		// (get) Token: 0x0601CA68 RID: 117352 RVA: 0x0040AC49 File Offset: 0x00408E49
+		// (set) Token: 0x0601CA69 RID: 117353 RVA: 0x0040AC51 File Offset: 0x00408E51
 		public object Value { get; set; }
 
-		// Token: 0x0601B295 RID: 111253 RVA: 0x003DE9BE File Offset: 0x003DCBBE
+		// Token: 0x0601CA6A RID: 117354 RVA: 0x0040AC5A File Offset: 0x00408E5A
 		public TLevelPlayInfoMappingConfigUnion()
 		{
 			this.Type = TLevelPlayInfoMappingConfig.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601B296 RID: 111254 RVA: 0x003DE9D4 File Offset: 0x003DCBD4
+		// Token: 0x0601CA6B RID: 117355 RVA: 0x0040AC70 File Offset: 0x00408E70
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601B297 RID: 111255 RVA: 0x003DE9E6 File Offset: 0x003DCBE6
+		// Token: 0x0601CA6C RID: 117356 RVA: 0x0040AC82 File Offset: 0x00408E82
 		public ILevelPlayInfoMappingNightmareSpawnPointT AsILevelPlayInfoMappingNightmareSpawnPoint()
 		{
 			return this.As<ILevelPlayInfoMappingNightmareSpawnPointT>();
 		}
 
-		// Token: 0x0601B298 RID: 111256 RVA: 0x003DE9EE File Offset: 0x003DCBEE
+		// Token: 0x0601CA6D RID: 117357 RVA: 0x0040AC8A File Offset: 0x00408E8A
 		public static TLevelPlayInfoMappingConfigUnion FromILevelPlayInfoMappingNightmareSpawnPoint(ILevelPlayInfoMappingNightmareSpawnPointT _ilevelplayinfomappingnightmarespawnpoint)
 		{
 			return new TLevelPlayInfoMappingConfigUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601B299 RID: 111257 RVA: 0x003DEA03 File Offset: 0x003DCC03
+		// Token: 0x0601CA6E RID: 117358 RVA: 0x0040AC9F File Offset: 0x00408E9F
 		public ILevelPlayInfoMappingPunishReportT AsILevelPlayInfoMappingPunishReport()
 		{
 			return this.As<ILevelPlayInfoMappingPunishReportT>();
 		}
 
-		// Token: 0x0601B29A RID: 111258 RVA: 0x003DEA0B File Offset: 0x003DCC0B
+		// Token: 0x0601CA6F RID: 117359 RVA: 0x0040ACA7 File Offset: 0x00408EA7
 		public static TLevelPlayInfoMappingConfigUnion FromILevelPlayInfoMappingPunishReport(ILevelPlayInfoMappingPunishReportT _ilevelplayinfomappingpunishreport)
 		{
 			return new TLevelPlayInfoMappingConfigUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601B29B RID: 111259 RVA: 0x003DEA20 File Offset: 0x003DCC20
+		// Token: 0x0601CA70 RID: 117360 RVA: 0x0040ACBC File Offset: 0x00408EBC
 		public ILevelPlayInfoMappingSoaringChallengeT AsILevelPlayInfoMappingSoaringChallenge()
 		{
 			return this.As<ILevelPlayInfoMappingSoaringChallengeT>();
 		}
 
-		// Token: 0x0601B29C RID: 111260 RVA: 0x003DEA28 File Offset: 0x003DCC28
+		// Token: 0x0601CA71 RID: 117361 RVA: 0x0040ACC4 File Offset: 0x00408EC4
 		public static TLevelPlayInfoMappingConfigUnion FromILevelPlayInfoMappingSoaringChallenge(ILevelPlayInfoMappingSoaringChallengeT _ilevelplayinfomappingsoaringchallenge)
 		{
 			return new TLevelPlayInfoMappingConfigUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601B29D RID: 111261 RVA: 0x003DEA40 File Offset: 0x003DCC40
+		// Token: 0x0601CA72 RID: 117362 RVA: 0x0040ACDC File Offset: 0x00408EDC
 		public static int Pack(FlatBufferBuilder builder, TLevelPlayInfoMappingConfigUnion _o)
 		{
 			switch (_o.Type)

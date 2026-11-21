@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002445 RID: 9285
+	// Token: 0x020026E6 RID: 9958
 	public static class ESwitchSubLevelsTypeExtensions
 	{
-		// Token: 0x0600C9B5 RID: 51637 RVA: 0x001D8728 File Offset: 0x001D6928
+		// Token: 0x0600D665 RID: 54885 RVA: 0x001F25F0 File Offset: 0x001F07F0
 		public static string ToEnumString(this ESwitchSubLevelsType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C9B6 RID: 51638 RVA: 0x001D8770 File Offset: 0x001D6970
+		// Token: 0x0600D666 RID: 54886 RVA: 0x001F2638 File Offset: 0x001F0838
 		public static ESwitchSubLevelsType FromString(string name)
 		{
 			ESwitchSubLevelsType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C9B7 RID: 51639 RVA: 0x001D879C File Offset: 0x001D699C
+		// Token: 0x0600D667 RID: 54887 RVA: 0x001F2664 File Offset: 0x001F0864
 		public static bool TryFromString(string name, out ESwitchSubLevelsType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C9B8 RID: 51640 RVA: 0x001D87F2 File Offset: 0x001D69F2
+		// Token: 0x0600D668 RID: 54888 RVA: 0x001F26BA File Offset: 0x001F08BA
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C9B9 RID: 51641 RVA: 0x001D8812 File Offset: 0x001D6A12
+		// Token: 0x0600D669 RID: 54889 RVA: 0x001F26DA File Offset: 0x001F08DA
 		public static ESwitchSubLevelsType[] GetValues()
 		{
 			return new ESwitchSubLevelsType[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C9BA RID: 51642 RVA: 0x001D8822 File Offset: 0x001D6A22
+		// Token: 0x0600D66A RID: 54890 RVA: 0x001F26EA File Offset: 0x001F08EA
 		public static string[] GetNames()
 		{
 			return new string[]

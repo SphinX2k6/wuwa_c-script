@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CA1 RID: 3233
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D83 RID: 3459
 	public class IMonsterGachaSlot
 	{
-		// Token: 0x060049EC RID: 18924 RVA: 0x000B94AA File Offset: 0x000B76AA
+		// Token: 0x06004E9A RID: 20122 RVA: 0x000C3EBA File Offset: 0x000C20BA
 		public static IMonsterGachaSlot Create(IMonsterGachaSlot? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001667 RID: 5735
-		// (get) Token: 0x060049ED RID: 18925 RVA: 0x000B94C9 File Offset: 0x000B76C9
+		// Token: 0x1700178F RID: 6031
+		// (get) Token: 0x06004E9B RID: 20123 RVA: 0x000C3ED9 File Offset: 0x000C20D9
 		public virtual VectorInfo Pos
 		{
 			get
@@ -39,14 +37,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002A3A RID: 10810
+		// Token: 0x04002CB4 RID: 11444
 		private IMonsterGachaSlot Instance;
 
-		// Token: 0x04002A3B RID: 10811
+		// Token: 0x04002CB5 RID: 11445
 		[Nullable(2)]
 		private VectorInfo _PosCache;
 
-		// Token: 0x04002A3C RID: 10812
+		// Token: 0x04002CB6 RID: 11446
 		private bool _PosInited;
 	}
 }

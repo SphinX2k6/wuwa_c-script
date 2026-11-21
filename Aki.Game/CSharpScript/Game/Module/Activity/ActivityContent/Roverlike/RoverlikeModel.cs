@@ -7,15 +7,15 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x020060F2 RID: 24818
+	// Token: 0x02005070 RID: 20592
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class RoverlikeModel : ModelBase
 	{
-		// Token: 0x1700914F RID: 37199
-		// (get) Token: 0x0603EC1E RID: 257054 RVA: 0x00F28F6A File Offset: 0x00F2716A
-		// (set) Token: 0x0603EC1F RID: 257055 RVA: 0x00F28F77 File Offset: 0x00F27177
+		// Token: 0x170064B1 RID: 25777
+		// (get) Token: 0x060338E0 RID: 211168 RVA: 0x00E6FD7E File Offset: 0x00E6DF7E
+		// (set) Token: 0x060338E1 RID: 211169 RVA: 0x00E6FD8B File Offset: 0x00E6DF8B
 		public string CurRoomMusicState
 		{
 			get
@@ -28,14 +28,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EC20 RID: 257056 RVA: 0x00F28F8E File Offset: 0x00F2718E
+		// Token: 0x060338E2 RID: 211170 RVA: 0x00E6FDA2 File Offset: 0x00E6DFA2
 		public void CreateInstanceData()
 		{
 			this.ClearInstanceData();
 			this.InstanceData = RoverlikeInstanceData.Create();
 		}
 
-		// Token: 0x0603EC21 RID: 257057 RVA: 0x00F28FA1 File Offset: 0x00F271A1
+		// Token: 0x060338E3 RID: 211171 RVA: 0x00E6FDB5 File Offset: 0x00E6DFB5
 		public void ClearInstanceData()
 		{
 			if (this.InstanceData != null)
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ClearFloatText();
 		}
 
-		// Token: 0x0603EC22 RID: 257058 RVA: 0x00F28FC9 File Offset: 0x00F271C9
+		// Token: 0x060338E4 RID: 211172 RVA: 0x00E6FDDD File Offset: 0x00E6DFDD
 		public int GetMainRoleId()
 		{
 			if (WorldLevelModel.Instance.Sex != 1)
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return 5053002;
 		}
 
-		// Token: 0x0603EC23 RID: 257059 RVA: 0x00F28FE4 File Offset: 0x00F271E4
+		// Token: 0x060338E5 RID: 211173 RVA: 0x00E6FDF8 File Offset: 0x00E6DFF8
 		public int GetCurrency(int configId)
 		{
 			int result;
@@ -68,8 +68,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return result;
 		}
 
-		// Token: 0x17009150 RID: 37200
-		// (get) Token: 0x0603EC24 RID: 257060 RVA: 0x00F29004 File Offset: 0x00F27204
+		// Token: 0x170064B2 RID: 25778
+		// (get) Token: 0x060338E6 RID: 211174 RVA: 0x00E6FE18 File Offset: 0x00E6E018
 		public int? GoldItemId
 		{
 			get
@@ -84,8 +84,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x17009151 RID: 37201
-		// (get) Token: 0x0603EC25 RID: 257061 RVA: 0x00F2904C File Offset: 0x00F2724C
+		// Token: 0x170064B3 RID: 25779
+		// (get) Token: 0x060338E7 RID: 211175 RVA: 0x00E6FE60 File Offset: 0x00E6E060
 		public int Gold
 		{
 			get
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EC26 RID: 257062 RVA: 0x00F2908C File Offset: 0x00F2728C
+		// Token: 0x060338E8 RID: 211176 RVA: 0x00E6FEA0 File Offset: 0x00E6E0A0
 		public void UpdateCurrency([Nullable(new byte[]
 		{
 			2,
@@ -116,20 +116,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EC27 RID: 257063 RVA: 0x00F290E8 File Offset: 0x00F272E8
+		// Token: 0x060338E9 RID: 211177 RVA: 0x00E6FEFC File Offset: 0x00E6E0FC
 		public void UpdateCurrencyByItemId(int itemId, int count)
 		{
 			this.CurrencyCountMap[itemId] = count;
 			EventSystem.Instance.Emit<int>(EEventName.OnPlayerCurrencyChange, itemId);
 		}
 
-		// Token: 0x0603EC28 RID: 257064 RVA: 0x00F29108 File Offset: 0x00F27308
+		// Token: 0x060338EA RID: 211178 RVA: 0x00E6FF1C File Offset: 0x00E6E11C
 		public void SetCurrentRunRoleTypeId(int roleTypeId)
 		{
 			this.CurrentRunRoleTypeId = roleTypeId;
 		}
 
-		// Token: 0x0603EC29 RID: 257065 RVA: 0x00F29111 File Offset: 0x00F27311
+		// Token: 0x060338EB RID: 211179 RVA: 0x00E6FF25 File Offset: 0x00E6E125
 		public void SaveLastPassRoleTypeId()
 		{
 			if (this.CurrentRunRoleTypeId <= 0)
@@ -139,13 +139,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			LocalStorage.SetPlayer<int>(ELocalStoragePlayerKey.RoverRogueLastPassRoleType, this.CurrentRunRoleTypeId);
 		}
 
-		// Token: 0x0603EC2A RID: 257066 RVA: 0x00F2912E File Offset: 0x00F2732E
+		// Token: 0x060338EC RID: 211180 RVA: 0x00E6FF42 File Offset: 0x00E6E142
 		public int GetLastPassRoleTypeId()
 		{
 			return LocalStorage.GetPlayer<int>(ELocalStoragePlayerKey.RoverRogueLastPassRoleType, 0);
 		}
 
-		// Token: 0x0603EC2B RID: 257067 RVA: 0x00F2913B File Offset: 0x00F2733B
+		// Token: 0x060338ED RID: 211181 RVA: 0x00E6FF4F File Offset: 0x00E6E14F
 		public void CreateActionData()
 		{
 			this.ClearActionData();
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ActionStack = new RoverlikeActionStack();
 		}
 
-		// Token: 0x0603EC2C RID: 257068 RVA: 0x00F29164 File Offset: 0x00F27364
+		// Token: 0x060338EE RID: 211182 RVA: 0x00E6FF78 File Offset: 0x00E6E178
 		public void ClearActionData()
 		{
 			if (this.ActionData != null)
@@ -174,8 +174,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x17009152 RID: 37202
-		// (get) Token: 0x0603EC2D RID: 257069 RVA: 0x00F291BF File Offset: 0x00F273BF
+		// Token: 0x170064B4 RID: 25780
+		// (get) Token: 0x060338EF RID: 211183 RVA: 0x00E6FFD3 File Offset: 0x00E6E1D3
 		public bool NeedOpenMainView
 		{
 			get
@@ -186,20 +186,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EC2E RID: 257070 RVA: 0x00F291CE File Offset: 0x00F273CE
+		// Token: 0x060338F0 RID: 211184 RVA: 0x00E6FFE2 File Offset: 0x00E6E1E2
 		protected override bool OnInit()
 		{
 			return true;
 		}
 
-		// Token: 0x0603EC2F RID: 257071 RVA: 0x00F291D1 File Offset: 0x00F273D1
+		// Token: 0x060338F1 RID: 211185 RVA: 0x00E6FFE5 File Offset: 0x00E6E1E5
 		protected override bool OnClear()
 		{
 			this.ClearInstanceData();
 			return true;
 		}
 
-		// Token: 0x0603EC30 RID: 257072 RVA: 0x00F291DC File Offset: 0x00F273DC
+		// Token: 0x060338F2 RID: 211186 RVA: 0x00E6FFF0 File Offset: 0x00E6E1F0
 		public void EnqueueFloatText(List<IRoverlikeFloatTextData> list)
 		{
 			foreach (IRoverlikeFloatTextData item in list)
@@ -208,8 +208,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x17009153 RID: 37203
-		// (get) Token: 0x0603EC31 RID: 257073 RVA: 0x00F29230 File Offset: 0x00F27430
+		// Token: 0x170064B5 RID: 25781
+		// (get) Token: 0x060338F3 RID: 211187 RVA: 0x00E70044 File Offset: 0x00E6E244
 		public bool IsFloatTextEmpty
 		{
 			get
@@ -218,7 +218,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EC32 RID: 257074 RVA: 0x00F29243 File Offset: 0x00F27443
+		// Token: 0x060338F4 RID: 211188 RVA: 0x00E70057 File Offset: 0x00E6E257
 		[NullableContext(2)]
 		public IRoverlikeFloatTextData ShiftFloatText()
 		{
@@ -231,20 +231,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return result;
 		}
 
-		// Token: 0x0603EC33 RID: 257075 RVA: 0x00F2926D File Offset: 0x00F2746D
+		// Token: 0x060338F5 RID: 211189 RVA: 0x00E70081 File Offset: 0x00E6E281
 		public void ClearFloatText()
 		{
 			this.FloatTextQueue.Clear();
 		}
 
-		// Token: 0x0603EC34 RID: 257076 RVA: 0x00F2927A File Offset: 0x00F2747A
+		// Token: 0x060338F6 RID: 211190 RVA: 0x00E7008E File Offset: 0x00E6E28E
 		public void UpdateReviveTimes(int reviveTimes, int reviveTimesMax)
 		{
 			this.ReviveTimes = reviveTimes;
 			this.ReviveTimesMax = reviveTimesMax;
 		}
 
-		// Token: 0x0603EC35 RID: 257077 RVA: 0x00F2928A File Offset: 0x00F2748A
+		// Token: 0x060338F7 RID: 211191 RVA: 0x00E7009E File Offset: 0x00E6E29E
 		public bool ConsumeReviveTimes()
 		{
 			if (this.ReviveTimes > 0)
@@ -255,26 +255,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return false;
 		}
 
-		// Token: 0x0603EC36 RID: 257078 RVA: 0x00F292A6 File Offset: 0x00F274A6
+		// Token: 0x060338F8 RID: 211192 RVA: 0x00E700BA File Offset: 0x00E6E2BA
 		public bool HasReviveTimes()
 		{
 			return this.ReviveTimes > 0;
 		}
 
-		// Token: 0x0603EC37 RID: 257079 RVA: 0x00F292B1 File Offset: 0x00F274B1
+		// Token: 0x060338F9 RID: 211193 RVA: 0x00E700C5 File Offset: 0x00E6E2C5
 		public int GetReviveTimes()
 		{
 			return this.ReviveTimes;
 		}
 
-		// Token: 0x0603EC38 RID: 257080 RVA: 0x00F292B9 File Offset: 0x00F274B9
+		// Token: 0x060338FA RID: 211194 RVA: 0x00E700CD File Offset: 0x00E6E2CD
 		public int GetReviveTimesMax()
 		{
 			return this.ReviveTimesMax;
 		}
 
-		// Token: 0x17009154 RID: 37204
-		// (get) Token: 0x0603EC39 RID: 257081 RVA: 0x00F292C1 File Offset: 0x00F274C1
+		// Token: 0x170064B6 RID: 25782
+		// (get) Token: 0x060338FB RID: 211195 RVA: 0x00E700D5 File Offset: 0x00E6E2D5
 		public static RoverlikeModel Instance
 		{
 			get
@@ -283,7 +283,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EC3A RID: 257082 RVA: 0x00F292C8 File Offset: 0x00F274C8
+		// Token: 0x060338FC RID: 211196 RVA: 0x00E700DC File Offset: 0x00E6E2DC
 		public static RoverlikeModel GetOrCreateInstance()
 		{
 			if (RoverlikeModel._Instance == null)
@@ -293,7 +293,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return RoverlikeModel._Instance;
 		}
 
-		// Token: 0x0603EC3B RID: 257083 RVA: 0x00F292DC File Offset: 0x00F274DC
+		// Token: 0x060338FD RID: 211197 RVA: 0x00E700F0 File Offset: 0x00E6E2F0
 		public static bool CreateInstance()
 		{
 			if (RoverlikeModel._Instance != null)
@@ -304,61 +304,61 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return true;
 		}
 
-		// Token: 0x0603EC3C RID: 257084 RVA: 0x00F292F2 File Offset: 0x00F274F2
+		// Token: 0x060338FE RID: 211198 RVA: 0x00E70106 File Offset: 0x00E6E306
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603EC3D RID: 257085 RVA: 0x00F292F4 File Offset: 0x00F274F4
+		// Token: 0x060338FF RID: 211199 RVA: 0x00E70108 File Offset: 0x00E6E308
 		public static void ResetStaticDefaultValue()
 		{
 			RoverlikeModel._Instance = null;
 		}
 
-		// Token: 0x0603EC3E RID: 257086 RVA: 0x00F292FC File Offset: 0x00F274FC
+		// Token: 0x06033900 RID: 211200 RVA: 0x00E70110 File Offset: 0x00E6E310
 		static RoverlikeModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(RoverlikeModel.CreateStaticDefaultValue), new Action(RoverlikeModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04020CBC RID: 134332
+		// Token: 0x0401B5E9 RID: 112105
 		private readonly StateRef CurRoomMusicStateInternal = new StateRef("game_rogue_room_type", "none");
 
-		// Token: 0x04020CBD RID: 134333
+		// Token: 0x0401B5EA RID: 112106
 		[Nullable(2)]
 		public RoverlikeInstanceData InstanceData;
 
-		// Token: 0x04020CBE RID: 134334
+		// Token: 0x0401B5EB RID: 112107
 		private readonly Dictionary<int, int> CurrencyCountMap = new Dictionary<int, int>();
 
-		// Token: 0x04020CBF RID: 134335
+		// Token: 0x0401B5EC RID: 112108
 		private int CurrentRunRoleTypeId;
 
-		// Token: 0x04020CC0 RID: 134336
+		// Token: 0x0401B5ED RID: 112109
 		[Nullable(2)]
 		public RoverlikeActionData ActionData;
 
-		// Token: 0x04020CC1 RID: 134337
+		// Token: 0x0401B5EE RID: 112110
 		[Nullable(2)]
 		public RoverlikeActionStack ActionStack;
 
-		// Token: 0x04020CC2 RID: 134338
+		// Token: 0x0401B5EF RID: 112111
 		[Nullable(2)]
 		public RoverlikeActionSubViewManager ActionSubViewManager;
 
-		// Token: 0x04020CC3 RID: 134339
+		// Token: 0x0401B5F0 RID: 112112
 		public bool HasNewSettle;
 
-		// Token: 0x04020CC4 RID: 134340
+		// Token: 0x0401B5F1 RID: 112113
 		private readonly List<IRoverlikeFloatTextData> FloatTextQueue = new List<IRoverlikeFloatTextData>();
 
-		// Token: 0x04020CC5 RID: 134341
+		// Token: 0x0401B5F2 RID: 112114
 		private int ReviveTimes;
 
-		// Token: 0x04020CC6 RID: 134342
+		// Token: 0x0401B5F3 RID: 112115
 		private int ReviveTimesMax;
 
-		// Token: 0x04020CC7 RID: 134343
+		// Token: 0x0401B5F4 RID: 112116
 		[Nullable(2)]
 		private static RoverlikeModel _Instance;
 	}

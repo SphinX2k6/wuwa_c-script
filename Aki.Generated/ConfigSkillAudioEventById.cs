@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000931 RID: 2353
+	// Token: 0x0200097C RID: 2428
 	public class ConfigSkillAudioEventById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003739 RID: 14137 RVA: 0x00191957 File Offset: 0x0018FB57
+		// Token: 0x060038FB RID: 14587 RVA: 0x0019EB77 File Offset: 0x0019CD77
 		static ConfigSkillAudioEventById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSkillAudioEventById.CreateStaticDefaultValue), new Action(ConfigSkillAudioEventById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600373A RID: 14138 RVA: 0x00191978 File Offset: 0x0018FB78
+		// Token: 0x060038FC RID: 14588 RVA: 0x0019EB98 File Offset: 0x0019CD98
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSkillAudioEventById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600373B RID: 14139 RVA: 0x001919F7 File Offset: 0x0018FBF7
+		// Token: 0x060038FD RID: 14589 RVA: 0x0019EC17 File Offset: 0x0019CE17
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSkillAudioEventById.LogPair = null;
 			ConfigSkillAudioEventById.HandleId = 0;
 		}
 
-		// Token: 0x0600373C RID: 14140 RVA: 0x00191A05 File Offset: 0x0018FC05
+		// Token: 0x060038FE RID: 14590 RVA: 0x0019EC25 File Offset: 0x0019CE25
 		public static void Init()
 		{
 			ConfigSkillAudioEventById.HandleId = ConfigCommon.InitDataStatement(ConfigSkillAudioEventById.HandleId, "db_skillaudioevent.db", "select BinData from `SkillAudioEvent` where Id=?");
 		}
 
-		// Token: 0x0600373D RID: 14141 RVA: 0x00191A20 File Offset: 0x0018FC20
+		// Token: 0x060038FF RID: 14591 RVA: 0x0019EC40 File Offset: 0x0019CE40
 		public static SkillAudioEvent? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigSkillAudioEventById.HandleId, ConfigSkillAudioEventById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new SkillAudioEvent?(rootAsSkillAudioEvent);
 		}
 
-		// Token: 0x0400403D RID: 16445
+		// Token: 0x0400424A RID: 16970
 		private const string DB = "db_skillaudioevent.db";
 
-		// Token: 0x0400403E RID: 16446
+		// Token: 0x0400424B RID: 16971
 		private const string FILE = "y.音频_技能音频.xlsx";
 
-		// Token: 0x0400403F RID: 16447
+		// Token: 0x0400424C RID: 16972
 		private const string TABLE = "SkillAudioEvent";
 
-		// Token: 0x04004040 RID: 16448
+		// Token: 0x0400424D RID: 16973
 		private const string COMMAND = "select BinData from `SkillAudioEvent` where Id=?";
 
-		// Token: 0x04004041 RID: 16449
+		// Token: 0x0400424E RID: 16974
 		private const string KEY_PREFIX = "SkillAudioEventById";
 
-		// Token: 0x04004042 RID: 16450
+		// Token: 0x0400424F RID: 16975
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004043 RID: 16451
+		// Token: 0x04004250 RID: 16976
 		private static int HandleId;
 	}
 }

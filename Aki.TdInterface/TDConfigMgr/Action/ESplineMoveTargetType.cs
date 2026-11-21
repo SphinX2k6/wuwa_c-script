@@ -3,13 +3,15 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016AF RID: 5807
+	// Token: 0x02001829 RID: 6185
 	[EnumExtensions]
 	public enum ESplineMoveTargetType
 	{
-		// Token: 0x04004DF0 RID: 19952
+		// Token: 0x0400520D RID: 21005
 		Entity,
-		// Token: 0x04004DF1 RID: 19953
-		Player
+		// Token: 0x0400520E RID: 21006
+		Player,
+		// Token: 0x0400520F RID: 21007
+		AssistCharacter
 	}
 }

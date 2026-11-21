@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.InputSetting
 {
-	// Token: 0x0200700F RID: 28687
+	// Token: 0x02006190 RID: 24976
 	internal class ItemDataCache
 	{
-		// Token: 0x04024810 RID: 149520
+		// Token: 0x0401FAC6 RID: 129734
 		public float OffsetX;
 
-		// Token: 0x04024811 RID: 149521
+		// Token: 0x0401FAC7 RID: 129735
 		public float OffsetY;
 
-		// Token: 0x04024812 RID: 149522
+		// Token: 0x0401FAC8 RID: 129736
 		public float Scale = 1f;
 
-		// Token: 0x04024813 RID: 149523
+		// Token: 0x0401FAC9 RID: 129737
 		public float Alpha = 1f;
 
-		// Token: 0x04024814 RID: 149524
+		// Token: 0x0401FACA RID: 129738
 		public int HierarchyIndex;
 	}
 }

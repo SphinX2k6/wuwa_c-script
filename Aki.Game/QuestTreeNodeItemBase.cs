@@ -5,7 +5,7 @@ using CSharpScript.Game.Module.Util;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x020026AD RID: 9901
+// Token: 0x02001B98 RID: 7064
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,44 +14,44 @@ using UnrealEngine;
 })]
 public abstract class QuestTreeNodeItemBase<[Nullable(2)] TData> : GridProxyAbstract<TData>, IQuestTreeNodeItem
 {
-	// Token: 0x17001A4E RID: 6734
-	// (get) Token: 0x0601447C RID: 83068
+	// Token: 0x17001A86 RID: 6790
+	// (get) Token: 0x0601195E RID: 72030
 	public abstract EQuestTreeNodeType Type { get; }
 
-	// Token: 0x17001A4F RID: 6735
-	// (get) Token: 0x0601447D RID: 83069 RVA: 0x0051FE3E File Offset: 0x0051E03E
-	// (set) Token: 0x0601447E RID: 83070 RVA: 0x0051FE46 File Offset: 0x0051E046
+	// Token: 0x17001A87 RID: 6791
+	// (get) Token: 0x0601195F RID: 72031 RVA: 0x0052EB76 File Offset: 0x0052CD76
+	// (set) Token: 0x06011960 RID: 72032 RVA: 0x0052EB7E File Offset: 0x0052CD7E
 	public int HierarchyIndex { get; set; }
 
-	// Token: 0x17001A50 RID: 6736
-	// (get) Token: 0x0601447F RID: 83071 RVA: 0x0051FE4F File Offset: 0x0051E04F
-	// (set) Token: 0x06014480 RID: 83072 RVA: 0x0051FE57 File Offset: 0x0051E057
+	// Token: 0x17001A88 RID: 6792
+	// (get) Token: 0x06011961 RID: 72033 RVA: 0x0052EB87 File Offset: 0x0052CD87
+	// (set) Token: 0x06011962 RID: 72034 RVA: 0x0052EB8F File Offset: 0x0052CD8F
 	private protected IQuestTreeNodeItemLoader Loader { protected get; private set; }
 
-	// Token: 0x06014481 RID: 83073 RVA: 0x0051FE60 File Offset: 0x0051E060
+	// Token: 0x06011963 RID: 72035 RVA: 0x0052EB98 File Offset: 0x0052CD98
 	public void Init(IQuestTreeNodeItemLoader loader)
 	{
 		this.Loader = loader;
 	}
 
-	// Token: 0x06014482 RID: 83074
+	// Token: 0x06011964 RID: 72036
 	public abstract UniTask CreateSelf(UUIItem parent);
 
-	// Token: 0x06014483 RID: 83075
+	// Token: 0x06011965 RID: 72037
 	public abstract void UpdateData(QuestTreeNodeData data);
 
-	// Token: 0x06014484 RID: 83076 RVA: 0x0051FE69 File Offset: 0x0051E069
+	// Token: 0x06011966 RID: 72038 RVA: 0x0052EBA1 File Offset: 0x0052CDA1
 	public virtual float GetAdditionalHeight()
 	{
 		return 0f;
 	}
 
-	// Token: 0x06014485 RID: 83077 RVA: 0x0051FE70 File Offset: 0x0051E070
+	// Token: 0x06011967 RID: 72039 RVA: 0x0052EBA8 File Offset: 0x0052CDA8
 	public virtual void UpdateDataList(List<QuestTreeNodeData> data)
 	{
 	}
 
-	// Token: 0x06014486 RID: 83078 RVA: 0x0051FE72 File Offset: 0x0051E072
+	// Token: 0x06011968 RID: 72040 RVA: 0x0052EBAA File Offset: 0x0052CDAA
 	protected virtual void LocateSelf(bool tween = true)
 	{
 		QuestTreeNodeLocatingHelper locatingHelper = QuestTreeModel.Instance.ViewModelChapter.LocatingHelper;
@@ -62,7 +62,7 @@ public abstract class QuestTreeNodeItemBase<[Nullable(2)] TData> : GridProxyAbst
 		locatingHelper.LocateToNode(base.GetRootItem(), tween, false);
 	}
 
-	// Token: 0x06014487 RID: 83079 RVA: 0x0051FE95 File Offset: 0x0051E095
+	// Token: 0x06011969 RID: 72041 RVA: 0x0052EBCD File Offset: 0x0052CDCD
 	[NullableContext(2)]
 	public virtual UUIItem GetGuideFocusUiItem()
 	{

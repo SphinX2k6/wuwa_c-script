@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005DB6 RID: 23990
+	// Token: 0x020063F3 RID: 25587
 	public class IGiantAnimDataTypeT
 	{
-		// Token: 0x1700B3A3 RID: 45987
-		// (get) Token: 0x06029100 RID: 168192 RVA: 0x005A3432 File Offset: 0x005A1632
-		// (set) Token: 0x06029101 RID: 168193 RVA: 0x005A343A File Offset: 0x005A163A
+		// Token: 0x1700BD09 RID: 48393
+		// (get) Token: 0x0602B78A RID: 178058 RVA: 0x005EC162 File Offset: 0x005EA362
+		// (set) Token: 0x0602B78B RID: 178059 RVA: 0x005EC16A File Offset: 0x005EA36A
 		public EGiantAnimationType Type { get; set; }
 
-		// Token: 0x06029102 RID: 168194 RVA: 0x005A3443 File Offset: 0x005A1643
+		// Token: 0x0602B78C RID: 178060 RVA: 0x005EC173 File Offset: 0x005EA373
 		public IGiantAnimDataTypeT()
 		{
 			this.Type = EGiantAnimationType.Idle;

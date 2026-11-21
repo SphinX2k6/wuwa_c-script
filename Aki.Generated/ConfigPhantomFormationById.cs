@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000697 RID: 1687
+	// Token: 0x020006AF RID: 1711
 	public class ConfigPhantomFormationById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600279A RID: 10138 RVA: 0x00139897 File Offset: 0x00137A97
+		// Token: 0x0600282A RID: 10282 RVA: 0x00140313 File Offset: 0x0013E513
 		static ConfigPhantomFormationById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPhantomFormationById.CreateStaticDefaultValue), new Action(ConfigPhantomFormationById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600279B RID: 10139 RVA: 0x001398B8 File Offset: 0x00137AB8
+		// Token: 0x0600282B RID: 10283 RVA: 0x00140334 File Offset: 0x0013E534
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPhantomFormationById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600279C RID: 10140 RVA: 0x00139937 File Offset: 0x00137B37
+		// Token: 0x0600282C RID: 10284 RVA: 0x001403B3 File Offset: 0x0013E5B3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPhantomFormationById.LogPair = null;
 			ConfigPhantomFormationById.HandleId = 0;
 		}
 
-		// Token: 0x0600279D RID: 10141 RVA: 0x00139945 File Offset: 0x00137B45
+		// Token: 0x0600282D RID: 10285 RVA: 0x001403C1 File Offset: 0x0013E5C1
 		public static void Init()
 		{
 			ConfigPhantomFormationById.HandleId = ConfigCommon.InitDataStatement(ConfigPhantomFormationById.HandleId, "db_formation.db", "select BinData from `PhantomFormation` where Id=?");
 		}
 
-		// Token: 0x0600279E RID: 10142 RVA: 0x00139960 File Offset: 0x00137B60
+		// Token: 0x0600282E RID: 10286 RVA: 0x001403DC File Offset: 0x0013E5DC
 		public static PhantomFormation? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPhantomFormationById.HandleId, ConfigPhantomFormationById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PhantomFormation?(rootAsPhantomFormation);
 		}
 
-		// Token: 0x04002E07 RID: 11783
+		// Token: 0x04002EAF RID: 11951
 		private const string DB = "db_formation.db";
 
-		// Token: 0x04002E08 RID: 11784
+		// Token: 0x04002EB0 RID: 11952
 		private const string FILE = "b.编队.xlsx";
 
-		// Token: 0x04002E09 RID: 11785
+		// Token: 0x04002EB1 RID: 11953
 		private const string TABLE = "PhantomFormation";
 
-		// Token: 0x04002E0A RID: 11786
+		// Token: 0x04002EB2 RID: 11954
 		private const string COMMAND = "select BinData from `PhantomFormation` where Id=?";
 
-		// Token: 0x04002E0B RID: 11787
+		// Token: 0x04002EB3 RID: 11955
 		private const string KEY_PREFIX = "PhantomFormationById";
 
-		// Token: 0x04002E0C RID: 11788
+		// Token: 0x04002EB4 RID: 11956
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002E0D RID: 11789
+		// Token: 0x04002EB5 RID: 11957
 		private static int HandleId;
 	}
 }

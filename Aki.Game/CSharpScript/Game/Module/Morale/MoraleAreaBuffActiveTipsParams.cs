@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Morale
 {
-	// Token: 0x02005396 RID: 21398
+	// Token: 0x02004379 RID: 17273
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MoraleAreaBuffActiveTipsParams
 	{
-		// Token: 0x0401CE12 RID: 118290
+		// Token: 0x040178AA RID: 96426
 		public string TitleKey;
 
-		// Token: 0x0401CE13 RID: 118291
+		// Token: 0x040178AB RID: 96427
 		public string DescKey;
 
-		// Token: 0x0401CE14 RID: 118292
+		// Token: 0x040178AC RID: 96428
 		public bool IsMultipleView;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020054CA RID: 21706
+	// Token: 0x02005A50 RID: 23120
 	public struct ILevelAiCycleLooply : IFlatbufferObject
 	{
-		// Token: 0x17009FF5 RID: 40949
-		// (get) Token: 0x06023C5C RID: 146524 RVA: 0x004F216E File Offset: 0x004F036E
+		// Token: 0x1700A82F RID: 43055
+		// (get) Token: 0x06025D14 RID: 154900 RVA: 0x0052F1E2 File Offset: 0x0052D3E2
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023C5D RID: 146525 RVA: 0x004F217B File Offset: 0x004F037B
+		// Token: 0x06025D15 RID: 154901 RVA: 0x0052F1EF File Offset: 0x0052D3EF
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06023C5E RID: 146526 RVA: 0x004F2184 File Offset: 0x004F0384
+		// Token: 0x06025D16 RID: 154902 RVA: 0x0052F1F8 File Offset: 0x0052D3F8
 		public static ILevelAiCycleLooply GetRootAsILevelAiCycleLooply(ByteBuffer _bb)
 		{
 			return ILevelAiCycleLooply.GetRootAsILevelAiCycleLooply(_bb, default(ILevelAiCycleLooply));
 		}
 
-		// Token: 0x06023C5F RID: 146527 RVA: 0x004F21A0 File Offset: 0x004F03A0
+		// Token: 0x06025D17 RID: 154903 RVA: 0x0052F214 File Offset: 0x0052D414
 		public static ILevelAiCycleLooply GetRootAsILevelAiCycleLooply(ByteBuffer _bb, ILevelAiCycleLooply obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06023C60 RID: 146528 RVA: 0x004F21BD File Offset: 0x004F03BD
+		// Token: 0x06025D18 RID: 154904 RVA: 0x0052F231 File Offset: 0x0052D431
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06023C61 RID: 146529 RVA: 0x004F21CC File Offset: 0x004F03CC
+		// Token: 0x06025D19 RID: 154905 RVA: 0x0052F240 File Offset: 0x0052D440
 		public ILevelAiCycleLooply __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009FF6 RID: 40950
-		// (get) Token: 0x06023C62 RID: 146530 RVA: 0x004F21DC File Offset: 0x004F03DC
+		// Token: 0x1700A830 RID: 43056
+		// (get) Token: 0x06025D1A RID: 154906 RVA: 0x0052F250 File Offset: 0x0052D450
 		public ELevelAiCycleMode Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009FF7 RID: 40951
-		// (get) Token: 0x06023C63 RID: 146531 RVA: 0x004F2218 File Offset: 0x004F0418
+		// Token: 0x1700A831 RID: 43057
+		// (get) Token: 0x06025D1B RID: 154907 RVA: 0x0052F28C File Offset: 0x0052D48C
 		public bool IsCircle
 		{
 			get
@@ -73,7 +73,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023C64 RID: 146532 RVA: 0x004F2257 File Offset: 0x004F0457
+		// Token: 0x06025D1C RID: 154908 RVA: 0x0052F2CB File Offset: 0x0052D4CB
 		public static Offset<ILevelAiCycleLooply> CreateILevelAiCycleLooply(FlatBufferBuilder builder, ELevelAiCycleMode Type = ELevelAiCycleMode.Loop, bool IsCircle = false)
 		{
 			builder.StartTable(2);
@@ -82,31 +82,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ILevelAiCycleLooply.EndILevelAiCycleLooply(builder);
 		}
 
-		// Token: 0x06023C65 RID: 146533 RVA: 0x004F2274 File Offset: 0x004F0474
+		// Token: 0x06025D1D RID: 154909 RVA: 0x0052F2E8 File Offset: 0x0052D4E8
 		public static void StartILevelAiCycleLooply(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06023C66 RID: 146534 RVA: 0x004F227D File Offset: 0x004F047D
+		// Token: 0x06025D1E RID: 154910 RVA: 0x0052F2F1 File Offset: 0x0052D4F1
 		public static void AddType(FlatBufferBuilder builder, ELevelAiCycleMode type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06023C67 RID: 146535 RVA: 0x004F2288 File Offset: 0x004F0488
+		// Token: 0x06025D1F RID: 154911 RVA: 0x0052F2FC File Offset: 0x0052D4FC
 		public static void AddIsCircle(FlatBufferBuilder builder, bool isCircle)
 		{
 			builder.AddBool(1, isCircle, false);
 		}
 
-		// Token: 0x06023C68 RID: 146536 RVA: 0x004F2293 File Offset: 0x004F0493
+		// Token: 0x06025D20 RID: 154912 RVA: 0x0052F307 File Offset: 0x0052D507
 		public static Offset<ILevelAiCycleLooply> EndILevelAiCycleLooply(FlatBufferBuilder builder)
 		{
 			return new Offset<ILevelAiCycleLooply>(builder.EndTable());
 		}
 
-		// Token: 0x06023C69 RID: 146537 RVA: 0x004F22A0 File Offset: 0x004F04A0
+		// Token: 0x06025D21 RID: 154913 RVA: 0x0052F314 File Offset: 0x0052D514
 		public ILevelAiCycleLooplyT UnPack()
 		{
 			ILevelAiCycleLooplyT levelAiCycleLooplyT = new ILevelAiCycleLooplyT();
@@ -114,14 +114,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return levelAiCycleLooplyT;
 		}
 
-		// Token: 0x06023C6A RID: 146538 RVA: 0x004F22BB File Offset: 0x004F04BB
+		// Token: 0x06025D22 RID: 154914 RVA: 0x0052F32F File Offset: 0x0052D52F
 		public void UnPackTo(ILevelAiCycleLooplyT _o)
 		{
 			_o.Type = this.Type;
 			_o.IsCircle = this.IsCircle;
 		}
 
-		// Token: 0x06023C6B RID: 146539 RVA: 0x004F22D8 File Offset: 0x004F04D8
+		// Token: 0x06025D23 RID: 154915 RVA: 0x0052F34C File Offset: 0x0052D54C
 		public static Offset<ILevelAiCycleLooply> Pack(FlatBufferBuilder builder, ILevelAiCycleLooplyT _o)
 		{
 			if (_o == null)
@@ -131,7 +131,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ILevelAiCycleLooply.CreateILevelAiCycleLooply(builder, _o.Type, _o.IsCircle);
 		}
 
-		// Token: 0x0400E788 RID: 59272
+		// Token: 0x0400F3B9 RID: 62393
 		private Table __p;
 	}
 }

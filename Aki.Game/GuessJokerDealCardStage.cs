@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001041 RID: 4161
+// Token: 0x020004F5 RID: 1269
 public class GuessJokerDealCardStage : GuessJokerStageBase
 {
-	// Token: 0x06006ACB RID: 27339 RVA: 0x00157D24 File Offset: 0x00155F24
+	// Token: 0x06003E60 RID: 15968 RVA: 0x0016064C File Offset: 0x0015E84C
 	[NullableContext(1)]
 	public GuessJokerDealCardStage(GuessJokerStageFsm stageFsm) : base(stageFsm)
 	{
 	}
 
-	// Token: 0x06006ACC RID: 27340 RVA: 0x00157D30 File Offset: 0x00155F30
+	// Token: 0x06003E61 RID: 15969 RVA: 0x00160658 File Offset: 0x0015E858
 	protected override void OnEnter()
 	{
 		GuessJokerGamePlayView gamePlayView = GuessJokerGamePlayModel.Instance.GetGamePlayView();

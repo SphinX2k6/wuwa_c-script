@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200239D RID: 9117
+	// Token: 0x02002628 RID: 9768
 	public static class EMoveOperationTypeExtensions
 	{
-		// Token: 0x0600C6C1 RID: 50881 RVA: 0x001D1AE0 File Offset: 0x001CFCE0
+		// Token: 0x0600D30E RID: 54030 RVA: 0x001EAC80 File Offset: 0x001E8E80
 		public static string ToEnumString(this EMoveOperationType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C6C2 RID: 50882 RVA: 0x001D1B18 File Offset: 0x001CFD18
+		// Token: 0x0600D30F RID: 54031 RVA: 0x001EACB8 File Offset: 0x001E8EB8
 		public static EMoveOperationType FromString(string name)
 		{
 			EMoveOperationType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C6C3 RID: 50883 RVA: 0x001D1B41 File Offset: 0x001CFD41
+		// Token: 0x0600D310 RID: 54032 RVA: 0x001EACE1 File Offset: 0x001E8EE1
 		public static bool TryFromString(string name, out EMoveOperationType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C6C4 RID: 50884 RVA: 0x001D1B7A File Offset: 0x001CFD7A
+		// Token: 0x0600D311 RID: 54033 RVA: 0x001EAD1A File Offset: 0x001E8F1A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C6C5 RID: 50885 RVA: 0x001D1B92 File Offset: 0x001CFD92
+		// Token: 0x0600D312 RID: 54034 RVA: 0x001EAD32 File Offset: 0x001E8F32
 		public static EMoveOperationType[] GetValues()
 		{
 			return new EMoveOperationType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C6C6 RID: 50886 RVA: 0x001D1B9E File Offset: 0x001CFD9E
+		// Token: 0x0600D313 RID: 54035 RVA: 0x001EAD3E File Offset: 0x001E8F3E
 		public static string[] GetNames()
 		{
 			return new string[]

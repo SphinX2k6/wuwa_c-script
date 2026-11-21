@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200164E RID: 5710
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020017BB RID: 6075
 	public class EndCommonTip : ActionParams
 	{
-		// Token: 0x06007CA1 RID: 31905 RVA: 0x0012B860 File Offset: 0x00129A60
+		// Token: 0x0600837F RID: 33663 RVA: 0x0013A90C File Offset: 0x00138B0C
 		private EndCommonTip_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007CA2 RID: 31906 RVA: 0x0012B898 File Offset: 0x00129A98
+		// Token: 0x06008380 RID: 33664 RVA: 0x0013A944 File Offset: 0x00138B44
 		public static EndCommonTip Create([Nullable(2)] EndCommonTip instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007CA3 RID: 31907 RVA: 0x0012B8AB File Offset: 0x00129AAB
+		// Token: 0x06008381 RID: 33665 RVA: 0x0013A957 File Offset: 0x00138B57
 		public static EndCommonTip CreateFromSetValue([Nullable(2)] EndCommonTip_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007CA4 RID: 31908 RVA: 0x0012B8BE File Offset: 0x00129ABE
+		// Token: 0x06008382 RID: 33666 RVA: 0x0013A96A File Offset: 0x00138B6A
 		public EndCommonTip_SetValue ToSetValue()
 		{
 			return new EndCommonTip_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700292E RID: 10542
-		// (get) Token: 0x06007CA5 RID: 31909 RVA: 0x0012B8D1 File Offset: 0x00129AD1
-		// (set) Token: 0x06007CA6 RID: 31910 RVA: 0x0012B8FC File Offset: 0x00129AFC
+		// Token: 0x17002B19 RID: 11033
+		// (get) Token: 0x06008383 RID: 33667 RVA: 0x0013A97D File Offset: 0x00138B7D
+		// (set) Token: 0x06008384 RID: 33668 RVA: 0x0013A9A8 File Offset: 0x00138BA8
 		public virtual string Token
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004C82 RID: 19586
+		// Token: 0x04005076 RID: 20598
 		[Nullable(2)]
 		protected new EndCommonTip FbInstance;
 
-		// Token: 0x04004C83 RID: 19587
+		// Token: 0x04005077 RID: 20599
 		[Nullable(2)]
 		protected EndCommonTip_SetValue PocoInterface;
 	}

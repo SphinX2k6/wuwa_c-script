@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200096D RID: 2413
+	// Token: 0x0200095C RID: 2396
 	[NetMessage(EMessageId.MailAddNotify)]
 	public sealed class MailAddNotify : IMessage<MailAddNotify>, IMessage, IEquatable<MailAddNotify>, IDeepCloneable<MailAddNotify>, IBufferMessage
 	{
-		// Token: 0x0600D47A RID: 54394 RVA: 0x001F49DA File Offset: 0x001F2BDA
+		// Token: 0x0600D360 RID: 54112 RVA: 0x001F27F2 File Offset: 0x001F09F2
 		[NullableContext(1)]
 		public static MailAddNotify Create()
 		{
 			return new MailAddNotify();
 		}
 
-		// Token: 0x17002B09 RID: 11017
-		// (get) Token: 0x0600D47B RID: 54395 RVA: 0x001F49E1 File Offset: 0x001F2BE1
+		// Token: 0x17002ACB RID: 10955
+		// (get) Token: 0x0600D361 RID: 54113 RVA: 0x001F27F9 File Offset: 0x001F09F9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002B0A RID: 11018
-		// (get) Token: 0x0600D47C RID: 54396 RVA: 0x001F49E4 File Offset: 0x001F2BE4
+		// Token: 0x17002ACC RID: 10956
+		// (get) Token: 0x0600D362 RID: 54114 RVA: 0x001F27FC File Offset: 0x001F09FC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600D47D RID: 54397 RVA: 0x001F49EB File Offset: 0x001F2BEB
+		// Token: 0x0600D363 RID: 54115 RVA: 0x001F2803 File Offset: 0x001F0A03
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MailAddNotify()
 		{
 		}
 
-		// Token: 0x0600D47E RID: 54398 RVA: 0x001F49F4 File Offset: 0x001F2BF4
+		// Token: 0x0600D364 RID: 54116 RVA: 0x001F280C File Offset: 0x001F0A0C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MailAddNotify(MailAddNotify other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600D47F RID: 54399 RVA: 0x001F4A40 File Offset: 0x001F2C40
+		// Token: 0x0600D365 RID: 54117 RVA: 0x001F2858 File Offset: 0x001F0A58
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MailAddNotify Clone()
@@ -67,9 +67,9 @@ namespace Aki.Protocol
 			return new MailAddNotify(this);
 		}
 
-		// Token: 0x17002B0B RID: 11019
-		// (get) Token: 0x0600D480 RID: 54400 RVA: 0x001F4A48 File Offset: 0x001F2C48
-		// (set) Token: 0x0600D481 RID: 54401 RVA: 0x001F4A50 File Offset: 0x001F2C50
+		// Token: 0x17002ACD RID: 10957
+		// (get) Token: 0x0600D366 RID: 54118 RVA: 0x001F2860 File Offset: 0x001F0A60
+		// (set) Token: 0x0600D367 RID: 54119 RVA: 0x001F2868 File Offset: 0x001F0A68
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PbMailInfo NewMail
@@ -84,9 +84,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002B0C RID: 11020
-		// (get) Token: 0x0600D482 RID: 54402 RVA: 0x001F4A59 File Offset: 0x001F2C59
-		// (set) Token: 0x0600D483 RID: 54403 RVA: 0x001F4A61 File Offset: 0x001F2C61
+		// Token: 0x17002ACE RID: 10958
+		// (get) Token: 0x0600D368 RID: 54120 RVA: 0x001F2871 File Offset: 0x001F0A71
+		// (set) Token: 0x0600D369 RID: 54121 RVA: 0x001F2879 File Offset: 0x001F0A79
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public MailAddReason Reason
@@ -101,7 +101,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600D484 RID: 54404 RVA: 0x001F4A6A File Offset: 0x001F2C6A
+		// Token: 0x0600D36A RID: 54122 RVA: 0x001F2882 File Offset: 0x001F0A82
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return this.Equals(other as MailAddNotify);
 		}
 
-		// Token: 0x0600D485 RID: 54405 RVA: 0x001F4A78 File Offset: 0x001F2C78
+		// Token: 0x0600D36B RID: 54123 RVA: 0x001F2890 File Offset: 0x001F0A90
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(MailAddNotify other)
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (object.Equals(this.NewMail, other.NewMail) && this.Reason == other.Reason && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600D486 RID: 54406 RVA: 0x001F4AC8 File Offset: 0x001F2CC8
+		// Token: 0x0600D36C RID: 54124 RVA: 0x001F28E0 File Offset: 0x001F0AE0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600D487 RID: 54407 RVA: 0x001F4B23 File Offset: 0x001F2D23
+		// Token: 0x0600D36D RID: 54125 RVA: 0x001F293B File Offset: 0x001F0B3B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600D488 RID: 54408 RVA: 0x001F4B30 File Offset: 0x001F2D30
+		// Token: 0x0600D36E RID: 54126 RVA: 0x001F2948 File Offset: 0x001F0B48
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -154,19 +154,19 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600D489 RID: 54409 RVA: 0x001F4B3C File Offset: 0x001F2D3C
+		// Token: 0x0600D36F RID: 54127 RVA: 0x001F2954 File Offset: 0x001F0B54
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			if (this.newMail_ != null)
 			{
-				output.WriteRawTag(34);
+				output.WriteRawTag(26);
 				output.WriteMessage(this.NewMail);
 			}
 			if (this.Reason != MailAddReason.Gm)
 			{
-				output.WriteRawTag(104);
+				output.WriteRawTag(56);
 				output.WriteEnum((int)this.Reason);
 			}
 			if (this._unknownFields != null)
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600D48A RID: 54410 RVA: 0x001F4B98 File Offset: 0x001F2D98
+		// Token: 0x0600D370 RID: 54128 RVA: 0x001F29B0 File Offset: 0x001F0BB0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -196,7 +196,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600D48B RID: 54411 RVA: 0x001F4BF0 File Offset: 0x001F2DF0
+		// Token: 0x0600D371 RID: 54129 RVA: 0x001F2A08 File Offset: 0x001F0C08
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(MailAddNotify other)
@@ -220,7 +220,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600D48C RID: 54412 RVA: 0x001F4C58 File Offset: 0x001F2E58
+		// Token: 0x0600D372 RID: 54130 RVA: 0x001F2A70 File Offset: 0x001F0C70
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -228,7 +228,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600D48D RID: 54413 RVA: 0x001F4C64 File Offset: 0x001F2E64
+		// Token: 0x0600D373 RID: 54131 RVA: 0x001F2A7C File Offset: 0x001F0C7C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -240,9 +240,9 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 34U)
+				if (num != 26U)
 				{
-					if (num != 104U)
+					if (num != 56U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
@@ -262,19 +262,19 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04005927 RID: 22823
+		// Token: 0x04005930 RID: 22832
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04005928 RID: 22824
-		public const int NewMailFieldNumber = 4;
+		// Token: 0x04005931 RID: 22833
+		public const int NewMailFieldNumber = 3;
 
-		// Token: 0x04005929 RID: 22825
+		// Token: 0x04005932 RID: 22834
 		private PbMailInfo newMail_;
 
-		// Token: 0x0400592A RID: 22826
-		public const int ReasonFieldNumber = 13;
+		// Token: 0x04005933 RID: 22835
+		public const int ReasonFieldNumber = 7;
 
-		// Token: 0x0400592B RID: 22827
+		// Token: 0x04005934 RID: 22836
 		private MailAddReason reason_;
 	}
 }

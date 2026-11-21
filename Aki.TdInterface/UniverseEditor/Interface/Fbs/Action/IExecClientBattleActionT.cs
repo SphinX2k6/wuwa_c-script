@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006706 RID: 26374
+	// Token: 0x02006D86 RID: 28038
 	public class IExecClientBattleActionT
 	{
-		// Token: 0x1700C3F5 RID: 50165
-		// (get) Token: 0x0602DDF9 RID: 187897 RVA: 0x00645FF5 File Offset: 0x006441F5
-		// (set) Token: 0x0602DDFA RID: 187898 RVA: 0x00645FFD File Offset: 0x006441FD
+		// Token: 0x1700CDAB RID: 52651
+		// (get) Token: 0x0603063D RID: 198205 RVA: 0x006936F5 File Offset: 0x006918F5
+		// (set) Token: 0x0603063E RID: 198206 RVA: 0x006936FD File Offset: 0x006918FD
 		public TExecClientBattleOptionUnion ClientBattleOption { get; set; }
 
-		// Token: 0x0602DDFB RID: 187899 RVA: 0x00646006 File Offset: 0x00644206
+		// Token: 0x0603063F RID: 198207 RVA: 0x00693706 File Offset: 0x00691906
 		public IExecClientBattleActionT()
 		{
 			this.ClientBattleOption = null;

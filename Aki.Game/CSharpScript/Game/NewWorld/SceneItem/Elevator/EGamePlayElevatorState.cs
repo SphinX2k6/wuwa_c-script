@@ -2,18 +2,18 @@
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Elevator
 {
-	// Token: 0x02007203 RID: 29187
+	// Token: 0x020062B8 RID: 25272
 	public enum EGamePlayElevatorState
 	{
-		// Token: 0x04025958 RID: 153944
+		// Token: 0x040205C7 RID: 132551
 		Stop,
-		// Token: 0x04025959 RID: 153945
+		// Token: 0x040205C8 RID: 132552
 		Moving,
-		// Token: 0x0402595A RID: 153946
+		// Token: 0x040205C9 RID: 132553
 		MovingPhaseTwo,
-		// Token: 0x0402595B RID: 153947
+		// Token: 0x040205CA RID: 132554
 		Hovering,
-		// Token: 0x0402595C RID: 153948
+		// Token: 0x040205CB RID: 132555
 		Teleporting
 	}
 }

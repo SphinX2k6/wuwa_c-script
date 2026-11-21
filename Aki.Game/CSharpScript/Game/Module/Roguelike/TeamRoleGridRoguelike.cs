@@ -4,10 +4,10 @@ using CSharpScript.Game.Module.Common.MediumItemGrid;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DE1 RID: 19937
+	// Token: 0x02003DAA RID: 15786
 	public class TeamRoleGridRoguelike : TeamRoleGridBase
 	{
-		// Token: 0x06033754 RID: 210772 RVA: 0x00C05F4C File Offset: 0x00C0414C
+		// Token: 0x060285BF RID: 165311 RVA: 0x00B4F45C File Offset: 0x00B4D65C
 		[NullableContext(1)]
 		protected override CharacterMediumItemGrid GetRoleParameters(CharacterMediumItemGrid baseParameter, RoleDataBase data)
 		{

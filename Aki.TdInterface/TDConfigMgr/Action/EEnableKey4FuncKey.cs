@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020015D3 RID: 5587
+	// Token: 0x02001732 RID: 5938
 	public enum EEnableKey4FuncKey
 	{
-		// Token: 0x04004A77 RID: 19063
+		// Token: 0x04004E31 RID: 20017
 		TimeScaled
 	}
 }

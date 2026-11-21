@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020024B8 RID: 9400
+// Token: 0x0200199F RID: 6559
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 internal class MainRecommendAttrItem : GridProxyAbstract<IMainRecommendAttrItemData>
 {
-	// Token: 0x06012DC8 RID: 77256 RVA: 0x004A8318 File Offset: 0x004A6518
+	// Token: 0x06010288 RID: 66184 RVA: 0x004B5ECC File Offset: 0x004B40CC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,19 +25,19 @@ internal class MainRecommendAttrItem : GridProxyAbstract<IMainRecommendAttrItemD
 		};
 	}
 
-	// Token: 0x06012DC9 RID: 77257 RVA: 0x004A8388 File Offset: 0x004A6588
+	// Token: 0x06010289 RID: 66185 RVA: 0x004B5F3C File Offset: 0x004B413C
 	protected override void OnStart()
 	{
 		this.Layout = new GenericLayout<AttrContent, RecommendItemData>(base.GetVerticalLayout(1), new Func<AttrContent>(this.InitItem), base.GetItem(2).GetOwner() as AUIBaseActor, false, true);
 	}
 
-	// Token: 0x06012DCA RID: 77258 RVA: 0x004A83BB File Offset: 0x004A65BB
+	// Token: 0x0601028A RID: 66186 RVA: 0x004B5F6F File Offset: 0x004B416F
 	private AttrContent InitItem()
 	{
 		return new AttrContent();
 	}
 
-	// Token: 0x06012DCB RID: 77259 RVA: 0x004A83C4 File Offset: 0x004A65C4
+	// Token: 0x0601028B RID: 66187 RVA: 0x004B5F78 File Offset: 0x004B4178
 	public override void Refresh(IMainRecommendAttrItemData data, bool isSelected, int gridIndex)
 	{
 		LguiUtil.Instance.TrySetLocalTextNew(base.GetText(0), data.CostLabel, Array.Empty<object>());
@@ -54,7 +54,7 @@ internal class MainRecommendAttrItem : GridProxyAbstract<IMainRecommendAttrItemD
 		item.SetUIActive(data.Items.Count == 0);
 	}
 
-	// Token: 0x04008E18 RID: 36376
+	// Token: 0x04008F62 RID: 36706
 	[Nullable(new byte[]
 	{
 		2,

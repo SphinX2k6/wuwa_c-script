@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003FC8 RID: 16328
+	// Token: 0x02004409 RID: 17417
 	public struct IQuestBuffActiveCenterRange : IFlatbufferObject
 	{
-		// Token: 0x1700725C RID: 29276
-		// (get) Token: 0x060176AD RID: 95917 RVA: 0x00360A89 File Offset: 0x0035EC89
+		// Token: 0x1700785C RID: 30812
+		// (get) Token: 0x06018D40 RID: 101696 RVA: 0x0038A7B3 File Offset: 0x003889B3
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060176AE RID: 95918 RVA: 0x00360A96 File Offset: 0x0035EC96
+		// Token: 0x06018D41 RID: 101697 RVA: 0x0038A7C0 File Offset: 0x003889C0
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060176AF RID: 95919 RVA: 0x00360AA0 File Offset: 0x0035ECA0
+		// Token: 0x06018D42 RID: 101698 RVA: 0x0038A7C8 File Offset: 0x003889C8
 		public static IQuestBuffActiveCenterRange GetRootAsIQuestBuffActiveCenterRange(ByteBuffer _bb)
 		{
 			return IQuestBuffActiveCenterRange.GetRootAsIQuestBuffActiveCenterRange(_bb, default(IQuestBuffActiveCenterRange));
 		}
 
-		// Token: 0x060176B0 RID: 95920 RVA: 0x00360ABC File Offset: 0x0035ECBC
+		// Token: 0x06018D43 RID: 101699 RVA: 0x0038A7E4 File Offset: 0x003889E4
 		public static IQuestBuffActiveCenterRange GetRootAsIQuestBuffActiveCenterRange(ByteBuffer _bb, IQuestBuffActiveCenterRange obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060176B1 RID: 95921 RVA: 0x00360AD9 File Offset: 0x0035ECD9
+		// Token: 0x06018D44 RID: 101700 RVA: 0x0038A801 File Offset: 0x00388A01
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060176B2 RID: 95922 RVA: 0x00360AE8 File Offset: 0x0035ECE8
+		// Token: 0x06018D45 RID: 101701 RVA: 0x0038A810 File Offset: 0x00388A10
 		public IQuestBuffActiveCenterRange __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700725D RID: 29277
-		// (get) Token: 0x060176B3 RID: 95923 RVA: 0x00360AF8 File Offset: 0x0035ECF8
+		// Token: 0x1700785D RID: 30813
+		// (get) Token: 0x06018D46 RID: 101702 RVA: 0x0038A820 File Offset: 0x00388A20
 		public IVectorInfo? CheckPoint
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x1700725E RID: 29278
-		// (get) Token: 0x060176B4 RID: 95924 RVA: 0x00360B58 File Offset: 0x0035ED58
+		// Token: 0x1700785E RID: 30814
+		// (get) Token: 0x06018D47 RID: 101703 RVA: 0x0038A880 File Offset: 0x00388A80
 		public int CheckEnterRange
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x1700725F RID: 29279
-		// (get) Token: 0x060176B5 RID: 95925 RVA: 0x00360B94 File Offset: 0x0035ED94
+		// Token: 0x1700785F RID: 30815
+		// (get) Token: 0x06018D48 RID: 101704 RVA: 0x0038A8BC File Offset: 0x00388ABC
 		public int CheckLeaveRange
 		{
 			get
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060176B6 RID: 95926 RVA: 0x00360BD0 File Offset: 0x0035EDD0
+		// Token: 0x06018D49 RID: 101705 RVA: 0x0038A8F8 File Offset: 0x00388AF8
 		public static Offset<IQuestBuffActiveCenterRange> CreateIQuestBuffActiveCenterRange(FlatBufferBuilder builder, Offset<IVectorInfo> CheckPointOffset = default(Offset<IVectorInfo>), int CheckEnterRange = 0, int CheckLeaveRange = 0)
 		{
 			builder.StartTable(3);
@@ -103,37 +103,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IQuestBuffActiveCenterRange.EndIQuestBuffActiveCenterRange(builder);
 		}
 
-		// Token: 0x060176B7 RID: 95927 RVA: 0x00360BF4 File Offset: 0x0035EDF4
+		// Token: 0x06018D4A RID: 101706 RVA: 0x0038A91C File Offset: 0x00388B1C
 		public static void StartIQuestBuffActiveCenterRange(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x060176B8 RID: 95928 RVA: 0x00360BFD File Offset: 0x0035EDFD
+		// Token: 0x06018D4B RID: 101707 RVA: 0x0038A925 File Offset: 0x00388B25
 		public static void AddCheckPoint(FlatBufferBuilder builder, Offset<IVectorInfo> checkPointOffset)
 		{
 			builder.AddOffset(0, checkPointOffset.Value, 0);
 		}
 
-		// Token: 0x060176B9 RID: 95929 RVA: 0x00360C0D File Offset: 0x0035EE0D
+		// Token: 0x06018D4C RID: 101708 RVA: 0x0038A935 File Offset: 0x00388B35
 		public static void AddCheckEnterRange(FlatBufferBuilder builder, int checkEnterRange)
 		{
 			builder.AddInt(1, checkEnterRange, 0);
 		}
 
-		// Token: 0x060176BA RID: 95930 RVA: 0x00360C18 File Offset: 0x0035EE18
+		// Token: 0x06018D4D RID: 101709 RVA: 0x0038A940 File Offset: 0x00388B40
 		public static void AddCheckLeaveRange(FlatBufferBuilder builder, int checkLeaveRange)
 		{
 			builder.AddInt(2, checkLeaveRange, 0);
 		}
 
-		// Token: 0x060176BB RID: 95931 RVA: 0x00360C23 File Offset: 0x0035EE23
+		// Token: 0x06018D4E RID: 101710 RVA: 0x0038A94B File Offset: 0x00388B4B
 		public static Offset<IQuestBuffActiveCenterRange> EndIQuestBuffActiveCenterRange(FlatBufferBuilder builder)
 		{
 			return new Offset<IQuestBuffActiveCenterRange>(builder.EndTable());
 		}
 
-		// Token: 0x060176BC RID: 95932 RVA: 0x00360C30 File Offset: 0x0035EE30
+		// Token: 0x06018D4F RID: 101711 RVA: 0x0038A958 File Offset: 0x00388B58
 		public IQuestBuffActiveCenterRangeT UnPack()
 		{
 			IQuestBuffActiveCenterRangeT questBuffActiveCenterRangeT = new IQuestBuffActiveCenterRangeT();
@@ -141,7 +141,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return questBuffActiveCenterRangeT;
 		}
 
-		// Token: 0x060176BD RID: 95933 RVA: 0x00360C4C File Offset: 0x0035EE4C
+		// Token: 0x06018D50 RID: 101712 RVA: 0x0038A974 File Offset: 0x00388B74
 		public void UnPackTo(IQuestBuffActiveCenterRangeT _o)
 		{
 			_o.CheckPoint = ((this.CheckPoint != null) ? this.CheckPoint.Value.UnPack() : null);
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.CheckLeaveRange = this.CheckLeaveRange;
 		}
 
-		// Token: 0x060176BE RID: 95934 RVA: 0x00360CA0 File Offset: 0x0035EEA0
+		// Token: 0x06018D51 RID: 101713 RVA: 0x0038A9C8 File Offset: 0x00388BC8
 		public static Offset<IQuestBuffActiveCenterRange> Pack(FlatBufferBuilder builder, IQuestBuffActiveCenterRangeT _o)
 		{
 			if (_o == null)
@@ -160,7 +160,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IQuestBuffActiveCenterRange.CreateIQuestBuffActiveCenterRange(builder, checkPointOffset, _o.CheckEnterRange, _o.CheckLeaveRange);
 		}
 
-		// Token: 0x0400BA65 RID: 47717
+		// Token: 0x0400C44B RID: 50251
 		private Table __p;
 	}
 }

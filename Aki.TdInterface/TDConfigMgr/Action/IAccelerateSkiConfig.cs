@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001752 RID: 5970
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020018D3 RID: 6355
 	public class IAccelerateSkiConfig : ISkiConfigType
 	{
-		// Token: 0x06007E57 RID: 32343 RVA: 0x0012E9B4 File Offset: 0x0012CBB4
+		// Token: 0x06008547 RID: 34119 RVA: 0x0013DC14 File Offset: 0x0013BE14
 		private IAccelerateSkiConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007E58 RID: 32344 RVA: 0x0012E9EC File Offset: 0x0012CBEC
+		// Token: 0x06008548 RID: 34120 RVA: 0x0013DC4C File Offset: 0x0013BE4C
 		public static IAccelerateSkiConfig Create([Nullable(2)] IAccelerateSkiConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007E59 RID: 32345 RVA: 0x0012E9FF File Offset: 0x0012CBFF
+		// Token: 0x06008549 RID: 34121 RVA: 0x0013DC5F File Offset: 0x0013BE5F
 		public static IAccelerateSkiConfig CreateFromSetValue([Nullable(2)] IAccelerateSkiConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007E5A RID: 32346 RVA: 0x0012EA14 File Offset: 0x0012CC14
+		// Token: 0x0600854A RID: 34122 RVA: 0x0013DC74 File Offset: 0x0013BE74
 		public new IAccelerateSkiConfig_SetValue ToSetValue()
 		{
 			return new IAccelerateSkiConfig_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002985 RID: 10629
-		// (get) Token: 0x06007E5B RID: 32347 RVA: 0x0012EA6E File Offset: 0x0012CC6E
-		// (set) Token: 0x06007E5C RID: 32348 RVA: 0x0012EA99 File Offset: 0x0012CC99
+		// Token: 0x17002B73 RID: 11123
+		// (get) Token: 0x0600854B RID: 34123 RVA: 0x0013DCCE File Offset: 0x0013BECE
+		// (set) Token: 0x0600854C RID: 34124 RVA: 0x0013DCF9 File Offset: 0x0013BEF9
 		public override ESkiConfig Type
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002986 RID: 10630
-		// (get) Token: 0x06007E5D RID: 32349 RVA: 0x0012EAA7 File Offset: 0x0012CCA7
-		// (set) Token: 0x06007E5E RID: 32350 RVA: 0x0012EACE File Offset: 0x0012CCCE
+		// Token: 0x17002B74 RID: 11124
+		// (get) Token: 0x0600854D RID: 34125 RVA: 0x0013DD07 File Offset: 0x0013BF07
+		// (set) Token: 0x0600854E RID: 34126 RVA: 0x0013DD2E File Offset: 0x0013BF2E
 		public override ITargetEntityType Target
 		{
 			get
@@ -111,9 +109,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002987 RID: 10631
-		// (get) Token: 0x06007E5F RID: 32351 RVA: 0x0012EADC File Offset: 0x0012CCDC
-		// (set) Token: 0x06007E60 RID: 32352 RVA: 0x0012EB07 File Offset: 0x0012CD07
+		// Token: 0x17002B75 RID: 11125
+		// (get) Token: 0x0600854F RID: 34127 RVA: 0x0013DD3C File Offset: 0x0013BF3C
+		// (set) Token: 0x06008550 RID: 34128 RVA: 0x0013DD67 File Offset: 0x0013BF67
 		public virtual int Duration
 		{
 			get
@@ -134,9 +132,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002988 RID: 10632
-		// (get) Token: 0x06007E61 RID: 32353 RVA: 0x0012EB15 File Offset: 0x0012CD15
-		// (set) Token: 0x06007E62 RID: 32354 RVA: 0x0012EB40 File Offset: 0x0012CD40
+		// Token: 0x17002B76 RID: 11126
+		// (get) Token: 0x06008551 RID: 34129 RVA: 0x0013DD75 File Offset: 0x0013BF75
+		// (set) Token: 0x06008552 RID: 34130 RVA: 0x0013DDA0 File Offset: 0x0013BFA0
 		public virtual int LimitSpeed
 		{
 			get
@@ -157,9 +155,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002989 RID: 10633
-		// (get) Token: 0x06007E63 RID: 32355 RVA: 0x0012EB4E File Offset: 0x0012CD4E
-		// (set) Token: 0x06007E64 RID: 32356 RVA: 0x0012EB79 File Offset: 0x0012CD79
+		// Token: 0x17002B77 RID: 11127
+		// (get) Token: 0x06008553 RID: 34131 RVA: 0x0013DDAE File Offset: 0x0013BFAE
+		// (set) Token: 0x06008554 RID: 34132 RVA: 0x0013DDD9 File Offset: 0x0013BFD9
 		public virtual int Acceleration
 		{
 			get
@@ -180,9 +178,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700298A RID: 10634
-		// (get) Token: 0x06007E65 RID: 32357 RVA: 0x0012EB88 File Offset: 0x0012CD88
-		// (set) Token: 0x06007E66 RID: 32358 RVA: 0x0012EBC2 File Offset: 0x0012CDC2
+		// Token: 0x17002B78 RID: 11128
+		// (get) Token: 0x06008555 RID: 34133 RVA: 0x0013DDE8 File Offset: 0x0013BFE8
+		// (set) Token: 0x06008556 RID: 34134 RVA: 0x0013DE22 File Offset: 0x0013C022
 		public virtual int? InstantSpeed
 		{
 			get
@@ -204,11 +202,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400507E RID: 20606
+		// Token: 0x040054B4 RID: 21684
 		[Nullable(2)]
 		protected new IAccelerateSkiConfig FbInstance;
 
-		// Token: 0x0400507F RID: 20607
+		// Token: 0x040054B5 RID: 21685
 		[Nullable(2)]
 		protected new IAccelerateSkiConfig_SetValue PocoInterface;
 	}

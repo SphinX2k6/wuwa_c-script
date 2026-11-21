@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020005D9 RID: 1497
+	// Token: 0x020005F1 RID: 1521
 	public class ConfigMultiMapById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002323 RID: 8995 RVA: 0x0012018B File Offset: 0x0011E38B
+		// Token: 0x060023B3 RID: 9139 RVA: 0x00126C07 File Offset: 0x00124E07
 		static ConfigMultiMapById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMultiMapById.CreateStaticDefaultValue), new Action(ConfigMultiMapById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002324 RID: 8996 RVA: 0x001201AC File Offset: 0x0011E3AC
+		// Token: 0x060023B4 RID: 9140 RVA: 0x00126C28 File Offset: 0x00124E28
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMultiMapById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002325 RID: 8997 RVA: 0x0012022B File Offset: 0x0011E42B
+		// Token: 0x060023B5 RID: 9141 RVA: 0x00126CA7 File Offset: 0x00124EA7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMultiMapById.LogPair = null;
 			ConfigMultiMapById.HandleId = 0;
 		}
 
-		// Token: 0x06002326 RID: 8998 RVA: 0x00120239 File Offset: 0x0011E439
+		// Token: 0x060023B6 RID: 9142 RVA: 0x00126CB5 File Offset: 0x00124EB5
 		public static void Init()
 		{
 			ConfigMultiMapById.HandleId = ConfigCommon.InitDataStatement(ConfigMultiMapById.HandleId, "db_map.db", "select BinData from `MultiMap` where Id=?");
 		}
 
-		// Token: 0x06002327 RID: 8999 RVA: 0x00120254 File Offset: 0x0011E454
+		// Token: 0x060023B7 RID: 9143 RVA: 0x00126CD0 File Offset: 0x00124ED0
 		public static MultiMap? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigMultiMapById.HandleId, ConfigMultiMapById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new MultiMap?(rootAsMultiMap);
 		}
 
-		// Token: 0x040028D3 RID: 10451
+		// Token: 0x0400297B RID: 10619
 		private const string DB = "db_map.db";
 
-		// Token: 0x040028D4 RID: 10452
+		// Token: 0x0400297C RID: 10620
 		private const string FILE = "d.地图.xlsx";
 
-		// Token: 0x040028D5 RID: 10453
+		// Token: 0x0400297D RID: 10621
 		private const string TABLE = "MultiMap";
 
-		// Token: 0x040028D6 RID: 10454
+		// Token: 0x0400297E RID: 10622
 		private const string COMMAND = "select BinData from `MultiMap` where Id=?";
 
-		// Token: 0x040028D7 RID: 10455
+		// Token: 0x0400297F RID: 10623
 		private const string KEY_PREFIX = "MultiMapById";
 
-		// Token: 0x040028D8 RID: 10456
+		// Token: 0x04002980 RID: 10624
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040028D9 RID: 10457
+		// Token: 0x04002981 RID: 10625
 		private static int HandleId;
 	}
 }

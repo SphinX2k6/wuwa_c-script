@@ -6,10 +6,10 @@ using UnrealEngine.Extension;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x02004593 RID: 17811
+	// Token: 0x020034BB RID: 13499
 	public class WuYinQuBattleStateFighting1 : WuYinQuBattleStateBase
 	{
-		// Token: 0x0602DEF7 RID: 188151 RVA: 0x00A8FEF0 File Offset: 0x00A8E0F0
+		// Token: 0x060225E1 RID: 140769 RVA: 0x009BC110 File Offset: 0x009BA310
 		[NullableContext(1)]
 		public WuYinQuBattleStateFighting1(WuYinQuBattleActor Owner, EWuYinQuBattleState State, [Nullable(new byte[]
 		{
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Render
 		{
 		}
 
-		// Token: 0x0602DEF8 RID: 188152 RVA: 0x00A8FEFB File Offset: 0x00A8E0FB
+		// Token: 0x060225E2 RID: 140770 RVA: 0x009BC11B File Offset: 0x009BA31B
 		[NullableContext(2)]
 		protected virtual PDA_WuYinQuBattleFightingData_C GetFightingData()
 		{
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Render
 			return wuYinQuFightingData.WuYinQuFightingData1;
 		}
 
-		// Token: 0x0602DEF9 RID: 188153 RVA: 0x00A8FF14 File Offset: 0x00A8E114
+		// Token: 0x060225E3 RID: 140771 RVA: 0x009BC134 File Offset: 0x009BA334
 		protected override void OnEnter(EWuYinQuBattleState? lastState)
 		{
 			Log.Instance.Info(ELogModule.RenderBattle, ELogAuthor.HCS, "进入战斗阶段", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -59,18 +59,18 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DEFA RID: 188154 RVA: 0x00A90001 File Offset: 0x00A8E201
+		// Token: 0x060225E4 RID: 140772 RVA: 0x009BC221 File Offset: 0x009BA421
 		protected override void OnUpdate(float delta)
 		{
 		}
 
-		// Token: 0x0602DEFB RID: 188155 RVA: 0x00A90004 File Offset: 0x00A8E204
+		// Token: 0x060225E5 RID: 140773 RVA: 0x009BC224 File Offset: 0x009BA424
 		protected override void OnExit(EWuYinQuBattleState lastState)
 		{
 			Log.Instance.Info(ELogModule.RenderBattle, ELogAuthor.HCS, "退出战斗阶段", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x04018858 RID: 100440
+		// Token: 0x04012E93 RID: 77459
 		protected float Timer;
 	}
 }

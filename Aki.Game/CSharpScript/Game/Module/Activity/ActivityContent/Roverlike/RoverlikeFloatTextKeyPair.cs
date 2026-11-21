@@ -3,19 +3,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x020060ED RID: 24813
+	// Token: 0x0200506B RID: 20587
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoverlikeFloatTextKeyPair : IRoverlikeFloatTextKeyPair
 	{
-		// Token: 0x17009147 RID: 37191
-		// (get) Token: 0x0603EC07 RID: 257031 RVA: 0x00F28CC6 File Offset: 0x00F26EC6
-		// (set) Token: 0x0603EC08 RID: 257032 RVA: 0x00F28CCE File Offset: 0x00F26ECE
+		// Token: 0x170064A9 RID: 25769
+		// (get) Token: 0x060338C9 RID: 211145 RVA: 0x00E6FADA File Offset: 0x00E6DCDA
+		// (set) Token: 0x060338CA RID: 211146 RVA: 0x00E6FAE2 File Offset: 0x00E6DCE2
 		public string Increment { get; set; } = string.Empty;
 
-		// Token: 0x17009148 RID: 37192
-		// (get) Token: 0x0603EC09 RID: 257033 RVA: 0x00F28CD7 File Offset: 0x00F26ED7
-		// (set) Token: 0x0603EC0A RID: 257034 RVA: 0x00F28CDF File Offset: 0x00F26EDF
+		// Token: 0x170064AA RID: 25770
+		// (get) Token: 0x060338CB RID: 211147 RVA: 0x00E6FAEB File Offset: 0x00E6DCEB
+		// (set) Token: 0x060338CC RID: 211148 RVA: 0x00E6FAF3 File Offset: 0x00E6DCF3
 		public string Decrements { get; set; } = string.Empty;
 	}
 }

@@ -14,7 +14,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B2A RID: 19242
+	// Token: 0x02003AD2 RID: 15058
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 	})]
 	public class TowerDefenseRankItemV2 : GridProxyAbstract<TowerDefenseRankItemData>
 	{
-		// Token: 0x06031D5F RID: 204127 RVA: 0x00B91CD4 File Offset: 0x00B8FED4
+		// Token: 0x06026AEF RID: 158447 RVA: 0x00AD5D38 File Offset: 0x00AD3F38
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 12;
@@ -64,26 +64,26 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06031D60 RID: 204128 RVA: 0x00B91ECC File Offset: 0x00B900CC
+		// Token: 0x06026AF0 RID: 158448 RVA: 0x00AD5F30 File Offset: 0x00AD4130
 		protected override void OnStart()
 		{
 			this.OnlineNameLayout = new GenericLayout<TowerDefenseRankOnlineItem, ITowerDefenseRankPlayerName>(base.GetLayoutBase(5), new Func<TowerDefenseRankOnlineItem>(this.InitOnlineItem), base.GetItem(6).GetOwner() as AUIBaseActor, false, true);
 			this.FormationLayout = new GenericLayout<TowerDefenseRankFormationItemV2, TowerDefenseRankRoleData>(base.GetLayoutBase(8), new Func<TowerDefenseRankFormationItemV2>(this.InitFormationItem), base.GetItem(9).GetOwner() as AUIBaseActor, false, true);
 		}
 
-		// Token: 0x06031D61 RID: 204129 RVA: 0x00B91F3C File Offset: 0x00B9013C
+		// Token: 0x06026AF1 RID: 158449 RVA: 0x00AD5FA0 File Offset: 0x00AD41A0
 		private TowerDefenseRankOnlineItem InitOnlineItem()
 		{
 			return new TowerDefenseRankOnlineItem();
 		}
 
-		// Token: 0x06031D62 RID: 204130 RVA: 0x00B91F43 File Offset: 0x00B90143
+		// Token: 0x06026AF2 RID: 158450 RVA: 0x00AD5FA7 File Offset: 0x00AD41A7
 		private TowerDefenseRankFormationItemV2 InitFormationItem()
 		{
 			return new TowerDefenseRankFormationItemV2();
 		}
 
-		// Token: 0x06031D63 RID: 204131 RVA: 0x00B91F4C File Offset: 0x00B9014C
+		// Token: 0x06026AF3 RID: 158451 RVA: 0x00AD5FB0 File Offset: 0x00AD41B0
 		private void RefreshEmpty()
 		{
 			base.GetText(1).SetUIActive(false);
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.RefreshRankBg();
 		}
 
-		// Token: 0x06031D64 RID: 204132 RVA: 0x00B92020 File Offset: 0x00B90220
+		// Token: 0x06026AF4 RID: 158452 RVA: 0x00AD6084 File Offset: 0x00AD4284
 		protected virtual void RefreshRankBg()
 		{
 			UUITexture texture = base.GetTexture(0);
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			base.SetTextureByPath(resourcePath, texture, null, null);
 		}
 
-		// Token: 0x06031D65 RID: 204133 RVA: 0x00B9207C File Offset: 0x00B9027C
+		// Token: 0x06026AF5 RID: 158453 RVA: 0x00AD60E0 File Offset: 0x00AD42E0
 		private void RefreshRankNum()
 		{
 			bool isTopThree = this.RankItemData.IsTopThree;
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031D66 RID: 204134 RVA: 0x00B92134 File Offset: 0x00B90334
+		// Token: 0x06026AF6 RID: 158454 RVA: 0x00AD6198 File Offset: 0x00AD4398
 		public UniTask RefreshPlayerName()
 		{
 			TowerDefenseRankItemV2.<RefreshPlayerName>d__10 <RefreshPlayerName>d__;
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return <RefreshPlayerName>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031D67 RID: 204135 RVA: 0x00B92178 File Offset: 0x00B90378
+		// Token: 0x06026AF7 RID: 158455 RVA: 0x00AD61DC File Offset: 0x00AD43DC
 		private void RefreshTimeScore()
 		{
 			UUIText text = base.GetText(7);
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			text.SetText(timeDataFormat, true);
 		}
 
-		// Token: 0x06031D68 RID: 204136 RVA: 0x00B921B4 File Offset: 0x00B903B4
+		// Token: 0x06026AF8 RID: 158456 RVA: 0x00AD6218 File Offset: 0x00AD4418
 		private UniTask RefreshFormation()
 		{
 			TowerDefenseRankItemV2.<RefreshFormation>d__12 <RefreshFormation>d__;
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return <RefreshFormation>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031D69 RID: 204137 RVA: 0x00B921F7 File Offset: 0x00B903F7
+		// Token: 0x06026AF9 RID: 158457 RVA: 0x00AD625B File Offset: 0x00AD445B
 		public override void Refresh(TowerDefenseRankItemData data, bool isSelected, int gridIndex)
 		{
 			this.RankItemData = data;
@@ -200,7 +200,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.RefreshReviewButton();
 		}
 
-		// Token: 0x06031D6A RID: 204138 RVA: 0x00B92238 File Offset: 0x00B90438
+		// Token: 0x06026AFA RID: 158458 RVA: 0x00AD629C File Offset: 0x00AD449C
 		protected virtual void RefreshReviewButton()
 		{
 			UUIButtonComponent button = base.GetButton(11);
@@ -211,7 +211,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			button.RootUIComp.Get().SetUIActive(this.RankItemData.IsOnline);
 		}
 
-		// Token: 0x06031D6B RID: 204139 RVA: 0x00B92270 File Offset: 0x00B90470
+		// Token: 0x06026AFB RID: 158459 RVA: 0x00AD62D4 File Offset: 0x00AD44D4
 		private void OnReviewClick()
 		{
 			List<ISolarSpeedRolePanelData> list = new List<ISolarSpeedRolePanelData>();
@@ -271,59 +271,59 @@ namespace CSharpScript.Game.Module.TowerDefence
 			UiManager.Instance.OpenView(EUiViewName.SolarSpeedResultView, param, null);
 		}
 
-		// Token: 0x06031D6C RID: 204140 RVA: 0x00B92508 File Offset: 0x00B90708
+		// Token: 0x06026AFC RID: 158460 RVA: 0x00AD656C File Offset: 0x00AD476C
 		public bool IsSelfItem()
 		{
 			return this.RankItemData.IsSelfInData;
 		}
 
-		// Token: 0x0401A97F RID: 108927
+		// Token: 0x040152D1 RID: 86737
 		private GenericLayout<TowerDefenseRankOnlineItem, ITowerDefenseRankPlayerName> OnlineNameLayout;
 
-		// Token: 0x0401A980 RID: 108928
+		// Token: 0x040152D2 RID: 86738
 		private GenericLayout<TowerDefenseRankFormationItemV2, TowerDefenseRankRoleData> FormationLayout;
 
-		// Token: 0x0401A981 RID: 108929
+		// Token: 0x040152D3 RID: 86739
 		protected TowerDefenseRankItemData RankItemData;
 
-		// Token: 0x0200ACBA RID: 44218
+		// Token: 0x020096DA RID: 38618
 		[NullableContext(0)]
 		protected class ERankItemComponent
 		{
-			// Token: 0x040347A2 RID: 214946
+			// Token: 0x0402F153 RID: 192851
 			public const int RankBgTex = 0;
 
-			// Token: 0x040347A3 RID: 214947
+			// Token: 0x0402F154 RID: 192852
 			public const int TopThreeRankTxt = 1;
 
-			// Token: 0x040347A4 RID: 214948
+			// Token: 0x0402F155 RID: 192853
 			public const int OtherRankTxt = 2;
 
-			// Token: 0x040347A5 RID: 214949
+			// Token: 0x0402F156 RID: 192854
 			public const int EmptyItem = 3;
 
-			// Token: 0x040347A6 RID: 214950
+			// Token: 0x0402F157 RID: 192855
 			public const int NameTxt = 4;
 
-			// Token: 0x040347A7 RID: 214951
+			// Token: 0x0402F158 RID: 192856
 			public const int OnlineLayout = 5;
 
-			// Token: 0x040347A8 RID: 214952
+			// Token: 0x0402F159 RID: 192857
 			public const int OnlineItem = 6;
 
-			// Token: 0x040347A9 RID: 214953
+			// Token: 0x0402F15A RID: 192858
 			public const int TimeTxt = 7;
 
-			// Token: 0x040347AA RID: 214954
+			// Token: 0x0402F15B RID: 192859
 			public const int FormationLayout = 8;
 
-			// Token: 0x040347AB RID: 214955
+			// Token: 0x0402F15C RID: 192860
 			public const int FormationItem = 9;
 
-			// Token: 0x040347AC RID: 214956
+			// Token: 0x0402F15D RID: 192861
 			public const int EmptyTxt = 10;
 
-			// Token: 0x040347AD RID: 214957
+			// Token: 0x0402F15E RID: 192862
 			public const int ReviewButton = 11;
 		}
 	}

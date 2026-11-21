@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021A5 RID: 8613
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002410 RID: 9232
 	public class SetCameraAnim : ActionParams
 	{
-		// Token: 0x0600BD20 RID: 48416 RVA: 0x001B3A44 File Offset: 0x001B1C44
+		// Token: 0x0600C8DA RID: 51418 RVA: 0x001CB07C File Offset: 0x001C927C
 		private SetCameraAnim_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BD21 RID: 48417 RVA: 0x001B3A7C File Offset: 0x001B1C7C
+		// Token: 0x0600C8DB RID: 51419 RVA: 0x001CB0B4 File Offset: 0x001C92B4
 		public static SetCameraAnim Create([Nullable(2)] SetCameraAnim instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BD22 RID: 48418 RVA: 0x001B3A8F File Offset: 0x001B1C8F
+		// Token: 0x0600C8DC RID: 51420 RVA: 0x001CB0C7 File Offset: 0x001C92C7
 		public static SetCameraAnim CreateFromSetValue([Nullable(2)] SetCameraAnim_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BD23 RID: 48419 RVA: 0x001B3AA2 File Offset: 0x001B1CA2
+		// Token: 0x0600C8DD RID: 51421 RVA: 0x001CB0DA File Offset: 0x001C92DA
 		public SetCameraAnim_SetValue ToSetValue()
 		{
 			return new SetCameraAnim_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003979 RID: 14713
-		// (get) Token: 0x0600BD24 RID: 48420 RVA: 0x001B3ACD File Offset: 0x001B1CCD
-		// (set) Token: 0x0600BD25 RID: 48421 RVA: 0x001B3AF8 File Offset: 0x001B1CF8
+		// Token: 0x17003C6D RID: 15469
+		// (get) Token: 0x0600C8DE RID: 51422 RVA: 0x001CB105 File Offset: 0x001C9305
+		// (set) Token: 0x0600C8DF RID: 51423 RVA: 0x001CB130 File Offset: 0x001C9330
 		public virtual string CameraAnimDataAsset
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700397A RID: 14714
-		// (get) Token: 0x0600BD26 RID: 48422 RVA: 0x001B3B06 File Offset: 0x001B1D06
-		// (set) Token: 0x0600BD27 RID: 48423 RVA: 0x001B3B35 File Offset: 0x001B1D35
+		// Token: 0x17003C6E RID: 15470
+		// (get) Token: 0x0600C8E0 RID: 51424 RVA: 0x001CB13E File Offset: 0x001C933E
+		// (set) Token: 0x0600C8E1 RID: 51425 RVA: 0x001CB16D File Offset: 0x001C936D
 		public virtual float Speed
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700397B RID: 14715
-		// (get) Token: 0x0600BD28 RID: 48424 RVA: 0x001B3B44 File Offset: 0x001B1D44
-		// (set) Token: 0x0600BD29 RID: 48425 RVA: 0x001B3B7E File Offset: 0x001B1D7E
+		// Token: 0x17003C6F RID: 15471
+		// (get) Token: 0x0600C8E2 RID: 51426 RVA: 0x001CB17C File Offset: 0x001C937C
+		// (set) Token: 0x0600C8E3 RID: 51427 RVA: 0x001CB1B6 File Offset: 0x001C93B6
 		public virtual bool? UseNoise
 		{
 			get
@@ -131,11 +129,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040070DE RID: 28894
+		// Token: 0x04007726 RID: 30502
 		[Nullable(2)]
 		protected new SetCameraAnim FbInstance;
 
-		// Token: 0x040070DF RID: 28895
+		// Token: 0x04007727 RID: 30503
 		[Nullable(2)]
 		protected SetCameraAnim_SetValue PocoInterface;
 	}

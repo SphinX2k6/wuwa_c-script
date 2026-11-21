@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace ActivityNamespace.MapTravel.MapTravelSubViewTravelTask
 {
-	// Token: 0x020044D8 RID: 17624
+	// Token: 0x02002F65 RID: 12133
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,12 +17,12 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewTravelTask
 	})]
 	internal class TaskNormalItem : TaskItemBase<ActivityTaskData>
 	{
-		// Token: 0x0602D68A RID: 185994 RVA: 0x00A3F970 File Offset: 0x00A3DB70
+		// Token: 0x0601CBC8 RID: 117704 RVA: 0x008C55D4 File Offset: 0x008C37D4
 		public TaskNormalItem(ActivityMapTravelData activityBaseData) : base(activityBaseData)
 		{
 		}
 
-		// Token: 0x0602D68B RID: 185995 RVA: 0x00A3F97C File Offset: 0x00A3DB7C
+		// Token: 0x0601CBC9 RID: 117705 RVA: 0x008C55E0 File Offset: 0x008C37E0
 		public override void Refresh(ActivityTaskData taskData, bool isSelected, int gridIndex)
 		{
 			this.TaskData = taskData;
@@ -44,7 +44,7 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewTravelTask
 			base.GetItem(5).SetUIActive(flag);
 		}
 
-		// Token: 0x0602D68C RID: 185996 RVA: 0x00A3FA94 File Offset: 0x00A3DC94
+		// Token: 0x0601CBCA RID: 117706 RVA: 0x008C56F8 File Offset: 0x008C38F8
 		private void RefreshRewardData(int rewardId)
 		{
 			List<IItemGridData> list = new List<IItemGridData>();
@@ -60,7 +60,7 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewTravelTask
 			this.RewardScrollView.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x0602D68D RID: 185997 RVA: 0x00A3FB24 File Offset: 0x00A3DD24
+		// Token: 0x0601CBCB RID: 117707 RVA: 0x008C5788 File Offset: 0x008C3988
 		protected override void OnClickedButton()
 		{
 			TravelTask? travelTaskConfig = ActivityMapTravelConfig.Instance.GetTravelTaskConfig(this.TaskData.Id);
@@ -70,13 +70,13 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewTravelTask
 			}
 		}
 
-		// Token: 0x0602D68E RID: 185998 RVA: 0x00A3FB6E File Offset: 0x00A3DD6E
+		// Token: 0x0601CBCC RID: 117708 RVA: 0x008C57D2 File Offset: 0x008C39D2
 		public void SetBtnClickCallback(Action callback)
 		{
 			this.ClickRewardBtnCb = callback;
 		}
 
-		// Token: 0x0602D68F RID: 185999 RVA: 0x00A3FB77 File Offset: 0x00A3DD77
+		// Token: 0x0601CBCD RID: 117709 RVA: 0x008C57DB File Offset: 0x008C39DB
 		protected override void OnClickedRewardButton()
 		{
 			Action clickRewardBtnCb = this.ClickRewardBtnCb;
@@ -87,7 +87,7 @@ namespace ActivityNamespace.MapTravel.MapTravelSubViewTravelTask
 			clickRewardBtnCb();
 		}
 
-		// Token: 0x04018491 RID: 99473
+		// Token: 0x0400F239 RID: 62009
 		[Nullable(2)]
 		private Action ClickRewardBtnCb;
 	}

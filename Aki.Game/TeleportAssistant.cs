@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -13,13 +12,14 @@ using CSharpScript.Game.Module.WorldMap;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
+using Google.Protobuf.Collections;
 
-// Token: 0x020021F1 RID: 8689
+// Token: 0x020016D5 RID: 5845
 [NullableContext(1)]
 [Nullable(0)]
 public class TeleportAssistant : ControllerAssistantBase
 {
-	// Token: 0x06010E85 RID: 69253 RVA: 0x0041D05A File Offset: 0x0041B25A
+	// Token: 0x0600E318 RID: 58136 RVA: 0x004299EE File Offset: 0x00427BEE
 	protected override void OnDestroy()
 	{
 		this.CurrentSequenceConfig = null;
@@ -29,37 +29,39 @@ public class TeleportAssistant : ControllerAssistantBase
 		this.IsInPlot = false;
 	}
 
-	// Token: 0x06010E86 RID: 69254 RVA: 0x0041D088 File Offset: 0x0041B288
+	// Token: 0x0600E319 RID: 58137 RVA: 0x00429A1C File Offset: 0x00427C1C
 	public override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.TeleportUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnTeleportUpdateNotify));
 	}
 
-	// Token: 0x06010E87 RID: 69255 RVA: 0x0041D0A6 File Offset: 0x0041B2A6
+	// Token: 0x0600E31A RID: 58138 RVA: 0x00429A3A File Offset: 0x00427C3A
 	public override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.TeleportUpdateNotify);
 	}
 
-	// Token: 0x06010E88 RID: 69256 RVA: 0x0041D0B8 File Offset: 0x0041B2B8
+	// Token: 0x0600E31B RID: 58139 RVA: 0x00429A4C File Offset: 0x00427C4C
 	public override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.PlotNetworkEnd, new Action<PlotResultInfo>(this.OnPlotNetworkEnd));
 		EventSystem.Instance.Add(EEventName.OnExecuteServerGm, new Action<string>(this.OnExecuteServerGm));
 	}
 
-	// Token: 0x06010E89 RID: 69257 RVA: 0x0041D0F2 File Offset: 0x0041B2F2
+	// Token: 0x0600E31C RID: 58140 RVA: 0x00429A86 File Offset: 0x00427C86
 	public override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.PlotNetworkEnd, new Action<PlotResultInfo>(this.OnPlotNetworkEnd));
 		EventSystem.Instance.Remove(EEventName.OnExecuteServerGm, new Action<string>(this.OnExecuteServerGm));
 	}
 
-	// Token: 0x06010E8A RID: 69258 RVA: 0x0041D12C File Offset: 0x0041B32C
+	// Token: 0x0600E31D RID: 58141 RVA: 0x00429AC0 File Offset: 0x00427CC0
 	[NullableContext(2)]
 	private void OnTeleportUpdateNotify(IMessage msg, Net.CallbackStatus status)
 	{
-		int[] array = ((TeleportUpdateNotify)msg).Ids.ToArray<int>();
+		RepeatedField<int> ids = ((TeleportUpdateNotify)msg).Ids;
+		int[] array = new int[ids.Count];
+		ids.CopyTo(array, 0);
 		MapModel.Instance.UnlockTeleports(array, false);
 		if (GameModeModel.Instance.IsMulti)
 		{
@@ -73,7 +75,7 @@ public class TeleportAssistant : ControllerAssistantBase
 		this.PlaySequenceOnUnlockNewTeleport(array);
 	}
 
-	// Token: 0x06010E8B RID: 69259 RVA: 0x0041D194 File Offset: 0x0041B394
+	// Token: 0x0600E31E RID: 58142 RVA: 0x00429B38 File Offset: 0x00427D38
 	private void PlaySequenceOnUnlockNewTeleport(int[] teleportIds)
 	{
 		if (this.IsGmUnlockAll)
@@ -108,7 +110,7 @@ public class TeleportAssistant : ControllerAssistantBase
 		}
 	}
 
-	// Token: 0x06010E8C RID: 69260 RVA: 0x0041D251 File Offset: 0x0041B451
+	// Token: 0x0600E31F RID: 58143 RVA: 0x00429BF5 File Offset: 0x00427DF5
 	private void OnWorldMapViewOpened()
 	{
 		LevelLoadingController.Instance.CloseLoading(ELoadingReason.Common, "BlackScreenFadeOnPlotToWorldMap", delegate
@@ -117,7 +119,7 @@ public class TeleportAssistant : ControllerAssistantBase
 		}, new float?((float)1));
 	}
 
-	// Token: 0x06010E8D RID: 69261 RVA: 0x0041D28C File Offset: 0x0041B48C
+	// Token: 0x0600E320 RID: 58144 RVA: 0x00429C30 File Offset: 0x00427E30
 	private void OnPlotNetworkEnd(PlotResultInfo plotResult)
 	{
 		if (!(plotResult.FlowListName != this.CurFlowListName))
@@ -164,7 +166,7 @@ public class TeleportAssistant : ControllerAssistantBase
 		}
 	}
 
-	// Token: 0x06010E8E RID: 69262 RVA: 0x0041D3ED File Offset: 0x0041B5ED
+	// Token: 0x0600E321 RID: 58145 RVA: 0x00429D91 File Offset: 0x00427F91
 	private void OnExecuteServerGm(string gm)
 	{
 		if (gm.ToLower() != "activateteleport 0")
@@ -174,7 +176,7 @@ public class TeleportAssistant : ControllerAssistantBase
 		this.IsGmUnlockAll = true;
 	}
 
-	// Token: 0x06010E8F RID: 69263 RVA: 0x0041D40C File Offset: 0x0041B60C
+	// Token: 0x0600E322 RID: 58146 RVA: 0x00429DB0 File Offset: 0x00427FB0
 	public UniTask RequestTeleportData()
 	{
 		TeleportAssistant.<RequestTeleportData>d__16 <RequestTeleportData>d__;
@@ -184,21 +186,21 @@ public class TeleportAssistant : ControllerAssistantBase
 		return <RequestTeleportData>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0400807F RID: 32895
+	// Token: 0x040081BD RID: 33213
 	private const string GM_UNLOCK_ALL_TELEPORT = "activateteleport 0";
 
-	// Token: 0x04008080 RID: 32896
+	// Token: 0x040081BE RID: 33214
 	private Teleporter? CurrentSequenceConfig;
 
-	// Token: 0x04008081 RID: 32897
+	// Token: 0x040081BF RID: 33215
 	private string CurFlowListName = "";
 
-	// Token: 0x04008082 RID: 32898
+	// Token: 0x040081C0 RID: 33216
 	private int CurFlowId;
 
-	// Token: 0x04008083 RID: 32899
+	// Token: 0x040081C1 RID: 33217
 	private bool IsGmUnlockAll;
 
-	// Token: 0x04008084 RID: 32900
+	// Token: 0x040081C2 RID: 33218
 	private bool IsInPlot;
 }

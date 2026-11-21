@@ -14,16 +14,16 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x0200023E RID: 574
+// Token: 0x02000242 RID: 578
 [NullableContext(2)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/Character/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Character/TsBaseCharacter.TsBaseCharacter_C")]
 public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnrealBlueprintInterface, IUnrealInterface, IUnrealObject, IUnrealUObject
 {
-	// Token: 0x17000543 RID: 1347
-	// (get) Token: 0x06002310 RID: 8976 RVA: 0x000D9704 File Offset: 0x000D7904
-	// (set) Token: 0x06002311 RID: 8977 RVA: 0x000D9718 File Offset: 0x000D7918
+	// Token: 0x1700056A RID: 1386
+	// (get) Token: 0x060023C8 RID: 9160 RVA: 0x000DFBC4 File Offset: 0x000DDDC4
+	// (set) Token: 0x060023C9 RID: 9161 RVA: 0x000DFBD8 File Offset: 0x000DDDD8
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe CharRenderingComponent CharRenderingComponent
 	{
@@ -37,9 +37,9 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		}
 	}
 
-	// Token: 0x17000544 RID: 1348
-	// (get) Token: 0x06002312 RID: 8978 RVA: 0x000D972D File Offset: 0x000D792D
-	// (set) Token: 0x06002313 RID: 8979 RVA: 0x000D973D File Offset: 0x000D793D
+	// Token: 0x1700056B RID: 1387
+	// (get) Token: 0x060023CA RID: 9162 RVA: 0x000DFBED File Offset: 0x000DDDED
+	// (set) Token: 0x060023CB RID: 9163 RVA: 0x000DFBFD File Offset: 0x000DDDFD
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe ECharacterRenderingType RenderType
 	{
@@ -53,9 +53,9 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		}
 	}
 
-	// Token: 0x17000545 RID: 1349
-	// (get) Token: 0x06002314 RID: 8980 RVA: 0x000D974E File Offset: 0x000D794E
-	// (set) Token: 0x06002315 RID: 8981 RVA: 0x000D9762 File Offset: 0x000D7962
+	// Token: 0x1700056C RID: 1388
+	// (get) Token: 0x060023CC RID: 9164 RVA: 0x000DFC0E File Offset: 0x000DDE0E
+	// (set) Token: 0x060023CD RID: 9165 RVA: 0x000DFC22 File Offset: 0x000DDE22
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe TsCharacterDebugComponent TsCharacterDebugComponent
 	{
@@ -69,9 +69,9 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		}
 	}
 
-	// Token: 0x17000546 RID: 1350
-	// (get) Token: 0x06002316 RID: 8982 RVA: 0x000D9777 File Offset: 0x000D7977
-	// (set) Token: 0x06002317 RID: 8983 RVA: 0x000D978B File Offset: 0x000D798B
+	// Token: 0x1700056D RID: 1389
+	// (get) Token: 0x060023CE RID: 9166 RVA: 0x000DFC37 File Offset: 0x000DDE37
+	// (set) Token: 0x060023CF RID: 9167 RVA: 0x000DFC4B File Offset: 0x000DDE4B
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe UNavigationInvokerComponent NavigationInvoker
 	{
@@ -85,9 +85,9 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		}
 	}
 
-	// Token: 0x17000547 RID: 1351
-	// (get) Token: 0x06002318 RID: 8984 RVA: 0x000D97A0 File Offset: 0x000D79A0
-	// (set) Token: 0x06002319 RID: 8985 RVA: 0x000D97D9 File Offset: 0x000D79D9
+	// Token: 0x1700056E RID: 1390
+	// (get) Token: 0x060023D0 RID: 9168 RVA: 0x000DFC60 File Offset: 0x000DDE60
+	// (set) Token: 0x060023D1 RID: 9169 RVA: 0x000DFC99 File Offset: 0x000DDE99
 	[Nullable(1)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FSoftClassPath InputComponentClass
@@ -110,9 +110,9 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		}
 	}
 
-	// Token: 0x17000548 RID: 1352
-	// (get) Token: 0x0600231A RID: 8986 RVA: 0x000D9801 File Offset: 0x000D7A01
-	// (set) Token: 0x0600231B RID: 8987 RVA: 0x000D9815 File Offset: 0x000D7A15
+	// Token: 0x1700056F RID: 1391
+	// (get) Token: 0x060023D2 RID: 9170 RVA: 0x000DFCC1 File Offset: 0x000DDEC1
+	// (set) Token: 0x060023D3 RID: 9171 RVA: 0x000DFCD5 File Offset: 0x000DDED5
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe BP_BasePlatform_C BasePlatform
 	{
@@ -126,9 +126,9 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		}
 	}
 
-	// Token: 0x17000549 RID: 1353
-	// (get) Token: 0x0600231C RID: 8988 RVA: 0x000D982A File Offset: 0x000D7A2A
-	// (set) Token: 0x0600231D RID: 8989 RVA: 0x000D983A File Offset: 0x000D7A3A
+	// Token: 0x17000570 RID: 1392
+	// (get) Token: 0x060023D4 RID: 9172 RVA: 0x000DFCEA File Offset: 0x000DDEEA
+	// (set) Token: 0x060023D5 RID: 9173 RVA: 0x000DFCFA File Offset: 0x000DDEFA
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int EntityId
 	{
@@ -142,14 +142,14 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		}
 	}
 
-	// Token: 0x0600231E RID: 8990 RVA: 0x000D984B File Offset: 0x000D7A4B
+	// Token: 0x060023D6 RID: 9174 RVA: 0x000DFD0B File Offset: 0x000DDF0B
 	public void SetEntityId(int entityId)
 	{
 		this.EntityId = entityId;
 		base.EntityIdInternal = entityId;
 	}
 
-	// Token: 0x0600231F RID: 8991 RVA: 0x000D985C File Offset: 0x000D7A5C
+	// Token: 0x060023D7 RID: 9175 RVA: 0x000DFD1C File Offset: 0x000DDF1C
 	public void TryAddTsAbilitySystemComponent()
 	{
 		if (base.AbilitySystemComponent == null)
@@ -158,9 +158,9 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		}
 	}
 
-	// Token: 0x1700054A RID: 1354
-	// (get) Token: 0x06002320 RID: 8992 RVA: 0x000D98A1 File Offset: 0x000D7AA1
-	// (set) Token: 0x06002321 RID: 8993 RVA: 0x000D98B5 File Offset: 0x000D7AB5
+	// Token: 0x17000571 RID: 1393
+	// (get) Token: 0x060023D8 RID: 9176 RVA: 0x000DFD61 File Offset: 0x000DDF61
+	// (set) Token: 0x060023D9 RID: 9177 RVA: 0x000DFD75 File Offset: 0x000DDF75
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe BP_FightManager_C FightManager
 	{
@@ -174,9 +174,9 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		}
 	}
 
-	// Token: 0x1700054B RID: 1355
-	// (get) Token: 0x06002322 RID: 8994 RVA: 0x000D98CA File Offset: 0x000D7ACA
-	// (set) Token: 0x06002323 RID: 8995 RVA: 0x000D98DE File Offset: 0x000D7ADE
+	// Token: 0x17000572 RID: 1394
+	// (get) Token: 0x060023DA RID: 9178 RVA: 0x000DFD8A File Offset: 0x000DDF8A
+	// (set) Token: 0x060023DB RID: 9179 RVA: 0x000DFD9E File Offset: 0x000DDF9E
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe UDataTable DtHitEffect
 	{
@@ -190,9 +190,9 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		}
 	}
 
-	// Token: 0x1700054C RID: 1356
-	// (get) Token: 0x06002324 RID: 8996 RVA: 0x000D98F3 File Offset: 0x000D7AF3
-	// (set) Token: 0x06002325 RID: 8997 RVA: 0x000D9907 File Offset: 0x000D7B07
+	// Token: 0x17000573 RID: 1395
+	// (get) Token: 0x060023DC RID: 9180 RVA: 0x000DFDB3 File Offset: 0x000DDFB3
+	// (set) Token: 0x060023DD RID: 9181 RVA: 0x000DFDC7 File Offset: 0x000DDFC7
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe UDataTable DtBaseMovementSetting
 	{
@@ -206,9 +206,9 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		}
 	}
 
-	// Token: 0x1700054D RID: 1357
-	// (get) Token: 0x06002326 RID: 8998 RVA: 0x000D991C File Offset: 0x000D7B1C
-	// (set) Token: 0x06002327 RID: 8999 RVA: 0x000D9930 File Offset: 0x000D7B30
+	// Token: 0x17000574 RID: 1396
+	// (get) Token: 0x060023DE RID: 9182 RVA: 0x000DFDDC File Offset: 0x000DDFDC
+	// (set) Token: 0x060023DF RID: 9183 RVA: 0x000DFDF0 File Offset: 0x000DDFF0
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe UDataTable DtNewBulletDataMain
 	{
@@ -222,9 +222,9 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		}
 	}
 
-	// Token: 0x1700054E RID: 1358
-	// (get) Token: 0x06002328 RID: 9000 RVA: 0x000D9945 File Offset: 0x000D7B45
-	// (set) Token: 0x06002329 RID: 9001 RVA: 0x000D9959 File Offset: 0x000D7B59
+	// Token: 0x17000575 RID: 1397
+	// (get) Token: 0x060023E0 RID: 9184 RVA: 0x000DFE05 File Offset: 0x000DE005
+	// (set) Token: 0x060023E1 RID: 9185 RVA: 0x000DFE19 File Offset: 0x000DE019
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe UDataTable DtCharacterPart
 	{
@@ -238,9 +238,9 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		}
 	}
 
-	// Token: 0x1700054F RID: 1359
-	// (get) Token: 0x0600232A RID: 9002 RVA: 0x000D996E File Offset: 0x000D7B6E
-	// (set) Token: 0x0600232B RID: 9003 RVA: 0x000D9982 File Offset: 0x000D7B82
+	// Token: 0x17000576 RID: 1398
+	// (get) Token: 0x060023E2 RID: 9186 RVA: 0x000DFE2E File Offset: 0x000DE02E
+	// (set) Token: 0x060023E3 RID: 9187 RVA: 0x000DFE42 File Offset: 0x000DE042
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe UDataTable DtCameraConfig
 	{
@@ -254,8 +254,8 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		}
 	}
 
-	// Token: 0x17000550 RID: 1360
-	// (get) Token: 0x0600232C RID: 9004 RVA: 0x000D9998 File Offset: 0x000D7B98
+	// Token: 0x17000577 RID: 1399
+	// (get) Token: 0x060023E4 RID: 9188 RVA: 0x000DFE58 File Offset: 0x000DE058
 	[Nullable(1)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<FName> BattleSockets
@@ -273,8 +273,8 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		}
 	}
 
-	// Token: 0x17000551 RID: 1361
-	// (get) Token: 0x0600232D RID: 9005 RVA: 0x000D99D4 File Offset: 0x000D7BD4
+	// Token: 0x17000578 RID: 1400
+	// (get) Token: 0x060023E5 RID: 9189 RVA: 0x000DFE94 File Offset: 0x000DE094
 	[Nullable(1)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TArray<FName> NormalSockets
@@ -292,9 +292,9 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		}
 	}
 
-	// Token: 0x17000552 RID: 1362
-	// (get) Token: 0x0600232E RID: 9006 RVA: 0x000D9A0D File Offset: 0x000D7C0D
-	// (set) Token: 0x0600232F RID: 9007 RVA: 0x000D9A21 File Offset: 0x000D7C21
+	// Token: 0x17000579 RID: 1401
+	// (get) Token: 0x060023E6 RID: 9190 RVA: 0x000DFECD File Offset: 0x000DE0CD
+	// (set) Token: 0x060023E7 RID: 9191 RVA: 0x000DFEE1 File Offset: 0x000DE0E1
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe PD_CharacterControllerData_C WeaponInEffect
 	{
@@ -308,9 +308,9 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		}
 	}
 
-	// Token: 0x17000553 RID: 1363
-	// (get) Token: 0x06002330 RID: 9008 RVA: 0x000D9A36 File Offset: 0x000D7C36
-	// (set) Token: 0x06002331 RID: 9009 RVA: 0x000D9A4A File Offset: 0x000D7C4A
+	// Token: 0x1700057A RID: 1402
+	// (get) Token: 0x060023E8 RID: 9192 RVA: 0x000DFEF6 File Offset: 0x000DE0F6
+	// (set) Token: 0x060023E9 RID: 9193 RVA: 0x000DFF0A File Offset: 0x000DE10A
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe UEffectModelBase WeaponHideEffect
 	{
@@ -324,9 +324,9 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		}
 	}
 
-	// Token: 0x17000554 RID: 1364
-	// (get) Token: 0x06002332 RID: 9010 RVA: 0x000D9A5F File Offset: 0x000D7C5F
-	// (set) Token: 0x06002333 RID: 9011 RVA: 0x000D9A73 File Offset: 0x000D7C73
+	// Token: 0x1700057B RID: 1403
+	// (get) Token: 0x060023EA RID: 9194 RVA: 0x000DFF1F File Offset: 0x000DE11F
+	// (set) Token: 0x060023EB RID: 9195 RVA: 0x000DFF33 File Offset: 0x000DE133
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe UPrimaryDataAsset FkData
 	{
@@ -340,9 +340,9 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		}
 	}
 
-	// Token: 0x17000555 RID: 1365
-	// (get) Token: 0x06002334 RID: 9012 RVA: 0x000D9A88 File Offset: 0x000D7C88
-	// (set) Token: 0x06002335 RID: 9013 RVA: 0x000D9A9C File Offset: 0x000D7C9C
+	// Token: 0x1700057C RID: 1404
+	// (get) Token: 0x060023EC RID: 9196 RVA: 0x000DFF48 File Offset: 0x000DE148
+	// (set) Token: 0x060023ED RID: 9197 RVA: 0x000DFF5C File Offset: 0x000DE15C
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe UPrimaryDataAsset CharacterData
 	{
@@ -356,9 +356,9 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		}
 	}
 
-	// Token: 0x17000556 RID: 1366
-	// (get) Token: 0x06002336 RID: 9014 RVA: 0x000D9AB1 File Offset: 0x000D7CB1
-	// (set) Token: 0x06002337 RID: 9015 RVA: 0x000D9AC1 File Offset: 0x000D7CC1
+	// Token: 0x1700057D RID: 1405
+	// (get) Token: 0x060023EE RID: 9198 RVA: 0x000DFF71 File Offset: 0x000DE171
+	// (set) Token: 0x060023EF RID: 9199 RVA: 0x000DFF81 File Offset: 0x000DE181
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe ECamp Camp
 	{
@@ -372,15 +372,15 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		}
 	}
 
-	// Token: 0x06002338 RID: 9016 RVA: 0x000D9AD2 File Offset: 0x000D7CD2
+	// Token: 0x060023F0 RID: 9200 RVA: 0x000DFF92 File Offset: 0x000DE192
 	public void SetCamp(ECamp camp)
 	{
 		this.Camp = camp;
 	}
 
-	// Token: 0x17000557 RID: 1367
-	// (get) Token: 0x06002339 RID: 9017 RVA: 0x000D9ADB File Offset: 0x000D7CDB
-	// (set) Token: 0x0600233A RID: 9018 RVA: 0x000D9AEB File Offset: 0x000D7CEB
+	// Token: 0x1700057E RID: 1406
+	// (get) Token: 0x060023F1 RID: 9201 RVA: 0x000DFF9B File Offset: 0x000DE19B
+	// (set) Token: 0x060023F2 RID: 9202 RVA: 0x000DFFAB File Offset: 0x000DE1AB
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool PhysicsClothSimulateEnable
 	{
@@ -394,9 +394,9 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		}
 	}
 
-	// Token: 0x17000558 RID: 1368
-	// (get) Token: 0x0600233B RID: 9019 RVA: 0x000D9AFC File Offset: 0x000D7CFC
-	// (set) Token: 0x0600233C RID: 9020 RVA: 0x000D9B0C File Offset: 0x000D7D0C
+	// Token: 0x1700057F RID: 1407
+	// (get) Token: 0x060023F3 RID: 9203 RVA: 0x000DFFBC File Offset: 0x000DE1BC
+	// (set) Token: 0x060023F4 RID: 9204 RVA: 0x000DFFCC File Offset: 0x000DE1CC
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool PhysicsClothSimulateDisableOneFrame
 	{
@@ -410,9 +410,9 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		}
 	}
 
-	// Token: 0x17000559 RID: 1369
-	// (get) Token: 0x0600233D RID: 9021 RVA: 0x000D9B1D File Offset: 0x000D7D1D
-	// (set) Token: 0x0600233E RID: 9022 RVA: 0x000D9B2D File Offset: 0x000D7D2D
+	// Token: 0x17000580 RID: 1408
+	// (get) Token: 0x060023F5 RID: 9205 RVA: 0x000DFFDD File Offset: 0x000DE1DD
+	// (set) Token: 0x060023F6 RID: 9206 RVA: 0x000DFFED File Offset: 0x000DE1ED
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool CachePoseEnableOneFrame
 	{
@@ -426,9 +426,9 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		}
 	}
 
-	// Token: 0x1700055A RID: 1370
-	// (get) Token: 0x0600233F RID: 9023 RVA: 0x000D9B3E File Offset: 0x000D7D3E
-	// (set) Token: 0x06002340 RID: 9024 RVA: 0x000D9B4E File Offset: 0x000D7D4E
+	// Token: 0x17000581 RID: 1409
+	// (get) Token: 0x060023F7 RID: 9207 RVA: 0x000DFFFE File Offset: 0x000DE1FE
+	// (set) Token: 0x060023F8 RID: 9208 RVA: 0x000E000E File Offset: 0x000DE20E
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float CacheTime
 	{
@@ -442,9 +442,9 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		}
 	}
 
-	// Token: 0x1700055B RID: 1371
-	// (get) Token: 0x06002341 RID: 9025 RVA: 0x000D9B5F File Offset: 0x000D7D5F
-	// (set) Token: 0x06002342 RID: 9026 RVA: 0x000D9B73 File Offset: 0x000D7D73
+	// Token: 0x17000582 RID: 1410
+	// (get) Token: 0x060023F9 RID: 9209 RVA: 0x000E001F File Offset: 0x000DE21F
+	// (set) Token: 0x060023FA RID: 9210 RVA: 0x000E0033 File Offset: 0x000DE233
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe UDataTable DtGameplayAbpConfig
 	{
@@ -458,41 +458,38 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		}
 	}
 
-	// Token: 0x1700055C RID: 1372
-	// (get) Token: 0x06002343 RID: 9027 RVA: 0x000D9B88 File Offset: 0x000D7D88
-	// (set) Token: 0x06002344 RID: 9028 RVA: 0x000D9B90 File Offset: 0x000D7D90
+	// Token: 0x17000583 RID: 1411
+	// (get) Token: 0x060023FB RID: 9211 RVA: 0x000E0048 File Offset: 0x000DE248
+	// (set) Token: 0x060023FC RID: 9212 RVA: 0x000E0050 File Offset: 0x000DE250
 	public CharacterActorComponent CharacterActorComponent { get; set; }
 
-	// Token: 0x1700055D RID: 1373
-	// (get) Token: 0x06002345 RID: 9029 RVA: 0x000D9B99 File Offset: 0x000D7D99
-	// (set) Token: 0x06002346 RID: 9030 RVA: 0x000D9BA1 File Offset: 0x000D7DA1
+	// Token: 0x17000584 RID: 1412
+	// (get) Token: 0x060023FD RID: 9213 RVA: 0x000E0059 File Offset: 0x000DE259
+	// (set) Token: 0x060023FE RID: 9214 RVA: 0x000E0061 File Offset: 0x000DE261
 	public SimpleNpcActorComponent SimpleNpcActorComponent { get; set; }
 
-	// Token: 0x06002347 RID: 9031 RVA: 0x000D9BAC File Offset: 0x000D7DAC
+	// Token: 0x060023FF RID: 9215 RVA: 0x000E006C File Offset: 0x000DE26C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void K2_OnMovementModeChanged(EMovementMode prevMovementMode, EMovementMode newMovementMode, byte prevCustomMode, byte newCustomMode)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_OnMovementModeChanged"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		ACharacter.__K2_OnMovementModeChanged_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsBaseCharacter) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_OnMovementModeChanged"), TsBaseCharacter.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((ACharacter.__K2_OnMovementModeChanged_FunctionParams*)ptr + 15L / (long)sizeof(ACharacter.__K2_OnMovementModeChanged_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(byte*)(&ptr2->PrevMovementMode) = (byte)prevMovementMode;
-			*(byte*)(&ptr2->NewMovementMode) = (byte)newMovementMode;
-			ptr2->PrevCustomMode = prevCustomMode;
-			ptr2->NewCustomMode = newCustomMode;
+			this.K2_OnMovementModeChanged_Implementation(prevMovementMode, newMovementMode, prevCustomMode, newCustomMode);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		ACharacter.__K2_OnMovementModeChanged_FunctionParams* ptr = stackalloc ACharacter.__K2_OnMovementModeChanged_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(ACharacter.__K2_OnMovementModeChanged_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(byte*)(&ptr->PrevMovementMode) = (byte)prevMovementMode;
+		*(byte*)(&ptr->NewMovementMode) = (byte)newMovementMode;
+		ptr->PrevCustomMode = prevCustomMode;
+		ptr->NewCustomMode = newCustomMode;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06002348 RID: 9032 RVA: 0x000D9C40 File Offset: 0x000D7E40
+	// Token: 0x06002400 RID: 9216 RVA: 0x000E0118 File Offset: 0x000DE318
 	protected virtual void K2_OnMovementModeChanged_Implementation(EMovementMode prevMovementMode, EMovementMode newMovementMode, byte prevCustomMode, byte newCustomMode)
 	{
 		if (this.CharacterActorComponent == null)
@@ -504,35 +501,32 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		this.OnMovementModeChanged = false;
 	}
 
-	// Token: 0x06002349 RID: 9033 RVA: 0x000D9C94 File Offset: 0x000D7E94
+	// Token: 0x06002401 RID: 9217 RVA: 0x000E016C File Offset: 0x000DE36C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void BindGameplayEnableState(ref bool gameplayEnable)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("BindGameplayEnableState"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsBaseCharacter.__BindGameplayEnableState_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsBaseCharacter) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("BindGameplayEnableState"), TsBaseCharacter.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsBaseCharacter.__BindGameplayEnableState_FunctionParams*)ptr + 15L / (long)sizeof(TsBaseCharacter.__BindGameplayEnableState_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->gameplayEnable = gameplayEnable;
+			this.BindGameplayEnableState_Implementation(ref gameplayEnable);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		gameplayEnable = ptr2->gameplayEnable;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsBaseCharacter.__BindGameplayEnableState_FunctionParams* ptr = stackalloc TsBaseCharacter.__BindGameplayEnableState_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsBaseCharacter.__BindGameplayEnableState_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->gameplayEnable = gameplayEnable;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		gameplayEnable = ptr->gameplayEnable;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0600234A RID: 9034 RVA: 0x000D9D13 File Offset: 0x000D7F13
+	// Token: 0x06002402 RID: 9218 RVA: 0x000E0201 File Offset: 0x000DE401
 	protected void BindGameplayEnableState_Implementation(ref bool gameplayEnable)
 	{
 		this.AbpGameplayEnableState = new bool?(gameplayEnable);
 	}
 
-	// Token: 0x0600234B RID: 9035 RVA: 0x000D9D22 File Offset: 0x000D7F22
+	// Token: 0x06002403 RID: 9219 RVA: 0x000E0210 File Offset: 0x000DE410
 	public void SetGameplayEnableState(bool enable)
 	{
 		if (this.AbpGameplayEnableState == null)
@@ -542,28 +536,25 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		this.AbpGameplayEnableState = new bool?(enable);
 	}
 
-	// Token: 0x0600234C RID: 9036 RVA: 0x000D9D40 File Offset: 0x000D7F40
+	// Token: 0x06002404 RID: 9220 RVA: 0x000E022C File Offset: 0x000DE42C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceivePossessed(AController newController)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceivePossessed"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		APawn.__ReceivePossessed_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsBaseCharacter) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceivePossessed"), TsBaseCharacter.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((APawn.__ReceivePossessed_FunctionParams*)ptr + 15L / (long)sizeof(APawn.__ReceivePossessed_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->NewController) = ((newController != null) ? newController.NativePtr : ((IntPtr)0));
+			this.ReceivePossessed_Implementation(newController);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		APawn.__ReceivePossessed_FunctionParams* ptr = stackalloc APawn.__ReceivePossessed_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(APawn.__ReceivePossessed_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->NewController) = ((newController != null) ? newController.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0600234D RID: 9037 RVA: 0x000D9DC4 File Offset: 0x000D7FC4
+	// Token: 0x06002405 RID: 9221 RVA: 0x000E02C6 File Offset: 0x000DE4C6
 	protected virtual void ReceivePossessed_Implementation(AController newController)
 	{
 		if (this.CharacterActorComponent == null || !(newController is BP_CharacterController_C))
@@ -573,28 +564,25 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		EventSystem.Instance.EmitWithTarget<Entity, AController>(this.CharacterActorComponent.Entity, EEventName.CharPossessed, this.CharacterActorComponent.Entity, newController);
 	}
 
-	// Token: 0x0600234E RID: 9038 RVA: 0x000D9E00 File Offset: 0x000D8000
+	// Token: 0x06002406 RID: 9222 RVA: 0x000E0300 File Offset: 0x000DE500
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveUnpossessed(AController oldController)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveUnpossessed"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		APawn.__ReceiveUnpossessed_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsBaseCharacter) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveUnpossessed"), TsBaseCharacter.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((APawn.__ReceiveUnpossessed_FunctionParams*)ptr + 15L / (long)sizeof(APawn.__ReceiveUnpossessed_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OldController) = ((oldController != null) ? oldController.NativePtr : ((IntPtr)0));
+			this.ReceiveUnpossessed_Implementation(oldController);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		APawn.__ReceiveUnpossessed_FunctionParams* ptr = stackalloc APawn.__ReceiveUnpossessed_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(APawn.__ReceiveUnpossessed_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OldController) = ((oldController != null) ? oldController.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0600234F RID: 9039 RVA: 0x000D9E84 File Offset: 0x000D8084
+	// Token: 0x06002407 RID: 9223 RVA: 0x000E039A File Offset: 0x000DE59A
 	protected virtual void ReceiveUnpossessed_Implementation(AController oldController)
 	{
 		if (this.CharacterActorComponent == null || !(oldController is BP_CharacterController_C))
@@ -604,35 +592,31 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		EventSystem.Instance.EmitWithTarget<Entity, AController>(this.CharacterActorComponent.Entity, EEventName.CharUnpossessed, this.CharacterActorComponent.Entity, oldController);
 	}
 
-	// Token: 0x06002350 RID: 9040 RVA: 0x000D9EC0 File Offset: 0x000D80C0
+	// Token: 0x06002408 RID: 9224 RVA: 0x000E03D4 File Offset: 0x000DE5D4
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual int GetEntityId()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetEntityId"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsBaseCharacter.__GetEntityId_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsBaseCharacter) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetEntityId"), TsBaseCharacter.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsBaseCharacter.__GetEntityId_FunctionParams*)ptr + 15L / (long)sizeof(TsBaseCharacter.__GetEntityId_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.GetEntityId_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		int _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsBaseCharacter.__GetEntityId_FunctionParams* ptr = stackalloc TsBaseCharacter.__GetEntityId_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsBaseCharacter.__GetEntityId_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		int _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x06002351 RID: 9041 RVA: 0x000D9F35 File Offset: 0x000D8135
+	// Token: 0x06002409 RID: 9225 RVA: 0x000E045E File Offset: 0x000DE65E
 	protected int GetEntityId_Implementation()
 	{
 		return ((IBPI_CreatureInterface_C)this).GetEntityId();
 	}
 
-	// Token: 0x06002352 RID: 9042 RVA: 0x000D9F3D File Offset: 0x000D813D
+	// Token: 0x0600240A RID: 9226 RVA: 0x000E0466 File Offset: 0x000DE666
 	int IBPI_CreatureInterface_C.GetEntityId()
 	{
 		if (this.CharacterActorComponent != null)
@@ -646,7 +630,7 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		return 0;
 	}
 
-	// Token: 0x06002353 RID: 9043 RVA: 0x000D9F72 File Offset: 0x000D8172
+	// Token: 0x0600240B RID: 9227 RVA: 0x000E049B File Offset: 0x000DE69B
 	public int GetEntityIdNoBlueprint()
 	{
 		if (this.CharacterActorComponent != null)
@@ -660,7 +644,7 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		return 0;
 	}
 
-	// Token: 0x06002354 RID: 9044 RVA: 0x000D9FA8 File Offset: 0x000D81A8
+	// Token: 0x0600240C RID: 9228 RVA: 0x000E04D0 File Offset: 0x000DE6D0
 	public Entity GetEntityNoBlueprint()
 	{
 		Entity result = null;
@@ -675,34 +659,28 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		return result;
 	}
 
-	// Token: 0x06002355 RID: 9045 RVA: 0x000D9FE4 File Offset: 0x000D81E4
+	// Token: 0x0600240D RID: 9229 RVA: 0x000E050C File Offset: 0x000DE70C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe virtual void Initialize()
+	public virtual void Initialize()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("Initialize"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsBaseCharacter) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("Initialize"), TsBaseCharacter.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.Initialize_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x06002356 RID: 9046 RVA: 0x000DA054 File Offset: 0x000D8254
+	// Token: 0x0600240E RID: 9230 RVA: 0x000E0565 File Offset: 0x000DE765
 	protected void Initialize_Implementation()
 	{
 	}
 
-	// Token: 0x1700055E RID: 1374
-	// (get) Token: 0x06002357 RID: 9047 RVA: 0x000DA058 File Offset: 0x000D8258
-	// (set) Token: 0x06002358 RID: 9048 RVA: 0x000DA084 File Offset: 0x000D8284
+	// Token: 0x17000585 RID: 1413
+	// (get) Token: 0x0600240F RID: 9231 RVA: 0x000E0568 File Offset: 0x000DE768
+	// (set) Token: 0x06002410 RID: 9232 RVA: 0x000E0594 File Offset: 0x000DE794
 	[Nullable(1)]
 	public CharacterDitherEffectController DitherEffectController
 	{
@@ -723,8 +701,8 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		}
 	}
 
-	// Token: 0x1700055F RID: 1375
-	// (get) Token: 0x06002359 RID: 9049 RVA: 0x000DA08D File Offset: 0x000D828D
+	// Token: 0x17000586 RID: 1414
+	// (get) Token: 0x06002411 RID: 9233 RVA: 0x000E059D File Offset: 0x000DE79D
 	public bool HasDitherEffectController
 	{
 		get
@@ -733,29 +711,26 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		}
 	}
 
-	// Token: 0x0600235A RID: 9050 RVA: 0x000DA098 File Offset: 0x000D8298
+	// Token: 0x06002412 RID: 9234 RVA: 0x000E05A8 File Offset: 0x000DE7A8
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void SetDitherEffect(float dither, ECharacterDitherType ditherType = ECharacterDitherType.Temporary)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("SetDitherEffect"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsBaseCharacter.__SetDitherEffect_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsBaseCharacter) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("SetDitherEffect"), TsBaseCharacter.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsBaseCharacter.__SetDitherEffect_FunctionParams*)ptr + 15L / (long)sizeof(TsBaseCharacter.__SetDitherEffect_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->dither = dither;
-			*(&ptr2->ditherType) = (byte)ditherType;
+			this.SetDitherEffect_Implementation(dither, ditherType);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsBaseCharacter.__SetDitherEffect_FunctionParams* ptr = stackalloc TsBaseCharacter.__SetDitherEffect_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsBaseCharacter.__SetDitherEffect_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->dither = dither;
+		*(&ptr->ditherType) = (byte)ditherType;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0600235B RID: 9051 RVA: 0x000DA117 File Offset: 0x000D8317
+	// Token: 0x06002413 RID: 9235 RVA: 0x000E063E File Offset: 0x000DE83E
 	protected void SetDitherEffect_Implementation(float dither, ECharacterDitherType ditherType = ECharacterDitherType.Temporary)
 	{
 		if (this.HasDitherEffectController)
@@ -769,28 +744,25 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		}
 	}
 
-	// Token: 0x0600235C RID: 9052 RVA: 0x000DA138 File Offset: 0x000D8338
+	// Token: 0x06002414 RID: 9236 RVA: 0x000E065C File Offset: 0x000DE85C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void K2_UpdateCustomMovement(float delta)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_UpdateCustomMovement"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		ACharacter.__K2_UpdateCustomMovement_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsBaseCharacter) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_UpdateCustomMovement"), TsBaseCharacter.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((ACharacter.__K2_UpdateCustomMovement_FunctionParams*)ptr + 15L / (long)sizeof(ACharacter.__K2_UpdateCustomMovement_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->DeltaTime = delta;
+			this.K2_UpdateCustomMovement_Implementation(delta);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		ACharacter.__K2_UpdateCustomMovement_FunctionParams* ptr = stackalloc ACharacter.__K2_UpdateCustomMovement_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(ACharacter.__K2_UpdateCustomMovement_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->DeltaTime = delta;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0600235D RID: 9053 RVA: 0x000DA1B0 File Offset: 0x000D83B0
+	// Token: 0x06002415 RID: 9237 RVA: 0x000E06E8 File Offset: 0x000DE8E8
 	protected virtual void K2_UpdateCustomMovement_Implementation(float delta)
 	{
 		switch (base.CharacterMovement.CustomMovementMode)
@@ -859,53 +831,44 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		}
 	}
 
-	// Token: 0x0600235E RID: 9054 RVA: 0x000DA39C File Offset: 0x000D859C
+	// Token: 0x06002416 RID: 9238 RVA: 0x000E08E0 File Offset: 0x000DEAE0
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe virtual void FightCommand(bool isInAir)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("FightCommand"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsBaseCharacter.__FightCommand_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsBaseCharacter) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("FightCommand"), TsBaseCharacter.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsBaseCharacter.__FightCommand_FunctionParams*)ptr + 15L / (long)sizeof(TsBaseCharacter.__FightCommand_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->isInAir = isInAir;
+			this.FightCommand_Implementation(isInAir);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsBaseCharacter.__FightCommand_FunctionParams* ptr = stackalloc TsBaseCharacter.__FightCommand_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsBaseCharacter.__FightCommand_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->isInAir = isInAir;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0600235F RID: 9055 RVA: 0x000DA412 File Offset: 0x000D8612
+	// Token: 0x06002417 RID: 9239 RVA: 0x000E096C File Offset: 0x000DEB6C
 	protected void FightCommand_Implementation(bool isInAir)
 	{
 	}
 
-	// Token: 0x06002360 RID: 9056 RVA: 0x000DA414 File Offset: 0x000D8614
+	// Token: 0x06002418 RID: 9240 RVA: 0x000E0970 File Offset: 0x000DEB70
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe override void ReceiveDestroyed()
+	public override void ReceiveDestroyed()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveDestroyed"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsBaseCharacter) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveDestroyed"), TsBaseCharacter.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.ReceiveDestroyed_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x06002361 RID: 9057 RVA: 0x000DA484 File Offset: 0x000D8684
+	// Token: 0x06002419 RID: 9241 RVA: 0x000E09CC File Offset: 0x000DEBCC
 	protected virtual void ReceiveDestroyed_Implementation()
 	{
 		if (!ObjectUtils.IsValid(this))
@@ -934,8 +897,8 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		this.TsCharacterDebugComponent = null;
 	}
 
-	// Token: 0x17000560 RID: 1376
-	// (get) Token: 0x06002362 RID: 9058 RVA: 0x000DA514 File Offset: 0x000D8714
+	// Token: 0x17000587 RID: 1415
+	// (get) Token: 0x0600241A RID: 9242 RVA: 0x000E0A5C File Offset: 0x000DEC5C
 	[Nullable(1)]
 	private Queue<SetMovementModeInfo>[] MovementModeLayer
 	{
@@ -956,12 +919,12 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		}
 	}
 
-	// Token: 0x17000561 RID: 1377
-	// (get) Token: 0x06002363 RID: 9059 RVA: 0x000DA554 File Offset: 0x000D8754
-	// (set) Token: 0x06002364 RID: 9060 RVA: 0x000DA55C File Offset: 0x000D875C
+	// Token: 0x17000588 RID: 1416
+	// (get) Token: 0x0600241B RID: 9243 RVA: 0x000E0A9C File Offset: 0x000DEC9C
+	// (set) Token: 0x0600241C RID: 9244 RVA: 0x000E0AA4 File Offset: 0x000DECA4
 	private SetMovementModeInfo CurrentMovementParam { get; set; }
 
-	// Token: 0x06002365 RID: 9061 RVA: 0x000DA568 File Offset: 0x000D8768
+	// Token: 0x0600241D RID: 9245 RVA: 0x000E0AB0 File Offset: 0x000DECB0
 	[NullableContext(1)]
 	public unsafe void KuroSetMovementMode(SetMovementModeInfo @params)
 	{
@@ -1064,7 +1027,7 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		this.MovementModeLayer[this.Count].Push(@params);
 	}
 
-	// Token: 0x06002366 RID: 9062 RVA: 0x000DA924 File Offset: 0x000D8B24
+	// Token: 0x0600241E RID: 9246 RVA: 0x000E0E6C File Offset: 0x000DF06C
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsBaseCharacter._ClassPtr == IntPtr.Zero)
@@ -1074,23 +1037,23 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		return TsBaseCharacter._ClassPtr;
 	}
 
-	// Token: 0x06002367 RID: 9063 RVA: 0x000DA948 File Offset: 0x000D8B48
+	// Token: 0x0600241F RID: 9247 RVA: 0x000E0E90 File Offset: 0x000DF090
 	public TsBaseCharacter() : this(BuiltinUtils.AllocNativeUObject(TsBaseCharacter.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06002368 RID: 9064 RVA: 0x000DA970 File Offset: 0x000D8B70
+	// Token: 0x06002420 RID: 9248 RVA: 0x000E0EB8 File Offset: 0x000DF0B8
 	[NullableContext(1)]
 	public TsBaseCharacter(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsBaseCharacter.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06002369 RID: 9065 RVA: 0x000DA9A3 File Offset: 0x000D8BA3
+	// Token: 0x06002421 RID: 9249 RVA: 0x000E0EEB File Offset: 0x000DF0EB
 	protected TsBaseCharacter(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0600236A RID: 9066 RVA: 0x000DA9AC File Offset: 0x000D8BAC
+	// Token: 0x06002422 RID: 9250 RVA: 0x000E0EF4 File Offset: 0x000DF0F4
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_K2_OnMovementModeChanged_Implementation(ACharacter.__K2_OnMovementModeChanged_FunctionParams* __Params)
 	{
@@ -1099,14 +1062,14 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		this.K2_OnMovementModeChanged_Implementation(prevMovementMode, newMovementMode, __Params->PrevCustomMode, __Params->NewCustomMode);
 	}
 
-	// Token: 0x0600236B RID: 9067 RVA: 0x000DA9E5 File Offset: 0x000D8BE5
+	// Token: 0x06002423 RID: 9251 RVA: 0x000E0F2D File Offset: 0x000DF12D
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_BindGameplayEnableState_Implementation(TsBaseCharacter.__BindGameplayEnableState_FunctionParams* __Params)
 	{
 		this.BindGameplayEnableState_Implementation(ref __Params->gameplayEnable);
 	}
 
-	// Token: 0x0600236C RID: 9068 RVA: 0x000DA9F4 File Offset: 0x000D8BF4
+	// Token: 0x06002424 RID: 9252 RVA: 0x000E0F3C File Offset: 0x000DF13C
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceivePossessed_Implementation(APawn.__ReceivePossessed_FunctionParams* __Params)
 	{
@@ -1114,7 +1077,7 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		this.ReceivePossessed_Implementation(orCreateUObjectByNativePointer);
 	}
 
-	// Token: 0x0600236D RID: 9069 RVA: 0x000DAA14 File Offset: 0x000D8C14
+	// Token: 0x06002425 RID: 9253 RVA: 0x000E0F5C File Offset: 0x000DF15C
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveUnpossessed_Implementation(APawn.__ReceiveUnpossessed_FunctionParams* __Params)
 	{
@@ -1122,20 +1085,20 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		this.ReceiveUnpossessed_Implementation(orCreateUObjectByNativePointer);
 	}
 
-	// Token: 0x0600236E RID: 9070 RVA: 0x000DAA34 File Offset: 0x000D8C34
+	// Token: 0x06002426 RID: 9254 RVA: 0x000E0F7C File Offset: 0x000DF17C
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_GetEntityId_Implementation(TsBaseCharacter.__GetEntityId_FunctionParams* __Params)
 	{
 		__Params->__Result = this.GetEntityId_Implementation();
 	}
 
-	// Token: 0x0600236F RID: 9071 RVA: 0x000DAA42 File Offset: 0x000D8C42
+	// Token: 0x06002427 RID: 9255 RVA: 0x000E0F8A File Offset: 0x000DF18A
 	protected virtual void __CPPCALL_Initialize_Implementation()
 	{
 		this.Initialize_Implementation();
 	}
 
-	// Token: 0x06002370 RID: 9072 RVA: 0x000DAA4C File Offset: 0x000D8C4C
+	// Token: 0x06002428 RID: 9256 RVA: 0x000E0F94 File Offset: 0x000DF194
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_SetDitherEffect_Implementation(TsBaseCharacter.__SetDitherEffect_FunctionParams* __Params)
 	{
@@ -1143,45 +1106,45 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 		this.SetDitherEffect_Implementation(__Params->dither, ditherType);
 	}
 
-	// Token: 0x06002371 RID: 9073 RVA: 0x000DAA6D File Offset: 0x000D8C6D
+	// Token: 0x06002429 RID: 9257 RVA: 0x000E0FB5 File Offset: 0x000DF1B5
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_K2_UpdateCustomMovement_Implementation(ACharacter.__K2_UpdateCustomMovement_FunctionParams* __Params)
 	{
 		this.K2_UpdateCustomMovement_Implementation(__Params->DeltaTime);
 	}
 
-	// Token: 0x06002372 RID: 9074 RVA: 0x000DAA7B File Offset: 0x000D8C7B
+	// Token: 0x0600242A RID: 9258 RVA: 0x000E0FC3 File Offset: 0x000DF1C3
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_FightCommand_Implementation(TsBaseCharacter.__FightCommand_FunctionParams* __Params)
 	{
 		this.FightCommand_Implementation(__Params->isInAir);
 	}
 
-	// Token: 0x06002373 RID: 9075 RVA: 0x000DAA89 File Offset: 0x000D8C89
+	// Token: 0x0600242B RID: 9259 RVA: 0x000E0FD1 File Offset: 0x000DF1D1
 	protected virtual void __CPPCALL_ReceiveDestroyed_Implementation()
 	{
 		this.ReceiveDestroyed_Implementation();
 	}
 
-	// Token: 0x040017D3 RID: 6099
+	// Token: 0x04001817 RID: 6167
 	public bool OnMovementModeChanged;
 
-	// Token: 0x040017D6 RID: 6102
+	// Token: 0x0400181A RID: 6170
 	public bool? AbpGameplayEnableState;
 
-	// Token: 0x040017D7 RID: 6103
+	// Token: 0x0400181B RID: 6171
 	private CharacterDitherEffectController DitherEffectControllerInternal;
 
-	// Token: 0x040017D8 RID: 6104
+	// Token: 0x0400181C RID: 6172
 	private int MovementModeInfoUid;
 
-	// Token: 0x040017D9 RID: 6105
+	// Token: 0x0400181D RID: 6173
 	private int Count;
 
-	// Token: 0x040017DA RID: 6106
+	// Token: 0x0400181E RID: 6174
 	private bool Mutex;
 
-	// Token: 0x040017DB RID: 6107
+	// Token: 0x0400181F RID: 6175
 	[Nullable(new byte[]
 	{
 		2,
@@ -1190,144 +1153,144 @@ public class TsBaseCharacter : ABaseCharacter, IBPI_CreatureInterface_C, IUnreal
 	})]
 	private Queue<SetMovementModeInfo>[] MovementModeLayerInternal;
 
-	// Token: 0x040017DD RID: 6109
+	// Token: 0x04001821 RID: 6177
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Character/TsBaseCharacter.TsBaseCharacter_C";
 
-	// Token: 0x040017DE RID: 6110
+	// Token: 0x04001822 RID: 6178
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x040017DF RID: 6111
+	// Token: 0x04001823 RID: 6179
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x040017E0 RID: 6112
+	// Token: 0x04001824 RID: 6180
 	private static int __PropertyOffset_CharRenderingComponent;
 
-	// Token: 0x040017E1 RID: 6113
+	// Token: 0x04001825 RID: 6181
 	private static int __PropertyOffset_RenderType;
 
-	// Token: 0x040017E2 RID: 6114
+	// Token: 0x04001826 RID: 6182
 	private static int __PropertyOffset_TsCharacterDebugComponent;
 
-	// Token: 0x040017E3 RID: 6115
+	// Token: 0x04001827 RID: 6183
 	private static int __PropertyOffset_NavigationInvoker;
 
-	// Token: 0x040017E4 RID: 6116
+	// Token: 0x04001828 RID: 6184
 	private static int __PropertyOffset_InputComponentClass;
 
-	// Token: 0x040017E5 RID: 6117
+	// Token: 0x04001829 RID: 6185
 	private FSoftClassPath _InputComponentClass;
 
-	// Token: 0x040017E6 RID: 6118
+	// Token: 0x0400182A RID: 6186
 	private static int __PropertyOffset_BasePlatform;
 
-	// Token: 0x040017E7 RID: 6119
+	// Token: 0x0400182B RID: 6187
 	private static int __PropertyOffset_EntityId;
 
-	// Token: 0x040017E8 RID: 6120
+	// Token: 0x0400182C RID: 6188
 	private static int __PropertyOffset_FightManager;
 
-	// Token: 0x040017E9 RID: 6121
+	// Token: 0x0400182D RID: 6189
 	private static int __PropertyOffset_DtHitEffect;
 
-	// Token: 0x040017EA RID: 6122
+	// Token: 0x0400182E RID: 6190
 	private static int __PropertyOffset_DtBaseMovementSetting;
 
-	// Token: 0x040017EB RID: 6123
+	// Token: 0x0400182F RID: 6191
 	private static int __PropertyOffset_DtNewBulletDataMain;
 
-	// Token: 0x040017EC RID: 6124
+	// Token: 0x04001830 RID: 6192
 	private static int __PropertyOffset_DtCharacterPart;
 
-	// Token: 0x040017ED RID: 6125
+	// Token: 0x04001831 RID: 6193
 	private static int __PropertyOffset_DtCameraConfig;
 
-	// Token: 0x040017EE RID: 6126
+	// Token: 0x04001832 RID: 6194
 	private static int __PropertyOffset_BattleSockets;
 
-	// Token: 0x040017EF RID: 6127
+	// Token: 0x04001833 RID: 6195
 	private TArray<FName> _BattleSockets;
 
-	// Token: 0x040017F0 RID: 6128
+	// Token: 0x04001834 RID: 6196
 	private static int __PropertyOffset_NormalSockets;
 
-	// Token: 0x040017F1 RID: 6129
+	// Token: 0x04001835 RID: 6197
 	private TArray<FName> _NormalSockets;
 
-	// Token: 0x040017F2 RID: 6130
+	// Token: 0x04001836 RID: 6198
 	private static int __PropertyOffset_WeaponInEffect;
 
-	// Token: 0x040017F3 RID: 6131
+	// Token: 0x04001837 RID: 6199
 	private static int __PropertyOffset_WeaponHideEffect;
 
-	// Token: 0x040017F4 RID: 6132
+	// Token: 0x04001838 RID: 6200
 	private static int __PropertyOffset_FkData;
 
-	// Token: 0x040017F5 RID: 6133
+	// Token: 0x04001839 RID: 6201
 	private static int __PropertyOffset_CharacterData;
 
-	// Token: 0x040017F6 RID: 6134
+	// Token: 0x0400183A RID: 6202
 	private static int __PropertyOffset_Camp;
 
-	// Token: 0x040017F7 RID: 6135
+	// Token: 0x0400183B RID: 6203
 	private static int __PropertyOffset_PhysicsClothSimulateEnable;
 
-	// Token: 0x040017F8 RID: 6136
+	// Token: 0x0400183C RID: 6204
 	private static int __PropertyOffset_PhysicsClothSimulateDisableOneFrame;
 
-	// Token: 0x040017F9 RID: 6137
+	// Token: 0x0400183D RID: 6205
 	private static int __PropertyOffset_CachePoseEnableOneFrame;
 
-	// Token: 0x040017FA RID: 6138
+	// Token: 0x0400183E RID: 6206
 	private static int __PropertyOffset_CacheTime;
 
-	// Token: 0x040017FB RID: 6139
+	// Token: 0x0400183F RID: 6207
 	private static int __PropertyOffset_DtGameplayAbpConfig;
 
-	// Token: 0x0200743B RID: 29755
+	// Token: 0x020065CC RID: 26060
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 1)]
 	protected ref struct __BindGameplayEnableState_FunctionParams
 	{
-		// Token: 0x04026818 RID: 157720
+		// Token: 0x04021B56 RID: 138070
 		[FieldOffset(0)]
 		public bool gameplayEnable;
 	}
 
-	// Token: 0x0200743C RID: 29756
+	// Token: 0x020065CD RID: 26061
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 4)]
 	protected ref struct __GetEntityId_FunctionParams
 	{
-		// Token: 0x04026819 RID: 157721
+		// Token: 0x04021B57 RID: 138071
 		[FieldOffset(0)]
 		public int __Result;
 	}
 
-	// Token: 0x0200743D RID: 29757
+	// Token: 0x020065CE RID: 26062
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 8)]
 	protected ref struct __SetDitherEffect_FunctionParams
 	{
-		// Token: 0x0402681A RID: 157722
+		// Token: 0x04021B58 RID: 138072
 		[FieldOffset(0)]
 		public float dither;
 
-		// Token: 0x0402681B RID: 157723
+		// Token: 0x04021B59 RID: 138073
 		[FieldOffset(4)]
 		public byte ditherType;
 	}
 
-	// Token: 0x0200743E RID: 29758
+	// Token: 0x020065CF RID: 26063
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 1)]
 	protected ref struct __FightCommand_FunctionParams
 	{
-		// Token: 0x0402681C RID: 157724
+		// Token: 0x04021B5A RID: 138074
 		[FieldOffset(0)]
 		public bool isInAir;
 	}

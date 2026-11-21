@@ -2,20 +2,18 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
-using CSharpScript.Core.Common;
 using CSharpScript.Game.Common.Event;
-using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 {
-	// Token: 0x02006F51 RID: 28497
+	// Token: 0x020060D2 RID: 24786
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class BigStuffedDollModel : ModelBase
 	{
-		// Token: 0x17009B5C RID: 39772
-		// (get) Token: 0x06045525 RID: 283941 RVA: 0x011265F4 File Offset: 0x011247F4
+		// Token: 0x1700709B RID: 28827
+		// (get) Token: 0x0603B6D3 RID: 243411 RVA: 0x010D05A0 File Offset: 0x010CE7A0
 		[Nullable(new byte[]
 		{
 			0,
@@ -30,26 +28,15 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			})]
 			get
 			{
-				if (!PublicUtil.Instance.UseDbConfig())
+				if (this.GameDbConfig == null)
 				{
-					if (this.GameJsonConfig == null)
-					{
-						return default(OneOf<BrokenRockConfig, BrokenRockConfig>);
-					}
-					return this.GameJsonConfig;
+					return default(OneOf<BrokenRockConfig, BrokenRockConfig>);
 				}
-				else
-				{
-					if (this.GameDbConfig == null)
-					{
-						return default(OneOf<BrokenRockConfig, BrokenRockConfig>);
-					}
-					return this.GameDbConfig.Value;
-				}
+				return this.GameDbConfig.Value;
 			}
 		}
 
-		// Token: 0x06045526 RID: 283942 RVA: 0x01126654 File Offset: 0x01124854
+		// Token: 0x0603B6D4 RID: 243412 RVA: 0x010D05D4 File Offset: 0x010CE7D4
 		public void GameplayStart(int id, int treeConfigId)
 		{
 			this.CurrentGameplayId = id;
@@ -75,59 +62,13 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			int.TryParse(array[2], out this.BrokenRockEntityPbDataId);
 		}
 
-		// Token: 0x06045527 RID: 283943 RVA: 0x01126708 File Offset: 0x01124908
+		// Token: 0x0603B6D5 RID: 243413 RVA: 0x010D0688 File Offset: 0x010CE888
 		public void InitialConfig()
 		{
-			if (PublicUtil.Instance.UseDbConfig())
-			{
-				this.GameDbConfig = ConfigBrokenRockConfigById.GetConfig(this.CurrentGameplayId, true);
-				return;
-			}
-			string text = "../Config/Raw/Tables/k.可视化编辑/__Temp__/Json/BrokenRockConfig.json";
-			if (string.IsNullOrEmpty(text))
-			{
-				Log.Instance.Error(ELogModule.LevelPlay, ELogAuthor.YSQ, "大个布偶坚固岩石玩法找不到Json数据配置", default(ReadOnlySpan<ValueTuple<string, object>>));
-				return;
-			}
-			string configPath = PublicUtil.Instance.GetConfigPath(text);
-			string text2 = "";
-			UKuroStaticLibrary.LoadFileToString(ref text2, configPath);
-			BrokenRockJsonConfig brokenRockJsonConfig = Json.Decode<BrokenRockJsonConfig>(text2, null);
-			if (brokenRockJsonConfig != null)
-			{
-				this.GameJsonConfig = null;
-				foreach (BrokenRockConfig brokenRockConfig in brokenRockJsonConfig.Config)
-				{
-					if (brokenRockConfig.Id == this.CurrentGameplayId)
-					{
-						this.GameJsonConfig = brokenRockConfig;
-						break;
-					}
-				}
-				if (this.GameJsonConfig != null)
-				{
-					this.GameJsonRingConfig = new Dictionary<int, BrokenRockRingConfig>();
-					foreach (int num in this.GameJsonConfig.Rings)
-					{
-						BrokenRockRingConfig brokenRockRingConfig = null;
-						foreach (BrokenRockRingConfig brokenRockRingConfig2 in brokenRockJsonConfig.Rings)
-						{
-							if (brokenRockRingConfig2.Id == num)
-							{
-								brokenRockRingConfig = brokenRockRingConfig2;
-								break;
-							}
-						}
-						if (brokenRockRingConfig != null)
-						{
-							this.GameJsonRingConfig[num] = brokenRockRingConfig;
-						}
-					}
-				}
-			}
+			this.GameDbConfig = ConfigBrokenRockConfigById.GetConfig(this.CurrentGameplayId, true);
 		}
 
-		// Token: 0x06045528 RID: 283944 RVA: 0x01126850 File Offset: 0x01124A50
+		// Token: 0x0603B6D6 RID: 243414 RVA: 0x010D06A8 File Offset: 0x010CE8A8
 		private Dictionary<int, int> StringToMapValue(string stringValue)
 		{
 			string[] array = stringValue.Replace("[", "").Replace("]", "").Split(',', StringSplitOptions.None);
@@ -141,13 +82,13 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			return dictionary;
 		}
 
-		// Token: 0x06045529 RID: 283945 RVA: 0x011268BC File Offset: 0x01124ABC
+		// Token: 0x0603B6D7 RID: 243415 RVA: 0x010D0714 File Offset: 0x010CE914
 		public int GetCurrentGameplayId()
 		{
 			return this.CurrentGameplayId;
 		}
 
-		// Token: 0x0604552A RID: 283946 RVA: 0x011268C4 File Offset: 0x01124AC4
+		// Token: 0x0603B6D8 RID: 243416 RVA: 0x010D071C File Offset: 0x010CE91C
 		public void SetGameStage(EGameStage stage)
 		{
 			this.LastGameStage = this.GameStage;
@@ -155,13 +96,13 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			EventSystem.Instance.Emit<EGameStage>(EEventName.OnBigStuffedDollGameStageUpdate, this.GameStage);
 		}
 
-		// Token: 0x0604552B RID: 283947 RVA: 0x011268EF File Offset: 0x01124AEF
+		// Token: 0x0603B6D9 RID: 243417 RVA: 0x010D0747 File Offset: 0x010CE947
 		public EGameStage GetGameStage()
 		{
 			return this.GameStage;
 		}
 
-		// Token: 0x0604552C RID: 283948 RVA: 0x011268F8 File Offset: 0x01124AF8
+		// Token: 0x0603B6DA RID: 243418 RVA: 0x010D0750 File Offset: 0x010CE950
 		public void EnterNextGameStage()
 		{
 			this.LastGameStage = this.GameStage;
@@ -172,7 +113,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			instance.Emit<EGameStage>(name, egameStage);
 		}
 
-		// Token: 0x0604552D RID: 283949 RVA: 0x01126934 File Offset: 0x01124B34
+		// Token: 0x0603B6DB RID: 243419 RVA: 0x010D078C File Offset: 0x010CE98C
 		public void ArrowEnterNextValidArea()
 		{
 			int validAreaNum = this.GameInfo.GetValidAreaNum();
@@ -210,51 +151,27 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			EventSystem.Instance.Emit<int, int, int>(EEventName.OnBigStuffedDollArrowStayAreaUpdate, currentArrowStayRingId, this.GameInfo.CurrentArrowStayRingId, this.GameInfo.CurrentArrowStayRelativeValidAreaIndex);
 		}
 
-		// Token: 0x0604552E RID: 283950 RVA: 0x01126A1C File Offset: 0x01124C1C
+		// Token: 0x0603B6DC RID: 243420 RVA: 0x010D0874 File Offset: 0x010CEA74
 		public int GetGlobalTime()
 		{
-			if (PublicUtil.Instance.UseDbConfig())
+			if (this.GameDbConfig == null)
 			{
-				if (this.GameDbConfig == null)
-				{
-					return 0;
-				}
-				return this.GameDbConfig.GetValueOrDefault().GlobalTime;
+				return 0;
 			}
-			else
-			{
-				BrokenRockConfig gameJsonConfig = this.GameJsonConfig;
-				if (gameJsonConfig == null)
-				{
-					return 0;
-				}
-				return gameJsonConfig.GlobalTime;
-			}
+			return this.GameDbConfig.GetValueOrDefault().GlobalTime;
 		}
 
-		// Token: 0x0604552F RID: 283951 RVA: 0x01126A68 File Offset: 0x01124C68
+		// Token: 0x0603B6DD RID: 243421 RVA: 0x010D08A0 File Offset: 0x010CEAA0
 		public int GetScoreDown()
 		{
-			if (PublicUtil.Instance.UseDbConfig())
+			if (this.GameDbConfig == null)
 			{
-				if (this.GameDbConfig == null)
-				{
-					return 0;
-				}
-				return this.GameDbConfig.GetValueOrDefault().ScoreDown;
+				return 0;
 			}
-			else
-			{
-				BrokenRockConfig gameJsonConfig = this.GameJsonConfig;
-				if (gameJsonConfig == null)
-				{
-					return 0;
-				}
-				return gameJsonConfig.ScoreDown;
-			}
+			return this.GameDbConfig.GetValueOrDefault().ScoreDown;
 		}
 
-		// Token: 0x06045530 RID: 283952 RVA: 0x01126AB4 File Offset: 0x01124CB4
+		// Token: 0x0603B6DE RID: 243422 RVA: 0x010D08CC File Offset: 0x010CEACC
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -262,27 +179,15 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 		})]
 		public OneOf<BrokenRockRing, BrokenRockRingConfig> GetRingConfig(int ringId)
 		{
-			if (PublicUtil.Instance.UseDbConfig())
+			BrokenRockRing? config = ConfigBrokenRockRingById.GetConfig(ringId, true);
+			if (config == null)
 			{
-				BrokenRockRing? config = ConfigBrokenRockRingById.GetConfig(ringId, true);
-				if (config == null)
-				{
-					return default(OneOf<BrokenRockRing, BrokenRockRingConfig>);
-				}
-				return config.Value;
-			}
-			else
-			{
-				BrokenRockRingConfig value;
-				if (this.GameJsonRingConfig != null && this.GameJsonRingConfig.TryGetValue(ringId, out value))
-				{
-					return value;
-				}
 				return default(OneOf<BrokenRockRing, BrokenRockRingConfig>);
 			}
+			return config.Value;
 		}
 
-		// Token: 0x06045531 RID: 283953 RVA: 0x01126B20 File Offset: 0x01124D20
+		// Token: 0x0603B6DF RID: 243423 RVA: 0x010D0900 File Offset: 0x010CEB00
 		public int GetArrowSpeed([Nullable(new byte[]
 		{
 			0,
@@ -326,7 +231,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			return result;
 		}
 
-		// Token: 0x06045532 RID: 283954 RVA: 0x01126C20 File Offset: 0x01124E20
+		// Token: 0x0603B6E0 RID: 243424 RVA: 0x010D0A00 File Offset: 0x010CEC00
 		public void ArrowDirectionReverse()
 		{
 			EArrowDirection currentArrowDirection = this.CurrentArrowDirection;
@@ -344,8 +249,8 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			this.GameInfo.OnArrowDirectionReverse();
 		}
 
-		// Token: 0x17009B5D RID: 39773
-		// (get) Token: 0x06045533 RID: 283955 RVA: 0x01126C58 File Offset: 0x01124E58
+		// Token: 0x1700709C RID: 28828
+		// (get) Token: 0x0603B6E1 RID: 243425 RVA: 0x010D0A38 File Offset: 0x010CEC38
 		public static BigStuffedDollModel Instance
 		{
 			get
@@ -354,7 +259,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			}
 		}
 
-		// Token: 0x06045534 RID: 283956 RVA: 0x01126C5F File Offset: 0x01124E5F
+		// Token: 0x0603B6E2 RID: 243426 RVA: 0x010D0A3F File Offset: 0x010CEC3F
 		public static BigStuffedDollModel GetOrCreateInstance()
 		{
 			if (BigStuffedDollModel._Instance == null)
@@ -364,7 +269,7 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			return BigStuffedDollModel._Instance;
 		}
 
-		// Token: 0x06045535 RID: 283957 RVA: 0x01126C73 File Offset: 0x01124E73
+		// Token: 0x0603B6E3 RID: 243427 RVA: 0x010D0A53 File Offset: 0x010CEC53
 		public static bool CreateInstance()
 		{
 			if (BigStuffedDollModel._Instance != null)
@@ -375,43 +280,43 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 			return true;
 		}
 
-		// Token: 0x06045536 RID: 283958 RVA: 0x01126C89 File Offset: 0x01124E89
+		// Token: 0x0603B6E4 RID: 243428 RVA: 0x010D0A69 File Offset: 0x010CEC69
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06045537 RID: 283959 RVA: 0x01126C8B File Offset: 0x01124E8B
+		// Token: 0x0603B6E5 RID: 243429 RVA: 0x010D0A6B File Offset: 0x010CEC6B
 		public static void ResetStaticDefaultValue()
 		{
 			BigStuffedDollModel._Instance = null;
 		}
 
-		// Token: 0x06045538 RID: 283960 RVA: 0x01126C93 File Offset: 0x01124E93
+		// Token: 0x0603B6E6 RID: 243430 RVA: 0x010D0A73 File Offset: 0x010CEC73
 		static BigStuffedDollModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(BigStuffedDollModel.CreateStaticDefaultValue), new Action(BigStuffedDollModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04024271 RID: 148081
+		// Token: 0x0401F526 RID: 128294
 		private int CurrentGameplayId;
 
-		// Token: 0x04024272 RID: 148082
+		// Token: 0x0401F527 RID: 128295
 		public int BehaviorTreeConfigId;
 
-		// Token: 0x04024273 RID: 148083
+		// Token: 0x0401F528 RID: 128296
 		public int BrokenRockEntityPbDataId;
 
-		// Token: 0x04024274 RID: 148084
+		// Token: 0x0401F529 RID: 128297
 		public long BrokenRockEntityCreatureDataId;
 
-		// Token: 0x04024275 RID: 148085
+		// Token: 0x0401F52A RID: 128298
 		private BrokenRockConfig? GameDbConfig;
 
-		// Token: 0x04024276 RID: 148086
+		// Token: 0x0401F52B RID: 128299
 		[Nullable(2)]
 		private BrokenRockConfig GameJsonConfig;
 
-		// Token: 0x04024277 RID: 148087
+		// Token: 0x0401F52C RID: 128300
 		[Nullable(new byte[]
 		{
 			2,
@@ -419,25 +324,25 @@ namespace CSharpScript.Game.LevelGamePlay.BigStuffedDoll
 		})]
 		private Dictionary<int, BrokenRockRingConfig> GameJsonRingConfig;
 
-		// Token: 0x04024278 RID: 148088
+		// Token: 0x0401F52D RID: 128301
 		public readonly BigStuffedGameInfo GameInfo = new BigStuffedGameInfo();
 
-		// Token: 0x04024279 RID: 148089
+		// Token: 0x0401F52E RID: 128302
 		private EGameStage GameStage;
 
-		// Token: 0x0402427A RID: 148090
+		// Token: 0x0401F52F RID: 128303
 		public bool GameResult;
 
-		// Token: 0x0402427B RID: 148091
+		// Token: 0x0401F530 RID: 128304
 		public float CurrentScore;
 
-		// Token: 0x0402427C RID: 148092
+		// Token: 0x0401F531 RID: 128305
 		public EArrowDirection CurrentArrowDirection;
 
-		// Token: 0x0402427D RID: 148093
+		// Token: 0x0401F532 RID: 128306
 		public EGameStage LastGameStage;
 
-		// Token: 0x0402427E RID: 148094
+		// Token: 0x0401F533 RID: 128307
 		[Nullable(2)]
 		private static BigStuffedDollModel _Instance;
 	}

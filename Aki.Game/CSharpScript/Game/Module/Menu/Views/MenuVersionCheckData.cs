@@ -7,18 +7,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.Views
 {
-	// Token: 0x02005412 RID: 21522
+	// Token: 0x020043F5 RID: 17397
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MenuVersionCheckData : MenuData
 	{
-		// Token: 0x06037030 RID: 225328 RVA: 0x00D0903B File Offset: 0x00D0723B
+		// Token: 0x0602BF79 RID: 180089 RVA: 0x00C58463 File Offset: 0x00C56663
 		public MenuVersionCheckData(MenuConfig Config) : base(Config)
 		{
 		}
 
-		// Token: 0x17008432 RID: 33842
-		// (get) Token: 0x06037031 RID: 225329 RVA: 0x00D09044 File Offset: 0x00D07244
+		// Token: 0x170057FE RID: 22526
+		// (get) Token: 0x0602BF7A RID: 180090 RVA: 0x00C5846C File Offset: 0x00C5666C
 		public override string FunctionName
 		{
 			get
@@ -27,8 +27,8 @@ namespace CSharpScript.Game.Module.Menu.Views
 			}
 		}
 
-		// Token: 0x17008433 RID: 33843
-		// (get) Token: 0x06037032 RID: 225330 RVA: 0x00D0904B File Offset: 0x00D0724B
+		// Token: 0x170057FF RID: 22527
+		// (get) Token: 0x0602BF7B RID: 180091 RVA: 0x00C58473 File Offset: 0x00C56673
 		public override string ButtonTextId
 		{
 			get
@@ -41,8 +41,8 @@ namespace CSharpScript.Game.Module.Menu.Views
 			}
 		}
 
-		// Token: 0x17008434 RID: 33844
-		// (get) Token: 0x06037033 RID: 225331 RVA: 0x00D09064 File Offset: 0x00D07264
+		// Token: 0x17005800 RID: 22528
+		// (get) Token: 0x0602BF7C RID: 180092 RVA: 0x00C5848C File Offset: 0x00C5668C
 		public override string[] CustomTitleArgs
 		{
 			get
@@ -54,8 +54,8 @@ namespace CSharpScript.Game.Module.Menu.Views
 			}
 		}
 
-		// Token: 0x17008435 RID: 33845
-		// (get) Token: 0x06037034 RID: 225332 RVA: 0x00D09074 File Offset: 0x00D07274
+		// Token: 0x17005801 RID: 22529
+		// (get) Token: 0x0602BF7D RID: 180093 RVA: 0x00C5849C File Offset: 0x00C5669C
 		public override bool EnableRedDot
 		{
 			get
@@ -64,13 +64,13 @@ namespace CSharpScript.Game.Module.Menu.Views
 			}
 		}
 
-		// Token: 0x06037035 RID: 225333 RVA: 0x00D09080 File Offset: 0x00D07280
+		// Token: 0x0602BF7E RID: 180094 RVA: 0x00C584A8 File Offset: 0x00C566A8
 		public override void OnRefresh()
 		{
 			this.RefreshVersionCheckRedDotIsRead();
 		}
 
-		// Token: 0x06037036 RID: 225334 RVA: 0x00D09088 File Offset: 0x00D07288
+		// Token: 0x0602BF7F RID: 180095 RVA: 0x00C584B0 File Offset: 0x00C566B0
 		private void RefreshVersionCheckRedDotIsRead()
 		{
 			RedDotBase redDot = RedDotModel.Instance.GetRedDot(ERedDotName.RedDotVersionCheck);
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			}
 		}
 
-		// Token: 0x06037037 RID: 225335 RVA: 0x00D090C4 File Offset: 0x00D072C4
+		// Token: 0x0602BF80 RID: 180096 RVA: 0x00C584EC File Offset: 0x00C566EC
 		public override bool GetButtonEnable()
 		{
 			return ParallelPackageController.Instance.CheckParallelPackage();

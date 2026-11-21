@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001989 RID: 6537
+	// Token: 0x02000444 RID: 1092
 	public sealed class FKuroDownloadComplete : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601846E RID: 99438 RVA: 0x0023CFDF File Offset: 0x0023B1DF
+		// Token: 0x06006954 RID: 26964 RVA: 0x00099E6C File Offset: 0x0009806C
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FKuroDownloadComplete.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601846F RID: 99439 RVA: 0x0023CFEB File Offset: 0x0023B1EB
+		// Token: 0x06006955 RID: 26965 RVA: 0x00099E78 File Offset: 0x00098078
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FKuroDownloadComplete._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FKuroDownloadComplete._FunctionPtr;
 		}
 
-		// Token: 0x06018470 RID: 99440 RVA: 0x0023D00E File Offset: 0x0023B20E
+		// Token: 0x06006956 RID: 26966 RVA: 0x00099E9B File Offset: 0x0009809B
 		public FKuroDownloadComplete()
 		{
 		}
 
-		// Token: 0x06018471 RID: 99441 RVA: 0x0023D016 File Offset: 0x0023B216
+		// Token: 0x06006957 RID: 26967 RVA: 0x00099EA3 File Offset: 0x000980A3
 		[NullableContext(2)]
 		public FKuroDownloadComplete(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06018472 RID: 99442 RVA: 0x0023D020 File Offset: 0x0023B220
+		// Token: 0x06006958 RID: 26968 RVA: 0x00099EAD File Offset: 0x000980AD
 		public FKuroDownloadComplete(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06018473 RID: 99443 RVA: 0x0023D02B File Offset: 0x0023B22B
+		// Token: 0x06006959 RID: 26969 RVA: 0x00099EB8 File Offset: 0x000980B8
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<byte, int>) ?? ((Action<byte, int>)Delegate.CreateDelegate(typeof(Action<byte, int>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06018474 RID: 99444 RVA: 0x0023D05D File Offset: 0x0023B25D
+		// Token: 0x0600695A RID: 26970 RVA: 0x00099EEA File Offset: 0x000980EA
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<byte, int> Callback)
 		{
 			if (FKuroDownloadComplete.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FKuroDownloadComplete.RegisterId);
 		}
 
-		// Token: 0x06018475 RID: 99445 RVA: 0x0023D098 File Offset: 0x0023B298
+		// Token: 0x0600695B RID: 26971 RVA: 0x00099F24 File Offset: 0x00098124
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(byte DownloadState, int HttpState)
 		{
 			FKuroDownloadComplete.__FKuroDownloadComplete_DelegateParams* ptr = stackalloc FKuroDownloadComplete.__FKuroDownloadComplete_DelegateParams[(UIntPtr)23] + 15L / (long)sizeof(FKuroDownloadComplete.__FKuroDownloadComplete_DelegateParams) & -16L;
@@ -77,10 +75,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x06018476 RID: 99446 RVA: 0x0023D0DC File Offset: 0x0023B2DC
+		// Token: 0x0600695C RID: 26972 RVA: 0x00099F68 File Offset: 0x00098168
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<byte, int> action = target as Action<byte, int>;
@@ -91,35 +88,35 @@ namespace UnrealEngine
 			action(((FKuroDownloadComplete.__FKuroDownloadComplete_DelegateParams*)__Parameters)->DownloadState, ((FKuroDownloadComplete.__FKuroDownloadComplete_DelegateParams*)__Parameters)->HttpState);
 		}
 
-		// Token: 0x0400D254 RID: 53844
+		// Token: 0x04002CE5 RID: 11493
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400D255 RID: 53845
+		// Token: 0x04002CE6 RID: 11494
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroHotPatch.KuroDownloadComplete__DelegateSignature";
 
-		// Token: 0x0400D256 RID: 53846
+		// Token: 0x04002CE7 RID: 11495
 		private static int RegisterId;
 
-		// Token: 0x02003080 RID: 12416
+		// Token: 0x02000B66 RID: 2918
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
-		protected ref struct __FKuroDownloadComplete_DelegateParams
+		private ref struct __FKuroDownloadComplete_DelegateParams
 		{
-			// Token: 0x04016D5C RID: 93532
+			// Token: 0x04005C7F RID: 23679
 			[FieldOffset(0)]
 			public byte DownloadState;
 
-			// Token: 0x04016D5D RID: 93533
+			// Token: 0x04005C80 RID: 23680
 			[FieldOffset(4)]
 			public int HttpState;
 		}
 
-		// Token: 0x02003081 RID: 12417
+		// Token: 0x02000B67 RID: 2919
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016D5E RID: 93534
+			// Token: 0x04005C81 RID: 23681
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020DD RID: 8413
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200233E RID: 9022
 	public class MoveSceneItem : ActionParams
 	{
-		// Token: 0x0600B8D4 RID: 47316 RVA: 0x001AB6CC File Offset: 0x001A98CC
+		// Token: 0x0600C45E RID: 50270 RVA: 0x001C27A8 File Offset: 0x001C09A8
 		private MoveSceneItem_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B8D5 RID: 47317 RVA: 0x001AB704 File Offset: 0x001A9904
+		// Token: 0x0600C45F RID: 50271 RVA: 0x001C27E0 File Offset: 0x001C09E0
 		public static MoveSceneItem Create([Nullable(2)] MoveSceneItem instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B8D6 RID: 47318 RVA: 0x001AB717 File Offset: 0x001A9917
+		// Token: 0x0600C460 RID: 50272 RVA: 0x001C27F3 File Offset: 0x001C09F3
 		public static MoveSceneItem CreateFromSetValue([Nullable(2)] MoveSceneItem_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B8D7 RID: 47319 RVA: 0x001AB72A File Offset: 0x001A992A
+		// Token: 0x0600C461 RID: 50273 RVA: 0x001C2806 File Offset: 0x001C0A06
 		public MoveSceneItem_SetValue ToSetValue()
 		{
 			return new MoveSceneItem_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003877 RID: 14455
-		// (get) Token: 0x0600B8D8 RID: 47320 RVA: 0x001AB761 File Offset: 0x001A9961
-		// (set) Token: 0x0600B8D9 RID: 47321 RVA: 0x001AB78C File Offset: 0x001A998C
+		// Token: 0x17003B62 RID: 15202
+		// (get) Token: 0x0600C462 RID: 50274 RVA: 0x001C283D File Offset: 0x001C0A3D
+		// (set) Token: 0x0600C463 RID: 50275 RVA: 0x001C2868 File Offset: 0x001C0A68
 		public virtual int EntityId
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003878 RID: 14456
-		// (get) Token: 0x0600B8DA RID: 47322 RVA: 0x001AB79C File Offset: 0x001A999C
-		// (set) Token: 0x0600B8DB RID: 47323 RVA: 0x001AB7D6 File Offset: 0x001A99D6
+		// Token: 0x17003B63 RID: 15203
+		// (get) Token: 0x0600C464 RID: 50276 RVA: 0x001C2878 File Offset: 0x001C0A78
+		// (set) Token: 0x0600C465 RID: 50277 RVA: 0x001C28B2 File Offset: 0x001C0AB2
 		public virtual bool? StopBeforeMove
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003879 RID: 14457
-		// (get) Token: 0x0600B8DC RID: 47324 RVA: 0x001AB7E4 File Offset: 0x001A99E4
-		// (set) Token: 0x0600B8DD RID: 47325 RVA: 0x001AB80B File Offset: 0x001A9A0B
+		// Token: 0x17003B64 RID: 15204
+		// (get) Token: 0x0600C466 RID: 50278 RVA: 0x001C28C0 File Offset: 0x001C0AC0
+		// (set) Token: 0x0600C467 RID: 50279 RVA: 0x001C28E7 File Offset: 0x001C0AE7
 		public virtual IMoveSceneItemType MoveConfig
 		{
 			get
@@ -133,9 +131,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700387A RID: 14458
-		// (get) Token: 0x0600B8DE RID: 47326 RVA: 0x001AB81C File Offset: 0x001A9A1C
-		// (set) Token: 0x0600B8DF RID: 47327 RVA: 0x001AB856 File Offset: 0x001A9A56
+		// Token: 0x17003B65 RID: 15205
+		// (get) Token: 0x0600C468 RID: 50280 RVA: 0x001C28F8 File Offset: 0x001C0AF8
+		// (set) Token: 0x0600C469 RID: 50281 RVA: 0x001C2932 File Offset: 0x001C0B32
 		public virtual bool? BypassClientResponse
 		{
 			get
@@ -157,11 +155,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006EB6 RID: 28342
+		// Token: 0x040074E7 RID: 29927
 		[Nullable(2)]
 		protected new MoveSceneItem FbInstance;
 
-		// Token: 0x04006EB7 RID: 28343
+		// Token: 0x040074E8 RID: 29928
 		[Nullable(2)]
 		protected MoveSceneItem_SetValue PocoInterface;
 	}

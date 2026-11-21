@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02000DCA RID: 3530
+// Token: 0x0200027C RID: 636
 public enum EShakeStrengthType
 {
-	// Token: 0x0400256B RID: 9579
+	// Token: 0x040025EE RID: 9710
 	LowShake,
-	// Token: 0x0400256C RID: 9580
+	// Token: 0x040025EF RID: 9711
 	MiddleShake,
-	// Token: 0x0400256D RID: 9581
+	// Token: 0x040025F0 RID: 9712
 	HighShake
 }

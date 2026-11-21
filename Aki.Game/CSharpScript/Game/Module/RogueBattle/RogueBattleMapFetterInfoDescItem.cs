@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E66 RID: 20070
+	// Token: 0x02003E2F RID: 15919
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 	})]
 	public class RogueBattleMapFetterInfoDescItem : GridProxyAbstract<IRogueBattleMapFetterDescInfo>
 	{
-		// Token: 0x06033AF5 RID: 211701 RVA: 0x00C1A377 File Offset: 0x00C18577
+		// Token: 0x06028960 RID: 166240 RVA: 0x00B6389F File Offset: 0x00B61A9F
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033AF6 RID: 211702 RVA: 0x00C1A3B0 File Offset: 0x00C185B0
+		// Token: 0x06028961 RID: 166241 RVA: 0x00B638D8 File Offset: 0x00B61AD8
 		public override void Refresh(IRogueBattleMapFetterDescInfo data, bool isSelected, int gridIndex)
 		{
 			if (data.Param != null)
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			base.GetText(1).SetColor(FColor.FromHex(this.DescColor[data.IsReached]));
 		}
 
-		// Token: 0x0401B6B8 RID: 112312
+		// Token: 0x0401608B RID: 90251
 		public readonly Dictionary<bool, string> IconColor = new Dictionary<bool, string>
 		{
 			{
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		};
 
-		// Token: 0x0401B6B9 RID: 112313
+		// Token: 0x0401608C RID: 90252
 		public readonly Dictionary<bool, string> DescColor = new Dictionary<bool, string>
 		{
 			{

@@ -1,21 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B7D RID: 7037
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001D2A RID: 7466
 	public class ILifePointColorBoard_SetValue
 	{
-		// Token: 0x04005C1D RID: 23581
+		// Token: 0x040060B6 RID: 24758
 		public List<IColorPiece> Config;
 
-		// Token: 0x04005C1E RID: 23582
+		// Token: 0x040060B7 RID: 24759
 		public List<EPieceColorType> Colors;
 
-		// Token: 0x04005C1F RID: 23583
+		// Token: 0x040060B8 RID: 24760
 		public EPieceColorType TargetColor;
 	}
 }

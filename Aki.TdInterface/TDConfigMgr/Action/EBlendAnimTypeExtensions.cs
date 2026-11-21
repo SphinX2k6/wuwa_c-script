@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022C1 RID: 8897
+	// Token: 0x02002530 RID: 9520
 	public static class EBlendAnimTypeExtensions
 	{
-		// Token: 0x0600C2E3 RID: 49891 RVA: 0x001C7980 File Offset: 0x001C5B80
+		// Token: 0x0600CEB2 RID: 52914 RVA: 0x001DF788 File Offset: 0x001DD988
 		public static string ToEnumString(this EBlendAnimType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C2E4 RID: 49892 RVA: 0x001C79B8 File Offset: 0x001C5BB8
+		// Token: 0x0600CEB3 RID: 52915 RVA: 0x001DF7C0 File Offset: 0x001DD9C0
 		public static EBlendAnimType FromString(string name)
 		{
 			EBlendAnimType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C2E5 RID: 49893 RVA: 0x001C79E1 File Offset: 0x001C5BE1
+		// Token: 0x0600CEB4 RID: 52916 RVA: 0x001DF7E9 File Offset: 0x001DD9E9
 		public static bool TryFromString(string name, out EBlendAnimType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C2E6 RID: 49894 RVA: 0x001C7A1A File Offset: 0x001C5C1A
+		// Token: 0x0600CEB5 RID: 52917 RVA: 0x001DF822 File Offset: 0x001DDA22
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C2E7 RID: 49895 RVA: 0x001C7A32 File Offset: 0x001C5C32
+		// Token: 0x0600CEB6 RID: 52918 RVA: 0x001DF83A File Offset: 0x001DDA3A
 		public static EBlendAnimType[] GetValues()
 		{
 			return new EBlendAnimType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C2E8 RID: 49896 RVA: 0x001C7A3E File Offset: 0x001C5C3E
+		// Token: 0x0600CEB7 RID: 52919 RVA: 0x001DF846 File Offset: 0x001DDA46
 		public static string[] GetNames()
 		{
 			return new string[]

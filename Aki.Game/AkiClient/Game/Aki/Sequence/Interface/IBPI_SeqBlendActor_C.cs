@@ -8,14 +8,13 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Sequence.Interface
 {
-	// Token: 0x02003A39 RID: 14905
+	// Token: 0x02003079 RID: 12409
 	[UnrealObjectPath("/Game/Aki/Sequence/Interface/BPI_SeqBlendActor.BPI_SeqBlendActor_C")]
 	public interface IBPI_SeqBlendActor_C : IUnrealBlueprintInterface, IUnrealInterface, IUnrealObject
 	{
-		// Token: 0x0601F640 RID: 128576 RVA: 0x008B71FC File Offset: 0x008B53FC
+		// Token: 0x0601D95E RID: 121182 RVA: 0x008FC0F4 File Offset: 0x008FA2F4
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		unsafe void EndSeqSwitchPose(AActor To)
 		{
 			IBPI_SeqBlendActor_C.__EndSeqSwitchPose_FunctionParams* ptr = stackalloc IBPI_SeqBlendActor_C.__EndSeqSwitchPose_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(IBPI_SeqBlendActor_C.__EndSeqSwitchPose_FunctionParams) & -16L;
@@ -24,10 +23,9 @@ namespace AkiClient.Game.Aki.Sequence.Interface
 			UnrealReflectionUtils.CallVirtualUFunction(this.NativePtr, IBPI_SeqBlendActor_C_ReflectionImplementationFields.__EndSeqSwitchPose_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601F641 RID: 128577 RVA: 0x008B7254 File Offset: 0x008B5454
+		// Token: 0x0601D95F RID: 121183 RVA: 0x008FC14C File Offset: 0x008FA34C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		unsafe void BeginSeqSwitchPose(AActor From, AActor To, float SwitchTime)
 		{
 			IBPI_SeqBlendActor_C.__BeginSeqSwitchPose_FunctionParams* ptr = stackalloc IBPI_SeqBlendActor_C.__BeginSeqSwitchPose_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(IBPI_SeqBlendActor_C.__BeginSeqSwitchPose_FunctionParams) & -16L;
@@ -38,10 +36,9 @@ namespace AkiClient.Game.Aki.Sequence.Interface
 			UnrealReflectionUtils.CallVirtualUFunction(this.NativePtr, IBPI_SeqBlendActor_C_ReflectionImplementationFields.__BeginSeqSwitchPose_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0601F642 RID: 128578 RVA: 0x008B72C8 File Offset: 0x008B54C8
+		// Token: 0x0601D960 RID: 121184 RVA: 0x008FC1C0 File Offset: 0x008FA3C0
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		unsafe void GetSeqBlendMesh(ref USkeletalMeshComponent Mesh)
 		{
 			IBPI_SeqBlendActor_C.__GetSeqBlendMesh_FunctionParams* ptr = stackalloc IBPI_SeqBlendActor_C.__GetSeqBlendMesh_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(IBPI_SeqBlendActor_C.__GetSeqBlendMesh_FunctionParams) & -16L;
@@ -53,44 +50,44 @@ namespace AkiClient.Game.Aki.Sequence.Interface
 			Mesh = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(ptr->Mesh);
 		}
 
-		// Token: 0x0400F12E RID: 61742
+		// Token: 0x0400F974 RID: 63860
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/Sequence/Interface/BPI_SeqBlendActor.BPI_SeqBlendActor_C";
 
-		// Token: 0x02009AD1 RID: 39633
+		// Token: 0x02008D60 RID: 36192
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __EndSeqSwitchPose_FunctionParams
 		{
-			// Token: 0x04031077 RID: 200823
+			// Token: 0x0402C8EA RID: 182506
 			[FieldOffset(0)]
 			public IntPtr To;
 		}
 
-		// Token: 0x02009AD2 RID: 39634
+		// Token: 0x02008D61 RID: 36193
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __BeginSeqSwitchPose_FunctionParams
 		{
-			// Token: 0x04031078 RID: 200824
+			// Token: 0x0402C8EB RID: 182507
 			[FieldOffset(0)]
 			public IntPtr From;
 
-			// Token: 0x04031079 RID: 200825
+			// Token: 0x0402C8EC RID: 182508
 			[FieldOffset(8)]
 			public IntPtr To;
 
-			// Token: 0x0403107A RID: 200826
+			// Token: 0x0402C8ED RID: 182509
 			[FieldOffset(16)]
 			public float SwitchTime;
 		}
 
-		// Token: 0x02009AD3 RID: 39635
+		// Token: 0x02008D62 RID: 36194
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __GetSeqBlendMesh_FunctionParams
 		{
-			// Token: 0x0403107B RID: 200827
+			// Token: 0x0402C8EE RID: 182510
 			[FieldOffset(0)]
 			public IntPtr Mesh;
 		}

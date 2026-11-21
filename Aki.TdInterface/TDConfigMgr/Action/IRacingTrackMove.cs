@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D84 RID: 7556
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F95 RID: 8085
 	public class IRacingTrackMove : ISplineMovePattern
 	{
-		// Token: 0x0600A1EF RID: 41455 RVA: 0x001708D0 File Offset: 0x0016EAD0
+		// Token: 0x0600ABDB RID: 43995 RVA: 0x00184CF4 File Offset: 0x00182EF4
 		private IRacingTrackMove_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A1F0 RID: 41456 RVA: 0x00170908 File Offset: 0x0016EB08
+		// Token: 0x0600ABDC RID: 43996 RVA: 0x00184D2C File Offset: 0x00182F2C
 		public static IRacingTrackMove Create([Nullable(2)] IRacingTrackMove instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A1F1 RID: 41457 RVA: 0x0017091B File Offset: 0x0016EB1B
+		// Token: 0x0600ABDD RID: 43997 RVA: 0x00184D3F File Offset: 0x00182F3F
 		public static IRacingTrackMove CreateFromSetValue([Nullable(2)] IRacingTrackMove_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A1F2 RID: 41458 RVA: 0x00170930 File Offset: 0x0016EB30
+		// Token: 0x0600ABDE RID: 43998 RVA: 0x00184D54 File Offset: 0x00182F54
 		public new IRacingTrackMove_SetValue ToSetValue()
 		{
 			return new IRacingTrackMove_SetValue
@@ -66,9 +64,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003208 RID: 12808
-		// (get) Token: 0x0600A1F3 RID: 41459 RVA: 0x001709A2 File Offset: 0x0016EBA2
-		// (set) Token: 0x0600A1F4 RID: 41460 RVA: 0x001709CD File Offset: 0x0016EBCD
+		// Token: 0x1700349C RID: 13468
+		// (get) Token: 0x0600ABDF RID: 43999 RVA: 0x00184DC6 File Offset: 0x00182FC6
+		// (set) Token: 0x0600ABE0 RID: 44000 RVA: 0x00184DF1 File Offset: 0x00182FF1
 		public override ESplineMovePattern Type
 		{
 			get
@@ -89,9 +87,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003209 RID: 12809
-		// (get) Token: 0x0600A1F5 RID: 41461 RVA: 0x001709DC File Offset: 0x0016EBDC
-		// (set) Token: 0x0600A1F6 RID: 41462 RVA: 0x00170A16 File Offset: 0x0016EC16
+		// Token: 0x1700349D RID: 13469
+		// (get) Token: 0x0600ABE1 RID: 44001 RVA: 0x00184E00 File Offset: 0x00183000
+		// (set) Token: 0x0600ABE2 RID: 44002 RVA: 0x00184E3A File Offset: 0x0018303A
 		public override float? MaxOffsetDistance
 		{
 			get
@@ -113,9 +111,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700320A RID: 12810
-		// (get) Token: 0x0600A1F7 RID: 41463 RVA: 0x00170A24 File Offset: 0x0016EC24
-		// (set) Token: 0x0600A1F8 RID: 41464 RVA: 0x00170A5E File Offset: 0x0016EC5E
+		// Token: 0x1700349E RID: 13470
+		// (get) Token: 0x0600ABE3 RID: 44003 RVA: 0x00184E48 File Offset: 0x00183048
+		// (set) Token: 0x0600ABE4 RID: 44004 RVA: 0x00184E82 File Offset: 0x00183082
 		public override bool? IsOneWay
 		{
 			get
@@ -137,9 +135,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700320B RID: 12811
-		// (get) Token: 0x0600A1F9 RID: 41465 RVA: 0x00170A6C File Offset: 0x0016EC6C
-		// (set) Token: 0x0600A1FA RID: 41466 RVA: 0x00170AA6 File Offset: 0x0016ECA6
+		// Token: 0x1700349F RID: 13471
+		// (get) Token: 0x0600ABE5 RID: 44005 RVA: 0x00184E90 File Offset: 0x00183090
+		// (set) Token: 0x0600ABE6 RID: 44006 RVA: 0x00184ECA File Offset: 0x001830CA
 		public override float? LayerVerticalLimit
 		{
 			get
@@ -161,9 +159,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700320C RID: 12812
-		// (get) Token: 0x0600A1FB RID: 41467 RVA: 0x00170AB4 File Offset: 0x0016ECB4
-		// (set) Token: 0x0600A1FC RID: 41468 RVA: 0x00170AEE File Offset: 0x0016ECEE
+		// Token: 0x170034A0 RID: 13472
+		// (get) Token: 0x0600ABE7 RID: 44007 RVA: 0x00184ED8 File Offset: 0x001830D8
+		// (set) Token: 0x0600ABE8 RID: 44008 RVA: 0x00184F12 File Offset: 0x00183112
 		public override bool? DynamicGravity
 		{
 			get
@@ -185,9 +183,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700320D RID: 12813
-		// (get) Token: 0x0600A1FD RID: 41469 RVA: 0x00170AFC File Offset: 0x0016ECFC
-		// (set) Token: 0x0600A1FE RID: 41470 RVA: 0x00170B36 File Offset: 0x0016ED36
+		// Token: 0x170034A1 RID: 13473
+		// (get) Token: 0x0600ABE9 RID: 44009 RVA: 0x00184F20 File Offset: 0x00183120
+		// (set) Token: 0x0600ABEA RID: 44010 RVA: 0x00184F5A File Offset: 0x0018315A
 		public override float? GravitySwitchAngularVelocity
 		{
 			get
@@ -209,9 +207,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700320E RID: 12814
-		// (get) Token: 0x0600A1FF RID: 41471 RVA: 0x00170B44 File Offset: 0x0016ED44
-		// (set) Token: 0x0600A200 RID: 41472 RVA: 0x00170B7E File Offset: 0x0016ED7E
+		// Token: 0x170034A2 RID: 13474
+		// (get) Token: 0x0600ABEB RID: 44011 RVA: 0x00184F68 File Offset: 0x00183168
+		// (set) Token: 0x0600ABEC RID: 44012 RVA: 0x00184FA2 File Offset: 0x001831A2
 		public override int? AutoExitDistance
 		{
 			get
@@ -233,9 +231,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700320F RID: 12815
-		// (get) Token: 0x0600A201 RID: 41473 RVA: 0x00170B8C File Offset: 0x0016ED8C
-		// (set) Token: 0x0600A202 RID: 41474 RVA: 0x00170BBB File Offset: 0x0016EDBB
+		// Token: 0x170034A3 RID: 13475
+		// (get) Token: 0x0600ABED RID: 44013 RVA: 0x00184FB0 File Offset: 0x001831B0
+		// (set) Token: 0x0600ABEE RID: 44014 RVA: 0x00184FDF File Offset: 0x001831DF
 		public virtual float DirectionAngleLimit
 		{
 			get
@@ -256,11 +254,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006157 RID: 24919
+		// Token: 0x040066D3 RID: 26323
 		[Nullable(2)]
 		protected new IRacingTrackMove FbInstance;
 
-		// Token: 0x04006158 RID: 24920
+		// Token: 0x040066D4 RID: 26324
 		[Nullable(2)]
 		protected new IRacingTrackMove_SetValue PocoInterface;
 	}

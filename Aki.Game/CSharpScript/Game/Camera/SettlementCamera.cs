@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072E2 RID: 29410
+	// Token: 0x02006465 RID: 25701
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SettlementCamera
 	{
-		// Token: 0x060482E0 RID: 295648 RVA: 0x012876C9 File Offset: 0x012858C9
+		// Token: 0x0603E724 RID: 255780 RVA: 0x0122A10D File Offset: 0x0122830D
 		public void Init(FightCameraLogicComponent camera)
 		{
 			this.Camera = camera;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Camera
 			};
 		}
 
-		// Token: 0x060482E1 RID: 295649 RVA: 0x012876F4 File Offset: 0x012858F4
+		// Token: 0x0603E725 RID: 255781 RVA: 0x0122A138 File Offset: 0x01228338
 		private void SetSettlementCamera(EDynamicSettlementType settlementConfigType)
 		{
 			SSettlementCamera dataTableRowFromName = DataTableUtil.GetDataTableRowFromName<SSettlementCamera>(EDataTable.FightSettlementCamera, settlementConfigType.ToEnumString());
@@ -233,7 +233,7 @@ namespace CSharpScript.Game.Camera
 			cameraModifierCharacterOffset.DeepCopy(fvectorDouble);
 		}
 
-		// Token: 0x060482E2 RID: 295650 RVA: 0x01287E88 File Offset: 0x01286088
+		// Token: 0x0603E726 RID: 255782 RVA: 0x0122A8CC File Offset: 0x01228ACC
 		public void PlaySettlementCamera(EDynamicSettlementType settlementType)
 		{
 			if (CameraController.Instance.IsSequenceCameraInCinematic(this.Camera.CameraModel.CameraName))
@@ -277,7 +277,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x060482E3 RID: 295651 RVA: 0x01288047 File Offset: 0x01286247
+		// Token: 0x0603E727 RID: 255783 RVA: 0x0122AA8B File Offset: 0x01228C8B
 		public void UpdateRotator(UKuroHitResult hitResult)
 		{
 			this.UpdateHitActorMap(hitResult);
@@ -286,7 +286,7 @@ namespace CSharpScript.Game.Camera
 			this.UpdateFinalRotator();
 		}
 
-		// Token: 0x060482E4 RID: 295652 RVA: 0x01288064 File Offset: 0x01286264
+		// Token: 0x0603E728 RID: 255784 RVA: 0x0122AAA8 File Offset: 0x01228CA8
 		public void UpdateFinalRotator()
 		{
 			this.TmpYawRange.Clear();
@@ -322,7 +322,7 @@ namespace CSharpScript.Game.Camera
 			this.TmpVector.Rotation(this.FinalRotator);
 		}
 
-		// Token: 0x060482E5 RID: 295653 RVA: 0x01288230 File Offset: 0x01286430
+		// Token: 0x0603E729 RID: 255785 RVA: 0x0122AC74 File Offset: 0x01228E74
 		public void PlaySettlementCameraInternal()
 		{
 			CameraController.Instance.StopAllCameraShakes();
@@ -332,13 +332,13 @@ namespace CSharpScript.Game.Camera
 			this.Camera.CameraModifyController.ApplyCameraModify(null, this.CameraModifier.Duration, this.CameraModifier.BlendInTime, this.CameraModifier.BlendOutTime, this.CameraModifier.BreakBlendOutTime, this.CameraModifier.Settings, null, new OneOf<CurveBase, SBaseCurve>(this.CameraModifier.BlendInCurve), new OneOf<CurveBase, SBaseCurve>(this.CameraModifier.BlendOutCurve), this.Camera.Character, "HitCase", default(OneOf<TsBaseCharacter, TsBaseVehicle>));
 		}
 
-		// Token: 0x060482E6 RID: 295654 RVA: 0x01288368 File Offset: 0x01286568
+		// Token: 0x0603E72A RID: 255786 RVA: 0x0122ADAC File Offset: 0x01228FAC
 		public bool IsPlayingSettlementCamera()
 		{
 			return this.Camera.CameraModifyController.IsModified && !(this.CameraModifier == null) && this.Camera.CameraModifyController.ModifySettings.Name == this.CameraModifier.Settings.ModifySettingsAdditional.Name;
 		}
 
-		// Token: 0x060482E7 RID: 295655 RVA: 0x012883C8 File Offset: 0x012865C8
+		// Token: 0x0603E72B RID: 255787 RVA: 0x0122AE0C File Offset: 0x0122900C
 		[NullableContext(2)]
 		private unsafe void UpdateHitActorMap(UKuroHitResult hitResult)
 		{
@@ -409,7 +409,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x060482E8 RID: 295656 RVA: 0x012885E0 File Offset: 0x012867E0
+		// Token: 0x0603E72C RID: 255788 RVA: 0x0122B024 File Offset: 0x01229224
 		[NullableContext(0)]
 		private ValueTuple<double, double> GetActorBoundExtent(FTransformDouble transform, [Nullable(1)] UStaticMeshComponent staticMeshComponent)
 		{
@@ -420,7 +420,7 @@ namespace CSharpScript.Game.Camera
 			return new ValueTuple<double, double>(item, item2);
 		}
 
-		// Token: 0x060482E9 RID: 295657 RVA: 0x0128863C File Offset: 0x0128683C
+		// Token: 0x0603E72D RID: 255789 RVA: 0x0122B080 File Offset: 0x01229280
 		private void UpdateInvalidYawRangeArray(UKuroHitResult hitResult)
 		{
 			this.InvalidYawRangeArray.Clear();
@@ -481,7 +481,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x060482EA RID: 295658 RVA: 0x01288844 File Offset: 0x01286A44
+		// Token: 0x0603E72E RID: 255790 RVA: 0x0122B288 File Offset: 0x01229488
 		private SettlementCamera.YawRange GetShapeInvalidYawRange(UShapeComponent hitComponent, int hitComponentIndex)
 		{
 			Vector tmpVector = this.TmpVector;
@@ -504,7 +504,7 @@ namespace CSharpScript.Game.Camera
 			return new SettlementCamera.YawRange(num2 - num3, num2 + num3);
 		}
 
-		// Token: 0x060482EB RID: 295659 RVA: 0x012888D4 File Offset: 0x01286AD4
+		// Token: 0x0603E72F RID: 255791 RVA: 0x0122B318 File Offset: 0x01229518
 		private SettlementCamera.YawRange GetStaticMeshInvalidYawRange(FTransformDouble hitTransform, UStaticMeshComponent hitComponent, Vector impactPoint)
 		{
 			FVectorDouble fvectorDouble = this.PlayerLocation.ToUeVector(false);
@@ -716,7 +716,7 @@ namespace CSharpScript.Game.Camera
 			return new SettlementCamera.YawRange((float)MathUtils.Instance.WrapAngle(num29 - num28 / 2.0), (float)MathUtils.Instance.WrapAngle(num29 + num28 / 2.0));
 		}
 
-		// Token: 0x060482EC RID: 295660 RVA: 0x01289038 File Offset: 0x01287238
+		// Token: 0x0603E730 RID: 255792 RVA: 0x0122BA7C File Offset: 0x01229C7C
 		private void UpdateValidYawRangeArray()
 		{
 			this.LeftYawRangeArray.Clear();
@@ -840,7 +840,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x060482ED RID: 295661 RVA: 0x012893E4 File Offset: 0x012875E4
+		// Token: 0x0603E731 RID: 255793 RVA: 0x0122BE28 File Offset: 0x0122A028
 		private float GetHitComponentRadius(UShapeComponent hitComponent, int index)
 		{
 			if (!this.HitResultIndexRadiusMap.ContainsKey(index))
@@ -850,7 +850,7 @@ namespace CSharpScript.Game.Camera
 			return this.HitResultIndexRadiusMap[index];
 		}
 
-		// Token: 0x060482EE RID: 295662 RVA: 0x01289414 File Offset: 0x01287614
+		// Token: 0x0603E732 RID: 255794 RVA: 0x0122BE58 File Offset: 0x0122A058
 		[NullableContext(2)]
 		private float GetShapeComponentRadius(UShapeComponent hitComponent)
 		{
@@ -876,14 +876,14 @@ namespace CSharpScript.Game.Camera
 			return 0f;
 		}
 
-		// Token: 0x060482EF RID: 295663 RVA: 0x01289477 File Offset: 0x01287677
+		// Token: 0x0603E733 RID: 255795 RVA: 0x0122BEBB File Offset: 0x0122A0BB
 		private float ConvertUePointToAngle(FVectorDouble uePoint)
 		{
 			this.TmpVector.Set(uePoint.X, uePoint.Y, uePoint.Z);
 			return this.ConvertPointToAngle(this.TmpVector);
 		}
 
-		// Token: 0x060482F0 RID: 295664 RVA: 0x012894A4 File Offset: 0x012876A4
+		// Token: 0x0603E734 RID: 255796 RVA: 0x0122BEE8 File Offset: 0x0122A0E8
 		private float ConvertPointToAngle(Vector point)
 		{
 			point.Subtraction(this.PlayerLocation, this.TmpVector);
@@ -896,25 +896,25 @@ namespace CSharpScript.Game.Camera
 			return MathUtils.Instance.WrapAngle(this.TmpRotator.Yaw);
 		}
 
-		// Token: 0x060482F1 RID: 295665 RVA: 0x01289520 File Offset: 0x01287720
+		// Token: 0x0603E735 RID: 255797 RVA: 0x0122BF64 File Offset: 0x0122A164
 		[Conditional("DEBUG")]
 		public void SetDrawDebugEnable(bool isEnable)
 		{
 		}
 
-		// Token: 0x060482F2 RID: 295666 RVA: 0x01289522 File Offset: 0x01287722
+		// Token: 0x0603E736 RID: 255798 RVA: 0x0122BF66 File Offset: 0x0122A166
 		[Conditional("DEBUG")]
 		private void DrawDebugInvalidRange()
 		{
 		}
 
-		// Token: 0x060482F3 RID: 295667 RVA: 0x01289524 File Offset: 0x01287724
+		// Token: 0x0603E737 RID: 255799 RVA: 0x0122BF68 File Offset: 0x0122A168
 		[Conditional("DEBUG")]
 		private void DrawDebugValidRange()
 		{
 		}
 
-		// Token: 0x060482F4 RID: 295668 RVA: 0x01289528 File Offset: 0x01287728
+		// Token: 0x0603E738 RID: 255800 RVA: 0x0122BF6C File Offset: 0x0122A16C
 		private void DrawDebugCameraFocus()
 		{
 			FTransformDouble actorTransform = this.Camera.Character.CharacterActorComponent.ActorTransform;
@@ -923,13 +923,13 @@ namespace CSharpScript.Game.Camera
 			UKismetSystemLibrary.D_DrawDebugSphere(GlobalData.World, center, 10f, 12, new FLinearColor?(new FLinearColor()), 10f, 0f);
 		}
 
-		// Token: 0x060482F5 RID: 295669 RVA: 0x01289588 File Offset: 0x01287788
+		// Token: 0x0603E739 RID: 255801 RVA: 0x0122BFCC File Offset: 0x0122A1CC
 		[Conditional("DEBUG")]
 		private void DrawDebugFinalDirection()
 		{
 		}
 
-		// Token: 0x060482F6 RID: 295670 RVA: 0x0128958C File Offset: 0x0128778C
+		// Token: 0x0603E73A RID: 255802 RVA: 0x0122BFD0 File Offset: 0x0122A1D0
 		public void Clear()
 		{
 			if (this.CameraSphereTrace != null)
@@ -947,184 +947,184 @@ namespace CSharpScript.Game.Camera
 			this.TmpYawRange.Clear();
 		}
 
-		// Token: 0x040261B3 RID: 156083
+		// Token: 0x0402149E RID: 136350
 		private const int MIN_CAMERA_DISTANCE = 100;
 
-		// Token: 0x040261B4 RID: 156084
+		// Token: 0x0402149F RID: 136351
 		private const int TARGET_PITCH_MIN = -5;
 
-		// Token: 0x040261B5 RID: 156085
+		// Token: 0x040214A0 RID: 136352
 		private const int TARGET_PITCH_MAX = -8;
 
-		// Token: 0x040261B6 RID: 156086
+		// Token: 0x040214A1 RID: 136353
 		private const int TRACE_TOP_ADDITION_Z = 50;
 
-		// Token: 0x040261B7 RID: 156087
+		// Token: 0x040214A2 RID: 136354
 		private const int TRACE_BOTTOM_ADDITION_Z = 50;
 
-		// Token: 0x040261B8 RID: 156088
+		// Token: 0x040214A3 RID: 136355
 		private const int LEFT_YAW_RANGE_MIN = -180;
 
-		// Token: 0x040261B9 RID: 156089
+		// Token: 0x040214A4 RID: 136356
 		private const int LEFT_YAW_RANGE_MAX = 0;
 
-		// Token: 0x040261BA RID: 156090
+		// Token: 0x040214A5 RID: 136357
 		private const int RIGHT_YAW_RANGE_MIN = 0;
 
-		// Token: 0x040261BB RID: 156091
+		// Token: 0x040214A6 RID: 136358
 		private const int RIGHT_YAW_RANGE_MAX = 180;
 
-		// Token: 0x040261BC RID: 156092
+		// Token: 0x040214A7 RID: 136359
 		private const int MIN_VALID_YAW_RANGE = 0;
 
-		// Token: 0x040261BD RID: 156093
+		// Token: 0x040214A8 RID: 136360
 		private const int MIN_SHAPE_RADUIS = 30;
 
-		// Token: 0x040261BE RID: 156094
+		// Token: 0x040214A9 RID: 136361
 		private const int MAX_CACHE_CAPSULE_COUNT = 4;
 
-		// Token: 0x040261BF RID: 156095
+		// Token: 0x040214AA RID: 136362
 		private const int PITCH_MAX = 90;
 
-		// Token: 0x040261C0 RID: 156096
+		// Token: 0x040214AB RID: 136363
 		private const int PITCH_MIN = -90;
 
-		// Token: 0x040261C1 RID: 156097
+		// Token: 0x040214AC RID: 136364
 		private const int MINUS_FLAT_ANGLE = -180;
 
-		// Token: 0x040261C2 RID: 156098
+		// Token: 0x040214AD RID: 136365
 		private const int FLAT_ANGLE = 180;
 
-		// Token: 0x040261C3 RID: 156099
+		// Token: 0x040214AE RID: 136366
 		private const string PROFILE_KEY = "FightCameraLogicComponent_TraceValidRange_Camera";
 
-		// Token: 0x040261C4 RID: 156100
+		// Token: 0x040214AF RID: 136367
 		[StaticVariableRuleIgnore]
 		private static readonly int BanSettlementCamera = GameplayTagDefine.EGameplayTagId["功能.通用镜头.屏蔽终结镜头"];
 
-		// Token: 0x040261C5 RID: 156101
+		// Token: 0x040214B0 RID: 136368
 		private const double DEBUG_DRAW_DURATION = 10.0;
 
-		// Token: 0x040261C6 RID: 156102
+		// Token: 0x040214B1 RID: 136369
 		private const double DEBUG_DRAW_RADIUS = 10.0;
 
-		// Token: 0x040261C7 RID: 156103
+		// Token: 0x040214B2 RID: 136370
 		private const int DEBUG_DRAW_SEGMENTS = 12;
 
-		// Token: 0x040261C8 RID: 156104
+		// Token: 0x040214B3 RID: 136371
 		private const double THICKNESS = 5.0;
 
-		// Token: 0x040261C9 RID: 156105
+		// Token: 0x040214B4 RID: 136372
 		[Nullable(2)]
 		private FightCameraLogicComponent Camera;
 
-		// Token: 0x040261CA RID: 156106
+		// Token: 0x040214B5 RID: 136373
 		private float CameraSphereRadius = 100f;
 
-		// Token: 0x040261CB RID: 156107
+		// Token: 0x040214B6 RID: 136374
 		[Nullable(2)]
 		private UTraceSphereElement CameraSphereTrace;
 
-		// Token: 0x040261CC RID: 156108
+		// Token: 0x040214B7 RID: 136375
 		[Nullable(2)]
 		private SSettlementCamera SettlementCameraConfig;
 
-		// Token: 0x040261CD RID: 156109
+		// Token: 0x040214B8 RID: 136376
 		[Nullable(2)]
 		private SCameraModifier CameraModifier;
 
-		// Token: 0x040261CE RID: 156110
+		// Token: 0x040214B9 RID: 136377
 		private float CameraModifierArmLength = 100f;
 
-		// Token: 0x040261CF RID: 156111
+		// Token: 0x040214BA RID: 136378
 		private float CameraModifierPitchMin = -5f;
 
-		// Token: 0x040261D0 RID: 156112
+		// Token: 0x040214BB RID: 136379
 		private float CameraModifierPitchMax = -8f;
 
-		// Token: 0x040261D1 RID: 156113
+		// Token: 0x040214BC RID: 136380
 		private float CameraModifierTopAdditionZ = 50f;
 
-		// Token: 0x040261D2 RID: 156114
+		// Token: 0x040214BD RID: 136381
 		private float CameraModifierBottomAdditionZ = 50f;
 
-		// Token: 0x040261D3 RID: 156115
+		// Token: 0x040214BE RID: 136382
 		private float CameraModifierLeftYawRangeMin = -180f;
 
-		// Token: 0x040261D4 RID: 156116
+		// Token: 0x040214BF RID: 136383
 		private float CameraModifierLeftYawRangeMax;
 
-		// Token: 0x040261D5 RID: 156117
+		// Token: 0x040214C0 RID: 136384
 		private float CameraModifierRightYawRangeMin;
 
-		// Token: 0x040261D6 RID: 156118
+		// Token: 0x040214C1 RID: 136385
 		private float CameraModifierRightYawRangeMax = 180f;
 
-		// Token: 0x040261D7 RID: 156119
+		// Token: 0x040214C2 RID: 136386
 		private float CameraModifierValidRangeMin;
 
-		// Token: 0x040261D8 RID: 156120
+		// Token: 0x040214C3 RID: 136387
 		private readonly Vector CameraModifierCharacterOffset = Vector.Create();
 
-		// Token: 0x040261D9 RID: 156121
+		// Token: 0x040214C4 RID: 136388
 		private float PlayerYaw;
 
-		// Token: 0x040261DA RID: 156122
+		// Token: 0x040214C5 RID: 136389
 		[Nullable(2)]
 		private Vector PlayerLocation;
 
-		// Token: 0x040261DB RID: 156123
+		// Token: 0x040214C6 RID: 136390
 		private readonly Rotator FinalRotator = Rotator.Create();
 
-		// Token: 0x040261DC RID: 156124
+		// Token: 0x040214C7 RID: 136391
 		private readonly Dictionary<AActor, int> ActorHitResultIndexMap = new Dictionary<AActor, int>();
 
-		// Token: 0x040261DD RID: 156125
+		// Token: 0x040214C8 RID: 136392
 		private readonly Dictionary<AActor, List<int>> ActorHitResultIndexArrayMap = new Dictionary<AActor, List<int>>();
 
-		// Token: 0x040261DE RID: 156126
+		// Token: 0x040214C9 RID: 136393
 		private readonly Dictionary<int, float> HitResultIndexRadiusMap = new Dictionary<int, float>();
 
-		// Token: 0x040261DF RID: 156127
+		// Token: 0x040214CA RID: 136394
 		private FVector Extent = new FVector();
 
-		// Token: 0x040261E0 RID: 156128
+		// Token: 0x040214CB RID: 136395
 		private readonly List<SettlementCamera.YawRange> InvalidYawRangeArray = new List<SettlementCamera.YawRange>();
 
-		// Token: 0x040261E1 RID: 156129
+		// Token: 0x040214CC RID: 136396
 		private readonly List<SettlementCamera.YawRange> LeftYawRangeArray = new List<SettlementCamera.YawRange>();
 
-		// Token: 0x040261E2 RID: 156130
+		// Token: 0x040214CD RID: 136397
 		private readonly List<SettlementCamera.YawRange> RightYawRangeArray = new List<SettlementCamera.YawRange>();
 
-		// Token: 0x040261E3 RID: 156131
+		// Token: 0x040214CE RID: 136398
 		private readonly Vector TmpVector = Vector.Create();
 
-		// Token: 0x040261E4 RID: 156132
+		// Token: 0x040214CF RID: 136399
 		private readonly Vector TmpVector2 = Vector.Create();
 
-		// Token: 0x040261E5 RID: 156133
+		// Token: 0x040214D0 RID: 136400
 		private readonly Rotator TmpRotator = Rotator.Create();
 
-		// Token: 0x040261E6 RID: 156134
+		// Token: 0x040214D1 RID: 136401
 		private readonly List<SettlementCamera.YawRange> TmpYawRange = new List<SettlementCamera.YawRange>();
 
-		// Token: 0x040261E7 RID: 156135
+		// Token: 0x040214D2 RID: 136402
 		public bool EnableDebugDraw;
 
-		// Token: 0x0200CFD5 RID: 53205
+		// Token: 0x0200BBB1 RID: 48049
 		[NullableContext(0)]
 		public class YawRange
 		{
-			// Token: 0x06052292 RID: 336530 RVA: 0x0164E841 File Offset: 0x0164CA41
+			// Token: 0x06048B2D RID: 297773 RVA: 0x0162397F File Offset: 0x01621B7F
 			public YawRange(float from, float to)
 			{
 			}
 
-			// Token: 0x0403E7CF RID: 255951
+			// Token: 0x04039C0F RID: 236559
 			public float Min = from;
 
-			// Token: 0x0403E7D0 RID: 255952
+			// Token: 0x04039C10 RID: 236560
 			public float Max = to;
 		}
 	}

@@ -3,30 +3,30 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E51 RID: 20049
+	// Token: 0x02005362 RID: 21346
 	public class IActiveRenjuPieceT
 	{
-		// Token: 0x17008F7D RID: 36733
-		// (get) Token: 0x0601F792 RID: 128914 RVA: 0x00462802 File Offset: 0x00460A02
-		// (set) Token: 0x0601F793 RID: 128915 RVA: 0x0046280A File Offset: 0x00460A0A
+		// Token: 0x170096B6 RID: 38582
+		// (get) Token: 0x060213DD RID: 136157 RVA: 0x0049681A File Offset: 0x00494A1A
+		// (set) Token: 0x060213DE RID: 136158 RVA: 0x00496822 File Offset: 0x00494A22
 		public EJigsawCompleteCondition Type { get; set; }
 
-		// Token: 0x17008F7E RID: 36734
-		// (get) Token: 0x0601F794 RID: 128916 RVA: 0x00462813 File Offset: 0x00460A13
-		// (set) Token: 0x0601F795 RID: 128917 RVA: 0x0046281B File Offset: 0x00460A1B
+		// Token: 0x170096B7 RID: 38583
+		// (get) Token: 0x060213DF RID: 136159 RVA: 0x0049682B File Offset: 0x00494A2B
+		// (set) Token: 0x060213E0 RID: 136160 RVA: 0x00496833 File Offset: 0x00494A33
 		public List<IRenjuConfigT> RenjuConfig { get; set; }
 
-		// Token: 0x17008F7F RID: 36735
-		// (get) Token: 0x0601F796 RID: 128918 RVA: 0x00462824 File Offset: 0x00460A24
-		// (set) Token: 0x0601F797 RID: 128919 RVA: 0x0046282C File Offset: 0x00460A2C
+		// Token: 0x170096B8 RID: 38584
+		// (get) Token: 0x060213E1 RID: 136161 RVA: 0x0049683C File Offset: 0x00494A3C
+		// (set) Token: 0x060213E2 RID: 136162 RVA: 0x00496844 File Offset: 0x00494A44
 		public List<IJigsawItemMatchedConfigT> ExitMatchedConfig { get; set; }
 
-		// Token: 0x17008F80 RID: 36736
-		// (get) Token: 0x0601F798 RID: 128920 RVA: 0x00462835 File Offset: 0x00460A35
-		// (set) Token: 0x0601F799 RID: 128921 RVA: 0x0046283D File Offset: 0x00460A3D
+		// Token: 0x170096B9 RID: 38585
+		// (get) Token: 0x060213E3 RID: 136163 RVA: 0x0049684D File Offset: 0x00494A4D
+		// (set) Token: 0x060213E4 RID: 136164 RVA: 0x00496855 File Offset: 0x00494A55
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601F79A RID: 128922 RVA: 0x00462846 File Offset: 0x00460A46
+		// Token: 0x060213E5 RID: 136165 RVA: 0x0049685E File Offset: 0x00494A5E
 		public IActiveRenjuPieceT()
 		{
 			this.Type = EJigsawCompleteCondition.ActivateAllCorrectPiece;

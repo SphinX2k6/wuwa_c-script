@@ -6,33 +6,33 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001DB6 RID: 7606
+	// Token: 0x02000573 RID: 1395
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroSimpleCombat.KSC_DA_Shape2D_World")]
 	[UnrealStructLayout(432, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 432)]
 	public class UKSC_DA_Shape2D_World : UDataAsset, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601D0E9 RID: 119017 RVA: 0x002AF1DA File Offset: 0x002AD3DA
+		// Token: 0x06007E91 RID: 32401 RVA: 0x000BB8F6 File Offset: 0x000B9AF6
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKSC_DA_Shape2D_World._ClassPtr;
 		}
 
-		// Token: 0x0601D0EA RID: 119018 RVA: 0x002AF1E8 File Offset: 0x002AD3E8
+		// Token: 0x06007E92 RID: 32402 RVA: 0x000BB904 File Offset: 0x000B9B04
 		public UKSC_DA_Shape2D_World() : this(BuiltinUtils.AllocNativeUObject(UKSC_DA_Shape2D_World.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601D0EB RID: 119019 RVA: 0x002AF210 File Offset: 0x002AD410
+		// Token: 0x06007E93 RID: 32403 RVA: 0x000BB92C File Offset: 0x000B9B2C
 		[NullableContext(1)]
 		public UKSC_DA_Shape2D_World(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKSC_DA_Shape2D_World.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17007533 RID: 30003
-		// (get) Token: 0x0601D0EC RID: 119020 RVA: 0x002AF243 File Offset: 0x002AD443
-		// (set) Token: 0x0601D0ED RID: 119021 RVA: 0x002AF253 File Offset: 0x002AD453
+		// Token: 0x1700187A RID: 6266
+		// (get) Token: 0x06007E94 RID: 32404 RVA: 0x000BB95F File Offset: 0x000B9B5F
+		// (set) Token: 0x06007E95 RID: 32405 RVA: 0x000BB96F File Offset: 0x000B9B6F
 		public unsafe float Gravity
 		{
 			get
@@ -45,9 +45,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007534 RID: 30004
-		// (get) Token: 0x0601D0EE RID: 119022 RVA: 0x002AF264 File Offset: 0x002AD464
-		// (set) Token: 0x0601D0EF RID: 119023 RVA: 0x002AF278 File Offset: 0x002AD478
+		// Token: 0x1700187B RID: 6267
+		// (get) Token: 0x06007E96 RID: 32406 RVA: 0x000BB980 File Offset: 0x000B9B80
+		// (set) Token: 0x06007E97 RID: 32407 RVA: 0x000BB994 File Offset: 0x000B9B94
 		public unsafe FVector2D GravityDir
 		{
 			get
@@ -60,9 +60,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007535 RID: 30005
-		// (get) Token: 0x0601D0F0 RID: 119024 RVA: 0x002AF28D File Offset: 0x002AD48D
-		// (set) Token: 0x0601D0F1 RID: 119025 RVA: 0x002AF29D File Offset: 0x002AD49D
+		// Token: 0x1700187C RID: 6268
+		// (get) Token: 0x06007E98 RID: 32408 RVA: 0x000BB9A9 File Offset: 0x000B9BA9
+		// (set) Token: 0x06007E99 RID: 32409 RVA: 0x000BB9B9 File Offset: 0x000B9BB9
 		public unsafe float RotateRange
 		{
 			get
@@ -75,9 +75,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007536 RID: 30006
-		// (get) Token: 0x0601D0F2 RID: 119026 RVA: 0x002AF2AE File Offset: 0x002AD4AE
-		// (set) Token: 0x0601D0F3 RID: 119027 RVA: 0x002AF2BE File Offset: 0x002AD4BE
+		// Token: 0x1700187D RID: 6269
+		// (get) Token: 0x06007E9A RID: 32410 RVA: 0x000BB9CA File Offset: 0x000B9BCA
+		// (set) Token: 0x06007E9B RID: 32411 RVA: 0x000BB9DA File Offset: 0x000B9BDA
 		public unsafe float RotateDuration
 		{
 			get
@@ -90,9 +90,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007537 RID: 30007
-		// (get) Token: 0x0601D0F4 RID: 119028 RVA: 0x002AF2CF File Offset: 0x002AD4CF
-		// (set) Token: 0x0601D0F5 RID: 119029 RVA: 0x002AF2DF File Offset: 0x002AD4DF
+		// Token: 0x1700187E RID: 6270
+		// (get) Token: 0x06007E9C RID: 32412 RVA: 0x000BB9EB File Offset: 0x000B9BEB
+		// (set) Token: 0x06007E9D RID: 32413 RVA: 0x000BB9FB File Offset: 0x000B9BFB
 		public unsafe float LaunchSpeed
 		{
 			get
@@ -105,9 +105,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007538 RID: 30008
-		// (get) Token: 0x0601D0F6 RID: 119030 RVA: 0x002AF2F0 File Offset: 0x002AD4F0
-		// (set) Token: 0x0601D0F7 RID: 119031 RVA: 0x002AF304 File Offset: 0x002AD504
+		// Token: 0x1700187F RID: 6271
+		// (get) Token: 0x06007E9E RID: 32414 RVA: 0x000BBA0C File Offset: 0x000B9C0C
+		// (set) Token: 0x06007E9F RID: 32415 RVA: 0x000BBA20 File Offset: 0x000B9C20
 		public unsafe UCurveFloat DirectionCurve
 		{
 			get
@@ -120,9 +120,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007539 RID: 30009
-		// (get) Token: 0x0601D0F8 RID: 119032 RVA: 0x002AF319 File Offset: 0x002AD519
-		// (set) Token: 0x0601D0F9 RID: 119033 RVA: 0x002AF32D File Offset: 0x002AD52D
+		// Token: 0x17001880 RID: 6272
+		// (get) Token: 0x06007EA0 RID: 32416 RVA: 0x000BBA35 File Offset: 0x000B9C35
+		// (set) Token: 0x06007EA1 RID: 32417 RVA: 0x000BBA49 File Offset: 0x000B9C49
 		public unsafe UEffectModelBase LaunchHitEffect
 		{
 			get
@@ -135,9 +135,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700753A RID: 30010
-		// (get) Token: 0x0601D0FA RID: 119034 RVA: 0x002AF342 File Offset: 0x002AD542
-		// (set) Token: 0x0601D0FB RID: 119035 RVA: 0x002AF356 File Offset: 0x002AD556
+		// Token: 0x17001881 RID: 6273
+		// (get) Token: 0x06007EA2 RID: 32418 RVA: 0x000BBA5E File Offset: 0x000B9C5E
+		// (set) Token: 0x06007EA3 RID: 32419 RVA: 0x000BBA72 File Offset: 0x000B9C72
 		public unsafe UEffectModelBase LaunchHitEffectPower1
 		{
 			get
@@ -150,9 +150,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700753B RID: 30011
-		// (get) Token: 0x0601D0FC RID: 119036 RVA: 0x002AF36B File Offset: 0x002AD56B
-		// (set) Token: 0x0601D0FD RID: 119037 RVA: 0x002AF37F File Offset: 0x002AD57F
+		// Token: 0x17001882 RID: 6274
+		// (get) Token: 0x06007EA4 RID: 32420 RVA: 0x000BBA87 File Offset: 0x000B9C87
+		// (set) Token: 0x06007EA5 RID: 32421 RVA: 0x000BBA9B File Offset: 0x000B9C9B
 		public unsafe UEffectModelBase LaunchHitEffectPower2
 		{
 			get
@@ -165,9 +165,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700753C RID: 30012
-		// (get) Token: 0x0601D0FE RID: 119038 RVA: 0x002AF394 File Offset: 0x002AD594
-		// (set) Token: 0x0601D0FF RID: 119039 RVA: 0x002AF3A8 File Offset: 0x002AD5A8
+		// Token: 0x17001883 RID: 6275
+		// (get) Token: 0x06007EA6 RID: 32422 RVA: 0x000BBAB0 File Offset: 0x000B9CB0
+		// (set) Token: 0x06007EA7 RID: 32423 RVA: 0x000BBAC4 File Offset: 0x000B9CC4
 		public unsafe UEffectModelBase LaunchHitEffectPower3
 		{
 			get
@@ -180,9 +180,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700753D RID: 30013
-		// (get) Token: 0x0601D100 RID: 119040 RVA: 0x002AF3BD File Offset: 0x002AD5BD
-		// (set) Token: 0x0601D101 RID: 119041 RVA: 0x002AF3D1 File Offset: 0x002AD5D1
+		// Token: 0x17001884 RID: 6276
+		// (get) Token: 0x06007EA8 RID: 32424 RVA: 0x000BBAD9 File Offset: 0x000B9CD9
+		// (set) Token: 0x06007EA9 RID: 32425 RVA: 0x000BBAED File Offset: 0x000B9CED
 		public unsafe FTransform LaunchHitEffectOffset
 		{
 			get
@@ -195,9 +195,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700753E RID: 30014
-		// (get) Token: 0x0601D102 RID: 119042 RVA: 0x002AF3E6 File Offset: 0x002AD5E6
-		// (set) Token: 0x0601D103 RID: 119043 RVA: 0x002AF3FA File Offset: 0x002AD5FA
+		// Token: 0x17001885 RID: 6277
+		// (get) Token: 0x06007EAA RID: 32426 RVA: 0x000BBB02 File Offset: 0x000B9D02
+		// (set) Token: 0x06007EAB RID: 32427 RVA: 0x000BBB16 File Offset: 0x000B9D16
 		public unsafe FVector2D InitLocation
 		{
 			get
@@ -210,9 +210,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700753F RID: 30015
-		// (get) Token: 0x0601D104 RID: 119044 RVA: 0x002AF40F File Offset: 0x002AD60F
-		// (set) Token: 0x0601D105 RID: 119045 RVA: 0x002AF41F File Offset: 0x002AD61F
+		// Token: 0x17001886 RID: 6278
+		// (get) Token: 0x06007EAC RID: 32428 RVA: 0x000BBB2B File Offset: 0x000B9D2B
+		// (set) Token: 0x06007EAD RID: 32429 RVA: 0x000BBB3B File Offset: 0x000B9D3B
 		public unsafe float MoveDelaySeconds
 		{
 			get
@@ -225,9 +225,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007540 RID: 30016
-		// (get) Token: 0x0601D106 RID: 119046 RVA: 0x002AF430 File Offset: 0x002AD630
-		// (set) Token: 0x0601D107 RID: 119047 RVA: 0x002AF440 File Offset: 0x002AD640
+		// Token: 0x17001887 RID: 6279
+		// (get) Token: 0x06007EAE RID: 32430 RVA: 0x000BBB4C File Offset: 0x000B9D4C
+		// (set) Token: 0x06007EAF RID: 32431 RVA: 0x000BBB5C File Offset: 0x000B9D5C
 		public unsafe float MoveDelayMaxDistance
 		{
 			get
@@ -240,9 +240,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007541 RID: 30017
-		// (get) Token: 0x0601D108 RID: 119048 RVA: 0x002AF451 File Offset: 0x002AD651
-		// (set) Token: 0x0601D109 RID: 119049 RVA: 0x002AF461 File Offset: 0x002AD661
+		// Token: 0x17001888 RID: 6280
+		// (get) Token: 0x06007EB0 RID: 32432 RVA: 0x000BBB6D File Offset: 0x000B9D6D
+		// (set) Token: 0x06007EB1 RID: 32433 RVA: 0x000BBB7D File Offset: 0x000B9D7D
 		public unsafe float MoveMaxDistanceNeedSpeed
 		{
 			get
@@ -255,9 +255,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007542 RID: 30018
-		// (get) Token: 0x0601D10A RID: 119050 RVA: 0x002AF472 File Offset: 0x002AD672
-		// (set) Token: 0x0601D10B RID: 119051 RVA: 0x002AF482 File Offset: 0x002AD682
+		// Token: 0x17001889 RID: 6281
+		// (get) Token: 0x06007EB2 RID: 32434 RVA: 0x000BBB8E File Offset: 0x000B9D8E
+		// (set) Token: 0x06007EB3 RID: 32435 RVA: 0x000BBB9E File Offset: 0x000B9D9E
 		public unsafe float MoveDistanceInertialSpeed
 		{
 			get
@@ -270,9 +270,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007543 RID: 30019
-		// (get) Token: 0x0601D10C RID: 119052 RVA: 0x002AF493 File Offset: 0x002AD693
-		// (set) Token: 0x0601D10D RID: 119053 RVA: 0x002AF4A3 File Offset: 0x002AD6A3
+		// Token: 0x1700188A RID: 6282
+		// (get) Token: 0x06007EB4 RID: 32436 RVA: 0x000BBBAF File Offset: 0x000B9DAF
+		// (set) Token: 0x06007EB5 RID: 32437 RVA: 0x000BBBBF File Offset: 0x000B9DBF
 		public unsafe long CollisionDamageId0
 		{
 			get
@@ -285,9 +285,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007544 RID: 30020
-		// (get) Token: 0x0601D10E RID: 119054 RVA: 0x002AF4B4 File Offset: 0x002AD6B4
-		// (set) Token: 0x0601D10F RID: 119055 RVA: 0x002AF4C4 File Offset: 0x002AD6C4
+		// Token: 0x1700188B RID: 6283
+		// (get) Token: 0x06007EB6 RID: 32438 RVA: 0x000BBBD0 File Offset: 0x000B9DD0
+		// (set) Token: 0x06007EB7 RID: 32439 RVA: 0x000BBBE0 File Offset: 0x000B9DE0
 		public unsafe long CollisionDamageId1
 		{
 			get
@@ -300,9 +300,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007545 RID: 30021
-		// (get) Token: 0x0601D110 RID: 119056 RVA: 0x002AF4D5 File Offset: 0x002AD6D5
-		// (set) Token: 0x0601D111 RID: 119057 RVA: 0x002AF4E5 File Offset: 0x002AD6E5
+		// Token: 0x1700188C RID: 6284
+		// (get) Token: 0x06007EB8 RID: 32440 RVA: 0x000BBBF1 File Offset: 0x000B9DF1
+		// (set) Token: 0x06007EB9 RID: 32441 RVA: 0x000BBC01 File Offset: 0x000B9E01
 		public unsafe long CollisionDamageId2
 		{
 			get
@@ -315,9 +315,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007546 RID: 30022
-		// (get) Token: 0x0601D112 RID: 119058 RVA: 0x002AF4F6 File Offset: 0x002AD6F6
-		// (set) Token: 0x0601D113 RID: 119059 RVA: 0x002AF506 File Offset: 0x002AD706
+		// Token: 0x1700188D RID: 6285
+		// (get) Token: 0x06007EBA RID: 32442 RVA: 0x000BBC12 File Offset: 0x000B9E12
+		// (set) Token: 0x06007EBB RID: 32443 RVA: 0x000BBC22 File Offset: 0x000B9E22
 		public unsafe long CollisionDamageId3
 		{
 			get
@@ -330,9 +330,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007547 RID: 30023
-		// (get) Token: 0x0601D114 RID: 119060 RVA: 0x002AF517 File Offset: 0x002AD717
-		// (set) Token: 0x0601D115 RID: 119061 RVA: 0x002AF52B File Offset: 0x002AD72B
+		// Token: 0x1700188E RID: 6286
+		// (get) Token: 0x06007EBC RID: 32444 RVA: 0x000BBC33 File Offset: 0x000B9E33
+		// (set) Token: 0x06007EBD RID: 32445 RVA: 0x000BBC47 File Offset: 0x000B9E47
 		public unsafe FGameplayTag PowerCollisionTag1
 		{
 			get
@@ -345,9 +345,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007548 RID: 30024
-		// (get) Token: 0x0601D116 RID: 119062 RVA: 0x002AF540 File Offset: 0x002AD740
-		// (set) Token: 0x0601D117 RID: 119063 RVA: 0x002AF554 File Offset: 0x002AD754
+		// Token: 0x1700188F RID: 6287
+		// (get) Token: 0x06007EBE RID: 32446 RVA: 0x000BBC5C File Offset: 0x000B9E5C
+		// (set) Token: 0x06007EBF RID: 32447 RVA: 0x000BBC70 File Offset: 0x000B9E70
 		public unsafe FGameplayTag PowerCollisionTag2
 		{
 			get
@@ -360,9 +360,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007549 RID: 30025
-		// (get) Token: 0x0601D118 RID: 119064 RVA: 0x002AF569 File Offset: 0x002AD769
-		// (set) Token: 0x0601D119 RID: 119065 RVA: 0x002AF57D File Offset: 0x002AD77D
+		// Token: 0x17001890 RID: 6288
+		// (get) Token: 0x06007EC0 RID: 32448 RVA: 0x000BBC85 File Offset: 0x000B9E85
+		// (set) Token: 0x06007EC1 RID: 32449 RVA: 0x000BBC99 File Offset: 0x000B9E99
 		public unsafe FGameplayTag PowerCollisionTag3
 		{
 			get
@@ -375,9 +375,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700754A RID: 30026
-		// (get) Token: 0x0601D11A RID: 119066 RVA: 0x002AF592 File Offset: 0x002AD792
-		// (set) Token: 0x0601D11B RID: 119067 RVA: 0x002AF5A6 File Offset: 0x002AD7A6
+		// Token: 0x17001891 RID: 6289
+		// (get) Token: 0x06007EC2 RID: 32450 RVA: 0x000BBCAE File Offset: 0x000B9EAE
+		// (set) Token: 0x06007EC3 RID: 32451 RVA: 0x000BBCC2 File Offset: 0x000B9EC2
 		public unsafe UKSC_DA_Buff PowerCollisionBuff1
 		{
 			get
@@ -390,9 +390,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700754B RID: 30027
-		// (get) Token: 0x0601D11C RID: 119068 RVA: 0x002AF5BB File Offset: 0x002AD7BB
-		// (set) Token: 0x0601D11D RID: 119069 RVA: 0x002AF5CF File Offset: 0x002AD7CF
+		// Token: 0x17001892 RID: 6290
+		// (get) Token: 0x06007EC4 RID: 32452 RVA: 0x000BBCD7 File Offset: 0x000B9ED7
+		// (set) Token: 0x06007EC5 RID: 32453 RVA: 0x000BBCEB File Offset: 0x000B9EEB
 		public unsafe UKSC_DA_Buff PowerCollisionBuff2
 		{
 			get
@@ -405,9 +405,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700754C RID: 30028
-		// (get) Token: 0x0601D11E RID: 119070 RVA: 0x002AF5E4 File Offset: 0x002AD7E4
-		// (set) Token: 0x0601D11F RID: 119071 RVA: 0x002AF5F8 File Offset: 0x002AD7F8
+		// Token: 0x17001893 RID: 6291
+		// (get) Token: 0x06007EC6 RID: 32454 RVA: 0x000BBD00 File Offset: 0x000B9F00
+		// (set) Token: 0x06007EC7 RID: 32455 RVA: 0x000BBD14 File Offset: 0x000B9F14
 		public unsafe UKSC_DA_Buff PowerCollisionBuff3
 		{
 			get
@@ -420,9 +420,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700754D RID: 30029
-		// (get) Token: 0x0601D120 RID: 119072 RVA: 0x002AF60D File Offset: 0x002AD80D
-		// (set) Token: 0x0601D121 RID: 119073 RVA: 0x002AF621 File Offset: 0x002AD821
+		// Token: 0x17001894 RID: 6292
+		// (get) Token: 0x06007EC8 RID: 32456 RVA: 0x000BBD29 File Offset: 0x000B9F29
+		// (set) Token: 0x06007EC9 RID: 32457 RVA: 0x000BBD3D File Offset: 0x000B9F3D
 		public unsafe UEffectModelBase CollisionDamageEffect0
 		{
 			get
@@ -435,9 +435,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700754E RID: 30030
-		// (get) Token: 0x0601D122 RID: 119074 RVA: 0x002AF636 File Offset: 0x002AD836
-		// (set) Token: 0x0601D123 RID: 119075 RVA: 0x002AF64A File Offset: 0x002AD84A
+		// Token: 0x17001895 RID: 6293
+		// (get) Token: 0x06007ECA RID: 32458 RVA: 0x000BBD52 File Offset: 0x000B9F52
+		// (set) Token: 0x06007ECB RID: 32459 RVA: 0x000BBD66 File Offset: 0x000B9F66
 		public unsafe UEffectModelBase CollisionDamageEffect1
 		{
 			get
@@ -450,9 +450,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700754F RID: 30031
-		// (get) Token: 0x0601D124 RID: 119076 RVA: 0x002AF65F File Offset: 0x002AD85F
-		// (set) Token: 0x0601D125 RID: 119077 RVA: 0x002AF673 File Offset: 0x002AD873
+		// Token: 0x17001896 RID: 6294
+		// (get) Token: 0x06007ECC RID: 32460 RVA: 0x000BBD7B File Offset: 0x000B9F7B
+		// (set) Token: 0x06007ECD RID: 32461 RVA: 0x000BBD8F File Offset: 0x000B9F8F
 		public unsafe UEffectModelBase CollisionDamageEffect2
 		{
 			get
@@ -465,9 +465,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007550 RID: 30032
-		// (get) Token: 0x0601D126 RID: 119078 RVA: 0x002AF688 File Offset: 0x002AD888
-		// (set) Token: 0x0601D127 RID: 119079 RVA: 0x002AF69C File Offset: 0x002AD89C
+		// Token: 0x17001897 RID: 6295
+		// (get) Token: 0x06007ECE RID: 32462 RVA: 0x000BBDA4 File Offset: 0x000B9FA4
+		// (set) Token: 0x06007ECF RID: 32463 RVA: 0x000BBDB8 File Offset: 0x000B9FB8
 		public unsafe UEffectModelBase CollisionDamageEffect3
 		{
 			get
@@ -480,9 +480,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007551 RID: 30033
-		// (get) Token: 0x0601D128 RID: 119080 RVA: 0x002AF6B1 File Offset: 0x002AD8B1
-		// (set) Token: 0x0601D129 RID: 119081 RVA: 0x002AF6C1 File Offset: 0x002AD8C1
+		// Token: 0x17001898 RID: 6296
+		// (get) Token: 0x06007ED0 RID: 32464 RVA: 0x000BBDCD File Offset: 0x000B9FCD
+		// (set) Token: 0x06007ED1 RID: 32465 RVA: 0x000BBDDD File Offset: 0x000B9FDD
 		public unsafe byte CollisionDamageEffectMaxCount
 		{
 			get
@@ -495,9 +495,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007552 RID: 30034
-		// (get) Token: 0x0601D12A RID: 119082 RVA: 0x002AF6D2 File Offset: 0x002AD8D2
-		// (set) Token: 0x0601D12B RID: 119083 RVA: 0x002AF6E2 File Offset: 0x002AD8E2
+		// Token: 0x17001899 RID: 6297
+		// (get) Token: 0x06007ED2 RID: 32466 RVA: 0x000BBDEE File Offset: 0x000B9FEE
+		// (set) Token: 0x06007ED3 RID: 32467 RVA: 0x000BBDFE File Offset: 0x000B9FFE
 		public unsafe int PowerCollisionCount1
 		{
 			get
@@ -510,9 +510,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007553 RID: 30035
-		// (get) Token: 0x0601D12C RID: 119084 RVA: 0x002AF6F3 File Offset: 0x002AD8F3
-		// (set) Token: 0x0601D12D RID: 119085 RVA: 0x002AF703 File Offset: 0x002AD903
+		// Token: 0x1700189A RID: 6298
+		// (get) Token: 0x06007ED4 RID: 32468 RVA: 0x000BBE0F File Offset: 0x000BA00F
+		// (set) Token: 0x06007ED5 RID: 32469 RVA: 0x000BBE1F File Offset: 0x000BA01F
 		public unsafe int PowerCollisionCount2
 		{
 			get
@@ -525,9 +525,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007554 RID: 30036
-		// (get) Token: 0x0601D12E RID: 119086 RVA: 0x002AF714 File Offset: 0x002AD914
-		// (set) Token: 0x0601D12F RID: 119087 RVA: 0x002AF724 File Offset: 0x002AD924
+		// Token: 0x1700189B RID: 6299
+		// (get) Token: 0x06007ED6 RID: 32470 RVA: 0x000BBE30 File Offset: 0x000BA030
+		// (set) Token: 0x06007ED7 RID: 32471 RVA: 0x000BBE40 File Offset: 0x000BA040
 		public unsafe int PowerCollisionCount3
 		{
 			get
@@ -540,9 +540,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007555 RID: 30037
-		// (get) Token: 0x0601D130 RID: 119088 RVA: 0x002AF735 File Offset: 0x002AD935
-		// (set) Token: 0x0601D131 RID: 119089 RVA: 0x002AF745 File Offset: 0x002AD945
+		// Token: 0x1700189C RID: 6300
+		// (get) Token: 0x06007ED8 RID: 32472 RVA: 0x000BBE51 File Offset: 0x000BA051
+		// (set) Token: 0x06007ED9 RID: 32473 RVA: 0x000BBE61 File Offset: 0x000BA061
 		public unsafe float RecoverSprintEnergy
 		{
 			get
@@ -555,9 +555,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007556 RID: 30038
-		// (get) Token: 0x0601D132 RID: 119090 RVA: 0x002AF756 File Offset: 0x002AD956
-		// (set) Token: 0x0601D133 RID: 119091 RVA: 0x002AF766 File Offset: 0x002AD966
+		// Token: 0x1700189D RID: 6301
+		// (get) Token: 0x06007EDA RID: 32474 RVA: 0x000BBE72 File Offset: 0x000BA072
+		// (set) Token: 0x06007EDB RID: 32475 RVA: 0x000BBE82 File Offset: 0x000BA082
 		public unsafe float RecoverSprintEnergyCD
 		{
 			get
@@ -570,9 +570,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007557 RID: 30039
-		// (get) Token: 0x0601D134 RID: 119092 RVA: 0x002AF777 File Offset: 0x002AD977
-		// (set) Token: 0x0601D135 RID: 119093 RVA: 0x002AF787 File Offset: 0x002AD987
+		// Token: 0x1700189E RID: 6302
+		// (get) Token: 0x06007EDC RID: 32476 RVA: 0x000BBE93 File Offset: 0x000BA093
+		// (set) Token: 0x06007EDD RID: 32477 RVA: 0x000BBEA3 File Offset: 0x000BA0A3
 		public unsafe float CollisionDamageCD
 		{
 			get
@@ -585,9 +585,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007558 RID: 30040
-		// (get) Token: 0x0601D136 RID: 119094 RVA: 0x002AF798 File Offset: 0x002AD998
-		// (set) Token: 0x0601D137 RID: 119095 RVA: 0x002AF7A8 File Offset: 0x002AD9A8
+		// Token: 0x1700189F RID: 6303
+		// (get) Token: 0x06007EDE RID: 32478 RVA: 0x000BBEB4 File Offset: 0x000BA0B4
+		// (set) Token: 0x06007EDF RID: 32479 RVA: 0x000BBEC4 File Offset: 0x000BA0C4
 		public unsafe float CollisionDamageCDInIgnore
 		{
 			get
@@ -600,9 +600,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007559 RID: 30041
-		// (get) Token: 0x0601D138 RID: 119096 RVA: 0x002AF7B9 File Offset: 0x002AD9B9
-		// (set) Token: 0x0601D139 RID: 119097 RVA: 0x002AF7CD File Offset: 0x002AD9CD
+		// Token: 0x170018A0 RID: 6304
+		// (get) Token: 0x06007EE0 RID: 32480 RVA: 0x000BBED5 File Offset: 0x000BA0D5
+		// (set) Token: 0x06007EE1 RID: 32481 RVA: 0x000BBEE9 File Offset: 0x000BA0E9
 		public unsafe FGameplayTag DisableCollisionDamageTag
 		{
 			get
@@ -615,9 +615,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700755A RID: 30042
-		// (get) Token: 0x0601D13A RID: 119098 RVA: 0x002AF7E2 File Offset: 0x002AD9E2
-		// (set) Token: 0x0601D13B RID: 119099 RVA: 0x002AF7F6 File Offset: 0x002AD9F6
+		// Token: 0x170018A1 RID: 6305
+		// (get) Token: 0x06007EE2 RID: 32482 RVA: 0x000BBEFE File Offset: 0x000BA0FE
+		// (set) Token: 0x06007EE3 RID: 32483 RVA: 0x000BBF12 File Offset: 0x000BA112
 		public unsafe FGameplayTag DeadTag
 		{
 			get
@@ -630,9 +630,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700755B RID: 30043
-		// (get) Token: 0x0601D13C RID: 119100 RVA: 0x002AF80B File Offset: 0x002ADA0B
-		// (set) Token: 0x0601D13D RID: 119101 RVA: 0x002AF81F File Offset: 0x002ADA1F
+		// Token: 0x170018A2 RID: 6306
+		// (get) Token: 0x06007EE4 RID: 32484 RVA: 0x000BBF27 File Offset: 0x000BA127
+		// (set) Token: 0x06007EE5 RID: 32485 RVA: 0x000BBF3B File Offset: 0x000BA13B
 		public unsafe FLinearColor PlayerBeHitColor
 		{
 			get
@@ -645,9 +645,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700755C RID: 30044
-		// (get) Token: 0x0601D13E RID: 119102 RVA: 0x002AF834 File Offset: 0x002ADA34
-		// (set) Token: 0x0601D13F RID: 119103 RVA: 0x002AF844 File Offset: 0x002ADA44
+		// Token: 0x170018A3 RID: 6307
+		// (get) Token: 0x06007EE6 RID: 32486 RVA: 0x000BBF50 File Offset: 0x000BA150
+		// (set) Token: 0x06007EE7 RID: 32487 RVA: 0x000BBF60 File Offset: 0x000BA160
 		public unsafe float PlayerBeHitColorCD
 		{
 			get
@@ -660,9 +660,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700755D RID: 30045
-		// (get) Token: 0x0601D140 RID: 119104 RVA: 0x002AF855 File Offset: 0x002ADA55
-		// (set) Token: 0x0601D141 RID: 119105 RVA: 0x002AF869 File Offset: 0x002ADA69
+		// Token: 0x170018A4 RID: 6308
+		// (get) Token: 0x06007EE8 RID: 32488 RVA: 0x000BBF71 File Offset: 0x000BA171
+		// (set) Token: 0x06007EE9 RID: 32489 RVA: 0x000BBF85 File Offset: 0x000BA185
 		public unsafe FLinearColor EnemyBeHitColor
 		{
 			get
@@ -675,9 +675,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700755E RID: 30046
-		// (get) Token: 0x0601D142 RID: 119106 RVA: 0x002AF87E File Offset: 0x002ADA7E
-		// (set) Token: 0x0601D143 RID: 119107 RVA: 0x002AF88E File Offset: 0x002ADA8E
+		// Token: 0x170018A5 RID: 6309
+		// (get) Token: 0x06007EEA RID: 32490 RVA: 0x000BBF9A File Offset: 0x000BA19A
+		// (set) Token: 0x06007EEB RID: 32491 RVA: 0x000BBFAA File Offset: 0x000BA1AA
 		public unsafe float EnemyBeHitColorCD
 		{
 			get
@@ -690,9 +690,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700755F RID: 30047
-		// (get) Token: 0x0601D144 RID: 119108 RVA: 0x002AF89F File Offset: 0x002ADA9F
-		// (set) Token: 0x0601D145 RID: 119109 RVA: 0x002AF8AF File Offset: 0x002ADAAF
+		// Token: 0x170018A6 RID: 6310
+		// (get) Token: 0x06007EEC RID: 32492 RVA: 0x000BBFBB File Offset: 0x000BA1BB
+		// (set) Token: 0x06007EED RID: 32493 RVA: 0x000BBFCB File Offset: 0x000BA1CB
 		public unsafe float BeHitColorDuration
 		{
 			get
@@ -705,160 +705,160 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601D146 RID: 119110 RVA: 0x002AF8C0 File Offset: 0x002ADAC0
+		// Token: 0x06007EEE RID: 32494 RVA: 0x000BBFDC File Offset: 0x000BA1DC
 		static UKSC_DA_Shape2D_World()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroSimpleCombat.KSC_DA_Shape2D_World");
 		}
 
-		// Token: 0x0601D147 RID: 119111 RVA: 0x002AF8CE File Offset: 0x002ADACE
+		// Token: 0x06007EEF RID: 32495 RVA: 0x000BBFEA File Offset: 0x000BA1EA
 		protected UKSC_DA_Shape2D_World(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400FC65 RID: 64613
+		// Token: 0x04003742 RID: 14146
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroSimpleCombat.KSC_DA_Shape2D_World";
 
-		// Token: 0x0400FC66 RID: 64614
+		// Token: 0x04003743 RID: 14147
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400FC67 RID: 64615
+		// Token: 0x04003744 RID: 14148
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400FC68 RID: 64616
+		// Token: 0x04003745 RID: 14149
 		internal static int __PropertyOffset_Gravity;
 
-		// Token: 0x0400FC69 RID: 64617
+		// Token: 0x04003746 RID: 14150
 		internal static int __PropertyOffset_GravityDir;
 
-		// Token: 0x0400FC6A RID: 64618
+		// Token: 0x04003747 RID: 14151
 		internal static int __PropertyOffset_RotateRange;
 
-		// Token: 0x0400FC6B RID: 64619
+		// Token: 0x04003748 RID: 14152
 		internal static int __PropertyOffset_RotateDuration;
 
-		// Token: 0x0400FC6C RID: 64620
+		// Token: 0x04003749 RID: 14153
 		internal static int __PropertyOffset_LaunchSpeed;
 
-		// Token: 0x0400FC6D RID: 64621
+		// Token: 0x0400374A RID: 14154
 		internal static int __PropertyOffset_DirectionCurve;
 
-		// Token: 0x0400FC6E RID: 64622
+		// Token: 0x0400374B RID: 14155
 		internal static int __PropertyOffset_LaunchHitEffect;
 
-		// Token: 0x0400FC6F RID: 64623
+		// Token: 0x0400374C RID: 14156
 		internal static int __PropertyOffset_LaunchHitEffectPower1;
 
-		// Token: 0x0400FC70 RID: 64624
+		// Token: 0x0400374D RID: 14157
 		internal static int __PropertyOffset_LaunchHitEffectPower2;
 
-		// Token: 0x0400FC71 RID: 64625
+		// Token: 0x0400374E RID: 14158
 		internal static int __PropertyOffset_LaunchHitEffectPower3;
 
-		// Token: 0x0400FC72 RID: 64626
+		// Token: 0x0400374F RID: 14159
 		internal static int __PropertyOffset_LaunchHitEffectOffset;
 
-		// Token: 0x0400FC73 RID: 64627
+		// Token: 0x04003750 RID: 14160
 		internal static int __PropertyOffset_InitLocation;
 
-		// Token: 0x0400FC74 RID: 64628
+		// Token: 0x04003751 RID: 14161
 		internal static int __PropertyOffset_MoveDelaySeconds;
 
-		// Token: 0x0400FC75 RID: 64629
+		// Token: 0x04003752 RID: 14162
 		internal static int __PropertyOffset_MoveDelayMaxDistance;
 
-		// Token: 0x0400FC76 RID: 64630
+		// Token: 0x04003753 RID: 14163
 		internal static int __PropertyOffset_MoveMaxDistanceNeedSpeed;
 
-		// Token: 0x0400FC77 RID: 64631
+		// Token: 0x04003754 RID: 14164
 		internal static int __PropertyOffset_MoveDistanceInertialSpeed;
 
-		// Token: 0x0400FC78 RID: 64632
+		// Token: 0x04003755 RID: 14165
 		internal static int __PropertyOffset_CollisionDamageId0;
 
-		// Token: 0x0400FC79 RID: 64633
+		// Token: 0x04003756 RID: 14166
 		internal static int __PropertyOffset_CollisionDamageId1;
 
-		// Token: 0x0400FC7A RID: 64634
+		// Token: 0x04003757 RID: 14167
 		internal static int __PropertyOffset_CollisionDamageId2;
 
-		// Token: 0x0400FC7B RID: 64635
+		// Token: 0x04003758 RID: 14168
 		internal static int __PropertyOffset_CollisionDamageId3;
 
-		// Token: 0x0400FC7C RID: 64636
+		// Token: 0x04003759 RID: 14169
 		internal static int __PropertyOffset_PowerCollisionTag1;
 
-		// Token: 0x0400FC7D RID: 64637
+		// Token: 0x0400375A RID: 14170
 		internal static int __PropertyOffset_PowerCollisionTag2;
 
-		// Token: 0x0400FC7E RID: 64638
+		// Token: 0x0400375B RID: 14171
 		internal static int __PropertyOffset_PowerCollisionTag3;
 
-		// Token: 0x0400FC7F RID: 64639
+		// Token: 0x0400375C RID: 14172
 		internal static int __PropertyOffset_PowerCollisionBuff1;
 
-		// Token: 0x0400FC80 RID: 64640
+		// Token: 0x0400375D RID: 14173
 		internal static int __PropertyOffset_PowerCollisionBuff2;
 
-		// Token: 0x0400FC81 RID: 64641
+		// Token: 0x0400375E RID: 14174
 		internal static int __PropertyOffset_PowerCollisionBuff3;
 
-		// Token: 0x0400FC82 RID: 64642
+		// Token: 0x0400375F RID: 14175
 		internal static int __PropertyOffset_CollisionDamageEffect0;
 
-		// Token: 0x0400FC83 RID: 64643
+		// Token: 0x04003760 RID: 14176
 		internal static int __PropertyOffset_CollisionDamageEffect1;
 
-		// Token: 0x0400FC84 RID: 64644
+		// Token: 0x04003761 RID: 14177
 		internal static int __PropertyOffset_CollisionDamageEffect2;
 
-		// Token: 0x0400FC85 RID: 64645
+		// Token: 0x04003762 RID: 14178
 		internal static int __PropertyOffset_CollisionDamageEffect3;
 
-		// Token: 0x0400FC86 RID: 64646
+		// Token: 0x04003763 RID: 14179
 		internal static int __PropertyOffset_CollisionDamageEffectMaxCount;
 
-		// Token: 0x0400FC87 RID: 64647
+		// Token: 0x04003764 RID: 14180
 		internal static int __PropertyOffset_PowerCollisionCount1;
 
-		// Token: 0x0400FC88 RID: 64648
+		// Token: 0x04003765 RID: 14181
 		internal static int __PropertyOffset_PowerCollisionCount2;
 
-		// Token: 0x0400FC89 RID: 64649
+		// Token: 0x04003766 RID: 14182
 		internal static int __PropertyOffset_PowerCollisionCount3;
 
-		// Token: 0x0400FC8A RID: 64650
+		// Token: 0x04003767 RID: 14183
 		internal static int __PropertyOffset_RecoverSprintEnergy;
 
-		// Token: 0x0400FC8B RID: 64651
+		// Token: 0x04003768 RID: 14184
 		internal static int __PropertyOffset_RecoverSprintEnergyCD;
 
-		// Token: 0x0400FC8C RID: 64652
+		// Token: 0x04003769 RID: 14185
 		internal static int __PropertyOffset_CollisionDamageCD;
 
-		// Token: 0x0400FC8D RID: 64653
+		// Token: 0x0400376A RID: 14186
 		internal static int __PropertyOffset_CollisionDamageCDInIgnore;
 
-		// Token: 0x0400FC8E RID: 64654
+		// Token: 0x0400376B RID: 14187
 		internal static int __PropertyOffset_DisableCollisionDamageTag;
 
-		// Token: 0x0400FC8F RID: 64655
+		// Token: 0x0400376C RID: 14188
 		internal static int __PropertyOffset_DeadTag;
 
-		// Token: 0x0400FC90 RID: 64656
+		// Token: 0x0400376D RID: 14189
 		internal static int __PropertyOffset_PlayerBeHitColor;
 
-		// Token: 0x0400FC91 RID: 64657
+		// Token: 0x0400376E RID: 14190
 		internal static int __PropertyOffset_PlayerBeHitColorCD;
 
-		// Token: 0x0400FC92 RID: 64658
+		// Token: 0x0400376F RID: 14191
 		internal static int __PropertyOffset_EnemyBeHitColor;
 
-		// Token: 0x0400FC93 RID: 64659
+		// Token: 0x04003770 RID: 14192
 		internal static int __PropertyOffset_EnemyBeHitColorCD;
 
-		// Token: 0x0400FC94 RID: 64660
+		// Token: 0x04003771 RID: 14193
 		internal static int __PropertyOffset_BeHitColorDuration;
 	}
 }

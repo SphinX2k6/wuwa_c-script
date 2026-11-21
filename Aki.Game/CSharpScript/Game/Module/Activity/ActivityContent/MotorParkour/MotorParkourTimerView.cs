@@ -7,16 +7,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 {
-	// Token: 0x020063FD RID: 25597
+	// Token: 0x0200537B RID: 21371
 	public class MotorParkourTimerView : UiTickViewBase
 	{
-		// Token: 0x06040600 RID: 263680 RVA: 0x00F92AAA File Offset: 0x00F90CAA
+		// Token: 0x060352C1 RID: 217793 RVA: 0x00ED9A8B File Offset: 0x00ED7C8B
 		[NullableContext(1)]
 		public MotorParkourTimerView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06040601 RID: 263681 RVA: 0x00F92AB4 File Offset: 0x00F90CB4
+		// Token: 0x060352C2 RID: 217794 RVA: 0x00ED9A94 File Offset: 0x00ED7C94
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -28,13 +28,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06040602 RID: 263682 RVA: 0x00F92AFC File Offset: 0x00F90CFC
+		// Token: 0x060352C3 RID: 217795 RVA: 0x00ED9ADC File Offset: 0x00ED7CDC
 		protected override void OnStart()
 		{
 			this.StartFlowTime = (long)this.OpenParam;
 		}
 
-		// Token: 0x06040603 RID: 263683 RVA: 0x00F92B10 File Offset: 0x00F90D10
+		// Token: 0x060352C4 RID: 217796 RVA: 0x00ED9AF0 File Offset: 0x00ED7CF0
 		protected override void OnTick(float delta)
 		{
 			if (this.StartFlowTime == 0L)
@@ -75,16 +75,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x040217B4 RID: 137140
+		// Token: 0x0401C0E3 RID: 114915
 		private const int ONE_HUNDRED = 100;
 
-		// Token: 0x040217B5 RID: 137141
+		// Token: 0x0401C0E4 RID: 114916
 		private long StartFlowTime;
 
-		// Token: 0x0200C623 RID: 50723
+		// Token: 0x0200B00A RID: 45066
 		private class EComponent
 		{
-			// Token: 0x0403BD1F RID: 245023
+			// Token: 0x0403667E RID: 222846
 			public const int TextTime = 0;
 		}
 	}

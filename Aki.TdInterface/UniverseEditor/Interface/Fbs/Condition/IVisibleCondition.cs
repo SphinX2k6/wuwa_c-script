@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004D12 RID: 19730
+	// Token: 0x0200520E RID: 21006
 	public struct IVisibleCondition : IFlatbufferObject
 	{
-		// Token: 0x17008F16 RID: 36630
-		// (get) Token: 0x0601F508 RID: 128264 RVA: 0x0045E030 File Offset: 0x0045C230
+		// Token: 0x1700964F RID: 38479
+		// (get) Token: 0x0602114D RID: 135501 RVA: 0x00491F80 File Offset: 0x00490180
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601F509 RID: 128265 RVA: 0x0045E03D File Offset: 0x0045C23D
+		// Token: 0x0602114E RID: 135502 RVA: 0x00491F8D File Offset: 0x0049018D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601F50A RID: 128266 RVA: 0x0045E044 File Offset: 0x0045C244
+		// Token: 0x0602114F RID: 135503 RVA: 0x00491F94 File Offset: 0x00490194
 		public static IVisibleCondition GetRootAsIVisibleCondition(ByteBuffer _bb)
 		{
 			return IVisibleCondition.GetRootAsIVisibleCondition(_bb, default(IVisibleCondition));
 		}
 
-		// Token: 0x0601F50B RID: 128267 RVA: 0x0045E060 File Offset: 0x0045C260
+		// Token: 0x06021150 RID: 135504 RVA: 0x00491FB0 File Offset: 0x004901B0
 		public static IVisibleCondition GetRootAsIVisibleCondition(ByteBuffer _bb, IVisibleCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601F50C RID: 128268 RVA: 0x0045E07D File Offset: 0x0045C27D
+		// Token: 0x06021151 RID: 135505 RVA: 0x00491FCD File Offset: 0x004901CD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601F50D RID: 128269 RVA: 0x0045E08C File Offset: 0x0045C28C
+		// Token: 0x06021152 RID: 135506 RVA: 0x00491FDC File Offset: 0x004901DC
 		public IVisibleCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008F17 RID: 36631
-		// (get) Token: 0x0601F50E RID: 128270 RVA: 0x0045E09C File Offset: 0x0045C29C
+		// Token: 0x17009650 RID: 38480
+		// (get) Token: 0x06021153 RID: 135507 RVA: 0x00491FEC File Offset: 0x004901EC
 		public EVisibleCondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008F18 RID: 36632
-		// (get) Token: 0x0601F50F RID: 128271 RVA: 0x0045E0D8 File Offset: 0x0045C2D8
+		// Token: 0x17009651 RID: 38481
+		// (get) Token: 0x06021154 RID: 135508 RVA: 0x00492028 File Offset: 0x00490228
 		public ECompare Compare
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601F510 RID: 128272 RVA: 0x0045E114 File Offset: 0x0045C314
+		// Token: 0x06021155 RID: 135509 RVA: 0x00492064 File Offset: 0x00490264
 		public static Offset<IVisibleCondition> CreateIVisibleCondition(FlatBufferBuilder builder, EVisibleCondition Type = EVisibleCondition.Weather, ECompare Compare = ECompare.Eq)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IVisibleCondition.EndIVisibleCondition(builder);
 		}
 
-		// Token: 0x0601F511 RID: 128273 RVA: 0x0045E131 File Offset: 0x0045C331
+		// Token: 0x06021156 RID: 135510 RVA: 0x00492081 File Offset: 0x00490281
 		public static void StartIVisibleCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601F512 RID: 128274 RVA: 0x0045E13A File Offset: 0x0045C33A
+		// Token: 0x06021157 RID: 135511 RVA: 0x0049208A File Offset: 0x0049028A
 		public static void AddType(FlatBufferBuilder builder, EVisibleCondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601F513 RID: 128275 RVA: 0x0045E145 File Offset: 0x0045C345
+		// Token: 0x06021158 RID: 135512 RVA: 0x00492095 File Offset: 0x00490295
 		public static void AddCompare(FlatBufferBuilder builder, ECompare compare)
 		{
 			builder.AddByte(1, (byte)compare, 0);
 		}
 
-		// Token: 0x0601F514 RID: 128276 RVA: 0x0045E150 File Offset: 0x0045C350
+		// Token: 0x06021159 RID: 135513 RVA: 0x004920A0 File Offset: 0x004902A0
 		public static Offset<IVisibleCondition> EndIVisibleCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<IVisibleCondition>(builder.EndTable());
 		}
 
-		// Token: 0x0601F515 RID: 128277 RVA: 0x0045E160 File Offset: 0x0045C360
+		// Token: 0x0602115A RID: 135514 RVA: 0x004920B0 File Offset: 0x004902B0
 		public IVisibleConditionT UnPack()
 		{
 			IVisibleConditionT visibleConditionT = new IVisibleConditionT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return visibleConditionT;
 		}
 
-		// Token: 0x0601F516 RID: 128278 RVA: 0x0045E17B File Offset: 0x0045C37B
+		// Token: 0x0602115B RID: 135515 RVA: 0x004920CB File Offset: 0x004902CB
 		public void UnPackTo(IVisibleConditionT _o)
 		{
 			_o.Type = this.Type;
 			_o.Compare = this.Compare;
 		}
 
-		// Token: 0x0601F517 RID: 128279 RVA: 0x0045E198 File Offset: 0x0045C398
+		// Token: 0x0602115C RID: 135516 RVA: 0x004920E8 File Offset: 0x004902E8
 		public static Offset<IVisibleCondition> Pack(FlatBufferBuilder builder, IVisibleConditionT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IVisibleCondition.CreateIVisibleCondition(builder, _o.Type, _o.Compare);
 		}
 
-		// Token: 0x0400D6F3 RID: 55027
+		// Token: 0x0400E220 RID: 57888
 		private Table __p;
 	}
 }

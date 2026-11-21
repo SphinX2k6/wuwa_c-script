@@ -6,16 +6,16 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 {
-	// Token: 0x02004BD2 RID: 19410
+	// Token: 0x02003B7C RID: 15228
 	public class SkipToMoonChasingBase : SkipTask
 	{
-		// Token: 0x06032333 RID: 205619 RVA: 0x00BAA65C File Offset: 0x00BA885C
+		// Token: 0x060270C4 RID: 159940 RVA: 0x00AEE914 File Offset: 0x00AECB14
 		public bool CheckMainViewOpen()
 		{
 			return UiManager.Instance.GetViewByName(EUiViewName.MoonChasingMainView) != null;
 		}
 
-		// Token: 0x06032334 RID: 205620 RVA: 0x00BAA670 File Offset: 0x00BA8870
+		// Token: 0x060270C5 RID: 159941 RVA: 0x00AEE928 File Offset: 0x00AECB28
 		public void SkipToMap(int activityId)
 		{
 			TrackMoonActivity? activityMoonChasingConfig = ActivityMoonChasingConfig.Instance.GetActivityMoonChasingConfig(activityId);

@@ -3,36 +3,36 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02001BD2 RID: 7122
+// Token: 0x02001091 RID: 4241
 [NullableContext(1)]
 [Nullable(0)]
 public class DangoAbyssViewExtension : IViewExtension
 {
-	// Token: 0x0600D460 RID: 54368 RVA: 0x0030E06F File Offset: 0x0030C26F
+	// Token: 0x0600A872 RID: 43122 RVA: 0x003191E3 File Offset: 0x003173E3
 	public DangoAbyssViewExtension(Action refreshEnter)
 	{
 		this.RefreshEnter = refreshEnter;
 	}
 
-	// Token: 0x0600D461 RID: 54369 RVA: 0x0030E07E File Offset: 0x0030C27E
+	// Token: 0x0600A873 RID: 43123 RVA: 0x003191F2 File Offset: 0x003173F2
 	public bool ShouldActivate()
 	{
 		return DangoAbyssModel.Instance.CheckInAbyssEditFormationState();
 	}
 
-	// Token: 0x0600D462 RID: 54370 RVA: 0x0030E08A File Offset: 0x0030C28A
+	// Token: 0x0600A874 RID: 43124 RVA: 0x003191FE File Offset: 0x003173FE
 	public void OnViewStart()
 	{
 		this.Active = true;
 		EventSystem.Instance.Add<IReadOnlyDictionary<int, int[]>>(EEventName.OnAbyssDangoSelect, new Action<IReadOnlyDictionary<int, int[]>>(this.OnAbyssDangoSelect));
 	}
 
-	// Token: 0x0600D463 RID: 54371 RVA: 0x0030E0AF File Offset: 0x0030C2AF
+	// Token: 0x0600A875 RID: 43125 RVA: 0x00319223 File Offset: 0x00317423
 	public void OnViewRefresh()
 	{
 	}
 
-	// Token: 0x0600D464 RID: 54372 RVA: 0x0030E0B1 File Offset: 0x0030C2B1
+	// Token: 0x0600A876 RID: 43126 RVA: 0x00319225 File Offset: 0x00317425
 	public void OnDetach()
 	{
 		if (!this.Active)
@@ -43,7 +43,7 @@ public class DangoAbyssViewExtension : IViewExtension
 		this.Active = false;
 	}
 
-	// Token: 0x0600D465 RID: 54373 RVA: 0x0030E0DF File Offset: 0x0030C2DF
+	// Token: 0x0600A877 RID: 43127 RVA: 0x00319253 File Offset: 0x00317453
 	public IEnterGateResult ContributeEnterGate()
 	{
 		if (DangoAbyssModel.Instance.CheckInAbyssEditFormationState() && !DangoAbyssModel.Instance.CheckAllDangoReady())
@@ -59,15 +59,15 @@ public class DangoAbyssViewExtension : IViewExtension
 		};
 	}
 
-	// Token: 0x0600D466 RID: 54374 RVA: 0x0030E112 File Offset: 0x0030C312
+	// Token: 0x0600A878 RID: 43128 RVA: 0x00319286 File Offset: 0x00317486
 	private void OnAbyssDangoSelect(IReadOnlyDictionary<int, int[]> dataMap)
 	{
 		this.RefreshEnter();
 	}
 
-	// Token: 0x0400610B RID: 24843
+	// Token: 0x040061DA RID: 25050
 	private bool Active;
 
-	// Token: 0x0400610C RID: 24844
+	// Token: 0x040061DB RID: 25051
 	private readonly Action RefreshEnter;
 }

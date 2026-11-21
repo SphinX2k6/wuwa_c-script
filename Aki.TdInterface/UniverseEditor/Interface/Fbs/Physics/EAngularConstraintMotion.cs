@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Physics
 {
-	// Token: 0x0200433B RID: 17211
+	// Token: 0x0200479D RID: 18333
 	public enum EAngularConstraintMotion : byte
 	{
-		// Token: 0x0400C114 RID: 49428
+		// Token: 0x0400CB32 RID: 52018
 		ACM_Free,
-		// Token: 0x0400C115 RID: 49429
+		// Token: 0x0400CB33 RID: 52019
 		ACM_Limited,
-		// Token: 0x0400C116 RID: 49430
+		// Token: 0x0400CB34 RID: 52020
 		ACM_Locked
 	}
 }

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006F79 RID: 28537
+	// Token: 0x0200773F RID: 30527
 	public class ISendSceneActorEventT
 	{
-		// Token: 0x1700D3FA RID: 54266
-		// (get) Token: 0x060326B4 RID: 206516 RVA: 0x006CE4ED File Offset: 0x006CC6ED
-		// (set) Token: 0x060326B5 RID: 206517 RVA: 0x006CE4F5 File Offset: 0x006CC6F5
+		// Token: 0x1700DFC9 RID: 57289
+		// (get) Token: 0x06035904 RID: 219396 RVA: 0x0072DEA5 File Offset: 0x0072C0A5
+		// (set) Token: 0x06035905 RID: 219397 RVA: 0x0072DEAD File Offset: 0x0072C0AD
 		public TSceneActorEventUnion ActorEvent { get; set; }
 
-		// Token: 0x060326B6 RID: 206518 RVA: 0x006CE4FE File Offset: 0x006CC6FE
+		// Token: 0x06035906 RID: 219398 RVA: 0x0072DEB6 File Offset: 0x0072C0B6
 		public ISendSceneActorEventT()
 		{
 			this.ActorEvent = null;

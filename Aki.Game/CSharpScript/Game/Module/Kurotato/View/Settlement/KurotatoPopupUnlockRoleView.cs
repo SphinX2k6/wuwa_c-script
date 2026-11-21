@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
-using CSharpScript.Game.Module.Activity.ActivityContent.Encircle;
+using Aki.Game.Module.Activity.ActivityContent.Encircle;
 using CSharpScript.Game.Module.Skin;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
@@ -13,16 +12,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 {
-	// Token: 0x02005723 RID: 22307
+	// Token: 0x020046FA RID: 18170
 	public class KurotatoPopupUnlockRoleView : UiViewBase
 	{
-		// Token: 0x06038B7D RID: 232317 RVA: 0x00D75749 File Offset: 0x00D73949
+		// Token: 0x0602DA8C RID: 187020 RVA: 0x00CC3D7D File Offset: 0x00CC1F7D
 		[NullableContext(1)]
 		public KurotatoPopupUnlockRoleView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06038B7E RID: 232318 RVA: 0x00D75760 File Offset: 0x00D73960
+		// Token: 0x0602DA8D RID: 187021 RVA: 0x00CC3D94 File Offset: 0x00CC1F94
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -57,7 +56,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06038B7F RID: 232319 RVA: 0x00D758F4 File Offset: 0x00D73AF4
+		// Token: 0x0602DA8E RID: 187022 RVA: 0x00CC3F28 File Offset: 0x00CC2128
 		protected override void OnStart()
 		{
 			IKurotatoPopupUnlockRoleOpenParam kurotatoPopupUnlockRoleOpenParam = (IKurotatoPopupUnlockRoleOpenParam)this.OpenParam;
@@ -74,7 +73,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			this.RefreshSkillInfo();
 		}
 
-		// Token: 0x06038B80 RID: 232320 RVA: 0x00D759CC File Offset: 0x00D73BCC
+		// Token: 0x0602DA8F RID: 187023 RVA: 0x00CC4000 File Offset: 0x00CC2200
 		private void RefreshRoleInfo()
 		{
 			KurotatoPopupUnlockRoleView.<>c__DisplayClass9_0 CS$<>8__locals1 = new KurotatoPopupUnlockRoleView.<>c__DisplayClass9_0();
@@ -107,7 +106,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			base.GetText(2).ShowTextNew(value.Name);
 		}
 
-		// Token: 0x06038B81 RID: 232321 RVA: 0x00D75ACC File Offset: 0x00D73CCC
+		// Token: 0x0602DA90 RID: 187024 RVA: 0x00CC4100 File Offset: 0x00CC2300
 		private void RefreshSkillInfo()
 		{
 			if (this.RoleId == 0)
@@ -117,12 +116,12 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			KurotatoCharacter value = KurotatoConfig.Instance.GetCharacterById(this.RoleId).Value;
 			List<string> data = new List<string>
 			{
-				KurotatoUtil.GetCardDesc(value.Desc, value.DescParamsIter().ToList<string>(), 0, 0, false)
+				KurotatoUtil.GetCardDesc(value.Desc, new List<string>(value.DescParamsIter()), 0, 0, false)
 			};
 			this.SkillInfoScrollList.RefreshByData(data, null, false);
 		}
 
-		// Token: 0x06038B82 RID: 232322 RVA: 0x00D75B30 File Offset: 0x00D73D30
+		// Token: 0x0602DA91 RID: 187025 RVA: 0x00CC4164 File Offset: 0x00CC2364
 		private void RefreshArrowBtn()
 		{
 			bool uiactive = this.RoleIdList.Count > 1;
@@ -139,7 +138,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			button2.RootUIComp.Get().SetUIActive(uiactive);
 		}
 
-		// Token: 0x06038B83 RID: 232323 RVA: 0x00D75B8C File Offset: 0x00D73D8C
+		// Token: 0x0602DA92 RID: 187026 RVA: 0x00CC41C0 File Offset: 0x00CC23C0
 		private void SwitchRole(int offset)
 		{
 			if (this.RoleIdList.Count <= 1)
@@ -152,25 +151,25 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 			this.RefreshSkillInfo();
 		}
 
-		// Token: 0x06038B84 RID: 232324 RVA: 0x00D75BF1 File Offset: 0x00D73DF1
+		// Token: 0x0602DA93 RID: 187027 RVA: 0x00CC4225 File Offset: 0x00CC2425
 		private void OnClickClose()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06038B85 RID: 232325 RVA: 0x00D75BFA File Offset: 0x00D73DFA
+		// Token: 0x0602DA94 RID: 187028 RVA: 0x00CC422E File Offset: 0x00CC242E
 		private void OnClickArrowLeft()
 		{
 			this.SwitchRole(-1);
 		}
 
-		// Token: 0x06038B86 RID: 232326 RVA: 0x00D75C03 File Offset: 0x00D73E03
+		// Token: 0x0602DA95 RID: 187029 RVA: 0x00CC4237 File Offset: 0x00CC2437
 		private void OnClickArrowRight()
 		{
 			this.SwitchRole(1);
 		}
 
-		// Token: 0x0401DC31 RID: 121905
+		// Token: 0x040186C7 RID: 100039
 		[Nullable(new byte[]
 		{
 			2,
@@ -179,41 +178,41 @@ namespace CSharpScript.Game.Module.Kurotato.View.Settlement
 		})]
 		private GenericScrollViewNew<SkillInfoItem, string> SkillInfoScrollList;
 
-		// Token: 0x0401DC32 RID: 121906
+		// Token: 0x040186C8 RID: 100040
 		[Nullable(1)]
 		private readonly List<int> RoleIdList = new List<int>();
 
-		// Token: 0x0401DC33 RID: 121907
+		// Token: 0x040186C9 RID: 100041
 		private int RoleIndex;
 
-		// Token: 0x0401DC34 RID: 121908
+		// Token: 0x040186CA RID: 100042
 		private int RoleId;
 
-		// Token: 0x0401DC35 RID: 121909
+		// Token: 0x040186CB RID: 100043
 		private int RoleRefreshToken;
 
-		// Token: 0x0200B8DD RID: 47325
+		// Token: 0x0200A2FF RID: 41727
 		private class EComponents
 		{
-			// Token: 0x04037EBC RID: 229052
+			// Token: 0x040328CE RID: 207054
 			public const int BtnClose = 0;
 
-			// Token: 0x04037EBD RID: 229053
+			// Token: 0x040328CF RID: 207055
 			public const int SpineRole = 1;
 
-			// Token: 0x04037EBE RID: 229054
+			// Token: 0x040328D0 RID: 207056
 			public const int TextRoleName = 2;
 
-			// Token: 0x04037EBF RID: 229055
+			// Token: 0x040328D1 RID: 207057
 			public const int ScrollView = 3;
 
-			// Token: 0x04037EC0 RID: 229056
+			// Token: 0x040328D2 RID: 207058
 			public const int ScrollContent = 4;
 
-			// Token: 0x04037EC1 RID: 229057
+			// Token: 0x040328D3 RID: 207059
 			public const int BtnArrowLeft = 5;
 
-			// Token: 0x04037EC2 RID: 229058
+			// Token: 0x040328D4 RID: 207060
 			public const int BtnArrowRight = 6;
 		}
 	}

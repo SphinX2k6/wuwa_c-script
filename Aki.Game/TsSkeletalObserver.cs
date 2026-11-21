@@ -6,17 +6,17 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02002A19 RID: 10777
+// Token: 0x02001F94 RID: 8084
 [UClass("/Game/Aki/TypeScript/Game/Module/SkeletalObserver/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Module/SkeletalObserver/TsSkeletalObserver.TsSkeletalObserver_C")]
 public class TsSkeletalObserver : AActor, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x17001DD3 RID: 7635
-	// (get) Token: 0x060165ED RID: 91629 RVA: 0x005A960B File Offset: 0x005A780B
-	// (set) Token: 0x060165EE RID: 91630 RVA: 0x005A9613 File Offset: 0x005A7813
+	// Token: 0x17001E2C RID: 7724
+	// (get) Token: 0x06013FF4 RID: 81908 RVA: 0x005D45E3 File Offset: 0x005D27E3
+	// (set) Token: 0x06013FF5 RID: 81909 RVA: 0x005D45EB File Offset: 0x005D27EB
 	public EUiModelUseWay UseWay { get; set; }
 
-	// Token: 0x060165EF RID: 91631 RVA: 0x005A961C File Offset: 0x005A781C
+	// Token: 0x06013FF6 RID: 81910 RVA: 0x005D45F4 File Offset: 0x005D27F4
 	public void Init(EUiModelUseWay useWay)
 	{
 		base.SetTickableWhenPaused(true);
@@ -34,28 +34,25 @@ public class TsSkeletalObserver : AActor, IUnrealUObject, IUnrealObject
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x060165F0 RID: 91632 RVA: 0x005A96A0 File Offset: 0x005A78A0
+	// Token: 0x06013FF7 RID: 81911 RVA: 0x005D4678 File Offset: 0x005D2878
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveTick(float deltaSecond)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveTick"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		AActor.__ReceiveTick_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsSkeletalObserver) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveTick"), TsSkeletalObserver.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((AActor.__ReceiveTick_FunctionParams*)ptr + 15L / (long)sizeof(AActor.__ReceiveTick_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			ptr2->DeltaSeconds = deltaSecond;
+			this.ReceiveTick_Implementation(deltaSecond);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		AActor.__ReceiveTick_FunctionParams* ptr = stackalloc AActor.__ReceiveTick_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(AActor.__ReceiveTick_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		ptr->DeltaSeconds = deltaSecond;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x060165F1 RID: 91633 RVA: 0x005A9716 File Offset: 0x005A7916
+	// Token: 0x06013FF8 RID: 81912 RVA: 0x005D4704 File Offset: 0x005D2904
 	protected virtual void ReceiveTick_Implementation(float deltaSecond)
 	{
 		UiModelBase model = this.Model;
@@ -66,7 +63,7 @@ public class TsSkeletalObserver : AActor, IUnrealUObject, IUnrealObject
 		model.Tick(deltaSecond);
 	}
 
-	// Token: 0x060165F2 RID: 91634 RVA: 0x005A972C File Offset: 0x005A792C
+	// Token: 0x06013FF9 RID: 81913 RVA: 0x005D4718 File Offset: 0x005D2918
 	public void Destroy()
 	{
 		UiModelBase model = this.Model;
@@ -89,7 +86,7 @@ public class TsSkeletalObserver : AActor, IUnrealUObject, IUnrealObject
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x060165F3 RID: 91635 RVA: 0x005A97A5 File Offset: 0x005A79A5
+	// Token: 0x06013FFA RID: 81914 RVA: 0x005D4791 File Offset: 0x005D2991
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsSkeletalObserver._ClassPtr == IntPtr.Zero)
@@ -99,36 +96,24 @@ public class TsSkeletalObserver : AActor, IUnrealUObject, IUnrealObject
 		return TsSkeletalObserver._ClassPtr;
 	}
 
-	// Token: 0x060165F4 RID: 91636 RVA: 0x005A97CC File Offset: 0x005A79CC
+	// Token: 0x06013FFB RID: 81915 RVA: 0x005D47B8 File Offset: 0x005D29B8
 	public TsSkeletalObserver() : this(BuiltinUtils.AllocNativeUObject(TsSkeletalObserver.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x060165F5 RID: 91637 RVA: 0x005A97F4 File Offset: 0x005A79F4
+	// Token: 0x06013FFC RID: 81916 RVA: 0x005D47E0 File Offset: 0x005D29E0
 	[NullableContext(1)]
 	public TsSkeletalObserver(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsSkeletalObserver.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x060165F6 RID: 91638 RVA: 0x005A9827 File Offset: 0x005A7A27
+	// Token: 0x06013FFD RID: 81917 RVA: 0x005D4813 File Offset: 0x005D2A13
 	protected TsSkeletalObserver(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x17001DD4 RID: 7636
-	// (get) Token: 0x060165F7 RID: 91639 RVA: 0x005A9830 File Offset: 0x005A7A30
-	[Nullable(1)]
-	public unsafe FPointerToUberGraphFrame UberGraphFrame
-	{
-		[NullableContext(1)]
-		get
-		{
-			return *(base.NativePtr + (IntPtr)TsSkeletalObserver.__PropertyOffset_UberGraphFrame);
-		}
-	}
-
-	// Token: 0x17001DD5 RID: 7637
-	// (get) Token: 0x060165F8 RID: 91640 RVA: 0x005A9840 File Offset: 0x005A7A40
+	// Token: 0x17001E2D RID: 7725
+	// (get) Token: 0x06013FFE RID: 81918 RVA: 0x005D481C File Offset: 0x005D2A1C
 	[Nullable(2)]
 	public unsafe USceneComponent DefaultSceneRoot
 	{
@@ -139,33 +124,30 @@ public class TsSkeletalObserver : AActor, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x060165F9 RID: 91641 RVA: 0x005A9854 File Offset: 0x005A7A54
+	// Token: 0x06013FFF RID: 81919 RVA: 0x005D4830 File Offset: 0x005D2A30
 	protected unsafe virtual void __CPPCALL_ReceiveTick_Implementation(AActor.__ReceiveTick_FunctionParams* __Params)
 	{
 		this.ReceiveTick_Implementation(__Params->DeltaSeconds);
 	}
 
-	// Token: 0x0400A67A RID: 42618
+	// Token: 0x0400AA64 RID: 43620
 	[Nullable(2)]
 	public UiModelBase Model;
 
-	// Token: 0x0400A67C RID: 42620
+	// Token: 0x0400AA66 RID: 43622
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Module/SkeletalObserver/TsSkeletalObserver.TsSkeletalObserver_C";
 
-	// Token: 0x0400A67D RID: 42621
+	// Token: 0x0400AA67 RID: 43623
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400A67E RID: 42622
+	// Token: 0x0400AA68 RID: 43624
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400A67F RID: 42623
-	private static int __PropertyOffset_UberGraphFrame;
-
-	// Token: 0x0400A680 RID: 42624
+	// Token: 0x0400AA69 RID: 43625
 	private static int __PropertyOffset_DefaultSceneRoot;
 
-	// Token: 0x02009056 RID: 36950
-	// (Invoke) Token: 0x0604BABF RID: 309951
+	// Token: 0x0200829D RID: 33437
+	// (Invoke) Token: 0x06041FB6 RID: 270262
 	public delegate void TLoadSkeletalMeshCallBack(USkeletalMesh skeletalMesh);
 }

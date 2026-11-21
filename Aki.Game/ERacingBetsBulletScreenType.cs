@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020026EA RID: 9962
+// Token: 0x02001BD5 RID: 7125
 public enum ERacingBetsBulletScreenType
 {
-	// Token: 0x040099A9 RID: 39337
+	// Token: 0x04009B01 RID: 39681
 	Icon = 1,
-	// Token: 0x040099AA RID: 39338
+	// Token: 0x04009B02 RID: 39682
 	DangoText,
-	// Token: 0x040099AB RID: 39339
+	// Token: 0x04009B03 RID: 39683
 	Text
 }

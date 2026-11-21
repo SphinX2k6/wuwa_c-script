@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 {
-	// Token: 0x02005183 RID: 20867
+	// Token: 0x02004153 RID: 16723
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 	})]
 	public class DeckBuilderCardDeleteFilterItem : GridProxyAbstract<IDeckBuilderCardDeleteFilterItemData>
 	{
-		// Token: 0x06035606 RID: 218630 RVA: 0x00CA4CA8 File Offset: 0x00CA2EA8
+		// Token: 0x0602A501 RID: 173313 RVA: 0x00BF2260 File Offset: 0x00BF0460
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			};
 		}
 
-		// Token: 0x06035607 RID: 218631 RVA: 0x00CA4D54 File Offset: 0x00CA2F54
+		// Token: 0x0602A502 RID: 173314 RVA: 0x00BF230C File Offset: 0x00BF050C
 		[NullableContext(1)]
 		public override void Refresh(IDeckBuilderCardDeleteFilterItemData data, bool isSelected, int gridIndex)
 		{
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnDetermined, false, false, false);
 		}
 
-		// Token: 0x06035608 RID: 218632 RVA: 0x00CA4DEC File Offset: 0x00CA2FEC
+		// Token: 0x0602A503 RID: 173315 RVA: 0x00BF23A4 File Offset: 0x00BF05A4
 		private void OnItemToggleClickInternal(EToggleState toggleState)
 		{
 			EToggleState toggleState2 = base.GetExtendToggle(0).GetToggleState();
@@ -62,29 +62,29 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare.DeckBuilder
 			onItemToggleStateChange(base.GridIndex, toggleState2);
 		}
 
-		// Token: 0x0401C5E5 RID: 116197
+		// Token: 0x0401701A RID: 94234
 		protected IDeckBuilderCardDeleteFilterItemData Data;
 
-		// Token: 0x0401C5E6 RID: 116198
+		// Token: 0x0401701B RID: 94235
 		public Action<int, EToggleState> OnItemToggleStateChange;
 
-		// Token: 0x0200B2F7 RID: 45815
+		// Token: 0x02009D30 RID: 40240
 		[NullableContext(0)]
 		private static class EComponents
 		{
-			// Token: 0x040363D4 RID: 222164
+			// Token: 0x04030E29 RID: 200233
 			public const int ItemToggle = 0;
 
-			// Token: 0x040363D5 RID: 222165
+			// Token: 0x04030E2A RID: 200234
 			public const int IconRootItem = 1;
 
-			// Token: 0x040363D6 RID: 222166
+			// Token: 0x04030E2B RID: 200235
 			public const int IconTexture = 2;
 
-			// Token: 0x040363D7 RID: 222167
+			// Token: 0x04030E2C RID: 200236
 			public const int IconSprite = 3;
 
-			// Token: 0x040363D8 RID: 222168
+			// Token: 0x04030E2D RID: 200237
 			public const int NameText = 4;
 		}
 	}

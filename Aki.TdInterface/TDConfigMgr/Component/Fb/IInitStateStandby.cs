@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A8B RID: 2699
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B55 RID: 2901
 	public class IInitStateStandby : IInitState
 	{
-		// Token: 0x06003E24 RID: 15908 RVA: 0x0009F2FB File Offset: 0x0009D4FB
+		// Token: 0x0600424D RID: 16973 RVA: 0x000A88B3 File Offset: 0x000A6AB3
 		public static IInitStateStandby Create(IInitStateStandby? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000ECB RID: 3787
-		// (get) Token: 0x06003E25 RID: 15909 RVA: 0x0009F31A File Offset: 0x0009D51A
+		// Token: 0x17000F9E RID: 3998
+		// (get) Token: 0x0600424E RID: 16974 RVA: 0x000A88D2 File Offset: 0x000A6AD2
 		public override EInitStateType Type
 		{
 			get
@@ -34,8 +32,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000ECC RID: 3788
-		// (get) Token: 0x06003E26 RID: 15910 RVA: 0x0009F328 File Offset: 0x0009D528
+		// Token: 0x17000F9F RID: 3999
+		// (get) Token: 0x0600424F RID: 16975 RVA: 0x000A88E0 File Offset: 0x000A6AE0
 		public virtual List<string> StandbyTags
 		{
 			get
@@ -55,8 +53,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000ECD RID: 3789
-		// (get) Token: 0x06003E27 RID: 15911 RVA: 0x0009F38C File Offset: 0x0009D58C
+		// Token: 0x17000FA0 RID: 4000
+		// (get) Token: 0x06004250 RID: 16976 RVA: 0x000A8944 File Offset: 0x000A6B44
 		[Nullable(2)]
 		public virtual List<int> EmotionBubbleIds
 		{
@@ -82,19 +80,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000ECE RID: 3790
-		// (get) Token: 0x06003E28 RID: 15912 RVA: 0x0009F404 File Offset: 0x0009D604
+		// Token: 0x17000FA1 RID: 4001
+		// (get) Token: 0x06004251 RID: 16977 RVA: 0x000A89BC File Offset: 0x000A6BBC
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IConditionGroup> Conditions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -117,8 +115,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000ECF RID: 3791
-		// (get) Token: 0x06003E29 RID: 15913 RVA: 0x0009F480 File Offset: 0x0009D680
+		// Token: 0x17000FA2 RID: 4002
+		// (get) Token: 0x06004252 RID: 16978 RVA: 0x000A8A38 File Offset: 0x000A6C38
 		public virtual EAiWanderType? Wander
 		{
 			get
@@ -131,31 +129,31 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400229E RID: 8862
+		// Token: 0x040024BA RID: 9402
 		private IInitStateStandby Instance;
 
-		// Token: 0x0400229F RID: 8863
+		// Token: 0x040024BB RID: 9403
 		private List<string> _StandbyTagsCache;
 
-		// Token: 0x040022A0 RID: 8864
+		// Token: 0x040024BC RID: 9404
 		private bool _StandbyTagsInited;
 
-		// Token: 0x040022A1 RID: 8865
+		// Token: 0x040024BD RID: 9405
 		[Nullable(2)]
 		private List<int> _EmotionBubbleIdsCache;
 
-		// Token: 0x040022A2 RID: 8866
+		// Token: 0x040024BE RID: 9406
 		private bool _EmotionBubbleIdsInited;
 
-		// Token: 0x040022A3 RID: 8867
+		// Token: 0x040024BF RID: 9407
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IConditionGroup> _ConditionsCache;
 
-		// Token: 0x040022A4 RID: 8868
+		// Token: 0x040024C0 RID: 9408
 		private bool _ConditionsInited;
 	}
 }

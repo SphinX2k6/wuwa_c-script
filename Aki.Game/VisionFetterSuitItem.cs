@@ -8,18 +8,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020024C6 RID: 9414
+// Token: 0x020019AD RID: 6573
 [NullableContext(2)]
 [Nullable(0)]
 public class VisionFetterSuitItem : GridProxyAbstract<PhantomFetterGroup>
 {
-	// Token: 0x06012E71 RID: 77425 RVA: 0x004AC69A File Offset: 0x004AA89A
+	// Token: 0x06010330 RID: 66352 RVA: 0x004BA29C File Offset: 0x004B849C
 	public VisionFetterSuitItem(UUIItem uiItem = null)
 	{
 		this.SourceItem = uiItem;
 	}
 
-	// Token: 0x06012E72 RID: 77426 RVA: 0x004AC6AC File Offset: 0x004AA8AC
+	// Token: 0x06010331 RID: 66353 RVA: 0x004BA2AC File Offset: 0x004B84AC
 	public UniTask Init()
 	{
 		VisionFetterSuitItem.<Init>d__5 <Init>d__;
@@ -30,7 +30,7 @@ public class VisionFetterSuitItem : GridProxyAbstract<PhantomFetterGroup>
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012E73 RID: 77427 RVA: 0x004AC6F0 File Offset: 0x004AA8F0
+	// Token: 0x06010332 RID: 66354 RVA: 0x004BA2F0 File Offset: 0x004B84F0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -55,7 +55,7 @@ public class VisionFetterSuitItem : GridProxyAbstract<PhantomFetterGroup>
 		}
 	}
 
-	// Token: 0x06012E74 RID: 77428 RVA: 0x004AC7BC File Offset: 0x004AA9BC
+	// Token: 0x06010333 RID: 66355 RVA: 0x004BA3BC File Offset: 0x004B85BC
 	public void Update(PhantomFetterGroup? fetterGroupData)
 	{
 		this.Data = fetterGroupData;
@@ -80,13 +80,13 @@ public class VisionFetterSuitItem : GridProxyAbstract<PhantomFetterGroup>
 		base.SetTextureByPath(path, base.GetTexture(1), null, null);
 	}
 
-	// Token: 0x06012E75 RID: 77429 RVA: 0x004AC850 File Offset: 0x004AAA50
+	// Token: 0x06010334 RID: 66356 RVA: 0x004BA450 File Offset: 0x004B8650
 	public override void Refresh(PhantomFetterGroup data, bool isSelected, int gridIndex)
 	{
 		this.Update(new PhantomFetterGroup?(data));
 	}
 
-	// Token: 0x06012E76 RID: 77430 RVA: 0x004AC860 File Offset: 0x004AAA60
+	// Token: 0x06010335 RID: 66357 RVA: 0x004BA460 File Offset: 0x004B8660
 	[CompilerGenerated]
 	private void <OnRegisterComponent>g__CallBack|6_0()
 	{
@@ -98,24 +98,24 @@ public class VisionFetterSuitItem : GridProxyAbstract<PhantomFetterGroup>
 		onItemClick(this.Data.Value.Id);
 	}
 
-	// Token: 0x04008E78 RID: 36472
+	// Token: 0x04008FC2 RID: 36802
 	private readonly UUIItem SourceItem;
 
-	// Token: 0x04008E79 RID: 36473
+	// Token: 0x04008FC3 RID: 36803
 	private PhantomFetterGroup? Data;
 
-	// Token: 0x04008E7A RID: 36474
+	// Token: 0x04008FC4 RID: 36804
 	public Action<int> OnItemClick;
 
-	// Token: 0x02008A47 RID: 35399
+	// Token: 0x02007BD0 RID: 31696
 	[NullableContext(0)]
 	private enum ECommonElementCom
 	{
-		// Token: 0x0402CE5F RID: 183903
+		// Token: 0x0402817D RID: 164221
 		ElementBgSprite,
-		// Token: 0x0402CE60 RID: 183904
+		// Token: 0x0402817E RID: 164222
 		ElementIconTexture,
-		// Token: 0x0402CE61 RID: 183905
+		// Token: 0x0402817F RID: 164223
 		ItemButton
 	}
 }

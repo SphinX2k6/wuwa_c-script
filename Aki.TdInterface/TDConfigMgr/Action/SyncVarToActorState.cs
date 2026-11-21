@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200222C RID: 8748
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002497 RID: 9367
 	public class SyncVarToActorState : ActionParams
 	{
-		// Token: 0x0600C002 RID: 49154 RVA: 0x001B93E0 File Offset: 0x001B75E0
+		// Token: 0x0600CBC0 RID: 52160 RVA: 0x001D0AAC File Offset: 0x001CECAC
 		private SyncVarToActorState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C003 RID: 49155 RVA: 0x001B9418 File Offset: 0x001B7618
+		// Token: 0x0600CBC1 RID: 52161 RVA: 0x001D0AE4 File Offset: 0x001CECE4
 		public static SyncVarToActorState Create([Nullable(2)] SyncVarToActorState instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C004 RID: 49156 RVA: 0x001B942B File Offset: 0x001B762B
+		// Token: 0x0600CBC2 RID: 52162 RVA: 0x001D0AF7 File Offset: 0x001CECF7
 		public static SyncVarToActorState CreateFromSetValue([Nullable(2)] SyncVarToActorState_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C005 RID: 49157 RVA: 0x001B943E File Offset: 0x001B763E
+		// Token: 0x0600CBC3 RID: 52163 RVA: 0x001D0B0A File Offset: 0x001CED0A
 		public SyncVarToActorState_SetValue ToSetValue()
 		{
 			return new SyncVarToActorState_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003A24 RID: 14884
-		// (get) Token: 0x0600C006 RID: 49158 RVA: 0x001B945D File Offset: 0x001B765D
-		// (set) Token: 0x0600C007 RID: 49159 RVA: 0x001B9488 File Offset: 0x001B7688
+		// Token: 0x17003D1A RID: 15642
+		// (get) Token: 0x0600CBC4 RID: 52164 RVA: 0x001D0B29 File Offset: 0x001CED29
+		// (set) Token: 0x0600CBC5 RID: 52165 RVA: 0x001D0B54 File Offset: 0x001CED54
 		public virtual string VarName
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A25 RID: 14885
-		// (get) Token: 0x0600C008 RID: 49160 RVA: 0x001B9496 File Offset: 0x001B7696
-		// (set) Token: 0x0600C009 RID: 49161 RVA: 0x001B94C1 File Offset: 0x001B76C1
+		// Token: 0x17003D1B RID: 15643
+		// (get) Token: 0x0600CBC6 RID: 52166 RVA: 0x001D0B62 File Offset: 0x001CED62
+		// (set) Token: 0x0600CBC7 RID: 52167 RVA: 0x001D0B8D File Offset: 0x001CED8D
 		public virtual string StateKey
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400727A RID: 29306
+		// Token: 0x040078C4 RID: 30916
 		[Nullable(2)]
 		protected new SyncVarToActorState FbInstance;
 
-		// Token: 0x0400727B RID: 29307
+		// Token: 0x040078C5 RID: 30917
 		[Nullable(2)]
 		protected SyncVarToActorState_SetValue PocoInterface;
 	}

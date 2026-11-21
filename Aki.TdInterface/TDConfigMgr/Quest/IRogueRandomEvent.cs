@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020010F8 RID: 4344
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001226 RID: 4646
 	public class IRogueRandomEvent : IShowUi
 	{
-		// Token: 0x06006246 RID: 25158 RVA: 0x000ECD0C File Offset: 0x000EAF0C
+		// Token: 0x06006841 RID: 26689 RVA: 0x000F9E80 File Offset: 0x000F8080
 		private IRogueRandomEvent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006247 RID: 25159 RVA: 0x000ECD44 File Offset: 0x000EAF44
+		// Token: 0x06006842 RID: 26690 RVA: 0x000F9EB8 File Offset: 0x000F80B8
 		public static IRogueRandomEvent Create([Nullable(2)] IRogueRandomEvent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006248 RID: 25160 RVA: 0x000ECD57 File Offset: 0x000EAF57
+		// Token: 0x06006843 RID: 26691 RVA: 0x000F9ECB File Offset: 0x000F80CB
 		public static IRogueRandomEvent CreateFromSetValue([Nullable(2)] IRogueRandomEvent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006249 RID: 25161 RVA: 0x000ECD6A File Offset: 0x000EAF6A
+		// Token: 0x06006844 RID: 26692 RVA: 0x000F9EDE File Offset: 0x000F80DE
 		public new IRogueRandomEvent_SetValue ToSetValue()
 		{
 			return new IRogueRandomEvent_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17002033 RID: 8243
-		// (get) Token: 0x0600624A RID: 25162 RVA: 0x000ECD7D File Offset: 0x000EAF7D
-		// (set) Token: 0x0600624B RID: 25163 RVA: 0x000ECDA8 File Offset: 0x000EAFA8
+		// Token: 0x170021E6 RID: 8678
+		// (get) Token: 0x06006845 RID: 26693 RVA: 0x000F9EF1 File Offset: 0x000F80F1
+		// (set) Token: 0x06006846 RID: 26694 RVA: 0x000F9F1C File Offset: 0x000F811C
 		public override EShowUiType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003B0C RID: 15116
+		// Token: 0x04003E5A RID: 15962
 		[Nullable(2)]
 		protected new IRogueRandomEvent FbInstance;
 
-		// Token: 0x04003B0D RID: 15117
+		// Token: 0x04003E5B RID: 15963
 		[Nullable(2)]
 		protected new IRogueRandomEvent_SetValue PocoInterface;
 	}

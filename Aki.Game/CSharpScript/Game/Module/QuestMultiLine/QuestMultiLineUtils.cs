@@ -7,42 +7,42 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.QuestMultiLine
 {
-	// Token: 0x02004FA9 RID: 20393
+	// Token: 0x02003F72 RID: 16242
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class QuestMultiLineUtils
 	{
-		// Token: 0x06034343 RID: 213827 RVA: 0x00C411AA File Offset: 0x00C3F3AA
+		// Token: 0x060291B1 RID: 168369 RVA: 0x00B8A956 File Offset: 0x00B88B56
 		public static float ClampValue(float value, float min, float max)
 		{
 			return Math.Max(min, Math.Min(max, value));
 		}
 
-		// Token: 0x06034344 RID: 213828 RVA: 0x00C411B9 File Offset: 0x00C3F3B9
+		// Token: 0x060291B2 RID: 168370 RVA: 0x00B8A965 File Offset: 0x00B88B65
 		public static string GetComponentIconTexture(QuestMultiLineComponentData component)
 		{
 			return QuestMultiLineUtils.GetIconForGender(component.ComponentIcon);
 		}
 
-		// Token: 0x06034345 RID: 213829 RVA: 0x00C411C6 File Offset: 0x00C3F3C6
+		// Token: 0x060291B3 RID: 168371 RVA: 0x00B8A972 File Offset: 0x00B88B72
 		public static bool IsMultiPersonAvatar(QuestMultiLineComponentData component)
 		{
 			return component.ComponentIcon.Length == 0;
 		}
 
-		// Token: 0x06034346 RID: 213830 RVA: 0x00C411D2 File Offset: 0x00C3F3D2
+		// Token: 0x060291B4 RID: 168372 RVA: 0x00B8A97E File Offset: 0x00B88B7E
 		public static bool IsComponentClickable(QuestMultiLineComponentData component)
 		{
 			return component.Type == 1 || component.Type == 3;
 		}
 
-		// Token: 0x06034347 RID: 213831 RVA: 0x00C411E8 File Offset: 0x00C3F3E8
+		// Token: 0x060291B5 RID: 168373 RVA: 0x00B8A994 File Offset: 0x00B88B94
 		public static string GetMultiPersonAvatarTexture(QuestMultiLineComponentData component)
 		{
 			return QuestMultiLineUtils.GetIconForGender(component.MultiPersonAvatar);
 		}
 
-		// Token: 0x06034348 RID: 213832 RVA: 0x00C411F8 File Offset: 0x00C3F3F8
+		// Token: 0x060291B6 RID: 168374 RVA: 0x00B8A9A4 File Offset: 0x00B88BA4
 		public static string GetIconForGender(string[] icons)
 		{
 			EPlayerGender playerGender = PlayerInfoModel.Instance.GetPlayerGender();
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine
 			return icons[(int)playerGender];
 		}
 
-		// Token: 0x06034349 RID: 213833 RVA: 0x00C41224 File Offset: 0x00C3F424
+		// Token: 0x060291B7 RID: 168375 RVA: 0x00B8A9D0 File Offset: 0x00B88BD0
 		public static List<QuestMultiLineComponentData> GetBranchPageComponents([Nullable(2)] QuestMultiLineBranchPageData branchPageData)
 		{
 			if (branchPageData == null)
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine
 			return list;
 		}
 
-		// Token: 0x0603434A RID: 213834 RVA: 0x00C412D0 File Offset: 0x00C3F4D0
+		// Token: 0x060291B8 RID: 168376 RVA: 0x00B8AA7C File Offset: 0x00B88C7C
 		public static Dictionary<int, bool> GetBranchPageFightAreas([Nullable(2)] QuestMultiLineBranchPageData branchPageData)
 		{
 			Dictionary<int, bool> dictionary = new Dictionary<int, bool>();
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine
 			return dictionary;
 		}
 
-		// Token: 0x0603434B RID: 213835 RVA: 0x00C41358 File Offset: 0x00C3F558
+		// Token: 0x060291B9 RID: 168377 RVA: 0x00B8AB04 File Offset: 0x00B88D04
 		public static bool IsBranchSelectTimePoint(QuestMultiLineTimePointData timePoint)
 		{
 			if (!timePoint.IsBranchTimePoint)
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine
 			return false;
 		}
 
-		// Token: 0x0603434C RID: 213836 RVA: 0x00C413F4 File Offset: 0x00C3F5F4
+		// Token: 0x060291BA RID: 168378 RVA: 0x00B8ABA0 File Offset: 0x00B88DA0
 		public static bool IsComponentFinish(QuestMultiLineComponentData componentData)
 		{
 			int[] branchFinishQuestNode = componentData.BranchFinishQuestNode;
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine
 			return behaviorNodeBase != null && behaviorNodeBase.IsSuccess;
 		}
 
-		// Token: 0x0603434D RID: 213837 RVA: 0x00C4144C File Offset: 0x00C3F64C
+		// Token: 0x060291BB RID: 168379 RVA: 0x00B8ABF8 File Offset: 0x00B88DF8
 		public static List<QuestMultiLineTimePointData> GetUnlockTimePointData(List<QuestMultiLineTimePointData> timePoints)
 		{
 			List<QuestMultiLineTimePointData> list = new List<QuestMultiLineTimePointData>();
@@ -163,7 +163,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine
 			return list;
 		}
 
-		// Token: 0x0603434E RID: 213838 RVA: 0x00C414B0 File Offset: 0x00C3F6B0
+		// Token: 0x060291BC RID: 168380 RVA: 0x00B8AC5C File Offset: 0x00B88E5C
 		[return: Nullable(2)]
 		public static QuestMultiLineTimePointData GetNextTimePoint(QuestMultiLineTimePointData timePoint)
 		{
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine
 			return null;
 		}
 
-		// Token: 0x0603434F RID: 213839 RVA: 0x00C414EC File Offset: 0x00C3F6EC
+		// Token: 0x060291BD RID: 168381 RVA: 0x00B8AC98 File Offset: 0x00B88E98
 		public static TArray<FVector2D> PointArrayToVectorArray(IReadOnlyList<global::Vector> points)
 		{
 			TArray<FVector2D> tarray = new TArray<FVector2D>();
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine
 			return tarray;
 		}
 
-		// Token: 0x06034350 RID: 213840 RVA: 0x00C41550 File Offset: 0x00C3F750
+		// Token: 0x060291BE RID: 168382 RVA: 0x00B8ACFC File Offset: 0x00B88EFC
 		public static string GetPointSpritePath(QuestMultiLineTimePointData data)
 		{
 			if (!data.IsUnLock)
@@ -201,7 +201,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine
 			return "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_TImeBtnPointNor.SP_TImeBtnPointNor";
 		}
 
-		// Token: 0x06034351 RID: 213841 RVA: 0x00C41574 File Offset: 0x00C3F774
+		// Token: 0x060291BF RID: 168383 RVA: 0x00B8AD20 File Offset: 0x00B88F20
 		public static ITimePointSpritePaths GetPointSpritePaths(QuestMultiLineTimePointData data)
 		{
 			if (!data.IsUnLock)

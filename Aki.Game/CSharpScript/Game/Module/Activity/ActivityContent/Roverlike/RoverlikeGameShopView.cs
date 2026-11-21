@@ -14,17 +14,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x0200615D RID: 24925
+	// Token: 0x020050DB RID: 20699
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoverlikeGameShopView : RoverlikeActionViewBase
 	{
-		// Token: 0x0603EFEF RID: 258031 RVA: 0x00F37B07 File Offset: 0x00F35D07
+		// Token: 0x06033CAF RID: 212143 RVA: 0x00E7E9DB File Offset: 0x00E7CBDB
 		public RoverlikeGameShopView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603EFF0 RID: 258032 RVA: 0x00F37B10 File Offset: 0x00F35D10
+		// Token: 0x06033CB0 RID: 212144 RVA: 0x00E7E9E4 File Offset: 0x00E7CBE4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603EFF1 RID: 258033 RVA: 0x00F37C3C File Offset: 0x00F35E3C
+		// Token: 0x06033CB1 RID: 212145 RVA: 0x00E7EB10 File Offset: 0x00E7CD10
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoverlikeGameShopView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603EFF2 RID: 258034 RVA: 0x00F37C80 File Offset: 0x00F35E80
+		// Token: 0x06033CB2 RID: 212146 RVA: 0x00E7EB54 File Offset: 0x00E7CD54
 		protected override void OnStart()
 		{
 			RoverRogueShopSnapshot roverRogueShopSnapshot = this.OpenParam as RoverRogueShopSnapshot;
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			EventSystem.Instance.Add<int>(EEventName.OnPlayerCurrencyChange, new Action<int>(this.OnCurrencyChange));
 		}
 
-		// Token: 0x0603EFF3 RID: 258035 RVA: 0x00F37CDC File Offset: 0x00F35EDC
+		// Token: 0x06033CB3 RID: 212147 RVA: 0x00E7EBB0 File Offset: 0x00E7CDB0
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove<RoverRogueShopSnapshot>(EEventName.RoverlikeShopInfoUpdate, new Action<RoverRogueShopSnapshot>(this.OnShopInfoUpdate));
@@ -87,13 +87,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.SelectedGroupType = null;
 		}
 
-		// Token: 0x0603EFF4 RID: 258036 RVA: 0x00F37D3B File Offset: 0x00F35F3B
+		// Token: 0x06033CB4 RID: 212148 RVA: 0x00E7EC0F File Offset: 0x00E7CE0F
 		private void OnClickClose()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603EFF5 RID: 258037 RVA: 0x00F37D44 File Offset: 0x00F35F44
+		// Token: 0x06033CB5 RID: 212149 RVA: 0x00E7EC18 File Offset: 0x00E7CE18
 		private void OnCurrencyChange(int itemId)
 		{
 			if (itemId != this.InsideCurrencyItemId)
@@ -106,20 +106,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EFF6 RID: 258038 RVA: 0x00F37D64 File Offset: 0x00F35F64
+		// Token: 0x06033CB6 RID: 212150 RVA: 0x00E7EC38 File Offset: 0x00E7CE38
 		private void OnShopInfoUpdate(RoverRogueShopSnapshot snapshot)
 		{
 			this.RefreshBySnapshot(snapshot);
 			ScrollingTipsController.Instance.ShowTipsByTextId("RoverRogue_RefreshSuccess", Array.Empty<object>());
 		}
 
-		// Token: 0x0603EFF7 RID: 258039 RVA: 0x00F37D84 File Offset: 0x00F35F84
+		// Token: 0x06033CB7 RID: 212151 RVA: 0x00E7EC58 File Offset: 0x00E7CE58
 		private void OnClickBtnFunctionTitle()
 		{
 			RoverlikeController.Instance.OpenGameInfoView(null);
 		}
 
-		// Token: 0x0603EFF8 RID: 258040 RVA: 0x00F37DA4 File Offset: 0x00F35FA4
+		// Token: 0x06033CB8 RID: 212152 RVA: 0x00E7EC78 File Offset: 0x00E7CE78
 		private void OnGridSelected(IRoverlikeGameShopGridData data)
 		{
 			if (this.SelectedIncId == data.IncId)
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EFF9 RID: 258041 RVA: 0x00F37E47 File Offset: 0x00F36047
+		// Token: 0x06033CB9 RID: 212153 RVA: 0x00E7ED1B File Offset: 0x00E7CF1B
 		private void OnConfirmBuy()
 		{
 			base.TryInteractAction(delegate
@@ -236,7 +236,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			});
 		}
 
-		// Token: 0x0603EFFA RID: 258042 RVA: 0x00F37E5C File Offset: 0x00F3605C
+		// Token: 0x06033CBA RID: 212154 RVA: 0x00E7ED30 File Offset: 0x00E7CF30
 		private void OnRefreshShop()
 		{
 			base.TryInteractAction(delegate
@@ -267,7 +267,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			});
 		}
 
-		// Token: 0x0603EFFB RID: 258043 RVA: 0x00F37E71 File Offset: 0x00F36071
+		// Token: 0x06033CBB RID: 212155 RVA: 0x00E7ED45 File Offset: 0x00E7CF45
 		private RoverlikeGameShopGroupItem CreateShopGroupItem()
 		{
 			RoverlikeGameShopGroupItem roverlikeGameShopGroupItem = new RoverlikeGameShopGroupItem();
@@ -276,7 +276,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return roverlikeGameShopGroupItem;
 		}
 
-		// Token: 0x0603EFFC RID: 258044 RVA: 0x00F37E9C File Offset: 0x00F3609C
+		// Token: 0x06033CBC RID: 212156 RVA: 0x00E7ED70 File Offset: 0x00E7CF70
 		private void OnGroupGridsRefreshed(ERoverlikeGameShopItemType groupType)
 		{
 			if (this.SelectedIncId != 0)
@@ -306,7 +306,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EFFD RID: 258045 RVA: 0x00F37F10 File Offset: 0x00F36110
+		// Token: 0x06033CBD RID: 212157 RVA: 0x00E7EDE4 File Offset: 0x00E7CFE4
 		private void RefreshBySnapshot(RoverRogueShopSnapshot snapshot)
 		{
 			this.CurrentSnapshot = snapshot;
@@ -337,7 +337,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EFFE RID: 258046 RVA: 0x00F37FB0 File Offset: 0x00F361B0
+		// Token: 0x06033CBE RID: 212158 RVA: 0x00E7EE84 File Offset: 0x00E7D084
 		private void StampSelection(List<IRoverlikeGameShopGroupData> groups)
 		{
 			foreach (IRoverlikeGameShopGroupData roverlikeGameShopGroupData in groups)
@@ -349,7 +349,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EFFF RID: 258047 RVA: 0x00F38044 File Offset: 0x00F36244
+		// Token: 0x06033CBF RID: 212159 RVA: 0x00E7EF18 File Offset: 0x00E7D118
 		private List<IRoverlikeGameShopGroupData> BuildGroupDataList(RoverRogueShopSnapshot snapshot)
 		{
 			List<IShopGridSortInfo> list = new List<IShopGridSortInfo>();
@@ -414,7 +414,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return list5;
 		}
 
-		// Token: 0x0603F000 RID: 258048 RVA: 0x00F381E8 File Offset: 0x00F363E8
+		// Token: 0x06033CC0 RID: 212160 RVA: 0x00E7F0BC File Offset: 0x00E7D2BC
 		private List<IRoverlikeGameShopGridData> SortGroupGrids(List<IShopGridSortInfo> list)
 		{
 			List<IShopGridSortInfo> list2 = new List<IShopGridSortInfo>(list);
@@ -462,7 +462,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return list3;
 		}
 
-		// Token: 0x0603F001 RID: 258049 RVA: 0x00F3826C File Offset: 0x00F3646C
+		// Token: 0x06033CC1 RID: 212161 RVA: 0x00E7F140 File Offset: 0x00E7D340
 		private void FallbackSelection(List<IRoverlikeGameShopGroupData> groups)
 		{
 			List<IRoverlikeGameShopGridData> list = new List<IRoverlikeGameShopGridData>();
@@ -504,7 +504,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.SelectedGroupType = new ERoverlikeGameShopItemType?(roverlikeGameShopGridData3.Type);
 		}
 
-		// Token: 0x0603F002 RID: 258050 RVA: 0x00F3840C File Offset: 0x00F3660C
+		// Token: 0x06033CC2 RID: 212162 RVA: 0x00E7F2E0 File Offset: 0x00E7D4E0
 		[return: Nullable(2)]
 		private IRoverlikeGameShopGridData GetSelectedGridData(List<IRoverlikeGameShopGroupData> groups)
 		{
@@ -525,7 +525,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return null;
 		}
 
-		// Token: 0x0603F003 RID: 258051 RVA: 0x00F384AC File Offset: 0x00F366AC
+		// Token: 0x06033CC3 RID: 212163 RVA: 0x00E7F380 File Offset: 0x00E7D580
 		private void ApplyBuyLocally(int incId)
 		{
 			RoverRogueShopSnapshot currentSnapshot = this.CurrentSnapshot;
@@ -561,25 +561,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.RefreshBySnapshot(currentSnapshot);
 		}
 
-		// Token: 0x0603F004 RID: 258052 RVA: 0x00F3857C File Offset: 0x00F3677C
+		// Token: 0x06033CC4 RID: 212164 RVA: 0x00E7F450 File Offset: 0x00E7D650
 		private int GetCurrentCurrencyCount()
 		{
 			return RoverlikeModel.Instance.Gold;
 		}
 
-		// Token: 0x04020DEA RID: 134634
+		// Token: 0x0401B717 RID: 112407
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04020DEB RID: 134635
+		// Token: 0x0401B718 RID: 112408
 		[Nullable(2)]
 		private RoverlikeGameShopInfoItem InfoPanel;
 
-		// Token: 0x04020DEC RID: 134636
+		// Token: 0x0401B719 RID: 112409
 		[Nullable(2)]
 		private RoverlikeGameShopRefreshItem RefreshBtn;
 
-		// Token: 0x04020DED RID: 134637
+		// Token: 0x0401B71A RID: 112410
 		[Nullable(new byte[]
 		{
 			2,
@@ -588,39 +588,39 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		private GenericScrollViewNew<RoverlikeGameShopGroupItem, IRoverlikeGameShopGroupData> ShopScrollView;
 
-		// Token: 0x04020DEE RID: 134638
+		// Token: 0x0401B71B RID: 112411
 		[Nullable(2)]
 		private RoverRogueShopSnapshot CurrentSnapshot;
 
-		// Token: 0x04020DEF RID: 134639
+		// Token: 0x0401B71C RID: 112412
 		private int SelectedIncId;
 
-		// Token: 0x04020DF0 RID: 134640
+		// Token: 0x0401B71D RID: 112413
 		private ERoverlikeGameShopItemType? SelectedGroupType;
 
-		// Token: 0x04020DF1 RID: 134641
+		// Token: 0x0401B71E RID: 112414
 		private int InsideCurrencyItemId;
 
-		// Token: 0x0200C3BA RID: 50106
+		// Token: 0x0200ADA1 RID: 44449
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403B0FC RID: 241916
+			// Token: 0x04035A5D RID: 219741
 			public const int ItemCaption = 0;
 
-			// Token: 0x0403B0FD RID: 241917
+			// Token: 0x04035A5E RID: 219742
 			public const int BtnFunctionTitle = 1;
 
-			// Token: 0x0403B0FE RID: 241918
+			// Token: 0x04035A5F RID: 219743
 			public const int ItemInfo = 2;
 
-			// Token: 0x0403B0FF RID: 241919
+			// Token: 0x04035A60 RID: 219744
 			public const int ShopScrollView = 3;
 
-			// Token: 0x0403B100 RID: 241920
+			// Token: 0x04035A61 RID: 219745
 			public const int ItemShopGroup = 4;
 
-			// Token: 0x0403B101 RID: 241921
+			// Token: 0x04035A62 RID: 219746
 			public const int ItemRefresh = 5;
 		}
 	}

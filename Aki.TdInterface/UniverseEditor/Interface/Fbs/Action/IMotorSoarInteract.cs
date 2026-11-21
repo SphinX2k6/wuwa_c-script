@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006B30 RID: 27440
+	// Token: 0x02007276 RID: 29302
 	public struct IMotorSoarInteract : IFlatbufferObject
 	{
-		// Token: 0x1700CBE9 RID: 52201
-		// (get) Token: 0x06030297 RID: 197271 RVA: 0x0068BCE8 File Offset: 0x00689EE8
+		// Token: 0x1700D6CE RID: 54990
+		// (get) Token: 0x060330EE RID: 209134 RVA: 0x006E42A4 File Offset: 0x006E24A4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06030298 RID: 197272 RVA: 0x0068BCF5 File Offset: 0x00689EF5
+		// Token: 0x060330EF RID: 209135 RVA: 0x006E42B1 File Offset: 0x006E24B1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06030299 RID: 197273 RVA: 0x0068BCFC File Offset: 0x00689EFC
+		// Token: 0x060330F0 RID: 209136 RVA: 0x006E42B8 File Offset: 0x006E24B8
 		public static IMotorSoarInteract GetRootAsIMotorSoarInteract(ByteBuffer _bb)
 		{
 			return IMotorSoarInteract.GetRootAsIMotorSoarInteract(_bb, default(IMotorSoarInteract));
 		}
 
-		// Token: 0x0603029A RID: 197274 RVA: 0x0068BD18 File Offset: 0x00689F18
+		// Token: 0x060330F1 RID: 209137 RVA: 0x006E42D4 File Offset: 0x006E24D4
 		public static IMotorSoarInteract GetRootAsIMotorSoarInteract(ByteBuffer _bb, IMotorSoarInteract obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0603029B RID: 197275 RVA: 0x0068BD35 File Offset: 0x00689F35
+		// Token: 0x060330F2 RID: 209138 RVA: 0x006E42F1 File Offset: 0x006E24F1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0603029C RID: 197276 RVA: 0x0068BD44 File Offset: 0x00689F44
+		// Token: 0x060330F3 RID: 209139 RVA: 0x006E4300 File Offset: 0x006E2500
 		public IMotorSoarInteract __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CBEA RID: 52202
-		// (get) Token: 0x0603029D RID: 197277 RVA: 0x0068BD54 File Offset: 0x00689F54
+		// Token: 0x1700D6CF RID: 54991
+		// (get) Token: 0x060330F4 RID: 209140 RVA: 0x006E4310 File Offset: 0x006E2510
 		public ELeisureInteract Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603029E RID: 197278 RVA: 0x0068BD90 File Offset: 0x00689F90
+		// Token: 0x060330F5 RID: 209141 RVA: 0x006E434C File Offset: 0x006E254C
 		public static Offset<IMotorSoarInteract> CreateIMotorSoarInteract(FlatBufferBuilder builder, ELeisureInteract Type = ELeisureInteract.CustomSkill)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IMotorSoarInteract.EndIMotorSoarInteract(builder);
 		}
 
-		// Token: 0x0603029F RID: 197279 RVA: 0x0068BDA6 File Offset: 0x00689FA6
+		// Token: 0x060330F6 RID: 209142 RVA: 0x006E4362 File Offset: 0x006E2562
 		public static void StartIMotorSoarInteract(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060302A0 RID: 197280 RVA: 0x0068BDAF File Offset: 0x00689FAF
+		// Token: 0x060330F7 RID: 209143 RVA: 0x006E436B File Offset: 0x006E256B
 		public static void AddType(FlatBufferBuilder builder, ELeisureInteract type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060302A1 RID: 197281 RVA: 0x0068BDBA File Offset: 0x00689FBA
+		// Token: 0x060330F8 RID: 209144 RVA: 0x006E4376 File Offset: 0x006E2576
 		public static Offset<IMotorSoarInteract> EndIMotorSoarInteract(FlatBufferBuilder builder)
 		{
 			return new Offset<IMotorSoarInteract>(builder.EndTable());
 		}
 
-		// Token: 0x060302A2 RID: 197282 RVA: 0x0068BDC8 File Offset: 0x00689FC8
+		// Token: 0x060330F9 RID: 209145 RVA: 0x006E4384 File Offset: 0x006E2584
 		public IMotorSoarInteractT UnPack()
 		{
 			IMotorSoarInteractT motorSoarInteractT = new IMotorSoarInteractT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return motorSoarInteractT;
 		}
 
-		// Token: 0x060302A3 RID: 197283 RVA: 0x0068BDE3 File Offset: 0x00689FE3
+		// Token: 0x060330FA RID: 209146 RVA: 0x006E439F File Offset: 0x006E259F
 		public void UnPackTo(IMotorSoarInteractT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060302A4 RID: 197284 RVA: 0x0068BDF4 File Offset: 0x00689FF4
+		// Token: 0x060330FB RID: 209147 RVA: 0x006E43B0 File Offset: 0x006E25B0
 		public static Offset<IMotorSoarInteract> Pack(FlatBufferBuilder builder, IMotorSoarInteractT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IMotorSoarInteract.CreateIMotorSoarInteract(builder, _o.Type);
 		}
 
-		// Token: 0x040113C9 RID: 70601
+		// Token: 0x040122F2 RID: 74482
 		private Table __p;
 	}
 }

@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023E6 RID: 9190
+	// Token: 0x0200267D RID: 9853
 	public class ERandomPrefabTypeJsonConverter : JsonConverter<ERandomPrefabType>
 	{
-		// Token: 0x0600C80B RID: 51211 RVA: 0x001D4990 File Offset: 0x001D2B90
+		// Token: 0x0600D48E RID: 54414 RVA: 0x001EE13C File Offset: 0x001EC33C
 		public override ERandomPrefabType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return ERandomPrefabTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C80C RID: 51212 RVA: 0x001D49B4 File Offset: 0x001D2BB4
+		// Token: 0x0600D48F RID: 54415 RVA: 0x001EE160 File Offset: 0x001EC360
 		public override void Write(Utf8JsonWriter writer, ERandomPrefabType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

@@ -7,14 +7,14 @@ using CSharpScript.Game.NewWorld.Pawn.Controllers;
 using NpcSitOnChair;
 using UnrealEngine;
 
-// Token: 0x020031E5 RID: 12773
+// Token: 0x02002754 RID: 10068
 [NullableContext(1)]
 [Nullable(0)]
 public class NpcSitOnChairComponent : EntityComponent
 {
-	// Token: 0x17002618 RID: 9752
-	// (get) Token: 0x0601B8CB RID: 112843 RVA: 0x0078EA25 File Offset: 0x0078CC25
-	// (set) Token: 0x0601B8CC RID: 112844 RVA: 0x0078EA2D File Offset: 0x0078CC2D
+	// Token: 0x1700284D RID: 10317
+	// (get) Token: 0x06019444 RID: 103492 RVA: 0x007B731D File Offset: 0x007B551D
+	// (set) Token: 0x06019445 RID: 103493 RVA: 0x007B7325 File Offset: 0x007B5525
 	public NpcSitOnChair.ETaskPhase Phase
 	{
 		get
@@ -31,8 +31,8 @@ public class NpcSitOnChairComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x17002619 RID: 9753
-	// (get) Token: 0x0601B8CD RID: 112845 RVA: 0x0078EA40 File Offset: 0x0078CC40
+	// Token: 0x1700284E RID: 10318
+	// (get) Token: 0x06019446 RID: 103494 RVA: 0x007B7338 File Offset: 0x007B5538
 	public bool IsSitOnChairTaskRunning
 	{
 		get
@@ -41,8 +41,8 @@ public class NpcSitOnChairComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x1700261A RID: 9754
-	// (get) Token: 0x0601B8CE RID: 112846 RVA: 0x0078EA4B File Offset: 0x0078CC4B
+	// Token: 0x1700284F RID: 10319
+	// (get) Token: 0x06019447 RID: 103495 RVA: 0x007B7343 File Offset: 0x007B5543
 	[Nullable(2)]
 	public Entity CurrentChairEntity
 	{
@@ -62,7 +62,7 @@ public class NpcSitOnChairComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601B8CF RID: 112847 RVA: 0x0078EA74 File Offset: 0x0078CC74
+	// Token: 0x06019448 RID: 103496 RVA: 0x007B736C File Offset: 0x007B556C
 	protected override bool OnStart()
 	{
 		this.ActorComp = base.Entity.GetComponent<CharacterActorComponent>();
@@ -77,7 +77,7 @@ public class NpcSitOnChairComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601B8D0 RID: 112848 RVA: 0x0078EAEC File Offset: 0x0078CCEC
+	// Token: 0x06019449 RID: 103497 RVA: 0x007B73E4 File Offset: 0x007B55E4
 	private bool IsRoleAnimInstance()
 	{
 		CharacterAnimationComponent animComp = this.AnimComp;
@@ -85,12 +85,12 @@ public class NpcSitOnChairComponent : EntityComponent
 		return UKuroStaticLibrary.IsObjectClassByName(@object, CharacterNameDefines.Instance.ABP_BASEROLENPC) || UKuroStaticLibrary.IsObjectClassByName(@object, CharacterNameDefines.Instance.ABP_BASEROLE);
 	}
 
-	// Token: 0x0601B8D1 RID: 112849 RVA: 0x0078EB30 File Offset: 0x0078CD30
+	// Token: 0x0601944A RID: 103498 RVA: 0x007B7428 File Offset: 0x007B5628
 	protected override void OnActivate()
 	{
 	}
 
-	// Token: 0x0601B8D2 RID: 112850 RVA: 0x0078EB32 File Offset: 0x0078CD32
+	// Token: 0x0601944B RID: 103499 RVA: 0x007B742A File Offset: 0x007B562A
 	protected override void OnTick(float deltaTime)
 	{
 		if (this.Params != null && !this.IsAbortRequested && this.Params.InterruptCondition())
@@ -104,14 +104,14 @@ public class NpcSitOnChairComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601B8D3 RID: 112851 RVA: 0x0078EB6B File Offset: 0x0078CD6B
+	// Token: 0x0601944C RID: 103500 RVA: 0x007B7463 File Offset: 0x007B5663
 	protected override bool OnEnd()
 	{
 		this.AbortImmediately();
 		return true;
 	}
 
-	// Token: 0x0601B8D4 RID: 112852 RVA: 0x0078EB74 File Offset: 0x0078CD74
+	// Token: 0x0601944D RID: 103501 RVA: 0x007B746C File Offset: 0x007B566C
 	public void RequestExit()
 	{
 		if (this.Params != null)
@@ -120,7 +120,7 @@ public class NpcSitOnChairComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601B8D5 RID: 112853 RVA: 0x0078EB84 File Offset: 0x0078CD84
+	// Token: 0x0601944E RID: 103502 RVA: 0x007B747C File Offset: 0x007B567C
 	public void StartNpcSitOnChair(INpcSitOnChairParams @params)
 	{
 		if (this.ActorComp == null)
@@ -209,7 +209,7 @@ public class NpcSitOnChairComponent : EntityComponent
 		}, 2000, this.LastFinishTime);
 	}
 
-	// Token: 0x0601B8D6 RID: 112854 RVA: 0x0078ED44 File Offset: 0x0078CF44
+	// Token: 0x0601944F RID: 103503 RVA: 0x007B763C File Offset: 0x007B583C
 	private void NpcSitOnChairTick()
 	{
 		switch (this.Phase)
@@ -255,7 +255,7 @@ public class NpcSitOnChairComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601B8D7 RID: 112855 RVA: 0x0078EE20 File Offset: 0x0078D020
+	// Token: 0x06019450 RID: 103504 RVA: 0x007B7718 File Offset: 0x007B5918
 	private void NpcSitOnChairEnd()
 	{
 		this.ReleaseChairPossession();
@@ -277,7 +277,7 @@ public class NpcSitOnChairComponent : EntityComponent
 		this.ClearExitSitTimerHandle();
 	}
 
-	// Token: 0x0601B8D8 RID: 112856 RVA: 0x0078EEAC File Offset: 0x0078D0AC
+	// Token: 0x06019451 RID: 103505 RVA: 0x007B77A4 File Offset: 0x007B59A4
 	private bool TryPossessAndLockChair()
 	{
 		PawnChairController chairController = this.ChairController;
@@ -308,7 +308,7 @@ public class NpcSitOnChairComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601B8D9 RID: 112857 RVA: 0x0078EF48 File Offset: 0x0078D148
+	// Token: 0x06019452 RID: 103506 RVA: 0x007B7840 File Offset: 0x007B5A40
 	private void ReleaseChairPossession()
 	{
 		if (!this.IsChairPossessed)
@@ -324,7 +324,7 @@ public class NpcSitOnChairComponent : EntityComponent
 		this.IsChairPossessed = false;
 	}
 
-	// Token: 0x0601B8DA RID: 112858 RVA: 0x0078EF8C File Offset: 0x0078D18C
+	// Token: 0x06019453 RID: 103507 RVA: 0x007B7884 File Offset: 0x007B5A84
 	private void UnlockChairInteract()
 	{
 		if (!this.IsChairInteractLocked)
@@ -351,7 +351,7 @@ public class NpcSitOnChairComponent : EntityComponent
 		this.LastChairClientCanInteraction = true;
 	}
 
-	// Token: 0x0601B8DB RID: 112859 RVA: 0x0078EFE4 File Offset: 0x0078D1E4
+	// Token: 0x06019454 RID: 103508 RVA: 0x007B78DC File Offset: 0x007B5ADC
 	private void AbortGracefully()
 	{
 		if (this.IsAbortRequested)
@@ -382,7 +382,7 @@ public class NpcSitOnChairComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601B8DC RID: 112860 RVA: 0x0078F038 File Offset: 0x0078D238
+	// Token: 0x06019455 RID: 103509 RVA: 0x007B7930 File Offset: 0x007B5B30
 	public void AbortImmediately()
 	{
 		if (this.Params == null)
@@ -423,7 +423,7 @@ public class NpcSitOnChairComponent : EntityComponent
 		abort();
 	}
 
-	// Token: 0x0601B8DD RID: 112861 RVA: 0x0078F138 File Offset: 0x0078D338
+	// Token: 0x06019456 RID: 103510 RVA: 0x007B7A30 File Offset: 0x007B5C30
 	private void CompleteTask()
 	{
 		object obj;
@@ -447,7 +447,7 @@ public class NpcSitOnChairComponent : EntityComponent
 		obj2();
 	}
 
-	// Token: 0x0601B8DE RID: 112862 RVA: 0x0078F194 File Offset: 0x0078D394
+	// Token: 0x06019457 RID: 103511 RVA: 0x007B7A8C File Offset: 0x007B5C8C
 	private void ExecuteMoveNearby()
 	{
 		if (this.IsExecuteMoveNearby)
@@ -536,7 +536,7 @@ public class NpcSitOnChairComponent : EntityComponent
 		this.MoveHandleId = this.MoveComp.MoveAlongPath(config, "NpcSitOnChairComponent.ExecuteMoveNearby");
 	}
 
-	// Token: 0x0601B8DF RID: 112863 RVA: 0x0078F318 File Offset: 0x0078D518
+	// Token: 0x06019458 RID: 103512 RVA: 0x007B7C10 File Offset: 0x007B5E10
 	private void ExecuteMoveClose()
 	{
 		if (this.IsExecuteMoveClose)
@@ -583,7 +583,7 @@ public class NpcSitOnChairComponent : EntityComponent
 		this.MoveHandleId = this.MoveComp.MoveAlongPath(config, "NpcSitOnChairComponent.ExecuteMoveClose");
 	}
 
-	// Token: 0x0601B8E0 RID: 112864 RVA: 0x0078F444 File Offset: 0x0078D644
+	// Token: 0x06019459 RID: 103513 RVA: 0x007B7D3C File Offset: 0x007B5F3C
 	private void ExecuteTurnTo()
 	{
 		if (this.IsExecuteTurnTo)
@@ -599,7 +599,7 @@ public class NpcSitOnChairComponent : EntityComponent
 		AiControllerLibrary.TurnToTarget(this.ActorComp, this.TempVector, 200f, false, 0f);
 	}
 
-	// Token: 0x0601B8E1 RID: 112865 RVA: 0x0078F4DF File Offset: 0x0078D6DF
+	// Token: 0x0601945A RID: 103514 RVA: 0x007B7DD7 File Offset: 0x007B5FD7
 	private void ExecutePlaySitOnChairAnim()
 	{
 		if (!this.IsExecutePlayMontage)
@@ -610,7 +610,7 @@ public class NpcSitOnChairComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601B8E2 RID: 112866 RVA: 0x0078F508 File Offset: 0x0078D708
+	// Token: 0x0601945B RID: 103515 RVA: 0x007B7E00 File Offset: 0x007B6000
 	private void RequestMoveAwayAfterSitDown()
 	{
 		int flowId = this.FlowId;
@@ -624,7 +624,7 @@ public class NpcSitOnChairComponent : EntityComponent
 		}, 1500, this.StartSitOnChairTime);
 	}
 
-	// Token: 0x0601B8E3 RID: 112867 RVA: 0x0078F54B File Offset: 0x0078D74B
+	// Token: 0x0601945C RID: 103516 RVA: 0x007B7E43 File Offset: 0x007B6043
 	private void ExecuteMoveAway()
 	{
 		if (this.IsExecuteMoveAway)
@@ -641,7 +641,7 @@ public class NpcSitOnChairComponent : EntityComponent
 		this.StartMoveAwayPath();
 	}
 
-	// Token: 0x0601B8E4 RID: 112868 RVA: 0x0078F584 File Offset: 0x0078D784
+	// Token: 0x0601945D RID: 103517 RVA: 0x007B7E7C File Offset: 0x007B607C
 	private void StartMoveAwayPath()
 	{
 		MoveCharacterPoint moveCharacterPoint = new MoveCharacterPoint
@@ -677,7 +677,7 @@ public class NpcSitOnChairComponent : EntityComponent
 		this.MoveHandleId = this.MoveComp.MoveAlongPath(config, "NpcSitOnChairComponent.StartMoveAwayPath");
 	}
 
-	// Token: 0x0601B8E5 RID: 112869 RVA: 0x0078F648 File Offset: 0x0078D848
+	// Token: 0x0601945E RID: 103518 RVA: 0x007B7F40 File Offset: 0x007B6140
 	private void TickRoleNpcStandUp()
 	{
 		if (!this.IsRoleNpc || this.StartStandUpTime == 0.0)
@@ -691,7 +691,7 @@ public class NpcSitOnChairComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601B8E6 RID: 112870 RVA: 0x0078F6A0 File Offset: 0x0078D8A0
+	// Token: 0x0601945F RID: 103519 RVA: 0x007B7F98 File Offset: 0x007B6198
 	private void OnMoveAwayEnd()
 	{
 		this.StopCurrentMove();
@@ -709,7 +709,7 @@ public class NpcSitOnChairComponent : EntityComponent
 		this.IsExecuteMoveNearby = false;
 	}
 
-	// Token: 0x0601B8E7 RID: 112871 RVA: 0x0078F6FC File Offset: 0x0078D8FC
+	// Token: 0x06019460 RID: 103520 RVA: 0x007B7FF4 File Offset: 0x007B61F4
 	private void StopCurrentMove()
 	{
 		if (this.MoveHandleId == 0)
@@ -726,7 +726,7 @@ public class NpcSitOnChairComponent : EntityComponent
 		moveComp.StopMoveByHandleId(moveHandleId, "NpcSitOnChairComponent.StopCurrentMove");
 	}
 
-	// Token: 0x0601B8E8 RID: 112872 RVA: 0x0078F736 File Offset: 0x0078D936
+	// Token: 0x06019461 RID: 103521 RVA: 0x007B802E File Offset: 0x007B622E
 	private void ResetMoveStateAtChair()
 	{
 		this.MoveComp.Speed = 0f;
@@ -744,7 +744,7 @@ public class NpcSitOnChairComponent : EntityComponent
 		component.SetMoveState(ECharMoveState.Stand);
 	}
 
-	// Token: 0x0601B8E9 RID: 112873 RVA: 0x0078F774 File Offset: 0x0078D974
+	// Token: 0x06019462 RID: 103522 RVA: 0x007B806C File Offset: 0x007B626C
 	private void SkipMoveToChair()
 	{
 		this.ChairController.IgnoreCollision();
@@ -768,19 +768,19 @@ public class NpcSitOnChairComponent : EntityComponent
 		this.Phase = (flag ? NpcSitOnChair.ETaskPhase.SitOnChair : NpcSitOnChair.ETaskPhase.TurnTo);
 	}
 
-	// Token: 0x0601B8EA RID: 112874 RVA: 0x0078F8CB File Offset: 0x0078DACB
+	// Token: 0x06019463 RID: 103523 RVA: 0x007B81C3 File Offset: 0x007B63C3
 	private bool IsCurrentFlow(int flowId)
 	{
 		return this.FlowId == flowId && this.Params != null;
 	}
 
-	// Token: 0x0601B8EB RID: 112875 RVA: 0x0078F8E1 File Offset: 0x0078DAE1
+	// Token: 0x06019464 RID: 103524 RVA: 0x007B81D9 File Offset: 0x007B63D9
 	private bool IsCurrentPhase(int flowId, NpcSitOnChair.ETaskPhase phase)
 	{
 		return this.IsCurrentFlow(flowId) && this.IsExecuting && this.Phase == phase;
 	}
 
-	// Token: 0x0601B8EC RID: 112876 RVA: 0x0078F900 File Offset: 0x0078DB00
+	// Token: 0x06019465 RID: 103525 RVA: 0x007B81F8 File Offset: 0x007B63F8
 	private void SetActorLocation(Vector target, string context)
 	{
 		FTransformDouble meshTransform = base.Entity.GetComponent<CharacterAnimationComponent>().GetMeshTransform();
@@ -797,7 +797,7 @@ public class NpcSitOnChairComponent : EntityComponent
 		component.SetModelBuffer(meshTransform, 200f);
 	}
 
-	// Token: 0x0601B8ED RID: 112877 RVA: 0x0078F960 File Offset: 0x0078DB60
+	// Token: 0x06019466 RID: 103526 RVA: 0x007B8258 File Offset: 0x007B6458
 	private void DelayExecuteAction(Action action, int time, double lastTime)
 	{
 		this.ClearExitSitTimerHandle();
@@ -818,7 +818,7 @@ public class NpcSitOnChairComponent : EntityComponent
 		}, (float)((int)num), null, null, true, 1f);
 	}
 
-	// Token: 0x0601B8EE RID: 112878 RVA: 0x0078F9D6 File Offset: 0x0078DBD6
+	// Token: 0x06019467 RID: 103527 RVA: 0x007B82CE File Offset: 0x007B64CE
 	private void ClearExitSitTimerHandle()
 	{
 		if (this.ExitSitTimerHandle != null && TimerSystem.Instance.Has(this.ExitSitTimerHandle))
@@ -828,7 +828,7 @@ public class NpcSitOnChairComponent : EntityComponent
 		this.ExitSitTimerHandle = null;
 	}
 
-	// Token: 0x0601B8EF RID: 112879 RVA: 0x0078FA0A File Offset: 0x0078DC0A
+	// Token: 0x06019468 RID: 103528 RVA: 0x007B8302 File Offset: 0x007B6502
 	private void PlaySitDownAnim()
 	{
 		if (this.IsRoleNpc)
@@ -839,7 +839,7 @@ public class NpcSitOnChairComponent : EntityComponent
 		this.NormalNpcSitOnChair();
 	}
 
-	// Token: 0x0601B8F0 RID: 112880 RVA: 0x0078FA21 File Offset: 0x0078DC21
+	// Token: 0x06019469 RID: 103529 RVA: 0x007B8319 File Offset: 0x007B6519
 	private void PlayStandUpAnim()
 	{
 		if (this.IsRoleNpc)
@@ -850,7 +850,7 @@ public class NpcSitOnChairComponent : EntityComponent
 		this.NormalNpcStopMontage();
 	}
 
-	// Token: 0x0601B8F1 RID: 112881 RVA: 0x0078FA38 File Offset: 0x0078DC38
+	// Token: 0x0601946A RID: 103530 RVA: 0x007B8330 File Offset: 0x007B6530
 	private void NormalNpcSitOnChair()
 	{
 		if (string.IsNullOrEmpty(this.Params.MontagePath))
@@ -882,7 +882,7 @@ public class NpcSitOnChairComponent : EntityComponent
 		}, new float?((float)-1), new float?((float)-1), new bool?(false), new bool?(false), new bool?(false));
 	}
 
-	// Token: 0x0601B8F2 RID: 112882 RVA: 0x0078FB19 File Offset: 0x0078DD19
+	// Token: 0x0601946B RID: 103531 RVA: 0x007B8411 File Offset: 0x007B6611
 	private void NormalNpcStopMontage()
 	{
 		if (this.PlayingMontage != -1)
@@ -896,7 +896,7 @@ public class NpcSitOnChairComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601B8F3 RID: 112883 RVA: 0x0078FB44 File Offset: 0x0078DD44
+	// Token: 0x0601946C RID: 103532 RVA: 0x007B843C File Offset: 0x007B663C
 	private void RoleNpcSitOnChair()
 	{
 		CharacterAnimationComponent animComp = this.AnimComp;
@@ -922,7 +922,7 @@ public class NpcSitOnChairComponent : EntityComponent
 		instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x0601B8F4 RID: 112884 RVA: 0x0078FC00 File Offset: 0x0078DE00
+	// Token: 0x0601946D RID: 103533 RVA: 0x007B84F8 File Offset: 0x007B66F8
 	private void RoleNpcStandUp()
 	{
 		CharacterAnimationComponent animComp = this.AnimComp;
@@ -945,7 +945,7 @@ public class NpcSitOnChairComponent : EntityComponent
 		instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x0601B8F5 RID: 112885 RVA: 0x0078FC98 File Offset: 0x0078DE98
+	// Token: 0x0601946E RID: 103534 RVA: 0x007B8590 File Offset: 0x007B6790
 	public void DoSitDownAction(Entity chair)
 	{
 		if (chair == null)
@@ -964,7 +964,7 @@ public class NpcSitOnChairComponent : EntityComponent
 		this.ActorComp.SetActorLocationAndRotation(this.TempVector.ToUeVector(false), this.TempRotator.ToUeRotator(), "角色坐下", false, null);
 	}
 
-	// Token: 0x0601B8F6 RID: 112886 RVA: 0x0078FD70 File Offset: 0x0078DF70
+	// Token: 0x0601946F RID: 103535 RVA: 0x007B8668 File Offset: 0x007B6868
 	private int CalculateLeaveSitDownIndex(Entity chair)
 	{
 		if (chair == null)
@@ -1006,7 +1006,7 @@ public class NpcSitOnChairComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601B8F7 RID: 112887 RVA: 0x0078FE78 File Offset: 0x0078E078
+	// Token: 0x06019470 RID: 103536 RVA: 0x007B8770 File Offset: 0x007B6970
 	private EChairInteractDirection IsChairCanInteract(Entity sceneItem)
 	{
 		SceneItemActorComponent component = sceneItem.GetComponent<SceneItemActorComponent>();
@@ -1046,7 +1046,7 @@ public class NpcSitOnChairComponent : EntityComponent
 		return EChairInteractDirection.None;
 	}
 
-	// Token: 0x0601B8F8 RID: 112888 RVA: 0x0078FFCC File Offset: 0x0078E1CC
+	// Token: 0x06019471 RID: 103537 RVA: 0x007B88C4 File Offset: 0x007B6AC4
 	public void ResetCollision(Entity chair)
 	{
 		this.ActorComp.Actor.CapsuleComponent.SetCollisionResponseToChannel(ECollisionChannel.ECC_Pawn, ECollisionResponse.ECR_Block);
@@ -1061,7 +1061,7 @@ public class NpcSitOnChairComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601B8F9 RID: 112889 RVA: 0x00790010 File Offset: 0x0078E210
+	// Token: 0x06019472 RID: 103538 RVA: 0x007B8908 File Offset: 0x007B6B08
 	private void IgnoreCollision(Entity chair)
 	{
 		SceneItemActorComponent component = chair.GetComponent<SceneItemActorComponent>();
@@ -1072,7 +1072,7 @@ public class NpcSitOnChairComponent : EntityComponent
 		this.ActorComp.Actor.CapsuleComponent.SetCollisionResponseToChannel(ECollisionChannel.ECC_Pawn, ECollisionResponse.ECR_Ignore);
 	}
 
-	// Token: 0x0601B8FA RID: 112890 RVA: 0x00790050 File Offset: 0x0078E250
+	// Token: 0x06019473 RID: 103539 RVA: 0x007B8948 File Offset: 0x007B6B48
 	private void IgnoreActorsCollision(SceneItemActorComponent actorComp, bool bCollision)
 	{
 		CreatureDataComponent component = actorComp.Entity.GetComponent<CreatureDataComponent>();
@@ -1111,7 +1111,7 @@ public class NpcSitOnChairComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601B8FB RID: 112891 RVA: 0x00790140 File Offset: 0x0078E340
+	// Token: 0x06019474 RID: 103540 RVA: 0x007B8A38 File Offset: 0x007B6C38
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -1119,353 +1119,309 @@ public class NpcSitOnChairComponent : EntityComponent
 			return false;
 		}
 		NpcSitOnChairComponent npcSitOnChairComponent = (NpcSitOnChairComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ChairNearbyPos") && npcSitOnChairComponent.ChairNearbyPos != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.ChairNearbyPos), "ChairNearbyPos"))
+		if (npcSitOnChairComponent.ChairNearbyPos != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ChairNearbyPos), "ChairNearbyPos"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TempVector") && npcSitOnChairComponent.TempVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TempVector), "TempVector"))
+		if (npcSitOnChairComponent.TempVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempVector), "TempVector"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TempVector2") && npcSitOnChairComponent.TempVector2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TempVector2), "TempVector2"))
+		if (npcSitOnChairComponent.TempVector2 != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempVector2), "TempVector2"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TempRotator") && npcSitOnChairComponent.TempRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Rotator>(this.TempRotator), "TempRotator"))
+		if (npcSitOnChairComponent.TempRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TempRotator), "TempRotator"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("ActorComp"))
+		if (npcSitOnChairComponent.ActorComp == null)
 		{
-			if (npcSitOnChairComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("MoveComp"))
-		{
-			if (npcSitOnChairComponent.MoveComp == null)
-			{
-				this.MoveComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseMoveComponent>(this.MoveComp), "MoveComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("PerformComp"))
-		{
-			if (npcSitOnChairComponent.PerformComp == null)
-			{
-				this.PerformComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BasePerformComponent>(this.PerformComp), "PerformComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("AnimComp"))
-		{
-			if (npcSitOnChairComponent.AnimComp == null)
-			{
-				this.AnimComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterAnimationComponent>(this.AnimComp), "AnimComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("IsRoleNpc"))
-		{
-			this.IsRoleNpc = npcSitOnChairComponent.IsRoleNpc;
-		}
-		if (base.CanResetComponentProperty("PlayingMontage"))
-		{
-			this.PlayingMontage = npcSitOnChairComponent.PlayingMontage;
-		}
-		if (base.CanResetComponentProperty("MovementMode"))
-		{
-			this.MovementMode = npcSitOnChairComponent.MovementMode;
-		}
-		if (base.CanResetComponentProperty("ChairController"))
-		{
-			if (npcSitOnChairComponent.ChairController == null)
-			{
-				this.ChairController = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PawnChairController>(this.ChairController), "ChairController"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("Params"))
-		{
-			if (npcSitOnChairComponent.Params == null)
-			{
-				this.Params = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<INpcSitOnChairParams>(this.Params), "Params"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("CloseMoveLocation") && npcSitOnChairComponent.CloseMoveLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.CloseMoveLocation), "CloseMoveLocation"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("IsExecuting"))
+		if (npcSitOnChairComponent.MoveComp == null)
 		{
-			this.IsExecuting = npcSitOnChairComponent.IsExecuting;
+			this.MoveComp = null;
 		}
-		if (base.CanResetComponentProperty("IsAbortRequested"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
 		{
-			this.IsAbortRequested = npcSitOnChairComponent.IsAbortRequested;
+			return false;
 		}
-		if (base.CanResetComponentProperty("FlowId"))
+		if (npcSitOnChairComponent.PerformComp == null)
 		{
-			this.FlowId = npcSitOnChairComponent.FlowId;
+			this.PerformComp = null;
 		}
-		if (base.CanResetComponentProperty("MoveHandleId"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PerformComp), "PerformComp"))
 		{
-			this.MoveHandleId = npcSitOnChairComponent.MoveHandleId;
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsActorChairCollisionIgnored"))
+		if (npcSitOnChairComponent.AnimComp == null)
 		{
-			this.IsActorChairCollisionIgnored = npcSitOnChairComponent.IsActorChairCollisionIgnored;
+			this.AnimComp = null;
 		}
-		if (base.CanResetComponentProperty("IsChairPossessed"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AnimComp), "AnimComp"))
 		{
-			this.IsChairPossessed = npcSitOnChairComponent.IsChairPossessed;
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsChairInteractLocked"))
+		this.IsRoleNpc = npcSitOnChairComponent.IsRoleNpc;
+		this.PlayingMontage = npcSitOnChairComponent.PlayingMontage;
+		this.MovementMode = npcSitOnChairComponent.MovementMode;
+		if (npcSitOnChairComponent.ChairController == null)
 		{
-			this.IsChairInteractLocked = npcSitOnChairComponent.IsChairInteractLocked;
+			this.ChairController = null;
 		}
-		if (base.CanResetComponentProperty("LastChairClientCanInteraction"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ChairController), "ChairController"))
 		{
-			this.LastChairClientCanInteraction = npcSitOnChairComponent.LastChairClientCanInteraction;
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsExecuteMoveNearby"))
+		if (npcSitOnChairComponent.Params == null)
 		{
-			this.IsExecuteMoveNearby = npcSitOnChairComponent.IsExecuteMoveNearby;
+			this.Params = null;
 		}
-		if (base.CanResetComponentProperty("IsExecuteMoveClose"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Params), "Params"))
 		{
-			this.IsExecuteMoveClose = npcSitOnChairComponent.IsExecuteMoveClose;
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsExecuteTurnTo"))
+		if (npcSitOnChairComponent.CloseMoveLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CloseMoveLocation), "CloseMoveLocation"))
 		{
-			this.IsExecuteTurnTo = npcSitOnChairComponent.IsExecuteTurnTo;
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsExecutePlayMontage"))
+		this.IsExecuting = npcSitOnChairComponent.IsExecuting;
+		this.IsAbortRequested = npcSitOnChairComponent.IsAbortRequested;
+		this.FlowId = npcSitOnChairComponent.FlowId;
+		this.MoveHandleId = npcSitOnChairComponent.MoveHandleId;
+		this.IsActorChairCollisionIgnored = npcSitOnChairComponent.IsActorChairCollisionIgnored;
+		this.IsChairPossessed = npcSitOnChairComponent.IsChairPossessed;
+		this.IsChairInteractLocked = npcSitOnChairComponent.IsChairInteractLocked;
+		this.LastChairClientCanInteraction = npcSitOnChairComponent.LastChairClientCanInteraction;
+		this.IsExecuteMoveNearby = npcSitOnChairComponent.IsExecuteMoveNearby;
+		this.IsExecuteMoveClose = npcSitOnChairComponent.IsExecuteMoveClose;
+		this.IsExecuteTurnTo = npcSitOnChairComponent.IsExecuteTurnTo;
+		this.IsExecutePlayMontage = npcSitOnChairComponent.IsExecutePlayMontage;
+		this.IsExecuteMoveAway = npcSitOnChairComponent.IsExecuteMoveAway;
+		this.IsAlignedToChair = npcSitOnChairComponent.IsAlignedToChair;
+		this.PhaseInternal = npcSitOnChairComponent.PhaseInternal;
+		this.LastFinishTime = npcSitOnChairComponent.LastFinishTime;
+		this.StartSitOnChairTime = npcSitOnChairComponent.StartSitOnChairTime;
+		this.StartStandUpTime = npcSitOnChairComponent.StartStandUpTime;
+		if (npcSitOnChairComponent.ExitSitTimerHandle == null)
 		{
-			this.IsExecutePlayMontage = npcSitOnChairComponent.IsExecutePlayMontage;
+			this.ExitSitTimerHandle = null;
 		}
-		if (base.CanResetComponentProperty("IsExecuteMoveAway"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ExitSitTimerHandle), "ExitSitTimerHandle"))
 		{
-			this.IsExecuteMoveAway = npcSitOnChairComponent.IsExecuteMoveAway;
-		}
-		if (base.CanResetComponentProperty("IsAlignedToChair"))
-		{
-			this.IsAlignedToChair = npcSitOnChairComponent.IsAlignedToChair;
-		}
-		if (base.CanResetComponentProperty("PhaseInternal"))
-		{
-			this.PhaseInternal = npcSitOnChairComponent.PhaseInternal;
-		}
-		if (base.CanResetComponentProperty("LastFinishTime"))
-		{
-			this.LastFinishTime = npcSitOnChairComponent.LastFinishTime;
-		}
-		if (base.CanResetComponentProperty("StartSitOnChairTime"))
-		{
-			this.StartSitOnChairTime = npcSitOnChairComponent.StartSitOnChairTime;
-		}
-		if (base.CanResetComponentProperty("StartStandUpTime"))
-		{
-			this.StartStandUpTime = npcSitOnChairComponent.StartStandUpTime;
-		}
-		if (base.CanResetComponentProperty("ExitSitTimerHandle"))
-		{
-			if (npcSitOnChairComponent.ExitSitTimerHandle == null)
-			{
-				this.ExitSitTimerHandle = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.ExitSitTimerHandle), "ExitSitTimerHandle"))
-			{
-				return false;
-			}
+			return false;
 		}
 		return true;
 	}
 
-	// Token: 0x0400D86E RID: 55406
+	// Token: 0x17002850 RID: 10320
+	// (get) Token: 0x06019475 RID: 103541 RVA: 0x007B8D2B File Offset: 0x007B6F2B
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002851 RID: 10321
+	// (get) Token: 0x06019476 RID: 103542 RVA: 0x007B8D2E File Offset: 0x007B6F2E
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002852 RID: 10322
+	// (get) Token: 0x06019477 RID: 103543 RVA: 0x007B8D31 File Offset: 0x007B6F31
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002853 RID: 10323
+	// (get) Token: 0x06019478 RID: 103544 RVA: 0x007B8D34 File Offset: 0x007B6F34
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400DD0C RID: 56588
 	private const int TOLERANCE = 10;
 
-	// Token: 0x0400D86F RID: 55407
+	// Token: 0x0400DD0D RID: 56589
 	private const int TURN_SPEED = 200;
 
-	// Token: 0x0400D870 RID: 55408
+	// Token: 0x0400DD0E RID: 56590
 	private const int NEARBY_CHAIR_TOLERANCE_SQUARED = 2500;
 
-	// Token: 0x0400D871 RID: 55409
+	// Token: 0x0400DD0F RID: 56591
 	private const int NEARBY_CHAIR_OFFSET = 50;
 
-	// Token: 0x0400D872 RID: 55410
+	// Token: 0x0400DD10 RID: 56592
 	private const int MOVE_TO_CHAIR_SPEED = 70;
 
-	// Token: 0x0400D873 RID: 55411
+	// Token: 0x0400DD11 RID: 56593
 	private const int MOVE_TO_NEARBY_CHAIR_SPEED = 100;
 
-	// Token: 0x0400D874 RID: 55412
+	// Token: 0x0400DD12 RID: 56594
 	private const int MOVE_TO_NEARBY_CHAIR_RUN_SPEED = 400;
 
-	// Token: 0x0400D875 RID: 55413
+	// Token: 0x0400DD13 RID: 56595
 	private const int MOVE_TO_CHAIR_DISTANCE_TOLERANCE = 5;
 
-	// Token: 0x0400D876 RID: 55414
+	// Token: 0x0400DD14 RID: 56596
 	private const int NEARBY_RUN_DISTANCE_SQUARED = 160000;
 
-	// Token: 0x0400D877 RID: 55415
+	// Token: 0x0400DD15 RID: 56597
 	private const int MODEL_BUFFER_TIME = 200;
 
-	// Token: 0x0400D878 RID: 55416
+	// Token: 0x0400DD16 RID: 56598
 	private const int SIT_UP_TIME = 2000;
 
-	// Token: 0x0400D879 RID: 55417
+	// Token: 0x0400DD17 RID: 56599
 	private const int SIT_DOWN_TIME = 1500;
 
-	// Token: 0x0400D87A RID: 55418
+	// Token: 0x0400DD18 RID: 56600
 	private const int MOVE_TIMEOUT_1 = 1;
 
-	// Token: 0x0400D87B RID: 55419
+	// Token: 0x0400DD19 RID: 56601
 	private const int MOVE_TIMEOUT_2 = 2;
 
-	// Token: 0x0400D87C RID: 55420
+	// Token: 0x0400DD1A RID: 56602
 	private const int FOURTY_FIVE = 45;
 
-	// Token: 0x0400D87D RID: 55421
+	// Token: 0x0400DD1B RID: 56603
 	private const double ZERO_EIGHT = 0.8;
 
-	// Token: 0x0400D87E RID: 55422
+	// Token: 0x0400DD1C RID: 56604
 	private const int FIVETY = 50;
 
-	// Token: 0x0400D87F RID: 55423
+	// Token: 0x0400DD1D RID: 56605
 	private const int ONE_HUNDRED_FOURTY = 140;
 
-	// Token: 0x0400D880 RID: 55424
+	// Token: 0x0400DD1E RID: 56606
 	private const int TWO_HUNDRED_TWENTY = 220;
 
-	// Token: 0x0400D881 RID: 55425
+	// Token: 0x0400DD1F RID: 56607
 	private const double PI_DEG_DOUBLE = 360.0;
 
-	// Token: 0x0400D882 RID: 55426
+	// Token: 0x0400DD20 RID: 56608
 	private readonly Vector ChairNearbyPos = Vector.Create();
 
-	// Token: 0x0400D883 RID: 55427
+	// Token: 0x0400DD21 RID: 56609
 	private readonly Vector TempVector = Vector.Create();
 
-	// Token: 0x0400D884 RID: 55428
+	// Token: 0x0400DD22 RID: 56610
 	private readonly Vector TempVector2 = Vector.Create();
 
-	// Token: 0x0400D885 RID: 55429
+	// Token: 0x0400DD23 RID: 56611
 	private readonly Rotator TempRotator = Rotator.Create();
 
-	// Token: 0x0400D886 RID: 55430
+	// Token: 0x0400DD24 RID: 56612
 	[Nullable(2)]
 	private CharacterActorComponent ActorComp;
 
-	// Token: 0x0400D887 RID: 55431
+	// Token: 0x0400DD25 RID: 56613
 	[Nullable(2)]
 	private BaseMoveComponent MoveComp;
 
-	// Token: 0x0400D888 RID: 55432
+	// Token: 0x0400DD26 RID: 56614
 	[Nullable(2)]
 	private BasePerformComponent PerformComp;
 
-	// Token: 0x0400D889 RID: 55433
+	// Token: 0x0400DD27 RID: 56615
 	[Nullable(2)]
 	private CharacterAnimationComponent AnimComp;
 
-	// Token: 0x0400D88A RID: 55434
+	// Token: 0x0400DD28 RID: 56616
 	private bool IsRoleNpc;
 
-	// Token: 0x0400D88B RID: 55435
+	// Token: 0x0400DD29 RID: 56617
 	private int PlayingMontage = -1;
 
-	// Token: 0x0400D88C RID: 55436
+	// Token: 0x0400DD2A RID: 56618
 	private EMovementMode MovementMode;
 
-	// Token: 0x0400D88D RID: 55437
+	// Token: 0x0400DD2B RID: 56619
 	[Nullable(2)]
 	private PawnChairController ChairController;
 
-	// Token: 0x0400D88E RID: 55438
+	// Token: 0x0400DD2C RID: 56620
 	[Nullable(2)]
 	private INpcSitOnChairParams Params;
 
-	// Token: 0x0400D88F RID: 55439
+	// Token: 0x0400DD2D RID: 56621
 	private readonly Vector CloseMoveLocation = Vector.Create();
 
-	// Token: 0x0400D890 RID: 55440
+	// Token: 0x0400DD2E RID: 56622
 	private bool IsExecuting;
 
-	// Token: 0x0400D891 RID: 55441
+	// Token: 0x0400DD2F RID: 56623
 	private bool IsAbortRequested;
 
-	// Token: 0x0400D892 RID: 55442
+	// Token: 0x0400DD30 RID: 56624
 	private int FlowId;
 
-	// Token: 0x0400D893 RID: 55443
+	// Token: 0x0400DD31 RID: 56625
 	private int MoveHandleId;
 
-	// Token: 0x0400D894 RID: 55444
+	// Token: 0x0400DD32 RID: 56626
 	private bool IsActorChairCollisionIgnored;
 
-	// Token: 0x0400D895 RID: 55445
+	// Token: 0x0400DD33 RID: 56627
 	private bool IsChairPossessed;
 
-	// Token: 0x0400D896 RID: 55446
+	// Token: 0x0400DD34 RID: 56628
 	private bool IsChairInteractLocked;
 
-	// Token: 0x0400D897 RID: 55447
+	// Token: 0x0400DD35 RID: 56629
 	private bool LastChairClientCanInteraction = true;
 
-	// Token: 0x0400D898 RID: 55448
+	// Token: 0x0400DD36 RID: 56630
 	private bool IsExecuteMoveNearby;
 
-	// Token: 0x0400D899 RID: 55449
+	// Token: 0x0400DD37 RID: 56631
 	private bool IsExecuteMoveClose;
 
-	// Token: 0x0400D89A RID: 55450
+	// Token: 0x0400DD38 RID: 56632
 	private bool IsExecuteTurnTo;
 
-	// Token: 0x0400D89B RID: 55451
+	// Token: 0x0400DD39 RID: 56633
 	private bool IsExecutePlayMontage;
 
-	// Token: 0x0400D89C RID: 55452
+	// Token: 0x0400DD3A RID: 56634
 	private bool IsExecuteMoveAway;
 
-	// Token: 0x0400D89D RID: 55453
+	// Token: 0x0400DD3B RID: 56635
 	private bool IsAlignedToChair;
 
-	// Token: 0x0400D89E RID: 55454
+	// Token: 0x0400DD3C RID: 56636
 	private NpcSitOnChair.ETaskPhase PhaseInternal;
 
-	// Token: 0x0400D89F RID: 55455
+	// Token: 0x0400DD3D RID: 56637
 	private double LastFinishTime;
 
-	// Token: 0x0400D8A0 RID: 55456
+	// Token: 0x0400DD3E RID: 56638
 	private double StartSitOnChairTime;
 
-	// Token: 0x0400D8A1 RID: 55457
+	// Token: 0x0400DD3F RID: 56639
 	private double StartStandUpTime;
 
-	// Token: 0x0400D8A2 RID: 55458
+	// Token: 0x0400DD40 RID: 56640
 	[Nullable(2)]
 	private TimerHandle ExitSitTimerHandle;
 }

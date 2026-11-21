@@ -2,17 +2,17 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02002F24 RID: 12068
+// Token: 0x02002477 RID: 9335
 [NullableContext(1)]
 [Nullable(0)]
 public class ExtraEffectBehaviorControl : BuffEffect
 {
-	// Token: 0x06019B73 RID: 105331 RVA: 0x006B1F3E File Offset: 0x006B013E
+	// Token: 0x0601747E RID: 95358 RVA: 0x006D8256 File Offset: 0x006D6456
 	public ExtraEffectBehaviorControl(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019B74 RID: 105332 RVA: 0x006B1F50 File Offset: 0x006B0150
+	// Token: 0x0601747F RID: 95359 RVA: 0x006D8268 File Offset: 0x006D6468
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -20,7 +20,7 @@ public class ExtraEffectBehaviorControl : BuffEffect
 		this.ControlType = (EControlType)controlType;
 	}
 
-	// Token: 0x06019B75 RID: 105333 RVA: 0x006B1F88 File Offset: 0x006B0188
+	// Token: 0x06017480 RID: 95360 RVA: 0x006D82A0 File Offset: 0x006D64A0
 	public override void OnCreated()
 	{
 		if (!base.TryExecute(new Partial_RequirementPayload(), this.OwnerBuffComponent, Array.Empty<object>()))
@@ -30,7 +30,7 @@ public class ExtraEffectBehaviorControl : BuffEffect
 		}
 	}
 
-	// Token: 0x06019B76 RID: 105334 RVA: 0x006B1FE7 File Offset: 0x006B01E7
+	// Token: 0x06017481 RID: 95361 RVA: 0x006D82FF File Offset: 0x006D64FF
 	public override void OnRemoved(bool bPremature)
 	{
 		if (!this.IsActive)
@@ -44,7 +44,7 @@ public class ExtraEffectBehaviorControl : BuffEffect
 		}
 	}
 
-	// Token: 0x06019B77 RID: 105335 RVA: 0x006B200C File Offset: 0x006B020C
+	// Token: 0x06017482 RID: 95362 RVA: 0x006D8324 File Offset: 0x006D6524
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
@@ -69,13 +69,13 @@ public class ExtraEffectBehaviorControl : BuffEffect
 		return null;
 	}
 
-	// Token: 0x06019B78 RID: 105336 RVA: 0x006B20E8 File Offset: 0x006B02E8
+	// Token: 0x06017483 RID: 95363 RVA: 0x006D8400 File Offset: 0x006D6600
 	private void ApplyTaunt(bool addOrRemove)
 	{
 		EventSystem.Instance.EmitWithTarget<bool, int, int>(base.OwnerEntity, EEventName.AiTauntAddOrRemove, addOrRemove, this.InstigatorEntityId, this.ActiveHandleId);
 	}
 
-	// Token: 0x06019B79 RID: 105337 RVA: 0x006B2110 File Offset: 0x006B0310
+	// Token: 0x06017484 RID: 95364 RVA: 0x006D8428 File Offset: 0x006D6628
 	private void ApplyTemptation(bool addOrRemove)
 	{
 		if (addOrRemove)
@@ -89,9 +89,9 @@ public class ExtraEffectBehaviorControl : BuffEffect
 		}
 	}
 
-	// Token: 0x0400C1C3 RID: 49603
+	// Token: 0x0400C565 RID: 50533
 	private EControlType ControlType;
 
-	// Token: 0x0400C1C4 RID: 49604
+	// Token: 0x0400C566 RID: 50534
 	private bool IsActive;
 }

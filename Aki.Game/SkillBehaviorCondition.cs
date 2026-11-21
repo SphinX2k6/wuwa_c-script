@@ -6,12 +6,12 @@ using AkiClient.Game.Aki.Character.BaseCharacter;
 using CSharpScript.Game.Input;
 using UnrealEngine;
 
-// Token: 0x02003152 RID: 12626
+// Token: 0x020026BF RID: 9919
 [NullableContext(1)]
 [Nullable(0)]
 public class SkillBehaviorCondition
 {
-	// Token: 0x0601B2CE RID: 111310 RVA: 0x00767394 File Offset: 0x00765594
+	// Token: 0x06018DD3 RID: 101843 RVA: 0x0078ED58 File Offset: 0x0078CF58
 	public unsafe static bool SatisfyGroup(TArray<SSkillBehaviorCondition> skillBehaviorConditionGroup, string skillBehaviorConditionFormula, IBeginSkillBehaviorConditionParam param)
 	{
 		List<bool> list = new List<bool>();
@@ -59,7 +59,7 @@ public class SkillBehaviorCondition
 		return true;
 	}
 
-	// Token: 0x0601B2CF RID: 111311 RVA: 0x007674CC File Offset: 0x007656CC
+	// Token: 0x06018DD4 RID: 101844 RVA: 0x0078EE90 File Offset: 0x0078D090
 	public unsafe static bool Satisfy(SSkillBehaviorCondition skillBehaviorCondition, IBeginSkillBehaviorConditionParam param)
 	{
 		bool flag = false;
@@ -122,7 +122,7 @@ public class SkillBehaviorCondition
 		return flag;
 	}
 
-	// Token: 0x0601B2D0 RID: 111312 RVA: 0x00767664 File Offset: 0x00765864
+	// Token: 0x06018DD5 RID: 101845 RVA: 0x0078F028 File Offset: 0x0078D228
 	private static bool ConditionTarget(SSkillBehaviorCondition condition, IBeginSkillBehaviorConditionParam param)
 	{
 		bool flag = false;
@@ -138,7 +138,7 @@ public class SkillBehaviorCondition
 		return !flag;
 	}
 
-	// Token: 0x0601B2D1 RID: 111313 RVA: 0x00767698 File Offset: 0x00765898
+	// Token: 0x06018DD6 RID: 101846 RVA: 0x0078F05C File Offset: 0x0078D25C
 	private static bool ConditionDistance(SSkillBehaviorCondition condition, IBeginSkillBehaviorConditionParam param)
 	{
 		bool flag = false;
@@ -157,7 +157,7 @@ public class SkillBehaviorCondition
 		return !flag;
 	}
 
-	// Token: 0x0601B2D2 RID: 111314 RVA: 0x00767738 File Offset: 0x00765938
+	// Token: 0x06018DD7 RID: 101847 RVA: 0x0078F0FC File Offset: 0x0078D2FC
 	private static bool ConditionAngle(SSkillBehaviorCondition condition, IBeginSkillBehaviorConditionParam param)
 	{
 		bool flag = false;
@@ -184,7 +184,7 @@ public class SkillBehaviorCondition
 		return !flag;
 	}
 
-	// Token: 0x0601B2D3 RID: 111315 RVA: 0x00767834 File Offset: 0x00765A34
+	// Token: 0x06018DD8 RID: 101848 RVA: 0x0078F200 File Offset: 0x0078D400
 	private static bool ConditionTag(SSkillBehaviorCondition condition, IBeginSkillBehaviorConditionParam param)
 	{
 		BaseTagComponent component = param.Entity.GetComponent<BaseTagComponent>();
@@ -196,7 +196,7 @@ public class SkillBehaviorCondition
 		return !flag;
 	}
 
-	// Token: 0x0601B2D4 RID: 111316 RVA: 0x0076788C File Offset: 0x00765A8C
+	// Token: 0x06018DD9 RID: 101849 RVA: 0x0078F258 File Offset: 0x0078D458
 	private static bool ConditionAttribute(SSkillBehaviorCondition condition, IBeginSkillBehaviorConditionParam param)
 	{
 		BaseAttributeComponent component = param.Entity.GetComponent<BaseAttributeComponent>();
@@ -210,7 +210,7 @@ public class SkillBehaviorCondition
 		return !flag;
 	}
 
-	// Token: 0x0601B2D5 RID: 111317 RVA: 0x00767914 File Offset: 0x00765B14
+	// Token: 0x06018DDA RID: 101850 RVA: 0x0078F2E0 File Offset: 0x0078D4E0
 	private static bool ConditionHeightAboveGround(SSkillBehaviorCondition condition, IBeginSkillBehaviorConditionParam param)
 	{
 		float heightAboveGround = param.Entity.GetComponent<CharacterMoveComponent>().GetHeightAboveGround(500f);
@@ -222,7 +222,7 @@ public class SkillBehaviorCondition
 		return !flag;
 	}
 
-	// Token: 0x0601B2D6 RID: 111318 RVA: 0x0076796C File Offset: 0x00765B6C
+	// Token: 0x06018DDB RID: 101851 RVA: 0x0078F338 File Offset: 0x0078D538
 	private static bool ConditionHeight(SSkillBehaviorCondition condition, IBeginSkillBehaviorConditionParam param)
 	{
 		bool flag = false;
@@ -241,7 +241,7 @@ public class SkillBehaviorCondition
 		return !flag;
 	}
 
-	// Token: 0x0601B2D7 RID: 111319 RVA: 0x00767A00 File Offset: 0x00765C00
+	// Token: 0x06018DDC RID: 101852 RVA: 0x0078F3CC File Offset: 0x0078D5CC
 	private static bool ConditionTargetOnlyCombat(SSkillBehaviorCondition condition, IBeginSkillBehaviorConditionParam param)
 	{
 		bool flag = false;
@@ -257,7 +257,7 @@ public class SkillBehaviorCondition
 		return !flag;
 	}
 
-	// Token: 0x0601B2D8 RID: 111320 RVA: 0x00767A38 File Offset: 0x00765C38
+	// Token: 0x06018DDD RID: 101853 RVA: 0x0078F404 File Offset: 0x0078D604
 	private static bool ConditionHasAxisInput(SSkillBehaviorCondition condition, IBeginSkillBehaviorConditionParam param)
 	{
 		bool flag = false;

@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200195B RID: 6491
+	// Token: 0x02000430 RID: 1072
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroGAS.BaseAttributeSet")]
 	[UnrealStructLayout(3536, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 3536)]
 	public class UBaseAttributeSet : UAttributeSet, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060180DA RID: 98522 RVA: 0x00235E2C File Offset: 0x0023402C
+		// Token: 0x060066DD RID: 26333 RVA: 0x00094C51 File Offset: 0x00092E51
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UBaseAttributeSet._ClassPtr;
 		}
 
-		// Token: 0x060180DB RID: 98523 RVA: 0x00235E38 File Offset: 0x00234038
+		// Token: 0x060066DE RID: 26334 RVA: 0x00094C60 File Offset: 0x00092E60
 		public UBaseAttributeSet() : this(BuiltinUtils.AllocNativeUObject(UBaseAttributeSet.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060180DC RID: 98524 RVA: 0x00235E60 File Offset: 0x00234060
+		// Token: 0x060066DF RID: 26335 RVA: 0x00094C88 File Offset: 0x00092E88
 		public UBaseAttributeSet(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UBaseAttributeSet.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17006043 RID: 24643
-		// (get) Token: 0x060180DD RID: 98525 RVA: 0x00235E94 File Offset: 0x00234094
-		// (set) Token: 0x060180DE RID: 98526 RVA: 0x00235ECD File Offset: 0x002340CD
+		// Token: 0x17001462 RID: 5218
+		// (get) Token: 0x060066E0 RID: 26336 RVA: 0x00094CBC File Offset: 0x00092EBC
+		// (set) Token: 0x060066E1 RID: 26337 RVA: 0x00094CF5 File Offset: 0x00092EF5
 		public FGameplayAttributeData Lv
 		{
 			get
@@ -50,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006044 RID: 24644
-		// (get) Token: 0x060180DF RID: 98527 RVA: 0x00235EF0 File Offset: 0x002340F0
-		// (set) Token: 0x060180E0 RID: 98528 RVA: 0x00235F29 File Offset: 0x00234129
+		// Token: 0x17001463 RID: 5219
+		// (get) Token: 0x060066E2 RID: 26338 RVA: 0x00094D18 File Offset: 0x00092F18
+		// (set) Token: 0x060066E3 RID: 26339 RVA: 0x00094D51 File Offset: 0x00092F51
 		public FGameplayAttributeData LifeMax
 		{
 			get
@@ -71,9 +71,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006045 RID: 24645
-		// (get) Token: 0x060180E1 RID: 98529 RVA: 0x00235F4C File Offset: 0x0023414C
-		// (set) Token: 0x060180E2 RID: 98530 RVA: 0x00235F85 File Offset: 0x00234185
+		// Token: 0x17001464 RID: 5220
+		// (get) Token: 0x060066E4 RID: 26340 RVA: 0x00094D74 File Offset: 0x00092F74
+		// (set) Token: 0x060066E5 RID: 26341 RVA: 0x00094DAD File Offset: 0x00092FAD
 		public FGameplayAttributeData Life
 		{
 			get
@@ -92,9 +92,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006046 RID: 24646
-		// (get) Token: 0x060180E3 RID: 98531 RVA: 0x00235FA8 File Offset: 0x002341A8
-		// (set) Token: 0x060180E4 RID: 98532 RVA: 0x00235FE1 File Offset: 0x002341E1
+		// Token: 0x17001465 RID: 5221
+		// (get) Token: 0x060066E6 RID: 26342 RVA: 0x00094DD0 File Offset: 0x00092FD0
+		// (set) Token: 0x060066E7 RID: 26343 RVA: 0x00094E09 File Offset: 0x00093009
 		public FGameplayAttributeData Sheild
 		{
 			get
@@ -113,9 +113,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006047 RID: 24647
-		// (get) Token: 0x060180E5 RID: 98533 RVA: 0x00236004 File Offset: 0x00234204
-		// (set) Token: 0x060180E6 RID: 98534 RVA: 0x0023603D File Offset: 0x0023423D
+		// Token: 0x17001466 RID: 5222
+		// (get) Token: 0x060066E8 RID: 26344 RVA: 0x00094E2C File Offset: 0x0009302C
+		// (set) Token: 0x060066E9 RID: 26345 RVA: 0x00094E65 File Offset: 0x00093065
 		public FGameplayAttributeData SheildDamageChange
 		{
 			get
@@ -134,9 +134,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006048 RID: 24648
-		// (get) Token: 0x060180E7 RID: 98535 RVA: 0x00236060 File Offset: 0x00234260
-		// (set) Token: 0x060180E8 RID: 98536 RVA: 0x00236099 File Offset: 0x00234299
+		// Token: 0x17001467 RID: 5223
+		// (get) Token: 0x060066EA RID: 26346 RVA: 0x00094E88 File Offset: 0x00093088
+		// (set) Token: 0x060066EB RID: 26347 RVA: 0x00094EC1 File Offset: 0x000930C1
 		public FGameplayAttributeData SheildDamageReduce
 		{
 			get
@@ -155,9 +155,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006049 RID: 24649
-		// (get) Token: 0x060180E9 RID: 98537 RVA: 0x002360BC File Offset: 0x002342BC
-		// (set) Token: 0x060180EA RID: 98538 RVA: 0x002360F5 File Offset: 0x002342F5
+		// Token: 0x17001468 RID: 5224
+		// (get) Token: 0x060066EC RID: 26348 RVA: 0x00094EE4 File Offset: 0x000930E4
+		// (set) Token: 0x060066ED RID: 26349 RVA: 0x00094F1D File Offset: 0x0009311D
 		public FGameplayAttributeData Atk
 		{
 			get
@@ -176,9 +176,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700604A RID: 24650
-		// (get) Token: 0x060180EB RID: 98539 RVA: 0x00236118 File Offset: 0x00234318
-		// (set) Token: 0x060180EC RID: 98540 RVA: 0x00236151 File Offset: 0x00234351
+		// Token: 0x17001469 RID: 5225
+		// (get) Token: 0x060066EE RID: 26350 RVA: 0x00094F40 File Offset: 0x00093140
+		// (set) Token: 0x060066EF RID: 26351 RVA: 0x00094F79 File Offset: 0x00093179
 		public FGameplayAttributeData Crit
 		{
 			get
@@ -197,9 +197,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700604B RID: 24651
-		// (get) Token: 0x060180ED RID: 98541 RVA: 0x00236174 File Offset: 0x00234374
-		// (set) Token: 0x060180EE RID: 98542 RVA: 0x002361AD File Offset: 0x002343AD
+		// Token: 0x1700146A RID: 5226
+		// (get) Token: 0x060066F0 RID: 26352 RVA: 0x00094F9C File Offset: 0x0009319C
+		// (set) Token: 0x060066F1 RID: 26353 RVA: 0x00094FD5 File Offset: 0x000931D5
 		public FGameplayAttributeData CritDamage
 		{
 			get
@@ -218,9 +218,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700604C RID: 24652
-		// (get) Token: 0x060180EF RID: 98543 RVA: 0x002361D0 File Offset: 0x002343D0
-		// (set) Token: 0x060180F0 RID: 98544 RVA: 0x00236209 File Offset: 0x00234409
+		// Token: 0x1700146B RID: 5227
+		// (get) Token: 0x060066F2 RID: 26354 RVA: 0x00094FF8 File Offset: 0x000931F8
+		// (set) Token: 0x060066F3 RID: 26355 RVA: 0x00095031 File Offset: 0x00093231
 		public FGameplayAttributeData Def
 		{
 			get
@@ -239,9 +239,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700604D RID: 24653
-		// (get) Token: 0x060180F1 RID: 98545 RVA: 0x0023622C File Offset: 0x0023442C
-		// (set) Token: 0x060180F2 RID: 98546 RVA: 0x00236265 File Offset: 0x00234465
+		// Token: 0x1700146C RID: 5228
+		// (get) Token: 0x060066F4 RID: 26356 RVA: 0x00095054 File Offset: 0x00093254
+		// (set) Token: 0x060066F5 RID: 26357 RVA: 0x0009508D File Offset: 0x0009328D
 		public FGameplayAttributeData EnergyEfficiency
 		{
 			get
@@ -260,9 +260,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700604E RID: 24654
-		// (get) Token: 0x060180F3 RID: 98547 RVA: 0x00236288 File Offset: 0x00234488
-		// (set) Token: 0x060180F4 RID: 98548 RVA: 0x002362C1 File Offset: 0x002344C1
+		// Token: 0x1700146D RID: 5229
+		// (get) Token: 0x060066F6 RID: 26358 RVA: 0x000950B0 File Offset: 0x000932B0
+		// (set) Token: 0x060066F7 RID: 26359 RVA: 0x000950E9 File Offset: 0x000932E9
 		public FGameplayAttributeData CDReduse
 		{
 			get
@@ -281,9 +281,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700604F RID: 24655
-		// (get) Token: 0x060180F5 RID: 98549 RVA: 0x002362E4 File Offset: 0x002344E4
-		// (set) Token: 0x060180F6 RID: 98550 RVA: 0x0023631D File Offset: 0x0023451D
+		// Token: 0x1700146E RID: 5230
+		// (get) Token: 0x060066F8 RID: 26360 RVA: 0x0009510C File Offset: 0x0009330C
+		// (set) Token: 0x060066F9 RID: 26361 RVA: 0x00095145 File Offset: 0x00093345
 		public FGameplayAttributeData ReactionEfficiency
 		{
 			get
@@ -302,9 +302,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006050 RID: 24656
-		// (get) Token: 0x060180F7 RID: 98551 RVA: 0x00236340 File Offset: 0x00234540
-		// (set) Token: 0x060180F8 RID: 98552 RVA: 0x00236379 File Offset: 0x00234579
+		// Token: 0x1700146F RID: 5231
+		// (get) Token: 0x060066FA RID: 26362 RVA: 0x00095168 File Offset: 0x00093368
+		// (set) Token: 0x060066FB RID: 26363 RVA: 0x000951A1 File Offset: 0x000933A1
 		public FGameplayAttributeData DamageChangeNormalSkill
 		{
 			get
@@ -323,9 +323,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006051 RID: 24657
-		// (get) Token: 0x060180F9 RID: 98553 RVA: 0x0023639C File Offset: 0x0023459C
-		// (set) Token: 0x060180FA RID: 98554 RVA: 0x002363D5 File Offset: 0x002345D5
+		// Token: 0x17001470 RID: 5232
+		// (get) Token: 0x060066FC RID: 26364 RVA: 0x000951C4 File Offset: 0x000933C4
+		// (set) Token: 0x060066FD RID: 26365 RVA: 0x000951FD File Offset: 0x000933FD
 		public FGameplayAttributeData DamageChange
 		{
 			get
@@ -344,9 +344,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006052 RID: 24658
-		// (get) Token: 0x060180FB RID: 98555 RVA: 0x002363F8 File Offset: 0x002345F8
-		// (set) Token: 0x060180FC RID: 98556 RVA: 0x00236431 File Offset: 0x00234631
+		// Token: 0x17001471 RID: 5233
+		// (get) Token: 0x060066FE RID: 26366 RVA: 0x00095220 File Offset: 0x00093420
+		// (set) Token: 0x060066FF RID: 26367 RVA: 0x00095259 File Offset: 0x00093459
 		public FGameplayAttributeData DamageReduce
 		{
 			get
@@ -365,9 +365,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006053 RID: 24659
-		// (get) Token: 0x060180FD RID: 98557 RVA: 0x00236454 File Offset: 0x00234654
-		// (set) Token: 0x060180FE RID: 98558 RVA: 0x0023648D File Offset: 0x0023468D
+		// Token: 0x17001472 RID: 5234
+		// (get) Token: 0x06006700 RID: 26368 RVA: 0x0009527C File Offset: 0x0009347C
+		// (set) Token: 0x06006701 RID: 26369 RVA: 0x000952B5 File Offset: 0x000934B5
 		public FGameplayAttributeData DamageChangeAuto
 		{
 			get
@@ -386,9 +386,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006054 RID: 24660
-		// (get) Token: 0x060180FF RID: 98559 RVA: 0x002364B0 File Offset: 0x002346B0
-		// (set) Token: 0x06018100 RID: 98560 RVA: 0x002364E9 File Offset: 0x002346E9
+		// Token: 0x17001473 RID: 5235
+		// (get) Token: 0x06006702 RID: 26370 RVA: 0x000952D8 File Offset: 0x000934D8
+		// (set) Token: 0x06006703 RID: 26371 RVA: 0x00095311 File Offset: 0x00093511
 		public FGameplayAttributeData DamageChangeCast
 		{
 			get
@@ -407,9 +407,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006055 RID: 24661
-		// (get) Token: 0x06018101 RID: 98561 RVA: 0x0023650C File Offset: 0x0023470C
-		// (set) Token: 0x06018102 RID: 98562 RVA: 0x00236545 File Offset: 0x00234745
+		// Token: 0x17001474 RID: 5236
+		// (get) Token: 0x06006704 RID: 26372 RVA: 0x00095334 File Offset: 0x00093534
+		// (set) Token: 0x06006705 RID: 26373 RVA: 0x0009536D File Offset: 0x0009356D
 		public FGameplayAttributeData DamageChangeUltra
 		{
 			get
@@ -428,9 +428,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006056 RID: 24662
-		// (get) Token: 0x06018103 RID: 98563 RVA: 0x00236568 File Offset: 0x00234768
-		// (set) Token: 0x06018104 RID: 98564 RVA: 0x002365A1 File Offset: 0x002347A1
+		// Token: 0x17001475 RID: 5237
+		// (get) Token: 0x06006706 RID: 26374 RVA: 0x00095390 File Offset: 0x00093590
+		// (set) Token: 0x06006707 RID: 26375 RVA: 0x000953C9 File Offset: 0x000935C9
 		public FGameplayAttributeData DamageChangeQTE
 		{
 			get
@@ -449,9 +449,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006057 RID: 24663
-		// (get) Token: 0x06018105 RID: 98565 RVA: 0x002365C4 File Offset: 0x002347C4
-		// (set) Token: 0x06018106 RID: 98566 RVA: 0x002365FD File Offset: 0x002347FD
+		// Token: 0x17001476 RID: 5238
+		// (get) Token: 0x06006708 RID: 26376 RVA: 0x000953EC File Offset: 0x000935EC
+		// (set) Token: 0x06006709 RID: 26377 RVA: 0x00095425 File Offset: 0x00093625
 		public FGameplayAttributeData DamageChangePhys
 		{
 			get
@@ -470,9 +470,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006058 RID: 24664
-		// (get) Token: 0x06018107 RID: 98567 RVA: 0x00236620 File Offset: 0x00234820
-		// (set) Token: 0x06018108 RID: 98568 RVA: 0x00236659 File Offset: 0x00234859
+		// Token: 0x17001477 RID: 5239
+		// (get) Token: 0x0600670A RID: 26378 RVA: 0x00095448 File Offset: 0x00093648
+		// (set) Token: 0x0600670B RID: 26379 RVA: 0x00095481 File Offset: 0x00093681
 		public FGameplayAttributeData DamageChangeElement1
 		{
 			get
@@ -491,9 +491,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006059 RID: 24665
-		// (get) Token: 0x06018109 RID: 98569 RVA: 0x0023667C File Offset: 0x0023487C
-		// (set) Token: 0x0601810A RID: 98570 RVA: 0x002366B5 File Offset: 0x002348B5
+		// Token: 0x17001478 RID: 5240
+		// (get) Token: 0x0600670C RID: 26380 RVA: 0x000954A4 File Offset: 0x000936A4
+		// (set) Token: 0x0600670D RID: 26381 RVA: 0x000954DD File Offset: 0x000936DD
 		public FGameplayAttributeData DamageChangeElement2
 		{
 			get
@@ -512,9 +512,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700605A RID: 24666
-		// (get) Token: 0x0601810B RID: 98571 RVA: 0x002366D8 File Offset: 0x002348D8
-		// (set) Token: 0x0601810C RID: 98572 RVA: 0x00236711 File Offset: 0x00234911
+		// Token: 0x17001479 RID: 5241
+		// (get) Token: 0x0600670E RID: 26382 RVA: 0x00095500 File Offset: 0x00093700
+		// (set) Token: 0x0600670F RID: 26383 RVA: 0x00095539 File Offset: 0x00093739
 		public FGameplayAttributeData DamageChangeElement3
 		{
 			get
@@ -533,9 +533,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700605B RID: 24667
-		// (get) Token: 0x0601810D RID: 98573 RVA: 0x00236734 File Offset: 0x00234934
-		// (set) Token: 0x0601810E RID: 98574 RVA: 0x0023676D File Offset: 0x0023496D
+		// Token: 0x1700147A RID: 5242
+		// (get) Token: 0x06006710 RID: 26384 RVA: 0x0009555C File Offset: 0x0009375C
+		// (set) Token: 0x06006711 RID: 26385 RVA: 0x00095595 File Offset: 0x00093795
 		public FGameplayAttributeData DamageChangeElement4
 		{
 			get
@@ -554,9 +554,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700605C RID: 24668
-		// (get) Token: 0x0601810F RID: 98575 RVA: 0x00236790 File Offset: 0x00234990
-		// (set) Token: 0x06018110 RID: 98576 RVA: 0x002367C9 File Offset: 0x002349C9
+		// Token: 0x1700147B RID: 5243
+		// (get) Token: 0x06006712 RID: 26386 RVA: 0x000955B8 File Offset: 0x000937B8
+		// (set) Token: 0x06006713 RID: 26387 RVA: 0x000955F1 File Offset: 0x000937F1
 		public FGameplayAttributeData DamageChangeElement5
 		{
 			get
@@ -575,9 +575,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700605D RID: 24669
-		// (get) Token: 0x06018111 RID: 98577 RVA: 0x002367EC File Offset: 0x002349EC
-		// (set) Token: 0x06018112 RID: 98578 RVA: 0x00236825 File Offset: 0x00234A25
+		// Token: 0x1700147C RID: 5244
+		// (get) Token: 0x06006714 RID: 26388 RVA: 0x00095614 File Offset: 0x00093814
+		// (set) Token: 0x06006715 RID: 26389 RVA: 0x0009564D File Offset: 0x0009384D
 		public FGameplayAttributeData DamageChangeElement6
 		{
 			get
@@ -596,9 +596,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700605E RID: 24670
-		// (get) Token: 0x06018113 RID: 98579 RVA: 0x00236848 File Offset: 0x00234A48
-		// (set) Token: 0x06018114 RID: 98580 RVA: 0x00236881 File Offset: 0x00234A81
+		// Token: 0x1700147D RID: 5245
+		// (get) Token: 0x06006716 RID: 26390 RVA: 0x00095670 File Offset: 0x00093870
+		// (set) Token: 0x06006717 RID: 26391 RVA: 0x000956A9 File Offset: 0x000938A9
 		public FGameplayAttributeData DamageResistancePhys
 		{
 			get
@@ -617,9 +617,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700605F RID: 24671
-		// (get) Token: 0x06018115 RID: 98581 RVA: 0x002368A4 File Offset: 0x00234AA4
-		// (set) Token: 0x06018116 RID: 98582 RVA: 0x002368DD File Offset: 0x00234ADD
+		// Token: 0x1700147E RID: 5246
+		// (get) Token: 0x06006718 RID: 26392 RVA: 0x000956CC File Offset: 0x000938CC
+		// (set) Token: 0x06006719 RID: 26393 RVA: 0x00095705 File Offset: 0x00093905
 		public FGameplayAttributeData DamageResistanceElement1
 		{
 			get
@@ -638,9 +638,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006060 RID: 24672
-		// (get) Token: 0x06018117 RID: 98583 RVA: 0x00236900 File Offset: 0x00234B00
-		// (set) Token: 0x06018118 RID: 98584 RVA: 0x00236939 File Offset: 0x00234B39
+		// Token: 0x1700147F RID: 5247
+		// (get) Token: 0x0600671A RID: 26394 RVA: 0x00095728 File Offset: 0x00093928
+		// (set) Token: 0x0600671B RID: 26395 RVA: 0x00095761 File Offset: 0x00093961
 		public FGameplayAttributeData DamageResistanceElement2
 		{
 			get
@@ -659,9 +659,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006061 RID: 24673
-		// (get) Token: 0x06018119 RID: 98585 RVA: 0x0023695C File Offset: 0x00234B5C
-		// (set) Token: 0x0601811A RID: 98586 RVA: 0x00236995 File Offset: 0x00234B95
+		// Token: 0x17001480 RID: 5248
+		// (get) Token: 0x0600671C RID: 26396 RVA: 0x00095784 File Offset: 0x00093984
+		// (set) Token: 0x0600671D RID: 26397 RVA: 0x000957BD File Offset: 0x000939BD
 		public FGameplayAttributeData DamageResistanceElement3
 		{
 			get
@@ -680,9 +680,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006062 RID: 24674
-		// (get) Token: 0x0601811B RID: 98587 RVA: 0x002369B8 File Offset: 0x00234BB8
-		// (set) Token: 0x0601811C RID: 98588 RVA: 0x002369F1 File Offset: 0x00234BF1
+		// Token: 0x17001481 RID: 5249
+		// (get) Token: 0x0600671E RID: 26398 RVA: 0x000957E0 File Offset: 0x000939E0
+		// (set) Token: 0x0600671F RID: 26399 RVA: 0x00095819 File Offset: 0x00093A19
 		public FGameplayAttributeData DamageResistanceElement4
 		{
 			get
@@ -701,9 +701,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006063 RID: 24675
-		// (get) Token: 0x0601811D RID: 98589 RVA: 0x00236A14 File Offset: 0x00234C14
-		// (set) Token: 0x0601811E RID: 98590 RVA: 0x00236A4D File Offset: 0x00234C4D
+		// Token: 0x17001482 RID: 5250
+		// (get) Token: 0x06006720 RID: 26400 RVA: 0x0009583C File Offset: 0x00093A3C
+		// (set) Token: 0x06006721 RID: 26401 RVA: 0x00095875 File Offset: 0x00093A75
 		public FGameplayAttributeData DamageResistanceElement5
 		{
 			get
@@ -722,9 +722,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006064 RID: 24676
-		// (get) Token: 0x0601811F RID: 98591 RVA: 0x00236A70 File Offset: 0x00234C70
-		// (set) Token: 0x06018120 RID: 98592 RVA: 0x00236AA9 File Offset: 0x00234CA9
+		// Token: 0x17001483 RID: 5251
+		// (get) Token: 0x06006722 RID: 26402 RVA: 0x00095898 File Offset: 0x00093A98
+		// (set) Token: 0x06006723 RID: 26403 RVA: 0x000958D1 File Offset: 0x00093AD1
 		public FGameplayAttributeData DamageResistanceElement6
 		{
 			get
@@ -743,9 +743,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006065 RID: 24677
-		// (get) Token: 0x06018121 RID: 98593 RVA: 0x00236ACC File Offset: 0x00234CCC
-		// (set) Token: 0x06018122 RID: 98594 RVA: 0x00236B05 File Offset: 0x00234D05
+		// Token: 0x17001484 RID: 5252
+		// (get) Token: 0x06006724 RID: 26404 RVA: 0x000958F4 File Offset: 0x00093AF4
+		// (set) Token: 0x06006725 RID: 26405 RVA: 0x0009592D File Offset: 0x00093B2D
 		public FGameplayAttributeData HealChange
 		{
 			get
@@ -764,9 +764,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006066 RID: 24678
-		// (get) Token: 0x06018123 RID: 98595 RVA: 0x00236B28 File Offset: 0x00234D28
-		// (set) Token: 0x06018124 RID: 98596 RVA: 0x00236B61 File Offset: 0x00234D61
+		// Token: 0x17001485 RID: 5253
+		// (get) Token: 0x06006726 RID: 26406 RVA: 0x00095950 File Offset: 0x00093B50
+		// (set) Token: 0x06006727 RID: 26407 RVA: 0x00095989 File Offset: 0x00093B89
 		public FGameplayAttributeData HealedChange
 		{
 			get
@@ -785,9 +785,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006067 RID: 24679
-		// (get) Token: 0x06018125 RID: 98597 RVA: 0x00236B84 File Offset: 0x00234D84
-		// (set) Token: 0x06018126 RID: 98598 RVA: 0x00236BBD File Offset: 0x00234DBD
+		// Token: 0x17001486 RID: 5254
+		// (get) Token: 0x06006728 RID: 26408 RVA: 0x000959AC File Offset: 0x00093BAC
+		// (set) Token: 0x06006729 RID: 26409 RVA: 0x000959E5 File Offset: 0x00093BE5
 		public FGameplayAttributeData DamageReducePhys
 		{
 			get
@@ -806,9 +806,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006068 RID: 24680
-		// (get) Token: 0x06018127 RID: 98599 RVA: 0x00236BE0 File Offset: 0x00234DE0
-		// (set) Token: 0x06018128 RID: 98600 RVA: 0x00236C19 File Offset: 0x00234E19
+		// Token: 0x17001487 RID: 5255
+		// (get) Token: 0x0600672A RID: 26410 RVA: 0x00095A08 File Offset: 0x00093C08
+		// (set) Token: 0x0600672B RID: 26411 RVA: 0x00095A41 File Offset: 0x00093C41
 		public FGameplayAttributeData DamageReduceElement1
 		{
 			get
@@ -827,9 +827,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006069 RID: 24681
-		// (get) Token: 0x06018129 RID: 98601 RVA: 0x00236C3C File Offset: 0x00234E3C
-		// (set) Token: 0x0601812A RID: 98602 RVA: 0x00236C75 File Offset: 0x00234E75
+		// Token: 0x17001488 RID: 5256
+		// (get) Token: 0x0600672C RID: 26412 RVA: 0x00095A64 File Offset: 0x00093C64
+		// (set) Token: 0x0600672D RID: 26413 RVA: 0x00095A9D File Offset: 0x00093C9D
 		public FGameplayAttributeData DamageReduceElement2
 		{
 			get
@@ -848,9 +848,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700606A RID: 24682
-		// (get) Token: 0x0601812B RID: 98603 RVA: 0x00236C98 File Offset: 0x00234E98
-		// (set) Token: 0x0601812C RID: 98604 RVA: 0x00236CD1 File Offset: 0x00234ED1
+		// Token: 0x17001489 RID: 5257
+		// (get) Token: 0x0600672E RID: 26414 RVA: 0x00095AC0 File Offset: 0x00093CC0
+		// (set) Token: 0x0600672F RID: 26415 RVA: 0x00095AF9 File Offset: 0x00093CF9
 		public FGameplayAttributeData DamageReduceElement3
 		{
 			get
@@ -869,9 +869,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700606B RID: 24683
-		// (get) Token: 0x0601812D RID: 98605 RVA: 0x00236CF4 File Offset: 0x00234EF4
-		// (set) Token: 0x0601812E RID: 98606 RVA: 0x00236D2D File Offset: 0x00234F2D
+		// Token: 0x1700148A RID: 5258
+		// (get) Token: 0x06006730 RID: 26416 RVA: 0x00095B1C File Offset: 0x00093D1C
+		// (set) Token: 0x06006731 RID: 26417 RVA: 0x00095B55 File Offset: 0x00093D55
 		public FGameplayAttributeData DamageReduceElement4
 		{
 			get
@@ -890,9 +890,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700606C RID: 24684
-		// (get) Token: 0x0601812F RID: 98607 RVA: 0x00236D50 File Offset: 0x00234F50
-		// (set) Token: 0x06018130 RID: 98608 RVA: 0x00236D89 File Offset: 0x00234F89
+		// Token: 0x1700148B RID: 5259
+		// (get) Token: 0x06006732 RID: 26418 RVA: 0x00095B78 File Offset: 0x00093D78
+		// (set) Token: 0x06006733 RID: 26419 RVA: 0x00095BB1 File Offset: 0x00093DB1
 		public FGameplayAttributeData DamageReduceElement5
 		{
 			get
@@ -911,9 +911,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700606D RID: 24685
-		// (get) Token: 0x06018131 RID: 98609 RVA: 0x00236DAC File Offset: 0x00234FAC
-		// (set) Token: 0x06018132 RID: 98610 RVA: 0x00236DE5 File Offset: 0x00234FE5
+		// Token: 0x1700148C RID: 5260
+		// (get) Token: 0x06006734 RID: 26420 RVA: 0x00095BD4 File Offset: 0x00093DD4
+		// (set) Token: 0x06006735 RID: 26421 RVA: 0x00095C0D File Offset: 0x00093E0D
 		public FGameplayAttributeData DamageReduceElement6
 		{
 			get
@@ -932,9 +932,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700606E RID: 24686
-		// (get) Token: 0x06018133 RID: 98611 RVA: 0x00236E08 File Offset: 0x00235008
-		// (set) Token: 0x06018134 RID: 98612 RVA: 0x00236E41 File Offset: 0x00235041
+		// Token: 0x1700148D RID: 5261
+		// (get) Token: 0x06006736 RID: 26422 RVA: 0x00095C30 File Offset: 0x00093E30
+		// (set) Token: 0x06006737 RID: 26423 RVA: 0x00095C69 File Offset: 0x00093E69
 		public FGameplayAttributeData ReactionChange1
 		{
 			get
@@ -953,9 +953,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700606F RID: 24687
-		// (get) Token: 0x06018135 RID: 98613 RVA: 0x00236E64 File Offset: 0x00235064
-		// (set) Token: 0x06018136 RID: 98614 RVA: 0x00236E9D File Offset: 0x0023509D
+		// Token: 0x1700148E RID: 5262
+		// (get) Token: 0x06006738 RID: 26424 RVA: 0x00095C8C File Offset: 0x00093E8C
+		// (set) Token: 0x06006739 RID: 26425 RVA: 0x00095CC5 File Offset: 0x00093EC5
 		public FGameplayAttributeData ReactionChange2
 		{
 			get
@@ -974,9 +974,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006070 RID: 24688
-		// (get) Token: 0x06018137 RID: 98615 RVA: 0x00236EC0 File Offset: 0x002350C0
-		// (set) Token: 0x06018138 RID: 98616 RVA: 0x00236EF9 File Offset: 0x002350F9
+		// Token: 0x1700148F RID: 5263
+		// (get) Token: 0x0600673A RID: 26426 RVA: 0x00095CE8 File Offset: 0x00093EE8
+		// (set) Token: 0x0600673B RID: 26427 RVA: 0x00095D21 File Offset: 0x00093F21
 		public FGameplayAttributeData ReactionChange3
 		{
 			get
@@ -995,9 +995,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006071 RID: 24689
-		// (get) Token: 0x06018139 RID: 98617 RVA: 0x00236F1C File Offset: 0x0023511C
-		// (set) Token: 0x0601813A RID: 98618 RVA: 0x00236F55 File Offset: 0x00235155
+		// Token: 0x17001490 RID: 5264
+		// (get) Token: 0x0600673C RID: 26428 RVA: 0x00095D44 File Offset: 0x00093F44
+		// (set) Token: 0x0600673D RID: 26429 RVA: 0x00095D7D File Offset: 0x00093F7D
 		public FGameplayAttributeData ReactionChange4
 		{
 			get
@@ -1016,9 +1016,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006072 RID: 24690
-		// (get) Token: 0x0601813B RID: 98619 RVA: 0x00236F78 File Offset: 0x00235178
-		// (set) Token: 0x0601813C RID: 98620 RVA: 0x00236FB1 File Offset: 0x002351B1
+		// Token: 0x17001491 RID: 5265
+		// (get) Token: 0x0600673E RID: 26430 RVA: 0x00095DA0 File Offset: 0x00093FA0
+		// (set) Token: 0x0600673F RID: 26431 RVA: 0x00095DD9 File Offset: 0x00093FD9
 		public FGameplayAttributeData ReactionChange5
 		{
 			get
@@ -1037,9 +1037,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006073 RID: 24691
-		// (get) Token: 0x0601813D RID: 98621 RVA: 0x00236FD4 File Offset: 0x002351D4
-		// (set) Token: 0x0601813E RID: 98622 RVA: 0x0023700D File Offset: 0x0023520D
+		// Token: 0x17001492 RID: 5266
+		// (get) Token: 0x06006740 RID: 26432 RVA: 0x00095DFC File Offset: 0x00093FFC
+		// (set) Token: 0x06006741 RID: 26433 RVA: 0x00095E35 File Offset: 0x00094035
 		public FGameplayAttributeData ReactionChange6
 		{
 			get
@@ -1058,9 +1058,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006074 RID: 24692
-		// (get) Token: 0x0601813F RID: 98623 RVA: 0x00237030 File Offset: 0x00235230
-		// (set) Token: 0x06018140 RID: 98624 RVA: 0x00237069 File Offset: 0x00235269
+		// Token: 0x17001493 RID: 5267
+		// (get) Token: 0x06006742 RID: 26434 RVA: 0x00095E58 File Offset: 0x00094058
+		// (set) Token: 0x06006743 RID: 26435 RVA: 0x00095E91 File Offset: 0x00094091
 		public FGameplayAttributeData ReactionChange7
 		{
 			get
@@ -1079,9 +1079,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006075 RID: 24693
-		// (get) Token: 0x06018141 RID: 98625 RVA: 0x0023708C File Offset: 0x0023528C
-		// (set) Token: 0x06018142 RID: 98626 RVA: 0x002370C5 File Offset: 0x002352C5
+		// Token: 0x17001494 RID: 5268
+		// (get) Token: 0x06006744 RID: 26436 RVA: 0x00095EB4 File Offset: 0x000940B4
+		// (set) Token: 0x06006745 RID: 26437 RVA: 0x00095EED File Offset: 0x000940ED
 		public FGameplayAttributeData ReactionChange8
 		{
 			get
@@ -1100,9 +1100,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006076 RID: 24694
-		// (get) Token: 0x06018143 RID: 98627 RVA: 0x002370E8 File Offset: 0x002352E8
-		// (set) Token: 0x06018144 RID: 98628 RVA: 0x00237121 File Offset: 0x00235321
+		// Token: 0x17001495 RID: 5269
+		// (get) Token: 0x06006746 RID: 26438 RVA: 0x00095F10 File Offset: 0x00094110
+		// (set) Token: 0x06006747 RID: 26439 RVA: 0x00095F49 File Offset: 0x00094149
 		public FGameplayAttributeData ReactionChange9
 		{
 			get
@@ -1121,9 +1121,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006077 RID: 24695
-		// (get) Token: 0x06018145 RID: 98629 RVA: 0x00237144 File Offset: 0x00235344
-		// (set) Token: 0x06018146 RID: 98630 RVA: 0x0023717D File Offset: 0x0023537D
+		// Token: 0x17001496 RID: 5270
+		// (get) Token: 0x06006748 RID: 26440 RVA: 0x00095F6C File Offset: 0x0009416C
+		// (set) Token: 0x06006749 RID: 26441 RVA: 0x00095FA5 File Offset: 0x000941A5
 		public FGameplayAttributeData ReactionChange10
 		{
 			get
@@ -1142,9 +1142,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006078 RID: 24696
-		// (get) Token: 0x06018147 RID: 98631 RVA: 0x002371A0 File Offset: 0x002353A0
-		// (set) Token: 0x06018148 RID: 98632 RVA: 0x002371D9 File Offset: 0x002353D9
+		// Token: 0x17001497 RID: 5271
+		// (get) Token: 0x0600674A RID: 26442 RVA: 0x00095FC8 File Offset: 0x000941C8
+		// (set) Token: 0x0600674B RID: 26443 RVA: 0x00096001 File Offset: 0x00094201
 		public FGameplayAttributeData ReactionChange11
 		{
 			get
@@ -1163,9 +1163,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006079 RID: 24697
-		// (get) Token: 0x06018149 RID: 98633 RVA: 0x002371FC File Offset: 0x002353FC
-		// (set) Token: 0x0601814A RID: 98634 RVA: 0x00237235 File Offset: 0x00235435
+		// Token: 0x17001498 RID: 5272
+		// (get) Token: 0x0600674C RID: 26444 RVA: 0x00096024 File Offset: 0x00094224
+		// (set) Token: 0x0600674D RID: 26445 RVA: 0x0009605D File Offset: 0x0009425D
 		public FGameplayAttributeData ReactionChange12
 		{
 			get
@@ -1184,9 +1184,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700607A RID: 24698
-		// (get) Token: 0x0601814B RID: 98635 RVA: 0x00237258 File Offset: 0x00235458
-		// (set) Token: 0x0601814C RID: 98636 RVA: 0x00237291 File Offset: 0x00235491
+		// Token: 0x17001499 RID: 5273
+		// (get) Token: 0x0600674E RID: 26446 RVA: 0x00096080 File Offset: 0x00094280
+		// (set) Token: 0x0600674F RID: 26447 RVA: 0x000960B9 File Offset: 0x000942B9
 		public FGameplayAttributeData ReactionChange13
 		{
 			get
@@ -1205,9 +1205,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700607B RID: 24699
-		// (get) Token: 0x0601814D RID: 98637 RVA: 0x002372B4 File Offset: 0x002354B4
-		// (set) Token: 0x0601814E RID: 98638 RVA: 0x002372ED File Offset: 0x002354ED
+		// Token: 0x1700149A RID: 5274
+		// (get) Token: 0x06006750 RID: 26448 RVA: 0x000960DC File Offset: 0x000942DC
+		// (set) Token: 0x06006751 RID: 26449 RVA: 0x00096115 File Offset: 0x00094315
 		public FGameplayAttributeData ReactionChange14
 		{
 			get
@@ -1226,9 +1226,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700607C RID: 24700
-		// (get) Token: 0x0601814F RID: 98639 RVA: 0x00237310 File Offset: 0x00235510
-		// (set) Token: 0x06018150 RID: 98640 RVA: 0x00237349 File Offset: 0x00235549
+		// Token: 0x1700149B RID: 5275
+		// (get) Token: 0x06006752 RID: 26450 RVA: 0x00096138 File Offset: 0x00094338
+		// (set) Token: 0x06006753 RID: 26451 RVA: 0x00096171 File Offset: 0x00094371
 		public FGameplayAttributeData ReactionChange15
 		{
 			get
@@ -1247,9 +1247,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700607D RID: 24701
-		// (get) Token: 0x06018151 RID: 98641 RVA: 0x0023736C File Offset: 0x0023556C
-		// (set) Token: 0x06018152 RID: 98642 RVA: 0x002373A5 File Offset: 0x002355A5
+		// Token: 0x1700149C RID: 5276
+		// (get) Token: 0x06006754 RID: 26452 RVA: 0x00096194 File Offset: 0x00094394
+		// (set) Token: 0x06006755 RID: 26453 RVA: 0x000961CD File Offset: 0x000943CD
 		public FGameplayAttributeData EnergyMax
 		{
 			get
@@ -1268,9 +1268,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700607E RID: 24702
-		// (get) Token: 0x06018153 RID: 98643 RVA: 0x002373C8 File Offset: 0x002355C8
-		// (set) Token: 0x06018154 RID: 98644 RVA: 0x00237401 File Offset: 0x00235601
+		// Token: 0x1700149D RID: 5277
+		// (get) Token: 0x06006756 RID: 26454 RVA: 0x000961F0 File Offset: 0x000943F0
+		// (set) Token: 0x06006757 RID: 26455 RVA: 0x00096229 File Offset: 0x00094429
 		public FGameplayAttributeData Energy
 		{
 			get
@@ -1289,9 +1289,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700607F RID: 24703
-		// (get) Token: 0x06018155 RID: 98645 RVA: 0x00237424 File Offset: 0x00235624
-		// (set) Token: 0x06018156 RID: 98646 RVA: 0x0023745D File Offset: 0x0023565D
+		// Token: 0x1700149E RID: 5278
+		// (get) Token: 0x06006758 RID: 26456 RVA: 0x0009624C File Offset: 0x0009444C
+		// (set) Token: 0x06006759 RID: 26457 RVA: 0x00096285 File Offset: 0x00094485
 		public FGameplayAttributeData SpecialEnergy1Max
 		{
 			get
@@ -1310,9 +1310,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006080 RID: 24704
-		// (get) Token: 0x06018157 RID: 98647 RVA: 0x00237480 File Offset: 0x00235680
-		// (set) Token: 0x06018158 RID: 98648 RVA: 0x002374B9 File Offset: 0x002356B9
+		// Token: 0x1700149F RID: 5279
+		// (get) Token: 0x0600675A RID: 26458 RVA: 0x000962A8 File Offset: 0x000944A8
+		// (set) Token: 0x0600675B RID: 26459 RVA: 0x000962E1 File Offset: 0x000944E1
 		public FGameplayAttributeData SpecialEnergy1
 		{
 			get
@@ -1331,9 +1331,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006081 RID: 24705
-		// (get) Token: 0x06018159 RID: 98649 RVA: 0x002374DC File Offset: 0x002356DC
-		// (set) Token: 0x0601815A RID: 98650 RVA: 0x00237515 File Offset: 0x00235715
+		// Token: 0x170014A0 RID: 5280
+		// (get) Token: 0x0600675C RID: 26460 RVA: 0x00096304 File Offset: 0x00094504
+		// (set) Token: 0x0600675D RID: 26461 RVA: 0x0009633D File Offset: 0x0009453D
 		public FGameplayAttributeData SpecialEnergy2Max
 		{
 			get
@@ -1352,9 +1352,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006082 RID: 24706
-		// (get) Token: 0x0601815B RID: 98651 RVA: 0x00237538 File Offset: 0x00235738
-		// (set) Token: 0x0601815C RID: 98652 RVA: 0x00237571 File Offset: 0x00235771
+		// Token: 0x170014A1 RID: 5281
+		// (get) Token: 0x0600675E RID: 26462 RVA: 0x00096360 File Offset: 0x00094560
+		// (set) Token: 0x0600675F RID: 26463 RVA: 0x00096399 File Offset: 0x00094599
 		public FGameplayAttributeData SpecialEnergy2
 		{
 			get
@@ -1373,9 +1373,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006083 RID: 24707
-		// (get) Token: 0x0601815D RID: 98653 RVA: 0x00237594 File Offset: 0x00235794
-		// (set) Token: 0x0601815E RID: 98654 RVA: 0x002375CD File Offset: 0x002357CD
+		// Token: 0x170014A2 RID: 5282
+		// (get) Token: 0x06006760 RID: 26464 RVA: 0x000963BC File Offset: 0x000945BC
+		// (set) Token: 0x06006761 RID: 26465 RVA: 0x000963F5 File Offset: 0x000945F5
 		public FGameplayAttributeData SpecialEnergy3Max
 		{
 			get
@@ -1394,9 +1394,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006084 RID: 24708
-		// (get) Token: 0x0601815F RID: 98655 RVA: 0x002375F0 File Offset: 0x002357F0
-		// (set) Token: 0x06018160 RID: 98656 RVA: 0x00237629 File Offset: 0x00235829
+		// Token: 0x170014A3 RID: 5283
+		// (get) Token: 0x06006762 RID: 26466 RVA: 0x00096418 File Offset: 0x00094618
+		// (set) Token: 0x06006763 RID: 26467 RVA: 0x00096451 File Offset: 0x00094651
 		public FGameplayAttributeData SpecialEnergy3
 		{
 			get
@@ -1415,9 +1415,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006085 RID: 24709
-		// (get) Token: 0x06018161 RID: 98657 RVA: 0x0023764C File Offset: 0x0023584C
-		// (set) Token: 0x06018162 RID: 98658 RVA: 0x00237685 File Offset: 0x00235885
+		// Token: 0x170014A4 RID: 5284
+		// (get) Token: 0x06006764 RID: 26468 RVA: 0x00096474 File Offset: 0x00094674
+		// (set) Token: 0x06006765 RID: 26469 RVA: 0x000964AD File Offset: 0x000946AD
 		public FGameplayAttributeData SpecialEnergy4Max
 		{
 			get
@@ -1436,9 +1436,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006086 RID: 24710
-		// (get) Token: 0x06018163 RID: 98659 RVA: 0x002376A8 File Offset: 0x002358A8
-		// (set) Token: 0x06018164 RID: 98660 RVA: 0x002376E1 File Offset: 0x002358E1
+		// Token: 0x170014A5 RID: 5285
+		// (get) Token: 0x06006766 RID: 26470 RVA: 0x000964D0 File Offset: 0x000946D0
+		// (set) Token: 0x06006767 RID: 26471 RVA: 0x00096509 File Offset: 0x00094709
 		public FGameplayAttributeData SpecialEnergy4
 		{
 			get
@@ -1457,9 +1457,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006087 RID: 24711
-		// (get) Token: 0x06018165 RID: 98661 RVA: 0x00237704 File Offset: 0x00235904
-		// (set) Token: 0x06018166 RID: 98662 RVA: 0x0023773D File Offset: 0x0023593D
+		// Token: 0x170014A6 RID: 5286
+		// (get) Token: 0x06006768 RID: 26472 RVA: 0x0009652C File Offset: 0x0009472C
+		// (set) Token: 0x06006769 RID: 26473 RVA: 0x00096565 File Offset: 0x00094765
 		public FGameplayAttributeData StrengthMax
 		{
 			get
@@ -1478,9 +1478,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006088 RID: 24712
-		// (get) Token: 0x06018167 RID: 98663 RVA: 0x00237760 File Offset: 0x00235960
-		// (set) Token: 0x06018168 RID: 98664 RVA: 0x00237799 File Offset: 0x00235999
+		// Token: 0x170014A7 RID: 5287
+		// (get) Token: 0x0600676A RID: 26474 RVA: 0x00096588 File Offset: 0x00094788
+		// (set) Token: 0x0600676B RID: 26475 RVA: 0x000965C1 File Offset: 0x000947C1
 		public FGameplayAttributeData Strength
 		{
 			get
@@ -1499,9 +1499,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006089 RID: 24713
-		// (get) Token: 0x06018169 RID: 98665 RVA: 0x002377BC File Offset: 0x002359BC
-		// (set) Token: 0x0601816A RID: 98666 RVA: 0x002377F5 File Offset: 0x002359F5
+		// Token: 0x170014A8 RID: 5288
+		// (get) Token: 0x0600676C RID: 26476 RVA: 0x000965E4 File Offset: 0x000947E4
+		// (set) Token: 0x0600676D RID: 26477 RVA: 0x0009661D File Offset: 0x0009481D
 		public FGameplayAttributeData StrengthRecover
 		{
 			get
@@ -1520,9 +1520,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700608A RID: 24714
-		// (get) Token: 0x0601816B RID: 98667 RVA: 0x00237818 File Offset: 0x00235A18
-		// (set) Token: 0x0601816C RID: 98668 RVA: 0x00237851 File Offset: 0x00235A51
+		// Token: 0x170014A9 RID: 5289
+		// (get) Token: 0x0600676E RID: 26478 RVA: 0x00096640 File Offset: 0x00094840
+		// (set) Token: 0x0600676F RID: 26479 RVA: 0x00096679 File Offset: 0x00094879
 		public FGameplayAttributeData StrengthPunishTime
 		{
 			get
@@ -1541,9 +1541,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700608B RID: 24715
-		// (get) Token: 0x0601816D RID: 98669 RVA: 0x00237874 File Offset: 0x00235A74
-		// (set) Token: 0x0601816E RID: 98670 RVA: 0x002378AD File Offset: 0x00235AAD
+		// Token: 0x170014AA RID: 5290
+		// (get) Token: 0x06006770 RID: 26480 RVA: 0x0009669C File Offset: 0x0009489C
+		// (set) Token: 0x06006771 RID: 26481 RVA: 0x000966D5 File Offset: 0x000948D5
 		public FGameplayAttributeData StrengthRun
 		{
 			get
@@ -1562,9 +1562,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700608C RID: 24716
-		// (get) Token: 0x0601816F RID: 98671 RVA: 0x002378D0 File Offset: 0x00235AD0
-		// (set) Token: 0x06018170 RID: 98672 RVA: 0x00237909 File Offset: 0x00235B09
+		// Token: 0x170014AB RID: 5291
+		// (get) Token: 0x06006772 RID: 26482 RVA: 0x000966F8 File Offset: 0x000948F8
+		// (set) Token: 0x06006773 RID: 26483 RVA: 0x00096731 File Offset: 0x00094931
 		public FGameplayAttributeData StrengthSwim
 		{
 			get
@@ -1583,9 +1583,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700608D RID: 24717
-		// (get) Token: 0x06018171 RID: 98673 RVA: 0x0023792C File Offset: 0x00235B2C
-		// (set) Token: 0x06018172 RID: 98674 RVA: 0x00237965 File Offset: 0x00235B65
+		// Token: 0x170014AC RID: 5292
+		// (get) Token: 0x06006774 RID: 26484 RVA: 0x00096754 File Offset: 0x00094954
+		// (set) Token: 0x06006775 RID: 26485 RVA: 0x0009678D File Offset: 0x0009498D
 		public FGameplayAttributeData StrengthFastSwim
 		{
 			get
@@ -1604,9 +1604,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700608E RID: 24718
-		// (get) Token: 0x06018173 RID: 98675 RVA: 0x00237988 File Offset: 0x00235B88
-		// (set) Token: 0x06018174 RID: 98676 RVA: 0x002379C1 File Offset: 0x00235BC1
+		// Token: 0x170014AD RID: 5293
+		// (get) Token: 0x06006776 RID: 26486 RVA: 0x000967B0 File Offset: 0x000949B0
+		// (set) Token: 0x06006777 RID: 26487 RVA: 0x000967E9 File Offset: 0x000949E9
 		public FGameplayAttributeData StrengthClimb
 		{
 			get
@@ -1625,9 +1625,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700608F RID: 24719
-		// (get) Token: 0x06018175 RID: 98677 RVA: 0x002379E4 File Offset: 0x00235BE4
-		// (set) Token: 0x06018176 RID: 98678 RVA: 0x00237A1D File Offset: 0x00235C1D
+		// Token: 0x170014AE RID: 5294
+		// (get) Token: 0x06006778 RID: 26488 RVA: 0x0009680C File Offset: 0x00094A0C
+		// (set) Token: 0x06006779 RID: 26489 RVA: 0x00096845 File Offset: 0x00094A45
 		public FGameplayAttributeData StrengthFastClimb
 		{
 			get
@@ -1646,9 +1646,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006090 RID: 24720
-		// (get) Token: 0x06018177 RID: 98679 RVA: 0x00237A40 File Offset: 0x00235C40
-		// (set) Token: 0x06018178 RID: 98680 RVA: 0x00237A79 File Offset: 0x00235C79
+		// Token: 0x170014AF RID: 5295
+		// (get) Token: 0x0600677A RID: 26490 RVA: 0x00096868 File Offset: 0x00094A68
+		// (set) Token: 0x0600677B RID: 26491 RVA: 0x000968A1 File Offset: 0x00094AA1
 		public FGameplayAttributeData HardnessMax
 		{
 			get
@@ -1667,9 +1667,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006091 RID: 24721
-		// (get) Token: 0x06018179 RID: 98681 RVA: 0x00237A9C File Offset: 0x00235C9C
-		// (set) Token: 0x0601817A RID: 98682 RVA: 0x00237AD5 File Offset: 0x00235CD5
+		// Token: 0x170014B0 RID: 5296
+		// (get) Token: 0x0600677C RID: 26492 RVA: 0x000968C4 File Offset: 0x00094AC4
+		// (set) Token: 0x0600677D RID: 26493 RVA: 0x000968FD File Offset: 0x00094AFD
 		public FGameplayAttributeData Hardness
 		{
 			get
@@ -1688,9 +1688,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006092 RID: 24722
-		// (get) Token: 0x0601817B RID: 98683 RVA: 0x00237AF8 File Offset: 0x00235CF8
-		// (set) Token: 0x0601817C RID: 98684 RVA: 0x00237B31 File Offset: 0x00235D31
+		// Token: 0x170014B1 RID: 5297
+		// (get) Token: 0x0600677E RID: 26494 RVA: 0x00096920 File Offset: 0x00094B20
+		// (set) Token: 0x0600677F RID: 26495 RVA: 0x00096959 File Offset: 0x00094B59
 		public FGameplayAttributeData HardnessRecover
 		{
 			get
@@ -1709,9 +1709,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006093 RID: 24723
-		// (get) Token: 0x0601817D RID: 98685 RVA: 0x00237B54 File Offset: 0x00235D54
-		// (set) Token: 0x0601817E RID: 98686 RVA: 0x00237B8D File Offset: 0x00235D8D
+		// Token: 0x170014B2 RID: 5298
+		// (get) Token: 0x06006780 RID: 26496 RVA: 0x0009697C File Offset: 0x00094B7C
+		// (set) Token: 0x06006781 RID: 26497 RVA: 0x000969B5 File Offset: 0x00094BB5
 		public FGameplayAttributeData HardnessPunishTime
 		{
 			get
@@ -1730,9 +1730,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006094 RID: 24724
-		// (get) Token: 0x0601817F RID: 98687 RVA: 0x00237BB0 File Offset: 0x00235DB0
-		// (set) Token: 0x06018180 RID: 98688 RVA: 0x00237BE9 File Offset: 0x00235DE9
+		// Token: 0x170014B3 RID: 5299
+		// (get) Token: 0x06006782 RID: 26498 RVA: 0x000969D8 File Offset: 0x00094BD8
+		// (set) Token: 0x06006783 RID: 26499 RVA: 0x00096A11 File Offset: 0x00094C11
 		public FGameplayAttributeData HardnessChange
 		{
 			get
@@ -1751,9 +1751,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006095 RID: 24725
-		// (get) Token: 0x06018181 RID: 98689 RVA: 0x00237C0C File Offset: 0x00235E0C
-		// (set) Token: 0x06018182 RID: 98690 RVA: 0x00237C45 File Offset: 0x00235E45
+		// Token: 0x170014B4 RID: 5300
+		// (get) Token: 0x06006784 RID: 26500 RVA: 0x00096A34 File Offset: 0x00094C34
+		// (set) Token: 0x06006785 RID: 26501 RVA: 0x00096A6D File Offset: 0x00094C6D
 		public FGameplayAttributeData HardnessReduce
 		{
 			get
@@ -1772,9 +1772,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006096 RID: 24726
-		// (get) Token: 0x06018183 RID: 98691 RVA: 0x00237C68 File Offset: 0x00235E68
-		// (set) Token: 0x06018184 RID: 98692 RVA: 0x00237CA1 File Offset: 0x00235EA1
+		// Token: 0x170014B5 RID: 5301
+		// (get) Token: 0x06006786 RID: 26502 RVA: 0x00096A90 File Offset: 0x00094C90
+		// (set) Token: 0x06006787 RID: 26503 RVA: 0x00096AC9 File Offset: 0x00094CC9
 		public FGameplayAttributeData ToughMax
 		{
 			get
@@ -1793,9 +1793,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006097 RID: 24727
-		// (get) Token: 0x06018185 RID: 98693 RVA: 0x00237CC4 File Offset: 0x00235EC4
-		// (set) Token: 0x06018186 RID: 98694 RVA: 0x00237CFD File Offset: 0x00235EFD
+		// Token: 0x170014B6 RID: 5302
+		// (get) Token: 0x06006788 RID: 26504 RVA: 0x00096AEC File Offset: 0x00094CEC
+		// (set) Token: 0x06006789 RID: 26505 RVA: 0x00096B25 File Offset: 0x00094D25
 		public FGameplayAttributeData Tough
 		{
 			get
@@ -1814,9 +1814,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006098 RID: 24728
-		// (get) Token: 0x06018187 RID: 98695 RVA: 0x00237D20 File Offset: 0x00235F20
-		// (set) Token: 0x06018188 RID: 98696 RVA: 0x00237D59 File Offset: 0x00235F59
+		// Token: 0x170014B7 RID: 5303
+		// (get) Token: 0x0600678A RID: 26506 RVA: 0x00096B48 File Offset: 0x00094D48
+		// (set) Token: 0x0600678B RID: 26507 RVA: 0x00096B81 File Offset: 0x00094D81
 		public FGameplayAttributeData ToughRecover
 		{
 			get
@@ -1835,9 +1835,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006099 RID: 24729
-		// (get) Token: 0x06018189 RID: 98697 RVA: 0x00237D7C File Offset: 0x00235F7C
-		// (set) Token: 0x0601818A RID: 98698 RVA: 0x00237DB5 File Offset: 0x00235FB5
+		// Token: 0x170014B8 RID: 5304
+		// (get) Token: 0x0600678C RID: 26508 RVA: 0x00096BA4 File Offset: 0x00094DA4
+		// (set) Token: 0x0600678D RID: 26509 RVA: 0x00096BDD File Offset: 0x00094DDD
 		public FGameplayAttributeData ToughChange
 		{
 			get
@@ -1856,9 +1856,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700609A RID: 24730
-		// (get) Token: 0x0601818B RID: 98699 RVA: 0x00237DD8 File Offset: 0x00235FD8
-		// (set) Token: 0x0601818C RID: 98700 RVA: 0x00237E11 File Offset: 0x00236011
+		// Token: 0x170014B9 RID: 5305
+		// (get) Token: 0x0600678E RID: 26510 RVA: 0x00096C00 File Offset: 0x00094E00
+		// (set) Token: 0x0600678F RID: 26511 RVA: 0x00096C39 File Offset: 0x00094E39
 		public FGameplayAttributeData ToughReduce
 		{
 			get
@@ -1877,9 +1877,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700609B RID: 24731
-		// (get) Token: 0x0601818D RID: 98701 RVA: 0x00237E34 File Offset: 0x00236034
-		// (set) Token: 0x0601818E RID: 98702 RVA: 0x00237E6D File Offset: 0x0023606D
+		// Token: 0x170014BA RID: 5306
+		// (get) Token: 0x06006790 RID: 26512 RVA: 0x00096C5C File Offset: 0x00094E5C
+		// (set) Token: 0x06006791 RID: 26513 RVA: 0x00096C95 File Offset: 0x00094E95
 		public FGameplayAttributeData ElementPower1
 		{
 			get
@@ -1898,9 +1898,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700609C RID: 24732
-		// (get) Token: 0x0601818F RID: 98703 RVA: 0x00237E90 File Offset: 0x00236090
-		// (set) Token: 0x06018190 RID: 98704 RVA: 0x00237EC9 File Offset: 0x002360C9
+		// Token: 0x170014BB RID: 5307
+		// (get) Token: 0x06006792 RID: 26514 RVA: 0x00096CB8 File Offset: 0x00094EB8
+		// (set) Token: 0x06006793 RID: 26515 RVA: 0x00096CF1 File Offset: 0x00094EF1
 		public FGameplayAttributeData ElementPower2
 		{
 			get
@@ -1919,9 +1919,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700609D RID: 24733
-		// (get) Token: 0x06018191 RID: 98705 RVA: 0x00237EEC File Offset: 0x002360EC
-		// (set) Token: 0x06018192 RID: 98706 RVA: 0x00237F25 File Offset: 0x00236125
+		// Token: 0x170014BC RID: 5308
+		// (get) Token: 0x06006794 RID: 26516 RVA: 0x00096D14 File Offset: 0x00094F14
+		// (set) Token: 0x06006795 RID: 26517 RVA: 0x00096D4D File Offset: 0x00094F4D
 		public FGameplayAttributeData ElementPower3
 		{
 			get
@@ -1940,9 +1940,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700609E RID: 24734
-		// (get) Token: 0x06018193 RID: 98707 RVA: 0x00237F48 File Offset: 0x00236148
-		// (set) Token: 0x06018194 RID: 98708 RVA: 0x00237F81 File Offset: 0x00236181
+		// Token: 0x170014BD RID: 5309
+		// (get) Token: 0x06006796 RID: 26518 RVA: 0x00096D70 File Offset: 0x00094F70
+		// (set) Token: 0x06006797 RID: 26519 RVA: 0x00096DA9 File Offset: 0x00094FA9
 		public FGameplayAttributeData ElementPower4
 		{
 			get
@@ -1961,9 +1961,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700609F RID: 24735
-		// (get) Token: 0x06018195 RID: 98709 RVA: 0x00237FA4 File Offset: 0x002361A4
-		// (set) Token: 0x06018196 RID: 98710 RVA: 0x00237FDD File Offset: 0x002361DD
+		// Token: 0x170014BE RID: 5310
+		// (get) Token: 0x06006798 RID: 26520 RVA: 0x00096DCC File Offset: 0x00094FCC
+		// (set) Token: 0x06006799 RID: 26521 RVA: 0x00096E05 File Offset: 0x00095005
 		public FGameplayAttributeData ElementPower5
 		{
 			get
@@ -1982,9 +1982,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060A0 RID: 24736
-		// (get) Token: 0x06018197 RID: 98711 RVA: 0x00238000 File Offset: 0x00236200
-		// (set) Token: 0x06018198 RID: 98712 RVA: 0x00238039 File Offset: 0x00236239
+		// Token: 0x170014BF RID: 5311
+		// (get) Token: 0x0600679A RID: 26522 RVA: 0x00096E28 File Offset: 0x00095028
+		// (set) Token: 0x0600679B RID: 26523 RVA: 0x00096E61 File Offset: 0x00095061
 		public FGameplayAttributeData ElementPower6
 		{
 			get
@@ -2003,9 +2003,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060A1 RID: 24737
-		// (get) Token: 0x06018199 RID: 98713 RVA: 0x0023805C File Offset: 0x0023625C
-		// (set) Token: 0x0601819A RID: 98714 RVA: 0x00238095 File Offset: 0x00236295
+		// Token: 0x170014C0 RID: 5312
+		// (get) Token: 0x0600679C RID: 26524 RVA: 0x00096E84 File Offset: 0x00095084
+		// (set) Token: 0x0600679D RID: 26525 RVA: 0x00096EBD File Offset: 0x000950BD
 		public FGameplayAttributeData SpecialDamageChange
 		{
 			get
@@ -2024,9 +2024,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060A2 RID: 24738
-		// (get) Token: 0x0601819B RID: 98715 RVA: 0x002380B8 File Offset: 0x002362B8
-		// (set) Token: 0x0601819C RID: 98716 RVA: 0x002380F1 File Offset: 0x002362F1
+		// Token: 0x170014C1 RID: 5313
+		// (get) Token: 0x0600679E RID: 26526 RVA: 0x00096EE0 File Offset: 0x000950E0
+		// (set) Token: 0x0600679F RID: 26527 RVA: 0x00096F19 File Offset: 0x00095119
 		public FGameplayAttributeData StrengthFastClimbCost
 		{
 			get
@@ -2045,9 +2045,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060A3 RID: 24739
-		// (get) Token: 0x0601819D RID: 98717 RVA: 0x00238114 File Offset: 0x00236314
-		// (set) Token: 0x0601819E RID: 98718 RVA: 0x0023814D File Offset: 0x0023634D
+		// Token: 0x170014C2 RID: 5314
+		// (get) Token: 0x060067A0 RID: 26528 RVA: 0x00096F3C File Offset: 0x0009513C
+		// (set) Token: 0x060067A1 RID: 26529 RVA: 0x00096F75 File Offset: 0x00095175
 		public FGameplayAttributeData ElementPropertyType
 		{
 			get
@@ -2066,9 +2066,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060A4 RID: 24740
-		// (get) Token: 0x0601819F RID: 98719 RVA: 0x00238170 File Offset: 0x00236370
-		// (set) Token: 0x060181A0 RID: 98720 RVA: 0x002381A9 File Offset: 0x002363A9
+		// Token: 0x170014C3 RID: 5315
+		// (get) Token: 0x060067A2 RID: 26530 RVA: 0x00096F98 File Offset: 0x00095198
+		// (set) Token: 0x060067A3 RID: 26531 RVA: 0x00096FD1 File Offset: 0x000951D1
 		public FGameplayAttributeData WeakTime
 		{
 			get
@@ -2087,9 +2087,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060A5 RID: 24741
-		// (get) Token: 0x060181A1 RID: 98721 RVA: 0x002381CC File Offset: 0x002363CC
-		// (set) Token: 0x060181A2 RID: 98722 RVA: 0x00238205 File Offset: 0x00236405
+		// Token: 0x170014C4 RID: 5316
+		// (get) Token: 0x060067A4 RID: 26532 RVA: 0x00096FF4 File Offset: 0x000951F4
+		// (set) Token: 0x060067A5 RID: 26533 RVA: 0x0009702D File Offset: 0x0009522D
 		public FGameplayAttributeData IgnoreDefRate
 		{
 			get
@@ -2108,9 +2108,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060A6 RID: 24742
-		// (get) Token: 0x060181A3 RID: 98723 RVA: 0x00238228 File Offset: 0x00236428
-		// (set) Token: 0x060181A4 RID: 98724 RVA: 0x00238261 File Offset: 0x00236461
+		// Token: 0x170014C5 RID: 5317
+		// (get) Token: 0x060067A6 RID: 26534 RVA: 0x00097050 File Offset: 0x00095250
+		// (set) Token: 0x060067A7 RID: 26535 RVA: 0x00097089 File Offset: 0x00095289
 		public FGameplayAttributeData IgnoreDamageResistancePhys
 		{
 			get
@@ -2129,9 +2129,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060A7 RID: 24743
-		// (get) Token: 0x060181A5 RID: 98725 RVA: 0x00238284 File Offset: 0x00236484
-		// (set) Token: 0x060181A6 RID: 98726 RVA: 0x002382BD File Offset: 0x002364BD
+		// Token: 0x170014C6 RID: 5318
+		// (get) Token: 0x060067A8 RID: 26536 RVA: 0x000970AC File Offset: 0x000952AC
+		// (set) Token: 0x060067A9 RID: 26537 RVA: 0x000970E5 File Offset: 0x000952E5
 		public FGameplayAttributeData IgnoreDamageResistanceElement1
 		{
 			get
@@ -2150,9 +2150,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060A8 RID: 24744
-		// (get) Token: 0x060181A7 RID: 98727 RVA: 0x002382E0 File Offset: 0x002364E0
-		// (set) Token: 0x060181A8 RID: 98728 RVA: 0x00238319 File Offset: 0x00236519
+		// Token: 0x170014C7 RID: 5319
+		// (get) Token: 0x060067AA RID: 26538 RVA: 0x00097108 File Offset: 0x00095308
+		// (set) Token: 0x060067AB RID: 26539 RVA: 0x00097141 File Offset: 0x00095341
 		public FGameplayAttributeData IgnoreDamageResistanceElement2
 		{
 			get
@@ -2171,9 +2171,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060A9 RID: 24745
-		// (get) Token: 0x060181A9 RID: 98729 RVA: 0x0023833C File Offset: 0x0023653C
-		// (set) Token: 0x060181AA RID: 98730 RVA: 0x00238375 File Offset: 0x00236575
+		// Token: 0x170014C8 RID: 5320
+		// (get) Token: 0x060067AC RID: 26540 RVA: 0x00097164 File Offset: 0x00095364
+		// (set) Token: 0x060067AD RID: 26541 RVA: 0x0009719D File Offset: 0x0009539D
 		public FGameplayAttributeData IgnoreDamageResistanceElement3
 		{
 			get
@@ -2192,9 +2192,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060AA RID: 24746
-		// (get) Token: 0x060181AB RID: 98731 RVA: 0x00238398 File Offset: 0x00236598
-		// (set) Token: 0x060181AC RID: 98732 RVA: 0x002383D1 File Offset: 0x002365D1
+		// Token: 0x170014C9 RID: 5321
+		// (get) Token: 0x060067AE RID: 26542 RVA: 0x000971C0 File Offset: 0x000953C0
+		// (set) Token: 0x060067AF RID: 26543 RVA: 0x000971F9 File Offset: 0x000953F9
 		public FGameplayAttributeData IgnoreDamageResistanceElement4
 		{
 			get
@@ -2213,9 +2213,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060AB RID: 24747
-		// (get) Token: 0x060181AD RID: 98733 RVA: 0x002383F4 File Offset: 0x002365F4
-		// (set) Token: 0x060181AE RID: 98734 RVA: 0x0023842D File Offset: 0x0023662D
+		// Token: 0x170014CA RID: 5322
+		// (get) Token: 0x060067B0 RID: 26544 RVA: 0x0009721C File Offset: 0x0009541C
+		// (set) Token: 0x060067B1 RID: 26545 RVA: 0x00097255 File Offset: 0x00095455
 		public FGameplayAttributeData IgnoreDamageResistanceElement5
 		{
 			get
@@ -2234,9 +2234,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060AC RID: 24748
-		// (get) Token: 0x060181AF RID: 98735 RVA: 0x00238450 File Offset: 0x00236650
-		// (set) Token: 0x060181B0 RID: 98736 RVA: 0x00238489 File Offset: 0x00236689
+		// Token: 0x170014CB RID: 5323
+		// (get) Token: 0x060067B2 RID: 26546 RVA: 0x00097278 File Offset: 0x00095478
+		// (set) Token: 0x060067B3 RID: 26547 RVA: 0x000972B1 File Offset: 0x000954B1
 		public FGameplayAttributeData IgnoreDamageResistanceElement6
 		{
 			get
@@ -2255,9 +2255,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060AD RID: 24749
-		// (get) Token: 0x060181B1 RID: 98737 RVA: 0x002384AC File Offset: 0x002366AC
-		// (set) Token: 0x060181B2 RID: 98738 RVA: 0x002384E5 File Offset: 0x002366E5
+		// Token: 0x170014CC RID: 5324
+		// (get) Token: 0x060067B4 RID: 26548 RVA: 0x000972D4 File Offset: 0x000954D4
+		// (set) Token: 0x060067B5 RID: 26549 RVA: 0x0009730D File Offset: 0x0009550D
 		public FGameplayAttributeData SkillToughRatio
 		{
 			get
@@ -2276,9 +2276,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060AE RID: 24750
-		// (get) Token: 0x060181B3 RID: 98739 RVA: 0x00238508 File Offset: 0x00236708
-		// (set) Token: 0x060181B4 RID: 98740 RVA: 0x00238541 File Offset: 0x00236741
+		// Token: 0x170014CD RID: 5325
+		// (get) Token: 0x060067B6 RID: 26550 RVA: 0x00097330 File Offset: 0x00095530
+		// (set) Token: 0x060067B7 RID: 26551 RVA: 0x00097369 File Offset: 0x00095569
 		public FGameplayAttributeData StrengthClimbJump
 		{
 			get
@@ -2297,9 +2297,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060AF RID: 24751
-		// (get) Token: 0x060181B5 RID: 98741 RVA: 0x00238564 File Offset: 0x00236764
-		// (set) Token: 0x060181B6 RID: 98742 RVA: 0x0023859D File Offset: 0x0023679D
+		// Token: 0x170014CE RID: 5326
+		// (get) Token: 0x060067B8 RID: 26552 RVA: 0x0009738C File Offset: 0x0009558C
+		// (set) Token: 0x060067B9 RID: 26553 RVA: 0x000973C5 File Offset: 0x000955C5
 		public FGameplayAttributeData StrengthGliding
 		{
 			get
@@ -2318,9 +2318,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060B0 RID: 24752
-		// (get) Token: 0x060181B7 RID: 98743 RVA: 0x002385C0 File Offset: 0x002367C0
-		// (set) Token: 0x060181B8 RID: 98744 RVA: 0x002385F9 File Offset: 0x002367F9
+		// Token: 0x170014CF RID: 5327
+		// (get) Token: 0x060067BA RID: 26554 RVA: 0x000973E8 File Offset: 0x000955E8
+		// (set) Token: 0x060067BB RID: 26555 RVA: 0x00097421 File Offset: 0x00095621
 		public FGameplayAttributeData Mass
 		{
 			get
@@ -2339,9 +2339,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060B1 RID: 24753
-		// (get) Token: 0x060181B9 RID: 98745 RVA: 0x0023861C File Offset: 0x0023681C
-		// (set) Token: 0x060181BA RID: 98746 RVA: 0x00238655 File Offset: 0x00236855
+		// Token: 0x170014D0 RID: 5328
+		// (get) Token: 0x060067BC RID: 26556 RVA: 0x00097444 File Offset: 0x00095644
+		// (set) Token: 0x060067BD RID: 26557 RVA: 0x0009747D File Offset: 0x0009567D
 		public FGameplayAttributeData BrakingFrictionFactor
 		{
 			get
@@ -2360,9 +2360,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060B2 RID: 24754
-		// (get) Token: 0x060181BB RID: 98747 RVA: 0x00238678 File Offset: 0x00236878
-		// (set) Token: 0x060181BC RID: 98748 RVA: 0x002386B1 File Offset: 0x002368B1
+		// Token: 0x170014D1 RID: 5329
+		// (get) Token: 0x060067BE RID: 26558 RVA: 0x000974A0 File Offset: 0x000956A0
+		// (set) Token: 0x060067BF RID: 26559 RVA: 0x000974D9 File Offset: 0x000956D9
 		public FGameplayAttributeData GravityScale
 		{
 			get
@@ -2381,9 +2381,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060B3 RID: 24755
-		// (get) Token: 0x060181BD RID: 98749 RVA: 0x002386D4 File Offset: 0x002368D4
-		// (set) Token: 0x060181BE RID: 98750 RVA: 0x0023870D File Offset: 0x0023690D
+		// Token: 0x170014D2 RID: 5330
+		// (get) Token: 0x060067C0 RID: 26560 RVA: 0x000974FC File Offset: 0x000956FC
+		// (set) Token: 0x060067C1 RID: 26561 RVA: 0x00097535 File Offset: 0x00095735
 		public FGameplayAttributeData SpeedRatio
 		{
 			get
@@ -2402,9 +2402,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060B4 RID: 24756
-		// (get) Token: 0x060181BF RID: 98751 RVA: 0x00238730 File Offset: 0x00236930
-		// (set) Token: 0x060181C0 RID: 98752 RVA: 0x00238769 File Offset: 0x00236969
+		// Token: 0x170014D3 RID: 5331
+		// (get) Token: 0x060067C2 RID: 26562 RVA: 0x00097558 File Offset: 0x00095758
+		// (set) Token: 0x060067C3 RID: 26563 RVA: 0x00097591 File Offset: 0x00095791
 		public FGameplayAttributeData DamageChangePhantom
 		{
 			get
@@ -2423,9 +2423,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060B5 RID: 24757
-		// (get) Token: 0x060181C1 RID: 98753 RVA: 0x0023878C File Offset: 0x0023698C
-		// (set) Token: 0x060181C2 RID: 98754 RVA: 0x002387C5 File Offset: 0x002369C5
+		// Token: 0x170014D4 RID: 5332
+		// (get) Token: 0x060067C4 RID: 26564 RVA: 0x000975B4 File Offset: 0x000957B4
+		// (set) Token: 0x060067C5 RID: 26565 RVA: 0x000975ED File Offset: 0x000957ED
 		public FGameplayAttributeData AutoAttackSpeed
 		{
 			get
@@ -2444,9 +2444,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060B6 RID: 24758
-		// (get) Token: 0x060181C3 RID: 98755 RVA: 0x002387E8 File Offset: 0x002369E8
-		// (set) Token: 0x060181C4 RID: 98756 RVA: 0x00238821 File Offset: 0x00236A21
+		// Token: 0x170014D5 RID: 5333
+		// (get) Token: 0x060067C6 RID: 26566 RVA: 0x00097610 File Offset: 0x00095810
+		// (set) Token: 0x060067C7 RID: 26567 RVA: 0x00097649 File Offset: 0x00095849
 		public FGameplayAttributeData CastAttackSpeed
 		{
 			get
@@ -2465,9 +2465,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060B7 RID: 24759
-		// (get) Token: 0x060181C5 RID: 98757 RVA: 0x00238844 File Offset: 0x00236A44
-		// (set) Token: 0x060181C6 RID: 98758 RVA: 0x0023887D File Offset: 0x00236A7D
+		// Token: 0x170014D6 RID: 5334
+		// (get) Token: 0x060067C8 RID: 26568 RVA: 0x0009766C File Offset: 0x0009586C
+		// (set) Token: 0x060067C9 RID: 26569 RVA: 0x000976A5 File Offset: 0x000958A5
 		public FGameplayAttributeData StatusBuildUp1Max
 		{
 			get
@@ -2486,9 +2486,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060B8 RID: 24760
-		// (get) Token: 0x060181C7 RID: 98759 RVA: 0x002388A0 File Offset: 0x00236AA0
-		// (set) Token: 0x060181C8 RID: 98760 RVA: 0x002388D9 File Offset: 0x00236AD9
+		// Token: 0x170014D7 RID: 5335
+		// (get) Token: 0x060067CA RID: 26570 RVA: 0x000976C8 File Offset: 0x000958C8
+		// (set) Token: 0x060067CB RID: 26571 RVA: 0x00097701 File Offset: 0x00095901
 		public FGameplayAttributeData StatusBuildUp1
 		{
 			get
@@ -2507,9 +2507,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060B9 RID: 24761
-		// (get) Token: 0x060181C9 RID: 98761 RVA: 0x002388FC File Offset: 0x00236AFC
-		// (set) Token: 0x060181CA RID: 98762 RVA: 0x00238935 File Offset: 0x00236B35
+		// Token: 0x170014D8 RID: 5336
+		// (get) Token: 0x060067CC RID: 26572 RVA: 0x00097724 File Offset: 0x00095924
+		// (set) Token: 0x060067CD RID: 26573 RVA: 0x0009775D File Offset: 0x0009595D
 		public FGameplayAttributeData StatusBuildUp2Max
 		{
 			get
@@ -2528,9 +2528,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060BA RID: 24762
-		// (get) Token: 0x060181CB RID: 98763 RVA: 0x00238958 File Offset: 0x00236B58
-		// (set) Token: 0x060181CC RID: 98764 RVA: 0x00238991 File Offset: 0x00236B91
+		// Token: 0x170014D9 RID: 5337
+		// (get) Token: 0x060067CE RID: 26574 RVA: 0x00097780 File Offset: 0x00095980
+		// (set) Token: 0x060067CF RID: 26575 RVA: 0x000977B9 File Offset: 0x000959B9
 		public FGameplayAttributeData StatusBuildUp2
 		{
 			get
@@ -2549,9 +2549,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060BB RID: 24763
-		// (get) Token: 0x060181CD RID: 98765 RVA: 0x002389B4 File Offset: 0x00236BB4
-		// (set) Token: 0x060181CE RID: 98766 RVA: 0x002389ED File Offset: 0x00236BED
+		// Token: 0x170014DA RID: 5338
+		// (get) Token: 0x060067D0 RID: 26576 RVA: 0x000977DC File Offset: 0x000959DC
+		// (set) Token: 0x060067D1 RID: 26577 RVA: 0x00097815 File Offset: 0x00095A15
 		public FGameplayAttributeData StatusBuildUp3Max
 		{
 			get
@@ -2570,9 +2570,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060BC RID: 24764
-		// (get) Token: 0x060181CF RID: 98767 RVA: 0x00238A10 File Offset: 0x00236C10
-		// (set) Token: 0x060181D0 RID: 98768 RVA: 0x00238A49 File Offset: 0x00236C49
+		// Token: 0x170014DB RID: 5339
+		// (get) Token: 0x060067D2 RID: 26578 RVA: 0x00097838 File Offset: 0x00095A38
+		// (set) Token: 0x060067D3 RID: 26579 RVA: 0x00097871 File Offset: 0x00095A71
 		public FGameplayAttributeData StatusBuildUp3
 		{
 			get
@@ -2591,9 +2591,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060BD RID: 24765
-		// (get) Token: 0x060181D1 RID: 98769 RVA: 0x00238A6C File Offset: 0x00236C6C
-		// (set) Token: 0x060181D2 RID: 98770 RVA: 0x00238AA5 File Offset: 0x00236CA5
+		// Token: 0x170014DC RID: 5340
+		// (get) Token: 0x060067D4 RID: 26580 RVA: 0x00097894 File Offset: 0x00095A94
+		// (set) Token: 0x060067D5 RID: 26581 RVA: 0x000978CD File Offset: 0x00095ACD
 		public FGameplayAttributeData StatusBuildUp4Max
 		{
 			get
@@ -2612,9 +2612,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060BE RID: 24766
-		// (get) Token: 0x060181D3 RID: 98771 RVA: 0x00238AC8 File Offset: 0x00236CC8
-		// (set) Token: 0x060181D4 RID: 98772 RVA: 0x00238B01 File Offset: 0x00236D01
+		// Token: 0x170014DD RID: 5341
+		// (get) Token: 0x060067D6 RID: 26582 RVA: 0x000978F0 File Offset: 0x00095AF0
+		// (set) Token: 0x060067D7 RID: 26583 RVA: 0x00097929 File Offset: 0x00095B29
 		public FGameplayAttributeData StatusBuildUp4
 		{
 			get
@@ -2633,9 +2633,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060BF RID: 24767
-		// (get) Token: 0x060181D5 RID: 98773 RVA: 0x00238B24 File Offset: 0x00236D24
-		// (set) Token: 0x060181D6 RID: 98774 RVA: 0x00238B5D File Offset: 0x00236D5D
+		// Token: 0x170014DE RID: 5342
+		// (get) Token: 0x060067D8 RID: 26584 RVA: 0x0009794C File Offset: 0x00095B4C
+		// (set) Token: 0x060067D9 RID: 26585 RVA: 0x00097985 File Offset: 0x00095B85
 		public FGameplayAttributeData StatusBuildUp5Max
 		{
 			get
@@ -2654,9 +2654,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060C0 RID: 24768
-		// (get) Token: 0x060181D7 RID: 98775 RVA: 0x00238B80 File Offset: 0x00236D80
-		// (set) Token: 0x060181D8 RID: 98776 RVA: 0x00238BB9 File Offset: 0x00236DB9
+		// Token: 0x170014DF RID: 5343
+		// (get) Token: 0x060067DA RID: 26586 RVA: 0x000979A8 File Offset: 0x00095BA8
+		// (set) Token: 0x060067DB RID: 26587 RVA: 0x000979E1 File Offset: 0x00095BE1
 		public FGameplayAttributeData StatusBuildUp5
 		{
 			get
@@ -2675,9 +2675,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060C1 RID: 24769
-		// (get) Token: 0x060181D9 RID: 98777 RVA: 0x00238BDC File Offset: 0x00236DDC
-		// (set) Token: 0x060181DA RID: 98778 RVA: 0x00238C15 File Offset: 0x00236E15
+		// Token: 0x170014E0 RID: 5344
+		// (get) Token: 0x060067DC RID: 26588 RVA: 0x00097A04 File Offset: 0x00095C04
+		// (set) Token: 0x060067DD RID: 26589 RVA: 0x00097A3D File Offset: 0x00095C3D
 		public FGameplayAttributeData RageMax
 		{
 			get
@@ -2696,9 +2696,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060C2 RID: 24770
-		// (get) Token: 0x060181DB RID: 98779 RVA: 0x00238C38 File Offset: 0x00236E38
-		// (set) Token: 0x060181DC RID: 98780 RVA: 0x00238C71 File Offset: 0x00236E71
+		// Token: 0x170014E1 RID: 5345
+		// (get) Token: 0x060067DE RID: 26590 RVA: 0x00097A60 File Offset: 0x00095C60
+		// (set) Token: 0x060067DF RID: 26591 RVA: 0x00097A99 File Offset: 0x00095C99
 		public FGameplayAttributeData Rage
 		{
 			get
@@ -2717,9 +2717,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060C3 RID: 24771
-		// (get) Token: 0x060181DD RID: 98781 RVA: 0x00238C94 File Offset: 0x00236E94
-		// (set) Token: 0x060181DE RID: 98782 RVA: 0x00238CCD File Offset: 0x00236ECD
+		// Token: 0x170014E2 RID: 5346
+		// (get) Token: 0x060067E0 RID: 26592 RVA: 0x00097ABC File Offset: 0x00095CBC
+		// (set) Token: 0x060067E1 RID: 26593 RVA: 0x00097AF5 File Offset: 0x00095CF5
 		public FGameplayAttributeData RageRecover
 		{
 			get
@@ -2738,9 +2738,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060C4 RID: 24772
-		// (get) Token: 0x060181DF RID: 98783 RVA: 0x00238CF0 File Offset: 0x00236EF0
-		// (set) Token: 0x060181E0 RID: 98784 RVA: 0x00238D29 File Offset: 0x00236F29
+		// Token: 0x170014E3 RID: 5347
+		// (get) Token: 0x060067E2 RID: 26594 RVA: 0x00097B18 File Offset: 0x00095D18
+		// (set) Token: 0x060067E3 RID: 26595 RVA: 0x00097B51 File Offset: 0x00095D51
 		public FGameplayAttributeData RagePunishTime
 		{
 			get
@@ -2759,9 +2759,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060C5 RID: 24773
-		// (get) Token: 0x060181E1 RID: 98785 RVA: 0x00238D4C File Offset: 0x00236F4C
-		// (set) Token: 0x060181E2 RID: 98786 RVA: 0x00238D85 File Offset: 0x00236F85
+		// Token: 0x170014E4 RID: 5348
+		// (get) Token: 0x060067E4 RID: 26596 RVA: 0x00097B74 File Offset: 0x00095D74
+		// (set) Token: 0x060067E5 RID: 26597 RVA: 0x00097BAD File Offset: 0x00095DAD
 		public FGameplayAttributeData RageChange
 		{
 			get
@@ -2780,9 +2780,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060C6 RID: 24774
-		// (get) Token: 0x060181E3 RID: 98787 RVA: 0x00238DA8 File Offset: 0x00236FA8
-		// (set) Token: 0x060181E4 RID: 98788 RVA: 0x00238DE1 File Offset: 0x00236FE1
+		// Token: 0x170014E5 RID: 5349
+		// (get) Token: 0x060067E6 RID: 26598 RVA: 0x00097BD0 File Offset: 0x00095DD0
+		// (set) Token: 0x060067E7 RID: 26599 RVA: 0x00097C09 File Offset: 0x00095E09
 		public FGameplayAttributeData RageReduce
 		{
 			get
@@ -2801,9 +2801,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060C7 RID: 24775
-		// (get) Token: 0x060181E5 RID: 98789 RVA: 0x00238E04 File Offset: 0x00237004
-		// (set) Token: 0x060181E6 RID: 98790 RVA: 0x00238E3D File Offset: 0x0023703D
+		// Token: 0x170014E6 RID: 5350
+		// (get) Token: 0x060067E8 RID: 26600 RVA: 0x00097C2C File Offset: 0x00095E2C
+		// (set) Token: 0x060067E9 RID: 26601 RVA: 0x00097C65 File Offset: 0x00095E65
 		public FGameplayAttributeData ToughRecoverDelayTime
 		{
 			get
@@ -2822,9 +2822,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060C8 RID: 24776
-		// (get) Token: 0x060181E7 RID: 98791 RVA: 0x00238E60 File Offset: 0x00237060
-		// (set) Token: 0x060181E8 RID: 98792 RVA: 0x00238E99 File Offset: 0x00237099
+		// Token: 0x170014E7 RID: 5351
+		// (get) Token: 0x060067EA RID: 26602 RVA: 0x00097C88 File Offset: 0x00095E88
+		// (set) Token: 0x060067EB RID: 26603 RVA: 0x00097CC1 File Offset: 0x00095EC1
 		public FGameplayAttributeData Jump
 		{
 			get
@@ -2843,9 +2843,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060C9 RID: 24777
-		// (get) Token: 0x060181E9 RID: 98793 RVA: 0x00238EBC File Offset: 0x002370BC
-		// (set) Token: 0x060181EA RID: 98794 RVA: 0x00238EF5 File Offset: 0x002370F5
+		// Token: 0x170014E8 RID: 5352
+		// (get) Token: 0x060067EC RID: 26604 RVA: 0x00097CE4 File Offset: 0x00095EE4
+		// (set) Token: 0x060067ED RID: 26605 RVA: 0x00097D1D File Offset: 0x00095F1D
 		public FGameplayAttributeData ParalysisTimeMax
 		{
 			get
@@ -2864,9 +2864,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060CA RID: 24778
-		// (get) Token: 0x060181EB RID: 98795 RVA: 0x00238F18 File Offset: 0x00237118
-		// (set) Token: 0x060181EC RID: 98796 RVA: 0x00238F51 File Offset: 0x00237151
+		// Token: 0x170014E9 RID: 5353
+		// (get) Token: 0x060067EE RID: 26606 RVA: 0x00097D40 File Offset: 0x00095F40
+		// (set) Token: 0x060067EF RID: 26607 RVA: 0x00097D79 File Offset: 0x00095F79
 		public FGameplayAttributeData ParalysisTime
 		{
 			get
@@ -2885,9 +2885,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060CB RID: 24779
-		// (get) Token: 0x060181ED RID: 98797 RVA: 0x00238F74 File Offset: 0x00237174
-		// (set) Token: 0x060181EE RID: 98798 RVA: 0x00238FAD File Offset: 0x002371AD
+		// Token: 0x170014EA RID: 5354
+		// (get) Token: 0x060067F0 RID: 26608 RVA: 0x00097D9C File Offset: 0x00095F9C
+		// (set) Token: 0x060067F1 RID: 26609 RVA: 0x00097DD5 File Offset: 0x00095FD5
 		public FGameplayAttributeData ParalysisTimeRecover
 		{
 			get
@@ -2906,9 +2906,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060CC RID: 24780
-		// (get) Token: 0x060181EF RID: 98799 RVA: 0x00238FD0 File Offset: 0x002371D0
-		// (set) Token: 0x060181F0 RID: 98800 RVA: 0x00239009 File Offset: 0x00237209
+		// Token: 0x170014EB RID: 5355
+		// (get) Token: 0x060067F2 RID: 26610 RVA: 0x00097DF8 File Offset: 0x00095FF8
+		// (set) Token: 0x060067F3 RID: 26611 RVA: 0x00097E31 File Offset: 0x00096031
 		public FGameplayAttributeData WeaknessBuildUp
 		{
 			get
@@ -2927,9 +2927,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060CD RID: 24781
-		// (get) Token: 0x060181F1 RID: 98801 RVA: 0x0023902C File Offset: 0x0023722C
-		// (set) Token: 0x060181F2 RID: 98802 RVA: 0x00239065 File Offset: 0x00237265
+		// Token: 0x170014EC RID: 5356
+		// (get) Token: 0x060067F4 RID: 26612 RVA: 0x00097E54 File Offset: 0x00096054
+		// (set) Token: 0x060067F5 RID: 26613 RVA: 0x00097E8D File Offset: 0x0009608D
 		public FGameplayAttributeData WeaknessBuildUpMax
 		{
 			get
@@ -2948,9 +2948,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060CE RID: 24782
-		// (get) Token: 0x060181F3 RID: 98803 RVA: 0x00239088 File Offset: 0x00237288
-		// (set) Token: 0x060181F4 RID: 98804 RVA: 0x002390C1 File Offset: 0x002372C1
+		// Token: 0x170014ED RID: 5357
+		// (get) Token: 0x060067F6 RID: 26614 RVA: 0x00097EB0 File Offset: 0x000960B0
+		// (set) Token: 0x060067F7 RID: 26615 RVA: 0x00097EE9 File Offset: 0x000960E9
 		public FGameplayAttributeData WeaknessTotalBonus
 		{
 			get
@@ -2969,9 +2969,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170060CF RID: 24783
-		// (get) Token: 0x060181F5 RID: 98805 RVA: 0x002390E4 File Offset: 0x002372E4
-		// (set) Token: 0x060181F6 RID: 98806 RVA: 0x0023911D File Offset: 0x0023731D
+		// Token: 0x170014EE RID: 5358
+		// (get) Token: 0x060067F8 RID: 26616 RVA: 0x00097F0C File Offset: 0x0009610C
+		// (set) Token: 0x060067F9 RID: 26617 RVA: 0x00097F45 File Offset: 0x00096145
 		public FGameplayAttributeData WeaknessTotalResist
 		{
 			get
@@ -2990,1084 +2990,1074 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060181F7 RID: 98807
+		// Token: 0x060067FA RID: 26618
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void SetReduceMax(float InReduceMax);
 
-		// Token: 0x060181F8 RID: 98808
+		// Token: 0x060067FB RID: 26619
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void SetElementPowerMax(float InElementPowerMax);
 
-		// Token: 0x060181F9 RID: 98809 RVA: 0x0023913E File Offset: 0x0023733E
+		// Token: 0x060067FC RID: 26620 RVA: 0x00097F66 File Offset: 0x00096166
 		public void SetAttributeValue(int AttributeType, float BaseValue, float CurrentValue)
 		{
 			UBaseAttributeSet.__SetAttributeValue_Internal(base.NativePtr, AttributeType, BaseValue, CurrentValue);
 		}
 
-		// Token: 0x060181FA RID: 98810 RVA: 0x0023914E File Offset: 0x0023734E
-		public void SetAttributeIntervalLock(int AttributeId, EIntervalLockType LockType, float UpperBoundPercentage, float UpperBoundOffset, float LowerBoundPercentage, float LowerBoundOffset)
-		{
-			UBaseAttributeSet.__SetAttributeIntervalLock_Internal(base.NativePtr, AttributeId, LockType, UpperBoundPercentage, UpperBoundOffset, LowerBoundPercentage, LowerBoundOffset);
-		}
-
-		// Token: 0x060181FB RID: 98811
+		// Token: 0x060067FD RID: 26621
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void SetAttackSpeedMax(float InMaxSpeed);
 
-		// Token: 0x060181FC RID: 98812 RVA: 0x00239164 File Offset: 0x00237364
+		// Token: 0x060067FE RID: 26622 RVA: 0x00097F76 File Offset: 0x00096176
 		[NullableContext(2)]
 		public bool GetAttributeData(int AttributeType, ref FGameplayAttributeData AttributeData)
 		{
 			return UBaseAttributeSet.__GetAttributeData_Internal(base.NativePtr, AttributeType, (AttributeData ?? new FGameplayAttributeData()).NativePtr);
 		}
 
-		// Token: 0x060181FD RID: 98813 RVA: 0x00239182 File Offset: 0x00237382
+		// Token: 0x060067FF RID: 26623 RVA: 0x00097F94 File Offset: 0x00096194
 		public float GetAttributeCurrentValueById(int AttributeType)
 		{
 			return UBaseAttributeSet.__GetAttributeCurrentValueById_Internal(base.NativePtr, AttributeType);
 		}
 
-		// Token: 0x060181FE RID: 98814 RVA: 0x00239190 File Offset: 0x00237390
+		// Token: 0x06006800 RID: 26624 RVA: 0x00097FA2 File Offset: 0x000961A2
 		public float GetAttributeBaseValueById(int AttributeType)
 		{
 			return UBaseAttributeSet.__GetAttributeBaseValueById_Internal(base.NativePtr, AttributeType);
 		}
 
-		// Token: 0x060181FF RID: 98815 RVA: 0x0023919E File Offset: 0x0023739E
+		// Token: 0x06006801 RID: 26625 RVA: 0x00097FB0 File Offset: 0x000961B0
 		[NullableContext(2)]
 		public bool CopyAllAttribute(UBaseAttributeSet AttributeSet)
 		{
 			return UBaseAttributeSet.__CopyAllAttribute_Internal(base.NativePtr, (AttributeSet != null) ? AttributeSet.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06018200 RID: 98816
+		// Token: 0x06006802 RID: 26626
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetAttributeValue_Internal(IntPtr @this, int AttributeType, float BaseValue, float CurrentValue);
 
-		// Token: 0x06018201 RID: 98817
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __SetAttributeIntervalLock_Internal(IntPtr @this, int AttributeId, EIntervalLockType LockType, float UpperBoundPercentage, float UpperBoundOffset, float LowerBoundPercentage, float LowerBoundOffset);
-
-		// Token: 0x06018202 RID: 98818
+		// Token: 0x06006803 RID: 26627
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetAttributeData_Internal(IntPtr @this, int AttributeType, IntPtr AttributeData);
 
-		// Token: 0x06018203 RID: 98819
+		// Token: 0x06006804 RID: 26628
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetAttributeCurrentValueById_Internal(IntPtr @this, int AttributeType);
 
-		// Token: 0x06018204 RID: 98820
+		// Token: 0x06006805 RID: 26629
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetAttributeBaseValueById_Internal(IntPtr @this, int AttributeType);
 
-		// Token: 0x06018205 RID: 98821
+		// Token: 0x06006806 RID: 26630
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __CopyAllAttribute_Internal(IntPtr @this, IntPtr AttributeSet);
 
-		// Token: 0x06018206 RID: 98822 RVA: 0x002391BB File Offset: 0x002373BB
+		// Token: 0x06006807 RID: 26631 RVA: 0x00097FCD File Offset: 0x000961CD
 		static UBaseAttributeSet()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroGAS.BaseAttributeSet");
 		}
 
-		// Token: 0x06018207 RID: 98823 RVA: 0x002391C9 File Offset: 0x002373C9
+		// Token: 0x06006808 RID: 26632 RVA: 0x00097FDB File Offset: 0x000961DB
 		protected UBaseAttributeSet(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400D053 RID: 53331
+		// Token: 0x04002B65 RID: 11109
 		public new const string __ObjectPath = "/Script/KuroGAS.BaseAttributeSet";
 
-		// Token: 0x0400D054 RID: 53332
+		// Token: 0x04002B66 RID: 11110
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400D055 RID: 53333
+		// Token: 0x04002B67 RID: 11111
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400D056 RID: 53334
+		// Token: 0x04002B68 RID: 11112
 		internal static int __PropertyOffset_Lv;
 
-		// Token: 0x0400D057 RID: 53335
+		// Token: 0x04002B69 RID: 11113
 		[Nullable(2)]
 		private FGameplayAttributeData _Lv;
 
-		// Token: 0x0400D058 RID: 53336
+		// Token: 0x04002B6A RID: 11114
 		internal static int __PropertyOffset_LifeMax;
 
-		// Token: 0x0400D059 RID: 53337
+		// Token: 0x04002B6B RID: 11115
 		[Nullable(2)]
 		private FGameplayAttributeData _LifeMax;
 
-		// Token: 0x0400D05A RID: 53338
+		// Token: 0x04002B6C RID: 11116
 		internal static int __PropertyOffset_Life;
 
-		// Token: 0x0400D05B RID: 53339
+		// Token: 0x04002B6D RID: 11117
 		[Nullable(2)]
 		private FGameplayAttributeData _Life;
 
-		// Token: 0x0400D05C RID: 53340
+		// Token: 0x04002B6E RID: 11118
 		internal static int __PropertyOffset_Sheild;
 
-		// Token: 0x0400D05D RID: 53341
+		// Token: 0x04002B6F RID: 11119
 		[Nullable(2)]
 		private FGameplayAttributeData _Sheild;
 
-		// Token: 0x0400D05E RID: 53342
+		// Token: 0x04002B70 RID: 11120
 		internal static int __PropertyOffset_SheildDamageChange;
 
-		// Token: 0x0400D05F RID: 53343
+		// Token: 0x04002B71 RID: 11121
 		[Nullable(2)]
 		private FGameplayAttributeData _SheildDamageChange;
 
-		// Token: 0x0400D060 RID: 53344
+		// Token: 0x04002B72 RID: 11122
 		internal static int __PropertyOffset_SheildDamageReduce;
 
-		// Token: 0x0400D061 RID: 53345
+		// Token: 0x04002B73 RID: 11123
 		[Nullable(2)]
 		private FGameplayAttributeData _SheildDamageReduce;
 
-		// Token: 0x0400D062 RID: 53346
+		// Token: 0x04002B74 RID: 11124
 		internal static int __PropertyOffset_Atk;
 
-		// Token: 0x0400D063 RID: 53347
+		// Token: 0x04002B75 RID: 11125
 		[Nullable(2)]
 		private FGameplayAttributeData _Atk;
 
-		// Token: 0x0400D064 RID: 53348
+		// Token: 0x04002B76 RID: 11126
 		internal static int __PropertyOffset_Crit;
 
-		// Token: 0x0400D065 RID: 53349
+		// Token: 0x04002B77 RID: 11127
 		[Nullable(2)]
 		private FGameplayAttributeData _Crit;
 
-		// Token: 0x0400D066 RID: 53350
+		// Token: 0x04002B78 RID: 11128
 		internal static int __PropertyOffset_CritDamage;
 
-		// Token: 0x0400D067 RID: 53351
+		// Token: 0x04002B79 RID: 11129
 		[Nullable(2)]
 		private FGameplayAttributeData _CritDamage;
 
-		// Token: 0x0400D068 RID: 53352
+		// Token: 0x04002B7A RID: 11130
 		internal static int __PropertyOffset_Def;
 
-		// Token: 0x0400D069 RID: 53353
+		// Token: 0x04002B7B RID: 11131
 		[Nullable(2)]
 		private FGameplayAttributeData _Def;
 
-		// Token: 0x0400D06A RID: 53354
+		// Token: 0x04002B7C RID: 11132
 		internal static int __PropertyOffset_EnergyEfficiency;
 
-		// Token: 0x0400D06B RID: 53355
+		// Token: 0x04002B7D RID: 11133
 		[Nullable(2)]
 		private FGameplayAttributeData _EnergyEfficiency;
 
-		// Token: 0x0400D06C RID: 53356
+		// Token: 0x04002B7E RID: 11134
 		internal static int __PropertyOffset_CDReduse;
 
-		// Token: 0x0400D06D RID: 53357
+		// Token: 0x04002B7F RID: 11135
 		[Nullable(2)]
 		private FGameplayAttributeData _CDReduse;
 
-		// Token: 0x0400D06E RID: 53358
+		// Token: 0x04002B80 RID: 11136
 		internal static int __PropertyOffset_ReactionEfficiency;
 
-		// Token: 0x0400D06F RID: 53359
+		// Token: 0x04002B81 RID: 11137
 		[Nullable(2)]
 		private FGameplayAttributeData _ReactionEfficiency;
 
-		// Token: 0x0400D070 RID: 53360
+		// Token: 0x04002B82 RID: 11138
 		internal static int __PropertyOffset_DamageChangeNormalSkill;
 
-		// Token: 0x0400D071 RID: 53361
+		// Token: 0x04002B83 RID: 11139
 		[Nullable(2)]
 		private FGameplayAttributeData _DamageChangeNormalSkill;
 
-		// Token: 0x0400D072 RID: 53362
+		// Token: 0x04002B84 RID: 11140
 		internal static int __PropertyOffset_DamageChange;
 
-		// Token: 0x0400D073 RID: 53363
+		// Token: 0x04002B85 RID: 11141
 		[Nullable(2)]
 		private FGameplayAttributeData _DamageChange;
 
-		// Token: 0x0400D074 RID: 53364
+		// Token: 0x04002B86 RID: 11142
 		internal static int __PropertyOffset_DamageReduce;
 
-		// Token: 0x0400D075 RID: 53365
+		// Token: 0x04002B87 RID: 11143
 		[Nullable(2)]
 		private FGameplayAttributeData _DamageReduce;
 
-		// Token: 0x0400D076 RID: 53366
+		// Token: 0x04002B88 RID: 11144
 		internal static int __PropertyOffset_DamageChangeAuto;
 
-		// Token: 0x0400D077 RID: 53367
+		// Token: 0x04002B89 RID: 11145
 		[Nullable(2)]
 		private FGameplayAttributeData _DamageChangeAuto;
 
-		// Token: 0x0400D078 RID: 53368
+		// Token: 0x04002B8A RID: 11146
 		internal static int __PropertyOffset_DamageChangeCast;
 
-		// Token: 0x0400D079 RID: 53369
+		// Token: 0x04002B8B RID: 11147
 		[Nullable(2)]
 		private FGameplayAttributeData _DamageChangeCast;
 
-		// Token: 0x0400D07A RID: 53370
+		// Token: 0x04002B8C RID: 11148
 		internal static int __PropertyOffset_DamageChangeUltra;
 
-		// Token: 0x0400D07B RID: 53371
+		// Token: 0x04002B8D RID: 11149
 		[Nullable(2)]
 		private FGameplayAttributeData _DamageChangeUltra;
 
-		// Token: 0x0400D07C RID: 53372
+		// Token: 0x04002B8E RID: 11150
 		internal static int __PropertyOffset_DamageChangeQTE;
 
-		// Token: 0x0400D07D RID: 53373
+		// Token: 0x04002B8F RID: 11151
 		[Nullable(2)]
 		private FGameplayAttributeData _DamageChangeQTE;
 
-		// Token: 0x0400D07E RID: 53374
+		// Token: 0x04002B90 RID: 11152
 		internal static int __PropertyOffset_DamageChangePhys;
 
-		// Token: 0x0400D07F RID: 53375
+		// Token: 0x04002B91 RID: 11153
 		[Nullable(2)]
 		private FGameplayAttributeData _DamageChangePhys;
 
-		// Token: 0x0400D080 RID: 53376
+		// Token: 0x04002B92 RID: 11154
 		internal static int __PropertyOffset_DamageChangeElement1;
 
-		// Token: 0x0400D081 RID: 53377
+		// Token: 0x04002B93 RID: 11155
 		[Nullable(2)]
 		private FGameplayAttributeData _DamageChangeElement1;
 
-		// Token: 0x0400D082 RID: 53378
+		// Token: 0x04002B94 RID: 11156
 		internal static int __PropertyOffset_DamageChangeElement2;
 
-		// Token: 0x0400D083 RID: 53379
+		// Token: 0x04002B95 RID: 11157
 		[Nullable(2)]
 		private FGameplayAttributeData _DamageChangeElement2;
 
-		// Token: 0x0400D084 RID: 53380
+		// Token: 0x04002B96 RID: 11158
 		internal static int __PropertyOffset_DamageChangeElement3;
 
-		// Token: 0x0400D085 RID: 53381
+		// Token: 0x04002B97 RID: 11159
 		[Nullable(2)]
 		private FGameplayAttributeData _DamageChangeElement3;
 
-		// Token: 0x0400D086 RID: 53382
+		// Token: 0x04002B98 RID: 11160
 		internal static int __PropertyOffset_DamageChangeElement4;
 
-		// Token: 0x0400D087 RID: 53383
+		// Token: 0x04002B99 RID: 11161
 		[Nullable(2)]
 		private FGameplayAttributeData _DamageChangeElement4;
 
-		// Token: 0x0400D088 RID: 53384
+		// Token: 0x04002B9A RID: 11162
 		internal static int __PropertyOffset_DamageChangeElement5;
 
-		// Token: 0x0400D089 RID: 53385
+		// Token: 0x04002B9B RID: 11163
 		[Nullable(2)]
 		private FGameplayAttributeData _DamageChangeElement5;
 
-		// Token: 0x0400D08A RID: 53386
+		// Token: 0x04002B9C RID: 11164
 		internal static int __PropertyOffset_DamageChangeElement6;
 
-		// Token: 0x0400D08B RID: 53387
+		// Token: 0x04002B9D RID: 11165
 		[Nullable(2)]
 		private FGameplayAttributeData _DamageChangeElement6;
 
-		// Token: 0x0400D08C RID: 53388
+		// Token: 0x04002B9E RID: 11166
 		internal static int __PropertyOffset_DamageResistancePhys;
 
-		// Token: 0x0400D08D RID: 53389
+		// Token: 0x04002B9F RID: 11167
 		[Nullable(2)]
 		private FGameplayAttributeData _DamageResistancePhys;
 
-		// Token: 0x0400D08E RID: 53390
+		// Token: 0x04002BA0 RID: 11168
 		internal static int __PropertyOffset_DamageResistanceElement1;
 
-		// Token: 0x0400D08F RID: 53391
+		// Token: 0x04002BA1 RID: 11169
 		[Nullable(2)]
 		private FGameplayAttributeData _DamageResistanceElement1;
 
-		// Token: 0x0400D090 RID: 53392
+		// Token: 0x04002BA2 RID: 11170
 		internal static int __PropertyOffset_DamageResistanceElement2;
 
-		// Token: 0x0400D091 RID: 53393
+		// Token: 0x04002BA3 RID: 11171
 		[Nullable(2)]
 		private FGameplayAttributeData _DamageResistanceElement2;
 
-		// Token: 0x0400D092 RID: 53394
+		// Token: 0x04002BA4 RID: 11172
 		internal static int __PropertyOffset_DamageResistanceElement3;
 
-		// Token: 0x0400D093 RID: 53395
+		// Token: 0x04002BA5 RID: 11173
 		[Nullable(2)]
 		private FGameplayAttributeData _DamageResistanceElement3;
 
-		// Token: 0x0400D094 RID: 53396
+		// Token: 0x04002BA6 RID: 11174
 		internal static int __PropertyOffset_DamageResistanceElement4;
 
-		// Token: 0x0400D095 RID: 53397
+		// Token: 0x04002BA7 RID: 11175
 		[Nullable(2)]
 		private FGameplayAttributeData _DamageResistanceElement4;
 
-		// Token: 0x0400D096 RID: 53398
+		// Token: 0x04002BA8 RID: 11176
 		internal static int __PropertyOffset_DamageResistanceElement5;
 
-		// Token: 0x0400D097 RID: 53399
+		// Token: 0x04002BA9 RID: 11177
 		[Nullable(2)]
 		private FGameplayAttributeData _DamageResistanceElement5;
 
-		// Token: 0x0400D098 RID: 53400
+		// Token: 0x04002BAA RID: 11178
 		internal static int __PropertyOffset_DamageResistanceElement6;
 
-		// Token: 0x0400D099 RID: 53401
+		// Token: 0x04002BAB RID: 11179
 		[Nullable(2)]
 		private FGameplayAttributeData _DamageResistanceElement6;
 
-		// Token: 0x0400D09A RID: 53402
+		// Token: 0x04002BAC RID: 11180
 		internal static int __PropertyOffset_HealChange;
 
-		// Token: 0x0400D09B RID: 53403
+		// Token: 0x04002BAD RID: 11181
 		[Nullable(2)]
 		private FGameplayAttributeData _HealChange;
 
-		// Token: 0x0400D09C RID: 53404
+		// Token: 0x04002BAE RID: 11182
 		internal static int __PropertyOffset_HealedChange;
 
-		// Token: 0x0400D09D RID: 53405
+		// Token: 0x04002BAF RID: 11183
 		[Nullable(2)]
 		private FGameplayAttributeData _HealedChange;
 
-		// Token: 0x0400D09E RID: 53406
+		// Token: 0x04002BB0 RID: 11184
 		internal static int __PropertyOffset_DamageReducePhys;
 
-		// Token: 0x0400D09F RID: 53407
+		// Token: 0x04002BB1 RID: 11185
 		[Nullable(2)]
 		private FGameplayAttributeData _DamageReducePhys;
 
-		// Token: 0x0400D0A0 RID: 53408
+		// Token: 0x04002BB2 RID: 11186
 		internal static int __PropertyOffset_DamageReduceElement1;
 
-		// Token: 0x0400D0A1 RID: 53409
+		// Token: 0x04002BB3 RID: 11187
 		[Nullable(2)]
 		private FGameplayAttributeData _DamageReduceElement1;
 
-		// Token: 0x0400D0A2 RID: 53410
+		// Token: 0x04002BB4 RID: 11188
 		internal static int __PropertyOffset_DamageReduceElement2;
 
-		// Token: 0x0400D0A3 RID: 53411
+		// Token: 0x04002BB5 RID: 11189
 		[Nullable(2)]
 		private FGameplayAttributeData _DamageReduceElement2;
 
-		// Token: 0x0400D0A4 RID: 53412
+		// Token: 0x04002BB6 RID: 11190
 		internal static int __PropertyOffset_DamageReduceElement3;
 
-		// Token: 0x0400D0A5 RID: 53413
+		// Token: 0x04002BB7 RID: 11191
 		[Nullable(2)]
 		private FGameplayAttributeData _DamageReduceElement3;
 
-		// Token: 0x0400D0A6 RID: 53414
+		// Token: 0x04002BB8 RID: 11192
 		internal static int __PropertyOffset_DamageReduceElement4;
 
-		// Token: 0x0400D0A7 RID: 53415
+		// Token: 0x04002BB9 RID: 11193
 		[Nullable(2)]
 		private FGameplayAttributeData _DamageReduceElement4;
 
-		// Token: 0x0400D0A8 RID: 53416
+		// Token: 0x04002BBA RID: 11194
 		internal static int __PropertyOffset_DamageReduceElement5;
 
-		// Token: 0x0400D0A9 RID: 53417
+		// Token: 0x04002BBB RID: 11195
 		[Nullable(2)]
 		private FGameplayAttributeData _DamageReduceElement5;
 
-		// Token: 0x0400D0AA RID: 53418
+		// Token: 0x04002BBC RID: 11196
 		internal static int __PropertyOffset_DamageReduceElement6;
 
-		// Token: 0x0400D0AB RID: 53419
+		// Token: 0x04002BBD RID: 11197
 		[Nullable(2)]
 		private FGameplayAttributeData _DamageReduceElement6;
 
-		// Token: 0x0400D0AC RID: 53420
+		// Token: 0x04002BBE RID: 11198
 		internal static int __PropertyOffset_ReactionChange1;
 
-		// Token: 0x0400D0AD RID: 53421
+		// Token: 0x04002BBF RID: 11199
 		[Nullable(2)]
 		private FGameplayAttributeData _ReactionChange1;
 
-		// Token: 0x0400D0AE RID: 53422
+		// Token: 0x04002BC0 RID: 11200
 		internal static int __PropertyOffset_ReactionChange2;
 
-		// Token: 0x0400D0AF RID: 53423
+		// Token: 0x04002BC1 RID: 11201
 		[Nullable(2)]
 		private FGameplayAttributeData _ReactionChange2;
 
-		// Token: 0x0400D0B0 RID: 53424
+		// Token: 0x04002BC2 RID: 11202
 		internal static int __PropertyOffset_ReactionChange3;
 
-		// Token: 0x0400D0B1 RID: 53425
+		// Token: 0x04002BC3 RID: 11203
 		[Nullable(2)]
 		private FGameplayAttributeData _ReactionChange3;
 
-		// Token: 0x0400D0B2 RID: 53426
+		// Token: 0x04002BC4 RID: 11204
 		internal static int __PropertyOffset_ReactionChange4;
 
-		// Token: 0x0400D0B3 RID: 53427
+		// Token: 0x04002BC5 RID: 11205
 		[Nullable(2)]
 		private FGameplayAttributeData _ReactionChange4;
 
-		// Token: 0x0400D0B4 RID: 53428
+		// Token: 0x04002BC6 RID: 11206
 		internal static int __PropertyOffset_ReactionChange5;
 
-		// Token: 0x0400D0B5 RID: 53429
+		// Token: 0x04002BC7 RID: 11207
 		[Nullable(2)]
 		private FGameplayAttributeData _ReactionChange5;
 
-		// Token: 0x0400D0B6 RID: 53430
+		// Token: 0x04002BC8 RID: 11208
 		internal static int __PropertyOffset_ReactionChange6;
 
-		// Token: 0x0400D0B7 RID: 53431
+		// Token: 0x04002BC9 RID: 11209
 		[Nullable(2)]
 		private FGameplayAttributeData _ReactionChange6;
 
-		// Token: 0x0400D0B8 RID: 53432
+		// Token: 0x04002BCA RID: 11210
 		internal static int __PropertyOffset_ReactionChange7;
 
-		// Token: 0x0400D0B9 RID: 53433
+		// Token: 0x04002BCB RID: 11211
 		[Nullable(2)]
 		private FGameplayAttributeData _ReactionChange7;
 
-		// Token: 0x0400D0BA RID: 53434
+		// Token: 0x04002BCC RID: 11212
 		internal static int __PropertyOffset_ReactionChange8;
 
-		// Token: 0x0400D0BB RID: 53435
+		// Token: 0x04002BCD RID: 11213
 		[Nullable(2)]
 		private FGameplayAttributeData _ReactionChange8;
 
-		// Token: 0x0400D0BC RID: 53436
+		// Token: 0x04002BCE RID: 11214
 		internal static int __PropertyOffset_ReactionChange9;
 
-		// Token: 0x0400D0BD RID: 53437
+		// Token: 0x04002BCF RID: 11215
 		[Nullable(2)]
 		private FGameplayAttributeData _ReactionChange9;
 
-		// Token: 0x0400D0BE RID: 53438
+		// Token: 0x04002BD0 RID: 11216
 		internal static int __PropertyOffset_ReactionChange10;
 
-		// Token: 0x0400D0BF RID: 53439
+		// Token: 0x04002BD1 RID: 11217
 		[Nullable(2)]
 		private FGameplayAttributeData _ReactionChange10;
 
-		// Token: 0x0400D0C0 RID: 53440
+		// Token: 0x04002BD2 RID: 11218
 		internal static int __PropertyOffset_ReactionChange11;
 
-		// Token: 0x0400D0C1 RID: 53441
+		// Token: 0x04002BD3 RID: 11219
 		[Nullable(2)]
 		private FGameplayAttributeData _ReactionChange11;
 
-		// Token: 0x0400D0C2 RID: 53442
+		// Token: 0x04002BD4 RID: 11220
 		internal static int __PropertyOffset_ReactionChange12;
 
-		// Token: 0x0400D0C3 RID: 53443
+		// Token: 0x04002BD5 RID: 11221
 		[Nullable(2)]
 		private FGameplayAttributeData _ReactionChange12;
 
-		// Token: 0x0400D0C4 RID: 53444
+		// Token: 0x04002BD6 RID: 11222
 		internal static int __PropertyOffset_ReactionChange13;
 
-		// Token: 0x0400D0C5 RID: 53445
+		// Token: 0x04002BD7 RID: 11223
 		[Nullable(2)]
 		private FGameplayAttributeData _ReactionChange13;
 
-		// Token: 0x0400D0C6 RID: 53446
+		// Token: 0x04002BD8 RID: 11224
 		internal static int __PropertyOffset_ReactionChange14;
 
-		// Token: 0x0400D0C7 RID: 53447
+		// Token: 0x04002BD9 RID: 11225
 		[Nullable(2)]
 		private FGameplayAttributeData _ReactionChange14;
 
-		// Token: 0x0400D0C8 RID: 53448
+		// Token: 0x04002BDA RID: 11226
 		internal static int __PropertyOffset_ReactionChange15;
 
-		// Token: 0x0400D0C9 RID: 53449
+		// Token: 0x04002BDB RID: 11227
 		[Nullable(2)]
 		private FGameplayAttributeData _ReactionChange15;
 
-		// Token: 0x0400D0CA RID: 53450
+		// Token: 0x04002BDC RID: 11228
 		internal static int __PropertyOffset_EnergyMax;
 
-		// Token: 0x0400D0CB RID: 53451
+		// Token: 0x04002BDD RID: 11229
 		[Nullable(2)]
 		private FGameplayAttributeData _EnergyMax;
 
-		// Token: 0x0400D0CC RID: 53452
+		// Token: 0x04002BDE RID: 11230
 		internal static int __PropertyOffset_Energy;
 
-		// Token: 0x0400D0CD RID: 53453
+		// Token: 0x04002BDF RID: 11231
 		[Nullable(2)]
 		private FGameplayAttributeData _Energy;
 
-		// Token: 0x0400D0CE RID: 53454
+		// Token: 0x04002BE0 RID: 11232
 		internal static int __PropertyOffset_SpecialEnergy1Max;
 
-		// Token: 0x0400D0CF RID: 53455
+		// Token: 0x04002BE1 RID: 11233
 		[Nullable(2)]
 		private FGameplayAttributeData _SpecialEnergy1Max;
 
-		// Token: 0x0400D0D0 RID: 53456
+		// Token: 0x04002BE2 RID: 11234
 		internal static int __PropertyOffset_SpecialEnergy1;
 
-		// Token: 0x0400D0D1 RID: 53457
+		// Token: 0x04002BE3 RID: 11235
 		[Nullable(2)]
 		private FGameplayAttributeData _SpecialEnergy1;
 
-		// Token: 0x0400D0D2 RID: 53458
+		// Token: 0x04002BE4 RID: 11236
 		internal static int __PropertyOffset_SpecialEnergy2Max;
 
-		// Token: 0x0400D0D3 RID: 53459
+		// Token: 0x04002BE5 RID: 11237
 		[Nullable(2)]
 		private FGameplayAttributeData _SpecialEnergy2Max;
 
-		// Token: 0x0400D0D4 RID: 53460
+		// Token: 0x04002BE6 RID: 11238
 		internal static int __PropertyOffset_SpecialEnergy2;
 
-		// Token: 0x0400D0D5 RID: 53461
+		// Token: 0x04002BE7 RID: 11239
 		[Nullable(2)]
 		private FGameplayAttributeData _SpecialEnergy2;
 
-		// Token: 0x0400D0D6 RID: 53462
+		// Token: 0x04002BE8 RID: 11240
 		internal static int __PropertyOffset_SpecialEnergy3Max;
 
-		// Token: 0x0400D0D7 RID: 53463
+		// Token: 0x04002BE9 RID: 11241
 		[Nullable(2)]
 		private FGameplayAttributeData _SpecialEnergy3Max;
 
-		// Token: 0x0400D0D8 RID: 53464
+		// Token: 0x04002BEA RID: 11242
 		internal static int __PropertyOffset_SpecialEnergy3;
 
-		// Token: 0x0400D0D9 RID: 53465
+		// Token: 0x04002BEB RID: 11243
 		[Nullable(2)]
 		private FGameplayAttributeData _SpecialEnergy3;
 
-		// Token: 0x0400D0DA RID: 53466
+		// Token: 0x04002BEC RID: 11244
 		internal static int __PropertyOffset_SpecialEnergy4Max;
 
-		// Token: 0x0400D0DB RID: 53467
+		// Token: 0x04002BED RID: 11245
 		[Nullable(2)]
 		private FGameplayAttributeData _SpecialEnergy4Max;
 
-		// Token: 0x0400D0DC RID: 53468
+		// Token: 0x04002BEE RID: 11246
 		internal static int __PropertyOffset_SpecialEnergy4;
 
-		// Token: 0x0400D0DD RID: 53469
+		// Token: 0x04002BEF RID: 11247
 		[Nullable(2)]
 		private FGameplayAttributeData _SpecialEnergy4;
 
-		// Token: 0x0400D0DE RID: 53470
+		// Token: 0x04002BF0 RID: 11248
 		internal static int __PropertyOffset_StrengthMax;
 
-		// Token: 0x0400D0DF RID: 53471
+		// Token: 0x04002BF1 RID: 11249
 		[Nullable(2)]
 		private FGameplayAttributeData _StrengthMax;
 
-		// Token: 0x0400D0E0 RID: 53472
+		// Token: 0x04002BF2 RID: 11250
 		internal static int __PropertyOffset_Strength;
 
-		// Token: 0x0400D0E1 RID: 53473
+		// Token: 0x04002BF3 RID: 11251
 		[Nullable(2)]
 		private FGameplayAttributeData _Strength;
 
-		// Token: 0x0400D0E2 RID: 53474
+		// Token: 0x04002BF4 RID: 11252
 		internal static int __PropertyOffset_StrengthRecover;
 
-		// Token: 0x0400D0E3 RID: 53475
+		// Token: 0x04002BF5 RID: 11253
 		[Nullable(2)]
 		private FGameplayAttributeData _StrengthRecover;
 
-		// Token: 0x0400D0E4 RID: 53476
+		// Token: 0x04002BF6 RID: 11254
 		internal static int __PropertyOffset_StrengthPunishTime;
 
-		// Token: 0x0400D0E5 RID: 53477
+		// Token: 0x04002BF7 RID: 11255
 		[Nullable(2)]
 		private FGameplayAttributeData _StrengthPunishTime;
 
-		// Token: 0x0400D0E6 RID: 53478
+		// Token: 0x04002BF8 RID: 11256
 		internal static int __PropertyOffset_StrengthRun;
 
-		// Token: 0x0400D0E7 RID: 53479
+		// Token: 0x04002BF9 RID: 11257
 		[Nullable(2)]
 		private FGameplayAttributeData _StrengthRun;
 
-		// Token: 0x0400D0E8 RID: 53480
+		// Token: 0x04002BFA RID: 11258
 		internal static int __PropertyOffset_StrengthSwim;
 
-		// Token: 0x0400D0E9 RID: 53481
+		// Token: 0x04002BFB RID: 11259
 		[Nullable(2)]
 		private FGameplayAttributeData _StrengthSwim;
 
-		// Token: 0x0400D0EA RID: 53482
+		// Token: 0x04002BFC RID: 11260
 		internal static int __PropertyOffset_StrengthFastSwim;
 
-		// Token: 0x0400D0EB RID: 53483
+		// Token: 0x04002BFD RID: 11261
 		[Nullable(2)]
 		private FGameplayAttributeData _StrengthFastSwim;
 
-		// Token: 0x0400D0EC RID: 53484
+		// Token: 0x04002BFE RID: 11262
 		internal static int __PropertyOffset_StrengthClimb;
 
-		// Token: 0x0400D0ED RID: 53485
+		// Token: 0x04002BFF RID: 11263
 		[Nullable(2)]
 		private FGameplayAttributeData _StrengthClimb;
 
-		// Token: 0x0400D0EE RID: 53486
+		// Token: 0x04002C00 RID: 11264
 		internal static int __PropertyOffset_StrengthFastClimb;
 
-		// Token: 0x0400D0EF RID: 53487
+		// Token: 0x04002C01 RID: 11265
 		[Nullable(2)]
 		private FGameplayAttributeData _StrengthFastClimb;
 
-		// Token: 0x0400D0F0 RID: 53488
+		// Token: 0x04002C02 RID: 11266
 		internal static int __PropertyOffset_HardnessMax;
 
-		// Token: 0x0400D0F1 RID: 53489
+		// Token: 0x04002C03 RID: 11267
 		[Nullable(2)]
 		private FGameplayAttributeData _HardnessMax;
 
-		// Token: 0x0400D0F2 RID: 53490
+		// Token: 0x04002C04 RID: 11268
 		internal static int __PropertyOffset_Hardness;
 
-		// Token: 0x0400D0F3 RID: 53491
+		// Token: 0x04002C05 RID: 11269
 		[Nullable(2)]
 		private FGameplayAttributeData _Hardness;
 
-		// Token: 0x0400D0F4 RID: 53492
+		// Token: 0x04002C06 RID: 11270
 		internal static int __PropertyOffset_HardnessRecover;
 
-		// Token: 0x0400D0F5 RID: 53493
+		// Token: 0x04002C07 RID: 11271
 		[Nullable(2)]
 		private FGameplayAttributeData _HardnessRecover;
 
-		// Token: 0x0400D0F6 RID: 53494
+		// Token: 0x04002C08 RID: 11272
 		internal static int __PropertyOffset_HardnessPunishTime;
 
-		// Token: 0x0400D0F7 RID: 53495
+		// Token: 0x04002C09 RID: 11273
 		[Nullable(2)]
 		private FGameplayAttributeData _HardnessPunishTime;
 
-		// Token: 0x0400D0F8 RID: 53496
+		// Token: 0x04002C0A RID: 11274
 		internal static int __PropertyOffset_HardnessChange;
 
-		// Token: 0x0400D0F9 RID: 53497
+		// Token: 0x04002C0B RID: 11275
 		[Nullable(2)]
 		private FGameplayAttributeData _HardnessChange;
 
-		// Token: 0x0400D0FA RID: 53498
+		// Token: 0x04002C0C RID: 11276
 		internal static int __PropertyOffset_HardnessReduce;
 
-		// Token: 0x0400D0FB RID: 53499
+		// Token: 0x04002C0D RID: 11277
 		[Nullable(2)]
 		private FGameplayAttributeData _HardnessReduce;
 
-		// Token: 0x0400D0FC RID: 53500
+		// Token: 0x04002C0E RID: 11278
 		internal static int __PropertyOffset_ToughMax;
 
-		// Token: 0x0400D0FD RID: 53501
+		// Token: 0x04002C0F RID: 11279
 		[Nullable(2)]
 		private FGameplayAttributeData _ToughMax;
 
-		// Token: 0x0400D0FE RID: 53502
+		// Token: 0x04002C10 RID: 11280
 		internal static int __PropertyOffset_Tough;
 
-		// Token: 0x0400D0FF RID: 53503
+		// Token: 0x04002C11 RID: 11281
 		[Nullable(2)]
 		private FGameplayAttributeData _Tough;
 
-		// Token: 0x0400D100 RID: 53504
+		// Token: 0x04002C12 RID: 11282
 		internal static int __PropertyOffset_ToughRecover;
 
-		// Token: 0x0400D101 RID: 53505
+		// Token: 0x04002C13 RID: 11283
 		[Nullable(2)]
 		private FGameplayAttributeData _ToughRecover;
 
-		// Token: 0x0400D102 RID: 53506
+		// Token: 0x04002C14 RID: 11284
 		internal static int __PropertyOffset_ToughChange;
 
-		// Token: 0x0400D103 RID: 53507
+		// Token: 0x04002C15 RID: 11285
 		[Nullable(2)]
 		private FGameplayAttributeData _ToughChange;
 
-		// Token: 0x0400D104 RID: 53508
+		// Token: 0x04002C16 RID: 11286
 		internal static int __PropertyOffset_ToughReduce;
 
-		// Token: 0x0400D105 RID: 53509
+		// Token: 0x04002C17 RID: 11287
 		[Nullable(2)]
 		private FGameplayAttributeData _ToughReduce;
 
-		// Token: 0x0400D106 RID: 53510
+		// Token: 0x04002C18 RID: 11288
 		internal static int __PropertyOffset_ElementPower1;
 
-		// Token: 0x0400D107 RID: 53511
+		// Token: 0x04002C19 RID: 11289
 		[Nullable(2)]
 		private FGameplayAttributeData _ElementPower1;
 
-		// Token: 0x0400D108 RID: 53512
+		// Token: 0x04002C1A RID: 11290
 		internal static int __PropertyOffset_ElementPower2;
 
-		// Token: 0x0400D109 RID: 53513
+		// Token: 0x04002C1B RID: 11291
 		[Nullable(2)]
 		private FGameplayAttributeData _ElementPower2;
 
-		// Token: 0x0400D10A RID: 53514
+		// Token: 0x04002C1C RID: 11292
 		internal static int __PropertyOffset_ElementPower3;
 
-		// Token: 0x0400D10B RID: 53515
+		// Token: 0x04002C1D RID: 11293
 		[Nullable(2)]
 		private FGameplayAttributeData _ElementPower3;
 
-		// Token: 0x0400D10C RID: 53516
+		// Token: 0x04002C1E RID: 11294
 		internal static int __PropertyOffset_ElementPower4;
 
-		// Token: 0x0400D10D RID: 53517
+		// Token: 0x04002C1F RID: 11295
 		[Nullable(2)]
 		private FGameplayAttributeData _ElementPower4;
 
-		// Token: 0x0400D10E RID: 53518
+		// Token: 0x04002C20 RID: 11296
 		internal static int __PropertyOffset_ElementPower5;
 
-		// Token: 0x0400D10F RID: 53519
+		// Token: 0x04002C21 RID: 11297
 		[Nullable(2)]
 		private FGameplayAttributeData _ElementPower5;
 
-		// Token: 0x0400D110 RID: 53520
+		// Token: 0x04002C22 RID: 11298
 		internal static int __PropertyOffset_ElementPower6;
 
-		// Token: 0x0400D111 RID: 53521
+		// Token: 0x04002C23 RID: 11299
 		[Nullable(2)]
 		private FGameplayAttributeData _ElementPower6;
 
-		// Token: 0x0400D112 RID: 53522
+		// Token: 0x04002C24 RID: 11300
 		internal static int __PropertyOffset_SpecialDamageChange;
 
-		// Token: 0x0400D113 RID: 53523
+		// Token: 0x04002C25 RID: 11301
 		[Nullable(2)]
 		private FGameplayAttributeData _SpecialDamageChange;
 
-		// Token: 0x0400D114 RID: 53524
+		// Token: 0x04002C26 RID: 11302
 		internal static int __PropertyOffset_StrengthFastClimbCost;
 
-		// Token: 0x0400D115 RID: 53525
+		// Token: 0x04002C27 RID: 11303
 		[Nullable(2)]
 		private FGameplayAttributeData _StrengthFastClimbCost;
 
-		// Token: 0x0400D116 RID: 53526
+		// Token: 0x04002C28 RID: 11304
 		internal static int __PropertyOffset_ElementPropertyType;
 
-		// Token: 0x0400D117 RID: 53527
+		// Token: 0x04002C29 RID: 11305
 		[Nullable(2)]
 		private FGameplayAttributeData _ElementPropertyType;
 
-		// Token: 0x0400D118 RID: 53528
+		// Token: 0x04002C2A RID: 11306
 		internal static int __PropertyOffset_WeakTime;
 
-		// Token: 0x0400D119 RID: 53529
+		// Token: 0x04002C2B RID: 11307
 		[Nullable(2)]
 		private FGameplayAttributeData _WeakTime;
 
-		// Token: 0x0400D11A RID: 53530
+		// Token: 0x04002C2C RID: 11308
 		internal static int __PropertyOffset_IgnoreDefRate;
 
-		// Token: 0x0400D11B RID: 53531
+		// Token: 0x04002C2D RID: 11309
 		[Nullable(2)]
 		private FGameplayAttributeData _IgnoreDefRate;
 
-		// Token: 0x0400D11C RID: 53532
+		// Token: 0x04002C2E RID: 11310
 		internal static int __PropertyOffset_IgnoreDamageResistancePhys;
 
-		// Token: 0x0400D11D RID: 53533
+		// Token: 0x04002C2F RID: 11311
 		[Nullable(2)]
 		private FGameplayAttributeData _IgnoreDamageResistancePhys;
 
-		// Token: 0x0400D11E RID: 53534
+		// Token: 0x04002C30 RID: 11312
 		internal static int __PropertyOffset_IgnoreDamageResistanceElement1;
 
-		// Token: 0x0400D11F RID: 53535
+		// Token: 0x04002C31 RID: 11313
 		[Nullable(2)]
 		private FGameplayAttributeData _IgnoreDamageResistanceElement1;
 
-		// Token: 0x0400D120 RID: 53536
+		// Token: 0x04002C32 RID: 11314
 		internal static int __PropertyOffset_IgnoreDamageResistanceElement2;
 
-		// Token: 0x0400D121 RID: 53537
+		// Token: 0x04002C33 RID: 11315
 		[Nullable(2)]
 		private FGameplayAttributeData _IgnoreDamageResistanceElement2;
 
-		// Token: 0x0400D122 RID: 53538
+		// Token: 0x04002C34 RID: 11316
 		internal static int __PropertyOffset_IgnoreDamageResistanceElement3;
 
-		// Token: 0x0400D123 RID: 53539
+		// Token: 0x04002C35 RID: 11317
 		[Nullable(2)]
 		private FGameplayAttributeData _IgnoreDamageResistanceElement3;
 
-		// Token: 0x0400D124 RID: 53540
+		// Token: 0x04002C36 RID: 11318
 		internal static int __PropertyOffset_IgnoreDamageResistanceElement4;
 
-		// Token: 0x0400D125 RID: 53541
+		// Token: 0x04002C37 RID: 11319
 		[Nullable(2)]
 		private FGameplayAttributeData _IgnoreDamageResistanceElement4;
 
-		// Token: 0x0400D126 RID: 53542
+		// Token: 0x04002C38 RID: 11320
 		internal static int __PropertyOffset_IgnoreDamageResistanceElement5;
 
-		// Token: 0x0400D127 RID: 53543
+		// Token: 0x04002C39 RID: 11321
 		[Nullable(2)]
 		private FGameplayAttributeData _IgnoreDamageResistanceElement5;
 
-		// Token: 0x0400D128 RID: 53544
+		// Token: 0x04002C3A RID: 11322
 		internal static int __PropertyOffset_IgnoreDamageResistanceElement6;
 
-		// Token: 0x0400D129 RID: 53545
+		// Token: 0x04002C3B RID: 11323
 		[Nullable(2)]
 		private FGameplayAttributeData _IgnoreDamageResistanceElement6;
 
-		// Token: 0x0400D12A RID: 53546
+		// Token: 0x04002C3C RID: 11324
 		internal static int __PropertyOffset_SkillToughRatio;
 
-		// Token: 0x0400D12B RID: 53547
+		// Token: 0x04002C3D RID: 11325
 		[Nullable(2)]
 		private FGameplayAttributeData _SkillToughRatio;
 
-		// Token: 0x0400D12C RID: 53548
+		// Token: 0x04002C3E RID: 11326
 		internal static int __PropertyOffset_StrengthClimbJump;
 
-		// Token: 0x0400D12D RID: 53549
+		// Token: 0x04002C3F RID: 11327
 		[Nullable(2)]
 		private FGameplayAttributeData _StrengthClimbJump;
 
-		// Token: 0x0400D12E RID: 53550
+		// Token: 0x04002C40 RID: 11328
 		internal static int __PropertyOffset_StrengthGliding;
 
-		// Token: 0x0400D12F RID: 53551
+		// Token: 0x04002C41 RID: 11329
 		[Nullable(2)]
 		private FGameplayAttributeData _StrengthGliding;
 
-		// Token: 0x0400D130 RID: 53552
+		// Token: 0x04002C42 RID: 11330
 		internal static int __PropertyOffset_Mass;
 
-		// Token: 0x0400D131 RID: 53553
+		// Token: 0x04002C43 RID: 11331
 		[Nullable(2)]
 		private FGameplayAttributeData _Mass;
 
-		// Token: 0x0400D132 RID: 53554
+		// Token: 0x04002C44 RID: 11332
 		internal static int __PropertyOffset_BrakingFrictionFactor;
 
-		// Token: 0x0400D133 RID: 53555
+		// Token: 0x04002C45 RID: 11333
 		[Nullable(2)]
 		private FGameplayAttributeData _BrakingFrictionFactor;
 
-		// Token: 0x0400D134 RID: 53556
+		// Token: 0x04002C46 RID: 11334
 		internal static int __PropertyOffset_GravityScale;
 
-		// Token: 0x0400D135 RID: 53557
+		// Token: 0x04002C47 RID: 11335
 		[Nullable(2)]
 		private FGameplayAttributeData _GravityScale;
 
-		// Token: 0x0400D136 RID: 53558
+		// Token: 0x04002C48 RID: 11336
 		internal static int __PropertyOffset_SpeedRatio;
 
-		// Token: 0x0400D137 RID: 53559
+		// Token: 0x04002C49 RID: 11337
 		[Nullable(2)]
 		private FGameplayAttributeData _SpeedRatio;
 
-		// Token: 0x0400D138 RID: 53560
+		// Token: 0x04002C4A RID: 11338
 		internal static int __PropertyOffset_DamageChangePhantom;
 
-		// Token: 0x0400D139 RID: 53561
+		// Token: 0x04002C4B RID: 11339
 		[Nullable(2)]
 		private FGameplayAttributeData _DamageChangePhantom;
 
-		// Token: 0x0400D13A RID: 53562
+		// Token: 0x04002C4C RID: 11340
 		internal static int __PropertyOffset_AutoAttackSpeed;
 
-		// Token: 0x0400D13B RID: 53563
+		// Token: 0x04002C4D RID: 11341
 		[Nullable(2)]
 		private FGameplayAttributeData _AutoAttackSpeed;
 
-		// Token: 0x0400D13C RID: 53564
+		// Token: 0x04002C4E RID: 11342
 		internal static int __PropertyOffset_CastAttackSpeed;
 
-		// Token: 0x0400D13D RID: 53565
+		// Token: 0x04002C4F RID: 11343
 		[Nullable(2)]
 		private FGameplayAttributeData _CastAttackSpeed;
 
-		// Token: 0x0400D13E RID: 53566
+		// Token: 0x04002C50 RID: 11344
 		internal static int __PropertyOffset_StatusBuildUp1Max;
 
-		// Token: 0x0400D13F RID: 53567
+		// Token: 0x04002C51 RID: 11345
 		[Nullable(2)]
 		private FGameplayAttributeData _StatusBuildUp1Max;
 
-		// Token: 0x0400D140 RID: 53568
+		// Token: 0x04002C52 RID: 11346
 		internal static int __PropertyOffset_StatusBuildUp1;
 
-		// Token: 0x0400D141 RID: 53569
+		// Token: 0x04002C53 RID: 11347
 		[Nullable(2)]
 		private FGameplayAttributeData _StatusBuildUp1;
 
-		// Token: 0x0400D142 RID: 53570
+		// Token: 0x04002C54 RID: 11348
 		internal static int __PropertyOffset_StatusBuildUp2Max;
 
-		// Token: 0x0400D143 RID: 53571
+		// Token: 0x04002C55 RID: 11349
 		[Nullable(2)]
 		private FGameplayAttributeData _StatusBuildUp2Max;
 
-		// Token: 0x0400D144 RID: 53572
+		// Token: 0x04002C56 RID: 11350
 		internal static int __PropertyOffset_StatusBuildUp2;
 
-		// Token: 0x0400D145 RID: 53573
+		// Token: 0x04002C57 RID: 11351
 		[Nullable(2)]
 		private FGameplayAttributeData _StatusBuildUp2;
 
-		// Token: 0x0400D146 RID: 53574
+		// Token: 0x04002C58 RID: 11352
 		internal static int __PropertyOffset_StatusBuildUp3Max;
 
-		// Token: 0x0400D147 RID: 53575
+		// Token: 0x04002C59 RID: 11353
 		[Nullable(2)]
 		private FGameplayAttributeData _StatusBuildUp3Max;
 
-		// Token: 0x0400D148 RID: 53576
+		// Token: 0x04002C5A RID: 11354
 		internal static int __PropertyOffset_StatusBuildUp3;
 
-		// Token: 0x0400D149 RID: 53577
+		// Token: 0x04002C5B RID: 11355
 		[Nullable(2)]
 		private FGameplayAttributeData _StatusBuildUp3;
 
-		// Token: 0x0400D14A RID: 53578
+		// Token: 0x04002C5C RID: 11356
 		internal static int __PropertyOffset_StatusBuildUp4Max;
 
-		// Token: 0x0400D14B RID: 53579
+		// Token: 0x04002C5D RID: 11357
 		[Nullable(2)]
 		private FGameplayAttributeData _StatusBuildUp4Max;
 
-		// Token: 0x0400D14C RID: 53580
+		// Token: 0x04002C5E RID: 11358
 		internal static int __PropertyOffset_StatusBuildUp4;
 
-		// Token: 0x0400D14D RID: 53581
+		// Token: 0x04002C5F RID: 11359
 		[Nullable(2)]
 		private FGameplayAttributeData _StatusBuildUp4;
 
-		// Token: 0x0400D14E RID: 53582
+		// Token: 0x04002C60 RID: 11360
 		internal static int __PropertyOffset_StatusBuildUp5Max;
 
-		// Token: 0x0400D14F RID: 53583
+		// Token: 0x04002C61 RID: 11361
 		[Nullable(2)]
 		private FGameplayAttributeData _StatusBuildUp5Max;
 
-		// Token: 0x0400D150 RID: 53584
+		// Token: 0x04002C62 RID: 11362
 		internal static int __PropertyOffset_StatusBuildUp5;
 
-		// Token: 0x0400D151 RID: 53585
+		// Token: 0x04002C63 RID: 11363
 		[Nullable(2)]
 		private FGameplayAttributeData _StatusBuildUp5;
 
-		// Token: 0x0400D152 RID: 53586
+		// Token: 0x04002C64 RID: 11364
 		internal static int __PropertyOffset_RageMax;
 
-		// Token: 0x0400D153 RID: 53587
+		// Token: 0x04002C65 RID: 11365
 		[Nullable(2)]
 		private FGameplayAttributeData _RageMax;
 
-		// Token: 0x0400D154 RID: 53588
+		// Token: 0x04002C66 RID: 11366
 		internal static int __PropertyOffset_Rage;
 
-		// Token: 0x0400D155 RID: 53589
+		// Token: 0x04002C67 RID: 11367
 		[Nullable(2)]
 		private FGameplayAttributeData _Rage;
 
-		// Token: 0x0400D156 RID: 53590
+		// Token: 0x04002C68 RID: 11368
 		internal static int __PropertyOffset_RageRecover;
 
-		// Token: 0x0400D157 RID: 53591
+		// Token: 0x04002C69 RID: 11369
 		[Nullable(2)]
 		private FGameplayAttributeData _RageRecover;
 
-		// Token: 0x0400D158 RID: 53592
+		// Token: 0x04002C6A RID: 11370
 		internal static int __PropertyOffset_RagePunishTime;
 
-		// Token: 0x0400D159 RID: 53593
+		// Token: 0x04002C6B RID: 11371
 		[Nullable(2)]
 		private FGameplayAttributeData _RagePunishTime;
 
-		// Token: 0x0400D15A RID: 53594
+		// Token: 0x04002C6C RID: 11372
 		internal static int __PropertyOffset_RageChange;
 
-		// Token: 0x0400D15B RID: 53595
+		// Token: 0x04002C6D RID: 11373
 		[Nullable(2)]
 		private FGameplayAttributeData _RageChange;
 
-		// Token: 0x0400D15C RID: 53596
+		// Token: 0x04002C6E RID: 11374
 		internal static int __PropertyOffset_RageReduce;
 
-		// Token: 0x0400D15D RID: 53597
+		// Token: 0x04002C6F RID: 11375
 		[Nullable(2)]
 		private FGameplayAttributeData _RageReduce;
 
-		// Token: 0x0400D15E RID: 53598
+		// Token: 0x04002C70 RID: 11376
 		internal static int __PropertyOffset_ToughRecoverDelayTime;
 
-		// Token: 0x0400D15F RID: 53599
+		// Token: 0x04002C71 RID: 11377
 		[Nullable(2)]
 		private FGameplayAttributeData _ToughRecoverDelayTime;
 
-		// Token: 0x0400D160 RID: 53600
+		// Token: 0x04002C72 RID: 11378
 		internal static int __PropertyOffset_Jump;
 
-		// Token: 0x0400D161 RID: 53601
+		// Token: 0x04002C73 RID: 11379
 		[Nullable(2)]
 		private FGameplayAttributeData _Jump;
 
-		// Token: 0x0400D162 RID: 53602
+		// Token: 0x04002C74 RID: 11380
 		internal static int __PropertyOffset_ParalysisTimeMax;
 
-		// Token: 0x0400D163 RID: 53603
+		// Token: 0x04002C75 RID: 11381
 		[Nullable(2)]
 		private FGameplayAttributeData _ParalysisTimeMax;
 
-		// Token: 0x0400D164 RID: 53604
+		// Token: 0x04002C76 RID: 11382
 		internal static int __PropertyOffset_ParalysisTime;
 
-		// Token: 0x0400D165 RID: 53605
+		// Token: 0x04002C77 RID: 11383
 		[Nullable(2)]
 		private FGameplayAttributeData _ParalysisTime;
 
-		// Token: 0x0400D166 RID: 53606
+		// Token: 0x04002C78 RID: 11384
 		internal static int __PropertyOffset_ParalysisTimeRecover;
 
-		// Token: 0x0400D167 RID: 53607
+		// Token: 0x04002C79 RID: 11385
 		[Nullable(2)]
 		private FGameplayAttributeData _ParalysisTimeRecover;
 
-		// Token: 0x0400D168 RID: 53608
+		// Token: 0x04002C7A RID: 11386
 		internal static int __PropertyOffset_WeaknessBuildUp;
 
-		// Token: 0x0400D169 RID: 53609
+		// Token: 0x04002C7B RID: 11387
 		[Nullable(2)]
 		private FGameplayAttributeData _WeaknessBuildUp;
 
-		// Token: 0x0400D16A RID: 53610
+		// Token: 0x04002C7C RID: 11388
 		internal static int __PropertyOffset_WeaknessBuildUpMax;
 
-		// Token: 0x0400D16B RID: 53611
+		// Token: 0x04002C7D RID: 11389
 		[Nullable(2)]
 		private FGameplayAttributeData _WeaknessBuildUpMax;
 
-		// Token: 0x0400D16C RID: 53612
+		// Token: 0x04002C7E RID: 11390
 		internal static int __PropertyOffset_WeaknessTotalBonus;
 
-		// Token: 0x0400D16D RID: 53613
+		// Token: 0x04002C7F RID: 11391
 		[Nullable(2)]
 		private FGameplayAttributeData _WeaknessTotalBonus;
 
-		// Token: 0x0400D16E RID: 53614
+		// Token: 0x04002C80 RID: 11392
 		internal static int __PropertyOffset_WeaknessTotalResist;
 
-		// Token: 0x0400D16F RID: 53615
+		// Token: 0x04002C81 RID: 11393
 		[Nullable(2)]
 		private FGameplayAttributeData _WeaknessTotalResist;
 	}

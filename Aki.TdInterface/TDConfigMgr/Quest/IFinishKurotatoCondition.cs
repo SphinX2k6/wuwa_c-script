@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F7D RID: 3965
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020010A7 RID: 4263
 	public class IFinishKurotatoCondition : IQuestCondition
 	{
-		// Token: 0x06005830 RID: 22576 RVA: 0x000D747C File Offset: 0x000D567C
+		// Token: 0x06005E02 RID: 24066 RVA: 0x000E3EA4 File Offset: 0x000E20A4
 		private IFinishKurotatoCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005831 RID: 22577 RVA: 0x000D74B4 File Offset: 0x000D56B4
+		// Token: 0x06005E03 RID: 24067 RVA: 0x000E3EDC File Offset: 0x000E20DC
 		public static IFinishKurotatoCondition Create([Nullable(2)] IFinishKurotatoCondition instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005832 RID: 22578 RVA: 0x000D74C7 File Offset: 0x000D56C7
+		// Token: 0x06005E04 RID: 24068 RVA: 0x000E3EEF File Offset: 0x000E20EF
 		public static IFinishKurotatoCondition CreateFromSetValue([Nullable(2)] IFinishKurotatoCondition_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005833 RID: 22579 RVA: 0x000D74DA File Offset: 0x000D56DA
+		// Token: 0x06005E05 RID: 24069 RVA: 0x000E3F02 File Offset: 0x000E2102
 		public new IFinishKurotatoCondition_SetValue ToSetValue()
 		{
 			return new IFinishKurotatoCondition_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001D5E RID: 7518
-		// (get) Token: 0x06005834 RID: 22580 RVA: 0x000D7511 File Offset: 0x000D5711
-		// (set) Token: 0x06005835 RID: 22581 RVA: 0x000D753C File Offset: 0x000D573C
+		// Token: 0x17001F03 RID: 7939
+		// (get) Token: 0x06005E06 RID: 24070 RVA: 0x000E3F39 File Offset: 0x000E2139
+		// (set) Token: 0x06005E07 RID: 24071 RVA: 0x000E3F64 File Offset: 0x000E2164
 		public override EChildQuest Type
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D5F RID: 7519
-		// (get) Token: 0x06005836 RID: 22582 RVA: 0x000D754C File Offset: 0x000D574C
-		// (set) Token: 0x06005837 RID: 22583 RVA: 0x000D75AD File Offset: 0x000D57AD
+		// Token: 0x17001F04 RID: 7940
+		// (get) Token: 0x06005E08 RID: 24072 RVA: 0x000E3F74 File Offset: 0x000E2174
+		// (set) Token: 0x06005E09 RID: 24073 RVA: 0x000E3FD5 File Offset: 0x000E21D5
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -120,9 +118,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D60 RID: 7520
-		// (get) Token: 0x06005838 RID: 22584 RVA: 0x000D75C2 File Offset: 0x000D57C2
-		// (set) Token: 0x06005839 RID: 22585 RVA: 0x000D75E9 File Offset: 0x000D57E9
+		// Token: 0x17001F05 RID: 7941
+		// (get) Token: 0x06005E0A RID: 24074 RVA: 0x000E3FEA File Offset: 0x000E21EA
+		// (set) Token: 0x06005E0B RID: 24075 RVA: 0x000E4011 File Offset: 0x000E2211
 		public virtual IKurotatoConditionStepBase Step
 		{
 			get
@@ -144,9 +142,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D61 RID: 7521
-		// (get) Token: 0x0600583A RID: 22586 RVA: 0x000D75F7 File Offset: 0x000D57F7
-		// (set) Token: 0x0600583B RID: 22587 RVA: 0x000D761E File Offset: 0x000D581E
+		// Token: 0x17001F06 RID: 7942
+		// (get) Token: 0x06005E0C RID: 24076 RVA: 0x000E401F File Offset: 0x000E221F
+		// (set) Token: 0x06005E0D RID: 24077 RVA: 0x000E4046 File Offset: 0x000E2246
 		public virtual VarRef Batch
 		{
 			get
@@ -168,18 +166,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003547 RID: 13639
+		// Token: 0x04003877 RID: 14455
 		[Nullable(2)]
 		protected new IFinishKurotatoCondition FbInstance;
 
-		// Token: 0x04003548 RID: 13640
+		// Token: 0x04003878 RID: 14456
 		[Nullable(2)]
 		protected new IFinishKurotatoCondition_SetValue PocoInterface;
 
-		// Token: 0x04003549 RID: 13641
+		// Token: 0x04003879 RID: 14457
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x0400354A RID: 13642
+		// Token: 0x0400387A RID: 14458
 		private bool _PreConditionsInited;
 	}
 }

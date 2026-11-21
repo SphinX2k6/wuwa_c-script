@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x020010F7 RID: 4343
+// Token: 0x020005AB RID: 1451
 public static class ArtemisQteDefine
 {
-	// Token: 0x06007151 RID: 29009 RVA: 0x001724C2 File Offset: 0x001706C2
+	// Token: 0x060044E7 RID: 17639 RVA: 0x0017AE7E File Offset: 0x0017907E
 	public static int CalculateCellSize(int startIndex, int endIndex)
 	{
 		if (endIndex >= startIndex)
@@ -13,7 +13,7 @@ public static class ArtemisQteDefine
 		return 36 - startIndex + endIndex + 1;
 	}
 
-	// Token: 0x06007152 RID: 29010 RVA: 0x001724D8 File Offset: 0x001706D8
+	// Token: 0x060044E8 RID: 17640 RVA: 0x0017AE94 File Offset: 0x00179094
 	public static int FixedCellIndex(int index)
 	{
 		if (index > 36)
@@ -35,12 +35,12 @@ public static class ArtemisQteDefine
 		}
 	}
 
-	// Token: 0x04003473 RID: 13427
+	// Token: 0x0400350C RID: 13580
 	public const int QTE_RINGCELLCOUNT = 36;
 
-	// Token: 0x04003474 RID: 13428
+	// Token: 0x0400350D RID: 13581
 	public const int QTE_RING_ANGLE = 360;
 
-	// Token: 0x04003475 RID: 13429
+	// Token: 0x0400350E RID: 13582
 	public const int QTE_SINGLECELL_ANGLE = 10;
 }

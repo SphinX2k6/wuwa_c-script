@@ -6,12 +6,12 @@ using CSharpScript.Game.NewWorld.Pawn.Component;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002E2E RID: 11822
+// Token: 0x0200238A RID: 9098
 [NullableContext(1)]
 [Nullable(0)]
 public class AnimalPerformSystemUiState : AnimalPerformStateBase
 {
-	// Token: 0x06018E62 RID: 101986 RVA: 0x0066AFC1 File Offset: 0x006691C1
+	// Token: 0x0601672F RID: 91951 RVA: 0x00690EB1 File Offset: 0x0068F0B1
 	public AnimalPerformSystemUiState(Entity owner, EAnimalPerformState state, [Nullable(new byte[]
 	{
 		2,
@@ -20,9 +20,9 @@ public class AnimalPerformSystemUiState : AnimalPerformStateBase
 	{
 	}
 
-	// Token: 0x17002280 RID: 8832
-	// (get) Token: 0x06018E63 RID: 101987 RVA: 0x0066AFD7 File Offset: 0x006691D7
-	// (set) Token: 0x06018E64 RID: 101988 RVA: 0x0066AFDF File Offset: 0x006691DF
+	// Token: 0x170022F3 RID: 8947
+	// (get) Token: 0x06016730 RID: 91952 RVA: 0x00690EC7 File Offset: 0x0068F0C7
+	// (set) Token: 0x06016731 RID: 91953 RVA: 0x00690ECF File Offset: 0x0068F0CF
 	public EUiViewName? SystemUiViewName
 	{
 		get
@@ -35,7 +35,7 @@ public class AnimalPerformSystemUiState : AnimalPerformStateBase
 		}
 	}
 
-	// Token: 0x06018E65 RID: 101989 RVA: 0x0066AFE8 File Offset: 0x006691E8
+	// Token: 0x06016732 RID: 91954 RVA: 0x00690ED8 File Offset: 0x0068F0D8
 	protected override void OnEnter(EAnimalPerformState? lastState)
 	{
 		if (this.EcologicalInterface == null)
@@ -69,7 +69,7 @@ public class AnimalPerformSystemUiState : AnimalPerformStateBase
 		this.EcologicalInterface.SystemUiStart();
 	}
 
-	// Token: 0x06018E66 RID: 101990 RVA: 0x0066B09C File Offset: 0x0066929C
+	// Token: 0x06016733 RID: 91955 RVA: 0x00690F8C File Offset: 0x0068F18C
 	protected override void OnExit(EAnimalPerformState nextState)
 	{
 		if (this.EcologicalInterface == null)
@@ -91,7 +91,7 @@ public class AnimalPerformSystemUiState : AnimalPerformStateBase
 		this.UiViewName = null;
 	}
 
-	// Token: 0x06018E67 RID: 101991 RVA: 0x0066B118 File Offset: 0x00669318
+	// Token: 0x06016734 RID: 91956 RVA: 0x00691008 File Offset: 0x0068F208
 	private void OnOpenView(EUiViewName viewName, int viewId)
 	{
 		if (this.UiViewName == null || this.UiViewName != viewName)
@@ -107,7 +107,7 @@ public class AnimalPerformSystemUiState : AnimalPerformStateBase
 		EventSystem.Instance.Add<int>(EEventName.OnDeliveryProps, new Action<int>(this.OnDeliveryProps));
 	}
 
-	// Token: 0x06018E68 RID: 101992 RVA: 0x0066B1B4 File Offset: 0x006693B4
+	// Token: 0x06016735 RID: 91957 RVA: 0x006910A4 File Offset: 0x0068F2A4
 	private void OnCloseView(EUiViewName viewName, int viewId)
 	{
 		if (this.UiViewName == null)
@@ -123,7 +123,7 @@ public class AnimalPerformSystemUiState : AnimalPerformStateBase
 		this.StateMachine.Switch(EAnimalPerformState.Stand);
 	}
 
-	// Token: 0x06018E69 RID: 101993 RVA: 0x0066B238 File Offset: 0x00669438
+	// Token: 0x06016736 RID: 91958 RVA: 0x00691128 File Offset: 0x0068F328
 	public void InitFeedingAnimalConfig(int[] itemIds, string[] gameplayTags)
 	{
 		if (itemIds == null || gameplayTags == null)
@@ -142,7 +142,7 @@ public class AnimalPerformSystemUiState : AnimalPerformStateBase
 		}
 	}
 
-	// Token: 0x06018E6A RID: 101994 RVA: 0x0066B27C File Offset: 0x0066947C
+	// Token: 0x06016737 RID: 91959 RVA: 0x0069116C File Offset: 0x0068F36C
 	private void OnDeliveryProps(int itemId)
 	{
 		if (itemId == 0)
@@ -157,7 +157,7 @@ public class AnimalPerformSystemUiState : AnimalPerformStateBase
 		}
 	}
 
-	// Token: 0x06018E6B RID: 101995 RVA: 0x0066B2B8 File Offset: 0x006694B8
+	// Token: 0x06016738 RID: 91960 RVA: 0x006911A8 File Offset: 0x0068F3A8
 	private void ProcessGameplayTag(BaseTagComponent gameplayTagComponent)
 	{
 		if (gameplayTagComponent == null || !gameplayTagComponent.Valid)
@@ -182,12 +182,12 @@ public class AnimalPerformSystemUiState : AnimalPerformStateBase
 		gameplayTagComponent.AddTag(new int?(GameplayTagDefine.EGameplayTagId["动物.Common.通知标识.系统UI"]));
 	}
 
-	// Token: 0x0400BAE1 RID: 47841
+	// Token: 0x0400BE6F RID: 48751
 	private readonly Dictionary<int, string> DeliveryPropsConfig = new Dictionary<int, string>();
 
-	// Token: 0x0400BAE2 RID: 47842
+	// Token: 0x0400BE70 RID: 48752
 	private bool IsViewOpening;
 
-	// Token: 0x0400BAE3 RID: 47843
+	// Token: 0x0400BE71 RID: 48753
 	private EUiViewName? UiViewName;
 }

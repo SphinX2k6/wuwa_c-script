@@ -4,10 +4,10 @@ using Aki.Config;
 using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Item;
 
-// Token: 0x02002239 RID: 8761
+// Token: 0x0200171D RID: 5917
 public class MotorcycleRewardItemGrid : LoopScrollSmallItemGrid<TItem>
 {
-	// Token: 0x06011181 RID: 70017 RVA: 0x0042B6D0 File Offset: 0x004298D0
+	// Token: 0x0600E617 RID: 58903 RVA: 0x00438274 File Offset: 0x00436474
 	protected override void OnRefresh(TItem data, bool isSelected, int gridIndex)
 	{
 		InventoryDefine.IGetItemData itemData = data.ItemData;
@@ -37,35 +37,35 @@ public class MotorcycleRewardItemGrid : LoopScrollSmallItemGrid<TItem>
 		base.Apply<PropSmallItemGrid>(parameters2);
 	}
 
-	// Token: 0x06011182 RID: 70018 RVA: 0x0042B7F7 File Offset: 0x004299F7
+	// Token: 0x0600E618 RID: 58904 RVA: 0x0043839B File Offset: 0x0043659B
 	protected override bool OnCanExecuteChange()
 	{
 		return false;
 	}
 
-	// Token: 0x06011183 RID: 70019 RVA: 0x0042B7FA File Offset: 0x004299FA
+	// Token: 0x0600E619 RID: 58905 RVA: 0x0043839E File Offset: 0x0043659E
 	public void SetAllowClickBack(bool isAllow)
 	{
 		this.AllowClickBack = isAllow;
 	}
 
-	// Token: 0x06011184 RID: 70020 RVA: 0x0042B803 File Offset: 0x00429A03
+	// Token: 0x0600E61A RID: 58906 RVA: 0x004383A7 File Offset: 0x004365A7
 	protected override void OnExtendToggleClicked()
 	{
 		if (!this.AllowClickBack)
 		{
 			return;
 		}
-		ItemController.Instance.OpenItemTipsByItemId(this.ConfigId, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(this.ConfigId, true, null, false);
 	}
 
-	// Token: 0x04008233 RID: 33331
+	// Token: 0x04008371 RID: 33649
 	private int ConfigId;
 
-	// Token: 0x04008234 RID: 33332
+	// Token: 0x04008372 RID: 33650
 	private bool AllowClickBack = true;
 
-	// Token: 0x04008235 RID: 33333
+	// Token: 0x04008373 RID: 33651
 	[Nullable(2)]
 	public Func<TItem, bool> ShowReceivedCallBack;
 }

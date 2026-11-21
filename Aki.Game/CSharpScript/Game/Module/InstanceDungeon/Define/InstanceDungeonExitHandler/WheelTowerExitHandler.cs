@@ -5,16 +5,16 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.Define.InstanceDungeonExitHandler
 {
-	// Token: 0x020058FD RID: 22781
+	// Token: 0x020048D6 RID: 18646
 	public class WheelTowerExitHandler : InstanceDungeonExitHandlerBase
 	{
-		// Token: 0x06039D45 RID: 236869 RVA: 0x00DBC610 File Offset: 0x00DBA810
+		// Token: 0x0602EC6B RID: 191595 RVA: 0x00D0B5DC File Offset: 0x00D097DC
 		public override bool Checker()
 		{
 			return WheelTowerModel.Instance.CheckInInstanceDungeon();
 		}
 
-		// Token: 0x06039D46 RID: 236870 RVA: 0x00DBC61C File Offset: 0x00DBA81C
+		// Token: 0x0602EC6C RID: 191596 RVA: 0x00D0B5E8 File Offset: 0x00D097E8
 		[NullableContext(2)]
 		public override void HandleExit(InstanceDungeonExitHandlerData data)
 		{

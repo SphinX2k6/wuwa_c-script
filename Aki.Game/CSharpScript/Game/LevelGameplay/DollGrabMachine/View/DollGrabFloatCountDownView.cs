@@ -8,17 +8,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 {
-	// Token: 0x02006EE4 RID: 28388
+	// Token: 0x02006064 RID: 24676
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DollGrabFloatCountDownView : UiTickViewBase
 	{
-		// Token: 0x06045254 RID: 283220 RVA: 0x0111A0CE File Offset: 0x011182CE
+		// Token: 0x0603B3FD RID: 242685 RVA: 0x010C3E5E File Offset: 0x010C205E
 		public DollGrabFloatCountDownView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06045255 RID: 283221 RVA: 0x0111A0F8 File Offset: 0x011182F8
+		// Token: 0x0603B3FE RID: 242686 RVA: 0x010C3E88 File Offset: 0x010C2088
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06045256 RID: 283222 RVA: 0x0111A164 File Offset: 0x01118364
+		// Token: 0x0603B3FF RID: 242687 RVA: 0x010C3EF4 File Offset: 0x010C20F4
 		protected override void OnBeforeShow()
 		{
 			this.CurrentTime = DollGrabMachineController.Instance.RemainingTime / 1000f;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			EventSystem.Instance.Add(EEventName.OnDollGrabMachineResume, new Action(this.OnDollGrabMachineResume));
 		}
 
-		// Token: 0x06045257 RID: 283223 RVA: 0x0111A200 File Offset: 0x01118400
+		// Token: 0x0603B400 RID: 242688 RVA: 0x010C3F90 File Offset: 0x010C2190
 		protected override void OnBeforeHide()
 		{
 			EventSystem.Instance.Remove<float>(EEventName.OnDollGrabMachineRemainingTimeAdd, new Action<float>(this.OnRemainingTimeAdd));
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			EventSystem.Instance.Remove(EEventName.OnDollGrabMachineResume, new Action(this.OnDollGrabMachineResume));
 		}
 
-		// Token: 0x06045258 RID: 283224 RVA: 0x0111A264 File Offset: 0x01118464
+		// Token: 0x0603B401 RID: 242689 RVA: 0x010C3FF4 File Offset: 0x010C21F4
 		protected override void OnTick(float delta)
 		{
 			if (TickSystem.Instance.IsPaused || this.IsPaused)
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			this.SetExtraText(this.MinuteText, this.SecondText, this.Millisecond);
 		}
 
-		// Token: 0x06045259 RID: 283225 RVA: 0x0111A2DC File Offset: 0x011184DC
+		// Token: 0x0603B402 RID: 242690 RVA: 0x010C406C File Offset: 0x010C226C
 		private void UpdateCountDown()
 		{
 			float currentTime = this.CurrentTime;
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			this.Millisecond = defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x0604525A RID: 283226 RVA: 0x0111A3F4 File Offset: 0x011185F4
+		// Token: 0x0603B403 RID: 242691 RVA: 0x010C4184 File Offset: 0x010C2384
 		protected void SetExtraText(string minute, string second, string millionSecond)
 		{
 			UUIText text = base.GetText(1);
@@ -105,37 +105,37 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x0604525B RID: 283227 RVA: 0x0111A453 File Offset: 0x01118653
+		// Token: 0x0603B404 RID: 242692 RVA: 0x010C41E3 File Offset: 0x010C23E3
 		private void OnRemainingTimeAdd(float num)
 		{
 			this.CurrentTime = DollGrabMachineController.Instance.RemainingTime / 1000f;
 		}
 
-		// Token: 0x0604525C RID: 283228 RVA: 0x0111A46B File Offset: 0x0111866B
+		// Token: 0x0603B405 RID: 242693 RVA: 0x010C41FB File Offset: 0x010C23FB
 		private void OnDollGrabMachinePause()
 		{
 			this.IsPaused = true;
 		}
 
-		// Token: 0x0604525D RID: 283229 RVA: 0x0111A474 File Offset: 0x01118674
+		// Token: 0x0603B406 RID: 242694 RVA: 0x010C4204 File Offset: 0x010C2404
 		private void OnDollGrabMachineResume()
 		{
 			this.IsPaused = false;
 		}
 
-		// Token: 0x0402403D RID: 147517
+		// Token: 0x0401F2F0 RID: 127728
 		private float CurrentTime;
 
-		// Token: 0x0402403E RID: 147518
+		// Token: 0x0401F2F1 RID: 127729
 		private string Millisecond = "";
 
-		// Token: 0x0402403F RID: 147519
+		// Token: 0x0401F2F2 RID: 127730
 		private string MinuteText = "";
 
-		// Token: 0x04024040 RID: 147520
+		// Token: 0x0401F2F3 RID: 127731
 		private string SecondText = "";
 
-		// Token: 0x04024041 RID: 147521
+		// Token: 0x0401F2F4 RID: 127732
 		private bool IsPaused;
 	}
 }

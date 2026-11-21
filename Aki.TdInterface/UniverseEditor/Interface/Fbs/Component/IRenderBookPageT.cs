@@ -3,30 +3,30 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200583F RID: 22591
+	// Token: 0x02005E49 RID: 24137
 	public class IRenderBookPageT
 	{
-		// Token: 0x1700A8C5 RID: 43205
-		// (get) Token: 0x06026018 RID: 155672 RVA: 0x0053D423 File Offset: 0x0053B623
-		// (set) Token: 0x06026019 RID: 155673 RVA: 0x0053D42B File Offset: 0x0053B62B
+		// Token: 0x1700B1F0 RID: 45552
+		// (get) Token: 0x0602855F RID: 165215 RVA: 0x00583C87 File Offset: 0x00581E87
+		// (set) Token: 0x06028560 RID: 165216 RVA: 0x00583C8F File Offset: 0x00581E8F
 		public ERenderSpecifiedRangeType Type { get; set; }
 
-		// Token: 0x1700A8C6 RID: 43206
-		// (get) Token: 0x0602601A RID: 155674 RVA: 0x0053D434 File Offset: 0x0053B634
-		// (set) Token: 0x0602601B RID: 155675 RVA: 0x0053D43C File Offset: 0x0053B63C
+		// Token: 0x1700B1F1 RID: 45553
+		// (get) Token: 0x06028561 RID: 165217 RVA: 0x00583C98 File Offset: 0x00581E98
+		// (set) Token: 0x06028562 RID: 165218 RVA: 0x00583CA0 File Offset: 0x00581EA0
 		public int Radius { get; set; }
 
-		// Token: 0x1700A8C7 RID: 43207
-		// (get) Token: 0x0602601C RID: 155676 RVA: 0x0053D445 File Offset: 0x0053B645
-		// (set) Token: 0x0602601D RID: 155677 RVA: 0x0053D44D File Offset: 0x0053B64D
+		// Token: 0x1700B1F2 RID: 45554
+		// (get) Token: 0x06028563 RID: 165219 RVA: 0x00583CA9 File Offset: 0x00581EA9
+		// (set) Token: 0x06028564 RID: 165220 RVA: 0x00583CB1 File Offset: 0x00581EB1
 		public TTargetEntityUnion CenterTarget { get; set; }
 
-		// Token: 0x1700A8C8 RID: 43208
-		// (get) Token: 0x0602601E RID: 155678 RVA: 0x0053D456 File Offset: 0x0053B656
-		// (set) Token: 0x0602601F RID: 155679 RVA: 0x0053D45E File Offset: 0x0053B65E
+		// Token: 0x1700B1F3 RID: 45555
+		// (get) Token: 0x06028565 RID: 165221 RVA: 0x00583CBA File Offset: 0x00581EBA
+		// (set) Token: 0x06028566 RID: 165222 RVA: 0x00583CC2 File Offset: 0x00581EC2
 		public string AkEvent { get; set; }
 
-		// Token: 0x06026020 RID: 155680 RVA: 0x0053D467 File Offset: 0x0053B667
+		// Token: 0x06028567 RID: 165223 RVA: 0x00583CCB File Offset: 0x00581ECB
 		public IRenderBookPageT()
 		{
 			this.Type = ERenderSpecifiedRangeType.FlowerBridge;

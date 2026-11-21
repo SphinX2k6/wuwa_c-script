@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002909 RID: 10505
+// Token: 0x02001E84 RID: 7812
 public enum ERouletteViewType
 {
-	// Token: 0x0400A170 RID: 41328
+	// Token: 0x0400A55B RID: 42331
 	Assembly,
-	// Token: 0x0400A171 RID: 41329
+	// Token: 0x0400A55C RID: 42332
 	Main
 }

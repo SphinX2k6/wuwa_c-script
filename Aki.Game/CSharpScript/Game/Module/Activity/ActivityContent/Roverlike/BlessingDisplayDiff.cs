@@ -4,24 +4,24 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006145 RID: 24901
+	// Token: 0x020050C3 RID: 20675
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BlessingDisplayDiff : IBlessingDisplayDiff
 	{
-		// Token: 0x1700919B RID: 37275
-		// (get) Token: 0x0603EF1F RID: 257823 RVA: 0x00F347C2 File Offset: 0x00F329C2
-		// (set) Token: 0x0603EF20 RID: 257824 RVA: 0x00F347CA File Offset: 0x00F329CA
+		// Token: 0x170064FD RID: 25853
+		// (get) Token: 0x06033BDF RID: 211935 RVA: 0x00E7B6A2 File Offset: 0x00E798A2
+		// (set) Token: 0x06033BE0 RID: 211936 RVA: 0x00E7B6AA File Offset: 0x00E798AA
 		public List<IRoverlikeBlessingSlotItemData> DataList { get; set; }
 
-		// Token: 0x1700919C RID: 37276
-		// (get) Token: 0x0603EF21 RID: 257825 RVA: 0x00F347D3 File Offset: 0x00F329D3
-		// (set) Token: 0x0603EF22 RID: 257826 RVA: 0x00F347DB File Offset: 0x00F329DB
+		// Token: 0x170064FE RID: 25854
+		// (get) Token: 0x06033BE1 RID: 211937 RVA: 0x00E7B6B3 File Offset: 0x00E798B3
+		// (set) Token: 0x06033BE2 RID: 211938 RVA: 0x00E7B6BB File Offset: 0x00E798BB
 		public List<int> ChangedSlots { get; set; }
 
-		// Token: 0x1700919D RID: 37277
-		// (get) Token: 0x0603EF23 RID: 257827 RVA: 0x00F347E4 File Offset: 0x00F329E4
-		// (set) Token: 0x0603EF24 RID: 257828 RVA: 0x00F347EC File Offset: 0x00F329EC
+		// Token: 0x170064FF RID: 25855
+		// (get) Token: 0x06033BE3 RID: 211939 RVA: 0x00E7B6C4 File Offset: 0x00E798C4
+		// (set) Token: 0x06033BE4 RID: 211940 RVA: 0x00E7B6CC File Offset: 0x00E798CC
 		public int Count { get; set; }
 	}
 }

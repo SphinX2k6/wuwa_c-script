@@ -6,33 +6,33 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.LevelGamePlay.AlertArea
 {
-	// Token: 0x02006F63 RID: 28515
+	// Token: 0x020060E4 RID: 24804
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class AlertAreaModel : ModelBase
 	{
-		// Token: 0x060455D9 RID: 284121 RVA: 0x0112BB31 File Offset: 0x01129D31
+		// Token: 0x0603B787 RID: 243591 RVA: 0x010D5911 File Offset: 0x010D3B11
 		public bool GetAreaAlertEnabled(int areaId)
 		{
 			return this.EnabledAreaAlertData.ContainsKey(areaId);
 		}
 
-		// Token: 0x060455DA RID: 284122 RVA: 0x0112BB40 File Offset: 0x01129D40
+		// Token: 0x0603B788 RID: 243592 RVA: 0x010D5920 File Offset: 0x010D3B20
 		public bool GetAreaAlertUiEnabled(int areaId)
 		{
 			AlertAreaData alertAreaData;
 			return this.EnabledAreaAlertData.TryGetValue(areaId, out alertAreaData) && alertAreaData != null && alertAreaData.AlertUiEnabled;
 		}
 
-		// Token: 0x060455DB RID: 284123 RVA: 0x0112BB6C File Offset: 0x01129D6C
+		// Token: 0x0603B789 RID: 243593 RVA: 0x010D594C File Offset: 0x010D3B4C
 		public bool GetAreaAlertUiVisible(int areaId)
 		{
 			AlertAreaData alertAreaData;
 			return this.EnabledAreaAlertData.TryGetValue(areaId, out alertAreaData) && (alertAreaData != null && alertAreaData.AlertUiEnabled) && alertAreaData.AlertUiVisible;
 		}
 
-		// Token: 0x060455DC RID: 284124 RVA: 0x0112BBA0 File Offset: 0x01129DA0
+		// Token: 0x0603B78A RID: 243594 RVA: 0x010D5980 File Offset: 0x010D3B80
 		public int? GetAlertUiVisibleAreaId()
 		{
 			foreach (KeyValuePair<int, AlertAreaData> keyValuePair in this.EnabledAreaAlertData)
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.LevelGamePlay.AlertArea
 			return null;
 		}
 
-		// Token: 0x060455DD RID: 284125 RVA: 0x0112BC28 File Offset: 0x01129E28
+		// Token: 0x0603B78B RID: 243595 RVA: 0x010D5A08 File Offset: 0x010D3C08
 		public float GetAreaAlertValue(int areaId)
 		{
 			AlertAreaData alertAreaData;
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.LevelGamePlay.AlertArea
 			return alertAreaData.AlertValue;
 		}
 
-		// Token: 0x060455DE RID: 284126 RVA: 0x0112BC5C File Offset: 0x01129E5C
+		// Token: 0x0603B78C RID: 243596 RVA: 0x010D5A3C File Offset: 0x010D3C3C
 		public void UpdateAreaAlertValue(int areaId, float newValue)
 		{
 			AlertAreaData alertAreaData;
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.LevelGamePlay.AlertArea
 			EventSystem.Instance.Emit<int, float>(EEventName.OnUpdateAreaAlertValue, areaId, newValue);
 		}
 
-		// Token: 0x060455DF RID: 284127 RVA: 0x0112BCB8 File Offset: 0x01129EB8
+		// Token: 0x0603B78D RID: 243597 RVA: 0x010D5A98 File Offset: 0x010D3C98
 		public void UpdateAreaAlertUiEnabled(int areaId, bool newEnabled)
 		{
 			AlertAreaData alertAreaData;
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.LevelGamePlay.AlertArea
 			EventSystem.Instance.Emit<int, bool>(EEventName.OnUpdateAreaAlertUiEnable, areaId, newEnabled);
 		}
 
-		// Token: 0x060455E0 RID: 284128 RVA: 0x0112BD04 File Offset: 0x01129F04
+		// Token: 0x0603B78E RID: 243598 RVA: 0x010D5AE4 File Offset: 0x010D3CE4
 		public void UpdateAreaAlertUiVisible(int areaId, bool newVisible)
 		{
 			AlertAreaData alertAreaData;
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.LevelGamePlay.AlertArea
 			EventSystem.Instance.Emit<int, bool>(EEventName.OnUpdateAreaAlertUiVisible, areaId, newVisible);
 		}
 
-		// Token: 0x060455E1 RID: 284129 RVA: 0x0112BD4C File Offset: 0x01129F4C
+		// Token: 0x0603B78F RID: 243599 RVA: 0x010D5B2C File Offset: 0x010D3D2C
 		public void EnableAlertArea(int areaId, float initValue, bool initUiEnable, bool initUiVisible)
 		{
 			if (this.EnabledAreaAlertData.ContainsKey(areaId))
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.LevelGamePlay.AlertArea
 			}
 		}
 
-		// Token: 0x060455E2 RID: 284130 RVA: 0x0112BE20 File Offset: 0x0112A020
+		// Token: 0x0603B790 RID: 243600 RVA: 0x010D5C00 File Offset: 0x010D3E00
 		public void DisableAlertArea(int areaId)
 		{
 			AlertAreaData alertAreaData;
@@ -157,8 +157,8 @@ namespace CSharpScript.Game.LevelGamePlay.AlertArea
 			EventSystem.Instance.Emit<int, bool>(EEventName.OnUpdateAreaAlertEnable, areaId, false);
 		}
 
-		// Token: 0x17009B60 RID: 39776
-		// (get) Token: 0x060455E3 RID: 284131 RVA: 0x0112BEA7 File Offset: 0x0112A0A7
+		// Token: 0x1700709F RID: 28831
+		// (get) Token: 0x0603B791 RID: 243601 RVA: 0x010D5C87 File Offset: 0x010D3E87
 		public static AlertAreaModel Instance
 		{
 			get
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.LevelGamePlay.AlertArea
 			}
 		}
 
-		// Token: 0x060455E4 RID: 284132 RVA: 0x0112BEAE File Offset: 0x0112A0AE
+		// Token: 0x0603B792 RID: 243602 RVA: 0x010D5C8E File Offset: 0x010D3E8E
 		public static AlertAreaModel GetOrCreateInstance()
 		{
 			if (AlertAreaModel._Instance == null)
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.LevelGamePlay.AlertArea
 			return AlertAreaModel._Instance;
 		}
 
-		// Token: 0x060455E5 RID: 284133 RVA: 0x0112BEC2 File Offset: 0x0112A0C2
+		// Token: 0x0603B793 RID: 243603 RVA: 0x010D5CA2 File Offset: 0x010D3EA2
 		public static bool CreateInstance()
 		{
 			if (AlertAreaModel._Instance != null)
@@ -188,27 +188,27 @@ namespace CSharpScript.Game.LevelGamePlay.AlertArea
 			return true;
 		}
 
-		// Token: 0x060455E6 RID: 284134 RVA: 0x0112BED8 File Offset: 0x0112A0D8
+		// Token: 0x0603B794 RID: 243604 RVA: 0x010D5CB8 File Offset: 0x010D3EB8
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060455E7 RID: 284135 RVA: 0x0112BEDA File Offset: 0x0112A0DA
+		// Token: 0x0603B795 RID: 243605 RVA: 0x010D5CBA File Offset: 0x010D3EBA
 		public static void ResetStaticDefaultValue()
 		{
 			AlertAreaModel._Instance = null;
 		}
 
-		// Token: 0x060455E8 RID: 284136 RVA: 0x0112BEE2 File Offset: 0x0112A0E2
+		// Token: 0x0603B796 RID: 243606 RVA: 0x010D5CC2 File Offset: 0x010D3EC2
 		static AlertAreaModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(AlertAreaModel.CreateStaticDefaultValue), new Action(AlertAreaModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04024304 RID: 148228
+		// Token: 0x0401F5B9 RID: 128441
 		private readonly Dictionary<int, AlertAreaData> EnabledAreaAlertData = new Dictionary<int, AlertAreaData>();
 
-		// Token: 0x04024305 RID: 148229
+		// Token: 0x0401F5BA RID: 128442
 		[Nullable(2)]
 		private static AlertAreaModel _Instance;
 	}

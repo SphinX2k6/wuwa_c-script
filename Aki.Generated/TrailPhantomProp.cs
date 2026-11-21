@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200114E RID: 4430
+	// Token: 0x02001284 RID: 4740
 	public struct TrailPhantomProp : IFlatbufferObject
 	{
-		// Token: 0x17003B4B RID: 15179
-		// (get) Token: 0x0600E121 RID: 57633 RVA: 0x00333135 File Offset: 0x00331335
+		// Token: 0x17003EAF RID: 16047
+		// (get) Token: 0x0600EE8F RID: 61071 RVA: 0x0035E521 File Offset: 0x0035C721
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E122 RID: 57634 RVA: 0x00333142 File Offset: 0x00331342
+		// Token: 0x0600EE90 RID: 61072 RVA: 0x0035E52E File Offset: 0x0035C72E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600E123 RID: 57635 RVA: 0x0033314C File Offset: 0x0033134C
+		// Token: 0x0600EE91 RID: 61073 RVA: 0x0035E538 File Offset: 0x0035C738
 		public static TrailPhantomProp GetRootAsTrailPhantomProp(ByteBuffer _bb)
 		{
 			return TrailPhantomProp.GetRootAsTrailPhantomProp(_bb, default(TrailPhantomProp));
 		}
 
-		// Token: 0x0600E124 RID: 57636 RVA: 0x00333168 File Offset: 0x00331368
+		// Token: 0x0600EE92 RID: 61074 RVA: 0x0035E554 File Offset: 0x0035C754
 		public static TrailPhantomProp GetRootAsTrailPhantomProp(ByteBuffer _bb, TrailPhantomProp obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600E125 RID: 57637 RVA: 0x00333185 File Offset: 0x00331385
+		// Token: 0x0600EE93 RID: 61075 RVA: 0x0035E571 File Offset: 0x0035C771
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600E126 RID: 57638 RVA: 0x00333194 File Offset: 0x00331394
+		// Token: 0x0600EE94 RID: 61076 RVA: 0x0035E580 File Offset: 0x0035C780
 		public TrailPhantomProp __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003B4C RID: 15180
-		// (get) Token: 0x0600E127 RID: 57639 RVA: 0x003331A4 File Offset: 0x003313A4
+		// Token: 0x17003EB0 RID: 16048
+		// (get) Token: 0x0600EE95 RID: 61077 RVA: 0x0035E590 File Offset: 0x0035C790
 		public int Id
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003B4D RID: 15181
-		// (get) Token: 0x0600E128 RID: 57640 RVA: 0x003331E0 File Offset: 0x003313E0
+		// Token: 0x17003EB1 RID: 16049
+		// (get) Token: 0x0600EE96 RID: 61078 RVA: 0x0035E5CC File Offset: 0x0035C7CC
 		public int Level
 		{
 			get
@@ -80,8 +80,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003B4E RID: 15182
-		// (get) Token: 0x0600E129 RID: 57641 RVA: 0x0033321C File Offset: 0x0033141C
+		// Token: 0x17003EB2 RID: 16050
+		// (get) Token: 0x0600EE97 RID: 61079 RVA: 0x0035E608 File Offset: 0x0035C808
 		public ConfigPropValue? MainProp
 		{
 			get
@@ -95,8 +95,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003B4F RID: 15183
-		// (get) Token: 0x0600E12A RID: 57642 RVA: 0x0033327C File Offset: 0x0033147C
+		// Token: 0x17003EB3 RID: 16051
+		// (get) Token: 0x0600EE98 RID: 61080 RVA: 0x0035E668 File Offset: 0x0035C868
 		public ConfigPropValue? BreachProp
 		{
 			get
@@ -110,7 +110,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E12B RID: 57643 RVA: 0x003332DC File Offset: 0x003314DC
+		// Token: 0x0600EE99 RID: 61081 RVA: 0x0035E6C8 File Offset: 0x0035C8C8
 		public ConfigPropValue? SubProp(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -121,8 +121,8 @@ namespace Aki.Config
 			return new ConfigPropValue?(default(ConfigPropValue).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17003B50 RID: 15184
-		// (get) Token: 0x0600E12C RID: 57644 RVA: 0x00333340 File Offset: 0x00331540
+		// Token: 0x17003EB4 RID: 16052
+		// (get) Token: 0x0600EE9A RID: 61082 RVA: 0x0035E72C File Offset: 0x0035C92C
 		public int SubPropLength
 		{
 			get
@@ -136,7 +136,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E12D RID: 57645 RVA: 0x0033336C File Offset: 0x0033156C
+		// Token: 0x0600EE9B RID: 61083 RVA: 0x0035E758 File Offset: 0x0035C958
 		public int MainProps(int j)
 		{
 			int num = this.__p.__offset(14);
@@ -147,8 +147,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17003B51 RID: 15185
-		// (get) Token: 0x0600E12E RID: 57646 RVA: 0x003333AC File Offset: 0x003315AC
+		// Token: 0x17003EB5 RID: 16053
+		// (get) Token: 0x0600EE9C RID: 61084 RVA: 0x0035E798 File Offset: 0x0035C998
 		public int MainPropsLength
 		{
 			get
@@ -162,20 +162,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E12F RID: 57647 RVA: 0x003333D8 File Offset: 0x003315D8
+		// Token: 0x0600EE9D RID: 61085 RVA: 0x0035E7C4 File Offset: 0x0035C9C4
 		public Span<int> GetMainPropsBytes()
 		{
 			return this.__p.__vector_as_span<int>(14, 4);
 		}
 
-		// Token: 0x0600E130 RID: 57648 RVA: 0x003333E8 File Offset: 0x003315E8
+		// Token: 0x0600EE9E RID: 61086 RVA: 0x0035E7D4 File Offset: 0x0035C9D4
 		public int[] GetMainPropsArray()
 		{
 			return this.__p.__vector_as_array<int>(14) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17003B52 RID: 15186
-		// (get) Token: 0x0600E131 RID: 57649 RVA: 0x00333400 File Offset: 0x00331600
+		// Token: 0x17003EB6 RID: 16054
+		// (get) Token: 0x0600EE9F RID: 61087 RVA: 0x0035E7EC File Offset: 0x0035C9EC
 		public int MainPropGrowth
 		{
 			get
@@ -189,7 +189,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E132 RID: 57650 RVA: 0x00333440 File Offset: 0x00331640
+		// Token: 0x0600EEA0 RID: 61088 RVA: 0x0035E82C File Offset: 0x0035CA2C
 		public IntArray? SubProps(int j)
 		{
 			int num = this.__p.__offset(18);
@@ -200,8 +200,8 @@ namespace Aki.Config
 			return new IntArray?(default(IntArray).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17003B53 RID: 15187
-		// (get) Token: 0x0600E133 RID: 57651 RVA: 0x003334A4 File Offset: 0x003316A4
+		// Token: 0x17003EB7 RID: 16055
+		// (get) Token: 0x0600EEA1 RID: 61089 RVA: 0x0035E890 File Offset: 0x0035CA90
 		public int SubPropsLength
 		{
 			get
@@ -215,7 +215,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E134 RID: 57652 RVA: 0x003334D0 File Offset: 0x003316D0
+		// Token: 0x0600EEA2 RID: 61090 RVA: 0x0035E8BC File Offset: 0x0035CABC
 		public int SubPropList(int j)
 		{
 			int num = this.__p.__offset(20);
@@ -226,8 +226,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17003B54 RID: 15188
-		// (get) Token: 0x0600E135 RID: 57653 RVA: 0x00333510 File Offset: 0x00331710
+		// Token: 0x17003EB8 RID: 16056
+		// (get) Token: 0x0600EEA3 RID: 61091 RVA: 0x0035E8FC File Offset: 0x0035CAFC
 		public int SubPropListLength
 		{
 			get
@@ -241,20 +241,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E136 RID: 57654 RVA: 0x0033353C File Offset: 0x0033173C
+		// Token: 0x0600EEA4 RID: 61092 RVA: 0x0035E928 File Offset: 0x0035CB28
 		public Span<int> GetSubPropListBytes()
 		{
 			return this.__p.__vector_as_span<int>(20, 4);
 		}
 
-		// Token: 0x0600E137 RID: 57655 RVA: 0x0033354C File Offset: 0x0033174C
+		// Token: 0x0600EEA5 RID: 61093 RVA: 0x0035E938 File Offset: 0x0035CB38
 		public int[] GetSubPropListArray()
 		{
 			return this.__p.__vector_as_array<int>(20) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17003B55 RID: 15189
-		// (get) Token: 0x0600E138 RID: 57656 RVA: 0x00333564 File Offset: 0x00331764
+		// Token: 0x17003EB9 RID: 16057
+		// (get) Token: 0x0600EEA6 RID: 61094 RVA: 0x0035E950 File Offset: 0x0035CB50
 		public int FetterGroupId
 		{
 			get
@@ -268,8 +268,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003B56 RID: 15190
-		// (get) Token: 0x0600E139 RID: 57657 RVA: 0x003335A4 File Offset: 0x003317A4
+		// Token: 0x17003EBA RID: 16058
+		// (get) Token: 0x0600EEA7 RID: 61095 RVA: 0x0035E990 File Offset: 0x0035CB90
 		public int SkinItemId
 		{
 			get
@@ -283,77 +283,71 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E13A RID: 57658 RVA: 0x003335E4 File Offset: 0x003317E4
+		// Token: 0x0600EEA8 RID: 61096 RVA: 0x0035E9CD File Offset: 0x0035CBCD
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用MainPropsIter()或GetMainPropsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] MainProps()
+		public int[] MainProps()
 		{
-			TrailPhantomProp trailPhantomProp = this;
-			return trailPhantomProp.GetMainPropsArray() ?? Array.Empty<int>();
+			return this.GetMainPropsArray();
 		}
 
-		// Token: 0x0600E13B RID: 57659 RVA: 0x00333608 File Offset: 0x00331808
+		// Token: 0x0600EEA9 RID: 61097 RVA: 0x0035E9D5 File Offset: 0x0035CBD5
 		[NullableContext(1)]
-		public readonly IEnumerable<int> MainPropsIter()
+		public IEnumerable<int> MainPropsIter()
 		{
 			TrailPhantomProp.<MainPropsIter>d__39 <MainPropsIter>d__ = new TrailPhantomProp.<MainPropsIter>d__39(-2);
 			<MainPropsIter>d__.<>3__<>4__this = this;
 			return <MainPropsIter>d__;
 		}
 
-		// Token: 0x0600E13C RID: 57660 RVA: 0x0033361D File Offset: 0x0033181D
+		// Token: 0x0600EEAA RID: 61098 RVA: 0x0035E9EA File Offset: 0x0035CBEA
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用SubPropIter()或GetSubPropBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly ConfigPropValue[] SubProp()
+		public ConfigPropValue[] SubProp()
 		{
 			return this.SubPropIter().ToArray<ConfigPropValue>();
 		}
 
-		// Token: 0x0600E13D RID: 57661 RVA: 0x0033362A File Offset: 0x0033182A
+		// Token: 0x0600EEAB RID: 61099 RVA: 0x0035E9F7 File Offset: 0x0035CBF7
 		[NullableContext(1)]
-		public readonly IEnumerable<ConfigPropValue> SubPropIter()
+		public IEnumerable<ConfigPropValue> SubPropIter()
 		{
 			TrailPhantomProp.<SubPropIter>d__41 <SubPropIter>d__ = new TrailPhantomProp.<SubPropIter>d__41(-2);
 			<SubPropIter>d__.<>3__<>4__this = this;
 			return <SubPropIter>d__;
 		}
 
-		// Token: 0x0600E13E RID: 57662 RVA: 0x00333640 File Offset: 0x00331840
+		// Token: 0x0600EEAC RID: 61100 RVA: 0x0035EA0C File Offset: 0x0035CC0C
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用SubPropListIter()或GetSubPropListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] SubPropList()
+		public int[] SubPropList()
 		{
-			TrailPhantomProp trailPhantomProp = this;
-			return trailPhantomProp.GetSubPropListArray() ?? Array.Empty<int>();
+			return this.GetSubPropListArray();
 		}
 
-		// Token: 0x0600E13F RID: 57663 RVA: 0x00333664 File Offset: 0x00331864
+		// Token: 0x0600EEAD RID: 61101 RVA: 0x0035EA14 File Offset: 0x0035CC14
 		[NullableContext(1)]
-		public readonly IEnumerable<int> SubPropListIter()
+		public IEnumerable<int> SubPropListIter()
 		{
 			TrailPhantomProp.<SubPropListIter>d__43 <SubPropListIter>d__ = new TrailPhantomProp.<SubPropListIter>d__43(-2);
 			<SubPropListIter>d__.<>3__<>4__this = this;
 			return <SubPropListIter>d__;
 		}
 
-		// Token: 0x0600E140 RID: 57664 RVA: 0x00333679 File Offset: 0x00331879
+		// Token: 0x0600EEAE RID: 61102 RVA: 0x0035EA29 File Offset: 0x0035CC29
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用SubPropsIter()或GetSubPropsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly IntArray[] SubProps()
+		public IntArray[] SubProps()
 		{
 			return this.SubPropsIter().ToArray<IntArray>();
 		}
 
-		// Token: 0x0600E141 RID: 57665 RVA: 0x00333686 File Offset: 0x00331886
+		// Token: 0x0600EEAF RID: 61103 RVA: 0x0035EA36 File Offset: 0x0035CC36
 		[NullableContext(1)]
-		public readonly IEnumerable<IntArray> SubPropsIter()
+		public IEnumerable<IntArray> SubPropsIter()
 		{
 			TrailPhantomProp.<SubPropsIter>d__45 <SubPropsIter>d__ = new TrailPhantomProp.<SubPropsIter>d__45(-2);
 			<SubPropsIter>d__.<>3__<>4__this = this;
 			return <SubPropsIter>d__;
 		}
 
-		// Token: 0x04005293 RID: 21139
+		// Token: 0x040058D6 RID: 22742
 		private Table __p;
 	}
 }

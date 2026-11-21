@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001A1C RID: 6684
+// Token: 0x02000EDB RID: 3803
 [NullableContext(1)]
 [Nullable(0)]
 public class DangoAbyssRankRoleData
 {
-	// Token: 0x0600C433 RID: 50227 RVA: 0x002C6C60 File Offset: 0x002C4E60
+	// Token: 0x06009843 RID: 38979 RVA: 0x002D1D14 File Offset: 0x002CFF14
 	public Dictionary<int, int> GetEquipPluginMap()
 	{
 		Dictionary<int, int> dictionary = new Dictionary<int, int>();
@@ -22,24 +22,24 @@ public class DangoAbyssRankRoleData
 		return dictionary;
 	}
 
-	// Token: 0x04005A8C RID: 23180
+	// Token: 0x04005B5B RID: 23387
 	public bool IsEmpty = true;
 
-	// Token: 0x04005A8D RID: 23181
+	// Token: 0x04005B5C RID: 23388
 	public int RoleSkinId;
 
-	// Token: 0x04005A8E RID: 23182
+	// Token: 0x04005B5D RID: 23389
 	public int RoleLevel;
 
-	// Token: 0x04005A8F RID: 23183
+	// Token: 0x04005B5E RID: 23390
 	public int DangoId;
 
-	// Token: 0x04005A90 RID: 23184
+	// Token: 0x04005B5F RID: 23391
 	public bool IsOnline;
 
-	// Token: 0x04005A91 RID: 23185
+	// Token: 0x04005B60 RID: 23392
 	public int Pos;
 
-	// Token: 0x04005A92 RID: 23186
+	// Token: 0x04005B61 RID: 23393
 	public int[] DangoEquipIds = Array.Empty<int>();
 }

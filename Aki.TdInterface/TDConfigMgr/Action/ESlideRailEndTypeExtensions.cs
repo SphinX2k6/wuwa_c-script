@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002421 RID: 9249
+	// Token: 0x020026C0 RID: 9920
 	public static class ESlideRailEndTypeExtensions
 	{
-		// Token: 0x0600C913 RID: 51475 RVA: 0x001D7228 File Offset: 0x001D5428
+		// Token: 0x0600D5BA RID: 54714 RVA: 0x001F0EFC File Offset: 0x001EF0FC
 		public static string ToEnumString(this ESlideRailEndType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C914 RID: 51476 RVA: 0x001D7260 File Offset: 0x001D5460
+		// Token: 0x0600D5BB RID: 54715 RVA: 0x001F0F34 File Offset: 0x001EF134
 		public static ESlideRailEndType FromString(string name)
 		{
 			ESlideRailEndType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C915 RID: 51477 RVA: 0x001D7289 File Offset: 0x001D5489
+		// Token: 0x0600D5BC RID: 54716 RVA: 0x001F0F5D File Offset: 0x001EF15D
 		public static bool TryFromString(string name, out ESlideRailEndType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C916 RID: 51478 RVA: 0x001D72C2 File Offset: 0x001D54C2
+		// Token: 0x0600D5BD RID: 54717 RVA: 0x001F0F96 File Offset: 0x001EF196
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C917 RID: 51479 RVA: 0x001D72DA File Offset: 0x001D54DA
+		// Token: 0x0600D5BE RID: 54718 RVA: 0x001F0FAE File Offset: 0x001EF1AE
 		public static ESlideRailEndType[] GetValues()
 		{
 			return new ESlideRailEndType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C918 RID: 51480 RVA: 0x001D72E6 File Offset: 0x001D54E6
+		// Token: 0x0600D5BF RID: 54719 RVA: 0x001F0FBA File Offset: 0x001EF1BA
 		public static string[] GetNames()
 		{
 			return new string[]

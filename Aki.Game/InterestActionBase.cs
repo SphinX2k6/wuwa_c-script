@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02003208 RID: 12808
+// Token: 0x02002777 RID: 10103
 [NullableContext(1)]
 [Nullable(0)]
 public class InterestActionBase
 {
-	// Token: 0x17002634 RID: 9780
-	// (get) Token: 0x0601BA22 RID: 113186 RVA: 0x00797B4F File Offset: 0x00795D4F
+	// Token: 0x17002875 RID: 10357
+	// (get) Token: 0x060195A7 RID: 103847 RVA: 0x007C02AE File Offset: 0x007BE4AE
 	public virtual EInterestActionType Type
 	{
 		get
@@ -16,8 +16,8 @@ public class InterestActionBase
 		}
 	}
 
-	// Token: 0x17002635 RID: 9781
-	// (get) Token: 0x0601BA23 RID: 113187 RVA: 0x00797B52 File Offset: 0x00795D52
+	// Token: 0x17002876 RID: 10358
+	// (get) Token: 0x060195A8 RID: 103848 RVA: 0x007C02B1 File Offset: 0x007BE4B1
 	public virtual bool IsExclusive
 	{
 		get
@@ -26,26 +26,26 @@ public class InterestActionBase
 		}
 	}
 
-	// Token: 0x0601BA24 RID: 113188 RVA: 0x00797B55 File Offset: 0x00795D55
+	// Token: 0x060195A9 RID: 103849 RVA: 0x007C02B4 File Offset: 0x007BE4B4
 	public virtual void OnEnter(Entity entity, InterestItemBase item)
 	{
 	}
 
-	// Token: 0x0601BA25 RID: 113189 RVA: 0x00797B57 File Offset: 0x00795D57
+	// Token: 0x060195AA RID: 103850 RVA: 0x007C02B6 File Offset: 0x007BE4B6
 	public virtual void OnLeave(Entity entity, InterestItemBase item)
 	{
 	}
 
-	// Token: 0x0601BA26 RID: 113190 RVA: 0x00797B59 File Offset: 0x00795D59
+	// Token: 0x060195AB RID: 103851 RVA: 0x007C02B8 File Offset: 0x007BE4B8
 	public virtual int GetPriority(Entity entity, InterestItemBase item)
 	{
 		return 0;
 	}
 
-	// Token: 0x0400D954 RID: 55636
+	// Token: 0x0400DDF3 RID: 56819
 	public int Priority;
 
-	// Token: 0x0400D955 RID: 55637
+	// Token: 0x0400DDF4 RID: 56820
 	[StaticVariableRuleIgnore]
 	protected static Vector TmpVector1 = Vector.Create();
 }

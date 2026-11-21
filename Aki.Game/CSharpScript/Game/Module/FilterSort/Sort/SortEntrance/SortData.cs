@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.FilterSort.Sort.SortEntrance
 {
-	// Token: 0x02005B33 RID: 23347
+	// Token: 0x02004B14 RID: 19220
 	public class SortData : ISortData
 	{
-		// Token: 0x17008C8F RID: 35983
-		// (get) Token: 0x0603B1C7 RID: 242119 RVA: 0x00E1891B File Offset: 0x00E16B1B
-		// (set) Token: 0x0603B1C8 RID: 242120 RVA: 0x00E18923 File Offset: 0x00E16B23
+		// Token: 0x17006069 RID: 24681
+		// (get) Token: 0x06030139 RID: 196921 RVA: 0x00D69633 File Offset: 0x00D67833
+		// (set) Token: 0x0603013A RID: 196922 RVA: 0x00D6963B File Offset: 0x00D6783B
 		public int RuleId { get; set; }
 
-		// Token: 0x17008C90 RID: 35984
-		// (get) Token: 0x0603B1C9 RID: 242121 RVA: 0x00E1892C File Offset: 0x00E16B2C
-		// (set) Token: 0x0603B1CA RID: 242122 RVA: 0x00E18934 File Offset: 0x00E16B34
+		// Token: 0x1700606A RID: 24682
+		// (get) Token: 0x0603013B RID: 196923 RVA: 0x00D69644 File Offset: 0x00D67844
+		// (set) Token: 0x0603013C RID: 196924 RVA: 0x00D6964C File Offset: 0x00D6784C
 		public ESortDataType DataType { get; set; }
 
-		// Token: 0x17008C91 RID: 35985
-		// (get) Token: 0x0603B1CB RID: 242123 RVA: 0x00E1893D File Offset: 0x00E16B3D
-		// (set) Token: 0x0603B1CC RID: 242124 RVA: 0x00E18945 File Offset: 0x00E16B45
+		// Token: 0x1700606B RID: 24683
+		// (get) Token: 0x0603013D RID: 196925 RVA: 0x00D69655 File Offset: 0x00D67855
+		// (set) Token: 0x0603013E RID: 196926 RVA: 0x00D6965D File Offset: 0x00D6785D
 		public int SelectedRule { get; set; }
 	}
 }

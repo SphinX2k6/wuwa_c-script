@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000BBB RID: 3003
+	// Token: 0x02000208 RID: 520
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/Engine.EWindowMode")]
 	public enum EWindowMode
 	{
-		// Token: 0x040052B4 RID: 21172
+		// Token: 0x04000D11 RID: 3345
 		Fullscreen,
-		// Token: 0x040052B5 RID: 21173
+		// Token: 0x04000D12 RID: 3346
 		WindowedFullscreen,
-		// Token: 0x040052B6 RID: 21174
+		// Token: 0x04000D13 RID: 3347
 		Windowed,
-		// Token: 0x040052B7 RID: 21175
+		// Token: 0x04000D14 RID: 3348
 		EWindowMode_MAX
 	}
 }

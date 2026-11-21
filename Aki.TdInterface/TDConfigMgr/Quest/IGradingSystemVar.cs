@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000FA7 RID: 4007
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020010D1 RID: 4305
 	public class IGradingSystemVar
 	{
-		// Token: 0x06005946 RID: 22854 RVA: 0x000D9958 File Offset: 0x000D7B58
+		// Token: 0x06005F1C RID: 24348 RVA: 0x000E6418 File Offset: 0x000E4618
 		private IGradingSystemVar_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005947 RID: 22855 RVA: 0x000D9990 File Offset: 0x000D7B90
+		// Token: 0x06005F1D RID: 24349 RVA: 0x000E6450 File Offset: 0x000E4650
 		public static IGradingSystemVar Create([Nullable(2)] IGradingSystemVar instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005948 RID: 22856 RVA: 0x000D99A3 File Offset: 0x000D7BA3
+		// Token: 0x06005F1E RID: 24350 RVA: 0x000E6463 File Offset: 0x000E4663
 		public static IGradingSystemVar CreateFromSetValue([Nullable(2)] IGradingSystemVar_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005949 RID: 22857 RVA: 0x000D99B6 File Offset: 0x000D7BB6
+		// Token: 0x06005F1F RID: 24351 RVA: 0x000E6476 File Offset: 0x000E4676
 		public IGradingSystemVar_SetValue ToSetValue()
 		{
 			return new IGradingSystemVar_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001DAA RID: 7594
-		// (get) Token: 0x0600594A RID: 22858 RVA: 0x000D99D5 File Offset: 0x000D7BD5
-		// (set) Token: 0x0600594B RID: 22859 RVA: 0x000D9A00 File Offset: 0x000D7C00
+		// Token: 0x17001F51 RID: 8017
+		// (get) Token: 0x06005F20 RID: 24352 RVA: 0x000E6495 File Offset: 0x000E4695
+		// (set) Token: 0x06005F21 RID: 24353 RVA: 0x000E64C0 File Offset: 0x000E46C0
 		public virtual EGradingSystemVarType VarType
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001DAB RID: 7595
-		// (get) Token: 0x0600594C RID: 22860 RVA: 0x000D9A0E File Offset: 0x000D7C0E
-		// (set) Token: 0x0600594D RID: 22861 RVA: 0x000D9A35 File Offset: 0x000D7C35
+		// Token: 0x17001F52 RID: 8018
+		// (get) Token: 0x06005F22 RID: 24354 RVA: 0x000E64CE File Offset: 0x000E46CE
+		// (set) Token: 0x06005F23 RID: 24355 RVA: 0x000E64F5 File Offset: 0x000E46F5
 		public virtual VarRef VarRef
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040035E5 RID: 13797
+		// Token: 0x04003917 RID: 14615
 		[Nullable(2)]
 		protected IGradingSystemVar FbInstance;
 
-		// Token: 0x040035E6 RID: 13798
+		// Token: 0x04003918 RID: 14616
 		[Nullable(2)]
 		protected IGradingSystemVar_SetValue PocoInterface;
 	}

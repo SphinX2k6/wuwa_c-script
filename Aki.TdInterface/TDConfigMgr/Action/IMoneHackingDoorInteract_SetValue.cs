@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001BF3 RID: 7155
+	// Token: 0x02001DE2 RID: 7650
 	public class IMoneHackingDoorInteract_SetValue
 	{
-		// Token: 0x04005D52 RID: 23890
+		// Token: 0x04006278 RID: 25208
 		public ELeisureInteract Type;
 	}
 }

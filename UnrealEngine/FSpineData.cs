@@ -5,22 +5,22 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002711 RID: 10001
+	// Token: 0x020007E1 RID: 2017
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/SequenceDialogue.SpineData")]
 	[UnrealStructLayout(24, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 24)]
 	public class FSpineData : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602513D RID: 151869 RVA: 0x0036E7CE File Offset: 0x0036C9CE
+		// Token: 0x0600AD60 RID: 44384 RVA: 0x001006A1 File Offset: 0x000FE8A1
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FSpineData._ScriptStructPtr != 0) ? FSpineData._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/SequenceDialogue.SpineData", ref FSpineData._ScriptStructPtr);
 		}
 
-		// Token: 0x17008F0B RID: 36619
-		// (get) Token: 0x0602513E RID: 151870 RVA: 0x0036E7F2 File Offset: 0x0036C9F2
-		// (set) Token: 0x0602513F RID: 151871 RVA: 0x0036E806 File Offset: 0x0036CA06
+		// Token: 0x1700204E RID: 8270
+		// (get) Token: 0x0600AD61 RID: 44385 RVA: 0x001006C5 File Offset: 0x000FE8C5
+		// (set) Token: 0x0600AD62 RID: 44386 RVA: 0x001006D9 File Offset: 0x000FE8D9
 		public unsafe string Name
 		{
 			get
@@ -33,9 +33,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008F0C RID: 36620
-		// (get) Token: 0x06025140 RID: 151872 RVA: 0x0036E81B File Offset: 0x0036CA1B
-		// (set) Token: 0x06025141 RID: 151873 RVA: 0x0036E82B File Offset: 0x0036CA2B
+		// Token: 0x1700204F RID: 8271
+		// (get) Token: 0x0600AD63 RID: 44387 RVA: 0x001006EE File Offset: 0x000FE8EE
+		// (set) Token: 0x0600AD64 RID: 44388 RVA: 0x001006FE File Offset: 0x000FE8FE
 		public unsafe bool NeedLoop
 		{
 			get
@@ -48,57 +48,50 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06025142 RID: 151874 RVA: 0x0036E83C File Offset: 0x0036CA3C
+		// Token: 0x0600AD65 RID: 44389 RVA: 0x0010070F File Offset: 0x000FE90F
 		public FSpineData()
 		{
 		}
 
-		// Token: 0x06025143 RID: 151875 RVA: 0x0036E844 File Offset: 0x0036CA44
-		public FSpineData(string Name, bool NeedLoop)
-		{
-			this.Name = Name;
-			this.NeedLoop = NeedLoop;
-		}
-
-		// Token: 0x06025144 RID: 151876 RVA: 0x0036E85A File Offset: 0x0036CA5A
+		// Token: 0x0600AD66 RID: 44390 RVA: 0x00100717 File Offset: 0x000FE917
 		protected override IntPtr GetUStructPtr()
 		{
 			return FSpineData.StaticStruct();
 		}
 
-		// Token: 0x06025145 RID: 151877 RVA: 0x0036E866 File Offset: 0x0036CA66
+		// Token: 0x0600AD67 RID: 44391 RVA: 0x00100723 File Offset: 0x000FE923
 		[NullableContext(2)]
 		public FSpineData(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06025146 RID: 151878 RVA: 0x0036E870 File Offset: 0x0036CA70
+		// Token: 0x0600AD68 RID: 44392 RVA: 0x0010072D File Offset: 0x000FE92D
 		public FSpineData(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06025147 RID: 151879 RVA: 0x0036E87B File Offset: 0x0036CA7B
+		// Token: 0x0600AD69 RID: 44393 RVA: 0x00100738 File Offset: 0x000FE938
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FSpineData(Pointer, false, true);
 		}
 
-		// Token: 0x06025148 RID: 151880 RVA: 0x0036E885 File Offset: 0x0036CA85
+		// Token: 0x0600AD6A RID: 44394 RVA: 0x00100742 File Offset: 0x000FE942
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FSpineData(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04013F89 RID: 81801
+		// Token: 0x04004AC1 RID: 19137
 		public const string __ObjectPath = "/Script/SequenceDialogue.SpineData";
 
-		// Token: 0x04013F8A RID: 81802
+		// Token: 0x04004AC2 RID: 19138
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04013F8B RID: 81803
+		// Token: 0x04004AC3 RID: 19139
 		internal static int __PropertyOffset_Name;
 
-		// Token: 0x04013F8C RID: 81804
+		// Token: 0x04004AC4 RID: 19140
 		internal static int __PropertyOffset_NeedLoop;
 	}
 }

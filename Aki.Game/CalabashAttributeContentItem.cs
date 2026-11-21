@@ -6,7 +6,7 @@ using CSharpScript.Game.Module.Item;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001750 RID: 5968
+// Token: 0x02000C09 RID: 3081
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 internal class CalabashAttributeContentItem : GridProxyAbstract<CalabashAttributeContentData>
 {
-	// Token: 0x0600AC89 RID: 44169 RVA: 0x0026B6D6 File Offset: 0x002698D6
+	// Token: 0x06008070 RID: 32880 RVA: 0x00275B1E File Offset: 0x00273D1E
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ internal class CalabashAttributeContentItem : GridProxyAbstract<CalabashAttribut
 		};
 	}
 
-	// Token: 0x0600AC8A RID: 44170 RVA: 0x0026B710 File Offset: 0x00269910
+	// Token: 0x06008071 RID: 32881 RVA: 0x00275B58 File Offset: 0x00273D58
 	public override void Refresh(CalabashAttributeContentData data, bool isSelected, int gridIndex)
 	{
 		if (data.Type == ECalabashLevelSubShowType.UpgradeTarget)

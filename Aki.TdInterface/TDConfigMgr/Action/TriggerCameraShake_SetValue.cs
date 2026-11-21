@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002257 RID: 8791
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020024C4 RID: 9412
 	public class TriggerCameraShake_SetValue
 	{
-		// Token: 0x040072EE RID: 29422
+		// Token: 0x0400793B RID: 31035
 		public ICameraShakeConfig CameraShakeConfig;
 
-		// Token: 0x040072EF RID: 29423
+		// Token: 0x0400793C RID: 31036
 		public string CameraShakeBp;
 	}
 }

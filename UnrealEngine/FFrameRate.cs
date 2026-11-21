@@ -7,39 +7,39 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200072A RID: 1834
+	// Token: 0x02000110 RID: 272
 	[UnrealBlittableStruct(UnrealReflectionPropertyTypeCode.UnrealBlittableStruct)]
 	[UnrealStructLayout(8, 4, UnrealReflectionPropertyTypeCode.UnrealBlittableStruct, PropertiesSize = 8)]
 	[UnrealObjectPath("/Script/CoreUObject.FrameRate")]
 	[StructLayout(LayoutKind.Explicit, Pack = 4, Size = 8)]
 	public struct FFrameRate : IEqualityOperators<FFrameRate, FFrameRate, bool>, IEquatable<FFrameRate>, IUnrealScriptStruct
 	{
-		// Token: 0x060061EE RID: 25070 RVA: 0x0008C696 File Offset: 0x0008A896
+		// Token: 0x06001152 RID: 4434 RVA: 0x0001B6FC File Offset: 0x000198FC
 		public FFrameRate(int Numerator, int Denominator)
 		{
 			this.Numerator = Numerator;
 			this.Denominator = Denominator;
 		}
 
-		// Token: 0x060061EF RID: 25071 RVA: 0x0008C6A6 File Offset: 0x0008A8A6
+		// Token: 0x06001153 RID: 4435 RVA: 0x0001B70C File Offset: 0x0001990C
 		public static bool operator ==(FFrameRate left, FFrameRate right)
 		{
 			return left.Numerator == right.Numerator && left.Denominator == right.Denominator;
 		}
 
-		// Token: 0x060061F0 RID: 25072 RVA: 0x0008C6C6 File Offset: 0x0008A8C6
+		// Token: 0x06001154 RID: 4436 RVA: 0x0001B72C File Offset: 0x0001992C
 		public static bool operator !=(FFrameRate left, FFrameRate right)
 		{
 			return !(left == right);
 		}
 
-		// Token: 0x060061F1 RID: 25073 RVA: 0x0008C6D2 File Offset: 0x0008A8D2
+		// Token: 0x06001155 RID: 4437 RVA: 0x0001B738 File Offset: 0x00019938
 		public bool Equals(FFrameRate other)
 		{
 			return this == other;
 		}
 
-		// Token: 0x060061F2 RID: 25074 RVA: 0x0008C6E0 File Offset: 0x0008A8E0
+		// Token: 0x06001156 RID: 4438 RVA: 0x0001B748 File Offset: 0x00019948
 		[NullableContext(2)]
 		public override bool Equals(object obj)
 		{
@@ -51,30 +51,30 @@ namespace UnrealEngine
 			return false;
 		}
 
-		// Token: 0x060061F3 RID: 25075 RVA: 0x0008C705 File Offset: 0x0008A905
+		// Token: 0x06001157 RID: 4439 RVA: 0x0001B76D File Offset: 0x0001996D
 		public override int GetHashCode()
 		{
 			return HashCode.Combine<int, int>(this.Numerator, this.Denominator);
 		}
 
-		// Token: 0x060061F4 RID: 25076 RVA: 0x0008C718 File Offset: 0x0008A918
+		// Token: 0x06001158 RID: 4440 RVA: 0x0001B780 File Offset: 0x00019980
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FFrameRate._ScriptStructPtr != 0) ? FFrameRate._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/CoreUObject.FrameRate", ref FFrameRate._ScriptStructPtr);
 		}
 
-		// Token: 0x04002EC0 RID: 11968
+		// Token: 0x040004F6 RID: 1270
 		[FieldOffset(0)]
 		public int Numerator;
 
-		// Token: 0x04002EC1 RID: 11969
+		// Token: 0x040004F7 RID: 1271
 		[FieldOffset(4)]
 		public int Denominator;
 
-		// Token: 0x04002EC2 RID: 11970
+		// Token: 0x040004F8 RID: 1272
 		public const string __ObjectPath = "/Script/CoreUObject.FrameRate";
 
-		// Token: 0x04002EC3 RID: 11971
+		// Token: 0x040004F9 RID: 1273
 		private static IntPtr _ScriptStructPtr;
 	}
 }

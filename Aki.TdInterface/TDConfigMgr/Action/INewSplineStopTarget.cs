@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C5A RID: 7258
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001E53 RID: 7763
 	public class INewSplineStopTarget
 	{
-		// Token: 0x06009BA9 RID: 39849 RVA: 0x00165670 File Offset: 0x00163870
+		// Token: 0x0600A509 RID: 42249 RVA: 0x00178A6C File Offset: 0x00176C6C
 		private INewSplineStopTarget_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009BAA RID: 39850 RVA: 0x001656A8 File Offset: 0x001638A8
+		// Token: 0x0600A50A RID: 42250 RVA: 0x00178AA4 File Offset: 0x00176CA4
 		public static INewSplineStopTarget Create([Nullable(2)] INewSplineStopTarget instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009BAB RID: 39851 RVA: 0x001656BB File Offset: 0x001638BB
+		// Token: 0x0600A50B RID: 42251 RVA: 0x00178AB7 File Offset: 0x00176CB7
 		public static INewSplineStopTarget CreateFromSetValue([Nullable(2)] INewSplineStopTarget_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009BAC RID: 39852 RVA: 0x001656CE File Offset: 0x001638CE
+		// Token: 0x0600A50C RID: 42252 RVA: 0x00178ACA File Offset: 0x00176CCA
 		public INewSplineStopTarget_SetValue ToSetValue()
 		{
 			return new INewSplineStopTarget_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170030A4 RID: 12452
-		// (get) Token: 0x06009BAD RID: 39853 RVA: 0x001656E1 File Offset: 0x001638E1
-		// (set) Token: 0x06009BAE RID: 39854 RVA: 0x0016570C File Offset: 0x0016390C
+		// Token: 0x17003316 RID: 13078
+		// (get) Token: 0x0600A50D RID: 42253 RVA: 0x00178ADD File Offset: 0x00176CDD
+		// (set) Token: 0x0600A50E RID: 42254 RVA: 0x00178B08 File Offset: 0x00176D08
 		public virtual ENewSplineMoveTargetType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005E81 RID: 24193
+		// Token: 0x040063BB RID: 25531
 		[Nullable(2)]
 		protected INewSplineStopTarget FbInstance;
 
-		// Token: 0x04005E82 RID: 24194
+		// Token: 0x040063BC RID: 25532
 		[Nullable(2)]
 		protected INewSplineStopTarget_SetValue PocoInterface;
 	}

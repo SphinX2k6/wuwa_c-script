@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D64 RID: 23908
+	// Token: 0x02004D46 RID: 19782
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SpecialEnergyKeyItem : LongPressKeyItemBase
 	{
-		// Token: 0x0603CB3A RID: 248634 RVA: 0x00E93154 File Offset: 0x00E91354
+		// Token: 0x06031A95 RID: 203413 RVA: 0x00DE3990 File Offset: 0x00DE1B90
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -29,41 +29,41 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603CB3B RID: 248635 RVA: 0x00E931FF File Offset: 0x00E913FF
+		// Token: 0x06031A96 RID: 203414 RVA: 0x00DE3A3B File Offset: 0x00DE1C3B
 		protected override UUIText GetKeyText()
 		{
 			return base.GetText(3);
 		}
 
-		// Token: 0x0603CB3C RID: 248636 RVA: 0x00E93208 File Offset: 0x00E91408
+		// Token: 0x06031A97 RID: 203415 RVA: 0x00DE3A44 File Offset: 0x00DE1C44
 		protected override UUITexture GetKeyTexture()
 		{
 			return base.GetTexture(0);
 		}
 
-		// Token: 0x0603CB3D RID: 248637 RVA: 0x00E93211 File Offset: 0x00E91411
+		// Token: 0x06031A98 RID: 203416 RVA: 0x00DE3A4D File Offset: 0x00DE1C4D
 		protected override UUITexture GetLongPressTexture()
 		{
 			return base.GetTexture(2);
 		}
 
-		// Token: 0x0603CB3E RID: 248638 RVA: 0x00E9321A File Offset: 0x00E9141A
+		// Token: 0x06031A99 RID: 203417 RVA: 0x00DE3A56 File Offset: 0x00DE1C56
 		protected override UUIItem GetLongPressItem()
 		{
 			return base.GetItem(1);
 		}
 
-		// Token: 0x0200C013 RID: 49171
+		// Token: 0x0200AA19 RID: 43545
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x04039F5A RID: 237402
+			// Token: 0x0403491C RID: 215324
 			KeyTexture,
-			// Token: 0x04039F5B RID: 237403
+			// Token: 0x0403491D RID: 215325
 			LongPressItem,
-			// Token: 0x04039F5C RID: 237404
+			// Token: 0x0403491E RID: 215326
 			LongPressTexture,
-			// Token: 0x04039F5D RID: 237405
+			// Token: 0x0403491F RID: 215327
 			KeyText
 		}
 	}

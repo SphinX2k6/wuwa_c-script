@@ -2,34 +2,36 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x02004812 RID: 18450
+	// Token: 0x02004C7A RID: 19578
 	public enum EServerDeveloper : byte
 	{
-		// Token: 0x0400CCF1 RID: 52465
+		// Token: 0x0400D72B RID: 55083
 		None,
-		// Token: 0x0400CCF2 RID: 52466
+		// Token: 0x0400D72C RID: 55084
 		CC,
-		// Token: 0x0400CCF3 RID: 52467
+		// Token: 0x0400D72D RID: 55085
 		ZZT,
-		// Token: 0x0400CCF4 RID: 52468
+		// Token: 0x0400D72E RID: 55086
 		LZB,
-		// Token: 0x0400CCF5 RID: 52469
+		// Token: 0x0400D72F RID: 55087
 		LT,
-		// Token: 0x0400CCF6 RID: 52470
+		// Token: 0x0400D730 RID: 55088
 		SHY,
-		// Token: 0x0400CCF7 RID: 52471
+		// Token: 0x0400D731 RID: 55089
 		ZXL,
-		// Token: 0x0400CCF8 RID: 52472
+		// Token: 0x0400D732 RID: 55090
 		DZB,
-		// Token: 0x0400CCF9 RID: 52473
+		// Token: 0x0400D733 RID: 55091
 		ZJC,
-		// Token: 0x0400CCFA RID: 52474
+		// Token: 0x0400D734 RID: 55092
 		CHL,
-		// Token: 0x0400CCFB RID: 52475
+		// Token: 0x0400D735 RID: 55093
 		YH,
-		// Token: 0x0400CCFC RID: 52476
+		// Token: 0x0400D736 RID: 55094
 		ZYF,
-		// Token: 0x0400CCFD RID: 52477
-		DCY
+		// Token: 0x0400D737 RID: 55095
+		DCY,
+		// Token: 0x0400D738 RID: 55096
+		LR
 	}
 }

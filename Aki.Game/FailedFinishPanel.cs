@@ -5,10 +5,10 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002A0E RID: 10766
+// Token: 0x02001F89 RID: 8073
 public class FailedFinishPanel : UiPanelBase
 {
-	// Token: 0x0601656A RID: 91498 RVA: 0x005A7254 File Offset: 0x005A5454
+	// Token: 0x06013F71 RID: 81777 RVA: 0x005D222C File Offset: 0x005D042C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,20 +26,20 @@ public class FailedFinishPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x0601656B RID: 91499 RVA: 0x005A7315 File Offset: 0x005A5515
+	// Token: 0x06013F72 RID: 81778 RVA: 0x005D22ED File Offset: 0x005D04ED
 	private void OnCloseBtnClick()
 	{
 		UiManager.Instance.CloseView(EUiViewName.SignalDecodeView, null);
 	}
 
-	// Token: 0x0601656C RID: 91500 RVA: 0x005A7327 File Offset: 0x005A5527
+	// Token: 0x06013F73 RID: 81779 RVA: 0x005D22FF File Offset: 0x005D04FF
 	private void OnStartAgainBtnClick()
 	{
 		EventSystem.Instance.Emit(EEventName.OnSignalCatchStartAgain);
 		this.Close();
 	}
 
-	// Token: 0x0601656D RID: 91501 RVA: 0x005A7340 File Offset: 0x005A5540
+	// Token: 0x06013F74 RID: 81780 RVA: 0x005D2318 File Offset: 0x005D0518
 	protected override void OnStart()
 	{
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
@@ -51,20 +51,20 @@ public class FailedFinishPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0601656E RID: 91502 RVA: 0x005A73BC File Offset: 0x005A55BC
+	// Token: 0x06013F75 RID: 81781 RVA: 0x005D2394 File Offset: 0x005D0594
 	public void Open()
 	{
 		base.SetUiActive(true);
 		this.LevelSequencePlayer.PlayLevelSequenceByName("Start", false, null, false);
 	}
 
-	// Token: 0x0601656F RID: 91503 RVA: 0x005A73EC File Offset: 0x005A55EC
+	// Token: 0x06013F76 RID: 81782 RVA: 0x005D23C4 File Offset: 0x005D05C4
 	public void Close()
 	{
 		this.LevelSequencePlayer.PlayLevelSequenceByName("Close", false, null, false);
 	}
 
-	// Token: 0x06016570 RID: 91504 RVA: 0x005A7414 File Offset: 0x005A5614
+	// Token: 0x06013F77 RID: 81783 RVA: 0x005D23EC File Offset: 0x005D05EC
 	[NullableContext(1)]
 	private void OnSequenceClose(string sequenceName)
 	{
@@ -74,26 +74,26 @@ public class FailedFinishPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0400A62E RID: 42542
+	// Token: 0x0400AA18 RID: 43544
 	[Nullable(2)]
 	protected LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x02009049 RID: 36937
+	// Token: 0x02008290 RID: 33424
 	private static class EChildComponent
 	{
-		// Token: 0x0402EB82 RID: 191362
+		// Token: 0x0402A27A RID: 172666
 		public const int CloseBtn = 0;
 
-		// Token: 0x0402EB83 RID: 191363
+		// Token: 0x0402A27B RID: 172667
 		public const int StartAgainBtn = 1;
 
-		// Token: 0x0402EB84 RID: 191364
+		// Token: 0x0402A27C RID: 172668
 		public const int CloseBtnText = 2;
 
-		// Token: 0x0402EB85 RID: 191365
+		// Token: 0x0402A27D RID: 172669
 		public const int TipsText = 3;
 
-		// Token: 0x0402EB86 RID: 191366
+		// Token: 0x0402A27E RID: 172670
 		public const int DecodeFailedText = 4;
 	}
 }

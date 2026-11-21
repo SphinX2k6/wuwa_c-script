@@ -4,17 +4,17 @@ using Aki.TDConfigMgr.Component;
 
 namespace CSharpScript.Game.Module.WuwaGo.Model.Role
 {
-	// Token: 0x02004742 RID: 18242
+	// Token: 0x02003673 RID: 13939
 	public class WuWaGoStaticMonster : WuWaGoRole
 	{
-		// Token: 0x0602FAD8 RID: 195288 RVA: 0x00B0CB44 File Offset: 0x00B0AD44
+		// Token: 0x060242A2 RID: 148130 RVA: 0x00A3CB10 File Offset: 0x00A3AD10
 		[NullableContext(1)]
 		public WuWaGoStaticMonster(Vector coordinate, Rotator rotator) : base(EWuWaGoRoleType.HeatFusionEnemy, coordinate, rotator)
 		{
 		}
 
-		// Token: 0x17007724 RID: 30500
-		// (get) Token: 0x0602FAD9 RID: 195289 RVA: 0x00B0CB4F File Offset: 0x00B0AD4F
+		// Token: 0x170049E0 RID: 18912
+		// (get) Token: 0x060242A3 RID: 148131 RVA: 0x00A3CB1B File Offset: 0x00A3AD1B
 		public override bool Actionable
 		{
 			get
@@ -23,8 +23,8 @@ namespace CSharpScript.Game.Module.WuwaGo.Model.Role
 			}
 		}
 
-		// Token: 0x17007725 RID: 30501
-		// (get) Token: 0x0602FADA RID: 195290 RVA: 0x00B0CB52 File Offset: 0x00B0AD52
+		// Token: 0x170049E1 RID: 18913
+		// (get) Token: 0x060242A4 RID: 148132 RVA: 0x00A3CB1E File Offset: 0x00A3AD1E
 		public override bool MoveAbility
 		{
 			get

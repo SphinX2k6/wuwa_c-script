@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006B0A RID: 27402
+	// Token: 0x02007241 RID: 29249
 	public class IMorseCodeT
 	{
-		// Token: 0x1700CB79 RID: 52089
-		// (get) Token: 0x0603010A RID: 196874 RVA: 0x00688BFF File Offset: 0x00686DFF
-		// (set) Token: 0x0603010B RID: 196875 RVA: 0x00688C07 File Offset: 0x00686E07
+		// Token: 0x1700D648 RID: 54856
+		// (get) Token: 0x06032EDE RID: 208606 RVA: 0x006E02B7 File Offset: 0x006DE4B7
+		// (set) Token: 0x06032EDF RID: 208607 RVA: 0x006E02BF File Offset: 0x006DE4BF
 		public ESimpleGameplayType Type { get; set; }
 
-		// Token: 0x1700CB7A RID: 52090
-		// (get) Token: 0x0603010C RID: 196876 RVA: 0x00688C10 File Offset: 0x00686E10
-		// (set) Token: 0x0603010D RID: 196877 RVA: 0x00688C18 File Offset: 0x00686E18
+		// Token: 0x1700D649 RID: 54857
+		// (get) Token: 0x06032EE0 RID: 208608 RVA: 0x006E02C8 File Offset: 0x006DE4C8
+		// (set) Token: 0x06032EE1 RID: 208609 RVA: 0x006E02D0 File Offset: 0x006DE4D0
 		public string MorseCodeId { get; set; }
 
-		// Token: 0x0603010E RID: 196878 RVA: 0x00688C21 File Offset: 0x00686E21
+		// Token: 0x06032EE2 RID: 208610 RVA: 0x006E02D9 File Offset: 0x006DE4D9
 		public IMorseCodeT()
 		{
 			this.Type = ESimpleGameplayType.Cipher;

@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004D57 RID: 19799
+	// Token: 0x02005253 RID: 21075
 	public enum TSkillReadyOption : byte
 	{
-		// Token: 0x0400D797 RID: 55191
+		// Token: 0x0400E2C6 RID: 58054
 		NONE,
-		// Token: 0x0400D798 RID: 55192
+		// Token: 0x0400E2C7 RID: 58055
 		IESkillReady,
-		// Token: 0x0400D799 RID: 55193
+		// Token: 0x0400E2C8 RID: 58056
 		IUltimateSkillReady,
-		// Token: 0x0400D79A RID: 55194
+		// Token: 0x0400E2C9 RID: 58057
 		IVisionSkillReady
 	}
 }

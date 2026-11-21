@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002F7D RID: 12157
+// Token: 0x020024D1 RID: 9425
 public enum ERefCalcType
 {
-	// Token: 0x0400C304 RID: 49924
+	// Token: 0x0400C6AD RID: 50861
 	Base,
-	// Token: 0x0400C305 RID: 49925
+	// Token: 0x0400C6AE RID: 50862
 	Current,
-	// Token: 0x0400C306 RID: 49926
+	// Token: 0x0400C6AF RID: 50863
 	CurrentMinusBase
 }

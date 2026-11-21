@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005E2A RID: 24106
+	// Token: 0x02006467 RID: 25703
 	public enum IOutAreaBorderType_Union : byte
 	{
-		// Token: 0x0400F826 RID: 63526
+		// Token: 0x04010581 RID: 66945
 		NONE,
-		// Token: 0x0400F827 RID: 63527
+		// Token: 0x04010582 RID: 66946
 		IOutAreaBorderType,
-		// Token: 0x0400F828 RID: 63528
+		// Token: 0x04010583 RID: 66947
 		IOutAreaBorderTimerConfig
 	}
 }

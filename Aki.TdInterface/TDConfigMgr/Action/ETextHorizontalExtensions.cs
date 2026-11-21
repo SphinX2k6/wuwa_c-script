@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200246D RID: 9325
+	// Token: 0x0200270E RID: 9998
 	public static class ETextHorizontalExtensions
 	{
-		// Token: 0x0600CA69 RID: 51817 RVA: 0x001DCB50 File Offset: 0x001DAD50
+		// Token: 0x0600D719 RID: 55065 RVA: 0x001F6C04 File Offset: 0x001F4E04
 		public static string ToEnumString(this ETextHorizontal value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CA6A RID: 51818 RVA: 0x001DCB98 File Offset: 0x001DAD98
+		// Token: 0x0600D71A RID: 55066 RVA: 0x001F6C4C File Offset: 0x001F4E4C
 		public static ETextHorizontal FromString(string name)
 		{
 			ETextHorizontal result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CA6B RID: 51819 RVA: 0x001DCBC4 File Offset: 0x001DADC4
+		// Token: 0x0600D71B RID: 55067 RVA: 0x001F6C78 File Offset: 0x001F4E78
 		public static bool TryFromString(string name, out ETextHorizontal value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600CA6C RID: 51820 RVA: 0x001DCC1A File Offset: 0x001DAE1A
+		// Token: 0x0600D71C RID: 55068 RVA: 0x001F6CCE File Offset: 0x001F4ECE
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CA6D RID: 51821 RVA: 0x001DCC3A File Offset: 0x001DAE3A
+		// Token: 0x0600D71D RID: 55069 RVA: 0x001F6CEE File Offset: 0x001F4EEE
 		public static ETextHorizontal[] GetValues()
 		{
 			return new ETextHorizontal[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CA6E RID: 51822 RVA: 0x001DCC4A File Offset: 0x001DAE4A
+		// Token: 0x0600D71E RID: 55070 RVA: 0x001F6CFE File Offset: 0x001F4EFE
 		public static string[] GetNames()
 		{
 			return new string[]

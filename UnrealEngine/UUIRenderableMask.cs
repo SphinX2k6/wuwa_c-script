@@ -6,48 +6,33 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200219C RID: 8604
+	// Token: 0x0200071B RID: 1819
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/LGUI.UIRenderableMask")]
 	[UnrealStructLayout(400, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 400)]
 	public class UUIRenderableMask : ULGUIBehaviour, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06020A09 RID: 133641 RVA: 0x00304A37 File Offset: 0x00302C37
+		// Token: 0x06009C89 RID: 40073 RVA: 0x000E9B07 File Offset: 0x000E7D07
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UUIRenderableMask._ClassPtr;
 		}
 
-		// Token: 0x06020A0A RID: 133642 RVA: 0x00304A44 File Offset: 0x00302C44
+		// Token: 0x06009C8A RID: 40074 RVA: 0x000E9B14 File Offset: 0x000E7D14
 		public UUIRenderableMask() : this(BuiltinUtils.AllocNativeUObject(UUIRenderableMask.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06020A0B RID: 133643 RVA: 0x00304A6C File Offset: 0x00302C6C
+		// Token: 0x06009C8B RID: 40075 RVA: 0x000E9B3C File Offset: 0x000E7D3C
 		[NullableContext(1)]
 		public UUIRenderableMask(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UUIRenderableMask.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17007F87 RID: 32647
-		// (get) Token: 0x06020A0C RID: 133644 RVA: 0x00304A9F File Offset: 0x00302C9F
-		// (set) Token: 0x06020A0D RID: 133645 RVA: 0x00304AAF File Offset: 0x00302CAF
-		public unsafe ELGUICanvasClipType ClipType
-		{
-			get
-			{
-				return (ELGUICanvasClipType)(*(base.NativePtr + (IntPtr)UUIRenderableMask.__PropertyOffset_ClipType));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)UUIRenderableMask.__PropertyOffset_ClipType) = (byte)value;
-			}
-		}
-
-		// Token: 0x17007F88 RID: 32648
-		// (get) Token: 0x06020A0E RID: 133646 RVA: 0x00304AC0 File Offset: 0x00302CC0
-		// (set) Token: 0x06020A0F RID: 133647 RVA: 0x00304AD4 File Offset: 0x00302CD4
+		// Token: 0x17001D02 RID: 7426
+		// (get) Token: 0x06009C8C RID: 40076 RVA: 0x000E9B6F File Offset: 0x000E7D6F
+		// (set) Token: 0x06009C8D RID: 40077 RVA: 0x000E9B83 File Offset: 0x000E7D83
 		public unsafe FMargin ClipFeatherNew
 		{
 			get
@@ -60,9 +45,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007F89 RID: 32649
-		// (get) Token: 0x06020A10 RID: 133648 RVA: 0x00304AE9 File Offset: 0x00302CE9
-		// (set) Token: 0x06020A11 RID: 133649 RVA: 0x00304AFD File Offset: 0x00302CFD
+		// Token: 0x17001D03 RID: 7427
+		// (get) Token: 0x06009C8E RID: 40078 RVA: 0x000E9B98 File Offset: 0x000E7D98
+		// (set) Token: 0x06009C8F RID: 40079 RVA: 0x000E9BAC File Offset: 0x000E7DAC
 		public unsafe FMargin ClipRectOffset
 		{
 			get
@@ -75,9 +60,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007F8A RID: 32650
-		// (get) Token: 0x06020A12 RID: 133650 RVA: 0x00304B12 File Offset: 0x00302D12
-		// (set) Token: 0x06020A13 RID: 133651 RVA: 0x00304B26 File Offset: 0x00302D26
+		// Token: 0x17001D04 RID: 7428
+		// (get) Token: 0x06009C90 RID: 40080 RVA: 0x000E9BC1 File Offset: 0x000E7DC1
+		// (set) Token: 0x06009C91 RID: 40081 RVA: 0x000E9BD5 File Offset: 0x000E7DD5
 		public unsafe UTexture ClipTexture
 		{
 			get
@@ -90,9 +75,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007F8B RID: 32651
-		// (get) Token: 0x06020A14 RID: 133652 RVA: 0x00304B3B File Offset: 0x00302D3B
-		// (set) Token: 0x06020A15 RID: 133653 RVA: 0x00304B4B File Offset: 0x00302D4B
+		// Token: 0x17001D05 RID: 7429
+		// (get) Token: 0x06009C92 RID: 40082 RVA: 0x000E9BEA File Offset: 0x000E7DEA
+		// (set) Token: 0x06009C93 RID: 40083 RVA: 0x000E9BFA File Offset: 0x000E7DFA
 		public unsafe float ClipTextureAlpha
 		{
 			get
@@ -105,9 +90,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007F8C RID: 32652
-		// (get) Token: 0x06020A16 RID: 133654 RVA: 0x00304B5C File Offset: 0x00302D5C
-		// (set) Token: 0x06020A17 RID: 133655 RVA: 0x00304B6C File Offset: 0x00302D6C
+		// Token: 0x17001D06 RID: 7430
+		// (get) Token: 0x06009C94 RID: 40084 RVA: 0x000E9C0B File Offset: 0x000E7E0B
+		// (set) Token: 0x06009C95 RID: 40085 RVA: 0x000E9C1B File Offset: 0x000E7E1B
 		public unsafe bool bInheritRectClip
 		{
 			get
@@ -120,9 +105,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007F8D RID: 32653
-		// (get) Token: 0x06020A18 RID: 133656 RVA: 0x00304B7D File Offset: 0x00302D7D
-		// (set) Token: 0x06020A19 RID: 133657 RVA: 0x00304B8D File Offset: 0x00302D8D
+		// Token: 0x17001D07 RID: 7431
+		// (get) Token: 0x06009C96 RID: 40086 RVA: 0x000E9C2C File Offset: 0x000E7E2C
+		// (set) Token: 0x06009C97 RID: 40087 RVA: 0x000E9C3C File Offset: 0x000E7E3C
 		public unsafe bool bInheritRectClipFull
 		{
 			get
@@ -135,9 +120,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007F8E RID: 32654
-		// (get) Token: 0x06020A1A RID: 133658 RVA: 0x00304B9E File Offset: 0x00302D9E
-		// (set) Token: 0x06020A1B RID: 133659 RVA: 0x00304BAE File Offset: 0x00302DAE
+		// Token: 0x17001D08 RID: 7432
+		// (get) Token: 0x06009C98 RID: 40088 RVA: 0x000E9C4D File Offset: 0x000E7E4D
+		// (set) Token: 0x06009C99 RID: 40089 RVA: 0x000E9C5D File Offset: 0x000E7E5D
 		public unsafe bool bFlipClipArea
 		{
 			get
@@ -150,9 +135,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007F8F RID: 32655
-		// (get) Token: 0x06020A1C RID: 133660 RVA: 0x00304BBF File Offset: 0x00302DBF
-		// (set) Token: 0x06020A1D RID: 133661 RVA: 0x00304BCF File Offset: 0x00302DCF
+		// Token: 0x17001D09 RID: 7433
+		// (get) Token: 0x06009C9A RID: 40090 RVA: 0x000E9C6E File Offset: 0x000E7E6E
+		// (set) Token: 0x06009C9B RID: 40091 RVA: 0x000E9C7E File Offset: 0x000E7E7E
 		public unsafe bool bEnableSliceBorder
 		{
 			get
@@ -165,9 +150,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007F90 RID: 32656
-		// (get) Token: 0x06020A1E RID: 133662 RVA: 0x00304BE0 File Offset: 0x00302DE0
-		// (set) Token: 0x06020A1F RID: 133663 RVA: 0x00304BF4 File Offset: 0x00302DF4
+		// Token: 0x17001D0A RID: 7434
+		// (get) Token: 0x06009C9C RID: 40092 RVA: 0x000E9C8F File Offset: 0x000E7E8F
+		// (set) Token: 0x06009C9D RID: 40093 RVA: 0x000E9CA3 File Offset: 0x000E7EA3
 		public unsafe FVector4 SliceBorder
 		{
 			get
@@ -180,9 +165,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007F91 RID: 32657
-		// (get) Token: 0x06020A20 RID: 133664 RVA: 0x00304C09 File Offset: 0x00302E09
-		// (set) Token: 0x06020A21 RID: 133665 RVA: 0x00304C19 File Offset: 0x00302E19
+		// Token: 0x17001D0B RID: 7435
+		// (get) Token: 0x06009C9E RID: 40094 RVA: 0x000E9CB8 File Offset: 0x000E7EB8
+		// (set) Token: 0x06009C9F RID: 40095 RVA: 0x000E9CC8 File Offset: 0x000E7EC8
 		public unsafe bool bScreenSpaceRectClip
 		{
 			get
@@ -195,9 +180,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007F92 RID: 32658
-		// (get) Token: 0x06020A22 RID: 133666 RVA: 0x00304C2A File Offset: 0x00302E2A
-		// (set) Token: 0x06020A23 RID: 133667 RVA: 0x00304C3A File Offset: 0x00302E3A
+		// Token: 0x17001D0C RID: 7436
+		// (get) Token: 0x06009CA0 RID: 40096 RVA: 0x000E9CD9 File Offset: 0x000E7ED9
+		// (set) Token: 0x06009CA1 RID: 40097 RVA: 0x000E9CE9 File Offset: 0x000E7EE9
 		public unsafe bool bEnableRotationClip
 		{
 			get
@@ -210,91 +195,78 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06020A24 RID: 133668 RVA: 0x00304C4B File Offset: 0x00302E4B
+		// Token: 0x06009CA2 RID: 40098 RVA: 0x000E9CFA File Offset: 0x000E7EFA
 		public void SetClipTexture(UTexture NewClipTexture)
 		{
 			UUIRenderableMask.__SetClipTexture_Internal(base.NativePtr, (NewClipTexture != null) ? NewClipTexture.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x06020A25 RID: 133669 RVA: 0x00304C68 File Offset: 0x00302E68
-		public ELGUICanvasClipType GetClipType()
-		{
-			return UUIRenderableMask.__GetClipType_Internal(base.NativePtr);
-		}
-
-		// Token: 0x06020A26 RID: 133670 RVA: 0x00304C75 File Offset: 0x00302E75
+		// Token: 0x06009CA3 RID: 40099 RVA: 0x000E9D17 File Offset: 0x000E7F17
 		public UTexture GetClipTexture()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UTexture>(UUIRenderableMask.__GetClipTexture_Internal(base.NativePtr));
 		}
 
-		// Token: 0x06020A27 RID: 133671
+		// Token: 0x06009CA4 RID: 40100
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetClipTexture_Internal(IntPtr @this, IntPtr NewClipTexture);
 
-		// Token: 0x06020A28 RID: 133672
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern ELGUICanvasClipType __GetClipType_Internal(IntPtr @this);
-
-		// Token: 0x06020A29 RID: 133673
+		// Token: 0x06009CA5 RID: 40101
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetClipTexture_Internal(IntPtr @this);
 
-		// Token: 0x06020A2A RID: 133674 RVA: 0x00304C87 File Offset: 0x00302E87
+		// Token: 0x06009CA6 RID: 40102 RVA: 0x000E9D29 File Offset: 0x000E7F29
 		static UUIRenderableMask()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LGUI.UIRenderableMask");
 		}
 
-		// Token: 0x06020A2B RID: 133675 RVA: 0x00304C95 File Offset: 0x00302E95
+		// Token: 0x06009CA7 RID: 40103 RVA: 0x000E9D37 File Offset: 0x000E7F37
 		protected UUIRenderableMask(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0401175E RID: 71518
+		// Token: 0x0400437A RID: 17274
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/LGUI.UIRenderableMask";
 
-		// Token: 0x0401175F RID: 71519
+		// Token: 0x0400437B RID: 17275
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04011760 RID: 71520
+		// Token: 0x0400437C RID: 17276
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04011761 RID: 71521
-		internal static int __PropertyOffset_ClipType;
-
-		// Token: 0x04011762 RID: 71522
+		// Token: 0x0400437D RID: 17277
 		internal static int __PropertyOffset_ClipFeatherNew;
 
-		// Token: 0x04011763 RID: 71523
+		// Token: 0x0400437E RID: 17278
 		internal static int __PropertyOffset_ClipRectOffset;
 
-		// Token: 0x04011764 RID: 71524
+		// Token: 0x0400437F RID: 17279
 		internal static int __PropertyOffset_ClipTexture;
 
-		// Token: 0x04011765 RID: 71525
+		// Token: 0x04004380 RID: 17280
 		internal static int __PropertyOffset_ClipTextureAlpha;
 
-		// Token: 0x04011766 RID: 71526
+		// Token: 0x04004381 RID: 17281
 		internal static int __PropertyOffset_bInheritRectClip;
 
-		// Token: 0x04011767 RID: 71527
+		// Token: 0x04004382 RID: 17282
 		internal static int __PropertyOffset_bInheritRectClipFull;
 
-		// Token: 0x04011768 RID: 71528
+		// Token: 0x04004383 RID: 17283
 		internal static int __PropertyOffset_bFlipClipArea;
 
-		// Token: 0x04011769 RID: 71529
+		// Token: 0x04004384 RID: 17284
 		internal static int __PropertyOffset_bEnableSliceBorder;
 
-		// Token: 0x0401176A RID: 71530
+		// Token: 0x04004385 RID: 17285
 		internal static int __PropertyOffset_SliceBorder;
 
-		// Token: 0x0401176B RID: 71531
+		// Token: 0x04004386 RID: 17286
 		internal static int __PropertyOffset_bScreenSpaceRectClip;
 
-		// Token: 0x0401176C RID: 71532
+		// Token: 0x04004387 RID: 17287
 		internal static int __PropertyOffset_bEnableRotationClip;
 	}
 }

@@ -2,570 +2,586 @@
 
 namespace CSharpScript.Game.Common
 {
-	// Token: 0x0200728A RID: 29322
+	// Token: 0x02006409 RID: 25609
 	public enum ELocalStoragePlayerKey
 	{
-		// Token: 0x04025D56 RID: 154966
+		// Token: 0x0402101A RID: 135194
 		FirstOpenShop,
-		// Token: 0x04025D57 RID: 154967
+		// Token: 0x0402101B RID: 135195
 		CookerLevelKey,
-		// Token: 0x04025D58 RID: 154968
+		// Token: 0x0402101C RID: 135196
 		EditBattleTeam,
-		// Token: 0x04025D59 RID: 154969
+		// Token: 0x0402101D RID: 135197
 		GachaPoolOpenRecord,
-		// Token: 0x04025D5A RID: 154970
+		// Token: 0x0402101E RID: 135198
 		InventoryCommonItem,
-		// Token: 0x04025D5B RID: 154971
+		// Token: 0x0402101F RID: 135199
 		InventoryAttributeItem,
-		// Token: 0x04025D5C RID: 154972
+		// Token: 0x04021020 RID: 135200
 		InventoryCommonItemRedDot,
-		// Token: 0x04025D5D RID: 154973
+		// Token: 0x04021021 RID: 135201
 		InventoryAttributeItemRedDot,
-		// Token: 0x04025D5E RID: 154974
+		// Token: 0x04021022 RID: 135202
 		RouletteAssemblyItemRedDot,
-		// Token: 0x04025D5F RID: 154975
+		// Token: 0x04021023 RID: 135203
 		GetItemConfigListSaveKey,
-		// Token: 0x04025D60 RID: 154976
+		// Token: 0x04021024 RID: 135204
 		ComposeLevelKey,
-		// Token: 0x04025D61 RID: 154977
+		// Token: 0x04021025 RID: 135205
 		ForgingLevelKey,
-		// Token: 0x04025D62 RID: 154978
+		// Token: 0x04021026 RID: 135206
 		Chat,
-		// Token: 0x04025D63 RID: 154979
+		// Token: 0x04021027 RID: 135207
 		BattlePassPayButton,
-		// Token: 0x04025D64 RID: 154980
+		// Token: 0x04021028 RID: 135208
 		MonthCardNextShowRedDotTime,
-		// Token: 0x04025D65 RID: 154981
+		// Token: 0x04021029 RID: 135209
 		IsErrorChatReplace,
-		// Token: 0x04025D66 RID: 154982
+		// Token: 0x0402102A RID: 135210
 		LocalFriendApplication,
-		// Token: 0x04025D67 RID: 154983
+		// Token: 0x0402102B RID: 135211
 		MarqueeScrollingMap,
-		// Token: 0x04025D68 RID: 154984
+		// Token: 0x0402102C RID: 135212
 		LoginTime,
-		// Token: 0x04025D69 RID: 154985
+		// Token: 0x0402102D RID: 135213
 		LastTimeUploadStamp,
-		// Token: 0x04025D6A RID: 154986
+		// Token: 0x0402102E RID: 135214
 		Activity,
-		// Token: 0x04025D6B RID: 154987
+		// Token: 0x0402102F RID: 135215
 		IsTriggerMobileGuide,
-		// Token: 0x04025D6C RID: 154988
+		// Token: 0x04021030 RID: 135216
 		IsTriggerDesktopGuide,
-		// Token: 0x04025D6D RID: 154989
+		// Token: 0x04021031 RID: 135217
 		AutoInteractionGuideAppearCount,
-		// Token: 0x04025D6E RID: 154990
+		// Token: 0x04021032 RID: 135218
 		IsSimpleDetail,
-		// Token: 0x04025D6F RID: 154991
+		// Token: 0x04021033 RID: 135219
 		VisionSpecialSkillShowMap,
-		// Token: 0x04025D70 RID: 154992
+		// Token: 0x04021034 RID: 135220
 		ItemGridDropDown,
-		// Token: 0x04025D71 RID: 154993
+		// Token: 0x04021035 RID: 135221
 		HasShowNewMailTipsMap,
-		// Token: 0x04025D72 RID: 154994
+		// Token: 0x04021036 RID: 135222
 		RoguelikeDescModel,
-		// Token: 0x04025D73 RID: 154995
+		// Token: 0x04021037 RID: 135223
 		RoleDataItem,
-		// Token: 0x04025D74 RID: 154996
+		// Token: 0x04021038 RID: 135224
 		PersonalDataItem,
-		// Token: 0x04025D75 RID: 154997
+		// Token: 0x04021039 RID: 135225
 		CalabashCollect,
-		// Token: 0x04025D76 RID: 154998
+		// Token: 0x0402103A RID: 135226
 		CalabashCollectIsSimpleDetail,
-		// Token: 0x04025D77 RID: 154999
+		// Token: 0x0402103B RID: 135227
 		RoguelikeShopRecord,
-		// Token: 0x04025D78 RID: 155000
+		// Token: 0x0402103C RID: 135228
 		RoguelikeShopNextTimeStamp,
-		// Token: 0x04025D79 RID: 155001
+		// Token: 0x0402103D RID: 135229
 		VisionSkin,
-		// Token: 0x04025D7A RID: 155002
+		// Token: 0x0402103E RID: 135230
 		SilentTips,
-		// Token: 0x04025D7B RID: 155003
+		// Token: 0x0402103F RID: 135231
 		GachaRoleRecord,
-		// Token: 0x04025D7C RID: 155004
+		// Token: 0x04021040 RID: 135232
 		GachaWeaponRecord,
-		// Token: 0x04025D7D RID: 155005
+		// Token: 0x04021041 RID: 135233
 		RouletteAction01OpenConfig,
-		// Token: 0x04025D7E RID: 155006
+		// Token: 0x04021042 RID: 135234
 		RouletteAction02OpenConfig,
-		// Token: 0x04025D7F RID: 155007
+		// Token: 0x04021043 RID: 135235
 		MoonChasingShopItemUnlock,
-		// Token: 0x04025D80 RID: 155008
+		// Token: 0x04021044 RID: 135236
 		MoonChasingShopItemChecked,
-		// Token: 0x04025D81 RID: 155009
+		// Token: 0x04021045 RID: 135237
 		MoonChasingRoleUnlock,
-		// Token: 0x04025D82 RID: 155010
+		// Token: 0x04021046 RID: 135238
 		MoonChasingQuestUnlock,
-		// Token: 0x04025D83 RID: 155011
+		// Token: 0x04021047 RID: 135239
 		MoonChasingMemoryChecked,
-		// Token: 0x04025D84 RID: 155012
+		// Token: 0x04021048 RID: 135240
 		LoopTowerIsClickSeason,
-		// Token: 0x04025D85 RID: 155013
+		// Token: 0x04021049 RID: 135241
 		LoopTowerIsClickShop,
-		// Token: 0x04025D86 RID: 155014
+		// Token: 0x0402104A RID: 135242
 		TowerOverLockArea,
-		// Token: 0x04025D87 RID: 155015
+		// Token: 0x0402104B RID: 135243
 		ActivityRecallWatchFirstShow,
-		// Token: 0x04025D88 RID: 155016
+		// Token: 0x0402104C RID: 135244
 		ActivityRecallSplashFirstShowTime,
-		// Token: 0x04025D89 RID: 155017
+		// Token: 0x0402104D RID: 135245
 		ActivityRecallWatchFirstShowTime,
-		// Token: 0x04025D8A RID: 155018
+		// Token: 0x0402104E RID: 135246
 		ActivityRegressSignLastDailyFirstShowTimeStamp,
-		// Token: 0x04025D8B RID: 155019
+		// Token: 0x0402104F RID: 135247
 		ActivityRegressShopRedDotCheckedInPeriod,
-		// Token: 0x04025D8C RID: 155020
+		// Token: 0x04021050 RID: 135248
 		ActivityRegressQuestionnaireRedDotCheckedInPeriod,
-		// Token: 0x04025D8D RID: 155021
+		// Token: 0x04021051 RID: 135249
 		ActivityRegressSecondQuestionnaireRedDotCheckedInPeriod,
-		// Token: 0x04025D8E RID: 155022
+		// Token: 0x04021052 RID: 135250
 		ActivityRegressDoubleDropReminderLastShowTime,
-		// Token: 0x04025D8F RID: 155023
+		// Token: 0x04021053 RID: 135251
 		ActivityRegressDoubleDropFirstRedDotCheckedInPeriod,
-		// Token: 0x04025D90 RID: 155024
+		// Token: 0x04021054 RID: 135252
 		ActivityRegressBpPayButtonRedDotCheckedInPeriod,
-		// Token: 0x04025D91 RID: 155025
+		// Token: 0x04021055 RID: 135253
 		ActivityRegressTrialRoleRedDotCheckedInPeriod,
-		// Token: 0x04025D92 RID: 155026
+		// Token: 0x04021056 RID: 135254
 		ActivityRegressDoubleDropRedDotCheckedInPeriod,
-		// Token: 0x04025D93 RID: 155027
+		// Token: 0x04021057 RID: 135255
 		ActivityRegressRecommendRedDotCheckedInPeriod,
-		// Token: 0x04025D94 RID: 155028
+		// Token: 0x04021058 RID: 135256
 		ActivityRegressAdventureRedDotCheckedInPeriod,
-		// Token: 0x04025D95 RID: 155029
+		// Token: 0x04021059 RID: 135257
 		TowerDefenseEntered,
-		// Token: 0x04025D96 RID: 155030
+		// Token: 0x0402105A RID: 135258
 		VersionPreheatToQuestClicked,
-		// Token: 0x04025D97 RID: 155031
+		// Token: 0x0402105B RID: 135259
 		VersionPreheatBonusClicked,
-		// Token: 0x04025D98 RID: 155032
+		// Token: 0x0402105C RID: 135260
 		VersionPreheatToQuestPlayed,
-		// Token: 0x04025D99 RID: 155033
+		// Token: 0x0402105D RID: 135261
 		VersionPreheatBonusPlayed,
-		// Token: 0x04025D9A RID: 155034
+		// Token: 0x0402105E RID: 135262
 		Spring25FirstTimeTaskAllDone,
-		// Token: 0x04025D9B RID: 155035
+		// Token: 0x0402105F RID: 135263
 		Spring25FirstDoneTaskIndex,
-		// Token: 0x04025D9C RID: 155036
+		// Token: 0x04021060 RID: 135264
 		Spring25FirstLetterClick,
-		// Token: 0x04025D9D RID: 155037
+		// Token: 0x04021061 RID: 135265
 		Spring25FirstEnter,
-		// Token: 0x04025D9E RID: 155038
+		// Token: 0x04021062 RID: 135266
 		MoonChasingDelegation,
-		// Token: 0x04025D9F RID: 155039
+		// Token: 0x04021063 RID: 135267
 		ShowPersonalTip,
-		// Token: 0x04025DA0 RID: 155040
+		// Token: 0x04021064 RID: 135268
 		HasCleanInvalidCustomMark,
-		// Token: 0x04025DA1 RID: 155041
+		// Token: 0x04021065 RID: 135269
 		SortConfig,
-		// Token: 0x04025DA2 RID: 155042
+		// Token: 0x04021066 RID: 135270
 		FilterConfig,
-		// Token: 0x04025DA3 RID: 155043
+		// Token: 0x04021067 RID: 135271
 		FragmentMemoryOpened,
-		// Token: 0x04025DA4 RID: 155044
+		// Token: 0x04021068 RID: 135272
 		VisionRecoveryBatchTip,
-		// Token: 0x04025DA5 RID: 155045
+		// Token: 0x04021069 RID: 135273
 		VisionRecoveryBatchAimTip,
-		// Token: 0x04025DA6 RID: 155046
+		// Token: 0x0402106A RID: 135274
 		VisionRefineTip,
-		// Token: 0x04025DA7 RID: 155047
+		// Token: 0x0402106B RID: 135275
 		AuToTrackQuestTime,
-		// Token: 0x04025DA8 RID: 155048
+		// Token: 0x0402106C RID: 135276
 		GoodsRemindMap,
-		// Token: 0x04025DA9 RID: 155049
+		// Token: 0x0402106D RID: 135277
 		WeaponSkinRedDot,
-		// Token: 0x04025DAA RID: 155050
+		// Token: 0x0402106E RID: 135278
 		FlySkinRedDot,
-		// Token: 0x04025DAB RID: 155051
+		// Token: 0x0402106F RID: 135279
 		CalabashSkinRedDot,
-		// Token: 0x04025DAC RID: 155052
+		// Token: 0x04021070 RID: 135280
 		MowingRiskIsInstanceNew,
-		// Token: 0x04025DAD RID: 155053
+		// Token: 0x04021071 RID: 135281
 		TowerDefenseNewLevel,
-		// Token: 0x04025DAE RID: 155054
+		// Token: 0x04021072 RID: 135282
 		MailBindNextShowRedDotTime,
-		// Token: 0x04025DAF RID: 155055
+		// Token: 0x04021073 RID: 135283
 		ShowSkillResume,
-		// Token: 0x04025DB0 RID: 155056
+		// Token: 0x04021074 RID: 135284
 		ShowSkillShowTag,
-		// Token: 0x04025DB1 RID: 155057
+		// Token: 0x04021075 RID: 135285
 		GamepadUsageRecord,
-		// Token: 0x04025DB2 RID: 155058
+		// Token: 0x04021076 RID: 135286
 		RedDotAdventureNewSoundAreaTabLastUpdateTime,
-		// Token: 0x04025DB3 RID: 155059
+		// Token: 0x04021077 RID: 135287
 		VisionLevelUpMaterialPutInMode,
-		// Token: 0x04025DB4 RID: 155060
+		// Token: 0x04021078 RID: 135288
 		VisionLevelUpMaterialUseType,
-		// Token: 0x04025DB5 RID: 155061
+		// Token: 0x04021079 RID: 135289
 		VisionLevelUpSettingRedDot,
-		// Token: 0x04025DB6 RID: 155062
+		// Token: 0x0402107A RID: 135290
 		VisionLevelUpIdentifyRedDot,
-		// Token: 0x04025DB7 RID: 155063
+		// Token: 0x0402107B RID: 135291
 		DirectTrainGotoRedDotHaveDisplayed,
-		// Token: 0x04025DB8 RID: 155064
+		// Token: 0x0402107C RID: 135292
 		DirectTrainGotoRedDotHaveDisplayedByActId,
-		// Token: 0x04025DB9 RID: 155065
+		// Token: 0x0402107D RID: 135293
 		DirectTrainMakeRoleChange,
-		// Token: 0x04025DBA RID: 155066
+		// Token: 0x0402107E RID: 135294
 		DetectionRedDotRecord,
-		// Token: 0x04025DBB RID: 155067
+		// Token: 0x0402107F RID: 135295
 		SuitWeaponFirstWearRecord,
-		// Token: 0x04025DBC RID: 155068
+		// Token: 0x04021080 RID: 135296
 		RoleSkinRedDot,
-		// Token: 0x04025DBD RID: 155069
+		// Token: 0x04021081 RID: 135297
 		NewLordGymEntranceIdRecord,
-		// Token: 0x04025DBE RID: 155070
+		// Token: 0x04021082 RID: 135298
 		SailingIsFix,
-		// Token: 0x04025DBF RID: 155071
+		// Token: 0x04021083 RID: 135299
 		VisionTopTipsState,
-		// Token: 0x04025DC0 RID: 155072
+		// Token: 0x04021084 RID: 135300
 		FirstOpenVisionGroup,
-		// Token: 0x04025DC1 RID: 155073
+		// Token: 0x04021085 RID: 135301
 		ShipTowerSeason,
-		// Token: 0x04025DC2 RID: 155074
+		// Token: 0x04021086 RID: 135302
 		AdventrueShipTowerSeason,
-		// Token: 0x04025DC3 RID: 155075
+		// Token: 0x04021087 RID: 135303
 		AdventrueWeeklyRogue,
-		// Token: 0x04025DC4 RID: 155076
+		// Token: 0x04021088 RID: 135304
 		AdventrueTower,
-		// Token: 0x04025DC5 RID: 155077
+		// Token: 0x04021089 RID: 135305
 		DockyardListItemRead,
-		// Token: 0x04025DC6 RID: 155078
+		// Token: 0x0402108A RID: 135306
 		FilterRedPoint,
-		// Token: 0x04025DC7 RID: 155079
+		// Token: 0x0402108B RID: 135307
 		SolarSpeedInstanceClicked,
-		// Token: 0x04025DC8 RID: 155080
+		// Token: 0x0402108C RID: 135308
 		PayShopTabItemChecked,
-		// Token: 0x04025DC9 RID: 155081
+		// Token: 0x0402108D RID: 135309
 		FishingHandBookItemRecord,
-		// Token: 0x04025DCA RID: 155082
+		// Token: 0x0402108E RID: 135310
 		FishingShipSkinRecord,
-		// Token: 0x04025DCB RID: 155083
+		// Token: 0x0402108F RID: 135311
 		ShipTowerGetBuffSet,
-		// Token: 0x04025DCC RID: 155084
+		// Token: 0x04021090 RID: 135312
 		ShipTowerExchangeInstId,
-		// Token: 0x04025DCD RID: 155085
+		// Token: 0x04021091 RID: 135313
 		ExploreActivityFirstUnlock,
-		// Token: 0x04025DCE RID: 155086
+		// Token: 0x04021092 RID: 135314
 		PlayerTitleRecord,
-		// Token: 0x04025DCF RID: 155087
+		// Token: 0x04021093 RID: 135315
 		PlayerTitleUnlockRedDot,
-		// Token: 0x04025DD0 RID: 155088
+		// Token: 0x04021094 RID: 135316
 		VersionRedDotMap,
-		// Token: 0x04025DD1 RID: 155089
+		// Token: 0x04021095 RID: 135317
 		BabelTowerNewLevel,
-		// Token: 0x04025DD2 RID: 155090
+		// Token: 0x04021096 RID: 135318
 		BabelTowerNewLevelHasClick,
-		// Token: 0x04025DD3 RID: 155091
+		// Token: 0x04021097 RID: 135319
 		InviteNewbieEntered,
-		// Token: 0x04025DD4 RID: 155092
+		// Token: 0x04021098 RID: 135320
 		AbyssDangoFormationSelect,
-		// Token: 0x04025DD5 RID: 155093
+		// Token: 0x04021099 RID: 135321
 		RogueResDungeonNewest,
-		// Token: 0x04025DD6 RID: 155094
+		// Token: 0x0402109A RID: 135322
 		RogueResSkillTreeOpen,
-		// Token: 0x04025DD7 RID: 155095
+		// Token: 0x0402109B RID: 135323
 		RogueResEndingOpen,
-		// Token: 0x04025DD8 RID: 155096
+		// Token: 0x0402109C RID: 135324
 		RogueResShopRefresh,
-		// Token: 0x04025DD9 RID: 155097
+		// Token: 0x0402109D RID: 135325
 		RogueResShopNewGoods,
-		// Token: 0x04025DDA RID: 155098
+		// Token: 0x0402109E RID: 135326
 		RogueResTaskOpen,
-		// Token: 0x04025DDB RID: 155099
+		// Token: 0x0402109F RID: 135327
 		RogueResTrialOpen,
-		// Token: 0x04025DDC RID: 155100
+		// Token: 0x040210A0 RID: 135328
 		RogueResNewRoleFlag,
-		// Token: 0x04025DDD RID: 155101
+		// Token: 0x040210A1 RID: 135329
 		RogueResMapScale,
-		// Token: 0x04025DDE RID: 155102
+		// Token: 0x040210A2 RID: 135330
 		DangoMonopolyActivityId,
-		// Token: 0x04025DDF RID: 155103
+		// Token: 0x040210A3 RID: 135331
 		DangoMonopolySpeed,
-		// Token: 0x04025DE0 RID: 155104
+		// Token: 0x040210A4 RID: 135332
 		DangoMonopolyLastEnterBoard,
-		// Token: 0x04025DE1 RID: 155105
+		// Token: 0x040210A5 RID: 135333
 		DangoMonopolyNewTask,
-		// Token: 0x04025DE2 RID: 155106
+		// Token: 0x040210A6 RID: 135334
 		RacingBetsMatchViewRecord,
-		// Token: 0x04025DE3 RID: 155107
+		// Token: 0x040210A7 RID: 135335
 		RacingBetsRankViewRecord,
-		// Token: 0x04025DE4 RID: 155108
+		// Token: 0x040210A8 RID: 135336
 		RacingBetsReplayGameRecord,
-		// Token: 0x04025DE5 RID: 155109
+		// Token: 0x040210A9 RID: 135337
 		RacingBetsWatchGameRecord,
-		// Token: 0x04025DE6 RID: 155110
+		// Token: 0x040210AA RID: 135338
 		RacingBetsSettlementMainViewRecord,
-		// Token: 0x04025DE7 RID: 155111
+		// Token: 0x040210AB RID: 135339
 		RacingBetsBettingMainViewRecord,
-		// Token: 0x04025DE8 RID: 155112
+		// Token: 0x040210AC RID: 135340
 		RacingBetsBulletScreenAlphaRecord,
-		// Token: 0x04025DE9 RID: 155113
+		// Token: 0x040210AD RID: 135341
 		RacingBetsBulletScreenShowTypeRecord,
-		// Token: 0x04025DEA RID: 155114
+		// Token: 0x040210AE RID: 135342
 		SdkReportStateMap,
-		// Token: 0x04025DEB RID: 155115
+		// Token: 0x040210AF RID: 135343
 		PayShopRechargeRedDot,
-		// Token: 0x04025DEC RID: 155116
+		// Token: 0x040210B0 RID: 135344
 		ShowNoteIdMap,
-		// Token: 0x04025DED RID: 155117
+		// Token: 0x040210B1 RID: 135345
 		AbyssSelectRole,
-		// Token: 0x04025DEE RID: 155118
+		// Token: 0x040210B2 RID: 135346
 		AbyssDangoLevelCheck,
-		// Token: 0x04025DEF RID: 155119
+		// Token: 0x040210B3 RID: 135347
 		AbyssDangoRoleNew,
-		// Token: 0x04025DF0 RID: 155120
+		// Token: 0x040210B4 RID: 135348
 		AbyssDangoEnterNew,
-		// Token: 0x04025DF1 RID: 155121
+		// Token: 0x040210B5 RID: 135349
 		AbyssDangoFormationNew,
-		// Token: 0x04025DF2 RID: 155122
+		// Token: 0x040210B6 RID: 135350
 		RogueResDungeonSelected,
-		// Token: 0x04025DF3 RID: 155123
+		// Token: 0x040210B7 RID: 135351
 		IsDirectTrainProOpened,
-		// Token: 0x04025DF4 RID: 155124
+		// Token: 0x040210B8 RID: 135352
 		PhantomArenaEntranceShopRefresh,
-		// Token: 0x04025DF5 RID: 155125
+		// Token: 0x040210B9 RID: 135353
 		PhantomArenaEntranceGymCheck,
-		// Token: 0x04025DF6 RID: 155126
+		// Token: 0x040210BA RID: 135354
 		PhantomArenaRepeatLastIndex,
-		// Token: 0x04025DF7 RID: 155127
+		// Token: 0x040210BB RID: 135355
 		PhantomArenaEntranceGymRedDotCheck,
-		// Token: 0x04025DF8 RID: 155128
+		// Token: 0x040210BC RID: 135356
 		QuestReviewNodeRedDot,
-		// Token: 0x04025DF9 RID: 155129
+		// Token: 0x040210BD RID: 135357
 		QuestReviewNodeUnlockAnim,
-		// Token: 0x04025DFA RID: 155130
+		// Token: 0x040210BE RID: 135358
 		QuestReviewLineUnlockAnim,
-		// Token: 0x04025DFB RID: 155131
+		// Token: 0x040210BF RID: 135359
 		QuestReviewLineDestroyAnim,
-		// Token: 0x04025DFC RID: 155132
+		// Token: 0x040210C0 RID: 135360
 		QuestReviewTabUnlockAnim,
-		// Token: 0x04025DFD RID: 155133
+		// Token: 0x040210C1 RID: 135361
 		QuestReviewMainViewEntryAnim,
-		// Token: 0x04025DFE RID: 155134
+		// Token: 0x040210C2 RID: 135362
 		QuestReviewHasFused,
-		// Token: 0x04025DFF RID: 155135
+		// Token: 0x040210C3 RID: 135363
 		QuestReviewNewLineHasFused,
-		// Token: 0x04025E00 RID: 155136
+		// Token: 0x040210C4 RID: 135364
 		BeginnerCarnivalShop,
-		// Token: 0x04025E01 RID: 155137
+		// Token: 0x040210C5 RID: 135365
 		BeginnerCarnivalGacha,
-		// Token: 0x04025E02 RID: 155138
+		// Token: 0x040210C6 RID: 135366
 		BeginnerCarnivalChoseRoleView,
-		// Token: 0x04025E03 RID: 155139
+		// Token: 0x040210C7 RID: 135367
 		FloroRanchSpeed,
-		// Token: 0x04025E04 RID: 155140
+		// Token: 0x040210C8 RID: 135368
 		MoraleAreaUnlockFlagSet,
-		// Token: 0x04025E05 RID: 155141
+		// Token: 0x040210C9 RID: 135369
 		MoraleTipsAreaBuff,
-		// Token: 0x04025E06 RID: 155142
+		// Token: 0x040210CA RID: 135370
 		MoraleActiveAreaBuff,
-		// Token: 0x04025E07 RID: 155143
+		// Token: 0x040210CB RID: 135371
 		RoleTutorialNew,
-		// Token: 0x04025E08 RID: 155144
+		// Token: 0x040210CC RID: 135372
 		AdventrueItemNew,
-		// Token: 0x04025E09 RID: 155145
+		// Token: 0x040210CD RID: 135373
 		VisionSuitFilter,
-		// Token: 0x04025E0A RID: 155146
+		// Token: 0x040210CE RID: 135374
 		FloroRanchSkillId,
-		// Token: 0x04025E0B RID: 155147
+		// Token: 0x040210CF RID: 135375
 		FloroRanchSkillIdWeekly,
-		// Token: 0x04025E0C RID: 155148
+		// Token: 0x040210D0 RID: 135376
 		CustomizedThumbnailShow,
-		// Token: 0x04025E0D RID: 155149
+		// Token: 0x040210D1 RID: 135377
 		VisionLevelUpIdentify,
-		// Token: 0x04025E0E RID: 155150
+		// Token: 0x040210D2 RID: 135378
 		FloroRanchSelectedRaceIds,
-		// Token: 0x04025E0F RID: 155151
+		// Token: 0x040210D3 RID: 135379
 		FloroRanchSkillRedDot,
-		// Token: 0x04025E10 RID: 155152
+		// Token: 0x040210D4 RID: 135380
 		FloroRanchCardRedDot,
-		// Token: 0x04025E11 RID: 155153
+		// Token: 0x040210D5 RID: 135381
 		FloroRanchCardInGameRedDot,
-		// Token: 0x04025E12 RID: 155154
+		// Token: 0x040210D6 RID: 135382
 		FloroRanchToyRedDot,
-		// Token: 0x04025E13 RID: 155155
+		// Token: 0x040210D7 RID: 135383
 		FloroRanchRaceRedDot,
-		// Token: 0x04025E14 RID: 155156
+		// Token: 0x040210D8 RID: 135384
 		WeeklyRogueExtraEnterTips,
-		// Token: 0x04025E15 RID: 155157
+		// Token: 0x040210D9 RID: 135385
 		LoopTowerSeason,
-		// Token: 0x04025E16 RID: 155158
+		// Token: 0x040210DA RID: 135386
 		IntroductionVersion,
-		// Token: 0x04025E17 RID: 155159
+		// Token: 0x040210DB RID: 135387
 		TrapDefenseBuildingClicked,
-		// Token: 0x04025E18 RID: 155160
+		// Token: 0x040210DC RID: 135388
 		TrapDefenseAuxiliaryClicked,
-		// Token: 0x04025E19 RID: 155161
+		// Token: 0x040210DD RID: 135389
 		TrapDefenseBdBuffUnlock,
-		// Token: 0x04025E1A RID: 155162
+		// Token: 0x040210DE RID: 135390
 		TrapDefenseLevelReachOpenTime,
-		// Token: 0x04025E1B RID: 155163
+		// Token: 0x040210DF RID: 135391
 		TrapDefenseRougeModeOpen,
-		// Token: 0x04025E1C RID: 155164
+		// Token: 0x040210E0 RID: 135392
 		TrapDefenseRougeModeOpenSub,
-		// Token: 0x04025E1D RID: 155165
+		// Token: 0x040210E1 RID: 135393
 		SurvivorsHandbookClicked,
-		// Token: 0x04025E1E RID: 155166
+		// Token: 0x040210E2 RID: 135394
 		FightPhotoLevelRedDot,
-		// Token: 0x04025E1F RID: 155167
+		// Token: 0x040210E3 RID: 135395
 		QuestTreeNodeNewTag,
-		// Token: 0x04025E20 RID: 155168
+		// Token: 0x040210E4 RID: 135396
 		SubDownLoadAgreeUseCellData,
-		// Token: 0x04025E21 RID: 155169
+		// Token: 0x040210E5 RID: 135397
 		SubDownLoadLastDownLoadList,
-		// Token: 0x04025E22 RID: 155170
+		// Token: 0x040210E6 RID: 135398
+		SubDownLoadLastPauseId,
+		// Token: 0x040210E7 RID: 135399
+		SubDownLoadLastDynamicDownLoadList,
+		// Token: 0x040210E8 RID: 135400
+		SubDownLoadLastDownLoadingId,
+		// Token: 0x040210E9 RID: 135401
 		HonamiStoryMascotUnlockSet,
-		// Token: 0x04025E23 RID: 155171
+		// Token: 0x040210EA RID: 135402
 		HonamiStoryWeaponUnlockSet,
-		// Token: 0x04025E24 RID: 155172
+		// Token: 0x040210EB RID: 135403
 		HonamiStoryMainButtonUnlockSet,
-		// Token: 0x04025E25 RID: 155173
+		// Token: 0x040210EC RID: 135404
 		HonamiStorySelectLvAreaUnLockTips,
-		// Token: 0x04025E26 RID: 155174
+		// Token: 0x040210ED RID: 135405
 		HonamiStorySelectLvUnLockTips,
-		// Token: 0x04025E27 RID: 155175
+		// Token: 0x040210EE RID: 135406
 		HonamiStorySelectLvTowerUnLockTips,
-		// Token: 0x04025E28 RID: 155176
+		// Token: 0x040210EF RID: 135407
 		HonamiStorySelectLvTowerUnLockTogRedDot,
-		// Token: 0x04025E29 RID: 155177
+		// Token: 0x040210F0 RID: 135408
 		HonamiStorySelectLvTowerUnLockBtnGoRedDot,
-		// Token: 0x04025E2A RID: 155178
+		// Token: 0x040210F1 RID: 135409
 		HonamiStorySkillDescMode,
-		// Token: 0x04025E2B RID: 155179
+		// Token: 0x040210F2 RID: 135410
 		FirstOpenCommonWeaponSelect,
-		// Token: 0x04025E2C RID: 155180
+		// Token: 0x040210F3 RID: 135411
 		SubDownLoadClearOnLogin,
-		// Token: 0x04025E2D RID: 155181
+		// Token: 0x040210F4 RID: 135412
 		MotorcycleMusicRedDot,
-		// Token: 0x04025E2E RID: 155182
+		// Token: 0x040210F5 RID: 135413
 		MotorcycleCurPlayAlbumId,
-		// Token: 0x04025E2F RID: 155183
+		// Token: 0x040210F6 RID: 135414
 		MotorcycleCurPlayMusicId,
-		// Token: 0x04025E30 RID: 155184
+		// Token: 0x040210F7 RID: 135415
 		MotorcyclePlayMode,
-		// Token: 0x04025E31 RID: 155185
+		// Token: 0x040210F8 RID: 135416
+		MotorcycleMusicIsPause,
+		// Token: 0x040210F9 RID: 135417
 		FirstUnlockArtemisDayMap,
-		// Token: 0x04025E32 RID: 155186
+		// Token: 0x040210FA RID: 135418
 		FirstPlayArtemisPlaneAnimMap,
-		// Token: 0x04025E33 RID: 155187
+		// Token: 0x040210FB RID: 135419
 		RemindCanUpgradedLaHaiLuo,
-		// Token: 0x04025E34 RID: 155188
+		// Token: 0x040210FC RID: 135420
 		RemindCanUpgradedRiLing,
-		// Token: 0x04025E35 RID: 155189
+		// Token: 0x040210FD RID: 135421
 		InfrRecordObservatoryLevel,
-		// Token: 0x04025E36 RID: 155190
+		// Token: 0x040210FE RID: 135422
 		InfrRoadMarkUnlockRecord,
-		// Token: 0x04025E37 RID: 155191
+		// Token: 0x040210FF RID: 135423
 		InfrObservatoryLevelUpSeq,
-		// Token: 0x04025E38 RID: 155192
+		// Token: 0x04021100 RID: 135424
 		MapNPCMarkShowSeq,
-		// Token: 0x04025E39 RID: 155193
+		// Token: 0x04021101 RID: 135425
 		RegionalTerminalBarFoldState,
-		// Token: 0x04025E3A RID: 155194
+		// Token: 0x04021102 RID: 135426
 		PhantomArenaChallengeUnlockRedDotCheck,
-		// Token: 0x04025E3B RID: 155195
+		// Token: 0x04021103 RID: 135427
 		PhantomArenaMapUnlockRedDotCheck,
-		// Token: 0x04025E3C RID: 155196
+		// Token: 0x04021104 RID: 135428
 		MotorParkourLevelClicked,
-		// Token: 0x04025E3D RID: 155197
+		// Token: 0x04021105 RID: 135429
 		CyberPunkBossEntranceFirstClicked,
-		// Token: 0x04025E3E RID: 155198
+		// Token: 0x04021106 RID: 135430
 		WeatherCentralClicked,
-		// Token: 0x04025E3F RID: 155199
+		// Token: 0x04021107 RID: 135431
 		PhantomInteractNewUnlock,
-		// Token: 0x04025E40 RID: 155200
+		// Token: 0x04021108 RID: 135432
 		NewPlayerSupportTrialRoleEntranceRedDot,
-		// Token: 0x04025E41 RID: 155201
+		// Token: 0x04021109 RID: 135433
 		TrialRoleGroupUnlock,
-		// Token: 0x04025E42 RID: 155202
+		// Token: 0x0402110A RID: 135434
 		ActivityNewPlayerSupportFirstShow,
-		// Token: 0x04025E43 RID: 155203
+		// Token: 0x0402110B RID: 135435
 		MotorDevelopIsFirstDailyExpLimit,
-		// Token: 0x04025E44 RID: 155204
+		// Token: 0x0402110C RID: 135436
 		MotorDevelopNewUnlockTree,
-		// Token: 0x04025E45 RID: 155205
+		// Token: 0x0402110D RID: 135437
 		MotorDiyNewUnlockId,
-		// Token: 0x04025E46 RID: 155206
+		// Token: 0x0402110E RID: 135438
 		MotorFightLevelClicked,
-		// Token: 0x04025E47 RID: 155207
+		// Token: 0x0402110F RID: 135439
 		MotorFightItemClicked,
-		// Token: 0x04025E48 RID: 155208
+		// Token: 0x04021110 RID: 135440
 		MotorFightRoleClicked,
-		// Token: 0x04025E49 RID: 155209
+		// Token: 0x04021111 RID: 135441
 		DrinksUnlockLevelClicked,
-		// Token: 0x04025E4A RID: 155210
+		// Token: 0x04021112 RID: 135442
 		GuessJokerUnlockLevelClicked,
-		// Token: 0x04025E4B RID: 155211
+		// Token: 0x04021113 RID: 135443
 		GuessJokerFirstFinishAnim,
-		// Token: 0x04025E4C RID: 155212
+		// Token: 0x04021114 RID: 135444
 		FlagChallengeFormationRoleIds,
-		// Token: 0x04025E4D RID: 155213
+		// Token: 0x04021115 RID: 135445
 		FeedbackRewardHaveShowRewardId,
-		// Token: 0x04025E4E RID: 155214
+		// Token: 0x04021116 RID: 135446
 		SpringManorBrochureUnlockSequencePlayed,
-		// Token: 0x04025E4F RID: 155215
+		// Token: 0x04021117 RID: 135447
 		CoopLevelFirstRedDotClicked,
-		// Token: 0x04025E50 RID: 155216
+		// Token: 0x04021118 RID: 135448
 		CoopPhotoRedDotClicked,
-		// Token: 0x04025E51 RID: 155217
+		// Token: 0x04021119 RID: 135449
 		PhantomDiscardPlanRecycleSet,
-		// Token: 0x04025E52 RID: 155218
+		// Token: 0x0402111A RID: 135450
 		RhythmShipLocalCalibrationValue,
-		// Token: 0x04025E53 RID: 155219
+		// Token: 0x0402111B RID: 135451
 		RhythmShipHavePlayAniLevelId,
-		// Token: 0x04025E54 RID: 155220
+		// Token: 0x0402111C RID: 135452
 		BossPilingQuestClicked,
-		// Token: 0x04025E55 RID: 155221
+		// Token: 0x0402111D RID: 135453
 		BossPilingLevelNew,
-		// Token: 0x04025E56 RID: 155222
+		// Token: 0x0402111E RID: 135454
 		RoguelikeInstanceSelectGroupIndex,
-		// Token: 0x04025E57 RID: 155223
+		// Token: 0x0402111F RID: 135455
 		RoguelikeInstanceSelectEntryId,
-		// Token: 0x04025E58 RID: 155224
+		// Token: 0x04021120 RID: 135456
 		RoguelikeFormationIdList,
-		// Token: 0x04025E59 RID: 155225
+		// Token: 0x04021121 RID: 135457
 		RoguelikeSelectPhantomId,
-		// Token: 0x04025E5A RID: 155226
+		// Token: 0x04021122 RID: 135458
 		RoleVoiceMap,
-		// Token: 0x04025E5B RID: 155227
+		// Token: 0x04021123 RID: 135459
 		RoleTrialRemindMap,
-		// Token: 0x04025E5C RID: 155228
+		// Token: 0x04021124 RID: 135460
 		GolemHackingBonusLevelGroupPlayed,
-		// Token: 0x04025E5D RID: 155229
+		// Token: 0x04021125 RID: 135461
 		GolemHackingActivityLevelTime,
-		// Token: 0x04025E5E RID: 155230
+		// Token: 0x04021126 RID: 135462
 		ShouldSaveCaptureCollectFlag,
-		// Token: 0x04025E5F RID: 155231
+		// Token: 0x04021127 RID: 135463
 		FirstOpenDailyActivityDailyTab,
-		// Token: 0x04025E60 RID: 155232
+		// Token: 0x04021128 RID: 135464
 		FirstOpenDailyActivityWeeklyTab,
-		// Token: 0x04025E61 RID: 155233
+		// Token: 0x04021129 RID: 135465
 		IgnoreWheelTowerSeasonReviewMedalCheck,
-		// Token: 0x04025E62 RID: 155234
+		// Token: 0x0402112A RID: 135466
 		RoguelikeShopItemChecked,
-		// Token: 0x04025E63 RID: 155235
+		// Token: 0x0402112B RID: 135467
 		SheriffHideCompletedMarkItem,
-		// Token: 0x04025E64 RID: 155236
+		// Token: 0x0402112C RID: 135468
 		SubPackageRecommendConfirmShown,
-		// Token: 0x04025E65 RID: 155237
+		// Token: 0x0402112D RID: 135469
 		RoleLangCustomRecord,
-		// Token: 0x04025E66 RID: 155238
+		// Token: 0x0402112E RID: 135470
 		RoverRogueLastPassRoleType,
-		// Token: 0x04025E67 RID: 155239
+		// Token: 0x0402112F RID: 135471
 		UseFormation3DView,
-		// Token: 0x04025E68 RID: 155240
+		// Token: 0x04021130 RID: 135472
 		RoverRogueSeenUnlockedInsIds,
-		// Token: 0x04025E69 RID: 155241
+		// Token: 0x04021131 RID: 135473
 		RoverRogueSeenUnlockedBlessIds,
-		// Token: 0x04025E6A RID: 155242
+		// Token: 0x04021132 RID: 135474
 		RoverRogueSeenUnlockedLootIds,
-		// Token: 0x04025E6B RID: 155243
+		// Token: 0x04021133 RID: 135475
 		GiantAccessReadIds,
-		// Token: 0x04025E6C RID: 155244
+		// Token: 0x04021134 RID: 135476
 		GiantCommissionRedDotClicked,
-		// Token: 0x04025E6D RID: 155245
+		// Token: 0x04021135 RID: 135477
 		SubDownLoadRecallProtectedIds,
-		// Token: 0x04025E6E RID: 155246
-		GiantInteractReadNodeIds
+		// Token: 0x04021136 RID: 135478
+		GiantInteractReadNodeIds,
+		// Token: 0x04021137 RID: 135479
+		InstRechallengeCache,
+		// Token: 0x04021138 RID: 135480
+		RoleDevelopNewState,
+		// Token: 0x04021139 RID: 135481
+		SolarSchoolLocalRecords,
+		// Token: 0x0402113A RID: 135482
+		RoleTowerShowBriefDesc
 	}
 }

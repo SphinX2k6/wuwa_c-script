@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x020049DA RID: 18906
+	// Token: 0x02004E9A RID: 20122
 	public class ICheckDungeonFinishT
 	{
-		// Token: 0x170088B9 RID: 35001
-		// (get) Token: 0x0601D87A RID: 120954 RVA: 0x00428638 File Offset: 0x00426838
-		// (set) Token: 0x0601D87B RID: 120955 RVA: 0x00428640 File Offset: 0x00426840
+		// Token: 0x17008F89 RID: 36745
+		// (get) Token: 0x0601F2ED RID: 127725 RVA: 0x004592A4 File Offset: 0x004574A4
+		// (set) Token: 0x0601F2EE RID: 127726 RVA: 0x004592AC File Offset: 0x004574AC
 		public ECondition Type { get; set; }
 
-		// Token: 0x170088BA RID: 35002
-		// (get) Token: 0x0601D87C RID: 120956 RVA: 0x00428649 File Offset: 0x00426849
-		// (set) Token: 0x0601D87D RID: 120957 RVA: 0x00428651 File Offset: 0x00426851
+		// Token: 0x17008F8A RID: 36746
+		// (get) Token: 0x0601F2EF RID: 127727 RVA: 0x004592B5 File Offset: 0x004574B5
+		// (set) Token: 0x0601F2F0 RID: 127728 RVA: 0x004592BD File Offset: 0x004574BD
 		public int DungeonId { get; set; }
 
-		// Token: 0x170088BB RID: 35003
-		// (get) Token: 0x0601D87E RID: 120958 RVA: 0x0042865A File Offset: 0x0042685A
-		// (set) Token: 0x0601D87F RID: 120959 RVA: 0x00428662 File Offset: 0x00426862
+		// Token: 0x17008F8B RID: 36747
+		// (get) Token: 0x0601F2F1 RID: 127729 RVA: 0x004592C6 File Offset: 0x004574C6
+		// (set) Token: 0x0601F2F2 RID: 127730 RVA: 0x004592CE File Offset: 0x004574CE
 		public bool IsFinished { get; set; }
 
-		// Token: 0x170088BC RID: 35004
-		// (get) Token: 0x0601D880 RID: 120960 RVA: 0x0042866B File Offset: 0x0042686B
-		// (set) Token: 0x0601D881 RID: 120961 RVA: 0x00428673 File Offset: 0x00426873
+		// Token: 0x17008F8C RID: 36748
+		// (get) Token: 0x0601F2F3 RID: 127731 RVA: 0x004592D7 File Offset: 0x004574D7
+		// (set) Token: 0x0601F2F4 RID: 127732 RVA: 0x004592DF File Offset: 0x004574DF
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601D882 RID: 120962 RVA: 0x0042867C File Offset: 0x0042687C
+		// Token: 0x0601F2F5 RID: 127733 RVA: 0x004592E8 File Offset: 0x004574E8
 		public ICheckDungeonFinishT()
 		{
 			this.Type = ECondition.CompareVar;

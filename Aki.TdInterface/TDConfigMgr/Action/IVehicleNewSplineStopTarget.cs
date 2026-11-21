@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002043 RID: 8259
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200228C RID: 8844
 	public class IVehicleNewSplineStopTarget : INewSplineStopTarget
 	{
-		// Token: 0x0600B582 RID: 46466 RVA: 0x001A56DC File Offset: 0x001A38DC
+		// Token: 0x0600C0A8 RID: 49320 RVA: 0x001BBE48 File Offset: 0x001BA048
 		private IVehicleNewSplineStopTarget_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B583 RID: 46467 RVA: 0x001A5714 File Offset: 0x001A3914
+		// Token: 0x0600C0A9 RID: 49321 RVA: 0x001BBE80 File Offset: 0x001BA080
 		public static IVehicleNewSplineStopTarget Create([Nullable(2)] IVehicleNewSplineStopTarget instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B584 RID: 46468 RVA: 0x001A5727 File Offset: 0x001A3927
+		// Token: 0x0600C0AA RID: 49322 RVA: 0x001BBE93 File Offset: 0x001BA093
 		public static IVehicleNewSplineStopTarget CreateFromSetValue([Nullable(2)] IVehicleNewSplineStopTarget_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B585 RID: 46469 RVA: 0x001A573A File Offset: 0x001A393A
+		// Token: 0x0600C0AB RID: 49323 RVA: 0x001BBEA6 File Offset: 0x001BA0A6
 		public new IVehicleNewSplineStopTarget_SetValue ToSetValue()
 		{
 			return new IVehicleNewSplineStopTarget_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170037B5 RID: 14261
-		// (get) Token: 0x0600B586 RID: 46470 RVA: 0x001A5759 File Offset: 0x001A3959
-		// (set) Token: 0x0600B587 RID: 46471 RVA: 0x001A5784 File Offset: 0x001A3984
+		// Token: 0x17003A92 RID: 14994
+		// (get) Token: 0x0600C0AC RID: 49324 RVA: 0x001BBEC5 File Offset: 0x001BA0C5
+		// (set) Token: 0x0600C0AD RID: 49325 RVA: 0x001BBEF0 File Offset: 0x001BA0F0
 		public override ENewSplineMoveTargetType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170037B6 RID: 14262
-		// (get) Token: 0x0600B588 RID: 46472 RVA: 0x001A5792 File Offset: 0x001A3992
-		// (set) Token: 0x0600B589 RID: 46473 RVA: 0x001A57B9 File Offset: 0x001A39B9
+		// Token: 0x17003A93 RID: 14995
+		// (get) Token: 0x0600C0AE RID: 49326 RVA: 0x001BBEFE File Offset: 0x001BA0FE
+		// (set) Token: 0x0600C0AF RID: 49327 RVA: 0x001BBF25 File Offset: 0x001BA125
 		public virtual ITargetVehicle TargetVehicle
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006D34 RID: 27956
+		// Token: 0x0400733D RID: 29501
 		[Nullable(2)]
 		protected new IVehicleNewSplineStopTarget FbInstance;
 
-		// Token: 0x04006D35 RID: 27957
+		// Token: 0x0400733E RID: 29502
 		[Nullable(2)]
 		protected new IVehicleNewSplineStopTarget_SetValue PocoInterface;
 	}

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001AFB RID: 6907
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001CA8 RID: 7336
 	public class IHideGroupType
 	{
-		// Token: 0x060093EE RID: 37870 RVA: 0x00156ECC File Offset: 0x001550CC
+		// Token: 0x06009BCC RID: 39884 RVA: 0x00167A14 File Offset: 0x00165C14
 		private IHideGroupType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060093EF RID: 37871 RVA: 0x00156F04 File Offset: 0x00155104
+		// Token: 0x06009BCD RID: 39885 RVA: 0x00167A4C File Offset: 0x00165C4C
 		public static IHideGroupType Create([Nullable(2)] IHideGroupType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060093F0 RID: 37872 RVA: 0x00156F17 File Offset: 0x00155117
+		// Token: 0x06009BCE RID: 39886 RVA: 0x00167A5F File Offset: 0x00165C5F
 		public static IHideGroupType CreateFromSetValue([Nullable(2)] IHideGroupType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060093F1 RID: 37873 RVA: 0x00156F2A File Offset: 0x0015512A
+		// Token: 0x06009BCF RID: 39887 RVA: 0x00167A72 File Offset: 0x00165C72
 		public IHideGroupType_SetValue ToSetValue()
 		{
 			return new IHideGroupType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002ED4 RID: 11988
-		// (get) Token: 0x060093F2 RID: 37874 RVA: 0x00156F3D File Offset: 0x0015513D
-		// (set) Token: 0x060093F3 RID: 37875 RVA: 0x00156F68 File Offset: 0x00155168
+		// Token: 0x170030F7 RID: 12535
+		// (get) Token: 0x06009BD0 RID: 39888 RVA: 0x00167A85 File Offset: 0x00165C85
+		// (set) Token: 0x06009BD1 RID: 39889 RVA: 0x00167AB0 File Offset: 0x00165CB0
 		public virtual EHideType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005ACD RID: 23245
+		// Token: 0x04005F64 RID: 24420
 		[Nullable(2)]
 		protected IHideGroupType FbInstance;
 
-		// Token: 0x04005ACE RID: 23246
+		// Token: 0x04005F65 RID: 24421
 		[Nullable(2)]
 		protected IHideGroupType_SetValue PocoInterface;
 	}

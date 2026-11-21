@@ -1,26 +1,24 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008D1 RID: 2257
+	// Token: 0x02000974 RID: 2420
 	public class TriggerUe5Component_SetValue
 	{
-		// Token: 0x04002181 RID: 8577
+		// Token: 0x04002391 RID: 9105
 		public bool? Disabled;
 
-		// Token: 0x04002182 RID: 8578
+		// Token: 0x04002392 RID: 9106
 		public bool? EdIsLocked;
 
-		// Token: 0x04002183 RID: 8579
+		// Token: 0x04002393 RID: 9107
 		public int MaxTriggerTimes;
 
-		// Token: 0x04002184 RID: 8580
+		// Token: 0x04002394 RID: 9108
 		public bool IsNotLoad;
 
-		// Token: 0x04002185 RID: 8581
-		[Nullable(1)]
+		// Token: 0x04002395 RID: 9109
 		public ITriggerActions TriggerActions;
 	}
 }

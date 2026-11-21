@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004AAF RID: 19119
+	// Token: 0x02003A57 RID: 14935
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseLevelNamePanel : UiPanelBase
 	{
-		// Token: 0x060318A0 RID: 202912 RVA: 0x00B7CCD8 File Offset: 0x00B7AED8
+		// Token: 0x06026630 RID: 157232 RVA: 0x00AC0C8C File Offset: 0x00ABEE8C
 		public UniTask Init(UUIItem item)
 		{
 			TrapDefenseLevelNamePanel.<Init>d__2 <Init>d__;
@@ -26,12 +26,12 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060318A1 RID: 202913 RVA: 0x00B7CD23 File Offset: 0x00B7AF23
+		// Token: 0x06026631 RID: 157233 RVA: 0x00AC0CD7 File Offset: 0x00ABEED7
 		protected override void OnBeforeCreate()
 		{
 		}
 
-		// Token: 0x060318A2 RID: 202914 RVA: 0x00B7CD28 File Offset: 0x00B7AF28
+		// Token: 0x06026632 RID: 157234 RVA: 0x00AC0CDC File Offset: 0x00ABEEDC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060318A3 RID: 202915 RVA: 0x00B7CE38 File Offset: 0x00B7B038
+		// Token: 0x06026633 RID: 157235 RVA: 0x00AC0DEC File Offset: 0x00ABEFEC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TrapDefenseLevelNamePanel.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -66,22 +66,22 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060318A4 RID: 202916 RVA: 0x00B7CE7B File Offset: 0x00B7B07B
+		// Token: 0x06026634 RID: 157236 RVA: 0x00AC0E2F File Offset: 0x00ABF02F
 		protected override void OnStart()
 		{
 		}
 
-		// Token: 0x060318A5 RID: 202917 RVA: 0x00B7CE7D File Offset: 0x00B7B07D
+		// Token: 0x06026635 RID: 157237 RVA: 0x00AC0E31 File Offset: 0x00ABF031
 		protected override void OnBeforeShow()
 		{
 		}
 
-		// Token: 0x060318A6 RID: 202918 RVA: 0x00B7CE7F File Offset: 0x00B7B07F
+		// Token: 0x06026636 RID: 157238 RVA: 0x00AC0E33 File Offset: 0x00ABF033
 		protected override void OnBeforeDestroy()
 		{
 		}
 
-		// Token: 0x060318A7 RID: 202919 RVA: 0x00B7CE84 File Offset: 0x00B7B084
+		// Token: 0x06026637 RID: 157239 RVA: 0x00AC0E38 File Offset: 0x00ABF038
 		public void UpdateData(TrapDefenseLevelData data)
 		{
 			this.LevelData = data;
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.UpdateBg();
 		}
 
-		// Token: 0x060318A8 RID: 202920 RVA: 0x00B7CEEC File Offset: 0x00B7B0EC
+		// Token: 0x06026638 RID: 157240 RVA: 0x00AC0EA0 File Offset: 0x00ABF0A0
 		private void UpdateBg()
 		{
 			ITrapDefenseDifficultyLevelInfo difficultyUiInfo = this.LevelData.GetDifficultyUiInfo();
@@ -123,32 +123,32 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.SetSpriteByPath(resourcePath3, sprite, false, null, null);
 		}
 
-		// Token: 0x0401A79D RID: 108445
+		// Token: 0x040150EF RID: 86255
 		public TrapDefenseLevelData LevelData;
 
-		// Token: 0x0200AC0A RID: 44042
+		// Token: 0x0200962A RID: 38442
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x04034473 RID: 214131
+			// Token: 0x0402EE24 RID: 192036
 			public const int TextureBg = 0;
 
-			// Token: 0x04034474 RID: 214132
+			// Token: 0x0402EE25 RID: 192037
 			public const int TextureBgLight = 1;
 
-			// Token: 0x04034475 RID: 214133
+			// Token: 0x0402EE26 RID: 192038
 			public const int SpriteBgTitle = 2;
 
-			// Token: 0x04034476 RID: 214134
+			// Token: 0x0402EE27 RID: 192039
 			public const int ArtTextPosition = 3;
 
-			// Token: 0x04034477 RID: 214135
+			// Token: 0x0402EE28 RID: 192040
 			public const int TextTitle = 4;
 
-			// Token: 0x04034478 RID: 214136
+			// Token: 0x0402EE29 RID: 192041
 			public const int ArtTextPositionShadow = 5;
 
-			// Token: 0x04034479 RID: 214137
+			// Token: 0x0402EE2A RID: 192042
 			public const int TextureBgFlower = 6;
 		}
 	}

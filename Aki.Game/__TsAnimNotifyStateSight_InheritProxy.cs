@@ -3,21 +3,21 @@ using System.Runtime.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Utils;
 
-// Token: 0x0200379C RID: 14236
+// Token: 0x02002D15 RID: 11541
 public class __TsAnimNotifyStateSight_InheritProxy : TsAnimNotifyStateSight
 {
-	// Token: 0x0601E6E8 RID: 124648 RVA: 0x0088DE70 File Offset: 0x0088C070
+	// Token: 0x0601C3E1 RID: 115681 RVA: 0x008B426C File Offset: 0x008B246C
 	[NullableContext(1)]
 	public __TsAnimNotifyStateSight_InheritProxy(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyStateSight.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601E6E9 RID: 124649 RVA: 0x0088DEA3 File Offset: 0x0088C0A3
+	// Token: 0x0601C3E2 RID: 115682 RVA: 0x008B429F File Offset: 0x008B249F
 	protected __TsAnimNotifyStateSight_InheritProxy(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0601E6EA RID: 124650 RVA: 0x0088DEAC File Offset: 0x0088C0AC
+	// Token: 0x0601C3E3 RID: 115683 RVA: 0x008B42A8 File Offset: 0x008B24A8
 	protected unsafe override void __CPPCALL_K2_NotifyBegin_Implementation(UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams* __Params)
 	{
 		USkeletalMeshComponent orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(__Params->MeshComp);
@@ -25,7 +25,7 @@ public class __TsAnimNotifyStateSight_InheritProxy : TsAnimNotifyStateSight
 		__Params->__Result = base.K2_NotifyBegin_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->TotalDuration);
 	}
 
-	// Token: 0x0601E6EB RID: 124651 RVA: 0x0088DEE8 File Offset: 0x0088C0E8
+	// Token: 0x0601C3E4 RID: 115684 RVA: 0x008B42E4 File Offset: 0x008B24E4
 	protected unsafe override void __CPPCALL_K2_NotifyEnd_Implementation(UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams* __Params)
 	{
 		USkeletalMeshComponent orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(__Params->MeshComp);

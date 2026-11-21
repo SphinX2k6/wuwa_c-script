@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Activity.ActivityContent.Pinball;
 using CSharpScript.Game.Module.RoleUi;
 
-// Token: 0x0200188F RID: 6287
+// Token: 0x02000D48 RID: 3400
 public class PinballFormationSort : CommonSort<EPinballFormation>
 {
-	// Token: 0x0600B848 RID: 47176 RVA: 0x0029CAA4 File Offset: 0x0029ACA4
+	// Token: 0x06008C31 RID: 35889 RVA: 0x002A71BC File Offset: 0x002A53BC
 	[NullableContext(1)]
 	private int SortQuality(object a, object b, bool isAscending, params object[] parameters)
 	{
@@ -51,7 +51,7 @@ public class PinballFormationSort : CommonSort<EPinballFormation>
 		}
 	}
 
-	// Token: 0x0600B849 RID: 47177 RVA: 0x0029CC03 File Offset: 0x0029AE03
+	// Token: 0x06008C32 RID: 35890 RVA: 0x002A731B File Offset: 0x002A551B
 	protected override void OnInitSortMap()
 	{
 		this.SortMap[EPinballFormation.Quality] = new TSortResult(this.SortQuality);

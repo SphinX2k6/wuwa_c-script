@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000525 RID: 1317
+	// Token: 0x0200058C RID: 1420
 	public class IMotorHookAcceleration_SetValue
 	{
-		// Token: 0x04001350 RID: 4944
+		// Token: 0x040014BA RID: 5306
 		public int MaxSpeed;
 
-		// Token: 0x04001351 RID: 4945
-		[Nullable(1)]
+		// Token: 0x040014BB RID: 5307
 		public string SpeedSampleCurve;
 	}
 }

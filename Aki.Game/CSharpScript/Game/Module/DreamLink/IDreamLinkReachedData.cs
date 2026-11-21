@@ -3,23 +3,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.DreamLink
 {
-	// Token: 0x02005AB0 RID: 23216
+	// Token: 0x02004A8C RID: 19084
 	[NullableContext(1)]
 	public interface IDreamLinkReachedData
 	{
-		// Token: 0x17008C16 RID: 35862
-		// (get) Token: 0x0603ACEE RID: 240878
-		// (set) Token: 0x0603ACEF RID: 240879
+		// Token: 0x17005FE4 RID: 24548
+		// (get) Token: 0x0602FC3A RID: 195642
+		// (set) Token: 0x0602FC3B RID: 195643
 		string Title { get; set; }
 
-		// Token: 0x17008C17 RID: 35863
-		// (get) Token: 0x0603ACF0 RID: 240880
-		// (set) Token: 0x0603ACF1 RID: 240881
+		// Token: 0x17005FE5 RID: 24549
+		// (get) Token: 0x0602FC3C RID: 195644
+		// (set) Token: 0x0602FC3D RID: 195645
 		string Score { get; set; }
 
-		// Token: 0x17008C18 RID: 35864
-		// (get) Token: 0x0603ACF2 RID: 240882
-		// (set) Token: 0x0603ACF3 RID: 240883
+		// Token: 0x17005FE6 RID: 24550
+		// (get) Token: 0x0602FC3E RID: 195646
+		// (set) Token: 0x0602FC3F RID: 195647
 		bool IsReached { get; set; }
 	}
 }

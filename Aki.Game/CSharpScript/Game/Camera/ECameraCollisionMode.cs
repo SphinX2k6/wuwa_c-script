@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072A9 RID: 29353
+	// Token: 0x02006428 RID: 25640
 	public enum ECameraCollisionMode
 	{
-		// Token: 0x04025F58 RID: 155480
+		// Token: 0x0402122B RID: 135723
 		Default,
-		// Token: 0x04025F59 RID: 155481
+		// Token: 0x0402122C RID: 135724
 		InPlaceProbe
 	}
 }

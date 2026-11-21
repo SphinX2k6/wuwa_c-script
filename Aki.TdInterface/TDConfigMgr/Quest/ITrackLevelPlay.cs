@@ -7,12 +7,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020011BC RID: 4540
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020012F8 RID: 4856
 	public class ITrackLevelPlay : ITrackType
 	{
-		// Token: 0x06006728 RID: 26408 RVA: 0x000F70C8 File Offset: 0x000F52C8
+		// Token: 0x06006D69 RID: 28009 RVA: 0x001049D4 File Offset: 0x00102BD4
 		private ITrackLevelPlay_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,7 +25,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006729 RID: 26409 RVA: 0x000F7100 File Offset: 0x000F5300
+		// Token: 0x06006D6A RID: 28010 RVA: 0x00104A0C File Offset: 0x00102C0C
 		public static ITrackLevelPlay Create([Nullable(2)] ITrackLevelPlay instance)
 		{
 			if (instance == null)
@@ -40,7 +38,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600672A RID: 26410 RVA: 0x000F7113 File Offset: 0x000F5313
+		// Token: 0x06006D6B RID: 28011 RVA: 0x00104A1F File Offset: 0x00102C1F
 		public static ITrackLevelPlay CreateFromSetValue([Nullable(2)] ITrackLevelPlay_SetValue value)
 		{
 			if (value == null)
@@ -53,7 +51,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600672B RID: 26411 RVA: 0x000F7128 File Offset: 0x000F5328
+		// Token: 0x06006D6C RID: 28012 RVA: 0x00104A34 File Offset: 0x00102C34
 		public new ITrackLevelPlay_SetValue ToSetValue()
 		{
 			return new ITrackLevelPlay_SetValue
@@ -67,9 +65,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x1700217F RID: 8575
-		// (get) Token: 0x0600672C RID: 26412 RVA: 0x000F7182 File Offset: 0x000F5382
-		// (set) Token: 0x0600672D RID: 26413 RVA: 0x000F71AD File Offset: 0x000F53AD
+		// Token: 0x17002340 RID: 9024
+		// (get) Token: 0x06006D6D RID: 28013 RVA: 0x00104A8E File Offset: 0x00102C8E
+		// (set) Token: 0x06006D6E RID: 28014 RVA: 0x00104AB9 File Offset: 0x00102CB9
 		public override ETrackType Type
 		{
 			get
@@ -90,9 +88,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002180 RID: 8576
-		// (get) Token: 0x0600672E RID: 26414 RVA: 0x000F71BB File Offset: 0x000F53BB
-		// (set) Token: 0x0600672F RID: 26415 RVA: 0x000F71E2 File Offset: 0x000F53E2
+		// Token: 0x17002341 RID: 9025
+		// (get) Token: 0x06006D6F RID: 28015 RVA: 0x00104AC7 File Offset: 0x00102CC7
+		// (set) Token: 0x06006D70 RID: 28016 RVA: 0x00104AEE File Offset: 0x00102CEE
 		[Nullable(2)]
 		public override IGravityDirectionType GravityDirection
 		{
@@ -117,9 +115,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002181 RID: 8577
-		// (get) Token: 0x06006730 RID: 26416 RVA: 0x000F71F0 File Offset: 0x000F53F0
-		// (set) Token: 0x06006731 RID: 26417 RVA: 0x000F721B File Offset: 0x000F541B
+		// Token: 0x17002342 RID: 9026
+		// (get) Token: 0x06006D71 RID: 28017 RVA: 0x00104AFC File Offset: 0x00102CFC
+		// (set) Token: 0x06006D72 RID: 28018 RVA: 0x00104B27 File Offset: 0x00102D27
 		public virtual int LevelPlayId
 		{
 			get
@@ -140,9 +138,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002182 RID: 8578
-		// (get) Token: 0x06006732 RID: 26418 RVA: 0x000F722C File Offset: 0x000F542C
-		// (set) Token: 0x06006733 RID: 26419 RVA: 0x000F728D File Offset: 0x000F548D
+		// Token: 0x17002343 RID: 9027
+		// (get) Token: 0x06006D73 RID: 28019 RVA: 0x00104B38 File Offset: 0x00102D38
+		// (set) Token: 0x06006D74 RID: 28020 RVA: 0x00104B99 File Offset: 0x00102D99
 		public virtual VectorInfo OutOfRangeTrackPos
 		{
 			get
@@ -170,20 +168,20 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002183 RID: 8579
-		// (get) Token: 0x06006734 RID: 26420 RVA: 0x000F72A4 File Offset: 0x000F54A4
-		// (set) Token: 0x06006735 RID: 26421 RVA: 0x000F7337 File Offset: 0x000F5537
+		// Token: 0x17002344 RID: 9028
+		// (get) Token: 0x06006D75 RID: 28021 RVA: 0x00104BB0 File Offset: 0x00102DB0
+		// (set) Token: 0x06006D76 RID: 28022 RVA: 0x00104C43 File Offset: 0x00102E43
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IConditionTrackPos> ConditionTrackPosList
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -214,7 +212,7 @@ namespace Aki.TDConfigMgr.Quest
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -223,9 +221,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17002184 RID: 8580
-		// (get) Token: 0x06006736 RID: 26422 RVA: 0x000F734C File Offset: 0x000F554C
-		// (set) Token: 0x06006737 RID: 26423 RVA: 0x000F7386 File Offset: 0x000F5586
+		// Token: 0x17002345 RID: 9029
+		// (get) Token: 0x06006D77 RID: 28023 RVA: 0x00104C58 File Offset: 0x00102E58
+		// (set) Token: 0x06006D78 RID: 28024 RVA: 0x00104C92 File Offset: 0x00102E92
 		public virtual ELevelPlayTrackSwitchRule? TrackSwitchRule
 		{
 			get
@@ -247,29 +245,29 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003DEE RID: 15854
+		// Token: 0x0400415C RID: 16732
 		[Nullable(2)]
 		protected new ITrackLevelPlay FbInstance;
 
-		// Token: 0x04003DEF RID: 15855
+		// Token: 0x0400415D RID: 16733
 		[Nullable(2)]
 		protected new ITrackLevelPlay_SetValue PocoInterface;
 
-		// Token: 0x04003DF0 RID: 15856
+		// Token: 0x0400415E RID: 16734
 		private VectorInfo _OutOfRangeTrackPosCache;
 
-		// Token: 0x04003DF1 RID: 15857
+		// Token: 0x0400415F RID: 16735
 		private bool _OutOfRangeTrackPosInited;
 
-		// Token: 0x04003DF2 RID: 15858
+		// Token: 0x04004160 RID: 16736
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IConditionTrackPos> _ConditionTrackPosListCache;
 
-		// Token: 0x04003DF3 RID: 15859
+		// Token: 0x04004161 RID: 16737
 		private bool _ConditionTrackPosListInited;
 	}
 }

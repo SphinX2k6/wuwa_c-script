@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000686 RID: 1670
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000727 RID: 1831
 	public class IRenjuStrategy : IAiGearStrategy
 	{
-		// Token: 0x060023C4 RID: 9156 RVA: 0x000616E8 File Offset: 0x0005F8E8
+		// Token: 0x060026E0 RID: 9952 RVA: 0x000686B0 File Offset: 0x000668B0
 		private IRenjuStrategy_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060023C5 RID: 9157 RVA: 0x00061720 File Offset: 0x0005F920
+		// Token: 0x060026E1 RID: 9953 RVA: 0x000686E8 File Offset: 0x000668E8
 		public static IRenjuStrategy Create([Nullable(2)] IRenjuStrategy instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060023C6 RID: 9158 RVA: 0x00061733 File Offset: 0x0005F933
+		// Token: 0x060026E2 RID: 9954 RVA: 0x000686FB File Offset: 0x000668FB
 		public static IRenjuStrategy CreateFromSetValue([Nullable(2)] IRenjuStrategy_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060023C7 RID: 9159 RVA: 0x00061746 File Offset: 0x0005F946
+		// Token: 0x060026E3 RID: 9955 RVA: 0x0006870E File Offset: 0x0006690E
 		public new IRenjuStrategy_SetValue ToSetValue()
 		{
 			return new IRenjuStrategy_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000978 RID: 2424
-		// (get) Token: 0x060023C8 RID: 9160 RVA: 0x0006177D File Offset: 0x0005F97D
-		// (set) Token: 0x060023C9 RID: 9161 RVA: 0x000617A8 File Offset: 0x0005F9A8
+		// Token: 0x17000A34 RID: 2612
+		// (get) Token: 0x060026E4 RID: 9956 RVA: 0x00068745 File Offset: 0x00066945
+		// (set) Token: 0x060026E5 RID: 9957 RVA: 0x00068770 File Offset: 0x00066970
 		public override EAiGearStrategy Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000979 RID: 2425
-		// (get) Token: 0x060023CA RID: 9162 RVA: 0x000617B8 File Offset: 0x0005F9B8
-		// (set) Token: 0x060023CB RID: 9163 RVA: 0x00061819 File Offset: 0x0005FA19
+		// Token: 0x17000A35 RID: 2613
+		// (get) Token: 0x060026E6 RID: 9958 RVA: 0x00068780 File Offset: 0x00066980
+		// (set) Token: 0x060026E7 RID: 9959 RVA: 0x000687E1 File Offset: 0x000669E1
 		[Nullable(2)]
 		public override IConditionGroup Condition
 		{
@@ -119,9 +117,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700097A RID: 2426
-		// (get) Token: 0x060023CC RID: 9164 RVA: 0x00061830 File Offset: 0x0005FA30
-		// (set) Token: 0x060023CD RID: 9165 RVA: 0x0006186A File Offset: 0x0005FA6A
+		// Token: 0x17000A36 RID: 2614
+		// (get) Token: 0x060026E8 RID: 9960 RVA: 0x000687F8 File Offset: 0x000669F8
+		// (set) Token: 0x060026E9 RID: 9961 RVA: 0x00068832 File Offset: 0x00066A32
 		public virtual int? Chessboard
 		{
 			get
@@ -143,9 +141,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700097B RID: 2427
-		// (get) Token: 0x060023CE RID: 9166 RVA: 0x00061878 File Offset: 0x0005FA78
-		// (set) Token: 0x060023CF RID: 9167 RVA: 0x000618A3 File Offset: 0x0005FAA3
+		// Token: 0x17000A37 RID: 2615
+		// (get) Token: 0x060026EA RID: 9962 RVA: 0x00068840 File Offset: 0x00066A40
+		// (set) Token: 0x060026EB RID: 9963 RVA: 0x0006886B File Offset: 0x00066A6B
 		public virtual string CommonConfig
 		{
 			get
@@ -166,18 +164,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040018AA RID: 6314
+		// Token: 0x04001AA7 RID: 6823
 		[Nullable(2)]
 		protected new IRenjuStrategy FbInstance;
 
-		// Token: 0x040018AB RID: 6315
+		// Token: 0x04001AA8 RID: 6824
 		[Nullable(2)]
 		protected new IRenjuStrategy_SetValue PocoInterface;
 
-		// Token: 0x040018AC RID: 6316
+		// Token: 0x04001AA9 RID: 6825
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x040018AD RID: 6317
+		// Token: 0x04001AAA RID: 6826
 		private bool _ConditionInited;
 	}
 }

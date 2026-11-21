@@ -4,24 +4,24 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x020057C9 RID: 22473
+	// Token: 0x020047A0 RID: 18336
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RewardExploreTargetReachedData : IRewardExploreTargetReached
 	{
-		// Token: 0x1700899F RID: 35231
-		// (get) Token: 0x06039246 RID: 234054 RVA: 0x00D9007A File Offset: 0x00D8E27A
-		// (set) Token: 0x06039247 RID: 234055 RVA: 0x00D90082 File Offset: 0x00D8E282
+		// Token: 0x17005D67 RID: 23911
+		// (get) Token: 0x0602E156 RID: 188758 RVA: 0x00CDEEB2 File Offset: 0x00CDD0B2
+		// (set) Token: 0x0602E157 RID: 188759 RVA: 0x00CDEEBA File Offset: 0x00CDD0BA
 		public List<string> Target { get; set; }
 
-		// Token: 0x170089A0 RID: 35232
-		// (get) Token: 0x06039248 RID: 234056 RVA: 0x00D9008B File Offset: 0x00D8E28B
-		// (set) Token: 0x06039249 RID: 234057 RVA: 0x00D90093 File Offset: 0x00D8E293
+		// Token: 0x17005D68 RID: 23912
+		// (get) Token: 0x0602E158 RID: 188760 RVA: 0x00CDEEC3 File Offset: 0x00CDD0C3
+		// (set) Token: 0x0602E159 RID: 188761 RVA: 0x00CDEECB File Offset: 0x00CDD0CB
 		public string DescriptionTextId { get; set; }
 
-		// Token: 0x170089A1 RID: 35233
-		// (get) Token: 0x0603924A RID: 234058 RVA: 0x00D9009C File Offset: 0x00D8E29C
-		// (set) Token: 0x0603924B RID: 234059 RVA: 0x00D900A4 File Offset: 0x00D8E2A4
+		// Token: 0x17005D69 RID: 23913
+		// (get) Token: 0x0602E15A RID: 188762 RVA: 0x00CDEED4 File Offset: 0x00CDD0D4
+		// (set) Token: 0x0602E15B RID: 188763 RVA: 0x00CDEEDC File Offset: 0x00CDD0DC
 		public bool IsReached { get; set; }
 	}
 }

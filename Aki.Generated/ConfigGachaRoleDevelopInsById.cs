@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000371 RID: 881
+	// Token: 0x02000386 RID: 902
 	public class ConfigGachaRoleDevelopInsById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060014AC RID: 5292 RVA: 0x000CE680 File Offset: 0x000CC880
+		// Token: 0x0600152A RID: 5418 RVA: 0x000D4B8C File Offset: 0x000D2D8C
 		static ConfigGachaRoleDevelopInsById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigGachaRoleDevelopInsById.CreateStaticDefaultValue), new Action(ConfigGachaRoleDevelopInsById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060014AD RID: 5293 RVA: 0x000CE6A0 File Offset: 0x000CC8A0
+		// Token: 0x0600152B RID: 5419 RVA: 0x000D4BAC File Offset: 0x000D2DAC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigGachaRoleDevelopInsById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060014AE RID: 5294 RVA: 0x000CE71F File Offset: 0x000CC91F
+		// Token: 0x0600152C RID: 5420 RVA: 0x000D4C2B File Offset: 0x000D2E2B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigGachaRoleDevelopInsById.LogPair = null;
 			ConfigGachaRoleDevelopInsById.HandleId = 0;
 		}
 
-		// Token: 0x060014AF RID: 5295 RVA: 0x000CE72D File Offset: 0x000CC92D
+		// Token: 0x0600152D RID: 5421 RVA: 0x000D4C39 File Offset: 0x000D2E39
 		public static void Init()
 		{
 			ConfigGachaRoleDevelopInsById.HandleId = ConfigCommon.InitDataStatement(ConfigGachaRoleDevelopInsById.HandleId, "db_gacharoledevelop.db", "select BinData from `GachaRoleDevelopIns` where Id=?");
 		}
 
-		// Token: 0x060014B0 RID: 5296 RVA: 0x000CE748 File Offset: 0x000CC948
+		// Token: 0x0600152E RID: 5422 RVA: 0x000D4C54 File Offset: 0x000D2E54
 		public static GachaRoleDevelopIns? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigGachaRoleDevelopInsById.HandleId, ConfigGachaRoleDevelopInsById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new GachaRoleDevelopIns?(rootAsGachaRoleDevelopIns);
 		}
 
-		// Token: 0x040017FB RID: 6139
+		// Token: 0x0400188E RID: 6286
 		private const string DB = "db_gacharoledevelop.db";
 
-		// Token: 0x040017FC RID: 6140
+		// Token: 0x0400188F RID: 6287
 		private const string FILE = "d.当期卡池角色养成推荐.xlsx";
 
-		// Token: 0x040017FD RID: 6141
+		// Token: 0x04001890 RID: 6288
 		private const string TABLE = "GachaRoleDevelopIns";
 
-		// Token: 0x040017FE RID: 6142
+		// Token: 0x04001891 RID: 6289
 		private const string COMMAND = "select BinData from `GachaRoleDevelopIns` where Id=?";
 
-		// Token: 0x040017FF RID: 6143
+		// Token: 0x04001892 RID: 6290
 		private const string KEY_PREFIX = "GachaRoleDevelopInsById";
 
-		// Token: 0x04001800 RID: 6144
+		// Token: 0x04001893 RID: 6291
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001801 RID: 6145
+		// Token: 0x04001894 RID: 6292
 		private static int HandleId;
 	}
 }

@@ -2,47 +2,47 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001401 RID: 5121
+// Token: 0x020008B5 RID: 2229
 [NullableContext(1)]
 public interface IPinballSettleResultViewParam
 {
-	// Token: 0x17000C3A RID: 3130
-	// (get) Token: 0x0600909A RID: 37018
-	// (set) Token: 0x0600909B RID: 37019
+	// Token: 0x17000C5A RID: 3162
+	// (get) Token: 0x0600642F RID: 25647
+	// (set) Token: 0x06006430 RID: 25648
 	int LevelId { get; set; }
 
-	// Token: 0x17000C3B RID: 3131
-	// (get) Token: 0x0600909C RID: 37020
-	// (set) Token: 0x0600909D RID: 37021
+	// Token: 0x17000C5B RID: 3163
+	// (get) Token: 0x06006431 RID: 25649
+	// (set) Token: 0x06006432 RID: 25650
 	EPinballLevelShowType LevelType { get; set; }
 
-	// Token: 0x17000C3C RID: 3132
-	// (get) Token: 0x0600909E RID: 37022
-	// (set) Token: 0x0600909F RID: 37023
+	// Token: 0x17000C5C RID: 3164
+	// (get) Token: 0x06006433 RID: 25651
+	// (set) Token: 0x06006434 RID: 25652
 	bool IsWin { get; set; }
 
-	// Token: 0x17000C3D RID: 3133
-	// (get) Token: 0x060090A0 RID: 37024
-	// (set) Token: 0x060090A1 RID: 37025
+	// Token: 0x17000C5D RID: 3165
+	// (get) Token: 0x06006435 RID: 25653
+	// (set) Token: 0x06006436 RID: 25654
 	int MostValuablePlayerRoleId { get; set; }
 
-	// Token: 0x17000C3E RID: 3134
-	// (get) Token: 0x060090A2 RID: 37026
-	// (set) Token: 0x060090A3 RID: 37027
+	// Token: 0x17000C5E RID: 3166
+	// (get) Token: 0x06006437 RID: 25655
+	// (set) Token: 0x06006438 RID: 25656
 	Dictionary<int, float> Roles { get; set; }
 
-	// Token: 0x17000C3F RID: 3135
-	// (get) Token: 0x060090A4 RID: 37028
-	// (set) Token: 0x060090A5 RID: 37029
+	// Token: 0x17000C5F RID: 3167
+	// (get) Token: 0x06006439 RID: 25657
+	// (set) Token: 0x0600643A RID: 25658
 	bool[] StarInfo { get; set; }
 
-	// Token: 0x17000C40 RID: 3136
-	// (get) Token: 0x060090A6 RID: 37030
-	// (set) Token: 0x060090A7 RID: 37031
+	// Token: 0x17000C60 RID: 3168
+	// (get) Token: 0x0600643B RID: 25659
+	// (set) Token: 0x0600643C RID: 25660
 	int Score { get; set; }
 
-	// Token: 0x17000C41 RID: 3137
-	// (get) Token: 0x060090A8 RID: 37032
-	// (set) Token: 0x060090A9 RID: 37033
+	// Token: 0x17000C61 RID: 3169
+	// (get) Token: 0x0600643D RID: 25661
+	// (set) Token: 0x0600643E RID: 25662
 	bool IsFirstPass { get; set; }
 }

@@ -6,10 +6,10 @@ using CSharpScript.Game.LevelGamePlay;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020025D0 RID: 9680
+// Token: 0x02001ABB RID: 6843
 public class PhotographExpressionItem : UiPanelBase
 {
-	// Token: 0x06013A28 RID: 80424 RVA: 0x004E9198 File Offset: 0x004E7398
+	// Token: 0x06010F08 RID: 69384 RVA: 0x004F7D98 File Offset: 0x004F5F98
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,19 +26,19 @@ public class PhotographExpressionItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06013A29 RID: 80425 RVA: 0x004E9241 File Offset: 0x004E7441
+	// Token: 0x06010F09 RID: 69385 RVA: 0x004F7E41 File Offset: 0x004F6041
 	protected override void OnStart()
 	{
 		base.GetExtendToggle(0).CanExecuteChange.Bind(new Func<bool>(this.OnCanExecuteChange));
 	}
 
-	// Token: 0x06013A2A RID: 80426 RVA: 0x004E9260 File Offset: 0x004E7460
+	// Token: 0x06010F0A RID: 69386 RVA: 0x004F7E60 File Offset: 0x004F6060
 	protected override void OnBeforeDestroy()
 	{
 		base.GetExtendToggle(0).CanExecuteChange.Unbind();
 	}
 
-	// Token: 0x06013A2B RID: 80427 RVA: 0x004E9274 File Offset: 0x004E7474
+	// Token: 0x06010F0B RID: 69387 RVA: 0x004F7E74 File Offset: 0x004F6074
 	private bool OnCanExecuteChange()
 	{
 		bool flag = this.IsUnLock();
@@ -49,7 +49,7 @@ public class PhotographExpressionItem : UiPanelBase
 		return flag;
 	}
 
-	// Token: 0x06013A2C RID: 80428 RVA: 0x004E92A4 File Offset: 0x004E74A4
+	// Token: 0x06010F0C RID: 69388 RVA: 0x004F7EA4 File Offset: 0x004F60A4
 	public void Refresh(int photoMontageId)
 	{
 		this.PhotoMontageId = photoMontageId;
@@ -88,7 +88,7 @@ public class PhotographExpressionItem : UiPanelBase
 		base.GetItem(4).SetUIActive(!flag);
 	}
 
-	// Token: 0x06013A2D RID: 80429 RVA: 0x004E9408 File Offset: 0x004E7608
+	// Token: 0x06010F0D RID: 69389 RVA: 0x004F8008 File Offset: 0x004F6208
 	private bool IsUnLock()
 	{
 		if (this.PhotoMontageId == 0)
@@ -99,21 +99,21 @@ public class PhotographExpressionItem : UiPanelBase
 		return unLockConditionGroup == 0 || LevelGeneralController.Instance.CheckCondition(unLockConditionGroup.ToString(), null, true, Array.Empty<object>());
 	}
 
-	// Token: 0x06013A2E RID: 80430 RVA: 0x004E9450 File Offset: 0x004E7650
+	// Token: 0x06010F0E RID: 69390 RVA: 0x004F8050 File Offset: 0x004F6250
 	[NullableContext(1)]
 	public void BindOnSelected(Action<PhotographExpressionItem, bool> onSelected)
 	{
 		this.OnSelected = onSelected;
 	}
 
-	// Token: 0x06013A2F RID: 80431 RVA: 0x004E9459 File Offset: 0x004E7659
+	// Token: 0x06010F0F RID: 69391 RVA: 0x004F8059 File Offset: 0x004F6259
 	[NullableContext(1)]
 	public void BindOnCanExecuteChange(Func<PhotographExpressionItem, bool> canExecuteChange)
 	{
 		this.OnCanExecuteChangeFunc = canExecuteChange;
 	}
 
-	// Token: 0x06013A30 RID: 80432 RVA: 0x004E9464 File Offset: 0x004E7664
+	// Token: 0x06010F10 RID: 69392 RVA: 0x004F8064 File Offset: 0x004F6264
 	public void SetSelected(bool bSelected, bool bFireEvent = false)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -125,19 +125,19 @@ public class PhotographExpressionItem : UiPanelBase
 		extendToggle.SetToggleStateForce(EToggleState.ETT_UnChecked, bFireEvent, false, false);
 	}
 
-	// Token: 0x06013A31 RID: 80433 RVA: 0x004E9491 File Offset: 0x004E7691
+	// Token: 0x06010F11 RID: 69393 RVA: 0x004F8091 File Offset: 0x004F6291
 	public int GetPhotoMontageId()
 	{
 		return this.PhotoMontageId;
 	}
 
-	// Token: 0x06013A32 RID: 80434 RVA: 0x004E9499 File Offset: 0x004E7699
+	// Token: 0x06010F12 RID: 69394 RVA: 0x004F8099 File Offset: 0x004F6299
 	public PhotoMontage? GetPhotoMontageConfig()
 	{
 		return this.PhotoMontageConfig;
 	}
 
-	// Token: 0x06013A33 RID: 80435 RVA: 0x004E94A4 File Offset: 0x004E76A4
+	// Token: 0x06010F13 RID: 69395 RVA: 0x004F80A4 File Offset: 0x004F62A4
 	private void OnClicked(EToggleState state)
 	{
 		if (!this.IsUnLock())
@@ -151,10 +151,10 @@ public class PhotographExpressionItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0400940C RID: 37900
+	// Token: 0x04009562 RID: 38242
 	private int PhotoMontageId;
 
-	// Token: 0x0400940D RID: 37901
+	// Token: 0x04009563 RID: 38243
 	[Nullable(new byte[]
 	{
 		2,
@@ -162,7 +162,7 @@ public class PhotographExpressionItem : UiPanelBase
 	})]
 	private Action<PhotographExpressionItem, bool> OnSelected;
 
-	// Token: 0x0400940E RID: 37902
+	// Token: 0x04009564 RID: 38244
 	[Nullable(new byte[]
 	{
 		2,
@@ -170,27 +170,27 @@ public class PhotographExpressionItem : UiPanelBase
 	})]
 	private Func<PhotographExpressionItem, bool> OnCanExecuteChangeFunc;
 
-	// Token: 0x0400940F RID: 37903
+	// Token: 0x04009565 RID: 38245
 	private PhotoMontage? PhotoMontageConfig;
 
-	// Token: 0x04009410 RID: 37904
+	// Token: 0x04009566 RID: 38246
 	private const float LOCK_ALPHA = 0.3f;
 
-	// Token: 0x04009411 RID: 37905
+	// Token: 0x04009567 RID: 38247
 	private const float UNLOCK_ALPHA = 1f;
 
-	// Token: 0x02008BDF RID: 35807
+	// Token: 0x02007D67 RID: 32103
 	private enum EChildType
 	{
-		// Token: 0x0402D67B RID: 185979
+		// Token: 0x04028990 RID: 166288
 		Toggle,
-		// Token: 0x0402D67C RID: 185980
+		// Token: 0x04028991 RID: 166289
 		SpriteIcon,
-		// Token: 0x0402D67D RID: 185981
+		// Token: 0x04028992 RID: 166290
 		TextTitle,
-		// Token: 0x0402D67E RID: 185982
+		// Token: 0x04028993 RID: 166291
 		TextLock,
-		// Token: 0x0402D67F RID: 185983
+		// Token: 0x04028994 RID: 166292
 		ItemLock
 	}
 }

@@ -3,13 +3,13 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.Define.InstanceDungeonExitHandler
 {
-	// Token: 0x020058EE RID: 22766
+	// Token: 0x020048C6 RID: 18630
 	public abstract class InstanceDungeonExitHandlerBase
 	{
-		// Token: 0x06039D13 RID: 236819
+		// Token: 0x0602EC36 RID: 191542
 		public abstract bool Checker();
 
-		// Token: 0x06039D14 RID: 236820
+		// Token: 0x0602EC37 RID: 191543
 		[NullableContext(2)]
 		public abstract void HandleExit(InstanceDungeonExitHandlerData param);
 	}

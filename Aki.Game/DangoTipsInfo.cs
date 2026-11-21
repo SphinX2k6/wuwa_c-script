@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001237 RID: 4663
+// Token: 0x020006EB RID: 1771
 [NullableContext(1)]
 [Nullable(0)]
 public class DangoTipsInfo : IDangoTipsInfo
 {
-	// Token: 0x17000ABA RID: 2746
-	// (get) Token: 0x06007E0B RID: 32267 RVA: 0x001AAEB4 File Offset: 0x001A90B4
-	// (set) Token: 0x06007E0C RID: 32268 RVA: 0x001AAEBC File Offset: 0x001A90BC
+	// Token: 0x17000ADA RID: 2778
+	// (get) Token: 0x060051A2 RID: 20898 RVA: 0x001B3B74 File Offset: 0x001B1D74
+	// (set) Token: 0x060051A3 RID: 20899 RVA: 0x001B3B7C File Offset: 0x001B1D7C
 	public string Text { get; set; } = "";
 
-	// Token: 0x17000ABB RID: 2747
-	// (get) Token: 0x06007E0D RID: 32269 RVA: 0x001AAEC5 File Offset: 0x001A90C5
-	// (set) Token: 0x06007E0E RID: 32270 RVA: 0x001AAECD File Offset: 0x001A90CD
+	// Token: 0x17000ADB RID: 2779
+	// (get) Token: 0x060051A4 RID: 20900 RVA: 0x001B3B85 File Offset: 0x001B1D85
+	// (set) Token: 0x060051A5 RID: 20901 RVA: 0x001B3B8D File Offset: 0x001B1D8D
 	[Nullable(2)]
 	public string Icon { [NullableContext(2)] get; [NullableContext(2)] set; } = "";
 }

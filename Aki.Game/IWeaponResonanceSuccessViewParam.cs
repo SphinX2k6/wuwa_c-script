@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02002D0F RID: 11535
+// Token: 0x02002269 RID: 8809
 public interface IWeaponResonanceSuccessViewParam
 {
-	// Token: 0x170020B5 RID: 8373
-	// (get) Token: 0x060183EC RID: 99308
-	// (set) Token: 0x060183ED RID: 99309
+	// Token: 0x17002110 RID: 8464
+	// (get) Token: 0x06015C8D RID: 89229
+	// (set) Token: 0x06015C8E RID: 89230
 	int WeaponIncId { get; set; }
 
-	// Token: 0x170020B6 RID: 8374
-	// (get) Token: 0x060183EE RID: 99310
-	// (set) Token: 0x060183EF RID: 99311
+	// Token: 0x17002111 RID: 8465
+	// (get) Token: 0x06015C8F RID: 89231
+	// (set) Token: 0x06015C90 RID: 89232
 	int LastLevel { get; set; }
 }

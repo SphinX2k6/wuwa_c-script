@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Core.Common;
 
-// Token: 0x02002200 RID: 8704
+// Token: 0x020016E4 RID: 5860
 [NullableContext(1)]
 [Nullable(0)]
 public class MarqueeData
 {
-	// Token: 0x06010ED1 RID: 69329 RVA: 0x0041E3A0 File Offset: 0x0041C5A0
+	// Token: 0x0600E364 RID: 58212 RVA: 0x0042AD44 File Offset: 0x00428F44
 	public void RefreshContent()
 	{
 		if (this.Contents != null)
@@ -38,7 +38,7 @@ public class MarqueeData
 		}
 	}
 
-	// Token: 0x06010ED2 RID: 69330 RVA: 0x0041E46C File Offset: 0x0041C66C
+	// Token: 0x0600E365 RID: 58213 RVA: 0x0042AE10 File Offset: 0x00429010
 	public void Phrase(MarqueeDataEx data)
 	{
 		this.Id = data.id.ToString();
@@ -53,7 +53,7 @@ public class MarqueeData
 		this.Channel = data.channel;
 	}
 
-	// Token: 0x06010ED3 RID: 69331 RVA: 0x0041E504 File Offset: 0x0041C704
+	// Token: 0x0600E366 RID: 58214 RVA: 0x0042AEA8 File Offset: 0x004290A8
 	public bool CheckPlatformAndChannelIfShow()
 	{
 		string item = "";
@@ -77,10 +77,10 @@ public class MarqueeData
 		return this.Platform == null || this.Platform.Count <= 0 || this.Platform.Contains(item2);
 	}
 
-	// Token: 0x040080A8 RID: 32936
+	// Token: 0x040081E6 RID: 33254
 	public string Id = "";
 
-	// Token: 0x040080A9 RID: 32937
+	// Token: 0x040081E7 RID: 33255
 	[Nullable(new byte[]
 	{
 		2,
@@ -88,14 +88,14 @@ public class MarqueeData
 	})]
 	public List<string> WhiteLists;
 
-	// Token: 0x040080AA RID: 32938
+	// Token: 0x040081E8 RID: 33256
 	public double ModifyTime;
 
-	// Token: 0x040080AB RID: 32939
+	// Token: 0x040081E9 RID: 33257
 	[Nullable(2)]
 	public string Content = "";
 
-	// Token: 0x040080AC RID: 32940
+	// Token: 0x040081EA RID: 33258
 	[Nullable(new byte[]
 	{
 		2,
@@ -103,29 +103,29 @@ public class MarqueeData
 	})]
 	public List<MarqueeContent> Contents;
 
-	// Token: 0x040080AD RID: 32941
+	// Token: 0x040081EB RID: 33259
 	public double BeginTime;
 
-	// Token: 0x040080AE RID: 32942
+	// Token: 0x040081EC RID: 33260
 	public double EndTime;
 
-	// Token: 0x040080AF RID: 32943
+	// Token: 0x040081ED RID: 33261
 	public int ScrollInterval;
 
-	// Token: 0x040080B0 RID: 32944
+	// Token: 0x040081EE RID: 33262
 	public int ScrollTimes;
 
-	// Token: 0x040080B1 RID: 32945
+	// Token: 0x040081EF RID: 33263
 	public int ShowInFight;
 
-	// Token: 0x040080B2 RID: 32946
+	// Token: 0x040081F0 RID: 33264
 	public int ShowInPhotograph;
 
-	// Token: 0x040080B3 RID: 32947
+	// Token: 0x040081F1 RID: 33265
 	[Nullable(2)]
 	public List<int> Platform;
 
-	// Token: 0x040080B4 RID: 32948
+	// Token: 0x040081F2 RID: 33266
 	[Nullable(new byte[]
 	{
 		2,
@@ -133,21 +133,21 @@ public class MarqueeData
 	})]
 	public List<string> Channel;
 
-	// Token: 0x040080B5 RID: 32949
+	// Token: 0x040081F3 RID: 33267
 	public bool IsClientMarquee;
 
-	// Token: 0x040080B6 RID: 32950
+	// Token: 0x040081F4 RID: 33268
 	public string LocalTextKey = "";
 
-	// Token: 0x040080B7 RID: 32951
+	// Token: 0x040081F5 RID: 33269
 	public bool UseLocalTextKey;
 
-	// Token: 0x040080B8 RID: 32952
+	// Token: 0x040081F6 RID: 33270
 	private const int MARQUEEPLATFORMPC = 1;
 
-	// Token: 0x040080B9 RID: 32953
+	// Token: 0x040081F7 RID: 33271
 	private const int MARQUEEPLATFORMIOS = 2;
 
-	// Token: 0x040080BA RID: 32954
+	// Token: 0x040081F8 RID: 33272
 	private const int MARQUEEPLATFORMANDROID = 3;
 }

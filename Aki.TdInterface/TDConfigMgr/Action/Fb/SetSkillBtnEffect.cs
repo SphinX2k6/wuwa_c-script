@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002AB3 RID: 10931
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002DA7 RID: 11687
 	public class SetSkillBtnEffect : ActionParams
 	{
-		// Token: 0x0600EFF1 RID: 61425 RVA: 0x0022DCB0 File Offset: 0x0022BEB0
+		// Token: 0x0600FEA7 RID: 65191 RVA: 0x0024B9BC File Offset: 0x00249BBC
 		public static SetSkillBtnEffect Create(ISetSkillBtnEffect? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004C4D RID: 19533
-		// (get) Token: 0x0600EFF2 RID: 61426 RVA: 0x0022DCCF File Offset: 0x0022BECF
+		// Token: 0x17005007 RID: 20487
+		// (get) Token: 0x0600FEA8 RID: 65192 RVA: 0x0024B9DB File Offset: 0x00249BDB
 		public virtual ESkillButtonType SkillBtnType
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004C4E RID: 19534
-		// (get) Token: 0x0600EFF3 RID: 61427 RVA: 0x0022DCDC File Offset: 0x0022BEDC
+		// Token: 0x17005008 RID: 20488
+		// (get) Token: 0x0600FEA9 RID: 65193 RVA: 0x0024B9E8 File Offset: 0x00249BE8
 		public virtual IMusicBattleBtnEffect SkillBtnEffectData
 		{
 			get
@@ -48,8 +46,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004C4F RID: 19535
-		// (get) Token: 0x0600EFF4 RID: 61428 RVA: 0x0022DD10 File Offset: 0x0022BF10
+		// Token: 0x17005009 RID: 20489
+		// (get) Token: 0x0600FEAA RID: 65194 RVA: 0x0024BA1C File Offset: 0x00249C1C
 		public virtual float Time
 		{
 			get
@@ -58,14 +56,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040083FF RID: 33791
+		// Token: 0x04008B03 RID: 35587
 		private ISetSkillBtnEffect Instance;
 
-		// Token: 0x04008400 RID: 33792
+		// Token: 0x04008B04 RID: 35588
 		[Nullable(2)]
 		private IMusicBattleBtnEffect _SkillBtnEffectDataCache;
 
-		// Token: 0x04008401 RID: 33793
+		// Token: 0x04008B05 RID: 35589
 		private bool _SkillBtnEffectDataInited;
 	}
 }

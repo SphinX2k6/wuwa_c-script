@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000437 RID: 1079
+	// Token: 0x0200044D RID: 1101
 	public class ConfigInfrV2LevelByLevel : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001954 RID: 6484 RVA: 0x000E8C6F File Offset: 0x000E6E6F
+		// Token: 0x060019D8 RID: 6616 RVA: 0x000EF3C3 File Offset: 0x000ED5C3
 		static ConfigInfrV2LevelByLevel()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigInfrV2LevelByLevel.CreateStaticDefaultValue), new Action(ConfigInfrV2LevelByLevel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001955 RID: 6485 RVA: 0x000E8C90 File Offset: 0x000E6E90
+		// Token: 0x060019D9 RID: 6617 RVA: 0x000EF3E4 File Offset: 0x000ED5E4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigInfrV2LevelByLevel.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001956 RID: 6486 RVA: 0x000E8D0F File Offset: 0x000E6F0F
+		// Token: 0x060019DA RID: 6618 RVA: 0x000EF463 File Offset: 0x000ED663
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigInfrV2LevelByLevel.LogPair = null;
 			ConfigInfrV2LevelByLevel.HandleId = 0;
 		}
 
-		// Token: 0x06001957 RID: 6487 RVA: 0x000E8D1D File Offset: 0x000E6F1D
+		// Token: 0x060019DB RID: 6619 RVA: 0x000EF471 File Offset: 0x000ED671
 		public static void Init()
 		{
 			ConfigInfrV2LevelByLevel.HandleId = ConfigCommon.InitDataStatement(ConfigInfrV2LevelByLevel.HandleId, "db_villageinfr.db", "select BinData from `InfrV2Level` where Level=?");
 		}
 
-		// Token: 0x06001958 RID: 6488 RVA: 0x000E8D38 File Offset: 0x000E6F38
+		// Token: 0x060019DC RID: 6620 RVA: 0x000EF48C File Offset: 0x000ED68C
 		public static InfrV2Level? GetConfig(int p0Level, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigInfrV2LevelByLevel.HandleId, ConfigInfrV2LevelByLevel.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new InfrV2Level?(rootAsInfrV2Level);
 		}
 
-		// Token: 0x04001D65 RID: 7525
+		// Token: 0x04001DFF RID: 7679
 		private const string DB = "db_villageinfr.db";
 
-		// Token: 0x04001D66 RID: 7526
+		// Token: 0x04001E00 RID: 7680
 		private const string FILE = "j.基建V2.xlsx";
 
-		// Token: 0x04001D67 RID: 7527
+		// Token: 0x04001E01 RID: 7681
 		private const string TABLE = "InfrV2Level";
 
-		// Token: 0x04001D68 RID: 7528
+		// Token: 0x04001E02 RID: 7682
 		private const string COMMAND = "select BinData from `InfrV2Level` where Level=?";
 
-		// Token: 0x04001D69 RID: 7529
+		// Token: 0x04001E03 RID: 7683
 		private const string KEY_PREFIX = "InfrV2LevelByLevel";
 
-		// Token: 0x04001D6A RID: 7530
+		// Token: 0x04001E04 RID: 7684
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001D6B RID: 7531
+		// Token: 0x04001E05 RID: 7685
 		private static int HandleId;
 	}
 }

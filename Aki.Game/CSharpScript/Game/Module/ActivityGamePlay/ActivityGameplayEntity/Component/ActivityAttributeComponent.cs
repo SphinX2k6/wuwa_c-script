@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.ActivityGamePlay.ActivityGameplayEntity.Component
 {
-	// Token: 0x0200693C RID: 26940
+	// Token: 0x0200588D RID: 22669
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ActivityAttributeComponent : ActivityGameplayComponentBase
 	{
-		// Token: 0x06043254 RID: 275028 RVA: 0x0105E1D8 File Offset: 0x0105C3D8
+		// Token: 0x06037DB1 RID: 228785 RVA: 0x00F9F848 File Offset: 0x00F9DA48
 		public void SetAttribute(int attrId, int value)
 		{
 			int num;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.ActivityGameplayEntity.Compo
 			}
 		}
 
-		// Token: 0x06043255 RID: 275029 RVA: 0x0105E258 File Offset: 0x0105C458
+		// Token: 0x06037DB2 RID: 228786 RVA: 0x00F9F8C8 File Offset: 0x00F9DAC8
 		public int GetAttribute(int attrId)
 		{
 			int result;
@@ -37,13 +37,13 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.ActivityGameplayEntity.Compo
 			return result;
 		}
 
-		// Token: 0x06043256 RID: 275030 RVA: 0x0105E278 File Offset: 0x0105C478
+		// Token: 0x06037DB3 RID: 228787 RVA: 0x00F9F8E8 File Offset: 0x00F9DAE8
 		public bool HasAttribute(int attrId)
 		{
 			return this.AttributeMap.ContainsKey(attrId);
 		}
 
-		// Token: 0x06043257 RID: 275031 RVA: 0x0105E288 File Offset: 0x0105C488
+		// Token: 0x06037DB4 RID: 228788 RVA: 0x00F9F8F8 File Offset: 0x00F9DAF8
 		public void AddChangedListener(int attrId, TActivityAttributeChangedCallback callback)
 		{
 			HashSet<TActivityAttributeChangedCallback> hashSet;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.ActivityGameplayEntity.Compo
 			hashSet.Add(callback);
 		}
 
-		// Token: 0x06043258 RID: 275032 RVA: 0x0105E2C0 File Offset: 0x0105C4C0
+		// Token: 0x06037DB5 RID: 228789 RVA: 0x00F9F930 File Offset: 0x00F9DB30
 		public void RemoveChangedListener(int attrId, TActivityAttributeChangedCallback callback)
 		{
 			HashSet<TActivityAttributeChangedCallback> hashSet;
@@ -65,23 +65,23 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.ActivityGameplayEntity.Compo
 			}
 		}
 
-		// Token: 0x06043259 RID: 275033 RVA: 0x0105E2E5 File Offset: 0x0105C4E5
+		// Token: 0x06037DB6 RID: 228790 RVA: 0x00F9F955 File Offset: 0x00F9DB55
 		public void ClearData()
 		{
 			this.AttributeMap.Clear();
 		}
 
-		// Token: 0x0604325A RID: 275034 RVA: 0x0105E2F2 File Offset: 0x0105C4F2
+		// Token: 0x06037DB7 RID: 228791 RVA: 0x00F9F962 File Offset: 0x00F9DB62
 		protected override void OnEnd()
 		{
 			this.AttributeMap.Clear();
 			this.ChangedCallbacks.Clear();
 		}
 
-		// Token: 0x04022F5C RID: 143196
+		// Token: 0x0401D7B9 RID: 120761
 		private readonly Dictionary<int, int> AttributeMap = new Dictionary<int, int>();
 
-		// Token: 0x04022F5D RID: 143197
+		// Token: 0x0401D7BA RID: 120762
 		private readonly Dictionary<int, HashSet<TActivityAttributeChangedCallback>> ChangedCallbacks = new Dictionary<int, HashSet<TActivityAttributeChangedCallback>>();
 	}
 }

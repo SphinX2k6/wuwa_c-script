@@ -12,7 +12,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.SubViews
 {
-	// Token: 0x02005435 RID: 21557
+	// Token: 0x02004418 RID: 17432
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -21,18 +21,18 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 	})]
 	public class VoiceLanguageDownloadView : LanguageSettingViewBase<VoiceLanguageToggle>
 	{
-		// Token: 0x060370DA RID: 225498 RVA: 0x00D0BC6E File Offset: 0x00D09E6E
+		// Token: 0x0602C023 RID: 180259 RVA: 0x00C5B08E File Offset: 0x00C5928E
 		public VoiceLanguageDownloadView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x060370DB RID: 225499 RVA: 0x00D0BC77 File Offset: 0x00D09E77
+		// Token: 0x0602C024 RID: 180260 RVA: 0x00C5B097 File Offset: 0x00C59297
 		protected override void OnRegisterComponent()
 		{
 			base.OnRegisterComponent();
 		}
 
-		// Token: 0x060370DC RID: 225500 RVA: 0x00D0BC80 File Offset: 0x00D09E80
+		// Token: 0x0602C025 RID: 180261 RVA: 0x00C5B0A0 File Offset: 0x00C592A0
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -61,14 +61,14 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			LguiUtil.Instance.SetLocalTextNew(this.RoleLangDeleteHintTxt, textStringId, Array.Empty<object>());
 		}
 
-		// Token: 0x060370DD RID: 225501 RVA: 0x00D0BD62 File Offset: 0x00D09F62
+		// Token: 0x0602C026 RID: 180262 RVA: 0x00C5B182 File Offset: 0x00C59382
 		protected override void OnBeforeDestroy()
 		{
 			this.IsDestroyed = true;
 			ResourceManagerController.Instance.RestoreHttpTickFrequency();
 		}
 
-		// Token: 0x060370DE RID: 225502 RVA: 0x00D0BD75 File Offset: 0x00D09F75
+		// Token: 0x0602C027 RID: 180263 RVA: 0x00C5B195 File Offset: 0x00C59395
 		[return: Nullable(2)]
 		protected override VoiceLanguageToggle CreateToggle(UUIItem uiItem, int index, bool isToggled)
 		{
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			return voiceLanguageToggle;
 		}
 
-		// Token: 0x060370DF RID: 225503 RVA: 0x00D0BD88 File Offset: 0x00D09F88
+		// Token: 0x0602C028 RID: 180264 RVA: 0x00C5B1A8 File Offset: 0x00C593A8
 		protected override void OnRefreshView(VoiceLanguageToggle newToggle)
 		{
 			base.OnRefreshView(newToggle);
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			newToggle.SetDownloadStatusCallback(new Action(this.OnDownloadStatusCallback));
 		}
 
-		// Token: 0x060370E0 RID: 225504 RVA: 0x00D0BDCC File Offset: 0x00D09FCC
+		// Token: 0x0602C029 RID: 180265 RVA: 0x00C5B1EC File Offset: 0x00C593EC
 		protected override void InitScrollViewData()
 		{
 			List<int> allLanguageTypeForAudio = LanguageUpdateManager.Instance.GetAllLanguageTypeForAudio();
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			this.ScrollView.RefreshByData<int>(allLanguageTypeForAudio, null);
 		}
 
-		// Token: 0x060370E1 RID: 225505 RVA: 0x00D0BE1E File Offset: 0x00D0A01E
+		// Token: 0x0602C02A RID: 180266 RVA: 0x00C5B23E File Offset: 0x00C5943E
 		protected override void OnAfterShow()
 		{
 			if (this.SelectedToggle != null)
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			}
 		}
 
-		// Token: 0x060370E2 RID: 225506 RVA: 0x00D0BE34 File Offset: 0x00D0A034
+		// Token: 0x0602C02B RID: 180267 RVA: 0x00C5B254 File Offset: 0x00C59454
 		private unsafe void ChangeButtonByToggleState(VoiceLanguageToggle toggle)
 		{
 			LanguageUpdater updater = toggle.GetUpdater();
@@ -144,20 +144,20 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			this.ConfirmButton.SetFunction(new Action<int>(this.DoConfirmBtn));
 		}
 
-		// Token: 0x060370E3 RID: 225507 RVA: 0x00D0BFC2 File Offset: 0x00D0A1C2
+		// Token: 0x0602C02C RID: 180268 RVA: 0x00C5B3E2 File Offset: 0x00C595E2
 		protected override void OnSelected(VoiceLanguageToggle newToggle, EToggleState newToggleState)
 		{
 			this.RefreshRoleHint(newToggle);
 			this.RefreshUiBySelect(newToggle);
 		}
 
-		// Token: 0x060370E4 RID: 225508 RVA: 0x00D0BFD2 File Offset: 0x00D0A1D2
+		// Token: 0x0602C02D RID: 180269 RVA: 0x00C5B3F2 File Offset: 0x00C595F2
 		private void OnDownloadStatusCallback()
 		{
 			this.RefreshUiBySelect(this.SelectedToggle);
 		}
 
-		// Token: 0x060370E5 RID: 225509 RVA: 0x00D0BFE0 File Offset: 0x00D0A1E0
+		// Token: 0x0602C02E RID: 180270 RVA: 0x00C5B400 File Offset: 0x00C59600
 		protected void RefreshRoleHint(VoiceLanguageToggle selectedToggle)
 		{
 			if (!this.CheckRoleLangCustom())
@@ -193,7 +193,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			this.RoleLangDeleteHint.SetUIActive(true);
 		}
 
-		// Token: 0x060370E6 RID: 225510 RVA: 0x00D0C0B4 File Offset: 0x00D0A2B4
+		// Token: 0x0602C02F RID: 180271 RVA: 0x00C5B4D4 File Offset: 0x00C596D4
 		protected void RefreshUiBySelect(VoiceLanguageToggle selectedToggle)
 		{
 			if (this.IsDestroyed)
@@ -204,7 +204,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			selectedToggle.RefreshUi();
 		}
 
-		// Token: 0x060370E7 RID: 225511 RVA: 0x00D0C0CC File Offset: 0x00D0A2CC
+		// Token: 0x0602C030 RID: 180272 RVA: 0x00C5B4EC File Offset: 0x00C596EC
 		protected bool CheckRoleLangCustom()
 		{
 			if (CloudGameManager.Instance.IsCloudGame)
@@ -220,7 +220,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			return boolConfig != null && boolConfig.Value && (!GameSettingsManager.Instance.IsGameSettingsAppliedOnOpenLoading || (LocalStorage.GetPlayer<HashSet<int>>(ELocalStoragePlayerKey.RoleLangCustomRecord, null) ?? new HashSet<int>()).Count > 0);
 		}
 
-		// Token: 0x060370E8 RID: 225512 RVA: 0x00D0C150 File Offset: 0x00D0A350
+		// Token: 0x0602C031 RID: 180273 RVA: 0x00C5B570 File Offset: 0x00C59770
 		private void DoCloseBtn()
 		{
 			EUiViewName? backToPrevLangSettingViewName = LanguageSettingViewBase.BackToPrevLangSettingViewName;
@@ -243,13 +243,13 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			base.CloseMe(null);
 		}
 
-		// Token: 0x060370E9 RID: 225513 RVA: 0x00D0C195 File Offset: 0x00D0A395
+		// Token: 0x0602C032 RID: 180274 RVA: 0x00C5B5B5 File Offset: 0x00C597B5
 		private void DoDisBtn(int _)
 		{
 			ScrollingTipsController.Instance.ShowTipsById("InUseCanNotDelete", Array.Empty<object>());
 		}
 
-		// Token: 0x060370EA RID: 225514 RVA: 0x00D0C1AC File Offset: 0x00D0A3AC
+		// Token: 0x0602C033 RID: 180275 RVA: 0x00C5B5CC File Offset: 0x00C597CC
 		private void DoConfirmBtn(int _)
 		{
 			ConfirmBoxDataNew confirmBoxDataNew = null;
@@ -319,7 +319,7 @@ namespace CSharpScript.Game.Module.Menu.SubViews
 			}
 		}
 
-		// Token: 0x0401D0CD RID: 118989
+		// Token: 0x04017B66 RID: 97126
 		private bool IsDestroyed;
 	}
 }

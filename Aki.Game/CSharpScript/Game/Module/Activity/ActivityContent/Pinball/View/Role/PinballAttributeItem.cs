@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 {
-	// Token: 0x02006303 RID: 25347
+	// Token: 0x02005281 RID: 21121
 	[Nullable(new byte[]
 	{
 		0,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 	})]
 	public class PinballAttributeItem : GridProxyAbstract<IPinballAttributeItemData>
 	{
-		// Token: 0x0603FC78 RID: 261240 RVA: 0x00F6E564 File Offset: 0x00F6C764
+		// Token: 0x06034939 RID: 215353 RVA: 0x00EB54C0 File Offset: 0x00EB36C0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603FC79 RID: 261241 RVA: 0x00F6E610 File Offset: 0x00F6C810
+		// Token: 0x0603493A RID: 215354 RVA: 0x00EB556C File Offset: 0x00EB376C
 		[NullableContext(1)]
 		public override void Refresh(IPinballAttributeItemData data, bool isSelected, int gridIndex)
 		{
@@ -44,16 +44,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			base.GetSprite(3).SetUIActive(data.IsBgShow);
 		}
 
-		// Token: 0x0200C4FA RID: 50426
+		// Token: 0x0200AEE1 RID: 44769
 		private enum EComponent
 		{
-			// Token: 0x0403B71E RID: 243486
+			// Token: 0x04036080 RID: 221312
 			AttributeNameText,
-			// Token: 0x0403B71F RID: 243487
+			// Token: 0x04036081 RID: 221313
 			AttributeValueText,
-			// Token: 0x0403B720 RID: 243488
+			// Token: 0x04036082 RID: 221314
 			IconTexture,
-			// Token: 0x0403B721 RID: 243489
+			// Token: 0x04036083 RID: 221315
 			BgSprite
 		}
 	}

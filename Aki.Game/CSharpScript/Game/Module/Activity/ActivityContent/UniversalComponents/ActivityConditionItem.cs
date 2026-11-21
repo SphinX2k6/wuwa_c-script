@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalComponents
 {
-	// Token: 0x02005F76 RID: 24438
+	// Token: 0x02004F5D RID: 20317
 	[Nullable(new byte[]
 	{
 		0,
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalComponents
 	})]
 	internal class ActivityConditionItem : GridProxyAbstract<IActivityConditionData>
 	{
-		// Token: 0x0603E080 RID: 254080 RVA: 0x00EFA030 File Offset: 0x00EF8230
+		// Token: 0x0603301A RID: 208922 RVA: 0x00E4BD18 File Offset: 0x00E49F18
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalComponents
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603E081 RID: 254081 RVA: 0x00EFA1E4 File Offset: 0x00EF83E4
+		// Token: 0x0603301B RID: 208923 RVA: 0x00E4BECC File Offset: 0x00E4A0CC
 		[NullableContext(1)]
 		public override void Refresh(IActivityConditionData data, bool isSelected, int gridIndex)
 		{
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalComponents
 			base.GetButton(8).RootUIComp.Get().SetUIActive(!isFinished && flag && flag3);
 		}
 
-		// Token: 0x0603E082 RID: 254082 RVA: 0x00EFA348 File Offset: 0x00EF8548
+		// Token: 0x0603301C RID: 208924 RVA: 0x00E4C030 File Offset: 0x00E4A230
 		private void ButtonJumpClick()
 		{
 			IActivityConditionData data = this.Data;
@@ -102,38 +102,38 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.UniversalComponents
 			}
 		}
 
-		// Token: 0x0402064A RID: 132682
+		// Token: 0x0401B11C RID: 110876
 		[Nullable(2)]
 		private IActivityConditionData Data;
 
-		// Token: 0x0200C271 RID: 49777
+		// Token: 0x0200AC7C RID: 44156
 		internal class EItemComponents
 		{
-			// Token: 0x0403ABD2 RID: 240594
+			// Token: 0x040355AE RID: 218542
 			public const int PanelDone = 0;
 
-			// Token: 0x0403ABD3 RID: 240595
+			// Token: 0x040355AF RID: 218543
 			public const int PanelType1 = 1;
 
-			// Token: 0x0403ABD4 RID: 240596
+			// Token: 0x040355B0 RID: 218544
 			public const int PanelType2 = 2;
 
-			// Token: 0x0403ABD5 RID: 240597
+			// Token: 0x040355B1 RID: 218545
 			public const int SpriteGoing = 3;
 
-			// Token: 0x0403ABD6 RID: 240598
+			// Token: 0x040355B2 RID: 218546
 			public const int Txt = 4;
 
-			// Token: 0x0403ABD7 RID: 240599
+			// Token: 0x040355B3 RID: 218547
 			public const int ButtonType1 = 5;
 
-			// Token: 0x0403ABD8 RID: 240600
+			// Token: 0x040355B4 RID: 218548
 			public const int SpriteDone = 6;
 
-			// Token: 0x0403ABD9 RID: 240601
+			// Token: 0x040355B5 RID: 218549
 			public const int TxtGoing = 7;
 
-			// Token: 0x0403ABDA RID: 240602
+			// Token: 0x040355B6 RID: 218550
 			public const int ButtonType2 = 8;
 		}
 	}

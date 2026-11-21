@@ -3,30 +3,30 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005211 RID: 21009
+	// Token: 0x02005779 RID: 22393
 	public class IExtraAiAlertT
 	{
-		// Token: 0x170099E2 RID: 39394
-		// (get) Token: 0x06022240 RID: 139840 RVA: 0x004BCB8F File Offset: 0x004BAD8F
-		// (set) Token: 0x06022241 RID: 139841 RVA: 0x004BCB97 File Offset: 0x004BAD97
+		// Token: 0x1700A1DE RID: 41438
+		// (get) Token: 0x060241D6 RID: 147926 RVA: 0x004F7653 File Offset: 0x004F5853
+		// (set) Token: 0x060241D7 RID: 147927 RVA: 0x004F765B File Offset: 0x004F585B
 		public int MoveAlert { get; set; }
 
-		// Token: 0x170099E3 RID: 39395
-		// (get) Token: 0x06022242 RID: 139842 RVA: 0x004BCBA0 File Offset: 0x004BADA0
-		// (set) Token: 0x06022243 RID: 139843 RVA: 0x004BCBA8 File Offset: 0x004BADA8
+		// Token: 0x1700A1DF RID: 41439
+		// (get) Token: 0x060241D8 RID: 147928 RVA: 0x004F7664 File Offset: 0x004F5864
+		// (set) Token: 0x060241D9 RID: 147929 RVA: 0x004F766C File Offset: 0x004F586C
 		public int StopAlert { get; set; }
 
-		// Token: 0x170099E4 RID: 39396
-		// (get) Token: 0x06022244 RID: 139844 RVA: 0x004BCBB1 File Offset: 0x004BADB1
-		// (set) Token: 0x06022245 RID: 139845 RVA: 0x004BCBB9 File Offset: 0x004BADB9
+		// Token: 0x1700A1E0 RID: 41440
+		// (get) Token: 0x060241DA RID: 147930 RVA: 0x004F7675 File Offset: 0x004F5875
+		// (set) Token: 0x060241DB RID: 147931 RVA: 0x004F767D File Offset: 0x004F587D
 		public List<IStateAlertT> SelfStateAlert { get; set; }
 
-		// Token: 0x170099E5 RID: 39397
-		// (get) Token: 0x06022246 RID: 139846 RVA: 0x004BCBC2 File Offset: 0x004BADC2
-		// (set) Token: 0x06022247 RID: 139847 RVA: 0x004BCBCA File Offset: 0x004BADCA
+		// Token: 0x1700A1E1 RID: 41441
+		// (get) Token: 0x060241DC RID: 147932 RVA: 0x004F7686 File Offset: 0x004F5886
+		// (set) Token: 0x060241DD RID: 147933 RVA: 0x004F768E File Offset: 0x004F588E
 		public byte NullMask { get; set; }
 
-		// Token: 0x06022248 RID: 139848 RVA: 0x004BCBD3 File Offset: 0x004BADD3
+		// Token: 0x060241DE RID: 147934 RVA: 0x004F7697 File Offset: 0x004F5897
 		public IExtraAiAlertT()
 		{
 			this.MoveAlert = 0;

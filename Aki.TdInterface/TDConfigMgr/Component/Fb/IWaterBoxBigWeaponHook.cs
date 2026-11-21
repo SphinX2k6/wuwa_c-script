@@ -6,13 +6,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AF5 RID: 2805
+	// Token: 0x02000BC1 RID: 3009
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IWaterBoxBigWeaponHook : IHookInteractType
 	{
-		// Token: 0x06004093 RID: 16531 RVA: 0x000A517A File Offset: 0x000A337A
-		[NullableContext(1)]
+		// Token: 0x060044CA RID: 17610 RVA: 0x000AE9C2 File Offset: 0x000ACBC2
+		[NullableContext(0)]
 		public static IWaterBoxBigWeaponHook Create(IWaterBoxBigWeaponHook? instance)
 		{
 			if (instance == null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001066 RID: 4198
-		// (get) Token: 0x06004094 RID: 16532 RVA: 0x000A5199 File Offset: 0x000A3399
+		// Token: 0x17001143 RID: 4419
+		// (get) Token: 0x060044CB RID: 17611 RVA: 0x000AE9E1 File Offset: 0x000ACBE1
 		public override EHookInteractType Type
 		{
 			get
@@ -35,19 +35,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001067 RID: 4199
-		// (get) Token: 0x06004095 RID: 16533 RVA: 0x000A51A8 File Offset: 0x000A33A8
+		// Token: 0x17001144 RID: 4420
+		// (get) Token: 0x060044CC RID: 17612 RVA: 0x000AE9F0 File Offset: 0x000ACBF0
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<ActionInfo> HookActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -70,19 +70,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001068 RID: 4200
-		// (get) Token: 0x06004096 RID: 16534 RVA: 0x000A5224 File Offset: 0x000A3424
+		// Token: 0x17001145 RID: 4421
+		// (get) Token: 0x060044CD RID: 17613 RVA: 0x000AEA6C File Offset: 0x000ACC6C
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<ActionInfo> ExitHookActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -105,19 +105,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001069 RID: 4201
-		// (get) Token: 0x06004097 RID: 16535 RVA: 0x000A52A0 File Offset: 0x000A34A0
+		// Token: 0x17001146 RID: 4422
+		// (get) Token: 0x060044CE RID: 17614 RVA: 0x000AEAE8 File Offset: 0x000ACCE8
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<ActionInfo> FinishActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -140,8 +140,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700106A RID: 4202
-		// (get) Token: 0x06004098 RID: 16536 RVA: 0x000A531A File Offset: 0x000A351A
+		// Token: 0x17001147 RID: 4423
+		// (get) Token: 0x060044CF RID: 17615 RVA: 0x000AEB62 File Offset: 0x000ACD62
 		public override IClientHookActionConfig ClientHookActionConfig
 		{
 			get
@@ -156,46 +156,46 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002418 RID: 9240
+		// Token: 0x0400263E RID: 9790
 		private IWaterBoxBigWeaponHook Instance;
 
-		// Token: 0x04002419 RID: 9241
+		// Token: 0x0400263F RID: 9791
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _HookActionsCache;
 
-		// Token: 0x0400241A RID: 9242
+		// Token: 0x04002640 RID: 9792
 		private bool _HookActionsInited;
 
-		// Token: 0x0400241B RID: 9243
+		// Token: 0x04002641 RID: 9793
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _ExitHookActionsCache;
 
-		// Token: 0x0400241C RID: 9244
+		// Token: 0x04002642 RID: 9794
 		private bool _ExitHookActionsInited;
 
-		// Token: 0x0400241D RID: 9245
+		// Token: 0x04002643 RID: 9795
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _FinishActionsCache;
 
-		// Token: 0x0400241E RID: 9246
+		// Token: 0x04002644 RID: 9796
 		private bool _FinishActionsInited;
 
-		// Token: 0x0400241F RID: 9247
+		// Token: 0x04002645 RID: 9797
 		private IClientHookActionConfig _ClientHookActionConfigCache;
 
-		// Token: 0x04002420 RID: 9248
+		// Token: 0x04002646 RID: 9798
 		private bool _ClientHookActionConfigInited;
 	}
 }

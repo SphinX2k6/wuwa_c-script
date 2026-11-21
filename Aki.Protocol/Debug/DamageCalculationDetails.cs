@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol.Debug
 {
-	// Token: 0x02001692 RID: 5778
+	// Token: 0x0200170E RID: 5902
 	public sealed class DamageCalculationDetails : IMessage<DamageCalculationDetails>, IMessage, IEquatable<DamageCalculationDetails>, IDeepCloneable<DamageCalculationDetails>, IBufferMessage
 	{
-		// Token: 0x0601CF2B RID: 118571 RVA: 0x0043C2C5 File Offset: 0x0043A4C5
+		// Token: 0x0601D9F6 RID: 121334 RVA: 0x00457E75 File Offset: 0x00456075
 		[NullableContext(1)]
 		public static DamageCalculationDetails Create()
 		{
 			return new DamageCalculationDetails();
 		}
 
-		// Token: 0x1700622C RID: 25132
-		// (get) Token: 0x0601CF2C RID: 118572 RVA: 0x0043C2CC File Offset: 0x0043A4CC
+		// Token: 0x170064CF RID: 25807
+		// (get) Token: 0x0601D9F7 RID: 121335 RVA: 0x00457E7C File Offset: 0x0045607C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol.Debug
 			}
 		}
 
-		// Token: 0x1700622D RID: 25133
-		// (get) Token: 0x0601CF2D RID: 118573 RVA: 0x0043C2CF File Offset: 0x0043A4CF
+		// Token: 0x170064D0 RID: 25808
+		// (get) Token: 0x0601D9F8 RID: 121336 RVA: 0x00457E7F File Offset: 0x0045607F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol.Debug
 			}
 		}
 
-		// Token: 0x0601CF2E RID: 118574 RVA: 0x0043C2D6 File Offset: 0x0043A4D6
+		// Token: 0x0601D9F9 RID: 121337 RVA: 0x00457E86 File Offset: 0x00456086
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DamageCalculationDetails()
 		{
 		}
 
-		// Token: 0x0601CF2F RID: 118575 RVA: 0x0043C2E0 File Offset: 0x0043A4E0
+		// Token: 0x0601D9FA RID: 121338 RVA: 0x00457E90 File Offset: 0x00456090
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DamageCalculationDetails(DamageCalculationDetails other) : this()
@@ -72,10 +72,12 @@ namespace Aki.Protocol.Debug
 			this.hitDamageBonusRate_ = other.hitDamageBonusRate_;
 			this.weakDamageBonusRate_ = other.weakDamageBonusRate_;
 			this.exceptedDamageValue_ = other.exceptedDamageValue_;
+			this.darkTideAttackValue_ = other.darkTideAttackValue_;
+			this.aDamageBonusRate2_ = other.aDamageBonusRate2_;
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601CF30 RID: 118576 RVA: 0x0043C3DC File Offset: 0x0043A5DC
+		// Token: 0x0601D9FB RID: 121339 RVA: 0x00457FA4 File Offset: 0x004561A4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DamageCalculationDetails Clone()
@@ -83,9 +85,9 @@ namespace Aki.Protocol.Debug
 			return new DamageCalculationDetails(this);
 		}
 
-		// Token: 0x1700622E RID: 25134
-		// (get) Token: 0x0601CF31 RID: 118577 RVA: 0x0043C3E4 File Offset: 0x0043A5E4
-		// (set) Token: 0x0601CF32 RID: 118578 RVA: 0x0043C3EC File Offset: 0x0043A5EC
+		// Token: 0x170064D1 RID: 25809
+		// (get) Token: 0x0601D9FC RID: 121340 RVA: 0x00457FAC File Offset: 0x004561AC
+		// (set) Token: 0x0601D9FD RID: 121341 RVA: 0x00457FB4 File Offset: 0x004561B4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long ABaseAttackValue
@@ -100,9 +102,9 @@ namespace Aki.Protocol.Debug
 			}
 		}
 
-		// Token: 0x1700622F RID: 25135
-		// (get) Token: 0x0601CF33 RID: 118579 RVA: 0x0043C3F5 File Offset: 0x0043A5F5
-		// (set) Token: 0x0601CF34 RID: 118580 RVA: 0x0043C3FD File Offset: 0x0043A5FD
+		// Token: 0x170064D2 RID: 25810
+		// (get) Token: 0x0601D9FE RID: 121342 RVA: 0x00457FBD File Offset: 0x004561BD
+		// (set) Token: 0x0601D9FF RID: 121343 RVA: 0x00457FC5 File Offset: 0x004561C5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public float VEffectiveDefense
@@ -117,9 +119,9 @@ namespace Aki.Protocol.Debug
 			}
 		}
 
-		// Token: 0x17006230 RID: 25136
-		// (get) Token: 0x0601CF35 RID: 118581 RVA: 0x0043C406 File Offset: 0x0043A606
-		// (set) Token: 0x0601CF36 RID: 118582 RVA: 0x0043C40E File Offset: 0x0043A60E
+		// Token: 0x170064D3 RID: 25811
+		// (get) Token: 0x0601DA00 RID: 121344 RVA: 0x00457FCE File Offset: 0x004561CE
+		// (set) Token: 0x0601DA01 RID: 121345 RVA: 0x00457FD6 File Offset: 0x004561D6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public float ADamageFactor
@@ -134,9 +136,9 @@ namespace Aki.Protocol.Debug
 			}
 		}
 
-		// Token: 0x17006231 RID: 25137
-		// (get) Token: 0x0601CF37 RID: 118583 RVA: 0x0043C417 File Offset: 0x0043A617
-		// (set) Token: 0x0601CF38 RID: 118584 RVA: 0x0043C41F File Offset: 0x0043A61F
+		// Token: 0x170064D4 RID: 25812
+		// (get) Token: 0x0601DA02 RID: 121346 RVA: 0x00457FDF File Offset: 0x004561DF
+		// (set) Token: 0x0601DA03 RID: 121347 RVA: 0x00457FE7 File Offset: 0x004561E7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public float ADamageBonusRate
@@ -151,9 +153,9 @@ namespace Aki.Protocol.Debug
 			}
 		}
 
-		// Token: 0x17006232 RID: 25138
-		// (get) Token: 0x0601CF39 RID: 118585 RVA: 0x0043C428 File Offset: 0x0043A628
-		// (set) Token: 0x0601CF3A RID: 118586 RVA: 0x0043C430 File Offset: 0x0043A630
+		// Token: 0x170064D5 RID: 25813
+		// (get) Token: 0x0601DA04 RID: 121348 RVA: 0x00457FF0 File Offset: 0x004561F0
+		// (set) Token: 0x0601DA05 RID: 121349 RVA: 0x00457FF8 File Offset: 0x004561F8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long ACritChance
@@ -168,9 +170,9 @@ namespace Aki.Protocol.Debug
 			}
 		}
 
-		// Token: 0x17006233 RID: 25139
-		// (get) Token: 0x0601CF3B RID: 118587 RVA: 0x0043C439 File Offset: 0x0043A639
-		// (set) Token: 0x0601CF3C RID: 118588 RVA: 0x0043C441 File Offset: 0x0043A641
+		// Token: 0x170064D6 RID: 25814
+		// (get) Token: 0x0601DA06 RID: 121350 RVA: 0x00458001 File Offset: 0x00456201
+		// (set) Token: 0x0601DA07 RID: 121351 RVA: 0x00458009 File Offset: 0x00456209
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public float AWeaknessMasteryCoefficient
@@ -185,9 +187,9 @@ namespace Aki.Protocol.Debug
 			}
 		}
 
-		// Token: 0x17006234 RID: 25140
-		// (get) Token: 0x0601CF3D RID: 118589 RVA: 0x0043C44A File Offset: 0x0043A64A
-		// (set) Token: 0x0601CF3E RID: 118590 RVA: 0x0043C452 File Offset: 0x0043A652
+		// Token: 0x170064D7 RID: 25815
+		// (get) Token: 0x0601DA08 RID: 121352 RVA: 0x00458012 File Offset: 0x00456212
+		// (set) Token: 0x0601DA09 RID: 121353 RVA: 0x0045801A File Offset: 0x0045621A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public float VMonsterTypeRate
@@ -202,9 +204,9 @@ namespace Aki.Protocol.Debug
 			}
 		}
 
-		// Token: 0x17006235 RID: 25141
-		// (get) Token: 0x0601CF3F RID: 118591 RVA: 0x0043C45B File Offset: 0x0043A65B
-		// (set) Token: 0x0601CF40 RID: 118592 RVA: 0x0043C463 File Offset: 0x0043A663
+		// Token: 0x170064D8 RID: 25816
+		// (get) Token: 0x0601DA0A RID: 121354 RVA: 0x00458023 File Offset: 0x00456223
+		// (set) Token: 0x0601DA0B RID: 121355 RVA: 0x0045802B File Offset: 0x0045622B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public float ARate
@@ -219,9 +221,9 @@ namespace Aki.Protocol.Debug
 			}
 		}
 
-		// Token: 0x17006236 RID: 25142
-		// (get) Token: 0x0601CF41 RID: 118593 RVA: 0x0043C46C File Offset: 0x0043A66C
-		// (set) Token: 0x0601CF42 RID: 118594 RVA: 0x0043C474 File Offset: 0x0043A674
+		// Token: 0x170064D9 RID: 25817
+		// (get) Token: 0x0601DA0C RID: 121356 RVA: 0x00458034 File Offset: 0x00456234
+		// (set) Token: 0x0601DA0D RID: 121357 RVA: 0x0045803C File Offset: 0x0045623C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public float VDefFactor
@@ -236,9 +238,9 @@ namespace Aki.Protocol.Debug
 			}
 		}
 
-		// Token: 0x17006237 RID: 25143
-		// (get) Token: 0x0601CF43 RID: 118595 RVA: 0x0043C47D File Offset: 0x0043A67D
-		// (set) Token: 0x0601CF44 RID: 118596 RVA: 0x0043C485 File Offset: 0x0043A685
+		// Token: 0x170064DA RID: 25818
+		// (get) Token: 0x0601DA0E RID: 121358 RVA: 0x00458045 File Offset: 0x00456245
+		// (set) Token: 0x0601DA0F RID: 121359 RVA: 0x0045804D File Offset: 0x0045624D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public float VResistanceFactor
@@ -253,9 +255,9 @@ namespace Aki.Protocol.Debug
 			}
 		}
 
-		// Token: 0x17006238 RID: 25144
-		// (get) Token: 0x0601CF45 RID: 118597 RVA: 0x0043C48E File Offset: 0x0043A68E
-		// (set) Token: 0x0601CF46 RID: 118598 RVA: 0x0043C496 File Offset: 0x0043A696
+		// Token: 0x170064DB RID: 25819
+		// (get) Token: 0x0601DA10 RID: 121360 RVA: 0x00458056 File Offset: 0x00456256
+		// (set) Token: 0x0601DA11 RID: 121361 RVA: 0x0045805E File Offset: 0x0045625E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public float VbDamageReduce
@@ -270,9 +272,9 @@ namespace Aki.Protocol.Debug
 			}
 		}
 
-		// Token: 0x17006239 RID: 25145
-		// (get) Token: 0x0601CF47 RID: 118599 RVA: 0x0043C49F File Offset: 0x0043A69F
-		// (set) Token: 0x0601CF48 RID: 118600 RVA: 0x0043C4A7 File Offset: 0x0043A6A7
+		// Token: 0x170064DC RID: 25820
+		// (get) Token: 0x0601DA12 RID: 121362 RVA: 0x00458067 File Offset: 0x00456267
+		// (set) Token: 0x0601DA13 RID: 121363 RVA: 0x0045806F File Offset: 0x0045626F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public float VbElementReduce
@@ -287,9 +289,9 @@ namespace Aki.Protocol.Debug
 			}
 		}
 
-		// Token: 0x1700623A RID: 25146
-		// (get) Token: 0x0601CF49 RID: 118601 RVA: 0x0043C4B0 File Offset: 0x0043A6B0
-		// (set) Token: 0x0601CF4A RID: 118602 RVA: 0x0043C4B8 File Offset: 0x0043A6B8
+		// Token: 0x170064DD RID: 25821
+		// (get) Token: 0x0601DA14 RID: 121364 RVA: 0x00458078 File Offset: 0x00456278
+		// (set) Token: 0x0601DA15 RID: 121365 RVA: 0x00458080 File Offset: 0x00456280
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long AEnergyChange
@@ -304,9 +306,9 @@ namespace Aki.Protocol.Debug
 			}
 		}
 
-		// Token: 0x1700623B RID: 25147
-		// (get) Token: 0x0601CF4B RID: 118603 RVA: 0x0043C4C1 File Offset: 0x0043A6C1
-		// (set) Token: 0x0601CF4C RID: 118604 RVA: 0x0043C4C9 File Offset: 0x0043A6C9
+		// Token: 0x170064DE RID: 25822
+		// (get) Token: 0x0601DA16 RID: 121366 RVA: 0x00458089 File Offset: 0x00456289
+		// (set) Token: 0x0601DA17 RID: 121367 RVA: 0x00458091 File Offset: 0x00456291
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public float WeaknessLvValue
@@ -321,9 +323,9 @@ namespace Aki.Protocol.Debug
 			}
 		}
 
-		// Token: 0x1700623C RID: 25148
-		// (get) Token: 0x0601CF4D RID: 118605 RVA: 0x0043C4D2 File Offset: 0x0043A6D2
-		// (set) Token: 0x0601CF4E RID: 118606 RVA: 0x0043C4DA File Offset: 0x0043A6DA
+		// Token: 0x170064DF RID: 25823
+		// (get) Token: 0x0601DA18 RID: 121368 RVA: 0x0045809A File Offset: 0x0045629A
+		// (set) Token: 0x0601DA19 RID: 121369 RVA: 0x004580A2 File Offset: 0x004562A2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int VWeaknessBuffStack
@@ -338,9 +340,9 @@ namespace Aki.Protocol.Debug
 			}
 		}
 
-		// Token: 0x1700623D RID: 25149
-		// (get) Token: 0x0601CF4F RID: 118607 RVA: 0x0043C4E3 File Offset: 0x0043A6E3
-		// (set) Token: 0x0601CF50 RID: 118608 RVA: 0x0043C4EB File Offset: 0x0043A6EB
+		// Token: 0x170064E0 RID: 25824
+		// (get) Token: 0x0601DA1A RID: 121370 RVA: 0x004580AB File Offset: 0x004562AB
+		// (set) Token: 0x0601DA1B RID: 121371 RVA: 0x004580B3 File Offset: 0x004562B3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public float HitDamageBonusRate
@@ -355,9 +357,9 @@ namespace Aki.Protocol.Debug
 			}
 		}
 
-		// Token: 0x1700623E RID: 25150
-		// (get) Token: 0x0601CF51 RID: 118609 RVA: 0x0043C4F4 File Offset: 0x0043A6F4
-		// (set) Token: 0x0601CF52 RID: 118610 RVA: 0x0043C4FC File Offset: 0x0043A6FC
+		// Token: 0x170064E1 RID: 25825
+		// (get) Token: 0x0601DA1C RID: 121372 RVA: 0x004580BC File Offset: 0x004562BC
+		// (set) Token: 0x0601DA1D RID: 121373 RVA: 0x004580C4 File Offset: 0x004562C4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public float WeakDamageBonusRate
@@ -372,9 +374,9 @@ namespace Aki.Protocol.Debug
 			}
 		}
 
-		// Token: 0x1700623F RID: 25151
-		// (get) Token: 0x0601CF53 RID: 118611 RVA: 0x0043C505 File Offset: 0x0043A705
-		// (set) Token: 0x0601CF54 RID: 118612 RVA: 0x0043C50D File Offset: 0x0043A70D
+		// Token: 0x170064E2 RID: 25826
+		// (get) Token: 0x0601DA1E RID: 121374 RVA: 0x004580CD File Offset: 0x004562CD
+		// (set) Token: 0x0601DA1F RID: 121375 RVA: 0x004580D5 File Offset: 0x004562D5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public float ExceptedDamageValue
@@ -389,7 +391,41 @@ namespace Aki.Protocol.Debug
 			}
 		}
 
-		// Token: 0x0601CF55 RID: 118613 RVA: 0x0043C516 File Offset: 0x0043A716
+		// Token: 0x170064E3 RID: 25827
+		// (get) Token: 0x0601DA20 RID: 121376 RVA: 0x004580DE File Offset: 0x004562DE
+		// (set) Token: 0x0601DA21 RID: 121377 RVA: 0x004580E6 File Offset: 0x004562E6
+		[DebuggerNonUserCode]
+		[GeneratedCode("protoc", null)]
+		public float DarkTideAttackValue
+		{
+			get
+			{
+				return this.darkTideAttackValue_;
+			}
+			set
+			{
+				this.darkTideAttackValue_ = value;
+			}
+		}
+
+		// Token: 0x170064E4 RID: 25828
+		// (get) Token: 0x0601DA22 RID: 121378 RVA: 0x004580EF File Offset: 0x004562EF
+		// (set) Token: 0x0601DA23 RID: 121379 RVA: 0x004580F7 File Offset: 0x004562F7
+		[DebuggerNonUserCode]
+		[GeneratedCode("protoc", null)]
+		public float ADamageBonusRate2
+		{
+			get
+			{
+				return this.aDamageBonusRate2_;
+			}
+			set
+			{
+				this.aDamageBonusRate2_ = value;
+			}
+		}
+
+		// Token: 0x0601DA24 RID: 121380 RVA: 0x00458100 File Offset: 0x00456300
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -397,15 +433,15 @@ namespace Aki.Protocol.Debug
 			return this.Equals(other as DamageCalculationDetails);
 		}
 
-		// Token: 0x0601CF56 RID: 118614 RVA: 0x0043C524 File Offset: 0x0043A724
+		// Token: 0x0601DA25 RID: 121381 RVA: 0x00458110 File Offset: 0x00456310
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(DamageCalculationDetails other)
 		{
-			return other != null && (other == this || (this.ABaseAttackValue == other.ABaseAttackValue && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.VEffectiveDefense, other.VEffectiveDefense) && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.ADamageFactor, other.ADamageFactor) && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.ADamageBonusRate, other.ADamageBonusRate) && this.ACritChance == other.ACritChance && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.AWeaknessMasteryCoefficient, other.AWeaknessMasteryCoefficient) && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.VMonsterTypeRate, other.VMonsterTypeRate) && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.ARate, other.ARate) && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.VDefFactor, other.VDefFactor) && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.VResistanceFactor, other.VResistanceFactor) && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.VbDamageReduce, other.VbDamageReduce) && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.VbElementReduce, other.VbElementReduce) && this.AEnergyChange == other.AEnergyChange && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.WeaknessLvValue, other.WeaknessLvValue) && this.VWeaknessBuffStack == other.VWeaknessBuffStack && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.HitDamageBonusRate, other.HitDamageBonusRate) && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.WeakDamageBonusRate, other.WeakDamageBonusRate) && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.ExceptedDamageValue, other.ExceptedDamageValue) && object.Equals(this._unknownFields, other._unknownFields)));
+			return other != null && (other == this || (this.ABaseAttackValue == other.ABaseAttackValue && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.VEffectiveDefense, other.VEffectiveDefense) && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.ADamageFactor, other.ADamageFactor) && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.ADamageBonusRate, other.ADamageBonusRate) && this.ACritChance == other.ACritChance && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.AWeaknessMasteryCoefficient, other.AWeaknessMasteryCoefficient) && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.VMonsterTypeRate, other.VMonsterTypeRate) && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.ARate, other.ARate) && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.VDefFactor, other.VDefFactor) && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.VResistanceFactor, other.VResistanceFactor) && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.VbDamageReduce, other.VbDamageReduce) && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.VbElementReduce, other.VbElementReduce) && this.AEnergyChange == other.AEnergyChange && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.WeaknessLvValue, other.WeaknessLvValue) && this.VWeaknessBuffStack == other.VWeaknessBuffStack && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.HitDamageBonusRate, other.HitDamageBonusRate) && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.WeakDamageBonusRate, other.WeakDamageBonusRate) && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.ExceptedDamageValue, other.ExceptedDamageValue) && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.DarkTideAttackValue, other.DarkTideAttackValue) && ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(this.ADamageBonusRate2, other.ADamageBonusRate2) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601CF57 RID: 118615 RVA: 0x0043C6FC File Offset: 0x0043A8FC
+		// Token: 0x0601DA26 RID: 121382 RVA: 0x0045831C File Offset: 0x0045651C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -483,6 +519,14 @@ namespace Aki.Protocol.Debug
 			{
 				num ^= ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(this.ExceptedDamageValue);
 			}
+			if (this.DarkTideAttackValue != 0f)
+			{
+				num ^= ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(this.DarkTideAttackValue);
+			}
+			if (this.ADamageBonusRate2 != 0f)
+			{
+				num ^= ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(this.ADamageBonusRate2);
+			}
 			if (this._unknownFields != null)
 			{
 				num ^= this._unknownFields.GetHashCode();
@@ -490,7 +534,7 @@ namespace Aki.Protocol.Debug
 			return num;
 		}
 
-		// Token: 0x0601CF58 RID: 118616 RVA: 0x0043C946 File Offset: 0x0043AB46
+		// Token: 0x0601DA27 RID: 121383 RVA: 0x004585A6 File Offset: 0x004567A6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -498,7 +542,7 @@ namespace Aki.Protocol.Debug
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601CF59 RID: 118617 RVA: 0x0043C953 File Offset: 0x0043AB53
+		// Token: 0x0601DA28 RID: 121384 RVA: 0x004585B3 File Offset: 0x004567B3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -506,7 +550,7 @@ namespace Aki.Protocol.Debug
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601CF5A RID: 118618 RVA: 0x0043C95C File Offset: 0x0043AB5C
+		// Token: 0x0601DA29 RID: 121385 RVA: 0x004585BC File Offset: 0x004567BC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -601,13 +645,23 @@ namespace Aki.Protocol.Debug
 				output.WriteRawTag(149, 1);
 				output.WriteFloat(this.ExceptedDamageValue);
 			}
+			if (this.DarkTideAttackValue != 0f)
+			{
+				output.WriteRawTag(157, 1);
+				output.WriteFloat(this.DarkTideAttackValue);
+			}
+			if (this.ADamageBonusRate2 != 0f)
+			{
+				output.WriteRawTag(165, 1);
+				output.WriteFloat(this.ADamageBonusRate2);
+			}
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x0601CF5B RID: 118619 RVA: 0x0043CBC8 File Offset: 0x0043ADC8
+		// Token: 0x0601DA2A RID: 121386 RVA: 0x00458870 File Offset: 0x00456A70
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -685,6 +739,14 @@ namespace Aki.Protocol.Debug
 			{
 				num += 6;
 			}
+			if (this.DarkTideAttackValue != 0f)
+			{
+				num += 6;
+			}
+			if (this.ADamageBonusRate2 != 0f)
+			{
+				num += 6;
+			}
 			if (this._unknownFields != null)
 			{
 				num += this._unknownFields.CalculateSize();
@@ -692,7 +754,7 @@ namespace Aki.Protocol.Debug
 			return num;
 		}
 
-		// Token: 0x0601CF5C RID: 118620 RVA: 0x0043CD3C File Offset: 0x0043AF3C
+		// Token: 0x0601DA2B RID: 121387 RVA: 0x00458A08 File Offset: 0x00456C08
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(DamageCalculationDetails other)
@@ -773,10 +835,18 @@ namespace Aki.Protocol.Debug
 			{
 				this.ExceptedDamageValue = other.ExceptedDamageValue;
 			}
+			if (other.DarkTideAttackValue != 0f)
+			{
+				this.DarkTideAttackValue = other.DarkTideAttackValue;
+			}
+			if (other.ADamageBonusRate2 != 0f)
+			{
+				this.ADamageBonusRate2 = other.ADamageBonusRate2;
+			}
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601CF5D RID: 118621 RVA: 0x0043CF12 File Offset: 0x0043B112
+		// Token: 0x0601DA2C RID: 121388 RVA: 0x00458C10 File Offset: 0x00456E10
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -784,7 +854,7 @@ namespace Aki.Protocol.Debug
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601CF5E RID: 118622 RVA: 0x0043CF1C File Offset: 0x0043B11C
+		// Token: 0x0601DA2D RID: 121389 RVA: 0x00458C1C File Offset: 0x00456E1C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -796,9 +866,9 @@ namespace Aki.Protocol.Debug
 				{
 					return;
 				}
-				if (num <= 77U)
+				if (num <= 85U)
 				{
-					if (num <= 37U)
+					if (num <= 40U)
 					{
 						if (num <= 21U)
 						{
@@ -825,28 +895,28 @@ namespace Aki.Protocol.Debug
 								this.ADamageBonusRate = input.ReadFloat();
 								continue;
 							}
+							if (num == 40U)
+							{
+								this.ACritChance = input.ReadInt64();
+								continue;
+							}
 						}
 					}
-					else if (num <= 53U)
+					else if (num <= 61U)
 					{
-						if (num == 40U)
-						{
-							this.ACritChance = input.ReadInt64();
-							continue;
-						}
 						if (num == 53U)
 						{
 							this.AWeaknessMasteryCoefficient = input.ReadFloat();
 							continue;
 						}
-					}
-					else
-					{
 						if (num == 61U)
 						{
 							this.VMonsterTypeRate = input.ReadFloat();
 							continue;
 						}
+					}
+					else
+					{
 						if (num == 69U)
 						{
 							this.ARate = input.ReadFloat();
@@ -857,51 +927,48 @@ namespace Aki.Protocol.Debug
 							this.VDefFactor = input.ReadFloat();
 							continue;
 						}
-					}
-				}
-				else if (num <= 104U)
-				{
-					if (num <= 93U)
-					{
 						if (num == 85U)
 						{
 							this.VResistanceFactor = input.ReadFloat();
-							continue;
-						}
-						if (num == 93U)
-						{
-							this.VbDamageReduce = input.ReadFloat();
-							continue;
-						}
-					}
-					else
-					{
-						if (num == 101U)
-						{
-							this.VbElementReduce = input.ReadFloat();
-							continue;
-						}
-						if (num == 104U)
-						{
-							this.AEnergyChange = input.ReadInt64();
 							continue;
 						}
 					}
 				}
 				else if (num <= 120U)
 				{
-					if (num == 117U)
+					if (num <= 101U)
 					{
-						this.WeaknessLvValue = input.ReadFloat();
-						continue;
+						if (num == 93U)
+						{
+							this.VbDamageReduce = input.ReadFloat();
+							continue;
+						}
+						if (num == 101U)
+						{
+							this.VbElementReduce = input.ReadFloat();
+							continue;
+						}
 					}
-					if (num == 120U)
+					else
 					{
-						this.VWeaknessBuffStack = input.ReadInt32();
-						continue;
+						if (num == 104U)
+						{
+							this.AEnergyChange = input.ReadInt64();
+							continue;
+						}
+						if (num == 117U)
+						{
+							this.WeaknessLvValue = input.ReadFloat();
+							continue;
+						}
+						if (num == 120U)
+						{
+							this.VWeaknessBuffStack = input.ReadInt32();
+							continue;
+						}
 					}
 				}
-				else
+				else if (num <= 141U)
 				{
 					if (num == 133U)
 					{
@@ -913,9 +980,22 @@ namespace Aki.Protocol.Debug
 						this.WeakDamageBonusRate = input.ReadFloat();
 						continue;
 					}
+				}
+				else
+				{
 					if (num == 149U)
 					{
 						this.ExceptedDamageValue = input.ReadFloat();
+						continue;
+					}
+					if (num == 157U)
+					{
+						this.DarkTideAttackValue = input.ReadFloat();
+						continue;
+					}
+					if (num == 165U)
+					{
+						this.ADamageBonusRate2 = input.ReadFloat();
 						continue;
 					}
 				}
@@ -923,115 +1003,127 @@ namespace Aki.Protocol.Debug
 			}
 		}
 
-		// Token: 0x0400C36C RID: 50028
+		// Token: 0x0400C897 RID: 51351
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400C36D RID: 50029
+		// Token: 0x0400C898 RID: 51352
 		public const int ABaseAttackValueFieldNumber = 1;
 
-		// Token: 0x0400C36E RID: 50030
+		// Token: 0x0400C899 RID: 51353
 		private long aBaseAttackValue_;
 
-		// Token: 0x0400C36F RID: 50031
+		// Token: 0x0400C89A RID: 51354
 		public const int VEffectiveDefenseFieldNumber = 2;
 
-		// Token: 0x0400C370 RID: 50032
+		// Token: 0x0400C89B RID: 51355
 		private float vEffectiveDefense_;
 
-		// Token: 0x0400C371 RID: 50033
+		// Token: 0x0400C89C RID: 51356
 		public const int ADamageFactorFieldNumber = 3;
 
-		// Token: 0x0400C372 RID: 50034
+		// Token: 0x0400C89D RID: 51357
 		private float aDamageFactor_;
 
-		// Token: 0x0400C373 RID: 50035
+		// Token: 0x0400C89E RID: 51358
 		public const int ADamageBonusRateFieldNumber = 4;
 
-		// Token: 0x0400C374 RID: 50036
+		// Token: 0x0400C89F RID: 51359
 		private float aDamageBonusRate_;
 
-		// Token: 0x0400C375 RID: 50037
+		// Token: 0x0400C8A0 RID: 51360
 		public const int ACritChanceFieldNumber = 5;
 
-		// Token: 0x0400C376 RID: 50038
+		// Token: 0x0400C8A1 RID: 51361
 		private long aCritChance_;
 
-		// Token: 0x0400C377 RID: 50039
+		// Token: 0x0400C8A2 RID: 51362
 		public const int AWeaknessMasteryCoefficientFieldNumber = 6;
 
-		// Token: 0x0400C378 RID: 50040
+		// Token: 0x0400C8A3 RID: 51363
 		private float aWeaknessMasteryCoefficient_;
 
-		// Token: 0x0400C379 RID: 50041
+		// Token: 0x0400C8A4 RID: 51364
 		public const int VMonsterTypeRateFieldNumber = 7;
 
-		// Token: 0x0400C37A RID: 50042
+		// Token: 0x0400C8A5 RID: 51365
 		private float vMonsterTypeRate_;
 
-		// Token: 0x0400C37B RID: 50043
+		// Token: 0x0400C8A6 RID: 51366
 		public const int ARateFieldNumber = 8;
 
-		// Token: 0x0400C37C RID: 50044
+		// Token: 0x0400C8A7 RID: 51367
 		private float aRate_;
 
-		// Token: 0x0400C37D RID: 50045
+		// Token: 0x0400C8A8 RID: 51368
 		public const int VDefFactorFieldNumber = 9;
 
-		// Token: 0x0400C37E RID: 50046
+		// Token: 0x0400C8A9 RID: 51369
 		private float vDefFactor_;
 
-		// Token: 0x0400C37F RID: 50047
+		// Token: 0x0400C8AA RID: 51370
 		public const int VResistanceFactorFieldNumber = 10;
 
-		// Token: 0x0400C380 RID: 50048
+		// Token: 0x0400C8AB RID: 51371
 		private float vResistanceFactor_;
 
-		// Token: 0x0400C381 RID: 50049
+		// Token: 0x0400C8AC RID: 51372
 		public const int VbDamageReduceFieldNumber = 11;
 
-		// Token: 0x0400C382 RID: 50050
+		// Token: 0x0400C8AD RID: 51373
 		private float vbDamageReduce_;
 
-		// Token: 0x0400C383 RID: 50051
+		// Token: 0x0400C8AE RID: 51374
 		public const int VbElementReduceFieldNumber = 12;
 
-		// Token: 0x0400C384 RID: 50052
+		// Token: 0x0400C8AF RID: 51375
 		private float vbElementReduce_;
 
-		// Token: 0x0400C385 RID: 50053
+		// Token: 0x0400C8B0 RID: 51376
 		public const int AEnergyChangeFieldNumber = 13;
 
-		// Token: 0x0400C386 RID: 50054
+		// Token: 0x0400C8B1 RID: 51377
 		private long aEnergyChange_;
 
-		// Token: 0x0400C387 RID: 50055
+		// Token: 0x0400C8B2 RID: 51378
 		public const int WeaknessLvValueFieldNumber = 14;
 
-		// Token: 0x0400C388 RID: 50056
+		// Token: 0x0400C8B3 RID: 51379
 		private float weaknessLvValue_;
 
-		// Token: 0x0400C389 RID: 50057
+		// Token: 0x0400C8B4 RID: 51380
 		public const int VWeaknessBuffStackFieldNumber = 15;
 
-		// Token: 0x0400C38A RID: 50058
+		// Token: 0x0400C8B5 RID: 51381
 		private int vWeaknessBuffStack_;
 
-		// Token: 0x0400C38B RID: 50059
+		// Token: 0x0400C8B6 RID: 51382
 		public const int HitDamageBonusRateFieldNumber = 16;
 
-		// Token: 0x0400C38C RID: 50060
+		// Token: 0x0400C8B7 RID: 51383
 		private float hitDamageBonusRate_;
 
-		// Token: 0x0400C38D RID: 50061
+		// Token: 0x0400C8B8 RID: 51384
 		public const int WeakDamageBonusRateFieldNumber = 17;
 
-		// Token: 0x0400C38E RID: 50062
+		// Token: 0x0400C8B9 RID: 51385
 		private float weakDamageBonusRate_;
 
-		// Token: 0x0400C38F RID: 50063
+		// Token: 0x0400C8BA RID: 51386
 		public const int ExceptedDamageValueFieldNumber = 18;
 
-		// Token: 0x0400C390 RID: 50064
+		// Token: 0x0400C8BB RID: 51387
 		private float exceptedDamageValue_;
+
+		// Token: 0x0400C8BC RID: 51388
+		public const int DarkTideAttackValueFieldNumber = 19;
+
+		// Token: 0x0400C8BD RID: 51389
+		private float darkTideAttackValue_;
+
+		// Token: 0x0400C8BE RID: 51390
+		public const int ADamageBonusRate2FieldNumber = 20;
+
+		// Token: 0x0400C8BF RID: 51391
+		private float aDamageBonusRate2_;
 	}
 }

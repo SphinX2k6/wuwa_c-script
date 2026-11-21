@@ -8,7 +8,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200261F RID: 9759
+// Token: 0x02001B0A RID: 6922
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -17,7 +17,7 @@ using UnrealEngine;
 })]
 public class CommonQteFullScreenLongPress : CommonQteItemBase<CommonQteLongPressContext>
 {
-	// Token: 0x06013F42 RID: 81730 RVA: 0x00504CBC File Offset: 0x00502EBC
+	// Token: 0x06011424 RID: 70692 RVA: 0x00513B80 File Offset: 0x00511D80
 	protected override void OnRegisterComponent()
 	{
 		base.OnRegisterComponent();
@@ -34,7 +34,7 @@ public class CommonQteFullScreenLongPress : CommonQteItemBase<CommonQteLongPress
 		}
 	}
 
-	// Token: 0x06013F43 RID: 81731 RVA: 0x00504D5C File Offset: 0x00502F5C
+	// Token: 0x06011425 RID: 70693 RVA: 0x00513C20 File Offset: 0x00511E20
 	protected override UniTask OnBeforeStartAsync()
 	{
 		CommonQteFullScreenLongPress.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -45,7 +45,7 @@ public class CommonQteFullScreenLongPress : CommonQteItemBase<CommonQteLongPress
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013F44 RID: 81732 RVA: 0x00504DA0 File Offset: 0x00502FA0
+	// Token: 0x06011426 RID: 70694 RVA: 0x00513C64 File Offset: 0x00511E64
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -98,7 +98,7 @@ public class CommonQteFullScreenLongPress : CommonQteItemBase<CommonQteLongPress
 		this.LevelSequencePlayer.BindSequenceCloseEvent(new TSequenceEndEvent(this.OnSequenceEndEvent), false);
 	}
 
-	// Token: 0x06013F45 RID: 81733 RVA: 0x00504E9C File Offset: 0x0050309C
+	// Token: 0x06011427 RID: 70695 RVA: 0x00513D60 File Offset: 0x00511F60
 	protected override void OnBeforeDestroy()
 	{
 		base.OnBeforeDestroy();
@@ -125,14 +125,14 @@ public class CommonQteFullScreenLongPress : CommonQteItemBase<CommonQteLongPress
 		levelSequencePlayer.Clear();
 	}
 
-	// Token: 0x06013F46 RID: 81734 RVA: 0x00504F01 File Offset: 0x00503101
+	// Token: 0x06011428 RID: 70696 RVA: 0x00513DC5 File Offset: 0x00511FC5
 	[NullableContext(1)]
 	protected override bool IsContextMatched(CommonQteContextBase context)
 	{
 		return context is CommonQteLongPressContext;
 	}
 
-	// Token: 0x06013F47 RID: 81735 RVA: 0x00504F0C File Offset: 0x0050310C
+	// Token: 0x06011429 RID: 70697 RVA: 0x00513DD0 File Offset: 0x00511FD0
 	[NullableContext(1)]
 	protected override void OnRefreshActionUi(string action)
 	{
@@ -151,7 +151,7 @@ public class CommonQteFullScreenLongPress : CommonQteItemBase<CommonQteLongPress
 		}
 	}
 
-	// Token: 0x06013F48 RID: 81736 RVA: 0x00504F44 File Offset: 0x00503144
+	// Token: 0x0601142A RID: 70698 RVA: 0x00513E08 File Offset: 0x00512008
 	protected override void OnPlayQteStart()
 	{
 		base.SetUiActive(true);
@@ -172,7 +172,7 @@ public class CommonQteFullScreenLongPress : CommonQteItemBase<CommonQteLongPress
 		this.IsQteInteractive = true;
 	}
 
-	// Token: 0x06013F49 RID: 81737 RVA: 0x00504FA4 File Offset: 0x005031A4
+	// Token: 0x0601142B RID: 70699 RVA: 0x00513E68 File Offset: 0x00512068
 	[NullableContext(1)]
 	private void OnSequenceEndEvent(string sequenceName)
 	{
@@ -192,7 +192,7 @@ public class CommonQteFullScreenLongPress : CommonQteItemBase<CommonQteLongPress
 		}
 	}
 
-	// Token: 0x06013F4A RID: 81738 RVA: 0x00504FF4 File Offset: 0x005031F4
+	// Token: 0x0601142C RID: 70700 RVA: 0x00513EB8 File Offset: 0x005120B8
 	protected override void OnInputPress()
 	{
 		CommonQteLongPressContext commonQteContext = this.CommonQteContext;
@@ -213,7 +213,7 @@ public class CommonQteFullScreenLongPress : CommonQteItemBase<CommonQteLongPress
 		btnMain.SetSelectionState(EUISelectableSelectionState.Pressed);
 	}
 
-	// Token: 0x06013F4B RID: 81739 RVA: 0x00505054 File Offset: 0x00503254
+	// Token: 0x0601142D RID: 70701 RVA: 0x00513F18 File Offset: 0x00512118
 	protected override void OnInputRelease()
 	{
 		CommonQteLongPressContext commonQteContext = this.CommonQteContext;
@@ -234,7 +234,7 @@ public class CommonQteFullScreenLongPress : CommonQteItemBase<CommonQteLongPress
 		btnMain.SetSelectionState(EUISelectableSelectionState.Normal);
 	}
 
-	// Token: 0x06013F4C RID: 81740 RVA: 0x005050B4 File Offset: 0x005032B4
+	// Token: 0x0601142E RID: 70702 RVA: 0x00513F78 File Offset: 0x00512178
 	protected override void OnHandleQteEnd()
 	{
 		InputMultiKeyItem keyItem = this.KeyItem;
@@ -255,7 +255,7 @@ public class CommonQteFullScreenLongPress : CommonQteItemBase<CommonQteLongPress
 		levelSequencePlayer2.PlayLevelSequenceByName("Close2", false, null, false);
 	}
 
-	// Token: 0x06013F4D RID: 81741 RVA: 0x00505106 File Offset: 0x00503306
+	// Token: 0x0601142F RID: 70703 RVA: 0x00513FCA File Offset: 0x005121CA
 	protected override void OnTickQteItem(float delta)
 	{
 		if (this.CommonQteContext != null)
@@ -270,7 +270,7 @@ public class CommonQteFullScreenLongPress : CommonQteItemBase<CommonQteLongPress
 		progressBar.SetFillAmount(this.CurrentProgress);
 	}
 
-	// Token: 0x06013F4E RID: 81742 RVA: 0x00505138 File Offset: 0x00503338
+	// Token: 0x06011430 RID: 70704 RVA: 0x00513FFC File Offset: 0x005121FC
 	protected override void RefreshUiOffset()
 	{
 		if (this.CommonQteContext != null)
@@ -297,34 +297,34 @@ public class CommonQteFullScreenLongPress : CommonQteItemBase<CommonQteLongPress
 		}
 	}
 
-	// Token: 0x0400965C RID: 38492
+	// Token: 0x040097B3 RID: 38835
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x0400965D RID: 38493
+	// Token: 0x040097B4 RID: 38836
 	private float CurrentProgress;
 
-	// Token: 0x0400965E RID: 38494
+	// Token: 0x040097B5 RID: 38837
 	private UUIButtonComponent BtnMain;
 
-	// Token: 0x0400965F RID: 38495
+	// Token: 0x040097B6 RID: 38838
 	private UUITexture ProgressBar;
 
-	// Token: 0x04009660 RID: 38496
+	// Token: 0x040097B7 RID: 38839
 	private InputMultiKeyItem KeyItem;
 
-	// Token: 0x02008C6E RID: 35950
+	// Token: 0x02007DF7 RID: 32247
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402D95F RID: 186719
+		// Token: 0x04028C76 RID: 167030
 		Prefab,
-		// Token: 0x0402D960 RID: 186720
+		// Token: 0x04028C77 RID: 167031
 		Button,
-		// Token: 0x0402D961 RID: 186721
+		// Token: 0x04028C78 RID: 167032
 		Offset,
-		// Token: 0x0402D962 RID: 186722
+		// Token: 0x04028C79 RID: 167033
 		Bar,
-		// Token: 0x0402D963 RID: 186723
+		// Token: 0x04028C7A RID: 167034
 		KeyItem
 	}
 }

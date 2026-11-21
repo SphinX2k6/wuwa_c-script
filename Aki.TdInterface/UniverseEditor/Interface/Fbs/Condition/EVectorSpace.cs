@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x0200495E RID: 18782
+	// Token: 0x02004E15 RID: 19989
 	public enum EVectorSpace : byte
 	{
-		// Token: 0x0400D13F RID: 53567
+		// Token: 0x0400DC06 RID: 56326
 		World,
-		// Token: 0x0400D140 RID: 53568
+		// Token: 0x0400DC07 RID: 56327
 		Local
 	}
 }

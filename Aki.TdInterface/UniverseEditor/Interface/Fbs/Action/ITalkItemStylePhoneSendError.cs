@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007304 RID: 29444
+	// Token: 0x02007AD9 RID: 31449
 	public struct ITalkItemStylePhoneSendError : IFlatbufferObject
 	{
-		// Token: 0x1700DDC4 RID: 56772
-		// (get) Token: 0x06034FFE RID: 217086 RVA: 0x0072E851 File Offset: 0x0072CA51
+		// Token: 0x1700E9BD RID: 59837
+		// (get) Token: 0x06038304 RID: 230148 RVA: 0x0078FCB5 File Offset: 0x0078DEB5
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06034FFF RID: 217087 RVA: 0x0072E85E File Offset: 0x0072CA5E
+		// Token: 0x06038305 RID: 230149 RVA: 0x0078FCC2 File Offset: 0x0078DEC2
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06035000 RID: 217088 RVA: 0x0072E868 File Offset: 0x0072CA68
+		// Token: 0x06038306 RID: 230150 RVA: 0x0078FCCC File Offset: 0x0078DECC
 		public static ITalkItemStylePhoneSendError GetRootAsITalkItemStylePhoneSendError(ByteBuffer _bb)
 		{
 			return ITalkItemStylePhoneSendError.GetRootAsITalkItemStylePhoneSendError(_bb, default(ITalkItemStylePhoneSendError));
 		}
 
-		// Token: 0x06035001 RID: 217089 RVA: 0x0072E884 File Offset: 0x0072CA84
+		// Token: 0x06038307 RID: 230151 RVA: 0x0078FCE8 File Offset: 0x0078DEE8
 		public static ITalkItemStylePhoneSendError GetRootAsITalkItemStylePhoneSendError(ByteBuffer _bb, ITalkItemStylePhoneSendError obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06035002 RID: 217090 RVA: 0x0072E8A1 File Offset: 0x0072CAA1
+		// Token: 0x06038308 RID: 230152 RVA: 0x0078FD05 File Offset: 0x0078DF05
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06035003 RID: 217091 RVA: 0x0072E8B0 File Offset: 0x0072CAB0
+		// Token: 0x06038309 RID: 230153 RVA: 0x0078FD14 File Offset: 0x0078DF14
 		public ITalkItemStylePhoneSendError __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700DDC5 RID: 56773
-		// (get) Token: 0x06035004 RID: 217092 RVA: 0x0072E8C0 File Offset: 0x0072CAC0
+		// Token: 0x1700E9BE RID: 59838
+		// (get) Token: 0x0603830A RID: 230154 RVA: 0x0078FD24 File Offset: 0x0078DF24
 		public ETalkItemStyle Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06035005 RID: 217093 RVA: 0x0072E8FC File Offset: 0x0072CAFC
+		// Token: 0x0603830B RID: 230155 RVA: 0x0078FD60 File Offset: 0x0078DF60
 		public static Offset<ITalkItemStylePhoneSendError> CreateITalkItemStylePhoneSendError(FlatBufferBuilder builder, ETalkItemStyle Type = ETalkItemStyle.InnerVoice)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITalkItemStylePhoneSendError.EndITalkItemStylePhoneSendError(builder);
 		}
 
-		// Token: 0x06035006 RID: 217094 RVA: 0x0072E912 File Offset: 0x0072CB12
+		// Token: 0x0603830C RID: 230156 RVA: 0x0078FD76 File Offset: 0x0078DF76
 		public static void StartITalkItemStylePhoneSendError(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06035007 RID: 217095 RVA: 0x0072E91B File Offset: 0x0072CB1B
+		// Token: 0x0603830D RID: 230157 RVA: 0x0078FD7F File Offset: 0x0078DF7F
 		public static void AddType(FlatBufferBuilder builder, ETalkItemStyle type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06035008 RID: 217096 RVA: 0x0072E926 File Offset: 0x0072CB26
+		// Token: 0x0603830E RID: 230158 RVA: 0x0078FD8A File Offset: 0x0078DF8A
 		public static Offset<ITalkItemStylePhoneSendError> EndITalkItemStylePhoneSendError(FlatBufferBuilder builder)
 		{
 			return new Offset<ITalkItemStylePhoneSendError>(builder.EndTable());
 		}
 
-		// Token: 0x06035009 RID: 217097 RVA: 0x0072E934 File Offset: 0x0072CB34
+		// Token: 0x0603830F RID: 230159 RVA: 0x0078FD98 File Offset: 0x0078DF98
 		public ITalkItemStylePhoneSendErrorT UnPack()
 		{
 			ITalkItemStylePhoneSendErrorT talkItemStylePhoneSendErrorT = new ITalkItemStylePhoneSendErrorT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return talkItemStylePhoneSendErrorT;
 		}
 
-		// Token: 0x0603500A RID: 217098 RVA: 0x0072E94F File Offset: 0x0072CB4F
+		// Token: 0x06038310 RID: 230160 RVA: 0x0078FDB3 File Offset: 0x0078DFB3
 		public void UnPackTo(ITalkItemStylePhoneSendErrorT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0603500B RID: 217099 RVA: 0x0072E960 File Offset: 0x0072CB60
+		// Token: 0x06038311 RID: 230161 RVA: 0x0078FDC4 File Offset: 0x0078DFC4
 		public static Offset<ITalkItemStylePhoneSendError> Pack(FlatBufferBuilder builder, ITalkItemStylePhoneSendErrorT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITalkItemStylePhoneSendError.CreateITalkItemStylePhoneSendError(builder, _o.Type);
 		}
 
-		// Token: 0x04011FE0 RID: 73696
+		// Token: 0x04012FE3 RID: 77795
 		private Table __p;
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001026 RID: 4134
+	// Token: 0x02001152 RID: 4434
 	public class INewHandInItemsBase_SetValue
 	{
-		// Token: 0x0400377B RID: 14203
+		// Token: 0x04003AB6 RID: 15030
 		public ENewHandInItemsType Type;
 	}
 }

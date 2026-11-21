@@ -6,16 +6,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x020049F5 RID: 18933
+	// Token: 0x0200396F RID: 14703
 	public class UiNavigationUtil : IStaticVariableResetter
 	{
-		// Token: 0x06031284 RID: 201348 RVA: 0x00B6714E File Offset: 0x00B6534E
+		// Token: 0x06025DBA RID: 155066 RVA: 0x00AA210A File Offset: 0x00AA030A
 		static UiNavigationUtil()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(UiNavigationUtil.CreateStaticDefaultValue), new Action(UiNavigationUtil.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06031285 RID: 201349 RVA: 0x00B67170 File Offset: 0x00B65370
+		// Token: 0x06025DBB RID: 155067 RVA: 0x00AA212C File Offset: 0x00AA032C
 		[NullableContext(1)]
 		public static string GetFullPathOfActor([Nullable(2)] AActor actor)
 		{
@@ -28,19 +28,19 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return result;
 		}
 
-		// Token: 0x06031286 RID: 201350 RVA: 0x00B6719B File Offset: 0x00B6539B
+		// Token: 0x06025DBC RID: 155068 RVA: 0x00AA2157 File Offset: 0x00AA0357
 		public static void CreateStaticDefaultValue()
 		{
 			UiNavigationUtil.IncId = 0;
 		}
 
-		// Token: 0x06031287 RID: 201351 RVA: 0x00B671A3 File Offset: 0x00B653A3
+		// Token: 0x06025DBD RID: 155069 RVA: 0x00AA215F File Offset: 0x00AA035F
 		public static void ResetStaticDefaultValue()
 		{
 			UiNavigationUtil.IncId = 0;
 		}
 
-		// Token: 0x06031288 RID: 201352 RVA: 0x00B671AC File Offset: 0x00B653AC
+		// Token: 0x06025DBE RID: 155070 RVA: 0x00AA2168 File Offset: 0x00AA0368
 		[NullableContext(1)]
 		public static IReadOnlyList<string> GetKeyNameListByConfig(HotKeyMap config)
 		{
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return Array.Empty<string>();
 		}
 
-		// Token: 0x0401A4E7 RID: 107751
+		// Token: 0x04014D59 RID: 85337
 		public static int IncId;
 	}
 }

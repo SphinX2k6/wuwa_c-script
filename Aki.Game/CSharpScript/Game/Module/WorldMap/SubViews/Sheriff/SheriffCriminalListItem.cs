@@ -10,7 +10,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.Sheriff
 {
-	// Token: 0x020047ED RID: 18413
+	// Token: 0x0200371E RID: 14110
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Sheriff
 	})]
 	public class SheriffCriminalListItem : GridProxyAbstract<SheriffCriminalInfo>
 	{
-		// Token: 0x0603039F RID: 197535 RVA: 0x00B2D698 File Offset: 0x00B2B898
+		// Token: 0x06024B6F RID: 150383 RVA: 0x00A5D5DC File Offset: 0x00A5B7DC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Sheriff
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060303A0 RID: 197536 RVA: 0x00B2D848 File Offset: 0x00B2BA48
+		// Token: 0x06024B70 RID: 150384 RVA: 0x00A5D78C File Offset: 0x00A5B98C
 		private void OnClickBtnCommon()
 		{
 			if (this.Data == null)
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Sheriff
 			clickCallBack(this.Data);
 		}
 
-		// Token: 0x060303A1 RID: 197537 RVA: 0x00B2D86C File Offset: 0x00B2BA6C
+		// Token: 0x06024B71 RID: 150385 RVA: 0x00A5D7B0 File Offset: 0x00A5B9B0
 		public override void Refresh(SheriffCriminalInfo data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Sheriff
 			item3.SetUIActive(uiactive);
 		}
 
-		// Token: 0x060303A2 RID: 197538 RVA: 0x00B2D9B0 File Offset: 0x00B2BBB0
+		// Token: 0x06024B72 RID: 150386 RVA: 0x00A5D8F4 File Offset: 0x00A5BAF4
 		private void RefreshProgress(SheriffAnomalyInfo anomalyInfo, ESheriffAnomalyState state)
 		{
 			if (state == ESheriffAnomalyState.UnOpened)
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Sheriff
 			}
 		}
 
-		// Token: 0x060303A3 RID: 197539 RVA: 0x00B2DA44 File Offset: 0x00B2BC44
+		// Token: 0x06024B73 RID: 150387 RVA: 0x00A5D988 File Offset: 0x00A5BB88
 		private void RefreshCriminal(ESheriffAnomalyState state, SheriffIdentity identityConfig, SheriffCriminal criminalConfig)
 		{
 			bool flag = this.Data.State >= ESheriffCriminalState.Confirmed;
@@ -217,17 +217,17 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Sheriff
 			text6.SetText(dropPackagePreviewItemList[0].Count.ToString(), true);
 		}
 
-		// Token: 0x060303A4 RID: 197540 RVA: 0x00B2DBE0 File Offset: 0x00B2BDE0
+		// Token: 0x06024B74 RID: 150388 RVA: 0x00A5DB24 File Offset: 0x00A5BD24
 		public override object GetKey(SheriffCriminalInfo data, int displayIndex)
 		{
 			return data.CriminalId;
 		}
 
-		// Token: 0x04019F6A RID: 106346
+		// Token: 0x0401461E RID: 83486
 		[Nullable(2)]
 		private SheriffCriminalInfo Data;
 
-		// Token: 0x04019F6B RID: 106347
+		// Token: 0x0401461F RID: 83487
 		[Nullable(new byte[]
 		{
 			2,
@@ -235,38 +235,38 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Sheriff
 		})]
 		public Action<SheriffCriminalInfo> ClickCallBack;
 
-		// Token: 0x0200AAB0 RID: 43696
+		// Token: 0x02009462 RID: 37986
 		[NullableContext(0)]
 		private static class EComponent
 		{
-			// Token: 0x04033EC3 RID: 212675
+			// Token: 0x0402E649 RID: 190025
 			public const int BtnCommon = 0;
 
-			// Token: 0x04033EC4 RID: 212676
+			// Token: 0x0402E64A RID: 190026
 			public const int TextTitle = 1;
 
-			// Token: 0x04033EC5 RID: 212677
+			// Token: 0x0402E64B RID: 190027
 			public const int TextProgress = 2;
 
-			// Token: 0x04033EC6 RID: 212678
+			// Token: 0x0402E64C RID: 190028
 			public const int SprCriminal = 3;
 
-			// Token: 0x04033EC7 RID: 212679
+			// Token: 0x0402E64D RID: 190029
 			public const int TextUnknown = 4;
 
-			// Token: 0x04033EC8 RID: 212680
+			// Token: 0x0402E64E RID: 190030
 			public const int TextName = 5;
 
-			// Token: 0x04033EC9 RID: 212681
+			// Token: 0x0402E64F RID: 190031
 			public const int TextMoney = 6;
 
-			// Token: 0x04033ECA RID: 212682
+			// Token: 0x0402E650 RID: 190032
 			public const int PnlLock = 7;
 
-			// Token: 0x04033ECB RID: 212683
+			// Token: 0x0402E651 RID: 190033
 			public const int TextLockTips = 8;
 
-			// Token: 0x04033ECC RID: 212684
+			// Token: 0x0402E652 RID: 190034
 			public const int PnlDone = 9;
 		}
 	}

@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006005 RID: 24581
+	// Token: 0x02006663 RID: 26211
 	public enum ESlidePerformType : byte
 	{
-		// Token: 0x04010020 RID: 65568
+		// Token: 0x04010E00 RID: 69120
 		SlopeSlide
 	}
 }

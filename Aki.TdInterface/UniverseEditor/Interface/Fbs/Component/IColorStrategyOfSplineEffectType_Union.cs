@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004FC1 RID: 20417
+	// Token: 0x0200551D RID: 21789
 	public enum IColorStrategyOfSplineEffectType_Union : byte
 	{
-		// Token: 0x0400DE9D RID: 56989
+		// Token: 0x0400EA8B RID: 60043
 		NONE,
-		// Token: 0x0400DE9E RID: 56990
+		// Token: 0x0400EA8C RID: 60044
 		IColorStrategyOfSplineEffectType,
-		// Token: 0x0400DE9F RID: 56991
+		// Token: 0x0400EA8D RID: 60045
 		IColorChangeStrategyOfRGB
 	}
 }

@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009BD RID: 2493
+	// Token: 0x02000A7C RID: 2684
 	public class EPasserbyNpcMoveTypeJsonConverter : JsonConverter<EPasserbyNpcMoveType>
 	{
-		// Token: 0x06003785 RID: 14213 RVA: 0x0009075C File Offset: 0x0008E95C
+		// Token: 0x06003B42 RID: 15170 RVA: 0x00098D18 File Offset: 0x00096F18
 		public override EPasserbyNpcMoveType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return EPasserbyNpcMoveTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x06003786 RID: 14214 RVA: 0x00090780 File Offset: 0x0008E980
+		// Token: 0x06003B43 RID: 15171 RVA: 0x00098D3C File Offset: 0x00096F3C
 		public override void Write(Utf8JsonWriter writer, EPasserbyNpcMoveType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

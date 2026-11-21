@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006D9B RID: 28059
+	// Token: 0x02007516 RID: 29974
 	public struct IPreloadPhantomCharacterForSkill : IFlatbufferObject
 	{
-		// Token: 0x1700D14B RID: 53579
-		// (get) Token: 0x0603190D RID: 203021 RVA: 0x006B7BCD File Offset: 0x006B5DCD
+		// Token: 0x1700DC93 RID: 56467
+		// (get) Token: 0x06034909 RID: 215305 RVA: 0x007132B5 File Offset: 0x007114B5
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603190E RID: 203022 RVA: 0x006B7BDA File Offset: 0x006B5DDA
+		// Token: 0x0603490A RID: 215306 RVA: 0x007132C2 File Offset: 0x007114C2
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0603190F RID: 203023 RVA: 0x006B7BE4 File Offset: 0x006B5DE4
+		// Token: 0x0603490B RID: 215307 RVA: 0x007132CC File Offset: 0x007114CC
 		public static IPreloadPhantomCharacterForSkill GetRootAsIPreloadPhantomCharacterForSkill(ByteBuffer _bb)
 		{
 			return IPreloadPhantomCharacterForSkill.GetRootAsIPreloadPhantomCharacterForSkill(_bb, default(IPreloadPhantomCharacterForSkill));
 		}
 
-		// Token: 0x06031910 RID: 203024 RVA: 0x006B7C00 File Offset: 0x006B5E00
+		// Token: 0x0603490C RID: 215308 RVA: 0x007132E8 File Offset: 0x007114E8
 		public static IPreloadPhantomCharacterForSkill GetRootAsIPreloadPhantomCharacterForSkill(ByteBuffer _bb, IPreloadPhantomCharacterForSkill obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06031911 RID: 203025 RVA: 0x006B7C1D File Offset: 0x006B5E1D
+		// Token: 0x0603490D RID: 215309 RVA: 0x00713305 File Offset: 0x00711505
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06031912 RID: 203026 RVA: 0x006B7C2C File Offset: 0x006B5E2C
+		// Token: 0x0603490E RID: 215310 RVA: 0x00713314 File Offset: 0x00711514
 		public IPreloadPhantomCharacterForSkill __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D14C RID: 53580
-		// (get) Token: 0x06031913 RID: 203027 RVA: 0x006B7C3C File Offset: 0x006B5E3C
+		// Token: 0x1700DC94 RID: 56468
+		// (get) Token: 0x0603490F RID: 215311 RVA: 0x00713324 File Offset: 0x00711524
 		public EPreloadObjectType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D14D RID: 53581
-		// (get) Token: 0x06031914 RID: 203028 RVA: 0x006B7C78 File Offset: 0x006B5E78
+		// Token: 0x1700DC95 RID: 56469
+		// (get) Token: 0x06034910 RID: 215312 RVA: 0x00713360 File Offset: 0x00711560
 		public int Id
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031915 RID: 203029 RVA: 0x006B7CB4 File Offset: 0x006B5EB4
+		// Token: 0x06034911 RID: 215313 RVA: 0x0071339C File Offset: 0x0071159C
 		public static Offset<IPreloadPhantomCharacterForSkill> CreateIPreloadPhantomCharacterForSkill(FlatBufferBuilder builder, EPreloadObjectType Type = EPreloadObjectType.PreloadTrialCharacterForSkill, int Id = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPreloadPhantomCharacterForSkill.EndIPreloadPhantomCharacterForSkill(builder);
 		}
 
-		// Token: 0x06031916 RID: 203030 RVA: 0x006B7CD1 File Offset: 0x006B5ED1
+		// Token: 0x06034912 RID: 215314 RVA: 0x007133B9 File Offset: 0x007115B9
 		public static void StartIPreloadPhantomCharacterForSkill(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06031917 RID: 203031 RVA: 0x006B7CDA File Offset: 0x006B5EDA
+		// Token: 0x06034913 RID: 215315 RVA: 0x007133C2 File Offset: 0x007115C2
 		public static void AddType(FlatBufferBuilder builder, EPreloadObjectType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06031918 RID: 203032 RVA: 0x006B7CE5 File Offset: 0x006B5EE5
+		// Token: 0x06034914 RID: 215316 RVA: 0x007133CD File Offset: 0x007115CD
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(1, id, 0);
 		}
 
-		// Token: 0x06031919 RID: 203033 RVA: 0x006B7CF0 File Offset: 0x006B5EF0
+		// Token: 0x06034915 RID: 215317 RVA: 0x007133D8 File Offset: 0x007115D8
 		public static Offset<IPreloadPhantomCharacterForSkill> EndIPreloadPhantomCharacterForSkill(FlatBufferBuilder builder)
 		{
 			return new Offset<IPreloadPhantomCharacterForSkill>(builder.EndTable());
 		}
 
-		// Token: 0x0603191A RID: 203034 RVA: 0x006B7D00 File Offset: 0x006B5F00
+		// Token: 0x06034916 RID: 215318 RVA: 0x007133E8 File Offset: 0x007115E8
 		public IPreloadPhantomCharacterForSkillT UnPack()
 		{
 			IPreloadPhantomCharacterForSkillT preloadPhantomCharacterForSkillT = new IPreloadPhantomCharacterForSkillT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return preloadPhantomCharacterForSkillT;
 		}
 
-		// Token: 0x0603191B RID: 203035 RVA: 0x006B7D1B File Offset: 0x006B5F1B
+		// Token: 0x06034917 RID: 215319 RVA: 0x00713403 File Offset: 0x00711603
 		public void UnPackTo(IPreloadPhantomCharacterForSkillT _o)
 		{
 			_o.Type = this.Type;
 			_o.Id = this.Id;
 		}
 
-		// Token: 0x0603191C RID: 203036 RVA: 0x006B7D38 File Offset: 0x006B5F38
+		// Token: 0x06034918 RID: 215320 RVA: 0x00713420 File Offset: 0x00711620
 		public static Offset<IPreloadPhantomCharacterForSkill> Pack(FlatBufferBuilder builder, IPreloadPhantomCharacterForSkillT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPreloadPhantomCharacterForSkill.CreateIPreloadPhantomCharacterForSkill(builder, _o.Type, _o.Id);
 		}
 
-		// Token: 0x0401176E RID: 71534
+		// Token: 0x040126EA RID: 75498
 		private Table __p;
 	}
 }

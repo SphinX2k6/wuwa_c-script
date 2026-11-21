@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x02000E6B RID: 3691
+// Token: 0x02000320 RID: 800
 public static class FinalBattleEntityModelConst
 {
-	// Token: 0x04002906 RID: 10502
+	// Token: 0x040029A1 RID: 10657
 	public const int ENTITY_POOL_SIZE = 100;
 }

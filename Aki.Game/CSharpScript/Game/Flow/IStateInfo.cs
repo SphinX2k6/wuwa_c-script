@@ -3,28 +3,28 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Flow
 {
-	// Token: 0x02007244 RID: 29252
+	// Token: 0x020063C3 RID: 25539
 	[NullableContext(1)]
 	public interface IStateInfo
 	{
-		// Token: 0x17009E4A RID: 40522
-		// (get) Token: 0x06047B76 RID: 293750
-		// (set) Token: 0x06047B77 RID: 293751
+		// Token: 0x170075A2 RID: 30114
+		// (get) Token: 0x0603DF2E RID: 253742
+		// (set) Token: 0x0603DF2F RID: 253743
 		int Id { get; set; }
 
-		// Token: 0x17009E4B RID: 40523
-		// (get) Token: 0x06047B78 RID: 293752
-		// (set) Token: 0x06047B79 RID: 293753
+		// Token: 0x170075A3 RID: 30115
+		// (get) Token: 0x0603DF30 RID: 253744
+		// (set) Token: 0x0603DF31 RID: 253745
 		string Name { get; set; }
 
-		// Token: 0x17009E4C RID: 40524
-		// (get) Token: 0x06047B7A RID: 293754
-		// (set) Token: 0x06047B7B RID: 293755
+		// Token: 0x170075A4 RID: 30116
+		// (get) Token: 0x0603DF32 RID: 253746
+		// (set) Token: 0x0603DF33 RID: 253747
 		bool? _folded { get; set; }
 
-		// Token: 0x17009E4D RID: 40525
-		// (get) Token: 0x06047B7C RID: 293756
-		// (set) Token: 0x06047B7D RID: 293757
+		// Token: 0x170075A5 RID: 30117
+		// (get) Token: 0x0603DF34 RID: 253748
+		// (set) Token: 0x0603DF35 RID: 253749
 		IActionInfo[] Actions { get; set; }
 	}
 }

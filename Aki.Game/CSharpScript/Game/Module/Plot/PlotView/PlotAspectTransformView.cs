@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.PlotView
 {
-	// Token: 0x0200504B RID: 20555
+	// Token: 0x0200401A RID: 16410
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PlotAspectTransformView : UiPanelBase
 	{
-		// Token: 0x060349B3 RID: 215475 RVA: 0x00C6D2C8 File Offset: 0x00C6B4C8
+		// Token: 0x06029895 RID: 170133 RVA: 0x00BBA43C File Offset: 0x00BB863C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060349B4 RID: 215476 RVA: 0x00C6D334 File Offset: 0x00C6B534
+		// Token: 0x06029896 RID: 170134 RVA: 0x00BBA4A8 File Offset: 0x00BB86A8
 		protected override void OnStart()
 		{
 			this.Texture1 = base.GetTexture(0);
@@ -57,23 +57,23 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			EventSystem.Instance.Add(EEventName.UIViewPortSizeChanged, new Action(this.OnSizeChanged));
 		}
 
-		// Token: 0x060349B5 RID: 215477 RVA: 0x00C6D3E1 File Offset: 0x00C6B5E1
+		// Token: 0x06029897 RID: 170135 RVA: 0x00BBA555 File Offset: 0x00BB8755
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove(EEventName.UIViewPortSizeChanged, new Action(this.OnSizeChanged));
 		}
 
-		// Token: 0x060349B6 RID: 215478 RVA: 0x00C6D3FC File Offset: 0x00C6B5FC
+		// Token: 0x06029898 RID: 170136 RVA: 0x00BBA570 File Offset: 0x00BB8770
 		protected override void OnBeforeShow()
 		{
 		}
 
-		// Token: 0x060349B7 RID: 215479 RVA: 0x00C6D3FE File Offset: 0x00C6B5FE
+		// Token: 0x06029899 RID: 170137 RVA: 0x00BBA572 File Offset: 0x00BB8772
 		protected override void OnAfterShow()
 		{
 		}
 
-		// Token: 0x060349B8 RID: 215480 RVA: 0x00C6D400 File Offset: 0x00C6B600
+		// Token: 0x0602989A RID: 170138 RVA: 0x00BBA574 File Offset: 0x00BB8774
 		protected override void OnBeforeHide()
 		{
 			if (this.TickHandle == -1)
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.TickHandle = -1;
 		}
 
-		// Token: 0x060349B9 RID: 215481 RVA: 0x00C6D424 File Offset: 0x00C6B624
+		// Token: 0x0602989B RID: 170139 RVA: 0x00BBA598 File Offset: 0x00BB8798
 		public void EnableAutoBlendOut(float blendTime)
 		{
 			this.BlendTime = blendTime;
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.StartBySizeChanged = true;
 		}
 
-		// Token: 0x060349BA RID: 215482 RVA: 0x00C6D454 File Offset: 0x00C6B654
+		// Token: 0x0602989C RID: 170140 RVA: 0x00BBA5C8 File Offset: 0x00BB87C8
 		public void ManualBlendOut(float blendTime, float startRatio, Action callback = null, bool autoClose = true)
 		{
 			this.BlendTime = blendTime;
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.StartTransform();
 		}
 
-		// Token: 0x060349BB RID: 215483 RVA: 0x00C6D4A4 File Offset: 0x00C6B6A4
+		// Token: 0x0602989D RID: 170141 RVA: 0x00BBA618 File Offset: 0x00BB8818
 		public void SetAspectRatio(float ratio)
 		{
 			UUITexture texture = this.Texture1;
@@ -195,7 +195,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x060349BC RID: 215484 RVA: 0x00C6D61C File Offset: 0x00C6B81C
+		// Token: 0x0602989E RID: 170142 RVA: 0x00BBA790 File Offset: 0x00BB8990
 		private void OnTick(float delta)
 		{
 			if (this.Duration > this.BlendTime)
@@ -253,7 +253,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x060349BD RID: 215485 RVA: 0x00C6D6EC File Offset: 0x00C6B8EC
+		// Token: 0x0602989F RID: 170143 RVA: 0x00BBA860 File Offset: 0x00BB8A60
 		private void OnSizeChanged()
 		{
 			if (!this.StartBySizeChanged)
@@ -267,7 +267,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.StartTransform();
 		}
 
-		// Token: 0x060349BE RID: 215486 RVA: 0x00C6D730 File Offset: 0x00C6B930
+		// Token: 0x060298A0 RID: 170144 RVA: 0x00BBA8A4 File Offset: 0x00BB8AA4
 		private void StartTransform()
 		{
 			UUITexture texture = this.Texture1;
@@ -361,53 +361,53 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.TickHandle = TickSystem.Instance.Add(new Action<float>(this.OnTick), "PlotAspectTransformView", ETickingGroup.TG_PrePhysics, false, 0, false).Id;
 		}
 
-		// Token: 0x0401C090 RID: 114832
+		// Token: 0x04016AB3 RID: 92851
 		private bool StartBySizeChanged;
 
-		// Token: 0x0401C091 RID: 114833
+		// Token: 0x04016AB4 RID: 92852
 		private UUITexture Texture1;
 
-		// Token: 0x0401C092 RID: 114834
+		// Token: 0x04016AB5 RID: 92853
 		private UUITexture Texture2;
 
-		// Token: 0x0401C093 RID: 114835
+		// Token: 0x04016AB6 RID: 92854
 		private float BeforeRatio;
 
-		// Token: 0x0401C094 RID: 114836
+		// Token: 0x04016AB7 RID: 92855
 		private float AfterRatio;
 
-		// Token: 0x0401C095 RID: 114837
+		// Token: 0x04016AB8 RID: 92856
 		private float BlendTime;
 
-		// Token: 0x0401C096 RID: 114838
+		// Token: 0x04016AB9 RID: 92857
 		private float Duration;
 
-		// Token: 0x0401C097 RID: 114839
+		// Token: 0x04016ABA RID: 92858
 		private float Speed;
 
-		// Token: 0x0401C098 RID: 114840
+		// Token: 0x04016ABB RID: 92859
 		private float CurrentValue;
 
-		// Token: 0x0401C099 RID: 114841
+		// Token: 0x04016ABC RID: 92860
 		private bool IsWidthBlend;
 
-		// Token: 0x0401C09A RID: 114842
+		// Token: 0x04016ABD RID: 92861
 		private int TickHandle = -1;
 
-		// Token: 0x0401C09B RID: 114843
+		// Token: 0x04016ABE RID: 92862
 		private bool AutoClose;
 
-		// Token: 0x0401C09C RID: 114844
+		// Token: 0x04016ABF RID: 92863
 		private Action Callback;
 
-		// Token: 0x0200B1A5 RID: 45477
+		// Token: 0x02009BDF RID: 39903
 		[NullableContext(0)]
 		private static class EChildItem
 		{
-			// Token: 0x04035DFF RID: 220671
+			// Token: 0x04030854 RID: 198740
 			public const int Texture1 = 0;
 
-			// Token: 0x04035E00 RID: 220672
+			// Token: 0x04030855 RID: 198741
 			public const int Texture2 = 1;
 		}
 	}

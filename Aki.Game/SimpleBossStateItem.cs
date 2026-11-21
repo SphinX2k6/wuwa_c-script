@@ -5,12 +5,12 @@ using CSharpScript.Game.Module.BattleUi.Views;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001CD0 RID: 7376
+// Token: 0x02001192 RID: 4498
 [NullableContext(1)]
 [Nullable(0)]
 public class SimpleBossStateItem : UiPanelBase
 {
-	// Token: 0x0600DF4C RID: 57164 RVA: 0x00344C64 File Offset: 0x00342E64
+	// Token: 0x0600B369 RID: 45929 RVA: 0x0035068C File Offset: 0x0034E88C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ public class SimpleBossStateItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600DF4D RID: 57165 RVA: 0x00344D30 File Offset: 0x00342F30
+	// Token: 0x0600B36A RID: 45930 RVA: 0x00350758 File Offset: 0x0034E958
 	protected override void OnStart()
 	{
 		this.BossNameText = base.GetText(1);
@@ -36,20 +36,20 @@ public class SimpleBossStateItem : UiPanelBase
 		base.GetSprite(14).SetUIActive(false);
 	}
 
-	// Token: 0x0600DF4E RID: 57166 RVA: 0x00344D81 File Offset: 0x00342F81
+	// Token: 0x0600B36B RID: 45931 RVA: 0x003507A9 File Offset: 0x0034E9A9
 	protected override void OnBeforeShow()
 	{
 		base.GetItem(11).SetUIActive(false);
 		base.GetText(0).SetUIActive(false);
 	}
 
-	// Token: 0x0600DF4F RID: 57167 RVA: 0x00344D9E File Offset: 0x00342F9E
+	// Token: 0x0600B36C RID: 45932 RVA: 0x003507C6 File Offset: 0x0034E9C6
 	protected override void OnBeforeHide()
 	{
 		this.StopBarLerpAnimation();
 	}
 
-	// Token: 0x0600DF50 RID: 57168 RVA: 0x00344DA8 File Offset: 0x00342FA8
+	// Token: 0x0600B36D RID: 45933 RVA: 0x003507D0 File Offset: 0x0034E9D0
 	private float GetSafeHpPercent(FKSC_HeadHpContext headInfo)
 	{
 		float num = (float)headInfo.CurHp / (float)headInfo.MaxHp;
@@ -60,7 +60,7 @@ public class SimpleBossStateItem : UiPanelBase
 		return 1f;
 	}
 
-	// Token: 0x0600DF51 RID: 57169 RVA: 0x00344DD4 File Offset: 0x00342FD4
+	// Token: 0x0600B36E RID: 45934 RVA: 0x003507FC File Offset: 0x0034E9FC
 	public void RefreshBossInfo(FKSC_HeadHpContext headInfo)
 	{
 		this.ShieldMax = (float)headInfo.Shield;
@@ -69,13 +69,13 @@ public class SimpleBossStateItem : UiPanelBase
 		this.HpStateMachine.CurrentPercent = safeHpPercent;
 	}
 
-	// Token: 0x0600DF52 RID: 57170 RVA: 0x00344E0E File Offset: 0x0034300E
+	// Token: 0x0600B36F RID: 45935 RVA: 0x00350836 File Offset: 0x0034EA36
 	public void SetBossName(string bossName)
 	{
 		this.BossNameText.ShowTextNew(bossName);
 	}
 
-	// Token: 0x0600DF53 RID: 57171 RVA: 0x00344E1C File Offset: 0x0034301C
+	// Token: 0x0600B370 RID: 45936 RVA: 0x00350844 File Offset: 0x0034EA44
 	public void UpdateHeadStateInfo(FKSC_HeadHpContext headInfo)
 	{
 		float safeHpPercent = this.GetSafeHpPercent(headInfo);
@@ -85,7 +85,7 @@ public class SimpleBossStateItem : UiPanelBase
 		this.SetShieldBarPercent((num > 1f) ? 1f : num);
 	}
 
-	// Token: 0x0600DF54 RID: 57172 RVA: 0x00344E80 File Offset: 0x00343080
+	// Token: 0x0600B371 RID: 45937 RVA: 0x003508A8 File Offset: 0x0034EAA8
 	private void PlayBarAnimation(float hpPercent)
 	{
 		if (hpPercent < this.HpStateMachine.TargetPercent)
@@ -100,14 +100,14 @@ public class SimpleBossStateItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600DF55 RID: 57173 RVA: 0x00344EEA File Offset: 0x003430EA
+	// Token: 0x0600B372 RID: 45938 RVA: 0x00350912 File Offset: 0x0034EB12
 	private void StopBarLerpAnimation()
 	{
 		base.GetItem(8).SetUIActive(false);
 		this.HpStateMachine.Reset();
 	}
 
-	// Token: 0x0600DF56 RID: 57174 RVA: 0x00344F04 File Offset: 0x00343104
+	// Token: 0x0600B373 RID: 45939 RVA: 0x0035092C File Offset: 0x0034EB2C
 	private void SetBarBufferPercent(float percent)
 	{
 		UUISprite hpBufferSprite = this.HpBufferSprite;
@@ -118,7 +118,7 @@ public class SimpleBossStateItem : UiPanelBase
 		hpBufferSprite.SetFillAmount(percent);
 	}
 
-	// Token: 0x0600DF57 RID: 57175 RVA: 0x00344F17 File Offset: 0x00343117
+	// Token: 0x0600B374 RID: 45940 RVA: 0x0035093F File Offset: 0x0034EB3F
 	private void SetShieldBarPercent(float percent)
 	{
 		if (percent > 0f)
@@ -130,7 +130,7 @@ public class SimpleBossStateItem : UiPanelBase
 		this.ShieldBarSprite.SetUIActive(false);
 	}
 
-	// Token: 0x0600DF58 RID: 57176 RVA: 0x00344F48 File Offset: 0x00343148
+	// Token: 0x0600B375 RID: 45941 RVA: 0x00350970 File Offset: 0x0034EB70
 	public void OnTick(float delta)
 	{
 		if (!this.HpStateMachine.IsOriginState())
@@ -148,150 +148,150 @@ public class SimpleBossStateItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x040066B4 RID: 26292
+	// Token: 0x04006793 RID: 26515
 	[Nullable(2)]
 	private UUIText BossNameText;
 
-	// Token: 0x040066B5 RID: 26293
+	// Token: 0x04006794 RID: 26516
 	[Nullable(2)]
 	private UUISprite HpBarSprite;
 
-	// Token: 0x040066B6 RID: 26294
+	// Token: 0x04006795 RID: 26517
 	[Nullable(2)]
 	private UUISprite ShieldBarSprite;
 
-	// Token: 0x040066B7 RID: 26295
+	// Token: 0x04006796 RID: 26518
 	[Nullable(2)]
 	private UUISprite HpBufferSprite;
 
-	// Token: 0x040066B8 RID: 26296
+	// Token: 0x04006797 RID: 26519
 	private float ShieldMax;
 
-	// Token: 0x040066B9 RID: 26297
+	// Token: 0x04006798 RID: 26520
 	private readonly HpBufferStateMachine HpStateMachine = new HpBufferStateMachine();
 
-	// Token: 0x020082D2 RID: 33490
+	// Token: 0x0200745B RID: 29787
 	[NullableContext(0)]
 	private static class EChildComponentType
 	{
-		// Token: 0x0402AAC6 RID: 174790
+		// Token: 0x04025DEE RID: 155118
 		public const int BossLevelText = 0;
 
-		// Token: 0x0402AAC7 RID: 174791
+		// Token: 0x04025DEF RID: 155119
 		public const int BossNameText = 1;
 
-		// Token: 0x0402AAC8 RID: 174792
+		// Token: 0x04025DF0 RID: 155120
 		public const int RageItem = 2;
 
-		// Token: 0x0402AAC9 RID: 174793
+		// Token: 0x04025DF1 RID: 155121
 		public const int ToughBg = 3;
 
-		// Token: 0x0402AACA RID: 174794
+		// Token: 0x04025DF2 RID: 155122
 		public const int RageBar = 4;
 
-		// Token: 0x0402AACB RID: 174795
+		// Token: 0x04025DF3 RID: 155123
 		public const int HpShieldBarItem = 5;
 
-		// Token: 0x0402AACC RID: 174796
+		// Token: 0x04025DF4 RID: 155124
 		public const int HpBarItem = 6;
 
-		// Token: 0x0402AACD RID: 174797
+		// Token: 0x04025DF5 RID: 155125
 		public const int NormalHpBarSprite = 7;
 
-		// Token: 0x0402AACE RID: 174798
+		// Token: 0x04025DF6 RID: 155126
 		public const int BarBufferCanvas = 8;
 
-		// Token: 0x0402AACF RID: 174799
+		// Token: 0x04025DF7 RID: 155127
 		public const int BarBufferSprite = 9;
 
-		// Token: 0x0402AAD0 RID: 174800
+		// Token: 0x04025DF8 RID: 155128
 		public const int ShieldBarSprite = 10;
 
-		// Token: 0x0402AAD1 RID: 174801
+		// Token: 0x04025DF9 RID: 155129
 		public const int ToughItem = 11;
 
-		// Token: 0x0402AAD2 RID: 174802
+		// Token: 0x04025DFA RID: 155130
 		public const int MaxHardnessEffect = 12;
 
-		// Token: 0x0402AAD3 RID: 174803
+		// Token: 0x04025DFB RID: 155131
 		public const int BuffHorizontalItem = 13;
 
-		// Token: 0x0402AAD4 RID: 174804
+		// Token: 0x04025DFC RID: 155132
 		public const int HpLight = 14;
 
-		// Token: 0x0402AAD5 RID: 174805
+		// Token: 0x04025DFD RID: 155133
 		public const int HardnessNormal = 15;
 
-		// Token: 0x0402AAD6 RID: 174806
+		// Token: 0x04025DFE RID: 155134
 		public const int HardnessBreak = 16;
 
-		// Token: 0x0402AAD7 RID: 174807
+		// Token: 0x04025DFF RID: 155135
 		public const int FallDownItem = 17;
 
-		// Token: 0x0402AAD8 RID: 174808
+		// Token: 0x04025E00 RID: 155136
 		public const int FallDownBar = 18;
 
-		// Token: 0x0402AAD9 RID: 174809
+		// Token: 0x04025E01 RID: 155137
 		public const int FallDownBarSign = 19;
 
-		// Token: 0x0402AADA RID: 174810
+		// Token: 0x04025E02 RID: 155138
 		public const int RageReduceLittle = 20;
 
-		// Token: 0x0402AADB RID: 174811
+		// Token: 0x04025E03 RID: 155139
 		public const int HpFlicker = 21;
 
-		// Token: 0x0402AADC RID: 174812
+		// Token: 0x04025E04 RID: 155140
 		public const int RageReduceLargeCanvas = 22;
 
-		// Token: 0x0402AADD RID: 174813
+		// Token: 0x04025E05 RID: 155141
 		public const int RageReduceLarge = 23;
 
-		// Token: 0x0402AADE RID: 174814
+		// Token: 0x04025E06 RID: 155142
 		public const int RageEmpty = 24;
 
-		// Token: 0x0402AADF RID: 174815
+		// Token: 0x04025E07 RID: 155143
 		public const int AnimSmallHit = 25;
 
-		// Token: 0x0402AAE0 RID: 174816
+		// Token: 0x04025E08 RID: 155144
 		public const int AnimBigHit = 26;
 
-		// Token: 0x0402AAE1 RID: 174817
+		// Token: 0x04025E09 RID: 155145
 		public const int AnimToughStart = 27;
 
-		// Token: 0x0402AAE2 RID: 174818
+		// Token: 0x04025E0A RID: 155146
 		public const int AnimToughHit = 28;
 
-		// Token: 0x0402AAE3 RID: 174819
+		// Token: 0x04025E0B RID: 155147
 		public const int AnimToughFlick = 29;
 
-		// Token: 0x0402AAE4 RID: 174820
+		// Token: 0x04025E0C RID: 155148
 		public const int AnimToughClose = 30;
 
-		// Token: 0x0402AAE5 RID: 174821
+		// Token: 0x04025E0D RID: 155149
 		public const int AnimBreak = 31;
 
-		// Token: 0x0402AAE6 RID: 174822
+		// Token: 0x04025E0E RID: 155150
 		public const int ExtraItem = 32;
 
-		// Token: 0x0402AAE7 RID: 174823
+		// Token: 0x04025E0F RID: 155151
 		public const int BloodModeIcon = 33;
 
-		// Token: 0x0402AAE8 RID: 174824
+		// Token: 0x04025E10 RID: 155152
 		public const int WeaknessContainer = 34;
 
-		// Token: 0x0402AAE9 RID: 174825
+		// Token: 0x04025E11 RID: 155153
 		public const int HpWeaknessNode = 35;
 
-		// Token: 0x0402AAEA RID: 174826
+		// Token: 0x04025E12 RID: 155154
 		public const int HpWeaknessSprite1 = 36;
 
-		// Token: 0x0402AAEB RID: 174827
+		// Token: 0x04025E13 RID: 155155
 		public const int HpWeaknessEffect = 37;
 
-		// Token: 0x0402AAEC RID: 174828
+		// Token: 0x04025E14 RID: 155156
 		public const int AniHpWeaknessFull = 38;
 
-		// Token: 0x0402AAED RID: 174829
+		// Token: 0x04025E15 RID: 155157
 		public const int AniHpWeaknessBreak = 39;
 	}
 }

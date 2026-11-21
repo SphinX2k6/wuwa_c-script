@@ -6,22 +6,22 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001E3E RID: 7742
+	// Token: 0x02000591 RID: 1425
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroSimpleCombat.KSC_Skill")]
 	[UnrealStructLayout(168, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 168)]
 	public abstract class UKSC_Skill : UKSC_BaseObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601D7F9 RID: 120825 RVA: 0x002B8DAA File Offset: 0x002B6FAA
+		// Token: 0x06008101 RID: 33025 RVA: 0x000BE6AC File Offset: 0x000BC8AC
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKSC_Skill._ClassPtr;
 		}
 
-		// Token: 0x170076D8 RID: 30424
-		// (get) Token: 0x0601D7FA RID: 120826 RVA: 0x002B8DB6 File Offset: 0x002B6FB6
-		// (set) Token: 0x0601D7FB RID: 120827 RVA: 0x002B8DCA File Offset: 0x002B6FCA
+		// Token: 0x1700191E RID: 6430
+		// (get) Token: 0x06008102 RID: 33026 RVA: 0x000BE6B8 File Offset: 0x000BC8B8
+		// (set) Token: 0x06008103 RID: 33027 RVA: 0x000BE6CC File Offset: 0x000BC8CC
 		public unsafe UKSC_DA_Skill DaSkill_
 		{
 			get
@@ -34,9 +34,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170076D9 RID: 30425
-		// (get) Token: 0x0601D7FC RID: 120828 RVA: 0x002B8DDF File Offset: 0x002B6FDF
-		// (set) Token: 0x0601D7FD RID: 120829 RVA: 0x002B8DF3 File Offset: 0x002B6FF3
+		// Token: 0x1700191F RID: 6431
+		// (get) Token: 0x06008104 RID: 33028 RVA: 0x000BE6E1 File Offset: 0x000BC8E1
+		// (set) Token: 0x06008105 RID: 33029 RVA: 0x000BE6F5 File Offset: 0x000BC8F5
 		public unsafe UKSC_SkillComp Caster_
 		{
 			get
@@ -49,9 +49,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170076DA RID: 30426
-		// (get) Token: 0x0601D7FE RID: 120830 RVA: 0x002B8E08 File Offset: 0x002B7008
-		// (set) Token: 0x0601D7FF RID: 120831 RVA: 0x002B8E1C File Offset: 0x002B701C
+		// Token: 0x17001920 RID: 6432
+		// (get) Token: 0x06008106 RID: 33030 RVA: 0x000BE70A File Offset: 0x000BC90A
+		// (set) Token: 0x06008107 RID: 33031 RVA: 0x000BE71E File Offset: 0x000BC91E
 		public unsafe UKSC_SkillComp Target_
 		{
 			get
@@ -64,9 +64,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170076DB RID: 30427
-		// (get) Token: 0x0601D800 RID: 120832 RVA: 0x002B8E34 File Offset: 0x002B7034
-		// (set) Token: 0x0601D801 RID: 120833 RVA: 0x002B8E6D File Offset: 0x002B706D
+		// Token: 0x17001921 RID: 6433
+		// (get) Token: 0x06008108 RID: 33032 RVA: 0x000BE734 File Offset: 0x000BC934
+		// (set) Token: 0x06008109 RID: 33033 RVA: 0x000BE76D File Offset: 0x000BC96D
 		[Nullable(1)]
 		public TArray<UKSC_SkillComp> Targets_
 		{
@@ -88,9 +88,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170076DC RID: 30428
-		// (get) Token: 0x0601D802 RID: 120834 RVA: 0x002B8E7B File Offset: 0x002B707B
-		// (set) Token: 0x0601D803 RID: 120835 RVA: 0x002B8E8B File Offset: 0x002B708B
+		// Token: 0x17001922 RID: 6434
+		// (get) Token: 0x0600810A RID: 33034 RVA: 0x000BE77B File Offset: 0x000BC97B
+		// (set) Token: 0x0600810B RID: 33035 RVA: 0x000BE78B File Offset: 0x000BC98B
 		public unsafe EKSC_Skill_State SkillState_
 		{
 			get
@@ -103,65 +103,65 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601D804 RID: 120836 RVA: 0x002B8E9C File Offset: 0x002B709C
+		// Token: 0x0600810C RID: 33036 RVA: 0x000BE79C File Offset: 0x000BC99C
 		public float GetSkillCoolDownRemain()
 		{
 			return UKSC_Skill.__GetSkillCoolDownRemain_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601D805 RID: 120837 RVA: 0x002B8EA9 File Offset: 0x002B70A9
+		// Token: 0x0600810D RID: 33037 RVA: 0x000BE7A9 File Offset: 0x000BC9A9
 		public float GetSkillCoolDownMax()
 		{
 			return UKSC_Skill.__GetSkillCoolDownMax_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601D806 RID: 120838
+		// Token: 0x0600810E RID: 33038
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetSkillCoolDownRemain_Internal(IntPtr @this);
 
-		// Token: 0x0601D807 RID: 120839
+		// Token: 0x0600810F RID: 33039
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetSkillCoolDownMax_Internal(IntPtr @this);
 
-		// Token: 0x0601D808 RID: 120840 RVA: 0x002B8EB6 File Offset: 0x002B70B6
+		// Token: 0x06008110 RID: 33040 RVA: 0x000BE7B6 File Offset: 0x000BC9B6
 		static UKSC_Skill()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroSimpleCombat.KSC_Skill");
 		}
 
-		// Token: 0x0601D809 RID: 120841 RVA: 0x002B8EC4 File Offset: 0x002B70C4
+		// Token: 0x06008111 RID: 33041 RVA: 0x000BE7C4 File Offset: 0x000BC9C4
 		protected UKSC_Skill() : this(BuiltinUtils.AllocNativeUObject(UKSC_Skill.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601D80A RID: 120842 RVA: 0x002B8EEC File Offset: 0x002B70EC
+		// Token: 0x06008112 RID: 33042 RVA: 0x000BE7EC File Offset: 0x000BC9EC
 		protected UKSC_Skill(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400FFD1 RID: 65489
+		// Token: 0x0400384A RID: 14410
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroSimpleCombat.KSC_Skill";
 
-		// Token: 0x0400FFD2 RID: 65490
+		// Token: 0x0400384B RID: 14411
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400FFD3 RID: 65491
+		// Token: 0x0400384C RID: 14412
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400FFD4 RID: 65492
+		// Token: 0x0400384D RID: 14413
 		internal static int __PropertyOffset_DaSkill_;
 
-		// Token: 0x0400FFD5 RID: 65493
+		// Token: 0x0400384E RID: 14414
 		internal static int __PropertyOffset_Caster_;
 
-		// Token: 0x0400FFD6 RID: 65494
+		// Token: 0x0400384F RID: 14415
 		internal static int __PropertyOffset_Target_;
 
-		// Token: 0x0400FFD7 RID: 65495
+		// Token: 0x04003850 RID: 14416
 		internal static int __PropertyOffset_Targets_;
 
-		// Token: 0x0400FFD8 RID: 65496
+		// Token: 0x04003851 RID: 14417
 		[Nullable(new byte[]
 		{
 			2,
@@ -169,7 +169,7 @@ namespace UnrealEngine
 		})]
 		private TArray<UKSC_SkillComp> _Targets_;
 
-		// Token: 0x0400FFD9 RID: 65497
+		// Token: 0x04003852 RID: 14418
 		internal static int __PropertyOffset_SkillState_;
 	}
 }

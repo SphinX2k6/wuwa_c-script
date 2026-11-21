@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002701 RID: 9985
+	// Token: 0x020007D6 RID: 2006
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FOnDialogueEvent : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06025075 RID: 151669 RVA: 0x0036C832 File Offset: 0x0036AA32
+		// Token: 0x0600ACDA RID: 44250 RVA: 0x000FF38E File Offset: 0x000FD58E
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnDialogueEvent.StaticFunctionPtr();
 		}
 
-		// Token: 0x06025076 RID: 151670 RVA: 0x0036C83E File Offset: 0x0036AA3E
+		// Token: 0x0600ACDB RID: 44251 RVA: 0x000FF39A File Offset: 0x000FD59A
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnDialogueEvent._FunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace UnrealEngine
 			return FOnDialogueEvent._FunctionPtr;
 		}
 
-		// Token: 0x06025077 RID: 151671 RVA: 0x0036C861 File Offset: 0x0036AA61
+		// Token: 0x0600ACDC RID: 44252 RVA: 0x000FF3BD File Offset: 0x000FD5BD
 		public FOnDialogueEvent()
 		{
 		}
 
-		// Token: 0x06025078 RID: 151672 RVA: 0x0036C869 File Offset: 0x0036AA69
+		// Token: 0x0600ACDD RID: 44253 RVA: 0x000FF3C5 File Offset: 0x000FD5C5
 		[NullableContext(2)]
 		public FOnDialogueEvent(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06025079 RID: 151673 RVA: 0x0036C873 File Offset: 0x0036AA73
+		// Token: 0x0600ACDE RID: 44254 RVA: 0x000FF3CF File Offset: 0x000FD5CF
 		public FOnDialogueEvent(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602507A RID: 151674 RVA: 0x0036C87E File Offset: 0x0036AA7E
+		// Token: 0x0600ACDF RID: 44255 RVA: 0x000FF3DA File Offset: 0x000FD5DA
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<bool, FText, int, int, int, ELanguageAudio, int>) ?? ((Action<bool, FText, int, int, int, ELanguageAudio, int>)Delegate.CreateDelegate(typeof(Action<bool, FText, int, int, int, ELanguageAudio, int>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0602507B RID: 151675 RVA: 0x0036C8B0 File Offset: 0x0036AAB0
+		// Token: 0x0600ACE0 RID: 44256 RVA: 0x000FF40C File Offset: 0x000FD60C
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action<bool, FText, int, int, int, ELanguageAudio, int> Callback)
 		{
 			if (FOnDialogueEvent.RegisterId == 0)
@@ -67,18 +66,16 @@ namespace UnrealEngine
 			base.Add(Callback, FOnDialogueEvent.RegisterId);
 		}
 
-		// Token: 0x0602507C RID: 151676 RVA: 0x0036C8EA File Offset: 0x0036AAEA
+		// Token: 0x0600ACE1 RID: 44257 RVA: 0x000FF446 File Offset: 0x000FD646
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action<bool, FText, int, int, int, ELanguageAudio, int> Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0602507D RID: 151677 RVA: 0x0036C8F4 File Offset: 0x0036AAF4
+		// Token: 0x0600ACE2 RID: 44258 RVA: 0x000FF450 File Offset: 0x000FD650
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(bool bShow, in FText DialogueID, int GuardTime, int AudioDelay, int AudioTransitionDuration, ELanguageAudio LanguageType, int AutoPlayDelay)
 		{
 			FOnDialogueEvent.__FOnDialogueEvent_DelegateParams* ptr = stackalloc FOnDialogueEvent.__FOnDialogueEvent_DelegateParams[(UIntPtr)71] + 15L / (long)sizeof(FOnDialogueEvent.__FOnDialogueEvent_DelegateParams) & -16L;
@@ -94,10 +91,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FOnDialogueEvent._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0602507E RID: 151678 RVA: 0x0036C97C File Offset: 0x0036AB7C
+		// Token: 0x0600ACE3 RID: 44259 RVA: 0x000FF4D8 File Offset: 0x000FD6D8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<bool, FText, int, int, int, ELanguageAudio, int> action = target as Action<bool, FText, int, int, int, ELanguageAudio, int>;
@@ -109,55 +105,55 @@ namespace UnrealEngine
 			action(((FOnDialogueEvent.__FOnDialogueEvent_DelegateParams*)__Parameters)->bShow, arg, ((FOnDialogueEvent.__FOnDialogueEvent_DelegateParams*)__Parameters)->GuardTime, ((FOnDialogueEvent.__FOnDialogueEvent_DelegateParams*)__Parameters)->AudioDelay, ((FOnDialogueEvent.__FOnDialogueEvent_DelegateParams*)__Parameters)->AudioTransitionDuration, ((FOnDialogueEvent.__FOnDialogueEvent_DelegateParams*)__Parameters)->LanguageType, ((FOnDialogueEvent.__FOnDialogueEvent_DelegateParams*)__Parameters)->AutoPlayDelay);
 		}
 
-		// Token: 0x04013F3B RID: 81723
+		// Token: 0x04004A8B RID: 19083
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04013F3C RID: 81724
+		// Token: 0x04004A8C RID: 19084
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/SequenceDialogue.OnDialogueEvent__DelegateSignature";
 
-		// Token: 0x04013F3D RID: 81725
+		// Token: 0x04004A8D RID: 19085
 		private static int RegisterId;
 
-		// Token: 0x0200369C RID: 13980
+		// Token: 0x02000F77 RID: 3959
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 56)]
-		protected ref struct __FOnDialogueEvent_DelegateParams
+		private ref struct __FOnDialogueEvent_DelegateParams
 		{
-			// Token: 0x0401779D RID: 96157
+			// Token: 0x0400635F RID: 25439
 			[FieldOffset(0)]
 			public bool bShow;
 
-			// Token: 0x0401779E RID: 96158
+			// Token: 0x04006360 RID: 25440
 			[FieldOffset(8)]
 			public byte DialogueID;
 
-			// Token: 0x0401779F RID: 96159
+			// Token: 0x04006361 RID: 25441
 			[FieldOffset(32)]
 			public int GuardTime;
 
-			// Token: 0x040177A0 RID: 96160
+			// Token: 0x04006362 RID: 25442
 			[FieldOffset(36)]
 			public int AudioDelay;
 
-			// Token: 0x040177A1 RID: 96161
+			// Token: 0x04006363 RID: 25443
 			[FieldOffset(40)]
 			public int AudioTransitionDuration;
 
-			// Token: 0x040177A2 RID: 96162
+			// Token: 0x04006364 RID: 25444
 			[FieldOffset(44)]
 			public ELanguageAudio LanguageType;
 
-			// Token: 0x040177A3 RID: 96163
+			// Token: 0x04006365 RID: 25445
 			[FieldOffset(48)]
 			public int AutoPlayDelay;
 		}
 
-		// Token: 0x0200369D RID: 13981
+		// Token: 0x02000F78 RID: 3960
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040177A4 RID: 96164
+			// Token: 0x04006366 RID: 25446
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

@@ -1,24 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200082A RID: 2090
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020008CD RID: 2253
 	public class LevelSequenceFrameEventComponent_SetValue
 	{
-		// Token: 0x04001E1E RID: 7710
+		// Token: 0x0400202A RID: 8234
 		public bool? Disabled;
 
-		// Token: 0x04001E1F RID: 7711
+		// Token: 0x0400202B RID: 8235
 		public bool? EdIsLocked;
 
-		// Token: 0x04001E20 RID: 7712
+		// Token: 0x0400202C RID: 8236
 		public List<ILevelSequenceSectionInfo> ForwardSections;
 
-		// Token: 0x04001E21 RID: 7713
+		// Token: 0x0400202D RID: 8237
 		public List<ILevelSequenceSectionInfo> BackWardSections;
 	}
 }

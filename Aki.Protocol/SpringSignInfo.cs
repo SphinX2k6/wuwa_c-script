@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001281 RID: 4737
+	// Token: 0x020012F0 RID: 4848
 	public sealed class SpringSignInfo : IMessage<SpringSignInfo>, IMessage, IEquatable<SpringSignInfo>, IDeepCloneable<SpringSignInfo>, IBufferMessage
 	{
-		// Token: 0x060193AA RID: 103338 RVA: 0x003AB8B7 File Offset: 0x003A9AB7
+		// Token: 0x06019DE0 RID: 105952 RVA: 0x003C5FE8 File Offset: 0x003C41E8
 		[NullableContext(1)]
 		public static SpringSignInfo Create()
 		{
 			return new SpringSignInfo();
 		}
 
-		// Token: 0x1700551C RID: 21788
-		// (get) Token: 0x060193AB RID: 103339 RVA: 0x003AB8BE File Offset: 0x003A9ABE
+		// Token: 0x1700579D RID: 22429
+		// (get) Token: 0x06019DE1 RID: 105953 RVA: 0x003C5FEF File Offset: 0x003C41EF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700551D RID: 21789
-		// (get) Token: 0x060193AC RID: 103340 RVA: 0x003AB8C1 File Offset: 0x003A9AC1
+		// Token: 0x1700579E RID: 22430
+		// (get) Token: 0x06019DE2 RID: 105954 RVA: 0x003C5FF2 File Offset: 0x003C41F2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060193AD RID: 103341 RVA: 0x003AB8C8 File Offset: 0x003A9AC8
+		// Token: 0x06019DE3 RID: 105955 RVA: 0x003C5FF9 File Offset: 0x003C41F9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SpringSignInfo()
 		{
 		}
 
-		// Token: 0x060193AE RID: 103342 RVA: 0x003AB8E8 File Offset: 0x003A9AE8
+		// Token: 0x06019DE4 RID: 105956 RVA: 0x003C6018 File Offset: 0x003C4218
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SpringSignInfo(SpringSignInfo other) : this()
@@ -61,7 +61,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060193AF RID: 103343 RVA: 0x003AB946 File Offset: 0x003A9B46
+		// Token: 0x06019DE5 RID: 105957 RVA: 0x003C6076 File Offset: 0x003C4276
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public SpringSignInfo Clone()
@@ -69,8 +69,8 @@ namespace Aki.Protocol
 			return new SpringSignInfo(this);
 		}
 
-		// Token: 0x1700551E RID: 21790
-		// (get) Token: 0x060193B0 RID: 103344 RVA: 0x003AB94E File Offset: 0x003A9B4E
+		// Token: 0x1700579F RID: 22431
+		// (get) Token: 0x06019DE6 RID: 105958 RVA: 0x003C607E File Offset: 0x003C427E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<ActivityTask> SpringSignActivityTasks
@@ -81,9 +81,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700551F RID: 21791
-		// (get) Token: 0x060193B1 RID: 103345 RVA: 0x003AB956 File Offset: 0x003A9B56
-		// (set) Token: 0x060193B2 RID: 103346 RVA: 0x003AB95E File Offset: 0x003A9B5E
+		// Token: 0x170057A0 RID: 22432
+		// (get) Token: 0x06019DE7 RID: 105959 RVA: 0x003C6086 File Offset: 0x003C4286
+		// (set) Token: 0x06019DE8 RID: 105960 RVA: 0x003C608E File Offset: 0x003C428E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool CanInvite
@@ -98,8 +98,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005520 RID: 21792
-		// (get) Token: 0x060193B3 RID: 103347 RVA: 0x003AB967 File Offset: 0x003A9B67
+		// Token: 0x170057A1 RID: 22433
+		// (get) Token: 0x06019DE9 RID: 105961 RVA: 0x003C6097 File Offset: 0x003C4297
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> DrawRoles
@@ -110,9 +110,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005521 RID: 21793
-		// (get) Token: 0x060193B4 RID: 103348 RVA: 0x003AB96F File Offset: 0x003A9B6F
-		// (set) Token: 0x060193B5 RID: 103349 RVA: 0x003AB977 File Offset: 0x003A9B77
+		// Token: 0x170057A2 RID: 22434
+		// (get) Token: 0x06019DEA RID: 105962 RVA: 0x003C609F File Offset: 0x003C429F
+		// (set) Token: 0x06019DEB RID: 105963 RVA: 0x003C60A7 File Offset: 0x003C42A7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool SkinReward
@@ -127,7 +127,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060193B6 RID: 103350 RVA: 0x003AB980 File Offset: 0x003A9B80
+		// Token: 0x06019DEC RID: 105964 RVA: 0x003C60B0 File Offset: 0x003C42B0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -135,7 +135,7 @@ namespace Aki.Protocol
 			return this.Equals(other as SpringSignInfo);
 		}
 
-		// Token: 0x060193B7 RID: 103351 RVA: 0x003AB990 File Offset: 0x003A9B90
+		// Token: 0x06019DED RID: 105965 RVA: 0x003C60C0 File Offset: 0x003C42C0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(SpringSignInfo other)
@@ -143,7 +143,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.springSignActivityTasks_.Equals(other.springSignActivityTasks_) && this.CanInvite == other.CanInvite && this.drawRoles_.Equals(other.drawRoles_) && this.SkinReward == other.SkinReward && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060193B8 RID: 103352 RVA: 0x003ABA04 File Offset: 0x003A9C04
+		// Token: 0x06019DEE RID: 105966 RVA: 0x003C6134 File Offset: 0x003C4334
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -166,7 +166,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060193B9 RID: 103353 RVA: 0x003ABA78 File Offset: 0x003A9C78
+		// Token: 0x06019DEF RID: 105967 RVA: 0x003C61A8 File Offset: 0x003C43A8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -174,7 +174,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060193BA RID: 103354 RVA: 0x003ABA85 File Offset: 0x003A9C85
+		// Token: 0x06019DF0 RID: 105968 RVA: 0x003C61B5 File Offset: 0x003C43B5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -182,7 +182,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060193BB RID: 103355 RVA: 0x003ABA90 File Offset: 0x003A9C90
+		// Token: 0x06019DF1 RID: 105969 RVA: 0x003C61C0 File Offset: 0x003C43C0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -205,7 +205,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060193BC RID: 103356 RVA: 0x003ABB0C File Offset: 0x003A9D0C
+		// Token: 0x06019DF2 RID: 105970 RVA: 0x003C623C File Offset: 0x003C443C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -228,7 +228,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060193BD RID: 103357 RVA: 0x003ABB70 File Offset: 0x003A9D70
+		// Token: 0x06019DF3 RID: 105971 RVA: 0x003C62A0 File Offset: 0x003C44A0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(SpringSignInfo other)
@@ -250,7 +250,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060193BE RID: 103358 RVA: 0x003ABBE2 File Offset: 0x003A9DE2
+		// Token: 0x06019DF4 RID: 105972 RVA: 0x003C6312 File Offset: 0x003C4512
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -258,7 +258,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060193BF RID: 103359 RVA: 0x003ABBEC File Offset: 0x003A9DEC
+		// Token: 0x06019DF5 RID: 105973 RVA: 0x003C631C File Offset: 0x003C451C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -300,37 +300,37 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400946E RID: 37998
+		// Token: 0x04009898 RID: 39064
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400946F RID: 37999
+		// Token: 0x04009899 RID: 39065
 		public const int SpringSignActivityTasksFieldNumber = 1;
 
-		// Token: 0x04009470 RID: 38000
+		// Token: 0x0400989A RID: 39066
 		private static readonly FieldCodec<ActivityTask> _repeated_springSignActivityTasks_codec = FieldCodec.ForMessage<ActivityTask>(10U, ActivityTask.Parser);
 
-		// Token: 0x04009471 RID: 38001
+		// Token: 0x0400989B RID: 39067
 		private readonly RepeatedField<ActivityTask> springSignActivityTasks_ = new RepeatedField<ActivityTask>();
 
-		// Token: 0x04009472 RID: 38002
+		// Token: 0x0400989C RID: 39068
 		public const int CanInviteFieldNumber = 2;
 
-		// Token: 0x04009473 RID: 38003
+		// Token: 0x0400989D RID: 39069
 		private bool canInvite_;
 
-		// Token: 0x04009474 RID: 38004
+		// Token: 0x0400989E RID: 39070
 		public const int DrawRolesFieldNumber = 3;
 
-		// Token: 0x04009475 RID: 38005
+		// Token: 0x0400989F RID: 39071
 		private static readonly FieldCodec<int> _repeated_drawRoles_codec = FieldCodec.ForInt32(26U);
 
-		// Token: 0x04009476 RID: 38006
+		// Token: 0x040098A0 RID: 39072
 		private readonly RepeatedField<int> drawRoles_ = new RepeatedField<int>();
 
-		// Token: 0x04009477 RID: 38007
+		// Token: 0x040098A1 RID: 39073
 		public const int SkinRewardFieldNumber = 4;
 
-		// Token: 0x04009478 RID: 38008
+		// Token: 0x040098A2 RID: 39074
 		private bool skinReward_;
 	}
 }

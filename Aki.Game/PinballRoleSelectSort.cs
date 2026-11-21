@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001891 RID: 6289
+// Token: 0x02000D4A RID: 3402
 [NullableContext(1)]
 [Nullable(0)]
 public class PinballRoleSelectSort : CommonSort<EPinballRoleSelectSortWayType>
 {
-	// Token: 0x0600B84B RID: 47179 RVA: 0x0029CC28 File Offset: 0x0029AE28
+	// Token: 0x06008C34 RID: 35892 RVA: 0x002A7340 File Offset: 0x002A5540
 	private int SortId(object a, object b, bool isAscending, params object[] parameters)
 	{
 		IPinballRoleSelectGridItemData pinballRoleSelectGridItemData = (IPinballRoleSelectGridItemData)a;
@@ -20,7 +20,7 @@ public class PinballRoleSelectSort : CommonSort<EPinballRoleSelectSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B84C RID: 47180 RVA: 0x0029CC6C File Offset: 0x0029AE6C
+	// Token: 0x06008C35 RID: 35893 RVA: 0x002A7384 File Offset: 0x002A5584
 	private int SortLevel(object a, object b, bool isAscending, params object[] parameters)
 	{
 		IPinballRoleSelectGridItemData pinballRoleSelectGridItemData = (IPinballRoleSelectGridItemData)a;
@@ -34,7 +34,7 @@ public class PinballRoleSelectSort : CommonSort<EPinballRoleSelectSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B84D RID: 47181 RVA: 0x0029CCB0 File Offset: 0x0029AEB0
+	// Token: 0x06008C36 RID: 35894 RVA: 0x002A73C8 File Offset: 0x002A55C8
 	private int SortLockState(object a, object b, bool isAscending, params object[] parameters)
 	{
 		IPinballRoleSelectGridItemData pinballRoleSelectGridItemData = (IPinballRoleSelectGridItemData)a;
@@ -52,7 +52,7 @@ public class PinballRoleSelectSort : CommonSort<EPinballRoleSelectSortWayType>
 		return 1;
 	}
 
-	// Token: 0x0600B84E RID: 47182 RVA: 0x0029CCF0 File Offset: 0x0029AEF0
+	// Token: 0x06008C37 RID: 35895 RVA: 0x002A7408 File Offset: 0x002A5608
 	private int SortFormationFirst(object a, object b, bool isAscending, params object[] parameters)
 	{
 		IPinballRoleSelectGridItemData pinballRoleSelectGridItemData = (IPinballRoleSelectGridItemData)a;
@@ -77,7 +77,7 @@ public class PinballRoleSelectSort : CommonSort<EPinballRoleSelectSortWayType>
 		}
 	}
 
-	// Token: 0x0600B84F RID: 47183 RVA: 0x0029CD44 File Offset: 0x0029AF44
+	// Token: 0x06008C38 RID: 35896 RVA: 0x002A745C File Offset: 0x002A565C
 	protected override void OnInitSortMap()
 	{
 		this.SortMap[EPinballRoleSelectSortWayType.Id] = new TSortResult(this.SortId);

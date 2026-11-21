@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200102D RID: 4141
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001159 RID: 4441
 	public class INumberWordArtEffectiveTargetType : IWordArtEffectiveTargetType
 	{
-		// Token: 0x06005C5E RID: 23646 RVA: 0x000DFBB0 File Offset: 0x000DDDB0
+		// Token: 0x06006240 RID: 25152 RVA: 0x000EC8A8 File Offset: 0x000EAAA8
 		private INumberWordArtEffectiveTargetType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005C5F RID: 23647 RVA: 0x000DFBE8 File Offset: 0x000DDDE8
+		// Token: 0x06006241 RID: 25153 RVA: 0x000EC8E0 File Offset: 0x000EAAE0
 		public static INumberWordArtEffectiveTargetType Create([Nullable(2)] INumberWordArtEffectiveTargetType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005C60 RID: 23648 RVA: 0x000DFBFB File Offset: 0x000DDDFB
+		// Token: 0x06006242 RID: 25154 RVA: 0x000EC8F3 File Offset: 0x000EAAF3
 		public static INumberWordArtEffectiveTargetType CreateFromSetValue([Nullable(2)] INumberWordArtEffectiveTargetType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005C61 RID: 23649 RVA: 0x000DFC0E File Offset: 0x000DDE0E
+		// Token: 0x06006243 RID: 25155 RVA: 0x000EC906 File Offset: 0x000EAB06
 		public new INumberWordArtEffectiveTargetType_SetValue ToSetValue()
 		{
 			return new INumberWordArtEffectiveTargetType_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001E6D RID: 7789
-		// (get) Token: 0x06005C62 RID: 23650 RVA: 0x000DFC2D File Offset: 0x000DDE2D
-		// (set) Token: 0x06005C63 RID: 23651 RVA: 0x000DFC58 File Offset: 0x000DDE58
+		// Token: 0x17002017 RID: 8215
+		// (get) Token: 0x06006244 RID: 25156 RVA: 0x000EC925 File Offset: 0x000EAB25
+		// (set) Token: 0x06006245 RID: 25157 RVA: 0x000EC950 File Offset: 0x000EAB50
 		public override EWordArtEffectiveTargetType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001E6E RID: 7790
-		// (get) Token: 0x06005C64 RID: 23652 RVA: 0x000DFC68 File Offset: 0x000DDE68
-		// (set) Token: 0x06005C65 RID: 23653 RVA: 0x000DFCA2 File Offset: 0x000DDEA2
+		// Token: 0x17002018 RID: 8216
+		// (get) Token: 0x06006246 RID: 25158 RVA: 0x000EC960 File Offset: 0x000EAB60
+		// (set) Token: 0x06006247 RID: 25159 RVA: 0x000EC99A File Offset: 0x000EAB9A
 		public virtual bool? ShowUiMotion
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003790 RID: 14224
+		// Token: 0x04003ACB RID: 15051
 		[Nullable(2)]
 		protected new INumberWordArtEffectiveTargetType FbInstance;
 
-		// Token: 0x04003791 RID: 14225
+		// Token: 0x04003ACC RID: 15052
 		[Nullable(2)]
 		protected new INumberWordArtEffectiveTargetType_SetValue PocoInterface;
 	}

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200055E RID: 1374
+	// Token: 0x02000574 RID: 1396
 	public class ConfigMoonLabelById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002041 RID: 8257 RVA: 0x0010FB9C File Offset: 0x0010DD9C
+		// Token: 0x060020C5 RID: 8389 RVA: 0x001162F0 File Offset: 0x001144F0
 		static ConfigMoonLabelById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMoonLabelById.CreateStaticDefaultValue), new Action(ConfigMoonLabelById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002042 RID: 8258 RVA: 0x0010FBBC File Offset: 0x0010DDBC
+		// Token: 0x060020C6 RID: 8390 RVA: 0x00116310 File Offset: 0x00114510
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMoonLabelById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002043 RID: 8259 RVA: 0x0010FC3B File Offset: 0x0010DE3B
+		// Token: 0x060020C7 RID: 8391 RVA: 0x0011638F File Offset: 0x0011458F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMoonLabelById.LogPair = null;
 			ConfigMoonLabelById.HandleId = 0;
 		}
 
-		// Token: 0x06002044 RID: 8260 RVA: 0x0010FC49 File Offset: 0x0010DE49
+		// Token: 0x060020C8 RID: 8392 RVA: 0x0011639D File Offset: 0x0011459D
 		public static void Init()
 		{
 			ConfigMoonLabelById.HandleId = ConfigCommon.InitDataStatement(ConfigMoonLabelById.HandleId, "db_moonsignin.db", "select BinData from `MoonLabel` where Id=?");
 		}
 
-		// Token: 0x06002045 RID: 8261 RVA: 0x0010FC64 File Offset: 0x0010DE64
+		// Token: 0x060020C9 RID: 8393 RVA: 0x001163B8 File Offset: 0x001145B8
 		public static MoonLabel? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigMoonLabelById.HandleId, ConfigMoonLabelById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new MoonLabel?(rootAsMoonLabel);
 		}
 
-		// Token: 0x04002576 RID: 9590
+		// Token: 0x04002610 RID: 9744
 		private const string DB = "db_moonsignin.db";
 
-		// Token: 0x04002577 RID: 9591
+		// Token: 0x04002611 RID: 9745
 		private const string FILE = "y.月相活动.xlsx";
 
-		// Token: 0x04002578 RID: 9592
+		// Token: 0x04002612 RID: 9746
 		private const string TABLE = "MoonLabel";
 
-		// Token: 0x04002579 RID: 9593
+		// Token: 0x04002613 RID: 9747
 		private const string COMMAND = "select BinData from `MoonLabel` where Id=?";
 
-		// Token: 0x0400257A RID: 9594
+		// Token: 0x04002614 RID: 9748
 		private const string KEY_PREFIX = "MoonLabelById";
 
-		// Token: 0x0400257B RID: 9595
+		// Token: 0x04002615 RID: 9749
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400257C RID: 9596
+		// Token: 0x04002616 RID: 9750
 		private static int HandleId;
 	}
 }

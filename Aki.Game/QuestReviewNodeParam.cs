@@ -1,63 +1,63 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200266E RID: 9838
+// Token: 0x02001B59 RID: 7001
 [NullableContext(1)]
 [Nullable(0)]
 public class QuestReviewNodeParam : IQuestReviewNodeParam
 {
-	// Token: 0x170019CA RID: 6602
-	// (get) Token: 0x06014277 RID: 82551 RVA: 0x0051750E File Offset: 0x0051570E
-	// (set) Token: 0x06014278 RID: 82552 RVA: 0x00517516 File Offset: 0x00515716
+	// Token: 0x17001A02 RID: 6658
+	// (get) Token: 0x06011759 RID: 71513 RVA: 0x00526266 File Offset: 0x00524466
+	// (set) Token: 0x0601175A RID: 71514 RVA: 0x0052626E File Offset: 0x0052446E
 	[Nullable(2)]
 	public QuestReviewNodeData Data { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-	// Token: 0x170019CB RID: 6603
-	// (get) Token: 0x06014279 RID: 82553 RVA: 0x0051751F File Offset: 0x0051571F
-	// (set) Token: 0x0601427A RID: 82554 RVA: 0x00517527 File Offset: 0x00515727
+	// Token: 0x17001A03 RID: 6659
+	// (get) Token: 0x0601175B RID: 71515 RVA: 0x00526277 File Offset: 0x00524477
+	// (set) Token: 0x0601175C RID: 71516 RVA: 0x0052627F File Offset: 0x0052447F
 	public bool IsLastSlotEmpty { get; set; }
 
-	// Token: 0x170019CC RID: 6604
-	// (get) Token: 0x0601427B RID: 82555 RVA: 0x00517530 File Offset: 0x00515730
-	// (set) Token: 0x0601427C RID: 82556 RVA: 0x00517538 File Offset: 0x00515738
+	// Token: 0x17001A04 RID: 6660
+	// (get) Token: 0x0601175D RID: 71517 RVA: 0x00526288 File Offset: 0x00524488
+	// (set) Token: 0x0601175E RID: 71518 RVA: 0x00526290 File Offset: 0x00524490
 	public bool IsDestroy { get; set; }
 
-	// Token: 0x170019CD RID: 6605
-	// (get) Token: 0x0601427D RID: 82557 RVA: 0x00517541 File Offset: 0x00515741
-	// (set) Token: 0x0601427E RID: 82558 RVA: 0x00517549 File Offset: 0x00515749
+	// Token: 0x17001A05 RID: 6661
+	// (get) Token: 0x0601175F RID: 71519 RVA: 0x00526299 File Offset: 0x00524499
+	// (set) Token: 0x06011760 RID: 71520 RVA: 0x005262A1 File Offset: 0x005244A1
 	public bool IsLastSlot { get; set; }
 
-	// Token: 0x170019CE RID: 6606
-	// (get) Token: 0x0601427F RID: 82559 RVA: 0x00517552 File Offset: 0x00515752
-	// (set) Token: 0x06014280 RID: 82560 RVA: 0x0051755A File Offset: 0x0051575A
+	// Token: 0x17001A06 RID: 6662
+	// (get) Token: 0x06011761 RID: 71521 RVA: 0x005262AA File Offset: 0x005244AA
+	// (set) Token: 0x06011762 RID: 71522 RVA: 0x005262B2 File Offset: 0x005244B2
 	public string LineColorHex { get; set; }
 
-	// Token: 0x170019CF RID: 6607
-	// (get) Token: 0x06014281 RID: 82561 RVA: 0x00517563 File Offset: 0x00515763
-	// (set) Token: 0x06014282 RID: 82562 RVA: 0x0051756B File Offset: 0x0051576B
+	// Token: 0x17001A07 RID: 6663
+	// (get) Token: 0x06011763 RID: 71523 RVA: 0x005262BB File Offset: 0x005244BB
+	// (set) Token: 0x06011764 RID: 71524 RVA: 0x005262C3 File Offset: 0x005244C3
 	public string StarIcon { get; set; }
 
-	// Token: 0x170019D0 RID: 6608
-	// (get) Token: 0x06014283 RID: 82563 RVA: 0x00517574 File Offset: 0x00515774
-	// (set) Token: 0x06014284 RID: 82564 RVA: 0x0051757C File Offset: 0x0051577C
+	// Token: 0x17001A08 RID: 6664
+	// (get) Token: 0x06011765 RID: 71525 RVA: 0x005262CC File Offset: 0x005244CC
+	// (set) Token: 0x06011766 RID: 71526 RVA: 0x005262D4 File Offset: 0x005244D4
 	public string RoundIcon { get; set; }
 
-	// Token: 0x170019D1 RID: 6609
-	// (get) Token: 0x06014285 RID: 82565 RVA: 0x00517585 File Offset: 0x00515785
-	// (set) Token: 0x06014286 RID: 82566 RVA: 0x0051758D File Offset: 0x0051578D
+	// Token: 0x17001A09 RID: 6665
+	// (get) Token: 0x06011767 RID: 71527 RVA: 0x005262DD File Offset: 0x005244DD
+	// (set) Token: 0x06011768 RID: 71528 RVA: 0x005262E5 File Offset: 0x005244E5
 	public int LineId { get; set; }
 
-	// Token: 0x170019D2 RID: 6610
-	// (get) Token: 0x06014287 RID: 82567 RVA: 0x00517596 File Offset: 0x00515796
-	// (set) Token: 0x06014288 RID: 82568 RVA: 0x0051759E File Offset: 0x0051579E
+	// Token: 0x17001A0A RID: 6666
+	// (get) Token: 0x06011769 RID: 71529 RVA: 0x005262EE File Offset: 0x005244EE
+	// (set) Token: 0x0601176A RID: 71530 RVA: 0x005262F6 File Offset: 0x005244F6
 	public bool ShouldHide { get; set; }
 
-	// Token: 0x170019D3 RID: 6611
-	// (get) Token: 0x06014289 RID: 82569 RVA: 0x005175A7 File Offset: 0x005157A7
-	// (set) Token: 0x0601428A RID: 82570 RVA: 0x005175AF File Offset: 0x005157AF
+	// Token: 0x17001A0B RID: 6667
+	// (get) Token: 0x0601176B RID: 71531 RVA: 0x005262FF File Offset: 0x005244FF
+	// (set) Token: 0x0601176C RID: 71532 RVA: 0x00526307 File Offset: 0x00524507
 	public int SlotIndex { get; set; }
 
-	// Token: 0x0601428B RID: 82571 RVA: 0x005175B8 File Offset: 0x005157B8
+	// Token: 0x0601176D RID: 71533 RVA: 0x00526310 File Offset: 0x00524510
 	public QuestReviewNodeParam()
 	{
 		this.LineColorHex = string.Empty;

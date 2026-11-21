@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000658 RID: 1624
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020006F5 RID: 1781
 	public class IRandomPoolConfig
 	{
-		// Token: 0x060022BE RID: 8894 RVA: 0x0005F6F0 File Offset: 0x0005D8F0
+		// Token: 0x060025C4 RID: 9668 RVA: 0x00066404 File Offset: 0x00064604
 		private IRandomPoolConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060022BF RID: 8895 RVA: 0x0005F728 File Offset: 0x0005D928
+		// Token: 0x060025C5 RID: 9669 RVA: 0x0006643C File Offset: 0x0006463C
 		public static IRandomPoolConfig Create([Nullable(2)] IRandomPoolConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060022C0 RID: 8896 RVA: 0x0005F73B File Offset: 0x0005D93B
+		// Token: 0x060025C6 RID: 9670 RVA: 0x0006644F File Offset: 0x0006464F
 		public static IRandomPoolConfig CreateFromSetValue([Nullable(2)] IRandomPoolConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060022C1 RID: 8897 RVA: 0x0005F74E File Offset: 0x0005D94E
+		// Token: 0x060025C7 RID: 9671 RVA: 0x00066462 File Offset: 0x00064662
 		public IRandomPoolConfig_SetValue ToSetValue()
 		{
 			return new IRandomPoolConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700093A RID: 2362
-		// (get) Token: 0x060022C2 RID: 8898 RVA: 0x0005F76D File Offset: 0x0005D96D
-		// (set) Token: 0x060022C3 RID: 8899 RVA: 0x0005F798 File Offset: 0x0005D998
+		// Token: 0x170009F1 RID: 2545
+		// (get) Token: 0x060025C8 RID: 9672 RVA: 0x00066481 File Offset: 0x00064681
+		// (set) Token: 0x060025C9 RID: 9673 RVA: 0x000664AC File Offset: 0x000646AC
 		public virtual int Id
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700093B RID: 2363
-		// (get) Token: 0x060022C4 RID: 8900 RVA: 0x0005F7A6 File Offset: 0x0005D9A6
-		// (set) Token: 0x060022C5 RID: 8901 RVA: 0x0005F7D1 File Offset: 0x0005D9D1
+		// Token: 0x170009F2 RID: 2546
+		// (get) Token: 0x060025CA RID: 9674 RVA: 0x000664BA File Offset: 0x000646BA
+		// (set) Token: 0x060025CB RID: 9675 RVA: 0x000664E5 File Offset: 0x000646E5
 		public virtual int Count
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001820 RID: 6176
+		// Token: 0x04001A12 RID: 6674
 		[Nullable(2)]
 		protected IRandomPoolConfig FbInstance;
 
-		// Token: 0x04001821 RID: 6177
+		// Token: 0x04001A13 RID: 6675
 		[Nullable(2)]
 		protected IRandomPoolConfig_SetValue PocoInterface;
 	}

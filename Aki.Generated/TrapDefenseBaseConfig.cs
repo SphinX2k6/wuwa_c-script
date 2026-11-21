@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02001156 RID: 4438
+	// Token: 0x0200128C RID: 4748
 	public struct TrapDefenseBaseConfig : IFlatbufferObject
 	{
-		// Token: 0x17003BC2 RID: 15298
-		// (get) Token: 0x0600E26E RID: 57966 RVA: 0x003361A1 File Offset: 0x003343A1
+		// Token: 0x17003F26 RID: 16166
+		// (get) Token: 0x0600EFDC RID: 61404 RVA: 0x0036132D File Offset: 0x0035F52D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E26F RID: 57967 RVA: 0x003361AE File Offset: 0x003343AE
+		// Token: 0x0600EFDD RID: 61405 RVA: 0x0036133A File Offset: 0x0035F53A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600E270 RID: 57968 RVA: 0x003361B8 File Offset: 0x003343B8
+		// Token: 0x0600EFDE RID: 61406 RVA: 0x00361344 File Offset: 0x0035F544
 		public static TrapDefenseBaseConfig GetRootAsTrapDefenseBaseConfig(ByteBuffer _bb)
 		{
 			return TrapDefenseBaseConfig.GetRootAsTrapDefenseBaseConfig(_bb, default(TrapDefenseBaseConfig));
 		}
 
-		// Token: 0x0600E271 RID: 57969 RVA: 0x003361D4 File Offset: 0x003343D4
+		// Token: 0x0600EFDF RID: 61407 RVA: 0x00361360 File Offset: 0x0035F560
 		public static TrapDefenseBaseConfig GetRootAsTrapDefenseBaseConfig(ByteBuffer _bb, TrapDefenseBaseConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600E272 RID: 57970 RVA: 0x003361F1 File Offset: 0x003343F1
+		// Token: 0x0600EFE0 RID: 61408 RVA: 0x0036137D File Offset: 0x0035F57D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600E273 RID: 57971 RVA: 0x00336200 File Offset: 0x00334400
+		// Token: 0x0600EFE1 RID: 61409 RVA: 0x0036138C File Offset: 0x0035F58C
 		public TrapDefenseBaseConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003BC3 RID: 15299
-		// (get) Token: 0x0600E274 RID: 57972 RVA: 0x00336210 File Offset: 0x00334410
+		// Token: 0x17003F27 RID: 16167
+		// (get) Token: 0x0600EFE2 RID: 61410 RVA: 0x0036139C File Offset: 0x0035F59C
 		public int ActivityId
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003BC4 RID: 15300
-		// (get) Token: 0x0600E275 RID: 57973 RVA: 0x0033624C File Offset: 0x0033444C
+		// Token: 0x17003F28 RID: 16168
+		// (get) Token: 0x0600EFE3 RID: 61411 RVA: 0x003613D8 File Offset: 0x0035F5D8
 		public int TechPointItem
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003BC5 RID: 15301
-		// (get) Token: 0x0600E276 RID: 57974 RVA: 0x00336288 File Offset: 0x00334488
+		// Token: 0x17003F29 RID: 16169
+		// (get) Token: 0x0600EFE4 RID: 61412 RVA: 0x00361414 File Offset: 0x0035F614
 		public int ShopId
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003BC6 RID: 15302
-		// (get) Token: 0x0600E277 RID: 57975 RVA: 0x003362C4 File Offset: 0x003344C4
+		// Token: 0x17003F2A RID: 16170
+		// (get) Token: 0x0600EFE5 RID: 61413 RVA: 0x00361450 File Offset: 0x0035F650
 		public int ShopItemId
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0400529B RID: 21147
+		// Token: 0x040058DE RID: 22750
 		private Table __p;
 	}
 }

@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002184 RID: 8580
+// Token: 0x02001668 RID: 5736
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class LogReportModel : ModelBase
 {
-	// Token: 0x06010AB8 RID: 68280 RVA: 0x0040C7E0 File Offset: 0x0040A9E0
+	// Token: 0x0600DF49 RID: 57161 RVA: 0x004190BC File Offset: 0x004172BC
 	protected override bool OnInit()
 	{
 		this.TimerAssemblyLogDataMap.Add("1012", new ExploreToolAssemblyLogData("1001"));
@@ -19,8 +19,8 @@ public class LogReportModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x17001522 RID: 5410
-	// (get) Token: 0x06010AB9 RID: 68281 RVA: 0x0040C856 File Offset: 0x0040AA56
+	// Token: 0x17001559 RID: 5465
+	// (get) Token: 0x0600DF4A RID: 57162 RVA: 0x00419132 File Offset: 0x00417332
 	public double HangUpTime
 	{
 		get
@@ -29,7 +29,7 @@ public class LogReportModel : ModelBase
 		}
 	}
 
-	// Token: 0x06010ABA RID: 68282 RVA: 0x0040C860 File Offset: 0x0040AA60
+	// Token: 0x0600DF4B RID: 57163 RVA: 0x0041913C File Offset: 0x0041733C
 	public void RecordOperateTime(bool isCheck = false, string key = "", double value = 0.0)
 	{
 		double serverTimeStamp = TimeUtil.Instance.GetServerTimeStamp();
@@ -57,26 +57,26 @@ public class LogReportModel : ModelBase
 		this.LastOperateTime = serverTimeStamp;
 	}
 
-	// Token: 0x06010ABB RID: 68283 RVA: 0x0040C910 File Offset: 0x0040AB10
+	// Token: 0x0600DF4C RID: 57164 RVA: 0x004191EC File Offset: 0x004173EC
 	public void SetTimerAssemblyLogData(string eventId, AssemblyLogData assemblyLogData)
 	{
 		this.TimerAssemblyLogDataMap[eventId] = assemblyLogData;
 	}
 
-	// Token: 0x06010ABC RID: 68284 RVA: 0x0040C91F File Offset: 0x0040AB1F
+	// Token: 0x0600DF4D RID: 57165 RVA: 0x004191FB File Offset: 0x004173FB
 	[return: Nullable(2)]
 	public AssemblyLogData GetTimerAssemblyLogData(string eventId)
 	{
 		return this.TimerAssemblyLogDataMap.GetValueOrDefault(eventId);
 	}
 
-	// Token: 0x06010ABD RID: 68285 RVA: 0x0040C92D File Offset: 0x0040AB2D
+	// Token: 0x0600DF4E RID: 57166 RVA: 0x00419209 File Offset: 0x00417409
 	public ICollection<AssemblyLogData> GetAllTimerAssemblyLogData()
 	{
 		return this.TimerAssemblyLogDataMap.Values;
 	}
 
-	// Token: 0x06010ABE RID: 68286 RVA: 0x0040C93C File Offset: 0x0040AB3C
+	// Token: 0x0600DF4F RID: 57167 RVA: 0x00419218 File Offset: 0x00417418
 	public PresetProperties GetPresetProperties()
 	{
 		PresetProperties presetProperties = new PresetProperties();
@@ -89,8 +89,8 @@ public class LogReportModel : ModelBase
 		return presetProperties;
 	}
 
-	// Token: 0x17001523 RID: 5411
-	// (get) Token: 0x06010ABF RID: 68287 RVA: 0x0040C99A File Offset: 0x0040AB9A
+	// Token: 0x1700155A RID: 5466
+	// (get) Token: 0x0600DF50 RID: 57168 RVA: 0x00419276 File Offset: 0x00417476
 	public static LogReportModel Instance
 	{
 		get
@@ -99,7 +99,7 @@ public class LogReportModel : ModelBase
 		}
 	}
 
-	// Token: 0x06010AC0 RID: 68288 RVA: 0x0040C9A1 File Offset: 0x0040ABA1
+	// Token: 0x0600DF51 RID: 57169 RVA: 0x0041927D File Offset: 0x0041747D
 	public static LogReportModel GetOrCreateInstance()
 	{
 		if (LogReportModel._Instance == null)
@@ -109,7 +109,7 @@ public class LogReportModel : ModelBase
 		return LogReportModel._Instance;
 	}
 
-	// Token: 0x06010AC1 RID: 68289 RVA: 0x0040C9B5 File Offset: 0x0040ABB5
+	// Token: 0x0600DF52 RID: 57170 RVA: 0x00419291 File Offset: 0x00417491
 	public static bool CreateInstance()
 	{
 		if (LogReportModel._Instance != null)
@@ -120,39 +120,39 @@ public class LogReportModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06010AC2 RID: 68290 RVA: 0x0040C9CB File Offset: 0x0040ABCB
+	// Token: 0x0600DF53 RID: 57171 RVA: 0x004192A7 File Offset: 0x004174A7
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06010AC3 RID: 68291 RVA: 0x0040C9CD File Offset: 0x0040ABCD
+	// Token: 0x0600DF54 RID: 57172 RVA: 0x004192A9 File Offset: 0x004174A9
 	public static void ResetStaticDefaultValue()
 	{
 		LogReportModel._Instance = null;
 	}
 
-	// Token: 0x06010AC4 RID: 68292 RVA: 0x0040C9D5 File Offset: 0x0040ABD5
+	// Token: 0x0600DF55 RID: 57173 RVA: 0x004192B1 File Offset: 0x004174B1
 	static LogReportModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(LogReportModel.CreateStaticDefaultValue), new Action(LogReportModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04007EF1 RID: 32497
+	// Token: 0x04008038 RID: 32824
 	private const int RECORD_HANG_UP_OFFSET = 30;
 
-	// Token: 0x04007EF2 RID: 32498
+	// Token: 0x04008039 RID: 32825
 	private double LastOperateTime;
 
-	// Token: 0x04007EF3 RID: 32499
+	// Token: 0x0400803A RID: 32826
 	private double HangUpTimeInternal;
 
-	// Token: 0x04007EF4 RID: 32500
+	// Token: 0x0400803B RID: 32827
 	private readonly Dictionary<string, double> HangUpRecord = new Dictionary<string, double>();
 
-	// Token: 0x04007EF5 RID: 32501
+	// Token: 0x0400803C RID: 32828
 	private readonly Dictionary<string, AssemblyLogData> TimerAssemblyLogDataMap = new Dictionary<string, AssemblyLogData>();
 
-	// Token: 0x04007EF6 RID: 32502
+	// Token: 0x0400803D RID: 32829
 	[Nullable(2)]
 	private static LogReportModel _Instance;
 }

@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x0200245D RID: 9309
+// Token: 0x02001942 RID: 6466
 [NullableContext(1)]
 [Nullable(0)]
 public class PhantomInteractInfoData
 {
-	// Token: 0x06012AEA RID: 76522 RVA: 0x0049CAE5 File Offset: 0x0049ACE5
+	// Token: 0x0600FFA2 RID: 65442 RVA: 0x004AA251 File Offset: 0x004A8451
 	private int GridSortFunc(IPhantomInteractGridData a, IPhantomInteractGridData b)
 	{
 		return a.SortId - b.SortId;
 	}
 
-	// Token: 0x06012AEB RID: 76523 RVA: 0x0049CAF4 File Offset: 0x0049ACF4
+	// Token: 0x0600FFA3 RID: 65443 RVA: 0x004AA260 File Offset: 0x004A8460
 	public void LoadFromProto(PhantomInteractionUnlockNotify proto)
 	{
 		this.EquippedMonsterIdMap.Clear();
@@ -70,7 +70,7 @@ public class PhantomInteractInfoData
 		}
 	}
 
-	// Token: 0x06012AEC RID: 76524 RVA: 0x0049CCEC File Offset: 0x0049AEEC
+	// Token: 0x0600FFA4 RID: 65444 RVA: 0x004AA458 File Offset: 0x004A8658
 	public bool UpdateFromProto(PhantomInteractionInfoUpdateNotify proto)
 	{
 		UnlockIllustratedPhantom unlockIllustratedPhantom = proto.UnlockIllustratedPhantom;
@@ -93,15 +93,15 @@ public class PhantomInteractInfoData
 		return true;
 	}
 
-	// Token: 0x04008CB1 RID: 36017
+	// Token: 0x04008DF8 RID: 36344
 	public Dictionary<int, int> EquippedMonsterIdMap = new Dictionary<int, int>();
 
-	// Token: 0x04008CB2 RID: 36018
+	// Token: 0x04008DF9 RID: 36345
 	public List<PhantomInteractItemData> EquippedVisionData = new List<PhantomInteractItemData>();
 
-	// Token: 0x04008CB3 RID: 36019
+	// Token: 0x04008DFA RID: 36346
 	public List<IPhantomInteractGridData> GridItemDataList = new List<IPhantomInteractGridData>();
 
-	// Token: 0x04008CB4 RID: 36020
+	// Token: 0x04008DFB RID: 36347
 	public Dictionary<int, PhantomInteractGridData> GridItemDataMap = new Dictionary<int, PhantomInteractGridData>();
 }

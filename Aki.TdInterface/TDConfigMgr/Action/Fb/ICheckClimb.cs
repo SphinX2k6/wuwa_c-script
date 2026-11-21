@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002721 RID: 10017
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020029EB RID: 10731
 	public class ICheckClimb
 	{
-		// Token: 0x0600DF64 RID: 57188 RVA: 0x00211A6A File Offset: 0x0020FC6A
+		// Token: 0x0600ED5C RID: 60764 RVA: 0x0022E4FC File Offset: 0x0022C6FC
 		public static ICheckClimb Create(ICheckClimb? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170042E4 RID: 17124
-		// (get) Token: 0x0600DF65 RID: 57189 RVA: 0x00211A89 File Offset: 0x0020FC89
+		// Token: 0x17004634 RID: 17972
+		// (get) Token: 0x0600ED5D RID: 60765 RVA: 0x0022E51B File Offset: 0x0022C71B
 		public virtual VectorInfo Direction
 		{
 			get
@@ -39,8 +37,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170042E5 RID: 17125
-		// (get) Token: 0x0600DF66 RID: 57190 RVA: 0x00211ABD File Offset: 0x0020FCBD
+		// Token: 0x17004635 RID: 17973
+		// (get) Token: 0x0600ED5E RID: 60766 RVA: 0x0022E54F File Offset: 0x0022C74F
 		public virtual int Distance
 		{
 			get
@@ -49,8 +47,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170042E6 RID: 17126
-		// (get) Token: 0x0600DF67 RID: 57191 RVA: 0x00211ACC File Offset: 0x0020FCCC
+		// Token: 0x17004636 RID: 17974
+		// (get) Token: 0x0600ED5F RID: 60767 RVA: 0x0022E55C File Offset: 0x0022C75C
 		public virtual int? FallBackClimbPointId
 		{
 			get
@@ -63,14 +61,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007BF7 RID: 31735
+		// Token: 0x040082A1 RID: 33441
 		private ICheckClimb Instance;
 
-		// Token: 0x04007BF8 RID: 31736
+		// Token: 0x040082A2 RID: 33442
 		[Nullable(2)]
 		private VectorInfo _DirectionCache;
 
-		// Token: 0x04007BF9 RID: 31737
+		// Token: 0x040082A3 RID: 33443
 		private bool _DirectionInited;
 	}
 }

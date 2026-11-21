@@ -5,17 +5,17 @@ using CSharpScript.Game.Camera;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B63 RID: 27491
+	// Token: 0x02005CDB RID: 23771
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventRestoreCameraLookAtPosition : LevelEventBase
 	{
-		// Token: 0x060441F6 RID: 279030 RVA: 0x010C4F06 File Offset: 0x010C3106
+		// Token: 0x0603A348 RID: 238408 RVA: 0x0106EAD6 File Offset: 0x0106CCD6
 		public LevelEventRestoreCameraLookAtPosition(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060441F7 RID: 279031 RVA: 0x010C4F18 File Offset: 0x010C3118
+		// Token: 0x0603A349 RID: 238409 RVA: 0x0106EAE8 File Offset: 0x0106CCE8
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			if (this.EnableDebugLog)
@@ -34,13 +34,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x060441F8 RID: 279032 RVA: 0x010C4F77 File Offset: 0x010C3177
+		// Token: 0x0603A34A RID: 238410 RVA: 0x0106EB47 File Offset: 0x0106CD47
 		protected override void ExecuteInGm(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x04023940 RID: 145728
+		// Token: 0x0401EBE2 RID: 125922
 		private readonly bool EnableDebugLog = true;
 	}
 }

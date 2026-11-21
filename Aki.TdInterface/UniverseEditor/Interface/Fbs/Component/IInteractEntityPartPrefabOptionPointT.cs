@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005453 RID: 21587
+	// Token: 0x020059D9 RID: 23001
 	public class IInteractEntityPartPrefabOptionPointT
 	{
-		// Token: 0x17009EEF RID: 40687
-		// (get) Token: 0x06023823 RID: 145443 RVA: 0x004E9BC2 File Offset: 0x004E7DC2
-		// (set) Token: 0x06023824 RID: 145444 RVA: 0x004E9BCA File Offset: 0x004E7DCA
+		// Token: 0x1700A729 RID: 42793
+		// (get) Token: 0x060258DB RID: 153819 RVA: 0x00526C36 File Offset: 0x00524E36
+		// (set) Token: 0x060258DC RID: 153820 RVA: 0x00526C3E File Offset: 0x00524E3E
 		public string UiStyle { get; set; }
 
-		// Token: 0x17009EF0 RID: 40688
-		// (get) Token: 0x06023825 RID: 145445 RVA: 0x004E9BD3 File Offset: 0x004E7DD3
-		// (set) Token: 0x06023826 RID: 145446 RVA: 0x004E9BDB File Offset: 0x004E7DDB
+		// Token: 0x1700A72A RID: 42794
+		// (get) Token: 0x060258DD RID: 153821 RVA: 0x00526C47 File Offset: 0x00524E47
+		// (set) Token: 0x060258DE RID: 153822 RVA: 0x00526C4F File Offset: 0x00524E4F
 		public string BindName { get; set; }
 
-		// Token: 0x06023827 RID: 145447 RVA: 0x004E9BE4 File Offset: 0x004E7DE4
+		// Token: 0x060258DF RID: 153823 RVA: 0x00526C58 File Offset: 0x00524E58
 		public IInteractEntityPartPrefabOptionPointT()
 		{
 			this.UiStyle = null;

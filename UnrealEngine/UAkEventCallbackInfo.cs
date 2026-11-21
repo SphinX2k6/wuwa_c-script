@@ -6,31 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000202 RID: 514
+	// Token: 0x020000C0 RID: 192
 	[UnrealObjectPath("/Script/AkAudio.AkEventCallbackInfo")]
 	[UnrealStructLayout(64, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 64)]
 	public class UAkEventCallbackInfo : UAkCallbackInfo, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06001E3E RID: 7742 RVA: 0x0002CD8D File Offset: 0x0002AF8D
+		// Token: 0x06000E42 RID: 3650 RVA: 0x00016403 File Offset: 0x00014603
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UAkEventCallbackInfo._ClassPtr;
 		}
 
-		// Token: 0x06001E3F RID: 7743 RVA: 0x0002CD9C File Offset: 0x0002AF9C
+		// Token: 0x06000E43 RID: 3651 RVA: 0x00016410 File Offset: 0x00014610
 		public UAkEventCallbackInfo() : this(BuiltinUtils.AllocNativeUObject(UAkEventCallbackInfo.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06001E40 RID: 7744 RVA: 0x0002CDC4 File Offset: 0x0002AFC4
+		// Token: 0x06000E44 RID: 3652 RVA: 0x00016438 File Offset: 0x00014638
 		[NullableContext(1)]
 		public UAkEventCallbackInfo(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UAkEventCallbackInfo.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17000792 RID: 1938
-		// (get) Token: 0x06001E41 RID: 7745 RVA: 0x0002CDF7 File Offset: 0x0002AFF7
-		// (set) Token: 0x06001E42 RID: 7746 RVA: 0x0002CE07 File Offset: 0x0002B007
+		// Token: 0x17000134 RID: 308
+		// (get) Token: 0x06000E45 RID: 3653 RVA: 0x0001646B File Offset: 0x0001466B
+		// (set) Token: 0x06000E46 RID: 3654 RVA: 0x0001647B File Offset: 0x0001467B
 		public unsafe int PlayingID
 		{
 			get
@@ -43,9 +43,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17000793 RID: 1939
-		// (get) Token: 0x06001E43 RID: 7747 RVA: 0x0002CE18 File Offset: 0x0002B018
-		// (set) Token: 0x06001E44 RID: 7748 RVA: 0x0002CE28 File Offset: 0x0002B028
+		// Token: 0x17000135 RID: 309
+		// (get) Token: 0x06000E47 RID: 3655 RVA: 0x0001648C File Offset: 0x0001468C
+		// (set) Token: 0x06000E48 RID: 3656 RVA: 0x0001649C File Offset: 0x0001469C
 		public unsafe int EventID
 		{
 			get
@@ -58,31 +58,31 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06001E45 RID: 7749 RVA: 0x0002CE39 File Offset: 0x0002B039
+		// Token: 0x06000E49 RID: 3657 RVA: 0x000164AD File Offset: 0x000146AD
 		static UAkEventCallbackInfo()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/AkAudio.AkEventCallbackInfo");
 		}
 
-		// Token: 0x06001E46 RID: 7750 RVA: 0x0002CE47 File Offset: 0x0002B047
+		// Token: 0x06000E4A RID: 3658 RVA: 0x000164BB File Offset: 0x000146BB
 		protected UAkEventCallbackInfo(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04000A09 RID: 2569
+		// Token: 0x040002C6 RID: 710
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/AkAudio.AkEventCallbackInfo";
 
-		// Token: 0x04000A0A RID: 2570
+		// Token: 0x040002C7 RID: 711
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04000A0B RID: 2571
+		// Token: 0x040002C8 RID: 712
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04000A0C RID: 2572
+		// Token: 0x040002C9 RID: 713
 		internal static int __PropertyOffset_PlayingID;
 
-		// Token: 0x04000A0D RID: 2573
+		// Token: 0x040002CA RID: 714
 		internal static int __PropertyOffset_EventID;
 	}
 }

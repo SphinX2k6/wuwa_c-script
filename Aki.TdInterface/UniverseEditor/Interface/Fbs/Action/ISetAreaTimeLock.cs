@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006FA8 RID: 28584
+	// Token: 0x0200776E RID: 30574
 	public struct ISetAreaTimeLock : IFlatbufferObject
 	{
-		// Token: 0x1700D443 RID: 54339
-		// (get) Token: 0x06032839 RID: 206905 RVA: 0x006D13D4 File Offset: 0x006CF5D4
+		// Token: 0x1700E012 RID: 57362
+		// (get) Token: 0x06035A89 RID: 219785 RVA: 0x00730D8C File Offset: 0x0072EF8C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603283A RID: 206906 RVA: 0x006D13E1 File Offset: 0x006CF5E1
+		// Token: 0x06035A8A RID: 219786 RVA: 0x00730D99 File Offset: 0x0072EF99
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0603283B RID: 206907 RVA: 0x006D13E8 File Offset: 0x006CF5E8
+		// Token: 0x06035A8B RID: 219787 RVA: 0x00730DA0 File Offset: 0x0072EFA0
 		public static ISetAreaTimeLock GetRootAsISetAreaTimeLock(ByteBuffer _bb)
 		{
 			return ISetAreaTimeLock.GetRootAsISetAreaTimeLock(_bb, default(ISetAreaTimeLock));
 		}
 
-		// Token: 0x0603283C RID: 206908 RVA: 0x006D1404 File Offset: 0x006CF604
+		// Token: 0x06035A8C RID: 219788 RVA: 0x00730DBC File Offset: 0x0072EFBC
 		public static ISetAreaTimeLock GetRootAsISetAreaTimeLock(ByteBuffer _bb, ISetAreaTimeLock obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0603283D RID: 206909 RVA: 0x006D1421 File Offset: 0x006CF621
+		// Token: 0x06035A8D RID: 219789 RVA: 0x00730DD9 File Offset: 0x0072EFD9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0603283E RID: 206910 RVA: 0x006D1430 File Offset: 0x006CF630
+		// Token: 0x06035A8E RID: 219790 RVA: 0x00730DE8 File Offset: 0x0072EFE8
 		public ISetAreaTimeLock __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D444 RID: 54340
-		// (get) Token: 0x0603283F RID: 206911 RVA: 0x006D1440 File Offset: 0x006CF640
+		// Token: 0x1700E013 RID: 57363
+		// (get) Token: 0x06035A8F RID: 219791 RVA: 0x00730DF8 File Offset: 0x0072EFF8
 		public ESetAreaTime Type
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032840 RID: 206912 RVA: 0x006D147C File Offset: 0x006CF67C
+		// Token: 0x06035A90 RID: 219792 RVA: 0x00730E34 File Offset: 0x0072F034
 		public int AreaIds(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700D445 RID: 54341
-		// (get) Token: 0x06032841 RID: 206913 RVA: 0x006D14BC File Offset: 0x006CF6BC
+		// Token: 0x1700E014 RID: 57364
+		// (get) Token: 0x06035A91 RID: 219793 RVA: 0x00730E74 File Offset: 0x0072F074
 		public int AreaIdsLength
 		{
 			get
@@ -89,20 +89,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032842 RID: 206914 RVA: 0x006D14E7 File Offset: 0x006CF6E7
+		// Token: 0x06035A92 RID: 219794 RVA: 0x00730E9F File Offset: 0x0072F09F
 		public Span<int> GetAreaIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x06032843 RID: 206915 RVA: 0x006D14F6 File Offset: 0x006CF6F6
+		// Token: 0x06035A93 RID: 219795 RVA: 0x00730EAE File Offset: 0x0072F0AE
 		public int[] GetAreaIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(6);
 		}
 
-		// Token: 0x1700D446 RID: 54342
-		// (get) Token: 0x06032844 RID: 206916 RVA: 0x006D1504 File Offset: 0x006CF704
+		// Token: 0x1700E015 RID: 57365
+		// (get) Token: 0x06035A94 RID: 219796 RVA: 0x00730EBC File Offset: 0x0072F0BC
 		public IFixedTime? LockTime
 		{
 			get
@@ -116,7 +116,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06032845 RID: 206917 RVA: 0x006D1561 File Offset: 0x006CF761
+		// Token: 0x06035A95 RID: 219797 RVA: 0x00730F19 File Offset: 0x0072F119
 		public static Offset<ISetAreaTimeLock> CreateISetAreaTimeLock(FlatBufferBuilder builder, ESetAreaTime Type = ESetAreaTime.Lock, VectorOffset AreaIdsOffset = default(VectorOffset), Offset<IFixedTime> LockTimeOffset = default(Offset<IFixedTime>))
 		{
 			builder.StartTable(3);
@@ -126,25 +126,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISetAreaTimeLock.EndISetAreaTimeLock(builder);
 		}
 
-		// Token: 0x06032846 RID: 206918 RVA: 0x006D1585 File Offset: 0x006CF785
+		// Token: 0x06035A96 RID: 219798 RVA: 0x00730F3D File Offset: 0x0072F13D
 		public static void StartISetAreaTimeLock(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06032847 RID: 206919 RVA: 0x006D158E File Offset: 0x006CF78E
+		// Token: 0x06035A97 RID: 219799 RVA: 0x00730F46 File Offset: 0x0072F146
 		public static void AddType(FlatBufferBuilder builder, ESetAreaTime type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06032848 RID: 206920 RVA: 0x006D1599 File Offset: 0x006CF799
+		// Token: 0x06035A98 RID: 219800 RVA: 0x00730F51 File Offset: 0x0072F151
 		public static void AddAreaIds(FlatBufferBuilder builder, VectorOffset areaIdsOffset)
 		{
 			builder.AddOffset(1, areaIdsOffset.Value, 0);
 		}
 
-		// Token: 0x06032849 RID: 206921 RVA: 0x006D15AC File Offset: 0x006CF7AC
+		// Token: 0x06035A99 RID: 219801 RVA: 0x00730F64 File Offset: 0x0072F164
 		public static VectorOffset CreateAreaIdsVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -155,7 +155,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0603284A RID: 206922 RVA: 0x006D15E3 File Offset: 0x006CF7E3
+		// Token: 0x06035A9A RID: 219802 RVA: 0x00730F9B File Offset: 0x0072F19B
 		public static VectorOffset CreateAreaIdsVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -163,7 +163,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0603284B RID: 206923 RVA: 0x006D15FD File Offset: 0x006CF7FD
+		// Token: 0x06035A9B RID: 219803 RVA: 0x00730FB5 File Offset: 0x0072F1B5
 		public static VectorOffset CreateAreaIdsVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0603284C RID: 206924 RVA: 0x006D161B File Offset: 0x006CF81B
+		// Token: 0x06035A9C RID: 219804 RVA: 0x00730FD3 File Offset: 0x0072F1D3
 		public static VectorOffset CreateAreaIdsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -179,25 +179,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0603284D RID: 206925 RVA: 0x006D1634 File Offset: 0x006CF834
+		// Token: 0x06035A9D RID: 219805 RVA: 0x00730FEC File Offset: 0x0072F1EC
 		public static void StartAreaIdsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0603284E RID: 206926 RVA: 0x006D163F File Offset: 0x006CF83F
+		// Token: 0x06035A9E RID: 219806 RVA: 0x00730FF7 File Offset: 0x0072F1F7
 		public static void AddLockTime(FlatBufferBuilder builder, Offset<IFixedTime> lockTimeOffset)
 		{
 			builder.AddOffset(2, lockTimeOffset.Value, 0);
 		}
 
-		// Token: 0x0603284F RID: 206927 RVA: 0x006D164F File Offset: 0x006CF84F
+		// Token: 0x06035A9F RID: 219807 RVA: 0x00731007 File Offset: 0x0072F207
 		public static Offset<ISetAreaTimeLock> EndISetAreaTimeLock(FlatBufferBuilder builder)
 		{
 			return new Offset<ISetAreaTimeLock>(builder.EndTable());
 		}
 
-		// Token: 0x06032850 RID: 206928 RVA: 0x006D165C File Offset: 0x006CF85C
+		// Token: 0x06035AA0 RID: 219808 RVA: 0x00731014 File Offset: 0x0072F214
 		public ISetAreaTimeLockT UnPack()
 		{
 			ISetAreaTimeLockT setAreaTimeLockT = new ISetAreaTimeLockT();
@@ -205,7 +205,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return setAreaTimeLockT;
 		}
 
-		// Token: 0x06032851 RID: 206929 RVA: 0x006D1678 File Offset: 0x006CF878
+		// Token: 0x06035AA1 RID: 219809 RVA: 0x00731030 File Offset: 0x0072F230
 		public void UnPackTo(ISetAreaTimeLockT _o)
 		{
 			_o.Type = this.Type;
@@ -217,7 +217,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.LockTime = ((this.LockTime != null) ? this.LockTime.Value.UnPack() : null);
 		}
 
-		// Token: 0x06032852 RID: 206930 RVA: 0x006D16F0 File Offset: 0x006CF8F0
+		// Token: 0x06035AA2 RID: 219810 RVA: 0x007310A8 File Offset: 0x0072F2A8
 		public static Offset<ISetAreaTimeLock> Pack(FlatBufferBuilder builder, ISetAreaTimeLockT _o)
 		{
 			if (_o == null)
@@ -234,7 +234,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISetAreaTimeLock.CreateISetAreaTimeLock(builder, _o.Type, areaIdsOffset, lockTimeOffset);
 		}
 
-		// Token: 0x040119AF RID: 72111
+		// Token: 0x04012991 RID: 76177
 		private Table __p;
 	}
 }

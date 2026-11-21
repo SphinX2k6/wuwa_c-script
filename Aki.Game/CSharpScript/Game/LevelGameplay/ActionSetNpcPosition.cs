@@ -5,10 +5,10 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x02006967 RID: 26983
+	// Token: 0x02005AC3 RID: 23235
 	public class ActionSetNpcPosition : ActionParams
 	{
-		// Token: 0x04022FF3 RID: 143347
+		// Token: 0x0401E1DD RID: 123357
 		[Nullable(new byte[]
 		{
 			2,
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.LevelGamePlay
 		})]
 		public List<EntityPositionData> EntityData;
 
-		// Token: 0x04022FF4 RID: 143348
+		// Token: 0x0401E1DE RID: 123358
 		public bool IsCenterPosition = true;
 	}
 }

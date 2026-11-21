@@ -6,22 +6,22 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x0200432B RID: 17195
+	// Token: 0x02003363 RID: 13155
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/SSkillBehavior.SSkillBehavior")]
 	[UnrealStructLayout(56, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 49)]
 	public class SSkillBehavior : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602C879 RID: 182393 RVA: 0x00A21EF6 File Offset: 0x00A200F6
+		// Token: 0x06021579 RID: 136569 RVA: 0x0095E7AD File Offset: 0x0095C9AD
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SSkillBehavior._ScriptStructPtr != 0) ? SSkillBehavior._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Character/BaseCharacter/SSkillBehavior.SSkillBehavior", ref SSkillBehavior._ScriptStructPtr);
 		}
 
-		// Token: 0x17006FAD RID: 28589
-		// (get) Token: 0x0602C87A RID: 182394 RVA: 0x00A21F1C File Offset: 0x00A2011C
-		// (set) Token: 0x0602C87B RID: 182395 RVA: 0x00A21F5F File Offset: 0x00A2015F
+		// Token: 0x170043DA RID: 17370
+		// (get) Token: 0x0602157A RID: 136570 RVA: 0x0095E7D4 File Offset: 0x0095C9D4
+		// (set) Token: 0x0602157B RID: 136571 RVA: 0x0095E817 File Offset: 0x0095CA17
 		public TArray<SSkillBehaviorCondition> SkillBehaviorConditionGroup
 		{
 			get
@@ -30,7 +30,7 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 				TArray<SSkillBehaviorCondition> result;
 				if ((result = this._SkillBehaviorConditionGroup) == null)
 				{
-					result = (this._SkillBehaviorConditionGroup = new TArray<SSkillBehaviorCondition>(base.NativePtr + (IntPtr)SSkillBehavior.__PropertyOffset_0, base.MemoryOwner ?? this));
+					result = (this._SkillBehaviorConditionGroup = new TArray<SSkillBehaviorCondition>(base.NativePtr + (IntPtr)SSkillBehavior.__PropertyOffset_SkillBehaviorConditionGroup, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -40,24 +40,24 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 			}
 		}
 
-		// Token: 0x17006FAE RID: 28590
-		// (get) Token: 0x0602C87C RID: 182396 RVA: 0x00A21F6D File Offset: 0x00A2016D
-		// (set) Token: 0x0602C87D RID: 182397 RVA: 0x00A21F81 File Offset: 0x00A20181
+		// Token: 0x170043DB RID: 17371
+		// (get) Token: 0x0602157C RID: 136572 RVA: 0x0095E825 File Offset: 0x0095CA25
+		// (set) Token: 0x0602157D RID: 136573 RVA: 0x0095E839 File Offset: 0x0095CA39
 		public unsafe string SkillBehaviorConditionFormula
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SSkillBehavior.__PropertyOffset_1)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SSkillBehavior.__PropertyOffset_SkillBehaviorConditionFormula)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SSkillBehavior.__PropertyOffset_1)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SSkillBehavior.__PropertyOffset_SkillBehaviorConditionFormula)), value);
 			}
 		}
 
-		// Token: 0x17006FAF RID: 28591
-		// (get) Token: 0x0602C87E RID: 182398 RVA: 0x00A21F98 File Offset: 0x00A20198
-		// (set) Token: 0x0602C87F RID: 182399 RVA: 0x00A21FDB File Offset: 0x00A201DB
+		// Token: 0x170043DC RID: 17372
+		// (get) Token: 0x0602157E RID: 136574 RVA: 0x0095E850 File Offset: 0x0095CA50
+		// (set) Token: 0x0602157F RID: 136575 RVA: 0x0095E893 File Offset: 0x0095CA93
 		public TArray<SSkillBehaviorAction> SkillBehaviorActionGroup
 		{
 			get
@@ -66,7 +66,7 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 				TArray<SSkillBehaviorAction> result;
 				if ((result = this._SkillBehaviorActionGroup) == null)
 				{
-					result = (this._SkillBehaviorActionGroup = new TArray<SSkillBehaviorAction>(base.NativePtr + (IntPtr)SSkillBehavior.__PropertyOffset_2, base.MemoryOwner ?? this));
+					result = (this._SkillBehaviorActionGroup = new TArray<SSkillBehaviorAction>(base.NativePtr + (IntPtr)SSkillBehavior.__PropertyOffset_SkillBehaviorActionGroup, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -76,74 +76,65 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 			}
 		}
 
-		// Token: 0x17006FB0 RID: 28592
-		// (get) Token: 0x0602C880 RID: 182400 RVA: 0x00A21FE9 File Offset: 0x00A201E9
-		// (set) Token: 0x0602C881 RID: 182401 RVA: 0x00A21FF9 File Offset: 0x00A201F9
+		// Token: 0x170043DD RID: 17373
+		// (get) Token: 0x06021580 RID: 136576 RVA: 0x0095E8A1 File Offset: 0x0095CAA1
+		// (set) Token: 0x06021581 RID: 136577 RVA: 0x0095E8B1 File Offset: 0x0095CAB1
 		public unsafe bool SkillBehaviorContinue
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SSkillBehavior.__PropertyOffset_3) != 0;
+				return *(base.NativePtr + (IntPtr)SSkillBehavior.__PropertyOffset_SkillBehaviorContinue) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SSkillBehavior.__PropertyOffset_3) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SSkillBehavior.__PropertyOffset_SkillBehaviorContinue) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x0602C882 RID: 182402 RVA: 0x00A2200A File Offset: 0x00A2020A
+		// Token: 0x06021582 RID: 136578 RVA: 0x0095E8C2 File Offset: 0x0095CAC2
 		public SSkillBehavior()
 		{
 		}
 
-		// Token: 0x0602C883 RID: 182403 RVA: 0x00A22012 File Offset: 0x00A20212
-		public SSkillBehavior(TArray<SSkillBehaviorCondition> SkillBehaviorConditionGroup, string SkillBehaviorConditionFormula, TArray<SSkillBehaviorAction> SkillBehaviorActionGroup, bool SkillBehaviorContinue)
-		{
-			this.SkillBehaviorConditionGroup = SkillBehaviorConditionGroup;
-			this.SkillBehaviorConditionFormula = SkillBehaviorConditionFormula;
-			this.SkillBehaviorActionGroup = SkillBehaviorActionGroup;
-			this.SkillBehaviorContinue = SkillBehaviorContinue;
-		}
-
-		// Token: 0x0602C884 RID: 182404 RVA: 0x00A22037 File Offset: 0x00A20237
+		// Token: 0x06021583 RID: 136579 RVA: 0x0095E8CA File Offset: 0x0095CACA
 		protected override IntPtr GetUStructPtr()
 		{
 			return SSkillBehavior.StaticStruct();
 		}
 
-		// Token: 0x0602C885 RID: 182405 RVA: 0x00A22043 File Offset: 0x00A20243
+		// Token: 0x06021584 RID: 136580 RVA: 0x0095E8D6 File Offset: 0x0095CAD6
 		[NullableContext(2)]
 		public SSkillBehavior(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602C886 RID: 182406 RVA: 0x00A2204D File Offset: 0x00A2024D
+		// Token: 0x06021585 RID: 136581 RVA: 0x0095E8E0 File Offset: 0x0095CAE0
 		public SSkillBehavior(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602C887 RID: 182407 RVA: 0x00A22058 File Offset: 0x00A20258
+		// Token: 0x06021586 RID: 136582 RVA: 0x0095E8EB File Offset: 0x0095CAEB
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SSkillBehavior(Pointer, false, true);
 		}
 
-		// Token: 0x0602C888 RID: 182408 RVA: 0x00A22062 File Offset: 0x00A20262
+		// Token: 0x06021587 RID: 136583 RVA: 0x0095E8F5 File Offset: 0x0095CAF5
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SSkillBehavior(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04017790 RID: 96144
+		// Token: 0x04012391 RID: 74641
 		public const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/SSkillBehavior.SSkillBehavior";
 
-		// Token: 0x04017791 RID: 96145
+		// Token: 0x04012392 RID: 74642
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04017792 RID: 96146
-		internal static int __PropertyOffset_0;
+		// Token: 0x04012393 RID: 74643
+		internal static int __PropertyOffset_SkillBehaviorConditionGroup;
 
-		// Token: 0x04017793 RID: 96147
+		// Token: 0x04012394 RID: 74644
 		[Nullable(new byte[]
 		{
 			2,
@@ -151,13 +142,13 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 		})]
 		private TArray<SSkillBehaviorCondition> _SkillBehaviorConditionGroup;
 
-		// Token: 0x04017794 RID: 96148
-		internal static int __PropertyOffset_1;
+		// Token: 0x04012395 RID: 74645
+		internal static int __PropertyOffset_SkillBehaviorConditionFormula;
 
-		// Token: 0x04017795 RID: 96149
-		internal static int __PropertyOffset_2;
+		// Token: 0x04012396 RID: 74646
+		internal static int __PropertyOffset_SkillBehaviorActionGroup;
 
-		// Token: 0x04017796 RID: 96150
+		// Token: 0x04012397 RID: 74647
 		[Nullable(new byte[]
 		{
 			2,
@@ -165,7 +156,7 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 		})]
 		private TArray<SSkillBehaviorAction> _SkillBehaviorActionGroup;
 
-		// Token: 0x04017797 RID: 96151
-		internal static int __PropertyOffset_3;
+		// Token: 0x04012398 RID: 74648
+		internal static int __PropertyOffset_SkillBehaviorContinue;
 	}
 }

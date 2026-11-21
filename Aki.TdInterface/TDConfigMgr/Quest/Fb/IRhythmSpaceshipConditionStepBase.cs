@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013F8 RID: 5112
+	// Token: 0x0200154F RID: 5455
 	public class IRhythmSpaceshipConditionStepBase
 	{
-		// Token: 0x06007456 RID: 29782 RVA: 0x0011662C File Offset: 0x0011482C
-		[NullableContext(1)]
+		// Token: 0x06007B17 RID: 31511 RVA: 0x00125010 File Offset: 0x00123210
 		public static IRhythmSpaceshipConditionStepBase Create(IRhythmSpaceshipConditionStepBase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002639 RID: 9785
-		// (get) Token: 0x06007457 RID: 29783 RVA: 0x0011664B File Offset: 0x0011484B
+		// Token: 0x1700281B RID: 10267
+		// (get) Token: 0x06007B18 RID: 31512 RVA: 0x0012502F File Offset: 0x0012322F
 		public virtual ERhythmSpaceshipConditionStep Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004352 RID: 17234
+		// Token: 0x040046E3 RID: 18147
 		private IRhythmSpaceshipConditionStepBase Instance;
 	}
 }

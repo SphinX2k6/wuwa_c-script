@@ -7,7 +7,7 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200117F RID: 4479
+// Token: 0x02000633 RID: 1587
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class BabelTowerRankItem : GridProxyAbstract<BabelTowerRankItemData>
 {
-	// Token: 0x0600766A RID: 30314 RVA: 0x00189B00 File Offset: 0x00187D00
+	// Token: 0x06004A01 RID: 18945 RVA: 0x001926B0 File Offset: 0x001908B0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 13;
@@ -59,7 +59,7 @@ public class BabelTowerRankItem : GridProxyAbstract<BabelTowerRankItemData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600766B RID: 30315 RVA: 0x00189D18 File Offset: 0x00187F18
+	// Token: 0x06004A02 RID: 18946 RVA: 0x001928C8 File Offset: 0x00190AC8
 	protected override void OnStart()
 	{
 		UUILayoutBase horizontalLayout = base.GetHorizontalLayout(8);
@@ -70,7 +70,7 @@ public class BabelTowerRankItem : GridProxyAbstract<BabelTowerRankItemData>
 		this.TitleItem.CreateThenShowByActor(base.GetItem(7).GetOwner(), null);
 	}
 
-	// Token: 0x0600766C RID: 30316 RVA: 0x00189D94 File Offset: 0x00187F94
+	// Token: 0x06004A03 RID: 18947 RVA: 0x00192944 File Offset: 0x00190B44
 	public override void Refresh(BabelTowerRankItemData data, bool isSelected, int gridIndex)
 	{
 		this.CurrentData = data;
@@ -92,7 +92,7 @@ public class BabelTowerRankItem : GridProxyAbstract<BabelTowerRankItemData>
 		button.SetSelfInteractive(selfInteractive);
 	}
 
-	// Token: 0x0600766D RID: 30317 RVA: 0x00189DF7 File Offset: 0x00187FF7
+	// Token: 0x06004A04 RID: 18948 RVA: 0x001929A7 File Offset: 0x00190BA7
 	public void ShowLockState()
 	{
 		UUIItem item = base.GetItem(0);
@@ -108,7 +108,7 @@ public class BabelTowerRankItem : GridProxyAbstract<BabelTowerRankItemData>
 		item2.SetUIActive(true);
 	}
 
-	// Token: 0x0600766E RID: 30318 RVA: 0x00189E20 File Offset: 0x00188020
+	// Token: 0x06004A05 RID: 18949 RVA: 0x001929D0 File Offset: 0x00190BD0
 	private void RefreshRankDisplay(int rank)
 	{
 		UUITexture texture = base.GetTexture(2);
@@ -175,7 +175,7 @@ public class BabelTowerRankItem : GridProxyAbstract<BabelTowerRankItemData>
 		this.SetRankTextOutline(text, rank);
 	}
 
-	// Token: 0x0600766F RID: 30319 RVA: 0x00189F0C File Offset: 0x0018810C
+	// Token: 0x06004A06 RID: 18950 RVA: 0x00192ABC File Offset: 0x00190CBC
 	[NullableContext(2)]
 	private void SetRankTextOutline(UUIText text, int rank)
 	{
@@ -203,7 +203,7 @@ public class BabelTowerRankItem : GridProxyAbstract<BabelTowerRankItemData>
 		text.SetFontOutlineColor(FColor.FromHex(hexStr));
 	}
 
-	// Token: 0x06007670 RID: 30320 RVA: 0x00189F60 File Offset: 0x00188160
+	// Token: 0x06004A07 RID: 18951 RVA: 0x00192B10 File Offset: 0x00190D10
 	[NullableContext(2)]
 	private void LoadTopRankDecoration(int rank, UUITexture texture)
 	{
@@ -225,7 +225,7 @@ public class BabelTowerRankItem : GridProxyAbstract<BabelTowerRankItemData>
 		texture.SetUIActive(false);
 	}
 
-	// Token: 0x06007671 RID: 30321 RVA: 0x00189FD0 File Offset: 0x001881D0
+	// Token: 0x06004A08 RID: 18952 RVA: 0x00192B80 File Offset: 0x00190D80
 	private void RefreshPlayerInfo(BabelTowerRankItemData data)
 	{
 		if (!data.HasData)
@@ -261,7 +261,7 @@ public class BabelTowerRankItem : GridProxyAbstract<BabelTowerRankItemData>
 		text3.SetText(timeDataFormatWithHour, true);
 	}
 
-	// Token: 0x06007672 RID: 30322 RVA: 0x0018A088 File Offset: 0x00188288
+	// Token: 0x06004A09 RID: 18953 RVA: 0x00192C38 File Offset: 0x00190E38
 	private void RefreshTitle(BabelTowerRankItemData data)
 	{
 		if (this.TitleItem == null)
@@ -278,7 +278,7 @@ public class BabelTowerRankItem : GridProxyAbstract<BabelTowerRankItemData>
 		this.TitleItem.SetUiActive(false);
 	}
 
-	// Token: 0x06007673 RID: 30323 RVA: 0x0018A100 File Offset: 0x00188300
+	// Token: 0x06004A0A RID: 18954 RVA: 0x00192CB0 File Offset: 0x00190EB0
 	private void RefreshHeadIcon(int headId, bool bShowName = true)
 	{
 		UUITexture headTexture = base.GetTexture(5);
@@ -311,7 +311,7 @@ public class BabelTowerRankItem : GridProxyAbstract<BabelTowerRankItemData>
 		}
 	}
 
-	// Token: 0x06007674 RID: 30324 RVA: 0x0018A1A0 File Offset: 0x001883A0
+	// Token: 0x06004A0B RID: 18955 RVA: 0x00192D50 File Offset: 0x00190F50
 	private void RefreshRoleList(BabelTowerRankItemData data)
 	{
 		if (data.ShowRoleList)
@@ -357,7 +357,7 @@ public class BabelTowerRankItem : GridProxyAbstract<BabelTowerRankItemData>
 		roleLayout2.SetActive(false);
 	}
 
-	// Token: 0x06007675 RID: 30325 RVA: 0x0018A278 File Offset: 0x00188478
+	// Token: 0x06004A0C RID: 18956 RVA: 0x00192E28 File Offset: 0x00191028
 	private void OnClickAvatarBtn()
 	{
 		if (this.CurrentData == null || !this.CurrentData.ShowName)
@@ -378,10 +378,10 @@ public class BabelTowerRankItem : GridProxyAbstract<BabelTowerRankItemData>
 		}
 	}
 
-	// Token: 0x0400364B RID: 13899
+	// Token: 0x040036E4 RID: 14052
 	private const int MAX_ROLE_COUNT = 3;
 
-	// Token: 0x0400364C RID: 13900
+	// Token: 0x040036E5 RID: 14053
 	[Nullable(new byte[]
 	{
 		2,
@@ -390,43 +390,43 @@ public class BabelTowerRankItem : GridProxyAbstract<BabelTowerRankItemData>
 	})]
 	private GenericLayout<RoleGridProxy, RoleData> RoleLayout;
 
-	// Token: 0x0400364D RID: 13901
+	// Token: 0x040036E6 RID: 14054
 	[Nullable(2)]
 	private PlayerTitleItem TitleItem;
 
-	// Token: 0x0400364E RID: 13902
+	// Token: 0x040036E7 RID: 14055
 	[Nullable(2)]
 	private BabelTowerRankItemData CurrentData;
 
-	// Token: 0x02007756 RID: 30550
+	// Token: 0x020068E3 RID: 26851
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x040275DC RID: 161244
+		// Token: 0x04022915 RID: 141589
 		UnlockItem,
-		// Token: 0x040275DD RID: 161245
+		// Token: 0x04022916 RID: 141590
 		LockItem,
-		// Token: 0x040275DE RID: 161246
+		// Token: 0x04022917 RID: 141591
 		RankNumTexture,
-		// Token: 0x040275DF RID: 161247
+		// Token: 0x04022918 RID: 141592
 		RankNorTexture,
-		// Token: 0x040275E0 RID: 161248
+		// Token: 0x04022919 RID: 141593
 		RankNumText,
-		// Token: 0x040275E1 RID: 161249
+		// Token: 0x0402291A RID: 141594
 		AvatarTexture,
-		// Token: 0x040275E2 RID: 161250
+		// Token: 0x0402291B RID: 141595
 		PlayerNameText,
-		// Token: 0x040275E3 RID: 161251
+		// Token: 0x0402291C RID: 141596
 		TitlesComItem,
-		// Token: 0x040275E4 RID: 161252
+		// Token: 0x0402291D RID: 141597
 		RoleListHLayout,
-		// Token: 0x040275E5 RID: 161253
+		// Token: 0x0402291E RID: 141598
 		ItemBase,
-		// Token: 0x040275E6 RID: 161254
+		// Token: 0x0402291F RID: 141599
 		TxtNumText,
-		// Token: 0x040275E7 RID: 161255
+		// Token: 0x04022920 RID: 141600
 		TxtTimeText,
-		// Token: 0x040275E8 RID: 161256
+		// Token: 0x04022921 RID: 141601
 		AvatarBtn
 	}
 }

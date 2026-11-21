@@ -7,18 +7,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.FlagChallenge
 {
-	// Token: 0x02005A57 RID: 23127
+	// Token: 0x02004A33 RID: 18995
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FlagChallengeBuffAddPanel : UiPanelBase
 	{
-		// Token: 0x0603AA0C RID: 240140 RVA: 0x00DF4F50 File Offset: 0x00DF3150
+		// Token: 0x0602F955 RID: 194901 RVA: 0x00D454D4 File Offset: 0x00D436D4
 		public FlagChallengeBuffAddPanel(int activityId)
 		{
 			this.ActivityId = activityId;
 		}
 
-		// Token: 0x0603AA0D RID: 240141 RVA: 0x00DF4F60 File Offset: 0x00DF3160
+		// Token: 0x0602F956 RID: 194902 RVA: 0x00D454E4 File Offset: 0x00D436E4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			};
 		}
 
-		// Token: 0x0603AA0E RID: 240142 RVA: 0x00DF5064 File Offset: 0x00DF3264
+		// Token: 0x0602F957 RID: 194903 RVA: 0x00D455E8 File Offset: 0x00D437E8
 		protected override void OnStart()
 		{
 			UUILayoutBase layoutBase = base.GetLayoutBase(1);
@@ -49,13 +49,13 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			base.GetItem(7).SetUIActive(false);
 		}
 
-		// Token: 0x0603AA0F RID: 240143 RVA: 0x00DF50CD File Offset: 0x00DF32CD
+		// Token: 0x0602F958 RID: 194904 RVA: 0x00D45651 File Offset: 0x00D43851
 		protected override void OnBeforeShow()
 		{
 			this.UpdateView();
 		}
 
-		// Token: 0x0603AA10 RID: 240144 RVA: 0x00DF50D5 File Offset: 0x00DF32D5
+		// Token: 0x0602F959 RID: 194905 RVA: 0x00D45659 File Offset: 0x00D43859
 		protected override void OnBeforeDestroy()
 		{
 			if (base.GetActive())
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			}
 		}
 
-		// Token: 0x0603AA11 RID: 240145 RVA: 0x00DF50EF File Offset: 0x00DF32EF
+		// Token: 0x0602F95A RID: 194906 RVA: 0x00D45673 File Offset: 0x00D43873
 		private void OnBtnMask()
 		{
 			this.SetActive(false);
@@ -81,13 +81,13 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			closeCallback();
 		}
 
-		// Token: 0x0603AA12 RID: 240146 RVA: 0x00DF5108 File Offset: 0x00DF3308
+		// Token: 0x0602F95B RID: 194907 RVA: 0x00D4568C File Offset: 0x00D4388C
 		private FlagChallengeBuffAddItem CreateItem()
 		{
 			return new FlagChallengeBuffAddItem();
 		}
 
-		// Token: 0x0603AA13 RID: 240147 RVA: 0x00DF510F File Offset: 0x00DF330F
+		// Token: 0x0602F95C RID: 194908 RVA: 0x00D45693 File Offset: 0x00D43893
 		public void UpdateView()
 		{
 			this.UpdateTitle();
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			this.UpdateList();
 		}
 
-		// Token: 0x0603AA14 RID: 240148 RVA: 0x00DF5124 File Offset: 0x00DF3324
+		// Token: 0x0602F95D RID: 194909 RVA: 0x00D456A8 File Offset: 0x00D438A8
 		public void UpdateTitle()
 		{
 			string key = "Morale_title_22";
@@ -103,32 +103,32 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			base.GetText(8).SetUIActive(false);
 		}
 
-		// Token: 0x0603AA15 RID: 240149 RVA: 0x00DF5154 File Offset: 0x00DF3354
+		// Token: 0x0602F95E RID: 194910 RVA: 0x00D456D8 File Offset: 0x00D438D8
 		public void UpdateList()
 		{
 			List<FlagChallengeBuffAddItemData> allRoleAttrAddList = FlagChallengeModel.Instance.GetAllRoleAttrAddList(this.ActivityId);
 			this.ItemLayout.RefreshByData(allRoleAttrAddList, null, false);
 		}
 
-		// Token: 0x0603AA16 RID: 240150 RVA: 0x00DF5180 File Offset: 0x00DF3380
+		// Token: 0x0602F95F RID: 194911 RVA: 0x00D45704 File Offset: 0x00D43904
 		public void UpdateLvAddDesc()
 		{
 			base.GetText(5).SetText(FlagChallengeModel.Instance.GetAllRoleAttrAddDesc(this.ActivityId), true);
 		}
 
-		// Token: 0x0603AA17 RID: 240151 RVA: 0x00DF519F File Offset: 0x00DF339F
+		// Token: 0x0602F960 RID: 194912 RVA: 0x00D45723 File Offset: 0x00D43923
 		public void SetCloseCallback(Action callback)
 		{
 			this.CloseCallback = callback;
 		}
 
-		// Token: 0x0401E8FE RID: 125182
+		// Token: 0x040193A5 RID: 103333
 		public int ActivityId;
 
-		// Token: 0x0401E8FF RID: 125183
+		// Token: 0x040193A6 RID: 103334
 		public GenericLayout<FlagChallengeBuffAddItem, FlagChallengeBuffAddItemData> ItemLayout;
 
-		// Token: 0x0401E900 RID: 125184
+		// Token: 0x040193A7 RID: 103335
 		[Nullable(2)]
 		private Action CloseCallback;
 	}

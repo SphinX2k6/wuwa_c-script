@@ -3,11 +3,11 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Common.MediumItemGrid
 {
-	// Token: 0x02005B56 RID: 23382
+	// Token: 0x02004B35 RID: 19253
 	public class OnlyEmptyItemGrid : IMediumItemGridBase
 	{
-		// Token: 0x17008CAC RID: 36012
-		// (get) Token: 0x0603B37A RID: 242554 RVA: 0x00E1ECD5 File Offset: 0x00E1CED5
+		// Token: 0x1700607E RID: 24702
+		// (get) Token: 0x060302C6 RID: 197318 RVA: 0x00D6F241 File Offset: 0x00D6D441
 		public EMediumItemGridType Type
 		{
 			get
@@ -16,14 +16,14 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			}
 		}
 
-		// Token: 0x0401ED8F RID: 126351
+		// Token: 0x0401983B RID: 104507
 		[Nullable(2)]
 		public Action OnClickedCallback;
 
-		// Token: 0x0401ED90 RID: 126352
+		// Token: 0x0401983C RID: 104508
 		public bool? IsClickable;
 
-		// Token: 0x0401ED91 RID: 126353
+		// Token: 0x0401983D RID: 104509
 		[Nullable(2)]
 		public object Data;
 	}

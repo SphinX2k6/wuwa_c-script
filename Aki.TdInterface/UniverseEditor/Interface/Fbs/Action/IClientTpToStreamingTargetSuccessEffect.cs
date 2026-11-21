@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006406 RID: 25606
+	// Token: 0x02006A86 RID: 27270
 	public struct IClientTpToStreamingTargetSuccessEffect : IFlatbufferObject
 	{
-		// Token: 0x1700BEB1 RID: 48817
-		// (get) Token: 0x0602C4E1 RID: 181473 RVA: 0x00614E12 File Offset: 0x00613012
+		// Token: 0x1700C84B RID: 51275
+		// (get) Token: 0x0602ECB7 RID: 191671 RVA: 0x00660C9E File Offset: 0x0065EE9E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602C4E2 RID: 181474 RVA: 0x00614E1F File Offset: 0x0061301F
+		// Token: 0x0602ECB8 RID: 191672 RVA: 0x00660CAB File Offset: 0x0065EEAB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602C4E3 RID: 181475 RVA: 0x00614E28 File Offset: 0x00613028
+		// Token: 0x0602ECB9 RID: 191673 RVA: 0x00660CB4 File Offset: 0x0065EEB4
 		public static IClientTpToStreamingTargetSuccessEffect GetRootAsIClientTpToStreamingTargetSuccessEffect(ByteBuffer _bb)
 		{
 			return IClientTpToStreamingTargetSuccessEffect.GetRootAsIClientTpToStreamingTargetSuccessEffect(_bb, default(IClientTpToStreamingTargetSuccessEffect));
 		}
 
-		// Token: 0x0602C4E4 RID: 181476 RVA: 0x00614E44 File Offset: 0x00613044
+		// Token: 0x0602ECBA RID: 191674 RVA: 0x00660CD0 File Offset: 0x0065EED0
 		public static IClientTpToStreamingTargetSuccessEffect GetRootAsIClientTpToStreamingTargetSuccessEffect(ByteBuffer _bb, IClientTpToStreamingTargetSuccessEffect obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602C4E5 RID: 181477 RVA: 0x00614E61 File Offset: 0x00613061
+		// Token: 0x0602ECBB RID: 191675 RVA: 0x00660CED File Offset: 0x0065EEED
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602C4E6 RID: 181478 RVA: 0x00614E70 File Offset: 0x00613070
+		// Token: 0x0602ECBC RID: 191676 RVA: 0x00660CFC File Offset: 0x0065EEFC
 		public IClientTpToStreamingTargetSuccessEffect __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BEB2 RID: 48818
-		// (get) Token: 0x0602C4E7 RID: 181479 RVA: 0x00614E80 File Offset: 0x00613080
+		// Token: 0x1700C84C RID: 51276
+		// (get) Token: 0x0602ECBD RID: 191677 RVA: 0x00660D0C File Offset: 0x0065EF0C
 		public string SceneEffectDaPath
 		{
 			get
@@ -62,19 +62,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602C4E8 RID: 181480 RVA: 0x00614EB7 File Offset: 0x006130B7
+		// Token: 0x0602ECBE RID: 191678 RVA: 0x00660D43 File Offset: 0x0065EF43
 		public Span<byte> GetSceneEffectDaPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x0602C4E9 RID: 181481 RVA: 0x00614EC6 File Offset: 0x006130C6
+		// Token: 0x0602ECBF RID: 191679 RVA: 0x00660D52 File Offset: 0x0065EF52
 		public byte[] GetSceneEffectDaPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x0602C4EA RID: 181482 RVA: 0x00614ED4 File Offset: 0x006130D4
+		// Token: 0x0602ECC0 RID: 191680 RVA: 0x00660D60 File Offset: 0x0065EF60
 		public static Offset<IClientTpToStreamingTargetSuccessEffect> CreateIClientTpToStreamingTargetSuccessEffect(FlatBufferBuilder builder, StringOffset SceneEffectDaPathOffset = default(StringOffset))
 		{
 			builder.StartTable(1);
@@ -82,25 +82,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IClientTpToStreamingTargetSuccessEffect.EndIClientTpToStreamingTargetSuccessEffect(builder);
 		}
 
-		// Token: 0x0602C4EB RID: 181483 RVA: 0x00614EEA File Offset: 0x006130EA
+		// Token: 0x0602ECC1 RID: 191681 RVA: 0x00660D76 File Offset: 0x0065EF76
 		public static void StartIClientTpToStreamingTargetSuccessEffect(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602C4EC RID: 181484 RVA: 0x00614EF3 File Offset: 0x006130F3
+		// Token: 0x0602ECC2 RID: 191682 RVA: 0x00660D7F File Offset: 0x0065EF7F
 		public static void AddSceneEffectDaPath(FlatBufferBuilder builder, StringOffset sceneEffectDaPathOffset)
 		{
 			builder.AddOffset(0, sceneEffectDaPathOffset.Value, 0);
 		}
 
-		// Token: 0x0602C4ED RID: 181485 RVA: 0x00614F03 File Offset: 0x00613103
+		// Token: 0x0602ECC3 RID: 191683 RVA: 0x00660D8F File Offset: 0x0065EF8F
 		public static Offset<IClientTpToStreamingTargetSuccessEffect> EndIClientTpToStreamingTargetSuccessEffect(FlatBufferBuilder builder)
 		{
 			return new Offset<IClientTpToStreamingTargetSuccessEffect>(builder.EndTable());
 		}
 
-		// Token: 0x0602C4EE RID: 181486 RVA: 0x00614F10 File Offset: 0x00613110
+		// Token: 0x0602ECC4 RID: 191684 RVA: 0x00660D9C File Offset: 0x0065EF9C
 		public IClientTpToStreamingTargetSuccessEffectT UnPack()
 		{
 			IClientTpToStreamingTargetSuccessEffectT clientTpToStreamingTargetSuccessEffectT = new IClientTpToStreamingTargetSuccessEffectT();
@@ -108,13 +108,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return clientTpToStreamingTargetSuccessEffectT;
 		}
 
-		// Token: 0x0602C4EF RID: 181487 RVA: 0x00614F2B File Offset: 0x0061312B
+		// Token: 0x0602ECC5 RID: 191685 RVA: 0x00660DB7 File Offset: 0x0065EFB7
 		public void UnPackTo(IClientTpToStreamingTargetSuccessEffectT _o)
 		{
 			_o.SceneEffectDaPath = this.SceneEffectDaPath;
 		}
 
-		// Token: 0x0602C4F0 RID: 181488 RVA: 0x00614F3C File Offset: 0x0061313C
+		// Token: 0x0602ECC6 RID: 191686 RVA: 0x00660DC8 File Offset: 0x0065EFC8
 		public static Offset<IClientTpToStreamingTargetSuccessEffect> Pack(FlatBufferBuilder builder, IClientTpToStreamingTargetSuccessEffectT _o)
 		{
 			if (_o == null)
@@ -125,7 +125,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IClientTpToStreamingTargetSuccessEffect.CreateIClientTpToStreamingTargetSuccessEffect(builder, sceneEffectDaPathOffset);
 		}
 
-		// Token: 0x040109F6 RID: 68086
+		// Token: 0x0401181C RID: 71708
 		private Table __p;
 	}
 }

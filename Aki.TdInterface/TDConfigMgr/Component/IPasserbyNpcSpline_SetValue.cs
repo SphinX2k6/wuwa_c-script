@@ -3,23 +3,23 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005D1 RID: 1489
+	// Token: 0x02000660 RID: 1632
 	public class IPasserbyNpcSpline_SetValue
 	{
-		// Token: 0x04001642 RID: 5698
+		// Token: 0x04001813 RID: 6163
 		public int SplineEntityId;
 
-		// Token: 0x04001643 RID: 5699
+		// Token: 0x04001814 RID: 6164
 		public int SpawnWeight;
 
-		// Token: 0x04001644 RID: 5700
+		// Token: 0x04001815 RID: 6165
 		public bool? IsLoop;
 
-		// Token: 0x04001645 RID: 5701
+		// Token: 0x04001816 RID: 6166
 		[Nullable(2)]
 		public IPasserbyNpcMoveState MoveState;
 
-		// Token: 0x04001646 RID: 5702
+		// Token: 0x04001817 RID: 6167
 		public bool? IsIkEnabled;
 	}
 }

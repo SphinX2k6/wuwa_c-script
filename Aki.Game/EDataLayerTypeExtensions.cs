@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x02003559 RID: 13657
+// Token: 0x02002ACE RID: 10958
 public static class EDataLayerTypeExtensions
 {
-	// Token: 0x0601DFB7 RID: 122807 RVA: 0x0086CE68 File Offset: 0x0086B068
+	// Token: 0x0601BCDF RID: 113887 RVA: 0x00894AC8 File Offset: 0x00892CC8
 	public static string ToEnumString(this EDataLayerType value)
 	{
 		string result;
@@ -25,7 +25,7 @@ public static class EDataLayerTypeExtensions
 		return result;
 	}
 
-	// Token: 0x0601DFB8 RID: 122808 RVA: 0x0086CEB0 File Offset: 0x0086B0B0
+	// Token: 0x0601BCE0 RID: 113888 RVA: 0x00894B10 File Offset: 0x00892D10
 	public static EDataLayerType FromString(string name)
 	{
 		EDataLayerType result;
@@ -36,7 +36,7 @@ public static class EDataLayerTypeExtensions
 		return result;
 	}
 
-	// Token: 0x0601DFB9 RID: 122809 RVA: 0x0086CEDC File Offset: 0x0086B0DC
+	// Token: 0x0601BCE1 RID: 113889 RVA: 0x00894B3C File Offset: 0x00892D3C
 	public static bool TryFromString(string name, out EDataLayerType value)
 	{
 		if (string.IsNullOrEmpty(name))
@@ -63,7 +63,7 @@ public static class EDataLayerTypeExtensions
 		return true;
 	}
 
-	// Token: 0x0601DFBA RID: 122810 RVA: 0x0086CF30 File Offset: 0x0086B130
+	// Token: 0x0601BCE2 RID: 113890 RVA: 0x00894B90 File Offset: 0x00892D90
 	public static string[] GetStringValues()
 	{
 		return new string[]
@@ -74,7 +74,7 @@ public static class EDataLayerTypeExtensions
 		};
 	}
 
-	// Token: 0x0601DFBB RID: 122811 RVA: 0x0086CF50 File Offset: 0x0086B150
+	// Token: 0x0601BCE3 RID: 113891 RVA: 0x00894BB0 File Offset: 0x00892DB0
 	public static EDataLayerType[] GetValues()
 	{
 		return new EDataLayerType[]
@@ -85,7 +85,7 @@ public static class EDataLayerTypeExtensions
 		};
 	}
 
-	// Token: 0x0601DFBC RID: 122812 RVA: 0x0086CF60 File Offset: 0x0086B160
+	// Token: 0x0601BCE4 RID: 113892 RVA: 0x00894BC0 File Offset: 0x00892DC0
 	public static string[] GetNames()
 	{
 		return new string[]

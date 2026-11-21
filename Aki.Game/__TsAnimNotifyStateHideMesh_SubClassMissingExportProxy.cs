@@ -3,16 +3,16 @@ using System.Runtime.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Utils;
 
-// Token: 0x02003745 RID: 14149
+// Token: 0x02002CBC RID: 11452
 public class __TsAnimNotifyStateHideMesh_SubClassMissingExportProxy : __TsAnimNotifyStateHideMesh_InheritProxy
 {
-	// Token: 0x0601E5AF RID: 124335 RVA: 0x0088B128 File Offset: 0x00889328
+	// Token: 0x0601C2A0 RID: 115360 RVA: 0x008B13EC File Offset: 0x008AF5EC
 	[NullableContext(1)]
 	protected __TsAnimNotifyStateHideMesh_SubClassMissingExportProxy(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyStateHideMesh.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601E5B0 RID: 124336 RVA: 0x0088B15B File Offset: 0x0088935B
+	// Token: 0x0601C2A1 RID: 115361 RVA: 0x008B141F File Offset: 0x008AF61F
 	protected __TsAnimNotifyStateHideMesh_SubClassMissingExportProxy(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}

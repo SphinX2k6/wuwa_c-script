@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Data.UiRoleCamera.Struct;
-using CSharpScript.Game.Module.Common.UiCamera;
 using CSharpScript.Game.Module.RoleUi;
+using CSharpScript.Game.Module.UiCamera;
 using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Skin.Role.View
 {
-	// Token: 0x02004BF6 RID: 19446
+	// Token: 0x02003BA7 RID: 15271
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoleSkinViewModel : ViewModelBase<ERoleSkinTabViewData>
 	{
-		// Token: 0x06032498 RID: 205976 RVA: 0x00BAF0DC File Offset: 0x00BAD2DC
+		// Token: 0x0602723E RID: 160318 RVA: 0x00AF36DC File Offset: 0x00AF18DC
 		public RoleSkinViewModel()
 		{
 			int num = 0;
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.Skin.Role.View
 			this.DataMap[ERoleSkinTabViewData.IsWearWeaponSkin] = flag;
 		}
 
-		// Token: 0x06032499 RID: 205977 RVA: 0x00BAF118 File Offset: 0x00BAD318
+		// Token: 0x0602723F RID: 160319 RVA: 0x00AF3718 File Offset: 0x00AF1918
 		public void Init(ISkinViewData viewData)
 		{
 			if (this.GetSelectRoleSkinId() <= 0)
@@ -31,32 +31,32 @@ namespace CSharpScript.Game.Module.Skin.Role.View
 			}
 		}
 
-		// Token: 0x0603249A RID: 205978 RVA: 0x00BAF14C File Offset: 0x00BAD34C
+		// Token: 0x06027240 RID: 160320 RVA: 0x00AF374C File Offset: 0x00AF194C
 		public void SetSelectRoleSkinId(int selectRoleSkinId, bool notNotify = false)
 		{
 			base.SetData(ERoleSkinTabViewData.SelectRoleSkinId, selectRoleSkinId, notNotify);
 		}
 
-		// Token: 0x0603249B RID: 205979 RVA: 0x00BAF15C File Offset: 0x00BAD35C
+		// Token: 0x06027241 RID: 160321 RVA: 0x00AF375C File Offset: 0x00AF195C
 		public int GetSelectRoleSkinId()
 		{
 			return (int)base.GetData(ERoleSkinTabViewData.SelectRoleSkinId);
 		}
 
-		// Token: 0x0603249C RID: 205980 RVA: 0x00BAF16A File Offset: 0x00BAD36A
+		// Token: 0x06027242 RID: 160322 RVA: 0x00AF376A File Offset: 0x00AF196A
 		public void SetIsWearWeaponSkin(bool isWearWeaponSkin, bool notNotify = false)
 		{
 			base.SetData(ERoleSkinTabViewData.IsWearWeaponSkin, isWearWeaponSkin, notNotify);
 		}
 
-		// Token: 0x0603249D RID: 205981 RVA: 0x00BAF17A File Offset: 0x00BAD37A
+		// Token: 0x06027243 RID: 160323 RVA: 0x00AF377A File Offset: 0x00AF197A
 		public bool GetIsWearWeaponSkin()
 		{
 			return (bool)base.GetData(ERoleSkinTabViewData.IsWearWeaponSkin);
 		}
 
-		// Token: 0x0603249E RID: 205982 RVA: 0x00BAF188 File Offset: 0x00BAD388
-		public IUiCameraInputComponentData GetRoleTabCameraInputData(UUIDraggableComponent dragItem, TsUiSceneRoleActor roleActor)
+		// Token: 0x06027244 RID: 160324 RVA: 0x00AF3788 File Offset: 0x00AF1988
+		public UiCameraInputBindingData GetRoleTabCameraInputData(UUIDraggableComponent dragItem, TsUiSceneRoleActor roleActor)
 		{
 			string rowName = this.GetIsWearWeaponSkin() ? PayShopConfig.Instance.GetBuySkinDetailWeaponCameraConfigId() : PayShopConfig.Instance.GetBuySkinDetailRoleCameraConfigId();
 			int selectRoleSkinId = this.GetSelectRoleSkinId();
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.Skin.Role.View
 			int roleConfigId = uiRoleDataComponent.RoleConfigId;
 			string roleBody = RoleConfig.Instance.GetRoleConfig(roleConfigId).Value.RoleBody;
 			SUiRoleCameraOffsetSetting? roleCameraOffsetConfig = UiRoleCameraConfig.Instance.GetRoleCameraOffsetConfig(roleBody);
-			return new UiCameraInputComponentData
+			return new UiCameraInputBindingData
 			{
 				DragComponent = dragItem,
 				CameraSettingConfig = roleCameraConfigBySkin.Value,

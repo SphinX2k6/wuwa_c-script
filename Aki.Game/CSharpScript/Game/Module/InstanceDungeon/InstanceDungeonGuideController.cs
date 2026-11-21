@@ -6,26 +6,26 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.InstanceDungeon
 {
-	// Token: 0x02005876 RID: 22646
+	// Token: 0x0200484E RID: 18510
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InstanceDungeonGuideController : ControllerBase
 	{
-		// Token: 0x060399EA RID: 236010 RVA: 0x00DB1821 File Offset: 0x00DAFA21
+		// Token: 0x0602E90B RID: 190731 RVA: 0x00D006F1 File Offset: 0x00CFE8F1
 		protected override bool OnInit()
 		{
 			InstanceDungeonGuideController.AddEvent();
 			return true;
 		}
 
-		// Token: 0x060399EB RID: 236011 RVA: 0x00DB1829 File Offset: 0x00DAFA29
+		// Token: 0x0602E90C RID: 190732 RVA: 0x00D006F9 File Offset: 0x00CFE8F9
 		protected override bool OnClear()
 		{
 			InstanceDungeonGuideController.RemoveEvent();
 			return true;
 		}
 
-		// Token: 0x060399EC RID: 236012 RVA: 0x00DB1831 File Offset: 0x00DAFA31
+		// Token: 0x0602E90D RID: 190733 RVA: 0x00D00701 File Offset: 0x00CFE901
 		private static void AddEvent()
 		{
 			EventSystem instance = EventSystem.Instance;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			instance.Add(name, handle);
 		}
 
-		// Token: 0x060399ED RID: 236013 RVA: 0x00DB185E File Offset: 0x00DAFA5E
+		// Token: 0x0602E90E RID: 190734 RVA: 0x00D0072E File Offset: 0x00CFE92E
 		private static void RemoveEvent()
 		{
 			EventSystem instance = EventSystem.Instance;
@@ -51,14 +51,14 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			instance.Remove(name, handle);
 		}
 
-		// Token: 0x060399EE RID: 236014 RVA: 0x00DB188B File Offset: 0x00DAFA8B
+		// Token: 0x0602E90F RID: 190735 RVA: 0x00D0075B File Offset: 0x00CFE95B
 		public static void StartReplayGuide()
 		{
 			GuideModel.Instance.ClearAllGroup();
 			InstanceDungeonGuideController.CheckAndRunGuide();
 		}
 
-		// Token: 0x060399EF RID: 236015 RVA: 0x00DB189C File Offset: 0x00DAFA9C
+		// Token: 0x0602E910 RID: 190736 RVA: 0x00D0076C File Offset: 0x00CFE96C
 		private static void CheckAndRunGuide()
 		{
 			int currentInstanceDungeonGuideType = InstanceDungeonGuideModel.Instance.GetCurrentInstanceDungeonGuideType();
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x060399F0 RID: 236016 RVA: 0x00DB192E File Offset: 0x00DAFB2E
+		// Token: 0x0602E911 RID: 190737 RVA: 0x00D007FE File Offset: 0x00CFE9FE
 		private static void OnWorldDone()
 		{
 			InstanceDungeonGuideModel.Instance.RefreshCurrentDungeonGuide();
@@ -98,14 +98,14 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x060399F1 RID: 236017 RVA: 0x00DB194B File Offset: 0x00DAFB4B
+		// Token: 0x0602E912 RID: 190738 RVA: 0x00D0081B File Offset: 0x00CFEA1B
 		public static bool GetHaveGuide()
 		{
 			return InstanceDungeonGuideModel.Instance.GetCurrentInstanceDungeonGuideType() != 0;
 		}
 
-		// Token: 0x17008A68 RID: 35432
-		// (get) Token: 0x060399F2 RID: 236018 RVA: 0x00DB195A File Offset: 0x00DAFB5A
+		// Token: 0x17005E34 RID: 24116
+		// (get) Token: 0x0602E913 RID: 190739 RVA: 0x00D0082A File Offset: 0x00CFEA2A
 		public static InstanceDungeonGuideController Instance
 		{
 			get
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x060399F3 RID: 236019 RVA: 0x00DB1961 File Offset: 0x00DAFB61
+		// Token: 0x0602E914 RID: 190740 RVA: 0x00D00831 File Offset: 0x00CFEA31
 		public static InstanceDungeonGuideController GetOrCreateInstance()
 		{
 			if (InstanceDungeonGuideController._Instance == null)
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return InstanceDungeonGuideController._Instance;
 		}
 
-		// Token: 0x060399F4 RID: 236020 RVA: 0x00DB1975 File Offset: 0x00DAFB75
+		// Token: 0x0602E915 RID: 190741 RVA: 0x00D00845 File Offset: 0x00CFEA45
 		public static bool CreateInstance()
 		{
 			if (InstanceDungeonGuideController._Instance != null)
@@ -135,32 +135,32 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			return true;
 		}
 
-		// Token: 0x060399F5 RID: 236021 RVA: 0x00DB198B File Offset: 0x00DAFB8B
+		// Token: 0x0602E916 RID: 190742 RVA: 0x00D0085B File Offset: 0x00CFEA5B
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060399F6 RID: 236022 RVA: 0x00DB198D File Offset: 0x00DAFB8D
+		// Token: 0x0602E917 RID: 190743 RVA: 0x00D0085D File Offset: 0x00CFEA5D
 		public static void ResetStaticDefaultValue()
 		{
 			InstanceDungeonGuideController._Instance = null;
 		}
 
-		// Token: 0x060399F7 RID: 236023 RVA: 0x00DB1995 File Offset: 0x00DAFB95
+		// Token: 0x0602E918 RID: 190744 RVA: 0x00D00865 File Offset: 0x00CFEA65
 		static InstanceDungeonGuideController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(InstanceDungeonGuideController.CreateStaticDefaultValue), new Action(InstanceDungeonGuideController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401E1E3 RID: 123363
+		// Token: 0x04018C80 RID: 101504
 		[Nullable(2)]
 		private static InstanceDungeonGuideController _Instance;
 
-		// Token: 0x0200BAD2 RID: 47826
+		// Token: 0x0200A4EB RID: 42219
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0403874A RID: 231242
+			// Token: 0x0403314B RID: 209227
 			[Nullable(0)]
 			public static Action <0>__OnWorldDone;
 		}

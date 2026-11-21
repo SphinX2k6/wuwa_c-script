@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020056AE RID: 22190
+	// Token: 0x02005C52 RID: 23634
 	public class IOverrideCollisionChannelT
 	{
-		// Token: 0x1700A508 RID: 42248
-		// (get) Token: 0x060250A8 RID: 151720 RVA: 0x0051D4B2 File Offset: 0x0051B6B2
-		// (set) Token: 0x060250A9 RID: 151721 RVA: 0x0051D4BA File Offset: 0x0051B6BA
+		// Token: 0x1700AD9C RID: 44444
+		// (get) Token: 0x060272FD RID: 160509 RVA: 0x0055E3FA File Offset: 0x0055C5FA
+		// (set) Token: 0x060272FE RID: 160510 RVA: 0x0055E402 File Offset: 0x0055C602
 		public ECollisionChannelPreset CollisionChannelPreset { get; set; }
 
-		// Token: 0x1700A509 RID: 42249
-		// (get) Token: 0x060250AA RID: 151722 RVA: 0x0051D4C3 File Offset: 0x0051B6C3
-		// (set) Token: 0x060250AB RID: 151723 RVA: 0x0051D4CB File Offset: 0x0051B6CB
+		// Token: 0x1700AD9D RID: 44445
+		// (get) Token: 0x060272FF RID: 160511 RVA: 0x0055E40B File Offset: 0x0055C60B
+		// (set) Token: 0x06027300 RID: 160512 RVA: 0x0055E413 File Offset: 0x0055C613
 		public float BlurResponseRadius { get; set; }
 
-		// Token: 0x1700A50A RID: 42250
-		// (get) Token: 0x060250AC RID: 151724 RVA: 0x0051D4D4 File Offset: 0x0051B6D4
-		// (set) Token: 0x060250AD RID: 151725 RVA: 0x0051D4DC File Offset: 0x0051B6DC
+		// Token: 0x1700AD9E RID: 44446
+		// (get) Token: 0x06027301 RID: 160513 RVA: 0x0055E41C File Offset: 0x0055C61C
+		// (set) Token: 0x06027302 RID: 160514 RVA: 0x0055E424 File Offset: 0x0055C624
 		public byte NullMask { get; set; }
 
-		// Token: 0x060250AE RID: 151726 RVA: 0x0051D4E5 File Offset: 0x0051B6E5
+		// Token: 0x06027303 RID: 160515 RVA: 0x0055E42D File Offset: 0x0055C62D
 		public IOverrideCollisionChannelT()
 		{
 			this.CollisionChannelPreset = ECollisionChannelPreset.CanBePassedThrough;

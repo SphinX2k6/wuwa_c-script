@@ -7,12 +7,12 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Google.Protobuf;
 
-// Token: 0x02001048 RID: 4168
+// Token: 0x020004FC RID: 1276
 [NullableContext(2)]
 [Nullable(0)]
 public class GuessJokerController : UiControllerBase
 {
-	// Token: 0x06006AF4 RID: 27380 RVA: 0x00158788 File Offset: 0x00156988
+	// Token: 0x06003E89 RID: 16009 RVA: 0x001610B0 File Offset: 0x0015F2B0
 	public void RequestJokerGuessStartNew(int levelId, Action sucCallback = null)
 	{
 		JokerGuessStartNewRequest jokerGuessStartNewRequest = JokerGuessStartNewRequest.Create();
@@ -28,7 +28,7 @@ public class GuessJokerController : UiControllerBase
 			}
 			if (jokerGuessStartNewResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(jokerGuessStartNewResponse.ErrorCode, 24323, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(jokerGuessStartNewResponse.ErrorCode, 18171, null, true, true);
 				return;
 			}
 			GuessJokerGamePlayModel.Instance.EnterGame(jokerGuessStartNewResponse.InitData, levelId, serverTime);
@@ -42,7 +42,7 @@ public class GuessJokerController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06006AF5 RID: 27381 RVA: 0x001587FC File Offset: 0x001569FC
+	// Token: 0x06003E8A RID: 16010 RVA: 0x00161124 File Offset: 0x0015F324
 	public void RequestJokerGuessRematch(int levelId, Action sucCallback = null)
 	{
 		GuessJokerController.<>c__DisplayClass1_0 CS$<>8__locals1 = new GuessJokerController.<>c__DisplayClass1_0();
@@ -63,14 +63,14 @@ public class GuessJokerController : UiControllerBase
 			}
 			if (CS$<>8__locals2.response.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(CS$<>8__locals2.response.ErrorCode, 24323, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(CS$<>8__locals2.response.ErrorCode, 18171, null, true, true);
 				return;
 			}
 			CS$<>8__locals2.<RequestJokerGuessRematch>g__DoRematch|1().Forget();
 		}, 0);
 	}
 
-	// Token: 0x06006AF6 RID: 27382 RVA: 0x00158870 File Offset: 0x00156A70
+	// Token: 0x06003E8B RID: 16011 RVA: 0x00161198 File Offset: 0x0015F398
 	[NullableContext(1)]
 	public void RequestJokerGuessPlayCard(IEnumerable<int> cardIdList, [Nullable(2)] Action callback = null)
 	{
@@ -87,7 +87,7 @@ public class GuessJokerController : UiControllerBase
 			}
 			if (jokerGuessPlayCardResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(jokerGuessPlayCardResponse.ErrorCode, 15319, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(jokerGuessPlayCardResponse.ErrorCode, 19352, null, true, true);
 				return;
 			}
 			GuessJokerGamePlayModel.Instance.UpdateTaskData(jokerGuessPlayCardResponse.Cmd);
@@ -100,7 +100,7 @@ public class GuessJokerController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06006AF7 RID: 27383 RVA: 0x001588C8 File Offset: 0x00156AC8
+	// Token: 0x06003E8C RID: 16012 RVA: 0x001611F0 File Offset: 0x0015F3F0
 	public void RequestJokerGuessDrawCard(int cardId, Action<int> callback = null)
 	{
 		JokerGuessDrawCardRequest jokerGuessDrawCardRequest = JokerGuessDrawCardRequest.Create();
@@ -114,7 +114,7 @@ public class GuessJokerController : UiControllerBase
 			}
 			if (jokerGuessDrawCardResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(jokerGuessDrawCardResponse.ErrorCode, 20858, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(jokerGuessDrawCardResponse.ErrorCode, 27976, null, true, true);
 				return;
 			}
 			GuessJokerGamePlayModel.Instance.UpdateTaskData(jokerGuessDrawCardResponse.Cmd);
@@ -128,7 +128,7 @@ public class GuessJokerController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06006AF8 RID: 27384 RVA: 0x0015890C File Offset: 0x00156B0C
+	// Token: 0x06003E8D RID: 16013 RVA: 0x00161234 File Offset: 0x0015F434
 	public void JokerGuessUseSkillRequest(int skillId, bool isUse, Action callback = null)
 	{
 		JokerGuessUseSkillRequest jokerGuessUseSkillRequest = Aki.Protocol.JokerGuessUseSkillRequest.Create();
@@ -143,7 +143,7 @@ public class GuessJokerController : UiControllerBase
 			}
 			if (jokerGuessUseSkillResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(jokerGuessUseSkillResponse.ErrorCode, 26805, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(jokerGuessUseSkillResponse.ErrorCode, 28232, null, true, true);
 				return;
 			}
 			GuessJokerGamePlayModel.Instance.UpdateTaskData(jokerGuessUseSkillResponse.Cmd);
@@ -156,7 +156,7 @@ public class GuessJokerController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06006AF9 RID: 27385 RVA: 0x0015895C File Offset: 0x00156B5C
+	// Token: 0x06003E8E RID: 16014 RVA: 0x00161284 File Offset: 0x0015F484
 	public void JokerGuessRewardRequest(int levelId, Action callback = null)
 	{
 		JokerGuessRewardRequest jokerGuessRewardRequest = Aki.Protocol.JokerGuessRewardRequest.Create();
@@ -170,7 +170,7 @@ public class GuessJokerController : UiControllerBase
 			}
 			if (jokerGuessRewardResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(jokerGuessRewardResponse.ErrorCode, 22205, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(jokerGuessRewardResponse.ErrorCode, 20099, null, true, true);
 				return;
 			}
 			SpringManorData activityData = SpringManorModel.Instance.ActivityData;
@@ -188,7 +188,7 @@ public class GuessJokerController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06006AFA RID: 27386 RVA: 0x001589AC File Offset: 0x00156BAC
+	// Token: 0x06003E8F RID: 16015 RVA: 0x001612D4 File Offset: 0x0015F4D4
 	[NullableContext(1)]
 	public void OpenGuessJokerFloatTipsView(string textId, [Nullable(new byte[]
 	{
@@ -204,8 +204,8 @@ public class GuessJokerController : UiControllerBase
 		UiManager.Instance.OpenView(EUiViewName.GuessJokerFloatTipsView, param, null);
 	}
 
-	// Token: 0x1700089A RID: 2202
-	// (get) Token: 0x06006AFB RID: 27387 RVA: 0x001589DE File Offset: 0x00156BDE
+	// Token: 0x170008BA RID: 2234
+	// (get) Token: 0x06003E90 RID: 16016 RVA: 0x00161306 File Offset: 0x0015F506
 	[Nullable(1)]
 	public static GuessJokerController Instance
 	{
@@ -216,7 +216,7 @@ public class GuessJokerController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06006AFC RID: 27388 RVA: 0x001589E5 File Offset: 0x00156BE5
+	// Token: 0x06003E91 RID: 16017 RVA: 0x0016130D File Offset: 0x0015F50D
 	[NullableContext(1)]
 	public static GuessJokerController GetOrCreateInstance()
 	{
@@ -227,7 +227,7 @@ public class GuessJokerController : UiControllerBase
 		return GuessJokerController._Instance;
 	}
 
-	// Token: 0x06006AFD RID: 27389 RVA: 0x001589F9 File Offset: 0x00156BF9
+	// Token: 0x06003E92 RID: 16018 RVA: 0x00161321 File Offset: 0x0015F521
 	public static bool CreateInstance()
 	{
 		if (GuessJokerController._Instance != null)
@@ -238,23 +238,23 @@ public class GuessJokerController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06006AFE RID: 27390 RVA: 0x00158A0F File Offset: 0x00156C0F
+	// Token: 0x06003E93 RID: 16019 RVA: 0x00161337 File Offset: 0x0015F537
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06006AFF RID: 27391 RVA: 0x00158A11 File Offset: 0x00156C11
+	// Token: 0x06003E94 RID: 16020 RVA: 0x00161339 File Offset: 0x0015F539
 	public static void ResetStaticDefaultValue()
 	{
 		GuessJokerController._Instance = null;
 	}
 
-	// Token: 0x06006B00 RID: 27392 RVA: 0x00158A19 File Offset: 0x00156C19
+	// Token: 0x06003E95 RID: 16021 RVA: 0x00161341 File Offset: 0x0015F541
 	static GuessJokerController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(GuessJokerController.CreateStaticDefaultValue), new Action(GuessJokerController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04003139 RID: 12601
+	// Token: 0x040031D2 RID: 12754
 	private static GuessJokerController _Instance;
 }

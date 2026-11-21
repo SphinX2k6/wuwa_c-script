@@ -4,14 +4,14 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Core.Framework;
 using UnrealEngine;
 
-// Token: 0x0200220B RID: 8715
+// Token: 0x020016EF RID: 5871
 [NullableContext(1)]
 [Nullable(0)]
 [TickController(0)]
 public class MeshStreamController : ControllerBase
 {
-	// Token: 0x170015A4 RID: 5540
-	// (get) Token: 0x06010FE2 RID: 69602 RVA: 0x00424A0F File Offset: 0x00422C0F
+	// Token: 0x170015DB RID: 5595
+	// (get) Token: 0x0600E477 RID: 58487 RVA: 0x004315A3 File Offset: 0x0042F7A3
 	protected override bool IsTickEvenPausedInternal
 	{
 		get
@@ -20,7 +20,7 @@ public class MeshStreamController : ControllerBase
 		}
 	}
 
-	// Token: 0x06010FE3 RID: 69603 RVA: 0x00424A14 File Offset: 0x00422C14
+	// Token: 0x0600E478 RID: 58488 RVA: 0x004315A8 File Offset: 0x0042F7A8
 	protected override void OnTick(float delta)
 	{
 		if (this.MeshSteamFinishedTaskSet.Count == 0)
@@ -46,7 +46,7 @@ public class MeshStreamController : ControllerBase
 		this.MeshSteamFinishedTaskSet.Clear();
 	}
 
-	// Token: 0x06010FE4 RID: 69604 RVA: 0x00424AA8 File Offset: 0x00422CA8
+	// Token: 0x0600E479 RID: 58489 RVA: 0x0043163C File Offset: 0x0042F83C
 	public int AddMeshStreamTask(MeshStreamTaskContext context)
 	{
 		MeshStreamTask meshStreamTask = new MeshStreamTask();
@@ -60,7 +60,7 @@ public class MeshStreamController : ControllerBase
 		return meshStreamTask.Id;
 	}
 
-	// Token: 0x06010FE5 RID: 69605 RVA: 0x00424AF8 File Offset: 0x00422CF8
+	// Token: 0x0600E47A RID: 58490 RVA: 0x0043168C File Offset: 0x0042F88C
 	private void ExecuteTask(MeshStreamTask task)
 	{
 		task.MeshStreamFinishDelegate = delegate(in TArray<USkeletalMesh> skeletalMeshArray, in TArray<UStaticMesh> staticMeshes)
@@ -80,7 +80,7 @@ public class MeshStreamController : ControllerBase
 		task.TaskState = EMeshStreamTaskState.Streaming;
 	}
 
-	// Token: 0x06010FE6 RID: 69606 RVA: 0x00424B80 File Offset: 0x00422D80
+	// Token: 0x0600E47B RID: 58491 RVA: 0x00431714 File Offset: 0x0042F914
 	public void RemoveMeshStreamTask(int taskId)
 	{
 		MeshStreamTask meshStreamTask;
@@ -94,7 +94,7 @@ public class MeshStreamController : ControllerBase
 		meshStreamTask.TaskState = EMeshStreamTaskState.Canceled;
 	}
 
-	// Token: 0x06010FE7 RID: 69607 RVA: 0x00424BC6 File Offset: 0x00422DC6
+	// Token: 0x0600E47C RID: 58492 RVA: 0x0043175A File Offset: 0x0042F95A
 	private void StopMeshStreaming(MeshStreamTask task)
 	{
 		if (task.SteamingHandleId < 0)
@@ -109,7 +109,7 @@ public class MeshStreamController : ControllerBase
 		task.SteamingHandleId = -1;
 	}
 
-	// Token: 0x06010FE8 RID: 69608 RVA: 0x00424BF8 File Offset: 0x00422DF8
+	// Token: 0x0600E47D RID: 58493 RVA: 0x0043178C File Offset: 0x0042F98C
 	protected override bool OnClear()
 	{
 		if (this.MeshStreamTaskMap.Count > 0)
@@ -135,8 +135,8 @@ public class MeshStreamController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x170015A5 RID: 5541
-	// (get) Token: 0x06010FE9 RID: 69609 RVA: 0x00424CAA File Offset: 0x00422EAA
+	// Token: 0x170015DC RID: 5596
+	// (get) Token: 0x0600E47E RID: 58494 RVA: 0x0043183E File Offset: 0x0042FA3E
 	public static MeshStreamController Instance
 	{
 		get
@@ -145,7 +145,7 @@ public class MeshStreamController : ControllerBase
 		}
 	}
 
-	// Token: 0x06010FEA RID: 69610 RVA: 0x00424CB1 File Offset: 0x00422EB1
+	// Token: 0x0600E47F RID: 58495 RVA: 0x00431845 File Offset: 0x0042FA45
 	public static MeshStreamController GetOrCreateInstance()
 	{
 		if (MeshStreamController._Instance == null)
@@ -155,7 +155,7 @@ public class MeshStreamController : ControllerBase
 		return MeshStreamController._Instance;
 	}
 
-	// Token: 0x06010FEB RID: 69611 RVA: 0x00424CC5 File Offset: 0x00422EC5
+	// Token: 0x0600E480 RID: 58496 RVA: 0x00431859 File Offset: 0x0042FA59
 	public static bool CreateInstance()
 	{
 		if (MeshStreamController._Instance != null)
@@ -166,33 +166,33 @@ public class MeshStreamController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06010FEC RID: 69612 RVA: 0x00424CDB File Offset: 0x00422EDB
+	// Token: 0x0600E481 RID: 58497 RVA: 0x0043186F File Offset: 0x0042FA6F
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06010FED RID: 69613 RVA: 0x00424CDD File Offset: 0x00422EDD
+	// Token: 0x0600E482 RID: 58498 RVA: 0x00431871 File Offset: 0x0042FA71
 	public static void ResetStaticDefaultValue()
 	{
 		MeshStreamController._Instance = null;
 	}
 
-	// Token: 0x06010FEE RID: 69614 RVA: 0x00424CE5 File Offset: 0x00422EE5
+	// Token: 0x0600E483 RID: 58499 RVA: 0x00431879 File Offset: 0x0042FA79
 	static MeshStreamController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(MeshStreamController.CreateStaticDefaultValue), new Action(MeshStreamController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04008155 RID: 33109
+	// Token: 0x04008293 RID: 33427
 	private int IncrementId = 1;
 
-	// Token: 0x04008156 RID: 33110
+	// Token: 0x04008294 RID: 33428
 	private readonly HashSet<int> MeshSteamFinishedTaskSet = new HashSet<int>();
 
-	// Token: 0x04008157 RID: 33111
+	// Token: 0x04008295 RID: 33429
 	private readonly Dictionary<int, MeshStreamTask> MeshStreamTaskMap = new Dictionary<int, MeshStreamTask>();
 
-	// Token: 0x04008158 RID: 33112
+	// Token: 0x04008296 RID: 33430
 	[Nullable(2)]
 	private static MeshStreamController _Instance;
 }

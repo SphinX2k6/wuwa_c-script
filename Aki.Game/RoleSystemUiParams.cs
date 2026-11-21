@@ -1,50 +1,50 @@
 ﻿using System;
 
-// Token: 0x020028D4 RID: 10452
+// Token: 0x02001E4F RID: 7759
 public class RoleSystemUiParams : IRoleSystemUiParams
 {
-	// Token: 0x17001CE6 RID: 7398
-	// (get) Token: 0x06015930 RID: 88368 RVA: 0x005727E4 File Offset: 0x005709E4
-	// (set) Token: 0x06015931 RID: 88369 RVA: 0x005727EC File Offset: 0x005709EC
+	// Token: 0x17001D3E RID: 7486
+	// (get) Token: 0x06013330 RID: 78640 RVA: 0x0059D69C File Offset: 0x0059B89C
+	// (set) Token: 0x06013331 RID: 78641 RVA: 0x0059D6A4 File Offset: 0x0059B8A4
 	public bool RoleListButton { get; set; }
 
-	// Token: 0x17001CE7 RID: 7399
-	// (get) Token: 0x06015932 RID: 88370 RVA: 0x005727F5 File Offset: 0x005709F5
-	// (set) Token: 0x06015933 RID: 88371 RVA: 0x005727FD File Offset: 0x005709FD
+	// Token: 0x17001D3F RID: 7487
+	// (get) Token: 0x06013332 RID: 78642 RVA: 0x0059D6AD File Offset: 0x0059B8AD
+	// (set) Token: 0x06013333 RID: 78643 RVA: 0x0059D6B5 File Offset: 0x0059B8B5
 	public bool RoleListButtonRedDot { get; set; }
 
-	// Token: 0x17001CE8 RID: 7400
-	// (get) Token: 0x06015934 RID: 88372 RVA: 0x00572806 File Offset: 0x00570A06
-	// (set) Token: 0x06015935 RID: 88373 RVA: 0x0057280E File Offset: 0x00570A0E
+	// Token: 0x17001D40 RID: 7488
+	// (get) Token: 0x06013334 RID: 78644 RVA: 0x0059D6BE File Offset: 0x0059B8BE
+	// (set) Token: 0x06013335 RID: 78645 RVA: 0x0059D6C6 File Offset: 0x0059B8C6
 	public bool RoleList { get; set; }
 
-	// Token: 0x17001CE9 RID: 7401
-	// (get) Token: 0x06015936 RID: 88374 RVA: 0x00572817 File Offset: 0x00570A17
-	// (set) Token: 0x06015937 RID: 88375 RVA: 0x0057281F File Offset: 0x00570A1F
+	// Token: 0x17001D41 RID: 7489
+	// (get) Token: 0x06013336 RID: 78646 RVA: 0x0059D6CF File Offset: 0x0059B8CF
+	// (set) Token: 0x06013337 RID: 78647 RVA: 0x0059D6D7 File Offset: 0x0059B8D7
 	public bool RoleListNeedTrial { get; set; }
 
-	// Token: 0x17001CEA RID: 7402
-	// (get) Token: 0x06015938 RID: 88376 RVA: 0x00572828 File Offset: 0x00570A28
-	// (set) Token: 0x06015939 RID: 88377 RVA: 0x00572830 File Offset: 0x00570A30
+	// Token: 0x17001D42 RID: 7490
+	// (get) Token: 0x06013338 RID: 78648 RVA: 0x0059D6E0 File Offset: 0x0059B8E0
+	// (set) Token: 0x06013339 RID: 78649 RVA: 0x0059D6E8 File Offset: 0x0059B8E8
 	public bool RoleListRedDot { get; set; }
 
-	// Token: 0x17001CEB RID: 7403
-	// (get) Token: 0x0601593A RID: 88378 RVA: 0x00572839 File Offset: 0x00570A39
-	// (set) Token: 0x0601593B RID: 88379 RVA: 0x00572841 File Offset: 0x00570A41
+	// Token: 0x17001D43 RID: 7491
+	// (get) Token: 0x0601333A RID: 78650 RVA: 0x0059D6F1 File Offset: 0x0059B8F1
+	// (set) Token: 0x0601333B RID: 78651 RVA: 0x0059D6F9 File Offset: 0x0059B8F9
 	public bool TabRedDot { get; set; }
 
-	// Token: 0x17001CEC RID: 7404
-	// (get) Token: 0x0601593C RID: 88380 RVA: 0x0057284A File Offset: 0x00570A4A
-	// (set) Token: 0x0601593D RID: 88381 RVA: 0x00572852 File Offset: 0x00570A52
+	// Token: 0x17001D44 RID: 7492
+	// (get) Token: 0x0601333C RID: 78652 RVA: 0x0059D702 File Offset: 0x0059B902
+	// (set) Token: 0x0601333D RID: 78653 RVA: 0x0059D70A File Offset: 0x0059B90A
 	public bool TeachBtn { get; set; }
 
-	// Token: 0x17001CED RID: 7405
-	// (get) Token: 0x0601593E RID: 88382 RVA: 0x0057285B File Offset: 0x00570A5B
-	// (set) Token: 0x0601593F RID: 88383 RVA: 0x00572863 File Offset: 0x00570A63
+	// Token: 0x17001D45 RID: 7493
+	// (get) Token: 0x0601333E RID: 78654 RVA: 0x0059D713 File Offset: 0x0059B913
+	// (set) Token: 0x0601333F RID: 78655 RVA: 0x0059D71B File Offset: 0x0059B91B
 	public bool SwitchSkin { get; set; }
 
-	// Token: 0x17001CEE RID: 7406
-	// (get) Token: 0x06015940 RID: 88384 RVA: 0x0057286C File Offset: 0x00570A6C
-	// (set) Token: 0x06015941 RID: 88385 RVA: 0x00572874 File Offset: 0x00570A74
+	// Token: 0x17001D46 RID: 7494
+	// (get) Token: 0x06013340 RID: 78656 RVA: 0x0059D724 File Offset: 0x0059B924
+	// (set) Token: 0x06013341 RID: 78657 RVA: 0x0059D72C File Offset: 0x0059B92C
 	public bool BackgroundMusicSwitch { get; set; }
 }

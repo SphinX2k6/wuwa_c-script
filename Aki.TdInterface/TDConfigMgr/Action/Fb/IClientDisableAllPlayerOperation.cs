@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200293D RID: 10557
+	// Token: 0x02002C1F RID: 11295
 	public class IClientDisableAllPlayerOperation : ClientSetPlayerOperationRestriction
 	{
-		// Token: 0x0600EA21 RID: 59937 RVA: 0x00224A42 File Offset: 0x00222C42
-		[NullableContext(1)]
+		// Token: 0x0600F88C RID: 63628 RVA: 0x00242022 File Offset: 0x00240222
 		public static IClientDisableAllPlayerOperation Create(IClientDisableAllPlayerOperation? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004969 RID: 18793
-		// (get) Token: 0x0600EA22 RID: 59938 RVA: 0x00224A61 File Offset: 0x00222C61
+		// Token: 0x17004CFC RID: 19708
+		// (get) Token: 0x0600F88D RID: 63629 RVA: 0x00242041 File Offset: 0x00240241
 		public override EPlayerOperationType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700496A RID: 18794
-		// (get) Token: 0x0600EA23 RID: 59939 RVA: 0x00224A70 File Offset: 0x00222C70
+		// Token: 0x17004CFD RID: 19709
+		// (get) Token: 0x0600F88E RID: 63630 RVA: 0x00242050 File Offset: 0x00240250
 		public virtual EDisplayModeInPlayerOp? DisplayMode
 		{
 			get
@@ -45,7 +43,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400811B RID: 33051
+		// Token: 0x040087F7 RID: 34807
 		private IClientDisableAllPlayerOperation Instance;
 	}
 }

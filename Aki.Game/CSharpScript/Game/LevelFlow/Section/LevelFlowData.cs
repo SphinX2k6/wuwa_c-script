@@ -4,24 +4,24 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelFlow.Section
 {
-	// Token: 0x02006F71 RID: 28529
+	// Token: 0x020060F2 RID: 24818
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelFlowData
 	{
-		// Token: 0x0604566B RID: 284267 RVA: 0x01133F91 File Offset: 0x01132191
+		// Token: 0x0603B819 RID: 243737 RVA: 0x010DDD95 File Offset: 0x010DBF95
 		public virtual void Init()
 		{
 		}
 
-		// Token: 0x0604566C RID: 284268 RVA: 0x01133F93 File Offset: 0x01132193
+		// Token: 0x0603B81A RID: 243738 RVA: 0x010DDD97 File Offset: 0x010DBF97
 		protected void Register(TSectionCreator creator)
 		{
 			this.SectionMap.Add(this.Capacity, creator);
 			this.Capacity++;
 		}
 
-		// Token: 0x0604566D RID: 284269 RVA: 0x01133FB8 File Offset: 0x011321B8
+		// Token: 0x0603B81B RID: 243739 RVA: 0x010DDDBC File Offset: 0x010DBFBC
 		[NullableContext(2)]
 		public LevelFlowSection GetSection(int index)
 		{
@@ -41,16 +41,16 @@ namespace CSharpScript.Game.LevelFlow.Section
 			return tsectionCreator();
 		}
 
-		// Token: 0x0604566E RID: 284270 RVA: 0x01134028 File Offset: 0x01132228
+		// Token: 0x0603B81C RID: 243740 RVA: 0x010DDE2C File Offset: 0x010DC02C
 		public int GetCapacity()
 		{
 			return this.Capacity;
 		}
 
-		// Token: 0x04024374 RID: 148340
+		// Token: 0x0401F629 RID: 128553
 		private readonly Dictionary<int, TSectionCreator> SectionMap = new Dictionary<int, TSectionCreator>();
 
-		// Token: 0x04024375 RID: 148341
+		// Token: 0x0401F62A RID: 128554
 		private int Capacity;
 	}
 }

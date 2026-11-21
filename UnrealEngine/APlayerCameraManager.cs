@@ -7,68 +7,63 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200100B RID: 4107
-	[NullableContext(1)]
+	// Token: 0x02000261 RID: 609
+	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.PlayerCameraManager")]
-	[UnrealStructLayout(18144, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 18144)]
+	[UnrealStructLayout(18432, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 18432)]
 	public class APlayerCameraManager : AActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0600DE48 RID: 56904 RVA: 0x00147BC2 File Offset: 0x00145DC2
+		// Token: 0x06003480 RID: 13440 RVA: 0x0004AB8A File Offset: 0x00048D8A
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return APlayerCameraManager._ClassPtr;
 		}
 
-		// Token: 0x0600DE49 RID: 56905 RVA: 0x00147BD0 File Offset: 0x00145DD0
+		// Token: 0x06003481 RID: 13441 RVA: 0x0004AB98 File Offset: 0x00048D98
 		public APlayerCameraManager() : this(BuiltinUtils.AllocNativeUObject(APlayerCameraManager.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0600DE4A RID: 56906 RVA: 0x00147BF8 File Offset: 0x00145DF8
+		// Token: 0x06003482 RID: 13442 RVA: 0x0004ABC0 File Offset: 0x00048DC0
+		[NullableContext(1)]
 		public APlayerCameraManager(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(APlayerCameraManager.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700345C RID: 13404
-		// (get) Token: 0x0600DE4B RID: 56907 RVA: 0x00147C2B File Offset: 0x00145E2B
-		// (set) Token: 0x0600DE4C RID: 56908 RVA: 0x00147C3F File Offset: 0x00145E3F
-		[Nullable(2)]
+		// Token: 0x17000765 RID: 1893
+		// (get) Token: 0x06003483 RID: 13443 RVA: 0x0004ABF3 File Offset: 0x00048DF3
+		// (set) Token: 0x06003484 RID: 13444 RVA: 0x0004AC07 File Offset: 0x00048E07
 		public unsafe APlayerController PCOwner
 		{
-			[NullableContext(2)]
 			get
 			{
 				return BuiltinUtils.ObjectPropertyGetter<APlayerController>(base.NativePtr / (IntPtr)sizeof(void*) + APlayerCameraManager.__PropertyOffset_PCOwner);
 			}
-			[NullableContext(2)]
 			set
 			{
 				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + APlayerCameraManager.__PropertyOffset_PCOwner, value);
 			}
 		}
 
-		// Token: 0x1700345D RID: 13405
-		// (get) Token: 0x0600DE4D RID: 56909 RVA: 0x00147C54 File Offset: 0x00145E54
-		// (set) Token: 0x0600DE4E RID: 56910 RVA: 0x00147C68 File Offset: 0x00145E68
-		[Nullable(2)]
+		// Token: 0x17000766 RID: 1894
+		// (get) Token: 0x06003485 RID: 13445 RVA: 0x0004AC1C File Offset: 0x00048E1C
+		// (set) Token: 0x06003486 RID: 13446 RVA: 0x0004AC30 File Offset: 0x00048E30
 		public unsafe USceneComponent TransformComponent
 		{
-			[NullableContext(2)]
 			get
 			{
 				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + APlayerCameraManager.__PropertyOffset_TransformComponent);
 			}
-			[NullableContext(2)]
 			set
 			{
 				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + APlayerCameraManager.__PropertyOffset_TransformComponent, value);
 			}
 		}
 
-		// Token: 0x1700345E RID: 13406
-		// (get) Token: 0x0600DE4F RID: 56911 RVA: 0x00147C7D File Offset: 0x00145E7D
-		// (set) Token: 0x0600DE50 RID: 56912 RVA: 0x00147C8D File Offset: 0x00145E8D
+		// Token: 0x17000767 RID: 1895
+		// (get) Token: 0x06003487 RID: 13447 RVA: 0x0004AC45 File Offset: 0x00048E45
+		// (set) Token: 0x06003488 RID: 13448 RVA: 0x0004AC55 File Offset: 0x00048E55
 		public unsafe float DefaultFOV
 		{
 			get
@@ -81,9 +76,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700345F RID: 13407
-		// (get) Token: 0x0600DE51 RID: 56913 RVA: 0x00147C9E File Offset: 0x00145E9E
-		// (set) Token: 0x0600DE52 RID: 56914 RVA: 0x00147CAE File Offset: 0x00145EAE
+		// Token: 0x17000768 RID: 1896
+		// (get) Token: 0x06003489 RID: 13449 RVA: 0x0004AC66 File Offset: 0x00048E66
+		// (set) Token: 0x0600348A RID: 13450 RVA: 0x0004AC76 File Offset: 0x00048E76
 		public unsafe float DefaultOrthoWidth
 		{
 			get
@@ -96,9 +91,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003460 RID: 13408
-		// (get) Token: 0x0600DE53 RID: 56915 RVA: 0x00147CBF File Offset: 0x00145EBF
-		// (set) Token: 0x0600DE54 RID: 56916 RVA: 0x00147CCF File Offset: 0x00145ECF
+		// Token: 0x17000769 RID: 1897
+		// (get) Token: 0x0600348B RID: 13451 RVA: 0x0004AC87 File Offset: 0x00048E87
+		// (set) Token: 0x0600348C RID: 13452 RVA: 0x0004AC97 File Offset: 0x00048E97
 		public unsafe float DefaultAspectRatio
 		{
 			get
@@ -111,9 +106,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003461 RID: 13409
-		// (get) Token: 0x0600DE55 RID: 56917 RVA: 0x00147CE0 File Offset: 0x00145EE0
-		// (set) Token: 0x0600DE56 RID: 56918 RVA: 0x00147CF4 File Offset: 0x00145EF4
+		// Token: 0x1700076A RID: 1898
+		// (get) Token: 0x0600348D RID: 13453 RVA: 0x0004ACA8 File Offset: 0x00048EA8
+		// (set) Token: 0x0600348E RID: 13454 RVA: 0x0004ACBC File Offset: 0x00048EBC
 		public unsafe FVector2D ViewPointOverride
 		{
 			get
@@ -126,9 +121,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003462 RID: 13410
-		// (get) Token: 0x0600DE57 RID: 56919 RVA: 0x00147D09 File Offset: 0x00145F09
-		// (set) Token: 0x0600DE58 RID: 56920 RVA: 0x00147D1D File Offset: 0x00145F1D
+		// Token: 0x1700076B RID: 1899
+		// (get) Token: 0x0600348F RID: 13455 RVA: 0x0004ACD1 File Offset: 0x00048ED1
+		// (set) Token: 0x06003490 RID: 13456 RVA: 0x0004ACE5 File Offset: 0x00048EE5
 		public unsafe FVector2D ViewSizeOverride
 		{
 			get
@@ -141,9 +136,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003463 RID: 13411
-		// (get) Token: 0x0600DE59 RID: 56921 RVA: 0x00147D32 File Offset: 0x00145F32
-		// (set) Token: 0x0600DE5A RID: 56922 RVA: 0x00147D46 File Offset: 0x00145F46
+		// Token: 0x1700076C RID: 1900
+		// (get) Token: 0x06003491 RID: 13457 RVA: 0x0004ACFA File Offset: 0x00048EFA
+		// (set) Token: 0x06003492 RID: 13458 RVA: 0x0004AD0E File Offset: 0x00048F0E
 		public unsafe FLinearColor FadeColor
 		{
 			get
@@ -156,9 +151,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003464 RID: 13412
-		// (get) Token: 0x0600DE5B RID: 56923 RVA: 0x00147D5B File Offset: 0x00145F5B
-		// (set) Token: 0x0600DE5C RID: 56924 RVA: 0x00147D6B File Offset: 0x00145F6B
+		// Token: 0x1700076D RID: 1901
+		// (get) Token: 0x06003493 RID: 13459 RVA: 0x0004AD23 File Offset: 0x00048F23
+		// (set) Token: 0x06003494 RID: 13460 RVA: 0x0004AD33 File Offset: 0x00048F33
 		public unsafe float FadeAmount
 		{
 			get
@@ -171,53 +166,13 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003465 RID: 13413
-		// (get) Token: 0x0600DE5D RID: 56925 RVA: 0x00147D7C File Offset: 0x00145F7C
-		// (set) Token: 0x0600DE5E RID: 56926 RVA: 0x00147DB5 File Offset: 0x00145FB5
-		public FCameraCacheEntry CameraCache
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FCameraCacheEntry result;
-				if ((result = this._CameraCache) == null)
-				{
-					result = (this._CameraCache = new FCameraCacheEntry(base.NativePtr + (IntPtr)APlayerCameraManager.__PropertyOffset_CameraCache, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FCameraCacheEntry.StaticStruct(), base.NativePtr + (IntPtr)APlayerCameraManager.__PropertyOffset_CameraCache, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x17003466 RID: 13414
-		// (get) Token: 0x0600DE5F RID: 56927 RVA: 0x00147DD8 File Offset: 0x00145FD8
-		// (set) Token: 0x0600DE60 RID: 56928 RVA: 0x00147E11 File Offset: 0x00146011
-		public FCameraCacheEntry LastFrameCameraCache
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FCameraCacheEntry result;
-				if ((result = this._LastFrameCameraCache) == null)
-				{
-					result = (this._LastFrameCameraCache = new FCameraCacheEntry(base.NativePtr + (IntPtr)APlayerCameraManager.__PropertyOffset_LastFrameCameraCache, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FCameraCacheEntry.StaticStruct(), base.NativePtr + (IntPtr)APlayerCameraManager.__PropertyOffset_LastFrameCameraCache, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x17003467 RID: 13415
-		// (get) Token: 0x0600DE61 RID: 56929 RVA: 0x00147E34 File Offset: 0x00146034
-		// (set) Token: 0x0600DE62 RID: 56930 RVA: 0x00147E6D File Offset: 0x0014606D
+		// Token: 0x1700076E RID: 1902
+		// (get) Token: 0x06003495 RID: 13461 RVA: 0x0004AD44 File Offset: 0x00048F44
+		// (set) Token: 0x06003496 RID: 13462 RVA: 0x0004AD7D File Offset: 0x00048F7D
+		[Nullable(1)]
 		public FTViewTarget ViewTarget
 		{
+			[NullableContext(1)]
 			get
 			{
 				base.FastCheckIsValid();
@@ -228,17 +183,20 @@ namespace UnrealEngine
 				}
 				return result;
 			}
+			[NullableContext(1)]
 			set
 			{
 				UnrealReflectionUtils.CopyNativeStruct(FTViewTarget.StaticStruct(), base.NativePtr + (IntPtr)APlayerCameraManager.__PropertyOffset_ViewTarget, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17003468 RID: 13416
-		// (get) Token: 0x0600DE63 RID: 56931 RVA: 0x00147E90 File Offset: 0x00146090
-		// (set) Token: 0x0600DE64 RID: 56932 RVA: 0x00147EC9 File Offset: 0x001460C9
+		// Token: 0x1700076F RID: 1903
+		// (get) Token: 0x06003497 RID: 13463 RVA: 0x0004ADA0 File Offset: 0x00048FA0
+		// (set) Token: 0x06003498 RID: 13464 RVA: 0x0004ADD9 File Offset: 0x00048FD9
+		[Nullable(1)]
 		public FTViewTarget PendingViewTarget
 		{
+			[NullableContext(1)]
 			get
 			{
 				base.FastCheckIsValid();
@@ -249,59 +207,20 @@ namespace UnrealEngine
 				}
 				return result;
 			}
+			[NullableContext(1)]
 			set
 			{
 				UnrealReflectionUtils.CopyNativeStruct(FTViewTarget.StaticStruct(), base.NativePtr + (IntPtr)APlayerCameraManager.__PropertyOffset_PendingViewTarget, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17003469 RID: 13417
-		// (get) Token: 0x0600DE65 RID: 56933 RVA: 0x00147EEC File Offset: 0x001460EC
-		// (set) Token: 0x0600DE66 RID: 56934 RVA: 0x00147F25 File Offset: 0x00146125
-		public FCameraCacheEntry CameraCachePrivate
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FCameraCacheEntry result;
-				if ((result = this._CameraCachePrivate) == null)
-				{
-					result = (this._CameraCachePrivate = new FCameraCacheEntry(base.NativePtr + (IntPtr)APlayerCameraManager.__PropertyOffset_CameraCachePrivate, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FCameraCacheEntry.StaticStruct(), base.NativePtr + (IntPtr)APlayerCameraManager.__PropertyOffset_CameraCachePrivate, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x1700346A RID: 13418
-		// (get) Token: 0x0600DE67 RID: 56935 RVA: 0x00147F48 File Offset: 0x00146148
-		// (set) Token: 0x0600DE68 RID: 56936 RVA: 0x00147F81 File Offset: 0x00146181
-		public FCameraCacheEntry LastFrameCameraCachePrivate
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FCameraCacheEntry result;
-				if ((result = this._LastFrameCameraCachePrivate) == null)
-				{
-					result = (this._LastFrameCameraCachePrivate = new FCameraCacheEntry(base.NativePtr + (IntPtr)APlayerCameraManager.__PropertyOffset_LastFrameCameraCachePrivate, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FCameraCacheEntry.StaticStruct(), base.NativePtr + (IntPtr)APlayerCameraManager.__PropertyOffset_LastFrameCameraCachePrivate, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x1700346B RID: 13419
-		// (get) Token: 0x0600DE69 RID: 56937 RVA: 0x00147FA4 File Offset: 0x001461A4
-		// (set) Token: 0x0600DE6A RID: 56938 RVA: 0x00147FDD File Offset: 0x001461DD
+		// Token: 0x17000770 RID: 1904
+		// (get) Token: 0x06003499 RID: 13465 RVA: 0x0004ADFC File Offset: 0x00048FFC
+		// (set) Token: 0x0600349A RID: 13466 RVA: 0x0004AE35 File Offset: 0x00049035
+		[Nullable(1)]
 		public TArray<UCameraModifier> ModifierList
 		{
+			[NullableContext(1)]
 			get
 			{
 				base.FastCheckIsValid();
@@ -312,15 +231,16 @@ namespace UnrealEngine
 				}
 				return result;
 			}
+			[NullableContext(1)]
 			set
 			{
 				this.ModifierList.CopyAssign(value);
 			}
 		}
 
-		// Token: 0x1700346C RID: 13420
-		// (get) Token: 0x0600DE6B RID: 56939 RVA: 0x00147FEC File Offset: 0x001461EC
-		// (set) Token: 0x0600DE6C RID: 56940 RVA: 0x00148025 File Offset: 0x00146225
+		// Token: 0x17000771 RID: 1905
+		// (get) Token: 0x0600349B RID: 13467 RVA: 0x0004AE44 File Offset: 0x00049044
+		// (set) Token: 0x0600349C RID: 13468 RVA: 0x0004AE7D File Offset: 0x0004907D
 		[Nullable(new byte[]
 		{
 			1,
@@ -357,9 +277,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700346D RID: 13421
-		// (get) Token: 0x0600DE6D RID: 56941 RVA: 0x00148033 File Offset: 0x00146233
-		// (set) Token: 0x0600DE6E RID: 56942 RVA: 0x00148043 File Offset: 0x00146243
+		// Token: 0x17000772 RID: 1906
+		// (get) Token: 0x0600349D RID: 13469 RVA: 0x0004AE8B File Offset: 0x0004908B
+		// (set) Token: 0x0600349E RID: 13470 RVA: 0x0004AE9B File Offset: 0x0004909B
 		public unsafe float FreeCamDistance
 		{
 			get
@@ -372,9 +292,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700346E RID: 13422
-		// (get) Token: 0x0600DE6F RID: 56943 RVA: 0x00148054 File Offset: 0x00146254
-		// (set) Token: 0x0600DE70 RID: 56944 RVA: 0x00148068 File Offset: 0x00146268
+		// Token: 0x17000773 RID: 1907
+		// (get) Token: 0x0600349F RID: 13471 RVA: 0x0004AEAC File Offset: 0x000490AC
+		// (set) Token: 0x060034A0 RID: 13472 RVA: 0x0004AEC0 File Offset: 0x000490C0
 		public unsafe FVector FreeCamOffset
 		{
 			get
@@ -387,9 +307,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700346F RID: 13423
-		// (get) Token: 0x0600DE71 RID: 56945 RVA: 0x0014807D File Offset: 0x0014627D
-		// (set) Token: 0x0600DE72 RID: 56946 RVA: 0x00148091 File Offset: 0x00146291
+		// Token: 0x17000774 RID: 1908
+		// (get) Token: 0x060034A1 RID: 13473 RVA: 0x0004AED5 File Offset: 0x000490D5
+		// (set) Token: 0x060034A2 RID: 13474 RVA: 0x0004AEE9 File Offset: 0x000490E9
 		public unsafe FVector ViewTargetOffset
 		{
 			get
@@ -402,11 +322,13 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003470 RID: 13424
-		// (get) Token: 0x0600DE73 RID: 56947 RVA: 0x001480A8 File Offset: 0x001462A8
-		// (set) Token: 0x0600DE74 RID: 56948 RVA: 0x001480E1 File Offset: 0x001462E1
+		// Token: 0x17000775 RID: 1909
+		// (get) Token: 0x060034A3 RID: 13475 RVA: 0x0004AF00 File Offset: 0x00049100
+		// (set) Token: 0x060034A4 RID: 13476 RVA: 0x0004AF39 File Offset: 0x00049139
+		[Nullable(1)]
 		public FOnAudioFadeChangeSignature OnAudioFadeChangeEvent
 		{
+			[NullableContext(1)]
 			get
 			{
 				base.FastCheckIsValid();
@@ -417,54 +339,31 @@ namespace UnrealEngine
 				}
 				return result;
 			}
+			[NullableContext(1)]
 			set
 			{
 				FMulticastScriptDelegate.NativeCopy(base.NativePtr + (IntPtr)APlayerCameraManager.__PropertyOffset_OnAudioFadeChangeEvent, (value != null) ? value.NativePtr : ((IntPtr)0));
 			}
 		}
 
-		// Token: 0x17003471 RID: 13425
-		// (get) Token: 0x0600DE75 RID: 56949 RVA: 0x00148104 File Offset: 0x00146304
-		// (set) Token: 0x0600DE76 RID: 56950 RVA: 0x0014813D File Offset: 0x0014633D
-		public TArray<AEmitterCameraLensEffectBase> CameraLensEffects
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<AEmitterCameraLensEffectBase> result;
-				if ((result = this._CameraLensEffects) == null)
-				{
-					result = (this._CameraLensEffects = new TArray<AEmitterCameraLensEffectBase>(base.NativePtr + (IntPtr)APlayerCameraManager.__PropertyOffset_CameraLensEffects, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.CameraLensEffects.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17003472 RID: 13426
-		// (get) Token: 0x0600DE77 RID: 56951 RVA: 0x0014814B File Offset: 0x0014634B
-		// (set) Token: 0x0600DE78 RID: 56952 RVA: 0x0014815F File Offset: 0x0014635F
-		[Nullable(2)]
+		// Token: 0x17000776 RID: 1910
+		// (get) Token: 0x060034A5 RID: 13477 RVA: 0x0004AF5A File Offset: 0x0004915A
+		// (set) Token: 0x060034A6 RID: 13478 RVA: 0x0004AF6E File Offset: 0x0004916E
 		public unsafe UCameraModifier_CameraShake CachedCameraShakeMod
 		{
-			[NullableContext(2)]
 			get
 			{
 				return BuiltinUtils.ObjectPropertyGetter<UCameraModifier_CameraShake>(base.NativePtr / (IntPtr)sizeof(void*) + APlayerCameraManager.__PropertyOffset_CachedCameraShakeMod);
 			}
-			[NullableContext(2)]
 			set
 			{
 				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + APlayerCameraManager.__PropertyOffset_CachedCameraShakeMod, value);
 			}
 		}
 
-		// Token: 0x17003473 RID: 13427
-		// (get) Token: 0x0600DE79 RID: 56953 RVA: 0x00148174 File Offset: 0x00146374
-		// (set) Token: 0x0600DE7A RID: 56954 RVA: 0x00148184 File Offset: 0x00146384
+		// Token: 0x17000777 RID: 1911
+		// (get) Token: 0x060034A7 RID: 13479 RVA: 0x0004AF83 File Offset: 0x00049183
+		// (set) Token: 0x060034A8 RID: 13480 RVA: 0x0004AF93 File Offset: 0x00049193
 		public unsafe bool bOpenCameraShake
 		{
 			get
@@ -477,32 +376,13 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003474 RID: 13428
-		// (get) Token: 0x0600DE7B RID: 56955 RVA: 0x00148198 File Offset: 0x00146398
-		// (set) Token: 0x0600DE7C RID: 56956 RVA: 0x001481D2 File Offset: 0x001463D2
-		public TFixedArray<UCameraAnimInst> AnimInstPool
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TFixedArray<UCameraAnimInst> result;
-				if ((result = this._AnimInstPool) == null)
-				{
-					result = (this._AnimInstPool = new TFixedArray<UCameraAnimInst>(base.NativePtr + (IntPtr)APlayerCameraManager.__PropertyOffset_AnimInstPool, 8, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.AnimInstPool.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17003475 RID: 13429
-		// (get) Token: 0x0600DE7D RID: 56957 RVA: 0x001481E0 File Offset: 0x001463E0
-		// (set) Token: 0x0600DE7E RID: 56958 RVA: 0x00148219 File Offset: 0x00146419
+		// Token: 0x17000778 RID: 1912
+		// (get) Token: 0x060034A9 RID: 13481 RVA: 0x0004AFA4 File Offset: 0x000491A4
+		// (set) Token: 0x060034AA RID: 13482 RVA: 0x0004AFDD File Offset: 0x000491DD
+		[Nullable(1)]
 		public TArray<FPostProcessSettings> PostProcessBlendCache
 		{
+			[NullableContext(1)]
 			get
 			{
 				base.FastCheckIsValid();
@@ -513,75 +393,31 @@ namespace UnrealEngine
 				}
 				return result;
 			}
+			[NullableContext(1)]
 			set
 			{
 				this.PostProcessBlendCache.CopyAssign(value);
 			}
 		}
 
-		// Token: 0x17003476 RID: 13430
-		// (get) Token: 0x0600DE7F RID: 56959 RVA: 0x00148228 File Offset: 0x00146428
-		// (set) Token: 0x0600DE80 RID: 56960 RVA: 0x00148261 File Offset: 0x00146461
-		public TArray<UCameraAnimInst> ActiveAnims
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<UCameraAnimInst> result;
-				if ((result = this._ActiveAnims) == null)
-				{
-					result = (this._ActiveAnims = new TArray<UCameraAnimInst>(base.NativePtr + (IntPtr)APlayerCameraManager.__PropertyOffset_ActiveAnims, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.ActiveAnims.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17003477 RID: 13431
-		// (get) Token: 0x0600DE81 RID: 56961 RVA: 0x00148270 File Offset: 0x00146470
-		// (set) Token: 0x0600DE82 RID: 56962 RVA: 0x001482A9 File Offset: 0x001464A9
-		public TArray<UCameraAnimInst> FreeAnims
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<UCameraAnimInst> result;
-				if ((result = this._FreeAnims) == null)
-				{
-					result = (this._FreeAnims = new TArray<UCameraAnimInst>(base.NativePtr + (IntPtr)APlayerCameraManager.__PropertyOffset_FreeAnims, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.FreeAnims.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17003478 RID: 13432
-		// (get) Token: 0x0600DE83 RID: 56963 RVA: 0x001482B7 File Offset: 0x001464B7
-		// (set) Token: 0x0600DE84 RID: 56964 RVA: 0x001482CB File Offset: 0x001464CB
-		[Nullable(2)]
+		// Token: 0x17000779 RID: 1913
+		// (get) Token: 0x060034AB RID: 13483 RVA: 0x0004AFEB File Offset: 0x000491EB
+		// (set) Token: 0x060034AC RID: 13484 RVA: 0x0004AFFF File Offset: 0x000491FF
 		public unsafe ACameraActor AnimCameraActor
 		{
-			[NullableContext(2)]
 			get
 			{
 				return BuiltinUtils.ObjectPropertyGetter<ACameraActor>(base.NativePtr / (IntPtr)sizeof(void*) + APlayerCameraManager.__PropertyOffset_AnimCameraActor);
 			}
-			[NullableContext(2)]
 			set
 			{
 				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + APlayerCameraManager.__PropertyOffset_AnimCameraActor, value);
 			}
 		}
 
-		// Token: 0x17003479 RID: 13433
-		// (get) Token: 0x0600DE85 RID: 56965 RVA: 0x001482E0 File Offset: 0x001464E0
-		// (set) Token: 0x0600DE86 RID: 56966 RVA: 0x001482F9 File Offset: 0x001464F9
+		// Token: 0x1700077A RID: 1914
+		// (get) Token: 0x060034AD RID: 13485 RVA: 0x0004B014 File Offset: 0x00049214
+		// (set) Token: 0x060034AE RID: 13486 RVA: 0x0004B02D File Offset: 0x0004922D
 		public unsafe bool bIsOrthographic
 		{
 			get
@@ -594,9 +430,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700347A RID: 13434
-		// (get) Token: 0x0600DE87 RID: 56967 RVA: 0x00148329 File Offset: 0x00146529
-		// (set) Token: 0x0600DE88 RID: 56968 RVA: 0x00148342 File Offset: 0x00146542
+		// Token: 0x1700077B RID: 1915
+		// (get) Token: 0x060034AF RID: 13487 RVA: 0x0004B05D File Offset: 0x0004925D
+		// (set) Token: 0x060034B0 RID: 13488 RVA: 0x0004B076 File Offset: 0x00049276
 		public unsafe bool bDefaultConstrainAspectRatio
 		{
 			get
@@ -609,9 +445,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700347B RID: 13435
-		// (get) Token: 0x0600DE89 RID: 56969 RVA: 0x00148372 File Offset: 0x00146572
-		// (set) Token: 0x0600DE8A RID: 56970 RVA: 0x0014838B File Offset: 0x0014658B
+		// Token: 0x1700077C RID: 1916
+		// (get) Token: 0x060034B1 RID: 13489 RVA: 0x0004B0A6 File Offset: 0x000492A6
+		// (set) Token: 0x060034B2 RID: 13490 RVA: 0x0004B0BF File Offset: 0x000492BF
 		public unsafe bool bEnableFading
 		{
 			get
@@ -624,9 +460,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700347C RID: 13436
-		// (get) Token: 0x0600DE8B RID: 56971 RVA: 0x001483BB File Offset: 0x001465BB
-		// (set) Token: 0x0600DE8C RID: 56972 RVA: 0x001483D4 File Offset: 0x001465D4
+		// Token: 0x1700077D RID: 1917
+		// (get) Token: 0x060034B3 RID: 13491 RVA: 0x0004B0EF File Offset: 0x000492EF
+		// (set) Token: 0x060034B4 RID: 13492 RVA: 0x0004B108 File Offset: 0x00049308
 		public unsafe bool bClientSimulatingViewTarget
 		{
 			get
@@ -639,9 +475,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700347D RID: 13437
-		// (get) Token: 0x0600DE8D RID: 56973 RVA: 0x00148404 File Offset: 0x00146604
-		// (set) Token: 0x0600DE8E RID: 56974 RVA: 0x0014841D File Offset: 0x0014661D
+		// Token: 0x1700077E RID: 1918
+		// (get) Token: 0x060034B5 RID: 13493 RVA: 0x0004B138 File Offset: 0x00049338
+		// (set) Token: 0x060034B6 RID: 13494 RVA: 0x0004B151 File Offset: 0x00049351
 		public unsafe bool bUseClientSideCameraUpdates
 		{
 			get
@@ -654,9 +490,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700347E RID: 13438
-		// (get) Token: 0x0600DE8F RID: 56975 RVA: 0x0014844D File Offset: 0x0014664D
-		// (set) Token: 0x0600DE90 RID: 56976 RVA: 0x00148466 File Offset: 0x00146666
+		// Token: 0x1700077F RID: 1919
+		// (get) Token: 0x060034B7 RID: 13495 RVA: 0x0004B181 File Offset: 0x00049381
+		// (set) Token: 0x060034B8 RID: 13496 RVA: 0x0004B19A File Offset: 0x0004939A
 		public unsafe bool bGameCameraCutThisFrame
 		{
 			get
@@ -669,9 +505,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700347F RID: 13439
-		// (get) Token: 0x0600DE91 RID: 56977 RVA: 0x00148496 File Offset: 0x00146696
-		// (set) Token: 0x0600DE92 RID: 56978 RVA: 0x001484A6 File Offset: 0x001466A6
+		// Token: 0x17000780 RID: 1920
+		// (get) Token: 0x060034B9 RID: 13497 RVA: 0x0004B1CA File Offset: 0x000493CA
+		// (set) Token: 0x060034BA RID: 13498 RVA: 0x0004B1DA File Offset: 0x000493DA
 		public unsafe float ViewPitchMin
 		{
 			get
@@ -684,9 +520,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003480 RID: 13440
-		// (get) Token: 0x0600DE93 RID: 56979 RVA: 0x001484B7 File Offset: 0x001466B7
-		// (set) Token: 0x0600DE94 RID: 56980 RVA: 0x001484C7 File Offset: 0x001466C7
+		// Token: 0x17000781 RID: 1921
+		// (get) Token: 0x060034BB RID: 13499 RVA: 0x0004B1EB File Offset: 0x000493EB
+		// (set) Token: 0x060034BC RID: 13500 RVA: 0x0004B1FB File Offset: 0x000493FB
 		public unsafe float ViewPitchMax
 		{
 			get
@@ -699,9 +535,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003481 RID: 13441
-		// (get) Token: 0x0600DE95 RID: 56981 RVA: 0x001484D8 File Offset: 0x001466D8
-		// (set) Token: 0x0600DE96 RID: 56982 RVA: 0x001484E8 File Offset: 0x001466E8
+		// Token: 0x17000782 RID: 1922
+		// (get) Token: 0x060034BD RID: 13501 RVA: 0x0004B20C File Offset: 0x0004940C
+		// (set) Token: 0x060034BE RID: 13502 RVA: 0x0004B21C File Offset: 0x0004941C
 		public unsafe float ViewYawMin
 		{
 			get
@@ -714,9 +550,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003482 RID: 13442
-		// (get) Token: 0x0600DE97 RID: 56983 RVA: 0x001484F9 File Offset: 0x001466F9
-		// (set) Token: 0x0600DE98 RID: 56984 RVA: 0x00148509 File Offset: 0x00146709
+		// Token: 0x17000783 RID: 1923
+		// (get) Token: 0x060034BF RID: 13503 RVA: 0x0004B22D File Offset: 0x0004942D
+		// (set) Token: 0x060034C0 RID: 13504 RVA: 0x0004B23D File Offset: 0x0004943D
 		public unsafe float ViewYawMax
 		{
 			get
@@ -729,9 +565,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003483 RID: 13443
-		// (get) Token: 0x0600DE99 RID: 56985 RVA: 0x0014851A File Offset: 0x0014671A
-		// (set) Token: 0x0600DE9A RID: 56986 RVA: 0x0014852A File Offset: 0x0014672A
+		// Token: 0x17000784 RID: 1924
+		// (get) Token: 0x060034C1 RID: 13505 RVA: 0x0004B24E File Offset: 0x0004944E
+		// (set) Token: 0x060034C2 RID: 13506 RVA: 0x0004B25E File Offset: 0x0004945E
 		public unsafe float ViewRollMin
 		{
 			get
@@ -744,9 +580,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003484 RID: 13444
-		// (get) Token: 0x0600DE9B RID: 56987 RVA: 0x0014853B File Offset: 0x0014673B
-		// (set) Token: 0x0600DE9C RID: 56988 RVA: 0x0014854B File Offset: 0x0014674B
+		// Token: 0x17000785 RID: 1925
+		// (get) Token: 0x060034C3 RID: 13507 RVA: 0x0004B26F File Offset: 0x0004946F
+		// (set) Token: 0x060034C4 RID: 13508 RVA: 0x0004B27F File Offset: 0x0004947F
 		public unsafe float ViewRollMax
 		{
 			get
@@ -759,9 +595,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003485 RID: 13445
-		// (get) Token: 0x0600DE9D RID: 56989 RVA: 0x0014855C File Offset: 0x0014675C
-		// (set) Token: 0x0600DE9E RID: 56990 RVA: 0x0014856C File Offset: 0x0014676C
+		// Token: 0x17000786 RID: 1926
+		// (get) Token: 0x060034C5 RID: 13509 RVA: 0x0004B290 File Offset: 0x00049490
+		// (set) Token: 0x060034C6 RID: 13510 RVA: 0x0004B2A0 File Offset: 0x000494A0
 		public unsafe float ServerUpdateCameraTimeout
 		{
 			get
@@ -774,9 +610,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003486 RID: 13446
-		// (get) Token: 0x0600DE9F RID: 56991 RVA: 0x0014857D File Offset: 0x0014677D
-		// (set) Token: 0x0600DEA0 RID: 56992 RVA: 0x0014858D File Offset: 0x0014678D
+		// Token: 0x17000787 RID: 1927
+		// (get) Token: 0x060034C7 RID: 13511 RVA: 0x0004B2B1 File Offset: 0x000494B1
+		// (set) Token: 0x060034C8 RID: 13512 RVA: 0x0004B2C1 File Offset: 0x000494C1
 		public unsafe float CameraModifyCustomTimeDilation
 		{
 			get
@@ -789,44 +625,25 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600DEA1 RID: 56993 RVA: 0x0014859E File Offset: 0x0014679E
+		// Token: 0x060034C9 RID: 13513 RVA: 0x0004B2D2 File Offset: 0x000494D2
 		public void SwapPendingViewTargetWhenUsingClientSideCameraUpdates()
 		{
 			APlayerCameraManager.__SwapPendingViewTargetWhenUsingClientSideCameraUpdates_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600DEA2 RID: 56994 RVA: 0x001485AB File Offset: 0x001467AB
-		[NullableContext(2)]
+		// Token: 0x060034CA RID: 13514 RVA: 0x0004B2DF File Offset: 0x000494DF
 		public void StopCameraShake(UCameraShakeBase ShakeInstance, bool bImmediately = true)
 		{
 			APlayerCameraManager.__StopCameraShake_Internal(base.NativePtr, (ShakeInstance != null) ? ShakeInstance.NativePtr : IntPtr.Zero, bImmediately);
 		}
 
-		// Token: 0x0600DEA3 RID: 56995 RVA: 0x001485C9 File Offset: 0x001467C9
+		// Token: 0x060034CB RID: 13515 RVA: 0x0004B2FD File Offset: 0x000494FD
 		public void StopCameraFade()
 		{
 			APlayerCameraManager.__StopCameraFade_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600DEA4 RID: 56996 RVA: 0x001485D6 File Offset: 0x001467D6
-		[NullableContext(2)]
-		public void StopCameraAnimInst(UCameraAnimInst AnimInst, bool bImmediate = false)
-		{
-			APlayerCameraManager.__StopCameraAnimInst_Internal(base.NativePtr, (AnimInst != null) ? AnimInst.NativePtr : IntPtr.Zero, bImmediate);
-		}
-
-		// Token: 0x0600DEA5 RID: 56997 RVA: 0x001485F4 File Offset: 0x001467F4
-		[NullableContext(2)]
-		public void StopAllInstancesOfCameraShakeFromSource([Nullable(new byte[]
-		{
-			0,
-			1
-		})] TSubclassOf<UCameraShakeBase> Shake, UCameraShakeSourceComponent SourceComponent, bool bImmediately = true)
-		{
-			APlayerCameraManager.__StopAllInstancesOfCameraShakeFromSource_Internal(base.NativePtr, Shake._NativePtr, (SourceComponent != null) ? SourceComponent.NativePtr : IntPtr.Zero, bImmediately);
-		}
-
-		// Token: 0x0600DEA6 RID: 56998 RVA: 0x00148618 File Offset: 0x00146818
+		// Token: 0x060034CC RID: 13516 RVA: 0x0004B30A File Offset: 0x0004950A
 		public void StopAllInstancesOfCameraShake([Nullable(new byte[]
 		{
 			0,
@@ -836,45 +653,19 @@ namespace UnrealEngine
 			APlayerCameraManager.__StopAllInstancesOfCameraShake_Internal(base.NativePtr, Shake._NativePtr, bImmediately);
 		}
 
-		// Token: 0x0600DEA7 RID: 56999 RVA: 0x0014862C File Offset: 0x0014682C
-		[NullableContext(2)]
-		public void StopAllInstancesOfCameraAnim(UCameraAnim Anim, bool bImmediate = false)
-		{
-			APlayerCameraManager.__StopAllInstancesOfCameraAnim_Internal(base.NativePtr, (Anim != null) ? Anim.NativePtr : IntPtr.Zero, bImmediate);
-		}
-
-		// Token: 0x0600DEA8 RID: 57000 RVA: 0x0014864A File Offset: 0x0014684A
-		[NullableContext(2)]
-		public void StopAllCameraShakesFromSource(UCameraShakeSourceComponent SourceComponent, bool bImmediately = true)
-		{
-			APlayerCameraManager.__StopAllCameraShakesFromSource_Internal(base.NativePtr, (SourceComponent != null) ? SourceComponent.NativePtr : IntPtr.Zero, bImmediately);
-		}
-
-		// Token: 0x0600DEA9 RID: 57001 RVA: 0x00148668 File Offset: 0x00146868
+		// Token: 0x060034CD RID: 13517 RVA: 0x0004B31E File Offset: 0x0004951E
 		public void StopAllCameraShakes(bool bImmediately = true)
 		{
 			APlayerCameraManager.__StopAllCameraShakes_Internal(base.NativePtr, bImmediately);
 		}
 
-		// Token: 0x0600DEAA RID: 57002 RVA: 0x00148676 File Offset: 0x00146876
+		// Token: 0x060034CE RID: 13518 RVA: 0x0004B32C File Offset: 0x0004952C
 		public void StopAllCameraAnims(bool bImmediate = false)
 		{
 			APlayerCameraManager.__StopAllCameraAnims_Internal(base.NativePtr, bImmediate);
 		}
 
-		// Token: 0x0600DEAB RID: 57003 RVA: 0x00148684 File Offset: 0x00146884
-		[NullableContext(2)]
-		public UMatineeCameraShake StartMatineeCameraShakeFromSource([Nullable(new byte[]
-		{
-			0,
-			1
-		})] TSubclassOf<UMatineeCameraShake> ShakeClass, UCameraShakeSourceComponent SourceComponent, float Scale = 1f, ECameraShakePlaySpace PlaySpace = ECameraShakePlaySpace.CameraLocal, FRotator UserPlaySpaceRot = default(FRotator), float TimeDilation = 1f)
-		{
-			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UMatineeCameraShake>(APlayerCameraManager.__StartMatineeCameraShakeFromSource_Internal(base.NativePtr, ShakeClass._NativePtr, (SourceComponent != null) ? SourceComponent.NativePtr : IntPtr.Zero, Scale, PlaySpace, UserPlaySpaceRot, TimeDilation));
-		}
-
-		// Token: 0x0600DEAC RID: 57004 RVA: 0x001486B3 File Offset: 0x001468B3
-		[NullableContext(2)]
+		// Token: 0x060034CF RID: 13519 RVA: 0x0004B33A File Offset: 0x0004953A
 		public UMatineeCameraShake StartMatineeCameraShake([Nullable(new byte[]
 		{
 			0,
@@ -884,19 +675,7 @@ namespace UnrealEngine
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UMatineeCameraShake>(APlayerCameraManager.__StartMatineeCameraShake_Internal(base.NativePtr, ShakeClass._NativePtr, Scale, PlaySpace, UserPlaySpaceRot, TimeDilation));
 		}
 
-		// Token: 0x0600DEAD RID: 57005 RVA: 0x001486D1 File Offset: 0x001468D1
-		[NullableContext(2)]
-		public UCameraShakeBase StartCameraShakeFromSource([Nullable(new byte[]
-		{
-			0,
-			1
-		})] TSubclassOf<UCameraShakeBase> ShakeClass, UCameraShakeSourceComponent SourceComponent, float Scale = 1f, ECameraShakePlaySpace PlaySpace = ECameraShakePlaySpace.CameraLocal, FRotator UserPlaySpaceRot = default(FRotator), float TimeDilation = 1f)
-		{
-			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UCameraShakeBase>(APlayerCameraManager.__StartCameraShakeFromSource_Internal(base.NativePtr, ShakeClass._NativePtr, (SourceComponent != null) ? SourceComponent.NativePtr : IntPtr.Zero, Scale, PlaySpace, UserPlaySpaceRot, TimeDilation));
-		}
-
-		// Token: 0x0600DEAE RID: 57006 RVA: 0x00148700 File Offset: 0x00146900
-		[NullableContext(2)]
+		// Token: 0x060034D0 RID: 13520 RVA: 0x0004B358 File Offset: 0x00049558
 		public UCameraShakeBase StartCameraShake([Nullable(new byte[]
 		{
 			0,
@@ -906,53 +685,37 @@ namespace UnrealEngine
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UCameraShakeBase>(APlayerCameraManager.__StartCameraShake_Internal(base.NativePtr, ShakeClass._NativePtr, Scale, PlaySpace, UserPlaySpaceRot, TimeDilation));
 		}
 
-		// Token: 0x0600DEAF RID: 57007 RVA: 0x0014871E File Offset: 0x0014691E
+		// Token: 0x060034D1 RID: 13521 RVA: 0x0004B376 File Offset: 0x00049576
 		public void StartCameraFade(float FromAlpha, float ToAlpha, float Duration, FLinearColor Color, bool bShouldFadeAudio = false, bool bHoldWhenFinished = false, ECameraFadeMode FadeMode = ECameraFadeMode.CFM_Linear)
 		{
 			APlayerCameraManager.__StartCameraFade_Internal(base.NativePtr, FromAlpha, ToAlpha, Duration, Color, bShouldFadeAudio, bHoldWhenFinished, FadeMode);
 		}
 
-		// Token: 0x0600DEB0 RID: 57008 RVA: 0x0014873B File Offset: 0x0014693B
+		// Token: 0x060034D2 RID: 13522 RVA: 0x0004B393 File Offset: 0x00049593
 		public void SetManualCameraFade(float InFadeAmount, FLinearColor Color, bool bInFadeAudio)
 		{
 			APlayerCameraManager.__SetManualCameraFade_Internal(base.NativePtr, InFadeAmount, Color, bInFadeAudio);
 		}
 
-		// Token: 0x0600DEB1 RID: 57009 RVA: 0x0014874B File Offset: 0x0014694B
+		// Token: 0x060034D3 RID: 13523 RVA: 0x0004B3A3 File Offset: 0x000495A3
 		public void SetGameCameraCutThisFrame()
 		{
 			APlayerCameraManager.__SetGameCameraCutThisFrame_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600DEB2 RID: 57010 RVA: 0x00148758 File Offset: 0x00146958
-		[NullableContext(2)]
+		// Token: 0x060034D4 RID: 13524 RVA: 0x0004B3B0 File Offset: 0x000495B0
 		public void ResetViewTarget(AActor NewViewTarget, in FViewTargetTransitionParams TransitionParams)
 		{
 			APlayerCameraManager.__ResetViewTarget_Internal(base.NativePtr, (NewViewTarget != null) ? NewViewTarget.NativePtr : IntPtr.Zero, (TransitionParams ?? new FViewTargetTransitionParams()).NativePtr);
 		}
 
-		// Token: 0x0600DEB3 RID: 57011 RVA: 0x00148785 File Offset: 0x00146985
-		[NullableContext(2)]
+		// Token: 0x060034D5 RID: 13525 RVA: 0x0004B3DD File Offset: 0x000495DD
 		public bool RemoveCameraModifier(UCameraModifier ModifierToRemove)
 		{
 			return APlayerCameraManager.__RemoveCameraModifier_Internal(base.NativePtr, (ModifierToRemove != null) ? ModifierToRemove.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0600DEB4 RID: 57012 RVA: 0x001487A2 File Offset: 0x001469A2
-		[NullableContext(2)]
-		public void RemoveCameraLensEffect(AEmitterCameraLensEffectBase Emitter)
-		{
-			APlayerCameraManager.__RemoveCameraLensEffect_Internal(base.NativePtr, (Emitter != null) ? Emitter.NativePtr : IntPtr.Zero);
-		}
-
-		// Token: 0x0600DEB5 RID: 57013 RVA: 0x001487C0 File Offset: 0x001469C0
-		[NullableContext(2)]
-		public UCameraAnimInst PlayCameraAnim(UCameraAnim Anim, float Rate = 1f, float Scale = 1f, float BlendInTime = 0f, float BlendOutTime = 0f, bool bLoop = false, bool bRandomStartTime = false, float Duration = 0f, ECameraShakePlaySpace PlaySpace = ECameraShakePlaySpace.CameraLocal, FRotator UserPlaySpaceRot = default(FRotator))
-		{
-			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UCameraAnimInst>(APlayerCameraManager.__PlayCameraAnim_Internal(base.NativePtr, (Anim != null) ? Anim.NativePtr : IntPtr.Zero, Rate, Scale, BlendInTime, BlendOutTime, bLoop, bRandomStartTime, Duration, PlaySpace, UserPlaySpaceRot));
-		}
-
-		// Token: 0x0600DEB6 RID: 57014 RVA: 0x00148800 File Offset: 0x00146A00
+		// Token: 0x060034D6 RID: 13526 RVA: 0x0004B3FC File Offset: 0x000495FC
 		public unsafe virtual void PhotographyCameraModify(FVector NewCameraLocation, FVector PreviousCameraLocation, FVector OriginalCameraLocation, ref FVector ResultCameraLocation)
 		{
 			fixed (FVector* ptr = &ResultCameraLocation)
@@ -962,7 +725,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600DEB7 RID: 57015 RVA: 0x00148828 File Offset: 0x00146A28
+		// Token: 0x060034D7 RID: 13527 RVA: 0x0004B424 File Offset: 0x00049624
 		protected unsafe virtual void PhotographyCameraModify_Implementation(FVector NewCameraLocation, FVector PreviousCameraLocation, FVector OriginalCameraLocation, ref FVector ResultCameraLocation)
 		{
 			fixed (FVector* ptr = &ResultCameraLocation)
@@ -972,81 +735,79 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600DEB8 RID: 57016 RVA: 0x0014884E File Offset: 0x00146A4E
+		// Token: 0x060034D8 RID: 13528 RVA: 0x0004B44A File Offset: 0x0004964A
 		public virtual void OnPhotographySessionStart()
 		{
 			APlayerCameraManager.__OnPhotographySessionStart_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600DEB9 RID: 57017 RVA: 0x0014885B File Offset: 0x00146A5B
+		// Token: 0x060034D9 RID: 13529 RVA: 0x0004B457 File Offset: 0x00049657
 		protected virtual void OnPhotographySessionStart_Implementation()
 		{
 			APlayerCameraManager.__OnPhotographySessionStart_Implementation_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600DEBA RID: 57018 RVA: 0x00148868 File Offset: 0x00146A68
+		// Token: 0x060034DA RID: 13530 RVA: 0x0004B464 File Offset: 0x00049664
 		public virtual void OnPhotographySessionEnd()
 		{
 			APlayerCameraManager.__OnPhotographySessionEnd_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600DEBB RID: 57019 RVA: 0x00148875 File Offset: 0x00146A75
+		// Token: 0x060034DB RID: 13531 RVA: 0x0004B471 File Offset: 0x00049671
 		protected virtual void OnPhotographySessionEnd_Implementation()
 		{
 			APlayerCameraManager.__OnPhotographySessionEnd_Implementation_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600DEBC RID: 57020 RVA: 0x00148882 File Offset: 0x00146A82
+		// Token: 0x060034DC RID: 13532 RVA: 0x0004B47E File Offset: 0x0004967E
 		public virtual void OnPhotographyMultiPartCaptureStart()
 		{
 			APlayerCameraManager.__OnPhotographyMultiPartCaptureStart_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600DEBD RID: 57021 RVA: 0x0014888F File Offset: 0x00146A8F
+		// Token: 0x060034DD RID: 13533 RVA: 0x0004B48B File Offset: 0x0004968B
 		protected virtual void OnPhotographyMultiPartCaptureStart_Implementation()
 		{
 			APlayerCameraManager.__OnPhotographyMultiPartCaptureStart_Implementation_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600DEBE RID: 57022 RVA: 0x0014889C File Offset: 0x00146A9C
+		// Token: 0x060034DE RID: 13534 RVA: 0x0004B498 File Offset: 0x00049698
 		public virtual void OnPhotographyMultiPartCaptureEnd()
 		{
 			APlayerCameraManager.__OnPhotographyMultiPartCaptureEnd_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600DEBF RID: 57023 RVA: 0x001488A9 File Offset: 0x00146AA9
+		// Token: 0x060034DF RID: 13535 RVA: 0x0004B4A5 File Offset: 0x000496A5
 		protected virtual void OnPhotographyMultiPartCaptureEnd_Implementation()
 		{
 			APlayerCameraManager.__OnPhotographyMultiPartCaptureEnd_Implementation_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600DEC0 RID: 57024 RVA: 0x001488B6 File Offset: 0x00146AB6
-		[NullableContext(2)]
+		// Token: 0x060034E0 RID: 13536 RVA: 0x0004B4B2 File Offset: 0x000496B2
 		public APlayerController GetOwningPlayerController()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<APlayerController>(APlayerCameraManager.__GetOwningPlayerController_Internal(base.NativePtr));
 		}
 
-		// Token: 0x0600DEC1 RID: 57025 RVA: 0x001488C8 File Offset: 0x00146AC8
+		// Token: 0x060034E1 RID: 13537 RVA: 0x0004B4C4 File Offset: 0x000496C4
 		public float GetFOVAngle()
 		{
 			return APlayerCameraManager.__GetFOVAngle_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600DEC2 RID: 57026 RVA: 0x001488D5 File Offset: 0x00146AD5
+		// Token: 0x060034E2 RID: 13538 RVA: 0x0004B4D1 File Offset: 0x000496D1
 		public FRotator GetCameraRotation()
 		{
 			return APlayerCameraManager.__GetCameraRotation_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600DEC3 RID: 57027 RVA: 0x001488E2 File Offset: 0x00146AE2
+		// Token: 0x060034E3 RID: 13539 RVA: 0x0004B4DE File Offset: 0x000496DE
 		public FVector GetCameraLocation()
 		{
 			return APlayerCameraManager.__GetCameraLocation_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600DEC4 RID: 57028 RVA: 0x001488EF File Offset: 0x00146AEF
-		[NullableContext(2)]
+		// Token: 0x060034E4 RID: 13540 RVA: 0x0004B4EB File Offset: 0x000496EB
 		public UCameraModifier FindCameraModifierByClass([Nullable(new byte[]
 		{
 			0,
@@ -1056,20 +817,19 @@ namespace UnrealEngine
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UCameraModifier>(APlayerCameraManager.__FindCameraModifierByClass_Internal(base.NativePtr, ModifierClass._NativePtr));
 		}
 
-		// Token: 0x0600DEC5 RID: 57029 RVA: 0x00148907 File Offset: 0x00146B07
+		// Token: 0x060034E5 RID: 13541 RVA: 0x0004B503 File Offset: 0x00049703
 		public FVectorDouble D_GetCameraLocation()
 		{
 			return APlayerCameraManager.__D_GetCameraLocation_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600DEC6 RID: 57030 RVA: 0x00148914 File Offset: 0x00146B14
+		// Token: 0x060034E6 RID: 13542 RVA: 0x0004B510 File Offset: 0x00049710
 		public void ClearCameraLensEffects()
 		{
 			APlayerCameraManager.__ClearCameraLensEffects_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600DEC7 RID: 57031 RVA: 0x00148924 File Offset: 0x00146B24
-		[NullableContext(2)]
+		// Token: 0x060034E7 RID: 13543 RVA: 0x0004B520 File Offset: 0x00049720
 		public unsafe virtual bool BlueprintUpdateCamera(AActor CameraTarget, ref FVector NewCameraLocation, ref FRotator NewCameraRotation, ref float NewCameraFOV)
 		{
 			fixed (FVector* ptr = &NewCameraLocation)
@@ -1087,8 +847,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600DEC8 RID: 57032 RVA: 0x00148964 File Offset: 0x00146B64
-		[NullableContext(2)]
+		// Token: 0x060034E8 RID: 13544 RVA: 0x0004B560 File Offset: 0x00049760
 		public UCameraModifier AddNewCameraModifier([Nullable(new byte[]
 		{
 			0,
@@ -1098,275 +857,199 @@ namespace UnrealEngine
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UCameraModifier>(APlayerCameraManager.__AddNewCameraModifier_Internal(base.NativePtr, ModifierClass._NativePtr));
 		}
 
-		// Token: 0x0600DEC9 RID: 57033 RVA: 0x0014897C File Offset: 0x00146B7C
-		[NullableContext(2)]
-		public AEmitterCameraLensEffectBase AddCameraLensEffect([Nullable(new byte[]
-		{
-			0,
-			1
-		})] TSubclassOf<AEmitterCameraLensEffectBase> LensEffectEmitterClass)
-		{
-			return BuiltinUtils.GetOrCreateUObjectByNativePointer<AEmitterCameraLensEffectBase>(APlayerCameraManager.__AddCameraLensEffect_Internal(base.NativePtr, LensEffectEmitterClass._NativePtr));
-		}
-
-		// Token: 0x0600DECA RID: 57034
+		// Token: 0x060034E9 RID: 13545
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SwapPendingViewTargetWhenUsingClientSideCameraUpdates_Internal(IntPtr @this);
 
-		// Token: 0x0600DECB RID: 57035
+		// Token: 0x060034EA RID: 13546
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __StopCameraShake_Internal(IntPtr @this, IntPtr ShakeInstance, bool bImmediately);
 
-		// Token: 0x0600DECC RID: 57036
+		// Token: 0x060034EB RID: 13547
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __StopCameraFade_Internal(IntPtr @this);
 
-		// Token: 0x0600DECD RID: 57037
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __StopCameraAnimInst_Internal(IntPtr @this, IntPtr AnimInst, bool bImmediate);
-
-		// Token: 0x0600DECE RID: 57038
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __StopAllInstancesOfCameraShakeFromSource_Internal(IntPtr @this, IntPtr Shake, IntPtr SourceComponent, bool bImmediately);
-
-		// Token: 0x0600DECF RID: 57039
+		// Token: 0x060034EC RID: 13548
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __StopAllInstancesOfCameraShake_Internal(IntPtr @this, IntPtr Shake, bool bImmediately);
 
-		// Token: 0x0600DED0 RID: 57040
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __StopAllInstancesOfCameraAnim_Internal(IntPtr @this, IntPtr Anim, bool bImmediate);
-
-		// Token: 0x0600DED1 RID: 57041
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __StopAllCameraShakesFromSource_Internal(IntPtr @this, IntPtr SourceComponent, bool bImmediately);
-
-		// Token: 0x0600DED2 RID: 57042
+		// Token: 0x060034ED RID: 13549
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __StopAllCameraShakes_Internal(IntPtr @this, bool bImmediately);
 
-		// Token: 0x0600DED3 RID: 57043
+		// Token: 0x060034EE RID: 13550
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __StopAllCameraAnims_Internal(IntPtr @this, bool bImmediate);
 
-		// Token: 0x0600DED4 RID: 57044
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern IntPtr __StartMatineeCameraShakeFromSource_Internal(IntPtr @this, IntPtr ShakeClass, IntPtr SourceComponent, float Scale, ECameraShakePlaySpace PlaySpace, FRotator UserPlaySpaceRot, float TimeDilation);
-
-		// Token: 0x0600DED5 RID: 57045
+		// Token: 0x060034EF RID: 13551
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __StartMatineeCameraShake_Internal(IntPtr @this, IntPtr ShakeClass, float Scale, ECameraShakePlaySpace PlaySpace, FRotator UserPlaySpaceRot, float TimeDilation);
 
-		// Token: 0x0600DED6 RID: 57046
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern IntPtr __StartCameraShakeFromSource_Internal(IntPtr @this, IntPtr ShakeClass, IntPtr SourceComponent, float Scale, ECameraShakePlaySpace PlaySpace, FRotator UserPlaySpaceRot, float TimeDilation);
-
-		// Token: 0x0600DED7 RID: 57047
+		// Token: 0x060034F0 RID: 13552
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __StartCameraShake_Internal(IntPtr @this, IntPtr ShakeClass, float Scale, ECameraShakePlaySpace PlaySpace, FRotator UserPlaySpaceRot, float TimeDilation);
 
-		// Token: 0x0600DED8 RID: 57048
+		// Token: 0x060034F1 RID: 13553
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __StartCameraFade_Internal(IntPtr @this, float FromAlpha, float ToAlpha, float Duration, FLinearColor Color, bool bShouldFadeAudio, bool bHoldWhenFinished, TEnumAsByte<ECameraFadeMode> FadeMode);
 
-		// Token: 0x0600DED9 RID: 57049
+		// Token: 0x060034F2 RID: 13554
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetManualCameraFade_Internal(IntPtr @this, float InFadeAmount, FLinearColor Color, bool bInFadeAudio);
 
-		// Token: 0x0600DEDA RID: 57050
+		// Token: 0x060034F3 RID: 13555
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetGameCameraCutThisFrame_Internal(IntPtr @this);
 
-		// Token: 0x0600DEDB RID: 57051
+		// Token: 0x060034F4 RID: 13556
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ResetViewTarget_Internal(IntPtr @this, IntPtr NewViewTarget, IntPtr TransitionParams);
 
-		// Token: 0x0600DEDC RID: 57052
+		// Token: 0x060034F5 RID: 13557
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __RemoveCameraModifier_Internal(IntPtr @this, IntPtr ModifierToRemove);
 
-		// Token: 0x0600DEDD RID: 57053
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern void __RemoveCameraLensEffect_Internal(IntPtr @this, IntPtr Emitter);
-
-		// Token: 0x0600DEDE RID: 57054
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern IntPtr __PlayCameraAnim_Internal(IntPtr @this, IntPtr Anim, float Rate, float Scale, float BlendInTime, float BlendOutTime, bool bLoop, bool bRandomStartTime, float Duration, ECameraShakePlaySpace PlaySpace, FRotator UserPlaySpaceRot);
-
-		// Token: 0x0600DEDF RID: 57055
+		// Token: 0x060034F6 RID: 13558
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __PhotographyCameraModify_Internal(IntPtr @this, FVector NewCameraLocation, FVector PreviousCameraLocation, FVector OriginalCameraLocation, ref FVector ResultCameraLocation);
 
-		// Token: 0x0600DEE0 RID: 57056
+		// Token: 0x060034F7 RID: 13559
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __PhotographyCameraModify_Implementation_Internal(IntPtr @this, FVector NewCameraLocation, FVector PreviousCameraLocation, FVector OriginalCameraLocation, ref FVector ResultCameraLocation);
 
-		// Token: 0x0600DEE1 RID: 57057
+		// Token: 0x060034F8 RID: 13560
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnPhotographySessionStart_Internal(IntPtr @this);
 
-		// Token: 0x0600DEE2 RID: 57058
+		// Token: 0x060034F9 RID: 13561
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnPhotographySessionStart_Implementation_Internal(IntPtr @this);
 
-		// Token: 0x0600DEE3 RID: 57059
+		// Token: 0x060034FA RID: 13562
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnPhotographySessionEnd_Internal(IntPtr @this);
 
-		// Token: 0x0600DEE4 RID: 57060
+		// Token: 0x060034FB RID: 13563
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnPhotographySessionEnd_Implementation_Internal(IntPtr @this);
 
-		// Token: 0x0600DEE5 RID: 57061
+		// Token: 0x060034FC RID: 13564
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnPhotographyMultiPartCaptureStart_Internal(IntPtr @this);
 
-		// Token: 0x0600DEE6 RID: 57062
+		// Token: 0x060034FD RID: 13565
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnPhotographyMultiPartCaptureStart_Implementation_Internal(IntPtr @this);
 
-		// Token: 0x0600DEE7 RID: 57063
+		// Token: 0x060034FE RID: 13566
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnPhotographyMultiPartCaptureEnd_Internal(IntPtr @this);
 
-		// Token: 0x0600DEE8 RID: 57064
+		// Token: 0x060034FF RID: 13567
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnPhotographyMultiPartCaptureEnd_Implementation_Internal(IntPtr @this);
 
-		// Token: 0x0600DEE9 RID: 57065
+		// Token: 0x06003500 RID: 13568
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetOwningPlayerController_Internal(IntPtr @this);
 
-		// Token: 0x0600DEEA RID: 57066
+		// Token: 0x06003501 RID: 13569
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float __GetFOVAngle_Internal(IntPtr @this);
 
-		// Token: 0x0600DEEB RID: 57067
+		// Token: 0x06003502 RID: 13570
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FRotator __GetCameraRotation_Internal(IntPtr @this);
 
-		// Token: 0x0600DEEC RID: 57068
+		// Token: 0x06003503 RID: 13571
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetCameraLocation_Internal(IntPtr @this);
 
-		// Token: 0x0600DEED RID: 57069
+		// Token: 0x06003504 RID: 13572
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __FindCameraModifierByClass_Internal(IntPtr @this, IntPtr ModifierClass);
 
-		// Token: 0x0600DEEE RID: 57070
+		// Token: 0x06003505 RID: 13573
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble __D_GetCameraLocation_Internal(IntPtr @this);
 
-		// Token: 0x0600DEEF RID: 57071
+		// Token: 0x06003506 RID: 13574
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ClearCameraLensEffects_Internal(IntPtr @this);
 
-		// Token: 0x0600DEF0 RID: 57072
+		// Token: 0x06003507 RID: 13575
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __BlueprintUpdateCamera_Internal(IntPtr @this, IntPtr CameraTarget, ref FVector NewCameraLocation, ref FRotator NewCameraRotation, ref float NewCameraFOV);
 
-		// Token: 0x0600DEF1 RID: 57073
+		// Token: 0x06003508 RID: 13576
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __AddNewCameraModifier_Internal(IntPtr @this, IntPtr ModifierClass);
 
-		// Token: 0x0600DEF2 RID: 57074
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern IntPtr __AddCameraLensEffect_Internal(IntPtr @this, IntPtr LensEffectEmitterClass);
-
-		// Token: 0x0600DEF3 RID: 57075 RVA: 0x00148994 File Offset: 0x00146B94
+		// Token: 0x06003509 RID: 13577 RVA: 0x0004B578 File Offset: 0x00049778
 		static APlayerCameraManager()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.PlayerCameraManager");
 		}
 
-		// Token: 0x0600DEF4 RID: 57076 RVA: 0x001489A2 File Offset: 0x00146BA2
+		// Token: 0x0600350A RID: 13578 RVA: 0x0004B586 File Offset: 0x00049786
 		protected APlayerCameraManager(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04007818 RID: 30744
+		// Token: 0x0400123E RID: 4670
+		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.PlayerCameraManager";
 
-		// Token: 0x04007819 RID: 30745
+		// Token: 0x0400123F RID: 4671
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400781A RID: 30746
+		// Token: 0x04001240 RID: 4672
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400781B RID: 30747
+		// Token: 0x04001241 RID: 4673
 		internal static int __PropertyOffset_PCOwner;
 
-		// Token: 0x0400781C RID: 30748
+		// Token: 0x04001242 RID: 4674
 		internal static int __PropertyOffset_TransformComponent;
 
-		// Token: 0x0400781D RID: 30749
+		// Token: 0x04001243 RID: 4675
 		internal static int __PropertyOffset_DefaultFOV;
 
-		// Token: 0x0400781E RID: 30750
+		// Token: 0x04001244 RID: 4676
 		internal static int __PropertyOffset_DefaultOrthoWidth;
 
-		// Token: 0x0400781F RID: 30751
+		// Token: 0x04001245 RID: 4677
 		internal static int __PropertyOffset_DefaultAspectRatio;
 
-		// Token: 0x04007820 RID: 30752
+		// Token: 0x04001246 RID: 4678
 		internal static int __PropertyOffset_ViewPointOverride;
 
-		// Token: 0x04007821 RID: 30753
+		// Token: 0x04001247 RID: 4679
 		internal static int __PropertyOffset_ViewSizeOverride;
 
-		// Token: 0x04007822 RID: 30754
+		// Token: 0x04001248 RID: 4680
 		internal static int __PropertyOffset_FadeColor;
 
-		// Token: 0x04007823 RID: 30755
+		// Token: 0x04001249 RID: 4681
 		internal static int __PropertyOffset_FadeAmount;
 
-		// Token: 0x04007824 RID: 30756
-		internal static int __PropertyOffset_CameraCache;
-
-		// Token: 0x04007825 RID: 30757
-		[Nullable(2)]
-		private FCameraCacheEntry _CameraCache;
-
-		// Token: 0x04007826 RID: 30758
-		internal static int __PropertyOffset_LastFrameCameraCache;
-
-		// Token: 0x04007827 RID: 30759
-		[Nullable(2)]
-		private FCameraCacheEntry _LastFrameCameraCache;
-
-		// Token: 0x04007828 RID: 30760
+		// Token: 0x0400124A RID: 4682
 		internal static int __PropertyOffset_ViewTarget;
 
-		// Token: 0x04007829 RID: 30761
-		[Nullable(2)]
+		// Token: 0x0400124B RID: 4683
 		private FTViewTarget _ViewTarget;
 
-		// Token: 0x0400782A RID: 30762
+		// Token: 0x0400124C RID: 4684
 		internal static int __PropertyOffset_PendingViewTarget;
 
-		// Token: 0x0400782B RID: 30763
-		[Nullable(2)]
+		// Token: 0x0400124D RID: 4685
 		private FTViewTarget _PendingViewTarget;
 
-		// Token: 0x0400782C RID: 30764
-		internal static int __PropertyOffset_CameraCachePrivate;
-
-		// Token: 0x0400782D RID: 30765
-		[Nullable(2)]
-		private FCameraCacheEntry _CameraCachePrivate;
-
-		// Token: 0x0400782E RID: 30766
-		internal static int __PropertyOffset_LastFrameCameraCachePrivate;
-
-		// Token: 0x0400782F RID: 30767
-		[Nullable(2)]
-		private FCameraCacheEntry _LastFrameCameraCachePrivate;
-
-		// Token: 0x04007830 RID: 30768
+		// Token: 0x0400124E RID: 4686
 		internal static int __PropertyOffset_ModifierList;
 
-		// Token: 0x04007831 RID: 30769
+		// Token: 0x0400124F RID: 4687
 		[Nullable(new byte[]
 		{
 			2,
@@ -1374,10 +1057,10 @@ namespace UnrealEngine
 		})]
 		private TArray<UCameraModifier> _ModifierList;
 
-		// Token: 0x04007832 RID: 30770
+		// Token: 0x04001250 RID: 4688
 		internal static int __PropertyOffset_DefaultModifiers;
 
-		// Token: 0x04007833 RID: 30771
+		// Token: 0x04001251 RID: 4689
 		[Nullable(new byte[]
 		{
 			2,
@@ -1386,54 +1069,31 @@ namespace UnrealEngine
 		})]
 		private TArray<TSubclassOf<UCameraModifier>> _DefaultModifiers;
 
-		// Token: 0x04007834 RID: 30772
+		// Token: 0x04001252 RID: 4690
 		internal static int __PropertyOffset_FreeCamDistance;
 
-		// Token: 0x04007835 RID: 30773
+		// Token: 0x04001253 RID: 4691
 		internal static int __PropertyOffset_FreeCamOffset;
 
-		// Token: 0x04007836 RID: 30774
+		// Token: 0x04001254 RID: 4692
 		internal static int __PropertyOffset_ViewTargetOffset;
 
-		// Token: 0x04007837 RID: 30775
+		// Token: 0x04001255 RID: 4693
 		internal static int __PropertyOffset_OnAudioFadeChangeEvent;
 
-		// Token: 0x04007838 RID: 30776
-		[Nullable(2)]
+		// Token: 0x04001256 RID: 4694
 		private FOnAudioFadeChangeSignature _OnAudioFadeChangeEvent;
 
-		// Token: 0x04007839 RID: 30777
-		internal static int __PropertyOffset_CameraLensEffects;
-
-		// Token: 0x0400783A RID: 30778
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<AEmitterCameraLensEffectBase> _CameraLensEffects;
-
-		// Token: 0x0400783B RID: 30779
+		// Token: 0x04001257 RID: 4695
 		internal static int __PropertyOffset_CachedCameraShakeMod;
 
-		// Token: 0x0400783C RID: 30780
+		// Token: 0x04001258 RID: 4696
 		internal static int __PropertyOffset_bOpenCameraShake;
 
-		// Token: 0x0400783D RID: 30781
-		internal static int __PropertyOffset_AnimInstPool;
-
-		// Token: 0x0400783E RID: 30782
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TFixedArray<UCameraAnimInst> _AnimInstPool;
-
-		// Token: 0x0400783F RID: 30783
+		// Token: 0x04001259 RID: 4697
 		internal static int __PropertyOffset_PostProcessBlendCache;
 
-		// Token: 0x04007840 RID: 30784
+		// Token: 0x0400125A RID: 4698
 		[Nullable(new byte[]
 		{
 			2,
@@ -1441,137 +1101,115 @@ namespace UnrealEngine
 		})]
 		private TArray<FPostProcessSettings> _PostProcessBlendCache;
 
-		// Token: 0x04007841 RID: 30785
-		internal static int __PropertyOffset_ActiveAnims;
-
-		// Token: 0x04007842 RID: 30786
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<UCameraAnimInst> _ActiveAnims;
-
-		// Token: 0x04007843 RID: 30787
-		internal static int __PropertyOffset_FreeAnims;
-
-		// Token: 0x04007844 RID: 30788
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<UCameraAnimInst> _FreeAnims;
-
-		// Token: 0x04007845 RID: 30789
+		// Token: 0x0400125B RID: 4699
 		internal static int __PropertyOffset_AnimCameraActor;
 
-		// Token: 0x04007846 RID: 30790
+		// Token: 0x0400125C RID: 4700
 		internal static int __PropertyOffset_bIsOrthographic;
 
-		// Token: 0x04007847 RID: 30791
+		// Token: 0x0400125D RID: 4701
 		internal static byte __PropertyMask_bIsOrthographic;
 
-		// Token: 0x04007848 RID: 30792
+		// Token: 0x0400125E RID: 4702
 		internal static int __PropertyOffset_bDefaultConstrainAspectRatio;
 
-		// Token: 0x04007849 RID: 30793
+		// Token: 0x0400125F RID: 4703
 		internal static byte __PropertyMask_bDefaultConstrainAspectRatio;
 
-		// Token: 0x0400784A RID: 30794
+		// Token: 0x04001260 RID: 4704
 		internal static int __PropertyOffset_bEnableFading;
 
-		// Token: 0x0400784B RID: 30795
+		// Token: 0x04001261 RID: 4705
 		internal static byte __PropertyMask_bEnableFading;
 
-		// Token: 0x0400784C RID: 30796
+		// Token: 0x04001262 RID: 4706
 		internal static int __PropertyOffset_bClientSimulatingViewTarget;
 
-		// Token: 0x0400784D RID: 30797
+		// Token: 0x04001263 RID: 4707
 		internal static byte __PropertyMask_bClientSimulatingViewTarget;
 
-		// Token: 0x0400784E RID: 30798
+		// Token: 0x04001264 RID: 4708
 		internal static int __PropertyOffset_bUseClientSideCameraUpdates;
 
-		// Token: 0x0400784F RID: 30799
+		// Token: 0x04001265 RID: 4709
 		internal static byte __PropertyMask_bUseClientSideCameraUpdates;
 
-		// Token: 0x04007850 RID: 30800
+		// Token: 0x04001266 RID: 4710
 		internal static int __PropertyOffset_bGameCameraCutThisFrame;
 
-		// Token: 0x04007851 RID: 30801
+		// Token: 0x04001267 RID: 4711
 		internal static byte __PropertyMask_bGameCameraCutThisFrame;
 
-		// Token: 0x04007852 RID: 30802
+		// Token: 0x04001268 RID: 4712
 		internal static int __PropertyOffset_ViewPitchMin;
 
-		// Token: 0x04007853 RID: 30803
+		// Token: 0x04001269 RID: 4713
 		internal static int __PropertyOffset_ViewPitchMax;
 
-		// Token: 0x04007854 RID: 30804
+		// Token: 0x0400126A RID: 4714
 		internal static int __PropertyOffset_ViewYawMin;
 
-		// Token: 0x04007855 RID: 30805
+		// Token: 0x0400126B RID: 4715
 		internal static int __PropertyOffset_ViewYawMax;
 
-		// Token: 0x04007856 RID: 30806
+		// Token: 0x0400126C RID: 4716
 		internal static int __PropertyOffset_ViewRollMin;
 
-		// Token: 0x04007857 RID: 30807
+		// Token: 0x0400126D RID: 4717
 		internal static int __PropertyOffset_ViewRollMax;
 
-		// Token: 0x04007858 RID: 30808
+		// Token: 0x0400126E RID: 4718
 		internal static int __PropertyOffset_ServerUpdateCameraTimeout;
 
-		// Token: 0x04007859 RID: 30809
+		// Token: 0x0400126F RID: 4719
 		internal static int __PropertyOffset_CameraModifyCustomTimeDilation;
 
-		// Token: 0x02002DD9 RID: 11737
+		// Token: 0x020009E2 RID: 2530
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 48)]
 		protected ref struct __PhotographyCameraModify_FunctionParams
 		{
-			// Token: 0x04016815 RID: 92181
+			// Token: 0x04005974 RID: 22900
 			[FieldOffset(0)]
 			public FVector NewCameraLocation;
 
-			// Token: 0x04016816 RID: 92182
+			// Token: 0x04005975 RID: 22901
 			[FieldOffset(12)]
 			public FVector PreviousCameraLocation;
 
-			// Token: 0x04016817 RID: 92183
+			// Token: 0x04005976 RID: 22902
 			[FieldOffset(24)]
 			public FVector OriginalCameraLocation;
 
-			// Token: 0x04016818 RID: 92184
+			// Token: 0x04005977 RID: 22903
 			[FieldOffset(36)]
 			public FVector ResultCameraLocation;
 		}
 
-		// Token: 0x02002DDA RID: 11738
+		// Token: 0x020009E3 RID: 2531
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 40)]
 		protected ref struct __BlueprintUpdateCamera_FunctionParams
 		{
-			// Token: 0x04016819 RID: 92185
+			// Token: 0x04005978 RID: 22904
 			[FieldOffset(0)]
 			public IntPtr CameraTarget;
 
-			// Token: 0x0401681A RID: 92186
+			// Token: 0x04005979 RID: 22905
 			[FieldOffset(8)]
 			public FVector NewCameraLocation;
 
-			// Token: 0x0401681B RID: 92187
+			// Token: 0x0400597A RID: 22906
 			[FieldOffset(20)]
 			public FRotator NewCameraRotation;
 
-			// Token: 0x0401681C RID: 92188
+			// Token: 0x0400597B RID: 22907
 			[FieldOffset(32)]
 			public float NewCameraFOV;
 
-			// Token: 0x0401681D RID: 92189
+			// Token: 0x0400597C RID: 22908
 			[FieldOffset(36)]
 			public bool __Result;
 		}

@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020015AE RID: 5550
+// Token: 0x02000A66 RID: 2662
 public class WheelTowerResultRoundItem : UiPanelBase
 {
-	// Token: 0x06009DB1 RID: 40369 RVA: 0x00223F30 File Offset: 0x00222130
+	// Token: 0x0600718F RID: 29071 RVA: 0x0022DCE0 File Offset: 0x0022BEE0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -20,13 +20,13 @@ public class WheelTowerResultRoundItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009DB2 RID: 40370 RVA: 0x00223F78 File Offset: 0x00222178
+	// Token: 0x06007190 RID: 29072 RVA: 0x0022DD28 File Offset: 0x0022BF28
 	protected override void OnStart()
 	{
 		this.Player = new LevelSequencePlayer(this.RootItem);
 	}
 
-	// Token: 0x06009DB3 RID: 40371 RVA: 0x00223F8B File Offset: 0x0022218B
+	// Token: 0x06007191 RID: 29073 RVA: 0x0022DD3B File Offset: 0x0022BF3B
 	protected override void OnBeforeDestroy()
 	{
 		LevelSequencePlayer player = this.Player;
@@ -37,7 +37,7 @@ public class WheelTowerResultRoundItem : UiPanelBase
 		player.Clear();
 	}
 
-	// Token: 0x06009DB4 RID: 40372 RVA: 0x00223FA0 File Offset: 0x002221A0
+	// Token: 0x06007192 RID: 29074 RVA: 0x0022DD50 File Offset: 0x0022BF50
 	public void Refresh(bool endless, int currentRound, int totalRound)
 	{
 		base.SetUiActive(true);
@@ -55,7 +55,7 @@ public class WheelTowerResultRoundItem : UiPanelBase
 		player.PlaySequencePurely("Start", false, false, null, null, false);
 	}
 
-	// Token: 0x040045A1 RID: 17825
+	// Token: 0x04004647 RID: 17991
 	[Nullable(2)]
 	private LevelSequencePlayer Player;
 }

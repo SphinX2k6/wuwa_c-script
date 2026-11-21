@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B17 RID: 2839
+	// Token: 0x02000BE5 RID: 3045
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IMotorHookConfig
 	{
-		// Token: 0x0600418A RID: 16778 RVA: 0x000A82D6 File Offset: 0x000A64D6
-		[NullableContext(1)]
+		// Token: 0x060045E0 RID: 17888 RVA: 0x000B2302 File Offset: 0x000B0502
+		[NullableContext(0)]
 		public static IMotorHookConfig Create(IMotorHookConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001119 RID: 4377
-		// (get) Token: 0x0600418B RID: 16779 RVA: 0x000A82F5 File Offset: 0x000A64F5
+		// Token: 0x17001211 RID: 4625
+		// (get) Token: 0x060045E1 RID: 17889 RVA: 0x000B2321 File Offset: 0x000B0521
 		public virtual IFaceToTargetMotorInteractConstraint InteractConstraint
 		{
 			get
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700111A RID: 4378
-		// (get) Token: 0x0600418C RID: 16780 RVA: 0x000A832C File Offset: 0x000A652C
+		// Token: 0x17001212 RID: 4626
+		// (get) Token: 0x060045E2 RID: 17890 RVA: 0x000B2358 File Offset: 0x000B0558
 		public virtual float? Radius
 		{
 			get
@@ -53,8 +53,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700111B RID: 4379
-		// (get) Token: 0x0600418D RID: 16781 RVA: 0x000A8364 File Offset: 0x000A6564
+		// Token: 0x17001213 RID: 4627
+		// (get) Token: 0x060045E3 RID: 17891 RVA: 0x000B2390 File Offset: 0x000B0590
 		public virtual float? NonInteractiveInnerRadius
 		{
 			get
@@ -67,8 +67,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700111C RID: 4380
-		// (get) Token: 0x0600418E RID: 16782 RVA: 0x000A839A File Offset: 0x000A659A
+		// Token: 0x17001214 RID: 4628
+		// (get) Token: 0x060045E4 RID: 17892 RVA: 0x000B23C6 File Offset: 0x000B05C6
 		public virtual IMotorHookEndDir HookEndDir
 		{
 			get
@@ -83,8 +83,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700111D RID: 4381
-		// (get) Token: 0x0600418F RID: 16783 RVA: 0x000A83CE File Offset: 0x000A65CE
+		// Token: 0x17001215 RID: 4629
+		// (get) Token: 0x060045E5 RID: 17893 RVA: 0x000B23FA File Offset: 0x000B05FA
 		public virtual IMotorHookAcceleration MotorHookAcceleration
 		{
 			get
@@ -99,12 +99,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700111E RID: 4382
-		// (get) Token: 0x06004190 RID: 16784 RVA: 0x000A8402 File Offset: 0x000A6602
-		[Nullable(1)]
+		// Token: 0x17001216 RID: 4630
+		// (get) Token: 0x060045E6 RID: 17894 RVA: 0x000B242E File Offset: 0x000B062E
+		[Nullable(0)]
 		public virtual IHookLockScreenDetectTypeBase ScreenDetectType
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._ScreenDetectTypeInited)
@@ -117,8 +117,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700111F RID: 4383
-		// (get) Token: 0x06004191 RID: 16785 RVA: 0x000A8434 File Offset: 0x000A6634
+		// Token: 0x17001217 RID: 4631
+		// (get) Token: 0x060045E7 RID: 17895 RVA: 0x000B2460 File Offset: 0x000B0660
 		public virtual bool? AutoExit
 		{
 			get
@@ -131,8 +131,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001120 RID: 4384
-		// (get) Token: 0x06004192 RID: 16786 RVA: 0x000A846A File Offset: 0x000A666A
+		// Token: 0x17001218 RID: 4632
+		// (get) Token: 0x060045E8 RID: 17896 RVA: 0x000B2496 File Offset: 0x000B0696
 		public virtual IMotorHookPerformanceConfig MotorHookPerformanceConfig
 		{
 			get
@@ -147,38 +147,38 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040024EC RID: 9452
+		// Token: 0x04002730 RID: 10032
 		private IMotorHookConfig Instance;
 
-		// Token: 0x040024ED RID: 9453
+		// Token: 0x04002731 RID: 10033
 		private IFaceToTargetMotorInteractConstraint _InteractConstraintCache;
 
-		// Token: 0x040024EE RID: 9454
+		// Token: 0x04002732 RID: 10034
 		private bool _InteractConstraintInited;
 
-		// Token: 0x040024EF RID: 9455
+		// Token: 0x04002733 RID: 10035
 		private IMotorHookEndDir _HookEndDirCache;
 
-		// Token: 0x040024F0 RID: 9456
+		// Token: 0x04002734 RID: 10036
 		private bool _HookEndDirInited;
 
-		// Token: 0x040024F1 RID: 9457
+		// Token: 0x04002735 RID: 10037
 		private IMotorHookAcceleration _MotorHookAccelerationCache;
 
-		// Token: 0x040024F2 RID: 9458
+		// Token: 0x04002736 RID: 10038
 		private bool _MotorHookAccelerationInited;
 
-		// Token: 0x040024F3 RID: 9459
-		[Nullable(1)]
+		// Token: 0x04002737 RID: 10039
+		[Nullable(0)]
 		private IHookLockScreenDetectTypeBase _ScreenDetectTypeCache;
 
-		// Token: 0x040024F4 RID: 9460
+		// Token: 0x04002738 RID: 10040
 		private bool _ScreenDetectTypeInited;
 
-		// Token: 0x040024F5 RID: 9461
+		// Token: 0x04002739 RID: 10041
 		private IMotorHookPerformanceConfig _MotorHookPerformanceConfigCache;
 
-		// Token: 0x040024F6 RID: 9462
+		// Token: 0x0400273A RID: 10042
 		private bool _MotorHookPerformanceConfigInited;
 	}
 }

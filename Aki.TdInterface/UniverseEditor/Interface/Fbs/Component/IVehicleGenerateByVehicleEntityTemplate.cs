@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005B14 RID: 23316
+	// Token: 0x0200612A RID: 24874
 	public struct IVehicleGenerateByVehicleEntityTemplate : IFlatbufferObject
 	{
-		// Token: 0x1700AFF7 RID: 45047
-		// (get) Token: 0x06027D5E RID: 163166 RVA: 0x0057AA68 File Offset: 0x00578C68
+		// Token: 0x1700B93F RID: 47423
+		// (get) Token: 0x0602A322 RID: 172834 RVA: 0x005C24BC File Offset: 0x005C06BC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027D5F RID: 163167 RVA: 0x0057AA75 File Offset: 0x00578C75
+		// Token: 0x0602A323 RID: 172835 RVA: 0x005C24C9 File Offset: 0x005C06C9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06027D60 RID: 163168 RVA: 0x0057AA7C File Offset: 0x00578C7C
+		// Token: 0x0602A324 RID: 172836 RVA: 0x005C24D0 File Offset: 0x005C06D0
 		public static IVehicleGenerateByVehicleEntityTemplate GetRootAsIVehicleGenerateByVehicleEntityTemplate(ByteBuffer _bb)
 		{
 			return IVehicleGenerateByVehicleEntityTemplate.GetRootAsIVehicleGenerateByVehicleEntityTemplate(_bb, default(IVehicleGenerateByVehicleEntityTemplate));
 		}
 
-		// Token: 0x06027D61 RID: 163169 RVA: 0x0057AA98 File Offset: 0x00578C98
+		// Token: 0x0602A325 RID: 172837 RVA: 0x005C24EC File Offset: 0x005C06EC
 		public static IVehicleGenerateByVehicleEntityTemplate GetRootAsIVehicleGenerateByVehicleEntityTemplate(ByteBuffer _bb, IVehicleGenerateByVehicleEntityTemplate obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06027D62 RID: 163170 RVA: 0x0057AAB5 File Offset: 0x00578CB5
+		// Token: 0x0602A326 RID: 172838 RVA: 0x005C2509 File Offset: 0x005C0709
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06027D63 RID: 163171 RVA: 0x0057AAC4 File Offset: 0x00578CC4
+		// Token: 0x0602A327 RID: 172839 RVA: 0x005C2518 File Offset: 0x005C0718
 		public IVehicleGenerateByVehicleEntityTemplate __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700AFF8 RID: 45048
-		// (get) Token: 0x06027D64 RID: 163172 RVA: 0x0057AAD4 File Offset: 0x00578CD4
+		// Token: 0x1700B940 RID: 47424
+		// (get) Token: 0x0602A328 RID: 172840 RVA: 0x005C2528 File Offset: 0x005C0728
 		public EVehicleGenerationType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AFF9 RID: 45049
-		// (get) Token: 0x06027D65 RID: 163173 RVA: 0x0057AB10 File Offset: 0x00578D10
+		// Token: 0x1700B941 RID: 47425
+		// (get) Token: 0x0602A329 RID: 172841 RVA: 0x005C2564 File Offset: 0x005C0764
 		public int Id
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700AFFA RID: 45050
-		// (get) Token: 0x06027D66 RID: 163174 RVA: 0x0057AB4C File Offset: 0x00578D4C
+		// Token: 0x1700B942 RID: 47426
+		// (get) Token: 0x0602A32A RID: 172842 RVA: 0x005C25A0 File Offset: 0x005C07A0
 		public int Weight
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027D67 RID: 163175 RVA: 0x0057AB88 File Offset: 0x00578D88
+		// Token: 0x0602A32B RID: 172843 RVA: 0x005C25DC File Offset: 0x005C07DC
 		public static Offset<IVehicleGenerateByVehicleEntityTemplate> CreateIVehicleGenerateByVehicleEntityTemplate(FlatBufferBuilder builder, EVehicleGenerationType Type = EVehicleGenerationType.VehicleEntityTemplate, int Id = 0, int Weight = 0)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IVehicleGenerateByVehicleEntityTemplate.EndIVehicleGenerateByVehicleEntityTemplate(builder);
 		}
 
-		// Token: 0x06027D68 RID: 163176 RVA: 0x0057ABAC File Offset: 0x00578DAC
+		// Token: 0x0602A32C RID: 172844 RVA: 0x005C2600 File Offset: 0x005C0800
 		public static void StartIVehicleGenerateByVehicleEntityTemplate(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06027D69 RID: 163177 RVA: 0x0057ABB5 File Offset: 0x00578DB5
+		// Token: 0x0602A32D RID: 172845 RVA: 0x005C2609 File Offset: 0x005C0809
 		public static void AddType(FlatBufferBuilder builder, EVehicleGenerationType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06027D6A RID: 163178 RVA: 0x0057ABC0 File Offset: 0x00578DC0
+		// Token: 0x0602A32E RID: 172846 RVA: 0x005C2614 File Offset: 0x005C0814
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(1, id, 0);
 		}
 
-		// Token: 0x06027D6B RID: 163179 RVA: 0x0057ABCB File Offset: 0x00578DCB
+		// Token: 0x0602A32F RID: 172847 RVA: 0x005C261F File Offset: 0x005C081F
 		public static void AddWeight(FlatBufferBuilder builder, int weight)
 		{
 			builder.AddInt(2, weight, 0);
 		}
 
-		// Token: 0x06027D6C RID: 163180 RVA: 0x0057ABD6 File Offset: 0x00578DD6
+		// Token: 0x0602A330 RID: 172848 RVA: 0x005C262A File Offset: 0x005C082A
 		public static Offset<IVehicleGenerateByVehicleEntityTemplate> EndIVehicleGenerateByVehicleEntityTemplate(FlatBufferBuilder builder)
 		{
 			return new Offset<IVehicleGenerateByVehicleEntityTemplate>(builder.EndTable());
 		}
 
-		// Token: 0x06027D6D RID: 163181 RVA: 0x0057ABE4 File Offset: 0x00578DE4
+		// Token: 0x0602A331 RID: 172849 RVA: 0x005C2638 File Offset: 0x005C0838
 		public IVehicleGenerateByVehicleEntityTemplateT UnPack()
 		{
 			IVehicleGenerateByVehicleEntityTemplateT vehicleGenerateByVehicleEntityTemplateT = new IVehicleGenerateByVehicleEntityTemplateT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return vehicleGenerateByVehicleEntityTemplateT;
 		}
 
-		// Token: 0x06027D6E RID: 163182 RVA: 0x0057ABFF File Offset: 0x00578DFF
+		// Token: 0x0602A332 RID: 172850 RVA: 0x005C2653 File Offset: 0x005C0853
 		public void UnPackTo(IVehicleGenerateByVehicleEntityTemplateT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.Weight = this.Weight;
 		}
 
-		// Token: 0x06027D6F RID: 163183 RVA: 0x0057AC28 File Offset: 0x00578E28
+		// Token: 0x0602A333 RID: 172851 RVA: 0x005C267C File Offset: 0x005C087C
 		public static Offset<IVehicleGenerateByVehicleEntityTemplate> Pack(FlatBufferBuilder builder, IVehicleGenerateByVehicleEntityTemplateT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IVehicleGenerateByVehicleEntityTemplate.CreateIVehicleGenerateByVehicleEntityTemplate(builder, _o.Type, _o.Id, _o.Weight);
 		}
 
-		// Token: 0x0400F22A RID: 61994
+		// Token: 0x0400FF30 RID: 65328
 		private Table __p;
 	}
 }

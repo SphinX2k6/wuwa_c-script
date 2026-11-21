@@ -11,17 +11,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020025D4 RID: 9684
+// Token: 0x02001ABF RID: 6847
 [NullableContext(1)]
 [Nullable(0)]
 public class PhotographSetupView : UiViewBase
 {
-	// Token: 0x06013A53 RID: 80467 RVA: 0x004E99F8 File Offset: 0x004E7BF8
+	// Token: 0x06010F33 RID: 69427 RVA: 0x004F85F8 File Offset: 0x004F67F8
 	public PhotographSetupView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x06013A54 RID: 80468 RVA: 0x004E9A54 File Offset: 0x004E7C54
+	// Token: 0x06010F34 RID: 69428 RVA: 0x004F8654 File Offset: 0x004F6854
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -54,31 +54,31 @@ public class PhotographSetupView : UiViewBase
 		};
 	}
 
-	// Token: 0x06013A55 RID: 80469 RVA: 0x004E9C6E File Offset: 0x004E7E6E
+	// Token: 0x06010F35 RID: 69429 RVA: 0x004F886E File Offset: 0x004F6A6E
 	private void OnClickedCloseButton()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06013A56 RID: 80470 RVA: 0x004E9C77 File Offset: 0x004E7E77
+	// Token: 0x06010F36 RID: 69430 RVA: 0x004F8877 File Offset: 0x004F6A77
 	private void OnClickedExpression(EToggleState toggleState)
 	{
 		this.RefreshTabState(EPhotoSettingMode.ExpressionSetup);
 	}
 
-	// Token: 0x06013A57 RID: 80471 RVA: 0x004E9C80 File Offset: 0x004E7E80
+	// Token: 0x06010F37 RID: 69431 RVA: 0x004F8880 File Offset: 0x004F6A80
 	private void OnClickedSetup(EToggleState toggleState)
 	{
 		this.RefreshTabState(EPhotoSettingMode.CameraSetup);
 	}
 
-	// Token: 0x06013A58 RID: 80472 RVA: 0x004E9C89 File Offset: 0x004E7E89
+	// Token: 0x06010F38 RID: 69432 RVA: 0x004F8889 File Offset: 0x004F6A89
 	private void OnClickedMotion(EToggleState toggleState)
 	{
 		this.RefreshTabState(EPhotoSettingMode.MotionSetup);
 	}
 
-	// Token: 0x06013A59 RID: 80473 RVA: 0x004E9C94 File Offset: 0x004E7E94
+	// Token: 0x06010F39 RID: 69433 RVA: 0x004F8894 File Offset: 0x004F6A94
 	private void OnClickedFilter(EToggleState toggleState)
 	{
 		ServerStorageBoolean serverStorageBoolean = ServerStorageModel.Instance.Get(EClientStorageSystemIdType.FilterRedPoint) as ServerStorageBoolean;
@@ -95,7 +95,7 @@ public class PhotographSetupView : UiViewBase
 		this.RefreshTabState(EPhotoSettingMode.FilterSetup);
 	}
 
-	// Token: 0x06013A5A RID: 80474 RVA: 0x004E9CF8 File Offset: 0x004E7EF8
+	// Token: 0x06010F3A RID: 69434 RVA: 0x004F88F8 File Offset: 0x004F6AF8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PhotographSetupView.<OnBeforeStartAsync>d__23 <OnBeforeStartAsync>d__;
@@ -106,7 +106,7 @@ public class PhotographSetupView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013A5B RID: 80475 RVA: 0x004E9D3C File Offset: 0x004E7F3C
+	// Token: 0x06010F3B RID: 69435 RVA: 0x004F893C File Offset: 0x004F6B3C
 	protected override void OnStart()
 	{
 		this.AnimationController = (base.GetItem(3).GetOwner().GetComponentByClass(UUIInturnAnimController.StaticClass()) as UUIInturnAnimController);
@@ -116,7 +116,7 @@ public class PhotographSetupView : UiViewBase
 		base.GetItem(16).SetUIActive(false);
 	}
 
-	// Token: 0x06013A5C RID: 80476 RVA: 0x004E9DA0 File Offset: 0x004E7FA0
+	// Token: 0x06010F3C RID: 69436 RVA: 0x004F89A0 File Offset: 0x004F6BA0
 	protected override void OnBeforeDestroy()
 	{
 		this.ClearMotionItem();
@@ -129,7 +129,7 @@ public class PhotographSetupView : UiViewBase
 		this.FilterToggleItem.Destroy(null);
 	}
 
-	// Token: 0x06013A5D RID: 80477 RVA: 0x004E9DF0 File Offset: 0x004E7FF0
+	// Token: 0x06010F3D RID: 69437 RVA: 0x004F89F0 File Offset: 0x004F6BF0
 	private void ScrollToSelectedItem(PhotoFilterItem item)
 	{
 		TTimerAction <>9__1;
@@ -156,7 +156,7 @@ public class PhotographSetupView : UiViewBase
 		});
 	}
 
-	// Token: 0x06013A5E RID: 80478 RVA: 0x004E9E30 File Offset: 0x004E8030
+	// Token: 0x06010F3E RID: 69438 RVA: 0x004F8A30 File Offset: 0x004F6C30
 	private void ScrollToSelectedItem(PhotographExpressionItem item)
 	{
 		TTimerAction <>9__1;
@@ -183,26 +183,26 @@ public class PhotographSetupView : UiViewBase
 		});
 	}
 
-	// Token: 0x06013A5F RID: 80479 RVA: 0x004E9E6D File Offset: 0x004E806D
+	// Token: 0x06010F3F RID: 69439 RVA: 0x004F8A6D File Offset: 0x004F6C6D
 	protected override void OnBeforeShow()
 	{
 		EventSystem.Instance.Emit<bool>(EEventName.OnPhotographSetUpViewVisibleChanged, true);
 	}
 
-	// Token: 0x06013A60 RID: 80480 RVA: 0x004E9E80 File Offset: 0x004E8080
+	// Token: 0x06010F40 RID: 69440 RVA: 0x004F8A80 File Offset: 0x004F6C80
 	protected override void OnBeforeHide()
 	{
 		EventSystem.Instance.Emit<bool>(EEventName.OnPhotographSetUpViewVisibleChanged, false);
 	}
 
-	// Token: 0x06013A61 RID: 80481 RVA: 0x004E9E93 File Offset: 0x004E8093
+	// Token: 0x06010F41 RID: 69441 RVA: 0x004F8A93 File Offset: 0x004F6C93
 	public void SetPanelVisible(bool isShow)
 	{
 		base.GetItem(11).SetUIActive(isShow);
 		base.GetItem(16).SetUIActive(!isShow);
 	}
 
-	// Token: 0x06013A62 RID: 80482 RVA: 0x004E9EB4 File Offset: 0x004E80B4
+	// Token: 0x06010F42 RID: 69442 RVA: 0x004F8AB4 File Offset: 0x004F6CB4
 	private void InitTabToggle()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -224,7 +224,7 @@ public class PhotographSetupView : UiViewBase
 		this.TabItemMap.Add(EPhotoSettingMode.FilterSetup, extendToggle4);
 	}
 
-	// Token: 0x06013A63 RID: 80483 RVA: 0x004E9F54 File Offset: 0x004E8154
+	// Token: 0x06010F43 RID: 69443 RVA: 0x004F8B54 File Offset: 0x004F6D54
 	private void RefreshTabState(EPhotoSettingMode newMode)
 	{
 		foreach (KeyValuePair<EPhotoSettingMode, UUIExtendToggle> keyValuePair in this.TabItemMap)
@@ -239,7 +239,7 @@ public class PhotographSetupView : UiViewBase
 		this.SetPhotoSetupMode(newMode);
 	}
 
-	// Token: 0x06013A64 RID: 80484 RVA: 0x004E9FC4 File Offset: 0x004E81C4
+	// Token: 0x06010F44 RID: 69444 RVA: 0x004F8BC4 File Offset: 0x004F6DC4
 	private void SelectTabToggle(EPhotoSettingMode newMode, bool selectOn, bool bFireEvent = false)
 	{
 		EToggleState state = selectOn ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
@@ -250,7 +250,7 @@ public class PhotographSetupView : UiViewBase
 		}
 	}
 
-	// Token: 0x06013A65 RID: 80485 RVA: 0x004E9FF3 File Offset: 0x004E81F3
+	// Token: 0x06010F45 RID: 69445 RVA: 0x004F8BF3 File Offset: 0x004F6DF3
 	private void SetPhotoSetupMode(EPhotoSettingMode newMode)
 	{
 		this.PhotoSetupMode = newMode;
@@ -260,7 +260,7 @@ public class PhotographSetupView : UiViewBase
 		this.SetFilterVisible(newMode == EPhotoSettingMode.FilterSetup);
 	}
 
-	// Token: 0x06013A66 RID: 80486 RVA: 0x004EA024 File Offset: 0x004E8224
+	// Token: 0x06010F46 RID: 69446 RVA: 0x004F8C24 File Offset: 0x004F6E24
 	private UniTask InitializeExpressionSetup()
 	{
 		PhotographSetupView.<InitializeExpressionSetup>d__35 <InitializeExpressionSetup>d__;
@@ -271,7 +271,7 @@ public class PhotographSetupView : UiViewBase
 		return <InitializeExpressionSetup>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013A67 RID: 80487 RVA: 0x004EA068 File Offset: 0x004E8268
+	// Token: 0x06010F47 RID: 69447 RVA: 0x004F8C68 File Offset: 0x004F6E68
 	private UniTask NewExpressionItem(int montageId)
 	{
 		PhotographSetupView.<NewExpressionItem>d__36 <NewExpressionItem>d__;
@@ -283,7 +283,7 @@ public class PhotographSetupView : UiViewBase
 		return <NewExpressionItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013A68 RID: 80488 RVA: 0x004EA0B4 File Offset: 0x004E82B4
+	// Token: 0x06010F48 RID: 69448 RVA: 0x004F8CB4 File Offset: 0x004F6EB4
 	private void ClearExpressionItem()
 	{
 		foreach (PhotographExpressionItem photographExpressionItem in this.ExpressionItemSet)
@@ -294,7 +294,7 @@ public class PhotographSetupView : UiViewBase
 		this.SelectedExpressionItem = null;
 	}
 
-	// Token: 0x06013A69 RID: 80489 RVA: 0x004EA118 File Offset: 0x004E8318
+	// Token: 0x06010F49 RID: 69449 RVA: 0x004F8D18 File Offset: 0x004F6F18
 	private void SetExpressionVisible(bool bVisible)
 	{
 		foreach (PhotographExpressionItem photographExpressionItem in this.ExpressionItemSet)
@@ -309,7 +309,7 @@ public class PhotographSetupView : UiViewBase
 		animationController.Play("Start03", -1, false);
 	}
 
-	// Token: 0x06013A6A RID: 80490 RVA: 0x004EA180 File Offset: 0x004E8380
+	// Token: 0x06010F4A RID: 69450 RVA: 0x004F8D80 File Offset: 0x004F6F80
 	private void OnSelectedExpressionItem(PhotographExpressionItem expressionItem, bool bSelectOn)
 	{
 		if (bSelectOn)
@@ -320,7 +320,7 @@ public class PhotographSetupView : UiViewBase
 		this.DeselectOnExpressionItem(expressionItem);
 	}
 
-	// Token: 0x06013A6B RID: 80491 RVA: 0x004EA194 File Offset: 0x004E8394
+	// Token: 0x06010F4B RID: 69451 RVA: 0x004F8D94 File Offset: 0x004F6F94
 	private void SelectOnExpressionItem(PhotographExpressionItem expressionItem)
 	{
 		if (this.SelectedExpressionItem != null)
@@ -335,7 +335,7 @@ public class PhotographSetupView : UiViewBase
 		this.ScrollToSelectedItem(this.SelectedExpressionItem);
 	}
 
-	// Token: 0x06013A6C RID: 80492 RVA: 0x004EA1F4 File Offset: 0x004E83F4
+	// Token: 0x06010F4C RID: 69452 RVA: 0x004F8DF4 File Offset: 0x004F6FF4
 	private void DeselectOnExpressionItem(PhotographExpressionItem expressionItem)
 	{
 		if (this.SelectedExpressionItem != expressionItem)
@@ -346,7 +346,7 @@ public class PhotographSetupView : UiViewBase
 		this.SelectedExpressionItem = null;
 	}
 
-	// Token: 0x06013A6D RID: 80493 RVA: 0x004EA214 File Offset: 0x004E8414
+	// Token: 0x06010F4D RID: 69453 RVA: 0x004F8E14 File Offset: 0x004F7014
 	private void SelectDefaultMotion()
 	{
 		int montageId = PhotographModel.Instance.MontageId;
@@ -372,7 +372,7 @@ public class PhotographSetupView : UiViewBase
 		selectedMotionItem.SetSelected(true, false);
 	}
 
-	// Token: 0x06013A6E RID: 80494 RVA: 0x004EA278 File Offset: 0x004E8478
+	// Token: 0x06010F4E RID: 69454 RVA: 0x004F8E78 File Offset: 0x004F7078
 	private UniTask InitializeMotionSetup()
 	{
 		PhotographSetupView.<InitializeMotionSetup>d__43 <InitializeMotionSetup>d__;
@@ -383,7 +383,7 @@ public class PhotographSetupView : UiViewBase
 		return <InitializeMotionSetup>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013A6F RID: 80495 RVA: 0x004EA2BC File Offset: 0x004E84BC
+	// Token: 0x06010F4F RID: 69455 RVA: 0x004F8EBC File Offset: 0x004F70BC
 	private UniTask CreateDefaultMotionItem()
 	{
 		PhotographSetupView.<CreateDefaultMotionItem>d__44 <CreateDefaultMotionItem>d__;
@@ -394,7 +394,7 @@ public class PhotographSetupView : UiViewBase
 		return <CreateDefaultMotionItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013A70 RID: 80496 RVA: 0x004EA300 File Offset: 0x004E8500
+	// Token: 0x06010F50 RID: 69456 RVA: 0x004F8F00 File Offset: 0x004F7100
 	private UniTask NewMotionItem(int montageId)
 	{
 		PhotographSetupView.<NewMotionItem>d__45 <NewMotionItem>d__;
@@ -406,7 +406,7 @@ public class PhotographSetupView : UiViewBase
 		return <NewMotionItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013A71 RID: 80497 RVA: 0x004EA34C File Offset: 0x004E854C
+	// Token: 0x06010F51 RID: 69457 RVA: 0x004F8F4C File Offset: 0x004F714C
 	private void SetMotionVisible(bool bVisible)
 	{
 		foreach (PhotographExpressionItem photographExpressionItem in this.MotionItemMap.Values)
@@ -415,7 +415,7 @@ public class PhotographSetupView : UiViewBase
 		}
 	}
 
-	// Token: 0x06013A72 RID: 80498 RVA: 0x004EA3A4 File Offset: 0x004E85A4
+	// Token: 0x06010F52 RID: 69458 RVA: 0x004F8FA4 File Offset: 0x004F71A4
 	private void ClearMotionItem()
 	{
 		foreach (PhotographExpressionItem photographExpressionItem in this.MotionItemMap.Values)
@@ -426,13 +426,13 @@ public class PhotographSetupView : UiViewBase
 		this.SelectedMotionItem = null;
 	}
 
-	// Token: 0x06013A73 RID: 80499 RVA: 0x004EA40C File Offset: 0x004E860C
+	// Token: 0x06010F53 RID: 69459 RVA: 0x004F900C File Offset: 0x004F720C
 	private bool OnCanExecuteChangeFunc(PhotographExpressionItem motionItem)
 	{
 		return this.SelectedMotionItem != motionItem;
 	}
 
-	// Token: 0x06013A74 RID: 80500 RVA: 0x004EA41A File Offset: 0x004E861A
+	// Token: 0x06010F54 RID: 69460 RVA: 0x004F901A File Offset: 0x004F721A
 	private void OnSelectedMotionItem(PhotographExpressionItem motionItem, bool bSelectOn)
 	{
 		if (bSelectOn)
@@ -443,7 +443,7 @@ public class PhotographSetupView : UiViewBase
 		this.DeselectOnMotionItem(motionItem);
 	}
 
-	// Token: 0x06013A75 RID: 80501 RVA: 0x004EA430 File Offset: 0x004E8630
+	// Token: 0x06010F55 RID: 69461 RVA: 0x004F9030 File Offset: 0x004F7230
 	private void SelectOnMotionItem(PhotographExpressionItem motionItem)
 	{
 		if (this.SelectedMotionItem != null)
@@ -465,7 +465,7 @@ public class PhotographSetupView : UiViewBase
 		this.ScrollToSelectedItem(this.SelectedMotionItem);
 	}
 
-	// Token: 0x06013A76 RID: 80502 RVA: 0x004EA49F File Offset: 0x004E869F
+	// Token: 0x06010F56 RID: 69462 RVA: 0x004F909F File Offset: 0x004F729F
 	private void DeselectOnMotionItem(PhotographExpressionItem motionItem)
 	{
 		if (this.SelectedMotionItem != motionItem)
@@ -476,7 +476,7 @@ public class PhotographSetupView : UiViewBase
 		this.SelectedMotionItem = null;
 	}
 
-	// Token: 0x06013A77 RID: 80503 RVA: 0x004EA4BC File Offset: 0x004E86BC
+	// Token: 0x06010F57 RID: 69463 RVA: 0x004F90BC File Offset: 0x004F72BC
 	private UniTask InitializeCameraSetup()
 	{
 		PhotographSetupView.<InitializeCameraSetup>d__52 <InitializeCameraSetup>d__;
@@ -487,7 +487,7 @@ public class PhotographSetupView : UiViewBase
 		return <InitializeCameraSetup>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013A78 RID: 80504 RVA: 0x004EA500 File Offset: 0x004E8700
+	// Token: 0x06010F58 RID: 69464 RVA: 0x004F9100 File Offset: 0x004F7300
 	private UniTask NewCameraSetupItem(int setupId, EPhotoSetupValueType setupValueType, EPhotoSetupOptionType optionType)
 	{
 		PhotographSetupView.<NewCameraSetupItem>d__53 <NewCameraSetupItem>d__;
@@ -501,14 +501,14 @@ public class PhotographSetupView : UiViewBase
 		return <NewCameraSetupItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013A79 RID: 80505 RVA: 0x004EA55B File Offset: 0x004E875B
+	// Token: 0x06010F59 RID: 69465 RVA: 0x004F915B File Offset: 0x004F735B
 	private void OnSetupIndexChanged(int index)
 	{
 		this.RefreshAllOptionEnable();
 		this.SelectDefaultMotion();
 	}
 
-	// Token: 0x06013A7A RID: 80506 RVA: 0x004EA56C File Offset: 0x004E876C
+	// Token: 0x06010F5A RID: 69466 RVA: 0x004F916C File Offset: 0x004F736C
 	[NullableContext(2)]
 	private IPhotographSetupItem GetSetupItem(EPhotoSetupValueType valueType)
 	{
@@ -520,7 +520,7 @@ public class PhotographSetupView : UiViewBase
 		return null;
 	}
 
-	// Token: 0x06013A7B RID: 80507 RVA: 0x004EA58C File Offset: 0x004E878C
+	// Token: 0x06010F5B RID: 69467 RVA: 0x004F918C File Offset: 0x004F738C
 	private void ClearSetupItem()
 	{
 		foreach (IPhotographSetupItem photographSetupItem in this.SetupItemMap.Values)
@@ -530,7 +530,7 @@ public class PhotographSetupView : UiViewBase
 		this.SetupItemMap.Clear();
 	}
 
-	// Token: 0x06013A7C RID: 80508 RVA: 0x004EA5EC File Offset: 0x004E87EC
+	// Token: 0x06010F5C RID: 69468 RVA: 0x004F91EC File Offset: 0x004F73EC
 	private void SetCameraSetupVisible(bool bVisible)
 	{
 		foreach (IPhotographSetupItem photographSetupItem in this.SetupItemMap.Values)
@@ -543,7 +543,7 @@ public class PhotographSetupView : UiViewBase
 		}
 	}
 
-	// Token: 0x06013A7D RID: 80509 RVA: 0x004EA64C File Offset: 0x004E884C
+	// Token: 0x06010F5D RID: 69469 RVA: 0x004F924C File Offset: 0x004F744C
 	private void RefreshAllOptionEnable()
 	{
 		foreach (IPhotographSetupItem photographSetupItem in this.SetupItemMap.Values)
@@ -577,7 +577,7 @@ public class PhotographSetupView : UiViewBase
 		}
 	}
 
-	// Token: 0x06013A7E RID: 80510 RVA: 0x004EA78C File Offset: 0x004E898C
+	// Token: 0x06010F5E RID: 69470 RVA: 0x004F938C File Offset: 0x004F758C
 	private UniTask InitializeFilterSetup()
 	{
 		PhotographSetupView.<InitializeFilterSetup>d__59 <InitializeFilterSetup>d__;
@@ -588,7 +588,7 @@ public class PhotographSetupView : UiViewBase
 		return <InitializeFilterSetup>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013A7F RID: 80511 RVA: 0x004EA7D0 File Offset: 0x004E89D0
+	// Token: 0x06010F5F RID: 69471 RVA: 0x004F93D0 File Offset: 0x004F75D0
 	private UniTask NewFilterItem(int filterId)
 	{
 		PhotographSetupView.<NewFilterItem>d__60 <NewFilterItem>d__;
@@ -600,7 +600,7 @@ public class PhotographSetupView : UiViewBase
 		return <NewFilterItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013A80 RID: 80512 RVA: 0x004EA81C File Offset: 0x004E8A1C
+	// Token: 0x06010F60 RID: 69472 RVA: 0x004F941C File Offset: 0x004F761C
 	private void ClearFilterItem()
 	{
 		foreach (PhotoFilterItem photoFilterItem in this.FilterItemMap.Values)
@@ -611,7 +611,7 @@ public class PhotographSetupView : UiViewBase
 		this.SelectedFilterItem = null;
 	}
 
-	// Token: 0x06013A81 RID: 80513 RVA: 0x004EA884 File Offset: 0x004E8A84
+	// Token: 0x06010F61 RID: 69473 RVA: 0x004F9484 File Offset: 0x004F7684
 	private void SetFilterVisible(bool bVisible)
 	{
 		this.FilterToggleItem.SetActive(bVisible);
@@ -628,7 +628,7 @@ public class PhotographSetupView : UiViewBase
 		animationController.Play("Start02", -1, false);
 	}
 
-	// Token: 0x06013A82 RID: 80514 RVA: 0x004EA8B8 File Offset: 0x004E8AB8
+	// Token: 0x06010F62 RID: 69474 RVA: 0x004F94B8 File Offset: 0x004F76B8
 	private void SetFilterOptionVisible(bool bVisible, bool isClickToggle = false)
 	{
 		foreach (PhotoFilterItem photoFilterItem in this.FilterItemMap.Values)
@@ -664,7 +664,7 @@ public class PhotographSetupView : UiViewBase
 		}
 	}
 
-	// Token: 0x06013A83 RID: 80515 RVA: 0x004EA994 File Offset: 0x004E8B94
+	// Token: 0x06010F63 RID: 69475 RVA: 0x004F9594 File Offset: 0x004F7794
 	private void OnSelectedFilterItem(PhotoFilterItem filterItem, bool bSelectOn)
 	{
 		if (bSelectOn)
@@ -673,7 +673,7 @@ public class PhotographSetupView : UiViewBase
 		}
 	}
 
-	// Token: 0x06013A84 RID: 80516 RVA: 0x004EA9A0 File Offset: 0x004E8BA0
+	// Token: 0x06010F64 RID: 69476 RVA: 0x004F95A0 File Offset: 0x004F77A0
 	private void SelectOnFilterItem(PhotoFilterItem filterItem)
 	{
 		if (this.SelectedFilterItem != null)
@@ -685,7 +685,7 @@ public class PhotographSetupView : UiViewBase
 		this.ScrollToSelectedItem(this.SelectedFilterItem);
 	}
 
-	// Token: 0x06013A85 RID: 80517 RVA: 0x004EA9D7 File Offset: 0x004E8BD7
+	// Token: 0x06010F65 RID: 69477 RVA: 0x004F95D7 File Offset: 0x004F77D7
 	private void DeselectOnFilterItem()
 	{
 		if (this.SelectedFilterItem != null)
@@ -696,55 +696,55 @@ public class PhotographSetupView : UiViewBase
 		}
 	}
 
-	// Token: 0x0400941D RID: 37917
+	// Token: 0x04009573 RID: 38259
 	private int SkinId;
 
-	// Token: 0x0400941E RID: 37918
+	// Token: 0x04009574 RID: 38260
 	private EPhotoSettingMode PhotoSetupMode = EPhotoSettingMode.CameraSetup;
 
-	// Token: 0x0400941F RID: 37919
+	// Token: 0x04009575 RID: 38261
 	private ERoleMainAnimInstanceType RoleAnimType = ERoleMainAnimInstanceType.CommonAnim;
 
-	// Token: 0x04009420 RID: 37920
+	// Token: 0x04009576 RID: 38262
 	private readonly HashSet<PhotographExpressionItem> ExpressionItemSet = new HashSet<PhotographExpressionItem>();
 
-	// Token: 0x04009421 RID: 37921
+	// Token: 0x04009577 RID: 38263
 	private readonly Dictionary<int, PhotographExpressionItem> MotionItemMap = new Dictionary<int, PhotographExpressionItem>();
 
-	// Token: 0x04009422 RID: 37922
+	// Token: 0x04009578 RID: 38264
 	private readonly Dictionary<int, PhotoFilterItem> FilterItemMap = new Dictionary<int, PhotoFilterItem>();
 
-	// Token: 0x04009423 RID: 37923
+	// Token: 0x04009579 RID: 38265
 	[Nullable(2)]
 	private PhotoFilterToggleItem FilterToggleItem;
 
-	// Token: 0x04009424 RID: 37924
+	// Token: 0x0400957A RID: 38266
 	[Nullable(2)]
 	private PhotographTab PhotoFilterTab;
 
-	// Token: 0x04009425 RID: 37925
+	// Token: 0x0400957B RID: 38267
 	[Nullable(2)]
 	private PhotographExpressionItem SelectedExpressionItem;
 
-	// Token: 0x04009426 RID: 37926
+	// Token: 0x0400957C RID: 38268
 	[Nullable(2)]
 	private PhotographExpressionItem SelectedMotionItem;
 
-	// Token: 0x04009427 RID: 37927
+	// Token: 0x0400957D RID: 38269
 	[Nullable(2)]
 	private PhotoFilterItem SelectedFilterItem;
 
-	// Token: 0x04009428 RID: 37928
+	// Token: 0x0400957E RID: 38270
 	public UUIScrollViewWithScrollbarComponent UiScrollView;
 
-	// Token: 0x04009429 RID: 37929
+	// Token: 0x0400957F RID: 38271
 	private readonly Dictionary<EPhotoSetupValueType, IPhotographSetupItem> SetupItemMap = new Dictionary<EPhotoSetupValueType, IPhotographSetupItem>();
 
-	// Token: 0x0400942A RID: 37930
+	// Token: 0x04009580 RID: 38272
 	[Nullable(2)]
 	private UUIInturnAnimController AnimationController;
 
-	// Token: 0x0400942B RID: 37931
+	// Token: 0x04009581 RID: 38273
 	[Nullable(new byte[]
 	{
 		2,
@@ -752,43 +752,43 @@ public class PhotographSetupView : UiViewBase
 	})]
 	private Dictionary<EPhotoSettingMode, UUIExtendToggle> TabItemMap = new Dictionary<EPhotoSettingMode, UUIExtendToggle>();
 
-	// Token: 0x02008BE1 RID: 35809
+	// Token: 0x02007D69 RID: 32105
 	[NullableContext(0)]
 	private enum ESetUpChildNode
 	{
-		// Token: 0x0402D685 RID: 185989
+		// Token: 0x0402899A RID: 166298
 		TabSet,
-		// Token: 0x0402D686 RID: 185990
+		// Token: 0x0402899B RID: 166299
 		TabEmotion,
-		// Token: 0x0402D687 RID: 185991
+		// Token: 0x0402899C RID: 166300
 		TabMotion,
-		// Token: 0x0402D688 RID: 185992
+		// Token: 0x0402899D RID: 166301
 		LayoutContent,
-		// Token: 0x0402D689 RID: 185993
+		// Token: 0x0402899E RID: 166302
 		ItemExpressionSource,
-		// Token: 0x0402D68A RID: 185994
+		// Token: 0x0402899F RID: 166303
 		ItemOptionSetupSource,
-		// Token: 0x0402D68B RID: 185995
+		// Token: 0x040289A0 RID: 166304
 		ItemValueSetupSource,
-		// Token: 0x0402D68C RID: 185996
+		// Token: 0x040289A1 RID: 166305
 		ButtonBack,
-		// Token: 0x0402D68D RID: 185997
+		// Token: 0x040289A2 RID: 166306
 		ItemExpressionDefault,
-		// Token: 0x0402D68E RID: 185998
+		// Token: 0x040289A3 RID: 166307
 		TabFilter,
-		// Token: 0x0402D68F RID: 185999
+		// Token: 0x040289A4 RID: 166308
 		ItemFilterSource,
-		// Token: 0x0402D690 RID: 186000
+		// Token: 0x040289A5 RID: 166309
 		PanelAll,
-		// Token: 0x0402D691 RID: 186001
+		// Token: 0x040289A6 RID: 166310
 		ScrollView,
-		// Token: 0x0402D692 RID: 186002
+		// Token: 0x040289A7 RID: 166311
 		ItemDropDownSetupSource,
-		// Token: 0x0402D693 RID: 186003
+		// Token: 0x040289A8 RID: 166312
 		ItemValueWithoutTitleSetupSource,
-		// Token: 0x0402D694 RID: 186004
+		// Token: 0x040289A9 RID: 166313
 		RedDot,
-		// Token: 0x0402D695 RID: 186005
+		// Token: 0x040289AA RID: 166314
 		PanelHideOnly
 	}
 }

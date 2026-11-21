@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200128A RID: 4746
+	// Token: 0x020013CA RID: 5066
 	public static class ESaveConfigExtensions
 	{
-		// Token: 0x06006B14 RID: 27412 RVA: 0x00100DE8 File Offset: 0x000FEFE8
+		// Token: 0x06007167 RID: 29031 RVA: 0x0010EAE4 File Offset: 0x0010CCE4
 		public static string ToEnumString(this ESaveConfig value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006B15 RID: 27413 RVA: 0x00100E20 File Offset: 0x000FF020
+		// Token: 0x06007168 RID: 29032 RVA: 0x0010EB1C File Offset: 0x0010CD1C
 		public static ESaveConfig FromString(string name)
 		{
 			ESaveConfig result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006B16 RID: 27414 RVA: 0x00100E49 File Offset: 0x000FF049
+		// Token: 0x06007169 RID: 29033 RVA: 0x0010EB45 File Offset: 0x0010CD45
 		public static bool TryFromString(string name, out ESaveConfig value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Quest
 			return true;
 		}
 
-		// Token: 0x06006B17 RID: 27415 RVA: 0x00100E82 File Offset: 0x000FF082
+		// Token: 0x0600716A RID: 29034 RVA: 0x0010EB7E File Offset: 0x0010CD7E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006B18 RID: 27416 RVA: 0x00100E9A File Offset: 0x000FF09A
+		// Token: 0x0600716B RID: 29035 RVA: 0x0010EB96 File Offset: 0x0010CD96
 		public static ESaveConfig[] GetValues()
 		{
 			return new ESaveConfig[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006B19 RID: 27417 RVA: 0x00100EA6 File Offset: 0x000FF0A6
+		// Token: 0x0600716C RID: 29036 RVA: 0x0010EBA2 File Offset: 0x0010CDA2
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BD7 RID: 23511
+	// Token: 0x02004BB7 RID: 19383
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 	})]
 	public class CiacconaGalStepItemContainer : GridProxyAbstract<CiacconaGalStepData>
 	{
-		// Token: 0x0603B6FC RID: 243452 RVA: 0x00E2C3D4 File Offset: 0x00E2A5D4
+		// Token: 0x06030647 RID: 198215 RVA: 0x00D7C6DC File Offset: 0x00D7A8DC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603B6FD RID: 243453 RVA: 0x00E2C480 File Offset: 0x00E2A680
+		// Token: 0x06030648 RID: 198216 RVA: 0x00D7C788 File Offset: 0x00D7A988
 		protected override UniTask OnBeforeStartAsync()
 		{
 			CiacconaGalStepItemContainer.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B6FE RID: 243454 RVA: 0x00E2C4C4 File Offset: 0x00E2A6C4
+		// Token: 0x06030649 RID: 198217 RVA: 0x00D7C7CC File Offset: 0x00D7A9CC
 		[NullableContext(1)]
 		public override void Refresh(CiacconaGalStepData data, bool isSelected, int gridIndex)
 		{
@@ -82,32 +82,32 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0603B6FF RID: 243455 RVA: 0x00E2C5C4 File Offset: 0x00E2A7C4
+		// Token: 0x0603064A RID: 198218 RVA: 0x00D7C8CC File Offset: 0x00D7AACC
 		private bool ShouldShowChosenItem()
 		{
 			return this.StepData.Type == ECiacconaGalStepType.Choice && this.StepData.Id != CiacconaGalController.Instance.GalPlayer.CurHandlingStepId;
 		}
 
-		// Token: 0x0603B700 RID: 243456 RVA: 0x00E2C5F5 File Offset: 0x00E2A7F5
+		// Token: 0x0603064B RID: 198219 RVA: 0x00D7C8FD File Offset: 0x00D7AAFD
 		private bool ShouldShowTextItem()
 		{
 			return this.StepData.HasText;
 		}
 
-		// Token: 0x0603B701 RID: 243457 RVA: 0x00E2C602 File Offset: 0x00E2A802
+		// Token: 0x0603064C RID: 198220 RVA: 0x00D7C90A File Offset: 0x00D7AB0A
 		private bool ShouldShowSubEndingItem()
 		{
 			return this.StepData.Type == ECiacconaGalStepType.End;
 		}
 
-		// Token: 0x0603B702 RID: 243458 RVA: 0x00E2C614 File Offset: 0x00E2A814
+		// Token: 0x0603064D RID: 198221 RVA: 0x00D7C91C File Offset: 0x00D7AB1C
 		private bool ShouldShowChoiceListItem()
 		{
 			ECiacconaGalPlayerState curState = CiacconaGalController.Instance.GalPlayer.GetCurState();
 			return this.StepData.Type == ECiacconaGalStepType.Choice && this.StepData.Id == CiacconaGalController.Instance.GalPlayer.CurHandlingStepId && (curState == ECiacconaGalPlayerState.Choosing || curState == ECiacconaGalPlayerState.ChoiceProtecting);
 		}
 
-		// Token: 0x0603B703 RID: 243459 RVA: 0x00E2C668 File Offset: 0x00E2A868
+		// Token: 0x0603064E RID: 198222 RVA: 0x00D7C970 File Offset: 0x00D7AB70
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -142,35 +142,35 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			return choiceListItem.GetGuideUiItemAndUiItemForShowEx(configParams);
 		}
 
-		// Token: 0x0401EF85 RID: 126853
+		// Token: 0x04019A36 RID: 105014
 		private CiacconaGalStepChosenItem ChosenItem;
 
-		// Token: 0x0401EF86 RID: 126854
+		// Token: 0x04019A37 RID: 105015
 		private CiacconaGalStepTextItem TextItem;
 
-		// Token: 0x0401EF87 RID: 126855
+		// Token: 0x04019A38 RID: 105016
 		private CiacconaGalStepSubEndingItem SubEndingItem;
 
-		// Token: 0x0401EF88 RID: 126856
+		// Token: 0x04019A39 RID: 105017
 		private CiacconaGalStepChoiceList ChoiceListItem;
 
-		// Token: 0x0401EF89 RID: 126857
+		// Token: 0x04019A3A RID: 105018
 		private CiacconaGalStepData StepData;
 
-		// Token: 0x0200BDB1 RID: 48561
+		// Token: 0x0200A7BA RID: 42938
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x0403934E RID: 234318
+			// Token: 0x04033D13 RID: 212243
 			public const int ChosenItem = 0;
 
-			// Token: 0x0403934F RID: 234319
+			// Token: 0x04033D14 RID: 212244
 			public const int TextItem = 1;
 
-			// Token: 0x04039350 RID: 234320
+			// Token: 0x04033D15 RID: 212245
 			public const int SubEndingItem = 2;
 
-			// Token: 0x04039351 RID: 234321
+			// Token: 0x04033D16 RID: 212246
 			public const int ChoiceListItem = 3;
 		}
 	}

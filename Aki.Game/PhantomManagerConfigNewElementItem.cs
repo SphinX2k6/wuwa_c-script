@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200242C RID: 9260
+// Token: 0x02001911 RID: 6417
 public class PhantomManagerConfigNewElementItem : UiPanelBase
 {
-	// Token: 0x06012928 RID: 76072 RVA: 0x00493F58 File Offset: 0x00492158
+	// Token: 0x0600FDDE RID: 64990 RVA: 0x004A1524 File Offset: 0x0049F724
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -22,19 +22,19 @@ public class PhantomManagerConfigNewElementItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06012929 RID: 76073 RVA: 0x00493FC4 File Offset: 0x004921C4
+	// Token: 0x0600FDDF RID: 64991 RVA: 0x004A1590 File Offset: 0x0049F790
 	[NullableContext(1)]
 	public void Refresh(string path)
 	{
 		base.SetTextureByPath(path, base.GetTexture(1), null, null);
 	}
 
-	// Token: 0x020089AE RID: 35246
+	// Token: 0x02007B35 RID: 31541
 	private enum EElement
 	{
-		// Token: 0x0402CBC7 RID: 183239
+		// Token: 0x04027EDD RID: 163549
 		Sprite,
-		// Token: 0x0402CBC8 RID: 183240
+		// Token: 0x04027EDE RID: 163550
 		Texture
 	}
 }

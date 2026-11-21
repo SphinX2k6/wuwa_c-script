@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005652 RID: 22098
+	// Token: 0x02005BF0 RID: 23536
 	public static class INpcSpecialMarkBase_UnionVerify
 	{
-		// Token: 0x06024BC4 RID: 150468 RVA: 0x00511A14 File Offset: 0x0050FC14
+		// Token: 0x06026DE5 RID: 159205 RVA: 0x0055236C File Offset: 0x0055056C
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;
@@ -20,6 +20,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 				break;
 			case 3:
 				result = INpcSpecialMarkIgnoreCameraHideNpcVerify.Verify(verifier, tablePos);
+				break;
+			case 4:
+				result = INpcSpecialMarkTriggerBlueprintFootprintEventVerify.Verify(verifier, tablePos);
 				break;
 			default:
 				result = true;

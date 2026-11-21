@@ -3,24 +3,24 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02002840 RID: 10304
+// Token: 0x02001DBB RID: 7611
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleFavorVoiceClassifyData : RoleFavorClassifyDataBase
 {
-	// Token: 0x06015405 RID: 87045 RVA: 0x0055EF54 File Offset: 0x0055D154
+	// Token: 0x06012E03 RID: 77315 RVA: 0x00589CB0 File Offset: 0x00587EB0
 	public RoleFavorVoiceClassifyData(string titleTableId, int roleId, EFavorVoiceType typeParam) : base(titleTableId, roleId)
 	{
 		this.TypeParam = typeParam;
 	}
 
-	// Token: 0x06015406 RID: 87046 RVA: 0x0055EF6C File Offset: 0x0055D16C
+	// Token: 0x06012E04 RID: 77316 RVA: 0x00589CC8 File Offset: 0x00587EC8
 	protected override EFavorTabType GetFavorTabType()
 	{
 		return EFavorTabType.Voice;
 	}
 
-	// Token: 0x06015407 RID: 87047 RVA: 0x0055EF70 File Offset: 0x0055D170
+	// Token: 0x06012E05 RID: 77317 RVA: 0x00589CCC File Offset: 0x00587ECC
 	protected override void InitContentDataList()
 	{
 		this.ContentDataList.Clear();
@@ -37,12 +37,12 @@ public class RoleFavorVoiceClassifyData : RoleFavorClassifyDataBase
 		}
 	}
 
-	// Token: 0x06015408 RID: 87048 RVA: 0x0055EFD0 File Offset: 0x0055D1D0
+	// Token: 0x06012E06 RID: 77318 RVA: 0x00589D2C File Offset: 0x00587F2C
 	private RoleFavorVoiceContentData CreateVoiceContentData(FavorWord config)
 	{
 		return new RoleFavorVoiceContentData(this.RoleId, this.TypeParam, config);
 	}
 
-	// Token: 0x04009EC1 RID: 40641
+	// Token: 0x0400A2AA RID: 41642
 	public EFavorVoiceType TypeParam = EFavorVoiceType.FavorNatureVoice;
 }

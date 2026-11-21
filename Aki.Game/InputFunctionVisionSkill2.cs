@@ -6,12 +6,12 @@ using AkiClient.Game.Aki.Character.Input.Structures;
 using AkiClient.Game.Aki.Character.Vision;
 using CSharpScript.Game;
 
-// Token: 0x020030BE RID: 12478
+// Token: 0x02002616 RID: 9750
 [NullableContext(2)]
 [Nullable(0)]
 public static class InputFunctionVisionSkill2
 {
-	// Token: 0x0601AB87 RID: 109447 RVA: 0x007334D8 File Offset: 0x007316D8
+	// Token: 0x06018596 RID: 99734 RVA: 0x00758E44 File Offset: 0x00757044
 	private static SInputCommand VisionSkill2Function(float time)
 	{
 		TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -121,13 +121,13 @@ public static class InputFunctionVisionSkill2
 		}
 	}
 
-	// Token: 0x0601AB88 RID: 109448 RVA: 0x0073379B File Offset: 0x0073199B
+	// Token: 0x06018597 RID: 99735 RVA: 0x00759107 File Offset: 0x00757307
 	public static SInputCommand VisionSkill2OnPress(float time)
 	{
 		return InputFunctionVisionSkill2.VisionSkill2Function(time);
 	}
 
-	// Token: 0x0601AB89 RID: 109449 RVA: 0x007337A3 File Offset: 0x007319A3
+	// Token: 0x06018598 RID: 99736 RVA: 0x0075910F File Offset: 0x0075730F
 	public static SInputCommand VisionSkill2OnRelease(float time)
 	{
 		return null;

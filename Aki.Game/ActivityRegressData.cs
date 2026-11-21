@@ -7,15 +7,17 @@ using CSharpScript.Game.Common;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Module.SkipInterface;
+using CSharpScript.Game.ServerStorage;
+using CSharpScript.Game.ServerStorage.Container;
 using Google.Protobuf.Collections;
 
-// Token: 0x0200144F RID: 5199
+// Token: 0x02000903 RID: 2307
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityRegressData : ActivityBaseData
 {
-	// Token: 0x17000CD5 RID: 3285
-	// (get) Token: 0x0600931E RID: 37662 RVA: 0x001F9E1E File Offset: 0x001F801E
+	// Token: 0x17000CF5 RID: 3317
+	// (get) Token: 0x060066B3 RID: 26291 RVA: 0x00202966 File Offset: 0x00200B66
 	public int PrevBpExp
 	{
 		get
@@ -24,7 +26,7 @@ public class ActivityRegressData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x0600931F RID: 37663 RVA: 0x001F9E28 File Offset: 0x001F8028
+	// Token: 0x060066B4 RID: 26292 RVA: 0x00202970 File Offset: 0x00200B70
 	protected override void PhraseEx(ActivityData data)
 	{
 		this.RegressRawData = data.RegressData;
@@ -88,7 +90,7 @@ public class ActivityRegressData : ActivityBaseData
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, ActivityRegressModel.Instance.ActivityId);
 	}
 
-	// Token: 0x06009320 RID: 37664 RVA: 0x001FA068 File Offset: 0x001F8268
+	// Token: 0x060066B5 RID: 26293 RVA: 0x00202BB0 File Offset: 0x00200DB0
 	private void ParseTrialRoles(RepeatedField<NewTrialRoleInfo> roleList)
 	{
 		List<ITrialRoleCreateData> list = new List<ITrialRoleCreateData>();
@@ -128,7 +130,7 @@ public class ActivityRegressData : ActivityBaseData
 		TrialRoleModel.Instance.AddTrialRoles(list);
 	}
 
-	// Token: 0x06009321 RID: 37665 RVA: 0x001FA1B8 File Offset: 0x001F83B8
+	// Token: 0x060066B6 RID: 26294 RVA: 0x00202D00 File Offset: 0x00200F00
 	public EActivityRecallState GetActivityState()
 	{
 		if (!base.IsUnLock())
@@ -146,9 +148,9 @@ public class ActivityRegressData : ActivityBaseData
 		return EActivityRecallState.UnOpen;
 	}
 
-	// Token: 0x17000CD6 RID: 3286
-	// (get) Token: 0x06009322 RID: 37666 RVA: 0x001FA1E6 File Offset: 0x001F83E6
-	// (set) Token: 0x06009323 RID: 37667 RVA: 0x001FA1FD File Offset: 0x001F83FD
+	// Token: 0x17000CF6 RID: 3318
+	// (get) Token: 0x060066B7 RID: 26295 RVA: 0x00202D2E File Offset: 0x00200F2E
+	// (set) Token: 0x060066B8 RID: 26296 RVA: 0x00202D45 File Offset: 0x00200F45
 	public ERegressGrade Grade
 	{
 		get
@@ -168,26 +170,26 @@ public class ActivityRegressData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06009324 RID: 37668 RVA: 0x001FA213 File Offset: 0x001F8413
+	// Token: 0x060066B9 RID: 26297 RVA: 0x00202D5B File Offset: 0x00200F5B
 	public override bool CheckIfInOpenTime()
 	{
 		return base.CheckIfInTimeInterval(base.BeginOpenTime, base.EndOpenTime);
 	}
 
-	// Token: 0x06009325 RID: 37669 RVA: 0x001FA228 File Offset: 0x001F8428
+	// Token: 0x060066BA RID: 26298 RVA: 0x00202D70 File Offset: 0x00200F70
 	public double GetActivityOpenTimeLeft()
 	{
 		long endOpenTime = base.EndOpenTime;
 		return Math.Max(0.0, (double)endOpenTime - TimeUtil.Instance.GetServerTime());
 	}
 
-	// Token: 0x06009326 RID: 37670 RVA: 0x001FA257 File Offset: 0x001F8457
+	// Token: 0x060066BB RID: 26299 RVA: 0x00202D9F File Offset: 0x00200F9F
 	public bool IsActivityOpen()
 	{
 		return this.GetActivityState() == EActivityRecallState.Opening;
 	}
 
-	// Token: 0x06009327 RID: 37671 RVA: 0x001FA264 File Offset: 0x001F8464
+	// Token: 0x060066BC RID: 26300 RVA: 0x00202DAC File Offset: 0x00200FAC
 	public ERegressRewardState GetSignRewardState(int day)
 	{
 		ActivityTask signRewardRawData = this.GetSignRewardRawData(day);
@@ -208,7 +210,7 @@ public class ActivityRegressData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06009328 RID: 37672 RVA: 0x001FA2A0 File Offset: 0x001F84A0
+	// Token: 0x060066BD RID: 26301 RVA: 0x00202DE8 File Offset: 0x00200FE8
 	public bool HasSignRewardCanClaimed()
 	{
 		if (this.RegressRawData == null)
@@ -228,7 +230,7 @@ public class ActivityRegressData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x06009329 RID: 37673 RVA: 0x001FA304 File Offset: 0x001F8504
+	// Token: 0x060066BE RID: 26302 RVA: 0x00202E4C File Offset: 0x0020104C
 	[NullableContext(2)]
 	private ActivityTask GetSignRewardRawData(int day)
 	{
@@ -244,7 +246,7 @@ public class ActivityRegressData : ActivityBaseData
 		return signRewards[day - 1];
 	}
 
-	// Token: 0x0600932A RID: 37674 RVA: 0x001FA344 File Offset: 0x001F8544
+	// Token: 0x060066BF RID: 26303 RVA: 0x00202E8C File Offset: 0x0020108C
 	public bool CheckHaveTaskRewardCanGet()
 	{
 		if (this.GetRegressTaskProgressFloat01() >= 1.0)
@@ -268,7 +270,7 @@ public class ActivityRegressData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x0600932B RID: 37675 RVA: 0x001FA3BC File Offset: 0x001F85BC
+	// Token: 0x060066C0 RID: 26304 RVA: 0x00202F04 File Offset: 0x00201104
 	public int GetSignRewardEntityId(int day)
 	{
 		ActivityTask signRewardRawData = this.GetSignRewardRawData(day);
@@ -279,7 +281,7 @@ public class ActivityRegressData : ActivityBaseData
 		return signRewardRawData.Id;
 	}
 
-	// Token: 0x0600932C RID: 37676 RVA: 0x001FA3DC File Offset: 0x001F85DC
+	// Token: 0x060066C1 RID: 26305 RVA: 0x00202F24 File Offset: 0x00201124
 	[NullableContext(2)]
 	private ActivityTask GetRawTaskData(int taskId)
 	{
@@ -297,13 +299,13 @@ public class ActivityRegressData : ActivityBaseData
 		return result;
 	}
 
-	// Token: 0x0600932D RID: 37677 RVA: 0x001FA42B File Offset: 0x001F862B
+	// Token: 0x060066C2 RID: 26306 RVA: 0x00202F73 File Offset: 0x00201173
 	public bool IsRegressTaskScoreOverExp()
 	{
 		return this.GetRegressTaskProgressFloat01() >= 1.0;
 	}
 
-	// Token: 0x0600932E RID: 37678 RVA: 0x001FA444 File Offset: 0x001F8644
+	// Token: 0x060066C3 RID: 26307 RVA: 0x00202F8C File Offset: 0x0020118C
 	[NullableContext(0)]
 	public ValueTuple<int, int> GetTaskProgressTuple(int taskId)
 	{
@@ -317,7 +319,7 @@ public class ActivityRegressData : ActivityBaseData
 		return new ValueTuple<int, int>(item, target);
 	}
 
-	// Token: 0x0600932F RID: 37679 RVA: 0x001FA47C File Offset: 0x001F867C
+	// Token: 0x060066C4 RID: 26308 RVA: 0x00202FC4 File Offset: 0x002011C4
 	public ERegressRewardState GetTaskRewardState(int taskId)
 	{
 		ActivityTask rawTaskData = this.GetRawTaskData(taskId);
@@ -338,7 +340,7 @@ public class ActivityRegressData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06009330 RID: 37680 RVA: 0x001FA4B8 File Offset: 0x001F86B8
+	// Token: 0x060066C5 RID: 26309 RVA: 0x00203000 File Offset: 0x00201200
 	public string GetNextRefreshTime()
 	{
 		long activityRecallDailyTaskRefreshTime = this.ActivityRecallDailyTaskRefreshTime;
@@ -353,13 +355,13 @@ public class ActivityRegressData : ActivityBaseData
 		return TimeUtil.Instance.GetCountDownDataFormat2(num, new CommonDefine.ETimeType?(value), new CommonDefine.ETimeType?(value2)).CountDownText ?? "";
 	}
 
-	// Token: 0x06009331 RID: 37681 RVA: 0x001FA540 File Offset: 0x001F8740
+	// Token: 0x060066C6 RID: 26310 RVA: 0x00203088 File Offset: 0x00201288
 	public override bool GetExDataRedPointShowState()
 	{
 		return this.IsActivityOpen() && (this.HasSignRewardCanClaimed() || this.CheckRegressScoreRewardReached() || this.CheckShowQuestionnaireRedDot() || this.CheckShopRedDot() || this.CheckTrialRoleRedDot() || this.CheckDisposableRewardRedDot() || this.HasReachableConstantTask() || this.CheckRegressRewardBtnReached());
 	}
 
-	// Token: 0x06009332 RID: 37682 RVA: 0x001FA597 File Offset: 0x001F8797
+	// Token: 0x060066C7 RID: 26311 RVA: 0x002030DF File Offset: 0x002012DF
 	public int GetBossDoubleDropCount()
 	{
 		RegressData regressRawData = this.RegressRawData;
@@ -370,7 +372,7 @@ public class ActivityRegressData : ActivityBaseData
 		return regressRawData.BossDoubleCount;
 	}
 
-	// Token: 0x06009333 RID: 37683 RVA: 0x001FA5AA File Offset: 0x001F87AA
+	// Token: 0x060066C8 RID: 26312 RVA: 0x002030F2 File Offset: 0x002012F2
 	public int GetWeekDoubleDropCount()
 	{
 		RegressData regressRawData = this.RegressRawData;
@@ -381,7 +383,7 @@ public class ActivityRegressData : ActivityBaseData
 		return regressRawData.WeekDoubleCount;
 	}
 
-	// Token: 0x06009334 RID: 37684 RVA: 0x001FA5C0 File Offset: 0x001F87C0
+	// Token: 0x060066C9 RID: 26313 RVA: 0x00203108 File Offset: 0x00201308
 	public ERegressRewardState GetQuestionnaireRewardState(int id)
 	{
 		if (this.RegressRawData == null)
@@ -415,7 +417,7 @@ public class ActivityRegressData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06009335 RID: 37685 RVA: 0x001FA64C File Offset: 0x001F884C
+	// Token: 0x060066CA RID: 26314 RVA: 0x00203194 File Offset: 0x00201394
 	public bool CheckShowQuestionnaireRedDot()
 	{
 		if (!this.IsActivityOpen())
@@ -433,13 +435,18 @@ public class ActivityRegressData : ActivityBaseData
 		return this.CheckQuestionnaireFirstRedDot() || this.CheckSecondQuestionnaireFirstRedDot();
 	}
 
-	// Token: 0x06009336 RID: 37686 RVA: 0x001FA6F0 File Offset: 0x001F88F0
+	// Token: 0x060066CB RID: 26315 RVA: 0x00203238 File Offset: 0x00201438
 	public bool CheckQuestionnaireFirstRedDot()
 	{
-		return this.IsActivityOpen() && !LocalStorage.GetPlayer<bool>(ELocalStoragePlayerKey.ActivityRegressQuestionnaireRedDotCheckedInPeriod, false);
+		if (!this.IsActivityOpen())
+		{
+			return false;
+		}
+		ServerStorageUtil.OverrideLocalBooleanToServerBoolean(ELocalStoragePlayerKey.ActivityRegressQuestionnaireRedDotCheckedInPeriod, EClientStorageSystemIdType.ActivityRegressQuestionnaireRedDotCheckedInPeriod, true);
+		return !(ServerStorageModel.Instance.Get(EClientStorageSystemIdType.ActivityRegressQuestionnaireRedDotCheckedInPeriod) as ServerStorageBoolean).Get().GetValueOrDefault();
 	}
 
-	// Token: 0x06009337 RID: 37687 RVA: 0x001FA708 File Offset: 0x001F8908
+	// Token: 0x060066CC RID: 26316 RVA: 0x0020327C File Offset: 0x0020147C
 	public bool CheckSecondQuestionnaireFirstRedDot()
 	{
 		if (!this.IsActivityOpen())
@@ -447,56 +454,63 @@ public class ActivityRegressData : ActivityBaseData
 			return false;
 		}
 		bool flag = this.IsQuestionnaireUnlock(ERegressQuestionnaireType.Type2);
-		return !LocalStorage.GetPlayer<bool>(ELocalStoragePlayerKey.ActivityRegressSecondQuestionnaireRedDotCheckedInPeriod, false) && flag;
+		ServerStorageUtil.OverrideLocalBooleanToServerBoolean(ELocalStoragePlayerKey.ActivityRegressSecondQuestionnaireRedDotCheckedInPeriod, EClientStorageSystemIdType.ActivityRegressSecondQuestionnaireRedDotCheckedInPeriod, true);
+		return !(ServerStorageModel.Instance.Get(EClientStorageSystemIdType.ActivityRegressSecondQuestionnaireRedDotCheckedInPeriod) as ServerStorageBoolean).Get().GetValueOrDefault() && flag;
 	}
 
-	// Token: 0x06009338 RID: 37688 RVA: 0x001FA734 File Offset: 0x001F8934
+	// Token: 0x060066CD RID: 26317 RVA: 0x002032C9 File Offset: 0x002014C9
 	public bool CheckDisposableRewardRedDot()
 	{
 		return !this.DisposableReward;
 	}
 
-	// Token: 0x06009339 RID: 37689 RVA: 0x001FA73F File Offset: 0x001F893F
+	// Token: 0x060066CE RID: 26318 RVA: 0x002032D4 File Offset: 0x002014D4
 	public void ResetQuestionnaireRedDot()
 	{
-		LocalStorage.SetPlayer<bool>(ELocalStoragePlayerKey.ActivityRegressQuestionnaireRedDotCheckedInPeriod, false);
-		LocalStorage.SetPlayer<bool>(ELocalStoragePlayerKey.ActivityRegressSecondQuestionnaireRedDotCheckedInPeriod, false);
+		(ServerStorageModel.Instance.Get(EClientStorageSystemIdType.ActivityRegressQuestionnaireRedDotCheckedInPeriod) as ServerStorageBoolean).Set(new bool?(false));
+		(ServerStorageModel.Instance.Get(EClientStorageSystemIdType.ActivityRegressSecondQuestionnaireRedDotCheckedInPeriod) as ServerStorageBoolean).Set(new bool?(false));
 	}
 
-	// Token: 0x0600933A RID: 37690 RVA: 0x001FA754 File Offset: 0x001F8954
+	// Token: 0x060066CF RID: 26319 RVA: 0x00203310 File Offset: 0x00201510
 	public void SetQuestionnaireRedDotChecked()
 	{
 		if (this.CheckQuestionnaireFirstRedDot())
 		{
-			LocalStorage.SetPlayer<bool>(ELocalStoragePlayerKey.ActivityRegressQuestionnaireRedDotCheckedInPeriod, true);
+			(ServerStorageModel.Instance.Get(EClientStorageSystemIdType.ActivityRegressQuestionnaireRedDotCheckedInPeriod) as ServerStorageBoolean).Set(new bool?(true));
 		}
 		if (this.CheckSecondQuestionnaireFirstRedDot())
 		{
-			LocalStorage.SetPlayer<bool>(ELocalStoragePlayerKey.ActivityRegressSecondQuestionnaireRedDotCheckedInPeriod, true);
+			(ServerStorageModel.Instance.Get(EClientStorageSystemIdType.ActivityRegressSecondQuestionnaireRedDotCheckedInPeriod) as ServerStorageBoolean).Set(new bool?(true));
 		}
 		EventSystem.Instance.Emit(EEventName.RecallActivityInfoUpdate);
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 	}
 
-	// Token: 0x0600933B RID: 37691 RVA: 0x001FA7A9 File Offset: 0x001F89A9
+	// Token: 0x060066D0 RID: 26320 RVA: 0x0020338C File Offset: 0x0020158C
 	public bool CheckShopRedDot()
 	{
-		return this.IsActivityOpen() && !LocalStorage.GetPlayer<bool>(ELocalStoragePlayerKey.ActivityRegressShopRedDotCheckedInPeriod, false);
+		if (!this.IsActivityOpen())
+		{
+			return false;
+		}
+		ServerStorageUtil.OverrideLocalBooleanToServerBoolean(ELocalStoragePlayerKey.ActivityRegressShopRedDotCheckedInPeriod, EClientStorageSystemIdType.ActivityRegressShopRedDotCheckedInPeriod, true);
+		return !(ServerStorageModel.Instance.Get(EClientStorageSystemIdType.ActivityRegressShopRedDotCheckedInPeriod) as ServerStorageBoolean).Get().GetValueOrDefault();
 	}
 
-	// Token: 0x0600933C RID: 37692 RVA: 0x001FA7C0 File Offset: 0x001F89C0
+	// Token: 0x060066D1 RID: 26321 RVA: 0x002033CF File Offset: 0x002015CF
 	public bool CheckTrialRoleRedDot()
 	{
 		return this.IsActivityOpen() && (this.CheckNewUnLockRole() || this.IsTrialRoleUpgradeRedPoint());
 	}
 
-	// Token: 0x0600933D RID: 37693 RVA: 0x001FA7DC File Offset: 0x001F89DC
+	// Token: 0x060066D2 RID: 26322 RVA: 0x002033EC File Offset: 0x002015EC
 	public bool CheckNewUnLockRole()
 	{
-		return !LocalStorage.GetPlayer<bool>(ELocalStoragePlayerKey.ActivityRegressTrialRoleRedDotCheckedInPeriod, false);
+		ServerStorageUtil.OverrideLocalBooleanToServerBoolean(ELocalStoragePlayerKey.ActivityRegressTrialRoleRedDotCheckedInPeriod, EClientStorageSystemIdType.ActivityRegressTrialRoleRedDotCheckedInPeriod, true);
+		return !(ServerStorageModel.Instance.Get(EClientStorageSystemIdType.ActivityRegressTrialRoleRedDotCheckedInPeriod) as ServerStorageBoolean).Get().GetValueOrDefault();
 	}
 
-	// Token: 0x0600933E RID: 37694 RVA: 0x001FA7EC File Offset: 0x001F89EC
+	// Token: 0x060066D3 RID: 26323 RVA: 0x00203428 File Offset: 0x00201628
 	public bool IsTrialRoleUpgradeRedPoint()
 	{
 		using (List<TrialRoleGroupData>.Enumerator enumerator = this.GetTrialRoleList().GetEnumerator())
@@ -512,74 +526,89 @@ public class ActivityRegressData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x0600933F RID: 37695 RVA: 0x001FA848 File Offset: 0x001F8A48
+	// Token: 0x060066D4 RID: 26324 RVA: 0x00203484 File Offset: 0x00201684
 	public List<TrialRoleGroupData> GetTrialRoleList()
 	{
 		return TrialRoleModel.Instance.GetDataListByType(ETrialRoleType.ReturnSupportTrial);
 	}
 
-	// Token: 0x06009340 RID: 37696 RVA: 0x001FA855 File Offset: 0x001F8A55
+	// Token: 0x060066D5 RID: 26325 RVA: 0x00203494 File Offset: 0x00201694
 	public bool CheckDoubleDropRedDot()
 	{
-		return this.IsActivityOpen() && !LocalStorage.GetPlayer<bool>(ELocalStoragePlayerKey.ActivityRegressDoubleDropRedDotCheckedInPeriod, false);
+		if (!this.IsActivityOpen())
+		{
+			return false;
+		}
+		ServerStorageUtil.OverrideLocalBooleanToServerBoolean(ELocalStoragePlayerKey.ActivityRegressDoubleDropRedDotCheckedInPeriod, EClientStorageSystemIdType.ActivityRegressDoubleDropRedDotCheckedInPeriod, true);
+		return !(ServerStorageModel.Instance.Get(EClientStorageSystemIdType.ActivityRegressDoubleDropRedDotCheckedInPeriod) as ServerStorageBoolean).Get().GetValueOrDefault();
 	}
 
-	// Token: 0x06009341 RID: 37697 RVA: 0x001FA86C File Offset: 0x001F8A6C
+	// Token: 0x060066D6 RID: 26326 RVA: 0x002034D8 File Offset: 0x002016D8
 	public bool CheckRecommendRedDot()
 	{
-		return this.IsActivityOpen() && !LocalStorage.GetPlayer<bool>(ELocalStoragePlayerKey.ActivityRegressRecommendRedDotCheckedInPeriod, false);
+		if (!this.IsActivityOpen())
+		{
+			return false;
+		}
+		ServerStorageUtil.OverrideLocalBooleanToServerBoolean(ELocalStoragePlayerKey.ActivityRegressRecommendRedDotCheckedInPeriod, EClientStorageSystemIdType.ActivityRegressRecommendRedDotCheckedInPeriod, true);
+		return !(ServerStorageModel.Instance.Get(EClientStorageSystemIdType.ActivityRegressRecommendRedDotCheckedInPeriod) as ServerStorageBoolean).Get().GetValueOrDefault();
 	}
 
-	// Token: 0x06009342 RID: 37698 RVA: 0x001FA883 File Offset: 0x001F8A83
+	// Token: 0x060066D7 RID: 26327 RVA: 0x0020351C File Offset: 0x0020171C
 	public bool CheckAdventureRedDot()
 	{
-		return this.IsActivityOpen() && !LocalStorage.GetPlayer<bool>(ELocalStoragePlayerKey.ActivityRegressAdventureRedDotCheckedInPeriod, false);
+		if (!this.IsActivityOpen())
+		{
+			return false;
+		}
+		ServerStorageUtil.OverrideLocalBooleanToServerBoolean(ELocalStoragePlayerKey.ActivityRegressAdventureRedDotCheckedInPeriod, EClientStorageSystemIdType.ActivityRegressAdventureRedDotCheckedInPeriod, true);
+		return !(ServerStorageModel.Instance.Get(EClientStorageSystemIdType.ActivityRegressAdventureRedDotCheckedInPeriod) as ServerStorageBoolean).Get().GetValueOrDefault();
 	}
 
-	// Token: 0x06009343 RID: 37699 RVA: 0x001FA89A File Offset: 0x001F8A9A
+	// Token: 0x060066D8 RID: 26328 RVA: 0x0020355F File Offset: 0x0020175F
 	public void ResetShopRemindRedDot()
 	{
-		LocalStorage.SetPlayer<bool>(ELocalStoragePlayerKey.ActivityRegressShopRedDotCheckedInPeriod, false);
+		(ServerStorageModel.Instance.Get(EClientStorageSystemIdType.ActivityRegressShopRedDotCheckedInPeriod) as ServerStorageBoolean).Set(new bool?(false));
 	}
 
-	// Token: 0x06009344 RID: 37700 RVA: 0x001FA8A5 File Offset: 0x001F8AA5
+	// Token: 0x060066D9 RID: 26329 RVA: 0x00203580 File Offset: 0x00201780
 	public void SetShopRedDotChecked()
 	{
-		LocalStorage.SetPlayer<bool>(ELocalStoragePlayerKey.ActivityRegressShopRedDotCheckedInPeriod, true);
+		(ServerStorageModel.Instance.Get(EClientStorageSystemIdType.ActivityRegressShopRedDotCheckedInPeriod) as ServerStorageBoolean).Set(new bool?(true));
 		EventSystem.Instance.Emit(EEventName.RecallActivityInfoUpdate);
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 	}
 
-	// Token: 0x06009345 RID: 37701 RVA: 0x001FA8D6 File Offset: 0x001F8AD6
+	// Token: 0x060066DA RID: 26330 RVA: 0x002035D0 File Offset: 0x002017D0
 	public void SetTrialRoleRedDotChecked(bool value)
 	{
-		LocalStorage.SetPlayer<bool>(ELocalStoragePlayerKey.ActivityRegressTrialRoleRedDotCheckedInPeriod, value);
+		(ServerStorageModel.Instance.Get(EClientStorageSystemIdType.ActivityRegressTrialRoleRedDotCheckedInPeriod) as ServerStorageBoolean).Set(new bool?(value));
 		EventSystem.Instance.Emit(EEventName.RecallActivityInfoUpdate);
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 	}
 
-	// Token: 0x06009346 RID: 37702 RVA: 0x001FA907 File Offset: 0x001F8B07
+	// Token: 0x060066DB RID: 26331 RVA: 0x0020361F File Offset: 0x0020181F
 	public void SetDoubleDropRedDotChecked()
 	{
-		LocalStorage.SetPlayer<bool>(ELocalStoragePlayerKey.ActivityRegressDoubleDropRedDotCheckedInPeriod, true);
+		(ServerStorageModel.Instance.Get(EClientStorageSystemIdType.ActivityRegressDoubleDropRedDotCheckedInPeriod) as ServerStorageBoolean).Set(new bool?(true));
 		EventSystem.Instance.Emit(EEventName.RecallActivityInfoUpdate);
 	}
 
-	// Token: 0x06009347 RID: 37703 RVA: 0x001FA922 File Offset: 0x001F8B22
+	// Token: 0x060066DC RID: 26332 RVA: 0x0020364D File Offset: 0x0020184D
 	public void SetRecommendRedDotChecked()
 	{
-		LocalStorage.SetPlayer<bool>(ELocalStoragePlayerKey.ActivityRegressRecommendRedDotCheckedInPeriod, true);
+		(ServerStorageModel.Instance.Get(EClientStorageSystemIdType.ActivityRegressRecommendRedDotCheckedInPeriod) as ServerStorageBoolean).Set(new bool?(true));
 		EventSystem.Instance.Emit(EEventName.RecallActivityInfoUpdate);
 	}
 
-	// Token: 0x06009348 RID: 37704 RVA: 0x001FA93D File Offset: 0x001F8B3D
+	// Token: 0x060066DD RID: 26333 RVA: 0x0020367B File Offset: 0x0020187B
 	public void SetAdventureRedDotChecked()
 	{
-		LocalStorage.SetPlayer<bool>(ELocalStoragePlayerKey.ActivityRegressAdventureRedDotCheckedInPeriod, true);
+		(ServerStorageModel.Instance.Get(EClientStorageSystemIdType.ActivityRegressAdventureRedDotCheckedInPeriod) as ServerStorageBoolean).Set(new bool?(true));
 		EventSystem.Instance.Emit(EEventName.RecallActivityInfoUpdate);
 	}
 
-	// Token: 0x06009349 RID: 37705 RVA: 0x001FA958 File Offset: 0x001F8B58
+	// Token: 0x060066DE RID: 26334 RVA: 0x002036AC File Offset: 0x002018AC
 	[NullableContext(0)]
 	public ValueTuple<int, int> GetShopIdAndTabIndex()
 	{
@@ -591,7 +620,7 @@ public class ActivityRegressData : ActivityBaseData
 		return new ValueTuple<int, int>(item, item2);
 	}
 
-	// Token: 0x0600934A RID: 37706 RVA: 0x001FA9D8 File Offset: 0x001F8BD8
+	// Token: 0x060066DF RID: 26335 RVA: 0x0020372C File Offset: 0x0020192C
 	public bool IsQuestionnaireUnlock(ERegressQuestionnaireType type)
 	{
 		if (!this.IsActivityOpen())
@@ -606,7 +635,7 @@ public class ActivityRegressData : ActivityBaseData
 		return intConfig != null && this.GetSignRewardState(intConfig.Value) == ERegressRewardState.Claim;
 	}
 
-	// Token: 0x0600934B RID: 37707 RVA: 0x001FAA1C File Offset: 0x001F8C1C
+	// Token: 0x060066E0 RID: 26336 RVA: 0x00203770 File Offset: 0x00201970
 	public void SetQuestionnaireReached(int id)
 	{
 		if (this.RegressRawData == null)
@@ -629,7 +658,7 @@ public class ActivityRegressData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x0600934C RID: 37708 RVA: 0x001FAA94 File Offset: 0x001F8C94
+	// Token: 0x060066E1 RID: 26337 RVA: 0x002037E8 File Offset: 0x002019E8
 	public void RefreshRegressTaskMapping()
 	{
 		this.RegressTaskMapping.Clear();
@@ -654,7 +683,7 @@ public class ActivityRegressData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x0600934D RID: 37709 RVA: 0x001FAB5C File Offset: 0x001F8D5C
+	// Token: 0x060066E2 RID: 26338 RVA: 0x002038B0 File Offset: 0x00201AB0
 	[NullableContext(2)]
 	public List<RegressQuest> GetRegressTaskListByType(ERegressTaskType taskType)
 	{
@@ -666,7 +695,7 @@ public class ActivityRegressData : ActivityBaseData
 		return null;
 	}
 
-	// Token: 0x0600934E RID: 37710 RVA: 0x001FAB7C File Offset: 0x001F8D7C
+	// Token: 0x060066E3 RID: 26339 RVA: 0x002038D0 File Offset: 0x00201AD0
 	public List<RegressQuest> GetAllRegressTaskList()
 	{
 		List<RegressQuest> list = new List<RegressQuest>();
@@ -677,7 +706,7 @@ public class ActivityRegressData : ActivityBaseData
 		return list;
 	}
 
-	// Token: 0x0600934F RID: 37711 RVA: 0x001FABDC File Offset: 0x001F8DDC
+	// Token: 0x060066E4 RID: 26340 RVA: 0x00203930 File Offset: 0x00201B30
 	public bool HasReachableTask(ERegressTaskType regressTaskType)
 	{
 		List<RegressQuest> regressTaskListByType = this.GetRegressTaskListByType(regressTaskType);
@@ -695,19 +724,19 @@ public class ActivityRegressData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x06009350 RID: 37712 RVA: 0x001FAC48 File Offset: 0x001F8E48
+	// Token: 0x060066E5 RID: 26341 RVA: 0x0020399C File Offset: 0x00201B9C
 	public bool HasReachableConstantTask()
 	{
 		return this.GetRegressTaskProgressFloat01() < 1.0 && (this.HasReachableTask(ERegressTaskType.Constant) || this.HasReachableTask(ERegressTaskType.Daily) || this.HasReachableTask(ERegressTaskType.Once));
 	}
 
-	// Token: 0x06009351 RID: 37713 RVA: 0x001FAC78 File Offset: 0x001F8E78
+	// Token: 0x060066E6 RID: 26342 RVA: 0x002039CC File Offset: 0x00201BCC
 	public bool HasReachableCultivateTask()
 	{
 		return this.HasReachableTask(ERegressTaskType.Cultivate);
 	}
 
-	// Token: 0x06009352 RID: 37714 RVA: 0x001FAC84 File Offset: 0x001F8E84
+	// Token: 0x060066E7 RID: 26343 RVA: 0x002039D8 File Offset: 0x00201BD8
 	public double GetRegressTaskProgressFloat01()
 	{
 		ValueTuple<int, int> regressTaskProgressTuple = this.GetRegressTaskProgressTuple();
@@ -720,13 +749,13 @@ public class ActivityRegressData : ActivityBaseData
 		return Math.Truncate(Math.Min(1.0, (double)item / (double)item2) * 100.0) / 100.0;
 	}
 
-	// Token: 0x06009353 RID: 37715 RVA: 0x001FACDD File Offset: 0x001F8EDD
+	// Token: 0x060066E8 RID: 26344 RVA: 0x00203A31 File Offset: 0x00201C31
 	public int GetRegressTaskScore()
 	{
 		return this.GetRegressTaskProgressTuple().Item1;
 	}
 
-	// Token: 0x06009354 RID: 37716 RVA: 0x001FACEC File Offset: 0x001F8EEC
+	// Token: 0x060066E9 RID: 26345 RVA: 0x00203A40 File Offset: 0x00201C40
 	private bool IsGetScoreReward(int id)
 	{
 		if (this.RegressRawData == null)
@@ -746,7 +775,7 @@ public class ActivityRegressData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x06009355 RID: 37717 RVA: 0x001FAD4C File Offset: 0x001F8F4C
+	// Token: 0x060066EA RID: 26346 RVA: 0x00203AA0 File Offset: 0x00201CA0
 	private bool IsGetPayScoreReward(int id)
 	{
 		if (this.RegressRawData == null)
@@ -766,7 +795,7 @@ public class ActivityRegressData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x06009356 RID: 37718 RVA: 0x001FADAC File Offset: 0x001F8FAC
+	// Token: 0x060066EB RID: 26347 RVA: 0x00203B00 File Offset: 0x00201D00
 	public ERegressRewardState GetRegressTaskScoreRewardState(RegressBonusReward config)
 	{
 		if (this.IsGetScoreReward(config.Id))
@@ -780,7 +809,7 @@ public class ActivityRegressData : ActivityBaseData
 		return ERegressRewardState.UnReach;
 	}
 
-	// Token: 0x06009357 RID: 37719 RVA: 0x001FADD1 File Offset: 0x001F8FD1
+	// Token: 0x060066EC RID: 26348 RVA: 0x00203B25 File Offset: 0x00201D25
 	public ERegressRewardState GetRegressTaskPayScoreRewardState(RegressBonusReward config)
 	{
 		if (this.IsGetPayScoreReward(config.Id))
@@ -798,7 +827,7 @@ public class ActivityRegressData : ActivityBaseData
 		return ERegressRewardState.UnReach;
 	}
 
-	// Token: 0x06009358 RID: 37720 RVA: 0x001FAE10 File Offset: 0x001F9010
+	// Token: 0x060066ED RID: 26349 RVA: 0x00203B64 File Offset: 0x00201D64
 	public bool CheckRegressScoreRewardReached()
 	{
 		foreach (RegressBonusReward config in (ActivityRegressConfig.Instance.GetRegressBonusRewardConfigList(this.Grade) ?? new List<RegressBonusReward>()))
@@ -813,7 +842,7 @@ public class ActivityRegressData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x06009359 RID: 37721 RVA: 0x001FAE88 File Offset: 0x001F9088
+	// Token: 0x060066EE RID: 26350 RVA: 0x00203BDC File Offset: 0x00201DDC
 	public void SetRegressScoreRewardReached(List<int> ids)
 	{
 		if (this.RegressRawData == null)
@@ -833,13 +862,13 @@ public class ActivityRegressData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x0600935A RID: 37722 RVA: 0x001FAF40 File Offset: 0x001F9140
+	// Token: 0x060066EF RID: 26351 RVA: 0x00203C94 File Offset: 0x00201E94
 	public bool CheckRegressRewardBtnReached()
 	{
 		return ActivityModel.Instance.GetActivityCacheData(base.Id, 0, 100, 0, 0) == 0;
 	}
 
-	// Token: 0x0600935B RID: 37723 RVA: 0x001FAF5A File Offset: 0x001F915A
+	// Token: 0x060066F0 RID: 26352 RVA: 0x00203CAE File Offset: 0x00201EAE
 	public void SetRegressRewardBtnReached()
 	{
 		ActivityModel.Instance.SaveActivityData(base.Id, 100, 0, 0, 1);
@@ -847,7 +876,7 @@ public class ActivityRegressData : ActivityBaseData
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 	}
 
-	// Token: 0x0600935C RID: 37724 RVA: 0x001FAF98 File Offset: 0x001F9198
+	// Token: 0x060066F1 RID: 26353 RVA: 0x00203CEC File Offset: 0x00201EEC
 	[NullableContext(0)]
 	public ValueTuple<int, int> GetRegressTaskProgressTuple()
 	{
@@ -861,7 +890,7 @@ public class ActivityRegressData : ActivityBaseData
 		return new ValueTuple<int, int>(commonItemCount, num);
 	}
 
-	// Token: 0x0600935D RID: 37725 RVA: 0x001FB018 File Offset: 0x001F9218
+	// Token: 0x060066F2 RID: 26354 RVA: 0x00203D6C File Offset: 0x00201F6C
 	private void RefreshScoreRewardNeedScoreList()
 	{
 		this.ActivityScoreRewardTotalNeedScoreMap.Clear();
@@ -871,7 +900,7 @@ public class ActivityRegressData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x0600935E RID: 37726 RVA: 0x001FB098 File Offset: 0x001F9298
+	// Token: 0x060066F3 RID: 26355 RVA: 0x00203DEC File Offset: 0x00201FEC
 	public int GetTaskSortPriority(int taskId)
 	{
 		ActivityTask rawTaskData = this.GetRawTaskData(taskId);
@@ -892,7 +921,7 @@ public class ActivityRegressData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x0600935F RID: 37727 RVA: 0x001FB0D4 File Offset: 0x001F92D4
+	// Token: 0x060066F4 RID: 26356 RVA: 0x00203E28 File Offset: 0x00202028
 	[NullableContext(0)]
 	public ValueTuple<int, int> GetRegressTaskRelativeScore(RegressBonusReward config)
 	{
@@ -925,7 +954,7 @@ public class ActivityRegressData : ActivityBaseData
 		return new ValueTuple<int, int>(item, num4);
 	}
 
-	// Token: 0x06009360 RID: 37728 RVA: 0x001FB145 File Offset: 0x001F9345
+	// Token: 0x060066F5 RID: 26357 RVA: 0x00203E99 File Offset: 0x00202099
 	public bool IsDoubleDropUnlock(EActivityRegressDoubleDropEntryType type)
 	{
 		if (type == EActivityRegressDoubleDropEntryType.WorldBoss)
@@ -941,27 +970,32 @@ public class ActivityRegressData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x06009361 RID: 37729 RVA: 0x001FB174 File Offset: 0x001F9374
+	// Token: 0x060066F6 RID: 26358 RVA: 0x00203EC8 File Offset: 0x002020C8
 	public void ResetDoubleDropFirstRedDot()
 	{
-		LocalStorage.SetPlayer<bool>(ELocalStoragePlayerKey.ActivityRegressDoubleDropFirstRedDotCheckedInPeriod, false);
+		(ServerStorageModel.Instance.Get(EClientStorageSystemIdType.ActivityRegressDoubleDropFirstRedDotCheckedInPeriod) as ServerStorageBoolean).Set(new bool?(false));
 	}
 
-	// Token: 0x06009362 RID: 37730 RVA: 0x001FB17F File Offset: 0x001F937F
+	// Token: 0x060066F7 RID: 26359 RVA: 0x00203EE8 File Offset: 0x002020E8
 	public void MarkDoubleDropFirstRedDotShown()
 	{
-		LocalStorage.SetPlayer<bool>(ELocalStoragePlayerKey.ActivityRegressDoubleDropFirstRedDotCheckedInPeriod, true);
+		(ServerStorageModel.Instance.Get(EClientStorageSystemIdType.ActivityRegressDoubleDropFirstRedDotCheckedInPeriod) as ServerStorageBoolean).Set(new bool?(true));
 		EventSystem.Instance.Emit(EEventName.RecallActivityInfoUpdate);
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 	}
 
-	// Token: 0x06009363 RID: 37731 RVA: 0x001FB1B0 File Offset: 0x001F93B0
+	// Token: 0x060066F8 RID: 26360 RVA: 0x00203F38 File Offset: 0x00202138
 	public bool CheckDoubleDropFirstRedDot()
 	{
-		return this.IsActivityOpen() && !LocalStorage.GetPlayer<bool>(ELocalStoragePlayerKey.ActivityRegressDoubleDropFirstRedDotCheckedInPeriod, false);
+		if (!this.IsActivityOpen())
+		{
+			return false;
+		}
+		ServerStorageUtil.OverrideLocalBooleanToServerBoolean(ELocalStoragePlayerKey.ActivityRegressDoubleDropFirstRedDotCheckedInPeriod, EClientStorageSystemIdType.ActivityRegressDoubleDropFirstRedDotCheckedInPeriod, true);
+		return !(ServerStorageModel.Instance.Get(EClientStorageSystemIdType.ActivityRegressDoubleDropFirstRedDotCheckedInPeriod) as ServerStorageBoolean).Get().GetValueOrDefault();
 	}
 
-	// Token: 0x06009364 RID: 37732 RVA: 0x001FB1C8 File Offset: 0x001F93C8
+	// Token: 0x060066F9 RID: 26361 RVA: 0x00203F7C File Offset: 0x0020217C
 	public int GetLevelByScore(int score)
 	{
 		IReadOnlyList<RegressBonusReward> sortedRegressBonusRewardConfigList = this.GetSortedRegressBonusRewardConfigList();
@@ -974,7 +1008,7 @@ public class ActivityRegressData : ActivityBaseData
 		return num;
 	}
 
-	// Token: 0x06009365 RID: 37733 RVA: 0x001FB204 File Offset: 0x001F9404
+	// Token: 0x060066FA RID: 26362 RVA: 0x00203FB8 File Offset: 0x002021B8
 	public IRegressLevelProgressData? GetLevelProgressDataByScore(int score)
 	{
 		IReadOnlyList<RegressBonusReward> sortedRegressBonusRewardConfigList = this.GetSortedRegressBonusRewardConfigList();
@@ -1008,7 +1042,7 @@ public class ActivityRegressData : ActivityBaseData
 		});
 	}
 
-	// Token: 0x06009366 RID: 37734 RVA: 0x001FB2FC File Offset: 0x001F94FC
+	// Token: 0x060066FB RID: 26363 RVA: 0x002040B0 File Offset: 0x002022B0
 	public IRegressLevelProgressData GetCurLevelProgressData()
 	{
 		int commonItemCount = InventoryModel.Instance.GetCommonItemCount(20, 0);
@@ -1026,20 +1060,20 @@ public class ActivityRegressData : ActivityBaseData
 		return levelProgressDataByScore.Value;
 	}
 
-	// Token: 0x06009367 RID: 37735 RVA: 0x001FB35F File Offset: 0x001F955F
+	// Token: 0x060066FC RID: 26364 RVA: 0x00204113 File Offset: 0x00202313
 	public bool IsPayRewardUnlock()
 	{
 		RegressData regressRawData = this.RegressRawData;
 		return regressRawData != null && regressRawData.PayRewardUnlock;
 	}
 
-	// Token: 0x06009368 RID: 37736 RVA: 0x001FB372 File Offset: 0x001F9572
+	// Token: 0x060066FD RID: 26365 RVA: 0x00204126 File Offset: 0x00202326
 	public int GetMaxLevel()
 	{
 		return this.GetSortedRegressBonusRewardConfigList().Count;
 	}
 
-	// Token: 0x06009369 RID: 37737 RVA: 0x001FB37F File Offset: 0x001F957F
+	// Token: 0x060066FE RID: 26366 RVA: 0x00204133 File Offset: 0x00202333
 	public void SetPayRewardUnlock(bool value)
 	{
 		if (this.RegressRawData != null)
@@ -1048,31 +1082,36 @@ public class ActivityRegressData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x0600936A RID: 37738 RVA: 0x001FB395 File Offset: 0x001F9595
+	// Token: 0x060066FF RID: 26367 RVA: 0x00204149 File Offset: 0x00202349
 	public void ResetBpPayButtonRedDot()
 	{
-		LocalStorage.SetPlayer<bool>(ELocalStoragePlayerKey.ActivityRegressBpPayButtonRedDotCheckedInPeriod, false);
+		(ServerStorageModel.Instance.Get(EClientStorageSystemIdType.ActivityRegressBpPayButtonRedDotCheckedInPeriod) as ServerStorageBoolean).Set(new bool?(false));
 	}
 
-	// Token: 0x0600936B RID: 37739 RVA: 0x001FB3A0 File Offset: 0x001F95A0
+	// Token: 0x06006700 RID: 26368 RVA: 0x00204168 File Offset: 0x00202368
 	public bool CheckBpPayButtonRedDot()
 	{
-		return this.IsActivityOpen() && !LocalStorage.GetPlayer<bool>(ELocalStoragePlayerKey.ActivityRegressBpPayButtonRedDotCheckedInPeriod, false);
+		if (!this.IsActivityOpen())
+		{
+			return false;
+		}
+		ServerStorageUtil.OverrideLocalBooleanToServerBoolean(ELocalStoragePlayerKey.ActivityRegressBpPayButtonRedDotCheckedInPeriod, EClientStorageSystemIdType.ActivityRegressBpPayButtonRedDotCheckedInPeriod, true);
+		return !(ServerStorageModel.Instance.Get(EClientStorageSystemIdType.ActivityRegressBpPayButtonRedDotCheckedInPeriod) as ServerStorageBoolean).Get().GetValueOrDefault();
 	}
 
-	// Token: 0x0600936C RID: 37740 RVA: 0x001FB3B7 File Offset: 0x001F95B7
+	// Token: 0x06006701 RID: 26369 RVA: 0x002041AB File Offset: 0x002023AB
 	public void SetBpPayButtonRedDotChecked()
 	{
-		LocalStorage.SetPlayer<bool>(ELocalStoragePlayerKey.ActivityRegressBpPayButtonRedDotCheckedInPeriod, true);
+		(ServerStorageModel.Instance.Get(EClientStorageSystemIdType.ActivityRegressBpPayButtonRedDotCheckedInPeriod) as ServerStorageBoolean).Set(new bool?(true));
 	}
 
-	// Token: 0x0600936D RID: 37741 RVA: 0x001FB3C2 File Offset: 0x001F95C2
+	// Token: 0x06006702 RID: 26370 RVA: 0x002041C9 File Offset: 0x002023C9
 	public void RefreshPrevBpExp()
 	{
 		this.PrevBpExpInternal = InventoryModel.Instance.GetCommonItemCount(20, 0);
 	}
 
-	// Token: 0x0600936E RID: 37742 RVA: 0x001FB3D8 File Offset: 0x001F95D8
+	// Token: 0x06006703 RID: 26371 RVA: 0x002041E0 File Offset: 0x002023E0
 	public IReadOnlyList<RegressBonusReward> GetSortedRegressBonusRewardConfigList()
 	{
 		if (this.SortedRegressBonusRewardConfigList == null || this.SortedRegressBonusRewardConfigList.Count == 0)
@@ -1084,42 +1123,42 @@ public class ActivityRegressData : ActivityBaseData
 		return this.SortedRegressBonusRewardConfigList;
 	}
 
-	// Token: 0x0400410A RID: 16650
+	// Token: 0x040041A2 RID: 16802
 	[Nullable(2)]
 	private RegressData RegressRawData;
 
-	// Token: 0x0400410B RID: 16651
+	// Token: 0x040041A3 RID: 16803
 	private const int ACTIVITY_REGRESS_REWARD_BTN_CLICK_KEY = 100;
 
-	// Token: 0x0400410C RID: 16652
+	// Token: 0x040041A4 RID: 16804
 	private readonly Dictionary<int, ActivityTask> ActivityInternalTaskMap = new Dictionary<int, ActivityTask>();
 
-	// Token: 0x0400410D RID: 16653
+	// Token: 0x040041A5 RID: 16805
 	private readonly Dictionary<int, int> ActivityScoreRewardTotalNeedScoreMap = new Dictionary<int, int>();
 
-	// Token: 0x0400410E RID: 16654
+	// Token: 0x040041A6 RID: 16806
 	private long ActivityRecallDailyTaskRefreshTime;
 
-	// Token: 0x0400410F RID: 16655
+	// Token: 0x040041A7 RID: 16807
 	public int CurrentUseTrialRole;
 
-	// Token: 0x04004110 RID: 16656
+	// Token: 0x040041A8 RID: 16808
 	public bool DisposableReward;
 
-	// Token: 0x04004111 RID: 16657
+	// Token: 0x040041A9 RID: 16809
 	private int PrevBpExpInternal;
 
-	// Token: 0x04004112 RID: 16658
+	// Token: 0x040041AA RID: 16810
 	[Nullable(2)]
 	private List<RegressBonusReward> SortedRegressBonusRewardConfigList;
 
-	// Token: 0x04004113 RID: 16659
+	// Token: 0x040041AB RID: 16811
 	private readonly List<ERegressQuestionnaireType> CheckQuestionnaireTypes = new List<ERegressQuestionnaireType>
 	{
 		ERegressQuestionnaireType.Type1,
 		ERegressQuestionnaireType.Type2
 	};
 
-	// Token: 0x04004114 RID: 16660
+	// Token: 0x040041AC RID: 16812
 	private readonly Dictionary<ERegressTaskType, List<RegressQuest>> RegressTaskMapping = new Dictionary<ERegressTaskType, List<RegressQuest>>();
 }

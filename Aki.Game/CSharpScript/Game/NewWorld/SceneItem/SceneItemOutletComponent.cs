@@ -16,12 +16,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x02007189 RID: 29065
+	// Token: 0x0200623D RID: 25149
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneItemOutletComponent : EntityComponent
 	{
-		// Token: 0x0604713C RID: 291132 RVA: 0x01206D44 File Offset: 0x01204F44
+		// Token: 0x0603C9EE RID: 248302 RVA: 0x01160E00 File Offset: 0x0115F000
 		public global::Vector GetSocketLocation(Entity entity)
 		{
 			global::Vector vector = global::Vector.Create(this.GetSocketLocationOffset(entity));
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return vector;
 		}
 
-		// Token: 0x0604713D RID: 291133 RVA: 0x01206DBC File Offset: 0x01204FBC
+		// Token: 0x0603C9EF RID: 248303 RVA: 0x01160E78 File Offset: 0x0115F078
 		public global::Vector GetFinalLocation(Entity entity)
 		{
 			global::Vector vector = global::Vector.Create(this.GetSocketLocationOffset(entity));
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return vector;
 		}
 
-		// Token: 0x0604713E RID: 291134 RVA: 0x01206E40 File Offset: 0x01205040
+		// Token: 0x0603C9F0 RID: 248304 RVA: 0x01160EFC File Offset: 0x0115F0FC
 		public global::Vector GetSocketLocationOffset(Entity entity)
 		{
 			switch (this.Config.Config.Type)
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604713F RID: 291135 RVA: 0x01206FD4 File Offset: 0x012051D4
+		// Token: 0x0603C9F1 RID: 248305 RVA: 0x01161090 File Offset: 0x0115F290
 		[return: Nullable(2)]
 		public string GetSocketName(Entity entity)
 		{
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047140 RID: 291136 RVA: 0x01207040 File Offset: 0x01205240
+		// Token: 0x0603C9F2 RID: 248306 RVA: 0x011610FC File Offset: 0x0115F2FC
 		[return: Nullable(2)]
 		public string GetLockingEffect(Entity entity)
 		{
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return itemLockingConfig.EffectPath;
 		}
 
-		// Token: 0x06047141 RID: 291137 RVA: 0x01207074 File Offset: 0x01205274
+		// Token: 0x0603C9F3 RID: 248307 RVA: 0x01161130 File Offset: 0x0115F330
 		[return: Nullable(2)]
 		public string GetLockingItemTag(Entity entity)
 		{
@@ -167,14 +167,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return eteleControlLockingPerform.GetValueOrDefault().ToEnumString();
 		}
 
-		// Token: 0x06047142 RID: 291138 RVA: 0x012070CC File Offset: 0x012052CC
+		// Token: 0x0603C9F4 RID: 248308 RVA: 0x01161188 File Offset: 0x0115F388
 		public bool GetIsNeedAttach()
 		{
 			EItemFoundation type = this.Config.Config.Type;
 			return type == EItemFoundation.CategoryMatching || type == EItemFoundation.RangeAdsorption;
 		}
 
-		// Token: 0x06047143 RID: 291139 RVA: 0x012070F4 File Offset: 0x012052F4
+		// Token: 0x0603C9F5 RID: 248309 RVA: 0x011611B0 File Offset: 0x0115F3B0
 		[NullableContext(2)]
 		public global::Vector GetCurrentLockLocation()
 		{
@@ -190,7 +190,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return global::Vector.Create(this.JigsawComp.GetBlockLocationByIndex(this.CurrentChooseIndex, true));
 		}
 
-		// Token: 0x06047144 RID: 291140 RVA: 0x01207138 File Offset: 0x01205338
+		// Token: 0x0603C9F6 RID: 248310 RVA: 0x011611F4 File Offset: 0x0115F3F4
 		public void ShowAimModel(Entity entity)
 		{
 			EItemFoundation type = this.Config.Config.Type;
@@ -201,7 +201,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047145 RID: 291141 RVA: 0x01207178 File Offset: 0x01205378
+		// Token: 0x0603C9F7 RID: 248311 RVA: 0x01161234 File Offset: 0x0115F434
 		public bool GetIsIllegal(Entity entity)
 		{
 			EItemFoundation type = this.Config.Config.Type;
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return this.JigsawComp.CheckJigsawBlockIllegal(component, this.CurrentChooseIndex);
 		}
 
-		// Token: 0x06047146 RID: 291142 RVA: 0x012071C0 File Offset: 0x012053C0
+		// Token: 0x0603C9F8 RID: 248312 RVA: 0x0116127C File Offset: 0x0115F47C
 		public bool GetIsCorrect(Entity entity, [Nullable(2)] JigsawIndex index)
 		{
 			EItemFoundation type = this.Config.Config.Type;
@@ -233,7 +233,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return this.JigsawComp.CheckJigsawBlockCorrect(component, index ?? this.CurrentChooseIndex);
 		}
 
-		// Token: 0x06047147 RID: 291143 RVA: 0x0120720C File Offset: 0x0120540C
+		// Token: 0x0603C9F9 RID: 248313 RVA: 0x011612C8 File Offset: 0x0115F4C8
 		[return: Nullable(2)]
 		public string GetMatchSequence(Entity entity)
 		{
@@ -245,7 +245,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return matchConfig.Animation.MatchSequence;
 		}
 
-		// Token: 0x06047148 RID: 291144 RVA: 0x01207234 File Offset: 0x01205434
+		// Token: 0x0603C9FA RID: 248314 RVA: 0x011612F0 File Offset: 0x0115F4F0
 		[return: Nullable(2)]
 		public string GetMismatchSequence(Entity entity)
 		{
@@ -257,7 +257,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return matchConfig.Callback.DischargeSequence;
 		}
 
-		// Token: 0x06047149 RID: 291145 RVA: 0x0120725C File Offset: 0x0120545C
+		// Token: 0x0603C9FB RID: 248315 RVA: 0x01161318 File Offset: 0x0115F518
 		public global::Vector GetMatchSequenceOffset(Entity entity)
 		{
 			ICategoryMatchingConfig matchConfig = this.GetMatchConfig(entity);
@@ -265,7 +265,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return global::Vector.Create((double)((vectorInfo != null) ? vectorInfo.X : null).GetValueOrDefault(), (double)((vectorInfo != null) ? vectorInfo.Y : null).GetValueOrDefault(), (double)((vectorInfo != null) ? vectorInfo.Z : null).GetValueOrDefault());
 		}
 
-		// Token: 0x0604714A RID: 291146 RVA: 0x012072E0 File Offset: 0x012054E0
+		// Token: 0x0603C9FC RID: 248316 RVA: 0x0116139C File Offset: 0x0115F59C
 		public global::Rotator GetSocketRotator(Entity entity)
 		{
 			global::Rotator socketRotatorOffset = this.GetSocketRotatorOffset(entity);
@@ -275,7 +275,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return global::Rotator.Create(ftransformDouble.TransformRotation(fquat).Rotator());
 		}
 
-		// Token: 0x0604714B RID: 291147 RVA: 0x01207360 File Offset: 0x01205560
+		// Token: 0x0603C9FD RID: 248317 RVA: 0x0116141C File Offset: 0x0115F61C
 		public global::Rotator GetSocketRotatorOffset(Entity entity)
 		{
 			EItemFoundation type = this.Config.Config.Type;
@@ -292,7 +292,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return global::Rotator.Create(0f, (float)(-(float)component.Rotation), 0f);
 		}
 
-		// Token: 0x0604714C RID: 291148 RVA: 0x012073F4 File Offset: 0x012055F4
+		// Token: 0x0603C9FE RID: 248318 RVA: 0x011614B0 File Offset: 0x0115F6B0
 		[return: Nullable(2)]
 		private ICategoryMatchingConfig GetMatchConfig(Entity entity)
 		{
@@ -322,7 +322,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return categoryMatchingConfig;
 		}
 
-		// Token: 0x0604714D RID: 291149 RVA: 0x012074A0 File Offset: 0x012056A0
+		// Token: 0x0603C9FF RID: 248319 RVA: 0x0116155C File Offset: 0x0115F75C
 		[NullableContext(2)]
 		private ICategoryMatchingConfig GetMatchConfigByIndex(int? index)
 		{
@@ -353,9 +353,9 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return null;
 		}
 
-		// Token: 0x17009D94 RID: 40340
-		// (get) Token: 0x0604714E RID: 291150 RVA: 0x01207532 File Offset: 0x01205732
-		// (set) Token: 0x0604714F RID: 291151 RVA: 0x0120753A File Offset: 0x0120573A
+		// Token: 0x170072A7 RID: 29351
+		// (get) Token: 0x0603CA00 RID: 248320 RVA: 0x011615EE File Offset: 0x0115F7EE
+		// (set) Token: 0x0603CA01 RID: 248321 RVA: 0x011615F6 File Offset: 0x0115F7F6
 		public SceneItemManipulatableComponent EntityInSocket
 		{
 			get
@@ -368,9 +368,9 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x17009D95 RID: 40341
-		// (get) Token: 0x06047150 RID: 291152 RVA: 0x01207543 File Offset: 0x01205743
-		// (set) Token: 0x06047151 RID: 291153 RVA: 0x01207550 File Offset: 0x01205750
+		// Token: 0x170072A8 RID: 29352
+		// (get) Token: 0x0603CA02 RID: 248322 RVA: 0x011615FF File Offset: 0x0115F7FF
+		// (set) Token: 0x0603CA03 RID: 248323 RVA: 0x0116160C File Offset: 0x0115F80C
 		public int? MatchCfgIndex
 		{
 			get
@@ -383,7 +383,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047152 RID: 291154 RVA: 0x01207560 File Offset: 0x01205760
+		// Token: 0x0603CA04 RID: 248324 RVA: 0x0116161C File Offset: 0x0115F81C
 		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
@@ -405,7 +405,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06047153 RID: 291155 RVA: 0x0120764C File Offset: 0x0120584C
+		// Token: 0x0603CA05 RID: 248325 RVA: 0x01161708 File Offset: 0x0115F908
 		protected override bool OnStart()
 		{
 			this.ActorComponent.Owner.Tags.Add(SceneItemOutletComponent.SCENE_ITEM_OUTLET_TAG);
@@ -432,7 +432,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06047154 RID: 291156 RVA: 0x01207778 File Offset: 0x01205978
+		// Token: 0x0603CA06 RID: 248326 RVA: 0x01161834 File Offset: 0x0115FA34
 		protected override void OnActivate()
 		{
 			if (this.Config.Config.Type == EItemFoundation.BuildingBlock || this.Config.Config.Type == EItemFoundation.PulseDevice)
@@ -459,7 +459,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047155 RID: 291157 RVA: 0x01207848 File Offset: 0x01205A48
+		// Token: 0x0603CA07 RID: 248327 RVA: 0x01161904 File Offset: 0x0115FB04
 		protected override bool OnEnd()
 		{
 			BaseTagComponent tagComp = this.TagComp;
@@ -480,7 +480,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06047156 RID: 291158 RVA: 0x01207918 File Offset: 0x01205B18
+		// Token: 0x0603CA08 RID: 248328 RVA: 0x011619D4 File Offset: 0x0115FBD4
 		[NullableContext(2)]
 		public bool CheckMatchManipulatable(Entity manipulatable)
 		{
@@ -513,7 +513,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047157 RID: 291159 RVA: 0x01207980 File Offset: 0x01205B80
+		// Token: 0x0603CA09 RID: 248329 RVA: 0x01161A3C File Offset: 0x0115FC3C
 		[NullableContext(2)]
 		public bool CheckCategoryMatchingMatchManipulatable(Entity manipulatable)
 		{
@@ -536,7 +536,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return false;
 		}
 
-		// Token: 0x06047158 RID: 291160 RVA: 0x01207A30 File Offset: 0x01205C30
+		// Token: 0x0603CA0A RID: 248330 RVA: 0x01161AEC File Offset: 0x0115FCEC
 		public bool CheckRangeAdsorptionMatchManipulatable(BaseInfoComponent baseInfo)
 		{
 			IRangeAdsorptionFoundation rangeAdsorptionFoundation = (IRangeAdsorptionFoundation)this.Config.Config;
@@ -563,7 +563,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06047159 RID: 291161 RVA: 0x01207AB0 File Offset: 0x01205CB0
+		// Token: 0x0603CA0B RID: 248331 RVA: 0x01161B6C File Offset: 0x0115FD6C
 		private void OnSilentOrLock(int tagId, bool isAdd)
 		{
 			this.TagComp.RemoveTag(new int?(GameplayTagDefine.EGameplayTagId["关卡.发电装置底座.激活"]));
@@ -575,7 +575,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.TagComp.AddTag(new int?(GameplayTagDefine.EGameplayTagId["关卡.发电装置底座.静默.未完成"]));
 		}
 
-		// Token: 0x0604715A RID: 291162 RVA: 0x01207B24 File Offset: 0x01205D24
+		// Token: 0x0603CA0C RID: 248332 RVA: 0x01161BE0 File Offset: 0x0115FDE0
 		private void OnStateChange(int curState, bool isReady)
 		{
 			int num = GameplayTagDefine.EGameplayTagId["关卡.Common.状态.激活"];
@@ -587,7 +587,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.TagComp.RemoveTag(new int?(GameplayTagDefine.EGameplayTagId["关卡.发电装置底座.激活"]));
 		}
 
-		// Token: 0x0604715B RID: 291163 RVA: 0x01207B88 File Offset: 0x01205D88
+		// Token: 0x0603CA0D RID: 248333 RVA: 0x01161C44 File Offset: 0x0115FE44
 		public void ChangeSilentTag()
 		{
 			LevelTagComponent component = base.Entity.GetComponent<LevelTagComponent>();
@@ -598,7 +598,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604715C RID: 291164 RVA: 0x01207BF0 File Offset: 0x01205DF0
+		// Token: 0x0603CA0E RID: 248334 RVA: 0x01161CAC File Offset: 0x0115FEAC
 		public EItemFoundationMatchType? GetOutletMatchType()
 		{
 			BaseInfoComponent baseInfo = base.Entity.GetComponent<CreatureDataComponent>().GetBaseInfo();
@@ -614,21 +614,21 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return category.ItemFoundation;
 		}
 
-		// Token: 0x0604715D RID: 291165 RVA: 0x01207C34 File Offset: 0x01205E34
+		// Token: 0x0603CA0F RID: 248335 RVA: 0x01161CF0 File Offset: 0x0115FEF0
 		public bool IsLockOrSlient()
 		{
 			LevelTagComponent component = base.Entity.GetComponent<LevelTagComponent>();
 			return component.HasTag(GameplayTagDefine.EGameplayTagId["关卡.Common.属性.锁定"]) || component.HasTag(GameplayTagDefine.EGameplayTagId["关卡.Common.状态.静默"]);
 		}
 
-		// Token: 0x0604715E RID: 291166 RVA: 0x01207C7C File Offset: 0x01205E7C
+		// Token: 0x0603CA10 RID: 248336 RVA: 0x01161D38 File Offset: 0x0115FF38
 		public bool MultiplayerLimitTypeCheck()
 		{
 			EOnlineInteractType entityOnlineInteractType = base.Entity.GetComponent<CreatureDataComponent>().GetEntityOnlineInteractType();
 			return LevelGamePlayController.Instance.MultiplayerLimitTypeCheck(entityOnlineInteractType, false);
 		}
 
-		// Token: 0x0604715F RID: 291167 RVA: 0x01207CA8 File Offset: 0x01205EA8
+		// Token: 0x0603CA11 RID: 248337 RVA: 0x01161D64 File Offset: 0x0115FF64
 		public bool CanSetNewItem()
 		{
 			switch (this.Config.Config.Type)
@@ -644,14 +644,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047160 RID: 291168 RVA: 0x01207CF5 File Offset: 0x01205EF5
+		// Token: 0x0603CA12 RID: 248338 RVA: 0x01161DB1 File Offset: 0x0115FFB1
 		[NullableContext(2)]
 		public JigsawIndex GetCurrentChooseIndex()
 		{
 			return this.CurrentChooseIndex;
 		}
 
-		// Token: 0x06047161 RID: 291169 RVA: 0x01207D00 File Offset: 0x01205F00
+		// Token: 0x0603CA13 RID: 248339 RVA: 0x01161DBC File Offset: 0x0115FFBC
 		private void OnEntityInOutRangeLocal(bool isEnter, EntityHandle handle)
 		{
 			WorldEntity entity = handle.Entity;
@@ -716,7 +716,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047162 RID: 291170 RVA: 0x01207E98 File Offset: 0x01206098
+		// Token: 0x0603CA14 RID: 248340 RVA: 0x01161F54 File Offset: 0x01160154
 		private void ChangeToAdsorbState(Entity entity, IRangeAdsorptionFoundation config)
 		{
 			BaseActorComponent component = entity.GetComponent<BaseActorComponent>();
@@ -743,7 +743,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			component2.TargetOutletComponent = this;
 		}
 
-		// Token: 0x06047163 RID: 291171 RVA: 0x0120800C File Offset: 0x0120620C
+		// Token: 0x0603CA15 RID: 248341 RVA: 0x011620C8 File Offset: 0x011602C8
 		[NullableContext(2)]
 		private void OnInRangeManipulatableItemStateModified(SceneItemManipulatableComponent.EManipulatableState oldState, SceneItemManipulatableComponent.EManipulatableState newState, [Nullable(1)] Entity entity, SceneItemManipulableBaseState oldStateObj, SceneItemManipulableBaseState newStateObj)
 		{
@@ -756,7 +756,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047164 RID: 291172 RVA: 0x0120805C File Offset: 0x0120625C
+		// Token: 0x0603CA16 RID: 248342 RVA: 0x01162118 File Offset: 0x01160318
 		private bool CheckEntityDynamicMatch(IDynamicEntityMatch entityMatch, Entity entity)
 		{
 			BaseInfoComponent baseInfo = entity.GetComponent<CreatureDataComponent>().GetBaseInfo();
@@ -789,7 +789,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06047165 RID: 291173 RVA: 0x012080F8 File Offset: 0x012062F8
+		// Token: 0x0603CA17 RID: 248343 RVA: 0x011621B4 File Offset: 0x011603B4
 		public void RequestMatch(Entity itemEntity)
 		{
 			switch (this.Config.Config.Type)
@@ -807,7 +807,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06047166 RID: 291174 RVA: 0x0120813C File Offset: 0x0120633C
+		// Token: 0x0603CA18 RID: 248344 RVA: 0x011621F8 File Offset: 0x011603F8
 		private void RequestMatchOutlet(Entity itemEntity)
 		{
 			long creatureDataId = base.Entity.GetComponent<CreatureDataComponent>().GetCreatureDataId();
@@ -842,7 +842,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}, 0);
 		}
 
-		// Token: 0x06047167 RID: 291175 RVA: 0x01208258 File Offset: 0x01206458
+		// Token: 0x0603CA19 RID: 248345 RVA: 0x01162314 File Offset: 0x01160514
 		private void RequestMatchJigsaw(Entity itemEntity)
 		{
 			PlaceItemOnBoardRequest placeItemOnBoardRequest = PlaceItemOnBoardRequest.Create();
@@ -880,13 +880,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}, 0);
 		}
 
-		// Token: 0x06047168 RID: 291176 RVA: 0x012083B8 File Offset: 0x012065B8
+		// Token: 0x0603CA1A RID: 248346 RVA: 0x01162474 File Offset: 0x01160674
 		public EItemFoundation GetFoundationType()
 		{
 			return this.Config.Config.Type;
 		}
 
-		// Token: 0x06047169 RID: 291177 RVA: 0x012083CC File Offset: 0x012065CC
+		// Token: 0x0603CA1B RID: 248347 RVA: 0x01162488 File Offset: 0x01160688
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -894,145 +894,151 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemOutletComponent sceneItemOutletComponent = (SceneItemOutletComponent)componentTemplate;
-			if (base.CanResetComponentProperty("Config"))
+			if (sceneItemOutletComponent.Config == null)
 			{
-				if (sceneItemOutletComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ItemFoundation2>(this.Config), "Config"))
-				{
-					return false;
-				}
+				this.Config = null;
 			}
-			if (base.CanResetComponentProperty("ActorComponent"))
-			{
-				if (sceneItemOutletComponent.ActorComponent == null)
-				{
-					this.ActorComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComponent), "ActorComponent"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TagComp"))
-			{
-				if (sceneItemOutletComponent.TagComp == null)
-				{
-					this.TagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("EntityInSocketCache"))
-			{
-				if (sceneItemOutletComponent.EntityInSocketCache == null)
-				{
-					this.EntityInSocketCache = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemManipulatableComponent>(this.EntityInSocketCache), "EntityInSocketCache"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("MatchCfgIndexCache"))
-			{
-				this.MatchCfgIndexCache = sceneItemOutletComponent.MatchCfgIndexCache;
-			}
-			if (base.CanResetComponentProperty("CategoryMap") && sceneItemOutletComponent.CategoryMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<IDynamicEntityMatch, ICategoryMatchingConfig>>(this.CategoryMap), "CategoryMap"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("JigsawComp"))
+			if (sceneItemOutletComponent.ActorComponent == null)
 			{
-				if (sceneItemOutletComponent.JigsawComp == null)
-				{
-					this.JigsawComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemJigsawBaseComponent>(this.JigsawComp), "JigsawComp"))
-				{
-					return false;
-				}
+				this.ActorComponent = null;
 			}
-			if (base.CanResetComponentProperty("CurrentChooseIndex"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComponent), "ActorComponent"))
 			{
-				if (sceneItemOutletComponent.CurrentChooseIndex == null)
-				{
-					this.CurrentChooseIndex = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<JigsawIndex>(this.CurrentChooseIndex), "CurrentChooseIndex"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("AdsorptionCurve"))
+			if (sceneItemOutletComponent.TagComp == null)
 			{
-				if (sceneItemOutletComponent.AdsorptionCurve == null)
-				{
-					this.AdsorptionCurve = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UCurveFloat>(this.AdsorptionCurve), "AdsorptionCurve"))
-				{
-					return false;
-				}
+				this.TagComp = null;
 			}
-			return (!base.CanResetComponentProperty("AdsorptionMovementHandle") || sceneItemOutletComponent.AdsorptionMovementHandle == null || base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.AdsorptionMovementHandle), "AdsorptionMovementHandle")) && (!base.CanResetComponentProperty("AdsorbStartLoc") || sceneItemOutletComponent.AdsorbStartLoc == null || base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.AdsorbStartLoc), "AdsorbStartLoc")) && (!base.CanResetComponentProperty("AdsorbEndLoc") || sceneItemOutletComponent.AdsorbEndLoc == null || base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.AdsorbEndLoc), "AdsorbEndLoc")) && (!base.CanResetComponentProperty("AdsorbStartRot") || sceneItemOutletComponent.AdsorbStartRot == null || base.CheckClearObject(EntityComponentSystem.ClearObject<global::Rotator>(this.AdsorbStartRot), "AdsorbStartRot")) && (!base.CanResetComponentProperty("AdsorbEndRot") || sceneItemOutletComponent.AdsorbEndRot == null || base.CheckClearObject(EntityComponentSystem.ClearObject<global::Rotator>(this.AdsorbEndRot), "AdsorbEndRot"));
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
+			{
+				return false;
+			}
+			if (sceneItemOutletComponent.EntityInSocketCache == null)
+			{
+				this.EntityInSocketCache = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.EntityInSocketCache), "EntityInSocketCache"))
+			{
+				return false;
+			}
+			this.MatchCfgIndexCache = sceneItemOutletComponent.MatchCfgIndexCache;
+			if (sceneItemOutletComponent.CategoryMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CategoryMap), "CategoryMap"))
+			{
+				return false;
+			}
+			if (sceneItemOutletComponent.JigsawComp == null)
+			{
+				this.JigsawComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.JigsawComp), "JigsawComp"))
+			{
+				return false;
+			}
+			if (sceneItemOutletComponent.CurrentChooseIndex == null)
+			{
+				this.CurrentChooseIndex = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurrentChooseIndex), "CurrentChooseIndex"))
+			{
+				return false;
+			}
+			if (sceneItemOutletComponent.AdsorptionCurve == null)
+			{
+				this.AdsorptionCurve = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AdsorptionCurve), "AdsorptionCurve"))
+			{
+				return false;
+			}
+			return (sceneItemOutletComponent.AdsorptionMovementHandle == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.AdsorptionMovementHandle), "AdsorptionMovementHandle")) && (sceneItemOutletComponent.AdsorbStartLoc == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.AdsorbStartLoc), "AdsorbStartLoc")) && (sceneItemOutletComponent.AdsorbEndLoc == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.AdsorbEndLoc), "AdsorbEndLoc")) && (sceneItemOutletComponent.AdsorbStartRot == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.AdsorbStartRot), "AdsorbStartRot")) && (sceneItemOutletComponent.AdsorbEndRot == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.AdsorbEndRot), "AdsorbEndRot"));
 		}
 
-		// Token: 0x040255D4 RID: 153044
+		// Token: 0x170072A9 RID: 29353
+		// (get) Token: 0x0603CA1C RID: 248348 RVA: 0x011626AD File Offset: 0x011608AD
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170072AA RID: 29354
+		// (get) Token: 0x0603CA1D RID: 248349 RVA: 0x011626B0 File Offset: 0x011608B0
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170072AB RID: 29355
+		// (get) Token: 0x0603CA1E RID: 248350 RVA: 0x011626B3 File Offset: 0x011608B3
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0402023B RID: 131643
 		private static readonly FName SCENE_ITEM_OUTLET_TAG = new FName("SceneItemOutlet");
 
-		// Token: 0x040255D5 RID: 153045
+		// Token: 0x0402023C RID: 131644
 		[Nullable(2)]
 		public ItemFoundation2 Config;
 
-		// Token: 0x040255D6 RID: 153046
+		// Token: 0x0402023D RID: 131645
 		[Nullable(2)]
 		private SceneItemActorComponent ActorComponent;
 
-		// Token: 0x040255D7 RID: 153047
+		// Token: 0x0402023E RID: 131646
 		[Nullable(2)]
 		private BaseTagComponent TagComp;
 
-		// Token: 0x040255D8 RID: 153048
+		// Token: 0x0402023F RID: 131647
 		[Nullable(2)]
 		private SceneItemManipulatableComponent EntityInSocketCache;
 
-		// Token: 0x040255D9 RID: 153049
+		// Token: 0x04020240 RID: 131648
 		private int MatchCfgIndexCache = -1;
 
-		// Token: 0x040255DA RID: 153050
+		// Token: 0x04020241 RID: 131649
 		private readonly Dictionary<IDynamicEntityMatch, ICategoryMatchingConfig> CategoryMap = new Dictionary<IDynamicEntityMatch, ICategoryMatchingConfig>();
 
-		// Token: 0x040255DB RID: 153051
+		// Token: 0x04020242 RID: 131650
 		[Nullable(2)]
 		private SceneItemJigsawBaseComponent JigsawComp;
 
-		// Token: 0x040255DC RID: 153052
+		// Token: 0x04020243 RID: 131651
 		[Nullable(2)]
 		private JigsawIndex CurrentChooseIndex;
 
-		// Token: 0x040255DD RID: 153053
+		// Token: 0x04020244 RID: 131652
 		[Nullable(2)]
 		private UCurveFloat AdsorptionCurve;
 
-		// Token: 0x040255DE RID: 153054
+		// Token: 0x04020245 RID: 131653
 		[Nullable(2)]
 		private readonly TimerHandle AdsorptionMovementHandle;
 
-		// Token: 0x040255DF RID: 153055
+		// Token: 0x04020246 RID: 131654
 		private readonly global::Vector AdsorbStartLoc = global::Vector.Create();
 
-		// Token: 0x040255E0 RID: 153056
+		// Token: 0x04020247 RID: 131655
 		private readonly global::Vector AdsorbEndLoc = global::Vector.Create();
 
-		// Token: 0x040255E1 RID: 153057
+		// Token: 0x04020248 RID: 131656
 		private readonly global::Rotator AdsorbStartRot = global::Rotator.Create();
 
-		// Token: 0x040255E2 RID: 153058
+		// Token: 0x04020249 RID: 131657
 		private readonly global::Rotator AdsorbEndRot = global::Rotator.Create();
 	}
 }

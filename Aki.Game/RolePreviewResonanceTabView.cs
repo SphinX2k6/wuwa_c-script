@@ -1,6 +1,6 @@
 ﻿using System;
 
-// Token: 0x02001CA5 RID: 7333
+// Token: 0x02001164 RID: 4452
 public class RolePreviewResonanceTabView : RoleResonanceTabViewNew
 {
 }

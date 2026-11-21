@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002105 RID: 8453
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002366 RID: 9062
 	public class PlayCustomSequence : ActionParams
 	{
-		// Token: 0x0600B9F8 RID: 47608 RVA: 0x001ADDEC File Offset: 0x001ABFEC
+		// Token: 0x0600C584 RID: 50564 RVA: 0x001C4F4C File Offset: 0x001C314C
 		private PlayCustomSequence_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B9F9 RID: 47609 RVA: 0x001ADE24 File Offset: 0x001AC024
+		// Token: 0x0600C585 RID: 50565 RVA: 0x001C4F84 File Offset: 0x001C3184
 		public static PlayCustomSequence Create([Nullable(2)] PlayCustomSequence instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B9FA RID: 47610 RVA: 0x001ADE37 File Offset: 0x001AC037
+		// Token: 0x0600C586 RID: 50566 RVA: 0x001C4F97 File Offset: 0x001C3197
 		public static PlayCustomSequence CreateFromSetValue([Nullable(2)] PlayCustomSequence_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B9FB RID: 47611 RVA: 0x001ADE4A File Offset: 0x001AC04A
+		// Token: 0x0600C587 RID: 50567 RVA: 0x001C4FAA File Offset: 0x001C31AA
 		public PlayCustomSequence_SetValue ToSetValue()
 		{
 			return new PlayCustomSequence_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170038CE RID: 14542
-		// (get) Token: 0x0600B9FC RID: 47612 RVA: 0x001ADE75 File Offset: 0x001AC075
-		// (set) Token: 0x0600B9FD RID: 47613 RVA: 0x001ADEA0 File Offset: 0x001AC0A0
+		// Token: 0x17003BBA RID: 15290
+		// (get) Token: 0x0600C588 RID: 50568 RVA: 0x001C4FD5 File Offset: 0x001C31D5
+		// (set) Token: 0x0600C589 RID: 50569 RVA: 0x001C5000 File Offset: 0x001C3200
 		public virtual int CustomSeqId
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170038CF RID: 14543
-		// (get) Token: 0x0600B9FE RID: 47614 RVA: 0x001ADEAE File Offset: 0x001AC0AE
-		// (set) Token: 0x0600B9FF RID: 47615 RVA: 0x001ADED5 File Offset: 0x001AC0D5
+		// Token: 0x17003BBB RID: 15291
+		// (get) Token: 0x0600C58A RID: 50570 RVA: 0x001C500E File Offset: 0x001C320E
+		// (set) Token: 0x0600C58B RID: 50571 RVA: 0x001C5035 File Offset: 0x001C3235
 		public virtual List<int> WhoIds
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170038D0 RID: 14544
-		// (get) Token: 0x0600BA00 RID: 47616 RVA: 0x001ADEE4 File Offset: 0x001AC0E4
-		// (set) Token: 0x0600BA01 RID: 47617 RVA: 0x001ADF1E File Offset: 0x001AC11E
+		// Token: 0x17003BBC RID: 15292
+		// (get) Token: 0x0600C58C RID: 50572 RVA: 0x001C5044 File Offset: 0x001C3244
+		// (set) Token: 0x0600C58D RID: 50573 RVA: 0x001C507E File Offset: 0x001C327E
 		public virtual bool? ResetCamera
 		{
 			get
@@ -133,11 +131,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006F5B RID: 28507
+		// Token: 0x0400758F RID: 30095
 		[Nullable(2)]
 		protected new PlayCustomSequence FbInstance;
 
-		// Token: 0x04006F5C RID: 28508
+		// Token: 0x04007590 RID: 30096
 		[Nullable(2)]
 		protected PlayCustomSequence_SetValue PocoInterface;
 	}

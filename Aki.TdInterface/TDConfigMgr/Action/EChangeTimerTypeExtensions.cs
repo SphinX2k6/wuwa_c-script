@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022D7 RID: 8919
+	// Token: 0x02002546 RID: 9542
 	public static class EChangeTimerTypeExtensions
 	{
-		// Token: 0x0600C346 RID: 49990 RVA: 0x001C88DC File Offset: 0x001C6ADC
+		// Token: 0x0600CF15 RID: 53013 RVA: 0x001E06E4 File Offset: 0x001DE8E4
 		public static string ToEnumString(this EChangeTimerType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C347 RID: 49991 RVA: 0x001C8924 File Offset: 0x001C6B24
+		// Token: 0x0600CF16 RID: 53014 RVA: 0x001E072C File Offset: 0x001DE92C
 		public static EChangeTimerType FromString(string name)
 		{
 			EChangeTimerType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C348 RID: 49992 RVA: 0x001C8950 File Offset: 0x001C6B50
+		// Token: 0x0600CF17 RID: 53015 RVA: 0x001E0758 File Offset: 0x001DE958
 		public static bool TryFromString(string name, out EChangeTimerType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C349 RID: 49993 RVA: 0x001C89A6 File Offset: 0x001C6BA6
+		// Token: 0x0600CF18 RID: 53016 RVA: 0x001E07AE File Offset: 0x001DE9AE
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C34A RID: 49994 RVA: 0x001C89C6 File Offset: 0x001C6BC6
+		// Token: 0x0600CF19 RID: 53017 RVA: 0x001E07CE File Offset: 0x001DE9CE
 		public static EChangeTimerType[] GetValues()
 		{
 			return new EChangeTimerType[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C34B RID: 49995 RVA: 0x001C89D6 File Offset: 0x001C6BD6
+		// Token: 0x0600CF1A RID: 53018 RVA: 0x001E07DE File Offset: 0x001DE9DE
 		public static string[] GetNames()
 		{
 			return new string[]

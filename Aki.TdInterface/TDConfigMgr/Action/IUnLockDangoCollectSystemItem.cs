@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002027 RID: 8231
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002270 RID: 8816
 	public class IUnLockDangoCollectSystemItem : IUnlockSystemItemType
 	{
-		// Token: 0x0600B4F2 RID: 46322 RVA: 0x001A47C0 File Offset: 0x001A29C0
+		// Token: 0x0600C018 RID: 49176 RVA: 0x001BAF2C File Offset: 0x001B912C
 		private IUnLockDangoCollectSystemItem_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B4F3 RID: 46323 RVA: 0x001A47F8 File Offset: 0x001A29F8
+		// Token: 0x0600C019 RID: 49177 RVA: 0x001BAF64 File Offset: 0x001B9164
 		public static IUnLockDangoCollectSystemItem Create([Nullable(2)] IUnLockDangoCollectSystemItem instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B4F4 RID: 46324 RVA: 0x001A480B File Offset: 0x001A2A0B
+		// Token: 0x0600C01A RID: 49178 RVA: 0x001BAF77 File Offset: 0x001B9177
 		public static IUnLockDangoCollectSystemItem CreateFromSetValue([Nullable(2)] IUnLockDangoCollectSystemItem_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B4F5 RID: 46325 RVA: 0x001A481E File Offset: 0x001A2A1E
+		// Token: 0x0600C01B RID: 49179 RVA: 0x001BAF8A File Offset: 0x001B918A
 		public new IUnLockDangoCollectSystemItem_SetValue ToSetValue()
 		{
 			return new IUnLockDangoCollectSystemItem_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003797 RID: 14231
-		// (get) Token: 0x0600B4F6 RID: 46326 RVA: 0x001A483D File Offset: 0x001A2A3D
-		// (set) Token: 0x0600B4F7 RID: 46327 RVA: 0x001A4868 File Offset: 0x001A2A68
+		// Token: 0x17003A74 RID: 14964
+		// (get) Token: 0x0600C01C RID: 49180 RVA: 0x001BAFA9 File Offset: 0x001B91A9
+		// (set) Token: 0x0600C01D RID: 49181 RVA: 0x001BAFD4 File Offset: 0x001B91D4
 		public override EUnlockSystemItemType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003798 RID: 14232
-		// (get) Token: 0x0600B4F8 RID: 46328 RVA: 0x001A4876 File Offset: 0x001A2A76
-		// (set) Token: 0x0600B4F9 RID: 46329 RVA: 0x001A48A1 File Offset: 0x001A2AA1
+		// Token: 0x17003A75 RID: 14965
+		// (get) Token: 0x0600C01E RID: 49182 RVA: 0x001BAFE2 File Offset: 0x001B91E2
+		// (set) Token: 0x0600C01F RID: 49183 RVA: 0x001BB00D File Offset: 0x001B920D
 		public virtual int Id
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006CF8 RID: 27896
+		// Token: 0x04007301 RID: 29441
 		[Nullable(2)]
 		protected new IUnLockDangoCollectSystemItem FbInstance;
 
-		// Token: 0x04006CF9 RID: 27897
+		// Token: 0x04007302 RID: 29442
 		[Nullable(2)]
 		protected new IUnLockDangoCollectSystemItem_SetValue PocoInterface;
 	}

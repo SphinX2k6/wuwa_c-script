@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200665D RID: 26205
+	// Token: 0x02006CCE RID: 27854
 	public struct IEnableFollowShooterAbility : IFlatbufferObject
 	{
-		// Token: 0x1700C2AD RID: 49837
-		// (get) Token: 0x0602D851 RID: 186449 RVA: 0x0063BBF9 File Offset: 0x00639DF9
+		// Token: 0x1700CC4B RID: 52299
+		// (get) Token: 0x06030022 RID: 196642 RVA: 0x00688761 File Offset: 0x00686961
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D852 RID: 186450 RVA: 0x0063BC06 File Offset: 0x00639E06
+		// Token: 0x06030023 RID: 196643 RVA: 0x0068876E File Offset: 0x0068696E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602D853 RID: 186451 RVA: 0x0063BC10 File Offset: 0x00639E10
+		// Token: 0x06030024 RID: 196644 RVA: 0x00688778 File Offset: 0x00686978
 		public static IEnableFollowShooterAbility GetRootAsIEnableFollowShooterAbility(ByteBuffer _bb)
 		{
 			return IEnableFollowShooterAbility.GetRootAsIEnableFollowShooterAbility(_bb, default(IEnableFollowShooterAbility));
 		}
 
-		// Token: 0x0602D854 RID: 186452 RVA: 0x0063BC2C File Offset: 0x00639E2C
+		// Token: 0x06030025 RID: 196645 RVA: 0x00688794 File Offset: 0x00686994
 		public static IEnableFollowShooterAbility GetRootAsIEnableFollowShooterAbility(ByteBuffer _bb, IEnableFollowShooterAbility obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602D855 RID: 186453 RVA: 0x0063BC49 File Offset: 0x00639E49
+		// Token: 0x06030026 RID: 196646 RVA: 0x006887B1 File Offset: 0x006869B1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602D856 RID: 186454 RVA: 0x0063BC58 File Offset: 0x00639E58
+		// Token: 0x06030027 RID: 196647 RVA: 0x006887C0 File Offset: 0x006869C0
 		public IEnableFollowShooterAbility __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C2AE RID: 49838
-		// (get) Token: 0x0602D857 RID: 186455 RVA: 0x0063BC68 File Offset: 0x00639E68
+		// Token: 0x1700CC4C RID: 52300
+		// (get) Token: 0x06030028 RID: 196648 RVA: 0x006887D0 File Offset: 0x006869D0
 		public bool Enable
 		{
 			get
@@ -59,8 +59,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C2AF RID: 49839
-		// (get) Token: 0x0602D858 RID: 186456 RVA: 0x0063BCA8 File Offset: 0x00639EA8
+		// Token: 0x1700CC4D RID: 52301
+		// (get) Token: 0x06030029 RID: 196649 RVA: 0x00688810 File Offset: 0x00686A10
 		public int Id
 		{
 			get
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C2B0 RID: 49840
-		// (get) Token: 0x0602D859 RID: 186457 RVA: 0x0063BCE4 File Offset: 0x00639EE4
+		// Token: 0x1700CC4E RID: 52302
+		// (get) Token: 0x0603002A RID: 196650 RVA: 0x0068884C File Offset: 0x00686A4C
 		public IFollowShooterJellyFishAbility? AbilityType
 		{
 			get
@@ -89,7 +89,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D85A RID: 186458 RVA: 0x0063BD41 File Offset: 0x00639F41
+		// Token: 0x0603002B RID: 196651 RVA: 0x006888A9 File Offset: 0x00686AA9
 		public static Offset<IEnableFollowShooterAbility> CreateIEnableFollowShooterAbility(FlatBufferBuilder builder, bool Enable = false, int Id = 0, Offset<IFollowShooterJellyFishAbility> AbilityTypeOffset = default(Offset<IFollowShooterJellyFishAbility>))
 		{
 			builder.StartTable(3);
@@ -99,37 +99,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IEnableFollowShooterAbility.EndIEnableFollowShooterAbility(builder);
 		}
 
-		// Token: 0x0602D85B RID: 186459 RVA: 0x0063BD65 File Offset: 0x00639F65
+		// Token: 0x0603002C RID: 196652 RVA: 0x006888CD File Offset: 0x00686ACD
 		public static void StartIEnableFollowShooterAbility(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0602D85C RID: 186460 RVA: 0x0063BD6E File Offset: 0x00639F6E
+		// Token: 0x0603002D RID: 196653 RVA: 0x006888D6 File Offset: 0x00686AD6
 		public static void AddEnable(FlatBufferBuilder builder, bool enable)
 		{
 			builder.AddBool(0, enable, false);
 		}
 
-		// Token: 0x0602D85D RID: 186461 RVA: 0x0063BD79 File Offset: 0x00639F79
+		// Token: 0x0603002E RID: 196654 RVA: 0x006888E1 File Offset: 0x00686AE1
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(1, id, 0);
 		}
 
-		// Token: 0x0602D85E RID: 186462 RVA: 0x0063BD84 File Offset: 0x00639F84
+		// Token: 0x0603002F RID: 196655 RVA: 0x006888EC File Offset: 0x00686AEC
 		public static void AddAbilityType(FlatBufferBuilder builder, Offset<IFollowShooterJellyFishAbility> abilityTypeOffset)
 		{
 			builder.AddOffset(2, abilityTypeOffset.Value, 0);
 		}
 
-		// Token: 0x0602D85F RID: 186463 RVA: 0x0063BD94 File Offset: 0x00639F94
+		// Token: 0x06030030 RID: 196656 RVA: 0x006888FC File Offset: 0x00686AFC
 		public static Offset<IEnableFollowShooterAbility> EndIEnableFollowShooterAbility(FlatBufferBuilder builder)
 		{
 			return new Offset<IEnableFollowShooterAbility>(builder.EndTable());
 		}
 
-		// Token: 0x0602D860 RID: 186464 RVA: 0x0063BDA4 File Offset: 0x00639FA4
+		// Token: 0x06030031 RID: 196657 RVA: 0x0068890C File Offset: 0x00686B0C
 		public IEnableFollowShooterAbilityT UnPack()
 		{
 			IEnableFollowShooterAbilityT enableFollowShooterAbilityT = new IEnableFollowShooterAbilityT();
@@ -137,7 +137,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return enableFollowShooterAbilityT;
 		}
 
-		// Token: 0x0602D861 RID: 186465 RVA: 0x0063BDC0 File Offset: 0x00639FC0
+		// Token: 0x06030032 RID: 196658 RVA: 0x00688928 File Offset: 0x00686B28
 		public void UnPackTo(IEnableFollowShooterAbilityT _o)
 		{
 			_o.Enable = this.Enable;
@@ -145,7 +145,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.AbilityType = ((this.AbilityType != null) ? this.AbilityType.Value.UnPack() : null);
 		}
 
-		// Token: 0x0602D862 RID: 186466 RVA: 0x0063BE14 File Offset: 0x0063A014
+		// Token: 0x06030033 RID: 196659 RVA: 0x0068897C File Offset: 0x00686B7C
 		public static Offset<IEnableFollowShooterAbility> Pack(FlatBufferBuilder builder, IEnableFollowShooterAbilityT _o)
 		{
 			if (_o == null)
@@ -156,7 +156,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IEnableFollowShooterAbility.CreateIEnableFollowShooterAbility(builder, _o.Enable, _o.Id, abilityTypeOffset);
 		}
 
-		// Token: 0x04010CFD RID: 68861
+		// Token: 0x04011B18 RID: 72472
 		private Table __p;
 	}
 }

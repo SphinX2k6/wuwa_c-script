@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.AdventureGuide
 {
-	// Token: 0x02005EB1 RID: 24241
+	// Token: 0x02004E96 RID: 20118
 	public enum EDangerType
 	{
-		// Token: 0x040202B6 RID: 131766
+		// Token: 0x0401AD7D RID: 109949
 		VeryLow,
-		// Token: 0x040202B7 RID: 131767
+		// Token: 0x0401AD7E RID: 109950
 		Low,
-		// Token: 0x040202B8 RID: 131768
+		// Token: 0x0401AD7F RID: 109951
 		Middle,
-		// Token: 0x040202B9 RID: 131769
+		// Token: 0x0401AD80 RID: 109952
 		High
 	}
 }

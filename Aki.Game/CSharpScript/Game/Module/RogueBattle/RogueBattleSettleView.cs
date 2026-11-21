@@ -14,18 +14,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004F01 RID: 20225
+	// Token: 0x02003ECA RID: 16074
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RogueBattleSettleView : UiViewBase
 	{
-		// Token: 0x06033DDF RID: 212447 RVA: 0x00C26A5D File Offset: 0x00C24C5D
+		// Token: 0x06028C4A RID: 166986 RVA: 0x00B6FFFD File Offset: 0x00B6E1FD
 		[NullableContext(1)]
 		public RogueBattleSettleView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06033DE0 RID: 212448 RVA: 0x00C26A68 File Offset: 0x00C24C68
+		// Token: 0x06028C4B RID: 166987 RVA: 0x00B70008 File Offset: 0x00B6E208
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033DE1 RID: 212449 RVA: 0x00C26C24 File Offset: 0x00C24E24
+		// Token: 0x06028C4C RID: 166988 RVA: 0x00B701C4 File Offset: 0x00B6E3C4
 		private void OnClickBtnLeft()
 		{
 			this.PageIndex--;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			levelSequencePlayer.PlayLevelSequenceByName("SwitchL", false, null, false);
 		}
 
-		// Token: 0x06033DE2 RID: 212450 RVA: 0x00C26C68 File Offset: 0x00C24E68
+		// Token: 0x06028C4D RID: 166989 RVA: 0x00B70208 File Offset: 0x00B6E408
 		private void OnClickBtnRight()
 		{
 			this.PageIndex++;
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			levelSequencePlayer.PlayLevelSequenceByName("SwitchR", false, null, false);
 		}
 
-		// Token: 0x06033DE3 RID: 212451 RVA: 0x00C26CAC File Offset: 0x00C24EAC
+		// Token: 0x06028C4E RID: 166990 RVA: 0x00B7024C File Offset: 0x00B6E44C
 		private void OnClickBtnMask()
 		{
 			if (this.PageIndex == 0)
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06033DE4 RID: 212452 RVA: 0x00C26D04 File Offset: 0x00C24F04
+		// Token: 0x06028C4F RID: 166991 RVA: 0x00B702A4 File Offset: 0x00B6E4A4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RogueBattleSettleView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033DE5 RID: 212453 RVA: 0x00C26D48 File Offset: 0x00C24F48
+		// Token: 0x06028C50 RID: 166992 RVA: 0x00B702E8 File Offset: 0x00B6E4E8
 		protected void RefreshDetail()
 		{
 			InstResultView instResultView = (InstResultView)this.OpenParam;
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}
 		}
 
-		// Token: 0x06033DE6 RID: 212454 RVA: 0x00C2700C File Offset: 0x00C2520C
+		// Token: 0x06028C51 RID: 166993 RVA: 0x00B705AC File Offset: 0x00B6E7AC
 		protected void RefreshPanel()
 		{
 			RogueBattleSettleChallengeInfoPanel challengeInfoPanelComponent = this.ChallengeInfoPanelComponent;
@@ -199,16 +199,16 @@ namespace CSharpScript.Game.Module.RogueBattle
 			base.GetButton(1).RootUIComp.Get().SetUIActive(this.PageIndex < 1);
 		}
 
-		// Token: 0x0401B914 RID: 112916
+		// Token: 0x040162E7 RID: 90855
 		protected RogueBattleSettleChallengeInfoPanel ChallengeInfoPanelComponent;
 
-		// Token: 0x0401B915 RID: 112917
+		// Token: 0x040162E8 RID: 90856
 		protected RogueBattleSettleDataInfoPanel DataInfoPanelComponent;
 
-		// Token: 0x0401B916 RID: 112918
+		// Token: 0x040162E9 RID: 90857
 		protected int PageIndex;
 
-		// Token: 0x0401B917 RID: 112919
+		// Token: 0x040162EA RID: 90858
 		protected LevelSequencePlayer LevelSequencePlayer;
 	}
 }

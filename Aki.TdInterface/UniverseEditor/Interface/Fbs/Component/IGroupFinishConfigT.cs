@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200534E RID: 21326
+	// Token: 0x020058D4 RID: 22740
 	public class IGroupFinishConfigT
 	{
-		// Token: 0x17009CB4 RID: 40116
-		// (get) Token: 0x06022E34 RID: 142900 RVA: 0x004D52FE File Offset: 0x004D34FE
-		// (set) Token: 0x06022E35 RID: 142901 RVA: 0x004D5306 File Offset: 0x004D3506
+		// Token: 0x1700A4EC RID: 42220
+		// (get) Token: 0x06024EE8 RID: 151272 RVA: 0x005121D2 File Offset: 0x005103D2
+		// (set) Token: 0x06024EE9 RID: 151273 RVA: 0x005121DA File Offset: 0x005103DA
 		public EGroupFinishConfig Type { get; set; }
 
-		// Token: 0x06022E36 RID: 142902 RVA: 0x004D530F File Offset: 0x004D350F
+		// Token: 0x06024EEA RID: 151274 RVA: 0x005121E3 File Offset: 0x005103E3
 		public IGroupFinishConfigT()
 		{
 			this.Type = EGroupFinishConfig.Silence;

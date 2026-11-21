@@ -5,14 +5,14 @@ using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02001324 RID: 4900
+// Token: 0x020007D8 RID: 2008
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class MoonChasingBusinessModel : ModelBase
 {
-	// Token: 0x17000B9E RID: 2974
-	// (get) Token: 0x060087F9 RID: 34809 RVA: 0x001D0190 File Offset: 0x001CE390
+	// Token: 0x17000BBE RID: 3006
+	// (get) Token: 0x06005B94 RID: 23444 RVA: 0x001D8FFC File Offset: 0x001D71FC
 	public bool IsInDelegate
 	{
 		get
@@ -21,7 +21,7 @@ public class MoonChasingBusinessModel : ModelBase
 		}
 	}
 
-	// Token: 0x060087FA RID: 34810 RVA: 0x001D0198 File Offset: 0x001CE398
+	// Token: 0x06005B95 RID: 23445 RVA: 0x001D9004 File Offset: 0x001D7204
 	protected override bool OnInit()
 	{
 		IReadOnlyList<EntrustRole> configList = ConfigEntrustRoleAll.GetConfigList(true);
@@ -37,7 +37,7 @@ public class MoonChasingBusinessModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060087FB RID: 34811 RVA: 0x001D01F8 File Offset: 0x001CE3F8
+	// Token: 0x06005B96 RID: 23446 RVA: 0x001D9064 File Offset: 0x001D7264
 	public void SetAllDelegationData(IReadOnlyList<EntrustInfo> dataList)
 	{
 		for (int i = 0; i < dataList.Count; i++)
@@ -46,14 +46,14 @@ public class MoonChasingBusinessModel : ModelBase
 		}
 	}
 
-	// Token: 0x060087FC RID: 34812 RVA: 0x001D0224 File Offset: 0x001CE424
+	// Token: 0x06005B97 RID: 23447 RVA: 0x001D9090 File Offset: 0x001D7290
 	public void SetDelegationData(EntrustInfo data)
 	{
 		DelegationData value = new DelegationData(data.EntrustId, data.HistoryLevel, data.IsVisiable);
 		this.DelegationDataMap[data.EntrustId] = value;
 	}
 
-	// Token: 0x060087FD RID: 34813 RVA: 0x001D025C File Offset: 0x001CE45C
+	// Token: 0x06005B98 RID: 23448 RVA: 0x001D90C8 File Offset: 0x001D72C8
 	public void ReplaceDelegationData(int oldId, EntrustInfo newData)
 	{
 		if (oldId == newData.EntrustId)
@@ -66,13 +66,13 @@ public class MoonChasingBusinessModel : ModelBase
 		EventSystem.Instance.Emit<bool>(EEventName.RefreshDelegate, true);
 	}
 
-	// Token: 0x060087FE RID: 34814 RVA: 0x001D02A9 File Offset: 0x001CE4A9
+	// Token: 0x06005B99 RID: 23449 RVA: 0x001D9115 File Offset: 0x001D7315
 	public void ConditionUnlockDelegationData(EntrustInfo data)
 	{
 		this.SetDelegationData(data);
 	}
 
-	// Token: 0x060087FF RID: 34815 RVA: 0x001D02B4 File Offset: 0x001CE4B4
+	// Token: 0x06005B9A RID: 23450 RVA: 0x001D9120 File Offset: 0x001D7320
 	[NullableContext(2)]
 	public DelegationData GetDelegationData(int id)
 	{
@@ -84,7 +84,7 @@ public class MoonChasingBusinessModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x06008800 RID: 34816 RVA: 0x001D02D4 File Offset: 0x001CE4D4
+	// Token: 0x06005B9B RID: 23451 RVA: 0x001D9140 File Offset: 0x001D7340
 	public List<DelegationData> GetDelegationDataList()
 	{
 		List<DelegationData> list = new List<DelegationData>();
@@ -135,7 +135,7 @@ public class MoonChasingBusinessModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06008801 RID: 34817 RVA: 0x001D0358 File Offset: 0x001CE558
+	// Token: 0x06005B9C RID: 23452 RVA: 0x001D91C4 File Offset: 0x001D73C4
 	public void SetAllEditTeamData(IReadOnlyList<EntrustRoleInfo> dataList)
 	{
 		foreach (EditTeamData editTeamData in this.EditTeamDataMap.Values)
@@ -148,7 +148,7 @@ public class MoonChasingBusinessModel : ModelBase
 		}
 	}
 
-	// Token: 0x06008802 RID: 34818 RVA: 0x001D03CC File Offset: 0x001CE5CC
+	// Token: 0x06005B9D RID: 23453 RVA: 0x001D9238 File Offset: 0x001D7438
 	public void SetEditTeamData(EntrustRoleInfo data)
 	{
 		RoleProperSettle roleAttr = data.RoleAttr;
@@ -165,7 +165,7 @@ public class MoonChasingBusinessModel : ModelBase
 		editTeamData.SetCharacterDataList(roleAttr);
 	}
 
-	// Token: 0x06008803 RID: 34819 RVA: 0x001D0408 File Offset: 0x001CE608
+	// Token: 0x06005B9E RID: 23454 RVA: 0x001D9274 File Offset: 0x001D7474
 	public EditTeamData DeepCopyEditTeamData(EditTeamData editTeamData)
 	{
 		EditTeamData editTeamData2 = new EditTeamData(editTeamData.Id, editTeamData.Type, editTeamData.UnLockCondition);
@@ -173,7 +173,7 @@ public class MoonChasingBusinessModel : ModelBase
 		return editTeamData2;
 	}
 
-	// Token: 0x06008804 RID: 34820 RVA: 0x001D0428 File Offset: 0x001CE628
+	// Token: 0x06005B9F RID: 23455 RVA: 0x001D9294 File Offset: 0x001D7494
 	public void ConditionUnlockEditTeamData(EntrustRoleInfo data)
 	{
 		this.SetEditTeamData(data);
@@ -186,7 +186,7 @@ public class MoonChasingBusinessModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.ConditionUnlockRole);
 	}
 
-	// Token: 0x06008805 RID: 34821 RVA: 0x001D0478 File Offset: 0x001CE678
+	// Token: 0x06005BA0 RID: 23456 RVA: 0x001D92E4 File Offset: 0x001D74E4
 	public int? PopUnlockRoleId()
 	{
 		if (this.UnlockRoleIdList.Count == 0)
@@ -198,13 +198,13 @@ public class MoonChasingBusinessModel : ModelBase
 		return new int?(value);
 	}
 
-	// Token: 0x06008806 RID: 34822 RVA: 0x001D04B9 File Offset: 0x001CE6B9
+	// Token: 0x06005BA1 RID: 23457 RVA: 0x001D9325 File Offset: 0x001D7525
 	public bool IsUnlockRoleIdEmpty()
 	{
 		return this.UnlockRoleIdList.Count == 0;
 	}
 
-	// Token: 0x06008807 RID: 34823 RVA: 0x001D04CC File Offset: 0x001CE6CC
+	// Token: 0x06005BA2 RID: 23458 RVA: 0x001D9338 File Offset: 0x001D7538
 	public List<EditTeamData> GetHelpEditTeamDataList(bool withMainRole = false)
 	{
 		List<EditTeamData> list = new List<EditTeamData>();
@@ -219,7 +219,7 @@ public class MoonChasingBusinessModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06008808 RID: 34824 RVA: 0x001D0558 File Offset: 0x001CE758
+	// Token: 0x06005BA3 RID: 23459 RVA: 0x001D93C4 File Offset: 0x001D75C4
 	public List<EditTeamData> GetUnlockHelpEditTeamDataList(bool withMainRole = false)
 	{
 		List<EditTeamData> list = new List<EditTeamData>();
@@ -234,7 +234,7 @@ public class MoonChasingBusinessModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06008809 RID: 34825 RVA: 0x001D05EC File Offset: 0x001CE7EC
+	// Token: 0x06005BA4 RID: 23460 RVA: 0x001D9458 File Offset: 0x001D7658
 	private int SortHelpTeamData(EditTeamData aData, EditTeamData bData)
 	{
 		if (aData.IsOwn != bData.IsOwn)
@@ -289,7 +289,7 @@ public class MoonChasingBusinessModel : ModelBase
 		}
 	}
 
-	// Token: 0x0600880A RID: 34826 RVA: 0x001D0680 File Offset: 0x001CE880
+	// Token: 0x06005BA5 RID: 23461 RVA: 0x001D94EC File Offset: 0x001D76EC
 	public int GetPlayerRoleId()
 	{
 		foreach (EditTeamData editTeamData in this.EditTeamDataMap.Values)
@@ -302,14 +302,14 @@ public class MoonChasingBusinessModel : ModelBase
 		return 0;
 	}
 
-	// Token: 0x0600880B RID: 34827 RVA: 0x001D06F4 File Offset: 0x001CE8F4
+	// Token: 0x06005BA6 RID: 23462 RVA: 0x001D9560 File Offset: 0x001D7760
 	private bool CheckTypeCanUse(int type)
 	{
 		PlayerInfoModel instance = PlayerInfoModel.Instance;
 		return (type != 1 || instance.GetPlayerGender() == EPlayerGender.Male) && (type != 2 || instance.GetPlayerGender() == EPlayerGender.Female);
 	}
 
-	// Token: 0x0600880C RID: 34828 RVA: 0x001D0728 File Offset: 0x001CE928
+	// Token: 0x06005BA7 RID: 23463 RVA: 0x001D9594 File Offset: 0x001D7794
 	public List<EditTeamData> GetOwnEditTeamDataList()
 	{
 		List<EditTeamData> list = new List<EditTeamData>();
@@ -355,26 +355,26 @@ public class MoonChasingBusinessModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0600880D RID: 34829 RVA: 0x001D07C4 File Offset: 0x001CE9C4
+	// Token: 0x06005BA8 RID: 23464 RVA: 0x001D9630 File Offset: 0x001D7830
 	public EditTeamData GetEditTeamDataById(int roleId)
 	{
 		return this.EditTeamDataMap[roleId];
 	}
 
-	// Token: 0x0600880E RID: 34830 RVA: 0x001D07D2 File Offset: 0x001CE9D2
+	// Token: 0x06005BA9 RID: 23465 RVA: 0x001D963E File Offset: 0x001D783E
 	public void SetResultData(DelegationResultData resultData)
 	{
 		this.DelegationResultDataInternal = resultData;
 		EventSystem.Instance.Emit(EEventName.SetDelegationResultData);
 	}
 
-	// Token: 0x0600880F RID: 34831 RVA: 0x001D07EB File Offset: 0x001CE9EB
+	// Token: 0x06005BAA RID: 23466 RVA: 0x001D9657 File Offset: 0x001D7857
 	public DelegationResultData GetResultData()
 	{
 		return this.DelegationResultDataInternal;
 	}
 
-	// Token: 0x06008810 RID: 34832 RVA: 0x001D07F4 File Offset: 0x001CE9F4
+	// Token: 0x06005BAB RID: 23467 RVA: 0x001D9660 File Offset: 0x001D7860
 	private List<CharacterData> CreateCharacterList(bool useScoreName)
 	{
 		List<CharacterData> list = new List<CharacterData>();
@@ -387,7 +387,7 @@ public class MoonChasingBusinessModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06008811 RID: 34833 RVA: 0x001D082C File Offset: 0x001CEA2C
+	// Token: 0x06005BAC RID: 23468 RVA: 0x001D9698 File Offset: 0x001D7898
 	public List<CharacterData> GetCharacterValueListByRoleIds(IEnumerable<int> roleIds, bool useScoreName)
 	{
 		List<CharacterData> list = this.CreateCharacterList(useScoreName);
@@ -407,7 +407,7 @@ public class MoonChasingBusinessModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06008812 RID: 34834 RVA: 0x001D08C0 File Offset: 0x001CEAC0
+	// Token: 0x06005BAD RID: 23469 RVA: 0x001D972C File Offset: 0x001D792C
 	public IInvestData GetInvestData(int invest)
 	{
 		TrackMoonEntrust valueOrDefault = ConfigTrackMoonEntrustById.GetConfig(this.GetResultData().EntrustId, true).GetValueOrDefault();
@@ -443,14 +443,14 @@ public class MoonChasingBusinessModel : ModelBase
 		};
 	}
 
-	// Token: 0x06008813 RID: 34835 RVA: 0x001D09DC File Offset: 0x001CEBDC
+	// Token: 0x06005BAE RID: 23470 RVA: 0x001D9848 File Offset: 0x001D7A48
 	public Popularity GetCurrentPopularityConfig()
 	{
 		int popularityValue = MoonChasingModel.Instance.GetPopularityValue();
 		return this.GetPopularityConfigByValue(popularityValue);
 	}
 
-	// Token: 0x06008814 RID: 34836 RVA: 0x001D09FC File Offset: 0x001CEBFC
+	// Token: 0x06005BAF RID: 23471 RVA: 0x001D9868 File Offset: 0x001D7A68
 	public Popularity? GetLastPopularityConfig()
 	{
 		Popularity? result = null;
@@ -471,7 +471,7 @@ public class MoonChasingBusinessModel : ModelBase
 		return result;
 	}
 
-	// Token: 0x06008815 RID: 34837 RVA: 0x001D0A54 File Offset: 0x001CEC54
+	// Token: 0x06005BB0 RID: 23472 RVA: 0x001D98C0 File Offset: 0x001D7AC0
 	public Popularity GetPopularityConfigByValue(int value)
 	{
 		IReadOnlyList<Popularity> configList = ConfigPopularityAll.GetConfigList(true);
@@ -490,7 +490,7 @@ public class MoonChasingBusinessModel : ModelBase
 		return configList[configList.Count - 1];
 	}
 
-	// Token: 0x06008816 RID: 34838 RVA: 0x001D0AB0 File Offset: 0x001CECB0
+	// Token: 0x06005BB1 RID: 23473 RVA: 0x001D991C File Offset: 0x001D7B1C
 	public void SetIsInDelegate(bool value)
 	{
 		this.IsInDelegateInternal = value;
@@ -500,8 +500,8 @@ public class MoonChasingBusinessModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000B9F RID: 2975
-	// (get) Token: 0x06008817 RID: 34839 RVA: 0x001D0ACC File Offset: 0x001CECCC
+	// Token: 0x17000BBF RID: 3007
+	// (get) Token: 0x06005BB2 RID: 23474 RVA: 0x001D9938 File Offset: 0x001D7B38
 	public static MoonChasingBusinessModel Instance
 	{
 		get
@@ -510,7 +510,7 @@ public class MoonChasingBusinessModel : ModelBase
 		}
 	}
 
-	// Token: 0x06008818 RID: 34840 RVA: 0x001D0AD3 File Offset: 0x001CECD3
+	// Token: 0x06005BB3 RID: 23475 RVA: 0x001D993F File Offset: 0x001D7B3F
 	public static MoonChasingBusinessModel GetOrCreateInstance()
 	{
 		if (MoonChasingBusinessModel._Instance == null)
@@ -520,7 +520,7 @@ public class MoonChasingBusinessModel : ModelBase
 		return MoonChasingBusinessModel._Instance;
 	}
 
-	// Token: 0x06008819 RID: 34841 RVA: 0x001D0AE7 File Offset: 0x001CECE7
+	// Token: 0x06005BB4 RID: 23476 RVA: 0x001D9953 File Offset: 0x001D7B53
 	public static bool CreateInstance()
 	{
 		if (MoonChasingBusinessModel._Instance != null)
@@ -531,39 +531,39 @@ public class MoonChasingBusinessModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0600881A RID: 34842 RVA: 0x001D0AFD File Offset: 0x001CECFD
+	// Token: 0x06005BB5 RID: 23477 RVA: 0x001D9969 File Offset: 0x001D7B69
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600881B RID: 34843 RVA: 0x001D0AFF File Offset: 0x001CECFF
+	// Token: 0x06005BB6 RID: 23478 RVA: 0x001D996B File Offset: 0x001D7B6B
 	public static void ResetStaticDefaultValue()
 	{
 		MoonChasingBusinessModel._Instance = null;
 	}
 
-	// Token: 0x0600881C RID: 34844 RVA: 0x001D0B07 File Offset: 0x001CED07
+	// Token: 0x06005BB7 RID: 23479 RVA: 0x001D9973 File Offset: 0x001D7B73
 	static MoonChasingBusinessModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(MoonChasingBusinessModel.CreateStaticDefaultValue), new Action(MoonChasingBusinessModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04003CAA RID: 15530
+	// Token: 0x04003D42 RID: 15682
 	private readonly Dictionary<int, DelegationData> DelegationDataMap = new Dictionary<int, DelegationData>();
 
-	// Token: 0x04003CAB RID: 15531
+	// Token: 0x04003D43 RID: 15683
 	private readonly Dictionary<int, EditTeamData> EditTeamDataMap = new Dictionary<int, EditTeamData>();
 
-	// Token: 0x04003CAC RID: 15532
+	// Token: 0x04003D44 RID: 15684
 	private DelegationResultData DelegationResultDataInternal;
 
-	// Token: 0x04003CAD RID: 15533
+	// Token: 0x04003D45 RID: 15685
 	private readonly List<int> UnlockRoleIdList = new List<int>();
 
-	// Token: 0x04003CAE RID: 15534
+	// Token: 0x04003D46 RID: 15686
 	private bool IsInDelegateInternal;
 
-	// Token: 0x04003CAF RID: 15535
+	// Token: 0x04003D47 RID: 15687
 	[Nullable(2)]
 	private static MoonChasingBusinessModel _Instance;
 }

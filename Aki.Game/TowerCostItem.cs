@@ -4,10 +4,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002BE2 RID: 11234
+// Token: 0x0200215D RID: 8541
 public class TowerCostItem : UiPanelBase
 {
-	// Token: 0x0601756B RID: 95595 RVA: 0x005EFA68 File Offset: 0x005EDC68
+	// Token: 0x06014F9C RID: 85916 RVA: 0x0061C5E4 File Offset: 0x0061A7E4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -21,7 +21,7 @@ public class TowerCostItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0601756C RID: 95596 RVA: 0x005EFAD4 File Offset: 0x005EDCD4
+	// Token: 0x06014F9D RID: 85917 RVA: 0x0061C650 File Offset: 0x0061A850
 	public void Update(int cost)
 	{
 		UUIText text = base.GetText(0);
@@ -31,12 +31,12 @@ public class TowerCostItem : UiPanelBase
 		base.GetItem(1).SetColor(fcolor.Value);
 	}
 
-	// Token: 0x0200919D RID: 37277
+	// Token: 0x020083E0 RID: 33760
 	private enum EChildType
 	{
-		// Token: 0x0402F1E8 RID: 193000
+		// Token: 0x0402A8EA RID: 174314
 		NumberText,
-		// Token: 0x0402F1E9 RID: 193001
+		// Token: 0x0402A8EB RID: 174315
 		IconItem
 	}
 }

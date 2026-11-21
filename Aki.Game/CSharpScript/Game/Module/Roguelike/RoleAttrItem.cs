@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E3D RID: 20029
+	// Token: 0x02003E06 RID: 15878
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,25 +17,25 @@ namespace CSharpScript.Game.Module.Roguelike
 	})]
 	public class RoleAttrItem : GridProxyAbstract<AffixEntry>
 	{
-		// Token: 0x17007ED3 RID: 32467
-		// (get) Token: 0x06033A2F RID: 211503 RVA: 0x00C15E44 File Offset: 0x00C14044
-		// (set) Token: 0x06033A30 RID: 211504 RVA: 0x00C15E4C File Offset: 0x00C1404C
+		// Token: 0x17005283 RID: 21123
+		// (get) Token: 0x0602889A RID: 166042 RVA: 0x00B5F36C File Offset: 0x00B5D56C
+		// (set) Token: 0x0602889B RID: 166043 RVA: 0x00B5F374 File Offset: 0x00B5D574
 		public AffixEntry AffixEntry { get; set; }
 
-		// Token: 0x06033A31 RID: 211505 RVA: 0x00C15E55 File Offset: 0x00C14055
+		// Token: 0x0602889C RID: 166044 RVA: 0x00B5F37D File Offset: 0x00B5D57D
 		public override void Refresh(AffixEntry data, bool isSelected, int gridIndex)
 		{
 			this.Update(data);
 		}
 
-		// Token: 0x06033A32 RID: 211506 RVA: 0x00C15E5E File Offset: 0x00C1405E
+		// Token: 0x0602889D RID: 166045 RVA: 0x00B5F386 File Offset: 0x00B5D586
 		public void Update(AffixEntry affixEntry)
 		{
 			this.AffixEntry = affixEntry;
 			this.RefreshPanel();
 		}
 
-		// Token: 0x06033A33 RID: 211507 RVA: 0x00C15E70 File Offset: 0x00C14070
+		// Token: 0x0602889E RID: 166046 RVA: 0x00B5F398 File Offset: 0x00B5D598
 		public void SetSecondColor()
 		{
 			UUIText text = base.GetText(0);
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			uuiitem.SetChangeColor(bUseChangeColor, fcolor);
 		}
 
-		// Token: 0x06033A34 RID: 211508 RVA: 0x00C15E9C File Offset: 0x00C1409C
+		// Token: 0x0602889F RID: 166047 RVA: 0x00B5F3C4 File Offset: 0x00B5D5C4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06033A35 RID: 211509 RVA: 0x00C15EE4 File Offset: 0x00C140E4
+		// Token: 0x060288A0 RID: 166048 RVA: 0x00B5F40C File Offset: 0x00B5D60C
 		public void RefreshPanel()
 		{
 			RogueCharacterBuff? rogueCharacterBuffConfig = RoguelikeConfig.Instance.GetRogueCharacterBuffConfig(this.AffixEntry.Id.Value);
@@ -76,11 +76,11 @@ namespace CSharpScript.Game.Module.Roguelike
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), rogueCharacterBuffConfig.Value.AffixDesc, rogueCharacterBuffConfig.Value.AffixDescParam());
 		}
 
-		// Token: 0x0200AFF6 RID: 45046
+		// Token: 0x02009A28 RID: 39464
 		[NullableContext(0)]
 		private class ERoleAttrItemCom
 		{
-			// Token: 0x040356BD RID: 218813
+			// Token: 0x040300ED RID: 196845
 			public const int DescText = 0;
 		}
 	}

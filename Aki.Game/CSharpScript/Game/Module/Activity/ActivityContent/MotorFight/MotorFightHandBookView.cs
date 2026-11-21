@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 {
-	// Token: 0x02006426 RID: 25638
+	// Token: 0x020053A4 RID: 21412
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorFightHandBookView : UiViewBase
 	{
-		// Token: 0x06040770 RID: 264048 RVA: 0x00F997FF File Offset: 0x00F979FF
+		// Token: 0x06035431 RID: 218161 RVA: 0x00EE079F File Offset: 0x00EDE99F
 		public MotorFightHandBookView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06040771 RID: 264049 RVA: 0x00F9981C File Offset: 0x00F97A1C
+		// Token: 0x06035432 RID: 218162 RVA: 0x00EE07BC File Offset: 0x00EDE9BC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06040772 RID: 264050 RVA: 0x00F9990C File Offset: 0x00F97B0C
+		// Token: 0x06035433 RID: 218163 RVA: 0x00EE08AC File Offset: 0x00EDEAAC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MotorFightHandBookView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040773 RID: 264051 RVA: 0x00F99950 File Offset: 0x00F97B50
+		// Token: 0x06035434 RID: 218164 RVA: 0x00EE08F0 File Offset: 0x00EDEAF0
 		private void InitScrollViewData()
 		{
 			foreach (MotorFightItemType data in this.MotorFightActivityData.GetMotorFightItemTypeList())
@@ -73,19 +73,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x06040774 RID: 264052 RVA: 0x00F99A60 File Offset: 0x00F97C60
+		// Token: 0x06035435 RID: 218165 RVA: 0x00EE0A00 File Offset: 0x00EDEC00
 		protected override void OnBeforeHide()
 		{
 			this.MotorFightActivityData.ReadHandBookRedDot();
 		}
 
-		// Token: 0x06040775 RID: 264053 RVA: 0x00F99A6D File Offset: 0x00F97C6D
+		// Token: 0x06035436 RID: 218166 RVA: 0x00EE0A0D File Offset: 0x00EDEC0D
 		private Tuple<int, int> GetUnlockNum(int type)
 		{
 			return this.MotorFightActivityData.GetItemUnlockNum(type);
 		}
 
-		// Token: 0x06040776 RID: 264054 RVA: 0x00F99A7C File Offset: 0x00F97C7C
+		// Token: 0x06035437 RID: 218167 RVA: 0x00EE0A1C File Offset: 0x00EDEC1C
 		private void OnItemClick(MotorFightItemData data, int index)
 		{
 			this.SelectedItemData = data;
@@ -100,63 +100,63 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			base.PlayOrReplaySequence("Switch", false, null);
 		}
 
-		// Token: 0x06040777 RID: 264055 RVA: 0x00F99ADD File Offset: 0x00F97CDD
+		// Token: 0x06035438 RID: 218168 RVA: 0x00EE0A7D File Offset: 0x00EDEC7D
 		private bool IsSelected(int id)
 		{
 			return this.SelectedItemData != null && this.SelectedItemData.Id == id;
 		}
 
-		// Token: 0x06040778 RID: 264056 RVA: 0x00F99AF7 File Offset: 0x00F97CF7
+		// Token: 0x06035439 RID: 218169 RVA: 0x00EE0A97 File Offset: 0x00EDEC97
 		private void OnCloseBtnClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x04021838 RID: 137272
+		// Token: 0x0401C167 RID: 115047
 		[Nullable(2)]
 		private MotorFightActivityData MotorFightActivityData;
 
-		// Token: 0x04021839 RID: 137273
+		// Token: 0x0401C168 RID: 115048
 		private int SelectedIndex = 1;
 
-		// Token: 0x0402183A RID: 137274
+		// Token: 0x0401C169 RID: 115049
 		private readonly List<IMultiTemplateGridData> ScrollDataList = new List<IMultiTemplateGridData>();
 
-		// Token: 0x0402183B RID: 137275
+		// Token: 0x0401C16A RID: 115050
 		private MotorFightItemDetailPanel DetailPanel;
 
-		// Token: 0x0402183C RID: 137276
+		// Token: 0x0401C16B RID: 115051
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0402183D RID: 137277
+		// Token: 0x0401C16C RID: 115052
 		[Nullable(2)]
 		private MotorFightItemData SelectedItemData;
 
-		// Token: 0x0402183E RID: 137278
+		// Token: 0x0401C16D RID: 115053
 		[Nullable(2)]
 		private MultiTemplateScrollView ItemMultiTemplateScrollView;
 
-		// Token: 0x0200C65A RID: 50778
+		// Token: 0x0200B041 RID: 45121
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403BE11 RID: 245265
+			// Token: 0x0403676E RID: 223086
 			public const int ItemCaption = 0;
 
-			// Token: 0x0403BE12 RID: 245266
+			// Token: 0x0403676F RID: 223087
 			public const int ItemDetailPanel = 1;
 
-			// Token: 0x0403BE13 RID: 245267
+			// Token: 0x04036770 RID: 223088
 			public const int MultiTemplateScrollView = 2;
 
-			// Token: 0x0403BE14 RID: 245268
+			// Token: 0x04036771 RID: 223089
 			public const int ItemTitle = 3;
 
-			// Token: 0x0403BE15 RID: 245269
+			// Token: 0x04036772 RID: 223090
 			public const int ItemGrid = 4;
 
-			// Token: 0x0403BE16 RID: 245270
+			// Token: 0x04036773 RID: 223091
 			public const int TextCollectNum = 5;
 		}
 	}

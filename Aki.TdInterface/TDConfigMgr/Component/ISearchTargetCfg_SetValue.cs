@@ -1,21 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006BD RID: 1725
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200075E RID: 1886
 	public class ISearchTargetCfg_SetValue
 	{
-		// Token: 0x0400195F RID: 6495
+		// Token: 0x04001B5E RID: 7006
 		public List<IEntityAngleWeight> AngleWeight;
 
-		// Token: 0x04001960 RID: 6496
+		// Token: 0x04001B5F RID: 7007
 		public List<IEntityCategoryWeight> LockConditions;
 
-		// Token: 0x04001961 RID: 6497
+		// Token: 0x04001B60 RID: 7008
 		public bool? IgnoreDistanceWeight;
 	}
 }

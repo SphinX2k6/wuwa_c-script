@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000462 RID: 1122
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020004BB RID: 1211
 	public class IInhaledPerResultType
 	{
-		// Token: 0x060016A7 RID: 5799 RVA: 0x000459DC File Offset: 0x00043BDC
+		// Token: 0x06001841 RID: 6209 RVA: 0x00049724 File Offset: 0x00047924
 		private IInhaledPerResultType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060016A8 RID: 5800 RVA: 0x00045A14 File Offset: 0x00043C14
+		// Token: 0x06001842 RID: 6210 RVA: 0x0004975C File Offset: 0x0004795C
 		public static IInhaledPerResultType Create([Nullable(2)] IInhaledPerResultType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060016A9 RID: 5801 RVA: 0x00045A27 File Offset: 0x00043C27
+		// Token: 0x06001843 RID: 6211 RVA: 0x0004976F File Offset: 0x0004796F
 		public static IInhaledPerResultType CreateFromSetValue([Nullable(2)] IInhaledPerResultType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060016AA RID: 5802 RVA: 0x00045A3A File Offset: 0x00043C3A
+		// Token: 0x06001844 RID: 6212 RVA: 0x00049782 File Offset: 0x00047982
 		public IInhaledPerResultType_SetValue ToSetValue()
 		{
 			return new IInhaledPerResultType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700061E RID: 1566
-		// (get) Token: 0x060016AB RID: 5803 RVA: 0x00045A4D File Offset: 0x00043C4D
-		// (set) Token: 0x060016AC RID: 5804 RVA: 0x00045A78 File Offset: 0x00043C78
+		// Token: 0x17000685 RID: 1669
+		// (get) Token: 0x06001845 RID: 6213 RVA: 0x00049795 File Offset: 0x00047995
+		// (set) Token: 0x06001846 RID: 6214 RVA: 0x000497C0 File Offset: 0x000479C0
 		public virtual EInhaledPerResultType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001137 RID: 4407
+		// Token: 0x04001259 RID: 4697
 		[Nullable(2)]
 		protected IInhaledPerResultType FbInstance;
 
-		// Token: 0x04001138 RID: 4408
+		// Token: 0x0400125A RID: 4698
 		[Nullable(2)]
 		protected IInhaledPerResultType_SetValue PocoInterface;
 	}

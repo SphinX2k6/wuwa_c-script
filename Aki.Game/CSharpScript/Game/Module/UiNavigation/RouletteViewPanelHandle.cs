@@ -1,21 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004903 RID: 18691
+	// Token: 0x0200387A RID: 14458
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RouletteViewPanelHandle : SpecialPanelHandleBase
 	{
-		// Token: 0x06030DCF RID: 200143 RVA: 0x00B59150 File Offset: 0x00B57350
+		// Token: 0x060258FC RID: 153852 RVA: 0x00A93FC0 File Offset: 0x00A921C0
 		public RouletteViewPanelHandle(string type) : base(type)
 		{
 		}
 
-		// Token: 0x06030DD0 RID: 200144 RVA: 0x00B5915C File Offset: 0x00B5735C
+		// Token: 0x060258FD RID: 153853 RVA: 0x00A93FCC File Offset: 0x00A921CC
 		protected override List<TsUiNavigationBehaviorListener> OnGetSuitableNavigationListenerList(bool isDefault)
 		{
 			if (isDefault)
@@ -35,7 +34,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 			if (this.ChangeListenerList == null)
 			{
-				this.ChangeListenerList = this.DefaultNavigationListener.ToList<TsUiNavigationBehaviorListener>();
+				this.ChangeListenerList = new List<TsUiNavigationBehaviorListener>(this.DefaultNavigationListener);
 				if (this.ChangeListenerList.Count >= 2)
 				{
 					List<TsUiNavigationBehaviorListener> changeListenerList = this.ChangeListenerList;
@@ -49,7 +48,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			return this.ChangeListenerList;
 		}
 
-		// Token: 0x0401A3C5 RID: 107461
+		// Token: 0x04014C38 RID: 85048
 		[Nullable(new byte[]
 		{
 			2,

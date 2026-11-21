@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005B3E RID: 23358
+	// Token: 0x02006154 RID: 24916
 	public struct IVisionComponent : IFlatbufferObject
 	{
-		// Token: 0x1700B048 RID: 45128
-		// (get) Token: 0x06027EC8 RID: 163528 RVA: 0x0057D510 File Offset: 0x0057B710
+		// Token: 0x1700B990 RID: 47504
+		// (get) Token: 0x0602A48C RID: 173196 RVA: 0x005C4FA0 File Offset: 0x005C31A0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027EC9 RID: 163529 RVA: 0x0057D51D File Offset: 0x0057B71D
+		// Token: 0x0602A48D RID: 173197 RVA: 0x005C4FAD File Offset: 0x005C31AD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06027ECA RID: 163530 RVA: 0x0057D524 File Offset: 0x0057B724
+		// Token: 0x0602A48E RID: 173198 RVA: 0x005C4FB4 File Offset: 0x005C31B4
 		public static IVisionComponent GetRootAsIVisionComponent(ByteBuffer _bb)
 		{
 			return IVisionComponent.GetRootAsIVisionComponent(_bb, default(IVisionComponent));
 		}
 
-		// Token: 0x06027ECB RID: 163531 RVA: 0x0057D540 File Offset: 0x0057B740
+		// Token: 0x0602A48F RID: 173199 RVA: 0x005C4FD0 File Offset: 0x005C31D0
 		public static IVisionComponent GetRootAsIVisionComponent(ByteBuffer _bb, IVisionComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06027ECC RID: 163532 RVA: 0x0057D55D File Offset: 0x0057B75D
+		// Token: 0x0602A490 RID: 173200 RVA: 0x005C4FED File Offset: 0x005C31ED
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06027ECD RID: 163533 RVA: 0x0057D56C File Offset: 0x0057B76C
+		// Token: 0x0602A491 RID: 173201 RVA: 0x005C4FFC File Offset: 0x005C31FC
 		public IVisionComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B049 RID: 45129
-		// (get) Token: 0x06027ECE RID: 163534 RVA: 0x0057D57C File Offset: 0x0057B77C
+		// Token: 0x1700B991 RID: 47505
+		// (get) Token: 0x0602A492 RID: 173202 RVA: 0x005C500C File Offset: 0x005C320C
 		public bool Disabled
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700B04A RID: 45130
-		// (get) Token: 0x06027ECF RID: 163535 RVA: 0x0057D5BC File Offset: 0x0057B7BC
+		// Token: 0x1700B992 RID: 47506
+		// (get) Token: 0x0602A493 RID: 173203 RVA: 0x005C504C File Offset: 0x005C324C
 		public int VisionId
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700B04B RID: 45131
-		// (get) Token: 0x06027ED0 RID: 163536 RVA: 0x0057D5F8 File Offset: 0x0057B7F8
+		// Token: 0x1700B993 RID: 47507
+		// (get) Token: 0x0602A494 RID: 173204 RVA: 0x005C5088 File Offset: 0x005C3288
 		public byte NullMask
 		{
 			get
@@ -88,7 +88,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027ED1 RID: 163537 RVA: 0x0057D634 File Offset: 0x0057B834
+		// Token: 0x0602A495 RID: 173205 RVA: 0x005C50C4 File Offset: 0x005C32C4
 		public static Offset<IVisionComponent> CreateIVisionComponent(FlatBufferBuilder builder, bool Disabled = false, int VisionId = 0, byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -98,37 +98,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IVisionComponent.EndIVisionComponent(builder);
 		}
 
-		// Token: 0x06027ED2 RID: 163538 RVA: 0x0057D658 File Offset: 0x0057B858
+		// Token: 0x0602A496 RID: 173206 RVA: 0x005C50E8 File Offset: 0x005C32E8
 		public static void StartIVisionComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06027ED3 RID: 163539 RVA: 0x0057D661 File Offset: 0x0057B861
+		// Token: 0x0602A497 RID: 173207 RVA: 0x005C50F1 File Offset: 0x005C32F1
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x06027ED4 RID: 163540 RVA: 0x0057D66C File Offset: 0x0057B86C
+		// Token: 0x0602A498 RID: 173208 RVA: 0x005C50FC File Offset: 0x005C32FC
 		public static void AddVisionId(FlatBufferBuilder builder, int visionId)
 		{
 			builder.AddInt(1, visionId, 0);
 		}
 
-		// Token: 0x06027ED5 RID: 163541 RVA: 0x0057D677 File Offset: 0x0057B877
+		// Token: 0x0602A499 RID: 173209 RVA: 0x005C5107 File Offset: 0x005C3307
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x06027ED6 RID: 163542 RVA: 0x0057D682 File Offset: 0x0057B882
+		// Token: 0x0602A49A RID: 173210 RVA: 0x005C5112 File Offset: 0x005C3312
 		public static Offset<IVisionComponent> EndIVisionComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<IVisionComponent>(builder.EndTable());
 		}
 
-		// Token: 0x06027ED7 RID: 163543 RVA: 0x0057D690 File Offset: 0x0057B890
+		// Token: 0x0602A49B RID: 173211 RVA: 0x005C5120 File Offset: 0x005C3320
 		public IVisionComponentT UnPack()
 		{
 			IVisionComponentT visionComponentT = new IVisionComponentT();
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return visionComponentT;
 		}
 
-		// Token: 0x06027ED8 RID: 163544 RVA: 0x0057D6AB File Offset: 0x0057B8AB
+		// Token: 0x0602A49C RID: 173212 RVA: 0x005C513B File Offset: 0x005C333B
 		public void UnPackTo(IVisionComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06027ED9 RID: 163545 RVA: 0x0057D6D4 File Offset: 0x0057B8D4
+		// Token: 0x0602A49D RID: 173213 RVA: 0x005C5164 File Offset: 0x005C3364
 		public static Offset<IVisionComponent> Pack(FlatBufferBuilder builder, IVisionComponentT _o)
 		{
 			if (_o == null)
@@ -154,7 +154,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IVisionComponent.CreateIVisionComponent(builder, _o.Disabled, _o.VisionId, _o.NullMask);
 		}
 
-		// Token: 0x0400F26A RID: 62058
+		// Token: 0x0400FF70 RID: 65392
 		private Table __p;
 	}
 }

@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 {
-	// Token: 0x0200640E RID: 25614
+	// Token: 0x0200538C RID: 21388
 	[Nullable(new byte[]
 	{
 		0,
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 	})]
 	public class MotorFightDetailAttrItem : GridProxyAbstract<MotorFightDetailAttrDetailData>
 	{
-		// Token: 0x060406DB RID: 263899 RVA: 0x00F95C48 File Offset: 0x00F93E48
+		// Token: 0x0603539C RID: 218012 RVA: 0x00EDCBE8 File Offset: 0x00EDADE8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060406DC RID: 263900 RVA: 0x00F95D94 File Offset: 0x00F93F94
+		// Token: 0x0603539D RID: 218013 RVA: 0x00EDCD34 File Offset: 0x00EDAF34
 		protected override void OnStart()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			base.GetItem(5).SetUIActive(false);
 		}
 
-		// Token: 0x060406DD RID: 263901 RVA: 0x00F95DE8 File Offset: 0x00F93FE8
+		// Token: 0x0603539E RID: 218014 RVA: 0x00EDCD88 File Offset: 0x00EDAF88
 		[NullableContext(1)]
 		public override void Refresh(MotorFightDetailAttrDetailData data, bool isSelected, int gridIndex)
 		{
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x060406DE RID: 263902 RVA: 0x00F95FE8 File Offset: 0x00F941E8
+		// Token: 0x0603539F RID: 218015 RVA: 0x00EDCF88 File Offset: 0x00EDB188
 		protected override void OnBeforeDestroy()
 		{
 			if (this.LevelSequencePlayer != null)
@@ -145,13 +145,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x060406DF RID: 263903 RVA: 0x00F96004 File Offset: 0x00F94204
+		// Token: 0x060353A0 RID: 218016 RVA: 0x00EDCFA4 File Offset: 0x00EDB1A4
 		private bool CanClickToggle()
 		{
 			return !StringUtils.IsEmpty(this.Config.Desc);
 		}
 
-		// Token: 0x060406E0 RID: 263904 RVA: 0x00F9601C File Offset: 0x00F9421C
+		// Token: 0x060353A1 RID: 218017 RVA: 0x00EDCFBC File Offset: 0x00EDB1BC
 		protected void OnToggleClick(EToggleState bState)
 		{
 			bool flag = bState == EToggleState.ETT_Checked;
@@ -164,35 +164,35 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x04021802 RID: 137218
+		// Token: 0x0401C131 RID: 114993
 		private MotorFightAttrShow Config;
 
-		// Token: 0x04021803 RID: 137219
+		// Token: 0x0401C132 RID: 114994
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200C630 RID: 50736
+		// Token: 0x0200B017 RID: 45079
 		private class EComponent
 		{
-			// Token: 0x0403BD55 RID: 245077
+			// Token: 0x040366B2 RID: 222898
 			public const int ToggleBase = 0;
 
-			// Token: 0x0403BD56 RID: 245078
+			// Token: 0x040366B3 RID: 222899
 			public const int SpriteBg = 1;
 
-			// Token: 0x0403BD57 RID: 245079
+			// Token: 0x040366B4 RID: 222900
 			public const int TextAttrName = 2;
 
-			// Token: 0x0403BD58 RID: 245080
+			// Token: 0x040366B5 RID: 222901
 			public const int TextValue = 3;
 
-			// Token: 0x0403BD59 RID: 245081
+			// Token: 0x040366B6 RID: 222902
 			public const int SpriteArrow = 4;
 
-			// Token: 0x0403BD5A RID: 245082
+			// Token: 0x040366B7 RID: 222903
 			public const int ItemDescPanel = 5;
 
-			// Token: 0x0403BD5B RID: 245083
+			// Token: 0x040366B8 RID: 222904
 			public const int TextDesc = 6;
 		}
 	}

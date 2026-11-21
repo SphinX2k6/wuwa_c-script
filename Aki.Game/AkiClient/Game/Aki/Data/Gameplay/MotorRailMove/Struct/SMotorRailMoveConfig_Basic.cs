@@ -6,52 +6,52 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Data.Gameplay.MotorRailMove.Struct
 {
-	// Token: 0x02003F3A RID: 16186
+	// Token: 0x020031E6 RID: 12774
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Data/Gameplay/MotorRailMove/Struct/SMotorRailMoveConfig_Basic.SMotorRailMoveConfig_Basic")]
 	[UnrealStructLayout(816, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 816)]
 	public class SMotorRailMoveConfig_Basic : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x060292FA RID: 168698 RVA: 0x009BDE4B File Offset: 0x009BC04B
+		// Token: 0x0601FC25 RID: 130085 RVA: 0x0093507D File Offset: 0x0093327D
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SMotorRailMoveConfig_Basic._ScriptStructPtr != 0) ? SMotorRailMoveConfig_Basic._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Data/Gameplay/MotorRailMove/Struct/SMotorRailMoveConfig_Basic.SMotorRailMoveConfig_Basic", ref SMotorRailMoveConfig_Basic._ScriptStructPtr);
 		}
 
-		// Token: 0x170061FE RID: 25086
-		// (get) Token: 0x060292FB RID: 168699 RVA: 0x009BDE6F File Offset: 0x009BC06F
-		// (set) Token: 0x060292FC RID: 168700 RVA: 0x009BDE7F File Offset: 0x009BC07F
+		// Token: 0x17003B5A RID: 15194
+		// (get) Token: 0x0601FC26 RID: 130086 RVA: 0x009350A1 File Offset: 0x009332A1
+		// (set) Token: 0x0601FC27 RID: 130087 RVA: 0x009350B1 File Offset: 0x009332B1
 		public unsafe float MaxDeltaTimeForMoveUpdate
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SMotorRailMoveConfig_Basic.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)SMotorRailMoveConfig_Basic.__PropertyOffset_MaxDeltaTimeForMoveUpdate);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SMotorRailMoveConfig_Basic.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)SMotorRailMoveConfig_Basic.__PropertyOffset_MaxDeltaTimeForMoveUpdate) = value;
 			}
 		}
 
-		// Token: 0x170061FF RID: 25087
-		// (get) Token: 0x060292FD RID: 168701 RVA: 0x009BDE90 File Offset: 0x009BC090
-		// (set) Token: 0x060292FE RID: 168702 RVA: 0x009BDEA0 File Offset: 0x009BC0A0
+		// Token: 0x17003B5B RID: 15195
+		// (get) Token: 0x0601FC28 RID: 130088 RVA: 0x009350C2 File Offset: 0x009332C2
+		// (set) Token: 0x0601FC29 RID: 130089 RVA: 0x009350D2 File Offset: 0x009332D2
 		public unsafe float DefaultMoveSpeed
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SMotorRailMoveConfig_Basic.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)SMotorRailMoveConfig_Basic.__PropertyOffset_DefaultMoveSpeed);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SMotorRailMoveConfig_Basic.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)SMotorRailMoveConfig_Basic.__PropertyOffset_DefaultMoveSpeed) = value;
 			}
 		}
 
-		// Token: 0x17006200 RID: 25088
-		// (get) Token: 0x060292FF RID: 168703 RVA: 0x009BDEB4 File Offset: 0x009BC0B4
-		// (set) Token: 0x06029300 RID: 168704 RVA: 0x009BDEF7 File Offset: 0x009BC0F7
+		// Token: 0x17003B5C RID: 15196
+		// (get) Token: 0x0601FC2A RID: 130090 RVA: 0x009350E4 File Offset: 0x009332E4
+		// (set) Token: 0x0601FC2B RID: 130091 RVA: 0x00935127 File Offset: 0x00933327
 		public TSet<int> AllowUseSkillIds
 		{
 			get
@@ -60,7 +60,7 @@ namespace AkiClient.Game.Aki.Data.Gameplay.MotorRailMove.Struct
 				TSet<int> result;
 				if ((result = this._AllowUseSkillIds) == null)
 				{
-					result = (this._AllowUseSkillIds = new TSet<int>(base.NativePtr + (IntPtr)SMotorRailMoveConfig_Basic.__PropertyOffset_2, base.MemoryOwner ?? this));
+					result = (this._AllowUseSkillIds = new TSet<int>(base.NativePtr + (IntPtr)SMotorRailMoveConfig_Basic.__PropertyOffset_AllowUseSkillIds, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -70,39 +70,39 @@ namespace AkiClient.Game.Aki.Data.Gameplay.MotorRailMove.Struct
 			}
 		}
 
-		// Token: 0x17006201 RID: 25089
-		// (get) Token: 0x06029301 RID: 168705 RVA: 0x009BDF05 File Offset: 0x009BC105
-		// (set) Token: 0x06029302 RID: 168706 RVA: 0x009BDF15 File Offset: 0x009BC115
+		// Token: 0x17003B5D RID: 15197
+		// (get) Token: 0x0601FC2C RID: 130092 RVA: 0x00935135 File Offset: 0x00933335
+		// (set) Token: 0x0601FC2D RID: 130093 RVA: 0x00935145 File Offset: 0x00933345
 		public unsafe float AutoEnterRailCdAfterLeaveRailMove
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SMotorRailMoveConfig_Basic.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)SMotorRailMoveConfig_Basic.__PropertyOffset_AutoEnterRailCdAfterLeaveRailMove);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SMotorRailMoveConfig_Basic.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)SMotorRailMoveConfig_Basic.__PropertyOffset_AutoEnterRailCdAfterLeaveRailMove) = value;
 			}
 		}
 
-		// Token: 0x17006202 RID: 25090
-		// (get) Token: 0x06029303 RID: 168707 RVA: 0x009BDF26 File Offset: 0x009BC126
-		// (set) Token: 0x06029304 RID: 168708 RVA: 0x009BDF36 File Offset: 0x009BC136
+		// Token: 0x17003B5E RID: 15198
+		// (get) Token: 0x0601FC2E RID: 130094 RVA: 0x00935156 File Offset: 0x00933356
+		// (set) Token: 0x0601FC2F RID: 130095 RVA: 0x00935166 File Offset: 0x00933366
 		public unsafe float AutoEnterRailCdAfterLeaveRail
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SMotorRailMoveConfig_Basic.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)SMotorRailMoveConfig_Basic.__PropertyOffset_AutoEnterRailCdAfterLeaveRail);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SMotorRailMoveConfig_Basic.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)SMotorRailMoveConfig_Basic.__PropertyOffset_AutoEnterRailCdAfterLeaveRail) = value;
 			}
 		}
 
-		// Token: 0x17006203 RID: 25091
-		// (get) Token: 0x06029305 RID: 168709 RVA: 0x009BDF48 File Offset: 0x009BC148
-		// (set) Token: 0x06029306 RID: 168710 RVA: 0x009BDF8B File Offset: 0x009BC18B
+		// Token: 0x17003B5F RID: 15199
+		// (get) Token: 0x0601FC30 RID: 130096 RVA: 0x00935178 File Offset: 0x00933378
+		// (set) Token: 0x0601FC31 RID: 130097 RVA: 0x009351BB File Offset: 0x009333BB
 		public TMap<FGameplayTag, SMotorRailMove_EventHandler> ClientEventHandlers
 		{
 			get
@@ -111,7 +111,7 @@ namespace AkiClient.Game.Aki.Data.Gameplay.MotorRailMove.Struct
 				TMap<FGameplayTag, SMotorRailMove_EventHandler> result;
 				if ((result = this._ClientEventHandlers) == null)
 				{
-					result = (this._ClientEventHandlers = new TMap<FGameplayTag, SMotorRailMove_EventHandler>(base.NativePtr + (IntPtr)SMotorRailMoveConfig_Basic.__PropertyOffset_5, base.MemoryOwner ?? this));
+					result = (this._ClientEventHandlers = new TMap<FGameplayTag, SMotorRailMove_EventHandler>(base.NativePtr + (IntPtr)SMotorRailMoveConfig_Basic.__PropertyOffset_ClientEventHandlers, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -121,9 +121,9 @@ namespace AkiClient.Game.Aki.Data.Gameplay.MotorRailMove.Struct
 			}
 		}
 
-		// Token: 0x17006204 RID: 25092
-		// (get) Token: 0x06029307 RID: 168711 RVA: 0x009BDF9C File Offset: 0x009BC19C
-		// (set) Token: 0x06029308 RID: 168712 RVA: 0x009BDFDF File Offset: 0x009BC1DF
+		// Token: 0x17003B60 RID: 15200
+		// (get) Token: 0x0601FC32 RID: 130098 RVA: 0x009351CC File Offset: 0x009333CC
+		// (set) Token: 0x0601FC33 RID: 130099 RVA: 0x0093520F File Offset: 0x0093340F
 		public TMap<FGameplayTag, bool> ModifyVehicleTagsOnEnterRail
 		{
 			get
@@ -132,7 +132,7 @@ namespace AkiClient.Game.Aki.Data.Gameplay.MotorRailMove.Struct
 				TMap<FGameplayTag, bool> result;
 				if ((result = this._ModifyVehicleTagsOnEnterRail) == null)
 				{
-					result = (this._ModifyVehicleTagsOnEnterRail = new TMap<FGameplayTag, bool>(base.NativePtr + (IntPtr)SMotorRailMoveConfig_Basic.__PropertyOffset_6, base.MemoryOwner ?? this));
+					result = (this._ModifyVehicleTagsOnEnterRail = new TMap<FGameplayTag, bool>(base.NativePtr + (IntPtr)SMotorRailMoveConfig_Basic.__PropertyOffset_ModifyVehicleTagsOnEnterRail, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -142,9 +142,9 @@ namespace AkiClient.Game.Aki.Data.Gameplay.MotorRailMove.Struct
 			}
 		}
 
-		// Token: 0x17006205 RID: 25093
-		// (get) Token: 0x06029309 RID: 168713 RVA: 0x009BDFF0 File Offset: 0x009BC1F0
-		// (set) Token: 0x0602930A RID: 168714 RVA: 0x009BE033 File Offset: 0x009BC233
+		// Token: 0x17003B61 RID: 15201
+		// (get) Token: 0x0601FC34 RID: 130100 RVA: 0x00935220 File Offset: 0x00933420
+		// (set) Token: 0x0601FC35 RID: 130101 RVA: 0x00935263 File Offset: 0x00933463
 		public TMap<FGameplayTag, bool> ModifyVehicleTagsOnLeaveRail
 		{
 			get
@@ -153,7 +153,7 @@ namespace AkiClient.Game.Aki.Data.Gameplay.MotorRailMove.Struct
 				TMap<FGameplayTag, bool> result;
 				if ((result = this._ModifyVehicleTagsOnLeaveRail) == null)
 				{
-					result = (this._ModifyVehicleTagsOnLeaveRail = new TMap<FGameplayTag, bool>(base.NativePtr + (IntPtr)SMotorRailMoveConfig_Basic.__PropertyOffset_7, base.MemoryOwner ?? this));
+					result = (this._ModifyVehicleTagsOnLeaveRail = new TMap<FGameplayTag, bool>(base.NativePtr + (IntPtr)SMotorRailMoveConfig_Basic.__PropertyOffset_ModifyVehicleTagsOnLeaveRail, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -163,9 +163,9 @@ namespace AkiClient.Game.Aki.Data.Gameplay.MotorRailMove.Struct
 			}
 		}
 
-		// Token: 0x17006206 RID: 25094
-		// (get) Token: 0x0602930B RID: 168715 RVA: 0x009BE044 File Offset: 0x009BC244
-		// (set) Token: 0x0602930C RID: 168716 RVA: 0x009BE087 File Offset: 0x009BC287
+		// Token: 0x17003B62 RID: 15202
+		// (get) Token: 0x0601FC36 RID: 130102 RVA: 0x00935274 File Offset: 0x00933474
+		// (set) Token: 0x0601FC37 RID: 130103 RVA: 0x009352B7 File Offset: 0x009334B7
 		public TMap<long, bool> ModifyVehicleBuffsOnEnterRail
 		{
 			get
@@ -174,7 +174,7 @@ namespace AkiClient.Game.Aki.Data.Gameplay.MotorRailMove.Struct
 				TMap<long, bool> result;
 				if ((result = this._ModifyVehicleBuffsOnEnterRail) == null)
 				{
-					result = (this._ModifyVehicleBuffsOnEnterRail = new TMap<long, bool>(base.NativePtr + (IntPtr)SMotorRailMoveConfig_Basic.__PropertyOffset_8, base.MemoryOwner ?? this));
+					result = (this._ModifyVehicleBuffsOnEnterRail = new TMap<long, bool>(base.NativePtr + (IntPtr)SMotorRailMoveConfig_Basic.__PropertyOffset_ModifyVehicleBuffsOnEnterRail, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -184,9 +184,9 @@ namespace AkiClient.Game.Aki.Data.Gameplay.MotorRailMove.Struct
 			}
 		}
 
-		// Token: 0x17006207 RID: 25095
-		// (get) Token: 0x0602930D RID: 168717 RVA: 0x009BE098 File Offset: 0x009BC298
-		// (set) Token: 0x0602930E RID: 168718 RVA: 0x009BE0DB File Offset: 0x009BC2DB
+		// Token: 0x17003B63 RID: 15203
+		// (get) Token: 0x0601FC38 RID: 130104 RVA: 0x009352C8 File Offset: 0x009334C8
+		// (set) Token: 0x0601FC39 RID: 130105 RVA: 0x0093530B File Offset: 0x0093350B
 		public TMap<long, bool> ModifyVehicleBuffsOnLeaveRail
 		{
 			get
@@ -195,7 +195,7 @@ namespace AkiClient.Game.Aki.Data.Gameplay.MotorRailMove.Struct
 				TMap<long, bool> result;
 				if ((result = this._ModifyVehicleBuffsOnLeaveRail) == null)
 				{
-					result = (this._ModifyVehicleBuffsOnLeaveRail = new TMap<long, bool>(base.NativePtr + (IntPtr)SMotorRailMoveConfig_Basic.__PropertyOffset_9, base.MemoryOwner ?? this));
+					result = (this._ModifyVehicleBuffsOnLeaveRail = new TMap<long, bool>(base.NativePtr + (IntPtr)SMotorRailMoveConfig_Basic.__PropertyOffset_ModifyVehicleBuffsOnLeaveRail, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -205,9 +205,9 @@ namespace AkiClient.Game.Aki.Data.Gameplay.MotorRailMove.Struct
 			}
 		}
 
-		// Token: 0x17006208 RID: 25096
-		// (get) Token: 0x0602930F RID: 168719 RVA: 0x009BE0EC File Offset: 0x009BC2EC
-		// (set) Token: 0x06029310 RID: 168720 RVA: 0x009BE12F File Offset: 0x009BC32F
+		// Token: 0x17003B64 RID: 15204
+		// (get) Token: 0x0601FC3A RID: 130106 RVA: 0x0093531C File Offset: 0x0093351C
+		// (set) Token: 0x0601FC3B RID: 130107 RVA: 0x0093535F File Offset: 0x0093355F
 		public TMap<FGameplayTag, bool> ModifyDriverPlayerTagsOnEnterRail
 		{
 			get
@@ -216,7 +216,7 @@ namespace AkiClient.Game.Aki.Data.Gameplay.MotorRailMove.Struct
 				TMap<FGameplayTag, bool> result;
 				if ((result = this._ModifyDriverPlayerTagsOnEnterRail) == null)
 				{
-					result = (this._ModifyDriverPlayerTagsOnEnterRail = new TMap<FGameplayTag, bool>(base.NativePtr + (IntPtr)SMotorRailMoveConfig_Basic.__PropertyOffset_10, base.MemoryOwner ?? this));
+					result = (this._ModifyDriverPlayerTagsOnEnterRail = new TMap<FGameplayTag, bool>(base.NativePtr + (IntPtr)SMotorRailMoveConfig_Basic.__PropertyOffset_ModifyDriverPlayerTagsOnEnterRail, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -226,9 +226,9 @@ namespace AkiClient.Game.Aki.Data.Gameplay.MotorRailMove.Struct
 			}
 		}
 
-		// Token: 0x17006209 RID: 25097
-		// (get) Token: 0x06029311 RID: 168721 RVA: 0x009BE140 File Offset: 0x009BC340
-		// (set) Token: 0x06029312 RID: 168722 RVA: 0x009BE183 File Offset: 0x009BC383
+		// Token: 0x17003B65 RID: 15205
+		// (get) Token: 0x0601FC3C RID: 130108 RVA: 0x00935370 File Offset: 0x00933570
+		// (set) Token: 0x0601FC3D RID: 130109 RVA: 0x009353B3 File Offset: 0x009335B3
 		public TMap<FGameplayTag, bool> ModifyDriverPlayerTagsOnLeaveRail
 		{
 			get
@@ -237,7 +237,7 @@ namespace AkiClient.Game.Aki.Data.Gameplay.MotorRailMove.Struct
 				TMap<FGameplayTag, bool> result;
 				if ((result = this._ModifyDriverPlayerTagsOnLeaveRail) == null)
 				{
-					result = (this._ModifyDriverPlayerTagsOnLeaveRail = new TMap<FGameplayTag, bool>(base.NativePtr + (IntPtr)SMotorRailMoveConfig_Basic.__PropertyOffset_11, base.MemoryOwner ?? this));
+					result = (this._ModifyDriverPlayerTagsOnLeaveRail = new TMap<FGameplayTag, bool>(base.NativePtr + (IntPtr)SMotorRailMoveConfig_Basic.__PropertyOffset_ModifyDriverPlayerTagsOnLeaveRail, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -247,9 +247,9 @@ namespace AkiClient.Game.Aki.Data.Gameplay.MotorRailMove.Struct
 			}
 		}
 
-		// Token: 0x1700620A RID: 25098
-		// (get) Token: 0x06029313 RID: 168723 RVA: 0x009BE194 File Offset: 0x009BC394
-		// (set) Token: 0x06029314 RID: 168724 RVA: 0x009BE1D7 File Offset: 0x009BC3D7
+		// Token: 0x17003B66 RID: 15206
+		// (get) Token: 0x0601FC3E RID: 130110 RVA: 0x009353C4 File Offset: 0x009335C4
+		// (set) Token: 0x0601FC3F RID: 130111 RVA: 0x00935407 File Offset: 0x00933607
 		public TMap<long, bool> ModifyDriverBuffsOnEnterRail
 		{
 			get
@@ -258,7 +258,7 @@ namespace AkiClient.Game.Aki.Data.Gameplay.MotorRailMove.Struct
 				TMap<long, bool> result;
 				if ((result = this._ModifyDriverBuffsOnEnterRail) == null)
 				{
-					result = (this._ModifyDriverBuffsOnEnterRail = new TMap<long, bool>(base.NativePtr + (IntPtr)SMotorRailMoveConfig_Basic.__PropertyOffset_12, base.MemoryOwner ?? this));
+					result = (this._ModifyDriverBuffsOnEnterRail = new TMap<long, bool>(base.NativePtr + (IntPtr)SMotorRailMoveConfig_Basic.__PropertyOffset_ModifyDriverBuffsOnEnterRail, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -268,9 +268,9 @@ namespace AkiClient.Game.Aki.Data.Gameplay.MotorRailMove.Struct
 			}
 		}
 
-		// Token: 0x1700620B RID: 25099
-		// (get) Token: 0x06029315 RID: 168725 RVA: 0x009BE1E8 File Offset: 0x009BC3E8
-		// (set) Token: 0x06029316 RID: 168726 RVA: 0x009BE22B File Offset: 0x009BC42B
+		// Token: 0x17003B67 RID: 15207
+		// (get) Token: 0x0601FC40 RID: 130112 RVA: 0x00935418 File Offset: 0x00933618
+		// (set) Token: 0x0601FC41 RID: 130113 RVA: 0x0093545B File Offset: 0x0093365B
 		public TMap<long, bool> ModifyDriverBuffsOnLeaveRail
 		{
 			get
@@ -279,7 +279,7 @@ namespace AkiClient.Game.Aki.Data.Gameplay.MotorRailMove.Struct
 				TMap<long, bool> result;
 				if ((result = this._ModifyDriverBuffsOnLeaveRail) == null)
 				{
-					result = (this._ModifyDriverBuffsOnLeaveRail = new TMap<long, bool>(base.NativePtr + (IntPtr)SMotorRailMoveConfig_Basic.__PropertyOffset_13, base.MemoryOwner ?? this));
+					result = (this._ModifyDriverBuffsOnLeaveRail = new TMap<long, bool>(base.NativePtr + (IntPtr)SMotorRailMoveConfig_Basic.__PropertyOffset_ModifyDriverBuffsOnLeaveRail, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -289,88 +289,69 @@ namespace AkiClient.Game.Aki.Data.Gameplay.MotorRailMove.Struct
 			}
 		}
 
-		// Token: 0x06029317 RID: 168727 RVA: 0x009BE239 File Offset: 0x009BC439
+		// Token: 0x0601FC42 RID: 130114 RVA: 0x00935469 File Offset: 0x00933669
 		public SMotorRailMoveConfig_Basic()
 		{
 		}
 
-		// Token: 0x06029318 RID: 168728 RVA: 0x009BE244 File Offset: 0x009BC444
-		public SMotorRailMoveConfig_Basic(float MaxDeltaTimeForMoveUpdate, float DefaultMoveSpeed, TSet<int> AllowUseSkillIds, float AutoEnterRailCdAfterLeaveRailMove, float AutoEnterRailCdAfterLeaveRail, TMap<FGameplayTag, SMotorRailMove_EventHandler> ClientEventHandlers, TMap<FGameplayTag, bool> ModifyVehicleTagsOnEnterRail, TMap<FGameplayTag, bool> ModifyVehicleTagsOnLeaveRail, TMap<long, bool> ModifyVehicleBuffsOnEnterRail, TMap<long, bool> ModifyVehicleBuffsOnLeaveRail, TMap<FGameplayTag, bool> ModifyDriverPlayerTagsOnEnterRail, TMap<FGameplayTag, bool> ModifyDriverPlayerTagsOnLeaveRail, TMap<long, bool> ModifyDriverBuffsOnEnterRail, TMap<long, bool> ModifyDriverBuffsOnLeaveRail)
-		{
-			this.MaxDeltaTimeForMoveUpdate = MaxDeltaTimeForMoveUpdate;
-			this.DefaultMoveSpeed = DefaultMoveSpeed;
-			this.AllowUseSkillIds = AllowUseSkillIds;
-			this.AutoEnterRailCdAfterLeaveRailMove = AutoEnterRailCdAfterLeaveRailMove;
-			this.AutoEnterRailCdAfterLeaveRail = AutoEnterRailCdAfterLeaveRail;
-			this.ClientEventHandlers = ClientEventHandlers;
-			this.ModifyVehicleTagsOnEnterRail = ModifyVehicleTagsOnEnterRail;
-			this.ModifyVehicleTagsOnLeaveRail = ModifyVehicleTagsOnLeaveRail;
-			this.ModifyVehicleBuffsOnEnterRail = ModifyVehicleBuffsOnEnterRail;
-			this.ModifyVehicleBuffsOnLeaveRail = ModifyVehicleBuffsOnLeaveRail;
-			this.ModifyDriverPlayerTagsOnEnterRail = ModifyDriverPlayerTagsOnEnterRail;
-			this.ModifyDriverPlayerTagsOnLeaveRail = ModifyDriverPlayerTagsOnLeaveRail;
-			this.ModifyDriverBuffsOnEnterRail = ModifyDriverBuffsOnEnterRail;
-			this.ModifyDriverBuffsOnLeaveRail = ModifyDriverBuffsOnLeaveRail;
-		}
-
-		// Token: 0x06029319 RID: 168729 RVA: 0x009BE2C4 File Offset: 0x009BC4C4
+		// Token: 0x0601FC43 RID: 130115 RVA: 0x00935471 File Offset: 0x00933671
 		protected override IntPtr GetUStructPtr()
 		{
 			return SMotorRailMoveConfig_Basic.StaticStruct();
 		}
 
-		// Token: 0x0602931A RID: 168730 RVA: 0x009BE2D0 File Offset: 0x009BC4D0
+		// Token: 0x0601FC44 RID: 130116 RVA: 0x0093547D File Offset: 0x0093367D
 		[NullableContext(2)]
 		public SMotorRailMoveConfig_Basic(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602931B RID: 168731 RVA: 0x009BE2DA File Offset: 0x009BC4DA
+		// Token: 0x0601FC45 RID: 130117 RVA: 0x00935487 File Offset: 0x00933687
 		public SMotorRailMoveConfig_Basic(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602931C RID: 168732 RVA: 0x009BE2E5 File Offset: 0x009BC4E5
+		// Token: 0x0601FC46 RID: 130118 RVA: 0x00935492 File Offset: 0x00933692
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SMotorRailMoveConfig_Basic(Pointer, false, true);
 		}
 
-		// Token: 0x0602931D RID: 168733 RVA: 0x009BE2EF File Offset: 0x009BC4EF
+		// Token: 0x0601FC47 RID: 130119 RVA: 0x0093549C File Offset: 0x0093369C
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SMotorRailMoveConfig_Basic(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0401516F RID: 86383
+		// Token: 0x040110AB RID: 69803
 		public const string __ObjectPath = "/Game/Aki/Data/Gameplay/MotorRailMove/Struct/SMotorRailMoveConfig_Basic.SMotorRailMoveConfig_Basic";
 
-		// Token: 0x04015170 RID: 86384
+		// Token: 0x040110AC RID: 69804
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04015171 RID: 86385
-		internal static int __PropertyOffset_0;
+		// Token: 0x040110AD RID: 69805
+		internal static int __PropertyOffset_MaxDeltaTimeForMoveUpdate;
 
-		// Token: 0x04015172 RID: 86386
-		internal static int __PropertyOffset_1;
+		// Token: 0x040110AE RID: 69806
+		internal static int __PropertyOffset_DefaultMoveSpeed;
 
-		// Token: 0x04015173 RID: 86387
-		internal static int __PropertyOffset_2;
+		// Token: 0x040110AF RID: 69807
+		internal static int __PropertyOffset_AllowUseSkillIds;
 
-		// Token: 0x04015174 RID: 86388
+		// Token: 0x040110B0 RID: 69808
 		[Nullable(2)]
 		private TSet<int> _AllowUseSkillIds;
 
-		// Token: 0x04015175 RID: 86389
-		internal static int __PropertyOffset_3;
+		// Token: 0x040110B1 RID: 69809
+		internal static int __PropertyOffset_AutoEnterRailCdAfterLeaveRailMove;
 
-		// Token: 0x04015176 RID: 86390
-		internal static int __PropertyOffset_4;
+		// Token: 0x040110B2 RID: 69810
+		internal static int __PropertyOffset_AutoEnterRailCdAfterLeaveRail;
 
-		// Token: 0x04015177 RID: 86391
-		internal static int __PropertyOffset_5;
+		// Token: 0x040110B3 RID: 69811
+		internal static int __PropertyOffset_ClientEventHandlers;
 
-		// Token: 0x04015178 RID: 86392
+		// Token: 0x040110B4 RID: 69812
 		[Nullable(new byte[]
 		{
 			2,
@@ -378,59 +359,59 @@ namespace AkiClient.Game.Aki.Data.Gameplay.MotorRailMove.Struct
 		})]
 		private TMap<FGameplayTag, SMotorRailMove_EventHandler> _ClientEventHandlers;
 
-		// Token: 0x04015179 RID: 86393
-		internal static int __PropertyOffset_6;
+		// Token: 0x040110B5 RID: 69813
+		internal static int __PropertyOffset_ModifyVehicleTagsOnEnterRail;
 
-		// Token: 0x0401517A RID: 86394
+		// Token: 0x040110B6 RID: 69814
 		[Nullable(2)]
 		private TMap<FGameplayTag, bool> _ModifyVehicleTagsOnEnterRail;
 
-		// Token: 0x0401517B RID: 86395
-		internal static int __PropertyOffset_7;
+		// Token: 0x040110B7 RID: 69815
+		internal static int __PropertyOffset_ModifyVehicleTagsOnLeaveRail;
 
-		// Token: 0x0401517C RID: 86396
+		// Token: 0x040110B8 RID: 69816
 		[Nullable(2)]
 		private TMap<FGameplayTag, bool> _ModifyVehicleTagsOnLeaveRail;
 
-		// Token: 0x0401517D RID: 86397
-		internal static int __PropertyOffset_8;
+		// Token: 0x040110B9 RID: 69817
+		internal static int __PropertyOffset_ModifyVehicleBuffsOnEnterRail;
 
-		// Token: 0x0401517E RID: 86398
+		// Token: 0x040110BA RID: 69818
 		[Nullable(2)]
 		private TMap<long, bool> _ModifyVehicleBuffsOnEnterRail;
 
-		// Token: 0x0401517F RID: 86399
-		internal static int __PropertyOffset_9;
+		// Token: 0x040110BB RID: 69819
+		internal static int __PropertyOffset_ModifyVehicleBuffsOnLeaveRail;
 
-		// Token: 0x04015180 RID: 86400
+		// Token: 0x040110BC RID: 69820
 		[Nullable(2)]
 		private TMap<long, bool> _ModifyVehicleBuffsOnLeaveRail;
 
-		// Token: 0x04015181 RID: 86401
-		internal static int __PropertyOffset_10;
+		// Token: 0x040110BD RID: 69821
+		internal static int __PropertyOffset_ModifyDriverPlayerTagsOnEnterRail;
 
-		// Token: 0x04015182 RID: 86402
+		// Token: 0x040110BE RID: 69822
 		[Nullable(2)]
 		private TMap<FGameplayTag, bool> _ModifyDriverPlayerTagsOnEnterRail;
 
-		// Token: 0x04015183 RID: 86403
-		internal static int __PropertyOffset_11;
+		// Token: 0x040110BF RID: 69823
+		internal static int __PropertyOffset_ModifyDriverPlayerTagsOnLeaveRail;
 
-		// Token: 0x04015184 RID: 86404
+		// Token: 0x040110C0 RID: 69824
 		[Nullable(2)]
 		private TMap<FGameplayTag, bool> _ModifyDriverPlayerTagsOnLeaveRail;
 
-		// Token: 0x04015185 RID: 86405
-		internal static int __PropertyOffset_12;
+		// Token: 0x040110C1 RID: 69825
+		internal static int __PropertyOffset_ModifyDriverBuffsOnEnterRail;
 
-		// Token: 0x04015186 RID: 86406
+		// Token: 0x040110C2 RID: 69826
 		[Nullable(2)]
 		private TMap<long, bool> _ModifyDriverBuffsOnEnterRail;
 
-		// Token: 0x04015187 RID: 86407
-		internal static int __PropertyOffset_13;
+		// Token: 0x040110C3 RID: 69827
+		internal static int __PropertyOffset_ModifyDriverBuffsOnLeaveRail;
 
-		// Token: 0x04015188 RID: 86408
+		// Token: 0x040110C4 RID: 69828
 		[Nullable(2)]
 		private TMap<long, bool> _ModifyDriverBuffsOnLeaveRail;
 	}

@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002392 RID: 9106
+	// Token: 0x0200261B RID: 9755
 	public class EMotorParamsChangeTypeJsonConverter : JsonConverter<EMotorParamsChangeType>
 	{
-		// Token: 0x0600C691 RID: 50833 RVA: 0x001D1534 File Offset: 0x001CF734
+		// Token: 0x0600D2D5 RID: 53973 RVA: 0x001EA508 File Offset: 0x001E8708
 		public override EMotorParamsChangeType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EMotorParamsChangeTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C692 RID: 50834 RVA: 0x001D1558 File Offset: 0x001CF758
+		// Token: 0x0600D2D6 RID: 53974 RVA: 0x001EA52C File Offset: 0x001E872C
 		public override void Write(Utf8JsonWriter writer, EMotorParamsChangeType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x0200661F RID: 26143
+	// Token: 0x0200559D RID: 21917
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FishingShipData
 	{
-		// Token: 0x060418A7 RID: 268455 RVA: 0x00FE40F0 File Offset: 0x00FE22F0
+		// Token: 0x0603656C RID: 222572 RVA: 0x00F2B160 File Offset: 0x00F29360
 		public void RefreshData(FishingShipInfo info)
 		{
 			this.CurrentSkinId = info.SkinId;
@@ -24,19 +24,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.RefreshShipEntity(this.CreatureDataId);
 		}
 
-		// Token: 0x060418A8 RID: 268456 RVA: 0x00FE4145 File Offset: 0x00FE2345
+		// Token: 0x0603656D RID: 222573 RVA: 0x00F2B1B5 File Offset: 0x00F293B5
 		public void SetLastPortId(int portId)
 		{
 			this.LastPortId = portId;
 		}
 
-		// Token: 0x060418A9 RID: 268457 RVA: 0x00FE414E File Offset: 0x00FE234E
+		// Token: 0x0603656E RID: 222574 RVA: 0x00F2B1BE File Offset: 0x00F293BE
 		public void SetIsInPortInternal(bool isInPortInternal)
 		{
 			this.IsInPortInternal = isInPortInternal;
 		}
 
-		// Token: 0x060418AA RID: 268458 RVA: 0x00FE4158 File Offset: 0x00FE2358
+		// Token: 0x0603656F RID: 222575 RVA: 0x00F2B1C8 File Offset: 0x00F293C8
 		public void RefreshShipEntity(long creatureDataId)
 		{
 			if (creatureDataId != this.CreatureDataId)
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}
 		}
 
-		// Token: 0x060418AB RID: 268459 RVA: 0x00FE42EC File Offset: 0x00FE24EC
+		// Token: 0x06036570 RID: 222576 RVA: 0x00F2B35C File Offset: 0x00F2955C
 		private void CreateShipMark(EntityHandle entityHandle)
 		{
 			if (GameModeModel.Instance.IsMulti)
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			MapModel.Instance.CreateMapMark(info);
 		}
 
-		// Token: 0x060418AC RID: 268460 RVA: 0x00FE43A8 File Offset: 0x00FE25A8
+		// Token: 0x06036571 RID: 222577 RVA: 0x00F2B418 File Offset: 0x00F29618
 		private void ClearShipEntity(ERemoveEntityType _1 = ERemoveEntityType.RemoveTypeForce, EntityHandle _2 = null)
 		{
 			EntityHandle entityHandle = this.EntityHandle;
@@ -138,32 +138,32 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.AttributeComp = null;
 		}
 
-		// Token: 0x060418AD RID: 268461 RVA: 0x00FE44CA File Offset: 0x00FE26CA
+		// Token: 0x06036572 RID: 222578 RVA: 0x00F2B53A File Offset: 0x00F2973A
 		private void OnEnterVehicle(VehiclePassengerInfo _, bool byChangeRole)
 		{
 			this.RefreshDriveFishingShipState(true);
 		}
 
-		// Token: 0x060418AE RID: 268462 RVA: 0x00FE44D3 File Offset: 0x00FE26D3
+		// Token: 0x06036573 RID: 222579 RVA: 0x00F2B543 File Offset: 0x00F29743
 		private void OnLeaveVehicle(VehiclePassengerInfo _, bool byChangeRole)
 		{
 			this.RefreshDriveFishingShipState(false);
 		}
 
-		// Token: 0x060418AF RID: 268463 RVA: 0x00FE44DC File Offset: 0x00FE26DC
+		// Token: 0x06036574 RID: 222580 RVA: 0x00F2B54C File Offset: 0x00F2974C
 		private void RefreshDriveFishingShipState(bool isDriving)
 		{
 			this.IsDrivingInternal = isDriving;
 			EventSystem.Instance.Emit<bool>(EEventName.DriveFishingShipStateChanged, isDriving);
 		}
 
-		// Token: 0x060418B0 RID: 268464 RVA: 0x00FE44F6 File Offset: 0x00FE26F6
+		// Token: 0x06036575 RID: 222581 RVA: 0x00F2B566 File Offset: 0x00F29766
 		public long GetCreatureDataId()
 		{
 			return this.CreatureDataId;
 		}
 
-		// Token: 0x060418B1 RID: 268465 RVA: 0x00FE4500 File Offset: 0x00FE2700
+		// Token: 0x06036576 RID: 222582 RVA: 0x00F2B570 File Offset: 0x00F29770
 		[NullableContext(2)]
 		public EntityHandle GetEntityHandle()
 		{
@@ -175,7 +175,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return null;
 		}
 
-		// Token: 0x060418B2 RID: 268466 RVA: 0x00FE4522 File Offset: 0x00FE2722
+		// Token: 0x06036577 RID: 222583 RVA: 0x00F2B592 File Offset: 0x00F29792
 		public float GetCurrentHp()
 		{
 			BaseAttributeComponent attributeComp = this.AttributeComp;
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return attributeComp.GetCurrentValue(EAttributeType.Life);
 		}
 
-		// Token: 0x060418B3 RID: 268467 RVA: 0x00FE453A File Offset: 0x00FE273A
+		// Token: 0x06036578 RID: 222584 RVA: 0x00F2B5AA File Offset: 0x00F297AA
 		public float GetMaxHp()
 		{
 			BaseAttributeComponent attributeComp = this.AttributeComp;
@@ -197,13 +197,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return attributeComp.GetCurrentValue(EAttributeType.LifeMax);
 		}
 
-		// Token: 0x060418B4 RID: 268468 RVA: 0x00FE4552 File Offset: 0x00FE2752
+		// Token: 0x06036579 RID: 222585 RVA: 0x00F2B5C2 File Offset: 0x00F297C2
 		public int GetCurrentSkinId()
 		{
 			return this.CurrentSkinId;
 		}
 
-		// Token: 0x060418B5 RID: 268469 RVA: 0x00FE455A File Offset: 0x00FE275A
+		// Token: 0x0603657A RID: 222586 RVA: 0x00F2B5CA File Offset: 0x00F297CA
 		public void AddAttributeListener(EAttributeType attrId, Action<EAttributeType, float, float> callback)
 		{
 			BaseAttributeComponent attributeComp = this.AttributeComp;
@@ -214,7 +214,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			attributeComp.AddListener(attrId, callback, null);
 		}
 
-		// Token: 0x060418B6 RID: 268470 RVA: 0x00FE456F File Offset: 0x00FE276F
+		// Token: 0x0603657B RID: 222587 RVA: 0x00F2B5DF File Offset: 0x00F297DF
 		public void RemoveAttributeListener(EAttributeType attrId, Action<EAttributeType, float, float> callback)
 		{
 			BaseAttributeComponent attributeComp = this.AttributeComp;
@@ -225,7 +225,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			attributeComp.RemoveListener(attrId, callback);
 		}
 
-		// Token: 0x060418B7 RID: 268471 RVA: 0x00FE4584 File Offset: 0x00FE2784
+		// Token: 0x0603657C RID: 222588 RVA: 0x00F2B5F4 File Offset: 0x00F297F4
 		public float GetAttributeValue(EAttributeType attrId)
 		{
 			BaseAttributeComponent attributeComp = this.AttributeComp;
@@ -236,54 +236,54 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return attributeComp.GetCurrentValue(attrId);
 		}
 
-		// Token: 0x060418B8 RID: 268472 RVA: 0x00FE459C File Offset: 0x00FE279C
+		// Token: 0x0603657D RID: 222589 RVA: 0x00F2B60C File Offset: 0x00F2980C
 		public bool IsShipInPort()
 		{
 			return this.IsInPortInternal;
 		}
 
-		// Token: 0x060418B9 RID: 268473 RVA: 0x00FE45A4 File Offset: 0x00FE27A4
+		// Token: 0x0603657E RID: 222590 RVA: 0x00F2B614 File Offset: 0x00F29814
 		public bool IsShipSailing()
 		{
 			return this.IsSailingInternal;
 		}
 
-		// Token: 0x060418BA RID: 268474 RVA: 0x00FE45AC File Offset: 0x00FE27AC
+		// Token: 0x0603657F RID: 222591 RVA: 0x00F2B61C File Offset: 0x00F2981C
 		public bool IsShipDriving()
 		{
 			return this.IsDrivingInternal;
 		}
 
-		// Token: 0x060418BB RID: 268475 RVA: 0x00FE45B4 File Offset: 0x00FE27B4
+		// Token: 0x06036580 RID: 222592 RVA: 0x00F2B624 File Offset: 0x00F29824
 		public int GetLastPortId()
 		{
 			return this.LastPortId;
 		}
 
-		// Token: 0x0402219D RID: 139677
+		// Token: 0x0401CACE RID: 117454
 		private int CurrentSkinId = 1;
 
-		// Token: 0x0402219E RID: 139678
+		// Token: 0x0401CACF RID: 117455
 		private bool IsInPortInternal;
 
-		// Token: 0x0402219F RID: 139679
+		// Token: 0x0401CAD0 RID: 117456
 		private bool IsSailingInternal;
 
-		// Token: 0x040221A0 RID: 139680
+		// Token: 0x0401CAD1 RID: 117457
 		private bool IsDrivingInternal;
 
-		// Token: 0x040221A1 RID: 139681
+		// Token: 0x0401CAD2 RID: 117458
 		private long CreatureDataId;
 
-		// Token: 0x040221A2 RID: 139682
+		// Token: 0x0401CAD3 RID: 117459
 		[Nullable(2)]
 		private EntityHandle EntityHandle;
 
-		// Token: 0x040221A3 RID: 139683
+		// Token: 0x0401CAD4 RID: 117460
 		[Nullable(2)]
 		private BaseAttributeComponent AttributeComp;
 
-		// Token: 0x040221A4 RID: 139684
+		// Token: 0x0401CAD5 RID: 117461
 		private int LastPortId;
 	}
 }

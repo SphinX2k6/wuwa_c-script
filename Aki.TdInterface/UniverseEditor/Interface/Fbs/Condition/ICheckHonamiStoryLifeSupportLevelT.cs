@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004A5E RID: 19038
+	// Token: 0x02004F24 RID: 20260
 	public class ICheckHonamiStoryLifeSupportLevelT
 	{
-		// Token: 0x170089D6 RID: 35286
-		// (get) Token: 0x0601DD24 RID: 122148 RVA: 0x00430DE4 File Offset: 0x0042EFE4
-		// (set) Token: 0x0601DD25 RID: 122149 RVA: 0x00430DEC File Offset: 0x0042EFEC
+		// Token: 0x170090B2 RID: 37042
+		// (get) Token: 0x0601F7C7 RID: 128967 RVA: 0x00461F70 File Offset: 0x00460170
+		// (set) Token: 0x0601F7C8 RID: 128968 RVA: 0x00461F78 File Offset: 0x00460178
 		public ECondition Type { get; set; }
 
-		// Token: 0x170089D7 RID: 35287
-		// (get) Token: 0x0601DD26 RID: 122150 RVA: 0x00430DF5 File Offset: 0x0042EFF5
-		// (set) Token: 0x0601DD27 RID: 122151 RVA: 0x00430DFD File Offset: 0x0042EFFD
+		// Token: 0x170090B3 RID: 37043
+		// (get) Token: 0x0601F7C9 RID: 128969 RVA: 0x00461F81 File Offset: 0x00460181
+		// (set) Token: 0x0601F7CA RID: 128970 RVA: 0x00461F89 File Offset: 0x00460189
 		public int ActivityId { get; set; }
 
-		// Token: 0x170089D8 RID: 35288
-		// (get) Token: 0x0601DD28 RID: 122152 RVA: 0x00430E06 File Offset: 0x0042F006
-		// (set) Token: 0x0601DD29 RID: 122153 RVA: 0x00430E0E File Offset: 0x0042F00E
+		// Token: 0x170090B4 RID: 37044
+		// (get) Token: 0x0601F7CB RID: 128971 RVA: 0x00461F92 File Offset: 0x00460192
+		// (set) Token: 0x0601F7CC RID: 128972 RVA: 0x00461F9A File Offset: 0x0046019A
 		public ECompare Compare { get; set; }
 
-		// Token: 0x170089D9 RID: 35289
-		// (get) Token: 0x0601DD2A RID: 122154 RVA: 0x00430E17 File Offset: 0x0042F017
-		// (set) Token: 0x0601DD2B RID: 122155 RVA: 0x00430E1F File Offset: 0x0042F01F
+		// Token: 0x170090B5 RID: 37045
+		// (get) Token: 0x0601F7CD RID: 128973 RVA: 0x00461FA3 File Offset: 0x004601A3
+		// (set) Token: 0x0601F7CE RID: 128974 RVA: 0x00461FAB File Offset: 0x004601AB
 		public int Level { get; set; }
 
-		// Token: 0x0601DD2C RID: 122156 RVA: 0x00430E28 File Offset: 0x0042F028
+		// Token: 0x0601F7CF RID: 128975 RVA: 0x00461FB4 File Offset: 0x004601B4
 		public ICheckHonamiStoryLifeSupportLevelT()
 		{
 			this.Type = ECondition.CompareVar;

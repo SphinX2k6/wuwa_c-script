@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200075E RID: 1886
+	// Token: 0x02000776 RID: 1910
 	public class ConfigPreheatVoteById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002C45 RID: 11333 RVA: 0x0015388B File Offset: 0x00151A8B
+		// Token: 0x06002CD5 RID: 11477 RVA: 0x0015A307 File Offset: 0x00158507
 		static ConfigPreheatVoteById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPreheatVoteById.CreateStaticDefaultValue), new Action(ConfigPreheatVoteById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002C46 RID: 11334 RVA: 0x001538AC File Offset: 0x00151AAC
+		// Token: 0x06002CD6 RID: 11478 RVA: 0x0015A328 File Offset: 0x00158528
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPreheatVoteById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002C47 RID: 11335 RVA: 0x0015392B File Offset: 0x00151B2B
+		// Token: 0x06002CD7 RID: 11479 RVA: 0x0015A3A7 File Offset: 0x001585A7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPreheatVoteById.LogPair = null;
 			ConfigPreheatVoteById.HandleId = 0;
 		}
 
-		// Token: 0x06002C48 RID: 11336 RVA: 0x00153939 File Offset: 0x00151B39
+		// Token: 0x06002CD8 RID: 11480 RVA: 0x0015A3B5 File Offset: 0x001585B5
 		public static void Init()
 		{
 			ConfigPreheatVoteById.HandleId = ConfigCommon.InitDataStatement(ConfigPreheatVoteById.HandleId, "db_preheat.db", "select BinData from `PreheatVote` where Id=?");
 		}
 
-		// Token: 0x06002C49 RID: 11337 RVA: 0x00153954 File Offset: 0x00151B54
+		// Token: 0x06002CD9 RID: 11481 RVA: 0x0015A3D0 File Offset: 0x001585D0
 		public static PreheatVote? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPreheatVoteById.HandleId, ConfigPreheatVoteById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PreheatVote?(rootAsPreheatVote);
 		}
 
-		// Token: 0x04003378 RID: 13176
+		// Token: 0x04003420 RID: 13344
 		private const string DB = "db_preheat.db";
 
-		// Token: 0x04003379 RID: 13177
+		// Token: 0x04003421 RID: 13345
 		private const string FILE = "y.预热签到活动.xlsx";
 
-		// Token: 0x0400337A RID: 13178
+		// Token: 0x04003422 RID: 13346
 		private const string TABLE = "PreheatVote";
 
-		// Token: 0x0400337B RID: 13179
+		// Token: 0x04003423 RID: 13347
 		private const string COMMAND = "select BinData from `PreheatVote` where Id=?";
 
-		// Token: 0x0400337C RID: 13180
+		// Token: 0x04003424 RID: 13348
 		private const string KEY_PREFIX = "PreheatVoteById";
 
-		// Token: 0x0400337D RID: 13181
+		// Token: 0x04003425 RID: 13349
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400337E RID: 13182
+		// Token: 0x04003426 RID: 13350
 		private static int HandleId;
 	}
 }

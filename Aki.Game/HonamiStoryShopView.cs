@@ -10,17 +10,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001EF1 RID: 7921
+// Token: 0x020013B3 RID: 5043
 [NullableContext(1)]
 [Nullable(0)]
 public class HonamiStoryShopView : UiViewBase
 {
-	// Token: 0x0600F3C1 RID: 62401 RVA: 0x003AC482 File Offset: 0x003AA682
+	// Token: 0x0600C7E0 RID: 51168 RVA: 0x003B7F7E File Offset: 0x003B617E
 	public HonamiStoryShopView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600F3C2 RID: 62402 RVA: 0x003AC498 File Offset: 0x003AA698
+	// Token: 0x0600C7E1 RID: 51169 RVA: 0x003B7F94 File Offset: 0x003B6194
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -49,13 +49,13 @@ public class HonamiStoryShopView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600F3C3 RID: 62403 RVA: 0x003AC5C2 File Offset: 0x003AA7C2
-	public override bool GetLoopAudioEventSwitch()
+	// Token: 0x0600C7E2 RID: 51170 RVA: 0x003B80BE File Offset: 0x003B62BE
+	public override bool GetBgmSwitch()
 	{
 		return !HonamiStoryUtil.CheckInHonamiStoryDungeon();
 	}
 
-	// Token: 0x0600F3C4 RID: 62404 RVA: 0x003AC5CC File Offset: 0x003AA7CC
+	// Token: 0x0600C7E3 RID: 51171 RVA: 0x003B80C8 File Offset: 0x003B62C8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		HonamiStoryShopView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -66,7 +66,7 @@ public class HonamiStoryShopView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F3C5 RID: 62405 RVA: 0x003AC610 File Offset: 0x003AA810
+	// Token: 0x0600C7E4 RID: 51172 RVA: 0x003B810C File Offset: 0x003B630C
 	protected override void OnBeforeShow()
 	{
 		int shopId = this.ActivityData.ShopId;
@@ -80,27 +80,27 @@ public class HonamiStoryShopView : UiViewBase
 		this.HideCharacter();
 	}
 
-	// Token: 0x0600F3C6 RID: 62406 RVA: 0x003AC667 File Offset: 0x003AA867
+	// Token: 0x0600C7E5 RID: 51173 RVA: 0x003B8163 File Offset: 0x003B6363
 	protected override void OnBeforeHide()
 	{
 		this.ShowCharacter();
 	}
 
-	// Token: 0x0600F3C7 RID: 62407 RVA: 0x003AC66F File Offset: 0x003AA86F
+	// Token: 0x0600C7E6 RID: 51174 RVA: 0x003B816B File Offset: 0x003B636B
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int, bool>(EEventName.RefreshPayShop, new Action<int, bool>(this.RefreshShop));
 		EventSystem.Instance.Add(EEventName.PayShopGoodsBuy, new Action(this.HandleBuyItem));
 	}
 
-	// Token: 0x0600F3C8 RID: 62408 RVA: 0x003AC6A9 File Offset: 0x003AA8A9
+	// Token: 0x0600C7E7 RID: 51175 RVA: 0x003B81A5 File Offset: 0x003B63A5
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove<int, bool>(EEventName.RefreshPayShop, new Action<int, bool>(this.RefreshShop));
 		EventSystem.Instance.Remove(EEventName.PayShopGoodsBuy, new Action(this.HandleBuyItem));
 	}
 
-	// Token: 0x0600F3C9 RID: 62409 RVA: 0x003AC6E4 File Offset: 0x003AA8E4
+	// Token: 0x0600C7E8 RID: 51176 RVA: 0x003B81E0 File Offset: 0x003B63E0
 	private void CheckPlayPerformance(EHonamiStoryOutDialogType dialogType)
 	{
 		HonamiStoryOutDialog? randomDialogData = HonamiStoryModel.Instance.GetRandomDialogData((int)dialogType);
@@ -123,14 +123,14 @@ public class HonamiStoryShopView : UiViewBase
 		this.PlayAudio(randomDialogData.Value);
 	}
 
-	// Token: 0x0600F3CA RID: 62410 RVA: 0x003AC788 File Offset: 0x003AA988
+	// Token: 0x0600C7E9 RID: 51177 RVA: 0x003B8284 File Offset: 0x003B6484
 	private void PlayPlot(HonamiStoryOutDialog outDialog)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), outDialog.Name, Array.Empty<object>());
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(2), outDialog.Desc, Array.Empty<object>());
 	}
 
-	// Token: 0x0600F3CB RID: 62411 RVA: 0x003AC7C4 File Offset: 0x003AA9C4
+	// Token: 0x0600C7EA RID: 51178 RVA: 0x003B82C0 File Offset: 0x003B64C0
 	private void PlayNpcMontage(HonamiStoryOutDialog outDialog)
 	{
 		int entityId = outDialog.EntityId;
@@ -158,7 +158,7 @@ public class HonamiStoryShopView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600F3CC RID: 62412 RVA: 0x003AC84B File Offset: 0x003AAA4B
+	// Token: 0x0600C7EB RID: 51179 RVA: 0x003B8347 File Offset: 0x003B6547
 	private void PlayAudio(HonamiStoryOutDialog outDialog)
 	{
 		if (outDialog.AudioEvent != "")
@@ -167,7 +167,7 @@ public class HonamiStoryShopView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600F3CD RID: 62413 RVA: 0x003AC874 File Offset: 0x003AAA74
+	// Token: 0x0600C7EC RID: 51180 RVA: 0x003B8370 File Offset: 0x003B6570
 	private void HideCharacter()
 	{
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -177,7 +177,7 @@ public class HonamiStoryShopView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600F3CE RID: 62414 RVA: 0x003AC8A8 File Offset: 0x003AAAA8
+	// Token: 0x0600C7ED RID: 51181 RVA: 0x003B83A4 File Offset: 0x003B65A4
 	private void ShowCharacter()
 	{
 		EntityHandle getCurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
@@ -187,39 +187,39 @@ public class HonamiStoryShopView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600F3CF RID: 62415 RVA: 0x003AC8DC File Offset: 0x003AAADC
+	// Token: 0x0600C7EE RID: 51182 RVA: 0x003B83D8 File Offset: 0x003B65D8
 	private void RefreshShop(int _1, bool _2)
 	{
 		int shopId = this.ActivityData.ShopId;
 		this.ActivityShopScrollItem.Refresh(shopId);
 	}
 
-	// Token: 0x0600F3D0 RID: 62416 RVA: 0x003AC902 File Offset: 0x003AAB02
+	// Token: 0x0600C7EF RID: 51183 RVA: 0x003B83FE File Offset: 0x003B65FE
 	private void HandleBuyItem()
 	{
 		this.CheckPlayPerformance(EHonamiStoryOutDialogType.BuyGoodsInShop);
 	}
 
-	// Token: 0x0600F3D1 RID: 62417 RVA: 0x003AC90C File Offset: 0x003AAB0C
+	// Token: 0x0600C7F0 RID: 51184 RVA: 0x003B8408 File Offset: 0x003B6608
 	private void OnClickBack()
 	{
 		PayShopModel.Instance.ReadShopItemCheckFlag((PayShopDefine.EPayShopTabType)this.ActivityData.ShopId, 1);
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600F3D2 RID: 62418 RVA: 0x003AC92C File Offset: 0x003AAB2C
+	// Token: 0x0600C7F1 RID: 51185 RVA: 0x003B8428 File Offset: 0x003B6628
 	private void OnClickBagButton()
 	{
 		HonamiStoryController.Instance.OpenHonamiStoryBag();
 	}
 
-	// Token: 0x040070DE RID: 28894
+	// Token: 0x040071BF RID: 29119
 	private HonamiStoryActivityData ActivityData;
 
-	// Token: 0x040070DF RID: 28895
+	// Token: 0x040071C0 RID: 29120
 	public PopupCaptionItem PopupCaption;
 
-	// Token: 0x040070E0 RID: 28896
+	// Token: 0x040071C1 RID: 29121
 	[Nullable(new byte[]
 	{
 		2,
@@ -227,24 +227,24 @@ public class HonamiStoryShopView : UiViewBase
 	})]
 	private HonamiStoryShopScrollItem<HonamiStoryShopGridItem> ActivityShopScrollItem;
 
-	// Token: 0x040070E1 RID: 28897
+	// Token: 0x040071C2 RID: 29122
 	private Dictionary<EHonamiStoryOutDialogType, double> LastTimeMap = new Dictionary<EHonamiStoryOutDialogType, double>();
 
-	// Token: 0x020084E7 RID: 34023
+	// Token: 0x0200766C RID: 30316
 	[NullableContext(0)]
 	private enum EHonamiStoryShopComponent
 	{
-		// Token: 0x0402B3FD RID: 177149
+		// Token: 0x04026721 RID: 157473
 		ItemCaption,
-		// Token: 0x0402B3FE RID: 177150
+		// Token: 0x04026722 RID: 157474
 		NameText,
-		// Token: 0x0402B3FF RID: 177151
+		// Token: 0x04026723 RID: 157475
 		DescText,
-		// Token: 0x0402B400 RID: 177152
+		// Token: 0x04026724 RID: 157476
 		ItemScroller,
-		// Token: 0x0402B401 RID: 177153
+		// Token: 0x04026725 RID: 157477
 		Item,
-		// Token: 0x0402B402 RID: 177154
+		// Token: 0x04026726 RID: 157478
 		BagButton
 	}
 }

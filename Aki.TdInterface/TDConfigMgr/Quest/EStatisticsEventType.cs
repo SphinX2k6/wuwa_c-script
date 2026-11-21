@@ -3,29 +3,29 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000E9A RID: 3738
+	// Token: 0x02000FAE RID: 4014
 	[EnumExtensions]
 	public enum EStatisticsEventType
 	{
-		// Token: 0x040031A6 RID: 12710
+		// Token: 0x040034AE RID: 13486
 		Collect,
-		// Token: 0x040031A7 RID: 12711
+		// Token: 0x040034AF RID: 13487
 		UseSkill,
-		// Token: 0x040031A8 RID: 12712
+		// Token: 0x040034B0 RID: 13488
 		UseSkillNew,
-		// Token: 0x040031A9 RID: 12713
+		// Token: 0x040034B1 RID: 13489
 		PlayerTriggerMotion,
-		// Token: 0x040031AA RID: 12714
+		// Token: 0x040034B2 RID: 13490
 		Timer,
-		// Token: 0x040031AB RID: 12715
+		// Token: 0x040034B3 RID: 13491
 		MonsterPoint,
-		// Token: 0x040031AC RID: 12716
+		// Token: 0x040034B4 RID: 13492
 		MonsterRemainingHealth,
-		// Token: 0x040031AD RID: 12717
+		// Token: 0x040034B5 RID: 13493
 		MonsterHealthScore,
-		// Token: 0x040031AE RID: 12718
+		// Token: 0x040034B6 RID: 13494
 		PlayerHit,
-		// Token: 0x040031AF RID: 12719
+		// Token: 0x040034B7 RID: 13495
 		MechaTrackScore
 	}
 }

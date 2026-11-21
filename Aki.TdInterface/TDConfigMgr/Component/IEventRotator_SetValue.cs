@@ -1,19 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000340 RID: 832
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000387 RID: 903
 	public class IEventRotator_SetValue
 	{
-		// Token: 0x04000DD3 RID: 3539
+		// Token: 0x04000EBE RID: 3774
 		public List<ActionInfo> StartActions;
 
-		// Token: 0x04000DD4 RID: 3540
+		// Token: 0x04000EBF RID: 3775
 		public List<ActionInfo> EndActions;
 	}
 }

@@ -12,12 +12,12 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x0200026E RID: 622
+// Token: 0x02000272 RID: 626
 [UClass("/Game/Aki/TypeScript/Game/Effect/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Effect/TsEffectFunctionLibrary.TsEffectFunctionLibrary_C")]
 public class TsEffectFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x060025EF RID: 9711 RVA: 0x000E33B4 File Offset: 0x000E15B4
+	// Token: 0x060026A8 RID: 9896 RVA: 0x000E99B8 File Offset: 0x000E7BB8
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public unsafe static int SpawnEffect(UObject worldContext, UObject callObject, string path, FTransformDouble transform, string reason, EEffectPlay playType, bool disablePostProcess = false)
@@ -66,7 +66,7 @@ public class TsEffectFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject
 		return num.GetValueOrDefault();
 	}
 
-	// Token: 0x060025F0 RID: 9712 RVA: 0x000E355C File Offset: 0x000E175C
+	// Token: 0x060026A9 RID: 9897 RVA: 0x000E9B60 File Offset: 0x000E7D60
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public unsafe static int SpawnEffectAttachToBone(UObject worldContext, UObject callObject, USkeletalMeshComponent skeletalMeshComponent, FName socketName, string path, FTransformDouble transform, string reason, EEffectPlay playType, bool disablePostProcess = false)
@@ -145,7 +145,7 @@ public class TsEffectFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject
 		return num;
 	}
 
-	// Token: 0x060025F1 RID: 9713 RVA: 0x000E3810 File Offset: 0x000E1A10
+	// Token: 0x060026AA RID: 9898 RVA: 0x000E9E14 File Offset: 0x000E8014
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public unsafe static int SpawnEffectUI(UObject worldContext, UObject callObject, string path, FTransformDouble transform, string reason)
@@ -194,7 +194,7 @@ public class TsEffectFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject
 		return num.GetValueOrDefault();
 	}
 
-	// Token: 0x060025F2 RID: 9714 RVA: 0x000E39B8 File Offset: 0x000E1BB8
+	// Token: 0x060026AB RID: 9899 RVA: 0x000E9FBC File Offset: 0x000E81BC
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public unsafe static int SpawnEffectWithActor(UObject worldContext, UObject callObject, AActor effectActor, string path, string reason, EEffectPlay playType, AkiClient.Game.Aki.Data.Effect.Struct.EEffectType effectType, bool disablePostProcess = false)
@@ -263,21 +263,21 @@ public class TsEffectFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject
 		return EffectSystem.Instance.SpawnEffectWithActor(worldContext, effectActor, path, reason2, true, new EffectContext(null, callObject, disablePostProcess), false, (global::EEffectType)effectType);
 	}
 
-	// Token: 0x060025F3 RID: 9715 RVA: 0x000E3BE8 File Offset: 0x000E1DE8
+	// Token: 0x060026AC RID: 9900 RVA: 0x000EA1EC File Offset: 0x000E83EC
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void InitializeWithPreview(bool refresh)
 	{
 		EffectSystem.Instance.InitializeWithPreview(refresh);
 	}
 
-	// Token: 0x060025F4 RID: 9716 RVA: 0x000E3BF5 File Offset: 0x000E1DF5
+	// Token: 0x060026AD RID: 9901 RVA: 0x000EA1F9 File Offset: 0x000E83F9
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static bool EffectHandleIsValid(int handle)
 	{
 		return EffectSystem.Instance.IsValid(handle);
 	}
 
-	// Token: 0x060025F5 RID: 9717 RVA: 0x000E3C04 File Offset: 0x000E1E04
+	// Token: 0x060026AE RID: 9902 RVA: 0x000EA208 File Offset: 0x000E8408
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public unsafe static bool StopEffect(int handle, UObject callObject, string reason, bool immediately, bool destroyActor)
@@ -337,7 +337,7 @@ public class TsEffectFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject
 		return EffectSystem.Instance.StopEffectById(handle, reason2, immediately, null);
 	}
 
-	// Token: 0x060025F6 RID: 9718 RVA: 0x000E3E1C File Offset: 0x000E201C
+	// Token: 0x060026AF RID: 9903 RVA: 0x000EA420 File Offset: 0x000E8620
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public unsafe static bool StopAndDestroyEffect(int handle, UObject callObject, string reason, bool immediately)
@@ -397,7 +397,7 @@ public class TsEffectFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject
 		return EffectSystem.Instance.StopEffectById(handle, reason2, immediately, new bool?(true));
 	}
 
-	// Token: 0x060025F7 RID: 9719 RVA: 0x000E4030 File Offset: 0x000E2230
+	// Token: 0x060026B0 RID: 9904 RVA: 0x000EA634 File Offset: 0x000E8834
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public unsafe static bool PlayEffect(int handle, UObject callObject, string reason)
@@ -456,7 +456,7 @@ public class TsEffectFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject
 		return true;
 	}
 
-	// Token: 0x060025F8 RID: 9720 RVA: 0x000E4218 File Offset: 0x000E2418
+	// Token: 0x060026B1 RID: 9905 RVA: 0x000EA81C File Offset: 0x000E8A1C
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetEffectParameterNiagara(int handle, ref TArray<SEffectFloatParameter> userParameterFloat, ref TArray<SEffectColorParameter> userParameterColor, ref TArray<SEffectVectorParameter> userParameterVector, ref TArray<SEffectFloatParameter> materialParameterFloat, ref TArray<SEffectColorParameter> materialParameterColor)
@@ -540,14 +540,14 @@ public class TsEffectFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject
 		EffectSystem.Instance.SetEffectParameterNiagara(handle, effectParameterNiagara);
 	}
 
-	// Token: 0x060025F9 RID: 9721 RVA: 0x000E441C File Offset: 0x000E261C
+	// Token: 0x060026B2 RID: 9906 RVA: 0x000EAA20 File Offset: 0x000E8C20
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void EditorTickHandle(int handle, float delta)
 	{
 		EffectSystem.Instance.TickHandleInEditor(handle, delta);
 	}
 
-	// Token: 0x060025FA RID: 9722 RVA: 0x000E442A File Offset: 0x000E262A
+	// Token: 0x060026B3 RID: 9907 RVA: 0x000EAA2E File Offset: 0x000E8C2E
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static AActor GetEffectActor(int handle)
@@ -555,7 +555,7 @@ public class TsEffectFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject
 		return EffectSystem.Instance.GetSureEffectActor(handle);
 	}
 
-	// Token: 0x060025FB RID: 9723 RVA: 0x000E4438 File Offset: 0x000E2638
+	// Token: 0x060026B4 RID: 9908 RVA: 0x000EAA3C File Offset: 0x000E8C3C
 	public static bool? GetPlayType(EEffectPlay playType)
 	{
 		if (playType == EEffectPlay.Play)
@@ -569,7 +569,7 @@ public class TsEffectFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject
 		return new bool?(false);
 	}
 
-	// Token: 0x060025FC RID: 9724 RVA: 0x000E4468 File Offset: 0x000E2668
+	// Token: 0x060026B5 RID: 9909 RVA: 0x000EAA6C File Offset: 0x000E8C6C
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void AttachEffectActorToActor(int handle, AActor parent, FName socketName, EAttachmentRule locationRule, EAttachmentRule rotationRule, EAttachmentRule scaleRule, bool bWeldSimulatedBodies)
@@ -587,7 +587,7 @@ public class TsEffectFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject
 		effectActor.K2_AttachToActor(parent, fname, locationRule, rotationRule, scaleRule, bWeldSimulatedBodies);
 	}
 
-	// Token: 0x060025FD RID: 9725 RVA: 0x000E44A8 File Offset: 0x000E26A8
+	// Token: 0x060026B6 RID: 9910 RVA: 0x000EAAAC File Offset: 0x000E8CAC
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void AttachEffectActorToComponent(int handle, USceneComponent parent, FName socketName, EAttachmentRule locationRule, EAttachmentRule rotationRule, EAttachmentRule scaleRule, bool bWeldSimulatedBodies)
@@ -603,7 +603,7 @@ public class TsEffectFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject
 		EffectSystem.Instance.GetEffectActor(handle).K2_AttachToComponent(parent, new FName?(socketName), locationRule, rotationRule, scaleRule, bWeldSimulatedBodies);
 	}
 
-	// Token: 0x060025FE RID: 9726 RVA: 0x000E44DA File Offset: 0x000E26DA
+	// Token: 0x060026B7 RID: 9911 RVA: 0x000EAADE File Offset: 0x000E8CDE
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetEffectActorRelativeLocation(int handle, FVectorDouble newRelativeLocation, bool bSweep, bool bTeleport)
 	{
@@ -614,7 +614,7 @@ public class TsEffectFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject
 		EffectSystem.Instance.GetEffectActor(handle).D_K2_SetActorRelativeLocation(newRelativeLocation, bSweep, ref WorldGlobal.SweepHitResult, bTeleport);
 	}
 
-	// Token: 0x060025FF RID: 9727 RVA: 0x000E4503 File Offset: 0x000E2703
+	// Token: 0x060026B8 RID: 9912 RVA: 0x000EAB07 File Offset: 0x000E8D07
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetEffectHiddenInGame(int handle, bool value)
 	{
@@ -625,7 +625,7 @@ public class TsEffectFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject
 		EffectSystem.Instance.SetEffectHidden(handle, value, "TsEffectFunctionLibrary.SetEffectHiddenInGame", false);
 	}
 
-	// Token: 0x06002600 RID: 9728 RVA: 0x000E4528 File Offset: 0x000E2728
+	// Token: 0x060026B9 RID: 9913 RVA: 0x000EAB2C File Offset: 0x000E8D2C
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetEffectIgnoreVisibilityOptimize(int handle, bool ignore)
 	{
@@ -642,7 +642,7 @@ public class TsEffectFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject
 		EffectSystem.Instance.SetEffectIgnoreVisibilityOptimize(handle, ignore);
 	}
 
-	// Token: 0x06002601 RID: 9729 RVA: 0x000E457C File Offset: 0x000E277C
+	// Token: 0x060026BA RID: 9914 RVA: 0x000EAB80 File Offset: 0x000E8D80
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetEffectStoppingTime(int handle, bool stoppingTime)
 	{
@@ -659,28 +659,28 @@ public class TsEffectFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject
 		EffectSystem.Instance.SetEffectStoppingTime(handle, stoppingTime, EEffectStoppingTimeSource.ScenePaused);
 	}
 
-	// Token: 0x06002602 RID: 9730 RVA: 0x000E45D0 File Offset: 0x000E27D0
+	// Token: 0x060026BB RID: 9915 RVA: 0x000EABD4 File Offset: 0x000E8DD4
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetGlobalStoppingTime(bool stoppingTime, float playTime)
 	{
 		EffectSystem.Instance.SetGlobalStoppingTime(stoppingTime, playTime, EEffectStoppingTimeSource.ScenePaused);
 	}
 
-	// Token: 0x06002603 RID: 9731 RVA: 0x000E45DF File Offset: 0x000E27DF
+	// Token: 0x060026BC RID: 9916 RVA: 0x000EABE3 File Offset: 0x000E8DE3
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetPublicToSequence(int handle, BP_EffectActor_C actor)
 	{
 	}
 
-	// Token: 0x06002604 RID: 9732 RVA: 0x000E45E1 File Offset: 0x000E27E1
+	// Token: 0x060026BD RID: 9917 RVA: 0x000EABE5 File Offset: 0x000E8DE5
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public static void SetSimulateFromSequence(int handle, BP_EffectActor_C actor)
 	{
 	}
 
-	// Token: 0x06002605 RID: 9733 RVA: 0x000E45E3 File Offset: 0x000E27E3
+	// Token: 0x060026BE RID: 9918 RVA: 0x000EABE7 File Offset: 0x000E8DE7
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsEffectFunctionLibrary._ClassPtr == IntPtr.Zero)
@@ -690,23 +690,23 @@ public class TsEffectFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject
 		return TsEffectFunctionLibrary._ClassPtr;
 	}
 
-	// Token: 0x06002606 RID: 9734 RVA: 0x000E4608 File Offset: 0x000E2808
+	// Token: 0x060026BF RID: 9919 RVA: 0x000EAC0C File Offset: 0x000E8E0C
 	public TsEffectFunctionLibrary() : this(BuiltinUtils.AllocNativeUObject(TsEffectFunctionLibrary.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06002607 RID: 9735 RVA: 0x000E4630 File Offset: 0x000E2830
+	// Token: 0x060026C0 RID: 9920 RVA: 0x000EAC34 File Offset: 0x000E8E34
 	[NullableContext(1)]
 	public TsEffectFunctionLibrary(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsEffectFunctionLibrary.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06002608 RID: 9736 RVA: 0x000E4663 File Offset: 0x000E2863
+	// Token: 0x060026C1 RID: 9921 RVA: 0x000EAC67 File Offset: 0x000E8E67
 	protected TsEffectFunctionLibrary(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06002609 RID: 9737 RVA: 0x000E466C File Offset: 0x000E286C
+	// Token: 0x060026C2 RID: 9922 RVA: 0x000EAC70 File Offset: 0x000E8E70
 	protected unsafe static void __CPPCALL_SpawnEffect_Implementation(TsEffectFunctionLibrary.__SpawnEffect_FunctionParams* __Params)
 	{
 		UObject orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<UObject>(__Params->worldContext);
@@ -717,7 +717,7 @@ public class TsEffectFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject
 		__Params->__Result = TsEffectFunctionLibrary.SpawnEffect(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, path, __Params->transform, reason, playType, __Params->disablePostProcess);
 	}
 
-	// Token: 0x0600260A RID: 9738 RVA: 0x000E46D0 File Offset: 0x000E28D0
+	// Token: 0x060026C3 RID: 9923 RVA: 0x000EACD4 File Offset: 0x000E8ED4
 	protected unsafe static void __CPPCALL_SpawnEffectAttachToBone_Implementation(TsEffectFunctionLibrary.__SpawnEffectAttachToBone_FunctionParams* __Params)
 	{
 		UObject orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<UObject>(__Params->worldContext);
@@ -729,7 +729,7 @@ public class TsEffectFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject
 		__Params->__Result = TsEffectFunctionLibrary.SpawnEffectAttachToBone(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, orCreateUObjectByNativePointer3, __Params->socketName, path, __Params->transform, reason, playType, __Params->disablePostProcess);
 	}
 
-	// Token: 0x0600260B RID: 9739 RVA: 0x000E474C File Offset: 0x000E294C
+	// Token: 0x060026C4 RID: 9924 RVA: 0x000EAD50 File Offset: 0x000E8F50
 	protected unsafe static void __CPPCALL_SpawnEffectUI_Implementation(TsEffectFunctionLibrary.__SpawnEffectUI_FunctionParams* __Params)
 	{
 		UObject orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<UObject>(__Params->worldContext);
@@ -739,7 +739,7 @@ public class TsEffectFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject
 		__Params->__Result = TsEffectFunctionLibrary.SpawnEffectUI(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, path, __Params->transform, reason);
 	}
 
-	// Token: 0x0600260C RID: 9740 RVA: 0x000E47A0 File Offset: 0x000E29A0
+	// Token: 0x060026C5 RID: 9925 RVA: 0x000EADA4 File Offset: 0x000E8FA4
 	protected unsafe static void __CPPCALL_SpawnEffectWithActor_Implementation(TsEffectFunctionLibrary.__SpawnEffectWithActor_FunctionParams* __Params)
 	{
 		UObject orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<UObject>(__Params->worldContext);
@@ -752,19 +752,19 @@ public class TsEffectFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject
 		__Params->__Result = TsEffectFunctionLibrary.SpawnEffectWithActor(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, orCreateUObjectByNativePointer3, path, reason, playType, effectType, __Params->disablePostProcess);
 	}
 
-	// Token: 0x0600260D RID: 9741 RVA: 0x000E4817 File Offset: 0x000E2A17
+	// Token: 0x060026C6 RID: 9926 RVA: 0x000EAE1B File Offset: 0x000E901B
 	protected unsafe static void __CPPCALL_InitializeWithPreview_Implementation(TsEffectFunctionLibrary.__InitializeWithPreview_FunctionParams* __Params)
 	{
 		TsEffectFunctionLibrary.InitializeWithPreview(__Params->refresh);
 	}
 
-	// Token: 0x0600260E RID: 9742 RVA: 0x000E4824 File Offset: 0x000E2A24
+	// Token: 0x060026C7 RID: 9927 RVA: 0x000EAE28 File Offset: 0x000E9028
 	protected unsafe static void __CPPCALL_EffectHandleIsValid_Implementation(TsEffectFunctionLibrary.__EffectHandleIsValid_FunctionParams* __Params)
 	{
 		__Params->__Result = TsEffectFunctionLibrary.EffectHandleIsValid(__Params->handle);
 	}
 
-	// Token: 0x0600260F RID: 9743 RVA: 0x000E4838 File Offset: 0x000E2A38
+	// Token: 0x060026C8 RID: 9928 RVA: 0x000EAE3C File Offset: 0x000E903C
 	protected unsafe static void __CPPCALL_StopEffect_Implementation(TsEffectFunctionLibrary.__StopEffect_FunctionParams* __Params)
 	{
 		UObject orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<UObject>(__Params->callObject);
@@ -772,7 +772,7 @@ public class TsEffectFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject
 		__Params->__Result = TsEffectFunctionLibrary.StopEffect(__Params->handle, orCreateUObjectByNativePointer, reason, __Params->immediately, __Params->destroyActor);
 	}
 
-	// Token: 0x06002610 RID: 9744 RVA: 0x000E4880 File Offset: 0x000E2A80
+	// Token: 0x060026C9 RID: 9929 RVA: 0x000EAE84 File Offset: 0x000E9084
 	protected unsafe static void __CPPCALL_StopAndDestroyEffect_Implementation(TsEffectFunctionLibrary.__StopAndDestroyEffect_FunctionParams* __Params)
 	{
 		UObject orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<UObject>(__Params->callObject);
@@ -780,7 +780,7 @@ public class TsEffectFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject
 		__Params->__Result = TsEffectFunctionLibrary.StopAndDestroyEffect(__Params->handle, orCreateUObjectByNativePointer, reason, __Params->immediately);
 	}
 
-	// Token: 0x06002611 RID: 9745 RVA: 0x000E48C0 File Offset: 0x000E2AC0
+	// Token: 0x060026CA RID: 9930 RVA: 0x000EAEC4 File Offset: 0x000E90C4
 	protected unsafe static void __CPPCALL_PlayEffect_Implementation(TsEffectFunctionLibrary.__PlayEffect_FunctionParams* __Params)
 	{
 		UObject orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<UObject>(__Params->callObject);
@@ -788,7 +788,7 @@ public class TsEffectFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject
 		__Params->__Result = TsEffectFunctionLibrary.PlayEffect(__Params->handle, orCreateUObjectByNativePointer, reason);
 	}
 
-	// Token: 0x06002612 RID: 9746 RVA: 0x000E48FC File Offset: 0x000E2AFC
+	// Token: 0x060026CB RID: 9931 RVA: 0x000EAF00 File Offset: 0x000E9100
 	protected unsafe static void __CPPCALL_SetEffectParameterNiagara_Implementation(TsEffectFunctionLibrary.__SetEffectParameterNiagara_FunctionParams* __Params)
 	{
 		TArray<SEffectFloatParameter> tarray = new TArray<SEffectFloatParameter>(&__Params->userParameterFloat, true, true);
@@ -819,13 +819,13 @@ public class TsEffectFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject
 		}
 	}
 
-	// Token: 0x06002613 RID: 9747 RVA: 0x000E49EE File Offset: 0x000E2BEE
+	// Token: 0x060026CC RID: 9932 RVA: 0x000EAFF2 File Offset: 0x000E91F2
 	protected unsafe static void __CPPCALL_EditorTickHandle_Implementation(TsEffectFunctionLibrary.__EditorTickHandle_FunctionParams* __Params)
 	{
 		TsEffectFunctionLibrary.EditorTickHandle(__Params->handle, __Params->delta);
 	}
 
-	// Token: 0x06002614 RID: 9748 RVA: 0x000E4A01 File Offset: 0x000E2C01
+	// Token: 0x060026CD RID: 9933 RVA: 0x000EB005 File Offset: 0x000E9205
 	protected unsafe static void __CPPCALL_GetEffectActor_Implementation(TsEffectFunctionLibrary.__GetEffectActor_FunctionParams* __Params)
 	{
 		ref IntPtr ptr = ref *(&__Params->__Result);
@@ -833,7 +833,7 @@ public class TsEffectFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject
 		ptr = ((effectActor != null) ? effectActor.NativePtr : ((IntPtr)0));
 	}
 
-	// Token: 0x06002615 RID: 9749 RVA: 0x000E4A24 File Offset: 0x000E2C24
+	// Token: 0x060026CE RID: 9934 RVA: 0x000EB028 File Offset: 0x000E9228
 	protected unsafe static void __CPPCALL_AttachEffectActorToActor_Implementation(TsEffectFunctionLibrary.__AttachEffectActorToActor_FunctionParams* __Params)
 	{
 		AActor orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AActor>(__Params->parent);
@@ -843,7 +843,7 @@ public class TsEffectFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject
 		TsEffectFunctionLibrary.AttachEffectActorToActor(__Params->handle, orCreateUObjectByNativePointer, __Params->socketName, locationRule, rotationRule, scaleRule, __Params->bWeldSimulatedBodies);
 	}
 
-	// Token: 0x06002616 RID: 9750 RVA: 0x000E4A70 File Offset: 0x000E2C70
+	// Token: 0x060026CF RID: 9935 RVA: 0x000EB074 File Offset: 0x000E9274
 	protected unsafe static void __CPPCALL_AttachEffectActorToComponent_Implementation(TsEffectFunctionLibrary.__AttachEffectActorToComponent_FunctionParams* __Params)
 	{
 		USceneComponent orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USceneComponent>(__Params->parent);
@@ -853,630 +853,630 @@ public class TsEffectFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject
 		TsEffectFunctionLibrary.AttachEffectActorToComponent(__Params->handle, orCreateUObjectByNativePointer, __Params->socketName, locationRule, rotationRule, scaleRule, __Params->bWeldSimulatedBodies);
 	}
 
-	// Token: 0x06002617 RID: 9751 RVA: 0x000E4AB9 File Offset: 0x000E2CB9
+	// Token: 0x060026D0 RID: 9936 RVA: 0x000EB0BD File Offset: 0x000E92BD
 	protected unsafe static void __CPPCALL_SetEffectActorRelativeLocation_Implementation(TsEffectFunctionLibrary.__SetEffectActorRelativeLocation_FunctionParams* __Params)
 	{
 		TsEffectFunctionLibrary.SetEffectActorRelativeLocation(__Params->handle, __Params->newRelativeLocation, __Params->bSweep, __Params->bTeleport);
 	}
 
-	// Token: 0x06002618 RID: 9752 RVA: 0x000E4AD8 File Offset: 0x000E2CD8
+	// Token: 0x060026D1 RID: 9937 RVA: 0x000EB0DC File Offset: 0x000E92DC
 	protected unsafe static void __CPPCALL_SetEffectHiddenInGame_Implementation(TsEffectFunctionLibrary.__SetEffectHiddenInGame_FunctionParams* __Params)
 	{
 		TsEffectFunctionLibrary.SetEffectHiddenInGame(__Params->handle, __Params->value);
 	}
 
-	// Token: 0x06002619 RID: 9753 RVA: 0x000E4AEB File Offset: 0x000E2CEB
+	// Token: 0x060026D2 RID: 9938 RVA: 0x000EB0EF File Offset: 0x000E92EF
 	protected unsafe static void __CPPCALL_SetEffectIgnoreVisibilityOptimize_Implementation(TsEffectFunctionLibrary.__SetEffectIgnoreVisibilityOptimize_FunctionParams* __Params)
 	{
 		TsEffectFunctionLibrary.SetEffectIgnoreVisibilityOptimize(__Params->handle, __Params->ignore);
 	}
 
-	// Token: 0x0600261A RID: 9754 RVA: 0x000E4AFE File Offset: 0x000E2CFE
+	// Token: 0x060026D3 RID: 9939 RVA: 0x000EB102 File Offset: 0x000E9302
 	protected unsafe static void __CPPCALL_SetEffectStoppingTime_Implementation(TsEffectFunctionLibrary.__SetEffectStoppingTime_FunctionParams* __Params)
 	{
 		TsEffectFunctionLibrary.SetEffectStoppingTime(__Params->handle, __Params->stoppingTime);
 	}
 
-	// Token: 0x0600261B RID: 9755 RVA: 0x000E4B11 File Offset: 0x000E2D11
+	// Token: 0x060026D4 RID: 9940 RVA: 0x000EB115 File Offset: 0x000E9315
 	protected unsafe static void __CPPCALL_SetGlobalStoppingTime_Implementation(TsEffectFunctionLibrary.__SetGlobalStoppingTime_FunctionParams* __Params)
 	{
 		TsEffectFunctionLibrary.SetGlobalStoppingTime(__Params->stoppingTime, __Params->playTime);
 	}
 
-	// Token: 0x0600261C RID: 9756 RVA: 0x000E4B24 File Offset: 0x000E2D24
+	// Token: 0x060026D5 RID: 9941 RVA: 0x000EB128 File Offset: 0x000E9328
 	protected unsafe static void __CPPCALL_SetPublicToSequence_Implementation(TsEffectFunctionLibrary.__SetPublicToSequence_FunctionParams* __Params)
 	{
 		BP_EffectActor_C orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<BP_EffectActor_C>(__Params->actor);
 		TsEffectFunctionLibrary.SetPublicToSequence(__Params->handle, orCreateUObjectByNativePointer);
 	}
 
-	// Token: 0x0600261D RID: 9757 RVA: 0x000E4B4C File Offset: 0x000E2D4C
+	// Token: 0x060026D6 RID: 9942 RVA: 0x000EB150 File Offset: 0x000E9350
 	protected unsafe static void __CPPCALL_SetSimulateFromSequence_Implementation(TsEffectFunctionLibrary.__SetSimulateFromSequence_FunctionParams* __Params)
 	{
 		BP_EffectActor_C orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<BP_EffectActor_C>(__Params->actor);
 		TsEffectFunctionLibrary.SetSimulateFromSequence(__Params->handle, orCreateUObjectByNativePointer);
 	}
 
-	// Token: 0x04002485 RID: 9349
+	// Token: 0x04002505 RID: 9477
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Effect/TsEffectFunctionLibrary.TsEffectFunctionLibrary_C";
 
-	// Token: 0x04002486 RID: 9350
+	// Token: 0x04002506 RID: 9478
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04002487 RID: 9351
+	// Token: 0x04002507 RID: 9479
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x02007456 RID: 29782
+	// Token: 0x020065E7 RID: 26087
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 144)]
 	protected ref struct __SpawnEffect_FunctionParams
 	{
-		// Token: 0x0402684F RID: 157775
+		// Token: 0x04021B8D RID: 138125
 		[FieldOffset(0)]
 		public IntPtr worldContext;
 
-		// Token: 0x04026850 RID: 157776
+		// Token: 0x04021B8E RID: 138126
 		[FieldOffset(8)]
 		public IntPtr callObject;
 
-		// Token: 0x04026851 RID: 157777
+		// Token: 0x04021B8F RID: 138127
 		[FieldOffset(16)]
 		public FString path;
 
-		// Token: 0x04026852 RID: 157778
+		// Token: 0x04021B90 RID: 138128
 		[FieldOffset(32)]
 		public FTransformDouble transform;
 
-		// Token: 0x04026853 RID: 157779
+		// Token: 0x04021B91 RID: 138129
 		[FieldOffset(96)]
 		public FString reason;
 
-		// Token: 0x04026854 RID: 157780
+		// Token: 0x04021B92 RID: 138130
 		[FieldOffset(112)]
 		public byte playType;
 
-		// Token: 0x04026855 RID: 157781
+		// Token: 0x04021B93 RID: 138131
 		[FieldOffset(113)]
 		public bool disablePostProcess;
 
-		// Token: 0x04026856 RID: 157782
+		// Token: 0x04021B94 RID: 138132
 		[FieldOffset(120)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04026857 RID: 157783
+		// Token: 0x04021B95 RID: 138133
 		[FieldOffset(128)]
 		public int __Result;
 	}
 
-	// Token: 0x02007457 RID: 29783
+	// Token: 0x020065E8 RID: 26088
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 176)]
 	protected ref struct __SpawnEffectAttachToBone_FunctionParams
 	{
-		// Token: 0x04026858 RID: 157784
+		// Token: 0x04021B96 RID: 138134
 		[FieldOffset(0)]
 		public IntPtr worldContext;
 
-		// Token: 0x04026859 RID: 157785
+		// Token: 0x04021B97 RID: 138135
 		[FieldOffset(8)]
 		public IntPtr callObject;
 
-		// Token: 0x0402685A RID: 157786
+		// Token: 0x04021B98 RID: 138136
 		[FieldOffset(16)]
 		public IntPtr skeletalMeshComponent;
 
-		// Token: 0x0402685B RID: 157787
+		// Token: 0x04021B99 RID: 138137
 		[FieldOffset(24)]
 		public FName socketName;
 
-		// Token: 0x0402685C RID: 157788
+		// Token: 0x04021B9A RID: 138138
 		[FieldOffset(40)]
 		public FString path;
 
-		// Token: 0x0402685D RID: 157789
+		// Token: 0x04021B9B RID: 138139
 		[FieldOffset(64)]
 		public FTransformDouble transform;
 
-		// Token: 0x0402685E RID: 157790
+		// Token: 0x04021B9C RID: 138140
 		[FieldOffset(128)]
 		public FString reason;
 
-		// Token: 0x0402685F RID: 157791
+		// Token: 0x04021B9D RID: 138141
 		[FieldOffset(144)]
 		public byte playType;
 
-		// Token: 0x04026860 RID: 157792
+		// Token: 0x04021B9E RID: 138142
 		[FieldOffset(145)]
 		public bool disablePostProcess;
 
-		// Token: 0x04026861 RID: 157793
+		// Token: 0x04021B9F RID: 138143
 		[FieldOffset(152)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04026862 RID: 157794
+		// Token: 0x04021BA0 RID: 138144
 		[FieldOffset(160)]
 		public int __Result;
 	}
 
-	// Token: 0x02007458 RID: 29784
+	// Token: 0x020065E9 RID: 26089
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 128)]
 	protected ref struct __SpawnEffectUI_FunctionParams
 	{
-		// Token: 0x04026863 RID: 157795
+		// Token: 0x04021BA1 RID: 138145
 		[FieldOffset(0)]
 		public IntPtr worldContext;
 
-		// Token: 0x04026864 RID: 157796
+		// Token: 0x04021BA2 RID: 138146
 		[FieldOffset(8)]
 		public IntPtr callObject;
 
-		// Token: 0x04026865 RID: 157797
+		// Token: 0x04021BA3 RID: 138147
 		[FieldOffset(16)]
 		public FString path;
 
-		// Token: 0x04026866 RID: 157798
+		// Token: 0x04021BA4 RID: 138148
 		[FieldOffset(32)]
 		public FTransformDouble transform;
 
-		// Token: 0x04026867 RID: 157799
+		// Token: 0x04021BA5 RID: 138149
 		[FieldOffset(96)]
 		public FString reason;
 
-		// Token: 0x04026868 RID: 157800
+		// Token: 0x04021BA6 RID: 138150
 		[FieldOffset(112)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04026869 RID: 157801
+		// Token: 0x04021BA7 RID: 138151
 		[FieldOffset(120)]
 		public int __Result;
 	}
 
-	// Token: 0x02007459 RID: 29785
+	// Token: 0x020065EA RID: 26090
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 80)]
 	protected ref struct __SpawnEffectWithActor_FunctionParams
 	{
-		// Token: 0x0402686A RID: 157802
+		// Token: 0x04021BA8 RID: 138152
 		[FieldOffset(0)]
 		public IntPtr worldContext;
 
-		// Token: 0x0402686B RID: 157803
+		// Token: 0x04021BA9 RID: 138153
 		[FieldOffset(8)]
 		public IntPtr callObject;
 
-		// Token: 0x0402686C RID: 157804
+		// Token: 0x04021BAA RID: 138154
 		[FieldOffset(16)]
 		public IntPtr effectActor;
 
-		// Token: 0x0402686D RID: 157805
+		// Token: 0x04021BAB RID: 138155
 		[FieldOffset(24)]
 		public FString path;
 
-		// Token: 0x0402686E RID: 157806
+		// Token: 0x04021BAC RID: 138156
 		[FieldOffset(40)]
 		public FString reason;
 
-		// Token: 0x0402686F RID: 157807
+		// Token: 0x04021BAD RID: 138157
 		[FieldOffset(56)]
 		public byte playType;
 
-		// Token: 0x04026870 RID: 157808
+		// Token: 0x04021BAE RID: 138158
 		[FieldOffset(57)]
 		public byte effectType;
 
-		// Token: 0x04026871 RID: 157809
+		// Token: 0x04021BAF RID: 138159
 		[FieldOffset(58)]
 		public bool disablePostProcess;
 
-		// Token: 0x04026872 RID: 157810
+		// Token: 0x04021BB0 RID: 138160
 		[FieldOffset(64)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04026873 RID: 157811
+		// Token: 0x04021BB1 RID: 138161
 		[FieldOffset(72)]
 		public int __Result;
 	}
 
-	// Token: 0x0200745A RID: 29786
+	// Token: 0x020065EB RID: 26091
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __InitializeWithPreview_FunctionParams
 	{
-		// Token: 0x04026874 RID: 157812
+		// Token: 0x04021BB2 RID: 138162
 		[FieldOffset(0)]
 		public bool refresh;
 
-		// Token: 0x04026875 RID: 157813
+		// Token: 0x04021BB3 RID: 138163
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x0200745B RID: 29787
+	// Token: 0x020065EC RID: 26092
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __EffectHandleIsValid_FunctionParams
 	{
-		// Token: 0x04026876 RID: 157814
+		// Token: 0x04021BB4 RID: 138164
 		[FieldOffset(0)]
 		public int handle;
 
-		// Token: 0x04026877 RID: 157815
+		// Token: 0x04021BB5 RID: 138165
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04026878 RID: 157816
+		// Token: 0x04021BB6 RID: 138166
 		[FieldOffset(16)]
 		public bool __Result;
 	}
 
-	// Token: 0x0200745C RID: 29788
+	// Token: 0x020065ED RID: 26093
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 56)]
 	protected ref struct __StopEffect_FunctionParams
 	{
-		// Token: 0x04026879 RID: 157817
+		// Token: 0x04021BB7 RID: 138167
 		[FieldOffset(0)]
 		public int handle;
 
-		// Token: 0x0402687A RID: 157818
+		// Token: 0x04021BB8 RID: 138168
 		[FieldOffset(8)]
 		public IntPtr callObject;
 
-		// Token: 0x0402687B RID: 157819
+		// Token: 0x04021BB9 RID: 138169
 		[FieldOffset(16)]
 		public FString reason;
 
-		// Token: 0x0402687C RID: 157820
+		// Token: 0x04021BBA RID: 138170
 		[FieldOffset(32)]
 		public bool immediately;
 
-		// Token: 0x0402687D RID: 157821
+		// Token: 0x04021BBB RID: 138171
 		[FieldOffset(33)]
 		public bool destroyActor;
 
-		// Token: 0x0402687E RID: 157822
+		// Token: 0x04021BBC RID: 138172
 		[FieldOffset(40)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402687F RID: 157823
+		// Token: 0x04021BBD RID: 138173
 		[FieldOffset(48)]
 		public bool __Result;
 	}
 
-	// Token: 0x0200745D RID: 29789
+	// Token: 0x020065EE RID: 26094
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 56)]
 	protected ref struct __StopAndDestroyEffect_FunctionParams
 	{
-		// Token: 0x04026880 RID: 157824
+		// Token: 0x04021BBE RID: 138174
 		[FieldOffset(0)]
 		public int handle;
 
-		// Token: 0x04026881 RID: 157825
+		// Token: 0x04021BBF RID: 138175
 		[FieldOffset(8)]
 		public IntPtr callObject;
 
-		// Token: 0x04026882 RID: 157826
+		// Token: 0x04021BC0 RID: 138176
 		[FieldOffset(16)]
 		public FString reason;
 
-		// Token: 0x04026883 RID: 157827
+		// Token: 0x04021BC1 RID: 138177
 		[FieldOffset(32)]
 		public bool immediately;
 
-		// Token: 0x04026884 RID: 157828
+		// Token: 0x04021BC2 RID: 138178
 		[FieldOffset(40)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04026885 RID: 157829
+		// Token: 0x04021BC3 RID: 138179
 		[FieldOffset(48)]
 		public bool __Result;
 	}
 
-	// Token: 0x0200745E RID: 29790
+	// Token: 0x020065EF RID: 26095
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __PlayEffect_FunctionParams
 	{
-		// Token: 0x04026886 RID: 157830
+		// Token: 0x04021BC4 RID: 138180
 		[FieldOffset(0)]
 		public int handle;
 
-		// Token: 0x04026887 RID: 157831
+		// Token: 0x04021BC5 RID: 138181
 		[FieldOffset(8)]
 		public IntPtr callObject;
 
-		// Token: 0x04026888 RID: 157832
+		// Token: 0x04021BC6 RID: 138182
 		[FieldOffset(16)]
 		public FString reason;
 
-		// Token: 0x04026889 RID: 157833
+		// Token: 0x04021BC7 RID: 138183
 		[FieldOffset(32)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402688A RID: 157834
+		// Token: 0x04021BC8 RID: 138184
 		[FieldOffset(40)]
 		public bool __Result;
 	}
 
-	// Token: 0x0200745F RID: 29791
+	// Token: 0x020065F0 RID: 26096
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 96)]
 	protected ref struct __SetEffectParameterNiagara_FunctionParams
 	{
-		// Token: 0x0402688B RID: 157835
+		// Token: 0x04021BC9 RID: 138185
 		[FieldOffset(0)]
 		public int handle;
 
-		// Token: 0x0402688C RID: 157836
+		// Token: 0x04021BCA RID: 138186
 		[FieldOffset(8)]
 		public byte userParameterFloat;
 
-		// Token: 0x0402688D RID: 157837
+		// Token: 0x04021BCB RID: 138187
 		[FieldOffset(24)]
 		public byte userParameterColor;
 
-		// Token: 0x0402688E RID: 157838
+		// Token: 0x04021BCC RID: 138188
 		[FieldOffset(40)]
 		public byte userParameterVector;
 
-		// Token: 0x0402688F RID: 157839
+		// Token: 0x04021BCD RID: 138189
 		[FieldOffset(56)]
 		public byte materialParameterFloat;
 
-		// Token: 0x04026890 RID: 157840
+		// Token: 0x04021BCE RID: 138190
 		[FieldOffset(72)]
 		public byte materialParameterColor;
 
-		// Token: 0x04026891 RID: 157841
+		// Token: 0x04021BCF RID: 138191
 		[FieldOffset(88)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007460 RID: 29792
+	// Token: 0x020065F1 RID: 26097
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __EditorTickHandle_FunctionParams
 	{
-		// Token: 0x04026892 RID: 157842
+		// Token: 0x04021BD0 RID: 138192
 		[FieldOffset(0)]
 		public int handle;
 
-		// Token: 0x04026893 RID: 157843
+		// Token: 0x04021BD1 RID: 138193
 		[FieldOffset(4)]
 		public float delta;
 
-		// Token: 0x04026894 RID: 157844
+		// Token: 0x04021BD2 RID: 138194
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007461 RID: 29793
+	// Token: 0x020065F2 RID: 26098
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetEffectActor_FunctionParams
 	{
-		// Token: 0x04026895 RID: 157845
+		// Token: 0x04021BD3 RID: 138195
 		[FieldOffset(0)]
 		public int handle;
 
-		// Token: 0x04026896 RID: 157846
+		// Token: 0x04021BD4 RID: 138196
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x04026897 RID: 157847
+		// Token: 0x04021BD5 RID: 138197
 		[FieldOffset(16)]
 		public IntPtr __Result;
 	}
 
-	// Token: 0x02007462 RID: 29794
+	// Token: 0x020065F3 RID: 26099
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __AttachEffectActorToActor_FunctionParams
 	{
-		// Token: 0x04026898 RID: 157848
+		// Token: 0x04021BD6 RID: 138198
 		[FieldOffset(0)]
 		public int handle;
 
-		// Token: 0x04026899 RID: 157849
+		// Token: 0x04021BD7 RID: 138199
 		[FieldOffset(8)]
 		public IntPtr parent;
 
-		// Token: 0x0402689A RID: 157850
+		// Token: 0x04021BD8 RID: 138200
 		[FieldOffset(16)]
 		public FName socketName;
 
-		// Token: 0x0402689B RID: 157851
+		// Token: 0x04021BD9 RID: 138201
 		[FieldOffset(28)]
 		public byte locationRule;
 
-		// Token: 0x0402689C RID: 157852
+		// Token: 0x04021BDA RID: 138202
 		[FieldOffset(29)]
 		public byte rotationRule;
 
-		// Token: 0x0402689D RID: 157853
+		// Token: 0x04021BDB RID: 138203
 		[FieldOffset(30)]
 		public byte scaleRule;
 
-		// Token: 0x0402689E RID: 157854
+		// Token: 0x04021BDC RID: 138204
 		[FieldOffset(31)]
 		public bool bWeldSimulatedBodies;
 
-		// Token: 0x0402689F RID: 157855
+		// Token: 0x04021BDD RID: 138205
 		[FieldOffset(32)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007463 RID: 29795
+	// Token: 0x020065F4 RID: 26100
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 40)]
 	protected ref struct __AttachEffectActorToComponent_FunctionParams
 	{
-		// Token: 0x040268A0 RID: 157856
+		// Token: 0x04021BDE RID: 138206
 		[FieldOffset(0)]
 		public int handle;
 
-		// Token: 0x040268A1 RID: 157857
+		// Token: 0x04021BDF RID: 138207
 		[FieldOffset(8)]
 		public IntPtr parent;
 
-		// Token: 0x040268A2 RID: 157858
+		// Token: 0x04021BE0 RID: 138208
 		[FieldOffset(16)]
 		public FName socketName;
 
-		// Token: 0x040268A3 RID: 157859
+		// Token: 0x04021BE1 RID: 138209
 		[FieldOffset(28)]
 		public byte locationRule;
 
-		// Token: 0x040268A4 RID: 157860
+		// Token: 0x04021BE2 RID: 138210
 		[FieldOffset(29)]
 		public byte rotationRule;
 
-		// Token: 0x040268A5 RID: 157861
+		// Token: 0x04021BE3 RID: 138211
 		[FieldOffset(30)]
 		public byte scaleRule;
 
-		// Token: 0x040268A6 RID: 157862
+		// Token: 0x04021BE4 RID: 138212
 		[FieldOffset(31)]
 		public bool bWeldSimulatedBodies;
 
-		// Token: 0x040268A7 RID: 157863
+		// Token: 0x04021BE5 RID: 138213
 		[FieldOffset(32)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007464 RID: 29796
+	// Token: 0x020065F5 RID: 26101
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 48)]
 	protected ref struct __SetEffectActorRelativeLocation_FunctionParams
 	{
-		// Token: 0x040268A8 RID: 157864
+		// Token: 0x04021BE6 RID: 138214
 		[FieldOffset(0)]
 		public int handle;
 
-		// Token: 0x040268A9 RID: 157865
+		// Token: 0x04021BE7 RID: 138215
 		[FieldOffset(8)]
 		public FVectorDouble newRelativeLocation;
 
-		// Token: 0x040268AA RID: 157866
+		// Token: 0x04021BE8 RID: 138216
 		[FieldOffset(32)]
 		public bool bSweep;
 
-		// Token: 0x040268AB RID: 157867
+		// Token: 0x04021BE9 RID: 138217
 		[FieldOffset(33)]
 		public bool bTeleport;
 
-		// Token: 0x040268AC RID: 157868
+		// Token: 0x04021BEA RID: 138218
 		[FieldOffset(40)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007465 RID: 29797
+	// Token: 0x020065F6 RID: 26102
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __SetEffectHiddenInGame_FunctionParams
 	{
-		// Token: 0x040268AD RID: 157869
+		// Token: 0x04021BEB RID: 138219
 		[FieldOffset(0)]
 		public int handle;
 
-		// Token: 0x040268AE RID: 157870
+		// Token: 0x04021BEC RID: 138220
 		[FieldOffset(4)]
 		public bool value;
 
-		// Token: 0x040268AF RID: 157871
+		// Token: 0x04021BED RID: 138221
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007466 RID: 29798
+	// Token: 0x020065F7 RID: 26103
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __SetEffectIgnoreVisibilityOptimize_FunctionParams
 	{
-		// Token: 0x040268B0 RID: 157872
+		// Token: 0x04021BEE RID: 138222
 		[FieldOffset(0)]
 		public int handle;
 
-		// Token: 0x040268B1 RID: 157873
+		// Token: 0x04021BEF RID: 138223
 		[FieldOffset(4)]
 		public bool ignore;
 
-		// Token: 0x040268B2 RID: 157874
+		// Token: 0x04021BF0 RID: 138224
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007467 RID: 29799
+	// Token: 0x020065F8 RID: 26104
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __SetEffectStoppingTime_FunctionParams
 	{
-		// Token: 0x040268B3 RID: 157875
+		// Token: 0x04021BF1 RID: 138225
 		[FieldOffset(0)]
 		public int handle;
 
-		// Token: 0x040268B4 RID: 157876
+		// Token: 0x04021BF2 RID: 138226
 		[FieldOffset(4)]
 		public bool stoppingTime;
 
-		// Token: 0x040268B5 RID: 157877
+		// Token: 0x04021BF3 RID: 138227
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007468 RID: 29800
+	// Token: 0x020065F9 RID: 26105
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __SetGlobalStoppingTime_FunctionParams
 	{
-		// Token: 0x040268B6 RID: 157878
+		// Token: 0x04021BF4 RID: 138228
 		[FieldOffset(0)]
 		public bool stoppingTime;
 
-		// Token: 0x040268B7 RID: 157879
+		// Token: 0x04021BF5 RID: 138229
 		[FieldOffset(4)]
 		public float playTime;
 
-		// Token: 0x040268B8 RID: 157880
+		// Token: 0x04021BF6 RID: 138230
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x02007469 RID: 29801
+	// Token: 0x020065FA RID: 26106
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __SetPublicToSequence_FunctionParams
 	{
-		// Token: 0x040268B9 RID: 157881
+		// Token: 0x04021BF7 RID: 138231
 		[FieldOffset(0)]
 		public int handle;
 
-		// Token: 0x040268BA RID: 157882
+		// Token: 0x04021BF8 RID: 138232
 		[FieldOffset(8)]
 		public IntPtr actor;
 
-		// Token: 0x040268BB RID: 157883
+		// Token: 0x04021BF9 RID: 138233
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x0200746A RID: 29802
+	// Token: 0x020065FB RID: 26107
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __SetSimulateFromSequence_FunctionParams
 	{
-		// Token: 0x040268BC RID: 157884
+		// Token: 0x04021BFA RID: 138234
 		[FieldOffset(0)]
 		public int handle;
 
-		// Token: 0x040268BD RID: 157885
+		// Token: 0x04021BFB RID: 138235
 		[FieldOffset(8)]
 		public IntPtr actor;
 
-		// Token: 0x040268BE RID: 157886
+		// Token: 0x04021BFC RID: 138236
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}

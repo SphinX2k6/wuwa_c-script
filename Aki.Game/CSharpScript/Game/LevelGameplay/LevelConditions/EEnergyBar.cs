@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006C8D RID: 27789
+	// Token: 0x02005E07 RID: 24071
 	public enum EEnergyBar
 	{
-		// Token: 0x040239C5 RID: 145861
+		// Token: 0x0401EC67 RID: 126055
 		Empty,
-		// Token: 0x040239C6 RID: 145862
+		// Token: 0x0401EC68 RID: 126056
 		Full,
-		// Token: 0x040239C7 RID: 145863
+		// Token: 0x0401EC69 RID: 126057
 		Middle
 	}
 }

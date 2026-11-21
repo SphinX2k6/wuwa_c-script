@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
@@ -8,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Infrastructure
 {
-	// Token: 0x02005910 RID: 22800
+	// Token: 0x020048E9 RID: 18665
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InfrastructureFireExpPanel : UiPanelBase
 	{
-		// Token: 0x06039E5D RID: 237149 RVA: 0x00DC09E8 File Offset: 0x00DBEBE8
+		// Token: 0x0602ED80 RID: 191872 RVA: 0x00D0FCE0 File Offset: 0x00D0DEE0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 17;
@@ -64,7 +63,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06039E5E RID: 237150 RVA: 0x00DC0C88 File Offset: 0x00DBEE88
+		// Token: 0x0602ED81 RID: 191873 RVA: 0x00D0FF80 File Offset: 0x00D0E180
 		protected override void OnStart()
 		{
 			this.SeqPlayer = new LevelSequencePlayer(base.GetItem(16));
@@ -73,19 +72,19 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.RefreshActivityLevel(0, true);
 		}
 
-		// Token: 0x06039E5F RID: 237151 RVA: 0x00DC0CF1 File Offset: 0x00DBEEF1
+		// Token: 0x0602ED82 RID: 191874 RVA: 0x00D0FFE9 File Offset: 0x00D0E1E9
 		public bool UpdateExp()
 		{
 			return this.RefreshActivityLevel(0, false);
 		}
 
-		// Token: 0x06039E60 RID: 237152 RVA: 0x00DC0CFC File Offset: 0x00DBEEFC
+		// Token: 0x0602ED83 RID: 191875 RVA: 0x00D0FFF4 File Offset: 0x00D0E1F4
 		public void RefreshExpBeforeRoadBuilt(int roadId)
 		{
 			this.RefreshActivityLevel(InfrastructureConfig.Instance.GetRoadConfigById(roadId).Value.FireExpReward, true);
 		}
 
-		// Token: 0x06039E61 RID: 237153 RVA: 0x00DC0D2C File Offset: 0x00DBEF2C
+		// Token: 0x0602ED84 RID: 191876 RVA: 0x00D10024 File Offset: 0x00D0E224
 		private bool RefreshActivityLevel(int expDiff = 0, bool disableSequence = false)
 		{
 			double num = Math.Pow(10.0, (double)(this.numEnum.Length - 1));
@@ -143,19 +142,19 @@ namespace CSharpScript.Game.Module.Infrastructure
 			return flag;
 		}
 
-		// Token: 0x06039E62 RID: 237154 RVA: 0x00DC0EEC File Offset: 0x00DBF0EC
+		// Token: 0x0602ED85 RID: 191877 RVA: 0x00D101E4 File Offset: 0x00D0E3E4
 		public void SetOnClickHelpCb(Action cb)
 		{
 			this.OnClickHelpCb = cb;
 		}
 
-		// Token: 0x06039E63 RID: 237155 RVA: 0x00DC0EF5 File Offset: 0x00DBF0F5
+		// Token: 0x0602ED86 RID: 191878 RVA: 0x00D101ED File Offset: 0x00D0E3ED
 		public void SetOnDigitSequenceFinishCb(Action cb)
 		{
 			this.OnDigitSequenceFinishCb = cb;
 		}
 
-		// Token: 0x06039E64 RID: 237156 RVA: 0x00DC0EFE File Offset: 0x00DBF0FE
+		// Token: 0x0602ED87 RID: 191879 RVA: 0x00D101F6 File Offset: 0x00D0E3F6
 		private void OnClickHelp()
 		{
 			Action onClickHelpCb = this.OnClickHelpCb;
@@ -166,10 +165,10 @@ namespace CSharpScript.Game.Module.Infrastructure
 			onClickHelpCb();
 		}
 
-		// Token: 0x06039E65 RID: 237157 RVA: 0x00DC0F10 File Offset: 0x00DBF110
+		// Token: 0x0602ED88 RID: 191880 RVA: 0x00D10208 File Offset: 0x00D0E408
 		private void OnSequenceClose(string seqName)
 		{
-			if (this.sequenceName.Contains(seqName))
+			if (Array.IndexOf<string>(this.sequenceName, seqName) >= 0)
 			{
 				Action onDigitSequenceFinishCb = this.OnDigitSequenceFinishCb;
 				if (onDigitSequenceFinishCb == null)
@@ -180,10 +179,10 @@ namespace CSharpScript.Game.Module.Infrastructure
 			}
 		}
 
-		// Token: 0x06039E66 RID: 237158 RVA: 0x00DC0F30 File Offset: 0x00DBF130
+		// Token: 0x0602ED89 RID: 191881 RVA: 0x00D1022C File Offset: 0x00D0E42C
 		private void SequenceEvent(string seqName, string eventName)
 		{
-			if (this.sequenceName.Contains(seqName) && eventName == "On")
+			if (Array.IndexOf<string>(this.sequenceName, seqName) >= 0 && eventName == "On")
 			{
 				int num = this.sequenceName.IndexOf(seqName);
 				int num2 = this.CurrentFireExpArray[num];
@@ -191,19 +190,19 @@ namespace CSharpScript.Game.Module.Infrastructure
 			}
 		}
 
-		// Token: 0x0401E31A RID: 123674
+		// Token: 0x04018DB7 RID: 101815
 		private List<int> CurrentFireExpArray = new List<int>();
 
-		// Token: 0x0401E31B RID: 123675
+		// Token: 0x04018DB8 RID: 101816
 		private LevelSequencePlayer SeqPlayer;
 
-		// Token: 0x0401E31C RID: 123676
+		// Token: 0x04018DB9 RID: 101817
 		private Action OnClickHelpCb;
 
-		// Token: 0x0401E31D RID: 123677
+		// Token: 0x04018DBA RID: 101818
 		private Action OnDigitSequenceFinishCb;
 
-		// Token: 0x0401E31E RID: 123678
+		// Token: 0x04018DBB RID: 101819
 		private readonly int[] numEnum = new int[]
 		{
 			1,
@@ -213,7 +212,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			5
 		};
 
-		// Token: 0x0401E31F RID: 123679
+		// Token: 0x04018DBC RID: 101820
 		private readonly int[] preNumEnum = new int[]
 		{
 			11,
@@ -223,7 +222,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			15
 		};
 
-		// Token: 0x0401E320 RID: 123680
+		// Token: 0x04018DBD RID: 101821
 		private readonly int[] nextNumEnum = new int[]
 		{
 			6,
@@ -233,7 +232,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			10
 		};
 
-		// Token: 0x0401E321 RID: 123681
+		// Token: 0x04018DBE RID: 101822
 		private readonly string[] sequenceName = new string[]
 		{
 			"FirstDigit",
@@ -243,59 +242,59 @@ namespace CSharpScript.Game.Module.Infrastructure
 			"FifthDigit"
 		};
 
-		// Token: 0x0200BB82 RID: 48002
+		// Token: 0x0200A592 RID: 42386
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x04038994 RID: 231828
+			// Token: 0x0403337C RID: 209788
 			public const int BtnHelp = 0;
 
-			// Token: 0x04038995 RID: 231829
+			// Token: 0x0403337D RID: 209789
 			public const int ArtText1 = 1;
 
-			// Token: 0x04038996 RID: 231830
+			// Token: 0x0403337E RID: 209790
 			public const int ArtText2 = 2;
 
-			// Token: 0x04038997 RID: 231831
+			// Token: 0x0403337F RID: 209791
 			public const int ArtText3 = 3;
 
-			// Token: 0x04038998 RID: 231832
+			// Token: 0x04033380 RID: 209792
 			public const int ArtText4 = 4;
 
-			// Token: 0x04038999 RID: 231833
+			// Token: 0x04033381 RID: 209793
 			public const int ArtText5 = 5;
 
-			// Token: 0x0403899A RID: 231834
+			// Token: 0x04033382 RID: 209794
 			public const int ArtTextNext1 = 6;
 
-			// Token: 0x0403899B RID: 231835
+			// Token: 0x04033383 RID: 209795
 			public const int ArtTextNext2 = 7;
 
-			// Token: 0x0403899C RID: 231836
+			// Token: 0x04033384 RID: 209796
 			public const int ArtTextNext3 = 8;
 
-			// Token: 0x0403899D RID: 231837
+			// Token: 0x04033385 RID: 209797
 			public const int ArtTextNext4 = 9;
 
-			// Token: 0x0403899E RID: 231838
+			// Token: 0x04033386 RID: 209798
 			public const int ArtTextNext5 = 10;
 
-			// Token: 0x0403899F RID: 231839
+			// Token: 0x04033387 RID: 209799
 			public const int ArtTextPre1 = 11;
 
-			// Token: 0x040389A0 RID: 231840
+			// Token: 0x04033388 RID: 209800
 			public const int ArtTextPre2 = 12;
 
-			// Token: 0x040389A1 RID: 231841
+			// Token: 0x04033389 RID: 209801
 			public const int ArtTextPre3 = 13;
 
-			// Token: 0x040389A2 RID: 231842
+			// Token: 0x0403338A RID: 209802
 			public const int ArtTextPre4 = 14;
 
-			// Token: 0x040389A3 RID: 231843
+			// Token: 0x0403338B RID: 209803
 			public const int ArtTextPre5 = 15;
 
-			// Token: 0x040389A4 RID: 231844
+			// Token: 0x0403338C RID: 209804
 			public const int PanelSeq = 16;
 		}
 	}

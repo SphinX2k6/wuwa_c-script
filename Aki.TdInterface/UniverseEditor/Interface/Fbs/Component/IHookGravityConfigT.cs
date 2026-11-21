@@ -3,30 +3,30 @@ using Aki.UniverseEditor.Interface.Fbs.Common;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020053C0 RID: 21440
+	// Token: 0x02005946 RID: 22854
 	public class IHookGravityConfigT
 	{
-		// Token: 0x17009D96 RID: 40342
-		// (get) Token: 0x0602323A RID: 143930 RVA: 0x004DD3D7 File Offset: 0x004DB5D7
-		// (set) Token: 0x0602323B RID: 143931 RVA: 0x004DD3DF File Offset: 0x004DB5DF
+		// Token: 0x1700A5CE RID: 42446
+		// (get) Token: 0x060252EE RID: 152302 RVA: 0x0051A2AB File Offset: 0x005184AB
+		// (set) Token: 0x060252EF RID: 152303 RVA: 0x0051A2B3 File Offset: 0x005184B3
 		public TGravityDirectionUnion GravityDirection { get; set; }
 
-		// Token: 0x17009D97 RID: 40343
-		// (get) Token: 0x0602323C RID: 143932 RVA: 0x004DD3E8 File Offset: 0x004DB5E8
-		// (set) Token: 0x0602323D RID: 143933 RVA: 0x004DD3F0 File Offset: 0x004DB5F0
+		// Token: 0x1700A5CF RID: 42447
+		// (get) Token: 0x060252F0 RID: 152304 RVA: 0x0051A2BC File Offset: 0x005184BC
+		// (set) Token: 0x060252F1 RID: 152305 RVA: 0x0051A2C4 File Offset: 0x005184C4
 		public int SafePointId { get; set; }
 
-		// Token: 0x17009D98 RID: 40344
-		// (get) Token: 0x0602323E RID: 143934 RVA: 0x004DD3F9 File Offset: 0x004DB5F9
-		// (set) Token: 0x0602323F RID: 143935 RVA: 0x004DD401 File Offset: 0x004DB601
+		// Token: 0x1700A5D0 RID: 42448
+		// (get) Token: 0x060252F2 RID: 152306 RVA: 0x0051A2CD File Offset: 0x005184CD
+		// (set) Token: 0x060252F3 RID: 152307 RVA: 0x0051A2D5 File Offset: 0x005184D5
 		public int CameraLookAtPointId { get; set; }
 
-		// Token: 0x17009D99 RID: 40345
-		// (get) Token: 0x06023240 RID: 143936 RVA: 0x004DD40A File Offset: 0x004DB60A
-		// (set) Token: 0x06023241 RID: 143937 RVA: 0x004DD412 File Offset: 0x004DB612
+		// Token: 0x1700A5D1 RID: 42449
+		// (get) Token: 0x060252F4 RID: 152308 RVA: 0x0051A2DE File Offset: 0x005184DE
+		// (set) Token: 0x060252F5 RID: 152309 RVA: 0x0051A2E6 File Offset: 0x005184E6
 		public byte NullMask { get; set; }
 
-		// Token: 0x06023242 RID: 143938 RVA: 0x004DD41B File Offset: 0x004DB61B
+		// Token: 0x060252F6 RID: 152310 RVA: 0x0051A2EF File Offset: 0x005184EF
 		public IHookGravityConfigT()
 		{
 			this.GravityDirection = null;

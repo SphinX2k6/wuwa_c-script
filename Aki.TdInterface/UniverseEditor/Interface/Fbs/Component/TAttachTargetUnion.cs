@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005BE9 RID: 23529
+	// Token: 0x02006202 RID: 25090
 	public class TAttachTargetUnion
 	{
-		// Token: 0x1700B1C5 RID: 45509
-		// (get) Token: 0x0602851F RID: 165151 RVA: 0x0058A28C File Offset: 0x0058848C
-		// (set) Token: 0x06028520 RID: 165152 RVA: 0x0058A294 File Offset: 0x00588494
+		// Token: 0x1700BB0F RID: 47887
+		// (get) Token: 0x0602AAEF RID: 174831 RVA: 0x005D1E18 File Offset: 0x005D0018
+		// (set) Token: 0x0602AAF0 RID: 174832 RVA: 0x005D1E20 File Offset: 0x005D0020
 		public TAttachTarget Type { get; set; }
 
-		// Token: 0x1700B1C6 RID: 45510
-		// (get) Token: 0x06028521 RID: 165153 RVA: 0x0058A29D File Offset: 0x0058849D
-		// (set) Token: 0x06028522 RID: 165154 RVA: 0x0058A2A5 File Offset: 0x005884A5
+		// Token: 0x1700BB10 RID: 47888
+		// (get) Token: 0x0602AAF1 RID: 174833 RVA: 0x005D1E29 File Offset: 0x005D0029
+		// (set) Token: 0x0602AAF2 RID: 174834 RVA: 0x005D1E31 File Offset: 0x005D0031
 		public object Value { get; set; }
 
-		// Token: 0x06028523 RID: 165155 RVA: 0x0058A2AE File Offset: 0x005884AE
+		// Token: 0x0602AAF3 RID: 174835 RVA: 0x005D1E3A File Offset: 0x005D003A
 		public TAttachTargetUnion()
 		{
 			this.Type = TAttachTarget.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06028524 RID: 165156 RVA: 0x0058A2C4 File Offset: 0x005884C4
+		// Token: 0x0602AAF4 RID: 174836 RVA: 0x005D1E50 File Offset: 0x005D0050
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06028525 RID: 165157 RVA: 0x0058A2D6 File Offset: 0x005884D6
+		// Token: 0x0602AAF5 RID: 174837 RVA: 0x005D1E62 File Offset: 0x005D0062
 		public IActorAttachTargetT AsIActorAttachTarget()
 		{
 			return this.As<IActorAttachTargetT>();
 		}
 
-		// Token: 0x06028526 RID: 165158 RVA: 0x0058A2DE File Offset: 0x005884DE
+		// Token: 0x0602AAF6 RID: 174838 RVA: 0x005D1E6A File Offset: 0x005D006A
 		public static TAttachTargetUnion FromIActorAttachTarget(IActorAttachTargetT _iactorattachtarget)
 		{
 			return new TAttachTargetUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028527 RID: 165159 RVA: 0x0058A2F3 File Offset: 0x005884F3
+		// Token: 0x0602AAF7 RID: 174839 RVA: 0x005D1E7F File Offset: 0x005D007F
 		public IDynamicAttachTargetT AsIDynamicAttachTarget()
 		{
 			return this.As<IDynamicAttachTargetT>();
 		}
 
-		// Token: 0x06028528 RID: 165160 RVA: 0x0058A2FB File Offset: 0x005884FB
+		// Token: 0x0602AAF8 RID: 174840 RVA: 0x005D1E87 File Offset: 0x005D0087
 		public static TAttachTargetUnion FromIDynamicAttachTarget(IDynamicAttachTargetT _idynamicattachtarget)
 		{
 			return new TAttachTargetUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028529 RID: 165161 RVA: 0x0058A310 File Offset: 0x00588510
+		// Token: 0x0602AAF9 RID: 174841 RVA: 0x005D1E9C File Offset: 0x005D009C
 		public IEntityAttachTargetT AsIEntityAttachTarget()
 		{
 			return this.As<IEntityAttachTargetT>();
 		}
 
-		// Token: 0x0602852A RID: 165162 RVA: 0x0058A318 File Offset: 0x00588518
+		// Token: 0x0602AAFA RID: 174842 RVA: 0x005D1EA4 File Offset: 0x005D00A4
 		public static TAttachTargetUnion FromIEntityAttachTarget(IEntityAttachTargetT _ientityattachtarget)
 		{
 			return new TAttachTargetUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602852B RID: 165163 RVA: 0x0058A32D File Offset: 0x0058852D
+		// Token: 0x0602AAFB RID: 174843 RVA: 0x005D1EB9 File Offset: 0x005D00B9
 		public IPlayerAttachTargetT AsIPlayerAttachTarget()
 		{
 			return this.As<IPlayerAttachTargetT>();
 		}
 
-		// Token: 0x0602852C RID: 165164 RVA: 0x0058A335 File Offset: 0x00588535
+		// Token: 0x0602AAFC RID: 174844 RVA: 0x005D1EC1 File Offset: 0x005D00C1
 		public static TAttachTargetUnion FromIPlayerAttachTarget(IPlayerAttachTargetT _iplayerattachtarget)
 		{
 			return new TAttachTargetUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602852D RID: 165165 RVA: 0x0058A34A File Offset: 0x0058854A
+		// Token: 0x0602AAFD RID: 174845 RVA: 0x005D1ED6 File Offset: 0x005D00D6
 		public IPointAttachTargetT AsIPointAttachTarget()
 		{
 			return this.As<IPointAttachTargetT>();
 		}
 
-		// Token: 0x0602852E RID: 165166 RVA: 0x0058A352 File Offset: 0x00588552
+		// Token: 0x0602AAFE RID: 174846 RVA: 0x005D1EDE File Offset: 0x005D00DE
 		public static TAttachTargetUnion FromIPointAttachTarget(IPointAttachTargetT _ipointattachtarget)
 		{
 			return new TAttachTargetUnion
@@ -109,7 +109,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x0602852F RID: 165167 RVA: 0x0058A368 File Offset: 0x00588568
+		// Token: 0x0602AAFF RID: 174847 RVA: 0x005D1EF4 File Offset: 0x005D00F4
 		public static int Pack(FlatBufferBuilder builder, TAttachTargetUnion _o)
 		{
 			switch (_o.Type)

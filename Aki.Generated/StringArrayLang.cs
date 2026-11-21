@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020011E8 RID: 4584
+	// Token: 0x0200131F RID: 4895
 	public struct StringArrayLang : IFlatbufferObject
 	{
-		// Token: 0x17003F4C RID: 16204
-		// (get) Token: 0x0600EBC5 RID: 60357 RVA: 0x0034AF1D File Offset: 0x0034911D
+		// Token: 0x170042B4 RID: 17076
+		// (get) Token: 0x0600F93E RID: 63806 RVA: 0x00375BF1 File Offset: 0x00373DF1
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,38 +18,38 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600EBC6 RID: 60358 RVA: 0x0034AF2A File Offset: 0x0034912A
+		// Token: 0x0600F93F RID: 63807 RVA: 0x00375BFE File Offset: 0x00373DFE
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600EBC7 RID: 60359 RVA: 0x0034AF34 File Offset: 0x00349134
+		// Token: 0x0600F940 RID: 63808 RVA: 0x00375C08 File Offset: 0x00373E08
 		public static StringArrayLang GetRootAsStringArrayLang(ByteBuffer _bb)
 		{
 			return StringArrayLang.GetRootAsStringArrayLang(_bb, default(StringArrayLang));
 		}
 
-		// Token: 0x0600EBC8 RID: 60360 RVA: 0x0034AF50 File Offset: 0x00349150
+		// Token: 0x0600F941 RID: 63809 RVA: 0x00375C24 File Offset: 0x00373E24
 		public static StringArrayLang GetRootAsStringArrayLang(ByteBuffer _bb, StringArrayLang obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600EBC9 RID: 60361 RVA: 0x0034AF6D File Offset: 0x0034916D
+		// Token: 0x0600F942 RID: 63810 RVA: 0x00375C41 File Offset: 0x00373E41
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600EBCA RID: 60362 RVA: 0x0034AF7C File Offset: 0x0034917C
+		// Token: 0x0600F943 RID: 63811 RVA: 0x00375C50 File Offset: 0x00373E50
 		public StringArrayLang __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x0600EBCB RID: 60363 RVA: 0x0034AF8C File Offset: 0x0034918C
+		// Token: 0x0600F944 RID: 63812 RVA: 0x00375C60 File Offset: 0x00373E60
 		public int ArrayString(int j)
 		{
 			int num = this.__p.__offset(4);
@@ -60,8 +60,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17003F4D RID: 16205
-		// (get) Token: 0x0600EBCC RID: 60364 RVA: 0x0034AFCC File Offset: 0x003491CC
+		// Token: 0x170042B5 RID: 17077
+		// (get) Token: 0x0600F945 RID: 63813 RVA: 0x00375CA0 File Offset: 0x00373EA0
 		public int ArrayStringLength
 		{
 			get
@@ -75,37 +75,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600EBCD RID: 60365 RVA: 0x0034AFF7 File Offset: 0x003491F7
+		// Token: 0x0600F946 RID: 63814 RVA: 0x00375CCB File Offset: 0x00373ECB
 		public Span<int> GetArrayStringBytes()
 		{
 			return this.__p.__vector_as_span<int>(4, 4);
 		}
 
-		// Token: 0x0600EBCE RID: 60366 RVA: 0x0034B006 File Offset: 0x00349206
+		// Token: 0x0600F947 RID: 63815 RVA: 0x00375CDA File Offset: 0x00373EDA
 		public int[] GetArrayStringArray()
 		{
 			return this.__p.__vector_as_array<int>(4) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600EBCF RID: 60367 RVA: 0x0034B020 File Offset: 0x00349220
+		// Token: 0x0600F948 RID: 63816 RVA: 0x00375CF1 File Offset: 0x00373EF1
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ArrayStringIter()或GetArrayStringBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] ArrayString()
+		public int[] ArrayString()
 		{
-			StringArrayLang stringArrayLang = this;
-			return stringArrayLang.GetArrayStringArray() ?? Array.Empty<int>();
+			return this.GetArrayStringArray();
 		}
 
-		// Token: 0x0600EBD0 RID: 60368 RVA: 0x0034B044 File Offset: 0x00349244
+		// Token: 0x0600F949 RID: 63817 RVA: 0x00375CF9 File Offset: 0x00373EF9
 		[NullableContext(1)]
-		public readonly IEnumerable<int> ArrayStringIter()
+		public IEnumerable<int> ArrayStringIter()
 		{
 			StringArrayLang.<ArrayStringIter>d__14 <ArrayStringIter>d__ = new StringArrayLang.<ArrayStringIter>d__14(-2);
 			<ArrayStringIter>d__.<>3__<>4__this = this;
 			return <ArrayStringIter>d__;
 		}
 
-		// Token: 0x04005361 RID: 21345
+		// Token: 0x040059A5 RID: 22949
 		private Table __p;
 	}
 }

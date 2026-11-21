@@ -3,15 +3,15 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Combat
 {
-	// Token: 0x02005EF4 RID: 24308
+	// Token: 0x02006537 RID: 25911
 	public class ITagsConfigT
 	{
-		// Token: 0x1700B5BB RID: 46523
-		// (get) Token: 0x06029C00 RID: 171008 RVA: 0x005BAAB1 File Offset: 0x005B8CB1
-		// (set) Token: 0x06029C01 RID: 171009 RVA: 0x005BAAB9 File Offset: 0x005B8CB9
+		// Token: 0x1700BF26 RID: 48934
+		// (get) Token: 0x0602C2B4 RID: 180916 RVA: 0x00603F95 File Offset: 0x00602195
+		// (set) Token: 0x0602C2B5 RID: 180917 RVA: 0x00603F9D File Offset: 0x0060219D
 		public List<ITagConfigT> Tags { get; set; }
 
-		// Token: 0x06029C02 RID: 171010 RVA: 0x005BAAC2 File Offset: 0x005B8CC2
+		// Token: 0x0602C2B6 RID: 180918 RVA: 0x00603FA6 File Offset: 0x006021A6
 		public ITagsConfigT()
 		{
 			this.Tags = null;

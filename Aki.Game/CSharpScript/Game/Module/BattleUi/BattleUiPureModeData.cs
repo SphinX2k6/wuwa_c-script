@@ -8,27 +8,27 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.BattleUi
 {
-	// Token: 0x02005C9E RID: 23710
+	// Token: 0x02004C80 RID: 19584
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BattleUiPureModeData
 	{
-		// Token: 0x0603BE7A RID: 245370 RVA: 0x00E4FF6C File Offset: 0x00E4E16C
+		// Token: 0x06030DCD RID: 200141 RVA: 0x00DA05F4 File Offset: 0x00D9E7F4
 		public void Init()
 		{
 			this.CurOperationType = Info.Instance.OperationType;
 			this.GuideId = ConfigCommonParamById.GetIntConfig("PureModeGuideId").Value;
 		}
 
-		// Token: 0x0603BE7B RID: 245371 RVA: 0x00E4FFA1 File Offset: 0x00E4E1A1
+		// Token: 0x06030DCE RID: 200142 RVA: 0x00DA0629 File Offset: 0x00D9E829
 		public void Clear()
 		{
 			this.IsOpen = false;
 		}
 
-		// Token: 0x17008DEF RID: 36335
-		// (get) Token: 0x0603BE7C RID: 245372 RVA: 0x00E4FFAA File Offset: 0x00E4E1AA
-		// (set) Token: 0x0603BE7D RID: 245373 RVA: 0x00E4FFB4 File Offset: 0x00E4E1B4
+		// Token: 0x170061C1 RID: 25025
+		// (get) Token: 0x06030DCF RID: 200143 RVA: 0x00DA0632 File Offset: 0x00D9E832
+		// (set) Token: 0x06030DD0 RID: 200144 RVA: 0x00DA063C File Offset: 0x00D9E83C
 		public bool IsOpen
 		{
 			get
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BE7E RID: 245374 RVA: 0x00E5000C File Offset: 0x00E4E20C
+		// Token: 0x06030DD1 RID: 200145 RVA: 0x00DA0694 File Offset: 0x00D9E894
 		public void ShowTypeChange(EOperationType last, EOperationType now)
 		{
 			if (now == EOperationType.None)
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.CurOperationType = now;
 		}
 
-		// Token: 0x0603BE7F RID: 245375 RVA: 0x00E50044 File Offset: 0x00E4E244
+		// Token: 0x06030DD2 RID: 200146 RVA: 0x00DA06CC File Offset: 0x00D9E8CC
 		private void Refresh(bool bVisible)
 		{
 			if (this.CurOperationType == EOperationType.None)
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0401F3F5 RID: 127989
+		// Token: 0x04019EAE RID: 106158
 		private static readonly IReadOnlyList<EBattleUiChild> DesktopHideChildren = new <>z__ReadOnlyArray<EBattleUiChild>(new EBattleUiChild[]
 		{
 			EBattleUiChild.MiniMap,
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			EBattleUiChild.BattleHud
 		});
 
-		// Token: 0x0401F3F6 RID: 127990
+		// Token: 0x04019EAF RID: 106159
 		private static readonly IReadOnlyList<EBattleUiChild> PadHideChildren = new <>z__ReadOnlyArray<EBattleUiChild>(new EBattleUiChild[]
 		{
 			EBattleUiChild.MiniMap,
@@ -121,19 +121,19 @@ namespace CSharpScript.Game.Module.BattleUi
 			EBattleUiChild.BattleHud
 		});
 
-		// Token: 0x0401F3F7 RID: 127991
+		// Token: 0x04019EB0 RID: 106160
 		private bool IsOpenInternal;
 
-		// Token: 0x0401F3F8 RID: 127992
+		// Token: 0x04019EB1 RID: 106161
 		private EOperationType CurOperationType;
 
-		// Token: 0x0401F3F9 RID: 127993
+		// Token: 0x04019EB2 RID: 106162
 		public bool IsSkipConfirmBox;
 
-		// Token: 0x0401F3FA RID: 127994
+		// Token: 0x04019EB3 RID: 106163
 		public bool IsSkipConfirmBoxTmp;
 
-		// Token: 0x0401F3FB RID: 127995
+		// Token: 0x04019EB4 RID: 106164
 		public int GuideId;
 	}
 }

@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001B41 RID: 6977
+// Token: 0x02001000 RID: 4096
 public class FloroRanchDailyTaskBase : IStaticVariableResetter
 {
-	// Token: 0x0600CF3E RID: 53054 RVA: 0x002F3C23 File Offset: 0x002F1E23
+	// Token: 0x0600A34F RID: 41807 RVA: 0x002FECFB File Offset: 0x002FCEFB
 	static FloroRanchDailyTaskBase()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(FloroRanchDailyTaskBase.CreateStaticDefaultValue), new Action(FloroRanchDailyTaskBase.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x1700114C RID: 4428
-	// (get) Token: 0x0600CF3F RID: 53055 RVA: 0x002F3C42 File Offset: 0x002F1E42
+	// Token: 0x17001171 RID: 4465
+	// (get) Token: 0x0600A350 RID: 41808 RVA: 0x002FED1A File Offset: 0x002FCF1A
 	public bool IsExecuting
 	{
 		get
@@ -20,8 +20,8 @@ public class FloroRanchDailyTaskBase : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x1700114D RID: 4429
-	// (get) Token: 0x0600CF40 RID: 53056 RVA: 0x002F3C4A File Offset: 0x002F1E4A
+	// Token: 0x17001172 RID: 4466
+	// (get) Token: 0x0600A351 RID: 41809 RVA: 0x002FED22 File Offset: 0x002FCF22
 	public bool IsPause
 	{
 		get
@@ -30,25 +30,25 @@ public class FloroRanchDailyTaskBase : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600CF41 RID: 53057 RVA: 0x002F3C52 File Offset: 0x002F1E52
+	// Token: 0x0600A352 RID: 41810 RVA: 0x002FED2A File Offset: 0x002FCF2A
 	public static void CreateStaticDefaultValue()
 	{
 		FloroRanchDailyTaskBase.SelfIncrementId = 0;
 	}
 
-	// Token: 0x0600CF42 RID: 53058 RVA: 0x002F3C5A File Offset: 0x002F1E5A
+	// Token: 0x0600A353 RID: 41811 RVA: 0x002FED32 File Offset: 0x002FCF32
 	public static void ResetStaticDefaultValue()
 	{
 		FloroRanchDailyTaskBase.SelfIncrementId = 0;
 	}
 
-	// Token: 0x0600CF43 RID: 53059 RVA: 0x002F3C62 File Offset: 0x002F1E62
+	// Token: 0x0600A354 RID: 41812 RVA: 0x002FED3A File Offset: 0x002FCF3A
 	public FloroRanchDailyTaskBase()
 	{
 		this.TaskId = FloroRanchDailyTaskBase.SelfIncrementId++;
 	}
 
-	// Token: 0x0600CF44 RID: 53060 RVA: 0x002F3C7D File Offset: 0x002F1E7D
+	// Token: 0x0600A355 RID: 41813 RVA: 0x002FED55 File Offset: 0x002FCF55
 	public void BindCompleteCallBack([Nullable(new byte[]
 	{
 		1,
@@ -58,7 +58,7 @@ public class FloroRanchDailyTaskBase : IStaticVariableResetter
 		this.CompleteCallBack = completeCallBack;
 	}
 
-	// Token: 0x0600CF45 RID: 53061 RVA: 0x002F3C86 File Offset: 0x002F1E86
+	// Token: 0x0600A356 RID: 41814 RVA: 0x002FED5E File Offset: 0x002FCF5E
 	public void Execute()
 	{
 		this.IsExecute = true;
@@ -66,7 +66,7 @@ public class FloroRanchDailyTaskBase : IStaticVariableResetter
 		this.OnExecute();
 	}
 
-	// Token: 0x0600CF46 RID: 53062 RVA: 0x002F3C9B File Offset: 0x002F1E9B
+	// Token: 0x0600A357 RID: 41815 RVA: 0x002FED73 File Offset: 0x002FCF73
 	public void Tick(float deltaTime)
 	{
 		if (!this.IsExecute)
@@ -76,7 +76,7 @@ public class FloroRanchDailyTaskBase : IStaticVariableResetter
 		this.OnTick(deltaTime);
 	}
 
-	// Token: 0x0600CF47 RID: 53063 RVA: 0x002F3CAD File Offset: 0x002F1EAD
+	// Token: 0x0600A358 RID: 41816 RVA: 0x002FED85 File Offset: 0x002FCF85
 	[NullableContext(2)]
 	public void Complete(Action preExcuteNextCallback = null)
 	{
@@ -90,7 +90,7 @@ public class FloroRanchDailyTaskBase : IStaticVariableResetter
 		this.CompleteCallBack(this.TaskId, preExcuteNextCallback);
 	}
 
-	// Token: 0x0600CF48 RID: 53064 RVA: 0x002F3CDD File Offset: 0x002F1EDD
+	// Token: 0x0600A359 RID: 41817 RVA: 0x002FEDB5 File Offset: 0x002FCFB5
 	[NullableContext(2)]
 	public void AsyncComplete(Action preExcuteNextCallback = null)
 	{
@@ -101,7 +101,7 @@ public class FloroRanchDailyTaskBase : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600CF49 RID: 53065 RVA: 0x002F3CFD File Offset: 0x002F1EFD
+	// Token: 0x0600A35A RID: 41818 RVA: 0x002FEDD5 File Offset: 0x002FCFD5
 	public void ForceFinish()
 	{
 		if (!this.IsExecute)
@@ -112,13 +112,13 @@ public class FloroRanchDailyTaskBase : IStaticVariableResetter
 		this.OnRemoveEventListener();
 	}
 
-	// Token: 0x0600CF4A RID: 53066 RVA: 0x002F3D15 File Offset: 0x002F1F15
+	// Token: 0x0600A35B RID: 41819 RVA: 0x002FEDED File Offset: 0x002FCFED
 	private bool CanComplete()
 	{
 		return this.IsExecute && !this.IsPauseInternal && this.IsDataCompleteInternal;
 	}
 
-	// Token: 0x0600CF4B RID: 53067 RVA: 0x002F3D30 File Offset: 0x002F1F30
+	// Token: 0x0600A35C RID: 41820 RVA: 0x002FEE08 File Offset: 0x002FD008
 	public void Pause()
 	{
 		if (!this.IsExecute)
@@ -135,7 +135,7 @@ public class FloroRanchDailyTaskBase : IStaticVariableResetter
 		this.IsPauseInternal = true;
 	}
 
-	// Token: 0x0600CF4C RID: 53068 RVA: 0x002F3D88 File Offset: 0x002F1F88
+	// Token: 0x0600A35D RID: 41821 RVA: 0x002FEE60 File Offset: 0x002FD060
 	public void Resume()
 	{
 		if (!this.IsPauseInternal)
@@ -156,47 +156,47 @@ public class FloroRanchDailyTaskBase : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600CF4D RID: 53069 RVA: 0x002F3DEF File Offset: 0x002F1FEF
+	// Token: 0x0600A35E RID: 41822 RVA: 0x002FEEC7 File Offset: 0x002FD0C7
 	protected virtual void OnExecute()
 	{
 	}
 
-	// Token: 0x0600CF4E RID: 53070 RVA: 0x002F3DF1 File Offset: 0x002F1FF1
+	// Token: 0x0600A35F RID: 41823 RVA: 0x002FEEC9 File Offset: 0x002FD0C9
 	protected virtual void OnAddEventListener()
 	{
 	}
 
-	// Token: 0x0600CF4F RID: 53071 RVA: 0x002F3DF3 File Offset: 0x002F1FF3
+	// Token: 0x0600A360 RID: 41824 RVA: 0x002FEECB File Offset: 0x002FD0CB
 	protected virtual void OnTick(float deltaTime)
 	{
 	}
 
-	// Token: 0x0600CF50 RID: 53072 RVA: 0x002F3DF5 File Offset: 0x002F1FF5
+	// Token: 0x0600A361 RID: 41825 RVA: 0x002FEECD File Offset: 0x002FD0CD
 	protected virtual void OnRemoveEventListener()
 	{
 	}
 
-	// Token: 0x0600CF51 RID: 53073 RVA: 0x002F3DF7 File Offset: 0x002F1FF7
+	// Token: 0x0600A362 RID: 41826 RVA: 0x002FEECF File Offset: 0x002FD0CF
 	protected virtual void OnComplete()
 	{
 	}
 
-	// Token: 0x04005F53 RID: 24403
+	// Token: 0x04006022 RID: 24610
 	public readonly int TaskId;
 
-	// Token: 0x04005F54 RID: 24404
+	// Token: 0x04006023 RID: 24611
 	private static int SelfIncrementId;
 
-	// Token: 0x04005F55 RID: 24405
+	// Token: 0x04006024 RID: 24612
 	private bool IsExecute;
 
-	// Token: 0x04005F56 RID: 24406
+	// Token: 0x04006025 RID: 24613
 	private bool IsPauseInternal;
 
-	// Token: 0x04005F57 RID: 24407
+	// Token: 0x04006026 RID: 24614
 	private bool IsDataCompleteInternal;
 
-	// Token: 0x04005F58 RID: 24408
+	// Token: 0x04006027 RID: 24615
 	[Nullable(new byte[]
 	{
 		1,

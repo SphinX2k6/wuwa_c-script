@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B44 RID: 19268
+	// Token: 0x02003AEC RID: 15084
 	public class TowerDefensePhantomExp : ITowerDefensePhantomExp
 	{
-		// Token: 0x17007BD1 RID: 31697
-		// (get) Token: 0x06031E67 RID: 204391 RVA: 0x00B92A84 File Offset: 0x00B90C84
-		// (set) Token: 0x06031E68 RID: 204392 RVA: 0x00B92A8C File Offset: 0x00B90C8C
+		// Token: 0x17004F7E RID: 20350
+		// (get) Token: 0x06026BF7 RID: 158711 RVA: 0x00AD6AE8 File Offset: 0x00AD4CE8
+		// (set) Token: 0x06026BF8 RID: 158712 RVA: 0x00AD6AF0 File Offset: 0x00AD4CF0
 		public double Exp { get; set; }
 
-		// Token: 0x17007BD2 RID: 31698
-		// (get) Token: 0x06031E69 RID: 204393 RVA: 0x00B92A95 File Offset: 0x00B90C95
-		// (set) Token: 0x06031E6A RID: 204394 RVA: 0x00B92A9D File Offset: 0x00B90C9D
+		// Token: 0x17004F7F RID: 20351
+		// (get) Token: 0x06026BF9 RID: 158713 RVA: 0x00AD6AF9 File Offset: 0x00AD4CF9
+		// (set) Token: 0x06026BFA RID: 158714 RVA: 0x00AD6B01 File Offset: 0x00AD4D01
 		public double Threshold { get; set; }
 	}
 }

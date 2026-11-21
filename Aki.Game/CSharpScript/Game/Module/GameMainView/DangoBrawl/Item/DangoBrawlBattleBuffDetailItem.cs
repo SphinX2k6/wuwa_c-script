@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 {
-	// Token: 0x02005A0C RID: 23052
+	// Token: 0x020049E8 RID: 18920
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 	})]
 	public class DangoBrawlBattleBuffDetailItem : GridProxyAbstract<DangoBrawlBattleBuffDetailItemData>
 	{
-		// Token: 0x0603A74A RID: 239434 RVA: 0x00DE88D4 File Offset: 0x00DE6AD4
+		// Token: 0x0602F693 RID: 194195 RVA: 0x00D38E54 File Offset: 0x00D37054
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -36,20 +36,20 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603A74B RID: 239435 RVA: 0x00DE897F File Offset: 0x00DE6B7F
+		// Token: 0x0602F694 RID: 194196 RVA: 0x00D38EFF File Offset: 0x00D370FF
 		protected override void OnStart()
 		{
 			ActivityDangoBrawlController.Instance.RegisterTermHyperlink(base.GetText(3));
 			this.LevelSequencePlayer = new LevelSequencePlayer(base.GetRootItem());
 		}
 
-		// Token: 0x0603A74C RID: 239436 RVA: 0x00DE89A4 File Offset: 0x00DE6BA4
+		// Token: 0x0602F695 RID: 194197 RVA: 0x00D38F24 File Offset: 0x00D37124
 		protected override void OnBeforeDestroy()
 		{
 			ActivityDangoBrawlController.Instance.UnRegisterTermHyperlink(base.GetText(3));
 		}
 
-		// Token: 0x0603A74D RID: 239437 RVA: 0x00DE89B8 File Offset: 0x00DE6BB8
+		// Token: 0x0602F696 RID: 194198 RVA: 0x00D38F38 File Offset: 0x00D37138
 		public override void Refresh(DangoBrawlBattleBuffDetailItemData data, bool isSelected, int gridIndex)
 		{
 			DangoBrawlBattleBuffItemData baseData = data.BaseData;
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			this.PlayTween(data.IsSelected);
 		}
 
-		// Token: 0x0603A74E RID: 239438 RVA: 0x00DE8AEC File Offset: 0x00DE6CEC
+		// Token: 0x0602F697 RID: 194199 RVA: 0x00D3906C File Offset: 0x00D3726C
 		public void PlayTween(bool isSelected)
 		{
 			string sequenceName = isSelected ? "SelectIn" : "SelectOut";
@@ -85,27 +85,27 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			levelSequencePlayer.PlayOrReplaySequenceByName(sequenceName, false, null);
 		}
 
-		// Token: 0x0603A74F RID: 239439 RVA: 0x00DE8B24 File Offset: 0x00DE6D24
+		// Token: 0x0602F698 RID: 194200 RVA: 0x00D390A4 File Offset: 0x00D372A4
 		public override object GetKey(DangoBrawlBattleBuffDetailItemData data, int displayIndex)
 		{
 			return data.BaseData.ConfigId;
 		}
 
-		// Token: 0x0401E755 RID: 124757
+		// Token: 0x040191FC RID: 102908
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0200BC72 RID: 48242
+		// Token: 0x0200A67B RID: 42619
 		[NullableContext(0)]
 		private enum EComp
 		{
-			// Token: 0x04038DBC RID: 232892
+			// Token: 0x04033788 RID: 210824
 			TexIcon,
-			// Token: 0x04038DBD RID: 232893
+			// Token: 0x04033789 RID: 210825
 			TxtFloorNum,
-			// Token: 0x04038DBE RID: 232894
+			// Token: 0x0403378A RID: 210826
 			TxtName,
-			// Token: 0x04038DBF RID: 232895
+			// Token: 0x0403378B RID: 210827
 			TxtDesc
 		}
 	}

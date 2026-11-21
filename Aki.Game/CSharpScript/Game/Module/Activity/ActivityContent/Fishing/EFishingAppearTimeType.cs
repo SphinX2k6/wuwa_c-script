@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065E8 RID: 26088
+	// Token: 0x02005566 RID: 21862
 	public enum EFishingAppearTimeType
 	{
-		// Token: 0x04022091 RID: 139409
+		// Token: 0x0401C9C2 RID: 117186
 		WholeDay = 1,
-		// Token: 0x04022092 RID: 139410
+		// Token: 0x0401C9C3 RID: 117187
 		DayOnly,
-		// Token: 0x04022093 RID: 139411
+		// Token: 0x0401C9C4 RID: 117188
 		NightOnly
 	}
 }

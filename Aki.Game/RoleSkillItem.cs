@@ -6,12 +6,12 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020015EC RID: 5612
+// Token: 0x02000AA4 RID: 2724
 [NullableContext(1)]
 [Nullable(0)]
 internal class RoleSkillItem : GridProxyAbstract<int>
 {
-	// Token: 0x06009E7B RID: 40571 RVA: 0x00229AE8 File Offset: 0x00227CE8
+	// Token: 0x06007259 RID: 29273 RVA: 0x00233898 File Offset: 0x00231A98
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -34,7 +34,7 @@ internal class RoleSkillItem : GridProxyAbstract<int>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009E7C RID: 40572 RVA: 0x00229BB0 File Offset: 0x00227DB0
+	// Token: 0x0600725A RID: 29274 RVA: 0x00233960 File Offset: 0x00231B60
 	public override void Refresh(int skillId, bool isSelected, int gridIndex)
 	{
 		this.SkillId = skillId;
@@ -58,25 +58,25 @@ internal class RoleSkillItem : GridProxyAbstract<int>
 		this.SetSelectedState(isSelected, true);
 	}
 
-	// Token: 0x06009E7D RID: 40573 RVA: 0x00229C66 File Offset: 0x00227E66
+	// Token: 0x0600725B RID: 29275 RVA: 0x00233A16 File Offset: 0x00231C16
 	public override object GetKey(int data, int gridIndex)
 	{
 		return data;
 	}
 
-	// Token: 0x06009E7E RID: 40574 RVA: 0x00229C6E File Offset: 0x00227E6E
+	// Token: 0x0600725C RID: 29276 RVA: 0x00233A1E File Offset: 0x00231C1E
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetSelectedState(false, false);
 	}
 
-	// Token: 0x06009E7F RID: 40575 RVA: 0x00229C78 File Offset: 0x00227E78
+	// Token: 0x0600725D RID: 29277 RVA: 0x00233A28 File Offset: 0x00231C28
 	public void SetToggleCallback(Action<int> callback)
 	{
 		this.ToggleCallback = callback;
 	}
 
-	// Token: 0x06009E80 RID: 40576 RVA: 0x00229C81 File Offset: 0x00227E81
+	// Token: 0x0600725E RID: 29278 RVA: 0x00233A31 File Offset: 0x00231C31
 	private void ToggleClick(EToggleState state)
 	{
 		Action<int> toggleCallback = this.ToggleCallback;
@@ -87,7 +87,7 @@ internal class RoleSkillItem : GridProxyAbstract<int>
 		toggleCallback(this.SkillId);
 	}
 
-	// Token: 0x06009E81 RID: 40577 RVA: 0x00229C99 File Offset: 0x00227E99
+	// Token: 0x0600725F RID: 29279 RVA: 0x00233A49 File Offset: 0x00231C49
 	public void SetSelectedState(bool selected, bool skipAnim = false)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -98,10 +98,10 @@ internal class RoleSkillItem : GridProxyAbstract<int>
 		extendToggle.SetToggleStateForce(selected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, skipAnim);
 	}
 
-	// Token: 0x040046CE RID: 18126
+	// Token: 0x04004774 RID: 18292
 	private int SkillId;
 
-	// Token: 0x040046CF RID: 18127
+	// Token: 0x04004775 RID: 18293
 	[Nullable(2)]
 	private Action<int> ToggleCallback;
 }

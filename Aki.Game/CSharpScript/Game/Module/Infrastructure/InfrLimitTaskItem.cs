@@ -11,7 +11,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Infrastructure
 {
-	// Token: 0x0200590E RID: 22798
+	// Token: 0x020048E7 RID: 18663
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 	})]
 	public class InfrLimitTaskItem : GridProxyAbstract<InfrastructureLimitTaskData>
 	{
-		// Token: 0x06039E47 RID: 237127 RVA: 0x00DC0284 File Offset: 0x00DBE484
+		// Token: 0x0602ED6A RID: 191850 RVA: 0x00D0F57C File Offset: 0x00D0D77C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 11;
@@ -61,19 +61,19 @@ namespace CSharpScript.Game.Module.Infrastructure
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06039E48 RID: 237128 RVA: 0x00DC047B File Offset: 0x00DBE67B
+		// Token: 0x0602ED6B RID: 191851 RVA: 0x00D0F773 File Offset: 0x00D0D973
 		protected override void OnStart()
 		{
 			this.RewardScroll = new GenericScrollViewNew<CommonItemSmallItemGrid, TItem>(base.GetScrollViewWithScrollbar(3), new Func<CommonItemSmallItemGrid>(this.CreateRewardItem), null, false, null);
 		}
 
-		// Token: 0x06039E49 RID: 237129 RVA: 0x00DC049E File Offset: 0x00DBE69E
+		// Token: 0x0602ED6C RID: 191852 RVA: 0x00D0F796 File Offset: 0x00D0D996
 		private CommonItemSmallItemGrid CreateRewardItem()
 		{
 			return new CommonItemSmallItemGrid();
 		}
 
-		// Token: 0x06039E4A RID: 237130 RVA: 0x00DC04A8 File Offset: 0x00DBE6A8
+		// Token: 0x0602ED6D RID: 191853 RVA: 0x00D0F7A0 File Offset: 0x00D0D9A0
 		public override void Refresh(InfrastructureLimitTaskData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -100,13 +100,13 @@ namespace CSharpScript.Game.Module.Infrastructure
 			text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x06039E4B RID: 237131 RVA: 0x00DC0614 File Offset: 0x00DBE814
+		// Token: 0x0602ED6E RID: 191854 RVA: 0x00D0F90C File Offset: 0x00D0DB0C
 		public void SetOnClickRewardCb(Action cb)
 		{
 			this.OnClickRewardCb = cb;
 		}
 
-		// Token: 0x06039E4C RID: 237132 RVA: 0x00DC061D File Offset: 0x00DBE81D
+		// Token: 0x0602ED6F RID: 191855 RVA: 0x00D0F915 File Offset: 0x00D0DB15
 		private void OnClickGoto()
 		{
 			if (this.Data.JumpId != 0)
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.Infrastructure
 			}
 		}
 
-		// Token: 0x06039E4D RID: 237133 RVA: 0x00DC063D File Offset: 0x00DBE83D
+		// Token: 0x0602ED70 RID: 191856 RVA: 0x00D0F935 File Offset: 0x00D0DB35
 		private void OnClickRewardGetConfirm()
 		{
 			Action onClickRewardCb = this.OnClickRewardCb;
@@ -126,55 +126,55 @@ namespace CSharpScript.Game.Module.Infrastructure
 			onClickRewardCb();
 		}
 
-		// Token: 0x0401E314 RID: 123668
+		// Token: 0x04018DB1 RID: 101809
 		private InfrastructureLimitTaskData Data;
 
-		// Token: 0x0401E315 RID: 123669
+		// Token: 0x04018DB2 RID: 101810
 		public Action<int> OnClickToGet = delegate(int taskId)
 		{
 		};
 
-		// Token: 0x0401E316 RID: 123670
+		// Token: 0x04018DB3 RID: 101811
 		private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardScroll;
 
-		// Token: 0x0401E317 RID: 123671
+		// Token: 0x04018DB4 RID: 101812
 		private Action OnClickRewardCb;
 
-		// Token: 0x0200BB7C RID: 47996
+		// Token: 0x0200A58C RID: 42380
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x04038976 RID: 231798
+			// Token: 0x0403335E RID: 209758
 			public const int ArtTextNum = 0;
 
-			// Token: 0x04038977 RID: 231799
+			// Token: 0x0403335F RID: 209759
 			public const int TextName = 1;
 
-			// Token: 0x04038978 RID: 231800
+			// Token: 0x04033360 RID: 209760
 			public const int TextProcessNum = 2;
 
-			// Token: 0x04038979 RID: 231801
+			// Token: 0x04033361 RID: 209761
 			public const int HorizontalScrollReward = 3;
 
-			// Token: 0x0403897A RID: 231802
+			// Token: 0x04033362 RID: 209762
 			public const int RewardItem = 4;
 
-			// Token: 0x0403897B RID: 231803
+			// Token: 0x04033363 RID: 209763
 			public const int TextDoing = 5;
 
-			// Token: 0x0403897C RID: 231804
+			// Token: 0x04033364 RID: 209764
 			public const int SpriteDone = 6;
 
-			// Token: 0x0403897D RID: 231805
+			// Token: 0x04033365 RID: 209765
 			public const int SpriteDoneBg = 7;
 
-			// Token: 0x0403897E RID: 231806
+			// Token: 0x04033366 RID: 209766
 			public const int PanelRedPoint = 8;
 
-			// Token: 0x0403897F RID: 231807
+			// Token: 0x04033367 RID: 209767
 			public const int BtnGoto = 9;
 
-			// Token: 0x04038980 RID: 231808
+			// Token: 0x04033368 RID: 209768
 			public const int BtnRewardGetConfirm = 10;
 		}
 	}

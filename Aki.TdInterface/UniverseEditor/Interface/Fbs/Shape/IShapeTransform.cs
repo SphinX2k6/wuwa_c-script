@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003C3D RID: 15421
+	// Token: 0x0200404C RID: 16460
 	public struct IShapeTransform : IFlatbufferObject
 	{
-		// Token: 0x17006A3B RID: 27195
-		// (get) Token: 0x060154CD RID: 87245 RVA: 0x00315288 File Offset: 0x00313488
+		// Token: 0x17006FEC RID: 28652
+		// (get) Token: 0x060169E1 RID: 92641 RVA: 0x0033C128 File Offset: 0x0033A328
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x060154CE RID: 87246 RVA: 0x00315295 File Offset: 0x00313495
+		// Token: 0x060169E2 RID: 92642 RVA: 0x0033C135 File Offset: 0x0033A335
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060154CF RID: 87247 RVA: 0x0031529C File Offset: 0x0031349C
+		// Token: 0x060169E3 RID: 92643 RVA: 0x0033C13C File Offset: 0x0033A33C
 		public static IShapeTransform GetRootAsIShapeTransform(ByteBuffer _bb)
 		{
 			return IShapeTransform.GetRootAsIShapeTransform(_bb, default(IShapeTransform));
 		}
 
-		// Token: 0x060154D0 RID: 87248 RVA: 0x003152B8 File Offset: 0x003134B8
+		// Token: 0x060169E4 RID: 92644 RVA: 0x0033C158 File Offset: 0x0033A358
 		public static IShapeTransform GetRootAsIShapeTransform(ByteBuffer _bb, IShapeTransform obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060154D1 RID: 87249 RVA: 0x003152D5 File Offset: 0x003134D5
+		// Token: 0x060169E5 RID: 92645 RVA: 0x0033C175 File Offset: 0x0033A375
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060154D2 RID: 87250 RVA: 0x003152E4 File Offset: 0x003134E4
+		// Token: 0x060169E6 RID: 92646 RVA: 0x0033C184 File Offset: 0x0033A384
 		public IShapeTransform __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006A3C RID: 27196
-		// (get) Token: 0x060154D3 RID: 87251 RVA: 0x003152F4 File Offset: 0x003134F4
+		// Token: 0x17006FED RID: 28653
+		// (get) Token: 0x060169E7 RID: 92647 RVA: 0x0033C194 File Offset: 0x0033A394
 		public IVectorInfo? Pos
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x17006A3D RID: 27197
-		// (get) Token: 0x060154D4 RID: 87252 RVA: 0x00315354 File Offset: 0x00313554
+		// Token: 0x17006FEE RID: 28654
+		// (get) Token: 0x060169E8 RID: 92648 RVA: 0x0033C1F4 File Offset: 0x0033A3F4
 		public IVectorInfo? Rot
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x17006A3E RID: 27198
-		// (get) Token: 0x060154D5 RID: 87253 RVA: 0x003153B4 File Offset: 0x003135B4
+		// Token: 0x17006FEF RID: 28655
+		// (get) Token: 0x060169E9 RID: 92649 RVA: 0x0033C254 File Offset: 0x0033A454
 		public IVectorInfo? Scale
 		{
 			get
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x060154D6 RID: 87254 RVA: 0x00315411 File Offset: 0x00313611
+		// Token: 0x060169EA RID: 92650 RVA: 0x0033C2B1 File Offset: 0x0033A4B1
 		public static Offset<IShapeTransform> CreateIShapeTransform(FlatBufferBuilder builder, Offset<IVectorInfo> PosOffset = default(Offset<IVectorInfo>), Offset<IVectorInfo> RotOffset = default(Offset<IVectorInfo>), Offset<IVectorInfo> ScaleOffset = default(Offset<IVectorInfo>))
 		{
 			builder.StartTable(3);
@@ -103,37 +103,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return IShapeTransform.EndIShapeTransform(builder);
 		}
 
-		// Token: 0x060154D7 RID: 87255 RVA: 0x00315435 File Offset: 0x00313635
+		// Token: 0x060169EB RID: 92651 RVA: 0x0033C2D5 File Offset: 0x0033A4D5
 		public static void StartIShapeTransform(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x060154D8 RID: 87256 RVA: 0x0031543E File Offset: 0x0031363E
+		// Token: 0x060169EC RID: 92652 RVA: 0x0033C2DE File Offset: 0x0033A4DE
 		public static void AddPos(FlatBufferBuilder builder, Offset<IVectorInfo> posOffset)
 		{
 			builder.AddOffset(0, posOffset.Value, 0);
 		}
 
-		// Token: 0x060154D9 RID: 87257 RVA: 0x0031544E File Offset: 0x0031364E
+		// Token: 0x060169ED RID: 92653 RVA: 0x0033C2EE File Offset: 0x0033A4EE
 		public static void AddRot(FlatBufferBuilder builder, Offset<IVectorInfo> rotOffset)
 		{
 			builder.AddOffset(1, rotOffset.Value, 0);
 		}
 
-		// Token: 0x060154DA RID: 87258 RVA: 0x0031545E File Offset: 0x0031365E
+		// Token: 0x060169EE RID: 92654 RVA: 0x0033C2FE File Offset: 0x0033A4FE
 		public static void AddScale(FlatBufferBuilder builder, Offset<IVectorInfo> scaleOffset)
 		{
 			builder.AddOffset(2, scaleOffset.Value, 0);
 		}
 
-		// Token: 0x060154DB RID: 87259 RVA: 0x0031546E File Offset: 0x0031366E
+		// Token: 0x060169EF RID: 92655 RVA: 0x0033C30E File Offset: 0x0033A50E
 		public static Offset<IShapeTransform> EndIShapeTransform(FlatBufferBuilder builder)
 		{
 			return new Offset<IShapeTransform>(builder.EndTable());
 		}
 
-		// Token: 0x060154DC RID: 87260 RVA: 0x0031547C File Offset: 0x0031367C
+		// Token: 0x060169F0 RID: 92656 RVA: 0x0033C31C File Offset: 0x0033A51C
 		public IShapeTransformT UnPack()
 		{
 			IShapeTransformT shapeTransformT = new IShapeTransformT();
@@ -141,7 +141,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return shapeTransformT;
 		}
 
-		// Token: 0x060154DD RID: 87261 RVA: 0x00315498 File Offset: 0x00313698
+		// Token: 0x060169F1 RID: 92657 RVA: 0x0033C338 File Offset: 0x0033A538
 		public void UnPackTo(IShapeTransformT _o)
 		{
 			_o.Pos = ((this.Pos != null) ? this.Pos.Value.UnPack() : null);
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			_o.Scale = ((this.Scale != null) ? this.Scale.Value.UnPack() : null);
 		}
 
-		// Token: 0x060154DE RID: 87262 RVA: 0x00315534 File Offset: 0x00313734
+		// Token: 0x060169F2 RID: 92658 RVA: 0x0033C3D4 File Offset: 0x0033A5D4
 		public static Offset<IShapeTransform> Pack(FlatBufferBuilder builder, IShapeTransformT _o)
 		{
 			if (_o == null)
@@ -162,7 +162,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return IShapeTransform.CreateIShapeTransform(builder, posOffset, rotOffset, scaleOffset);
 		}
 
-		// Token: 0x0400B242 RID: 45634
+		// Token: 0x0400BBD2 RID: 48082
 		private Table __p;
 	}
 }

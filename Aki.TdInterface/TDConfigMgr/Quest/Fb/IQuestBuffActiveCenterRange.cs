@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020012F7 RID: 4855
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001447 RID: 5191
 	public class IQuestBuffActiveCenterRange
 	{
-		// Token: 0x06006EBE RID: 28350 RVA: 0x0010B785 File Offset: 0x00109985
+		// Token: 0x0600755E RID: 30046 RVA: 0x00119CF1 File Offset: 0x00117EF1
 		public static IQuestBuffActiveCenterRange Create(IQuestBuffActiveCenterRange? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170022A3 RID: 8867
-		// (get) Token: 0x06006EBF RID: 28351 RVA: 0x0010B7A4 File Offset: 0x001099A4
+		// Token: 0x17002472 RID: 9330
+		// (get) Token: 0x0600755F RID: 30047 RVA: 0x00119D10 File Offset: 0x00117F10
 		public virtual VectorInfo CheckPoint
 		{
 			get
@@ -39,8 +37,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022A4 RID: 8868
-		// (get) Token: 0x06006EC0 RID: 28352 RVA: 0x0010B7D8 File Offset: 0x001099D8
+		// Token: 0x17002473 RID: 9331
+		// (get) Token: 0x06007560 RID: 30048 RVA: 0x00119D44 File Offset: 0x00117F44
 		public virtual int CheckEnterRange
 		{
 			get
@@ -49,8 +47,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170022A5 RID: 8869
-		// (get) Token: 0x06006EC1 RID: 28353 RVA: 0x0010B7E5 File Offset: 0x001099E5
+		// Token: 0x17002474 RID: 9332
+		// (get) Token: 0x06007561 RID: 30049 RVA: 0x00119D51 File Offset: 0x00117F51
 		public virtual int CheckLeaveRange
 		{
 			get
@@ -59,14 +57,14 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04003F7B RID: 16251
+		// Token: 0x040042F7 RID: 17143
 		private IQuestBuffActiveCenterRange Instance;
 
-		// Token: 0x04003F7C RID: 16252
+		// Token: 0x040042F8 RID: 17144
 		[Nullable(2)]
 		private VectorInfo _CheckPointCache;
 
-		// Token: 0x04003F7D RID: 16253
+		// Token: 0x040042F9 RID: 17145
 		private bool _CheckPointInited;
 	}
 }

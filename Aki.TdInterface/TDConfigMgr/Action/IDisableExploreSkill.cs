@@ -6,14 +6,11 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019AC RID: 6572
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02001B33 RID: 6963
 	[JsonConverter(typeof(IDisableExploreSkillConverter))]
 	public class IDisableExploreSkill
 	{
-		// Token: 0x06008CB1 RID: 36017 RVA: 0x0014A050 File Offset: 0x00148250
-		[NullableContext(1)]
+		// Token: 0x060093D5 RID: 37845 RVA: 0x00159860 File Offset: 0x00157A60
 		private IDisableExploreSkill_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -28,8 +25,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008CB2 RID: 36018 RVA: 0x0014A088 File Offset: 0x00148288
-		[NullableContext(1)]
+		// Token: 0x060093D6 RID: 37846 RVA: 0x00159898 File Offset: 0x00157A98
 		public static IDisableExploreSkill Create([Nullable(2)] IDisableExploreSkill instance)
 		{
 			if (instance == null)
@@ -42,8 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008CB3 RID: 36019 RVA: 0x0014A09B File Offset: 0x0014829B
-		[NullableContext(1)]
+		// Token: 0x060093D7 RID: 37847 RVA: 0x001598AB File Offset: 0x00157AAB
 		public static IDisableExploreSkill CreateFromSetValue([Nullable(2)] IDisableExploreSkill_SetValue value)
 		{
 			if (value == null)
@@ -56,8 +51,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008CB4 RID: 36020 RVA: 0x0014A0AE File Offset: 0x001482AE
-		[NullableContext(1)]
+		// Token: 0x060093D8 RID: 37848 RVA: 0x001598BE File Offset: 0x00157ABE
 		public IDisableExploreSkill_SetValue ToSetValue()
 		{
 			return new IDisableExploreSkill_SetValue
@@ -68,9 +62,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002D2B RID: 11563
-		// (get) Token: 0x06008CB5 RID: 36021 RVA: 0x0014A0DC File Offset: 0x001482DC
-		// (set) Token: 0x06008CB6 RID: 36022 RVA: 0x0014A116 File Offset: 0x00148316
+		// Token: 0x17002F2A RID: 12074
+		// (get) Token: 0x060093D9 RID: 37849 RVA: 0x001598EC File Offset: 0x00157AEC
+		// (set) Token: 0x060093DA RID: 37850 RVA: 0x00159926 File Offset: 0x00157B26
 		public virtual bool? PlaceTemporaryTeleport
 		{
 			get
@@ -92,9 +86,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D2C RID: 11564
-		// (get) Token: 0x06008CB7 RID: 36023 RVA: 0x0014A124 File Offset: 0x00148324
-		// (set) Token: 0x06008CB8 RID: 36024 RVA: 0x0014A15E File Offset: 0x0014835E
+		// Token: 0x17002F2B RID: 12075
+		// (get) Token: 0x060093DB RID: 37851 RVA: 0x00159934 File Offset: 0x00157B34
+		// (set) Token: 0x060093DC RID: 37852 RVA: 0x0015996E File Offset: 0x00157B6E
 		public virtual bool? IsComplementary
 		{
 			get
@@ -116,11 +110,13 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002D2D RID: 11565
-		// (get) Token: 0x06008CB9 RID: 36025 RVA: 0x0014A16C File Offset: 0x0014836C
-		// (set) Token: 0x06008CBA RID: 36026 RVA: 0x0014A193 File Offset: 0x00148393
+		// Token: 0x17002F2C RID: 12076
+		// (get) Token: 0x060093DD RID: 37853 RVA: 0x0015997C File Offset: 0x00157B7C
+		// (set) Token: 0x060093DE RID: 37854 RVA: 0x001599A3 File Offset: 0x00157BA3
+		[Nullable(2)]
 		public virtual List<EExploreSkillType> ExploreSkillList
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -134,16 +130,19 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return pocoInterface.ExploreSkillList;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().ExploreSkillList = value;
 			}
 		}
 
-		// Token: 0x04005788 RID: 22408
+		// Token: 0x04005BD1 RID: 23505
+		[Nullable(2)]
 		protected IDisableExploreSkill FbInstance;
 
-		// Token: 0x04005789 RID: 22409
+		// Token: 0x04005BD2 RID: 23506
+		[Nullable(2)]
 		protected IDisableExploreSkill_SetValue PocoInterface;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F50 RID: 3920
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200107A RID: 4218
 	public class IEnableSystemConfig
 	{
-		// Token: 0x0600572A RID: 22314 RVA: 0x000D5454 File Offset: 0x000D3654
+		// Token: 0x06005CFE RID: 23806 RVA: 0x000E1EC0 File Offset: 0x000E00C0
 		private IEnableSystemConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600572B RID: 22315 RVA: 0x000D548C File Offset: 0x000D368C
+		// Token: 0x06005CFF RID: 23807 RVA: 0x000E1EF8 File Offset: 0x000E00F8
 		public static IEnableSystemConfig Create([Nullable(2)] IEnableSystemConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600572C RID: 22316 RVA: 0x000D549F File Offset: 0x000D369F
+		// Token: 0x06005D00 RID: 23808 RVA: 0x000E1F0B File Offset: 0x000E010B
 		public static IEnableSystemConfig CreateFromSetValue([Nullable(2)] IEnableSystemConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600572D RID: 22317 RVA: 0x000D54B2 File Offset: 0x000D36B2
+		// Token: 0x06005D01 RID: 23809 RVA: 0x000E1F1E File Offset: 0x000E011E
 		public IEnableSystemConfig_SetValue ToSetValue()
 		{
 			return new IEnableSystemConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001D1E RID: 7454
-		// (get) Token: 0x0600572E RID: 22318 RVA: 0x000D54C5 File Offset: 0x000D36C5
-		// (set) Token: 0x0600572F RID: 22319 RVA: 0x000D54F0 File Offset: 0x000D36F0
+		// Token: 0x17001EC4 RID: 7876
+		// (get) Token: 0x06005D02 RID: 23810 RVA: 0x000E1F31 File Offset: 0x000E0131
+		// (set) Token: 0x06005D03 RID: 23811 RVA: 0x000E1F5C File Offset: 0x000E015C
 		public virtual EEnableSystemType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040034C5 RID: 13509
+		// Token: 0x040037F6 RID: 14326
 		[Nullable(2)]
 		protected IEnableSystemConfig FbInstance;
 
-		// Token: 0x040034C6 RID: 13510
+		// Token: 0x040037F7 RID: 14327
 		[Nullable(2)]
 		protected IEnableSystemConfig_SetValue PocoInterface;
 	}

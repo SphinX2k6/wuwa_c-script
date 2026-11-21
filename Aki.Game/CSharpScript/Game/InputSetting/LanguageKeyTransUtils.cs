@@ -5,16 +5,16 @@ using Aki.Config;
 
 namespace CSharpScript.Game.InputSetting
 {
-	// Token: 0x02007006 RID: 28678
+	// Token: 0x02006187 RID: 24967
 	public class LanguageKeyTransUtils : IStaticVariableResetter
 	{
-		// Token: 0x06045C88 RID: 285832 RVA: 0x0115A6DE File Offset: 0x011588DE
+		// Token: 0x0603BE3E RID: 245310 RVA: 0x01104AEA File Offset: 0x01102CEA
 		static LanguageKeyTransUtils()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LanguageKeyTransUtils.CreateStaticDefaultValue), new Action(LanguageKeyTransUtils.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06045C89 RID: 285833 RVA: 0x0115A6FD File Offset: 0x011588FD
+		// Token: 0x0603BE3F RID: 245311 RVA: 0x01104B09 File Offset: 0x01102D09
 		private static void CreateKeyTransMap()
 		{
 			LanguageKeyTransUtils.KeyTransMap[EKeyboardPrimaryLangId.Default] = new DefaultLanguageKeyTrans();
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.InputSetting
 			LanguageKeyTransUtils.KeyTransMap[EKeyboardPrimaryLangId.Thai] = new ThaiLanguageKeyTrans();
 		}
 
-		// Token: 0x06045C8A RID: 285834 RVA: 0x0115A73C File Offset: 0x0115893C
+		// Token: 0x0603BE40 RID: 245312 RVA: 0x01104B48 File Offset: 0x01102D48
 		private static void InitPcKeysByConfig()
 		{
 			IReadOnlyList<PcKey> pcKeyConfigList = InputSettingsConfig.Instance.GetPcKeyConfigList();
@@ -40,14 +40,14 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045C8B RID: 285835 RVA: 0x0115A7BC File Offset: 0x011589BC
+		// Token: 0x0603BE41 RID: 245313 RVA: 0x01104BC8 File Offset: 0x01102DC8
 		public static void Initialize()
 		{
 			LanguageKeyTransUtils.CreateKeyTransMap();
 			LanguageKeyTransUtils.InitPcKeysByConfig();
 		}
 
-		// Token: 0x06045C8C RID: 285836 RVA: 0x0115A7C8 File Offset: 0x011589C8
+		// Token: 0x0603BE42 RID: 245314 RVA: 0x01104BD4 File Offset: 0x01102DD4
 		[NullableContext(1)]
 		public static LanguageKeyTransBase GetKeyTrans(EKeyboardPrimaryLangId langId)
 		{
@@ -59,19 +59,19 @@ namespace CSharpScript.Game.InputSetting
 			return LanguageKeyTransUtils.KeyTransMap[EKeyboardPrimaryLangId.Default];
 		}
 
-		// Token: 0x06045C8D RID: 285837 RVA: 0x0115A7F5 File Offset: 0x011589F5
+		// Token: 0x0603BE43 RID: 245315 RVA: 0x01104C01 File Offset: 0x01102E01
 		public static void CreateStaticDefaultValue()
 		{
 			LanguageKeyTransUtils.KeyTransMap = new Dictionary<EKeyboardPrimaryLangId, LanguageKeyTransBase>();
 		}
 
-		// Token: 0x06045C8E RID: 285838 RVA: 0x0115A801 File Offset: 0x01158A01
+		// Token: 0x0603BE44 RID: 245316 RVA: 0x01104C0D File Offset: 0x01102E0D
 		public static void ResetStaticDefaultValue()
 		{
 			LanguageKeyTransUtils.KeyTransMap = null;
 		}
 
-		// Token: 0x040247F7 RID: 149495
+		// Token: 0x0401FAAD RID: 129709
 		[Nullable(1)]
 		private static Dictionary<EKeyboardPrimaryLangId, LanguageKeyTransBase> KeyTransMap;
 	}

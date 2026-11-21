@@ -3,29 +3,29 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x0200678E RID: 26510
+	// Token: 0x020056DE RID: 22238
 	public struct DangoBrawlCombineRowData
 	{
-		// Token: 0x04022807 RID: 141319
+		// Token: 0x0401D064 RID: 118884
 		[Nullable(1)]
 		public CombineItem[] SourceItems;
 
-		// Token: 0x04022808 RID: 141320
+		// Token: 0x0401D065 RID: 118885
 		public int ResultItemId;
 
-		// Token: 0x04022809 RID: 141321
+		// Token: 0x0401D066 RID: 118886
 		public int ComposeId;
 
-		// Token: 0x0402280A RID: 141322
+		// Token: 0x0401D067 RID: 118887
 		public bool CanCombine;
 
-		// Token: 0x0402280B RID: 141323
+		// Token: 0x0401D068 RID: 118888
 		public bool IsLock;
 
-		// Token: 0x0402280C RID: 141324
+		// Token: 0x0401D069 RID: 118889
 		public int SortTier;
 
-		// Token: 0x0402280D RID: 141325
+		// Token: 0x0401D06A RID: 118890
 		public int ResultQuality;
 	}
 }

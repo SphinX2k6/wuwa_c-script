@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002727 RID: 10023
+	// Token: 0x020029F1 RID: 10737
 	public class IPlayerNewSplineMoveTarget : INewSplineMoveTarget
 	{
-		// Token: 0x0600DF85 RID: 57221 RVA: 0x00211F4F File Offset: 0x0021014F
-		[NullableContext(1)]
+		// Token: 0x0600ED7D RID: 60797 RVA: 0x0022E9DF File Offset: 0x0022CBDF
 		public static IPlayerNewSplineMoveTarget Create(IPlayerNewSplineMoveTarget? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170042F9 RID: 17145
-		// (get) Token: 0x0600DF86 RID: 57222 RVA: 0x00211F6E File Offset: 0x0021016E
+		// Token: 0x17004649 RID: 17993
+		// (get) Token: 0x0600ED7E RID: 60798 RVA: 0x0022E9FE File Offset: 0x0022CBFE
 		public override ENewSplineMoveTargetType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C0F RID: 31759
+		// Token: 0x040082B9 RID: 33465
 		private IPlayerNewSplineMoveTarget Instance;
 	}
 }

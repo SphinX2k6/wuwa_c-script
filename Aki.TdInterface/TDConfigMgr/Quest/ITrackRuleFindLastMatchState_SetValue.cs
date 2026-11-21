@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020011C7 RID: 4551
+	// Token: 0x02001303 RID: 4867
 	public class ITrackRuleFindLastMatchState_SetValue
 	{
-		// Token: 0x04003E18 RID: 15896
+		// Token: 0x04004186 RID: 16774
 		public ETrackRuleType Type;
 
-		// Token: 0x04003E19 RID: 15897
-		[Nullable(1)]
+		// Token: 0x04004187 RID: 16775
 		public string State;
 	}
 }

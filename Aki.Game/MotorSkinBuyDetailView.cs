@@ -6,35 +6,34 @@ using Aki.Config;
 using AkiClient.Game.Aki.Data.UiRoleCamera.Struct;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp;
-using CSharpScript.Game.Module.Common.UiCamera;
 using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Motorcycle.Model;
 using CSharpScript.Game.Module.PayShop;
-using CSharpScript.Game.Module.UiCameraAnimation.UiCameraContext;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002A2A RID: 10794
+// Token: 0x02001FA5 RID: 8101
 [NullableContext(1)]
 [Nullable(0)]
 public class MotorSkinBuyDetailView : UiTickViewBase
 {
-	// Token: 0x0601672E RID: 91950 RVA: 0x005AEA64 File Offset: 0x005ACC64
+	// Token: 0x06014134 RID: 82228 RVA: 0x005D9A60 File Offset: 0x005D7C60
 	public MotorSkinBuyDetailView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0601672F RID: 91951 RVA: 0x005AEA78 File Offset: 0x005ACC78
+	// Token: 0x06014135 RID: 82229 RVA: 0x005D9A74 File Offset: 0x005D7C74
 	[NullableContext(2)]
 	public MotorSkinBuyDetailViewData GetViewData()
 	{
 		return this.ViewData;
 	}
 
-	// Token: 0x06016730 RID: 91952 RVA: 0x005AEA80 File Offset: 0x005ACC80
+	// Token: 0x06014136 RID: 82230 RVA: 0x005D9A7C File Offset: 0x005D7C7C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 19;
@@ -91,7 +90,7 @@ public class MotorSkinBuyDetailView : UiTickViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06016731 RID: 91953 RVA: 0x005AED88 File Offset: 0x005ACF88
+	// Token: 0x06014137 RID: 82231 RVA: 0x005D9D84 File Offset: 0x005D7F84
 	protected override UniTask OnBeforeStartAsync()
 	{
 		MotorSkinBuyDetailView.<OnBeforeStartAsync>d__20 <OnBeforeStartAsync>d__;
@@ -102,7 +101,7 @@ public class MotorSkinBuyDetailView : UiTickViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016732 RID: 91954 RVA: 0x005AEDCC File Offset: 0x005ACFCC
+	// Token: 0x06014138 RID: 82232 RVA: 0x005D9DC8 File Offset: 0x005D7FC8
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<UiCameraHandleData>(EEventName.OnActivateUiCameraAnimationHandle, new Action<UiCameraHandleData>(this.OnActivateUiCameraAnimationHandle));
@@ -110,7 +109,7 @@ public class MotorSkinBuyDetailView : UiTickViewBase
 		EventSystem.Instance.Add<PayItemSuccess>(EEventName.OnPayItemSuccess, new Action<PayItemSuccess>(this.OnPayItemSuccess));
 	}
 
-	// Token: 0x06016733 RID: 91955 RVA: 0x005AEE30 File Offset: 0x005AD030
+	// Token: 0x06014139 RID: 82233 RVA: 0x005D9E2C File Offset: 0x005D802C
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnActivateUiCameraAnimationHandle, new Action<UiCameraHandleData>(this.OnActivateUiCameraAnimationHandle));
@@ -118,7 +117,7 @@ public class MotorSkinBuyDetailView : UiTickViewBase
 		EventSystem.Instance.Remove(EEventName.OnPayItemSuccess, new Action<PayItemSuccess>(this.OnPayItemSuccess));
 	}
 
-	// Token: 0x06016734 RID: 91956 RVA: 0x005AEE94 File Offset: 0x005AD094
+	// Token: 0x0601413A RID: 82234 RVA: 0x005D9E90 File Offset: 0x005D8090
 	protected override void OnStart()
 	{
 		this.CaptionItem = new PopupCaptionItem(base.GetItem(2));
@@ -154,27 +153,27 @@ public class MotorSkinBuyDetailView : UiTickViewBase
 		totalTopUpTagItem.RefreshByGoodsId(this.CurrentGoodsId);
 	}
 
-	// Token: 0x06016735 RID: 91957 RVA: 0x005AEFBD File Offset: 0x005AD1BD
+	// Token: 0x0601413B RID: 82235 RVA: 0x005D9FB9 File Offset: 0x005D81B9
 	private SkinRewardItemGrid InitGridItem()
 	{
 		return new SkinRewardItemGrid();
 	}
 
-	// Token: 0x06016736 RID: 91958 RVA: 0x005AEFC4 File Offset: 0x005AD1C4
+	// Token: 0x0601413C RID: 82236 RVA: 0x005D9FC0 File Offset: 0x005D81C0
 	protected override void OnHandleLoadScene()
 	{
 		this.InitMotorModel();
 		this.InitCameraInputData();
 	}
 
-	// Token: 0x06016737 RID: 91959 RVA: 0x005AEFD2 File Offset: 0x005AD1D2
+	// Token: 0x0601413D RID: 82237 RVA: 0x005D9FCE File Offset: 0x005D81CE
 	private void InitMotorModel()
 	{
 		MotorcycleUiModelUtil.Instance.CreateMotor(EUiModelUseWay.MotorInMotorView);
 		this.HandleMotorShowByRewardList();
 	}
 
-	// Token: 0x06016738 RID: 91960 RVA: 0x005AEFE8 File Offset: 0x005AD1E8
+	// Token: 0x0601413E RID: 82238 RVA: 0x005D9FE4 File Offset: 0x005D81E4
 	private void HandleMotorShowByRewardList()
 	{
 		MotorSkinBuyDetailViewData motorSkinBuyDetailViewData = this.OpenParam as MotorSkinBuyDetailViewData;
@@ -228,7 +227,7 @@ public class MotorSkinBuyDetailView : UiTickViewBase
 		MotorcycleUiModelUtil.Instance.LoadMotorByParam(param, null);
 	}
 
-	// Token: 0x06016739 RID: 91961 RVA: 0x005AF104 File Offset: 0x005AD304
+	// Token: 0x0601413F RID: 82239 RVA: 0x005DA100 File Offset: 0x005D8300
 	public void InitCameraInputData()
 	{
 		SUiRoleCameraSetting? roleCameraConfig = UiRoleCameraConfig.Instance.GetRoleCameraConfig("摩托车贴纸商城");
@@ -242,16 +241,16 @@ public class MotorSkinBuyDetailView : UiTickViewBase
 			return;
 		}
 		FVectorDouble fvectorDouble = actorWithTag.D_K2_GetActorLocation();
-		UiCameraInputComponentData data = new UiCameraInputComponentData
+		UiCameraInputBindingData data = new UiCameraInputBindingData
 		{
 			DragComponent = base.GetDraggable(0),
 			CameraSettingConfig = roleCameraConfig.Value,
 			SourceLocation = fvectorDouble
 		};
-		this.CameraInputComponent.InitData(data);
+		this.CameraInputBinding.Configure(data);
 	}
 
-	// Token: 0x0601673A RID: 91962 RVA: 0x005AF189 File Offset: 0x005AD389
+	// Token: 0x06014140 RID: 82240 RVA: 0x005DA185 File Offset: 0x005D8385
 	protected override void OnBeforeShow()
 	{
 		MotorcycleUiModelUtil.Instance.SetSoarWingEnabled(true);
@@ -260,7 +259,7 @@ public class MotorSkinBuyDetailView : UiTickViewBase
 		this.RefreshView();
 	}
 
-	// Token: 0x0601673B RID: 91963 RVA: 0x005AF1B0 File Offset: 0x005AD3B0
+	// Token: 0x06014141 RID: 82241 RVA: 0x005DA1AC File Offset: 0x005D83AC
 	private void RefreshView()
 	{
 		MotorSkinBuyDetailViewData viewData = this.ViewData;
@@ -326,7 +325,7 @@ public class MotorSkinBuyDetailView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0601673C RID: 91964 RVA: 0x005AF3E4 File Offset: 0x005AD5E4
+	// Token: 0x06014142 RID: 82242 RVA: 0x005DA3E0 File Offset: 0x005D85E0
 	private void RefreshLeftTime(MotorSkinBuyDetailViewData data)
 	{
 		ShopMotorSkinData currentGoodsData = data.GetCurrentGoodsData();
@@ -361,7 +360,7 @@ public class MotorSkinBuyDetailView : UiTickViewBase
 		text.SetText(payShowCountDownRemainTime.Value, true);
 	}
 
-	// Token: 0x0601673D RID: 91965 RVA: 0x005AF4B8 File Offset: 0x005AD6B8
+	// Token: 0x06014143 RID: 82243 RVA: 0x005DA4B4 File Offset: 0x005D86B4
 	[NullableContext(2)]
 	private void RefreshMainReward(MotorSkinBuyDetailViewData data)
 	{
@@ -387,7 +386,7 @@ public class MotorSkinBuyDetailView : UiTickViewBase
 		mainRewardLayout.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x0601673E RID: 91966 RVA: 0x005AF55C File Offset: 0x005AD75C
+	// Token: 0x06014144 RID: 82244 RVA: 0x005DA558 File Offset: 0x005D8758
 	[NullableContext(2)]
 	private void RefreshExtraReward(MotorSkinBuyDetailViewData data)
 	{
@@ -414,14 +413,13 @@ public class MotorSkinBuyDetailView : UiTickViewBase
 		}, null, false);
 	}
 
-	// Token: 0x0601673F RID: 91967 RVA: 0x005AF5D5 File Offset: 0x005AD7D5
+	// Token: 0x06014145 RID: 82245 RVA: 0x005DA5D1 File Offset: 0x005D87D1
 	protected override void OnAfterShow()
 	{
-		this.CameraInputComponent.Start();
-		this.CameraInputComponent.TryActivate();
+		this.CameraInputBinding.Bind();
 	}
 
-	// Token: 0x06016740 RID: 91968 RVA: 0x005AF5F0 File Offset: 0x005AD7F0
+	// Token: 0x06014146 RID: 82246 RVA: 0x005DA5E0 File Offset: 0x005D87E0
 	protected override void OnTick(float delta)
 	{
 		MotorSkinBuyDetailViewData viewData = this.ViewData;
@@ -476,34 +474,34 @@ public class MotorSkinBuyDetailView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06016741 RID: 91969 RVA: 0x005AF737 File Offset: 0x005AD937
+	// Token: 0x06014147 RID: 82247 RVA: 0x005DA727 File Offset: 0x005D8927
 	protected override void OnBeforeHide()
 	{
-		this.CameraInputComponent.End();
+		this.CameraInputBinding.Unbind();
 		MotorcycleUiModelUtil.Instance.SetSoarWingEnabled(false);
 		MotorcycleUiModelUtil.Instance.ClearMotorBuff();
 		MotorcycleUiModelUtil.Instance.ShowMotor(false);
 	}
 
-	// Token: 0x06016742 RID: 91970 RVA: 0x005AF764 File Offset: 0x005AD964
+	// Token: 0x06014148 RID: 82248 RVA: 0x005DA754 File Offset: 0x005D8954
 	protected override void OnHandleReleaseScene()
 	{
 		MotorcycleUiModelUtil.Instance.DestroyMotor();
 	}
 
-	// Token: 0x06016743 RID: 91971 RVA: 0x005AF770 File Offset: 0x005AD970
+	// Token: 0x06014149 RID: 82249 RVA: 0x005DA760 File Offset: 0x005D8960
 	private void OnCloseView()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06016744 RID: 91972 RVA: 0x005AF779 File Offset: 0x005AD979
+	// Token: 0x0601414A RID: 82250 RVA: 0x005DA769 File Offset: 0x005D8969
 	private void OnClickBtnConfirmB()
 	{
 		PayShopController.Instance.OpenBuySkinDetailView(this.ViewData.GetCurrentGoodsData().GetCurrentGoodsData());
 	}
 
-	// Token: 0x06016745 RID: 91973 RVA: 0x005AF798 File Offset: 0x005AD998
+	// Token: 0x0601414B RID: 82251 RVA: 0x005DA788 File Offset: 0x005D8988
 	private void OnClickOnlyUiToggle(EToggleState toggleState)
 	{
 		this.IsObserving = !this.IsObserving;
@@ -526,10 +524,10 @@ public class MotorSkinBuyDetailView : UiTickViewBase
 		}, true);
 	}
 
-	// Token: 0x06016746 RID: 91974 RVA: 0x005AF82E File Offset: 0x005ADA2E
+	// Token: 0x0601414C RID: 82252 RVA: 0x005DA81E File Offset: 0x005D8A1E
 	private void OnActivateUiCameraAnimationHandle(UiCameraHandleData handleData)
 	{
-		if (handleData.HandleName == this.WaitCameraId)
+		if (handleData.GetHandleName() == this.WaitCameraId)
 		{
 			this.WaitCameraId = null;
 			if (!this.CanLoadModel)
@@ -539,19 +537,19 @@ public class MotorSkinBuyDetailView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06016747 RID: 91975 RVA: 0x005AF859 File Offset: 0x005ADA59
+	// Token: 0x0601414D RID: 82253 RVA: 0x005DA849 File Offset: 0x005D8A49
 	private void OnClickedHelpButton()
 	{
 		HelpController.Instance.OpenHelpById(478);
 	}
 
-	// Token: 0x06016748 RID: 91976 RVA: 0x005AF86A File Offset: 0x005ADA6A
+	// Token: 0x0601414E RID: 82254 RVA: 0x005DA85A File Offset: 0x005D8A5A
 	private void OnPayItemSuccess(PayItemSuccess notify)
 	{
 		this.RefreshView();
 	}
 
-	// Token: 0x06016749 RID: 91977 RVA: 0x005AF874 File Offset: 0x005ADA74
+	// Token: 0x0601414F RID: 82255 RVA: 0x005DA864 File Offset: 0x005D8A64
 	private void OnRefreshGoods(int goodsId, PayShopDefine.EPayShopTabType shopId, int tabId)
 	{
 		ShopMotorSkinData currentGoodsData = this.ViewData.GetCurrentGoodsData();
@@ -563,37 +561,37 @@ public class MotorSkinBuyDetailView : UiTickViewBase
 		this.RefreshView();
 	}
 
-	// Token: 0x0400A6CB RID: 42699
+	// Token: 0x0400AAB5 RID: 43701
 	private const int DEFAULT_MOTOR_SKIN_ID = 89200000;
 
-	// Token: 0x0400A6CC RID: 42700
+	// Token: 0x0400AAB6 RID: 43702
 	private const string MOTORCYCLE_SHOP_ROOT_VIEW_CAMERA_CONFIG_ID = "摩托车贴纸商城";
 
-	// Token: 0x0400A6CD RID: 42701
+	// Token: 0x0400AAB7 RID: 43703
 	[Nullable(2)]
 	private MotorSkinBuyDetailViewData ViewData;
 
-	// Token: 0x0400A6CE RID: 42702
+	// Token: 0x0400AAB8 RID: 43704
 	private int CurrentPayItemId;
 
-	// Token: 0x0400A6CF RID: 42703
-	public UiCameraInputComponent CameraInputComponent = new UiCameraInputComponent();
+	// Token: 0x0400AAB9 RID: 43705
+	public UiCameraInputBinding CameraInputBinding = new UiCameraInputBinding();
 
-	// Token: 0x0400A6D0 RID: 42704
+	// Token: 0x0400AABA RID: 43706
 	[Nullable(2)]
 	private string WaitCameraId;
 
-	// Token: 0x0400A6D1 RID: 42705
+	// Token: 0x0400AABB RID: 43707
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x0400A6D2 RID: 42706
+	// Token: 0x0400AABC RID: 43708
 	private bool CurrentDiscountState;
 
-	// Token: 0x0400A6D3 RID: 42707
+	// Token: 0x0400AABD RID: 43709
 	private bool CanLoadModel;
 
-	// Token: 0x0400A6D4 RID: 42708
+	// Token: 0x0400AABE RID: 43710
 	[Nullable(new byte[]
 	{
 		2,
@@ -602,7 +600,7 @@ public class MotorSkinBuyDetailView : UiTickViewBase
 	})]
 	private GenericLayout<SkinRewardItemGrid, SkinRewardData> MainRewardLayout;
 
-	// Token: 0x0400A6D5 RID: 42709
+	// Token: 0x0400AABF RID: 43711
 	[Nullable(new byte[]
 	{
 		2,
@@ -611,63 +609,63 @@ public class MotorSkinBuyDetailView : UiTickViewBase
 	})]
 	private GenericLayout<SkinRewardItemGrid, SkinRewardData> ExRewardLayout;
 
-	// Token: 0x0400A6D6 RID: 42710
+	// Token: 0x0400AAC0 RID: 43712
 	private bool IsObserving;
 
-	// Token: 0x0400A6D7 RID: 42711
+	// Token: 0x0400AAC1 RID: 43713
 	[Nullable(2)]
 	private TotalTopUpPayAdditiveTagItem TotalTopUpTagItem;
 
-	// Token: 0x0400A6D8 RID: 42712
+	// Token: 0x0400AAC2 RID: 43714
 	private int CurrentGoodsId;
 
-	// Token: 0x0400A6D9 RID: 42713
+	// Token: 0x0400AAC3 RID: 43715
 	private const int MOTOR_SHOP_HELP_ID = 478;
 
-	// Token: 0x0400A6DA RID: 42714
+	// Token: 0x0400AAC4 RID: 43716
 	private const int MOTOR_FIXED_FRAME_ID = 89400001;
 
-	// Token: 0x02009064 RID: 36964
+	// Token: 0x020082AB RID: 33451
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402EC7A RID: 191610
+		// Token: 0x0402A372 RID: 172914
 		BtnMask,
-		// Token: 0x0402EC7B RID: 191611
+		// Token: 0x0402A373 RID: 172915
 		OnlyUiToggle,
-		// Token: 0x0402EC7C RID: 191612
+		// Token: 0x0402A374 RID: 172916
 		UiItemCaption,
-		// Token: 0x0402EC7D RID: 191613
+		// Token: 0x0402A375 RID: 172917
 		PanelHide,
-		// Token: 0x0402EC7E RID: 191614
+		// Token: 0x0402A376 RID: 172918
 		TxtTitle,
-		// Token: 0x0402EC7F RID: 191615
+		// Token: 0x0402A377 RID: 172919
 		TxtType,
-		// Token: 0x0402EC80 RID: 191616
+		// Token: 0x0402A378 RID: 172920
 		LeftTimeItem,
-		// Token: 0x0402EC81 RID: 191617
+		// Token: 0x0402A379 RID: 172921
 		LeftTimeText,
-		// Token: 0x0402EC82 RID: 191618
+		// Token: 0x0402A37A RID: 172922
 		MainRewardLayout,
-		// Token: 0x0402EC83 RID: 191619
+		// Token: 0x0402A37B RID: 172923
 		UiItemItemBaseB3,
-		// Token: 0x0402EC84 RID: 191620
+		// Token: 0x0402A37C RID: 172924
 		ExRewardLayout,
-		// Token: 0x0402EC85 RID: 191621
+		// Token: 0x0402A37D RID: 172925
 		UiItemItemBaseB4,
-		// Token: 0x0402EC86 RID: 191622
+		// Token: 0x0402A37E RID: 172926
 		TxtContent,
-		// Token: 0x0402EC87 RID: 191623
+		// Token: 0x0402A37F RID: 172927
 		BtnConfirmB,
-		// Token: 0x0402EC88 RID: 191624
+		// Token: 0x0402A380 RID: 172928
 		PanelHorizontalLayout,
-		// Token: 0x0402EC89 RID: 191625
+		// Token: 0x0402A381 RID: 172929
 		TxtPrice,
-		// Token: 0x0402EC8A RID: 191626
+		// Token: 0x0402A382 RID: 172930
 		DiscountText,
-		// Token: 0x0402EC8B RID: 191627
+		// Token: 0x0402A383 RID: 172931
 		PanelGot,
-		// Token: 0x0402EC8C RID: 191628
+		// Token: 0x0402A384 RID: 172932
 		PanelTagRoot
 	}
 }

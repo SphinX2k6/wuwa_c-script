@@ -3,94 +3,94 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x020057BB RID: 22459
+	// Token: 0x02004792 RID: 18322
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ExploreRewardInfo : RewardInfo, IExploreRewardInfo, IRewardInfo
 	{
-		// Token: 0x17008965 RID: 35173
-		// (get) Token: 0x060391CB RID: 233931 RVA: 0x00D8FDD7 File Offset: 0x00D8DFD7
-		// (set) Token: 0x060391CC RID: 233932 RVA: 0x00D8FDDF File Offset: 0x00D8DFDF
+		// Token: 0x17005D2D RID: 23853
+		// (get) Token: 0x0602E0DB RID: 188635 RVA: 0x00CDEC0F File Offset: 0x00CDCE0F
+		// (set) Token: 0x0602E0DC RID: 188636 RVA: 0x00CDEC17 File Offset: 0x00CDCE17
 		public new ERewardInfoType Type { get; set; } = ERewardInfoType.Explore;
 
-		// Token: 0x17008966 RID: 35174
-		// (get) Token: 0x060391CD RID: 233933 RVA: 0x00D8FDE8 File Offset: 0x00D8DFE8
-		// (set) Token: 0x060391CE RID: 233934 RVA: 0x00D8FDF0 File Offset: 0x00D8DFF0
+		// Token: 0x17005D2E RID: 23854
+		// (get) Token: 0x0602E0DD RID: 188637 RVA: 0x00CDEC20 File Offset: 0x00CDCE20
+		// (set) Token: 0x0602E0DE RID: 188638 RVA: 0x00CDEC28 File Offset: 0x00CDCE28
 		public bool IsSuccess { get; set; }
 
-		// Token: 0x17008967 RID: 35175
-		// (get) Token: 0x060391CF RID: 233935 RVA: 0x00D8FDF9 File Offset: 0x00D8DFF9
-		// (set) Token: 0x060391D0 RID: 233936 RVA: 0x00D8FE01 File Offset: 0x00D8E001
+		// Token: 0x17005D2F RID: 23855
+		// (get) Token: 0x0602E0DF RID: 188639 RVA: 0x00CDEC31 File Offset: 0x00CDCE31
+		// (set) Token: 0x0602E0E0 RID: 188640 RVA: 0x00CDEC39 File Offset: 0x00CDCE39
 		public string Title { get; set; }
 
-		// Token: 0x17008968 RID: 35176
-		// (get) Token: 0x060391D1 RID: 233937 RVA: 0x00D8FE0A File Offset: 0x00D8E00A
-		// (set) Token: 0x060391D2 RID: 233938 RVA: 0x00D8FE12 File Offset: 0x00D8E012
+		// Token: 0x17005D30 RID: 23856
+		// (get) Token: 0x0602E0E1 RID: 188641 RVA: 0x00CDEC42 File Offset: 0x00CDCE42
+		// (set) Token: 0x0602E0E2 RID: 188642 RVA: 0x00CDEC4A File Offset: 0x00CDCE4A
 		public string TitleHexColor { get; set; }
 
-		// Token: 0x17008969 RID: 35177
-		// (get) Token: 0x060391D3 RID: 233939 RVA: 0x00D8FE1B File Offset: 0x00D8E01B
-		// (set) Token: 0x060391D4 RID: 233940 RVA: 0x00D8FE23 File Offset: 0x00D8E023
+		// Token: 0x17005D31 RID: 23857
+		// (get) Token: 0x0602E0E3 RID: 188643 RVA: 0x00CDEC53 File Offset: 0x00CDCE53
+		// (set) Token: 0x0602E0E4 RID: 188644 RVA: 0x00CDEC5B File Offset: 0x00CDCE5B
 		public string TitleIconPath { get; set; }
 
-		// Token: 0x1700896A RID: 35178
-		// (get) Token: 0x060391D5 RID: 233941 RVA: 0x00D8FE2C File Offset: 0x00D8E02C
-		// (set) Token: 0x060391D6 RID: 233942 RVA: 0x00D8FE34 File Offset: 0x00D8E034
+		// Token: 0x17005D32 RID: 23858
+		// (get) Token: 0x0602E0E5 RID: 188645 RVA: 0x00CDEC64 File Offset: 0x00CDCE64
+		// (set) Token: 0x0602E0E6 RID: 188646 RVA: 0x00CDEC6C File Offset: 0x00CDCE6C
 		public string TitleIconHexColor { get; set; }
 
-		// Token: 0x1700896B RID: 35179
-		// (get) Token: 0x060391D7 RID: 233943 RVA: 0x00D8FE3D File Offset: 0x00D8E03D
-		// (set) Token: 0x060391D8 RID: 233944 RVA: 0x00D8FE45 File Offset: 0x00D8E045
+		// Token: 0x17005D33 RID: 23859
+		// (get) Token: 0x0602E0E7 RID: 188647 RVA: 0x00CDEC75 File Offset: 0x00CDCE75
+		// (set) Token: 0x0602E0E8 RID: 188648 RVA: 0x00CDEC7D File Offset: 0x00CDCE7D
 		public bool IsRecordVisible { get; set; }
 
-		// Token: 0x1700896C RID: 35180
-		// (get) Token: 0x060391D9 RID: 233945 RVA: 0x00D8FE4E File Offset: 0x00D8E04E
-		// (set) Token: 0x060391DA RID: 233946 RVA: 0x00D8FE56 File Offset: 0x00D8E056
+		// Token: 0x17005D34 RID: 23860
+		// (get) Token: 0x0602E0E9 RID: 188649 RVA: 0x00CDEC86 File Offset: 0x00CDCE86
+		// (set) Token: 0x0602E0EA RID: 188650 RVA: 0x00CDEC8E File Offset: 0x00CDCE8E
 		public bool IsItemVisible { get; set; }
 
-		// Token: 0x1700896D RID: 35181
-		// (get) Token: 0x060391DB RID: 233947 RVA: 0x00D8FE5F File Offset: 0x00D8E05F
-		// (set) Token: 0x060391DC RID: 233948 RVA: 0x00D8FE67 File Offset: 0x00D8E067
+		// Token: 0x17005D35 RID: 23861
+		// (get) Token: 0x0602E0EB RID: 188651 RVA: 0x00CDEC97 File Offset: 0x00CDCE97
+		// (set) Token: 0x0602E0EC RID: 188652 RVA: 0x00CDEC9F File Offset: 0x00CDCE9F
 		public bool IsExploreProgressVisible { get; set; }
 
-		// Token: 0x1700896E RID: 35182
-		// (get) Token: 0x060391DD RID: 233949 RVA: 0x00D8FE70 File Offset: 0x00D8E070
-		// (set) Token: 0x060391DE RID: 233950 RVA: 0x00D8FE78 File Offset: 0x00D8E078
+		// Token: 0x17005D36 RID: 23862
+		// (get) Token: 0x0602E0ED RID: 188653 RVA: 0x00CDECA8 File Offset: 0x00CDCEA8
+		// (set) Token: 0x0602E0EE RID: 188654 RVA: 0x00CDECB0 File Offset: 0x00CDCEB0
 		public string ExploreBarTipsTextId { get; set; }
 
-		// Token: 0x1700896F RID: 35183
-		// (get) Token: 0x060391DF RID: 233951 RVA: 0x00D8FE81 File Offset: 0x00D8E081
-		// (set) Token: 0x060391E0 RID: 233952 RVA: 0x00D8FE89 File Offset: 0x00D8E089
+		// Token: 0x17005D37 RID: 23863
+		// (get) Token: 0x0602E0EF RID: 188655 RVA: 0x00CDECB9 File Offset: 0x00CDCEB9
+		// (set) Token: 0x0602E0F0 RID: 188656 RVA: 0x00CDECC1 File Offset: 0x00CDCEC1
 		public bool IsDescription { get; set; }
 
-		// Token: 0x17008970 RID: 35184
-		// (get) Token: 0x060391E1 RID: 233953 RVA: 0x00D8FE92 File Offset: 0x00D8E092
-		// (set) Token: 0x060391E2 RID: 233954 RVA: 0x00D8FE9A File Offset: 0x00D8E09A
+		// Token: 0x17005D38 RID: 23864
+		// (get) Token: 0x0602E0F1 RID: 188657 RVA: 0x00CDECCA File Offset: 0x00CDCECA
+		// (set) Token: 0x0602E0F2 RID: 188658 RVA: 0x00CDECD2 File Offset: 0x00CDCED2
 		public string Description { get; set; }
 
-		// Token: 0x17008971 RID: 35185
-		// (get) Token: 0x060391E3 RID: 233955 RVA: 0x00D8FEA3 File Offset: 0x00D8E0A3
-		// (set) Token: 0x060391E4 RID: 233956 RVA: 0x00D8FEAB File Offset: 0x00D8E0AB
+		// Token: 0x17005D39 RID: 23865
+		// (get) Token: 0x0602E0F3 RID: 188659 RVA: 0x00CDECDB File Offset: 0x00CDCEDB
+		// (set) Token: 0x0602E0F4 RID: 188660 RVA: 0x00CDECE3 File Offset: 0x00CDCEE3
 		public bool? IsShowOnlineChallengePlayer { get; set; }
 
-		// Token: 0x17008972 RID: 35186
-		// (get) Token: 0x060391E5 RID: 233957 RVA: 0x00D8FEB4 File Offset: 0x00D8E0B4
-		// (set) Token: 0x060391E6 RID: 233958 RVA: 0x00D8FEBC File Offset: 0x00D8E0BC
+		// Token: 0x17005D3A RID: 23866
+		// (get) Token: 0x0602E0F5 RID: 188661 RVA: 0x00CDECEC File Offset: 0x00CDCEEC
+		// (set) Token: 0x0602E0F6 RID: 188662 RVA: 0x00CDECF4 File Offset: 0x00CDCEF4
 		public string Tip { get; set; }
 
-		// Token: 0x17008973 RID: 35187
-		// (get) Token: 0x060391E7 RID: 233959 RVA: 0x00D8FEC5 File Offset: 0x00D8E0C5
-		// (set) Token: 0x060391E8 RID: 233960 RVA: 0x00D8FECD File Offset: 0x00D8E0CD
+		// Token: 0x17005D3B RID: 23867
+		// (get) Token: 0x0602E0F7 RID: 188663 RVA: 0x00CDECFD File Offset: 0x00CDCEFD
+		// (set) Token: 0x0602E0F8 RID: 188664 RVA: 0x00CDED05 File Offset: 0x00CDCF05
 		public bool? IsRewardMultiLine { get; set; }
 
-		// Token: 0x17008974 RID: 35188
-		// (get) Token: 0x060391E9 RID: 233961 RVA: 0x00D8FED6 File Offset: 0x00D8E0D6
-		// (set) Token: 0x060391EA RID: 233962 RVA: 0x00D8FEDE File Offset: 0x00D8E0DE
+		// Token: 0x17005D3C RID: 23868
+		// (get) Token: 0x0602E0F9 RID: 188665 RVA: 0x00CDED0E File Offset: 0x00CDCF0E
+		// (set) Token: 0x0602E0FA RID: 188666 RVA: 0x00CDED16 File Offset: 0x00CDCF16
 		public Action OnCloseCallback { get; set; }
 
-		// Token: 0x17008975 RID: 35189
-		// (get) Token: 0x060391EB RID: 233963 RVA: 0x00D8FEE7 File Offset: 0x00D8E0E7
-		// (set) Token: 0x060391EC RID: 233964 RVA: 0x00D8FEEF File Offset: 0x00D8E0EF
+		// Token: 0x17005D3D RID: 23869
+		// (get) Token: 0x0602E0FB RID: 188667 RVA: 0x00CDED1F File Offset: 0x00CDCF1F
+		// (set) Token: 0x0602E0FC RID: 188668 RVA: 0x00CDED27 File Offset: 0x00CDCF27
 		public bool? IsBagFull { get; set; }
 	}
 }

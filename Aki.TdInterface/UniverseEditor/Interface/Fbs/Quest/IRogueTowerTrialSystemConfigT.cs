@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020040B6 RID: 16566
+	// Token: 0x020044F7 RID: 17655
 	public class IRogueTowerTrialSystemConfigT
 	{
-		// Token: 0x170074EA RID: 29930
-		// (get) Token: 0x06018227 RID: 98855 RVA: 0x0037A997 File Offset: 0x00378B97
-		// (set) Token: 0x06018228 RID: 98856 RVA: 0x0037A99F File Offset: 0x00378B9F
+		// Token: 0x17007AF0 RID: 31472
+		// (get) Token: 0x060198C8 RID: 104648 RVA: 0x003A48E7 File Offset: 0x003A2AE7
+		// (set) Token: 0x060198C9 RID: 104649 RVA: 0x003A48EF File Offset: 0x003A2AEF
 		public EEnableSystemType Type { get; set; }
 
-		// Token: 0x170074EB RID: 29931
-		// (get) Token: 0x06018229 RID: 98857 RVA: 0x0037A9A8 File Offset: 0x00378BA8
-		// (set) Token: 0x0601822A RID: 98858 RVA: 0x0037A9B0 File Offset: 0x00378BB0
+		// Token: 0x17007AF1 RID: 31473
+		// (get) Token: 0x060198CA RID: 104650 RVA: 0x003A48F8 File Offset: 0x003A2AF8
+		// (set) Token: 0x060198CB RID: 104651 RVA: 0x003A4900 File Offset: 0x003A2B00
 		public List<IRogueTowerTrialSystemVarT> Vars { get; set; }
 
-		// Token: 0x0601822B RID: 98859 RVA: 0x0037A9B9 File Offset: 0x00378BB9
+		// Token: 0x060198CC RID: 104652 RVA: 0x003A4909 File Offset: 0x003A2B09
 		public IRogueTowerTrialSystemConfigT()
 		{
 			this.Type = EEnableSystemType.GradingSystem;

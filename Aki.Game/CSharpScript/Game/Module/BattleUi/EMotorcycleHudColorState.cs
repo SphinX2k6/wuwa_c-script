@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.BattleUi
 {
-	// Token: 0x02005C83 RID: 23683
+	// Token: 0x02004C63 RID: 19555
 	public enum EMotorcycleHudColorState
 	{
-		// Token: 0x0401F2FD RID: 127741
+		// Token: 0x04019DB2 RID: 105906
 		Normal,
-		// Token: 0x0401F2FE RID: 127742
+		// Token: 0x04019DB3 RID: 105907
 		Nitrogen,
-		// Token: 0x0401F2FF RID: 127743
+		// Token: 0x04019DB4 RID: 105908
 		Parkour
 	}
 }

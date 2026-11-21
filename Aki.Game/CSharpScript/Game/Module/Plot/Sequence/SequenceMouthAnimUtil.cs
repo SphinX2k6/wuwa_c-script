@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.Sequence
 {
-	// Token: 0x02005019 RID: 20505
+	// Token: 0x02003FE3 RID: 16355
 	[NullableContext(2)]
 	[Nullable(0)]
 	public static class SequenceMouthAnimUtil
 	{
-		// Token: 0x060347B2 RID: 214962 RVA: 0x00C5C9D8 File Offset: 0x00C5ABD8
+		// Token: 0x06029655 RID: 169557 RVA: 0x00BA7F24 File Offset: 0x00BA6124
 		public static string GetSequenceMouthAnimKey(ITalkItem talkItem)
 		{
 			if (!SequenceMouthAnimUtil.ShouldApplySequenceMouthAnim(talkItem))
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			return null;
 		}
 
-		// Token: 0x060347B3 RID: 214963 RVA: 0x00C5CA10 File Offset: 0x00C5AC10
+		// Token: 0x06029656 RID: 169558 RVA: 0x00BA7F5C File Offset: 0x00BA615C
 		[return: Nullable(1)]
 		public static List<int> GetSequenceMouthAnimSpeakerIds(ITalkItem talkItem, TArray<int> unisonIdList = null)
 		{
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			return list;
 		}
 
-		// Token: 0x060347B4 RID: 214964 RVA: 0x00C5CA64 File Offset: 0x00C5AC64
+		// Token: 0x06029657 RID: 169559 RVA: 0x00BA7FB0 File Offset: 0x00BA61B0
 		private static bool ShouldApplySequenceMouthAnim(ITalkItem talkItem)
 		{
 			if (talkItem == null || !talkItem.PlayVoice.GetValueOrDefault())
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence
 			return (style == null || style.Type > ETalkItemStyle.InnerVoice) && !talkItemDialog.NoMouthAnim.GetValueOrDefault();
 		}
 
-		// Token: 0x060347B5 RID: 214965 RVA: 0x00C5CAC4 File Offset: 0x00C5ACC4
+		// Token: 0x06029658 RID: 169560 RVA: 0x00BA8010 File Offset: 0x00BA6210
 		[NullableContext(1)]
 		private static void AddMouthAnimSpeakerId(List<int> idList, int? id)
 		{

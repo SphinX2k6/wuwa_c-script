@@ -3,60 +3,60 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Entity
 {
-	// Token: 0x020047CA RID: 18378
+	// Token: 0x02004C32 RID: 19506
 	public class IEntityPrefabT
 	{
-		// Token: 0x17008407 RID: 33799
-		// (get) Token: 0x0601C641 RID: 116289 RVA: 0x004048D7 File Offset: 0x00402AD7
-		// (set) Token: 0x0601C642 RID: 116290 RVA: 0x004048DF File Offset: 0x00402ADF
+		// Token: 0x17008A48 RID: 35400
+		// (get) Token: 0x0601DE16 RID: 122390 RVA: 0x00430B73 File Offset: 0x0042ED73
+		// (set) Token: 0x0601DE17 RID: 122391 RVA: 0x00430B7B File Offset: 0x0042ED7B
 		public string ObjType { get; set; }
 
-		// Token: 0x17008408 RID: 33800
-		// (get) Token: 0x0601C643 RID: 116291 RVA: 0x004048E8 File Offset: 0x00402AE8
-		// (set) Token: 0x0601C644 RID: 116292 RVA: 0x004048F0 File Offset: 0x00402AF0
+		// Token: 0x17008A49 RID: 35401
+		// (get) Token: 0x0601DE18 RID: 122392 RVA: 0x00430B84 File Offset: 0x0042ED84
+		// (set) Token: 0x0601DE19 RID: 122393 RVA: 0x00430B8C File Offset: 0x0042ED8C
 		public List<string> Children { get; set; }
 
-		// Token: 0x17008409 RID: 33801
-		// (get) Token: 0x0601C645 RID: 116293 RVA: 0x004048F9 File Offset: 0x00402AF9
-		// (set) Token: 0x0601C646 RID: 116294 RVA: 0x00404901 File Offset: 0x00402B01
+		// Token: 0x17008A4A RID: 35402
+		// (get) Token: 0x0601DE1A RID: 122394 RVA: 0x00430B95 File Offset: 0x0042ED95
+		// (set) Token: 0x0601DE1B RID: 122395 RVA: 0x00430B9D File Offset: 0x0042ED9D
 		public List<string> Reference { get; set; }
 
-		// Token: 0x1700840A RID: 33802
-		// (get) Token: 0x0601C647 RID: 116295 RVA: 0x0040490A File Offset: 0x00402B0A
-		// (set) Token: 0x0601C648 RID: 116296 RVA: 0x00404912 File Offset: 0x00402B12
+		// Token: 0x17008A4B RID: 35403
+		// (get) Token: 0x0601DE1C RID: 122396 RVA: 0x00430BA6 File Offset: 0x0042EDA6
+		// (set) Token: 0x0601DE1D RID: 122397 RVA: 0x00430BAE File Offset: 0x0042EDAE
 		public List<string> WeakReference { get; set; }
 
-		// Token: 0x1700840B RID: 33803
-		// (get) Token: 0x0601C649 RID: 116297 RVA: 0x0040491B File Offset: 0x00402B1B
-		// (set) Token: 0x0601C64A RID: 116298 RVA: 0x00404923 File Offset: 0x00402B23
+		// Token: 0x17008A4C RID: 35404
+		// (get) Token: 0x0601DE1E RID: 122398 RVA: 0x00430BB7 File Offset: 0x0042EDB7
+		// (set) Token: 0x0601DE1F RID: 122399 RVA: 0x00430BBF File Offset: 0x0042EDBF
 		public int PrefabId { get; set; }
 
-		// Token: 0x1700840C RID: 33804
-		// (get) Token: 0x0601C64B RID: 116299 RVA: 0x0040492C File Offset: 0x00402B2C
-		// (set) Token: 0x0601C64C RID: 116300 RVA: 0x00404934 File Offset: 0x00402B34
+		// Token: 0x17008A4D RID: 35405
+		// (get) Token: 0x0601DE20 RID: 122400 RVA: 0x00430BC8 File Offset: 0x0042EDC8
+		// (set) Token: 0x0601DE21 RID: 122401 RVA: 0x00430BD0 File Offset: 0x0042EDD0
 		public string Name { get; set; }
 
-		// Token: 0x1700840D RID: 33805
-		// (get) Token: 0x0601C64D RID: 116301 RVA: 0x0040493D File Offset: 0x00402B3D
-		// (set) Token: 0x0601C64E RID: 116302 RVA: 0x00404945 File Offset: 0x00402B45
+		// Token: 0x17008A4E RID: 35406
+		// (get) Token: 0x0601DE22 RID: 122402 RVA: 0x00430BD9 File Offset: 0x0042EDD9
+		// (set) Token: 0x0601DE23 RID: 122403 RVA: 0x00430BE1 File Offset: 0x0042EDE1
 		public List<IEntityPrefabElementT> Entities { get; set; }
 
-		// Token: 0x1700840E RID: 33806
-		// (get) Token: 0x0601C64F RID: 116303 RVA: 0x0040494E File Offset: 0x00402B4E
-		// (set) Token: 0x0601C650 RID: 116304 RVA: 0x00404956 File Offset: 0x00402B56
+		// Token: 0x17008A4F RID: 35407
+		// (get) Token: 0x0601DE24 RID: 122404 RVA: 0x00430BEA File Offset: 0x0042EDEA
+		// (set) Token: 0x0601DE25 RID: 122405 RVA: 0x00430BF2 File Offset: 0x0042EDF2
 		public string BpPath { get; set; }
 
-		// Token: 0x1700840F RID: 33807
-		// (get) Token: 0x0601C651 RID: 116305 RVA: 0x0040495F File Offset: 0x00402B5F
-		// (set) Token: 0x0601C652 RID: 116306 RVA: 0x00404967 File Offset: 0x00402B67
+		// Token: 0x17008A50 RID: 35408
+		// (get) Token: 0x0601DE26 RID: 122406 RVA: 0x00430BFB File Offset: 0x0042EDFB
+		// (set) Token: 0x0601DE27 RID: 122407 RVA: 0x00430C03 File Offset: 0x0042EE03
 		public int _SelectedEntityId { get; set; }
 
-		// Token: 0x17008410 RID: 33808
-		// (get) Token: 0x0601C653 RID: 116307 RVA: 0x00404970 File Offset: 0x00402B70
-		// (set) Token: 0x0601C654 RID: 116308 RVA: 0x00404978 File Offset: 0x00402B78
+		// Token: 0x17008A51 RID: 35409
+		// (get) Token: 0x0601DE28 RID: 122408 RVA: 0x00430C0C File Offset: 0x0042EE0C
+		// (set) Token: 0x0601DE29 RID: 122409 RVA: 0x00430C14 File Offset: 0x0042EE14
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601C655 RID: 116309 RVA: 0x00404984 File Offset: 0x00402B84
+		// Token: 0x0601DE2A RID: 122410 RVA: 0x00430C20 File Offset: 0x0042EE20
 		public IEntityPrefabT()
 		{
 			this.ObjType = null;

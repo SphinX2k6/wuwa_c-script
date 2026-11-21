@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020067CE RID: 26574
+	// Token: 0x02006E4E RID: 28238
 	public struct IFixedPos : IFlatbufferObject
 	{
-		// Token: 0x1700C549 RID: 50505
-		// (get) Token: 0x0602E431 RID: 189489 RVA: 0x006514EE File Offset: 0x0064F6EE
+		// Token: 0x1700CEFF RID: 52991
+		// (get) Token: 0x06030C77 RID: 199799 RVA: 0x0069EC32 File Offset: 0x0069CE32
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E432 RID: 189490 RVA: 0x006514FB File Offset: 0x0064F6FB
+		// Token: 0x06030C78 RID: 199800 RVA: 0x0069EC3F File Offset: 0x0069CE3F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602E433 RID: 189491 RVA: 0x00651504 File Offset: 0x0064F704
+		// Token: 0x06030C79 RID: 199801 RVA: 0x0069EC48 File Offset: 0x0069CE48
 		public static IFixedPos GetRootAsIFixedPos(ByteBuffer _bb)
 		{
 			return IFixedPos.GetRootAsIFixedPos(_bb, default(IFixedPos));
 		}
 
-		// Token: 0x0602E434 RID: 189492 RVA: 0x00651520 File Offset: 0x0064F720
+		// Token: 0x06030C7A RID: 199802 RVA: 0x0069EC64 File Offset: 0x0069CE64
 		public static IFixedPos GetRootAsIFixedPos(ByteBuffer _bb, IFixedPos obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602E435 RID: 189493 RVA: 0x0065153D File Offset: 0x0064F73D
+		// Token: 0x06030C7B RID: 199803 RVA: 0x0069EC81 File Offset: 0x0069CE81
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602E436 RID: 189494 RVA: 0x0065154C File Offset: 0x0064F74C
+		// Token: 0x06030C7C RID: 199804 RVA: 0x0069EC90 File Offset: 0x0069CE90
 		public IFixedPos __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C54A RID: 50506
-		// (get) Token: 0x0602E437 RID: 189495 RVA: 0x0065155C File Offset: 0x0064F75C
+		// Token: 0x1700CF00 RID: 52992
+		// (get) Token: 0x06030C7D RID: 199805 RVA: 0x0069ECA0 File Offset: 0x0069CEA0
 		public ETeleportType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C54B RID: 50507
-		// (get) Token: 0x0602E438 RID: 189496 RVA: 0x00651598 File Offset: 0x0064F798
+		// Token: 0x1700CF01 RID: 52993
+		// (get) Token: 0x06030C7E RID: 199806 RVA: 0x0069ECDC File Offset: 0x0069CEDC
 		public IPosA? TargetPos
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E439 RID: 189497 RVA: 0x006515F5 File Offset: 0x0064F7F5
+		// Token: 0x06030C7F RID: 199807 RVA: 0x0069ED39 File Offset: 0x0069CF39
 		public static Offset<IFixedPos> CreateIFixedPos(FlatBufferBuilder builder, ETeleportType Type = ETeleportType.FixedPos, Offset<IPosA> TargetPosOffset = default(Offset<IPosA>))
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFixedPos.EndIFixedPos(builder);
 		}
 
-		// Token: 0x0602E43A RID: 189498 RVA: 0x00651612 File Offset: 0x0064F812
+		// Token: 0x06030C80 RID: 199808 RVA: 0x0069ED56 File Offset: 0x0069CF56
 		public static void StartIFixedPos(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602E43B RID: 189499 RVA: 0x0065161B File Offset: 0x0064F81B
+		// Token: 0x06030C81 RID: 199809 RVA: 0x0069ED5F File Offset: 0x0069CF5F
 		public static void AddType(FlatBufferBuilder builder, ETeleportType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602E43C RID: 189500 RVA: 0x00651626 File Offset: 0x0064F826
+		// Token: 0x06030C82 RID: 199810 RVA: 0x0069ED6A File Offset: 0x0069CF6A
 		public static void AddTargetPos(FlatBufferBuilder builder, Offset<IPosA> targetPosOffset)
 		{
 			builder.AddOffset(1, targetPosOffset.Value, 0);
 		}
 
-		// Token: 0x0602E43D RID: 189501 RVA: 0x00651636 File Offset: 0x0064F836
+		// Token: 0x06030C83 RID: 199811 RVA: 0x0069ED7A File Offset: 0x0069CF7A
 		public static Offset<IFixedPos> EndIFixedPos(FlatBufferBuilder builder)
 		{
 			return new Offset<IFixedPos>(builder.EndTable());
 		}
 
-		// Token: 0x0602E43E RID: 189502 RVA: 0x00651644 File Offset: 0x0064F844
+		// Token: 0x06030C84 RID: 199812 RVA: 0x0069ED88 File Offset: 0x0069CF88
 		public IFixedPosT UnPack()
 		{
 			IFixedPosT fixedPosT = new IFixedPosT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return fixedPosT;
 		}
 
-		// Token: 0x0602E43F RID: 189503 RVA: 0x00651660 File Offset: 0x0064F860
+		// Token: 0x06030C85 RID: 199813 RVA: 0x0069EDA4 File Offset: 0x0069CFA4
 		public void UnPackTo(IFixedPosT _o)
 		{
 			_o.Type = this.Type;
 			_o.TargetPos = ((this.TargetPos != null) ? this.TargetPos.Value.UnPack() : null);
 		}
 
-		// Token: 0x0602E440 RID: 189504 RVA: 0x006516A8 File Offset: 0x0064F8A8
+		// Token: 0x06030C86 RID: 199814 RVA: 0x0069EDEC File Offset: 0x0069CFEC
 		public static Offset<IFixedPos> Pack(FlatBufferBuilder builder, IFixedPosT _o)
 		{
 			if (_o == null)
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFixedPos.CreateIFixedPos(builder, _o.Type, targetPosOffset);
 		}
 
-		// Token: 0x04010EEC RID: 69356
+		// Token: 0x04011D1E RID: 72990
 		private Table __p;
 	}
 }

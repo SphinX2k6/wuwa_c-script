@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.AdvanceNotice
 {
-	// Token: 0x0200692B RID: 26923
+	// Token: 0x0200587B RID: 22651
 	public class AdvanceNoticeRoleItemView : AdvanceNoticeItemView
 	{
-		// Token: 0x060431D6 RID: 274902 RVA: 0x0105B69C File Offset: 0x0105989C
+		// Token: 0x06037D2E RID: 228654 RVA: 0x00F9CCC8 File Offset: 0x00F9AEC8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.AdvanceNotice
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060431D7 RID: 274903 RVA: 0x0105B726 File Offset: 0x01059926
+		// Token: 0x06037D2F RID: 228655 RVA: 0x00F9CD52 File Offset: 0x00F9AF52
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -37,14 +37,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.AdvanceNotice
 			base.GetSpine(2).SetAnimation(0, EDreamLinkSpineDefine.Idle.ToString(), true);
 		}
 
-		// Token: 0x0200CAD0 RID: 51920
+		// Token: 0x0200B498 RID: 46232
 		private enum EComponent
 		{
-			// Token: 0x0403D4B6 RID: 251062
+			// Token: 0x04037D90 RID: 228752
 			DescItem,
-			// Token: 0x0403D4B7 RID: 251063
+			// Token: 0x04037D91 RID: 228753
 			ThemeTextTexture,
-			// Token: 0x0403D4B8 RID: 251064
+			// Token: 0x04037D92 RID: 228754
 			SpineActor
 		}
 	}

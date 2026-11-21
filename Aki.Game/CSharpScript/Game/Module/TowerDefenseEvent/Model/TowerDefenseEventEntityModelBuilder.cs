@@ -5,10 +5,10 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.TowerDefenseEvent.Model
 {
-	// Token: 0x02004B15 RID: 19221
+	// Token: 0x02003ABD RID: 15037
 	public class TowerDefenseEventEntityModelBuilder
 	{
-		// Token: 0x06031CA7 RID: 203943 RVA: 0x00B8ECA9 File Offset: 0x00B8CEA9
+		// Token: 0x06026A37 RID: 158263 RVA: 0x00AD2D15 File Offset: 0x00AD0F15
 		[NullableContext(1)]
 		[return: Nullable(2)]
 		public static ITowerDefenseEventCombatInfo Get(EntityPb entityData, Dictionary<string, EntityComponentPb> componentDataMap)
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent.Model
 			return result;
 		}
 
-		// Token: 0x06031CA8 RID: 203944 RVA: 0x00B8ECD3 File Offset: 0x00B8CED3
+		// Token: 0x06026A38 RID: 158264 RVA: 0x00AD2D3F File Offset: 0x00AD0F3F
 		public static void Clear()
 		{
 			TowerDefenseEventSpecialCellModel.Clear();

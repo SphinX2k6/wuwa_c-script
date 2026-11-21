@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200424D RID: 16973
+	// Token: 0x020046A9 RID: 18089
 	public struct IUseSkillCheckBySkillGenre : IFlatbufferObject
 	{
-		// Token: 0x1700787D RID: 30845
-		// (get) Token: 0x060191A7 RID: 102823 RVA: 0x0039C00E File Offset: 0x0039A20E
+		// Token: 0x17007EAE RID: 32430
+		// (get) Token: 0x0601A913 RID: 108819 RVA: 0x003C76E6 File Offset: 0x003C58E6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060191A8 RID: 102824 RVA: 0x0039C01B File Offset: 0x0039A21B
+		// Token: 0x0601A914 RID: 108820 RVA: 0x003C76F3 File Offset: 0x003C58F3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060191A9 RID: 102825 RVA: 0x0039C024 File Offset: 0x0039A224
+		// Token: 0x0601A915 RID: 108821 RVA: 0x003C76FC File Offset: 0x003C58FC
 		public static IUseSkillCheckBySkillGenre GetRootAsIUseSkillCheckBySkillGenre(ByteBuffer _bb)
 		{
 			return IUseSkillCheckBySkillGenre.GetRootAsIUseSkillCheckBySkillGenre(_bb, default(IUseSkillCheckBySkillGenre));
 		}
 
-		// Token: 0x060191AA RID: 102826 RVA: 0x0039C040 File Offset: 0x0039A240
+		// Token: 0x0601A916 RID: 108822 RVA: 0x003C7718 File Offset: 0x003C5918
 		public static IUseSkillCheckBySkillGenre GetRootAsIUseSkillCheckBySkillGenre(ByteBuffer _bb, IUseSkillCheckBySkillGenre obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060191AB RID: 102827 RVA: 0x0039C05D File Offset: 0x0039A25D
+		// Token: 0x0601A917 RID: 108823 RVA: 0x003C7735 File Offset: 0x003C5935
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060191AC RID: 102828 RVA: 0x0039C06C File Offset: 0x0039A26C
+		// Token: 0x0601A918 RID: 108824 RVA: 0x003C7744 File Offset: 0x003C5944
 		public IUseSkillCheckBySkillGenre __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700787E RID: 30846
-		// (get) Token: 0x060191AD RID: 102829 RVA: 0x0039C07C File Offset: 0x0039A27C
+		// Token: 0x17007EAF RID: 32431
+		// (get) Token: 0x0601A919 RID: 108825 RVA: 0x003C7754 File Offset: 0x003C5954
 		public EUseSkillCheckType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x1700787F RID: 30847
-		// (get) Token: 0x060191AE RID: 102830 RVA: 0x0039C0B8 File Offset: 0x0039A2B8
+		// Token: 0x17007EB0 RID: 32432
+		// (get) Token: 0x0601A91A RID: 108826 RVA: 0x003C7790 File Offset: 0x003C5990
 		public ESkillCategory SkillGenre
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060191AF RID: 102831 RVA: 0x0039C0F4 File Offset: 0x0039A2F4
+		// Token: 0x0601A91B RID: 108827 RVA: 0x003C77CC File Offset: 0x003C59CC
 		public static Offset<IUseSkillCheckBySkillGenre> CreateIUseSkillCheckBySkillGenre(FlatBufferBuilder builder, EUseSkillCheckType Type = EUseSkillCheckType.CheckSkillGenre, ESkillCategory SkillGenre = ESkillCategory.Normal)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IUseSkillCheckBySkillGenre.EndIUseSkillCheckBySkillGenre(builder);
 		}
 
-		// Token: 0x060191B0 RID: 102832 RVA: 0x0039C111 File Offset: 0x0039A311
+		// Token: 0x0601A91C RID: 108828 RVA: 0x003C77E9 File Offset: 0x003C59E9
 		public static void StartIUseSkillCheckBySkillGenre(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060191B1 RID: 102833 RVA: 0x0039C11A File Offset: 0x0039A31A
+		// Token: 0x0601A91D RID: 108829 RVA: 0x003C77F2 File Offset: 0x003C59F2
 		public static void AddType(FlatBufferBuilder builder, EUseSkillCheckType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060191B2 RID: 102834 RVA: 0x0039C125 File Offset: 0x0039A325
+		// Token: 0x0601A91E RID: 108830 RVA: 0x003C77FD File Offset: 0x003C59FD
 		public static void AddSkillGenre(FlatBufferBuilder builder, ESkillCategory skillGenre)
 		{
 			builder.AddSbyte(1, (sbyte)skillGenre, 0);
 		}
 
-		// Token: 0x060191B3 RID: 102835 RVA: 0x0039C130 File Offset: 0x0039A330
+		// Token: 0x0601A91F RID: 108831 RVA: 0x003C7808 File Offset: 0x003C5A08
 		public static Offset<IUseSkillCheckBySkillGenre> EndIUseSkillCheckBySkillGenre(FlatBufferBuilder builder)
 		{
 			return new Offset<IUseSkillCheckBySkillGenre>(builder.EndTable());
 		}
 
-		// Token: 0x060191B4 RID: 102836 RVA: 0x0039C140 File Offset: 0x0039A340
+		// Token: 0x0601A920 RID: 108832 RVA: 0x003C7818 File Offset: 0x003C5A18
 		public IUseSkillCheckBySkillGenreT UnPack()
 		{
 			IUseSkillCheckBySkillGenreT useSkillCheckBySkillGenreT = new IUseSkillCheckBySkillGenreT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return useSkillCheckBySkillGenreT;
 		}
 
-		// Token: 0x060191B5 RID: 102837 RVA: 0x0039C15B File Offset: 0x0039A35B
+		// Token: 0x0601A921 RID: 108833 RVA: 0x003C7833 File Offset: 0x003C5A33
 		public void UnPackTo(IUseSkillCheckBySkillGenreT _o)
 		{
 			_o.Type = this.Type;
 			_o.SkillGenre = this.SkillGenre;
 		}
 
-		// Token: 0x060191B6 RID: 102838 RVA: 0x0039C178 File Offset: 0x0039A378
+		// Token: 0x0601A922 RID: 108834 RVA: 0x003C7850 File Offset: 0x003C5A50
 		public static Offset<IUseSkillCheckBySkillGenre> Pack(FlatBufferBuilder builder, IUseSkillCheckBySkillGenreT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IUseSkillCheckBySkillGenre.CreateIUseSkillCheckBySkillGenre(builder, _o.Type, _o.SkillGenre);
 		}
 
-		// Token: 0x0400BED7 RID: 48855
+		// Token: 0x0400C8E4 RID: 51428
 		private Table __p;
 	}
 }

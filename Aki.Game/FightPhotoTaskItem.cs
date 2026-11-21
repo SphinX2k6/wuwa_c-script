@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001282 RID: 4738
+// Token: 0x02000736 RID: 1846
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class FightPhotoTaskItem : GridProxyAbstract<FightPhotoTaskData>
 {
-	// Token: 0x06008161 RID: 33121 RVA: 0x001B7248 File Offset: 0x001B5448
+	// Token: 0x060054F8 RID: 21752 RVA: 0x001BFF18 File Offset: 0x001BE118
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,13 +31,13 @@ public class FightPhotoTaskItem : GridProxyAbstract<FightPhotoTaskData>
 		};
 	}
 
-	// Token: 0x06008162 RID: 33122 RVA: 0x001B7307 File Offset: 0x001B5507
+	// Token: 0x060054F9 RID: 21753 RVA: 0x001BFFD7 File Offset: 0x001BE1D7
 	protected override void OnStart()
 	{
 		this.RewardScroll = new GenericScrollViewNew<CommonItemSmallItemGrid, TItem>(base.GetScrollViewWithScrollbar(4), new Func<CommonItemSmallItemGrid>(this.CreateRewardItem), null, false, null);
 	}
 
-	// Token: 0x06008163 RID: 33123 RVA: 0x001B732C File Offset: 0x001B552C
+	// Token: 0x060054FA RID: 21754 RVA: 0x001BFFFC File Offset: 0x001BE1FC
 	public override void Refresh(FightPhotoTaskData data, bool isSelected, int gridIndex)
 	{
 		this.RewardScroll.RefreshByData(data.RewardList, delegate
@@ -55,7 +55,7 @@ public class FightPhotoTaskItem : GridProxyAbstract<FightPhotoTaskData>
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(3), data.TaskName, Array.Empty<object>());
 	}
 
-	// Token: 0x06008164 RID: 33124 RVA: 0x001B73CE File Offset: 0x001B55CE
+	// Token: 0x060054FB RID: 21755 RVA: 0x001C009E File Offset: 0x001BE29E
 	private void OnRewardBtnClickHandler()
 	{
 		Action onRewardBtnClick = this.OnRewardBtnClick;
@@ -66,13 +66,13 @@ public class FightPhotoTaskItem : GridProxyAbstract<FightPhotoTaskData>
 		onRewardBtnClick();
 	}
 
-	// Token: 0x06008165 RID: 33125 RVA: 0x001B73E0 File Offset: 0x001B55E0
+	// Token: 0x060054FC RID: 21756 RVA: 0x001C00B0 File Offset: 0x001BE2B0
 	private CommonItemSmallItemGrid CreateRewardItem()
 	{
 		return new CommonItemSmallItemGrid();
 	}
 
-	// Token: 0x04003AA1 RID: 15009
+	// Token: 0x04003B39 RID: 15161
 	[Nullable(new byte[]
 	{
 		2,
@@ -80,27 +80,27 @@ public class FightPhotoTaskItem : GridProxyAbstract<FightPhotoTaskData>
 	})]
 	private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardScroll;
 
-	// Token: 0x04003AA2 RID: 15010
+	// Token: 0x04003B3A RID: 15162
 	[Nullable(2)]
 	public Action OnRewardBtnClick;
 
-	// Token: 0x02007899 RID: 30873
+	// Token: 0x02006A24 RID: 27172
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x04027BC6 RID: 162758
+		// Token: 0x04022EF7 RID: 143095
 		BtnReward,
-		// Token: 0x04027BC7 RID: 162759
+		// Token: 0x04022EF8 RID: 143096
 		TextDoing,
-		// Token: 0x04027BC8 RID: 162760
+		// Token: 0x04022EF9 RID: 143097
 		ItemFinish,
-		// Token: 0x04027BC9 RID: 162761
+		// Token: 0x04022EFA RID: 143098
 		TextName,
-		// Token: 0x04027BCA RID: 162762
+		// Token: 0x04022EFB RID: 143099
 		ScrollReward,
-		// Token: 0x04027BCB RID: 162763
+		// Token: 0x04022EFC RID: 143100
 		ItemLockPanel,
-		// Token: 0x04027BCC RID: 162764
+		// Token: 0x04022EFD RID: 143101
 		ItemRedDot
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D5C RID: 7516
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F6D RID: 8045
 	public class IProjectorPuzzle : IUiGame
 	{
-		// Token: 0x0600A13B RID: 41275 RVA: 0x0016F6D4 File Offset: 0x0016D8D4
+		// Token: 0x0600AB27 RID: 43815 RVA: 0x00183AF8 File Offset: 0x00181CF8
 		private IProjectorPuzzle_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A13C RID: 41276 RVA: 0x0016F70C File Offset: 0x0016D90C
+		// Token: 0x0600AB28 RID: 43816 RVA: 0x00183B30 File Offset: 0x00181D30
 		public static IProjectorPuzzle Create([Nullable(2)] IProjectorPuzzle instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A13D RID: 41277 RVA: 0x0016F71F File Offset: 0x0016D91F
+		// Token: 0x0600AB29 RID: 43817 RVA: 0x00183B43 File Offset: 0x00181D43
 		public static IProjectorPuzzle CreateFromSetValue([Nullable(2)] IProjectorPuzzle_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A13E RID: 41278 RVA: 0x0016F732 File Offset: 0x0016D932
+		// Token: 0x0600AB2A RID: 43818 RVA: 0x00183B56 File Offset: 0x00181D56
 		public new IProjectorPuzzle_SetValue ToSetValue()
 		{
 			return new IProjectorPuzzle_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170031EA RID: 12778
-		// (get) Token: 0x0600A13F RID: 41279 RVA: 0x0016F745 File Offset: 0x0016D945
-		// (set) Token: 0x0600A140 RID: 41280 RVA: 0x0016F770 File Offset: 0x0016D970
+		// Token: 0x1700347E RID: 13438
+		// (get) Token: 0x0600AB2B RID: 43819 RVA: 0x00183B69 File Offset: 0x00181D69
+		// (set) Token: 0x0600AB2C RID: 43820 RVA: 0x00183B94 File Offset: 0x00181D94
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400610F RID: 24847
+		// Token: 0x0400668B RID: 26251
 		[Nullable(2)]
 		protected new IProjectorPuzzle FbInstance;
 
-		// Token: 0x04006110 RID: 24848
+		// Token: 0x0400668C RID: 26252
 		[Nullable(2)]
 		protected new IProjectorPuzzle_SetValue PocoInterface;
 	}

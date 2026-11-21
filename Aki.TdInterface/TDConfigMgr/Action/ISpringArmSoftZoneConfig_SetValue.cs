@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001EB0 RID: 7856
+	// Token: 0x020020E9 RID: 8425
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ISpringArmSoftZoneConfig_SetValue
 	{
-		// Token: 0x04006429 RID: 25641
+		// Token: 0x04006A17 RID: 27159
 		public ISingleAxisSpringArmSoftZoneConfig LeftRightConfig;
 
-		// Token: 0x0400642A RID: 25642
+		// Token: 0x04006A18 RID: 27160
 		public ISingleAxisSpringArmSoftZoneConfig ForwardBackConfig;
 
-		// Token: 0x0400642B RID: 25643
+		// Token: 0x04006A19 RID: 27161
 		public ISingleAxisSpringArmSoftZoneConfig UpDownConfig;
 	}
 }

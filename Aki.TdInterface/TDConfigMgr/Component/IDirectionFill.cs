@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002B9 RID: 697
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000300 RID: 768
 	public class IDirectionFill : IFillType
 	{
-		// Token: 0x06000D0F RID: 3343 RVA: 0x000314EC File Offset: 0x0002F6EC
+		// Token: 0x06000E3F RID: 3647 RVA: 0x00034420 File Offset: 0x00032620
 		private IDirectionFill_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000D10 RID: 3344 RVA: 0x00031524 File Offset: 0x0002F724
+		// Token: 0x06000E40 RID: 3648 RVA: 0x00034458 File Offset: 0x00032658
 		public static IDirectionFill Create([Nullable(2)] IDirectionFill instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000D11 RID: 3345 RVA: 0x00031537 File Offset: 0x0002F737
+		// Token: 0x06000E41 RID: 3649 RVA: 0x0003446B File Offset: 0x0003266B
 		public static IDirectionFill CreateFromSetValue([Nullable(2)] IDirectionFill_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000D12 RID: 3346 RVA: 0x0003154C File Offset: 0x0002F74C
+		// Token: 0x06000E42 RID: 3650 RVA: 0x00034480 File Offset: 0x00032680
 		public new IDirectionFill_SetValue ToSetValue()
 		{
 			return new IDirectionFill_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170003CF RID: 975
-		// (get) Token: 0x06000D13 RID: 3347 RVA: 0x0003159A File Offset: 0x0002F79A
-		// (set) Token: 0x06000D14 RID: 3348 RVA: 0x000315C5 File Offset: 0x0002F7C5
+		// Token: 0x1700041C RID: 1052
+		// (get) Token: 0x06000E43 RID: 3651 RVA: 0x000344CE File Offset: 0x000326CE
+		// (set) Token: 0x06000E44 RID: 3652 RVA: 0x000344F9 File Offset: 0x000326F9
 		public override EFillType Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170003D0 RID: 976
-		// (get) Token: 0x06000D15 RID: 3349 RVA: 0x000315D3 File Offset: 0x0002F7D3
-		// (set) Token: 0x06000D16 RID: 3350 RVA: 0x000315FE File Offset: 0x0002F7FE
+		// Token: 0x1700041D RID: 1053
+		// (get) Token: 0x06000E45 RID: 3653 RVA: 0x00034507 File Offset: 0x00032707
+		// (set) Token: 0x06000E46 RID: 3654 RVA: 0x00034532 File Offset: 0x00032732
 		public virtual bool W
 		{
 			get
@@ -105,9 +103,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170003D1 RID: 977
-		// (get) Token: 0x06000D17 RID: 3351 RVA: 0x0003160C File Offset: 0x0002F80C
-		// (set) Token: 0x06000D18 RID: 3352 RVA: 0x00031637 File Offset: 0x0002F837
+		// Token: 0x1700041E RID: 1054
+		// (get) Token: 0x06000E47 RID: 3655 RVA: 0x00034540 File Offset: 0x00032740
+		// (set) Token: 0x06000E48 RID: 3656 RVA: 0x0003456B File Offset: 0x0003276B
 		public virtual bool S
 		{
 			get
@@ -124,9 +122,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170003D2 RID: 978
-		// (get) Token: 0x06000D19 RID: 3353 RVA: 0x00031645 File Offset: 0x0002F845
-		// (set) Token: 0x06000D1A RID: 3354 RVA: 0x00031670 File Offset: 0x0002F870
+		// Token: 0x1700041F RID: 1055
+		// (get) Token: 0x06000E49 RID: 3657 RVA: 0x00034579 File Offset: 0x00032779
+		// (set) Token: 0x06000E4A RID: 3658 RVA: 0x000345A4 File Offset: 0x000327A4
 		public virtual bool A
 		{
 			get
@@ -143,9 +141,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170003D3 RID: 979
-		// (get) Token: 0x06000D1B RID: 3355 RVA: 0x0003167E File Offset: 0x0002F87E
-		// (set) Token: 0x06000D1C RID: 3356 RVA: 0x000316A9 File Offset: 0x0002F8A9
+		// Token: 0x17000420 RID: 1056
+		// (get) Token: 0x06000E4B RID: 3659 RVA: 0x000345B2 File Offset: 0x000327B2
+		// (set) Token: 0x06000E4C RID: 3660 RVA: 0x000345DD File Offset: 0x000327DD
 		public virtual bool D
 		{
 			get
@@ -162,11 +160,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000BF6 RID: 3062
+		// Token: 0x04000CE0 RID: 3296
 		[Nullable(2)]
 		protected new IDirectionFill FbInstance;
 
-		// Token: 0x04000BF7 RID: 3063
+		// Token: 0x04000CE1 RID: 3297
 		[Nullable(2)]
 		protected new IDirectionFill_SetValue PocoInterface;
 	}

@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020044E2 RID: 17634
+	// Token: 0x0200494A RID: 18762
 	public struct ILevelBuildingGrid : IFlatbufferObject
 	{
-		// Token: 0x17007C83 RID: 31875
-		// (get) Token: 0x0601A5FE RID: 108030 RVA: 0x003C3C18 File Offset: 0x003C1E18
+		// Token: 0x170082C2 RID: 33474
+		// (get) Token: 0x0601BDCF RID: 114127 RVA: 0x003EFE24 File Offset: 0x003EE024
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A5FF RID: 108031 RVA: 0x003C3C25 File Offset: 0x003C1E25
+		// Token: 0x0601BDD0 RID: 114128 RVA: 0x003EFE31 File Offset: 0x003EE031
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601A600 RID: 108032 RVA: 0x003C3C2C File Offset: 0x003C1E2C
+		// Token: 0x0601BDD1 RID: 114129 RVA: 0x003EFE38 File Offset: 0x003EE038
 		public static ILevelBuildingGrid GetRootAsILevelBuildingGrid(ByteBuffer _bb)
 		{
 			return ILevelBuildingGrid.GetRootAsILevelBuildingGrid(_bb, default(ILevelBuildingGrid));
 		}
 
-		// Token: 0x0601A601 RID: 108033 RVA: 0x003C3C48 File Offset: 0x003C1E48
+		// Token: 0x0601BDD2 RID: 114130 RVA: 0x003EFE54 File Offset: 0x003EE054
 		public static ILevelBuildingGrid GetRootAsILevelBuildingGrid(ByteBuffer _bb, ILevelBuildingGrid obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601A602 RID: 108034 RVA: 0x003C3C65 File Offset: 0x003C1E65
+		// Token: 0x0601BDD3 RID: 114131 RVA: 0x003EFE71 File Offset: 0x003EE071
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601A603 RID: 108035 RVA: 0x003C3C74 File Offset: 0x003C1E74
+		// Token: 0x0601BDD4 RID: 114132 RVA: 0x003EFE80 File Offset: 0x003EE080
 		public ILevelBuildingGrid __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007C84 RID: 31876
-		// (get) Token: 0x0601A604 RID: 108036 RVA: 0x003C3C84 File Offset: 0x003C1E84
+		// Token: 0x170082C3 RID: 33475
+		// (get) Token: 0x0601BDD5 RID: 114133 RVA: 0x003EFE90 File Offset: 0x003EE090
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007C85 RID: 31877
-		// (get) Token: 0x0601A605 RID: 108037 RVA: 0x003C3CC0 File Offset: 0x003C1EC0
+		// Token: 0x170082C4 RID: 33476
+		// (get) Token: 0x0601BDD6 RID: 114134 RVA: 0x003EFECC File Offset: 0x003EE0CC
 		public string Guid
 		{
 			get
@@ -79,20 +79,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A606 RID: 108038 RVA: 0x003C3CF7 File Offset: 0x003C1EF7
+		// Token: 0x0601BDD7 RID: 114135 RVA: 0x003EFF03 File Offset: 0x003EE103
 		public Span<byte> GetGuidBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0601A607 RID: 108039 RVA: 0x003C3D06 File Offset: 0x003C1F06
+		// Token: 0x0601BDD8 RID: 114136 RVA: 0x003EFF12 File Offset: 0x003EE112
 		public byte[] GetGuidArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x17007C86 RID: 31878
-		// (get) Token: 0x0601A608 RID: 108040 RVA: 0x003C3D14 File Offset: 0x003C1F14
+		// Token: 0x170082C5 RID: 33477
+		// (get) Token: 0x0601BDD9 RID: 114137 RVA: 0x003EFF20 File Offset: 0x003EE120
 		public IVectorInfo? Position
 		{
 			get
@@ -106,8 +106,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007C87 RID: 31879
-		// (get) Token: 0x0601A609 RID: 108041 RVA: 0x003C3D74 File Offset: 0x003C1F74
+		// Token: 0x170082C6 RID: 33478
+		// (get) Token: 0x0601BDDA RID: 114138 RVA: 0x003EFF80 File Offset: 0x003EE180
 		public IVectorInfo? Rotation
 		{
 			get
@@ -121,8 +121,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007C88 RID: 31880
-		// (get) Token: 0x0601A60A RID: 108042 RVA: 0x003C3DD4 File Offset: 0x003C1FD4
+		// Token: 0x170082C7 RID: 33479
+		// (get) Token: 0x0601BDDB RID: 114139 RVA: 0x003EFFE0 File Offset: 0x003EE1E0
 		public IVector2? Size
 		{
 			get
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A60B RID: 108043 RVA: 0x003C3E34 File Offset: 0x003C2034
+		// Token: 0x0601BDDC RID: 114140 RVA: 0x003F0040 File Offset: 0x003EE240
 		public IVector2? BlockCoords(int j)
 		{
 			int num = this.__p.__offset(14);
@@ -147,8 +147,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return new IVector2?(default(IVector2).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17007C89 RID: 31881
-		// (get) Token: 0x0601A60C RID: 108044 RVA: 0x003C3E98 File Offset: 0x003C2098
+		// Token: 0x170082C8 RID: 33480
+		// (get) Token: 0x0601BDDD RID: 114141 RVA: 0x003F00A4 File Offset: 0x003EE2A4
 		public int BlockCoordsLength
 		{
 			get
@@ -162,7 +162,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A60D RID: 108045 RVA: 0x003C3EC4 File Offset: 0x003C20C4
+		// Token: 0x0601BDDE RID: 114142 RVA: 0x003F00D0 File Offset: 0x003EE2D0
 		public static Offset<ILevelBuildingGrid> CreateILevelBuildingGrid(FlatBufferBuilder builder, int Id = 0, StringOffset GuidOffset = default(StringOffset), Offset<IVectorInfo> PositionOffset = default(Offset<IVectorInfo>), Offset<IVectorInfo> RotationOffset = default(Offset<IVectorInfo>), Offset<IVector2> SizeOffset = default(Offset<IVector2>), VectorOffset BlockCoordsOffset = default(VectorOffset))
 		{
 			builder.StartTable(6);
@@ -175,49 +175,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return ILevelBuildingGrid.EndILevelBuildingGrid(builder);
 		}
 
-		// Token: 0x0601A60E RID: 108046 RVA: 0x003C3F00 File Offset: 0x003C2100
+		// Token: 0x0601BDDF RID: 114143 RVA: 0x003F010C File Offset: 0x003EE30C
 		public static void StartILevelBuildingGrid(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x0601A60F RID: 108047 RVA: 0x003C3F09 File Offset: 0x003C2109
+		// Token: 0x0601BDE0 RID: 114144 RVA: 0x003F0115 File Offset: 0x003EE315
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(0, id, 0);
 		}
 
-		// Token: 0x0601A610 RID: 108048 RVA: 0x003C3F14 File Offset: 0x003C2114
+		// Token: 0x0601BDE1 RID: 114145 RVA: 0x003F0120 File Offset: 0x003EE320
 		public static void AddGuid(FlatBufferBuilder builder, StringOffset guidOffset)
 		{
 			builder.AddOffset(1, guidOffset.Value, 0);
 		}
 
-		// Token: 0x0601A611 RID: 108049 RVA: 0x003C3F24 File Offset: 0x003C2124
+		// Token: 0x0601BDE2 RID: 114146 RVA: 0x003F0130 File Offset: 0x003EE330
 		public static void AddPosition(FlatBufferBuilder builder, Offset<IVectorInfo> positionOffset)
 		{
 			builder.AddOffset(2, positionOffset.Value, 0);
 		}
 
-		// Token: 0x0601A612 RID: 108050 RVA: 0x003C3F34 File Offset: 0x003C2134
+		// Token: 0x0601BDE3 RID: 114147 RVA: 0x003F0140 File Offset: 0x003EE340
 		public static void AddRotation(FlatBufferBuilder builder, Offset<IVectorInfo> rotationOffset)
 		{
 			builder.AddOffset(3, rotationOffset.Value, 0);
 		}
 
-		// Token: 0x0601A613 RID: 108051 RVA: 0x003C3F44 File Offset: 0x003C2144
+		// Token: 0x0601BDE4 RID: 114148 RVA: 0x003F0150 File Offset: 0x003EE350
 		public static void AddSize(FlatBufferBuilder builder, Offset<IVector2> sizeOffset)
 		{
 			builder.AddOffset(4, sizeOffset.Value, 0);
 		}
 
-		// Token: 0x0601A614 RID: 108052 RVA: 0x003C3F54 File Offset: 0x003C2154
+		// Token: 0x0601BDE5 RID: 114149 RVA: 0x003F0160 File Offset: 0x003EE360
 		public static void AddBlockCoords(FlatBufferBuilder builder, VectorOffset blockCoordsOffset)
 		{
 			builder.AddOffset(5, blockCoordsOffset.Value, 0);
 		}
 
-		// Token: 0x0601A615 RID: 108053 RVA: 0x003C3F64 File Offset: 0x003C2164
+		// Token: 0x0601BDE6 RID: 114150 RVA: 0x003F0170 File Offset: 0x003EE370
 		public static VectorOffset CreateBlockCoordsVector(FlatBufferBuilder builder, Offset<IVector2>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -228,7 +228,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A616 RID: 108054 RVA: 0x003C3FA4 File Offset: 0x003C21A4
+		// Token: 0x0601BDE7 RID: 114151 RVA: 0x003F01B0 File Offset: 0x003EE3B0
 		public static VectorOffset CreateBlockCoordsVectorBlock(FlatBufferBuilder builder, Offset<IVector2>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -236,7 +236,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A617 RID: 108055 RVA: 0x003C3FBE File Offset: 0x003C21BE
+		// Token: 0x0601BDE8 RID: 114152 RVA: 0x003F01CA File Offset: 0x003EE3CA
 		public static VectorOffset CreateBlockCoordsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IVector2>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -244,7 +244,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A618 RID: 108056 RVA: 0x003C3FDC File Offset: 0x003C21DC
+		// Token: 0x0601BDE9 RID: 114153 RVA: 0x003F01E8 File Offset: 0x003EE3E8
 		public static VectorOffset CreateBlockCoordsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -252,19 +252,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return builder.EndVector();
 		}
 
-		// Token: 0x0601A619 RID: 108057 RVA: 0x003C3FF5 File Offset: 0x003C21F5
+		// Token: 0x0601BDEA RID: 114154 RVA: 0x003F0201 File Offset: 0x003EE401
 		public static void StartBlockCoordsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0601A61A RID: 108058 RVA: 0x003C4000 File Offset: 0x003C2200
+		// Token: 0x0601BDEB RID: 114155 RVA: 0x003F020C File Offset: 0x003EE40C
 		public static Offset<ILevelBuildingGrid> EndILevelBuildingGrid(FlatBufferBuilder builder)
 		{
 			return new Offset<ILevelBuildingGrid>(builder.EndTable());
 		}
 
-		// Token: 0x0601A61B RID: 108059 RVA: 0x003C4010 File Offset: 0x003C2210
+		// Token: 0x0601BDEC RID: 114156 RVA: 0x003F021C File Offset: 0x003EE41C
 		public ILevelBuildingGridT UnPack()
 		{
 			ILevelBuildingGridT levelBuildingGridT = new ILevelBuildingGridT();
@@ -272,7 +272,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return levelBuildingGridT;
 		}
 
-		// Token: 0x0601A61C RID: 108060 RVA: 0x003C402C File Offset: 0x003C222C
+		// Token: 0x0601BDED RID: 114157 RVA: 0x003F0238 File Offset: 0x003EE438
 		public void UnPackTo(ILevelBuildingGridT _o)
 		{
 			_o.Id = this.Id;
@@ -287,7 +287,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601A61D RID: 108061 RVA: 0x003C4138 File Offset: 0x003C2338
+		// Token: 0x0601BDEE RID: 114158 RVA: 0x003F0344 File Offset: 0x003EE544
 		public static Offset<ILevelBuildingGrid> Pack(FlatBufferBuilder builder, ILevelBuildingGridT _o)
 		{
 			if (_o == null)
@@ -311,7 +311,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return ILevelBuildingGrid.CreateILevelBuildingGrid(builder, _o.Id, guidOffset, positionOffset, rotationOffset, sizeOffset, blockCoordsOffset);
 		}
 
-		// Token: 0x0400C501 RID: 50433
+		// Token: 0x0400CF2F RID: 53039
 		private Table __p;
 	}
 }

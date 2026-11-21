@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A08 RID: 10760
+	// Token: 0x02002CF5 RID: 11509
 	public class DangoAbyssReceiveReward : ActionParams
 	{
-		// Token: 0x0600ED61 RID: 60769 RVA: 0x00229C90 File Offset: 0x00227E90
-		[NullableContext(1)]
+		// Token: 0x0600FBF8 RID: 64504 RVA: 0x00247614 File Offset: 0x00245814
 		public static DangoAbyssReceiveReward Create(IDangoAbyssReceiveReward? instance)
 		{
 			if (instance == null)
@@ -21,7 +19,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x040082AC RID: 33452
+		// Token: 0x0400899D RID: 35229
 		private IDangoAbyssReceiveReward Instance;
 	}
 }

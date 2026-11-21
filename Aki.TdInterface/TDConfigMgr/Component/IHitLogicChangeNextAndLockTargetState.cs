@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000426 RID: 1062
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200047F RID: 1151
 	public class IHitLogicChangeNextAndLockTargetState : IHitLogicType
 	{
-		// Token: 0x06001569 RID: 5481 RVA: 0x00043240 File Offset: 0x00041440
+		// Token: 0x06001703 RID: 5891 RVA: 0x00046F88 File Offset: 0x00045188
 		private IHitLogicChangeNextAndLockTargetState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600156A RID: 5482 RVA: 0x00043278 File Offset: 0x00041478
+		// Token: 0x06001704 RID: 5892 RVA: 0x00046FC0 File Offset: 0x000451C0
 		public static IHitLogicChangeNextAndLockTargetState Create([Nullable(2)] IHitLogicChangeNextAndLockTargetState instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600156B RID: 5483 RVA: 0x0004328B File Offset: 0x0004148B
+		// Token: 0x06001705 RID: 5893 RVA: 0x00046FD3 File Offset: 0x000451D3
 		public static IHitLogicChangeNextAndLockTargetState CreateFromSetValue([Nullable(2)] IHitLogicChangeNextAndLockTargetState_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600156C RID: 5484 RVA: 0x0004329E File Offset: 0x0004149E
+		// Token: 0x06001706 RID: 5894 RVA: 0x00046FE6 File Offset: 0x000451E6
 		public new IHitLogicChangeNextAndLockTargetState_SetValue ToSetValue()
 		{
 			return new IHitLogicChangeNextAndLockTargetState_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170005D9 RID: 1497
-		// (get) Token: 0x0600156D RID: 5485 RVA: 0x000432BD File Offset: 0x000414BD
-		// (set) Token: 0x0600156E RID: 5486 RVA: 0x000432E8 File Offset: 0x000414E8
+		// Token: 0x17000640 RID: 1600
+		// (get) Token: 0x06001707 RID: 5895 RVA: 0x00047005 File Offset: 0x00045205
+		// (set) Token: 0x06001708 RID: 5896 RVA: 0x00047030 File Offset: 0x00045230
 		public override EHitLogicType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170005DA RID: 1498
-		// (get) Token: 0x0600156F RID: 5487 RVA: 0x000432F6 File Offset: 0x000414F6
-		// (set) Token: 0x06001570 RID: 5488 RVA: 0x00043321 File Offset: 0x00041521
+		// Token: 0x17000641 RID: 1601
+		// (get) Token: 0x06001709 RID: 5897 RVA: 0x0004703E File Offset: 0x0004523E
+		// (set) Token: 0x0600170A RID: 5898 RVA: 0x00047069 File Offset: 0x00045269
 		public virtual string TargetState
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001090 RID: 4240
+		// Token: 0x040011B2 RID: 4530
 		[Nullable(2)]
 		protected new IHitLogicChangeNextAndLockTargetState FbInstance;
 
-		// Token: 0x04001091 RID: 4241
+		// Token: 0x040011B3 RID: 4531
 		[Nullable(2)]
 		protected new IHitLogicChangeNextAndLockTargetState_SetValue PocoInterface;
 	}

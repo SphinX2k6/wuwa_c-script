@@ -9,16 +9,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001175 RID: 4469
+// Token: 0x02000629 RID: 1577
 public class BabelTowerMainView : UiViewBase
 {
-	// Token: 0x06007606 RID: 30214 RVA: 0x001877DC File Offset: 0x001859DC
+	// Token: 0x0600499D RID: 18845 RVA: 0x0019038C File Offset: 0x0018E58C
 	[NullableContext(1)]
 	public BabelTowerMainView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06007607 RID: 30215 RVA: 0x001877E8 File Offset: 0x001859E8
+	// Token: 0x0600499E RID: 18846 RVA: 0x00190398 File Offset: 0x0018E598
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 17;
@@ -73,7 +73,7 @@ public class BabelTowerMainView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06007608 RID: 30216 RVA: 0x00187AD0 File Offset: 0x00185CD0
+	// Token: 0x0600499F RID: 18847 RVA: 0x00190680 File Offset: 0x0018E880
 	protected override UniTask OnBeforeStartAsync()
 	{
 		BabelTowerMainView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -84,7 +84,7 @@ public class BabelTowerMainView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007609 RID: 30217 RVA: 0x00187B14 File Offset: 0x00185D14
+	// Token: 0x060049A0 RID: 18848 RVA: 0x001906C4 File Offset: 0x0018E8C4
 	protected override void OnStart()
 	{
 		UUIItem item = base.GetItem(1);
@@ -114,13 +114,13 @@ public class BabelTowerMainView : UiViewBase
 		UiManager.Instance.OpenView(EUiViewName.BabelTowerNewLevelTipsView, newLevel, null);
 	}
 
-	// Token: 0x0600760A RID: 30218 RVA: 0x00187BD8 File Offset: 0x00185DD8
+	// Token: 0x060049A1 RID: 18849 RVA: 0x00190788 File Offset: 0x0018E988
 	protected override void OnBeforeShow()
 	{
 		this.RefreshView();
 	}
 
-	// Token: 0x0600760B RID: 30219 RVA: 0x00187BE0 File Offset: 0x00185DE0
+	// Token: 0x060049A2 RID: 18850 RVA: 0x00190790 File Offset: 0x0018E990
 	protected override void OnBeforeDestroy()
 	{
 		RedDotController.Instance.UnBindGivenUi(ERedDotName.BabelTowerNewLevelDifficulty, base.GetItem(15), 1);
@@ -129,7 +129,7 @@ public class BabelTowerMainView : UiViewBase
 		BabelTowerModel.Instance.CurrentSelectLevel = 0;
 	}
 
-	// Token: 0x0600760C RID: 30220 RVA: 0x00187C40 File Offset: 0x00185E40
+	// Token: 0x060049A3 RID: 18851 RVA: 0x001907F0 File Offset: 0x0018E9F0
 	private void RefreshView()
 	{
 		BabelTowerData babelTowerData = BabelTowerController.Instance.GetBabelTowerData();
@@ -157,7 +157,7 @@ public class BabelTowerMainView : UiViewBase
 		this.RefreshQuestText();
 	}
 
-	// Token: 0x0600760D RID: 30221 RVA: 0x00187D48 File Offset: 0x00185F48
+	// Token: 0x060049A4 RID: 18852 RVA: 0x001908F8 File Offset: 0x0018EAF8
 	private void RefreshQuestText()
 	{
 		ValueTuple<int, int> normalQuestCount = BabelTowerController.Instance.GetBabelTowerData().GetNormalQuestCount();
@@ -176,7 +176,7 @@ public class BabelTowerMainView : UiViewBase
 		text2.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 	}
 
-	// Token: 0x0600760E RID: 30222 RVA: 0x00187DC9 File Offset: 0x00185FC9
+	// Token: 0x060049A5 RID: 18853 RVA: 0x00190979 File Offset: 0x0018EB79
 	private void OnCloseBtnClick()
 	{
 		IBabelTowerMainViewData data = this.Data;
@@ -188,7 +188,7 @@ public class BabelTowerMainView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600760F RID: 30223 RVA: 0x00187DF2 File Offset: 0x00185FF2
+	// Token: 0x060049A6 RID: 18854 RVA: 0x001909A2 File Offset: 0x0018EBA2
 	private void OnClickQuestBtn()
 	{
 		if (!BabelTowerController.Instance.GetBabelTowerData().CheckIfInOpenTime())
@@ -199,78 +199,78 @@ public class BabelTowerMainView : UiViewBase
 		UiManager.Instance.OpenView(EUiViewName.BabelTowerQuestView, null, null);
 	}
 
-	// Token: 0x06007610 RID: 30224 RVA: 0x00187E2B File Offset: 0x0018602B
+	// Token: 0x060049A7 RID: 18855 RVA: 0x001909DB File Offset: 0x0018EBDB
 	private void OnClickNormalBtn()
 	{
 		UiManager.Instance.OpenView(EUiViewName.BabelTowerNormalLevelChoseView, null, null);
 	}
 
-	// Token: 0x06007611 RID: 30225 RVA: 0x00187E3E File Offset: 0x0018603E
+	// Token: 0x060049A8 RID: 18856 RVA: 0x001909EE File Offset: 0x0018EBEE
 	private void OnClickHardBtn()
 	{
 		UiManager.Instance.OpenView(EUiViewName.BabelTowerHardLevelChoseView, null, null);
 	}
 
-	// Token: 0x04003624 RID: 13860
+	// Token: 0x040036BD RID: 14013
 	[Nullable(2)]
 	private IBabelTowerMainViewData Data;
 
-	// Token: 0x04003625 RID: 13861
+	// Token: 0x040036BE RID: 14014
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x02007747 RID: 30535
+	// Token: 0x020068D4 RID: 26836
 	private class EComponentDefine
 	{
-		// Token: 0x0402758A RID: 161162
+		// Token: 0x040228C3 RID: 141507
 		public const int CaptionItem = 0;
 
-		// Token: 0x0402758B RID: 161163
+		// Token: 0x040228C4 RID: 141508
 		public const int ShopBtn = 1;
 
-		// Token: 0x0402758C RID: 161164
+		// Token: 0x040228C5 RID: 141509
 		public const int ShopBtnRedDotItem = 2;
 
-		// Token: 0x0402758D RID: 161165
+		// Token: 0x040228C6 RID: 141510
 		public const int QuestBtn = 3;
 
-		// Token: 0x0402758E RID: 161166
+		// Token: 0x040228C7 RID: 141511
 		public const int QuestRedDotItem = 4;
 
-		// Token: 0x0402758F RID: 161167
+		// Token: 0x040228C8 RID: 141512
 		public const int QuestText1 = 5;
 
-		// Token: 0x04027590 RID: 161168
+		// Token: 0x040228C9 RID: 141513
 		public const int QuestText2 = 6;
 
-		// Token: 0x04027591 RID: 161169
+		// Token: 0x040228CA RID: 141514
 		public const int NewLevelTimeText = 7;
 
-		// Token: 0x04027592 RID: 161170
+		// Token: 0x040228CB RID: 141515
 		public const int NewLevelTimeItem = 8;
 
-		// Token: 0x04027593 RID: 161171
+		// Token: 0x040228CC RID: 141516
 		public const int NormalProgressText = 9;
 
-		// Token: 0x04027594 RID: 161172
+		// Token: 0x040228CD RID: 141517
 		public const int NormalDesText = 10;
 
-		// Token: 0x04027595 RID: 161173
+		// Token: 0x040228CE RID: 141518
 		public const int NormalTipsText = 11;
 
-		// Token: 0x04027596 RID: 161174
+		// Token: 0x040228CF RID: 141519
 		public const int HardStarText = 12;
 
-		// Token: 0x04027597 RID: 161175
+		// Token: 0x040228D0 RID: 141520
 		public const int NormalBtn = 13;
 
-		// Token: 0x04027598 RID: 161176
+		// Token: 0x040228D1 RID: 141521
 		public const int HardBtn = 14;
 
-		// Token: 0x04027599 RID: 161177
+		// Token: 0x040228D2 RID: 141522
 		public const int HardLevelRedDotItem = 15;
 
-		// Token: 0x0402759A RID: 161178
+		// Token: 0x040228D3 RID: 141523
 		public const int NormalLevelRedDotItem = 16;
 	}
 }

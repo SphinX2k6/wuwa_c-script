@@ -4,25 +4,15 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x0200716C RID: 29036
+	// Token: 0x02006220 RID: 25120
 	[NullableContext(1)]
 	[Nullable(0)]
-	public class SceneItemAiInteractionComponent : EntityComponent, IComponentDependency
+	public class SceneItemAiInteractionComponent : EntityComponent
 	{
-		// Token: 0x17009D5F RID: 40287
-		// (get) Token: 0x06046E03 RID: 290307 RVA: 0x011E0D28 File Offset: 0x011DEF28
-		[Nullable(new byte[]
+		// Token: 0x17007212 RID: 29202
+		// (get) Token: 0x0603C657 RID: 247383 RVA: 0x0113C678 File Offset: 0x0113A878
+		public override Type[] Dependencies
 		{
-			2,
-			1
-		})]
-		public static Type[] Dependencies
-		{
-			[return: Nullable(new byte[]
-			{
-				2,
-				1
-			})]
 			get
 			{
 				return new Type[]
@@ -32,7 +22,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046E04 RID: 290308 RVA: 0x011E0D40 File Offset: 0x011DEF40
+		// Token: 0x0603C658 RID: 247384 RVA: 0x0113C690 File Offset: 0x0113A890
 		protected override bool OnStart()
 		{
 			this.LastUsedTime = -2000.0;
@@ -52,28 +42,28 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046E05 RID: 290309 RVA: 0x011E0DDE File Offset: 0x011DEFDE
+		// Token: 0x0603C659 RID: 247385 RVA: 0x0113C72E File Offset: 0x0113A92E
 		protected override bool OnEnd()
 		{
 			AiInteractionItemQueryManager.Get().UnRegisterItem(base.Entity);
 			return true;
 		}
 
-		// Token: 0x06046E06 RID: 290310 RVA: 0x011E0DF2 File Offset: 0x011DEFF2
+		// Token: 0x0603C65A RID: 247386 RVA: 0x0113C742 File Offset: 0x0113A942
 		private void ClearSearchInfo()
 		{
 			this.IsSearchByAi = new bool?(false);
 			this.SearchEntity = null;
 		}
 
-		// Token: 0x06046E07 RID: 290311 RVA: 0x011E0E07 File Offset: 0x011DF007
+		// Token: 0x0603C65B RID: 247387 RVA: 0x0113C757 File Offset: 0x0113A957
 		public void OnEntityDead()
 		{
 			EventSystem.Instance.RemoveWithTarget(this.SearchEntity, EEventName.CharOnRoleDeadTargetSelf, this.OnEntityDeadEvent);
 			this.ClearSearchInfo();
 		}
 
-		// Token: 0x06046E08 RID: 290312 RVA: 0x011E0E2B File Offset: 0x011DF02B
+		// Token: 0x0603C65C RID: 247388 RVA: 0x0113C77B File Offset: 0x0113A97B
 		public void SetSearched(Entity searchEntity)
 		{
 			if (this.IsSearchByAi.GetValueOrDefault())
@@ -85,7 +75,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			EventSystem.Instance.AddWithTarget(searchEntity, EEventName.CharOnRoleDeadTargetSelf, this.OnEntityDeadEvent);
 		}
 
-		// Token: 0x06046E09 RID: 290313 RVA: 0x011E0E65 File Offset: 0x011DF065
+		// Token: 0x0603C65D RID: 247389 RVA: 0x0113C7B5 File Offset: 0x0113A9B5
 		public void SetUnSearched()
 		{
 			if (!this.IsSearchByAi.GetValueOrDefault())
@@ -95,14 +85,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.OnEntityDead();
 		}
 
-		// Token: 0x06046E0A RID: 290314 RVA: 0x011E0E7B File Offset: 0x011DF07B
+		// Token: 0x0603C65E RID: 247390 RVA: 0x0113C7CB File Offset: 0x0113A9CB
 		public void OnLastUsed()
 		{
 			this.SetUnSearched();
 			this.LastUsedTime = Time.Instance.WorldTime;
 		}
 
-		// Token: 0x06046E0B RID: 290315 RVA: 0x011E0E93 File Offset: 0x011DF093
+		// Token: 0x0603C65F RID: 247391 RVA: 0x0113C7E3 File Offset: 0x0113A9E3
 		public bool CanBeUsed()
 		{
 			if (this.MoveComp != null)
@@ -112,7 +102,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return Time.Instance.WorldTime - this.LastUsedTime > 2000.0;
 		}
 
-		// Token: 0x06046E0C RID: 290316 RVA: 0x011E0ED0 File Offset: 0x011DF0D0
+		// Token: 0x0603C660 RID: 247392 RVA: 0x0113C820 File Offset: 0x0113AA20
 		public bool HiddenItem(bool bHidden)
 		{
 			if (bHidden != (this.EnableHandler.GetValueOrDefault() != -1))
@@ -131,18 +121,18 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return false;
 		}
 
-		// Token: 0x06046E0D RID: 290317 RVA: 0x011E0F3C File Offset: 0x011DF13C
+		// Token: 0x0603C661 RID: 247393 RVA: 0x0113C88C File Offset: 0x0113AA8C
 		public void ItemAttachEntity(Entity entity)
 		{
 		}
 
-		// Token: 0x06046E0E RID: 290318 RVA: 0x011E0F3E File Offset: 0x011DF13E
+		// Token: 0x0603C662 RID: 247394 RVA: 0x0113C88E File Offset: 0x0113AA8E
 		public bool IsSearchByOther(int entityId)
 		{
 			return this.IsSearchByAi.GetValueOrDefault() && this.SearchEntity.Id != entityId;
 		}
 
-		// Token: 0x06046E0F RID: 290319 RVA: 0x011E0F60 File Offset: 0x011DF160
+		// Token: 0x0603C663 RID: 247395 RVA: 0x0113C8B0 File Offset: 0x0113AAB0
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -150,82 +140,81 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemAiInteractionComponent sceneItemAiInteractionComponent = (SceneItemAiInteractionComponent)componentTemplate;
-			if (base.CanResetComponentProperty("IsSearchByAi"))
+			this.IsSearchByAi = sceneItemAiInteractionComponent.IsSearchByAi;
+			if (sceneItemAiInteractionComponent.SearchEntity == null)
 			{
-				this.IsSearchByAi = sceneItemAiInteractionComponent.IsSearchByAi;
+				this.SearchEntity = null;
 			}
-			if (base.CanResetComponentProperty("SearchEntity"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SearchEntity), "SearchEntity"))
 			{
-				if (sceneItemAiInteractionComponent.SearchEntity == null)
-				{
-					this.SearchEntity = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Entity>(this.SearchEntity), "SearchEntity"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("IsUsingByAi"))
+			this.IsUsingByAi = sceneItemAiInteractionComponent.IsUsingByAi;
+			this.LastUsedTime = sceneItemAiInteractionComponent.LastUsedTime;
+			this.EnableHandler = sceneItemAiInteractionComponent.EnableHandler;
+			if (sceneItemAiInteractionComponent.MoveComp == null)
 			{
-				this.IsUsingByAi = sceneItemAiInteractionComponent.IsUsingByAi;
+				this.MoveComp = null;
 			}
-			if (base.CanResetComponentProperty("LastUsedTime"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
 			{
-				this.LastUsedTime = sceneItemAiInteractionComponent.LastUsedTime;
+				return false;
 			}
-			if (base.CanResetComponentProperty("EnableHandler"))
+			if (sceneItemAiInteractionComponent.OnEntityDeadEvent == null)
 			{
-				this.EnableHandler = sceneItemAiInteractionComponent.EnableHandler;
+				this.OnEntityDeadEvent = null;
 			}
-			if (base.CanResetComponentProperty("MoveComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OnEntityDeadEvent), "OnEntityDeadEvent"))
 			{
-				if (sceneItemAiInteractionComponent.MoveComp == null)
-				{
-					this.MoveComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AiWeaponMovementComponent>(this.MoveComp), "MoveComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("OnEntityDeadEvent"))
-			{
-				if (sceneItemAiInteractionComponent.OnEntityDeadEvent == null)
-				{
-					this.OnEntityDeadEvent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Action>(this.OnEntityDeadEvent), "OnEntityDeadEvent"))
-				{
-					return false;
-				}
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x04025346 RID: 152390
+		// Token: 0x17007213 RID: 29203
+		// (get) Token: 0x0603C664 RID: 247396 RVA: 0x0113C981 File Offset: 0x0113AB81
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007214 RID: 29204
+		// (get) Token: 0x0603C665 RID: 247397 RVA: 0x0113C984 File Offset: 0x0113AB84
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FFAD RID: 130989
 		private const int AI_USED_COLD_DOWN = 2000;
 
-		// Token: 0x04025347 RID: 152391
+		// Token: 0x0401FFAE RID: 130990
 		public bool? IsSearchByAi;
 
-		// Token: 0x04025348 RID: 152392
+		// Token: 0x0401FFAF RID: 130991
 		[Nullable(2)]
 		public Entity SearchEntity;
 
-		// Token: 0x04025349 RID: 152393
+		// Token: 0x0401FFB0 RID: 130992
 		public bool? IsUsingByAi;
 
-		// Token: 0x0402534A RID: 152394
+		// Token: 0x0401FFB1 RID: 130993
 		public double LastUsedTime = -2000.0;
 
-		// Token: 0x0402534B RID: 152395
+		// Token: 0x0401FFB2 RID: 130994
 		public int? EnableHandler;
 
-		// Token: 0x0402534C RID: 152396
+		// Token: 0x0401FFB3 RID: 130995
 		[Nullable(2)]
 		public AiWeaponMovementComponent MoveComp;
 
-		// Token: 0x0402534D RID: 152397
+		// Token: 0x0401FFB4 RID: 130996
 		[Nullable(2)]
 		public Action OnEntityDeadEvent;
 	}

@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02000F55 RID: 3925
+// Token: 0x0200040A RID: 1034
 [NullableContext(1)]
 [Nullable(0)]
 public class DrinksBubblePanel : UiPanelBase
 {
-	// Token: 0x0600646B RID: 25707 RVA: 0x0013D80C File Offset: 0x0013BA0C
+	// Token: 0x06003803 RID: 14339 RVA: 0x001460A8 File Offset: 0x001442A8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -22,7 +22,7 @@ public class DrinksBubblePanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600646C RID: 25708 RVA: 0x0013D868 File Offset: 0x0013BA68
+	// Token: 0x06003804 RID: 14340 RVA: 0x00146104 File Offset: 0x00144304
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DrinksBubblePanel.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -33,7 +33,7 @@ public class DrinksBubblePanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600646D RID: 25709 RVA: 0x0013D8AB File Offset: 0x0013BAAB
+	// Token: 0x06003805 RID: 14341 RVA: 0x00146147 File Offset: 0x00144347
 	protected override void OnBeforeShow()
 	{
 		this.Bubble1.SetUiActive(false);
@@ -41,7 +41,7 @@ public class DrinksBubblePanel : UiPanelBase
 		this.Bubble3.SetUiActive(false);
 	}
 
-	// Token: 0x0600646E RID: 25710 RVA: 0x0013D8D4 File Offset: 0x0013BAD4
+	// Token: 0x06003806 RID: 14342 RVA: 0x00146170 File Offset: 0x00144370
 	public void UpdateState(bool isEnd)
 	{
 		EDrinksPlayStep curStep = DrinksModel.Instance.GetCurStep();
@@ -95,7 +95,7 @@ public class DrinksBubblePanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600646F RID: 25711 RVA: 0x0013DA71 File Offset: 0x0013BC71
+	// Token: 0x06003807 RID: 14343 RVA: 0x0014630D File Offset: 0x0014450D
 	public void HideBubble()
 	{
 		this.Bubble1.SetIsVisible(false, false);
@@ -103,26 +103,26 @@ public class DrinksBubblePanel : UiPanelBase
 		this.Bubble3.SetIsVisible(false, false);
 	}
 
-	// Token: 0x04002D99 RID: 11673
+	// Token: 0x04002E32 RID: 11826
 	protected DrinksBubbleItem Bubble1;
 
-	// Token: 0x04002D9A RID: 11674
+	// Token: 0x04002E33 RID: 11827
 	protected DrinksBubbleItem Bubble2;
 
-	// Token: 0x04002D9B RID: 11675
+	// Token: 0x04002E34 RID: 11828
 	protected DrinksBubbleItem Bubble3;
 
-	// Token: 0x0200759F RID: 30111
+	// Token: 0x02006733 RID: 26419
 	[NullableContext(0)]
 	private static class EItem
 	{
-		// Token: 0x04026E23 RID: 159267
+		// Token: 0x0402216E RID: 139630
 		public const int Bubble1 = 0;
 
-		// Token: 0x04026E24 RID: 159268
+		// Token: 0x0402216F RID: 139631
 		public const int Bubble2 = 1;
 
-		// Token: 0x04026E25 RID: 159269
+		// Token: 0x04022170 RID: 139632
 		public const int Bubble3 = 2;
 	}
 }

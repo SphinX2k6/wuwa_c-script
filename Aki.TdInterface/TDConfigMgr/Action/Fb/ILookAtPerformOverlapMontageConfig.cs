@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A64 RID: 10852
+	// Token: 0x02002D58 RID: 11608
 	public class ILookAtPerformOverlapMontageConfig
 	{
-		// Token: 0x0600EEB1 RID: 61105 RVA: 0x0022BACA File Offset: 0x00229CCA
-		[NullableContext(1)]
+		// Token: 0x0600FD67 RID: 64871 RVA: 0x002497D6 File Offset: 0x002479D6
 		public static ILookAtPerformOverlapMontageConfig Create(ILookAtPerformOverlapMontageConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004BAB RID: 19371
-		// (get) Token: 0x0600EEB2 RID: 61106 RVA: 0x0022BAEC File Offset: 0x00229CEC
+		// Token: 0x17004F65 RID: 20325
+		// (get) Token: 0x0600FD68 RID: 64872 RVA: 0x002497F8 File Offset: 0x002479F8
 		public virtual float? OverlapMontageLoopDuration
 		{
 			get
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004BAC RID: 19372
-		// (get) Token: 0x0600EEB3 RID: 61107 RVA: 0x0022BB24 File Offset: 0x00229D24
+		// Token: 0x17004F66 RID: 20326
+		// (get) Token: 0x0600FD69 RID: 64873 RVA: 0x00249830 File Offset: 0x00247A30
 		public virtual int? OverlapMontageRepeatTimes
 		{
 			get
@@ -49,7 +47,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400834E RID: 33614
+		// Token: 0x04008A52 RID: 35410
 		private ILookAtPerformOverlapMontageConfig Instance;
 	}
 }

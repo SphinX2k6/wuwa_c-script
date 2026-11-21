@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020073A7 RID: 29607
+	// Token: 0x02007B8E RID: 31630
 	public class ITeleportTransitionType_UnionUnion
 	{
-		// Token: 0x1700E0C2 RID: 57538
-		// (get) Token: 0x06035BE5 RID: 220133 RVA: 0x00750D51 File Offset: 0x0074EF51
-		// (set) Token: 0x06035BE6 RID: 220134 RVA: 0x00750D59 File Offset: 0x0074EF59
+		// Token: 0x1700ECD2 RID: 60626
+		// (get) Token: 0x06038F80 RID: 233344 RVA: 0x007B3291 File Offset: 0x007B1491
+		// (set) Token: 0x06038F81 RID: 233345 RVA: 0x007B3299 File Offset: 0x007B1499
 		public ITeleportTransitionType_Union Type { get; set; }
 
-		// Token: 0x1700E0C3 RID: 57539
-		// (get) Token: 0x06035BE7 RID: 220135 RVA: 0x00750D62 File Offset: 0x0074EF62
-		// (set) Token: 0x06035BE8 RID: 220136 RVA: 0x00750D6A File Offset: 0x0074EF6A
+		// Token: 0x1700ECD3 RID: 60627
+		// (get) Token: 0x06038F82 RID: 233346 RVA: 0x007B32A2 File Offset: 0x007B14A2
+		// (set) Token: 0x06038F83 RID: 233347 RVA: 0x007B32AA File Offset: 0x007B14AA
 		public object Value { get; set; }
 
-		// Token: 0x06035BE9 RID: 220137 RVA: 0x00750D73 File Offset: 0x0074EF73
+		// Token: 0x06038F84 RID: 233348 RVA: 0x007B32B3 File Offset: 0x007B14B3
 		public ITeleportTransitionType_UnionUnion()
 		{
 			this.Type = ITeleportTransitionType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06035BEA RID: 220138 RVA: 0x00750D89 File Offset: 0x0074EF89
+		// Token: 0x06038F85 RID: 233349 RVA: 0x007B32C9 File Offset: 0x007B14C9
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06035BEB RID: 220139 RVA: 0x00750D9B File Offset: 0x0074EF9B
+		// Token: 0x06038F86 RID: 233350 RVA: 0x007B32DB File Offset: 0x007B14DB
 		public ITeleportTransitionTypeT AsITeleportTransitionType()
 		{
 			return this.As<ITeleportTransitionTypeT>();
 		}
 
-		// Token: 0x06035BEC RID: 220140 RVA: 0x00750DA3 File Offset: 0x0074EFA3
+		// Token: 0x06038F87 RID: 233351 RVA: 0x007B32E3 File Offset: 0x007B14E3
 		public static ITeleportTransitionType_UnionUnion FromITeleportTransitionType(ITeleportTransitionTypeT _iteleporttransitiontype)
 		{
 			return new ITeleportTransitionType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06035BED RID: 220141 RVA: 0x00750DB8 File Offset: 0x0074EFB8
+		// Token: 0x06038F88 RID: 233352 RVA: 0x007B32F8 File Offset: 0x007B14F8
 		public ITeleportTransitionWithMp4T AsITeleportTransitionWithMp4()
 		{
 			return this.As<ITeleportTransitionWithMp4T>();
 		}
 
-		// Token: 0x06035BEE RID: 220142 RVA: 0x00750DC0 File Offset: 0x0074EFC0
+		// Token: 0x06038F89 RID: 233353 RVA: 0x007B3300 File Offset: 0x007B1500
 		public static ITeleportTransitionType_UnionUnion FromITeleportTransitionWithMp4(ITeleportTransitionWithMp4T _iteleporttransitionwithmp4)
 		{
 			return new ITeleportTransitionType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06035BEF RID: 220143 RVA: 0x00750DD5 File Offset: 0x0074EFD5
+		// Token: 0x06038F8A RID: 233354 RVA: 0x007B3315 File Offset: 0x007B1515
 		public ITeleportTransitionWithEffectT AsITeleportTransitionWithEffect()
 		{
 			return this.As<ITeleportTransitionWithEffectT>();
 		}
 
-		// Token: 0x06035BF0 RID: 220144 RVA: 0x00750DDD File Offset: 0x0074EFDD
+		// Token: 0x06038F8B RID: 233355 RVA: 0x007B331D File Offset: 0x007B151D
 		public static ITeleportTransitionType_UnionUnion FromITeleportTransitionWithEffect(ITeleportTransitionWithEffectT _iteleporttransitionwitheffect)
 		{
 			return new ITeleportTransitionType_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06035BF1 RID: 220145 RVA: 0x00750DF2 File Offset: 0x0074EFF2
+		// Token: 0x06038F8C RID: 233356 RVA: 0x007B3332 File Offset: 0x007B1532
 		public ITeleportTransitionWithCenterTextT AsITeleportTransitionWithCenterText()
 		{
 			return this.As<ITeleportTransitionWithCenterTextT>();
 		}
 
-		// Token: 0x06035BF2 RID: 220146 RVA: 0x00750DFA File Offset: 0x0074EFFA
+		// Token: 0x06038F8D RID: 233357 RVA: 0x007B333A File Offset: 0x007B153A
 		public static ITeleportTransitionType_UnionUnion FromITeleportTransitionWithCenterText(ITeleportTransitionWithCenterTextT _iteleporttransitionwithcentertext)
 		{
 			return new ITeleportTransitionType_UnionUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06035BF3 RID: 220147 RVA: 0x00750E0F File Offset: 0x0074F00F
+		// Token: 0x06038F8E RID: 233358 RVA: 0x007B334F File Offset: 0x007B154F
 		public ITeleportTransitionWithFadeInScreenT AsITeleportTransitionWithFadeInScreen()
 		{
 			return this.As<ITeleportTransitionWithFadeInScreenT>();
 		}
 
-		// Token: 0x06035BF4 RID: 220148 RVA: 0x00750E17 File Offset: 0x0074F017
+		// Token: 0x06038F8F RID: 233359 RVA: 0x007B3357 File Offset: 0x007B1557
 		public static ITeleportTransitionType_UnionUnion FromITeleportTransitionWithFadeInScreen(ITeleportTransitionWithFadeInScreenT _iteleporttransitionwithfadeinscreen)
 		{
 			return new ITeleportTransitionType_UnionUnion
@@ -109,13 +109,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06035BF5 RID: 220149 RVA: 0x00750E2C File Offset: 0x0074F02C
+		// Token: 0x06038F90 RID: 233360 RVA: 0x007B336C File Offset: 0x007B156C
 		public ITeleportTransitionInDigitalScreenT AsITeleportTransitionInDigitalScreen()
 		{
 			return this.As<ITeleportTransitionInDigitalScreenT>();
 		}
 
-		// Token: 0x06035BF6 RID: 220150 RVA: 0x00750E34 File Offset: 0x0074F034
+		// Token: 0x06038F91 RID: 233361 RVA: 0x007B3374 File Offset: 0x007B1574
 		public static ITeleportTransitionType_UnionUnion FromITeleportTransitionInDigitalScreen(ITeleportTransitionInDigitalScreenT _iteleporttransitionindigitalscreen)
 		{
 			return new ITeleportTransitionType_UnionUnion
@@ -125,13 +125,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06035BF7 RID: 220151 RVA: 0x00750E49 File Offset: 0x0074F049
+		// Token: 0x06038F92 RID: 233362 RVA: 0x007B3389 File Offset: 0x007B1589
 		public ITeleportTransitionWithCustomLoadingT AsITeleportTransitionWithCustomLoading()
 		{
 			return this.As<ITeleportTransitionWithCustomLoadingT>();
 		}
 
-		// Token: 0x06035BF8 RID: 220152 RVA: 0x00750E51 File Offset: 0x0074F051
+		// Token: 0x06038F93 RID: 233363 RVA: 0x007B3391 File Offset: 0x007B1591
 		public static ITeleportTransitionType_UnionUnion FromITeleportTransitionWithCustomLoading(ITeleportTransitionWithCustomLoadingT _iteleporttransitionwithcustomloading)
 		{
 			return new ITeleportTransitionType_UnionUnion
@@ -141,13 +141,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06035BF9 RID: 220153 RVA: 0x00750E66 File Offset: 0x0074F066
+		// Token: 0x06038F94 RID: 233364 RVA: 0x007B33A6 File Offset: 0x007B15A6
 		public ITeleportTransitionWithSpecialCustomLoadingT AsITeleportTransitionWithSpecialCustomLoading()
 		{
 			return this.As<ITeleportTransitionWithSpecialCustomLoadingT>();
 		}
 
-		// Token: 0x06035BFA RID: 220154 RVA: 0x00750E6E File Offset: 0x0074F06E
+		// Token: 0x06038F95 RID: 233365 RVA: 0x007B33AE File Offset: 0x007B15AE
 		public static ITeleportTransitionType_UnionUnion FromITeleportTransitionWithSpecialCustomLoading(ITeleportTransitionWithSpecialCustomLoadingT _iteleporttransitionwithspecialcustomloading)
 		{
 			return new ITeleportTransitionType_UnionUnion
@@ -157,13 +157,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06035BFB RID: 220155 RVA: 0x00750E83 File Offset: 0x0074F083
+		// Token: 0x06038F96 RID: 233366 RVA: 0x007B33C3 File Offset: 0x007B15C3
 		public ITeleportTransitionWithPlayFlowT AsITeleportTransitionWithPlayFlow()
 		{
 			return this.As<ITeleportTransitionWithPlayFlowT>();
 		}
 
-		// Token: 0x06035BFC RID: 220156 RVA: 0x00750E8B File Offset: 0x0074F08B
+		// Token: 0x06038F97 RID: 233367 RVA: 0x007B33CB File Offset: 0x007B15CB
 		public static ITeleportTransitionType_UnionUnion FromITeleportTransitionWithPlayFlow(ITeleportTransitionWithPlayFlowT _iteleporttransitionwithplayflow)
 		{
 			return new ITeleportTransitionType_UnionUnion
@@ -173,13 +173,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06035BFD RID: 220157 RVA: 0x00750EA1 File Offset: 0x0074F0A1
+		// Token: 0x06038F98 RID: 233368 RVA: 0x007B33E1 File Offset: 0x007B15E1
 		public ITeleportTransitionWithCustomScreenT AsITeleportTransitionWithCustomScreen()
 		{
 			return this.As<ITeleportTransitionWithCustomScreenT>();
 		}
 
-		// Token: 0x06035BFE RID: 220158 RVA: 0x00750EA9 File Offset: 0x0074F0A9
+		// Token: 0x06038F99 RID: 233369 RVA: 0x007B33E9 File Offset: 0x007B15E9
 		public static ITeleportTransitionType_UnionUnion FromITeleportTransitionWithCustomScreen(ITeleportTransitionWithCustomScreenT _iteleporttransitionwithcustomscreen)
 		{
 			return new ITeleportTransitionType_UnionUnion
@@ -189,13 +189,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06035BFF RID: 220159 RVA: 0x00750EBF File Offset: 0x0074F0BF
+		// Token: 0x06038F9A RID: 233370 RVA: 0x007B33FF File Offset: 0x007B15FF
 		public ITeleportTransitionInSeamlessTypeT AsITeleportTransitionInSeamlessType()
 		{
 			return this.As<ITeleportTransitionInSeamlessTypeT>();
 		}
 
-		// Token: 0x06035C00 RID: 220160 RVA: 0x00750EC7 File Offset: 0x0074F0C7
+		// Token: 0x06038F9B RID: 233371 RVA: 0x007B3407 File Offset: 0x007B1607
 		public static ITeleportTransitionType_UnionUnion FromITeleportTransitionInSeamlessType(ITeleportTransitionInSeamlessTypeT _iteleporttransitioninseamlesstype)
 		{
 			return new ITeleportTransitionType_UnionUnion
@@ -205,13 +205,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06035C01 RID: 220161 RVA: 0x00750EDD File Offset: 0x0074F0DD
+		// Token: 0x06038F9C RID: 233372 RVA: 0x007B341D File Offset: 0x007B161D
 		public ITeleportTransitionWithCharacterDisplayT AsITeleportTransitionWithCharacterDisplay()
 		{
 			return this.As<ITeleportTransitionWithCharacterDisplayT>();
 		}
 
-		// Token: 0x06035C02 RID: 220162 RVA: 0x00750EE5 File Offset: 0x0074F0E5
+		// Token: 0x06038F9D RID: 233373 RVA: 0x007B3425 File Offset: 0x007B1625
 		public static ITeleportTransitionType_UnionUnion FromITeleportTransitionWithCharacterDisplay(ITeleportTransitionWithCharacterDisplayT _iteleporttransitionwithcharacterdisplay)
 		{
 			return new ITeleportTransitionType_UnionUnion
@@ -221,7 +221,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06035C03 RID: 220163 RVA: 0x00750EFC File Offset: 0x0074F0FC
+		// Token: 0x06038F9E RID: 233374 RVA: 0x007B343C File Offset: 0x007B163C
 		public static int Pack(FlatBufferBuilder builder, ITeleportTransitionType_UnionUnion _o)
 		{
 			switch (_o.Type)

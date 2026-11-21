@@ -5,16 +5,16 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.LevelGamePlay.RollBlock.States
 {
-	// Token: 0x02006AAC RID: 27308
+	// Token: 0x02005C09 RID: 23561
 	public class RbIdleState : RbBaseMoveState
 	{
-		// Token: 0x06043D80 RID: 277888 RVA: 0x0109F986 File Offset: 0x0109DB86
+		// Token: 0x06039DD6 RID: 237014 RVA: 0x0104408F File Offset: 0x0104228F
 		[NullableContext(1)]
 		public RbIdleState(RbBlockComponent owner) : base(owner)
 		{
 		}
 
-		// Token: 0x06043D81 RID: 277889 RVA: 0x0109F990 File Offset: 0x0109DB90
+		// Token: 0x06039DD7 RID: 237015 RVA: 0x01044098 File Offset: 0x01042298
 		public override void Enter([Nullable(new byte[]
 		{
 			0,
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.LevelGamePlay.RollBlock.States
 			this.IsFinishedInternal = true;
 		}
 
-		// Token: 0x0402374C RID: 145228
+		// Token: 0x0401E93E RID: 125246
 		[Nullable(2)]
 		public RbBlockIdlePbState Info;
 	}

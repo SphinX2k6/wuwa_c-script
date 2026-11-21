@@ -22,6 +22,7 @@ using CSharpScript.Game.LevelGamePlay.ItemInspect;
 using CSharpScript.Game.LevelGamePlay.LevelEffect;
 using CSharpScript.Game.LevelGamePlay.LifePoint;
 using CSharpScript.Game.LevelGamePlay.Parkour;
+using CSharpScript.Game.LevelGamePlay.PianoGameplay;
 using CSharpScript.Game.LevelGamePlay.ProjectPuzzle;
 using CSharpScript.Game.LevelGamePlay.ResetPlayer;
 using CSharpScript.Game.LevelGamePlay.SeekTrace;
@@ -50,6 +51,8 @@ using CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip;
 using CSharpScript.Game.Module.Activity.ActivityContent.Roverlike;
 using CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed;
 using CSharpScript.Game.Module.Activity.ActivityContent.SpringManor;
+using CSharpScript.Game.Module.ActivityAction;
+using CSharpScript.Game.Module.ActivityCondition;
 using CSharpScript.Game.Module.ActorFxEmote;
 using CSharpScript.Game.Module.AiInteraction.AiWeapon;
 using CSharpScript.Game.Module.Area;
@@ -113,12 +116,14 @@ using CSharpScript.Game.Module.Sheriff;
 using CSharpScript.Game.Module.SkillButtonUi;
 using CSharpScript.Game.Module.SkipInterface;
 using CSharpScript.Game.Module.SlidingBlocks;
+using CSharpScript.Game.Module.SolarSchool;
 using CSharpScript.Game.Module.SubLevelLoading;
 using CSharpScript.Game.Module.Teleport;
 using CSharpScript.Game.Module.TowerDefenseEvent.Model;
 using CSharpScript.Game.Module.TrainingDegree;
 using CSharpScript.Game.Module.TrapDefense;
 using CSharpScript.Game.Module.TreasureHunt;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Module.UiComponent.UiHomeButton;
 using CSharpScript.Game.Module.VehicleStream;
 using CSharpScript.Game.Module.VillageInfr;
@@ -142,13 +147,19 @@ using CSharpScript.Game.World.Model;
 using CSharpScript.Module.InstanceDungeon;
 using CSharpScript.Utils;
 
-// Token: 0x02003561 RID: 13665
+// Token: 0x02002AD6 RID: 10966
 public class ModelRegister
 {
-	// Token: 0x0601DFD0 RID: 122832 RVA: 0x008709C0 File Offset: 0x0086EBC0
+	// Token: 0x0601BCF8 RID: 113912 RVA: 0x00898724 File Offset: 0x00896924
 	public static bool CreateInstance()
 	{
 		ModelRegister.Models.Clear();
+		if (!FloroRanchModel.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::FloroRanchModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ModelRegister.Models.Add(FloroRanchModel.Instance);
 		if (!QuestNewModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::QuestNewModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -161,6 +172,12 @@ public class ModelRegister
 			return false;
 		}
 		ModelRegister.Models.Add(AiModel.Instance);
+		if (!QuestReviewModel.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::QuestReviewModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ModelRegister.Models.Add(QuestReviewModel.Instance);
 		if (!QuestResourceModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::QuestResourceModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -203,18 +220,18 @@ public class ModelRegister
 			return false;
 		}
 		ModelRegister.Models.Add(SequenceModel.Instance);
-		if (!QuestReviewModel.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::QuestReviewModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ModelRegister.Models.Add(QuestReviewModel.Instance);
 		if (!PlotModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Plot.PlotModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ModelRegister.Models.Add(PlotModel.Instance);
+		if (!PlotAudioModel.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Plot.PlotAudioModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ModelRegister.Models.Add(PlotAudioModel.Instance);
 		if (!PlayerInfoModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::PlayerInfoModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -257,18 +274,6 @@ public class ModelRegister
 			return false;
 		}
 		ModelRegister.Models.Add(PhoneMsgModel.Instance);
-		if (!PhantomInteractModel.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::PhantomInteractModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ModelRegister.Models.Add(PhantomInteractModel.Instance);
-		if (!PlotAudioModel.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Plot.PlotAudioModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ModelRegister.Models.Add(PlotAudioModel.Instance);
 		if (!QuestTreeModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::QuestTreeModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -287,6 +292,18 @@ public class ModelRegister
 			return false;
 		}
 		ModelRegister.Models.Add(QtaModel.Instance);
+		if (!RacingBetsModel.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.RacingBets.RacingBetsModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ModelRegister.Models.Add(RacingBetsModel.Instance);
+		if (!RouletteModel.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::RouletteModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ModelRegister.Models.Add(RouletteModel.Instance);
 		if (!TrialRoleModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::TrialRoleModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -323,24 +340,30 @@ public class ModelRegister
 			return false;
 		}
 		ModelRegister.Models.Add(MainRoleModel.Instance);
+		if (!RoleTowerModel.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::RoleTowerModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ModelRegister.Models.Add(RoleTowerModel.Instance);
 		if (!RoleSelectModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::RoleSelectModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ModelRegister.Models.Add(RoleSelectModel.Instance);
+		if (!PhantomInteractModel.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::PhantomInteractModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ModelRegister.Models.Add(PhantomInteractModel.Instance);
 		if (!RoleLangCustomModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.RoleLangCustomModel.RoleLangCustomModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ModelRegister.Models.Add(RoleLangCustomModel.Instance);
-		if (!RoguelikeModel.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::RoguelikeModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ModelRegister.Models.Add(RoguelikeModel.Instance);
 		if (!RogueBattleModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.RogueBattle.RogueBattleModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -395,36 +418,36 @@ public class ModelRegister
 			return false;
 		}
 		ModelRegister.Models.Add(RandomPlotModel.Instance);
-		if (!RacingBetsModel.CreateInstance())
+		if (!RoguelikeModel.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.RacingBets.RacingBetsModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::RoguelikeModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ModelRegister.Models.Add(RacingBetsModel.Instance);
+		ModelRegister.Models.Add(RoguelikeModel.Instance);
 		if (!VisionRecommendModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::VisionRecommendModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ModelRegister.Models.Add(VisionRecommendModel.Instance);
-		if (!RouletteModel.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::RouletteModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ModelRegister.Models.Add(RouletteModel.Instance);
 		if (!VisionEquipGroupModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::VisionEquipGroupModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ModelRegister.Models.Add(VisionEquipGroupModel.Instance);
-		if (!PhantomArenaModel.CreateInstance())
+		if (!PhantomBattleModel.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.PhantomArena.PhantomArenaModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::PhantomBattleModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ModelRegister.Models.Add(PhantomArenaModel.Instance);
+		ModelRegister.Models.Add(PhantomBattleModel.Instance);
+		if (!MoraleModel.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::MoraleModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ModelRegister.Models.Add(MoraleModel.Instance);
 		if (!MonsterGroupPatrolModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.MonsterGroup.MonsterGroupPatrolModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -473,18 +496,18 @@ public class ModelRegister
 			return false;
 		}
 		ModelRegister.Models.Add(MapModel.Instance);
-		if (!MoraleModel.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::MoraleModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ModelRegister.Models.Add(MoraleModel.Instance);
 		if (!MapRogueModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.MapRogue.MapRogueModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ModelRegister.Models.Add(MapRogueModel.Instance);
+		if (!MapExploreToolModel.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::MapExploreToolModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ModelRegister.Models.Add(MapExploreToolModel.Instance);
 		if (!ForgingModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Manufacture.Forging.ForgingModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -533,30 +556,36 @@ public class ModelRegister
 			return false;
 		}
 		ModelRegister.Models.Add(LoginServerModel.Instance);
-		if (!MapExploreToolModel.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::MapExploreToolModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ModelRegister.Models.Add(MapExploreToolModel.Instance);
 		if (!MotionModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::MotionModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ModelRegister.Models.Add(MotionModel.Instance);
+		if (!SceneBattleInteractModel.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::SceneBattleInteractModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ModelRegister.Models.Add(SceneBattleInteractModel.Instance);
 		if (!MotorcycleDevelopModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::MotorcycleDevelopModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ModelRegister.Models.Add(MotorcycleDevelopModel.Instance);
-		if (!MotorcycleDiyModel.CreateInstance())
+		if (!MotorcycleMusicPlayerModel.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::MotorcycleDiyModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::MotorcycleMusicPlayerModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ModelRegister.Models.Add(MotorcycleDiyModel.Instance);
+		ModelRegister.Models.Add(MotorcycleMusicPlayerModel.Instance);
+		if (!PhantomArenaModel.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.PhantomArena.PhantomArenaModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ModelRegister.Models.Add(PhantomArenaModel.Instance);
 		if (!PhantomArenaBattleModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.PhantomArena.Battle.Model.PhantomArenaBattleModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -665,36 +694,30 @@ public class ModelRegister
 			return false;
 		}
 		ModelRegister.Models.Add(AvoidanceModel.Instance);
-		if (!MotorcycleMusicPlayerModel.CreateInstance())
+		if (!MotorcycleDiyModel.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::MotorcycleMusicPlayerModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::MotorcycleDiyModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ModelRegister.Models.Add(MotorcycleMusicPlayerModel.Instance);
-		if (!PhantomBattleModel.CreateInstance())
+		ModelRegister.Models.Add(MotorcycleDiyModel.Instance);
+		if (!LoginModel.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::PhantomBattleModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::LoginModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ModelRegister.Models.Add(PhantomBattleModel.Instance);
-		if (!SceneBattleInteractModel.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::SceneBattleInteractModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ModelRegister.Models.Add(SceneBattleInteractModel.Instance);
+		ModelRegister.Models.Add(LoginModel.Instance);
 		if (!SceneTeamModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::SceneTeamModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ModelRegister.Models.Add(SceneTeamModel.Instance);
-		if (!ScoreModel.CreateInstance())
+		if (!SeamlessTravelModel.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ScoreModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.SeamlessTravel.SeamlessTravelModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ModelRegister.Models.Add(ScoreModel.Instance);
+		ModelRegister.Models.Add(SeamlessTravelModel.Instance);
 		if (!SceneItemBuffModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.NewWorld.SceneItem.Model.SceneItemBuffModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -743,18 +766,18 @@ public class ModelRegister
 			return false;
 		}
 		ModelRegister.Models.Add(NpcVehicleRiderModel.Instance);
-		if (!SceneItemConnectorModel.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.NewWorld.SceneItem.Model.SceneItemConnectorModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ModelRegister.Models.Add(SceneItemConnectorModel.Instance);
 		if (!NpcConfigModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::NpcConfigModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ModelRegister.Models.Add(NpcConfigModel.Instance);
+		if (!PerformModel.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::PerformModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ModelRegister.Models.Add(PerformModel.Instance);
 		if (!CharacterExploreModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.NewWorld.Character.Common.Component.Explore.CharacterExploreModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -803,24 +826,30 @@ public class ModelRegister
 			return false;
 		}
 		ModelRegister.Models.Add(WuWaGoModel.Instance);
-		if (!PerformModel.CreateInstance())
+		if (!WorldMapModel.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::PerformModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.WorldMap.WorldMapModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ModelRegister.Models.Add(PerformModel.Instance);
+		ModelRegister.Models.Add(WorldMapModel.Instance);
+		if (!SceneItemConnectorModel.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.NewWorld.SceneItem.Model.SceneItemConnectorModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ModelRegister.Models.Add(SceneItemConnectorModel.Instance);
+		if (!RegionalTerminalModel.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.WorldMap.RegionalTerminal.RegionalTerminalModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ModelRegister.Models.Add(RegionalTerminalModel.Instance);
 		if (!ShootTargetModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.NewWorld.SceneItem.Model.ShootTargetModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ModelRegister.Models.Add(ShootTargetModel.Instance);
-		if (!VisionCaptureModel.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.NewWorld.SceneItem.Model.VisionCaptureModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ModelRegister.Models.Add(VisionCaptureModel.Instance);
 		if (!SceneItemStreamingTriggerModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.NewWorld.SceneItem.StreamingTrigger.SceneItemStreamingTriggerModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -941,18 +970,12 @@ public class ModelRegister
 			return false;
 		}
 		ModelRegister.Models.Add(TriggerVolumeModel.Instance);
-		if (!WorldMapModel.CreateInstance())
+		if (!VisionCaptureModel.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.WorldMap.WorldMapModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.NewWorld.SceneItem.Model.VisionCaptureModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ModelRegister.Models.Add(WorldMapModel.Instance);
-		if (!RegionalTerminalModel.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.WorldMap.RegionalTerminal.RegionalTerminalModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ModelRegister.Models.Add(RegionalTerminalModel.Instance);
+		ModelRegister.Models.Add(VisionCaptureModel.Instance);
 		if (!WorldLevelModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::WorldLevelModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -965,12 +988,12 @@ public class ModelRegister
 			return false;
 		}
 		ModelRegister.Models.Add(WeeklyRogueModel.Instance);
-		if (!SubLevelLoadingModel.CreateInstance())
+		if (!WeeklyChallengeModel.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.SubLevelLoading.SubLevelLoadingModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::WeeklyChallengeModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ModelRegister.Models.Add(SubLevelLoadingModel.Instance);
+		ModelRegister.Models.Add(WeeklyChallengeModel.Instance);
 		if (!SpecialTransitionModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::SpecialTransitionModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -983,6 +1006,18 @@ public class ModelRegister
 			return false;
 		}
 		ModelRegister.Models.Add(SoundAreaPlayTipsModel.Instance);
+		if (!SolarSchoolModel.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.SolarSchool.SolarSchoolModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ModelRegister.Models.Add(SolarSchoolModel.Instance);
+		if (!SolarSchoolGamePlayModel.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.SolarSchool.SolarSchoolGamePlayModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ModelRegister.Models.Add(SolarSchoolGamePlayModel.Instance);
 		if (!SlidingBlocksModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.SlidingBlocks.SlidingBlocksModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -1073,42 +1108,30 @@ public class ModelRegister
 			return false;
 		}
 		ModelRegister.Models.Add(SeasonModel.Instance);
-		if (!SeamlessTravelModel.CreateInstance())
+		if (!SubLevelLoadingModel.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.SeamlessTravel.SeamlessTravelModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.SubLevelLoading.SubLevelLoadingModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ModelRegister.Models.Add(SeamlessTravelModel.Instance);
+		ModelRegister.Models.Add(SubLevelLoadingModel.Instance);
 		if (!SubPackageDownLoadModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::SubPackageDownLoadModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ModelRegister.Models.Add(SubPackageDownLoadModel.Instance);
-		if (!LoginModel.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::LoginModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ModelRegister.Models.Add(LoginModel.Instance);
 		if (!SundryModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::SundryModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ModelRegister.Models.Add(SundryModel.Instance);
-		if (!TeleportModel.CreateInstance())
+		if (!SurvivorsRogueModel.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Teleport.TeleportModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::SurvivorsRogueModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ModelRegister.Models.Add(TeleportModel.Instance);
-		if (!WeeklyChallengeModel.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::WeeklyChallengeModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ModelRegister.Models.Add(WeeklyChallengeModel.Instance);
+		ModelRegister.Models.Add(SurvivorsRogueModel.Instance);
 		if (!WeatherModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Weather.WeatherModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -1157,18 +1180,24 @@ public class ModelRegister
 			return false;
 		}
 		ModelRegister.Models.Add(HomeBtnModel.Instance);
+		if (!UiCameraModel.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.UiCamera.UiCameraModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ModelRegister.Models.Add(UiCameraModel.Instance);
+		if (!ScoreModel.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ScoreModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ModelRegister.Models.Add(ScoreModel.Instance);
 		if (!TutorialModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::TutorialModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ModelRegister.Models.Add(TutorialModel.Instance);
-		if (!TreasureHuntModel.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.TreasureHunt.TreasureHuntModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ModelRegister.Models.Add(TreasureHuntModel.Instance);
 		if (!TrapDefenseModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.TrapDefense.TrapDefenseModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -1217,12 +1246,18 @@ public class ModelRegister
 			return false;
 		}
 		ModelRegister.Models.Add(TimeOfDayModel.Instance);
-		if (!SurvivorsRogueModel.CreateInstance())
+		if (!TeleportModel.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::SurvivorsRogueModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Teleport.TeleportModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ModelRegister.Models.Add(SurvivorsRogueModel.Instance);
+		ModelRegister.Models.Add(TeleportModel.Instance);
+		if (!TreasureHuntModel.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.TreasureHunt.TreasureHuntModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ModelRegister.Models.Add(TreasureHuntModel.Instance);
 		if (!LoadingModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::LoadingModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -1241,18 +1276,6 @@ public class ModelRegister
 			return false;
 		}
 		ModelRegister.Models.Add(LevelPlayModel.Instance);
-		if (!LineCrossModel.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Activity.ActivityContent.LineCross.LineCrossModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ModelRegister.Models.Add(LineCrossModel.Instance);
-		if (!LifePointDrawModel.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::LifePointDrawModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ModelRegister.Models.Add(LifePointDrawModel.Instance);
 		if (!InviteNewbieModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::InviteNewbieModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -1289,18 +1312,18 @@ public class ModelRegister
 			return false;
 		}
 		ModelRegister.Models.Add(FightPhotoModel.Instance);
-		if (!MoonChasingBuildingModel.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::MoonChasingBuildingModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ModelRegister.Models.Add(MoonChasingBuildingModel.Instance);
 		if (!DropCatchModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.DropCatchModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ModelRegister.Models.Add(DropCatchModel.Instance);
+		if (!DirectTrainModel.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActivity.DirectTrainModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ModelRegister.Models.Add(DirectTrainModel.Instance);
 		if (!ActivityDirectTrainModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.ActivityDirectTrainModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -1349,42 +1372,48 @@ public class ModelRegister
 			return false;
 		}
 		ModelRegister.Models.Add(AdvanceNoticeModel.Instance);
-		if (!DirectTrainModel.CreateInstance())
+		if (!ActivityRecommendModel.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Activity.ActivityContent.DirectTrain.MainActivity.DirectTrainModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ActivityRecommendModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ModelRegister.Models.Add(DirectTrainModel.Instance);
+		ModelRegister.Models.Add(ActivityRecommendModel.Instance);
+		if (!RhythmGameModel.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::RhythmGameModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ModelRegister.Models.Add(RhythmGameModel.Instance);
+		if (!GuessJokerGamePlayModel.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::GuessJokerGamePlayModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ModelRegister.Models.Add(GuessJokerGamePlayModel.Instance);
+		if (!LifePointDrawModel.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::LifePointDrawModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ModelRegister.Models.Add(LifePointDrawModel.Instance);
+		if (!FurnitureModel.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::FurnitureModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ModelRegister.Models.Add(FurnitureModel.Instance);
+		if (!LineCrossModel.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Activity.ActivityContent.LineCross.LineCrossModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ModelRegister.Models.Add(LineCrossModel.Instance);
 		if (!MoonChasingBusinessModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::MoonChasingBusinessModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ModelRegister.Models.Add(MoonChasingBusinessModel.Instance);
-		if (!MoonChasingModel.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::MoonChasingModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ModelRegister.Models.Add(MoonChasingModel.Instance);
-		if (!MoonChasingRewardModel.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::MoonChasingRewardModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ModelRegister.Models.Add(MoonChasingRewardModel.Instance);
-		if (!WheelTowerModel.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::WheelTowerModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ModelRegister.Models.Add(WheelTowerModel.Instance);
-		if (!VersionPreheatModel.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::VersionPreheatModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ModelRegister.Models.Add(VersionPreheatModel.Instance);
 		if (!SpringManorModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Activity.ActivityContent.SpringManor.SpringManorModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -1487,30 +1516,42 @@ public class ModelRegister
 			return false;
 		}
 		ModelRegister.Models.Add(MoonChasingTaskModel.Instance);
-		if (!ActivityRecommendModel.CreateInstance())
+		if (!MoonChasingRewardModel.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ActivityRecommendModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::MoonChasingRewardModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ModelRegister.Models.Add(ActivityRecommendModel.Instance);
-		if (!RhythmGameModel.CreateInstance())
+		ModelRegister.Models.Add(MoonChasingRewardModel.Instance);
+		if (!MoonChasingModel.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::RhythmGameModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::MoonChasingModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ModelRegister.Models.Add(RhythmGameModel.Instance);
-		if (!GuessJokerGamePlayModel.CreateInstance())
+		ModelRegister.Models.Add(MoonChasingModel.Instance);
+		if (!MoonChasingBuildingModel.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::GuessJokerGamePlayModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::MoonChasingBuildingModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ModelRegister.Models.Add(GuessJokerGamePlayModel.Instance);
-		if (!FurnitureModel.CreateInstance())
+		ModelRegister.Models.Add(MoonChasingBuildingModel.Instance);
+		if (!VersionPreheatModel.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::FurnitureModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::VersionPreheatModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ModelRegister.Models.Add(FurnitureModel.Instance);
+		ModelRegister.Models.Add(VersionPreheatModel.Instance);
+		if (!DrinksModel.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::DrinksModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ModelRegister.Models.Add(DrinksModel.Instance);
+		if (!ActivityActionModel.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.ActivityAction.ActivityActionModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ModelRegister.Models.Add(ActivityActionModel.Instance);
 		if (!GravityFlipModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.LevelGamePlay.GravityFlip.GravityFlipModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -1631,12 +1672,12 @@ public class ModelRegister
 			return false;
 		}
 		ModelRegister.Models.Add(QteHourglassModel.Instance);
-		if (!ActivityModel.CreateInstance())
+		if (!ActivityConditionModel.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ActivityModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.ActivityCondition.ActivityConditionModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ModelRegister.Models.Add(ActivityModel.Instance);
+		ModelRegister.Models.Add(ActivityConditionModel.Instance);
 		if (!ItemInspectModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.LevelGamePlay.ItemInspect.ItemInspectModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -1649,12 +1690,6 @@ public class ModelRegister
 			return false;
 		}
 		ModelRegister.Models.Add(LevelGamePlayModel.Instance);
-		if (!DrinksModel.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::DrinksModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ModelRegister.Models.Add(DrinksModel.Instance);
 		if (!AchievementModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::AchievementModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -1745,6 +1780,12 @@ public class ModelRegister
 			return false;
 		}
 		ModelRegister.Models.Add(ProjectorModel.Instance);
+		if (!PianoGameplayModel.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.LevelGamePlay.PianoGameplay.PianoGameplayModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ModelRegister.Models.Add(PianoGameplayModel.Instance);
 		if (!ParkourModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.LevelGamePlay.Parkour.ParkourModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -1769,24 +1810,30 @@ public class ModelRegister
 			return false;
 		}
 		ModelRegister.Models.Add(LevelEffectModel.Instance);
-		if (!WorldDebugModel.CreateInstance())
+		if (!WheelTowerModel.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.World.Model.WorldDebugModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::WheelTowerModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ModelRegister.Models.Add(WorldDebugModel.Instance);
+		ModelRegister.Models.Add(WheelTowerModel.Instance);
+		if (!ActivityModel.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ActivityModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ModelRegister.Models.Add(ActivityModel.Instance);
 		if (!ActorFxEmoteModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.ActorFxEmote.ActorFxEmoteModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ModelRegister.Models.Add(ActorFxEmoteModel.Instance);
-		if (!AdviceModel.CreateInstance())
+		if (!HonamiStoryModel.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::AdviceModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::HonamiStoryModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ModelRegister.Models.Add(AdviceModel.Instance);
+		ModelRegister.Models.Add(HonamiStoryModel.Instance);
 		if (!HoldingHandsModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::HoldingHandsModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -1835,18 +1882,18 @@ public class ModelRegister
 			return false;
 		}
 		ModelRegister.Models.Add(GamePingModel.Instance);
-		if (!HonamiStoryModel.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::HonamiStoryModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ModelRegister.Models.Add(HonamiStoryModel.Instance);
 		if (!GachaModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::GachaModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ModelRegister.Models.Add(GachaModel.Instance);
+		if (!GachaAccumulateModel.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::GachaAccumulateModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ModelRegister.Models.Add(GachaAccumulateModel.Instance);
 		if (!LevelFuncFlagModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::LevelFuncFlagModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -1889,36 +1936,36 @@ public class ModelRegister
 			return false;
 		}
 		ModelRegister.Models.Add(BattleTeamModel.Instance);
-		if (!FloroRanchModel.CreateInstance())
+		if (!FloroRanchGamePlayModel.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::FloroRanchModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::FloroRanchGamePlayModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ModelRegister.Models.Add(FloroRanchModel.Instance);
-		if (!GachaAccumulateModel.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::GachaAccumulateModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ModelRegister.Models.Add(GachaAccumulateModel.Instance);
+		ModelRegister.Models.Add(FloroRanchGamePlayModel.Instance);
 		if (!IdlePerformModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::IdlePerformModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ModelRegister.Models.Add(IdlePerformModel.Instance);
+		if (!FlagChallengeModel.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.FlagChallenge.FlagChallengeModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ModelRegister.Models.Add(FlagChallengeModel.Instance);
 		if (!InfluenceModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::InfluenceModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ModelRegister.Models.Add(InfluenceModel.Instance);
-		if (!InfluenceReputationModel.CreateInstance())
+		if (!InfoDisplayModel.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::InfluenceReputationModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::InfoDisplayModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ModelRegister.Models.Add(InfluenceReputationModel.Instance);
+		ModelRegister.Models.Add(InfoDisplayModel.Instance);
 		if (!LevelPlayReportModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::LevelPlayReportModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -1979,6 +2026,12 @@ public class ModelRegister
 			return false;
 		}
 		ModelRegister.Models.Add(ItemDeliverModel.Instance);
+		if (!ItemUseLogicModel.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ItemUseLogicModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ModelRegister.Models.Add(ItemUseLogicModel.Instance);
 		if (!InventoryModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::InventoryModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -2027,24 +2080,12 @@ public class ModelRegister
 			return false;
 		}
 		ModelRegister.Models.Add(InfrastructureModel.Instance);
-		if (!InfoDisplayModel.CreateInstance())
+		if (!InfluenceReputationModel.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::InfoDisplayModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::InfluenceReputationModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ModelRegister.Models.Add(InfoDisplayModel.Instance);
-		if (!FloroRanchGamePlayModel.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::FloroRanchGamePlayModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ModelRegister.Models.Add(FloroRanchGamePlayModel.Instance);
-		if (!FlagChallengeModel.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.FlagChallenge.FlagChallengeModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ModelRegister.Models.Add(FlagChallengeModel.Instance);
+		ModelRegister.Models.Add(InfluenceReputationModel.Instance);
 		if (!FeedbackRewardModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::FeedbackRewardModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -2057,18 +2098,12 @@ public class ModelRegister
 			return false;
 		}
 		ModelRegister.Models.Add(ExploreProgressModel.Instance);
-		if (!BossPilingModel.CreateInstance())
+		if (!ExploreLevelModel.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.BossPiling.BossPilingModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ExploreLevelModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ModelRegister.Models.Add(BossPilingModel.Instance);
-		if (!BirthdayModel.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::BirthdayModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ModelRegister.Models.Add(BirthdayModel.Instance);
+		ModelRegister.Models.Add(ExploreLevelModel.Instance);
 		if (!SkillCdModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.Battle.SkillCdModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -2171,36 +2206,42 @@ public class ModelRegister
 			return false;
 		}
 		ModelRegister.Models.Add(AiWeaponModel.Instance);
-		if (!BuffItemModel.CreateInstance())
+		if (!AdviceModel.CreateInstance())
 		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::BuffItemModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::AdviceModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		ModelRegister.Models.Add(BuffItemModel.Instance);
+		ModelRegister.Models.Add(AdviceModel.Instance);
 		if (!AdventureGuideModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::AdventureGuideModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ModelRegister.Models.Add(AdventureGuideModel.Instance);
+		if (!BirthdayModel.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::BirthdayModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ModelRegister.Models.Add(BirthdayModel.Instance);
+		if (!BossPilingModel.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.BossPiling.BossPilingModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ModelRegister.Models.Add(BossPilingModel.Instance);
+		if (!BuffItemModel.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::BuffItemModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ModelRegister.Models.Add(BuffItemModel.Instance);
 		if (!BuildingGridModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::BuildingGridModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ModelRegister.Models.Add(BuildingGridModel.Instance);
-		if (!ChannelModel.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ChannelModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ModelRegister.Models.Add(ChannelModel.Instance);
-		if (!ExploreLevelModel.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ExploreLevelModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ModelRegister.Models.Add(ExploreLevelModel.Instance);
 		if (!EffectSaveModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.Module.EffectSave.EffectSaveModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -2255,18 +2296,18 @@ public class ModelRegister
 			return false;
 		}
 		ModelRegister.Models.Add(ConfirmBoxModel.Instance);
+		if (!WorldDebugModel.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CSharpScript.Game.World.Model.WorldDebugModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ModelRegister.Models.Add(WorldDebugModel.Instance);
 		if (!SmallItemGridModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::SmallItemGridModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ModelRegister.Models.Add(SmallItemGridModel.Instance);
-		if (!MediumItemGridModel.CreateInstance())
-		{
-			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::MediumItemGridModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
-			return false;
-		}
-		ModelRegister.Models.Add(MediumItemGridModel.Instance);
 		if (!ItemTipsModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ItemTipsModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -2309,12 +2350,24 @@ public class ModelRegister
 			return false;
 		}
 		ModelRegister.Models.Add(ChatModel.Instance);
+		if (!ChannelModel.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::ChannelModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ModelRegister.Models.Add(ChannelModel.Instance);
 		if (!CalabashModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::CalabashModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		ModelRegister.Models.Add(CalabashModel.Instance);
+		if (!MediumItemGridModel.CreateInstance())
+		{
+			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::MediumItemGridModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
+			return false;
+		}
+		ModelRegister.Models.Add(MediumItemGridModel.Instance);
 		if (!WorldModel.CreateInstance())
 		{
 			Log.Instance.Error(ELogModule.Config, ELogAuthor.LRX, "global::WorldModel 创建模块单例失败", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -2324,7 +2377,7 @@ public class ModelRegister
 		return true;
 	}
 
-	// Token: 0x0601DFD1 RID: 122833 RVA: 0x00875360 File Offset: 0x00873560
+	// Token: 0x0601BCF9 RID: 113913 RVA: 0x0089D264 File Offset: 0x0089B464
 	public static bool Init()
 	{
 		for (int i = 0; i < ModelRegister.Models.Count; i++)
@@ -2339,7 +2392,7 @@ public class ModelRegister
 		return true;
 	}
 
-	// Token: 0x0601DFD2 RID: 122834 RVA: 0x008753C8 File Offset: 0x008735C8
+	// Token: 0x0601BCFA RID: 113914 RVA: 0x0089D2CC File Offset: 0x0089B4CC
 	public static bool Clear()
 	{
 		bool result = true;
@@ -2368,7 +2421,7 @@ public class ModelRegister
 		return result;
 	}
 
-	// Token: 0x0601DFD3 RID: 122835 RVA: 0x0087548C File Offset: 0x0087368C
+	// Token: 0x0601BCFB RID: 113915 RVA: 0x0089D390 File Offset: 0x0089B590
 	public static bool LeaveLevel()
 	{
 		bool result = true;
@@ -2397,7 +2450,7 @@ public class ModelRegister
 		return result;
 	}
 
-	// Token: 0x0601DFD4 RID: 122836 RVA: 0x00875550 File Offset: 0x00873750
+	// Token: 0x0601BCFC RID: 113916 RVA: 0x0089D454 File Offset: 0x0089B654
 	public static bool ChangeMode()
 	{
 		bool result = true;
@@ -2426,6 +2479,6 @@ public class ModelRegister
 		return result;
 	}
 
-	// Token: 0x0400ECF1 RID: 60657
-	private static List<ModelBase> Models = new List<ModelBase>(362);
+	// Token: 0x0400F1B1 RID: 61873
+	private static List<ModelBase> Models = new List<ModelBase>(370);
 }

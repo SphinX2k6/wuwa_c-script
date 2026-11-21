@@ -3,50 +3,50 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02002A90 RID: 10896
+// Token: 0x0200200C RID: 8204
 [NullableContext(2)]
 [Nullable(0)]
 [Config(0)]
 public class SubPackageConfig : ConfigBase
 {
-	// Token: 0x06016AE8 RID: 92904 RVA: 0x005BEB3C File Offset: 0x005BCD3C
+	// Token: 0x0601450D RID: 83213 RVA: 0x005EAD24 File Offset: 0x005E8F24
 	public DownLoadSubPackage? GetDownLoadSubPackageById(int id)
 	{
 		return ConfigDownLoadSubPackageById.GetConfig(id, true);
 	}
 
-	// Token: 0x06016AE9 RID: 92905 RVA: 0x005BEB45 File Offset: 0x005BCD45
+	// Token: 0x0601450E RID: 83214 RVA: 0x005EAD2D File Offset: 0x005E8F2D
 	public DownLoadVersion? GetDownLoadVersionByVersion(int version)
 	{
 		return ConfigDownLoadVersionByVersion.GetConfig(version, true);
 	}
 
-	// Token: 0x06016AEA RID: 92906 RVA: 0x005BEB4E File Offset: 0x005BCD4E
+	// Token: 0x0601450F RID: 83215 RVA: 0x005EAD36 File Offset: 0x005E8F36
 	public IReadOnlyList<DownLoadVersion> GetDownLoadVersionByType(int type)
 	{
 		return ConfigDownLoadVersionByType.GetConfigList(type, true);
 	}
 
-	// Token: 0x06016AEB RID: 92907 RVA: 0x005BEB57 File Offset: 0x005BCD57
+	// Token: 0x06014510 RID: 83216 RVA: 0x005EAD3F File Offset: 0x005E8F3F
 	public IReadOnlyList<DownLoadSubPackage> GetDownLoadSubPackageList()
 	{
 		return ConfigDownLoadSubPackageAll.GetConfigList(true);
 	}
 
-	// Token: 0x06016AEC RID: 92908 RVA: 0x005BEB5F File Offset: 0x005BCD5F
+	// Token: 0x06014511 RID: 83217 RVA: 0x005EAD47 File Offset: 0x005E8F47
 	public IReadOnlyList<DownLoadSubPackage> GetDownLoadSubPackageListByVersion(int versionId)
 	{
 		return ConfigDownLoadSubPackageByVersion.GetConfigList(versionId, true);
 	}
 
-	// Token: 0x06016AED RID: 92909 RVA: 0x005BEB68 File Offset: 0x005BCD68
+	// Token: 0x06014512 RID: 83218 RVA: 0x005EAD50 File Offset: 0x005E8F50
 	public IReadOnlyList<VideoData> GetVideoDataByBranch(int branch)
 	{
 		return ConfigVideoDataByBelongBranch.GetConfigList(branch, true);
 	}
 
-	// Token: 0x17001E37 RID: 7735
-	// (get) Token: 0x06016AEE RID: 92910 RVA: 0x005BEB71 File Offset: 0x005BCD71
+	// Token: 0x17001E8F RID: 7823
+	// (get) Token: 0x06014513 RID: 83219 RVA: 0x005EAD59 File Offset: 0x005E8F59
 	[Nullable(1)]
 	public static SubPackageConfig Instance
 	{
@@ -57,7 +57,7 @@ public class SubPackageConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x06016AEF RID: 92911 RVA: 0x005BEB78 File Offset: 0x005BCD78
+	// Token: 0x06014514 RID: 83220 RVA: 0x005EAD60 File Offset: 0x005E8F60
 	[NullableContext(1)]
 	public static SubPackageConfig GetOrCreateInstance()
 	{
@@ -68,7 +68,7 @@ public class SubPackageConfig : ConfigBase
 		return SubPackageConfig._Instance;
 	}
 
-	// Token: 0x06016AF0 RID: 92912 RVA: 0x005BEB8C File Offset: 0x005BCD8C
+	// Token: 0x06014515 RID: 83221 RVA: 0x005EAD74 File Offset: 0x005E8F74
 	public static bool CreateInstance()
 	{
 		if (SubPackageConfig._Instance != null)
@@ -79,23 +79,23 @@ public class SubPackageConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x06016AF1 RID: 92913 RVA: 0x005BEBA2 File Offset: 0x005BCDA2
+	// Token: 0x06014516 RID: 83222 RVA: 0x005EAD8A File Offset: 0x005E8F8A
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06016AF2 RID: 92914 RVA: 0x005BEBA4 File Offset: 0x005BCDA4
+	// Token: 0x06014517 RID: 83223 RVA: 0x005EAD8C File Offset: 0x005E8F8C
 	public static void ResetStaticDefaultValue()
 	{
 		SubPackageConfig._Instance = null;
 	}
 
-	// Token: 0x06016AF3 RID: 92915 RVA: 0x005BEBAC File Offset: 0x005BCDAC
+	// Token: 0x06014518 RID: 83224 RVA: 0x005EAD94 File Offset: 0x005E8F94
 	static SubPackageConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(SubPackageConfig.CreateStaticDefaultValue), new Action(SubPackageConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400A855 RID: 43093
+	// Token: 0x0400AC5A RID: 44122
 	private static SubPackageConfig _Instance;
 }

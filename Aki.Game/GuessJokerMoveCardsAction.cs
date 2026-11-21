@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001021 RID: 4129
+// Token: 0x020004D5 RID: 1237
 [NullableContext(1)]
 [Nullable(0)]
 public class GuessJokerMoveCardsAction : GuessJokerActionBase
 {
-	// Token: 0x06006A10 RID: 27152 RVA: 0x001543F0 File Offset: 0x001525F0
+	// Token: 0x06003DA5 RID: 15781 RVA: 0x0015CD18 File Offset: 0x0015AF18
 	public GuessJokerMoveCardsAction(int[] cardIdList, ECardPositionType toPosition)
 	{
 		this.CardIdList.AddRange(cardIdList);
 		this.TargetPosition = toPosition;
 	}
 
-	// Token: 0x06006A11 RID: 27153 RVA: 0x00154418 File Offset: 0x00152618
+	// Token: 0x06003DA6 RID: 15782 RVA: 0x0015CD40 File Offset: 0x0015AF40
 	protected override void OnStart()
 	{
 		GuessJokerGamePlayView gamePlayView = GuessJokerGamePlayModel.Instance.GetGamePlayView();
@@ -66,9 +66,9 @@ public class GuessJokerMoveCardsAction : GuessJokerActionBase
 		});
 	}
 
-	// Token: 0x040030E0 RID: 12512
+	// Token: 0x04003179 RID: 12665
 	private readonly List<int> CardIdList = new List<int>();
 
-	// Token: 0x040030E1 RID: 12513
+	// Token: 0x0400317A RID: 12666
 	private readonly ECardPositionType TargetPosition;
 }

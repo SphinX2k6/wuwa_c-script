@@ -5,7 +5,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x02006072 RID: 24690
+	// Token: 0x02004FF0 RID: 20464
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -14,7 +14,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 	})]
 	public class SpringManorRoleGridItem : LoopScrollMediumItemGrid<RoleDataBase>
 	{
-		// Token: 0x0603E70C RID: 255756 RVA: 0x00F15C90 File Offset: 0x00F13E90
+		// Token: 0x060333D0 RID: 209872 RVA: 0x00E5CA54 File Offset: 0x00E5AC54
 		protected override void OnRefresh(RoleDataBase roleDataBase, bool isSelected, int gridIndex)
 		{
 			int dataId = roleDataBase.GetDataId();
@@ -43,13 +43,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.SetToggleState(isSelected, false, true);
 		}
 
-		// Token: 0x0603E70D RID: 255757 RVA: 0x00F15D7D File Offset: 0x00F13F7D
+		// Token: 0x060333D1 RID: 209873 RVA: 0x00E5CB41 File Offset: 0x00E5AD41
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetToggleState(false, false, false);
 		}
 
-		// Token: 0x0603E70E RID: 255758 RVA: 0x00F15D88 File Offset: 0x00F13F88
+		// Token: 0x060333D2 RID: 209874 RVA: 0x00E5CB4C File Offset: 0x00E5AD4C
 		public void SetToggleState(bool select, bool fireEvent, bool skipAnim = false)
 		{
 			UUIExtendToggle itemGridExtendToggle = this.GetItemGridExtendToggle();
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			itemGridExtendToggle.SetToggleStateForce(select ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, fireEvent, false, skipAnim);
 		}
 
-		// Token: 0x04020A4B RID: 133707
+		// Token: 0x0401B378 RID: 111480
 		private int RoleId;
 	}
 }

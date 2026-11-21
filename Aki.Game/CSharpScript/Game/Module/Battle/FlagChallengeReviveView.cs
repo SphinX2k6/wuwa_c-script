@@ -10,16 +10,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Battle
 {
-	// Token: 0x02005C3F RID: 23615
+	// Token: 0x02004C1F RID: 19487
 	public class FlagChallengeReviveView : UiTickViewBase
 	{
-		// Token: 0x0603BA80 RID: 244352 RVA: 0x00E3C8C3 File Offset: 0x00E3AAC3
+		// Token: 0x060309CB RID: 199115 RVA: 0x00D8CC33 File Offset: 0x00D8AE33
 		[NullableContext(1)]
 		public FlagChallengeReviveView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603BA81 RID: 244353 RVA: 0x00E3C8CC File Offset: 0x00E3AACC
+		// Token: 0x060309CC RID: 199116 RVA: 0x00D8CC3C File Offset: 0x00D8AE3C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 13;
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603BA82 RID: 244354 RVA: 0x00E3CB08 File Offset: 0x00E3AD08
+		// Token: 0x060309CD RID: 199117 RVA: 0x00D8CE78 File Offset: 0x00D8B078
 		protected override void OnStart()
 		{
 			this.IsAutoRevived = false;
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.Battle
 			base.GetButton(3).RootUIComp.Get().SetUIActive(true);
 		}
 
-		// Token: 0x0603BA83 RID: 244355 RVA: 0x00E3CC35 File Offset: 0x00E3AE35
+		// Token: 0x060309CE RID: 199118 RVA: 0x00D8CFA5 File Offset: 0x00D8B1A5
 		protected override void OnTick(float delta)
 		{
 			if (this.IsAutoRevived)
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BA84 RID: 244356 RVA: 0x00E3CC6C File Offset: 0x00E3AE6C
+		// Token: 0x060309CF RID: 199119 RVA: 0x00D8CFDC File Offset: 0x00D8B1DC
 		protected override void OnBeforeDestroy()
 		{
 			TrainingView trainingView = this.TrainingView;
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.Battle
 			DeadReviveModel.Instance.ClearExternalHandles();
 		}
 
-		// Token: 0x0603BA85 RID: 244357 RVA: 0x00E3CCC0 File Offset: 0x00E3AEC0
+		// Token: 0x060309D0 RID: 199120 RVA: 0x00D8D030 File Offset: 0x00D8B230
 		private void AutoReviveOnTick()
 		{
 			if (this.IsAutoRevived)
@@ -133,14 +133,14 @@ namespace CSharpScript.Game.Module.Battle
 			LguiUtil.Instance.SetLocalText(this.AutoReviveCountDown, "ReviveItemTips", new <>z__ReadOnlySingleElementList<object>(this.AutoReviveCountDownTime));
 		}
 
-		// Token: 0x0603BA86 RID: 244358 RVA: 0x00E3CD28 File Offset: 0x00E3AF28
+		// Token: 0x060309D1 RID: 199121 RVA: 0x00D8D098 File Offset: 0x00D8B298
 		private void OnClickRevive()
 		{
 			DeadReviveController.Instance.ReviveRequest(false, null, new int?(0));
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603BA87 RID: 244359 RVA: 0x00E3CD44 File Offset: 0x00E3AF44
+		// Token: 0x060309D2 RID: 199122 RVA: 0x00D8D0B4 File Offset: 0x00D8B2B4
 		private void OnClickGiveUp()
 		{
 			int activityId = FlagChallengeBattleModel.Instance.ActivityId;
@@ -150,57 +150,57 @@ namespace CSharpScript.Game.Module.Battle
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0401F0E7 RID: 127207
+		// Token: 0x04019B98 RID: 105368
 		private const float TIME_SECOND = 1000f;
 
-		// Token: 0x0401F0E8 RID: 127208
+		// Token: 0x04019B99 RID: 105369
 		private const float AUTO_REVIVE_TIME = 60f;
 
-		// Token: 0x0401F0E9 RID: 127209
+		// Token: 0x04019B9A RID: 105370
 		private float TimeCount;
 
-		// Token: 0x0401F0EA RID: 127210
+		// Token: 0x04019B9B RID: 105371
 		private bool IsAutoRevived;
 
-		// Token: 0x0401F0EB RID: 127211
+		// Token: 0x04019B9C RID: 105372
 		private float AutoReviveCountDownTime;
 
-		// Token: 0x0401F0EC RID: 127212
+		// Token: 0x04019B9D RID: 105373
 		[Nullable(2)]
 		private UUIText AutoReviveCountDown;
 
-		// Token: 0x0401F0ED RID: 127213
+		// Token: 0x04019B9E RID: 105374
 		[Nullable(2)]
 		private TrainingView TrainingView;
 
-		// Token: 0x0200BE34 RID: 48692
+		// Token: 0x0200A83C RID: 43068
 		private enum EComponentType
 		{
-			// Token: 0x040395B5 RID: 234933
+			// Token: 0x04033F78 RID: 212856
 			Revive,
-			// Token: 0x040395B6 RID: 234934
+			// Token: 0x04033F79 RID: 212857
 			Fail,
-			// Token: 0x040395B7 RID: 234935
+			// Token: 0x04033F7A RID: 212858
 			ReviveBtn,
-			// Token: 0x040395B8 RID: 234936
+			// Token: 0x04033F7B RID: 212859
 			GiveUpBtn,
-			// Token: 0x040395B9 RID: 234937
+			// Token: 0x04033F7C RID: 212860
 			WaitTime,
-			// Token: 0x040395BA RID: 234938
+			// Token: 0x04033F7D RID: 212861
 			ReviveTitle,
-			// Token: 0x040395BB RID: 234939
+			// Token: 0x04033F7E RID: 212862
 			ReviveContent,
-			// Token: 0x040395BC RID: 234940
+			// Token: 0x04033F7F RID: 212863
 			RoleTrainingLayout,
-			// Token: 0x040395BD RID: 234941
+			// Token: 0x04033F80 RID: 212864
 			ReviveAtLocationBtn,
-			// Token: 0x040395BE RID: 234942
+			// Token: 0x04033F81 RID: 212865
 			AutoReviveCountDownText,
-			// Token: 0x040395BF RID: 234943
+			// Token: 0x04033F82 RID: 212866
 			ItemTexture,
-			// Token: 0x040395C0 RID: 234944
+			// Token: 0x04033F83 RID: 212867
 			ItemText,
-			// Token: 0x040395C1 RID: 234945
+			// Token: 0x04033F84 RID: 212868
 			GiveUpBtnText
 		}
 	}

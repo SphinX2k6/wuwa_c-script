@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FFC RID: 8188
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002243 RID: 8771
 	public class ITriggeredEntity : ITargetEntityType
 	{
-		// Token: 0x0600B414 RID: 46100 RVA: 0x001A2E88 File Offset: 0x001A1088
+		// Token: 0x0600BF2A RID: 48938 RVA: 0x001B93F4 File Offset: 0x001B75F4
 		private ITriggeredEntity_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B415 RID: 46101 RVA: 0x001A2EC0 File Offset: 0x001A10C0
+		// Token: 0x0600BF2B RID: 48939 RVA: 0x001B942C File Offset: 0x001B762C
 		public static ITriggeredEntity Create([Nullable(2)] ITriggeredEntity instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B416 RID: 46102 RVA: 0x001A2ED3 File Offset: 0x001A10D3
+		// Token: 0x0600BF2C RID: 48940 RVA: 0x001B943F File Offset: 0x001B763F
 		public static ITriggeredEntity CreateFromSetValue([Nullable(2)] ITriggeredEntity_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B417 RID: 46103 RVA: 0x001A2EE6 File Offset: 0x001A10E6
+		// Token: 0x0600BF2D RID: 48941 RVA: 0x001B9452 File Offset: 0x001B7652
 		public new ITriggeredEntity_SetValue ToSetValue()
 		{
 			return new ITriggeredEntity_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003768 RID: 14184
-		// (get) Token: 0x0600B418 RID: 46104 RVA: 0x001A2EF9 File Offset: 0x001A10F9
-		// (set) Token: 0x0600B419 RID: 46105 RVA: 0x001A2F24 File Offset: 0x001A1124
+		// Token: 0x17003A40 RID: 14912
+		// (get) Token: 0x0600BF2E RID: 48942 RVA: 0x001B9465 File Offset: 0x001B7665
+		// (set) Token: 0x0600BF2F RID: 48943 RVA: 0x001B9490 File Offset: 0x001B7690
 		public override ETargetEntityType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006C91 RID: 27793
+		// Token: 0x04007293 RID: 29331
 		[Nullable(2)]
 		protected new ITriggeredEntity FbInstance;
 
-		// Token: 0x04006C92 RID: 27794
+		// Token: 0x04007294 RID: 29332
 		[Nullable(2)]
 		protected new ITriggeredEntity_SetValue PocoInterface;
 	}

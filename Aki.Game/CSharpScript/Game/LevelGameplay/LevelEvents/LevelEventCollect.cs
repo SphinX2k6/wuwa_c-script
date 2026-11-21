@@ -8,15 +8,15 @@ using CSharpScript.Game.Module.Common;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B0B RID: 27403
+	// Token: 0x02005C83 RID: 23683
 	public class LevelEventCollect : LevelEventBase
 	{
-		// Token: 0x0604407A RID: 278650 RVA: 0x010B8385 File Offset: 0x010B6585
+		// Token: 0x0603A1CC RID: 238028 RVA: 0x01061C11 File Offset: 0x0105FE11
 		public LevelEventCollect(int id) : base(id)
 		{
 		}
 
-		// Token: 0x0604407B RID: 278651 RVA: 0x010B8390 File Offset: 0x010B6590
+		// Token: 0x0603A1CD RID: 238029 RVA: 0x01061C1C File Offset: 0x0105FE1C
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{

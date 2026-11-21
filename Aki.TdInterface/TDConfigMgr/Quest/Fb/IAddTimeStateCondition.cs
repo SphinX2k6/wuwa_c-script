@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001439 RID: 5177
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001591 RID: 5521
 	public class IAddTimeStateCondition
 	{
-		// Token: 0x060075B1 RID: 30129 RVA: 0x0011914E File Offset: 0x0011734E
+		// Token: 0x06007C76 RID: 31862 RVA: 0x00127B9A File Offset: 0x00125D9A
 		public static IAddTimeStateCondition Create(IAddTimeStateCondition? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002712 RID: 10002
-		// (get) Token: 0x060075B2 RID: 30130 RVA: 0x0011916D File Offset: 0x0011736D
+		// Token: 0x170028F6 RID: 10486
+		// (get) Token: 0x06007C77 RID: 31863 RVA: 0x00127BB9 File Offset: 0x00125DB9
 		public virtual IEntityStateCondition Condition
 		{
 			get
@@ -38,8 +36,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002713 RID: 10003
-		// (get) Token: 0x060075B3 RID: 30131 RVA: 0x001191A1 File Offset: 0x001173A1
+		// Token: 0x170028F7 RID: 10487
+		// (get) Token: 0x06007C78 RID: 31864 RVA: 0x00127BED File Offset: 0x00125DED
 		public virtual int AddTime
 		{
 			get
@@ -48,14 +46,14 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004431 RID: 17457
+		// Token: 0x040047C5 RID: 18373
 		private IAddTimeStateCondition Instance;
 
-		// Token: 0x04004432 RID: 17458
+		// Token: 0x040047C6 RID: 18374
 		[Nullable(2)]
 		private IEntityStateCondition _ConditionCache;
 
-		// Token: 0x04004433 RID: 17459
+		// Token: 0x040047C7 RID: 18375
 		private bool _ConditionInited;
 	}
 }

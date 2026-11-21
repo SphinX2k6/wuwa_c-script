@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001F95 RID: 8085
+// Token: 0x02001457 RID: 5207
 [NullableContext(1)]
 [Nullable(0)]
 public class InfoDisplayAudioPlayer : UiPanelBase
 {
-	// Token: 0x0600FB17 RID: 64279 RVA: 0x003CD3E4 File Offset: 0x003CB5E4
+	// Token: 0x0600CF39 RID: 53049 RVA: 0x003D8FA4 File Offset: 0x003D71A4
 	public void Initialize(AActor rootActor)
 	{
 		base.CreateThenShowByActor(rootActor, null);
@@ -23,14 +23,14 @@ public class InfoDisplayAudioPlayer : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600FB18 RID: 64280 RVA: 0x003CD41E File Offset: 0x003CB61E
+	// Token: 0x0600CF3A RID: 53050 RVA: 0x003D8FDE File Offset: 0x003D71DE
 	public void SetShowTextComponent(UUIText textComponent)
 	{
 		this.TextComponent = textComponent;
 		this.TextComponent.SetText("00:00/00:00", true);
 	}
 
-	// Token: 0x0600FB19 RID: 64281 RVA: 0x003CD438 File Offset: 0x003CB638
+	// Token: 0x0600CF3B RID: 53051 RVA: 0x003D8FF8 File Offset: 0x003D71F8
 	public void SetSpectrumCallBack(Action<TArray<float>, float> spectrumCall)
 	{
 		if (this.AudioPlayer != null)
@@ -39,7 +39,7 @@ public class InfoDisplayAudioPlayer : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600FB1A RID: 64282 RVA: 0x003CD450 File Offset: 0x003CB650
+	// Token: 0x0600CF3C RID: 53052 RVA: 0x003D9010 File Offset: 0x003D7210
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -58,7 +58,7 @@ public class InfoDisplayAudioPlayer : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600FB1B RID: 64283 RVA: 0x003CD4D8 File Offset: 0x003CB6D8
+	// Token: 0x0600CF3D RID: 53053 RVA: 0x003D9098 File Offset: 0x003D7298
 	public void OnTick(float deltaTime)
 	{
 		if (this.AudioPlayer == null)
@@ -77,7 +77,7 @@ public class InfoDisplayAudioPlayer : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600FB1C RID: 64284 RVA: 0x003CD554 File Offset: 0x003CB754
+	// Token: 0x0600CF3E RID: 53054 RVA: 0x003D9114 File Offset: 0x003D7314
 	public UniTask Refresh(string param)
 	{
 		InfoDisplayAudioPlayer.<Refresh>d__8 <Refresh>d__;
@@ -89,7 +89,7 @@ public class InfoDisplayAudioPlayer : UiPanelBase
 		return <Refresh>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600FB1D RID: 64285 RVA: 0x003CD59F File Offset: 0x003CB79F
+	// Token: 0x0600CF3F RID: 53055 RVA: 0x003D915F File Offset: 0x003D735F
 	protected override void OnBeforeDestroy()
 	{
 		if (this.AudioPlayer != null)
@@ -98,7 +98,7 @@ public class InfoDisplayAudioPlayer : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600FB1E RID: 64286 RVA: 0x003CD5B4 File Offset: 0x003CB7B4
+	// Token: 0x0600CF40 RID: 53056 RVA: 0x003D9174 File Offset: 0x003D7374
 	private void OnClickPlayAudioBtn(EToggleState toggleState)
 	{
 		InfoDisplayAudioPlayerImpl audioPlayer = this.AudioPlayer;
@@ -109,19 +109,19 @@ public class InfoDisplayAudioPlayer : UiPanelBase
 		audioPlayer.OnClickPlayAudioBtn();
 	}
 
-	// Token: 0x040074D7 RID: 29911
+	// Token: 0x040075B9 RID: 30137
 	[Nullable(2)]
 	private InfoDisplayAudioPlayerImpl AudioPlayer;
 
-	// Token: 0x040074D8 RID: 29912
+	// Token: 0x040075BA RID: 30138
 	[Nullable(2)]
 	private UUIText TextComponent;
 
-	// Token: 0x02008581 RID: 34177
+	// Token: 0x02007706 RID: 30470
 	[NullableContext(0)]
 	private class EInfoDisplayAudioPlayerComponents
 	{
-		// Token: 0x0402B780 RID: 178048
+		// Token: 0x04026AA3 RID: 158371
 		public const int PlayToggle = 0;
 	}
 }

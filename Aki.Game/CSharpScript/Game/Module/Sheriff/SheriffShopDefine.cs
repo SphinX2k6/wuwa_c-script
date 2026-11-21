@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Sheriff
 {
-	// Token: 0x02004C4B RID: 19531
+	// Token: 0x02003BFC RID: 15356
 	public static class SheriffShopDefine
 	{
-		// Token: 0x06032801 RID: 206849 RVA: 0x00BC33E0 File Offset: 0x00BC15E0
+		// Token: 0x060275B4 RID: 161204 RVA: 0x00B07FF8 File Offset: 0x00B061F8
 		// Note: this type is marked as 'beforefieldinit'.
 		static SheriffShopDefine()
 		{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Sheriff
 			SheriffShopDefine.SheriffShopTabMenuName = dictionary;
 		}
 
-		// Token: 0x0401AE2C RID: 110124
+		// Token: 0x04015789 RID: 87945
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		public static readonly IReadOnlyDictionary<int, string> SheriffShopTabMenuName;

@@ -9,16 +9,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MingSu.View
 {
-	// Token: 0x020053DA RID: 21466
+	// Token: 0x020043BD RID: 17341
 	public class DarkCoastDeliveryLevelUpView : UiViewBase
 	{
-		// Token: 0x06036DDA RID: 224730 RVA: 0x00CFE5C7 File Offset: 0x00CFC7C7
+		// Token: 0x0602BD21 RID: 179489 RVA: 0x00C4D697 File Offset: 0x00C4B897
 		[NullableContext(1)]
 		public DarkCoastDeliveryLevelUpView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06036DDB RID: 224731 RVA: 0x00CFE5D0 File Offset: 0x00CFC7D0
+		// Token: 0x0602BD22 RID: 179490 RVA: 0x00C4D6A0 File Offset: 0x00C4B8A0
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.MingSu.View
 			};
 		}
 
-		// Token: 0x06036DDC RID: 224732 RVA: 0x00CFE664 File Offset: 0x00CFC864
+		// Token: 0x0602BD23 RID: 179491 RVA: 0x00C4D734 File Offset: 0x00C4B934
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DarkCoastDeliveryLevelUpView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -45,20 +45,20 @@ namespace CSharpScript.Game.Module.MingSu.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036DDD RID: 224733 RVA: 0x00CFE6A7 File Offset: 0x00CFC8A7
+		// Token: 0x0602BD24 RID: 179492 RVA: 0x00C4D777 File Offset: 0x00C4B977
 		[NullableContext(1)]
 		private DarkCoastDeliveryLevelUpItem InitLevelUpItem()
 		{
 			return new DarkCoastDeliveryLevelUpItem();
 		}
 
-		// Token: 0x06036DDE RID: 224734 RVA: 0x00CFE6AE File Offset: 0x00CFC8AE
+		// Token: 0x0602BD25 RID: 179493 RVA: 0x00C4D77E File Offset: 0x00C4B97E
 		private void OnClickCloseBtn()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0401CF3A RID: 118586
+		// Token: 0x040179D2 RID: 96722
 		[Nullable(new byte[]
 		{
 			2,
@@ -67,19 +67,19 @@ namespace CSharpScript.Game.Module.MingSu.View
 		})]
 		private GenericLayout<DarkCoastDeliveryLevelUpItem, DarkCoastDeliveryLevelData> VisionLayout;
 
-		// Token: 0x0200B67E RID: 46718
+		// Token: 0x0200A0B6 RID: 41142
 		private static class EComponent
 		{
-			// Token: 0x04037476 RID: 226422
+			// Token: 0x04031ECB RID: 204491
 			public const int CloseBtn = 0;
 
-			// Token: 0x04037477 RID: 226423
+			// Token: 0x04031ECC RID: 204492
 			public const int PreLevelTexture = 1;
 
-			// Token: 0x04037478 RID: 226424
+			// Token: 0x04031ECD RID: 204493
 			public const int CurLevelTexture = 2;
 
-			// Token: 0x04037479 RID: 226425
+			// Token: 0x04031ECE RID: 204494
 			public const int VisionLayout = 3;
 		}
 	}

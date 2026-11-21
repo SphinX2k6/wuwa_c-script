@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020054FA RID: 21754
+	// Token: 0x02005A80 RID: 23168
 	public struct ILifeStageConfig : IFlatbufferObject
 	{
-		// Token: 0x1700A088 RID: 41096
-		// (get) Token: 0x06023E91 RID: 147089 RVA: 0x004F6F86 File Offset: 0x004F5186
+		// Token: 0x1700A8C2 RID: 43202
+		// (get) Token: 0x06025F4B RID: 155467 RVA: 0x005340AA File Offset: 0x005322AA
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023E92 RID: 147090 RVA: 0x004F6F93 File Offset: 0x004F5193
+		// Token: 0x06025F4C RID: 155468 RVA: 0x005340B7 File Offset: 0x005322B7
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06023E93 RID: 147091 RVA: 0x004F6F9C File Offset: 0x004F519C
+		// Token: 0x06025F4D RID: 155469 RVA: 0x005340C0 File Offset: 0x005322C0
 		public static ILifeStageConfig GetRootAsILifeStageConfig(ByteBuffer _bb)
 		{
 			return ILifeStageConfig.GetRootAsILifeStageConfig(_bb, default(ILifeStageConfig));
 		}
 
-		// Token: 0x06023E94 RID: 147092 RVA: 0x004F6FB8 File Offset: 0x004F51B8
+		// Token: 0x06025F4E RID: 155470 RVA: 0x005340DC File Offset: 0x005322DC
 		public static ILifeStageConfig GetRootAsILifeStageConfig(ByteBuffer _bb, ILifeStageConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06023E95 RID: 147093 RVA: 0x004F6FD5 File Offset: 0x004F51D5
+		// Token: 0x06025F4F RID: 155471 RVA: 0x005340F9 File Offset: 0x005322F9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06023E96 RID: 147094 RVA: 0x004F6FE4 File Offset: 0x004F51E4
+		// Token: 0x06025F50 RID: 155472 RVA: 0x00534108 File Offset: 0x00532308
 		public ILifeStageConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A089 RID: 41097
-		// (get) Token: 0x06023E97 RID: 147095 RVA: 0x004F6FF4 File Offset: 0x004F51F4
+		// Token: 0x1700A8C3 RID: 43203
+		// (get) Token: 0x06025F51 RID: 155473 RVA: 0x00534118 File Offset: 0x00532318
 		public float PerformDuration
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A08A RID: 41098
-		// (get) Token: 0x06023E98 RID: 147096 RVA: 0x004F7034 File Offset: 0x004F5234
+		// Token: 0x1700A8C4 RID: 43204
+		// (get) Token: 0x06025F52 RID: 155474 RVA: 0x00534158 File Offset: 0x00532358
 		public byte NullMask
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023E99 RID: 147097 RVA: 0x004F7070 File Offset: 0x004F5270
+		// Token: 0x06025F53 RID: 155475 RVA: 0x00534194 File Offset: 0x00532394
 		public static Offset<ILifeStageConfig> CreateILifeStageConfig(FlatBufferBuilder builder, float PerformDuration = 0f, byte NullMask = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ILifeStageConfig.EndILifeStageConfig(builder);
 		}
 
-		// Token: 0x06023E9A RID: 147098 RVA: 0x004F708D File Offset: 0x004F528D
+		// Token: 0x06025F54 RID: 155476 RVA: 0x005341B1 File Offset: 0x005323B1
 		public static void StartILifeStageConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06023E9B RID: 147099 RVA: 0x004F7096 File Offset: 0x004F5296
+		// Token: 0x06025F55 RID: 155477 RVA: 0x005341BA File Offset: 0x005323BA
 		public static void AddPerformDuration(FlatBufferBuilder builder, float performDuration)
 		{
 			builder.AddFloat(0, performDuration, 0.0);
 		}
 
-		// Token: 0x06023E9C RID: 147100 RVA: 0x004F70A9 File Offset: 0x004F52A9
+		// Token: 0x06025F56 RID: 155478 RVA: 0x005341CD File Offset: 0x005323CD
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(1, nullMask, 0);
 		}
 
-		// Token: 0x06023E9D RID: 147101 RVA: 0x004F70B4 File Offset: 0x004F52B4
+		// Token: 0x06025F57 RID: 155479 RVA: 0x005341D8 File Offset: 0x005323D8
 		public static Offset<ILifeStageConfig> EndILifeStageConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<ILifeStageConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06023E9E RID: 147102 RVA: 0x004F70C4 File Offset: 0x004F52C4
+		// Token: 0x06025F58 RID: 155480 RVA: 0x005341E8 File Offset: 0x005323E8
 		public ILifeStageConfigT UnPack()
 		{
 			ILifeStageConfigT lifeStageConfigT = new ILifeStageConfigT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return lifeStageConfigT;
 		}
 
-		// Token: 0x06023E9F RID: 147103 RVA: 0x004F70DF File Offset: 0x004F52DF
+		// Token: 0x06025F59 RID: 155481 RVA: 0x00534203 File Offset: 0x00532403
 		public void UnPackTo(ILifeStageConfigT _o)
 		{
 			_o.PerformDuration = this.PerformDuration;
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06023EA0 RID: 147104 RVA: 0x004F70FC File Offset: 0x004F52FC
+		// Token: 0x06025F5A RID: 155482 RVA: 0x00534220 File Offset: 0x00532420
 		public static Offset<ILifeStageConfig> Pack(FlatBufferBuilder builder, ILifeStageConfigT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ILifeStageConfig.CreateILifeStageConfig(builder, _o.PerformDuration, _o.NullMask);
 		}
 
-		// Token: 0x0400E7DE RID: 59358
+		// Token: 0x0400F40F RID: 62479
 		private Table __p;
 	}
 }

@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020006E6 RID: 1766
+	// Token: 0x020006FE RID: 1790
 	public class ConfigPhotoModeAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002974 RID: 10612 RVA: 0x00143A30 File Offset: 0x00141C30
+		// Token: 0x06002A04 RID: 10756 RVA: 0x0014A4AC File Offset: 0x001486AC
 		static ConfigPhotoModeAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPhotoModeAll.CreateStaticDefaultValue), new Action(ConfigPhotoModeAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002975 RID: 10613 RVA: 0x00143A50 File Offset: 0x00141C50
+		// Token: 0x06002A05 RID: 10757 RVA: 0x0014A4CC File Offset: 0x001486CC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPhotoModeAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002976 RID: 10614 RVA: 0x00143ACF File Offset: 0x00141CCF
+		// Token: 0x06002A06 RID: 10758 RVA: 0x0014A54B File Offset: 0x0014874B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPhotoModeAll.LogPair = null;
 			ConfigPhotoModeAll.HandleId = 0;
 		}
 
-		// Token: 0x06002977 RID: 10615 RVA: 0x00143ADD File Offset: 0x00141CDD
+		// Token: 0x06002A07 RID: 10759 RVA: 0x0014A559 File Offset: 0x00148759
 		public static void Init()
 		{
 			ConfigPhotoModeAll.HandleId = ConfigCommon.InitDataStatement(ConfigPhotoModeAll.HandleId, "db_photonew.db", "select BinData from `PhotoMode`");
 		}
 
-		// Token: 0x06002978 RID: 10616 RVA: 0x00143AF8 File Offset: 0x00141CF8
+		// Token: 0x06002A08 RID: 10760 RVA: 0x0014A574 File Offset: 0x00148774
 		[NullableContext(2)]
 		public static IReadOnlyList<PhotoMode> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04003030 RID: 12336
+		// Token: 0x040030D8 RID: 12504
 		private const string DB = "db_photonew.db";
 
-		// Token: 0x04003031 RID: 12337
+		// Token: 0x040030D9 RID: 12505
 		private const string FILE = "p.拍照新.xlsx";
 
-		// Token: 0x04003032 RID: 12338
+		// Token: 0x040030DA RID: 12506
 		private const string TABLE = "PhotoMode";
 
-		// Token: 0x04003033 RID: 12339
+		// Token: 0x040030DB RID: 12507
 		private const string COMMAND = "select BinData from `PhotoMode`";
 
-		// Token: 0x04003034 RID: 12340
+		// Token: 0x040030DC RID: 12508
 		private const string KEY_PREFIX = "PhotoModeAll";
 
-		// Token: 0x04003035 RID: 12341
+		// Token: 0x040030DD RID: 12509
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003036 RID: 12342
+		// Token: 0x040030DE RID: 12510
 		private static int HandleId;
 	}
 }

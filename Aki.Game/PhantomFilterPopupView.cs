@@ -11,17 +11,17 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using FilterDefine;
 using UnrealEngine;
 
-// Token: 0x02001864 RID: 6244
+// Token: 0x02000D1D RID: 3357
 [NullableContext(1)]
 [Nullable(0)]
 public class PhantomFilterPopupView : UiViewBase
 {
-	// Token: 0x0600B712 RID: 46866 RVA: 0x00295EFC File Offset: 0x002940FC
+	// Token: 0x06008AFB RID: 35579 RVA: 0x002A0620 File Offset: 0x0029E820
 	public PhantomFilterPopupView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600B713 RID: 46867 RVA: 0x00295F24 File Offset: 0x00294124
+	// Token: 0x06008AFC RID: 35580 RVA: 0x002A0648 File Offset: 0x0029E848
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 12;
@@ -66,7 +66,7 @@ public class PhantomFilterPopupView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600B714 RID: 46868 RVA: 0x00296164 File Offset: 0x00294364
+	// Token: 0x06008AFD RID: 35581 RVA: 0x002A0888 File Offset: 0x0029EA88
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PhantomFilterPopupView.<OnBeforeStartAsync>d__17 <OnBeforeStartAsync>d__;
@@ -77,7 +77,7 @@ public class PhantomFilterPopupView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600B715 RID: 46869 RVA: 0x002961A8 File Offset: 0x002943A8
+	// Token: 0x06008AFE RID: 35582 RVA: 0x002A08CC File Offset: 0x0029EACC
 	protected override void OnStart()
 	{
 		this.RootActor.OnSequencePlayEvent.Bind(new Action<string, string>(this.OnPlaySequenceEvent));
@@ -95,7 +95,7 @@ public class PhantomFilterPopupView : UiViewBase
 		this.InitState = true;
 	}
 
-	// Token: 0x0600B716 RID: 46870 RVA: 0x0029622E File Offset: 0x0029442E
+	// Token: 0x06008AFF RID: 35583 RVA: 0x002A0952 File Offset: 0x0029EB52
 	protected override void OnBeforeDestroy()
 	{
 		CommonDropDown<int, int> commonDropDown = this.CommonDropDown;
@@ -106,13 +106,13 @@ public class PhantomFilterPopupView : UiViewBase
 		this.CommonDropDown = null;
 	}
 
-	// Token: 0x0600B717 RID: 46871 RVA: 0x00296249 File Offset: 0x00294449
+	// Token: 0x06008B00 RID: 35584 RVA: 0x002A096D File Offset: 0x0029EB6D
 	protected override void OnBeforeShow()
 	{
 		this.UpdateFilterAnimation();
 	}
 
-	// Token: 0x0600B718 RID: 46872 RVA: 0x00296252 File Offset: 0x00294452
+	// Token: 0x06008B01 RID: 35585 RVA: 0x002A0976 File Offset: 0x0029EB76
 	private void OnClickClose()
 	{
 		Action onFilterViewClose = this.ViewData.OnFilterViewClose;
@@ -123,7 +123,7 @@ public class PhantomFilterPopupView : UiViewBase
 		UiManager.Instance.CloseView(this.ViewInfo.Name, null);
 	}
 
-	// Token: 0x0600B719 RID: 46873 RVA: 0x00296280 File Offset: 0x00294480
+	// Token: 0x06008B02 RID: 35586 RVA: 0x002A09A4 File Offset: 0x0029EBA4
 	private void OnFilterConfirm()
 	{
 		Action confirmFunction = this.ViewData.ConfirmFunction;
@@ -138,7 +138,7 @@ public class PhantomFilterPopupView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600B71A RID: 46874 RVA: 0x002962AC File Offset: 0x002944AC
+	// Token: 0x06008B03 RID: 35587 RVA: 0x002A09D0 File Offset: 0x0029EBD0
 	private void OnPlaySequenceEvent(string sequenceName, string eventName)
 	{
 		if (eventName != "Sequence_Change_Number")
@@ -148,7 +148,7 @@ public class PhantomFilterPopupView : UiViewBase
 		this.UpdateFilterCount();
 	}
 
-	// Token: 0x0600B71B RID: 46875 RVA: 0x002962C4 File Offset: 0x002944C4
+	// Token: 0x06008B04 RID: 35588 RVA: 0x002A09E8 File Offset: 0x0029EBE8
 	private void UpdateFilterCount()
 	{
 		List<IPhantomFilterData> filteredPhantomList = this.GetFilteredPhantomList();
@@ -159,7 +159,7 @@ public class PhantomFilterPopupView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600B71C RID: 46876 RVA: 0x00296304 File Offset: 0x00294504
+	// Token: 0x06008B05 RID: 35589 RVA: 0x002A0A28 File Offset: 0x0029EC28
 	private bool CheckHasFilter()
 	{
 		FilterResultData filterResultData = FilterModel.Instance.GetFilterResultData(this.ViewData.UniqueId);
@@ -180,7 +180,7 @@ public class PhantomFilterPopupView : UiViewBase
 		return false;
 	}
 
-	// Token: 0x0600B71D RID: 46877 RVA: 0x00296380 File Offset: 0x00294580
+	// Token: 0x06008B06 RID: 35590 RVA: 0x002A0AA4 File Offset: 0x0029ECA4
 	private bool UpdateFilterAnimation()
 	{
 		bool flag = this.CheckHasFilter();
@@ -205,7 +205,7 @@ public class PhantomFilterPopupView : UiViewBase
 		return false;
 	}
 
-	// Token: 0x0600B71E RID: 46878 RVA: 0x002963EC File Offset: 0x002945EC
+	// Token: 0x06008B07 RID: 35591 RVA: 0x002A0B10 File Offset: 0x0029ED10
 	private void OnClickBtnReset()
 	{
 		FilterResultData filterResultData = FilterModel.Instance.GetFilterResultData(this.ViewData.UniqueId);
@@ -237,7 +237,7 @@ public class PhantomFilterPopupView : UiViewBase
 		this.UpdateFilterAnimation();
 	}
 
-	// Token: 0x0600B71F RID: 46879 RVA: 0x0029646C File Offset: 0x0029466C
+	// Token: 0x06008B08 RID: 35592 RVA: 0x002A0B90 File Offset: 0x0029ED90
 	private void InitQualityLayout()
 	{
 		UUIHorizontalLayout horizontalLayout = base.GetHorizontalLayout(2);
@@ -248,7 +248,7 @@ public class PhantomFilterPopupView : UiViewBase
 		this.QualityLayout = new GenericLayout<QualityToggleGridProxy, FilterItemData>(horizontalLayout, new Func<QualityToggleGridProxy>(this.CreateQualityToggle), null, false, true);
 	}
 
-	// Token: 0x0600B720 RID: 46880 RVA: 0x002964A0 File Offset: 0x002946A0
+	// Token: 0x06008B09 RID: 35593 RVA: 0x002A0BC4 File Offset: 0x0029EDC4
 	private void InitStateLayout()
 	{
 		UUIHorizontalLayout horizontalLayout = base.GetHorizontalLayout(1);
@@ -259,7 +259,7 @@ public class PhantomFilterPopupView : UiViewBase
 		this.StateLayout = new GenericLayout<StateToggleGridProxy, FilterItemData>(horizontalLayout, new Func<StateToggleGridProxy>(this.CreateStateToggle), null, false, true);
 	}
 
-	// Token: 0x0600B721 RID: 46881 RVA: 0x002964D4 File Offset: 0x002946D4
+	// Token: 0x06008B0A RID: 35594 RVA: 0x002A0BF8 File Offset: 0x0029EDF8
 	private void InitMainPropertiesLayout()
 	{
 		UUIVerticalLayout verticalLayout = base.GetVerticalLayout(6);
@@ -270,7 +270,7 @@ public class PhantomFilterPopupView : UiViewBase
 		this.MainPropertiesLayout = new GenericLayout<MainPropertyItem, FilterItemData>(verticalLayout, new Func<MainPropertyItem>(this.CreateMainPropertyItem), null, false, true);
 	}
 
-	// Token: 0x0600B722 RID: 46882 RVA: 0x00296508 File Offset: 0x00294708
+	// Token: 0x06008B0B RID: 35595 RVA: 0x002A0C2C File Offset: 0x0029EE2C
 	private QualityToggleGridProxy CreateQualityToggle()
 	{
 		QualityToggleGridProxy qualityToggleGridProxy = new QualityToggleGridProxy();
@@ -278,7 +278,7 @@ public class PhantomFilterPopupView : UiViewBase
 		return qualityToggleGridProxy;
 	}
 
-	// Token: 0x0600B723 RID: 46883 RVA: 0x00296521 File Offset: 0x00294721
+	// Token: 0x06008B0C RID: 35596 RVA: 0x002A0C45 File Offset: 0x0029EE45
 	private StateToggleGridProxy CreateStateToggle()
 	{
 		StateToggleGridProxy stateToggleGridProxy = new StateToggleGridProxy();
@@ -286,7 +286,7 @@ public class PhantomFilterPopupView : UiViewBase
 		return stateToggleGridProxy;
 	}
 
-	// Token: 0x0600B724 RID: 46884 RVA: 0x0029653A File Offset: 0x0029473A
+	// Token: 0x06008B0D RID: 35597 RVA: 0x002A0C5E File Offset: 0x0029EE5E
 	private MainPropertyItem CreateMainPropertyItem()
 	{
 		MainPropertyItem mainPropertyItem = new MainPropertyItem();
@@ -294,7 +294,7 @@ public class PhantomFilterPopupView : UiViewBase
 		return mainPropertyItem;
 	}
 
-	// Token: 0x0600B725 RID: 46885 RVA: 0x00296554 File Offset: 0x00294754
+	// Token: 0x06008B0E RID: 35598 RVA: 0x002A0C78 File Offset: 0x0029EE78
 	private void OnQualityToggleChanged(bool isChecked, int filterId, string content)
 	{
 		FilterResultData filterResultData = FilterModel.Instance.GetFilterResultData(this.ViewData.UniqueId);
@@ -311,7 +311,7 @@ public class PhantomFilterPopupView : UiViewBase
 		this.OnFilterConfirm();
 	}
 
-	// Token: 0x0600B726 RID: 46886 RVA: 0x002965AC File Offset: 0x002947AC
+	// Token: 0x06008B0F RID: 35599 RVA: 0x002A0CD0 File Offset: 0x0029EED0
 	private void OnStateToggleChanged(bool isChecked, int filterId, string content)
 	{
 		FilterResultData filterResultData = FilterModel.Instance.GetFilterResultData(this.ViewData.UniqueId);
@@ -340,7 +340,7 @@ public class PhantomFilterPopupView : UiViewBase
 		this.OnFilterConfirm();
 	}
 
-	// Token: 0x0600B727 RID: 46887 RVA: 0x0029667C File Offset: 0x0029487C
+	// Token: 0x06008B10 RID: 35600 RVA: 0x002A0DA0 File Offset: 0x0029EFA0
 	private void OnClickAddMainProperty()
 	{
 		int defaultSelectCostTab = 4;
@@ -371,7 +371,7 @@ public class PhantomFilterPopupView : UiViewBase
 		UiManager.Instance.OpenView(EUiViewName.PhantomMainPropertyPopupView, param, null);
 	}
 
-	// Token: 0x0600B728 RID: 46888 RVA: 0x00296718 File Offset: 0x00294918
+	// Token: 0x06008B11 RID: 35601 RVA: 0x002A0E3C File Offset: 0x0029F03C
 	private void OnDeleteMainProperty(int filterId)
 	{
 		FilterResultData filterResultData = FilterModel.Instance.GetFilterResultData(this.ViewData.UniqueId);
@@ -382,7 +382,7 @@ public class PhantomFilterPopupView : UiViewBase
 		this.OnFilterConfirm();
 	}
 
-	// Token: 0x0600B729 RID: 46889 RVA: 0x00296778 File Offset: 0x00294978
+	// Token: 0x06008B12 RID: 35602 RVA: 0x002A0E9C File Offset: 0x0029F09C
 	private void LoadFilterData()
 	{
 		FilterResultData resultData = FilterModel.Instance.GetFilterResultData(this.ViewData.UniqueId);
@@ -485,7 +485,7 @@ public class PhantomFilterPopupView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600B72A RID: 46890 RVA: 0x00296934 File Offset: 0x00294B34
+	// Token: 0x06008B13 RID: 35603 RVA: 0x002A1058 File Offset: 0x0029F258
 	private void LoadMainPropertiesData()
 	{
 		FilterResultData filterResultData = FilterModel.Instance.GetFilterResultData(this.ViewData.UniqueId);
@@ -510,7 +510,7 @@ public class PhantomFilterPopupView : UiViewBase
 		mainPropertiesLayout.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x0600B72B RID: 46891 RVA: 0x002969DC File Offset: 0x00294BDC
+	// Token: 0x06008B14 RID: 35604 RVA: 0x002A1100 File Offset: 0x0029F300
 	private UniTask InitSuitFilter()
 	{
 		PhantomFilterPopupView.<InitSuitFilter>d__40 <InitSuitFilter>d__;
@@ -521,7 +521,7 @@ public class PhantomFilterPopupView : UiViewBase
 		return <InitSuitFilter>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600B72C RID: 46892 RVA: 0x00296A20 File Offset: 0x00294C20
+	// Token: 0x06008B15 RID: 35605 RVA: 0x002A1144 File Offset: 0x0029F344
 	private void InitDropDown()
 	{
 		IEnumerable<PhantomFetterGroup> fetterGroupArray = PhantomBattleConfig.Instance.GetFetterGroupArray();
@@ -562,7 +562,7 @@ public class PhantomFilterPopupView : UiViewBase
 		this.CommonDropDown.InitScroll(this.FetterSuitFilterArray, new Func<int, int>(this.GetDropDownTextId), this.CurrentSelectSuitIndex, true);
 	}
 
-	// Token: 0x0600B72D RID: 46893 RVA: 0x00296BB0 File Offset: 0x00294DB0
+	// Token: 0x06008B16 RID: 35606 RVA: 0x002A12D4 File Offset: 0x0029F4D4
 	private void OnDropDownSelectCall(int index, int data)
 	{
 		this.CurrentSelectSuitIndex = index;
@@ -574,25 +574,25 @@ public class PhantomFilterPopupView : UiViewBase
 		this.OnFilterConfirm();
 	}
 
-	// Token: 0x0600B72E RID: 46894 RVA: 0x00296BCE File Offset: 0x00294DCE
+	// Token: 0x06008B17 RID: 35607 RVA: 0x002A12F2 File Offset: 0x0029F4F2
 	private int GetDropDownTextId(int data)
 	{
 		return data;
 	}
 
-	// Token: 0x0600B72F RID: 46895 RVA: 0x00296BD1 File Offset: 0x00294DD1
+	// Token: 0x06008B18 RID: 35608 RVA: 0x002A12F5 File Offset: 0x0029F4F5
 	private VisionEquipmentDropDownItem CreateDropDownItem(UUIItem uiItem, int data)
 	{
 		return new VisionEquipmentDropDownItem(uiItem);
 	}
 
-	// Token: 0x0600B730 RID: 46896 RVA: 0x00296BD9 File Offset: 0x00294DD9
+	// Token: 0x06008B19 RID: 35609 RVA: 0x002A12FD File Offset: 0x0029F4FD
 	private VisionEquipmentDropDownTitleItem CreateTitleItem(UUIItem uiItem)
 	{
 		return new VisionEquipmentDropDownTitleItem(uiItem);
 	}
 
-	// Token: 0x0600B731 RID: 46897 RVA: 0x00296BE4 File Offset: 0x00294DE4
+	// Token: 0x06008B1A RID: 35610 RVA: 0x002A1308 File Offset: 0x0029F508
 	private void UpdateSuitFilter()
 	{
 		int num = this.FetterSuitFilterArray[this.CurrentSelectSuitIndex];
@@ -608,7 +608,7 @@ public class PhantomFilterPopupView : UiViewBase
 		filterResultData.SetSelectRuleData(FilterDefine.EFilterType.VisionDestroyFetterGroup, dictionary);
 	}
 
-	// Token: 0x0600B732 RID: 46898 RVA: 0x00296C70 File Offset: 0x00294E70
+	// Token: 0x06008B1B RID: 35611 RVA: 0x002A1394 File Offset: 0x0029F594
 	private InventoryDefine.EItemDataFunctionValue? CheckSelectStateSame()
 	{
 		List<IPhantomFilterData> filteredPhantomList = this.GetFilteredPhantomList();
@@ -643,7 +643,7 @@ public class PhantomFilterPopupView : UiViewBase
 		return eitemDataFunctionValue;
 	}
 
-	// Token: 0x0600B733 RID: 46899 RVA: 0x00296D34 File Offset: 0x00294F34
+	// Token: 0x06008B1C RID: 35612 RVA: 0x002A1458 File Offset: 0x0029F658
 	private void UpdateQuickButtonState()
 	{
 		InventoryDefine.EItemDataFunctionValue? eitemDataFunctionValue = this.CheckSelectStateSame();
@@ -685,7 +685,7 @@ public class PhantomFilterPopupView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600B734 RID: 46900 RVA: 0x00296DB5 File Offset: 0x00294FB5
+	// Token: 0x06008B1D RID: 35613 RVA: 0x002A14D9 File Offset: 0x0029F6D9
 	private List<IPhantomFilterData> GetFilteredPhantomList()
 	{
 		PhantomFilterViewData<IPhantomFilterData> viewData = this.ViewData;
@@ -696,7 +696,7 @@ public class PhantomFilterPopupView : UiViewBase
 		return this.ViewData.GetFilteredDataListFunc();
 	}
 
-	// Token: 0x0600B735 RID: 46901 RVA: 0x00296DE4 File Offset: 0x00294FE4
+	// Token: 0x06008B1E RID: 35614 RVA: 0x002A1508 File Offset: 0x0029F708
 	private void OnClickBtnDiscard(int state)
 	{
 		bool isCancel = this.CheckSelectStateSame().GetValueOrDefault() == InventoryDefine.EItemDataFunctionValue.Deprecate;
@@ -727,7 +727,7 @@ public class PhantomFilterPopupView : UiViewBase
 		UiManager.Instance.OpenView(EUiViewName.PhantomBatchConfirmPopupView, param, null);
 	}
 
-	// Token: 0x0600B736 RID: 46902 RVA: 0x00296F24 File Offset: 0x00295124
+	// Token: 0x06008B1F RID: 35615 RVA: 0x002A1648 File Offset: 0x0029F848
 	private void OnClickBtnLock(int state)
 	{
 		bool isCancel = this.CheckSelectStateSame().GetValueOrDefault() == InventoryDefine.EItemDataFunctionValue.Lock;
@@ -758,7 +758,7 @@ public class PhantomFilterPopupView : UiViewBase
 		UiManager.Instance.OpenView(EUiViewName.PhantomBatchConfirmPopupView, param, null);
 	}
 
-	// Token: 0x0600B737 RID: 46903 RVA: 0x00297064 File Offset: 0x00295264
+	// Token: 0x06008B20 RID: 35616 RVA: 0x002A1788 File Offset: 0x0029F988
 	private UniTask ExecuteBatchDeprecate(List<int> uniqueIdList, bool isDeprecate)
 	{
 		PhantomFilterPopupView.<ExecuteBatchDeprecate>d__52 <ExecuteBatchDeprecate>d__;
@@ -770,7 +770,7 @@ public class PhantomFilterPopupView : UiViewBase
 		return <ExecuteBatchDeprecate>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600B738 RID: 46904 RVA: 0x002970B0 File Offset: 0x002952B0
+	// Token: 0x06008B21 RID: 35617 RVA: 0x002A17D4 File Offset: 0x0029F9D4
 	private UniTask ExecuteBatchLock(List<int> uniqueIdList, bool isLock)
 	{
 		PhantomFilterPopupView.<ExecuteBatchLock>d__53 <ExecuteBatchLock>d__;
@@ -782,7 +782,7 @@ public class PhantomFilterPopupView : UiViewBase
 		return <ExecuteBatchLock>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x040052A7 RID: 21159
+	// Token: 0x04005352 RID: 21330
 	[Nullable(new byte[]
 	{
 		2,
@@ -790,7 +790,7 @@ public class PhantomFilterPopupView : UiViewBase
 	})]
 	private PhantomFilterViewData<IPhantomFilterData> ViewData;
 
-	// Token: 0x040052A8 RID: 21160
+	// Token: 0x04005353 RID: 21331
 	[Nullable(new byte[]
 	{
 		2,
@@ -799,7 +799,7 @@ public class PhantomFilterPopupView : UiViewBase
 	})]
 	private GenericLayout<QualityToggleGridProxy, FilterItemData> QualityLayout;
 
-	// Token: 0x040052A9 RID: 21161
+	// Token: 0x04005354 RID: 21332
 	[Nullable(new byte[]
 	{
 		2,
@@ -808,7 +808,7 @@ public class PhantomFilterPopupView : UiViewBase
 	})]
 	private GenericLayout<StateToggleGridProxy, FilterItemData> StateLayout;
 
-	// Token: 0x040052AA RID: 21162
+	// Token: 0x04005355 RID: 21333
 	[Nullable(new byte[]
 	{
 		2,
@@ -817,81 +817,81 @@ public class PhantomFilterPopupView : UiViewBase
 	})]
 	private GenericLayout<MainPropertyItem, FilterItemData> MainPropertiesLayout;
 
-	// Token: 0x040052AB RID: 21163
+	// Token: 0x04005356 RID: 21334
 	[Nullable(2)]
 	private CommonDropDown<int, int> CommonDropDown;
 
-	// Token: 0x040052AC RID: 21164
+	// Token: 0x04005357 RID: 21335
 	private readonly List<int> FetterSuitFilterArray = new List<int>();
 
-	// Token: 0x040052AD RID: 21165
+	// Token: 0x04005358 RID: 21336
 	private readonly Dictionary<int, int> FetterSortIdMap = new Dictionary<int, int>();
 
-	// Token: 0x040052AE RID: 21166
+	// Token: 0x04005359 RID: 21337
 	private int CurrentSelectSuitIndex;
 
-	// Token: 0x040052AF RID: 21167
+	// Token: 0x0400535A RID: 21338
 	[Nullable(2)]
 	private ButtonItem BtnDiscardItem;
 
-	// Token: 0x040052B0 RID: 21168
+	// Token: 0x0400535B RID: 21339
 	[Nullable(2)]
 	private ButtonItem BtnLockItem;
 
-	// Token: 0x040052B1 RID: 21169
+	// Token: 0x0400535C RID: 21340
 	[Nullable(2)]
 	public PopupCaptionItem CaptionItem;
 
-	// Token: 0x040052B2 RID: 21170
+	// Token: 0x0400535D RID: 21341
 	private bool InitState;
 
-	// Token: 0x040052B3 RID: 21171
+	// Token: 0x0400535E RID: 21342
 	private bool LastHasFilter;
 
-	// Token: 0x040052B4 RID: 21172
+	// Token: 0x0400535F RID: 21343
 	private FilterDefine.EFilterType MainAttributeFilterType = FilterDefine.EFilterType.VisionDestroyAttribute;
 
-	// Token: 0x02007E23 RID: 32291
+	// Token: 0x02006FAA RID: 28586
 	[NullableContext(0)]
 	private class EPhantomFilterComp
 	{
-		// Token: 0x0402948A RID: 169098
+		// Token: 0x040247B7 RID: 149431
 		public const int Caption = 0;
 
-		// Token: 0x0402948B RID: 169099
+		// Token: 0x040247B8 RID: 149432
 		public const int StateLayout = 1;
 
-		// Token: 0x0402948C RID: 169100
+		// Token: 0x040247B9 RID: 149433
 		public const int QualityLayout = 2;
 
-		// Token: 0x0402948D RID: 169101
+		// Token: 0x040247BA RID: 149434
 		public const int TogQualityItem = 3;
 
-		// Token: 0x0402948E RID: 169102
+		// Token: 0x040247BB RID: 149435
 		public const int SuitFilter = 4;
 
-		// Token: 0x0402948F RID: 169103
+		// Token: 0x040247BC RID: 149436
 		public const int BtnAddMainPro = 5;
 
-		// Token: 0x04029490 RID: 169104
+		// Token: 0x040247BD RID: 149437
 		public const int PanelMainPropertiesLayout = 6;
 
-		// Token: 0x04029491 RID: 169105
+		// Token: 0x040247BE RID: 149438
 		public const int PanelPropertyItem = 7;
 
-		// Token: 0x04029492 RID: 169106
+		// Token: 0x040247BF RID: 149439
 		public const int TxtFilterCount = 8;
 
-		// Token: 0x04029493 RID: 169107
+		// Token: 0x040247C0 RID: 149440
 		public const int BtnReset = 9;
 
-		// Token: 0x04029494 RID: 169108
+		// Token: 0x040247C1 RID: 149441
 		public const int BtnConfirmBaseDiscard = 10;
 
-		// Token: 0x04029495 RID: 169109
+		// Token: 0x040247C2 RID: 149442
 		public const int BtnConfirmBaseLock = 11;
 
-		// Token: 0x04029496 RID: 169110
+		// Token: 0x040247C3 RID: 149443
 		public const int BtnClose = 12;
 	}
 }

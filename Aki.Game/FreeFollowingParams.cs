@@ -2,17 +2,17 @@
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Data.Level.KeepFollowing;
 
-// Token: 0x0200310B RID: 12555
+// Token: 0x02002666 RID: 9830
 [NullableContext(1)]
 [Nullable(0)]
 public class FreeFollowingParams
 {
-	// Token: 0x0601AF69 RID: 110441 RVA: 0x0074FC50 File Offset: 0x0074DE50
+	// Token: 0x060189B8 RID: 100792 RVA: 0x00775E0C File Offset: 0x0077400C
 	public FreeFollowingParams()
 	{
 	}
 
-	// Token: 0x0601AF6A RID: 110442 RVA: 0x0074FD04 File Offset: 0x0074DF04
+	// Token: 0x060189B9 RID: 100793 RVA: 0x00775EC0 File Offset: 0x007740C0
 	public FreeFollowingParams(SFreeFollowingConfig data)
 	{
 		this.Enable = data.Enable;
@@ -31,7 +31,8 @@ public class FreeFollowingParams
 		this.MaxForwardOffset = (double)Math.Max(0f, data.MaxForwardOffset);
 		this.FullForwardOffsetSpeed = (double)((data.FullForwardOffsetSpeed <= 0f) ? 600f : data.FullForwardOffsetSpeed);
 		this.SideAngleTolerance = (double)MathUtils.Instance.Clamp(data.SideAngleTolerance, 0f, 89f);
-		this.OffsetAngle = (double)MathUtils.Instance.Clamp(data.OffsetAngle, 0f, 89f);
+		this.OffsetAngle = (double)MathUtils.Instance.Clamp(data.OffsetAngle, -89f, 89f);
+		this.EnableNavMeshPath = data.EnableNavMeshPath;
 		this.DebugDraw = data.DebugDraw;
 		if (!this.Enable)
 		{
@@ -57,72 +58,75 @@ public class FreeFollowingParams
 		}
 	}
 
-	// Token: 0x0400D15E RID: 53598
+	// Token: 0x0400D57E RID: 54654
 	public bool Enable;
 
-	// Token: 0x0400D15F RID: 53599
+	// Token: 0x0400D57F RID: 54655
 	public bool FollowOnRight = true;
 
-	// Token: 0x0400D160 RID: 53600
+	// Token: 0x0400D580 RID: 54656
 	public bool AutoChangeSide;
 
-	// Token: 0x0400D161 RID: 53601
+	// Token: 0x0400D581 RID: 54657
 	public bool EnableLocalMovementHold = true;
 
-	// Token: 0x0400D162 RID: 53602
+	// Token: 0x0400D582 RID: 54658
 	public double MovementIntentSmoothingTime = 0.5;
 
-	// Token: 0x0400D163 RID: 53603
+	// Token: 0x0400D583 RID: 54659
 	public double LocalMovementEnterRate = 0.55;
 
-	// Token: 0x0400D164 RID: 53604
+	// Token: 0x0400D584 RID: 54660
 	public double LocalMovementEnterConfirmTime = 0.35;
 
-	// Token: 0x0400D165 RID: 53605
+	// Token: 0x0400D585 RID: 54661
 	public double RunReferenceDirectionSmoothingTime = 0.2;
 
-	// Token: 0x0400D166 RID: 53606
+	// Token: 0x0400D586 RID: 54662
 	public double SprintReferenceDirectionSmoothingTime = 0.12;
 
-	// Token: 0x0400D167 RID: 53607
+	// Token: 0x0400D587 RID: 54663
 	public double StopConfirmTime = 0.2;
 
-	// Token: 0x0400D168 RID: 53608
+	// Token: 0x0400D588 RID: 54664
 	public double WalkBehindTargetPauseTime = 1.0;
 
-	// Token: 0x0400D169 RID: 53609
+	// Token: 0x0400D589 RID: 54665
 	public double StartFollowingRadius;
 
-	// Token: 0x0400D16A RID: 53610
+	// Token: 0x0400D58A RID: 54666
 	public double FollowRadius;
 
-	// Token: 0x0400D16B RID: 53611
+	// Token: 0x0400D58B RID: 54667
 	public double WalkStartFollowingRadius;
 
-	// Token: 0x0400D16C RID: 53612
+	// Token: 0x0400D58C RID: 54668
 	public double WalkFollowRadius;
 
-	// Token: 0x0400D16D RID: 53613
+	// Token: 0x0400D58D RID: 54669
 	public double MaxForwardOffset;
 
-	// Token: 0x0400D16E RID: 53614
+	// Token: 0x0400D58E RID: 54670
 	public double FullForwardOffsetSpeed = 600.0;
 
-	// Token: 0x0400D16F RID: 53615
+	// Token: 0x0400D58F RID: 54671
 	public double SideAngleTolerance = 30.0;
 
-	// Token: 0x0400D170 RID: 53616
+	// Token: 0x0400D590 RID: 54672
 	public double OffsetAngle;
 
-	// Token: 0x0400D171 RID: 53617
+	// Token: 0x0400D591 RID: 54673
+	public bool EnableNavMeshPath;
+
+	// Token: 0x0400D592 RID: 54674
 	public string InvalidReason = "";
 
-	// Token: 0x0400D172 RID: 53618
+	// Token: 0x0400D593 RID: 54675
 	public bool ClampedStartFollowingRadius;
 
-	// Token: 0x0400D173 RID: 53619
+	// Token: 0x0400D594 RID: 54676
 	public bool ClampedWalkStartFollowingRadius;
 
-	// Token: 0x0400D174 RID: 53620
+	// Token: 0x0400D595 RID: 54677
 	public bool DebugDraw;
 }

@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.PlotView.PlotSceneView
 {
-	// Token: 0x02005075 RID: 20597
+	// Token: 0x02004045 RID: 16453
 	public class PlotSceneArtWordTextPanel : UiPanelBase
 	{
-		// Token: 0x06034C40 RID: 216128 RVA: 0x00C7C31C File Offset: 0x00C7A51C
+		// Token: 0x06029B35 RID: 170805 RVA: 0x00BC96F4 File Offset: 0x00BC78F4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotSceneView
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06034C41 RID: 216129 RVA: 0x00C7C388 File Offset: 0x00C7A588
+		// Token: 0x06029B36 RID: 170806 RVA: 0x00BC9760 File Offset: 0x00BC7960
 		[NullableContext(1)]
 		public void ApplyConfig(FloatingSubtitle3D config, string lineText, float fontSize)
 		{
@@ -50,13 +50,13 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotSceneView
 			this.SpaceMarkWatcher.Start(text);
 		}
 
-		// Token: 0x06034C42 RID: 216130 RVA: 0x00C7C406 File Offset: 0x00C7A606
+		// Token: 0x06029B37 RID: 170807 RVA: 0x00BC97DE File Offset: 0x00BC79DE
 		protected override void OnBeforeDestroy()
 		{
 			this.SpaceMarkWatcher.Stop();
 		}
 
-		// Token: 0x06034C43 RID: 216131 RVA: 0x00C7C414 File Offset: 0x00C7A614
+		// Token: 0x06029B38 RID: 170808 RVA: 0x00BC97EC File Offset: 0x00BC79EC
 		[NullableContext(2)]
 		private void ApplyLayoutScale(UUIText text, float scale)
 		{
@@ -83,22 +83,22 @@ namespace CSharpScript.Game.Module.Plot.PlotView.PlotSceneView
 			}
 		}
 
-		// Token: 0x0401C1DF RID: 115167
+		// Token: 0x04016C0A RID: 93194
 		private float? BasePivotOffsetY;
 
-		// Token: 0x0401C1E0 RID: 115168
+		// Token: 0x04016C0B RID: 93195
 		private float? BaseTextOffsetY;
 
-		// Token: 0x0401C1E1 RID: 115169
+		// Token: 0x04016C0C RID: 93196
 		[Nullable(1)]
 		private readonly FloatingSubtitleSpaceMarkWatcher SpaceMarkWatcher = new FloatingSubtitleSpaceMarkWatcher();
 
-		// Token: 0x0200B212 RID: 45586
+		// Token: 0x02009C4B RID: 40011
 		private enum EComponents
 		{
-			// Token: 0x04035FD8 RID: 221144
+			// Token: 0x04030A2C RID: 199212
 			Text,
-			// Token: 0x04035FD9 RID: 221145
+			// Token: 0x04030A2D RID: 199213
 			PnlPivot
 		}
 	}

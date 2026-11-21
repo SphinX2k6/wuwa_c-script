@@ -5,15 +5,15 @@ using Aki.Protocol;
 using CSharpScript.Game.Module.RoleUi.RoleDevelop;
 using Google.Protobuf.Collections;
 
-// Token: 0x02002810 RID: 10256
+// Token: 0x02001D8B RID: 7563
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class RoleDevModel : ModelBase
 {
-	// Token: 0x17001BD0 RID: 7120
-	// (get) Token: 0x060150E3 RID: 86243 RVA: 0x00554D07 File Offset: 0x00552F07
-	// (set) Token: 0x060150E4 RID: 86244 RVA: 0x00554D0F File Offset: 0x00552F0F
+	// Token: 0x17001C28 RID: 7208
+	// (get) Token: 0x06012AE3 RID: 76515 RVA: 0x0057FB07 File Offset: 0x0057DD07
+	// (set) Token: 0x06012AE4 RID: 76516 RVA: 0x0057FB0F File Offset: 0x0057DD0F
 	public string Version
 	{
 		get
@@ -26,13 +26,13 @@ public class RoleDevModel : ModelBase
 		}
 	}
 
-	// Token: 0x060150E5 RID: 86245 RVA: 0x00554D18 File Offset: 0x00552F18
+	// Token: 0x06012AE5 RID: 76517 RVA: 0x0057FB18 File Offset: 0x0057DD18
 	public RoleDevModel()
 	{
 		this.HotRoleDataListInternal = new List<RoleDisplayModelBase>();
 	}
 
-	// Token: 0x060150E6 RID: 86246 RVA: 0x00554D38 File Offset: 0x00552F38
+	// Token: 0x06012AE6 RID: 76518 RVA: 0x0057FB38 File Offset: 0x0057DD38
 	public void UpdateRoleDevConfig(RoleDevelopConfigs configs)
 	{
 		RepeatedField<RoleDevPropsConfig> devPropsList = configs.DevPropsList;
@@ -55,14 +55,14 @@ public class RoleDevModel : ModelBase
 		}
 	}
 
-	// Token: 0x060150E7 RID: 86247 RVA: 0x00554DAF File Offset: 0x00552FAF
+	// Token: 0x06012AE7 RID: 76519 RVA: 0x0057FBAF File Offset: 0x0057DDAF
 	public void UpdateDevTargetRoleId(int roleId)
 	{
 		this.DevTargetRoleIdInternal = roleId;
 	}
 
-	// Token: 0x17001BD1 RID: 7121
-	// (get) Token: 0x060150E8 RID: 86248 RVA: 0x00554DB8 File Offset: 0x00552FB8
+	// Token: 0x17001C29 RID: 7209
+	// (get) Token: 0x06012AE8 RID: 76520 RVA: 0x0057FBB8 File Offset: 0x0057DDB8
 	public int DevTargetRoleId
 	{
 		get
@@ -71,7 +71,7 @@ public class RoleDevModel : ModelBase
 		}
 	}
 
-	// Token: 0x060150E9 RID: 86249 RVA: 0x00554DC0 File Offset: 0x00552FC0
+	// Token: 0x06012AE9 RID: 76521 RVA: 0x0057FBC0 File Offset: 0x0057DDC0
 	[NullableContext(2)]
 	public IRoleDevProsConfig GetRoleDevPropsConfig(int configId)
 	{
@@ -85,8 +85,8 @@ public class RoleDevModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x17001BD2 RID: 7122
-	// (get) Token: 0x060150EA RID: 86250 RVA: 0x00554E24 File Offset: 0x00553024
+	// Token: 0x17001C2A RID: 7210
+	// (get) Token: 0x06012AEA RID: 76522 RVA: 0x0057FC24 File Offset: 0x0057DE24
 	public bool IsConfigDataInitialized
 	{
 		get
@@ -95,8 +95,8 @@ public class RoleDevModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001BD3 RID: 7123
-	// (get) Token: 0x060150EB RID: 86251 RVA: 0x00554E41 File Offset: 0x00553041
+	// Token: 0x17001C2B RID: 7211
+	// (get) Token: 0x06012AEB RID: 76523 RVA: 0x0057FC41 File Offset: 0x0057DE41
 	public List<RoleDisplayModelBase> HotRoleDataList
 	{
 		get
@@ -105,8 +105,8 @@ public class RoleDevModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001BD4 RID: 7124
-	// (get) Token: 0x060150EC RID: 86252 RVA: 0x00554E49 File Offset: 0x00553049
+	// Token: 0x17001C2C RID: 7212
+	// (get) Token: 0x06012AEC RID: 76524 RVA: 0x0057FC49 File Offset: 0x0057DE49
 	public static RoleDevModel Instance
 	{
 		get
@@ -115,7 +115,7 @@ public class RoleDevModel : ModelBase
 		}
 	}
 
-	// Token: 0x060150ED RID: 86253 RVA: 0x00554E50 File Offset: 0x00553050
+	// Token: 0x06012AED RID: 76525 RVA: 0x0057FC50 File Offset: 0x0057DE50
 	public static RoleDevModel GetOrCreateInstance()
 	{
 		if (RoleDevModel._Instance == null)
@@ -125,7 +125,7 @@ public class RoleDevModel : ModelBase
 		return RoleDevModel._Instance;
 	}
 
-	// Token: 0x060150EE RID: 86254 RVA: 0x00554E64 File Offset: 0x00553064
+	// Token: 0x06012AEE RID: 76526 RVA: 0x0057FC64 File Offset: 0x0057DE64
 	public static bool CreateInstance()
 	{
 		if (RoleDevModel._Instance != null)
@@ -136,33 +136,33 @@ public class RoleDevModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060150EF RID: 86255 RVA: 0x00554E7A File Offset: 0x0055307A
+	// Token: 0x06012AEF RID: 76527 RVA: 0x0057FC7A File Offset: 0x0057DE7A
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060150F0 RID: 86256 RVA: 0x00554E7C File Offset: 0x0055307C
+	// Token: 0x06012AF0 RID: 76528 RVA: 0x0057FC7C File Offset: 0x0057DE7C
 	public static void ResetStaticDefaultValue()
 	{
 		RoleDevModel._Instance = null;
 	}
 
-	// Token: 0x060150F1 RID: 86257 RVA: 0x00554E84 File Offset: 0x00553084
+	// Token: 0x06012AF1 RID: 76529 RVA: 0x0057FC84 File Offset: 0x0057DE84
 	static RoleDevModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(RoleDevModel.CreateStaticDefaultValue), new Action(RoleDevModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04009E2F RID: 40495
+	// Token: 0x0400A218 RID: 41496
 	private readonly List<RoleDisplayModelBase> HotRoleDataListInternal;
 
-	// Token: 0x04009E30 RID: 40496
+	// Token: 0x0400A219 RID: 41497
 	private int DevTargetRoleIdInternal;
 
-	// Token: 0x04009E31 RID: 40497
+	// Token: 0x0400A21A RID: 41498
 	private string VersionInternal = string.Empty;
 
-	// Token: 0x04009E32 RID: 40498
+	// Token: 0x0400A21B RID: 41499
 	[Nullable(2)]
 	private static RoleDevModel _Instance;
 }

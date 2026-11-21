@@ -1,21 +1,21 @@
 ﻿using System;
 using CSharpScript.Game.Input;
 
-// Token: 0x020017DD RID: 6109
+// Token: 0x02000C96 RID: 3222
 public interface ICheckKeyCondition : IBaseCheckConditionInfo
 {
-	// Token: 0x17000F13 RID: 3859
-	// (get) Token: 0x0600B28F RID: 45711
-	// (set) Token: 0x0600B290 RID: 45712
+	// Token: 0x17000F36 RID: 3894
+	// (get) Token: 0x06008678 RID: 34424
+	// (set) Token: 0x06008679 RID: 34425
 	EInputAction ActionKey { get; set; }
 
-	// Token: 0x17000F14 RID: 3860
-	// (get) Token: 0x0600B291 RID: 45713
-	// (set) Token: 0x0600B292 RID: 45714
+	// Token: 0x17000F37 RID: 3895
+	// (get) Token: 0x0600867A RID: 34426
+	// (set) Token: 0x0600867B RID: 34427
 	EComboKeyType ActionType { get; set; }
 
-	// Token: 0x17000F15 RID: 3861
-	// (get) Token: 0x0600B293 RID: 45715
-	// (set) Token: 0x0600B294 RID: 45716
+	// Token: 0x17000F38 RID: 3896
+	// (get) Token: 0x0600867C RID: 34428
+	// (set) Token: 0x0600867D RID: 34429
 	float? HoldTime { get; set; }
 }

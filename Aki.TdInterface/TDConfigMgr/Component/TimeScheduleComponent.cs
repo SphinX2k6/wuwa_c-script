@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008C4 RID: 2244
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000967 RID: 2407
 	public class TimeScheduleComponent : IComponentBase
 	{
-		// Token: 0x06003283 RID: 12931 RVA: 0x000818BC File Offset: 0x0007FABC
+		// Token: 0x060035BF RID: 13759 RVA: 0x00088DA4 File Offset: 0x00086FA4
 		private TimeScheduleComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003284 RID: 12932 RVA: 0x000818F4 File Offset: 0x0007FAF4
+		// Token: 0x060035C0 RID: 13760 RVA: 0x00088DDC File Offset: 0x00086FDC
 		public static TimeScheduleComponent Create([Nullable(2)] TimeScheduleComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003285 RID: 12933 RVA: 0x00081907 File Offset: 0x0007FB07
+		// Token: 0x060035C1 RID: 13761 RVA: 0x00088DEF File Offset: 0x00086FEF
 		public static TimeScheduleComponent CreateFromSetValue([Nullable(2)] TimeScheduleComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003286 RID: 12934 RVA: 0x0008191A File Offset: 0x0007FB1A
+		// Token: 0x060035C2 RID: 13762 RVA: 0x00088E02 File Offset: 0x00087002
 		public new TimeScheduleComponent_SetValue ToSetValue()
 		{
 			return new TimeScheduleComponent_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000D83 RID: 3459
-		// (get) Token: 0x06003287 RID: 12935 RVA: 0x00081948 File Offset: 0x0007FB48
-		// (set) Token: 0x06003288 RID: 12936 RVA: 0x00081982 File Offset: 0x0007FB82
+		// Token: 0x17000E4C RID: 3660
+		// (get) Token: 0x060035C3 RID: 13763 RVA: 0x00088E30 File Offset: 0x00087030
+		// (set) Token: 0x060035C4 RID: 13764 RVA: 0x00088E6A File Offset: 0x0008706A
 		public override bool? Disabled
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D84 RID: 3460
-		// (get) Token: 0x06003289 RID: 12937 RVA: 0x00081990 File Offset: 0x0007FB90
-		// (set) Token: 0x0600328A RID: 12938 RVA: 0x000819BA File Offset: 0x0007FBBA
+		// Token: 0x17000E4D RID: 3661
+		// (get) Token: 0x060035C5 RID: 13765 RVA: 0x00088E78 File Offset: 0x00087078
+		// (set) Token: 0x060035C6 RID: 13766 RVA: 0x00088EA2 File Offset: 0x000870A2
 		public override bool? EdIsLocked
 		{
 			get
@@ -105,9 +103,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D85 RID: 3461
-		// (get) Token: 0x0600328B RID: 12939 RVA: 0x000819C8 File Offset: 0x0007FBC8
-		// (set) Token: 0x0600328C RID: 12940 RVA: 0x00081A5B File Offset: 0x0007FC5B
+		// Token: 0x17000E4E RID: 3662
+		// (get) Token: 0x060035C7 RID: 13767 RVA: 0x00088EB0 File Offset: 0x000870B0
+		// (set) Token: 0x060035C8 RID: 13768 RVA: 0x00088F43 File Offset: 0x00087143
 		public virtual List<ITimeScheduleConfig> TimeScheduleConfigs
 		{
 			get
@@ -143,18 +141,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04002126 RID: 8486
+		// Token: 0x04002338 RID: 9016
 		[Nullable(2)]
 		protected new TimeScheduleComponent FbInstance;
 
-		// Token: 0x04002127 RID: 8487
+		// Token: 0x04002339 RID: 9017
 		[Nullable(2)]
 		protected new TimeScheduleComponent_SetValue PocoInterface;
 
-		// Token: 0x04002128 RID: 8488
+		// Token: 0x0400233A RID: 9018
 		private List<ITimeScheduleConfig> _TimeScheduleConfigsCache;
 
-		// Token: 0x04002129 RID: 8489
+		// Token: 0x0400233B RID: 9019
 		private bool _TimeScheduleConfigsInited;
 	}
 }

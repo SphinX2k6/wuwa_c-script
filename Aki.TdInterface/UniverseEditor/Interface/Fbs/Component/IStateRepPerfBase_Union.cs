@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020059B0 RID: 22960
+	// Token: 0x02005FBD RID: 24509
 	public enum IStateRepPerfBase_Union : byte
 	{
-		// Token: 0x0400EFBF RID: 61375
+		// Token: 0x0400FCB4 RID: 64692
 		NONE,
-		// Token: 0x0400EFC0 RID: 61376
+		// Token: 0x0400FCB5 RID: 64693
 		IStateRepPerfBase,
-		// Token: 0x0400EFC1 RID: 61377
+		// Token: 0x0400FCB6 RID: 64694
 		IStateRepPerfSkillId,
-		// Token: 0x0400EFC2 RID: 61378
+		// Token: 0x0400FCB7 RID: 64695
 		IStateRepPerfMontagePath,
-		// Token: 0x0400EFC3 RID: 61379
+		// Token: 0x0400FCB8 RID: 64696
 		IStateRepPerfEffects
 	}
 }

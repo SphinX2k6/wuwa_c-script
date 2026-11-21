@@ -1,30 +1,30 @@
 ﻿using System;
 
-// Token: 0x020026FE RID: 9982
+// Token: 0x02001BE9 RID: 7145
 public class DangoMatchRoleData : IDangoMatchRoleData
 {
-	// Token: 0x17001AD7 RID: 6871
-	// (get) Token: 0x0601478A RID: 83850 RVA: 0x0052BBF0 File Offset: 0x00529DF0
-	// (set) Token: 0x0601478B RID: 83851 RVA: 0x0052BBF8 File Offset: 0x00529DF8
+	// Token: 0x17001B0F RID: 6927
+	// (get) Token: 0x06011C6C RID: 72812 RVA: 0x0053A90C File Offset: 0x00538B0C
+	// (set) Token: 0x06011C6D RID: 72813 RVA: 0x0053A914 File Offset: 0x00538B14
 	public int GroupMatchId { get; set; }
 
-	// Token: 0x17001AD8 RID: 6872
-	// (get) Token: 0x0601478C RID: 83852 RVA: 0x0052BC01 File Offset: 0x00529E01
-	// (set) Token: 0x0601478D RID: 83853 RVA: 0x0052BC09 File Offset: 0x00529E09
+	// Token: 0x17001B10 RID: 6928
+	// (get) Token: 0x06011C6E RID: 72814 RVA: 0x0053A91D File Offset: 0x00538B1D
+	// (set) Token: 0x06011C6F RID: 72815 RVA: 0x0053A925 File Offset: 0x00538B25
 	public int DangoId { get; set; }
 
-	// Token: 0x17001AD9 RID: 6873
-	// (get) Token: 0x0601478E RID: 83854 RVA: 0x0052BC12 File Offset: 0x00529E12
-	// (set) Token: 0x0601478F RID: 83855 RVA: 0x0052BC1A File Offset: 0x00529E1A
+	// Token: 0x17001B11 RID: 6929
+	// (get) Token: 0x06011C70 RID: 72816 RVA: 0x0053A92E File Offset: 0x00538B2E
+	// (set) Token: 0x06011C71 RID: 72817 RVA: 0x0053A936 File Offset: 0x00538B36
 	public bool IsMatchFinished { get; set; }
 
-	// Token: 0x17001ADA RID: 6874
-	// (get) Token: 0x06014790 RID: 83856 RVA: 0x0052BC23 File Offset: 0x00529E23
-	// (set) Token: 0x06014791 RID: 83857 RVA: 0x0052BC2B File Offset: 0x00529E2B
+	// Token: 0x17001B12 RID: 6930
+	// (get) Token: 0x06011C72 RID: 72818 RVA: 0x0053A93F File Offset: 0x00538B3F
+	// (set) Token: 0x06011C73 RID: 72819 RVA: 0x0053A947 File Offset: 0x00538B47
 	public bool IsPromote { get; set; }
 
-	// Token: 0x17001ADB RID: 6875
-	// (get) Token: 0x06014792 RID: 83858 RVA: 0x0052BC34 File Offset: 0x00529E34
-	// (set) Token: 0x06014793 RID: 83859 RVA: 0x0052BC3C File Offset: 0x00529E3C
+	// Token: 0x17001B13 RID: 6931
+	// (get) Token: 0x06011C74 RID: 72820 RVA: 0x0053A950 File Offset: 0x00538B50
+	// (set) Token: 0x06011C75 RID: 72821 RVA: 0x0053A958 File Offset: 0x00538B58
 	public bool IsBasicGroupMatch { get; set; }
 }

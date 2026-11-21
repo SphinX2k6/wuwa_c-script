@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Reflection;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200008C RID: 140
+// Token: 0x0200008E RID: 142
 [NullableContext(1)]
 [Nullable(0)]
 public class Event<[Nullable(0)] TName, [Nullable(0)] TType> : IClear where TName : Enum where TType : Delegate
 {
-	// Token: 0x06000432 RID: 1074 RVA: 0x00018A7C File Offset: 0x00016C7C
+	// Token: 0x06000473 RID: 1139 RVA: 0x00019274 File Offset: 0x00017474
 	private void AddHoldKeyValueToMapInternal<[Nullable(0)] T>(TName name, object holdKey, object objectKey, Dictionary<TName, Dictionary<object, object>> keyMap) where T : TName
 	{
 		Dictionary<object, object> dictionary;
@@ -20,7 +19,7 @@ public class Event<[Nullable(0)] TName, [Nullable(0)] TType> : IClear where TNam
 		dictionary[objectKey] = holdKey;
 	}
 
-	// Token: 0x06000433 RID: 1075 RVA: 0x00018AAC File Offset: 0x00016CAC
+	// Token: 0x06000474 RID: 1140 RVA: 0x000192A4 File Offset: 0x000174A4
 	private void RemoveHoldKeyValueFromMapInternal(TName name, object holdKey, Dictionary<TName, Dictionary<object, object>> keyMap)
 	{
 		Dictionary<object, object> dictionary;
@@ -35,7 +34,7 @@ public class Event<[Nullable(0)] TName, [Nullable(0)] TType> : IClear where TNam
 		}
 	}
 
-	// Token: 0x06000434 RID: 1076 RVA: 0x00018AE0 File Offset: 0x00016CE0
+	// Token: 0x06000475 RID: 1141 RVA: 0x000192D8 File Offset: 0x000174D8
 	[return: Nullable(2)]
 	private object GetHoldKeyValueOfMapInternal(TName name, object holdKey, Dictionary<TName, Dictionary<object, object>> keyMap)
 	{
@@ -47,26 +46,26 @@ public class Event<[Nullable(0)] TName, [Nullable(0)] TType> : IClear where TNam
 		return dictionary.GetValueOrDefault(holdKey);
 	}
 
-	// Token: 0x06000435 RID: 1077 RVA: 0x00018B01 File Offset: 0x00016D01
+	// Token: 0x06000476 RID: 1142 RVA: 0x000192F9 File Offset: 0x000174F9
 	public void AddHoldKeyHandle<[Nullable(0)] T>(TName name, object objectKey, object handle) where T : TName
 	{
 		this.AddHoldKeyValueToMapInternal<T>(name, handle, objectKey, this.HoldKeyHandles);
 	}
 
-	// Token: 0x06000436 RID: 1078 RVA: 0x00018B12 File Offset: 0x00016D12
+	// Token: 0x06000477 RID: 1143 RVA: 0x0001930A File Offset: 0x0001750A
 	public void RemoveHoldKeyHandle(TName name, object handle)
 	{
 		this.RemoveHoldKeyValueFromMapInternal(name, handle, this.HoldKeyHandles);
 	}
 
-	// Token: 0x06000437 RID: 1079 RVA: 0x00018B22 File Offset: 0x00016D22
+	// Token: 0x06000478 RID: 1144 RVA: 0x0001931A File Offset: 0x0001751A
 	[return: Nullable(2)]
 	public object GetHoldKeyByHandle(TName name, object handle)
 	{
 		return this.GetHoldKeyValueOfMapInternal(name, handle, this.HoldKeyHandles);
 	}
 
-	// Token: 0x06000438 RID: 1080 RVA: 0x00018B34 File Offset: 0x00016D34
+	// Token: 0x06000479 RID: 1145 RVA: 0x0001932C File Offset: 0x0001752C
 	public bool Has(TName name, TType handle)
 	{
 		List<EventHandleEntry> handles;
@@ -79,31 +78,31 @@ public class Event<[Nullable(0)] TName, [Nullable(0)] TType> : IClear where TNam
 		return this.PendingAddHandles.TryGetValue(name, out handles2) && handles2.ContainsHandle(handle);
 	}
 
-	// Token: 0x06000439 RID: 1081 RVA: 0x00018B9F File Offset: 0x00016D9F
+	// Token: 0x0600047A RID: 1146 RVA: 0x00019397 File Offset: 0x00017597
 	public bool HasAny(TName name)
 	{
 		return this.Handles.ContainsKey(name) || this.PendingAddHandles.ContainsKey(name);
 	}
 
-	// Token: 0x0600043A RID: 1082 RVA: 0x00018BBD File Offset: 0x00016DBD
+	// Token: 0x0600047B RID: 1147 RVA: 0x000193B5 File Offset: 0x000175B5
 	public bool Add(TName name, TType handle)
 	{
 		return this.AddInternal(name, handle, EHandleType.Forever);
 	}
 
-	// Token: 0x0600043B RID: 1083 RVA: 0x00018BC8 File Offset: 0x00016DC8
+	// Token: 0x0600047C RID: 1148 RVA: 0x000193C0 File Offset: 0x000175C0
 	public bool Once(TName name, TType handle)
 	{
 		return this.AddInternal(name, handle, EHandleType.Once);
 	}
 
-	// Token: 0x0600043C RID: 1084 RVA: 0x00018BD3 File Offset: 0x00016DD3
+	// Token: 0x0600047D RID: 1149 RVA: 0x000193CB File Offset: 0x000175CB
 	public bool Remove(TName name, TType handle)
 	{
 		return this.IsRegistered(name, handle) && this.RemoveInternal(name, handle);
 	}
 
-	// Token: 0x0600043D RID: 1085 RVA: 0x00018BF4 File Offset: 0x00016DF4
+	// Token: 0x0600047E RID: 1150 RVA: 0x000193EC File Offset: 0x000175EC
 	private bool IsRegistered(TName name, Delegate handle)
 	{
 		List<EventHandleEntry> handles;
@@ -111,7 +110,7 @@ public class Event<[Nullable(0)] TName, [Nullable(0)] TType> : IClear where TNam
 		return (this.Handles.TryGetValue(name, out handles) && handles.ContainsHandle(handle)) || (this.PendingAddHandlesInternal != null && this.PendingAddHandlesInternal.TryGetValue(name, out handles2) && handles2.ContainsHandle(handle));
 	}
 
-	// Token: 0x0600043E RID: 1086 RVA: 0x00018C40 File Offset: 0x00016E40
+	// Token: 0x0600047F RID: 1151 RVA: 0x00019438 File Offset: 0x00017638
 	public bool ClearObject()
 	{
 		this.Handles.Clear();
@@ -130,7 +129,7 @@ public class Event<[Nullable(0)] TName, [Nullable(0)] TType> : IClear where TNam
 		return true;
 	}
 
-	// Token: 0x0600043F RID: 1087 RVA: 0x00018C94 File Offset: 0x00016E94
+	// Token: 0x06000480 RID: 1152 RVA: 0x0001948C File Offset: 0x0001768C
 	public bool ClearObject(TName name)
 	{
 		List<EventHandleEntry> list;
@@ -145,55 +144,55 @@ public class Event<[Nullable(0)] TName, [Nullable(0)] TType> : IClear where TNam
 		return true;
 	}
 
-	// Token: 0x06000440 RID: 1088 RVA: 0x00018CE0 File Offset: 0x00016EE0
+	// Token: 0x06000481 RID: 1153 RVA: 0x000194D8 File Offset: 0x000176D8
 	public bool Emit(TName name)
 	{
 		return this.EmitInternal<EventArgs>(name, default(EventArgs), default(EventArgs));
 	}
 
-	// Token: 0x06000441 RID: 1089 RVA: 0x00018D0B File Offset: 0x00016F0B
+	// Token: 0x06000482 RID: 1154 RVA: 0x00019503 File Offset: 0x00017703
 	public bool Emit<[Nullable(2)] T1>(TName name, T1 p1)
 	{
 		return this.EmitInternal<T1>(name, new EventArgs<T1>(p1), p1);
 	}
 
-	// Token: 0x06000442 RID: 1090 RVA: 0x00018D20 File Offset: 0x00016F20
+	// Token: 0x06000483 RID: 1155 RVA: 0x00019518 File Offset: 0x00017718
 	public bool Emit<[Nullable(2)] T1, [Nullable(2)] T2>(TName name, T1 p1, T2 p2)
 	{
 		return this.EmitInternal<T1>(name, new EventArgs<T1, T2>(p1, p2), p1);
 	}
 
-	// Token: 0x06000443 RID: 1091 RVA: 0x00018D36 File Offset: 0x00016F36
+	// Token: 0x06000484 RID: 1156 RVA: 0x0001952E File Offset: 0x0001772E
 	public bool Emit<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3>(TName name, T1 p1, T2 p2, T3 p3)
 	{
 		return this.EmitInternal<T1>(name, new EventArgs<T1, T2, T3>(p1, p2, p3), p1);
 	}
 
-	// Token: 0x06000444 RID: 1092 RVA: 0x00018D4E File Offset: 0x00016F4E
+	// Token: 0x06000485 RID: 1157 RVA: 0x00019546 File Offset: 0x00017746
 	public bool Emit<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3, [Nullable(2)] T4>(TName name, T1 p1, T2 p2, T3 p3, T4 p4)
 	{
 		return this.EmitInternal<T1>(name, new EventArgs<T1, T2, T3, T4>(p1, p2, p3, p4), p1);
 	}
 
-	// Token: 0x06000445 RID: 1093 RVA: 0x00018D68 File Offset: 0x00016F68
+	// Token: 0x06000486 RID: 1158 RVA: 0x00019560 File Offset: 0x00017760
 	public bool Emit<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3, [Nullable(2)] T4, [Nullable(2)] T5>(TName name, T1 p1, T2 p2, T3 p3, T4 p4, T5 p5)
 	{
 		return this.EmitInternal<T1>(name, new EventArgs<T1, T2, T3, T4, T5>(p1, p2, p3, p4, p5), p1);
 	}
 
-	// Token: 0x06000446 RID: 1094 RVA: 0x00018D84 File Offset: 0x00016F84
+	// Token: 0x06000487 RID: 1159 RVA: 0x0001957C File Offset: 0x0001777C
 	public bool Emit<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3, [Nullable(2)] T4, [Nullable(2)] T5, [Nullable(2)] T6>(TName name, T1 p1, T2 p2, T3 p3, T4 p4, T5 p5, T6 p6)
 	{
 		return this.EmitInternal<T1>(name, new EventArgs<T1, T2, T3, T4, T5, T6>(p1, p2, p3, p4, p5, p6), p1);
 	}
 
-	// Token: 0x06000447 RID: 1095 RVA: 0x00018DA4 File Offset: 0x00016FA4
+	// Token: 0x06000488 RID: 1160 RVA: 0x0001959C File Offset: 0x0001779C
 	public bool Emit<[Nullable(2)] T1, [Nullable(2)] T2, [Nullable(2)] T3, [Nullable(2)] T4, [Nullable(2)] T5, [Nullable(2)] T6, [Nullable(2)] T7>(TName name, T1 p1, T2 p2, T3 p3, T4 p4, T5 p5, T6 p6, T7 p7)
 	{
 		return this.EmitInternal<T1>(name, new EventArgs<T1, T2, T3, T4, T5, T6, T7>(p1, p2, p3, p4, p5, p6, p7), p1);
 	}
 
-	// Token: 0x06000448 RID: 1096 RVA: 0x00018DD0 File Offset: 0x00016FD0
+	// Token: 0x06000489 RID: 1161 RVA: 0x000195C8 File Offset: 0x000177C8
 	private unsafe bool EmitInternal<[Nullable(2)] T1>(TName name, IEventArgs args, [Nullable(2)] T1 conditionParam)
 	{
 		if (this.IsEmitting(name))
@@ -284,18 +283,13 @@ public class Event<[Nullable(0)] TName, [Nullable(0)] TType> : IClear where TNam
 		return true;
 	}
 
-	// Token: 0x06000449 RID: 1097 RVA: 0x00019130 File Offset: 0x00017330
+	// Token: 0x0600048A RID: 1162 RVA: 0x00019928 File Offset: 0x00017B28
 	private unsafe void ExecuteHandlesInternal<[Nullable(2)] T1>(TName name, List<EventHandleEntry> handles, [Nullable(new byte[]
 	{
 		2,
 		1
 	})] ConditionListener<T1> conditionListener, IEventArgs args, [Nullable(2)] T1 conditionParam)
 	{
-		Stat value = null;
-		if (Stat.Enable && !EventConstant.NameStateMap.TryGetValue(name, out value))
-		{
-			EventConstant.NameStateMap[name] = value;
-		}
 		foreach (EventHandleEntry eventHandleEntry in handles)
 		{
 			Delegate handle = eventHandleEntry.Handle;
@@ -311,11 +305,6 @@ public class Event<[Nullable(0)] TName, [Nullable(0)] TType> : IClear where TNam
 					{
 						this.RemoveInternal(name, handle);
 					}
-				}
-				Stat stat = null;
-				if (Stat.Enable)
-				{
-					EventConstant.HandleStatMap.TryGetValue(handle.Method, out stat);
 				}
 				try
 				{
@@ -337,7 +326,7 @@ public class Event<[Nullable(0)] TName, [Nullable(0)] TType> : IClear where TNam
 		}
 	}
 
-	// Token: 0x0600044A RID: 1098 RVA: 0x000192C0 File Offset: 0x000174C0
+	// Token: 0x0600048B RID: 1163 RVA: 0x00019A58 File Offset: 0x00017C58
 	private bool AddInternal(TName name, TType handle, EHandleType handleType)
 	{
 		Event<TName, TType>.SetupHandleStat(handle);
@@ -385,25 +374,12 @@ public class Event<[Nullable(0)] TName, [Nullable(0)] TType> : IClear where TNam
 		}
 	}
 
-	// Token: 0x0600044B RID: 1099 RVA: 0x000193E0 File Offset: 0x000175E0
+	// Token: 0x0600048C RID: 1164 RVA: 0x00019B78 File Offset: 0x00017D78
 	private static void SetupHandleStat(Delegate handle)
 	{
-		if (!Stat.Enable)
-		{
-			return;
-		}
-		MethodInfo method = handle.Method;
-		if (EventConstant.HandleStatMap.ContainsKey(method))
-		{
-			return;
-		}
-		string name = method.Name;
-		Stat value = null;
-		string.IsNullOrEmpty(name);
-		EventConstant.HandleStatMap[method] = value;
 	}
 
-	// Token: 0x0600044C RID: 1100 RVA: 0x00019424 File Offset: 0x00017624
+	// Token: 0x0600048D RID: 1165 RVA: 0x00019B88 File Offset: 0x00017D88
 	private bool DoAdd(TName name, Delegate handle, EHandleType handleType)
 	{
 		List<EventHandleEntry> list;
@@ -426,7 +402,7 @@ public class Event<[Nullable(0)] TName, [Nullable(0)] TType> : IClear where TNam
 		return true;
 	}
 
-	// Token: 0x0600044D RID: 1101 RVA: 0x0001949C File Offset: 0x0001769C
+	// Token: 0x0600048E RID: 1166 RVA: 0x00019C00 File Offset: 0x00017E00
 	private bool RemoveInternal(TName name, Delegate handle)
 	{
 		if (!this.IsEmitting(name))
@@ -473,7 +449,7 @@ public class Event<[Nullable(0)] TName, [Nullable(0)] TType> : IClear where TNam
 		}
 	}
 
-	// Token: 0x0600044E RID: 1102 RVA: 0x0001958C File Offset: 0x0001778C
+	// Token: 0x0600048F RID: 1167 RVA: 0x00019CF0 File Offset: 0x00017EF0
 	private bool DoRemove(TName name, Delegate handle)
 	{
 		List<EventHandleEntry> list;
@@ -494,13 +470,13 @@ public class Event<[Nullable(0)] TName, [Nullable(0)] TType> : IClear where TNam
 		return true;
 	}
 
-	// Token: 0x0600044F RID: 1103 RVA: 0x000195F5 File Offset: 0x000177F5
+	// Token: 0x06000490 RID: 1168 RVA: 0x00019D59 File Offset: 0x00017F59
 	public bool IsEmitting(TName name)
 	{
 		return this.EmittingMaskSet.Contains(name);
 	}
 
-	// Token: 0x06000450 RID: 1104 RVA: 0x00019603 File Offset: 0x00017803
+	// Token: 0x06000491 RID: 1169 RVA: 0x00019D67 File Offset: 0x00017F67
 	private void SetEmitting(TName name, bool isEmitting)
 	{
 		if (isEmitting)
@@ -511,8 +487,8 @@ public class Event<[Nullable(0)] TName, [Nullable(0)] TType> : IClear where TNam
 		this.EmittingMaskSet.Remove(name);
 	}
 
-	// Token: 0x17000095 RID: 149
-	// (get) Token: 0x06000451 RID: 1105 RVA: 0x00019623 File Offset: 0x00017823
+	// Token: 0x170000A7 RID: 167
+	// (get) Token: 0x06000492 RID: 1170 RVA: 0x00019D87 File Offset: 0x00017F87
 	private Dictionary<TName, List<EventHandleEntry>> PendingAddHandles
 	{
 		get
@@ -525,8 +501,8 @@ public class Event<[Nullable(0)] TName, [Nullable(0)] TType> : IClear where TNam
 		}
 	}
 
-	// Token: 0x17000096 RID: 150
-	// (get) Token: 0x06000452 RID: 1106 RVA: 0x0001963E File Offset: 0x0001783E
+	// Token: 0x170000A8 RID: 168
+	// (get) Token: 0x06000493 RID: 1171 RVA: 0x00019DA2 File Offset: 0x00017FA2
 	private Dictionary<TName, List<Delegate>> PendingRemoveHandles
 	{
 		get
@@ -539,14 +515,14 @@ public class Event<[Nullable(0)] TName, [Nullable(0)] TType> : IClear where TNam
 		}
 	}
 
-	// Token: 0x06000453 RID: 1107 RVA: 0x0001965C File Offset: 0x0001785C
+	// Token: 0x06000494 RID: 1172 RVA: 0x00019DC0 File Offset: 0x00017FC0
 	private bool CheckInPendingRemoveHandles(TName name, Delegate handle)
 	{
 		List<Delegate> valueOrDefault = this.PendingRemoveHandles.GetValueOrDefault(name);
 		return valueOrDefault != null && valueOrDefault.Contains(handle);
 	}
 
-	// Token: 0x06000454 RID: 1108 RVA: 0x00019684 File Offset: 0x00017884
+	// Token: 0x06000495 RID: 1173 RVA: 0x00019DE8 File Offset: 0x00017FE8
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -566,7 +542,7 @@ public class Event<[Nullable(0)] TName, [Nullable(0)] TType> : IClear where TNam
 		return null;
 	}
 
-	// Token: 0x06000455 RID: 1109 RVA: 0x000196B0 File Offset: 0x000178B0
+	// Token: 0x06000496 RID: 1174 RVA: 0x00019E14 File Offset: 0x00018014
 	public bool HasWithCondition<[Nullable(2)] T1>(TName name, Delegate handle, T1 param)
 	{
 		ConditionListener<T1> conditionListener = this.GetConditionListener<T1>(name);
@@ -581,19 +557,19 @@ public class Event<[Nullable(0)] TName, [Nullable(0)] TType> : IClear where TNam
 		return conditionListener.IsInPendingAdd(param, handle);
 	}
 
-	// Token: 0x06000456 RID: 1110 RVA: 0x000196E8 File Offset: 0x000178E8
+	// Token: 0x06000497 RID: 1175 RVA: 0x00019E4C File Offset: 0x0001804C
 	public bool AddWithCondition<[Nullable(2)] T1>(TName name, Delegate handle, T1 conditionParam)
 	{
 		return this.AddWithConditionInternal<T1>(name, handle, EHandleType.Forever, conditionParam);
 	}
 
-	// Token: 0x06000457 RID: 1111 RVA: 0x000196F4 File Offset: 0x000178F4
+	// Token: 0x06000498 RID: 1176 RVA: 0x00019E58 File Offset: 0x00018058
 	public bool OnceWithCondition<[Nullable(2)] T1>(TName name, Delegate handle, T1 conditionParam)
 	{
 		return this.AddWithConditionInternal<T1>(name, handle, EHandleType.Once, conditionParam);
 	}
 
-	// Token: 0x06000458 RID: 1112 RVA: 0x00019700 File Offset: 0x00017900
+	// Token: 0x06000499 RID: 1177 RVA: 0x00019E64 File Offset: 0x00018064
 	private bool AddWithConditionInternal<[Nullable(2)] T1>(TName name, Delegate handle, EHandleType handleType, T1 param)
 	{
 		Event<TName, TType>.SetupHandleStat(handle);
@@ -635,7 +611,7 @@ public class Event<[Nullable(0)] TName, [Nullable(0)] TType> : IClear where TNam
 		return flag2;
 	}
 
-	// Token: 0x06000459 RID: 1113 RVA: 0x000197D4 File Offset: 0x000179D4
+	// Token: 0x0600049A RID: 1178 RVA: 0x00019F38 File Offset: 0x00018138
 	private bool DoAddWithCondition<[Nullable(2)] T1>(TName name, ConditionListener<T1> conditionListener, Delegate handle, EHandleType handleType, T1 param)
 	{
 		if (conditionListener.Has(param, handle))
@@ -652,14 +628,14 @@ public class Event<[Nullable(0)] TName, [Nullable(0)] TType> : IClear where TNam
 		return true;
 	}
 
-	// Token: 0x0600045A RID: 1114 RVA: 0x00019828 File Offset: 0x00017A28
+	// Token: 0x0600049B RID: 1179 RVA: 0x00019F8C File Offset: 0x0001818C
 	public bool RemoveWithCondition<[Nullable(2)] T1>(TName name, Delegate handle, T1 param)
 	{
 		ConditionListener<T1> conditionListener = this.GetConditionListener<T1>(name);
 		return conditionListener != null && (conditionListener.Has(param, handle) || conditionListener.IsInPendingAdd(param, handle)) && this.RemoveWithConditionInternal<T1>(name, handle, param);
 	}
 
-	// Token: 0x0600045B RID: 1115 RVA: 0x00019860 File Offset: 0x00017A60
+	// Token: 0x0600049C RID: 1180 RVA: 0x00019FC4 File Offset: 0x000181C4
 	private bool RemoveWithConditionInternal<[Nullable(2)] T1>(TName name, Delegate handle, T1 param)
 	{
 		if (!this.IsEmitting(name))
@@ -698,7 +674,7 @@ public class Event<[Nullable(0)] TName, [Nullable(0)] TType> : IClear where TNam
 		return flag2;
 	}
 
-	// Token: 0x0600045C RID: 1116 RVA: 0x00019908 File Offset: 0x00017B08
+	// Token: 0x0600049D RID: 1181 RVA: 0x0001A06C File Offset: 0x0001826C
 	private bool DoRemoveWithCondition<[Nullable(2)] T1>(TName name, T1 param, Delegate handle)
 	{
 		ConditionListener<T1> conditionListener = this.GetConditionListener<T1>(name);
@@ -725,10 +701,10 @@ public class Event<[Nullable(0)] TName, [Nullable(0)] TType> : IClear where TNam
 		return flag;
 	}
 
-	// Token: 0x040003E9 RID: 1001
+	// Token: 0x040003F7 RID: 1015
 	private readonly Dictionary<TName, List<EventHandleEntry>> Handles = new Dictionary<TName, List<EventHandleEntry>>();
 
-	// Token: 0x040003EA RID: 1002
+	// Token: 0x040003F8 RID: 1016
 	[Nullable(new byte[]
 	{
 		2,
@@ -737,7 +713,7 @@ public class Event<[Nullable(0)] TName, [Nullable(0)] TType> : IClear where TNam
 	})]
 	private Dictionary<TName, List<EventHandleEntry>> PendingAddHandlesInternal;
 
-	// Token: 0x040003EB RID: 1003
+	// Token: 0x040003F9 RID: 1017
 	[Nullable(new byte[]
 	{
 		2,
@@ -747,12 +723,12 @@ public class Event<[Nullable(0)] TName, [Nullable(0)] TType> : IClear where TNam
 	})]
 	private Dictionary<TName, List<Delegate>> PendingRemoveHandlesInternal;
 
-	// Token: 0x040003EC RID: 1004
+	// Token: 0x040003FA RID: 1018
 	private readonly HashSet<TName> EmittingMaskSet = new HashSet<TName>();
 
-	// Token: 0x040003ED RID: 1005
+	// Token: 0x040003FB RID: 1019
 	private readonly Dictionary<TName, Dictionary<object, object>> HoldKeyHandles = new Dictionary<TName, Dictionary<object, object>>();
 
-	// Token: 0x040003EE RID: 1006
+	// Token: 0x040003FC RID: 1020
 	private readonly Dictionary<TName, IConditionListener> ConditionHandles = new Dictionary<TName, IConditionListener>();
 }

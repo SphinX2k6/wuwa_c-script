@@ -14,12 +14,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 {
-	// Token: 0x02007223 RID: 29219
+	// Token: 0x020062D8 RID: 25304
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneItemProgressControlComponent : EntityComponent
 	{
-		// Token: 0x06047951 RID: 293201 RVA: 0x01249DE4 File Offset: 0x01247FE4
+		// Token: 0x0603D296 RID: 250518 RVA: 0x011A2F48 File Offset: 0x011A1148
 		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x06047952 RID: 293202 RVA: 0x01249EA8 File Offset: 0x012480A8
+		// Token: 0x0603D297 RID: 250519 RVA: 0x011A300C File Offset: 0x011A120C
 		protected override bool OnStart()
 		{
 			this.StateComp = base.Entity.GetComponent<SceneItemStateComponent>();
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x06047953 RID: 293203 RVA: 0x0124A000 File Offset: 0x01248200
+		// Token: 0x0603D298 RID: 250520 RVA: 0x011A3164 File Offset: 0x011A1364
 		protected override void OnActivate()
 		{
 			this.DisableProgressControl("[SceneItemProgressControlComponent.OnActivate] 初始停止进度控制");
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.CheckProgressDataAndChangeState();
 		}
 
-		// Token: 0x06047954 RID: 293204 RVA: 0x0124A0A0 File Offset: 0x012482A0
+		// Token: 0x0603D299 RID: 250521 RVA: 0x011A3204 File Offset: 0x011A1404
 		protected override bool OnEnd()
 		{
 			switch (this.Config.Control.Type)
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x06047955 RID: 293205 RVA: 0x0124A1E0 File Offset: 0x012483E0
+		// Token: 0x0603D29A RID: 250522 RVA: 0x011A3344 File Offset: 0x011A1544
 		protected override void OnTick(float delta)
 		{
 			switch (this.Config.Control.Type)
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x06047956 RID: 293206 RVA: 0x0124A238 File Offset: 0x01248438
+		// Token: 0x0603D29B RID: 250523 RVA: 0x011A339C File Offset: 0x011A159C
 		private void HandleUpdateState(int stateId, bool isReady)
 		{
 			if (stateId == GameplayTagDefine.EGameplayTagId["关卡.Common.状态.常态"])
@@ -206,7 +206,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x06047957 RID: 293207 RVA: 0x0124A311 File Offset: 0x01248511
+		// Token: 0x0603D29C RID: 250524 RVA: 0x011A3475 File Offset: 0x011A1675
 		private void CheckStateAndToggleControl()
 		{
 			if (this.StateComp.IsInState(SceneItemStateComponent.ESceneItemState.Active))
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.DisableProgressControl("[SceneItemProgressControlComponent.HandleUpdateState] 状态未激活, 停止进度控制");
 		}
 
-		// Token: 0x06047958 RID: 293208 RVA: 0x0124A334 File Offset: 0x01248534
+		// Token: 0x0603D29D RID: 250525 RVA: 0x011A3498 File Offset: 0x011A1698
 		private void RequestProgressFinish()
 		{
 			ProgressBarFinishRequest progressBarFinishRequest = ProgressBarFinishRequest.Create();
@@ -225,7 +225,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			Net.Instance.Call(ERequestMessageId.ProgressBarFinishRequest, progressBarFinishRequest, null, 0);
 		}
 
-		// Token: 0x06047959 RID: 293209 RVA: 0x0124A36C File Offset: 0x0124856C
+		// Token: 0x0603D29E RID: 250526 RVA: 0x011A34D0 File Offset: 0x011A16D0
 		private void CheckProgressDataAndChangeState()
 		{
 			IProgressBarControl control = this.Config.Control;
@@ -236,13 +236,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x0604795A RID: 293210 RVA: 0x0124A3C3 File Offset: 0x012485C3
+		// Token: 0x0603D29F RID: 250527 RVA: 0x011A3527 File Offset: 0x011A1727
 		private bool IsProgressControlEnabled()
 		{
 			return this.DisableHandle == null;
 		}
 
-		// Token: 0x0604795B RID: 293211 RVA: 0x0124A3D3 File Offset: 0x012485D3
+		// Token: 0x0603D2A0 RID: 250528 RVA: 0x011A3537 File Offset: 0x011A1737
 		private void EnableProgressControl()
 		{
 			if (!this.IsProgressControlEnabled() && base.Enable(new int?(this.DisableHandle.Value), "SceneItemProgressControlComponent.EnableProgressControl"))
@@ -252,7 +252,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x0604795C RID: 293212 RVA: 0x0124A40D File Offset: 0x0124860D
+		// Token: 0x0603D2A1 RID: 250529 RVA: 0x011A3571 File Offset: 0x011A1771
 		private void DisableProgressControl(string reason)
 		{
 			if (this.IsProgressControlEnabled())
@@ -262,7 +262,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x0604795D RID: 293213 RVA: 0x0124A430 File Offset: 0x01248630
+		// Token: 0x0603D2A2 RID: 250530 RVA: 0x011A3594 File Offset: 0x011A1794
 		private void OnProgressControlEnableChange(bool isEnable)
 		{
 			IProgressBarControl control = this.Config.Control;
@@ -307,7 +307,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			EventSystem.Instance.Emit<Entity, bool, SceneItemProgressControlComponent.TProgressData>(EEventName.OnAnyProgressControlEnableStateChange, base.Entity, isEnable, this.ProgressData);
 		}
 
-		// Token: 0x0604795E RID: 293214 RVA: 0x0124A4D8 File Offset: 0x012486D8
+		// Token: 0x0603D2A3 RID: 250531 RVA: 0x011A363C File Offset: 0x011A183C
 		private void OnProgressDataChanged()
 		{
 			foreach (Action<SceneItemProgressControlComponent.TProgressData> action in this.ProgressDataChangedCallbackSet)
@@ -319,7 +319,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x0604795F RID: 293215 RVA: 0x0124A534 File Offset: 0x01248734
+		// Token: 0x0603D2A4 RID: 250532 RVA: 0x011A3698 File Offset: 0x011A1898
 		public bool AddProgressDataChangedCallback(Action<SceneItemProgressControlComponent.TProgressData> callback)
 		{
 			if (this.ProgressDataChangedCallbackSet == null)
@@ -330,20 +330,20 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x06047960 RID: 293216 RVA: 0x0124A54E File Offset: 0x0124874E
+		// Token: 0x0603D2A5 RID: 250533 RVA: 0x011A36B2 File Offset: 0x011A18B2
 		public bool RemoveProgressDataChangedCallback(Action<SceneItemProgressControlComponent.TProgressData> callback)
 		{
 			return this.ProgressDataChangedCallbackSet != null && this.ProgressDataChangedCallbackSet.Remove(callback);
 		}
 
-		// Token: 0x06047961 RID: 293217 RVA: 0x0124A566 File Offset: 0x01248766
+		// Token: 0x0603D2A6 RID: 250534 RVA: 0x011A36CA File Offset: 0x011A18CA
 		[NullableContext(2)]
 		public SceneItemProgressControlComponent.TProgressData GetProgressData()
 		{
 			return this.ProgressData;
 		}
 
-		// Token: 0x06047962 RID: 293218 RVA: 0x0124A570 File Offset: 0x01248770
+		// Token: 0x0603D2A7 RID: 250535 RVA: 0x011A36D4 File Offset: 0x011A18D4
 		private void InitProgressData()
 		{
 			IProgressBarControl control = this.Config.Control;
@@ -374,7 +374,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x06047963 RID: 293219 RVA: 0x0124A618 File Offset: 0x01248818
+		// Token: 0x0603D2A8 RID: 250536 RVA: 0x011A377C File Offset: 0x011A197C
 		private void OnPlayerOverlapStrategicArea(bool isEnter)
 		{
 			IProgressBarControl control = this.Config.Control;
@@ -390,7 +390,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.UpdateStrategicAreaState();
 		}
 
-		// Token: 0x06047964 RID: 293220 RVA: 0x0124A65C File Offset: 0x0124885C
+		// Token: 0x0603D2A9 RID: 250537 RVA: 0x011A37C0 File Offset: 0x011A19C0
 		private void OnEntityOverlapStrategicArea(bool isEnter, EntityHandle entity)
 		{
 			IProgressBarControl control = this.Config.Control;
@@ -441,7 +441,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.UpdateStrategicAreaState();
 		}
 
-		// Token: 0x06047965 RID: 293221 RVA: 0x0124A72A File Offset: 0x0124892A
+		// Token: 0x0603D2AA RID: 250538 RVA: 0x011A388E File Offset: 0x011A1A8E
 		private void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle handle)
 		{
 			if (!this.EnemyInStrategicArea.Contains(handle))
@@ -451,7 +451,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.OnEntityOverlapStrategicArea(false, handle);
 		}
 
-		// Token: 0x06047966 RID: 293222 RVA: 0x0124A744 File Offset: 0x01248944
+		// Token: 0x0603D2AB RID: 250539 RVA: 0x011A38A8 File Offset: 0x011A1AA8
 		private int? GetPerformTagByStrategicAreaState(SceneItemProgressControlComponent.EStrategicAreaState state, ECaptureStateType performType = ECaptureStateType.Default)
 		{
 			if (performType == ECaptureStateType.Default)
@@ -483,7 +483,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return null;
 		}
 
-		// Token: 0x06047967 RID: 293223 RVA: 0x0124A818 File Offset: 0x01248A18
+		// Token: 0x0603D2AC RID: 250540 RVA: 0x011A397C File Offset: 0x011A1B7C
 		private float GetSpeedByStrategicAreaState(SceneItemProgressControlComponent.EStrategicAreaState state)
 		{
 			IProgressBarControl control = this.Config.Control;
@@ -529,7 +529,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return 0f;
 		}
 
-		// Token: 0x06047968 RID: 293224 RVA: 0x0124A8DC File Offset: 0x01248ADC
+		// Token: 0x0603D2AD RID: 250541 RVA: 0x011A3A40 File Offset: 0x011A1C40
 		private void UpdateStrategicAreaState()
 		{
 			IProgressBarControl control = this.Config.Control;
@@ -662,7 +662,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x06047969 RID: 293225 RVA: 0x0124AC20 File Offset: 0x01248E20
+		// Token: 0x0603D2AE RID: 250542 RVA: 0x011A3D84 File Offset: 0x011A1F84
 		private void UpdateStrategicAreaProgress(float delta)
 		{
 			IProgressBarControl control = this.Config.Control;
@@ -680,7 +680,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x0604796A RID: 293226 RVA: 0x0124ACC4 File Offset: 0x01248EC4
+		// Token: 0x0603D2AF RID: 250543 RVA: 0x011A3E28 File Offset: 0x011A2028
 		private void OnHit(global::HitInformation hitData)
 		{
 			if (!this.IsProgressControlEnabled())
@@ -729,7 +729,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x0604796B RID: 293227 RVA: 0x0124ADE1 File Offset: 0x01248FE1
+		// Token: 0x0603D2B0 RID: 250544 RVA: 0x011A3F45 File Offset: 0x011A2145
 		private bool MultiplayerCheck(global::HitInformation hitData)
 		{
 			if (!GameModeModel.Instance.IsMulti)
@@ -740,7 +740,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return attacker != null && attacker.Valid && hitData.Attacker.GetComponent<CharacterActorComponent>().IsAutonomousProxy;
 		}
 
-		// Token: 0x0604796C RID: 293228 RVA: 0x0124AE1C File Offset: 0x0124901C
+		// Token: 0x0603D2B1 RID: 250545 RVA: 0x011A3F80 File Offset: 0x011A2180
 		private void UpdateChargingDeviceProgress(float delta)
 		{
 			if (this.FirstTick)
@@ -767,7 +767,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x0604796D RID: 293229 RVA: 0x0124AED0 File Offset: 0x012490D0
+		// Token: 0x0603D2B2 RID: 250546 RVA: 0x011A4034 File Offset: 0x011A2234
 		private void UpdateTimedStrikeDeviceProgress(float delta)
 		{
 			ProgressBarControlComponent config = this.Config;
@@ -854,7 +854,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x0604796E RID: 293230 RVA: 0x0124B0EC File Offset: 0x012492EC
+		// Token: 0x0603D2B3 RID: 250547 RVA: 0x011A4250 File Offset: 0x011A2450
 		private void UpdateTimedStrikeDevicePerform()
 		{
 			ProgressBarControlComponent config = this.Config;
@@ -1133,7 +1133,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x0604796F RID: 293231 RVA: 0x0124B8A8 File Offset: 0x01249AA8
+		// Token: 0x0603D2B4 RID: 250548 RVA: 0x011A4A0C File Offset: 0x011A2C0C
 		private void OnStartByMatchTargetChargingDevice()
 		{
 			ProgressBarControlComponent config = this.Config;
@@ -1142,7 +1142,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			EventSystem.Instance.AddWithTarget<bool, AActor>(base.Entity, EEventName.OnActorInOutRangeLocal, new Action<bool, AActor>(this.OnActorOverlapCallback));
 		}
 
-		// Token: 0x06047970 RID: 293232 RVA: 0x0124B90C File Offset: 0x01249B0C
+		// Token: 0x0603D2B5 RID: 250549 RVA: 0x011A4A70 File Offset: 0x011A2C70
 		private void OnEndByMatchTargetChargingDevice()
 		{
 			DelegateUtils.ReleaseManualReleaseDelegate(new Action<bool, UTraceBaseElement, double, double>(this.OnAsyncTraceHitResultHandle));
@@ -1154,7 +1154,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.DisableProgressControl("[SceneItemProgressControlComponent.OnEndByMatchTargetChargingDevice] 状态变为完成, 停止进度控制");
 		}
 
-		// Token: 0x06047971 RID: 293233 RVA: 0x0124B984 File Offset: 0x01249B84
+		// Token: 0x0603D2B6 RID: 250550 RVA: 0x011A4AE8 File Offset: 0x011A2CE8
 		private void InitTraceElement(global::Vector traceEndLocation, [Nullable(new byte[]
 		{
 			2,
@@ -1244,7 +1244,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x06047972 RID: 293234 RVA: 0x0124BC0C File Offset: 0x01249E0C
+		// Token: 0x0603D2B7 RID: 250551 RVA: 0x011A4D70 File Offset: 0x011A2F70
 		private void OnActorOverlapCallback(bool isEnter, AActor actor)
 		{
 			EntityHandle entityHandle = this.ExtractEntity(actor);
@@ -1292,7 +1292,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.ActorInOutNoObstacleActors(true, actor);
 		}
 
-		// Token: 0x06047973 RID: 293235 RVA: 0x0124BCE0 File Offset: 0x01249EE0
+		// Token: 0x0603D2B8 RID: 250552 RVA: 0x011A4E44 File Offset: 0x011A3044
 		private void TickTrace()
 		{
 			if (this.InRangeMatchActor.Count == 0)
@@ -1314,7 +1314,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.TraceHandleMap[(double)traceHandle.Index] = new ValueTuple<double, TraceHandle>((double)this.CurTraceIndex, traceHandle);
 		}
 
-		// Token: 0x06047974 RID: 293236 RVA: 0x0124BDB4 File Offset: 0x01249FB4
+		// Token: 0x0603D2B9 RID: 250553 RVA: 0x011A4F18 File Offset: 0x011A3118
 		[NullableContext(2)]
 		private void OnAsyncTraceHitResultHandle(bool isHit, UTraceBaseElement element, double frame, double index)
 		{
@@ -1343,7 +1343,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.TraceHandleMap.Remove(index);
 		}
 
-		// Token: 0x06047975 RID: 293237 RVA: 0x0124BEB4 File Offset: 0x0124A0B4
+		// Token: 0x0603D2BA RID: 250554 RVA: 0x011A5018 File Offset: 0x011A3218
 		[NullableContext(2)]
 		private EntityHandle ExtractEntity(AActor actor)
 		{
@@ -1358,7 +1358,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return CreatureModel.Instance.GetEntityByChildActor(actor);
 		}
 
-		// Token: 0x06047976 RID: 293238 RVA: 0x0124BF08 File Offset: 0x0124A108
+		// Token: 0x0603D2BB RID: 250555 RVA: 0x011A506C File Offset: 0x011A326C
 		private void ActorInOutNoObstacleActors(bool isEnter, AActor actor)
 		{
 			if (isEnter)
@@ -1383,7 +1383,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x06047977 RID: 293239 RVA: 0x0124BF78 File Offset: 0x0124A178
+		// Token: 0x0603D2BC RID: 250556 RVA: 0x011A50DC File Offset: 0x011A32DC
 		private void ChangeAnimState(SceneItemProgressControlComponent.EMatchTargetChargingState targetAnimState)
 		{
 			if (!this.GetIsLoadComplete())
@@ -1471,7 +1471,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.CheckCanEnableTick();
 		}
 
-		// Token: 0x06047978 RID: 293240 RVA: 0x0124C1A0 File Offset: 0x0124A3A0
+		// Token: 0x0603D2BD RID: 250557 RVA: 0x011A5304 File Offset: 0x011A3504
 		private void UpdateMatchTargetChargingDeviceProgress(float delta = 0f)
 		{
 			if (!this.GetIsLoadComplete())
@@ -1505,7 +1505,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x06047979 RID: 293241 RVA: 0x0124C283 File Offset: 0x0124A483
+		// Token: 0x0603D2BE RID: 250558 RVA: 0x011A53E7 File Offset: 0x011A35E7
 		private float GetSpeedByMatchTargetChargingState(SceneItemProgressControlComponent.EMatchTargetChargingState state)
 		{
 			if (state == SceneItemProgressControlComponent.EMatchTargetChargingState.Increasing)
@@ -1519,14 +1519,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return (float)(-(float)this.ControlConfig.DecreaseSpeed);
 		}
 
-		// Token: 0x0604797A RID: 293242 RVA: 0x0124C2AE File Offset: 0x0124A4AE
+		// Token: 0x0603D2BF RID: 250559 RVA: 0x011A5412 File Offset: 0x011A3612
 		private bool GetIsLoadComplete()
 		{
 			SceneItemActorComponent actorComp = this.ActorComp;
 			return actorComp != null && actorComp.GetIsSceneInteractionLoadCompleted();
 		}
 
-		// Token: 0x0604797B RID: 293243 RVA: 0x0124C2C4 File Offset: 0x0124A4C4
+		// Token: 0x0603D2C0 RID: 250560 RVA: 0x011A5428 File Offset: 0x011A3628
 		private void CheckCanEnableTick()
 		{
 			bool flag;
@@ -1560,7 +1560,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			this.DisableProgressControl("[ProgressControlComp] 不可以启用Tick");
 		}
 
-		// Token: 0x0604797C RID: 293244 RVA: 0x0124C360 File Offset: 0x0124A560
+		// Token: 0x0603D2C1 RID: 250561 RVA: 0x011A54C4 File Offset: 0x011A36C4
 		private SceneItemProgressControlComponent.MatchTargetChargingOverlapActorInfo ConstructOverlapActorInfo(AActor actor, EntityHandle entityHandle, int index)
 		{
 			SceneItemProgressControlComponent.MatchTargetChargingOverlapActorInfo matchTargetChargingOverlapActorInfo = new SceneItemProgressControlComponent.MatchTargetChargingOverlapActorInfo
@@ -1582,7 +1582,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return matchTargetChargingOverlapActorInfo;
 		}
 
-		// Token: 0x0604797D RID: 293245 RVA: 0x0124C3E0 File Offset: 0x0124A5E0
+		// Token: 0x0603D2C2 RID: 250562 RVA: 0x011A5544 File Offset: 0x011A3744
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -1590,235 +1590,209 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 				return false;
 			}
 			SceneItemProgressControlComponent sceneItemProgressControlComponent = (SceneItemProgressControlComponent)componentTemplate;
-			if (base.CanResetComponentProperty("DisableHandle"))
+			this.DisableHandle = sceneItemProgressControlComponent.DisableHandle;
+			if (sceneItemProgressControlComponent.Config == null)
 			{
-				this.DisableHandle = sceneItemProgressControlComponent.DisableHandle;
+				this.Config = null;
 			}
-			if (base.CanResetComponentProperty("Config"))
-			{
-				if (sceneItemProgressControlComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ProgressBarControlComponent>(this.Config), "Config"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CreatureDataComp"))
-			{
-				if (sceneItemProgressControlComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("StateComp"))
-			{
-				if (sceneItemProgressControlComponent.StateComp == null)
-				{
-					this.StateComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemStateComponent>(this.StateComp), "StateComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ActorComp"))
-			{
-				if (sceneItemProgressControlComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TagComp"))
-			{
-				if (sceneItemProgressControlComponent.TagComp == null)
-				{
-					this.TagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LevelTagComponent>(this.TagComp), "TagComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ProgressData"))
-			{
-				if (sceneItemProgressControlComponent.ProgressData == null)
-				{
-					this.ProgressData = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemProgressControlComponent.TProgressData>(this.ProgressData), "ProgressData"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ProgressDataChangedCallbackSet"))
-			{
-				if (sceneItemProgressControlComponent.ProgressDataChangedCallbackSet == null)
-				{
-					this.ProgressDataChangedCallbackSet = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Action<SceneItemProgressControlComponent.TProgressData>>(this.ProgressDataChangedCallbackSet), "ProgressDataChangedCallbackSet"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("RangeComp"))
-			{
-				if (sceneItemProgressControlComponent.RangeComp == null)
-				{
-					this.RangeComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CSharpScript.Game.NewWorld.Character.Custom.Components.RangeComponent>(this.RangeComp), "RangeComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("IsMyRoleInStrategicArea"))
-			{
-				this.IsMyRoleInStrategicArea = sceneItemProgressControlComponent.IsMyRoleInStrategicArea;
-			}
-			if (base.CanResetComponentProperty("EnemyInStrategicArea"))
-			{
-				if (sceneItemProgressControlComponent.EnemyInStrategicArea == null)
-				{
-					this.EnemyInStrategicArea = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<EntityHandle>(this.EnemyInStrategicArea), "EnemyInStrategicArea"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("StrategicAreaState"))
-			{
-				this.StrategicAreaState = sceneItemProgressControlComponent.StrategicAreaState;
-			}
-			if (base.CanResetComponentProperty("HitComponent"))
-			{
-				if (sceneItemProgressControlComponent.HitComponent == null)
-				{
-					this.HitComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemHitComponent>(this.HitComponent), "HitComponent"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("FirstTick"))
-			{
-				this.FirstTick = sceneItemProgressControlComponent.FirstTick;
-			}
-			if (base.CanResetComponentProperty("TimedStrikeState"))
-			{
-				this.TimedStrikeState = sceneItemProgressControlComponent.TimedStrikeState;
-			}
-			if (base.CanResetComponentProperty("ContinuousStrikeTimeout"))
-			{
-				this.ContinuousStrikeTimeout = sceneItemProgressControlComponent.ContinuousStrikeTimeout;
-			}
-			if (base.CanResetComponentProperty("FallbackDotTimeout"))
-			{
-				this.FallbackDotTimeout = sceneItemProgressControlComponent.FallbackDotTimeout;
-			}
-			if (base.CanResetComponentProperty("ControlConfig"))
-			{
-				if (sceneItemProgressControlComponent.ControlConfig == null)
-				{
-					this.ControlConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<IMatchTargetChargingDevice>(this.ControlConfig), "ControlConfig"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("InRangeMatchActor") && sceneItemProgressControlComponent.InRangeMatchActor != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<AActor>>(this.InRangeMatchActor), "InRangeMatchActor"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("InRangeMatchActorInfoMap") && sceneItemProgressControlComponent.InRangeMatchActorInfoMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<AActor, SceneItemProgressControlComponent.MatchTargetChargingOverlapActorInfo>>(this.InRangeMatchActorInfoMap), "InRangeMatchActorInfoMap"))
+			if (sceneItemProgressControlComponent.CreatureDataComp == null)
+			{
+				this.CreatureDataComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("InRangeMatchNoObstacleActor") && sceneItemProgressControlComponent.InRangeMatchNoObstacleActor != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<AActor>>(this.InRangeMatchNoObstacleActor), "InRangeMatchNoObstacleActor"))
+			if (sceneItemProgressControlComponent.StateComp == null)
+			{
+				this.StateComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StateComp), "StateComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TraceHandleMap") && sceneItemProgressControlComponent.TraceHandleMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<double, ValueTuple<double, TraceHandle>>>(this.TraceHandleMap), "TraceHandleMap"))
+			if (sceneItemProgressControlComponent.ActorComp == null)
+			{
+				this.ActorComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("CurTraceIndex"))
+			if (sceneItemProgressControlComponent.TagComp == null)
 			{
-				this.CurTraceIndex = sceneItemProgressControlComponent.CurTraceIndex;
+				this.TagComp = null;
 			}
-			if (base.CanResetComponentProperty("TraceElement"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 			{
-				if (sceneItemProgressControlComponent.TraceElement == null)
-				{
-					this.TraceElement = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UTraceLineElement>(this.TraceElement), "TraceElement"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("AnimState"))
+			if (sceneItemProgressControlComponent.ProgressData == null)
 			{
-				this.AnimState = sceneItemProgressControlComponent.AnimState;
+				this.ProgressData = null;
 			}
-			if (base.CanResetComponentProperty("TraceDelegate"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ProgressData), "ProgressData"))
 			{
-				if (sceneItemProgressControlComponent.TraceDelegate == null)
-				{
-					this.TraceDelegate = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<FAsyncTraceDelegate>(this.TraceDelegate), "TraceDelegate"))
-				{
-					return false;
-				}
+				return false;
+			}
+			if (sceneItemProgressControlComponent.ProgressDataChangedCallbackSet == null)
+			{
+				this.ProgressDataChangedCallbackSet = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Action<SceneItemProgressControlComponent.TProgressData>>(this.ProgressDataChangedCallbackSet), "ProgressDataChangedCallbackSet"))
+			{
+				return false;
+			}
+			if (sceneItemProgressControlComponent.RangeComp == null)
+			{
+				this.RangeComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RangeComp), "RangeComp"))
+			{
+				return false;
+			}
+			this.IsMyRoleInStrategicArea = sceneItemProgressControlComponent.IsMyRoleInStrategicArea;
+			if (sceneItemProgressControlComponent.EnemyInStrategicArea == null)
+			{
+				this.EnemyInStrategicArea = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<EntityHandle>(this.EnemyInStrategicArea), "EnemyInStrategicArea"))
+			{
+				return false;
+			}
+			this.StrategicAreaState = sceneItemProgressControlComponent.StrategicAreaState;
+			if (sceneItemProgressControlComponent.HitComponent == null)
+			{
+				this.HitComponent = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.HitComponent), "HitComponent"))
+			{
+				return false;
+			}
+			this.FirstTick = sceneItemProgressControlComponent.FirstTick;
+			this.TimedStrikeState = sceneItemProgressControlComponent.TimedStrikeState;
+			this.ContinuousStrikeTimeout = sceneItemProgressControlComponent.ContinuousStrikeTimeout;
+			this.FallbackDotTimeout = sceneItemProgressControlComponent.FallbackDotTimeout;
+			if (sceneItemProgressControlComponent.ControlConfig == null)
+			{
+				this.ControlConfig = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ControlConfig), "ControlConfig"))
+			{
+				return false;
+			}
+			if (sceneItemProgressControlComponent.InRangeMatchActor != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.InRangeMatchActor), "InRangeMatchActor"))
+			{
+				return false;
+			}
+			if (sceneItemProgressControlComponent.InRangeMatchActorInfoMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.InRangeMatchActorInfoMap), "InRangeMatchActorInfoMap"))
+			{
+				return false;
+			}
+			if (sceneItemProgressControlComponent.InRangeMatchNoObstacleActor != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.InRangeMatchNoObstacleActor), "InRangeMatchNoObstacleActor"))
+			{
+				return false;
+			}
+			if (sceneItemProgressControlComponent.TraceHandleMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TraceHandleMap), "TraceHandleMap"))
+			{
+				return false;
+			}
+			this.CurTraceIndex = sceneItemProgressControlComponent.CurTraceIndex;
+			if (sceneItemProgressControlComponent.TraceElement == null)
+			{
+				this.TraceElement = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TraceElement), "TraceElement"))
+			{
+				return false;
+			}
+			this.AnimState = sceneItemProgressControlComponent.AnimState;
+			if (sceneItemProgressControlComponent.TraceDelegate == null)
+			{
+				this.TraceDelegate = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TraceDelegate), "TraceDelegate"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x04025A8A RID: 154250
+		// Token: 0x170073CC RID: 29644
+		// (get) Token: 0x0603D2C3 RID: 250563 RVA: 0x011A5887 File Offset: 0x011A3A87
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170073CD RID: 29645
+		// (get) Token: 0x0603D2C4 RID: 250564 RVA: 0x011A588A File Offset: 0x011A3A8A
+		public override bool NeedActivateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170073CE RID: 29646
+		// (get) Token: 0x0603D2C5 RID: 250565 RVA: 0x011A588D File Offset: 0x011A3A8D
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170073CF RID: 29647
+		// (get) Token: 0x0603D2C6 RID: 250566 RVA: 0x011A5890 File Offset: 0x011A3A90
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x040206F9 RID: 132857
 		private const int CHARGING_DEVICE_DISABLE_OFFSET = 2000;
 
-		// Token: 0x04025A8B RID: 154251
+		// Token: 0x040206FA RID: 132858
 		private int? DisableHandle;
 
-		// Token: 0x04025A8C RID: 154252
+		// Token: 0x040206FB RID: 132859
 		[Nullable(2)]
 		private ProgressBarControlComponent Config;
 
-		// Token: 0x04025A8D RID: 154253
+		// Token: 0x040206FC RID: 132860
 		[Nullable(2)]
 		private CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x04025A8E RID: 154254
+		// Token: 0x040206FD RID: 132861
 		[Nullable(2)]
 		private SceneItemStateComponent StateComp;
 
-		// Token: 0x04025A8F RID: 154255
+		// Token: 0x040206FE RID: 132862
 		[Nullable(2)]
 		private SceneItemActorComponent ActorComp;
 
-		// Token: 0x04025A90 RID: 154256
+		// Token: 0x040206FF RID: 132863
 		[Nullable(2)]
 		private LevelTagComponent TagComp;
 
-		// Token: 0x04025A91 RID: 154257
+		// Token: 0x04020700 RID: 132864
 		[Nullable(2)]
 		private SceneItemProgressControlComponent.TProgressData ProgressData;
 
-		// Token: 0x04025A92 RID: 154258
+		// Token: 0x04020701 RID: 132865
 		[Nullable(new byte[]
 		{
 			2,
@@ -1827,14 +1801,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 		})]
 		private HashSet<Action<SceneItemProgressControlComponent.TProgressData>> ProgressDataChangedCallbackSet;
 
-		// Token: 0x04025A93 RID: 154259
+		// Token: 0x04020702 RID: 132866
 		[Nullable(2)]
 		private CSharpScript.Game.NewWorld.Character.Custom.Components.RangeComponent RangeComp;
 
-		// Token: 0x04025A94 RID: 154260
+		// Token: 0x04020703 RID: 132867
 		private bool IsMyRoleInStrategicArea;
 
-		// Token: 0x04025A95 RID: 154261
+		// Token: 0x04020704 RID: 132868
 		[Nullable(new byte[]
 		{
 			2,
@@ -1842,39 +1816,39 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 		})]
 		private HashSet<EntityHandle> EnemyInStrategicArea;
 
-		// Token: 0x04025A96 RID: 154262
+		// Token: 0x04020705 RID: 132869
 		private SceneItemProgressControlComponent.EStrategicAreaState StrategicAreaState;
 
-		// Token: 0x04025A97 RID: 154263
+		// Token: 0x04020706 RID: 132870
 		[Nullable(2)]
 		private SceneItemHitComponent HitComponent;
 
-		// Token: 0x04025A98 RID: 154264
+		// Token: 0x04020707 RID: 132871
 		private bool FirstTick = true;
 
-		// Token: 0x04025A99 RID: 154265
+		// Token: 0x04020708 RID: 132872
 		private SceneItemProgressControlComponent.ETimedStrikeState TimedStrikeState;
 
-		// Token: 0x04025A9A RID: 154266
+		// Token: 0x04020709 RID: 132873
 		private float ContinuousStrikeTimeout;
 
-		// Token: 0x04025A9B RID: 154267
+		// Token: 0x0402070A RID: 132874
 		private float FallbackDotTimeout;
 
-		// Token: 0x04025A9C RID: 154268
+		// Token: 0x0402070B RID: 132875
 		[Nullable(2)]
 		private IMatchTargetChargingDevice ControlConfig;
 
-		// Token: 0x04025A9D RID: 154269
+		// Token: 0x0402070C RID: 132876
 		private readonly List<AActor> InRangeMatchActor = new List<AActor>();
 
-		// Token: 0x04025A9E RID: 154270
+		// Token: 0x0402070D RID: 132877
 		private readonly Dictionary<AActor, SceneItemProgressControlComponent.MatchTargetChargingOverlapActorInfo> InRangeMatchActorInfoMap = new Dictionary<AActor, SceneItemProgressControlComponent.MatchTargetChargingOverlapActorInfo>();
 
-		// Token: 0x04025A9F RID: 154271
+		// Token: 0x0402070E RID: 132878
 		private readonly List<AActor> InRangeMatchNoObstacleActor = new List<AActor>();
 
-		// Token: 0x04025AA0 RID: 154272
+		// Token: 0x0402070F RID: 132879
 		[Nullable(new byte[]
 		{
 			1,
@@ -1883,98 +1857,98 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 		})]
 		private readonly Dictionary<double, ValueTuple<double, TraceHandle>> TraceHandleMap = new Dictionary<double, ValueTuple<double, TraceHandle>>();
 
-		// Token: 0x04025AA1 RID: 154273
+		// Token: 0x04020710 RID: 132880
 		private int CurTraceIndex;
 
-		// Token: 0x04025AA2 RID: 154274
+		// Token: 0x04020711 RID: 132881
 		[Nullable(2)]
 		private UTraceLineElement TraceElement;
 
-		// Token: 0x04025AA3 RID: 154275
+		// Token: 0x04020712 RID: 132882
 		private SceneItemProgressControlComponent.EMatchTargetChargingState AnimState = SceneItemProgressControlComponent.EMatchTargetChargingState.Decreasing;
 
-		// Token: 0x04025AA4 RID: 154276
+		// Token: 0x04020713 RID: 132883
 		[Nullable(2)]
 		private FAsyncTraceDelegate TraceDelegate;
 
-		// Token: 0x04025AA5 RID: 154277
+		// Token: 0x04020714 RID: 132884
 		private readonly bool DebugMode;
 
-		// Token: 0x0200CF6F RID: 53103
+		// Token: 0x0200BB04 RID: 47876
 		[NullableContext(0)]
 		public class TProgressData
 		{
-			// Token: 0x0403E592 RID: 255378
+			// Token: 0x040398B8 RID: 235704
 			public EProgressBarControlType ProgressCtrlType;
 
-			// Token: 0x0403E593 RID: 255379
+			// Token: 0x040398B9 RID: 235705
 			public float CurrentValue;
 
-			// Token: 0x0403E594 RID: 255380
+			// Token: 0x040398BA RID: 235706
 			public float MaxValue;
 		}
 
-		// Token: 0x0200CF70 RID: 53104
+		// Token: 0x0200BB05 RID: 47877
 		[NullableContext(0)]
 		private enum EStrategicAreaState
 		{
-			// Token: 0x0403E596 RID: 255382
+			// Token: 0x040398BC RID: 235708
 			Inactive,
-			// Token: 0x0403E597 RID: 255383
+			// Token: 0x040398BD RID: 235709
 			EnemyInPlayerIn,
-			// Token: 0x0403E598 RID: 255384
+			// Token: 0x040398BE RID: 235710
 			EnemyInPlayerOut,
-			// Token: 0x0403E599 RID: 255385
+			// Token: 0x040398BF RID: 235711
 			EnemyOutPlayerIn,
-			// Token: 0x0403E59A RID: 255386
+			// Token: 0x040398C0 RID: 235712
 			EnemyOutPlayerOut
 		}
 
-		// Token: 0x0200CF71 RID: 53105
+		// Token: 0x0200BB06 RID: 47878
 		[NullableContext(0)]
 		private enum ETimedStrikeState
 		{
-			// Token: 0x0403E59C RID: 255388
+			// Token: 0x040398C2 RID: 235714
 			Inactive,
-			// Token: 0x0403E59D RID: 255389
+			// Token: 0x040398C3 RID: 235715
 			ProgressAdd,
-			// Token: 0x0403E59E RID: 255390
+			// Token: 0x040398C4 RID: 235716
 			WaitingAddTimeout,
-			// Token: 0x0403E59F RID: 255391
+			// Token: 0x040398C5 RID: 235717
 			ProgressFallback,
-			// Token: 0x0403E5A0 RID: 255392
+			// Token: 0x040398C6 RID: 235718
 			WaitingFallbackTimeout,
-			// Token: 0x0403E5A1 RID: 255393
+			// Token: 0x040398C7 RID: 235719
 			StopAtZero,
-			// Token: 0x0403E5A2 RID: 255394
+			// Token: 0x040398C8 RID: 235720
 			StopAtFull
 		}
 
-		// Token: 0x0200CF72 RID: 53106
+		// Token: 0x0200BB07 RID: 47879
 		[NullableContext(0)]
 		private enum EMatchTargetChargingState
 		{
-			// Token: 0x0403E5A4 RID: 255396
+			// Token: 0x040398CA RID: 235722
 			Increasing,
-			// Token: 0x0403E5A5 RID: 255397
+			// Token: 0x040398CB RID: 235723
 			Decreasing
 		}
 
-		// Token: 0x0200CF73 RID: 53107
+		// Token: 0x0200BB08 RID: 47880
 		[Nullable(0)]
 		private class MatchTargetChargingOverlapActorInfo
 		{
-			// Token: 0x0403E5A6 RID: 255398
+			// Token: 0x040398CC RID: 235724
 			public int ArrayIndex = -1;
 
-			// Token: 0x0403E5A7 RID: 255399
+			// Token: 0x040398CD RID: 235725
 			[Nullable(2)]
 			public EntityHandle EntityHandle;
 
-			// Token: 0x0403E5A8 RID: 255400
+			// Token: 0x040398CE RID: 235726
 			public List<AActor> AllOverlapActors = new List<AActor>();
 
-			// Token: 0x0403E5A9 RID: 255401
+			// Token: 0x040398CF RID: 235727
 			public global::Vector ActorLocation = global::Vector.Create();
 		}
 	}

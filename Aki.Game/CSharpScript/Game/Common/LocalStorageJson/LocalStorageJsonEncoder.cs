@@ -10,11 +10,11 @@ using System.Text.Json.Serialization.Metadata;
 
 namespace CSharpScript.Game.Common.LocalStorageJson
 {
-	// Token: 0x02007290 RID: 29328
+	// Token: 0x0200640F RID: 25615
 	public static class LocalStorageJsonEncoder
 	{
-		// Token: 0x17009EA2 RID: 40610
-		// (get) Token: 0x06047E0B RID: 294411 RVA: 0x01264B58 File Offset: 0x01262D58
+		// Token: 0x170075FB RID: 30203
+		// (get) Token: 0x0603E1CB RID: 254411 RVA: 0x01205568 File Offset: 0x01203768
 		private unsafe static ReadOnlySpan<byte> BigIntMarkerUtf8
 		{
 			get
@@ -23,8 +23,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson
 			}
 		}
 
-		// Token: 0x17009EA3 RID: 40611
-		// (get) Token: 0x06047E0C RID: 294412 RVA: 0x01264B65 File Offset: 0x01262D65
+		// Token: 0x170075FC RID: 30204
+		// (get) Token: 0x0603E1CC RID: 254412 RVA: 0x01205575 File Offset: 0x01203775
 		private unsafe static ReadOnlySpan<byte> MetaTypePropertyNameUtf8
 		{
 			get
@@ -33,8 +33,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson
 			}
 		}
 
-		// Token: 0x17009EA4 RID: 40612
-		// (get) Token: 0x06047E0D RID: 294413 RVA: 0x01264B73 File Offset: 0x01262D73
+		// Token: 0x170075FD RID: 30205
+		// (get) Token: 0x0603E1CD RID: 254413 RVA: 0x01205583 File Offset: 0x01203783
 		private unsafe static ReadOnlySpan<byte> ContentPropertyNameUtf8
 		{
 			get
@@ -43,8 +43,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson
 			}
 		}
 
-		// Token: 0x17009EA5 RID: 40613
-		// (get) Token: 0x06047E0E RID: 294414 RVA: 0x01264B80 File Offset: 0x01262D80
+		// Token: 0x170075FE RID: 30206
+		// (get) Token: 0x0603E1CE RID: 254414 RVA: 0x01205590 File Offset: 0x01203790
 		private unsafe static ReadOnlySpan<byte> MetaMapValueUtf8
 		{
 			get
@@ -53,8 +53,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson
 			}
 		}
 
-		// Token: 0x17009EA6 RID: 40614
-		// (get) Token: 0x06047E0F RID: 294415 RVA: 0x01264B8E File Offset: 0x01262D8E
+		// Token: 0x170075FF RID: 30207
+		// (get) Token: 0x0603E1CF RID: 254415 RVA: 0x0120559E File Offset: 0x0120379E
 		private unsafe static ReadOnlySpan<byte> MetaSetValueUtf8
 		{
 			get
@@ -63,8 +63,8 @@ namespace CSharpScript.Game.Common.LocalStorageJson
 			}
 		}
 
-		// Token: 0x17009EA7 RID: 40615
-		// (get) Token: 0x06047E10 RID: 294416 RVA: 0x01264B9C File Offset: 0x01262D9C
+		// Token: 0x17007600 RID: 30208
+		// (get) Token: 0x0603E1D0 RID: 254416 RVA: 0x012055AC File Offset: 0x012037AC
 		private static ReadOnlySpan<char> BigIntMarkerChars
 		{
 			get
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson
 			}
 		}
 
-		// Token: 0x06047E11 RID: 294417 RVA: 0x01264BA8 File Offset: 0x01262DA8
+		// Token: 0x0603E1D1 RID: 254417 RVA: 0x012055B8 File Offset: 0x012037B8
 		[NullableContext(1)]
 		public static void Encode<[Nullable(2)] T>(Utf8JsonWriter writer, T value, JsonSerializerOptions options)
 		{
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson
 			LocalStorageJsonEncoder.WriteAsObject(writer, value, type);
 		}
 
-		// Token: 0x06047E12 RID: 294418 RVA: 0x01264C80 File Offset: 0x01262E80
+		// Token: 0x0603E1D2 RID: 254418 RVA: 0x01205690 File Offset: 0x01203890
 		[NullableContext(1)]
 		private static void WriteAsObject(Utf8JsonWriter writer, object value, Type runtimeType)
 		{
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson
 			writer.WriteEndObject();
 		}
 
-		// Token: 0x06047E13 RID: 294419 RVA: 0x01264D38 File Offset: 0x01262F38
+		// Token: 0x0603E1D3 RID: 254419 RVA: 0x01205748 File Offset: 0x01203948
 		[NullableContext(1)]
 		private static void WriteScalar(Utf8JsonWriter writer, object value, Type runtimeType)
 		{
@@ -213,7 +213,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson
 			}
 		}
 
-		// Token: 0x06047E14 RID: 294420 RVA: 0x01264E7C File Offset: 0x0126307C
+		// Token: 0x0603E1D4 RID: 254420 RVA: 0x0120588C File Offset: 0x01203A8C
 		[NullableContext(1)]
 		private unsafe static void WriteLongWithBigIntMarker(Utf8JsonWriter writer, long value)
 		{
@@ -231,7 +231,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson
 			writer.WriteStringValue(defaultInterpolatedStringHandler.ToStringAndClear());
 		}
 
-		// Token: 0x06047E15 RID: 294421 RVA: 0x01264F0C File Offset: 0x0126310C
+		// Token: 0x0603E1D5 RID: 254421 RVA: 0x0120591C File Offset: 0x01203B1C
 		[NullableContext(1)]
 		private unsafe static void WriteUlongWithBigIntMarker(Utf8JsonWriter writer, ulong value)
 		{
@@ -249,7 +249,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson
 			writer.WriteStringValue(defaultInterpolatedStringHandler.ToStringAndClear());
 		}
 
-		// Token: 0x06047E16 RID: 294422 RVA: 0x01264F9C File Offset: 0x0126319C
+		// Token: 0x0603E1D6 RID: 254422 RVA: 0x012059AC File Offset: 0x01203BAC
 		[NullableContext(1)]
 		private unsafe static void WriteBigIntegerWithBigIntMarker(Utf8JsonWriter writer, BigInteger value)
 		{
@@ -269,7 +269,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson
 			writer.WriteStringValue(defaultInterpolatedStringHandler.ToStringAndClear());
 		}
 
-		// Token: 0x06047E17 RID: 294423 RVA: 0x01265058 File Offset: 0x01263258
+		// Token: 0x0603E1D7 RID: 254423 RVA: 0x01205A68 File Offset: 0x01203C68
 		[NullableContext(1)]
 		private static void WriteAsMap(Utf8JsonWriter writer, IDictionary dict, Type runtimeType)
 		{
@@ -294,7 +294,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson
 			writer.WriteEndObject();
 		}
 
-		// Token: 0x06047E18 RID: 294424 RVA: 0x01265128 File Offset: 0x01263328
+		// Token: 0x0603E1D8 RID: 254424 RVA: 0x01205B38 File Offset: 0x01203D38
 		[NullableContext(1)]
 		private static void WriteAsArray(Utf8JsonWriter writer, IEnumerable enumerable, Type runtimeType)
 		{
@@ -308,7 +308,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson
 			writer.WriteEndArray();
 		}
 
-		// Token: 0x06047E19 RID: 294425 RVA: 0x01265198 File Offset: 0x01263398
+		// Token: 0x0603E1D9 RID: 254425 RVA: 0x01205BA8 File Offset: 0x01203DA8
 		[NullableContext(1)]
 		private static void WriteAsSet(Utf8JsonWriter writer, IEnumerable set, Type runtimeType)
 		{
@@ -326,7 +326,7 @@ namespace CSharpScript.Game.Common.LocalStorageJson
 			writer.WriteEndObject();
 		}
 
-		// Token: 0x06047E1A RID: 294426 RVA: 0x01265230 File Offset: 0x01263430
+		// Token: 0x0603E1DA RID: 254426 RVA: 0x01205C40 File Offset: 0x01203E40
 		[NullableContext(1)]
 		private static Type GetEnumerableElementType(Type runtimeType)
 		{
@@ -345,13 +345,13 @@ namespace CSharpScript.Game.Common.LocalStorageJson
 			return typeof(object);
 		}
 
-		// Token: 0x04025E79 RID: 155257
+		// Token: 0x04021145 RID: 135493
 		private const int LongUtf8BufferSize = 32;
 
-		// Token: 0x04025E7A RID: 155258
+		// Token: 0x04021146 RID: 135494
 		private const int UlongUtf8BufferSize = 32;
 
-		// Token: 0x04025E7B RID: 155259
+		// Token: 0x04021147 RID: 135495
 		private const int BigIntegerCharBufferSize = 64;
 	}
 }

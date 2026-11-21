@@ -7,25 +7,15 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 {
-	// Token: 0x0200721E RID: 29214
+	// Token: 0x020062D3 RID: 25299
 	[NullableContext(1)]
 	[Nullable(0)]
-	public class SceneItemInteractAudioComponent : EntityComponent, IComponentDependency
+	public class SceneItemInteractAudioComponent : EntityComponent
 	{
-		// Token: 0x17009E27 RID: 40487
-		// (get) Token: 0x0604785D RID: 292957 RVA: 0x0123CFF1 File Offset: 0x0123B1F1
-		[Nullable(new byte[]
+		// Token: 0x170073AE RID: 29614
+		// (get) Token: 0x0603D18E RID: 250254 RVA: 0x01196626 File Offset: 0x01194826
+		public override Type[] Dependencies
 		{
-			2,
-			1
-		})]
-		public static Type[] Dependencies
-		{
-			[return: Nullable(new byte[]
-			{
-				2,
-				1
-			})]
 			get
 			{
 				return new Type[]
@@ -36,7 +26,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x0604785E RID: 292958 RVA: 0x0123D014 File Offset: 0x0123B214
+		// Token: 0x0603D18F RID: 250255 RVA: 0x01196648 File Offset: 0x01194848
 		protected override bool OnStart()
 		{
 			this.InitDataInternal();
@@ -57,7 +47,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x0604785F RID: 292959 RVA: 0x0123D080 File Offset: 0x0123B280
+		// Token: 0x0603D190 RID: 250256 RVA: 0x011966B4 File Offset: 0x011948B4
 		private void InitDataInternal()
 		{
 			CreatureDataComponent component = base.Entity.GetComponent<CreatureDataComponent>();
@@ -97,7 +87,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			AudioController.Instance.SetRTPCValue((float)this.Mass, this.MassRtpc, null, null, null);
 		}
 
-		// Token: 0x06047860 RID: 292960 RVA: 0x0123D238 File Offset: 0x0123B438
+		// Token: 0x0603D191 RID: 250257 RVA: 0x0119686C File Offset: 0x01194A6C
 		private void OnComponentHit(FHitResult hitResult)
 		{
 			long num = DateTimeOffset.Now.ToUnixTimeMilliseconds();
@@ -143,7 +133,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			AudioController.Instance.PostEvent(this.AkEvent, owner, null, null, null, null, true, "");
 		}
 
-		// Token: 0x06047861 RID: 292961 RVA: 0x0123D408 File Offset: 0x0123B608
+		// Token: 0x0603D192 RID: 250258 RVA: 0x01196A3C File Offset: 0x01194C3C
 		public global::Vector GetVelocity()
 		{
 			AActor owner = this.ActorComponent.Owner;
@@ -157,7 +147,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return this.Velocity;
 		}
 
-		// Token: 0x06047862 RID: 292962 RVA: 0x0123D44C File Offset: 0x0123B64C
+		// Token: 0x0603D193 RID: 250259 RVA: 0x01196A80 File Offset: 0x01194C80
 		protected override bool OnClear()
 		{
 			UStaticMeshComponent staticMeshComponent = this.StaticMeshComponent;
@@ -168,7 +158,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x06047863 RID: 292963 RVA: 0x0123D468 File Offset: 0x0123B668
+		// Token: 0x0603D194 RID: 250260 RVA: 0x01196A9C File Offset: 0x01194C9C
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -176,116 +166,106 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 				return false;
 			}
 			SceneItemInteractAudioComponent sceneItemInteractAudioComponent = (SceneItemInteractAudioComponent)componentTemplate;
-			if (base.CanResetComponentProperty("ActorComponent"))
+			if (sceneItemInteractAudioComponent.ActorComponent == null)
 			{
-				if (sceneItemInteractAudioComponent.ActorComponent == null)
-				{
-					this.ActorComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComponent), "ActorComponent"))
-				{
-					return false;
-				}
+				this.ActorComponent = null;
 			}
-			if (base.CanResetComponentProperty("StaticMeshComponent"))
-			{
-				if (sceneItemInteractAudioComponent.StaticMeshComponent == null)
-				{
-					this.StaticMeshComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UStaticMeshComponent>(this.StaticMeshComponent), "StaticMeshComponent"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("IsImpacterActive"))
-			{
-				this.IsImpacterActive = sceneItemInteractAudioComponent.IsImpacterActive;
-			}
-			if (base.CanResetComponentProperty("Mass"))
-			{
-				this.Mass = sceneItemInteractAudioComponent.Mass;
-			}
-			if (base.CanResetComponentProperty("TriggerInterval"))
-			{
-				this.TriggerInterval = sceneItemInteractAudioComponent.TriggerInterval;
-			}
-			if (base.CanResetComponentProperty("MaxValue"))
-			{
-				this.MaxValue = sceneItemInteractAudioComponent.MaxValue;
-			}
-			if (base.CanResetComponentProperty("MinValue"))
-			{
-				this.MinValue = sceneItemInteractAudioComponent.MinValue;
-			}
-			if (base.CanResetComponentProperty("LastTime"))
-			{
-				this.LastTime = sceneItemInteractAudioComponent.LastTime;
-			}
-			if (base.CanResetComponentProperty("Velocity") && sceneItemInteractAudioComponent.Velocity != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.Velocity), "Velocity"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComponent), "ActorComponent"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("VelocitySize"))
+			if (sceneItemInteractAudioComponent.StaticMeshComponent == null)
 			{
-				this.VelocitySize = sceneItemInteractAudioComponent.VelocitySize;
+				this.StaticMeshComponent = null;
 			}
-			if (base.CanResetComponentProperty("OtherVelocity") && sceneItemInteractAudioComponent.OtherVelocity != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.OtherVelocity), "OtherVelocity"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.StaticMeshComponent), "StaticMeshComponent"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("AkEvent"))
+			this.IsImpacterActive = sceneItemInteractAudioComponent.IsImpacterActive;
+			this.Mass = sceneItemInteractAudioComponent.Mass;
+			this.TriggerInterval = sceneItemInteractAudioComponent.TriggerInterval;
+			this.MaxValue = sceneItemInteractAudioComponent.MaxValue;
+			this.MinValue = sceneItemInteractAudioComponent.MinValue;
+			this.LastTime = sceneItemInteractAudioComponent.LastTime;
+			if (sceneItemInteractAudioComponent.Velocity != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.Velocity), "Velocity"))
 			{
-				this.AkEvent = sceneItemInteractAudioComponent.AkEvent;
+				return false;
 			}
+			this.VelocitySize = sceneItemInteractAudioComponent.VelocitySize;
+			if (sceneItemInteractAudioComponent.OtherVelocity != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.OtherVelocity), "OtherVelocity"))
+			{
+				return false;
+			}
+			this.AkEvent = sceneItemInteractAudioComponent.AkEvent;
 			return true;
 		}
 
-		// Token: 0x04025A02 RID: 154114
+		// Token: 0x170073AF RID: 29615
+		// (get) Token: 0x0603D195 RID: 250261 RVA: 0x01196BB6 File Offset: 0x01194DB6
+		public override bool NeedClearInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170073B0 RID: 29616
+		// (get) Token: 0x0603D196 RID: 250262 RVA: 0x01196BB9 File Offset: 0x01194DB9
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020671 RID: 132721
 		[Nullable(2)]
 		private SceneItemActorComponent ActorComponent;
 
-		// Token: 0x04025A03 RID: 154115
+		// Token: 0x04020672 RID: 132722
 		[Nullable(2)]
 		private UStaticMeshComponent StaticMeshComponent;
 
-		// Token: 0x04025A04 RID: 154116
+		// Token: 0x04020673 RID: 132723
 		private bool IsImpacterActive;
 
-		// Token: 0x04025A05 RID: 154117
+		// Token: 0x04020674 RID: 132724
 		public double Mass;
 
-		// Token: 0x04025A06 RID: 154118
+		// Token: 0x04020675 RID: 132725
 		private double TriggerInterval;
 
-		// Token: 0x04025A07 RID: 154119
+		// Token: 0x04020676 RID: 132726
 		private double MaxValue;
 
-		// Token: 0x04025A08 RID: 154120
+		// Token: 0x04020677 RID: 132727
 		private double MinValue;
 
-		// Token: 0x04025A09 RID: 154121
+		// Token: 0x04020678 RID: 132728
 		private double LastTime;
 
-		// Token: 0x04025A0A RID: 154122
+		// Token: 0x04020679 RID: 132729
 		private readonly global::Vector Velocity = global::Vector.Create();
 
-		// Token: 0x04025A0B RID: 154123
+		// Token: 0x0402067A RID: 132730
 		private double VelocitySize;
 
-		// Token: 0x04025A0C RID: 154124
+		// Token: 0x0402067B RID: 132731
 		private readonly global::Vector OtherVelocity = global::Vector.Create();
 
-		// Token: 0x04025A0D RID: 154125
+		// Token: 0x0402067C RID: 132732
 		private string AkEvent = "";
 
-		// Token: 0x04025A0E RID: 154126
+		// Token: 0x0402067D RID: 132733
 		private readonly string MassRtpc = "physical_obj_mass";
 
-		// Token: 0x04025A0F RID: 154127
+		// Token: 0x0402067E RID: 132734
 		private readonly string MomentumRtpc = "physical_obj_velocity";
 
-		// Token: 0x04025A10 RID: 154128
+		// Token: 0x0402067F RID: 132735
 		private const int RTPC_MAX = 100;
 	}
 }

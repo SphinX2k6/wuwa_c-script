@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Linq;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -12,13 +12,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 
-// Token: 0x020029E5 RID: 10725
+// Token: 0x02001F60 RID: 8032
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class ShipTogetherModel : ModelBase
 {
-	// Token: 0x060163C7 RID: 91079 RVA: 0x0059FC28 File Offset: 0x0059DE28
+	// Token: 0x06013DCD RID: 81357 RVA: 0x005CABE0 File Offset: 0x005C8DE0
 	protected override bool OnInit()
 	{
 		this.InitParams();
@@ -33,7 +33,7 @@ public class ShipTogetherModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060163C8 RID: 91080 RVA: 0x0059FD08 File Offset: 0x0059DF08
+	// Token: 0x06013DCE RID: 81358 RVA: 0x005CACC0 File Offset: 0x005C8EC0
 	protected override bool OnClear()
 	{
 		this.OnRemoveOpenViewCheckFunction();
@@ -47,7 +47,7 @@ public class ShipTogetherModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060163C9 RID: 91081 RVA: 0x0059FDE0 File Offset: 0x0059DFE0
+	// Token: 0x06013DCF RID: 81359 RVA: 0x005CAD98 File Offset: 0x005C8F98
 	private void InitParams()
 	{
 		this.MotorSharingRideRequestDelay = ConfigCommonParamById.GetFloatConfig("MotorSharingRideRequestDelay").GetValueOrDefault(0.5f);
@@ -56,31 +56,31 @@ public class ShipTogetherModel : ModelBase
 		this.MotorSharingMovieCameraConfig = (ConfigCommonParamById.GetStringConfig("MotorSharingRideCamera") ?? "SharingRideCamera");
 	}
 
-	// Token: 0x060163CA RID: 91082 RVA: 0x0059FE5D File Offset: 0x0059E05D
+	// Token: 0x06013DD0 RID: 81360 RVA: 0x005CAE15 File Offset: 0x005C9015
 	private void OnAddOpenViewCheckFunction()
 	{
 		UiManager.Instance.AddOpenViewCheckFunction(EUiViewName.MotorcycleTogetherView, new Func<EUiViewName, object, bool>(this.CheckCanOpenMotorcycleTogetherView), "ShipTogetherModel.CheckCanOpenMotorcycleTogetherView");
 	}
 
-	// Token: 0x060163CB RID: 91083 RVA: 0x0059FE7F File Offset: 0x0059E07F
+	// Token: 0x06013DD1 RID: 81361 RVA: 0x005CAE37 File Offset: 0x005C9037
 	private void OnRemoveOpenViewCheckFunction()
 	{
 		UiManager.Instance.RemoveOpenViewCheckFunction(EUiViewName.MotorcycleTogetherView, new Func<EUiViewName, object, bool>(this.CheckCanOpenMotorcycleTogetherView));
 	}
 
-	// Token: 0x060163CC RID: 91084 RVA: 0x0059FE9C File Offset: 0x0059E09C
+	// Token: 0x06013DD2 RID: 81362 RVA: 0x005CAE54 File Offset: 0x005C9054
 	private void OnChangeRideSharingPassengerResponse(int curRoleId, int preRoleId, int seat)
 	{
 		this.ExecuteChangeRideSharingPassengerResponse(curRoleId, preRoleId, seat);
 	}
 
-	// Token: 0x060163CD RID: 91085 RVA: 0x0059FEA7 File Offset: 0x0059E0A7
+	// Token: 0x06013DD3 RID: 81363 RVA: 0x005CAE5F File Offset: 0x005C905F
 	private void OnRemoveRideSharingPassengerResponse(int roleId, int seat)
 	{
 		this.ExecuteRemoveRideSharingPassengerResponse(roleId, seat);
 	}
 
-	// Token: 0x060163CE RID: 91086 RVA: 0x0059FEB1 File Offset: 0x0059E0B1
+	// Token: 0x06013DD4 RID: 81364 RVA: 0x005CAE69 File Offset: 0x005C9069
 	private void OnChangeRideSharingPassengerNotify(int roleId, int seat)
 	{
 		this.RiderSharingRoleId = roleId;
@@ -88,7 +88,7 @@ public class ShipTogetherModel : ModelBase
 		this.RegisterDriveAudioEvent();
 	}
 
-	// Token: 0x060163CF RID: 91087 RVA: 0x0059FEC6 File Offset: 0x0059E0C6
+	// Token: 0x06013DD5 RID: 81365 RVA: 0x005CAE7E File Offset: 0x005C907E
 	private void OnRemoveRideSharingPassengerNotify(int roleId, int seat)
 	{
 		this.RiderSharingRoleId = 0;
@@ -96,14 +96,14 @@ public class ShipTogetherModel : ModelBase
 		this.RemoveDriveAudioEvent();
 	}
 
-	// Token: 0x060163D0 RID: 91088 RVA: 0x0059FEDB File Offset: 0x0059E0DB
+	// Token: 0x06013DD6 RID: 81366 RVA: 0x005CAE93 File Offset: 0x005C9093
 	private void OnEnterVehicleRideSharing(VehiclePassengerInfo info)
 	{
 		this.RiderSharingState = true;
 		this.HandleEnterVehicleRideSharing(info);
 	}
 
-	// Token: 0x060163D1 RID: 91089 RVA: 0x0059FEEB File Offset: 0x0059E0EB
+	// Token: 0x06013DD7 RID: 81367 RVA: 0x005CAEA3 File Offset: 0x005C90A3
 	private void OnLeaveVehicleRideSharing(VehiclePassengerInfo info)
 	{
 		this.HandleExitVehicleRideSharing(info);
@@ -111,7 +111,7 @@ public class ShipTogetherModel : ModelBase
 		this.RiderSharingRoleId = 0;
 	}
 
-	// Token: 0x060163D2 RID: 91090 RVA: 0x0059FF04 File Offset: 0x0059E104
+	// Token: 0x06013DD8 RID: 81368 RVA: 0x005CAEBC File Offset: 0x005C90BC
 	private void OnSpecialVehicleShareNotify(VehicleShareNotify data)
 	{
 		bool isEnter = data.IsEnter;
@@ -121,7 +121,7 @@ public class ShipTogetherModel : ModelBase
 		}
 	}
 
-	// Token: 0x060163D3 RID: 91091 RVA: 0x0059FF28 File Offset: 0x0059E128
+	// Token: 0x06013DD9 RID: 81369 RVA: 0x005CAEE0 File Offset: 0x005C90E0
 	private void HandleEnterVehicleRideSharing(VehiclePassengerInfo info)
 	{
 		EVehicleType? evehicleType = (info != null) ? new EVehicleType?(info.VehicleType) : null;
@@ -152,7 +152,7 @@ public class ShipTogetherModel : ModelBase
 		}
 	}
 
-	// Token: 0x060163D4 RID: 91092 RVA: 0x0059FF9C File Offset: 0x0059E19C
+	// Token: 0x06013DDA RID: 81370 RVA: 0x005CAF54 File Offset: 0x005C9154
 	private void HandleExitVehicleRideSharing(VehiclePassengerInfo info)
 	{
 		EVehicleType? evehicleType = (info != null) ? new EVehicleType?(info.VehicleType) : null;
@@ -183,7 +183,7 @@ public class ShipTogetherModel : ModelBase
 		}
 	}
 
-	// Token: 0x060163D5 RID: 91093 RVA: 0x005A0010 File Offset: 0x0059E210
+	// Token: 0x06013DDB RID: 81371 RVA: 0x005CAFC8 File Offset: 0x005C91C8
 	private void HandleEnterVehicleRideSharingForGongduola(VehiclePassengerInfo info)
 	{
 		Entity entity = (info != null) ? info.PassengerEntity : null;
@@ -201,7 +201,7 @@ public class ShipTogetherModel : ModelBase
 		vehicleTagComponent.AddTagForPassenger(entity, ETagChannel.Common, GameplayTagDefine.EGameplayTagId["载具.贡多拉.允许共乘"]);
 	}
 
-	// Token: 0x060163D6 RID: 91094 RVA: 0x005A0088 File Offset: 0x0059E288
+	// Token: 0x06013DDC RID: 81372 RVA: 0x005CB040 File Offset: 0x005C9240
 	private void HandleExitVehicleRideSharingForGongduola(VehiclePassengerInfo info)
 	{
 		Entity entity = (info != null) ? info.PassengerEntity : null;
@@ -219,14 +219,14 @@ public class ShipTogetherModel : ModelBase
 		vehicleTagComponent.RemoveTagForPassenger(entity, ETagChannel.Common, GameplayTagDefine.EGameplayTagId["载具.贡多拉.允许共乘"]);
 	}
 
-	// Token: 0x060163D7 RID: 91095 RVA: 0x005A0101 File Offset: 0x0059E301
+	// Token: 0x06013DDD RID: 81373 RVA: 0x005CB0B9 File Offset: 0x005C92B9
 	private void HandleEnterVehicleRideSharingForCoBath(VehiclePassengerInfo info)
 	{
 		EventSystem.Instance.Add(EEventName.OnCoBathSwitchFirstPlayerView, new Action<bool>(this.SwitchFirstPlayerView));
 		EventSystem.Instance.Add(EEventName.OnScreenShotDone, new Action(this.OnScreenShotDone));
 	}
 
-	// Token: 0x060163D8 RID: 91096 RVA: 0x005A013C File Offset: 0x0059E33C
+	// Token: 0x06013DDE RID: 81374 RVA: 0x005CB0F4 File Offset: 0x005C92F4
 	private void HandleExitVehicleRideSharingForCoBath(VehiclePassengerInfo info)
 	{
 		TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -251,7 +251,7 @@ public class ShipTogetherModel : ModelBase
 		ShowerModel.Instance.ExitAndClear();
 	}
 
-	// Token: 0x060163D9 RID: 91097 RVA: 0x005A01D4 File Offset: 0x0059E3D4
+	// Token: 0x06013DDF RID: 81375 RVA: 0x005CB18C File Offset: 0x005C938C
 	private void SwitchFirstPlayerView(bool enable)
 	{
 		TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -272,7 +272,7 @@ public class ShipTogetherModel : ModelBase
 		}
 	}
 
-	// Token: 0x060163DA RID: 91098 RVA: 0x005A0248 File Offset: 0x0059E448
+	// Token: 0x06013DE0 RID: 81376 RVA: 0x005CB200 File Offset: 0x005C9400
 	private void SendSwitchViewRequest(bool enable)
 	{
 		BathChangeCameraRequest bathChangeCameraRequest = BathChangeCameraRequest.Create();
@@ -282,7 +282,7 @@ public class ShipTogetherModel : ModelBase
 		}, 0);
 	}
 
-	// Token: 0x060163DB RID: 91099 RVA: 0x005A0298 File Offset: 0x0059E498
+	// Token: 0x06013DE1 RID: 81377 RVA: 0x005CB250 File Offset: 0x005C9450
 	private void OnScreenShotDone()
 	{
 		BathPhotoRequest message = BathPhotoRequest.Create();
@@ -291,7 +291,7 @@ public class ShipTogetherModel : ModelBase
 		}, 0);
 	}
 
-	// Token: 0x060163DC RID: 91100 RVA: 0x005A02DB File Offset: 0x0059E4DB
+	// Token: 0x06013DE2 RID: 81378 RVA: 0x005CB293 File Offset: 0x005C9493
 	public bool CanEnterMotorcycleMovieRideSharingMode(bool tipsText)
 	{
 		if (GameModeModel.Instance.IsMulti)
@@ -305,31 +305,31 @@ public class ShipTogetherModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060163DD RID: 91101 RVA: 0x005A0303 File Offset: 0x0059E503
+	// Token: 0x06013DE3 RID: 81379 RVA: 0x005CB2BB File Offset: 0x005C94BB
 	public bool CheckCanOpenMotorcycleTogetherView(EUiViewName viewName, object param)
 	{
 		return this.IsInMovieRideSharingMode;
 	}
 
-	// Token: 0x060163DE RID: 91102 RVA: 0x005A0310 File Offset: 0x0059E510
+	// Token: 0x06013DE4 RID: 81380 RVA: 0x005CB2C8 File Offset: 0x005C94C8
 	private void HandleEnterVehicleRideSharingForMotorcycle(VehiclePassengerInfo info)
 	{
 		EventSystem.Instance.Add<bool, bool>(EEventName.OnMovieMotorRideSharingModeChangeRequest, new Action<bool, bool>(this.OnMovieMotorRideSharingModeChangeRequest));
 	}
 
-	// Token: 0x060163DF RID: 91103 RVA: 0x005A032E File Offset: 0x0059E52E
+	// Token: 0x06013DE5 RID: 81381 RVA: 0x005CB2E6 File Offset: 0x005C94E6
 	private void HandleExitVehicleRideSharingForMotorcycle(VehiclePassengerInfo info)
 	{
 		EventSystem.Instance.Remove(EEventName.OnMovieMotorRideSharingModeChangeRequest, new Action<bool, bool>(this.OnMovieMotorRideSharingModeChangeRequest));
 	}
 
-	// Token: 0x060163E0 RID: 91104 RVA: 0x005A034C File Offset: 0x0059E54C
+	// Token: 0x06013DE6 RID: 81382 RVA: 0x005CB304 File Offset: 0x005C9504
 	private void OnMovieMotorRideSharingModeChangeRequest(bool enable, bool blackScreen)
 	{
 		this.RequestMovieRideSharingModeChangeForMotorcycle(enable, blackScreen).Forget();
 	}
 
-	// Token: 0x060163E1 RID: 91105 RVA: 0x005A035C File Offset: 0x0059E55C
+	// Token: 0x06013DE7 RID: 81383 RVA: 0x005CB314 File Offset: 0x005C9514
 	protected UniTask RequestMovieRideSharingModeChangeForMotorcycle(bool enable, bool blackScreen)
 	{
 		ShipTogetherModel.<RequestMovieRideSharingModeChangeForMotorcycle>d__41 <RequestMovieRideSharingModeChangeForMotorcycle>d__;
@@ -342,7 +342,7 @@ public class ShipTogetherModel : ModelBase
 		return <RequestMovieRideSharingModeChangeForMotorcycle>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060163E2 RID: 91106 RVA: 0x005A03B0 File Offset: 0x0059E5B0
+	// Token: 0x06013DE8 RID: 81384 RVA: 0x005CB368 File Offset: 0x005C9568
 	protected UniTask PreMovieRideSharingModeChangeForMotorcycle(bool enable, bool blackScreen)
 	{
 		ShipTogetherModel.<PreMovieRideSharingModeChangeForMotorcycle>d__42 <PreMovieRideSharingModeChangeForMotorcycle>d__;
@@ -355,7 +355,7 @@ public class ShipTogetherModel : ModelBase
 		return <PreMovieRideSharingModeChangeForMotorcycle>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060163E3 RID: 91107 RVA: 0x005A0404 File Offset: 0x0059E604
+	// Token: 0x06013DE9 RID: 81385 RVA: 0x005CB3BC File Offset: 0x005C95BC
 	protected void SendMovieModeRideSharingRequest(bool enable)
 	{
 		VehicleEnterSharingRequest vehicleEnterSharingRequest = VehicleEnterSharingRequest.Create();
@@ -368,12 +368,12 @@ public class ShipTogetherModel : ModelBase
 			{
 				return;
 			}
-			ErrorCodeController.Instance.OpenErrorCodeTipView(vehicleEnterSharingResponse.ErrorCode, 29612, null, true, true);
+			ErrorCodeController.Instance.OpenErrorCodeTipView(vehicleEnterSharingResponse.ErrorCode, 25137, null, true, true);
 			this.PostMovieRideSharingModeChangeForMotorcycle(enable, false);
 		}, 0);
 	}
 
-	// Token: 0x060163E4 RID: 91108 RVA: 0x005A045C File Offset: 0x0059E65C
+	// Token: 0x06013DEA RID: 81386 RVA: 0x005CB414 File Offset: 0x005C9614
 	protected UniTask OnMovieRideSharingModeChangeForMotorcycle(bool enable)
 	{
 		ShipTogetherModel.<OnMovieRideSharingModeChangeForMotorcycle>d__44 <OnMovieRideSharingModeChangeForMotorcycle>d__;
@@ -385,7 +385,7 @@ public class ShipTogetherModel : ModelBase
 		return <OnMovieRideSharingModeChangeForMotorcycle>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060163E5 RID: 91109 RVA: 0x005A04A8 File Offset: 0x0059E6A8
+	// Token: 0x06013DEB RID: 81387 RVA: 0x005CB460 File Offset: 0x005C9660
 	[NullableContext(0)]
 	protected UniTask<bool> PostMovieRideSharingModeChangeForMotorcycle(bool enable, bool success)
 	{
@@ -399,7 +399,7 @@ public class ShipTogetherModel : ModelBase
 		return <PostMovieRideSharingModeChangeForMotorcycle>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060163E6 RID: 91110 RVA: 0x005A04FC File Offset: 0x0059E6FC
+	// Token: 0x06013DEC RID: 81388 RVA: 0x005CB4B4 File Offset: 0x005C96B4
 	[NullableContext(0)]
 	protected UniTask<bool> WaitMotorTeamUpdateComplete()
 	{
@@ -411,7 +411,7 @@ public class ShipTogetherModel : ModelBase
 		return <WaitMotorTeamUpdateComplete>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060163E7 RID: 91111 RVA: 0x005A0540 File Offset: 0x0059E740
+	// Token: 0x06013DED RID: 81389 RVA: 0x005CB4F8 File Offset: 0x005C96F8
 	[NullableContext(0)]
 	protected UniTask<bool> WaitExitBlackScreen()
 	{
@@ -423,13 +423,12 @@ public class ShipTogetherModel : ModelBase
 		return <WaitExitBlackScreen>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060163E8 RID: 91112 RVA: 0x005A0584 File Offset: 0x0059E784
+	// Token: 0x06013DEE RID: 81390 RVA: 0x005CB53C File Offset: 0x005C973C
 	private void RegisterDriveAudioEvent()
 	{
-		VehicleModel instance = VehicleModel.Instance;
-		VehicleRideSharingInfo vehicleRideSharingInfo = (instance != null) ? instance.RideSharingInfoMap.Values.FirstOrDefault<VehicleRideSharingInfo>() : null;
-		int num = (vehicleRideSharingInfo != null) ? vehicleRideSharingInfo.RoleId : 0;
-		long num2 = (vehicleRideSharingInfo != null) ? vehicleRideSharingInfo.RoleCreatureId : 0L;
+		VehicleRideSharingInfo firstRideSharingInfo = ShipTogetherModel.GetFirstRideSharingInfo(VehicleModel.Instance);
+		int num = (firstRideSharingInfo != null) ? firstRideSharingInfo.RoleId : 0;
+		long num2 = (firstRideSharingInfo != null) ? firstRideSharingInfo.RoleCreatureId : 0L;
 		if (num2 == 0L || num == 0)
 		{
 			return;
@@ -470,14 +469,14 @@ public class ShipTogetherModel : ModelBase
 		}
 	}
 
-	// Token: 0x060163E9 RID: 91113 RVA: 0x005A064D File Offset: 0x0059E84D
+	// Token: 0x06013DEF RID: 81391 RVA: 0x005CB5F4 File Offset: 0x005C97F4
 	private void HandleEnterVehicleRideSharingForMoonTogether(VehiclePassengerInfo info)
 	{
 		EventSystem.Instance.Add(EEventName.OnCoBathSwitchFirstPlayerView, new Action<bool>(this.SwitchFirstPlayerViewForMoonTogether));
 		EventSystem.Instance.Add(EEventName.OnScreenShotDone, new Action(this.OnScreenShotDone));
 	}
 
-	// Token: 0x060163EA RID: 91114 RVA: 0x005A0688 File Offset: 0x0059E888
+	// Token: 0x06013DF0 RID: 81392 RVA: 0x005CB630 File Offset: 0x005C9830
 	private void HandleExitVehicleRideSharingForMoonTogether(VehiclePassengerInfo info)
 	{
 		TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -513,7 +512,7 @@ public class ShipTogetherModel : ModelBase
 		MoonTogetherModel.Instance.ClearCurInviteRole();
 	}
 
-	// Token: 0x060163EB RID: 91115 RVA: 0x005A076C File Offset: 0x0059E96C
+	// Token: 0x06013DF1 RID: 81393 RVA: 0x005CB714 File Offset: 0x005C9914
 	private void SwitchFirstPlayerViewForMoonTogether(bool enable)
 	{
 		TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -542,7 +541,7 @@ public class ShipTogetherModel : ModelBase
 		}
 	}
 
-	// Token: 0x060163EC RID: 91116 RVA: 0x005A0818 File Offset: 0x0059EA18
+	// Token: 0x06013DF2 RID: 81394 RVA: 0x005CB7C0 File Offset: 0x005C99C0
 	private void ExecuteChangeRideSharingPassengerResponseForMoonTogether(int roleId, int preRoleId, int seat)
 	{
 		if (roleId != 1511 && roleId != 1308)
@@ -563,7 +562,7 @@ public class ShipTogetherModel : ModelBase
 		CreatureController.Instance.SetActorVisible(entityNoBlueprint, false, true, true, "MoonTogether", false);
 	}
 
-	// Token: 0x060163ED RID: 91117 RVA: 0x005A087C File Offset: 0x0059EA7C
+	// Token: 0x06013DF3 RID: 81395 RVA: 0x005CB824 File Offset: 0x005C9A24
 	private void ExecuteRemoveRideSharingPassengerResponseForMoonTogether(int roleId, int seat)
 	{
 		if (roleId != 1511 && roleId != 1308)
@@ -584,7 +583,7 @@ public class ShipTogetherModel : ModelBase
 		CreatureController.Instance.SetActorVisible(entityNoBlueprint, true, true, true, "MoonTogether", false);
 	}
 
-	// Token: 0x060163EE RID: 91118 RVA: 0x005A08E0 File Offset: 0x0059EAE0
+	// Token: 0x06013DF4 RID: 81396 RVA: 0x005CB888 File Offset: 0x005C9A88
 	private void RemoveDriveAudioEvent()
 	{
 		TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -623,13 +622,12 @@ public class ShipTogetherModel : ModelBase
 		}
 	}
 
-	// Token: 0x060163EF RID: 91119 RVA: 0x005A0964 File Offset: 0x0059EB64
+	// Token: 0x06013DF5 RID: 81397 RVA: 0x005CB90C File Offset: 0x005C9B0C
 	private void ExecuteChangeRideSharingPassenger()
 	{
-		VehicleModel instance = VehicleModel.Instance;
-		VehicleRideSharingInfo vehicleRideSharingInfo = (instance != null) ? instance.RideSharingInfoMap.Values.FirstOrDefault<VehicleRideSharingInfo>() : null;
-		int num = (vehicleRideSharingInfo != null) ? vehicleRideSharingInfo.RoleId : 0;
-		if (((vehicleRideSharingInfo != null) ? vehicleRideSharingInfo.RoleCreatureId : 0L) == 0L || num == 0)
+		VehicleRideSharingInfo firstRideSharingInfo = ShipTogetherModel.GetFirstRideSharingInfo(VehicleModel.Instance);
+		int num = (firstRideSharingInfo != null) ? firstRideSharingInfo.RoleId : 0;
+		if (((firstRideSharingInfo != null) ? firstRideSharingInfo.RoleCreatureId : 0L) == 0L || num == 0)
 		{
 			return;
 		}
@@ -657,7 +655,7 @@ public class ShipTogetherModel : ModelBase
 		}
 	}
 
-	// Token: 0x060163F0 RID: 91120 RVA: 0x005A0A30 File Offset: 0x0059EC30
+	// Token: 0x06013DF6 RID: 81398 RVA: 0x005CB9C8 File Offset: 0x005C9BC8
 	private void ExecuteRemoveRideSharingPassenger()
 	{
 		TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -684,7 +682,7 @@ public class ShipTogetherModel : ModelBase
 		}
 	}
 
-	// Token: 0x060163F1 RID: 91121 RVA: 0x005A0AC0 File Offset: 0x0059ECC0
+	// Token: 0x06013DF7 RID: 81399 RVA: 0x005CBA58 File Offset: 0x005C9C58
 	private void ExecuteChangeRideSharingPassengerResponse(int roleId, int preRoleId, int seat)
 	{
 		TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -696,7 +694,7 @@ public class ShipTogetherModel : ModelBase
 		}
 	}
 
-	// Token: 0x060163F2 RID: 91122 RVA: 0x005A0B1C File Offset: 0x0059ED1C
+	// Token: 0x06013DF8 RID: 81400 RVA: 0x005CBAB4 File Offset: 0x005C9CB4
 	private void ExecuteRemoveRideSharingPassengerResponse(int roleId, int seat)
 	{
 		TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -708,8 +706,26 @@ public class ShipTogetherModel : ModelBase
 		}
 	}
 
-	// Token: 0x17001DB1 RID: 7601
-	// (get) Token: 0x060163F3 RID: 91123 RVA: 0x005A0B76 File Offset: 0x0059ED76
+	// Token: 0x06013DF9 RID: 81401 RVA: 0x005CBB10 File Offset: 0x005C9D10
+	[NullableContext(2)]
+	private static VehicleRideSharingInfo GetFirstRideSharingInfo(VehicleModel vehicleModel)
+	{
+		if (vehicleModel == null)
+		{
+			return null;
+		}
+		using (Dictionary<int, VehicleRideSharingInfo>.ValueCollection.Enumerator enumerator = vehicleModel.RideSharingInfoMap.Values.GetEnumerator())
+		{
+			if (enumerator.MoveNext())
+			{
+				return enumerator.Current;
+			}
+		}
+		return null;
+	}
+
+	// Token: 0x17001E0A RID: 7690
+	// (get) Token: 0x06013DFA RID: 81402 RVA: 0x005CBB6C File Offset: 0x005C9D6C
 	public static ShipTogetherModel Instance
 	{
 		get
@@ -718,7 +734,7 @@ public class ShipTogetherModel : ModelBase
 		}
 	}
 
-	// Token: 0x060163F4 RID: 91124 RVA: 0x005A0B7D File Offset: 0x0059ED7D
+	// Token: 0x06013DFB RID: 81403 RVA: 0x005CBB73 File Offset: 0x005C9D73
 	public static ShipTogetherModel GetOrCreateInstance()
 	{
 		if (ShipTogetherModel._Instance == null)
@@ -728,7 +744,7 @@ public class ShipTogetherModel : ModelBase
 		return ShipTogetherModel._Instance;
 	}
 
-	// Token: 0x060163F5 RID: 91125 RVA: 0x005A0B91 File Offset: 0x0059ED91
+	// Token: 0x06013DFC RID: 81404 RVA: 0x005CBB87 File Offset: 0x005C9D87
 	public static bool CreateInstance()
 	{
 		if (ShipTogetherModel._Instance != null)
@@ -739,73 +755,73 @@ public class ShipTogetherModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060163F6 RID: 91126 RVA: 0x005A0BA7 File Offset: 0x0059EDA7
+	// Token: 0x06013DFD RID: 81405 RVA: 0x005CBB9D File Offset: 0x005C9D9D
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060163F7 RID: 91127 RVA: 0x005A0BA9 File Offset: 0x0059EDA9
+	// Token: 0x06013DFE RID: 81406 RVA: 0x005CBB9F File Offset: 0x005C9D9F
 	public static void ResetStaticDefaultValue()
 	{
 		ShipTogetherModel._Instance = null;
 	}
 
-	// Token: 0x060163F8 RID: 91128 RVA: 0x005A0BB1 File Offset: 0x0059EDB1
+	// Token: 0x06013DFF RID: 81407 RVA: 0x005CBBA7 File Offset: 0x005C9DA7
 	static ShipTogetherModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ShipTogetherModel.CreateStaticDefaultValue), new Action(ShipTogetherModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400A578 RID: 42360
+	// Token: 0x0400A962 RID: 43362
 	private const int LUCY_ROLE_ID = 1511;
 
-	// Token: 0x0400A579 RID: 42361
+	// Token: 0x0400A963 RID: 43363
 	private const int REBECCA_ROLE_ID = 1308;
 
-	// Token: 0x0400A57A RID: 42362
+	// Token: 0x0400A964 RID: 43364
 	public bool RiderSharingState;
 
-	// Token: 0x0400A57B RID: 42363
+	// Token: 0x0400A965 RID: 43365
 	public int CurrentSelectTogetherRoleId;
 
-	// Token: 0x0400A57C RID: 42364
+	// Token: 0x0400A966 RID: 43366
 	public int RiderSharingRoleId;
 
-	// Token: 0x0400A57D RID: 42365
+	// Token: 0x0400A967 RID: 43367
 	public bool IsInMovieRideSharingMode;
 
-	// Token: 0x0400A57E RID: 42366
+	// Token: 0x0400A968 RID: 43368
 	private bool NeedBlackScreen;
 
-	// Token: 0x0400A57F RID: 42367
+	// Token: 0x0400A969 RID: 43369
 	[Nullable(2)]
 	private CustomPromise WaitMovieRideSharingModeChangeFinishPromise;
 
-	// Token: 0x0400A580 RID: 42368
+	// Token: 0x0400A96A RID: 43370
 	private int WaitTeamUpdateHandle;
 
-	// Token: 0x0400A581 RID: 42369
+	// Token: 0x0400A96B RID: 43371
 	private int WaitExitBlackScreenHandle;
 
-	// Token: 0x0400A582 RID: 42370
+	// Token: 0x0400A96C RID: 43372
 	private UniTaskCompletionSource CurrentRequestTcs;
 
-	// Token: 0x0400A583 RID: 42371
+	// Token: 0x0400A96D RID: 43373
 	private float MotorSharingRideRequestDelay = 0.5f;
 
-	// Token: 0x0400A584 RID: 42372
+	// Token: 0x0400A96E RID: 43374
 	public float MotorSharingRideBlackScreenLoad = 0.5f;
 
-	// Token: 0x0400A585 RID: 42373
+	// Token: 0x0400A96F RID: 43375
 	public float MotorSharingRideBlackScreenQuit = 0.5f;
 
-	// Token: 0x0400A586 RID: 42374
+	// Token: 0x0400A970 RID: 43376
 	public string MotorSharingMovieCameraConfig = "";
 
-	// Token: 0x0400A587 RID: 42375
+	// Token: 0x0400A971 RID: 43377
 	private bool WasPlayerRoleHidden;
 
-	// Token: 0x0400A588 RID: 42376
+	// Token: 0x0400A972 RID: 43378
 	[Nullable(2)]
 	private static ShipTogetherModel _Instance;
 }

@@ -4,16 +4,16 @@ using Aki.TDConfigMgr.Component;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.InteractHandler
 {
-	// Token: 0x02007115 RID: 28949
+	// Token: 0x02006343 RID: 25411
 	public class QuantumDiffusionInteractHandler : ManipulateInteractHandlerBase
 	{
-		// Token: 0x06046AC0 RID: 289472 RVA: 0x011CA52C File Offset: 0x011C872C
+		// Token: 0x0603D905 RID: 252165 RVA: 0x011D3330 File Offset: 0x011D1530
 		[NullableContext(1)]
 		public QuantumDiffusionInteractHandler(IManipulateInteractContext context) : base(context)
 		{
 		}
 
-		// Token: 0x06046AC1 RID: 289473 RVA: 0x011CA538 File Offset: 0x011C8738
+		// Token: 0x0603D906 RID: 252166 RVA: 0x011D333C File Offset: 0x011D153C
 		public override bool Start()
 		{
 			if (!this.Context.CheckBeforeInteract(EExploreSkillInteractType.QuantumDiffusion))
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.InteractHandler
 			return true;
 		}
 
-		// Token: 0x06046AC2 RID: 289474 RVA: 0x011CA586 File Offset: 0x011C8786
+		// Token: 0x0603D907 RID: 252167 RVA: 0x011D338A File Offset: 0x011D158A
 		public override void End()
 		{
 		}

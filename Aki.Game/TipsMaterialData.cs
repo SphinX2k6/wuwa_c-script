@@ -6,12 +6,12 @@ using CSharpScript.Game.Module.Common.MediumItemGrid;
 using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Item;
 
-// Token: 0x020018D8 RID: 6360
+// Token: 0x02000D91 RID: 3473
 [NullableContext(1)]
 [Nullable(0)]
 public class TipsMaterialData : ItemTipsData
 {
-	// Token: 0x0600BA9C RID: 47772 RVA: 0x002A3CB0 File Offset: 0x002A1EB0
+	// Token: 0x06008E85 RID: 36485 RVA: 0x002AE408 File Offset: 0x002AC608
 	public TipsMaterialData(ItemTipsParam data) : base(data)
 	{
 		this.ItemType = EItemTipsType.Normal;
@@ -48,15 +48,15 @@ public class TipsMaterialData : ItemTipsData
 			string localTextNew = ConfigMultiTextLang.GetLocalTextNew("Text_ItemExpired_text", null);
 			this.LimitTimeTxt = StringUtils.Format(localTextNew, new string[]
 			{
-				dataFromTimeStamp.Month.ToString(),
-				dataFromTimeStamp.Day.ToString(),
-				dataFromTimeStamp.Hour.ToString() + ":" + dataFromTimeStamp.Minute.ToString()
+				dataFromTimeStamp.Month.ToString("D2"),
+				dataFromTimeStamp.Day.ToString("D2"),
+				dataFromTimeStamp.Hour.ToString("D2") + ":" + dataFromTimeStamp.Minute.ToString("D2")
 			});
 		}
 		this.TryApplyConsoleExtraPayGiftPreview();
 	}
 
-	// Token: 0x0600BA9D RID: 47773 RVA: 0x002A3EBC File Offset: 0x002A20BC
+	// Token: 0x06008E86 RID: 36486 RVA: 0x002AE628 File Offset: 0x002AC828
 	private void TryApplyConsoleExtraPayGiftPreview()
 	{
 		PayShopModel instance = PayShopModel.Instance;
@@ -89,7 +89,7 @@ public class TipsMaterialData : ItemTipsData
 		this.Num = 1;
 	}
 
-	// Token: 0x0600BA9E RID: 47774 RVA: 0x002A3FC4 File Offset: 0x002A21C4
+	// Token: 0x06008E87 RID: 36487 RVA: 0x002AE730 File Offset: 0x002AC930
 	[NullableContext(2)]
 	private string GetItemBuffIconPathByBuffType(EMediumItemGridBuffType? buffIconType)
 	{
@@ -115,38 +115,38 @@ public class TipsMaterialData : ItemTipsData
 		return null;
 	}
 
-	// Token: 0x0600BA9F RID: 47775 RVA: 0x002A4037 File Offset: 0x002A2237
+	// Token: 0x06008E88 RID: 36488 RVA: 0x002AE7A3 File Offset: 0x002AC9A3
 	protected override bool OnIsShowIconBig()
 	{
-		return this.ItemConfigType.GetValueOrDefault() == InventoryDefine.EItemType.Phantom || this.ItemConfigType.GetValueOrDefault() == InventoryDefine.EItemType.MotorFrame || this.ItemConfigType.GetValueOrDefault() == InventoryDefine.EItemType.MotorSkin;
+		return this.ItemConfigType.GetValueOrDefault() == InventoryDefine.EItemType.Phantom || this.ItemConfigType.GetValueOrDefault() == InventoryDefine.EItemType.MotorFrame || this.ItemConfigType.GetValueOrDefault() == InventoryDefine.EItemType.MotorSkin || this.ItemConfigType.GetValueOrDefault() == InventoryDefine.EItemType.WeaponSkin;
 	}
 
-	// Token: 0x040054A0 RID: 21664
+	// Token: 0x0400554B RID: 21835
 	public string MaterialType;
 
-	// Token: 0x040054A1 RID: 21665
+	// Token: 0x0400554C RID: 21836
 	[Nullable(2)]
 	public string FunctionSpritePath;
 
-	// Token: 0x040054A2 RID: 21666
+	// Token: 0x0400554D RID: 21837
 	public int Num;
 
-	// Token: 0x040054A3 RID: 21667
+	// Token: 0x0400554E RID: 21838
 	public string TxtEffect;
 
-	// Token: 0x040054A4 RID: 21668
+	// Token: 0x0400554F RID: 21839
 	public string[] TxtEffectArgs;
 
-	// Token: 0x040054A5 RID: 21669
+	// Token: 0x04005550 RID: 21840
 	public bool EffectAutoLocalText = true;
 
-	// Token: 0x040054A6 RID: 21670
+	// Token: 0x04005551 RID: 21841
 	public string TxtDescription;
 
-	// Token: 0x040054A7 RID: 21671
+	// Token: 0x04005552 RID: 21842
 	public InventoryDefine.EItemType? ItemConfigType;
 
-	// Token: 0x040054A8 RID: 21672
+	// Token: 0x04005553 RID: 21843
 	[Nullable(2)]
 	public string ExTxtDescription;
 }

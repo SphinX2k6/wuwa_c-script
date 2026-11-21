@@ -6,18 +6,18 @@ using CSharpScript.Core.Common;
 using CSharpScript.Game.NewWorld.SceneItem;
 using UnrealEngine;
 
-// Token: 0x02003268 RID: 12904
+// Token: 0x020027D7 RID: 10199
 [NullableContext(1)]
 [Nullable(0)]
 public class AimPart
 {
-	// Token: 0x0601BE50 RID: 114256 RVA: 0x007BBB68 File Offset: 0x007B9D68
+	// Token: 0x06019A2B RID: 105003 RVA: 0x007E3441 File Offset: 0x007E1641
 	public AimPart(BaseActorComponent ownerBase)
 	{
 		this.OwnerBase = ownerBase;
 	}
 
-	// Token: 0x0601BE51 RID: 114257 RVA: 0x007BBBA4 File Offset: 0x007B9DA4
+	// Token: 0x06019A2C RID: 105004 RVA: 0x007E347C File Offset: 0x007E167C
 	public void Init(SAimPart config)
 	{
 		this.OwnerCharacter = (this.OwnerBase as CharacterActorComponent);
@@ -35,7 +35,7 @@ public class AimPart
 		this.GamePadCorrect = config.GamePadCorrect;
 	}
 
-	// Token: 0x0601BE52 RID: 114258 RVA: 0x007BBC44 File Offset: 0x007B9E44
+	// Token: 0x06019A2D RID: 105005 RVA: 0x007E351C File Offset: 0x007E171C
 	public void InitSceneItem(IAimPart config)
 	{
 		this.SceneItemHit = this.OwnerBase.Entity.GetComponent<SceneItemHitComponent>();
@@ -51,7 +51,7 @@ public class AimPart
 		this.GamePadCorrect = config.GamePadCorrect;
 	}
 
-	// Token: 0x0601BE53 RID: 114259 RVA: 0x007BBD2C File Offset: 0x007B9F2C
+	// Token: 0x06019A2E RID: 105006 RVA: 0x007E3604 File Offset: 0x007E1804
 	public float GetRadius(bool onStart)
 	{
 		float num = onStart ? this.RadiusOutOnStart : this.RadiusOut;
@@ -66,7 +66,7 @@ public class AimPart
 		return num;
 	}
 
-	// Token: 0x0601BE54 RID: 114260 RVA: 0x007BBD78 File Offset: 0x007B9F78
+	// Token: 0x06019A2F RID: 105007 RVA: 0x007E3650 File Offset: 0x007E1850
 	public bool GetAimPointLocation(Vector @out)
 	{
 		if (this.OwnerCharacter != null)
@@ -113,45 +113,45 @@ public class AimPart
 		return true;
 	}
 
-	// Token: 0x0400DC19 RID: 56345
+	// Token: 0x0400E0B8 RID: 57528
 	[StaticVariableRuleIgnore]
 	private static readonly Transform TmpTrans = Transform.Create();
 
-	// Token: 0x0400DC1A RID: 56346
+	// Token: 0x0400E0B9 RID: 57529
 	public FName BoneName = FNameUtil.NONE;
 
-	// Token: 0x0400DC1B RID: 56347
+	// Token: 0x0400E0BA RID: 57530
 	public string BoneNameString = "";
 
-	// Token: 0x0400DC1C RID: 56348
+	// Token: 0x0400E0BB RID: 57531
 	public Vector Offset = Vector.Create();
 
-	// Token: 0x0400DC1D RID: 56349
+	// Token: 0x0400E0BC RID: 57532
 	public float RadiusIn;
 
-	// Token: 0x0400DC1E RID: 56350
+	// Token: 0x0400E0BD RID: 57533
 	public float RadiusOut;
 
-	// Token: 0x0400DC1F RID: 56351
+	// Token: 0x0400E0BE RID: 57534
 	public float RadiusOutOnStart;
 
-	// Token: 0x0400DC20 RID: 56352
+	// Token: 0x0400E0BF RID: 57535
 	public float MobileCorrect;
 
-	// Token: 0x0400DC21 RID: 56353
+	// Token: 0x0400E0C0 RID: 57536
 	public float GamePadCorrect;
 
-	// Token: 0x0400DC22 RID: 56354
+	// Token: 0x0400E0C1 RID: 57537
 	public string IgnoreCollisionBoneName = "";
 
-	// Token: 0x0400DC23 RID: 56355
+	// Token: 0x0400E0C2 RID: 57538
 	[Nullable(2)]
 	public CharacterActorComponent OwnerCharacter;
 
-	// Token: 0x0400DC24 RID: 56356
+	// Token: 0x0400E0C3 RID: 57539
 	[Nullable(2)]
 	public SceneItemHitComponent SceneItemHit;
 
-	// Token: 0x0400DC25 RID: 56357
+	// Token: 0x0400E0C4 RID: 57540
 	public readonly BaseActorComponent OwnerBase;
 }

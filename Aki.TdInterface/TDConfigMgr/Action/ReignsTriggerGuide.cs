@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002142 RID: 8514
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020023A3 RID: 9123
 	public class ReignsTriggerGuide : ActionParams
 	{
-		// Token: 0x0600BB72 RID: 47986 RVA: 0x001B0CCC File Offset: 0x001AEECC
+		// Token: 0x0600C700 RID: 50944 RVA: 0x001C7E80 File Offset: 0x001C6080
 		private ReignsTriggerGuide_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BB73 RID: 47987 RVA: 0x001B0D04 File Offset: 0x001AEF04
+		// Token: 0x0600C701 RID: 50945 RVA: 0x001C7EB8 File Offset: 0x001C60B8
 		public static ReignsTriggerGuide Create([Nullable(2)] ReignsTriggerGuide instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BB74 RID: 47988 RVA: 0x001B0D17 File Offset: 0x001AEF17
+		// Token: 0x0600C702 RID: 50946 RVA: 0x001C7ECB File Offset: 0x001C60CB
 		public static ReignsTriggerGuide CreateFromSetValue([Nullable(2)] ReignsTriggerGuide_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BB75 RID: 47989 RVA: 0x001B0D2A File Offset: 0x001AEF2A
+		// Token: 0x0600C703 RID: 50947 RVA: 0x001C7EDE File Offset: 0x001C60DE
 		public ReignsTriggerGuide_SetValue ToSetValue()
 		{
 			return new ReignsTriggerGuide_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003933 RID: 14643
-		// (get) Token: 0x0600BB76 RID: 47990 RVA: 0x001B0D3D File Offset: 0x001AEF3D
-		// (set) Token: 0x0600BB77 RID: 47991 RVA: 0x001B0D68 File Offset: 0x001AEF68
+		// Token: 0x17003C20 RID: 15392
+		// (get) Token: 0x0600C704 RID: 50948 RVA: 0x001C7EF1 File Offset: 0x001C60F1
+		// (set) Token: 0x0600C705 RID: 50949 RVA: 0x001C7F1C File Offset: 0x001C611C
 		public virtual int GuideId
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04007017 RID: 28695
+		// Token: 0x0400764C RID: 30284
 		[Nullable(2)]
 		protected new ReignsTriggerGuide FbInstance;
 
-		// Token: 0x04007018 RID: 28696
+		// Token: 0x0400764D RID: 30285
 		[Nullable(2)]
 		protected ReignsTriggerGuide_SetValue PocoInterface;
 	}

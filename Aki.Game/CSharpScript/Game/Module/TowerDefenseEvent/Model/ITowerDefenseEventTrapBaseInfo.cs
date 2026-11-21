@@ -3,53 +3,53 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.TowerDefenseEvent.Model
 {
-	// Token: 0x02004B0D RID: 19213
+	// Token: 0x02003AB5 RID: 15029
 	[NullableContext(1)]
 	public interface ITowerDefenseEventTrapBaseInfo : ITowerDefenseEventCombatInfo, ITowerDefenseEventConfigInfo
 	{
-		// Token: 0x17007B19 RID: 31513
-		// (get) Token: 0x06031C13 RID: 203795
-		// (set) Token: 0x06031C14 RID: 203796
+		// Token: 0x17004EC6 RID: 20166
+		// (get) Token: 0x060269A3 RID: 158115
+		// (set) Token: 0x060269A4 RID: 158116
 		int TrapId { get; set; }
 
-		// Token: 0x17007B1A RID: 31514
-		// (get) Token: 0x06031C15 RID: 203797
-		// (set) Token: 0x06031C16 RID: 203798
+		// Token: 0x17004EC7 RID: 20167
+		// (get) Token: 0x060269A5 RID: 158117
+		// (set) Token: 0x060269A6 RID: 158118
 		int Level { get; set; }
 
-		// Token: 0x17007B1B RID: 31515
-		// (get) Token: 0x06031C17 RID: 203799
-		// (set) Token: 0x06031C18 RID: 203800
+		// Token: 0x17004EC8 RID: 20168
+		// (get) Token: 0x060269A7 RID: 158119
+		// (set) Token: 0x060269A8 RID: 158120
 		int BranchId { get; set; }
 
-		// Token: 0x17007B1C RID: 31516
-		// (get) Token: 0x06031C19 RID: 203801
-		// (set) Token: 0x06031C1A RID: 203802
+		// Token: 0x17004EC9 RID: 20169
+		// (get) Token: 0x060269A9 RID: 158121
+		// (set) Token: 0x060269AA RID: 158122
 		int DefaultCost { get; set; }
 
-		// Token: 0x17007B1D RID: 31517
-		// (get) Token: 0x06031C1B RID: 203803
-		// (set) Token: 0x06031C1C RID: 203804
+		// Token: 0x17004ECA RID: 20170
+		// (get) Token: 0x060269AB RID: 158123
+		// (set) Token: 0x060269AC RID: 158124
 		int DeconstructReturn { get; set; }
 
-		// Token: 0x17007B1E RID: 31518
-		// (get) Token: 0x06031C1D RID: 203805
-		// (set) Token: 0x06031C1E RID: 203806
+		// Token: 0x17004ECB RID: 20171
+		// (get) Token: 0x060269AD RID: 158125
+		// (set) Token: 0x060269AE RID: 158126
 		Vector2D GridSize { get; set; }
 
-		// Token: 0x17007B1F RID: 31519
-		// (get) Token: 0x06031C1F RID: 203807
-		// (set) Token: 0x06031C20 RID: 203808
+		// Token: 0x17004ECC RID: 20172
+		// (get) Token: 0x060269AF RID: 158127
+		// (set) Token: 0x060269B0 RID: 158128
 		ETowerDefenseEventTrapPlacementType PlacementType { get; set; }
 
-		// Token: 0x17007B20 RID: 31520
-		// (get) Token: 0x06031C21 RID: 203809
-		// (set) Token: 0x06031C22 RID: 203810
+		// Token: 0x17004ECD RID: 20173
+		// (get) Token: 0x060269B1 RID: 158129
+		// (set) Token: 0x060269B2 RID: 158130
 		bool CanRotate { get; set; }
 
-		// Token: 0x17007B21 RID: 31521
-		// (get) Token: 0x06031C23 RID: 203811
-		// (set) Token: 0x06031C24 RID: 203812
+		// Token: 0x17004ECE RID: 20174
+		// (get) Token: 0x060269B3 RID: 158131
+		// (set) Token: 0x060269B4 RID: 158132
 		int Degree { get; set; }
 	}
 }

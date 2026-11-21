@@ -6,17 +6,17 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200138E RID: 5006
+// Token: 0x02000842 RID: 2114
 [NullableContext(1)]
 [Nullable(0)]
 public class MowingTowerRewardView : UiViewBase
 {
-	// Token: 0x06008C46 RID: 35910 RVA: 0x001E1070 File Offset: 0x001DF270
+	// Token: 0x06005FE1 RID: 24545 RVA: 0x001E9EC4 File Offset: 0x001E80C4
 	public MowingTowerRewardView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06008C47 RID: 35911 RVA: 0x001E107C File Offset: 0x001DF27C
+	// Token: 0x06005FE2 RID: 24546 RVA: 0x001E9ED0 File Offset: 0x001E80D0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,7 +29,7 @@ public class MowingTowerRewardView : UiViewBase
 		};
 	}
 
-	// Token: 0x06008C48 RID: 35912 RVA: 0x001E1104 File Offset: 0x001DF304
+	// Token: 0x06005FE3 RID: 24547 RVA: 0x001E9F58 File Offset: 0x001E8158
 	protected override void OnStart()
 	{
 		this.CaptionItem = new PopupCaptionItem(base.GetItem(0));
@@ -46,7 +46,7 @@ public class MowingTowerRewardView : UiViewBase
 		this.MowingTowerData = mowingTowerData;
 	}
 
-	// Token: 0x06008C49 RID: 35913 RVA: 0x001E11E0 File Offset: 0x001DF3E0
+	// Token: 0x06005FE4 RID: 24548 RVA: 0x001EA034 File Offset: 0x001E8234
 	protected override void OnBeforeShow()
 	{
 		List<MowingTowerLevelDetailInfo> data = new List<MowingTowerLevelDetailInfo>(this.MowingTowerData.GetMowingTowerLevelDetailInfo());
@@ -76,7 +76,7 @@ public class MowingTowerRewardView : UiViewBase
 		levelSequencePlayer.PlayLevelSequenceByName("Start", false, null, false);
 	}
 
-	// Token: 0x06008C4A RID: 35914 RVA: 0x001E123D File Offset: 0x001DF43D
+	// Token: 0x06005FE5 RID: 24549 RVA: 0x001EA091 File Offset: 0x001E8291
 	private MowingTowerRewardTabItem CreateMowingTowerRewardTabItem()
 	{
 		MowingTowerRewardTabItem mowingTowerRewardTabItem = new MowingTowerRewardTabItem();
@@ -84,13 +84,13 @@ public class MowingTowerRewardView : UiViewBase
 		return mowingTowerRewardTabItem;
 	}
 
-	// Token: 0x06008C4B RID: 35915 RVA: 0x001E1256 File Offset: 0x001DF456
+	// Token: 0x06005FE6 RID: 24550 RVA: 0x001EA0AA File Offset: 0x001E82AA
 	private MowingTowerRewardItem CreateMowingTowerRewardItem()
 	{
 		return new MowingTowerRewardItem();
 	}
 
-	// Token: 0x06008C4C RID: 35916 RVA: 0x001E125D File Offset: 0x001DF45D
+	// Token: 0x06005FE7 RID: 24551 RVA: 0x001EA0B1 File Offset: 0x001E82B1
 	private void ClickTabToggle(MowingTowerRewardTabItem item)
 	{
 		MowingTowerRewardTabItem currentSelectTabItem = this.CurrentSelectTabItem;
@@ -102,7 +102,7 @@ public class MowingTowerRewardView : UiViewBase
 		this.RefreshRewardLayout();
 	}
 
-	// Token: 0x06008C4D RID: 35917 RVA: 0x001E1280 File Offset: 0x001DF480
+	// Token: 0x06005FE8 RID: 24552 RVA: 0x001EA0D4 File Offset: 0x001E82D4
 	private void RefreshRewardLayout()
 	{
 		MowingTowerData mowingTowerData = this.MowingTowerData;
@@ -129,17 +129,17 @@ public class MowingTowerRewardView : UiViewBase
 		}, true);
 	}
 
-	// Token: 0x06008C4E RID: 35918 RVA: 0x001E12D1 File Offset: 0x001DF4D1
+	// Token: 0x06005FE9 RID: 24553 RVA: 0x001EA125 File Offset: 0x001E8325
 	protected override void OnBeforeDestroy()
 	{
 		EventSystem.Instance.Remove(EEventName.RefreshMowingTowerReward, new Action(this.RefreshRewardLayout));
 	}
 
-	// Token: 0x04003E41 RID: 15937
+	// Token: 0x04003ED9 RID: 16089
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04003E42 RID: 15938
+	// Token: 0x04003EDA RID: 16090
 	[Nullable(new byte[]
 	{
 		2,
@@ -148,11 +148,11 @@ public class MowingTowerRewardView : UiViewBase
 	})]
 	private GenericLayout<MowingTowerRewardTabItem, MowingTowerLevelDetailInfo> TabDataLayout;
 
-	// Token: 0x04003E43 RID: 15939
+	// Token: 0x04003EDB RID: 16091
 	[Nullable(2)]
 	private MowingTowerRewardTabItem CurrentSelectTabItem;
 
-	// Token: 0x04003E44 RID: 15940
+	// Token: 0x04003EDC RID: 16092
 	[Nullable(new byte[]
 	{
 		2,
@@ -161,31 +161,31 @@ public class MowingTowerRewardView : UiViewBase
 	})]
 	private GenericLayout<MowingTowerRewardItem, IActivityRewardData> RewardLayout;
 
-	// Token: 0x04003E45 RID: 15941
+	// Token: 0x04003EDD RID: 16093
 	[Nullable(2)]
 	private MowingTowerData MowingTowerData;
 
-	// Token: 0x04003E46 RID: 15942
+	// Token: 0x04003EDE RID: 16094
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x020079FE RID: 31230
+	// Token: 0x02006B88 RID: 27528
 	[NullableContext(0)]
 	private static class EComponent
 	{
-		// Token: 0x0402826E RID: 164462
+		// Token: 0x0402359B RID: 144795
 		public const int CaptionItem = 0;
 
-		// Token: 0x0402826F RID: 164463
+		// Token: 0x0402359C RID: 144796
 		public const int TabContentItem = 1;
 
-		// Token: 0x04028270 RID: 164464
+		// Token: 0x0402359D RID: 144797
 		public const int TabItem = 2;
 
-		// Token: 0x04028271 RID: 164465
+		// Token: 0x0402359E RID: 144798
 		public const int RewardContentItem = 3;
 
-		// Token: 0x04028272 RID: 164466
+		// Token: 0x0402359F RID: 144799
 		public const int RewardItem = 4;
 	}
 }

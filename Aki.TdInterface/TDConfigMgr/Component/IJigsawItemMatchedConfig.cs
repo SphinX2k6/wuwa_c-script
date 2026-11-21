@@ -7,12 +7,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004A6 RID: 1190
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020004FF RID: 1279
 	public class IJigsawItemMatchedConfig
 	{
-		// Token: 0x060017F6 RID: 6134 RVA: 0x00047FA0 File Offset: 0x000461A0
+		// Token: 0x06001990 RID: 6544 RVA: 0x0004BCE8 File Offset: 0x00049EE8
 		private IJigsawItemMatchedConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,7 +25,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060017F7 RID: 6135 RVA: 0x00047FD8 File Offset: 0x000461D8
+		// Token: 0x06001991 RID: 6545 RVA: 0x0004BD20 File Offset: 0x00049F20
 		public static IJigsawItemMatchedConfig Create([Nullable(2)] IJigsawItemMatchedConfig instance)
 		{
 			if (instance == null)
@@ -40,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060017F8 RID: 6136 RVA: 0x00047FEB File Offset: 0x000461EB
+		// Token: 0x06001992 RID: 6546 RVA: 0x0004BD33 File Offset: 0x00049F33
 		public static IJigsawItemMatchedConfig CreateFromSetValue([Nullable(2)] IJigsawItemMatchedConfig_SetValue value)
 		{
 			if (value == null)
@@ -53,7 +51,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060017F9 RID: 6137 RVA: 0x00048000 File Offset: 0x00046200
+		// Token: 0x06001993 RID: 6547 RVA: 0x0004BD48 File Offset: 0x00049F48
 		public IJigsawItemMatchedConfig_SetValue ToSetValue()
 		{
 			return new IJigsawItemMatchedConfig_SetValue
@@ -66,9 +64,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000661 RID: 1633
-		// (get) Token: 0x060017FA RID: 6138 RVA: 0x00048050 File Offset: 0x00046250
-		// (set) Token: 0x060017FB RID: 6139 RVA: 0x000480B1 File Offset: 0x000462B1
+		// Token: 0x170006C8 RID: 1736
+		// (get) Token: 0x06001994 RID: 6548 RVA: 0x0004BD98 File Offset: 0x00049F98
+		// (set) Token: 0x06001995 RID: 6549 RVA: 0x0004BDF9 File Offset: 0x00049FF9
 		public virtual Aki.TDConfigMgr.Action.IPieceIndex TargetIndex
 		{
 			get
@@ -96,9 +94,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000662 RID: 1634
-		// (get) Token: 0x060017FC RID: 6140 RVA: 0x000480C6 File Offset: 0x000462C6
-		// (set) Token: 0x060017FD RID: 6141 RVA: 0x000480ED File Offset: 0x000462ED
+		// Token: 0x170006C9 RID: 1737
+		// (get) Token: 0x06001996 RID: 6550 RVA: 0x0004BE0E File Offset: 0x0004A00E
+		// (set) Token: 0x06001997 RID: 6551 RVA: 0x0004BE35 File Offset: 0x0004A035
 		public virtual List<int> JigsawItemIds
 		{
 			get
@@ -120,20 +118,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000663 RID: 1635
-		// (get) Token: 0x060017FE RID: 6142 RVA: 0x000480FC File Offset: 0x000462FC
-		// (set) Token: 0x060017FF RID: 6143 RVA: 0x0004818F File Offset: 0x0004638F
+		// Token: 0x170006CA RID: 1738
+		// (get) Token: 0x06001998 RID: 6552 RVA: 0x0004BE44 File Offset: 0x0004A044
+		// (set) Token: 0x06001999 RID: 6553 RVA: 0x0004BED7 File Offset: 0x0004A0D7
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> Actions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -164,7 +162,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -173,20 +171,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000664 RID: 1636
-		// (get) Token: 0x06001800 RID: 6144 RVA: 0x000481A4 File Offset: 0x000463A4
-		// (set) Token: 0x06001801 RID: 6145 RVA: 0x00048237 File Offset: 0x00046437
+		// Token: 0x170006CB RID: 1739
+		// (get) Token: 0x0600199A RID: 6554 RVA: 0x0004BEEC File Offset: 0x0004A0EC
+		// (set) Token: 0x0600199B RID: 6555 RVA: 0x0004BF7F File Offset: 0x0004A17F
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IConditionAction> ConditionActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -217,7 +215,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -226,20 +224,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000665 RID: 1637
-		// (get) Token: 0x06001802 RID: 6146 RVA: 0x0004824C File Offset: 0x0004644C
-		// (set) Token: 0x06001803 RID: 6147 RVA: 0x000482DF File Offset: 0x000464DF
+		// Token: 0x170006CC RID: 1740
+		// (get) Token: 0x0600199C RID: 6556 RVA: 0x0004BF94 File Offset: 0x0004A194
+		// (set) Token: 0x0600199D RID: 6557 RVA: 0x0004C027 File Offset: 0x0004A227
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> UnmatchedActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -270,7 +268,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -279,51 +277,51 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040011D1 RID: 4561
+		// Token: 0x040012F3 RID: 4851
 		[Nullable(2)]
 		protected IJigsawItemMatchedConfig FbInstance;
 
-		// Token: 0x040011D2 RID: 4562
+		// Token: 0x040012F4 RID: 4852
 		[Nullable(2)]
 		protected IJigsawItemMatchedConfig_SetValue PocoInterface;
 
-		// Token: 0x040011D3 RID: 4563
+		// Token: 0x040012F5 RID: 4853
 		private Aki.TDConfigMgr.Action.IPieceIndex _TargetIndexCache;
 
-		// Token: 0x040011D4 RID: 4564
+		// Token: 0x040012F6 RID: 4854
 		private bool _TargetIndexInited;
 
-		// Token: 0x040011D5 RID: 4565
+		// Token: 0x040012F7 RID: 4855
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _ActionsCache;
 
-		// Token: 0x040011D6 RID: 4566
+		// Token: 0x040012F8 RID: 4856
 		private bool _ActionsInited;
 
-		// Token: 0x040011D7 RID: 4567
+		// Token: 0x040012F9 RID: 4857
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IConditionAction> _ConditionActionsCache;
 
-		// Token: 0x040011D8 RID: 4568
+		// Token: 0x040012FA RID: 4858
 		private bool _ConditionActionsInited;
 
-		// Token: 0x040011D9 RID: 4569
+		// Token: 0x040012FB RID: 4859
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _UnmatchedActionsCache;
 
-		// Token: 0x040011DA RID: 4570
+		// Token: 0x040012FC RID: 4860
 		private bool _UnmatchedActionsInited;
 	}
 }

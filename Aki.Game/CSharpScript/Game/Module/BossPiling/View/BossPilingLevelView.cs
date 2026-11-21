@@ -13,17 +13,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BossPiling.View
 {
-	// Token: 0x02005C10 RID: 23568
+	// Token: 0x02004BF0 RID: 19440
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BossPilingLevelView : UiViewBase
 	{
-		// Token: 0x0603B8DE RID: 243934 RVA: 0x00E3313A File Offset: 0x00E3133A
+		// Token: 0x06030829 RID: 198697 RVA: 0x00D83482 File Offset: 0x00D81682
 		public BossPilingLevelView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603B8DF RID: 243935 RVA: 0x00E33150 File Offset: 0x00E31350
+		// Token: 0x0603082A RID: 198698 RVA: 0x00D83498 File Offset: 0x00D81698
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 16;
@@ -74,19 +74,19 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B8E0 RID: 243936 RVA: 0x00E333F1 File Offset: 0x00E315F1
+		// Token: 0x0603082B RID: 198699 RVA: 0x00D83739 File Offset: 0x00D81939
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<IReadOnlySet<int>>(EEventName.OnActivityClose, new Action<IReadOnlySet<int>>(this.OnActivityClose));
 		}
 
-		// Token: 0x0603B8E1 RID: 243937 RVA: 0x00E3340F File Offset: 0x00E3160F
+		// Token: 0x0603082C RID: 198700 RVA: 0x00D83757 File Offset: 0x00D81957
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<IReadOnlySet<int>>(EEventName.OnActivityClose, new Action<IReadOnlySet<int>>(this.OnActivityClose));
 		}
 
-		// Token: 0x0603B8E2 RID: 243938 RVA: 0x00E33430 File Offset: 0x00E31630
+		// Token: 0x0603082D RID: 198701 RVA: 0x00D83778 File Offset: 0x00D81978
 		protected override UniTask OnBeforeStartAsync()
 		{
 			BossPilingLevelView.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B8E3 RID: 243939 RVA: 0x00E33474 File Offset: 0x00E31674
+		// Token: 0x0603082E RID: 198702 RVA: 0x00D837BC File Offset: 0x00D819BC
 		protected override void OnStart()
 		{
 			this.CaptionItem = new PopupCaptionItem(base.GetItem(0));
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			this.RefreshPanel();
 		}
 
-		// Token: 0x0603B8E4 RID: 243940 RVA: 0x00E33518 File Offset: 0x00E31718
+		// Token: 0x0603082F RID: 198703 RVA: 0x00D83860 File Offset: 0x00D81A60
 		protected void RefreshPanel()
 		{
 			BossPilingLevels? levelInfo = BossPilingConfig.Instance.GetLevelInfo(this.CurLevel);
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			this.LevelInfo2.Refresh(levelDataList[1], false, 1);
 		}
 
-		// Token: 0x0603B8E5 RID: 243941 RVA: 0x00E3365C File Offset: 0x00E3185C
+		// Token: 0x06030830 RID: 198704 RVA: 0x00D839A4 File Offset: 0x00D81BA4
 		protected List<BossPilingLevelDescInfo> GetLevelDataList()
 		{
 			if (this.LevelDataList.Count > 0)
@@ -166,25 +166,25 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			return this.LevelDataList;
 		}
 
-		// Token: 0x0603B8E6 RID: 243942 RVA: 0x00E3373B File Offset: 0x00E3193B
+		// Token: 0x06030831 RID: 198705 RVA: 0x00D83A83 File Offset: 0x00D81C83
 		private BossPilingBuffSimpleItem CreateBuffItem()
 		{
 			return new BossPilingBuffSimpleItem();
 		}
 
-		// Token: 0x0603B8E7 RID: 243943 RVA: 0x00E33742 File Offset: 0x00E31942
+		// Token: 0x06030832 RID: 198706 RVA: 0x00D83A8A File Offset: 0x00D81C8A
 		private BossPilingScoreTabItem CreateScoreItem()
 		{
 			return new BossPilingScoreTabItem();
 		}
 
-		// Token: 0x0603B8E8 RID: 243944 RVA: 0x00E33749 File Offset: 0x00E31949
+		// Token: 0x06030833 RID: 198707 RVA: 0x00D83A91 File Offset: 0x00D81C91
 		private void OnClickedClose()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603B8E9 RID: 243945 RVA: 0x00E33754 File Offset: 0x00E31954
+		// Token: 0x06030834 RID: 198708 RVA: 0x00D83A9C File Offset: 0x00D81C9C
 		private void OnClickedView(bool isFirst)
 		{
 			List<BossPilingLevelDescInfo> levelDataList = this.GetLevelDataList();
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			UiManager.Instance.OpenView(EUiViewName.BossPilingLevelDescView, param, null);
 		}
 
-		// Token: 0x0603B8EA RID: 243946 RVA: 0x00E33790 File Offset: 0x00E31990
+		// Token: 0x06030835 RID: 198709 RVA: 0x00D83AD8 File Offset: 0x00D81CD8
 		private void OnClickedConfirm()
 		{
 			ValueTuple<List<int>, List<int>> teamListResult = this.PanelTeam.GetTeamListResult();
@@ -231,13 +231,13 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			BossPilingController.Instance.RequestChallenge(this.CurLevel, teamList, tagList, false);
 		}
 
-		// Token: 0x0603B8EB RID: 243947 RVA: 0x00E33880 File Offset: 0x00E31A80
+		// Token: 0x06030836 RID: 198710 RVA: 0x00D83BC8 File Offset: 0x00D81DC8
 		private void OnActivityClose(IReadOnlySet<int> closeActivities)
 		{
 			BossPilingModel.Instance.CloseActivityView(closeActivities);
 		}
 
-		// Token: 0x0603B8EC RID: 243948 RVA: 0x00E33890 File Offset: 0x00E31A90
+		// Token: 0x06030837 RID: 198711 RVA: 0x00D83BD8 File Offset: 0x00D81DD8
 		private void OnClickedBuff()
 		{
 			BossPilingBuffViewInfo param = new BossPilingBuffViewInfo
@@ -248,65 +248,65 @@ namespace CSharpScript.Game.Module.BossPiling.View
 			UiManager.Instance.OpenView(EUiViewName.BossPilingBuffView, param, null);
 		}
 
-		// Token: 0x0401F029 RID: 127017
+		// Token: 0x04019ADA RID: 105178
 		protected int CurLevel;
 
-		// Token: 0x0401F02A RID: 127018
+		// Token: 0x04019ADB RID: 105179
 		protected List<BossPilingLevelDescInfo> LevelDataList = new List<BossPilingLevelDescInfo>();
 
-		// Token: 0x0401F02B RID: 127019
+		// Token: 0x04019ADC RID: 105180
 		protected PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401F02C RID: 127020
+		// Token: 0x04019ADD RID: 105181
 		protected GenericLayout<BossPilingBuffSimpleItem, int> BuffLayout;
 
-		// Token: 0x0401F02D RID: 127021
+		// Token: 0x04019ADE RID: 105182
 		protected GenericLayout<BossPilingScoreTabItem, BossPilingScoreTabInfo> ScoreLayout;
 
-		// Token: 0x0401F02E RID: 127022
+		// Token: 0x04019ADF RID: 105183
 		protected BossPilingLevelDescItem LevelInfo1;
 
-		// Token: 0x0401F02F RID: 127023
+		// Token: 0x04019AE0 RID: 105184
 		protected BossPilingLevelDescItem LevelInfo2;
 
-		// Token: 0x0401F030 RID: 127024
+		// Token: 0x04019AE1 RID: 105185
 		protected BossPilingTeamPanel PanelTeam;
 
-		// Token: 0x0200BDEF RID: 48623
+		// Token: 0x0200A7F7 RID: 42999
 		[NullableContext(0)]
 		private enum EDefine
 		{
-			// Token: 0x04039443 RID: 234563
+			// Token: 0x04033E06 RID: 212486
 			CaptionItem,
-			// Token: 0x04039444 RID: 234564
+			// Token: 0x04033E07 RID: 212487
 			TxtTitle,
-			// Token: 0x04039445 RID: 234565
+			// Token: 0x04033E08 RID: 212488
 			SpriteFrameHover,
-			// Token: 0x04039446 RID: 234566
+			// Token: 0x04033E09 RID: 212489
 			TxtBuffView,
-			// Token: 0x04039447 RID: 234567
+			// Token: 0x04033E0A RID: 212490
 			PanelBuff,
-			// Token: 0x04039448 RID: 234568
+			// Token: 0x04033E0B RID: 212491
 			BuffItem,
-			// Token: 0x04039449 RID: 234569
+			// Token: 0x04033E0C RID: 212492
 			TxtTitleScore,
-			// Token: 0x0403944A RID: 234570
+			// Token: 0x04033E0D RID: 212493
 			ContentScore,
-			// Token: 0x0403944B RID: 234571
+			// Token: 0x04033E0E RID: 212494
 			TargetItem,
-			// Token: 0x0403944C RID: 234572
+			// Token: 0x04033E0F RID: 212495
 			ScrollViewDefault,
-			// Token: 0x0403944D RID: 234573
+			// Token: 0x04033E10 RID: 212496
 			ContentLevelInfo,
-			// Token: 0x0403944E RID: 234574
+			// Token: 0x04033E11 RID: 212497
 			LevelInfo1,
-			// Token: 0x0403944F RID: 234575
+			// Token: 0x04033E12 RID: 212498
 			PanelTeam,
-			// Token: 0x04039450 RID: 234576
+			// Token: 0x04033E13 RID: 212499
 			BtnConfirm,
-			// Token: 0x04039451 RID: 234577
+			// Token: 0x04033E14 RID: 212500
 			BtnBuff,
-			// Token: 0x04039452 RID: 234578
+			// Token: 0x04033E15 RID: 212501
 			LevelInfo2
 		}
 	}

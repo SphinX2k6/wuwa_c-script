@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026D4 RID: 9940
+	// Token: 0x02002998 RID: 10648
 	public class DetectTrigger : ActionParams
 	{
-		// Token: 0x0600DE2F RID: 56879 RVA: 0x0020F9A8 File Offset: 0x0020DBA8
-		[NullableContext(1)]
+		// Token: 0x0600EC0B RID: 60427 RVA: 0x0022C1E8 File Offset: 0x0022A3E8
 		public static DetectTrigger Create(IDetectTrigger? instance)
 		{
 			if (instance == null)
@@ -21,7 +19,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x04007B5C RID: 31580
+		// Token: 0x040081FC RID: 33276
 		private IDetectTrigger Instance;
 	}
 }

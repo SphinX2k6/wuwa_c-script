@@ -1,15 +1,15 @@
 ﻿using System;
 using Aki.Config;
 
-// Token: 0x0200146A RID: 5226
+// Token: 0x0200091E RID: 2334
 public class ActivityRegressTaskScoreRewardGridData
 {
-	// Token: 0x0400417E RID: 16766
+	// Token: 0x04004216 RID: 16918
 	public RegressBonusReward? Config;
 
-	// Token: 0x0400417F RID: 16767
+	// Token: 0x04004217 RID: 16919
 	public ERegressRewardState RewardState;
 
-	// Token: 0x04004180 RID: 16768
+	// Token: 0x04004218 RID: 16920
 	public ERegressRewardState PayRewardState;
 }

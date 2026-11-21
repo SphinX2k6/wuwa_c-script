@@ -17,13 +17,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag
 {
-	// Token: 0x02006A30 RID: 27184
+	// Token: 0x02005B8D RID: 23437
 	[NullableContext(1)]
 	[Nullable(0)]
 	[TickController(0)]
 	public class SplineConstrainedDragController : ControllerBase
 	{
-		// Token: 0x060439C9 RID: 276937 RVA: 0x0108B800 File Offset: 0x01089A00
+		// Token: 0x06039A17 RID: 236055 RVA: 0x01030030 File Offset: 0x0102E230
 		private void OnDragActorPlayConditionRecheck()
 		{
 			SplineConstrainedDragModel instance = SplineConstrainedDragModel.Instance;
@@ -38,14 +38,14 @@ namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag
 			}
 		}
 
-		// Token: 0x060439CA RID: 276938 RVA: 0x0108B83A File Offset: 0x01089A3A
+		// Token: 0x06039A18 RID: 236056 RVA: 0x0103006A File Offset: 0x0102E26A
 		protected override bool OnInit()
 		{
 			EventSystem.Instance.Add(EEventName.DragActorPlayConditionRecheck, new Action(this.OnDragActorPlayConditionRecheck));
 			return true;
 		}
 
-		// Token: 0x060439CB RID: 276939 RVA: 0x0108B85C File Offset: 0x01089A5C
+		// Token: 0x06039A19 RID: 236057 RVA: 0x0103008C File Offset: 0x0102E28C
 		protected override void OnTick(float delta)
 		{
 			if (!this.IsDragActorPlayActive())
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag
 			dragModeStrategy.ApplyScreenDelta(tempGamepadScreenDelta);
 		}
 
-		// Token: 0x060439CC RID: 276940 RVA: 0x0108B9CA File Offset: 0x01089BCA
+		// Token: 0x06039A1A RID: 236058 RVA: 0x010301FA File Offset: 0x0102E3FA
 		protected override bool OnClear()
 		{
 			EventSystem.Instance.Remove(EEventName.DragActorPlayConditionRecheck, new Action(this.OnDragActorPlayConditionRecheck));
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag
 			return true;
 		}
 
-		// Token: 0x060439CD RID: 276941 RVA: 0x0108B9F0 File Offset: 0x01089BF0
+		// Token: 0x06039A1B RID: 236059 RVA: 0x01030220 File Offset: 0x0102E420
 		public unsafe void EnableDragActorPlay(IToggleDragActorPlayEnable config)
 		{
 			ICapabilityGameObject playerCapabilityHost = this.GetPlayerCapabilityHost();
@@ -157,7 +157,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag
 			instance2.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x060439CE RID: 276942 RVA: 0x0108BBA4 File Offset: 0x01089DA4
+		// Token: 0x06039A1C RID: 236060 RVA: 0x010303D4 File Offset: 0x0102E5D4
 		public unsafe void DisableDragActorPlay()
 		{
 			SplineConstrainedDragModel.Instance.SetDragActorPlayActive(false);
@@ -189,7 +189,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag
 			instance2.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x060439CF RID: 276943 RVA: 0x0108BCA8 File Offset: 0x01089EA8
+		// Token: 0x06039A1D RID: 236061 RVA: 0x010304D8 File Offset: 0x0102E6D8
 		[NullableContext(2)]
 		private ICapabilityGameObject GetPlayerCapabilityHost()
 		{
@@ -208,7 +208,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag
 			return playerEntity.CheckGetComponent<EntityCapabilityHostComponent>();
 		}
 
-		// Token: 0x060439D0 RID: 276944 RVA: 0x0108BD10 File Offset: 0x01089F10
+		// Token: 0x06039A1E RID: 236062 RVA: 0x01030540 File Offset: 0x0102E740
 		public bool IsActiveDragMovingLatched()
 		{
 			ICapabilityGameObject playerCapabilityHost = this.GetPlayerCapabilityHost();
@@ -220,7 +220,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag
 			return capabilityData != null && capabilityData.ActiveDragMoving;
 		}
 
-		// Token: 0x060439D1 RID: 276945 RVA: 0x0108BD44 File Offset: 0x01089F44
+		// Token: 0x06039A1F RID: 236063 RVA: 0x01030574 File Offset: 0x0102E774
 		public void OpenSplineConstrainedDragView()
 		{
 			TsInteractionUtils.RegisterOpenViewName(EUiViewName.SplineConstrainedDrag);
@@ -231,14 +231,14 @@ namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag
 			base.ResumeTick();
 		}
 
-		// Token: 0x060439D2 RID: 276946 RVA: 0x0108BD81 File Offset: 0x01089F81
+		// Token: 0x06039A20 RID: 236064 RVA: 0x010305B1 File Offset: 0x0102E7B1
 		public void CloseSplineConstrainedDragView()
 		{
 			UiManager.Instance.CloseView(EUiViewName.SplineConstrainedDrag, null);
 			this.CleanupGameplaySession();
 		}
 
-		// Token: 0x060439D3 RID: 276947 RVA: 0x0108BD9C File Offset: 0x01089F9C
+		// Token: 0x06039A21 RID: 236065 RVA: 0x010305CC File Offset: 0x0102E7CC
 		public void PreloadSelectionMaterials(int holderId, [Nullable(new byte[]
 		{
 			1,
@@ -271,13 +271,13 @@ namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag
 			}
 		}
 
-		// Token: 0x060439D4 RID: 276948 RVA: 0x0108BE3C File Offset: 0x0108A03C
+		// Token: 0x06039A22 RID: 236066 RVA: 0x0103066C File Offset: 0x0102E86C
 		public void ReleaseSelectionMaterialsByHolder(int holderId)
 		{
 			SplineConstrainedDragModel.Instance.RemoveSelectionMatRefByHolder(holderId);
 		}
 
-		// Token: 0x060439D5 RID: 276949 RVA: 0x0108BE4C File Offset: 0x0108A04C
+		// Token: 0x06039A23 RID: 236067 RVA: 0x0103067C File Offset: 0x0102E87C
 		public void OnPointerBegin(IVector pointerPosition)
 		{
 			SplineConstrainedDragModel instance = SplineConstrainedDragModel.Instance;
@@ -335,7 +335,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag
 			instance.LastPointerPosition.DeepCopy(pointerPosition);
 		}
 
-		// Token: 0x060439D6 RID: 276950 RVA: 0x0108BF7C File Offset: 0x0108A17C
+		// Token: 0x06039A24 RID: 236068 RVA: 0x010307AC File Offset: 0x0102E9AC
 		public void OnPointerMove(IVector pointerPosition)
 		{
 			SplineConstrainedDragModel instance = SplineConstrainedDragModel.Instance;
@@ -356,7 +356,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag
 			instance.LastPointerPosition.DeepCopy(pointerPosition);
 		}
 
-		// Token: 0x060439D7 RID: 276951 RVA: 0x0108BFF6 File Offset: 0x0108A1F6
+		// Token: 0x06039A25 RID: 236069 RVA: 0x01030826 File Offset: 0x0102EA26
 		public void OnPointerEnd()
 		{
 			if (SplineConstrainedDragModel.Instance.GetActiveDragSource() != EDragSource.Pointer)
@@ -366,7 +366,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag
 			this.EndCurrentDrag(true);
 		}
 
-		// Token: 0x060439D8 RID: 276952 RVA: 0x0108C010 File Offset: 0x0108A210
+		// Token: 0x06039A26 RID: 236070 RVA: 0x01030840 File Offset: 0x0102EA40
 		public void OnGamepadAxis(string axisName, float value)
 		{
 			SplineConstrainedDragModel instance = SplineConstrainedDragModel.Instance;
@@ -413,7 +413,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag
 			}
 		}
 
-		// Token: 0x060439D9 RID: 276953 RVA: 0x0108C0EC File Offset: 0x0108A2EC
+		// Token: 0x06039A27 RID: 236071 RVA: 0x0103091C File Offset: 0x0102EB1C
 		public void SwitchActiveDragByDirection(EGamepadSwitchDirection direction)
 		{
 			TsCharacterController characterController = Global.CharacterController;
@@ -470,7 +470,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag
 			currentStrategy.SetCurrentScreenPosition(Vector.Create((double)fvector2D2.Value.X, (double)fvector2D2.Value.Y, 0.0));
 		}
 
-		// Token: 0x060439DA RID: 276954 RVA: 0x0108C220 File Offset: 0x0108A420
+		// Token: 0x06039A28 RID: 236072 RVA: 0x01030A50 File Offset: 0x0102EC50
 		public void SwitchActiveDragByStep(EGamepadSwitchStep step)
 		{
 			TsCharacterController characterController = Global.CharacterController;
@@ -528,7 +528,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag
 			currentStrategy.SetCurrentScreenPosition(Vector.Create((double)fvector2D.Value.X, (double)fvector2D.Value.Y, 0.0));
 		}
 
-		// Token: 0x060439DB RID: 276955 RVA: 0x0108C33F File Offset: 0x0108A53F
+		// Token: 0x06039A29 RID: 236073 RVA: 0x01030B6F File Offset: 0x0102ED6F
 		private void CleanupGameplaySession()
 		{
 			this.EndCurrentDrag(false);
@@ -538,14 +538,14 @@ namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag
 			instance.SetGamepadAxisY(0f);
 		}
 
-		// Token: 0x060439DC RID: 276956 RVA: 0x0108C368 File Offset: 0x0108A568
+		// Token: 0x06039A2A RID: 236074 RVA: 0x01030B98 File Offset: 0x0102ED98
 		private bool CheckDragCondition(IKuroSplineConstrainedDrag drag)
 		{
 			IConditionGroup condition = drag.GetCondition();
 			return condition == null || LevelGeneralController.Instance.CheckConditionNew(condition, null, drag.GetEntityContext(), null);
 		}
 
-		// Token: 0x060439DD RID: 276957 RVA: 0x0108C39C File Offset: 0x0108A59C
+		// Token: 0x06039A2B RID: 236075 RVA: 0x01030BCC File Offset: 0x0102EDCC
 		private void EndCurrentDrag(bool checkRelease)
 		{
 			SplineConstrainedDragModel instance = SplineConstrainedDragModel.Instance;
@@ -560,7 +560,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag
 			instance.SetGamepadDragPaused(false);
 		}
 
-		// Token: 0x060439DE RID: 276958 RVA: 0x0108C3EC File Offset: 0x0108A5EC
+		// Token: 0x06039A2C RID: 236076 RVA: 0x01030C1C File Offset: 0x0102EE1C
 		public void OnDraggableRegistered(IKuroSplineConstrainedDrag drag)
 		{
 			AActor actor = drag.GetActor();
@@ -584,20 +584,18 @@ namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag
 			playerCapabilityHost.GetOrAddCapabilityData<DraggableStateData>(typeof(DraggableStateData)).PushRegister(drag);
 		}
 
-		// Token: 0x060439DF RID: 276959 RVA: 0x0108C48C File Offset: 0x0108A68C
+		// Token: 0x06039A2D RID: 236077 RVA: 0x01030CBB File Offset: 0x0102EEBB
 		public void OnDraggableUnregistered(IKuroSplineConstrainedDrag drag)
 		{
 			ICapabilityGameObject playerCapabilityHost = this.GetPlayerCapabilityHost();
-			if (playerCapabilityHost == null)
+			if (playerCapabilityHost != null)
 			{
-				global::Log.Instance.Error(ELogModule.LevelPlay, ELogAuthor.XDW, "[SplineConstrainedDragController] OnDraggableUnregistered: invalid host", default(ReadOnlySpan<ValueTuple<string, object>>));
-				return;
+				playerCapabilityHost.GetOrAddCapabilityData<DraggableStateData>(typeof(DraggableStateData)).PushUnregister(drag);
 			}
-			playerCapabilityHost.GetOrAddCapabilityData<DraggableStateData>(typeof(DraggableStateData)).PushUnregister(drag);
 			SplineConstrainedDragModel.Instance.UnregisterKuroSplineConstrainedDrag(drag.GetActorKey());
 		}
 
-		// Token: 0x060439E0 RID: 276960 RVA: 0x0108C4E8 File Offset: 0x0108A6E8
+		// Token: 0x06039A2E RID: 236078 RVA: 0x01030CF0 File Offset: 0x0102EEF0
 		public int GetDraggableCount()
 		{
 			IEnumerable<KeyValuePair<string, IKuroSplineConstrainedDrag>> allKuroSplineConstrainedDrags = SplineConstrainedDragModel.Instance.GetAllKuroSplineConstrainedDrags();
@@ -616,14 +614,14 @@ namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag
 			return num;
 		}
 
-		// Token: 0x060439E1 RID: 276961 RVA: 0x0108C550 File Offset: 0x0108A750
+		// Token: 0x06039A2F RID: 236079 RVA: 0x01030D58 File Offset: 0x0102EF58
 		private bool IsDragActorPlayActive()
 		{
 			ICapabilityGameObject playerCapabilityHost = this.GetPlayerCapabilityHost();
 			return playerCapabilityHost != null && playerCapabilityHost.GetCapability<DragActorPlayCapability>(typeof(DragActorPlayCapability)) != null;
 		}
 
-		// Token: 0x060439E2 RID: 276962 RVA: 0x0108C57C File Offset: 0x0108A77C
+		// Token: 0x06039A30 RID: 236080 RVA: 0x01030D84 File Offset: 0x0102EF84
 		[NullableContext(2)]
 		private unsafe IKuroSplineConstrainedDrag PickTopLeftDrag()
 		{
@@ -676,7 +674,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag
 			return result;
 		}
 
-		// Token: 0x060439E3 RID: 276963 RVA: 0x0108C70C File Offset: 0x0108A90C
+		// Token: 0x06039A31 RID: 236081 RVA: 0x01030F14 File Offset: 0x0102F114
 		private FVector2D? ProjectActorToScreen(IKuroSplineConstrainedDrag drag)
 		{
 			TsCharacterController characterController = Global.CharacterController;
@@ -700,7 +698,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag
 			return new FVector2D?(instance.TempActorScreenPos2D);
 		}
 
-		// Token: 0x060439E4 RID: 276964 RVA: 0x0108C7A0 File Offset: 0x0108A9A0
+		// Token: 0x06039A32 RID: 236082 RVA: 0x01030FA8 File Offset: 0x0102F1A8
 		[NullableContext(0)]
 		[return: TupleElementNames(new string[]
 		{
@@ -726,7 +724,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag
 			return new ValueTuple<float, float>?(new ValueTuple<float, float>((float)num3 * 0.5f, (float)num4 * 0.5f));
 		}
 
-		// Token: 0x060439E5 RID: 276965 RVA: 0x0108C814 File Offset: 0x0108AA14
+		// Token: 0x06039A33 RID: 236083 RVA: 0x0103101C File Offset: 0x0102F21C
 		[NullableContext(2)]
 		private IKuroSplineConstrainedDrag PickDirectionalDrag(float anchorX, float anchorY, EGamepadSwitchDirection direction, IKuroSplineConstrainedDrag excludeDrag)
 		{
@@ -782,8 +780,8 @@ namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag
 			return result;
 		}
 
-		// Token: 0x170098E6 RID: 39142
-		// (get) Token: 0x060439E6 RID: 276966 RVA: 0x0108C974 File Offset: 0x0108AB74
+		// Token: 0x17006DCB RID: 28107
+		// (get) Token: 0x06039A34 RID: 236084 RVA: 0x0103117C File Offset: 0x0102F37C
 		public static SplineConstrainedDragController Instance
 		{
 			get
@@ -792,7 +790,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag
 			}
 		}
 
-		// Token: 0x060439E7 RID: 276967 RVA: 0x0108C97B File Offset: 0x0108AB7B
+		// Token: 0x06039A35 RID: 236085 RVA: 0x01031183 File Offset: 0x0102F383
 		public static SplineConstrainedDragController GetOrCreateInstance()
 		{
 			if (SplineConstrainedDragController._Instance == null)
@@ -802,7 +800,7 @@ namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag
 			return SplineConstrainedDragController._Instance;
 		}
 
-		// Token: 0x060439E8 RID: 276968 RVA: 0x0108C98F File Offset: 0x0108AB8F
+		// Token: 0x06039A36 RID: 236086 RVA: 0x01031197 File Offset: 0x0102F397
 		public static bool CreateInstance()
 		{
 			if (SplineConstrainedDragController._Instance != null)
@@ -813,24 +811,24 @@ namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag
 			return true;
 		}
 
-		// Token: 0x060439E9 RID: 276969 RVA: 0x0108C9A5 File Offset: 0x0108ABA5
+		// Token: 0x06039A37 RID: 236087 RVA: 0x010311AD File Offset: 0x0102F3AD
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060439EA RID: 276970 RVA: 0x0108C9A7 File Offset: 0x0108ABA7
+		// Token: 0x06039A38 RID: 236088 RVA: 0x010311AF File Offset: 0x0102F3AF
 		public static void ResetStaticDefaultValue()
 		{
 			SplineConstrainedDragController._Instance = null;
 		}
 
-		// Token: 0x060439EB RID: 276971 RVA: 0x0108C9AF File Offset: 0x0108ABAF
+		// Token: 0x06039A39 RID: 236089 RVA: 0x010311B7 File Offset: 0x0102F3B7
 		static SplineConstrainedDragController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SplineConstrainedDragController.CreateStaticDefaultValue), new Action(SplineConstrainedDragController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040234C6 RID: 144582
+		// Token: 0x0401E6B8 RID: 124600
 		[Nullable(2)]
 		private static SplineConstrainedDragController _Instance;
 	}

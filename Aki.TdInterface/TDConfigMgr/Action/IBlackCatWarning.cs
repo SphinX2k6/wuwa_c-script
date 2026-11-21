@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200180A RID: 6154
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001995 RID: 6549
 	public class IBlackCatWarning : ICommonTipType
 	{
-		// Token: 0x0600841B RID: 33819 RVA: 0x0013AF1C File Offset: 0x0013911C
+		// Token: 0x06008B3F RID: 35647 RVA: 0x0014A6C0 File Offset: 0x001488C0
 		private IBlackCatWarning_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600841C RID: 33820 RVA: 0x0013AF54 File Offset: 0x00139154
+		// Token: 0x06008B40 RID: 35648 RVA: 0x0014A6F8 File Offset: 0x001488F8
 		public static IBlackCatWarning Create([Nullable(2)] IBlackCatWarning instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600841D RID: 33821 RVA: 0x0013AF67 File Offset: 0x00139167
+		// Token: 0x06008B41 RID: 35649 RVA: 0x0014A70B File Offset: 0x0014890B
 		public static IBlackCatWarning CreateFromSetValue([Nullable(2)] IBlackCatWarning_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600841E RID: 33822 RVA: 0x0013AF7A File Offset: 0x0013917A
+		// Token: 0x06008B42 RID: 35650 RVA: 0x0014A71E File Offset: 0x0014891E
 		public new IBlackCatWarning_SetValue ToSetValue()
 		{
 			return new IBlackCatWarning_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002B53 RID: 11091
-		// (get) Token: 0x0600841F RID: 33823 RVA: 0x0013AF99 File Offset: 0x00139199
-		// (set) Token: 0x06008420 RID: 33824 RVA: 0x0013AFC4 File Offset: 0x001391C4
+		// Token: 0x17002D4C RID: 11596
+		// (get) Token: 0x06008B43 RID: 35651 RVA: 0x0014A73D File Offset: 0x0014893D
+		// (set) Token: 0x06008B44 RID: 35652 RVA: 0x0014A768 File Offset: 0x00148968
 		public override ECommonTipType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B54 RID: 11092
-		// (get) Token: 0x06008421 RID: 33825 RVA: 0x0013AFD2 File Offset: 0x001391D2
-		// (set) Token: 0x06008422 RID: 33826 RVA: 0x0013AFFD File Offset: 0x001391FD
+		// Token: 0x17002D4D RID: 11597
+		// (get) Token: 0x06008B45 RID: 35653 RVA: 0x0014A776 File Offset: 0x00148976
+		// (set) Token: 0x06008B46 RID: 35654 RVA: 0x0014A7A1 File Offset: 0x001489A1
 		public virtual string WarningText
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040053AC RID: 21420
+		// Token: 0x040057F7 RID: 22519
 		[Nullable(2)]
 		protected new IBlackCatWarning FbInstance;
 
-		// Token: 0x040053AD RID: 21421
+		// Token: 0x040057F8 RID: 22520
 		[Nullable(2)]
 		protected new IBlackCatWarning_SetValue PocoInterface;
 	}

@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb
 {
-	// Token: 0x02005272 RID: 21106
+	// Token: 0x02004242 RID: 16962
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaBattleDetailsSkillItem : UiPanelBase
 	{
-		// Token: 0x06035F94 RID: 221076 RVA: 0x00CC5598 File Offset: 0x00CC3798
+		// Token: 0x0602AE8F RID: 175759 RVA: 0x00C12C98 File Offset: 0x00C10E98
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb
 			};
 		}
 
-		// Token: 0x06035F95 RID: 221077 RVA: 0x00CC5634 File Offset: 0x00CC3834
+		// Token: 0x0602AE90 RID: 175760 RVA: 0x00C12D34 File Offset: 0x00C10F34
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new LevelSequencePlayer(this.RootItem);
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb
 			base.GetUiNiagara(5).SetUIActive(false);
 		}
 
-		// Token: 0x06035F96 RID: 221078 RVA: 0x00CC5690 File Offset: 0x00CC3890
+		// Token: 0x0602AE91 RID: 175761 RVA: 0x00C12D90 File Offset: 0x00C10F90
 		protected override void OnBeforeDestroy()
 		{
 			if (this.TweenerX != null)
@@ -49,20 +49,20 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb
 			DelegateUtils.ReleaseManualReleaseDelegate(new Action<float>(this.TweenerCallZ));
 		}
 
-		// Token: 0x06035F97 RID: 221079 RVA: 0x00CC56E0 File Offset: 0x00CC38E0
+		// Token: 0x0602AE92 RID: 175762 RVA: 0x00C12DE0 File Offset: 0x00C10FE0
 		public void RefreshIcon(string icon)
 		{
 			base.SetTextureByPath(icon, base.GetTexture(0), null, null);
 		}
 
-		// Token: 0x06035F98 RID: 221080 RVA: 0x00CC5705 File Offset: 0x00CC3905
+		// Token: 0x0602AE93 RID: 175763 RVA: 0x00C12E05 File Offset: 0x00C11005
 		public void RefreshSettlePointText(int settlePoint)
 		{
 			this.SettlePoint = settlePoint;
 			base.GetText(1).SetText(settlePoint.ToString(), true);
 		}
 
-		// Token: 0x06035F99 RID: 221081 RVA: 0x00CC5724 File Offset: 0x00CC3924
+		// Token: 0x0602AE94 RID: 175764 RVA: 0x00C12E24 File Offset: 0x00C11024
 		public int ShowWinAnim()
 		{
 			if (this.SettlePoint == 0)
@@ -77,13 +77,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb
 			return this.SettlePoint;
 		}
 
-		// Token: 0x06035F9A RID: 221082 RVA: 0x00CC576D File Offset: 0x00CC396D
+		// Token: 0x0602AE95 RID: 175765 RVA: 0x00C12E6D File Offset: 0x00C1106D
 		public int GetDamage()
 		{
 			return this.SettlePoint;
 		}
 
-		// Token: 0x06035F9B RID: 221083 RVA: 0x00CC5778 File Offset: 0x00CC3978
+		// Token: 0x0602AE96 RID: 175766 RVA: 0x00C12E78 File Offset: 0x00C11078
 		public void OnAccumulateEvent(float endX, float endZ, UCurveFloat curveCommon)
 		{
 			if (this.SettlePoint == 0)
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb
 			}
 		}
 
-		// Token: 0x06035F9C RID: 221084 RVA: 0x00CC5878 File Offset: 0x00CC3A78
+		// Token: 0x0602AE97 RID: 175767 RVA: 0x00C12F78 File Offset: 0x00C11178
 		private void TweenCallX(float value)
 		{
 			FVectorDouble fvectorDouble = base.GetUiNiagara(5).D_K2_GetComponentLocation();
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb
 			base.GetUiNiagara(5).D_K2_SetWorldLocation(newLocation, false, ref WorldGlobal.SweepHitResult, false);
 		}
 
-		// Token: 0x06035F9D RID: 221085 RVA: 0x00CC58C0 File Offset: 0x00CC3AC0
+		// Token: 0x0602AE98 RID: 175768 RVA: 0x00C12FC0 File Offset: 0x00C111C0
 		private void TweenerCallZ(float value)
 		{
 			FVectorDouble fvectorDouble = base.GetUiNiagara(5).D_K2_GetComponentLocation();
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb
 			base.GetUiNiagara(5).D_K2_SetWorldLocation(newLocation, false, ref WorldGlobal.SweepHitResult, false);
 		}
 
-		// Token: 0x06035F9E RID: 221086 RVA: 0x00CC5908 File Offset: 0x00CC3B08
+		// Token: 0x0602AE99 RID: 175769 RVA: 0x00C13008 File Offset: 0x00C11208
 		private void OnTweenerXEnd()
 		{
 			if (this.TweenerX != null)
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb
 			base.GetUiNiagara(5).SetUIActive(false);
 		}
 
-		// Token: 0x06035F9F RID: 221087 RVA: 0x00CC5926 File Offset: 0x00CC3B26
+		// Token: 0x0602AE9A RID: 175770 RVA: 0x00C13026 File Offset: 0x00C11226
 		private void OnTweenerZEnd()
 		{
 			if (this.TweenerZ != null)
@@ -143,44 +143,44 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Bvb
 			}
 		}
 
-		// Token: 0x0401C947 RID: 117063
+		// Token: 0x0401737C RID: 95100
 		protected ULTweener TweenerX;
 
-		// Token: 0x0401C948 RID: 117064
+		// Token: 0x0401737D RID: 95101
 		protected ULTweener TweenerZ;
 
-		// Token: 0x0401C949 RID: 117065
+		// Token: 0x0401737E RID: 95102
 		protected FLTweenFloatSetterDynamic DelegateX;
 
-		// Token: 0x0401C94A RID: 117066
+		// Token: 0x0401737F RID: 95103
 		protected FLTweenFloatSetterDynamic DelegateZ;
 
-		// Token: 0x0401C94B RID: 117067
+		// Token: 0x04017380 RID: 95104
 		protected int SettlePoint;
 
-		// Token: 0x0401C94C RID: 117068
+		// Token: 0x04017381 RID: 95105
 		protected LevelSequencePlayer SequencePlayer;
 
-		// Token: 0x0200B466 RID: 46182
+		// Token: 0x02009E9E RID: 40606
 		[NullableContext(0)]
 		private class ESkillItem
 		{
-			// Token: 0x04036A86 RID: 223878
+			// Token: 0x040314D9 RID: 201945
 			public const int Icon = 0;
 
-			// Token: 0x04036A87 RID: 223879
+			// Token: 0x040314DA RID: 201946
 			public const int SettlePointText = 1;
 
-			// Token: 0x04036A88 RID: 223880
+			// Token: 0x040314DB RID: 201947
 			public const int PanelSkill = 2;
 
-			// Token: 0x04036A89 RID: 223881
+			// Token: 0x040314DC RID: 201948
 			public const int SpriteSkillCost = 3;
 
-			// Token: 0x04036A8A RID: 223882
+			// Token: 0x040314DD RID: 201949
 			public const int Content = 4;
 
-			// Token: 0x04036A8B RID: 223883
+			// Token: 0x040314DE RID: 201950
 			public const int NiagaraPoint = 5;
 		}
 	}

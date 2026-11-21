@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x020049D7 RID: 18903
+	// Token: 0x02004E97 RID: 20119
 	public class ICheckDropCatchGameplayCompleteLevelT
 	{
-		// Token: 0x170088B2 RID: 34994
-		// (get) Token: 0x0601D860 RID: 120928 RVA: 0x00428374 File Offset: 0x00426574
-		// (set) Token: 0x0601D861 RID: 120929 RVA: 0x0042837C File Offset: 0x0042657C
+		// Token: 0x17008F82 RID: 36738
+		// (get) Token: 0x0601F2D3 RID: 127699 RVA: 0x00458FE0 File Offset: 0x004571E0
+		// (set) Token: 0x0601F2D4 RID: 127700 RVA: 0x00458FE8 File Offset: 0x004571E8
 		public ECheckSystemStateType Type { get; set; }
 
-		// Token: 0x170088B3 RID: 34995
-		// (get) Token: 0x0601D862 RID: 120930 RVA: 0x00428385 File Offset: 0x00426585
-		// (set) Token: 0x0601D863 RID: 120931 RVA: 0x0042838D File Offset: 0x0042658D
+		// Token: 0x17008F83 RID: 36739
+		// (get) Token: 0x0601F2D5 RID: 127701 RVA: 0x00458FF1 File Offset: 0x004571F1
+		// (set) Token: 0x0601F2D6 RID: 127702 RVA: 0x00458FF9 File Offset: 0x004571F9
 		public int LevelId { get; set; }
 
-		// Token: 0x0601D864 RID: 120932 RVA: 0x00428396 File Offset: 0x00426596
+		// Token: 0x0601F2D7 RID: 127703 RVA: 0x00459002 File Offset: 0x00457202
 		public ICheckDropCatchGameplayCompleteLevelT()
 		{
 			this.Type = ECheckSystemStateType.TrackMoonBuilding;

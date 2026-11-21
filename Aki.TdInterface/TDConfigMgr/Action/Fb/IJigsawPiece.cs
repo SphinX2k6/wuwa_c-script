@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200296C RID: 10604
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002C51 RID: 11345
 	public class IJigsawPiece : IPieceBase
 	{
-		// Token: 0x0600EB01 RID: 60161 RVA: 0x002264BF File Offset: 0x002246BF
+		// Token: 0x0600F977 RID: 63863 RVA: 0x00243B77 File Offset: 0x00241D77
 		public static IJigsawPiece Create(IJigsawPiece? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170049EB RID: 18923
-		// (get) Token: 0x0600EB02 RID: 60162 RVA: 0x002264DE File Offset: 0x002246DE
+		// Token: 0x17004D83 RID: 19843
+		// (get) Token: 0x0600F978 RID: 63864 RVA: 0x00243B96 File Offset: 0x00241D96
 		public override IPieceIndex Index
 		{
 			get
@@ -38,8 +36,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170049EC RID: 18924
-		// (get) Token: 0x0600EB03 RID: 60163 RVA: 0x00226512 File Offset: 0x00224712
+		// Token: 0x17004D84 RID: 19844
+		// (get) Token: 0x0600F979 RID: 63865 RVA: 0x00243BCA File Offset: 0x00241DCA
 		public override bool Active
 		{
 			get
@@ -48,8 +46,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170049ED RID: 18925
-		// (get) Token: 0x0600EB04 RID: 60164 RVA: 0x0022651F File Offset: 0x0022471F
+		// Token: 0x17004D85 RID: 19845
+		// (get) Token: 0x0600F97A RID: 63866 RVA: 0x00243BD7 File Offset: 0x00241DD7
 		public virtual bool IsCorrect
 		{
 			get
@@ -58,8 +56,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170049EE RID: 18926
-		// (get) Token: 0x0600EB05 RID: 60165 RVA: 0x0022652C File Offset: 0x0022472C
+		// Token: 0x17004D86 RID: 19846
+		// (get) Token: 0x0600F97B RID: 63867 RVA: 0x00243BE4 File Offset: 0x00241DE4
 		public virtual EJigsawPieceState InitState
 		{
 			get
@@ -68,14 +66,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008178 RID: 33144
+		// Token: 0x04008859 RID: 34905
 		private IJigsawPiece Instance;
 
-		// Token: 0x04008179 RID: 33145
+		// Token: 0x0400885A RID: 34906
 		[Nullable(2)]
 		private IPieceIndex _IndexCache;
 
-		// Token: 0x0400817A RID: 33146
+		// Token: 0x0400885B RID: 34907
 		private bool _IndexInited;
 	}
 }

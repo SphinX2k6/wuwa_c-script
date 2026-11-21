@@ -4,34 +4,35 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200295F RID: 10591
+// Token: 0x02001EDA RID: 7898
 public class ScreenShotManager : IStaticVariableResetter
 {
-	// Token: 0x06015E5B RID: 89691 RVA: 0x005864FB File Offset: 0x005846FB
+	// Token: 0x0601385F RID: 79967 RVA: 0x005B14FB File Offset: 0x005AF6FB
 	static ScreenShotManager()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ScreenShotManager.CreateStaticDefaultValue), new Action(ScreenShotManager.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06015E5C RID: 89692 RVA: 0x0058651A File Offset: 0x0058471A
+	// Token: 0x06013860 RID: 79968 RVA: 0x005B151A File Offset: 0x005AF71A
 	public static void CreateStaticDefaultValue()
 	{
 		ScreenShotManager.GameScreenshotTask = null;
 	}
 
-	// Token: 0x06015E5D RID: 89693 RVA: 0x00586522 File Offset: 0x00584722
+	// Token: 0x06013861 RID: 79969 RVA: 0x005B1522 File Offset: 0x005AF722
 	public static void ResetStaticDefaultValue()
 	{
+		ScreenShotManager.ResetScreenShot();
 		ScreenShotManager.GameScreenshotTask = null;
 	}
 
-	// Token: 0x06015E5E RID: 89694 RVA: 0x0058652A File Offset: 0x0058472A
+	// Token: 0x06013862 RID: 79970 RVA: 0x005B152F File Offset: 0x005AF72F
 	public static void Clear()
 	{
 		ScreenShotManager.ResetScreenShot();
 	}
 
-	// Token: 0x06015E5F RID: 89695 RVA: 0x00586534 File Offset: 0x00584734
+	// Token: 0x06013863 RID: 79971 RVA: 0x005B1538 File Offset: 0x005AF738
 	[NullableContext(1)]
 	[return: Nullable(2)]
 	public static UGameScreenshotTask PrepareTakeScreenshot(string relativePath, float minX, float minY, float maxX, float maxY, bool saveFile, float screenshotResolutionX = 0f, float screenshotResolutionY = 0f, int resolutionMultiplier = 1)
@@ -43,7 +44,7 @@ public class ScreenShotManager : IStaticVariableResetter
 		return ScreenShotManager.GameScreenshotTask;
 	}
 
-	// Token: 0x06015E60 RID: 89696 RVA: 0x00586586 File Offset: 0x00584786
+	// Token: 0x06013864 RID: 79972 RVA: 0x005B158A File Offset: 0x005AF78A
 	public static void ResetScreenShot()
 	{
 		if (ScreenShotManager.GameScreenshotTask != null && ScreenShotManager.GameScreenshotTask.IsValid())
@@ -53,7 +54,7 @@ public class ScreenShotManager : IStaticVariableResetter
 		ScreenShotManager.GameScreenshotTask = null;
 	}
 
-	// Token: 0x06015E61 RID: 89697 RVA: 0x005865AB File Offset: 0x005847AB
+	// Token: 0x06013865 RID: 79973 RVA: 0x005B15AF File Offset: 0x005AF7AF
 	public static void RequestIOSPhotoLibraryAuthorization()
 	{
 		UGameScreenshotTask gameScreenshotTask = ScreenShotManager.GameScreenshotTask;
@@ -64,7 +65,7 @@ public class ScreenShotManager : IStaticVariableResetter
 		gameScreenshotTask.RequestIOSPhotoLibraryAuthorization();
 	}
 
-	// Token: 0x06015E62 RID: 89698 RVA: 0x005865BC File Offset: 0x005847BC
+	// Token: 0x06013866 RID: 79974 RVA: 0x005B15C0 File Offset: 0x005AF7C0
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -80,14 +81,14 @@ public class ScreenShotManager : IStaticVariableResetter
 		return <TakeFullScreenShotToTextureAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015E63 RID: 89699 RVA: 0x005865FF File Offset: 0x005847FF
+	// Token: 0x06013867 RID: 79975 RVA: 0x005B1603 File Offset: 0x005AF803
 	[NullableContext(1)]
 	public static UTexture2D CreateTextureFromBuffer(int minX, int minY, int maxX, int maxY)
 	{
 		return ULGUIBPLibrary.CreateTexture2DFromBuffer(minX, maxX, minY, maxY);
 	}
 
-	// Token: 0x0400A2F9 RID: 41721
+	// Token: 0x0400A6E3 RID: 42723
 	[Nullable(2)]
 	private static UGameScreenshotTask GameScreenshotTask;
 }

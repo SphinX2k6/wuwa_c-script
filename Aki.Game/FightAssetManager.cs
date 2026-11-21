@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02003313 RID: 13075
+// Token: 0x02002885 RID: 10373
 [NullableContext(1)]
 [Nullable(0)]
 public class FightAssetManager
 {
-	// Token: 0x0601C7BF RID: 116671 RVA: 0x007FDE14 File Offset: 0x007FC014
+	// Token: 0x0601A4B8 RID: 107704 RVA: 0x00824380 File Offset: 0x00822580
 	public FightAssetManager([Nullable(new byte[]
 	{
 		0,
@@ -19,14 +19,14 @@ public class FightAssetManager
 		this.BulletAssetManager = new BulletAssetManager(this);
 	}
 
-	// Token: 0x0601C7C0 RID: 116672 RVA: 0x007FDE3B File Offset: 0x007FC03B
+	// Token: 0x0601A4B9 RID: 107705 RVA: 0x008243A7 File Offset: 0x008225A7
 	public void Clear()
 	{
 		this.SkillAssetManager.Clear();
 		this.BulletAssetManager.Clear();
 	}
 
-	// Token: 0x0400E23D RID: 57917
+	// Token: 0x0400E6EE RID: 59118
 	[Nullable(new byte[]
 	{
 		0,
@@ -35,9 +35,9 @@ public class FightAssetManager
 	})]
 	public readonly OneOf<EntityAssetElement, PbEntityAssetElement> EntityAssetElement;
 
-	// Token: 0x0400E23E RID: 57918
+	// Token: 0x0400E6EF RID: 59119
 	public SkillAssetManager SkillAssetManager;
 
-	// Token: 0x0400E23F RID: 57919
+	// Token: 0x0400E6F0 RID: 59120
 	public BulletAssetManager BulletAssetManager;
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002103 RID: 8451
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002364 RID: 9060
 	public class PlayBubble : ActionParams
 	{
-		// Token: 0x0600B9E6 RID: 47590 RVA: 0x001ADB10 File Offset: 0x001ABD10
+		// Token: 0x0600C572 RID: 50546 RVA: 0x001C4C70 File Offset: 0x001C2E70
 		private PlayBubble_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B9E7 RID: 47591 RVA: 0x001ADB48 File Offset: 0x001ABD48
+		// Token: 0x0600C573 RID: 50547 RVA: 0x001C4CA8 File Offset: 0x001C2EA8
 		public static PlayBubble Create([Nullable(2)] PlayBubble instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B9E8 RID: 47592 RVA: 0x001ADB5B File Offset: 0x001ABD5B
+		// Token: 0x0600C574 RID: 50548 RVA: 0x001C4CBB File Offset: 0x001C2EBB
 		public static PlayBubble CreateFromSetValue([Nullable(2)] PlayBubble_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B9E9 RID: 47593 RVA: 0x001ADB70 File Offset: 0x001ABD70
+		// Token: 0x0600C575 RID: 50549 RVA: 0x001C4CD0 File Offset: 0x001C2ED0
 		public PlayBubble_SetValue ToSetValue()
 		{
 			return new PlayBubble_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170038C8 RID: 14536
-		// (get) Token: 0x0600B9EA RID: 47594 RVA: 0x001ADBCC File Offset: 0x001ABDCC
-		// (set) Token: 0x0600B9EB RID: 47595 RVA: 0x001ADC06 File Offset: 0x001ABE06
+		// Token: 0x17003BB4 RID: 15284
+		// (get) Token: 0x0600C576 RID: 50550 RVA: 0x001C4D2C File Offset: 0x001C2F2C
+		// (set) Token: 0x0600C577 RID: 50551 RVA: 0x001C4D66 File Offset: 0x001C2F66
 		public virtual int? EntityId
 		{
 			get
@@ -88,9 +86,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170038C9 RID: 14537
-		// (get) Token: 0x0600B9EC RID: 47596 RVA: 0x001ADC14 File Offset: 0x001ABE14
-		// (set) Token: 0x0600B9ED RID: 47597 RVA: 0x001ADC75 File Offset: 0x001ABE75
+		// Token: 0x17003BB5 RID: 15285
+		// (get) Token: 0x0600C578 RID: 50552 RVA: 0x001C4D74 File Offset: 0x001C2F74
+		// (set) Token: 0x0600C579 RID: 50553 RVA: 0x001C4DD5 File Offset: 0x001C2FD5
 		public virtual IBubbleIndex Flow
 		{
 			get
@@ -118,9 +116,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170038CA RID: 14538
-		// (get) Token: 0x0600B9EE RID: 47598 RVA: 0x001ADC8C File Offset: 0x001ABE8C
-		// (set) Token: 0x0600B9EF RID: 47599 RVA: 0x001ADCC6 File Offset: 0x001ABEC6
+		// Token: 0x17003BB6 RID: 15286
+		// (get) Token: 0x0600C57A RID: 50554 RVA: 0x001C4DEC File Offset: 0x001C2FEC
+		// (set) Token: 0x0600C57B RID: 50555 RVA: 0x001C4E26 File Offset: 0x001C3026
 		public virtual bool? IsRangeFollowEntity
 		{
 			get
@@ -142,9 +140,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170038CB RID: 14539
-		// (get) Token: 0x0600B9F0 RID: 47600 RVA: 0x001ADCD4 File Offset: 0x001ABED4
-		// (set) Token: 0x0600B9F1 RID: 47601 RVA: 0x001ADD0E File Offset: 0x001ABF0E
+		// Token: 0x17003BB7 RID: 15287
+		// (get) Token: 0x0600C57C RID: 50556 RVA: 0x001C4E34 File Offset: 0x001C3034
+		// (set) Token: 0x0600C57D RID: 50557 RVA: 0x001C4E6E File Offset: 0x001C306E
 		public virtual bool? IsAudioOccludedByScene
 		{
 			get
@@ -166,9 +164,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170038CC RID: 14540
-		// (get) Token: 0x0600B9F2 RID: 47602 RVA: 0x001ADD1C File Offset: 0x001ABF1C
-		// (set) Token: 0x0600B9F3 RID: 47603 RVA: 0x001ADD7D File Offset: 0x001ABF7D
+		// Token: 0x17003BB8 RID: 15288
+		// (get) Token: 0x0600C57E RID: 50558 RVA: 0x001C4E7C File Offset: 0x001C307C
+		// (set) Token: 0x0600C57F RID: 50559 RVA: 0x001C4EDD File Offset: 0x001C30DD
 		[Nullable(2)]
 		public virtual IBubbleRangeCylinderConfig TriggerCylinderConfig
 		{
@@ -199,9 +197,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170038CD RID: 14541
-		// (get) Token: 0x0600B9F4 RID: 47604 RVA: 0x001ADD94 File Offset: 0x001ABF94
-		// (set) Token: 0x0600B9F5 RID: 47605 RVA: 0x001ADDCE File Offset: 0x001ABFCE
+		// Token: 0x17003BB9 RID: 15289
+		// (get) Token: 0x0600C580 RID: 50560 RVA: 0x001C4EF4 File Offset: 0x001C30F4
+		// (set) Token: 0x0600C581 RID: 50561 RVA: 0x001C4F2E File Offset: 0x001C312E
 		public virtual bool? IsPlayMouthAnim
 		{
 			get
@@ -223,24 +221,24 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006F4F RID: 28495
+		// Token: 0x04007583 RID: 30083
 		[Nullable(2)]
 		protected new PlayBubble FbInstance;
 
-		// Token: 0x04006F50 RID: 28496
+		// Token: 0x04007584 RID: 30084
 		[Nullable(2)]
 		protected PlayBubble_SetValue PocoInterface;
 
-		// Token: 0x04006F51 RID: 28497
+		// Token: 0x04007585 RID: 30085
 		private IBubbleIndex _FlowCache;
 
-		// Token: 0x04006F52 RID: 28498
+		// Token: 0x04007586 RID: 30086
 		private bool _FlowInited;
 
-		// Token: 0x04006F53 RID: 28499
+		// Token: 0x04007587 RID: 30087
 		private IBubbleRangeCylinderConfig _TriggerCylinderConfigCache;
 
-		// Token: 0x04006F54 RID: 28500
+		// Token: 0x04007588 RID: 30088
 		private bool _TriggerCylinderConfigInited;
 	}
 }

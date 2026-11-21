@@ -1,26 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Activity.ActivityContent.SpringManor;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001065 RID: 4197
+// Token: 0x02000519 RID: 1305
 [NullableContext(1)]
 [Nullable(0)]
-public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
+public class GuessJokerGamePlayView : UiViewBase, IUiViewCameraBehavior
 {
-	// Token: 0x06006BDE RID: 27614 RVA: 0x0015B738 File Offset: 0x00159938
+	// Token: 0x06003F73 RID: 16243 RVA: 0x00164080 File Offset: 0x00162280
 	public GuessJokerGamePlayView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06006BDF RID: 27615 RVA: 0x0015B770 File Offset: 0x00159970
+	// Token: 0x06003F74 RID: 16244 RVA: 0x001640B8 File Offset: 0x001622B8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -82,7 +82,7 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		};
 	}
 
-	// Token: 0x06006BE0 RID: 27616 RVA: 0x0015BC24 File Offset: 0x00159E24
+	// Token: 0x06003F75 RID: 16245 RVA: 0x0016456C File Offset: 0x0016276C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		GuessJokerGamePlayView.<OnBeforeStartAsync>d__24 <OnBeforeStartAsync>d__;
@@ -93,7 +93,7 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06006BE1 RID: 27617 RVA: 0x0015BC67 File Offset: 0x00159E67
+	// Token: 0x06003F76 RID: 16246 RVA: 0x001645AF File Offset: 0x001627AF
 	protected override void OnBeforeShow()
 	{
 		this.PauseTimeDilation();
@@ -103,7 +103,7 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		this.InitInfo();
 	}
 
-	// Token: 0x06006BE2 RID: 27618 RVA: 0x0015BC87 File Offset: 0x00159E87
+	// Token: 0x06003F77 RID: 16247 RVA: 0x001645CF File Offset: 0x001627CF
 	protected override void OnAfterShow()
 	{
 		GuessJokerGamePlayModel instance = GuessJokerGamePlayModel.Instance;
@@ -114,7 +114,7 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		instance.SetActiveDialogLogic(this.DialogLogic);
 	}
 
-	// Token: 0x06006BE3 RID: 27619 RVA: 0x0015BC9E File Offset: 0x00159E9E
+	// Token: 0x06003F78 RID: 16248 RVA: 0x001645E6 File Offset: 0x001627E6
 	protected override void OnBeforeHide()
 	{
 		GuessJokerGamePlayModel instance = GuessJokerGamePlayModel.Instance;
@@ -130,20 +130,20 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		this.ResumeTimeDilation();
 	}
 
-	// Token: 0x06006BE4 RID: 27620 RVA: 0x0015BCC8 File Offset: 0x00159EC8
+	// Token: 0x06003F79 RID: 16249 RVA: 0x00164610 File Offset: 0x00162810
 	protected void PauseTimeDilation()
 	{
 		UiTimeDilation.Instance.AddWaitSetTimeDilationTag("GuessJokerGamePlayView");
 	}
 
-	// Token: 0x06006BE5 RID: 27621 RVA: 0x0015BCD9 File Offset: 0x00159ED9
+	// Token: 0x06003F7A RID: 16250 RVA: 0x00164621 File Offset: 0x00162821
 	protected void ResumeTimeDilation()
 	{
 		UiTimeDilation.Instance.DeleteWaitSetTimeDilationTag("GuessJokerGamePlayView");
 	}
 
-	// Token: 0x06006BE6 RID: 27622 RVA: 0x0015BCEC File Offset: 0x00159EEC
-	public void PushCameraHandle(EUiViewName viewName, int viewId, bool isBlend)
+	// Token: 0x06003F7B RID: 16251 RVA: 0x00164634 File Offset: 0x00162834
+	public void PushCameraHandleByOpenView(EUiViewName viewName, int viewId, EUiCameraHandleOperationType operationType)
 	{
 		GuessJokerAiConfig? jokerAiConfigByEntityId = GuessJokerConfig.Instance.GetJokerAiConfigByEntityId(this.NpcId);
 		if (jokerAiConfigByEntityId == null)
@@ -153,13 +153,12 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		string cameraNameByCameraId = GuessJokerUtils.GetCameraNameByCameraId(jokerAiConfigByEntityId.Value.GamePlayCameraId);
 		if (cameraNameByCameraId != null)
 		{
-			UiCameraAnimationController.Instance.PushCameraHandle((EUiViewName)cameraNameByCameraId, new int?(viewId), isBlend);
+			UiCameraController.Instance.PushCameraHandleByOpenView((EUiViewName)cameraNameByCameraId, viewId, operationType);
 		}
 	}
 
-	// Token: 0x06006BE7 RID: 27623 RVA: 0x0015BD44 File Offset: 0x00159F44
-	[NullableContext(2)]
-	public void PopCameraHandle(EUiViewName viewName, UiViewInfo stackTopInfo, int closeViewId, bool popOrDelete)
+	// Token: 0x06003F7C RID: 16252 RVA: 0x00164688 File Offset: 0x00162888
+	public void PopCameraHandleByCloseView(EUiViewName viewName, EUiViewName? nextViewName, int closeViewId, EUiCameraHandleOperationType operationType)
 	{
 		GuessJokerAiConfig? jokerAiConfigByEntityId = GuessJokerConfig.Instance.GetJokerAiConfigByEntityId(this.NpcId);
 		if (jokerAiConfigByEntityId == null)
@@ -169,11 +168,11 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		string cameraNameByCameraId = GuessJokerUtils.GetCameraNameByCameraId(jokerAiConfigByEntityId.Value.GamePlayCameraId);
 		if (cameraNameByCameraId != null)
 		{
-			UiCameraAnimationController.Instance.PopCameraHandle((EUiViewName)cameraNameByCameraId, stackTopInfo, closeViewId, popOrDelete);
+			UiCameraController.Instance.PopCameraHandleByCloseView((EUiViewName)cameraNameByCameraId, nextViewName, closeViewId, operationType);
 		}
 	}
 
-	// Token: 0x06006BE8 RID: 27624 RVA: 0x0015BD98 File Offset: 0x00159F98
+	// Token: 0x06003F7D RID: 16253 RVA: 0x001646DC File Offset: 0x001628DC
 	private void OnGamePlayViewSequenceFinish(string sequenceName)
 	{
 		Action action;
@@ -184,7 +183,7 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x06006BE9 RID: 27625 RVA: 0x0015BDCD File Offset: 0x00159FCD
+	// Token: 0x06003F7E RID: 16254 RVA: 0x00164711 File Offset: 0x00162911
 	private void OnEventSequence(string sequenceName, string eventName)
 	{
 		if (sequenceName == "LevelChange" && eventName == "LevelChange")
@@ -193,14 +192,14 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x06006BEA RID: 27626 RVA: 0x0015BDEF File Offset: 0x00159FEF
+	// Token: 0x06003F7F RID: 16255 RVA: 0x00164733 File Offset: 0x00162933
 	private void InitPlayer()
 	{
 		this.AiPlayerItem.SetRoleData(GuessJokerGamePlayModel.Instance.GetRoleData(EGuessJokerPlayerType.Ai));
 		this.MePlayerItem.SetRoleData(GuessJokerGamePlayModel.Instance.GetRoleData(EGuessJokerPlayerType.Me));
 	}
 
-	// Token: 0x06006BEB RID: 27627 RVA: 0x0015BE20 File Offset: 0x0015A020
+	// Token: 0x06003F80 RID: 16256 RVA: 0x00164764 File Offset: 0x00162964
 	private void InitButtons()
 	{
 		int roleId = GuessJokerGamePlayModel.Instance.GetRoleId();
@@ -232,7 +231,7 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x06006BEC RID: 27628 RVA: 0x0015BEC0 File Offset: 0x0015A0C0
+	// Token: 0x06003F81 RID: 16257 RVA: 0x00164804 File Offset: 0x00162A04
 	private UniTask InitAllCards()
 	{
 		GuessJokerGamePlayView.<InitAllCards>d__36 <InitAllCards>d__;
@@ -243,7 +242,7 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		return <InitAllCards>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06006BED RID: 27629 RVA: 0x0015BF04 File Offset: 0x0015A104
+	// Token: 0x06003F82 RID: 16258 RVA: 0x00164848 File Offset: 0x00162A48
 	private UniTask InitBlankCard()
 	{
 		GuessJokerGamePlayView.<InitBlankCard>d__37 <InitBlankCard>d__;
@@ -254,7 +253,7 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		return <InitBlankCard>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06006BEE RID: 27630 RVA: 0x0015BF48 File Offset: 0x0015A148
+	// Token: 0x06003F83 RID: 16259 RVA: 0x0016488C File Offset: 0x00162A8C
 	private void InitRound()
 	{
 		int roundNumber = GuessJokerGamePlayModel.Instance.RoundNumber;
@@ -272,14 +271,14 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x06006BEF RID: 27631 RVA: 0x0015BFF0 File Offset: 0x0015A1F0
+	// Token: 0x06003F84 RID: 16260 RVA: 0x00164934 File Offset: 0x00162B34
 	private void InitInfo()
 	{
 		string playerNameByType = GuessJokerGamePlayModel.Instance.GetPlayerNameByType(EGuessJokerPlayerType.Ai);
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(39), "GuessJoker_AiSelectText", new <>z__ReadOnlySingleElementList<object>(playerNameByType));
 	}
 
-	// Token: 0x06006BF0 RID: 27632 RVA: 0x0015C026 File Offset: 0x0015A226
+	// Token: 0x06003F85 RID: 16261 RVA: 0x0016496A File Offset: 0x00162B6A
 	public void HidePlayerButtons()
 	{
 		this.PlayGamePlayViewSequence("BtnHide", delegate
@@ -288,7 +287,7 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		});
 	}
 
-	// Token: 0x06006BF1 RID: 27633 RVA: 0x0015C040 File Offset: 0x0015A240
+	// Token: 0x06003F86 RID: 16262 RVA: 0x00164984 File Offset: 0x00162B84
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -305,7 +304,7 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		return <CreateCardItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06006BF2 RID: 27634 RVA: 0x0015C08C File Offset: 0x0015A28C
+	// Token: 0x06003F87 RID: 16263 RVA: 0x001649D0 File Offset: 0x00162BD0
 	protected override void OnBeforeDestroy()
 	{
 		foreach (GuessJokerCardItem guessJokerCardItem in this.CardItemMap.Values)
@@ -315,7 +314,7 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		this.CardItemMap.Clear();
 	}
 
-	// Token: 0x06006BF3 RID: 27635 RVA: 0x0015C0F0 File Offset: 0x0015A2F0
+	// Token: 0x06003F88 RID: 16264 RVA: 0x00164A34 File Offset: 0x00162C34
 	[NullableContext(2)]
 	public GuessJokerCardItem GetCardItemById(int cardId)
 	{
@@ -327,7 +326,7 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		return result;
 	}
 
-	// Token: 0x06006BF4 RID: 27636 RVA: 0x0015C110 File Offset: 0x0015A310
+	// Token: 0x06003F89 RID: 16265 RVA: 0x00164A54 File Offset: 0x00162C54
 	public void SwapCardItemMap(int cardId1, int cardId2)
 	{
 		GuessJokerCardItem guessJokerCardItem2;
@@ -341,7 +340,7 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x06006BF5 RID: 27637 RVA: 0x0015C168 File Offset: 0x0015A368
+	// Token: 0x06003F8A RID: 16266 RVA: 0x00164AAC File Offset: 0x00162CAC
 	[NullableContext(2)]
 	private LevelSequencePlayer GetOrCreateSequencePlayer(int componentDefine)
 	{
@@ -366,7 +365,7 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		return levelSequencePlayer;
 	}
 
-	// Token: 0x06006BF6 RID: 27638 RVA: 0x0015C1E8 File Offset: 0x0015A3E8
+	// Token: 0x06003F8B RID: 16267 RVA: 0x00164B2C File Offset: 0x00162D2C
 	public void SetPlayerPlayCardInteractiveCallback([Nullable(new byte[]
 	{
 		2,
@@ -385,14 +384,14 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		};
 	}
 
-	// Token: 0x06006BF7 RID: 27639 RVA: 0x0015C21B File Offset: 0x0015A41B
+	// Token: 0x06003F8C RID: 16268 RVA: 0x00164B5F File Offset: 0x00162D5F
 	[NullableContext(2)]
 	public void SetPlayerCardClickCallback(Action<int, int, bool> callback)
 	{
 		this.PlayerCardClickCallback = callback;
 	}
 
-	// Token: 0x06006BF8 RID: 27640 RVA: 0x0015C224 File Offset: 0x0015A424
+	// Token: 0x06003F8D RID: 16269 RVA: 0x00164B68 File Offset: 0x00162D68
 	public void SetFlipCoinClickEnable()
 	{
 		GuessJokerCoinFlipItem flipCoinItem = this.FlipCoinItem;
@@ -403,7 +402,7 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		flipCoinItem.SetClickEnable(true);
 	}
 
-	// Token: 0x06006BF9 RID: 27641 RVA: 0x0015C237 File Offset: 0x0015A437
+	// Token: 0x06003F8E RID: 16270 RVA: 0x00164B7B File Offset: 0x00162D7B
 	private void FlipCoinClickCallback()
 	{
 		GuessJokerCoinFlipItem flipCoinItem = this.FlipCoinItem;
@@ -420,13 +419,13 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		});
 	}
 
-	// Token: 0x06006BFA RID: 27642 RVA: 0x0015C25E File Offset: 0x0015A45E
+	// Token: 0x06003F8F RID: 16271 RVA: 0x00164BA2 File Offset: 0x00162DA2
 	public void SetPlayerSkillRequestCallback(Action<bool> callback)
 	{
 		this.PlayerSkillRequestCallback = callback;
 	}
 
-	// Token: 0x06006BFB RID: 27643 RVA: 0x0015C268 File Offset: 0x0015A468
+	// Token: 0x06003F90 RID: 16272 RVA: 0x00164BAC File Offset: 0x00162DAC
 	public void UpdateRoundNumber()
 	{
 		int roundNumber = GuessJokerGamePlayModel.Instance.RoundNumber;
@@ -436,7 +435,7 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 	}
 
-	// Token: 0x06006BFC RID: 27644 RVA: 0x0015C2AC File Offset: 0x0015A4AC
+	// Token: 0x06003F91 RID: 16273 RVA: 0x00164BF0 File Offset: 0x00162DF0
 	public void PlayGamePlayViewSequence(string sequenceName, [Nullable(2)] Action finishCallback = null)
 	{
 		LevelSequencePlayer gamePlayViewSequencePlayer = this.GamePlayViewSequencePlayer;
@@ -450,7 +449,7 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x06006BFD RID: 27645 RVA: 0x0015C2E8 File Offset: 0x0015A4E8
+	// Token: 0x06003F92 RID: 16274 RVA: 0x00164C2C File Offset: 0x00162E2C
 	public void SetSkillProgress(EGuessJokerPlayerType playerType, float progress)
 	{
 		UUISprite uuisprite;
@@ -479,13 +478,13 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x06006BFE RID: 27646 RVA: 0x0015C38F File Offset: 0x0015A58F
+	// Token: 0x06003F93 RID: 16275 RVA: 0x00164CD3 File Offset: 0x00162ED3
 	public void ShowAiSkillProgress(bool isShow)
 	{
 		this.PlayStartOrCloseSequence(isShow, 30, null);
 	}
 
-	// Token: 0x06006BFF RID: 27647 RVA: 0x0015C39C File Offset: 0x0015A59C
+	// Token: 0x06003F94 RID: 16276 RVA: 0x00164CE0 File Offset: 0x00162EE0
 	[NullableContext(2)]
 	public void ShowDialog(EGuessJokerPlayerType playerType, bool isShow, Action onComplete = null)
 	{
@@ -516,7 +515,7 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		});
 	}
 
-	// Token: 0x06006C00 RID: 27648 RVA: 0x0015C414 File Offset: 0x0015A614
+	// Token: 0x06003F95 RID: 16277 RVA: 0x00164D58 File Offset: 0x00162F58
 	public void SetDialogText(EGuessJokerPlayerType playerType, string textKey)
 	{
 		if (playerType == EGuessJokerPlayerType.Ai)
@@ -531,7 +530,7 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x06006C01 RID: 27649 RVA: 0x0015C448 File Offset: 0x0015A648
+	// Token: 0x06003F96 RID: 16278 RVA: 0x00164D8C File Offset: 0x00162F8C
 	public void ShowPlayerButtons(int normalCardPairCount)
 	{
 		base.GetButton(7).RootUIComp.Get().SetUIActive(false);
@@ -545,7 +544,7 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x06006C02 RID: 27650 RVA: 0x0015C4D0 File Offset: 0x0015A6D0
+	// Token: 0x06003F97 RID: 16279 RVA: 0x00164E14 File Offset: 0x00163014
 	public void ShowSkillInteractivePanel(bool isActive)
 	{
 		string sequenceName = isActive ? "SkillShow" : "SkillHide";
@@ -562,21 +561,21 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		});
 	}
 
-	// Token: 0x06006C03 RID: 27651 RVA: 0x0015C51A File Offset: 0x0015A71A
+	// Token: 0x06003F98 RID: 16280 RVA: 0x00164E5E File Offset: 0x0016305E
 	public void UpdateCurrentPlayer(EGuessJokerPlayerType playerType)
 	{
 		this.AiPlayerItem.SetSelfRound(playerType == EGuessJokerPlayerType.Ai);
 		this.MePlayerItem.SetSelfRound(playerType == EGuessJokerPlayerType.Me);
 	}
 
-	// Token: 0x06006C04 RID: 27652 RVA: 0x0015C53A File Offset: 0x0015A73A
+	// Token: 0x06003F99 RID: 16281 RVA: 0x00164E7E File Offset: 0x0016307E
 	public void SetCurrentSkillInfo(int skillId, int skillRemindCount)
 	{
 		this.CurrentSkillRemindCount = skillRemindCount;
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(15), "GuessJoker_SkillChargesText", new <>z__ReadOnlySingleElementList<object>(this.CurrentSkillRemindCount));
 	}
 
-	// Token: 0x06006C05 RID: 27653 RVA: 0x0015C56C File Offset: 0x0015A76C
+	// Token: 0x06003F9A RID: 16282 RVA: 0x00164EB0 File Offset: 0x001630B0
 	public void ShowCards(int[] cardIdList, bool isShow)
 	{
 		foreach (int cardId in cardIdList)
@@ -589,7 +588,7 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x06006C06 RID: 27654 RVA: 0x0015C5A0 File Offset: 0x0015A7A0
+	// Token: 0x06003F9B RID: 16283 RVA: 0x00164EE4 File Offset: 0x001630E4
 	public void BlankCardAnimPlay()
 	{
 		GuessJokerCardData blankCardData = GuessJokerGamePlayModel.Instance.GetBlankCardData();
@@ -613,7 +612,7 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x06006C07 RID: 27655 RVA: 0x0015C644 File Offset: 0x0015A844
+	// Token: 0x06003F9C RID: 16284 RVA: 0x00164F88 File Offset: 0x00163188
 	public void RemoveCardFromMiddleArea(Action finishCallback)
 	{
 		GuessJokerPositionPanelBase middlePanel = this.GetPositionPanel(ECardPositionType.Middle);
@@ -627,13 +626,13 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		});
 	}
 
-	// Token: 0x06006C08 RID: 27656 RVA: 0x0015C6D4 File Offset: 0x0015A8D4
+	// Token: 0x06003F9D RID: 16285 RVA: 0x00165018 File Offset: 0x00163218
 	public void SetBlankCardDisable()
 	{
 		this.BlankCardItem.SetBlankCardDisable();
 	}
 
-	// Token: 0x06006C09 RID: 27657 RVA: 0x0015C6E4 File Offset: 0x0015A8E4
+	// Token: 0x06003F9E RID: 16286 RVA: 0x00165028 File Offset: 0x00163228
 	public void DealCards(Action finishCallback)
 	{
 		List<GuessJokerCardData> allCardDataList = GuessJokerGamePlayModel.Instance.GetAllCardDataList();
@@ -674,17 +673,17 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		positionPanel2.DealCards(list2, finishCallback2, 150);
 	}
 
-	// Token: 0x06006C0A RID: 27658 RVA: 0x0015C7F4 File Offset: 0x0015A9F4
+	// Token: 0x06003F9F RID: 16287 RVA: 0x00165138 File Offset: 0x00163338
 	public void SetPositionPanelCardsDark(ECardPositionType position, bool isDark, int[] excludeCardIdList = null)
 	{
 		if (excludeCardIdList == null)
 		{
 			excludeCardIdList = Array.Empty<int>();
 		}
-		this.GetPositionPanel(position).SetCardsDarkExcept(isDark, excludeCardIdList.ToList<int>());
+		this.GetPositionPanel(position).SetCardsDarkExcept(isDark, new List<int>(excludeCardIdList));
 	}
 
-	// Token: 0x06006C0B RID: 27659 RVA: 0x0015C814 File Offset: 0x0015AA14
+	// Token: 0x06003FA0 RID: 16288 RVA: 0x00165158 File Offset: 0x00163358
 	[NullableContext(2)]
 	private void PlayContinuousSequence(int componentDefine, Action completeCallback = null)
 	{
@@ -721,7 +720,7 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		completeCallback2();
 	}
 
-	// Token: 0x06006C0C RID: 27660 RVA: 0x0015C8AC File Offset: 0x0015AAAC
+	// Token: 0x06003FA1 RID: 16289 RVA: 0x001651F0 File Offset: 0x001633F0
 	[NullableContext(2)]
 	private void PlayStartOrCloseSequence(bool isShow, int componentDefine, Action completeCallback = null)
 	{
@@ -762,7 +761,7 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x06006C0D RID: 27661 RVA: 0x0015C94A File Offset: 0x0015AB4A
+	// Token: 0x06003FA2 RID: 16290 RVA: 0x0016528E File Offset: 0x0016348E
 	public void PlaySkillEffect(int skillId, Action completeCallback)
 	{
 		GuessJokerSkillActivateItem skillActivateItem = this.SkillActivateItem;
@@ -773,7 +772,7 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		this.PlayContinuousSequence(17, completeCallback);
 	}
 
-	// Token: 0x06006C0E RID: 27662 RVA: 0x0015C967 File Offset: 0x0015AB67
+	// Token: 0x06003FA3 RID: 16291 RVA: 0x001652AB File Offset: 0x001634AB
 	public void ShowFlipCoinEffect(bool isShow, Action completeCallback)
 	{
 		if (isShow)
@@ -789,7 +788,7 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		this.PlayStartOrCloseSequence(false, 18, completeCallback);
 	}
 
-	// Token: 0x06006C0F RID: 27663 RVA: 0x0015C994 File Offset: 0x0015AB94
+	// Token: 0x06003FA4 RID: 16292 RVA: 0x001652D8 File Offset: 0x001634D8
 	public void UpdateHp(EGuessJokerPlayerType playerType, Action completeCallback)
 	{
 		GuessJokerHeadItem guessJokerHeadItem = (playerType == EGuessJokerPlayerType.Ai) ? this.AiPlayerItem : this.MePlayerItem;
@@ -801,7 +800,7 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		completeCallback();
 	}
 
-	// Token: 0x06006C10 RID: 27664 RVA: 0x0015C9C8 File Offset: 0x0015ABC8
+	// Token: 0x06003FA5 RID: 16293 RVA: 0x0016530C File Offset: 0x0016350C
 	public void UpdateSkill(EGuessJokerPlayerType playerType)
 	{
 		GuessJokerHeadItem guessJokerHeadItem = (playerType == EGuessJokerPlayerType.Ai) ? this.AiPlayerItem : this.MePlayerItem;
@@ -811,7 +810,7 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x06006C11 RID: 27665 RVA: 0x0015C9F2 File Offset: 0x0015ABF2
+	// Token: 0x06003FA6 RID: 16294 RVA: 0x00165336 File Offset: 0x00163536
 	private void UseSkill(bool isUse)
 	{
 		Action<bool> playerSkillRequestCallback = this.PlayerSkillRequestCallback;
@@ -822,7 +821,7 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		playerSkillRequestCallback(isUse);
 	}
 
-	// Token: 0x06006C12 RID: 27666 RVA: 0x0015CA08 File Offset: 0x0015AC08
+	// Token: 0x06003FA7 RID: 16295 RVA: 0x0016534C File Offset: 0x0016354C
 	public void SetCardChoose(int cardId, bool isSelected)
 	{
 		GuessJokerCardItem cardItemById = this.GetCardItemById(cardId);
@@ -845,7 +844,7 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		cardItemById.SetChoose(isSelected, true);
 	}
 
-	// Token: 0x06006C13 RID: 27667 RVA: 0x0015CA63 File Offset: 0x0015AC63
+	// Token: 0x06003FA8 RID: 16296 RVA: 0x001653A7 File Offset: 0x001635A7
 	public void ClearChooseCard()
 	{
 		if (this.CurChooseCardItem != null)
@@ -855,7 +854,7 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x06006C14 RID: 27668 RVA: 0x0015CA84 File Offset: 0x0015AC84
+	// Token: 0x06003FA9 RID: 16297 RVA: 0x001653C8 File Offset: 0x001635C8
 	public void SetCardsSelect(int cardId, Action finishCallback)
 	{
 		GuessJokerCardItem cardItemById = this.GetCardItemById(cardId);
@@ -865,7 +864,7 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x06006C15 RID: 27669 RVA: 0x0015CAA4 File Offset: 0x0015ACA4
+	// Token: 0x06003FAA RID: 16298 RVA: 0x001653E8 File Offset: 0x001635E8
 	public void UpdateCardItemsHierarchyIndex()
 	{
 		List<GuessJokerCardItem> list = new List<GuessJokerCardItem>(this.CardItemMap.Values);
@@ -876,7 +875,7 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x06006C16 RID: 27670 RVA: 0x0015CB08 File Offset: 0x0015AD08
+	// Token: 0x06003FAB RID: 16299 RVA: 0x0016544C File Offset: 0x0016364C
 	public void ClearAllCardsChecking()
 	{
 		foreach (GuessJokerCardItem guessJokerCardItem in this.CardItemMap.Values)
@@ -885,28 +884,28 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		}
 	}
 
-	// Token: 0x06006C17 RID: 27671 RVA: 0x0015CB60 File Offset: 0x0015AD60
+	// Token: 0x06003FAC RID: 16300 RVA: 0x001654A4 File Offset: 0x001636A4
 	public void ShowPlayerRoundStartTip(EGuessJokerPlayerType playerType, Action completeCallback)
 	{
 		int componentDefine = (playerType == EGuessJokerPlayerType.Ai) ? 21 : 22;
 		this.PlayContinuousSequence(componentDefine, completeCallback);
 	}
 
-	// Token: 0x06006C18 RID: 27672 RVA: 0x0015CB80 File Offset: 0x0015AD80
+	// Token: 0x06003FAD RID: 16301 RVA: 0x001654C4 File Offset: 0x001636C4
 	public void ShowPlayerDrawCardTip(bool isShow, Action completeCallback)
 	{
 		int componentDefine = 25;
 		this.PlayStartOrCloseSequence(isShow, componentDefine, completeCallback);
 	}
 
-	// Token: 0x06006C19 RID: 27673 RVA: 0x0015CB9C File Offset: 0x0015AD9C
+	// Token: 0x06003FAE RID: 16302 RVA: 0x001654E0 File Offset: 0x001636E0
 	public void ShowInitialRoundTip(bool isShow, Action completeCallback)
 	{
 		int componentDefine = 26;
 		this.PlayStartOrCloseSequence(isShow, componentDefine, completeCallback);
 	}
 
-	// Token: 0x06006C1A RID: 27674 RVA: 0x0015CBB8 File Offset: 0x0015ADB8
+	// Token: 0x06003FAF RID: 16303 RVA: 0x001654FC File Offset: 0x001636FC
 	public void ShowDrawSpecialTip(bool isShow, bool isGood, EGuessJokerPlayerType playerType, Action completeCallback)
 	{
 		int componentDefine = isGood ? 24 : 23;
@@ -917,7 +916,7 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		this.PlayStartOrCloseSequence(isShow, componentDefine, completeCallback);
 	}
 
-	// Token: 0x06006C1B RID: 27675 RVA: 0x0015CC1C File Offset: 0x0015AE1C
+	// Token: 0x06003FB0 RID: 16304 RVA: 0x00165560 File Offset: 0x00163760
 	public void ShowWinLoseReasonTip(EGuessJokerPlayerType playerType, string textKey, bool isGood, Action completeCallback)
 	{
 		int name = isGood ? 46 : 45;
@@ -928,20 +927,20 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		this.PlayContinuousSequence(componentDefine, completeCallback);
 	}
 
-	// Token: 0x06006C1C RID: 27676 RVA: 0x0015CC77 File Offset: 0x0015AE77
+	// Token: 0x06003FB1 RID: 16305 RVA: 0x001655BB File Offset: 0x001637BB
 	public void ShowOfficialRoundStartTip(Action completeCallback)
 	{
 		this.PlayContinuousSequence(27, completeCallback);
 	}
 
-	// Token: 0x06006C1D RID: 27677 RVA: 0x0015CC84 File Offset: 0x0015AE84
+	// Token: 0x06003FB2 RID: 16306 RVA: 0x001655C8 File Offset: 0x001637C8
 	public void ShowAiSelectCardTip(bool isShow, Action completeCallback)
 	{
 		int componentDefine = 38;
 		this.PlayStartOrCloseSequence(isShow, componentDefine, completeCallback);
 	}
 
-	// Token: 0x06006C1E RID: 27678 RVA: 0x0015CCA0 File Offset: 0x0015AEA0
+	// Token: 0x06003FB3 RID: 16307 RVA: 0x001655E4 File Offset: 0x001637E4
 	public GuessJokerPositionPanelBase GetPositionPanel(ECardPositionType position)
 	{
 		GuessJokerPositionPanelBase guessJokerPositionPanelBase;
@@ -953,7 +952,7 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		return guessJokerPositionPanelBase;
 	}
 
-	// Token: 0x06006C1F RID: 27679 RVA: 0x0015CCD4 File Offset: 0x0015AED4
+	// Token: 0x06003FB4 RID: 16308 RVA: 0x00165618 File Offset: 0x00163818
 	private void OnCardItemClick(GuessJokerCardItem cardItem)
 	{
 		GuessJokerCardData data = cardItem.Data;
@@ -980,7 +979,7 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		playerCardClickCallback(id, valueOrDefault, choose);
 	}
 
-	// Token: 0x06006C20 RID: 27680 RVA: 0x0015CD44 File Offset: 0x0015AF44
+	// Token: 0x06003FB5 RID: 16309 RVA: 0x00165688 File Offset: 0x00163888
 	private void OnCloseButtonClick()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.GuessJokerExitConfirm);
@@ -1009,7 +1008,7 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x06006C21 RID: 27681 RVA: 0x0015CD9C File Offset: 0x0015AF9C
+	// Token: 0x06003FB6 RID: 16310 RVA: 0x001656E0 File Offset: 0x001638E0
 	private void OnPlayCardButtonClick()
 	{
 		List<IPlayCardInfo> playerPlayCardIdList = GuessJokerGamePlayModel.Instance.GetPlayerPlayCardIdList();
@@ -1030,19 +1029,19 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		playerPlayCardInteractiveCallback(list.ToArray());
 	}
 
-	// Token: 0x06006C22 RID: 27682 RVA: 0x0015CE58 File Offset: 0x0015B058
+	// Token: 0x06003FB7 RID: 16311 RVA: 0x0016579C File Offset: 0x0016399C
 	private void OnUseSkillButtonClick()
 	{
 		this.UseSkill(true);
 	}
 
-	// Token: 0x06006C23 RID: 27683 RVA: 0x0015CE61 File Offset: 0x0015B061
+	// Token: 0x06003FB8 RID: 16312 RVA: 0x001657A5 File Offset: 0x001639A5
 	private void OnGiveUpSkillButtonClick()
 	{
 		this.UseSkill(false);
 	}
 
-	// Token: 0x06006C24 RID: 27684 RVA: 0x0015CE6C File Offset: 0x0015B06C
+	// Token: 0x06003FB9 RID: 16313 RVA: 0x001657B0 File Offset: 0x001639B0
 	private void OnHideToggleClick(EToggleState state)
 	{
 		bool uiactive = state != EToggleState.ETT_Checked;
@@ -1053,7 +1052,7 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		base.GetButton(43).RootUIComp.Get().SetUIActive(uiactive);
 	}
 
-	// Token: 0x06006C25 RID: 27685 RVA: 0x0015CEE1 File Offset: 0x0015B0E1
+	// Token: 0x06003FBA RID: 16314 RVA: 0x00165825 File Offset: 0x00163A25
 	private void OnMaskButtonClick()
 	{
 		GuessJokerHeadItem aiPlayerItem = this.AiPlayerItem;
@@ -1064,7 +1063,7 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		aiPlayerItem.ShowLockSkillTips(false);
 	}
 
-	// Token: 0x06006C26 RID: 27686 RVA: 0x0015CEF4 File Offset: 0x0015B0F4
+	// Token: 0x06003FBB RID: 16315 RVA: 0x00165838 File Offset: 0x00163A38
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -1090,55 +1089,55 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 		};
 	}
 
-	// Token: 0x040031E8 RID: 12776
+	// Token: 0x04003281 RID: 12929
 	private int NpcId;
 
-	// Token: 0x040031E9 RID: 12777
+	// Token: 0x04003282 RID: 12930
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x040031EA RID: 12778
+	// Token: 0x04003283 RID: 12931
 	[Nullable(2)]
 	private GuessJokerHeadItem AiPlayerItem;
 
-	// Token: 0x040031EB RID: 12779
+	// Token: 0x04003284 RID: 12932
 	[Nullable(2)]
 	private GuessJokerHeadItem MePlayerItem;
 
-	// Token: 0x040031EC RID: 12780
+	// Token: 0x04003285 RID: 12933
 	[Nullable(2)]
 	private GuessJokerCardItem BlankCardItem;
 
-	// Token: 0x040031ED RID: 12781
+	// Token: 0x04003286 RID: 12934
 	[Nullable(2)]
 	private GuessJokerSkillItem UseSkillItem;
 
-	// Token: 0x040031EE RID: 12782
+	// Token: 0x04003287 RID: 12935
 	[Nullable(2)]
 	private GuessJokerSkillItem GiveUpSkillItem;
 
-	// Token: 0x040031EF RID: 12783
+	// Token: 0x04003288 RID: 12936
 	[Nullable(2)]
 	private GuessJokerSkillActivateItem SkillActivateItem;
 
-	// Token: 0x040031F0 RID: 12784
+	// Token: 0x04003289 RID: 12937
 	[Nullable(2)]
 	private GuessJokerCoinFlipItem FlipCoinItem;
 
-	// Token: 0x040031F1 RID: 12785
+	// Token: 0x0400328A RID: 12938
 	private readonly Dictionary<ECardPositionType, GuessJokerPositionPanelBase> PositionPanelMap = new Dictionary<ECardPositionType, GuessJokerPositionPanelBase>();
 
-	// Token: 0x040031F2 RID: 12786
+	// Token: 0x0400328B RID: 12939
 	private readonly Dictionary<int, GuessJokerCardItem> CardItemMap = new Dictionary<int, GuessJokerCardItem>();
 
-	// Token: 0x040031F3 RID: 12787
+	// Token: 0x0400328C RID: 12940
 	[Nullable(2)]
 	private GuessJokerCardItem CurChooseCardItem;
 
-	// Token: 0x040031F4 RID: 12788
+	// Token: 0x0400328D RID: 12941
 	private bool? LastSkillProgressAboveThreshold;
 
-	// Token: 0x040031F5 RID: 12789
+	// Token: 0x0400328E RID: 12942
 	[Nullable(new byte[]
 	{
 		2,
@@ -1146,18 +1145,18 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 	})]
 	private Action<int[]> PlayerPlayCardInteractiveCallback;
 
-	// Token: 0x040031F6 RID: 12790
+	// Token: 0x0400328F RID: 12943
 	[Nullable(2)]
 	private Action<int, int, bool> PlayerCardClickCallback;
 
-	// Token: 0x040031F7 RID: 12791
+	// Token: 0x04003290 RID: 12944
 	private int CurrentSkillRemindCount;
 
-	// Token: 0x040031F8 RID: 12792
+	// Token: 0x04003291 RID: 12945
 	[Nullable(2)]
 	private LevelSequencePlayer GamePlayViewSequencePlayer;
 
-	// Token: 0x040031F9 RID: 12793
+	// Token: 0x04003292 RID: 12946
 	[Nullable(new byte[]
 	{
 		1,
@@ -1166,163 +1165,163 @@ public class GuessJokerGamePlayView : UiViewBase, IUiCameraBehavior
 	})]
 	private readonly Dictionary<string, Action> SequenceFinishCallbackMap = new Dictionary<string, Action>();
 
-	// Token: 0x040031FA RID: 12794
+	// Token: 0x04003293 RID: 12947
 	private readonly Dictionary<int, LevelSequencePlayer> SequencePlayerMap = new Dictionary<int, LevelSequencePlayer>();
 
-	// Token: 0x040031FB RID: 12795
+	// Token: 0x04003294 RID: 12948
 	[Nullable(2)]
 	private GuessJokerDialogLogic DialogLogic;
 
-	// Token: 0x040031FC RID: 12796
+	// Token: 0x04003295 RID: 12949
 	[Nullable(2)]
 	private Action<bool> PlayerSkillRequestCallback;
 
-	// Token: 0x0200764A RID: 30282
+	// Token: 0x020067DE RID: 26590
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x040270B8 RID: 159928
+		// Token: 0x04022403 RID: 140291
 		public const int CaptionItem = 0;
 
-		// Token: 0x040270B9 RID: 159929
+		// Token: 0x04022404 RID: 140292
 		public const int AiPlayerItem = 1;
 
-		// Token: 0x040270BA RID: 159930
+		// Token: 0x04022405 RID: 140293
 		public const int MePlayerItem = 2;
 
-		// Token: 0x040270BB RID: 159931
+		// Token: 0x04022406 RID: 140294
 		public const int RoundText = 3;
 
-		// Token: 0x040270BC RID: 159932
+		// Token: 0x04022407 RID: 140295
 		public const int CardItem = 4;
 
-		// Token: 0x040270BD RID: 159933
+		// Token: 0x04022408 RID: 140296
 		public const int PlayerSelectArea = 5;
 
-		// Token: 0x040270BE RID: 159934
+		// Token: 0x04022409 RID: 140297
 		public const int AiSelectArea = 6;
 
-		// Token: 0x040270BF RID: 159935
+		// Token: 0x0402240A RID: 140298
 		public const int WithoutBlankButton = 7;
 
-		// Token: 0x040270C0 RID: 159936
+		// Token: 0x0402240B RID: 140299
 		public const int PlayCardButton = 8;
 
-		// Token: 0x040270C1 RID: 159937
+		// Token: 0x0402240C RID: 140300
 		public const int MiddleArea = 9;
 
-		// Token: 0x040270C2 RID: 159938
+		// Token: 0x0402240D RID: 140301
 		public const int GiveUpButton = 10;
 
-		// Token: 0x040270C3 RID: 159939
+		// Token: 0x0402240E RID: 140302
 		public const int SkillInteractivePanel = 11;
 
-		// Token: 0x040270C4 RID: 159940
+		// Token: 0x0402240F RID: 140303
 		public const int UseSkillItem = 12;
 
-		// Token: 0x040270C5 RID: 159941
+		// Token: 0x04022410 RID: 140304
 		public const int GiveUpSkillItem = 13;
 
-		// Token: 0x040270C6 RID: 159942
+		// Token: 0x04022411 RID: 140305
 		public const int TimeSlider = 14;
 
-		// Token: 0x040270C7 RID: 159943
+		// Token: 0x04022412 RID: 140306
 		public const int SkillLeftTimeText = 15;
 
-		// Token: 0x040270C8 RID: 159944
+		// Token: 0x04022413 RID: 140307
 		public const int BarItem = 16;
 
-		// Token: 0x040270C9 RID: 159945
+		// Token: 0x04022414 RID: 140308
 		public const int SkillActivateItem = 17;
 
-		// Token: 0x040270CA RID: 159946
+		// Token: 0x04022415 RID: 140309
 		public const int FlipCoinItem = 18;
 
-		// Token: 0x040270CB RID: 159947
+		// Token: 0x04022416 RID: 140310
 		public const int NumberBackPanel1 = 19;
 
-		// Token: 0x040270CC RID: 159948
+		// Token: 0x04022417 RID: 140311
 		public const int NumberBackPanel2 = 20;
 
-		// Token: 0x040270CD RID: 159949
+		// Token: 0x04022418 RID: 140312
 		public const int AiRoundStartTipItem = 21;
 
-		// Token: 0x040270CE RID: 159950
+		// Token: 0x04022419 RID: 140313
 		public const int PlayerRoundStartTipItem = 22;
 
-		// Token: 0x040270CF RID: 159951
+		// Token: 0x0402241A RID: 140314
 		public const int DrawJokerTipItem = 23;
 
-		// Token: 0x040270D0 RID: 159952
+		// Token: 0x0402241B RID: 140315
 		public const int DrawBlankCardTipItem = 24;
 
-		// Token: 0x040270D1 RID: 159953
+		// Token: 0x0402241C RID: 140316
 		public const int PlayerDrawCardTipItem = 25;
 
-		// Token: 0x040270D2 RID: 159954
+		// Token: 0x0402241D RID: 140317
 		public const int InitialRoundTipItem = 26;
 
-		// Token: 0x040270D3 RID: 159955
+		// Token: 0x0402241E RID: 140318
 		public const int OfficialRoundTipItem = 27;
 
-		// Token: 0x040270D4 RID: 159956
+		// Token: 0x0402241F RID: 140319
 		public const int CheckItem = 28;
 
-		// Token: 0x040270D5 RID: 159957
+		// Token: 0x04022420 RID: 140320
 		public const int PlayerButtonPanel = 29;
 
-		// Token: 0x040270D6 RID: 159958
+		// Token: 0x04022421 RID: 140321
 		public const int AiProgressPanel = 30;
 
-		// Token: 0x040270D7 RID: 159959
+		// Token: 0x04022422 RID: 140322
 		public const int AiProgressSprite = 31;
 
-		// Token: 0x040270D8 RID: 159960
+		// Token: 0x04022423 RID: 140323
 		public const int BlankCardButton = 32;
 
-		// Token: 0x040270D9 RID: 159961
+		// Token: 0x04022424 RID: 140324
 		public const int AiDialogItem = 33;
 
-		// Token: 0x040270DA RID: 159962
+		// Token: 0x04022425 RID: 140325
 		public const int AiDialogText = 34;
 
-		// Token: 0x040270DB RID: 159963
+		// Token: 0x04022426 RID: 140326
 		public const int HideToggle = 35;
 
-		// Token: 0x040270DC RID: 159964
+		// Token: 0x04022427 RID: 140327
 		public const int PlayButtonText = 36;
 
-		// Token: 0x040270DD RID: 159965
+		// Token: 0x04022428 RID: 140328
 		public const int HideItem = 37;
 
-		// Token: 0x040270DE RID: 159966
+		// Token: 0x04022429 RID: 140329
 		public const int AiSelectTipItem = 38;
 
-		// Token: 0x040270DF RID: 159967
+		// Token: 0x0402242A RID: 140330
 		public const int AiSelectText = 39;
 
-		// Token: 0x040270E0 RID: 159968
+		// Token: 0x0402242B RID: 140331
 		public const int TipHideItem = 40;
 
-		// Token: 0x040270E1 RID: 159969
+		// Token: 0x0402242C RID: 140332
 		public const int TitlePanel = 41;
 
-		// Token: 0x040270E2 RID: 159970
+		// Token: 0x0402242D RID: 140333
 		public const int HelpButton = 42;
 
-		// Token: 0x040270E3 RID: 159971
+		// Token: 0x0402242E RID: 140334
 		public const int CloseButton = 43;
 
-		// Token: 0x040270E4 RID: 159972
+		// Token: 0x0402242F RID: 140335
 		public const int MaskButton = 44;
 
-		// Token: 0x040270E5 RID: 159973
+		// Token: 0x04022430 RID: 140336
 		public const int BadTipText = 45;
 
-		// Token: 0x040270E6 RID: 159974
+		// Token: 0x04022431 RID: 140337
 		public const int GoodTipText = 46;
 
-		// Token: 0x040270E7 RID: 159975
+		// Token: 0x04022432 RID: 140338
 		public const int PlayerSkillProgressSprite = 47;
 	}
 }

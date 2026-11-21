@@ -3,30 +3,30 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena
 {
-	// Token: 0x0200510B RID: 20747
+	// Token: 0x020040DB RID: 16603
 	[NullableContext(1)]
 	[Nullable(0)]
 	public readonly struct ECardSpineAnimation : IEquatable<ECardSpineAnimation>
 	{
-		// Token: 0x06035134 RID: 217396 RVA: 0x00C93FE0 File Offset: 0x00C921E0
+		// Token: 0x0602A02D RID: 172077 RVA: 0x00BE13F4 File Offset: 0x00BDF5F4
 		private ECardSpineAnimation(string value)
 		{
 			this._Value = value;
 		}
 
-		// Token: 0x06035135 RID: 217397 RVA: 0x00C93FE9 File Offset: 0x00C921E9
+		// Token: 0x0602A02E RID: 172078 RVA: 0x00BE13FD File Offset: 0x00BDF5FD
 		public override string ToString()
 		{
 			return this._Value;
 		}
 
-		// Token: 0x06035136 RID: 217398 RVA: 0x00C93FF1 File Offset: 0x00C921F1
+		// Token: 0x0602A02F RID: 172079 RVA: 0x00BE1405 File Offset: 0x00BDF605
 		public bool Equals(ECardSpineAnimation other)
 		{
 			return this._Value == other._Value;
 		}
 
-		// Token: 0x06035137 RID: 217399 RVA: 0x00C94004 File Offset: 0x00C92204
+		// Token: 0x0602A030 RID: 172080 RVA: 0x00BE1418 File Offset: 0x00BDF618
 		[NullableContext(2)]
 		public override bool Equals(object obj)
 		{
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			return false;
 		}
 
-		// Token: 0x06035138 RID: 217400 RVA: 0x00C94029 File Offset: 0x00C92229
+		// Token: 0x0602A031 RID: 172081 RVA: 0x00BE143D File Offset: 0x00BDF63D
 		public override int GetHashCode()
 		{
 			string value = this._Value;
@@ -49,25 +49,25 @@ namespace CSharpScript.Game.Module.PhantomArena
 			return value.GetHashCode();
 		}
 
-		// Token: 0x06035139 RID: 217401 RVA: 0x00C9403C File Offset: 0x00C9223C
+		// Token: 0x0602A032 RID: 172082 RVA: 0x00BE1450 File Offset: 0x00BDF650
 		public static bool operator ==(ECardSpineAnimation left, ECardSpineAnimation right)
 		{
 			return left.Equals(right);
 		}
 
-		// Token: 0x0603513A RID: 217402 RVA: 0x00C94046 File Offset: 0x00C92246
+		// Token: 0x0602A033 RID: 172083 RVA: 0x00BE145A File Offset: 0x00BDF65A
 		public static bool operator !=(ECardSpineAnimation left, ECardSpineAnimation right)
 		{
 			return !left.Equals(right);
 		}
 
-		// Token: 0x0401C41D RID: 115741
+		// Token: 0x04016E52 RID: 93778
 		private readonly string _Value;
 
-		// Token: 0x0401C41E RID: 115742
+		// Token: 0x04016E53 RID: 93779
 		public static readonly ECardSpineAnimation Start = new ECardSpineAnimation("start");
 
-		// Token: 0x0401C41F RID: 115743
+		// Token: 0x04016E54 RID: 93780
 		public static readonly ECardSpineAnimation Idle = new ECardSpineAnimation("idle");
 	}
 }

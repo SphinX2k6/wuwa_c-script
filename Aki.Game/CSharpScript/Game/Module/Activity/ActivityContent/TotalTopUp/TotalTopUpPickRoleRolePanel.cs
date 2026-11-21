@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 {
-	// Token: 0x02005FA3 RID: 24483
+	// Token: 0x02004F8A RID: 20362
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TotalTopUpPickRoleRolePanel : UiPanelBase
 	{
-		// Token: 0x0603E17B RID: 254331 RVA: 0x00EFE6A8 File Offset: 0x00EFC8A8
+		// Token: 0x06033115 RID: 209173 RVA: 0x00E50364 File Offset: 0x00E4E564
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			};
 		}
 
-		// Token: 0x0603E17C RID: 254332 RVA: 0x00EFE75C File Offset: 0x00EFC95C
+		// Token: 0x06033116 RID: 209174 RVA: 0x00E50418 File Offset: 0x00E4E618
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TotalTopUpPickRoleRolePanel.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E17D RID: 254333 RVA: 0x00EFE7A0 File Offset: 0x00EFC9A0
+		// Token: 0x06033117 RID: 209175 RVA: 0x00E5045C File Offset: 0x00E4E65C
 		public void Refresh(TotalTopUpPickRoleViewModel viewModel)
 		{
 			if (viewModel.CurrentRoleId <= 0)
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			text.SetText(currentRoleChainNum.ToString(), true);
 		}
 
-		// Token: 0x0603E17E RID: 254334 RVA: 0x00EFE85C File Offset: 0x00EFCA5C
+		// Token: 0x06033118 RID: 209176 RVA: 0x00E50518 File Offset: 0x00E4E718
 		private UniTask RefreshRoleSpineItem(int roleId)
 		{
 			TotalTopUpPickRoleRolePanel.<RefreshRoleSpineItem>d__7 <RefreshRoleSpineItem>d__;
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			return <RefreshRoleSpineItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E17F RID: 254335 RVA: 0x00EFE8A8 File Offset: 0x00EFCAA8
+		// Token: 0x06033119 RID: 209177 RVA: 0x00E50564 File Offset: 0x00E4E764
 		private void ShowCurrentRole(int currentRoleId)
 		{
 			foreach (KeyValuePair<int, SpineRoleGachaPoolItem> keyValuePair in this.SpineItemMap)
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			}
 		}
 
-		// Token: 0x0603E180 RID: 254336 RVA: 0x00EFE918 File Offset: 0x00EFCB18
+		// Token: 0x0603311A RID: 209178 RVA: 0x00E505D4 File Offset: 0x00E4E7D4
 		private void ApplyFullChainChangeColor(bool isChange)
 		{
 			UUIText text = base.GetText(3);
@@ -128,17 +128,17 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.TotalTopUp
 			}
 		}
 
-		// Token: 0x040206F3 RID: 132851
+		// Token: 0x0401B1C5 RID: 111045
 		private readonly Dictionary<int, SpineRoleGachaPoolItem> SpineItemMap = new Dictionary<int, SpineRoleGachaPoolItem>();
 
-		// Token: 0x040206F4 RID: 132852
+		// Token: 0x0401B1C6 RID: 111046
 		[Nullable(2)]
 		private RoleDescribeComponent DescComponent;
 
-		// Token: 0x040206F5 RID: 132853
+		// Token: 0x0401B1C7 RID: 111047
 		private int CurrentRoleId;
 
-		// Token: 0x040206F6 RID: 132854
+		// Token: 0x0401B1C8 RID: 111048
 		[Nullable(2)]
 		private Action PreviewRoleCallback;
 	}

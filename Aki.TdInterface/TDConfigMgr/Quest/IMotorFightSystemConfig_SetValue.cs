@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200101E RID: 4126
+	// Token: 0x0200114A RID: 4426
 	public class IMotorFightSystemConfig_SetValue
 	{
-		// Token: 0x04003768 RID: 14184
+		// Token: 0x04003AA3 RID: 15011
 		public EEnableSystemType Type;
 
-		// Token: 0x04003769 RID: 14185
-		[Nullable(1)]
+		// Token: 0x04003AA4 RID: 15012
 		public List<IMotorFightSystemVar> Vars;
 	}
 }

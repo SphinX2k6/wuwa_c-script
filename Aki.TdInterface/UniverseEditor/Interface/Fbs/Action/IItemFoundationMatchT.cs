@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020069BB RID: 27067
+	// Token: 0x0200706B RID: 28779
 	public class IItemFoundationMatchT
 	{
-		// Token: 0x1700C8C6 RID: 51398
-		// (get) Token: 0x0602F4BF RID: 193727 RVA: 0x00671036 File Offset: 0x0066F236
-		// (set) Token: 0x0602F4C0 RID: 193728 RVA: 0x0067103E File Offset: 0x0066F23E
+		// Token: 0x1700D2C6 RID: 53958
+		// (get) Token: 0x06031E7F RID: 204415 RVA: 0x006C138E File Offset: 0x006BF58E
+		// (set) Token: 0x06031E80 RID: 204416 RVA: 0x006C1396 File Offset: 0x006BF596
 		public int MatchEntityId { get; set; }
 
-		// Token: 0x0602F4C1 RID: 193729 RVA: 0x00671047 File Offset: 0x0066F247
+		// Token: 0x06031E81 RID: 204417 RVA: 0x006C139F File Offset: 0x006BF59F
 		public IItemFoundationMatchT()
 		{
 			this.MatchEntityId = 0;

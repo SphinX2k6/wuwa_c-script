@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001776 RID: 6006
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020018F7 RID: 6391
 	public class IActorInitialEffect
 	{
-		// Token: 0x06007F27 RID: 32551 RVA: 0x001301C4 File Offset: 0x0012E3C4
+		// Token: 0x06008617 RID: 34327 RVA: 0x0013F424 File Offset: 0x0013D624
 		private IActorInitialEffect_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007F28 RID: 32552 RVA: 0x001301FC File Offset: 0x0012E3FC
+		// Token: 0x06008618 RID: 34328 RVA: 0x0013F45C File Offset: 0x0013D65C
 		public static IActorInitialEffect Create([Nullable(2)] IActorInitialEffect instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007F29 RID: 32553 RVA: 0x0013020F File Offset: 0x0012E40F
+		// Token: 0x06008619 RID: 34329 RVA: 0x0013F46F File Offset: 0x0013D66F
 		public static IActorInitialEffect CreateFromSetValue([Nullable(2)] IActorInitialEffect_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007F2A RID: 32554 RVA: 0x00130222 File Offset: 0x0012E422
+		// Token: 0x0600861A RID: 34330 RVA: 0x0013F482 File Offset: 0x0013D682
 		public IActorInitialEffect_SetValue ToSetValue()
 		{
 			return new IActorInitialEffect_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170029B7 RID: 10679
-		// (get) Token: 0x06007F2B RID: 32555 RVA: 0x00130241 File Offset: 0x0012E441
-		// (set) Token: 0x06007F2C RID: 32556 RVA: 0x00130268 File Offset: 0x0012E468
+		// Token: 0x17002BA5 RID: 11173
+		// (get) Token: 0x0600861B RID: 34331 RVA: 0x0013F4A1 File Offset: 0x0013D6A1
+		// (set) Token: 0x0600861C RID: 34332 RVA: 0x0013F4C8 File Offset: 0x0013D6C8
 		public virtual List<int> EffectIds
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170029B8 RID: 10680
-		// (get) Token: 0x06007F2D RID: 32557 RVA: 0x00130276 File Offset: 0x0012E476
-		// (set) Token: 0x06007F2E RID: 32558 RVA: 0x0013029D File Offset: 0x0012E49D
+		// Token: 0x17002BA6 RID: 11174
+		// (get) Token: 0x0600861D RID: 34333 RVA: 0x0013F4D6 File Offset: 0x0013D6D6
+		// (set) Token: 0x0600861E RID: 34334 RVA: 0x0013F4FD File Offset: 0x0013D6FD
 		[Nullable(2)]
 		public virtual List<int> EffectIdsMaleVariant
 		{
@@ -112,11 +110,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040050DE RID: 20702
+		// Token: 0x04005514 RID: 21780
 		[Nullable(2)]
 		protected IActorInitialEffect FbInstance;
 
-		// Token: 0x040050DF RID: 20703
+		// Token: 0x04005515 RID: 21781
 		[Nullable(2)]
 		protected IActorInitialEffect_SetValue PocoInterface;
 	}

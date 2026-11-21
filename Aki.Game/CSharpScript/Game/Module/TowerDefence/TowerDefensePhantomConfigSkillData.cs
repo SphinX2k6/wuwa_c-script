@@ -3,34 +3,34 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B36 RID: 19254
+	// Token: 0x02003ADE RID: 15070
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TowerDefensePhantomConfigSkillData : ITowerDefensePhantomConfigSkillData
 	{
-		// Token: 0x17007B86 RID: 31622
-		// (get) Token: 0x06031DCA RID: 204234 RVA: 0x00B927B5 File Offset: 0x00B909B5
-		// (set) Token: 0x06031DCB RID: 204235 RVA: 0x00B927BD File Offset: 0x00B909BD
+		// Token: 0x17004F33 RID: 20275
+		// (get) Token: 0x06026B5A RID: 158554 RVA: 0x00AD6819 File Offset: 0x00AD4A19
+		// (set) Token: 0x06026B5B RID: 158555 RVA: 0x00AD6821 File Offset: 0x00AD4A21
 		public string Name { get; set; }
 
-		// Token: 0x17007B87 RID: 31623
-		// (get) Token: 0x06031DCC RID: 204236 RVA: 0x00B927C6 File Offset: 0x00B909C6
-		// (set) Token: 0x06031DCD RID: 204237 RVA: 0x00B927CE File Offset: 0x00B909CE
+		// Token: 0x17004F34 RID: 20276
+		// (get) Token: 0x06026B5C RID: 158556 RVA: 0x00AD682A File Offset: 0x00AD4A2A
+		// (set) Token: 0x06026B5D RID: 158557 RVA: 0x00AD6832 File Offset: 0x00AD4A32
 		public string Description { get; set; }
 
-		// Token: 0x17007B88 RID: 31624
-		// (get) Token: 0x06031DCE RID: 204238 RVA: 0x00B927D7 File Offset: 0x00B909D7
-		// (set) Token: 0x06031DCF RID: 204239 RVA: 0x00B927DF File Offset: 0x00B909DF
+		// Token: 0x17004F35 RID: 20277
+		// (get) Token: 0x06026B5E RID: 158558 RVA: 0x00AD683B File Offset: 0x00AD4A3B
+		// (set) Token: 0x06026B5F RID: 158559 RVA: 0x00AD6843 File Offset: 0x00AD4A43
 		public string UnlockDescription { get; set; }
 
-		// Token: 0x17007B89 RID: 31625
-		// (get) Token: 0x06031DD0 RID: 204240 RVA: 0x00B927E8 File Offset: 0x00B909E8
-		// (set) Token: 0x06031DD1 RID: 204241 RVA: 0x00B927F0 File Offset: 0x00B909F0
+		// Token: 0x17004F36 RID: 20278
+		// (get) Token: 0x06026B60 RID: 158560 RVA: 0x00AD684C File Offset: 0x00AD4A4C
+		// (set) Token: 0x06026B61 RID: 158561 RVA: 0x00AD6854 File Offset: 0x00AD4A54
 		public double? ExpThreshold { get; set; }
 
-		// Token: 0x17007B8A RID: 31626
-		// (get) Token: 0x06031DD2 RID: 204242 RVA: 0x00B927F9 File Offset: 0x00B909F9
-		// (set) Token: 0x06031DD3 RID: 204243 RVA: 0x00B92801 File Offset: 0x00B90A01
+		// Token: 0x17004F37 RID: 20279
+		// (get) Token: 0x06026B62 RID: 158562 RVA: 0x00AD685D File Offset: 0x00AD4A5D
+		// (set) Token: 0x06026B63 RID: 158563 RVA: 0x00AD6865 File Offset: 0x00AD4A65
 		public int PhantomSkill { get; set; }
 	}
 }

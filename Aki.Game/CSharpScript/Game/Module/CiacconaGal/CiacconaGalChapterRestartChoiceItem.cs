@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BE9 RID: 23529
+	// Token: 0x02004BC9 RID: 19401
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 	})]
 	public class CiacconaGalChapterRestartChoiceItem : GridProxyAbstract<ICiacconaGalChapterRestartChoiceParam>
 	{
-		// Token: 0x0603B796 RID: 243606 RVA: 0x00E2EBD4 File Offset: 0x00E2CDD4
+		// Token: 0x060306E1 RID: 198369 RVA: 0x00D7EEE4 File Offset: 0x00D7D0E4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B797 RID: 243607 RVA: 0x00E2EC9C File Offset: 0x00E2CE9C
+		// Token: 0x060306E2 RID: 198370 RVA: 0x00D7EFAC File Offset: 0x00D7D1AC
 		public override void Refresh(ICiacconaGalChapterRestartChoiceParam data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(2), this.Data.Desc, Array.Empty<object>());
 		}
 
-		// Token: 0x0603B798 RID: 243608 RVA: 0x00E2ECEC File Offset: 0x00E2CEEC
+		// Token: 0x060306E3 RID: 198371 RVA: 0x00D7EFFC File Offset: 0x00D7D1FC
 		private void OnClick()
 		{
 			if (this.Data.Type == ECiacconaGalChapterRestartChoiceType.FromBranching)
@@ -59,20 +59,20 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			CiacconaGalController.Instance.OpenGalViewByChapterId(this.Data.ChapterData.Id, new EUiViewName?(EUiViewName.CiacconaGalChapterView));
 		}
 
-		// Token: 0x0401EFC3 RID: 126915
+		// Token: 0x04019A74 RID: 105076
 		private ICiacconaGalChapterRestartChoiceParam Data;
 
-		// Token: 0x0200BDCD RID: 48589
+		// Token: 0x0200A7D5 RID: 42965
 		[NullableContext(0)]
 		private class EChoiceItemComponentDefine
 		{
-			// Token: 0x040393B1 RID: 234417
+			// Token: 0x04033D74 RID: 212340
 			public const int BtnSelect = 0;
 
-			// Token: 0x040393B2 RID: 234418
+			// Token: 0x04033D75 RID: 212341
 			public const int SpriteRecommend = 1;
 
-			// Token: 0x040393B3 RID: 234419
+			// Token: 0x04033D76 RID: 212342
 			public const int TextDesc = 2;
 		}
 	}

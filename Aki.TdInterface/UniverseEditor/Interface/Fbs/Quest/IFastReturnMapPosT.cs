@@ -4,35 +4,35 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003E22 RID: 15906
+	// Token: 0x0200425D RID: 16989
 	public class IFastReturnMapPosT
 	{
-		// Token: 0x17006DFD RID: 28157
-		// (get) Token: 0x0601649F RID: 91295 RVA: 0x00337FDA File Offset: 0x003361DA
-		// (set) Token: 0x060164A0 RID: 91296 RVA: 0x00337FE2 File Offset: 0x003361E2
+		// Token: 0x170073E3 RID: 29667
+		// (get) Token: 0x06017ACC RID: 96972 RVA: 0x00360BD2 File Offset: 0x0035EDD2
+		// (set) Token: 0x06017ACD RID: 96973 RVA: 0x00360BDA File Offset: 0x0035EDDA
 		public string TidTip { get; set; }
 
-		// Token: 0x17006DFE RID: 28158
-		// (get) Token: 0x060164A1 RID: 91297 RVA: 0x00337FEB File Offset: 0x003361EB
-		// (set) Token: 0x060164A2 RID: 91298 RVA: 0x00337FF3 File Offset: 0x003361F3
+		// Token: 0x170073E4 RID: 29668
+		// (get) Token: 0x06017ACE RID: 96974 RVA: 0x00360BE3 File Offset: 0x0035EDE3
+		// (set) Token: 0x06017ACF RID: 96975 RVA: 0x00360BEB File Offset: 0x0035EDEB
 		public List<IConditionGroupT> ShowButtonConditionGroup { get; set; }
 
-		// Token: 0x17006DFF RID: 28159
-		// (get) Token: 0x060164A3 RID: 91299 RVA: 0x00337FFC File Offset: 0x003361FC
-		// (set) Token: 0x060164A4 RID: 91300 RVA: 0x00338004 File Offset: 0x00336204
+		// Token: 0x170073E5 RID: 29669
+		// (get) Token: 0x06017AD0 RID: 96976 RVA: 0x00360BF4 File Offset: 0x0035EDF4
+		// (set) Token: 0x06017AD1 RID: 96977 RVA: 0x00360BFC File Offset: 0x0035EDFC
 		public TFastReturnPosUnion DefaultPos { get; set; }
 
-		// Token: 0x17006E00 RID: 28160
-		// (get) Token: 0x060164A5 RID: 91301 RVA: 0x0033800D File Offset: 0x0033620D
-		// (set) Token: 0x060164A6 RID: 91302 RVA: 0x00338015 File Offset: 0x00336215
+		// Token: 0x170073E6 RID: 29670
+		// (get) Token: 0x06017AD2 RID: 96978 RVA: 0x00360C05 File Offset: 0x0035EE05
+		// (set) Token: 0x06017AD3 RID: 96979 RVA: 0x00360C0D File Offset: 0x0035EE0D
 		public List<IConditionReturnPosT> ConditionPositionGroup { get; set; }
 
-		// Token: 0x17006E01 RID: 28161
-		// (get) Token: 0x060164A7 RID: 91303 RVA: 0x0033801E File Offset: 0x0033621E
-		// (set) Token: 0x060164A8 RID: 91304 RVA: 0x00338026 File Offset: 0x00336226
+		// Token: 0x170073E7 RID: 29671
+		// (get) Token: 0x06017AD4 RID: 96980 RVA: 0x00360C16 File Offset: 0x0035EE16
+		// (set) Token: 0x06017AD5 RID: 96981 RVA: 0x00360C1E File Offset: 0x0035EE1E
 		public byte NullMask { get; set; }
 
-		// Token: 0x060164A9 RID: 91305 RVA: 0x0033802F File Offset: 0x0033622F
+		// Token: 0x06017AD6 RID: 96982 RVA: 0x00360C27 File Offset: 0x0035EE27
 		public IFastReturnMapPosT()
 		{
 			this.TidTip = null;

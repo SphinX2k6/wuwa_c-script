@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020073D1 RID: 29649
+	// Token: 0x02007BB8 RID: 31672
 	public class ITextStyleT
 	{
-		// Token: 0x1700E135 RID: 57653
-		// (get) Token: 0x06035DB3 RID: 220595 RVA: 0x00754BB5 File Offset: 0x00752DB5
-		// (set) Token: 0x06035DB4 RID: 220596 RVA: 0x00754BBD File Offset: 0x00752DBD
+		// Token: 0x1700ED45 RID: 60741
+		// (get) Token: 0x0603914E RID: 233806 RVA: 0x007B70F5 File Offset: 0x007B52F5
+		// (set) Token: 0x0603914F RID: 233807 RVA: 0x007B70FD File Offset: 0x007B52FD
 		public TCenterTextShowAnimUnion ShowAnim { get; set; }
 
-		// Token: 0x1700E136 RID: 57654
-		// (get) Token: 0x06035DB5 RID: 220597 RVA: 0x00754BC6 File Offset: 0x00752DC6
-		// (set) Token: 0x06035DB6 RID: 220598 RVA: 0x00754BCE File Offset: 0x00752DCE
+		// Token: 0x1700ED46 RID: 60742
+		// (get) Token: 0x06039150 RID: 233808 RVA: 0x007B7106 File Offset: 0x007B5306
+		// (set) Token: 0x06039151 RID: 233809 RVA: 0x007B710E File Offset: 0x007B530E
 		public EFontSize FontSize { get; set; }
 
-		// Token: 0x1700E137 RID: 57655
-		// (get) Token: 0x06035DB7 RID: 220599 RVA: 0x00754BD7 File Offset: 0x00752DD7
-		// (set) Token: 0x06035DB8 RID: 220600 RVA: 0x00754BDF File Offset: 0x00752DDF
+		// Token: 0x1700ED47 RID: 60743
+		// (get) Token: 0x06039152 RID: 233810 RVA: 0x007B7117 File Offset: 0x007B5317
+		// (set) Token: 0x06039153 RID: 233811 RVA: 0x007B711F File Offset: 0x007B531F
 		public ETextAlign TextAlign { get; set; }
 
-		// Token: 0x1700E138 RID: 57656
-		// (get) Token: 0x06035DB9 RID: 220601 RVA: 0x00754BE8 File Offset: 0x00752DE8
-		// (set) Token: 0x06035DBA RID: 220602 RVA: 0x00754BF0 File Offset: 0x00752DF0
+		// Token: 0x1700ED48 RID: 60744
+		// (get) Token: 0x06039154 RID: 233812 RVA: 0x007B7128 File Offset: 0x007B5328
+		// (set) Token: 0x06039155 RID: 233813 RVA: 0x007B7130 File Offset: 0x007B5330
 		public ETextHorizontal TextHorizontal { get; set; }
 
-		// Token: 0x1700E139 RID: 57657
-		// (get) Token: 0x06035DBB RID: 220603 RVA: 0x00754BF9 File Offset: 0x00752DF9
-		// (set) Token: 0x06035DBC RID: 220604 RVA: 0x00754C01 File Offset: 0x00752E01
+		// Token: 0x1700ED49 RID: 60745
+		// (get) Token: 0x06039156 RID: 233814 RVA: 0x007B7139 File Offset: 0x007B5339
+		// (set) Token: 0x06039157 RID: 233815 RVA: 0x007B7141 File Offset: 0x007B5341
 		public byte NullMask { get; set; }
 
-		// Token: 0x06035DBD RID: 220605 RVA: 0x00754C0A File Offset: 0x00752E0A
+		// Token: 0x06039158 RID: 233816 RVA: 0x007B714A File Offset: 0x007B534A
 		public ITextStyleT()
 		{
 			this.ShowAnim = null;

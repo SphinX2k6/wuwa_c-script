@@ -3,55 +3,55 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020061AA RID: 25002
+	// Token: 0x02006818 RID: 26648
 	public class IAstrologyTextUiConfigT
 	{
-		// Token: 0x1700BA61 RID: 47713
-		// (get) Token: 0x0602B12C RID: 176428 RVA: 0x005F0AE8 File Offset: 0x005EECE8
-		// (set) Token: 0x0602B12D RID: 176429 RVA: 0x005F0AF0 File Offset: 0x005EECF0
+		// Token: 0x1700C3E4 RID: 50148
+		// (get) Token: 0x0602D873 RID: 186483 RVA: 0x0063B55C File Offset: 0x0063975C
+		// (set) Token: 0x0602D874 RID: 186484 RVA: 0x0063B564 File Offset: 0x00639764
 		public ETextUiType Type { get; set; }
 
-		// Token: 0x1700BA62 RID: 47714
-		// (get) Token: 0x0602B12E RID: 176430 RVA: 0x005F0AF9 File Offset: 0x005EECF9
-		// (set) Token: 0x0602B12F RID: 176431 RVA: 0x005F0B01 File Offset: 0x005EED01
+		// Token: 0x1700C3E5 RID: 50149
+		// (get) Token: 0x0602D875 RID: 186485 RVA: 0x0063B56D File Offset: 0x0063976D
+		// (set) Token: 0x0602D876 RID: 186486 RVA: 0x0063B575 File Offset: 0x00639775
 		public string InitTipText { get; set; }
 
-		// Token: 0x1700BA63 RID: 47715
-		// (get) Token: 0x0602B130 RID: 176432 RVA: 0x005F0B0A File Offset: 0x005EED0A
-		// (set) Token: 0x0602B131 RID: 176433 RVA: 0x005F0B12 File Offset: 0x005EED12
+		// Token: 0x1700C3E6 RID: 50150
+		// (get) Token: 0x0602D877 RID: 186487 RVA: 0x0063B57E File Offset: 0x0063977E
+		// (set) Token: 0x0602D878 RID: 186488 RVA: 0x0063B586 File Offset: 0x00639786
 		public string ProgressTipText { get; set; }
 
-		// Token: 0x1700BA64 RID: 47716
-		// (get) Token: 0x0602B132 RID: 176434 RVA: 0x005F0B1B File Offset: 0x005EED1B
-		// (set) Token: 0x0602B133 RID: 176435 RVA: 0x005F0B23 File Offset: 0x005EED23
+		// Token: 0x1700C3E7 RID: 50151
+		// (get) Token: 0x0602D879 RID: 186489 RVA: 0x0063B58F File Offset: 0x0063978F
+		// (set) Token: 0x0602D87A RID: 186490 RVA: 0x0063B597 File Offset: 0x00639797
 		public string SkipText { get; set; }
 
-		// Token: 0x1700BA65 RID: 47717
-		// (get) Token: 0x0602B134 RID: 176436 RVA: 0x005F0B2C File Offset: 0x005EED2C
-		// (set) Token: 0x0602B135 RID: 176437 RVA: 0x005F0B34 File Offset: 0x005EED34
+		// Token: 0x1700C3E8 RID: 50152
+		// (get) Token: 0x0602D87B RID: 186491 RVA: 0x0063B5A0 File Offset: 0x006397A0
+		// (set) Token: 0x0602D87C RID: 186492 RVA: 0x0063B5A8 File Offset: 0x006397A8
 		public string FinishText { get; set; }
 
-		// Token: 0x1700BA66 RID: 47718
-		// (get) Token: 0x0602B136 RID: 176438 RVA: 0x005F0B3D File Offset: 0x005EED3D
-		// (set) Token: 0x0602B137 RID: 176439 RVA: 0x005F0B45 File Offset: 0x005EED45
+		// Token: 0x1700C3E9 RID: 50153
+		// (get) Token: 0x0602D87D RID: 186493 RVA: 0x0063B5B1 File Offset: 0x006397B1
+		// (set) Token: 0x0602D87E RID: 186494 RVA: 0x0063B5B9 File Offset: 0x006397B9
 		public List<string> InitDialogues { get; set; }
 
-		// Token: 0x1700BA67 RID: 47719
-		// (get) Token: 0x0602B138 RID: 176440 RVA: 0x005F0B4E File Offset: 0x005EED4E
-		// (set) Token: 0x0602B139 RID: 176441 RVA: 0x005F0B56 File Offset: 0x005EED56
+		// Token: 0x1700C3EA RID: 50154
+		// (get) Token: 0x0602D87F RID: 186495 RVA: 0x0063B5C2 File Offset: 0x006397C2
+		// (set) Token: 0x0602D880 RID: 186496 RVA: 0x0063B5CA File Offset: 0x006397CA
 		public int SkipConfirmBoxId { get; set; }
 
-		// Token: 0x1700BA68 RID: 47720
-		// (get) Token: 0x0602B13A RID: 176442 RVA: 0x005F0B5F File Offset: 0x005EED5F
-		// (set) Token: 0x0602B13B RID: 176443 RVA: 0x005F0B67 File Offset: 0x005EED67
+		// Token: 0x1700C3EB RID: 50155
+		// (get) Token: 0x0602D881 RID: 186497 RVA: 0x0063B5D3 File Offset: 0x006397D3
+		// (set) Token: 0x0602D882 RID: 186498 RVA: 0x0063B5DB File Offset: 0x006397DB
 		public string LoopAudioEvent { get; set; }
 
-		// Token: 0x1700BA69 RID: 47721
-		// (get) Token: 0x0602B13C RID: 176444 RVA: 0x005F0B70 File Offset: 0x005EED70
-		// (set) Token: 0x0602B13D RID: 176445 RVA: 0x005F0B78 File Offset: 0x005EED78
+		// Token: 0x1700C3EC RID: 50156
+		// (get) Token: 0x0602D883 RID: 186499 RVA: 0x0063B5E4 File Offset: 0x006397E4
+		// (set) Token: 0x0602D884 RID: 186500 RVA: 0x0063B5EC File Offset: 0x006397EC
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602B13E RID: 176446 RVA: 0x005F0B84 File Offset: 0x005EED84
+		// Token: 0x0602D885 RID: 186501 RVA: 0x0063B5F8 File Offset: 0x006397F8
 		public IAstrologyTextUiConfigT()
 		{
 			this.Type = ETextUiType.Astrology;

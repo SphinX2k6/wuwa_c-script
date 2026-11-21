@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020004CD RID: 1229
+	// Token: 0x020004E3 RID: 1251
 	public class ConfigLevelEntityConfigByMapIdAndEntityId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001CD9 RID: 7385 RVA: 0x000FC297 File Offset: 0x000FA497
+		// Token: 0x06001D5D RID: 7517 RVA: 0x001029EB File Offset: 0x00100BEB
 		static ConfigLevelEntityConfigByMapIdAndEntityId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigLevelEntityConfigByMapIdAndEntityId.CreateStaticDefaultValue), new Action(ConfigLevelEntityConfigByMapIdAndEntityId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001CDA RID: 7386 RVA: 0x000FC2B8 File Offset: 0x000FA4B8
+		// Token: 0x06001D5E RID: 7518 RVA: 0x00102A0C File Offset: 0x00100C0C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigLevelEntityConfigByMapIdAndEntityId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001CDB RID: 7387 RVA: 0x000FC337 File Offset: 0x000FA537
+		// Token: 0x06001D5F RID: 7519 RVA: 0x00102A8B File Offset: 0x00100C8B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigLevelEntityConfigByMapIdAndEntityId.LogPair = null;
 			ConfigLevelEntityConfigByMapIdAndEntityId.HandleId = 0;
 		}
 
-		// Token: 0x06001CDC RID: 7388 RVA: 0x000FC345 File Offset: 0x000FA545
+		// Token: 0x06001D60 RID: 7520 RVA: 0x00102A99 File Offset: 0x00100C99
 		public static void Init()
 		{
 			ConfigLevelEntityConfigByMapIdAndEntityId.HandleId = ConfigCommon.InitDataStatement(ConfigLevelEntityConfigByMapIdAndEntityId.HandleId, "db_level_entity.db", "select BinData from `LevelEntityConfig` where MapId=? and EntityId=?");
 		}
 
-		// Token: 0x06001CDD RID: 7389 RVA: 0x000FC360 File Offset: 0x000FA560
+		// Token: 0x06001D61 RID: 7521 RVA: 0x00102AB4 File Offset: 0x00100CB4
 		public static LevelEntityConfig? GetConfig(int p0MapId, int p1EntityId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigLevelEntityConfigByMapIdAndEntityId.HandleId, ConfigLevelEntityConfigByMapIdAndEntityId.LogPair))
@@ -93,22 +93,22 @@ namespace Aki.Config
 			return new LevelEntityConfig?(rootAsLevelEntityConfig);
 		}
 
-		// Token: 0x0400217F RID: 8575
+		// Token: 0x04002219 RID: 8729
 		private const string DB = "db_level_entity.db";
 
-		// Token: 0x04002180 RID: 8576
+		// Token: 0x0400221A RID: 8730
 		private const string FILE = "UniverseEditor/Entity/LevelEntity.csv";
 
-		// Token: 0x04002181 RID: 8577
+		// Token: 0x0400221B RID: 8731
 		private const string TABLE = "LevelEntityConfig";
 
-		// Token: 0x04002182 RID: 8578
+		// Token: 0x0400221C RID: 8732
 		private const string COMMAND = "select BinData from `LevelEntityConfig` where MapId=? and EntityId=?";
 
-		// Token: 0x04002183 RID: 8579
+		// Token: 0x0400221D RID: 8733
 		private const string KEY_PREFIX = "LevelEntityConfigByMapIdAndEntityId";
 
-		// Token: 0x04002184 RID: 8580
+		// Token: 0x0400221E RID: 8734
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,7 +118,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002185 RID: 8581
+		// Token: 0x0400221F RID: 8735
 		private static int HandleId;
 	}
 }

@@ -6,196 +6,184 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Data.Gameplay.RhythmGame
 {
-	// Token: 0x02003F34 RID: 16180
+	// Token: 0x020031DF RID: 12767
 	[UnrealObjectPath("/Game/Aki/Data/Gameplay/RhythmGame/RhythmGameFreeFlyCameraConfig.RhythmGameFreeFlyCameraConfig")]
 	[UnrealStructLayout(56, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 56)]
 	public class RhythmGameFreeFlyCameraConfig : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602926F RID: 168559 RVA: 0x009BD132 File Offset: 0x009BB332
+		// Token: 0x0601FB7A RID: 129914 RVA: 0x0093418B File Offset: 0x0093238B
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (RhythmGameFreeFlyCameraConfig._ScriptStructPtr != 0) ? RhythmGameFreeFlyCameraConfig._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Data/Gameplay/RhythmGame/RhythmGameFreeFlyCameraConfig.RhythmGameFreeFlyCameraConfig", ref RhythmGameFreeFlyCameraConfig._ScriptStructPtr);
 		}
 
-		// Token: 0x170061CE RID: 25038
-		// (get) Token: 0x06029270 RID: 168560 RVA: 0x009BD156 File Offset: 0x009BB356
-		// (set) Token: 0x06029271 RID: 168561 RVA: 0x009BD16A File Offset: 0x009BB36A
+		// Token: 0x17003B1A RID: 15130
+		// (get) Token: 0x0601FB7B RID: 129915 RVA: 0x009341AF File Offset: 0x009323AF
+		// (set) Token: 0x0601FB7C RID: 129916 RVA: 0x009341C3 File Offset: 0x009323C3
 		public unsafe FVectorDouble TargetLoc
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)RhythmGameFreeFlyCameraConfig.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)RhythmGameFreeFlyCameraConfig.__PropertyOffset_TargetLoc);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)RhythmGameFreeFlyCameraConfig.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)RhythmGameFreeFlyCameraConfig.__PropertyOffset_TargetLoc) = value;
 			}
 		}
 
-		// Token: 0x170061CF RID: 25039
-		// (get) Token: 0x06029272 RID: 168562 RVA: 0x009BD17F File Offset: 0x009BB37F
-		// (set) Token: 0x06029273 RID: 168563 RVA: 0x009BD193 File Offset: 0x009BB393
+		// Token: 0x17003B1B RID: 15131
+		// (get) Token: 0x0601FB7D RID: 129917 RVA: 0x009341D8 File Offset: 0x009323D8
+		// (set) Token: 0x0601FB7E RID: 129918 RVA: 0x009341EC File Offset: 0x009323EC
 		public unsafe FRotator TargetRot
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)RhythmGameFreeFlyCameraConfig.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)RhythmGameFreeFlyCameraConfig.__PropertyOffset_TargetRot);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)RhythmGameFreeFlyCameraConfig.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)RhythmGameFreeFlyCameraConfig.__PropertyOffset_TargetRot) = value;
 			}
 		}
 
-		// Token: 0x170061D0 RID: 25040
-		// (get) Token: 0x06029274 RID: 168564 RVA: 0x009BD1A8 File Offset: 0x009BB3A8
-		// (set) Token: 0x06029275 RID: 168565 RVA: 0x009BD1B8 File Offset: 0x009BB3B8
+		// Token: 0x17003B1C RID: 15132
+		// (get) Token: 0x0601FB7F RID: 129919 RVA: 0x00934201 File Offset: 0x00932401
+		// (set) Token: 0x0601FB80 RID: 129920 RVA: 0x00934211 File Offset: 0x00932411
 		public unsafe float Radius
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)RhythmGameFreeFlyCameraConfig.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)RhythmGameFreeFlyCameraConfig.__PropertyOffset_Radius);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)RhythmGameFreeFlyCameraConfig.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)RhythmGameFreeFlyCameraConfig.__PropertyOffset_Radius) = value;
 			}
 		}
 
-		// Token: 0x170061D1 RID: 25041
-		// (get) Token: 0x06029276 RID: 168566 RVA: 0x009BD1C9 File Offset: 0x009BB3C9
-		// (set) Token: 0x06029277 RID: 168567 RVA: 0x009BD1D9 File Offset: 0x009BB3D9
+		// Token: 0x17003B1D RID: 15133
+		// (get) Token: 0x0601FB81 RID: 129921 RVA: 0x00934222 File Offset: 0x00932422
+		// (set) Token: 0x0601FB82 RID: 129922 RVA: 0x00934232 File Offset: 0x00932432
 		public unsafe float ChangeInterval
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)RhythmGameFreeFlyCameraConfig.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)RhythmGameFreeFlyCameraConfig.__PropertyOffset_ChangeInterval);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)RhythmGameFreeFlyCameraConfig.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)RhythmGameFreeFlyCameraConfig.__PropertyOffset_ChangeInterval) = value;
 			}
 		}
 
-		// Token: 0x170061D2 RID: 25042
-		// (get) Token: 0x06029278 RID: 168568 RVA: 0x009BD1EA File Offset: 0x009BB3EA
-		// (set) Token: 0x06029279 RID: 168569 RVA: 0x009BD1FA File Offset: 0x009BB3FA
+		// Token: 0x17003B1E RID: 15134
+		// (get) Token: 0x0601FB83 RID: 129923 RVA: 0x00934243 File Offset: 0x00932443
+		// (set) Token: 0x0601FB84 RID: 129924 RVA: 0x00934253 File Offset: 0x00932453
 		public unsafe float InterpDuration
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)RhythmGameFreeFlyCameraConfig.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)RhythmGameFreeFlyCameraConfig.__PropertyOffset_InterpDuration);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)RhythmGameFreeFlyCameraConfig.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)RhythmGameFreeFlyCameraConfig.__PropertyOffset_InterpDuration) = value;
 			}
 		}
 
-		// Token: 0x170061D3 RID: 25043
-		// (get) Token: 0x0602927A RID: 168570 RVA: 0x009BD20B File Offset: 0x009BB40B
-		// (set) Token: 0x0602927B RID: 168571 RVA: 0x009BD21B File Offset: 0x009BB41B
+		// Token: 0x17003B1F RID: 15135
+		// (get) Token: 0x0601FB85 RID: 129925 RVA: 0x00934264 File Offset: 0x00932464
+		// (set) Token: 0x0601FB86 RID: 129926 RVA: 0x00934274 File Offset: 0x00932474
 		public unsafe float EnterTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)RhythmGameFreeFlyCameraConfig.__PropertyOffset_5);
+				return *(base.NativePtr + (IntPtr)RhythmGameFreeFlyCameraConfig.__PropertyOffset_EnterTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)RhythmGameFreeFlyCameraConfig.__PropertyOffset_5) = value;
+				*(base.NativePtr + (IntPtr)RhythmGameFreeFlyCameraConfig.__PropertyOffset_EnterTime) = value;
 			}
 		}
 
-		// Token: 0x170061D4 RID: 25044
-		// (get) Token: 0x0602927C RID: 168572 RVA: 0x009BD22C File Offset: 0x009BB42C
-		// (set) Token: 0x0602927D RID: 168573 RVA: 0x009BD23C File Offset: 0x009BB43C
+		// Token: 0x17003B20 RID: 15136
+		// (get) Token: 0x0601FB87 RID: 129927 RVA: 0x00934285 File Offset: 0x00932485
+		// (set) Token: 0x0601FB88 RID: 129928 RVA: 0x00934295 File Offset: 0x00932495
 		public unsafe float ExitTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)RhythmGameFreeFlyCameraConfig.__PropertyOffset_6);
+				return *(base.NativePtr + (IntPtr)RhythmGameFreeFlyCameraConfig.__PropertyOffset_ExitTime);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)RhythmGameFreeFlyCameraConfig.__PropertyOffset_6) = value;
+				*(base.NativePtr + (IntPtr)RhythmGameFreeFlyCameraConfig.__PropertyOffset_ExitTime) = value;
 			}
 		}
 
-		// Token: 0x0602927E RID: 168574 RVA: 0x009BD24D File Offset: 0x009BB44D
+		// Token: 0x0601FB89 RID: 129929 RVA: 0x009342A6 File Offset: 0x009324A6
 		public RhythmGameFreeFlyCameraConfig()
 		{
 		}
 
-		// Token: 0x0602927F RID: 168575 RVA: 0x009BD255 File Offset: 0x009BB455
-		public RhythmGameFreeFlyCameraConfig(FVectorDouble TargetLoc, FRotator TargetRot, float Radius, float ChangeInterval, float InterpDuration, float EnterTime, float ExitTime)
-		{
-			this.TargetLoc = TargetLoc;
-			this.TargetRot = TargetRot;
-			this.Radius = Radius;
-			this.ChangeInterval = ChangeInterval;
-			this.InterpDuration = InterpDuration;
-			this.EnterTime = EnterTime;
-			this.ExitTime = ExitTime;
-		}
-
-		// Token: 0x06029280 RID: 168576 RVA: 0x009BD292 File Offset: 0x009BB492
+		// Token: 0x0601FB8A RID: 129930 RVA: 0x009342AE File Offset: 0x009324AE
 		protected override IntPtr GetUStructPtr()
 		{
 			return RhythmGameFreeFlyCameraConfig.StaticStruct();
 		}
 
-		// Token: 0x06029281 RID: 168577 RVA: 0x009BD29E File Offset: 0x009BB49E
+		// Token: 0x0601FB8B RID: 129931 RVA: 0x009342BA File Offset: 0x009324BA
 		[NullableContext(2)]
 		public RhythmGameFreeFlyCameraConfig(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06029282 RID: 168578 RVA: 0x009BD2A8 File Offset: 0x009BB4A8
+		// Token: 0x0601FB8C RID: 129932 RVA: 0x009342C4 File Offset: 0x009324C4
 		public RhythmGameFreeFlyCameraConfig(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06029283 RID: 168579 RVA: 0x009BD2B3 File Offset: 0x009BB4B3
+		// Token: 0x0601FB8D RID: 129933 RVA: 0x009342CF File Offset: 0x009324CF
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new RhythmGameFreeFlyCameraConfig(Pointer, false, true);
 		}
 
-		// Token: 0x06029284 RID: 168580 RVA: 0x009BD2BD File Offset: 0x009BB4BD
+		// Token: 0x0601FB8E RID: 129934 RVA: 0x009342D9 File Offset: 0x009324D9
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new RhythmGameFreeFlyCameraConfig(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04015126 RID: 86310
+		// Token: 0x0401104F RID: 69711
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/Data/Gameplay/RhythmGame/RhythmGameFreeFlyCameraConfig.RhythmGameFreeFlyCameraConfig";
 
-		// Token: 0x04015127 RID: 86311
+		// Token: 0x04011050 RID: 69712
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04015128 RID: 86312
-		internal static int __PropertyOffset_0;
+		// Token: 0x04011051 RID: 69713
+		internal static int __PropertyOffset_TargetLoc;
 
-		// Token: 0x04015129 RID: 86313
-		internal static int __PropertyOffset_1;
+		// Token: 0x04011052 RID: 69714
+		internal static int __PropertyOffset_TargetRot;
 
-		// Token: 0x0401512A RID: 86314
-		internal static int __PropertyOffset_2;
+		// Token: 0x04011053 RID: 69715
+		internal static int __PropertyOffset_Radius;
 
-		// Token: 0x0401512B RID: 86315
-		internal static int __PropertyOffset_3;
+		// Token: 0x04011054 RID: 69716
+		internal static int __PropertyOffset_ChangeInterval;
 
-		// Token: 0x0401512C RID: 86316
-		internal static int __PropertyOffset_4;
+		// Token: 0x04011055 RID: 69717
+		internal static int __PropertyOffset_InterpDuration;
 
-		// Token: 0x0401512D RID: 86317
-		internal static int __PropertyOffset_5;
+		// Token: 0x04011056 RID: 69718
+		internal static int __PropertyOffset_EnterTime;
 
-		// Token: 0x0401512E RID: 86318
-		internal static int __PropertyOffset_6;
+		// Token: 0x04011057 RID: 69719
+		internal static int __PropertyOffset_ExitTime;
 	}
 }

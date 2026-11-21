@@ -7,18 +7,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Util
 {
-	// Token: 0x020048CF RID: 18639
+	// Token: 0x02003846 RID: 14406
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal sealed class SBoxRange : SRange
 	{
-		// Token: 0x06030B86 RID: 199558 RVA: 0x00B4FF28 File Offset: 0x00B4E128
+		// Token: 0x060256B2 RID: 153266 RVA: 0x00A8AD30 File Offset: 0x00A88F30
 		public override bool CheckPositionReached(Vector pos)
 		{
 			return this.High >= pos.Z && this.Low <= pos.Z && SBoxRange.CheckByTriangle(pos, this.VecLB, this.VecRB) * SBoxRange.CheckByTriangle(pos, this.VecRF, this.VecLF) >= 0.0 && SBoxRange.CheckByTriangle(pos, this.VecRB, this.VecRF) * SBoxRange.CheckByTriangle(pos, this.VecLF, this.VecLB) >= 0.0;
 		}
 
-		// Token: 0x06030B87 RID: 199559 RVA: 0x00B4FFB8 File Offset: 0x00B4E1B8
+		// Token: 0x060256B3 RID: 153267 RVA: 0x00A8ADC0 File Offset: 0x00A88FC0
 		public override bool MakeRange(IEntityData entityData, ITriggerShape shapeConfig)
 		{
 			IBoxTriggerShape boxTriggerShape = shapeConfig as IBoxTriggerShape;
@@ -56,28 +56,28 @@ namespace CSharpScript.Game.Module.Util
 			return true;
 		}
 
-		// Token: 0x06030B88 RID: 199560 RVA: 0x00B503AC File Offset: 0x00B4E5AC
+		// Token: 0x060256B4 RID: 153268 RVA: 0x00A8B1B4 File Offset: 0x00A893B4
 		private static double CheckByTriangle(Vector targetVec, Vector vecOne, Vector vecTwo)
 		{
 			return (vecTwo.X - vecOne.X) * (targetVec.Y - vecOne.Y) - (targetVec.X - vecOne.X) * (vecTwo.Y - vecOne.Y);
 		}
 
-		// Token: 0x0401A2BE RID: 107198
+		// Token: 0x04014B31 RID: 84785
 		private readonly Vector VecLB = Vector.Create(0.0, 0.0, 0.0);
 
-		// Token: 0x0401A2BF RID: 107199
+		// Token: 0x04014B32 RID: 84786
 		private readonly Vector VecRB = Vector.Create(0.0, 0.0, 0.0);
 
-		// Token: 0x0401A2C0 RID: 107200
+		// Token: 0x04014B33 RID: 84787
 		private readonly Vector VecLF = Vector.Create(0.0, 0.0, 0.0);
 
-		// Token: 0x0401A2C1 RID: 107201
+		// Token: 0x04014B34 RID: 84788
 		private readonly Vector VecRF = Vector.Create(0.0, 0.0, 0.0);
 
-		// Token: 0x0401A2C2 RID: 107202
+		// Token: 0x04014B35 RID: 84789
 		private double High;
 
-		// Token: 0x0401A2C3 RID: 107203
+		// Token: 0x04014B36 RID: 84790
 		private double Low;
 	}
 }

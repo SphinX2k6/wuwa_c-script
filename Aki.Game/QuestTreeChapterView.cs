@@ -11,17 +11,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020026B0 RID: 9904
+// Token: 0x02001B9B RID: 7067
 [NullableContext(1)]
 [Nullable(0)]
 public class QuestTreeChapterView : UiTickViewBase
 {
-	// Token: 0x06014497 RID: 83095 RVA: 0x0052031C File Offset: 0x0051E51C
+	// Token: 0x06011979 RID: 72057 RVA: 0x0052F054 File Offset: 0x0052D254
 	public QuestTreeChapterView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06014498 RID: 83096 RVA: 0x0052036C File Offset: 0x0051E56C
+	// Token: 0x0601197A RID: 72058 RVA: 0x0052F0A4 File Offset: 0x0052D2A4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 18;
@@ -74,7 +74,7 @@ public class QuestTreeChapterView : UiTickViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06014499 RID: 83097 RVA: 0x00520630 File Offset: 0x0051E830
+	// Token: 0x0601197B RID: 72059 RVA: 0x0052F368 File Offset: 0x0052D568
 	protected override UniTask OnBeforeStartAsync()
 	{
 		QuestTreeChapterView.<OnBeforeStartAsync>d__21 <OnBeforeStartAsync>d__;
@@ -85,7 +85,7 @@ public class QuestTreeChapterView : UiTickViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601449A RID: 83098 RVA: 0x00520674 File Offset: 0x0051E874
+	// Token: 0x0601197C RID: 72060 RVA: 0x0052F3AC File Offset: 0x0052D5AC
 	protected override void OnStart()
 	{
 		UUIScrollViewWithScrollbarComponent scrollViewWithScrollbar = base.GetScrollViewWithScrollbar(5);
@@ -104,25 +104,25 @@ public class QuestTreeChapterView : UiTickViewBase
 		}, new TInputHandle<InputDistributeDefine.ITouchData>(this.OnTouch));
 	}
 
-	// Token: 0x0601449B RID: 83099 RVA: 0x00520765 File Offset: 0x0051E965
+	// Token: 0x0601197D RID: 72061 RVA: 0x0052F49D File Offset: 0x0052D69D
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.QuestTreeNodeDataUpdate, new Action<QuestTreeNodeData>(this.OnDataUpdate));
 	}
 
-	// Token: 0x0601449C RID: 83100 RVA: 0x00520783 File Offset: 0x0051E983
+	// Token: 0x0601197E RID: 72062 RVA: 0x0052F4BB File Offset: 0x0052D6BB
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.QuestTreeNodeDataUpdate, new Action<QuestTreeNodeData>(this.OnDataUpdate));
 	}
 
-	// Token: 0x0601449D RID: 83101 RVA: 0x005207A1 File Offset: 0x0051E9A1
+	// Token: 0x0601197F RID: 72063 RVA: 0x0052F4D9 File Offset: 0x0052D6D9
 	protected override void OnBeforeShow()
 	{
 		QuestTreeModel.Instance.ViewModelChapter.SetShouldLocateToDefaultNode(true);
 	}
 
-	// Token: 0x0601449E RID: 83102 RVA: 0x005207B4 File Offset: 0x0051E9B4
+	// Token: 0x06011980 RID: 72064 RVA: 0x0052F4EC File Offset: 0x0052D6EC
 	protected override void OnAfterShow()
 	{
 		QuestTreeModel.Instance.ViewModelChapter.NotifyUpdateNode();
@@ -147,13 +147,13 @@ public class QuestTreeChapterView : UiTickViewBase
 		BlackScreenController.Instance.RemoveBlackScreen("Close", "QuestTreeChapterView", "Default");
 	}
 
-	// Token: 0x0601449F RID: 83103 RVA: 0x00520893 File Offset: 0x0051EA93
+	// Token: 0x06011981 RID: 72065 RVA: 0x0052F5CB File Offset: 0x0052D7CB
 	protected override void OnBeforeHide()
 	{
 		QuestTreeController.Instance.CloseNodeDetailView();
 	}
 
-	// Token: 0x060144A0 RID: 83104 RVA: 0x005208A0 File Offset: 0x0051EAA0
+	// Token: 0x06011982 RID: 72066 RVA: 0x0052F5D8 File Offset: 0x0052D7D8
 	protected override void OnBeforeDestroy()
 	{
 		this.Factory = null;
@@ -170,7 +170,7 @@ public class QuestTreeChapterView : UiTickViewBase
 		this.GuideFocusNodeData = null;
 	}
 
-	// Token: 0x060144A1 RID: 83105 RVA: 0x0052092A File Offset: 0x0051EB2A
+	// Token: 0x06011983 RID: 72067 RVA: 0x0052F662 File Offset: 0x0052D862
 	protected override void OnTick(float delta)
 	{
 		this.TickRebuildLayout(delta);
@@ -179,7 +179,7 @@ public class QuestTreeChapterView : UiTickViewBase
 		this.TickLocateToGuideFocusNodeData();
 	}
 
-	// Token: 0x060144A2 RID: 83106 RVA: 0x00520948 File Offset: 0x0051EB48
+	// Token: 0x06011984 RID: 72068 RVA: 0x0052F680 File Offset: 0x0052D880
 	private void TickRebuildLayout(float delta)
 	{
 		this.DeltaTime += delta;
@@ -196,7 +196,7 @@ public class QuestTreeChapterView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060144A3 RID: 83107 RVA: 0x005209A8 File Offset: 0x0051EBA8
+	// Token: 0x06011985 RID: 72069 RVA: 0x0052F6E0 File Offset: 0x0052D8E0
 	private void TickLayoutMargin(float delta)
 	{
 		FMargin layoutMargin = this.LayoutMargin;
@@ -216,7 +216,7 @@ public class QuestTreeChapterView : UiTickViewBase
 		horizontalLayout.SetPadding(this.LayoutMargin);
 	}
 
-	// Token: 0x060144A4 RID: 83108 RVA: 0x00520A57 File Offset: 0x0051EC57
+	// Token: 0x06011986 RID: 72070 RVA: 0x0052F78F File Offset: 0x0052D98F
 	private void TickPointerScrolling(float delta)
 	{
 		if (this.IsPointerScrolling)
@@ -232,7 +232,7 @@ public class QuestTreeChapterView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060144A5 RID: 83109 RVA: 0x00520A85 File Offset: 0x0051EC85
+	// Token: 0x06011987 RID: 72071 RVA: 0x0052F7BD File Offset: 0x0052D9BD
 	private void TickLocateToGuideFocusNodeData()
 	{
 		if (this.GuideFocusNodeData != null && GuideModel.Instance.HasFocusGuideGroupOnView(this.ViewInfo.Name))
@@ -243,7 +243,7 @@ public class QuestTreeChapterView : UiTickViewBase
 		this.GuideFocusNodeData = null;
 	}
 
-	// Token: 0x060144A6 RID: 83110 RVA: 0x00520AC4 File Offset: 0x0051ECC4
+	// Token: 0x06011988 RID: 72072 RVA: 0x0052F7FC File Offset: 0x0052D9FC
 	public UniTask RefreshByData(QuestTreeChapterData data)
 	{
 		QuestTreeChapterView.<RefreshByData>d__34 <RefreshByData>d__;
@@ -255,19 +255,19 @@ public class QuestTreeChapterView : UiTickViewBase
 		return <RefreshByData>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060144A7 RID: 83111 RVA: 0x00520B0F File Offset: 0x0051ED0F
+	// Token: 0x06011989 RID: 72073 RVA: 0x0052F847 File Offset: 0x0052DA47
 	public UUIScrollViewWithScrollbarComponent GetScrollView()
 	{
 		return base.GetScrollViewWithScrollbar(5);
 	}
 
-	// Token: 0x060144A8 RID: 83112 RVA: 0x00520B18 File Offset: 0x0051ED18
+	// Token: 0x0601198A RID: 72074 RVA: 0x0052F850 File Offset: 0x0052DA50
 	public UUIItem GetOverrideBlurItem()
 	{
 		return base.GetItem(17);
 	}
 
-	// Token: 0x060144A9 RID: 83113 RVA: 0x00520B24 File Offset: 0x0051ED24
+	// Token: 0x0601198B RID: 72075 RVA: 0x0052F85C File Offset: 0x0052DA5C
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -318,7 +318,7 @@ public class QuestTreeChapterView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x060144AA RID: 83114 RVA: 0x00520C30 File Offset: 0x0051EE30
+	// Token: 0x0601198C RID: 72076 RVA: 0x0052F968 File Offset: 0x0052DB68
 	private void OnValueChange(float value)
 	{
 		UUISliderComponent slider = base.GetSlider(4);
@@ -331,21 +331,21 @@ public class QuestTreeChapterView : UiTickViewBase
 		this.ScaleDirty = true;
 	}
 
-	// Token: 0x060144AB RID: 83115 RVA: 0x00520CB0 File Offset: 0x0051EEB0
+	// Token: 0x0601198D RID: 72077 RVA: 0x0052F9E8 File Offset: 0x0052DBE8
 	private void OnPressIncrease(bool _)
 	{
 		UUISliderComponent slider = base.GetSlider(4);
 		slider.SetValue(Math.Min(slider.GetValue() + 0.01f, slider.GetMaxValue()), true);
 	}
 
-	// Token: 0x060144AC RID: 83116 RVA: 0x00520CE4 File Offset: 0x0051EEE4
+	// Token: 0x0601198E RID: 72078 RVA: 0x0052FA1C File Offset: 0x0052DC1C
 	private void OnPressReduce(bool _)
 	{
 		UUISliderComponent slider = base.GetSlider(4);
 		slider.SetValue(Math.Max(slider.GetValue() - 0.01f, slider.GetMinValue()), true);
 	}
 
-	// Token: 0x060144AD RID: 83117 RVA: 0x00520D18 File Offset: 0x0051EF18
+	// Token: 0x0601198F RID: 72079 RVA: 0x0052FA50 File Offset: 0x0052DC50
 	private void OnLocate()
 	{
 		QuestTreeNodeData curTrackingNode = this.Data.GetCurTrackingNode();
@@ -356,7 +356,7 @@ public class QuestTreeChapterView : UiTickViewBase
 		QuestTreeModel.Instance.ViewModelChapter.LocateToNode(curTrackingNode, true);
 	}
 
-	// Token: 0x060144AE RID: 83118 RVA: 0x00520D46 File Offset: 0x0051EF46
+	// Token: 0x06011990 RID: 72080 RVA: 0x0052FA7E File Offset: 0x0052DC7E
 	[NullableContext(2)]
 	private bool OnPointerBeginDrag(ULGUIPointerEventData _)
 	{
@@ -364,7 +364,7 @@ public class QuestTreeChapterView : UiTickViewBase
 		return true;
 	}
 
-	// Token: 0x060144AF RID: 83119 RVA: 0x00520D5C File Offset: 0x0051EF5C
+	// Token: 0x06011991 RID: 72081 RVA: 0x0052FA94 File Offset: 0x0052DC94
 	[NullableContext(2)]
 	private void OnPointerScroll(ULGUIPointerEventData eventData)
 	{
@@ -385,15 +385,15 @@ public class QuestTreeChapterView : UiTickViewBase
 		this.SetScaleImp((double)num2, eventData.pointerPosition);
 	}
 
-	// Token: 0x060144B0 RID: 83120 RVA: 0x00520DE9 File Offset: 0x0051EFE9
+	// Token: 0x06011992 RID: 72082 RVA: 0x0052FB21 File Offset: 0x0052DD21
 	private void OnDataUpdate(QuestTreeNodeData data)
 	{
 		this.CollectBtn.SetActive(this.Data.GetAcceptableNodeList().Count > 0);
 		base.GetButton(14).GetRootComponent().SetUIActive(this.Data.GetCurTrackingNode() != null);
 	}
 
-	// Token: 0x17001A51 RID: 6737
-	// (get) Token: 0x060144B1 RID: 83121 RVA: 0x00520E29 File Offset: 0x0051F029
+	// Token: 0x17001A89 RID: 6793
+	// (get) Token: 0x06011993 RID: 72083 RVA: 0x0052FB61 File Offset: 0x0052DD61
 	private bool IsInMultiTouch
 	{
 		get
@@ -402,7 +402,7 @@ public class QuestTreeChapterView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060144B2 RID: 83122 RVA: 0x00520E39 File Offset: 0x0051F039
+	// Token: 0x06011994 RID: 72084 RVA: 0x0052FB71 File Offset: 0x0052DD71
 	private void OnTouch(string touchIdName, InputDistributeDefine.ITouchData touchData, InputIdentification _)
 	{
 		if (touchData.TouchType == InputDistributeDefine.ETouchType.TouchBegin)
@@ -421,7 +421,7 @@ public class QuestTreeChapterView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060144B3 RID: 83123 RVA: 0x00520E6C File Offset: 0x0051F06C
+	// Token: 0x06011995 RID: 72085 RVA: 0x0052FBA4 File Offset: 0x0052DDA4
 	private void OnTouchBegin(InputDistributeDefine.ITouchData touchData)
 	{
 		int touchId = touchData.TouchId;
@@ -441,7 +441,7 @@ public class QuestTreeChapterView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060144B4 RID: 83124 RVA: 0x00520F4C File Offset: 0x0051F14C
+	// Token: 0x06011996 RID: 72086 RVA: 0x0052FC84 File Offset: 0x0052DE84
 	private void OnTouchEnd(InputDistributeDefine.ITouchData touchData)
 	{
 		int touchId = touchData.TouchId;
@@ -458,7 +458,7 @@ public class QuestTreeChapterView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x060144B5 RID: 83125 RVA: 0x00521020 File Offset: 0x0051F220
+	// Token: 0x06011997 RID: 72087 RVA: 0x0052FD58 File Offset: 0x0052DF58
 	private void OnTouchMove(InputDistributeDefine.ITouchData touchData)
 	{
 		if (!this.IsInMultiTouch)
@@ -477,7 +477,7 @@ public class QuestTreeChapterView : UiTickViewBase
 		this.SetScaleImp((double)(value + item2), this.TouchCenter.ToUeVectorOld());
 	}
 
-	// Token: 0x060144B6 RID: 83126 RVA: 0x0052107C File Offset: 0x0051F27C
+	// Token: 0x06011998 RID: 72088 RVA: 0x0052FDB4 File Offset: 0x0052DFB4
 	private void SetScaleImp(double newScale, FVector center)
 	{
 		Vector2D vector2D = Vector2D.Create((double)center.X, (double)center.Y);
@@ -500,126 +500,126 @@ public class QuestTreeChapterView : UiTickViewBase
 		slider.SetValue((float)newScale, true);
 	}
 
-	// Token: 0x04009894 RID: 39060
+	// Token: 0x040099EC RID: 39404
 	private const float SCALE_STEP = 0.01f;
 
-	// Token: 0x04009895 RID: 39061
+	// Token: 0x040099ED RID: 39405
 	private const float EXTRA_BALANCE_UP_REDUCE = 50f;
 
-	// Token: 0x04009896 RID: 39062
+	// Token: 0x040099EE RID: 39406
 	private QuestTreeChapterData Data;
 
-	// Token: 0x04009897 RID: 39063
+	// Token: 0x040099EF RID: 39407
 	private GenericScrollViewNew<QuestTreeNodeItemBase<QuestTreeNodeData>, QuestTreeNodeData> ScrollQuests;
 
-	// Token: 0x04009898 RID: 39064
+	// Token: 0x040099F0 RID: 39408
 	private PopupCaptionItem Caption;
 
-	// Token: 0x04009899 RID: 39065
+	// Token: 0x040099F1 RID: 39409
 	private QuestTreeNodeItemFactory Factory;
 
-	// Token: 0x0400989A RID: 39066
+	// Token: 0x040099F2 RID: 39410
 	private FMargin LayoutMargin;
 
-	// Token: 0x0400989B RID: 39067
+	// Token: 0x040099F3 RID: 39411
 	private FVector ScaleVector = new FVector(1f, 1f, 1f);
 
-	// Token: 0x0400989C RID: 39068
+	// Token: 0x040099F4 RID: 39412
 	private bool ScaleDirty;
 
-	// Token: 0x0400989D RID: 39069
+	// Token: 0x040099F5 RID: 39413
 	private float DeltaTime;
 
-	// Token: 0x0400989E RID: 39070
+	// Token: 0x040099F6 RID: 39414
 	private LongPressButtonItem LongPressIncrease;
 
-	// Token: 0x0400989F RID: 39071
+	// Token: 0x040099F7 RID: 39415
 	private LongPressButtonItem LongPressReduce;
 
-	// Token: 0x040098A0 RID: 39072
+	// Token: 0x040099F8 RID: 39416
 	private QuestTreeChapterStartNodeItem StartNode;
 
-	// Token: 0x040098A1 RID: 39073
+	// Token: 0x040099F9 RID: 39417
 	private QuestTreeCollectBtnItem CollectBtn;
 
-	// Token: 0x040098A2 RID: 39074
+	// Token: 0x040099FA RID: 39418
 	private float Elasticity;
 
-	// Token: 0x040098A3 RID: 39075
+	// Token: 0x040099FB RID: 39419
 	private bool IsPointerScrolling;
 
-	// Token: 0x040098A4 RID: 39076
+	// Token: 0x040099FC RID: 39420
 	private bool HasPointerScrolled;
 
-	// Token: 0x040098A5 RID: 39077
+	// Token: 0x040099FD RID: 39421
 	[Nullable(2)]
 	private QuestTreeNodeData GuideFocusNodeData;
 
-	// Token: 0x040098A6 RID: 39078
+	// Token: 0x040099FE RID: 39422
 	private Vector TempTouchVector2D = Vector.Create();
 
-	// Token: 0x040098A7 RID: 39079
+	// Token: 0x040099FF RID: 39423
 	private Vector TouchCenter = Vector.Create();
 
-	// Token: 0x040098A8 RID: 39080
+	// Token: 0x04009A00 RID: 39424
 	private Dictionary<int, InputDistributeDefine.ITouchData> TouchMap = new Dictionary<int, InputDistributeDefine.ITouchData>();
 
-	// Token: 0x02008CF3 RID: 36083
+	// Token: 0x02007E7C RID: 32380
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x0402DBAD RID: 187309
+		// Token: 0x04028EC4 RID: 167620
 		public const int ItemCaption = 0;
 
-		// Token: 0x0402DBAE RID: 187310
+		// Token: 0x04028EC5 RID: 167621
 		public const int ItemScaleBar = 1;
 
-		// Token: 0x0402DBAF RID: 187311
+		// Token: 0x04028EC6 RID: 167622
 		public const int BtnIncrease = 2;
 
-		// Token: 0x0402DBB0 RID: 187312
+		// Token: 0x04028EC7 RID: 167623
 		public const int BtnReduce = 3;
 
-		// Token: 0x0402DBB1 RID: 187313
+		// Token: 0x04028EC8 RID: 167624
 		public const int SliderScale = 4;
 
-		// Token: 0x0402DBB2 RID: 187314
+		// Token: 0x04028EC9 RID: 167625
 		public const int ScrollQuests = 5;
 
-		// Token: 0x0402DBB3 RID: 187315
+		// Token: 0x04028ECA RID: 167626
 		public const int LayoutContent = 6;
 
-		// Token: 0x0402DBB4 RID: 187316
+		// Token: 0x04028ECB RID: 167627
 		public const int ItemNode = 7;
 
-		// Token: 0x0402DBB5 RID: 187317
+		// Token: 0x04028ECC RID: 167628
 		public const int TextureRegionIcon = 8;
 
-		// Token: 0x0402DBB6 RID: 187318
+		// Token: 0x04028ECD RID: 167629
 		public const int TextChapterTitle = 9;
 
-		// Token: 0x0402DBB7 RID: 187319
+		// Token: 0x04028ECE RID: 167630
 		public const int TextChapterName = 10;
 
-		// Token: 0x0402DBB8 RID: 187320
+		// Token: 0x04028ECF RID: 167631
 		public const int TextureBg = 11;
 
-		// Token: 0x0402DBB9 RID: 187321
+		// Token: 0x04028ED0 RID: 167632
 		public const int ItemStartNode = 12;
 
-		// Token: 0x0402DBBA RID: 187322
+		// Token: 0x04028ED1 RID: 167633
 		public const int BtnPick = 13;
 
-		// Token: 0x0402DBBB RID: 187323
+		// Token: 0x04028ED2 RID: 167634
 		public const int BtnLocate = 14;
 
-		// Token: 0x0402DBBC RID: 187324
+		// Token: 0x04028ED3 RID: 167635
 		public const int Draggable = 15;
 
-		// Token: 0x0402DBBD RID: 187325
+		// Token: 0x04028ED4 RID: 167636
 		public const int ScrollBar = 16;
 
-		// Token: 0x0402DBBE RID: 187326
+		// Token: 0x04028ED5 RID: 167637
 		public const int ItemBlurOverride = 17;
 	}
 }

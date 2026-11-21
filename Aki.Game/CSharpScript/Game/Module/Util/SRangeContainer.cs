@@ -7,18 +7,18 @@ using Aki.TDConfigMgr.Component;
 
 namespace CSharpScript.Game.Module.Util
 {
-	// Token: 0x020048CD RID: 18637
+	// Token: 0x02003844 RID: 14404
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SRangeContainer
 	{
-		// Token: 0x06030B7E RID: 199550 RVA: 0x00B4FCC8 File Offset: 0x00B4DEC8
+		// Token: 0x060256AA RID: 153258 RVA: 0x00A8AAD0 File Offset: 0x00A88CD0
 		public void Clear()
 		{
 			this.Ranges.Clear();
 		}
 
-		// Token: 0x06030B7F RID: 199551 RVA: 0x00B4FCD8 File Offset: 0x00B4DED8
+		// Token: 0x060256AB RID: 153259 RVA: 0x00A8AAE0 File Offset: 0x00A88CE0
 		public bool CheckPositionReached(Vector pos)
 		{
 			using (List<SRange>.Enumerator enumerator = this.Ranges.GetEnumerator())
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.Util
 			return false;
 		}
 
-		// Token: 0x06030B80 RID: 199552 RVA: 0x00B4FD34 File Offset: 0x00B4DF34
+		// Token: 0x060256AC RID: 153260 RVA: 0x00A8AB3C File Offset: 0x00A88D3C
 		public bool MakeRange(int entityId)
 		{
 			IEntityData completeEntityData = CreatureModel.Instance.GetCompleteEntityData(new int?(entityId), null);
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.Util
 			return false;
 		}
 
-		// Token: 0x06030B81 RID: 199553 RVA: 0x00B4FEE8 File Offset: 0x00B4E0E8
+		// Token: 0x060256AD RID: 153261 RVA: 0x00A8ACF0 File Offset: 0x00A88EF0
 		private bool MakeRangeImp([Nullable(2)] SRange range, IEntityData entityData, ITriggerShape shapeConfig)
 		{
 			if (range == null || !range.MakeRange(entityData, shapeConfig))
@@ -108,11 +108,11 @@ namespace CSharpScript.Game.Module.Util
 			return true;
 		}
 
-		// Token: 0x0401A2BC RID: 107196
+		// Token: 0x04014B2F RID: 84783
 		[Nullable(2)]
 		public ITriggerShape RangeComponentShape;
 
-		// Token: 0x0401A2BD RID: 107197
+		// Token: 0x04014B30 RID: 84784
 		private readonly List<SRange> Ranges = new List<SRange>();
 	}
 }

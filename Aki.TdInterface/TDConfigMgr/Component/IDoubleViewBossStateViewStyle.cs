@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002CD RID: 717
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000314 RID: 788
 	public class IDoubleViewBossStateViewStyle : IBossStateViewStyle
 	{
-		// Token: 0x06000D81 RID: 3457 RVA: 0x00032400 File Offset: 0x00030600
+		// Token: 0x06000EB1 RID: 3761 RVA: 0x00035334 File Offset: 0x00033534
 		private IDoubleViewBossStateViewStyle_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000D82 RID: 3458 RVA: 0x00032438 File Offset: 0x00030638
+		// Token: 0x06000EB2 RID: 3762 RVA: 0x0003536C File Offset: 0x0003356C
 		public static IDoubleViewBossStateViewStyle Create([Nullable(2)] IDoubleViewBossStateViewStyle instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000D83 RID: 3459 RVA: 0x0003244B File Offset: 0x0003064B
+		// Token: 0x06000EB3 RID: 3763 RVA: 0x0003537F File Offset: 0x0003357F
 		public static IDoubleViewBossStateViewStyle CreateFromSetValue([Nullable(2)] IDoubleViewBossStateViewStyle_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000D84 RID: 3460 RVA: 0x0003245E File Offset: 0x0003065E
+		// Token: 0x06000EB4 RID: 3764 RVA: 0x00035392 File Offset: 0x00033592
 		public new IDoubleViewBossStateViewStyle_SetValue ToSetValue()
 		{
 			return new IDoubleViewBossStateViewStyle_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170003EA RID: 1002
-		// (get) Token: 0x06000D85 RID: 3461 RVA: 0x00032495 File Offset: 0x00030695
-		// (set) Token: 0x06000D86 RID: 3462 RVA: 0x000324C0 File Offset: 0x000306C0
+		// Token: 0x17000437 RID: 1079
+		// (get) Token: 0x06000EB5 RID: 3765 RVA: 0x000353C9 File Offset: 0x000335C9
+		// (set) Token: 0x06000EB6 RID: 3766 RVA: 0x000353F4 File Offset: 0x000335F4
 		public override EBossStateViewStyle Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170003EB RID: 1003
-		// (get) Token: 0x06000D87 RID: 3463 RVA: 0x000324CE File Offset: 0x000306CE
-		// (set) Token: 0x06000D88 RID: 3464 RVA: 0x000324F9 File Offset: 0x000306F9
+		// Token: 0x17000438 RID: 1080
+		// (get) Token: 0x06000EB7 RID: 3767 RVA: 0x00035402 File Offset: 0x00033602
+		// (set) Token: 0x06000EB8 RID: 3768 RVA: 0x0003542D File Offset: 0x0003362D
 		public virtual EDoubleViewSlot Slot
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170003EC RID: 1004
-		// (get) Token: 0x06000D89 RID: 3465 RVA: 0x00032508 File Offset: 0x00030708
-		// (set) Token: 0x06000D8A RID: 3466 RVA: 0x00032569 File Offset: 0x00030769
+		// Token: 0x17000439 RID: 1081
+		// (get) Token: 0x06000EB9 RID: 3769 RVA: 0x0003543C File Offset: 0x0003363C
+		// (set) Token: 0x06000EBA RID: 3770 RVA: 0x0003549D File Offset: 0x0003369D
 		[Nullable(2)]
 		public virtual IMarkMainStateTextTarget MainStateTextTarget
 		{
@@ -141,9 +139,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170003ED RID: 1005
-		// (get) Token: 0x06000D8B RID: 3467 RVA: 0x00032580 File Offset: 0x00030780
-		// (set) Token: 0x06000D8C RID: 3468 RVA: 0x000325BA File Offset: 0x000307BA
+		// Token: 0x1700043A RID: 1082
+		// (get) Token: 0x06000EBB RID: 3771 RVA: 0x000354B4 File Offset: 0x000336B4
+		// (set) Token: 0x06000EBC RID: 3772 RVA: 0x000354EE File Offset: 0x000336EE
 		public virtual int? BindMonsterEntityId
 		{
 			get
@@ -165,18 +163,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000C37 RID: 3127
+		// Token: 0x04000D21 RID: 3361
 		[Nullable(2)]
 		protected new IDoubleViewBossStateViewStyle FbInstance;
 
-		// Token: 0x04000C38 RID: 3128
+		// Token: 0x04000D22 RID: 3362
 		[Nullable(2)]
 		protected new IDoubleViewBossStateViewStyle_SetValue PocoInterface;
 
-		// Token: 0x04000C39 RID: 3129
+		// Token: 0x04000D23 RID: 3363
 		private IMarkMainStateTextTarget _MainStateTextTargetCache;
 
-		// Token: 0x04000C3A RID: 3130
+		// Token: 0x04000D24 RID: 3364
 		private bool _MainStateTextTargetInited;
 	}
 }

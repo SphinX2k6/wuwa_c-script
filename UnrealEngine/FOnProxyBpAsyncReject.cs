@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020015B9 RID: 5561
+	// Token: 0x020002CF RID: 719
 	public sealed class FOnProxyBpAsyncReject : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06014123 RID: 82211 RVA: 0x001D746D File Offset: 0x001D566D
+		// Token: 0x06004E01 RID: 19969 RVA: 0x0006D009 File Offset: 0x0006B209
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnProxyBpAsyncReject.StaticFunctionPtr();
 		}
 
-		// Token: 0x06014124 RID: 82212 RVA: 0x001D7479 File Offset: 0x001D5679
+		// Token: 0x06004E02 RID: 19970 RVA: 0x0006D015 File Offset: 0x0006B215
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnProxyBpAsyncReject._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FOnProxyBpAsyncReject._FunctionPtr;
 		}
 
-		// Token: 0x06014125 RID: 82213 RVA: 0x001D749C File Offset: 0x001D569C
+		// Token: 0x06004E03 RID: 19971 RVA: 0x0006D038 File Offset: 0x0006B238
 		public FOnProxyBpAsyncReject()
 		{
 		}
 
-		// Token: 0x06014126 RID: 82214 RVA: 0x001D74A4 File Offset: 0x001D56A4
+		// Token: 0x06004E04 RID: 19972 RVA: 0x0006D040 File Offset: 0x0006B240
 		[NullableContext(2)]
 		public FOnProxyBpAsyncReject(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06014127 RID: 82215 RVA: 0x001D74AE File Offset: 0x001D56AE
+		// Token: 0x06004E05 RID: 19973 RVA: 0x0006D04A File Offset: 0x0006B24A
 		public FOnProxyBpAsyncReject(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06014128 RID: 82216 RVA: 0x001D74B9 File Offset: 0x001D56B9
+		// Token: 0x06004E06 RID: 19974 RVA: 0x0006D055 File Offset: 0x0006B255
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<string>) ?? ((Action<string>)Delegate.CreateDelegate(typeof(Action<string>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06014129 RID: 82217 RVA: 0x001D74EB File Offset: 0x001D56EB
+		// Token: 0x06004E07 RID: 19975 RVA: 0x0006D087 File Offset: 0x0006B287
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<string> Callback)
 		{
 			if (FOnProxyBpAsyncReject.RegisterId == 0)
@@ -65,10 +64,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FOnProxyBpAsyncReject.RegisterId);
 		}
 
-		// Token: 0x0601412A RID: 82218 RVA: 0x001D7528 File Offset: 0x001D5728
+		// Token: 0x06004E08 RID: 19976 RVA: 0x0006D0C4 File Offset: 0x0006B2C4
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(string Reason)
 		{
 			FOnProxyBpAsyncReject.__FOnProxyBpAsyncReject_DelegateParams* ptr = stackalloc FOnProxyBpAsyncReject.__FOnProxyBpAsyncReject_DelegateParams[(UIntPtr)31] + 15L / (long)sizeof(FOnProxyBpAsyncReject.__FOnProxyBpAsyncReject_DelegateParams) & -16L;
@@ -78,10 +76,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FOnProxyBpAsyncReject._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601412B RID: 82219 RVA: 0x001D757C File Offset: 0x001D577C
+		// Token: 0x06004E09 RID: 19977 RVA: 0x0006D118 File Offset: 0x0006B318
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<string> action = target as Action<string>;
@@ -93,31 +90,31 @@ namespace UnrealEngine
 			action(obj);
 		}
 
-		// Token: 0x0400AE98 RID: 44696
+		// Token: 0x04001F3B RID: 7995
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400AE99 RID: 44697
+		// Token: 0x04001F3C RID: 7996
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/JsEnv.OnProxyBpAsyncReject__DelegateSignature";
 
-		// Token: 0x0400AE9A RID: 44698
+		// Token: 0x04001F3D RID: 7997
 		private static int RegisterId;
 
-		// Token: 0x02002EC0 RID: 11968
+		// Token: 0x020009FE RID: 2558
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
-		protected ref struct __FOnProxyBpAsyncReject_DelegateParams
+		private ref struct __FOnProxyBpAsyncReject_DelegateParams
 		{
-			// Token: 0x040169BD RID: 92605
+			// Token: 0x040059A5 RID: 22949
 			[FieldOffset(0)]
 			public FString Reason;
 		}
 
-		// Token: 0x02002EC1 RID: 11969
+		// Token: 0x020009FF RID: 2559
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040169BE RID: 92606
+			// Token: 0x040059A6 RID: 22950
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003EFA RID: 16122
+	// Token: 0x02004338 RID: 17208
 	public class ILevelPlayInformationT
 	{
-		// Token: 0x17006FD6 RID: 28630
-		// (get) Token: 0x06016D12 RID: 93458 RVA: 0x0034A844 File Offset: 0x00348A44
-		// (set) Token: 0x06016D13 RID: 93459 RVA: 0x0034A84C File Offset: 0x00348A4C
+		// Token: 0x170075C5 RID: 30149
+		// (get) Token: 0x06018369 RID: 99177 RVA: 0x00373A10 File Offset: 0x00371C10
+		// (set) Token: 0x0601836A RID: 99178 RVA: 0x00373A18 File Offset: 0x00371C18
 		public string TidMainTitle { get; set; }
 
-		// Token: 0x17006FD7 RID: 28631
-		// (get) Token: 0x06016D14 RID: 93460 RVA: 0x0034A855 File Offset: 0x00348A55
-		// (set) Token: 0x06016D15 RID: 93461 RVA: 0x0034A85D File Offset: 0x00348A5D
+		// Token: 0x170075C6 RID: 30150
+		// (get) Token: 0x0601836B RID: 99179 RVA: 0x00373A21 File Offset: 0x00371C21
+		// (set) Token: 0x0601836C RID: 99180 RVA: 0x00373A29 File Offset: 0x00371C29
 		public List<IInformationSubTitleT> SubTitles { get; set; }
 
-		// Token: 0x06016D16 RID: 93462 RVA: 0x0034A866 File Offset: 0x00348A66
+		// Token: 0x0601836D RID: 99181 RVA: 0x00373A32 File Offset: 0x00371C32
 		public ILevelPlayInformationT()
 		{
 			this.TidMainTitle = null;

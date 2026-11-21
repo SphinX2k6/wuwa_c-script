@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002932 RID: 10546
+	// Token: 0x02002C0E RID: 11278
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ITeleportDungeonFunction : EnableFunction
 	{
-		// Token: 0x0600E9F7 RID: 59895 RVA: 0x00224687 File Offset: 0x00222887
-		[NullableContext(1)]
+		// Token: 0x0600F849 RID: 63561 RVA: 0x002419DF File Offset: 0x0023FBDF
+		[NullableContext(0)]
 		public static ITeleportDungeonFunction Create(ITeleportDungeonFunction? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004955 RID: 18773
-		// (get) Token: 0x0600E9F8 RID: 59896 RVA: 0x002246A6 File Offset: 0x002228A6
+		// Token: 0x17004CDB RID: 19675
+		// (get) Token: 0x0600F84A RID: 63562 RVA: 0x002419FE File Offset: 0x0023FBFE
 		public override EEnableFunctionType Type
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004956 RID: 18774
-		// (get) Token: 0x0600E9F9 RID: 59897 RVA: 0x002246B3 File Offset: 0x002228B3
+		// Token: 0x17004CDC RID: 19676
+		// (get) Token: 0x0600F84B RID: 63563 RVA: 0x00241A0B File Offset: 0x0023FC0B
 		public virtual bool Enable
 		{
 			get
@@ -44,8 +44,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004957 RID: 18775
-		// (get) Token: 0x0600E9FA RID: 59898 RVA: 0x002246C0 File Offset: 0x002228C0
+		// Token: 0x17004CDD RID: 19677
+		// (get) Token: 0x0600F84C RID: 63564 RVA: 0x00241A18 File Offset: 0x0023FC18
 		public virtual List<int> DungeonList
 		{
 			get
@@ -69,13 +69,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400810C RID: 33036
+		// Token: 0x040087DA RID: 34778
 		private ITeleportDungeonFunction Instance;
 
-		// Token: 0x0400810D RID: 33037
+		// Token: 0x040087DB RID: 34779
 		private List<int> _DungeonListCache;
 
-		// Token: 0x0400810E RID: 33038
+		// Token: 0x040087DC RID: 34780
 		private bool _DungeonListInited;
 	}
 }

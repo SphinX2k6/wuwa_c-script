@@ -4,22 +4,22 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200272E RID: 10030
+	// Token: 0x020007E4 RID: 2020
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/SharpherealTest.FSharpherealTestEnum")]
 	public enum FSharpherealTestEnum : byte
 	{
-		// Token: 0x04014067 RID: 82023
+		// Token: 0x04004AD1 RID: 19153
 		E0,
-		// Token: 0x04014068 RID: 82024
+		// Token: 0x04004AD2 RID: 19154
 		E1,
-		// Token: 0x04014069 RID: 82025
+		// Token: 0x04004AD3 RID: 19155
 		E2,
-		// Token: 0x0401406A RID: 82026
+		// Token: 0x04004AD4 RID: 19156
 		E3,
-		// Token: 0x0401406B RID: 82027
+		// Token: 0x04004AD5 RID: 19157
 		E4,
-		// Token: 0x0401406C RID: 82028
+		// Token: 0x04004AD6 RID: 19158
 		FSharpherealTestEnum_MAX
 	}
 }

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007071 RID: 28785
+	// Token: 0x0200783D RID: 30781
 	public class ISetSpineAnimationT
 	{
-		// Token: 0x1700D5F4 RID: 54772
-		// (get) Token: 0x06032F82 RID: 208770 RVA: 0x006E0229 File Offset: 0x006DE429
-		// (set) Token: 0x06032F83 RID: 208771 RVA: 0x006E0231 File Offset: 0x006DE431
+		// Token: 0x1700E1D7 RID: 57815
+		// (get) Token: 0x06036223 RID: 221731 RVA: 0x007407DD File Offset: 0x0073E9DD
+		// (set) Token: 0x06036224 RID: 221732 RVA: 0x007407E5 File Offset: 0x0073E9E5
 		public IPlaySpineAnimationT Config { get; set; }
 
-		// Token: 0x06032F84 RID: 208772 RVA: 0x006E023A File Offset: 0x006DE43A
+		// Token: 0x06036225 RID: 221733 RVA: 0x007407EE File Offset: 0x0073E9EE
 		public ISetSpineAnimationT()
 		{
 			this.Config = null;

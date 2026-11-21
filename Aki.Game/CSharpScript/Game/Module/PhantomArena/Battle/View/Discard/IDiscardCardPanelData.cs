@@ -7,38 +7,38 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Discard
 {
-	// Token: 0x02005265 RID: 21093
+	// Token: 0x02004235 RID: 16949
 	[NullableContext(1)]
 	public interface IDiscardCardPanelData
 	{
-		// Token: 0x17008264 RID: 33380
-		// (get) Token: 0x06035EDB RID: 220891
-		// (set) Token: 0x06035EDC RID: 220892
+		// Token: 0x17005624 RID: 22052
+		// (get) Token: 0x0602ADD6 RID: 175574
+		// (set) Token: 0x0602ADD7 RID: 175575
 		Func<List<int>, UniTask> ConfirmFunc { get; set; }
 
-		// Token: 0x17008265 RID: 33381
-		// (get) Token: 0x06035EDD RID: 220893
-		// (set) Token: 0x06035EDE RID: 220894
+		// Token: 0x17005625 RID: 22053
+		// (get) Token: 0x0602ADD8 RID: 175576
+		// (set) Token: 0x0602ADD9 RID: 175577
 		int LimitCount { get; set; }
 
-		// Token: 0x17008266 RID: 33382
-		// (get) Token: 0x06035EDF RID: 220895
-		// (set) Token: 0x06035EE0 RID: 220896
+		// Token: 0x17005626 RID: 22054
+		// (get) Token: 0x0602ADDA RID: 175578
+		// (set) Token: 0x0602ADDB RID: 175579
 		List<PhantomCardData> CardDataList { get; set; }
 
-		// Token: 0x17008267 RID: 33383
-		// (get) Token: 0x06035EE1 RID: 220897
-		// (set) Token: 0x06035EE2 RID: 220898
+		// Token: 0x17005627 RID: 22055
+		// (get) Token: 0x0602ADDC RID: 175580
+		// (set) Token: 0x0602ADDD RID: 175581
 		string TitleTips { get; set; }
 
-		// Token: 0x17008268 RID: 33384
-		// (get) Token: 0x06035EE3 RID: 220899
-		// (set) Token: 0x06035EE4 RID: 220900
+		// Token: 0x17005628 RID: 22056
+		// (get) Token: 0x0602ADDE RID: 175582
+		// (set) Token: 0x0602ADDF RID: 175583
 		string SelectedTips { get; set; }
 
-		// Token: 0x17008269 RID: 33385
-		// (get) Token: 0x06035EE5 RID: 220901
-		// (set) Token: 0x06035EE6 RID: 220902
+		// Token: 0x17005629 RID: 22057
+		// (get) Token: 0x0602ADE0 RID: 175584
+		// (set) Token: 0x0602ADE1 RID: 175585
 		EBvbPlayerOperationType? GuideType { get; set; }
 	}
 }

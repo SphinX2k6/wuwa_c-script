@@ -2,24 +2,24 @@
 
 namespace CSharpScript.Game.LevelGamePlay.RollBlock
 {
-	// Token: 0x02006AA3 RID: 27299
+	// Token: 0x02005C00 RID: 23552
 	public enum ERollBlockInitState
 	{
-		// Token: 0x040236EB RID: 145131
+		// Token: 0x0401E8DD RID: 125149
 		None,
-		// Token: 0x040236EC RID: 145132
+		// Token: 0x0401E8DE RID: 125150
 		Enter,
-		// Token: 0x040236ED RID: 145133
+		// Token: 0x0401E8DF RID: 125151
 		WaitEntitiesCreate,
-		// Token: 0x040236EE RID: 145134
+		// Token: 0x0401E8E0 RID: 125152
 		WaitSceneItemLoadCompleted,
-		// Token: 0x040236EF RID: 145135
+		// Token: 0x0401E8E1 RID: 125153
 		HandleBirthEffect,
-		// Token: 0x040236F0 RID: 145136
+		// Token: 0x0401E8E2 RID: 125154
 		WaitGuideGroupFinished,
-		// Token: 0x040236F1 RID: 145137
+		// Token: 0x0401E8E3 RID: 125155
 		WaitGameplayReadyResponse,
-		// Token: 0x040236F2 RID: 145138
+		// Token: 0x0401E8E4 RID: 125156
 		AllCompleted
 	}
 }

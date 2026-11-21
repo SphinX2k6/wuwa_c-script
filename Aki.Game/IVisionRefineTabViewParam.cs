@@ -2,47 +2,47 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200172F RID: 5935
+// Token: 0x02000BE7 RID: 3047
 public interface IVisionRefineTabViewParam
 {
-	// Token: 0x17000E34 RID: 3636
-	// (get) Token: 0x0600AB72 RID: 43890
-	// (set) Token: 0x0600AB73 RID: 43891
+	// Token: 0x17000E55 RID: 3669
+	// (get) Token: 0x06007F54 RID: 32596
+	// (set) Token: 0x06007F55 RID: 32597
 	ERefineViewState ViewState { get; set; }
 
-	// Token: 0x17000E35 RID: 3637
-	// (get) Token: 0x0600AB74 RID: 43892
-	// (set) Token: 0x0600AB75 RID: 43893
+	// Token: 0x17000E56 RID: 3670
+	// (get) Token: 0x06007F56 RID: 32598
+	// (set) Token: 0x06007F57 RID: 32599
 	EVisionRefineRefineType? RefineType { get; set; }
 
-	// Token: 0x17000E36 RID: 3638
-	// (get) Token: 0x0600AB76 RID: 43894
-	// (set) Token: 0x0600AB77 RID: 43895
+	// Token: 0x17000E57 RID: 3671
+	// (get) Token: 0x06007F58 RID: 32600
+	// (set) Token: 0x06007F59 RID: 32601
 	int? UniqueId { get; set; }
 
-	// Token: 0x17000E37 RID: 3639
-	// (get) Token: 0x0600AB78 RID: 43896
-	// (set) Token: 0x0600AB79 RID: 43897
+	// Token: 0x17000E58 RID: 3672
+	// (get) Token: 0x06007F5A RID: 32602
+	// (set) Token: 0x06007F5B RID: 32603
 	bool? ActiveCaptionItem { get; set; }
 
-	// Token: 0x17000E38 RID: 3640
-	// (get) Token: 0x0600AB7A RID: 43898
-	// (set) Token: 0x0600AB7B RID: 43899
+	// Token: 0x17000E59 RID: 3673
+	// (get) Token: 0x06007F5C RID: 32604
+	// (set) Token: 0x06007F5D RID: 32605
 	bool? SlotInteractive { get; set; }
 
-	// Token: 0x17000E39 RID: 3641
-	// (get) Token: 0x0600AB7C RID: 43900
-	// (set) Token: 0x0600AB7D RID: 43901
+	// Token: 0x17000E5A RID: 3674
+	// (get) Token: 0x06007F5E RID: 32606
+	// (set) Token: 0x06007F5F RID: 32607
 	bool? ResultShowTips { get; set; }
 
-	// Token: 0x17000E3A RID: 3642
-	// (get) Token: 0x0600AB7E RID: 43902
-	// (set) Token: 0x0600AB7F RID: 43903
+	// Token: 0x17000E5B RID: 3675
+	// (get) Token: 0x06007F60 RID: 32608
+	// (set) Token: 0x06007F61 RID: 32609
 	bool? IsSingleMode { get; set; }
 
-	// Token: 0x17000E3B RID: 3643
-	// (get) Token: 0x0600AB80 RID: 43904
-	// (set) Token: 0x0600AB81 RID: 43905
+	// Token: 0x17000E5C RID: 3676
+	// (get) Token: 0x06007F62 RID: 32610
+	// (set) Token: 0x06007F63 RID: 32611
 	[Nullable(new byte[]
 	{
 		2,
@@ -58,9 +58,9 @@ public interface IVisionRefineTabViewParam
 		1
 	})] set; }
 
-	// Token: 0x17000E3C RID: 3644
-	// (get) Token: 0x0600AB82 RID: 43906
-	// (set) Token: 0x0600AB83 RID: 43907
+	// Token: 0x17000E5D RID: 3677
+	// (get) Token: 0x06007F64 RID: 32612
+	// (set) Token: 0x06007F65 RID: 32613
 	[Nullable(new byte[]
 	{
 		2,

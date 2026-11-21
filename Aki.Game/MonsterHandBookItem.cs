@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001E30 RID: 7728
+// Token: 0x020012F2 RID: 4850
 [NullableContext(1)]
 [Nullable(0)]
 public class MonsterHandBookItem : UiPanelBase, IDynamicScrollItem<MonsterHandBookDynamicData>
 {
-	// Token: 0x0600EAFA RID: 60154 RVA: 0x0037ABE0 File Offset: 0x00378DE0
+	// Token: 0x0600BF19 RID: 48921 RVA: 0x0038686C File Offset: 0x00384A6C
 	public UniTask Init(UUIItem actor)
 	{
 		MonsterHandBookItem.<Init>d__3 <Init>d__;
@@ -24,7 +24,7 @@ public class MonsterHandBookItem : UiPanelBase, IDynamicScrollItem<MonsterHandBo
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600EAFB RID: 60155 RVA: 0x0037AC2B File Offset: 0x00378E2B
+	// Token: 0x0600BF1A RID: 48922 RVA: 0x003868B7 File Offset: 0x00384AB7
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +34,7 @@ public class MonsterHandBookItem : UiPanelBase, IDynamicScrollItem<MonsterHandBo
 		};
 	}
 
-	// Token: 0x0600EAFC RID: 60156 RVA: 0x0037AC64 File Offset: 0x00378E64
+	// Token: 0x0600BF1B RID: 48923 RVA: 0x003868F0 File Offset: 0x00384AF0
 	private UniTask InitChildItem()
 	{
 		MonsterHandBookItem.<InitChildItem>d__5 <InitChildItem>d__;
@@ -45,7 +45,7 @@ public class MonsterHandBookItem : UiPanelBase, IDynamicScrollItem<MonsterHandBo
 		return <InitChildItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600EAFD RID: 60157 RVA: 0x0037ACA7 File Offset: 0x00378EA7
+	// Token: 0x0600BF1C RID: 48924 RVA: 0x00386933 File Offset: 0x00384B33
 	[return: Nullable(2)]
 	public AUIBaseActor GetUsingItem(MonsterHandBookDynamicData data)
 	{
@@ -56,13 +56,13 @@ public class MonsterHandBookItem : UiPanelBase, IDynamicScrollItem<MonsterHandBo
 		return base.GetItem(1).GetOwner() as AUIBaseActor;
 	}
 
-	// Token: 0x0600EAFE RID: 60158 RVA: 0x0037ACD9 File Offset: 0x00378ED9
+	// Token: 0x0600BF1D RID: 48925 RVA: 0x00386965 File Offset: 0x00384B65
 	public void ClearItem()
 	{
 		base.Destroy(null);
 	}
 
-	// Token: 0x0600EAFF RID: 60159 RVA: 0x0037ACE4 File Offset: 0x00378EE4
+	// Token: 0x0600BF1E RID: 48926 RVA: 0x00386970 File Offset: 0x00384B70
 	public void Update(MonsterHandBookDynamicData data, int gridIndex)
 	{
 		if (this.MonsterHandBookTitleItem != null)
@@ -89,7 +89,7 @@ public class MonsterHandBookItem : UiPanelBase, IDynamicScrollItem<MonsterHandBo
 		}
 	}
 
-	// Token: 0x04006D02 RID: 27906
+	// Token: 0x04006DE3 RID: 28131
 	[Nullable(new byte[]
 	{
 		2,
@@ -97,11 +97,11 @@ public class MonsterHandBookItem : UiPanelBase, IDynamicScrollItem<MonsterHandBo
 	})]
 	public Action<UUIExtendToggle, int, bool> OnClickCallBack;
 
-	// Token: 0x04006D03 RID: 27907
+	// Token: 0x04006DE4 RID: 28132
 	[Nullable(2)]
 	private MonsterHandBookTitleItem MonsterHandBookTitleItem;
 
-	// Token: 0x04006D04 RID: 27908
+	// Token: 0x04006DE5 RID: 28133
 	[Nullable(2)]
 	private MonsterHandBookLayoutItem MonsterHandBookLayoutItem;
 }

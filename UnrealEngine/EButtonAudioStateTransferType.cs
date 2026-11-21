@@ -4,24 +4,24 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001FD6 RID: 8150
+	// Token: 0x02000649 RID: 1609
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/LGUI.EButtonAudioStateTransferType")]
 	public enum EButtonAudioStateTransferType : byte
 	{
-		// Token: 0x04010B32 RID: 68402
+		// Token: 0x04003D99 RID: 15769
 		None,
-		// Token: 0x04010B33 RID: 68403
+		// Token: 0x04003D9A RID: 15770
 		NormalToHighLight,
-		// Token: 0x04010B34 RID: 68404
+		// Token: 0x04003D9B RID: 15771
 		HighlightToNormal,
-		// Token: 0x04010B35 RID: 68405
+		// Token: 0x04003D9C RID: 15772
 		HighLightToPress,
-		// Token: 0x04010B36 RID: 68406
+		// Token: 0x04003D9D RID: 15773
 		PressToRelease,
-		// Token: 0x04010B37 RID: 68407
+		// Token: 0x04003D9E RID: 15774
 		DisabledPress,
-		// Token: 0x04010B38 RID: 68408
+		// Token: 0x04003D9F RID: 15775
 		EButtonAudioStateTransferType_MAX
 	}
 }

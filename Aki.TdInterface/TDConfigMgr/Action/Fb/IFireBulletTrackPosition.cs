@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026B2 RID: 9906
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002975 RID: 10613
 	public class IFireBulletTrackPosition : IFireBulletType
 	{
-		// Token: 0x0600DDA3 RID: 56739 RVA: 0x0020EA3E File Offset: 0x0020CC3E
+		// Token: 0x0600EB7A RID: 60282 RVA: 0x0022B1DE File Offset: 0x002293DE
 		public static IFireBulletTrackPosition Create(IFireBulletTrackPosition? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004201 RID: 16897
-		// (get) Token: 0x0600DDA4 RID: 56740 RVA: 0x0020EA5D File Offset: 0x0020CC5D
+		// Token: 0x1700453E RID: 17726
+		// (get) Token: 0x0600EB7B RID: 60283 RVA: 0x0022B1FD File Offset: 0x002293FD
 		public override EFireBulletType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004202 RID: 16898
-		// (get) Token: 0x0600DDA5 RID: 56741 RVA: 0x0020EA6A File Offset: 0x0020CC6A
+		// Token: 0x1700453F RID: 17727
+		// (get) Token: 0x0600EB7C RID: 60284 RVA: 0x0022B20A File Offset: 0x0022940A
 		public virtual long BulletId
 		{
 			get
@@ -42,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004203 RID: 16899
-		// (get) Token: 0x0600DDA6 RID: 56742 RVA: 0x0020EA77 File Offset: 0x0020CC77
+		// Token: 0x17004540 RID: 17728
+		// (get) Token: 0x0600EB7D RID: 60285 RVA: 0x0022B217 File Offset: 0x00229417
 		public virtual ITargetEntityType Launcher
 		{
 			get
@@ -58,8 +55,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004204 RID: 16900
-		// (get) Token: 0x0600DDA7 RID: 56743 RVA: 0x0020EAA6 File Offset: 0x0020CCA6
+		// Token: 0x17004541 RID: 17729
+		// (get) Token: 0x0600EB7E RID: 60286 RVA: 0x0022B246 File Offset: 0x00229446
 		public virtual int PositionEntityId
 		{
 			get
@@ -68,13 +65,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B10 RID: 31504
+		// Token: 0x040081AD RID: 33197
 		private IFireBulletTrackPosition Instance;
 
-		// Token: 0x04007B11 RID: 31505
+		// Token: 0x040081AE RID: 33198
 		private ITargetEntityType _LauncherCache;
 
-		// Token: 0x04007B12 RID: 31506
+		// Token: 0x040081AF RID: 33199
 		private bool _LauncherInited;
 	}
 }

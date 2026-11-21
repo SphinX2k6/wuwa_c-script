@@ -12,7 +12,7 @@ namespace Aki.Protocol
 	[NetMessage(EMessageId.AbyssRewardsUpdateNotify)]
 	public sealed class AbyssRewardsUpdateNotify : IMessage<AbyssRewardsUpdateNotify>, IMessage, IEquatable<AbyssRewardsUpdateNotify>, IDeepCloneable<AbyssRewardsUpdateNotify>, IBufferMessage
 	{
-		// Token: 0x060013BC RID: 5052 RVA: 0x00035634 File Offset: 0x00033834
+		// Token: 0x060013E7 RID: 5095 RVA: 0x00035BED File Offset: 0x00033DED
 		[NullableContext(1)]
 		public static AbyssRewardsUpdateNotify Create()
 		{
@@ -20,7 +20,7 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x17000108 RID: 264
-		// (get) Token: 0x060013BD RID: 5053 RVA: 0x0003563B File Offset: 0x0003383B
+		// (get) Token: 0x060013E8 RID: 5096 RVA: 0x00035BF4 File Offset: 0x00033DF4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -32,7 +32,7 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x17000109 RID: 265
-		// (get) Token: 0x060013BE RID: 5054 RVA: 0x0003563E File Offset: 0x0003383E
+		// (get) Token: 0x060013E9 RID: 5097 RVA: 0x00035BF7 File Offset: 0x00033DF7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060013BF RID: 5055 RVA: 0x00035645 File Offset: 0x00033845
+		// Token: 0x060013EA RID: 5098 RVA: 0x00035BFE File Offset: 0x00033DFE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AbyssRewardsUpdateNotify()
 		{
 		}
 
-		// Token: 0x060013C0 RID: 5056 RVA: 0x00035658 File Offset: 0x00033858
+		// Token: 0x060013EB RID: 5099 RVA: 0x00035C11 File Offset: 0x00033E11
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AbyssRewardsUpdateNotify(AbyssRewardsUpdateNotify other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060013C1 RID: 5057 RVA: 0x00035682 File Offset: 0x00033882
+		// Token: 0x060013EC RID: 5100 RVA: 0x00035C3B File Offset: 0x00033E3B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AbyssRewardsUpdateNotify Clone()
@@ -68,7 +68,7 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x1700010A RID: 266
-		// (get) Token: 0x060013C2 RID: 5058 RVA: 0x0003568A File Offset: 0x0003388A
+		// (get) Token: 0x060013ED RID: 5101 RVA: 0x00035C43 File Offset: 0x00033E43
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<AbyssRewardInfo> RewardInfos
@@ -79,7 +79,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060013C3 RID: 5059 RVA: 0x00035692 File Offset: 0x00033892
+		// Token: 0x060013EE RID: 5102 RVA: 0x00035C4B File Offset: 0x00033E4B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -87,7 +87,7 @@ namespace Aki.Protocol
 			return this.Equals(other as AbyssRewardsUpdateNotify);
 		}
 
-		// Token: 0x060013C4 RID: 5060 RVA: 0x000356A0 File Offset: 0x000338A0
+		// Token: 0x060013EF RID: 5103 RVA: 0x00035C59 File Offset: 0x00033E59
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(AbyssRewardsUpdateNotify other)
@@ -95,7 +95,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.rewardInfos_.Equals(other.rewardInfos_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060013C5 RID: 5061 RVA: 0x000356D4 File Offset: 0x000338D4
+		// Token: 0x060013F0 RID: 5104 RVA: 0x00035C8C File Offset: 0x00033E8C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060013C6 RID: 5062 RVA: 0x00035708 File Offset: 0x00033908
+		// Token: 0x060013F1 RID: 5105 RVA: 0x00035CC0 File Offset: 0x00033EC0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060013C7 RID: 5063 RVA: 0x00035715 File Offset: 0x00033915
+		// Token: 0x060013F2 RID: 5106 RVA: 0x00035CCD File Offset: 0x00033ECD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -125,7 +125,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060013C8 RID: 5064 RVA: 0x0003571E File Offset: 0x0003391E
+		// Token: 0x060013F3 RID: 5107 RVA: 0x00035CD6 File Offset: 0x00033ED6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -137,7 +137,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060013C9 RID: 5065 RVA: 0x00035748 File Offset: 0x00033948
+		// Token: 0x060013F4 RID: 5108 RVA: 0x00035D00 File Offset: 0x00033F00
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -151,7 +151,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060013CA RID: 5066 RVA: 0x00035781 File Offset: 0x00033981
+		// Token: 0x060013F5 RID: 5109 RVA: 0x00035D39 File Offset: 0x00033F39
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(AbyssRewardsUpdateNotify other)
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060013CB RID: 5067 RVA: 0x000357AF File Offset: 0x000339AF
+		// Token: 0x060013F6 RID: 5110 RVA: 0x00035D67 File Offset: 0x00033F67
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -172,7 +172,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060013CC RID: 5068 RVA: 0x000357B8 File Offset: 0x000339B8
+		// Token: 0x060013F7 RID: 5111 RVA: 0x00035D70 File Offset: 0x00033F70
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -184,7 +184,7 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 106U)
+				if (num != 114U)
 				{
 					this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 				}
@@ -195,16 +195,16 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04002027 RID: 8231
+		// Token: 0x0400207D RID: 8317
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04002028 RID: 8232
-		public const int RewardInfosFieldNumber = 13;
+		// Token: 0x0400207E RID: 8318
+		public const int RewardInfosFieldNumber = 14;
 
-		// Token: 0x04002029 RID: 8233
-		private static readonly FieldCodec<AbyssRewardInfo> _repeated_rewardInfos_codec = FieldCodec.ForMessage<AbyssRewardInfo>(106U, AbyssRewardInfo.Parser);
+		// Token: 0x0400207F RID: 8319
+		private static readonly FieldCodec<AbyssRewardInfo> _repeated_rewardInfos_codec = FieldCodec.ForMessage<AbyssRewardInfo>(114U, AbyssRewardInfo.Parser);
 
-		// Token: 0x0400202A RID: 8234
+		// Token: 0x04002080 RID: 8320
 		private readonly RepeatedField<AbyssRewardInfo> rewardInfos_ = new RepeatedField<AbyssRewardInfo>();
 	}
 }

@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200180B RID: 6155
+	// Token: 0x02001996 RID: 6550
 	public class IBlackCatWarning_SetValue
 	{
-		// Token: 0x040053AE RID: 21422
+		// Token: 0x040057F9 RID: 22521
 		public ECommonTipType Type;
 
-		// Token: 0x040053AF RID: 21423
-		[Nullable(1)]
+		// Token: 0x040057FA RID: 22522
 		public string WarningText;
 	}
 }

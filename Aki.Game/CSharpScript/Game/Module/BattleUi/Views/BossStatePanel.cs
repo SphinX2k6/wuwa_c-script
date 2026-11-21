@@ -13,12 +13,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D05 RID: 23813
+	// Token: 0x02004CE7 RID: 19687
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BossStatePanel : BattleChildViewPanel
 	{
-		// Token: 0x0603C4F6 RID: 247030 RVA: 0x00E7215C File Offset: 0x00E7035C
+		// Token: 0x0603144F RID: 201807 RVA: 0x00DC27C4 File Offset: 0x00DC09C4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -30,14 +30,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C4F7 RID: 247031 RVA: 0x00E721A4 File Offset: 0x00E703A4
+		// Token: 0x06031450 RID: 201808 RVA: 0x00DC280C File Offset: 0x00DC0A0C
 		public override void InitializeTemp()
 		{
 			this.StateViewDisplayDistance = (float)ConfigCommonParamById.GetIntConfig("BossStateShowDistance").Value;
 			this.StateViewDisplayMaxDistance = (float)ConfigCommonParamById.GetIntConfig("BossStateShowMaxDistance").Value;
 		}
 
-		// Token: 0x0603C4F8 RID: 247032 RVA: 0x00E721E4 File Offset: 0x00E703E4
+		// Token: 0x06031451 RID: 201809 RVA: 0x00DC284C File Offset: 0x00DC0A4C
 		public override UniTask InitializeAsync()
 		{
 			BossStatePanel.<InitializeAsync>d__15 <InitializeAsync>d__;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitializeAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C4F9 RID: 247033 RVA: 0x00E72228 File Offset: 0x00E70428
+		// Token: 0x06031452 RID: 201810 RVA: 0x00DC2890 File Offset: 0x00DC0A90
 		public override void Reset()
 		{
 			this.DeactivateBossStateView(true);
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.Reset();
 		}
 
-		// Token: 0x0603C4FA RID: 247034 RVA: 0x00E7227C File Offset: 0x00E7047C
+		// Token: 0x06031453 RID: 201811 RVA: 0x00DC28E4 File Offset: 0x00DC0AE4
 		public void InitializeBossBarList()
 		{
 			IReadOnlyList<EntityHandle> allEntities = CreatureModel.Instance.GetAllEntities();
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C4FB RID: 247035 RVA: 0x00E722FC File Offset: 0x00E704FC
+		// Token: 0x06031454 RID: 201812 RVA: 0x00DC2964 File Offset: 0x00DC0B64
 		private UniTask InitAllBossStateViewAsync()
 		{
 			BossStatePanel.<InitAllBossStateViewAsync>d__18 <InitAllBossStateViewAsync>d__;
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitAllBossStateViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C4FC RID: 247036 RVA: 0x00E72340 File Offset: 0x00E70540
+		// Token: 0x06031455 RID: 201813 RVA: 0x00DC29A8 File Offset: 0x00DC0BA8
 		private void ResetAllBossStateView()
 		{
 			if (this.BossStateViewMap != null)
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C4FD RID: 247037 RVA: 0x00E723A4 File Offset: 0x00E705A4
+		// Token: 0x06031456 RID: 201814 RVA: 0x00DC2A0C File Offset: 0x00DC0C0C
 		private UniTask ActivateBossStateView(Entity bossEntity, EBossStateViewType bossStateViewType, [Nullable(2)] IDoubleViewBossStateViewStyle bossStateViewStyle = null)
 		{
 			BossStatePanel.<ActivateBossStateView>d__20 <ActivateBossStateView>d__;
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <ActivateBossStateView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C4FE RID: 247038 RVA: 0x00E72400 File Offset: 0x00E70600
+		// Token: 0x06031457 RID: 201815 RVA: 0x00DC2A68 File Offset: 0x00DC0C68
 		private void DeactivateBossStateView(bool immediately = true)
 		{
 			if (this.CurrentBossStateView == null)
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			BattleUiModel.Instance.UpdateBossStateArea(EBossStateAreaType.BossHeadState, false);
 		}
 
-		// Token: 0x0603C4FF RID: 247039 RVA: 0x00E724B3 File Offset: 0x00E706B3
+		// Token: 0x06031458 RID: 201816 RVA: 0x00DC2B1B File Offset: 0x00DC0D1B
 		public override void OnTickBattleChildViewPanel(float delta)
 		{
 			this.TryRefreshTargetBossBar();
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			towerMergeMonsterHeadStateView.Tick(delta);
 		}
 
-		// Token: 0x0603C500 RID: 247040 RVA: 0x00E724F0 File Offset: 0x00E706F0
+		// Token: 0x06031459 RID: 201817 RVA: 0x00DC2B58 File Offset: 0x00DC0D58
 		private void OnChangeBossBar(int entityId)
 		{
 			if (this.CurrentBossStateView != null)
@@ -234,7 +234,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ActivateBossStateView(entity, ebossStateViewType3, doubleViewBossStateViewStyle2).Forget();
 		}
 
-		// Token: 0x0603C501 RID: 247041 RVA: 0x00E725F8 File Offset: 0x00E707F8
+		// Token: 0x0603145A RID: 201818 RVA: 0x00DC2C60 File Offset: 0x00DC0E60
 		private void TryRefreshTargetBossBar()
 		{
 			int targetEntityId = this.GetTargetEntityId();
@@ -253,7 +253,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C502 RID: 247042 RVA: 0x00E72648 File Offset: 0x00E70848
+		// Token: 0x0603145B RID: 201819 RVA: 0x00DC2CB0 File Offset: 0x00DC0EB0
 		private bool IsTwinEntity(int entityId1, int entityId2)
 		{
 			if (!(this.CurrentBossStateView is CommonBossStateDoubleView))
@@ -283,7 +283,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return false;
 		}
 
-		// Token: 0x0603C503 RID: 247043 RVA: 0x00E72700 File Offset: 0x00E70900
+		// Token: 0x0603145C RID: 201820 RVA: 0x00DC2D68 File Offset: 0x00DC0F68
 		private bool IsTwinByBindMonsterEntityId(CreatureDataComponent creatureDataCp1, CreatureDataComponent creatureDataCp2)
 		{
 			int pbDataId = creatureDataCp1.GetPbDataId();
@@ -335,19 +335,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return false;
 		}
 
-		// Token: 0x0603C504 RID: 247044 RVA: 0x00E727C4 File Offset: 0x00E709C4
+		// Token: 0x0603145D RID: 201821 RVA: 0x00DC2E2C File Offset: 0x00DC102C
 		private bool IsTwinBySummonerRelation(CreatureDataComponent creatureDataCp1, CreatureDataComponent creatureDataCp2)
 		{
 			return (creatureDataCp1.GetSummonerId() > 0L && creatureDataCp2.CustomServerEntityIds.Contains(creatureDataCp1.GetCreatureDataId())) || (creatureDataCp2.GetSummonerId() > 0L && creatureDataCp1.CustomServerEntityIds.Contains(creatureDataCp2.GetCreatureDataId()));
 		}
 
-		// Token: 0x0603C505 RID: 247045 RVA: 0x00E72810 File Offset: 0x00E70A10
+		// Token: 0x0603145E RID: 201822 RVA: 0x00DC2E78 File Offset: 0x00DC1078
 		private void ResetBossBarData()
 		{
 			this.TargetEntityIdInternal = -1;
 		}
 
-		// Token: 0x0603C506 RID: 247046 RVA: 0x00E7281C File Offset: 0x00E70A1C
+		// Token: 0x0603145F RID: 201823 RVA: 0x00DC2E84 File Offset: 0x00DC1084
 		private int GetTargetEntityId()
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -398,7 +398,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return result;
 		}
 
-		// Token: 0x0603C507 RID: 247047 RVA: 0x00E72938 File Offset: 0x00E70B38
+		// Token: 0x06031460 RID: 201824 RVA: 0x00DC2FA0 File Offset: 0x00DC11A0
 		[NullableContext(2)]
 		private MonsterComponent GetTargetMonsterConfig()
 		{
@@ -409,7 +409,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return this.GetMonsterComponent(this.TargetEntityIdInternal);
 		}
 
-		// Token: 0x0603C508 RID: 247048 RVA: 0x00E72950 File Offset: 0x00E70B50
+		// Token: 0x06031461 RID: 201825 RVA: 0x00DC2FB8 File Offset: 0x00DC11B8
 		[NullableContext(2)]
 		private MonsterComponent GetMonsterComponent(int entityId)
 		{
@@ -421,13 +421,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return component.GetMonsterComponent();
 		}
 
-		// Token: 0x0603C509 RID: 247049 RVA: 0x00E7296D File Offset: 0x00E70B6D
+		// Token: 0x06031462 RID: 201826 RVA: 0x00DC2FD5 File Offset: 0x00DC11D5
 		protected bool IsTargetExist()
 		{
 			return this.TargetEntityIdInternal != -1;
 		}
 
-		// Token: 0x0603C50A RID: 247050 RVA: 0x00E7297C File Offset: 0x00E70B7C
+		// Token: 0x06031463 RID: 201827 RVA: 0x00DC2FE4 File Offset: 0x00DC11E4
 		[NullableContext(2)]
 		private bool TryAddBossBar(EntityHandle handle)
 		{
@@ -467,7 +467,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return true;
 		}
 
-		// Token: 0x0603C50B RID: 247051 RVA: 0x00E72A30 File Offset: 0x00E70C30
+		// Token: 0x06031464 RID: 201828 RVA: 0x00DC3098 File Offset: 0x00DC1298
 		protected override void AddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.CharOnBuffAddUITexture, new Action<int, GameplayCue, bool, int>(this.OnAddOrRemoveBuff));
@@ -479,7 +479,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Add(EEventName.GmHideMissionAndBossName, new Action<bool>(this.OnGmHideBossName));
 		}
 
-		// Token: 0x0603C50C RID: 247052 RVA: 0x00E72B04 File Offset: 0x00E70D04
+		// Token: 0x06031465 RID: 201829 RVA: 0x00DC316C File Offset: 0x00DC136C
 		protected override void RemoveEvents()
 		{
 			EventSystem.Instance.RemoveAllTargetUseKey(this);
@@ -492,7 +492,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Remove(EEventName.GmHideMissionAndBossName, new Action<bool>(this.OnGmHideBossName));
 		}
 
-		// Token: 0x0603C50D RID: 247053 RVA: 0x00E72BE1 File Offset: 0x00E70DE1
+		// Token: 0x06031466 RID: 201830 RVA: 0x00DC3249 File Offset: 0x00DC1449
 		[NullableContext(2)]
 		public void OnCreateEntity(EntityHandle handle)
 		{
@@ -506,7 +506,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C50E RID: 247054 RVA: 0x00E72C10 File Offset: 0x00E70E10
+		// Token: 0x06031467 RID: 201831 RVA: 0x00DC3278 File Offset: 0x00DC1478
 		[NullableContext(2)]
 		private void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle handle)
 		{
@@ -530,7 +530,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C50F RID: 247055 RVA: 0x00E72CA8 File Offset: 0x00E70EA8
+		// Token: 0x06031468 RID: 201832 RVA: 0x00DC3310 File Offset: 0x00DC1510
 		private void OnAddOrRemoveBuff(int entityId, GameplayCue cue, bool isAdd, int handleId)
 		{
 			if (this.TargetEntityIdInternal != entityId && !this.IsTwinEntity(this.TargetEntityIdInternal, entityId))
@@ -550,7 +550,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			currentBossStateView.ChangeBuff(cue, isAdd, handleId, entityId);
 		}
 
-		// Token: 0x0603C510 RID: 247056 RVA: 0x00E72CFB File Offset: 0x00E70EFB
+		// Token: 0x06031469 RID: 201833 RVA: 0x00DC3363 File Offset: 0x00DC1563
 		[NullableContext(2)]
 		public override AActor GetUiActorForGuide()
 		{
@@ -562,7 +562,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return currentBossStateView.GetRootActor();
 		}
 
-		// Token: 0x0603C511 RID: 247057 RVA: 0x00E72D10 File Offset: 0x00E70F10
+		// Token: 0x0603146A RID: 201834 RVA: 0x00DC3378 File Offset: 0x00DC1578
 		private void OnMergeHeadStateVisibleChanged(MergeHeadStateInfo info)
 		{
 			BattleUiModel.Instance.UpdateBossStateArea(EBossStateAreaType.MergeHeadState, info.IsVisible);
@@ -598,7 +598,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}).Forget();
 		}
 
-		// Token: 0x0603C512 RID: 247058 RVA: 0x00E72DFC File Offset: 0x00E70FFC
+		// Token: 0x0603146B RID: 201835 RVA: 0x00DC3464 File Offset: 0x00DC1664
 		private void OnMergeHeadStateHealthChanged(MergeHeadStateInfo info)
 		{
 			if (this.MergeMonsterHeadStateView == null)
@@ -612,7 +612,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.MergeMonsterHeadStateView.OnHealthChanged();
 		}
 
-		// Token: 0x0603C513 RID: 247059 RVA: 0x00E72E24 File Offset: 0x00E71024
+		// Token: 0x0603146C RID: 201836 RVA: 0x00DC348C File Offset: 0x00DC168C
 		private void OnTowerMergeHeadStateVisibleChanged(TowerMergeHeadStateInfo info)
 		{
 			BattleUiModel.Instance.UpdateBossStateArea(EBossStateAreaType.TowerMergeHeadState, info.IsVisible);
@@ -648,7 +648,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}).Forget();
 		}
 
-		// Token: 0x0603C514 RID: 247060 RVA: 0x00E72F10 File Offset: 0x00E71110
+		// Token: 0x0603146D RID: 201837 RVA: 0x00DC3578 File Offset: 0x00DC1778
 		private void OnTowerMergeHeadStateMonsterHpChanged(TowerMergeHeadStateInfo info)
 		{
 			if (this.TowerMergeMonsterHeadStateView == null)
@@ -662,7 +662,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TowerMergeMonsterHeadStateView.OnHealthChanged();
 		}
 
-		// Token: 0x0603C515 RID: 247061 RVA: 0x00E72F35 File Offset: 0x00E71135
+		// Token: 0x0603146E RID: 201838 RVA: 0x00DC359D File Offset: 0x00DC179D
 		private void OnLanguageChange(string s, string s1)
 		{
 			BossStateViewBase currentBossStateView = this.CurrentBossStateView;
@@ -683,7 +683,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			towerMergeMonsterHeadStateView.OnLanguageChange();
 		}
 
-		// Token: 0x0603C516 RID: 247062 RVA: 0x00E72F69 File Offset: 0x00E71169
+		// Token: 0x0603146F RID: 201839 RVA: 0x00DC35D1 File Offset: 0x00DC17D1
 		private void OnGmHideBossName(bool bVisible)
 		{
 			BossStateViewBase currentBossStateView = this.CurrentBossStateView;
@@ -694,11 +694,11 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			currentBossStateView.HideBossName(bVisible);
 		}
 
-		// Token: 0x0401F6C4 RID: 128708
+		// Token: 0x0401A17D RID: 106877
 		[StaticVariableRuleIgnore]
 		private static readonly Stat BattleViewTickStatsObject = Stat.Create("[BattleView]BossStatePanelTick", "", "");
 
-		// Token: 0x0401F6C5 RID: 128709
+		// Token: 0x0401A17E RID: 106878
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<EBossStateViewType, Func<BossStateViewBase>> BossStateViewClassMap = new Dictionary<EBossStateViewType, Func<BossStateViewBase>>
 		{
@@ -716,16 +716,16 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		};
 
-		// Token: 0x0401F6C6 RID: 128710
+		// Token: 0x0401A17F RID: 106879
 		private readonly HashSet<int> BossBarIdSet = new HashSet<int>();
 
-		// Token: 0x0401F6C7 RID: 128711
+		// Token: 0x0401A180 RID: 106880
 		private readonly Dictionary<int, float> BossBarSquaredDistanceMap = new Dictionary<int, float>();
 
-		// Token: 0x0401F6C8 RID: 128712
+		// Token: 0x0401A181 RID: 106881
 		private int TargetEntityIdInternal = -1;
 
-		// Token: 0x0401F6C9 RID: 128713
+		// Token: 0x0401A182 RID: 106882
 		[Nullable(new byte[]
 		{
 			2,
@@ -733,32 +733,32 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 		})]
 		private Dictionary<EBossStateViewType, BossStateViewBase> BossStateViewMap;
 
-		// Token: 0x0401F6CA RID: 128714
+		// Token: 0x0401A183 RID: 106883
 		[Nullable(2)]
 		private BossStateViewBase CurrentBossStateView;
 
-		// Token: 0x0401F6CB RID: 128715
+		// Token: 0x0401A184 RID: 106884
 		[Nullable(2)]
 		private MergeMonsterHeadStateView MergeMonsterHeadStateView;
 
-		// Token: 0x0401F6CC RID: 128716
+		// Token: 0x0401A185 RID: 106885
 		[Nullable(2)]
 		private TowerMergeMonsterHeadStateView TowerMergeMonsterHeadStateView;
 
-		// Token: 0x0401F6CD RID: 128717
+		// Token: 0x0401A186 RID: 106886
 		private float StateViewDisplayDistance;
 
-		// Token: 0x0401F6CE RID: 128718
+		// Token: 0x0401A187 RID: 106887
 		private float StateViewDisplayMaxDistance;
 
-		// Token: 0x0401F6CF RID: 128719
+		// Token: 0x0401A188 RID: 106888
 		private readonly List<int> TwinEntityIds = new List<int>();
 
-		// Token: 0x0200BF79 RID: 49017
+		// Token: 0x0200A97F RID: 43391
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x04039BD7 RID: 236503
+			// Token: 0x04034599 RID: 214425
 			BossStateItem
 		}
 	}

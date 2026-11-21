@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001287 RID: 4743
+	// Token: 0x020013C7 RID: 5063
 	public class ERollBlockInteractTypeJsonConverter : JsonConverter<ERollBlockInteractType>
 	{
-		// Token: 0x06006B08 RID: 27400 RVA: 0x00100C98 File Offset: 0x000FEE98
+		// Token: 0x0600715B RID: 29019 RVA: 0x0010E994 File Offset: 0x0010CB94
 		public override ERollBlockInteractType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Quest
 			return ERollBlockInteractTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x06006B09 RID: 27401 RVA: 0x00100CBC File Offset: 0x000FEEBC
+		// Token: 0x0600715C RID: 29020 RVA: 0x0010E9B8 File Offset: 0x0010CBB8
 		public override void Write(Utf8JsonWriter writer, ERollBlockInteractType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

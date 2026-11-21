@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020020F3 RID: 8435
+	// Token: 0x020006D2 RID: 1746
 	public sealed class FOnRebuildLayoutDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601FC15 RID: 130069 RVA: 0x002F3769 File Offset: 0x002F1969
+		// Token: 0x060094C0 RID: 38080 RVA: 0x000E057A File Offset: 0x000DE77A
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnRebuildLayoutDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601FC16 RID: 130070 RVA: 0x002F3775 File Offset: 0x002F1975
+		// Token: 0x060094C1 RID: 38081 RVA: 0x000E0586 File Offset: 0x000DE786
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnRebuildLayoutDelegate._FunctionPtr == IntPtr.Zero)
@@ -25,31 +25,30 @@ namespace UnrealEngine
 			return FOnRebuildLayoutDelegate._FunctionPtr;
 		}
 
-		// Token: 0x0601FC17 RID: 130071 RVA: 0x002F3798 File Offset: 0x002F1998
+		// Token: 0x060094C2 RID: 38082 RVA: 0x000E05A9 File Offset: 0x000DE7A9
 		public FOnRebuildLayoutDelegate()
 		{
 		}
 
-		// Token: 0x0601FC18 RID: 130072 RVA: 0x002F37A0 File Offset: 0x002F19A0
+		// Token: 0x060094C3 RID: 38083 RVA: 0x000E05B1 File Offset: 0x000DE7B1
 		[NullableContext(2)]
 		public FOnRebuildLayoutDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601FC19 RID: 130073 RVA: 0x002F37AA File Offset: 0x002F19AA
+		// Token: 0x060094C4 RID: 38084 RVA: 0x000E05BB File Offset: 0x000DE7BB
 		public FOnRebuildLayoutDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601FC1A RID: 130074 RVA: 0x002F37B5 File Offset: 0x002F19B5
+		// Token: 0x060094C5 RID: 38085 RVA: 0x000E05C6 File Offset: 0x000DE7C6
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<UUILayoutBase>) ?? ((Action<UUILayoutBase>)Delegate.CreateDelegate(typeof(Action<UUILayoutBase>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601FC1B RID: 130075 RVA: 0x002F37E7 File Offset: 0x002F19E7
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x060094C6 RID: 38086 RVA: 0x000E05F8 File Offset: 0x000DE7F8
 		public void Bind([Nullable(new byte[]
 		{
 			1,
@@ -68,10 +67,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FOnRebuildLayoutDelegate.RegisterId);
 		}
 
-		// Token: 0x0601FC1C RID: 130076 RVA: 0x002F3824 File Offset: 0x002F1A24
+		// Token: 0x060094C7 RID: 38087 RVA: 0x000E0634 File Offset: 0x000DE834
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(UUILayoutBase Layout)
 		{
 			FOnRebuildLayoutDelegate.__FOnRebuildLayoutDelegate_DelegateParams* ptr = stackalloc FOnRebuildLayoutDelegate.__FOnRebuildLayoutDelegate_DelegateParams[(UIntPtr)23] + 15L / (long)sizeof(FOnRebuildLayoutDelegate.__FOnRebuildLayoutDelegate_DelegateParams) & -16L;
@@ -80,10 +78,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x0601FC1D RID: 130077 RVA: 0x002F3870 File Offset: 0x002F1A70
+		// Token: 0x060094C8 RID: 38088 RVA: 0x000E0680 File Offset: 0x000DE880
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<UUILayoutBase> action = target as Action<UUILayoutBase>;
@@ -95,31 +92,31 @@ namespace UnrealEngine
 			action(orCreateUObjectByNativePointer);
 		}
 
-		// Token: 0x040111E6 RID: 70118
+		// Token: 0x040040B4 RID: 16564
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x040111E7 RID: 70119
+		// Token: 0x040040B5 RID: 16565
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/LGUI.OnRebuildLayoutDelegate__DelegateSignature";
 
-		// Token: 0x040111E8 RID: 70120
+		// Token: 0x040040B6 RID: 16566
 		private static int RegisterId;
 
-		// Token: 0x020034D7 RID: 13527
+		// Token: 0x02000F03 RID: 3843
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
-		protected ref struct __FOnRebuildLayoutDelegate_DelegateParams
+		private ref struct __FOnRebuildLayoutDelegate_DelegateParams
 		{
-			// Token: 0x040174EA RID: 95466
+			// Token: 0x040062CF RID: 25295
 			[FieldOffset(0)]
 			public IntPtr Layout;
 		}
 
-		// Token: 0x020034D8 RID: 13528
+		// Token: 0x02000F04 RID: 3844
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040174EB RID: 95467
+			// Token: 0x040062D0 RID: 25296
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

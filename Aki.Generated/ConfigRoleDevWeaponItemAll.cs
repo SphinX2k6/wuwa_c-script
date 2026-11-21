@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020008A2 RID: 2210
+	// Token: 0x020008BE RID: 2238
 	public class ConfigRoleDevWeaponItemAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060033DE RID: 13278 RVA: 0x0017E72C File Offset: 0x0017C92C
+		// Token: 0x06003486 RID: 13446 RVA: 0x00185A14 File Offset: 0x00183C14
 		static ConfigRoleDevWeaponItemAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRoleDevWeaponItemAll.CreateStaticDefaultValue), new Action(ConfigRoleDevWeaponItemAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060033DF RID: 13279 RVA: 0x0017E74C File Offset: 0x0017C94C
+		// Token: 0x06003487 RID: 13447 RVA: 0x00185A34 File Offset: 0x00183C34
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRoleDevWeaponItemAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060033E0 RID: 13280 RVA: 0x0017E7CB File Offset: 0x0017C9CB
+		// Token: 0x06003488 RID: 13448 RVA: 0x00185AB3 File Offset: 0x00183CB3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRoleDevWeaponItemAll.LogPair = null;
 			ConfigRoleDevWeaponItemAll.HandleId = 0;
 		}
 
-		// Token: 0x060033E1 RID: 13281 RVA: 0x0017E7D9 File Offset: 0x0017C9D9
+		// Token: 0x06003489 RID: 13449 RVA: 0x00185AC1 File Offset: 0x00183CC1
 		public static void Init()
 		{
 			ConfigRoleDevWeaponItemAll.HandleId = ConfigCommon.InitDataStatement(ConfigRoleDevWeaponItemAll.HandleId, "db_roledev.db", "select BinData from `RoleDevWeaponItem`");
 		}
 
-		// Token: 0x060033E2 RID: 13282 RVA: 0x0017E7F4 File Offset: 0x0017C9F4
+		// Token: 0x0600348A RID: 13450 RVA: 0x00185ADC File Offset: 0x00183CDC
 		[NullableContext(2)]
 		public static IReadOnlyList<RoleDevWeaponItem> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04003C54 RID: 15444
+		// Token: 0x04003D18 RID: 15640
 		private const string DB = "db_roledev.db";
 
-		// Token: 0x04003C55 RID: 15445
+		// Token: 0x04003D19 RID: 15641
 		private const string FILE = "g.共鸣者培养计划.xlsx";
 
-		// Token: 0x04003C56 RID: 15446
+		// Token: 0x04003D1A RID: 15642
 		private const string TABLE = "RoleDevWeaponItem";
 
-		// Token: 0x04003C57 RID: 15447
+		// Token: 0x04003D1B RID: 15643
 		private const string COMMAND = "select BinData from `RoleDevWeaponItem`";
 
-		// Token: 0x04003C58 RID: 15448
+		// Token: 0x04003D1C RID: 15644
 		private const string KEY_PREFIX = "RoleDevWeaponItemAll";
 
-		// Token: 0x04003C59 RID: 15449
+		// Token: 0x04003D1D RID: 15645
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003C5A RID: 15450
+		// Token: 0x04003D1E RID: 15646
 		private static int HandleId;
 	}
 }

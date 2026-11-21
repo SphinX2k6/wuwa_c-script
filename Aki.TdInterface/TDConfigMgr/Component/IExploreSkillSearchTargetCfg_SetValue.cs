@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000361 RID: 865
+	// Token: 0x020003AA RID: 938
 	public class IExploreSkillSearchTargetCfg_SetValue
 	{
-		// Token: 0x04000E38 RID: 3640
+		// Token: 0x04000F2F RID: 3887
 		public EExploreSkillSearchTargetCfg Type;
 	}
 }

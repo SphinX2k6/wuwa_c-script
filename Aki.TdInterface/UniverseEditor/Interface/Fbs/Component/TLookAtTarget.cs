@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C57 RID: 23639
+	// Token: 0x0200627C RID: 25212
 	public enum TLookAtTarget : byte
 	{
-		// Token: 0x0400F488 RID: 62600
+		// Token: 0x040101B2 RID: 65970
 		NONE,
-		// Token: 0x0400F489 RID: 62601
+		// Token: 0x040101B3 RID: 65971
 		ILookAtTargetEntity,
-		// Token: 0x0400F48A RID: 62602
+		// Token: 0x040101B4 RID: 65972
 		ILookAtTargetPlayer
 	}
 }

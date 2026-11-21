@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004A8D RID: 19085
+	// Token: 0x02004F53 RID: 20307
 	public struct ICheckIsGramophonePlayingMusic : IFlatbufferObject
 	{
-		// Token: 0x17008A43 RID: 35395
-		// (get) Token: 0x0601DEE2 RID: 122594 RVA: 0x004340BE File Offset: 0x004322BE
+		// Token: 0x1700911F RID: 37151
+		// (get) Token: 0x0601F985 RID: 129413 RVA: 0x0046524A File Offset: 0x0046344A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DEE3 RID: 122595 RVA: 0x004340CB File Offset: 0x004322CB
+		// Token: 0x0601F986 RID: 129414 RVA: 0x00465257 File Offset: 0x00463457
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601DEE4 RID: 122596 RVA: 0x004340D4 File Offset: 0x004322D4
+		// Token: 0x0601F987 RID: 129415 RVA: 0x00465260 File Offset: 0x00463460
 		public static ICheckIsGramophonePlayingMusic GetRootAsICheckIsGramophonePlayingMusic(ByteBuffer _bb)
 		{
 			return ICheckIsGramophonePlayingMusic.GetRootAsICheckIsGramophonePlayingMusic(_bb, default(ICheckIsGramophonePlayingMusic));
 		}
 
-		// Token: 0x0601DEE5 RID: 122597 RVA: 0x004340F0 File Offset: 0x004322F0
+		// Token: 0x0601F988 RID: 129416 RVA: 0x0046527C File Offset: 0x0046347C
 		public static ICheckIsGramophonePlayingMusic GetRootAsICheckIsGramophonePlayingMusic(ByteBuffer _bb, ICheckIsGramophonePlayingMusic obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601DEE6 RID: 122598 RVA: 0x0043410D File Offset: 0x0043230D
+		// Token: 0x0601F989 RID: 129417 RVA: 0x00465299 File Offset: 0x00463499
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601DEE7 RID: 122599 RVA: 0x0043411C File Offset: 0x0043231C
+		// Token: 0x0601F98A RID: 129418 RVA: 0x004652A8 File Offset: 0x004634A8
 		public ICheckIsGramophonePlayingMusic __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008A44 RID: 35396
-		// (get) Token: 0x0601DEE8 RID: 122600 RVA: 0x0043412C File Offset: 0x0043232C
+		// Token: 0x17009120 RID: 37152
+		// (get) Token: 0x0601F98B RID: 129419 RVA: 0x004652B8 File Offset: 0x004634B8
 		public ECondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008A45 RID: 35397
-		// (get) Token: 0x0601DEE9 RID: 122601 RVA: 0x00434168 File Offset: 0x00432368
+		// Token: 0x17009121 RID: 37153
+		// (get) Token: 0x0601F98C RID: 129420 RVA: 0x004652F4 File Offset: 0x004634F4
 		public int TargetGramophone
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008A46 RID: 35398
-		// (get) Token: 0x0601DEEA RID: 122602 RVA: 0x004341A4 File Offset: 0x004323A4
+		// Token: 0x17009122 RID: 37154
+		// (get) Token: 0x0601F98D RID: 129421 RVA: 0x00465330 File Offset: 0x00463530
 		public IGramophoneCheckCondition? CheckCondition
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DEEB RID: 122603 RVA: 0x00434201 File Offset: 0x00432401
+		// Token: 0x0601F98E RID: 129422 RVA: 0x0046538D File Offset: 0x0046358D
 		public static Offset<ICheckIsGramophonePlayingMusic> CreateICheckIsGramophonePlayingMusic(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, int TargetGramophone = 0, Offset<IGramophoneCheckCondition> CheckConditionOffset = default(Offset<IGramophoneCheckCondition>))
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckIsGramophonePlayingMusic.EndICheckIsGramophonePlayingMusic(builder);
 		}
 
-		// Token: 0x0601DEEC RID: 122604 RVA: 0x00434225 File Offset: 0x00432425
+		// Token: 0x0601F98F RID: 129423 RVA: 0x004653B1 File Offset: 0x004635B1
 		public static void StartICheckIsGramophonePlayingMusic(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601DEED RID: 122605 RVA: 0x0043422E File Offset: 0x0043242E
+		// Token: 0x0601F990 RID: 129424 RVA: 0x004653BA File Offset: 0x004635BA
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601DEEE RID: 122606 RVA: 0x00434239 File Offset: 0x00432439
+		// Token: 0x0601F991 RID: 129425 RVA: 0x004653C5 File Offset: 0x004635C5
 		public static void AddTargetGramophone(FlatBufferBuilder builder, int targetGramophone)
 		{
 			builder.AddInt(1, targetGramophone, 0);
 		}
 
-		// Token: 0x0601DEEF RID: 122607 RVA: 0x00434244 File Offset: 0x00432444
+		// Token: 0x0601F992 RID: 129426 RVA: 0x004653D0 File Offset: 0x004635D0
 		public static void AddCheckCondition(FlatBufferBuilder builder, Offset<IGramophoneCheckCondition> checkConditionOffset)
 		{
 			builder.AddOffset(2, checkConditionOffset.Value, 0);
 		}
 
-		// Token: 0x0601DEF0 RID: 122608 RVA: 0x00434254 File Offset: 0x00432454
+		// Token: 0x0601F993 RID: 129427 RVA: 0x004653E0 File Offset: 0x004635E0
 		public static Offset<ICheckIsGramophonePlayingMusic> EndICheckIsGramophonePlayingMusic(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckIsGramophonePlayingMusic>(builder.EndTable());
 		}
 
-		// Token: 0x0601DEF1 RID: 122609 RVA: 0x00434264 File Offset: 0x00432464
+		// Token: 0x0601F994 RID: 129428 RVA: 0x004653F0 File Offset: 0x004635F0
 		public ICheckIsGramophonePlayingMusicT UnPack()
 		{
 			ICheckIsGramophonePlayingMusicT checkIsGramophonePlayingMusicT = new ICheckIsGramophonePlayingMusicT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkIsGramophonePlayingMusicT;
 		}
 
-		// Token: 0x0601DEF2 RID: 122610 RVA: 0x00434280 File Offset: 0x00432480
+		// Token: 0x0601F995 RID: 129429 RVA: 0x0046540C File Offset: 0x0046360C
 		public void UnPackTo(ICheckIsGramophonePlayingMusicT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.CheckCondition = ((this.CheckCondition != null) ? this.CheckCondition.Value.UnPack() : null);
 		}
 
-		// Token: 0x0601DEF3 RID: 122611 RVA: 0x004342D4 File Offset: 0x004324D4
+		// Token: 0x0601F996 RID: 129430 RVA: 0x00465460 File Offset: 0x00463660
 		public static Offset<ICheckIsGramophonePlayingMusic> Pack(FlatBufferBuilder builder, ICheckIsGramophonePlayingMusicT _o)
 		{
 			if (_o == null)
@@ -159,7 +159,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckIsGramophonePlayingMusic.CreateICheckIsGramophonePlayingMusic(builder, _o.Type, _o.TargetGramophone, checkConditionOffset);
 		}
 
-		// Token: 0x0400D2FC RID: 54012
+		// Token: 0x0400DDD7 RID: 56791
 		private Table __p;
 	}
 }

@@ -4,13 +4,13 @@ using Aki.Protocol;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x020026DA RID: 9946
+// Token: 0x02001BC5 RID: 7109
 [NullableContext(1)]
 [Nullable(0)]
 public class RacingBetsSkillCommand : RacingBetsCommandBase
 {
-	// Token: 0x17001A73 RID: 6771
-	// (get) Token: 0x06014649 RID: 83529 RVA: 0x00528550 File Offset: 0x00526750
+	// Token: 0x17001AAB RID: 6827
+	// (get) Token: 0x06011B2B RID: 72491 RVA: 0x00537288 File Offset: 0x00535488
 	public override ERacingBetsCommandType CommandType
 	{
 		get
@@ -19,13 +19,13 @@ public class RacingBetsSkillCommand : RacingBetsCommandBase
 		}
 	}
 
-	// Token: 0x0601464A RID: 83530 RVA: 0x00528553 File Offset: 0x00526753
+	// Token: 0x06011B2C RID: 72492 RVA: 0x0053728B File Offset: 0x0053548B
 	public void Init(RacingBetsDangoActionSkill skillAction)
 	{
 		this.SkillAction = skillAction;
 	}
 
-	// Token: 0x0601464B RID: 83531 RVA: 0x0052855C File Offset: 0x0052675C
+	// Token: 0x06011B2D RID: 72493 RVA: 0x00537294 File Offset: 0x00535494
 	public override UniTask OnExecute()
 	{
 		RacingBetsSkillCommand.<OnExecute>d__4 <OnExecute>d__;
@@ -36,12 +36,12 @@ public class RacingBetsSkillCommand : RacingBetsCommandBase
 		return <OnExecute>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601464C RID: 83532 RVA: 0x0052859F File Offset: 0x0052679F
+	// Token: 0x06011B2E RID: 72494 RVA: 0x005372D7 File Offset: 0x005354D7
 	public override string LogInfo()
 	{
 		return "RacingBetsSkillCommand";
 	}
 
-	// Token: 0x04009933 RID: 39219
+	// Token: 0x04009A8B RID: 39563
 	private RacingBetsDangoActionSkill SkillAction;
 }

@@ -12,12 +12,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B48 RID: 27464
+	// Token: 0x02005CC0 RID: 23744
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventOpenSystem : LevelEventBase
 	{
-		// Token: 0x0604418F RID: 278927 RVA: 0x010C0BF0 File Offset: 0x010BEDF0
+		// Token: 0x0603A2E1 RID: 238305 RVA: 0x0106A78C File Offset: 0x0106898C
 		public LevelEventOpenSystem(int id) : base(id)
 		{
 			this.OpenSystemMap[ESystemType.Shop] = new OpenSystemShopView(this);
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.OpenSystemMap[ESystemType.DangoBrawlFailureSettlement] = new OpenSystemDangoBrawlSettleFailure(this);
 		}
 
-		// Token: 0x06044190 RID: 278928 RVA: 0x010C13F8 File Offset: 0x010BF5F8
+		// Token: 0x0603A2E2 RID: 238306 RVA: 0x0106AF94 File Offset: 0x01069194
 		protected override void OnReset()
 		{
 			if (EventSystem.Instance.Has(EEventName.CloseView, new Action<EUiViewName, int>(this.FinishExecuteSync)))
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.LoadingPromise = null;
 		}
 
-		// Token: 0x06044191 RID: 278929 RVA: 0x010C1478 File Offset: 0x010BF678
+		// Token: 0x0603A2E3 RID: 238307 RVA: 0x0106B014 File Offset: 0x01069214
 		private UniTask ExecuteOpenView(OpenSystemBoard @params, GeneralContext context)
 		{
 			LevelEventOpenSystem.<ExecuteOpenView>d__5 <ExecuteOpenView>d__;
@@ -156,13 +156,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			return <ExecuteOpenView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06044192 RID: 278930 RVA: 0x010C14CB File Offset: 0x010BF6CB
+		// Token: 0x0603A2E4 RID: 238308 RVA: 0x0106B067 File Offset: 0x01069267
 		protected override void ExecuteInGm(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x06044193 RID: 278931 RVA: 0x010C14D8 File Offset: 0x010BF6D8
+		// Token: 0x0603A2E5 RID: 238309 RVA: 0x0106B074 File Offset: 0x01069274
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			OpenSystemBoard openSystemBoard = inParams as OpenSystemBoard;
@@ -174,7 +174,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.ExecuteOpenView(openSystemBoard, context);
 		}
 
-		// Token: 0x06044194 RID: 278932 RVA: 0x010C1518 File Offset: 0x010BF718
+		// Token: 0x0603A2E6 RID: 238310 RVA: 0x0106B0B4 File Offset: 0x010692B4
 		private void CreateLoadingPromise()
 		{
 			global::Log.Instance.Info(ELogModule.LevelEvent, ELogAuthor.CB, "[LevelEventOpenSystem]创建LoadingPromise", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -185,7 +185,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x06044195 RID: 278933 RVA: 0x010C1588 File Offset: 0x010BF788
+		// Token: 0x0603A2E7 RID: 238311 RVA: 0x0106B124 File Offset: 0x01069324
 		private void OnWorldDoneAndCloseLoading()
 		{
 			global::Log.Instance.Info(ELogModule.LevelEvent, ELogAuthor.CB, "[LevelEventOpenSystem]设置LoadingPromise结果", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -197,7 +197,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			loadingPromise.SetResult(null);
 		}
 
-		// Token: 0x06044196 RID: 278934 RVA: 0x010C15C4 File Offset: 0x010BF7C4
+		// Token: 0x0603A2E8 RID: 238312 RVA: 0x0106B160 File Offset: 0x01069360
 		private void ActivateNpcPerformance(OpenSystemBoard @params, OpenSystemBase openSystem, GeneralContext context)
 		{
 			EUiViewName? viewName = openSystem.GetViewName(@params, context);
@@ -237,7 +237,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			commonNpcPerformComponent.SetUiOpenPerformance(viewName.Value, @params.BoardId);
 		}
 
-		// Token: 0x06044197 RID: 278935 RVA: 0x010C168C File Offset: 0x010BF88C
+		// Token: 0x0603A2E9 RID: 238313 RVA: 0x0106B228 File Offset: 0x01069428
 		private void FinishExecuteSync(EUiViewName viewName, int viewId)
 		{
 			if (viewName != this.ViewName)
@@ -248,14 +248,14 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			EventSystem.Instance.Remove(EEventName.CloseView, new Action<EUiViewName, int>(this.FinishExecuteSync));
 		}
 
-		// Token: 0x06044198 RID: 278936 RVA: 0x010C16E0 File Offset: 0x010BF8E0
+		// Token: 0x0603A2EA RID: 238314 RVA: 0x0106B27C File Offset: 0x0106947C
 		private void FinishPromptViewSync(EUiViewName viewName)
 		{
 			base.FinishExecute(true, false, true);
 			EventSystem.Instance.Remove<EUiViewName>(EEventName.ClosePlotCaptionImageView, new Action<EUiViewName>(this.FinishPromptViewSync));
 		}
 
-		// Token: 0x06044199 RID: 278937 RVA: 0x010C1708 File Offset: 0x010BF908
+		// Token: 0x0603A2EB RID: 238315 RVA: 0x0106B2A4 File Offset: 0x010694A4
 		private void TryCloseLevelLoading(EUiViewName viewName, int viewId)
 		{
 			if (viewName != this.ViewName)
@@ -265,13 +265,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			LevelLoadingController.Instance.CloseLoading(ELoadingReason.Common, "OpenSystem", null, null);
 		}
 
-		// Token: 0x0402391E RID: 145694
+		// Token: 0x0401EBC0 RID: 125888
 		private EUiViewName? ViewName;
 
-		// Token: 0x0402391F RID: 145695
+		// Token: 0x0401EBC1 RID: 125889
 		private readonly Dictionary<ESystemType, OpenSystemBase> OpenSystemMap = new Dictionary<ESystemType, OpenSystemBase>();
 
-		// Token: 0x04023920 RID: 145696
+		// Token: 0x0401EBC2 RID: 125890
 		[Nullable(2)]
 		private CustomPromise<object> LoadingPromise;
 	}

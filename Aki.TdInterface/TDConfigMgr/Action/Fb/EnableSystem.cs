@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027D1 RID: 10193
+	// Token: 0x02002AA4 RID: 10916
 	public class EnableSystem : ActionParams
 	{
-		// Token: 0x0600E298 RID: 58008 RVA: 0x0021745A File Offset: 0x0021565A
-		[NullableContext(1)]
+		// Token: 0x0600F0BA RID: 61626 RVA: 0x0023422E File Offset: 0x0023242E
 		public static EnableSystem Create(IEnableSystem? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170044B8 RID: 17592
-		// (get) Token: 0x0600E299 RID: 58009 RVA: 0x00217479 File Offset: 0x00215679
+		// Token: 0x17004820 RID: 18464
+		// (get) Token: 0x0600F0BB RID: 61627 RVA: 0x0023424D File Offset: 0x0023244D
 		public virtual ESystem SystemType
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170044B9 RID: 17593
-		// (get) Token: 0x0600E29A RID: 58010 RVA: 0x00217486 File Offset: 0x00215686
+		// Token: 0x17004821 RID: 18465
+		// (get) Token: 0x0600F0BC RID: 61628 RVA: 0x0023425A File Offset: 0x0023245A
 		public virtual bool IsEnable
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007DA3 RID: 32163
+		// Token: 0x0400845A RID: 33882
 		private IEnableSystem Instance;
 	}
 }

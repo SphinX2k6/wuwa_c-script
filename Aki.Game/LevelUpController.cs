@@ -3,13 +3,13 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02002066 RID: 8294
+// Token: 0x02001539 RID: 5433
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class LevelUpController : UiControllerBase
 {
-	// Token: 0x0601052E RID: 66862 RVA: 0x003FBD7C File Offset: 0x003F9F7C
+	// Token: 0x0600D996 RID: 55702 RVA: 0x004081C4 File Offset: 0x004063C4
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<int, int, int, int, int, int, int>(EEventName.OnPlayerLevelChanged, new Action<int, int, int, int, int, int, int>(this.OnPlayerLevelChanged));
@@ -17,7 +17,7 @@ public class LevelUpController : UiControllerBase
 		EventSystem.Instance.Add(EEventName.OnFinishLoadingState, new Action(this.OnShowLevelOnly));
 	}
 
-	// Token: 0x0601052F RID: 66863 RVA: 0x003FBDE0 File Offset: 0x003F9FE0
+	// Token: 0x0600D997 RID: 55703 RVA: 0x00408228 File Offset: 0x00406428
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OnPlayerLevelChanged, new Action<int, int, int, int, int, int, int>(this.OnPlayerLevelChanged));
@@ -25,7 +25,7 @@ public class LevelUpController : UiControllerBase
 		EventSystem.Instance.Remove(EEventName.OnFinishLoadingState, new Action(this.OnShowLevelOnly));
 	}
 
-	// Token: 0x06010530 RID: 66864 RVA: 0x003FBE44 File Offset: 0x003FA044
+	// Token: 0x0600D998 RID: 55704 RVA: 0x0040828C File Offset: 0x0040648C
 	private void OnPlayerExpChanged(int currentExp, int lastExp, int maxExp)
 	{
 		int? playerLevel = FunctionModel.Instance.GetPlayerLevel();
@@ -38,7 +38,7 @@ public class LevelUpController : UiControllerBase
 		LevelUpModel.Instance.SetExpChange(playerLevel.Value, currentExp, lastExp, maxExp, differenceExp);
 	}
 
-	// Token: 0x06010531 RID: 66865 RVA: 0x003FBEB4 File Offset: 0x003FA0B4
+	// Token: 0x0600D999 RID: 55705 RVA: 0x004082FC File Offset: 0x004064FC
 	private void OnPlayerLevelChanged(int lastLevel, int currentLevel, int currentExp, int lastExp, int addExp, int currentMaxExp, int lastMaxExp)
 	{
 		KuroSdkReport.Instance.OnPlayerLevelChange(currentLevel);
@@ -51,7 +51,7 @@ public class LevelUpController : UiControllerBase
 		LevelUpModel.Instance.SetLevelUp(lastLevel, currentLevel, currentExp, lastExp, addExp, currentMaxExp, lastMaxExp, differenceExp);
 	}
 
-	// Token: 0x06010532 RID: 66866 RVA: 0x003FBF14 File Offset: 0x003FA114
+	// Token: 0x0600D99A RID: 55706 RVA: 0x0040835C File Offset: 0x0040655C
 	private void OnShowLevelOnly()
 	{
 		int? playerLevel = FunctionModel.Instance.GetPlayerLevel();
@@ -63,8 +63,8 @@ public class LevelUpController : UiControllerBase
 		LevelUpModel.Instance.SetShowLevelOnly(playerLevel.Value);
 	}
 
-	// Token: 0x1700141D RID: 5149
-	// (get) Token: 0x06010533 RID: 66867 RVA: 0x003FBF62 File Offset: 0x003FA162
+	// Token: 0x1700144A RID: 5194
+	// (get) Token: 0x0600D99B RID: 55707 RVA: 0x004083AA File Offset: 0x004065AA
 	public static LevelUpController Instance
 	{
 		get
@@ -73,7 +73,7 @@ public class LevelUpController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06010534 RID: 66868 RVA: 0x003FBF69 File Offset: 0x003FA169
+	// Token: 0x0600D99C RID: 55708 RVA: 0x004083B1 File Offset: 0x004065B1
 	public static LevelUpController GetOrCreateInstance()
 	{
 		if (LevelUpController._Instance == null)
@@ -83,7 +83,7 @@ public class LevelUpController : UiControllerBase
 		return LevelUpController._Instance;
 	}
 
-	// Token: 0x06010535 RID: 66869 RVA: 0x003FBF7D File Offset: 0x003FA17D
+	// Token: 0x0600D99D RID: 55709 RVA: 0x004083C5 File Offset: 0x004065C5
 	public static bool CreateInstance()
 	{
 		if (LevelUpController._Instance != null)
@@ -94,24 +94,24 @@ public class LevelUpController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06010536 RID: 66870 RVA: 0x003FBF93 File Offset: 0x003FA193
+	// Token: 0x0600D99E RID: 55710 RVA: 0x004083DB File Offset: 0x004065DB
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06010537 RID: 66871 RVA: 0x003FBF95 File Offset: 0x003FA195
+	// Token: 0x0600D99F RID: 55711 RVA: 0x004083DD File Offset: 0x004065DD
 	public static void ResetStaticDefaultValue()
 	{
 		LevelUpController._Instance = null;
 	}
 
-	// Token: 0x06010538 RID: 66872 RVA: 0x003FBF9D File Offset: 0x003FA19D
+	// Token: 0x0600D9A0 RID: 55712 RVA: 0x004083E5 File Offset: 0x004065E5
 	static LevelUpController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(LevelUpController.CreateStaticDefaultValue), new Action(LevelUpController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040078A0 RID: 30880
+	// Token: 0x04007989 RID: 31113
 	[Nullable(2)]
 	private static LevelUpController _Instance;
 }

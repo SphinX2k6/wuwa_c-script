@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001364 RID: 4964
+// Token: 0x02000818 RID: 2072
 [NullableContext(1)]
 [Nullable(0)]
 public class RewardTargetTabView : UiTabViewBase
 {
-	// Token: 0x06008A52 RID: 35410 RVA: 0x001D8DE8 File Offset: 0x001D6FE8
+	// Token: 0x06005DED RID: 24045 RVA: 0x001E1C44 File Offset: 0x001DFE44
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ public class RewardTargetTabView : UiTabViewBase
 		};
 	}
 
-	// Token: 0x06008A53 RID: 35411 RVA: 0x001D8E58 File Offset: 0x001D7058
+	// Token: 0x06005DEE RID: 24046 RVA: 0x001E1CB4 File Offset: 0x001DFEB4
 	protected override void OnStart()
 	{
 		object extraParams = this.ExtraParams;
@@ -45,7 +45,7 @@ public class RewardTargetTabView : UiTabViewBase
 		this.LoopScroll = new LoopScrollView<TaskItem, TaskData>(base.GetLoopScrollViewComponent(2), (AUIBaseActor)base.GetItem(3).GetOwner(), new Func<TaskItem>(this.InitTargetItem), false);
 	}
 
-	// Token: 0x06008A54 RID: 35412 RVA: 0x001D8ED8 File Offset: 0x001D70D8
+	// Token: 0x06005DEF RID: 24047 RVA: 0x001E1D34 File Offset: 0x001DFF34
 	private List<RewardTabData> CreateTabItemDataList(IReadOnlyList<TrackMoonTargetType> tabList)
 	{
 		List<RewardTabData> list = new List<RewardTabData>();
@@ -61,7 +61,7 @@ public class RewardTargetTabView : UiTabViewBase
 		return list;
 	}
 
-	// Token: 0x06008A55 RID: 35413 RVA: 0x001D8F60 File Offset: 0x001D7160
+	// Token: 0x06005DF0 RID: 24048 RVA: 0x001E1DBC File Offset: 0x001DFFBC
 	protected override UniTask OnBeforeShowAsyncImplement()
 	{
 		RewardTargetTabView.<OnBeforeShowAsyncImplement>d__8 <OnBeforeShowAsyncImplement>d__;
@@ -72,7 +72,7 @@ public class RewardTargetTabView : UiTabViewBase
 		return <OnBeforeShowAsyncImplement>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008A56 RID: 35414 RVA: 0x001D8FA4 File Offset: 0x001D71A4
+	// Token: 0x06005DF1 RID: 24049 RVA: 0x001E1E00 File Offset: 0x001E0000
 	protected override void OnBeforeShow()
 	{
 		UiTabSequence tabBehavior = base.GetTabBehavior<UiTabSequence>();
@@ -83,19 +83,19 @@ public class RewardTargetTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x06008A57 RID: 35415 RVA: 0x001D8FDE File Offset: 0x001D71DE
+	// Token: 0x06005DF2 RID: 24050 RVA: 0x001E1E3A File Offset: 0x001E003A
 	protected override void AddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.TakenRewardTargetData, new Action<int>(this.TakenRewardTargetData));
 	}
 
-	// Token: 0x06008A58 RID: 35416 RVA: 0x001D8FFC File Offset: 0x001D71FC
+	// Token: 0x06005DF3 RID: 24051 RVA: 0x001E1E58 File Offset: 0x001E0058
 	protected override void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.TakenRewardTargetData, new Action<int>(this.TakenRewardTargetData));
 	}
 
-	// Token: 0x06008A59 RID: 35417 RVA: 0x001D901C File Offset: 0x001D721C
+	// Token: 0x06005DF4 RID: 24052 RVA: 0x001E1E78 File Offset: 0x001E0078
 	public override UUIItem[] GetGuideUiItemAndUiItemForShowEx(string[] configParams)
 	{
 		UUIItem grid = this.LoopScroll.GetGrid(0);
@@ -110,7 +110,7 @@ public class RewardTargetTabView : UiTabViewBase
 		};
 	}
 
-	// Token: 0x06008A5A RID: 35418 RVA: 0x001D9049 File Offset: 0x001D7249
+	// Token: 0x06005DF5 RID: 24053 RVA: 0x001E1EA5 File Offset: 0x001E00A5
 	private void TakenRewardTargetData(int id)
 	{
 		if (MoonChasingRewardModel.Instance.GetTaskDataById(id) == null)
@@ -121,19 +121,19 @@ public class RewardTargetTabView : UiTabViewBase
 		this.RefreshLoopScrollView(this.CurrentTabIndex);
 	}
 
-	// Token: 0x06008A5B RID: 35419 RVA: 0x001D907B File Offset: 0x001D727B
+	// Token: 0x06005DF6 RID: 24054 RVA: 0x001E1ED7 File Offset: 0x001E00D7
 	private TaskItem InitTargetItem()
 	{
 		return new TaskItem();
 	}
 
-	// Token: 0x06008A5C RID: 35420 RVA: 0x001D9082 File Offset: 0x001D7282
+	// Token: 0x06005DF7 RID: 24055 RVA: 0x001E1EDE File Offset: 0x001E00DE
 	private RewardTargetTabItem TabItemProxyCreate()
 	{
 		return new RewardTargetTabItem();
 	}
 
-	// Token: 0x06008A5D RID: 35421 RVA: 0x001D908C File Offset: 0x001D728C
+	// Token: 0x06005DF8 RID: 24056 RVA: 0x001E1EE8 File Offset: 0x001E00E8
 	private void TabCallBack(int index)
 	{
 		if (this.CurrentTabIndex != index && this.CurrentTabIndex != -1)
@@ -148,7 +148,7 @@ public class RewardTargetTabView : UiTabViewBase
 		this.RefreshLoopScrollView(this.CurrentTabIndex);
 	}
 
-	// Token: 0x06008A5E RID: 35422 RVA: 0x001D90DC File Offset: 0x001D72DC
+	// Token: 0x06005DF9 RID: 24057 RVA: 0x001E1F38 File Offset: 0x001E0138
 	private void RefreshLoopScrollView(int tabIndex)
 	{
 		this.DataList.Clear();
@@ -174,35 +174,35 @@ public class RewardTargetTabView : UiTabViewBase
 		this.LoopScroll.RefreshByDataAsync(this.DataList, false, true).Forget();
 	}
 
-	// Token: 0x04003DA5 RID: 15781
+	// Token: 0x04003E3D RID: 15933
 	protected GenericLayout<RewardTargetTabItem, RewardTabData> TabLayout;
 
-	// Token: 0x04003DA6 RID: 15782
+	// Token: 0x04003E3E RID: 15934
 	private int CurrentTabIndex = -1;
 
-	// Token: 0x04003DA7 RID: 15783
+	// Token: 0x04003E3F RID: 15935
 	protected LoopScrollView<TaskItem, TaskData> LoopScroll;
 
-	// Token: 0x04003DA8 RID: 15784
+	// Token: 0x04003E40 RID: 15936
 	private List<TaskData> DataList = new List<TaskData>();
 
-	// Token: 0x04003DA9 RID: 15785
+	// Token: 0x04003E41 RID: 15937
 	private bool CanAccomplishTask = true;
 
-	// Token: 0x020079CB RID: 31179
+	// Token: 0x02006B55 RID: 27477
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x04028179 RID: 164217
+		// Token: 0x040234A6 RID: 144550
 		public const int TabRootItem = 0;
 
-		// Token: 0x0402817A RID: 164218
+		// Token: 0x040234A7 RID: 144551
 		public const int TabItem = 1;
 
-		// Token: 0x0402817B RID: 164219
+		// Token: 0x040234A8 RID: 144552
 		public const int Scroll = 2;
 
-		// Token: 0x0402817C RID: 164220
+		// Token: 0x040234A9 RID: 144553
 		public const int TargetItem = 3;
 	}
 }

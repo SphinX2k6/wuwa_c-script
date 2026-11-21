@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x0200200C RID: 8204
+// Token: 0x020014DF RID: 5343
 public enum EItemLoadState
 {
-	// Token: 0x04007704 RID: 30468
+	// Token: 0x040077ED RID: 30701
 	None,
-	// Token: 0x04007705 RID: 30469
+	// Token: 0x040077EE RID: 30702
 	Loading,
-	// Token: 0x04007706 RID: 30470
+	// Token: 0x040077EF RID: 30703
 	Loaded
 }

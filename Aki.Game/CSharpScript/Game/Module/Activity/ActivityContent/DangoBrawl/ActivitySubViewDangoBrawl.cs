@@ -10,13 +10,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006756 RID: 26454
+	// Token: 0x020056A6 RID: 22182
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ActivitySubViewDangoBrawl : ActivitySubViewBase
 	{
-		// Token: 0x1700966F RID: 38511
-		// (get) Token: 0x060420E9 RID: 270569 RVA: 0x01006D26 File Offset: 0x01004F26
+		// Token: 0x170069AE RID: 27054
+		// (get) Token: 0x06036C3B RID: 224315 RVA: 0x00F481AA File Offset: 0x00F463AA
 		[Nullable(1)]
 		private DangoBrawlOutGameData OutGameData
 		{
@@ -27,13 +27,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x060420EA RID: 270570 RVA: 0x01006D33 File Offset: 0x01004F33
+		// Token: 0x06036C3C RID: 224316 RVA: 0x00F481B7 File Offset: 0x00F463B7
 		protected override void OnSetData()
 		{
 			this.MyActivityData = (this.ActivityBaseData as ActivityDangoBrawlData);
 		}
 
-		// Token: 0x060420EB RID: 270571 RVA: 0x01006D48 File Offset: 0x01004F48
+		// Token: 0x06036C3D RID: 224317 RVA: 0x00F481CC File Offset: 0x00F463CC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060420EC RID: 270572 RVA: 0x01006DF4 File Offset: 0x01004FF4
+		// Token: 0x06036C3E RID: 224318 RVA: 0x00F48278 File Offset: 0x00F46478
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ActivitySubViewDangoBrawl.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060420ED RID: 270573 RVA: 0x01006E38 File Offset: 0x01005038
+		// Token: 0x06036C3F RID: 224319 RVA: 0x00F482BC File Offset: 0x00F464BC
 		protected override void OnStart()
 		{
 			DangoBrawlMainButtonItem shopButton = this.ShopButton;
@@ -83,19 +83,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.OnRefreshView();
 		}
 
-		// Token: 0x060420EE RID: 270574 RVA: 0x01006EA2 File Offset: 0x010050A2
+		// Token: 0x06036C40 RID: 224320 RVA: 0x00F48326 File Offset: 0x00F46526
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRedDotRefresh));
 		}
 
-		// Token: 0x060420EF RID: 270575 RVA: 0x01006EC0 File Offset: 0x010050C0
+		// Token: 0x06036C41 RID: 224321 RVA: 0x00F48344 File Offset: 0x00F46544
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRedDotRefresh));
 		}
 
-		// Token: 0x060420F0 RID: 270576 RVA: 0x01006EDE File Offset: 0x010050DE
+		// Token: 0x06036C42 RID: 224322 RVA: 0x00F48362 File Offset: 0x00F46562
 		private void OnRedDotRefresh(int activityId)
 		{
 			if (this.MyActivityData == null || activityId != this.MyActivityData.Id)
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.RefreshRedDot();
 		}
 
-		// Token: 0x060420F1 RID: 270577 RVA: 0x01006F04 File Offset: 0x01005104
+		// Token: 0x06036C43 RID: 224323 RVA: 0x00F48388 File Offset: 0x00F46588
 		protected override void OnRefreshView()
 		{
 			ActivityDangoBrawlData myActivityData = this.MyActivityData;
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.RefreshRecommendQuestTips();
 		}
 
-		// Token: 0x060420F2 RID: 270578 RVA: 0x01006F5C File Offset: 0x0100515C
+		// Token: 0x06036C44 RID: 224324 RVA: 0x00F483E0 File Offset: 0x00F465E0
 		private void RefreshCondition()
 		{
 			ActivitySubViewGeneralInfo commonActivityInfo = this.CommonActivityInfo;
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			functionButton.SetButtonAllowEventBubbleUp(true);
 		}
 
-		// Token: 0x060420F3 RID: 270579 RVA: 0x01006FB8 File Offset: 0x010051B8
+		// Token: 0x06036C45 RID: 224325 RVA: 0x00F4843C File Offset: 0x00F4663C
 		private void RefreshShopAndRewardButton()
 		{
 			if (this.MyActivityData == null)
@@ -173,7 +173,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			rewardButton.SetProgressText(defaultInterpolatedStringHandler.ToStringAndClear());
 		}
 
-		// Token: 0x060420F4 RID: 270580 RVA: 0x01007058 File Offset: 0x01005258
+		// Token: 0x06036C46 RID: 224326 RVA: 0x00F484DC File Offset: 0x00F466DC
 		private void RefreshRedDot()
 		{
 			if (this.MyActivityData == null)
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			commonActivityInfo.SetFunctionRedDotVisible(this.MyActivityData.HasFirstOpenPageRedDot() || this.MyActivityData.HasNewLevelRedDot(null));
 		}
 
-		// Token: 0x060420F5 RID: 270581 RVA: 0x010070DC File Offset: 0x010052DC
+		// Token: 0x06036C47 RID: 224327 RVA: 0x00F48560 File Offset: 0x00F46760
 		private void RefreshRecommendQuestTips()
 		{
 			if (this.RecommendQuestTipsSubPanel == null || this.MyActivityData == null)
@@ -213,7 +213,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x060420F6 RID: 270582 RVA: 0x01007133 File Offset: 0x01005333
+		// Token: 0x06036C48 RID: 224328 RVA: 0x00F485B7 File Offset: 0x00F467B7
 		private void OnClickEnter()
 		{
 			ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -235,19 +235,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			});
 		}
 
-		// Token: 0x060420F7 RID: 270583 RVA: 0x01007151 File Offset: 0x01005351
+		// Token: 0x06036C49 RID: 224329 RVA: 0x00F485D5 File Offset: 0x00F467D5
 		private void OnClickShop()
 		{
 			UiManager.Instance.OpenView(EUiViewName.DangoBrawlShopView, null, null);
 		}
 
-		// Token: 0x060420F8 RID: 270584 RVA: 0x01007164 File Offset: 0x01005364
+		// Token: 0x06036C4A RID: 224330 RVA: 0x00F485E8 File Offset: 0x00F467E8
 		private void OnClickReward()
 		{
 			UiManager.Instance.OpenView(EUiViewName.DangoBrawlRewardsView, null, null);
 		}
 
-		// Token: 0x060420F9 RID: 270585 RVA: 0x01007178 File Offset: 0x01005378
+		// Token: 0x06036C4B RID: 224331 RVA: 0x00F485FC File Offset: 0x00F467FC
 		private void OnRecommendQuestBtnClick()
 		{
 			if (this.MyActivityData == null)
@@ -262,34 +262,34 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x04022655 RID: 140885
+		// Token: 0x0401CEAE RID: 118446
 		private ActivityDangoBrawlData MyActivityData;
 
-		// Token: 0x04022656 RID: 140886
+		// Token: 0x0401CEAF RID: 118447
 		private ActivitySubViewGeneralInfo CommonActivityInfo;
 
-		// Token: 0x04022657 RID: 140887
+		// Token: 0x0401CEB0 RID: 118448
 		private DangoBrawlMainButtonItem ShopButton;
 
-		// Token: 0x04022658 RID: 140888
+		// Token: 0x0401CEB1 RID: 118449
 		private DangoBrawlMainButtonItem RewardButton;
 
-		// Token: 0x04022659 RID: 140889
+		// Token: 0x0401CEB2 RID: 118450
 		private RecommendQuestTipsSubPanel RecommendQuestTipsSubPanel;
 
-		// Token: 0x0200C8E4 RID: 51428
+		// Token: 0x0200B2B3 RID: 45747
 		[NullableContext(0)]
 		private enum EComp
 		{
-			// Token: 0x0403CA73 RID: 248435
+			// Token: 0x0403736D RID: 226157
 			CommonActivityInfo,
-			// Token: 0x0403CA74 RID: 248436
+			// Token: 0x0403736E RID: 226158
 			Unused,
-			// Token: 0x0403CA75 RID: 248437
+			// Token: 0x0403736F RID: 226159
 			RecommendQuestTips,
-			// Token: 0x0403CA76 RID: 248438
+			// Token: 0x04037370 RID: 226160
 			ShopButton,
-			// Token: 0x0403CA77 RID: 248439
+			// Token: 0x04037371 RID: 226161
 			RewardButton
 		}
 	}

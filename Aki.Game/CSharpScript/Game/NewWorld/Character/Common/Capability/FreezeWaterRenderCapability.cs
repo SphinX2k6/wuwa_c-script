@@ -5,13 +5,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Capability
 {
-	// Token: 0x0200715A RID: 29018
+	// Token: 0x02006319 RID: 25369
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class FreezeWaterRenderCapability : WaterDetectedCapability
 	{
-		// Token: 0x17009D51 RID: 40273
-		// (get) Token: 0x06046D52 RID: 290130 RVA: 0x011D9EA0 File Offset: 0x011D80A0
+		// Token: 0x17007479 RID: 29817
+		// (get) Token: 0x0603D68A RID: 251530 RVA: 0x011C0757 File Offset: 0x011BE957
 		public AActor Actor
 		{
 			get
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Capability
 			}
 		}
 
-		// Token: 0x06046D53 RID: 290131 RVA: 0x011D9EA8 File Offset: 0x011D80A8
+		// Token: 0x0603D68B RID: 251531 RVA: 0x011C0760 File Offset: 0x011BE960
 		[NullableContext(1)]
 		public FreezeWaterRenderCapability(AActor Invoker, UKuroTrailCollisionAsset KuroTrailCollisionAsset)
 		{
@@ -41,13 +41,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Capability
 			this.ActorInternal.D_AddComponentByClass(USceneComponent.StaticClass(), false, MathUtils.Instance.DefaultTransformDouble, false, default(FName));
 		}
 
-		// Token: 0x06046D54 RID: 290132 RVA: 0x011D9F61 File Offset: 0x011D8161
+		// Token: 0x0603D68C RID: 251532 RVA: 0x011C0819 File Offset: 0x011BEA19
 		public override void Activate()
 		{
 			this.AddWaterInteractionComponent();
 		}
 
-		// Token: 0x06046D55 RID: 290133 RVA: 0x011D9F6A File Offset: 0x011D816A
+		// Token: 0x0603D68D RID: 251533 RVA: 0x011C0822 File Offset: 0x011BEA22
 		public override void Deactivate()
 		{
 			AActor actorInternal = this.ActorInternal;
@@ -58,19 +58,19 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Capability
 			this.ActorInternal = null;
 		}
 
-		// Token: 0x06046D56 RID: 290134 RVA: 0x011D9FA1 File Offset: 0x011D81A1
+		// Token: 0x0603D68E RID: 251534 RVA: 0x011C0859 File Offset: 0x011BEA59
 		public override void OnWaterDetectedStart()
 		{
 			this.DetectingWater = true;
 		}
 
-		// Token: 0x06046D57 RID: 290135 RVA: 0x011D9FAA File Offset: 0x011D81AA
+		// Token: 0x0603D68F RID: 251535 RVA: 0x011C0862 File Offset: 0x011BEA62
 		public override void OnWaterDetectedEnd()
 		{
 			this.DetectingWater = false;
 		}
 
-		// Token: 0x06046D58 RID: 290136 RVA: 0x011D9FB4 File Offset: 0x011D81B4
+		// Token: 0x0603D690 RID: 251536 RVA: 0x011C086C File Offset: 0x011BEA6C
 		[NullableContext(1)]
 		public override void OnWaterDetectedTick(float deltaTime, Vector impactPoint, Vector impactNormal)
 		{
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Capability
 			actorInternal.D_K2_SetActorLocation(impactPoint.ToUeVector(false), false, ref fhitResult, false);
 		}
 
-		// Token: 0x06046D59 RID: 290137 RVA: 0x011DA008 File Offset: 0x011D8208
+		// Token: 0x0603D691 RID: 251537 RVA: 0x011C08C0 File Offset: 0x011BEAC0
 		private BP_KuroMotorcycleFreezeWaterComponent_C AddWaterInteractionComponent()
 		{
 			AActor actorInternal = this.ActorInternal;
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Capability
 			return bp_KuroMotorcycleFreezeWaterComponent_C;
 		}
 
-		// Token: 0x06046D5A RID: 290138 RVA: 0x011DA0E0 File Offset: 0x011D82E0
+		// Token: 0x0603D692 RID: 251538 RVA: 0x011C0998 File Offset: 0x011BEB98
 		public static UKuroEnviInteractionComponent CheckKuroWaterDetectedInterface(AActor actor)
 		{
 			if (actor == null || !actor.IsValid())
@@ -132,20 +132,20 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Capability
 			return ukuroEnviInteractionComponent;
 		}
 
-		// Token: 0x040252CB RID: 152267
+		// Token: 0x04020908 RID: 133384
 		private const float ICE_MESH_SCALE = 40.96f;
 
-		// Token: 0x040252CC RID: 152268
+		// Token: 0x04020909 RID: 133385
 		private AActor ActorInternal;
 
-		// Token: 0x040252CD RID: 152269
+		// Token: 0x0402090A RID: 133386
 		private bool DetectingWater;
 
-		// Token: 0x040252CE RID: 152270
+		// Token: 0x0402090B RID: 133387
 		[Nullable(1)]
 		private readonly AActor Invoker;
 
-		// Token: 0x040252CF RID: 152271
+		// Token: 0x0402090C RID: 133388
 		public UKuroTrailCollisionAsset KuroTrailCollisionAsset;
 	}
 }

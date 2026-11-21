@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200098F RID: 2447
+	// Token: 0x02000A42 RID: 2626
 	public class ELiftBuffTypeJsonConverter : JsonConverter<ELiftBuffType>
 	{
-		// Token: 0x060036B6 RID: 14006 RVA: 0x0008E758 File Offset: 0x0008C958
+		// Token: 0x06003A3D RID: 14909 RVA: 0x000966C4 File Offset: 0x000948C4
 		public override ELiftBuffType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return ELiftBuffTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x060036B7 RID: 14007 RVA: 0x0008E77C File Offset: 0x0008C97C
+		// Token: 0x06003A3E RID: 14910 RVA: 0x000966E8 File Offset: 0x000948E8
 		public override void Write(Utf8JsonWriter writer, ELiftBuffType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

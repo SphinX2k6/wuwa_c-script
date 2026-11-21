@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000CD1 RID: 3281
+	// Token: 0x02000DB5 RID: 3509
 	public struct FuncMenuWheel : IFlatbufferObject
 	{
-		// Token: 0x17001437 RID: 5175
-		// (get) Token: 0x060076FC RID: 30460 RVA: 0x002437A9 File Offset: 0x002419A9
+		// Token: 0x17001494 RID: 5268
+		// (get) Token: 0x06007D07 RID: 32007 RVA: 0x00262346 File Offset: 0x00260546
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060076FD RID: 30461 RVA: 0x002437B6 File Offset: 0x002419B6
+		// Token: 0x06007D08 RID: 32008 RVA: 0x00262353 File Offset: 0x00260553
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060076FE RID: 30462 RVA: 0x002437C0 File Offset: 0x002419C0
+		// Token: 0x06007D09 RID: 32009 RVA: 0x0026235C File Offset: 0x0026055C
 		public static FuncMenuWheel GetRootAsFuncMenuWheel(ByteBuffer _bb)
 		{
 			return FuncMenuWheel.GetRootAsFuncMenuWheel(_bb, default(FuncMenuWheel));
 		}
 
-		// Token: 0x060076FF RID: 30463 RVA: 0x002437DC File Offset: 0x002419DC
+		// Token: 0x06007D0A RID: 32010 RVA: 0x00262378 File Offset: 0x00260578
 		public static FuncMenuWheel GetRootAsFuncMenuWheel(ByteBuffer _bb, FuncMenuWheel obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06007700 RID: 30464 RVA: 0x002437F9 File Offset: 0x002419F9
+		// Token: 0x06007D0B RID: 32011 RVA: 0x00262395 File Offset: 0x00260595
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06007701 RID: 30465 RVA: 0x00243808 File Offset: 0x00241A08
+		// Token: 0x06007D0C RID: 32012 RVA: 0x002623A4 File Offset: 0x002605A4
 		public FuncMenuWheel __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001438 RID: 5176
-		// (get) Token: 0x06007702 RID: 30466 RVA: 0x00243818 File Offset: 0x00241A18
+		// Token: 0x17001495 RID: 5269
+		// (get) Token: 0x06007D0D RID: 32013 RVA: 0x002623B4 File Offset: 0x002605B4
 		public int FuncId
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001439 RID: 5177
-		// (get) Token: 0x06007703 RID: 30467 RVA: 0x00243854 File Offset: 0x00241A54
+		// Token: 0x17001496 RID: 5270
+		// (get) Token: 0x06007D0E RID: 32014 RVA: 0x002623F0 File Offset: 0x002605F0
 		public string FuncName
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007704 RID: 30468 RVA: 0x0024388B File Offset: 0x00241A8B
+		// Token: 0x06007D0F RID: 32015 RVA: 0x00262427 File Offset: 0x00260627
 		public Span<byte> GetFuncNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06007705 RID: 30469 RVA: 0x0024389A File Offset: 0x00241A9A
+		// Token: 0x06007D10 RID: 32016 RVA: 0x00262436 File Offset: 0x00260636
 		public byte[] GetFuncNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700143A RID: 5178
-		// (get) Token: 0x06007706 RID: 30470 RVA: 0x002438B4 File Offset: 0x00241AB4
+		// Token: 0x17001497 RID: 5271
+		// (get) Token: 0x06007D11 RID: 32017 RVA: 0x00262450 File Offset: 0x00260650
 		public string FuncMenuIconPath
 		{
 			get
@@ -104,20 +104,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007707 RID: 30471 RVA: 0x002438EB File Offset: 0x00241AEB
+		// Token: 0x06007D12 RID: 32018 RVA: 0x00262487 File Offset: 0x00260687
 		public Span<byte> GetFuncMenuIconPathBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x06007708 RID: 30472 RVA: 0x002438FA File Offset: 0x00241AFA
+		// Token: 0x06007D13 RID: 32019 RVA: 0x00262496 File Offset: 0x00260696
 		public byte[] GetFuncMenuIconPathArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700143B RID: 5179
-		// (get) Token: 0x06007709 RID: 30473 RVA: 0x00243914 File Offset: 0x00241B14
+		// Token: 0x17001498 RID: 5272
+		// (get) Token: 0x06007D14 RID: 32020 RVA: 0x002624B0 File Offset: 0x002606B0
 		public int FuncMenuSequence
 		{
 			get
@@ -131,8 +131,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700143C RID: 5180
-		// (get) Token: 0x0600770A RID: 30474 RVA: 0x00243954 File Offset: 0x00241B54
+		// Token: 0x17001499 RID: 5273
+		// (get) Token: 0x06007D15 RID: 32021 RVA: 0x002624F0 File Offset: 0x002606F0
 		public bool AutoEquip
 		{
 			get
@@ -142,8 +142,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700143D RID: 5181
-		// (get) Token: 0x0600770B RID: 30475 RVA: 0x00243994 File Offset: 0x00241B94
+		// Token: 0x1700149A RID: 5274
+		// (get) Token: 0x06007D16 RID: 32022 RVA: 0x00262530 File Offset: 0x00260730
 		public int UnlockCondition
 		{
 			get
@@ -157,8 +157,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700143E RID: 5182
-		// (get) Token: 0x0600770C RID: 30476 RVA: 0x002439D4 File Offset: 0x00241BD4
+		// Token: 0x1700149B RID: 5275
+		// (get) Token: 0x06007D17 RID: 32023 RVA: 0x00262570 File Offset: 0x00260770
 		public bool ShowInAssembly
 		{
 			get
@@ -168,7 +168,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004D41 RID: 19777
+		// Token: 0x04005325 RID: 21285
 		private Table __p;
 	}
 }

@@ -8,17 +8,17 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Core.Fight.Manager
 {
-	// Token: 0x0200401D RID: 16413
+	// Token: 0x0200327D RID: 12925
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class 三消触发 : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0602A180 RID: 172416 RVA: 0x009D5C4B File Offset: 0x009D3E4B
+		// Token: 0x06020520 RID: 132384 RVA: 0x009430AB File Offset: 0x009412AB
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return 三消触发.StaticFunctionPtr();
 		}
 
-		// Token: 0x0602A181 RID: 172417 RVA: 0x009D5C57 File Offset: 0x009D3E57
+		// Token: 0x06020521 RID: 132385 RVA: 0x009430B7 File Offset: 0x009412B7
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (BP_FightManager_C.__三消触发__DelegateSignature_NativeFunctionPtr == IntPtr.Zero)
@@ -28,31 +28,30 @@ namespace AkiClient.Game.Aki.Core.Fight.Manager
 			return BP_FightManager_C.__三消触发__DelegateSignature_NativeFunctionPtr;
 		}
 
-		// Token: 0x0602A182 RID: 172418 RVA: 0x009D5C7A File Offset: 0x009D3E7A
+		// Token: 0x06020522 RID: 132386 RVA: 0x009430DA File Offset: 0x009412DA
 		public 三消触发()
 		{
 		}
 
-		// Token: 0x0602A183 RID: 172419 RVA: 0x009D5C82 File Offset: 0x009D3E82
+		// Token: 0x06020523 RID: 132387 RVA: 0x009430E2 File Offset: 0x009412E2
 		[NullableContext(2)]
 		public 三消触发(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602A184 RID: 172420 RVA: 0x009D5C8C File Offset: 0x009D3E8C
+		// Token: 0x06020524 RID: 132388 RVA: 0x009430EC File Offset: 0x009412EC
 		public 三消触发(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602A185 RID: 172421 RVA: 0x009D5C97 File Offset: 0x009D3E97
+		// Token: 0x06020525 RID: 132389 RVA: 0x009430F7 File Offset: 0x009412F7
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<TsBaseCharacter>) ?? ((Action<TsBaseCharacter>)Delegate.CreateDelegate(typeof(Action<TsBaseCharacter>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0602A186 RID: 172422 RVA: 0x009D5CC9 File Offset: 0x009D3EC9
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x06020526 RID: 132390 RVA: 0x00943129 File Offset: 0x00941329
 		public void Add([Nullable(new byte[]
 		{
 			1,
@@ -71,8 +70,7 @@ namespace AkiClient.Game.Aki.Core.Fight.Manager
 			base.Add(Callback, 三消触发.RegisterId);
 		}
 
-		// Token: 0x0602A187 RID: 172423 RVA: 0x009D5D03 File Offset: 0x009D3F03
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x06020527 RID: 132391 RVA: 0x00943163 File Offset: 0x00941363
 		public void Remove([Nullable(new byte[]
 		{
 			1,
@@ -82,10 +80,9 @@ namespace AkiClient.Game.Aki.Core.Fight.Manager
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0602A188 RID: 172424 RVA: 0x009D5D0C File Offset: 0x009D3F0C
+		// Token: 0x06020528 RID: 132392 RVA: 0x0094316C File Offset: 0x0094136C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(TsBaseCharacter 触发者)
 		{
 			三消触发.__三消触发_DelegateParams* ptr = stackalloc 三消触发.__三消触发_DelegateParams[(UIntPtr)23] + 15L / (long)sizeof(三消触发.__三消触发_DelegateParams) & -16L;
@@ -94,10 +91,9 @@ namespace AkiClient.Game.Aki.Core.Fight.Manager
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x0602A189 RID: 172425 RVA: 0x009D5D58 File Offset: 0x009D3F58
+		// Token: 0x06020529 RID: 132393 RVA: 0x009431B8 File Offset: 0x009413B8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<TsBaseCharacter> action = target as Action<TsBaseCharacter>;
@@ -109,28 +105,28 @@ namespace AkiClient.Game.Aki.Core.Fight.Manager
 			action(orCreateUObjectByNativePointer);
 		}
 
-		// Token: 0x04015AF6 RID: 88822
+		// Token: 0x04011743 RID: 71491
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/Core/Fight/Manager/BP_FightManager.BP_FightManager_C:三消触发__DelegateSignature";
 
-		// Token: 0x04015AF7 RID: 88823
+		// Token: 0x04011744 RID: 71492
 		private static int RegisterId;
 
-		// Token: 0x0200A329 RID: 41769
+		// Token: 0x02008F42 RID: 36674
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
-		protected ref struct __三消触发_DelegateParams
+		private ref struct __三消触发_DelegateParams
 		{
-			// Token: 0x040320EC RID: 205036
+			// Token: 0x0402CCB6 RID: 183478
 			[FieldOffset(0)]
 			public IntPtr 触发者;
 		}
 
-		// Token: 0x0200A32A RID: 41770
+		// Token: 0x02008F43 RID: 36675
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040320ED RID: 205037
+			// Token: 0x0402CCB7 RID: 183479
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

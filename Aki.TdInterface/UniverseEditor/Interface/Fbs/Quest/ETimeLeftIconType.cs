@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003CDB RID: 15579
+	// Token: 0x020040F2 RID: 16626
 	public enum ETimeLeftIconType : byte
 	{
-		// Token: 0x0400B538 RID: 46392
+		// Token: 0x0400BEE5 RID: 48869
 		AkiWorld,
-		// Token: 0x0400B539 RID: 46393
+		// Token: 0x0400BEE6 RID: 48870
 		Tower
 	}
 }

@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.VehicleStream
 {
-	// Token: 0x020048A7 RID: 18599
+	// Token: 0x0200381E RID: 14366
 	public enum ETickType
 	{
-		// Token: 0x0401A208 RID: 107016
+		// Token: 0x04014A7B RID: 84603
 		PreMoveTick,
-		// Token: 0x0401A209 RID: 107017
+		// Token: 0x04014A7C RID: 84604
 		CommonTick,
-		// Token: 0x0401A20A RID: 107018
+		// Token: 0x04014A7D RID: 84605
 		CompensationTick
 	}
 }

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02002801 RID: 10241
+// Token: 0x02001D7C RID: 7548
 public class RoleDevPhantomFetterGroupData : RoleDevPhantomVisionSuitItemData
 {
-	// Token: 0x0601503C RID: 86076 RVA: 0x00552944 File Offset: 0x00550B44
+	// Token: 0x06012A3C RID: 76348 RVA: 0x0057D718 File Offset: 0x0057B918
 	[NullableContext(2)]
 	public void InitByFetterGroup(int fetterGroupId, int roleId, List<int> recommendGroupIds = null)
 	{
@@ -41,7 +41,7 @@ public class RoleDevPhantomFetterGroupData : RoleDevPhantomVisionSuitItemData
 		}
 	}
 
-	// Token: 0x0601503D RID: 86077 RVA: 0x00552A04 File Offset: 0x00550C04
+	// Token: 0x06012A3D RID: 76349 RVA: 0x0057D7D8 File Offset: 0x0057B9D8
 	private bool IsMonsterCost4(int monsterId, int targetCost)
 	{
 		IReadOnlyList<PhantomItem> phantomItemByMonsterId = PhantomBattleConfig.Instance.GetPhantomItemByMonsterId(monsterId);
@@ -54,7 +54,7 @@ public class RoleDevPhantomFetterGroupData : RoleDevPhantomVisionSuitItemData
 		return phantomRareConfig != null && phantomRareConfig.Value.Cost == targetCost;
 	}
 
-	// Token: 0x0601503E RID: 86078 RVA: 0x00552A64 File Offset: 0x00550C64
+	// Token: 0x06012A3E RID: 76350 RVA: 0x0057D838 File Offset: 0x0057BA38
 	[NullableContext(1)]
 	private IPhantomMonsterItemData CreateMonsterData(int monsterId)
 	{

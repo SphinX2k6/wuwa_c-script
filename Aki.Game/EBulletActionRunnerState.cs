@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02002D94 RID: 11668
+// Token: 0x020022EE RID: 8942
 public enum EBulletActionRunnerState
 {
-	// Token: 0x0400B5D4 RID: 46548
+	// Token: 0x0400B94A RID: 47434
 	Idle,
-	// Token: 0x0400B5D5 RID: 46549
+	// Token: 0x0400B94B RID: 47435
 	Pause,
-	// Token: 0x0400B5D6 RID: 46550
+	// Token: 0x0400B94C RID: 47436
 	Running,
-	// Token: 0x0400B5D7 RID: 46551
+	// Token: 0x0400B94D RID: 47437
 	ClearBullet
 }

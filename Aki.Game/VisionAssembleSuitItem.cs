@@ -7,7 +7,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002490 RID: 9360
+// Token: 0x02001977 RID: 6519
 [Nullable(new byte[]
 {
 	0,
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class VisionAssembleSuitItem : GridProxyAbstract<VisionAssembleSuitItemData>
 {
-	// Token: 0x06012C8E RID: 76942 RVA: 0x004A24CA File Offset: 0x004A06CA
+	// Token: 0x0601014F RID: 65871 RVA: 0x004AFFBA File Offset: 0x004AE1BA
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ public class VisionAssembleSuitItem : GridProxyAbstract<VisionAssembleSuitItemDa
 		};
 	}
 
-	// Token: 0x06012C8F RID: 76943 RVA: 0x004A2504 File Offset: 0x004A0704
+	// Token: 0x06010150 RID: 65872 RVA: 0x004AFFF4 File Offset: 0x004AE1F4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		VisionAssembleSuitItem.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -36,7 +36,7 @@ public class VisionAssembleSuitItem : GridProxyAbstract<VisionAssembleSuitItemDa
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012C90 RID: 76944 RVA: 0x004A2548 File Offset: 0x004A0748
+	// Token: 0x06010151 RID: 65873 RVA: 0x004B0038 File Offset: 0x004AE238
 	[NullableContext(1)]
 	public override void Refresh(VisionAssembleSuitItemData data, bool isSelected, int gridIndex)
 	{
@@ -56,16 +56,16 @@ public class VisionAssembleSuitItem : GridProxyAbstract<VisionAssembleSuitItemDa
 		text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 	}
 
-	// Token: 0x04008D73 RID: 36211
+	// Token: 0x04008EBC RID: 36540
 	[Nullable(2)]
 	private VisionFetterSuitItem VisionFetterSuitItem;
 
-	// Token: 0x02008A0A RID: 35338
+	// Token: 0x02007B94 RID: 31636
 	private enum EComponent
 	{
-		// Token: 0x0402CD45 RID: 183621
+		// Token: 0x04028065 RID: 163941
 		ElementItem,
-		// Token: 0x0402CD46 RID: 183622
+		// Token: 0x04028066 RID: 163942
 		InfoText
 	}
 }

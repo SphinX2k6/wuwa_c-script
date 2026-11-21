@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200191B RID: 6427
+	// Token: 0x02000409 RID: 1033
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FLightUpPointLightSignature : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06017D9A RID: 97690 RVA: 0x0022ECCD File Offset: 0x0022CECD
+		// Token: 0x06006510 RID: 25872 RVA: 0x000902CD File Offset: 0x0008E4CD
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FLightUpPointLightSignature.StaticFunctionPtr();
 		}
 
-		// Token: 0x06017D9B RID: 97691 RVA: 0x0022ECD9 File Offset: 0x0022CED9
+		// Token: 0x06006511 RID: 25873 RVA: 0x000902D9 File Offset: 0x0008E4D9
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FLightUpPointLightSignature._FunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace UnrealEngine
 			return FLightUpPointLightSignature._FunctionPtr;
 		}
 
-		// Token: 0x06017D9C RID: 97692 RVA: 0x0022ECFC File Offset: 0x0022CEFC
+		// Token: 0x06006512 RID: 25874 RVA: 0x000902FC File Offset: 0x0008E4FC
 		public FLightUpPointLightSignature()
 		{
 		}
 
-		// Token: 0x06017D9D RID: 97693 RVA: 0x0022ED04 File Offset: 0x0022CF04
+		// Token: 0x06006513 RID: 25875 RVA: 0x00090304 File Offset: 0x0008E504
 		[NullableContext(2)]
 		public FLightUpPointLightSignature(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06017D9E RID: 97694 RVA: 0x0022ED0E File Offset: 0x0022CF0E
+		// Token: 0x06006514 RID: 25876 RVA: 0x0009030E File Offset: 0x0008E50E
 		public FLightUpPointLightSignature(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06017D9F RID: 97695 RVA: 0x0022ED19 File Offset: 0x0022CF19
+		// Token: 0x06006515 RID: 25877 RVA: 0x00090319 File Offset: 0x0008E519
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<int, int>) ?? ((Action<int, int>)Delegate.CreateDelegate(typeof(Action<int, int>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06017DA0 RID: 97696 RVA: 0x0022ED4B File Offset: 0x0022CF4B
+		// Token: 0x06006516 RID: 25878 RVA: 0x0009034B File Offset: 0x0008E54B
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action<int, int> Callback)
 		{
 			if (FLightUpPointLightSignature.RegisterId == 0)
@@ -67,17 +66,15 @@ namespace UnrealEngine
 			base.Add(Callback, FLightUpPointLightSignature.RegisterId);
 		}
 
-		// Token: 0x06017DA1 RID: 97697 RVA: 0x0022ED85 File Offset: 0x0022CF85
+		// Token: 0x06006517 RID: 25879 RVA: 0x00090385 File Offset: 0x0008E585
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action<int, int> Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x06017DA2 RID: 97698 RVA: 0x0022ED90 File Offset: 0x0022CF90
+		// Token: 0x06006518 RID: 25880 RVA: 0x00090390 File Offset: 0x0008E590
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(int Source, int Target)
 		{
 			FLightUpPointLightSignature.__FLightUpPointLightSignature_DelegateParams* ptr = stackalloc FLightUpPointLightSignature.__FLightUpPointLightSignature_DelegateParams[(UIntPtr)23] + 15L / (long)sizeof(FLightUpPointLightSignature.__FLightUpPointLightSignature_DelegateParams) & -16L;
@@ -87,10 +84,9 @@ namespace UnrealEngine
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x06017DA3 RID: 97699 RVA: 0x0022EDD4 File Offset: 0x0022CFD4
+		// Token: 0x06006519 RID: 25881 RVA: 0x000903D4 File Offset: 0x0008E5D4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<int, int> action = target as Action<int, int>;
@@ -101,35 +97,35 @@ namespace UnrealEngine
 			action(((FLightUpPointLightSignature.__FLightUpPointLightSignature_DelegateParams*)__Parameters)->Source, ((FLightUpPointLightSignature.__FLightUpPointLightSignature_DelegateParams*)__Parameters)->Target);
 		}
 
-		// Token: 0x0400CEC2 RID: 52930
+		// Token: 0x04002A87 RID: 10887
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400CEC3 RID: 52931
+		// Token: 0x04002A88 RID: 10888
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroGameplay.LightUpPointLightSignature__DelegateSignature";
 
-		// Token: 0x0400CEC4 RID: 52932
+		// Token: 0x04002A89 RID: 10889
 		private static int RegisterId;
 
-		// Token: 0x02002FDF RID: 12255
+		// Token: 0x02000AF3 RID: 2803
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
-		protected ref struct __FLightUpPointLightSignature_DelegateParams
+		private ref struct __FLightUpPointLightSignature_DelegateParams
 		{
-			// Token: 0x04016BD8 RID: 93144
+			// Token: 0x04005B81 RID: 23425
 			[FieldOffset(0)]
 			public int Source;
 
-			// Token: 0x04016BD9 RID: 93145
+			// Token: 0x04005B82 RID: 23426
 			[FieldOffset(4)]
 			public int Target;
 		}
 
-		// Token: 0x02002FE0 RID: 12256
+		// Token: 0x02000AF4 RID: 2804
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016BDA RID: 93146
+			// Token: 0x04005B83 RID: 23427
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

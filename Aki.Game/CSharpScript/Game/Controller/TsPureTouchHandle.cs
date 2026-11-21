@@ -4,19 +4,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Controller
 {
-	// Token: 0x02007281 RID: 29313
+	// Token: 0x02006400 RID: 25600
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class TsPureTouchHandle
 	{
-		// Token: 0x06047D9C RID: 294300 RVA: 0x012627D1 File Offset: 0x012609D1
+		// Token: 0x0603E15C RID: 254300 RVA: 0x012031D1 File Offset: 0x012013D1
 		public void Initialize(TsBasePlayerController playerController, PlayerInputHandle playerInputHandle)
 		{
 			this.PlayerController = playerController;
 			this.PlayerInputHandle = playerInputHandle;
 		}
 
-		// Token: 0x06047D9D RID: 294301 RVA: 0x012627E4 File Offset: 0x012609E4
+		// Token: 0x0603E15D RID: 254301 RVA: 0x012031E4 File Offset: 0x012013E4
 		public void Reset()
 		{
 			this.PlayerController = null;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Controller
 			}
 		}
 
-		// Token: 0x06047D9E RID: 294302 RVA: 0x01262860 File Offset: 0x01260A60
+		// Token: 0x0603E15E RID: 254302 RVA: 0x01203260 File Offset: 0x01201460
 		public void BindTouch()
 		{
 			if (this.PlayerController == null)
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Controller
 			UKuroInputDelegateLibrary.RegisterTouchBinding(EInputEvent.IE_Repeat, this.PlayerController, this.OnTouchMoveDelegate);
 		}
 
-		// Token: 0x06047D9F RID: 294303 RVA: 0x01262925 File Offset: 0x01260B25
+		// Token: 0x0603E15F RID: 254303 RVA: 0x01203325 File Offset: 0x01201525
 		[NullableContext(0)]
 		protected void OnTouchBegin(TEnumAsByte<ETouchIndex> touchIndex, FVector position)
 		{
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Controller
 			LogReportModel.Instance.RecordOperateTime(false, "", 0.0);
 		}
 
-		// Token: 0x06047DA0 RID: 294304 RVA: 0x0126295B File Offset: 0x01260B5B
+		// Token: 0x0603E160 RID: 254304 RVA: 0x0120335B File Offset: 0x0120155B
 		[NullableContext(0)]
 		protected void OnTouchEnd(TEnumAsByte<ETouchIndex> touchIndex, FVector position)
 		{
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Controller
 			this.PlayerInputHandle.TouchEnd(touchIndex, position);
 		}
 
-		// Token: 0x06047DA1 RID: 294305 RVA: 0x01262978 File Offset: 0x01260B78
+		// Token: 0x0603E161 RID: 254305 RVA: 0x01203378 File Offset: 0x01201578
 		[NullableContext(0)]
 		protected void OnTouchMove(TEnumAsByte<ETouchIndex> touchIndex, FVector position)
 		{
@@ -97,19 +97,19 @@ namespace CSharpScript.Game.Controller
 			this.PlayerInputHandle.TouchMove(touchIndex, position);
 		}
 
-		// Token: 0x04025C6E RID: 154734
+		// Token: 0x04020F2E RID: 134958
 		private TsBasePlayerController PlayerController;
 
-		// Token: 0x04025C6F RID: 154735
+		// Token: 0x04020F2F RID: 134959
 		private PlayerInputHandle PlayerInputHandle;
 
-		// Token: 0x04025C70 RID: 154736
+		// Token: 0x04020F30 RID: 134960
 		private FTouchBindingDelegate OnTouchBeginDelegate;
 
-		// Token: 0x04025C71 RID: 154737
+		// Token: 0x04020F31 RID: 134961
 		private FTouchBindingDelegate OnTouchEndDelegate;
 
-		// Token: 0x04025C72 RID: 154738
+		// Token: 0x04020F32 RID: 134962
 		private FTouchBindingDelegate OnTouchMoveDelegate;
 	}
 }

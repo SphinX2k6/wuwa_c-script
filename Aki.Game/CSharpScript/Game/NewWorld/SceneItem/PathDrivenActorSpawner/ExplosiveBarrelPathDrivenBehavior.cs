@@ -8,18 +8,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 {
-	// Token: 0x020071BC RID: 29116
+	// Token: 0x02006271 RID: 25201
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ExplosiveBarrelPathDrivenBehavior : IPathDrivenActorTickBehavior, IPathDrivenActorBehavior
 	{
-		// Token: 0x06047401 RID: 291841 RVA: 0x0121E2BC File Offset: 0x0121C4BC
+		// Token: 0x0603CCFC RID: 249084 RVA: 0x011781C8 File Offset: 0x011763C8
 		public ExplosiveBarrelPathDrivenBehavior(int? ownerPbDataId)
 		{
 			this.OwnerPbDataId = ownerPbDataId;
 		}
 
-		// Token: 0x06047402 RID: 291842 RVA: 0x0121E2E4 File Offset: 0x0121C4E4
+		// Token: 0x0603CCFD RID: 249085 RVA: 0x011781F0 File Offset: 0x011763F0
 		public unsafe bool Initialize(IPathDrivenActorRuntimeData runtimeData)
 		{
 			AActor actor = runtimeData.Actor;
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			return true;
 		}
 
-		// Token: 0x06047403 RID: 291843 RVA: 0x0121E588 File Offset: 0x0121C788
+		// Token: 0x0603CCFE RID: 249086 RVA: 0x01178494 File Offset: 0x01176694
 		public void PrepareCollisionBeforeSpawn(IPathDrivenActorRuntimeData runtimeData)
 		{
 			UStaticMeshComponent staticMeshComponent = this.StaticMeshComponent;
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			staticMeshComponent2.SetCollisionEnabled(ECollisionEnabled.NoCollision);
 		}
 
-		// Token: 0x06047404 RID: 291844 RVA: 0x0121E5B0 File Offset: 0x0121C7B0
+		// Token: 0x0603CCFF RID: 249087 RVA: 0x011784BC File Offset: 0x011766BC
 		public void RestoreCollisionAfterSpawn(IPathDrivenActorRuntimeData runtimeData)
 		{
 			UStaticMeshComponent staticMeshComponent = this.StaticMeshComponent;
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			staticMeshComponent.SetGenerateOverlapEvents(true);
 		}
 
-		// Token: 0x06047405 RID: 291845 RVA: 0x0121E5E4 File Offset: 0x0121C7E4
+		// Token: 0x0603CD00 RID: 249088 RVA: 0x011784F0 File Offset: 0x011766F0
 		public void ClearCollisionBeforeRecycle(IPathDrivenActorRuntimeData runtimeData)
 		{
 			UStaticMeshComponent staticMeshComponent = this.StaticMeshComponent;
@@ -121,17 +121,17 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			staticMeshComponent2.SetCollisionEnabled(ECollisionEnabled.NoCollision);
 		}
 
-		// Token: 0x06047406 RID: 291846 RVA: 0x0121E609 File Offset: 0x0121C809
+		// Token: 0x0603CD01 RID: 249089 RVA: 0x01178515 File Offset: 0x01176715
 		public void OnStagnationChanged(IPathDrivenActorRuntimeData runtimeData, bool isStagnated)
 		{
 		}
 
-		// Token: 0x06047407 RID: 291847 RVA: 0x0121E60B File Offset: 0x0121C80B
+		// Token: 0x0603CD02 RID: 249090 RVA: 0x01178517 File Offset: 0x01176717
 		public void OnSpawnerStagnationChanged(IPathDrivenActorRuntimeData runtimeData, bool isStagnated)
 		{
 		}
 
-		// Token: 0x06047408 RID: 291848 RVA: 0x0121E60D File Offset: 0x0121C80D
+		// Token: 0x0603CD03 RID: 249091 RVA: 0x01178519 File Offset: 0x01176719
 		[NullableContext(0)]
 		public UniTask<bool> OnTrackSwitched([Nullable(1)] IPathDrivenActorRuntimeData runtimeData, FTransformDouble fromTransform, FTransformDouble toTransform)
 		{
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			return UniTask.FromResult<bool>(true);
 		}
 
-		// Token: 0x06047409 RID: 291849 RVA: 0x0121E628 File Offset: 0x0121C828
+		// Token: 0x0603CD04 RID: 249092 RVA: 0x01178534 File Offset: 0x01176734
 		public void Tick(IPathDrivenActorRuntimeData runtimeData, float deltaSeconds)
 		{
 			if (!runtimeData.Finished)
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			}
 		}
 
-		// Token: 0x0604740A RID: 291850 RVA: 0x0121E6D0 File Offset: 0x0121C8D0
+		// Token: 0x0603CD05 RID: 249093 RVA: 0x011785DC File Offset: 0x011767DC
 		public void OnFinishing(IPathDrivenActorRuntimeData runtimeData, EPathDrivenActorFinishReason reason)
 		{
 			this.StopRollingAudio();
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			}
 		}
 
-		// Token: 0x0604740B RID: 291851 RVA: 0x0121E720 File Offset: 0x0121C920
+		// Token: 0x0603CD06 RID: 249094 RVA: 0x0117862C File Offset: 0x0117682C
 		public void Cleanup(IPathDrivenActorRuntimeData runtimeData)
 		{
 			this.StopRollingAudio();
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			this.RuntimeData = null;
 		}
 
-		// Token: 0x0604740C RID: 291852 RVA: 0x0121E794 File Offset: 0x0121C994
+		// Token: 0x0603CD07 RID: 249095 RVA: 0x011786A0 File Offset: 0x011768A0
 		private void StartRollingAudio(AActor actor)
 		{
 			if (string.IsNullOrEmpty(this.AudioEvent) || this.AudioHandle != 0 || (actor == null || !actor.IsValid()))
@@ -206,7 +206,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			this.AudioHandle = AudioSystem.Instance.PostEvent(this.AudioEvent, actor, null);
 		}
 
-		// Token: 0x0604740D RID: 291853 RVA: 0x0121E7E8 File Offset: 0x0121C9E8
+		// Token: 0x0603CD08 RID: 249096 RVA: 0x011786F4 File Offset: 0x011768F4
 		private void StopRollingAudio()
 		{
 			if (this.AudioHandle == 0)
@@ -220,7 +220,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			this.AudioHandle = 0;
 		}
 
-		// Token: 0x0604740E RID: 291854 RVA: 0x0121E838 File Offset: 0x0121CA38
+		// Token: 0x0603CD09 RID: 249097 RVA: 0x01178744 File Offset: 0x01176944
 		private unsafe void TryPlayExplodeEffect(IPathDrivenActorRuntimeData runtimeData, FTransformDouble? actorTransform)
 		{
 			if (actorTransform == null || string.IsNullOrEmpty(this.ExplodeEffectPath) || GlobalData.World == null)
@@ -241,7 +241,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			}
 		}
 
-		// Token: 0x0604740F RID: 291855 RVA: 0x0121E8FC File Offset: 0x0121CAFC
+		// Token: 0x0603CD0A RID: 249098 RVA: 0x01178808 File Offset: 0x01176A08
 		private unsafe void TryEmitOverlapHitEvent()
 		{
 			FGameplayTag? gameplayTagById = GameplayTagUtils.GetGameplayTagById(ExplosiveBarrelPathDrivenBehavior.EXPLOSIVE_BARREL_HIT_EVENT_TAG_ID);
@@ -260,7 +260,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			EventSystem.Instance.Emit<FGameplayTag>(EEventName.CheckClientEvent, gameplayTagById.Value);
 		}
 
-		// Token: 0x06047410 RID: 291856 RVA: 0x0121E9A0 File Offset: 0x0121CBA0
+		// Token: 0x0603CD0B RID: 249099 RVA: 0x011788AC File Offset: 0x01176AAC
 		[NullableContext(2)]
 		private void HandleActorBeginOverlap(AActor overlappedActor, AActor otherActor)
 		{
@@ -332,36 +332,36 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			runtimeData.RequestFinish(EPathDrivenActorFinishReason.Overlap);
 		}
 
-		// Token: 0x04025788 RID: 153480
+		// Token: 0x040203F7 RID: 132087
 		private const float MIN_BARREL_RADIUS = 0.01f;
 
-		// Token: 0x04025789 RID: 153481
+		// Token: 0x040203F8 RID: 132088
 		private static readonly int EXPLOSIVE_BARREL_HIT_EVENT_TAG_ID = GameplayTagDefine.EGameplayTagId["关卡.事件.无限爆炸桶.爆炸桶命中"];
 
-		// Token: 0x0402578A RID: 153482
+		// Token: 0x040203F9 RID: 132089
 		private float BarrelRadius;
 
-		// Token: 0x0402578B RID: 153483
+		// Token: 0x040203FA RID: 132090
 		private string ExplodeEffectPath = "";
 
-		// Token: 0x0402578C RID: 153484
+		// Token: 0x040203FB RID: 132091
 		private string AudioEvent = "";
 
-		// Token: 0x0402578D RID: 153485
+		// Token: 0x040203FC RID: 132092
 		private int AudioHandle;
 
-		// Token: 0x0402578E RID: 153486
+		// Token: 0x040203FD RID: 132093
 		[Nullable(2)]
 		private UStaticMeshComponent StaticMeshComponent;
 
-		// Token: 0x0402578F RID: 153487
+		// Token: 0x040203FE RID: 132094
 		private float LastSplineDistance;
 
-		// Token: 0x04025790 RID: 153488
+		// Token: 0x040203FF RID: 132095
 		[Nullable(2)]
 		private IPathDrivenActorRuntimeData RuntimeData;
 
-		// Token: 0x04025791 RID: 153489
+		// Token: 0x04020400 RID: 132096
 		private readonly int? OwnerPbDataId;
 	}
 }

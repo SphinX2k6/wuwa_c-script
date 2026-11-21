@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005510 RID: 21776
+	// Token: 0x02005A96 RID: 23190
 	public class ILookAtTargetBaseT
 	{
-		// Token: 0x1700A0C9 RID: 41161
-		// (get) Token: 0x06023F83 RID: 147331 RVA: 0x004F8C6A File Offset: 0x004F6E6A
-		// (set) Token: 0x06023F84 RID: 147332 RVA: 0x004F8C72 File Offset: 0x004F6E72
+		// Token: 0x1700A903 RID: 43267
+		// (get) Token: 0x0602603D RID: 155709 RVA: 0x00535D8E File Offset: 0x00533F8E
+		// (set) Token: 0x0602603E RID: 155710 RVA: 0x00535D96 File Offset: 0x00533F96
 		public ELookAtTargetType Type { get; set; }
 
-		// Token: 0x06023F85 RID: 147333 RVA: 0x004F8C7B File Offset: 0x004F6E7B
+		// Token: 0x0602603F RID: 155711 RVA: 0x00535D9F File Offset: 0x00533F9F
 		public ILookAtTargetBaseT()
 		{
 			this.Type = ELookAtTargetType.Entity;

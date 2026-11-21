@@ -8,13 +8,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002273 RID: 8819
+// Token: 0x02001757 RID: 5975
 [NullableContext(1)]
 [Nullable(0)]
 public class MotorcycleTechTreeSwitchView : UiViewBase
 {
-	// Token: 0x170015F2 RID: 5618
-	// (get) Token: 0x06011385 RID: 70533 RVA: 0x00432E69 File Offset: 0x00431069
+	// Token: 0x17001629 RID: 5673
+	// (get) Token: 0x0600E81B RID: 59419 RVA: 0x0043FA75 File Offset: 0x0043DC75
 	private bool IsLockByTime
 	{
 		get
@@ -23,8 +23,8 @@ public class MotorcycleTechTreeSwitchView : UiViewBase
 		}
 	}
 
-	// Token: 0x170015F3 RID: 5619
-	// (get) Token: 0x06011386 RID: 70534 RVA: 0x00432E75 File Offset: 0x00431075
+	// Token: 0x1700162A RID: 5674
+	// (get) Token: 0x0600E81C RID: 59420 RVA: 0x0043FA81 File Offset: 0x0043DC81
 	private bool IsLockByPlayerStatus
 	{
 		get
@@ -33,12 +33,12 @@ public class MotorcycleTechTreeSwitchView : UiViewBase
 		}
 	}
 
-	// Token: 0x06011387 RID: 70535 RVA: 0x00432E81 File Offset: 0x00431081
+	// Token: 0x0600E81D RID: 59421 RVA: 0x0043FA8D File Offset: 0x0043DC8D
 	public MotorcycleTechTreeSwitchView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06011388 RID: 70536 RVA: 0x00432E8C File Offset: 0x0043108C
+	// Token: 0x0600E81E RID: 59422 RVA: 0x0043FA98 File Offset: 0x0043DC98
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -50,7 +50,7 @@ public class MotorcycleTechTreeSwitchView : UiViewBase
 		};
 	}
 
-	// Token: 0x06011389 RID: 70537 RVA: 0x00432EFC File Offset: 0x004310FC
+	// Token: 0x0600E81F RID: 59423 RVA: 0x0043FB08 File Offset: 0x0043DD08
 	protected override UniTask OnBeforeStartAsync()
 	{
 		MotorcycleTechTreeSwitchView.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -61,7 +61,7 @@ public class MotorcycleTechTreeSwitchView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601138A RID: 70538 RVA: 0x00432F3F File Offset: 0x0043113F
+	// Token: 0x0600E820 RID: 59424 RVA: 0x0043FB4B File Offset: 0x0043DD4B
 	protected override void OnBeforeShow()
 	{
 		UUIInturnAnimController uuiinturnAnimController = base.GetHorizontalLayout(1).GetOwner().GetComponentByClass(UUIInturnAnimController.StaticClass()) as UUIInturnAnimController;
@@ -72,7 +72,7 @@ public class MotorcycleTechTreeSwitchView : UiViewBase
 		uuiinturnAnimController.Play("", -1, false);
 	}
 
-	// Token: 0x0601138B RID: 70539 RVA: 0x00432F72 File Offset: 0x00431172
+	// Token: 0x0600E821 RID: 59425 RVA: 0x0043FB7E File Offset: 0x0043DD7E
 	protected override void OnBeforeDestroy()
 	{
 		PopupCaptionItem captionItem = this.CaptionItem;
@@ -83,7 +83,7 @@ public class MotorcycleTechTreeSwitchView : UiViewBase
 		captionItem.Destroy(null);
 	}
 
-	// Token: 0x0601138C RID: 70540 RVA: 0x00432F85 File Offset: 0x00431185
+	// Token: 0x0600E822 RID: 59426 RVA: 0x0043FB91 File Offset: 0x0043DD91
 	private MotorcycleTechTreeSwitchItem InitItem()
 	{
 		return new MotorcycleTechTreeSwitchItem
@@ -92,7 +92,7 @@ public class MotorcycleTechTreeSwitchView : UiViewBase
 		};
 	}
 
-	// Token: 0x0601138D RID: 70541 RVA: 0x00432FA0 File Offset: 0x004311A0
+	// Token: 0x0600E823 RID: 59427 RVA: 0x0043FBAC File Offset: 0x0043DDAC
 	private void OnClickItem(int treeType, UUIExtendToggle toggle)
 	{
 		if (this.CurrentSelectToggle != null)
@@ -106,13 +106,13 @@ public class MotorcycleTechTreeSwitchView : UiViewBase
 		this.SwitchBtnItem.SetEnableClick(enableClick);
 	}
 
-	// Token: 0x0601138E RID: 70542 RVA: 0x00433001 File Offset: 0x00431201
+	// Token: 0x0600E824 RID: 59428 RVA: 0x0043FC0D File Offset: 0x0043DE0D
 	private void OnBackButtonClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0601138F RID: 70543 RVA: 0x0043300C File Offset: 0x0043120C
+	// Token: 0x0600E825 RID: 59429 RVA: 0x0043FC18 File Offset: 0x0043DE18
 	private void OnBtnSwitchClick(int _)
 	{
 		if (this.IsLockByTime)
@@ -146,15 +146,15 @@ public class MotorcycleTechTreeSwitchView : UiViewBase
 		});
 	}
 
-	// Token: 0x04008309 RID: 33545
+	// Token: 0x04008447 RID: 33863
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x0400830A RID: 33546
+	// Token: 0x04008448 RID: 33864
 	[Nullable(2)]
 	private ButtonItem SwitchBtnItem;
 
-	// Token: 0x0400830B RID: 33547
+	// Token: 0x04008449 RID: 33865
 	[Nullable(new byte[]
 	{
 		2,
@@ -162,30 +162,30 @@ public class MotorcycleTechTreeSwitchView : UiViewBase
 	})]
 	private GenericLayout<MotorcycleTechTreeSwitchItem, int> TechTreeLayout;
 
-	// Token: 0x0400830C RID: 33548
+	// Token: 0x0400844A RID: 33866
 	[Nullable(2)]
 	private UUIExtendToggle CurrentSelectToggle;
 
-	// Token: 0x0400830D RID: 33549
+	// Token: 0x0400844B RID: 33867
 	private int SelectedTechTreeType;
 
-	// Token: 0x0400830E RID: 33550
+	// Token: 0x0400844C RID: 33868
 	private int CacheCurTreeType;
 
-	// Token: 0x020087AC RID: 34732
+	// Token: 0x02007935 RID: 31029
 	[NullableContext(0)]
 	private class EMotorTechTreeSwitchComponent
 	{
-		// Token: 0x0402C175 RID: 180597
+		// Token: 0x0402748D RID: 160909
 		public const int ItemCaption = 0;
 
-		// Token: 0x0402C176 RID: 180598
+		// Token: 0x0402748E RID: 160910
 		public const int Layout = 1;
 
-		// Token: 0x0402C177 RID: 180599
+		// Token: 0x0402748F RID: 160911
 		public const int LayoutItem = 2;
 
-		// Token: 0x0402C178 RID: 180600
+		// Token: 0x04027490 RID: 160912
 		public const int BtnConfirm = 3;
 	}
 }

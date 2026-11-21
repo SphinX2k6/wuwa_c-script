@@ -4,13 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002718 RID: 10008
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x020029DF RID: 10719
 	public class PlayBubble : ActionParams
 	{
-		// Token: 0x0600DF3F RID: 57151 RVA: 0x002115EB File Offset: 0x0020F7EB
-		[NullableContext(1)]
+		// Token: 0x0600ED2B RID: 60715 RVA: 0x0022DF93 File Offset: 0x0022C193
 		public static PlayBubble Create(IPlayBubble? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170042D1 RID: 17105
-		// (get) Token: 0x0600DF40 RID: 57152 RVA: 0x0021160C File Offset: 0x0020F80C
+		// Token: 0x1700461B RID: 17947
+		// (get) Token: 0x0600ED2C RID: 60716 RVA: 0x0022DFB4 File Offset: 0x0022C1B4
 		public virtual int? EntityId
 		{
 			get
@@ -37,12 +34,10 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170042D2 RID: 17106
-		// (get) Token: 0x0600DF41 RID: 57153 RVA: 0x00211642 File Offset: 0x0020F842
-		[Nullable(1)]
+		// Token: 0x1700461C RID: 17948
+		// (get) Token: 0x0600ED2D RID: 60717 RVA: 0x0022DFEA File Offset: 0x0022C1EA
 		public virtual IBubbleIndex Flow
 		{
-			[NullableContext(1)]
 			get
 			{
 				if (this._FlowInited)
@@ -55,8 +50,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170042D3 RID: 17107
-		// (get) Token: 0x0600DF42 RID: 57154 RVA: 0x00211678 File Offset: 0x0020F878
+		// Token: 0x1700461D RID: 17949
+		// (get) Token: 0x0600ED2E RID: 60718 RVA: 0x0022E020 File Offset: 0x0022C220
 		public virtual bool? IsRangeFollowEntity
 		{
 			get
@@ -69,8 +64,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170042D4 RID: 17108
-		// (get) Token: 0x0600DF43 RID: 57155 RVA: 0x002116B0 File Offset: 0x0020F8B0
+		// Token: 0x1700461E RID: 17950
+		// (get) Token: 0x0600ED2F RID: 60719 RVA: 0x0022E058 File Offset: 0x0022C258
 		public virtual bool? IsAudioOccludedByScene
 		{
 			get
@@ -83,10 +78,12 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170042D5 RID: 17109
-		// (get) Token: 0x0600DF44 RID: 57156 RVA: 0x002116E6 File Offset: 0x0020F8E6
+		// Token: 0x1700461F RID: 17951
+		// (get) Token: 0x0600ED30 RID: 60720 RVA: 0x0022E08E File Offset: 0x0022C28E
+		[Nullable(2)]
 		public virtual IBubbleRangeCylinderConfig TriggerCylinderConfig
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this._TriggerCylinderConfigInited)
@@ -99,8 +96,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170042D6 RID: 17110
-		// (get) Token: 0x0600DF45 RID: 57157 RVA: 0x0021171C File Offset: 0x0020F91C
+		// Token: 0x17004620 RID: 17952
+		// (get) Token: 0x0600ED31 RID: 60721 RVA: 0x0022E0C4 File Offset: 0x0022C2C4
 		public virtual bool? IsPlayMouthAnim
 		{
 			get
@@ -113,19 +110,21 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007BE4 RID: 31716
+		// Token: 0x04008289 RID: 33417
 		private IPlayBubble Instance;
 
-		// Token: 0x04007BE5 RID: 31717
+		// Token: 0x0400828A RID: 33418
+		[Nullable(2)]
 		private IBubbleIndex _FlowCache;
 
-		// Token: 0x04007BE6 RID: 31718
+		// Token: 0x0400828B RID: 33419
 		private bool _FlowInited;
 
-		// Token: 0x04007BE7 RID: 31719
+		// Token: 0x0400828C RID: 33420
+		[Nullable(2)]
 		private IBubbleRangeCylinderConfig _TriggerCylinderConfigCache;
 
-		// Token: 0x04007BE8 RID: 31720
+		// Token: 0x0400828D RID: 33421
 		private bool _TriggerCylinderConfigInited;
 	}
 }

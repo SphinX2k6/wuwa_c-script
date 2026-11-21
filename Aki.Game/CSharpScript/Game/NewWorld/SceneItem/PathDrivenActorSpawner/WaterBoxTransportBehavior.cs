@@ -11,32 +11,32 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 {
-	// Token: 0x020071D3 RID: 29139
+	// Token: 0x02006288 RID: 25224
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WaterBoxTransportBehavior : IPathDrivenActorBehavior, IStaticVariableResetter
 	{
-		// Token: 0x060474F9 RID: 292089 RVA: 0x012227DF File Offset: 0x012209DF
+		// Token: 0x0603CDFB RID: 249339 RVA: 0x0117C613 File Offset: 0x0117A813
 		static WaterBoxTransportBehavior()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(WaterBoxTransportBehavior.CreateStaticDefaultValue), new Action(WaterBoxTransportBehavior.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060474FA RID: 292090 RVA: 0x012227FE File Offset: 0x012209FE
+		// Token: 0x0603CDFC RID: 249340 RVA: 0x0117C632 File Offset: 0x0117A832
 		public static void CreateStaticDefaultValue()
 		{
 			WaterBoxTransportBehavior._stagnationMaterialDataCache = new Dictionary<string, ItemMaterialControllerActorData>();
 		}
 
-		// Token: 0x060474FB RID: 292091 RVA: 0x0122280A File Offset: 0x01220A0A
+		// Token: 0x0603CDFD RID: 249341 RVA: 0x0117C63E File Offset: 0x0117A83E
 		public static void ResetStaticDefaultValue()
 		{
 			WaterBoxTransportBehavior.StagnatedTrailCount = 0;
 			WaterBoxTransportBehavior._stagnationMaterialDataCache = null;
 		}
 
-		// Token: 0x17009DED RID: 40429
-		// (get) Token: 0x060474FC RID: 292092 RVA: 0x01222818 File Offset: 0x01220A18
+		// Token: 0x17007344 RID: 29508
+		// (get) Token: 0x0603CDFE RID: 249342 RVA: 0x0117C64C File Offset: 0x0117A84C
 		private static Dictionary<string, ItemMaterialControllerActorData> StagnationMaterialDataCache
 		{
 			get
@@ -45,13 +45,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			}
 		}
 
-		// Token: 0x060474FD RID: 292093 RVA: 0x0122281F File Offset: 0x01220A1F
+		// Token: 0x0603CDFF RID: 249343 RVA: 0x0117C653 File Offset: 0x0117A853
 		public WaterBoxTransportBehavior(int? ownerPbDataId)
 		{
 			this.OwnerPbDataId = ownerPbDataId;
 		}
 
-		// Token: 0x060474FE RID: 292094 RVA: 0x01222844 File Offset: 0x01220A44
+		// Token: 0x0603CE00 RID: 249344 RVA: 0x0117C678 File Offset: 0x0117A878
 		public unsafe bool Initialize(IPathDrivenActorRuntimeData runtimeData)
 		{
 			AActor actor = runtimeData.Actor;
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			return true;
 		}
 
-		// Token: 0x060474FF RID: 292095 RVA: 0x012229E1 File Offset: 0x01220BE1
+		// Token: 0x0603CE01 RID: 249345 RVA: 0x0117C815 File Offset: 0x0117AA15
 		public void PrepareCollisionBeforeSpawn(IPathDrivenActorRuntimeData runtimeData)
 		{
 			UBoxComponent collisionTriggerComponent = this.CollisionTriggerComponent;
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			collisionTriggerComponent.SetGenerateOverlapEvents(false);
 		}
 
-		// Token: 0x06047500 RID: 292096 RVA: 0x012229F4 File Offset: 0x01220BF4
+		// Token: 0x0603CE02 RID: 249346 RVA: 0x0117C828 File Offset: 0x0117AA28
 		public void RestoreCollisionAfterSpawn(IPathDrivenActorRuntimeData runtimeData)
 		{
 			UBoxComponent collisionTriggerComponent = this.CollisionTriggerComponent;
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			collisionTriggerComponent.SetGenerateOverlapEvents(this.GenerateOverlapEventsBeforeSpawn);
 		}
 
-		// Token: 0x06047501 RID: 292097 RVA: 0x01222A26 File Offset: 0x01220C26
+		// Token: 0x0603CE03 RID: 249347 RVA: 0x0117C85A File Offset: 0x0117AA5A
 		public void ClearCollisionBeforeRecycle(IPathDrivenActorRuntimeData runtimeData)
 		{
 			UBoxComponent collisionTriggerComponent = this.CollisionTriggerComponent;
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			collisionTriggerComponent.SetGenerateOverlapEvents(false);
 		}
 
-		// Token: 0x06047502 RID: 292098 RVA: 0x01222A39 File Offset: 0x01220C39
+		// Token: 0x0603CE04 RID: 249348 RVA: 0x0117C86D File Offset: 0x0117AA6D
 		public void OnStagnationChanged(IPathDrivenActorRuntimeData runtimeData, bool isStagnated)
 		{
 			this.StagnationMaterialEnabled = isStagnated;
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			this.DisableStagnationMaterial();
 		}
 
-		// Token: 0x06047503 RID: 292099 RVA: 0x01222A54 File Offset: 0x01220C54
+		// Token: 0x0603CE05 RID: 249349 RVA: 0x0117C888 File Offset: 0x0117AA88
 		private void EnableStagnationMaterial()
 		{
 			string dataPath = this.StagnationMaterialDataPath;
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			}, 100, "js_undefined");
 		}
 
-		// Token: 0x06047504 RID: 292100 RVA: 0x01222AD4 File Offset: 0x01220CD4
+		// Token: 0x0603CE06 RID: 249350 RVA: 0x0117C908 File Offset: 0x0117AB08
 		[NullableContext(2)]
 		private void ApplyStagnationMaterial(ItemMaterialControllerActorData asset)
 		{
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			}
 		}
 
-		// Token: 0x06047505 RID: 292101 RVA: 0x01222B76 File Offset: 0x01220D76
+		// Token: 0x0603CE07 RID: 249351 RVA: 0x0117C9AA File Offset: 0x0117ABAA
 		private void DisableStagnationMaterial()
 		{
 			if (this.StagnationMaterialHandle == null)
@@ -197,12 +197,12 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			this.StagnationMaterialHandle = null;
 		}
 
-		// Token: 0x06047506 RID: 292102 RVA: 0x01222BA8 File Offset: 0x01220DA8
+		// Token: 0x0603CE08 RID: 249352 RVA: 0x0117C9DC File Offset: 0x0117ABDC
 		public void OnFinishing(IPathDrivenActorRuntimeData runtimeData, EPathDrivenActorFinishReason reason)
 		{
 		}
 
-		// Token: 0x06047507 RID: 292103 RVA: 0x01222BAC File Offset: 0x01220DAC
+		// Token: 0x0603CE09 RID: 249353 RVA: 0x0117C9E0 File Offset: 0x0117ABE0
 		[NullableContext(0)]
 		public UniTask<bool> OnTrackSwitched([Nullable(1)] IPathDrivenActorRuntimeData runtimeData, FTransformDouble fromTransform, FTransformDouble toTransform)
 		{
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			return <OnTrackSwitched>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06047508 RID: 292104 RVA: 0x01222C08 File Offset: 0x01220E08
+		// Token: 0x0603CE0A RID: 249354 RVA: 0x0117CA3C File Offset: 0x0117AC3C
 		public void Cleanup(IPathDrivenActorRuntimeData runtimeData)
 		{
 			this.StopTrailEffect();
@@ -234,13 +234,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			this.CollisionTriggerComponent = null;
 		}
 
-		// Token: 0x06047509 RID: 292105 RVA: 0x01222C6C File Offset: 0x01220E6C
+		// Token: 0x0603CE0B RID: 249355 RVA: 0x0117CAA0 File Offset: 0x0117ACA0
 		public void OnSpawnerStagnationChanged(IPathDrivenActorRuntimeData runtimeData, bool isStagnated)
 		{
 			this.SetTrailStagnated(isStagnated);
 		}
 
-		// Token: 0x0604750A RID: 292106 RVA: 0x01222C78 File Offset: 0x01220E78
+		// Token: 0x0603CE0C RID: 249356 RVA: 0x0117CAAC File Offset: 0x0117ACAC
 		private unsafe void SpawnTrailEffect(IPathDrivenActorRuntimeData runtimeData, BP_WaterBox_PhantomBox_C waterBoxActor)
 		{
 			if (this.TrailEffectHandle != null || string.IsNullOrEmpty(this.TrailEffectPath))
@@ -276,7 +276,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			this.TrailEffectHandle = new int?(num);
 		}
 
-		// Token: 0x0604750B RID: 292107 RVA: 0x01222DC0 File Offset: 0x01220FC0
+		// Token: 0x0603CE0D RID: 249357 RVA: 0x0117CBF4 File Offset: 0x0117ADF4
 		private void SetTrailStagnated(bool isStagnated)
 		{
 			if (this.TrailStagnated == isStagnated)
@@ -292,7 +292,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			}
 		}
 
-		// Token: 0x0604750C RID: 292108 RVA: 0x01222E44 File Offset: 0x01221044
+		// Token: 0x0603CE0E RID: 249358 RVA: 0x0117CC78 File Offset: 0x0117AE78
 		private void StopTrailEffect()
 		{
 			this.SetTrailStagnated(false);
@@ -307,7 +307,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			this.TrailEffectHandle = null;
 		}
 
-		// Token: 0x0604750D RID: 292109 RVA: 0x01222EB0 File Offset: 0x012210B0
+		// Token: 0x0603CE0F RID: 249359 RVA: 0x0117CCE4 File Offset: 0x0117AEE4
 		private void AttachOwnerForHit(IPathDrivenActorRuntimeData runtimeData)
 		{
 			BaseActorComponent component = runtimeData.OwnerEntity.GetComponent<BaseActorComponent>();
@@ -325,13 +325,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 			runtimeData.Actor.SetOwner(aactor);
 		}
 
-		// Token: 0x040257F7 RID: 153591
+		// Token: 0x04020466 RID: 132198
 		private const string TRACK_SWITCH_TELEPORT_REASON = "WaterBoxTransportBehavior.TrackSwitchCarry";
 
-		// Token: 0x040257F8 RID: 153592
+		// Token: 0x04020467 RID: 132199
 		private static int StagnatedTrailCount;
 
-		// Token: 0x040257F9 RID: 153593
+		// Token: 0x04020468 RID: 132200
 		[Nullable(new byte[]
 		{
 			2,
@@ -340,36 +340,36 @@ namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 		})]
 		private static Dictionary<string, ItemMaterialControllerActorData> _stagnationMaterialDataCache;
 
-		// Token: 0x040257FA RID: 153594
+		// Token: 0x04020469 RID: 132201
 		[Nullable(2)]
 		private AActor StagnationMaterialActor;
 
-		// Token: 0x040257FB RID: 153595
+		// Token: 0x0402046A RID: 132202
 		private string StagnationMaterialDataPath = "";
 
-		// Token: 0x040257FC RID: 153596
+		// Token: 0x0402046B RID: 132203
 		private int? StagnationMaterialHandle;
 
-		// Token: 0x040257FD RID: 153597
+		// Token: 0x0402046C RID: 132204
 		private bool StagnationMaterialEnabled;
 
-		// Token: 0x040257FE RID: 153598
+		// Token: 0x0402046D RID: 132205
 		private string TrailEffectPath = "";
 
-		// Token: 0x040257FF RID: 153599
+		// Token: 0x0402046E RID: 132206
 		private int? TrailEffectHandle;
 
-		// Token: 0x04025800 RID: 153600
+		// Token: 0x0402046F RID: 132207
 		private bool TrailStagnated;
 
-		// Token: 0x04025801 RID: 153601
+		// Token: 0x04020470 RID: 132208
 		[Nullable(2)]
 		private UBoxComponent CollisionTriggerComponent;
 
-		// Token: 0x04025802 RID: 153602
+		// Token: 0x04020471 RID: 132209
 		private bool GenerateOverlapEventsBeforeSpawn;
 
-		// Token: 0x04025803 RID: 153603
+		// Token: 0x04020472 RID: 132210
 		private readonly int? OwnerPbDataId;
 	}
 }

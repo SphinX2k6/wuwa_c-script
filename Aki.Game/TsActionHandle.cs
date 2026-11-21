@@ -7,16 +7,16 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02000256 RID: 598
+// Token: 0x0200025A RID: 602
 [NullableContext(1)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/Controller/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Controller/TsActionHandle.TsActionHandle_C")]
 public class TsActionHandle : UObject, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x17000593 RID: 1427
-	// (get) Token: 0x06002465 RID: 9317 RVA: 0x000DDBFE File Offset: 0x000DBDFE
-	// (set) Token: 0x06002466 RID: 9318 RVA: 0x000DDC12 File Offset: 0x000DBE12
+	// Token: 0x170005BA RID: 1466
+	// (get) Token: 0x0600251C RID: 9500 RVA: 0x000E3FB2 File Offset: 0x000E21B2
+	// (set) Token: 0x0600251D RID: 9501 RVA: 0x000E3FC6 File Offset: 0x000E21C6
 	[Nullable(2)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	private unsafe TsBasePlayerController PlayerController
@@ -33,9 +33,9 @@ public class TsActionHandle : UObject, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x17000594 RID: 1428
-	// (get) Token: 0x06002467 RID: 9319 RVA: 0x000DDC27 File Offset: 0x000DBE27
-	// (set) Token: 0x06002468 RID: 9320 RVA: 0x000DDC3B File Offset: 0x000DBE3B
+	// Token: 0x170005BB RID: 1467
+	// (get) Token: 0x0600251E RID: 9502 RVA: 0x000E3FDB File Offset: 0x000E21DB
+	// (set) Token: 0x0600251F RID: 9503 RVA: 0x000E3FEF File Offset: 0x000E21EF
 	[UProperty(EPropertyFlags.CPF_None)]
 	private unsafe string ActionName
 	{
@@ -49,7 +49,7 @@ public class TsActionHandle : UObject, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x06002469 RID: 9321 RVA: 0x000DDC50 File Offset: 0x000DBE50
+	// Token: 0x06002520 RID: 9504 RVA: 0x000E4004 File Offset: 0x000E2204
 	public void Initialize(TsBasePlayerController playerController)
 	{
 		this.PlayerController = playerController;
@@ -57,7 +57,7 @@ public class TsActionHandle : UObject, IUnrealUObject, IUnrealObject
 		this.OnReleaseStat = Stat.Create("TsActionHandle.OnReleaseAction", "", "STATGROUP_KuroBattle");
 	}
 
-	// Token: 0x0600246A RID: 9322 RVA: 0x000DDC8D File Offset: 0x000DBE8D
+	// Token: 0x06002521 RID: 9505 RVA: 0x000E4041 File Offset: 0x000E2241
 	public void Reset()
 	{
 		this.PlayerController = null;
@@ -65,7 +65,7 @@ public class TsActionHandle : UObject, IUnrealUObject, IUnrealObject
 		this.OnInputActionCallback = null;
 	}
 
-	// Token: 0x0600246B RID: 9323 RVA: 0x000DDCA8 File Offset: 0x000DBEA8
+	// Token: 0x06002522 RID: 9506 RVA: 0x000E405C File Offset: 0x000E225C
 	public void AddActionBinding(string actionName, [Nullable(new byte[]
 	{
 		2,
@@ -111,28 +111,25 @@ public class TsActionHandle : UObject, IUnrealUObject, IUnrealObject
 		playerController2.AddActionBinding(value, keyEvent2, this, fname);
 	}
 
-	// Token: 0x0600246C RID: 9324 RVA: 0x000DDD58 File Offset: 0x000DBF58
+	// Token: 0x06002523 RID: 9507 RVA: 0x000E410C File Offset: 0x000E230C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	protected unsafe virtual void OnPressAction(FKey key)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("OnPressAction"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsActionHandle.__OnPressAction_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsActionHandle) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("OnPressAction"), TsActionHandle.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsActionHandle.__OnPressAction_FunctionParams*)ptr + 15L / (long)sizeof(TsActionHandle.__OnPressAction_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			UnrealReflectionUtils.CopyNativeStruct(FKey.StaticStruct(), &ptr2->key, (key != null) ? key.NativePtr : ((IntPtr)0), 1, false);
+			this.OnPressAction_Implementation(key);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsActionHandle.__OnPressAction_FunctionParams* ptr = stackalloc TsActionHandle.__OnPressAction_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsActionHandle.__OnPressAction_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CopyNativeStruct(FKey.StaticStruct(), &ptr->key, (key != null) ? key.NativePtr : ((IntPtr)0), 1, false);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0600246D RID: 9325 RVA: 0x000DDDE7 File Offset: 0x000DBFE7
+	// Token: 0x06002524 RID: 9508 RVA: 0x000E41B1 File Offset: 0x000E23B1
 	protected void OnPressAction_Implementation(FKey key)
 	{
 		Action<string, bool, FKey> onInputActionCallback = this.OnInputActionCallback;
@@ -143,28 +140,25 @@ public class TsActionHandle : UObject, IUnrealUObject, IUnrealObject
 		onInputActionCallback(this.ActionName, true, key);
 	}
 
-	// Token: 0x0600246E RID: 9326 RVA: 0x000DDE04 File Offset: 0x000DC004
+	// Token: 0x06002525 RID: 9509 RVA: 0x000E41CC File Offset: 0x000E23CC
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	protected unsafe virtual void OnReleaseAction(FKey key)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("OnReleaseAction"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		TsActionHandle.__OnReleaseAction_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsActionHandle) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("OnReleaseAction"), TsActionHandle.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((TsActionHandle.__OnReleaseAction_FunctionParams*)ptr + 15L / (long)sizeof(TsActionHandle.__OnReleaseAction_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			UnrealReflectionUtils.CopyNativeStruct(FKey.StaticStruct(), &ptr2->key, (key != null) ? key.NativePtr : ((IntPtr)0), 1, false);
+			this.OnReleaseAction_Implementation(key);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		TsActionHandle.__OnReleaseAction_FunctionParams* ptr = stackalloc TsActionHandle.__OnReleaseAction_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(TsActionHandle.__OnReleaseAction_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CopyNativeStruct(FKey.StaticStruct(), &ptr->key, (key != null) ? key.NativePtr : ((IntPtr)0), 1, false);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0600246F RID: 9327 RVA: 0x000DDE93 File Offset: 0x000DC093
+	// Token: 0x06002526 RID: 9510 RVA: 0x000E4271 File Offset: 0x000E2471
 	protected void OnReleaseAction_Implementation(FKey key)
 	{
 		Action<string, bool, FKey> onInputActionCallback = this.OnInputActionCallback;
@@ -175,7 +169,7 @@ public class TsActionHandle : UObject, IUnrealUObject, IUnrealObject
 		onInputActionCallback(this.ActionName, false, key);
 	}
 
-	// Token: 0x06002470 RID: 9328 RVA: 0x000DDEAD File Offset: 0x000DC0AD
+	// Token: 0x06002527 RID: 9511 RVA: 0x000E428B File Offset: 0x000E248B
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsActionHandle._ClassPtr == IntPtr.Zero)
@@ -185,22 +179,22 @@ public class TsActionHandle : UObject, IUnrealUObject, IUnrealObject
 		return TsActionHandle._ClassPtr;
 	}
 
-	// Token: 0x06002471 RID: 9329 RVA: 0x000DDED4 File Offset: 0x000DC0D4
+	// Token: 0x06002528 RID: 9512 RVA: 0x000E42B0 File Offset: 0x000E24B0
 	public TsActionHandle() : this(BuiltinUtils.AllocNativeUObject(TsActionHandle.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06002472 RID: 9330 RVA: 0x000DDEFC File Offset: 0x000DC0FC
+	// Token: 0x06002529 RID: 9513 RVA: 0x000E42D8 File Offset: 0x000E24D8
 	public TsActionHandle(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsActionHandle.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06002473 RID: 9331 RVA: 0x000DDF2F File Offset: 0x000DC12F
+	// Token: 0x0600252A RID: 9514 RVA: 0x000E430B File Offset: 0x000E250B
 	protected TsActionHandle(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06002474 RID: 9332 RVA: 0x000DDF38 File Offset: 0x000DC138
+	// Token: 0x0600252B RID: 9515 RVA: 0x000E4314 File Offset: 0x000E2514
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_OnPressAction_Implementation(TsActionHandle.__OnPressAction_FunctionParams* __Params)
 	{
@@ -208,7 +202,7 @@ public class TsActionHandle : UObject, IUnrealUObject, IUnrealObject
 		this.OnPressAction_Implementation(key);
 	}
 
-	// Token: 0x06002475 RID: 9333 RVA: 0x000DDF5C File Offset: 0x000DC15C
+	// Token: 0x0600252C RID: 9516 RVA: 0x000E4338 File Offset: 0x000E2538
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_OnReleaseAction_Implementation(TsActionHandle.__OnReleaseAction_FunctionParams* __Params)
 	{
@@ -216,7 +210,7 @@ public class TsActionHandle : UObject, IUnrealUObject, IUnrealObject
 		this.OnReleaseAction_Implementation(key);
 	}
 
-	// Token: 0x040023D4 RID: 9172
+	// Token: 0x04002452 RID: 9298
 	[Nullable(new byte[]
 	{
 		2,
@@ -225,47 +219,47 @@ public class TsActionHandle : UObject, IUnrealUObject, IUnrealObject
 	})]
 	private Action<string, bool, FKey> OnInputActionCallback;
 
-	// Token: 0x040023D5 RID: 9173
+	// Token: 0x04002453 RID: 9299
 	[Nullable(2)]
 	private Stat OnPressStat;
 
-	// Token: 0x040023D6 RID: 9174
+	// Token: 0x04002454 RID: 9300
 	[Nullable(2)]
 	private Stat OnReleaseStat;
 
-	// Token: 0x040023D7 RID: 9175
+	// Token: 0x04002455 RID: 9301
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Controller/TsActionHandle.TsActionHandle_C";
 
-	// Token: 0x040023D8 RID: 9176
+	// Token: 0x04002456 RID: 9302
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x040023D9 RID: 9177
+	// Token: 0x04002457 RID: 9303
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x040023DA RID: 9178
+	// Token: 0x04002458 RID: 9304
 	private static int __PropertyOffset_PlayerController;
 
-	// Token: 0x040023DB RID: 9179
+	// Token: 0x04002459 RID: 9305
 	private static int __PropertyOffset_ActionName;
 
-	// Token: 0x02007443 RID: 29763
+	// Token: 0x020065D4 RID: 26068
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __OnPressAction_FunctionParams
 	{
-		// Token: 0x0402682B RID: 157739
+		// Token: 0x04021B69 RID: 138089
 		[FieldOffset(0)]
 		public byte key;
 	}
 
-	// Token: 0x02007444 RID: 29764
+	// Token: 0x020065D5 RID: 26069
 	[NullableContext(0)]
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __OnReleaseAction_FunctionParams
 	{
-		// Token: 0x0402682C RID: 157740
+		// Token: 0x04021B6A RID: 138090
 		[FieldOffset(0)]
 		public byte key;
 	}

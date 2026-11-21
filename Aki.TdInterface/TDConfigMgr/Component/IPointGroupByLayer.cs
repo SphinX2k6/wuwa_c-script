@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000610 RID: 1552
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020006AD RID: 1709
 	public class IPointGroupByLayer : IPointGroupGenerateType
 	{
-		// Token: 0x0600211C RID: 8476 RVA: 0x0005BD48 File Offset: 0x00059F48
+		// Token: 0x06002422 RID: 9250 RVA: 0x00062A5C File Offset: 0x00060C5C
 		private IPointGroupByLayer_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600211D RID: 8477 RVA: 0x0005BD80 File Offset: 0x00059F80
+		// Token: 0x06002423 RID: 9251 RVA: 0x00062A94 File Offset: 0x00060C94
 		public static IPointGroupByLayer Create([Nullable(2)] IPointGroupByLayer instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600211E RID: 8478 RVA: 0x0005BD93 File Offset: 0x00059F93
+		// Token: 0x06002424 RID: 9252 RVA: 0x00062AA7 File Offset: 0x00060CA7
 		public static IPointGroupByLayer CreateFromSetValue([Nullable(2)] IPointGroupByLayer_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600211F RID: 8479 RVA: 0x0005BDA6 File Offset: 0x00059FA6
+		// Token: 0x06002425 RID: 9253 RVA: 0x00062ABA File Offset: 0x00060CBA
 		public new IPointGroupByLayer_SetValue ToSetValue()
 		{
 			return new IPointGroupByLayer_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170008D5 RID: 2261
-		// (get) Token: 0x06002120 RID: 8480 RVA: 0x0005BDD1 File Offset: 0x00059FD1
-		// (set) Token: 0x06002121 RID: 8481 RVA: 0x0005BDFC File Offset: 0x00059FFC
+		// Token: 0x1700098C RID: 2444
+		// (get) Token: 0x06002426 RID: 9254 RVA: 0x00062AE5 File Offset: 0x00060CE5
+		// (set) Token: 0x06002427 RID: 9255 RVA: 0x00062B10 File Offset: 0x00060D10
 		public override EPointGroupGenerateType Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170008D6 RID: 2262
-		// (get) Token: 0x06002122 RID: 8482 RVA: 0x0005BE0C File Offset: 0x0005A00C
-		// (set) Token: 0x06002123 RID: 8483 RVA: 0x0005BE6D File Offset: 0x0005A06D
+		// Token: 0x1700098D RID: 2445
+		// (get) Token: 0x06002428 RID: 9256 RVA: 0x00062B20 File Offset: 0x00060D20
+		// (set) Token: 0x06002429 RID: 9257 RVA: 0x00062B81 File Offset: 0x00060D81
 		public virtual VectorInfo Space
 		{
 			get
@@ -116,9 +114,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170008D7 RID: 2263
-		// (get) Token: 0x06002124 RID: 8484 RVA: 0x0005BE84 File Offset: 0x0005A084
-		// (set) Token: 0x06002125 RID: 8485 RVA: 0x0005BF17 File Offset: 0x0005A117
+		// Token: 0x1700098E RID: 2446
+		// (get) Token: 0x0600242A RID: 9258 RVA: 0x00062B98 File Offset: 0x00060D98
+		// (set) Token: 0x0600242B RID: 9259 RVA: 0x00062C2B File Offset: 0x00060E2B
 		public virtual List<IParkourPointLayerConfig> Layers
 		{
 			get
@@ -154,24 +152,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001727 RID: 5927
+		// Token: 0x04001919 RID: 6425
 		[Nullable(2)]
 		protected new IPointGroupByLayer FbInstance;
 
-		// Token: 0x04001728 RID: 5928
+		// Token: 0x0400191A RID: 6426
 		[Nullable(2)]
 		protected new IPointGroupByLayer_SetValue PocoInterface;
 
-		// Token: 0x04001729 RID: 5929
+		// Token: 0x0400191B RID: 6427
 		private VectorInfo _SpaceCache;
 
-		// Token: 0x0400172A RID: 5930
+		// Token: 0x0400191C RID: 6428
 		private bool _SpaceInited;
 
-		// Token: 0x0400172B RID: 5931
+		// Token: 0x0400191D RID: 6429
 		private List<IParkourPointLayerConfig> _LayersCache;
 
-		// Token: 0x0400172C RID: 5932
+		// Token: 0x0400191E RID: 6430
 		private bool _LayersInited;
 	}
 }

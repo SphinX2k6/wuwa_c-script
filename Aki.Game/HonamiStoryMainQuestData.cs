@@ -3,19 +3,19 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.BattleUi.Views;
 using CSharpScript.Game.Module.HonamiStory;
 
-// Token: 0x02001E75 RID: 7797
+// Token: 0x02001337 RID: 4919
 [NullableContext(1)]
 [Nullable(0)]
 public class HonamiStoryMainQuestData : HonamiStoryQuestDataBase
 {
-	// Token: 0x0600EDA5 RID: 60837 RVA: 0x003898EA File Offset: 0x00387AEA
+	// Token: 0x0600C1C4 RID: 49604 RVA: 0x003954DA File Offset: 0x003936DA
 	public HonamiStoryMainQuestData()
 	{
 		this.TaskType = EHonamiStoryQuestType.Main;
 		this.ActivityQuestId = this.ActivityData.ActivityQuestId;
 	}
 
-	// Token: 0x0600EDA6 RID: 60838 RVA: 0x0038990C File Offset: 0x00387B0C
+	// Token: 0x0600C1C5 RID: 49605 RVA: 0x003954FC File Offset: 0x003936FC
 	[NullableContext(2)]
 	public override LevelPlayInfo GetLevelPlayInfo()
 	{
@@ -32,7 +32,7 @@ public class HonamiStoryMainQuestData : HonamiStoryQuestDataBase
 		return LevelPlayModel.Instance.GetLevelPlayInfo(honamiStoryAreaData.LevelPlayId);
 	}
 
-	// Token: 0x0600EDA7 RID: 60839 RVA: 0x00389950 File Offset: 0x00387B50
+	// Token: 0x0600C1C6 RID: 49606 RVA: 0x00395540 File Offset: 0x00393740
 	public override string GetNameKey()
 	{
 		if (base.IsInDungeon)
@@ -51,7 +51,7 @@ public class HonamiStoryMainQuestData : HonamiStoryQuestDataBase
 		return quest.NameKey;
 	}
 
-	// Token: 0x0600EDA8 RID: 60840 RVA: 0x00389998 File Offset: 0x00387B98
+	// Token: 0x0600C1C7 RID: 49607 RVA: 0x00395588 File Offset: 0x00393788
 	public override string GetDesc()
 	{
 		if (base.IsInDungeon)
@@ -66,7 +66,7 @@ public class HonamiStoryMainQuestData : HonamiStoryQuestDataBase
 		return quest.QuestDescribe;
 	}
 
-	// Token: 0x0600EDA9 RID: 60841 RVA: 0x003899D4 File Offset: 0x00387BD4
+	// Token: 0x0600C1C8 RID: 49608 RVA: 0x003955C4 File Offset: 0x003937C4
 	public override int GetRewardId()
 	{
 		if (base.IsInDungeon)
@@ -85,26 +85,26 @@ public class HonamiStoryMainQuestData : HonamiStoryQuestDataBase
 		return quest.RewardId.GetValueOrDefault();
 	}
 
-	// Token: 0x0600EDAA RID: 60842 RVA: 0x00389A1E File Offset: 0x00387C1E
+	// Token: 0x0600C1C9 RID: 49609 RVA: 0x0039560E File Offset: 0x0039380E
 	public override bool IsFinished()
 	{
 		return HonamiStoryUtil.CheckActivityQuestFinished();
 	}
 
-	// Token: 0x0600EDAB RID: 60843 RVA: 0x00389A25 File Offset: 0x00387C25
+	// Token: 0x0600C1CA RID: 49610 RVA: 0x00395615 File Offset: 0x00393815
 	public override bool CanMapTrack()
 	{
 		return false;
 	}
 
-	// Token: 0x0600EDAC RID: 60844 RVA: 0x00389A28 File Offset: 0x00387C28
+	// Token: 0x0600C1CB RID: 49611 RVA: 0x00395618 File Offset: 0x00393818
 	public override bool MapTrack(bool isTrack)
 	{
 		Log.Instance.Error(ELogModule.HonamiStory, ELogAuthor.LRC, "主线任务不能追踪", default(ReadOnlySpan<ValueTuple<string, object>>));
 		return false;
 	}
 
-	// Token: 0x0600EDAD RID: 60845 RVA: 0x00389A58 File Offset: 0x00387C58
+	// Token: 0x0600C1CC RID: 49612 RVA: 0x00395648 File Offset: 0x00393848
 	[NullableContext(2)]
 	public override BehaviorTreeViewShowData GetTreeShowData()
 	{
@@ -149,6 +149,6 @@ public class HonamiStoryMainQuestData : HonamiStoryQuestDataBase
 		}
 	}
 
-	// Token: 0x04006E43 RID: 28227
+	// Token: 0x04006F24 RID: 28452
 	private readonly int ActivityQuestId;
 }

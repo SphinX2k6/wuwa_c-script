@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020063B9 RID: 25529
+	// Token: 0x02006A2A RID: 27178
 	public class IClientEventUiPlayPianoT
 	{
-		// Token: 0x1700BE42 RID: 48706
-		// (get) Token: 0x0602C29B RID: 180891 RVA: 0x006106DB File Offset: 0x0060E8DB
-		// (set) Token: 0x0602C29C RID: 180892 RVA: 0x006106E3 File Offset: 0x0060E8E3
+		// Token: 0x1700C7C6 RID: 51142
+		// (get) Token: 0x0602E9FD RID: 190973 RVA: 0x0065B713 File Offset: 0x00659913
+		// (set) Token: 0x0602E9FE RID: 190974 RVA: 0x0065B71B File Offset: 0x0065991B
 		public EClientEventUiType Type { get; set; }
 
-		// Token: 0x1700BE43 RID: 48707
-		// (get) Token: 0x0602C29D RID: 180893 RVA: 0x006106EC File Offset: 0x0060E8EC
-		// (set) Token: 0x0602C29E RID: 180894 RVA: 0x006106F4 File Offset: 0x0060E8F4
+		// Token: 0x1700C7C7 RID: 51143
+		// (get) Token: 0x0602E9FF RID: 190975 RVA: 0x0065B724 File Offset: 0x00659924
+		// (set) Token: 0x0602EA00 RID: 190976 RVA: 0x0065B72C File Offset: 0x0065992C
 		public TClientEventPianoEventUnion EventType { get; set; }
 
-		// Token: 0x0602C29F RID: 180895 RVA: 0x006106FD File Offset: 0x0060E8FD
+		// Token: 0x0602EA01 RID: 190977 RVA: 0x0065B735 File Offset: 0x00659935
 		public IClientEventUiPlayPianoT()
 		{
 			this.Type = EClientEventUiType.PlayPiano;

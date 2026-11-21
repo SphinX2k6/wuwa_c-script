@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002781 RID: 10113
+	// Token: 0x02002A53 RID: 10835
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IFlowActorUnit
 	{
-		// Token: 0x0600E124 RID: 57636 RVA: 0x002144A2 File Offset: 0x002126A2
-		[NullableContext(1)]
+		// Token: 0x0600EF42 RID: 61250 RVA: 0x00231236 File Offset: 0x0022F436
+		[NullableContext(0)]
 		public static IFlowActorUnit Create(IFlowActorUnit? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170043E4 RID: 17380
-		// (get) Token: 0x0600E125 RID: 57637 RVA: 0x002144C1 File Offset: 0x002126C1
+		// Token: 0x1700474A RID: 18250
+		// (get) Token: 0x0600EF43 RID: 61251 RVA: 0x00231255 File Offset: 0x0022F455
 		public virtual int EntityId
 		{
 			get
@@ -33,8 +33,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043E5 RID: 17381
-		// (get) Token: 0x0600E126 RID: 57638 RVA: 0x002144CE File Offset: 0x002126CE
+		// Token: 0x1700474B RID: 18251
+		// (get) Token: 0x0600EF44 RID: 61252 RVA: 0x00231262 File Offset: 0x0022F462
 		public virtual int TalkerId
 		{
 			get
@@ -43,8 +43,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043E6 RID: 17382
-		// (get) Token: 0x0600E127 RID: 57639 RVA: 0x002144DB File Offset: 0x002126DB
+		// Token: 0x1700474C RID: 18252
+		// (get) Token: 0x0600EF45 RID: 61253 RVA: 0x0023126F File Offset: 0x0022F46F
 		public virtual bool IsPlayer
 		{
 			get
@@ -53,8 +53,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043E7 RID: 17383
-		// (get) Token: 0x0600E128 RID: 57640 RVA: 0x002144E8 File Offset: 0x002126E8
+		// Token: 0x1700474D RID: 18253
+		// (get) Token: 0x0600EF46 RID: 61254 RVA: 0x0023127C File Offset: 0x0022F47C
 		public virtual bool IsResetPosition
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043E8 RID: 17384
-		// (get) Token: 0x0600E129 RID: 57641 RVA: 0x002144F5 File Offset: 0x002126F5
+		// Token: 0x1700474E RID: 18254
+		// (get) Token: 0x0600EF47 RID: 61255 RVA: 0x00231289 File Offset: 0x0022F489
 		public virtual string SeqFacePath
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043E9 RID: 17385
-		// (get) Token: 0x0600E12A RID: 57642 RVA: 0x00214502 File Offset: 0x00212702
+		// Token: 0x1700474F RID: 18255
+		// (get) Token: 0x0600EF48 RID: 61256 RVA: 0x00231296 File Offset: 0x0022F496
 		public virtual IActorInitialState InitialState
 		{
 			get
@@ -89,8 +89,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043EA RID: 17386
-		// (get) Token: 0x0600E12B RID: 57643 RVA: 0x00214536 File Offset: 0x00212736
+		// Token: 0x17004750 RID: 18256
+		// (get) Token: 0x0600EF49 RID: 61257 RVA: 0x002312CA File Offset: 0x0022F4CA
 		public virtual string EdTrialCharacterTemplate
 		{
 			get
@@ -99,13 +99,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007CBF RID: 31935
+		// Token: 0x04008375 RID: 33653
 		private IFlowActorUnit Instance;
 
-		// Token: 0x04007CC0 RID: 31936
+		// Token: 0x04008376 RID: 33654
 		private IActorInitialState _InitialStateCache;
 
-		// Token: 0x04007CC1 RID: 31937
+		// Token: 0x04008377 RID: 33655
 		private bool _InitialStateInited;
 	}
 }

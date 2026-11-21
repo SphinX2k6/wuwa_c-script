@@ -2,10 +2,10 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02001CD5 RID: 7381
+// Token: 0x02001197 RID: 4503
 public class MotorcycleArrowCollectionItemData
 {
-	// Token: 0x0600DF8D RID: 57229 RVA: 0x00345C92 File Offset: 0x00343E92
+	// Token: 0x0600B3AA RID: 45994 RVA: 0x003516BA File Offset: 0x0034F8BA
 	[NullableContext(1)]
 	public static MotorcycleArrowCollectionItemData Create(MotorFightItem config, int pos)
 	{
@@ -17,33 +17,33 @@ public class MotorcycleArrowCollectionItemData
 		};
 	}
 
-	// Token: 0x0600DF8E RID: 57230 RVA: 0x00345CB5 File Offset: 0x00343EB5
+	// Token: 0x0600B3AB RID: 45995 RVA: 0x003516DD File Offset: 0x0034F8DD
 	private MotorcycleArrowCollectionItemData(int id)
 	{
 		this.Id = id;
 	}
 
-	// Token: 0x0600DF8F RID: 57231 RVA: 0x00345CCB File Offset: 0x00343ECB
+	// Token: 0x0600B3AC RID: 45996 RVA: 0x003516F3 File Offset: 0x0034F8F3
 	public void SetIsShowStrengthen(bool show)
 	{
 		this.IsShowStrengthen = show;
 	}
 
-	// Token: 0x040066D6 RID: 26326
+	// Token: 0x040067B5 RID: 26549
 	public int Id;
 
-	// Token: 0x040066D7 RID: 26327
+	// Token: 0x040067B6 RID: 26550
 	public MotorFightItem Config;
 
-	// Token: 0x040066D8 RID: 26328
+	// Token: 0x040067B7 RID: 26551
 	public bool IsShowStrengthen;
 
-	// Token: 0x040066D9 RID: 26329
+	// Token: 0x040067B8 RID: 26552
 	public bool IsUnlock = true;
 
-	// Token: 0x040066DA RID: 26330
+	// Token: 0x040067B9 RID: 26553
 	public int Pos;
 
-	// Token: 0x040066DB RID: 26331
+	// Token: 0x040067BA RID: 26554
 	public int Num;
 }

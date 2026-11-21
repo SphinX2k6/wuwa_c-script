@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200243A RID: 9274
+	// Token: 0x020026DB RID: 9947
 	public class ESubScreenPushDirectionJsonConverter : JsonConverter<ESubScreenPushDirection>
 	{
-		// Token: 0x0600C985 RID: 51589 RVA: 0x001D81F8 File Offset: 0x001D63F8
+		// Token: 0x0600D635 RID: 54837 RVA: 0x001F20C0 File Offset: 0x001F02C0
 		public override ESubScreenPushDirection Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return ESubScreenPushDirectionExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C986 RID: 51590 RVA: 0x001D821C File Offset: 0x001D641C
+		// Token: 0x0600D636 RID: 54838 RVA: 0x001F20E4 File Offset: 0x001F02E4
 		public override void Write(Utf8JsonWriter writer, ESubScreenPushDirection value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

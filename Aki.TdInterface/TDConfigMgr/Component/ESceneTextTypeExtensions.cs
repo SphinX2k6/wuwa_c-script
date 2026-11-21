@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000A06 RID: 2566
+	// Token: 0x02000ACB RID: 2763
 	public static class ESceneTextTypeExtensions
 	{
-		// Token: 0x060038CC RID: 14540 RVA: 0x00092DA8 File Offset: 0x00090FA8
+		// Token: 0x06003CA4 RID: 15524 RVA: 0x0009B698 File Offset: 0x00099898
 		public static string ToEnumString(this ESceneTextType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060038CD RID: 14541 RVA: 0x00092DE0 File Offset: 0x00090FE0
+		// Token: 0x06003CA5 RID: 15525 RVA: 0x0009B6D0 File Offset: 0x000998D0
 		public static ESceneTextType FromString(string name)
 		{
 			ESceneTextType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060038CE RID: 14542 RVA: 0x00092E09 File Offset: 0x00091009
+		// Token: 0x06003CA6 RID: 15526 RVA: 0x0009B6F9 File Offset: 0x000998F9
 		public static bool TryFromString(string name, out ESceneTextType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x060038CF RID: 14543 RVA: 0x00092E42 File Offset: 0x00091042
+		// Token: 0x06003CA7 RID: 15527 RVA: 0x0009B732 File Offset: 0x00099932
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060038D0 RID: 14544 RVA: 0x00092E5A File Offset: 0x0009105A
+		// Token: 0x06003CA8 RID: 15528 RVA: 0x0009B74A File Offset: 0x0009994A
 		public static ESceneTextType[] GetValues()
 		{
 			return new ESceneTextType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060038D1 RID: 14545 RVA: 0x00092E66 File Offset: 0x00091066
+		// Token: 0x06003CA9 RID: 15529 RVA: 0x0009B756 File Offset: 0x00099956
 		public static string[] GetNames()
 		{
 			return new string[]

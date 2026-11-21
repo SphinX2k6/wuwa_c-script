@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -14,12 +13,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x02006588 RID: 25992
+	// Token: 0x02005506 RID: 21766
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FishingTimeLimitRewardTabView : UiTabViewBase
 	{
-		// Token: 0x0604123B RID: 266811 RVA: 0x00FC9594 File Offset: 0x00FC7794
+		// Token: 0x06035F00 RID: 220928 RVA: 0x00F1054C File Offset: 0x00F0E74C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -41,7 +40,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0604123C RID: 266812 RVA: 0x00FC9684 File Offset: 0x00FC7884
+		// Token: 0x06035F01 RID: 220929 RVA: 0x00F1063C File Offset: 0x00F0E83C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			FishingTimeLimitRewardTabView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -52,7 +51,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604123D RID: 266813 RVA: 0x00FC96C8 File Offset: 0x00FC78C8
+		// Token: 0x06035F02 RID: 220930 RVA: 0x00F10680 File Offset: 0x00F0E880
 		protected override void OnStart()
 		{
 			FishingActivity activityConfig = this.ActivityDataBase.GetActivityConfig();
@@ -66,14 +65,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}, 0);
 		}
 
-		// Token: 0x0604123E RID: 266814 RVA: 0x00FC972F File Offset: 0x00FC792F
+		// Token: 0x06035F03 RID: 220931 RVA: 0x00F106E7 File Offset: 0x00F0E8E7
 		protected override void AddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.FishingTimeLimitRewardListRefresh, new Action(this.RefreshCurrentTaskLayout));
 			EventSystem.Instance.Add(EEventName.FishingTimeLimitRewardProgressRefresh, new Action(this.RefreshProgressItem));
 		}
 
-		// Token: 0x0604123F RID: 266815 RVA: 0x00FC976C File Offset: 0x00FC796C
+		// Token: 0x06035F04 RID: 220932 RVA: 0x00F10724 File Offset: 0x00F0E924
 		protected override void OnBeforeShow()
 		{
 			UiTabSequence tabBehavior = base.GetTabBehavior<UiTabSequence>();
@@ -85,7 +84,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			levelSequencePlayer.PlayLevelSequenceByName("Start", false, null, false);
 		}
 
-		// Token: 0x06041240 RID: 266816 RVA: 0x00FC97A8 File Offset: 0x00FC79A8
+		// Token: 0x06035F05 RID: 220933 RVA: 0x00F10760 File Offset: 0x00F0E960
 		protected override void OnBeforeHide()
 		{
 			UiTabSequence tabBehavior = base.GetTabBehavior<UiTabSequence>();
@@ -97,20 +96,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			levelSequencePlayer.PlayLevelSequenceByName("Close", false, null, false);
 		}
 
-		// Token: 0x06041241 RID: 266817 RVA: 0x00FC97E1 File Offset: 0x00FC79E1
+		// Token: 0x06035F06 RID: 220934 RVA: 0x00F10799 File Offset: 0x00F0E999
 		protected override void RemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.FishingTimeLimitRewardListRefresh, new Action(this.RefreshCurrentTaskLayout));
 			EventSystem.Instance.Remove(EEventName.FishingTimeLimitRewardProgressRefresh, new Action(this.RefreshProgressItem));
 		}
 
-		// Token: 0x06041242 RID: 266818 RVA: 0x00FC981B File Offset: 0x00FC7A1B
+		// Token: 0x06035F07 RID: 220935 RVA: 0x00F107D3 File Offset: 0x00F0E9D3
 		private FishingRewardTargetTabItem TabItemProxyCreate()
 		{
 			return new FishingRewardTargetTabItem();
 		}
 
-		// Token: 0x06041243 RID: 266819 RVA: 0x00FC9824 File Offset: 0x00FC7A24
+		// Token: 0x06035F08 RID: 220936 RVA: 0x00F107DC File Offset: 0x00F0E9DC
 		private List<FishingRewardTargetTabData> CreateTabItemDataList(IEnumerable<FishingActivityGroup> tabList)
 		{
 			List<FishingRewardTargetTabData> list = new List<FishingRewardTargetTabData>();
@@ -129,7 +128,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return list;
 		}
 
-		// Token: 0x06041244 RID: 266820 RVA: 0x00FC98C0 File Offset: 0x00FC7AC0
+		// Token: 0x06035F09 RID: 220937 RVA: 0x00F10878 File Offset: 0x00F0EA78
 		private void TabCallBack(int index)
 		{
 			if (this.CurrentTabIndex != index && this.CurrentTabIndex != -1)
@@ -144,13 +143,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.RefreshTaskLayout(this.CurrentTabIndex, true);
 		}
 
-		// Token: 0x06041245 RID: 266821 RVA: 0x00FC9911 File Offset: 0x00FC7B11
+		// Token: 0x06035F0A RID: 220938 RVA: 0x00F108C9 File Offset: 0x00F0EAC9
 		private FishingRewardTaskItem TaskItemProxyCreate()
 		{
 			return new FishingRewardTaskItem();
 		}
 
-		// Token: 0x06041246 RID: 266822 RVA: 0x00FC9918 File Offset: 0x00FC7B18
+		// Token: 0x06035F0B RID: 220939 RVA: 0x00F108D0 File Offset: 0x00F0EAD0
 		private void RefreshCurrentTaskLayout()
 		{
 			foreach (FishingRewardTargetTabItem fishingRewardTargetTabItem in this.TabLayout.GetLayoutItemList())
@@ -160,7 +159,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.RefreshTaskLayout(this.CurrentTabIndex, false);
 		}
 
-		// Token: 0x06041247 RID: 266823 RVA: 0x00FC997C File Offset: 0x00FC7B7C
+		// Token: 0x06035F0C RID: 220940 RVA: 0x00F10934 File Offset: 0x00F0EB34
 		private void RefreshTaskLayout(int tabIndex, bool reset)
 		{
 			ActivityTaskData[] timeLimitTasksByGroupId = this.ActivityDataBase.GetTimeLimitTasksByGroupId(tabIndex + 1);
@@ -173,7 +172,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			}, true);
 		}
 
-		// Token: 0x06041248 RID: 266824 RVA: 0x00FC99CC File Offset: 0x00FC7BCC
+		// Token: 0x06035F0D RID: 220941 RVA: 0x00F10984 File Offset: 0x00F0EB84
 		private List<FishingTaskData> CreateTaskDataList(IEnumerable<ActivityTaskData> taskDataList)
 		{
 			List<FishingTaskData> list = new List<FishingTaskData>();
@@ -195,13 +194,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			return list;
 		}
 
-		// Token: 0x06041249 RID: 266825 RVA: 0x00FC9AD0 File Offset: 0x00FC7CD0
+		// Token: 0x06035F0E RID: 220942 RVA: 0x00F10A88 File Offset: 0x00F0EC88
 		private void TaskReceiveFunc(int taskId)
 		{
 			ActivityFishingController.FishingActivityLimitRewardRequest(taskId);
 		}
 
-		// Token: 0x0604124A RID: 266826 RVA: 0x00FC9AD8 File Offset: 0x00FC7CD8
+		// Token: 0x06035F0F RID: 220943 RVA: 0x00F10A90 File Offset: 0x00F0EC90
 		private void RefreshProgressItem()
 		{
 			FishingRewardProgressData[] allMilestoneReward = this.ActivityDataBase.GetAllMilestoneReward();
@@ -210,54 +209,54 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.ProgressItem.RefreshProgressItem(milestoneRewardItemAccumulate, milestoneRewardMaxCount, allMilestoneReward).Forget();
 		}
 
-		// Token: 0x0604124B RID: 266827 RVA: 0x00FC9B1C File Offset: 0x00FC7D1C
+		// Token: 0x06035F10 RID: 220944 RVA: 0x00F10AD4 File Offset: 0x00F0ECD4
 		private void OnClickGetProgressReward()
 		{
 			int[] allAvailableGetMilestoneRewardIds = this.ActivityDataBase.GetAllAvailableGetMilestoneRewardIds();
 			if (allAvailableGetMilestoneRewardIds.Length != 0)
 			{
-				ActivityFishingController.FishingActivityMilestoneRewardRequest(allAvailableGetMilestoneRewardIds.ToList<int>());
+				ActivityFishingController.FishingActivityMilestoneRewardRequest(allAvailableGetMilestoneRewardIds);
 			}
 		}
 
-		// Token: 0x04021EF1 RID: 138993
+		// Token: 0x0401C822 RID: 116770
 		private GenericLayout<FishingRewardTargetTabItem, FishingRewardTargetTabData> TabLayout;
 
-		// Token: 0x04021EF2 RID: 138994
+		// Token: 0x0401C823 RID: 116771
 		private GenericScrollViewNew<FishingRewardTaskItem, FishingTaskData> TaskLayout;
 
-		// Token: 0x04021EF3 RID: 138995
+		// Token: 0x0401C824 RID: 116772
 		private ActivityWeaponDescribeComponent WeaponItem;
 
-		// Token: 0x04021EF4 RID: 138996
+		// Token: 0x0401C825 RID: 116773
 		private FishingRewardProgressPanel ProgressItem;
 
-		// Token: 0x04021EF5 RID: 138997
+		// Token: 0x0401C826 RID: 116774
 		private ActivityFishingData ActivityDataBase;
 
-		// Token: 0x04021EF6 RID: 138998
+		// Token: 0x0401C827 RID: 116775
 		private int CurrentTabIndex = -1;
 
-		// Token: 0x0200C780 RID: 51072
+		// Token: 0x0200B165 RID: 45413
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x0403C45F RID: 246879
+			// Token: 0x04036DB0 RID: 224688
 			public const int WeaponPreview = 0;
 
-			// Token: 0x0403C460 RID: 246880
+			// Token: 0x04036DB1 RID: 224689
 			public const int TabLayout = 1;
 
-			// Token: 0x0403C461 RID: 246881
+			// Token: 0x04036DB2 RID: 224690
 			public const int TabItem = 2;
 
-			// Token: 0x0403C462 RID: 246882
+			// Token: 0x04036DB3 RID: 224691
 			public const int TaskLayout = 3;
 
-			// Token: 0x0403C463 RID: 246883
+			// Token: 0x04036DB4 RID: 224692
 			public const int TaskItem = 4;
 
-			// Token: 0x0403C464 RID: 246884
+			// Token: 0x04036DB5 RID: 224693
 			public const int ProgressItem = 5;
 		}
 	}

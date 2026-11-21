@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001E95 RID: 7829
+// Token: 0x02001357 RID: 4951
 [NullableContext(2)]
 [Nullable(0)]
 public class HonamiStoryInteractOperateAgent
 {
-	// Token: 0x0600F015 RID: 61461 RVA: 0x00397E0E File Offset: 0x0039600E
+	// Token: 0x0600C434 RID: 50228 RVA: 0x003A39CA File Offset: 0x003A1BCA
 	public void Clear()
 	{
 		this.StartOperateBackpack = null;
@@ -17,21 +17,21 @@ public class HonamiStoryInteractOperateAgent
 		this.TargetPosition = -1;
 	}
 
-	// Token: 0x04006F0F RID: 28431
+	// Token: 0x04006FF0 RID: 28656
 	public HonamiStoryBackpackPanelBase StartOperateBackpack;
 
-	// Token: 0x04006F10 RID: 28432
+	// Token: 0x04006FF1 RID: 28657
 	public HonamiStoryItemDataBase OperateData;
 
-	// Token: 0x04006F11 RID: 28433
+	// Token: 0x04006FF2 RID: 28658
 	public float BaseWidth;
 
-	// Token: 0x04006F12 RID: 28434
+	// Token: 0x04006FF3 RID: 28659
 	public float BaseHeight;
 
-	// Token: 0x04006F13 RID: 28435
+	// Token: 0x04006FF4 RID: 28660
 	public HonamiStoryBackpackPanelBase TargetOperateBackpack;
 
-	// Token: 0x04006F14 RID: 28436
+	// Token: 0x04006FF5 RID: 28661
 	public int TargetPosition = -1;
 }

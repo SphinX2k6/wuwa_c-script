@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001984 RID: 6532
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001B0D RID: 6925
 	public class IDeliverItemProbeCollectiblesConfig
 	{
-		// Token: 0x06008BDD RID: 35805 RVA: 0x00148868 File Offset: 0x00146A68
+		// Token: 0x0600930B RID: 37643 RVA: 0x001581F8 File Offset: 0x001563F8
 		private IDeliverItemProbeCollectiblesConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008BDE RID: 35806 RVA: 0x001488A0 File Offset: 0x00146AA0
+		// Token: 0x0600930C RID: 37644 RVA: 0x00158230 File Offset: 0x00156430
 		public static IDeliverItemProbeCollectiblesConfig Create([Nullable(2)] IDeliverItemProbeCollectiblesConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008BDF RID: 35807 RVA: 0x001488B3 File Offset: 0x00146AB3
+		// Token: 0x0600930D RID: 37645 RVA: 0x00158243 File Offset: 0x00156443
 		public static IDeliverItemProbeCollectiblesConfig CreateFromSetValue([Nullable(2)] IDeliverItemProbeCollectiblesConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,20 +48,19 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008BE0 RID: 35808 RVA: 0x001488C6 File Offset: 0x00146AC6
+		// Token: 0x0600930E RID: 37646 RVA: 0x00158256 File Offset: 0x00156456
 		public IDeliverItemProbeCollectiblesConfig_SetValue ToSetValue()
 		{
 			return new IDeliverItemProbeCollectiblesConfig_SetValue
 			{
 				ViewStyle = this.ViewStyle,
-				DeliverType = this.DeliverType,
-				MarkerType = this.MarkerType
+				CollectiblesDetectionId = this.CollectiblesDetectionId
 			};
 		}
 
-		// Token: 0x17002CFD RID: 11517
-		// (get) Token: 0x06008BE1 RID: 35809 RVA: 0x001488F4 File Offset: 0x00146AF4
-		// (set) Token: 0x06008BE2 RID: 35810 RVA: 0x00148955 File Offset: 0x00146B55
+		// Token: 0x17002EFE RID: 12030
+		// (get) Token: 0x0600930F RID: 37647 RVA: 0x00158278 File Offset: 0x00156478
+		// (set) Token: 0x06009310 RID: 37648 RVA: 0x001582D9 File Offset: 0x001564D9
 		public virtual IHandInItemViewStyle ViewStyle
 		{
 			get
@@ -91,90 +88,41 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002CFE RID: 11518
-		// (get) Token: 0x06008BE3 RID: 35811 RVA: 0x0014896C File Offset: 0x00146B6C
-		// (set) Token: 0x06008BE4 RID: 35812 RVA: 0x001489CD File Offset: 0x00146BCD
-		public virtual IItemCellIndependentDeliverType DeliverType
+		// Token: 0x17002EFF RID: 12031
+		// (get) Token: 0x06009311 RID: 37649 RVA: 0x001582EE File Offset: 0x001564EE
+		// (set) Token: 0x06009312 RID: 37650 RVA: 0x00158319 File Offset: 0x00156519
+		public virtual int CollectiblesDetectionId
 		{
 			get
 			{
-				if (this._DeliverTypeInited)
-				{
-					return this._DeliverTypeCache;
-				}
-				this._DeliverTypeInited = true;
 				if (this.FbInstance != null)
 				{
-					this._DeliverTypeCache = IItemCellIndependentDeliverType.Create(this.FbInstance.DeliverType);
+					return this.FbInstance.CollectiblesDetectionId;
 				}
-				else
+				if (this.PocoInterface == null)
 				{
-					IDeliverItemProbeCollectiblesConfig_SetValue pocoInterface = this.PocoInterface;
-					this._DeliverTypeCache = ((pocoInterface != null) ? pocoInterface.DeliverType : null);
+					return 0;
 				}
-				return this._DeliverTypeCache;
+				return this.PocoInterface.CollectiblesDetectionId;
 			}
 			set
 			{
-				this.GetOrCreatePoco().DeliverType = value;
-				this._DeliverTypeInited = false;
+				this.GetOrCreatePoco().CollectiblesDetectionId = value;
 			}
 		}
 
-		// Token: 0x17002CFF RID: 11519
-		// (get) Token: 0x06008BE5 RID: 35813 RVA: 0x001489E4 File Offset: 0x00146BE4
-		// (set) Token: 0x06008BE6 RID: 35814 RVA: 0x00148A45 File Offset: 0x00146C45
-		public virtual IPlaceholderCollectibleMarkerType MarkerType
-		{
-			get
-			{
-				if (this._MarkerTypeInited)
-				{
-					return this._MarkerTypeCache;
-				}
-				this._MarkerTypeInited = true;
-				if (this.FbInstance != null)
-				{
-					this._MarkerTypeCache = IPlaceholderCollectibleMarkerType.Create(this.FbInstance.MarkerType);
-				}
-				else
-				{
-					IDeliverItemProbeCollectiblesConfig_SetValue pocoInterface = this.PocoInterface;
-					this._MarkerTypeCache = ((pocoInterface != null) ? pocoInterface.MarkerType : null);
-				}
-				return this._MarkerTypeCache;
-			}
-			set
-			{
-				this.GetOrCreatePoco().MarkerType = value;
-				this._MarkerTypeInited = false;
-			}
-		}
-
-		// Token: 0x04005728 RID: 22312
+		// Token: 0x04005B79 RID: 23417
 		[Nullable(2)]
 		protected IDeliverItemProbeCollectiblesConfig FbInstance;
 
-		// Token: 0x04005729 RID: 22313
+		// Token: 0x04005B7A RID: 23418
 		[Nullable(2)]
 		protected IDeliverItemProbeCollectiblesConfig_SetValue PocoInterface;
 
-		// Token: 0x0400572A RID: 22314
+		// Token: 0x04005B7B RID: 23419
 		private IHandInItemViewStyle _ViewStyleCache;
 
-		// Token: 0x0400572B RID: 22315
+		// Token: 0x04005B7C RID: 23420
 		private bool _ViewStyleInited;
-
-		// Token: 0x0400572C RID: 22316
-		private IItemCellIndependentDeliverType _DeliverTypeCache;
-
-		// Token: 0x0400572D RID: 22317
-		private bool _DeliverTypeInited;
-
-		// Token: 0x0400572E RID: 22318
-		private IPlaceholderCollectibleMarkerType _MarkerTypeCache;
-
-		// Token: 0x0400572F RID: 22319
-		private bool _MarkerTypeInited;
 	}
 }

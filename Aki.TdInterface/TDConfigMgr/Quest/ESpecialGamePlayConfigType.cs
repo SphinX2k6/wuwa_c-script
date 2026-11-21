@@ -3,17 +3,17 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000E97 RID: 3735
+	// Token: 0x02000FAA RID: 4010
 	[EnumExtensions]
 	public enum ESpecialGamePlayConfigType
 	{
-		// Token: 0x0400319C RID: 12700
+		// Token: 0x040034A2 RID: 13474
 		Stalking,
-		// Token: 0x0400319D RID: 12701
+		// Token: 0x040034A3 RID: 13475
 		FreezeOnSight,
-		// Token: 0x0400319E RID: 12702
+		// Token: 0x040034A4 RID: 13476
 		FirstPersonTurret,
-		// Token: 0x0400319F RID: 12703
+		// Token: 0x040034A5 RID: 13477
 		Eavesdrop
 	}
 }

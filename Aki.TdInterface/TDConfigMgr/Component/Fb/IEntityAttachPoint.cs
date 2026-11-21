@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AA7 RID: 2727
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B71 RID: 2929
 	public class IEntityAttachPoint
 	{
-		// Token: 0x06003ECA RID: 16074 RVA: 0x000A0922 File Offset: 0x0009EB22
+		// Token: 0x060042F4 RID: 17140 RVA: 0x000A9F16 File Offset: 0x000A8116
 		public static IEntityAttachPoint Create(IEntityAttachPoint? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000F39 RID: 3897
-		// (get) Token: 0x06003ECB RID: 16075 RVA: 0x000A0941 File Offset: 0x0009EB41
+		// Token: 0x1700100D RID: 4109
+		// (get) Token: 0x060042F5 RID: 17141 RVA: 0x000A9F35 File Offset: 0x000A8135
 		public virtual string Name
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000F3A RID: 3898
-		// (get) Token: 0x06003ECC RID: 16076 RVA: 0x000A094E File Offset: 0x0009EB4E
+		// Token: 0x1700100E RID: 4110
+		// (get) Token: 0x060042F6 RID: 17142 RVA: 0x000A9F42 File Offset: 0x000A8142
 		public virtual VectorInfo AttachPoint
 		{
 			get
@@ -49,14 +47,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040022DE RID: 8926
+		// Token: 0x040024FA RID: 9466
 		private IEntityAttachPoint Instance;
 
-		// Token: 0x040022DF RID: 8927
+		// Token: 0x040024FB RID: 9467
 		[Nullable(2)]
 		private VectorInfo _AttachPointCache;
 
-		// Token: 0x040022E0 RID: 8928
+		// Token: 0x040024FC RID: 9468
 		private bool _AttachPointInited;
 	}
 }

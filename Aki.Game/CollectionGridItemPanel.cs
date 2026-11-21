@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using UnrealEngine;
 
-// Token: 0x02001CC7 RID: 7367
+// Token: 0x02001189 RID: 4489
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class CollectionGridItemPanel : LoopScrollSmallItemGrid<MotorcycleArrowCollectionItemData>
 {
-	// Token: 0x0600DF0D RID: 57101 RVA: 0x00343C2C File Offset: 0x00341E2C
+	// Token: 0x0600B32A RID: 45866 RVA: 0x0034F654 File Offset: 0x0034D854
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,13 +32,13 @@ public class CollectionGridItemPanel : LoopScrollSmallItemGrid<MotorcycleArrowCo
 		};
 	}
 
-	// Token: 0x0600DF0E RID: 57102 RVA: 0x00343D01 File Offset: 0x00341F01
+	// Token: 0x0600B32B RID: 45867 RVA: 0x0034F729 File Offset: 0x0034D929
 	protected override void OnRefresh(MotorcycleArrowCollectionItemData data, bool isSelected, int gridIndex)
 	{
 		this.Refresh(data);
 	}
 
-	// Token: 0x0600DF0F RID: 57103 RVA: 0x00343D0C File Offset: 0x00341F0C
+	// Token: 0x0600B32C RID: 45868 RVA: 0x0034F734 File Offset: 0x0034D934
 	public void Refresh(MotorcycleArrowCollectionItemData data)
 	{
 		this.Data = data;
@@ -49,7 +49,7 @@ public class CollectionGridItemPanel : LoopScrollSmallItemGrid<MotorcycleArrowCo
 		base.SetLeftTopIconVisible(ConfigMotorFightItemTypeById.GetConfig(config.Type, true).Value.Icon);
 	}
 
-	// Token: 0x0600DF10 RID: 57104 RVA: 0x00343DC2 File Offset: 0x00341FC2
+	// Token: 0x0600B32D RID: 45869 RVA: 0x0034F7EA File Offset: 0x0034D9EA
 	private void OnClickToggle(EToggleState toggleState)
 	{
 		this.OnClickCallBack(this.Data as MotorcycleArrowCollectionItemData);
@@ -59,53 +59,53 @@ public class CollectionGridItemPanel : LoopScrollSmallItemGrid<MotorcycleArrowCo
 		}
 	}
 
-	// Token: 0x0600DF11 RID: 57105 RVA: 0x00343DEC File Offset: 0x00341FEC
+	// Token: 0x0600B32E RID: 45870 RVA: 0x0034F814 File Offset: 0x0034DA14
 	public void SetToggleState(bool state)
 	{
 		EToggleState state2 = state ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 		base.GetExtendToggle(7).SetToggleState(state2, false, false, false);
 	}
 
-	// Token: 0x0400668D RID: 26253
+	// Token: 0x0400676C RID: 26476
 	public bool NeedSelectedState = true;
 
-	// Token: 0x0400668E RID: 26254
+	// Token: 0x0400676D RID: 26477
 	public Action<MotorcycleArrowCollectionItemData> OnClickCallBack = delegate(MotorcycleArrowCollectionItemData _)
 	{
 	};
 
-	// Token: 0x020082C5 RID: 33477
+	// Token: 0x0200744E RID: 29774
 	[NullableContext(0)]
 	private static class EComponents
 	{
-		// Token: 0x0402AA8E RID: 174734
+		// Token: 0x04025DB6 RID: 155062
 		public const int SpriteQuality = 0;
 
-		// Token: 0x0402AA8F RID: 174735
+		// Token: 0x04025DB7 RID: 155063
 		public const int TextureIcon = 1;
 
-		// Token: 0x0402AA90 RID: 174736
+		// Token: 0x04025DB8 RID: 155064
 		public const int ItemText = 2;
 
-		// Token: 0x0402AA91 RID: 174737
+		// Token: 0x04025DB9 RID: 155065
 		public const int TextName = 3;
 
-		// Token: 0x0402AA92 RID: 174738
+		// Token: 0x04025DBA RID: 155066
 		public const int SpriteBg = 4;
 
-		// Token: 0x0402AA93 RID: 174739
+		// Token: 0x04025DBB RID: 155067
 		public const int ItemAddPanel = 5;
 
-		// Token: 0x0402AA94 RID: 174740
+		// Token: 0x04025DBC RID: 155068
 		public const int ItemBottomAddPanel = 6;
 
-		// Token: 0x0402AA95 RID: 174741
+		// Token: 0x04025DBD RID: 155069
 		public const int ToggleRoot = 7;
 
-		// Token: 0x0402AA96 RID: 174742
+		// Token: 0x04025DBE RID: 155070
 		public const int SpriteSkinQuality = 8;
 
-		// Token: 0x0402AA97 RID: 174743
+		// Token: 0x04025DBF RID: 155071
 		public const int ItemAdditionBottomA = 9;
 	}
 }

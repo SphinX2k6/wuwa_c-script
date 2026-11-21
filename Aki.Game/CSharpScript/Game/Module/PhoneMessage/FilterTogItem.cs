@@ -7,24 +7,24 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhoneMessage
 {
-	// Token: 0x020050F7 RID: 20727
+	// Token: 0x020040C7 RID: 16583
 	[NullableContext(2)]
 	[Nullable(0)]
 	internal class FilterTogItem : GridProxyAbstract<int>
 	{
-		// Token: 0x06034FD7 RID: 217047 RVA: 0x00C8D121 File Offset: 0x00C8B321
+		// Token: 0x06029ED0 RID: 171728 RVA: 0x00BDA3FD File Offset: 0x00BD85FD
 		public void SetOnFilterTogItemClick(Action<int, bool> callback)
 		{
 			this.OnFilterTogItemClick = callback;
 		}
 
-		// Token: 0x06034FD8 RID: 217048 RVA: 0x00C8D12A File Offset: 0x00C8B32A
+		// Token: 0x06029ED1 RID: 171729 RVA: 0x00BDA406 File Offset: 0x00BD8606
 		public void SetIsFilterSelected(Func<int, bool> callback)
 		{
 			this.IsFilterSelected = callback;
 		}
 
-		// Token: 0x06034FD9 RID: 217049 RVA: 0x00C8D134 File Offset: 0x00C8B334
+		// Token: 0x06029ED2 RID: 171730 RVA: 0x00BDA410 File Offset: 0x00BD8610
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.PhoneMessage
 			};
 		}
 
-		// Token: 0x06034FDA RID: 217050 RVA: 0x00C8D1B4 File Offset: 0x00C8B3B4
+		// Token: 0x06029ED3 RID: 171731 RVA: 0x00BDA490 File Offset: 0x00BD8690
 		public override void Refresh(int filterId, bool isSelected, int gridIndex)
 		{
 			this.Id = new int?(filterId);
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.PhoneMessage
 			}
 		}
 
-		// Token: 0x06034FDB RID: 217051 RVA: 0x00C8D280 File Offset: 0x00C8B480
+		// Token: 0x06029ED4 RID: 171732 RVA: 0x00BDA55C File Offset: 0x00BD875C
 		private void OnTogItemClick(EToggleState state)
 		{
 			if (this.Id == null)
@@ -78,18 +78,18 @@ namespace CSharpScript.Game.Module.PhoneMessage
 			onFilterTogItemClick(this.Id.Value, arg);
 		}
 
-		// Token: 0x06034FDC RID: 217052 RVA: 0x00C8D2BC File Offset: 0x00C8B4BC
+		// Token: 0x06029ED5 RID: 171733 RVA: 0x00BDA598 File Offset: 0x00BD8798
 		public override void Clear()
 		{
 		}
 
-		// Token: 0x0401C373 RID: 115571
+		// Token: 0x04016DA6 RID: 93606
 		private int? Id;
 
-		// Token: 0x0401C374 RID: 115572
+		// Token: 0x04016DA7 RID: 93607
 		private Action<int, bool> OnFilterTogItemClick;
 
-		// Token: 0x0401C375 RID: 115573
+		// Token: 0x04016DA8 RID: 93608
 		private Func<int, bool> IsFilterSelected;
 	}
 }

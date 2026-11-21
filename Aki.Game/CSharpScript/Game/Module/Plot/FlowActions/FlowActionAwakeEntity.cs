@@ -6,12 +6,12 @@ using CSharpScript.Game.Module.Plot.Flow;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050A8 RID: 20648
+	// Token: 0x02004078 RID: 16504
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FlowActionAwakeEntity : FlowActionServerAction
 	{
-		// Token: 0x06034E96 RID: 216726 RVA: 0x00C881C4 File Offset: 0x00C863C4
+		// Token: 0x06029D8F RID: 171407 RVA: 0x00BD5444 File Offset: 0x00BD3644
 		protected unsafe override void OnExecute()
 		{
 			if (AutoRunModel.Instance.IsInLogicTreeGmMode())
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			this.AwakeEntity(list);
 		}
 
-		// Token: 0x06034E97 RID: 216727 RVA: 0x00C8836C File Offset: 0x00C8656C
+		// Token: 0x06029D90 RID: 171408 RVA: 0x00BD55EC File Offset: 0x00BD37EC
 		private void AwakeEntity(List<int> entityIds)
 		{
 			if (entityIds.Count == 0)
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			this.Task = WaitEntityTask.CreateWithPbDataId("FlowActionAwakeEntity.OnExecute", entityIds, new Action<bool?>(this.OnEntityReady), 20000, false, false);
 		}
 
-		// Token: 0x06034E98 RID: 216728 RVA: 0x00C883F8 File Offset: 0x00C865F8
+		// Token: 0x06029D91 RID: 171409 RVA: 0x00BD5678 File Offset: 0x00BD3878
 		private void OnEntityReady(bool? result)
 		{
 			this.Task = null;
@@ -119,13 +119,13 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			base.FinishExecute(true, true);
 		}
 
-		// Token: 0x06034E99 RID: 216729 RVA: 0x00C884F4 File Offset: 0x00C866F4
+		// Token: 0x06029D92 RID: 171410 RVA: 0x00BD5774 File Offset: 0x00BD3974
 		protected override void OnBackgroundExecute()
 		{
 			this.OnExecute();
 		}
 
-		// Token: 0x06034E9A RID: 216730 RVA: 0x00C884FC File Offset: 0x00C866FC
+		// Token: 0x06029D93 RID: 171411 RVA: 0x00BD577C File Offset: 0x00BD397C
 		protected override void OnInterruptExecute()
 		{
 			WaitEntityTask task = this.Task;
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			base.FinishExecute(true, true);
 		}
 
-		// Token: 0x06034E9B RID: 216731 RVA: 0x00C88528 File Offset: 0x00C86728
+		// Token: 0x06029D94 RID: 171412 RVA: 0x00BD57A8 File Offset: 0x00BD39A8
 		protected override void OnRollback(ActionRecord actionRecord, FlowContext context)
 		{
 			foreach (int pbDataId in (actionRecord.ActionInfo.Params as AwakeEntity).EntityIds)
@@ -151,11 +151,11 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			}
 		}
 
-		// Token: 0x0401C2FE RID: 115454
+		// Token: 0x04016D2F RID: 93487
 		[Nullable(2)]
 		public WaitEntityTask Task;
 
-		// Token: 0x0401C2FF RID: 115455
+		// Token: 0x04016D30 RID: 93488
 		[Nullable(2)]
 		private List<int> AwakeEntityIds;
 	}

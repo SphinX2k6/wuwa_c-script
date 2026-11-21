@@ -8,18 +8,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.GenericPrompt.View
 {
-	// Token: 0x020059A9 RID: 22953
+	// Token: 0x02004982 RID: 18818
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class GenericPromptFloatTipsBase : UiTickViewBase
 	{
-		// Token: 0x0603A37E RID: 238462 RVA: 0x00DD60D7 File Offset: 0x00DD42D7
+		// Token: 0x0602F2A4 RID: 193188 RVA: 0x00D25567 File Offset: 0x00D23767
 		[NullableContext(1)]
 		public GenericPromptFloatTipsBase(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603A37F RID: 238463 RVA: 0x00DD60E0 File Offset: 0x00DD42E0
+		// Token: 0x0602F2A5 RID: 193189 RVA: 0x00D25570 File Offset: 0x00D23770
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -33,14 +33,14 @@ namespace CSharpScript.Game.Module.GenericPrompt.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603A380 RID: 238464 RVA: 0x00DD6149 File Offset: 0x00DD4349
+		// Token: 0x0602F2A6 RID: 193190 RVA: 0x00D255D9 File Offset: 0x00D237D9
 		protected override void OnBeforeCreate()
 		{
 			this.Data = (this.OpenParam as IPromptParamHub);
 			this.TypeConfig = GenericPromptConfig.Instance.GetPromptTypeInfo(this.Data.TypeId);
 		}
 
-		// Token: 0x0603A381 RID: 238465 RVA: 0x00DD6178 File Offset: 0x00DD4378
+		// Token: 0x0602F2A7 RID: 193191 RVA: 0x00D25608 File Offset: 0x00D23808
 		protected override void OnStart()
 		{
 			IReadOnlyList<object> mainText = this.Data.MainTextParams ?? Array.Empty<object>();
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.GenericPrompt.View
 			this.SetVerticalOffset();
 		}
 
-		// Token: 0x0603A382 RID: 238466 RVA: 0x00DD61CC File Offset: 0x00DD43CC
+		// Token: 0x0602F2A8 RID: 193192 RVA: 0x00D2565C File Offset: 0x00D2385C
 		protected virtual void SetMainText([ParamCollection] [Nullable(new byte[]
 		{
 			1,
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.GenericPrompt.View
 			}
 		}
 
-		// Token: 0x0603A383 RID: 238467 RVA: 0x00DD62C8 File Offset: 0x00DD44C8
+		// Token: 0x0602F2A9 RID: 193193 RVA: 0x00D25758 File Offset: 0x00D23958
 		protected virtual void SetExtraText([ParamCollection] [Nullable(new byte[]
 		{
 			1,
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.GenericPrompt.View
 			text.SetUIActive(false);
 		}
 
-		// Token: 0x0603A384 RID: 238468 RVA: 0x00DD63B4 File Offset: 0x00DD45B4
+		// Token: 0x0602F2AA RID: 193194 RVA: 0x00D25844 File Offset: 0x00D23A44
 		private void SetTickDuration()
 		{
 			float? duration = this.Data.Duration;
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.Module.GenericPrompt.View
 			}
 		}
 
-		// Token: 0x0603A385 RID: 238469 RVA: 0x00DD64D4 File Offset: 0x00DD46D4
+		// Token: 0x0602F2AB RID: 193195 RVA: 0x00D25964 File Offset: 0x00D23B64
 		private void SetVerticalOffset()
 		{
 			if (this.Data.TypeId == 0)
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.GenericPrompt.View
 			this.RootItem.SetAnchorOffsetY(promptTypeInfo.Value.OffsetY);
 		}
 
-		// Token: 0x0603A386 RID: 238470 RVA: 0x00DD6538 File Offset: 0x00DD4738
+		// Token: 0x0602F2AC RID: 193196 RVA: 0x00D259C8 File Offset: 0x00D23BC8
 		protected override void OnTick(float delta)
 		{
 			if (this.ClosePromise != null)
@@ -195,8 +195,8 @@ namespace CSharpScript.Game.Module.GenericPrompt.View
 			}
 		}
 
-		// Token: 0x17008B8B RID: 35723
-		// (get) Token: 0x0603A387 RID: 238471 RVA: 0x00DD65A8 File Offset: 0x00DD47A8
+		// Token: 0x17005F58 RID: 24408
+		// (get) Token: 0x0602F2AD RID: 193197 RVA: 0x00D25A38 File Offset: 0x00D23C38
 		protected UUIText MainText
 		{
 			get
@@ -205,8 +205,8 @@ namespace CSharpScript.Game.Module.GenericPrompt.View
 			}
 		}
 
-		// Token: 0x17008B8C RID: 35724
-		// (get) Token: 0x0603A388 RID: 238472 RVA: 0x00DD65B1 File Offset: 0x00DD47B1
+		// Token: 0x17005F59 RID: 24409
+		// (get) Token: 0x0602F2AE RID: 193198 RVA: 0x00D25A41 File Offset: 0x00D23C41
 		protected UUIText ExtraText
 		{
 			get
@@ -215,26 +215,26 @@ namespace CSharpScript.Game.Module.GenericPrompt.View
 			}
 		}
 
-		// Token: 0x0401E5E9 RID: 124393
+		// Token: 0x04019087 RID: 102535
 		protected double TickDuration;
 
-		// Token: 0x0401E5EA RID: 124394
+		// Token: 0x04019088 RID: 102536
 		protected double TickTime;
 
-		// Token: 0x0401E5EB RID: 124395
+		// Token: 0x04019089 RID: 102537
 		protected IPromptParamHub Data;
 
-		// Token: 0x0401E5EC RID: 124396
+		// Token: 0x0401908A RID: 102538
 		protected GenericPromptTypes? TypeConfig;
 
-		// Token: 0x0200BC1A RID: 48154
+		// Token: 0x0200A625 RID: 42533
 		[NullableContext(0)]
 		private class EGenericPromptFloatTipsBase
 		{
-			// Token: 0x04038C5C RID: 232540
+			// Token: 0x0403362B RID: 210475
 			public const int MainTextItem = 0;
 
-			// Token: 0x04038C5D RID: 232541
+			// Token: 0x0403362C RID: 210476
 			public const int ExtraTextItem = 1;
 		}
 	}

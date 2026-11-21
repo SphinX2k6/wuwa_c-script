@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000EF7 RID: 3831
+	// Token: 0x0200100D RID: 4109
 	public class ICheckPlayerPressButton_SetValue
 	{
-		// Token: 0x04003333 RID: 13107
+		// Token: 0x04003640 RID: 13888
 		public ECheckPlayerInputType Type;
 
-		// Token: 0x04003334 RID: 13108
+		// Token: 0x04003641 RID: 13889
 		public EPlayerButtonType ButtonType;
 	}
 }

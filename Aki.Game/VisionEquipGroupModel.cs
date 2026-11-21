@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -9,20 +8,20 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.ServerStorage;
 using CSharpScript.Game.ServerStorage.Container;
 
-// Token: 0x02002447 RID: 9287
+// Token: 0x0200192C RID: 6444
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class VisionEquipGroupModel : ModelBase
 {
-	// Token: 0x060129F1 RID: 76273 RVA: 0x00498550 File Offset: 0x00496750
+	// Token: 0x0600FEA7 RID: 65191 RVA: 0x004A5B1C File Offset: 0x004A3D1C
 	public VisionEquipGroupModel()
 	{
 		this.VisionEquipGroupList = new List<VisionEquipGroupData>();
 	}
 
-	// Token: 0x060129F2 RID: 76274 RVA: 0x00498564 File Offset: 0x00496764
-	public void RefreshVisionEquipGroupData(List<PhantomEquipGroupInfo> data)
+	// Token: 0x0600FEA8 RID: 65192 RVA: 0x004A5B30 File Offset: 0x004A3D30
+	public void RefreshVisionEquipGroupData(IReadOnlyList<PhantomEquipGroupInfo> data)
 	{
 		this.VisionEquipGroupList = new List<VisionEquipGroupData>();
 		int count = data.Count;
@@ -35,7 +34,7 @@ public class VisionEquipGroupModel : ModelBase
 		EventSystem.Instance.Emit(EEventName.OnVisionGroupDataUpdate);
 	}
 
-	// Token: 0x060129F3 RID: 76275 RVA: 0x004985C0 File Offset: 0x004967C0
+	// Token: 0x0600FEA9 RID: 65193 RVA: 0x004A5B8C File Offset: 0x004A3D8C
 	public bool CheckVisionListIfInGroup(List<int> incIdList)
 	{
 		int count = this.VisionEquipGroupList.Count;
@@ -43,9 +42,19 @@ public class VisionEquipGroupModel : ModelBase
 		{
 			VisionEquipGroupData visionEquipGroupData = this.VisionEquipGroupList[i];
 			bool flag = true;
-			foreach (int value in incIdList)
+			foreach (int num in incIdList)
 			{
-				if (!visionEquipGroupData.GetVisionUniqueIdList().Contains(value))
+				bool flag2 = false;
+				int[] visionUniqueIdList = visionEquipGroupData.GetVisionUniqueIdList();
+				for (int j = 0; j < visionUniqueIdList.Length; j++)
+				{
+					if (visionUniqueIdList[j] == num)
+					{
+						flag2 = true;
+						break;
+					}
+				}
+				if (!flag2)
 				{
 					flag = false;
 					break;
@@ -59,13 +68,13 @@ public class VisionEquipGroupModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x060129F4 RID: 76276 RVA: 0x0049864C File Offset: 0x0049684C
+	// Token: 0x0600FEAA RID: 65194 RVA: 0x004A5C38 File Offset: 0x004A3E38
 	public List<VisionEquipGroupData> GetVisionEquipGroupList()
 	{
 		return this.VisionEquipGroupList;
 	}
 
-	// Token: 0x060129F5 RID: 76277 RVA: 0x00498654 File Offset: 0x00496854
+	// Token: 0x0600FEAB RID: 65195 RVA: 0x004A5C40 File Offset: 0x004A3E40
 	public int GetVisionUsedCountInGroup(int incId)
 	{
 		int num = 0;
@@ -83,7 +92,7 @@ public class VisionEquipGroupModel : ModelBase
 		return num;
 	}
 
-	// Token: 0x060129F6 RID: 76278 RVA: 0x004986C0 File Offset: 0x004968C0
+	// Token: 0x0600FEAC RID: 65196 RVA: 0x004A5CAC File Offset: 0x004A3EAC
 	public bool CheckVisionConsumeBreakGroup(int incId, int consumeCount)
 	{
 		int visionUsedCountInGroup = this.GetVisionUsedCountInGroup(incId);
@@ -95,7 +104,7 @@ public class VisionEquipGroupModel : ModelBase
 		return ((phantomItemData != null) ? phantomItemData.GetStackCount() : 0) - consumeCount < visionUsedCountInGroup;
 	}
 
-	// Token: 0x060129F7 RID: 76279 RVA: 0x004986F8 File Offset: 0x004968F8
+	// Token: 0x0600FEAD RID: 65197 RVA: 0x004A5CE4 File Offset: 0x004A3EE4
 	[NullableContext(2)]
 	public VisionEquipGroupData GetVisionEquipGroupDataByIndex(int index)
 	{
@@ -109,7 +118,7 @@ public class VisionEquipGroupModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x060129F8 RID: 76280 RVA: 0x00498754 File Offset: 0x00496954
+	// Token: 0x0600FEAE RID: 65198 RVA: 0x004A5D40 File Offset: 0x004A3F40
 	public List<VisionFetterData> GetVisionFetterDataByIncIdList(List<int> incIdList)
 	{
 		List<PhantomDataBase> list = new List<PhantomDataBase>();
@@ -145,7 +154,7 @@ public class VisionEquipGroupModel : ModelBase
 		return list2;
 	}
 
-	// Token: 0x060129F9 RID: 76281 RVA: 0x0049888C File Offset: 0x00496A8C
+	// Token: 0x0600FEAF RID: 65199 RVA: 0x004A5E78 File Offset: 0x004A4078
 	public List<VisionAssembleAttrData> GetVisionAssembleViewAttrData(int groupIndex, bool compareMode, int currentSelectRoleId)
 	{
 		List<int> incIdList;
@@ -174,7 +183,7 @@ public class VisionEquipGroupModel : ModelBase
 		return visionAttrDataListByIncIdList;
 	}
 
-	// Token: 0x060129FA RID: 76282 RVA: 0x00498918 File Offset: 0x00496B18
+	// Token: 0x0600FEB0 RID: 65200 RVA: 0x004A5F04 File Offset: 0x004A4104
 	private int SortAttrList(VisionAssembleAttrData dataB, VisionAssembleAttrData dataA)
 	{
 		int priority = dataA.GetPriority();
@@ -205,7 +214,7 @@ public class VisionEquipGroupModel : ModelBase
 		}
 	}
 
-	// Token: 0x060129FB RID: 76283 RVA: 0x0049897C File Offset: 0x00496B7C
+	// Token: 0x0600FEB1 RID: 65201 RVA: 0x004A5F68 File Offset: 0x004A4168
 	private void CombineAttrList(List<VisionAssembleAttrData> compareAttrDataList, List<VisionAssembleAttrData> currentAttrDataList)
 	{
 		int count = currentAttrDataList.Count;
@@ -235,14 +244,14 @@ public class VisionEquipGroupModel : ModelBase
 		}
 	}
 
-	// Token: 0x060129FC RID: 76284 RVA: 0x00498A58 File Offset: 0x00496C58
+	// Token: 0x0600FEB2 RID: 65202 RVA: 0x004A6044 File Offset: 0x004A4244
 	private List<VisionAssembleAttrData> GetCurrentRoleAttrData(int currentSelectRoleId, bool compareMode)
 	{
 		List<int> incrIdList = RoleModel.Instance.GetRoleDataById(currentSelectRoleId, true).GetPhantomData().GetIncrIdList();
 		return this.GetVisionAttrDataListByIncIdList(incrIdList, compareMode);
 	}
 
-	// Token: 0x060129FD RID: 76285 RVA: 0x00498A84 File Offset: 0x00496C84
+	// Token: 0x0600FEB3 RID: 65203 RVA: 0x004A6070 File Offset: 0x004A4270
 	private List<VisionAssembleAttrData> GetVisionAttrDataListByIncIdList(List<int> incIdList, bool compareMode)
 	{
 		List<VisionAssembleAttrData> list = new List<VisionAssembleAttrData>();
@@ -305,35 +314,35 @@ public class VisionEquipGroupModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x060129FE RID: 76286 RVA: 0x00498D00 File Offset: 0x00496F00
+	// Token: 0x0600FEB4 RID: 65204 RVA: 0x004A62EC File Offset: 0x004A44EC
 	public void SaveLocalTopTipState(bool state)
 	{
 		int value = (state > false) ? 1 : 0;
 		LocalStorage.SetPlayer<int>(ELocalStoragePlayerKey.VisionTopTipsState, value);
 	}
 
-	// Token: 0x060129FF RID: 76287 RVA: 0x00498D1B File Offset: 0x00496F1B
+	// Token: 0x0600FEB5 RID: 65205 RVA: 0x004A6307 File Offset: 0x004A4507
 	public bool GetLocalTipsState()
 	{
 		return LocalStorage.GetPlayer<int>(ELocalStoragePlayerKey.VisionTopTipsState, 0) == 1;
 	}
 
-	// Token: 0x06012A00 RID: 76288 RVA: 0x00498D28 File Offset: 0x00496F28
+	// Token: 0x0600FEB6 RID: 65206 RVA: 0x004A6314 File Offset: 0x004A4514
 	public bool GetVisionGroupFirstOpenState()
 	{
 		bool flag = FunctionModel.Instance.IsOpen(EFunctionType.VisionGroup);
-		ServerStorageUtil.OverrideLocalBooleanToServerBoolean(ELocalStoragePlayerKey.FirstOpenVisionGroup, EClientStorageSystemIdType.FirstOpenVisionGroup);
+		ServerStorageUtil.OverrideLocalBooleanToServerBoolean(ELocalStoragePlayerKey.FirstOpenVisionGroup, EClientStorageSystemIdType.FirstOpenVisionGroup, true);
 		return (ServerStorageModel.Instance.Get(EClientStorageSystemIdType.FirstOpenVisionGroup) as ServerStorageBoolean).Get().GetValueOrDefault(true) && flag;
 	}
 
-	// Token: 0x06012A01 RID: 76289 RVA: 0x00498D70 File Offset: 0x00496F70
+	// Token: 0x0600FEB7 RID: 65207 RVA: 0x004A635D File Offset: 0x004A455D
 	public void SaveVisionGroupFirstOpenState(bool state)
 	{
 		(ServerStorageModel.Instance.Get(EClientStorageSystemIdType.FirstOpenVisionGroup) as ServerStorageBoolean).Set(new bool?(state));
 	}
 
-	// Token: 0x17001824 RID: 6180
-	// (get) Token: 0x06012A02 RID: 76290 RVA: 0x00498D8E File Offset: 0x00496F8E
+	// Token: 0x1700185E RID: 6238
+	// (get) Token: 0x0600FEB8 RID: 65208 RVA: 0x004A637B File Offset: 0x004A457B
 	public static VisionEquipGroupModel Instance
 	{
 		get
@@ -342,7 +351,7 @@ public class VisionEquipGroupModel : ModelBase
 		}
 	}
 
-	// Token: 0x06012A03 RID: 76291 RVA: 0x00498D95 File Offset: 0x00496F95
+	// Token: 0x0600FEB9 RID: 65209 RVA: 0x004A6382 File Offset: 0x004A4582
 	public static VisionEquipGroupModel GetOrCreateInstance()
 	{
 		if (VisionEquipGroupModel._Instance == null)
@@ -352,7 +361,7 @@ public class VisionEquipGroupModel : ModelBase
 		return VisionEquipGroupModel._Instance;
 	}
 
-	// Token: 0x06012A04 RID: 76292 RVA: 0x00498DA9 File Offset: 0x00496FA9
+	// Token: 0x0600FEBA RID: 65210 RVA: 0x004A6396 File Offset: 0x004A4596
 	public static bool CreateInstance()
 	{
 		if (VisionEquipGroupModel._Instance != null)
@@ -363,30 +372,30 @@ public class VisionEquipGroupModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06012A05 RID: 76293 RVA: 0x00498DBF File Offset: 0x00496FBF
+	// Token: 0x0600FEBB RID: 65211 RVA: 0x004A63AC File Offset: 0x004A45AC
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06012A06 RID: 76294 RVA: 0x00498DC1 File Offset: 0x00496FC1
+	// Token: 0x0600FEBC RID: 65212 RVA: 0x004A63AE File Offset: 0x004A45AE
 	public static void ResetStaticDefaultValue()
 	{
 		VisionEquipGroupModel._Instance = null;
 	}
 
-	// Token: 0x06012A07 RID: 76295 RVA: 0x00498DC9 File Offset: 0x00496FC9
+	// Token: 0x0600FEBD RID: 65213 RVA: 0x004A63B6 File Offset: 0x004A45B6
 	static VisionEquipGroupModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(VisionEquipGroupModel.CreateStaticDefaultValue), new Action(VisionEquipGroupModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04008C5E RID: 35934
+	// Token: 0x04008DA5 RID: 36261
 	private List<VisionEquipGroupData> VisionEquipGroupList;
 
-	// Token: 0x04008C5F RID: 35935
+	// Token: 0x04008DA6 RID: 36262
 	public int FilterDataLength;
 
-	// Token: 0x04008C60 RID: 35936
+	// Token: 0x04008DA7 RID: 36263
 	[Nullable(2)]
 	private static VisionEquipGroupModel _Instance;
 }

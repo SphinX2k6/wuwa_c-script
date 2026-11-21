@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002287 RID: 8839
+	// Token: 0x020024F4 RID: 9460
 	public static class EActionMontageTypeExtensions
 	{
-		// Token: 0x0600C1DE RID: 49630 RVA: 0x001C4E5C File Offset: 0x001C305C
+		// Token: 0x0600CDA4 RID: 52644 RVA: 0x001DCB50 File Offset: 0x001DAD50
 		public static string ToEnumString(this EActionMontageType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C1DF RID: 49631 RVA: 0x001C4E94 File Offset: 0x001C3094
+		// Token: 0x0600CDA5 RID: 52645 RVA: 0x001DCB88 File Offset: 0x001DAD88
 		public static EActionMontageType FromString(string name)
 		{
 			EActionMontageType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C1E0 RID: 49632 RVA: 0x001C4EBD File Offset: 0x001C30BD
+		// Token: 0x0600CDA6 RID: 52646 RVA: 0x001DCBB1 File Offset: 0x001DADB1
 		public static bool TryFromString(string name, out EActionMontageType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C1E1 RID: 49633 RVA: 0x001C4EF6 File Offset: 0x001C30F6
+		// Token: 0x0600CDA7 RID: 52647 RVA: 0x001DCBEA File Offset: 0x001DADEA
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C1E2 RID: 49634 RVA: 0x001C4F0E File Offset: 0x001C310E
+		// Token: 0x0600CDA8 RID: 52648 RVA: 0x001DCC02 File Offset: 0x001DAE02
 		public static EActionMontageType[] GetValues()
 		{
 			return new EActionMontageType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C1E3 RID: 49635 RVA: 0x001C4F1A File Offset: 0x001C311A
+		// Token: 0x0600CDA9 RID: 52649 RVA: 0x001DCC0E File Offset: 0x001DAE0E
 		public static string[] GetNames()
 		{
 			return new string[]

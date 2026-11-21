@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 {
-	// Token: 0x020051FB RID: 20987
+	// Token: 0x020041CB RID: 16843
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class EvolveProxy
 	{
-		// Token: 0x06035B1A RID: 219930 RVA: 0x00CB6F88 File Offset: 0x00CB5188
+		// Token: 0x0602AA15 RID: 174613 RVA: 0x00C045C4 File Offset: 0x00C027C4
 		public UniTask CreateEffectItem(string resourceId, UUIItem attachItem)
 		{
 			EvolveProxy.<CreateEffectItem>d__2 <CreateEffectItem>d__;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 			return <CreateEffectItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035B1B RID: 219931 RVA: 0x00CB6FDC File Offset: 0x00CB51DC
+		// Token: 0x0602AA16 RID: 174614 RVA: 0x00C04618 File Offset: 0x00C02818
 		public void SetEvolveNum(int evolveNum)
 		{
 			this.EvolveNum = evolveNum;
@@ -45,10 +45,10 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component.Bvb
 			effectItem2.SetEffectActive(this.EvolveNum > 1);
 		}
 
-		// Token: 0x0401C797 RID: 116631
+		// Token: 0x040171CC RID: 94668
 		protected EvolveItem EffectItem;
 
-		// Token: 0x0401C798 RID: 116632
+		// Token: 0x040171CD RID: 94669
 		protected int EvolveNum;
 	}
 }

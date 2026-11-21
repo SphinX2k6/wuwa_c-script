@@ -6,38 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001744 RID: 5956
+	// Token: 0x0200033D RID: 829
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroCollision.CollisionClusterComponent")]
 	[UnrealStructLayout(1920, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1920)]
-	public class UCollisionClusterComponent : UPrimitiveComponent, IUnrealUObject, IUnrealObject, IInterface_CollisionDataProvider, IUnrealNativeInterface, IUnrealInterface
+	public class UCollisionClusterComponent : UPrimitiveComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060156DA RID: 87770 RVA: 0x001F7D14 File Offset: 0x001F5F14
+		// Token: 0x060055C9 RID: 21961 RVA: 0x00078232 File Offset: 0x00076432
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UCollisionClusterComponent._ClassPtr;
 		}
 
-		// Token: 0x060156DB RID: 87771 RVA: 0x001F7D20 File Offset: 0x001F5F20
-		int IInterface_CollisionDataProvider.InterfaceOffset()
-		{
-			return UCollisionClusterComponent.__InterfaceOffset_IInterface_CollisionDataProvider;
-		}
-
-		// Token: 0x060156DC RID: 87772 RVA: 0x001F7D28 File Offset: 0x001F5F28
+		// Token: 0x060055CA RID: 21962 RVA: 0x00078240 File Offset: 0x00076440
 		public UCollisionClusterComponent() : this(BuiltinUtils.AllocNativeUObject(UCollisionClusterComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060156DD RID: 87773 RVA: 0x001F7D50 File Offset: 0x001F5F50
+		// Token: 0x060055CB RID: 21963 RVA: 0x00078268 File Offset: 0x00076468
 		public UCollisionClusterComponent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UCollisionClusterComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700549C RID: 21660
-		// (get) Token: 0x060156DE RID: 87774 RVA: 0x001F7D84 File Offset: 0x001F5F84
-		// (set) Token: 0x060156DF RID: 87775 RVA: 0x001F7DBD File Offset: 0x001F5FBD
+		// Token: 0x170010E4 RID: 4324
+		// (get) Token: 0x060055CC RID: 21964 RVA: 0x0007829C File Offset: 0x0007649C
+		// (set) Token: 0x060055CD RID: 21965 RVA: 0x000782D5 File Offset: 0x000764D5
 		public TArray<FSoftObjectPath> StaticMeshPathNames
 		{
 			get
@@ -56,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700549D RID: 21661
-		// (get) Token: 0x060156E0 RID: 87776 RVA: 0x001F7DCC File Offset: 0x001F5FCC
-		// (set) Token: 0x060156E1 RID: 87777 RVA: 0x001F7E05 File Offset: 0x001F6005
+		// Token: 0x170010E5 RID: 4325
+		// (get) Token: 0x060055CE RID: 21966 RVA: 0x000782E4 File Offset: 0x000764E4
+		// (set) Token: 0x060055CF RID: 21967 RVA: 0x0007831D File Offset: 0x0007651D
 		public TArray<UPhysicalMaterial> PhysicalMaterials
 		{
 			get
@@ -77,30 +71,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700549E RID: 21662
-		// (get) Token: 0x060156E2 RID: 87778 RVA: 0x001F7E14 File Offset: 0x001F6014
-		// (set) Token: 0x060156E3 RID: 87779 RVA: 0x001F7E4D File Offset: 0x001F604D
-		public TArray<FKAggregateGeom> AggGeometries
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<FKAggregateGeom> result;
-				if ((result = this._AggGeometries) == null)
-				{
-					result = (this._AggGeometries = new TArray<FKAggregateGeom>(base.NativePtr + (IntPtr)UCollisionClusterComponent.__PropertyOffset_AggGeometries, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.AggGeometries.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x1700549F RID: 21663
-		// (get) Token: 0x060156E4 RID: 87780 RVA: 0x001F7E5C File Offset: 0x001F605C
-		// (set) Token: 0x060156E5 RID: 87781 RVA: 0x001F7E95 File Offset: 0x001F6095
+		// Token: 0x170010E6 RID: 4326
+		// (get) Token: 0x060055D0 RID: 21968 RVA: 0x0007832C File Offset: 0x0007652C
+		// (set) Token: 0x060055D1 RID: 21969 RVA: 0x00078365 File Offset: 0x00076565
 		public TArray<UBodySetup> BodySetups
 		{
 			get
@@ -119,9 +92,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170054A0 RID: 21664
-		// (get) Token: 0x060156E6 RID: 87782 RVA: 0x001F7EA4 File Offset: 0x001F60A4
-		// (set) Token: 0x060156E7 RID: 87783 RVA: 0x001F7EDD File Offset: 0x001F60DD
+		// Token: 0x170010E7 RID: 4327
+		// (get) Token: 0x060055D2 RID: 21970 RVA: 0x00078374 File Offset: 0x00076574
+		// (set) Token: 0x060055D3 RID: 21971 RVA: 0x000783AD File Offset: 0x000765AD
 		public TArray<UBodySetup> StandaloneBodySetups
 		{
 			get
@@ -140,9 +113,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170054A1 RID: 21665
-		// (get) Token: 0x060156E8 RID: 87784 RVA: 0x001F7EEC File Offset: 0x001F60EC
-		// (set) Token: 0x060156E9 RID: 87785 RVA: 0x001F7F25 File Offset: 0x001F6125
+		// Token: 0x170010E8 RID: 4328
+		// (get) Token: 0x060055D4 RID: 21972 RVA: 0x000783BC File Offset: 0x000765BC
+		// (set) Token: 0x060055D5 RID: 21973 RVA: 0x000783F5 File Offset: 0x000765F5
 		public TArray<int> BodySetupComplexPhysicalMaterialNums
 		{
 			get
@@ -161,9 +134,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170054A2 RID: 21666
-		// (get) Token: 0x060156EA RID: 87786 RVA: 0x001F7F33 File Offset: 0x001F6133
-		// (set) Token: 0x060156EB RID: 87787 RVA: 0x001F7F47 File Offset: 0x001F6147
+		// Token: 0x170010E9 RID: 4329
+		// (get) Token: 0x060055D6 RID: 21974 RVA: 0x00078403 File Offset: 0x00076603
+		// (set) Token: 0x060055D7 RID: 21975 RVA: 0x00078417 File Offset: 0x00076617
 		public unsafe FBoxSphereBounds RelativeBounds
 		{
 			get
@@ -176,33 +149,30 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060156EC RID: 87788 RVA: 0x001F7F5C File Offset: 0x001F615C
+		// Token: 0x060055D8 RID: 21976 RVA: 0x0007842C File Offset: 0x0007662C
 		static UCollisionClusterComponent()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroCollision.CollisionClusterComponent");
 		}
 
-		// Token: 0x060156ED RID: 87789 RVA: 0x001F7F6A File Offset: 0x001F616A
+		// Token: 0x060055D9 RID: 21977 RVA: 0x0007843A File Offset: 0x0007663A
 		protected UCollisionClusterComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400BAE8 RID: 47848
-		internal static int __InterfaceOffset_IInterface_CollisionDataProvider;
-
-		// Token: 0x0400BAE9 RID: 47849
+		// Token: 0x04002315 RID: 8981
 		public new const string __ObjectPath = "/Script/KuroCollision.CollisionClusterComponent";
 
-		// Token: 0x0400BAEA RID: 47850
+		// Token: 0x04002316 RID: 8982
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400BAEB RID: 47851
+		// Token: 0x04002317 RID: 8983
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400BAEC RID: 47852
+		// Token: 0x04002318 RID: 8984
 		internal static int __PropertyOffset_StaticMeshPathNames;
 
-		// Token: 0x0400BAED RID: 47853
+		// Token: 0x04002319 RID: 8985
 		[Nullable(new byte[]
 		{
 			2,
@@ -210,10 +180,10 @@ namespace UnrealEngine
 		})]
 		private TArray<FSoftObjectPath> _StaticMeshPathNames;
 
-		// Token: 0x0400BAEE RID: 47854
+		// Token: 0x0400231A RID: 8986
 		internal static int __PropertyOffset_PhysicalMaterials;
 
-		// Token: 0x0400BAEF RID: 47855
+		// Token: 0x0400231B RID: 8987
 		[Nullable(new byte[]
 		{
 			2,
@@ -221,21 +191,10 @@ namespace UnrealEngine
 		})]
 		private TArray<UPhysicalMaterial> _PhysicalMaterials;
 
-		// Token: 0x0400BAF0 RID: 47856
-		internal static int __PropertyOffset_AggGeometries;
-
-		// Token: 0x0400BAF1 RID: 47857
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<FKAggregateGeom> _AggGeometries;
-
-		// Token: 0x0400BAF2 RID: 47858
+		// Token: 0x0400231C RID: 8988
 		internal static int __PropertyOffset_BodySetups;
 
-		// Token: 0x0400BAF3 RID: 47859
+		// Token: 0x0400231D RID: 8989
 		[Nullable(new byte[]
 		{
 			2,
@@ -243,10 +202,10 @@ namespace UnrealEngine
 		})]
 		private TArray<UBodySetup> _BodySetups;
 
-		// Token: 0x0400BAF4 RID: 47860
+		// Token: 0x0400231E RID: 8990
 		internal static int __PropertyOffset_StandaloneBodySetups;
 
-		// Token: 0x0400BAF5 RID: 47861
+		// Token: 0x0400231F RID: 8991
 		[Nullable(new byte[]
 		{
 			2,
@@ -254,14 +213,14 @@ namespace UnrealEngine
 		})]
 		private TArray<UBodySetup> _StandaloneBodySetups;
 
-		// Token: 0x0400BAF6 RID: 47862
+		// Token: 0x04002320 RID: 8992
 		internal static int __PropertyOffset_BodySetupComplexPhysicalMaterialNums;
 
-		// Token: 0x0400BAF7 RID: 47863
+		// Token: 0x04002321 RID: 8993
 		[Nullable(2)]
 		private TArray<int> _BodySetupComplexPhysicalMaterialNums;
 
-		// Token: 0x0400BAF8 RID: 47864
+		// Token: 0x04002322 RID: 8994
 		internal static int __PropertyOffset_RelativeBounds;
 	}
 }

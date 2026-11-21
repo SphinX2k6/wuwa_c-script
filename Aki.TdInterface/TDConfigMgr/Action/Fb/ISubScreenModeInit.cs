@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200279F RID: 10143
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A71 RID: 10865
 	public class ISubScreenModeInit : ISubScreenModeConfig
 	{
-		// Token: 0x0600E1B9 RID: 57785 RVA: 0x002159CA File Offset: 0x00213BCA
+		// Token: 0x0600EFD7 RID: 61399 RVA: 0x0023275E File Offset: 0x0023095E
 		public static ISubScreenModeInit Create(ISubScreenModeInit? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700443D RID: 17469
-		// (get) Token: 0x0600E1BA RID: 57786 RVA: 0x002159E9 File Offset: 0x00213BE9
+		// Token: 0x170047A3 RID: 18339
+		// (get) Token: 0x0600EFD8 RID: 61400 RVA: 0x0023277D File Offset: 0x0023097D
 		public override ESubScreenOperationType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700443E RID: 17470
-		// (get) Token: 0x0600E1BB RID: 57787 RVA: 0x002159F6 File Offset: 0x00213BF6
+		// Token: 0x170047A4 RID: 18340
+		// (get) Token: 0x0600EFD9 RID: 61401 RVA: 0x0023278A File Offset: 0x0023098A
 		public virtual List<ISubScreenInitData> InitConfigs
 		{
 			get
@@ -49,13 +46,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007D29 RID: 32041
+		// Token: 0x040083DF RID: 33759
 		private ISubScreenModeInit Instance;
 
-		// Token: 0x04007D2A RID: 32042
+		// Token: 0x040083E0 RID: 33760
 		private List<ISubScreenInitData> _InitConfigsCache;
 
-		// Token: 0x04007D2B RID: 32043
+		// Token: 0x040083E1 RID: 33761
 		private bool _InitConfigsInited;
 	}
 }

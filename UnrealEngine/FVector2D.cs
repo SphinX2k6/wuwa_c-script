@@ -9,7 +9,7 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000041 RID: 65
+	// Token: 0x02000026 RID: 38
 	[HasGetTypeHash]
 	[UnrealBlittableStruct(UnrealReflectionPropertyTypeCode.UnrealBlittableStruct)]
 	[UnrealStructLayout(8, 4, UnrealReflectionPropertyTypeCode.UnrealBlittableStruct, PropertiesSize = 8)]
@@ -17,7 +17,7 @@ namespace UnrealEngine
 	[StructLayout(LayoutKind.Explicit, Pack = 4, Size = 8)]
 	public struct FVector2D : IEquatable<FVector2D>, IEqualityOperators<FVector2D, FVector2D, bool>, IVector2D, IUnrealScriptStruct
 	{
-		// Token: 0x060006B5 RID: 1717 RVA: 0x0000E2F4 File Offset: 0x0000C4F4
+		// Token: 0x0600063A RID: 1594 RVA: 0x0000AB60 File Offset: 0x00008D60
 		[Conditional("ENABLE_NAN_DIAGNOSTIC")]
 		public void DiagnosticCheckNaN()
 		{
@@ -30,159 +30,159 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060006B6 RID: 1718 RVA: 0x0000E32A File Offset: 0x0000C52A
+		// Token: 0x0600063B RID: 1595 RVA: 0x0000AB96 File Offset: 0x00008D96
 		public FVector2D()
 		{
 			this.X = 0f;
 			this.Y = 0f;
 		}
 
-		// Token: 0x060006B7 RID: 1719 RVA: 0x0000E342 File Offset: 0x0000C542
+		// Token: 0x0600063C RID: 1596 RVA: 0x0000ABAE File Offset: 0x00008DAE
 		public FVector2D(float inX, float inY)
 		{
 			this.X = inX;
 			this.Y = inY;
 		}
 
-		// Token: 0x060006B8 RID: 1720 RVA: 0x0000E352 File Offset: 0x0000C552
+		// Token: 0x0600063D RID: 1597 RVA: 0x0000ABBE File Offset: 0x00008DBE
 		public FVector2D(float inF)
 		{
 			this = new FVector2D(inF, inF);
 		}
 
-		// Token: 0x060006B9 RID: 1721 RVA: 0x0000E35C File Offset: 0x0000C55C
+		// Token: 0x0600063E RID: 1598 RVA: 0x0000ABC8 File Offset: 0x00008DC8
 		public FVector2D(in FIntPoint inPos)
 		{
 			this = new FVector2D((float)inPos.X, (float)inPos.Y);
 		}
 
-		// Token: 0x060006BA RID: 1722 RVA: 0x0000E372 File Offset: 0x0000C572
+		// Token: 0x0600063F RID: 1599 RVA: 0x0000ABDE File Offset: 0x00008DDE
 		public FVector2D(in FVector v)
 		{
 			this = new FVector2D(v.X, v.Y);
 		}
 
-		// Token: 0x060006BB RID: 1723 RVA: 0x0000E386 File Offset: 0x0000C586
+		// Token: 0x06000640 RID: 1600 RVA: 0x0000ABF2 File Offset: 0x00008DF2
 		public static FVector2D operator *(float scale, in FVector2D v)
 		{
 			return v * scale;
 		}
 
-		// Token: 0x060006BC RID: 1724 RVA: 0x0000E38F File Offset: 0x0000C58F
+		// Token: 0x06000641 RID: 1601 RVA: 0x0000ABFB File Offset: 0x00008DFB
 		public static FVector2D operator -(in FVector2D v)
 		{
 			return new FVector2D(-v.X, -v.Y);
 		}
 
-		// Token: 0x060006BD RID: 1725 RVA: 0x0000E3A4 File Offset: 0x0000C5A4
+		// Token: 0x06000642 RID: 1602 RVA: 0x0000AC10 File Offset: 0x00008E10
 		public static FVector2D operator +(in FVector2D a, in FVector2D b)
 		{
 			return new FVector2D(a.X + b.X, a.Y + b.Y);
 		}
 
-		// Token: 0x060006BE RID: 1726 RVA: 0x0000E3C5 File Offset: 0x0000C5C5
+		// Token: 0x06000643 RID: 1603 RVA: 0x0000AC31 File Offset: 0x00008E31
 		public static FVector2D operator +(in FVector2D v, float a)
 		{
 			return new FVector2D(v.X + a, v.Y + a);
 		}
 
-		// Token: 0x060006BF RID: 1727 RVA: 0x0000E3DC File Offset: 0x0000C5DC
+		// Token: 0x06000644 RID: 1604 RVA: 0x0000AC48 File Offset: 0x00008E48
 		public static FVector2D operator -(in FVector2D a, in FVector2D b)
 		{
 			return new FVector2D(a.X - b.X, a.Y - b.Y);
 		}
 
-		// Token: 0x060006C0 RID: 1728 RVA: 0x0000E3FD File Offset: 0x0000C5FD
+		// Token: 0x06000645 RID: 1605 RVA: 0x0000AC69 File Offset: 0x00008E69
 		public static FVector2D operator -(in FVector2D v, float a)
 		{
 			return new FVector2D(v.X - a, v.Y - a);
 		}
 
-		// Token: 0x060006C1 RID: 1729 RVA: 0x0000E414 File Offset: 0x0000C614
+		// Token: 0x06000646 RID: 1606 RVA: 0x0000AC80 File Offset: 0x00008E80
 		public static FVector2D operator *(in FVector2D v, float scale)
 		{
 			return new FVector2D(v.X * scale, v.Y * scale);
 		}
 
-		// Token: 0x060006C2 RID: 1730 RVA: 0x0000E42B File Offset: 0x0000C62B
+		// Token: 0x06000647 RID: 1607 RVA: 0x0000AC97 File Offset: 0x00008E97
 		public static FVector2D operator *(in FVector2D a, in FVector2D b)
 		{
 			return new FVector2D(a.X * b.X, a.Y * b.Y);
 		}
 
-		// Token: 0x060006C3 RID: 1731 RVA: 0x0000E44C File Offset: 0x0000C64C
+		// Token: 0x06000648 RID: 1608 RVA: 0x0000ACB8 File Offset: 0x00008EB8
 		public static FVector2D operator /(in FVector2D a, in FVector2D b)
 		{
 			return new FVector2D(a.X / b.X, a.Y / b.Y);
 		}
 
-		// Token: 0x060006C4 RID: 1732 RVA: 0x0000E46D File Offset: 0x0000C66D
+		// Token: 0x06000649 RID: 1609 RVA: 0x0000ACD9 File Offset: 0x00008ED9
 		public static FVector2D operator /(in FVector2D v, float scale)
 		{
 			return v * (1f / scale);
 		}
 
-		// Token: 0x060006C5 RID: 1733 RVA: 0x0000E47C File Offset: 0x0000C67C
+		// Token: 0x0600064A RID: 1610 RVA: 0x0000ACE8 File Offset: 0x00008EE8
 		public static bool operator <(in FVector2D a, in FVector2D b)
 		{
 			return a.X < b.X && a.Y < b.Y;
 		}
 
-		// Token: 0x060006C6 RID: 1734 RVA: 0x0000E49C File Offset: 0x0000C69C
+		// Token: 0x0600064B RID: 1611 RVA: 0x0000AD08 File Offset: 0x00008F08
 		public static bool operator >(in FVector2D a, in FVector2D b)
 		{
 			return a.X > b.X && a.Y > b.Y;
 		}
 
-		// Token: 0x060006C7 RID: 1735 RVA: 0x0000E4BC File Offset: 0x0000C6BC
+		// Token: 0x0600064C RID: 1612 RVA: 0x0000AD28 File Offset: 0x00008F28
 		public static bool operator <=(in FVector2D a, in FVector2D b)
 		{
 			return a.X <= b.X && a.Y <= b.Y;
 		}
 
-		// Token: 0x060006C8 RID: 1736 RVA: 0x0000E4DF File Offset: 0x0000C6DF
+		// Token: 0x0600064D RID: 1613 RVA: 0x0000AD4B File Offset: 0x00008F4B
 		public static bool operator >=(in FVector2D a, in FVector2D b)
 		{
 			return a.X >= b.X && a.Y >= b.Y;
 		}
 
-		// Token: 0x060006C9 RID: 1737 RVA: 0x0000E502 File Offset: 0x0000C702
+		// Token: 0x0600064E RID: 1614 RVA: 0x0000AD6E File Offset: 0x00008F6E
 		public static float operator |(in FVector2D a, in FVector2D b)
 		{
 			return a.X * b.X + a.Y * b.Y;
 		}
 
-		// Token: 0x060006CA RID: 1738 RVA: 0x0000E51F File Offset: 0x0000C71F
+		// Token: 0x0600064F RID: 1615 RVA: 0x0000AD8B File Offset: 0x00008F8B
 		public static float operator ^(in FVector2D a, in FVector2D b)
 		{
 			return a.X * b.Y - a.Y * b.X;
 		}
 
-		// Token: 0x060006CB RID: 1739 RVA: 0x0000E53C File Offset: 0x0000C73C
+		// Token: 0x06000650 RID: 1616 RVA: 0x0000ADA8 File Offset: 0x00008FA8
 		public static implicit operator FVector2D(in FVector4 a)
 		{
 			return new FVector2D(a.X, a.Y);
 		}
 
-		// Token: 0x060006CC RID: 1740 RVA: 0x0000E54F File Offset: 0x0000C74F
+		// Token: 0x06000651 RID: 1617 RVA: 0x0000ADBB File Offset: 0x00008FBB
 		public static bool operator ==(FVector2D a, FVector2D b)
 		{
 			return a.X == b.X && a.Y == b.Y;
 		}
 
-		// Token: 0x060006CD RID: 1741 RVA: 0x0000E56F File Offset: 0x0000C76F
+		// Token: 0x06000652 RID: 1618 RVA: 0x0000ADDB File Offset: 0x00008FDB
 		public static bool operator !=(FVector2D a, FVector2D b)
 		{
 			return a.X != b.X || a.Y != b.Y;
 		}
 
-		// Token: 0x060006CE RID: 1742 RVA: 0x0000E592 File Offset: 0x0000C792
+		// Token: 0x06000653 RID: 1619 RVA: 0x0000ADFE File Offset: 0x00008FFE
 		public readonly bool Equals(FVector2D other)
 		{
 			return this == other;
 		}
 
-		// Token: 0x060006CF RID: 1743 RVA: 0x0000E5A0 File Offset: 0x0000C7A0
+		// Token: 0x06000654 RID: 1620 RVA: 0x0000AE0C File Offset: 0x0000900C
 		[NullableContext(2)]
 		public override readonly bool Equals(object obj)
 		{
@@ -194,13 +194,13 @@ namespace UnrealEngine
 			return false;
 		}
 
-		// Token: 0x060006D0 RID: 1744 RVA: 0x0000E5CA File Offset: 0x0000C7CA
+		// Token: 0x06000655 RID: 1621 RVA: 0x0000AE36 File Offset: 0x00009036
 		public override readonly int GetHashCode()
 		{
 			return HashCode.Combine<float, float>(this.X, this.Y);
 		}
 
-		// Token: 0x060006D1 RID: 1745 RVA: 0x0000E5E0 File Offset: 0x0000C7E0
+		// Token: 0x06000656 RID: 1622 RVA: 0x0000AE4C File Offset: 0x0000904C
 		[NullableContext(1)]
 		public override readonly string ToString()
 		{
@@ -212,7 +212,7 @@ namespace UnrealEngine
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x1700001B RID: 27
+		// Token: 0x1700001A RID: 26
 		public float this[int index]
 		{
 			readonly get
@@ -247,142 +247,142 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060006D4 RID: 1748 RVA: 0x0000E67F File Offset: 0x0000C87F
+		// Token: 0x06000659 RID: 1625 RVA: 0x0000AEEB File Offset: 0x000090EB
 		public readonly float Component(int index)
 		{
 			return this[index];
 		}
 
-		// Token: 0x060006D5 RID: 1749 RVA: 0x0000E688 File Offset: 0x0000C888
+		// Token: 0x0600065A RID: 1626 RVA: 0x0000AEF4 File Offset: 0x000090F4
 		public void Set(float inX, float inY)
 		{
 			this.X = inX;
 			this.Y = inY;
 		}
 
-		// Token: 0x060006D6 RID: 1750 RVA: 0x0000E698 File Offset: 0x0000C898
+		// Token: 0x0600065B RID: 1627 RVA: 0x0000AF04 File Offset: 0x00009104
 		public static float DotProduct(in FVector2D a, in FVector2D b)
 		{
 			return a | b;
 		}
 
-		// Token: 0x060006D7 RID: 1751 RVA: 0x0000E6A1 File Offset: 0x0000C8A1
+		// Token: 0x0600065C RID: 1628 RVA: 0x0000AF0D File Offset: 0x0000910D
 		public static float CrossProduct(in FVector2D a, in FVector2D b)
 		{
 			return a ^ b;
 		}
 
-		// Token: 0x060006D8 RID: 1752 RVA: 0x0000E6AA File Offset: 0x0000C8AA
+		// Token: 0x0600065D RID: 1629 RVA: 0x0000AF16 File Offset: 0x00009116
 		public static FVector2D Max(in FVector2D a, in FVector2D b)
 		{
 			return new FVector2D(Math.Max(a.X, b.X), Math.Max(a.Y, b.Y));
 		}
 
-		// Token: 0x060006D9 RID: 1753 RVA: 0x0000E6D3 File Offset: 0x0000C8D3
+		// Token: 0x0600065E RID: 1630 RVA: 0x0000AF3F File Offset: 0x0000913F
 		public static FVector2D Min(in FVector2D a, in FVector2D b)
 		{
 			return new FVector2D(Math.Min(a.X, b.X), Math.Min(a.Y, b.Y));
 		}
 
-		// Token: 0x060006DA RID: 1754 RVA: 0x0000E6FC File Offset: 0x0000C8FC
+		// Token: 0x0600065F RID: 1631 RVA: 0x0000AF68 File Offset: 0x00009168
 		public readonly float GetMax()
 		{
 			return Math.Max(this.X, this.Y);
 		}
 
-		// Token: 0x060006DB RID: 1755 RVA: 0x0000E70F File Offset: 0x0000C90F
+		// Token: 0x06000660 RID: 1632 RVA: 0x0000AF7B File Offset: 0x0000917B
 		public readonly float GetMin()
 		{
 			return Math.Min(this.X, this.Y);
 		}
 
-		// Token: 0x060006DC RID: 1756 RVA: 0x0000E722 File Offset: 0x0000C922
+		// Token: 0x06000661 RID: 1633 RVA: 0x0000AF8E File Offset: 0x0000918E
 		public readonly bool IsZero()
 		{
 			return this.X == 0f && this.Y == 0f;
 		}
 
-		// Token: 0x060006DD RID: 1757
+		// Token: 0x06000662 RID: 1634
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float Internal_Distance(in FVector2D a, in FVector2D b);
 
-		// Token: 0x060006DE RID: 1758
+		// Token: 0x06000663 RID: 1635
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float Internal_DistSquared(in FVector2D a, in FVector2D b);
 
-		// Token: 0x060006DF RID: 1759
+		// Token: 0x06000664 RID: 1636
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool Internal_Equals(in FVector2D a, in FVector2D b, float tolerance = 0.0001f);
 
-		// Token: 0x060006E0 RID: 1760
+		// Token: 0x06000665 RID: 1637
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float Internal_GetAbsMax(in FVector2D a);
 
-		// Token: 0x060006E1 RID: 1761
+		// Token: 0x06000666 RID: 1638
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector2D Internal_GetAbs(in FVector2D a);
 
-		// Token: 0x060006E2 RID: 1762
+		// Token: 0x06000667 RID: 1639
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float Internal_Length(in FVector2D a);
 
-		// Token: 0x060006E3 RID: 1763
+		// Token: 0x06000668 RID: 1640
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float Internal_Size(in FVector2D a);
 
-		// Token: 0x060006E4 RID: 1764
+		// Token: 0x06000669 RID: 1641
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern float Internal_SizeSquared(in FVector2D a);
 
-		// Token: 0x060006E5 RID: 1765
+		// Token: 0x0600066A RID: 1642
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector2D Internal_GetRotated(in FVector2D a, float angleDeg);
 
-		// Token: 0x060006E6 RID: 1766
+		// Token: 0x0600066B RID: 1643
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool Internal_IsNearlyZero(in FVector2D a, float tolerance = 0.0001f);
 
-		// Token: 0x060006E7 RID: 1767
+		// Token: 0x0600066C RID: 1644
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void Internal_Normalize(ref FVector2D a, float tolerance = 1E-08f);
 
-		// Token: 0x060006E8 RID: 1768
+		// Token: 0x0600066D RID: 1645
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector2D Internal_GetSafeNormal(in FVector2D a, float tolerance = 1E-08f);
 
-		// Token: 0x060006E9 RID: 1769
+		// Token: 0x0600066E RID: 1646
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void Internal_ToDirectionAndLength(in FVector2D a, out FVector2D outDirection, out float outLength);
 
-		// Token: 0x060006EA RID: 1770
+		// Token: 0x0600066F RID: 1647
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FIntPoint Internal_IntPoint(in FVector2D a);
 
-		// Token: 0x060006EB RID: 1771
+		// Token: 0x06000670 RID: 1648
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector2D Internal_RoundToVector(in FVector2D a);
 
-		// Token: 0x060006EC RID: 1772
+		// Token: 0x06000671 RID: 1649
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector2D Internal_ClampAxes(in FVector2D a, float minAxisVal, float maxAxisVal);
 
-		// Token: 0x060006ED RID: 1773
+		// Token: 0x06000672 RID: 1650
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector2D Internal_GetSignVector(in FVector2D a);
 
-		// Token: 0x060006EE RID: 1774
+		// Token: 0x06000673 RID: 1651
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool Internal_ContainsNaN(in FVector2D a);
 
-		// Token: 0x060006EF RID: 1775
+		// Token: 0x06000674 RID: 1652
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector Internal_SphericalToUnitCartesian(in FVector2D a);
 
-		// Token: 0x060006F0 RID: 1776
+		// Token: 0x06000675 RID: 1653
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void Internal_InitFromString(ref FVector2D a, in FCSharpStringView str);
 
-		// Token: 0x060006F1 RID: 1777 RVA: 0x0000E740 File Offset: 0x0000C940
+		// Token: 0x06000676 RID: 1654 RVA: 0x0000AFAC File Offset: 0x000091AC
 		public unsafe static float Distance(in FVector2D a, in FVector2D b)
 		{
 			fixed (FVector2D* ptr = &a)
@@ -394,7 +394,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060006F2 RID: 1778 RVA: 0x0000E75C File Offset: 0x0000C95C
+		// Token: 0x06000677 RID: 1655 RVA: 0x0000AFC8 File Offset: 0x000091C8
 		public unsafe static float DistSquared(in FVector2D a, in FVector2D b)
 		{
 			fixed (FVector2D* ptr = &a)
@@ -406,7 +406,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060006F3 RID: 1779 RVA: 0x0000E778 File Offset: 0x0000C978
+		// Token: 0x06000678 RID: 1656 RVA: 0x0000AFE4 File Offset: 0x000091E4
 		public unsafe readonly bool Equals(in FVector2D b, float tolerance = 0.0001f)
 		{
 			fixed (FVector2D* ptr = &this)
@@ -418,7 +418,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060006F4 RID: 1780 RVA: 0x0000E798 File Offset: 0x0000C998
+		// Token: 0x06000679 RID: 1657 RVA: 0x0000B004 File Offset: 0x00009204
 		public unsafe readonly float GetAbsMax()
 		{
 			fixed (FVector2D* ptr = &this)
@@ -427,7 +427,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060006F5 RID: 1781 RVA: 0x0000E7B0 File Offset: 0x0000C9B0
+		// Token: 0x0600067A RID: 1658 RVA: 0x0000B01C File Offset: 0x0000921C
 		public unsafe readonly FVector2D GetAbs()
 		{
 			fixed (FVector2D* ptr = &this)
@@ -436,7 +436,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060006F6 RID: 1782 RVA: 0x0000E7C8 File Offset: 0x0000C9C8
+		// Token: 0x0600067B RID: 1659 RVA: 0x0000B034 File Offset: 0x00009234
 		public unsafe readonly float Length()
 		{
 			fixed (FVector2D* ptr = &this)
@@ -445,7 +445,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060006F7 RID: 1783 RVA: 0x0000E7E0 File Offset: 0x0000C9E0
+		// Token: 0x0600067C RID: 1660 RVA: 0x0000B04C File Offset: 0x0000924C
 		public unsafe readonly float Size()
 		{
 			fixed (FVector2D* ptr = &this)
@@ -454,7 +454,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060006F8 RID: 1784 RVA: 0x0000E7F8 File Offset: 0x0000C9F8
+		// Token: 0x0600067D RID: 1661 RVA: 0x0000B064 File Offset: 0x00009264
 		public unsafe readonly float SizeSquared()
 		{
 			fixed (FVector2D* ptr = &this)
@@ -463,7 +463,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060006F9 RID: 1785 RVA: 0x0000E810 File Offset: 0x0000CA10
+		// Token: 0x0600067E RID: 1662 RVA: 0x0000B07C File Offset: 0x0000927C
 		public unsafe readonly FVector2D GetRotated(float angleDeg)
 		{
 			fixed (FVector2D* ptr = &this)
@@ -472,7 +472,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060006FA RID: 1786 RVA: 0x0000E828 File Offset: 0x0000CA28
+		// Token: 0x0600067F RID: 1663 RVA: 0x0000B094 File Offset: 0x00009294
 		public unsafe readonly bool IsNearlyZero(float tolerance = 0.0001f)
 		{
 			fixed (FVector2D* ptr = &this)
@@ -481,7 +481,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060006FB RID: 1787 RVA: 0x0000E840 File Offset: 0x0000CA40
+		// Token: 0x06000680 RID: 1664 RVA: 0x0000B0AC File Offset: 0x000092AC
 		public unsafe void Normalize(float tolerance = 1E-08f)
 		{
 			fixed (FVector2D* ptr = &this)
@@ -490,7 +490,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060006FC RID: 1788 RVA: 0x0000E85C File Offset: 0x0000CA5C
+		// Token: 0x06000681 RID: 1665 RVA: 0x0000B0C8 File Offset: 0x000092C8
 		public unsafe readonly FVector2D GetSafeNormal(float tolerance = 1E-08f)
 		{
 			fixed (FVector2D* ptr = &this)
@@ -499,7 +499,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060006FD RID: 1789 RVA: 0x0000E874 File Offset: 0x0000CA74
+		// Token: 0x06000682 RID: 1666 RVA: 0x0000B0E0 File Offset: 0x000092E0
 		public unsafe readonly void ToDirectionAndLength(out FVector2D outDirection, out float outLength)
 		{
 			fixed (FVector2D* ptr = &this)
@@ -514,7 +514,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060006FE RID: 1790 RVA: 0x0000E8A0 File Offset: 0x0000CAA0
+		// Token: 0x06000683 RID: 1667 RVA: 0x0000B10C File Offset: 0x0000930C
 		public unsafe readonly FIntPoint IntPoint()
 		{
 			fixed (FVector2D* ptr = &this)
@@ -523,7 +523,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060006FF RID: 1791 RVA: 0x0000E8B8 File Offset: 0x0000CAB8
+		// Token: 0x06000684 RID: 1668 RVA: 0x0000B124 File Offset: 0x00009324
 		public unsafe readonly FVector2D RoundToVector()
 		{
 			fixed (FVector2D* ptr = &this)
@@ -532,7 +532,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000700 RID: 1792 RVA: 0x0000E8D0 File Offset: 0x0000CAD0
+		// Token: 0x06000685 RID: 1669 RVA: 0x0000B13C File Offset: 0x0000933C
 		public unsafe readonly FVector2D ClampAxes(float minAxisVal, float maxAxisVal)
 		{
 			fixed (FVector2D* ptr = &this)
@@ -541,7 +541,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000701 RID: 1793 RVA: 0x0000E8EC File Offset: 0x0000CAEC
+		// Token: 0x06000686 RID: 1670 RVA: 0x0000B158 File Offset: 0x00009358
 		public unsafe readonly FVector2D GetSignVector()
 		{
 			fixed (FVector2D* ptr = &this)
@@ -550,7 +550,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000702 RID: 1794 RVA: 0x0000E904 File Offset: 0x0000CB04
+		// Token: 0x06000687 RID: 1671 RVA: 0x0000B170 File Offset: 0x00009370
 		public unsafe readonly bool ContainsNaN()
 		{
 			fixed (FVector2D* ptr = &this)
@@ -559,7 +559,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000703 RID: 1795 RVA: 0x0000E91C File Offset: 0x0000CB1C
+		// Token: 0x06000688 RID: 1672 RVA: 0x0000B188 File Offset: 0x00009388
 		public unsafe readonly FVector SphericalToUnitCartesian()
 		{
 			fixed (FVector2D* ptr = &this)
@@ -568,7 +568,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000704 RID: 1796 RVA: 0x0000E934 File Offset: 0x0000CB34
+		// Token: 0x06000689 RID: 1673 RVA: 0x0000B1A0 File Offset: 0x000093A0
 		[NullableContext(2)]
 		public unsafe void InitFromString(string str)
 		{
@@ -598,9 +598,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700001C RID: 28
-		// (get) Token: 0x06000705 RID: 1797 RVA: 0x0000E992 File Offset: 0x0000CB92
-		// (set) Token: 0x06000706 RID: 1798 RVA: 0x0000E99B File Offset: 0x0000CB9B
+		// Token: 0x1700001B RID: 27
+		// (get) Token: 0x0600068A RID: 1674 RVA: 0x0000B1FE File Offset: 0x000093FE
+		// (set) Token: 0x0600068B RID: 1675 RVA: 0x0000B207 File Offset: 0x00009407
 		double IVector2D.X
 		{
 			get
@@ -613,9 +613,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700001D RID: 29
-		// (get) Token: 0x06000707 RID: 1799 RVA: 0x0000E9A5 File Offset: 0x0000CBA5
-		// (set) Token: 0x06000708 RID: 1800 RVA: 0x0000E9AE File Offset: 0x0000CBAE
+		// Token: 0x1700001C RID: 28
+		// (get) Token: 0x0600068C RID: 1676 RVA: 0x0000B211 File Offset: 0x00009411
+		// (set) Token: 0x0600068D RID: 1677 RVA: 0x0000B21A File Offset: 0x0000941A
 		double IVector2D.Y
 		{
 			get
@@ -628,33 +628,33 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000709 RID: 1801 RVA: 0x0000E9B8 File Offset: 0x0000CBB8
+		// Token: 0x0600068E RID: 1678 RVA: 0x0000B224 File Offset: 0x00009424
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FVector2D._ScriptStructPtr != 0) ? FVector2D._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/CoreUObject.Vector2D", ref FVector2D._ScriptStructPtr);
 		}
 
-		// Token: 0x04000119 RID: 281
+		// Token: 0x040000D2 RID: 210
 		public static readonly FVector2D ZeroVector = new FVector2D(0f, 0f);
 
-		// Token: 0x0400011A RID: 282
+		// Token: 0x040000D3 RID: 211
 		public static readonly FVector2D UnitVector = new FVector2D(1f, 1f);
 
-		// Token: 0x0400011B RID: 283
+		// Token: 0x040000D4 RID: 212
 		public static readonly FVector2D Unit45Deg = new FVector2D(0.70710677f, 0.70710677f);
 
-		// Token: 0x0400011C RID: 284
+		// Token: 0x040000D5 RID: 213
 		[FieldOffset(0)]
 		public float X;
 
-		// Token: 0x0400011D RID: 285
+		// Token: 0x040000D6 RID: 214
 		[FieldOffset(4)]
 		public float Y;
 
-		// Token: 0x0400011E RID: 286
+		// Token: 0x040000D7 RID: 215
 		public const string __ObjectPath = "/Script/CoreUObject.Vector2D";
 
-		// Token: 0x0400011F RID: 287
+		// Token: 0x040000D8 RID: 216
 		private static IntPtr _ScriptStructPtr;
 	}
 }

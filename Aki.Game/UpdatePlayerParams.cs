@@ -2,23 +2,23 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002957 RID: 10583
+// Token: 0x02001ED2 RID: 7890
 [NullableContext(1)]
 [Nullable(0)]
 public class UpdatePlayerParams : IUpdatePlayerParams
 {
-	// Token: 0x17001D67 RID: 7527
-	// (get) Token: 0x06015DDA RID: 89562 RVA: 0x00583FC2 File Offset: 0x005821C2
-	// (set) Token: 0x06015DDB RID: 89563 RVA: 0x00583FCA File Offset: 0x005821CA
+	// Token: 0x17001DC0 RID: 7616
+	// (get) Token: 0x060137DE RID: 79838 RVA: 0x005AEFC2 File Offset: 0x005AD1C2
+	// (set) Token: 0x060137DF RID: 79839 RVA: 0x005AEFCA File Offset: 0x005AD1CA
 	public int PlayerId { get; set; }
 
-	// Token: 0x17001D68 RID: 7528
-	// (get) Token: 0x06015DDC RID: 89564 RVA: 0x00583FD3 File Offset: 0x005821D3
-	// (set) Token: 0x06015DDD RID: 89565 RVA: 0x00583FDB File Offset: 0x005821DB
+	// Token: 0x17001DC1 RID: 7617
+	// (get) Token: 0x060137E0 RID: 79840 RVA: 0x005AEFD3 File Offset: 0x005AD1D3
+	// (set) Token: 0x060137E1 RID: 79841 RVA: 0x005AEFDB File Offset: 0x005AD1DB
 	public ETeamGroupType CurrentGroupType { get; set; }
 
-	// Token: 0x17001D69 RID: 7529
-	// (get) Token: 0x06015DDE RID: 89566 RVA: 0x00583FE4 File Offset: 0x005821E4
-	// (set) Token: 0x06015DDF RID: 89567 RVA: 0x00583FEC File Offset: 0x005821EC
+	// Token: 0x17001DC2 RID: 7618
+	// (get) Token: 0x060137E2 RID: 79842 RVA: 0x005AEFE4 File Offset: 0x005AD1E4
+	// (set) Token: 0x060137E3 RID: 79843 RVA: 0x005AEFEC File Offset: 0x005AD1EC
 	public IList<IUpdateGroupParams> Groups { get; set; }
 }

@@ -6,10 +6,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006148 RID: 24904
+	// Token: 0x020067AD RID: 26541
 	public static class IAdjustDialogCameraVerify
 	{
-		// Token: 0x0602AB22 RID: 174882 RVA: 0x005E1F34 File Offset: 0x005E0134
+		// Token: 0x0602D21B RID: 184859 RVA: 0x0062C110 File Offset: 0x0062A310
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			if (verifier.VerifyTableStart(tablePos) && verifier.VerifyField(tablePos, 4, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 6, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 8, 4UL, 4UL, false))
@@ -74,17 +74,17 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return false;
 		}
 
-		// Token: 0x02007CE3 RID: 31971
+		// Token: 0x02008554 RID: 34132
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04013824 RID: 79908
+			// Token: 0x040148CA RID: 84170
 			public static VerifyTableAction <0>__Verify;
 
-			// Token: 0x04013825 RID: 79909
+			// Token: 0x040148CB RID: 84171
 			public static VerifyTableAction <1>__Verify;
 
-			// Token: 0x04013826 RID: 79910
+			// Token: 0x040148CC RID: 84172
 			public static VerifyUnionAction <2>__Verify;
 		}
 	}

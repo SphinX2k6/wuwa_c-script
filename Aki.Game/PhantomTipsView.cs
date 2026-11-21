@@ -8,17 +8,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002026 RID: 8230
+// Token: 0x020014F9 RID: 5369
 [NullableContext(1)]
 [Nullable(0)]
 public class PhantomTipsView : UiViewBase
 {
-	// Token: 0x0601020A RID: 66058 RVA: 0x003ED2A4 File Offset: 0x003EB4A4
+	// Token: 0x0600D672 RID: 54898 RVA: 0x003F989C File Offset: 0x003F7A9C
 	public PhantomTipsView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0601020B RID: 66059 RVA: 0x003ED2B0 File Offset: 0x003EB4B0
+	// Token: 0x0600D673 RID: 54899 RVA: 0x003F98A8 File Offset: 0x003F7AA8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -38,7 +38,7 @@ public class PhantomTipsView : UiViewBase
 		};
 	}
 
-	// Token: 0x0601020C RID: 66060 RVA: 0x003ED3D4 File Offset: 0x003EB5D4
+	// Token: 0x0600D674 RID: 54900 RVA: 0x003F99CC File Offset: 0x003F7BCC
 	private UniTask CreateVisionItem()
 	{
 		PhantomTipsView.<CreateVisionItem>d__9 <CreateVisionItem>d__;
@@ -49,7 +49,7 @@ public class PhantomTipsView : UiViewBase
 		return <CreateVisionItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601020D RID: 66061 RVA: 0x003ED418 File Offset: 0x003EB618
+	// Token: 0x0600D675 RID: 54901 RVA: 0x003F9A10 File Offset: 0x003F7C10
 	private UniTask CreateMainAttributeItem()
 	{
 		PhantomTipsView.<CreateMainAttributeItem>d__10 <CreateMainAttributeItem>d__;
@@ -60,7 +60,7 @@ public class PhantomTipsView : UiViewBase
 		return <CreateMainAttributeItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601020E RID: 66062 RVA: 0x003ED45C File Offset: 0x003EB65C
+	// Token: 0x0600D676 RID: 54902 RVA: 0x003F9A54 File Offset: 0x003F7C54
 	private UniTask CreateSubAttributeItem()
 	{
 		PhantomTipsView.<CreateSubAttributeItem>d__11 <CreateSubAttributeItem>d__;
@@ -71,7 +71,7 @@ public class PhantomTipsView : UiViewBase
 		return <CreateSubAttributeItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601020F RID: 66063 RVA: 0x003ED4A0 File Offset: 0x003EB6A0
+	// Token: 0x0600D677 RID: 54903 RVA: 0x003F9A98 File Offset: 0x003F7C98
 	private UniTask CreateVisionFetterSuitItem()
 	{
 		PhantomTipsView.<CreateVisionFetterSuitItem>d__12 <CreateVisionFetterSuitItem>d__;
@@ -82,7 +82,7 @@ public class PhantomTipsView : UiViewBase
 		return <CreateVisionFetterSuitItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010210 RID: 66064 RVA: 0x003ED4E4 File Offset: 0x003EB6E4
+	// Token: 0x0600D678 RID: 54904 RVA: 0x003F9ADC File Offset: 0x003F7CDC
 	private UniTask CreateStateItem()
 	{
 		PhantomTipsView.<CreateStateItem>d__13 <CreateStateItem>d__;
@@ -93,7 +93,7 @@ public class PhantomTipsView : UiViewBase
 		return <CreateStateItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010211 RID: 66065 RVA: 0x003ED528 File Offset: 0x003EB728
+	// Token: 0x0600D679 RID: 54905 RVA: 0x003F9B20 File Offset: 0x003F7D20
 	protected override UniTask OnBeforeStartAsync()
 	{
 		PhantomTipsView.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -104,7 +104,7 @@ public class PhantomTipsView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06010212 RID: 66066 RVA: 0x003ED56C File Offset: 0x003EB76C
+	// Token: 0x0600D67A RID: 54906 RVA: 0x003F9B64 File Offset: 0x003F7D64
 	protected override void OnStart()
 	{
 		int? num = this.OpenParam as int?;
@@ -133,7 +133,7 @@ public class PhantomTipsView : UiViewBase
 		this.UiViewSequence.AddSequenceFinishEvent(text, new Action<string>(this.OnViewShowSequenceFinish), false);
 	}
 
-	// Token: 0x06010213 RID: 66067 RVA: 0x003ED650 File Offset: 0x003EB850
+	// Token: 0x0600D67B RID: 54907 RVA: 0x003F9C48 File Offset: 0x003F7E48
 	private void RefreshUi(PhantomDataBase phantomData)
 	{
 		QualityInfo value = ItemConfig.Instance.GetQualityConfig(phantomData.GetQuality()).Value;
@@ -150,7 +150,7 @@ public class PhantomTipsView : UiViewBase
 		this.RefreshNiagara(value);
 	}
 
-	// Token: 0x06010214 RID: 66068 RVA: 0x003ED744 File Offset: 0x003EB944
+	// Token: 0x0600D67C RID: 54908 RVA: 0x003F9D3C File Offset: 0x003F7F3C
 	private void RefreshState(PhantomDataBase phantomData)
 	{
 		bool isLock = phantomData.GetIsLock();
@@ -160,7 +160,7 @@ public class PhantomTipsView : UiViewBase
 		base.GetButton(8).SetSelfInteractive(true);
 	}
 
-	// Token: 0x06010215 RID: 66069 RVA: 0x003ED790 File Offset: 0x003EB990
+	// Token: 0x0600D67D RID: 54909 RVA: 0x003F9D88 File Offset: 0x003F7F88
 	private void RefreshAttribute(PhantomDataBase phantomData)
 	{
 		List<AttrListScrollData> mainPropShowAttributeList = phantomData.GetMainPropShowAttributeList(CommonComponentDefine.EAttributeType.PhantomType, false);
@@ -172,7 +172,7 @@ public class PhantomTipsView : UiViewBase
 		this.SubMainAttributeItem.RefreshUi(mainPropShowAttributeList[1]);
 	}
 
-	// Token: 0x06010216 RID: 66070 RVA: 0x003ED7D8 File Offset: 0x003EB9D8
+	// Token: 0x0600D67E RID: 54910 RVA: 0x003F9DD0 File Offset: 0x003F7FD0
 	private void RefreshNiagara(QualityInfo qualityInfo)
 	{
 		FColor color = FColor.FromHex(qualityInfo.TextColor);
@@ -193,7 +193,7 @@ public class PhantomTipsView : UiViewBase
 		}, 100, this.MemoryTag);
 	}
 
-	// Token: 0x06010217 RID: 66071 RVA: 0x003ED853 File Offset: 0x003EBA53
+	// Token: 0x0600D67F RID: 54911 RVA: 0x003F9E4B File Offset: 0x003F804B
 	private void OnViewShowSequenceFinish(string _)
 	{
 		if (base.IsPendingDestroy)
@@ -203,62 +203,62 @@ public class PhantomTipsView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06010218 RID: 66072 RVA: 0x003ED865 File Offset: 0x003EBA65
+	// Token: 0x0600D680 RID: 54912 RVA: 0x003F9E5D File Offset: 0x003F805D
 	protected override void OnBeforeDestroy()
 	{
 		ItemModel.Instance.LastCloseTimeStamp = TimeUtil.Instance.GetServerTimeStamp();
 	}
 
-	// Token: 0x0400775D RID: 30557
+	// Token: 0x04007846 RID: 30790
 	private bool IsGolden;
 
-	// Token: 0x0400775E RID: 30558
+	// Token: 0x04007847 RID: 30791
 	[Nullable(2)]
 	private PhantomTipsAttributeItem MainAttributeItem;
 
-	// Token: 0x0400775F RID: 30559
+	// Token: 0x04007848 RID: 30792
 	[Nullable(2)]
 	private PhantomTipsAttributeItem SubMainAttributeItem;
 
-	// Token: 0x04007760 RID: 30560
+	// Token: 0x04007849 RID: 30793
 	[Nullable(2)]
 	private VisionFetterSuitItem VisionFetterSuitItem;
 
-	// Token: 0x04007761 RID: 30561
+	// Token: 0x0400784A RID: 30794
 	[Nullable(2)]
 	private MediumItemGridLevelAndLockComponent StateItem;
 
-	// Token: 0x04007762 RID: 30562
+	// Token: 0x0400784B RID: 30795
 	[Nullable(2)]
 	private VisionGridItem VisionItem;
 
-	// Token: 0x02008618 RID: 34328
+	// Token: 0x0200779F RID: 30623
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402BA30 RID: 178736
+		// Token: 0x04026D3F RID: 159039
 		PhantomName,
-		// Token: 0x0402BA31 RID: 178737
+		// Token: 0x04026D40 RID: 159040
 		PhantomCost,
-		// Token: 0x0402BA32 RID: 178738
+		// Token: 0x04026D41 RID: 159041
 		VisionItem,
-		// Token: 0x0402BA33 RID: 178739
+		// Token: 0x04026D42 RID: 159042
 		QualityTexture,
-		// Token: 0x0402BA34 RID: 178740
+		// Token: 0x04026D43 RID: 159043
 		ElementItem,
-		// Token: 0x0402BA35 RID: 178741
+		// Token: 0x04026D44 RID: 159044
 		MainAttributeItem,
-		// Token: 0x0402BA36 RID: 178742
+		// Token: 0x04026D45 RID: 159045
 		SubAttributeItem,
-		// Token: 0x0402BA37 RID: 178743
+		// Token: 0x04026D46 RID: 159046
 		Niagara,
-		// Token: 0x0402BA38 RID: 178744
+		// Token: 0x04026D47 RID: 159047
 		BtnClick,
-		// Token: 0x0402BA39 RID: 178745
+		// Token: 0x04026D48 RID: 159048
 		PanelTips,
-		// Token: 0x0402BA3A RID: 178746
+		// Token: 0x04026D49 RID: 159049
 		ItemState,
-		// Token: 0x0402BA3B RID: 178747
+		// Token: 0x04026D4A RID: 159050
 		FlowTexture
 	}
 }

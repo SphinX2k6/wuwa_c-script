@@ -2,19 +2,19 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x0200603A RID: 24634
+	// Token: 0x02004FB8 RID: 20408
 	public class SpringLevelData
 	{
-		// Token: 0x04020926 RID: 133414
+		// Token: 0x0401B253 RID: 111187
 		public int Level;
 
-		// Token: 0x04020927 RID: 133415
+		// Token: 0x0401B254 RID: 111188
 		public int ExpLevel;
 
-		// Token: 0x04020928 RID: 133416
+		// Token: 0x0401B255 RID: 111189
 		public int ExpNext;
 
-		// Token: 0x04020929 RID: 133417
+		// Token: 0x0401B256 RID: 111190
 		public bool IsMax;
 	}
 }

@@ -2,45 +2,45 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006691 RID: 26257
+	// Token: 0x02006D0B RID: 27915
 	public class IEnableSubLevelTransitionWithSceneCaptureT
 	{
-		// Token: 0x1700C322 RID: 49954
-		// (get) Token: 0x0602DA31 RID: 186929 RVA: 0x0063F19A File Offset: 0x0063D39A
-		// (set) Token: 0x0602DA32 RID: 186930 RVA: 0x0063F1A2 File Offset: 0x0063D3A2
+		// Token: 0x1700CCD3 RID: 52435
+		// (get) Token: 0x0603024E RID: 197198 RVA: 0x0068C44E File Offset: 0x0068A64E
+		// (set) Token: 0x0603024F RID: 197199 RVA: 0x0068C456 File Offset: 0x0068A656
 		public EEnableSubLevelTransitionType Type { get; set; }
 
-		// Token: 0x1700C323 RID: 49955
-		// (get) Token: 0x0602DA33 RID: 186931 RVA: 0x0063F1AB File Offset: 0x0063D3AB
-		// (set) Token: 0x0602DA34 RID: 186932 RVA: 0x0063F1B3 File Offset: 0x0063D3B3
+		// Token: 0x1700CCD4 RID: 52436
+		// (get) Token: 0x06030250 RID: 197200 RVA: 0x0068C45F File Offset: 0x0068A65F
+		// (set) Token: 0x06030251 RID: 197201 RVA: 0x0068C467 File Offset: 0x0068A667
 		public string SceneCaptureEffect { get; set; }
 
-		// Token: 0x1700C324 RID: 49956
-		// (get) Token: 0x0602DA35 RID: 186933 RVA: 0x0063F1BC File Offset: 0x0063D3BC
-		// (set) Token: 0x0602DA36 RID: 186934 RVA: 0x0063F1C4 File Offset: 0x0063D3C4
+		// Token: 0x1700CCD5 RID: 52437
+		// (get) Token: 0x06030252 RID: 197202 RVA: 0x0068C470 File Offset: 0x0068A670
+		// (set) Token: 0x06030253 RID: 197203 RVA: 0x0068C478 File Offset: 0x0068A678
 		public string ScreenEffect { get; set; }
 
-		// Token: 0x1700C325 RID: 49957
-		// (get) Token: 0x0602DA37 RID: 186935 RVA: 0x0063F1CD File Offset: 0x0063D3CD
-		// (set) Token: 0x0602DA38 RID: 186936 RVA: 0x0063F1D5 File Offset: 0x0063D3D5
+		// Token: 0x1700CCD6 RID: 52438
+		// (get) Token: 0x06030254 RID: 197204 RVA: 0x0068C481 File Offset: 0x0068A681
+		// (set) Token: 0x06030255 RID: 197205 RVA: 0x0068C489 File Offset: 0x0068A689
 		public string ScreenEffectLoop { get; set; }
 
-		// Token: 0x1700C326 RID: 49958
-		// (get) Token: 0x0602DA39 RID: 186937 RVA: 0x0063F1DE File Offset: 0x0063D3DE
-		// (set) Token: 0x0602DA3A RID: 186938 RVA: 0x0063F1E6 File Offset: 0x0063D3E6
+		// Token: 0x1700CCD7 RID: 52439
+		// (get) Token: 0x06030256 RID: 197206 RVA: 0x0068C492 File Offset: 0x0068A692
+		// (set) Token: 0x06030257 RID: 197207 RVA: 0x0068C49A File Offset: 0x0068A69A
 		public float DelayTime { get; set; }
 
-		// Token: 0x1700C327 RID: 49959
-		// (get) Token: 0x0602DA3B RID: 186939 RVA: 0x0063F1EF File Offset: 0x0063D3EF
-		// (set) Token: 0x0602DA3C RID: 186940 RVA: 0x0063F1F7 File Offset: 0x0063D3F7
+		// Token: 0x1700CCD8 RID: 52440
+		// (get) Token: 0x06030258 RID: 197208 RVA: 0x0068C4A3 File Offset: 0x0068A6A3
+		// (set) Token: 0x06030259 RID: 197209 RVA: 0x0068C4AB File Offset: 0x0068A6AB
 		public bool IsAllowInput { get; set; }
 
-		// Token: 0x1700C328 RID: 49960
-		// (get) Token: 0x0602DA3D RID: 186941 RVA: 0x0063F200 File Offset: 0x0063D400
-		// (set) Token: 0x0602DA3E RID: 186942 RVA: 0x0063F208 File Offset: 0x0063D408
+		// Token: 0x1700CCD9 RID: 52441
+		// (get) Token: 0x0603025A RID: 197210 RVA: 0x0068C4B4 File Offset: 0x0068A6B4
+		// (set) Token: 0x0603025B RID: 197211 RVA: 0x0068C4BC File Offset: 0x0068A6BC
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602DA3F RID: 186943 RVA: 0x0063F211 File Offset: 0x0063D411
+		// Token: 0x0603025C RID: 197212 RVA: 0x0068C4C5 File Offset: 0x0068A6C5
 		public IEnableSubLevelTransitionWithSceneCaptureT()
 		{
 			this.Type = EEnableSubLevelTransitionType.SceneCapture;

@@ -7,13 +7,13 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Manager
 {
-	// Token: 0x02006943 RID: 26947
+	// Token: 0x02005A9E RID: 23198
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class ControllerHolder
 	{
-		// Token: 0x170097F6 RID: 38902
-		// (get) Token: 0x0604326F RID: 275055 RVA: 0x0105E3F8 File Offset: 0x0105C5F8
+		// Token: 0x17006CD6 RID: 27862
+		// (get) Token: 0x060392A6 RID: 234150 RVA: 0x010025B7 File Offset: 0x010007B7
 		public static WriteLetterController WriteLetterController
 		{
 			get
@@ -22,8 +22,8 @@ namespace CSharpScript.Game.Manager
 			}
 		}
 
-		// Token: 0x170097F7 RID: 38903
-		// (get) Token: 0x06043270 RID: 275056 RVA: 0x0105E3FF File Offset: 0x0105C5FF
+		// Token: 0x17006CD7 RID: 27863
+		// (get) Token: 0x060392A7 RID: 234151 RVA: 0x010025BE File Offset: 0x010007BE
 		public static CapabilityController CapabilityController
 		{
 			get
@@ -32,8 +32,8 @@ namespace CSharpScript.Game.Manager
 			}
 		}
 
-		// Token: 0x170097F8 RID: 38904
-		// (get) Token: 0x06043271 RID: 275057 RVA: 0x0105E406 File Offset: 0x0105C606
+		// Token: 0x17006CD8 RID: 27864
+		// (get) Token: 0x060392A8 RID: 234152 RVA: 0x010025C5 File Offset: 0x010007C5
 		public static SceneUiController SceneUiController
 		{
 			get
@@ -42,8 +42,8 @@ namespace CSharpScript.Game.Manager
 			}
 		}
 
-		// Token: 0x170097F9 RID: 38905
-		// (get) Token: 0x06043272 RID: 275058 RVA: 0x0105E40D File Offset: 0x0105C60D
+		// Token: 0x17006CD9 RID: 27865
+		// (get) Token: 0x060392A9 RID: 234153 RVA: 0x010025CC File Offset: 0x010007CC
 		public static LoopTeleportVolumeController LoopTeleportVolumeController
 		{
 			get
@@ -52,8 +52,8 @@ namespace CSharpScript.Game.Manager
 			}
 		}
 
-		// Token: 0x170097FA RID: 38906
-		// (get) Token: 0x06043273 RID: 275059 RVA: 0x0105E414 File Offset: 0x0105C614
+		// Token: 0x17006CDA RID: 27866
+		// (get) Token: 0x060392AA RID: 234154 RVA: 0x010025D3 File Offset: 0x010007D3
 		public static InputDistributeController InputDistributeController
 		{
 			get

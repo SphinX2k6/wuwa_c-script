@@ -1,35 +1,35 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020020BC RID: 8380
+// Token: 0x02001593 RID: 5523
 [NullableContext(1)]
 [Nullable(0)]
 public class MonsterSkillReportLog : PlayerCommonLogData
 {
-	// Token: 0x06010877 RID: 67703 RVA: 0x0040A1E0 File Offset: 0x004083E0
+	// Token: 0x0600DCE7 RID: 56551 RVA: 0x004168E8 File Offset: 0x00414AE8
 	public MonsterSkillReportLog(int monsterId, string pbModelConfigId)
 	{
 		this.i_monster_id = monsterId;
 		this.s_pb_model_config_id = pbModelConfigId;
 	}
 
-	// Token: 0x17001468 RID: 5224
-	// (get) Token: 0x06010878 RID: 67704 RVA: 0x0040A22D File Offset: 0x0040842D
-	// (set) Token: 0x06010879 RID: 67705 RVA: 0x0040A235 File Offset: 0x00408435
+	// Token: 0x17001495 RID: 5269
+	// (get) Token: 0x0600DCE8 RID: 56552 RVA: 0x00416935 File Offset: 0x00414B35
+	// (set) Token: 0x0600DCE9 RID: 56553 RVA: 0x0041693D File Offset: 0x00414B3D
 	public override string event_id { get; set; } = "102803";
 
-	// Token: 0x04007ABF RID: 31423
+	// Token: 0x04007BBD RID: 31677
 	public string s_battle_id = "";
 
-	// Token: 0x04007AC0 RID: 31424
+	// Token: 0x04007BBE RID: 31678
 	public int i_monster_id;
 
-	// Token: 0x04007AC1 RID: 31425
+	// Token: 0x04007BBF RID: 31679
 	public int i_monster_level;
 
-	// Token: 0x04007AC2 RID: 31426
+	// Token: 0x04007BC0 RID: 31680
 	public string s_pb_model_config_id = "";
 
-	// Token: 0x04007AC3 RID: 31427
+	// Token: 0x04007BC1 RID: 31681
 	public string s_reports = "";
 }

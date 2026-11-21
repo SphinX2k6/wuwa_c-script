@@ -8,14 +8,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.Opponent
 {
-	// Token: 0x02005293 RID: 21139
+	// Token: 0x02004263 RID: 16995
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class OpponentMonsterProxy : OpponentFunctionAreaProxy
 	{
-		// Token: 0x17008286 RID: 33414
-		// (get) Token: 0x060360E6 RID: 221414 RVA: 0x00CCAFD7 File Offset: 0x00CC91D7
-		// (set) Token: 0x060360E7 RID: 221415 RVA: 0x00CCAFE4 File Offset: 0x00CC91E4
+		// Token: 0x17005646 RID: 22086
+		// (get) Token: 0x0602AFE1 RID: 176097 RVA: 0x00C186DB File Offset: 0x00C168DB
+		// (set) Token: 0x0602AFE2 RID: 176098 RVA: 0x00C186E8 File Offset: 0x00C168E8
 		public new PhantomArenaAreaMonsterItem AreaItem
 		{
 			get
@@ -28,8 +28,8 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Opponent
 			}
 		}
 
-		// Token: 0x17008287 RID: 33415
-		// (get) Token: 0x060360E8 RID: 221416 RVA: 0x00CCAFED File Offset: 0x00CC91ED
+		// Token: 0x17005647 RID: 22087
+		// (get) Token: 0x0602AFE3 RID: 176099 RVA: 0x00C186F1 File Offset: 0x00C168F1
 		public override bool IsMonster
 		{
 			get
@@ -38,8 +38,8 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Opponent
 			}
 		}
 
-		// Token: 0x17008288 RID: 33416
-		// (get) Token: 0x060360E9 RID: 221417 RVA: 0x00CCAFF0 File Offset: 0x00CC91F0
+		// Token: 0x17005648 RID: 22088
+		// (get) Token: 0x0602AFE4 RID: 176100 RVA: 0x00C186F4 File Offset: 0x00C168F4
 		public override bool IsNeedPreload
 		{
 			get
@@ -48,18 +48,18 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Opponent
 			}
 		}
 
-		// Token: 0x060360EA RID: 221418 RVA: 0x00CCB00C File Offset: 0x00CC920C
+		// Token: 0x0602AFE5 RID: 176101 RVA: 0x00C18710 File Offset: 0x00C16910
 		public OpponentMonsterProxy(int index, OpponentFunctionArea area) : base(index, area)
 		{
 		}
 
-		// Token: 0x060360EB RID: 221419 RVA: 0x00CCB016 File Offset: 0x00CC9216
+		// Token: 0x0602AFE6 RID: 176102 RVA: 0x00C1871A File Offset: 0x00C1691A
 		protected override UUIItem GetCardAttachItem()
 		{
 			return this.AreaItem.GetCardRootItem();
 		}
 
-		// Token: 0x060360EC RID: 221420 RVA: 0x00CCB024 File Offset: 0x00CC9224
+		// Token: 0x0602AFE7 RID: 176103 RVA: 0x00C18728 File Offset: 0x00C16928
 		public UniTask EvolveCard(int cardId)
 		{
 			OpponentMonsterProxy.<EvolveCard>d__9 <EvolveCard>d__;
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Opponent
 			return <EvolveCard>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060360ED RID: 221421 RVA: 0x00CCB070 File Offset: 0x00CC9270
+		// Token: 0x0602AFE8 RID: 176104 RVA: 0x00C18774 File Offset: 0x00C16974
 		public UniTask CopyCard(int cardId)
 		{
 			OpponentMonsterProxy.<CopyCard>d__10 <CopyCard>d__;
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Opponent
 			return <CopyCard>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060360EE RID: 221422 RVA: 0x00CCB0BC File Offset: 0x00CC92BC
+		// Token: 0x0602AFE9 RID: 176105 RVA: 0x00C187C0 File Offset: 0x00C169C0
 		private UniTask DestroyLastCard(PhantomArenaCard lastCard)
 		{
 			OpponentMonsterProxy.<DestroyLastCard>d__11 <DestroyLastCard>d__;

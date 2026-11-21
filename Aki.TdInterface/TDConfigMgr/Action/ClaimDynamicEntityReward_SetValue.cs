@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014F4 RID: 5364
+	// Token: 0x0200164D RID: 5709
 	public class ClaimDynamicEntityReward_SetValue
 	{
-		// Token: 0x040046BB RID: 18107
-		[Nullable(1)]
+		// Token: 0x04004A56 RID: 19030
 		public IClaimDynamicTrafficReward RewardType;
 	}
 }

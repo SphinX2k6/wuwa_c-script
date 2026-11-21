@@ -7,7 +7,7 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Data.Gameplay.MotorRailMove.Struct
 {
-	// Token: 0x02003F3D RID: 16189
+	// Token: 0x020031E9 RID: 12777
 	[NullableContext(1)]
 	[Nullable(0)]
 	[HasGetTypeHash]
@@ -15,15 +15,15 @@ namespace AkiClient.Game.Aki.Data.Gameplay.MotorRailMove.Struct
 	[UnrealStructLayout(192, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 192)]
 	public class SMotorRailMoveConfig_JumpOffRail : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602933C RID: 168764 RVA: 0x009BE57F File Offset: 0x009BC77F
+		// Token: 0x0601FC64 RID: 130148 RVA: 0x009356EE File Offset: 0x009338EE
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SMotorRailMoveConfig_JumpOffRail._ScriptStructPtr != 0) ? SMotorRailMoveConfig_JumpOffRail._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Data/Gameplay/MotorRailMove/Struct/SMotorRailMoveConfig_JumpOffRail.SMotorRailMoveConfig_JumpOffRail", ref SMotorRailMoveConfig_JumpOffRail._ScriptStructPtr);
 		}
 
-		// Token: 0x17006213 RID: 25107
-		// (get) Token: 0x0602933D RID: 168765 RVA: 0x009BE5A4 File Offset: 0x009BC7A4
-		// (set) Token: 0x0602933E RID: 168766 RVA: 0x009BE5E7 File Offset: 0x009BC7E7
+		// Token: 0x17003B6F RID: 15215
+		// (get) Token: 0x0601FC65 RID: 130149 RVA: 0x00935714 File Offset: 0x00933914
+		// (set) Token: 0x0601FC66 RID: 130150 RVA: 0x00935757 File Offset: 0x00933957
 		public SMotorRailMove_CommonConfig CommonConfig
 		{
 			get
@@ -32,124 +32,115 @@ namespace AkiClient.Game.Aki.Data.Gameplay.MotorRailMove.Struct
 				SMotorRailMove_CommonConfig result;
 				if ((result = this._CommonConfig) == null)
 				{
-					result = (this._CommonConfig = new SMotorRailMove_CommonConfig(base.NativePtr + (IntPtr)SMotorRailMoveConfig_JumpOffRail.__PropertyOffset_0, base.MemoryOwner ?? this));
+					result = (this._CommonConfig = new SMotorRailMove_CommonConfig(base.NativePtr + (IntPtr)SMotorRailMoveConfig_JumpOffRail.__PropertyOffset_CommonConfig, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SMotorRailMove_CommonConfig.StaticStruct(), base.NativePtr + (IntPtr)SMotorRailMoveConfig_JumpOffRail.__PropertyOffset_0, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SMotorRailMove_CommonConfig.StaticStruct(), base.NativePtr + (IntPtr)SMotorRailMoveConfig_JumpOffRail.__PropertyOffset_CommonConfig, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17006214 RID: 25108
-		// (get) Token: 0x0602933F RID: 168767 RVA: 0x009BE608 File Offset: 0x009BC808
-		// (set) Token: 0x06029340 RID: 168768 RVA: 0x009BE618 File Offset: 0x009BC818
+		// Token: 0x17003B70 RID: 15216
+		// (get) Token: 0x0601FC67 RID: 130151 RVA: 0x00935778 File Offset: 0x00933978
+		// (set) Token: 0x0601FC68 RID: 130152 RVA: 0x00935788 File Offset: 0x00933988
 		public unsafe int SkillId
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SMotorRailMoveConfig_JumpOffRail.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)SMotorRailMoveConfig_JumpOffRail.__PropertyOffset_SkillId);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SMotorRailMoveConfig_JumpOffRail.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)SMotorRailMoveConfig_JumpOffRail.__PropertyOffset_SkillId) = value;
 			}
 		}
 
-		// Token: 0x17006215 RID: 25109
-		// (get) Token: 0x06029341 RID: 168769 RVA: 0x009BE629 File Offset: 0x009BC829
-		// (set) Token: 0x06029342 RID: 168770 RVA: 0x009BE639 File Offset: 0x009BC839
+		// Token: 0x17003B71 RID: 15217
+		// (get) Token: 0x0601FC69 RID: 130153 RVA: 0x00935799 File Offset: 0x00933999
+		// (set) Token: 0x0601FC6A RID: 130154 RVA: 0x009357A9 File Offset: 0x009339A9
 		public unsafe float SideOffsetAbs
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SMotorRailMoveConfig_JumpOffRail.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)SMotorRailMoveConfig_JumpOffRail.__PropertyOffset_SideOffsetAbs);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SMotorRailMoveConfig_JumpOffRail.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)SMotorRailMoveConfig_JumpOffRail.__PropertyOffset_SideOffsetAbs) = value;
 			}
 		}
 
-		// Token: 0x17006216 RID: 25110
-		// (get) Token: 0x06029343 RID: 168771 RVA: 0x009BE64A File Offset: 0x009BC84A
-		// (set) Token: 0x06029344 RID: 168772 RVA: 0x009BE65E File Offset: 0x009BC85E
+		// Token: 0x17003B72 RID: 15218
+		// (get) Token: 0x0601FC6B RID: 130155 RVA: 0x009357BA File Offset: 0x009339BA
+		// (set) Token: 0x0601FC6C RID: 130156 RVA: 0x009357CE File Offset: 0x009339CE
 		public unsafe SMotorRailMove_ParabolaMove ParabolaMove
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SMotorRailMoveConfig_JumpOffRail.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)SMotorRailMoveConfig_JumpOffRail.__PropertyOffset_ParabolaMove);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SMotorRailMoveConfig_JumpOffRail.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)SMotorRailMoveConfig_JumpOffRail.__PropertyOffset_ParabolaMove) = value;
 			}
 		}
 
-		// Token: 0x06029345 RID: 168773 RVA: 0x009BE673 File Offset: 0x009BC873
+		// Token: 0x0601FC6D RID: 130157 RVA: 0x009357E3 File Offset: 0x009339E3
 		public SMotorRailMoveConfig_JumpOffRail()
 		{
 		}
 
-		// Token: 0x06029346 RID: 168774 RVA: 0x009BE67B File Offset: 0x009BC87B
-		public SMotorRailMoveConfig_JumpOffRail(SMotorRailMove_CommonConfig CommonConfig, int SkillId, float SideOffsetAbs, SMotorRailMove_ParabolaMove ParabolaMove)
-		{
-			this.CommonConfig = CommonConfig;
-			this.SkillId = SkillId;
-			this.SideOffsetAbs = SideOffsetAbs;
-			this.ParabolaMove = ParabolaMove;
-		}
-
-		// Token: 0x06029347 RID: 168775 RVA: 0x009BE6A0 File Offset: 0x009BC8A0
+		// Token: 0x0601FC6E RID: 130158 RVA: 0x009357EB File Offset: 0x009339EB
 		protected override IntPtr GetUStructPtr()
 		{
 			return SMotorRailMoveConfig_JumpOffRail.StaticStruct();
 		}
 
-		// Token: 0x06029348 RID: 168776 RVA: 0x009BE6AC File Offset: 0x009BC8AC
+		// Token: 0x0601FC6F RID: 130159 RVA: 0x009357F7 File Offset: 0x009339F7
 		[NullableContext(2)]
 		public SMotorRailMoveConfig_JumpOffRail(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06029349 RID: 168777 RVA: 0x009BE6B6 File Offset: 0x009BC8B6
+		// Token: 0x0601FC70 RID: 130160 RVA: 0x00935801 File Offset: 0x00933A01
 		public SMotorRailMoveConfig_JumpOffRail(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602934A RID: 168778 RVA: 0x009BE6C1 File Offset: 0x009BC8C1
+		// Token: 0x0601FC71 RID: 130161 RVA: 0x0093580C File Offset: 0x00933A0C
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SMotorRailMoveConfig_JumpOffRail(Pointer, false, true);
 		}
 
-		// Token: 0x0602934B RID: 168779 RVA: 0x009BE6CB File Offset: 0x009BC8CB
+		// Token: 0x0601FC72 RID: 130162 RVA: 0x00935816 File Offset: 0x00933A16
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SMotorRailMoveConfig_JumpOffRail(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04015196 RID: 86422
+		// Token: 0x040110D2 RID: 69842
 		public const string __ObjectPath = "/Game/Aki/Data/Gameplay/MotorRailMove/Struct/SMotorRailMoveConfig_JumpOffRail.SMotorRailMoveConfig_JumpOffRail";
 
-		// Token: 0x04015197 RID: 86423
+		// Token: 0x040110D3 RID: 69843
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04015198 RID: 86424
-		internal static int __PropertyOffset_0;
+		// Token: 0x040110D4 RID: 69844
+		internal static int __PropertyOffset_CommonConfig;
 
-		// Token: 0x04015199 RID: 86425
+		// Token: 0x040110D5 RID: 69845
 		[Nullable(2)]
 		private SMotorRailMove_CommonConfig _CommonConfig;
 
-		// Token: 0x0401519A RID: 86426
-		internal static int __PropertyOffset_1;
+		// Token: 0x040110D6 RID: 69846
+		internal static int __PropertyOffset_SkillId;
 
-		// Token: 0x0401519B RID: 86427
-		internal static int __PropertyOffset_2;
+		// Token: 0x040110D7 RID: 69847
+		internal static int __PropertyOffset_SideOffsetAbs;
 
-		// Token: 0x0401519C RID: 86428
-		internal static int __PropertyOffset_3;
+		// Token: 0x040110D8 RID: 69848
+		internal static int __PropertyOffset_ParabolaMove;
 	}
 }

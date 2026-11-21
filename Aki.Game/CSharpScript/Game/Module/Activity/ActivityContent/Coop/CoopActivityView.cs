@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 {
-	// Token: 0x020068CA RID: 26826
+	// Token: 0x0200581A RID: 22554
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CoopActivityView : ActivitySubViewBase
 	{
-		// Token: 0x06042F3B RID: 274235 RVA: 0x0104E2E0 File Offset: 0x0104C4E0
+		// Token: 0x06037A93 RID: 227987 RVA: 0x00F8F908 File Offset: 0x00F8DB08
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,13 +28,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			};
 		}
 
-		// Token: 0x06042F3C RID: 274236 RVA: 0x0104E37C File Offset: 0x0104C57C
+		// Token: 0x06037A94 RID: 227988 RVA: 0x00F8F9A4 File Offset: 0x00F8DBA4
 		protected override void OnSetData()
 		{
 			this.Data = (this.ActivityBaseData as CoopActivityData);
 		}
 
-		// Token: 0x06042F3D RID: 274237 RVA: 0x0104E390 File Offset: 0x0104C590
+		// Token: 0x06037A95 RID: 227989 RVA: 0x00F8F9B8 File Offset: 0x00F8DBB8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			CoopActivityView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042F3E RID: 274238 RVA: 0x0104E3D4 File Offset: 0x0104C5D4
+		// Token: 0x06037A96 RID: 227990 RVA: 0x00F8F9FC File Offset: 0x00F8DBFC
 		protected override void OnBeforeShow()
 		{
 			ActivitySubViewGeneralInfo generalInfo = this.GeneralInfo;
@@ -61,19 +61,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			this.RefreshRewardButton();
 		}
 
-		// Token: 0x06042F3F RID: 274239 RVA: 0x0104E42E File Offset: 0x0104C62E
+		// Token: 0x06037A97 RID: 227991 RVA: 0x00F8FA56 File Offset: 0x00F8DC56
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 		}
 
-		// Token: 0x06042F40 RID: 274240 RVA: 0x0104E44C File Offset: 0x0104C64C
+		// Token: 0x06037A98 RID: 227992 RVA: 0x00F8FA74 File Offset: 0x00F8DC74
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 		}
 
-		// Token: 0x06042F41 RID: 274241 RVA: 0x0104E46C File Offset: 0x0104C66C
+		// Token: 0x06037A99 RID: 227993 RVA: 0x00F8FA94 File Offset: 0x00F8DC94
 		private void RefreshRewardButton()
 		{
 			int claimedRewardCount = this.Data.GetClaimedRewardCount();
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			rewardButton2.SetRedDotShow(this.Data.IsHasCoopSpRewardRedDot());
 		}
 
-		// Token: 0x06042F42 RID: 274242 RVA: 0x0104E4B4 File Offset: 0x0104C6B4
+		// Token: 0x06037A9A RID: 227994 RVA: 0x00F8FADC File Offset: 0x00F8DCDC
 		private void OnRefreshCommonActivityRedDot(int id)
 		{
 			CoopActivityData data = this.Data;
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			this.RefreshRewardButton();
 		}
 
-		// Token: 0x06042F43 RID: 274243 RVA: 0x0104E528 File Offset: 0x0104C728
+		// Token: 0x06037A9B RID: 227995 RVA: 0x00F8FB50 File Offset: 0x00F8DD50
 		private void OnBtnClick(ActivityBaseData _)
 		{
 			ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -116,19 +116,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			});
 		}
 
-		// Token: 0x06042F44 RID: 274244 RVA: 0x0104E546 File Offset: 0x0104C746
+		// Token: 0x06037A9C RID: 227996 RVA: 0x00F8FB6E File Offset: 0x00F8DD6E
 		private void OnClickRewardBtn()
 		{
 			UiManager.Instance.OpenView(EUiViewName.CoopSpRewardView, this.Data, null);
 		}
 
-		// Token: 0x04022D39 RID: 142649
+		// Token: 0x0401D595 RID: 120213
 		protected CoopActivityData Data;
 
-		// Token: 0x04022D3A RID: 142650
+		// Token: 0x0401D596 RID: 120214
 		protected ActivitySubViewGeneralInfo GeneralInfo;
 
-		// Token: 0x04022D3B RID: 142651
+		// Token: 0x0401D597 RID: 120215
 		private CoopRewardButton RewardButton;
 	}
 }

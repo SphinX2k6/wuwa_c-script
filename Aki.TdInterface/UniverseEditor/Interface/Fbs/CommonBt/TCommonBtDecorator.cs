@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 {
-	// Token: 0x02005ED8 RID: 24280
+	// Token: 0x0200651B RID: 25883
 	public enum TCommonBtDecorator : byte
 	{
-		// Token: 0x0400F974 RID: 63860
+		// Token: 0x040106D7 RID: 67287
 		NONE,
-		// Token: 0x0400F975 RID: 63861
+		// Token: 0x040106D8 RID: 67288
 		ICommonBtAlwaysFalseDecorator,
-		// Token: 0x0400F976 RID: 63862
+		// Token: 0x040106D9 RID: 67289
 		ICommonBtAlwaysTrueDecorator,
-		// Token: 0x0400F977 RID: 63863
+		// Token: 0x040106DA RID: 67290
 		ICommonBtConditionDecorator,
-		// Token: 0x0400F978 RID: 63864
+		// Token: 0x040106DB RID: 67291
 		ICommonBtCoolDownDecorator,
-		// Token: 0x0400F979 RID: 63865
+		// Token: 0x040106DC RID: 67292
 		ICommonBtDoOnceDecorator
 	}
 }

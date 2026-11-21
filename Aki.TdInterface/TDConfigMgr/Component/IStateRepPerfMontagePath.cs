@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000717 RID: 1815
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020007B8 RID: 1976
 	public class IStateRepPerfMontagePath : IStateRepPerfBase
 	{
-		// Token: 0x06002707 RID: 9991 RVA: 0x00067FC0 File Offset: 0x000661C0
+		// Token: 0x06002A27 RID: 10791 RVA: 0x0006F030 File Offset: 0x0006D230
 		private IStateRepPerfMontagePath_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002708 RID: 9992 RVA: 0x00067FF8 File Offset: 0x000661F8
+		// Token: 0x06002A28 RID: 10792 RVA: 0x0006F068 File Offset: 0x0006D268
 		public static IStateRepPerfMontagePath Create([Nullable(2)] IStateRepPerfMontagePath instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002709 RID: 9993 RVA: 0x0006800B File Offset: 0x0006620B
+		// Token: 0x06002A29 RID: 10793 RVA: 0x0006F07B File Offset: 0x0006D27B
 		public static IStateRepPerfMontagePath CreateFromSetValue([Nullable(2)] IStateRepPerfMontagePath_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600270A RID: 9994 RVA: 0x0006801E File Offset: 0x0006621E
+		// Token: 0x06002A2A RID: 10794 RVA: 0x0006F08E File Offset: 0x0006D28E
 		public new IStateRepPerfMontagePath_SetValue ToSetValue()
 		{
 			return new IStateRepPerfMontagePath_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000A41 RID: 2625
-		// (get) Token: 0x0600270B RID: 9995 RVA: 0x00068049 File Offset: 0x00066249
-		// (set) Token: 0x0600270C RID: 9996 RVA: 0x00068074 File Offset: 0x00066274
+		// Token: 0x17000AFF RID: 2815
+		// (get) Token: 0x06002A2B RID: 10795 RVA: 0x0006F0B9 File Offset: 0x0006D2B9
+		// (set) Token: 0x06002A2C RID: 10796 RVA: 0x0006F0E4 File Offset: 0x0006D2E4
 		public override EStateRepPerfType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A42 RID: 2626
-		// (get) Token: 0x0600270D RID: 9997 RVA: 0x00068082 File Offset: 0x00066282
-		// (set) Token: 0x0600270E RID: 9998 RVA: 0x000680AD File Offset: 0x000662AD
+		// Token: 0x17000B00 RID: 2816
+		// (get) Token: 0x06002A2D RID: 10797 RVA: 0x0006F0F2 File Offset: 0x0006D2F2
+		// (set) Token: 0x06002A2E RID: 10798 RVA: 0x0006F11D File Offset: 0x0006D31D
 		public virtual string MontagePath
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A43 RID: 2627
-		// (get) Token: 0x0600270F RID: 9999 RVA: 0x000680BB File Offset: 0x000662BB
-		// (set) Token: 0x06002710 RID: 10000 RVA: 0x000680E6 File Offset: 0x000662E6
+		// Token: 0x17000B01 RID: 2817
+		// (get) Token: 0x06002A2F RID: 10799 RVA: 0x0006F12B File Offset: 0x0006D32B
+		// (set) Token: 0x06002A30 RID: 10800 RVA: 0x0006F156 File Offset: 0x0006D356
 		public virtual string MontageName
 		{
 			get
@@ -130,11 +128,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001A5B RID: 6747
+		// Token: 0x04001C5A RID: 7258
 		[Nullable(2)]
 		protected new IStateRepPerfMontagePath FbInstance;
 
-		// Token: 0x04001A5C RID: 6748
+		// Token: 0x04001C5B RID: 7259
 		[Nullable(2)]
 		protected new IStateRepPerfMontagePath_SetValue PocoInterface;
 	}

@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020018B9 RID: 6329
+	// Token: 0x020003D7 RID: 983
 	public sealed class FKeyBindingDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601765B RID: 95835 RVA: 0x002235AF File Offset: 0x002217AF
+		// Token: 0x060060EE RID: 24814 RVA: 0x0008A78F File Offset: 0x0008898F
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FKeyBindingDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601765C RID: 95836 RVA: 0x002235BB File Offset: 0x002217BB
+		// Token: 0x060060EF RID: 24815 RVA: 0x0008A79B File Offset: 0x0008899B
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FKeyBindingDelegate._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FKeyBindingDelegate._FunctionPtr;
 		}
 
-		// Token: 0x0601765D RID: 95837 RVA: 0x002235DE File Offset: 0x002217DE
+		// Token: 0x060060F0 RID: 24816 RVA: 0x0008A7BE File Offset: 0x000889BE
 		public FKeyBindingDelegate()
 		{
 		}
 
-		// Token: 0x0601765E RID: 95838 RVA: 0x002235E6 File Offset: 0x002217E6
+		// Token: 0x060060F1 RID: 24817 RVA: 0x0008A7C6 File Offset: 0x000889C6
 		[NullableContext(2)]
 		public FKeyBindingDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601765F RID: 95839 RVA: 0x002235F0 File Offset: 0x002217F0
+		// Token: 0x060060F2 RID: 24818 RVA: 0x0008A7D0 File Offset: 0x000889D0
 		public FKeyBindingDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06017660 RID: 95840 RVA: 0x002235FB File Offset: 0x002217FB
+		// Token: 0x060060F3 RID: 24819 RVA: 0x0008A7DB File Offset: 0x000889DB
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<FKey>) ?? ((Action<FKey>)Delegate.CreateDelegate(typeof(Action<FKey>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06017661 RID: 95841 RVA: 0x0022362D File Offset: 0x0022182D
+		// Token: 0x060060F4 RID: 24820 RVA: 0x0008A80D File Offset: 0x00088A0D
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<FKey> Callback)
 		{
 			if (FKeyBindingDelegate.RegisterId == 0)
@@ -65,10 +64,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FKeyBindingDelegate.RegisterId);
 		}
 
-		// Token: 0x06017662 RID: 95842 RVA: 0x00223668 File Offset: 0x00221868
+		// Token: 0x060060F5 RID: 24821 RVA: 0x0008A848 File Offset: 0x00088A48
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(FKey Key)
 		{
 			FKeyBindingDelegate.__FKeyBindingDelegate_DelegateParams* ptr = stackalloc FKeyBindingDelegate.__FKeyBindingDelegate_DelegateParams[(UIntPtr)47] + 15L / (long)sizeof(FKeyBindingDelegate.__FKeyBindingDelegate_DelegateParams) & -16L;
@@ -81,10 +79,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FKeyBindingDelegate._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06017663 RID: 95843 RVA: 0x002236D4 File Offset: 0x002218D4
+		// Token: 0x060060F6 RID: 24822 RVA: 0x0008A8B4 File Offset: 0x00088AB4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<FKey> action = target as Action<FKey>;
@@ -96,31 +93,31 @@ namespace UnrealEngine
 			action(obj);
 		}
 
-		// Token: 0x0400CBA6 RID: 52134
+		// Token: 0x04002952 RID: 10578
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400CBA7 RID: 52135
+		// Token: 0x04002953 RID: 10579
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroGameplay.KeyBindingDelegate__DelegateSignature";
 
-		// Token: 0x0400CBA8 RID: 52136
+		// Token: 0x04002954 RID: 10580
 		private static int RegisterId;
 
-		// Token: 0x02002FAD RID: 12205
+		// Token: 0x02000AD0 RID: 2768
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
-		protected ref struct __FKeyBindingDelegate_DelegateParams
+		private ref struct __FKeyBindingDelegate_DelegateParams
 		{
-			// Token: 0x04016B90 RID: 93072
+			// Token: 0x04005B4D RID: 23373
 			[FieldOffset(0)]
 			public byte Key;
 		}
 
-		// Token: 0x02002FAE RID: 12206
+		// Token: 0x02000AD1 RID: 2769
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016B91 RID: 93073
+			// Token: 0x04005B4E RID: 23374
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

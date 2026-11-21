@@ -9,16 +9,16 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x0200017C RID: 380
+// Token: 0x02000180 RID: 384
 [NullableContext(1)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/AnimNotifyState/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AnimNotifyState/TsAnimNotifyStateSubMeshFreeze.TsAnimNotifyStateSubMeshFreeze_C")]
 public class TsAnimNotifyStateSubMeshFreeze : UKuroAnimNotifyState, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170003E6 RID: 998
-	// (get) Token: 0x0600180E RID: 6158 RVA: 0x000808B3 File Offset: 0x0007EAB3
-	// (set) Token: 0x0600180F RID: 6159 RVA: 0x000808C7 File Offset: 0x0007EAC7
+	// Token: 0x17000408 RID: 1032
+	// (get) Token: 0x060018AB RID: 6315 RVA: 0x000867DB File Offset: 0x000849DB
+	// (set) Token: 0x060018AC RID: 6316 RVA: 0x000867EF File Offset: 0x000849EF
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string MeshName
 	{
@@ -32,9 +32,9 @@ public class TsAnimNotifyStateSubMeshFreeze : UKuroAnimNotifyState, IUnrealUObje
 		}
 	}
 
-	// Token: 0x170003E7 RID: 999
-	// (get) Token: 0x06001810 RID: 6160 RVA: 0x000808DC File Offset: 0x0007EADC
-	// (set) Token: 0x06001811 RID: 6161 RVA: 0x000808EC File Offset: 0x0007EAEC
+	// Token: 0x17000409 RID: 1033
+	// (get) Token: 0x060018AD RID: 6317 RVA: 0x00086804 File Offset: 0x00084A04
+	// (set) Token: 0x060018AE RID: 6318 RVA: 0x00086814 File Offset: 0x00084A14
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool 开始是否可见
 	{
@@ -48,9 +48,9 @@ public class TsAnimNotifyStateSubMeshFreeze : UKuroAnimNotifyState, IUnrealUObje
 		}
 	}
 
-	// Token: 0x170003E8 RID: 1000
-	// (get) Token: 0x06001812 RID: 6162 RVA: 0x000808FD File Offset: 0x0007EAFD
-	// (set) Token: 0x06001813 RID: 6163 RVA: 0x00080911 File Offset: 0x0007EB11
+	// Token: 0x1700040A RID: 1034
+	// (get) Token: 0x060018AF RID: 6319 RVA: 0x00086825 File Offset: 0x00084A25
+	// (set) Token: 0x060018B0 RID: 6320 RVA: 0x00086839 File Offset: 0x00084A39
 	[Nullable(2)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe PD_CharacterControllerData_C 开始材质
@@ -67,9 +67,9 @@ public class TsAnimNotifyStateSubMeshFreeze : UKuroAnimNotifyState, IUnrealUObje
 		}
 	}
 
-	// Token: 0x170003E9 RID: 1001
-	// (get) Token: 0x06001814 RID: 6164 RVA: 0x00080928 File Offset: 0x0007EB28
-	// (set) Token: 0x06001815 RID: 6165 RVA: 0x00080961 File Offset: 0x0007EB61
+	// Token: 0x1700040B RID: 1035
+	// (get) Token: 0x060018B1 RID: 6321 RVA: 0x00086850 File Offset: 0x00084A50
+	// (set) Token: 0x060018B2 RID: 6322 RVA: 0x00086889 File Offset: 0x00084A89
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TSoftObjectPtr<UEffectModelBase> 开始特效
 	{
@@ -89,9 +89,9 @@ public class TsAnimNotifyStateSubMeshFreeze : UKuroAnimNotifyState, IUnrealUObje
 		}
 	}
 
-	// Token: 0x170003EA RID: 1002
-	// (get) Token: 0x06001816 RID: 6166 RVA: 0x00080986 File Offset: 0x0007EB86
-	// (set) Token: 0x06001817 RID: 6167 RVA: 0x00080996 File Offset: 0x0007EB96
+	// Token: 0x1700040C RID: 1036
+	// (get) Token: 0x060018B3 RID: 6323 RVA: 0x000868AE File Offset: 0x00084AAE
+	// (set) Token: 0x060018B4 RID: 6324 RVA: 0x000868BE File Offset: 0x00084ABE
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool 结束是否可见
 	{
@@ -105,9 +105,9 @@ public class TsAnimNotifyStateSubMeshFreeze : UKuroAnimNotifyState, IUnrealUObje
 		}
 	}
 
-	// Token: 0x170003EB RID: 1003
-	// (get) Token: 0x06001818 RID: 6168 RVA: 0x000809A7 File Offset: 0x0007EBA7
-	// (set) Token: 0x06001819 RID: 6169 RVA: 0x000809BB File Offset: 0x0007EBBB
+	// Token: 0x1700040D RID: 1037
+	// (get) Token: 0x060018B5 RID: 6325 RVA: 0x000868CF File Offset: 0x00084ACF
+	// (set) Token: 0x060018B6 RID: 6326 RVA: 0x000868E3 File Offset: 0x00084AE3
 	[Nullable(2)]
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe PD_CharacterControllerData_C 结束材质
@@ -124,9 +124,9 @@ public class TsAnimNotifyStateSubMeshFreeze : UKuroAnimNotifyState, IUnrealUObje
 		}
 	}
 
-	// Token: 0x170003EC RID: 1004
-	// (get) Token: 0x0600181A RID: 6170 RVA: 0x000809D0 File Offset: 0x0007EBD0
-	// (set) Token: 0x0600181B RID: 6171 RVA: 0x00080A09 File Offset: 0x0007EC09
+	// Token: 0x1700040E RID: 1038
+	// (get) Token: 0x060018B7 RID: 6327 RVA: 0x000868F8 File Offset: 0x00084AF8
+	// (set) Token: 0x060018B8 RID: 6328 RVA: 0x00086931 File Offset: 0x00084B31
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TSoftObjectPtr<UEffectModelBase> 结束特效
 	{
@@ -146,9 +146,9 @@ public class TsAnimNotifyStateSubMeshFreeze : UKuroAnimNotifyState, IUnrealUObje
 		}
 	}
 
-	// Token: 0x170003ED RID: 1005
-	// (get) Token: 0x0600181C RID: 6172 RVA: 0x00080A2E File Offset: 0x0007EC2E
-	// (set) Token: 0x0600181D RID: 6173 RVA: 0x00080A3E File Offset: 0x0007EC3E
+	// Token: 0x1700040F RID: 1039
+	// (get) Token: 0x060018B9 RID: 6329 RVA: 0x00086956 File Offset: 0x00084B56
+	// (set) Token: 0x060018BA RID: 6330 RVA: 0x00086966 File Offset: 0x00084B66
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool 是否冻结
 	{
@@ -162,9 +162,9 @@ public class TsAnimNotifyStateSubMeshFreeze : UKuroAnimNotifyState, IUnrealUObje
 		}
 	}
 
-	// Token: 0x170003EE RID: 1006
-	// (get) Token: 0x0600181E RID: 6174 RVA: 0x00080A4F File Offset: 0x0007EC4F
-	// (set) Token: 0x0600181F RID: 6175 RVA: 0x00080A5F File Offset: 0x0007EC5F
+	// Token: 0x17000410 RID: 1040
+	// (get) Token: 0x060018BB RID: 6331 RVA: 0x00086977 File Offset: 0x00084B77
+	// (set) Token: 0x060018BC RID: 6332 RVA: 0x00086987 File Offset: 0x00084B87
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float 快照延迟时间
 	{
@@ -178,9 +178,9 @@ public class TsAnimNotifyStateSubMeshFreeze : UKuroAnimNotifyState, IUnrealUObje
 		}
 	}
 
-	// Token: 0x170003EF RID: 1007
-	// (get) Token: 0x06001820 RID: 6176 RVA: 0x00080A70 File Offset: 0x0007EC70
-	// (set) Token: 0x06001821 RID: 6177 RVA: 0x00080A84 File Offset: 0x0007EC84
+	// Token: 0x17000411 RID: 1041
+	// (get) Token: 0x060018BD RID: 6333 RVA: 0x00086998 File Offset: 0x00084B98
+	// (set) Token: 0x060018BE RID: 6334 RVA: 0x000869AC File Offset: 0x00084BAC
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FGameplayTag EnableTag
 	{
@@ -194,7 +194,7 @@ public class TsAnimNotifyStateSubMeshFreeze : UKuroAnimNotifyState, IUnrealUObje
 		}
 	}
 
-	// Token: 0x06001822 RID: 6178 RVA: 0x00080A9C File Offset: 0x0007EC9C
+	// Token: 0x060018BF RID: 6335 RVA: 0x000869C4 File Offset: 0x00084BC4
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public override bool K2_NotifyBegin(USkeletalMeshComponent meshComp, UAnimSequenceBase animation, float totalDuration)
@@ -257,7 +257,7 @@ public class TsAnimNotifyStateSubMeshFreeze : UKuroAnimNotifyState, IUnrealUObje
 		return true;
 	}
 
-	// Token: 0x06001823 RID: 6179 RVA: 0x00080C44 File Offset: 0x0007EE44
+	// Token: 0x060018C0 RID: 6336 RVA: 0x00086B6C File Offset: 0x00084D6C
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public override bool K2_NotifyEnd(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
@@ -304,14 +304,14 @@ public class TsAnimNotifyStateSubMeshFreeze : UKuroAnimNotifyState, IUnrealUObje
 		return true;
 	}
 
-	// Token: 0x06001824 RID: 6180 RVA: 0x00080DA7 File Offset: 0x0007EFA7
+	// Token: 0x060018C1 RID: 6337 RVA: 0x00086CCF File Offset: 0x00084ECF
 	[UFunction(EFunctionFlags.FUNC_None)]
 	public override string GetNotifyName()
 	{
 		return "子Mesh冻结控制";
 	}
 
-	// Token: 0x06001825 RID: 6181 RVA: 0x00080DAE File Offset: 0x0007EFAE
+	// Token: 0x060018C2 RID: 6338 RVA: 0x00086CD6 File Offset: 0x00084ED6
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsAnimNotifyStateSubMeshFreeze._ClassPtr == IntPtr.Zero)
@@ -321,22 +321,22 @@ public class TsAnimNotifyStateSubMeshFreeze : UKuroAnimNotifyState, IUnrealUObje
 		return TsAnimNotifyStateSubMeshFreeze._ClassPtr;
 	}
 
-	// Token: 0x06001826 RID: 6182 RVA: 0x00080DD4 File Offset: 0x0007EFD4
+	// Token: 0x060018C3 RID: 6339 RVA: 0x00086CFC File Offset: 0x00084EFC
 	public TsAnimNotifyStateSubMeshFreeze() : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyStateSubMeshFreeze.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06001827 RID: 6183 RVA: 0x00080DFC File Offset: 0x0007EFFC
+	// Token: 0x060018C4 RID: 6340 RVA: 0x00086D24 File Offset: 0x00084F24
 	public TsAnimNotifyStateSubMeshFreeze(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyStateSubMeshFreeze.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06001828 RID: 6184 RVA: 0x00080E2F File Offset: 0x0007F02F
+	// Token: 0x060018C5 RID: 6341 RVA: 0x00086D57 File Offset: 0x00084F57
 	protected TsAnimNotifyStateSubMeshFreeze(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06001829 RID: 6185 RVA: 0x00080E64 File Offset: 0x0007F064
+	// Token: 0x060018C6 RID: 6342 RVA: 0x00086D8C File Offset: 0x00084F8C
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_K2_NotifyBegin_Implementation(UKuroAnimNotifyState.__K2_NotifyBegin_FunctionParams* __Params)
 	{
@@ -345,7 +345,7 @@ public class TsAnimNotifyStateSubMeshFreeze : UKuroAnimNotifyState, IUnrealUObje
 		__Params->__Result = this.K2_NotifyBegin(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->TotalDuration);
 	}
 
-	// Token: 0x0600182A RID: 6186 RVA: 0x00080EA0 File Offset: 0x0007F0A0
+	// Token: 0x060018C7 RID: 6343 RVA: 0x00086DC8 File Offset: 0x00084FC8
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_K2_NotifyEnd_Implementation(UKuroAnimNotifyState.__K2_NotifyEnd_FunctionParams* __Params)
 	{
@@ -354,26 +354,26 @@ public class TsAnimNotifyStateSubMeshFreeze : UKuroAnimNotifyState, IUnrealUObje
 		__Params->__Result = this.K2_NotifyEnd(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x0600182B RID: 6187 RVA: 0x00080ED3 File Offset: 0x0007F0D3
+	// Token: 0x060018C8 RID: 6344 RVA: 0x00086DFB File Offset: 0x00084FFB
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_GetNotifyName_Implementation(UAnimNotifyState.__GetNotifyName_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), this.GetNotifyName());
 	}
 
-	// Token: 0x04001020 RID: 4128
+	// Token: 0x04001063 RID: 4195
 	private const float INTERRUPT_THRESHOLD = 0.05f;
 
-	// Token: 0x04001021 RID: 4129
+	// Token: 0x04001064 RID: 4196
 	private HashSet<USkeletalMeshComponent> ActivateSet = new HashSet<USkeletalMeshComponent>();
 
-	// Token: 0x04001022 RID: 4130
+	// Token: 0x04001065 RID: 4197
 	private Dictionary<USkeletalMeshComponent, double> BeginTimeMap = new Dictionary<USkeletalMeshComponent, double>();
 
-	// Token: 0x04001023 RID: 4131
+	// Token: 0x04001066 RID: 4198
 	private Dictionary<USkeletalMeshComponent, float> TotalDurationMap = new Dictionary<USkeletalMeshComponent, float>();
 
-	// Token: 0x04001024 RID: 4132
+	// Token: 0x04001067 RID: 4199
 	[Nullable(new byte[]
 	{
 		1,
@@ -382,28 +382,28 @@ public class TsAnimNotifyStateSubMeshFreeze : UKuroAnimNotifyState, IUnrealUObje
 	})]
 	private Dictionary<USkeletalMeshComponent, TimerHandle> SnapshotTimerMap = new Dictionary<USkeletalMeshComponent, TimerHandle>();
 
-	// Token: 0x04001025 RID: 4133
+	// Token: 0x04001068 RID: 4200
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AnimNotifyState/TsAnimNotifyStateSubMeshFreeze.TsAnimNotifyStateSubMeshFreeze_C";
 
-	// Token: 0x04001026 RID: 4134
+	// Token: 0x04001069 RID: 4201
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04001027 RID: 4135
+	// Token: 0x0400106A RID: 4202
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x04001028 RID: 4136
+	// Token: 0x0400106B RID: 4203
 	private static int __PropertyOffset_MeshName;
 
-	// Token: 0x04001029 RID: 4137
+	// Token: 0x0400106C RID: 4204
 	private static int __PropertyOffset_开始是否可见;
 
-	// Token: 0x0400102A RID: 4138
+	// Token: 0x0400106D RID: 4205
 	private static int __PropertyOffset_开始材质;
 
-	// Token: 0x0400102B RID: 4139
+	// Token: 0x0400106E RID: 4206
 	private static int __PropertyOffset_开始特效;
 
-	// Token: 0x0400102C RID: 4140
+	// Token: 0x0400106F RID: 4207
 	[Nullable(new byte[]
 	{
 		2,
@@ -411,16 +411,16 @@ public class TsAnimNotifyStateSubMeshFreeze : UKuroAnimNotifyState, IUnrealUObje
 	})]
 	private TSoftObjectPtr<UEffectModelBase> _开始特效;
 
-	// Token: 0x0400102D RID: 4141
+	// Token: 0x04001070 RID: 4208
 	private static int __PropertyOffset_结束是否可见;
 
-	// Token: 0x0400102E RID: 4142
+	// Token: 0x04001071 RID: 4209
 	private static int __PropertyOffset_结束材质;
 
-	// Token: 0x0400102F RID: 4143
+	// Token: 0x04001072 RID: 4210
 	private static int __PropertyOffset_结束特效;
 
-	// Token: 0x04001030 RID: 4144
+	// Token: 0x04001073 RID: 4211
 	[Nullable(new byte[]
 	{
 		2,
@@ -428,12 +428,12 @@ public class TsAnimNotifyStateSubMeshFreeze : UKuroAnimNotifyState, IUnrealUObje
 	})]
 	private TSoftObjectPtr<UEffectModelBase> _结束特效;
 
-	// Token: 0x04001031 RID: 4145
+	// Token: 0x04001074 RID: 4212
 	private static int __PropertyOffset_是否冻结;
 
-	// Token: 0x04001032 RID: 4146
+	// Token: 0x04001075 RID: 4213
 	private static int __PropertyOffset_快照延迟时间;
 
-	// Token: 0x04001033 RID: 4147
+	// Token: 0x04001076 RID: 4214
 	private static int __PropertyOffset_EnableTag;
 }

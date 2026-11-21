@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020053D6 RID: 21462
+	// Token: 0x0200595C RID: 22876
 	public static class IHookLockScreenDetectTypeFullScreenVerify
 	{
-		// Token: 0x0602338A RID: 144266 RVA: 0x004E09BE File Offset: 0x004DEBBE
+		// Token: 0x06025442 RID: 152642 RVA: 0x0051D9EA File Offset: 0x0051BBEA
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			return verifier.VerifyTableStart(tablePos) && verifier.VerifyField(tablePos, 4, 1UL, 1UL, false) && verifier.VerifyTableEnd(tablePos);

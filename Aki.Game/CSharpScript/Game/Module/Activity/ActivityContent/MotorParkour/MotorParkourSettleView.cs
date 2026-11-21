@@ -8,17 +8,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 {
-	// Token: 0x020063FC RID: 25596
+	// Token: 0x0200537A RID: 21370
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorParkourSettleView : UiViewBase
 	{
-		// Token: 0x060405FB RID: 263675 RVA: 0x00F92598 File Offset: 0x00F90798
+		// Token: 0x060352BC RID: 217788 RVA: 0x00ED9578 File Offset: 0x00ED7778
 		public MotorParkourSettleView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x060405FC RID: 263676 RVA: 0x00F925A4 File Offset: 0x00F907A4
+		// Token: 0x060352BD RID: 217789 RVA: 0x00ED9584 File Offset: 0x00ED7784
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 18;
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060405FD RID: 263677 RVA: 0x00F92888 File Offset: 0x00F90A88
+		// Token: 0x060352BE RID: 217790 RVA: 0x00ED9868 File Offset: 0x00ED7A68
 		protected override void OnBeforeShow()
 		{
 			MotorParkourSettleView.IMotorParkourSettleViewData motorParkourSettleViewData = this.OpenParam as MotorParkourSettleView.IMotorParkourSettleViewData;
@@ -131,114 +131,114 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			text4.SetText(remainTimeDataFormat3, true);
 		}
 
-		// Token: 0x060405FE RID: 263678 RVA: 0x00F92A86 File Offset: 0x00F90C86
+		// Token: 0x060352BF RID: 217791 RVA: 0x00ED9A66 File Offset: 0x00ED7C66
 		private void OnReChallengeBtnClick()
 		{
-			InstanceDungeonEntranceController.Instance.RestartInstanceDungeon();
+			InstanceDungeonEntranceController.Instance.RestartInstanceDungeon(false);
 		}
 
-		// Token: 0x060405FF RID: 263679 RVA: 0x00F92A93 File Offset: 0x00F90C93
+		// Token: 0x060352C0 RID: 217792 RVA: 0x00ED9A74 File Offset: 0x00ED7C74
 		private void OnExitBtnClick()
 		{
 			MotorParkourController.Instance.IsNeedShowMotorParkourMainView = true;
 			MotorParkourController.Instance.LeaveInstanceDungeon();
 		}
 
-		// Token: 0x0200C61F RID: 50719
+		// Token: 0x0200B006 RID: 45062
 		public interface IMotorParkourSettleViewData
 		{
-			// Token: 0x1700A286 RID: 41606
-			// (get) Token: 0x06050CA9 RID: 330921
-			// (set) Token: 0x06050CAA RID: 330922
+			// Token: 0x17007A23 RID: 31267
+			// (get) Token: 0x0604718E RID: 291214
+			// (set) Token: 0x0604718F RID: 291215
 			MotorParkourLevelData LevelData { get; set; }
 
-			// Token: 0x1700A287 RID: 41607
-			// (get) Token: 0x06050CAB RID: 330923
-			// (set) Token: 0x06050CAC RID: 330924
+			// Token: 0x17007A24 RID: 31268
+			// (get) Token: 0x06047190 RID: 291216
+			// (set) Token: 0x06047191 RID: 291217
 			bool IsNewRecord { get; set; }
 
-			// Token: 0x1700A288 RID: 41608
-			// (get) Token: 0x06050CAD RID: 330925
-			// (set) Token: 0x06050CAE RID: 330926
+			// Token: 0x17007A25 RID: 31269
+			// (get) Token: 0x06047192 RID: 291218
+			// (set) Token: 0x06047193 RID: 291219
 			int MyScoreTime { get; set; }
 		}
 
-		// Token: 0x0200C620 RID: 50720
+		// Token: 0x0200B007 RID: 45063
 		[Nullable(0)]
 		public class MotorParkourSettleViewData : MotorParkourSettleView.IMotorParkourSettleViewData
 		{
-			// Token: 0x1700A289 RID: 41609
-			// (get) Token: 0x06050CAF RID: 330927 RVA: 0x015CBFCE File Offset: 0x015CA1CE
-			// (set) Token: 0x06050CB0 RID: 330928 RVA: 0x015CBFD6 File Offset: 0x015CA1D6
+			// Token: 0x17007A26 RID: 31270
+			// (get) Token: 0x06047194 RID: 291220 RVA: 0x01583D0A File Offset: 0x01581F0A
+			// (set) Token: 0x06047195 RID: 291221 RVA: 0x01583D12 File Offset: 0x01581F12
 			public MotorParkourLevelData LevelData { get; set; }
 
-			// Token: 0x1700A28A RID: 41610
-			// (get) Token: 0x06050CB1 RID: 330929 RVA: 0x015CBFDF File Offset: 0x015CA1DF
-			// (set) Token: 0x06050CB2 RID: 330930 RVA: 0x015CBFE7 File Offset: 0x015CA1E7
+			// Token: 0x17007A27 RID: 31271
+			// (get) Token: 0x06047196 RID: 291222 RVA: 0x01583D1B File Offset: 0x01581F1B
+			// (set) Token: 0x06047197 RID: 291223 RVA: 0x01583D23 File Offset: 0x01581F23
 			public bool IsNewRecord { get; set; }
 
-			// Token: 0x1700A28B RID: 41611
-			// (get) Token: 0x06050CB3 RID: 330931 RVA: 0x015CBFF0 File Offset: 0x015CA1F0
-			// (set) Token: 0x06050CB4 RID: 330932 RVA: 0x015CBFF8 File Offset: 0x015CA1F8
+			// Token: 0x17007A28 RID: 31272
+			// (get) Token: 0x06047198 RID: 291224 RVA: 0x01583D2C File Offset: 0x01581F2C
+			// (set) Token: 0x06047199 RID: 291225 RVA: 0x01583D34 File Offset: 0x01581F34
 			public int MyScoreTime { get; set; }
 		}
 
-		// Token: 0x0200C621 RID: 50721
+		// Token: 0x0200B008 RID: 45064
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403BD0B RID: 245003
+			// Token: 0x0403666A RID: 222826
 			public const int ItemFirstBg = 0;
 
-			// Token: 0x0403BD0C RID: 245004
+			// Token: 0x0403666B RID: 222827
 			public const int ItemSecondBg = 1;
 
-			// Token: 0x0403BD0D RID: 245005
+			// Token: 0x0403666C RID: 222828
 			public const int ItemThirdBg = 2;
 
-			// Token: 0x0403BD0E RID: 245006
+			// Token: 0x0403666D RID: 222829
 			public const int ItemNormalBg = 3;
 
-			// Token: 0x0403BD0F RID: 245007
+			// Token: 0x0403666E RID: 222830
 			public const int BtnReChallenge = 4;
 
-			// Token: 0x0403BD10 RID: 245008
+			// Token: 0x0403666F RID: 222831
 			public const int BtnExit = 5;
 
-			// Token: 0x0403BD11 RID: 245009
+			// Token: 0x04036670 RID: 222832
 			public const int ItemFirstNum = 6;
 
-			// Token: 0x0403BD12 RID: 245010
+			// Token: 0x04036671 RID: 222833
 			public const int ItemSecondNum = 7;
 
-			// Token: 0x0403BD13 RID: 245011
+			// Token: 0x04036672 RID: 222834
 			public const int ItemThirdNum = 8;
 
-			// Token: 0x0403BD14 RID: 245012
+			// Token: 0x04036673 RID: 222835
 			public const int TextMyScoreTime = 9;
 
-			// Token: 0x0403BD15 RID: 245013
+			// Token: 0x04036674 RID: 222836
 			public const int ItemNewRecord = 10;
 
-			// Token: 0x0403BD16 RID: 245014
+			// Token: 0x04036675 RID: 222837
 			public const int TextBestRecordTime = 11;
 
-			// Token: 0x0403BD17 RID: 245015
+			// Token: 0x04036676 RID: 222838
 			public const int TextFirstName = 12;
 
-			// Token: 0x0403BD18 RID: 245016
+			// Token: 0x04036677 RID: 222839
 			public const int TextFirstTime = 13;
 
-			// Token: 0x0403BD19 RID: 245017
+			// Token: 0x04036678 RID: 222840
 			public const int TextSecondName = 14;
 
-			// Token: 0x0403BD1A RID: 245018
+			// Token: 0x04036679 RID: 222841
 			public const int TextSecondTime = 15;
 
-			// Token: 0x0403BD1B RID: 245019
+			// Token: 0x0403667A RID: 222842
 			public const int TextThirdName = 16;
 
-			// Token: 0x0403BD1C RID: 245020
+			// Token: 0x0403667B RID: 222843
 			public const int TextThirdTime = 17;
 		}
 	}

@@ -1,60 +1,59 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Module.AdventureGuide;
 
-// Token: 0x0200125D RID: 4701
+// Token: 0x02000711 RID: 1809
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class ActivityDoubleRewardController : ActivityControllerBase
 {
-	// Token: 0x06007FBD RID: 32701 RVA: 0x001B086D File Offset: 0x001AEA6D
+	// Token: 0x06005354 RID: 21332 RVA: 0x001B951D File Offset: 0x001B771D
 	protected override bool OnGetIsOpeningActivityRelativeView()
 	{
 		return false;
 	}
 
-	// Token: 0x06007FBE RID: 32702 RVA: 0x001B0870 File Offset: 0x001AEA70
+	// Token: 0x06005355 RID: 21333 RVA: 0x001B9520 File Offset: 0x001B7720
 	protected override void OnOpenView(ActivityBaseData data)
 	{
 	}
 
-	// Token: 0x06007FBF RID: 32703 RVA: 0x001B0872 File Offset: 0x001AEA72
+	// Token: 0x06005356 RID: 21334 RVA: 0x001B9522 File Offset: 0x001B7722
 	protected override string OnGetActivityResource(ActivityBaseData data)
 	{
 		return ((ActivityDoubleRewardData)data).Prefab;
 	}
 
-	// Token: 0x06007FC0 RID: 32704 RVA: 0x001B087F File Offset: 0x001AEA7F
+	// Token: 0x06005357 RID: 21335 RVA: 0x001B952F File Offset: 0x001B772F
 	protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 	{
 		return new ActivitySubViewDoubleReward();
 	}
 
-	// Token: 0x06007FC1 RID: 32705 RVA: 0x001B0886 File Offset: 0x001AEA86
+	// Token: 0x06005358 RID: 21336 RVA: 0x001B9536 File Offset: 0x001B7736
 	protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 	{
 		this.UniversalActivityIdSet.Add(data.Id);
 		return new ActivityDoubleRewardData();
 	}
 
-	// Token: 0x06007FC2 RID: 32706 RVA: 0x001B089F File Offset: 0x001AEA9F
+	// Token: 0x06005359 RID: 21337 RVA: 0x001B954F File Offset: 0x001B774F
 	protected override bool OnInit()
 	{
 		return true;
 	}
 
-	// Token: 0x06007FC3 RID: 32707 RVA: 0x001B08A2 File Offset: 0x001AEAA2
+	// Token: 0x0600535A RID: 21338 RVA: 0x001B9552 File Offset: 0x001B7752
 	protected override bool OnClear()
 	{
 		this.UniversalActivityIdSet.Clear();
 		return true;
 	}
 
-	// Token: 0x06007FC4 RID: 32708 RVA: 0x001B08B0 File Offset: 0x001AEAB0
+	// Token: 0x0600535B RID: 21339 RVA: 0x001B9560 File Offset: 0x001B7760
 	public bool IsAnyActivityHasLeftUpCount()
 	{
 		foreach (ActivityBaseData activityBaseData in ActivityModel.Instance.GetActivitiesByType(7))
@@ -67,13 +66,13 @@ public class ActivityDoubleRewardController : ActivityControllerBase
 		return false;
 	}
 
-	// Token: 0x06007FC5 RID: 32709 RVA: 0x001B0920 File Offset: 0x001AEB20
+	// Token: 0x0600535C RID: 21340 RVA: 0x001B95D0 File Offset: 0x001B77D0
 	public ActivityDoubleRewardData GetAdventureUpActivity(EDungeonType type)
 	{
 		foreach (int id in this.UniversalActivityIdSet)
 		{
 			ActivityDoubleRewardData activityDoubleRewardData = ActivityModel.Instance.GetActivityById(id) as ActivityDoubleRewardData;
-			if (activityDoubleRewardData != null && activityDoubleRewardData.CheckIfInOpenTime() && activityDoubleRewardData != null && activityDoubleRewardData.AdventureGuideUpList.Contains(type))
+			if (activityDoubleRewardData != null && activityDoubleRewardData.CheckIfInOpenTime() && Array.IndexOf<EDungeonType>(activityDoubleRewardData.AdventureGuideUpList, type) >= 0)
 			{
 				return activityDoubleRewardData;
 			}
@@ -81,22 +80,28 @@ public class ActivityDoubleRewardController : ActivityControllerBase
 		return null;
 	}
 
-	// Token: 0x06007FC6 RID: 32710 RVA: 0x001B09A0 File Offset: 0x001AEBA0
+	// Token: 0x0600535D RID: 21341 RVA: 0x001B9650 File Offset: 0x001B7850
 	[return: Nullable(2)]
 	public ActivityDoubleRewardData GetDungeonUpActivity(IList<int> customTypes, bool isInstance = true)
 	{
 		foreach (int id in this.UniversalActivityIdSet)
 		{
 			ActivityDoubleRewardData activityDoubleRewardData = ActivityModel.Instance.GetActivityById(id) as ActivityDoubleRewardData;
-			if (activityDoubleRewardData != null && activityDoubleRewardData.CheckIfInOpenTime() && activityDoubleRewardData.GetDungeonUpList(isInstance).ToList<int>().Any(new Func<int, bool>(customTypes.Contains)))
+			if (activityDoubleRewardData != null && activityDoubleRewardData.CheckIfInOpenTime())
 			{
-				return activityDoubleRewardData;
+				foreach (int item in activityDoubleRewardData.GetDungeonUpList(isInstance))
+				{
+					if (customTypes.Contains(item))
+					{
+						return activityDoubleRewardData;
+					}
+				}
 			}
 		}
 		return null;
 	}
 
-	// Token: 0x06007FC7 RID: 32711 RVA: 0x001B0A30 File Offset: 0x001AEC30
+	// Token: 0x0600535E RID: 21342 RVA: 0x001B96EC File Offset: 0x001B78EC
 	public string GetDungeonUpActivityFullTip(List<int> customTypes, bool isInstance = true)
 	{
 		ActivityDoubleRewardData dungeonUpActivity = this.GetDungeonUpActivity(customTypes, isInstance);
@@ -107,14 +112,14 @@ public class ActivityDoubleRewardController : ActivityControllerBase
 		return dungeonUpActivity.GetFullTip();
 	}
 
-	// Token: 0x06007FC8 RID: 32712 RVA: 0x001B0A45 File Offset: 0x001AEC45
+	// Token: 0x0600535F RID: 21343 RVA: 0x001B9701 File Offset: 0x001B7901
 	public bool HasAnyDoubleRewardActivityShowing()
 	{
 		return ActivityModel.Instance.GetIsActivityShowingByType(7);
 	}
 
-	// Token: 0x17000AE0 RID: 2784
-	// (get) Token: 0x06007FC9 RID: 32713 RVA: 0x001B0A52 File Offset: 0x001AEC52
+	// Token: 0x17000B00 RID: 2816
+	// (get) Token: 0x06005360 RID: 21344 RVA: 0x001B970E File Offset: 0x001B790E
 	public static ActivityDoubleRewardController Instance
 	{
 		get
@@ -123,7 +128,7 @@ public class ActivityDoubleRewardController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06007FCA RID: 32714 RVA: 0x001B0A59 File Offset: 0x001AEC59
+	// Token: 0x06005361 RID: 21345 RVA: 0x001B9715 File Offset: 0x001B7915
 	public static ActivityDoubleRewardController GetOrCreateInstance()
 	{
 		if (ActivityDoubleRewardController._Instance == null)
@@ -133,7 +138,7 @@ public class ActivityDoubleRewardController : ActivityControllerBase
 		return ActivityDoubleRewardController._Instance;
 	}
 
-	// Token: 0x06007FCB RID: 32715 RVA: 0x001B0A6D File Offset: 0x001AEC6D
+	// Token: 0x06005362 RID: 21346 RVA: 0x001B9729 File Offset: 0x001B7929
 	public static bool CreateInstance()
 	{
 		if (ActivityDoubleRewardController._Instance != null)
@@ -144,27 +149,27 @@ public class ActivityDoubleRewardController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x06007FCC RID: 32716 RVA: 0x001B0A83 File Offset: 0x001AEC83
+	// Token: 0x06005363 RID: 21347 RVA: 0x001B973F File Offset: 0x001B793F
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06007FCD RID: 32717 RVA: 0x001B0A85 File Offset: 0x001AEC85
+	// Token: 0x06005364 RID: 21348 RVA: 0x001B9741 File Offset: 0x001B7941
 	public static void ResetStaticDefaultValue()
 	{
 		ActivityDoubleRewardController._Instance = null;
 	}
 
-	// Token: 0x06007FCE RID: 32718 RVA: 0x001B0A8D File Offset: 0x001AEC8D
+	// Token: 0x06005365 RID: 21349 RVA: 0x001B9749 File Offset: 0x001B7949
 	static ActivityDoubleRewardController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActivityDoubleRewardController.CreateStaticDefaultValue), new Action(ActivityDoubleRewardController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04003A1B RID: 14875
+	// Token: 0x04003AB3 RID: 15027
 	private readonly HashSet<int> UniversalActivityIdSet = new HashSet<int>();
 
-	// Token: 0x04003A1C RID: 14876
+	// Token: 0x04003AB4 RID: 15028
 	[Nullable(2)]
 	private static ActivityDoubleRewardController _Instance;
 }

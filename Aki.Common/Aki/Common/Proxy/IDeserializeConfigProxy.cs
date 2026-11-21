@@ -4,10 +4,10 @@ using Aki.Config;
 
 namespace Aki.Common.Proxy
 {
-	// Token: 0x0200001F RID: 31
+	// Token: 0x02000020 RID: 32
 	public interface IDeserializeConfigProxy
 	{
-		// Token: 0x060000DF RID: 223
+		// Token: 0x0600014C RID: 332
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -22,7 +22,7 @@ namespace Aki.Common.Proxy
 			2
 		})] LogList<ValueTuple<string, object>> pairs);
 
-		// Token: 0x060000E0 RID: 224
+		// Token: 0x0600014D RID: 333
 		DeserializeConfigResult<int> ParseInt([Nullable(1)] byte[] buffer, int startIndex = 0, [ParamCollection] [Nullable(new byte[]
 		{
 			1,
@@ -31,7 +31,7 @@ namespace Aki.Common.Proxy
 			2
 		})] LogList<ValueTuple<string, object>> pairs);
 
-		// Token: 0x060000E1 RID: 225
+		// Token: 0x0600014E RID: 334
 		DeserializeConfigResult<float> ParseFloat([Nullable(1)] byte[] buffer, int startIndex = 0, [ParamCollection] [Nullable(new byte[]
 		{
 			1,
@@ -40,7 +40,7 @@ namespace Aki.Common.Proxy
 			2
 		})] LogList<ValueTuple<string, object>> pairs);
 
-		// Token: 0x060000E2 RID: 226
+		// Token: 0x0600014F RID: 335
 		DeserializeConfigResult<long> ParseBigInt([Nullable(1)] byte[] buffer, int startIndex = 0, [ParamCollection] [Nullable(new byte[]
 		{
 			1,
@@ -49,7 +49,7 @@ namespace Aki.Common.Proxy
 			2
 		})] LogList<ValueTuple<string, object>> pairs);
 
-		// Token: 0x060000E3 RID: 227
+		// Token: 0x06000150 RID: 336
 		DeserializeConfigResult<bool> ParseBoolean([Nullable(1)] byte[] buffer, int startIndex = 0, [ParamCollection] [Nullable(new byte[]
 		{
 			1,
@@ -58,7 +58,7 @@ namespace Aki.Common.Proxy
 			2
 		})] LogList<ValueTuple<string, object>> pairs);
 
-		// Token: 0x060000E4 RID: 228
+		// Token: 0x06000151 RID: 337
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{

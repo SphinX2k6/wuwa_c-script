@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200127D RID: 4733
+	// Token: 0x020013BD RID: 5053
 	public class ERhythmSpaceshipConditionStepJsonConverter : JsonConverter<ERhythmSpaceshipConditionStep>
 	{
-		// Token: 0x06006ADB RID: 27355 RVA: 0x001003AC File Offset: 0x000FE5AC
+		// Token: 0x0600712E RID: 28974 RVA: 0x0010DFD8 File Offset: 0x0010C1D8
 		public override ERhythmSpaceshipConditionStep Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Quest
 			return ERhythmSpaceshipConditionStepExtensions.FromString(@string);
 		}
 
-		// Token: 0x06006ADC RID: 27356 RVA: 0x001003D0 File Offset: 0x000FE5D0
+		// Token: 0x0600712F RID: 28975 RVA: 0x0010DFFC File Offset: 0x0010C1FC
 		public override void Write(Utf8JsonWriter writer, ERhythmSpaceshipConditionStep value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

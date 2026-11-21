@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E64 RID: 7780
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002099 RID: 8345
 	public class IShowTalkFrameEvent
 	{
-		// Token: 0x0600A689 RID: 42633 RVA: 0x00178D94 File Offset: 0x00176F94
+		// Token: 0x0600B141 RID: 45377 RVA: 0x0018EA94 File Offset: 0x0018CC94
 		private IShowTalkFrameEvent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A68A RID: 42634 RVA: 0x00178DCC File Offset: 0x00176FCC
+		// Token: 0x0600B142 RID: 45378 RVA: 0x0018EACC File Offset: 0x0018CCCC
 		public static IShowTalkFrameEvent Create([Nullable(2)] IShowTalkFrameEvent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A68B RID: 42635 RVA: 0x00178DDF File Offset: 0x00176FDF
+		// Token: 0x0600B143 RID: 45379 RVA: 0x0018EADF File Offset: 0x0018CCDF
 		public static IShowTalkFrameEvent CreateFromSetValue([Nullable(2)] IShowTalkFrameEvent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A68C RID: 42636 RVA: 0x00178DF2 File Offset: 0x00176FF2
+		// Token: 0x0600B144 RID: 45380 RVA: 0x0018EAF2 File Offset: 0x0018CCF2
 		public IShowTalkFrameEvent_SetValue ToSetValue()
 		{
 			return new IShowTalkFrameEvent_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003305 RID: 13061
-		// (get) Token: 0x0600A68D RID: 42637 RVA: 0x00178E14 File Offset: 0x00177014
-		// (set) Token: 0x0600A68E RID: 42638 RVA: 0x00178E75 File Offset: 0x00177075
+		// Token: 0x170035C9 RID: 13769
+		// (get) Token: 0x0600B145 RID: 45381 RVA: 0x0018EB14 File Offset: 0x0018CD14
+		// (set) Token: 0x0600B146 RID: 45382 RVA: 0x0018EB75 File Offset: 0x0018CD75
 		public virtual ISequenceFrameEvent FrameEvent
 		{
 			get
@@ -90,9 +88,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003306 RID: 13062
-		// (get) Token: 0x0600A68F RID: 42639 RVA: 0x00178E8C File Offset: 0x0017708C
-		// (set) Token: 0x0600A690 RID: 42640 RVA: 0x00178EED File Offset: 0x001770ED
+		// Token: 0x170035CA RID: 13770
+		// (get) Token: 0x0600B147 RID: 45383 RVA: 0x0018EB8C File Offset: 0x0018CD8C
+		// (set) Token: 0x0600B148 RID: 45384 RVA: 0x0018EBED File Offset: 0x0018CDED
 		public virtual IShowTalkFrameEventPosition Position
 		{
 			get
@@ -120,24 +118,24 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006378 RID: 25464
+		// Token: 0x0400695C RID: 26972
 		[Nullable(2)]
 		protected IShowTalkFrameEvent FbInstance;
 
-		// Token: 0x04006379 RID: 25465
+		// Token: 0x0400695D RID: 26973
 		[Nullable(2)]
 		protected IShowTalkFrameEvent_SetValue PocoInterface;
 
-		// Token: 0x0400637A RID: 25466
+		// Token: 0x0400695E RID: 26974
 		private ISequenceFrameEvent _FrameEventCache;
 
-		// Token: 0x0400637B RID: 25467
+		// Token: 0x0400695F RID: 26975
 		private bool _FrameEventInited;
 
-		// Token: 0x0400637C RID: 25468
+		// Token: 0x04006960 RID: 26976
 		private IShowTalkFrameEventPosition _PositionCache;
 
-		// Token: 0x0400637D RID: 25469
+		// Token: 0x04006961 RID: 26977
 		private bool _PositionInited;
 	}
 }

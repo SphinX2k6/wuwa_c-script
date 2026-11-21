@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001DC RID: 476
+	// Token: 0x02000203 RID: 515
 	public class IAudioRangeConfig_SetValue
 	{
-		// Token: 0x040008B9 RID: 2233
-		[Nullable(1)]
+		// Token: 0x04000940 RID: 2368
 		public string LeaveAkEvent;
 	}
 }

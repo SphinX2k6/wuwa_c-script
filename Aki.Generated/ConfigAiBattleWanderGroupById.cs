@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000083 RID: 131
+	// Token: 0x0200008B RID: 139
 	public class ConfigAiBattleWanderGroupById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000312 RID: 786 RVA: 0x0006AD54 File Offset: 0x00068F54
+		// Token: 0x06000342 RID: 834 RVA: 0x0006F608 File Offset: 0x0006D808
 		static ConfigAiBattleWanderGroupById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAiBattleWanderGroupById.CreateStaticDefaultValue), new Action(ConfigAiBattleWanderGroupById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000313 RID: 787 RVA: 0x0006AD74 File Offset: 0x00068F74
+		// Token: 0x06000343 RID: 835 RVA: 0x0006F628 File Offset: 0x0006D828
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAiBattleWanderGroupById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000314 RID: 788 RVA: 0x0006ADF3 File Offset: 0x00068FF3
+		// Token: 0x06000344 RID: 836 RVA: 0x0006F6A7 File Offset: 0x0006D8A7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAiBattleWanderGroupById.LogPair = null;
 			ConfigAiBattleWanderGroupById.HandleId = 0;
 		}
 
-		// Token: 0x06000315 RID: 789 RVA: 0x0006AE01 File Offset: 0x00069001
+		// Token: 0x06000345 RID: 837 RVA: 0x0006F6B5 File Offset: 0x0006D8B5
 		public static void Init()
 		{
 			ConfigAiBattleWanderGroupById.HandleId = ConfigCommon.InitDataStatement(ConfigAiBattleWanderGroupById.HandleId, "db_ai.db", "select BinData from `AiBattleWanderGroup` where Id=?");
 		}
 
-		// Token: 0x06000316 RID: 790 RVA: 0x0006AE1C File Offset: 0x0006901C
+		// Token: 0x06000346 RID: 838 RVA: 0x0006F6D0 File Offset: 0x0006D8D0
 		public static AiBattleWanderGroup? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigAiBattleWanderGroupById.HandleId, ConfigAiBattleWanderGroupById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new AiBattleWanderGroup?(rootAsAiBattleWanderGroup);
 		}
 
-		// Token: 0x04000379 RID: 889
+		// Token: 0x040003B1 RID: 945
 		private const string DB = "db_ai.db";
 
-		// Token: 0x0400037A RID: 890
+		// Token: 0x040003B2 RID: 946
 		private const string FILE = "a.AI战斗游荡.xlsx";
 
-		// Token: 0x0400037B RID: 891
+		// Token: 0x040003B3 RID: 947
 		private const string TABLE = "AiBattleWanderGroup";
 
-		// Token: 0x0400037C RID: 892
+		// Token: 0x040003B4 RID: 948
 		private const string COMMAND = "select BinData from `AiBattleWanderGroup` where Id=?";
 
-		// Token: 0x0400037D RID: 893
+		// Token: 0x040003B5 RID: 949
 		private const string KEY_PREFIX = "AiBattleWanderGroupById";
 
-		// Token: 0x0400037E RID: 894
+		// Token: 0x040003B6 RID: 950
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400037F RID: 895
+		// Token: 0x040003B7 RID: 951
 		private static int HandleId;
 	}
 }

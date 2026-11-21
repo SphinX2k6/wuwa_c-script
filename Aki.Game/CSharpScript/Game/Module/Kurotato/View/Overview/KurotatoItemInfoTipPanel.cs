@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -15,12 +14,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.Overview
 {
-	// Token: 0x02005745 RID: 22341
+	// Token: 0x0200471C RID: 18204
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class KurotatoItemInfoTipPanel : UiPanelBase
 	{
-		// Token: 0x06038CB4 RID: 232628 RVA: 0x00D7C31C File Offset: 0x00D7A51C
+		// Token: 0x0602DBC4 RID: 187332 RVA: 0x00CCAAF0 File Offset: 0x00CC8CF0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 25;
@@ -80,7 +79,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038CB5 RID: 232629 RVA: 0x00D7C690 File Offset: 0x00D7A890
+		// Token: 0x0602DBC5 RID: 187333 RVA: 0x00CCAE64 File Offset: 0x00CC9064
 		protected override UniTask OnBeforeStartAsync()
 		{
 			KurotatoItemInfoTipPanel.<OnBeforeStartAsync>d__15 <OnBeforeStartAsync>d__;
@@ -91,13 +90,13 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038CB6 RID: 232630 RVA: 0x00D7C6D3 File Offset: 0x00D7A8D3
+		// Token: 0x0602DBC6 RID: 187334 RVA: 0x00CCAEA7 File Offset: 0x00CC90A7
 		private void CreateAttrSelectLayout()
 		{
 			this.PropertyLayout = new GenericLayout<PropertyInfoItem, IKurotatoAttrDisplay>(base.GetVerticalLayout(3), () => new PropertyInfoItem(), null, false, true);
 		}
 
-		// Token: 0x06038CB7 RID: 232631 RVA: 0x00D7C70C File Offset: 0x00D7A90C
+		// Token: 0x0602DBC7 RID: 187335 RVA: 0x00CCAEE0 File Offset: 0x00CC90E0
 		private UniTask CreateToggleTabItemAsync()
 		{
 			KurotatoItemInfoTipPanel.<CreateToggleTabItemAsync>d__17 <CreateToggleTabItemAsync>d__;
@@ -108,7 +107,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			return <CreateToggleTabItemAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038CB8 RID: 232632 RVA: 0x00D7C750 File Offset: 0x00D7A950
+		// Token: 0x0602DBC8 RID: 187336 RVA: 0x00CCAF24 File Offset: 0x00CC9124
 		private UniTask CreateLockPanelAsync()
 		{
 			KurotatoItemInfoTipPanel.<CreateLockPanelAsync>d__18 <CreateLockPanelAsync>d__;
@@ -119,14 +118,14 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			return <CreateLockPanelAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038CB9 RID: 232633 RVA: 0x00D7C794 File Offset: 0x00D7A994
+		// Token: 0x0602DBC9 RID: 187337 RVA: 0x00CCAF68 File Offset: 0x00CC9168
 		private void CreateBuildInfoPanel()
 		{
 			this.BuildLeftInfoLayout = new GenericLayout<KurotatoPopupWeaponBuildItem, IKurotatoWeaponBuildInfoPanel>(base.GetVerticalLayout(11), () => new KurotatoPopupWeaponBuildItem(), null, false, true);
 			this.BuildRightInfoLayout = new GenericLayout<KurotatoPopupWeaponBuildItem, IKurotatoWeaponBuildInfoPanel>(base.GetVerticalLayout(12), () => new KurotatoPopupWeaponBuildItem(), null, false, true);
 		}
 
-		// Token: 0x06038CBA RID: 232634 RVA: 0x00D7C80C File Offset: 0x00D7AA0C
+		// Token: 0x0602DBCA RID: 187338 RVA: 0x00CCAFE0 File Offset: 0x00CC91E0
 		private UniTask CreateBuildTagItemAsync()
 		{
 			KurotatoItemInfoTipPanel.<CreateBuildTagItemAsync>d__20 <CreateBuildTagItemAsync>d__;
@@ -137,19 +136,19 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			return <CreateBuildTagItemAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038CBB RID: 232635 RVA: 0x00D7C84F File Offset: 0x00D7AA4F
+		// Token: 0x0602DBCB RID: 187339 RVA: 0x00CCB023 File Offset: 0x00CC9223
 		private void CreateSkillLayout()
 		{
 			this.SkillLayout = new GenericLayout<SkillItem, string>(base.GetVerticalLayout(15), () => new SkillItem(), null, false, true);
 		}
 
-		// Token: 0x06038CBC RID: 232636 RVA: 0x00D7C886 File Offset: 0x00D7AA86
+		// Token: 0x0602DBCC RID: 187340 RVA: 0x00CCB05A File Offset: 0x00CC925A
 		protected override void OnStart()
 		{
 			this.ToggleTabItem.SetUiActive(false);
 		}
 
-		// Token: 0x06038CBD RID: 232637 RVA: 0x00D7C894 File Offset: 0x00D7AA94
+		// Token: 0x0602DBCD RID: 187341 RVA: 0x00CCB068 File Offset: 0x00CC9268
 		public void RefreshBuildInfoByCheckedTags()
 		{
 			if (!this.BuildTagItem.IsChecked())
@@ -163,21 +162,24 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 				this.CloseBuildInfo();
 				return;
 			}
-			List<IKurotatoWeaponBuildInfoPanel> data = (from tagData in dataList
-			select new KurotatoWeaponBuildInfoPanel
+			List<IKurotatoWeaponBuildInfoPanel> list = new List<IKurotatoWeaponBuildInfoPanel>(dataList.Count);
+			foreach (IKurotatoWeaponBuildData kurotatoWeaponBuildData in dataList)
 			{
-				BuildId = tagData.BuildId,
-				BuildLevel = KurotatoModel.Instance.GetWeaponBuildLevelByBuildId(tagData.BuildId)
-			}).ToList<IKurotatoWeaponBuildInfoPanel>();
+				list.Add(new KurotatoWeaponBuildInfoPanel
+				{
+					BuildId = kurotatoWeaponBuildData.BuildId,
+					BuildLevel = KurotatoModel.Instance.GetWeaponBuildLevelByBuildId(kurotatoWeaponBuildData.BuildId)
+				});
+			}
 			if (this.TipShowLeft)
 			{
-				this.ShowBuildInfoLeft(data);
+				this.ShowBuildInfoLeft(list);
 				return;
 			}
-			this.ShowBuildInfoRight(data);
+			this.ShowBuildInfoRight(list);
 		}
 
-		// Token: 0x06038CBE RID: 232638 RVA: 0x00D7C915 File Offset: 0x00D7AB15
+		// Token: 0x0602DBCE RID: 187342 RVA: 0x00CCB134 File Offset: 0x00CC9334
 		public void ShowBuildInfoLeft(IReadOnlyList<IKurotatoWeaponBuildInfoPanel> data)
 		{
 			this.BuildLeftInfoLayout.SetActive(true);
@@ -185,7 +187,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			this.BuildLeftInfoLayout.RefreshByData(data, null, false);
 		}
 
-		// Token: 0x06038CBF RID: 232639 RVA: 0x00D7C93D File Offset: 0x00D7AB3D
+		// Token: 0x0602DBCF RID: 187343 RVA: 0x00CCB15C File Offset: 0x00CC935C
 		public void ShowBuildInfoRight(IReadOnlyList<IKurotatoWeaponBuildInfoPanel> data)
 		{
 			this.BuildRightInfoLayout.SetActive(true);
@@ -193,20 +195,20 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			this.BuildRightInfoLayout.RefreshByData(data, null, false);
 		}
 
-		// Token: 0x06038CC0 RID: 232640 RVA: 0x00D7C965 File Offset: 0x00D7AB65
+		// Token: 0x0602DBD0 RID: 187344 RVA: 0x00CCB184 File Offset: 0x00CC9384
 		public void CloseBuildInfo()
 		{
 			this.BuildLeftInfoLayout.SetActive(false);
 			this.BuildRightInfoLayout.SetActive(false);
 		}
 
-		// Token: 0x06038CC1 RID: 232641 RVA: 0x00D7C97F File Offset: 0x00D7AB7F
+		// Token: 0x0602DBD1 RID: 187345 RVA: 0x00CCB19E File Offset: 0x00CC939E
 		private void OnClickBuildTag(IReadOnlyList<IKurotatoWeaponBuildData> dataList, EToggleState state)
 		{
 			this.RefreshBuildInfoByCheckedTags();
 		}
 
-		// Token: 0x06038CC2 RID: 232642 RVA: 0x00D7C987 File Offset: 0x00D7AB87
+		// Token: 0x0602DBD2 RID: 187346 RVA: 0x00CCB1A6 File Offset: 0x00CC93A6
 		public void Refresh(EKurotatoCardType selectedType, int selectedId, bool tipShowLeft = true, bool showBuildInfo = true, int? preWaveDealtDamage = null)
 		{
 			this.SelectedType = selectedType;
@@ -216,7 +218,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			this.RefreshInfo(showBuildInfo);
 		}
 
-		// Token: 0x06038CC3 RID: 232643 RVA: 0x00D7C9AE File Offset: 0x00D7ABAE
+		// Token: 0x0602DBD3 RID: 187347 RVA: 0x00CCB1CD File Offset: 0x00CC93CD
 		private void RefreshInfo(bool showBuildInfo = true)
 		{
 			this.CloseBuildInfo();
@@ -233,7 +235,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			this.RefreshItemInfo();
 		}
 
-		// Token: 0x06038CC4 RID: 232644 RVA: 0x00D7C9E4 File Offset: 0x00D7ABE4
+		// Token: 0x0602DBD4 RID: 187348 RVA: 0x00CCB204 File Offset: 0x00CC9404
 		private void RefreshItemInfo()
 		{
 			KurotatoConfig instance = KurotatoConfig.Instance;
@@ -246,9 +248,9 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			base.GetText(1).SetColor(FColor.FromHex(value2.QualityColor));
 			base.SetTextureByPath(value2.InfoQualityTexture, base.GetTexture(17), null, null);
 			base.SetTextureByPath(value.Icon, base.GetTexture(2), null, null);
-			List<IKurotatoAttrDisplay> itemAttrDisplayList = KurotatoUtil.GetItemAttrDisplayList(value.EffectIter().ToList<int>(), false, false, true);
+			List<IKurotatoAttrDisplay> itemAttrDisplayList = KurotatoUtil.GetItemAttrDisplayList(new List<int>(value.EffectIter()), false, false, true);
 			this.PropertyLayout.RefreshByData(itemAttrDisplayList, null, false);
-			string cardDesc = KurotatoUtil.GetCardDesc(value.Desc, value.DescParamsIter().ToList<string>(), 0, 0, false);
+			string cardDesc = KurotatoUtil.GetCardDesc(value.Desc, new List<string>(value.DescParamsIter()), 0, 0, false);
 			bool flag = cardDesc != "";
 			GenericLayout<SkillItem, string> skillLayout = this.SkillLayout;
 			List<string> data;
@@ -298,18 +300,26 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			}
 		}
 
-		// Token: 0x06038CC5 RID: 232645 RVA: 0x00D7CC18 File Offset: 0x00D7AE18
+		// Token: 0x0602DBD5 RID: 187349 RVA: 0x00CCB438 File Offset: 0x00CC9638
 		private void RefreshWeaponInfo(bool showBuildInfo = true)
 		{
 			KurotatoConfig instance = KurotatoConfig.Instance;
-			KurotatoModel kurotatoModel = KurotatoModel.Instance;
-			IKurotatoWeaponData weaponDataByIncId = kurotatoModel.GetWeaponDataByIncId(this.SelectedId);
+			KurotatoModel instance2 = KurotatoModel.Instance;
+			IKurotatoWeaponData weaponDataByIncId = instance2.GetWeaponDataByIncId(this.SelectedId);
 			bool flag = !this.IsOutside && weaponDataByIncId != null;
 			int weaponId = flag ? weaponDataByIncId.WeaponId : this.SelectedId;
 			KurotatoWeapon value = instance.GetWeaponConfigByWeaponId(weaponId).Value;
 			KurotatoWeaponGroup value2 = instance.GetWeaponGroupConfigByWeaponId(weaponId).Value;
 			KurotatoQuality value3 = instance.GetQualityByQuality(value.Quality).Value;
-			bool flag2 = value2.WeaponBuildIdsIter().Any<int>();
+			bool flag2 = false;
+			using (IEnumerator<int> enumerator = value2.WeaponBuildIdsIter().GetEnumerator())
+			{
+				if (enumerator.MoveNext())
+				{
+					int num = enumerator.Current;
+					flag2 = true;
+				}
+			}
 			this.BuildTagItem.SetUiActive(flag2);
 			base.GetItem(9).SetUIActive(false);
 			base.GetText(0).ShowTextNew(value.Name);
@@ -318,10 +328,10 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			base.SetTextureByPath(value3.InfoQualityTexture, base.GetTexture(17), null, null);
 			base.SetTextureByPath(value2.Icon, base.GetTexture(2), null, null);
 			int weaponIncId = flag ? this.SelectedId : 0;
-			List<IKurotatoAttrDisplay> weaponPropertyDisplayList = KurotatoUtil.GetWeaponPropertyDisplayList(value.ShowPropertyIter().ToList<int>(), weaponId, weaponIncId);
+			List<IKurotatoAttrDisplay> weaponPropertyDisplayList = KurotatoUtil.GetWeaponPropertyDisplayList(new List<int>(value.ShowPropertyIter()), weaponId, weaponIncId);
 			if (!StringUtils.IsEmpty(value.AttackDes))
 			{
-				string cardDesc = KurotatoUtil.GetCardDesc(value.AttackDes, value.AttackDesParamIter().ToList<string>(), weaponId, weaponIncId, true);
+				string cardDesc = KurotatoUtil.GetCardDesc(value.AttackDes, new List<string>(value.AttackDesParamIter()), weaponId, weaponIncId, true);
 				KurotatoProperty? propertyById = instance.GetPropertyById(7);
 				weaponPropertyDisplayList.Insert(0, new KurotatoAttrDisplay
 				{
@@ -331,7 +341,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 				});
 			}
 			this.PropertyLayout.RefreshByData(weaponPropertyDisplayList, null, false);
-			string cardDesc2 = KurotatoUtil.GetCardDesc(value.Desc, value.DescParamsIter().ToList<string>(), weaponId, weaponIncId, false);
+			string cardDesc2 = KurotatoUtil.GetCardDesc(value.Desc, new List<string>(value.DescParamsIter()), weaponId, weaponIncId, false);
 			bool flag3 = cardDesc2 != "";
 			GenericLayout<SkillItem, string> skillLayout = this.SkillLayout;
 			List<string> data;
@@ -351,25 +361,33 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			}
 			if (showBuildInfo)
 			{
-				this.ShowBuildInfoLeft((from buildId in value2.WeaponBuildIdsIter()
-				select new KurotatoWeaponBuildInfoPanel
+				List<IKurotatoWeaponBuildInfoPanel> list = new List<IKurotatoWeaponBuildInfoPanel>();
+				foreach (int num2 in value2.WeaponBuildIdsIter())
 				{
-					BuildId = buildId,
-					BuildLevel = kurotatoModel.GetWeaponBuildLevelByBuildId(buildId)
-				}).ToList<IKurotatoWeaponBuildInfoPanel>());
+					list.Add(new KurotatoWeaponBuildInfoPanel
+					{
+						BuildId = num2,
+						BuildLevel = instance2.GetWeaponBuildLevelByBuildId(num2)
+					});
+				}
+				this.ShowBuildInfoLeft(list);
 			}
 			if (flag2)
 			{
-				this.BuildTagItem.Refresh((from buildId in value2.WeaponBuildIdsIter()
-				select new KurotatoWeaponBuildData
+				List<IKurotatoWeaponBuildData> list2 = new List<IKurotatoWeaponBuildData>();
+				foreach (int buildId in value2.WeaponBuildIdsIter())
 				{
-					BuildId = buildId,
-					WeaponId = weaponId
-				}).ToList<IKurotatoWeaponBuildData>());
+					list2.Add(new KurotatoWeaponBuildData
+					{
+						BuildId = buildId,
+						WeaponId = weaponId
+					});
+				}
+				this.BuildTagItem.Refresh(list2);
 			}
 			base.GetItem(18).SetUIActive(!this.IsOutside || this.PreWaveDealtDamage != null);
-			int num = this.PreWaveDealtDamage ?? ((weaponDataByIncId != null) ? weaponDataByIncId.PreWaveDealtDamage : 0);
-			base.GetText(19).SetText(num.ToString(), true);
+			int num3 = this.PreWaveDealtDamage ?? ((weaponDataByIncId != null) ? weaponDataByIncId.PreWaveDealtDamage : 0);
+			base.GetText(19).SetText(num3.ToString(), true);
 			this.RefreshBgDesc(value.BgDesc);
 			if (this.IsInHandBook)
 			{
@@ -397,7 +415,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			}
 		}
 
-		// Token: 0x06038CC6 RID: 232646 RVA: 0x00D7CFF4 File Offset: 0x00D7B1F4
+		// Token: 0x0602DBD6 RID: 187350 RVA: 0x00CCB8B0 File Offset: 0x00CC9AB0
 		private void RefreshBgDesc(string text)
 		{
 			bool flag = text == "";
@@ -418,16 +436,16 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(23), text, Array.Empty<object>());
 		}
 
-		// Token: 0x0401DC99 RID: 122009
+		// Token: 0x0401872F RID: 100143
 		private readonly PopupCaptionToggleItem ToggleTabItem = new PopupCaptionToggleItem();
 
-		// Token: 0x0401DC9A RID: 122010
+		// Token: 0x04018730 RID: 100144
 		private readonly FunctionalPanelConditionLock LockPanel = new FunctionalPanelConditionLock();
 
-		// Token: 0x0401DC9B RID: 122011
+		// Token: 0x04018731 RID: 100145
 		private readonly KurotatoWeaponTagItem BuildTagItem = new KurotatoWeaponTagItem();
 
-		// Token: 0x0401DC9C RID: 122012
+		// Token: 0x04018732 RID: 100146
 		[Nullable(new byte[]
 		{
 			2,
@@ -436,7 +454,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 		})]
 		private GenericLayout<PropertyInfoItem, IKurotatoAttrDisplay> PropertyLayout;
 
-		// Token: 0x0401DC9D RID: 122013
+		// Token: 0x04018733 RID: 100147
 		[Nullable(new byte[]
 		{
 			2,
@@ -445,7 +463,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 		})]
 		private GenericLayout<KurotatoPopupWeaponBuildItem, IKurotatoWeaponBuildInfoPanel> BuildLeftInfoLayout;
 
-		// Token: 0x0401DC9E RID: 122014
+		// Token: 0x04018734 RID: 100148
 		[Nullable(new byte[]
 		{
 			2,
@@ -454,7 +472,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 		})]
 		private GenericLayout<KurotatoPopupWeaponBuildItem, IKurotatoWeaponBuildInfoPanel> BuildRightInfoLayout;
 
-		// Token: 0x0401DC9F RID: 122015
+		// Token: 0x04018735 RID: 100149
 		[Nullable(new byte[]
 		{
 			2,
@@ -463,77 +481,77 @@ namespace CSharpScript.Game.Module.Kurotato.View.Overview
 		})]
 		private GenericLayout<SkillItem, string> SkillLayout;
 
-		// Token: 0x0401DCA0 RID: 122016
+		// Token: 0x04018736 RID: 100150
 		private EKurotatoCardType SelectedType;
 
-		// Token: 0x0401DCA1 RID: 122017
+		// Token: 0x04018737 RID: 100151
 		private int SelectedId;
 
-		// Token: 0x0401DCA2 RID: 122018
+		// Token: 0x04018738 RID: 100152
 		private bool TipShowLeft = true;
 
-		// Token: 0x0401DCA3 RID: 122019
+		// Token: 0x04018739 RID: 100153
 		private int? PreWaveDealtDamage;
 
-		// Token: 0x0401DCA4 RID: 122020
+		// Token: 0x0401873A RID: 100154
 		public bool IsOutside;
 
-		// Token: 0x0401DCA5 RID: 122021
+		// Token: 0x0401873B RID: 100155
 		public bool IsInHandBook;
 
-		// Token: 0x0200B92E RID: 47406
+		// Token: 0x0200A34E RID: 41806
 		[NullableContext(0)]
 		private enum EComponents
 		{
-			// Token: 0x04038020 RID: 229408
+			// Token: 0x04032A2D RID: 207405
 			TextName,
-			// Token: 0x04038021 RID: 229409
+			// Token: 0x04032A2E RID: 207406
 			TextQuality,
-			// Token: 0x04038022 RID: 229410
+			// Token: 0x04032A2F RID: 207407
 			TextureIcon,
-			// Token: 0x04038023 RID: 229411
+			// Token: 0x04032A30 RID: 207408
 			VerticalLayoutAttr,
-			// Token: 0x04038024 RID: 229412
+			// Token: 0x04032A31 RID: 207409
 			AttrItem,
-			// Token: 0x04038025 RID: 229413
+			// Token: 0x04032A32 RID: 207410
 			ItemMiddleLine,
-			// Token: 0x04038026 RID: 229414
+			// Token: 0x04032A33 RID: 207411
 			PanelTag,
-			// Token: 0x04038027 RID: 229415
+			// Token: 0x04032A34 RID: 207412
 			ItemTog,
-			// Token: 0x04038028 RID: 229416
+			// Token: 0x04032A35 RID: 207413
 			ToggleTabNameItem,
-			// Token: 0x04038029 RID: 229417
+			// Token: 0x04032A36 RID: 207414
 			PanelType,
-			// Token: 0x0403802A RID: 229418
+			// Token: 0x04032A37 RID: 207415
 			TextType,
-			// Token: 0x0403802B RID: 229419
+			// Token: 0x04032A38 RID: 207416
 			PanelTipsLeft,
-			// Token: 0x0403802C RID: 229420
+			// Token: 0x04032A39 RID: 207417
 			PanelTipsRight,
-			// Token: 0x0403802D RID: 229421
+			// Token: 0x04032A3A RID: 207418
 			TagTipLeftItem,
-			// Token: 0x0403802E RID: 229422
+			// Token: 0x04032A3B RID: 207419
 			TagTipRightItem,
-			// Token: 0x0403802F RID: 229423
+			// Token: 0x04032A3C RID: 207420
 			VerticalSkillData,
-			// Token: 0x04038030 RID: 229424
+			// Token: 0x04032A3D RID: 207421
 			SkillInfo,
-			// Token: 0x04038031 RID: 229425
+			// Token: 0x04032A3E RID: 207422
 			TextureQuality,
-			// Token: 0x04038032 RID: 229426
+			// Token: 0x04032A3F RID: 207423
 			PanelHarm,
-			// Token: 0x04038033 RID: 229427
+			// Token: 0x04032A40 RID: 207424
 			TextHarm,
-			// Token: 0x04038034 RID: 229428
+			// Token: 0x04032A41 RID: 207425
 			SpriteLockIcon,
-			// Token: 0x04038035 RID: 229429
+			// Token: 0x04032A42 RID: 207426
 			ItemBgDescLine,
-			// Token: 0x04038036 RID: 229430
+			// Token: 0x04032A43 RID: 207427
 			ItemBgDescPanel,
-			// Token: 0x04038037 RID: 229431
+			// Token: 0x04032A44 RID: 207428
 			TextBgDesc,
-			// Token: 0x04038038 RID: 229432
+			// Token: 0x04032A45 RID: 207429
 			ItemLockPanel
 		}
 	}

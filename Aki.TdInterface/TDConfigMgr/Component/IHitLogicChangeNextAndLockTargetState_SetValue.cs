@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000427 RID: 1063
+	// Token: 0x02000480 RID: 1152
 	public class IHitLogicChangeNextAndLockTargetState_SetValue
 	{
-		// Token: 0x04001092 RID: 4242
+		// Token: 0x040011B4 RID: 4532
 		public EHitLogicType Type;
 
-		// Token: 0x04001093 RID: 4243
-		[Nullable(1)]
+		// Token: 0x040011B5 RID: 4533
 		public string TargetState;
 	}
 }

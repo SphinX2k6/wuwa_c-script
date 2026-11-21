@@ -10,17 +10,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001B70 RID: 7024
+// Token: 0x0200102F RID: 4143
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchRaceSelectView : UiViewBase
 {
-	// Token: 0x0600D0E6 RID: 53478 RVA: 0x002FC04F File Offset: 0x002FA24F
+	// Token: 0x0600A4F7 RID: 42231 RVA: 0x00307127 File Offset: 0x00305327
 	public FloroRanchRaceSelectView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0600D0E7 RID: 53479 RVA: 0x002FC070 File Offset: 0x002FA270
+	// Token: 0x0600A4F8 RID: 42232 RVA: 0x00307148 File Offset: 0x00305348
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -49,7 +49,7 @@ public class FloroRanchRaceSelectView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D0E8 RID: 53480 RVA: 0x002FC19C File Offset: 0x002FA39C
+	// Token: 0x0600A4F9 RID: 42233 RVA: 0x00307274 File Offset: 0x00305474
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FloroRanchRaceSelectView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -60,7 +60,7 @@ public class FloroRanchRaceSelectView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D0E9 RID: 53481 RVA: 0x002FC1E0 File Offset: 0x002FA3E0
+	// Token: 0x0600A4FA RID: 42234 RVA: 0x003072B8 File Offset: 0x003054B8
 	public void RefreshSelectedNum()
 	{
 		int num = this.FixedRaceIds.Count + this.SelectedRaceIds.Count;
@@ -72,7 +72,7 @@ public class FloroRanchRaceSelectView : UiViewBase
 		base.GetButton(3).SetSelfInteractive(num == this.TotalNum);
 	}
 
-	// Token: 0x0600D0EA RID: 53482 RVA: 0x002FC254 File Offset: 0x002FA454
+	// Token: 0x0600A4FB RID: 42235 RVA: 0x0030732C File Offset: 0x0030552C
 	private bool IsRaceFixed(int raceId)
 	{
 		using (List<int>.Enumerator enumerator = this.FixedRaceIds.GetEnumerator())
@@ -88,7 +88,7 @@ public class FloroRanchRaceSelectView : UiViewBase
 		return false;
 	}
 
-	// Token: 0x0600D0EB RID: 53483 RVA: 0x002FC2AC File Offset: 0x002FA4AC
+	// Token: 0x0600A4FC RID: 42236 RVA: 0x00307384 File Offset: 0x00305584
 	private void OnToggleCallback(int raceId)
 	{
 		if (this.FixedRaceIds.Count != this.TotalNum)
@@ -124,7 +124,7 @@ public class FloroRanchRaceSelectView : UiViewBase
 		layoutItemByKey2.SetToggleState(false);
 	}
 
-	// Token: 0x0600D0EC RID: 53484 RVA: 0x002FC385 File Offset: 0x002FA585
+	// Token: 0x0600A4FD RID: 42237 RVA: 0x0030745D File Offset: 0x0030565D
 	private FloroRanchRaceCardItem CreateRaceCard()
 	{
 		return new FloroRanchRaceCardItem
@@ -135,7 +135,7 @@ public class FloroRanchRaceSelectView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600D0ED RID: 53485 RVA: 0x002FC3BC File Offset: 0x002FA5BC
+	// Token: 0x0600A4FE RID: 42238 RVA: 0x00307494 File Offset: 0x00305694
 	private void OnConfirmBtnClick()
 	{
 		List<int> list = new List<int>();
@@ -151,7 +151,7 @@ public class FloroRanchRaceSelectView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600D0EE RID: 53486 RVA: 0x002FC438 File Offset: 0x002FA638
+	// Token: 0x0600A4FF RID: 42239 RVA: 0x00307510 File Offset: 0x00305710
 	private void OnCloseBtnClick()
 	{
 		if (this.ActivityDataType == EFloroRanchActivityDataType.Normal)
@@ -162,22 +162,22 @@ public class FloroRanchRaceSelectView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x04005FDC RID: 24540
+	// Token: 0x040060AB RID: 24747
 	private List<int> FixedRaceIds = new List<int>();
 
-	// Token: 0x04005FDD RID: 24541
+	// Token: 0x040060AC RID: 24748
 	private List<int> SelectedRaceIds = new List<int>();
 
-	// Token: 0x04005FDE RID: 24542
+	// Token: 0x040060AD RID: 24749
 	private int SubDungeonId;
 
-	// Token: 0x04005FDF RID: 24543
+	// Token: 0x040060AE RID: 24750
 	private int TotalNum;
 
-	// Token: 0x04005FE0 RID: 24544
+	// Token: 0x040060AF RID: 24751
 	private EFloroRanchActivityDataType ActivityDataType;
 
-	// Token: 0x04005FE1 RID: 24545
+	// Token: 0x040060B0 RID: 24752
 	[Nullable(new byte[]
 	{
 		2,
@@ -186,26 +186,26 @@ public class FloroRanchRaceSelectView : UiViewBase
 	})]
 	private GenericLayout<FloroRanchRaceCardItem, FloroRanchRaceData> RaceLayout;
 
-	// Token: 0x020080E3 RID: 32995
+	// Token: 0x02007271 RID: 29297
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x0402A0DA RID: 172250
+		// Token: 0x0402540E RID: 152590
 		public const int LayoutRaceCard = 0;
 
-		// Token: 0x0402A0DB RID: 172251
+		// Token: 0x0402540F RID: 152591
 		public const int ItemRaceCard = 1;
 
-		// Token: 0x0402A0DC RID: 172252
+		// Token: 0x04025410 RID: 152592
 		public const int TextSelectedNum = 2;
 
-		// Token: 0x0402A0DD RID: 172253
+		// Token: 0x04025411 RID: 152593
 		public const int ButtonConfirm = 3;
 
-		// Token: 0x0402A0DE RID: 172254
+		// Token: 0x04025412 RID: 152594
 		public const int ButtonHelp = 4;
 
-		// Token: 0x0402A0DF RID: 172255
+		// Token: 0x04025413 RID: 152595
 		public const int ButtonClose = 5;
 	}
 }

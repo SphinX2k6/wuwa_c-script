@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BossPiling.View.Item
 {
-	// Token: 0x02005C25 RID: 23589
+	// Token: 0x02004C05 RID: 19461
 	[Nullable(new byte[]
 	{
 		0,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 	})]
 	public class BossPilingLevelDescItem : GridProxyAbstract<BossPilingLevelDescInfo>
 	{
-		// Token: 0x0603B976 RID: 244086 RVA: 0x00E36CB8 File Offset: 0x00E34EB8
+		// Token: 0x060308C1 RID: 198849 RVA: 0x00D87014 File Offset: 0x00D85214
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B977 RID: 244087 RVA: 0x00E36E04 File Offset: 0x00E35004
+		// Token: 0x060308C2 RID: 198850 RVA: 0x00D87160 File Offset: 0x00D85360
 		[NullableContext(1)]
 		public override void Refresh(BossPilingLevelDescInfo data, bool isSelected, int gridIndex)
 		{
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			}
 		}
 
-		// Token: 0x0603B978 RID: 244088 RVA: 0x00E36F8B File Offset: 0x00E3518B
+		// Token: 0x060308C3 RID: 198851 RVA: 0x00D872E7 File Offset: 0x00D854E7
 		private void OnClickedBtn()
 		{
 			Action<bool> onClickedCb = this.OnClickedCb;
@@ -144,29 +144,29 @@ namespace CSharpScript.Game.Module.BossPiling.View.Item
 			onClickedCb(this.IsFirstLevel);
 		}
 
-		// Token: 0x0401F065 RID: 127077
+		// Token: 0x04019B16 RID: 105238
 		[Nullable(2)]
 		public Action<bool> OnClickedCb;
 
-		// Token: 0x0401F066 RID: 127078
+		// Token: 0x04019B17 RID: 105239
 		public bool IsFirstLevel = true;
 
-		// Token: 0x0200BE0F RID: 48655
+		// Token: 0x0200A817 RID: 43031
 		private enum EDefine
 		{
-			// Token: 0x04039502 RID: 234754
+			// Token: 0x04033EC5 RID: 212677
 			TxtTitle,
-			// Token: 0x04039503 RID: 234755
+			// Token: 0x04033EC6 RID: 212678
 			BtnView,
-			// Token: 0x04039504 RID: 234756
+			// Token: 0x04033EC7 RID: 212679
 			TxtLevelMechanism,
-			// Token: 0x04039505 RID: 234757
+			// Token: 0x04033EC8 RID: 212680
 			TxtBossTitle,
-			// Token: 0x04039506 RID: 234758
+			// Token: 0x04033EC9 RID: 212681
 			TxtLevelTitle,
-			// Token: 0x04039507 RID: 234759
+			// Token: 0x04033ECA RID: 212682
 			TxtBoss,
-			// Token: 0x04039508 RID: 234760
+			// Token: 0x04033ECB RID: 212683
 			TxtLevel
 		}
 	}

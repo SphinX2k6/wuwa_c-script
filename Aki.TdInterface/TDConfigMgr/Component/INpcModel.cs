@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000560 RID: 1376
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020005C7 RID: 1479
 	public class INpcModel : IModelConfig
 	{
-		// Token: 0x06001C24 RID: 7204 RVA: 0x00050BB8 File Offset: 0x0004EDB8
+		// Token: 0x06001E20 RID: 7712 RVA: 0x00055974 File Offset: 0x00053B74
 		private INpcModel_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001C25 RID: 7205 RVA: 0x00050BF0 File Offset: 0x0004EDF0
+		// Token: 0x06001E21 RID: 7713 RVA: 0x000559AC File Offset: 0x00053BAC
 		public static INpcModel Create([Nullable(2)] INpcModel instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001C26 RID: 7206 RVA: 0x00050C03 File Offset: 0x0004EE03
+		// Token: 0x06001E22 RID: 7714 RVA: 0x000559BF File Offset: 0x00053BBF
 		public static INpcModel CreateFromSetValue([Nullable(2)] INpcModel_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001C27 RID: 7207 RVA: 0x00050C18 File Offset: 0x0004EE18
+		// Token: 0x06001E23 RID: 7715 RVA: 0x000559D4 File Offset: 0x00053BD4
 		public new INpcModel_SetValue ToSetValue()
 		{
 			return new INpcModel_SetValue
@@ -68,9 +66,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000761 RID: 1889
-		// (get) Token: 0x06001C28 RID: 7208 RVA: 0x00050C96 File Offset: 0x0004EE96
-		// (set) Token: 0x06001C29 RID: 7209 RVA: 0x00050CC1 File Offset: 0x0004EEC1
+		// Token: 0x170007E4 RID: 2020
+		// (get) Token: 0x06001E24 RID: 7716 RVA: 0x00055A52 File Offset: 0x00053C52
+		// (set) Token: 0x06001E25 RID: 7717 RVA: 0x00055A7D File Offset: 0x00053C7D
 		public override EModelType Type
 		{
 			get
@@ -91,9 +89,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000762 RID: 1890
-		// (get) Token: 0x06001C2A RID: 7210 RVA: 0x00050CCF File Offset: 0x0004EECF
-		// (set) Token: 0x06001C2B RID: 7211 RVA: 0x00050CFA File Offset: 0x0004EEFA
+		// Token: 0x170007E5 RID: 2021
+		// (get) Token: 0x06001E26 RID: 7718 RVA: 0x00055A8B File Offset: 0x00053C8B
+		// (set) Token: 0x06001E27 RID: 7719 RVA: 0x00055AB6 File Offset: 0x00053CB6
 		public virtual string BlueprintPath
 		{
 			get
@@ -114,9 +112,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000763 RID: 1891
-		// (get) Token: 0x06001C2C RID: 7212 RVA: 0x00050D08 File Offset: 0x0004EF08
-		// (set) Token: 0x06001C2D RID: 7213 RVA: 0x00050D2F File Offset: 0x0004EF2F
+		// Token: 0x170007E6 RID: 2022
+		// (get) Token: 0x06001E28 RID: 7720 RVA: 0x00055AC4 File Offset: 0x00053CC4
+		// (set) Token: 0x06001E29 RID: 7721 RVA: 0x00055AEB File Offset: 0x00053CEB
 		[Nullable(2)]
 		public virtual INpcModelConfig NpcModel
 		{
@@ -141,9 +139,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000764 RID: 1892
-		// (get) Token: 0x06001C2E RID: 7214 RVA: 0x00050D3D File Offset: 0x0004EF3D
-		// (set) Token: 0x06001C2F RID: 7215 RVA: 0x00050D68 File Offset: 0x0004EF68
+		// Token: 0x170007E7 RID: 2023
+		// (get) Token: 0x06001E2A RID: 7722 RVA: 0x00055AF9 File Offset: 0x00053CF9
+		// (set) Token: 0x06001E2B RID: 7723 RVA: 0x00055B24 File Offset: 0x00053D24
 		public virtual string Abp
 		{
 			get
@@ -164,20 +162,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000765 RID: 1893
-		// (get) Token: 0x06001C30 RID: 7216 RVA: 0x00050D76 File Offset: 0x0004EF76
-		// (set) Token: 0x06001C31 RID: 7217 RVA: 0x00050D9D File Offset: 0x0004EF9D
+		// Token: 0x170007E8 RID: 2024
+		// (get) Token: 0x06001E2C RID: 7724 RVA: 0x00055B32 File Offset: 0x00053D32
+		// (set) Token: 0x06001E2D RID: 7725 RVA: 0x00055B59 File Offset: 0x00053D59
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<string> BattleSockets
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -195,7 +193,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -203,20 +201,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000766 RID: 1894
-		// (get) Token: 0x06001C32 RID: 7218 RVA: 0x00050DAB File Offset: 0x0004EFAB
-		// (set) Token: 0x06001C33 RID: 7219 RVA: 0x00050DD2 File Offset: 0x0004EFD2
+		// Token: 0x170007E9 RID: 2025
+		// (get) Token: 0x06001E2E RID: 7726 RVA: 0x00055B67 File Offset: 0x00053D67
+		// (set) Token: 0x06001E2F RID: 7727 RVA: 0x00055B8E File Offset: 0x00053D8E
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<string> NormalSockets
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -234,7 +232,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -242,9 +240,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000767 RID: 1895
-		// (get) Token: 0x06001C34 RID: 7220 RVA: 0x00050DE0 File Offset: 0x0004EFE0
-		// (set) Token: 0x06001C35 RID: 7221 RVA: 0x00050E1A File Offset: 0x0004F01A
+		// Token: 0x170007EA RID: 2026
+		// (get) Token: 0x06001E30 RID: 7728 RVA: 0x00055B9C File Offset: 0x00053D9C
+		// (set) Token: 0x06001E31 RID: 7729 RVA: 0x00055BD6 File Offset: 0x00053DD6
 		public virtual float? LookingUpAngle
 		{
 			get
@@ -266,9 +264,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000768 RID: 1896
-		// (get) Token: 0x06001C36 RID: 7222 RVA: 0x00050E28 File Offset: 0x0004F028
-		// (set) Token: 0x06001C37 RID: 7223 RVA: 0x00050E62 File Offset: 0x0004F062
+		// Token: 0x170007EB RID: 2027
+		// (get) Token: 0x06001E32 RID: 7730 RVA: 0x00055BE4 File Offset: 0x00053DE4
+		// (set) Token: 0x06001E33 RID: 7731 RVA: 0x00055C1E File Offset: 0x00053E1E
 		public virtual EBodyType? BodyType
 		{
 			get
@@ -290,9 +288,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000769 RID: 1897
-		// (get) Token: 0x06001C38 RID: 7224 RVA: 0x00050E70 File Offset: 0x0004F070
-		// (set) Token: 0x06001C39 RID: 7225 RVA: 0x00050EAA File Offset: 0x0004F0AA
+		// Token: 0x170007EC RID: 2028
+		// (get) Token: 0x06001E34 RID: 7732 RVA: 0x00055C2C File Offset: 0x00053E2C
+		// (set) Token: 0x06001E35 RID: 7733 RVA: 0x00055C66 File Offset: 0x00053E66
 		public virtual float? NameZaxisOffset
 		{
 			get
@@ -314,11 +312,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001423 RID: 5155
+		// Token: 0x0400158D RID: 5517
 		[Nullable(2)]
 		protected new INpcModel FbInstance;
 
-		// Token: 0x04001424 RID: 5156
+		// Token: 0x0400158E RID: 5518
 		[Nullable(2)]
 		protected new INpcModel_SetValue PocoInterface;
 	}

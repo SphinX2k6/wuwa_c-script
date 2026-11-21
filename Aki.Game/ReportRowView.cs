@@ -5,23 +5,23 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x0200275A RID: 10074
+// Token: 0x02001C45 RID: 7237
 public class ReportRowView : GridProxyAbstract<ReportPlayerInfo>
 {
-	// Token: 0x06014A97 RID: 84631 RVA: 0x00539FDA File Offset: 0x005381DA
+	// Token: 0x06011F7A RID: 73594 RVA: 0x00548E6E File Offset: 0x0054706E
 	public override void Refresh(ReportPlayerInfo data, bool isSelected, int gridIndex)
 	{
 		this.SetData(data);
 		this.SetToggleState(isSelected);
 	}
 
-	// Token: 0x06014A98 RID: 84632 RVA: 0x00539FEA File Offset: 0x005381EA
+	// Token: 0x06011F7B RID: 73595 RVA: 0x00548E7E File Offset: 0x0054707E
 	public override void OnSelected(bool fireEvent)
 	{
 		this.ToggleFunction(this.Id);
 	}
 
-	// Token: 0x06014A99 RID: 84633 RVA: 0x0053A000 File Offset: 0x00538200
+	// Token: 0x06011F7C RID: 73596 RVA: 0x00548E94 File Offset: 0x00547094
 	protected override void OnRegisterComponent()
 	{
 		base.OnRegisterComponent();
@@ -36,7 +36,7 @@ public class ReportRowView : GridProxyAbstract<ReportPlayerInfo>
 		};
 	}
 
-	// Token: 0x06014A9A RID: 84634 RVA: 0x0053A06D File Offset: 0x0053826D
+	// Token: 0x06011F7D RID: 73597 RVA: 0x00548F01 File Offset: 0x00547101
 	protected void ToggleClick(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -47,7 +47,7 @@ public class ReportRowView : GridProxyAbstract<ReportPlayerInfo>
 		this.ToggleFunction(-1);
 	}
 
-	// Token: 0x06014A9B RID: 84635 RVA: 0x0053A094 File Offset: 0x00538294
+	// Token: 0x06011F7E RID: 73598 RVA: 0x00548F28 File Offset: 0x00547128
 	public void SetData(ReportPlayerInfo data)
 	{
 		this.Id = data.Id;
@@ -55,33 +55,33 @@ public class ReportRowView : GridProxyAbstract<ReportPlayerInfo>
 		LguiUtil.Instance.SetLocalTextNew(text, data.Reason, Array.Empty<object>());
 	}
 
-	// Token: 0x06014A9C RID: 84636 RVA: 0x0053A0CD File Offset: 0x005382CD
+	// Token: 0x06011F7F RID: 73599 RVA: 0x00548F61 File Offset: 0x00547161
 	[NullableContext(1)]
 	public void SetToggleFunction(Action<int> toggleFunction)
 	{
 		this.ToggleFunction = toggleFunction;
 	}
 
-	// Token: 0x06014A9D RID: 84637 RVA: 0x0053A0D6 File Offset: 0x005382D6
+	// Token: 0x06011F80 RID: 73600 RVA: 0x00548F6A File Offset: 0x0054716A
 	public void SetToggleState(bool isChecked)
 	{
 		base.GetExtendToggle(1).SetToggleState(isChecked ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, true, false, false);
 	}
 
-	// Token: 0x04009B51 RID: 39761
+	// Token: 0x04009CAA RID: 40106
 	[Nullable(2)]
 	protected Action<int> ToggleFunction;
 
-	// Token: 0x04009B52 RID: 39762
+	// Token: 0x04009CAB RID: 40107
 	public int Id;
 
-	// Token: 0x02008DC0 RID: 36288
+	// Token: 0x02007F49 RID: 32585
 	private static class EReportRowDefine
 	{
-		// Token: 0x0402E014 RID: 188436
+		// Token: 0x0402932B RID: 168747
 		public const int Describe = 0;
 
-		// Token: 0x0402E015 RID: 188437
+		// Token: 0x0402932C RID: 168748
 		public const int Toggle = 1;
 	}
 }

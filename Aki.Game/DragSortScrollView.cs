@@ -6,13 +6,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020022BD RID: 8893
+// Token: 0x020017A1 RID: 6049
 [NullableContext(1)]
 [Nullable(0)]
 public class DragSortScrollView<[Nullable(0)] TProxy, [Nullable(2)] TData> where TProxy : DragSortGridAbstract<TData>
 {
-	// Token: 0x17001633 RID: 5683
-	// (get) Token: 0x06011733 RID: 71475 RVA: 0x004460E8 File Offset: 0x004442E8
+	// Token: 0x1700166A RID: 5738
+	// (get) Token: 0x0600EBCB RID: 60363 RVA: 0x00452D40 File Offset: 0x00450F40
 	[Nullable(new byte[]
 	{
 		0,
@@ -36,7 +36,7 @@ public class DragSortScrollView<[Nullable(0)] TProxy, [Nullable(2)] TData> where
 		}
 	}
 
-	// Token: 0x06011734 RID: 71476 RVA: 0x00446114 File Offset: 0x00444314
+	// Token: 0x0600EBCC RID: 60364 RVA: 0x00452D6C File Offset: 0x00450F6C
 	public DragSortScrollView(UUIScrollViewWithScrollbarComponent scrollView, Func<TProxy> gridProxyCreateFunction, [Nullable(2)] AUIBaseActor gridActor = null)
 	{
 		this.TargetScroll = scrollView;
@@ -84,7 +84,7 @@ public class DragSortScrollView<[Nullable(0)] TProxy, [Nullable(2)] TData> where
 		}
 	}
 
-	// Token: 0x06011735 RID: 71477 RVA: 0x004462A8 File Offset: 0x004444A8
+	// Token: 0x0600EBCD RID: 60365 RVA: 0x00452F00 File Offset: 0x00451100
 	private void OnDestroy(AActor aActor)
 	{
 		for (int i = 0; i < this.PoolItemList.Count; i++)
@@ -114,8 +114,8 @@ public class DragSortScrollView<[Nullable(0)] TProxy, [Nullable(2)] TData> where
 		this.OnItemPointerUpCallback = null;
 	}
 
-	// Token: 0x17001634 RID: 5684
-	// (get) Token: 0x06011736 RID: 71478 RVA: 0x004463A0 File Offset: 0x004445A0
+	// Token: 0x1700166B RID: 5739
+	// (get) Token: 0x0600EBCE RID: 60366 RVA: 0x00452FF8 File Offset: 0x004511F8
 	public float ScrollWidth
 	{
 		get
@@ -136,8 +136,8 @@ public class DragSortScrollView<[Nullable(0)] TProxy, [Nullable(2)] TData> where
 		}
 	}
 
-	// Token: 0x17001635 RID: 5685
-	// (get) Token: 0x06011737 RID: 71479 RVA: 0x004463F0 File Offset: 0x004445F0
+	// Token: 0x1700166C RID: 5740
+	// (get) Token: 0x0600EBCF RID: 60367 RVA: 0x00453048 File Offset: 0x00451248
 	public float ScrollHeight
 	{
 		get
@@ -158,7 +158,7 @@ public class DragSortScrollView<[Nullable(0)] TProxy, [Nullable(2)] TData> where
 		}
 	}
 
-	// Token: 0x06011738 RID: 71480 RVA: 0x00446440 File Offset: 0x00444640
+	// Token: 0x0600EBD0 RID: 60368 RVA: 0x00453098 File Offset: 0x00451298
 	private void OnScrollValueChange(FVector2D delta)
 	{
 		if (this.DragItem != null)
@@ -169,13 +169,13 @@ public class DragSortScrollView<[Nullable(0)] TProxy, [Nullable(2)] TData> where
 		this.UpdateItem();
 	}
 
-	// Token: 0x06011739 RID: 71481 RVA: 0x00446461 File Offset: 0x00444661
+	// Token: 0x0600EBD1 RID: 60369 RVA: 0x004530B9 File Offset: 0x004512B9
 	public float CalcGridOffsetY(int index)
 	{
 		return (float)(-(float)index) * (this.ItemHeight + this.Spacing) - this.ItemHeight * 0.5f;
 	}
 
-	// Token: 0x0601173A RID: 71482 RVA: 0x00446484 File Offset: 0x00444684
+	// Token: 0x0600EBD2 RID: 60370 RVA: 0x004530DC File Offset: 0x004512DC
 	public void SetGridIndex(DragSortGridAbstract<TData> item, int index, bool isTween = true)
 	{
 		if (item.DragData == null)
@@ -194,7 +194,7 @@ public class DragSortScrollView<[Nullable(0)] TProxy, [Nullable(2)] TData> where
 		dragData.IsTweenMoving = false;
 	}
 
-	// Token: 0x0601173B RID: 71483 RVA: 0x004464E8 File Offset: 0x004446E8
+	// Token: 0x0600EBD3 RID: 60371 RVA: 0x00453140 File Offset: 0x00451340
 	public UniTask RefreshByDataAsync(IReadOnlyList<TData> data, bool playGridAnim = false)
 	{
 		DragSortScrollView<TProxy, TData>.<RefreshByDataAsync>d__29 <RefreshByDataAsync>d__;
@@ -206,7 +206,7 @@ public class DragSortScrollView<[Nullable(0)] TProxy, [Nullable(2)] TData> where
 		return <RefreshByDataAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601173C RID: 71484 RVA: 0x00446534 File Offset: 0x00444734
+	// Token: 0x0600EBD4 RID: 60372 RVA: 0x0045318C File Offset: 0x0045138C
 	private void OnItemDragBegin(DragSortGridAbstract<TData> item)
 	{
 		if (item.DragData == null || item.DragData.IsTweenMoving)
@@ -218,13 +218,13 @@ public class DragSortScrollView<[Nullable(0)] TProxy, [Nullable(2)] TData> where
 		item.GetRootItem().SetHierarchyIndex(this.CopyItemList.Count);
 	}
 
-	// Token: 0x0601173D RID: 71485 RVA: 0x00446585 File Offset: 0x00444785
+	// Token: 0x0600EBD5 RID: 60373 RVA: 0x004531DD File Offset: 0x004513DD
 	public bool IsDragging()
 	{
 		return this.DragItem != null;
 	}
 
-	// Token: 0x0601173E RID: 71486 RVA: 0x00446590 File Offset: 0x00444790
+	// Token: 0x0600EBD6 RID: 60374 RVA: 0x004531E8 File Offset: 0x004513E8
 	public void CancelDrag()
 	{
 		if (this.DragItem == null)
@@ -301,7 +301,7 @@ public class DragSortScrollView<[Nullable(0)] TProxy, [Nullable(2)] TData> where
 		}
 	}
 
-	// Token: 0x0601173F RID: 71487 RVA: 0x00446824 File Offset: 0x00444A24
+	// Token: 0x0600EBD7 RID: 60375 RVA: 0x0045347C File Offset: 0x0045167C
 	private void UpdateItem()
 	{
 		List<TProxy> list = new List<TProxy>();
@@ -331,7 +331,7 @@ public class DragSortScrollView<[Nullable(0)] TProxy, [Nullable(2)] TData> where
 		}
 	}
 
-	// Token: 0x06011740 RID: 71488 RVA: 0x00446A24 File Offset: 0x00444C24
+	// Token: 0x0600EBD8 RID: 60376 RVA: 0x0045367C File Offset: 0x0045187C
 	private void OnDragItemPositionChanged()
 	{
 		if (this.DragItem == null || this.DragItem.DragData == null)
@@ -380,7 +380,7 @@ public class DragSortScrollView<[Nullable(0)] TProxy, [Nullable(2)] TData> where
 		}
 	}
 
-	// Token: 0x06011741 RID: 71489 RVA: 0x00446C5C File Offset: 0x00444E5C
+	// Token: 0x0600EBD9 RID: 60377 RVA: 0x004538B4 File Offset: 0x00451AB4
 	private void OnItemDrag(DragSortGridAbstract<TData> item)
 	{
 		if (item == this.DragItem)
@@ -410,7 +410,7 @@ public class DragSortScrollView<[Nullable(0)] TProxy, [Nullable(2)] TData> where
 		}
 	}
 
-	// Token: 0x06011742 RID: 71490 RVA: 0x00446DA1 File Offset: 0x00444FA1
+	// Token: 0x0600EBDA RID: 60378 RVA: 0x004539F9 File Offset: 0x00451BF9
 	private void OnItemDragEnd(DragSortGridAbstract<TData> item)
 	{
 		if (this.DragItem == null)
@@ -424,7 +424,7 @@ public class DragSortScrollView<[Nullable(0)] TProxy, [Nullable(2)] TData> where
 		this.DragItem = null;
 	}
 
-	// Token: 0x06011743 RID: 71491 RVA: 0x00446DDD File Offset: 0x00444FDD
+	// Token: 0x0600EBDB RID: 60379 RVA: 0x00453A35 File Offset: 0x00451C35
 	private void OnItemPointerDown(DragSortGridAbstract<TData> item)
 	{
 		if (item.DragData != null && !item.DragData.IsTweenMoving)
@@ -439,7 +439,7 @@ public class DragSortScrollView<[Nullable(0)] TProxy, [Nullable(2)] TData> where
 		onItemPointerDownCallback(item);
 	}
 
-	// Token: 0x06011744 RID: 71492 RVA: 0x00446E10 File Offset: 0x00445010
+	// Token: 0x0600EBDC RID: 60380 RVA: 0x00453A68 File Offset: 0x00451C68
 	private void OnItemPointerUp(DragSortGridAbstract<TData> item)
 	{
 		Action<DragSortGridAbstract<TData>> onItemPointerUpCallback = this.OnItemPointerUpCallback;
@@ -450,7 +450,7 @@ public class DragSortScrollView<[Nullable(0)] TProxy, [Nullable(2)] TData> where
 		UiNavigationNewController.Instance.NotifyNavigationMousePositionDragState(false);
 	}
 
-	// Token: 0x06011745 RID: 71493 RVA: 0x00446E30 File Offset: 0x00445030
+	// Token: 0x0600EBDD RID: 60381 RVA: 0x00453A88 File Offset: 0x00451C88
 	private void RecycleToPool(TProxy item)
 	{
 		int num = this.CopyItemList.IndexOf(item);
@@ -474,7 +474,7 @@ public class DragSortScrollView<[Nullable(0)] TProxy, [Nullable(2)] TData> where
 		}
 	}
 
-	// Token: 0x06011746 RID: 71494 RVA: 0x00446EC8 File Offset: 0x004450C8
+	// Token: 0x0600EBDE RID: 60382 RVA: 0x00453B20 File Offset: 0x00451D20
 	private void RecycleAll()
 	{
 		foreach (TProxy item in new List<TProxy>(this.CopyItemList))
@@ -483,7 +483,7 @@ public class DragSortScrollView<[Nullable(0)] TProxy, [Nullable(2)] TData> where
 		}
 	}
 
-	// Token: 0x06011747 RID: 71495 RVA: 0x00446F20 File Offset: 0x00445120
+	// Token: 0x0600EBDF RID: 60383 RVA: 0x00453B78 File Offset: 0x00451D78
 	private TProxy CreateCopyItem(DragSortGridData dragData)
 	{
 		if (this.TemplateGrid == null || this.ContentItem == null || !this.ContentItem.Value.Get().IsValid())
@@ -508,7 +508,7 @@ public class DragSortScrollView<[Nullable(0)] TProxy, [Nullable(2)] TData> where
 		return tproxy;
 	}
 
-	// Token: 0x06011748 RID: 71496 RVA: 0x00447040 File Offset: 0x00445240
+	// Token: 0x0600EBE0 RID: 60384 RVA: 0x00453C98 File Offset: 0x00451E98
 	private TProxy GetFromPool(DragSortGridData dragData)
 	{
 		TProxy tproxy = default(TProxy);
@@ -531,7 +531,7 @@ public class DragSortScrollView<[Nullable(0)] TProxy, [Nullable(2)] TData> where
 		return tproxy;
 	}
 
-	// Token: 0x06011749 RID: 71497 RVA: 0x0044710C File Offset: 0x0044530C
+	// Token: 0x0600EBE1 RID: 60385 RVA: 0x00453D64 File Offset: 0x00451F64
 	public void Tick(float delta)
 	{
 		List<TProxy> copyItemList = this.CopyItemList;
@@ -562,7 +562,7 @@ public class DragSortScrollView<[Nullable(0)] TProxy, [Nullable(2)] TData> where
 		}
 	}
 
-	// Token: 0x0601174A RID: 71498 RVA: 0x004471F0 File Offset: 0x004453F0
+	// Token: 0x0600EBE2 RID: 60386 RVA: 0x00453E48 File Offset: 0x00452048
 	public List<TData> GetSortedData()
 	{
 		List<DragSortGridData> list = new List<DragSortGridData>(this.DragDataList);
@@ -575,7 +575,7 @@ public class DragSortScrollView<[Nullable(0)] TProxy, [Nullable(2)] TData> where
 		return list2;
 	}
 
-	// Token: 0x0601174B RID: 71499 RVA: 0x00447284 File Offset: 0x00445484
+	// Token: 0x0600EBE3 RID: 60387 RVA: 0x00453EDC File Offset: 0x004520DC
 	public bool HasChanged()
 	{
 		foreach (DragSortGridData dragSortGridData in this.DragDataList)
@@ -588,14 +588,14 @@ public class DragSortScrollView<[Nullable(0)] TProxy, [Nullable(2)] TData> where
 		return false;
 	}
 
-	// Token: 0x0400847D RID: 33917
+	// Token: 0x040085BB RID: 34235
 	[Nullable(2)]
 	private UUIScrollViewWithScrollbarComponent TargetScroll;
 
-	// Token: 0x0400847E RID: 33918
+	// Token: 0x040085BC RID: 34236
 	private readonly float Spacing;
 
-	// Token: 0x0400847F RID: 33919
+	// Token: 0x040085BD RID: 34237
 	[Nullable(new byte[]
 	{
 		2,
@@ -603,38 +603,38 @@ public class DragSortScrollView<[Nullable(0)] TProxy, [Nullable(2)] TData> where
 	})]
 	private DragSortGridAbstract<TData> DragItem;
 
-	// Token: 0x04008480 RID: 33920
+	// Token: 0x040085BE RID: 34238
 	private readonly float ItemHeight;
 
-	// Token: 0x04008481 RID: 33921
+	// Token: 0x040085BF RID: 34239
 	private readonly float SwapSpeed = MotorcycleMusicPlayerConfig.Instance.GetDragSwapSpeed();
 
-	// Token: 0x04008482 RID: 33922
+	// Token: 0x040085C0 RID: 34240
 	private readonly double AutoScrollThreshold = 100.0;
 
-	// Token: 0x04008483 RID: 33923
+	// Token: 0x040085C1 RID: 34241
 	private readonly double MinScrollSpeed = (double)MotorcycleMusicPlayerConfig.Instance.GetDragScrollSpeedRange().Item1;
 
-	// Token: 0x04008484 RID: 33924
+	// Token: 0x040085C2 RID: 34242
 	private readonly double MaxScrollSpeed = (double)MotorcycleMusicPlayerConfig.Instance.GetDragScrollSpeedRange().Item2;
 
-	// Token: 0x04008485 RID: 33925
+	// Token: 0x040085C3 RID: 34243
 	private List<TProxy> PoolItemList = new List<TProxy>();
 
-	// Token: 0x04008486 RID: 33926
+	// Token: 0x040085C4 RID: 34244
 	private List<TProxy> CopyItemList = new List<TProxy>();
 
-	// Token: 0x04008487 RID: 33927
+	// Token: 0x040085C5 RID: 34245
 	private readonly Dictionary<DragSortGridData, TProxy> CopyItemMap = new Dictionary<DragSortGridData, TProxy>();
 
-	// Token: 0x04008488 RID: 33928
+	// Token: 0x040085C6 RID: 34246
 	private List<DragSortGridData> DragDataList = new List<DragSortGridData>();
 
-	// Token: 0x04008489 RID: 33929
+	// Token: 0x040085C7 RID: 34247
 	[Nullable(2)]
 	private UUIItem TemplateGrid;
 
-	// Token: 0x0400848A RID: 33930
+	// Token: 0x040085C8 RID: 34248
 	[Nullable(new byte[]
 	{
 		2,
@@ -642,13 +642,13 @@ public class DragSortScrollView<[Nullable(0)] TProxy, [Nullable(2)] TData> where
 	})]
 	private Func<TProxy> GridProxyCreateFunction;
 
-	// Token: 0x0400848B RID: 33931
+	// Token: 0x040085C9 RID: 34249
 	private IReadOnlyList<TData> DataList = new List<TData>();
 
-	// Token: 0x0400848C RID: 33932
+	// Token: 0x040085CA RID: 34250
 	private int DragItemBeginIndex;
 
-	// Token: 0x0400848D RID: 33933
+	// Token: 0x040085CB RID: 34251
 	[Nullable(new byte[]
 	{
 		2,
@@ -657,7 +657,7 @@ public class DragSortScrollView<[Nullable(0)] TProxy, [Nullable(2)] TData> where
 	})]
 	public Action<DragSortGridAbstract<TData>> OnItemPointerDownCallback;
 
-	// Token: 0x0400848E RID: 33934
+	// Token: 0x040085CC RID: 34252
 	[Nullable(new byte[]
 	{
 		2,

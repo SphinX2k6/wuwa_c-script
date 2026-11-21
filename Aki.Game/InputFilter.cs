@@ -1,53 +1,52 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Input;
 
-// Token: 0x02000DE1 RID: 3553
+// Token: 0x02000293 RID: 659
 [NullableContext(1)]
 [Nullable(0)]
 public class InputFilter
 {
-	// Token: 0x06005575 RID: 21877 RVA: 0x000F6360 File Offset: 0x000F4560
+	// Token: 0x060028FF RID: 10495 RVA: 0x000FD858 File Offset: 0x000FBA58
 	[NullableContext(2)]
 	public InputFilter(IEnumerable<EInputAction> actions, IEnumerable<EInputAction> blockActions, IEnumerable<EInputAxis> axes, IEnumerable<EInputAxis> blockAxes)
 	{
-		this.Actions = new HashSet<EInputAction>(actions ?? Enumerable.Empty<EInputAction>());
-		this.BlockActions = new HashSet<EInputAction>(blockActions ?? Enumerable.Empty<EInputAction>());
-		this.Axes = new HashSet<EInputAxis>(axes ?? Enumerable.Empty<EInputAxis>());
-		this.BlockAxes = new HashSet<EInputAxis>(blockAxes ?? Enumerable.Empty<EInputAxis>());
+		this.Actions = new HashSet<EInputAction>(actions ?? Array.Empty<EInputAction>());
+		this.BlockActions = new HashSet<EInputAction>(blockActions ?? Array.Empty<EInputAction>());
+		this.Axes = new HashSet<EInputAxis>(axes ?? Array.Empty<EInputAxis>());
+		this.BlockAxes = new HashSet<EInputAxis>(blockAxes ?? Array.Empty<EInputAxis>());
 	}
 
-	// Token: 0x06005576 RID: 21878 RVA: 0x000F63C8 File Offset: 0x000F45C8
+	// Token: 0x06002900 RID: 10496 RVA: 0x000FD8C0 File Offset: 0x000FBAC0
 	public bool ListenToAction(EInputAction action)
 	{
 		HashSet<EInputAction> actions = this.Actions;
 		return actions != null && actions.Contains(action);
 	}
 
-	// Token: 0x06005577 RID: 21879 RVA: 0x000F63DC File Offset: 0x000F45DC
+	// Token: 0x06002901 RID: 10497 RVA: 0x000FD8D4 File Offset: 0x000FBAD4
 	public bool ListenToAxis(EInputAxis axis)
 	{
 		HashSet<EInputAxis> axes = this.Axes;
 		return axes != null && axes.Contains(axis);
 	}
 
-	// Token: 0x06005578 RID: 21880 RVA: 0x000F63F0 File Offset: 0x000F45F0
+	// Token: 0x06002902 RID: 10498 RVA: 0x000FD8E8 File Offset: 0x000FBAE8
 	public bool BlockAction(EInputAction action)
 	{
 		HashSet<EInputAction> blockActions = this.BlockActions;
 		return blockActions != null && blockActions.Contains(action);
 	}
 
-	// Token: 0x06005579 RID: 21881 RVA: 0x000F6404 File Offset: 0x000F4604
+	// Token: 0x06002903 RID: 10499 RVA: 0x000FD8FC File Offset: 0x000FBAFC
 	public bool BlockAxis(EInputAxis axis)
 	{
 		HashSet<EInputAxis> blockAxes = this.BlockAxes;
 		return blockAxes != null && blockAxes.Contains(axis);
 	}
 
-	// Token: 0x0600557A RID: 21882 RVA: 0x000F6418 File Offset: 0x000F4618
+	// Token: 0x06002904 RID: 10500 RVA: 0x000FD910 File Offset: 0x000FBB10
 	public InputFilter Union(InputFilter other)
 	{
 		InputFilter inputFilter = new InputFilter(this.Actions, this.BlockActions, this.Axes, this.BlockAxes);
@@ -58,15 +57,15 @@ public class InputFilter
 		return inputFilter;
 	}
 
-	// Token: 0x040026C1 RID: 9921
+	// Token: 0x04002749 RID: 10057
 	public HashSet<EInputAction> Actions;
 
-	// Token: 0x040026C2 RID: 9922
+	// Token: 0x0400274A RID: 10058
 	public HashSet<EInputAction> BlockActions;
 
-	// Token: 0x040026C3 RID: 9923
+	// Token: 0x0400274B RID: 10059
 	public HashSet<EInputAxis> Axes;
 
-	// Token: 0x040026C4 RID: 9924
+	// Token: 0x0400274C RID: 10060
 	public HashSet<EInputAxis> BlockAxes;
 }

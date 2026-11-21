@@ -6,16 +6,16 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x0200019B RID: 411
+// Token: 0x0200019F RID: 415
 [NullableContext(1)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/AnimNotify/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AnimNotify/TsAnimNotifyBulletPattern.TsAnimNotifyBulletPattern_C")]
 public class TsAnimNotifyBulletPattern : TsAnimNotifyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x1700043C RID: 1084
-	// (get) Token: 0x06001A1F RID: 6687 RVA: 0x00089054 File Offset: 0x00087254
-	// (set) Token: 0x06001A20 RID: 6688 RVA: 0x0008908D File Offset: 0x0008728D
+	// Token: 0x1700045E RID: 1118
+	// (get) Token: 0x06001ABC RID: 6844 RVA: 0x0008F5BC File Offset: 0x0008D7BC
+	// (set) Token: 0x06001ABD RID: 6845 RVA: 0x0008F5F5 File Offset: 0x0008D7F5
 	[UProperty(EPropertyFlags.CPF_None)]
 	public TSoftObjectPtr<UKuroBulletPatternDataAsset> 弹幕数据
 	{
@@ -35,32 +35,28 @@ public class TsAnimNotifyBulletPattern : TsAnimNotifyBase, IUnrealUObject, IUnre
 		}
 	}
 
-	// Token: 0x06001A21 RID: 6689 RVA: 0x000890B4 File Offset: 0x000872B4
+	// Token: 0x06001ABE RID: 6846 RVA: 0x0008F61C File Offset: 0x0008D81C
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_Notify(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_Notify"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotify.__K2_Notify_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyBulletPattern) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_Notify"), TsAnimNotifyBulletPattern.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotify.__K2_Notify_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotify.__K2_Notify_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
-			*(&ptr2->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+			return this.K2_Notify_Implementation(meshComp, animation);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotify.__K2_Notify_FunctionParams* ptr = stackalloc UKuroAnimNotify.__K2_Notify_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotify.__K2_Notify_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
+		*(&ptr->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x06001A22 RID: 6690 RVA: 0x00089154 File Offset: 0x00087354
+	// Token: 0x06001ABF RID: 6847 RVA: 0x0008F6D4 File Offset: 0x0008D8D4
 	[NullableContext(2)]
 	protected virtual bool K2_Notify_Implementation(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
@@ -100,35 +96,31 @@ public class TsAnimNotifyBulletPattern : TsAnimNotifyBase, IUnrealUObject, IUnre
 		return true;
 	}
 
-	// Token: 0x06001A23 RID: 6691 RVA: 0x00089258 File Offset: 0x00087458
+	// Token: 0x06001AC0 RID: 6848 RVA: 0x0008F7D8 File Offset: 0x0008D9D8
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override string GetNotifyName()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetNotifyName"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UAnimNotify.__GetNotifyName_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyBulletPattern) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetNotifyName"), TsAnimNotifyBulletPattern.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UAnimNotify.__GetNotifyName_FunctionParams*)ptr + 15L / (long)sizeof(UAnimNotify.__GetNotifyName_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.GetNotifyName_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		string result = FString.ToString((void*)(&ptr2->__Result));
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UAnimNotify.__GetNotifyName_FunctionParams* ptr = stackalloc UAnimNotify.__GetNotifyName_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UAnimNotify.__GetNotifyName_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		string result = FString.ToString((void*)(&ptr->__Result));
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return result;
 	}
 
-	// Token: 0x06001A24 RID: 6692 RVA: 0x000892D3 File Offset: 0x000874D3
+	// Token: 0x06001AC1 RID: 6849 RVA: 0x0008F868 File Offset: 0x0008DA68
 	protected override string GetNotifyName_Implementation()
 	{
 		return "子弹弹幕";
 	}
 
-	// Token: 0x06001A25 RID: 6693 RVA: 0x000892DA File Offset: 0x000874DA
+	// Token: 0x06001AC2 RID: 6850 RVA: 0x0008F86F File Offset: 0x0008DA6F
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsAnimNotifyBulletPattern._ClassPtr == IntPtr.Zero)
@@ -138,22 +130,22 @@ public class TsAnimNotifyBulletPattern : TsAnimNotifyBase, IUnrealUObject, IUnre
 		return TsAnimNotifyBulletPattern._ClassPtr;
 	}
 
-	// Token: 0x06001A26 RID: 6694 RVA: 0x00089300 File Offset: 0x00087500
+	// Token: 0x06001AC3 RID: 6851 RVA: 0x0008F894 File Offset: 0x0008DA94
 	public TsAnimNotifyBulletPattern() : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyBulletPattern.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06001A27 RID: 6695 RVA: 0x00089328 File Offset: 0x00087528
+	// Token: 0x06001AC4 RID: 6852 RVA: 0x0008F8BC File Offset: 0x0008DABC
 	public TsAnimNotifyBulletPattern(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyBulletPattern.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06001A28 RID: 6696 RVA: 0x0008935B File Offset: 0x0008755B
+	// Token: 0x06001AC5 RID: 6853 RVA: 0x0008F8EF File Offset: 0x0008DAEF
 	protected TsAnimNotifyBulletPattern(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06001A29 RID: 6697 RVA: 0x00089364 File Offset: 0x00087564
+	// Token: 0x06001AC6 RID: 6854 RVA: 0x0008F8F8 File Offset: 0x0008DAF8
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_K2_Notify_Implementation(UKuroAnimNotify.__K2_Notify_FunctionParams* __Params)
 	{
@@ -162,26 +154,26 @@ public class TsAnimNotifyBulletPattern : TsAnimNotifyBase, IUnrealUObject, IUnre
 		__Params->__Result = this.K2_Notify_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x06001A2A RID: 6698 RVA: 0x00089397 File Offset: 0x00087597
+	// Token: 0x06001AC7 RID: 6855 RVA: 0x0008F92B File Offset: 0x0008DB2B
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_GetNotifyName_Implementation(UAnimNotify.__GetNotifyName_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), this.GetNotifyName_Implementation());
 	}
 
-	// Token: 0x04001105 RID: 4357
+	// Token: 0x04001148 RID: 4424
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AnimNotify/TsAnimNotifyBulletPattern.TsAnimNotifyBulletPattern_C";
 
-	// Token: 0x04001106 RID: 4358
+	// Token: 0x04001149 RID: 4425
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04001107 RID: 4359
+	// Token: 0x0400114A RID: 4426
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x04001108 RID: 4360
+	// Token: 0x0400114B RID: 4427
 	private static int __PropertyOffset_弹幕数据;
 
-	// Token: 0x04001109 RID: 4361
+	// Token: 0x0400114C RID: 4428
 	[Nullable(new byte[]
 	{
 		2,

@@ -4,20 +4,20 @@ using Aki.UniverseEditor.Interface.Fbs.Common;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200563C RID: 22076
+	// Token: 0x02005BDA RID: 23514
 	public class INpcPerformStateT
 	{
-		// Token: 0x1700A38B RID: 41867
-		// (get) Token: 0x06024B1B RID: 150299 RVA: 0x005109DC File Offset: 0x0050EBDC
-		// (set) Token: 0x06024B1C RID: 150300 RVA: 0x005109E4 File Offset: 0x0050EBE4
+		// Token: 0x1700AC15 RID: 44053
+		// (get) Token: 0x06026D3A RID: 159034 RVA: 0x00551300 File Offset: 0x0054F500
+		// (set) Token: 0x06026D3B RID: 159035 RVA: 0x00551308 File Offset: 0x0054F508
 		public IInitNpcPerformStateT InitState { get; set; }
 
-		// Token: 0x1700A38C RID: 41868
-		// (get) Token: 0x06024B1D RID: 150301 RVA: 0x005109ED File Offset: 0x0050EBED
-		// (set) Token: 0x06024B1E RID: 150302 RVA: 0x005109F5 File Offset: 0x0050EBF5
+		// Token: 0x1700AC16 RID: 44054
+		// (get) Token: 0x06026D3C RID: 159036 RVA: 0x00551311 File Offset: 0x0054F511
+		// (set) Token: 0x06026D3D RID: 159037 RVA: 0x00551319 File Offset: 0x0054F519
 		public List<INpcPerformStateConfigT> Configs { get; set; }
 
-		// Token: 0x06024B1F RID: 150303 RVA: 0x005109FE File Offset: 0x0050EBFE
+		// Token: 0x06026D3E RID: 159038 RVA: 0x00551322 File Offset: 0x0054F522
 		public INpcPerformStateT()
 		{
 			this.InitState = null;

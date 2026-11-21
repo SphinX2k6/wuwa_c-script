@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x0200613A RID: 24890
+	// Token: 0x020050B8 RID: 20664
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoverlikeLevelTipsItem : UiPanelBase
 	{
-		// Token: 0x0603EEC6 RID: 257734 RVA: 0x00F32C74 File Offset: 0x00F30E74
+		// Token: 0x06033B86 RID: 211846 RVA: 0x00E79B54 File Offset: 0x00E77D54
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603EEC7 RID: 257735 RVA: 0x00F32D64 File Offset: 0x00F30F64
+		// Token: 0x06033B87 RID: 211847 RVA: 0x00E79C44 File Offset: 0x00E77E44
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoverlikeLevelTipsItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603EEC8 RID: 257736 RVA: 0x00F32DA8 File Offset: 0x00F30FA8
+		// Token: 0x06033B88 RID: 211848 RVA: 0x00E79C88 File Offset: 0x00E77E88
 		protected override void OnStart()
 		{
 			this.LineLayout = new GenericLayout<RoverlikeRogueLevelLineItem, IRoverlikeRogueLevelLineData>(base.GetHorizontalLayout(1), new Func<RoverlikeRogueLevelLineItem>(this.CreateLevelLineItem), base.GetItem(2).GetOwner() as AUIBaseActor, false, true);
@@ -57,13 +57,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			base.GetText(4).SetUIActive(true);
 		}
 
-		// Token: 0x0603EEC9 RID: 257737 RVA: 0x00F32E00 File Offset: 0x00F31000
+		// Token: 0x06033B89 RID: 211849 RVA: 0x00E79CE0 File Offset: 0x00E77EE0
 		private RoverlikeRogueLevelLineItem CreateLevelLineItem()
 		{
 			return new RoverlikeRogueLevelLineItem();
 		}
 
-		// Token: 0x0603EECA RID: 257738 RVA: 0x00F32E08 File Offset: 0x00F31008
+		// Token: 0x06033B8A RID: 211850 RVA: 0x00E79CE8 File Offset: 0x00E77EE8
 		public void Refresh(RoverlikeInstanceData instanceData, bool combinationText, [Nullable(2)] Action callback = null)
 		{
 			List<IRoverlikeRogueLevelLineData> dataList = this.BuildLevelLineDataList(instanceData);
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.RefreshLines(dataList, callback);
 		}
 
-		// Token: 0x0603EECB RID: 257739 RVA: 0x00F32E2D File Offset: 0x00F3102D
+		// Token: 0x06033B8B RID: 211851 RVA: 0x00E79D0D File Offset: 0x00E77F0D
 		public void PlayCurrentLevelSequence(string sequenceName)
 		{
 			RoverlikeRogueLevelLineItem levelLineItem = this.GetLevelLineItem(this.CurrentLevelIndex);
@@ -82,13 +82,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			levelLineItem.PlayCurrentNodeSequence(sequenceName);
 		}
 
-		// Token: 0x0603EECC RID: 257740 RVA: 0x00F32E46 File Offset: 0x00F31046
+		// Token: 0x06033B8C RID: 211852 RVA: 0x00E79D26 File Offset: 0x00E77F26
 		public void SetEffectPanelVisible(bool bVisible)
 		{
 			base.GetItem(5).SetUIActive(bVisible);
 		}
 
-		// Token: 0x0603EECD RID: 257741 RVA: 0x00F32E58 File Offset: 0x00F31058
+		// Token: 0x06033B8D RID: 211853 RVA: 0x00E79D38 File Offset: 0x00E77F38
 		private void RefreshTips(RoverlikeInstanceData instanceData, bool combinationText)
 		{
 			RoverRogueRoomType? roomTypeConfig = RoverlikeConfig.Instance.GetRoomTypeConfig(instanceData.CurRoomTypeId);
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EECE RID: 257742 RVA: 0x00F32FF0 File Offset: 0x00F311F0
+		// Token: 0x06033B8E RID: 211854 RVA: 0x00E79ED0 File Offset: 0x00E780D0
 		private void RefreshLines(List<IRoverlikeRogueLevelLineData> dataList, [Nullable(2)] Action callback = null)
 		{
 			if (dataList.Count == 0)
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			lastNode2.SetActive(true);
 		}
 
-		// Token: 0x0603EECF RID: 257743 RVA: 0x00F33090 File Offset: 0x00F31290
+		// Token: 0x06033B8F RID: 211855 RVA: 0x00E79F70 File Offset: 0x00E78170
 		[NullableContext(2)]
 		private RoverlikeRogueLevelLineItem GetLevelLineItem(int index)
 		{
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return lineLayout2.GetLayoutItemByIndex(index);
 		}
 
-		// Token: 0x0603EED0 RID: 257744 RVA: 0x00F330DC File Offset: 0x00F312DC
+		// Token: 0x06033B90 RID: 211856 RVA: 0x00E79FBC File Offset: 0x00E781BC
 		private List<IRoverlikeRogueLevelLineData> BuildLevelLineDataList(RoverlikeInstanceData instanceData)
 		{
 			List<IRoverlikeRogueLevelLineData> list = new List<IRoverlikeRogueLevelLineData>();
@@ -218,7 +218,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return list;
 		}
 
-		// Token: 0x0603EED1 RID: 257745 RVA: 0x00F3319C File Offset: 0x00F3139C
+		// Token: 0x06033B91 RID: 211857 RVA: 0x00E7A07C File Offset: 0x00E7827C
 		[NullableContext(0)]
 		private ValueTuple<int, int> GetCurrentFloorRange([Nullable(1)] RoverlikeInstanceData instanceData, int curIndex, int total)
 		{
@@ -235,7 +235,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return new ValueTuple<int, int>(0, total);
 		}
 
-		// Token: 0x0603EED2 RID: 257746 RVA: 0x00F331FC File Offset: 0x00F313FC
+		// Token: 0x06033B92 RID: 211858 RVA: 0x00E7A0DC File Offset: 0x00E782DC
 		private int GetCurrentFloorNumber(RoverlikeInstanceData instanceData, int curIndex)
 		{
 			List<int> roadLayerIndexList = instanceData.RoadLayerIndexList;
@@ -249,7 +249,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return 1;
 		}
 
-		// Token: 0x04020D91 RID: 134545
+		// Token: 0x0401B6BE RID: 112318
 		[Nullable(new byte[]
 		{
 			2,
@@ -258,36 +258,36 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		private GenericLayout<RoverlikeRogueLevelLineItem, IRoverlikeRogueLevelLineData> LineLayout;
 
-		// Token: 0x04020D92 RID: 134546
+		// Token: 0x0401B6BF RID: 112319
 		[Nullable(2)]
 		private RoverlikeRogueLevelLineItem LastNode;
 
-		// Token: 0x04020D93 RID: 134547
+		// Token: 0x0401B6C0 RID: 112320
 		private int CurrentLevelIndex = -1;
 
-		// Token: 0x04020D94 RID: 134548
+		// Token: 0x0401B6C1 RID: 112321
 		public bool ShowCurrentNode = true;
 
-		// Token: 0x0200C394 RID: 50068
+		// Token: 0x0200AD7B RID: 44411
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403B052 RID: 241746
+			// Token: 0x040359B3 RID: 219571
 			public const int TxtTips = 0;
 
-			// Token: 0x0403B053 RID: 241747
+			// Token: 0x040359B4 RID: 219572
 			public const int LineLayout = 1;
 
-			// Token: 0x0403B054 RID: 241748
+			// Token: 0x040359B5 RID: 219573
 			public const int ItemLevelLine = 2;
 
-			// Token: 0x0403B055 RID: 241749
+			// Token: 0x040359B6 RID: 219574
 			public const int ItemLastLine = 3;
 
-			// Token: 0x0403B056 RID: 241750
+			// Token: 0x040359B7 RID: 219575
 			public const int TxtLevelProgress = 4;
 
-			// Token: 0x0403B057 RID: 241751
+			// Token: 0x040359B8 RID: 219576
 			public const int PanelEffect = 5;
 		}
 	}

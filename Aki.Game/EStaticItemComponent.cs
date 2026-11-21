@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x02002492 RID: 9362
+// Token: 0x02001979 RID: 6521
 public enum EStaticItemComponent
 {
-	// Token: 0x04008D8A RID: 36234
+	// Token: 0x04008ED3 RID: 36563
 	Toggle,
-	// Token: 0x04008D8B RID: 36235
+	// Token: 0x04008ED4 RID: 36564
 	VisionAssembleItem1,
-	// Token: 0x04008D8C RID: 36236
+	// Token: 0x04008ED5 RID: 36565
 	VisionAssembleItem2,
-	// Token: 0x04008D8D RID: 36237
+	// Token: 0x04008ED6 RID: 36566
 	VisionAssembleItem3,
-	// Token: 0x04008D8E RID: 36238
+	// Token: 0x04008ED7 RID: 36567
 	VisionAssembleItem4,
-	// Token: 0x04008D8F RID: 36239
+	// Token: 0x04008ED8 RID: 36568
 	VisionAssembleItem5
 }

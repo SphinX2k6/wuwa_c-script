@@ -4,65 +4,65 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020055C7 RID: 21959
+	// Token: 0x02005B65 RID: 23397
 	public class IMotorPullInteractT
 	{
-		// Token: 0x1700A24E RID: 41550
-		// (get) Token: 0x0602462F RID: 149039 RVA: 0x00505F76 File Offset: 0x00504176
-		// (set) Token: 0x06024630 RID: 149040 RVA: 0x00505F7E File Offset: 0x0050417E
+		// Token: 0x1700AAD6 RID: 43734
+		// (get) Token: 0x0602683C RID: 157756 RVA: 0x005464EE File Offset: 0x005446EE
+		// (set) Token: 0x0602683D RID: 157757 RVA: 0x005464F6 File Offset: 0x005446F6
 		public EHookInteractType Type { get; set; }
 
-		// Token: 0x1700A24F RID: 41551
-		// (get) Token: 0x06024631 RID: 149041 RVA: 0x00505F87 File Offset: 0x00504187
-		// (set) Token: 0x06024632 RID: 149042 RVA: 0x00505F8F File Offset: 0x0050418F
+		// Token: 0x1700AAD7 RID: 43735
+		// (get) Token: 0x0602683E RID: 157758 RVA: 0x005464FF File Offset: 0x005446FF
+		// (set) Token: 0x0602683F RID: 157759 RVA: 0x00546507 File Offset: 0x00544707
 		public List<IActionInfoT> HookActions { get; set; }
 
-		// Token: 0x1700A250 RID: 41552
-		// (get) Token: 0x06024633 RID: 149043 RVA: 0x00505F98 File Offset: 0x00504198
-		// (set) Token: 0x06024634 RID: 149044 RVA: 0x00505FA0 File Offset: 0x005041A0
+		// Token: 0x1700AAD8 RID: 43736
+		// (get) Token: 0x06026840 RID: 157760 RVA: 0x00546510 File Offset: 0x00544710
+		// (set) Token: 0x06026841 RID: 157761 RVA: 0x00546518 File Offset: 0x00544718
 		public List<IActionInfoT> ExitHookActions { get; set; }
 
-		// Token: 0x1700A251 RID: 41553
-		// (get) Token: 0x06024635 RID: 149045 RVA: 0x00505FA9 File Offset: 0x005041A9
-		// (set) Token: 0x06024636 RID: 149046 RVA: 0x00505FB1 File Offset: 0x005041B1
+		// Token: 0x1700AAD9 RID: 43737
+		// (get) Token: 0x06026842 RID: 157762 RVA: 0x00546521 File Offset: 0x00544721
+		// (set) Token: 0x06026843 RID: 157763 RVA: 0x00546529 File Offset: 0x00544729
 		public List<IActionInfoT> FinishActions { get; set; }
 
-		// Token: 0x1700A252 RID: 41554
-		// (get) Token: 0x06024637 RID: 149047 RVA: 0x00505FBA File Offset: 0x005041BA
-		// (set) Token: 0x06024638 RID: 149048 RVA: 0x00505FC2 File Offset: 0x005041C2
+		// Token: 0x1700AADA RID: 43738
+		// (get) Token: 0x06026844 RID: 157764 RVA: 0x00546532 File Offset: 0x00544732
+		// (set) Token: 0x06026845 RID: 157765 RVA: 0x0054653A File Offset: 0x0054473A
 		public IClientHookActionConfigT ClientHookActionConfig { get; set; }
 
-		// Token: 0x1700A253 RID: 41555
-		// (get) Token: 0x06024639 RID: 149049 RVA: 0x00505FCB File Offset: 0x005041CB
-		// (set) Token: 0x0602463A RID: 149050 RVA: 0x00505FD3 File Offset: 0x005041D3
+		// Token: 0x1700AADB RID: 43739
+		// (get) Token: 0x06026846 RID: 157766 RVA: 0x00546543 File Offset: 0x00544743
+		// (set) Token: 0x06026847 RID: 157767 RVA: 0x0054654B File Offset: 0x0054474B
 		public bool IsPlayPullProgress { get; set; }
 
-		// Token: 0x1700A254 RID: 41556
-		// (get) Token: 0x0602463B RID: 149051 RVA: 0x00505FDC File Offset: 0x005041DC
-		// (set) Token: 0x0602463C RID: 149052 RVA: 0x00505FE4 File Offset: 0x005041E4
+		// Token: 0x1700AADC RID: 43740
+		// (get) Token: 0x06026848 RID: 157768 RVA: 0x00546554 File Offset: 0x00544754
+		// (set) Token: 0x06026849 RID: 157769 RVA: 0x0054655C File Offset: 0x0054475C
 		public float PullMoveSpeed { get; set; }
 
-		// Token: 0x1700A255 RID: 41557
-		// (get) Token: 0x0602463D RID: 149053 RVA: 0x00505FED File Offset: 0x005041ED
-		// (set) Token: 0x0602463E RID: 149054 RVA: 0x00505FF5 File Offset: 0x005041F5
+		// Token: 0x1700AADD RID: 43741
+		// (get) Token: 0x0602684A RID: 157770 RVA: 0x00546565 File Offset: 0x00544765
+		// (set) Token: 0x0602684B RID: 157771 RVA: 0x0054656D File Offset: 0x0054476D
 		public bool IsFixedWhenNotRide { get; set; }
 
-		// Token: 0x1700A256 RID: 41558
-		// (get) Token: 0x0602463F RID: 149055 RVA: 0x00505FFE File Offset: 0x005041FE
-		// (set) Token: 0x06024640 RID: 149056 RVA: 0x00506006 File Offset: 0x00504206
+		// Token: 0x1700AADE RID: 43742
+		// (get) Token: 0x0602684C RID: 157772 RVA: 0x00546576 File Offset: 0x00544776
+		// (set) Token: 0x0602684D RID: 157773 RVA: 0x0054657E File Offset: 0x0054477E
 		public bool DisableAreaEffect { get; set; }
 
-		// Token: 0x1700A257 RID: 41559
-		// (get) Token: 0x06024641 RID: 149057 RVA: 0x0050600F File Offset: 0x0050420F
-		// (set) Token: 0x06024642 RID: 149058 RVA: 0x00506017 File Offset: 0x00504217
+		// Token: 0x1700AADF RID: 43743
+		// (get) Token: 0x0602684E RID: 157774 RVA: 0x00546587 File Offset: 0x00544787
+		// (set) Token: 0x0602684F RID: 157775 RVA: 0x0054658F File Offset: 0x0054478F
 		public bool DisableCollectEffect { get; set; }
 
-		// Token: 0x1700A258 RID: 41560
-		// (get) Token: 0x06024643 RID: 149059 RVA: 0x00506020 File Offset: 0x00504220
-		// (set) Token: 0x06024644 RID: 149060 RVA: 0x00506028 File Offset: 0x00504228
+		// Token: 0x1700AAE0 RID: 43744
+		// (get) Token: 0x06026850 RID: 157776 RVA: 0x00546598 File Offset: 0x00544798
+		// (set) Token: 0x06026851 RID: 157777 RVA: 0x005465A0 File Offset: 0x005447A0
 		public byte NullMask { get; set; }
 
-		// Token: 0x06024645 RID: 149061 RVA: 0x00506034 File Offset: 0x00504234
+		// Token: 0x06026852 RID: 157778 RVA: 0x005465AC File Offset: 0x005447AC
 		public IMotorPullInteractT()
 		{
 			this.Type = EHookInteractType.FixedPointHook;

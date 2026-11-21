@@ -7,38 +7,43 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 
-// Token: 0x0200239E RID: 9118
+// Token: 0x02001883 RID: 6275
 [Controller(0)]
 public class WeekCardController : UiControllerBase
 {
-	// Token: 0x060123C9 RID: 74697 RVA: 0x0047E27E File Offset: 0x0047C47E
+	// Token: 0x0600F87B RID: 63611 RVA: 0x0048B6EA File Offset: 0x004898EA
 	protected override bool OnInit()
 	{
 		return true;
 	}
 
-	// Token: 0x060123CA RID: 74698 RVA: 0x0047E281 File Offset: 0x0047C481
+	// Token: 0x0600F87C RID: 63612 RVA: 0x0048B6ED File Offset: 0x004898ED
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.EffectiveWeekCardInfoNotify, new Action<IMessage, Net.CallbackStatus>(this.OnWeekCardInfoResponse));
 	}
 
-	// Token: 0x060123CB RID: 74699 RVA: 0x0047E29F File Offset: 0x0047C49F
+	// Token: 0x0600F87D RID: 63613 RVA: 0x0048B70B File Offset: 0x0048990B
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.EffectiveWeekCardInfoNotify);
 	}
 
-	// Token: 0x060123CC RID: 74700 RVA: 0x0047E2B4 File Offset: 0x0047C4B4
+	// Token: 0x0600F87E RID: 63614 RVA: 0x0048B720 File Offset: 0x00489920
 	[NullableContext(2)]
 	private void OnWeekCardInfoResponse(IMessage msg, Net.CallbackStatus status)
 	{
 		EffectiveWeekCardInfoNotify effectiveWeekCardInfoNotify = (EffectiveWeekCardInfoNotify)msg;
-		List<WeekCardInfo> weekCardInfos = (((effectiveWeekCardInfoNotify != null) ? effectiveWeekCardInfoNotify.WeekCardInfos : null) != null) ? new List<WeekCardInfo>(effectiveWeekCardInfoNotify.WeekCardInfos) : new List<WeekCardInfo>();
-		WeekCardModel.Instance.SetWeekCardInfos(weekCardInfos);
+		List<WeekCardInfo> list = (((effectiveWeekCardInfoNotify != null) ? effectiveWeekCardInfoNotify.WeekCardInfos : null) != null) ? new List<WeekCardInfo>(effectiveWeekCardInfoNotify.WeekCardInfos) : new List<WeekCardInfo>();
+		int[] array = new int[list.Count];
+		for (int i = 0; i < list.Count; i++)
+		{
+			array[i] = list[i].WeekCardId;
+		}
+		WeekCardModel.Instance.SetWeekCardInfos(list);
 	}
 
-	// Token: 0x060123CD RID: 74701 RVA: 0x0047E2F4 File Offset: 0x0047C4F4
+	// Token: 0x0600F87F RID: 63615 RVA: 0x0048B78C File Offset: 0x0048998C
 	public UniTask<bool> RequestWeekCardInfo(int weekCardId)
 	{
 		WeekCardController.<RequestWeekCardInfo>d__4 <RequestWeekCardInfo>d__;
@@ -49,7 +54,7 @@ public class WeekCardController : UiControllerBase
 		return <RequestWeekCardInfo>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060123CE RID: 74702 RVA: 0x0047E338 File Offset: 0x0047C538
+	// Token: 0x0600F880 RID: 63616 RVA: 0x0048B7D0 File Offset: 0x004899D0
 	public UniTask<bool> RequestWeekCardReward(int contentId)
 	{
 		WeekCardController.<RequestWeekCardReward>d__5 <RequestWeekCardReward>d__;
@@ -60,8 +65,8 @@ public class WeekCardController : UiControllerBase
 		return <RequestWeekCardReward>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x170017A4 RID: 6052
-	// (get) Token: 0x060123CF RID: 74703 RVA: 0x0047E37B File Offset: 0x0047C57B
+	// Token: 0x170017DE RID: 6110
+	// (get) Token: 0x0600F881 RID: 63617 RVA: 0x0048B813 File Offset: 0x00489A13
 	[Nullable(1)]
 	public static WeekCardController Instance
 	{
@@ -72,7 +77,7 @@ public class WeekCardController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060123D0 RID: 74704 RVA: 0x0047E382 File Offset: 0x0047C582
+	// Token: 0x0600F882 RID: 63618 RVA: 0x0048B81A File Offset: 0x00489A1A
 	[NullableContext(1)]
 	public static WeekCardController GetOrCreateInstance()
 	{
@@ -83,7 +88,7 @@ public class WeekCardController : UiControllerBase
 		return WeekCardController._Instance;
 	}
 
-	// Token: 0x060123D1 RID: 74705 RVA: 0x0047E396 File Offset: 0x0047C596
+	// Token: 0x0600F883 RID: 63619 RVA: 0x0048B82E File Offset: 0x00489A2E
 	public static bool CreateInstance()
 	{
 		if (WeekCardController._Instance != null)
@@ -94,24 +99,24 @@ public class WeekCardController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x060123D2 RID: 74706 RVA: 0x0047E3AC File Offset: 0x0047C5AC
+	// Token: 0x0600F884 RID: 63620 RVA: 0x0048B844 File Offset: 0x00489A44
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060123D3 RID: 74707 RVA: 0x0047E3AE File Offset: 0x0047C5AE
+	// Token: 0x0600F885 RID: 63621 RVA: 0x0048B846 File Offset: 0x00489A46
 	public static void ResetStaticDefaultValue()
 	{
 		WeekCardController._Instance = null;
 	}
 
-	// Token: 0x060123D4 RID: 74708 RVA: 0x0047E3B6 File Offset: 0x0047C5B6
+	// Token: 0x0600F886 RID: 63622 RVA: 0x0048B84E File Offset: 0x00489A4E
 	static WeekCardController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(WeekCardController.CreateStaticDefaultValue), new Action(WeekCardController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040089C3 RID: 35267
+	// Token: 0x04008B0A RID: 35594
 	[Nullable(2)]
 	private static WeekCardController _Instance;
 }

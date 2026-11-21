@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020003FA RID: 1018
+	// Token: 0x02000410 RID: 1040
 	public class ConfigHonamiStoryOutDialogById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060017E3 RID: 6115 RVA: 0x000E0BD1 File Offset: 0x000DEDD1
+		// Token: 0x06001867 RID: 6247 RVA: 0x000E7325 File Offset: 0x000E5525
 		static ConfigHonamiStoryOutDialogById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigHonamiStoryOutDialogById.CreateStaticDefaultValue), new Action(ConfigHonamiStoryOutDialogById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060017E4 RID: 6116 RVA: 0x000E0BF0 File Offset: 0x000DEDF0
+		// Token: 0x06001868 RID: 6248 RVA: 0x000E7344 File Offset: 0x000E5544
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigHonamiStoryOutDialogById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060017E5 RID: 6117 RVA: 0x000E0C6F File Offset: 0x000DEE6F
+		// Token: 0x06001869 RID: 6249 RVA: 0x000E73C3 File Offset: 0x000E55C3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigHonamiStoryOutDialogById.LogPair = null;
 			ConfigHonamiStoryOutDialogById.HandleId = 0;
 		}
 
-		// Token: 0x060017E6 RID: 6118 RVA: 0x000E0C7D File Offset: 0x000DEE7D
+		// Token: 0x0600186A RID: 6250 RVA: 0x000E73D1 File Offset: 0x000E55D1
 		public static void Init()
 		{
 			ConfigHonamiStoryOutDialogById.HandleId = ConfigCommon.InitDataStatement(ConfigHonamiStoryOutDialogById.HandleId, "db_honamistory.db", "select BinData from `HonamiStoryOutDialog` where Id=?");
 		}
 
-		// Token: 0x060017E7 RID: 6119 RVA: 0x000E0C98 File Offset: 0x000DEE98
+		// Token: 0x0600186B RID: 6251 RVA: 0x000E73EC File Offset: 0x000E55EC
 		public static HonamiStoryOutDialog? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigHonamiStoryOutDialogById.HandleId, ConfigHonamiStoryOutDialogById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new HonamiStoryOutDialog?(rootAsHonamiStoryOutDialog);
 		}
 
-		// Token: 0x04001BBA RID: 7098
+		// Token: 0x04001C54 RID: 7252
 		private const string DB = "db_honamistory.db";
 
-		// Token: 0x04001BBB RID: 7099
+		// Token: 0x04001C55 RID: 7253
 		private const string FILE = "s.穗波奇妙物语局外.xlsx";
 
-		// Token: 0x04001BBC RID: 7100
+		// Token: 0x04001C56 RID: 7254
 		private const string TABLE = "HonamiStoryOutDialog";
 
-		// Token: 0x04001BBD RID: 7101
+		// Token: 0x04001C57 RID: 7255
 		private const string COMMAND = "select BinData from `HonamiStoryOutDialog` where Id=?";
 
-		// Token: 0x04001BBE RID: 7102
+		// Token: 0x04001C58 RID: 7256
 		private const string KEY_PREFIX = "HonamiStoryOutDialogById";
 
-		// Token: 0x04001BBF RID: 7103
+		// Token: 0x04001C59 RID: 7257
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001BC0 RID: 7104
+		// Token: 0x04001C5A RID: 7258
 		private static int HandleId;
 	}
 }

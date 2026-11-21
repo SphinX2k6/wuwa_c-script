@@ -8,12 +8,12 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.SkipInterface;
 using CSharpScript.Game.Ui;
 
-// Token: 0x020012E8 RID: 4840
+// Token: 0x0200079C RID: 1948
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityMoonChasingData : ActivityBaseData
 {
-	// Token: 0x060085A8 RID: 34216 RVA: 0x001C7628 File Offset: 0x001C5828
+	// Token: 0x06005943 RID: 22851 RVA: 0x001D0494 File Offset: 0x001CE694
 	protected override void PhraseEx(ActivityData data)
 	{
 		this.LimitTimeRewardOn = false;
@@ -51,13 +51,13 @@ public class ActivityMoonChasingData : ActivityBaseData
 		this.RefreshRewardPopView();
 	}
 
-	// Token: 0x060085A9 RID: 34217 RVA: 0x001C7758 File Offset: 0x001C5958
+	// Token: 0x06005944 RID: 22852 RVA: 0x001D05C4 File Offset: 0x001CE7C4
 	public override bool NeedSelfControlFirstRedPoint()
 	{
 		return false;
 	}
 
-	// Token: 0x060085AA RID: 34218 RVA: 0x001C775B File Offset: 0x001C595B
+	// Token: 0x06005945 RID: 22853 RVA: 0x001D05C7 File Offset: 0x001CE7C7
 	public override bool GetExDataRedPointShowState()
 	{
 		if (this.ActivityFlowState == EMoonChasingActivityFlow.Close)
@@ -67,7 +67,7 @@ public class ActivityMoonChasingData : ActivityBaseData
 		return this.IsHasLimitTimeReward() || this.IsHasPermanentReward() || this.IsHasHandbookReward() || this.IsHasMoonChasingRedDot();
 	}
 
-	// Token: 0x060085AB RID: 34219 RVA: 0x001C7790 File Offset: 0x001C5990
+	// Token: 0x06005946 RID: 22854 RVA: 0x001D05FC File Offset: 0x001CE7FC
 	public bool IsPreStageQuestFinished()
 	{
 		TrackMoonActivity? activityMoonChasingConfig = ActivityMoonChasingConfig.Instance.GetActivityMoonChasingConfig(base.Id);
@@ -79,7 +79,7 @@ public class ActivityMoonChasingData : ActivityBaseData
 		return stageQuestId == 0 || QuestNewModel.Instance.CheckQuestFinished(stageQuestId);
 	}
 
-	// Token: 0x060085AC RID: 34220 RVA: 0x001C77DC File Offset: 0x001C59DC
+	// Token: 0x06005947 RID: 22855 RVA: 0x001D0648 File Offset: 0x001CE848
 	public int? GetPreStageQuestId()
 	{
 		global::Quest firstShowQuestByType = QuestNewModel.Instance.GetFirstShowQuestByType(1);
@@ -90,7 +90,7 @@ public class ActivityMoonChasingData : ActivityBaseData
 		return null;
 	}
 
-	// Token: 0x060085AD RID: 34221 RVA: 0x001C7810 File Offset: 0x001C5A10
+	// Token: 0x06005948 RID: 22856 RVA: 0x001D067C File Offset: 0x001CE87C
 	[NullableContext(2)]
 	public unsafe IActivityRewardViewData GetAllRewardData()
 	{
@@ -124,7 +124,7 @@ public class ActivityMoonChasingData : ActivityBaseData
 		return activityRewardViewData;
 	}
 
-	// Token: 0x060085AE RID: 34222 RVA: 0x001C78EC File Offset: 0x001C5AEC
+	// Token: 0x06005949 RID: 22857 RVA: 0x001D0758 File Offset: 0x001CE958
 	[NullableContext(2)]
 	private IActivityRewardData GetRewardStateInfo(int id, EActivityTaskState state)
 	{
@@ -195,7 +195,7 @@ public class ActivityMoonChasingData : ActivityBaseData
 		};
 	}
 
-	// Token: 0x060085AF RID: 34223 RVA: 0x001C7A78 File Offset: 0x001C5C78
+	// Token: 0x0600594A RID: 22858 RVA: 0x001D08E4 File Offset: 0x001CEAE4
 	private int SortReward(IActivityRewardData a, IActivityRewardData b)
 	{
 		EActivityTaskState eactivityTaskState = this.LimitTimeRewardState[a.Id.Value];
@@ -207,7 +207,7 @@ public class ActivityMoonChasingData : ActivityBaseData
 		return eactivityTaskState - eactivityTaskState2;
 	}
 
-	// Token: 0x060085B0 RID: 34224 RVA: 0x001C7ADE File Offset: 0x001C5CDE
+	// Token: 0x0600594B RID: 22859 RVA: 0x001D094A File Offset: 0x001CEB4A
 	public void SetRewardState(int id, EActivityTaskState state)
 	{
 		if (!this.LimitTimeRewardState.ContainsKey(id))
@@ -219,7 +219,7 @@ public class ActivityMoonChasingData : ActivityBaseData
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 	}
 
-	// Token: 0x060085B1 RID: 34225 RVA: 0x001C7B18 File Offset: 0x001C5D18
+	// Token: 0x0600594C RID: 22860 RVA: 0x001D0984 File Offset: 0x001CEB84
 	public bool IsHasLimitTimeReward()
 	{
 		if (!this.LimitTimeRewardOn)
@@ -239,7 +239,7 @@ public class ActivityMoonChasingData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x060085B2 RID: 34226 RVA: 0x001C7B7C File Offset: 0x001C5D7C
+	// Token: 0x0600594D RID: 22861 RVA: 0x001D09E8 File Offset: 0x001CEBE8
 	private void RefreshRewardPopView()
 	{
 		if (UiManager.Instance.IsViewOpen(EUiViewName.ActivityRewardPopUpView))
@@ -252,19 +252,19 @@ public class ActivityMoonChasingData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x060085B3 RID: 34227 RVA: 0x001C7BB5 File Offset: 0x001C5DB5
+	// Token: 0x0600594E RID: 22862 RVA: 0x001D0A21 File Offset: 0x001CEC21
 	private bool IsHasPermanentReward()
 	{
 		return base.IsUnLock() && base.GetPreGuideQuestFinishState() && (MoonChasingRewardModel.Instance.GetAllTaskDataRedDotState(true) || MoonChasingRewardModel.Instance.GetShopRedDotState());
 	}
 
-	// Token: 0x060085B4 RID: 34228 RVA: 0x001C7BE2 File Offset: 0x001C5DE2
+	// Token: 0x0600594F RID: 22863 RVA: 0x001D0A4E File Offset: 0x001CEC4E
 	private bool IsHasHandbookReward()
 	{
 		return MoonChasingModel.Instance.HasHandbookRewardRedDot();
 	}
 
-	// Token: 0x060085B5 RID: 34229 RVA: 0x001C7BF0 File Offset: 0x001C5DF0
+	// Token: 0x06005950 RID: 22864 RVA: 0x001D0A5C File Offset: 0x001CEC5C
 	public bool IsHasMoonChasingRedDot()
 	{
 		if (!base.IsUnLock() || !base.GetPreGuideQuestFinishState())
@@ -283,15 +283,15 @@ public class ActivityMoonChasingData : ActivityBaseData
 		return instance != null && instance.CheckQuestRedDotState();
 	}
 
-	// Token: 0x04003BF7 RID: 15351
+	// Token: 0x04003C8F RID: 15503
 	public bool LimitTimeRewardOn;
 
-	// Token: 0x04003BF8 RID: 15352
+	// Token: 0x04003C90 RID: 15504
 	private readonly Dictionary<int, EActivityTaskState> LimitTimeRewardState = new Dictionary<int, EActivityTaskState>();
 
-	// Token: 0x04003BF9 RID: 15353
+	// Token: 0x04003C91 RID: 15505
 	public bool PermanentTargetOn;
 
-	// Token: 0x04003BFA RID: 15354
+	// Token: 0x04003C92 RID: 15506
 	public EMoonChasingActivityFlow ActivityFlowState;
 }

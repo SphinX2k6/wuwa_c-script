@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x0200460C RID: 17932
+	// Token: 0x02004A74 RID: 19060
 	public class TLevelPlayRefreshUnion
 	{
-		// Token: 0x17007F67 RID: 32615
-		// (get) Token: 0x0601B29F RID: 111263 RVA: 0x003DEAE8 File Offset: 0x003DCCE8
-		// (set) Token: 0x0601B2A0 RID: 111264 RVA: 0x003DEAF0 File Offset: 0x003DCCF0
+		// Token: 0x170085A8 RID: 34216
+		// (get) Token: 0x0601CA74 RID: 117364 RVA: 0x0040AD84 File Offset: 0x00408F84
+		// (set) Token: 0x0601CA75 RID: 117365 RVA: 0x0040AD8C File Offset: 0x00408F8C
 		public TLevelPlayRefresh Type { get; set; }
 
-		// Token: 0x17007F68 RID: 32616
-		// (get) Token: 0x0601B2A1 RID: 111265 RVA: 0x003DEAF9 File Offset: 0x003DCCF9
-		// (set) Token: 0x0601B2A2 RID: 111266 RVA: 0x003DEB01 File Offset: 0x003DCD01
+		// Token: 0x170085A9 RID: 34217
+		// (get) Token: 0x0601CA76 RID: 117366 RVA: 0x0040AD95 File Offset: 0x00408F95
+		// (set) Token: 0x0601CA77 RID: 117367 RVA: 0x0040AD9D File Offset: 0x00408F9D
 		public object Value { get; set; }
 
-		// Token: 0x0601B2A3 RID: 111267 RVA: 0x003DEB0A File Offset: 0x003DCD0A
+		// Token: 0x0601CA78 RID: 117368 RVA: 0x0040ADA6 File Offset: 0x00408FA6
 		public TLevelPlayRefreshUnion()
 		{
 			this.Type = TLevelPlayRefresh.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601B2A4 RID: 111268 RVA: 0x003DEB20 File Offset: 0x003DCD20
+		// Token: 0x0601CA79 RID: 117369 RVA: 0x0040ADBC File Offset: 0x00408FBC
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601B2A5 RID: 111269 RVA: 0x003DEB32 File Offset: 0x003DCD32
+		// Token: 0x0601CA7A RID: 117370 RVA: 0x0040ADCE File Offset: 0x00408FCE
 		public IChildDestroyOrAwardedRefreshT AsIChildDestroyOrAwardedRefresh()
 		{
 			return this.As<IChildDestroyOrAwardedRefreshT>();
 		}
 
-		// Token: 0x0601B2A6 RID: 111270 RVA: 0x003DEB3A File Offset: 0x003DCD3A
+		// Token: 0x0601CA7B RID: 117371 RVA: 0x0040ADD6 File Offset: 0x00408FD6
 		public static TLevelPlayRefreshUnion FromIChildDestroyOrAwardedRefresh(IChildDestroyOrAwardedRefreshT _ichilddestroyorawardedrefresh)
 		{
 			return new TLevelPlayRefreshUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601B2A7 RID: 111271 RVA: 0x003DEB4F File Offset: 0x003DCD4F
+		// Token: 0x0601CA7C RID: 117372 RVA: 0x0040ADEB File Offset: 0x00408FEB
 		public IChildDestroyRefreshT AsIChildDestroyRefresh()
 		{
 			return this.As<IChildDestroyRefreshT>();
 		}
 
-		// Token: 0x0601B2A8 RID: 111272 RVA: 0x003DEB57 File Offset: 0x003DCD57
+		// Token: 0x0601CA7D RID: 117373 RVA: 0x0040ADF3 File Offset: 0x00408FF3
 		public static TLevelPlayRefreshUnion FromIChildDestroyRefresh(IChildDestroyRefreshT _ichilddestroyrefresh)
 		{
 			return new TLevelPlayRefreshUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601B2A9 RID: 111273 RVA: 0x003DEB6C File Offset: 0x003DCD6C
+		// Token: 0x0601CA7E RID: 117374 RVA: 0x0040AE08 File Offset: 0x00409008
 		public ICompletedRefreshT AsICompletedRefresh()
 		{
 			return this.As<ICompletedRefreshT>();
 		}
 
-		// Token: 0x0601B2AA RID: 111274 RVA: 0x003DEB74 File Offset: 0x003DCD74
+		// Token: 0x0601CA7F RID: 117375 RVA: 0x0040AE10 File Offset: 0x00409010
 		public static TLevelPlayRefreshUnion FromICompletedRefresh(ICompletedRefreshT _icompletedrefresh)
 		{
 			return new TLevelPlayRefreshUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601B2AB RID: 111275 RVA: 0x003DEB89 File Offset: 0x003DCD89
+		// Token: 0x0601CA80 RID: 117376 RVA: 0x0040AE25 File Offset: 0x00409025
 		public ICustomOnlineRefreshT AsICustomOnlineRefresh()
 		{
 			return this.As<ICustomOnlineRefreshT>();
 		}
 
-		// Token: 0x0601B2AC RID: 111276 RVA: 0x003DEB91 File Offset: 0x003DCD91
+		// Token: 0x0601CA81 RID: 117377 RVA: 0x0040AE2D File Offset: 0x0040902D
 		public static TLevelPlayRefreshUnion FromICustomOnlineRefresh(ICustomOnlineRefreshT _icustomonlinerefresh)
 		{
 			return new TLevelPlayRefreshUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601B2AD RID: 111277 RVA: 0x003DEBA6 File Offset: 0x003DCDA6
+		// Token: 0x0601CA82 RID: 117378 RVA: 0x0040AE42 File Offset: 0x00409042
 		public ICustomRefreshT AsICustomRefresh()
 		{
 			return this.As<ICustomRefreshT>();
 		}
 
-		// Token: 0x0601B2AE RID: 111278 RVA: 0x003DEBAE File Offset: 0x003DCDAE
+		// Token: 0x0601CA83 RID: 117379 RVA: 0x0040AE4A File Offset: 0x0040904A
 		public static TLevelPlayRefreshUnion FromICustomRefresh(ICustomRefreshT _icustomrefresh)
 		{
 			return new TLevelPlayRefreshUnion
@@ -109,13 +109,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601B2AF RID: 111279 RVA: 0x003DEBC3 File Offset: 0x003DCDC3
+		// Token: 0x0601CA84 RID: 117380 RVA: 0x0040AE5F File Offset: 0x0040905F
 		public IFixedDateTimeRefreshT AsIFixedDateTimeRefresh()
 		{
 			return this.As<IFixedDateTimeRefreshT>();
 		}
 
-		// Token: 0x0601B2B0 RID: 111280 RVA: 0x003DEBCB File Offset: 0x003DCDCB
+		// Token: 0x0601CA85 RID: 117381 RVA: 0x0040AE67 File Offset: 0x00409067
 		public static TLevelPlayRefreshUnion FromIFixedDateTimeRefresh(IFixedDateTimeRefreshT _ifixeddatetimerefresh)
 		{
 			return new TLevelPlayRefreshUnion
@@ -125,13 +125,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601B2B1 RID: 111281 RVA: 0x003DEBE0 File Offset: 0x003DCDE0
+		// Token: 0x0601CA86 RID: 117382 RVA: 0x0040AE7C File Offset: 0x0040907C
 		public INoneRefreshT AsINoneRefresh()
 		{
 			return this.As<INoneRefreshT>();
 		}
 
-		// Token: 0x0601B2B2 RID: 111282 RVA: 0x003DEBE8 File Offset: 0x003DCDE8
+		// Token: 0x0601CA87 RID: 117383 RVA: 0x0040AE84 File Offset: 0x00409084
 		public static TLevelPlayRefreshUnion FromINoneRefresh(INoneRefreshT _inonerefresh)
 		{
 			return new TLevelPlayRefreshUnion
@@ -141,7 +141,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			};
 		}
 
-		// Token: 0x0601B2B3 RID: 111283 RVA: 0x003DEC00 File Offset: 0x003DCE00
+		// Token: 0x0601CA88 RID: 117384 RVA: 0x0040AE9C File Offset: 0x0040909C
 		public static int Pack(FlatBufferBuilder builder, TLevelPlayRefreshUnion _o)
 		{
 			switch (_o.Type)

@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x0200163A RID: 5690
+// Token: 0x02000AF2 RID: 2802
 internal enum <WheelTowerRoundSelectView>FB9048B61C16B2A5F16614A6005A38709FA757B32D0E1744282206D8A6A5AC196__EWheelTowerRoundTabComponent
 {
-	// Token: 0x040048BE RID: 18622
+	// Token: 0x04004964 RID: 18788
 	Toggle,
-	// Token: 0x040048BF RID: 18623
+	// Token: 0x04004965 RID: 18789
 	Text,
-	// Token: 0x040048C0 RID: 18624
+	// Token: 0x04004966 RID: 18790
 	RedPoint,
-	// Token: 0x040048C1 RID: 18625
+	// Token: 0x04004967 RID: 18791
 	LockIcon
 }

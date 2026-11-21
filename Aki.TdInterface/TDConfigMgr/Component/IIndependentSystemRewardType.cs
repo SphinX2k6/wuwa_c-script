@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000454 RID: 1108
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020004AD RID: 1197
 	public class IIndependentSystemRewardType
 	{
-		// Token: 0x06001669 RID: 5737 RVA: 0x0004536C File Offset: 0x0004356C
+		// Token: 0x06001803 RID: 6147 RVA: 0x000490B4 File Offset: 0x000472B4
 		private IIndependentSystemRewardType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600166A RID: 5738 RVA: 0x000453A4 File Offset: 0x000435A4
+		// Token: 0x06001804 RID: 6148 RVA: 0x000490EC File Offset: 0x000472EC
 		public static IIndependentSystemRewardType Create([Nullable(2)] IIndependentSystemRewardType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600166B RID: 5739 RVA: 0x000453B7 File Offset: 0x000435B7
+		// Token: 0x06001805 RID: 6149 RVA: 0x000490FF File Offset: 0x000472FF
 		public static IIndependentSystemRewardType CreateFromSetValue([Nullable(2)] IIndependentSystemRewardType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600166C RID: 5740 RVA: 0x000453CA File Offset: 0x000435CA
+		// Token: 0x06001806 RID: 6150 RVA: 0x00049112 File Offset: 0x00047312
 		public IIndependentSystemRewardType_SetValue ToSetValue()
 		{
 			return new IIndependentSystemRewardType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000614 RID: 1556
-		// (get) Token: 0x0600166D RID: 5741 RVA: 0x000453DD File Offset: 0x000435DD
-		// (set) Token: 0x0600166E RID: 5742 RVA: 0x00045408 File Offset: 0x00043608
+		// Token: 0x1700067B RID: 1659
+		// (get) Token: 0x06001807 RID: 6151 RVA: 0x00049125 File Offset: 0x00047325
+		// (set) Token: 0x06001808 RID: 6152 RVA: 0x00049150 File Offset: 0x00047350
 		public virtual EIndependentSystemRewardType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400111B RID: 4379
+		// Token: 0x0400123D RID: 4669
 		[Nullable(2)]
 		protected IIndependentSystemRewardType FbInstance;
 
-		// Token: 0x0400111C RID: 4380
+		// Token: 0x0400123E RID: 4670
 		[Nullable(2)]
 		protected IIndependentSystemRewardType_SetValue PocoInterface;
 	}

@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Plot
 {
-	// Token: 0x02004FEA RID: 20458
+	// Token: 0x02003FB4 RID: 16308
 	public enum EPlotReviewItemType
 	{
-		// Token: 0x0401BD93 RID: 114067
+		// Token: 0x0401676E RID: 92014
 		Talk,
-		// Token: 0x0401BD94 RID: 114068
+		// Token: 0x0401676F RID: 92015
 		Option
 	}
 }

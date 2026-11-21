@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A00 RID: 6656
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001B93 RID: 7059
 	public class IEnterOrbitalCameraControlByMove : IEnterOrbitalCameraType
 	{
-		// Token: 0x06008E95 RID: 36501 RVA: 0x0014D694 File Offset: 0x0014B894
+		// Token: 0x060095F7 RID: 38391 RVA: 0x0015D504 File Offset: 0x0015B704
 		private IEnterOrbitalCameraControlByMove_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008E96 RID: 36502 RVA: 0x0014D6CC File Offset: 0x0014B8CC
+		// Token: 0x060095F8 RID: 38392 RVA: 0x0015D53C File Offset: 0x0015B73C
 		public static IEnterOrbitalCameraControlByMove Create([Nullable(2)] IEnterOrbitalCameraControlByMove instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008E97 RID: 36503 RVA: 0x0014D6DF File Offset: 0x0014B8DF
+		// Token: 0x060095F9 RID: 38393 RVA: 0x0015D54F File Offset: 0x0015B74F
 		public static IEnterOrbitalCameraControlByMove CreateFromSetValue([Nullable(2)] IEnterOrbitalCameraControlByMove_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008E98 RID: 36504 RVA: 0x0014D6F4 File Offset: 0x0014B8F4
+		// Token: 0x060095FA RID: 38394 RVA: 0x0015D564 File Offset: 0x0015B764
 		public new IEnterOrbitalCameraControlByMove_SetValue ToSetValue()
 		{
 			return new IEnterOrbitalCameraControlByMove_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002D9F RID: 11679
-		// (get) Token: 0x06008E99 RID: 36505 RVA: 0x0014D74E File Offset: 0x0014B94E
-		// (set) Token: 0x06008E9A RID: 36506 RVA: 0x0014D779 File Offset: 0x0014B979
+		// Token: 0x17002FAB RID: 12203
+		// (get) Token: 0x060095FB RID: 38395 RVA: 0x0015D5BE File Offset: 0x0015B7BE
+		// (set) Token: 0x060095FC RID: 38396 RVA: 0x0015D5E9 File Offset: 0x0015B7E9
 		public override EEnterOrbitalCameraType Type
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002DA0 RID: 11680
-		// (get) Token: 0x06008E9B RID: 36507 RVA: 0x0014D787 File Offset: 0x0014B987
-		// (set) Token: 0x06008E9C RID: 36508 RVA: 0x0014D7B2 File Offset: 0x0014B9B2
+		// Token: 0x17002FAC RID: 12204
+		// (get) Token: 0x060095FD RID: 38397 RVA: 0x0015D5F7 File Offset: 0x0015B7F7
+		// (set) Token: 0x060095FE RID: 38398 RVA: 0x0015D622 File Offset: 0x0015B822
 		public virtual string LevelSequence
 		{
 			get
@@ -110,9 +108,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002DA1 RID: 11681
-		// (get) Token: 0x06008E9D RID: 36509 RVA: 0x0014D7C0 File Offset: 0x0014B9C0
-		// (set) Token: 0x06008E9E RID: 36510 RVA: 0x0014D7EF File Offset: 0x0014B9EF
+		// Token: 0x17002FAD RID: 12205
+		// (get) Token: 0x060095FF RID: 38399 RVA: 0x0015D630 File Offset: 0x0015B830
+		// (set) Token: 0x06009600 RID: 38400 RVA: 0x0015D65F File Offset: 0x0015B85F
 		public virtual float BlendInTime
 		{
 			get
@@ -133,9 +131,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002DA2 RID: 11682
-		// (get) Token: 0x06008E9F RID: 36511 RVA: 0x0014D7FD File Offset: 0x0014B9FD
-		// (set) Token: 0x06008EA0 RID: 36512 RVA: 0x0014D82C File Offset: 0x0014BA2C
+		// Token: 0x17002FAE RID: 12206
+		// (get) Token: 0x06009601 RID: 38401 RVA: 0x0015D66D File Offset: 0x0015B86D
+		// (set) Token: 0x06009602 RID: 38402 RVA: 0x0015D69C File Offset: 0x0015B89C
 		public virtual float BlendOutTime
 		{
 			get
@@ -156,9 +154,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002DA3 RID: 11683
-		// (get) Token: 0x06008EA1 RID: 36513 RVA: 0x0014D83A File Offset: 0x0014BA3A
-		// (set) Token: 0x06008EA2 RID: 36514 RVA: 0x0014D865 File Offset: 0x0014BA65
+		// Token: 0x17002FAF RID: 12207
+		// (get) Token: 0x06009603 RID: 38403 RVA: 0x0015D6AA File Offset: 0x0015B8AA
+		// (set) Token: 0x06009604 RID: 38404 RVA: 0x0015D6D5 File Offset: 0x0015B8D5
 		public virtual int BegEntity
 		{
 			get
@@ -179,9 +177,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002DA4 RID: 11684
-		// (get) Token: 0x06008EA3 RID: 36515 RVA: 0x0014D873 File Offset: 0x0014BA73
-		// (set) Token: 0x06008EA4 RID: 36516 RVA: 0x0014D89E File Offset: 0x0014BA9E
+		// Token: 0x17002FB0 RID: 12208
+		// (get) Token: 0x06009605 RID: 38405 RVA: 0x0015D6E3 File Offset: 0x0015B8E3
+		// (set) Token: 0x06009606 RID: 38406 RVA: 0x0015D70E File Offset: 0x0015B90E
 		public virtual int EndEntity
 		{
 			get
@@ -202,11 +200,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400585A RID: 22618
+		// Token: 0x04005CBC RID: 23740
 		[Nullable(2)]
 		protected new IEnterOrbitalCameraControlByMove FbInstance;
 
-		// Token: 0x0400585B RID: 22619
+		// Token: 0x04005CBD RID: 23741
 		[Nullable(2)]
 		protected new IEnterOrbitalCameraControlByMove_SetValue PocoInterface;
 	}

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020067F6 RID: 26614
+	// Token: 0x02006E76 RID: 28278
 	public class IFlowCameraShakeT
 	{
-		// Token: 0x1700C590 RID: 50576
-		// (get) Token: 0x0602E57F RID: 189823 RVA: 0x006537D9 File Offset: 0x006519D9
-		// (set) Token: 0x0602E580 RID: 189824 RVA: 0x006537E1 File Offset: 0x006519E1
+		// Token: 0x1700CF46 RID: 53062
+		// (get) Token: 0x06030DC5 RID: 200133 RVA: 0x006A0F1D File Offset: 0x0069F11D
+		// (set) Token: 0x06030DC6 RID: 200134 RVA: 0x006A0F25 File Offset: 0x0069F125
 		public string CameraShakeBp { get; set; }
 
-		// Token: 0x0602E581 RID: 189825 RVA: 0x006537EA File Offset: 0x006519EA
+		// Token: 0x06030DC7 RID: 200135 RVA: 0x006A0F2E File Offset: 0x0069F12E
 		public IFlowCameraShakeT()
 		{
 			this.CameraShakeBp = null;

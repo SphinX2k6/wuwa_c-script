@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C66 RID: 7270
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001E5F RID: 7775
 	public class INpcExitCurrentInteract : INpcLeisureInteractType
 	{
-		// Token: 0x06009BEF RID: 39919 RVA: 0x00165DFC File Offset: 0x00163FFC
+		// Token: 0x0600A54F RID: 42319 RVA: 0x001791F8 File Offset: 0x001773F8
 		private INpcExitCurrentInteract_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009BF0 RID: 39920 RVA: 0x00165E34 File Offset: 0x00164034
+		// Token: 0x0600A550 RID: 42320 RVA: 0x00179230 File Offset: 0x00177430
 		public static INpcExitCurrentInteract Create([Nullable(2)] INpcExitCurrentInteract instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009BF1 RID: 39921 RVA: 0x00165E47 File Offset: 0x00164047
+		// Token: 0x0600A551 RID: 42321 RVA: 0x00179243 File Offset: 0x00177443
 		public static INpcExitCurrentInteract CreateFromSetValue([Nullable(2)] INpcExitCurrentInteract_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009BF2 RID: 39922 RVA: 0x00165E5A File Offset: 0x0016405A
+		// Token: 0x0600A552 RID: 42322 RVA: 0x00179256 File Offset: 0x00177456
 		public new INpcExitCurrentInteract_SetValue ToSetValue()
 		{
 			return new INpcExitCurrentInteract_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170030B5 RID: 12469
-		// (get) Token: 0x06009BF3 RID: 39923 RVA: 0x00165E79 File Offset: 0x00164079
-		// (set) Token: 0x06009BF4 RID: 39924 RVA: 0x00165EA4 File Offset: 0x001640A4
+		// Token: 0x17003327 RID: 13095
+		// (get) Token: 0x0600A553 RID: 42323 RVA: 0x00179275 File Offset: 0x00177475
+		// (set) Token: 0x0600A554 RID: 42324 RVA: 0x001792A0 File Offset: 0x001774A0
 		public override ENpcLeisureInteract Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170030B6 RID: 12470
-		// (get) Token: 0x06009BF5 RID: 39925 RVA: 0x00165EB4 File Offset: 0x001640B4
-		// (set) Token: 0x06009BF6 RID: 39926 RVA: 0x00165EEE File Offset: 0x001640EE
+		// Token: 0x17003328 RID: 13096
+		// (get) Token: 0x0600A555 RID: 42325 RVA: 0x001792B0 File Offset: 0x001774B0
+		// (set) Token: 0x0600A556 RID: 42326 RVA: 0x001792EA File Offset: 0x001774EA
 		public override bool? KeepState
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005EA0 RID: 24224
+		// Token: 0x040063DA RID: 25562
 		[Nullable(2)]
 		protected new INpcExitCurrentInteract FbInstance;
 
-		// Token: 0x04005EA1 RID: 24225
+		// Token: 0x040063DB RID: 25563
 		[Nullable(2)]
 		protected new INpcExitCurrentInteract_SetValue PocoInterface;
 	}

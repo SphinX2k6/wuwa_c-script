@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F48 RID: 3912
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001072 RID: 4210
 	public class IDungeonCondition
 	{
-		// Token: 0x060056EA RID: 22250 RVA: 0x000D4CD8 File Offset: 0x000D2ED8
+		// Token: 0x06005CBA RID: 23738 RVA: 0x000E169C File Offset: 0x000DF89C
 		private IDungeonCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060056EB RID: 22251 RVA: 0x000D4D10 File Offset: 0x000D2F10
+		// Token: 0x06005CBB RID: 23739 RVA: 0x000E16D4 File Offset: 0x000DF8D4
 		public static IDungeonCondition Create([Nullable(2)] IDungeonCondition instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060056EC RID: 22252 RVA: 0x000D4D23 File Offset: 0x000D2F23
+		// Token: 0x06005CBC RID: 23740 RVA: 0x000E16E7 File Offset: 0x000DF8E7
 		public static IDungeonCondition CreateFromSetValue([Nullable(2)] IDungeonCondition_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060056ED RID: 22253 RVA: 0x000D4D36 File Offset: 0x000D2F36
+		// Token: 0x06005CBD RID: 23741 RVA: 0x000E16FA File Offset: 0x000DF8FA
 		public IDungeonCondition_SetValue ToSetValue()
 		{
 			return new IDungeonCondition_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001D0A RID: 7434
-		// (get) Token: 0x060056EE RID: 22254 RVA: 0x000D4D61 File Offset: 0x000D2F61
-		// (set) Token: 0x060056EF RID: 22255 RVA: 0x000D4D8C File Offset: 0x000D2F8C
+		// Token: 0x17001EAE RID: 7854
+		// (get) Token: 0x06005CBE RID: 23742 RVA: 0x000E1725 File Offset: 0x000DF925
+		// (set) Token: 0x06005CBF RID: 23743 RVA: 0x000E1750 File Offset: 0x000DF950
 		public virtual EDungeonConditionType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D0B RID: 7435
-		// (get) Token: 0x060056F0 RID: 22256 RVA: 0x000D4D9A File Offset: 0x000D2F9A
-		// (set) Token: 0x060056F1 RID: 22257 RVA: 0x000D4DC5 File Offset: 0x000D2FC5
+		// Token: 0x17001EAF RID: 7855
+		// (get) Token: 0x06005CC0 RID: 23744 RVA: 0x000E175E File Offset: 0x000DF95E
+		// (set) Token: 0x06005CC1 RID: 23745 RVA: 0x000E1789 File Offset: 0x000DF989
 		public virtual int Count
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D0C RID: 7436
-		// (get) Token: 0x060056F2 RID: 22258 RVA: 0x000D4DD4 File Offset: 0x000D2FD4
-		// (set) Token: 0x060056F3 RID: 22259 RVA: 0x000D4E0E File Offset: 0x000D300E
+		// Token: 0x17001EB0 RID: 7856
+		// (get) Token: 0x06005CC2 RID: 23746 RVA: 0x000E1798 File Offset: 0x000DF998
+		// (set) Token: 0x06005CC3 RID: 23747 RVA: 0x000E17D2 File Offset: 0x000DF9D2
 		public virtual bool? IsExitDungeon
 		{
 			get
@@ -131,11 +129,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040034A9 RID: 13481
+		// Token: 0x040037D8 RID: 14296
 		[Nullable(2)]
 		protected IDungeonCondition FbInstance;
 
-		// Token: 0x040034AA RID: 13482
+		// Token: 0x040037D9 RID: 14297
 		[Nullable(2)]
 		protected IDungeonCondition_SetValue PocoInterface;
 	}

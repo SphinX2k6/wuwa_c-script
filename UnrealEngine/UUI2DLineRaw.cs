@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200211C RID: 8476
+	// Token: 0x020006E4 RID: 1764
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/LGUI.UI2DLineRaw")]
 	[UnrealStructLayout(2288, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 2288)]
 	public class UUI2DLineRaw : UUI2DLineRendererBase, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601FE30 RID: 130608 RVA: 0x002F717F File Offset: 0x002F537F
+		// Token: 0x060095BD RID: 38333 RVA: 0x000E2237 File Offset: 0x000E0437
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UUI2DLineRaw._ClassPtr;
 		}
 
-		// Token: 0x0601FE31 RID: 130609 RVA: 0x002F718C File Offset: 0x002F538C
+		// Token: 0x060095BE RID: 38334 RVA: 0x000E2244 File Offset: 0x000E0444
 		public UUI2DLineRaw() : this(BuiltinUtils.AllocNativeUObject(UUI2DLineRaw.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601FE32 RID: 130610 RVA: 0x002F71B4 File Offset: 0x002F53B4
+		// Token: 0x060095BF RID: 38335 RVA: 0x000E226C File Offset: 0x000E046C
 		public UUI2DLineRaw(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UUI2DLineRaw.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17007D68 RID: 32104
-		// (get) Token: 0x0601FE33 RID: 130611 RVA: 0x002F71E8 File Offset: 0x002F53E8
-		// (set) Token: 0x0601FE34 RID: 130612 RVA: 0x002F7221 File Offset: 0x002F5421
+		// Token: 0x17001BCC RID: 7116
+		// (get) Token: 0x060095C0 RID: 38336 RVA: 0x000E22A0 File Offset: 0x000E04A0
+		// (set) Token: 0x060095C1 RID: 38337 RVA: 0x000E22D9 File Offset: 0x000E04D9
 		public TArray<FVector2D> PointArray
 		{
 			get
@@ -50,62 +50,62 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601FE35 RID: 130613 RVA: 0x002F722F File Offset: 0x002F542F
+		// Token: 0x060095C2 RID: 38338 RVA: 0x000E22E7 File Offset: 0x000E04E7
 		[NullableContext(2)]
 		public void SetVertsData(ULGUIVertsData InVertsData)
 		{
 			UUI2DLineRaw.__SetVertsData_Internal(base.NativePtr, (InVertsData != null) ? InVertsData.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0601FE36 RID: 130614 RVA: 0x002F724C File Offset: 0x002F544C
+		// Token: 0x060095C3 RID: 38339 RVA: 0x000E2304 File Offset: 0x000E0504
 		[NullableContext(2)]
 		public void SetPoints(in TArray<FVector2D> InPoints, bool bAdjustSize = false)
 		{
 			UUI2DLineRaw.__SetPoints_Internal(base.NativePtr, (InPoints ?? new TArray<FVector2D>()).NativePtr, bAdjustSize);
 		}
 
-		// Token: 0x0601FE37 RID: 130615 RVA: 0x002F726A File Offset: 0x002F546A
+		// Token: 0x060095C4 RID: 38340 RVA: 0x000E2322 File Offset: 0x000E0522
 		public void AdjustSize()
 		{
 			UUI2DLineRaw.__AdjustSize_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601FE38 RID: 130616
+		// Token: 0x060095C5 RID: 38341
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetVertsData_Internal(IntPtr @this, IntPtr InVertsData);
 
-		// Token: 0x0601FE39 RID: 130617
+		// Token: 0x060095C6 RID: 38342
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetPoints_Internal(IntPtr @this, IntPtr InPoints, bool bAdjustSize);
 
-		// Token: 0x0601FE3A RID: 130618
+		// Token: 0x060095C7 RID: 38343
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AdjustSize_Internal(IntPtr @this);
 
-		// Token: 0x0601FE3B RID: 130619 RVA: 0x002F7277 File Offset: 0x002F5477
+		// Token: 0x060095C8 RID: 38344 RVA: 0x000E232F File Offset: 0x000E052F
 		static UUI2DLineRaw()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LGUI.UI2DLineRaw");
 		}
 
-		// Token: 0x0601FE3C RID: 130620 RVA: 0x002F7285 File Offset: 0x002F5485
+		// Token: 0x060095C9 RID: 38345 RVA: 0x000E233D File Offset: 0x000E053D
 		protected UUI2DLineRaw(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040112E8 RID: 70376
+		// Token: 0x04004129 RID: 16681
 		public new const string __ObjectPath = "/Script/LGUI.UI2DLineRaw";
 
-		// Token: 0x040112E9 RID: 70377
+		// Token: 0x0400412A RID: 16682
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040112EA RID: 70378
+		// Token: 0x0400412B RID: 16683
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040112EB RID: 70379
+		// Token: 0x0400412C RID: 16684
 		internal static int __PropertyOffset_PointArray;
 
-		// Token: 0x040112EC RID: 70380
+		// Token: 0x0400412D RID: 16685
 		[Nullable(2)]
 		private TArray<FVector2D> _PointArray;
 	}

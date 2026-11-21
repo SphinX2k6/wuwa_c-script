@@ -6,38 +6,37 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200080F RID: 2063
+	// Token: 0x02000179 RID: 377
+	[NullableContext(2)]
+	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.AnimLinkableElement")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 48)]
 	public class FAnimLinkableElement : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06006EB1 RID: 28337 RVA: 0x0009EBE9 File Offset: 0x0009CDE9
+		// Token: 0x060017D3 RID: 6099 RVA: 0x0002480F File Offset: 0x00022A0F
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FAnimLinkableElement._ScriptStructPtr != 0) ? FAnimLinkableElement._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/Engine.AnimLinkableElement", ref FAnimLinkableElement._ScriptStructPtr);
 		}
 
-		// Token: 0x170019FB RID: 6651
-		// (get) Token: 0x06006EB2 RID: 28338 RVA: 0x0009EC0D File Offset: 0x0009CE0D
-		// (set) Token: 0x06006EB3 RID: 28339 RVA: 0x0009EC21 File Offset: 0x0009CE21
-		[Nullable(2)]
+		// Token: 0x17000278 RID: 632
+		// (get) Token: 0x060017D4 RID: 6100 RVA: 0x00024833 File Offset: 0x00022A33
+		// (set) Token: 0x060017D5 RID: 6101 RVA: 0x00024847 File Offset: 0x00022A47
 		public unsafe UAnimMontage LinkedMontage
 		{
-			[NullableContext(2)]
 			get
 			{
 				return BuiltinUtils.ObjectPropertyGetter<UAnimMontage>(base.NativePtr / (IntPtr)sizeof(void*) + FAnimLinkableElement.__PropertyOffset_LinkedMontage);
 			}
-			[NullableContext(2)]
 			set
 			{
 				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + FAnimLinkableElement.__PropertyOffset_LinkedMontage, value);
 			}
 		}
 
-		// Token: 0x170019FC RID: 6652
-		// (get) Token: 0x06006EB4 RID: 28340 RVA: 0x0009EC36 File Offset: 0x0009CE36
-		// (set) Token: 0x06006EB5 RID: 28341 RVA: 0x0009EC46 File Offset: 0x0009CE46
+		// Token: 0x17000279 RID: 633
+		// (get) Token: 0x060017D6 RID: 6102 RVA: 0x0002485C File Offset: 0x00022A5C
+		// (set) Token: 0x060017D7 RID: 6103 RVA: 0x0002486C File Offset: 0x00022A6C
 		public unsafe int SlotIndex
 		{
 			get
@@ -50,9 +49,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170019FD RID: 6653
-		// (get) Token: 0x06006EB6 RID: 28342 RVA: 0x0009EC57 File Offset: 0x0009CE57
-		// (set) Token: 0x06006EB7 RID: 28343 RVA: 0x0009EC67 File Offset: 0x0009CE67
+		// Token: 0x1700027A RID: 634
+		// (get) Token: 0x060017D8 RID: 6104 RVA: 0x0002487D File Offset: 0x00022A7D
+		// (set) Token: 0x060017D9 RID: 6105 RVA: 0x0002488D File Offset: 0x00022A8D
 		public unsafe int SegmentIndex
 		{
 			get
@@ -65,39 +64,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170019FE RID: 6654
-		// (get) Token: 0x06006EB8 RID: 28344 RVA: 0x0009EC78 File Offset: 0x0009CE78
-		// (set) Token: 0x06006EB9 RID: 28345 RVA: 0x0009EC8C File Offset: 0x0009CE8C
-		public unsafe TEnumAsByte<EAnimLinkMethod> LinkMethod
-		{
-			get
-			{
-				return *(base.NativePtr + (IntPtr)FAnimLinkableElement.__PropertyOffset_LinkMethod);
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)FAnimLinkableElement.__PropertyOffset_LinkMethod) = value;
-			}
-		}
-
-		// Token: 0x170019FF RID: 6655
-		// (get) Token: 0x06006EBA RID: 28346 RVA: 0x0009ECA1 File Offset: 0x0009CEA1
-		// (set) Token: 0x06006EBB RID: 28347 RVA: 0x0009ECB5 File Offset: 0x0009CEB5
-		public unsafe TEnumAsByte<EAnimLinkMethod> CachedLinkMethod
-		{
-			get
-			{
-				return *(base.NativePtr + (IntPtr)FAnimLinkableElement.__PropertyOffset_CachedLinkMethod);
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)FAnimLinkableElement.__PropertyOffset_CachedLinkMethod) = value;
-			}
-		}
-
-		// Token: 0x17001A00 RID: 6656
-		// (get) Token: 0x06006EBC RID: 28348 RVA: 0x0009ECCA File Offset: 0x0009CECA
-		// (set) Token: 0x06006EBD RID: 28349 RVA: 0x0009ECDA File Offset: 0x0009CEDA
+		// Token: 0x1700027B RID: 635
+		// (get) Token: 0x060017DA RID: 6106 RVA: 0x0002489E File Offset: 0x00022A9E
+		// (set) Token: 0x060017DB RID: 6107 RVA: 0x000248AE File Offset: 0x00022AAE
 		public unsafe float SegmentBeginTime
 		{
 			get
@@ -110,9 +79,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001A01 RID: 6657
-		// (get) Token: 0x06006EBE RID: 28350 RVA: 0x0009ECEB File Offset: 0x0009CEEB
-		// (set) Token: 0x06006EBF RID: 28351 RVA: 0x0009ECFB File Offset: 0x0009CEFB
+		// Token: 0x1700027C RID: 636
+		// (get) Token: 0x060017DC RID: 6108 RVA: 0x000248BF File Offset: 0x00022ABF
+		// (set) Token: 0x060017DD RID: 6109 RVA: 0x000248CF File Offset: 0x00022ACF
 		public unsafe float SegmentLength
 		{
 			get
@@ -125,9 +94,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001A02 RID: 6658
-		// (get) Token: 0x06006EC0 RID: 28352 RVA: 0x0009ED0C File Offset: 0x0009CF0C
-		// (set) Token: 0x06006EC1 RID: 28353 RVA: 0x0009ED1C File Offset: 0x0009CF1C
+		// Token: 0x1700027D RID: 637
+		// (get) Token: 0x060017DE RID: 6110 RVA: 0x000248E0 File Offset: 0x00022AE0
+		// (set) Token: 0x060017DF RID: 6111 RVA: 0x000248F0 File Offset: 0x00022AF0
 		public unsafe float LinkValue
 		{
 			get
@@ -140,106 +109,82 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001A03 RID: 6659
-		// (get) Token: 0x06006EC2 RID: 28354 RVA: 0x0009ED2D File Offset: 0x0009CF2D
-		// (set) Token: 0x06006EC3 RID: 28355 RVA: 0x0009ED41 File Offset: 0x0009CF41
-		[Nullable(2)]
+		// Token: 0x1700027E RID: 638
+		// (get) Token: 0x060017E0 RID: 6112 RVA: 0x00024901 File Offset: 0x00022B01
+		// (set) Token: 0x060017E1 RID: 6113 RVA: 0x00024915 File Offset: 0x00022B15
 		public unsafe UAnimSequenceBase LinkedSequence
 		{
-			[NullableContext(2)]
 			get
 			{
 				return BuiltinUtils.ObjectPropertyGetter<UAnimSequenceBase>(base.NativePtr / (IntPtr)sizeof(void*) + FAnimLinkableElement.__PropertyOffset_LinkedSequence);
 			}
-			[NullableContext(2)]
 			set
 			{
 				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + FAnimLinkableElement.__PropertyOffset_LinkedSequence, value);
 			}
 		}
 
-		// Token: 0x06006EC4 RID: 28356 RVA: 0x0009ED56 File Offset: 0x0009CF56
+		// Token: 0x060017E2 RID: 6114 RVA: 0x0002492A File Offset: 0x00022B2A
 		public FAnimLinkableElement()
 		{
 		}
 
-		// Token: 0x06006EC5 RID: 28357 RVA: 0x0009ED60 File Offset: 0x0009CF60
-		public FAnimLinkableElement([Nullable(1)] UAnimMontage LinkedMontage, int SlotIndex, int SegmentIndex, TEnumAsByte<EAnimLinkMethod> LinkMethod, TEnumAsByte<EAnimLinkMethod> CachedLinkMethod, float SegmentBeginTime, float SegmentLength, float LinkValue, [Nullable(1)] UAnimSequenceBase LinkedSequence)
-		{
-			this.LinkedMontage = LinkedMontage;
-			this.SlotIndex = SlotIndex;
-			this.SegmentIndex = SegmentIndex;
-			this.LinkMethod = LinkMethod;
-			this.CachedLinkMethod = CachedLinkMethod;
-			this.SegmentBeginTime = SegmentBeginTime;
-			this.SegmentLength = SegmentLength;
-			this.LinkValue = LinkValue;
-			this.LinkedSequence = LinkedSequence;
-		}
-
-		// Token: 0x06006EC6 RID: 28358 RVA: 0x0009EDB8 File Offset: 0x0009CFB8
+		// Token: 0x060017E3 RID: 6115 RVA: 0x00024932 File Offset: 0x00022B32
 		protected override IntPtr GetUStructPtr()
 		{
 			return FAnimLinkableElement.StaticStruct();
 		}
 
-		// Token: 0x06006EC7 RID: 28359 RVA: 0x0009EDC4 File Offset: 0x0009CFC4
-		[NullableContext(2)]
+		// Token: 0x060017E4 RID: 6116 RVA: 0x0002493E File Offset: 0x00022B3E
 		public FAnimLinkableElement(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06006EC8 RID: 28360 RVA: 0x0009EDCE File Offset: 0x0009CFCE
+		// Token: 0x060017E5 RID: 6117 RVA: 0x00024948 File Offset: 0x00022B48
 		public FAnimLinkableElement(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06006EC9 RID: 28361 RVA: 0x0009EDD9 File Offset: 0x0009CFD9
+		// Token: 0x060017E6 RID: 6118 RVA: 0x00024953 File Offset: 0x00022B53
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FAnimLinkableElement(Pointer, false, true);
 		}
 
-		// Token: 0x06006ECA RID: 28362 RVA: 0x0009EDE3 File Offset: 0x0009CFE3
+		// Token: 0x060017E7 RID: 6119 RVA: 0x0002495D File Offset: 0x00022B5D
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FAnimLinkableElement(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04003525 RID: 13605
+		// Token: 0x04000776 RID: 1910
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/Engine.AnimLinkableElement";
 
-		// Token: 0x04003526 RID: 13606
+		// Token: 0x04000777 RID: 1911
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04003527 RID: 13607
+		// Token: 0x04000778 RID: 1912
 		internal static int __PropertyOffset_LinkedMontage;
 
-		// Token: 0x04003528 RID: 13608
+		// Token: 0x04000779 RID: 1913
 		internal static int __PropertyOffset_SlotIndex;
 
-		// Token: 0x04003529 RID: 13609
+		// Token: 0x0400077A RID: 1914
 		internal static int __PropertyOffset_SegmentIndex;
 
-		// Token: 0x0400352A RID: 13610
-		internal static int __PropertyOffset_LinkMethod;
-
-		// Token: 0x0400352B RID: 13611
-		internal static int __PropertyOffset_CachedLinkMethod;
-
-		// Token: 0x0400352C RID: 13612
+		// Token: 0x0400077B RID: 1915
 		internal static int __PropertyOffset_SegmentBeginTime;
 
-		// Token: 0x0400352D RID: 13613
+		// Token: 0x0400077C RID: 1916
 		internal static int __PropertyOffset_SegmentLength;
 
-		// Token: 0x0400352E RID: 13614
+		// Token: 0x0400077D RID: 1917
 		internal static int __PropertyOffset_LinkValue;
 
-		// Token: 0x0400352F RID: 13615
+		// Token: 0x0400077E RID: 1918
 		internal static int __PropertyOffset_LinkedSequence;
 	}
 }

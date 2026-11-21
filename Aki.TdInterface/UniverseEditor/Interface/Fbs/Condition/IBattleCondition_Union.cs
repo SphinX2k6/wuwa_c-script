@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004979 RID: 18809
+	// Token: 0x02004E30 RID: 20016
 	public enum IBattleCondition_Union : byte
 	{
-		// Token: 0x0400D17E RID: 53630
+		// Token: 0x0400DC46 RID: 56390
 		NONE,
-		// Token: 0x0400D17F RID: 53631
+		// Token: 0x0400DC47 RID: 56391
 		IBattleCondition,
-		// Token: 0x0400D180 RID: 53632
+		// Token: 0x0400DC48 RID: 56392
 		IBattleTagCondition,
-		// Token: 0x0400D181 RID: 53633
+		// Token: 0x0400DC49 RID: 56393
 		IPerfectDodgeCondition,
-		// Token: 0x0400D182 RID: 53634
+		// Token: 0x0400DC4A RID: 56394
 		ICounterAttackCondition
 	}
 }

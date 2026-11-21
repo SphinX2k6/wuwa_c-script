@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F72 RID: 8050
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020021AD RID: 8621
 	public class ITalkOptionParamType
 	{
-		// Token: 0x0600B126 RID: 45350 RVA: 0x0019D9A8 File Offset: 0x0019BBA8
+		// Token: 0x0600BC00 RID: 48128 RVA: 0x001B38FC File Offset: 0x001B1AFC
 		private ITalkOptionParamType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B127 RID: 45351 RVA: 0x0019D9E0 File Offset: 0x0019BBE0
+		// Token: 0x0600BC01 RID: 48129 RVA: 0x001B3934 File Offset: 0x001B1B34
 		public static ITalkOptionParamType Create([Nullable(2)] ITalkOptionParamType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B128 RID: 45352 RVA: 0x0019D9F3 File Offset: 0x0019BBF3
+		// Token: 0x0600BC02 RID: 48130 RVA: 0x001B3947 File Offset: 0x001B1B47
 		public static ITalkOptionParamType CreateFromSetValue([Nullable(2)] ITalkOptionParamType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B129 RID: 45353 RVA: 0x0019DA06 File Offset: 0x0019BC06
+		// Token: 0x0600BC03 RID: 48131 RVA: 0x001B395A File Offset: 0x001B1B5A
 		public ITalkOptionParamType_SetValue ToSetValue()
 		{
 			return new ITalkOptionParamType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170036C0 RID: 14016
-		// (get) Token: 0x0600B12A RID: 45354 RVA: 0x0019DA19 File Offset: 0x0019BC19
-		// (set) Token: 0x0600B12B RID: 45355 RVA: 0x0019DA44 File Offset: 0x0019BC44
+		// Token: 0x1700398C RID: 14732
+		// (get) Token: 0x0600BC04 RID: 48132 RVA: 0x001B396D File Offset: 0x001B1B6D
+		// (set) Token: 0x0600BC05 RID: 48133 RVA: 0x001B3998 File Offset: 0x001B1B98
 		public virtual ETalkOptionParamType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006B2F RID: 27439
+		// Token: 0x04007117 RID: 28951
 		[Nullable(2)]
 		protected ITalkOptionParamType FbInstance;
 
-		// Token: 0x04006B30 RID: 27440
+		// Token: 0x04007118 RID: 28952
 		[Nullable(2)]
 		protected ITalkOptionParamType_SetValue PocoInterface;
 	}

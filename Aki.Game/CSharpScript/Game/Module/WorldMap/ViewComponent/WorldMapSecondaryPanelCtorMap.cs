@@ -38,10 +38,10 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 {
-	// Token: 0x020047B7 RID: 18359
+	// Token: 0x020036E8 RID: 14056
 	public static class WorldMapSecondaryPanelCtorMap
 	{
-		// Token: 0x0603015D RID: 196957 RVA: 0x00B24BD4 File Offset: 0x00B22DD4
+		// Token: 0x0602492C RID: 149804 RVA: 0x00A54B58 File Offset: 0x00A52D58
 		// Note: this type is marked as 'beforefieldinit'.
 		static WorldMapSecondaryPanelCtorMap()
 		{
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.WorldMap.ViewComponent
 			WorldMapSecondaryPanelCtorMap.Map = dictionary;
 		}
 
-		// Token: 0x04019EC0 RID: 106176
+		// Token: 0x04014570 RID: 83312
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		public static readonly Dictionary<ESecondaryPanel, Func<UiPanelBase>> Map;

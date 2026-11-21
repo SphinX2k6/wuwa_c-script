@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026FB RID: 9979
+	// Token: 0x020029C1 RID: 10689
 	public class IMonsterNpcInteractTriggerHook : IMonsterNpcInteractConfigBase
 	{
-		// Token: 0x0600DEC8 RID: 57032 RVA: 0x00210A7E File Offset: 0x0020EC7E
-		[NullableContext(1)]
+		// Token: 0x0600ECB0 RID: 60592 RVA: 0x0022D3E6 File Offset: 0x0022B5E6
 		public static IMonsterNpcInteractTriggerHook Create(IMonsterNpcInteractTriggerHook? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004294 RID: 17044
-		// (get) Token: 0x0600DEC9 RID: 57033 RVA: 0x00210A9D File Offset: 0x0020EC9D
+		// Token: 0x170045DC RID: 17884
+		// (get) Token: 0x0600ECB1 RID: 60593 RVA: 0x0022D405 File Offset: 0x0022B605
 		public override EMonsterNpcInteractType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004295 RID: 17045
-		// (get) Token: 0x0600DECA RID: 57034 RVA: 0x00210AAA File Offset: 0x0020ECAA
+		// Token: 0x170045DD RID: 17885
+		// (get) Token: 0x0600ECB2 RID: 60594 RVA: 0x0022D412 File Offset: 0x0022B612
 		public virtual int HookEntityId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007BA7 RID: 31655
+		// Token: 0x0400824B RID: 33355
 		private IMonsterNpcInteractTriggerHook Instance;
 	}
 }

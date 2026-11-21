@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020027BF RID: 10175
+// Token: 0x02001D3A RID: 7482
 public class OneSkillEffect
 {
-	// Token: 0x04009D45 RID: 40261
+	// Token: 0x0400A12B RID: 41259
 	public int Id;
 
-	// Token: 0x04009D46 RID: 40262
+	// Token: 0x0400A12C RID: 41260
 	[Nullable(1)]
 	public List<string> Desc;
 }

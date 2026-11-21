@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Plot
 {
-	// Token: 0x02004FE4 RID: 20452
+	// Token: 0x02003FAE RID: 16302
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlotResultInfo
 	{
-		// Token: 0x06034598 RID: 214424 RVA: 0x00C4D656 File Offset: 0x00C4B856
+		// Token: 0x06029421 RID: 168993 RVA: 0x00B9769E File Offset: 0x00B9589E
 		public PlotResultInfo()
 		{
 			this.FlowListName = "";
@@ -18,14 +18,14 @@ namespace CSharpScript.Game.Module.Plot
 			this.ResultCode = EPlotResultCode.Success;
 		}
 
-		// Token: 0x06034599 RID: 214425 RVA: 0x00C4D695 File Offset: 0x00C4B895
+		// Token: 0x06029422 RID: 168994 RVA: 0x00B976DD File Offset: 0x00B958DD
 		public void Reset()
 		{
 			this.ResultCode = EPlotResultCode.Success;
 		}
 
-		// Token: 0x17007FC5 RID: 32709
-		// (get) Token: 0x0603459A RID: 214426 RVA: 0x00C4D6A0 File Offset: 0x00C4B8A0
+		// Token: 0x17005379 RID: 21369
+		// (get) Token: 0x06029423 RID: 168995 RVA: 0x00B976E8 File Offset: 0x00B958E8
 		public string FormatId
 		{
 			get
@@ -44,23 +44,23 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x0401BD71 RID: 114033
+		// Token: 0x0401674C RID: 91980
 		[Nullable(2)]
 		public string FlowListName;
 
-		// Token: 0x0401BD72 RID: 114034
+		// Token: 0x0401674D RID: 91981
 		public int? FlowId;
 
-		// Token: 0x0401BD73 RID: 114035
+		// Token: 0x0401674E RID: 91982
 		public int? StateId;
 
-		// Token: 0x0401BD74 RID: 114036
+		// Token: 0x0401674F RID: 91983
 		public long? FlowIncId;
 
-		// Token: 0x0401BD75 RID: 114037
+		// Token: 0x04016750 RID: 91984
 		public EPlotResultCode ResultCode;
 
-		// Token: 0x0401BD76 RID: 114038
+		// Token: 0x04016751 RID: 91985
 		[Nullable(2)]
 		private string FormatIdInner;
 	}

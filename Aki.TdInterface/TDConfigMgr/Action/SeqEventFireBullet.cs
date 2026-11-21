@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200218F RID: 8591
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020023F8 RID: 9208
 	public class SeqEventFireBullet : ActionParams
 	{
-		// Token: 0x0600BCBE RID: 48318 RVA: 0x001B2F3C File Offset: 0x001B113C
+		// Token: 0x0600C86E RID: 51310 RVA: 0x001CA434 File Offset: 0x001C8634
 		private SeqEventFireBullet_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BCBF RID: 48319 RVA: 0x001B2F74 File Offset: 0x001B1174
+		// Token: 0x0600C86F RID: 51311 RVA: 0x001CA46C File Offset: 0x001C866C
 		public static SeqEventFireBullet Create([Nullable(2)] SeqEventFireBullet instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BCC0 RID: 48320 RVA: 0x001B2F87 File Offset: 0x001B1187
+		// Token: 0x0600C870 RID: 51312 RVA: 0x001CA47F File Offset: 0x001C867F
 		public static SeqEventFireBullet CreateFromSetValue([Nullable(2)] SeqEventFireBullet_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BCC1 RID: 48321 RVA: 0x001B2F9A File Offset: 0x001B119A
+		// Token: 0x0600C871 RID: 51313 RVA: 0x001CA492 File Offset: 0x001C8692
 		public SeqEventFireBullet_SetValue ToSetValue()
 		{
 			return new SeqEventFireBullet_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003969 RID: 14697
-		// (get) Token: 0x0600BCC2 RID: 48322 RVA: 0x001B2FAD File Offset: 0x001B11AD
-		// (set) Token: 0x0600BCC3 RID: 48323 RVA: 0x001B2FD9 File Offset: 0x001B11D9
+		// Token: 0x17003C5B RID: 15451
+		// (get) Token: 0x0600C872 RID: 51314 RVA: 0x001CA4A5 File Offset: 0x001C86A5
+		// (set) Token: 0x0600C873 RID: 51315 RVA: 0x001CA4D1 File Offset: 0x001C86D1
 		public virtual long BulletId
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040070AC RID: 28844
+		// Token: 0x040076EE RID: 30446
 		[Nullable(2)]
 		protected new SeqEventFireBullet FbInstance;
 
-		// Token: 0x040070AD RID: 28845
+		// Token: 0x040076EF RID: 30447
 		[Nullable(2)]
 		protected SeqEventFireBullet_SetValue PocoInterface;
 	}

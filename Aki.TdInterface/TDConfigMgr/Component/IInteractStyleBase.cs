@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000491 RID: 1169
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020004EA RID: 1258
 	public class IInteractStyleBase
 	{
-		// Token: 0x06001780 RID: 6016 RVA: 0x000471A0 File Offset: 0x000453A0
+		// Token: 0x0600191A RID: 6426 RVA: 0x0004AEE8 File Offset: 0x000490E8
 		private IInteractStyleBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001781 RID: 6017 RVA: 0x000471D8 File Offset: 0x000453D8
+		// Token: 0x0600191B RID: 6427 RVA: 0x0004AF20 File Offset: 0x00049120
 		public static IInteractStyleBase Create([Nullable(2)] IInteractStyleBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001782 RID: 6018 RVA: 0x000471EB File Offset: 0x000453EB
+		// Token: 0x0600191C RID: 6428 RVA: 0x0004AF33 File Offset: 0x00049133
 		public static IInteractStyleBase CreateFromSetValue([Nullable(2)] IInteractStyleBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001783 RID: 6019 RVA: 0x000471FE File Offset: 0x000453FE
+		// Token: 0x0600191D RID: 6429 RVA: 0x0004AF46 File Offset: 0x00049146
 		public IInteractStyleBase_SetValue ToSetValue()
 		{
 			return new IInteractStyleBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000645 RID: 1605
-		// (get) Token: 0x06001784 RID: 6020 RVA: 0x00047211 File Offset: 0x00045411
-		// (set) Token: 0x06001785 RID: 6021 RVA: 0x0004723C File Offset: 0x0004543C
+		// Token: 0x170006AC RID: 1708
+		// (get) Token: 0x0600191E RID: 6430 RVA: 0x0004AF59 File Offset: 0x00049159
+		// (set) Token: 0x0600191F RID: 6431 RVA: 0x0004AF84 File Offset: 0x00049184
 		public virtual EInteractStyleType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001196 RID: 4502
+		// Token: 0x040012B8 RID: 4792
 		[Nullable(2)]
 		protected IInteractStyleBase FbInstance;
 
-		// Token: 0x04001197 RID: 4503
+		// Token: 0x040012B9 RID: 4793
 		[Nullable(2)]
 		protected IInteractStyleBase_SetValue PocoInterface;
 	}

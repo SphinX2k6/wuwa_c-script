@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -10,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.Activity
 {
-	// Token: 0x02005786 RID: 22406
+	// Token: 0x0200475D RID: 18269
 	public class KurotatoLimitedTimeRewardBottomItem : UiPanelBase
 	{
-		// Token: 0x06038EA3 RID: 233123 RVA: 0x00D86D38 File Offset: 0x00D84F38
+		// Token: 0x0602DDB3 RID: 187827 RVA: 0x00CD5A7C File Offset: 0x00CD3C7C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -31,14 +30,14 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038EA4 RID: 233124 RVA: 0x00D86DE3 File Offset: 0x00D84FE3
+		// Token: 0x0602DDB4 RID: 187828 RVA: 0x00CD5B27 File Offset: 0x00CD3D27
 		protected override void OnStart()
 		{
 			this.GiftLayout = new GenericLayout<GiftItem, int>(base.GetLayoutBase(1), new Func<GiftItem>(this.CreateGiftItem), null, false, true);
 			this.ProgressBarWidth = base.GetSprite(3).GetWidth();
 		}
 
-		// Token: 0x06038EA5 RID: 233125 RVA: 0x00D86E18 File Offset: 0x00D85018
+		// Token: 0x0602DDB5 RID: 187829 RVA: 0x00CD5B5C File Offset: 0x00CD3D5C
 		[NullableContext(1)]
 		private GiftItem CreateGiftItem()
 		{
@@ -48,22 +47,25 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			};
 		}
 
-		// Token: 0x06038EA6 RID: 233126 RVA: 0x00D86E31 File Offset: 0x00D85031
+		// Token: 0x0602DDB6 RID: 187830 RVA: 0x00CD5B75 File Offset: 0x00CD3D75
 		private void OnReceiveCallback()
 		{
 			this.Refresh();
 		}
 
-		// Token: 0x06038EA7 RID: 233127 RVA: 0x00D86E3C File Offset: 0x00D8503C
+		// Token: 0x0602DDB7 RID: 187831 RVA: 0x00CD5B80 File Offset: 0x00CD3D80
 		public void Refresh()
 		{
 			int currentMilestone = KurotatoActivityController.Instance.GetActivityData().GetCurrentMilestone();
-			List<int> tabIdList = (from config in KurotatoConfig.Instance.GetAllKurotatoScoreAwardConfig()
-			select config.Id).ToList<int>();
-			this.RefreshProgressItem(currentMilestone, tabIdList);
+			List<int> list = new List<int>();
+			foreach (KurotatoScoreAward kurotatoScoreAward in KurotatoConfig.Instance.GetAllKurotatoScoreAwardConfig())
+			{
+				list.Add(kurotatoScoreAward.Id);
+			}
+			this.RefreshProgressItem(currentMilestone, list);
 		}
 
-		// Token: 0x06038EA8 RID: 233128 RVA: 0x00D86E98 File Offset: 0x00D85098
+		// Token: 0x0602DDB8 RID: 187832 RVA: 0x00CD5BF8 File Offset: 0x00CD3DF8
 		[NullableContext(1)]
 		public void RefreshProgressItem(int currentProgress, IReadOnlyList<int> tabIdList)
 		{
@@ -100,13 +102,13 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 			{
 				return;
 			}
-			giftLayout.RefreshByData(tabIdList.ToList<int>(), null, false);
+			giftLayout.RefreshByData(tabIdList, null, false);
 		}
 
-		// Token: 0x0401DD63 RID: 122211
+		// Token: 0x040187F9 RID: 100345
 		private const int REWARD_ITEM_WIDTH = 130;
 
-		// Token: 0x0401DD64 RID: 122212
+		// Token: 0x040187FA RID: 100346
 		[Nullable(new byte[]
 		{
 			2,
@@ -114,19 +116,19 @@ namespace CSharpScript.Game.Module.Kurotato.View.Activity
 		})]
 		private GenericLayout<GiftItem, int> GiftLayout;
 
-		// Token: 0x0401DD65 RID: 122213
+		// Token: 0x040187FB RID: 100347
 		private float ProgressBarWidth;
 
-		// Token: 0x0200B9A8 RID: 47528
+		// Token: 0x0200A3BF RID: 41919
 		private enum EComponents
 		{
-			// Token: 0x04038229 RID: 229929
+			// Token: 0x04032C1B RID: 207899
 			ProgressNum,
-			// Token: 0x0403822A RID: 229930
+			// Token: 0x04032C1C RID: 207900
 			RewardLayout,
-			// Token: 0x0403822B RID: 229931
+			// Token: 0x04032C1D RID: 207901
 			GiftItem,
-			// Token: 0x0403822C RID: 229932
+			// Token: 0x04032C1E RID: 207902
 			ProgressBar
 		}
 	}

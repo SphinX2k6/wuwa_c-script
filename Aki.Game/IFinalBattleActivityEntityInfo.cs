@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02000E6E RID: 3694
+// Token: 0x02000323 RID: 803
 public interface IFinalBattleActivityEntityInfo : IFinalBattleCombatInfo
 {
-	// Token: 0x1700066E RID: 1646
-	// (get) Token: 0x060059D2 RID: 22994
-	// (set) Token: 0x060059D3 RID: 22995
+	// Token: 0x17000692 RID: 1682
+	// (get) Token: 0x06002D69 RID: 11625
+	// (set) Token: 0x06002D6A RID: 11626
 	int ConfigId { get; set; }
 }

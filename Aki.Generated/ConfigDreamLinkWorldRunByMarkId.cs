@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000221 RID: 545
+	// Token: 0x02000233 RID: 563
 	public class ConfigDreamLinkWorldRunByMarkId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000CCA RID: 3274 RVA: 0x000A1E9C File Offset: 0x000A009C
+		// Token: 0x06000D36 RID: 3382 RVA: 0x000A7DD4 File Offset: 0x000A5FD4
 		static ConfigDreamLinkWorldRunByMarkId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDreamLinkWorldRunByMarkId.CreateStaticDefaultValue), new Action(ConfigDreamLinkWorldRunByMarkId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000CCB RID: 3275 RVA: 0x000A1EBC File Offset: 0x000A00BC
+		// Token: 0x06000D37 RID: 3383 RVA: 0x000A7DF4 File Offset: 0x000A5FF4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDreamLinkWorldRunByMarkId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000CCC RID: 3276 RVA: 0x000A1F3B File Offset: 0x000A013B
+		// Token: 0x06000D38 RID: 3384 RVA: 0x000A7E73 File Offset: 0x000A6073
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDreamLinkWorldRunByMarkId.LogPair = null;
 			ConfigDreamLinkWorldRunByMarkId.HandleId = 0;
 		}
 
-		// Token: 0x06000CCD RID: 3277 RVA: 0x000A1F49 File Offset: 0x000A0149
+		// Token: 0x06000D39 RID: 3385 RVA: 0x000A7E81 File Offset: 0x000A6081
 		public static void Init()
 		{
 			ConfigDreamLinkWorldRunByMarkId.HandleId = ConfigCommon.InitDataStatement(ConfigDreamLinkWorldRunByMarkId.HandleId, "db_dreamlink.db", "select BinData from `DreamLinkWorldRun` where MarkId=?");
 		}
 
-		// Token: 0x06000CCE RID: 3278 RVA: 0x000A1F64 File Offset: 0x000A0164
+		// Token: 0x06000D3A RID: 3386 RVA: 0x000A7E9C File Offset: 0x000A609C
 		public static DreamLinkWorldRun? GetConfig(int p0MarkId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigDreamLinkWorldRunByMarkId.HandleId, ConfigDreamLinkWorldRunByMarkId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new DreamLinkWorldRun?(rootAsDreamLinkWorldRun);
 		}
 
-		// Token: 0x04000ECB RID: 3787
+		// Token: 0x04000F49 RID: 3913
 		private const string DB = "db_dreamlink.db";
 
-		// Token: 0x04000ECC RID: 3788
+		// Token: 0x04000F4A RID: 3914
 		private const string FILE = "m.梦境链接活动.xlsx";
 
-		// Token: 0x04000ECD RID: 3789
+		// Token: 0x04000F4B RID: 3915
 		private const string TABLE = "DreamLinkWorldRun";
 
-		// Token: 0x04000ECE RID: 3790
+		// Token: 0x04000F4C RID: 3916
 		private const string COMMAND = "select BinData from `DreamLinkWorldRun` where MarkId=?";
 
-		// Token: 0x04000ECF RID: 3791
+		// Token: 0x04000F4D RID: 3917
 		private const string KEY_PREFIX = "DreamLinkWorldRunByMarkId";
 
-		// Token: 0x04000ED0 RID: 3792
+		// Token: 0x04000F4E RID: 3918
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000ED1 RID: 3793
+		// Token: 0x04000F4F RID: 3919
 		private static int HandleId;
 	}
 }

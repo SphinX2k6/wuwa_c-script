@@ -2,7 +2,7 @@
 
 namespace CSharpScript.Utils
 {
-	// Token: 0x020044FB RID: 17659
+	// Token: 0x0200341D RID: 13341
 	public interface IAstNode
 	{
 	}

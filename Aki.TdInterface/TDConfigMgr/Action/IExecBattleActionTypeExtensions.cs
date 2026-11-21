@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A1C RID: 6684
+	// Token: 0x02001BB1 RID: 7089
 	public static class IExecBattleActionTypeExtensions
 	{
-		// Token: 0x06008F33 RID: 36659 RVA: 0x0014E878 File Offset: 0x0014CA78
-		[NullableContext(1)]
+		// Token: 0x0600969D RID: 38557 RVA: 0x0015E7A4 File Offset: 0x0015C9A4
 		public static IReadOnlyList<object> GetConfigs(this IExecBattleActionType p)
 		{
 			ISetBattleTags setBattleTags = p as ISetBattleTags;

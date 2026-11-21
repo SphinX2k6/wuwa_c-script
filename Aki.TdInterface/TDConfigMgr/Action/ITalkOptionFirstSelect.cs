@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F70 RID: 8048
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020021AB RID: 8619
 	public class ITalkOptionFirstSelect : ITalkOptionPreConditionBase
 	{
-		// Token: 0x0600B11E RID: 45342 RVA: 0x0019D8EC File Offset: 0x0019BAEC
+		// Token: 0x0600BBF8 RID: 48120 RVA: 0x001B3840 File Offset: 0x001B1A40
 		private ITalkOptionFirstSelect_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B11F RID: 45343 RVA: 0x0019D924 File Offset: 0x0019BB24
+		// Token: 0x0600BBF9 RID: 48121 RVA: 0x001B3878 File Offset: 0x001B1A78
 		public static ITalkOptionFirstSelect Create([Nullable(2)] ITalkOptionFirstSelect instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B120 RID: 45344 RVA: 0x0019D937 File Offset: 0x0019BB37
+		// Token: 0x0600BBFA RID: 48122 RVA: 0x001B388B File Offset: 0x001B1A8B
 		public static ITalkOptionFirstSelect CreateFromSetValue([Nullable(2)] ITalkOptionFirstSelect_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B121 RID: 45345 RVA: 0x0019D94A File Offset: 0x0019BB4A
+		// Token: 0x0600BBFB RID: 48123 RVA: 0x001B389E File Offset: 0x001B1A9E
 		public new ITalkOptionFirstSelect_SetValue ToSetValue()
 		{
 			return new ITalkOptionFirstSelect_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170036BF RID: 14015
-		// (get) Token: 0x0600B122 RID: 45346 RVA: 0x0019D95D File Offset: 0x0019BB5D
-		// (set) Token: 0x0600B123 RID: 45347 RVA: 0x0019D988 File Offset: 0x0019BB88
+		// Token: 0x1700398B RID: 14731
+		// (get) Token: 0x0600BBFC RID: 48124 RVA: 0x001B38B1 File Offset: 0x001B1AB1
+		// (set) Token: 0x0600BBFD RID: 48125 RVA: 0x001B38DC File Offset: 0x001B1ADC
 		public override ETalkOptionPreConditionType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006B2C RID: 27436
+		// Token: 0x04007114 RID: 28948
 		[Nullable(2)]
 		protected new ITalkOptionFirstSelect FbInstance;
 
-		// Token: 0x04006B2D RID: 27437
+		// Token: 0x04007115 RID: 28949
 		[Nullable(2)]
 		protected new ITalkOptionFirstSelect_SetValue PocoInterface;
 	}

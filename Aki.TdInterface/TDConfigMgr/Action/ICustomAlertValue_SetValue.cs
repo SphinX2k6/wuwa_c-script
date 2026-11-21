@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001947 RID: 6471
+	// Token: 0x02001AD2 RID: 6866
 	public class ICustomAlertValue_SetValue
 	{
-		// Token: 0x040056A2 RID: 22178
+		// Token: 0x04005AF5 RID: 23285
 		public EValueChangeType Type;
 
-		// Token: 0x040056A3 RID: 22179
+		// Token: 0x04005AF6 RID: 23286
 		public float CustomValue;
 	}
 }

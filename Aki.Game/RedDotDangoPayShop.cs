@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x0200337D RID: 13181
+// Token: 0x020028EF RID: 10479
 [NullableContext(1)]
 [Nullable(0)]
 public class RedDotDangoPayShop : RedDotBase
 {
-	// Token: 0x0601CA80 RID: 117376 RVA: 0x0080642B File Offset: 0x0080462B
+	// Token: 0x0601A778 RID: 108408 RVA: 0x0082C9EF File Offset: 0x0082ABEF
 	protected override bool IsAllEventParamAsUId()
 	{
 		return false;
 	}
 
-	// Token: 0x0601CA81 RID: 117377 RVA: 0x00806430 File Offset: 0x00804630
+	// Token: 0x0601A779 RID: 108409 RVA: 0x0082C9F4 File Offset: 0x0082ABF4
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.PayShopGoodsBuy, new Action(base.EventCheck));
@@ -27,7 +27,7 @@ public class RedDotDangoPayShop : RedDotBase
 		EventSystem.Instance.Add<PayShopDefine.EPayShopTabType>(EEventName.RefreshPayShopInstanceRedDot, new Action<PayShopDefine.EPayShopTabType>(this.OnRefreshPayShopInstanceRedDot));
 	}
 
-	// Token: 0x0601CA82 RID: 117378 RVA: 0x00806520 File Offset: 0x00804720
+	// Token: 0x0601A77A RID: 108410 RVA: 0x0082CAE4 File Offset: 0x0082ACE4
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.PayShopGoodsBuy, new Action(base.EventCheck));
@@ -40,43 +40,43 @@ public class RedDotDangoPayShop : RedDotBase
 		EventSystem.Instance.Remove<PayShopDefine.EPayShopTabType>(EEventName.RefreshPayShopInstanceRedDot, new Action<PayShopDefine.EPayShopTabType>(this.OnRefreshPayShopInstanceRedDot));
 	}
 
-	// Token: 0x0601CA83 RID: 117379 RVA: 0x0080660D File Offset: 0x0080480D
+	// Token: 0x0601A77B RID: 108411 RVA: 0x0082CBD1 File Offset: 0x0082ADD1
 	protected override bool OnCheck(int uId = 0)
 	{
 		return DangoAbyssModel.Instance.CheckPayShopRedDot();
 	}
 
-	// Token: 0x0601CA84 RID: 117380 RVA: 0x00806619 File Offset: 0x00804819
+	// Token: 0x0601A77C RID: 108412 RVA: 0x0082CBDD File Offset: 0x0082ADDD
 	private void OnRefreshGoods(int goodsId, PayShopDefine.EPayShopTabType payShopId, int tabId)
 	{
 		base.EventCheck();
 	}
 
-	// Token: 0x0601CA85 RID: 117381 RVA: 0x00806621 File Offset: 0x00804821
+	// Token: 0x0601A77D RID: 108413 RVA: 0x0082CBE5 File Offset: 0x0082ADE5
 	private void OnUnLockGoods(IReadOnlyDictionary<int, HashSet<int>> payShopMap)
 	{
 		base.EventCheck();
 	}
 
-	// Token: 0x0601CA86 RID: 117382 RVA: 0x00806629 File Offset: 0x00804829
+	// Token: 0x0601A77E RID: 108414 RVA: 0x0082CBED File Offset: 0x0082ADED
 	private void OnRefreshPayShop(int payShopId, bool ifItemRefresh)
 	{
 		base.EventCheck();
 	}
 
-	// Token: 0x0601CA87 RID: 117383 RVA: 0x00806631 File Offset: 0x00804831
+	// Token: 0x0601A77F RID: 108415 RVA: 0x0082CBF5 File Offset: 0x0082ADF5
 	private void OnRefreshAllPayShop(IEnumerable<PayShopDefine.EPayShopTabType> idList)
 	{
 		base.EventCheck();
 	}
 
-	// Token: 0x0601CA88 RID: 117384 RVA: 0x00806639 File Offset: 0x00804839
+	// Token: 0x0601A780 RID: 108416 RVA: 0x0082CBFD File Offset: 0x0082ADFD
 	private void OnRefreshGoodsList(IReadOnlySet<int> tabSet)
 	{
 		base.EventCheck();
 	}
 
-	// Token: 0x0601CA89 RID: 117385 RVA: 0x00806641 File Offset: 0x00804841
+	// Token: 0x0601A781 RID: 108417 RVA: 0x0082CC05 File Offset: 0x0082AE05
 	private void OnRefreshPayShopInstanceRedDot(PayShopDefine.EPayShopTabType obj)
 	{
 		base.EventCheck();

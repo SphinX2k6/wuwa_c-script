@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi
 {
-	// Token: 0x02005C9D RID: 23709
+	// Token: 0x02004C7F RID: 19583
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BattleUiPool
 	{
-		// Token: 0x0603BE5D RID: 245341 RVA: 0x00E4F508 File Offset: 0x00E4D708
+		// Token: 0x06030DB0 RID: 200112 RVA: 0x00D9FB90 File Offset: 0x00D9DD90
 		[NullableContext(0)]
 		public UniTask<bool> Init()
 		{
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BE5E RID: 245342 RVA: 0x00E4F54C File Offset: 0x00E4D74C
+		// Token: 0x06030DB1 RID: 200113 RVA: 0x00D9FBD4 File Offset: 0x00D9DDD4
 		private bool InitRoot()
 		{
 			UUIItem worldSpaceUiRootItem = UiLayer.Instance.WorldSpaceUiRootItem;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			return true;
 		}
 
-		// Token: 0x0603BE5F RID: 245343 RVA: 0x00E4F634 File Offset: 0x00E4D834
+		// Token: 0x06030DB2 RID: 200114 RVA: 0x00D9FCBC File Offset: 0x00D9DEBC
 		[NullableContext(0)]
 		private UniTask<bool> PreloadAllActor()
 		{
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			return <PreloadAllActor>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BE60 RID: 245344 RVA: 0x00E4F678 File Offset: 0x00E4D878
+		// Token: 0x06030DB3 RID: 200115 RVA: 0x00D9FD00 File Offset: 0x00D9DF00
 		[return: Nullable(0)]
 		private UniTask<bool> PreloadActor(IPreLoad config, UUIItem parentItem)
 		{
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			return <PreloadActor>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BE61 RID: 245345 RVA: 0x00E4F6CC File Offset: 0x00E4D8CC
+		// Token: 0x06030DB4 RID: 200116 RVA: 0x00D9FD54 File Offset: 0x00D9DF54
 		[return: Nullable(2)]
 		public AActor GetActor(string resourceId, USceneComponent parent, bool setParent)
 		{
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			return aactor2;
 		}
 
-		// Token: 0x0603BE62 RID: 245346 RVA: 0x00E4F7E0 File Offset: 0x00E4D9E0
+		// Token: 0x06030DB5 RID: 200117 RVA: 0x00D9FE68 File Offset: 0x00D9E068
 		public bool RecycleActor(string resourceId, AActor actor, bool resetParent = false)
 		{
 			BattleUiPoolElement battleUiPoolElement;
@@ -175,7 +175,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			return true;
 		}
 
-		// Token: 0x0603BE63 RID: 245347 RVA: 0x00E4F8C4 File Offset: 0x00E4DAC4
+		// Token: 0x06030DB6 RID: 200118 RVA: 0x00D9FF4C File Offset: 0x00D9E14C
 		[return: Nullable(2)]
 		public AActor GetSrcActor(string resourceId)
 		{
@@ -187,27 +187,27 @@ namespace CSharpScript.Game.Module.BattleUi
 			return battleUiPoolElement.Actor;
 		}
 
-		// Token: 0x0603BE64 RID: 245348 RVA: 0x00E4F8F1 File Offset: 0x00E4DAF1
+		// Token: 0x06030DB7 RID: 200119 RVA: 0x00D9FF79 File Offset: 0x00D9E179
 		[return: Nullable(2)]
 		public AActor GetHeadStateView(string resourceId)
 		{
 			return this.GetActor(resourceId, this.WorldRoot, false);
 		}
 
-		// Token: 0x0603BE65 RID: 245349 RVA: 0x00E4F901 File Offset: 0x00E4DB01
+		// Token: 0x06030DB8 RID: 200120 RVA: 0x00D9FF89 File Offset: 0x00D9E189
 		public bool RecycleHeadStateView(string resourceId, AActor actor, bool resetParent = false)
 		{
 			return !this.Inited || this.RecycleActor(resourceId, actor, resetParent);
 		}
 
-		// Token: 0x0603BE66 RID: 245350 RVA: 0x00E4F916 File Offset: 0x00E4DB16
+		// Token: 0x06030DB9 RID: 200121 RVA: 0x00D9FF9E File Offset: 0x00D9E19E
 		[NullableContext(2)]
 		public AActor GetDamageView()
 		{
 			return this.GetActor(this.damageViewConfig.ResourceId, this.DamageViewRoot, false);
 		}
 
-		// Token: 0x0603BE67 RID: 245351 RVA: 0x00E4F930 File Offset: 0x00E4DB30
+		// Token: 0x06030DBA RID: 200122 RVA: 0x00D9FFB8 File Offset: 0x00D9E1B8
 		public bool RecycleDamageView(AActor actor)
 		{
 			if (!this.Inited)
@@ -218,14 +218,14 @@ namespace CSharpScript.Game.Module.BattleUi
 			return this.RecycleActor(this.damageViewConfig.ResourceId, actor, false);
 		}
 
-		// Token: 0x0603BE68 RID: 245352 RVA: 0x00E4F961 File Offset: 0x00E4DB61
+		// Token: 0x06030DBB RID: 200123 RVA: 0x00D9FFE9 File Offset: 0x00D9E1E9
 		[return: Nullable(2)]
 		public AActor GetBuffItem(USceneComponent parentItem)
 		{
 			return this.GetActor(this.buffItemConfig.ResourceId, parentItem, true);
 		}
 
-		// Token: 0x0603BE69 RID: 245353 RVA: 0x00E4F976 File Offset: 0x00E4DB76
+		// Token: 0x06030DBC RID: 200124 RVA: 0x00D9FFFE File Offset: 0x00D9E1FE
 		public bool RecycleBuffItem(AActor actor)
 		{
 			if (!this.Inited)
@@ -236,14 +236,14 @@ namespace CSharpScript.Game.Module.BattleUi
 			return this.RecycleActor(this.buffItemConfig.ResourceId, actor, true);
 		}
 
-		// Token: 0x0603BE6A RID: 245354 RVA: 0x00E4F9A7 File Offset: 0x00E4DBA7
+		// Token: 0x06030DBD RID: 200125 RVA: 0x00DA002F File Offset: 0x00D9E22F
 		[return: Nullable(2)]
 		public AActor GetQuickHackBuffItem(USceneComponent parentItem)
 		{
 			return this.GetActor(this.quickHackBuffItemConfig.ResourceId, parentItem, true);
 		}
 
-		// Token: 0x0603BE6B RID: 245355 RVA: 0x00E4F9BC File Offset: 0x00E4DBBC
+		// Token: 0x06030DBE RID: 200126 RVA: 0x00DA0044 File Offset: 0x00D9E244
 		public bool RecycleQuickHackBuffItem(AActor actor)
 		{
 			if (!this.Inited)
@@ -254,14 +254,14 @@ namespace CSharpScript.Game.Module.BattleUi
 			return this.RecycleActor(this.quickHackBuffItemConfig.ResourceId, actor, true);
 		}
 
-		// Token: 0x0603BE6C RID: 245356 RVA: 0x00E4F9ED File Offset: 0x00E4DBED
+		// Token: 0x06030DBF RID: 200127 RVA: 0x00DA0075 File Offset: 0x00D9E275
 		[return: Nullable(2)]
 		public AActor GetEnvironmentItem(USceneComponent parentItem)
 		{
 			return this.GetActor(this.environmentItemConfig.ResourceId, parentItem, true);
 		}
 
-		// Token: 0x0603BE6D RID: 245357 RVA: 0x00E4FA02 File Offset: 0x00E4DC02
+		// Token: 0x06030DC0 RID: 200128 RVA: 0x00DA008A File Offset: 0x00D9E28A
 		public bool RecycleEnvironmentItem(AActor actor)
 		{
 			if (!this.Inited)
@@ -272,14 +272,14 @@ namespace CSharpScript.Game.Module.BattleUi
 			return this.RecycleActor(this.environmentItemConfig.ResourceId, actor, true);
 		}
 
-		// Token: 0x0603BE6E RID: 245358 RVA: 0x00E4FA33 File Offset: 0x00E4DC33
+		// Token: 0x06030DC1 RID: 200129 RVA: 0x00DA00BB File Offset: 0x00D9E2BB
 		[return: Nullable(2)]
 		public AActor GetWeaknessItem(USceneComponent parentItem)
 		{
 			return this.GetActor(this.weaknessItemConfig.ResourceId, parentItem, true);
 		}
 
-		// Token: 0x0603BE6F RID: 245359 RVA: 0x00E4FA48 File Offset: 0x00E4DC48
+		// Token: 0x06030DC2 RID: 200130 RVA: 0x00DA00D0 File Offset: 0x00D9E2D0
 		public bool RecycleWeaknessItem(AActor actor)
 		{
 			if (!this.Inited)
@@ -290,7 +290,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			return this.RecycleActor(this.weaknessItemConfig.ResourceId, actor, true);
 		}
 
-		// Token: 0x0603BE70 RID: 245360 RVA: 0x00E4FA7C File Offset: 0x00E4DC7C
+		// Token: 0x06030DC3 RID: 200131 RVA: 0x00DA0104 File Offset: 0x00D9E304
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -308,7 +308,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			return <LoadActorNoCache>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BE71 RID: 245361 RVA: 0x00E4FAD0 File Offset: 0x00E4DCD0
+		// Token: 0x06030DC4 RID: 200132 RVA: 0x00DA0158 File Offset: 0x00D9E358
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -326,7 +326,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			return <LoadActor>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BE72 RID: 245362 RVA: 0x00E4FB24 File Offset: 0x00E4DD24
+		// Token: 0x06030DC5 RID: 200133 RVA: 0x00DA01AC File Offset: 0x00D9E3AC
 		private AActor GetActorFromPoolElement(BattleUiPoolElement poolElement, USceneComponent parentItem)
 		{
 			AActor aactor;
@@ -338,7 +338,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			return LguiUtil.Instance.DuplicateActor(poolElement.Actor, parentItem);
 		}
 
-		// Token: 0x0603BE73 RID: 245363 RVA: 0x00E4FB68 File Offset: 0x00E4DD68
+		// Token: 0x06030DC6 RID: 200134 RVA: 0x00DA01F0 File Offset: 0x00D9E3F0
 		public bool RecycleActorByPath(string path, AActor actor, bool resetParent = false)
 		{
 			if (!this.Inited)
@@ -360,7 +360,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			return true;
 		}
 
-		// Token: 0x0603BE74 RID: 245364 RVA: 0x00E4FBDC File Offset: 0x00E4DDDC
+		// Token: 0x06030DC7 RID: 200135 RVA: 0x00DA0264 File Offset: 0x00D9E464
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -378,7 +378,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			return <LoadSingleActorByPath>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BE75 RID: 245365 RVA: 0x00E4FC30 File Offset: 0x00E4DE30
+		// Token: 0x06030DC8 RID: 200136 RVA: 0x00DA02B8 File Offset: 0x00D9E4B8
 		public bool RecycleSingleActor(AActor actor, bool resetParent = false)
 		{
 			if (!this.Inited)
@@ -393,7 +393,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			return true;
 		}
 
-		// Token: 0x0603BE76 RID: 245366 RVA: 0x00E4FC74 File Offset: 0x00E4DE74
+		// Token: 0x06030DC9 RID: 200137 RVA: 0x00DA02FC File Offset: 0x00D9E4FC
 		[return: Nullable(0)]
 		public UniTask<bool> PreloadSingleActorByPath(string path, UUIItem parentItem)
 		{
@@ -407,7 +407,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			return <PreloadSingleActorByPath>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603BE77 RID: 245367 RVA: 0x00E4FCC8 File Offset: 0x00E4DEC8
+		// Token: 0x06030DCA RID: 200138 RVA: 0x00DA0350 File Offset: 0x00D9E550
 		public void Clear()
 		{
 			this.UiPrefabLoadModule.Clear();
@@ -427,7 +427,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.UiRoot = null;
 		}
 
-		// Token: 0x0603BE79 RID: 245369 RVA: 0x00E4FE90 File Offset: 0x00E4E090
+		// Token: 0x06030DCC RID: 200140 RVA: 0x00DA0518 File Offset: 0x00D9E718
 		// Note: this type is marked as 'beforefieldinit'.
 		unsafe static BattleUiPool()
 		{
@@ -468,92 +468,92 @@ namespace CSharpScript.Game.Module.BattleUi
 			BattleUiPool.headStateConfigList = list;
 		}
 
-		// Token: 0x0401F3E6 RID: 127974
+		// Token: 0x04019E9F RID: 106143
 		[StaticVariableRuleIgnore]
 		private static readonly List<IPreLoad> headStateConfigList;
 
-		// Token: 0x0401F3E7 RID: 127975
+		// Token: 0x04019EA0 RID: 106144
 		private readonly BattleUiPool.PreLoadConfig bossHeadStateConfig = new BattleUiPool.PreLoadConfig
 		{
 			ResourceId = "UiItem_BossState_Prefab",
 			PreloadCount = 0
 		};
 
-		// Token: 0x0401F3E8 RID: 127976
+		// Token: 0x04019EA1 RID: 106145
 		private readonly BattleUiPool.PreLoadConfig damageViewConfig = new BattleUiPool.PreLoadConfig
 		{
 			ResourceId = "UiItem_DamageView_Prefab",
 			PreloadCount = 21
 		};
 
-		// Token: 0x0401F3E9 RID: 127977
+		// Token: 0x04019EA2 RID: 106146
 		private readonly BattleUiPool.PreLoadConfig buffItemConfig = new BattleUiPool.PreLoadConfig
 		{
 			ResourceId = "UiItem_BuffItem_Prefab",
 			PreloadCount = 5
 		};
 
-		// Token: 0x0401F3EA RID: 127978
+		// Token: 0x04019EA3 RID: 106147
 		private readonly BattleUiPool.PreLoadConfig environmentItemConfig = new BattleUiPool.PreLoadConfig
 		{
 			ResourceId = "UiItem_BuffEnvironmentItem_Prefab",
 			PreloadCount = 5
 		};
 
-		// Token: 0x0401F3EB RID: 127979
+		// Token: 0x04019EA4 RID: 106148
 		private readonly BattleUiPool.PreLoadConfig weaknessItemConfig = new BattleUiPool.PreLoadConfig
 		{
 			ResourceId = "UiItem_FightBossConcertoState",
 			PreloadCount = 5
 		};
 
-		// Token: 0x0401F3EC RID: 127980
+		// Token: 0x04019EA5 RID: 106149
 		private readonly BattleUiPool.PreLoadConfig quickHackBuffItemConfig = new BattleUiPool.PreLoadConfig
 		{
 			ResourceId = "UiItem_QuickHack_BuffItem__Prefab",
 			PreloadCount = 5
 		};
 
-		// Token: 0x0401F3ED RID: 127981
+		// Token: 0x04019EA6 RID: 106150
 		private readonly Dictionary<string, BattleUiPoolElement> ActorMap = new Dictionary<string, BattleUiPoolElement>();
 
-		// Token: 0x0401F3EE RID: 127982
+		// Token: 0x04019EA7 RID: 106151
 		private readonly Dictionary<string, AActor> SingleActorMap = new Dictionary<string, AActor>();
 
-		// Token: 0x0401F3EF RID: 127983
+		// Token: 0x04019EA8 RID: 106152
 		private readonly UiPrefabLoadModule UiPrefabLoadModule = new UiPrefabLoadModule();
 
-		// Token: 0x0401F3F0 RID: 127984
+		// Token: 0x04019EA9 RID: 106153
 		private bool Inited;
 
-		// Token: 0x0401F3F1 RID: 127985
+		// Token: 0x04019EAA RID: 106154
 		[Nullable(2)]
 		private UUIItem WorldRoot;
 
-		// Token: 0x0401F3F2 RID: 127986
+		// Token: 0x04019EAB RID: 106155
 		[Nullable(2)]
 		private UUIItem PoolRoot;
 
-		// Token: 0x0401F3F3 RID: 127987
+		// Token: 0x04019EAC RID: 106156
 		[Nullable(2)]
 		private UUIItem UiRoot;
 
-		// Token: 0x0401F3F4 RID: 127988
+		// Token: 0x04019EAD RID: 106157
 		[Nullable(2)]
 		private UUIItem DamageViewRoot;
 
-		// Token: 0x0200BE79 RID: 48761
+		// Token: 0x0200A87F RID: 43135
 		[Nullable(0)]
 		private class PreLoadConfig : IPreLoad
 		{
-			// Token: 0x1700A25B RID: 41563
-			// (get) Token: 0x06050054 RID: 327764 RVA: 0x0157153A File Offset: 0x0156F73A
-			// (set) Token: 0x06050055 RID: 327765 RVA: 0x01571542 File Offset: 0x0156F742
+			// Token: 0x170079F8 RID: 31224
+			// (get) Token: 0x06046596 RID: 288150 RVA: 0x0152A8CA File Offset: 0x01528ACA
+			// (set) Token: 0x06046597 RID: 288151 RVA: 0x0152A8D2 File Offset: 0x01528AD2
 			public string ResourceId { get; set; } = string.Empty;
 
-			// Token: 0x1700A25C RID: 41564
-			// (get) Token: 0x06050056 RID: 327766 RVA: 0x0157154B File Offset: 0x0156F74B
-			// (set) Token: 0x06050057 RID: 327767 RVA: 0x01571553 File Offset: 0x0156F753
+			// Token: 0x170079F9 RID: 31225
+			// (get) Token: 0x06046598 RID: 288152 RVA: 0x0152A8DB File Offset: 0x01528ADB
+			// (set) Token: 0x06046599 RID: 288153 RVA: 0x0152A8E3 File Offset: 0x01528AE3
 			public int PreloadCount { get; set; }
 		}
 	}

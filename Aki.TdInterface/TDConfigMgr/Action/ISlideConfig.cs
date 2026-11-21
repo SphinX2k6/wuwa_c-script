@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E85 RID: 7813
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020020BA RID: 8378
 	public class ISlideConfig : ISportConfig
 	{
-		// Token: 0x0600A72C RID: 42796 RVA: 0x00179F9C File Offset: 0x0017819C
+		// Token: 0x0600B1E4 RID: 45540 RVA: 0x0018FC9C File Offset: 0x0018DE9C
 		private ISlideConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A72D RID: 42797 RVA: 0x00179FD4 File Offset: 0x001781D4
+		// Token: 0x0600B1E5 RID: 45541 RVA: 0x0018FCD4 File Offset: 0x0018DED4
 		public static ISlideConfig Create([Nullable(2)] ISlideConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A72E RID: 42798 RVA: 0x00179FE7 File Offset: 0x001781E7
+		// Token: 0x0600B1E6 RID: 45542 RVA: 0x0018FCE7 File Offset: 0x0018DEE7
 		public static ISlideConfig CreateFromSetValue([Nullable(2)] ISlideConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A72F RID: 42799 RVA: 0x00179FFA File Offset: 0x001781FA
+		// Token: 0x0600B1E7 RID: 45543 RVA: 0x0018FCFA File Offset: 0x0018DEFA
 		public new ISlideConfig_SetValue ToSetValue()
 		{
 			return new ISlideConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003326 RID: 13094
-		// (get) Token: 0x0600A730 RID: 42800 RVA: 0x0017A019 File Offset: 0x00178219
-		// (set) Token: 0x0600A731 RID: 42801 RVA: 0x0017A044 File Offset: 0x00178244
+		// Token: 0x170035EA RID: 13802
+		// (get) Token: 0x0600B1E8 RID: 45544 RVA: 0x0018FD19 File Offset: 0x0018DF19
+		// (set) Token: 0x0600B1E9 RID: 45545 RVA: 0x0018FD44 File Offset: 0x0018DF44
 		public override ESportStateType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003327 RID: 13095
-		// (get) Token: 0x0600A732 RID: 42802 RVA: 0x0017A052 File Offset: 0x00178252
-		// (set) Token: 0x0600A733 RID: 42803 RVA: 0x0017A07D File Offset: 0x0017827D
+		// Token: 0x170035EB RID: 13803
+		// (get) Token: 0x0600B1EA RID: 45546 RVA: 0x0018FD52 File Offset: 0x0018DF52
+		// (set) Token: 0x0600B1EB RID: 45547 RVA: 0x0018FD7D File Offset: 0x0018DF7D
 		public virtual int SlideId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040063C3 RID: 25539
+		// Token: 0x040069A7 RID: 27047
 		[Nullable(2)]
 		protected new ISlideConfig FbInstance;
 
-		// Token: 0x040063C4 RID: 25540
+		// Token: 0x040069A8 RID: 27048
 		[Nullable(2)]
 		protected new ISlideConfig_SetValue PocoInterface;
 	}

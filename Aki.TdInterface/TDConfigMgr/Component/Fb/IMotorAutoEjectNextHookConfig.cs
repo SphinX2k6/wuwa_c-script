@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B0C RID: 2828
+	// Token: 0x02000BD9 RID: 3033
 	public class IMotorAutoEjectNextHookConfig : IMotorAutoEjectConfigBase
 	{
-		// Token: 0x06004153 RID: 16723 RVA: 0x000A7C7E File Offset: 0x000A5E7E
-		[NullableContext(1)]
+		// Token: 0x06004599 RID: 17817 RVA: 0x000B1922 File Offset: 0x000AFB22
 		public static IMotorAutoEjectNextHookConfig Create(IMotorAutoEjectNextHookConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170010F8 RID: 4344
-		// (get) Token: 0x06004154 RID: 16724 RVA: 0x000A7C9D File Offset: 0x000A5E9D
+		// Token: 0x170011E2 RID: 4578
+		// (get) Token: 0x0600459A RID: 17818 RVA: 0x000B1941 File Offset: 0x000AFB41
 		public override EMotorAutoEjectType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170010F9 RID: 4345
-		// (get) Token: 0x06004155 RID: 16725 RVA: 0x000A7CAA File Offset: 0x000A5EAA
+		// Token: 0x170011E3 RID: 4579
+		// (get) Token: 0x0600459B RID: 17819 RVA: 0x000B194E File Offset: 0x000AFB4E
 		public virtual int EntityId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040024CD RID: 9421
+		// Token: 0x04002708 RID: 9992
 		private IMotorAutoEjectNextHookConfig Instance;
 	}
 }

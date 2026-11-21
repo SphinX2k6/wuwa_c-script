@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006E3 RID: 1763
+	// Token: 0x02000784 RID: 1924
 	public class ISpawnConfigType_SetValue
 	{
-		// Token: 0x040019DE RID: 6622
+		// Token: 0x04001BDD RID: 7133
 		public ESpawnConfigType Type;
 	}
 }

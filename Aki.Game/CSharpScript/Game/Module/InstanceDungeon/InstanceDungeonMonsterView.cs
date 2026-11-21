@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -11,16 +10,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.InstanceDungeon
 {
-	// Token: 0x0200587D RID: 22653
+	// Token: 0x02004855 RID: 18517
 	public class InstanceDungeonMonsterView : UiViewBase
 	{
-		// Token: 0x06039A7A RID: 236154 RVA: 0x00DB3A2E File Offset: 0x00DB1C2E
+		// Token: 0x0602E99D RID: 190877 RVA: 0x00D02942 File Offset: 0x00D00B42
 		[NullableContext(1)]
 		public InstanceDungeonMonsterView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06039A7B RID: 236155 RVA: 0x00DB3A38 File Offset: 0x00DB1C38
+		// Token: 0x0602E99E RID: 190878 RVA: 0x00D0294C File Offset: 0x00D00B4C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -42,7 +41,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06039A7C RID: 236156 RVA: 0x00DB3B28 File Offset: 0x00DB1D28
+		// Token: 0x0602E99F RID: 190879 RVA: 0x00D02A3C File Offset: 0x00D00C3C
 		protected override void OnStart()
 		{
 			InstanceDungeonMonsterView.InstanceDungeonMonsterViewOpenParam instanceDungeonMonsterViewOpenParam = this.OpenParam as InstanceDungeonMonsterView.InstanceDungeonMonsterViewOpenParam;
@@ -70,11 +69,11 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.ElementLayout = new GenericLayout<TowerElementItem, int>(base.GetHorizontalLayout(3), new Func<TowerElementItem>(this.CreateElementItem), null, false, true);
 		}
 
-		// Token: 0x06039A7D RID: 236157 RVA: 0x00DB3C4C File Offset: 0x00DB1E4C
+		// Token: 0x0602E9A0 RID: 190880 RVA: 0x00D02B60 File Offset: 0x00D00D60
 		protected override void OnBeforeShow()
 		{
 			InstanceDungeon value = InstanceDungeonConfig.Instance.GetConfig(this.CurrentInstanceId).Value;
-			this.MonsterLayout.RefreshByData(value.MonsterPreviewIter().ToList<int>(), null, false);
+			this.MonsterLayout.RefreshByData(new List<int>(value.MonsterPreviewIter()), null, false);
 			if (value.RecommendElementLength > 0)
 			{
 				UUIItem item = base.GetItem(2);
@@ -82,7 +81,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 				{
 					item.SetUIActive(true);
 				}
-				this.ElementLayout.RefreshByData(value.RecommendElementIter().ToList<int>(), null, false);
+				this.ElementLayout.RefreshByData(new List<int>(value.RecommendElementIter()), null, false);
 				return;
 			}
 			UUIItem item2 = base.GetItem(2);
@@ -93,13 +92,13 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			item2.SetUIActive(false);
 		}
 
-		// Token: 0x06039A7E RID: 236158 RVA: 0x00DB3CD4 File Offset: 0x00DB1ED4
+		// Token: 0x0602E9A1 RID: 190881 RVA: 0x00D02BE8 File Offset: 0x00D00DE8
 		protected override void OnBeforeDestroy()
 		{
 			this.MonsterLayout.ClearChildren();
 		}
 
-		// Token: 0x06039A7F RID: 236159 RVA: 0x00DB3CE1 File Offset: 0x00DB1EE1
+		// Token: 0x0602E9A2 RID: 190882 RVA: 0x00D02BF5 File Offset: 0x00D00DF5
 		[NullableContext(1)]
 		private InstanceDungeonMonsterGrid CreateMonsterItem()
 		{
@@ -109,17 +108,17 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			};
 		}
 
-		// Token: 0x06039A80 RID: 236160 RVA: 0x00DB3CF4 File Offset: 0x00DB1EF4
+		// Token: 0x0602E9A3 RID: 190883 RVA: 0x00D02C08 File Offset: 0x00D00E08
 		[NullableContext(1)]
 		private TowerElementItem CreateElementItem()
 		{
 			return new TowerElementItem();
 		}
 
-		// Token: 0x0401E210 RID: 123408
+		// Token: 0x04018CAD RID: 101549
 		private int CurrentInstanceId;
 
-		// Token: 0x0401E211 RID: 123409
+		// Token: 0x04018CAE RID: 101550
 		[Nullable(new byte[]
 		{
 			2,
@@ -127,7 +126,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 		})]
 		private GenericLayout<TowerElementItem, int> ElementLayout;
 
-		// Token: 0x0401E212 RID: 123410
+		// Token: 0x04018CAF RID: 101551
 		[Nullable(new byte[]
 		{
 			2,
@@ -135,39 +134,39 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 		})]
 		private GenericLayout<InstanceDungeonMonsterGrid, int> MonsterLayout;
 
-		// Token: 0x0200BAD7 RID: 47831
+		// Token: 0x0200A4F0 RID: 42224
 		private static class EChildCom
 		{
-			// Token: 0x04038763 RID: 231267
+			// Token: 0x04033164 RID: 209252
 			public const int UITextMonsterTips = 0;
 
-			// Token: 0x04038764 RID: 231268
+			// Token: 0x04033165 RID: 209253
 			public const int UILayoutMonster = 1;
 
-			// Token: 0x04038765 RID: 231269
+			// Token: 0x04033166 RID: 209254
 			public const int UIElementItem = 2;
 
-			// Token: 0x04038766 RID: 231270
+			// Token: 0x04033167 RID: 209255
 			public const int UIElementLayout = 3;
 
-			// Token: 0x04038767 RID: 231271
+			// Token: 0x04033168 RID: 209256
 			public const int BigTitle = 4;
 
-			// Token: 0x04038768 RID: 231272
+			// Token: 0x04033169 RID: 209257
 			public const int SmallTitle = 5;
 		}
 
-		// Token: 0x0200BAD8 RID: 47832
+		// Token: 0x0200A4F1 RID: 42225
 		public class InstanceDungeonMonsterViewOpenParam
 		{
-			// Token: 0x1700A21F RID: 41503
-			// (get) Token: 0x0604F97A RID: 326010 RVA: 0x0154E079 File Offset: 0x0154C279
-			// (set) Token: 0x0604F97B RID: 326011 RVA: 0x0154E081 File Offset: 0x0154C281
+			// Token: 0x170079BC RID: 31164
+			// (get) Token: 0x06045F0E RID: 286478 RVA: 0x01507735 File Offset: 0x01505935
+			// (set) Token: 0x06045F0F RID: 286479 RVA: 0x0150773D File Offset: 0x0150593D
 			public int InstanceId { get; set; }
 
-			// Token: 0x1700A220 RID: 41504
-			// (get) Token: 0x0604F97C RID: 326012 RVA: 0x0154E08A File Offset: 0x0154C28A
-			// (set) Token: 0x0604F97D RID: 326013 RVA: 0x0154E092 File Offset: 0x0154C292
+			// Token: 0x170079BD RID: 31165
+			// (get) Token: 0x06045F10 RID: 286480 RVA: 0x01507746 File Offset: 0x01505946
+			// (set) Token: 0x06045F11 RID: 286481 RVA: 0x0150774E File Offset: 0x0150594E
 			public InstanceDungeonBuffItem.EBuffInfoType? InfoType { get; set; }
 		}
 	}

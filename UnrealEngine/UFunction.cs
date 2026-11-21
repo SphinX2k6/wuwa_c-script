@@ -6,47 +6,47 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200072C RID: 1836
+	// Token: 0x02000112 RID: 274
 	[UnrealObjectPath("/Script/CoreUObject.Function")]
 	[UnrealStructLayout(240, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 240)]
 	public class UFunction : UStruct, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06006201 RID: 25089 RVA: 0x0008C837 File Offset: 0x0008AA37
+		// Token: 0x06001164 RID: 4452 RVA: 0x0001B889 File Offset: 0x00019A89
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UFunction._ClassPtr;
 		}
 
-		// Token: 0x06006202 RID: 25090 RVA: 0x0008C844 File Offset: 0x0008AA44
+		// Token: 0x06001165 RID: 4453 RVA: 0x0001B898 File Offset: 0x00019A98
 		public UFunction() : this(BuiltinUtils.AllocNativeUObject(UFunction.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06006203 RID: 25091 RVA: 0x0008C86C File Offset: 0x0008AA6C
+		// Token: 0x06001166 RID: 4454 RVA: 0x0001B8C0 File Offset: 0x00019AC0
 		[NullableContext(1)]
 		public UFunction(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UFunction.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x06006204 RID: 25092 RVA: 0x0008C89F File Offset: 0x0008AA9F
+		// Token: 0x06001167 RID: 4455 RVA: 0x0001B8F3 File Offset: 0x00019AF3
 		static UFunction()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/CoreUObject.Function");
 		}
 
-		// Token: 0x06006205 RID: 25093 RVA: 0x0008C8AD File Offset: 0x0008AAAD
+		// Token: 0x06001168 RID: 4456 RVA: 0x0001B901 File Offset: 0x00019B01
 		protected UFunction(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04002EC9 RID: 11977
+		// Token: 0x040004FF RID: 1279
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/CoreUObject.Function";
 
-		// Token: 0x04002ECA RID: 11978
+		// Token: 0x04000500 RID: 1280
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04002ECB RID: 11979
+		// Token: 0x04000501 RID: 1281
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

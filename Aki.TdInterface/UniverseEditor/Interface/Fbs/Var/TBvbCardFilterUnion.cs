@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003B4E RID: 15182
+	// Token: 0x02003F50 RID: 16208
 	public class TBvbCardFilterUnion
 	{
-		// Token: 0x1700681D RID: 26653
-		// (get) Token: 0x06014C0F RID: 85007 RVA: 0x003042FC File Offset: 0x003024FC
-		// (set) Token: 0x06014C10 RID: 85008 RVA: 0x00304304 File Offset: 0x00302504
+		// Token: 0x17006DB8 RID: 28088
+		// (get) Token: 0x060160B9 RID: 90297 RVA: 0x0032A58C File Offset: 0x0032878C
+		// (set) Token: 0x060160BA RID: 90298 RVA: 0x0032A594 File Offset: 0x00328794
 		public TBvbCardFilter Type { get; set; }
 
-		// Token: 0x1700681E RID: 26654
-		// (get) Token: 0x06014C11 RID: 85009 RVA: 0x0030430D File Offset: 0x0030250D
-		// (set) Token: 0x06014C12 RID: 85010 RVA: 0x00304315 File Offset: 0x00302515
+		// Token: 0x17006DB9 RID: 28089
+		// (get) Token: 0x060160BB RID: 90299 RVA: 0x0032A59D File Offset: 0x0032879D
+		// (set) Token: 0x060160BC RID: 90300 RVA: 0x0032A5A5 File Offset: 0x003287A5
 		public object Value { get; set; }
 
-		// Token: 0x06014C13 RID: 85011 RVA: 0x0030431E File Offset: 0x0030251E
+		// Token: 0x060160BD RID: 90301 RVA: 0x0032A5AE File Offset: 0x003287AE
 		public TBvbCardFilterUnion()
 		{
 			this.Type = TBvbCardFilter.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06014C14 RID: 85012 RVA: 0x00304334 File Offset: 0x00302534
+		// Token: 0x060160BE RID: 90302 RVA: 0x0032A5C4 File Offset: 0x003287C4
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06014C15 RID: 85013 RVA: 0x00304346 File Offset: 0x00302546
+		// Token: 0x060160BF RID: 90303 RVA: 0x0032A5D6 File Offset: 0x003287D6
 		public IBvbCardFilterCheckHasBattleFactorT AsIBvbCardFilterCheckHasBattleFactor()
 		{
 			return this.As<IBvbCardFilterCheckHasBattleFactorT>();
 		}
 
-		// Token: 0x06014C16 RID: 85014 RVA: 0x0030434E File Offset: 0x0030254E
+		// Token: 0x060160C0 RID: 90304 RVA: 0x0032A5DE File Offset: 0x003287DE
 		public static TBvbCardFilterUnion FromIBvbCardFilterCheckHasBattleFactor(IBvbCardFilterCheckHasBattleFactorT _ibvbcardfiltercheckhasbattlefactor)
 		{
 			return new TBvbCardFilterUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014C17 RID: 85015 RVA: 0x00304363 File Offset: 0x00302563
+		// Token: 0x060160C1 RID: 90305 RVA: 0x0032A5F3 File Offset: 0x003287F3
 		public IBvbCardFilterCheckHasOptimalFactorT AsIBvbCardFilterCheckHasOptimalFactor()
 		{
 			return this.As<IBvbCardFilterCheckHasOptimalFactorT>();
 		}
 
-		// Token: 0x06014C18 RID: 85016 RVA: 0x0030436B File Offset: 0x0030256B
+		// Token: 0x060160C2 RID: 90306 RVA: 0x0032A5FB File Offset: 0x003287FB
 		public static TBvbCardFilterUnion FromIBvbCardFilterCheckHasOptimalFactor(IBvbCardFilterCheckHasOptimalFactorT _ibvbcardfiltercheckhasoptimalfactor)
 		{
 			return new TBvbCardFilterUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014C19 RID: 85017 RVA: 0x00304380 File Offset: 0x00302580
+		// Token: 0x060160C3 RID: 90307 RVA: 0x0032A610 File Offset: 0x00328810
 		public IBvbCardFilterCheckIsCapableToEvolveT AsIBvbCardFilterCheckIsCapableToEvolve()
 		{
 			return this.As<IBvbCardFilterCheckIsCapableToEvolveT>();
 		}
 
-		// Token: 0x06014C1A RID: 85018 RVA: 0x00304388 File Offset: 0x00302588
+		// Token: 0x060160C4 RID: 90308 RVA: 0x0032A618 File Offset: 0x00328818
 		public static TBvbCardFilterUnion FromIBvbCardFilterCheckIsCapableToEvolve(IBvbCardFilterCheckIsCapableToEvolveT _ibvbcardfiltercheckiscapabletoevolve)
 		{
 			return new TBvbCardFilterUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014C1B RID: 85019 RVA: 0x0030439D File Offset: 0x0030259D
+		// Token: 0x060160C5 RID: 90309 RVA: 0x0032A62D File Offset: 0x0032882D
 		public IBvbCardFilterCheckIsCoreT AsIBvbCardFilterCheckIsCore()
 		{
 			return this.As<IBvbCardFilterCheckIsCoreT>();
 		}
 
-		// Token: 0x06014C1C RID: 85020 RVA: 0x003043A5 File Offset: 0x003025A5
+		// Token: 0x060160C6 RID: 90310 RVA: 0x0032A635 File Offset: 0x00328835
 		public static TBvbCardFilterUnion FromIBvbCardFilterCheckIsCore(IBvbCardFilterCheckIsCoreT _ibvbcardfiltercheckiscore)
 		{
 			return new TBvbCardFilterUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014C1D RID: 85021 RVA: 0x003043BA File Offset: 0x003025BA
+		// Token: 0x060160C7 RID: 90311 RVA: 0x0032A64A File Offset: 0x0032884A
 		public IBvbCardFilterCompareActiveSkillTagT AsIBvbCardFilterCompareActiveSkillTag()
 		{
 			return this.As<IBvbCardFilterCompareActiveSkillTagT>();
 		}
 
-		// Token: 0x06014C1E RID: 85022 RVA: 0x003043C2 File Offset: 0x003025C2
+		// Token: 0x060160C8 RID: 90312 RVA: 0x0032A652 File Offset: 0x00328852
 		public static TBvbCardFilterUnion FromIBvbCardFilterCompareActiveSkillTag(IBvbCardFilterCompareActiveSkillTagT _ibvbcardfiltercompareactiveskilltag)
 		{
 			return new TBvbCardFilterUnion
@@ -109,13 +109,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014C1F RID: 85023 RVA: 0x003043D7 File Offset: 0x003025D7
+		// Token: 0x060160C9 RID: 90313 RVA: 0x0032A667 File Offset: 0x00328867
 		public IBvbCardFilterCompareCardTypeT AsIBvbCardFilterCompareCardType()
 		{
 			return this.As<IBvbCardFilterCompareCardTypeT>();
 		}
 
-		// Token: 0x06014C20 RID: 85024 RVA: 0x003043DF File Offset: 0x003025DF
+		// Token: 0x060160CA RID: 90314 RVA: 0x0032A66F File Offset: 0x0032886F
 		public static TBvbCardFilterUnion FromIBvbCardFilterCompareCardType(IBvbCardFilterCompareCardTypeT _ibvbcardfiltercomparecardtype)
 		{
 			return new TBvbCardFilterUnion
@@ -125,13 +125,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014C21 RID: 85025 RVA: 0x003043F4 File Offset: 0x003025F4
+		// Token: 0x060160CB RID: 90315 RVA: 0x0032A684 File Offset: 0x00328884
 		public IBvbCardFilterCompareCostT AsIBvbCardFilterCompareCost()
 		{
 			return this.As<IBvbCardFilterCompareCostT>();
 		}
 
-		// Token: 0x06014C22 RID: 85026 RVA: 0x003043FC File Offset: 0x003025FC
+		// Token: 0x060160CC RID: 90316 RVA: 0x0032A68C File Offset: 0x0032888C
 		public static TBvbCardFilterUnion FromIBvbCardFilterCompareCost(IBvbCardFilterCompareCostT _ibvbcardfiltercomparecost)
 		{
 			return new TBvbCardFilterUnion
@@ -141,7 +141,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014C23 RID: 85027 RVA: 0x00304414 File Offset: 0x00302614
+		// Token: 0x060160CD RID: 90317 RVA: 0x0032A6A4 File Offset: 0x003288A4
 		public static int Pack(FlatBufferBuilder builder, TBvbCardFilterUnion _o)
 		{
 			switch (_o.Type)

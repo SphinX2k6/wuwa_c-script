@@ -2,26 +2,26 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 
-// Token: 0x0200175C RID: 5980
+// Token: 0x02000C15 RID: 3093
 [NullableContext(1)]
 [Nullable(0)]
 public class VisionRecoverySlotGridItem : VisionRecoverySlotItem, IGridProxy<PhantomItemData>
 {
-	// Token: 0x0600AD0D RID: 44301 RVA: 0x0026E82C File Offset: 0x0026CA2C
+	// Token: 0x060080F4 RID: 33012 RVA: 0x00278CA0 File Offset: 0x00276EA0
 	[NullableContext(2)]
 	public VisionRecoverySlotGridItem(Action<bool, PhantomItemData> callBack = null, bool showRemoveBtn = true) : base(callBack, showRemoveBtn)
 	{
 	}
 
-	// Token: 0x0600AD0E RID: 44302 RVA: 0x0026E836 File Offset: 0x0026CA36
+	// Token: 0x060080F5 RID: 33013 RVA: 0x00278CAA File Offset: 0x00276EAA
 	public void Refresh(PhantomItemData data, bool isSelected, int gridIndex)
 	{
 		base.RefreshUi(data);
 	}
 
-	// Token: 0x17000E65 RID: 3685
-	// (get) Token: 0x0600AD0F RID: 44303 RVA: 0x0026E83F File Offset: 0x0026CA3F
-	// (set) Token: 0x0600AD10 RID: 44304 RVA: 0x0026E847 File Offset: 0x0026CA47
+	// Token: 0x17000E88 RID: 3720
+	// (get) Token: 0x060080F6 RID: 33014 RVA: 0x00278CB3 File Offset: 0x00276EB3
+	// (set) Token: 0x060080F7 RID: 33015 RVA: 0x00278CBB File Offset: 0x00276EBB
 	[Nullable(new byte[]
 	{
 		2,
@@ -43,32 +43,32 @@ public class VisionRecoverySlotGridItem : VisionRecoverySlotItem, IGridProxy<Pha
 		1
 	})] set; }
 
-	// Token: 0x17000E66 RID: 3686
-	// (get) Token: 0x0600AD11 RID: 44305 RVA: 0x0026E850 File Offset: 0x0026CA50
-	// (set) Token: 0x0600AD12 RID: 44306 RVA: 0x0026E858 File Offset: 0x0026CA58
+	// Token: 0x17000E89 RID: 3721
+	// (get) Token: 0x060080F8 RID: 33016 RVA: 0x00278CC4 File Offset: 0x00276EC4
+	// (set) Token: 0x060080F9 RID: 33017 RVA: 0x00278CCC File Offset: 0x00276ECC
 	public int GridIndex { get; set; }
 
-	// Token: 0x17000E67 RID: 3687
-	// (get) Token: 0x0600AD13 RID: 44307 RVA: 0x0026E861 File Offset: 0x0026CA61
-	// (set) Token: 0x0600AD14 RID: 44308 RVA: 0x0026E869 File Offset: 0x0026CA69
+	// Token: 0x17000E8A RID: 3722
+	// (get) Token: 0x060080FA RID: 33018 RVA: 0x00278CD5 File Offset: 0x00276ED5
+	// (set) Token: 0x060080FB RID: 33019 RVA: 0x00278CDD File Offset: 0x00276EDD
 	public int DisplayIndex { get; set; }
 
-	// Token: 0x0600AD15 RID: 44309 RVA: 0x0026E872 File Offset: 0x0026CA72
+	// Token: 0x060080FC RID: 33020 RVA: 0x00278CE6 File Offset: 0x00276EE6
 	public void Clear()
 	{
 	}
 
-	// Token: 0x0600AD16 RID: 44310 RVA: 0x0026E874 File Offset: 0x0026CA74
+	// Token: 0x060080FD RID: 33021 RVA: 0x00278CE8 File Offset: 0x00276EE8
 	public void OnSelected(bool fireEvent)
 	{
 	}
 
-	// Token: 0x0600AD17 RID: 44311 RVA: 0x0026E876 File Offset: 0x0026CA76
+	// Token: 0x060080FE RID: 33022 RVA: 0x00278CEA File Offset: 0x00276EEA
 	public void OnDeselected(bool fireEvent)
 	{
 	}
 
-	// Token: 0x0600AD18 RID: 44312 RVA: 0x0026E878 File Offset: 0x0026CA78
+	// Token: 0x060080FF RID: 33023 RVA: 0x00278CEC File Offset: 0x00276EEC
 	public object GetKey(PhantomItemData data, int gridIndex)
 	{
 		return this.GridIndex;

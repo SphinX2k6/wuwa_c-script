@@ -2,16 +2,16 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019ED RID: 6637
+	// Token: 0x02001B80 RID: 7040
 	public class IEnableSectionalCameraOperation_SetValue
 	{
-		// Token: 0x04005826 RID: 22566
+		// Token: 0x04005C88 RID: 23688
 		public ECameraOperationType Type;
 
-		// Token: 0x04005827 RID: 22567
+		// Token: 0x04005C89 RID: 23689
 		public bool? EnableRotate;
 
-		// Token: 0x04005828 RID: 22568
+		// Token: 0x04005C8A RID: 23690
 		public bool? EnableZoom;
 	}
 }

@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006D15 RID: 27925
+	// Token: 0x02007490 RID: 29840
 	public class IPlayFlowT
 	{
-		// Token: 0x1700CFEF RID: 53231
-		// (get) Token: 0x060313E8 RID: 201704 RVA: 0x006ADDE2 File Offset: 0x006ABFE2
-		// (set) Token: 0x060313E9 RID: 201705 RVA: 0x006ADDEA File Offset: 0x006ABFEA
+		// Token: 0x1700DB35 RID: 56117
+		// (get) Token: 0x060343E0 RID: 213984 RVA: 0x00709426 File Offset: 0x00707626
+		// (set) Token: 0x060343E1 RID: 213985 RVA: 0x0070942E File Offset: 0x0070762E
 		public string FlowListName { get; set; }
 
-		// Token: 0x1700CFF0 RID: 53232
-		// (get) Token: 0x060313EA RID: 201706 RVA: 0x006ADDF3 File Offset: 0x006ABFF3
-		// (set) Token: 0x060313EB RID: 201707 RVA: 0x006ADDFB File Offset: 0x006ABFFB
+		// Token: 0x1700DB36 RID: 56118
+		// (get) Token: 0x060343E2 RID: 213986 RVA: 0x00709437 File Offset: 0x00707637
+		// (set) Token: 0x060343E3 RID: 213987 RVA: 0x0070943F File Offset: 0x0070763F
 		public int FlowId { get; set; }
 
-		// Token: 0x1700CFF1 RID: 53233
-		// (get) Token: 0x060313EC RID: 201708 RVA: 0x006ADE04 File Offset: 0x006AC004
-		// (set) Token: 0x060313ED RID: 201709 RVA: 0x006ADE0C File Offset: 0x006AC00C
+		// Token: 0x1700DB37 RID: 56119
+		// (get) Token: 0x060343E4 RID: 213988 RVA: 0x00709448 File Offset: 0x00707648
+		// (set) Token: 0x060343E5 RID: 213989 RVA: 0x00709450 File Offset: 0x00707650
 		public int StateId { get; set; }
 
-		// Token: 0x1700CFF2 RID: 53234
-		// (get) Token: 0x060313EE RID: 201710 RVA: 0x006ADE15 File Offset: 0x006AC015
-		// (set) Token: 0x060313EF RID: 201711 RVA: 0x006ADE1D File Offset: 0x006AC01D
+		// Token: 0x1700DB38 RID: 56120
+		// (get) Token: 0x060343E6 RID: 213990 RVA: 0x00709459 File Offset: 0x00707659
+		// (set) Token: 0x060343E7 RID: 213991 RVA: 0x00709461 File Offset: 0x00707661
 		public string FlowGuid { get; set; }
 
-		// Token: 0x060313F0 RID: 201712 RVA: 0x006ADE26 File Offset: 0x006AC026
+		// Token: 0x060343E8 RID: 213992 RVA: 0x0070946A File Offset: 0x0070766A
 		public IPlayFlowT()
 		{
 			this.FlowListName = null;

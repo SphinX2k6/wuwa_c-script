@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Guide.GroupInfo
 {
-	// Token: 0x02004612 RID: 17938
+	// Token: 0x0200353B RID: 13627
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -12,7 +12,7 @@ namespace CSharpScript.Game.Guide.GroupInfo
 	})]
 	public class PendingState : StateBase<GuideGroupInfo, EGuideGroupState>
 	{
-		// Token: 0x0602E3B2 RID: 189362 RVA: 0x00AB0CC6 File Offset: 0x00AAEEC6
+		// Token: 0x06022AA7 RID: 141991 RVA: 0x009DD3BA File Offset: 0x009DB5BA
 		public PendingState(GuideGroupInfo owner, EGuideGroupState state, [Nullable(new byte[]
 		{
 			2,
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Guide.GroupInfo
 		{
 		}
 
-		// Token: 0x0602E3B3 RID: 189363 RVA: 0x00AB0CD1 File Offset: 0x00AAEED1
+		// Token: 0x06022AA8 RID: 141992 RVA: 0x009DD3C5 File Offset: 0x009DB5C5
 		private void ClearTimer()
 		{
 			if (this.CheckTimer != null)
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Guide.GroupInfo
 			}
 		}
 
-		// Token: 0x0602E3B4 RID: 189364 RVA: 0x00AB0CF3 File Offset: 0x00AAEEF3
+		// Token: 0x06022AA9 RID: 141993 RVA: 0x009DD3E7 File Offset: 0x009DB5E7
 		protected override void OnEnter(EGuideGroupState? lastState)
 		{
 			this.ClearTimer();
@@ -46,13 +46,13 @@ namespace CSharpScript.Game.Guide.GroupInfo
 			}, 1000f, 1f, null, null, true);
 		}
 
-		// Token: 0x0602E3B5 RID: 189365 RVA: 0x00AB0D24 File Offset: 0x00AAEF24
+		// Token: 0x06022AAA RID: 141994 RVA: 0x009DD418 File Offset: 0x009DB618
 		protected override void OnExit(EGuideGroupState nextState)
 		{
 			this.ClearTimer();
 		}
 
-		// Token: 0x04018D19 RID: 101657
+		// Token: 0x04013358 RID: 78680
 		[Nullable(2)]
 		private TimerHandle CheckTimer;
 	}

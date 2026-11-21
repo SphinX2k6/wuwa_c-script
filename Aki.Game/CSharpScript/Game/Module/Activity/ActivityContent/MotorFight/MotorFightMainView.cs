@@ -10,18 +10,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 {
-	// Token: 0x0200642A RID: 25642
+	// Token: 0x020053A8 RID: 21416
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MotorFightMainView : UiViewBase
 	{
-		// Token: 0x0604078E RID: 264078 RVA: 0x00F9A351 File Offset: 0x00F98551
+		// Token: 0x0603544F RID: 218191 RVA: 0x00EE12F1 File Offset: 0x00EDF4F1
 		[NullableContext(1)]
 		public MotorFightMainView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0604078F RID: 264079 RVA: 0x00F9A35C File Offset: 0x00F9855C
+		// Token: 0x06035450 RID: 218192 RVA: 0x00EE12FC File Offset: 0x00EDF4FC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06040790 RID: 264080 RVA: 0x00F9A4D0 File Offset: 0x00F986D0
+		// Token: 0x06035451 RID: 218193 RVA: 0x00EE1470 File Offset: 0x00EDF670
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MotorFightMainView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040791 RID: 264081 RVA: 0x00F9A514 File Offset: 0x00F98714
+		// Token: 0x06035452 RID: 218194 RVA: 0x00EE14B4 File Offset: 0x00EDF6B4
 		protected override void OnBeforeShow()
 		{
 			List<List<MotorFightLevelData>> levelTreeList = this.MotorFightActivityData.GetLevelTreeList();
@@ -123,44 +123,44 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			item2.SetUIActive(this.MotorFightActivityData.HasLastSavedLevelData());
 		}
 
-		// Token: 0x06040792 RID: 264082 RVA: 0x00F9A66C File Offset: 0x00F9886C
+		// Token: 0x06035453 RID: 218195 RVA: 0x00EE160C File Offset: 0x00EDF80C
 		[NullableContext(1)]
 		private MotorFightLevelListPanel CreateLevelListPanel()
 		{
 			return new MotorFightLevelListPanel();
 		}
 
-		// Token: 0x06040793 RID: 264083 RVA: 0x00F9A673 File Offset: 0x00F98873
+		// Token: 0x06035454 RID: 218196 RVA: 0x00EE1613 File Offset: 0x00EDF813
 		private void OnCloseBtnClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06040794 RID: 264084 RVA: 0x00F9A67C File Offset: 0x00F9887C
+		// Token: 0x06035455 RID: 218197 RVA: 0x00EE161C File Offset: 0x00EDF81C
 		private void OnHandBookBtnClick(int _)
 		{
 			UiManager.Instance.OpenView(EUiViewName.MotorFightHandBookView, this.MotorFightActivityData, null);
 		}
 
-		// Token: 0x06040795 RID: 264085 RVA: 0x00F9A694 File Offset: 0x00F98894
+		// Token: 0x06035456 RID: 218198 RVA: 0x00EE1634 File Offset: 0x00EDF834
 		private void OnTalentBtnClick(int _)
 		{
 			UiManager.Instance.OpenView(EUiViewName.MotorFightTalentTreeView, this.MotorFightActivityData, null);
 		}
 
-		// Token: 0x06040796 RID: 264086 RVA: 0x00F9A6AC File Offset: 0x00F988AC
+		// Token: 0x06035457 RID: 218199 RVA: 0x00EE164C File Offset: 0x00EDF84C
 		private void OnRankBtnClick(int _)
 		{
 			UiManager.Instance.OpenView(EUiViewName.MotorFightRankView, this.MotorFightActivityData, null);
 		}
 
-		// Token: 0x06040797 RID: 264087 RVA: 0x00F9A6C4 File Offset: 0x00F988C4
+		// Token: 0x06035458 RID: 218200 RVA: 0x00EE1664 File Offset: 0x00EDF864
 		private void OnRewardBtnClick(int _)
 		{
 			UiManager.Instance.OpenView(EUiViewName.MotorFightRewardView, this.MotorFightActivityData, null);
 		}
 
-		// Token: 0x06040798 RID: 264088 RVA: 0x00F9A6DC File Offset: 0x00F988DC
+		// Token: 0x06035459 RID: 218201 RVA: 0x00EE167C File Offset: 0x00EDF87C
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -197,10 +197,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			};
 		}
 
-		// Token: 0x04021848 RID: 137288
+		// Token: 0x0401C177 RID: 115063
 		private MotorFightActivityData MotorFightActivityData;
 
-		// Token: 0x04021849 RID: 137289
+		// Token: 0x0401C178 RID: 115064
 		[Nullable(new byte[]
 		{
 			2,
@@ -210,53 +210,53 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 		})]
 		public GenericScrollViewNew<MotorFightLevelListPanel, List<MotorFightLevelData>> ScrollView;
 
-		// Token: 0x0402184A RID: 137290
+		// Token: 0x0401C179 RID: 115065
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0402184B RID: 137291
+		// Token: 0x0401C17A RID: 115066
 		private ButtonItem HandBookBtn;
 
-		// Token: 0x0402184C RID: 137292
+		// Token: 0x0401C17B RID: 115067
 		private ButtonItem TalentTreeBtn;
 
-		// Token: 0x0402184D RID: 137293
+		// Token: 0x0401C17C RID: 115068
 		private ButtonItem RankBtn;
 
-		// Token: 0x0402184E RID: 137294
+		// Token: 0x0401C17D RID: 115069
 		private ButtonItem RewardBtn;
 
-		// Token: 0x0200C660 RID: 50784
+		// Token: 0x0200B047 RID: 45127
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x0403BE3B RID: 245307
+			// Token: 0x04036798 RID: 223128
 			public const int ItemCaption = 0;
 
-			// Token: 0x0403BE3C RID: 245308
+			// Token: 0x04036799 RID: 223129
 			public const int LevelScroll = 1;
 
-			// Token: 0x0403BE3D RID: 245309
+			// Token: 0x0403679A RID: 223130
 			public const int ItemLevelList = 2;
 
-			// Token: 0x0403BE3E RID: 245310
+			// Token: 0x0403679B RID: 223131
 			public const int ItemHandBookBtn = 3;
 
-			// Token: 0x0403BE3F RID: 245311
+			// Token: 0x0403679C RID: 223132
 			public const int ItemTalentTreeBtn = 4;
 
-			// Token: 0x0403BE40 RID: 245312
+			// Token: 0x0403679D RID: 223133
 			public const int ItemRewardBtn = 5;
 
-			// Token: 0x0403BE41 RID: 245313
+			// Token: 0x0403679E RID: 223134
 			public const int ItemRankBtn = 6;
 
-			// Token: 0x0403BE42 RID: 245314
+			// Token: 0x0403679F RID: 223135
 			public const int BtnArchive = 7;
 
-			// Token: 0x0403BE43 RID: 245315
+			// Token: 0x040367A0 RID: 223136
 			public const int ItemArchive = 8;
 
-			// Token: 0x0403BE44 RID: 245316
+			// Token: 0x040367A1 RID: 223137
 			public const int ItemArchived = 9;
 		}
 	}

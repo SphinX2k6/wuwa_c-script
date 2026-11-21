@@ -4,22 +4,22 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045C7 RID: 17863
+	// Token: 0x020034EF RID: 13551
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class EffectCurveParameter
 	{
-		// Token: 0x0602E0EA RID: 188650 RVA: 0x00A9E095 File Offset: 0x00A9C295
+		// Token: 0x060227D5 RID: 141269 RVA: 0x009CA35D File Offset: 0x009C855D
 		public EffectCurveParameter(FName name, object parameter)
 		{
 			this.Name = name;
 			this.Value = parameter;
 		}
 
-		// Token: 0x04018ACB RID: 101067
+		// Token: 0x04013106 RID: 78086
 		public FName Name;
 
-		// Token: 0x04018ACC RID: 101068
+		// Token: 0x04013107 RID: 78087
 		public object Value;
 	}
 }

@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 {
-	// Token: 0x02006919 RID: 26905
+	// Token: 0x02005869 RID: 22633
 	public enum EAnniversaryProgressRewardState
 	{
-		// Token: 0x04022ED8 RID: 143064
+		// Token: 0x0401D734 RID: 120628
 		Lock,
-		// Token: 0x04022ED9 RID: 143065
+		// Token: 0x0401D735 RID: 120629
 		CanReceive,
-		// Token: 0x04022EDA RID: 143066
+		// Token: 0x0401D736 RID: 120630
 		Rewarded
 	}
 }

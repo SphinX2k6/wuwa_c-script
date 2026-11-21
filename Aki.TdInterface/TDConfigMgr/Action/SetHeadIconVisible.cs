@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021BB RID: 8635
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002426 RID: 9254
 	public class SetHeadIconVisible : ActionParams
 	{
-		// Token: 0x0600BDAE RID: 48558 RVA: 0x001B4E10 File Offset: 0x001B3010
+		// Token: 0x0600C968 RID: 51560 RVA: 0x001CC448 File Offset: 0x001CA648
 		private SetHeadIconVisible_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BDAF RID: 48559 RVA: 0x001B4E48 File Offset: 0x001B3048
+		// Token: 0x0600C969 RID: 51561 RVA: 0x001CC480 File Offset: 0x001CA680
 		public static SetHeadIconVisible Create([Nullable(2)] SetHeadIconVisible instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BDB0 RID: 48560 RVA: 0x001B4E5B File Offset: 0x001B305B
+		// Token: 0x0600C96A RID: 51562 RVA: 0x001CC493 File Offset: 0x001CA693
 		public static SetHeadIconVisible CreateFromSetValue([Nullable(2)] SetHeadIconVisible_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BDB1 RID: 48561 RVA: 0x001B4E6E File Offset: 0x001B306E
+		// Token: 0x0600C96B RID: 51563 RVA: 0x001CC4A6 File Offset: 0x001CA6A6
 		public SetHeadIconVisible_SetValue ToSetValue()
 		{
 			return new SetHeadIconVisible_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700399F RID: 14751
-		// (get) Token: 0x0600BDB2 RID: 48562 RVA: 0x001B4E8D File Offset: 0x001B308D
-		// (set) Token: 0x0600BDB3 RID: 48563 RVA: 0x001B4EB4 File Offset: 0x001B30B4
+		// Token: 0x17003C93 RID: 15507
+		// (get) Token: 0x0600C96C RID: 51564 RVA: 0x001CC4C5 File Offset: 0x001CA6C5
+		// (set) Token: 0x0600C96D RID: 51565 RVA: 0x001CC4EC File Offset: 0x001CA6EC
 		public virtual IHeadStyle HeadStyleConfig
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170039A0 RID: 14752
-		// (get) Token: 0x0600BDB4 RID: 48564 RVA: 0x001B4EC2 File Offset: 0x001B30C2
-		// (set) Token: 0x0600BDB5 RID: 48565 RVA: 0x001B4EED File Offset: 0x001B30ED
+		// Token: 0x17003C94 RID: 15508
+		// (get) Token: 0x0600C96E RID: 51566 RVA: 0x001CC4FA File Offset: 0x001CA6FA
+		// (set) Token: 0x0600C96F RID: 51567 RVA: 0x001CC525 File Offset: 0x001CA725
 		public virtual bool Visible
 		{
 			get
@@ -103,11 +101,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04007138 RID: 28984
+		// Token: 0x04007780 RID: 30592
 		[Nullable(2)]
 		protected new SetHeadIconVisible FbInstance;
 
-		// Token: 0x04007139 RID: 28985
+		// Token: 0x04007781 RID: 30593
 		[Nullable(2)]
 		protected SetHeadIconVisible_SetValue PocoInterface;
 	}

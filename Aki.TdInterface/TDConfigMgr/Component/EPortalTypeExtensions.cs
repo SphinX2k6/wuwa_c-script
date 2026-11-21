@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009DC RID: 2524
+	// Token: 0x02000AA1 RID: 2721
 	public static class EPortalTypeExtensions
 	{
-		// Token: 0x0600380F RID: 14351 RVA: 0x000916D0 File Offset: 0x0008F8D0
+		// Token: 0x06003BE7 RID: 15335 RVA: 0x00099F90 File Offset: 0x00098190
 		public static string ToEnumString(this EPortalType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003810 RID: 14352 RVA: 0x00091708 File Offset: 0x0008F908
+		// Token: 0x06003BE8 RID: 15336 RVA: 0x00099FC8 File Offset: 0x000981C8
 		public static EPortalType FromString(string name)
 		{
 			EPortalType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003811 RID: 14353 RVA: 0x00091731 File Offset: 0x0008F931
+		// Token: 0x06003BE9 RID: 15337 RVA: 0x00099FF1 File Offset: 0x000981F1
 		public static bool TryFromString(string name, out EPortalType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x06003812 RID: 14354 RVA: 0x0009176A File Offset: 0x0008F96A
+		// Token: 0x06003BEA RID: 15338 RVA: 0x0009A02A File Offset: 0x0009822A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003813 RID: 14355 RVA: 0x00091782 File Offset: 0x0008F982
+		// Token: 0x06003BEB RID: 15339 RVA: 0x0009A042 File Offset: 0x00098242
 		public static EPortalType[] GetValues()
 		{
 			return new EPortalType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003814 RID: 14356 RVA: 0x0009178E File Offset: 0x0008F98E
+		// Token: 0x06003BEC RID: 15340 RVA: 0x0009A04E File Offset: 0x0009824E
 		public static string[] GetNames()
 		{
 			return new string[]

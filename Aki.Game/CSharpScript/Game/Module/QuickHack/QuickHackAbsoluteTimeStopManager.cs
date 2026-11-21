@@ -4,10 +4,10 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.QuickHack
 {
-	// Token: 0x02004F84 RID: 20356
+	// Token: 0x02003F4D RID: 16205
 	public class QuickHackAbsoluteTimeStopManager : IQuickHackTimeScaleManager
 	{
-		// Token: 0x060341FD RID: 213501 RVA: 0x00C3B5E8 File Offset: 0x00C397E8
+		// Token: 0x0602906B RID: 168043 RVA: 0x00B84D94 File Offset: 0x00B82F94
 		public void BeginTimeScale(QuickHackDevice config, int ownerEntityId)
 		{
 			int timeScaleDuration = config.TimeScaleDuration;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			}, (float)timeScaleDuration, null, null, true, 1f);
 		}
 
-		// Token: 0x060341FE RID: 213502 RVA: 0x00C3B65E File Offset: 0x00C3985E
+		// Token: 0x0602906C RID: 168044 RVA: 0x00B84E0A File Offset: 0x00B8300A
 		public void EndTimeScale()
 		{
 			TimerHandle timerHandle = this.TimerHandle;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.QuickHack
 			this.EndTimeScaleInternal();
 		}
 
-		// Token: 0x060341FF RID: 213503 RVA: 0x00C3B67F File Offset: 0x00C3987F
+		// Token: 0x0602906D RID: 168045 RVA: 0x00B84E2B File Offset: 0x00B8302B
 		private void EndTimeScaleInternal()
 		{
 			if (this.OwnerEntityId != 0)
@@ -53,10 +53,10 @@ namespace CSharpScript.Game.Module.QuickHack
 			}
 		}
 
-		// Token: 0x0401BB6E RID: 113518
+		// Token: 0x04016543 RID: 91459
 		private int OwnerEntityId;
 
-		// Token: 0x0401BB6F RID: 113519
+		// Token: 0x04016544 RID: 91460
 		[Nullable(2)]
 		private TimerHandle TimerHandle;
 	}

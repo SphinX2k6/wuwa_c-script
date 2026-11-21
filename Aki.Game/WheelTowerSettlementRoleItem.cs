@@ -7,7 +7,7 @@ using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020015E2 RID: 5602
+// Token: 0x02000A9A RID: 2714
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class WheelTowerSettlementRoleItem : GridProxyAbstract<RoleDataWithBranch>
 {
-	// Token: 0x06009E58 RID: 40536 RVA: 0x00228554 File Offset: 0x00226754
+	// Token: 0x06007236 RID: 29238 RVA: 0x00232308 File Offset: 0x00230508
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -42,7 +42,7 @@ public class WheelTowerSettlementRoleItem : GridProxyAbstract<RoleDataWithBranch
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009E59 RID: 40537 RVA: 0x00228684 File Offset: 0x00226884
+	// Token: 0x06007237 RID: 29239 RVA: 0x00232438 File Offset: 0x00230638
 	public override void Refresh(RoleDataWithBranch data, bool isSelected, int gridIndex)
 	{
 		int roleId = data.RoleId;
@@ -108,7 +108,7 @@ public class WheelTowerSettlementRoleItem : GridProxyAbstract<RoleDataWithBranch
 		}
 	}
 
-	// Token: 0x06009E5A RID: 40538 RVA: 0x002287D4 File Offset: 0x002269D4
+	// Token: 0x06007238 RID: 29240 RVA: 0x00232588 File Offset: 0x00230788
 	private void RefreshSkillBranchTag(int roleId, RoleDataWithBranch data)
 	{
 		UUIItem item = base.GetItem(9);

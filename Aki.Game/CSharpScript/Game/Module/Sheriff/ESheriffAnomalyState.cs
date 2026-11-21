@@ -2,18 +2,18 @@
 
 namespace CSharpScript.Game.Module.Sheriff
 {
-	// Token: 0x02004C30 RID: 19504
+	// Token: 0x02003BE1 RID: 15329
 	public enum ESheriffAnomalyState
 	{
-		// Token: 0x0401ADC9 RID: 110025
+		// Token: 0x04015726 RID: 87846
 		Lock,
-		// Token: 0x0401ADCA RID: 110026
+		// Token: 0x04015727 RID: 87847
 		UnActivated,
-		// Token: 0x0401ADCB RID: 110027
+		// Token: 0x04015728 RID: 87848
 		UnOpened,
-		// Token: 0x0401ADCC RID: 110028
+		// Token: 0x04015729 RID: 87849
 		Opened,
-		// Token: 0x0401ADCD RID: 110029
+		// Token: 0x0401572A RID: 87850
 		Completed
 	}
 }

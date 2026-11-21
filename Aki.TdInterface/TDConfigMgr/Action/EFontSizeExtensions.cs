@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002341 RID: 9025
+	// Token: 0x020025B4 RID: 9652
 	public static class EFontSizeExtensions
 	{
-		// Token: 0x0600C523 RID: 50467 RVA: 0x001CC618 File Offset: 0x001CA818
+		// Token: 0x0600D104 RID: 53508 RVA: 0x001E47E4 File Offset: 0x001E29E4
 		public static string ToEnumString(this EFontSize value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C524 RID: 50468 RVA: 0x001CC660 File Offset: 0x001CA860
+		// Token: 0x0600D105 RID: 53509 RVA: 0x001E482C File Offset: 0x001E2A2C
 		public static EFontSize FromString(string name)
 		{
 			EFontSize result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C525 RID: 50469 RVA: 0x001CC68C File Offset: 0x001CA88C
+		// Token: 0x0600D106 RID: 53510 RVA: 0x001E4858 File Offset: 0x001E2A58
 		public static bool TryFromString(string name, out EFontSize value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C526 RID: 50470 RVA: 0x001CC6E2 File Offset: 0x001CA8E2
+		// Token: 0x0600D107 RID: 53511 RVA: 0x001E48AE File Offset: 0x001E2AAE
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C527 RID: 50471 RVA: 0x001CC702 File Offset: 0x001CA902
+		// Token: 0x0600D108 RID: 53512 RVA: 0x001E48CE File Offset: 0x001E2ACE
 		public static EFontSize[] GetValues()
 		{
 			return new EFontSize[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C528 RID: 50472 RVA: 0x001CC712 File Offset: 0x001CA912
+		// Token: 0x0600D109 RID: 53513 RVA: 0x001E48DE File Offset: 0x001E2ADE
 		public static string[] GetNames()
 		{
 			return new string[]

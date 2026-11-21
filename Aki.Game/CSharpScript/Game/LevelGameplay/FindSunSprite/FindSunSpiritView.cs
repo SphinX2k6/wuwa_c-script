@@ -9,16 +9,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.FindSunSprite
 {
-	// Token: 0x02006E51 RID: 28241
+	// Token: 0x02005FD2 RID: 24530
 	public class FindSunSpiritView : UiViewBase
 	{
-		// Token: 0x06044D4A RID: 281930 RVA: 0x010FD004 File Offset: 0x010FB204
+		// Token: 0x0603AED7 RID: 241367 RVA: 0x010A7564 File Offset: 0x010A5764
 		[NullableContext(1)]
 		public FindSunSpiritView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06044D4B RID: 281931 RVA: 0x010FD010 File Offset: 0x010FB210
+		// Token: 0x0603AED8 RID: 241368 RVA: 0x010A7570 File Offset: 0x010A5770
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06044D4C RID: 281932 RVA: 0x010FD1A4 File Offset: 0x010FB3A4
+		// Token: 0x0603AED9 RID: 241369 RVA: 0x010A7704 File Offset: 0x010A5904
 		protected override UniTask OnBeforeStartAsync()
 		{
 			FindSunSpiritView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -64,13 +64,13 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06044D4D RID: 281933 RVA: 0x010FD1E7 File Offset: 0x010FB3E7
+		// Token: 0x0603AEDA RID: 241370 RVA: 0x010A7747 File Offset: 0x010A5947
 		protected override void OnBeforeShow()
 		{
 			this.RefreshTriggerTimes();
 		}
 
-		// Token: 0x06044D4E RID: 281934 RVA: 0x010FD1EF File Offset: 0x010FB3EF
+		// Token: 0x0603AEDB RID: 241371 RVA: 0x010A774F File Offset: 0x010A594F
 		protected override void OnBeforeDestroy()
 		{
 			if (FindSunSpiritModel.Instance.Config != null)
@@ -79,13 +79,13 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite
 			}
 		}
 
-		// Token: 0x06044D4F RID: 281935 RVA: 0x010FD207 File Offset: 0x010FB407
+		// Token: 0x0603AEDC RID: 241372 RVA: 0x010A7767 File Offset: 0x010A5967
 		private void OnTriggerButtonClick()
 		{
 			this.TriggerModifierAsync();
 		}
 
-		// Token: 0x06044D50 RID: 281936 RVA: 0x010FD210 File Offset: 0x010FB410
+		// Token: 0x0603AEDD RID: 241373 RVA: 0x010A7770 File Offset: 0x010A5970
 		private UniTask TriggerModifierAsync()
 		{
 			FindSunSpiritView.<TriggerModifierAsync>d__9 <TriggerModifierAsync>d__;
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite
 			return <TriggerModifierAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06044D51 RID: 281937 RVA: 0x010FD253 File Offset: 0x010FB453
+		// Token: 0x0603AEDE RID: 241374 RVA: 0x010A77B3 File Offset: 0x010A59B3
 		private void OnResetButtonClick()
 		{
 			if (this.DisableInput)
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite
 			this.ResetFindSunSpirit();
 		}
 
-		// Token: 0x06044D52 RID: 281938 RVA: 0x010FD264 File Offset: 0x010FB464
+		// Token: 0x0603AEDF RID: 241375 RVA: 0x010A77C4 File Offset: 0x010A59C4
 		private void OnCloseButtonClick()
 		{
 			if (this.DisableInput)
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06044D53 RID: 281939 RVA: 0x010FD280 File Offset: 0x010FB480
+		// Token: 0x0603AEE0 RID: 241376 RVA: 0x010A77E0 File Offset: 0x010A59E0
 		private void OnLeftButtonClick()
 		{
 			if (this.DisableInput)
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite
 			FindSunSpiritController.Instance.SelectModifier(false);
 		}
 
-		// Token: 0x06044D54 RID: 281940 RVA: 0x010FD296 File Offset: 0x010FB496
+		// Token: 0x0603AEE1 RID: 241377 RVA: 0x010A77F6 File Offset: 0x010A59F6
 		private void OnRightButtonClick()
 		{
 			if (this.DisableInput)
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite
 			FindSunSpiritController.Instance.SelectModifier(true);
 		}
 
-		// Token: 0x06044D55 RID: 281941 RVA: 0x010FD2AC File Offset: 0x010FB4AC
+		// Token: 0x0603AEE2 RID: 241378 RVA: 0x010A780C File Offset: 0x010A5A0C
 		private void ResetFindSunSpirit()
 		{
 			FindSunSpiritController.Instance.ResetFindSunSpirit(delegate
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite
 			});
 		}
 
-		// Token: 0x06044D56 RID: 281942 RVA: 0x010FD2C4 File Offset: 0x010FB4C4
+		// Token: 0x0603AEE3 RID: 241379 RVA: 0x010A7824 File Offset: 0x010A5A24
 		private void RefreshTriggerTimes()
 		{
 			FindSunSpiritModel instance = FindSunSpiritModel.Instance;
@@ -162,32 +162,32 @@ namespace CSharpScript.Game.LevelGamePlay.FindSunSprite
 			text.SetText(num.ToString(), true);
 		}
 
-		// Token: 0x04023D05 RID: 146693
+		// Token: 0x0401EFBA RID: 126906
 		private bool DisableInput;
 
-		// Token: 0x04023D06 RID: 146694
+		// Token: 0x0401EFBB RID: 126907
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0200CD0A RID: 52490
+		// Token: 0x0200B8FA RID: 47354
 		private class EComponentType
 		{
-			// Token: 0x0403DD2B RID: 253227
+			// Token: 0x0403914D RID: 233805
 			public const int CaptionItem = 0;
 
-			// Token: 0x0403DD2C RID: 253228
+			// Token: 0x0403914E RID: 233806
 			public const int LeftBtn = 1;
 
-			// Token: 0x0403DD2D RID: 253229
+			// Token: 0x0403914F RID: 233807
 			public const int RightBtn = 2;
 
-			// Token: 0x0403DD2E RID: 253230
+			// Token: 0x04039150 RID: 233808
 			public const int TriggerBtn = 3;
 
-			// Token: 0x0403DD2F RID: 253231
+			// Token: 0x04039151 RID: 233809
 			public const int ResetBtn = 4;
 
-			// Token: 0x0403DD30 RID: 253232
+			// Token: 0x04039152 RID: 233810
 			public const int TimesText = 5;
 		}
 	}

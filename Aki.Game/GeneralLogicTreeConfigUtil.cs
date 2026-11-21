@@ -5,12 +5,12 @@ using System.Text.Json;
 using Aki.TDConfigMgr.Quest;
 using UnrealEngine;
 
-// Token: 0x02001D90 RID: 7568
+// Token: 0x02001252 RID: 4690
 [NullableContext(1)]
 [Nullable(0)]
 public class GeneralLogicTreeConfigUtil : Singleton
 {
-	// Token: 0x0600E561 RID: 58721 RVA: 0x003606F0 File Offset: 0x0035E8F0
+	// Token: 0x0600B97F RID: 47487 RVA: 0x0036C344 File Offset: 0x0036A544
 	public void InitConfig(string dir, Action<string> singleFileLoaded)
 	{
 		foreach (string text in UKuroStaticLibrary.GetFilesRecursive(dir, "*.json", true, false))
@@ -27,7 +27,7 @@ public class GeneralLogicTreeConfigUtil : Singleton
 		}
 	}
 
-	// Token: 0x0600E562 RID: 58722 RVA: 0x00360764 File Offset: 0x0035E964
+	// Token: 0x0600B980 RID: 47488 RVA: 0x0036C3C0 File Offset: 0x0036A5C0
 	public void BuildConfigIdIndex(string dir, string arrayPropertyName, Dictionary<int, string> idToFilePath)
 	{
 		foreach (string text in UKuroStaticLibrary.GetFilesRecursive(dir, "*.json", true, false))
@@ -66,7 +66,7 @@ public class GeneralLogicTreeConfigUtil : Singleton
 		}
 	}
 
-	// Token: 0x0600E563 RID: 58723 RVA: 0x003608B8 File Offset: 0x0035EAB8
+	// Token: 0x0600B981 RID: 47489 RVA: 0x0036C518 File Offset: 0x0036A718
 	public bool LoadSingleFile(string filePath, Action<string> singleFileLoaded)
 	{
 		if (!UBlueprintPathsLibrary.FileExists(filePath))
@@ -83,7 +83,7 @@ public class GeneralLogicTreeConfigUtil : Singleton
 		return true;
 	}
 
-	// Token: 0x0600E564 RID: 58724 RVA: 0x003608F0 File Offset: 0x0035EAF0
+	// Token: 0x0600B982 RID: 47490 RVA: 0x0036C550 File Offset: 0x0036A750
 	public void InitBehaviorNodeConfig(Dictionary<int, Dictionary<int, IBtNode>> nodeConfig, int questId, IBehaviorTree tree)
 	{
 		Dictionary<int, IBtNode> dictionary;
@@ -108,7 +108,7 @@ public class GeneralLogicTreeConfigUtil : Singleton
 		}
 	}
 
-	// Token: 0x0600E565 RID: 58725 RVA: 0x00360990 File Offset: 0x0035EB90
+	// Token: 0x0600B983 RID: 47491 RVA: 0x0036C5F0 File Offset: 0x0036A7F0
 	public bool IsAlwaysFalseChildNode(long treeIncId, int? parentNodeId)
 	{
 		if (parentNodeId == null || parentNodeId.Value == 0)
@@ -124,8 +124,8 @@ public class GeneralLogicTreeConfigUtil : Singleton
 		return nodeConfig != null && (nodeConfig.Type == EBtNode.AlwaysFalse || this.IsAlwaysFalseChildNode(treeIncId, nodeConfig.ParentNodeId));
 	}
 
-	// Token: 0x17001254 RID: 4692
-	// (get) Token: 0x0600E566 RID: 58726 RVA: 0x003609F3 File Offset: 0x0035EBF3
+	// Token: 0x1700127E RID: 4734
+	// (get) Token: 0x0600B984 RID: 47492 RVA: 0x0036C653 File Offset: 0x0036A853
 	public static GeneralLogicTreeConfigUtil Instance
 	{
 		get
@@ -139,12 +139,12 @@ public class GeneralLogicTreeConfigUtil : Singleton
 		}
 	}
 
-	// Token: 0x0600E567 RID: 58727 RVA: 0x00360A16 File Offset: 0x0035EC16
+	// Token: 0x0600B985 RID: 47493 RVA: 0x0036C676 File Offset: 0x0036A876
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600E568 RID: 58728 RVA: 0x00360A18 File Offset: 0x0035EC18
+	// Token: 0x0600B986 RID: 47494 RVA: 0x0036C678 File Offset: 0x0036A878
 	public static void ResetStaticDefaultValue()
 	{
 		GeneralLogicTreeConfigUtil instance = GeneralLogicTreeConfigUtil._instance;
@@ -155,7 +155,7 @@ public class GeneralLogicTreeConfigUtil : Singleton
 		GeneralLogicTreeConfigUtil._instance = null;
 	}
 
-	// Token: 0x0600E569 RID: 58729 RVA: 0x00360A34 File Offset: 0x0035EC34
+	// Token: 0x0600B987 RID: 47495 RVA: 0x0036C694 File Offset: 0x0036A894
 	static GeneralLogicTreeConfigUtil()
 	{
 		Dictionary<EBtNode, bool> dictionary = new Dictionary<EBtNode, bool>();
@@ -177,11 +177,11 @@ public class GeneralLogicTreeConfigUtil : Singleton
 		StaticVariableRegister.RegisterAndExecute(new Action(GeneralLogicTreeConfigUtil.CreateStaticDefaultValue), new Action(GeneralLogicTreeConfigUtil.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04006A44 RID: 27204
+	// Token: 0x04006B25 RID: 27429
 	[StaticVariableRuleIgnore]
 	private static readonly IReadOnlyDictionary<EBtNode, bool> configNodesFilter;
 
-	// Token: 0x04006A45 RID: 27205
+	// Token: 0x04006B26 RID: 27430
 	[Nullable(2)]
 	private static GeneralLogicTreeConfigUtil _instance;
 }

@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002086 RID: 8326
+	// Token: 0x020006A3 RID: 1699
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/LGUI.LGUIManagerActor")]
 	[UnrealStructLayout(1984, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1984)]
 	public class ALGUIManagerActor : AActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601F681 RID: 128641 RVA: 0x002EA51C File Offset: 0x002E871C
+		// Token: 0x0600921F RID: 37407 RVA: 0x000DC000 File Offset: 0x000DA200
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return ALGUIManagerActor._ClassPtr;
 		}
 
-		// Token: 0x0601F682 RID: 128642 RVA: 0x002EA528 File Offset: 0x002E8728
+		// Token: 0x06009220 RID: 37408 RVA: 0x000DC00C File Offset: 0x000DA20C
 		public ALGUIManagerActor() : this(BuiltinUtils.AllocNativeUObject(ALGUIManagerActor.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601F683 RID: 128643 RVA: 0x002EA550 File Offset: 0x002E8750
+		// Token: 0x06009221 RID: 37409 RVA: 0x000DC034 File Offset: 0x000DA234
 		public ALGUIManagerActor(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(ALGUIManagerActor.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17007BF2 RID: 31730
-		// (get) Token: 0x0601F684 RID: 128644 RVA: 0x002EA584 File Offset: 0x002E8784
-		// (set) Token: 0x0601F685 RID: 128645 RVA: 0x002EA5BD File Offset: 0x002E87BD
+		// Token: 0x17001B3D RID: 6973
+		// (get) Token: 0x06009222 RID: 37410 RVA: 0x000DC068 File Offset: 0x000DA268
+		// (set) Token: 0x06009223 RID: 37411 RVA: 0x000DC0A1 File Offset: 0x000DA2A1
 		[Nullable(new byte[]
 		{
 			1,
@@ -68,9 +68,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007BF3 RID: 31731
-		// (get) Token: 0x0601F686 RID: 128646 RVA: 0x002EA5CC File Offset: 0x002E87CC
-		// (set) Token: 0x0601F687 RID: 128647 RVA: 0x002EA605 File Offset: 0x002E8805
+		// Token: 0x17001B3E RID: 6974
+		// (get) Token: 0x06009224 RID: 37412 RVA: 0x000DC0B0 File Offset: 0x000DA2B0
+		// (set) Token: 0x06009225 RID: 37413 RVA: 0x000DC0E9 File Offset: 0x000DA2E9
 		public TArray<ULGUICanvas> AllCanvas
 		{
 			get
@@ -89,9 +89,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007BF4 RID: 31732
-		// (get) Token: 0x0601F688 RID: 128648 RVA: 0x002EA614 File Offset: 0x002E8814
-		// (set) Token: 0x0601F689 RID: 128649 RVA: 0x002EA64D File Offset: 0x002E884D
+		// Token: 0x17001B3F RID: 6975
+		// (get) Token: 0x06009226 RID: 37414 RVA: 0x000DC0F8 File Offset: 0x000DA2F8
+		// (set) Token: 0x06009227 RID: 37415 RVA: 0x000DC131 File Offset: 0x000DA331
 		public TArray<ULGUICanvas> PostTickCanvas
 		{
 			get
@@ -110,9 +110,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007BF5 RID: 31733
-		// (get) Token: 0x0601F68A RID: 128650 RVA: 0x002EA65C File Offset: 0x002E885C
-		// (set) Token: 0x0601F68B RID: 128651 RVA: 0x002EA695 File Offset: 0x002E8895
+		// Token: 0x17001B40 RID: 6976
+		// (get) Token: 0x06009228 RID: 37416 RVA: 0x000DC140 File Offset: 0x000DA340
+		// (set) Token: 0x06009229 RID: 37417 RVA: 0x000DC179 File Offset: 0x000DA379
 		public TArray<ULGUIBaseRaycaster> raycasterArray
 		{
 			get
@@ -131,9 +131,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007BF6 RID: 31734
-		// (get) Token: 0x0601F68C RID: 128652 RVA: 0x002EA6A3 File Offset: 0x002E88A3
-		// (set) Token: 0x0601F68D RID: 128653 RVA: 0x002EA6B7 File Offset: 0x002E88B7
+		// Token: 0x17001B41 RID: 6977
+		// (get) Token: 0x0600922A RID: 37418 RVA: 0x000DC187 File Offset: 0x000DA387
+		// (set) Token: 0x0600922B RID: 37419 RVA: 0x000DC19B File Offset: 0x000DA39B
 		[Nullable(2)]
 		public unsafe ULGUIBaseInputModule currentInputModule
 		{
@@ -149,9 +149,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007BF7 RID: 31735
-		// (get) Token: 0x0601F68E RID: 128654 RVA: 0x002EA6CC File Offset: 0x002E88CC
-		// (set) Token: 0x0601F68F RID: 128655 RVA: 0x002EA705 File Offset: 0x002E8905
+		// Token: 0x17001B42 RID: 6978
+		// (get) Token: 0x0600922C RID: 37420 RVA: 0x000DC1B0 File Offset: 0x000DA3B0
+		// (set) Token: 0x0600922D RID: 37421 RVA: 0x000DC1E9 File Offset: 0x000DA3E9
 		public TArray<UUISelectableComponent> allSelectableArray
 		{
 			get
@@ -170,9 +170,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007BF8 RID: 31736
-		// (get) Token: 0x0601F690 RID: 128656 RVA: 0x002EA713 File Offset: 0x002E8913
-		// (set) Token: 0x0601F691 RID: 128657 RVA: 0x002EA727 File Offset: 0x002E8927
+		// Token: 0x17001B43 RID: 6979
+		// (get) Token: 0x0600922E RID: 37422 RVA: 0x000DC1F7 File Offset: 0x000DA3F7
+		// (set) Token: 0x0600922F RID: 37423 RVA: 0x000DC20B File Offset: 0x000DA40B
 		[Nullable(2)]
 		public unsafe USequencerManager SequencerManager
 		{
@@ -188,45 +188,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007BF9 RID: 31737
-		// (get) Token: 0x0601F692 RID: 128658 RVA: 0x002EA73C File Offset: 0x002E893C
-		// (set) Token: 0x0601F693 RID: 128659 RVA: 0x002EA750 File Offset: 0x002E8950
-		[Nullable(2)]
-		public unsafe UUISpineManager UISpineManager
-		{
-			[NullableContext(2)]
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<UUISpineManager>(base.NativePtr / (IntPtr)sizeof(void*) + ALGUIManagerActor.__PropertyOffset_UISpineManager);
-			}
-			[NullableContext(2)]
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ALGUIManagerActor.__PropertyOffset_UISpineManager, value);
-			}
-		}
-
-		// Token: 0x17007BFA RID: 31738
-		// (get) Token: 0x0601F694 RID: 128660 RVA: 0x002EA765 File Offset: 0x002E8965
-		// (set) Token: 0x0601F695 RID: 128661 RVA: 0x002EA779 File Offset: 0x002E8979
-		[Nullable(2)]
-		public unsafe UUIDynmaicTextureAtlasMgr DynmaicTextureAtlasMgr
-		{
-			[NullableContext(2)]
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<UUIDynmaicTextureAtlasMgr>(base.NativePtr / (IntPtr)sizeof(void*) + ALGUIManagerActor.__PropertyOffset_DynmaicTextureAtlasMgr);
-			}
-			[NullableContext(2)]
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + ALGUIManagerActor.__PropertyOffset_DynmaicTextureAtlasMgr, value);
-			}
-		}
-
-		// Token: 0x17007BFB RID: 31739
-		// (get) Token: 0x0601F696 RID: 128662 RVA: 0x002EA78E File Offset: 0x002E898E
-		// (set) Token: 0x0601F697 RID: 128663 RVA: 0x002EA7A2 File Offset: 0x002E89A2
+		// Token: 0x17001B44 RID: 6980
+		// (get) Token: 0x06009230 RID: 37424 RVA: 0x000DC220 File Offset: 0x000DA420
+		// (set) Token: 0x06009231 RID: 37425 RVA: 0x000DC234 File Offset: 0x000DA434
 		[Nullable(2)]
 		public unsafe UUIDynamicSpriteAtlasMgr DynamicSpriteAtlasMgr
 		{
@@ -242,9 +206,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007BFC RID: 31740
-		// (get) Token: 0x0601F698 RID: 128664 RVA: 0x002EA7B8 File Offset: 0x002E89B8
-		// (set) Token: 0x0601F699 RID: 128665 RVA: 0x002EA7F1 File Offset: 0x002E89F1
+		// Token: 0x17001B45 RID: 6981
+		// (get) Token: 0x06009232 RID: 37426 RVA: 0x000DC24C File Offset: 0x000DA44C
+		// (set) Token: 0x06009233 RID: 37427 RVA: 0x000DC285 File Offset: 0x000DA485
 		[Nullable(new byte[]
 		{
 			1,
@@ -281,9 +245,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007BFD RID: 31741
-		// (get) Token: 0x0601F69A RID: 128666 RVA: 0x002EA800 File Offset: 0x002E8A00
-		// (set) Token: 0x0601F69B RID: 128667 RVA: 0x002EA839 File Offset: 0x002E8A39
+		// Token: 0x17001B46 RID: 6982
+		// (get) Token: 0x06009234 RID: 37428 RVA: 0x000DC294 File Offset: 0x000DA494
+		// (set) Token: 0x06009235 RID: 37429 RVA: 0x000DC2CD File Offset: 0x000DA4CD
 		[Nullable(new byte[]
 		{
 			1,
@@ -320,9 +284,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007BFE RID: 31742
-		// (get) Token: 0x0601F69C RID: 128668 RVA: 0x002EA848 File Offset: 0x002E8A48
-		// (set) Token: 0x0601F69D RID: 128669 RVA: 0x002EA881 File Offset: 0x002E8A81
+		// Token: 0x17001B47 RID: 6983
+		// (get) Token: 0x06009236 RID: 37430 RVA: 0x000DC2DC File Offset: 0x000DA4DC
+		// (set) Token: 0x06009237 RID: 37431 RVA: 0x000DC315 File Offset: 0x000DA515
 		[Nullable(new byte[]
 		{
 			1,
@@ -359,9 +323,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007BFF RID: 31743
-		// (get) Token: 0x0601F69E RID: 128670 RVA: 0x002EA890 File Offset: 0x002E8A90
-		// (set) Token: 0x0601F69F RID: 128671 RVA: 0x002EA8C9 File Offset: 0x002E8AC9
+		// Token: 0x17001B48 RID: 6984
+		// (get) Token: 0x06009238 RID: 37432 RVA: 0x000DC324 File Offset: 0x000DA524
+		// (set) Token: 0x06009239 RID: 37433 RVA: 0x000DC35D File Offset: 0x000DA55D
 		public TArray<UUINiagara> allUINiagara
 		{
 			get
@@ -380,9 +344,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C00 RID: 31744
-		// (get) Token: 0x0601F6A0 RID: 128672 RVA: 0x002EA8D7 File Offset: 0x002E8AD7
-		// (set) Token: 0x0601F6A1 RID: 128673 RVA: 0x002EA8EB File Offset: 0x002E8AEB
+		// Token: 0x17001B49 RID: 6985
+		// (get) Token: 0x0600923A RID: 37434 RVA: 0x000DC36B File Offset: 0x000DA56B
+		// (set) Token: 0x0600923B RID: 37435 RVA: 0x000DC37F File Offset: 0x000DA57F
 		[Nullable(new byte[]
 		{
 			0,
@@ -410,30 +374,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C01 RID: 31745
-		// (get) Token: 0x0601F6A2 RID: 128674 RVA: 0x002EA900 File Offset: 0x002E8B00
-		// (set) Token: 0x0601F6A3 RID: 128675 RVA: 0x002EA939 File Offset: 0x002E8B39
-		public TArray<FLGUIBehaviourArrayContainer> LGUIBehaviours_PrefabSystemProcessing
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<FLGUIBehaviourArrayContainer> result;
-				if ((result = this._LGUIBehaviours_PrefabSystemProcessing) == null)
-				{
-					result = (this._LGUIBehaviours_PrefabSystemProcessing = new TArray<FLGUIBehaviourArrayContainer>(base.NativePtr + (IntPtr)ALGUIManagerActor.__PropertyOffset_LGUIBehaviours_PrefabSystemProcessing, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.LGUIBehaviours_PrefabSystemProcessing.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17007C02 RID: 31746
-		// (get) Token: 0x0601F6A4 RID: 128676 RVA: 0x002EA947 File Offset: 0x002E8B47
-		// (set) Token: 0x0601F6A5 RID: 128677 RVA: 0x002EA95B File Offset: 0x002E8B5B
+		// Token: 0x17001B4A RID: 6986
+		// (get) Token: 0x0600923C RID: 37436 RVA: 0x000DC394 File Offset: 0x000DA594
+		// (set) Token: 0x0600923D RID: 37437 RVA: 0x000DC3A8 File Offset: 0x000DA5A8
 		[Nullable(new byte[]
 		{
 			0,
@@ -461,9 +404,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C03 RID: 31747
-		// (get) Token: 0x0601F6A6 RID: 128678 RVA: 0x002EA970 File Offset: 0x002E8B70
-		// (set) Token: 0x0601F6A7 RID: 128679 RVA: 0x002EA9A9 File Offset: 0x002E8BA9
+		// Token: 0x17001B4B RID: 6987
+		// (get) Token: 0x0600923E RID: 37438 RVA: 0x000DC3C0 File Offset: 0x000DA5C0
+		// (set) Token: 0x0600923F RID: 37439 RVA: 0x000DC3F9 File Offset: 0x000DA5F9
 		public TSet<UUIItem> DirtyHierarchyRootSet
 		{
 			get
@@ -482,9 +425,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C04 RID: 31748
-		// (get) Token: 0x0601F6A8 RID: 128680 RVA: 0x002EA9B8 File Offset: 0x002E8BB8
-		// (set) Token: 0x0601F6A9 RID: 128681 RVA: 0x002EA9F1 File Offset: 0x002E8BF1
+		// Token: 0x17001B4C RID: 6988
+		// (get) Token: 0x06009240 RID: 37440 RVA: 0x000DC408 File Offset: 0x000DA608
+		// (set) Token: 0x06009241 RID: 37441 RVA: 0x000DC441 File Offset: 0x000DA641
 		public TArray<UUILayoutBase> AutoLayoutRebuildList_ParentFirst
 		{
 			get
@@ -503,9 +446,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C05 RID: 31749
-		// (get) Token: 0x0601F6AA RID: 128682 RVA: 0x002EAA00 File Offset: 0x002E8C00
-		// (set) Token: 0x0601F6AB RID: 128683 RVA: 0x002EAA39 File Offset: 0x002E8C39
+		// Token: 0x17001B4D RID: 6989
+		// (get) Token: 0x06009242 RID: 37442 RVA: 0x000DC450 File Offset: 0x000DA650
+		// (set) Token: 0x06009243 RID: 37443 RVA: 0x000DC489 File Offset: 0x000DA689
 		public TArray<UUILayoutBase> AutoLayoutRebuildList_ChildrenFirst
 		{
 			get
@@ -524,9 +467,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C06 RID: 31750
-		// (get) Token: 0x0601F6AC RID: 128684 RVA: 0x002EAA48 File Offset: 0x002E8C48
-		// (set) Token: 0x0601F6AD RID: 128685 RVA: 0x002EAA81 File Offset: 0x002E8C81
+		// Token: 0x17001B4E RID: 6990
+		// (get) Token: 0x06009244 RID: 37444 RVA: 0x000DC498 File Offset: 0x000DA698
+		// (set) Token: 0x06009245 RID: 37445 RVA: 0x000DC4D1 File Offset: 0x000DA6D1
 		public TSet<UUILayoutBase> AutoLayoutPostRebuildList
 		{
 			get
@@ -545,9 +488,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C07 RID: 31751
-		// (get) Token: 0x0601F6AE RID: 128686 RVA: 0x002EAA90 File Offset: 0x002E8C90
-		// (set) Token: 0x0601F6AF RID: 128687 RVA: 0x002EAAC9 File Offset: 0x002E8CC9
+		// Token: 0x17001B4F RID: 6991
+		// (get) Token: 0x06009246 RID: 37446 RVA: 0x000DC4E0 File Offset: 0x000DA6E0
+		// (set) Token: 0x06009247 RID: 37447 RVA: 0x000DC519 File Offset: 0x000DA719
 		public TSet<UUILayoutBase> AutoLayoutPostHasRebuildThisFrame
 		{
 			get
@@ -566,9 +509,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C08 RID: 31752
-		// (get) Token: 0x0601F6B0 RID: 128688 RVA: 0x002EAAD8 File Offset: 0x002E8CD8
-		// (set) Token: 0x0601F6B1 RID: 128689 RVA: 0x002EAB11 File Offset: 0x002E8D11
+		// Token: 0x17001B50 RID: 6992
+		// (get) Token: 0x06009248 RID: 37448 RVA: 0x000DC528 File Offset: 0x000DA728
+		// (set) Token: 0x06009249 RID: 37449 RVA: 0x000DC561 File Offset: 0x000DA761
 		public TArray<ULGUICanvas> InternalHierarchyDirtyCanvases
 		{
 			get
@@ -587,9 +530,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007C09 RID: 31753
-		// (get) Token: 0x0601F6B2 RID: 128690 RVA: 0x002EAB20 File Offset: 0x002E8D20
-		// (set) Token: 0x0601F6B3 RID: 128691 RVA: 0x002EAB59 File Offset: 0x002E8D59
+		// Token: 0x17001B51 RID: 6993
+		// (get) Token: 0x0600924A RID: 37450 RVA: 0x000DC570 File Offset: 0x000DA770
+		// (set) Token: 0x0600924B RID: 37451 RVA: 0x000DC5A9 File Offset: 0x000DA7A9
 		public TSet<ULGUICanvas> DirtyRootCanvasSet
 		{
 			get
@@ -608,100 +551,89 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601F6B4 RID: 128692 RVA: 0x002EAB67 File Offset: 0x002E8D67
+		// Token: 0x0600924C RID: 37452 RVA: 0x000DC5B7 File Offset: 0x000DA7B7
 		[NullableContext(2)]
 		public static void SetGlobalPlayRate(UObject WorldContext, float PlayRate)
 		{
 			ALGUIManagerActor.__SetGlobalPlayRate_Internal((WorldContext != null) ? WorldContext.NativePtr : IntPtr.Zero, PlayRate);
 		}
 
-		// Token: 0x0601F6B5 RID: 128693 RVA: 0x002EAB7F File Offset: 0x002E8D7F
+		// Token: 0x0600924D RID: 37453 RVA: 0x000DC5CF File Offset: 0x000DA7CF
 		[NullableContext(2)]
 		public static void SetDebugRootLayer(UObject WorldContextObj, UUIItem LayerItem)
 		{
 			ALGUIManagerActor.__SetDebugRootLayer_Internal((WorldContextObj != null) ? WorldContextObj.NativePtr : IntPtr.Zero, (LayerItem != null) ? LayerItem.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0601F6B6 RID: 128694 RVA: 0x002EABA6 File Offset: 0x002E8DA6
-		[NullableContext(2)]
-		public static UUISpineManager GetUISpineManager(UObject WorldContext)
-		{
-			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UUISpineManager>(ALGUIManagerActor.__GetUISpineManager_Internal((WorldContext != null) ? WorldContext.NativePtr : IntPtr.Zero));
-		}
-
-		// Token: 0x0601F6B7 RID: 128695 RVA: 0x002EABC2 File Offset: 0x002E8DC2
+		// Token: 0x0600924E RID: 37454 RVA: 0x000DC5F6 File Offset: 0x000DA7F6
 		[NullableContext(2)]
 		public static USequencerManager GetSequencerManager(UObject WorldContext)
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<USequencerManager>(ALGUIManagerActor.__GetSequencerManager_Internal((WorldContext != null) ? WorldContext.NativePtr : IntPtr.Zero));
 		}
 
-		// Token: 0x0601F6B8 RID: 128696 RVA: 0x002EABDE File Offset: 0x002E8DDE
+		// Token: 0x0600924F RID: 37455 RVA: 0x000DC612 File Offset: 0x000DA812
 		[NullableContext(2)]
 		public static int GetGlobalUiBlurIndex(UObject WorldContextObject)
 		{
 			return ALGUIManagerActor.__GetGlobalUiBlurIndex_Internal((WorldContextObject != null) ? WorldContextObject.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0601F6B9 RID: 128697 RVA: 0x002EABF5 File Offset: 0x002E8DF5
+		// Token: 0x06009250 RID: 37456 RVA: 0x000DC629 File Offset: 0x000DA829
 		[NullableContext(2)]
 		public static UUIDynamicSpriteAtlasMgr GetDynamicSpriteAtlasMgr(UObject WorldContextObject)
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UUIDynamicSpriteAtlasMgr>(ALGUIManagerActor.__GetDynamicSpriteAtlasMgr_Internal((WorldContextObject != null) ? WorldContextObject.NativePtr : IntPtr.Zero));
 		}
 
-		// Token: 0x0601F6BA RID: 128698
+		// Token: 0x06009251 RID: 37457
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		public static extern void ForceClearBatchDestroyUIBaseActors();
 
-		// Token: 0x0601F6BB RID: 128699
+		// Token: 0x06009252 RID: 37458
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetGlobalPlayRate_Internal(IntPtr WorldContext, float PlayRate);
 
-		// Token: 0x0601F6BC RID: 128700
+		// Token: 0x06009253 RID: 37459
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetDebugRootLayer_Internal(IntPtr WorldContextObj, IntPtr LayerItem);
 
-		// Token: 0x0601F6BD RID: 128701
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern IntPtr __GetUISpineManager_Internal(IntPtr WorldContext);
-
-		// Token: 0x0601F6BE RID: 128702
+		// Token: 0x06009254 RID: 37460
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetSequencerManager_Internal(IntPtr WorldContext);
 
-		// Token: 0x0601F6BF RID: 128703
+		// Token: 0x06009255 RID: 37461
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetGlobalUiBlurIndex_Internal(IntPtr WorldContextObject);
 
-		// Token: 0x0601F6C0 RID: 128704
+		// Token: 0x06009256 RID: 37462
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetDynamicSpriteAtlasMgr_Internal(IntPtr WorldContextObject);
 
-		// Token: 0x0601F6C1 RID: 128705 RVA: 0x002EAC11 File Offset: 0x002E8E11
+		// Token: 0x06009257 RID: 37463 RVA: 0x000DC645 File Offset: 0x000DA845
 		static ALGUIManagerActor()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LGUI.LGUIManagerActor");
 		}
 
-		// Token: 0x0601F6C2 RID: 128706 RVA: 0x002EAC1F File Offset: 0x002E8E1F
+		// Token: 0x06009258 RID: 37464 RVA: 0x000DC653 File Offset: 0x000DA853
 		protected ALGUIManagerActor(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04010F61 RID: 69473
+		// Token: 0x04003FAB RID: 16299
 		public new const string __ObjectPath = "/Script/LGUI.LGUIManagerActor";
 
-		// Token: 0x04010F62 RID: 69474
+		// Token: 0x04003FAC RID: 16300
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04010F63 RID: 69475
+		// Token: 0x04003FAD RID: 16301
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04010F64 RID: 69476
+		// Token: 0x04003FAE RID: 16302
 		internal static int __PropertyOffset_AllUIItem;
 
-		// Token: 0x04010F65 RID: 69477
+		// Token: 0x04003FAF RID: 16303
 		[Nullable(new byte[]
 		{
 			2,
@@ -710,10 +642,10 @@ namespace UnrealEngine
 		})]
 		private TArray<TWeakObjectPtr<UUIItem>> _AllUIItem;
 
-		// Token: 0x04010F66 RID: 69478
+		// Token: 0x04003FB0 RID: 16304
 		internal static int __PropertyOffset_AllCanvas;
 
-		// Token: 0x04010F67 RID: 69479
+		// Token: 0x04003FB1 RID: 16305
 		[Nullable(new byte[]
 		{
 			2,
@@ -721,10 +653,10 @@ namespace UnrealEngine
 		})]
 		private TArray<ULGUICanvas> _AllCanvas;
 
-		// Token: 0x04010F68 RID: 69480
+		// Token: 0x04003FB2 RID: 16306
 		internal static int __PropertyOffset_PostTickCanvas;
 
-		// Token: 0x04010F69 RID: 69481
+		// Token: 0x04003FB3 RID: 16307
 		[Nullable(new byte[]
 		{
 			2,
@@ -732,10 +664,10 @@ namespace UnrealEngine
 		})]
 		private TArray<ULGUICanvas> _PostTickCanvas;
 
-		// Token: 0x04010F6A RID: 69482
+		// Token: 0x04003FB4 RID: 16308
 		internal static int __PropertyOffset_raycasterArray;
 
-		// Token: 0x04010F6B RID: 69483
+		// Token: 0x04003FB5 RID: 16309
 		[Nullable(new byte[]
 		{
 			2,
@@ -743,13 +675,13 @@ namespace UnrealEngine
 		})]
 		private TArray<ULGUIBaseRaycaster> _raycasterArray;
 
-		// Token: 0x04010F6C RID: 69484
+		// Token: 0x04003FB6 RID: 16310
 		internal static int __PropertyOffset_currentInputModule;
 
-		// Token: 0x04010F6D RID: 69485
+		// Token: 0x04003FB7 RID: 16311
 		internal static int __PropertyOffset_allSelectableArray;
 
-		// Token: 0x04010F6E RID: 69486
+		// Token: 0x04003FB8 RID: 16312
 		[Nullable(new byte[]
 		{
 			2,
@@ -757,22 +689,16 @@ namespace UnrealEngine
 		})]
 		private TArray<UUISelectableComponent> _allSelectableArray;
 
-		// Token: 0x04010F6F RID: 69487
+		// Token: 0x04003FB9 RID: 16313
 		internal static int __PropertyOffset_SequencerManager;
 
-		// Token: 0x04010F70 RID: 69488
-		internal static int __PropertyOffset_UISpineManager;
-
-		// Token: 0x04010F71 RID: 69489
-		internal static int __PropertyOffset_DynmaicTextureAtlasMgr;
-
-		// Token: 0x04010F72 RID: 69490
+		// Token: 0x04003FBA RID: 16314
 		internal static int __PropertyOffset_DynamicSpriteAtlasMgr;
 
-		// Token: 0x04010F73 RID: 69491
+		// Token: 0x04003FBB RID: 16315
 		internal static int __PropertyOffset_AllRaycastTarget;
 
-		// Token: 0x04010F74 RID: 69492
+		// Token: 0x04003FBC RID: 16316
 		[Nullable(new byte[]
 		{
 			2,
@@ -781,10 +707,10 @@ namespace UnrealEngine
 		})]
 		private TArray<TWeakObjectPtr<UUIItem>> _AllRaycastTarget;
 
-		// Token: 0x04010F75 RID: 69493
+		// Token: 0x04003FBD RID: 16317
 		internal static int __PropertyOffset_LGUIBehavioursForUpdate;
 
-		// Token: 0x04010F76 RID: 69494
+		// Token: 0x04003FBE RID: 16318
 		[Nullable(new byte[]
 		{
 			2,
@@ -793,10 +719,10 @@ namespace UnrealEngine
 		})]
 		private TArray<TWeakObjectPtr<ULGUIBehaviour>> _LGUIBehavioursForUpdate;
 
-		// Token: 0x04010F77 RID: 69495
+		// Token: 0x04003FBF RID: 16319
 		internal static int __PropertyOffset_LGUIBehavioursUpdateAfterGeometryUp;
 
-		// Token: 0x04010F78 RID: 69496
+		// Token: 0x04003FC0 RID: 16320
 		[Nullable(new byte[]
 		{
 			2,
@@ -805,10 +731,10 @@ namespace UnrealEngine
 		})]
 		private TArray<TWeakObjectPtr<ULGUIBehaviour>> _LGUIBehavioursUpdateAfterGeometryUp;
 
-		// Token: 0x04010F79 RID: 69497
+		// Token: 0x04003FC1 RID: 16321
 		internal static int __PropertyOffset_allUINiagara;
 
-		// Token: 0x04010F7A RID: 69498
+		// Token: 0x04003FC2 RID: 16322
 		[Nullable(new byte[]
 		{
 			2,
@@ -816,27 +742,16 @@ namespace UnrealEngine
 		})]
 		private TArray<UUINiagara> _allUINiagara;
 
-		// Token: 0x04010F7B RID: 69499
+		// Token: 0x04003FC3 RID: 16323
 		internal static int __PropertyOffset_ScreenRootPtr;
 
-		// Token: 0x04010F7C RID: 69500
-		internal static int __PropertyOffset_LGUIBehaviours_PrefabSystemProcessing;
-
-		// Token: 0x04010F7D RID: 69501
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<FLGUIBehaviourArrayContainer> _LGUIBehaviours_PrefabSystemProcessing;
-
-		// Token: 0x04010F7E RID: 69502
+		// Token: 0x04003FC4 RID: 16324
 		internal static int __PropertyOffset_DebugRootLayer;
 
-		// Token: 0x04010F7F RID: 69503
+		// Token: 0x04003FC5 RID: 16325
 		internal static int __PropertyOffset_DirtyHierarchyRootSet;
 
-		// Token: 0x04010F80 RID: 69504
+		// Token: 0x04003FC6 RID: 16326
 		[Nullable(new byte[]
 		{
 			2,
@@ -844,10 +759,10 @@ namespace UnrealEngine
 		})]
 		private TSet<UUIItem> _DirtyHierarchyRootSet;
 
-		// Token: 0x04010F81 RID: 69505
+		// Token: 0x04003FC7 RID: 16327
 		internal static int __PropertyOffset_AutoLayoutRebuildList_ParentFirst;
 
-		// Token: 0x04010F82 RID: 69506
+		// Token: 0x04003FC8 RID: 16328
 		[Nullable(new byte[]
 		{
 			2,
@@ -855,10 +770,10 @@ namespace UnrealEngine
 		})]
 		private TArray<UUILayoutBase> _AutoLayoutRebuildList_ParentFirst;
 
-		// Token: 0x04010F83 RID: 69507
+		// Token: 0x04003FC9 RID: 16329
 		internal static int __PropertyOffset_AutoLayoutRebuildList_ChildrenFirst;
 
-		// Token: 0x04010F84 RID: 69508
+		// Token: 0x04003FCA RID: 16330
 		[Nullable(new byte[]
 		{
 			2,
@@ -866,10 +781,10 @@ namespace UnrealEngine
 		})]
 		private TArray<UUILayoutBase> _AutoLayoutRebuildList_ChildrenFirst;
 
-		// Token: 0x04010F85 RID: 69509
+		// Token: 0x04003FCB RID: 16331
 		internal static int __PropertyOffset_AutoLayoutPostRebuildList;
 
-		// Token: 0x04010F86 RID: 69510
+		// Token: 0x04003FCC RID: 16332
 		[Nullable(new byte[]
 		{
 			2,
@@ -877,10 +792,10 @@ namespace UnrealEngine
 		})]
 		private TSet<UUILayoutBase> _AutoLayoutPostRebuildList;
 
-		// Token: 0x04010F87 RID: 69511
+		// Token: 0x04003FCD RID: 16333
 		internal static int __PropertyOffset_AutoLayoutPostHasRebuildThisFrame;
 
-		// Token: 0x04010F88 RID: 69512
+		// Token: 0x04003FCE RID: 16334
 		[Nullable(new byte[]
 		{
 			2,
@@ -888,10 +803,10 @@ namespace UnrealEngine
 		})]
 		private TSet<UUILayoutBase> _AutoLayoutPostHasRebuildThisFrame;
 
-		// Token: 0x04010F89 RID: 69513
+		// Token: 0x04003FCF RID: 16335
 		internal static int __PropertyOffset_InternalHierarchyDirtyCanvases;
 
-		// Token: 0x04010F8A RID: 69514
+		// Token: 0x04003FD0 RID: 16336
 		[Nullable(new byte[]
 		{
 			2,
@@ -899,10 +814,10 @@ namespace UnrealEngine
 		})]
 		private TArray<ULGUICanvas> _InternalHierarchyDirtyCanvases;
 
-		// Token: 0x04010F8B RID: 69515
+		// Token: 0x04003FD1 RID: 16337
 		internal static int __PropertyOffset_DirtyRootCanvasSet;
 
-		// Token: 0x04010F8C RID: 69516
+		// Token: 0x04003FD2 RID: 16338
 		[Nullable(new byte[]
 		{
 			2,

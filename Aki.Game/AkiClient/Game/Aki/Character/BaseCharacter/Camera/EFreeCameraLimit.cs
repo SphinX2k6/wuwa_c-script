@@ -4,38 +4,38 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter.Camera
 {
-	// Token: 0x020043BD RID: 17341
+	// Token: 0x020033D9 RID: 13273
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/Camera/EFreeCameraLimit.EFreeCameraLimit")]
 	public enum EFreeCameraLimit : byte
 	{
-		// Token: 0x04017C70 RID: 97392
+		// Token: 0x040127DD RID: 75741
 		None,
-		// Token: 0x04017C71 RID: 97393
+		// Token: 0x040127DE RID: 75742
 		世界X轴偏移上界,
-		// Token: 0x04017C72 RID: 97394
+		// Token: 0x040127DF RID: 75743
 		世界X轴偏移下界,
-		// Token: 0x04017C73 RID: 97395
+		// Token: 0x040127E0 RID: 75744
 		世界Y轴偏移上界,
-		// Token: 0x04017C74 RID: 97396
+		// Token: 0x040127E1 RID: 75745
 		世界Y轴偏移下界,
-		// Token: 0x04017C75 RID: 97397
+		// Token: 0x040127E2 RID: 75746
 		世界Z轴偏移上界,
-		// Token: 0x04017C76 RID: 97398
+		// Token: 0x040127E3 RID: 75747
 		世界Z轴偏移下界,
-		// Token: 0x04017C77 RID: 97399
+		// Token: 0x040127E4 RID: 75748
 		最小FOV,
-		// Token: 0x04017C78 RID: 97400
+		// Token: 0x040127E5 RID: 75749
 		最大FOV,
-		// Token: 0x04017C79 RID: 97401
+		// Token: 0x040127E6 RID: 75750
 		Yaw限制Min,
-		// Token: 0x04017C7A RID: 97402
+		// Token: 0x040127E7 RID: 75751
 		Yaw限制Max,
-		// Token: 0x04017C7B RID: 97403
+		// Token: 0x040127E8 RID: 75752
 		Pitch限制Min,
-		// Token: 0x04017C7C RID: 97404
+		// Token: 0x040127E9 RID: 75753
 		Pitch限制Max,
-		// Token: 0x04017C7D RID: 97405
+		// Token: 0x040127EA RID: 75754
 		EFreeCameraLimit_MAX
 	}
 }

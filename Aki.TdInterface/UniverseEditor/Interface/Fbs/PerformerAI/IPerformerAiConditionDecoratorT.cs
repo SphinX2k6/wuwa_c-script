@@ -3,35 +3,35 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 {
-	// Token: 0x0200435E RID: 17246
+	// Token: 0x020047C0 RID: 18368
 	public class IPerformerAiConditionDecoratorT
 	{
-		// Token: 0x170079B8 RID: 31160
-		// (get) Token: 0x0601993A RID: 104762 RVA: 0x003A94E9 File Offset: 0x003A76E9
-		// (set) Token: 0x0601993B RID: 104763 RVA: 0x003A94F1 File Offset: 0x003A76F1
+		// Token: 0x17007FED RID: 32749
+		// (get) Token: 0x0601B0C8 RID: 110792 RVA: 0x003D4F11 File Offset: 0x003D3111
+		// (set) Token: 0x0601B0C9 RID: 110793 RVA: 0x003D4F19 File Offset: 0x003D3119
 		public EPerformerAiDecoratorType Type { get; set; }
 
-		// Token: 0x170079B9 RID: 31161
-		// (get) Token: 0x0601993C RID: 104764 RVA: 0x003A94FA File Offset: 0x003A76FA
-		// (set) Token: 0x0601993D RID: 104765 RVA: 0x003A9502 File Offset: 0x003A7702
+		// Token: 0x17007FEE RID: 32750
+		// (get) Token: 0x0601B0CA RID: 110794 RVA: 0x003D4F22 File Offset: 0x003D3122
+		// (set) Token: 0x0601B0CB RID: 110795 RVA: 0x003D4F2A File Offset: 0x003D312A
 		public IConditionGroupT Condition { get; set; }
 
-		// Token: 0x170079BA RID: 31162
-		// (get) Token: 0x0601993E RID: 104766 RVA: 0x003A950B File Offset: 0x003A770B
-		// (set) Token: 0x0601993F RID: 104767 RVA: 0x003A9513 File Offset: 0x003A7713
+		// Token: 0x17007FEF RID: 32751
+		// (get) Token: 0x0601B0CC RID: 110796 RVA: 0x003D4F33 File Offset: 0x003D3133
+		// (set) Token: 0x0601B0CD RID: 110797 RVA: 0x003D4F3B File Offset: 0x003D313B
 		public bool Reverse { get; set; }
 
-		// Token: 0x170079BB RID: 31163
-		// (get) Token: 0x06019940 RID: 104768 RVA: 0x003A951C File Offset: 0x003A771C
-		// (set) Token: 0x06019941 RID: 104769 RVA: 0x003A9524 File Offset: 0x003A7724
+		// Token: 0x17007FF0 RID: 32752
+		// (get) Token: 0x0601B0CE RID: 110798 RVA: 0x003D4F44 File Offset: 0x003D3144
+		// (set) Token: 0x0601B0CF RID: 110799 RVA: 0x003D4F4C File Offset: 0x003D314C
 		public EPerformerAiAbortType AbortType { get; set; }
 
-		// Token: 0x170079BC RID: 31164
-		// (get) Token: 0x06019942 RID: 104770 RVA: 0x003A952D File Offset: 0x003A772D
-		// (set) Token: 0x06019943 RID: 104771 RVA: 0x003A9535 File Offset: 0x003A7735
+		// Token: 0x17007FF1 RID: 32753
+		// (get) Token: 0x0601B0D0 RID: 110800 RVA: 0x003D4F55 File Offset: 0x003D3155
+		// (set) Token: 0x0601B0D1 RID: 110801 RVA: 0x003D4F5D File Offset: 0x003D315D
 		public byte NullMask { get; set; }
 
-		// Token: 0x06019944 RID: 104772 RVA: 0x003A953E File Offset: 0x003A773E
+		// Token: 0x0601B0D2 RID: 110802 RVA: 0x003D4F66 File Offset: 0x003D3166
 		public IPerformerAiConditionDecoratorT()
 		{
 			this.Type = EPerformerAiDecoratorType.Condition;

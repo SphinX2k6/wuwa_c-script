@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020012D0 RID: 4816
+	// Token: 0x02001416 RID: 5142
 	public class IDangoAbyssInformationView : IInformationViewType
 	{
-		// Token: 0x06006E28 RID: 28200 RVA: 0x0010A789 File Offset: 0x00108989
-		[NullableContext(1)]
+		// Token: 0x060074A6 RID: 29862 RVA: 0x00118A19 File Offset: 0x00116C19
 		public static IDangoAbyssInformationView Create(IDangoAbyssInformationView? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700225B RID: 8795
-		// (get) Token: 0x06006E29 RID: 28201 RVA: 0x0010A7A8 File Offset: 0x001089A8
+		// Token: 0x1700241C RID: 9244
+		// (get) Token: 0x060074A7 RID: 29863 RVA: 0x00118A38 File Offset: 0x00116C38
 		public override EInformationViewType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04003F22 RID: 16162
+		// Token: 0x04004290 RID: 17040
 		private IDangoAbyssInformationView Instance;
 	}
 }

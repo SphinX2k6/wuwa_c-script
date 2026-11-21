@@ -6,17 +6,17 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020016CB RID: 5835
+// Token: 0x02000B83 RID: 2947
 public class AdviceAllViewShowContent : UiPanelBase
 {
-	// Token: 0x0600A6EB RID: 42731 RVA: 0x00256A0B File Offset: 0x00254C0B
+	// Token: 0x06007ACB RID: 31435 RVA: 0x00260E17 File Offset: 0x0025F017
 	[NullableContext(1)]
 	public AdviceAllViewShowContent(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x0600A6EC RID: 42732 RVA: 0x00256A20 File Offset: 0x00254C20
+	// Token: 0x06007ACC RID: 31436 RVA: 0x00260E2C File Offset: 0x0025F02C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ public class AdviceAllViewShowContent : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600A6ED RID: 42733 RVA: 0x00256B00 File Offset: 0x00254D00
+	// Token: 0x06007ACD RID: 31437 RVA: 0x00260F0C File Offset: 0x0025F10C
 	protected override void OnStart()
 	{
 		base.GetExtendToggle(6).RootUIComp.Get().SetUIActive(false);
@@ -56,7 +56,7 @@ public class AdviceAllViewShowContent : UiPanelBase
 		this.RefreshText();
 	}
 
-	// Token: 0x0600A6EE RID: 42734 RVA: 0x00256BD0 File Offset: 0x00254DD0
+	// Token: 0x06007ACE RID: 31438 RVA: 0x00260FDC File Offset: 0x0025F1DC
 	private void RefreshText()
 	{
 		if (AdviceModel.Instance.CurrentLineModel == ELineMode.MutiLine)
@@ -89,7 +89,7 @@ public class AdviceAllViewShowContent : UiPanelBase
 		text4.SetText(firstLineText, true);
 	}
 
-	// Token: 0x0600A6EF RID: 42735 RVA: 0x00256C50 File Offset: 0x00254E50
+	// Token: 0x06007ACF RID: 31439 RVA: 0x0026105C File Offset: 0x0025F25C
 	private void RefreshPlayerName()
 	{
 		string playerName = FunctionModel.Instance.GetPlayerName();
@@ -101,7 +101,7 @@ public class AdviceAllViewShowContent : UiPanelBase
 		text.SetText(playerName ?? "", true);
 	}
 
-	// Token: 0x0600A6F0 RID: 42736 RVA: 0x00256C84 File Offset: 0x00254E84
+	// Token: 0x06007AD0 RID: 31440 RVA: 0x00261090 File Offset: 0x0025F290
 	private void RefreshExpression()
 	{
 		int currentExpressionId = AdviceModel.Instance.CurrentExpressionId;
@@ -130,13 +130,13 @@ public class AdviceAllViewShowContent : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600A6F1 RID: 42737 RVA: 0x00256D01 File Offset: 0x00254F01
+	// Token: 0x06007AD1 RID: 31441 RVA: 0x0026110D File Offset: 0x0025F30D
 	public void RefreshView()
 	{
 		this.RefreshText();
 	}
 
-	// Token: 0x0600A6F2 RID: 42738 RVA: 0x00256D0C File Offset: 0x00254F0C
+	// Token: 0x06007AD2 RID: 31442 RVA: 0x00261118 File Offset: 0x0025F318
 	protected override void OnBeforeDestroy()
 	{
 		EventSystem.Instance.Remove(EEventName.OnSelectAdviceExpression, new Action(this.RefreshExpression));
@@ -144,34 +144,34 @@ public class AdviceAllViewShowContent : UiPanelBase
 		EventSystem.Instance.Remove(EEventName.OnChangeAdviceWord, new Action(this.RefreshText));
 	}
 
-	// Token: 0x02007CA0 RID: 31904
+	// Token: 0x02006E25 RID: 28197
 	private static class EComponents
 	{
-		// Token: 0x04028E15 RID: 167445
+		// Token: 0x0402413E RID: 147774
 		public const int ContentItem = 0;
 
-		// Token: 0x04028E16 RID: 167446
+		// Token: 0x0402413F RID: 147775
 		public const int EmojiTexture = 1;
 
-		// Token: 0x04028E17 RID: 167447
+		// Token: 0x04024140 RID: 147776
 		public const int NameText = 2;
 
-		// Token: 0x04028E18 RID: 167448
+		// Token: 0x04024141 RID: 147777
 		public const int TextLayout = 3;
 
-		// Token: 0x04028E19 RID: 167449
+		// Token: 0x04024142 RID: 147778
 		public const int ContentText = 4;
 
-		// Token: 0x04028E1A RID: 167450
+		// Token: 0x04024143 RID: 147779
 		public const int LikeNumText = 5;
 
-		// Token: 0x04028E1B RID: 167451
+		// Token: 0x04024144 RID: 147780
 		public const int DislikeToggle = 6;
 
-		// Token: 0x04028E1C RID: 167452
+		// Token: 0x04024145 RID: 147781
 		public const int LikeToggle = 7;
 
-		// Token: 0x04028E1D RID: 167453
+		// Token: 0x04024146 RID: 147782
 		public const int ContentText2 = 8;
 	}
 }

@@ -4,28 +4,26 @@ using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200058D RID: 1421
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020005F6 RID: 1526
 	public class INpcUiInteractOnHandInItem_SetValue
 	{
-		// Token: 0x040014E8 RID: 5352
+		// Token: 0x04001656 RID: 5718
 		public ENpcUiInteractType Type;
 
-		// Token: 0x040014E9 RID: 5353
+		// Token: 0x04001657 RID: 5719
 		public string EnterMontage;
 
-		// Token: 0x040014EA RID: 5354
+		// Token: 0x04001658 RID: 5720
 		public string StandByMontage;
 
-		// Token: 0x040014EB RID: 5355
+		// Token: 0x04001659 RID: 5721
 		public string HandInFailedMontage;
 
-		// Token: 0x040014EC RID: 5356
+		// Token: 0x0400165A RID: 5722
 		[Nullable(2)]
 		public PlayFlow EnterFlow;
 
-		// Token: 0x040014ED RID: 5357
+		// Token: 0x0400165B RID: 5723
 		[Nullable(2)]
 		public PlayFlow HandInFailedFlow;
 	}

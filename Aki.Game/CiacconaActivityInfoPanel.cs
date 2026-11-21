@@ -8,18 +8,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020011DF RID: 4575
+// Token: 0x02000693 RID: 1683
 [NullableContext(1)]
 [Nullable(0)]
 public class CiacconaActivityInfoPanel : UiPanelBase
 {
-	// Token: 0x060079ED RID: 31213 RVA: 0x0019A7E5 File Offset: 0x001989E5
+	// Token: 0x06004D84 RID: 19844 RVA: 0x001A3495 File Offset: 0x001A1695
 	public CiacconaActivityInfoPanel(ActivityBaseData activityBaseData)
 	{
 		this.ActivityBaseData = activityBaseData;
 	}
 
-	// Token: 0x060079EE RID: 31214 RVA: 0x0019A7F4 File Offset: 0x001989F4
+	// Token: 0x06004D85 RID: 19845 RVA: 0x001A34A4 File Offset: 0x001A16A4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -37,7 +37,7 @@ public class CiacconaActivityInfoPanel : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060079EF RID: 31215 RVA: 0x0019A8A0 File Offset: 0x00198AA0
+	// Token: 0x06004D86 RID: 19846 RVA: 0x001A3550 File Offset: 0x001A1750
 	protected override UniTask OnBeforeStartAsync()
 	{
 		CiacconaActivityInfoPanel.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -48,13 +48,13 @@ public class CiacconaActivityInfoPanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060079F0 RID: 31216 RVA: 0x0019A8E3 File Offset: 0x00198AE3
+	// Token: 0x06004D87 RID: 19847 RVA: 0x001A3593 File Offset: 0x001A1793
 	protected override void OnBeforeShow()
 	{
 		this.RefreshFunctionArea();
 	}
 
-	// Token: 0x060079F1 RID: 31217 RVA: 0x0019A8EC File Offset: 0x00198AEC
+	// Token: 0x06004D88 RID: 19848 RVA: 0x001A359C File Offset: 0x001A179C
 	public void RefreshFunctionArea()
 	{
 		CiacconaGalActivityData activityDataById = CiacconaGalModel.Instance.GetActivityDataById(this.ActivityBaseData.Id);
@@ -79,7 +79,7 @@ public class CiacconaActivityInfoPanel : UiPanelBase
 		bottomItem2.SetFunctionRedDotVisible(flag || flag2 || flag3);
 	}
 
-	// Token: 0x060079F2 RID: 31218 RVA: 0x0019A98B File Offset: 0x00198B8B
+	// Token: 0x06004D89 RID: 19849 RVA: 0x001A363B File Offset: 0x001A183B
 	public void SetTimer(bool visible, string text)
 	{
 		ActivityTitleTypeA commonActivityTitle = this.CommonActivityTitle;
@@ -95,7 +95,7 @@ public class CiacconaActivityInfoPanel : UiPanelBase
 		commonActivityTitle2.SetTimeTextByText(text);
 	}
 
-	// Token: 0x060079F3 RID: 31219 RVA: 0x0019A9B0 File Offset: 0x00198BB0
+	// Token: 0x06004D8A RID: 19850 RVA: 0x001A3660 File Offset: 0x001A1860
 	public void SetTitle(string text)
 	{
 		ActivityTitleTypeA commonActivityTitle = this.CommonActivityTitle;
@@ -111,7 +111,7 @@ public class CiacconaActivityInfoPanel : UiPanelBase
 		commonActivityTitle2.SetTitleByText(text);
 	}
 
-	// Token: 0x060079F4 RID: 31220 RVA: 0x0019A9DA File Offset: 0x00198BDA
+	// Token: 0x06004D8B RID: 19851 RVA: 0x001A368A File Offset: 0x001A188A
 	public void SetSubTitle(bool visible, string text)
 	{
 		ActivityTitleTypeA commonActivityTitle = this.CommonActivityTitle;
@@ -127,7 +127,7 @@ public class CiacconaActivityInfoPanel : UiPanelBase
 		commonActivityTitle2.SetSubTitleByText(text);
 	}
 
-	// Token: 0x060079F5 RID: 31221 RVA: 0x0019A9FF File Offset: 0x00198BFF
+	// Token: 0x06004D8C RID: 19852 RVA: 0x001A36AF File Offset: 0x001A18AF
 	public void SetDesc(bool visible, string text)
 	{
 		ActivityDescriptionTypeA commonActivityDesc = this.CommonActivityDesc;
@@ -143,7 +143,7 @@ public class CiacconaActivityInfoPanel : UiPanelBase
 		commonActivityDesc2.SetContentByTextId(text, Array.Empty<string>());
 	}
 
-	// Token: 0x060079F6 RID: 31222 RVA: 0x0019AA29 File Offset: 0x00198C29
+	// Token: 0x06004D8D RID: 19853 RVA: 0x001A36D9 File Offset: 0x001A18D9
 	public void SetReward(bool visible, List<TItem> rewardList)
 	{
 		ActivityRewardList<CommonItemSmallItemGrid, TItem> commonActivityReward = this.CommonActivityReward;
@@ -159,7 +159,7 @@ public class CiacconaActivityInfoPanel : UiPanelBase
 		commonActivityReward2.RefreshItemLayout(rewardList, null);
 	}
 
-	// Token: 0x060079F7 RID: 31223 RVA: 0x0019AA4F File Offset: 0x00198C4F
+	// Token: 0x06004D8E RID: 19854 RVA: 0x001A36FF File Offset: 0x001A18FF
 	private void OnBtnConfirmClick()
 	{
 		ActivityController.Instance.JumpAndLog(this.ActivityBaseData, delegate()
@@ -182,7 +182,7 @@ public class CiacconaActivityInfoPanel : UiPanelBase
 		});
 	}
 
-	// Token: 0x060079F8 RID: 31224 RVA: 0x0019AA70 File Offset: 0x00198C70
+	// Token: 0x06004D8F RID: 19855 RVA: 0x001A3720 File Offset: 0x001A1920
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -217,15 +217,15 @@ public class CiacconaActivityInfoPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x040037FE RID: 14334
+	// Token: 0x04003897 RID: 14487
 	[Nullable(2)]
 	private ActivityTitleTypeA CommonActivityTitle;
 
-	// Token: 0x040037FF RID: 14335
+	// Token: 0x04003898 RID: 14488
 	[Nullable(2)]
 	private ActivityDescriptionTypeA CommonActivityDesc;
 
-	// Token: 0x04003800 RID: 14336
+	// Token: 0x04003899 RID: 14489
 	[Nullable(new byte[]
 	{
 		2,
@@ -233,27 +233,27 @@ public class CiacconaActivityInfoPanel : UiPanelBase
 	})]
 	private ActivityRewardList<CommonItemSmallItemGrid, TItem> CommonActivityReward;
 
-	// Token: 0x04003801 RID: 14337
+	// Token: 0x0400389A RID: 14490
 	[Nullable(2)]
 	private ActivityFunctionalTypeA BottomItem;
 
-	// Token: 0x04003802 RID: 14338
+	// Token: 0x0400389B RID: 14491
 	private ActivityBaseData ActivityBaseData;
 
-	// Token: 0x020077C9 RID: 30665
+	// Token: 0x02006954 RID: 26964
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x040277E2 RID: 161762
+		// Token: 0x04022B14 RID: 142100
 		public const int ItemCommonActivityTitle = 0;
 
-		// Token: 0x040277E3 RID: 161763
+		// Token: 0x04022B15 RID: 142101
 		public const int ItemCommonActivityDesc = 1;
 
-		// Token: 0x040277E4 RID: 161764
+		// Token: 0x04022B16 RID: 142102
 		public const int ItemCommonActivityReward = 2;
 
-		// Token: 0x040277E5 RID: 161765
+		// Token: 0x04022B17 RID: 142103
 		public const int ItemCommonActivityBottom = 3;
 	}
 }

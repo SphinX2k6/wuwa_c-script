@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000D7D RID: 3453
+	// Token: 0x02000E62 RID: 3682
 	public struct ItemExchangeLimit : IFlatbufferObject
 	{
-		// Token: 0x170019F9 RID: 6649
-		// (get) Token: 0x0600864D RID: 34381 RVA: 0x00265C5C File Offset: 0x00263E5C
+		// Token: 0x17001A5D RID: 6749
+		// (get) Token: 0x06008C68 RID: 35944 RVA: 0x00283EEC File Offset: 0x002820EC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600864E RID: 34382 RVA: 0x00265C69 File Offset: 0x00263E69
+		// Token: 0x06008C69 RID: 35945 RVA: 0x00283EF9 File Offset: 0x002820F9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600864F RID: 34383 RVA: 0x00265C70 File Offset: 0x00263E70
+		// Token: 0x06008C6A RID: 35946 RVA: 0x00283F00 File Offset: 0x00282100
 		public static ItemExchangeLimit GetRootAsItemExchangeLimit(ByteBuffer _bb)
 		{
 			return ItemExchangeLimit.GetRootAsItemExchangeLimit(_bb, default(ItemExchangeLimit));
 		}
 
-		// Token: 0x06008650 RID: 34384 RVA: 0x00265C8C File Offset: 0x00263E8C
+		// Token: 0x06008C6B RID: 35947 RVA: 0x00283F1C File Offset: 0x0028211C
 		public static ItemExchangeLimit GetRootAsItemExchangeLimit(ByteBuffer _bb, ItemExchangeLimit obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06008651 RID: 34385 RVA: 0x00265CA9 File Offset: 0x00263EA9
+		// Token: 0x06008C6C RID: 35948 RVA: 0x00283F39 File Offset: 0x00282139
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06008652 RID: 34386 RVA: 0x00265CB8 File Offset: 0x00263EB8
+		// Token: 0x06008C6D RID: 35949 RVA: 0x00283F48 File Offset: 0x00282148
 		public ItemExchangeLimit __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170019FA RID: 6650
-		// (get) Token: 0x06008653 RID: 34387 RVA: 0x00265CC8 File Offset: 0x00263EC8
+		// Token: 0x17001A5E RID: 6750
+		// (get) Token: 0x06008C6E RID: 35950 RVA: 0x00283F58 File Offset: 0x00282158
 		public int ItemId
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170019FB RID: 6651
-		// (get) Token: 0x06008654 RID: 34388 RVA: 0x00265D04 File Offset: 0x00263F04
+		// Token: 0x17001A5F RID: 6751
+		// (get) Token: 0x06008C6F RID: 35951 RVA: 0x00283F94 File Offset: 0x00282194
 		public int AddBtnTime
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004E06 RID: 19974
+		// Token: 0x040053EB RID: 21483
 		private Table __p;
 	}
 }

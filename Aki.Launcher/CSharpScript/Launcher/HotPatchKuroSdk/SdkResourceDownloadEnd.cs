@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Launcher.HotPatchKuroSdk
 {
-	// Token: 0x020001EF RID: 495
+	// Token: 0x020001F4 RID: 500
 	public class SdkResourceDownloadEnd : SdkReportData
 	{
-		// Token: 0x06000CF1 RID: 3313 RVA: 0x0004E711 File Offset: 0x0004C911
+		// Token: 0x06000D32 RID: 3378 RVA: 0x000511FD File Offset: 0x0004F3FD
 		public SdkResourceDownloadEnd([Nullable(new byte[]
 		{
 			2,
@@ -17,7 +17,7 @@ namespace CSharpScript.Launcher.HotPatchKuroSdk
 		{
 		}
 
-		// Token: 0x06000CF2 RID: 3314 RVA: 0x0004E71A File Offset: 0x0004C91A
+		// Token: 0x06000D33 RID: 3379 RVA: 0x00051206 File Offset: 0x0004F406
 		[NullableContext(1)]
 		public override string GetEventName()
 		{

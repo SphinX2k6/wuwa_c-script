@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200674A RID: 26442
+	// Token: 0x02006DCA RID: 28106
 	public struct IFaceExpressionConfigData : IFlatbufferObject
 	{
-		// Token: 0x1700C44B RID: 50251
-		// (get) Token: 0x0602DFD7 RID: 188375 RVA: 0x00648FBD File Offset: 0x006471BD
+		// Token: 0x1700CE01 RID: 52737
+		// (get) Token: 0x0603081D RID: 198685 RVA: 0x00696701 File Offset: 0x00694901
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DFD8 RID: 188376 RVA: 0x00648FCA File Offset: 0x006471CA
+		// Token: 0x0603081E RID: 198686 RVA: 0x0069670E File Offset: 0x0069490E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602DFD9 RID: 188377 RVA: 0x00648FD4 File Offset: 0x006471D4
+		// Token: 0x0603081F RID: 198687 RVA: 0x00696718 File Offset: 0x00694918
 		public static IFaceExpressionConfigData GetRootAsIFaceExpressionConfigData(ByteBuffer _bb)
 		{
 			return IFaceExpressionConfigData.GetRootAsIFaceExpressionConfigData(_bb, default(IFaceExpressionConfigData));
 		}
 
-		// Token: 0x0602DFDA RID: 188378 RVA: 0x00648FF0 File Offset: 0x006471F0
+		// Token: 0x06030820 RID: 198688 RVA: 0x00696734 File Offset: 0x00694934
 		public static IFaceExpressionConfigData GetRootAsIFaceExpressionConfigData(ByteBuffer _bb, IFaceExpressionConfigData obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602DFDB RID: 188379 RVA: 0x0064900D File Offset: 0x0064720D
+		// Token: 0x06030821 RID: 198689 RVA: 0x00696751 File Offset: 0x00694951
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602DFDC RID: 188380 RVA: 0x0064901C File Offset: 0x0064721C
+		// Token: 0x06030822 RID: 198690 RVA: 0x00696760 File Offset: 0x00694960
 		public IFaceExpressionConfigData __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C44C RID: 50252
-		// (get) Token: 0x0602DFDD RID: 188381 RVA: 0x0064902C File Offset: 0x0064722C
+		// Token: 0x1700CE02 RID: 52738
+		// (get) Token: 0x06030823 RID: 198691 RVA: 0x00696770 File Offset: 0x00694970
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C44D RID: 50253
-		// (get) Token: 0x0602DFDE RID: 188382 RVA: 0x00649068 File Offset: 0x00647268
+		// Token: 0x1700CE03 RID: 52739
+		// (get) Token: 0x06030824 RID: 198692 RVA: 0x006967AC File Offset: 0x006949AC
 		public IFaceExpressionConfig_Union FaceExpressionType
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DFDF RID: 188383 RVA: 0x006490A4 File Offset: 0x006472A4
+		// Token: 0x06030825 RID: 198693 RVA: 0x006967E8 File Offset: 0x006949E8
 		public TTable? FaceExpression<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -88,38 +88,38 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0602DFE0 RID: 188384 RVA: 0x006490E8 File Offset: 0x006472E8
+		// Token: 0x06030826 RID: 198694 RVA: 0x0069682C File Offset: 0x00694A2C
 		public IFaceExpressionConfig FaceExpressionAsIFaceExpressionConfig()
 		{
 			return this.FaceExpression<IFaceExpressionConfig>().Value;
 		}
 
-		// Token: 0x0602DFE1 RID: 188385 RVA: 0x00649104 File Offset: 0x00647304
+		// Token: 0x06030827 RID: 198695 RVA: 0x00696848 File Offset: 0x00694A48
 		public IFaceExpressionMorphConfig FaceExpressionAsIFaceExpressionMorphConfig()
 		{
 			return this.FaceExpression<IFaceExpressionMorphConfig>().Value;
 		}
 
-		// Token: 0x0602DFE2 RID: 188386 RVA: 0x00649120 File Offset: 0x00647320
+		// Token: 0x06030828 RID: 198696 RVA: 0x00696864 File Offset: 0x00694A64
 		public IFaceExpressionTextureConfig FaceExpressionAsIFaceExpressionTextureConfig()
 		{
 			return this.FaceExpression<IFaceExpressionTextureConfig>().Value;
 		}
 
-		// Token: 0x0602DFE3 RID: 188387 RVA: 0x0064913C File Offset: 0x0064733C
+		// Token: 0x06030829 RID: 198697 RVA: 0x00696880 File Offset: 0x00694A80
 		public IFaceExpressionAnimSequenceConfig FaceExpressionAsIFaceExpressionAnimSequenceConfig()
 		{
 			return this.FaceExpression<IFaceExpressionAnimSequenceConfig>().Value;
 		}
 
-		// Token: 0x0602DFE4 RID: 188388 RVA: 0x00649158 File Offset: 0x00647358
+		// Token: 0x0603082A RID: 198698 RVA: 0x0069689C File Offset: 0x00694A9C
 		public IFaceExpressionTextureMultiSlotConfig FaceExpressionAsIFaceExpressionTextureMultiSlotConfig()
 		{
 			return this.FaceExpression<IFaceExpressionTextureMultiSlotConfig>().Value;
 		}
 
-		// Token: 0x1700C44E RID: 50254
-		// (get) Token: 0x0602DFE5 RID: 188389 RVA: 0x00649174 File Offset: 0x00647374
+		// Token: 0x1700CE04 RID: 52740
+		// (get) Token: 0x0603082B RID: 198699 RVA: 0x006968B8 File Offset: 0x00694AB8
 		public IFaceExpressionConfig_Union MaleVariantType
 		{
 			get
@@ -133,7 +133,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DFE6 RID: 188390 RVA: 0x006491B4 File Offset: 0x006473B4
+		// Token: 0x0603082C RID: 198700 RVA: 0x006968F8 File Offset: 0x00694AF8
 		public TTable? MaleVariant<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(12);
@@ -144,38 +144,38 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0602DFE7 RID: 188391 RVA: 0x006491FC File Offset: 0x006473FC
+		// Token: 0x0603082D RID: 198701 RVA: 0x00696940 File Offset: 0x00694B40
 		public IFaceExpressionConfig MaleVariantAsIFaceExpressionConfig()
 		{
 			return this.MaleVariant<IFaceExpressionConfig>().Value;
 		}
 
-		// Token: 0x0602DFE8 RID: 188392 RVA: 0x00649218 File Offset: 0x00647418
+		// Token: 0x0603082E RID: 198702 RVA: 0x0069695C File Offset: 0x00694B5C
 		public IFaceExpressionMorphConfig MaleVariantAsIFaceExpressionMorphConfig()
 		{
 			return this.MaleVariant<IFaceExpressionMorphConfig>().Value;
 		}
 
-		// Token: 0x0602DFE9 RID: 188393 RVA: 0x00649234 File Offset: 0x00647434
+		// Token: 0x0603082F RID: 198703 RVA: 0x00696978 File Offset: 0x00694B78
 		public IFaceExpressionTextureConfig MaleVariantAsIFaceExpressionTextureConfig()
 		{
 			return this.MaleVariant<IFaceExpressionTextureConfig>().Value;
 		}
 
-		// Token: 0x0602DFEA RID: 188394 RVA: 0x00649250 File Offset: 0x00647450
+		// Token: 0x06030830 RID: 198704 RVA: 0x00696994 File Offset: 0x00694B94
 		public IFaceExpressionAnimSequenceConfig MaleVariantAsIFaceExpressionAnimSequenceConfig()
 		{
 			return this.MaleVariant<IFaceExpressionAnimSequenceConfig>().Value;
 		}
 
-		// Token: 0x0602DFEB RID: 188395 RVA: 0x0064926C File Offset: 0x0064746C
+		// Token: 0x06030831 RID: 198705 RVA: 0x006969B0 File Offset: 0x00694BB0
 		public IFaceExpressionTextureMultiSlotConfig MaleVariantAsIFaceExpressionTextureMultiSlotConfig()
 		{
 			return this.MaleVariant<IFaceExpressionTextureMultiSlotConfig>().Value;
 		}
 
-		// Token: 0x1700C44F RID: 50255
-		// (get) Token: 0x0602DFEC RID: 188396 RVA: 0x00649288 File Offset: 0x00647488
+		// Token: 0x1700CE05 RID: 52741
+		// (get) Token: 0x06030832 RID: 198706 RVA: 0x006969CC File Offset: 0x00694BCC
 		public bool CloseAutoBlink
 		{
 			get
@@ -185,8 +185,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C450 RID: 50256
-		// (get) Token: 0x0602DFED RID: 188397 RVA: 0x006492C8 File Offset: 0x006474C8
+		// Token: 0x1700CE06 RID: 52742
+		// (get) Token: 0x06030833 RID: 198707 RVA: 0x00696A0C File Offset: 0x00694C0C
 		public byte NullMask
 		{
 			get
@@ -200,7 +200,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DFEE RID: 188398 RVA: 0x00649308 File Offset: 0x00647508
+		// Token: 0x06030834 RID: 198708 RVA: 0x00696A4C File Offset: 0x00694C4C
 		public static Offset<IFaceExpressionConfigData> CreateIFaceExpressionConfigData(FlatBufferBuilder builder, int Id = 0, IFaceExpressionConfig_Union FaceExpression_type = IFaceExpressionConfig_Union.NONE, int FaceExpressionOffset = 0, IFaceExpressionConfig_Union MaleVariant_type = IFaceExpressionConfig_Union.NONE, int MaleVariantOffset = 0, bool CloseAutoBlink = false, byte NullMask = 0)
 		{
 			builder.StartTable(7);
@@ -214,61 +214,61 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFaceExpressionConfigData.EndIFaceExpressionConfigData(builder);
 		}
 
-		// Token: 0x0602DFEF RID: 188399 RVA: 0x00649357 File Offset: 0x00647557
+		// Token: 0x06030835 RID: 198709 RVA: 0x00696A9B File Offset: 0x00694C9B
 		public static void StartIFaceExpressionConfigData(FlatBufferBuilder builder)
 		{
 			builder.StartTable(7);
 		}
 
-		// Token: 0x0602DFF0 RID: 188400 RVA: 0x00649360 File Offset: 0x00647560
+		// Token: 0x06030836 RID: 198710 RVA: 0x00696AA4 File Offset: 0x00694CA4
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(0, id, 0);
 		}
 
-		// Token: 0x0602DFF1 RID: 188401 RVA: 0x0064936B File Offset: 0x0064756B
+		// Token: 0x06030837 RID: 198711 RVA: 0x00696AAF File Offset: 0x00694CAF
 		public static void AddFaceExpressionType(FlatBufferBuilder builder, IFaceExpressionConfig_Union faceExpressionType)
 		{
 			builder.AddByte(1, (byte)faceExpressionType, 0);
 		}
 
-		// Token: 0x0602DFF2 RID: 188402 RVA: 0x00649376 File Offset: 0x00647576
+		// Token: 0x06030838 RID: 198712 RVA: 0x00696ABA File Offset: 0x00694CBA
 		public static void AddFaceExpression(FlatBufferBuilder builder, int faceExpressionOffset)
 		{
 			builder.AddOffset(2, faceExpressionOffset, 0);
 		}
 
-		// Token: 0x0602DFF3 RID: 188403 RVA: 0x00649381 File Offset: 0x00647581
+		// Token: 0x06030839 RID: 198713 RVA: 0x00696AC5 File Offset: 0x00694CC5
 		public static void AddMaleVariantType(FlatBufferBuilder builder, IFaceExpressionConfig_Union maleVariantType)
 		{
 			builder.AddByte(3, (byte)maleVariantType, 0);
 		}
 
-		// Token: 0x0602DFF4 RID: 188404 RVA: 0x0064938C File Offset: 0x0064758C
+		// Token: 0x0603083A RID: 198714 RVA: 0x00696AD0 File Offset: 0x00694CD0
 		public static void AddMaleVariant(FlatBufferBuilder builder, int maleVariantOffset)
 		{
 			builder.AddOffset(4, maleVariantOffset, 0);
 		}
 
-		// Token: 0x0602DFF5 RID: 188405 RVA: 0x00649397 File Offset: 0x00647597
+		// Token: 0x0603083B RID: 198715 RVA: 0x00696ADB File Offset: 0x00694CDB
 		public static void AddCloseAutoBlink(FlatBufferBuilder builder, bool closeAutoBlink)
 		{
 			builder.AddBool(5, closeAutoBlink, false);
 		}
 
-		// Token: 0x0602DFF6 RID: 188406 RVA: 0x006493A2 File Offset: 0x006475A2
+		// Token: 0x0603083C RID: 198716 RVA: 0x00696AE6 File Offset: 0x00694CE6
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(6, nullMask, 0);
 		}
 
-		// Token: 0x0602DFF7 RID: 188407 RVA: 0x006493AD File Offset: 0x006475AD
+		// Token: 0x0603083D RID: 198717 RVA: 0x00696AF1 File Offset: 0x00694CF1
 		public static Offset<IFaceExpressionConfigData> EndIFaceExpressionConfigData(FlatBufferBuilder builder)
 		{
 			return new Offset<IFaceExpressionConfigData>(builder.EndTable());
 		}
 
-		// Token: 0x0602DFF8 RID: 188408 RVA: 0x006493BC File Offset: 0x006475BC
+		// Token: 0x0603083E RID: 198718 RVA: 0x00696B00 File Offset: 0x00694D00
 		public IFaceExpressionConfigDataT UnPack()
 		{
 			IFaceExpressionConfigDataT faceExpressionConfigDataT = new IFaceExpressionConfigDataT();
@@ -276,7 +276,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return faceExpressionConfigDataT;
 		}
 
-		// Token: 0x0602DFF9 RID: 188409 RVA: 0x006493D8 File Offset: 0x006475D8
+		// Token: 0x0603083F RID: 198719 RVA: 0x00696B1C File Offset: 0x00694D1C
 		public void UnPackTo(IFaceExpressionConfigDataT _o)
 		{
 			_o.Id = this.Id;
@@ -324,7 +324,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602DFFA RID: 188410 RVA: 0x006496CC File Offset: 0x006478CC
+		// Token: 0x06030840 RID: 198720 RVA: 0x00696E10 File Offset: 0x00695010
 		public static Offset<IFaceExpressionConfigData> Pack(FlatBufferBuilder builder, IFaceExpressionConfigDataT _o)
 		{
 			if (_o == null)
@@ -338,7 +338,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFaceExpressionConfigData.CreateIFaceExpressionConfigData(builder, _o.Id, faceExpression_type, faceExpressionOffset, maleVariant_type, maleVariantOffset, _o.CloseAutoBlink, _o.NullMask);
 		}
 
-		// Token: 0x04010E33 RID: 69171
+		// Token: 0x04011C65 RID: 72805
 		private Table __p;
 	}
 }

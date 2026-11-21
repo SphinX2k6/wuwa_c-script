@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000CDE RID: 3294
+	// Token: 0x02000228 RID: 552
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.KuroActorSubsystem")]
 	[UnrealStructLayout(656, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 656)]
 	public class UKuroActorSubsystem : UWorldSubsystem, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0600AEA9 RID: 44713 RVA: 0x000F7C92 File Offset: 0x000F5E92
+		// Token: 0x06002CAF RID: 11439 RVA: 0x0003F273 File Offset: 0x0003D473
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroActorSubsystem._ClassPtr;
 		}
 
-		// Token: 0x0600AEAA RID: 44714 RVA: 0x000F7CA0 File Offset: 0x000F5EA0
+		// Token: 0x06002CB0 RID: 11440 RVA: 0x0003F280 File Offset: 0x0003D480
 		public UKuroActorSubsystem() : this(BuiltinUtils.AllocNativeUObject(UKuroActorSubsystem.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0600AEAB RID: 44715 RVA: 0x000F7CC8 File Offset: 0x000F5EC8
+		// Token: 0x06002CB1 RID: 11441 RVA: 0x0003F2A8 File Offset: 0x0003D4A8
 		public UKuroActorSubsystem(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroActorSubsystem.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17002776 RID: 10102
-		// (get) Token: 0x0600AEAC RID: 44716 RVA: 0x000F7CFC File Offset: 0x000F5EFC
-		// (set) Token: 0x0600AEAD RID: 44717 RVA: 0x000F7D35 File Offset: 0x000F5F35
+		// Token: 0x17000538 RID: 1336
+		// (get) Token: 0x06002CB2 RID: 11442 RVA: 0x0003F2DC File Offset: 0x0003D4DC
+		// (set) Token: 0x06002CB3 RID: 11443 RVA: 0x0003F315 File Offset: 0x0003D515
 		public FActorSubsystemDelegate OnAddToSubsystem
 		{
 			get
@@ -50,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002777 RID: 10103
-		// (get) Token: 0x0600AEAE RID: 44718 RVA: 0x000F7D58 File Offset: 0x000F5F58
-		// (set) Token: 0x0600AEAF RID: 44719 RVA: 0x000F7D91 File Offset: 0x000F5F91
+		// Token: 0x17000539 RID: 1337
+		// (get) Token: 0x06002CB4 RID: 11444 RVA: 0x0003F338 File Offset: 0x0003D538
+		// (set) Token: 0x06002CB5 RID: 11445 RVA: 0x0003F371 File Offset: 0x0003D571
 		public FActorSubsystemDelegate OnRemoveFromSubsystem
 		{
 			get
@@ -71,25 +71,25 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600AEB0 RID: 44720 RVA: 0x000F7DB2 File Offset: 0x000F5FB2
+		// Token: 0x06002CB6 RID: 11446 RVA: 0x0003F392 File Offset: 0x0003D592
 		public void UnRegisterEntity(int EntityId)
 		{
 			UKuroActorSubsystem.__UnRegisterEntity_Internal(base.NativePtr, EntityId);
 		}
 
-		// Token: 0x0600AEB1 RID: 44721 RVA: 0x000F7DC0 File Offset: 0x000F5FC0
+		// Token: 0x06002CB7 RID: 11447 RVA: 0x0003F3A0 File Offset: 0x0003D5A0
 		public void RegisterEntity(int EntityId, bool bPreAwake = false)
 		{
 			UKuroActorSubsystem.__RegisterEntity_Internal(base.NativePtr, EntityId, bPreAwake);
 		}
 
-		// Token: 0x0600AEB2 RID: 44722 RVA: 0x000F7DCF File Offset: 0x000F5FCF
+		// Token: 0x06002CB8 RID: 11448 RVA: 0x0003F3AF File Offset: 0x0003D5AF
 		public void RecordEntityModifiedActor(int EntityId)
 		{
 			UKuroActorSubsystem.__RecordEntityModifiedActor_Internal(base.NativePtr, EntityId);
 		}
 
-		// Token: 0x0600AEB3 RID: 44723 RVA: 0x000F7DE0 File Offset: 0x000F5FE0
+		// Token: 0x06002CB9 RID: 11449 RVA: 0x0003F3C0 File Offset: 0x0003D5C0
 		public unsafe bool GetActorOriginalTransform(FName ActorKey, ref FTransform OutTransform)
 		{
 			ref FTransform ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)63] + 15UL & 18446744073709551600UL);
@@ -99,14 +99,14 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0600AEB4 RID: 44724 RVA: 0x000F7E22 File Offset: 0x000F6022
+		// Token: 0x06002CBA RID: 11450 RVA: 0x0003F402 File Offset: 0x0003D602
 		[NullableContext(2)]
 		public AActor GetActor(FName ActorKey)
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<AActor>(UKuroActorSubsystem.__GetActor_Internal(base.NativePtr, ActorKey));
 		}
 
-		// Token: 0x0600AEB5 RID: 44725 RVA: 0x000F7E38 File Offset: 0x000F6038
+		// Token: 0x06002CBB RID: 11451 RVA: 0x0003F418 File Offset: 0x0003D618
 		[NullableContext(2)]
 		public unsafe bool D_GetActorOriginalTransform(UObject WorldContext, FName ActorKey, ref FTransformDouble OutTransform)
 		{
@@ -117,7 +117,7 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0600AEB6 RID: 44726 RVA: 0x000F7E8C File Offset: 0x000F608C
+		// Token: 0x06002CBC RID: 11452 RVA: 0x0003F46C File Offset: 0x0003D66C
 		public unsafe static bool CheckAssetPlatformInclude(string ResourcePlatformTag)
 		{
 			FString fstring = FString.AllocTemp(ResourcePlatformTag);
@@ -126,65 +126,65 @@ namespace UnrealEngine
 			return result;
 		}
 
-		// Token: 0x0600AEB7 RID: 44727
+		// Token: 0x06002CBD RID: 11453
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __UnRegisterEntity_Internal(IntPtr @this, int EntityId);
 
-		// Token: 0x0600AEB8 RID: 44728
+		// Token: 0x06002CBE RID: 11454
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RegisterEntity_Internal(IntPtr @this, int EntityId, bool bPreAwake);
 
-		// Token: 0x0600AEB9 RID: 44729
+		// Token: 0x06002CBF RID: 11455
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RecordEntityModifiedActor_Internal(IntPtr @this, int EntityId);
 
-		// Token: 0x0600AEBA RID: 44730
+		// Token: 0x06002CC0 RID: 11456
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetActorOriginalTransform_Internal(IntPtr @this, FName ActorKey, ref FTransform OutTransform);
 
-		// Token: 0x0600AEBB RID: 44731
+		// Token: 0x06002CC1 RID: 11457
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetActor_Internal(IntPtr @this, FName ActorKey);
 
-		// Token: 0x0600AEBC RID: 44732
+		// Token: 0x06002CC2 RID: 11458
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __D_GetActorOriginalTransform_Internal(IntPtr @this, IntPtr WorldContext, FName ActorKey, ref FTransformDouble OutTransform);
 
-		// Token: 0x0600AEBD RID: 44733
+		// Token: 0x06002CC3 RID: 11459
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __CheckAssetPlatformInclude_Internal(in FString ResourcePlatformTag);
 
-		// Token: 0x0600AEBE RID: 44734 RVA: 0x000F7EB0 File Offset: 0x000F60B0
+		// Token: 0x06002CC4 RID: 11460 RVA: 0x0003F490 File Offset: 0x0003D690
 		static UKuroActorSubsystem()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.KuroActorSubsystem");
 		}
 
-		// Token: 0x0600AEBF RID: 44735 RVA: 0x000F7EBE File Offset: 0x000F60BE
+		// Token: 0x06002CC5 RID: 11461 RVA: 0x0003F49E File Offset: 0x0003D69E
 		protected UKuroActorSubsystem(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04005B84 RID: 23428
+		// Token: 0x04000E25 RID: 3621
 		public new const string __ObjectPath = "/Script/Engine.KuroActorSubsystem";
 
-		// Token: 0x04005B85 RID: 23429
+		// Token: 0x04000E26 RID: 3622
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04005B86 RID: 23430
+		// Token: 0x04000E27 RID: 3623
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04005B87 RID: 23431
+		// Token: 0x04000E28 RID: 3624
 		internal static int __PropertyOffset_OnAddToSubsystem;
 
-		// Token: 0x04005B88 RID: 23432
+		// Token: 0x04000E29 RID: 3625
 		[Nullable(2)]
 		private FActorSubsystemDelegate _OnAddToSubsystem;
 
-		// Token: 0x04005B89 RID: 23433
+		// Token: 0x04000E2A RID: 3626
 		internal static int __PropertyOffset_OnRemoveFromSubsystem;
 
-		// Token: 0x04005B8A RID: 23434
+		// Token: 0x04000E2B RID: 3627
 		[Nullable(2)]
 		private FActorSubsystemDelegate _OnRemoveFromSubsystem;
 	}

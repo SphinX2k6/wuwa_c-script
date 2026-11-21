@@ -1,21 +1,18 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001058 RID: 4184
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001186 RID: 4486
 	public class IPlotHandBookNode_SetValue
 	{
-		// Token: 0x0400386F RID: 14447
+		// Token: 0x04003BB7 RID: 15287
 		public string TidTip;
 
-		// Token: 0x04003870 RID: 14448
+		// Token: 0x04003BB8 RID: 15288
 		public IFlowStateIndex Flow;
 
-		// Token: 0x04003871 RID: 14449
+		// Token: 0x04003BB9 RID: 15289
 		public bool IsHideUi;
 	}
 }

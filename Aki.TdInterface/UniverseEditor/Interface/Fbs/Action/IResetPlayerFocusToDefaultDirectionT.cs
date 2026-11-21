@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006E92 RID: 28306
+	// Token: 0x02007616 RID: 30230
 	public class IResetPlayerFocusToDefaultDirectionT
 	{
-		// Token: 0x1700D2C9 RID: 53961
-		// (get) Token: 0x0603207F RID: 204927 RVA: 0x006C4536 File Offset: 0x006C2736
-		// (set) Token: 0x06032080 RID: 204928 RVA: 0x006C453E File Offset: 0x006C273E
+		// Token: 0x1700DE20 RID: 56864
+		// (get) Token: 0x060350BF RID: 217279 RVA: 0x0072026A File Offset: 0x0071E46A
+		// (set) Token: 0x060350C0 RID: 217280 RVA: 0x00720272 File Offset: 0x0071E472
 		public EResetPlayerFocusType Type { get; set; }
 
-		// Token: 0x06032081 RID: 204929 RVA: 0x006C4547 File Offset: 0x006C2747
+		// Token: 0x060350C1 RID: 217281 RVA: 0x0072027B File Offset: 0x0071E47B
 		public IResetPlayerFocusToDefaultDirectionT()
 		{
 			this.Type = EResetPlayerFocusType.ResetToDefaultDirection;

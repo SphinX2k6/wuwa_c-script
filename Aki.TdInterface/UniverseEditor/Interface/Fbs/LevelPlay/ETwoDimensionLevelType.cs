@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x02004433 RID: 17459
+	// Token: 0x0200489B RID: 18587
 	public enum ETwoDimensionLevelType : byte
 	{
-		// Token: 0x0400C3FE RID: 50174
+		// Token: 0x0400CE2C RID: 52780
 		Marble,
-		// Token: 0x0400C3FF RID: 50175
+		// Token: 0x0400CE2D RID: 52781
 		DangoBrawl
 	}
 }

@@ -9,10 +9,10 @@ using CSharpScript.Game.Module.PhantomArena.Prepare.RoleSelect;
 
 namespace CSharpScript.Game.Module.PhantomArena
 {
-	// Token: 0x02005140 RID: 20800
+	// Token: 0x02004110 RID: 16656
 	public static class PhantomArenaViewManager
 	{
-		// Token: 0x0401C4EE RID: 115950
+		// Token: 0x04016F23 RID: 93987
 		[Nullable(new byte[]
 		{
 			1,
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.PhantomArena
 			}
 		};
 
-		// Token: 0x0401C4EF RID: 115951
+		// Token: 0x04016F24 RID: 93988
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		public static Dictionary<EPhantomArenaChildViewName, bool> roleStateInPhantomArenaMainViewTabView = new Dictionary<EPhantomArenaChildViewName, bool>

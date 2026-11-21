@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000386 RID: 902
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020003CF RID: 975
 	public class IFireBoxFishEffect : IGraph3dEffectBase
 	{
-		// Token: 0x060011E3 RID: 4579 RVA: 0x0003BB94 File Offset: 0x00039D94
+		// Token: 0x06001327 RID: 4903 RVA: 0x0003EE78 File Offset: 0x0003D078
 		private IFireBoxFishEffect_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060011E4 RID: 4580 RVA: 0x0003BBCC File Offset: 0x00039DCC
+		// Token: 0x06001328 RID: 4904 RVA: 0x0003EEB0 File Offset: 0x0003D0B0
 		public static IFireBoxFishEffect Create([Nullable(2)] IFireBoxFishEffect instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060011E5 RID: 4581 RVA: 0x0003BBDF File Offset: 0x00039DDF
+		// Token: 0x06001329 RID: 4905 RVA: 0x0003EEC3 File Offset: 0x0003D0C3
 		public static IFireBoxFishEffect CreateFromSetValue([Nullable(2)] IFireBoxFishEffect_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060011E6 RID: 4582 RVA: 0x0003BBF2 File Offset: 0x00039DF2
+		// Token: 0x0600132A RID: 4906 RVA: 0x0003EED6 File Offset: 0x0003D0D6
 		public new IFireBoxFishEffect_SetValue ToSetValue()
 		{
 			return new IFireBoxFishEffect_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000506 RID: 1286
-		// (get) Token: 0x060011E7 RID: 4583 RVA: 0x0003BC11 File Offset: 0x00039E11
-		// (set) Token: 0x060011E8 RID: 4584 RVA: 0x0003BC3C File Offset: 0x00039E3C
+		// Token: 0x1700055A RID: 1370
+		// (get) Token: 0x0600132B RID: 4907 RVA: 0x0003EEF5 File Offset: 0x0003D0F5
+		// (set) Token: 0x0600132C RID: 4908 RVA: 0x0003EF20 File Offset: 0x0003D120
 		public override EGraph3dEffectType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000507 RID: 1287
-		// (get) Token: 0x060011E9 RID: 4585 RVA: 0x0003BC4A File Offset: 0x00039E4A
-		// (set) Token: 0x060011EA RID: 4586 RVA: 0x0003BC75 File Offset: 0x00039E75
+		// Token: 0x1700055B RID: 1371
+		// (get) Token: 0x0600132D RID: 4909 RVA: 0x0003EF2E File Offset: 0x0003D12E
+		// (set) Token: 0x0600132E RID: 4910 RVA: 0x0003EF59 File Offset: 0x0003D159
 		public virtual string Effect
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000E8B RID: 3723
+		// Token: 0x04000F82 RID: 3970
 		[Nullable(2)]
 		protected new IFireBoxFishEffect FbInstance;
 
-		// Token: 0x04000E8C RID: 3724
+		// Token: 0x04000F83 RID: 3971
 		[Nullable(2)]
 		protected new IFireBoxFishEffect_SetValue PocoInterface;
 	}

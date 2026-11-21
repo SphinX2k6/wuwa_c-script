@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.FlagChallenge
 {
-	// Token: 0x02005A64 RID: 23140
+	// Token: 0x02004A40 RID: 19008
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FlagChallengeLevelAreaItem : UiPanelBase
 	{
-		// Token: 0x0603AA5A RID: 240218 RVA: 0x00DF6414 File Offset: 0x00DF4614
+		// Token: 0x0602F9A3 RID: 194979 RVA: 0x00D46998 File Offset: 0x00D44B98
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,13 +33,13 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			};
 		}
 
-		// Token: 0x0603AA5B RID: 240219 RVA: 0x00DF652C File Offset: 0x00DF472C
+		// Token: 0x0602F9A4 RID: 194980 RVA: 0x00D46AB0 File Offset: 0x00D44CB0
 		public void SetResIndex(int resIndex)
 		{
 			this.ResIndex = resIndex;
 		}
 
-		// Token: 0x0603AA5C RID: 240220 RVA: 0x00DF6535 File Offset: 0x00DF4735
+		// Token: 0x0602F9A5 RID: 194981 RVA: 0x00D46AB9 File Offset: 0x00D44CB9
 		public void Refresh(FlagChallengeAreaData data, int index)
 		{
 			this.Data = data;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			this.RefreshView();
 		}
 
-		// Token: 0x0603AA5D RID: 240221 RVA: 0x00DF6550 File Offset: 0x00DF4750
+		// Token: 0x0602F9A6 RID: 194982 RVA: 0x00D46AD4 File Offset: 0x00D44CD4
 		public void RefreshView()
 		{
 			if (this.Data == null || this.Index == null)
@@ -100,13 +100,13 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x0603AA5E RID: 240222 RVA: 0x00DF679F File Offset: 0x00DF499F
+		// Token: 0x0602F9A7 RID: 194983 RVA: 0x00D46D23 File Offset: 0x00D44F23
 		public void SetButtonClickCallback(Action<int> cb)
 		{
 			this.ButtonClickCallback = cb;
 		}
 
-		// Token: 0x0603AA5F RID: 240223 RVA: 0x00DF67A8 File Offset: 0x00DF49A8
+		// Token: 0x0602F9A8 RID: 194984 RVA: 0x00D46D2C File Offset: 0x00D44F2C
 		private void OnClickButton()
 		{
 			Action<int> buttonClickCallback = this.ButtonClickCallback;
@@ -117,17 +117,17 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			buttonClickCallback(this.Data.Id);
 		}
 
-		// Token: 0x0401E94E RID: 125262
+		// Token: 0x040193F5 RID: 103413
 		[Nullable(2)]
 		private FlagChallengeAreaData Data;
 
-		// Token: 0x0401E94F RID: 125263
+		// Token: 0x040193F6 RID: 103414
 		private int? Index;
 
-		// Token: 0x0401E950 RID: 125264
+		// Token: 0x040193F7 RID: 103415
 		private int ResIndex;
 
-		// Token: 0x0401E951 RID: 125265
+		// Token: 0x040193F8 RID: 103416
 		[Nullable(2)]
 		private Action<int> ButtonClickCallback;
 	}

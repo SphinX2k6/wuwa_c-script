@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200059F RID: 1439
+	// Token: 0x0200058A RID: 1418
 	[NetMessage(EMessageId.FlagChallengeTempRoleLevelNotify)]
 	public sealed class FlagChallengeTempRoleLevelNotify : IMessage<FlagChallengeTempRoleLevelNotify>, IMessage, IEquatable<FlagChallengeTempRoleLevelNotify>, IDeepCloneable<FlagChallengeTempRoleLevelNotify>, IBufferMessage
 	{
-		// Token: 0x06008525 RID: 34085 RVA: 0x00140305 File Offset: 0x0013E505
+		// Token: 0x060083BD RID: 33725 RVA: 0x0013D6FD File Offset: 0x0013B8FD
 		[NullableContext(1)]
 		public static FlagChallengeTempRoleLevelNotify Create()
 		{
 			return new FlagChallengeTempRoleLevelNotify();
 		}
 
-		// Token: 0x170019F3 RID: 6643
-		// (get) Token: 0x06008526 RID: 34086 RVA: 0x0014030C File Offset: 0x0013E50C
+		// Token: 0x170019A6 RID: 6566
+		// (get) Token: 0x060083BE RID: 33726 RVA: 0x0013D704 File Offset: 0x0013B904
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170019F4 RID: 6644
-		// (get) Token: 0x06008527 RID: 34087 RVA: 0x0014030F File Offset: 0x0013E50F
+		// Token: 0x170019A7 RID: 6567
+		// (get) Token: 0x060083BF RID: 33727 RVA: 0x0013D707 File Offset: 0x0013B907
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06008528 RID: 34088 RVA: 0x00140316 File Offset: 0x0013E516
+		// Token: 0x060083C0 RID: 33728 RVA: 0x0013D70E File Offset: 0x0013B90E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FlagChallengeTempRoleLevelNotify()
 		{
 		}
 
-		// Token: 0x06008529 RID: 34089 RVA: 0x00140320 File Offset: 0x0013E520
+		// Token: 0x060083C1 RID: 33729 RVA: 0x0013D718 File Offset: 0x0013B918
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FlagChallengeTempRoleLevelNotify(FlagChallengeTempRoleLevelNotify other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600852A RID: 34090 RVA: 0x0014036C File Offset: 0x0013E56C
+		// Token: 0x060083C2 RID: 33730 RVA: 0x0013D764 File Offset: 0x0013B964
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FlagChallengeTempRoleLevelNotify Clone()
@@ -67,9 +67,9 @@ namespace Aki.Protocol
 			return new FlagChallengeTempRoleLevelNotify(this);
 		}
 
-		// Token: 0x170019F5 RID: 6645
-		// (get) Token: 0x0600852B RID: 34091 RVA: 0x00140374 File Offset: 0x0013E574
-		// (set) Token: 0x0600852C RID: 34092 RVA: 0x0014037C File Offset: 0x0013E57C
+		// Token: 0x170019A8 RID: 6568
+		// (get) Token: 0x060083C3 RID: 33731 RVA: 0x0013D76C File Offset: 0x0013B96C
+		// (set) Token: 0x060083C4 RID: 33732 RVA: 0x0013D774 File Offset: 0x0013B974
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ChallengeLevelId
@@ -84,9 +84,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170019F6 RID: 6646
-		// (get) Token: 0x0600852D RID: 34093 RVA: 0x00140385 File Offset: 0x0013E585
-		// (set) Token: 0x0600852E RID: 34094 RVA: 0x0014038D File Offset: 0x0013E58D
+		// Token: 0x170019A9 RID: 6569
+		// (get) Token: 0x060083C5 RID: 33733 RVA: 0x0013D77D File Offset: 0x0013B97D
+		// (set) Token: 0x060083C6 RID: 33734 RVA: 0x0013D785 File Offset: 0x0013B985
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FlagChallengeRoleLevelInfo FlagChallengeRoleLevelInfo
@@ -101,7 +101,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600852F RID: 34095 RVA: 0x00140396 File Offset: 0x0013E596
+		// Token: 0x060083C7 RID: 33735 RVA: 0x0013D78E File Offset: 0x0013B98E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return this.Equals(other as FlagChallengeTempRoleLevelNotify);
 		}
 
-		// Token: 0x06008530 RID: 34096 RVA: 0x001403A4 File Offset: 0x0013E5A4
+		// Token: 0x060083C8 RID: 33736 RVA: 0x0013D79C File Offset: 0x0013B99C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(FlagChallengeTempRoleLevelNotify other)
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ChallengeLevelId == other.ChallengeLevelId && object.Equals(this.FlagChallengeRoleLevelInfo, other.FlagChallengeRoleLevelInfo) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06008531 RID: 34097 RVA: 0x001403F4 File Offset: 0x0013E5F4
+		// Token: 0x060083C9 RID: 33737 RVA: 0x0013D7EC File Offset: 0x0013B9EC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06008532 RID: 34098 RVA: 0x00140449 File Offset: 0x0013E649
+		// Token: 0x060083CA RID: 33738 RVA: 0x0013D841 File Offset: 0x0013BA41
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06008533 RID: 34099 RVA: 0x00140456 File Offset: 0x0013E656
+		// Token: 0x060083CB RID: 33739 RVA: 0x0013D84E File Offset: 0x0013BA4E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -154,19 +154,19 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06008534 RID: 34100 RVA: 0x00140460 File Offset: 0x0013E660
+		// Token: 0x060083CC RID: 33740 RVA: 0x0013D858 File Offset: 0x0013BA58
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			if (this.flagChallengeRoleLevelInfo_ != null)
 			{
-				output.WriteRawTag(42);
+				output.WriteRawTag(66);
 				output.WriteMessage(this.FlagChallengeRoleLevelInfo);
 			}
 			if (this.ChallengeLevelId != 0)
 			{
-				output.WriteRawTag(96);
+				output.WriteRawTag(112);
 				output.WriteInt32(this.ChallengeLevelId);
 			}
 			if (this._unknownFields != null)
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06008535 RID: 34101 RVA: 0x001404BC File Offset: 0x0013E6BC
+		// Token: 0x060083CD RID: 33741 RVA: 0x0013D8B4 File Offset: 0x0013BAB4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -196,7 +196,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06008536 RID: 34102 RVA: 0x00140514 File Offset: 0x0013E714
+		// Token: 0x060083CE RID: 33742 RVA: 0x0013D90C File Offset: 0x0013BB0C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(FlagChallengeTempRoleLevelNotify other)
@@ -220,7 +220,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06008537 RID: 34103 RVA: 0x0014057C File Offset: 0x0013E77C
+		// Token: 0x060083CF RID: 33743 RVA: 0x0013D974 File Offset: 0x0013BB74
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -228,7 +228,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06008538 RID: 34104 RVA: 0x00140588 File Offset: 0x0013E788
+		// Token: 0x060083D0 RID: 33744 RVA: 0x0013D980 File Offset: 0x0013BB80
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -240,9 +240,9 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 42U)
+				if (num != 66U)
 				{
-					if (num != 96U)
+					if (num != 112U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
@@ -262,19 +262,19 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040041E9 RID: 16873
+		// Token: 0x040041DF RID: 16863
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040041EA RID: 16874
-		public const int ChallengeLevelIdFieldNumber = 12;
+		// Token: 0x040041E0 RID: 16864
+		public const int ChallengeLevelIdFieldNumber = 14;
 
-		// Token: 0x040041EB RID: 16875
+		// Token: 0x040041E1 RID: 16865
 		private int challengeLevelId_;
 
-		// Token: 0x040041EC RID: 16876
-		public const int FlagChallengeRoleLevelInfoFieldNumber = 5;
+		// Token: 0x040041E2 RID: 16866
+		public const int FlagChallengeRoleLevelInfoFieldNumber = 8;
 
-		// Token: 0x040041ED RID: 16877
+		// Token: 0x040041E3 RID: 16867
 		private FlagChallengeRoleLevelInfo flagChallengeRoleLevelInfo_;
 	}
 }

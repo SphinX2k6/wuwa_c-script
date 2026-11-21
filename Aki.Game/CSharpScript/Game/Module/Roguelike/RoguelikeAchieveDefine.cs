@@ -3,13 +3,13 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DA9 RID: 19881
+	// Token: 0x02003D72 RID: 15730
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoguelikeAchieveDefine : IStaticVariableResetter
 	{
-		// Token: 0x17007E9D RID: 32413
-		// (get) Token: 0x06033575 RID: 210293 RVA: 0x00BFCC79 File Offset: 0x00BFAE79
+		// Token: 0x1700524D RID: 21069
+		// (get) Token: 0x060283E2 RID: 164834 RVA: 0x00B461AB File Offset: 0x00B443AB
 		public static string RoguelikeAchieveSavedStateIconPath
 		{
 			get
@@ -22,8 +22,8 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x17007E9E RID: 32414
-		// (get) Token: 0x06033576 RID: 210294 RVA: 0x00BFCC9B File Offset: 0x00BFAE9B
+		// Token: 0x1700524E RID: 21070
+		// (get) Token: 0x060283E3 RID: 164835 RVA: 0x00B461CD File Offset: 0x00B443CD
 		public static string RoguelikeAchieveUnSavedStateIconPath
 		{
 			get
@@ -36,34 +36,34 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x06033577 RID: 210295 RVA: 0x00BFCCBD File Offset: 0x00BFAEBD
+		// Token: 0x060283E4 RID: 164836 RVA: 0x00B461EF File Offset: 0x00B443EF
 		static RoguelikeAchieveDefine()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(RoguelikeAchieveDefine.CreateStaticDefaultValue), new Action(RoguelikeAchieveDefine.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06033578 RID: 210296 RVA: 0x00BFCCDC File Offset: 0x00BFAEDC
+		// Token: 0x060283E5 RID: 164837 RVA: 0x00B4620E File Offset: 0x00B4440E
 		public static void CreateStaticDefaultValue()
 		{
 			RoguelikeAchieveDefine.RoguelikeAchieveSavedStateIconPathInternal = null;
 			RoguelikeAchieveDefine.RoguelikeAchieveUnSavedStateIconPathInternal = null;
 		}
 
-		// Token: 0x06033579 RID: 210297 RVA: 0x00BFCCEA File Offset: 0x00BFAEEA
+		// Token: 0x060283E6 RID: 164838 RVA: 0x00B4621C File Offset: 0x00B4441C
 		public static void ResetStaticDefaultValue()
 		{
 			RoguelikeAchieveDefine.RoguelikeAchieveSavedStateIconPathInternal = null;
 			RoguelikeAchieveDefine.RoguelikeAchieveUnSavedStateIconPathInternal = null;
 		}
 
-		// Token: 0x0401B460 RID: 111712
+		// Token: 0x04015E33 RID: 89651
 		public const int ROGUELIKE_ACHIEVE_TOKEN_PANEL_MORE_THRESHOLD = 8;
 
-		// Token: 0x0401B461 RID: 111713
+		// Token: 0x04015E34 RID: 89652
 		[Nullable(2)]
 		private static string RoguelikeAchieveSavedStateIconPathInternal;
 
-		// Token: 0x0401B462 RID: 111714
+		// Token: 0x04015E35 RID: 89653
 		[Nullable(2)]
 		private static string RoguelikeAchieveUnSavedStateIconPathInternal;
 	}

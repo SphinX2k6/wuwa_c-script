@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200098E RID: 2446
+	// Token: 0x02000A41 RID: 2625
 	public static class ELiftBuffTypeExtensions
 	{
-		// Token: 0x060036B0 RID: 14000 RVA: 0x0008E680 File Offset: 0x0008C880
+		// Token: 0x06003A37 RID: 14903 RVA: 0x000965EC File Offset: 0x000947EC
 		public static string ToEnumString(this ELiftBuffType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060036B1 RID: 14001 RVA: 0x0008E6B8 File Offset: 0x0008C8B8
+		// Token: 0x06003A38 RID: 14904 RVA: 0x00096624 File Offset: 0x00094824
 		public static ELiftBuffType FromString(string name)
 		{
 			ELiftBuffType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060036B2 RID: 14002 RVA: 0x0008E6E1 File Offset: 0x0008C8E1
+		// Token: 0x06003A39 RID: 14905 RVA: 0x0009664D File Offset: 0x0009484D
 		public static bool TryFromString(string name, out ELiftBuffType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x060036B3 RID: 14003 RVA: 0x0008E71A File Offset: 0x0008C91A
+		// Token: 0x06003A3A RID: 14906 RVA: 0x00096686 File Offset: 0x00094886
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060036B4 RID: 14004 RVA: 0x0008E732 File Offset: 0x0008C932
+		// Token: 0x06003A3B RID: 14907 RVA: 0x0009669E File Offset: 0x0009489E
 		public static ELiftBuffType[] GetValues()
 		{
 			return new ELiftBuffType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060036B5 RID: 14005 RVA: 0x0008E73E File Offset: 0x0008C93E
+		// Token: 0x06003A3C RID: 14908 RVA: 0x000966AA File Offset: 0x000948AA
 		public static string[] GetNames()
 		{
 			return new string[]

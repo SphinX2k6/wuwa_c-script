@@ -4,30 +4,30 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020064BA RID: 25786
+	// Token: 0x02006B25 RID: 27429
 	public class ICompleteGuideT
 	{
-		// Token: 0x1700BFDF RID: 49119
-		// (get) Token: 0x0602CB74 RID: 183156 RVA: 0x00625587 File Offset: 0x00623787
-		// (set) Token: 0x0602CB75 RID: 183157 RVA: 0x0062558F File Offset: 0x0062378F
+		// Token: 0x1700C96C RID: 51564
+		// (get) Token: 0x0602F2F8 RID: 193272 RVA: 0x006716AF File Offset: 0x0066F8AF
+		// (set) Token: 0x0602F2F9 RID: 193273 RVA: 0x006716B7 File Offset: 0x0066F8B7
 		public EGuideTriggerType Type { get; set; }
 
-		// Token: 0x1700BFE0 RID: 49120
-		// (get) Token: 0x0602CB76 RID: 183158 RVA: 0x00625598 File Offset: 0x00623798
-		// (set) Token: 0x0602CB77 RID: 183159 RVA: 0x006255A0 File Offset: 0x006237A0
+		// Token: 0x1700C96D RID: 51565
+		// (get) Token: 0x0602F2FA RID: 193274 RVA: 0x006716C0 File Offset: 0x0066F8C0
+		// (set) Token: 0x0602F2FB RID: 193275 RVA: 0x006716C8 File Offset: 0x0066F8C8
 		public List<ICondition2_UnionUnion> Conditions { get; set; }
 
-		// Token: 0x1700BFE1 RID: 49121
-		// (get) Token: 0x0602CB78 RID: 183160 RVA: 0x006255A9 File Offset: 0x006237A9
-		// (set) Token: 0x0602CB79 RID: 183161 RVA: 0x006255B1 File Offset: 0x006237B1
+		// Token: 0x1700C96E RID: 51566
+		// (get) Token: 0x0602F2FC RID: 193276 RVA: 0x006716D1 File Offset: 0x0066F8D1
+		// (set) Token: 0x0602F2FD RID: 193277 RVA: 0x006716D9 File Offset: 0x0066F8D9
 		public int GuideId { get; set; }
 
-		// Token: 0x1700BFE2 RID: 49122
-		// (get) Token: 0x0602CB7A RID: 183162 RVA: 0x006255BA File Offset: 0x006237BA
-		// (set) Token: 0x0602CB7B RID: 183163 RVA: 0x006255C2 File Offset: 0x006237C2
+		// Token: 0x1700C96F RID: 51567
+		// (get) Token: 0x0602F2FE RID: 193278 RVA: 0x006716E2 File Offset: 0x0066F8E2
+		// (set) Token: 0x0602F2FF RID: 193279 RVA: 0x006716EA File Offset: 0x0066F8EA
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602CB7C RID: 183164 RVA: 0x006255CB File Offset: 0x006237CB
+		// Token: 0x0602F300 RID: 193280 RVA: 0x006716F3 File Offset: 0x0066F8F3
 		public ICompleteGuideT()
 		{
 			this.Type = EGuideTriggerType.BeginnerGuide;

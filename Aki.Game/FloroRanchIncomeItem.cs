@@ -6,7 +6,7 @@ using CSharpScript.Game.Module.FloroRanch;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001B94 RID: 7060
+// Token: 0x02001053 RID: 4179
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class FloroRanchIncomeItem : GridProxyAbstract<IFloroRanchDetailData>
 {
-	// Token: 0x0600D234 RID: 53812 RVA: 0x00303E78 File Offset: 0x00302078
+	// Token: 0x0600A645 RID: 42565 RVA: 0x0030EF50 File Offset: 0x0030D150
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -52,14 +52,14 @@ public class FloroRanchIncomeItem : GridProxyAbstract<IFloroRanchDetailData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D235 RID: 53813 RVA: 0x00304029 File Offset: 0x00302229
+	// Token: 0x0600A646 RID: 42566 RVA: 0x0030F101 File Offset: 0x0030D301
 	public override void Refresh(IFloroRanchDetailData data, bool isSelected, int gridIndex)
 	{
 		this.EntityData = data.EntityData;
 		this.RefreshView(data.Rank);
 	}
 
-	// Token: 0x0600D236 RID: 53814 RVA: 0x00304044 File Offset: 0x00302244
+	// Token: 0x0600A647 RID: 42567 RVA: 0x0030F11C File Offset: 0x0030D31C
 	private void RefreshView(int rank)
 	{
 		base.GetText(0).SetText(rank.ToString(), true);
@@ -89,7 +89,7 @@ public class FloroRanchIncomeItem : GridProxyAbstract<IFloroRanchDetailData>
 		}
 	}
 
-	// Token: 0x0600D237 RID: 53815 RVA: 0x0030412C File Offset: 0x0030232C
+	// Token: 0x0600A648 RID: 42568 RVA: 0x0030F204 File Offset: 0x0030D404
 	private void RefreshCard()
 	{
 		FloroRanchCardData cardData = this.EntityData.CheckGetComponent<FloroRanchCardDataComponent>().CardData;
@@ -102,7 +102,7 @@ public class FloroRanchIncomeItem : GridProxyAbstract<IFloroRanchDetailData>
 		base.GetText(4).ShowTextNew(name);
 	}
 
-	// Token: 0x0600D238 RID: 53816 RVA: 0x003041B0 File Offset: 0x003023B0
+	// Token: 0x0600A649 RID: 42569 RVA: 0x0030F288 File Offset: 0x0030D488
 	private void RefreshTerrain()
 	{
 		FloroRanchTerrainData terrainData = this.EntityData.CheckGetComponent<FloroRanchTerrainDataComponent>().TerrainData;
@@ -111,7 +111,7 @@ public class FloroRanchIncomeItem : GridProxyAbstract<IFloroRanchDetailData>
 		base.GetText(4).SetText(terrainData.Name, true);
 	}
 
-	// Token: 0x0600D239 RID: 53817 RVA: 0x0030420C File Offset: 0x0030240C
+	// Token: 0x0600A64A RID: 42570 RVA: 0x0030F2E4 File Offset: 0x0030D4E4
 	private void RefreshToy()
 	{
 		FloroRanchToyData toyData = this.EntityData.CheckGetComponent<FloroRanchToyDataComponent>().ToyData;
@@ -124,13 +124,13 @@ public class FloroRanchIncomeItem : GridProxyAbstract<IFloroRanchDetailData>
 		base.GetText(4).ShowTextNew(name);
 	}
 
-	// Token: 0x0600D23A RID: 53818 RVA: 0x0030428D File Offset: 0x0030248D
+	// Token: 0x0600A64B RID: 42571 RVA: 0x0030F365 File Offset: 0x0030D565
 	public void BindClickCallBack(Action<int, FloroRanchEntityBase> callBack)
 	{
 		this.CallBack = callBack;
 	}
 
-	// Token: 0x0600D23B RID: 53819 RVA: 0x00304296 File Offset: 0x00302496
+	// Token: 0x0600A64C RID: 42572 RVA: 0x0030F36E File Offset: 0x0030D56E
 	private void OnClickCallBack(EToggleState toggleState)
 	{
 		Action<int, FloroRanchEntityBase> callBack = this.CallBack;
@@ -141,7 +141,7 @@ public class FloroRanchIncomeItem : GridProxyAbstract<IFloroRanchDetailData>
 		callBack(base.GridIndex, this.EntityData);
 	}
 
-	// Token: 0x0600D23C RID: 53820 RVA: 0x003042B4 File Offset: 0x003024B4
+	// Token: 0x0600A64D RID: 42573 RVA: 0x0030F38C File Offset: 0x0030D58C
 	public void SetSelectState(bool isSelect)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(9);
@@ -152,44 +152,44 @@ public class FloroRanchIncomeItem : GridProxyAbstract<IFloroRanchDetailData>
 		extendToggle.SetToggleState(isSelect ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x04006056 RID: 24662
+	// Token: 0x04006125 RID: 24869
 	private FloroRanchEntityBase EntityData;
 
-	// Token: 0x04006057 RID: 24663
+	// Token: 0x04006126 RID: 24870
 	private Action<int, FloroRanchEntityBase> CallBack;
 
-	// Token: 0x02008120 RID: 33056
+	// Token: 0x020072AE RID: 29358
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x0402A260 RID: 172640
+		// Token: 0x04025594 RID: 152980
 		public const int RankNum = 0;
 
-		// Token: 0x0402A261 RID: 172641
+		// Token: 0x04025595 RID: 152981
 		public const int QualitySprite = 1;
 
-		// Token: 0x0402A262 RID: 172642
+		// Token: 0x04025596 RID: 152982
 		public const int IconTexture = 2;
 
-		// Token: 0x0402A263 RID: 172643
+		// Token: 0x04025597 RID: 152983
 		public const int LockItem = 3;
 
-		// Token: 0x0402A264 RID: 172644
+		// Token: 0x04025598 RID: 152984
 		public const int Name = 4;
 
-		// Token: 0x0402A265 RID: 172645
+		// Token: 0x04025599 RID: 152985
 		public const int IncomeItem = 5;
 
-		// Token: 0x0402A266 RID: 172646
+		// Token: 0x0402559A RID: 152986
 		public const int CoinIconTexture = 6;
 
-		// Token: 0x0402A267 RID: 172647
+		// Token: 0x0402559B RID: 152987
 		public const int IncomeCoinNum = 7;
 
-		// Token: 0x0402A268 RID: 172648
+		// Token: 0x0402559C RID: 152988
 		public const int StateItem = 8;
 
-		// Token: 0x0402A269 RID: 172649
+		// Token: 0x0402559D RID: 152989
 		public const int Toggle = 9;
 	}
 }

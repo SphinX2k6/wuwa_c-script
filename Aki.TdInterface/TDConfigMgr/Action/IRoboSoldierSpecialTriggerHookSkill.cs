@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DC2 RID: 7618
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001FD9 RID: 8153
 	public class IRoboSoldierSpecialTriggerHookSkill : IExecClientBattleActionType
 	{
-		// Token: 0x0600A329 RID: 41769 RVA: 0x00172A34 File Offset: 0x00170C34
+		// Token: 0x0600AD33 RID: 44339 RVA: 0x0018715C File Offset: 0x0018535C
 		private IRoboSoldierSpecialTriggerHookSkill_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A32A RID: 41770 RVA: 0x00172A6C File Offset: 0x00170C6C
+		// Token: 0x0600AD34 RID: 44340 RVA: 0x00187194 File Offset: 0x00185394
 		public static IRoboSoldierSpecialTriggerHookSkill Create([Nullable(2)] IRoboSoldierSpecialTriggerHookSkill instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A32B RID: 41771 RVA: 0x00172A7F File Offset: 0x00170C7F
+		// Token: 0x0600AD35 RID: 44341 RVA: 0x001871A7 File Offset: 0x001853A7
 		public static IRoboSoldierSpecialTriggerHookSkill CreateFromSetValue([Nullable(2)] IRoboSoldierSpecialTriggerHookSkill_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A32C RID: 41772 RVA: 0x00172A92 File Offset: 0x00170C92
+		// Token: 0x0600AD36 RID: 44342 RVA: 0x001871BA File Offset: 0x001853BA
 		public new IRoboSoldierSpecialTriggerHookSkill_SetValue ToSetValue()
 		{
 			return new IRoboSoldierSpecialTriggerHookSkill_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003248 RID: 12872
-		// (get) Token: 0x0600A32D RID: 41773 RVA: 0x00172AB1 File Offset: 0x00170CB1
-		// (set) Token: 0x0600A32E RID: 41774 RVA: 0x00172ADC File Offset: 0x00170CDC
+		// Token: 0x170034E2 RID: 13538
+		// (get) Token: 0x0600AD37 RID: 44343 RVA: 0x001871D9 File Offset: 0x001853D9
+		// (set) Token: 0x0600AD38 RID: 44344 RVA: 0x00187204 File Offset: 0x00185404
 		public override EExecClientBattleActionType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003249 RID: 12873
-		// (get) Token: 0x0600A32F RID: 41775 RVA: 0x00172AEA File Offset: 0x00170CEA
-		// (set) Token: 0x0600A330 RID: 41776 RVA: 0x00172B15 File Offset: 0x00170D15
+		// Token: 0x170034E3 RID: 13539
+		// (get) Token: 0x0600AD39 RID: 44345 RVA: 0x00187212 File Offset: 0x00185412
+		// (set) Token: 0x0600AD3A RID: 44346 RVA: 0x0018723D File Offset: 0x0018543D
 		public virtual int HookEntityId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040061DF RID: 25055
+		// Token: 0x04006767 RID: 26471
 		[Nullable(2)]
 		protected new IRoboSoldierSpecialTriggerHookSkill FbInstance;
 
-		// Token: 0x040061E0 RID: 25056
+		// Token: 0x04006768 RID: 26472
 		[Nullable(2)]
 		protected new IRoboSoldierSpecialTriggerHookSkill_SetValue PocoInterface;
 	}

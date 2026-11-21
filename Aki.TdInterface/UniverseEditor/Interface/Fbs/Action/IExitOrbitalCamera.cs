@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006729 RID: 26409
+	// Token: 0x02006DA9 RID: 28073
 	public struct IExitOrbitalCamera : IFlatbufferObject
 	{
-		// Token: 0x1700C428 RID: 50216
-		// (get) Token: 0x0602DF0E RID: 188174 RVA: 0x00647D7A File Offset: 0x00645F7A
+		// Token: 0x1700CDDE RID: 52702
+		// (get) Token: 0x06030754 RID: 198484 RVA: 0x006954BE File Offset: 0x006936BE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,50 +16,50 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DF0F RID: 188175 RVA: 0x00647D87 File Offset: 0x00645F87
+		// Token: 0x06030755 RID: 198485 RVA: 0x006954CB File Offset: 0x006936CB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602DF10 RID: 188176 RVA: 0x00647D90 File Offset: 0x00645F90
+		// Token: 0x06030756 RID: 198486 RVA: 0x006954D4 File Offset: 0x006936D4
 		public static IExitOrbitalCamera GetRootAsIExitOrbitalCamera(ByteBuffer _bb)
 		{
 			return IExitOrbitalCamera.GetRootAsIExitOrbitalCamera(_bb, default(IExitOrbitalCamera));
 		}
 
-		// Token: 0x0602DF11 RID: 188177 RVA: 0x00647DAC File Offset: 0x00645FAC
+		// Token: 0x06030757 RID: 198487 RVA: 0x006954F0 File Offset: 0x006936F0
 		public static IExitOrbitalCamera GetRootAsIExitOrbitalCamera(ByteBuffer _bb, IExitOrbitalCamera obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602DF12 RID: 188178 RVA: 0x00647DC9 File Offset: 0x00645FC9
+		// Token: 0x06030758 RID: 198488 RVA: 0x0069550D File Offset: 0x0069370D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602DF13 RID: 188179 RVA: 0x00647DD8 File Offset: 0x00645FD8
+		// Token: 0x06030759 RID: 198489 RVA: 0x0069551C File Offset: 0x0069371C
 		public IExitOrbitalCamera __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x0602DF14 RID: 188180 RVA: 0x00647DE8 File Offset: 0x00645FE8
+		// Token: 0x0603075A RID: 198490 RVA: 0x0069552C File Offset: 0x0069372C
 		public static void StartIExitOrbitalCamera(FlatBufferBuilder builder)
 		{
 			builder.StartTable(0);
 		}
 
-		// Token: 0x0602DF15 RID: 188181 RVA: 0x00647DF1 File Offset: 0x00645FF1
+		// Token: 0x0603075B RID: 198491 RVA: 0x00695535 File Offset: 0x00693735
 		public static Offset<IExitOrbitalCamera> EndIExitOrbitalCamera(FlatBufferBuilder builder)
 		{
 			return new Offset<IExitOrbitalCamera>(builder.EndTable());
 		}
 
-		// Token: 0x0602DF16 RID: 188182 RVA: 0x00647E00 File Offset: 0x00646000
+		// Token: 0x0603075C RID: 198492 RVA: 0x00695544 File Offset: 0x00693744
 		public IExitOrbitalCameraT UnPack()
 		{
 			IExitOrbitalCameraT exitOrbitalCameraT = new IExitOrbitalCameraT();
@@ -67,12 +67,12 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return exitOrbitalCameraT;
 		}
 
-		// Token: 0x0602DF17 RID: 188183 RVA: 0x00647E1B File Offset: 0x0064601B
+		// Token: 0x0603075D RID: 198493 RVA: 0x0069555F File Offset: 0x0069375F
 		public void UnPackTo(IExitOrbitalCameraT _o)
 		{
 		}
 
-		// Token: 0x0602DF18 RID: 188184 RVA: 0x00647E20 File Offset: 0x00646020
+		// Token: 0x0603075E RID: 198494 RVA: 0x00695564 File Offset: 0x00693764
 		public static Offset<IExitOrbitalCamera> Pack(FlatBufferBuilder builder, IExitOrbitalCameraT _o)
 		{
 			if (_o == null)
@@ -83,7 +83,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IExitOrbitalCamera.EndIExitOrbitalCamera(builder);
 		}
 
-		// Token: 0x04010E10 RID: 69136
+		// Token: 0x04011C42 RID: 72770
 		private Table __p;
 	}
 }

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020061BF RID: 25023
+	// Token: 0x0200682D RID: 26669
 	public class IAvgFocusRoleT
 	{
-		// Token: 0x1700BA8B RID: 47755
-		// (get) Token: 0x0602B1DE RID: 176606 RVA: 0x005F1C0E File Offset: 0x005EFE0E
-		// (set) Token: 0x0602B1DF RID: 176607 RVA: 0x005F1C16 File Offset: 0x005EFE16
+		// Token: 0x1700C40E RID: 50190
+		// (get) Token: 0x0602D925 RID: 186661 RVA: 0x0063C682 File Offset: 0x0063A882
+		// (set) Token: 0x0602D926 RID: 186662 RVA: 0x0063C68A File Offset: 0x0063A88A
 		public bool IsFocus { get; set; }
 
-		// Token: 0x0602B1E0 RID: 176608 RVA: 0x005F1C1F File Offset: 0x005EFE1F
+		// Token: 0x0602D927 RID: 186663 RVA: 0x0063C693 File Offset: 0x0063A893
 		public IAvgFocusRoleT()
 		{
 			this.IsFocus = false;

@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay
 {
-	// Token: 0x020064BE RID: 25790
+	// Token: 0x0200543C RID: 21564
 	public enum ESkillCastEffect
 	{
-		// Token: 0x04021B68 RID: 138088
+		// Token: 0x0401C499 RID: 115865
 		None,
-		// Token: 0x04021B69 RID: 138089
+		// Token: 0x0401C49A RID: 115866
 		Allure,
-		// Token: 0x04021B6A RID: 138090
+		// Token: 0x0401C49B RID: 115867
 		Chain
 	}
 }

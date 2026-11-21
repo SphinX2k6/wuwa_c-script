@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020040A6 RID: 16550
+	// Token: 0x020044E7 RID: 17639
 	public struct IRhythmSpaceshipConditionStepBase : IFlatbufferObject
 	{
-		// Token: 0x170074D5 RID: 29909
-		// (get) Token: 0x060181B5 RID: 98741 RVA: 0x00379E84 File Offset: 0x00378084
+		// Token: 0x17007ADB RID: 31451
+		// (get) Token: 0x06019856 RID: 104534 RVA: 0x003A3DD4 File Offset: 0x003A1FD4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060181B6 RID: 98742 RVA: 0x00379E91 File Offset: 0x00378091
+		// Token: 0x06019857 RID: 104535 RVA: 0x003A3DE1 File Offset: 0x003A1FE1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060181B7 RID: 98743 RVA: 0x00379E98 File Offset: 0x00378098
+		// Token: 0x06019858 RID: 104536 RVA: 0x003A3DE8 File Offset: 0x003A1FE8
 		public static IRhythmSpaceshipConditionStepBase GetRootAsIRhythmSpaceshipConditionStepBase(ByteBuffer _bb)
 		{
 			return IRhythmSpaceshipConditionStepBase.GetRootAsIRhythmSpaceshipConditionStepBase(_bb, default(IRhythmSpaceshipConditionStepBase));
 		}
 
-		// Token: 0x060181B8 RID: 98744 RVA: 0x00379EB4 File Offset: 0x003780B4
+		// Token: 0x06019859 RID: 104537 RVA: 0x003A3E04 File Offset: 0x003A2004
 		public static IRhythmSpaceshipConditionStepBase GetRootAsIRhythmSpaceshipConditionStepBase(ByteBuffer _bb, IRhythmSpaceshipConditionStepBase obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060181B9 RID: 98745 RVA: 0x00379ED1 File Offset: 0x003780D1
+		// Token: 0x0601985A RID: 104538 RVA: 0x003A3E21 File Offset: 0x003A2021
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060181BA RID: 98746 RVA: 0x00379EE0 File Offset: 0x003780E0
+		// Token: 0x0601985B RID: 104539 RVA: 0x003A3E30 File Offset: 0x003A2030
 		public IRhythmSpaceshipConditionStepBase __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170074D6 RID: 29910
-		// (get) Token: 0x060181BB RID: 98747 RVA: 0x00379EF0 File Offset: 0x003780F0
+		// Token: 0x17007ADC RID: 31452
+		// (get) Token: 0x0601985C RID: 104540 RVA: 0x003A3E40 File Offset: 0x003A2040
 		public ERhythmSpaceshipConditionStep Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060181BC RID: 98748 RVA: 0x00379F2C File Offset: 0x0037812C
+		// Token: 0x0601985D RID: 104541 RVA: 0x003A3E7C File Offset: 0x003A207C
 		public static Offset<IRhythmSpaceshipConditionStepBase> CreateIRhythmSpaceshipConditionStepBase(FlatBufferBuilder builder, ERhythmSpaceshipConditionStep Type = ERhythmSpaceshipConditionStep.Interact)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IRhythmSpaceshipConditionStepBase.EndIRhythmSpaceshipConditionStepBase(builder);
 		}
 
-		// Token: 0x060181BD RID: 98749 RVA: 0x00379F42 File Offset: 0x00378142
+		// Token: 0x0601985E RID: 104542 RVA: 0x003A3E92 File Offset: 0x003A2092
 		public static void StartIRhythmSpaceshipConditionStepBase(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060181BE RID: 98750 RVA: 0x00379F4B File Offset: 0x0037814B
+		// Token: 0x0601985F RID: 104543 RVA: 0x003A3E9B File Offset: 0x003A209B
 		public static void AddType(FlatBufferBuilder builder, ERhythmSpaceshipConditionStep type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060181BF RID: 98751 RVA: 0x00379F56 File Offset: 0x00378156
+		// Token: 0x06019860 RID: 104544 RVA: 0x003A3EA6 File Offset: 0x003A20A6
 		public static Offset<IRhythmSpaceshipConditionStepBase> EndIRhythmSpaceshipConditionStepBase(FlatBufferBuilder builder)
 		{
 			return new Offset<IRhythmSpaceshipConditionStepBase>(builder.EndTable());
 		}
 
-		// Token: 0x060181C0 RID: 98752 RVA: 0x00379F64 File Offset: 0x00378164
+		// Token: 0x06019861 RID: 104545 RVA: 0x003A3EB4 File Offset: 0x003A20B4
 		public IRhythmSpaceshipConditionStepBaseT UnPack()
 		{
 			IRhythmSpaceshipConditionStepBaseT rhythmSpaceshipConditionStepBaseT = new IRhythmSpaceshipConditionStepBaseT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return rhythmSpaceshipConditionStepBaseT;
 		}
 
-		// Token: 0x060181C1 RID: 98753 RVA: 0x00379F7F File Offset: 0x0037817F
+		// Token: 0x06019862 RID: 104546 RVA: 0x003A3ECF File Offset: 0x003A20CF
 		public void UnPackTo(IRhythmSpaceshipConditionStepBaseT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060181C2 RID: 98754 RVA: 0x00379F90 File Offset: 0x00378190
+		// Token: 0x06019863 RID: 104547 RVA: 0x003A3EE0 File Offset: 0x003A20E0
 		public static Offset<IRhythmSpaceshipConditionStepBase> Pack(FlatBufferBuilder builder, IRhythmSpaceshipConditionStepBaseT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IRhythmSpaceshipConditionStepBase.CreateIRhythmSpaceshipConditionStepBase(builder, _o.Type);
 		}
 
-		// Token: 0x0400BC3C RID: 48188
+		// Token: 0x0400C625 RID: 50725
 		private Table __p;
 	}
 }

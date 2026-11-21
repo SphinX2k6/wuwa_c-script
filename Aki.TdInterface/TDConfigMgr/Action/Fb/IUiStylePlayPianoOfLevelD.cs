@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025CE RID: 9678
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200287D RID: 10365
 	public class IUiStylePlayPianoOfLevelD : IUiStyleBaseOfLevelD
 	{
-		// Token: 0x0600D988 RID: 55688 RVA: 0x00207088 File Offset: 0x00205288
+		// Token: 0x0600E704 RID: 59140 RVA: 0x00222E38 File Offset: 0x00221038
 		public static IUiStylePlayPianoOfLevelD Create(IUiStylePlayPianoOfLevelD? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003FAE RID: 16302
-		// (get) Token: 0x0600D989 RID: 55689 RVA: 0x002070A7 File Offset: 0x002052A7
+		// Token: 0x170042B8 RID: 17080
+		// (get) Token: 0x0600E705 RID: 59141 RVA: 0x00222E57 File Offset: 0x00221057
 		public override EUiStyleTypeOfLevelD Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003FAF RID: 16303
-		// (get) Token: 0x0600D98A RID: 55690 RVA: 0x002070B4 File Offset: 0x002052B4
+		// Token: 0x170042B9 RID: 17081
+		// (get) Token: 0x0600E706 RID: 59142 RVA: 0x00222E64 File Offset: 0x00221064
 		public virtual IVector2 Position
 		{
 			get
@@ -49,8 +47,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003FB0 RID: 16304
-		// (get) Token: 0x0600D98B RID: 55691 RVA: 0x002070E8 File Offset: 0x002052E8
+		// Token: 0x170042BA RID: 17082
+		// (get) Token: 0x0600E707 RID: 59143 RVA: 0x00222E98 File Offset: 0x00221098
 		public virtual IVector2 TextBoxSize
 		{
 			get
@@ -65,8 +63,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003FB1 RID: 16305
-		// (get) Token: 0x0600D98C RID: 55692 RVA: 0x0020711C File Offset: 0x0020531C
+		// Token: 0x170042BB RID: 17083
+		// (get) Token: 0x0600E708 RID: 59144 RVA: 0x00222ECC File Offset: 0x002210CC
 		public virtual int FontSize
 		{
 			get
@@ -75,8 +73,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003FB2 RID: 16306
-		// (get) Token: 0x0600D98D RID: 55693 RVA: 0x00207129 File Offset: 0x00205329
+		// Token: 0x170042BC RID: 17084
+		// (get) Token: 0x0600E709 RID: 59145 RVA: 0x00222ED9 File Offset: 0x002210D9
 		public virtual float Duration
 		{
 			get
@@ -85,21 +83,49 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040078C8 RID: 30920
+		// Token: 0x170042BD RID: 17085
+		// (get) Token: 0x0600E70A RID: 59146 RVA: 0x00222EE8 File Offset: 0x002210E8
+		public virtual EPlayPianoFadeInEffect? FadeInEffect
+		{
+			get
+			{
+				if ((this.Instance.NullMask & 1) == 0)
+				{
+					return null;
+				}
+				return new EPlayPianoFadeInEffect?((EPlayPianoFadeInEffect)this.Instance.FadeInEffect);
+			}
+		}
+
+		// Token: 0x170042BE RID: 17086
+		// (get) Token: 0x0600E70B RID: 59147 RVA: 0x00222F20 File Offset: 0x00221120
+		public virtual EPlayPianoFadeOutEffect? FadeOutEffect
+		{
+			get
+			{
+				if ((this.Instance.NullMask & 2) == 0)
+				{
+					return null;
+				}
+				return new EPlayPianoFadeOutEffect?((EPlayPianoFadeOutEffect)this.Instance.FadeOutEffect);
+			}
+		}
+
+		// Token: 0x04007F31 RID: 32561
 		private IUiStylePlayPianoOfLevelD Instance;
 
-		// Token: 0x040078C9 RID: 30921
+		// Token: 0x04007F32 RID: 32562
 		[Nullable(2)]
 		private IVector2 _PositionCache;
 
-		// Token: 0x040078CA RID: 30922
+		// Token: 0x04007F33 RID: 32563
 		private bool _PositionInited;
 
-		// Token: 0x040078CB RID: 30923
+		// Token: 0x04007F34 RID: 32564
 		[Nullable(2)]
 		private IVector2 _TextBoxSizeCache;
 
-		// Token: 0x040078CC RID: 30924
+		// Token: 0x04007F35 RID: 32565
 		private bool _TextBoxSizeInited;
 	}
 }

@@ -7,7 +7,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001FFE RID: 8190
+// Token: 0x020014D1 RID: 5329
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class ItemHintItem : ItemHintItemBase<ItemRewardInfo>
 {
-	// Token: 0x060100D7 RID: 65751 RVA: 0x003E99D4 File Offset: 0x003E7BD4
+	// Token: 0x0600D53F RID: 54591 RVA: 0x003F5FCC File Offset: 0x003F41CC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,14 +28,14 @@ public class ItemHintItem : ItemHintItemBase<ItemRewardInfo>
 		};
 	}
 
-	// Token: 0x060100D8 RID: 65752 RVA: 0x003E9A44 File Offset: 0x003E7C44
+	// Token: 0x0600D540 RID: 54592 RVA: 0x003F603C File Offset: 0x003F423C
 	protected override void OnStart()
 	{
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 		this.LevelSequencePlayer.BindSequenceCloseEvent(new TSequenceEndEvent(this.FinishSequenceEvent), false);
 	}
 
-	// Token: 0x060100D9 RID: 65753 RVA: 0x003E9A6F File Offset: 0x003E7C6F
+	// Token: 0x0600D541 RID: 54593 RVA: 0x003F6067 File Offset: 0x003F4267
 	protected override void OnBeforeDestroy()
 	{
 		if (this.LevelSequencePlayer != null)
@@ -45,7 +45,7 @@ public class ItemHintItem : ItemHintItemBase<ItemRewardInfo>
 		}
 	}
 
-	// Token: 0x060100DA RID: 65754 RVA: 0x003E9A8B File Offset: 0x003E7C8B
+	// Token: 0x0600D542 RID: 54594 RVA: 0x003F6083 File Offset: 0x003F4283
 	[NullableContext(1)]
 	private void FinishSequenceEvent(string sequenceName)
 	{
@@ -65,7 +65,7 @@ public class ItemHintItem : ItemHintItemBase<ItemRewardInfo>
 		}
 	}
 
-	// Token: 0x060100DB RID: 65755 RVA: 0x003E9AC8 File Offset: 0x003E7CC8
+	// Token: 0x0600D543 RID: 54595 RVA: 0x003F60C0 File Offset: 0x003F42C0
 	public override UniTask AsyncLoadUiResource()
 	{
 		ItemHintItem.<AsyncLoadUiResource>d__10 <AsyncLoadUiResource>d__;
@@ -76,7 +76,7 @@ public class ItemHintItem : ItemHintItemBase<ItemRewardInfo>
 		return <AsyncLoadUiResource>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060100DC RID: 65756 RVA: 0x003E9B0C File Offset: 0x003E7D0C
+	// Token: 0x0600D544 RID: 54596 RVA: 0x003F6104 File Offset: 0x003F4304
 	public override void InitData()
 	{
 		CSharpScript.Game.Module.Inventory.ItemConfig itemConfigData = InventoryConfig.Instance.GetItemConfigData(this.Data.ItemId.GetValueOrDefault());
@@ -99,7 +99,7 @@ public class ItemHintItem : ItemHintItemBase<ItemRewardInfo>
 		this.CurSequencePlayer = null;
 	}
 
-	// Token: 0x060100DD RID: 65757 RVA: 0x003E9BEC File Offset: 0x003E7DEC
+	// Token: 0x0600D545 RID: 54597 RVA: 0x003F61E4 File Offset: 0x003F43E4
 	protected override void PlayStart()
 	{
 		this.LevelSequencePlayer.PlayLevelSequenceByName("Start", false, null, false);
@@ -107,7 +107,7 @@ public class ItemHintItem : ItemHintItemBase<ItemRewardInfo>
 		this.PlayItemHintAudio();
 	}
 
-	// Token: 0x060100DE RID: 65758 RVA: 0x003E9C28 File Offset: 0x003E7E28
+	// Token: 0x0600D546 RID: 54598 RVA: 0x003F6220 File Offset: 0x003F4420
 	private void PlayItemHintAudio()
 	{
 		if (this.ItemAudioQuality != null)
@@ -149,21 +149,21 @@ public class ItemHintItem : ItemHintItemBase<ItemRewardInfo>
 		ItemController.Instance.LastItemHintAudioPlayedTime = new double?(Time.Instance.Now);
 	}
 
-	// Token: 0x060100DF RID: 65759 RVA: 0x003E9E28 File Offset: 0x003E8028
+	// Token: 0x0600D547 RID: 54599 RVA: 0x003F6420 File Offset: 0x003F4620
 	protected override void PlayHalfway()
 	{
 		this.LevelSequencePlayer.PlayLevelSequenceByName("Move", false, null, false);
 		this.CurSequencePlayer = "Move";
 	}
 
-	// Token: 0x060100E0 RID: 65760 RVA: 0x003E9E5C File Offset: 0x003E805C
+	// Token: 0x0600D548 RID: 54600 RVA: 0x003F6454 File Offset: 0x003F4654
 	public override void PlayEnd()
 	{
 		this.LevelSequencePlayer.PlayLevelSequenceByName("Close", false, null, false);
 		this.CurSequencePlayer = "Close";
 	}
 
-	// Token: 0x060100E1 RID: 65761 RVA: 0x003E9E90 File Offset: 0x003E8090
+	// Token: 0x0600D549 RID: 54601 RVA: 0x003F6488 File Offset: 0x003F4688
 	protected unsafe override void OnActiveStatusChange(bool value)
 	{
 		if (this.CurSequencePlayer != null)
@@ -201,32 +201,32 @@ public class ItemHintItem : ItemHintItemBase<ItemRewardInfo>
 		}
 	}
 
-	// Token: 0x040076BF RID: 30399
+	// Token: 0x040077A8 RID: 30632
 	private const int AUDIO_EFFECT_RARE_LEVEL = 4;
 
-	// Token: 0x040076C0 RID: 30400
+	// Token: 0x040077A9 RID: 30633
 	private const int AUDIO_HINT_CD_MS = 500;
 
-	// Token: 0x040076C1 RID: 30401
+	// Token: 0x040077AA RID: 30634
 	protected string CurSequencePlayer;
 
-	// Token: 0x040076C2 RID: 30402
+	// Token: 0x040077AB RID: 30635
 	protected LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x040076C3 RID: 30403
+	// Token: 0x040077AC RID: 30636
 	private int? ItemAudioQuality;
 
-	// Token: 0x02008606 RID: 34310
+	// Token: 0x0200778D RID: 30605
 	[NullableContext(0)]
 	private enum EItemHintItemCom
 	{
-		// Token: 0x0402B9EF RID: 178671
+		// Token: 0x04026CFE RID: 158974
 		ItemIcon,
-		// Token: 0x0402B9F0 RID: 178672
+		// Token: 0x04026CFF RID: 158975
 		ItemNameText,
-		// Token: 0x0402B9F1 RID: 178673
+		// Token: 0x04026D00 RID: 158976
 		ItemCountText,
-		// Token: 0x0402B9F2 RID: 178674
+		// Token: 0x04026D01 RID: 158977
 		ItemXText
 	}
 }

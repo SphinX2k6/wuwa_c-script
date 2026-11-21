@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02001644 RID: 5700
+// Token: 0x02000AFC RID: 2812
 public enum ETaskCategory
 {
-	// Token: 0x040048ED RID: 18669
+	// Token: 0x04004993 RID: 18835
 	Cycle,
-	// Token: 0x040048EE RID: 18670
+	// Token: 0x04004994 RID: 18836
 	Challenge
 }

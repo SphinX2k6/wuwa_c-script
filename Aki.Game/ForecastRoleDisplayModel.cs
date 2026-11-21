@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.RoleUi.RoleDevelop;
 
-// Token: 0x020027D1 RID: 10193
+// Token: 0x02001D4C RID: 7500
 [NullableContext(2)]
 [Nullable(0)]
 public class ForecastRoleDisplayModel : RoleDisplayModelBase
 {
-	// Token: 0x06014F1D RID: 85789 RVA: 0x00550CA8 File Offset: 0x0054EEA8
+	// Token: 0x0601291D RID: 76061 RVA: 0x0057BA18 File Offset: 0x00579C18
 	public void InitByRoleId(int roleId)
 	{
 		this.RoleIdInternal = roleId;
@@ -27,8 +27,8 @@ public class ForecastRoleDisplayModel : RoleDisplayModelBase
 		});
 	}
 
-	// Token: 0x17001B41 RID: 6977
-	// (get) Token: 0x06014F1E RID: 85790 RVA: 0x00550D23 File Offset: 0x0054EF23
+	// Token: 0x17001B99 RID: 7065
+	// (get) Token: 0x0601291E RID: 76062 RVA: 0x0057BA93 File Offset: 0x00579C93
 	public int RoleId
 	{
 		get
@@ -37,8 +37,8 @@ public class ForecastRoleDisplayModel : RoleDisplayModelBase
 		}
 	}
 
-	// Token: 0x17001B42 RID: 6978
-	// (get) Token: 0x06014F1F RID: 85791 RVA: 0x00550D2B File Offset: 0x0054EF2B
+	// Token: 0x17001B9A RID: 7066
+	// (get) Token: 0x0601291F RID: 76063 RVA: 0x0057BA9B File Offset: 0x00579C9B
 	public override ERoleDisplaySourceType SourceType
 	{
 		get
@@ -47,8 +47,8 @@ public class ForecastRoleDisplayModel : RoleDisplayModelBase
 		}
 	}
 
-	// Token: 0x17001B43 RID: 6979
-	// (get) Token: 0x06014F20 RID: 85792 RVA: 0x00550D2E File Offset: 0x0054EF2E
+	// Token: 0x17001B9B RID: 7067
+	// (get) Token: 0x06012920 RID: 76064 RVA: 0x0057BA9E File Offset: 0x00579C9E
 	public override RoleDataBase OriginRoleData
 	{
 		get
@@ -57,6 +57,6 @@ public class ForecastRoleDisplayModel : RoleDisplayModelBase
 		}
 	}
 
-	// Token: 0x04009D89 RID: 40329
+	// Token: 0x0400A172 RID: 41330
 	private int RoleIdInternal;
 }

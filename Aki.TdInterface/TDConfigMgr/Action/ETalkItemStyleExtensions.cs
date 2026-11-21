@@ -2,32 +2,32 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002455 RID: 9301
+	// Token: 0x020026F6 RID: 9974
 	public static class ETalkItemStyleExtensions
 	{
-		// Token: 0x0600C9FD RID: 51709 RVA: 0x001DB2D4 File Offset: 0x001D94D4
+		// Token: 0x0600D6AD RID: 54957 RVA: 0x001F5344 File Offset: 0x001F3544
 		public static string ToEnumString(this ETalkItemStyle value)
 		{
 			string result;
-			if (value != ETalkItemStyle.InnerVoice)
+			switch (value)
 			{
-				if (value != ETalkItemStyle.PhoneSendError)
-				{
-					result = value.ToString();
-				}
-				else
-				{
-					result = "PhoneSendError";
-				}
-			}
-			else
-			{
+			case ETalkItemStyle.InnerVoice:
 				result = "InnerVoice";
+				break;
+			case ETalkItemStyle.PhoneSendError:
+				result = "PhoneSendError";
+				break;
+			case ETalkItemStyle.SceneUiSubtitle:
+				result = "SceneUiSubtitle";
+				break;
+			default:
+				result = value.ToString();
+				break;
 			}
 			return result;
 		}
 
-		// Token: 0x0600C9FE RID: 51710 RVA: 0x001DB30C File Offset: 0x001D950C
+		// Token: 0x0600D6AE RID: 54958 RVA: 0x001F538C File Offset: 0x001F358C
 		public static ETalkItemStyle FromString(string name)
 		{
 			ETalkItemStyle result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C9FF RID: 51711 RVA: 0x001DB335 File Offset: 0x001D9535
+		// Token: 0x0600D6AF RID: 54959 RVA: 0x001F53B8 File Offset: 0x001F35B8
 		public static bool TryFromString(string name, out ETalkItemStyle value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -51,42 +51,50 @@ namespace Aki.TDConfigMgr.Action
 				value = ETalkItemStyle.InnerVoice;
 				return true;
 			}
-			if (!(name == "PhoneSendError"))
+			if (name == "PhoneSendError")
+			{
+				value = ETalkItemStyle.PhoneSendError;
+				return true;
+			}
+			if (!(name == "SceneUiSubtitle"))
 			{
 				value = ETalkItemStyle.InnerVoice;
 				return false;
 			}
-			value = ETalkItemStyle.PhoneSendError;
+			value = ETalkItemStyle.SceneUiSubtitle;
 			return true;
 		}
 
-		// Token: 0x0600CA00 RID: 51712 RVA: 0x001DB36E File Offset: 0x001D956E
+		// Token: 0x0600D6B0 RID: 54960 RVA: 0x001F540E File Offset: 0x001F360E
 		public static string[] GetStringValues()
 		{
 			return new string[]
 			{
 				"InnerVoice",
-				"PhoneSendError"
+				"PhoneSendError",
+				"SceneUiSubtitle"
 			};
 		}
 
-		// Token: 0x0600CA01 RID: 51713 RVA: 0x001DB386 File Offset: 0x001D9586
+		// Token: 0x0600D6B1 RID: 54961 RVA: 0x001F542E File Offset: 0x001F362E
 		public static ETalkItemStyle[] GetValues()
 		{
 			return new ETalkItemStyle[]
 			{
 				ETalkItemStyle.InnerVoice,
-				ETalkItemStyle.PhoneSendError
+				ETalkItemStyle.PhoneSendError,
+				ETalkItemStyle.SceneUiSubtitle
 			};
 		}
 
-		// Token: 0x0600CA02 RID: 51714 RVA: 0x001DB392 File Offset: 0x001D9592
+		// Token: 0x0600D6B2 RID: 54962 RVA: 0x001F543E File Offset: 0x001F363E
 		public static string[] GetNames()
 		{
 			return new string[]
 			{
 				"InnerVoice",
-				"PhoneSendError"
+				"PhoneSendError",
+				"SceneUiSubtitle"
 			};
 		}
 	}

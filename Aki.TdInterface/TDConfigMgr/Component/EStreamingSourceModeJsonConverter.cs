@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000A23 RID: 2595
+	// Token: 0x02000AE8 RID: 2792
 	public class EStreamingSourceModeJsonConverter : JsonConverter<EStreamingSourceMode>
 	{
-		// Token: 0x06003950 RID: 14672 RVA: 0x000941A8 File Offset: 0x000923A8
+		// Token: 0x06003D28 RID: 15656 RVA: 0x0009CADC File Offset: 0x0009ACDC
 		public override EStreamingSourceMode Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return EStreamingSourceModeExtensions.FromString(@string);
 		}
 
-		// Token: 0x06003951 RID: 14673 RVA: 0x000941CC File Offset: 0x000923CC
+		// Token: 0x06003D29 RID: 15657 RVA: 0x0009CB00 File Offset: 0x0009AD00
 		public override void Write(Utf8JsonWriter writer, EStreamingSourceMode value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

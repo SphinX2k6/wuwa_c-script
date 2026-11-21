@@ -8,29 +8,29 @@ using CSharpScript.Game.NewWorld.SceneItem;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 {
-	// Token: 0x02006E77 RID: 28279
+	// Token: 0x02005FF8 RID: 24568
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlayerElementalFieldToggleAbility : LevelEntityAbilityBase
 	{
-		// Token: 0x06044EB4 RID: 282292 RVA: 0x01105E55 File Offset: 0x01104055
+		// Token: 0x0603B055 RID: 241749 RVA: 0x010B0479 File Offset: 0x010AE679
 		public PlayerElementalFieldToggleAbility(ELevelEntityAbilityType Type, EAbilityTickPhase TickPhase, int TickOrder, bool NeedTickActivate) : base(Type, TickPhase, TickOrder, NeedTickActivate)
 		{
 		}
 
-		// Token: 0x06044EB5 RID: 282293 RVA: 0x01105E6D File Offset: 0x0110406D
+		// Token: 0x0603B056 RID: 241750 RVA: 0x010B0491 File Offset: 0x010AE691
 		public override bool ShouldActivate(Entity entity)
 		{
 			return !entity.GetComponent<PlayerElementalCasketComponent>().IsBlockElemental;
 		}
 
-		// Token: 0x06044EB6 RID: 282294 RVA: 0x01105E7D File Offset: 0x0110407D
+		// Token: 0x0603B057 RID: 241751 RVA: 0x010B04A1 File Offset: 0x010AE6A1
 		public override bool ShouldDeactivate(Entity entity)
 		{
 			return entity.GetComponent<PlayerElementalCasketComponent>().IsBlockElemental;
 		}
 
-		// Token: 0x06044EB7 RID: 282295 RVA: 0x01105E8C File Offset: 0x0110408C
+		// Token: 0x0603B058 RID: 241752 RVA: 0x010B04B0 File Offset: 0x010AE6B0
 		public override void OnActivated(Entity entity)
 		{
 			this.InputLayerHelper.Init(EInputLayer.ElementalField);
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.RefreshFoundationInteractEnabled(entity);
 		}
 
-		// Token: 0x06044EB8 RID: 282296 RVA: 0x01105F10 File Offset: 0x01104110
+		// Token: 0x0603B059 RID: 241753 RVA: 0x010B0534 File Offset: 0x010AE734
 		public override void OnTick(Entity entity, float deltaMilliseconds)
 		{
 			PlayerElementalCasketComponent component = entity.GetComponent<PlayerElementalCasketComponent>();
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.RefreshFoundationInteractEnabled(entity);
 		}
 
-		// Token: 0x06044EB9 RID: 282297 RVA: 0x01105FA8 File Offset: 0x011041A8
+		// Token: 0x0603B05A RID: 241754 RVA: 0x010B05CC File Offset: 0x010AE7CC
 		public override void OnDeactivated(Entity entity)
 		{
 			this.InputLayerHelper.Clear();
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044EBA RID: 282298 RVA: 0x011060A4 File Offset: 0x011042A4
+		// Token: 0x0603B05B RID: 241755 RVA: 0x010B06C8 File Offset: 0x010AE8C8
 		private void RefreshFieldUiTag(Entity entity, EElementalType? type, bool isOpened)
 		{
 			int num = (type == null) ? 0 : this.GetFieldUiTag(type.Value, isOpened);
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.FieldUiTagId = num;
 		}
 
-		// Token: 0x06044EBB RID: 282299 RVA: 0x01106114 File Offset: 0x01104314
+		// Token: 0x0603B05C RID: 241756 RVA: 0x010B0738 File Offset: 0x010AE938
 		private int GetFieldUiTag(EElementalType type, bool isOpened)
 		{
 			switch (type)
@@ -181,7 +181,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044EBC RID: 282300 RVA: 0x011061A0 File Offset: 0x011043A0
+		// Token: 0x0603B05D RID: 241757 RVA: 0x010B07C4 File Offset: 0x010AE9C4
 		private void RefreshCoreUiTag(Entity entity, bool isHold)
 		{
 			bool? currentCoreHold = this.CurrentCoreHold;
@@ -208,7 +208,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.CoreUiTagId = num;
 		}
 
-		// Token: 0x06044EBD RID: 282301 RVA: 0x01106240 File Offset: 0x01104440
+		// Token: 0x0603B05E RID: 241758 RVA: 0x010B0864 File Offset: 0x010AEA64
 		private void RefreshRoleInteractListen()
 		{
 			SceneTeamModel instance = SceneTeamModel.Instance;
@@ -241,13 +241,13 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.InteractEnableTagListenTask = ((baseTagComponent != null) ? baseTagComponent.ListenForTagAddOrRemove(new int?(num2), new BaseTagComponent.TTagSwitchedCallback(this.OnInteractEnableTagChanged), null) : null);
 		}
 
-		// Token: 0x06044EBE RID: 282302 RVA: 0x011062F6 File Offset: 0x011044F6
+		// Token: 0x0603B05F RID: 241759 RVA: 0x010B091A File Offset: 0x010AEB1A
 		private void OnInteractEnableTagChanged(int tagId, bool tagExist)
 		{
 			this.CurrentRoleInteractEnabled = tagExist;
 		}
 
-		// Token: 0x06044EBF RID: 282303 RVA: 0x01106300 File Offset: 0x01104500
+		// Token: 0x0603B060 RID: 241760 RVA: 0x010B0924 File Offset: 0x010AEB24
 		private void RefreshFoundationInteractEnabled(Entity entity)
 		{
 			BaseTagComponent component = entity.GetComponent<BaseTagComponent>();
@@ -319,38 +319,48 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x04023E2B RID: 146987
+		// Token: 0x17006F77 RID: 28535
+		// (get) Token: 0x0603B061 RID: 241761 RVA: 0x010B0A60 File Offset: 0x010AEC60
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401F0E3 RID: 127203
 		private readonly InputLayerHelper InputLayerHelper = new InputLayerHelper();
 
-		// Token: 0x04023E2C RID: 146988
+		// Token: 0x0401F0E4 RID: 127204
 		private int FieldUiTagId;
 
-		// Token: 0x04023E2D RID: 146989
+		// Token: 0x0401F0E5 RID: 127205
 		private EElementalType? CurrentFieldElementType;
 
-		// Token: 0x04023E2E RID: 146990
+		// Token: 0x0401F0E6 RID: 127206
 		private bool CurrentFieldOpened;
 
-		// Token: 0x04023E2F RID: 146991
+		// Token: 0x0401F0E7 RID: 127207
 		private int CoreUiTagId;
 
-		// Token: 0x04023E30 RID: 146992
+		// Token: 0x0401F0E8 RID: 127208
 		private bool? CurrentCoreHold;
 
-		// Token: 0x04023E31 RID: 146993
+		// Token: 0x0401F0E9 RID: 127209
 		private int CurrentRoleEntityId;
 
-		// Token: 0x04023E32 RID: 146994
+		// Token: 0x0401F0EA RID: 127210
 		[Nullable(2)]
 		private ITagTask InteractEnableTagListenTask;
 
-		// Token: 0x04023E33 RID: 146995
+		// Token: 0x0401F0EB RID: 127211
 		private bool CurrentRoleInteractEnabled;
 
-		// Token: 0x04023E34 RID: 146996
+		// Token: 0x0401F0EC RID: 127212
 		private bool CoreButtonDisabled;
 
-		// Token: 0x04023E35 RID: 146997
+		// Token: 0x0401F0ED RID: 127213
 		private bool CoreButtonReplaceShown;
 	}
 }

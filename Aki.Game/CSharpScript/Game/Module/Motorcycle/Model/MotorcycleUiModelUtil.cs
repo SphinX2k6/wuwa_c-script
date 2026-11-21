@@ -6,24 +6,24 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Motorcycle.Model
 {
-	// Token: 0x02005394 RID: 21396
+	// Token: 0x02004377 RID: 17271
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorcycleUiModelUtil : Singleton
 	{
-		// Token: 0x06036A87 RID: 223879 RVA: 0x00CEF866 File Offset: 0x00CEDA66
+		// Token: 0x0602B9CD RID: 178637 RVA: 0x00C3E90E File Offset: 0x00C3CB0E
 		public void CreateMotor(EUiModelUseWay useWay = EUiModelUseWay.MotorInMotorView)
 		{
 			UiSceneManager.Instance.InitMotorSkeletalHandle(useWay);
 		}
 
-		// Token: 0x06036A88 RID: 223880 RVA: 0x00CEF873 File Offset: 0x00CEDA73
+		// Token: 0x0602B9CE RID: 178638 RVA: 0x00C3E91B File Offset: 0x00C3CB1B
 		public void DestroyMotor()
 		{
 			UiSceneManager.Instance.DestroyMotorSkeletalHandle();
 		}
 
-		// Token: 0x06036A89 RID: 223881 RVA: 0x00CEF880 File Offset: 0x00CEDA80
+		// Token: 0x0602B9CF RID: 178639 RVA: 0x00C3E928 File Offset: 0x00C3CB28
 		public void ClearMotorBuff()
 		{
 			UiModelBase motorModel = this.GetMotorModel();
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.Motorcycle.Model
 			uiModelBuffComponent.RemoveAllBuffId();
 		}
 
-		// Token: 0x06036A8A RID: 223882 RVA: 0x00CEF8A8 File Offset: 0x00CEDAA8
+		// Token: 0x0602B9D0 RID: 178640 RVA: 0x00C3E950 File Offset: 0x00C3CB50
 		[NullableContext(2)]
 		public UiModelBase GetMotorModel()
 		{
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Motorcycle.Model
 			return motorSkeletalHandle.Model;
 		}
 
-		// Token: 0x06036A8B RID: 223883 RVA: 0x00CEF8C0 File Offset: 0x00CEDAC0
+		// Token: 0x0602B9D1 RID: 178641 RVA: 0x00C3E968 File Offset: 0x00C3CB68
 		public void InitAutoRotateParam(float autoRotateDuration, ERotateAxis axis = ERotateAxis.Yaw, bool isPlus = true)
 		{
 			UiModelBase motorModel = this.GetMotorModel();
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Motorcycle.Model
 			uiModelRotateComponent.SetRotateParam(autoRotateDuration * 1000f, axis, isPlus);
 		}
 
-		// Token: 0x06036A8C RID: 223884 RVA: 0x00CEF8F4 File Offset: 0x00CEDAF4
+		// Token: 0x0602B9D2 RID: 178642 RVA: 0x00C3E99C File Offset: 0x00C3CB9C
 		public void SetAutoRotate(bool isAutoRotate)
 		{
 			UiModelBase motorModel = this.GetMotorModel();
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.Motorcycle.Model
 			uiModelRotateComponent.StopRotate();
 		}
 
-		// Token: 0x06036A8D RID: 223885 RVA: 0x00CEF928 File Offset: 0x00CEDB28
+		// Token: 0x0602B9D3 RID: 178643 RVA: 0x00C3E9D0 File Offset: 0x00C3CBD0
 		private MotorcycleUiModelParam GetMotorEquipParam()
 		{
 			int equippedFrameId = MotorcycleDiyModel.Instance.GetEquippedFrameId();
@@ -94,13 +94,13 @@ namespace CSharpScript.Game.Module.Motorcycle.Model
 			};
 		}
 
-		// Token: 0x06036A8E RID: 223886 RVA: 0x00CEF97A File Offset: 0x00CEDB7A
+		// Token: 0x0602B9D4 RID: 178644 RVA: 0x00C3EA22 File Offset: 0x00C3CC22
 		public bool IsMotorCreated()
 		{
 			return this.GetMotorModel() != null;
 		}
 
-		// Token: 0x06036A8F RID: 223887 RVA: 0x00CEF988 File Offset: 0x00CEDB88
+		// Token: 0x0602B9D5 RID: 178645 RVA: 0x00C3EA30 File Offset: 0x00C3CC30
 		public void ShowMotor(bool isShow)
 		{
 			UiModelBase motorModel = this.GetMotorModel();
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.Module.Motorcycle.Model
 			uiMotorSoarWingComponent.TrySetActive(isShow);
 		}
 
-		// Token: 0x06036A90 RID: 223888 RVA: 0x00CEF9D0 File Offset: 0x00CEDBD0
+		// Token: 0x0602B9D6 RID: 178646 RVA: 0x00C3EA78 File Offset: 0x00C3CC78
 		public void SetSoarWingEnabled(bool isEnabled)
 		{
 			UiModelBase motorModel = this.GetMotorModel();
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.Module.Motorcycle.Model
 			uiMotorSoarWingComponent.SetCanShowSoarWing(isEnabled);
 		}
 
-		// Token: 0x06036A91 RID: 223889 RVA: 0x00CEF9FC File Offset: 0x00CEDBFC
+		// Token: 0x0602B9D7 RID: 178647 RVA: 0x00C3EAA4 File Offset: 0x00C3CCA4
 		public void ShowSoarWing(bool isShow)
 		{
 			UiModelBase motorModel = this.GetMotorModel();
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.Module.Motorcycle.Model
 			uiMotorSoarWingComponent.TrySetActive(isShow);
 		}
 
-		// Token: 0x06036A92 RID: 223890 RVA: 0x00CEFA28 File Offset: 0x00CEDC28
+		// Token: 0x0602B9D8 RID: 178648 RVA: 0x00C3EAD0 File Offset: 0x00C3CCD0
 		public void ShowMotorLoadingIcon(bool isShow)
 		{
 			UiModelBase motorModel = this.GetMotorModel();
@@ -170,7 +170,7 @@ namespace CSharpScript.Game.Module.Motorcycle.Model
 			uiModelLoadingIconComponent.SetLoadingActive(isShow);
 		}
 
-		// Token: 0x06036A93 RID: 223891 RVA: 0x00CEFA54 File Offset: 0x00CEDC54
+		// Token: 0x0602B9D9 RID: 178649 RVA: 0x00C3EAFC File Offset: 0x00C3CCFC
 		public void LoadEquippedMotor([Nullable(new byte[]
 		{
 			2,
@@ -181,7 +181,7 @@ namespace CSharpScript.Game.Module.Motorcycle.Model
 			this.LoadMotorByParam(motorEquipParam, afterLoadCallBack);
 		}
 
-		// Token: 0x06036A94 RID: 223892 RVA: 0x00CEFA70 File Offset: 0x00CEDC70
+		// Token: 0x0602B9DA RID: 178650 RVA: 0x00C3EB18 File Offset: 0x00C3CD18
 		[NullableContext(2)]
 		public void LoadEquippedMotorAndRole(int roleId, int roleSkinId, string animPath = null)
 		{
@@ -195,7 +195,7 @@ namespace CSharpScript.Game.Module.Motorcycle.Model
 			this.LoadMotorByParam(motorEquipParam, null);
 		}
 
-		// Token: 0x06036A95 RID: 223893 RVA: 0x00CEFAAC File Offset: 0x00CEDCAC
+		// Token: 0x0602B9DB RID: 178651 RVA: 0x00C3EB54 File Offset: 0x00C3CD54
 		public void LoadMotorBySkinId(int skinId, [Nullable(new byte[]
 		{
 			2,
@@ -216,7 +216,7 @@ namespace CSharpScript.Game.Module.Motorcycle.Model
 			this.LoadMotorByParam(param, afterLoadCallBack);
 		}
 
-		// Token: 0x06036A96 RID: 223894 RVA: 0x00CEFAFC File Offset: 0x00CEDCFC
+		// Token: 0x0602B9DC RID: 178652 RVA: 0x00C3EBA4 File Offset: 0x00C3CDA4
 		private List<int> AutoFixStickerIds(int[] stickerIds)
 		{
 			List<int> list = new List<int>
@@ -244,7 +244,7 @@ namespace CSharpScript.Game.Module.Motorcycle.Model
 			return list;
 		}
 
-		// Token: 0x06036A97 RID: 223895 RVA: 0x00CEFB84 File Offset: 0x00CEDD84
+		// Token: 0x0602B9DD RID: 178653 RVA: 0x00C3EC2C File Offset: 0x00C3CE2C
 		private List<int> AutoFixDecorationIds(int[] decorateIds)
 		{
 			List<int> defaultDecorationIdList = MotorcycleDiyModel.Instance.GetDefaultDecorationIdList();
@@ -267,7 +267,7 @@ namespace CSharpScript.Game.Module.Motorcycle.Model
 			return defaultDecorationIdList;
 		}
 
-		// Token: 0x06036A98 RID: 223896 RVA: 0x00CEFBFC File Offset: 0x00CEDDFC
+		// Token: 0x0602B9DE RID: 178654 RVA: 0x00C3ECA4 File Offset: 0x00C3CEA4
 		public void LoadMotorByParam(MotorcycleUiModelParam param, [Nullable(new byte[]
 		{
 			2,
@@ -359,7 +359,7 @@ namespace CSharpScript.Game.Module.Motorcycle.Model
 			afterLoadCallBack2(CS$<>8__locals1.model);
 		}
 
-		// Token: 0x06036A99 RID: 223897 RVA: 0x00CEFEE4 File Offset: 0x00CEE0E4
+		// Token: 0x0602B9DF RID: 178655 RVA: 0x00C3EF8C File Offset: 0x00C3D18C
 		public void SetEmptySticker(int stickerPart)
 		{
 			if (stickerPart <= 0)
@@ -379,7 +379,7 @@ namespace CSharpScript.Game.Module.Motorcycle.Model
 			uiMotorStickerComponent.RemoveStickerMaterial(stickerPart);
 		}
 
-		// Token: 0x06036A9A RID: 223898 RVA: 0x00CEFF14 File Offset: 0x00CEE114
+		// Token: 0x0602B9E0 RID: 178656 RVA: 0x00C3EFBC File Offset: 0x00C3D1BC
 		public void AddMaterialByStickerId(int stickerId)
 		{
 			if (stickerId <= 0)
@@ -399,7 +399,7 @@ namespace CSharpScript.Game.Module.Motorcycle.Model
 			uiMotorStickerComponent.AddStickerMaterial(stickerId);
 		}
 
-		// Token: 0x06036A9B RID: 223899 RVA: 0x00CEFF44 File Offset: 0x00CEE144
+		// Token: 0x0602B9E1 RID: 178657 RVA: 0x00C3EFEC File Offset: 0x00C3D1EC
 		private void PlayFrameBuff(long[] frameBuffIds)
 		{
 			UiModelBase motorModel = this.GetMotorModel();
@@ -419,7 +419,7 @@ namespace CSharpScript.Game.Module.Motorcycle.Model
 			}
 		}
 
-		// Token: 0x06036A9C RID: 223900 RVA: 0x00CEFF8C File Offset: 0x00CEE18C
+		// Token: 0x0602B9E2 RID: 178658 RVA: 0x00C3F034 File Offset: 0x00C3D234
 		private void PlayFrameAnim(string frameAnimPath)
 		{
 			if (StringUtils.IsBlank(frameAnimPath))
@@ -444,7 +444,7 @@ namespace CSharpScript.Game.Module.Motorcycle.Model
 			}
 		}
 
-		// Token: 0x06036A9D RID: 223901 RVA: 0x00CEFFDC File Offset: 0x00CEE1DC
+		// Token: 0x0602B9E3 RID: 178659 RVA: 0x00C3F084 File Offset: 0x00C3D284
 		private void HandleSticker(List<int> stickerIds)
 		{
 			int[] motorcycle_DIY_STICKER_PART = MotorcycleDiyDefine.MOTORCYCLE_DIY_STICKER_PART;
@@ -462,7 +462,7 @@ namespace CSharpScript.Game.Module.Motorcycle.Model
 			}
 		}
 
-		// Token: 0x06036A9E RID: 223902 RVA: 0x00CF0028 File Offset: 0x00CEE228
+		// Token: 0x0602B9E4 RID: 178660 RVA: 0x00C3F0D0 File Offset: 0x00C3D2D0
 		private void LoadDecorations(List<int> decorationIds, [Nullable(2)] Action oneLoadCallBack = null)
 		{
 			int[] motorcycle_DIY_DECORATION_PART = MotorcycleDiyDefine.MOTORCYCLE_DIY_DECORATION_PART;
@@ -480,7 +480,7 @@ namespace CSharpScript.Game.Module.Motorcycle.Model
 			}
 		}
 
-		// Token: 0x06036A9F RID: 223903 RVA: 0x00CF0074 File Offset: 0x00CEE274
+		// Token: 0x0602B9E5 RID: 178661 RVA: 0x00C3F11C File Offset: 0x00C3D31C
 		public void SetEmptyDecoration(int decorationPart)
 		{
 			UiModelBase motorModel = this.GetMotorModel();
@@ -501,7 +501,7 @@ namespace CSharpScript.Game.Module.Motorcycle.Model
 			uiMotorDecorationComponent.RemoveDecorationSkeletalObserver(decorationPart, null);
 		}
 
-		// Token: 0x06036AA0 RID: 223904 RVA: 0x00CF00B8 File Offset: 0x00CEE2B8
+		// Token: 0x0602B9E6 RID: 178662 RVA: 0x00C3F160 File Offset: 0x00C3D360
 		[NullableContext(2)]
 		public void AddDecoration(int decorationId, Action finishCallBack = null)
 		{
@@ -584,7 +584,7 @@ namespace CSharpScript.Game.Module.Motorcycle.Model
 			}
 		}
 
-		// Token: 0x06036AA1 RID: 223905 RVA: 0x00CF0258 File Offset: 0x00CEE458
+		// Token: 0x0602B9E7 RID: 178663 RVA: 0x00C3F300 File Offset: 0x00C3D500
 		[NullableContext(2)]
 		public void RefreshRoleInMotor(int roleId, int skinId, string animPath = null)
 		{
@@ -608,8 +608,8 @@ namespace CSharpScript.Game.Module.Motorcycle.Model
 			uiMotorRoleComponent.Refresh();
 		}
 
-		// Token: 0x170083AA RID: 33706
-		// (get) Token: 0x06036AA2 RID: 223906 RVA: 0x00CF02A3 File Offset: 0x00CEE4A3
+		// Token: 0x17005776 RID: 22390
+		// (get) Token: 0x0602B9E8 RID: 178664 RVA: 0x00C3F34B File Offset: 0x00C3D54B
 		public static MotorcycleUiModelUtil Instance
 		{
 			get
@@ -623,12 +623,12 @@ namespace CSharpScript.Game.Module.Motorcycle.Model
 			}
 		}
 
-		// Token: 0x06036AA3 RID: 223907 RVA: 0x00CF02C6 File Offset: 0x00CEE4C6
+		// Token: 0x0602B9E9 RID: 178665 RVA: 0x00C3F36E File Offset: 0x00C3D56E
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06036AA4 RID: 223908 RVA: 0x00CF02C8 File Offset: 0x00CEE4C8
+		// Token: 0x0602B9EA RID: 178666 RVA: 0x00C3F370 File Offset: 0x00C3D570
 		public static void ResetStaticDefaultValue()
 		{
 			MotorcycleUiModelUtil instance = MotorcycleUiModelUtil._instance;
@@ -639,13 +639,13 @@ namespace CSharpScript.Game.Module.Motorcycle.Model
 			MotorcycleUiModelUtil._instance = null;
 		}
 
-		// Token: 0x06036AA5 RID: 223909 RVA: 0x00CF02E1 File Offset: 0x00CEE4E1
+		// Token: 0x0602B9EB RID: 178667 RVA: 0x00C3F389 File Offset: 0x00C3D589
 		static MotorcycleUiModelUtil()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MotorcycleUiModelUtil.CreateStaticDefaultValue), new Action(MotorcycleUiModelUtil.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401CE10 RID: 118288
+		// Token: 0x040178A8 RID: 96424
 		[Nullable(2)]
 		private static MotorcycleUiModelUtil _instance;
 	}

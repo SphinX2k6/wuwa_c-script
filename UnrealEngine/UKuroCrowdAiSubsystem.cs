@@ -7,31 +7,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020017F0 RID: 6128
+	// Token: 0x0200035D RID: 861
 	[UnrealObjectPath("/Script/KuroCrowdAi.KuroCrowdAiSubsystem")]
 	[UnrealStructLayout(1408, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1408)]
 	public class UKuroCrowdAiSubsystem : UWorldSubsystem, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06016A57 RID: 92759 RVA: 0x002108C2 File Offset: 0x0020EAC2
+		// Token: 0x060057FF RID: 22527 RVA: 0x0007BCC1 File Offset: 0x00079EC1
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroCrowdAiSubsystem._ClassPtr;
 		}
 
-		// Token: 0x06016A58 RID: 92760 RVA: 0x002108D0 File Offset: 0x0020EAD0
+		// Token: 0x06005800 RID: 22528 RVA: 0x0007BCD0 File Offset: 0x00079ED0
 		public UKuroCrowdAiSubsystem() : this(BuiltinUtils.AllocNativeUObject(UKuroCrowdAiSubsystem.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06016A59 RID: 92761 RVA: 0x002108F8 File Offset: 0x0020EAF8
+		// Token: 0x06005801 RID: 22529 RVA: 0x0007BCF8 File Offset: 0x00079EF8
 		[NullableContext(1)]
 		public UKuroCrowdAiSubsystem(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroCrowdAiSubsystem.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005B90 RID: 23440
-		// (get) Token: 0x06016A5A RID: 92762 RVA: 0x0021092B File Offset: 0x0020EB2B
-		// (set) Token: 0x06016A5B RID: 92763 RVA: 0x0021093B File Offset: 0x0020EB3B
+		// Token: 0x17001168 RID: 4456
+		// (get) Token: 0x06005802 RID: 22530 RVA: 0x0007BD2B File Offset: 0x00079F2B
+		// (set) Token: 0x06005803 RID: 22531 RVA: 0x0007BD3B File Offset: 0x00079F3B
 		public unsafe float GroupSplitRadius
 		{
 			get
@@ -44,9 +44,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005B91 RID: 23441
-		// (get) Token: 0x06016A5C RID: 92764 RVA: 0x0021094C File Offset: 0x0020EB4C
-		// (set) Token: 0x06016A5D RID: 92765 RVA: 0x0021095C File Offset: 0x0020EB5C
+		// Token: 0x17001169 RID: 4457
+		// (get) Token: 0x06005804 RID: 22532 RVA: 0x0007BD4C File Offset: 0x00079F4C
+		// (set) Token: 0x06005805 RID: 22533 RVA: 0x0007BD5C File Offset: 0x00079F5C
 		public unsafe float GroupNavigationInterval
 		{
 			get
@@ -59,9 +59,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005B92 RID: 23442
-		// (get) Token: 0x06016A5E RID: 92766 RVA: 0x0021096D File Offset: 0x0020EB6D
-		// (set) Token: 0x06016A5F RID: 92767 RVA: 0x0021097D File Offset: 0x0020EB7D
+		// Token: 0x1700116A RID: 4458
+		// (get) Token: 0x06005806 RID: 22534 RVA: 0x0007BD6D File Offset: 0x00079F6D
+		// (set) Token: 0x06005807 RID: 22535 RVA: 0x0007BD7D File Offset: 0x00079F7D
 		public unsafe float PauseSeekMinDist
 		{
 			get
@@ -74,9 +74,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005B93 RID: 23443
-		// (get) Token: 0x06016A60 RID: 92768 RVA: 0x0021098E File Offset: 0x0020EB8E
-		// (set) Token: 0x06016A61 RID: 92769 RVA: 0x0021099E File Offset: 0x0020EB9E
+		// Token: 0x1700116B RID: 4459
+		// (get) Token: 0x06005808 RID: 22536 RVA: 0x0007BD8E File Offset: 0x00079F8E
+		// (set) Token: 0x06005809 RID: 22537 RVA: 0x0007BD9E File Offset: 0x00079F9E
 		public unsafe float PauseSeekMaxTime
 		{
 			get
@@ -89,9 +89,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005B94 RID: 23444
-		// (get) Token: 0x06016A62 RID: 92770 RVA: 0x002109AF File Offset: 0x0020EBAF
-		// (set) Token: 0x06016A63 RID: 92771 RVA: 0x002109BF File Offset: 0x0020EBBF
+		// Token: 0x1700116C RID: 4460
+		// (get) Token: 0x0600580A RID: 22538 RVA: 0x0007BDAF File Offset: 0x00079FAF
+		// (set) Token: 0x0600580B RID: 22539 RVA: 0x0007BDBF File Offset: 0x00079FBF
 		public unsafe float PauseSeekMaxSpeed
 		{
 			get
@@ -104,9 +104,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005B95 RID: 23445
-		// (get) Token: 0x06016A64 RID: 92772 RVA: 0x002109D0 File Offset: 0x0020EBD0
-		// (set) Token: 0x06016A65 RID: 92773 RVA: 0x002109E0 File Offset: 0x0020EBE0
+		// Token: 0x1700116D RID: 4461
+		// (get) Token: 0x0600580C RID: 22540 RVA: 0x0007BDD0 File Offset: 0x00079FD0
+		// (set) Token: 0x0600580D RID: 22541 RVA: 0x0007BDE0 File Offset: 0x00079FE0
 		public unsafe bool bEnableFollowLimitation
 		{
 			get
@@ -119,9 +119,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005B96 RID: 23446
-		// (get) Token: 0x06016A66 RID: 92774 RVA: 0x002109F1 File Offset: 0x0020EBF1
-		// (set) Token: 0x06016A67 RID: 92775 RVA: 0x00210A01 File Offset: 0x0020EC01
+		// Token: 0x1700116E RID: 4462
+		// (get) Token: 0x0600580E RID: 22542 RVA: 0x0007BDF1 File Offset: 0x00079FF1
+		// (set) Token: 0x0600580F RID: 22543 RVA: 0x0007BE01 File Offset: 0x0007A001
 		public unsafe float FanWingEdgesAngle
 		{
 			get
@@ -134,9 +134,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005B97 RID: 23447
-		// (get) Token: 0x06016A68 RID: 92776 RVA: 0x00210A12 File Offset: 0x0020EC12
-		// (set) Token: 0x06016A69 RID: 92777 RVA: 0x00210A22 File Offset: 0x0020EC22
+		// Token: 0x1700116F RID: 4463
+		// (get) Token: 0x06005810 RID: 22544 RVA: 0x0007BE12 File Offset: 0x0007A012
+		// (set) Token: 0x06005811 RID: 22545 RVA: 0x0007BE22 File Offset: 0x0007A022
 		public unsafe float FanWingEdgesLen
 		{
 			get
@@ -149,9 +149,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005B98 RID: 23448
-		// (get) Token: 0x06016A6A RID: 92778 RVA: 0x00210A33 File Offset: 0x0020EC33
-		// (set) Token: 0x06016A6B RID: 92779 RVA: 0x00210A43 File Offset: 0x0020EC43
+		// Token: 0x17001170 RID: 4464
+		// (get) Token: 0x06005812 RID: 22546 RVA: 0x0007BE33 File Offset: 0x0007A033
+		// (set) Token: 0x06005813 RID: 22547 RVA: 0x0007BE43 File Offset: 0x0007A043
 		public unsafe float FanBottomEdgeHalfLen
 		{
 			get
@@ -164,9 +164,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005B99 RID: 23449
-		// (get) Token: 0x06016A6C RID: 92780 RVA: 0x00210A54 File Offset: 0x0020EC54
-		// (set) Token: 0x06016A6D RID: 92781 RVA: 0x00210A64 File Offset: 0x0020EC64
+		// Token: 0x17001171 RID: 4465
+		// (get) Token: 0x06005814 RID: 22548 RVA: 0x0007BE54 File Offset: 0x0007A054
+		// (set) Token: 0x06005815 RID: 22549 RVA: 0x0007BE64 File Offset: 0x0007A064
 		public unsafe float FanBottomEdgeDistToWatchingBoid
 		{
 			get
@@ -179,9 +179,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005B9A RID: 23450
-		// (get) Token: 0x06016A6E RID: 92782 RVA: 0x00210A75 File Offset: 0x0020EC75
-		// (set) Token: 0x06016A6F RID: 92783 RVA: 0x00210A85 File Offset: 0x0020EC85
+		// Token: 0x17001172 RID: 4466
+		// (get) Token: 0x06005816 RID: 22550 RVA: 0x0007BE75 File Offset: 0x0007A075
+		// (set) Token: 0x06005817 RID: 22551 RVA: 0x0007BE85 File Offset: 0x0007A085
 		public unsafe float BornDelayMaxTime
 		{
 			get
@@ -194,9 +194,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005B9B RID: 23451
-		// (get) Token: 0x06016A70 RID: 92784 RVA: 0x00210A96 File Offset: 0x0020EC96
-		// (set) Token: 0x06016A71 RID: 92785 RVA: 0x00210AA6 File Offset: 0x0020ECA6
+		// Token: 0x17001173 RID: 4467
+		// (get) Token: 0x06005818 RID: 22552 RVA: 0x0007BE96 File Offset: 0x0007A096
+		// (set) Token: 0x06005819 RID: 22553 RVA: 0x0007BEA6 File Offset: 0x0007A0A6
 		public unsafe float DestroyDelayMaxTime
 		{
 			get
@@ -209,9 +209,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005B9C RID: 23452
-		// (get) Token: 0x06016A72 RID: 92786 RVA: 0x00210AB7 File Offset: 0x0020ECB7
-		// (set) Token: 0x06016A73 RID: 92787 RVA: 0x00210AC7 File Offset: 0x0020ECC7
+		// Token: 0x17001174 RID: 4468
+		// (get) Token: 0x0600581A RID: 22554 RVA: 0x0007BEB7 File Offset: 0x0007A0B7
+		// (set) Token: 0x0600581B RID: 22555 RVA: 0x0007BEC7 File Offset: 0x0007A0C7
 		public unsafe bool bEnableTeleport
 		{
 			get
@@ -224,9 +224,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005B9D RID: 23453
-		// (get) Token: 0x06016A74 RID: 92788 RVA: 0x00210AD8 File Offset: 0x0020ECD8
-		// (set) Token: 0x06016A75 RID: 92789 RVA: 0x00210AE8 File Offset: 0x0020ECE8
+		// Token: 0x17001175 RID: 4469
+		// (get) Token: 0x0600581C RID: 22556 RVA: 0x0007BED8 File Offset: 0x0007A0D8
+		// (set) Token: 0x0600581D RID: 22557 RVA: 0x0007BEE8 File Offset: 0x0007A0E8
 		public unsafe float TeleportMinPlanarDist
 		{
 			get
@@ -239,9 +239,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005B9E RID: 23454
-		// (get) Token: 0x06016A76 RID: 92790 RVA: 0x00210AF9 File Offset: 0x0020ECF9
-		// (set) Token: 0x06016A77 RID: 92791 RVA: 0x00210B09 File Offset: 0x0020ED09
+		// Token: 0x17001176 RID: 4470
+		// (get) Token: 0x0600581E RID: 22558 RVA: 0x0007BEF9 File Offset: 0x0007A0F9
+		// (set) Token: 0x0600581F RID: 22559 RVA: 0x0007BF09 File Offset: 0x0007A109
 		public unsafe float TeleportMinVerticalDist
 		{
 			get
@@ -254,9 +254,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005B9F RID: 23455
-		// (get) Token: 0x06016A78 RID: 92792 RVA: 0x00210B1A File Offset: 0x0020ED1A
-		// (set) Token: 0x06016A79 RID: 92793 RVA: 0x00210B2A File Offset: 0x0020ED2A
+		// Token: 0x17001177 RID: 4471
+		// (get) Token: 0x06005820 RID: 22560 RVA: 0x0007BF1A File Offset: 0x0007A11A
+		// (set) Token: 0x06005821 RID: 22561 RVA: 0x0007BF2A File Offset: 0x0007A12A
 		public unsafe float PauseTeleportMaxPlanarSpeed
 		{
 			get
@@ -269,9 +269,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005BA0 RID: 23456
-		// (get) Token: 0x06016A7A RID: 92794 RVA: 0x00210B3B File Offset: 0x0020ED3B
-		// (set) Token: 0x06016A7B RID: 92795 RVA: 0x00210B4B File Offset: 0x0020ED4B
+		// Token: 0x17001178 RID: 4472
+		// (get) Token: 0x06005822 RID: 22562 RVA: 0x0007BF3B File Offset: 0x0007A13B
+		// (set) Token: 0x06005823 RID: 22563 RVA: 0x0007BF4B File Offset: 0x0007A14B
 		public unsafe float TeleportMinTime
 		{
 			get
@@ -284,9 +284,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005BA1 RID: 23457
-		// (get) Token: 0x06016A7C RID: 92796 RVA: 0x00210B5C File Offset: 0x0020ED5C
-		// (set) Token: 0x06016A7D RID: 92797 RVA: 0x00210B6C File Offset: 0x0020ED6C
+		// Token: 0x17001179 RID: 4473
+		// (get) Token: 0x06005824 RID: 22564 RVA: 0x0007BF5C File Offset: 0x0007A15C
+		// (set) Token: 0x06005825 RID: 22565 RVA: 0x0007BF6C File Offset: 0x0007A16C
 		public unsafe float TeleportMaxTime
 		{
 			get
@@ -299,9 +299,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005BA2 RID: 23458
-		// (get) Token: 0x06016A7E RID: 92798 RVA: 0x00210B7D File Offset: 0x0020ED7D
-		// (set) Token: 0x06016A7F RID: 92799 RVA: 0x00210B8D File Offset: 0x0020ED8D
+		// Token: 0x1700117A RID: 4474
+		// (get) Token: 0x06005826 RID: 22566 RVA: 0x0007BF7D File Offset: 0x0007A17D
+		// (set) Token: 0x06005827 RID: 22567 RVA: 0x0007BF8D File Offset: 0x0007A18D
 		public unsafe float TeleportTargetMaxRadius
 		{
 			get
@@ -314,9 +314,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005BA3 RID: 23459
-		// (get) Token: 0x06016A80 RID: 92800 RVA: 0x00210B9E File Offset: 0x0020ED9E
-		// (set) Token: 0x06016A81 RID: 92801 RVA: 0x00210BAE File Offset: 0x0020EDAE
+		// Token: 0x1700117B RID: 4475
+		// (get) Token: 0x06005828 RID: 22568 RVA: 0x0007BF9E File Offset: 0x0007A19E
+		// (set) Token: 0x06005829 RID: 22569 RVA: 0x0007BFAE File Offset: 0x0007A1AE
 		public unsafe float TeleportTargetMinRadius
 		{
 			get
@@ -329,9 +329,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005BA4 RID: 23460
-		// (get) Token: 0x06016A82 RID: 92802 RVA: 0x00210BBF File Offset: 0x0020EDBF
-		// (set) Token: 0x06016A83 RID: 92803 RVA: 0x00210BCF File Offset: 0x0020EDCF
+		// Token: 0x1700117C RID: 4476
+		// (get) Token: 0x0600582A RID: 22570 RVA: 0x0007BFBF File Offset: 0x0007A1BF
+		// (set) Token: 0x0600582B RID: 22571 RVA: 0x0007BFCF File Offset: 0x0007A1CF
 		public unsafe int TeleportTryCount
 		{
 			get
@@ -344,9 +344,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17005BA5 RID: 23461
-		// (get) Token: 0x06016A84 RID: 92804 RVA: 0x00210BE0 File Offset: 0x0020EDE0
-		// (set) Token: 0x06016A85 RID: 92805 RVA: 0x00210BF0 File Offset: 0x0020EDF0
+		// Token: 0x1700117D RID: 4477
+		// (get) Token: 0x0600582C RID: 22572 RVA: 0x0007BFE0 File Offset: 0x0007A1E0
+		// (set) Token: 0x0600582D RID: 22573 RVA: 0x0007BFF0 File Offset: 0x0007A1F0
 		public unsafe bool bStickToGround
 		{
 			get
@@ -359,45 +359,41 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06016A86 RID: 92806 RVA: 0x00210C04 File Offset: 0x0020EE04
+		// Token: 0x0600582E RID: 22574 RVA: 0x0007C004 File Offset: 0x0007A204
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool WasBoidControlledByCrowdAi(int BoidId)
 		{
 			UKuroCrowdAiSubsystem.__WasBoidControlledByCrowdAi_FunctionParams* ptr = stackalloc UKuroCrowdAiSubsystem.__WasBoidControlledByCrowdAi_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(UKuroCrowdAiSubsystem.__WasBoidControlledByCrowdAi_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroCrowdAiSubsystem.__WasBoidControlledByCrowdAi_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->BoidId = BoidId;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__WasBoidControlledByCrowdAi_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__WasBoidControlledByCrowdAi_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06016A87 RID: 92807 RVA: 0x00210C54 File Offset: 0x0020EE54
+		// Token: 0x0600582F RID: 22575 RVA: 0x0007C050 File Offset: 0x0007A250
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void UpdateDebugNavMeshEdges(in FBox Range)
 		{
 			UKuroCrowdAiSubsystem.__UpdateDebugNavMeshEdges_FunctionParams* ptr = stackalloc UKuroCrowdAiSubsystem.__UpdateDebugNavMeshEdges_FunctionParams[(UIntPtr)43] + 15L / (long)sizeof(UKuroCrowdAiSubsystem.__UpdateDebugNavMeshEdges_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroCrowdAiSubsystem.__UpdateDebugNavMeshEdges_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->Range = Range;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__UpdateDebugNavMeshEdges_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__UpdateDebugNavMeshEdges_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06016A88 RID: 92808 RVA: 0x00210CA0 File Offset: 0x0020EEA0
+		// Token: 0x06005830 RID: 22576 RVA: 0x0007C09C File Offset: 0x0007A29C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe int SetWatchingBoidAndJoinGroup(int BoidId, int WatchingBoidId)
 		{
 			UKuroCrowdAiSubsystem.__SetWatchingBoidAndJoinGroup_FunctionParams* ptr = stackalloc UKuroCrowdAiSubsystem.__SetWatchingBoidAndJoinGroup_FunctionParams[(UIntPtr)27] + 15L / (long)sizeof(UKuroCrowdAiSubsystem.__SetWatchingBoidAndJoinGroup_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroCrowdAiSubsystem.__SetWatchingBoidAndJoinGroup_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->BoidId = BoidId;
 			ptr->WatchingBoidId = WatchingBoidId;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__SetWatchingBoidAndJoinGroup_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__SetWatchingBoidAndJoinGroup_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06016A89 RID: 92809 RVA: 0x00210CF4 File Offset: 0x0020EEF4
+		// Token: 0x06005831 RID: 22577 RVA: 0x0007C0F0 File Offset: 0x0007A2F0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool SetBoidTransform(int BoidId, in FTransform NewTransform, bool bTeleport = false)
 		{
 			UKuroCrowdAiSubsystem.__SetBoidTransform_FunctionParams* ptr = stackalloc UKuroCrowdAiSubsystem.__SetBoidTransform_FunctionParams[(UIntPtr)95] + 15L / (long)sizeof(UKuroCrowdAiSubsystem.__SetBoidTransform_FunctionParams) & -16L;
@@ -405,40 +401,37 @@ namespace UnrealEngine
 			ptr->BoidId = BoidId;
 			ptr->NewTransform = NewTransform;
 			ptr->bTeleport = bTeleport;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__SetBoidTransform_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__SetBoidTransform_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06016A8A RID: 92810 RVA: 0x00210D54 File Offset: 0x0020EF54
+		// Token: 0x06005832 RID: 22578 RVA: 0x0007C150 File Offset: 0x0007A350
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool SetBoidScale(int BoidId, in FVector NewScale)
 		{
 			UKuroCrowdAiSubsystem.__SetBoidScale_FunctionParams* ptr = stackalloc UKuroCrowdAiSubsystem.__SetBoidScale_FunctionParams[(UIntPtr)35] + 15L / (long)sizeof(UKuroCrowdAiSubsystem.__SetBoidScale_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroCrowdAiSubsystem.__SetBoidScale_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->BoidId = BoidId;
 			ptr->NewScale = NewScale;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__SetBoidScale_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__SetBoidScale_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06016A8B RID: 92811 RVA: 0x00210DB0 File Offset: 0x0020EFB0
+		// Token: 0x06005833 RID: 22579 RVA: 0x0007C1A8 File Offset: 0x0007A3A8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool SetBoidControlledByCrowdAi(int BoidId, bool Enable)
 		{
 			UKuroCrowdAiSubsystem.__SetBoidControlledByCrowdAi_FunctionParams* ptr = stackalloc UKuroCrowdAiSubsystem.__SetBoidControlledByCrowdAi_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(UKuroCrowdAiSubsystem.__SetBoidControlledByCrowdAi_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroCrowdAiSubsystem.__SetBoidControlledByCrowdAi_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->BoidId = BoidId;
 			ptr->Enable = Enable;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__SetBoidControlledByCrowdAi_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__SetBoidControlledByCrowdAi_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06016A8C RID: 92812 RVA: 0x00210E04 File Offset: 0x0020F004
+		// Token: 0x06005834 RID: 22580 RVA: 0x0007C1FC File Offset: 0x0007A3FC
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool SetBoidAppearanceInfo(int BoidId, ref TArray<float> CustomDataArray)
 		{
 			UKuroCrowdAiSubsystem.__SetBoidAppearanceInfo_FunctionParams* ptr = stackalloc UKuroCrowdAiSubsystem.__SetBoidAppearanceInfo_FunctionParams[(UIntPtr)47] + 15L / (long)sizeof(UKuroCrowdAiSubsystem.__SetBoidAppearanceInfo_FunctionParams) & -16L;
@@ -449,7 +442,7 @@ namespace UnrealEngine
 			{
 				tarray.MoveTo(&ptr->CustomDataArray);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__SetBoidAppearanceInfo_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__SetBoidAppearanceInfo_NativeFunctionPtr, (void*)ptr);
 			TArray<float> tarray2 = CustomDataArray;
 			if (tarray2 != null)
 			{
@@ -460,22 +453,20 @@ namespace UnrealEngine
 			return _Result;
 		}
 
-		// Token: 0x06016A8D RID: 92813 RVA: 0x00210E8C File Offset: 0x0020F08C
+		// Token: 0x06005835 RID: 22581 RVA: 0x0007C284 File Offset: 0x0007A484
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool RemoveBoid(int BoidId, bool bForce = false)
 		{
 			UKuroCrowdAiSubsystem.__RemoveBoid_FunctionParams* ptr = stackalloc UKuroCrowdAiSubsystem.__RemoveBoid_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(UKuroCrowdAiSubsystem.__RemoveBoid_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroCrowdAiSubsystem.__RemoveBoid_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->BoidId = BoidId;
 			ptr->bForce = bForce;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__RemoveBoid_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__RemoveBoid_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06016A8E RID: 92814 RVA: 0x00210EE0 File Offset: 0x0020F0E0
+		// Token: 0x06005836 RID: 22582 RVA: 0x0007C2D8 File Offset: 0x0007A4D8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe FVector QueryUsablePositionForBoid(in FVector QueryPosition, float QueryRadius, float BoidRadius, int MaxTryCount = 8)
 		{
 			UKuroCrowdAiSubsystem.__QueryUsablePositionForBoid_FunctionParams* ptr = stackalloc UKuroCrowdAiSubsystem.__QueryUsablePositionForBoid_FunctionParams[(UIntPtr)51] + 15L / (long)sizeof(UKuroCrowdAiSubsystem.__QueryUsablePositionForBoid_FunctionParams) & -16L;
@@ -484,106 +475,85 @@ namespace UnrealEngine
 			ptr->QueryRadius = QueryRadius;
 			ptr->BoidRadius = BoidRadius;
 			ptr->MaxTryCount = MaxTryCount;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__QueryUsablePositionForBoid_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__QueryUsablePositionForBoid_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06016A8F RID: 92815 RVA: 0x00210F48 File Offset: 0x0020F148
+		// Token: 0x06005837 RID: 22583 RVA: 0x0007C340 File Offset: 0x0007A540
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void NotifyBoidsMoveTo(in FVector NewLocation)
 		{
 			UKuroCrowdAiSubsystem.__NotifyBoidsMoveTo_FunctionParams* ptr = stackalloc UKuroCrowdAiSubsystem.__NotifyBoidsMoveTo_FunctionParams[(UIntPtr)27] + 15L / (long)sizeof(UKuroCrowdAiSubsystem.__NotifyBoidsMoveTo_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroCrowdAiSubsystem.__NotifyBoidsMoveTo_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->NewLocation = NewLocation;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__NotifyBoidsMoveTo_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__NotifyBoidsMoveTo_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06016A90 RID: 92816 RVA: 0x00210F94 File Offset: 0x0020F194
+		// Token: 0x06005838 RID: 22584 RVA: 0x0007C38B File Offset: 0x0007A58B
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void NotifyBoidsAround()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__NotifyBoidsAround_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__NotifyBoidsAround_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06016A91 RID: 92817 RVA: 0x00210FAC File Offset: 0x0020F1AC
+		// Token: 0x06005839 RID: 22585 RVA: 0x0007C3A0 File Offset: 0x0007A5A0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe FVector GetBoidVelocity(int BoidId)
 		{
 			UKuroCrowdAiSubsystem.__GetBoidVelocity_FunctionParams* ptr = stackalloc UKuroCrowdAiSubsystem.__GetBoidVelocity_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UKuroCrowdAiSubsystem.__GetBoidVelocity_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroCrowdAiSubsystem.__GetBoidVelocity_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->BoidId = BoidId;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__GetBoidVelocity_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__GetBoidVelocity_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06016A92 RID: 92818 RVA: 0x00210FFC File Offset: 0x0020F1FC
+		// Token: 0x0600583A RID: 22586 RVA: 0x0007C3EC File Offset: 0x0007A5EC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe FTransform GetBoidTransform(int BoidId)
 		{
 			UKuroCrowdAiSubsystem.__GetBoidTransform_FunctionParams* ptr = stackalloc UKuroCrowdAiSubsystem.__GetBoidTransform_FunctionParams[(UIntPtr)79] + 15L / (long)sizeof(UKuroCrowdAiSubsystem.__GetBoidTransform_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroCrowdAiSubsystem.__GetBoidTransform_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->BoidId = BoidId;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__GetBoidTransform_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__GetBoidTransform_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06016A93 RID: 92819 RVA: 0x0021104C File Offset: 0x0020F24C
+		// Token: 0x0600583B RID: 22587 RVA: 0x0007C438 File Offset: 0x0007A638
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe FVector GetBoidLastVelocity(int BoidId)
 		{
 			UKuroCrowdAiSubsystem.__GetBoidLastVelocity_FunctionParams* ptr = stackalloc UKuroCrowdAiSubsystem.__GetBoidLastVelocity_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UKuroCrowdAiSubsystem.__GetBoidLastVelocity_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroCrowdAiSubsystem.__GetBoidLastVelocity_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->BoidId = BoidId;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__GetBoidLastVelocity_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__GetBoidLastVelocity_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06016A94 RID: 92820 RVA: 0x0021109C File Offset: 0x0020F29C
+		// Token: 0x0600583C RID: 22588 RVA: 0x0007C484 File Offset: 0x0007A684
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe FTransform GetBoidLastTransform(int BoidId)
 		{
 			UKuroCrowdAiSubsystem.__GetBoidLastTransform_FunctionParams* ptr = stackalloc UKuroCrowdAiSubsystem.__GetBoidLastTransform_FunctionParams[(UIntPtr)79] + 15L / (long)sizeof(UKuroCrowdAiSubsystem.__GetBoidLastTransform_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroCrowdAiSubsystem.__GetBoidLastTransform_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->BoidId = BoidId;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__GetBoidLastTransform_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__GetBoidLastTransform_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06016A95 RID: 92821 RVA: 0x002110EC File Offset: 0x0020F2EC
+		// Token: 0x0600583D RID: 22589 RVA: 0x0007C4D0 File Offset: 0x0007A6D0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe int GetBoidGroupId(int BoidId)
 		{
 			UKuroCrowdAiSubsystem.__GetBoidGroupId_FunctionParams* ptr = stackalloc UKuroCrowdAiSubsystem.__GetBoidGroupId_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(UKuroCrowdAiSubsystem.__GetBoidGroupId_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroCrowdAiSubsystem.__GetBoidGroupId_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->BoidId = BoidId;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__GetBoidGroupId_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__GetBoidGroupId_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06016A96 RID: 92822 RVA: 0x0021113C File Offset: 0x0020F33C
+		// Token: 0x0600583E RID: 22590 RVA: 0x0007C51C File Offset: 0x0007A71C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe UKuroCrowdAiBoidAnimUpdater GetBoidAnimUpdater(int BoidId)
-		{
-			UKuroCrowdAiSubsystem.__GetBoidAnimUpdater_FunctionParams* ptr = stackalloc UKuroCrowdAiSubsystem.__GetBoidAnimUpdater_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UKuroCrowdAiSubsystem.__GetBoidAnimUpdater_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(UKuroCrowdAiSubsystem.__GetBoidAnimUpdater_NativeFunctionPtr, (void*)ptr, 1);
-			ptr->BoidId = BoidId;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__GetBoidAnimUpdater_NativeFunctionPtr, (void*)ptr, 0);
-			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UKuroCrowdAiBoidAnimUpdater>(ptr->__Result);
-		}
-
-		// Token: 0x06016A97 RID: 92823 RVA: 0x00211190 File Offset: 0x0020F390
-		[NullableContext(2)]
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void GetAllGroupIds(ref TArray<int> OutGroupIds)
 		{
 			UKuroCrowdAiSubsystem.__GetAllGroupIds_FunctionParams* ptr = stackalloc UKuroCrowdAiSubsystem.__GetAllGroupIds_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(UKuroCrowdAiSubsystem.__GetAllGroupIds_FunctionParams) & -16L;
@@ -593,7 +563,7 @@ namespace UnrealEngine
 			{
 				tarray.MoveTo(&ptr->OutGroupIds);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__GetAllGroupIds_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__GetAllGroupIds_NativeFunctionPtr, (void*)ptr);
 			TArray<int> tarray2 = OutGroupIds;
 			if (tarray2 != null)
 			{
@@ -602,45 +572,41 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(UKuroCrowdAiSubsystem.__GetAllGroupIds_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06016A98 RID: 92824 RVA: 0x0021120C File Offset: 0x0020F40C
+		// Token: 0x0600583F RID: 22591 RVA: 0x0007C594 File Offset: 0x0007A794
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void EnableDebugMode(bool Enable)
 		{
 			UKuroCrowdAiSubsystem.__EnableDebugMode_FunctionParams* ptr = stackalloc UKuroCrowdAiSubsystem.__EnableDebugMode_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(UKuroCrowdAiSubsystem.__EnableDebugMode_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroCrowdAiSubsystem.__EnableDebugMode_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->Enable = Enable;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__EnableDebugMode_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__EnableDebugMode_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06016A99 RID: 92825 RVA: 0x00211254 File Offset: 0x0020F454
+		// Token: 0x06005840 RID: 22592 RVA: 0x0007C5DC File Offset: 0x0007A7DC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void EnableBoidIdlePerform(int BoidId, bool bEnable)
 		{
 			UKuroCrowdAiSubsystem.__EnableBoidIdlePerform_FunctionParams* ptr = stackalloc UKuroCrowdAiSubsystem.__EnableBoidIdlePerform_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(UKuroCrowdAiSubsystem.__EnableBoidIdlePerform_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroCrowdAiSubsystem.__EnableBoidIdlePerform_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->BoidId = BoidId;
 			ptr->bEnable = bEnable;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__EnableBoidIdlePerform_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__EnableBoidIdlePerform_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06016A9A RID: 92826 RVA: 0x002112A4 File Offset: 0x0020F4A4
+		// Token: 0x06005841 RID: 22593 RVA: 0x0007C62C File Offset: 0x0007A82C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool ChangeGroupWatchingBoid(int GroupId, int BoidId)
 		{
 			UKuroCrowdAiSubsystem.__ChangeGroupWatchingBoid_FunctionParams* ptr = stackalloc UKuroCrowdAiSubsystem.__ChangeGroupWatchingBoid_FunctionParams[(UIntPtr)27] + 15L / (long)sizeof(UKuroCrowdAiSubsystem.__ChangeGroupWatchingBoid_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(UKuroCrowdAiSubsystem.__ChangeGroupWatchingBoid_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->GroupId = GroupId;
 			ptr->BoidId = BoidId;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__ChangeGroupWatchingBoid_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__ChangeGroupWatchingBoid_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06016A9B RID: 92827 RVA: 0x002112F8 File Offset: 0x0020F4F8
+		// Token: 0x06005842 RID: 22594 RVA: 0x0007C680 File Offset: 0x0007A880
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool BoidStopAnimation(int BoidId, int AnimIndex, bool bImmediately = true)
 		{
 			UKuroCrowdAiSubsystem.__BoidStopAnimation_FunctionParams* ptr = stackalloc UKuroCrowdAiSubsystem.__BoidStopAnimation_FunctionParams[(UIntPtr)27] + 15L / (long)sizeof(UKuroCrowdAiSubsystem.__BoidStopAnimation_FunctionParams) & -16L;
@@ -648,13 +614,12 @@ namespace UnrealEngine
 			ptr->BoidId = BoidId;
 			ptr->AnimIndex = AnimIndex;
 			ptr->bImmediately = bImmediately;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__BoidStopAnimation_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__BoidStopAnimation_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06016A9C RID: 92828 RVA: 0x00211354 File Offset: 0x0020F554
+		// Token: 0x06005843 RID: 22595 RVA: 0x0007C6DC File Offset: 0x0007A8DC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool BoidPlayAnimation(int BoidId, int AnimIndex, float PlayRate = 1f, float StartPos = 0f, bool bIsLoop = false)
 		{
 			UKuroCrowdAiSubsystem.__BoidPlayAnimation_FunctionParams* ptr = stackalloc UKuroCrowdAiSubsystem.__BoidPlayAnimation_FunctionParams[(UIntPtr)35] + 15L / (long)sizeof(UKuroCrowdAiSubsystem.__BoidPlayAnimation_FunctionParams) & -16L;
@@ -664,522 +629,505 @@ namespace UnrealEngine
 			ptr->PlayRate = PlayRate;
 			ptr->StartPos = StartPos;
 			ptr->bIsLoop = bIsLoop;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__BoidPlayAnimation_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, UKuroCrowdAiSubsystem.__BoidPlayAnimation_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06016A9D RID: 92829 RVA: 0x002113BF File Offset: 0x0020F5BF
+		// Token: 0x06005844 RID: 22596 RVA: 0x0007C746 File Offset: 0x0007A946
 		static UKuroCrowdAiSubsystem()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroCrowdAi.KuroCrowdAiSubsystem");
 		}
 
-		// Token: 0x06016A9E RID: 92830 RVA: 0x002113CD File Offset: 0x0020F5CD
+		// Token: 0x06005845 RID: 22597 RVA: 0x0007C754 File Offset: 0x0007A954
 		protected UKuroCrowdAiSubsystem(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400C4BD RID: 50365
+		// Token: 0x0400244A RID: 9290
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroCrowdAi.KuroCrowdAiSubsystem";
 
-		// Token: 0x0400C4BE RID: 50366
+		// Token: 0x0400244B RID: 9291
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400C4BF RID: 50367
+		// Token: 0x0400244C RID: 9292
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400C4C0 RID: 50368
+		// Token: 0x0400244D RID: 9293
 		internal static int __PropertyOffset_GroupSplitRadius;
 
-		// Token: 0x0400C4C1 RID: 50369
+		// Token: 0x0400244E RID: 9294
 		internal static int __PropertyOffset_GroupNavigationInterval;
 
-		// Token: 0x0400C4C2 RID: 50370
+		// Token: 0x0400244F RID: 9295
 		internal static int __PropertyOffset_PauseSeekMinDist;
 
-		// Token: 0x0400C4C3 RID: 50371
+		// Token: 0x04002450 RID: 9296
 		internal static int __PropertyOffset_PauseSeekMaxTime;
 
-		// Token: 0x0400C4C4 RID: 50372
+		// Token: 0x04002451 RID: 9297
 		internal static int __PropertyOffset_PauseSeekMaxSpeed;
 
-		// Token: 0x0400C4C5 RID: 50373
+		// Token: 0x04002452 RID: 9298
 		internal static int __PropertyOffset_bEnableFollowLimitation;
 
-		// Token: 0x0400C4C6 RID: 50374
+		// Token: 0x04002453 RID: 9299
 		internal static int __PropertyOffset_FanWingEdgesAngle;
 
-		// Token: 0x0400C4C7 RID: 50375
+		// Token: 0x04002454 RID: 9300
 		internal static int __PropertyOffset_FanWingEdgesLen;
 
-		// Token: 0x0400C4C8 RID: 50376
+		// Token: 0x04002455 RID: 9301
 		internal static int __PropertyOffset_FanBottomEdgeHalfLen;
 
-		// Token: 0x0400C4C9 RID: 50377
+		// Token: 0x04002456 RID: 9302
 		internal static int __PropertyOffset_FanBottomEdgeDistToWatchingBoid;
 
-		// Token: 0x0400C4CA RID: 50378
+		// Token: 0x04002457 RID: 9303
 		internal static int __PropertyOffset_BornDelayMaxTime;
 
-		// Token: 0x0400C4CB RID: 50379
+		// Token: 0x04002458 RID: 9304
 		internal static int __PropertyOffset_DestroyDelayMaxTime;
 
-		// Token: 0x0400C4CC RID: 50380
+		// Token: 0x04002459 RID: 9305
 		internal static int __PropertyOffset_bEnableTeleport;
 
-		// Token: 0x0400C4CD RID: 50381
+		// Token: 0x0400245A RID: 9306
 		internal static int __PropertyOffset_TeleportMinPlanarDist;
 
-		// Token: 0x0400C4CE RID: 50382
+		// Token: 0x0400245B RID: 9307
 		internal static int __PropertyOffset_TeleportMinVerticalDist;
 
-		// Token: 0x0400C4CF RID: 50383
+		// Token: 0x0400245C RID: 9308
 		internal static int __PropertyOffset_PauseTeleportMaxPlanarSpeed;
 
-		// Token: 0x0400C4D0 RID: 50384
+		// Token: 0x0400245D RID: 9309
 		internal static int __PropertyOffset_TeleportMinTime;
 
-		// Token: 0x0400C4D1 RID: 50385
+		// Token: 0x0400245E RID: 9310
 		internal static int __PropertyOffset_TeleportMaxTime;
 
-		// Token: 0x0400C4D2 RID: 50386
+		// Token: 0x0400245F RID: 9311
 		internal static int __PropertyOffset_TeleportTargetMaxRadius;
 
-		// Token: 0x0400C4D3 RID: 50387
+		// Token: 0x04002460 RID: 9312
 		internal static int __PropertyOffset_TeleportTargetMinRadius;
 
-		// Token: 0x0400C4D4 RID: 50388
+		// Token: 0x04002461 RID: 9313
 		internal static int __PropertyOffset_TeleportTryCount;
 
-		// Token: 0x0400C4D5 RID: 50389
+		// Token: 0x04002462 RID: 9314
 		internal static int __PropertyOffset_bStickToGround;
 
-		// Token: 0x0400C4D6 RID: 50390
+		// Token: 0x04002463 RID: 9315
 		private static IntPtr __WasBoidControlledByCrowdAi_NativeFunctionPtr;
 
-		// Token: 0x0400C4D7 RID: 50391
+		// Token: 0x04002464 RID: 9316
 		private static IntPtr __UpdateDebugNavMeshEdges_NativeFunctionPtr;
 
-		// Token: 0x0400C4D8 RID: 50392
+		// Token: 0x04002465 RID: 9317
 		private static IntPtr __SetWatchingBoidAndJoinGroup_NativeFunctionPtr;
 
-		// Token: 0x0400C4D9 RID: 50393
+		// Token: 0x04002466 RID: 9318
 		private static IntPtr __SetBoidTransform_NativeFunctionPtr;
 
-		// Token: 0x0400C4DA RID: 50394
+		// Token: 0x04002467 RID: 9319
 		private static IntPtr __SetBoidScale_NativeFunctionPtr;
 
-		// Token: 0x0400C4DB RID: 50395
+		// Token: 0x04002468 RID: 9320
 		private static IntPtr __SetBoidControlledByCrowdAi_NativeFunctionPtr;
 
-		// Token: 0x0400C4DC RID: 50396
+		// Token: 0x04002469 RID: 9321
 		private static IntPtr __SetBoidAppearanceInfo_NativeFunctionPtr;
 
-		// Token: 0x0400C4DD RID: 50397
+		// Token: 0x0400246A RID: 9322
 		private static IntPtr __RemoveBoid_NativeFunctionPtr;
 
-		// Token: 0x0400C4DE RID: 50398
+		// Token: 0x0400246B RID: 9323
 		private static IntPtr __QueryUsablePositionForBoid_NativeFunctionPtr;
 
-		// Token: 0x0400C4DF RID: 50399
+		// Token: 0x0400246C RID: 9324
 		private static IntPtr __NotifyBoidsMoveTo_NativeFunctionPtr;
 
-		// Token: 0x0400C4E0 RID: 50400
+		// Token: 0x0400246D RID: 9325
 		private static IntPtr __NotifyBoidsAround_NativeFunctionPtr;
 
-		// Token: 0x0400C4E1 RID: 50401
+		// Token: 0x0400246E RID: 9326
 		private static IntPtr __GetBoidVelocity_NativeFunctionPtr;
 
-		// Token: 0x0400C4E2 RID: 50402
+		// Token: 0x0400246F RID: 9327
 		private static IntPtr __GetBoidTransform_NativeFunctionPtr;
 
-		// Token: 0x0400C4E3 RID: 50403
+		// Token: 0x04002470 RID: 9328
 		private static IntPtr __GetBoidLastVelocity_NativeFunctionPtr;
 
-		// Token: 0x0400C4E4 RID: 50404
+		// Token: 0x04002471 RID: 9329
 		private static IntPtr __GetBoidLastTransform_NativeFunctionPtr;
 
-		// Token: 0x0400C4E5 RID: 50405
+		// Token: 0x04002472 RID: 9330
 		private static IntPtr __GetBoidGroupId_NativeFunctionPtr;
 
-		// Token: 0x0400C4E6 RID: 50406
-		private static IntPtr __GetBoidAnimUpdater_NativeFunctionPtr;
-
-		// Token: 0x0400C4E7 RID: 50407
+		// Token: 0x04002473 RID: 9331
 		private static IntPtr __GetAllGroupIds_NativeFunctionPtr;
 
-		// Token: 0x0400C4E8 RID: 50408
+		// Token: 0x04002474 RID: 9332
 		private static IntPtr __EnableDebugMode_NativeFunctionPtr;
 
-		// Token: 0x0400C4E9 RID: 50409
+		// Token: 0x04002475 RID: 9333
 		private static IntPtr __EnableBoidIdlePerform_NativeFunctionPtr;
 
-		// Token: 0x0400C4EA RID: 50410
+		// Token: 0x04002476 RID: 9334
 		private static IntPtr __ChangeGroupWatchingBoid_NativeFunctionPtr;
 
-		// Token: 0x0400C4EB RID: 50411
+		// Token: 0x04002477 RID: 9335
 		private static IntPtr __BoidStopAnimation_NativeFunctionPtr;
 
-		// Token: 0x0400C4EC RID: 50412
+		// Token: 0x04002478 RID: 9336
 		private static IntPtr __BoidPlayAnimation_NativeFunctionPtr;
 
-		// Token: 0x02002F35 RID: 12085
+		// Token: 0x02000A66 RID: 2662
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __WasBoidControlledByCrowdAi_FunctionParams
 		{
-			// Token: 0x04016AB2 RID: 92850
+			// Token: 0x04005A81 RID: 23169
 			[FieldOffset(0)]
 			public int BoidId;
 
-			// Token: 0x04016AB3 RID: 92851
+			// Token: 0x04005A82 RID: 23170
 			[FieldOffset(4)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002F36 RID: 12086
+		// Token: 0x02000A67 RID: 2663
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 28)]
 		protected ref struct __UpdateDebugNavMeshEdges_FunctionParams
 		{
-			// Token: 0x04016AB4 RID: 92852
+			// Token: 0x04005A83 RID: 23171
 			[FieldOffset(0)]
 			public FBox Range;
 		}
 
-		// Token: 0x02002F37 RID: 12087
+		// Token: 0x02000A68 RID: 2664
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 12)]
 		protected ref struct __SetWatchingBoidAndJoinGroup_FunctionParams
 		{
-			// Token: 0x04016AB5 RID: 92853
+			// Token: 0x04005A84 RID: 23172
 			[FieldOffset(0)]
 			public int BoidId;
 
-			// Token: 0x04016AB6 RID: 92854
+			// Token: 0x04005A85 RID: 23173
 			[FieldOffset(4)]
 			public int WatchingBoidId;
 
-			// Token: 0x04016AB7 RID: 92855
+			// Token: 0x04005A86 RID: 23174
 			[FieldOffset(8)]
 			public int __Result;
 		}
 
-		// Token: 0x02002F38 RID: 12088
+		// Token: 0x02000A69 RID: 2665
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __SetBoidTransform_FunctionParams
 		{
-			// Token: 0x04016AB8 RID: 92856
+			// Token: 0x04005A87 RID: 23175
 			[FieldOffset(0)]
 			public int BoidId;
 
-			// Token: 0x04016AB9 RID: 92857
+			// Token: 0x04005A88 RID: 23176
 			[FieldOffset(16)]
 			public FTransform NewTransform;
 
-			// Token: 0x04016ABA RID: 92858
+			// Token: 0x04005A89 RID: 23177
 			[FieldOffset(64)]
 			public bool bTeleport;
 
-			// Token: 0x04016ABB RID: 92859
+			// Token: 0x04005A8A RID: 23178
 			[FieldOffset(65)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002F39 RID: 12089
+		// Token: 0x02000A6A RID: 2666
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 20)]
 		protected ref struct __SetBoidScale_FunctionParams
 		{
-			// Token: 0x04016ABC RID: 92860
+			// Token: 0x04005A8B RID: 23179
 			[FieldOffset(0)]
 			public int BoidId;
 
-			// Token: 0x04016ABD RID: 92861
+			// Token: 0x04005A8C RID: 23180
 			[FieldOffset(4)]
 			public FVector NewScale;
 
-			// Token: 0x04016ABE RID: 92862
+			// Token: 0x04005A8D RID: 23181
 			[FieldOffset(16)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002F3A RID: 12090
+		// Token: 0x02000A6B RID: 2667
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __SetBoidControlledByCrowdAi_FunctionParams
 		{
-			// Token: 0x04016ABF RID: 92863
+			// Token: 0x04005A8E RID: 23182
 			[FieldOffset(0)]
 			public int BoidId;
 
-			// Token: 0x04016AC0 RID: 92864
+			// Token: 0x04005A8F RID: 23183
 			[FieldOffset(4)]
 			public bool Enable;
 
-			// Token: 0x04016AC1 RID: 92865
+			// Token: 0x04005A90 RID: 23184
 			[FieldOffset(5)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002F3B RID: 12091
+		// Token: 0x02000A6C RID: 2668
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
 		protected ref struct __SetBoidAppearanceInfo_FunctionParams
 		{
-			// Token: 0x04016AC2 RID: 92866
+			// Token: 0x04005A91 RID: 23185
 			[FieldOffset(0)]
 			public int BoidId;
 
-			// Token: 0x04016AC3 RID: 92867
+			// Token: 0x04005A92 RID: 23186
 			[FieldOffset(8)]
 			public byte CustomDataArray;
 
-			// Token: 0x04016AC4 RID: 92868
+			// Token: 0x04005A93 RID: 23187
 			[FieldOffset(24)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002F3C RID: 12092
+		// Token: 0x02000A6D RID: 2669
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __RemoveBoid_FunctionParams
 		{
-			// Token: 0x04016AC5 RID: 92869
+			// Token: 0x04005A94 RID: 23188
 			[FieldOffset(0)]
 			public int BoidId;
 
-			// Token: 0x04016AC6 RID: 92870
+			// Token: 0x04005A95 RID: 23189
 			[FieldOffset(4)]
 			public bool bForce;
 
-			// Token: 0x04016AC7 RID: 92871
+			// Token: 0x04005A96 RID: 23190
 			[FieldOffset(5)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002F3D RID: 12093
+		// Token: 0x02000A6E RID: 2670
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 36)]
 		protected ref struct __QueryUsablePositionForBoid_FunctionParams
 		{
-			// Token: 0x04016AC8 RID: 92872
+			// Token: 0x04005A97 RID: 23191
 			[FieldOffset(0)]
 			public FVector QueryPosition;
 
-			// Token: 0x04016AC9 RID: 92873
+			// Token: 0x04005A98 RID: 23192
 			[FieldOffset(12)]
 			public float QueryRadius;
 
-			// Token: 0x04016ACA RID: 92874
+			// Token: 0x04005A99 RID: 23193
 			[FieldOffset(16)]
 			public float BoidRadius;
 
-			// Token: 0x04016ACB RID: 92875
+			// Token: 0x04005A9A RID: 23194
 			[FieldOffset(20)]
 			public int MaxTryCount;
 
-			// Token: 0x04016ACC RID: 92876
+			// Token: 0x04005A9B RID: 23195
 			[FieldOffset(24)]
 			public FVector __Result;
 		}
 
-		// Token: 0x02002F3E RID: 12094
+		// Token: 0x02000A6F RID: 2671
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 12)]
 		protected ref struct __NotifyBoidsMoveTo_FunctionParams
 		{
-			// Token: 0x04016ACD RID: 92877
+			// Token: 0x04005A9C RID: 23196
 			[FieldOffset(0)]
 			public FVector NewLocation;
 		}
 
-		// Token: 0x02002F3F RID: 12095
+		// Token: 0x02000A70 RID: 2672
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetBoidVelocity_FunctionParams
 		{
-			// Token: 0x04016ACE RID: 92878
+			// Token: 0x04005A9D RID: 23197
 			[FieldOffset(0)]
 			public int BoidId;
 
-			// Token: 0x04016ACF RID: 92879
+			// Token: 0x04005A9E RID: 23198
 			[FieldOffset(4)]
 			public FVector __Result;
 		}
 
-		// Token: 0x02002F40 RID: 12096
+		// Token: 0x02000A71 RID: 2673
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 64)]
 		protected ref struct __GetBoidTransform_FunctionParams
 		{
-			// Token: 0x04016AD0 RID: 92880
+			// Token: 0x04005A9F RID: 23199
 			[FieldOffset(0)]
 			public int BoidId;
 
-			// Token: 0x04016AD1 RID: 92881
+			// Token: 0x04005AA0 RID: 23200
 			[FieldOffset(16)]
 			public FTransform __Result;
 		}
 
-		// Token: 0x02002F41 RID: 12097
+		// Token: 0x02000A72 RID: 2674
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetBoidLastVelocity_FunctionParams
 		{
-			// Token: 0x04016AD2 RID: 92882
+			// Token: 0x04005AA1 RID: 23201
 			[FieldOffset(0)]
 			public int BoidId;
 
-			// Token: 0x04016AD3 RID: 92883
+			// Token: 0x04005AA2 RID: 23202
 			[FieldOffset(4)]
 			public FVector __Result;
 		}
 
-		// Token: 0x02002F42 RID: 12098
+		// Token: 0x02000A73 RID: 2675
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 64)]
 		protected ref struct __GetBoidLastTransform_FunctionParams
 		{
-			// Token: 0x04016AD4 RID: 92884
+			// Token: 0x04005AA3 RID: 23203
 			[FieldOffset(0)]
 			public int BoidId;
 
-			// Token: 0x04016AD5 RID: 92885
+			// Token: 0x04005AA4 RID: 23204
 			[FieldOffset(16)]
 			public FTransform __Result;
 		}
 
-		// Token: 0x02002F43 RID: 12099
+		// Token: 0x02000A74 RID: 2676
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __GetBoidGroupId_FunctionParams
 		{
-			// Token: 0x04016AD6 RID: 92886
+			// Token: 0x04005AA5 RID: 23205
 			[FieldOffset(0)]
 			public int BoidId;
 
-			// Token: 0x04016AD7 RID: 92887
+			// Token: 0x04005AA6 RID: 23206
 			[FieldOffset(4)]
 			public int __Result;
 		}
 
-		// Token: 0x02002F44 RID: 12100
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 16)]
-		protected ref struct __GetBoidAnimUpdater_FunctionParams
-		{
-			// Token: 0x04016AD8 RID: 92888
-			[FieldOffset(0)]
-			public int BoidId;
-
-			// Token: 0x04016AD9 RID: 92889
-			[FieldOffset(8)]
-			public IntPtr __Result;
-		}
-
-		// Token: 0x02002F45 RID: 12101
+		// Token: 0x02000A75 RID: 2677
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetAllGroupIds_FunctionParams
 		{
-			// Token: 0x04016ADA RID: 92890
+			// Token: 0x04005AA7 RID: 23207
 			[FieldOffset(0)]
 			public byte OutGroupIds;
 		}
 
-		// Token: 0x02002F46 RID: 12102
+		// Token: 0x02000A76 RID: 2678
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __EnableDebugMode_FunctionParams
 		{
-			// Token: 0x04016ADB RID: 92891
+			// Token: 0x04005AA8 RID: 23208
 			[FieldOffset(0)]
 			public bool Enable;
 		}
 
-		// Token: 0x02002F47 RID: 12103
+		// Token: 0x02000A77 RID: 2679
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __EnableBoidIdlePerform_FunctionParams
 		{
-			// Token: 0x04016ADC RID: 92892
+			// Token: 0x04005AA9 RID: 23209
 			[FieldOffset(0)]
 			public int BoidId;
 
-			// Token: 0x04016ADD RID: 92893
+			// Token: 0x04005AAA RID: 23210
 			[FieldOffset(4)]
 			public bool bEnable;
 		}
 
-		// Token: 0x02002F48 RID: 12104
+		// Token: 0x02000A78 RID: 2680
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 12)]
 		protected ref struct __ChangeGroupWatchingBoid_FunctionParams
 		{
-			// Token: 0x04016ADE RID: 92894
+			// Token: 0x04005AAB RID: 23211
 			[FieldOffset(0)]
 			public int GroupId;
 
-			// Token: 0x04016ADF RID: 92895
+			// Token: 0x04005AAC RID: 23212
 			[FieldOffset(4)]
 			public int BoidId;
 
-			// Token: 0x04016AE0 RID: 92896
+			// Token: 0x04005AAD RID: 23213
 			[FieldOffset(8)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002F49 RID: 12105
+		// Token: 0x02000A79 RID: 2681
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 12)]
 		protected ref struct __BoidStopAnimation_FunctionParams
 		{
-			// Token: 0x04016AE1 RID: 92897
+			// Token: 0x04005AAE RID: 23214
 			[FieldOffset(0)]
 			public int BoidId;
 
-			// Token: 0x04016AE2 RID: 92898
+			// Token: 0x04005AAF RID: 23215
 			[FieldOffset(4)]
 			public int AnimIndex;
 
-			// Token: 0x04016AE3 RID: 92899
+			// Token: 0x04005AB0 RID: 23216
 			[FieldOffset(8)]
 			public bool bImmediately;
 
-			// Token: 0x04016AE4 RID: 92900
+			// Token: 0x04005AB1 RID: 23217
 			[FieldOffset(9)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002F4A RID: 12106
+		// Token: 0x02000A7A RID: 2682
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 20)]
 		protected ref struct __BoidPlayAnimation_FunctionParams
 		{
-			// Token: 0x04016AE5 RID: 92901
+			// Token: 0x04005AB2 RID: 23218
 			[FieldOffset(0)]
 			public int BoidId;
 
-			// Token: 0x04016AE6 RID: 92902
+			// Token: 0x04005AB3 RID: 23219
 			[FieldOffset(4)]
 			public int AnimIndex;
 
-			// Token: 0x04016AE7 RID: 92903
+			// Token: 0x04005AB4 RID: 23220
 			[FieldOffset(8)]
 			public float PlayRate;
 
-			// Token: 0x04016AE8 RID: 92904
+			// Token: 0x04005AB5 RID: 23221
 			[FieldOffset(12)]
 			public float StartPos;
 
-			// Token: 0x04016AE9 RID: 92905
+			// Token: 0x04005AB6 RID: 23222
 			[FieldOffset(16)]
 			public bool bIsLoop;
 
-			// Token: 0x04016AEA RID: 92906
+			// Token: 0x04005AB7 RID: 23223
 			[FieldOffset(17)]
 			public bool __Result;
 		}

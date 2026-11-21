@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.InputSetting
 {
-	// Token: 0x02007008 RID: 28680
+	// Token: 0x02006189 RID: 24969
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InputActionMapping
 	{
-		// Token: 0x06045C96 RID: 285846 RVA: 0x0115A85C File Offset: 0x01158A5C
+		// Token: 0x0603BE4C RID: 245324 RVA: 0x01104C68 File Offset: 0x01102E68
 		public void Initialize()
 		{
 			IReadOnlyList<ActionMapping> allActionMappingConfig = InputSettingsConfig.Instance.GetAllActionMappingConfig();
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045C97 RID: 285847 RVA: 0x0115A898 File Offset: 0x01158A98
+		// Token: 0x0603BE4D RID: 245325 RVA: 0x01104CA4 File Offset: 0x01102EA4
 		public void Clear()
 		{
 			foreach (InputActionBinding inputActionBinding in this.ActionBindingMap.Values)
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.InputSetting
 			this.ActionBindingTypeMapping.Clear();
 		}
 
-		// Token: 0x06045C98 RID: 285848 RVA: 0x0115A910 File Offset: 0x01158B10
+		// Token: 0x0603BE4E RID: 245326 RVA: 0x01104D1C File Offset: 0x01102F1C
 		public void NewActionBinding(ActionMapping config)
 		{
 			string actionName = config.ActionName;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.InputSetting
 			hashSet.Add(inputActionBinding);
 		}
 
-		// Token: 0x06045C99 RID: 285849 RVA: 0x0115A988 File Offset: 0x01158B88
+		// Token: 0x0603BE4F RID: 245327 RVA: 0x01104D94 File Offset: 0x01102F94
 		public void RemoveActionBinding(string actionName)
 		{
 			InputActionBinding inputActionBinding;
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.InputSetting
 			inputActionBinding.Clear();
 		}
 
-		// Token: 0x06045C9A RID: 285850 RVA: 0x0115A9EC File Offset: 0x01158BEC
+		// Token: 0x0603BE50 RID: 245328 RVA: 0x01104DF8 File Offset: 0x01102FF8
 		public void ClearAllActionKeys()
 		{
 			foreach (InputActionBinding inputActionBinding in this.ActionBindingMap.Values)
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045C9B RID: 285851 RVA: 0x0115AA44 File Offset: 0x01158C44
+		// Token: 0x0603BE51 RID: 245329 RVA: 0x01104E50 File Offset: 0x01103050
 		[return: Nullable(2)]
 		public InputActionBinding GetActionBinding(string actionName)
 		{
@@ -99,13 +99,13 @@ namespace CSharpScript.Game.InputSetting
 			return null;
 		}
 
-		// Token: 0x06045C9C RID: 285852 RVA: 0x0115AA64 File Offset: 0x01158C64
+		// Token: 0x0603BE52 RID: 245330 RVA: 0x01104E70 File Offset: 0x01103070
 		public Dictionary<string, InputActionBinding> GetActionBindingMap()
 		{
 			return this.ActionBindingMap;
 		}
 
-		// Token: 0x06045C9D RID: 285853 RVA: 0x0115AA6C File Offset: 0x01158C6C
+		// Token: 0x0603BE53 RID: 245331 RVA: 0x01104E78 File Offset: 0x01103078
 		[NullableContext(2)]
 		public InputActionBinding GetActionBindingByConfigId(int configId)
 		{
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.InputSetting
 			return null;
 		}
 
-		// Token: 0x06045C9E RID: 285854 RVA: 0x0115AA8C File Offset: 0x01158C8C
+		// Token: 0x0603BE54 RID: 245332 RVA: 0x01104E98 File Offset: 0x01103098
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.InputSetting
 			return null;
 		}
 
-		// Token: 0x06045C9F RID: 285855 RVA: 0x0115AAAC File Offset: 0x01158CAC
+		// Token: 0x0603BE55 RID: 245333 RVA: 0x01104EB8 File Offset: 0x011030B8
 		public void SetKeys(string actionName, List<string> keys, EInputBindingType bindingType)
 		{
 			InputActionBinding inputActionBinding;
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.InputSetting
 			EventSystem.Instance.Emit<string, InputActionBinding>(EEventName.OnChangedActionKeys, actionName, inputActionBinding);
 		}
 
-		// Token: 0x06045CA0 RID: 285856 RVA: 0x0115AB0C File Offset: 0x01158D0C
+		// Token: 0x0603BE56 RID: 245334 RVA: 0x01104F18 File Offset: 0x01103118
 		public void RefreshKeysByActionMappings(string actionName, TArray<FInputActionKeyMapping> actionMappings, EInputBindingType bindingType)
 		{
 			InputActionBinding inputActionBinding;
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.InputSetting
 			EventSystem.Instance.Emit<string, InputActionBinding>(EEventName.OnChangedActionKeys, actionName, inputActionBinding);
 		}
 
-		// Token: 0x06045CA1 RID: 285857 RVA: 0x0115AB6C File Offset: 0x01158D6C
+		// Token: 0x0603BE57 RID: 245335 RVA: 0x01104F78 File Offset: 0x01103178
 		public void ResetAllActionBindingStates()
 		{
 			foreach (InputActionBinding inputActionBinding in this.ActionBindingMap.Values)
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045CA2 RID: 285858 RVA: 0x0115ABC4 File Offset: 0x01158DC4
+		// Token: 0x0603BE58 RID: 245336 RVA: 0x01104FD0 File Offset: 0x011031D0
 		public void SwitchKeysByBindingType(EInputBindingType bindingType)
 		{
 			foreach (InputActionBinding inputActionBinding in this.ActionBindingMap.Values)
@@ -187,13 +187,13 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x040247F8 RID: 149496
+		// Token: 0x0401FAAE RID: 129710
 		private readonly Dictionary<string, InputActionBinding> ActionBindingMap = new Dictionary<string, InputActionBinding>();
 
-		// Token: 0x040247F9 RID: 149497
+		// Token: 0x0401FAAF RID: 129711
 		private readonly Dictionary<int, InputActionBinding> ActionBindingIdMapping = new Dictionary<int, InputActionBinding>();
 
-		// Token: 0x040247FA RID: 149498
+		// Token: 0x0401FAB0 RID: 129712
 		private readonly Dictionary<EActionMappingType, HashSet<InputActionBinding>> ActionBindingTypeMapping = new Dictionary<EActionMappingType, HashSet<InputActionBinding>>();
 	}
 }

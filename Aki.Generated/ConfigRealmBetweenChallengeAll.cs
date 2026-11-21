@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020007B2 RID: 1970
+	// Token: 0x020007CC RID: 1996
 	public class ConfigRealmBetweenChallengeAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002E3E RID: 11838 RVA: 0x0015EBBC File Offset: 0x0015CDBC
+		// Token: 0x06002EDA RID: 11994 RVA: 0x00165AC8 File Offset: 0x00163CC8
 		static ConfigRealmBetweenChallengeAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRealmBetweenChallengeAll.CreateStaticDefaultValue), new Action(ConfigRealmBetweenChallengeAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002E3F RID: 11839 RVA: 0x0015EBDC File Offset: 0x0015CDDC
+		// Token: 0x06002EDB RID: 11995 RVA: 0x00165AE8 File Offset: 0x00163CE8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRealmBetweenChallengeAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002E40 RID: 11840 RVA: 0x0015EC5B File Offset: 0x0015CE5B
+		// Token: 0x06002EDC RID: 11996 RVA: 0x00165B67 File Offset: 0x00163D67
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRealmBetweenChallengeAll.LogPair = null;
 			ConfigRealmBetweenChallengeAll.HandleId = 0;
 		}
 
-		// Token: 0x06002E41 RID: 11841 RVA: 0x0015EC69 File Offset: 0x0015CE69
+		// Token: 0x06002EDD RID: 11997 RVA: 0x00165B75 File Offset: 0x00163D75
 		public static void Init()
 		{
 			ConfigRealmBetweenChallengeAll.HandleId = ConfigCommon.InitDataStatement(ConfigRealmBetweenChallengeAll.HandleId, "db_realmbetween.db", "select BinData from `RealmBetweenChallenge`");
 		}
 
-		// Token: 0x06002E42 RID: 11842 RVA: 0x0015EC84 File Offset: 0x0015CE84
+		// Token: 0x06002EDE RID: 11998 RVA: 0x00165B90 File Offset: 0x00163D90
 		[NullableContext(2)]
 		public static IReadOnlyList<RealmBetweenChallenge> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040035C4 RID: 13764
+		// Token: 0x0400367A RID: 13946
 		private const string DB = "db_realmbetween.db";
 
-		// Token: 0x040035C5 RID: 13765
+		// Token: 0x0400367B RID: 13947
 		private const string FILE = "q.千岛路书3.5.xlsx";
 
-		// Token: 0x040035C6 RID: 13766
+		// Token: 0x0400367C RID: 13948
 		private const string TABLE = "RealmBetweenChallenge";
 
-		// Token: 0x040035C7 RID: 13767
+		// Token: 0x0400367D RID: 13949
 		private const string COMMAND = "select BinData from `RealmBetweenChallenge`";
 
-		// Token: 0x040035C8 RID: 13768
+		// Token: 0x0400367E RID: 13950
 		private const string KEY_PREFIX = "RealmBetweenChallengeAll";
 
-		// Token: 0x040035C9 RID: 13769
+		// Token: 0x0400367F RID: 13951
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040035CA RID: 13770
+		// Token: 0x04003680 RID: 13952
 		private static int HandleId;
 	}
 }

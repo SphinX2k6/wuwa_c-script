@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001BF5 RID: 7157
+// Token: 0x020010B4 RID: 4276
 [NullableContext(2)]
 [Nullable(0)]
 public class FormationExtensionsData
 {
-	// Token: 0x0600D549 RID: 54601 RVA: 0x0031204D File Offset: 0x0031024D
+	// Token: 0x0600A95C RID: 43356 RVA: 0x0031D301 File Offset: 0x0031B501
 	public void Clear()
 	{
 		this.DangoExtensionData = null;
@@ -14,12 +14,12 @@ public class FormationExtensionsData
 		this.TrialRoleExtensionData = null;
 	}
 
-	// Token: 0x040061B1 RID: 25009
+	// Token: 0x04006283 RID: 25219
 	public object DangoExtensionData;
 
-	// Token: 0x040061B2 RID: 25010
+	// Token: 0x04006284 RID: 25220
 	public object PhantomExtensionData;
 
-	// Token: 0x040061B3 RID: 25011
+	// Token: 0x04006285 RID: 25221
 	public object TrialRoleExtensionData;
 }

@@ -7,17 +7,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x02006122 RID: 24866
+	// Token: 0x020050A0 RID: 20640
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoverlikeOutsideEntryGridItem : MediumItemGrid, ISyncGridProxy<RoverlikeGainEntry>, ISyncGridProxy
 	{
-		// Token: 0x1700918B RID: 37259
-		// (get) Token: 0x0603EDEB RID: 257515 RVA: 0x00F2F17E File Offset: 0x00F2D37E
-		// (set) Token: 0x0603EDEC RID: 257516 RVA: 0x00F2F186 File Offset: 0x00F2D386
+		// Token: 0x170064ED RID: 25837
+		// (get) Token: 0x06033AAD RID: 211629 RVA: 0x00E75F92 File Offset: 0x00E74192
+		// (set) Token: 0x06033AAE RID: 211630 RVA: 0x00E75F9A File Offset: 0x00E7419A
 		public int GridIndex { get; set; }
 
-		// Token: 0x0603EDED RID: 257517 RVA: 0x00F2F18F File Offset: 0x00F2D38F
+		// Token: 0x06033AAF RID: 211631 RVA: 0x00E75FA3 File Offset: 0x00E741A3
 		protected override void OnStart()
 		{
 			this.GetItemGridExtendToggle().bLockStateOnSelect = true;
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			base.SetUseFixedAsync(true);
 		}
 
-		// Token: 0x0603EDEE RID: 257518 RVA: 0x00F2F1B8 File Offset: 0x00F2D3B8
+		// Token: 0x06033AB0 RID: 211632 RVA: 0x00E75FCC File Offset: 0x00E741CC
 		public void Refresh(RoverlikeGainEntry data)
 		{
 			this.CollectData = data;
@@ -44,38 +44,38 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.SetToggleStateInternal(toggleStateInternal);
 		}
 
-		// Token: 0x0603EDEF RID: 257519 RVA: 0x00F2F23B File Offset: 0x00F2D43B
+		// Token: 0x06033AB1 RID: 211633 RVA: 0x00E7604F File Offset: 0x00E7424F
 		void ISyncGridProxy.Refresh(object data)
 		{
 			this.Refresh((RoverlikeGainEntry)data);
 		}
 
-		// Token: 0x0603EDF0 RID: 257520 RVA: 0x00F2F249 File Offset: 0x00F2D449
+		// Token: 0x06033AB2 RID: 211634 RVA: 0x00E7605D File Offset: 0x00E7425D
 		void ISyncGridProxy.CreateByActor(AActor actor)
 		{
 			base.CreateByActor(actor, null);
 		}
 
-		// Token: 0x0603EDF1 RID: 257521 RVA: 0x00F2F253 File Offset: 0x00F2D453
+		// Token: 0x06033AB3 RID: 211635 RVA: 0x00E76067 File Offset: 0x00E74267
 		void ISyncGridProxy.CreateThenShowByActor(AActor actor)
 		{
 			base.CreateThenShowByActor(actor, null);
 		}
 
-		// Token: 0x0603EDF2 RID: 257522 RVA: 0x00F2F25D File Offset: 0x00F2D45D
+		// Token: 0x06033AB4 RID: 211636 RVA: 0x00E76071 File Offset: 0x00E74271
 		public void Clear()
 		{
 			this.CollectData = null;
 		}
 
-		// Token: 0x0603EDF3 RID: 257523 RVA: 0x00F2F268 File Offset: 0x00F2D468
+		// Token: 0x06033AB5 RID: 211637 RVA: 0x00E7607C File Offset: 0x00E7427C
 		public void SetToggleStateInternal(bool selected)
 		{
 			EToggleState state = selected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 			this.GetItemGridExtendToggle().SetToggleState(state, false, false, false);
 		}
 
-		// Token: 0x0603EDF4 RID: 257524 RVA: 0x00F2F290 File Offset: 0x00F2D490
+		// Token: 0x06033AB6 RID: 211638 RVA: 0x00E760A4 File Offset: 0x00E742A4
 		private void FillGridParams(PropMediumItemGrid params_, RoverlikeGainEntry data)
 		{
 			switch (data.Type)
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EDF5 RID: 257525 RVA: 0x00F2F41A File Offset: 0x00F2D61A
+		// Token: 0x06033AB7 RID: 211639 RVA: 0x00E7622E File Offset: 0x00E7442E
 		private void OnToggleStateChanged(MediumItemGridExtendCallback parameters)
 		{
 			if (this.CollectData != null)
@@ -144,11 +144,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x04020D37 RID: 134455
+		// Token: 0x0401B664 RID: 112228
 		[Nullable(2)]
 		public RoverlikeGainEntry CollectData;
 
-		// Token: 0x04020D38 RID: 134456
+		// Token: 0x0401B665 RID: 112229
 		[Nullable(new byte[]
 		{
 			2,
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		public Action<RoverlikeGainEntry, int> OnClickCb;
 
-		// Token: 0x04020D39 RID: 134457
+		// Token: 0x0401B666 RID: 112230
 		[Nullable(new byte[]
 		{
 			2,
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		public Func<RoverlikeGainEntry, int, bool> IsGridSelected;
 
-		// Token: 0x04020D3A RID: 134458
+		// Token: 0x0401B667 RID: 112231
 		[Nullable(new byte[]
 		{
 			2,

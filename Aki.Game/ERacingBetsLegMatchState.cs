@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x020026E8 RID: 9960
+// Token: 0x02001BD3 RID: 7123
 public enum ERacingBetsLegMatchState
 {
-	// Token: 0x0400999E RID: 39326
+	// Token: 0x04009AF6 RID: 39670
 	NotOpen,
-	// Token: 0x0400999F RID: 39327
+	// Token: 0x04009AF7 RID: 39671
 	BettingPeriod,
-	// Token: 0x040099A0 RID: 39328
+	// Token: 0x04009AF8 RID: 39672
 	EndOfBetting,
-	// Token: 0x040099A1 RID: 39329
+	// Token: 0x04009AF9 RID: 39673
 	MatchPeriod,
-	// Token: 0x040099A2 RID: 39330
+	// Token: 0x04009AFA RID: 39674
 	EndOfMatch,
-	// Token: 0x040099A3 RID: 39331
+	// Token: 0x04009AFB RID: 39675
 	End
 }

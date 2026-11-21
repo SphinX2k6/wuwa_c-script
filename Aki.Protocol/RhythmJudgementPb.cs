@@ -3,22 +3,22 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001628 RID: 5672
+	// Token: 0x0200169B RID: 5787
 	public enum RhythmJudgementPb
 	{
-		// Token: 0x0400C032 RID: 49202
+		// Token: 0x0400C52C RID: 50476
 		[OriginalName("Perfect")]
 		Perfect,
-		// Token: 0x0400C033 RID: 49203
+		// Token: 0x0400C52D RID: 50477
 		[OriginalName("Great")]
 		Great,
-		// Token: 0x0400C034 RID: 49204
+		// Token: 0x0400C52E RID: 50478
 		[OriginalName("Good")]
 		Good,
-		// Token: 0x0400C035 RID: 49205
+		// Token: 0x0400C52F RID: 50479
 		[OriginalName("Bad")]
 		Bad,
-		// Token: 0x0400C036 RID: 49206
+		// Token: 0x0400C530 RID: 50480
 		[OriginalName("Miss")]
 		Miss
 	}

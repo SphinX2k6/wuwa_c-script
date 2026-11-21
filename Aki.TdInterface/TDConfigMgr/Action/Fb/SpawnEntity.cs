@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200261E RID: 9758
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020028DE RID: 10462
 	public class SpawnEntity : ActionParams
 	{
-		// Token: 0x0600DB15 RID: 56085 RVA: 0x0020A147 File Offset: 0x00208347
+		// Token: 0x0600E8E3 RID: 59619 RVA: 0x00226913 File Offset: 0x00224B13
 		public static SpawnEntity Create(ISpawnEntity? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700409B RID: 16539
-		// (get) Token: 0x0600DB16 RID: 56086 RVA: 0x0020A166 File Offset: 0x00208366
+		// Token: 0x170043D5 RID: 17365
+		// (get) Token: 0x0600E8E4 RID: 59620 RVA: 0x00226932 File Offset: 0x00224B32
 		public virtual int EntityDataId
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700409C RID: 16540
-		// (get) Token: 0x0600DB17 RID: 56087 RVA: 0x0020A173 File Offset: 0x00208373
+		// Token: 0x170043D6 RID: 17366
+		// (get) Token: 0x0600E8E5 RID: 59621 RVA: 0x0022693F File Offset: 0x00224B3F
 		public virtual ITransform Transform
 		{
 			get
@@ -49,8 +47,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700409D RID: 16541
-		// (get) Token: 0x0600DB18 RID: 56088 RVA: 0x0020A1A7 File Offset: 0x002083A7
+		// Token: 0x170043D7 RID: 17367
+		// (get) Token: 0x0600E8E6 RID: 59622 RVA: 0x00226973 File Offset: 0x00224B73
 		public virtual VarRef Save
 		{
 			get
@@ -65,20 +63,20 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040079B8 RID: 31160
+		// Token: 0x04008054 RID: 32852
 		private ISpawnEntity Instance;
 
-		// Token: 0x040079B9 RID: 31161
+		// Token: 0x04008055 RID: 32853
 		[Nullable(2)]
 		private ITransform _TransformCache;
 
-		// Token: 0x040079BA RID: 31162
+		// Token: 0x04008056 RID: 32854
 		private bool _TransformInited;
 
-		// Token: 0x040079BB RID: 31163
+		// Token: 0x04008057 RID: 32855
 		private VarRef _SaveCache;
 
-		// Token: 0x040079BC RID: 31164
+		// Token: 0x04008058 RID: 32856
 		private bool _SaveInited;
 	}
 }

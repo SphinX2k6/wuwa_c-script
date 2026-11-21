@@ -3,23 +3,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 {
-	// Token: 0x020063C3 RID: 25539
+	// Token: 0x02005341 RID: 21313
 	[NullableContext(1)]
 	public interface IMowingRiskInstanceRecommendData
 	{
-		// Token: 0x170093CD RID: 37837
-		// (get) Token: 0x060403FB RID: 263163
-		// (set) Token: 0x060403FC RID: 263164
+		// Token: 0x1700672F RID: 26415
+		// (get) Token: 0x060350BC RID: 217276
+		// (set) Token: 0x060350BD RID: 217277
 		string TextId { get; set; }
 
-		// Token: 0x170093CE RID: 37838
-		// (get) Token: 0x060403FD RID: 263165
-		// (set) Token: 0x060403FE RID: 263166
+		// Token: 0x17006730 RID: 26416
+		// (get) Token: 0x060350BE RID: 217278
+		// (set) Token: 0x060350BF RID: 217279
 		string[] TextArgs { get; set; }
 
-		// Token: 0x170093CF RID: 37839
-		// (get) Token: 0x060403FF RID: 263167
-		// (set) Token: 0x06040400 RID: 263168
+		// Token: 0x17006731 RID: 26417
+		// (get) Token: 0x060350C0 RID: 217280
+		// (set) Token: 0x060350C1 RID: 217281
 		int RecommendLevel { get; set; }
 	}
 }

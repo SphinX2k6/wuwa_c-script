@@ -2,11 +2,11 @@
 
 namespace CSharpScript.Game.Module.Plot
 {
-	// Token: 0x02004FD4 RID: 20436
+	// Token: 0x02003F9E RID: 16286
 	public class CameraParam
 	{
-		// Token: 0x17007FB7 RID: 32695
-		// (get) Token: 0x060344BA RID: 214202 RVA: 0x00C47BD2 File Offset: 0x00C45DD2
+		// Token: 0x1700536B RID: 21355
+		// (get) Token: 0x0602933F RID: 168767 RVA: 0x00B9192F File Offset: 0x00B8FB2F
 		public bool ApertureEnable
 		{
 			get
@@ -15,8 +15,8 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x17007FB8 RID: 32696
-		// (get) Token: 0x060344BB RID: 214203 RVA: 0x00C47BE0 File Offset: 0x00C45DE0
+		// Token: 0x1700536C RID: 21356
+		// (get) Token: 0x06029340 RID: 168768 RVA: 0x00B9193C File Offset: 0x00B8FB3C
 		public bool FocalLengthEnable
 		{
 			get
@@ -31,8 +31,8 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x17007FB9 RID: 32697
-		// (get) Token: 0x060344BC RID: 214204 RVA: 0x00C47C22 File Offset: 0x00C45E22
+		// Token: 0x1700536D RID: 21357
+		// (get) Token: 0x06029341 RID: 168769 RVA: 0x00B9197E File Offset: 0x00B8FB7E
 		public bool FocusDistanceEnable
 		{
 			get
@@ -41,8 +41,8 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x17007FBA RID: 32698
-		// (get) Token: 0x060344BD RID: 214205 RVA: 0x00C47C2F File Offset: 0x00C45E2F
+		// Token: 0x1700536E RID: 21358
+		// (get) Token: 0x06029342 RID: 168770 RVA: 0x00B9198B File Offset: 0x00B8FB8B
 		public bool FocalRegionEnable
 		{
 			get
@@ -51,16 +51,16 @@ namespace CSharpScript.Game.Module.Plot
 			}
 		}
 
-		// Token: 0x0401BD03 RID: 113923
+		// Token: 0x040166DE RID: 91870
 		public double? Aperture;
 
-		// Token: 0x0401BD04 RID: 113924
+		// Token: 0x040166DF RID: 91871
 		public double? FocalLength = new double?(0.0);
 
-		// Token: 0x0401BD05 RID: 113925
+		// Token: 0x040166E0 RID: 91872
 		public double? FocusDistance = new double?(0.0);
 
-		// Token: 0x0401BD06 RID: 113926
+		// Token: 0x040166E1 RID: 91873
 		public double? FocalRegion = new double?(0.0);
 	}
 }

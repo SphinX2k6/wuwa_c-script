@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001967 RID: 6503
+	// Token: 0x02001AF2 RID: 6898
 	public class IDartChampionOwnerInteractType_SetValue
 	{
-		// Token: 0x040056EF RID: 22255
+		// Token: 0x04005B43 RID: 23363
 		public EDartInteractType Type;
 
-		// Token: 0x040056F0 RID: 22256
+		// Token: 0x04005B44 RID: 23364
 		public int CompetitorId;
 	}
 }

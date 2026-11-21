@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005CFD RID: 23805
+	// Token: 0x02006331 RID: 25393
 	public enum EHonamiStoryRoleSlot : byte
 	{
-		// Token: 0x0400F65C RID: 63068
+		// Token: 0x040103AB RID: 66475
 		None,
-		// Token: 0x0400F65D RID: 63069
+		// Token: 0x040103AC RID: 66476
 		SlotOne,
-		// Token: 0x0400F65E RID: 63070
+		// Token: 0x040103AD RID: 66477
 		SlotTwo,
-		// Token: 0x0400F65F RID: 63071
+		// Token: 0x040103AE RID: 66478
 		SlotThree
 	}
 }

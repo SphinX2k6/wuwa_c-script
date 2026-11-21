@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009A2 RID: 2466
+	// Token: 0x02000A57 RID: 2647
 	public static class EMotorAutoEjectTypeExtensions
 	{
-		// Token: 0x0600370A RID: 14090 RVA: 0x0008F26C File Offset: 0x0008D46C
+		// Token: 0x06003A9A RID: 15002 RVA: 0x00097330 File Offset: 0x00095530
 		public static string ToEnumString(this EMotorAutoEjectType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600370B RID: 14091 RVA: 0x0008F2A4 File Offset: 0x0008D4A4
+		// Token: 0x06003A9B RID: 15003 RVA: 0x00097368 File Offset: 0x00095568
 		public static EMotorAutoEjectType FromString(string name)
 		{
 			EMotorAutoEjectType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600370C RID: 14092 RVA: 0x0008F2CD File Offset: 0x0008D4CD
+		// Token: 0x06003A9C RID: 15004 RVA: 0x00097391 File Offset: 0x00095591
 		public static bool TryFromString(string name, out EMotorAutoEjectType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x0600370D RID: 14093 RVA: 0x0008F306 File Offset: 0x0008D506
+		// Token: 0x06003A9D RID: 15005 RVA: 0x000973CA File Offset: 0x000955CA
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600370E RID: 14094 RVA: 0x0008F31E File Offset: 0x0008D51E
+		// Token: 0x06003A9E RID: 15006 RVA: 0x000973E2 File Offset: 0x000955E2
 		public static EMotorAutoEjectType[] GetValues()
 		{
 			return new EMotorAutoEjectType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600370F RID: 14095 RVA: 0x0008F32A File Offset: 0x0008D52A
+		// Token: 0x06003A9F RID: 15007 RVA: 0x000973EE File Offset: 0x000955EE
 		public static string[] GetNames()
 		{
 			return new string[]

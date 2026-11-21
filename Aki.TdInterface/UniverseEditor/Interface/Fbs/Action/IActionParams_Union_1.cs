@@ -2,392 +2,422 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200608C RID: 24716
+	// Token: 0x020066EE RID: 26350
 	public enum IActionParams_Union_1 : byte
 	{
-		// Token: 0x04010366 RID: 66406
+		// Token: 0x0401115B RID: 69979
 		NONE,
-		// Token: 0x04010367 RID: 66407
+		// Token: 0x0401115C RID: 69980
+		IEnterOrbitalCamera,
+		// Token: 0x0401115D RID: 69981
+		IExitOrbitalCamera,
+		// Token: 0x0401115E RID: 69982
+		IEnableSplineMoveModel,
+		// Token: 0x0401115F RID: 69983
+		IEnableActor,
+		// Token: 0x04011160 RID: 69984
 		ISetSportsState,
-		// Token: 0x04010368 RID: 66408
+		// Token: 0x04011161 RID: 69985
 		ISetExploreState,
-		// Token: 0x04010369 RID: 66409
+		// Token: 0x04011162 RID: 69986
 		IModifyActorMaterial,
-		// Token: 0x0401036A RID: 66410
+		// Token: 0x04011163 RID: 69987
 		IModifyActorMaterialParamBySplineProgress,
-		// Token: 0x0401036B RID: 66411
+		// Token: 0x04011164 RID: 69988
 		IModifyActorMedia,
-		// Token: 0x0401036C RID: 66412
+		// Token: 0x04011165 RID: 69989
 		IPlayLevelSequence,
-		// Token: 0x0401036D RID: 66413
+		// Token: 0x04011166 RID: 69990
 		IEnableTakePhotoClip,
-		// Token: 0x0401036E RID: 66414
+		// Token: 0x04011167 RID: 69991
 		IToggleAirWall,
-		// Token: 0x0401036F RID: 66415
+		// Token: 0x04011168 RID: 69992
 		ITriggerCameraShake,
-		// Token: 0x04010370 RID: 66416
+		// Token: 0x04011169 RID: 69993
 		ITriggerGamepadShake,
-		// Token: 0x04010371 RID: 66417
+		// Token: 0x0401116A RID: 69994
 		IPlayRegisteredMontage,
-		// Token: 0x04010372 RID: 66418
+		// Token: 0x0401116B RID: 69995
 		ICreatePrefab,
-		// Token: 0x04010373 RID: 66419
+		// Token: 0x0401116C RID: 69996
 		IDestroyPrefab,
-		// Token: 0x04010374 RID: 66420
+		// Token: 0x0401116D RID: 69997
 		ISetDataLayerTransitions,
-		// Token: 0x04010375 RID: 66421
+		// Token: 0x0401116E RID: 69998
 		IEnableAoiNotify,
-		// Token: 0x04010376 RID: 66422
+		// Token: 0x0401116F RID: 69999
 		IRecoverDurability,
-		// Token: 0x04010377 RID: 66423
+		// Token: 0x04011170 RID: 70000
 		ISetPlayerOperationRestriction,
-		// Token: 0x04010378 RID: 66424
+		// Token: 0x04011171 RID: 70001
 		IEnableAllPlayerOperation,
-		// Token: 0x04010379 RID: 66425
+		// Token: 0x04011172 RID: 70002
 		IDisableAllPlayerOperation,
-		// Token: 0x0401037A RID: 66426
+		// Token: 0x04011173 RID: 70003
 		IDisableModulePlayerOperation,
-		// Token: 0x0401037B RID: 66427
+		// Token: 0x04011174 RID: 70004
 		IClientSetPlayerOperationRestriction,
-		// Token: 0x0401037C RID: 66428
+		// Token: 0x04011175 RID: 70005
 		IClientEnableAllPlayerOperation,
-		// Token: 0x0401037D RID: 66429
+		// Token: 0x04011176 RID: 70006
 		IClientDisableAllPlayerOperation,
-		// Token: 0x0401037E RID: 66430
+		// Token: 0x04011177 RID: 70007
 		IClientDisableModulePlayerOperation,
-		// Token: 0x0401037F RID: 66431
+		// Token: 0x04011178 RID: 70008
 		IEnableFunction,
-		// Token: 0x04010380 RID: 66432
+		// Token: 0x04011179 RID: 70009
 		ITeleportDungeonFunction,
-		// Token: 0x04010381 RID: 66433
+		// Token: 0x0401117A RID: 70010
 		IMotorRadioUiFunction,
-		// Token: 0x04010382 RID: 66434
+		// Token: 0x0401117B RID: 70011
 		IInteractiveItemsFunction,
-		// Token: 0x04010383 RID: 66435
+		// Token: 0x0401117C RID: 70012
 		IEnableClientFunction,
-		// Token: 0x04010384 RID: 66436
+		// Token: 0x0401117D RID: 70013
 		IHealthBarDisplayClientFunction,
-		// Token: 0x04010385 RID: 66437
+		// Token: 0x0401117E RID: 70014
 		IChangeEntityPrefabPerformance,
-		// Token: 0x04010386 RID: 66438
+		// Token: 0x0401117F RID: 70015
 		IChangeTargetEntityPrefabPerformance,
-		// Token: 0x04010387 RID: 66439
+		// Token: 0x04011180 RID: 70016
 		IChangeSelfEntityPrefabPerformance,
-		// Token: 0x04010388 RID: 66440
+		// Token: 0x04011181 RID: 70017
 		IModifySceneItemAttributeTag,
-		// Token: 0x04010389 RID: 66441
+		// Token: 0x04011182 RID: 70018
 		IModifySelfSceneItemAttributeTag,
-		// Token: 0x0401038A RID: 66442
+		// Token: 0x04011183 RID: 70019
 		IModifyTargetSceneItemAttributeTag,
-		// Token: 0x0401038B RID: 66443
+		// Token: 0x04011184 RID: 70020
 		IClientModifyTargetTag,
-		// Token: 0x0401038C RID: 66444
+		// Token: 0x04011185 RID: 70021
 		IToggleMapMarkState,
-		// Token: 0x0401038D RID: 66445
+		// Token: 0x04011186 RID: 70022
 		IShowMapMark,
-		// Token: 0x0401038E RID: 66446
+		// Token: 0x04011187 RID: 70023
 		IHideMapMark,
-		// Token: 0x0401038F RID: 66447
+		// Token: 0x04011188 RID: 70024
 		IDisableMapMark,
-		// Token: 0x04010390 RID: 66448
+		// Token: 0x04011189 RID: 70025
 		IFocusOnMapMarkAction,
-		// Token: 0x04010391 RID: 66449
+		// Token: 0x0401118A RID: 70026
 		IEnableTemporaryTeleport,
-		// Token: 0x04010392 RID: 66450
+		// Token: 0x0401118B RID: 70027
 		ISetRegionConfig,
-		// Token: 0x04010393 RID: 66451
+		// Token: 0x0401118C RID: 70028
 		ISetRegionMpc,
-		// Token: 0x04010394 RID: 66452
+		// Token: 0x0401118D RID: 70029
 		ISetJigsawItem,
-		// Token: 0x04010395 RID: 66453
+		// Token: 0x0401118E RID: 70030
 		ISetJigsawFoundation,
-		// Token: 0x04010396 RID: 66454
+		// Token: 0x0401118F RID: 70031
 		IToggleHighlightExploreUi,
-		// Token: 0x04010397 RID: 66455
+		// Token: 0x04011190 RID: 70032
 		IShowHighlightExploreSkillIcon,
-		// Token: 0x04010398 RID: 66456
+		// Token: 0x04011191 RID: 70033
 		IHideHighlightExploreSkillIcon,
-		// Token: 0x04010399 RID: 66457
+		// Token: 0x04011192 RID: 70034
 		IToggleAndHighlightItem,
-		// Token: 0x0401039A RID: 66458
+		// Token: 0x04011193 RID: 70035
 		IResetEntity,
-		// Token: 0x0401039B RID: 66459
+		// Token: 0x04011194 RID: 70036
 		IResetLevelPlay,
-		// Token: 0x0401039C RID: 66460
+		// Token: 0x04011195 RID: 70037
 		IPlayDynamicSettlement,
-		// Token: 0x0401039D RID: 66461
+		// Token: 0x04011196 RID: 70038
 		ISetInteractionLockState,
-		// Token: 0x0401039E RID: 66462
+		// Token: 0x04011197 RID: 70039
 		ISetAudioState,
-		// Token: 0x0401039F RID: 66463
+		// Token: 0x04011198 RID: 70040
+		ISendBattleTag,
+		// Token: 0x04011199 RID: 70041
 		IPerformerAiSplineMove,
-		// Token: 0x040103A0 RID: 66464
+		// Token: 0x0401119A RID: 70042
 		IPerformerAiMoveTo,
-		// Token: 0x040103A1 RID: 66465
+		// Token: 0x0401119B RID: 70043
 		IAddTrialFollowShooter,
-		// Token: 0x040103A2 RID: 66466
+		// Token: 0x0401119C RID: 70044
 		IRemoveTrialFollowShooter,
-		// Token: 0x040103A3 RID: 66467
+		// Token: 0x0401119D RID: 70045
 		IEnableFollowShooterAbility,
-		// Token: 0x040103A4 RID: 66468
+		// Token: 0x0401119E RID: 70046
+		IFollowShooterLeisureInteract,
+		// Token: 0x0401119F RID: 70047
 		IClientFollowShooterLeisureInteract,
-		// Token: 0x040103A5 RID: 66469
+		// Token: 0x040111A0 RID: 70048
 		ICustomJson,
-		// Token: 0x040103A6 RID: 66470
+		// Token: 0x040111A1 RID: 70049
 		IExecResurrection,
-		// Token: 0x040103A7 RID: 66471
+		// Token: 0x040111A2 RID: 70050
 		IOpenSystemBoardWithReturn,
-		// Token: 0x040103A8 RID: 66472
+		// Token: 0x040111A3 RID: 70051
 		IResumeSystemRewardPopup,
-		// Token: 0x040103A9 RID: 66473
+		// Token: 0x040111A4 RID: 70052
 		IExecRiskHarvestEffect,
-		// Token: 0x040103AA RID: 66474
+		// Token: 0x040111A5 RID: 70053
 		ISetTeleControl,
-		// Token: 0x040103AB RID: 66475
+		// Token: 0x040111A6 RID: 70054
 		IMowingTowerGotoNextFloor,
-		// Token: 0x040103AC RID: 66476
+		// Token: 0x040111A7 RID: 70055
 		ISlashAndTowerGotoNextFloor,
-		// Token: 0x040103AD RID: 66477
+		// Token: 0x040111A8 RID: 70056
 		IRoleTowerGotoNextFloor,
-		// Token: 0x040103AE RID: 66478
+		// Token: 0x040111A9 RID: 70057
 		IVehicleEnter,
-		// Token: 0x040103AF RID: 66479
+		// Token: 0x040111AA RID: 70058
 		IEnterNpcVehicle,
-		// Token: 0x040103B0 RID: 66480
+		// Token: 0x040111AB RID: 70059
 		IVehicleExitPlayer,
-		// Token: 0x040103B1 RID: 66481
+		// Token: 0x040111AC RID: 70060
 		IVehicleExitNpc,
-		// Token: 0x040103B2 RID: 66482
+		// Token: 0x040111AD RID: 70061
 		ITeleportVehicle,
-		// Token: 0x040103B3 RID: 66483
+		// Token: 0x040111AE RID: 70062
 		IClientTeleportVehicle,
-		// Token: 0x040103B4 RID: 66484
+		// Token: 0x040111AF RID: 70063
 		IVehiclePlayPassengerVoice,
-		// Token: 0x040103B5 RID: 66485
+		// Token: 0x040111B0 RID: 70064
 		IVehicleWaterfallClimbing,
-		// Token: 0x040103B6 RID: 66486
+		// Token: 0x040111B1 RID: 70065
 		ITeleportToAndEnterVehicle,
-		// Token: 0x040103B7 RID: 66487
+		// Token: 0x040111B2 RID: 70066
 		IVehicleMoveWithPathLine,
-		// Token: 0x040103B8 RID: 66488
+		// Token: 0x040111B3 RID: 70067
 		IVehicleSprint,
-		// Token: 0x040103B9 RID: 66489
+		// Token: 0x040111B4 RID: 70068
 		IOpenQteAction,
-		// Token: 0x040103BA RID: 66490
+		// Token: 0x040111B5 RID: 70069
 		IPlayerInput,
-		// Token: 0x040103BB RID: 66491
+		// Token: 0x040111B6 RID: 70070
 		IPreloadAction,
-		// Token: 0x040103BC RID: 66492
+		// Token: 0x040111B7 RID: 70071
 		IRemovePreloadResourceAction,
-		// Token: 0x040103BD RID: 66493
+		// Token: 0x040111B8 RID: 70072
 		IExecAlertSystemAction,
-		// Token: 0x040103BE RID: 66494
+		// Token: 0x040111B9 RID: 70073
 		ISetSpineAnimation,
-		// Token: 0x040103BF RID: 66495
+		// Token: 0x040111BA RID: 70074
 		IChangeEntityCamp,
-		// Token: 0x040103C0 RID: 66496
+		// Token: 0x040111BB RID: 70075
 		IRecordDungeonEvent,
-		// Token: 0x040103C1 RID: 66497
+		// Token: 0x040111BC RID: 70076
 		IDangoAbyssGotoNextFloor,
-		// Token: 0x040103C2 RID: 66498
+		// Token: 0x040111BD RID: 70077
 		IDangoAbyssCreateRewardTreasureBox,
-		// Token: 0x040103C3 RID: 66499
+		// Token: 0x040111BE RID: 70078
 		IDangoAbyssActivatePortal,
-		// Token: 0x040103C4 RID: 66500
+		// Token: 0x040111BF RID: 70079
 		IDangoAbyssReceiveReward,
-		// Token: 0x040103C5 RID: 66501
+		// Token: 0x040111C0 RID: 70080
 		IRoverRogueActivate,
-		// Token: 0x040103C6 RID: 66502
+		// Token: 0x040111C1 RID: 70081
 		IRoverRogueRoomFinish,
-		// Token: 0x040103C7 RID: 66503
+		// Token: 0x040111C2 RID: 70082
 		IRoverRogueCreateRoomReward,
-		// Token: 0x040103C8 RID: 66504
+		// Token: 0x040111C3 RID: 70083
 		IGuestOperateUiAnimation,
-		// Token: 0x040103C9 RID: 66505
+		// Token: 0x040111C4 RID: 70084
 		ISlideRailStart,
-		// Token: 0x040103CA RID: 66506
+		// Token: 0x040111C5 RID: 70085
 		ISlideRailEnd,
-		// Token: 0x040103CB RID: 66507
+		// Token: 0x040111C6 RID: 70086
 		ISlidePerformStart,
-		// Token: 0x040103CC RID: 66508
+		// Token: 0x040111C7 RID: 70087
 		IBvbSendSystemEvent,
-		// Token: 0x040103CD RID: 66509
+		// Token: 0x040111C8 RID: 70088
 		IBvbSendAiEvent,
-		// Token: 0x040103CE RID: 66510
+		// Token: 0x040111C9 RID: 70089
 		IBvbPlayDialog,
-		// Token: 0x040103CF RID: 66511
+		// Token: 0x040111CA RID: 70090
 		IBvbPlayerOperationConstraint,
-		// Token: 0x040103D0 RID: 66512
+		// Token: 0x040111CB RID: 70091
 		IBvbSkipChallenge,
-		// Token: 0x040103D1 RID: 66513
+		// Token: 0x040111CC RID: 70092
 		IActiveAntiGravitySafePoint,
-		// Token: 0x040103D2 RID: 66514
+		// Token: 0x040111CD RID: 70093
 		ISummonEntity,
-		// Token: 0x040103D3 RID: 66515
+		// Token: 0x040111CE RID: 70094
 		IDestroySummonedEntities,
-		// Token: 0x040103D4 RID: 66516
+		// Token: 0x040111CF RID: 70095
 		ISetupMoraleSystem,
-		// Token: 0x040103D5 RID: 66517
+		// Token: 0x040111D0 RID: 70096
 		IGiantToggleModel,
-		// Token: 0x040103D6 RID: 66518
+		// Token: 0x040111D1 RID: 70097
 		IGiantTriggerResponse,
-		// Token: 0x040103D7 RID: 66519
+		// Token: 0x040111D2 RID: 70098
 		IActivateGiantTotalProgressNode,
-		// Token: 0x040103D8 RID: 66520
+		// Token: 0x040111D3 RID: 70099
 		IRunActorCustomEvent,
-		// Token: 0x040103D9 RID: 66521
+		// Token: 0x040111D4 RID: 70100
 		ITriggerSpecificScanEffect,
-		// Token: 0x040103DA RID: 66522
+		// Token: 0x040111D5 RID: 70101
 		ISendClientEvent,
-		// Token: 0x040103DB RID: 66523
+		// Token: 0x040111D6 RID: 70102
 		IScanEnrichmentArea,
-		// Token: 0x040103DC RID: 66524
+		// Token: 0x040111D7 RID: 70103
 		IRequestSystemFunction,
-		// Token: 0x040103DD RID: 66525
+		// Token: 0x040111D8 RID: 70104
 		IReignsSetPropertyVisible,
-		// Token: 0x040103DE RID: 66526
+		// Token: 0x040111D9 RID: 70105
 		IReignsChangeBackground,
-		// Token: 0x040103DF RID: 66527
+		// Token: 0x040111DA RID: 70106
 		IReignsSetUiEffect,
-		// Token: 0x040103E0 RID: 66528
+		// Token: 0x040111DB RID: 70107
 		IReignsChangePlayerName,
-		// Token: 0x040103E1 RID: 66529
+		// Token: 0x040111DC RID: 70108
 		IReignsCallCard,
-		// Token: 0x040103E2 RID: 66530
+		// Token: 0x040111DD RID: 70109
 		IReignsTriggerGuide,
-		// Token: 0x040103E3 RID: 66531
+		// Token: 0x040111DE RID: 70110
 		IReignsAddBuff,
-		// Token: 0x040103E4 RID: 66532
+		// Token: 0x040111DF RID: 70111
 		IReignsCheckSettle,
-		// Token: 0x040103E5 RID: 66533
+		// Token: 0x040111E0 RID: 70112
 		ISetNpcGroupPerform,
-		// Token: 0x040103E6 RID: 66534
+		// Token: 0x040111E1 RID: 70113
 		IRemoveNpcGroupPerform,
-		// Token: 0x040103E7 RID: 66535
+		// Token: 0x040111E2 RID: 70114
 		IEnableEntityLookAt,
-		// Token: 0x040103E8 RID: 66536
+		// Token: 0x040111E3 RID: 70115
 		IDisableEntityLookAt,
-		// Token: 0x040103E9 RID: 66537
+		// Token: 0x040111E4 RID: 70116
 		IOverrideAiBehaviorTree,
-		// Token: 0x040103EA RID: 66538
+		// Token: 0x040111E5 RID: 70117
 		IRestoreAiBehaviorTree,
-		// Token: 0x040103EB RID: 66539
+		// Token: 0x040111E6 RID: 70118
 		IFlowDefineNpcGroupPerform,
-		// Token: 0x040103EC RID: 66540
+		// Token: 0x040111E7 RID: 70119
 		ISeqEventAddTagToSelf,
-		// Token: 0x040103ED RID: 66541
+		// Token: 0x040111E8 RID: 70120
 		ISeqEventFireBullet,
-		// Token: 0x040103EE RID: 66542
+		// Token: 0x040111E9 RID: 70121
 		ITrapDefenseChangeMiniMap,
-		// Token: 0x040103EF RID: 66543
+		// Token: 0x040111EA RID: 70122
 		ITrapDefensePlayerOperationConstraint,
-		// Token: 0x040103F0 RID: 66544
+		// Token: 0x040111EB RID: 70123
 		IHonamiStoryInteractPickUp,
-		// Token: 0x040103F1 RID: 66545
+		// Token: 0x040111EC RID: 70124
 		IHonamiStoryReceiveCorruptedChestReward,
-		// Token: 0x040103F2 RID: 66546
+		// Token: 0x040111ED RID: 70125
 		IHonamiStoryActivateSafeEvacuation,
-		// Token: 0x040103F3 RID: 66547
+		// Token: 0x040111EE RID: 70126
 		IHonamiStorySetFormation,
-		// Token: 0x040103F4 RID: 66548
+		// Token: 0x040111EF RID: 70127
 		IHonamiStoryGetItem,
-		// Token: 0x040103F5 RID: 66549
+		// Token: 0x040111F0 RID: 70128
 		IInfrActivityUpgradeInfrastructure,
-		// Token: 0x040103F6 RID: 66550
+		// Token: 0x040111F1 RID: 70129
 		IPlayWalkingOverlayMontage,
-		// Token: 0x040103F7 RID: 66551
+		// Token: 0x040111F2 RID: 70130
 		IEnableKey4Func,
-		// Token: 0x040103F8 RID: 66552
+		// Token: 0x040111F3 RID: 70131
 		IChangeNpcAbpState,
-		// Token: 0x040103F9 RID: 66553
+		// Token: 0x040111F4 RID: 70132
 		IOverrideAbpAnimScheme,
-		// Token: 0x040103FA RID: 66554
+		// Token: 0x040111F5 RID: 70133
 		ICloseWalkingOverlayMontage,
-		// Token: 0x040103FB RID: 66555
+		// Token: 0x040111F6 RID: 70134
 		ISetMotorSpeed,
-		// Token: 0x040103FC RID: 66556
+		// Token: 0x040111F7 RID: 70135
 		IVehicleSetSpeedImmediately,
-		// Token: 0x040103FD RID: 66557
+		// Token: 0x040111F8 RID: 70136
 		IStartMotorCruise,
-		// Token: 0x040103FE RID: 66558
+		// Token: 0x040111F9 RID: 70137
 		IStopMotorCruise,
-		// Token: 0x040103FF RID: 66559
+		// Token: 0x040111FA RID: 70138
 		IDriveMotorInSpecConfig,
-		// Token: 0x04010400 RID: 66560
+		// Token: 0x040111FB RID: 70139
 		IMotorSoarInWindField,
-		// Token: 0x04010401 RID: 66561
+		// Token: 0x040111FC RID: 70140
 		ISetSkillBtnEffect,
-		// Token: 0x04010402 RID: 66562
+		// Token: 0x040111FD RID: 70141
 		ICollectSunSpirit,
-		// Token: 0x04010403 RID: 66563
+		// Token: 0x040111FE RID: 70142
 		IPerformSunSpiritGearRoundTrip,
-		// Token: 0x04010404 RID: 66564
+		// Token: 0x040111FF RID: 70143
 		ITriggerDeadeyeMode,
-		// Token: 0x04010405 RID: 66565
+		// Token: 0x04011200 RID: 70144
 		ITriggerSystemRandomPlot,
-		// Token: 0x04010406 RID: 66566
+		// Token: 0x04011201 RID: 70145
 		ISetAudioEnable,
-		// Token: 0x04010407 RID: 66567
+		// Token: 0x04011202 RID: 70146
 		IPhoneSystemInteract,
-		// Token: 0x04010408 RID: 66568
+		// Token: 0x04011203 RID: 70147
 		IRollBlockGetReward,
-		// Token: 0x04010409 RID: 66569
+		// Token: 0x04011204 RID: 70148
 		IEnterMovieMode,
-		// Token: 0x0401040A RID: 66570
+		// Token: 0x04011205 RID: 70149
 		IExitMovieMode,
-		// Token: 0x0401040B RID: 66571
+		// Token: 0x04011206 RID: 70150
 		IStartRoadNetworkNavigation,
-		// Token: 0x0401040C RID: 66572
+		// Token: 0x04011207 RID: 70151
 		ISetWayOccupancyState,
-		// Token: 0x0401040D RID: 66573
+		// Token: 0x04011208 RID: 70152
 		IEnterPatrolState,
-		// Token: 0x0401040E RID: 66574
+		// Token: 0x04011209 RID: 70153
 		IPerformAiHideSelf,
-		// Token: 0x0401040F RID: 66575
+		// Token: 0x0401120A RID: 70154
 		ISendSceneActorEvent,
-		// Token: 0x04010410 RID: 66576
+		// Token: 0x0401120B RID: 70155
 		IExecBpActorFunc,
-		// Token: 0x04010411 RID: 66577
+		// Token: 0x0401120C RID: 70156
 		IResetPlayerPosWithPresentation,
-		// Token: 0x04010412 RID: 66578
+		// Token: 0x0401120D RID: 70157
 		IDrinksRollRoleRequirement,
-		// Token: 0x04010413 RID: 66579
+		// Token: 0x0401120E RID: 70158
 		ISetBlendAnim,
-		// Token: 0x04010414 RID: 66580
+		// Token: 0x0401120F RID: 70159
 		IReportTrackingEvent,
-		// Token: 0x04010415 RID: 66581
+		// Token: 0x04011210 RID: 70160
 		ITetrisThrowBlock,
-		// Token: 0x04010416 RID: 66582
+		// Token: 0x04011211 RID: 70161
 		ITetrisGameComplete,
-		// Token: 0x04010417 RID: 66583
+		// Token: 0x04011212 RID: 70162
 		ITetrisTriggerDelayFall,
-		// Token: 0x04010418 RID: 66584
+		// Token: 0x04011213 RID: 70163
 		IBossPilingRandomBuff,
-		// Token: 0x04010419 RID: 66585
+		// Token: 0x04011214 RID: 70164
 		IBossPilingEnterNextInst,
-		// Token: 0x0401041A RID: 66586
+		// Token: 0x04011215 RID: 70165
 		IOpenQuickHackSystem,
-		// Token: 0x0401041B RID: 66587
+		// Token: 0x04011216 RID: 70166
 		IDollGrabItemDelivery,
-		// Token: 0x0401041C RID: 66588
+		// Token: 0x04011217 RID: 70167
 		ISheriffUnlockClue,
-		// Token: 0x0401041D RID: 66589
+		// Token: 0x04011218 RID: 70168
 		ISheriffUnlockProgress,
-		// Token: 0x0401041E RID: 66590
+		// Token: 0x04011219 RID: 70169
 		ISheriffChangeCriminalState,
-		// Token: 0x0401041F RID: 66591
+		// Token: 0x0401121A RID: 70170
 		ISheriffChangeCriminalIdentity,
-		// Token: 0x04010420 RID: 66592
+		// Token: 0x0401121B RID: 70171
 		ISheriffUnlockEnding,
-		// Token: 0x04010421 RID: 66593
+		// Token: 0x0401121C RID: 70172
 		ISetTargetElementalAbility,
-		// Token: 0x04010422 RID: 66594
+		// Token: 0x0401121D RID: 70173
 		IToggleEntityElementalAbility,
-		// Token: 0x04010423 RID: 66595
+		// Token: 0x0401121E RID: 70174
 		ICaptureElementalBox,
-		// Token: 0x04010424 RID: 66596
+		// Token: 0x0401121F RID: 70175
 		IChangeElementalBoxState,
-		// Token: 0x04010425 RID: 66597
-		ISetElementalBoxToTarget
+		// Token: 0x04011220 RID: 70176
+		ISetElementalBoxToTarget,
+		// Token: 0x04011221 RID: 70177
+		ISeasonWeatherSetRotationLock,
+		// Token: 0x04011222 RID: 70178
+		ISeasonWeatherChangeTo,
+		// Token: 0x04011223 RID: 70179
+		ISeasonWeatherUnlockSpecial,
+		// Token: 0x04011224 RID: 70180
+		IHandBookModifySystemProgress,
+		// Token: 0x04011225 RID: 70181
+		IClientExecEntityPrefabAction,
+		// Token: 0x04011226 RID: 70182
+		ILiveSetUi,
+		// Token: 0x04011227 RID: 70183
+		ILiveSetDanmaku,
+		// Token: 0x04011228 RID: 70184
+		ILiveSetParam,
+		// Token: 0x04011229 RID: 70185
+		ILiveSetSc
 	}
 }

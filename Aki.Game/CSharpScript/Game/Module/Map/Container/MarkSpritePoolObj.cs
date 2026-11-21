@@ -4,29 +4,29 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Container
 {
-	// Token: 0x02005594 RID: 21908
+	// Token: 0x0200456A RID: 17770
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MarkSpritePoolObj : IMarkSpritePoolObj
 	{
-		// Token: 0x1700866F RID: 34415
-		// (get) Token: 0x06037D6F RID: 228719 RVA: 0x00D3C4A6 File Offset: 0x00D3A6A6
-		// (set) Token: 0x06037D70 RID: 228720 RVA: 0x00D3C4AE File Offset: 0x00D3A6AE
+		// Token: 0x17005A36 RID: 23094
+		// (get) Token: 0x0602CC6D RID: 183405 RVA: 0x00C8A1EE File Offset: 0x00C883EE
+		// (set) Token: 0x0602CC6E RID: 183406 RVA: 0x00C8A1F6 File Offset: 0x00C883F6
 		public string SpritePath { get; set; }
 
-		// Token: 0x17008670 RID: 34416
-		// (get) Token: 0x06037D71 RID: 228721 RVA: 0x00D3C4B7 File Offset: 0x00D3A6B7
-		// (set) Token: 0x06037D72 RID: 228722 RVA: 0x00D3C4BF File Offset: 0x00D3A6BF
+		// Token: 0x17005A37 RID: 23095
+		// (get) Token: 0x0602CC6F RID: 183407 RVA: 0x00C8A1FF File Offset: 0x00C883FF
+		// (set) Token: 0x0602CC70 RID: 183408 RVA: 0x00C8A207 File Offset: 0x00C88407
 		public double RecycleTimeStamp { get; set; }
 
-		// Token: 0x17008671 RID: 34417
-		// (get) Token: 0x06037D73 RID: 228723 RVA: 0x00D3C4C8 File Offset: 0x00D3A6C8
-		// (set) Token: 0x06037D74 RID: 228724 RVA: 0x00D3C4D0 File Offset: 0x00D3A6D0
+		// Token: 0x17005A38 RID: 23096
+		// (get) Token: 0x0602CC71 RID: 183409 RVA: 0x00C8A210 File Offset: 0x00C88410
+		// (set) Token: 0x0602CC72 RID: 183410 RVA: 0x00C8A218 File Offset: 0x00C88418
 		public ULGUISpriteData_BaseObject Obj { get; set; }
 
-		// Token: 0x17008672 RID: 34418
-		// (get) Token: 0x06037D75 RID: 228725 RVA: 0x00D3C4D9 File Offset: 0x00D3A6D9
-		// (set) Token: 0x06037D76 RID: 228726 RVA: 0x00D3C4E1 File Offset: 0x00D3A6E1
+		// Token: 0x17005A39 RID: 23097
+		// (get) Token: 0x0602CC73 RID: 183411 RVA: 0x00C8A221 File Offset: 0x00C88421
+		// (set) Token: 0x0602CC74 RID: 183412 RVA: 0x00C8A229 File Offset: 0x00C88429
 		public int Ref { get; set; }
 	}
 }

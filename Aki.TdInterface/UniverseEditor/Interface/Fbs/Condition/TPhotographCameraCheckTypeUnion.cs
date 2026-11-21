@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004D4F RID: 19791
+	// Token: 0x0200524B RID: 21067
 	public class TPhotographCameraCheckTypeUnion
 	{
-		// Token: 0x17008F4F RID: 36687
-		// (get) Token: 0x0601F67A RID: 128634 RVA: 0x00460436 File Offset: 0x0045E636
-		// (set) Token: 0x0601F67B RID: 128635 RVA: 0x0046043E File Offset: 0x0045E63E
+		// Token: 0x17009688 RID: 38536
+		// (get) Token: 0x060212C3 RID: 135875 RVA: 0x0049440A File Offset: 0x0049260A
+		// (set) Token: 0x060212C4 RID: 135876 RVA: 0x00494412 File Offset: 0x00492612
 		public TPhotographCameraCheckType Type { get; set; }
 
-		// Token: 0x17008F50 RID: 36688
-		// (get) Token: 0x0601F67C RID: 128636 RVA: 0x00460447 File Offset: 0x0045E647
-		// (set) Token: 0x0601F67D RID: 128637 RVA: 0x0046044F File Offset: 0x0045E64F
+		// Token: 0x17009689 RID: 38537
+		// (get) Token: 0x060212C5 RID: 135877 RVA: 0x0049441B File Offset: 0x0049261B
+		// (set) Token: 0x060212C6 RID: 135878 RVA: 0x00494423 File Offset: 0x00492623
 		public object Value { get; set; }
 
-		// Token: 0x0601F67E RID: 128638 RVA: 0x00460458 File Offset: 0x0045E658
+		// Token: 0x060212C7 RID: 135879 RVA: 0x0049442C File Offset: 0x0049262C
 		public TPhotographCameraCheckTypeUnion()
 		{
 			this.Type = TPhotographCameraCheckType.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601F67F RID: 128639 RVA: 0x0046046E File Offset: 0x0045E66E
+		// Token: 0x060212C8 RID: 135880 RVA: 0x00494442 File Offset: 0x00492642
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601F680 RID: 128640 RVA: 0x00460480 File Offset: 0x0045E680
+		// Token: 0x060212C9 RID: 135881 RVA: 0x00494454 File Offset: 0x00492654
 		public IPhotographCameraCheckAspectRatioTypeT AsIPhotographCameraCheckAspectRatioType()
 		{
 			return this.As<IPhotographCameraCheckAspectRatioTypeT>();
 		}
 
-		// Token: 0x0601F681 RID: 128641 RVA: 0x00460488 File Offset: 0x0045E688
+		// Token: 0x060212CA RID: 135882 RVA: 0x0049445C File Offset: 0x0049265C
 		public static TPhotographCameraCheckTypeUnion FromIPhotographCameraCheckAspectRatioType(IPhotographCameraCheckAspectRatioTypeT _iphotographcameracheckaspectratiotype)
 		{
 			return new TPhotographCameraCheckTypeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F682 RID: 128642 RVA: 0x0046049D File Offset: 0x0045E69D
+		// Token: 0x060212CB RID: 135883 RVA: 0x00494471 File Offset: 0x00492671
 		public IPhotographCameraCheckBlurIntensityT AsIPhotographCameraCheckBlurIntensity()
 		{
 			return this.As<IPhotographCameraCheckBlurIntensityT>();
 		}
 
-		// Token: 0x0601F683 RID: 128643 RVA: 0x004604A5 File Offset: 0x0045E6A5
+		// Token: 0x060212CC RID: 135884 RVA: 0x00494479 File Offset: 0x00492679
 		public static TPhotographCameraCheckTypeUnion FromIPhotographCameraCheckBlurIntensity(IPhotographCameraCheckBlurIntensityT _iphotographcameracheckblurintensity)
 		{
 			return new TPhotographCameraCheckTypeUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F684 RID: 128644 RVA: 0x004604BA File Offset: 0x0045E6BA
+		// Token: 0x060212CD RID: 135885 RVA: 0x0049448E File Offset: 0x0049268E
 		public IPhotographCameraCheckTemplateT AsIPhotographCameraCheckTemplate()
 		{
 			return this.As<IPhotographCameraCheckTemplateT>();
 		}
 
-		// Token: 0x0601F685 RID: 128645 RVA: 0x004604C2 File Offset: 0x0045E6C2
+		// Token: 0x060212CE RID: 135886 RVA: 0x00494496 File Offset: 0x00492696
 		public static TPhotographCameraCheckTypeUnion FromIPhotographCameraCheckTemplate(IPhotographCameraCheckTemplateT _iphotographcamerachecktemplate)
 		{
 			return new TPhotographCameraCheckTypeUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F686 RID: 128646 RVA: 0x004604D8 File Offset: 0x0045E6D8
+		// Token: 0x060212CF RID: 135887 RVA: 0x004944AC File Offset: 0x004926AC
 		public static int Pack(FlatBufferBuilder builder, TPhotographCameraCheckTypeUnion _o)
 		{
 			switch (_o.Type)

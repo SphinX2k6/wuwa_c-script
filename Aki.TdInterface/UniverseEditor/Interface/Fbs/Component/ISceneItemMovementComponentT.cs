@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020058CB RID: 22731
+	// Token: 0x02005ED8 RID: 24280
 	public class ISceneItemMovementComponentT
 	{
-		// Token: 0x1700AA37 RID: 43575
-		// (get) Token: 0x060265D4 RID: 157140 RVA: 0x00549857 File Offset: 0x00547A57
-		// (set) Token: 0x060265D5 RID: 157141 RVA: 0x0054985F File Offset: 0x00547A5F
+		// Token: 0x1700B367 RID: 45927
+		// (get) Token: 0x06028B36 RID: 166710 RVA: 0x005903A3 File Offset: 0x0058E5A3
+		// (set) Token: 0x06028B37 RID: 166711 RVA: 0x005903AB File Offset: 0x0058E5AB
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700AA38 RID: 43576
-		// (get) Token: 0x060265D6 RID: 157142 RVA: 0x00549868 File Offset: 0x00547A68
-		// (set) Token: 0x060265D7 RID: 157143 RVA: 0x00549870 File Offset: 0x00547A70
+		// Token: 0x1700B368 RID: 45928
+		// (get) Token: 0x06028B38 RID: 166712 RVA: 0x005903B4 File Offset: 0x0058E5B4
+		// (set) Token: 0x06028B39 RID: 166713 RVA: 0x005903BC File Offset: 0x0058E5BC
 		public ISplineMoveT Patrol { get; set; }
 
-		// Token: 0x1700AA39 RID: 43577
-		// (get) Token: 0x060265D8 RID: 157144 RVA: 0x00549879 File Offset: 0x00547A79
-		// (set) Token: 0x060265D9 RID: 157145 RVA: 0x00549881 File Offset: 0x00547A81
+		// Token: 0x1700B369 RID: 45929
+		// (get) Token: 0x06028B3A RID: 166714 RVA: 0x005903C5 File Offset: 0x0058E5C5
+		// (set) Token: 0x06028B3B RID: 166715 RVA: 0x005903CD File Offset: 0x0058E5CD
 		public IMovementPlatformConfigT PlatformConfig { get; set; }
 
-		// Token: 0x1700AA3A RID: 43578
-		// (get) Token: 0x060265DA RID: 157146 RVA: 0x0054988A File Offset: 0x00547A8A
-		// (set) Token: 0x060265DB RID: 157147 RVA: 0x00549892 File Offset: 0x00547A92
+		// Token: 0x1700B36A RID: 45930
+		// (get) Token: 0x06028B3C RID: 166716 RVA: 0x005903D6 File Offset: 0x0058E5D6
+		// (set) Token: 0x06028B3D RID: 166717 RVA: 0x005903DE File Offset: 0x0058E5DE
 		public byte NullMask { get; set; }
 
-		// Token: 0x060265DC RID: 157148 RVA: 0x0054989B File Offset: 0x00547A9B
+		// Token: 0x06028B3E RID: 166718 RVA: 0x005903E7 File Offset: 0x0058E5E7
 		public ISceneItemMovementComponentT()
 		{
 			this.Disabled = false;

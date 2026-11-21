@@ -13,9 +13,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskSetSightToTarget.TsTaskSetSightToTarget_C")]
 public class TsTaskSetSightToTarget : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170001FD RID: 509
-	// (get) Token: 0x06000AE3 RID: 2787 RVA: 0x0003600B File Offset: 0x0003420B
-	// (set) Token: 0x06000AE4 RID: 2788 RVA: 0x0003601F File Offset: 0x0003421F
+	// Token: 0x17000200 RID: 512
+	// (get) Token: 0x06000AE9 RID: 2793 RVA: 0x0003713B File Offset: 0x0003533B
+	// (set) Token: 0x06000AEA RID: 2794 RVA: 0x0003714F File Offset: 0x0003534F
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string TargetBlackboardKey
 	{
@@ -29,9 +29,9 @@ public class TsTaskSetSightToTarget : TsTaskAbortImmediatelyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x170001FE RID: 510
-	// (get) Token: 0x06000AE5 RID: 2789 RVA: 0x00036034 File Offset: 0x00034234
-	// (set) Token: 0x06000AE6 RID: 2790 RVA: 0x00036048 File Offset: 0x00034248
+	// Token: 0x17000201 RID: 513
+	// (get) Token: 0x06000AEB RID: 2795 RVA: 0x00037164 File Offset: 0x00035364
+	// (set) Token: 0x06000AEC RID: 2796 RVA: 0x00037178 File Offset: 0x00035378
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string BoneName
 	{
@@ -45,9 +45,9 @@ public class TsTaskSetSightToTarget : TsTaskAbortImmediatelyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x170001FF RID: 511
-	// (get) Token: 0x06000AE7 RID: 2791 RVA: 0x0003605D File Offset: 0x0003425D
-	// (set) Token: 0x06000AE8 RID: 2792 RVA: 0x0003606D File Offset: 0x0003426D
+	// Token: 0x17000202 RID: 514
+	// (get) Token: 0x06000AED RID: 2797 RVA: 0x0003718D File Offset: 0x0003538D
+	// (set) Token: 0x06000AEE RID: 2798 RVA: 0x0003719D File Offset: 0x0003539D
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool EnableDebugDraw
 	{
@@ -61,7 +61,7 @@ public class TsTaskSetSightToTarget : TsTaskAbortImmediatelyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x06000AE9 RID: 2793 RVA: 0x0003607E File Offset: 0x0003427E
+	// Token: 0x06000AEF RID: 2799 RVA: 0x000371AE File Offset: 0x000353AE
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -72,30 +72,27 @@ public class TsTaskSetSightToTarget : TsTaskAbortImmediatelyBase, IUnrealUObject
 		}
 	}
 
-	// Token: 0x06000AEA RID: 2794 RVA: 0x000360B4 File Offset: 0x000342B4
+	// Token: 0x06000AF0 RID: 2800 RVA: 0x000371E4 File Offset: 0x000353E4
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveExecuteAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskSetSightToTarget) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveExecuteAI"), TsTaskSetSightToTarget.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			this.ReceiveExecuteAI_Implementation(ownerController, controlledPawn);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000AEB RID: 2795 RVA: 0x00036150 File Offset: 0x00034350
+	// Token: 0x06000AF1 RID: 2801 RVA: 0x00037294 File Offset: 0x00035494
 	[NullableContext(2)]
 	protected virtual void ReceiveExecuteAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -202,7 +199,7 @@ public class TsTaskSetSightToTarget : TsTaskAbortImmediatelyBase, IUnrealUObject
 		base.FinishExecute(true);
 	}
 
-	// Token: 0x06000AEC RID: 2796 RVA: 0x000364D2 File Offset: 0x000346D2
+	// Token: 0x06000AF2 RID: 2802 RVA: 0x00037616 File Offset: 0x00035816
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskSetSightToTarget._ClassPtr == IntPtr.Zero)
@@ -212,22 +209,22 @@ public class TsTaskSetSightToTarget : TsTaskAbortImmediatelyBase, IUnrealUObject
 		return TsTaskSetSightToTarget._ClassPtr;
 	}
 
-	// Token: 0x06000AED RID: 2797 RVA: 0x000364F8 File Offset: 0x000346F8
+	// Token: 0x06000AF3 RID: 2803 RVA: 0x0003763C File Offset: 0x0003583C
 	public TsTaskSetSightToTarget() : this(BuiltinUtils.AllocNativeUObject(TsTaskSetSightToTarget.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06000AEE RID: 2798 RVA: 0x00036520 File Offset: 0x00034720
+	// Token: 0x06000AF4 RID: 2804 RVA: 0x00037664 File Offset: 0x00035864
 	public TsTaskSetSightToTarget(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskSetSightToTarget.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06000AEF RID: 2799 RVA: 0x00036554 File Offset: 0x00034754
+	// Token: 0x06000AF5 RID: 2805 RVA: 0x00037698 File Offset: 0x00035898
 	protected TsTaskSetSightToTarget(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06000AF0 RID: 2800 RVA: 0x000365AC File Offset: 0x000347AC
+	// Token: 0x06000AF6 RID: 2806 RVA: 0x000376F0 File Offset: 0x000358F0
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
@@ -236,68 +233,68 @@ public class TsTaskSetSightToTarget : TsTaskAbortImmediatelyBase, IUnrealUObject
 		this.ReceiveExecuteAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x0400087B RID: 2171
+	// Token: 0x04000883 RID: 2179
 	private const float FORWARD_TARGET_DISTANCE = 10000f;
 
-	// Token: 0x0400087C RID: 2172
+	// Token: 0x04000884 RID: 2180
 	private const float SIGHT_DEBUG_LENGTH = 500f;
 
-	// Token: 0x0400087D RID: 2173
+	// Token: 0x04000885 RID: 2181
 	private const float SIGHT_DEBUG_ARROW_SIZE = 100f;
 
-	// Token: 0x0400087E RID: 2174
+	// Token: 0x04000886 RID: 2182
 	private const float SIGHT_DEBUG_DURATION = 1f;
 
-	// Token: 0x0400087F RID: 2175
+	// Token: 0x04000887 RID: 2183
 	private const float SIGHT_DEBUG_THICKNESS = 2f;
 
-	// Token: 0x04000880 RID: 2176
+	// Token: 0x04000888 RID: 2184
 	[StaticVariableRuleIgnore]
 	private static readonly FLinearColor currentDirColor = new FLinearColor(1f, 0f, 0f, 1f);
 
-	// Token: 0x04000881 RID: 2177
+	// Token: 0x04000889 RID: 2185
 	[StaticVariableRuleIgnore]
 	private static readonly FLinearColor targetDirColor = new FLinearColor(0f, 1f, 0f, 1f);
 
-	// Token: 0x04000882 RID: 2178
+	// Token: 0x0400088A RID: 2186
 	private bool IsInitTsVariables;
 
-	// Token: 0x04000883 RID: 2179
+	// Token: 0x0400088B RID: 2187
 	private string TsTargetBlackboardKey = "";
 
-	// Token: 0x04000884 RID: 2180
+	// Token: 0x0400088C RID: 2188
 	private FName? TsBoneName;
 
-	// Token: 0x04000885 RID: 2181
+	// Token: 0x0400088D RID: 2189
 	private readonly Vector TmpBoneLocation = Vector.Create();
 
-	// Token: 0x04000886 RID: 2182
+	// Token: 0x0400088E RID: 2190
 	private readonly Vector SightForwardPoint = Vector.Create();
 
-	// Token: 0x04000887 RID: 2183
+	// Token: 0x0400088F RID: 2191
 	private readonly Vector TmpSightDir = Vector.Create();
 
-	// Token: 0x04000888 RID: 2184
+	// Token: 0x04000890 RID: 2192
 	private readonly Vector TmpTargetDir = Vector.Create();
 
-	// Token: 0x04000889 RID: 2185
+	// Token: 0x04000891 RID: 2193
 	private readonly Vector TmpArrowEnd = Vector.Create();
 
-	// Token: 0x0400088A RID: 2186
+	// Token: 0x04000892 RID: 2194
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskSetSightToTarget.TsTaskSetSightToTarget_C";
 
-	// Token: 0x0400088B RID: 2187
+	// Token: 0x04000893 RID: 2195
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400088C RID: 2188
+	// Token: 0x04000894 RID: 2196
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400088D RID: 2189
+	// Token: 0x04000895 RID: 2197
 	private static int __PropertyOffset_TargetBlackboardKey;
 
-	// Token: 0x0400088E RID: 2190
+	// Token: 0x04000896 RID: 2198
 	private static int __PropertyOffset_BoneName;
 
-	// Token: 0x0400088F RID: 2191
+	// Token: 0x04000897 RID: 2199
 	private static int __PropertyOffset_EnableDebugDraw;
 }

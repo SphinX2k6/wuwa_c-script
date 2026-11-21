@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001973 RID: 6515
+// Token: 0x02000E30 RID: 3632
 public class SmallItemGridDirectionalFusionComponent : SmallItemGridComponent
 {
-	// Token: 0x0600BEC9 RID: 48841 RVA: 0x002B2AA7 File Offset: 0x002B0CA7
+	// Token: 0x060092D1 RID: 37585 RVA: 0x002BDA2B File Offset: 0x002BBC2B
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -15,14 +15,14 @@ public class SmallItemGridDirectionalFusionComponent : SmallItemGridComponent
 		};
 	}
 
-	// Token: 0x0600BECA RID: 48842 RVA: 0x002B2ACA File Offset: 0x002B0CCA
+	// Token: 0x060092D2 RID: 37586 RVA: 0x002BDA4E File Offset: 0x002BBC4E
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_ItemIconTag";
 	}
 
-	// Token: 0x0600BECB RID: 48843 RVA: 0x002B2AD4 File Offset: 0x002B0CD4
+	// Token: 0x060092D3 RID: 37587 RVA: 0x002BDA58 File Offset: 0x002BBC58
 	[NullableContext(2)]
 	protected override void OnRefresh(object phantomFetterId)
 	{

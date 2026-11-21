@@ -2,20 +2,20 @@
 
 namespace CSharpScript.Game.Module.Kurotato
 {
-	// Token: 0x0200570B RID: 22283
+	// Token: 0x020046E2 RID: 18146
 	public enum EKurotatoRedDot
 	{
-		// Token: 0x0401DBCE RID: 121806
+		// Token: 0x04018664 RID: 99940
 		Role = 1,
-		// Token: 0x0401DBCF RID: 121807
+		// Token: 0x04018665 RID: 99941
 		Weapon,
-		// Token: 0x0401DBD0 RID: 121808
+		// Token: 0x04018666 RID: 99942
 		Item,
-		// Token: 0x0401DBD1 RID: 121809
+		// Token: 0x04018667 RID: 99943
 		Level,
-		// Token: 0x0401DBD2 RID: 121810
+		// Token: 0x04018668 RID: 99944
 		RoleSelect,
-		// Token: 0x0401DBD3 RID: 121811
+		// Token: 0x04018669 RID: 99945
 		RoleUnlockAnim
 	}
 }

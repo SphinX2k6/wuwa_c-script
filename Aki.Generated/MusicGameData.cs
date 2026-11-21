@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000E7A RID: 3706
+	// Token: 0x02000F5F RID: 3935
 	public struct MusicGameData : IFlatbufferObject
 	{
-		// Token: 0x170022C8 RID: 8904
-		// (get) Token: 0x06009DDF RID: 40415 RVA: 0x0029B051 File Offset: 0x00299251
+		// Token: 0x1700232D RID: 9005
+		// (get) Token: 0x0600A3FF RID: 41983 RVA: 0x002B8765 File Offset: 0x002B6965
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009DE0 RID: 40416 RVA: 0x0029B05E File Offset: 0x0029925E
+		// Token: 0x0600A400 RID: 41984 RVA: 0x002B8772 File Offset: 0x002B6972
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06009DE1 RID: 40417 RVA: 0x0029B068 File Offset: 0x00299268
+		// Token: 0x0600A401 RID: 41985 RVA: 0x002B877C File Offset: 0x002B697C
 		public static MusicGameData GetRootAsMusicGameData(ByteBuffer _bb)
 		{
 			return MusicGameData.GetRootAsMusicGameData(_bb, default(MusicGameData));
 		}
 
-		// Token: 0x06009DE2 RID: 40418 RVA: 0x0029B084 File Offset: 0x00299284
+		// Token: 0x0600A402 RID: 41986 RVA: 0x002B8798 File Offset: 0x002B6998
 		public static MusicGameData GetRootAsMusicGameData(ByteBuffer _bb, MusicGameData obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06009DE3 RID: 40419 RVA: 0x0029B0A1 File Offset: 0x002992A1
+		// Token: 0x0600A403 RID: 41987 RVA: 0x002B87B5 File Offset: 0x002B69B5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06009DE4 RID: 40420 RVA: 0x0029B0B0 File Offset: 0x002992B0
+		// Token: 0x0600A404 RID: 41988 RVA: 0x002B87C4 File Offset: 0x002B69C4
 		public MusicGameData __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170022C9 RID: 8905
-		// (get) Token: 0x06009DE5 RID: 40421 RVA: 0x0029B0C0 File Offset: 0x002992C0
+		// Token: 0x1700232E RID: 9006
+		// (get) Token: 0x0600A405 RID: 41989 RVA: 0x002B87D4 File Offset: 0x002B69D4
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170022CA RID: 8906
-		// (get) Token: 0x06009DE6 RID: 40422 RVA: 0x0029B0FC File Offset: 0x002992FC
+		// Token: 0x1700232F RID: 9007
+		// (get) Token: 0x0600A406 RID: 41990 RVA: 0x002B8810 File Offset: 0x002B6A10
 		public float BgmOffset
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170022CB RID: 8907
-		// (get) Token: 0x06009DE7 RID: 40423 RVA: 0x0029B13C File Offset: 0x0029933C
+		// Token: 0x17002330 RID: 9008
+		// (get) Token: 0x0600A407 RID: 41991 RVA: 0x002B8850 File Offset: 0x002B6A50
 		public string Data
 		{
 			get
@@ -92,19 +92,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009DE8 RID: 40424 RVA: 0x0029B173 File Offset: 0x00299373
+		// Token: 0x0600A408 RID: 41992 RVA: 0x002B8887 File Offset: 0x002B6A87
 		public Span<byte> GetDataBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x06009DE9 RID: 40425 RVA: 0x0029B182 File Offset: 0x00299382
+		// Token: 0x0600A409 RID: 41993 RVA: 0x002B8896 File Offset: 0x002B6A96
 		public byte[] GetDataArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04004F28 RID: 20264
+		// Token: 0x0400550D RID: 21773
 		private Table __p;
 	}
 }

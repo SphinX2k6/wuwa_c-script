@@ -1,15 +1,14 @@
 ﻿using System;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x020018A2 RID: 6306
+// Token: 0x02000D5B RID: 3419
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class SortConfig : ConfigBase
 {
-	// Token: 0x0600B88C RID: 47244 RVA: 0x0029E4AC File Offset: 0x0029C6AC
+	// Token: 0x06008C75 RID: 35957 RVA: 0x002A8BC8 File Offset: 0x002A6DC8
 	public Sort? GetSortConfig(int configId)
 	{
 		Sort? config = ConfigSortById.GetConfig(configId, true);
@@ -20,7 +19,7 @@ public class SortConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x0600B88D RID: 47245 RVA: 0x0029E4E0 File Offset: 0x0029C6E0
+	// Token: 0x06008C76 RID: 35958 RVA: 0x002A8BFC File Offset: 0x002A6DFC
 	public string GetSortRuleName(int ruleId, ESortDataType dataType)
 	{
 		SortRule? config = ConfigSortRuleByIdAndDataId.GetConfig(ruleId, (int)dataType, true);
@@ -31,7 +30,7 @@ public class SortConfig : ConfigBase
 		return "";
 	}
 
-	// Token: 0x0600B88E RID: 47246 RVA: 0x0029E524 File Offset: 0x0029C724
+	// Token: 0x06008C77 RID: 35959 RVA: 0x002A8C40 File Offset: 0x002A6E40
 	public string GetSortRuleIcon(int ruleId, ESortDataType dataType)
 	{
 		SortRule? config = ConfigSortRuleByIdAndDataId.GetConfig(ruleId, (int)dataType, true);
@@ -42,7 +41,7 @@ public class SortConfig : ConfigBase
 		return "";
 	}
 
-	// Token: 0x0600B88F RID: 47247 RVA: 0x0029E558 File Offset: 0x0029C758
+	// Token: 0x06008C78 RID: 35960 RVA: 0x002A8C74 File Offset: 0x002A6E74
 	public int GetSortRuleAddType(int ruleId, ESortDataType dataType)
 	{
 		SortRule? config = ConfigSortRuleByIdAndDataId.GetConfig(ruleId, (int)dataType, true);
@@ -53,7 +52,7 @@ public class SortConfig : ConfigBase
 		return 0;
 	}
 
-	// Token: 0x0600B890 RID: 47248 RVA: 0x0029E588 File Offset: 0x0029C788
+	// Token: 0x06008C79 RID: 35961 RVA: 0x002A8CA4 File Offset: 0x002A6EA4
 	public int GetSortRuleAttributeId(int ruleId, ESortDataType dataType)
 	{
 		SortRule? config = ConfigSortRuleByIdAndDataId.GetConfig(ruleId, (int)dataType, true);
@@ -64,7 +63,7 @@ public class SortConfig : ConfigBase
 		return 0;
 	}
 
-	// Token: 0x0600B891 RID: 47249 RVA: 0x0029E5B8 File Offset: 0x0029C7B8
+	// Token: 0x06008C7A RID: 35962 RVA: 0x002A8CD4 File Offset: 0x002A6ED4
 	public int GetSortId(EFilterSortGroupId groupId)
 	{
 		FilterSortGroup? config = ConfigFilterSortGroupById.GetConfig((int)groupId, true);
@@ -75,14 +74,14 @@ public class SortConfig : ConfigBase
 		return 0;
 	}
 
-	// Token: 0x0600B892 RID: 47250 RVA: 0x0029E5E8 File Offset: 0x0029C7E8
+	// Token: 0x06008C7B RID: 35963 RVA: 0x002A8D04 File Offset: 0x002A6F04
 	public bool IsConfigSortSave(EFilterSortConfigId configId, int groupId)
 	{
 		FilterSortConfig? config = ConfigFilterSortConfigById.GetConfig((int)configId, true);
-		return config != null && config.Value.SaveGroupId().Contains(groupId);
+		return config != null && Array.IndexOf<int>(config.Value.SaveGroupId(), groupId) >= 0;
 	}
 
-	// Token: 0x0600B893 RID: 47251 RVA: 0x0029E620 File Offset: 0x0029C820
+	// Token: 0x06008C7C RID: 35964 RVA: 0x002A8D40 File Offset: 0x002A6F40
 	public string GetConfigSortFormatId(EFilterSortConfigId configId, int groupId, string extraParam = "")
 	{
 		int num = (int)configId;
@@ -94,7 +93,7 @@ public class SortConfig : ConfigBase
 		return text;
 	}
 
-	// Token: 0x0600B894 RID: 47252 RVA: 0x0029E660 File Offset: 0x0029C860
+	// Token: 0x06008C7D RID: 35965 RVA: 0x002A8D80 File Offset: 0x002A6F80
 	public FilterSortConfig GetSortFilterConfig(EFilterSortConfigId configId)
 	{
 		FilterSortConfig? config = ConfigFilterSortConfigById.GetConfig((int)configId, true);
@@ -105,8 +104,8 @@ public class SortConfig : ConfigBase
 		return default(FilterSortConfig);
 	}
 
-	// Token: 0x17000F4D RID: 3917
-	// (get) Token: 0x0600B895 RID: 47253 RVA: 0x0029E68F File Offset: 0x0029C88F
+	// Token: 0x17000F70 RID: 3952
+	// (get) Token: 0x06008C7E RID: 35966 RVA: 0x002A8DAF File Offset: 0x002A6FAF
 	public static SortConfig Instance
 	{
 		get
@@ -115,7 +114,7 @@ public class SortConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x0600B896 RID: 47254 RVA: 0x0029E696 File Offset: 0x0029C896
+	// Token: 0x06008C7F RID: 35967 RVA: 0x002A8DB6 File Offset: 0x002A6FB6
 	public static SortConfig GetOrCreateInstance()
 	{
 		if (SortConfig._Instance == null)
@@ -125,7 +124,7 @@ public class SortConfig : ConfigBase
 		return SortConfig._Instance;
 	}
 
-	// Token: 0x0600B897 RID: 47255 RVA: 0x0029E6AA File Offset: 0x0029C8AA
+	// Token: 0x06008C80 RID: 35968 RVA: 0x002A8DCA File Offset: 0x002A6FCA
 	public static bool CreateInstance()
 	{
 		if (SortConfig._Instance != null)
@@ -136,24 +135,24 @@ public class SortConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0600B898 RID: 47256 RVA: 0x0029E6C0 File Offset: 0x0029C8C0
+	// Token: 0x06008C81 RID: 35969 RVA: 0x002A8DE0 File Offset: 0x002A6FE0
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600B899 RID: 47257 RVA: 0x0029E6C2 File Offset: 0x0029C8C2
+	// Token: 0x06008C82 RID: 35970 RVA: 0x002A8DE2 File Offset: 0x002A6FE2
 	public static void ResetStaticDefaultValue()
 	{
 		SortConfig._Instance = null;
 	}
 
-	// Token: 0x0600B89A RID: 47258 RVA: 0x0029E6CA File Offset: 0x0029C8CA
+	// Token: 0x06008C83 RID: 35971 RVA: 0x002A8DEA File Offset: 0x002A6FEA
 	static SortConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(SortConfig.CreateStaticDefaultValue), new Action(SortConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04005390 RID: 21392
+	// Token: 0x0400543B RID: 21563
 	[Nullable(2)]
 	private static SortConfig _Instance;
 }

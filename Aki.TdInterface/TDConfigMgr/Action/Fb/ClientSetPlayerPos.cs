@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026C1 RID: 9921
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002985 RID: 10629
 	public class ClientSetPlayerPos : ActionParams
 	{
-		// Token: 0x0600DDE7 RID: 56807 RVA: 0x0020F113 File Offset: 0x0020D313
+		// Token: 0x0600EBC3 RID: 60355 RVA: 0x0022B953 File Offset: 0x00229B53
 		public static ClientSetPlayerPos Create(IClientSetPlayerPos? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004227 RID: 16935
-		// (get) Token: 0x0600DDE8 RID: 56808 RVA: 0x0020F132 File Offset: 0x0020D332
+		// Token: 0x17004567 RID: 17767
+		// (get) Token: 0x0600EBC4 RID: 60356 RVA: 0x0022B972 File Offset: 0x00229B72
 		public virtual IClientTeleportConfig TelePortConfig
 		{
 			get
@@ -38,13 +35,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B35 RID: 31541
+		// Token: 0x040081D5 RID: 33237
 		private IClientSetPlayerPos Instance;
 
-		// Token: 0x04007B36 RID: 31542
+		// Token: 0x040081D6 RID: 33238
 		private IClientTeleportConfig _TelePortConfigCache;
 
-		// Token: 0x04007B37 RID: 31543
+		// Token: 0x040081D7 RID: 33239
 		private bool _TelePortConfigInited;
 	}
 }

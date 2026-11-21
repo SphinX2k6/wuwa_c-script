@@ -10,18 +10,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Manufacture.Common
 {
-	// Token: 0x0200569A RID: 22170
+	// Token: 0x02004670 RID: 18032
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AmountItem : UiPanelBase
 	{
-		// Token: 0x060386A6 RID: 231078 RVA: 0x00D64AF0 File Offset: 0x00D62CF0
+		// Token: 0x0602D5A3 RID: 185763 RVA: 0x00CB2C40 File Offset: 0x00CB0E40
 		public AmountItem(UUIItem uiItem)
 		{
 			base.CreateThenShowByActor(uiItem.GetOwner(), null);
 		}
 
-		// Token: 0x060386A7 RID: 231079 RVA: 0x00D64B0C File Offset: 0x00D62D0C
+		// Token: 0x0602D5A4 RID: 185764 RVA: 0x00CB2C5C File Offset: 0x00CB0E5C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060386A8 RID: 231080 RVA: 0x00D64C3C File Offset: 0x00D62E3C
+		// Token: 0x0602D5A5 RID: 185765 RVA: 0x00CB2D8C File Offset: 0x00CB0F8C
 		private UniTask InitCommonItemCountPanel()
 		{
 			AmountItem.<InitCommonItemCountPanel>d__7 <InitCommonItemCountPanel>d__;
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			return <InitCommonItemCountPanel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060386A9 RID: 231081 RVA: 0x00D64C80 File Offset: 0x00D62E80
+		// Token: 0x0602D5A6 RID: 185766 RVA: 0x00CB2DD0 File Offset: 0x00CB0FD0
 		private void SetSumText(int sum)
 		{
 			int maxCallback = this.GetMaxCallback();
@@ -78,39 +78,39 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			this.RefreshAddAndDelButton();
 		}
 
-		// Token: 0x060386AA RID: 231082 RVA: 0x00D64CE9 File Offset: 0x00D62EE9
+		// Token: 0x0602D5A7 RID: 185767 RVA: 0x00CB2E39 File Offset: 0x00CB1039
 		protected override void OnStart()
 		{
 			base.GetText(3).SetText(this.Sum.ToString(), true);
 		}
 
-		// Token: 0x060386AB RID: 231083 RVA: 0x00D64D03 File Offset: 0x00D62F03
+		// Token: 0x0602D5A8 RID: 185768 RVA: 0x00CB2E53 File Offset: 0x00CB1053
 		public void ResetSum()
 		{
 			this.Sum = 1;
 			base.GetText(3).SetText(this.Sum.ToString(), true);
 		}
 
-		// Token: 0x060386AC RID: 231084 RVA: 0x00D64D24 File Offset: 0x00D62F24
+		// Token: 0x0602D5A9 RID: 185769 RVA: 0x00CB2E74 File Offset: 0x00CB1074
 		public void RefreshAddAndDelButton()
 		{
 			((base.GetButton(1).GetOwner() as AUIBaseActor).GetComponentByClass(UUIInteractionGroup.StaticClass()) as UUIInteractionGroup).SetInteractable(this.Sum != 1);
 			((base.GetButton(0).GetOwner() as AUIBaseActor).GetComponentByClass(UUIInteractionGroup.StaticClass()) as UUIInteractionGroup).SetInteractable(this.Sum < this.GetMaxCallback());
 		}
 
-		// Token: 0x060386AD RID: 231085 RVA: 0x00D64D9F File Offset: 0x00D62F9F
+		// Token: 0x0602D5AA RID: 185770 RVA: 0x00CB2EEF File Offset: 0x00CB10EF
 		public void BindGetMaxCallback(Func<int> onGetMaxCallback)
 		{
 			this.OnGetMaxCallback = onGetMaxCallback;
 		}
 
-		// Token: 0x060386AE RID: 231086 RVA: 0x00D64DA8 File Offset: 0x00D62FA8
+		// Token: 0x0602D5AB RID: 185771 RVA: 0x00CB2EF8 File Offset: 0x00CB10F8
 		public void BindSetSumCallback(Action<int> onSetSumCallback)
 		{
 			this.OnSetSumCallback = onSetSumCallback;
 		}
 
-		// Token: 0x060386AF RID: 231087 RVA: 0x00D64DB4 File Offset: 0x00D62FB4
+		// Token: 0x0602D5AC RID: 185772 RVA: 0x00CB2F04 File Offset: 0x00CB1104
 		private int GetMaxCallback()
 		{
 			if (this.OnGetMaxCallback != null)
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			return 1;
 		}
 
-		// Token: 0x060386B0 RID: 231088 RVA: 0x00D64DDC File Offset: 0x00D62FDC
+		// Token: 0x0602D5AD RID: 185773 RVA: 0x00CB2F2C File Offset: 0x00CB112C
 		private void OnAdd()
 		{
 			this.Sum++;
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			base.GetText(3).SetText(this.Sum.ToString(), true);
 		}
 
-		// Token: 0x060386B1 RID: 231089 RVA: 0x00D64E30 File Offset: 0x00D63030
+		// Token: 0x0602D5AE RID: 185774 RVA: 0x00CB2F80 File Offset: 0x00CB1180
 		private void OnDel()
 		{
 			this.Sum--;
@@ -148,13 +148,13 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			base.GetText(3).SetText(this.Sum.ToString(), true);
 		}
 
-		// Token: 0x060386B2 RID: 231090 RVA: 0x00D64E82 File Offset: 0x00D63082
+		// Token: 0x0602D5AF RID: 185775 RVA: 0x00CB2FD2 File Offset: 0x00CB11D2
 		private void OnShowButtonClick()
 		{
 			this.OnShowCommonItemCountPanel();
 		}
 
-		// Token: 0x060386B3 RID: 231091 RVA: 0x00D64E8C File Offset: 0x00D6308C
+		// Token: 0x0602D5B0 RID: 185776 RVA: 0x00CB2FDC File Offset: 0x00CB11DC
 		private UniTask OnShowCommonItemCountPanel()
 		{
 			AmountItem.<OnShowCommonItemCountPanel>d__18 <OnShowCommonItemCountPanel>d__;
@@ -165,35 +165,35 @@ namespace CSharpScript.Game.Module.Manufacture.Common
 			return <OnShowCommonItemCountPanel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401DA26 RID: 121382
+		// Token: 0x040184B1 RID: 99505
 		private int Sum = 1;
 
-		// Token: 0x0401DA27 RID: 121383
+		// Token: 0x040184B2 RID: 99506
 		[Nullable(2)]
 		private Func<int> OnGetMaxCallback;
 
-		// Token: 0x0401DA28 RID: 121384
+		// Token: 0x040184B3 RID: 99507
 		[Nullable(2)]
 		private Action<int> OnSetSumCallback;
 
-		// Token: 0x0401DA29 RID: 121385
+		// Token: 0x040184B4 RID: 99508
 		[Nullable(2)]
 		private CommonItemCountPanel CommonItemCountPanel;
 
-		// Token: 0x0200B85C RID: 47196
+		// Token: 0x0200A284 RID: 41604
 		[NullableContext(0)]
 		private class EAmountItemDefine
 		{
-			// Token: 0x04037CD4 RID: 228564
+			// Token: 0x040326F1 RID: 206577
 			public const int AddButton = 0;
 
-			// Token: 0x04037CD5 RID: 228565
+			// Token: 0x040326F2 RID: 206578
 			public const int DelButton = 1;
 
-			// Token: 0x04037CD6 RID: 228566
+			// Token: 0x040326F3 RID: 206579
 			public const int ShowButton = 2;
 
-			// Token: 0x04037CD7 RID: 228567
+			// Token: 0x040326F4 RID: 206580
 			public const int SumText = 3;
 		}
 	}

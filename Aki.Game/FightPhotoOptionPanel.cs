@@ -12,12 +12,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020025BB RID: 9659
+// Token: 0x02001AA6 RID: 6822
 [NullableContext(2)]
 [Nullable(0)]
 public class FightPhotoOptionPanel : UiPanelBase
 {
-	// Token: 0x0601394E RID: 80206 RVA: 0x004E5154 File Offset: 0x004E3354
+	// Token: 0x06010E2E RID: 69166 RVA: 0x004F3D54 File Offset: 0x004F1F54
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -45,7 +45,7 @@ public class FightPhotoOptionPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x0601394F RID: 80207 RVA: 0x004E52F8 File Offset: 0x004E34F8
+	// Token: 0x06010E2F RID: 69167 RVA: 0x004F3EF8 File Offset: 0x004F20F8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FightPhotoOptionPanel.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -56,7 +56,7 @@ public class FightPhotoOptionPanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013950 RID: 80208 RVA: 0x004E533C File Offset: 0x004E353C
+	// Token: 0x06010E30 RID: 69168 RVA: 0x004F3F3C File Offset: 0x004F213C
 	public UniTask RefreshTabLayout()
 	{
 		FightPhotoOptionPanel.<RefreshTabLayout>d__15 <RefreshTabLayout>d__;
@@ -67,7 +67,7 @@ public class FightPhotoOptionPanel : UiPanelBase
 		return <RefreshTabLayout>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013951 RID: 80209 RVA: 0x004E5380 File Offset: 0x004E3580
+	// Token: 0x06010E31 RID: 69169 RVA: 0x004F3F80 File Offset: 0x004F2180
 	private void RefreshTabContent(EFightPhotoTab tab)
 	{
 		FightPhotoModel.Instance.SelectedTab = new EFightPhotoTab?(tab);
@@ -100,7 +100,7 @@ public class FightPhotoOptionPanel : UiPanelBase
 		currentTabPanel.PlaySwitchAnim();
 	}
 
-	// Token: 0x06013952 RID: 80210 RVA: 0x004E540E File Offset: 0x004E360E
+	// Token: 0x06010E32 RID: 69170 RVA: 0x004F400E File Offset: 0x004F220E
 	private FightPhotoTabPanelBase GetTabPanel(EFightPhotoTab tab)
 	{
 		switch (tab)
@@ -118,14 +118,14 @@ public class FightPhotoOptionPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06013953 RID: 80211 RVA: 0x004E5447 File Offset: 0x004E3647
+	// Token: 0x06010E33 RID: 69171 RVA: 0x004F4047 File Offset: 0x004F2247
 	protected override void OnBeforeShow()
 	{
 		EventSystem.Instance.Add(EEventName.OnChangeFightPhotoOption, new Action(this.OnFrameOptionChanged));
 		EventSystem.Instance.Add(EEventName.UIViewPortSizeChanged, new Action(this.OnViewPortSizeChanged));
 	}
 
-	// Token: 0x06013954 RID: 80212 RVA: 0x004E5480 File Offset: 0x004E3680
+	// Token: 0x06010E34 RID: 69172 RVA: 0x004F4080 File Offset: 0x004F2280
 	public void RefreshMissionState()
 	{
 		TakePicturesWithTimeScaleChildQuestNode currentBtNode = PhotographController.Instance.CurrentBtNode;
@@ -199,7 +199,7 @@ public class FightPhotoOptionPanel : UiPanelBase
 		this.LastTotalCount = num;
 	}
 
-	// Token: 0x06013955 RID: 80213 RVA: 0x004E5604 File Offset: 0x004E3804
+	// Token: 0x06010E35 RID: 69173 RVA: 0x004F4204 File Offset: 0x004F2404
 	[NullableContext(1)]
 	private void PlaySequence(string sequenceName)
 	{
@@ -211,7 +211,7 @@ public class FightPhotoOptionPanel : UiPanelBase
 		this.SequencePlayer.PlayLevelSequenceByName(sequenceName, false, null, false);
 	}
 
-	// Token: 0x06013956 RID: 80214 RVA: 0x004E5650 File Offset: 0x004E3850
+	// Token: 0x06010E36 RID: 69174 RVA: 0x004F4250 File Offset: 0x004F2450
 	protected override void OnBeforeHide()
 	{
 		this.SetAllMonsterVisible(true);
@@ -222,7 +222,7 @@ public class FightPhotoOptionPanel : UiPanelBase
 		EventSystem.Instance.Remove(EEventName.UIViewPortSizeChanged, new Action(this.OnViewPortSizeChanged));
 	}
 
-	// Token: 0x06013957 RID: 80215 RVA: 0x004E56AE File Offset: 0x004E38AE
+	// Token: 0x06010E37 RID: 69175 RVA: 0x004F42AE File Offset: 0x004F24AE
 	protected override void OnBeforeDestroy()
 	{
 		LevelSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -233,7 +233,7 @@ public class FightPhotoOptionPanel : UiPanelBase
 		this.SequencePlayer = null;
 	}
 
-	// Token: 0x06013958 RID: 80216 RVA: 0x004E56C8 File Offset: 0x004E38C8
+	// Token: 0x06010E38 RID: 69176 RVA: 0x004F42C8 File Offset: 0x004F24C8
 	private void SetAllMonsterVisible(bool isVisible)
 	{
 		if (this.MonsterEntityHandleList.Count == 0)
@@ -263,7 +263,7 @@ public class FightPhotoOptionPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06013959 RID: 80217 RVA: 0x004E57DC File Offset: 0x004E39DC
+	// Token: 0x06010E39 RID: 69177 RVA: 0x004F43DC File Offset: 0x004F25DC
 	public void RefreshCondition()
 	{
 		TakePicturesWithTimeScaleChildQuestNode currentBtNode = PhotographController.Instance.CurrentBtNode;
@@ -288,7 +288,7 @@ public class FightPhotoOptionPanel : UiPanelBase
 		this.RefreshMissionState();
 	}
 
-	// Token: 0x0601395A RID: 80218 RVA: 0x004E5844 File Offset: 0x004E3A44
+	// Token: 0x06010E3A RID: 69178 RVA: 0x004F4444 File Offset: 0x004F2644
 	public void RefreshTip()
 	{
 		bool uiactive = PhotographController.Instance.IsFinishCurrentBtNode();
@@ -301,7 +301,7 @@ public class FightPhotoOptionPanel : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(4), textStringId, Array.Empty<object>());
 	}
 
-	// Token: 0x0601395B RID: 80219 RVA: 0x004E589F File Offset: 0x004E3A9F
+	// Token: 0x06010E3B RID: 69179 RVA: 0x004F449F File Offset: 0x004F269F
 	public void SetTipVisible(bool isVisible)
 	{
 		UUIItem item = base.GetItem(3);
@@ -312,7 +312,7 @@ public class FightPhotoOptionPanel : UiPanelBase
 		item.SetUIActive(isVisible);
 	}
 
-	// Token: 0x0601395C RID: 80220 RVA: 0x004E58B3 File Offset: 0x004E3AB3
+	// Token: 0x06010E3C RID: 69180 RVA: 0x004F44B3 File Offset: 0x004F26B3
 	[NullableContext(1)]
 	private FightPhotoTabItem CreateTabItem()
 	{
@@ -322,26 +322,26 @@ public class FightPhotoOptionPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x0601395D RID: 80221 RVA: 0x004E58CC File Offset: 0x004E3ACC
+	// Token: 0x06010E3D RID: 69181 RVA: 0x004F44CC File Offset: 0x004F26CC
 	private void OnTabClick(EFightPhotoTab tab)
 	{
 		this.TabLayout.SelectGridProxyByKey(tab, false);
 		this.RefreshTabContent(tab);
 	}
 
-	// Token: 0x0601395E RID: 80222 RVA: 0x004E58E7 File Offset: 0x004E3AE7
+	// Token: 0x06010E3E RID: 69182 RVA: 0x004F44E7 File Offset: 0x004F26E7
 	private void OnHideMonsterToggleClick(EToggleState toggleState)
 	{
 		this.SetAllMonsterVisible(toggleState == EToggleState.ETT_UnChecked);
 	}
 
-	// Token: 0x0601395F RID: 80223 RVA: 0x004E58F3 File Offset: 0x004E3AF3
+	// Token: 0x06010E3F RID: 69183 RVA: 0x004F44F3 File Offset: 0x004F26F3
 	private void OnFrameSwitched()
 	{
 		this.PlaySequence("FrameIn");
 	}
 
-	// Token: 0x06013960 RID: 80224 RVA: 0x004E5900 File Offset: 0x004E3B00
+	// Token: 0x06010E40 RID: 69184 RVA: 0x004F4500 File Offset: 0x004F2700
 	public void SetHideAreaActive(bool bVisible)
 	{
 		UUIItem item = base.GetItem(12);
@@ -352,7 +352,7 @@ public class FightPhotoOptionPanel : UiPanelBase
 		item.SetUIActive(bVisible);
 	}
 
-	// Token: 0x06013961 RID: 80225 RVA: 0x004E5918 File Offset: 0x004E3B18
+	// Token: 0x06010E41 RID: 69185 RVA: 0x004F4518 File Offset: 0x004F2718
 	public void ApplyFrameStyle(FightPhotoFrameStyle config)
 	{
 		UUIItem item = base.GetItem(10);
@@ -408,7 +408,7 @@ public class FightPhotoOptionPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06013962 RID: 80226 RVA: 0x004E5AB0 File Offset: 0x004E3CB0
+	// Token: 0x06010E42 RID: 69186 RVA: 0x004F46B0 File Offset: 0x004F28B0
 	private void OnFrameOptionChanged()
 	{
 		int? fightPhotoExtraOption = FightPhotoModel.Instance.GetFightPhotoExtraOption(EFightPhotoExtraOptionType.Frame);
@@ -438,14 +438,14 @@ public class FightPhotoOptionPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06013963 RID: 80227 RVA: 0x004E5B2E File Offset: 0x004E3D2E
+	// Token: 0x06010E43 RID: 69187 RVA: 0x004F472E File Offset: 0x004F292E
 	private void OnViewPortSizeChanged()
 	{
 		PhotographController.Instance.ReapplyCurrentFrame();
 		this.OnFrameOptionChanged();
 	}
 
-	// Token: 0x06013964 RID: 80228 RVA: 0x004E5B40 File Offset: 0x004E3D40
+	// Token: 0x06010E44 RID: 69188 RVA: 0x004F4740 File Offset: 0x004F2940
 	private bool IsDefaultFrame()
 	{
 		int? fightPhotoExtraOption = FightPhotoModel.Instance.GetFightPhotoExtraOption(EFightPhotoExtraOptionType.Frame);
@@ -462,7 +462,7 @@ public class FightPhotoOptionPanel : UiPanelBase
 		return true;
 	}
 
-	// Token: 0x06013965 RID: 80229 RVA: 0x004E5BAC File Offset: 0x004E3DAC
+	// Token: 0x06010E45 RID: 69189 RVA: 0x004F47AC File Offset: 0x004F29AC
 	[NullableContext(1)]
 	[return: Nullable(new byte[]
 	{
@@ -507,15 +507,15 @@ public class FightPhotoOptionPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x040093C7 RID: 37831
+	// Token: 0x0400951D RID: 38173
 	[Nullable(1)]
 	private readonly List<EntityHandle> MonsterEntityHandleList = new List<EntityHandle>();
 
-	// Token: 0x040093C8 RID: 37832
+	// Token: 0x0400951E RID: 38174
 	[Nullable(1)]
 	private readonly Dictionary<EntityHandle, int> HandleToDisableIdMap = new Dictionary<EntityHandle, int>();
 
-	// Token: 0x040093C9 RID: 37833
+	// Token: 0x0400951F RID: 38175
 	[Nullable(new byte[]
 	{
 		2,
@@ -523,68 +523,68 @@ public class FightPhotoOptionPanel : UiPanelBase
 	})]
 	private GenericLayout<FightPhotoTabItem, EFightPhotoTab> TabLayout;
 
-	// Token: 0x040093CA RID: 37834
+	// Token: 0x04009520 RID: 38176
 	private FightPhotoMissionPanel MissionPanel;
 
-	// Token: 0x040093CB RID: 37835
+	// Token: 0x04009521 RID: 38177
 	private FightPhotoFilterPanel FilterPanel;
 
-	// Token: 0x040093CC RID: 37836
+	// Token: 0x04009522 RID: 38178
 	private FightPhotoSettingPanel SettingPanel;
 
-	// Token: 0x040093CD RID: 37837
+	// Token: 0x04009523 RID: 38179
 	private FightPhotoFramePanel FramePanel;
 
-	// Token: 0x040093CE RID: 37838
+	// Token: 0x04009524 RID: 38180
 	private FightPhotoTabPanelBase CurrentTabPanel;
 
-	// Token: 0x040093CF RID: 37839
+	// Token: 0x04009525 RID: 38181
 	private LevelSequencePlayer SequencePlayer;
 
-	// Token: 0x040093D0 RID: 37840
+	// Token: 0x04009526 RID: 38182
 	private int LastFinishedCount = -1;
 
-	// Token: 0x040093D1 RID: 37841
+	// Token: 0x04009527 RID: 38183
 	private int LastTotalCount = -1;
 
-	// Token: 0x040093D2 RID: 37842
+	// Token: 0x04009528 RID: 38184
 	private bool IsShowingNoMission;
 
-	// Token: 0x02008BC7 RID: 35783
+	// Token: 0x02007D4F RID: 32079
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x0402D5DC RID: 185820
+		// Token: 0x040288F1 RID: 166129
 		LayoutTab,
-		// Token: 0x0402D5DD RID: 185821
+		// Token: 0x040288F2 RID: 166130
 		ItemTab,
-		// Token: 0x0402D5DE RID: 185822
+		// Token: 0x040288F3 RID: 166131
 		ItemContent,
-		// Token: 0x0402D5DF RID: 185823
+		// Token: 0x040288F4 RID: 166132
 		ItemTip,
-		// Token: 0x0402D5E0 RID: 185824
+		// Token: 0x040288F5 RID: 166133
 		TextTip,
-		// Token: 0x0402D5E1 RID: 185825
+		// Token: 0x040288F6 RID: 166134
 		ItemFrame,
-		// Token: 0x0402D5E2 RID: 185826
+		// Token: 0x040288F7 RID: 166135
 		ItemFrameTip,
-		// Token: 0x0402D5E3 RID: 185827
+		// Token: 0x040288F8 RID: 166136
 		ToggleHideMonster,
-		// Token: 0x0402D5E4 RID: 185828
+		// Token: 0x040288F9 RID: 166137
 		ItemPhotoFrame,
-		// Token: 0x0402D5E5 RID: 185829
+		// Token: 0x040288FA RID: 166138
 		TextTitle,
-		// Token: 0x0402D5E6 RID: 185830
+		// Token: 0x040288FB RID: 166139
 		ItemDeco,
-		// Token: 0x0402D5E7 RID: 185831
+		// Token: 0x040288FC RID: 166140
 		ItemPhotoFrameParent,
-		// Token: 0x0402D5E8 RID: 185832
+		// Token: 0x040288FD RID: 166141
 		ItemHidePanel,
-		// Token: 0x0402D5E9 RID: 185833
+		// Token: 0x040288FE RID: 166142
 		ItemPointLeft,
-		// Token: 0x0402D5EA RID: 185834
+		// Token: 0x040288FF RID: 166143
 		ItemPointTop,
-		// Token: 0x0402D5EB RID: 185835
+		// Token: 0x04028900 RID: 166144
 		SpriteMissionLine
 	}
 }

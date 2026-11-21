@@ -2,20 +2,20 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 {
-	// Token: 0x02006289 RID: 25225
+	// Token: 0x02005207 RID: 20999
 	internal enum <RealmBetweenTravelTaskView>F4EB5BCE23FF6E6A027146964EB2CB1C7797DE74A08764033D2C16990D956B160__ETabComponents
 	{
-		// Token: 0x040212DF RID: 135903
+		// Token: 0x0401BC0E RID: 113678
 		Toggle,
-		// Token: 0x040212E0 RID: 135904
+		// Token: 0x0401BC0F RID: 113679
 		Name,
-		// Token: 0x040212E1 RID: 135905
+		// Token: 0x0401BC10 RID: 113680
 		SpriteDone,
-		// Token: 0x040212E2 RID: 135906
+		// Token: 0x0401BC11 RID: 113681
 		SpriteLock,
-		// Token: 0x040212E3 RID: 135907
+		// Token: 0x0401BC12 RID: 113682
 		RedDot,
-		// Token: 0x040212E4 RID: 135908
+		// Token: 0x0401BC13 RID: 113683
 		RedDotNew
 	}
 }

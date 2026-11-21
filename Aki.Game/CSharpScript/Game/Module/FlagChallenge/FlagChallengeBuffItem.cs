@@ -6,18 +6,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.FlagChallenge
 {
-	// Token: 0x02005A5B RID: 23131
+	// Token: 0x02004A37 RID: 18999
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FlagChallengeBuffItem : UiPanelBase
 	{
-		// Token: 0x0603AA27 RID: 240167 RVA: 0x00DF56AC File Offset: 0x00DF38AC
+		// Token: 0x0602F970 RID: 194928 RVA: 0x00D45C30 File Offset: 0x00D43E30
 		public FlagChallengeBuffItem(FlagChallengeBuffData data)
 		{
 			this.BuffData = data;
 		}
 
-		// Token: 0x0603AA28 RID: 240168 RVA: 0x00DF56BC File Offset: 0x00DF38BC
+		// Token: 0x0602F971 RID: 194929 RVA: 0x00D45C40 File Offset: 0x00D43E40
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			};
 		}
 
-		// Token: 0x0603AA29 RID: 240169 RVA: 0x00DF57C0 File Offset: 0x00DF39C0
+		// Token: 0x0602F972 RID: 194930 RVA: 0x00D45D44 File Offset: 0x00D43F44
 		protected override void OnStart()
 		{
 			UUIItem item = base.GetItem(8);
@@ -49,13 +49,13 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			item.SetUIActive(flagChallengeData.IsBuffNewlyUnlocked(id));
 		}
 
-		// Token: 0x0603AA2A RID: 240170 RVA: 0x00DF5813 File Offset: 0x00DF3A13
+		// Token: 0x0602F973 RID: 194931 RVA: 0x00D45D97 File Offset: 0x00D43F97
 		protected override void OnBeforeDestroy()
 		{
 			RedDotController.Instance.UnBindGivenUi(ERedDotName.RedDotFlagChallengeActivityBuffItemNewlyUnlocked, base.GetItem(8), this.BuffData.Id);
 		}
 
-		// Token: 0x0603AA2B RID: 240171 RVA: 0x00DF5838 File Offset: 0x00DF3A38
+		// Token: 0x0602F974 RID: 194932 RVA: 0x00D45DBC File Offset: 0x00D43FBC
 		public void RefreshView()
 		{
 			base.GetText(6).SetText(this.BuffData.Config.Level.ToString(), true);
@@ -63,20 +63,20 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			this.UpdateState();
 		}
 
-		// Token: 0x0603AA2C RID: 240172 RVA: 0x00DF587C File Offset: 0x00DF3A7C
+		// Token: 0x0602F975 RID: 194933 RVA: 0x00D45E00 File Offset: 0x00D44000
 		public void UpdateToggleState()
 		{
 			EToggleState state = this.BuffData.IsSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 			base.GetExtendToggle(1).SetToggleStateForce(state, false, false, false);
 		}
 
-		// Token: 0x0603AA2D RID: 240173 RVA: 0x00DF58AB File Offset: 0x00DF3AAB
+		// Token: 0x0602F976 RID: 194934 RVA: 0x00D45E2F File Offset: 0x00D4402F
 		public void SetClickCallback(Action<FlagChallengeBuffData> callback)
 		{
 			this.ClickCallback = callback;
 		}
 
-		// Token: 0x0603AA2E RID: 240174 RVA: 0x00DF58B4 File Offset: 0x00DF3AB4
+		// Token: 0x0602F977 RID: 194935 RVA: 0x00D45E38 File Offset: 0x00D44038
 		private void OnBuffToggle(EToggleState state)
 		{
 			Action<FlagChallengeBuffData> clickCallback = this.ClickCallback;
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			clickCallback(this.BuffData);
 		}
 
-		// Token: 0x0603AA2F RID: 240175 RVA: 0x00DF58CC File Offset: 0x00DF3ACC
+		// Token: 0x0602F978 RID: 194936 RVA: 0x00D45E50 File Offset: 0x00D44050
 		public void UpdateState()
 		{
 			switch (this.BuffData.GetBuffStatus())
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			}
 		}
 
-		// Token: 0x0603AA30 RID: 240176 RVA: 0x00DF590C File Offset: 0x00DF3B0C
+		// Token: 0x0602F979 RID: 194937 RVA: 0x00D45E90 File Offset: 0x00D44090
 		public void SetStateActive()
 		{
 			this.SetStarState(true);
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			this.SetUseIconChangeColor(true);
 		}
 
-		// Token: 0x0603AA31 RID: 240177 RVA: 0x00DF5950 File Offset: 0x00DF3B50
+		// Token: 0x0602F97A RID: 194938 RVA: 0x00D45ED4 File Offset: 0x00D440D4
 		public void SetStateTempActive()
 		{
 			this.SetStarState(true);
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			this.SetUseIconChangeColor(true);
 		}
 
-		// Token: 0x0603AA32 RID: 240178 RVA: 0x00DF5994 File Offset: 0x00DF3B94
+		// Token: 0x0602F97B RID: 194939 RVA: 0x00D45F18 File Offset: 0x00D44118
 		public void SetStateNotActive()
 		{
 			this.SetStarState(false);
@@ -136,26 +136,26 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			this.SetUseIconChangeColor(false);
 		}
 
-		// Token: 0x0603AA33 RID: 240179 RVA: 0x00DF59D6 File Offset: 0x00DF3BD6
+		// Token: 0x0602F97C RID: 194940 RVA: 0x00D45F5A File Offset: 0x00D4415A
 		private void SetStarState(bool show)
 		{
 			base.GetSprite(0).SetUIActive(show);
 		}
 
-		// Token: 0x0603AA34 RID: 240180 RVA: 0x00DF59E5 File Offset: 0x00DF3BE5
+		// Token: 0x0602F97D RID: 194941 RVA: 0x00D45F69 File Offset: 0x00D44169
 		private void SetLockState(bool show)
 		{
 			base.GetItem(7).SetUIActive(show);
 		}
 
-		// Token: 0x0603AA35 RID: 240181 RVA: 0x00DF59F4 File Offset: 0x00DF3BF4
+		// Token: 0x0602F97E RID: 194942 RVA: 0x00D45F78 File Offset: 0x00D44178
 		private void SetIcon(string path)
 		{
 			UUITexture texture = base.GetTexture(5);
 			base.SetTextureByPath(path, texture, null, null);
 		}
 
-		// Token: 0x0603AA36 RID: 240182 RVA: 0x00DF5A1C File Offset: 0x00DF3C1C
+		// Token: 0x0602F97F RID: 194943 RVA: 0x00D45FA0 File Offset: 0x00D441A0
 		private void SetUseIconChangeColor(bool isUse)
 		{
 			UUITexture texture = base.GetTexture(5);
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			uuiitem.SetChangeColor(isUse, fcolor);
 		}
 
-		// Token: 0x0603AA37 RID: 240183 RVA: 0x00DF5A48 File Offset: 0x00DF3C48
+		// Token: 0x0602F980 RID: 194944 RVA: 0x00D45FCC File Offset: 0x00D441CC
 		private void SetStateItemShow(int index)
 		{
 			foreach (int num in new List<int>
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 			}
 		}
 
-		// Token: 0x0401E91A RID: 125210
+		// Token: 0x040193C1 RID: 103361
 		[Nullable(new byte[]
 		{
 			2,
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.Module.FlagChallenge
 		})]
 		private Action<FlagChallengeBuffData> ClickCallback;
 
-		// Token: 0x0401E91B RID: 125211
+		// Token: 0x040193C2 RID: 103362
 		private readonly FlagChallengeBuffData BuffData;
 	}
 }

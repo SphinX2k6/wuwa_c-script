@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200018E RID: 398
+	// Token: 0x020001A0 RID: 416
 	public class ConfigCommunityById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000956 RID: 2390 RVA: 0x0008E4EB File Offset: 0x0008C6EB
+		// Token: 0x060009C2 RID: 2498 RVA: 0x00094423 File Offset: 0x00092623
 		static ConfigCommunityById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigCommunityById.CreateStaticDefaultValue), new Action(ConfigCommunityById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000957 RID: 2391 RVA: 0x0008E50C File Offset: 0x0008C70C
+		// Token: 0x060009C3 RID: 2499 RVA: 0x00094444 File Offset: 0x00092644
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigCommunityById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000958 RID: 2392 RVA: 0x0008E58B File Offset: 0x0008C78B
+		// Token: 0x060009C4 RID: 2500 RVA: 0x000944C3 File Offset: 0x000926C3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigCommunityById.LogPair = null;
 			ConfigCommunityById.HandleId = 0;
 		}
 
-		// Token: 0x06000959 RID: 2393 RVA: 0x0008E599 File Offset: 0x0008C799
+		// Token: 0x060009C5 RID: 2501 RVA: 0x000944D1 File Offset: 0x000926D1
 		public static void Init()
 		{
 			ConfigCommunityById.HandleId = ConfigCommon.InitDataStatement(ConfigCommunityById.HandleId, "db_platformchannel.db", "select BinData from `Community` where Id=?");
 		}
 
-		// Token: 0x0600095A RID: 2394 RVA: 0x0008E5B4 File Offset: 0x0008C7B4
+		// Token: 0x060009C6 RID: 2502 RVA: 0x000944EC File Offset: 0x000926EC
 		public static Community? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigCommunityById.HandleId, ConfigCommunityById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new Community?(rootAsCommunity);
 		}
 
-		// Token: 0x04000AC6 RID: 2758
+		// Token: 0x04000B44 RID: 2884
 		private const string DB = "db_platformchannel.db";
 
-		// Token: 0x04000AC7 RID: 2759
+		// Token: 0x04000B45 RID: 2885
 		private const string FILE = "p.平台渠道.xlsx";
 
-		// Token: 0x04000AC8 RID: 2760
+		// Token: 0x04000B46 RID: 2886
 		private const string TABLE = "Community";
 
-		// Token: 0x04000AC9 RID: 2761
+		// Token: 0x04000B47 RID: 2887
 		private const string COMMAND = "select BinData from `Community` where Id=?";
 
-		// Token: 0x04000ACA RID: 2762
+		// Token: 0x04000B48 RID: 2888
 		private const string KEY_PREFIX = "CommunityById";
 
-		// Token: 0x04000ACB RID: 2763
+		// Token: 0x04000B49 RID: 2889
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000ACC RID: 2764
+		// Token: 0x04000B4A RID: 2890
 		private static int HandleId;
 	}
 }

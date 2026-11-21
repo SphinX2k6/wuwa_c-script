@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001101 RID: 4353
+	// Token: 0x0200122F RID: 4655
 	public class IRoleTowerChallengeTitleCurrentFloor_SetValue
 	{
-		// Token: 0x04003B1E RID: 15134
+		// Token: 0x04003E6C RID: 15980
 		public ERoleTowerChallengeTitleType Type;
 	}
 }

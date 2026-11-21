@@ -6,18 +6,18 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001D9E RID: 7582
+// Token: 0x02001260 RID: 4704
 [NullableContext(2)]
 [Nullable(0)]
 public class CountDownChallengeView : UiViewBase
 {
-	// Token: 0x0600E62A RID: 58922 RVA: 0x00363BA0 File Offset: 0x00361DA0
+	// Token: 0x0600BA48 RID: 47688 RVA: 0x0036F800 File Offset: 0x0036DA00
 	[NullableContext(1)]
 	public CountDownChallengeView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600E62B RID: 58923 RVA: 0x00363BB4 File Offset: 0x00361DB4
+	// Token: 0x0600BA49 RID: 47689 RVA: 0x0036F814 File Offset: 0x0036DA14
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -35,7 +35,7 @@ public class CountDownChallengeView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600E62C RID: 58924 RVA: 0x00363C60 File Offset: 0x00361E60
+	// Token: 0x0600BA4A RID: 47690 RVA: 0x0036F8C0 File Offset: 0x0036DAC0
 	protected override void OnStart()
 	{
 		ChallengeCountDownViewParams challengeCountDownViewParams = this.OpenParam as ChallengeCountDownViewParams;
@@ -57,21 +57,21 @@ public class CountDownChallengeView : UiViewBase
 		}, 100, this.MemoryTag);
 	}
 
-	// Token: 0x0600E62D RID: 58925 RVA: 0x00363CFD File Offset: 0x00361EFD
+	// Token: 0x0600BA4B RID: 47691 RVA: 0x0036F95D File Offset: 0x0036DB5D
 	protected override void OnAddEventListener()
 	{
 		base.OnAddEventListener();
 		EventSystem.Instance.Add<double, double>(EEventName.OnGamePlayCdChanged, new Action<double, double>(this.UpdateCountDown));
 	}
 
-	// Token: 0x0600E62E RID: 58926 RVA: 0x00363D21 File Offset: 0x00361F21
+	// Token: 0x0600BA4C RID: 47692 RVA: 0x0036F981 File Offset: 0x0036DB81
 	protected override void OnRemoveEventListener()
 	{
 		base.OnRemoveEventListener();
 		EventSystem.Instance.Remove(EEventName.OnGamePlayCdChanged, new Action<double, double>(this.UpdateCountDown));
 	}
 
-	// Token: 0x0600E62F RID: 58927 RVA: 0x00363D48 File Offset: 0x00361F48
+	// Token: 0x0600BA4D RID: 47693 RVA: 0x0036F9A8 File Offset: 0x0036DBA8
 	private void UpdateCountDown(double remainTime, double timerEndTime)
 	{
 		this.LastRemainTime = this.RemainTime;
@@ -175,59 +175,59 @@ public class CountDownChallengeView : UiViewBase
 		text2.SetText(this.TitleKey, true);
 	}
 
-	// Token: 0x04006A7C RID: 27260
+	// Token: 0x04006B5D RID: 27485
 	private const int ONE_HUNDRED = 100;
 
-	// Token: 0x04006A7D RID: 27261
+	// Token: 0x04006B5E RID: 27486
 	[Nullable(1)]
 	private const string SWITCH_ANIM = "Switch";
 
-	// Token: 0x04006A7E RID: 27262
+	// Token: 0x04006B5F RID: 27487
 	[Nullable(1)]
 	private const string ADD_ANIM = "Add";
 
-	// Token: 0x04006A7F RID: 27263
+	// Token: 0x04006B60 RID: 27488
 	private double LastRemainTime;
 
-	// Token: 0x04006A80 RID: 27264
+	// Token: 0x04006B61 RID: 27489
 	private double RemainTime;
 
-	// Token: 0x04006A81 RID: 27265
+	// Token: 0x04006B62 RID: 27490
 	private double TimerEndTime;
 
-	// Token: 0x04006A82 RID: 27266
+	// Token: 0x04006B63 RID: 27491
 	[Nullable(1)]
 	private string TitleKey = "";
 
-	// Token: 0x04006A83 RID: 27267
+	// Token: 0x04006B64 RID: 27492
 	private UUIArtText CountDownText;
 
-	// Token: 0x04006A84 RID: 27268
+	// Token: 0x04006B65 RID: 27493
 	private UUIArtText ChangeText;
 
-	// Token: 0x04006A85 RID: 27269
+	// Token: 0x04006B66 RID: 27494
 	private ULGUIArtTextData YellowArtTextData;
 
-	// Token: 0x04006A86 RID: 27270
+	// Token: 0x04006B67 RID: 27495
 	private ULGUIArtTextData RedArtTextData;
 
-	// Token: 0x04006A87 RID: 27271
+	// Token: 0x04006B68 RID: 27496
 	protected LevelSequencePlayer SequencePlayer;
 
-	// Token: 0x0200837A RID: 33658
+	// Token: 0x02007502 RID: 29954
 	[NullableContext(0)]
 	private static class EViewComponent
 	{
-		// Token: 0x0402AD8D RID: 175501
+		// Token: 0x040260B3 RID: 155827
 		public const int BgTexture = 0;
 
-		// Token: 0x0402AD8E RID: 175502
+		// Token: 0x040260B4 RID: 155828
 		public const int TipsText = 1;
 
-		// Token: 0x0402AD8F RID: 175503
+		// Token: 0x040260B5 RID: 155829
 		public const int CountDownText = 2;
 
-		// Token: 0x0402AD90 RID: 175504
+		// Token: 0x040260B6 RID: 155830
 		public const int ChangeText = 3;
 	}
 }

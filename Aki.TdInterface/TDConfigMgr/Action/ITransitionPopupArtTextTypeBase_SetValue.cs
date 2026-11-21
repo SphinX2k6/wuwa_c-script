@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FE3 RID: 8163
+	// Token: 0x0200222A RID: 8746
 	public class ITransitionPopupArtTextTypeBase_SetValue
 	{
-		// Token: 0x04006C59 RID: 27737
+		// Token: 0x0400725B RID: 29275
 		public ETransitionPopupArtTextType Type;
 	}
 }

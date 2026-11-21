@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200154D RID: 5453
+// Token: 0x02000A05 RID: 2565
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityButtonItem : UiPanelBase
 {
-	// Token: 0x06009BDA RID: 39898 RVA: 0x0021BC14 File Offset: 0x00219E14
+	// Token: 0x06006FB8 RID: 28600 RVA: 0x002259C4 File Offset: 0x00223BC4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -33,7 +33,7 @@ public class ActivityButtonItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009BDB RID: 39899 RVA: 0x0021BCDB File Offset: 0x00219EDB
+	// Token: 0x06006FB9 RID: 28601 RVA: 0x00225A8B File Offset: 0x00223C8B
 	protected override void OnBeforeDestroy()
 	{
 		this.ButtonFunction = null;
@@ -41,7 +41,7 @@ public class ActivityButtonItem : UiPanelBase
 		this.UnBindGivenUid(this.RedDotUid);
 	}
 
-	// Token: 0x06009BDC RID: 39900 RVA: 0x0021BCFC File Offset: 0x00219EFC
+	// Token: 0x06006FBA RID: 28602 RVA: 0x00225AAC File Offset: 0x00223CAC
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -65,7 +65,7 @@ public class ActivityButtonItem : UiPanelBase
 		return array;
 	}
 
-	// Token: 0x06009BDD RID: 39901 RVA: 0x0021BD78 File Offset: 0x00219F78
+	// Token: 0x06006FBB RID: 28603 RVA: 0x00225B28 File Offset: 0x00223D28
 	private void ButtonClick()
 	{
 		Action buttonFunction = this.ButtonFunction;
@@ -79,13 +79,13 @@ public class ActivityButtonItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06009BDE RID: 39902 RVA: 0x0021BDDC File Offset: 0x00219FDC
+	// Token: 0x06006FBC RID: 28604 RVA: 0x00225B8C File Offset: 0x00223D8C
 	public void SetButtonAllowEventBubbleUp(bool value)
 	{
 		base.GetButton(0).AllowEventBubbleUp = value;
 	}
 
-	// Token: 0x06009BDF RID: 39903 RVA: 0x0021BDEC File Offset: 0x00219FEC
+	// Token: 0x06006FBD RID: 28605 RVA: 0x00225B9C File Offset: 0x00223D9C
 	public void SetText(string text)
 	{
 		UUIText text2 = base.GetText(1);
@@ -95,19 +95,19 @@ public class ActivityButtonItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06009BE0 RID: 39904 RVA: 0x0021BE0C File Offset: 0x0021A00C
+	// Token: 0x06006FBE RID: 28606 RVA: 0x00225BBC File Offset: 0x00223DBC
 	public void SetLocalTextNew(string textId, params object[] args)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), textId, args);
 	}
 
-	// Token: 0x06009BE1 RID: 39905 RVA: 0x0021BE21 File Offset: 0x0021A021
+	// Token: 0x06006FBF RID: 28607 RVA: 0x00225BD1 File Offset: 0x00223DD1
 	public void SetShowText(string text)
 	{
 		base.GetText(1).ShowTextNew(text);
 	}
 
-	// Token: 0x06009BE2 RID: 39906 RVA: 0x0021BE30 File Offset: 0x0021A030
+	// Token: 0x06006FC0 RID: 28608 RVA: 0x00225BE0 File Offset: 0x00223DE0
 	public void SetEnableClick(bool state)
 	{
 		UUIButtonComponent button = base.GetButton(0);
@@ -118,31 +118,31 @@ public class ActivityButtonItem : UiPanelBase
 		button.SetSelfInteractive(state);
 	}
 
-	// Token: 0x06009BE3 RID: 39907 RVA: 0x0021BE44 File Offset: 0x0021A044
+	// Token: 0x06006FC1 RID: 28609 RVA: 0x00225BF4 File Offset: 0x00223DF4
 	public void SetFunction(Action buttonFunction)
 	{
 		this.ButtonFunction = buttonFunction;
 	}
 
-	// Token: 0x06009BE4 RID: 39908 RVA: 0x0021BE4D File Offset: 0x0021A04D
+	// Token: 0x06006FC2 RID: 28610 RVA: 0x00225BFD File Offset: 0x00223DFD
 	public void SetExtraFunction(Action buttonFunction)
 	{
 		this.ExtraButtonFunctionSet.Add(buttonFunction);
 	}
 
-	// Token: 0x06009BE5 RID: 39909 RVA: 0x0021BE5C File Offset: 0x0021A05C
+	// Token: 0x06006FC3 RID: 28611 RVA: 0x00225C0C File Offset: 0x00223E0C
 	public void DeleteExtraFunction(Action buttonFunction)
 	{
 		this.ExtraButtonFunctionSet.Remove(buttonFunction);
 	}
 
-	// Token: 0x06009BE6 RID: 39910 RVA: 0x0021BE6B File Offset: 0x0021A06B
+	// Token: 0x06006FC4 RID: 28612 RVA: 0x00225C1B File Offset: 0x00223E1B
 	public void SetRedDotVisible(bool bVisible)
 	{
 		base.GetItem(2).SetUIActive(bVisible);
 	}
 
-	// Token: 0x06009BE7 RID: 39911 RVA: 0x0021BE7C File Offset: 0x0021A07C
+	// Token: 0x06006FC5 RID: 28613 RVA: 0x00225C2C File Offset: 0x00223E2C
 	public void BindRedDot(ERedDotName redDotName, int uId = 0)
 	{
 		UUIItem item = base.GetItem(2);
@@ -158,7 +158,7 @@ public class ActivityButtonItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06009BE8 RID: 39912 RVA: 0x0021BEC3 File Offset: 0x0021A0C3
+	// Token: 0x06006FC6 RID: 28614 RVA: 0x00225C73 File Offset: 0x00223E73
 	public void UnBindGivenUid(int uId)
 	{
 		if (this.RedDotName != null)
@@ -169,7 +169,7 @@ public class ActivityButtonItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06009BE9 RID: 39913 RVA: 0x0021BF02 File Offset: 0x0021A102
+	// Token: 0x06006FC7 RID: 28615 RVA: 0x00225CB2 File Offset: 0x00223EB2
 	public void UnBindRedDot()
 	{
 		if (this.RedDotName != null)
@@ -180,30 +180,30 @@ public class ActivityButtonItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0400446C RID: 17516
+	// Token: 0x04004512 RID: 17682
 	private ERedDotName? RedDotName;
 
-	// Token: 0x0400446D RID: 17517
+	// Token: 0x04004513 RID: 17683
 	private int RedDotUid;
 
-	// Token: 0x0400446E RID: 17518
+	// Token: 0x04004514 RID: 17684
 	private readonly HashSet<Action> ExtraButtonFunctionSet = new HashSet<Action>();
 
-	// Token: 0x0400446F RID: 17519
+	// Token: 0x04004515 RID: 17685
 	[Nullable(2)]
 	private Action ButtonFunction;
 
-	// Token: 0x02007B82 RID: 31618
+	// Token: 0x02006D0D RID: 27917
 	[NullableContext(0)]
 	private class EButtonItemDefine
 	{
-		// Token: 0x040289AD RID: 166317
+		// Token: 0x04023CE8 RID: 146664
 		public const int Button = 0;
 
-		// Token: 0x040289AE RID: 166318
+		// Token: 0x04023CE9 RID: 146665
 		public const int ButtonText = 1;
 
-		// Token: 0x040289AF RID: 166319
+		// Token: 0x04023CEA RID: 146666
 		public const int RedDot = 2;
 	}
 }

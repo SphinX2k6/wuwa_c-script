@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002C7 RID: 711
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200030E RID: 782
 	public class IDollGrabShowcaseDollCameraConfig
 	{
-		// Token: 0x06000D63 RID: 3427 RVA: 0x00032080 File Offset: 0x00030280
+		// Token: 0x06000E93 RID: 3731 RVA: 0x00034FB4 File Offset: 0x000331B4
 		private IDollGrabShowcaseDollCameraConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000D64 RID: 3428 RVA: 0x000320B8 File Offset: 0x000302B8
+		// Token: 0x06000E94 RID: 3732 RVA: 0x00034FEC File Offset: 0x000331EC
 		public static IDollGrabShowcaseDollCameraConfig Create([Nullable(2)] IDollGrabShowcaseDollCameraConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000D65 RID: 3429 RVA: 0x000320CB File Offset: 0x000302CB
+		// Token: 0x06000E95 RID: 3733 RVA: 0x00034FFF File Offset: 0x000331FF
 		public static IDollGrabShowcaseDollCameraConfig CreateFromSetValue([Nullable(2)] IDollGrabShowcaseDollCameraConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000D66 RID: 3430 RVA: 0x000320DE File Offset: 0x000302DE
+		// Token: 0x06000E96 RID: 3734 RVA: 0x00035012 File Offset: 0x00033212
 		public IDollGrabShowcaseDollCameraConfig_SetValue ToSetValue()
 		{
 			return new IDollGrabShowcaseDollCameraConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170003E4 RID: 996
-		// (get) Token: 0x06000D67 RID: 3431 RVA: 0x00032100 File Offset: 0x00030300
-		// (set) Token: 0x06000D68 RID: 3432 RVA: 0x00032161 File Offset: 0x00030361
+		// Token: 0x17000431 RID: 1073
+		// (get) Token: 0x06000E97 RID: 3735 RVA: 0x00035034 File Offset: 0x00033234
+		// (set) Token: 0x06000E98 RID: 3736 RVA: 0x00035095 File Offset: 0x00033295
 		public virtual IShowcaseFullViewCameraConfig FullViewCamera
 		{
 			get
@@ -90,9 +88,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170003E5 RID: 997
-		// (get) Token: 0x06000D69 RID: 3433 RVA: 0x00032178 File Offset: 0x00030378
-		// (set) Token: 0x06000D6A RID: 3434 RVA: 0x000321D9 File Offset: 0x000303D9
+		// Token: 0x17000432 RID: 1074
+		// (get) Token: 0x06000E99 RID: 3737 RVA: 0x000350AC File Offset: 0x000332AC
+		// (set) Token: 0x06000E9A RID: 3738 RVA: 0x0003510D File Offset: 0x0003330D
 		public virtual IDollComboCamera DollCamera
 		{
 			get
@@ -120,24 +118,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000C27 RID: 3111
+		// Token: 0x04000D11 RID: 3345
 		[Nullable(2)]
 		protected IDollGrabShowcaseDollCameraConfig FbInstance;
 
-		// Token: 0x04000C28 RID: 3112
+		// Token: 0x04000D12 RID: 3346
 		[Nullable(2)]
 		protected IDollGrabShowcaseDollCameraConfig_SetValue PocoInterface;
 
-		// Token: 0x04000C29 RID: 3113
+		// Token: 0x04000D13 RID: 3347
 		private IShowcaseFullViewCameraConfig _FullViewCameraCache;
 
-		// Token: 0x04000C2A RID: 3114
+		// Token: 0x04000D14 RID: 3348
 		private bool _FullViewCameraInited;
 
-		// Token: 0x04000C2B RID: 3115
+		// Token: 0x04000D15 RID: 3349
 		private IDollComboCamera _DollCameraCache;
 
-		// Token: 0x04000C2C RID: 3116
+		// Token: 0x04000D16 RID: 3350
 		private bool _DollCameraInited;
 	}
 }

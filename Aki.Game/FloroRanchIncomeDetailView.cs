@@ -11,17 +11,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001B67 RID: 7015
+// Token: 0x02001026 RID: 4134
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchIncomeDetailView : UiViewBase
 {
-	// Token: 0x0600D076 RID: 53366 RVA: 0x002F9BB4 File Offset: 0x002F7DB4
+	// Token: 0x0600A487 RID: 42119 RVA: 0x00304C8C File Offset: 0x00302E8C
 	public FloroRanchIncomeDetailView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0600D077 RID: 53367 RVA: 0x002F9BE4 File Offset: 0x002F7DE4
+	// Token: 0x0600A488 RID: 42120 RVA: 0x00304CBC File Offset: 0x00302EBC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 12;
@@ -68,7 +68,7 @@ public class FloroRanchIncomeDetailView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D078 RID: 53368 RVA: 0x002F9E44 File Offset: 0x002F8044
+	// Token: 0x0600A489 RID: 42121 RVA: 0x00304F1C File Offset: 0x0030311C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FloroRanchIncomeDetailView.<OnBeforeStartAsync>d__17 <OnBeforeStartAsync>d__;
@@ -79,19 +79,19 @@ public class FloroRanchIncomeDetailView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600D079 RID: 53369 RVA: 0x002F9E87 File Offset: 0x002F8087
+	// Token: 0x0600A48A RID: 42122 RVA: 0x00304F5F File Offset: 0x0030315F
 	private OneTextDropDownItem CreateDropDownItem(UUIItem uiItem, FloroRanchFilterType type)
 	{
 		return new OneTextDropDownItem(uiItem);
 	}
 
-	// Token: 0x0600D07A RID: 53370 RVA: 0x002F9E8F File Offset: 0x002F808F
+	// Token: 0x0600A48B RID: 42123 RVA: 0x00304F67 File Offset: 0x00303167
 	private OneTextTitleItem CreateTitleItem(UUIItem uiItem)
 	{
 		return new OneTextTitleItem(uiItem);
 	}
 
-	// Token: 0x0600D07B RID: 53371 RVA: 0x002F9E98 File Offset: 0x002F8098
+	// Token: 0x0600A48C RID: 42124 RVA: 0x00304F70 File Offset: 0x00303170
 	protected override void OnBeforeShow()
 	{
 		FloroRanchGamePlayModel.Instance.RefreshLastIncomeEntityList();
@@ -103,19 +103,19 @@ public class FloroRanchIncomeDetailView : UiViewBase
 		this.RefreshScrollViewInfo();
 	}
 
-	// Token: 0x0600D07C RID: 53372 RVA: 0x002F9F35 File Offset: 0x002F8135
+	// Token: 0x0600A48D RID: 42125 RVA: 0x0030500D File Offset: 0x0030320D
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnFloroRanchCardEntityCountChange, new Action(this.OnFloroRanchCardEntityCountChange));
 	}
 
-	// Token: 0x0600D07D RID: 53373 RVA: 0x002F9F53 File Offset: 0x002F8153
+	// Token: 0x0600A48E RID: 42126 RVA: 0x0030502B File Offset: 0x0030322B
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnFloroRanchCardEntityCountChange, new Action(this.OnFloroRanchCardEntityCountChange));
 	}
 
-	// Token: 0x0600D07E RID: 53374 RVA: 0x002F9F74 File Offset: 0x002F8174
+	// Token: 0x0600A48F RID: 42127 RVA: 0x0030504C File Offset: 0x0030324C
 	protected override void OnStart()
 	{
 		IReadOnlyList<FloroRanchFilterType> floroRanchFilterTypeConfigList = FloroRanchConfig.Instance.GetFloroRanchFilterTypeConfigList();
@@ -130,7 +130,7 @@ public class FloroRanchIncomeDetailView : UiViewBase
 		this.DropDownList.SetOnSelectCall(new Action<int, FloroRanchFilterType>(this.OnSelectFilter));
 	}
 
-	// Token: 0x0600D07F RID: 53375 RVA: 0x002F9FEC File Offset: 0x002F81EC
+	// Token: 0x0600A490 RID: 42128 RVA: 0x003050C4 File Offset: 0x003032C4
 	private FloroRanchIncomeItem CreateIncomeItem()
 	{
 		FloroRanchIncomeItem floroRanchIncomeItem = new FloroRanchIncomeItem();
@@ -140,7 +140,7 @@ public class FloroRanchIncomeDetailView : UiViewBase
 		return floroRanchIncomeItem;
 	}
 
-	// Token: 0x0600D080 RID: 53376 RVA: 0x002FA028 File Offset: 0x002F8228
+	// Token: 0x0600A491 RID: 42129 RVA: 0x00305100 File Offset: 0x00303300
 	private void OnIncomeItemClick(int gridIndex, FloroRanchEntityBase floroRanchEntity)
 	{
 		this.OnItemSelect(gridIndex);
@@ -191,7 +191,7 @@ public class FloroRanchIncomeDetailView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D081 RID: 53377 RVA: 0x002FA0D8 File Offset: 0x002F82D8
+	// Token: 0x0600A492 RID: 42130 RVA: 0x003051B0 File Offset: 0x003033B0
 	private void OnItemSelect(int gridIndex)
 	{
 		this.RefreshIncomeItemToggleState(false, this.IncomeItemSelectIndex);
@@ -206,7 +206,7 @@ public class FloroRanchIncomeDetailView : UiViewBase
 		this.RefreshIncomeItemToggleState(true, gridIndex);
 	}
 
-	// Token: 0x0600D082 RID: 53378 RVA: 0x002FA125 File Offset: 0x002F8325
+	// Token: 0x0600A493 RID: 42131 RVA: 0x003051FD File Offset: 0x003033FD
 	private void CancelItemSelect()
 	{
 		this.OnItemSelect(-1);
@@ -219,7 +219,7 @@ public class FloroRanchIncomeDetailView : UiViewBase
 		selectStateCallback(-1);
 	}
 
-	// Token: 0x0600D083 RID: 53379 RVA: 0x002FA148 File Offset: 0x002F8348
+	// Token: 0x0600A494 RID: 42132 RVA: 0x00305220 File Offset: 0x00303420
 	private void SetTipType(FloroRanchEntityBase floroRanchEntity)
 	{
 		EFloroRanchEntityType entityType = floroRanchEntity.EntityType;
@@ -262,7 +262,7 @@ public class FloroRanchIncomeDetailView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D084 RID: 53380 RVA: 0x002FA200 File Offset: 0x002F8400
+	// Token: 0x0600A495 RID: 42133 RVA: 0x003052D8 File Offset: 0x003034D8
 	private void ShowTips(FloroRanchEntityBase floroRanchEntity)
 	{
 		this.SetTipType(floroRanchEntity);
@@ -292,7 +292,7 @@ public class FloroRanchIncomeDetailView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D085 RID: 53381 RVA: 0x002FA293 File Offset: 0x002F8493
+	// Token: 0x0600A496 RID: 42134 RVA: 0x0030536B File Offset: 0x0030356B
 	private void StopSequenceIfPlaying(LevelSequencePlayer player, string sequenceName)
 	{
 		if (!player.IsPlayingSequence(sequenceName))
@@ -302,7 +302,7 @@ public class FloroRanchIncomeDetailView : UiViewBase
 		player.StopSequenceByKey(sequenceName, false, false);
 	}
 
-	// Token: 0x0600D086 RID: 53382 RVA: 0x002FA2A8 File Offset: 0x002F84A8
+	// Token: 0x0600A497 RID: 42135 RVA: 0x00305380 File Offset: 0x00303580
 	private void HideSubTip(bool playAnim = true)
 	{
 		this.StopSequenceIfPlaying(this.SubTipLevelSequencePlayer, "Start");
@@ -319,7 +319,7 @@ public class FloroRanchIncomeDetailView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D087 RID: 53383 RVA: 0x002FA308 File Offset: 0x002F8508
+	// Token: 0x0600A498 RID: 42136 RVA: 0x003053E0 File Offset: 0x003035E0
 	private void HideMainTip(bool playAnim = true)
 	{
 		this.StopSequenceIfPlaying(this.MainTipLevelSequencePlayer, "Start");
@@ -336,7 +336,7 @@ public class FloroRanchIncomeDetailView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D088 RID: 53384 RVA: 0x002FA368 File Offset: 0x002F8568
+	// Token: 0x0600A499 RID: 42137 RVA: 0x00305440 File Offset: 0x00303640
 	private void ShowSubTip(bool playAnim = true)
 	{
 		FloroRanchEntityBase subEntityData = this.SelectTipData.SubEntityData;
@@ -350,7 +350,7 @@ public class FloroRanchIncomeDetailView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D089 RID: 53385 RVA: 0x002FA3F0 File Offset: 0x002F85F0
+	// Token: 0x0600A49A RID: 42138 RVA: 0x003054C8 File Offset: 0x003036C8
 	private void ShowMainTip(bool playAnim = true)
 	{
 		FloroRanchEntityBase mainEntityData = this.SelectTipData.MainEntityData;
@@ -373,7 +373,7 @@ public class FloroRanchIncomeDetailView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D08A RID: 53386 RVA: 0x002FA485 File Offset: 0x002F8685
+	// Token: 0x0600A49B RID: 42139 RVA: 0x0030555D File Offset: 0x0030375D
 	private void HideRightInfoTip()
 	{
 		this.SelectTipData.ChangeTipInfo(EFloroRanchTipType.None, null, null);
@@ -381,7 +381,7 @@ public class FloroRanchIncomeDetailView : UiViewBase
 		this.HideSubTip(true);
 	}
 
-	// Token: 0x0600D08B RID: 53387 RVA: 0x002FA4A4 File Offset: 0x002F86A4
+	// Token: 0x0600A49C RID: 42140 RVA: 0x0030557C File Offset: 0x0030377C
 	private void SetSubTipHeight(int height)
 	{
 		FloroRanchTerrainTipItem subTipInfoItem = this.SubTipInfoItem;
@@ -393,7 +393,7 @@ public class FloroRanchIncomeDetailView : UiViewBase
 		uuiitem.SetHeight((float)height);
 	}
 
-	// Token: 0x0600D08C RID: 53388 RVA: 0x002FA4D0 File Offset: 0x002F86D0
+	// Token: 0x0600A49D RID: 42141 RVA: 0x003055A8 File Offset: 0x003037A8
 	private void OnSellClick(FloroRanchEntityBase floroRanchEntity)
 	{
 		this.RefreshIncomeItemToggleState(false, this.IncomeItemSelectIndex);
@@ -408,7 +408,7 @@ public class FloroRanchIncomeDetailView : UiViewBase
 		selectStateCallback(-1);
 	}
 
-	// Token: 0x0600D08D RID: 53389 RVA: 0x002FA523 File Offset: 0x002F8723
+	// Token: 0x0600A49E RID: 42142 RVA: 0x003055FB File Offset: 0x003037FB
 	private void RefreshIncomeItemToggleState(bool isSelected, int gridIndex)
 	{
 		if (gridIndex < 0 || gridIndex >= this.IncomeItemList.Count)
@@ -418,7 +418,7 @@ public class FloroRanchIncomeDetailView : UiViewBase
 		this.IncomeItemList[gridIndex].SetSelectState(isSelected);
 	}
 
-	// Token: 0x0600D08E RID: 53390 RVA: 0x002FA54C File Offset: 0x002F874C
+	// Token: 0x0600A49F RID: 42143 RVA: 0x00305624 File Offset: 0x00303824
 	private void RefreshScrollViewInfo()
 	{
 		this.DataList = FloroRanchGamePlayModel.Instance.GetLastIncomeEntityList(this.CurrentFilterData, this.IsAscending, this.IsShowNotPresentCard);
@@ -426,7 +426,7 @@ public class FloroRanchIncomeDetailView : UiViewBase
 		base.GetItem(11).SetUIActive(this.DataList.Count <= 0);
 	}
 
-	// Token: 0x0600D08F RID: 53391 RVA: 0x002FA5AC File Offset: 0x002F87AC
+	// Token: 0x0600A4A0 RID: 42144 RVA: 0x00305684 File Offset: 0x00303884
 	private void OnSelectFilter(int index, FloroRanchFilterType data)
 	{
 		this.CurrentFilterData = data;
@@ -434,13 +434,13 @@ public class FloroRanchIncomeDetailView : UiViewBase
 		this.CancelItemSelect();
 	}
 
-	// Token: 0x0600D090 RID: 53392 RVA: 0x002FA5C1 File Offset: 0x002F87C1
+	// Token: 0x0600A4A1 RID: 42145 RVA: 0x00305699 File Offset: 0x00303899
 	private TableTextArgNew GetDropDownText(FloroRanchFilterType data)
 	{
 		return new TableTextArgNew(data.Name, Array.Empty<object>());
 	}
 
-	// Token: 0x0600D091 RID: 53393 RVA: 0x002FA5D4 File Offset: 0x002F87D4
+	// Token: 0x0600A4A2 RID: 42146 RVA: 0x003056AC File Offset: 0x003038AC
 	private void OnToggleCheckClick(EToggleState _)
 	{
 		this.IsShowNotPresentCard = !this.IsShowNotPresentCard;
@@ -448,7 +448,7 @@ public class FloroRanchIncomeDetailView : UiViewBase
 		this.CancelItemSelect();
 	}
 
-	// Token: 0x0600D092 RID: 53394 RVA: 0x002FA5F1 File Offset: 0x002F87F1
+	// Token: 0x0600A4A3 RID: 42147 RVA: 0x003056C9 File Offset: 0x003038C9
 	private void OnToggleOrderClick(EToggleState _)
 	{
 		this.IsAscending = !this.IsAscending;
@@ -456,7 +456,7 @@ public class FloroRanchIncomeDetailView : UiViewBase
 		this.CancelItemSelect();
 	}
 
-	// Token: 0x0600D093 RID: 53395 RVA: 0x002FA60E File Offset: 0x002F880E
+	// Token: 0x0600A4A4 RID: 42148 RVA: 0x003056E6 File Offset: 0x003038E6
 	private void OnCloseButtonClick()
 	{
 		Action<int> selectStateCallback = this.SelectStateCallback;
@@ -468,7 +468,7 @@ public class FloroRanchIncomeDetailView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600D094 RID: 53396 RVA: 0x002FA62F File Offset: 0x002F882F
+	// Token: 0x0600A4A5 RID: 42149 RVA: 0x00305707 File Offset: 0x00303907
 	private void MainTipSequenceFinishEvent(string sequenceName)
 	{
 		if (sequenceName == "Close")
@@ -482,7 +482,7 @@ public class FloroRanchIncomeDetailView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D095 RID: 53397 RVA: 0x002FA64F File Offset: 0x002F884F
+	// Token: 0x0600A4A6 RID: 42150 RVA: 0x00305727 File Offset: 0x00303927
 	private void SubTipSequenceFinishEvent(string sequenceName)
 	{
 		if (sequenceName == "Close")
@@ -496,14 +496,14 @@ public class FloroRanchIncomeDetailView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600D096 RID: 53398 RVA: 0x002FA670 File Offset: 0x002F8870
+	// Token: 0x0600A4A7 RID: 42151 RVA: 0x00305748 File Offset: 0x00303948
 	private void OnFloroRanchCardEntityCountChange()
 	{
 		int ownCardEntityCount = FloroRanchGamePlayModel.Instance.OwnCardEntityCount;
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(8), "Farm_ShowAllAnimal", new <>z__ReadOnlySingleElementList<object>(ownCardEntityCount));
 	}
 
-	// Token: 0x04005FB7 RID: 24503
+	// Token: 0x04006086 RID: 24710
 	[Nullable(new byte[]
 	{
 		2,
@@ -512,88 +512,88 @@ public class FloroRanchIncomeDetailView : UiViewBase
 	})]
 	private GenericScrollViewNew<FloroRanchIncomeItem, IFloroRanchDetailData> IncomeScrollView;
 
-	// Token: 0x04005FB8 RID: 24504
+	// Token: 0x04006087 RID: 24711
 	private readonly List<FloroRanchIncomeItem> IncomeItemList = new List<FloroRanchIncomeItem>();
 
-	// Token: 0x04005FB9 RID: 24505
+	// Token: 0x04006088 RID: 24712
 	private CommonDropDown<TableTextArgNew, FloroRanchFilterType> DropDownList;
 
-	// Token: 0x04005FBA RID: 24506
+	// Token: 0x04006089 RID: 24713
 	private FloroRanchFilterType CurrentFilterData;
 
-	// Token: 0x04005FBB RID: 24507
+	// Token: 0x0400608A RID: 24714
 	private bool IsShowNotPresentCard;
 
-	// Token: 0x04005FBC RID: 24508
+	// Token: 0x0400608B RID: 24715
 	private bool IsAscending = true;
 
-	// Token: 0x04005FBD RID: 24509
+	// Token: 0x0400608C RID: 24716
 	private List<IFloroRanchDetailData> DataList = new List<IFloroRanchDetailData>();
 
-	// Token: 0x04005FBE RID: 24510
+	// Token: 0x0400608D RID: 24717
 	private int IncomeItemSelectIndex = -1;
 
-	// Token: 0x04005FBF RID: 24511
+	// Token: 0x0400608E RID: 24718
 	private FloroRanchTipData SelectTipData;
 
-	// Token: 0x04005FC0 RID: 24512
+	// Token: 0x0400608F RID: 24719
 	[Nullable(2)]
 	private FloroRanchCommonTipItem MainTipInfoItem;
 
-	// Token: 0x04005FC1 RID: 24513
+	// Token: 0x04006090 RID: 24720
 	[Nullable(2)]
 	private FloroRanchTerrainTipItem SubTipInfoItem;
 
-	// Token: 0x04005FC2 RID: 24514
+	// Token: 0x04006091 RID: 24721
 	[Nullable(2)]
 	private LevelSequencePlayer MainTipLevelSequencePlayer;
 
-	// Token: 0x04005FC3 RID: 24515
+	// Token: 0x04006092 RID: 24722
 	[Nullable(2)]
 	private LevelSequencePlayer SubTipLevelSequencePlayer;
 
-	// Token: 0x04005FC4 RID: 24516
+	// Token: 0x04006093 RID: 24723
 	[Nullable(2)]
 	private Action<int> SelectStateCallback;
 
-	// Token: 0x020080D6 RID: 32982
+	// Token: 0x02007264 RID: 29284
 	[NullableContext(0)]
 	private class EComponentDefine
 	{
-		// Token: 0x0402A087 RID: 172167
+		// Token: 0x040253BB RID: 152507
 		public const int CloseButton = 0;
 
-		// Token: 0x0402A088 RID: 172168
+		// Token: 0x040253BC RID: 152508
 		public const int CoinTexture = 1;
 
-		// Token: 0x0402A089 RID: 172169
+		// Token: 0x040253BD RID: 152509
 		public const int IncomeCoin = 2;
 
-		// Token: 0x0402A08A RID: 172170
+		// Token: 0x040253BE RID: 152510
 		public const int IncomeScrollView = 3;
 
-		// Token: 0x0402A08B RID: 172171
+		// Token: 0x040253BF RID: 152511
 		public const int IncomeItem = 4;
 
-		// Token: 0x0402A08C RID: 172172
+		// Token: 0x040253C0 RID: 152512
 		public const int DropDown = 5;
 
-		// Token: 0x0402A08D RID: 172173
+		// Token: 0x040253C1 RID: 152513
 		public const int OrderToggle = 6;
 
-		// Token: 0x0402A08E RID: 172174
+		// Token: 0x040253C2 RID: 152514
 		public const int CheckToggle = 7;
 
-		// Token: 0x0402A08F RID: 172175
+		// Token: 0x040253C3 RID: 152515
 		public const int CheckToggleText = 8;
 
-		// Token: 0x0402A090 RID: 172176
+		// Token: 0x040253C4 RID: 152516
 		public const int RightInfoRoot = 9;
 
-		// Token: 0x0402A091 RID: 172177
+		// Token: 0x040253C5 RID: 152517
 		public const int MaskButton = 10;
 
-		// Token: 0x0402A092 RID: 172178
+		// Token: 0x040253C6 RID: 152518
 		public const int EmptyPanel = 11;
 	}
 }

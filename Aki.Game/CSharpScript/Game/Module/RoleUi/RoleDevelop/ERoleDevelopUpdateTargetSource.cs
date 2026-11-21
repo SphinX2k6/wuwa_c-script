@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 {
-	// Token: 0x02004D27 RID: 19751
+	// Token: 0x02003CE0 RID: 15584
 	public enum ERoleDevelopUpdateTargetSource
 	{
-		// Token: 0x0401B222 RID: 111138
+		// Token: 0x04015BBC RID: 89020
 		Detection = 1,
-		// Token: 0x0401B223 RID: 111139
+		// Token: 0x04015BBD RID: 89021
 		RoleDevelop,
-		// Token: 0x0401B224 RID: 111140
+		// Token: 0x04015BBE RID: 89022
 		Other
 	}
 }

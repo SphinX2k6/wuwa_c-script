@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000964 RID: 2404
+	// Token: 0x02000A17 RID: 2583
 	public static class EHookFetchMoveModeExtensions
 	{
-		// Token: 0x060035F3 RID: 13811 RVA: 0x0008C9A0 File Offset: 0x0008ABA0
+		// Token: 0x0600397A RID: 14714 RVA: 0x000948F4 File Offset: 0x00092AF4
 		public static string ToEnumString(this EHookFetchMoveMode value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060035F4 RID: 13812 RVA: 0x0008C9C8 File Offset: 0x0008ABC8
+		// Token: 0x0600397B RID: 14715 RVA: 0x0009491C File Offset: 0x00092B1C
 		public static EHookFetchMoveMode FromString(string name)
 		{
 			EHookFetchMoveMode result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060035F5 RID: 13813 RVA: 0x0008C9F1 File Offset: 0x0008ABF1
+		// Token: 0x0600397C RID: 14716 RVA: 0x00094945 File Offset: 0x00092B45
 		public static bool TryFromString(string name, out EHookFetchMoveMode value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x060035F6 RID: 13814 RVA: 0x0008CA16 File Offset: 0x0008AC16
+		// Token: 0x0600397D RID: 14717 RVA: 0x0009496A File Offset: 0x00092B6A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060035F7 RID: 13815 RVA: 0x0008CA26 File Offset: 0x0008AC26
+		// Token: 0x0600397E RID: 14718 RVA: 0x0009497A File Offset: 0x00092B7A
 		public static EHookFetchMoveMode[] GetValues()
 		{
 			return new EHookFetchMoveMode[1];
 		}
 
-		// Token: 0x060035F8 RID: 13816 RVA: 0x0008CA2E File Offset: 0x0008AC2E
+		// Token: 0x0600397F RID: 14719 RVA: 0x00094982 File Offset: 0x00092B82
 		public static string[] GetNames()
 		{
 			return new string[]

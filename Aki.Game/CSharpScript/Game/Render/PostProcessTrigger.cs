@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045D1 RID: 17873
+	// Token: 0x020034FA RID: 13562
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PostProcessTrigger
 	{
-		// Token: 0x0602E12C RID: 188716 RVA: 0x00A9EF00 File Offset: 0x00A9D100
+		// Token: 0x06022820 RID: 141344 RVA: 0x009CB5D0 File Offset: 0x009C97D0
 		[NullableContext(1)]
 		public void Init(UBoxComponent innerBoxCollision, UBoxComponent outerBoxCollision, UKuroPostProcessComponent postProcess, double transitionTime, EWuYinQuState wuYinQuBattleState, string wuYinQuActorKey)
 		{
@@ -46,26 +46,26 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E12D RID: 188717 RVA: 0x00A9F039 File Offset: 0x00A9D239
+		// Token: 0x06022821 RID: 141345 RVA: 0x009CB709 File Offset: 0x009C9909
 		[NullableContext(1)]
 		public string GetWuYinQuBattleKey()
 		{
 			return this.WuYinQuActorKey;
 		}
 
-		// Token: 0x0602E12E RID: 188718 RVA: 0x00A9F041 File Offset: 0x00A9D241
+		// Token: 0x06022822 RID: 141346 RVA: 0x009CB711 File Offset: 0x009C9911
 		public EWuYinQuState? GetWuYinQuBattleState()
 		{
 			return this.WuYinQuBattleState;
 		}
 
-		// Token: 0x0602E12F RID: 188719 RVA: 0x00A9F049 File Offset: 0x00A9D249
+		// Token: 0x06022823 RID: 141347 RVA: 0x009CB719 File Offset: 0x009C9919
 		public UKuroPostProcessComponent GetPostProcessComponent()
 		{
 			return this.PostProcess;
 		}
 
-		// Token: 0x0602E130 RID: 188720 RVA: 0x00A9F051 File Offset: 0x00A9D251
+		// Token: 0x06022824 RID: 141348 RVA: 0x009CB721 File Offset: 0x009C9921
 		private void OnInnerComponentBeginOverlap(UPrimitiveComponent overlappedComponent, AActor otherActor, UPrimitiveComponent otherComp)
 		{
 			if (!this.IsRelativeActor(otherActor))
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Render
 			this.TargetState = new EPostProcessTriggerState?(EPostProcessTriggerState.Inside);
 		}
 
-		// Token: 0x0602E131 RID: 188721 RVA: 0x00A9F06C File Offset: 0x00A9D26C
+		// Token: 0x06022825 RID: 141349 RVA: 0x009CB73C File Offset: 0x009C993C
 		private bool IsRelativeActor(AActor otherActor)
 		{
 			if (otherActor == null || !otherActor.IsValid())
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Render
 			return otherActor == myRoleTrigger;
 		}
 
-		// Token: 0x0602E132 RID: 188722 RVA: 0x00A9F09E File Offset: 0x00A9D29E
+		// Token: 0x06022826 RID: 141350 RVA: 0x009CB76E File Offset: 0x009C996E
 		private void OnOuterComponentEndOverlap(UPrimitiveComponent overlappedComponent, AActor otherActor, UPrimitiveComponent otherComp, int otherBodyIndex)
 		{
 			if (!this.IsRelativeActor(otherActor))
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Render
 			this.TargetState = new EPostProcessTriggerState?(EPostProcessTriggerState.Outside);
 		}
 
-		// Token: 0x0602E133 RID: 188723 RVA: 0x00A9F0B8 File Offset: 0x00A9D2B8
+		// Token: 0x06022827 RID: 141351 RVA: 0x009CB788 File Offset: 0x009C9988
 		public void Tick(float deltaTime)
 		{
 			EPostProcessTriggerState? currentState = this.StateMachine.CurrentState;
@@ -117,29 +117,29 @@ namespace CSharpScript.Game.Render
 			this.StateMachine.Update(deltaTime);
 		}
 
-		// Token: 0x0602E134 RID: 188724 RVA: 0x00A9F15B File Offset: 0x00A9D35B
+		// Token: 0x06022828 RID: 141352 RVA: 0x009CB82B File Offset: 0x009C9A2B
 		public void Dispose()
 		{
 			this.InnerBox.OnComponentBeginOverlapNoGcAlloc.Remove(new Action<UPrimitiveComponent, AActor, UPrimitiveComponent>(this.OnInnerComponentBeginOverlap));
 			this.OuterBox.OnComponentEndOverlap.Remove(new Action<UPrimitiveComponent, AActor, UPrimitiveComponent, int>(this.OnOuterComponentEndOverlap));
 		}
 
-		// Token: 0x04018B01 RID: 101121
+		// Token: 0x0401313F RID: 78143
 		private UBoxComponent InnerBox;
 
-		// Token: 0x04018B02 RID: 101122
+		// Token: 0x04013140 RID: 78144
 		private UBoxComponent OuterBox;
 
-		// Token: 0x04018B03 RID: 101123
+		// Token: 0x04013141 RID: 78145
 		private UKuroPostProcessComponent PostProcess;
 
-		// Token: 0x04018B04 RID: 101124
+		// Token: 0x04013142 RID: 78146
 		public double TransitionTime;
 
-		// Token: 0x04018B05 RID: 101125
+		// Token: 0x04013143 RID: 78147
 		private EPostProcessTriggerState? TargetState;
 
-		// Token: 0x04018B06 RID: 101126
+		// Token: 0x04013144 RID: 78148
 		[Nullable(new byte[]
 		{
 			2,
@@ -147,10 +147,10 @@ namespace CSharpScript.Game.Render
 		})]
 		private StateMachine<PostProcessTrigger, EPostProcessTriggerState> StateMachine;
 
-		// Token: 0x04018B07 RID: 101127
+		// Token: 0x04013145 RID: 78149
 		private EWuYinQuState? WuYinQuBattleState;
 
-		// Token: 0x04018B08 RID: 101128
+		// Token: 0x04013146 RID: 78150
 		[Nullable(1)]
 		private string WuYinQuActorKey = "";
 	}

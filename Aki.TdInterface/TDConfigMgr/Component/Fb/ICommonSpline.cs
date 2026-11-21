@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C39 RID: 3129
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D0C RID: 3340
 	public class ICommonSpline : ISplineType
 	{
-		// Token: 0x060047A5 RID: 18341 RVA: 0x000B4641 File Offset: 0x000B2841
+		// Token: 0x06004C15 RID: 19477 RVA: 0x000BE9F1 File Offset: 0x000BCBF1
 		public static ICommonSpline Create(ICommonSpline? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170014F0 RID: 5360
-		// (get) Token: 0x060047A6 RID: 18342 RVA: 0x000B4660 File Offset: 0x000B2860
+		// Token: 0x170015F8 RID: 5624
+		// (get) Token: 0x06004C16 RID: 19478 RVA: 0x000BEA10 File Offset: 0x000BCC10
 		public override ESplineType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170014F1 RID: 5361
-		// (get) Token: 0x060047A7 RID: 18343 RVA: 0x000B4670 File Offset: 0x000B2870
+		// Token: 0x170015F9 RID: 5625
+		// (get) Token: 0x06004C17 RID: 19479 RVA: 0x000BEA20 File Offset: 0x000BCC20
 		public virtual List<ICommonSplinePoint> Points
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040028BE RID: 10430
+		// Token: 0x04002B13 RID: 11027
 		private ICommonSpline Instance;
 
-		// Token: 0x040028BF RID: 10431
+		// Token: 0x04002B14 RID: 11028
 		private List<ICommonSplinePoint> _PointsCache;
 
-		// Token: 0x040028C0 RID: 10432
+		// Token: 0x04002B15 RID: 11029
 		private bool _PointsInited;
 	}
 }

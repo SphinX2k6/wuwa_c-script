@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02000FC3 RID: 4035
+// Token: 0x02000478 RID: 1144
 public class FurnitureAreaSelectItem : UiPanelBase
 {
-	// Token: 0x06006760 RID: 26464 RVA: 0x001467D0 File Offset: 0x001449D0
+	// Token: 0x06003AF8 RID: 15096 RVA: 0x0014F094 File Offset: 0x0014D294
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,7 +28,7 @@ public class FurnitureAreaSelectItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x06006761 RID: 26465 RVA: 0x001468D1 File Offset: 0x00144AD1
+	// Token: 0x06003AF9 RID: 15097 RVA: 0x0014F195 File Offset: 0x0014D395
 	[NullableContext(1)]
 	public void Refresh(IFurnitureAreaSelectItemData data)
 	{
@@ -39,7 +39,7 @@ public class FurnitureAreaSelectItem : UiPanelBase
 		this.RefreshShowState();
 	}
 
-	// Token: 0x06006762 RID: 26466 RVA: 0x001468F2 File Offset: 0x00144AF2
+	// Token: 0x06003AFA RID: 15098 RVA: 0x0014F1B6 File Offset: 0x0014D3B6
 	public void RefreshToggleState()
 	{
 		if (this.Data == null)
@@ -49,7 +49,7 @@ public class FurnitureAreaSelectItem : UiPanelBase
 		base.GetExtendToggle(0).SetToggleState(this.Data.IsSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x06006763 RID: 26467 RVA: 0x00146920 File Offset: 0x00144B20
+	// Token: 0x06003AFB RID: 15099 RVA: 0x0014F1E4 File Offset: 0x0014D3E4
 	public void RefreshProgress()
 	{
 		if (this.Data == null)
@@ -69,7 +69,7 @@ public class FurnitureAreaSelectItem : UiPanelBase
 		}));
 	}
 
-	// Token: 0x06006764 RID: 26468 RVA: 0x001469B3 File Offset: 0x00144BB3
+	// Token: 0x06003AFC RID: 15100 RVA: 0x0014F277 File Offset: 0x0014D477
 	public void RefreshRedDot()
 	{
 		if (this.Data == null)
@@ -79,7 +79,7 @@ public class FurnitureAreaSelectItem : UiPanelBase
 		base.GetItem(8).SetUIActive(this.Data.RedDotShowState);
 	}
 
-	// Token: 0x06006765 RID: 26469 RVA: 0x001469D8 File Offset: 0x00144BD8
+	// Token: 0x06003AFD RID: 15101 RVA: 0x0014F29C File Offset: 0x0014D49C
 	public void RefreshShowState()
 	{
 		if (this.Data == null)
@@ -94,7 +94,7 @@ public class FurnitureAreaSelectItem : UiPanelBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(3), this.Data.AreaName, Array.Empty<object>());
 	}
 
-	// Token: 0x06006766 RID: 26470 RVA: 0x00146AA7 File Offset: 0x00144CA7
+	// Token: 0x06003AFE RID: 15102 RVA: 0x0014F36B File Offset: 0x0014D56B
 	private void OnSelectedInternal(EToggleState state)
 	{
 		if (state != EToggleState.ETT_Checked)
@@ -108,7 +108,7 @@ public class FurnitureAreaSelectItem : UiPanelBase
 		this.Data.OnSelected(this.Data.AreaId);
 	}
 
-	// Token: 0x04002EDE RID: 11998
+	// Token: 0x04002F77 RID: 12151
 	[Nullable(2)]
 	private IFurnitureAreaSelectItemData Data;
 }

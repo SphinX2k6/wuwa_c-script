@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020068AF RID: 26799
+	// Token: 0x02006F50 RID: 28496
 	public struct IGuestOperateUiAnimation : IFlatbufferObject
 	{
-		// Token: 0x1700C6EE RID: 50926
-		// (get) Token: 0x0602EBE2 RID: 191458 RVA: 0x0065F17D File Offset: 0x0065D37D
+		// Token: 0x1700D0D4 RID: 53460
+		// (get) Token: 0x0603151C RID: 202012 RVA: 0x006AE1FD File Offset: 0x006AC3FD
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602EBE3 RID: 191459 RVA: 0x0065F18A File Offset: 0x0065D38A
+		// Token: 0x0603151D RID: 202013 RVA: 0x006AE20A File Offset: 0x006AC40A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602EBE4 RID: 191460 RVA: 0x0065F194 File Offset: 0x0065D394
+		// Token: 0x0603151E RID: 202014 RVA: 0x006AE214 File Offset: 0x006AC414
 		public static IGuestOperateUiAnimation GetRootAsIGuestOperateUiAnimation(ByteBuffer _bb)
 		{
 			return IGuestOperateUiAnimation.GetRootAsIGuestOperateUiAnimation(_bb, default(IGuestOperateUiAnimation));
 		}
 
-		// Token: 0x0602EBE5 RID: 191461 RVA: 0x0065F1B0 File Offset: 0x0065D3B0
+		// Token: 0x0603151F RID: 202015 RVA: 0x006AE230 File Offset: 0x006AC430
 		public static IGuestOperateUiAnimation GetRootAsIGuestOperateUiAnimation(ByteBuffer _bb, IGuestOperateUiAnimation obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602EBE6 RID: 191462 RVA: 0x0065F1CD File Offset: 0x0065D3CD
+		// Token: 0x06031520 RID: 202016 RVA: 0x006AE24D File Offset: 0x006AC44D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602EBE7 RID: 191463 RVA: 0x0065F1DC File Offset: 0x0065D3DC
+		// Token: 0x06031521 RID: 202017 RVA: 0x006AE25C File Offset: 0x006AC45C
 		public IGuestOperateUiAnimation __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C6EF RID: 50927
-		// (get) Token: 0x0602EBE8 RID: 191464 RVA: 0x0065F1EC File Offset: 0x0065D3EC
+		// Token: 0x1700D0D5 RID: 53461
+		// (get) Token: 0x06031522 RID: 202018 RVA: 0x006AE26C File Offset: 0x006AC46C
 		public TGuestOperateUiAnimation UiAnimationConfigType
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602EBE9 RID: 191465 RVA: 0x0065F228 File Offset: 0x0065D428
+		// Token: 0x06031523 RID: 202019 RVA: 0x006AE2A8 File Offset: 0x006AC4A8
 		public TTable? UiAnimationConfig<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(6);
@@ -73,19 +73,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0602EBEA RID: 191466 RVA: 0x0065F26C File Offset: 0x0065D46C
+		// Token: 0x06031524 RID: 202020 RVA: 0x006AE2EC File Offset: 0x006AC4EC
 		public IPlayGuestUiAnimation UiAnimationConfigAsIPlayGuestUiAnimation()
 		{
 			return this.UiAnimationConfig<IPlayGuestUiAnimation>().Value;
 		}
 
-		// Token: 0x0602EBEB RID: 191467 RVA: 0x0065F288 File Offset: 0x0065D488
+		// Token: 0x06031525 RID: 202021 RVA: 0x006AE308 File Offset: 0x006AC508
 		public IStopGuestUiAnimation UiAnimationConfigAsIStopGuestUiAnimation()
 		{
 			return this.UiAnimationConfig<IStopGuestUiAnimation>().Value;
 		}
 
-		// Token: 0x0602EBEC RID: 191468 RVA: 0x0065F2A3 File Offset: 0x0065D4A3
+		// Token: 0x06031526 RID: 202022 RVA: 0x006AE323 File Offset: 0x006AC523
 		public static Offset<IGuestOperateUiAnimation> CreateIGuestOperateUiAnimation(FlatBufferBuilder builder, TGuestOperateUiAnimation UiAnimationConfig_type = TGuestOperateUiAnimation.NONE, int UiAnimationConfigOffset = 0)
 		{
 			builder.StartTable(2);
@@ -94,31 +94,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IGuestOperateUiAnimation.EndIGuestOperateUiAnimation(builder);
 		}
 
-		// Token: 0x0602EBED RID: 191469 RVA: 0x0065F2C0 File Offset: 0x0065D4C0
+		// Token: 0x06031527 RID: 202023 RVA: 0x006AE340 File Offset: 0x006AC540
 		public static void StartIGuestOperateUiAnimation(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602EBEE RID: 191470 RVA: 0x0065F2C9 File Offset: 0x0065D4C9
+		// Token: 0x06031528 RID: 202024 RVA: 0x006AE349 File Offset: 0x006AC549
 		public static void AddUiAnimationConfigType(FlatBufferBuilder builder, TGuestOperateUiAnimation uiAnimationConfigType)
 		{
 			builder.AddByte(0, (byte)uiAnimationConfigType, 0);
 		}
 
-		// Token: 0x0602EBEF RID: 191471 RVA: 0x0065F2D4 File Offset: 0x0065D4D4
+		// Token: 0x06031529 RID: 202025 RVA: 0x006AE354 File Offset: 0x006AC554
 		public static void AddUiAnimationConfig(FlatBufferBuilder builder, int uiAnimationConfigOffset)
 		{
 			builder.AddOffset(1, uiAnimationConfigOffset, 0);
 		}
 
-		// Token: 0x0602EBF0 RID: 191472 RVA: 0x0065F2DF File Offset: 0x0065D4DF
+		// Token: 0x0603152A RID: 202026 RVA: 0x006AE35F File Offset: 0x006AC55F
 		public static Offset<IGuestOperateUiAnimation> EndIGuestOperateUiAnimation(FlatBufferBuilder builder)
 		{
 			return new Offset<IGuestOperateUiAnimation>(builder.EndTable());
 		}
 
-		// Token: 0x0602EBF1 RID: 191473 RVA: 0x0065F2EC File Offset: 0x0065D4EC
+		// Token: 0x0603152B RID: 202027 RVA: 0x006AE36C File Offset: 0x006AC56C
 		public IGuestOperateUiAnimationT UnPack()
 		{
 			IGuestOperateUiAnimationT guestOperateUiAnimationT = new IGuestOperateUiAnimationT();
@@ -126,7 +126,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return guestOperateUiAnimationT;
 		}
 
-		// Token: 0x0602EBF2 RID: 191474 RVA: 0x0065F308 File Offset: 0x0065D508
+		// Token: 0x0603152C RID: 202028 RVA: 0x006AE388 File Offset: 0x006AC588
 		public void UnPackTo(IGuestOperateUiAnimationT _o)
 		{
 			_o.UiAnimationConfig = new TGuestOperateUiAnimationUnion();
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.UiAnimationConfig.Value = ((this.UiAnimationConfig<IStopGuestUiAnimation>() != null) ? this.UiAnimationConfig<IStopGuestUiAnimation>().Value.UnPack() : null);
 		}
 
-		// Token: 0x0602EBF3 RID: 191475 RVA: 0x0065F3AC File Offset: 0x0065D5AC
+		// Token: 0x0603152D RID: 202029 RVA: 0x006AE42C File Offset: 0x006AC62C
 		public static Offset<IGuestOperateUiAnimation> Pack(FlatBufferBuilder builder, IGuestOperateUiAnimationT _o)
 		{
 			if (_o == null)
@@ -156,7 +156,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IGuestOperateUiAnimation.CreateIGuestOperateUiAnimation(builder, uiAnimationConfig_type, uiAnimationConfigOffset);
 		}
 
-		// Token: 0x04011003 RID: 69635
+		// Token: 0x04011E58 RID: 73304
 		private Table __p;
 	}
 }

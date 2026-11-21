@@ -5,15 +5,15 @@ namespace Aki.Protocol
 	// Token: 0x02000012 RID: 18
 	public enum EProtoConfigMask
 	{
-		// Token: 0x04001ECF RID: 7887
+		// Token: 0x04001F25 RID: 7973
 		MessageRoute = 3,
-		// Token: 0x04001ED0 RID: 7888
+		// Token: 0x04001F26 RID: 7974
 		NetworkMask,
-		// Token: 0x04001ED1 RID: 7889
+		// Token: 0x04001F27 RID: 7975
 		MsgLock = 8,
-		// Token: 0x04001ED2 RID: 7890
+		// Token: 0x04001F28 RID: 7976
 		NoEncrypt = 16,
-		// Token: 0x04001ED3 RID: 7891
+		// Token: 0x04001F29 RID: 7977
 		UdpTransport = 32
 	}
 }

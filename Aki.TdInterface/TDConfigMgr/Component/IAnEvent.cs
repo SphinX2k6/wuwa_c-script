@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001BF RID: 447
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020001E2 RID: 482
 	public class IAnEvent : ISceneItemSeqEventCbType
 	{
-		// Token: 0x06000714 RID: 1812 RVA: 0x000243D4 File Offset: 0x000225D4
+		// Token: 0x06000768 RID: 1896 RVA: 0x000256D8 File Offset: 0x000238D8
 		private IAnEvent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000715 RID: 1813 RVA: 0x0002440C File Offset: 0x0002260C
+		// Token: 0x06000769 RID: 1897 RVA: 0x00025710 File Offset: 0x00023910
 		public static IAnEvent Create([Nullable(2)] IAnEvent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000716 RID: 1814 RVA: 0x0002441F File Offset: 0x0002261F
+		// Token: 0x0600076A RID: 1898 RVA: 0x00025723 File Offset: 0x00023923
 		public static IAnEvent CreateFromSetValue([Nullable(2)] IAnEvent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000717 RID: 1815 RVA: 0x00024432 File Offset: 0x00022632
+		// Token: 0x0600076B RID: 1899 RVA: 0x00025736 File Offset: 0x00023936
 		public new IAnEvent_SetValue ToSetValue()
 		{
 			return new IAnEvent_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000249 RID: 585
-		// (get) Token: 0x06000718 RID: 1816 RVA: 0x0002445D File Offset: 0x0002265D
-		// (set) Token: 0x06000719 RID: 1817 RVA: 0x00024488 File Offset: 0x00022688
+		// Token: 0x1700025E RID: 606
+		// (get) Token: 0x0600076C RID: 1900 RVA: 0x00025761 File Offset: 0x00023961
+		// (set) Token: 0x0600076D RID: 1901 RVA: 0x0002578C File Offset: 0x0002398C
 		public override ESceneItemSeqEventCbType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700024A RID: 586
-		// (get) Token: 0x0600071A RID: 1818 RVA: 0x00024496 File Offset: 0x00022696
-		// (set) Token: 0x0600071B RID: 1819 RVA: 0x000244C1 File Offset: 0x000226C1
+		// Token: 0x1700025F RID: 607
+		// (get) Token: 0x0600076E RID: 1902 RVA: 0x0002579A File Offset: 0x0002399A
+		// (set) Token: 0x0600076F RID: 1903 RVA: 0x000257C5 File Offset: 0x000239C5
 		public override string EventName
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700024B RID: 587
-		// (get) Token: 0x0600071C RID: 1820 RVA: 0x000244D0 File Offset: 0x000226D0
-		// (set) Token: 0x0600071D RID: 1821 RVA: 0x00024531 File Offset: 0x00022731
+		// Token: 0x17000260 RID: 608
+		// (get) Token: 0x06000770 RID: 1904 RVA: 0x000257D4 File Offset: 0x000239D4
+		// (set) Token: 0x06000771 RID: 1905 RVA: 0x00025835 File Offset: 0x00023A35
 		public override ActionInfo Action
 		{
 			get
@@ -138,18 +136,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400086F RID: 2159
+		// Token: 0x040008E3 RID: 2275
 		[Nullable(2)]
 		protected new IAnEvent FbInstance;
 
-		// Token: 0x04000870 RID: 2160
+		// Token: 0x040008E4 RID: 2276
 		[Nullable(2)]
 		protected new IAnEvent_SetValue PocoInterface;
 
-		// Token: 0x04000871 RID: 2161
+		// Token: 0x040008E5 RID: 2277
 		private ActionInfo _ActionCache;
 
-		// Token: 0x04000872 RID: 2162
+		// Token: 0x040008E6 RID: 2278
 		private bool _ActionInited;
 	}
 }

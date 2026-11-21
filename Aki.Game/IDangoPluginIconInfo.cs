@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020018B5 RID: 6325
+// Token: 0x02000D6E RID: 3438
 public interface IDangoPluginIconInfo
 {
-	// Token: 0x17000F58 RID: 3928
-	// (get) Token: 0x0600B955 RID: 47445
-	// (set) Token: 0x0600B956 RID: 47446
+	// Token: 0x17000F7B RID: 3963
+	// (get) Token: 0x06008D3E RID: 36158
+	// (set) Token: 0x06008D3F RID: 36159
 	int PluginItemId { get; set; }
 }

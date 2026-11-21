@@ -3,55 +3,55 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001617 RID: 5655
+	// Token: 0x0200168A RID: 5770
 	public enum PlayerAttrKey
 	{
-		// Token: 0x0400BFCA RID: 49098
+		// Token: 0x0400C4C4 RID: 50372
 		[OriginalName("Level")]
 		Level,
-		// Token: 0x0400BFCB RID: 49099
+		// Token: 0x0400C4C5 RID: 50373
 		[OriginalName("Exp")]
 		Exp,
-		// Token: 0x0400BFCC RID: 49100
+		// Token: 0x0400C4C6 RID: 50374
 		[OriginalName("Coin")]
 		Coin,
-		// Token: 0x0400BFCD RID: 49101
+		// Token: 0x0400C4C7 RID: 50375
 		[OriginalName("RareCoin")]
 		RareCoin,
-		// Token: 0x0400BFCE RID: 49102
+		// Token: 0x0400C4C8 RID: 50376
 		[OriginalName("HeadPhoto")]
 		HeadPhoto,
-		// Token: 0x0400BFCF RID: 49103
+		// Token: 0x0400C4C9 RID: 50377
 		[OriginalName("HeadFrame")]
 		HeadFrame,
-		// Token: 0x0400BFD0 RID: 49104
+		// Token: 0x0400C4CA RID: 50378
 		[OriginalName("AreaId")]
 		AreaId,
-		// Token: 0x0400BFD1 RID: 49105
+		// Token: 0x0400C4CB RID: 50379
 		[OriginalName("Name")]
 		Name,
-		// Token: 0x0400BFD2 RID: 49106
+		// Token: 0x0400C4CC RID: 50380
 		[OriginalName("Sign")]
 		Sign,
-		// Token: 0x0400BFD3 RID: 49107
+		// Token: 0x0400C4CD RID: 50381
 		[OriginalName("Sex")]
 		Sex,
-		// Token: 0x0400BFD4 RID: 49108
+		// Token: 0x0400C4CE RID: 50382
 		[OriginalName("OriginWorldLevel")]
 		OriginWorldLevel,
-		// Token: 0x0400BFD5 RID: 49109
+		// Token: 0x0400C4CF RID: 50383
 		[OriginalName("CurWorldLevel")]
 		CurWorldLevel,
-		// Token: 0x0400BFD6 RID: 49110
+		// Token: 0x0400C4D0 RID: 50384
 		[OriginalName("WorldLevelTimeStamp")]
 		WorldLevelTimeStamp,
-		// Token: 0x0400BFD7 RID: 49111
+		// Token: 0x0400C4D1 RID: 50385
 		[OriginalName("CashCoin")]
 		CashCoin,
-		// Token: 0x0400BFD8 RID: 49112
+		// Token: 0x0400C4D2 RID: 50386
 		[OriginalName("WorldPermission")]
 		WorldPermission,
-		// Token: 0x0400BFD9 RID: 49113
+		// Token: 0x0400C4D3 RID: 50387
 		[OriginalName("PlayerTitle")]
 		PlayerTitle
 	}

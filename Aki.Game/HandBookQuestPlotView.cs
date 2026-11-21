@@ -5,7 +5,6 @@ using Aki.Config;
 using Aki.TDConfigMgr.Action;
 using Aki.TDConfigMgr.Quest;
 using Aki.TDConfigMgr.Quest.Fb;
-using Aki.TDConfigMgr.Wrapper.Out;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 using CSharpScript.Core.Common;
 using CSharpScript.Game.Common;
@@ -18,13 +17,13 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using Google.FlatBuffers;
 using UnrealEngine;
 
-// Token: 0x02001E26 RID: 7718
+// Token: 0x020012E8 RID: 4840
 [NullableContext(1)]
 [Nullable(0)]
 public class HandBookQuestPlotView : UiViewBase
 {
-	// Token: 0x17001285 RID: 4741
-	// (get) Token: 0x0600EA7E RID: 60030 RVA: 0x00377BC0 File Offset: 0x00375DC0
+	// Token: 0x170012AF RID: 4783
+	// (get) Token: 0x0600BE9D RID: 48797 RVA: 0x003838C8 File Offset: 0x00381AC8
 	private CacheLru<int, Aki.TDConfigMgr.Quest.IPlotHandBookItem> PlotHandBookFbLru
 	{
 		get
@@ -38,7 +37,7 @@ public class HandBookQuestPlotView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600EA7F RID: 60031 RVA: 0x00377BF4 File Offset: 0x00375DF4
+	// Token: 0x0600BE9E RID: 48798 RVA: 0x003838FC File Offset: 0x00381AFC
 	[NullableContext(2)]
 	private Aki.TDConfigMgr.Quest.IPlotHandBookItem LoadPlotHandBookFromFb(int questId)
 	{
@@ -55,12 +54,12 @@ public class HandBookQuestPlotView : UiViewBase
 		return Aki.TDConfigMgr.Quest.IPlotHandBookItem.Create(Aki.TDConfigMgr.Quest.Fb.IPlotHandBookItem.Create(new Aki.UniverseEditor.Interface.Fbs.Quest.IPlotHandBookItem?(Aki.UniverseEditor.Interface.Fbs.Quest.IPlotHandBookItem.GetRootAsIPlotHandBookItem(byteBuffer))));
 	}
 
-	// Token: 0x0600EA80 RID: 60032 RVA: 0x00377C60 File Offset: 0x00375E60
+	// Token: 0x0600BE9F RID: 48799 RVA: 0x00383968 File Offset: 0x00381B68
 	public HandBookQuestPlotView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600EA81 RID: 60033 RVA: 0x00377CCC File Offset: 0x00375ECC
+	// Token: 0x0600BEA0 RID: 48800 RVA: 0x003839D4 File Offset: 0x00381BD4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -82,7 +81,7 @@ public class HandBookQuestPlotView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600EA82 RID: 60034 RVA: 0x00377DE8 File Offset: 0x00375FE8
+	// Token: 0x0600BEA1 RID: 48801 RVA: 0x00383AF0 File Offset: 0x00381CF0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		HandBookQuestPlotView.<OnBeforeStartAsync>d__24 <OnBeforeStartAsync>d__;
@@ -93,7 +92,7 @@ public class HandBookQuestPlotView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600EA83 RID: 60035 RVA: 0x00377E2C File Offset: 0x0037602C
+	// Token: 0x0600BEA2 RID: 48802 RVA: 0x00383B34 File Offset: 0x00381D34
 	protected override void OnStart()
 	{
 		this.TalkTagString = (ConfigMultiTextLang.GetLocalTextNew("ColonTag", null) ?? "");
@@ -107,14 +106,14 @@ public class HandBookQuestPlotView : UiViewBase
 		this.RefreshView();
 	}
 
-	// Token: 0x0600EA84 RID: 60036 RVA: 0x00377EC8 File Offset: 0x003760C8
+	// Token: 0x0600BEA3 RID: 48803 RVA: 0x00383BD0 File Offset: 0x00381DD0
 	protected override void OnBeforeDestroy()
 	{
 		EventSystem.Instance.Emit<int>(EEventName.OnPhotoSelect, this.ConfigIdList[this.CurrentSelectIndex]);
 		HandBookQuestPlotTalkAudioUtil.ClearCurPlayAudio();
 	}
 
-	// Token: 0x0600EA85 RID: 60037 RVA: 0x00377EEC File Offset: 0x003760EC
+	// Token: 0x0600BEA4 RID: 48804 RVA: 0x00383BF4 File Offset: 0x00381DF4
 	private void RefreshView()
 	{
 		int[] configIdList = this.ConfigIdList;
@@ -163,42 +162,20 @@ public class HandBookQuestPlotView : UiViewBase
 		List<Aki.TDConfigMgr.Quest.IPlotHandBookNode> list = new List<Aki.TDConfigMgr.Quest.IPlotHandBookNode>();
 		foreach (int num3 in plotHandBookConfig.Value.ShowQuestList())
 		{
-			if (WrapperSetting.UseFb)
+			Aki.TDConfigMgr.Quest.IPlotHandBookItem plotHandBookItem = this.PlotHandBookFbLru.Get(num3);
+			if (plotHandBookItem == null)
 			{
-				Aki.TDConfigMgr.Quest.IPlotHandBookItem plotHandBookItem = this.PlotHandBookFbLru.Get(num3);
-				if (plotHandBookItem == null)
-				{
-					global::Log instance2 = global::Log.Instance;
-					ELogModule module2 = ELogModule.HandBook;
-					ELogAuthor author2 = ELogAuthor.LJQ;
-					string message2 = "HandBookPlot_剧情图鉴获取任务对应剧情配置出错";
-					ValueTuple<string, object> valueTuple2 = new ValueTuple<string, object>("questId:", num3);
-					instance2.Error(module2, author2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
-					return;
-				}
-				if (plotHandBookItem.Nodes != null)
-				{
-					list.AddRange(plotHandBookItem.Nodes);
-				}
+				global::Log instance2 = global::Log.Instance;
+				ELogModule module2 = ELogModule.HandBook;
+				ELogAuthor author2 = ELogAuthor.LJQ;
+				string message2 = "HandBookPlot_剧情图鉴获取任务对应剧情配置出错";
+				ValueTuple<string, object> valueTuple2 = new ValueTuple<string, object>("questId:", num3);
+				instance2.Error(module2, author2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
+				return;
 			}
-			else
+			if (plotHandBookItem.Nodes != null)
 			{
-				PlotHandBookConfig? questPlotConfig = HandBookConfig.Instance.GetQuestPlotConfig(num3);
-				if (questPlotConfig == null)
-				{
-					global::Log instance3 = global::Log.Instance;
-					ELogModule module3 = ELogModule.HandBook;
-					ELogAuthor author3 = ELogAuthor.LJQ;
-					string message3 = "HandBookPlot_剧情图鉴获取任务对应剧情配置出错";
-					ValueTuple<string, object> valueTuple3 = new ValueTuple<string, object>("questId:", num3);
-					instance3.Error(module3, author3, message3, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple3));
-					return;
-				}
-				List<Aki.TDConfigMgr.Quest.IPlotHandBookNode> list2 = Json.Decode<List<Aki.TDConfigMgr.Quest.IPlotHandBookNode>>(questPlotConfig.Value.Data, null);
-				if (list2 != null)
-				{
-					list.AddRange(list2);
-				}
+				list.AddRange(plotHandBookItem.Nodes);
 			}
 		}
 		this.NodeToTidMap.Clear();
@@ -207,63 +184,63 @@ public class HandBookQuestPlotView : UiViewBase
 		foreach (Aki.TDConfigMgr.Quest.IPlotHandBookNode plotHandBookNode in list)
 		{
 			string text2 = plotHandBookNode.IsHideUi ? "" : plotHandBookNode.TidTip;
-			List<Aki.TDConfigMgr.Quest.IPlotHandBookNode> list6;
+			List<Aki.TDConfigMgr.Quest.IPlotHandBookNode> list5;
 			if (text2 == "")
 			{
 				if (text == "")
 				{
 					string text3 = ((questConfig != null) ? questConfig.TidName : null) ?? "";
-					List<Aki.TDConfigMgr.Quest.IPlotHandBookNode> list3;
-					if (!this.NodeToTidMap.TryGetValue(text3, out list3))
+					List<Aki.TDConfigMgr.Quest.IPlotHandBookNode> list2;
+					if (!this.NodeToTidMap.TryGetValue(text3, out list2))
 					{
-						list3 = new List<Aki.TDConfigMgr.Quest.IPlotHandBookNode>();
-						list3.Add(plotHandBookNode);
+						list2 = new List<Aki.TDConfigMgr.Quest.IPlotHandBookNode>();
+						list2.Add(plotHandBookNode);
 						text = text3;
-						this.NodeToTidMap[text3] = list3;
+						this.NodeToTidMap[text3] = list2;
 						continue;
 					}
 				}
+				List<Aki.TDConfigMgr.Quest.IPlotHandBookNode> list3;
+				if (this.NodeToTidMap.TryGetValue(text, out list3))
+				{
+					list3.Add(plotHandBookNode);
+				}
+			}
+			else if (text != "" && text2 != "" && PublicUtil.Instance.GetConfigTextByKey(text) == PublicUtil.Instance.GetConfigTextByKey(text2))
+			{
 				List<Aki.TDConfigMgr.Quest.IPlotHandBookNode> list4;
 				if (this.NodeToTidMap.TryGetValue(text, out list4))
 				{
 					list4.Add(plotHandBookNode);
 				}
 			}
-			else if (text != "" && text2 != "" && PublicUtil.Instance.GetConfigTextByKey(text) == PublicUtil.Instance.GetConfigTextByKey(text2))
+			else if (!this.NodeToTidMap.TryGetValue(text2, out list5))
 			{
-				List<Aki.TDConfigMgr.Quest.IPlotHandBookNode> list5;
-				if (this.NodeToTidMap.TryGetValue(text, out list5))
-				{
-					list5.Add(plotHandBookNode);
-				}
-			}
-			else if (!this.NodeToTidMap.TryGetValue(text2, out list6))
-			{
-				list6 = new List<Aki.TDConfigMgr.Quest.IPlotHandBookNode>();
-				list6.Add(plotHandBookNode);
+				list5 = new List<Aki.TDConfigMgr.Quest.IPlotHandBookNode>();
+				list5.Add(plotHandBookNode);
 				text = text2;
-				this.NodeToTidMap[text2] = list6;
+				this.NodeToTidMap[text2] = list5;
 			}
 			else
 			{
-				list6.Add(plotHandBookNode);
+				list5.Add(plotHandBookNode);
 			}
 		}
-		List<HandBookQuestDynamicData> list7 = new List<HandBookQuestDynamicData>();
+		List<HandBookQuestDynamicData> list6 = new List<HandBookQuestDynamicData>();
 		foreach (string text4 in this.NodeToTidMap.Keys)
 		{
-			list7.Add(new HandBookQuestDynamicData
+			list6.Add(new HandBookQuestDynamicData
 			{
 				TidText = text4
 			});
 			this.NodeTextList.Add(text4);
 		}
-		this.NodeScrollView.RefreshByData(list7.ToArray(), false, false);
-		string tidText = list7[0].TidText;
+		this.NodeScrollView.RefreshByData(list6.ToArray(), false, false);
+		string tidText = list6[0].TidText;
 		this.RefreshByTidText(false, tidText);
 	}
 
-	// Token: 0x0600EA86 RID: 60038 RVA: 0x0037847C File Offset: 0x0037667C
+	// Token: 0x0600BEA5 RID: 48805 RVA: 0x00384108 File Offset: 0x00382308
 	private HandBookQuestPlotItem CreateNodeGrid(HandBookQuestDynamicData data, UUIItem uiItem, int index)
 	{
 		HandBookQuestPlotItem handBookQuestPlotItem = new HandBookQuestPlotItem();
@@ -272,7 +249,7 @@ public class HandBookQuestPlotView : UiViewBase
 		return handBookQuestPlotItem;
 	}
 
-	// Token: 0x0600EA87 RID: 60039 RVA: 0x003784A7 File Offset: 0x003766A7
+	// Token: 0x0600BEA6 RID: 48806 RVA: 0x00384133 File Offset: 0x00382333
 	private HandBookQuestPlotList CreatePlotGrid(HandBookPlotDynamicData data, UUIItem uiItem, int index)
 	{
 		HandBookQuestPlotList handBookQuestPlotList = new HandBookQuestPlotList();
@@ -281,13 +258,13 @@ public class HandBookQuestPlotView : UiViewBase
 		return handBookQuestPlotList;
 	}
 
-	// Token: 0x0600EA88 RID: 60040 RVA: 0x003784D2 File Offset: 0x003766D2
+	// Token: 0x0600BEA7 RID: 48807 RVA: 0x0038415E File Offset: 0x0038235E
 	private void OnBtnCloseClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600EA89 RID: 60041 RVA: 0x003784DC File Offset: 0x003766DC
+	// Token: 0x0600BEA8 RID: 48808 RVA: 0x00384168 File Offset: 0x00382368
 	private void OnClickNodeItem(string tidText, [Nullable(2)] UUIExtendToggle toggle = null)
 	{
 		if (this.IsClickNodeItemWaitScroll)
@@ -338,7 +315,7 @@ public class HandBookQuestPlotView : UiViewBase
 		});
 	}
 
-	// Token: 0x0600EA8A RID: 60042 RVA: 0x00378588 File Offset: 0x00376788
+	// Token: 0x0600BEA9 RID: 48809 RVA: 0x00384214 File Offset: 0x00382414
 	[NullableContext(2)]
 	private void RefreshByTidText(bool keepPosition = true, string tidText = null)
 	{
@@ -366,7 +343,7 @@ public class HandBookQuestPlotView : UiViewBase
 		});
 	}
 
-	// Token: 0x0600EA8B RID: 60043 RVA: 0x003785FC File Offset: 0x003767FC
+	// Token: 0x0600BEAA RID: 48810 RVA: 0x00384288 File Offset: 0x00382488
 	private void HandlePlotList()
 	{
 		int num = 0;
@@ -392,7 +369,7 @@ public class HandBookQuestPlotView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600EA8C RID: 60044 RVA: 0x00378710 File Offset: 0x00376910
+	// Token: 0x0600BEAB RID: 48811 RVA: 0x0038439C File Offset: 0x0038259C
 	private void HandlePlotActions(List<ActionInfo> plotActions, int flowIndex, string tidText)
 	{
 		this.JumpToTalkId = 0;
@@ -514,7 +491,7 @@ public class HandBookQuestPlotView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600EA8D RID: 60045 RVA: 0x00378B04 File Offset: 0x00376D04
+	// Token: 0x0600BEAC RID: 48812 RVA: 0x00384790 File Offset: 0x00382990
 	private bool HandleChildAction([Nullable(new byte[]
 	{
 		2,
@@ -552,7 +529,7 @@ public class HandBookQuestPlotView : UiViewBase
 		return false;
 	}
 
-	// Token: 0x0600EA8E RID: 60046 RVA: 0x00378BE4 File Offset: 0x00376DE4
+	// Token: 0x0600BEAD RID: 48813 RVA: 0x00384870 File Offset: 0x00382A70
 	private void HandleOptions(List<ITalkOption> options, int choseIndex, string tidText, int flowIndex, int talkItemId)
 	{
 		HandBookPlotDynamicData handBookPlotDynamicData = new HandBookPlotDynamicData();
@@ -573,7 +550,7 @@ public class HandBookQuestPlotView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600EA8F RID: 60047 RVA: 0x00378C7C File Offset: 0x00376E7C
+	// Token: 0x0600BEAE RID: 48814 RVA: 0x00384908 File Offset: 0x00382B08
 	private void LateUpdate()
 	{
 		if (this.NavigationFocusData.Count > 0)
@@ -629,7 +606,7 @@ public class HandBookQuestPlotView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600EA90 RID: 60048 RVA: 0x00378E08 File Offset: 0x00377008
+	// Token: 0x0600BEAF RID: 48815 RVA: 0x00384A94 File Offset: 0x00382C94
 	private void OnClickOption(int plotId, int talkItemId, int optionIndex, UUIExtendToggle toggle)
 	{
 		Dictionary<int, int> dictionary;
@@ -655,7 +632,7 @@ public class HandBookQuestPlotView : UiViewBase
 		HandBookQuestPlotTalkAudioUtil.ClearCurPlayAudio();
 	}
 
-	// Token: 0x0600EA91 RID: 60049 RVA: 0x00378E8F File Offset: 0x0037708F
+	// Token: 0x0600BEB0 RID: 48816 RVA: 0x00384B1B File Offset: 0x00382D1B
 	private void OnClickLeftBtn()
 	{
 		HandBookQuestPlotTalkAudioUtil.ClearCurPlayAudio();
@@ -664,7 +641,7 @@ public class HandBookQuestPlotView : UiViewBase
 		this.RefreshView();
 	}
 
-	// Token: 0x0600EA92 RID: 60050 RVA: 0x00378EB5 File Offset: 0x003770B5
+	// Token: 0x0600BEB1 RID: 48817 RVA: 0x00384B41 File Offset: 0x00382D41
 	private void OnClickRightBtn()
 	{
 		HandBookQuestPlotTalkAudioUtil.ClearCurPlayAudio();
@@ -673,7 +650,7 @@ public class HandBookQuestPlotView : UiViewBase
 		this.RefreshView();
 	}
 
-	// Token: 0x0600EA93 RID: 60051 RVA: 0x00378EDC File Offset: 0x003770DC
+	// Token: 0x0600BEB2 RID: 48818 RVA: 0x00384B68 File Offset: 0x00382D68
 	private void OnNodeSelectRefresh(string tidText)
 	{
 		if (this.IsClickNodeItemWaitScroll)
@@ -737,13 +714,13 @@ public class HandBookQuestPlotView : UiViewBase
 		});
 	}
 
-	// Token: 0x0600EA94 RID: 60052 RVA: 0x00378FF0 File Offset: 0x003771F0
+	// Token: 0x0600BEB3 RID: 48819 RVA: 0x00384C7C File Offset: 0x00382E7C
 	private bool IsNodeSelect(string tidText)
 	{
 		return this.SelectNodeText == tidText;
 	}
 
-	// Token: 0x04006CDA RID: 27866
+	// Token: 0x04006DBB RID: 28091
 	[Nullable(new byte[]
 	{
 		2,
@@ -753,7 +730,7 @@ public class HandBookQuestPlotView : UiViewBase
 	})]
 	protected DynamicScrollView<HandBookQuestPlotItem, HandBootQuestDynamicItem, HandBookQuestDynamicData> NodeScrollView;
 
-	// Token: 0x04006CDB RID: 27867
+	// Token: 0x04006DBC RID: 28092
 	[Nullable(new byte[]
 	{
 		2,
@@ -763,41 +740,41 @@ public class HandBookQuestPlotView : UiViewBase
 	})]
 	protected DynamicScrollView<HandBookQuestPlotList, HandBootPlotDynamicItem, HandBookPlotDynamicData> PlotListScrollView;
 
-	// Token: 0x04006CDC RID: 27868
+	// Token: 0x04006DBD RID: 28093
 	[Nullable(2)]
 	private PopupCaptionItem PopupCaptionItem;
 
-	// Token: 0x04006CDD RID: 27869
+	// Token: 0x04006DBE RID: 28094
 	[Nullable(2)]
 	private HandBootQuestDynamicItem HandBookQuestBaseItem;
 
-	// Token: 0x04006CDE RID: 27870
+	// Token: 0x04006DBF RID: 28095
 	[Nullable(2)]
 	private HandBootPlotDynamicItem HandBookPlotBaseItem;
 
-	// Token: 0x04006CDF RID: 27871
+	// Token: 0x04006DC0 RID: 28096
 	private List<HandBookPlotDynamicData> HandBookPlotDynamicDataList = new List<HandBookPlotDynamicData>();
 
-	// Token: 0x04006CE0 RID: 27872
+	// Token: 0x04006DC1 RID: 28097
 	private readonly Dictionary<int, Dictionary<int, int>> OptionChose = new Dictionary<int, Dictionary<int, int>>();
 
-	// Token: 0x04006CE1 RID: 27873
+	// Token: 0x04006DC2 RID: 28098
 	[Nullable(2)]
 	private int[] ConfigIdList;
 
-	// Token: 0x04006CE2 RID: 27874
+	// Token: 0x04006DC3 RID: 28099
 	private int CurrentSelectIndex;
 
-	// Token: 0x04006CE3 RID: 27875
+	// Token: 0x04006DC4 RID: 28100
 	public int NeedScrollIndex;
 
-	// Token: 0x04006CE4 RID: 27876
+	// Token: 0x04006DC5 RID: 28101
 	private int JumpToTalkId;
 
-	// Token: 0x04006CE5 RID: 27877
+	// Token: 0x04006DC6 RID: 28102
 	private bool IsClickNodeItemWaitScroll;
 
-	// Token: 0x04006CE6 RID: 27878
+	// Token: 0x04006DC7 RID: 28103
 	[Nullable(new byte[]
 	{
 		2,
@@ -805,56 +782,56 @@ public class HandBookQuestPlotView : UiViewBase
 	})]
 	private CacheLru<int, Aki.TDConfigMgr.Quest.IPlotHandBookItem> PlotHandBookFbLruInternal;
 
-	// Token: 0x04006CE7 RID: 27879
+	// Token: 0x04006DC8 RID: 28104
 	private string SelectNodeText = "";
 
-	// Token: 0x04006CE8 RID: 27880
+	// Token: 0x04006DC9 RID: 28105
 	private bool IsRefreshingView;
 
-	// Token: 0x04006CE9 RID: 27881
+	// Token: 0x04006DCA RID: 28106
 	private string TalkTagString = "";
 
-	// Token: 0x04006CEA RID: 27882
+	// Token: 0x04006DCB RID: 28107
 	private readonly Dictionary<string, List<Aki.TDConfigMgr.Quest.IPlotHandBookNode>> NodeToTidMap = new Dictionary<string, List<Aki.TDConfigMgr.Quest.IPlotHandBookNode>>();
 
-	// Token: 0x04006CEB RID: 27883
+	// Token: 0x04006DCC RID: 28108
 	private List<string> NodeTextList = new List<string>();
 
-	// Token: 0x04006CEC RID: 27884
+	// Token: 0x04006DCD RID: 28109
 	private readonly Dictionary<int, int> TalkItemMap = new Dictionary<int, int>();
 
-	// Token: 0x04006CED RID: 27885
+	// Token: 0x04006DCE RID: 28110
 	private List<int> NavigationFocusData = new List<int>();
 
-	// Token: 0x020083D3 RID: 33747
+	// Token: 0x02007558 RID: 30040
 	[NullableContext(0)]
 	private class EChildType
 	{
-		// Token: 0x0402AEAC RID: 175788
+		// Token: 0x040261CF RID: 156111
 		public const int TitleItem = 0;
 
-		// Token: 0x0402AEAD RID: 175789
+		// Token: 0x040261D0 RID: 156112
 		public const int NodeScrollView = 1;
 
-		// Token: 0x0402AEAE RID: 175790
+		// Token: 0x040261D1 RID: 156113
 		public const int ScrollViewItem = 2;
 
-		// Token: 0x0402AEAF RID: 175791
+		// Token: 0x040261D2 RID: 156114
 		public const int PlotContent = 3;
 
-		// Token: 0x0402AEB0 RID: 175792
+		// Token: 0x040261D3 RID: 156115
 		public const int PlotItem = 4;
 
-		// Token: 0x0402AEB1 RID: 175793
+		// Token: 0x040261D4 RID: 156116
 		public const int LeftBtn = 5;
 
-		// Token: 0x0402AEB2 RID: 175794
+		// Token: 0x040261D5 RID: 156117
 		public const int RightBtn = 6;
 
-		// Token: 0x0402AEB3 RID: 175795
+		// Token: 0x040261D6 RID: 156118
 		public const int PlotNameText = 7;
 
-		// Token: 0x0402AEB4 RID: 175796
+		// Token: 0x040261D7 RID: 156119
 		public const int PlotScrollView = 8;
 	}
 }

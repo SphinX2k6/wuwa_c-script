@@ -5,13 +5,13 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200085D RID: 2141
+	// Token: 0x02000900 RID: 2304
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ProgressBarControlComponent : IHitComponentBase
 	{
-		// Token: 0x06002F43 RID: 12099 RVA: 0x00079F94 File Offset: 0x00078194
-		[NullableContext(1)]
+		// Token: 0x0600327F RID: 12927 RVA: 0x0008147C File Offset: 0x0007F67C
+		[NullableContext(0)]
 		private ProgressBarControlComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +26,8 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002F44 RID: 12100 RVA: 0x00079FCC File Offset: 0x000781CC
-		[NullableContext(1)]
+		// Token: 0x06003280 RID: 12928 RVA: 0x000814B4 File Offset: 0x0007F6B4
+		[NullableContext(0)]
 		public static ProgressBarControlComponent Create([Nullable(2)] ProgressBarControlComponent instance)
 		{
 			if (instance == null)
@@ -40,8 +40,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002F45 RID: 12101 RVA: 0x00079FDF File Offset: 0x000781DF
-		[NullableContext(1)]
+		// Token: 0x06003281 RID: 12929 RVA: 0x000814C7 File Offset: 0x0007F6C7
+		[NullableContext(0)]
 		public static ProgressBarControlComponent CreateFromSetValue([Nullable(2)] ProgressBarControlComponent_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +54,8 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002F46 RID: 12102 RVA: 0x00079FF4 File Offset: 0x000781F4
-		[NullableContext(1)]
+		// Token: 0x06003282 RID: 12930 RVA: 0x000814DC File Offset: 0x0007F6DC
+		[NullableContext(0)]
 		public new ProgressBarControlComponent_SetValue ToSetValue()
 		{
 			return new ProgressBarControlComponent_SetValue
@@ -70,9 +70,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000C79 RID: 3193
-		// (get) Token: 0x06002F47 RID: 12103 RVA: 0x0007A05C File Offset: 0x0007825C
-		// (set) Token: 0x06002F48 RID: 12104 RVA: 0x0007A096 File Offset: 0x00078296
+		// Token: 0x17000D42 RID: 3394
+		// (get) Token: 0x06003283 RID: 12931 RVA: 0x00081544 File Offset: 0x0007F744
+		// (set) Token: 0x06003284 RID: 12932 RVA: 0x0008157E File Offset: 0x0007F77E
 		public override bool? Disabled
 		{
 			get
@@ -94,9 +94,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C7A RID: 3194
-		// (get) Token: 0x06002F49 RID: 12105 RVA: 0x0007A0A4 File Offset: 0x000782A4
-		// (set) Token: 0x06002F4A RID: 12106 RVA: 0x0007A0CB File Offset: 0x000782CB
+		// Token: 0x17000D43 RID: 3395
+		// (get) Token: 0x06003285 RID: 12933 RVA: 0x0008158C File Offset: 0x0007F78C
+		// (set) Token: 0x06003286 RID: 12934 RVA: 0x000815B3 File Offset: 0x0007F7B3
 		public override IHitBulletType HitBullet
 		{
 			get
@@ -118,9 +118,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C7B RID: 3195
-		// (get) Token: 0x06002F4B RID: 12107 RVA: 0x0007A0DC File Offset: 0x000782DC
-		// (set) Token: 0x06002F4C RID: 12108 RVA: 0x0007A13D File Offset: 0x0007833D
+		// Token: 0x17000D44 RID: 3396
+		// (get) Token: 0x06003287 RID: 12935 RVA: 0x000815C4 File Offset: 0x0007F7C4
+		// (set) Token: 0x06003288 RID: 12936 RVA: 0x00081625 File Offset: 0x0007F825
 		public override IHitTimeScaleRatio AttackerHitTimeScaleRatio
 		{
 			get
@@ -148,9 +148,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C7C RID: 3196
-		// (get) Token: 0x06002F4D RID: 12109 RVA: 0x0007A154 File Offset: 0x00078354
-		// (set) Token: 0x06002F4E RID: 12110 RVA: 0x0007A1B5 File Offset: 0x000783B5
+		// Token: 0x17000D45 RID: 3397
+		// (get) Token: 0x06003289 RID: 12937 RVA: 0x0008163C File Offset: 0x0007F83C
+		// (set) Token: 0x0600328A RID: 12938 RVA: 0x0008169D File Offset: 0x0007F89D
 		public override IHitTimeScaleRatio VictimHitTimeScaleRatio
 		{
 			get
@@ -178,20 +178,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C7D RID: 3197
-		// (get) Token: 0x06002F4F RID: 12111 RVA: 0x0007A1CC File Offset: 0x000783CC
-		// (set) Token: 0x06002F50 RID: 12112 RVA: 0x0007A25F File Offset: 0x0007845F
+		// Token: 0x17000D46 RID: 3398
+		// (get) Token: 0x0600328B RID: 12939 RVA: 0x000816B4 File Offset: 0x0007F8B4
+		// (set) Token: 0x0600328C RID: 12940 RVA: 0x00081747 File Offset: 0x0007F947
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<IAimPart> AimParts
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -222,7 +222,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -231,9 +231,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C7E RID: 3198
-		// (get) Token: 0x06002F51 RID: 12113 RVA: 0x0007A274 File Offset: 0x00078474
-		// (set) Token: 0x06002F52 RID: 12114 RVA: 0x0007A29E File Offset: 0x0007849E
+		// Token: 0x17000D47 RID: 3399
+		// (get) Token: 0x0600328D RID: 12941 RVA: 0x0008175C File Offset: 0x0007F95C
+		// (set) Token: 0x0600328E RID: 12942 RVA: 0x00081786 File Offset: 0x0007F986
 		public override bool? EdIsLocked
 		{
 			get
@@ -250,13 +250,13 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C7F RID: 3199
-		// (get) Token: 0x06002F53 RID: 12115 RVA: 0x0007A2AC File Offset: 0x000784AC
-		// (set) Token: 0x06002F54 RID: 12116 RVA: 0x0007A2D3 File Offset: 0x000784D3
-		[Nullable(1)]
+		// Token: 0x17000D48 RID: 3400
+		// (get) Token: 0x0600328F RID: 12943 RVA: 0x00081794 File Offset: 0x0007F994
+		// (set) Token: 0x06003290 RID: 12944 RVA: 0x000817BB File Offset: 0x0007F9BB
+		[Nullable(0)]
 		public virtual IProgressBarControl Control
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -270,42 +270,42 @@ namespace Aki.TDConfigMgr.Component
 				}
 				return pocoInterface.Control;
 			}
-			[NullableContext(1)]
+			[NullableContext(0)]
 			set
 			{
 				this.GetOrCreatePoco().Control = value;
 			}
 		}
 
-		// Token: 0x04001F2F RID: 7983
+		// Token: 0x04002141 RID: 8513
 		protected new ProgressBarControlComponent FbInstance;
 
-		// Token: 0x04001F30 RID: 7984
+		// Token: 0x04002142 RID: 8514
 		protected new ProgressBarControlComponent_SetValue PocoInterface;
 
-		// Token: 0x04001F31 RID: 7985
-		[Nullable(1)]
+		// Token: 0x04002143 RID: 8515
+		[Nullable(0)]
 		private IHitTimeScaleRatio _AttackerHitTimeScaleRatioCache;
 
-		// Token: 0x04001F32 RID: 7986
+		// Token: 0x04002144 RID: 8516
 		private bool _AttackerHitTimeScaleRatioInited;
 
-		// Token: 0x04001F33 RID: 7987
-		[Nullable(1)]
+		// Token: 0x04002145 RID: 8517
+		[Nullable(0)]
 		private IHitTimeScaleRatio _VictimHitTimeScaleRatioCache;
 
-		// Token: 0x04001F34 RID: 7988
+		// Token: 0x04002146 RID: 8518
 		private bool _VictimHitTimeScaleRatioInited;
 
-		// Token: 0x04001F35 RID: 7989
+		// Token: 0x04002147 RID: 8519
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IAimPart> _AimPartsCache;
 
-		// Token: 0x04001F36 RID: 7990
+		// Token: 0x04002148 RID: 8520
 		private bool _AimPartsInited;
 	}
 }

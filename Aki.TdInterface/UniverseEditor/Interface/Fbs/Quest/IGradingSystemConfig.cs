@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003E7E RID: 15998
+	// Token: 0x020042B9 RID: 17081
 	public struct IGradingSystemConfig : IFlatbufferObject
 	{
-		// Token: 0x17006EF5 RID: 28405
-		// (get) Token: 0x060168B5 RID: 92341 RVA: 0x00341F47 File Offset: 0x00340147
+		// Token: 0x170074DD RID: 29917
+		// (get) Token: 0x06017EEC RID: 98028 RVA: 0x0036ACCB File Offset: 0x00368ECB
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060168B6 RID: 92342 RVA: 0x00341F54 File Offset: 0x00340154
+		// Token: 0x06017EED RID: 98029 RVA: 0x0036ACD8 File Offset: 0x00368ED8
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060168B7 RID: 92343 RVA: 0x00341F5C File Offset: 0x0034015C
+		// Token: 0x06017EEE RID: 98030 RVA: 0x0036ACE0 File Offset: 0x00368EE0
 		public static IGradingSystemConfig GetRootAsIGradingSystemConfig(ByteBuffer _bb)
 		{
 			return IGradingSystemConfig.GetRootAsIGradingSystemConfig(_bb, default(IGradingSystemConfig));
 		}
 
-		// Token: 0x060168B8 RID: 92344 RVA: 0x00341F78 File Offset: 0x00340178
+		// Token: 0x06017EEF RID: 98031 RVA: 0x0036ACFC File Offset: 0x00368EFC
 		public static IGradingSystemConfig GetRootAsIGradingSystemConfig(ByteBuffer _bb, IGradingSystemConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060168B9 RID: 92345 RVA: 0x00341F95 File Offset: 0x00340195
+		// Token: 0x06017EF0 RID: 98032 RVA: 0x0036AD19 File Offset: 0x00368F19
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060168BA RID: 92346 RVA: 0x00341FA4 File Offset: 0x003401A4
+		// Token: 0x06017EF1 RID: 98033 RVA: 0x0036AD28 File Offset: 0x00368F28
 		public IGradingSystemConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006EF6 RID: 28406
-		// (get) Token: 0x060168BB RID: 92347 RVA: 0x00341FB4 File Offset: 0x003401B4
+		// Token: 0x170074DE RID: 29918
+		// (get) Token: 0x06017EF2 RID: 98034 RVA: 0x0036AD38 File Offset: 0x00368F38
 		public EEnableSystemType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006EF7 RID: 28407
-		// (get) Token: 0x060168BC RID: 92348 RVA: 0x00341FF0 File Offset: 0x003401F0
+		// Token: 0x170074DF RID: 29919
+		// (get) Token: 0x06017EF3 RID: 98035 RVA: 0x0036AD74 File Offset: 0x00368F74
 		public int GradingSystemId
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060168BD RID: 92349 RVA: 0x0034202C File Offset: 0x0034022C
+		// Token: 0x06017EF4 RID: 98036 RVA: 0x0036ADB0 File Offset: 0x00368FB0
 		public IGradingSystemVar? Vars(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return new IGradingSystemVar?(default(IGradingSystemVar).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17006EF8 RID: 28408
-		// (get) Token: 0x060168BE RID: 92350 RVA: 0x0034208C File Offset: 0x0034028C
+		// Token: 0x170074E0 RID: 29920
+		// (get) Token: 0x06017EF5 RID: 98037 RVA: 0x0036AE10 File Offset: 0x00369010
 		public int VarsLength
 		{
 			get
@@ -104,8 +104,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006EF9 RID: 28409
-		// (get) Token: 0x060168BF RID: 92351 RVA: 0x003420B8 File Offset: 0x003402B8
+		// Token: 0x170074E1 RID: 29921
+		// (get) Token: 0x06017EF6 RID: 98038 RVA: 0x0036AE3C File Offset: 0x0036903C
 		public byte NullMask
 		{
 			get
@@ -119,7 +119,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060168C0 RID: 92352 RVA: 0x003420F5 File Offset: 0x003402F5
+		// Token: 0x06017EF7 RID: 98039 RVA: 0x0036AE79 File Offset: 0x00369079
 		public static Offset<IGradingSystemConfig> CreateIGradingSystemConfig(FlatBufferBuilder builder, EEnableSystemType Type = EEnableSystemType.GradingSystem, int GradingSystemId = 0, VectorOffset VarsOffset = default(VectorOffset), byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -130,31 +130,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IGradingSystemConfig.EndIGradingSystemConfig(builder);
 		}
 
-		// Token: 0x060168C1 RID: 92353 RVA: 0x00342121 File Offset: 0x00340321
+		// Token: 0x06017EF8 RID: 98040 RVA: 0x0036AEA5 File Offset: 0x003690A5
 		public static void StartIGradingSystemConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x060168C2 RID: 92354 RVA: 0x0034212A File Offset: 0x0034032A
+		// Token: 0x06017EF9 RID: 98041 RVA: 0x0036AEAE File Offset: 0x003690AE
 		public static void AddType(FlatBufferBuilder builder, EEnableSystemType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060168C3 RID: 92355 RVA: 0x00342135 File Offset: 0x00340335
+		// Token: 0x06017EFA RID: 98042 RVA: 0x0036AEB9 File Offset: 0x003690B9
 		public static void AddGradingSystemId(FlatBufferBuilder builder, int gradingSystemId)
 		{
 			builder.AddInt(1, gradingSystemId, 0);
 		}
 
-		// Token: 0x060168C4 RID: 92356 RVA: 0x00342140 File Offset: 0x00340340
+		// Token: 0x06017EFB RID: 98043 RVA: 0x0036AEC4 File Offset: 0x003690C4
 		public static void AddVars(FlatBufferBuilder builder, VectorOffset varsOffset)
 		{
 			builder.AddOffset(2, varsOffset.Value, 0);
 		}
 
-		// Token: 0x060168C5 RID: 92357 RVA: 0x00342150 File Offset: 0x00340350
+		// Token: 0x06017EFC RID: 98044 RVA: 0x0036AED4 File Offset: 0x003690D4
 		public static VectorOffset CreateVarsVector(FlatBufferBuilder builder, Offset<IGradingSystemVar>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -165,7 +165,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x060168C6 RID: 92358 RVA: 0x00342190 File Offset: 0x00340390
+		// Token: 0x06017EFD RID: 98045 RVA: 0x0036AF14 File Offset: 0x00369114
 		public static VectorOffset CreateVarsVectorBlock(FlatBufferBuilder builder, Offset<IGradingSystemVar>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -173,7 +173,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x060168C7 RID: 92359 RVA: 0x003421AA File Offset: 0x003403AA
+		// Token: 0x06017EFE RID: 98046 RVA: 0x0036AF2E File Offset: 0x0036912E
 		public static VectorOffset CreateVarsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IGradingSystemVar>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -181,7 +181,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x060168C8 RID: 92360 RVA: 0x003421C8 File Offset: 0x003403C8
+		// Token: 0x06017EFF RID: 98047 RVA: 0x0036AF4C File Offset: 0x0036914C
 		public static VectorOffset CreateVarsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -189,25 +189,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x060168C9 RID: 92361 RVA: 0x003421E1 File Offset: 0x003403E1
+		// Token: 0x06017F00 RID: 98048 RVA: 0x0036AF65 File Offset: 0x00369165
 		public static void StartVarsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x060168CA RID: 92362 RVA: 0x003421EC File Offset: 0x003403EC
+		// Token: 0x06017F01 RID: 98049 RVA: 0x0036AF70 File Offset: 0x00369170
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x060168CB RID: 92363 RVA: 0x003421F7 File Offset: 0x003403F7
+		// Token: 0x06017F02 RID: 98050 RVA: 0x0036AF7B File Offset: 0x0036917B
 		public static Offset<IGradingSystemConfig> EndIGradingSystemConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IGradingSystemConfig>(builder.EndTable());
 		}
 
-		// Token: 0x060168CC RID: 92364 RVA: 0x00342204 File Offset: 0x00340404
+		// Token: 0x06017F03 RID: 98051 RVA: 0x0036AF88 File Offset: 0x00369188
 		public IGradingSystemConfigT UnPack()
 		{
 			IGradingSystemConfigT gradingSystemConfigT = new IGradingSystemConfigT();
@@ -215,7 +215,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return gradingSystemConfigT;
 		}
 
-		// Token: 0x060168CD RID: 92365 RVA: 0x00342220 File Offset: 0x00340420
+		// Token: 0x06017F04 RID: 98052 RVA: 0x0036AFA4 File Offset: 0x003691A4
 		public void UnPackTo(IGradingSystemConfigT _o)
 		{
 			_o.Type = this.Type;
@@ -228,7 +228,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x060168CE RID: 92366 RVA: 0x003422A4 File Offset: 0x003404A4
+		// Token: 0x06017F05 RID: 98053 RVA: 0x0036B028 File Offset: 0x00369228
 		public static Offset<IGradingSystemConfig> Pack(FlatBufferBuilder builder, IGradingSystemConfigT _o)
 		{
 			if (_o == null)
@@ -248,7 +248,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IGradingSystemConfig.CreateIGradingSystemConfig(builder, _o.Type, _o.GradingSystemId, varsOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400B837 RID: 47159
+		// Token: 0x0400C210 RID: 49680
 		private Table __p;
 	}
 }

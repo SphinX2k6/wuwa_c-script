@@ -6,18 +6,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004EA9 RID: 20137
+	// Token: 0x02003E72 RID: 15986
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RogueBattleTokenDetailGridBottom : MediumItemGridComponent
 	{
-		// Token: 0x06033BBB RID: 211899 RVA: 0x00C1E928 File Offset: 0x00C1CB28
+		// Token: 0x06028A26 RID: 166438 RVA: 0x00B67E40 File Offset: 0x00B66040
 		protected override string GetResourceId()
 		{
 			return "UiItem_ItemRogue";
 		}
 
-		// Token: 0x06033BBC RID: 211900 RVA: 0x00C1E92F File Offset: 0x00C1CB2F
+		// Token: 0x06028A27 RID: 166439 RVA: 0x00B67E47 File Offset: 0x00B66047
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,14 +27,14 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033BBD RID: 211901 RVA: 0x00C1E968 File Offset: 0x00C1CB68
+		// Token: 0x06028A28 RID: 166440 RVA: 0x00B67E80 File Offset: 0x00B66080
 		protected override void OnActivate()
 		{
 			this.CommonElementItem = new RogueBattleTokenElement();
 			this.CommonElementItem.CreateThenShowByActorAsync(base.GetItem(0).GetOwner());
 		}
 
-		// Token: 0x06033BBE RID: 211902 RVA: 0x00C1E990 File Offset: 0x00C1CB90
+		// Token: 0x06028A29 RID: 166441 RVA: 0x00B67EA8 File Offset: 0x00B660A8
 		protected override void OnRefresh(object data)
 		{
 			List<IRogueBattleElementInfo> tokenSortElementInfo = RogueBattleUtils.GetTokenSortElementInfo((RogueResGainData)data);
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			base.GetText(1).SetText(tokenSortElementInfo[0].Count.ToString(), true);
 		}
 
-		// Token: 0x0401B7B5 RID: 112565
+		// Token: 0x04016188 RID: 90504
 		[Nullable(2)]
 		private RogueBattleTokenElement CommonElementItem;
 	}

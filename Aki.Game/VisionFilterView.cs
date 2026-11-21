@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -11,17 +10,17 @@ using CSharpScript.Game.Ui;
 using FilterDefine;
 using UnrealEngine;
 
-// Token: 0x02001870 RID: 6256
+// Token: 0x02000D29 RID: 3369
 [NullableContext(1)]
 [Nullable(0)]
 public class VisionFilterView : UiViewBase
 {
-	// Token: 0x0600B7A3 RID: 47011 RVA: 0x00298B12 File Offset: 0x00296D12
+	// Token: 0x06008B8C RID: 35724 RVA: 0x002A322E File Offset: 0x002A142E
 	public VisionFilterView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600B7A4 RID: 47012 RVA: 0x00298B28 File Offset: 0x00296D28
+	// Token: 0x06008B8D RID: 35725 RVA: 0x002A3244 File Offset: 0x002A1444
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -50,7 +49,7 @@ public class VisionFilterView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600B7A5 RID: 47013 RVA: 0x00298C54 File Offset: 0x00296E54
+	// Token: 0x06008B8E RID: 35726 RVA: 0x002A3370 File Offset: 0x002A1570
 	private void OnClickClearSearchButton()
 	{
 		this.CurrentSearchingText = "";
@@ -64,7 +63,7 @@ public class VisionFilterView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600B7A6 RID: 47014 RVA: 0x00298CD4 File Offset: 0x00296ED4
+	// Token: 0x06008B8F RID: 35727 RVA: 0x002A33F0 File Offset: 0x002A15F0
 	private void OnClickSearchButton(string content)
 	{
 		this.CurrentSearchingText = content;
@@ -72,7 +71,7 @@ public class VisionFilterView : UiViewBase
 		this.RefreshView();
 	}
 
-	// Token: 0x0600B7A7 RID: 47015 RVA: 0x00298CF0 File Offset: 0x00296EF0
+	// Token: 0x06008B90 RID: 35728 RVA: 0x002A340C File Offset: 0x002A160C
 	protected override void OnStart()
 	{
 		this.ViewData = (this.OpenParam as FilterViewData);
@@ -80,26 +79,26 @@ public class VisionFilterView : UiViewBase
 		this.SearchComponent = new CommonSearchComponent(base.GetItem(4), new Action<string>(this.SearchResult), new Action(this.ResetSearch));
 	}
 
-	// Token: 0x0600B7A8 RID: 47016 RVA: 0x00298D3E File Offset: 0x00296F3E
+	// Token: 0x06008B91 RID: 35729 RVA: 0x002A345A File Offset: 0x002A165A
 	private void SearchResult(string content)
 	{
 		this.OnClickSearchButton(content);
 	}
 
-	// Token: 0x0600B7A9 RID: 47017 RVA: 0x00298D47 File Offset: 0x00296F47
+	// Token: 0x06008B92 RID: 35730 RVA: 0x002A3463 File Offset: 0x002A1663
 	private void ResetSearch()
 	{
 		this.OnClickClearSearchButton();
 	}
 
-	// Token: 0x0600B7AA RID: 47018 RVA: 0x00298D4F File Offset: 0x00296F4F
+	// Token: 0x06008B93 RID: 35731 RVA: 0x002A346B File Offset: 0x002A166B
 	private void InitScroller()
 	{
 		this.Scroll = new GenericScrollView<FilterGroup>(base.GetScrollViewWithScrollbar(0), new CSharpScript.Game.Module.Util.Layout.TLayoutRefresh<FilterGroup>(this.InitFilterGroup), null);
 		this.SearchScroll = new GenericScrollView<FilterItem>(base.GetScrollViewWithScrollbar(3), new CSharpScript.Game.Module.Util.Layout.TLayoutRefresh<FilterItem>(this.InitFilterItem), null);
 	}
 
-	// Token: 0x0600B7AB RID: 47019 RVA: 0x00298D90 File Offset: 0x00296F90
+	// Token: 0x06008B94 RID: 35732 RVA: 0x002A34AC File Offset: 0x002A16AC
 	private ILayoutItem<FilterItem> InitFilterItem(object tempData, UUIItem uiItem, int index)
 	{
 		FilterItemData filterItemData = (FilterItemData)tempData;
@@ -114,7 +113,7 @@ public class VisionFilterView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600B7AC RID: 47020 RVA: 0x00298DEA File Offset: 0x00296FEA
+	// Token: 0x06008B95 RID: 35733 RVA: 0x002A3506 File Offset: 0x002A1706
 	private void FilterItemToggleEvent(EToggleState state, int filterId, string name)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -125,7 +124,7 @@ public class VisionFilterView : UiViewBase
 		this.TempFilterDataMap.Remove(filterId);
 	}
 
-	// Token: 0x0600B7AD RID: 47021 RVA: 0x00298E0C File Offset: 0x0029700C
+	// Token: 0x06008B96 RID: 35734 RVA: 0x002A3528 File Offset: 0x002A1728
 	private ILayoutItem<FilterGroup> InitFilterGroup(object tempData, UUIItem uiItem, int index)
 	{
 		int ruleId = (int)tempData;
@@ -142,16 +141,16 @@ public class VisionFilterView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600B7AE RID: 47022 RVA: 0x00298E88 File Offset: 0x00297088
+	// Token: 0x06008B97 RID: 35735 RVA: 0x002A35A4 File Offset: 0x002A17A4
 	private void RefreshScroll()
 	{
 		FilterResultData filterResultData = FilterModel.Instance.GetFilterResultData(this.ViewData.UniqueId);
 		Filter? filterConfig = FilterConfig.Instance.GetFilterConfig(filterResultData.ConfigId);
-		this.Scroll.RefreshByData<int>(filterConfig.Value.RuleList().ToList<int>(), null);
+		this.Scroll.RefreshByData<int>(filterConfig.Value.RuleList(), null);
 		this.ShowViewBySearchState(false);
 	}
 
-	// Token: 0x0600B7AF RID: 47023 RVA: 0x00298EEC File Offset: 0x002970EC
+	// Token: 0x06008B98 RID: 35736 RVA: 0x002A3604 File Offset: 0x002A1804
 	private void RefreshSearchScroller()
 	{
 		FilterResultData filterResultData = FilterModel.Instance.GetFilterResultData(this.ViewData.UniqueId);
@@ -178,7 +177,7 @@ public class VisionFilterView : UiViewBase
 		this.ShowViewBySearchState(true);
 	}
 
-	// Token: 0x0600B7B0 RID: 47024 RVA: 0x0029906C File Offset: 0x0029726C
+	// Token: 0x06008B99 RID: 35737 RVA: 0x002A3784 File Offset: 0x002A1984
 	private void ShowViewBySearchState(bool searchState)
 	{
 		base.GetScrollViewWithScrollbar(0).RootUIComp.Get().SetUIActive(!searchState);
@@ -186,7 +185,7 @@ public class VisionFilterView : UiViewBase
 		this.SearchingState = searchState;
 	}
 
-	// Token: 0x0600B7B1 RID: 47025 RVA: 0x002990B8 File Offset: 0x002972B8
+	// Token: 0x06008B9A RID: 35738 RVA: 0x002A37D0 File Offset: 0x002A19D0
 	private void ResetView()
 	{
 		this.TempFilterDataMap.Clear();
@@ -210,7 +209,7 @@ public class VisionFilterView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600B7B2 RID: 47026 RVA: 0x00299174 File Offset: 0x00297374
+	// Token: 0x06008B9B RID: 35739 RVA: 0x002A388C File Offset: 0x002A1A8C
 	private void RefreshView()
 	{
 		if (StringUtils.IsEmpty(this.CurrentSearchingText))
@@ -221,7 +220,7 @@ public class VisionFilterView : UiViewBase
 		this.RefreshSearchScroller();
 	}
 
-	// Token: 0x0600B7B3 RID: 47027 RVA: 0x00299190 File Offset: 0x00297390
+	// Token: 0x06008B9C RID: 35740 RVA: 0x002A38A8 File Offset: 0x002A1AA8
 	private void SaveDataAndCloseView()
 	{
 		FilterResultData filterResultData = FilterModel.Instance.GetFilterResultData(this.ViewData.UniqueId);
@@ -242,7 +241,7 @@ public class VisionFilterView : UiViewBase
 		UiManager.Instance.CloseView(this.ViewInfo.Name, null);
 	}
 
-	// Token: 0x0600B7B4 RID: 47028 RVA: 0x00299250 File Offset: 0x00297450
+	// Token: 0x06008B9D RID: 35741 RVA: 0x002A3968 File Offset: 0x002A1B68
 	protected override void OnBeforeShow()
 	{
 		this.FilterVisionDataMap = new Dictionary<int, int>();
@@ -270,13 +269,13 @@ public class VisionFilterView : UiViewBase
 		this.RefreshView();
 	}
 
-	// Token: 0x0600B7B5 RID: 47029 RVA: 0x002993EC File Offset: 0x002975EC
+	// Token: 0x06008B9E RID: 35742 RVA: 0x002A3B04 File Offset: 0x002A1D04
 	protected override void OnBeforeDestroy()
 	{
 		this.SearchComponent.Destroy(null);
 	}
 
-	// Token: 0x040052D4 RID: 21204
+	// Token: 0x0400537F RID: 21375
 	[Nullable(new byte[]
 	{
 		2,
@@ -284,7 +283,7 @@ public class VisionFilterView : UiViewBase
 	})]
 	protected GenericScrollView<FilterGroup> Scroll;
 
-	// Token: 0x040052D5 RID: 21205
+	// Token: 0x04005380 RID: 21376
 	[Nullable(new byte[]
 	{
 		2,
@@ -292,14 +291,14 @@ public class VisionFilterView : UiViewBase
 	})]
 	protected GenericScrollView<FilterItem> SearchScroll;
 
-	// Token: 0x040052D6 RID: 21206
+	// Token: 0x04005381 RID: 21377
 	[Nullable(2)]
 	private FilterViewData ViewData;
 
-	// Token: 0x040052D7 RID: 21207
+	// Token: 0x04005382 RID: 21378
 	private string CurrentSearchingText = "";
 
-	// Token: 0x040052D8 RID: 21208
+	// Token: 0x04005383 RID: 21379
 	[Nullable(new byte[]
 	{
 		2,
@@ -307,30 +306,30 @@ public class VisionFilterView : UiViewBase
 	})]
 	private Dictionary<int, string> TempFilterDataMap;
 
-	// Token: 0x040052D9 RID: 21209
+	// Token: 0x04005384 RID: 21380
 	[Nullable(2)]
 	private Dictionary<int, int> FilterVisionDataMap;
 
-	// Token: 0x040052DA RID: 21210
+	// Token: 0x04005385 RID: 21381
 	[Nullable(2)]
 	private CommonSearchComponent SearchComponent;
 
-	// Token: 0x040052DB RID: 21211
+	// Token: 0x04005386 RID: 21382
 	private bool SearchingState;
 
-	// Token: 0x02007E35 RID: 32309
+	// Token: 0x02006FBC RID: 28604
 	[NullableContext(0)]
 	private enum ECompDefine
 	{
-		// Token: 0x040294DF RID: 169183
+		// Token: 0x0402480C RID: 149516
 		Scroll,
-		// Token: 0x040294E0 RID: 169184
+		// Token: 0x0402480D RID: 149517
 		ClearButton,
-		// Token: 0x040294E1 RID: 169185
+		// Token: 0x0402480E RID: 149518
 		ConfirmButton,
-		// Token: 0x040294E2 RID: 169186
+		// Token: 0x0402480F RID: 149519
 		SearchScroller,
-		// Token: 0x040294E3 RID: 169187
+		// Token: 0x04024810 RID: 149520
 		InputBox
 	}
 }

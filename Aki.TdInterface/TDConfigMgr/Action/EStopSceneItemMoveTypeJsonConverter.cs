@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002432 RID: 9266
+	// Token: 0x020026D3 RID: 9939
 	public class EStopSceneItemMoveTypeJsonConverter : JsonConverter<EStopSceneItemMoveType>
 	{
-		// Token: 0x0600C961 RID: 51553 RVA: 0x001D7CF0 File Offset: 0x001D5EF0
+		// Token: 0x0600D611 RID: 54801 RVA: 0x001F1BB8 File Offset: 0x001EFDB8
 		public override EStopSceneItemMoveType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EStopSceneItemMoveTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C962 RID: 51554 RVA: 0x001D7D14 File Offset: 0x001D5F14
+		// Token: 0x0600D612 RID: 54802 RVA: 0x001F1BDC File Offset: 0x001EFDDC
 		public override void Write(Utf8JsonWriter writer, EStopSceneItemMoveType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

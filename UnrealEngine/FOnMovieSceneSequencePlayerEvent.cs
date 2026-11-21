@@ -6,17 +6,17 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200245E RID: 9310
+	// Token: 0x02000795 RID: 1941
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FOnMovieSceneSequencePlayerEvent : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06022E04 RID: 142852 RVA: 0x00339104 File Offset: 0x00337304
+		// Token: 0x0600A798 RID: 42904 RVA: 0x000F75D1 File Offset: 0x000F57D1
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnMovieSceneSequencePlayerEvent.StaticFunctionPtr();
 		}
 
-		// Token: 0x06022E05 RID: 142853 RVA: 0x00339110 File Offset: 0x00337310
+		// Token: 0x0600A799 RID: 42905 RVA: 0x000F75DD File Offset: 0x000F57DD
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnMovieSceneSequencePlayerEvent._FunctionPtr == IntPtr.Zero)
@@ -26,32 +26,31 @@ namespace UnrealEngine
 			return FOnMovieSceneSequencePlayerEvent._FunctionPtr;
 		}
 
-		// Token: 0x06022E06 RID: 142854 RVA: 0x00339133 File Offset: 0x00337333
+		// Token: 0x0600A79A RID: 42906 RVA: 0x000F7600 File Offset: 0x000F5800
 		public FOnMovieSceneSequencePlayerEvent()
 		{
 		}
 
-		// Token: 0x06022E07 RID: 142855 RVA: 0x0033913B File Offset: 0x0033733B
+		// Token: 0x0600A79B RID: 42907 RVA: 0x000F7608 File Offset: 0x000F5808
 		[NullableContext(2)]
 		public FOnMovieSceneSequencePlayerEvent(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06022E08 RID: 142856 RVA: 0x00339145 File Offset: 0x00337345
+		// Token: 0x0600A79C RID: 42908 RVA: 0x000F7612 File Offset: 0x000F5812
 		public FOnMovieSceneSequencePlayerEvent(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06022E09 RID: 142857 RVA: 0x00339150 File Offset: 0x00337350
+		// Token: 0x0600A79D RID: 42909 RVA: 0x000F761D File Offset: 0x000F581D
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action) ?? ((Action)Delegate.CreateDelegate(typeof(Action), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06022E0A RID: 142858 RVA: 0x00339182 File Offset: 0x00337382
+		// Token: 0x0600A79E RID: 42910 RVA: 0x000F764F File Offset: 0x000F584F
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action Callback)
 		{
 			if (FOnMovieSceneSequencePlayerEvent.RegisterId == 0)
@@ -66,26 +65,23 @@ namespace UnrealEngine
 			base.Add(Callback, FOnMovieSceneSequencePlayerEvent.RegisterId);
 		}
 
-		// Token: 0x06022E0B RID: 142859 RVA: 0x003391BC File Offset: 0x003373BC
+		// Token: 0x0600A79F RID: 42911 RVA: 0x000F7689 File Offset: 0x000F5889
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x06022E0C RID: 142860 RVA: 0x003391C5 File Offset: 0x003373C5
+		// Token: 0x0600A7A0 RID: 42912 RVA: 0x000F7692 File Offset: 0x000F5892
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Broadcast()
 		{
 			base.BroadcastInternal(null);
 		}
 
-		// Token: 0x06022E0D RID: 142861 RVA: 0x003391D0 File Offset: 0x003373D0
+		// Token: 0x0600A7A1 RID: 42913 RVA: 0x000F769C File Offset: 0x000F589C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action action = target as Action;
@@ -96,21 +92,21 @@ namespace UnrealEngine
 			action();
 		}
 
-		// Token: 0x040129E9 RID: 76265
+		// Token: 0x040047CF RID: 18383
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x040129EA RID: 76266
+		// Token: 0x040047D0 RID: 18384
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/MovieScene.OnMovieSceneSequencePlayerEvent__DelegateSignature";
 
-		// Token: 0x040129EB RID: 76267
+		// Token: 0x040047D1 RID: 18385
 		private static int RegisterId;
 
-		// Token: 0x02003663 RID: 13923
+		// Token: 0x02000F5B RID: 3931
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017731 RID: 96049
+			// Token: 0x04006331 RID: 25393
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

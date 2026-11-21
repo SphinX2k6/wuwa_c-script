@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200283E RID: 10302
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B11 RID: 11025
 	public class IFindSunSpirit : IUiGame
 	{
-		// Token: 0x0600E464 RID: 58468 RVA: 0x00219DE4 File Offset: 0x00217FE4
+		// Token: 0x0600F289 RID: 62089 RVA: 0x00236C48 File Offset: 0x00234E48
 		public static IFindSunSpirit Create(IFindSunSpirit? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170045AA RID: 17834
-		// (get) Token: 0x0600E465 RID: 58469 RVA: 0x00219E03 File Offset: 0x00218003
+		// Token: 0x17004915 RID: 18709
+		// (get) Token: 0x0600F28A RID: 62090 RVA: 0x00236C67 File Offset: 0x00234E67
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -34,8 +32,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170045AB RID: 17835
-		// (get) Token: 0x0600E466 RID: 58470 RVA: 0x00219E10 File Offset: 0x00218010
+		// Token: 0x17004916 RID: 18710
+		// (get) Token: 0x0600F28B RID: 62091 RVA: 0x00236C74 File Offset: 0x00234E74
 		public virtual int Id
 		{
 			get
@@ -44,8 +42,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170045AC RID: 17836
-		// (get) Token: 0x0600E467 RID: 58471 RVA: 0x00219E1D File Offset: 0x0021801D
+		// Token: 0x17004917 RID: 18711
+		// (get) Token: 0x0600F28C RID: 62092 RVA: 0x00236C81 File Offset: 0x00234E81
 		public virtual VectorInfo Pos
 		{
 			get
@@ -60,8 +58,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170045AD RID: 17837
-		// (get) Token: 0x0600E468 RID: 58472 RVA: 0x00219E51 File Offset: 0x00218051
+		// Token: 0x17004918 RID: 18712
+		// (get) Token: 0x0600F28D RID: 62093 RVA: 0x00236CB5 File Offset: 0x00234EB5
 		public virtual VectorInfo Direction
 		{
 			get
@@ -76,8 +74,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170045AE RID: 17838
-		// (get) Token: 0x0600E469 RID: 58473 RVA: 0x00219E88 File Offset: 0x00218088
+		// Token: 0x17004919 RID: 18713
+		// (get) Token: 0x0600F28E RID: 62094 RVA: 0x00236CEC File Offset: 0x00234EEC
 		public virtual List<int> SunSpiritEntityIds
 		{
 			get
@@ -97,8 +95,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170045AF RID: 17839
-		// (get) Token: 0x0600E46A RID: 58474 RVA: 0x00219EEC File Offset: 0x002180EC
+		// Token: 0x1700491A RID: 18714
+		// (get) Token: 0x0600F28F RID: 62095 RVA: 0x00236D50 File Offset: 0x00234F50
 		public virtual List<int> TargetLocationIds
 		{
 			get
@@ -118,8 +116,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170045B0 RID: 17840
-		// (get) Token: 0x0600E46B RID: 58475 RVA: 0x00219F50 File Offset: 0x00218150
+		// Token: 0x1700491B RID: 18715
+		// (get) Token: 0x0600F290 RID: 62096 RVA: 0x00236DB4 File Offset: 0x00234FB4
 		[Nullable(2)]
 		public virtual ISunSpiritDifficultyReduction DifficultyReductionConfig
 		{
@@ -136,40 +134,40 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007E5A RID: 32346
+		// Token: 0x04008517 RID: 34071
 		private IFindSunSpirit Instance;
 
-		// Token: 0x04007E5B RID: 32347
+		// Token: 0x04008518 RID: 34072
 		[Nullable(2)]
 		private VectorInfo _PosCache;
 
-		// Token: 0x04007E5C RID: 32348
+		// Token: 0x04008519 RID: 34073
 		private bool _PosInited;
 
-		// Token: 0x04007E5D RID: 32349
+		// Token: 0x0400851A RID: 34074
 		[Nullable(2)]
 		private VectorInfo _DirectionCache;
 
-		// Token: 0x04007E5E RID: 32350
+		// Token: 0x0400851B RID: 34075
 		private bool _DirectionInited;
 
-		// Token: 0x04007E5F RID: 32351
+		// Token: 0x0400851C RID: 34076
 		private List<int> _SunSpiritEntityIdsCache;
 
-		// Token: 0x04007E60 RID: 32352
+		// Token: 0x0400851D RID: 34077
 		private bool _SunSpiritEntityIdsInited;
 
-		// Token: 0x04007E61 RID: 32353
+		// Token: 0x0400851E RID: 34078
 		private List<int> _TargetLocationIdsCache;
 
-		// Token: 0x04007E62 RID: 32354
+		// Token: 0x0400851F RID: 34079
 		private bool _TargetLocationIdsInited;
 
-		// Token: 0x04007E63 RID: 32355
+		// Token: 0x04008520 RID: 34080
 		[Nullable(2)]
 		private ISunSpiritDifficultyReduction _DifficultyReductionConfigCache;
 
-		// Token: 0x04007E64 RID: 32356
+		// Token: 0x04008521 RID: 34081
 		private bool _DifficultyReductionConfigInited;
 	}
 }

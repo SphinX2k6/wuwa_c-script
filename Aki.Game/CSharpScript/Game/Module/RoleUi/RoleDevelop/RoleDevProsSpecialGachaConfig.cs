@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop
 {
-	// Token: 0x02004D05 RID: 19717
+	// Token: 0x02003CB7 RID: 15543
 	public class RoleDevProsSpecialGachaConfig : IRoleDevProsSpecialGachaConfig
 	{
-		// Token: 0x06032FBC RID: 208828 RVA: 0x00BE1A44 File Offset: 0x00BDFC44
+		// Token: 0x06027D97 RID: 163223 RVA: 0x00B2734C File Offset: 0x00B2554C
 		public RoleDevProsSpecialGachaConfig(int TypeId, int GachaId)
 		{
 		}
 
-		// Token: 0x17007DDF RID: 32223
-		// (get) Token: 0x06032FBD RID: 208829 RVA: 0x00BE1A5A File Offset: 0x00BDFC5A
-		// (set) Token: 0x06032FBE RID: 208830 RVA: 0x00BE1A62 File Offset: 0x00BDFC62
+		// Token: 0x17005189 RID: 20873
+		// (get) Token: 0x06027D98 RID: 163224 RVA: 0x00B27362 File Offset: 0x00B25562
+		// (set) Token: 0x06027D99 RID: 163225 RVA: 0x00B2736A File Offset: 0x00B2556A
 		public int TypeId { get; set; } = TypeId;
 
-		// Token: 0x17007DE0 RID: 32224
-		// (get) Token: 0x06032FBF RID: 208831 RVA: 0x00BE1A6B File Offset: 0x00BDFC6B
-		// (set) Token: 0x06032FC0 RID: 208832 RVA: 0x00BE1A73 File Offset: 0x00BDFC73
+		// Token: 0x1700518A RID: 20874
+		// (get) Token: 0x06027D9A RID: 163226 RVA: 0x00B27373 File Offset: 0x00B25573
+		// (set) Token: 0x06027D9B RID: 163227 RVA: 0x00B2737B File Offset: 0x00B2557B
 		public int GachaId { get; set; } = GachaId;
 	}
 }

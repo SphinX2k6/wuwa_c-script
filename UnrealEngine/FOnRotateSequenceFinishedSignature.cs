@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001973 RID: 6515
+	// Token: 0x02000438 RID: 1080
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FOnRotateSequenceFinishedSignature : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06018354 RID: 99156 RVA: 0x0023B1BA File Offset: 0x002393BA
+		// Token: 0x060068C5 RID: 26821 RVA: 0x00098E8A File Offset: 0x0009708A
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnRotateSequenceFinishedSignature.StaticFunctionPtr();
 		}
 
-		// Token: 0x06018355 RID: 99157 RVA: 0x0023B1C6 File Offset: 0x002393C6
+		// Token: 0x060068C6 RID: 26822 RVA: 0x00098E96 File Offset: 0x00097096
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnRotateSequenceFinishedSignature._FunctionPtr == IntPtr.Zero)
@@ -27,31 +27,30 @@ namespace UnrealEngine
 			return FOnRotateSequenceFinishedSignature._FunctionPtr;
 		}
 
-		// Token: 0x06018356 RID: 99158 RVA: 0x0023B1E9 File Offset: 0x002393E9
+		// Token: 0x060068C7 RID: 26823 RVA: 0x00098EB9 File Offset: 0x000970B9
 		public FOnRotateSequenceFinishedSignature()
 		{
 		}
 
-		// Token: 0x06018357 RID: 99159 RVA: 0x0023B1F1 File Offset: 0x002393F1
+		// Token: 0x060068C8 RID: 26824 RVA: 0x00098EC1 File Offset: 0x000970C1
 		[NullableContext(2)]
 		public FOnRotateSequenceFinishedSignature(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06018358 RID: 99160 RVA: 0x0023B1FB File Offset: 0x002393FB
+		// Token: 0x060068C9 RID: 26825 RVA: 0x00098ECB File Offset: 0x000970CB
 		public FOnRotateSequenceFinishedSignature(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06018359 RID: 99161 RVA: 0x0023B206 File Offset: 0x00239406
+		// Token: 0x060068CA RID: 26826 RVA: 0x00098ED6 File Offset: 0x000970D6
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<USceneComponent>) ?? ((Action<USceneComponent>)Delegate.CreateDelegate(typeof(Action<USceneComponent>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601835A RID: 99162 RVA: 0x0023B238 File Offset: 0x00239438
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x060068CB RID: 26827 RVA: 0x00098F08 File Offset: 0x00097108
 		public void Add([Nullable(new byte[]
 		{
 			1,
@@ -70,8 +69,7 @@ namespace UnrealEngine
 			base.Add(Callback, FOnRotateSequenceFinishedSignature.RegisterId);
 		}
 
-		// Token: 0x0601835B RID: 99163 RVA: 0x0023B272 File Offset: 0x00239472
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x060068CC RID: 26828 RVA: 0x00098F42 File Offset: 0x00097142
 		public void Remove([Nullable(new byte[]
 		{
 			1,
@@ -81,10 +79,9 @@ namespace UnrealEngine
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601835C RID: 99164 RVA: 0x0023B27C File Offset: 0x0023947C
+		// Token: 0x060068CD RID: 26829 RVA: 0x00098F4C File Offset: 0x0009714C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(USceneComponent AimPivot)
 		{
 			FOnRotateSequenceFinishedSignature.__FOnRotateSequenceFinishedSignature_DelegateParams* ptr = stackalloc FOnRotateSequenceFinishedSignature.__FOnRotateSequenceFinishedSignature_DelegateParams[(UIntPtr)23] + 15L / (long)sizeof(FOnRotateSequenceFinishedSignature.__FOnRotateSequenceFinishedSignature_DelegateParams) & -16L;
@@ -93,10 +90,9 @@ namespace UnrealEngine
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x0601835D RID: 99165 RVA: 0x0023B2C8 File Offset: 0x002394C8
+		// Token: 0x060068CE RID: 26830 RVA: 0x00098F98 File Offset: 0x00097198
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<USceneComponent> action = target as Action<USceneComponent>;
@@ -108,31 +104,31 @@ namespace UnrealEngine
 			action(orCreateUObjectByNativePointer);
 		}
 
-		// Token: 0x0400D1CF RID: 53711
+		// Token: 0x04002CA7 RID: 11431
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400D1D0 RID: 53712
+		// Token: 0x04002CA8 RID: 11432
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroGAS.OnRotateSequenceFinishedSignature__DelegateSignature";
 
-		// Token: 0x0400D1D1 RID: 53713
+		// Token: 0x04002CA9 RID: 11433
 		private static int RegisterId;
 
-		// Token: 0x02003068 RID: 12392
+		// Token: 0x02000B58 RID: 2904
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
-		protected ref struct __FOnRotateSequenceFinishedSignature_DelegateParams
+		private ref struct __FOnRotateSequenceFinishedSignature_DelegateParams
 		{
-			// Token: 0x04016D36 RID: 93494
+			// Token: 0x04005C6B RID: 23659
 			[FieldOffset(0)]
 			public IntPtr AimPivot;
 		}
 
-		// Token: 0x02003069 RID: 12393
+		// Token: 0x02000B59 RID: 2905
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016D37 RID: 93495
+			// Token: 0x04005C6C RID: 23660
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

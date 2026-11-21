@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020058F5 RID: 22773
+	// Token: 0x02005F02 RID: 24322
 	public class ISearchSpawnMonsterPointT
 	{
-		// Token: 0x1700AAAA RID: 43690
-		// (get) Token: 0x06026790 RID: 157584 RVA: 0x0054D17C File Offset: 0x0054B37C
-		// (set) Token: 0x06026791 RID: 157585 RVA: 0x0054D184 File Offset: 0x0054B384
+		// Token: 0x1700B3DE RID: 46046
+		// (get) Token: 0x06028CFA RID: 167162 RVA: 0x00593DE8 File Offset: 0x00591FE8
+		// (set) Token: 0x06028CFB RID: 167163 RVA: 0x00593DF0 File Offset: 0x00591FF0
 		public ERangeConstraint Type { get; set; }
 
-		// Token: 0x1700AAAB RID: 43691
-		// (get) Token: 0x06026792 RID: 157586 RVA: 0x0054D18D File Offset: 0x0054B38D
-		// (set) Token: 0x06026793 RID: 157587 RVA: 0x0054D195 File Offset: 0x0054B395
+		// Token: 0x1700B3DF RID: 46047
+		// (get) Token: 0x06028CFC RID: 167164 RVA: 0x00593DF9 File Offset: 0x00591FF9
+		// (set) Token: 0x06028CFD RID: 167165 RVA: 0x00593E01 File Offset: 0x00592001
 		public int Radius { get; set; }
 
-		// Token: 0x1700AAAC RID: 43692
-		// (get) Token: 0x06026794 RID: 157588 RVA: 0x0054D19E File Offset: 0x0054B39E
-		// (set) Token: 0x06026795 RID: 157589 RVA: 0x0054D1A6 File Offset: 0x0054B3A6
+		// Token: 0x1700B3E0 RID: 46048
+		// (get) Token: 0x06028CFE RID: 167166 RVA: 0x00593E0A File Offset: 0x0059200A
+		// (set) Token: 0x06028CFF RID: 167167 RVA: 0x00593E12 File Offset: 0x00592012
 		public int TagId { get; set; }
 
-		// Token: 0x1700AAAD RID: 43693
-		// (get) Token: 0x06026796 RID: 157590 RVA: 0x0054D1AF File Offset: 0x0054B3AF
-		// (set) Token: 0x06026797 RID: 157591 RVA: 0x0054D1B7 File Offset: 0x0054B3B7
+		// Token: 0x1700B3E1 RID: 46049
+		// (get) Token: 0x06028D00 RID: 167168 RVA: 0x00593E1B File Offset: 0x0059201B
+		// (set) Token: 0x06028D01 RID: 167169 RVA: 0x00593E23 File Offset: 0x00592023
 		public byte NullMask { get; set; }
 
-		// Token: 0x06026798 RID: 157592 RVA: 0x0054D1C0 File Offset: 0x0054B3C0
+		// Token: 0x06028D02 RID: 167170 RVA: 0x00593E2C File Offset: 0x0059202C
 		public ISearchSpawnMonsterPointT()
 		{
 			this.Type = ERangeConstraint.SearchSpawnMonsterPoint;

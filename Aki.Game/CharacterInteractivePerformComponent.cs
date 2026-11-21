@@ -7,12 +7,12 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Plot;
 using UnrealEngine;
 
-// Token: 0x02003076 RID: 12406
+// Token: 0x020025CD RID: 9677
 [NullableContext(1)]
 [Nullable(0)]
 public class CharacterInteractivePerformComponent : EntityComponent
 {
-	// Token: 0x0601A76F RID: 108399 RVA: 0x007116FC File Offset: 0x0070F8FC
+	// Token: 0x06018130 RID: 98608 RVA: 0x00737CF8 File Offset: 0x00735EF8
 	protected override bool OnStart()
 	{
 		this.ActorComp = base.Entity.GetComponent<CharacterActorComponent>();
@@ -21,21 +21,21 @@ public class CharacterInteractivePerformComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A770 RID: 108400 RVA: 0x00711732 File Offset: 0x0070F932
+	// Token: 0x06018131 RID: 98609 RVA: 0x00737D2E File Offset: 0x00735F2E
 	protected override bool OnEnd()
 	{
 		this.FinishRequest();
 		return true;
 	}
 
-	// Token: 0x0601A771 RID: 108401 RVA: 0x0071173B File Offset: 0x0070F93B
+	// Token: 0x06018132 RID: 98610 RVA: 0x00737D37 File Offset: 0x00735F37
 	protected void AddGlobalEvents()
 	{
 		EventSystem.Instance.Add(EEventName.PlotNetworkStart, new Action<PlotInfo>(this.OnPlotBegin));
 		EventSystem.Instance.Add(EEventName.OnBattleStateChanged, new Action<bool>(this.OnBattleBegin));
 	}
 
-	// Token: 0x0601A772 RID: 108402 RVA: 0x00711778 File Offset: 0x0070F978
+	// Token: 0x06018133 RID: 98611 RVA: 0x00737D74 File Offset: 0x00735F74
 	protected void AddEntityEvents(Entity entity)
 	{
 		EventSystem.Instance.AddWithTarget<int, int, bool>(entity, EEventName.CharUseSkill, new Action<int, int, bool>(this.OnUseSkill));
@@ -44,14 +44,14 @@ public class CharacterInteractivePerformComponent : EntityComponent
 		EventSystem.Instance.AddWithTarget(entity, EEventName.CharOnUnifiedMoveStateChanged, new Action<global::ECharMoveState, global::ECharMoveState>(this.OnMoveStateChange));
 	}
 
-	// Token: 0x0601A773 RID: 108403 RVA: 0x007117F6 File Offset: 0x0070F9F6
+	// Token: 0x06018134 RID: 98612 RVA: 0x00737DF2 File Offset: 0x00735FF2
 	protected void RemoveGlobalEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.PlotNetworkStart, new Action<PlotInfo>(this.OnPlotBegin));
 		EventSystem.Instance.Remove(EEventName.OnBattleStateChanged, new Action<bool>(this.OnBattleBegin));
 	}
 
-	// Token: 0x0601A774 RID: 108404 RVA: 0x00711830 File Offset: 0x0070FA30
+	// Token: 0x06018135 RID: 98613 RVA: 0x00737E2C File Offset: 0x0073602C
 	protected void RemoveEntityEvents(Entity entity)
 	{
 		EventSystem.Instance.RemoveWithTarget<int, int, bool>(entity, EEventName.CharUseSkill, new Action<int, int, bool>(this.OnUseSkill));
@@ -60,13 +60,13 @@ public class CharacterInteractivePerformComponent : EntityComponent
 		EventSystem.Instance.RemoveWithTarget(entity, EEventName.CharOnUnifiedMoveStateChanged, new Action<global::ECharMoveState, global::ECharMoveState>(this.OnMoveStateChange));
 	}
 
-	// Token: 0x0601A775 RID: 108405 RVA: 0x007118AE File Offset: 0x0070FAAE
+	// Token: 0x06018136 RID: 98614 RVA: 0x00737EAA File Offset: 0x007360AA
 	protected void OnPlotBegin(PlotInfo plotInfo)
 	{
 		this.TryInterruptResponse("剧情开始");
 	}
 
-	// Token: 0x0601A776 RID: 108406 RVA: 0x007118BC File Offset: 0x0070FABC
+	// Token: 0x06018137 RID: 98615 RVA: 0x00737EB8 File Offset: 0x007360B8
 	protected void OnBattleBegin(bool isInBattleState)
 	{
 		if (!isInBattleState)
@@ -76,19 +76,19 @@ public class CharacterInteractivePerformComponent : EntityComponent
 		this.TryInterruptResponse("战斗开始");
 	}
 
-	// Token: 0x0601A777 RID: 108407 RVA: 0x007118CE File Offset: 0x0070FACE
+	// Token: 0x06018138 RID: 98616 RVA: 0x00737ECA File Offset: 0x007360CA
 	protected void OnUseSkill(int entityId, int skillId, bool IsAutonomousProxy)
 	{
 		this.TryInterruptResponse("使用技能");
 	}
 
-	// Token: 0x0601A778 RID: 108408 RVA: 0x007118DC File Offset: 0x0070FADC
+	// Token: 0x06018139 RID: 98617 RVA: 0x00737ED8 File Offset: 0x007360D8
 	protected void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle handle)
 	{
 		this.TryInterruptResponse("实体移除");
 	}
 
-	// Token: 0x0601A779 RID: 108409 RVA: 0x007118EA File Offset: 0x0070FAEA
+	// Token: 0x0601813A RID: 98618 RVA: 0x00737EE6 File Offset: 0x007360E6
 	protected void OnPositionStateChange(global::ECharPositionState oldMoveState, global::ECharPositionState newMoveState)
 	{
 		if (newMoveState == global::ECharPositionState.Ground)
@@ -98,7 +98,7 @@ public class CharacterInteractivePerformComponent : EntityComponent
 		this.TryInterruptResponse("位置模式改变");
 	}
 
-	// Token: 0x0601A77A RID: 108410 RVA: 0x007118FC File Offset: 0x0070FAFC
+	// Token: 0x0601813B RID: 98619 RVA: 0x00737EF8 File Offset: 0x007360F8
 	protected void OnMoveStateChange(global::ECharMoveState oldMoveState, global::ECharMoveState newMoveState)
 	{
 		if (newMoveState == global::ECharMoveState.Stand)
@@ -108,7 +108,7 @@ public class CharacterInteractivePerformComponent : EntityComponent
 		this.TryInterruptResponse("移动模式改变");
 	}
 
-	// Token: 0x0601A77B RID: 108411 RVA: 0x00711910 File Offset: 0x0070FB10
+	// Token: 0x0601813C RID: 98620 RVA: 0x00737F0C File Offset: 0x0073610C
 	public bool CanResponse()
 	{
 		if (this.TagComp == null)
@@ -129,7 +129,7 @@ public class CharacterInteractivePerformComponent : EntityComponent
 		return !flag && !PlotModel.Instance.IsInPlot && this.TagComp.HasTag(GameplayTagDefine.EGameplayTagId["行为状态.位置状态.地面"]) && !this.TagComp.HasTag(GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.进入战斗"]) && !this.TagComp.HasTag(GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.技能中"]);
 	}
 
-	// Token: 0x0601A77C RID: 108412 RVA: 0x007119C8 File Offset: 0x0070FBC8
+	// Token: 0x0601813D RID: 98621 RVA: 0x00737FC4 File Offset: 0x007361C4
 	protected void AddConditionEvents(Entity entity, string type)
 	{
 		if (type == "HandInSeat")
@@ -140,7 +140,7 @@ public class CharacterInteractivePerformComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A77D RID: 108413 RVA: 0x00711A28 File Offset: 0x0070FC28
+	// Token: 0x0601813E RID: 98622 RVA: 0x00738024 File Offset: 0x00736224
 	protected void RemoveConditionEvents(Entity entity, string type)
 	{
 		if (type == "HandInSeat")
@@ -151,7 +151,7 @@ public class CharacterInteractivePerformComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A77E RID: 108414 RVA: 0x00711A88 File Offset: 0x0070FC88
+	// Token: 0x0601813F RID: 98623 RVA: 0x00738084 File Offset: 0x00736284
 	protected bool CanResponseForHandInSeat()
 	{
 		CharacterActionComponent component = base.Entity.GetComponent<CharacterActionComponent>();
@@ -163,13 +163,13 @@ public class CharacterInteractivePerformComponent : EntityComponent
 		return component2 != null && component2.IsSitDownWithHoldingHands();
 	}
 
-	// Token: 0x0601A77F RID: 108415 RVA: 0x00711AC8 File Offset: 0x0070FCC8
+	// Token: 0x06018140 RID: 98624 RVA: 0x007380C4 File Offset: 0x007362C4
 	protected void OnCharHoldingHandsChange(int _1, bool _2, EHoldingHandsRoleState _3, EHandType _4)
 	{
 		this.TryInterruptResponse("牵手状态改变");
 	}
 
-	// Token: 0x0601A780 RID: 108416 RVA: 0x00711AD8 File Offset: 0x0070FCD8
+	// Token: 0x06018141 RID: 98625 RVA: 0x007380D4 File Offset: 0x007362D4
 	protected void OnCharActionStateChange(ECharacterActionType action, bool state)
 	{
 		ECharacterActionType? listenCharActionType = this.ListenCharActionType;
@@ -184,33 +184,33 @@ public class CharacterInteractivePerformComponent : EntityComponent
 		this.TryInterruptResponse("角色交互行为状态改变");
 	}
 
-	// Token: 0x0601A781 RID: 108417 RVA: 0x00711B13 File Offset: 0x0070FD13
+	// Token: 0x06018142 RID: 98626 RVA: 0x0073810F File Offset: 0x0073630F
 	public void AddRequestSignal(IRequestPerformParams request)
 	{
 		this.RequestCacheList[request.Signal] = request;
 		this.TryResponse(request.Signal);
 	}
 
-	// Token: 0x0601A782 RID: 108418 RVA: 0x00711B34 File Offset: 0x0070FD34
+	// Token: 0x06018143 RID: 98627 RVA: 0x00738130 File Offset: 0x00736330
 	public void RemoveRequestSignal(int signal)
 	{
 		this.RequestCacheList.Remove(signal);
 	}
 
-	// Token: 0x0601A783 RID: 108419 RVA: 0x00711B43 File Offset: 0x0070FD43
+	// Token: 0x06018144 RID: 98628 RVA: 0x0073813F File Offset: 0x0073633F
 	public void AddResponseSignal(int signal, string context = "")
 	{
 		this.ResponseCacheList.Add(signal);
 		this.TryResponse(signal);
 	}
 
-	// Token: 0x0601A784 RID: 108420 RVA: 0x00711B5A File Offset: 0x0070FD5A
+	// Token: 0x06018145 RID: 98629 RVA: 0x00738156 File Offset: 0x00736356
 	public void RemoveResponseSignal(int signal)
 	{
 		this.ResponseCacheList.Remove(signal);
 	}
 
-	// Token: 0x0601A785 RID: 108421 RVA: 0x00711B6C File Offset: 0x0070FD6C
+	// Token: 0x06018146 RID: 98630 RVA: 0x00738168 File Offset: 0x00736368
 	protected bool TryResponse(int signal)
 	{
 		if (!this.CanResponse())
@@ -239,13 +239,13 @@ public class CharacterInteractivePerformComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A786 RID: 108422 RVA: 0x00711BED File Offset: 0x0070FDED
+	// Token: 0x06018147 RID: 98631 RVA: 0x007381E9 File Offset: 0x007363E9
 	protected bool RequestConditionCheck(IRequestPerformParams request, AnsPerform config)
 	{
 		return config.Condition == "HandInSeat" && this.CanResponseForHandInSeat();
 	}
 
-	// Token: 0x0601A787 RID: 108423 RVA: 0x00711C0C File Offset: 0x0070FE0C
+	// Token: 0x06018148 RID: 98632 RVA: 0x00738208 File Offset: 0x00736408
 	protected void ResponseToRequest(IRequestPerformParams request, AnsPerform config)
 	{
 		if (!this.ResponseActionStart(config))
@@ -262,7 +262,7 @@ public class CharacterInteractivePerformComponent : EntityComponent
 		this.AddConditionEvents(base.Entity, config.Condition);
 	}
 
-	// Token: 0x0601A788 RID: 108424 RVA: 0x00711C80 File Offset: 0x0070FE80
+	// Token: 0x06018149 RID: 98633 RVA: 0x0073827C File Offset: 0x0073647C
 	protected unsafe bool ResponseActionStart(AnsPerform config)
 	{
 		if (this.AnimComp == null)
@@ -298,7 +298,7 @@ public class CharacterInteractivePerformComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A789 RID: 108425 RVA: 0x00711CFB File Offset: 0x0070FEFB
+	// Token: 0x0601814A RID: 98634 RVA: 0x007382F7 File Offset: 0x007364F7
 	protected void ResponseActionAbort()
 	{
 		if (this.CurResponseMontage == null)
@@ -318,7 +318,7 @@ public class CharacterInteractivePerformComponent : EntityComponent
 		mainAnimInstance.Montage_Stop(0f, this.CurResponseMontage);
 	}
 
-	// Token: 0x0601A78A RID: 108426 RVA: 0x00711D2B File Offset: 0x0070FF2B
+	// Token: 0x0601814B RID: 98635 RVA: 0x00738327 File Offset: 0x00736527
 	protected bool TryInterruptResponse(string context)
 	{
 		if (this.CurHandleRequest == null)
@@ -330,7 +330,7 @@ public class CharacterInteractivePerformComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A78B RID: 108427 RVA: 0x00711D44 File Offset: 0x0070FF44
+	// Token: 0x0601814C RID: 98636 RVA: 0x00738340 File Offset: 0x00736540
 	protected void FinishRequest()
 	{
 		if (this.CurHandleRequest == null)
@@ -345,7 +345,7 @@ public class CharacterInteractivePerformComponent : EntityComponent
 		this.CurHandleConfig = null;
 	}
 
-	// Token: 0x0601A78C RID: 108428 RVA: 0x00711DB0 File Offset: 0x0070FFB0
+	// Token: 0x0601814D RID: 98637 RVA: 0x007383AC File Offset: 0x007365AC
 	protected void PlayResponseMontage(UAnimMontage montage)
 	{
 		CharacterAnimationComponent animComp = this.AnimComp;
@@ -379,7 +379,7 @@ public class CharacterInteractivePerformComponent : EntityComponent
 		this.CurResponseMontage = montage;
 	}
 
-	// Token: 0x0601A78D RID: 108429 RVA: 0x00711E68 File Offset: 0x00710068
+	// Token: 0x0601814E RID: 98638 RVA: 0x00738464 File Offset: 0x00736664
 	[NullableContext(2)]
 	protected void OnResponseMontageEnd(UAnimMontage montage, bool bInterrupt)
 	{
@@ -410,7 +410,7 @@ public class CharacterInteractivePerformComponent : EntityComponent
 		this.FinishRequest();
 	}
 
-	// Token: 0x0601A78E RID: 108430 RVA: 0x00711F08 File Offset: 0x00710108
+	// Token: 0x0601814F RID: 98639 RVA: 0x00738504 File Offset: 0x00736704
 	protected string GetRoleMontagePathFromName(string name)
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -432,7 +432,7 @@ public class CharacterInteractivePerformComponent : EntityComponent
 		});
 	}
 
-	// Token: 0x0601A78F RID: 108431 RVA: 0x00711FA0 File Offset: 0x007101A0
+	// Token: 0x06018150 RID: 98640 RVA: 0x0073859C File Offset: 0x0073679C
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -440,130 +440,123 @@ public class CharacterInteractivePerformComponent : EntityComponent
 			return false;
 		}
 		CharacterInteractivePerformComponent characterInteractivePerformComponent = (CharacterInteractivePerformComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ActorComp"))
+		if (characterInteractivePerformComponent.ActorComp == null)
 		{
-			if (characterInteractivePerformComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("AnimComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
-			if (characterInteractivePerformComponent.AnimComp == null)
-			{
-				this.AnimComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterAnimationComponent>(this.AnimComp), "AnimComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("TagComp"))
+		if (characterInteractivePerformComponent.AnimComp == null)
 		{
-			if (characterInteractivePerformComponent.TagComp == null)
-			{
-				this.TagComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-			{
-				return false;
-			}
+			this.AnimComp = null;
 		}
-		if (base.CanResetComponentProperty("RequestCacheList"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AnimComp), "AnimComp"))
 		{
-			if (characterInteractivePerformComponent.RequestCacheList == null)
-			{
-				this.RequestCacheList = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, IRequestPerformParams>>(this.RequestCacheList), "RequestCacheList"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("ResponseCacheList"))
+		if (characterInteractivePerformComponent.TagComp == null)
 		{
-			if (characterInteractivePerformComponent.ResponseCacheList == null)
-			{
-				this.ResponseCacheList = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.ResponseCacheList), "ResponseCacheList"))
-			{
-				return false;
-			}
+			this.TagComp = null;
 		}
-		if (base.CanResetComponentProperty("CurHandleRequest"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
 		{
-			if (characterInteractivePerformComponent.CurHandleRequest == null)
-			{
-				this.CurHandleRequest = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<IRequestPerformParams>(this.CurHandleRequest), "CurHandleRequest"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("CurHandleConfig"))
+		if (characterInteractivePerformComponent.RequestCacheList == null)
 		{
-			this.CurHandleConfig = characterInteractivePerformComponent.CurHandleConfig;
+			this.RequestCacheList = null;
 		}
-		if (base.CanResetComponentProperty("ListenCharActionType"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RequestCacheList), "RequestCacheList"))
 		{
-			this.ListenCharActionType = characterInteractivePerformComponent.ListenCharActionType;
+			return false;
 		}
-		if (base.CanResetComponentProperty("CurResponseMontage"))
+		if (characterInteractivePerformComponent.ResponseCacheList == null)
 		{
-			if (characterInteractivePerformComponent.CurResponseMontage == null)
-			{
-				this.CurResponseMontage = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UAnimMontage>(this.CurResponseMontage), "CurResponseMontage"))
-			{
-				return false;
-			}
+			this.ResponseCacheList = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.ResponseCacheList), "ResponseCacheList"))
+		{
+			return false;
+		}
+		if (characterInteractivePerformComponent.CurHandleRequest == null)
+		{
+			this.CurHandleRequest = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurHandleRequest), "CurHandleRequest"))
+		{
+			return false;
+		}
+		this.CurHandleConfig = characterInteractivePerformComponent.CurHandleConfig;
+		this.ListenCharActionType = characterInteractivePerformComponent.ListenCharActionType;
+		if (characterInteractivePerformComponent.CurResponseMontage == null)
+		{
+			this.CurResponseMontage = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurResponseMontage), "CurResponseMontage"))
+		{
+			return false;
 		}
 		return true;
 	}
 
-	// Token: 0x0400CB0B RID: 51979
+	// Token: 0x170025A8 RID: 9640
+	// (get) Token: 0x06018151 RID: 98641 RVA: 0x00738701 File Offset: 0x00736901
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170025A9 RID: 9641
+	// (get) Token: 0x06018152 RID: 98642 RVA: 0x00738704 File Offset: 0x00736904
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400CEE6 RID: 52966
 	public static readonly string[] animationList = new string[]
 	{
 		"/Game/Aki/Character/Role/MaleM/BaseAnim/AM_Sit_1_Stand.AM_Sit_1_Stand",
 		"/Game/Aki/Character/Role/FemaleM/BaseAnim/AM_Sit_1_Stand.AM_Sit_1_Stand"
 	};
 
-	// Token: 0x0400CB0C RID: 51980
+	// Token: 0x0400CEE7 RID: 52967
 	[Nullable(2)]
 	protected CharacterActorComponent ActorComp;
 
-	// Token: 0x0400CB0D RID: 51981
+	// Token: 0x0400CEE8 RID: 52968
 	[Nullable(2)]
 	protected CharacterAnimationComponent AnimComp;
 
-	// Token: 0x0400CB0E RID: 51982
+	// Token: 0x0400CEE9 RID: 52969
 	[Nullable(2)]
 	protected BaseTagComponent TagComp;
 
-	// Token: 0x0400CB0F RID: 51983
+	// Token: 0x0400CEEA RID: 52970
 	protected Dictionary<int, IRequestPerformParams> RequestCacheList = new Dictionary<int, IRequestPerformParams>();
 
-	// Token: 0x0400CB10 RID: 51984
+	// Token: 0x0400CEEB RID: 52971
 	protected HashSet<int> ResponseCacheList = new HashSet<int>();
 
-	// Token: 0x0400CB11 RID: 51985
+	// Token: 0x0400CEEC RID: 52972
 	[Nullable(2)]
 	protected IRequestPerformParams CurHandleRequest;
 
-	// Token: 0x0400CB12 RID: 51986
+	// Token: 0x0400CEED RID: 52973
 	protected AnsPerform? CurHandleConfig;
 
-	// Token: 0x0400CB13 RID: 51987
+	// Token: 0x0400CEEE RID: 52974
 	protected ECharacterActionType? ListenCharActionType;
 
-	// Token: 0x0400CB14 RID: 51988
+	// Token: 0x0400CEEF RID: 52975
 	[Nullable(2)]
 	protected UAnimMontage CurResponseMontage;
 }

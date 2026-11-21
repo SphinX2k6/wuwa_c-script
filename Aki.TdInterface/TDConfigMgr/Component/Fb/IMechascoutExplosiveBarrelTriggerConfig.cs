@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B54 RID: 2900
+	// Token: 0x02000C22 RID: 3106
 	public class IMechascoutExplosiveBarrelTriggerConfig : ITeleCtrlTriggerConfig
 	{
-		// Token: 0x060042C5 RID: 17093 RVA: 0x000AA62D File Offset: 0x000A882D
-		[NullableContext(1)]
+		// Token: 0x0600471E RID: 18206 RVA: 0x000B46F1 File Offset: 0x000B28F1
 		public static IMechascoutExplosiveBarrelTriggerConfig Create(IMechascoutExplosiveBarrelTriggerConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170011DA RID: 4570
-		// (get) Token: 0x060042C6 RID: 17094 RVA: 0x000AA64C File Offset: 0x000A884C
+		// Token: 0x170012D5 RID: 4821
+		// (get) Token: 0x0600471F RID: 18207 RVA: 0x000B4710 File Offset: 0x000B2910
 		public override ETeleCtrlTriggerType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002599 RID: 9625
+		// Token: 0x040027E1 RID: 10209
 		private IMechascoutExplosiveBarrelTriggerConfig Instance;
 	}
 }

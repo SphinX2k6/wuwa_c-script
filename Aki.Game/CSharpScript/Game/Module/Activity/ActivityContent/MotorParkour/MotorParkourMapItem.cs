@@ -9,18 +9,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 {
-	// Token: 0x020063F3 RID: 25587
+	// Token: 0x02005371 RID: 21361
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorParkourMapItem : UiPanelBase
 	{
-		// Token: 0x060405B3 RID: 263603 RVA: 0x00F9102D File Offset: 0x00F8F22D
+		// Token: 0x06035274 RID: 217716 RVA: 0x00ED8015 File Offset: 0x00ED6215
 		public MotorParkourMapItem(MotorParkourLevelData levelData)
 		{
 			this.LevelData = levelData;
 		}
 
-		// Token: 0x060405B4 RID: 263604 RVA: 0x00F91054 File Offset: 0x00F8F254
+		// Token: 0x06035275 RID: 217717 RVA: 0x00ED803C File Offset: 0x00ED623C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060405B5 RID: 263605 RVA: 0x00F91120 File Offset: 0x00F8F320
+		// Token: 0x06035276 RID: 217718 RVA: 0x00ED8108 File Offset: 0x00ED6308
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MotorParkourMapItem.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060405B6 RID: 263606 RVA: 0x00F91164 File Offset: 0x00F8F364
+		// Token: 0x06035277 RID: 217719 RVA: 0x00ED814C File Offset: 0x00ED634C
 		public void DrawMapPathLine()
 		{
 			MotorParkourMapModel.Instance.InitSplinePoints(this.LevelData.SplineId, this.LevelData.MapScale, this.CenterOffset, this.LevelData.SplineStartIndex, this.LevelData.SplineEndIndex);
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			uiLineRaw.SetPoints(splinePoints, false);
 		}
 
-		// Token: 0x060405B7 RID: 263607 RVA: 0x00F911CC File Offset: 0x00F8F3CC
+		// Token: 0x06035278 RID: 217720 RVA: 0x00ED81B4 File Offset: 0x00ED63B4
 		public void UpdatePlayerPosition()
 		{
 			MotorParkourPlayerMarkItem playerMarkItem = this.PlayerMarkItem;
@@ -81,36 +81,36 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorParkour
 			uiLineRaw.SetPoints(pathTakenSplinePoints, false);
 		}
 
-		// Token: 0x0402179B RID: 137115
+		// Token: 0x0401C0CA RID: 114890
 		[Nullable(2)]
 		private MotorParkourPlayerMarkItem PlayerMarkItem;
 
-		// Token: 0x0402179C RID: 137116
+		// Token: 0x0401C0CB RID: 114891
 		private readonly Vector2D UiOffset = Vector2D.Create();
 
-		// Token: 0x0402179D RID: 137117
+		// Token: 0x0401C0CC RID: 114892
 		private readonly Vector2D CenterOffset = Vector2D.Create();
 
-		// Token: 0x0402179E RID: 137118
+		// Token: 0x0401C0CD RID: 114893
 		public MotorParkourLevelData LevelData;
 
-		// Token: 0x0200C60E RID: 50702
+		// Token: 0x0200AFF5 RID: 45045
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403BCB9 RID: 244921
+			// Token: 0x04036618 RID: 222744
 			public const int ItemMarkPanel = 0;
 
-			// Token: 0x0403BCBA RID: 244922
+			// Token: 0x04036619 RID: 222745
 			public const int LineRawMapPath = 1;
 
-			// Token: 0x0403BCBB RID: 244923
+			// Token: 0x0403661A RID: 222746
 			public const int LineRawPathTaken = 2;
 
-			// Token: 0x0403BCBC RID: 244924
+			// Token: 0x0403661B RID: 222747
 			public const int ItemEndPoint = 3;
 
-			// Token: 0x0403BCBD RID: 244925
+			// Token: 0x0403661C RID: 222748
 			public const int ItemPlayer = 4;
 		}
 	}

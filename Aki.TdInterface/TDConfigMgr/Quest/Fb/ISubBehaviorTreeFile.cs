@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001445 RID: 5189
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200159D RID: 5533
 	public class ISubBehaviorTreeFile
 	{
-		// Token: 0x060075FF RID: 30207 RVA: 0x00119E1E File Offset: 0x0011801E
+		// Token: 0x06007CC7 RID: 31943 RVA: 0x001288F2 File Offset: 0x00126AF2
 		public static ISubBehaviorTreeFile Create(ISubBehaviorTreeFile? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002748 RID: 10056
-		// (get) Token: 0x06007600 RID: 30208 RVA: 0x00119E3D File Offset: 0x0011803D
+		// Token: 0x1700292F RID: 10543
+		// (get) Token: 0x06007CC8 RID: 31944 RVA: 0x00128911 File Offset: 0x00126B11
 		public virtual int Id
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002749 RID: 10057
-		// (get) Token: 0x06007601 RID: 30209 RVA: 0x00119E4A File Offset: 0x0011804A
+		// Token: 0x17002930 RID: 10544
+		// (get) Token: 0x06007CC9 RID: 31945 RVA: 0x0012891E File Offset: 0x00126B1E
 		public virtual string ParentUid
 		{
 			get
@@ -43,8 +41,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700274A RID: 10058
-		// (get) Token: 0x06007602 RID: 30210 RVA: 0x00119E57 File Offset: 0x00118057
+		// Token: 0x17002931 RID: 10545
+		// (get) Token: 0x06007CCA RID: 31946 RVA: 0x0012892B File Offset: 0x00126B2B
 		public virtual IBehaviorTree Tree
 		{
 			get
@@ -59,19 +57,19 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700274B RID: 10059
-		// (get) Token: 0x06007603 RID: 30211 RVA: 0x00119E8C File Offset: 0x0011808C
+		// Token: 0x17002932 RID: 10546
+		// (get) Token: 0x06007CCB RID: 31947 RVA: 0x00128960 File Offset: 0x00126B60
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<string> Children
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -94,19 +92,19 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700274C RID: 10060
-		// (get) Token: 0x06007604 RID: 30212 RVA: 0x00119F04 File Offset: 0x00118104
+		// Token: 0x17002933 RID: 10547
+		// (get) Token: 0x06007CCC RID: 31948 RVA: 0x001289D8 File Offset: 0x00126BD8
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<string> Reference
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -129,19 +127,19 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700274D RID: 10061
-		// (get) Token: 0x06007605 RID: 30213 RVA: 0x00119F7C File Offset: 0x0011817C
+		// Token: 0x17002934 RID: 10548
+		// (get) Token: 0x06007CCD RID: 31949 RVA: 0x00128A50 File Offset: 0x00126C50
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<string> WeakReference
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -164,8 +162,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700274E RID: 10062
-		// (get) Token: 0x06007606 RID: 30214 RVA: 0x00119FF1 File Offset: 0x001181F1
+		// Token: 0x17002935 RID: 10549
+		// (get) Token: 0x06007CCE RID: 31950 RVA: 0x00128AC5 File Offset: 0x00126CC5
 		public virtual string _Name
 		{
 			get
@@ -174,8 +172,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700274F RID: 10063
-		// (get) Token: 0x06007607 RID: 30215 RVA: 0x00119FFE File Offset: 0x001181FE
+		// Token: 0x17002936 RID: 10550
+		// (get) Token: 0x06007CCF RID: 31951 RVA: 0x00128AD2 File Offset: 0x00126CD2
 		public virtual string _Path
 		{
 			get
@@ -184,19 +182,19 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002750 RID: 10064
-		// (get) Token: 0x06007608 RID: 30216 RVA: 0x0011A00B File Offset: 0x0011820B
+		// Token: 0x17002937 RID: 10551
+		// (get) Token: 0x06007CD0 RID: 31952 RVA: 0x00128ADF File Offset: 0x00126CDF
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<string> EdTextRef
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -204,47 +202,47 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400447D RID: 17533
+		// Token: 0x04004813 RID: 18451
 		private ISubBehaviorTreeFile Instance;
 
-		// Token: 0x0400447E RID: 17534
+		// Token: 0x04004814 RID: 18452
 		[Nullable(2)]
 		private IBehaviorTree _TreeCache;
 
-		// Token: 0x0400447F RID: 17535
+		// Token: 0x04004815 RID: 18453
 		private bool _TreeInited;
 
-		// Token: 0x04004480 RID: 17536
+		// Token: 0x04004816 RID: 18454
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<string> _ChildrenCache;
 
-		// Token: 0x04004481 RID: 17537
+		// Token: 0x04004817 RID: 18455
 		private bool _ChildrenInited;
 
-		// Token: 0x04004482 RID: 17538
+		// Token: 0x04004818 RID: 18456
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<string> _ReferenceCache;
 
-		// Token: 0x04004483 RID: 17539
+		// Token: 0x04004819 RID: 18457
 		private bool _ReferenceInited;
 
-		// Token: 0x04004484 RID: 17540
+		// Token: 0x0400481A RID: 18458
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<string> _WeakReferenceCache;
 
-		// Token: 0x04004485 RID: 17541
+		// Token: 0x0400481B RID: 18459
 		private bool _WeakReferenceInited;
 	}
 }

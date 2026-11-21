@@ -5,17 +5,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.SplineConstrainedDrag.Interface
 {
-	// Token: 0x02006A35 RID: 27189
+	// Token: 0x02005B92 RID: 23442
 	[NullableContext(1)]
 	public interface IDraggableStateApplier
 	{
-		// Token: 0x06043A25 RID: 277029
+		// Token: 0x06039A73 RID: 236147
 		void Initialize(AActor actor);
 
-		// Token: 0x06043A26 RID: 277030
+		// Token: 0x06039A74 RID: 236148
 		void ApplyState(AActor actor, EDraggableState state);
 
-		// Token: 0x06043A27 RID: 277031
+		// Token: 0x06039A75 RID: 236149
 		void Dispose(AActor actor);
 	}
 }

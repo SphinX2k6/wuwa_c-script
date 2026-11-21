@@ -2,18 +2,18 @@
 
 namespace CSharpScript.Game.Module.InstanceDungeon
 {
-	// Token: 0x02005882 RID: 22658
+	// Token: 0x0200485A RID: 18522
 	public enum EInstanceGuideType
 	{
-		// Token: 0x0401E21D RID: 123421
+		// Token: 0x04018CBA RID: 101562
 		None,
-		// Token: 0x0401E21E RID: 123422
+		// Token: 0x04018CBB RID: 101563
 		Role,
-		// Token: 0x0401E21F RID: 123423
+		// Token: 0x04018CBC RID: 101564
 		Play,
-		// Token: 0x0401E220 RID: 123424
+		// Token: 0x04018CBD RID: 101565
 		Guide,
-		// Token: 0x0401E221 RID: 123425
+		// Token: 0x04018CBE RID: 101566
 		RoleIntroduction
 	}
 }

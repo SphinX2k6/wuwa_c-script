@@ -2,28 +2,28 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002911 RID: 10513
+// Token: 0x02001E8C RID: 7820
 [NullableContext(1)]
 [Nullable(0)]
 public class RouletteListSaveData : IRouletteListSaveData
 {
-	// Token: 0x17001D24 RID: 7460
-	// (get) Token: 0x06015AE6 RID: 88806 RVA: 0x005785B5 File Offset: 0x005767B5
-	// (set) Token: 0x06015AE7 RID: 88807 RVA: 0x005785BD File Offset: 0x005767BD
+	// Token: 0x17001D7E RID: 7550
+	// (get) Token: 0x060134EA RID: 79082 RVA: 0x005A34A9 File Offset: 0x005A16A9
+	// (set) Token: 0x060134EB RID: 79083 RVA: 0x005A34B1 File Offset: 0x005A16B1
 	public ERouletteType RouletteType { get; set; }
 
-	// Token: 0x17001D25 RID: 7461
-	// (get) Token: 0x06015AE8 RID: 88808 RVA: 0x005785C6 File Offset: 0x005767C6
-	// (set) Token: 0x06015AE9 RID: 88809 RVA: 0x005785CE File Offset: 0x005767CE
+	// Token: 0x17001D7F RID: 7551
+	// (get) Token: 0x060134EC RID: 79084 RVA: 0x005A34BA File Offset: 0x005A16BA
+	// (set) Token: 0x060134ED RID: 79085 RVA: 0x005A34C2 File Offset: 0x005A16C2
 	public List<int> RouletteIdList { get; set; }
 
-	// Token: 0x17001D26 RID: 7462
-	// (get) Token: 0x06015AEA RID: 88810 RVA: 0x005785D7 File Offset: 0x005767D7
-	// (set) Token: 0x06015AEB RID: 88811 RVA: 0x005785DF File Offset: 0x005767DF
+	// Token: 0x17001D80 RID: 7552
+	// (get) Token: 0x060134EE RID: 79086 RVA: 0x005A34CB File Offset: 0x005A16CB
+	// (set) Token: 0x060134EF RID: 79087 RVA: 0x005A34D3 File Offset: 0x005A16D3
 	public int ExtraItemId { get; set; }
 
-	// Token: 0x17001D27 RID: 7463
-	// (get) Token: 0x06015AEC RID: 88812 RVA: 0x005785E8 File Offset: 0x005767E8
-	// (set) Token: 0x06015AED RID: 88813 RVA: 0x005785F0 File Offset: 0x005767F0
+	// Token: 0x17001D81 RID: 7553
+	// (get) Token: 0x060134F0 RID: 79088 RVA: 0x005A34DC File Offset: 0x005A16DC
+	// (set) Token: 0x060134F1 RID: 79089 RVA: 0x005A34E4 File Offset: 0x005A16E4
 	public int EquipExploreSkillId { get; set; }
 }

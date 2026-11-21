@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003FFE RID: 16382
+	// Token: 0x0200443F RID: 17471
 	public struct IQuestPlayerHitCount : IFlatbufferObject
 	{
-		// Token: 0x1700731A RID: 29466
-		// (get) Token: 0x06017A0B RID: 96779 RVA: 0x003689BA File Offset: 0x00366BBA
+		// Token: 0x1700791C RID: 31004
+		// (get) Token: 0x060190A4 RID: 102564 RVA: 0x003927AE File Offset: 0x003909AE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017A0C RID: 96780 RVA: 0x003689C7 File Offset: 0x00366BC7
+		// Token: 0x060190A5 RID: 102565 RVA: 0x003927BB File Offset: 0x003909BB
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06017A0D RID: 96781 RVA: 0x003689D0 File Offset: 0x00366BD0
+		// Token: 0x060190A6 RID: 102566 RVA: 0x003927C4 File Offset: 0x003909C4
 		public static IQuestPlayerHitCount GetRootAsIQuestPlayerHitCount(ByteBuffer _bb)
 		{
 			return IQuestPlayerHitCount.GetRootAsIQuestPlayerHitCount(_bb, default(IQuestPlayerHitCount));
 		}
 
-		// Token: 0x06017A0E RID: 96782 RVA: 0x003689EC File Offset: 0x00366BEC
+		// Token: 0x060190A7 RID: 102567 RVA: 0x003927E0 File Offset: 0x003909E0
 		public static IQuestPlayerHitCount GetRootAsIQuestPlayerHitCount(ByteBuffer _bb, IQuestPlayerHitCount obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06017A0F RID: 96783 RVA: 0x00368A09 File Offset: 0x00366C09
+		// Token: 0x060190A8 RID: 102568 RVA: 0x003927FD File Offset: 0x003909FD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06017A10 RID: 96784 RVA: 0x00368A18 File Offset: 0x00366C18
+		// Token: 0x060190A9 RID: 102569 RVA: 0x0039280C File Offset: 0x00390A0C
 		public IQuestPlayerHitCount __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700731B RID: 29467
-		// (get) Token: 0x06017A11 RID: 96785 RVA: 0x00368A28 File Offset: 0x00366C28
+		// Token: 0x1700791D RID: 31005
+		// (get) Token: 0x060190AA RID: 102570 RVA: 0x0039281C File Offset: 0x00390A1C
 		public EPlayerHitStatisticsType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x1700731C RID: 29468
-		// (get) Token: 0x06017A12 RID: 96786 RVA: 0x00368A64 File Offset: 0x00366C64
+		// Token: 0x1700791E RID: 31006
+		// (get) Token: 0x060190AB RID: 102571 RVA: 0x00392858 File Offset: 0x00390A58
 		public float Cd
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017A13 RID: 96787 RVA: 0x00368AA4 File Offset: 0x00366CA4
+		// Token: 0x060190AC RID: 102572 RVA: 0x00392898 File Offset: 0x00390A98
 		public int EntityIds(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700731D RID: 29469
-		// (get) Token: 0x06017A14 RID: 96788 RVA: 0x00368AE4 File Offset: 0x00366CE4
+		// Token: 0x1700791F RID: 31007
+		// (get) Token: 0x060190AD RID: 102573 RVA: 0x003928D8 File Offset: 0x00390AD8
 		public int EntityIdsLength
 		{
 			get
@@ -104,19 +104,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017A15 RID: 96789 RVA: 0x00368B0F File Offset: 0x00366D0F
+		// Token: 0x060190AE RID: 102574 RVA: 0x00392903 File Offset: 0x00390B03
 		public Span<int> GetEntityIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x06017A16 RID: 96790 RVA: 0x00368B1E File Offset: 0x00366D1E
+		// Token: 0x060190AF RID: 102575 RVA: 0x00392912 File Offset: 0x00390B12
 		public int[] GetEntityIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(8);
 		}
 
-		// Token: 0x06017A17 RID: 96791 RVA: 0x00368B2C File Offset: 0x00366D2C
+		// Token: 0x060190B0 RID: 102576 RVA: 0x00392920 File Offset: 0x00390B20
 		public int SkillIds(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -127,8 +127,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700731E RID: 29470
-		// (get) Token: 0x06017A18 RID: 96792 RVA: 0x00368B6C File Offset: 0x00366D6C
+		// Token: 0x17007920 RID: 31008
+		// (get) Token: 0x060190B1 RID: 102577 RVA: 0x00392960 File Offset: 0x00390B60
 		public int SkillIdsLength
 		{
 			get
@@ -142,20 +142,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017A19 RID: 96793 RVA: 0x00368B98 File Offset: 0x00366D98
+		// Token: 0x060190B2 RID: 102578 RVA: 0x0039298C File Offset: 0x00390B8C
 		public Span<int> GetSkillIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(10, 4);
 		}
 
-		// Token: 0x06017A1A RID: 96794 RVA: 0x00368BA8 File Offset: 0x00366DA8
+		// Token: 0x060190B3 RID: 102579 RVA: 0x0039299C File Offset: 0x00390B9C
 		public int[] GetSkillIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(10);
 		}
 
-		// Token: 0x1700731F RID: 29471
-		// (get) Token: 0x06017A1B RID: 96795 RVA: 0x00368BB8 File Offset: 0x00366DB8
+		// Token: 0x17007921 RID: 31009
+		// (get) Token: 0x060190B4 RID: 102580 RVA: 0x003929AC File Offset: 0x00390BAC
 		public byte NullMask
 		{
 			get
@@ -169,7 +169,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017A1C RID: 96796 RVA: 0x00368BF5 File Offset: 0x00366DF5
+		// Token: 0x060190B5 RID: 102581 RVA: 0x003929E9 File Offset: 0x00390BE9
 		public static Offset<IQuestPlayerHitCount> CreateIQuestPlayerHitCount(FlatBufferBuilder builder, EPlayerHitStatisticsType Type = EPlayerHitStatisticsType.HitCount, float Cd = 0f, VectorOffset EntityIdsOffset = default(VectorOffset), VectorOffset SkillIdsOffset = default(VectorOffset), byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -181,31 +181,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IQuestPlayerHitCount.EndIQuestPlayerHitCount(builder);
 		}
 
-		// Token: 0x06017A1D RID: 96797 RVA: 0x00368C29 File Offset: 0x00366E29
+		// Token: 0x060190B6 RID: 102582 RVA: 0x00392A1D File Offset: 0x00390C1D
 		public static void StartIQuestPlayerHitCount(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x06017A1E RID: 96798 RVA: 0x00368C32 File Offset: 0x00366E32
+		// Token: 0x060190B7 RID: 102583 RVA: 0x00392A26 File Offset: 0x00390C26
 		public static void AddType(FlatBufferBuilder builder, EPlayerHitStatisticsType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06017A1F RID: 96799 RVA: 0x00368C3D File Offset: 0x00366E3D
+		// Token: 0x060190B8 RID: 102584 RVA: 0x00392A31 File Offset: 0x00390C31
 		public static void AddCd(FlatBufferBuilder builder, float cd)
 		{
 			builder.AddFloat(1, cd, 0.0);
 		}
 
-		// Token: 0x06017A20 RID: 96800 RVA: 0x00368C50 File Offset: 0x00366E50
+		// Token: 0x060190B9 RID: 102585 RVA: 0x00392A44 File Offset: 0x00390C44
 		public static void AddEntityIds(FlatBufferBuilder builder, VectorOffset entityIdsOffset)
 		{
 			builder.AddOffset(2, entityIdsOffset.Value, 0);
 		}
 
-		// Token: 0x06017A21 RID: 96801 RVA: 0x00368C60 File Offset: 0x00366E60
+		// Token: 0x060190BA RID: 102586 RVA: 0x00392A54 File Offset: 0x00390C54
 		public static VectorOffset CreateEntityIdsVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -216,7 +216,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017A22 RID: 96802 RVA: 0x00368C97 File Offset: 0x00366E97
+		// Token: 0x060190BB RID: 102587 RVA: 0x00392A8B File Offset: 0x00390C8B
 		public static VectorOffset CreateEntityIdsVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -224,7 +224,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017A23 RID: 96803 RVA: 0x00368CB1 File Offset: 0x00366EB1
+		// Token: 0x060190BC RID: 102588 RVA: 0x00392AA5 File Offset: 0x00390CA5
 		public static VectorOffset CreateEntityIdsVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -232,7 +232,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017A24 RID: 96804 RVA: 0x00368CCF File Offset: 0x00366ECF
+		// Token: 0x060190BD RID: 102589 RVA: 0x00392AC3 File Offset: 0x00390CC3
 		public static VectorOffset CreateEntityIdsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -240,19 +240,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017A25 RID: 96805 RVA: 0x00368CE8 File Offset: 0x00366EE8
+		// Token: 0x060190BE RID: 102590 RVA: 0x00392ADC File Offset: 0x00390CDC
 		public static void StartEntityIdsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06017A26 RID: 96806 RVA: 0x00368CF3 File Offset: 0x00366EF3
+		// Token: 0x060190BF RID: 102591 RVA: 0x00392AE7 File Offset: 0x00390CE7
 		public static void AddSkillIds(FlatBufferBuilder builder, VectorOffset skillIdsOffset)
 		{
 			builder.AddOffset(3, skillIdsOffset.Value, 0);
 		}
 
-		// Token: 0x06017A27 RID: 96807 RVA: 0x00368D04 File Offset: 0x00366F04
+		// Token: 0x060190C0 RID: 102592 RVA: 0x00392AF8 File Offset: 0x00390CF8
 		public static VectorOffset CreateSkillIdsVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -263,7 +263,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017A28 RID: 96808 RVA: 0x00368D3B File Offset: 0x00366F3B
+		// Token: 0x060190C1 RID: 102593 RVA: 0x00392B2F File Offset: 0x00390D2F
 		public static VectorOffset CreateSkillIdsVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -271,7 +271,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017A29 RID: 96809 RVA: 0x00368D55 File Offset: 0x00366F55
+		// Token: 0x060190C2 RID: 102594 RVA: 0x00392B49 File Offset: 0x00390D49
 		public static VectorOffset CreateSkillIdsVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -279,7 +279,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017A2A RID: 96810 RVA: 0x00368D73 File Offset: 0x00366F73
+		// Token: 0x060190C3 RID: 102595 RVA: 0x00392B67 File Offset: 0x00390D67
 		public static VectorOffset CreateSkillIdsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -287,25 +287,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06017A2B RID: 96811 RVA: 0x00368D8C File Offset: 0x00366F8C
+		// Token: 0x060190C4 RID: 102596 RVA: 0x00392B80 File Offset: 0x00390D80
 		public static void StartSkillIdsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06017A2C RID: 96812 RVA: 0x00368D97 File Offset: 0x00366F97
+		// Token: 0x060190C5 RID: 102597 RVA: 0x00392B8B File Offset: 0x00390D8B
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x06017A2D RID: 96813 RVA: 0x00368DA2 File Offset: 0x00366FA2
+		// Token: 0x060190C6 RID: 102598 RVA: 0x00392B96 File Offset: 0x00390D96
 		public static Offset<IQuestPlayerHitCount> EndIQuestPlayerHitCount(FlatBufferBuilder builder)
 		{
 			return new Offset<IQuestPlayerHitCount>(builder.EndTable());
 		}
 
-		// Token: 0x06017A2E RID: 96814 RVA: 0x00368DB0 File Offset: 0x00366FB0
+		// Token: 0x060190C7 RID: 102599 RVA: 0x00392BA4 File Offset: 0x00390DA4
 		public IQuestPlayerHitCountT UnPack()
 		{
 			IQuestPlayerHitCountT questPlayerHitCountT = new IQuestPlayerHitCountT();
@@ -313,7 +313,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return questPlayerHitCountT;
 		}
 
-		// Token: 0x06017A2F RID: 96815 RVA: 0x00368DCC File Offset: 0x00366FCC
+		// Token: 0x060190C8 RID: 102600 RVA: 0x00392BC0 File Offset: 0x00390DC0
 		public void UnPackTo(IQuestPlayerHitCountT _o)
 		{
 			_o.Type = this.Type;
@@ -331,7 +331,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06017A30 RID: 96816 RVA: 0x00368E5C File Offset: 0x0036705C
+		// Token: 0x060190C9 RID: 102601 RVA: 0x00392C50 File Offset: 0x00390E50
 		public static Offset<IQuestPlayerHitCount> Pack(FlatBufferBuilder builder, IQuestPlayerHitCountT _o)
 		{
 			if (_o == null)
@@ -353,7 +353,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IQuestPlayerHitCount.CreateIQuestPlayerHitCount(builder, _o.Type, _o.Cd, entityIdsOffset, skillIdsOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400BB11 RID: 47889
+		// Token: 0x0400C4F8 RID: 50424
 		private Table __p;
 	}
 }

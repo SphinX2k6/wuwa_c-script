@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000D8D RID: 3469
+	// Token: 0x02000D7D RID: 3453
 	public sealed class PlayerFightFormations : IMessage<PlayerFightFormations>, IMessage, IEquatable<PlayerFightFormations>, IDeepCloneable<PlayerFightFormations>, IBufferMessage
 	{
-		// Token: 0x06012B54 RID: 76628 RVA: 0x002BB25C File Offset: 0x002B945C
+		// Token: 0x06012A58 RID: 76376 RVA: 0x002B9638 File Offset: 0x002B7838
 		[NullableContext(1)]
 		public static PlayerFightFormations Create()
 		{
 			return new PlayerFightFormations();
 		}
 
-		// Token: 0x17003E18 RID: 15896
-		// (get) Token: 0x06012B55 RID: 76629 RVA: 0x002BB263 File Offset: 0x002B9463
+		// Token: 0x17003DE3 RID: 15843
+		// (get) Token: 0x06012A59 RID: 76377 RVA: 0x002B963F File Offset: 0x002B783F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<PlayerFightFormations> Parser
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003E19 RID: 15897
-		// (get) Token: 0x06012B56 RID: 76630 RVA: 0x002BB26A File Offset: 0x002B946A
+		// Token: 0x17003DE4 RID: 15844
+		// (get) Token: 0x06012A5A RID: 76378 RVA: 0x002B9646 File Offset: 0x002B7846
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -42,8 +42,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003E1A RID: 15898
-		// (get) Token: 0x06012B57 RID: 76631 RVA: 0x002BB26D File Offset: 0x002B946D
+		// Token: 0x17003DE5 RID: 15845
+		// (get) Token: 0x06012A5B RID: 76379 RVA: 0x002B9649 File Offset: 0x002B7849
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -54,14 +54,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06012B58 RID: 76632 RVA: 0x002BB274 File Offset: 0x002B9474
+		// Token: 0x06012A5C RID: 76380 RVA: 0x002B9650 File Offset: 0x002B7850
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PlayerFightFormations()
 		{
 		}
 
-		// Token: 0x06012B59 RID: 76633 RVA: 0x002BB287 File Offset: 0x002B9487
+		// Token: 0x06012A5D RID: 76381 RVA: 0x002B9663 File Offset: 0x002B7863
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PlayerFightFormations(PlayerFightFormations other) : this()
@@ -71,7 +71,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06012B5A RID: 76634 RVA: 0x002BB2BD File Offset: 0x002B94BD
+		// Token: 0x06012A5E RID: 76382 RVA: 0x002B9699 File Offset: 0x002B7899
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PlayerFightFormations Clone()
@@ -79,9 +79,9 @@ namespace Aki.Protocol
 			return new PlayerFightFormations(this);
 		}
 
-		// Token: 0x17003E1B RID: 15899
-		// (get) Token: 0x06012B5B RID: 76635 RVA: 0x002BB2C5 File Offset: 0x002B94C5
-		// (set) Token: 0x06012B5C RID: 76636 RVA: 0x002BB2CD File Offset: 0x002B94CD
+		// Token: 0x17003DE6 RID: 15846
+		// (get) Token: 0x06012A5F RID: 76383 RVA: 0x002B96A1 File Offset: 0x002B78A1
+		// (set) Token: 0x06012A60 RID: 76384 RVA: 0x002B96A9 File Offset: 0x002B78A9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int PlayerId
@@ -96,8 +96,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003E1C RID: 15900
-		// (get) Token: 0x06012B5D RID: 76637 RVA: 0x002BB2D6 File Offset: 0x002B94D6
+		// Token: 0x17003DE7 RID: 15847
+		// (get) Token: 0x06012A61 RID: 76385 RVA: 0x002B96B2 File Offset: 0x002B78B2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<FightFormationNotifyInfo> Formations
@@ -108,7 +108,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06012B5E RID: 76638 RVA: 0x002BB2DE File Offset: 0x002B94DE
+		// Token: 0x06012A62 RID: 76386 RVA: 0x002B96BA File Offset: 0x002B78BA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -116,7 +116,7 @@ namespace Aki.Protocol
 			return this.Equals(other as PlayerFightFormations);
 		}
 
-		// Token: 0x06012B5F RID: 76639 RVA: 0x002BB2EC File Offset: 0x002B94EC
+		// Token: 0x06012A63 RID: 76387 RVA: 0x002B96C8 File Offset: 0x002B78C8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(PlayerFightFormations other)
@@ -124,7 +124,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.PlayerId == other.PlayerId && this.formations_.Equals(other.formations_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06012B60 RID: 76640 RVA: 0x002BB33C File Offset: 0x002B953C
+		// Token: 0x06012A64 RID: 76388 RVA: 0x002B9718 File Offset: 0x002B7918
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -142,7 +142,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06012B61 RID: 76641 RVA: 0x002BB389 File Offset: 0x002B9589
+		// Token: 0x06012A65 RID: 76389 RVA: 0x002B9765 File Offset: 0x002B7965
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -150,7 +150,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06012B62 RID: 76642 RVA: 0x002BB396 File Offset: 0x002B9596
+		// Token: 0x06012A66 RID: 76390 RVA: 0x002B9772 File Offset: 0x002B7972
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -158,7 +158,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06012B63 RID: 76643 RVA: 0x002BB3A0 File Offset: 0x002B95A0
+		// Token: 0x06012A67 RID: 76391 RVA: 0x002B977C File Offset: 0x002B797C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06012B64 RID: 76644 RVA: 0x002BB3F0 File Offset: 0x002B95F0
+		// Token: 0x06012A68 RID: 76392 RVA: 0x002B97CC File Offset: 0x002B79CC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -193,7 +193,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06012B65 RID: 76645 RVA: 0x002BB444 File Offset: 0x002B9644
+		// Token: 0x06012A69 RID: 76393 RVA: 0x002B9820 File Offset: 0x002B7A20
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(PlayerFightFormations other)
@@ -210,7 +210,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06012B66 RID: 76646 RVA: 0x002BB491 File Offset: 0x002B9691
+		// Token: 0x06012A6A RID: 76394 RVA: 0x002B986D File Offset: 0x002B7A6D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -218,7 +218,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06012B67 RID: 76647 RVA: 0x002BB49C File Offset: 0x002B969C
+		// Token: 0x06012A6B RID: 76395 RVA: 0x002B9878 File Offset: 0x002B7A78
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -248,25 +248,25 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04007416 RID: 29718
+		// Token: 0x0400742E RID: 29742
 		private static readonly MessageParser<PlayerFightFormations> _parser = new MessageParser<PlayerFightFormations>(() => new PlayerFightFormations());
 
-		// Token: 0x04007417 RID: 29719
+		// Token: 0x0400742F RID: 29743
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04007418 RID: 29720
+		// Token: 0x04007430 RID: 29744
 		public const int PlayerIdFieldNumber = 1;
 
-		// Token: 0x04007419 RID: 29721
+		// Token: 0x04007431 RID: 29745
 		private int playerId_;
 
-		// Token: 0x0400741A RID: 29722
+		// Token: 0x04007432 RID: 29746
 		public const int FormationsFieldNumber = 2;
 
-		// Token: 0x0400741B RID: 29723
+		// Token: 0x04007433 RID: 29747
 		private static readonly FieldCodec<FightFormationNotifyInfo> _repeated_formations_codec = FieldCodec.ForMessage<FightFormationNotifyInfo>(18U, FightFormationNotifyInfo.Parser);
 
-		// Token: 0x0400741C RID: 29724
+		// Token: 0x04007434 RID: 29748
 		private readonly RepeatedField<FightFormationNotifyInfo> formations_ = new RepeatedField<FightFormationNotifyInfo>();
 	}
 }

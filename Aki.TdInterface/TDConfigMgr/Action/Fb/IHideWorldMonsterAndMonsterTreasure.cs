@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200278A RID: 10122
+	// Token: 0x02002A5C RID: 10844
 	public class IHideWorldMonsterAndMonsterTreasure : IHideRangeType
 	{
-		// Token: 0x0600E15E RID: 57694 RVA: 0x00214D5F File Offset: 0x00212F5F
-		[NullableContext(1)]
+		// Token: 0x0600EF7C RID: 61308 RVA: 0x00231AF3 File Offset: 0x0022FCF3
 		public static IHideWorldMonsterAndMonsterTreasure Create(IHideWorldMonsterAndMonsterTreasure? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700440C RID: 17420
-		// (get) Token: 0x0600E15F RID: 57695 RVA: 0x00214D7E File Offset: 0x00212F7E
+		// Token: 0x17004772 RID: 18290
+		// (get) Token: 0x0600EF7D RID: 61309 RVA: 0x00231B12 File Offset: 0x0022FD12
 		public override EHideType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007CEE RID: 31982
+		// Token: 0x040083A4 RID: 33700
 		private IHideWorldMonsterAndMonsterTreasure Instance;
 	}
 }

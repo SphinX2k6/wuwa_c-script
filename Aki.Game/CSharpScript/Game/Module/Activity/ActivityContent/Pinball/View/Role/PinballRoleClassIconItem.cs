@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 {
-	// Token: 0x0200630B RID: 25355
+	// Token: 0x02005289 RID: 21129
 	public class PinballRoleClassIconItem : UiPanelBase
 	{
-		// Token: 0x0603FCBB RID: 261307 RVA: 0x00F6F8D4 File Offset: 0x00F6DAD4
+		// Token: 0x0603497C RID: 215420 RVA: 0x00EB6830 File Offset: 0x00EB4A30
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603FCBC RID: 261308 RVA: 0x00F6F940 File Offset: 0x00F6DB40
+		// Token: 0x0603497D RID: 215421 RVA: 0x00EB689C File Offset: 0x00EB4A9C
 		[NullableContext(1)]
 		public void Refresh(IPinballRoleClassIconItemData data)
 		{
@@ -32,12 +32,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 			base.SetTextureByPath(data.IconPath, base.GetTexture(1), null, null);
 		}
 
-		// Token: 0x0200C502 RID: 50434
+		// Token: 0x0200AEE9 RID: 44777
 		private enum EComponent
 		{
-			// Token: 0x0403B753 RID: 243539
+			// Token: 0x040360B5 RID: 221365
 			BgSprite,
-			// Token: 0x0403B754 RID: 243540
+			// Token: 0x040360B6 RID: 221366
 			ClassIconTexture
 		}
 	}

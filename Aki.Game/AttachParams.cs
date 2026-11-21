@@ -7,7 +7,7 @@ using CSharpScript.Game.Utils;
 [Nullable(0)]
 internal class AttachParams
 {
-	// Token: 0x06000FA1 RID: 4001 RVA: 0x0005A323 File Offset: 0x00058523
+	// Token: 0x06000FA7 RID: 4007 RVA: 0x0005B427 File Offset: 0x00059627
 	public void Initialize(CharacterActorComponent actorComp, Vector attachTargetLocation, float totalDuration)
 	{
 		this.ElpasedDuration = 0f;
@@ -17,7 +17,7 @@ internal class AttachParams
 		this.UpdateAttachLocation(actorComp, attachTargetLocation);
 	}
 
-	// Token: 0x06000FA2 RID: 4002 RVA: 0x0005A364 File Offset: 0x00058564
+	// Token: 0x06000FA8 RID: 4008 RVA: 0x0005B468 File Offset: 0x00059668
 	public void UpdateAttachLocation(CharacterActorComponent actorComp, Vector attachEndLocation)
 	{
 		if (attachEndLocation.Equals(this.AttachEndLocation, 0.0001))
@@ -30,7 +30,7 @@ internal class AttachParams
 		this.UpdateAnimationScale();
 	}
 
-	// Token: 0x06000FA3 RID: 4003 RVA: 0x0005A3C4 File Offset: 0x000585C4
+	// Token: 0x06000FA9 RID: 4009 RVA: 0x0005B4C8 File Offset: 0x000596C8
 	private void UpdateAnimationScale()
 	{
 		Vector tmpVector = AttachParams.TmpVector1;
@@ -41,7 +41,7 @@ internal class AttachParams
 		this.AnimScale.Set((!MathUtils.Instance.IsNearlyZero(tmpVector2.X, new double?(0.0001))) ? (tmpVector.X / tmpVector2.X) : 1.0, (!MathUtils.Instance.IsNearlyZero(tmpVector2.Y, new double?(0.0001))) ? (tmpVector.Y / tmpVector2.Y) : 1.0, (!MathUtils.Instance.IsNearlyZero(tmpVector2.Z, new double?(0.0001))) ? (tmpVector.Z / tmpVector2.Z) : 1.0);
 	}
 
-	// Token: 0x06000FA4 RID: 4004 RVA: 0x0005A4DC File Offset: 0x000586DC
+	// Token: 0x06000FAA RID: 4010 RVA: 0x0005B5E0 File Offset: 0x000597E0
 	public Vector StepFrameLocationOffset(CharacterActorComponent actorComp, float frameDeltaTime)
 	{
 		this.ElpasedDuration += frameDeltaTime;
@@ -62,42 +62,42 @@ internal class AttachParams
 		return tmpVector3;
 	}
 
-	// Token: 0x04000C33 RID: 3123
+	// Token: 0x04000C3B RID: 3131
 	public Vector AttachStartLocation = Vector.Create();
 
-	// Token: 0x04000C34 RID: 3124
+	// Token: 0x04000C3C RID: 3132
 	public Vector AttachEndLocation = Vector.Create();
 
-	// Token: 0x04000C35 RID: 3125
+	// Token: 0x04000C3D RID: 3133
 	public Rotator AttachRotator = Rotator.Create();
 
-	// Token: 0x04000C36 RID: 3126
+	// Token: 0x04000C3E RID: 3134
 	public Vector AnimEndLocation = Vector.Create();
 
-	// Token: 0x04000C37 RID: 3127
+	// Token: 0x04000C3F RID: 3135
 	public Vector AnimDeltaLocation = Vector.Create();
 
-	// Token: 0x04000C38 RID: 3128
+	// Token: 0x04000C40 RID: 3136
 	public Vector AnimScale = Vector.Create();
 
-	// Token: 0x04000C39 RID: 3129
+	// Token: 0x04000C41 RID: 3137
 	public Vector PreFrameAnimLocation = Vector.Create();
 
-	// Token: 0x04000C3A RID: 3130
+	// Token: 0x04000C42 RID: 3138
 	public float TotalAnimDuration;
 
-	// Token: 0x04000C3B RID: 3131
+	// Token: 0x04000C43 RID: 3139
 	public float ElpasedDuration;
 
-	// Token: 0x04000C3C RID: 3132
+	// Token: 0x04000C44 RID: 3140
 	[StaticVariableRuleIgnore]
 	private static readonly Vector TmpVector1 = Vector.Create();
 
-	// Token: 0x04000C3D RID: 3133
+	// Token: 0x04000C45 RID: 3141
 	[StaticVariableRuleIgnore]
 	private static readonly Vector TmpVector2 = Vector.Create();
 
-	// Token: 0x04000C3E RID: 3134
+	// Token: 0x04000C46 RID: 3142
 	[StaticVariableRuleIgnore]
 	private static readonly Vector TmpVector3 = Vector.Create();
 }

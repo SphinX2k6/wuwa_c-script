@@ -2,12 +2,12 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000094 RID: 148
+	// Token: 0x02000099 RID: 153
 	public enum EDoubleViewSlot
 	{
-		// Token: 0x040003A0 RID: 928
+		// Token: 0x040003B9 RID: 953
 		Left,
-		// Token: 0x040003A1 RID: 929
+		// Token: 0x040003BA RID: 954
 		Right
 	}
 }

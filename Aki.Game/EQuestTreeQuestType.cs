@@ -1,18 +1,18 @@
 ﻿using System;
 
-// Token: 0x0200268F RID: 9871
+// Token: 0x02001B7A RID: 7034
 public enum EQuestTreeQuestType
 {
-	// Token: 0x04009837 RID: 38967
+	// Token: 0x0400998F RID: 39311
 	Main = 1,
-	// Token: 0x04009838 RID: 38968
+	// Token: 0x04009990 RID: 39312
 	Role,
-	// Token: 0x04009839 RID: 38969
+	// Token: 0x04009991 RID: 39313
 	Danger,
-	// Token: 0x0400983A RID: 38970
+	// Token: 0x04009992 RID: 39314
 	Side,
-	// Token: 0x0400983B RID: 38971
+	// Token: 0x04009993 RID: 39315
 	POI,
-	// Token: 0x0400983C RID: 38972
+	// Token: 0x04009994 RID: 39316
 	Length
 }

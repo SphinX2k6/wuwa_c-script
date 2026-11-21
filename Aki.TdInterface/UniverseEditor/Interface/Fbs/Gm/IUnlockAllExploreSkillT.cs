@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x020046CD RID: 18125
+	// Token: 0x02004B35 RID: 19253
 	public class IUnlockAllExploreSkillT
 	{
-		// Token: 0x170080C9 RID: 32969
-		// (get) Token: 0x0601B8E9 RID: 112873 RVA: 0x003E8CEE File Offset: 0x003E6EEE
-		// (set) Token: 0x0601B8EA RID: 112874 RVA: 0x003E8CF6 File Offset: 0x003E6EF6
+		// Token: 0x1700870A RID: 34570
+		// (get) Token: 0x0601D0BE RID: 118974 RVA: 0x00414F8A File Offset: 0x0041318A
+		// (set) Token: 0x0601D0BF RID: 118975 RVA: 0x00414F92 File Offset: 0x00413192
 		public EGmCommand Type { get; set; }
 
-		// Token: 0x0601B8EB RID: 112875 RVA: 0x003E8CFF File Offset: 0x003E6EFF
+		// Token: 0x0601D0C0 RID: 118976 RVA: 0x00414F9B File Offset: 0x0041319B
 		public IUnlockAllExploreSkillT()
 		{
 			this.Type = EGmCommand.SkipToLevelPlayNode;

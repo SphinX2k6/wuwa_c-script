@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001BDE RID: 7134
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001DC7 RID: 7623
 	public class IMinAlertValue : ISetAlertValueType
 	{
-		// Token: 0x060098CB RID: 39115 RVA: 0x0015FF90 File Offset: 0x0015E190
+		// Token: 0x0600A1D9 RID: 41433 RVA: 0x00172B50 File Offset: 0x00170D50
 		private IMinAlertValue_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060098CC RID: 39116 RVA: 0x0015FFC8 File Offset: 0x0015E1C8
+		// Token: 0x0600A1DA RID: 41434 RVA: 0x00172B88 File Offset: 0x00170D88
 		public static IMinAlertValue Create([Nullable(2)] IMinAlertValue instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060098CD RID: 39117 RVA: 0x0015FFDB File Offset: 0x0015E1DB
+		// Token: 0x0600A1DB RID: 41435 RVA: 0x00172B9B File Offset: 0x00170D9B
 		public static IMinAlertValue CreateFromSetValue([Nullable(2)] IMinAlertValue_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060098CE RID: 39118 RVA: 0x0015FFEE File Offset: 0x0015E1EE
+		// Token: 0x0600A1DC RID: 41436 RVA: 0x00172BAE File Offset: 0x00170DAE
 		public new IMinAlertValue_SetValue ToSetValue()
 		{
 			return new IMinAlertValue_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002FEF RID: 12271
-		// (get) Token: 0x060098CF RID: 39119 RVA: 0x00160001 File Offset: 0x0015E201
-		// (set) Token: 0x060098D0 RID: 39120 RVA: 0x0016002C File Offset: 0x0015E22C
+		// Token: 0x17003250 RID: 12880
+		// (get) Token: 0x0600A1DD RID: 41437 RVA: 0x00172BC1 File Offset: 0x00170DC1
+		// (set) Token: 0x0600A1DE RID: 41438 RVA: 0x00172BEC File Offset: 0x00170DEC
 		public override EValueChangeType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005D22 RID: 23842
+		// Token: 0x0400623B RID: 25147
 		[Nullable(2)]
 		protected new IMinAlertValue FbInstance;
 
-		// Token: 0x04005D23 RID: 23843
+		// Token: 0x0400623C RID: 25148
 		[Nullable(2)]
 		protected new IMinAlertValue_SetValue PocoInterface;
 	}

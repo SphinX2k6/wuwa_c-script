@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004DF2 RID: 19954
+	// Token: 0x020052FF RID: 21247
 	public enum EPilotThrowPointVisualType : byte
 	{
-		// Token: 0x0400DABC RID: 55996
+		// Token: 0x0400E624 RID: 58916
 		Normal,
-		// Token: 0x0400DABD RID: 55997
+		// Token: 0x0400E625 RID: 58917
 		MainStory,
-		// Token: 0x0400DABE RID: 55998
+		// Token: 0x0400E626 RID: 58918
 		PlantFlag
 	}
 }

@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020000D8 RID: 216
+	// Token: 0x020000E0 RID: 224
 	[EnumExtensions]
 	public enum ELiftBuffType
 	{
-		// Token: 0x040004B4 RID: 1204
+		// Token: 0x040004D8 RID: 1240
 		DefaultLiftBuff,
-		// Token: 0x040004B5 RID: 1205
+		// Token: 0x040004D9 RID: 1241
 		AllowJumpDash
 	}
 }

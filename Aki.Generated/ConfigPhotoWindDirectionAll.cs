@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000704 RID: 1796
+	// Token: 0x0200071C RID: 1820
 	public class ConfigPhotoWindDirectionAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002A28 RID: 10792 RVA: 0x00147A44 File Offset: 0x00145C44
+		// Token: 0x06002AB8 RID: 10936 RVA: 0x0014E4C0 File Offset: 0x0014C6C0
 		static ConfigPhotoWindDirectionAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPhotoWindDirectionAll.CreateStaticDefaultValue), new Action(ConfigPhotoWindDirectionAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002A29 RID: 10793 RVA: 0x00147A64 File Offset: 0x00145C64
+		// Token: 0x06002AB9 RID: 10937 RVA: 0x0014E4E0 File Offset: 0x0014C6E0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPhotoWindDirectionAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002A2A RID: 10794 RVA: 0x00147AE3 File Offset: 0x00145CE3
+		// Token: 0x06002ABA RID: 10938 RVA: 0x0014E55F File Offset: 0x0014C75F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPhotoWindDirectionAll.LogPair = null;
 			ConfigPhotoWindDirectionAll.HandleId = 0;
 		}
 
-		// Token: 0x06002A2B RID: 10795 RVA: 0x00147AF1 File Offset: 0x00145CF1
+		// Token: 0x06002ABB RID: 10939 RVA: 0x0014E56D File Offset: 0x0014C76D
 		public static void Init()
 		{
 			ConfigPhotoWindDirectionAll.HandleId = ConfigCommon.InitDataStatement(ConfigPhotoWindDirectionAll.HandleId, "db_photonew.db", "select BinData from `PhotoWindDirection`");
 		}
 
-		// Token: 0x06002A2C RID: 10796 RVA: 0x00147B0C File Offset: 0x00145D0C
+		// Token: 0x06002ABC RID: 10940 RVA: 0x0014E588 File Offset: 0x0014C788
 		[NullableContext(2)]
 		public static IReadOnlyList<PhotoWindDirection> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04003102 RID: 12546
+		// Token: 0x040031AA RID: 12714
 		private const string DB = "db_photonew.db";
 
-		// Token: 0x04003103 RID: 12547
+		// Token: 0x040031AB RID: 12715
 		private const string FILE = "p.拍照新.xlsx";
 
-		// Token: 0x04003104 RID: 12548
+		// Token: 0x040031AC RID: 12716
 		private const string TABLE = "PhotoWindDirection";
 
-		// Token: 0x04003105 RID: 12549
+		// Token: 0x040031AD RID: 12717
 		private const string COMMAND = "select BinData from `PhotoWindDirection`";
 
-		// Token: 0x04003106 RID: 12550
+		// Token: 0x040031AE RID: 12718
 		private const string KEY_PREFIX = "PhotoWindDirectionAll";
 
-		// Token: 0x04003107 RID: 12551
+		// Token: 0x040031AF RID: 12719
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003108 RID: 12552
+		// Token: 0x040031B0 RID: 12720
 		private static int HandleId;
 	}
 }

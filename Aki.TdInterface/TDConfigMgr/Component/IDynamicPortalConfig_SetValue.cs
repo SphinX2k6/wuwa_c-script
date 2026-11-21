@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002EA RID: 746
+	// Token: 0x02000331 RID: 817
 	public class IDynamicPortalConfig_SetValue
 	{
-		// Token: 0x04000CB2 RID: 3250
+		// Token: 0x04000D9C RID: 3484
 		public EPortalModel PortalModel;
 
-		// Token: 0x04000CB3 RID: 3251
-		[Nullable(1)]
+		// Token: 0x04000D9D RID: 3485
 		public string TemplateId;
 	}
 }

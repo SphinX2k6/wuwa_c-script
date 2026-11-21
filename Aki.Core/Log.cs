@@ -16,7 +16,7 @@ using UnrealEngine.Utils;
 [Nullable(0)]
 public class Log : Singleton, ILog
 {
-	// Token: 0x06000111 RID: 273 RVA: 0x00007FDF File Offset: 0x000061DF
+	// Token: 0x06000113 RID: 275 RVA: 0x00007D4B File Offset: 0x00005F4B
 	public void SetCsDebugId(string id)
 	{
 		if (string.IsNullOrEmpty(id))
@@ -26,18 +26,18 @@ public class Log : Singleton, ILog
 		this.CsDebugId = "(" + id + ")";
 	}
 
-	// Token: 0x06000112 RID: 274 RVA: 0x00008000 File Offset: 0x00006200
+	// Token: 0x06000114 RID: 276 RVA: 0x00007D6C File Offset: 0x00005F6C
 	public void Initialize()
 	{
 	}
 
-	// Token: 0x06000113 RID: 275 RVA: 0x00008002 File Offset: 0x00006202
+	// Token: 0x06000115 RID: 277 RVA: 0x00007D6E File Offset: 0x00005F6E
 	protected override bool OnInit()
 	{
 		return true;
 	}
 
-	// Token: 0x06000114 RID: 276 RVA: 0x00008005 File Offset: 0x00006205
+	// Token: 0x06000116 RID: 278 RVA: 0x00007D71 File Offset: 0x00005F71
 	public void ApplyPostHotPatchVerbosity()
 	{
 		if (KuroApplication.IsBuildShipping())
@@ -47,7 +47,7 @@ public class Log : Singleton, ILog
 		}
 	}
 
-	// Token: 0x06000115 RID: 277 RVA: 0x0000801C File Offset: 0x0000621C
+	// Token: 0x06000117 RID: 279 RVA: 0x00007D88 File Offset: 0x00005F88
 	public void InitStat()
 	{
 		this.PrintStat = global::Stat.Create("Log.Print", "", "");
@@ -55,37 +55,37 @@ public class Log : Singleton, ILog
 		this.GetBpStackStat = global::Stat.Create("Log.GetBpStack", "", "");
 	}
 
-	// Token: 0x06000116 RID: 278 RVA: 0x00008077 File Offset: 0x00006277
-	public void SetLevel(global::ELogLevel level)
+	// Token: 0x06000118 RID: 280 RVA: 0x00007DE3 File Offset: 0x00005FE3
+	public void SetLevel(ELogLevel level)
 	{
 		this.Level = level;
 	}
 
-	// Token: 0x06000117 RID: 279 RVA: 0x00008080 File Offset: 0x00006280
+	// Token: 0x06000119 RID: 281 RVA: 0x00007DEC File Offset: 0x00005FEC
 	public bool CheckError()
 	{
-		return this.Level >= global::ELogLevel.Error;
+		return this.Level >= ELogLevel.Error;
 	}
 
-	// Token: 0x06000118 RID: 280 RVA: 0x0000808E File Offset: 0x0000628E
+	// Token: 0x0600011A RID: 282 RVA: 0x00007DFA File Offset: 0x00005FFA
 	public bool CheckWarn()
 	{
-		return this.Level >= global::ELogLevel.Warn;
+		return this.Level >= ELogLevel.Warn;
 	}
 
-	// Token: 0x06000119 RID: 281 RVA: 0x0000809C File Offset: 0x0000629C
+	// Token: 0x0600011B RID: 283 RVA: 0x00007E08 File Offset: 0x00006008
 	public bool CheckInfo()
 	{
-		return this.Level >= global::ELogLevel.Info;
+		return this.Level >= ELogLevel.Info;
 	}
 
-	// Token: 0x0600011A RID: 282 RVA: 0x000080AA File Offset: 0x000062AA
+	// Token: 0x0600011C RID: 284 RVA: 0x00007E16 File Offset: 0x00006016
 	public bool CheckDebug()
 	{
-		return this.Level >= global::ELogLevel.Debug;
+		return this.Level >= ELogLevel.Debug;
 	}
 
-	// Token: 0x0600011B RID: 283 RVA: 0x000080B8 File Offset: 0x000062B8
+	// Token: 0x0600011D RID: 285 RVA: 0x00007E24 File Offset: 0x00006024
 	public void Error(ELogModule module, ELogAuthor author, string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 	{
 		0,
@@ -94,10 +94,10 @@ public class Log : Singleton, ILog
 		2
 	})] ReadOnlySpan<ValueTuple<string, object>> pairs)
 	{
-		this.Print(global::ELogLevel.Error, module, author, message, pairs, true, null);
+		this.Print(ELogLevel.Error, module, author, message, pairs, true, null);
 	}
 
-	// Token: 0x0600011C RID: 284 RVA: 0x000080C8 File Offset: 0x000062C8
+	// Token: 0x0600011E RID: 286 RVA: 0x00007E34 File Offset: 0x00006034
 	public void ErrorWithLogList(ELogModule module, ELogAuthor author, string message, [Nullable(new byte[]
 	{
 		1,
@@ -106,10 +106,10 @@ public class Log : Singleton, ILog
 		2
 	})] LogList<ValueTuple<string, object>> pairs)
 	{
-		this.Print(global::ELogLevel.Error, module, author, message, CollectionsMarshal.AsSpan<ValueTuple<string, object>>(pairs), true, null);
+		this.Print(ELogLevel.Error, module, author, message, CollectionsMarshal.AsSpan<ValueTuple<string, object>>(pairs), true, null);
 	}
 
-	// Token: 0x0600011D RID: 285 RVA: 0x000080E2 File Offset: 0x000062E2
+	// Token: 0x0600011F RID: 287 RVA: 0x00007E4E File Offset: 0x0000604E
 	public void ErrorWithStack(ELogModule module, ELogAuthor author, string message, Exception error, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 	{
 		0,
@@ -118,10 +118,10 @@ public class Log : Singleton, ILog
 		2
 	})] ReadOnlySpan<ValueTuple<string, object>> pairs)
 	{
-		this.Print(global::ELogLevel.Error, module, author, message, pairs, true, error);
+		this.Print(ELogLevel.Error, module, author, message, pairs, true, error);
 	}
 
-	// Token: 0x0600011E RID: 286 RVA: 0x000080F3 File Offset: 0x000062F3
+	// Token: 0x06000120 RID: 288 RVA: 0x00007E5F File Offset: 0x0000605F
 	public void Warn(ELogModule module, ELogAuthor author, string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 	{
 		0,
@@ -130,10 +130,10 @@ public class Log : Singleton, ILog
 		2
 	})] ReadOnlySpan<ValueTuple<string, object>> pairs)
 	{
-		this.Print(global::ELogLevel.Warn, module, author, message, pairs, false, null);
+		this.Print(ELogLevel.Warn, module, author, message, pairs, false, null);
 	}
 
-	// Token: 0x0600011F RID: 287 RVA: 0x00008103 File Offset: 0x00006303
+	// Token: 0x06000121 RID: 289 RVA: 0x00007E6F File Offset: 0x0000606F
 	public void Info(ELogModule module, ELogAuthor author, string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 	{
 		0,
@@ -142,10 +142,10 @@ public class Log : Singleton, ILog
 		2
 	})] ReadOnlySpan<ValueTuple<string, object>> pairs)
 	{
-		this.Print(global::ELogLevel.Info, module, author, message, pairs, false, null);
+		this.Print(ELogLevel.Info, module, author, message, pairs, false, null);
 	}
 
-	// Token: 0x06000120 RID: 288 RVA: 0x00008113 File Offset: 0x00006313
+	// Token: 0x06000122 RID: 290 RVA: 0x00007E7F File Offset: 0x0000607F
 	[Conditional("UE_BUILD_DEBUG")]
 	[Conditional("UE_BUILD_DEVELOPMENT")]
 	public void Debug(ELogModule module, ELogAuthor author, string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
@@ -156,11 +156,11 @@ public class Log : Singleton, ILog
 		2
 	})] ReadOnlySpan<ValueTuple<string, object>> pairs)
 	{
-		this.Print(global::ELogLevel.Debug, module, author, message, pairs, false, null);
+		this.Print(ELogLevel.Debug, module, author, message, pairs, false, null);
 	}
 
-	// Token: 0x06000121 RID: 289 RVA: 0x00008123 File Offset: 0x00006323
-	public void LogWithLevel(global::ELogLevel Level, ELogModule module, ELogAuthor author, string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
+	// Token: 0x06000123 RID: 291 RVA: 0x00007E8F File Offset: 0x0000608F
+	public void LogWithLevel(ELogLevel Level, ELogModule module, ELogAuthor author, string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 	{
 		0,
 		0,
@@ -168,25 +168,25 @@ public class Log : Singleton, ILog
 		2
 	})] ReadOnlySpan<ValueTuple<string, object>> pairs)
 	{
-		this.Print(Level, module, author, message, pairs, Level == global::ELogLevel.Error, null);
+		this.Print(Level, module, author, message, pairs, Level == ELogLevel.Error, null);
 	}
 
-	// Token: 0x06000122 RID: 290 RVA: 0x00008138 File Offset: 0x00006338
-	private static EUeLogVerbosity ToUeLogLevel(global::ELogLevel level)
+	// Token: 0x06000124 RID: 292 RVA: 0x00007EA4 File Offset: 0x000060A4
+	private static EUeLogVerbosity ToUeLogLevel(ELogLevel level)
 	{
 		EUeLogVerbosity result;
 		switch (level)
 		{
-		case global::ELogLevel.Error:
+		case ELogLevel.Error:
 			result = EUeLogVerbosity.Error;
 			break;
-		case global::ELogLevel.Warn:
+		case ELogLevel.Warn:
 			result = EUeLogVerbosity.Warning;
 			break;
-		case global::ELogLevel.Info:
+		case ELogLevel.Info:
 			result = EUeLogVerbosity.Display;
 			break;
-		case global::ELogLevel.Debug:
+		case ELogLevel.Debug:
 			result = EUeLogVerbosity.Display;
 			break;
 		default:
@@ -195,8 +195,8 @@ public class Log : Singleton, ILog
 		return result;
 	}
 
-	// Token: 0x06000123 RID: 291 RVA: 0x00008180 File Offset: 0x00006380
-	private unsafe void Print(global::ELogLevel level, ELogModule module, ELogAuthor author, string message, [Nullable(new byte[]
+	// Token: 0x06000125 RID: 293 RVA: 0x00007EEC File Offset: 0x000060EC
+	private unsafe void Print(ELogLevel level, ELogModule module, ELogAuthor author, string message, [Nullable(new byte[]
 	{
 		0,
 		0,
@@ -297,18 +297,18 @@ public class Log : Singleton, ILog
 			logBuilder.Append(stackContentBuilder);
 			arg = stackContentBuilder.ToString();
 		}
-		Action<int, global::ELogLevel, ELogModule, ELogAuthor, string, UnsafeStringBuilder, string> @delegate = this.Delegate;
+		Action<int, ELogLevel, ELogModule, ELogAuthor, string, UnsafeStringBuilder, string> @delegate = this.Delegate;
 		if (@delegate != null)
 		{
 			@delegate(this.Increment, level, module, author, message, unsafeStringBuilder, arg);
 		}
-		if (level < global::ELogLevel.Max)
+		if (level < ELogLevel.Max)
 		{
 			UnrealLogger.Print(global::Log.ToUeLogLevel(level), logBuilder);
 		}
 	}
 
-	// Token: 0x06000124 RID: 292 RVA: 0x00008448 File Offset: 0x00006648
+	// Token: 0x06000126 RID: 294 RVA: 0x000081B4 File Offset: 0x000063B4
 	private void AppendValueToBuilder(UnsafeStringBuilder builder, [Nullable(2)] object value)
 	{
 		if (value == null)
@@ -415,7 +415,7 @@ public class Log : Singleton, ILog
 		}
 	}
 
-	// Token: 0x06000125 RID: 293 RVA: 0x000086C0 File Offset: 0x000068C0
+	// Token: 0x06000127 RID: 295 RVA: 0x0000842C File Offset: 0x0000662C
 	private void GetStack(UnsafeStringBuilder contentBuilder, [Nullable(2)] Exception error, int firstStackIndex)
 	{
 		UnsafeStringBuilder.AppendInterpolatedStringHandler appendInterpolatedStringHandler = new UnsafeStringBuilder.AppendInterpolatedStringHandler(8, 1, contentBuilder);
@@ -446,7 +446,7 @@ public class Log : Singleton, ILog
 		}
 	}
 
-	// Token: 0x06000126 RID: 294 RVA: 0x0000876C File Offset: 0x0000696C
+	// Token: 0x06000128 RID: 296 RVA: 0x000084D8 File Offset: 0x000066D8
 	public int GenLogId()
 	{
 		int num = this.Increment + 1;
@@ -455,7 +455,7 @@ public class Log : Singleton, ILog
 	}
 
 	// Token: 0x1700001E RID: 30
-	// (get) Token: 0x06000127 RID: 295 RVA: 0x0000878A File Offset: 0x0000698A
+	// (get) Token: 0x06000129 RID: 297 RVA: 0x000084F6 File Offset: 0x000066F6
 	public static global::Log Instance
 	{
 		get
@@ -469,12 +469,12 @@ public class Log : Singleton, ILog
 		}
 	}
 
-	// Token: 0x06000128 RID: 296 RVA: 0x000087AD File Offset: 0x000069AD
+	// Token: 0x0600012A RID: 298 RVA: 0x00008519 File Offset: 0x00006719
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06000129 RID: 297 RVA: 0x000087AF File Offset: 0x000069AF
+	// Token: 0x0600012B RID: 299 RVA: 0x0000851B File Offset: 0x0000671B
 	public static void ResetStaticDefaultValue()
 	{
 		global::Log instance = global::Log._instance;
@@ -485,28 +485,28 @@ public class Log : Singleton, ILog
 		global::Log._instance = null;
 	}
 
-	// Token: 0x0600012A RID: 298 RVA: 0x000087C8 File Offset: 0x000069C8
+	// Token: 0x0600012C RID: 300 RVA: 0x00008534 File Offset: 0x00006734
 	static Log()
 	{
 		global::StaticVariableRegister.RegisterAndExecute(new Action(global::Log.CreateStaticDefaultValue), new Action(global::Log.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04000115 RID: 277
+	// Token: 0x04000116 RID: 278
 	private const int DEFAULT_SKIP_INDEX = 2;
 
-	// Token: 0x04000116 RID: 278
+	// Token: 0x04000117 RID: 279
 	private const int DEFAULT_LOG_BUILDER_CAPACITY = 128;
 
-	// Token: 0x04000117 RID: 279
-	private global::ELogLevel Level = global::ELogLevel.Debug;
-
 	// Token: 0x04000118 RID: 280
-	private const bool All = false;
+	private ELogLevel Level = ELogLevel.Debug;
 
 	// Token: 0x04000119 RID: 281
-	private int Increment;
+	private const bool All = false;
 
 	// Token: 0x0400011A RID: 282
+	private int Increment;
+
+	// Token: 0x0400011B RID: 283
 	[Nullable(new byte[]
 	{
 		2,
@@ -514,43 +514,43 @@ public class Log : Singleton, ILog
 		2,
 		2
 	})]
-	public Action<int, global::ELogLevel, ELogModule, ELogAuthor, string, UnsafeStringBuilder, string> Delegate;
-
-	// Token: 0x0400011B RID: 283
-	[Nullable(2)]
-	private global::Stat PrintStat;
+	public Action<int, ELogLevel, ELogModule, ELogAuthor, string, UnsafeStringBuilder, string> Delegate;
 
 	// Token: 0x0400011C RID: 284
 	[Nullable(2)]
-	private global::Stat GetStackStat;
+	private global::Stat PrintStat;
 
 	// Token: 0x0400011D RID: 285
 	[Nullable(2)]
-	private global::Stat GetBpStackStat;
+	private global::Stat GetStackStat;
 
 	// Token: 0x0400011E RID: 286
-	private string CsDebugId = "";
+	[Nullable(2)]
+	private global::Stat GetBpStackStat;
 
 	// Token: 0x0400011F RID: 287
-	[StaticVariableRuleIgnore]
-	private static readonly UnsafeStringBuilder LogBuilder = new UnsafeStringBuilder(128);
+	private string CsDebugId = "";
 
 	// Token: 0x04000120 RID: 288
 	[StaticVariableRuleIgnore]
-	private static readonly UnsafeStringBuilder ContextBuilder = new UnsafeStringBuilder(128);
+	private static readonly UnsafeStringBuilder LogBuilder = new UnsafeStringBuilder(128);
 
 	// Token: 0x04000121 RID: 289
 	[StaticVariableRuleIgnore]
-	private static readonly UnsafeStringBuilder StackContentBuilder = new UnsafeStringBuilder(128);
+	private static readonly UnsafeStringBuilder ContextBuilder = new UnsafeStringBuilder(128);
 
 	// Token: 0x04000122 RID: 290
 	[StaticVariableRuleIgnore]
-	private static readonly UnsafeStringBuilder ValueBuilder = new UnsafeStringBuilder(128);
+	private static readonly UnsafeStringBuilder StackContentBuilder = new UnsafeStringBuilder(128);
 
 	// Token: 0x04000123 RID: 291
-	private const int MAX_CONTAINER_DEPTH = 4;
+	[StaticVariableRuleIgnore]
+	private static readonly UnsafeStringBuilder ValueBuilder = new UnsafeStringBuilder(128);
 
 	// Token: 0x04000124 RID: 292
+	private const int MAX_CONTAINER_DEPTH = 4;
+
+	// Token: 0x04000125 RID: 293
 	[Nullable(new byte[]
 	{
 		2,
@@ -559,11 +559,11 @@ public class Log : Singleton, ILog
 	[StaticVariableRuleIgnore]
 	private static HashSet<object> _visitedContainers;
 
-	// Token: 0x04000125 RID: 293
+	// Token: 0x04000126 RID: 294
 	[StaticVariableRuleIgnore]
 	private static int _containerDepth;
 
-	// Token: 0x04000126 RID: 294
+	// Token: 0x04000127 RID: 295
 	[Nullable(2)]
 	private static global::Log _instance;
 }

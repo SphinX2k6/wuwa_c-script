@@ -10,12 +10,12 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02002E3E RID: 11838
+// Token: 0x0200239A RID: 9114
 [UClass("/Game/Aki/TypeScript/Game/NewWorld/Character/Common/Blueprint/Utils/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/NewWorld/Character/Common/Blueprint/Utils/TsControlBlueprintFunctionLibrary.TsControlBlueprintFunctionLibrary_C")]
 public class TsControlBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x06018FFE RID: 102398 RVA: 0x006713F0 File Offset: 0x0066F5F0
+	// Token: 0x060168CB RID: 92363 RVA: 0x006972B8 File Offset: 0x006954B8
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static FVector2D GetMoveVectorCache(int entityId)
 	{
@@ -30,7 +30,7 @@ public class TsControlBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnr
 		return TsControlBlueprintFunctionLibrary._tmpVector2D;
 	}
 
-	// Token: 0x06018FFF RID: 102399 RVA: 0x00671440 File Offset: 0x0066F640
+	// Token: 0x060168CC RID: 92364 RVA: 0x00697308 File Offset: 0x00695508
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static FVector2D GetMoveDirectionCache(int entityId)
 	{
@@ -45,7 +45,7 @@ public class TsControlBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnr
 		return TsControlBlueprintFunctionLibrary._tmpVector2D;
 	}
 
-	// Token: 0x06019000 RID: 102400 RVA: 0x00671490 File Offset: 0x0066F690
+	// Token: 0x060168CD RID: 92365 RVA: 0x00697358 File Offset: 0x00695558
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static FVector2D GetWorldMoveDirectionCache(int entityId)
 	{
@@ -60,7 +60,7 @@ public class TsControlBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnr
 		return TsControlBlueprintFunctionLibrary._tmpVector2D;
 	}
 
-	// Token: 0x06019001 RID: 102401 RVA: 0x006714E0 File Offset: 0x0066F6E0
+	// Token: 0x060168CE RID: 92366 RVA: 0x006973A8 File Offset: 0x006955A8
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static FVector2D GetMoveVector(int entityId)
 	{
@@ -75,7 +75,7 @@ public class TsControlBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnr
 		return TsControlBlueprintFunctionLibrary._tmpVector2D;
 	}
 
-	// Token: 0x06019002 RID: 102402 RVA: 0x0067153C File Offset: 0x0066F73C
+	// Token: 0x060168CF RID: 92367 RVA: 0x00697404 File Offset: 0x00695604
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static FVector2D GetMoveDirection(int entityId)
 	{
@@ -90,7 +90,7 @@ public class TsControlBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnr
 		return TsControlBlueprintFunctionLibrary._tmpVector2D;
 	}
 
-	// Token: 0x06019003 RID: 102403 RVA: 0x00671598 File Offset: 0x0066F798
+	// Token: 0x060168D0 RID: 92368 RVA: 0x00697460 File Offset: 0x00695660
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static void PlayKuroForceFeedback(UKuroForceFeedbackEffect forceFeedbackEffect, FName tag, bool bLooping, bool bIgnoreTimeDilation, bool bPlayWhilePaused)
@@ -105,7 +105,7 @@ public class TsControlBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnr
 		}
 	}
 
-	// Token: 0x06019004 RID: 102404 RVA: 0x006715BE File Offset: 0x0066F7BE
+	// Token: 0x060168D1 RID: 92369 RVA: 0x00697486 File Offset: 0x00695686
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static void StopKuroForceFeedback(UKuroForceFeedbackEffect forceFeedbackEffect, FName tag)
@@ -116,7 +116,7 @@ public class TsControlBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnr
 		}
 	}
 
-	// Token: 0x06019005 RID: 102405 RVA: 0x006715D4 File Offset: 0x0066F7D4
+	// Token: 0x060168D2 RID: 92370 RVA: 0x0069749C File Offset: 0x0069569C
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static void BpInputReceiveEndPlay(int entityId)
 	{
@@ -144,7 +144,7 @@ public class TsControlBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnr
 		}
 	}
 
-	// Token: 0x06019006 RID: 102406 RVA: 0x0067164C File Offset: 0x0066F84C
+	// Token: 0x060168D3 RID: 92371 RVA: 0x00697514 File Offset: 0x00695714
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static void SetUseControllerRotationYaw(int entityId, bool value)
 	{
@@ -156,7 +156,7 @@ public class TsControlBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnr
 		component.UseControllerRotation = value;
 	}
 
-	// Token: 0x06019007 RID: 102407 RVA: 0x00671670 File Offset: 0x0066F870
+	// Token: 0x060168D4 RID: 92372 RVA: 0x00697538 File Offset: 0x00695738
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_None)]
 	protected static void SetBpInputComponent(int entityId, BP_InputBase_C bpInputComp)
@@ -174,7 +174,7 @@ public class TsControlBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnr
 		}
 	}
 
-	// Token: 0x06019008 RID: 102408 RVA: 0x006716B7 File Offset: 0x0066F8B7
+	// Token: 0x060168D5 RID: 92373 RVA: 0x0069757F File Offset: 0x0069577F
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsControlBlueprintFunctionLibrary._ClassPtr == IntPtr.Zero)
@@ -184,286 +184,286 @@ public class TsControlBlueprintFunctionLibrary : UBlueprintFunctionLibrary, IUnr
 		return TsControlBlueprintFunctionLibrary._ClassPtr;
 	}
 
-	// Token: 0x06019009 RID: 102409 RVA: 0x006716DC File Offset: 0x0066F8DC
+	// Token: 0x060168D6 RID: 92374 RVA: 0x006975A4 File Offset: 0x006957A4
 	public TsControlBlueprintFunctionLibrary() : this(BuiltinUtils.AllocNativeUObject(TsControlBlueprintFunctionLibrary.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0601900A RID: 102410 RVA: 0x00671704 File Offset: 0x0066F904
+	// Token: 0x060168D7 RID: 92375 RVA: 0x006975CC File Offset: 0x006957CC
 	[NullableContext(1)]
 	public TsControlBlueprintFunctionLibrary(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsControlBlueprintFunctionLibrary.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601900B RID: 102411 RVA: 0x00671737 File Offset: 0x0066F937
+	// Token: 0x060168D8 RID: 92376 RVA: 0x006975FF File Offset: 0x006957FF
 	protected TsControlBlueprintFunctionLibrary(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0601900C RID: 102412 RVA: 0x00671740 File Offset: 0x0066F940
+	// Token: 0x060168D9 RID: 92377 RVA: 0x00697608 File Offset: 0x00695808
 	protected unsafe static void __CPPCALL_GetMoveVectorCache_Implementation(TsControlBlueprintFunctionLibrary.__GetMoveVectorCache_FunctionParams* __Params)
 	{
 		__Params->__Result = TsControlBlueprintFunctionLibrary.GetMoveVectorCache(__Params->entityId);
 	}
 
-	// Token: 0x0601900D RID: 102413 RVA: 0x00671753 File Offset: 0x0066F953
+	// Token: 0x060168DA RID: 92378 RVA: 0x0069761B File Offset: 0x0069581B
 	protected unsafe static void __CPPCALL_GetMoveDirectionCache_Implementation(TsControlBlueprintFunctionLibrary.__GetMoveDirectionCache_FunctionParams* __Params)
 	{
 		__Params->__Result = TsControlBlueprintFunctionLibrary.GetMoveDirectionCache(__Params->entityId);
 	}
 
-	// Token: 0x0601900E RID: 102414 RVA: 0x00671766 File Offset: 0x0066F966
+	// Token: 0x060168DB RID: 92379 RVA: 0x0069762E File Offset: 0x0069582E
 	protected unsafe static void __CPPCALL_GetWorldMoveDirectionCache_Implementation(TsControlBlueprintFunctionLibrary.__GetWorldMoveDirectionCache_FunctionParams* __Params)
 	{
 		__Params->__Result = TsControlBlueprintFunctionLibrary.GetWorldMoveDirectionCache(__Params->entityId);
 	}
 
-	// Token: 0x0601900F RID: 102415 RVA: 0x00671779 File Offset: 0x0066F979
+	// Token: 0x060168DC RID: 92380 RVA: 0x00697641 File Offset: 0x00695841
 	protected unsafe static void __CPPCALL_GetMoveVector_Implementation(TsControlBlueprintFunctionLibrary.__GetMoveVector_FunctionParams* __Params)
 	{
 		__Params->__Result = TsControlBlueprintFunctionLibrary.GetMoveVector(__Params->entityId);
 	}
 
-	// Token: 0x06019010 RID: 102416 RVA: 0x0067178C File Offset: 0x0066F98C
+	// Token: 0x060168DD RID: 92381 RVA: 0x00697654 File Offset: 0x00695854
 	protected unsafe static void __CPPCALL_GetMoveDirection_Implementation(TsControlBlueprintFunctionLibrary.__GetMoveDirection_FunctionParams* __Params)
 	{
 		__Params->__Result = TsControlBlueprintFunctionLibrary.GetMoveDirection(__Params->entityId);
 	}
 
-	// Token: 0x06019011 RID: 102417 RVA: 0x0067179F File Offset: 0x0066F99F
+	// Token: 0x060168DE RID: 92382 RVA: 0x00697667 File Offset: 0x00695867
 	protected unsafe static void __CPPCALL_PlayKuroForceFeedback_Implementation(TsControlBlueprintFunctionLibrary.__PlayKuroForceFeedback_FunctionParams* __Params)
 	{
 		TsControlBlueprintFunctionLibrary.PlayKuroForceFeedback(BuiltinUtils.GetOrCreateUObjectByNativePointer<UKuroForceFeedbackEffect>(__Params->forceFeedbackEffect), __Params->tag, __Params->bLooping, __Params->bIgnoreTimeDilation, __Params->bPlayWhilePaused);
 	}
 
-	// Token: 0x06019012 RID: 102418 RVA: 0x006717C9 File Offset: 0x0066F9C9
+	// Token: 0x060168DF RID: 92383 RVA: 0x00697691 File Offset: 0x00695891
 	protected unsafe static void __CPPCALL_StopKuroForceFeedback_Implementation(TsControlBlueprintFunctionLibrary.__StopKuroForceFeedback_FunctionParams* __Params)
 	{
 		TsControlBlueprintFunctionLibrary.StopKuroForceFeedback(BuiltinUtils.GetOrCreateUObjectByNativePointer<UKuroForceFeedbackEffect>(__Params->forceFeedbackEffect), __Params->tag);
 	}
 
-	// Token: 0x06019013 RID: 102419 RVA: 0x006717E1 File Offset: 0x0066F9E1
+	// Token: 0x060168E0 RID: 92384 RVA: 0x006976A9 File Offset: 0x006958A9
 	protected unsafe static void __CPPCALL_BpInputReceiveEndPlay_Implementation(TsControlBlueprintFunctionLibrary.__BpInputReceiveEndPlay_FunctionParams* __Params)
 	{
 		TsControlBlueprintFunctionLibrary.BpInputReceiveEndPlay(__Params->entityId);
 	}
 
-	// Token: 0x06019014 RID: 102420 RVA: 0x006717EE File Offset: 0x0066F9EE
+	// Token: 0x060168E1 RID: 92385 RVA: 0x006976B6 File Offset: 0x006958B6
 	protected unsafe static void __CPPCALL_SetUseControllerRotationYaw_Implementation(TsControlBlueprintFunctionLibrary.__SetUseControllerRotationYaw_FunctionParams* __Params)
 	{
 		TsControlBlueprintFunctionLibrary.SetUseControllerRotationYaw(__Params->entityId, __Params->value);
 	}
 
-	// Token: 0x06019015 RID: 102421 RVA: 0x00671804 File Offset: 0x0066FA04
+	// Token: 0x060168E2 RID: 92386 RVA: 0x006976CC File Offset: 0x006958CC
 	protected unsafe static void __CPPCALL_SetBpInputComponent_Implementation(TsControlBlueprintFunctionLibrary.__SetBpInputComponent_FunctionParams* __Params)
 	{
 		BP_InputBase_C orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<BP_InputBase_C>(__Params->bpInputComp);
 		TsControlBlueprintFunctionLibrary.SetBpInputComponent(__Params->entityId, orCreateUObjectByNativePointer);
 	}
 
-	// Token: 0x0400BB8C RID: 48012
+	// Token: 0x0400BF1A RID: 48922
 	[StaticVariableRuleIgnore]
 	private static FVector2D _tmpVector2D = new FVector2D();
 
-	// Token: 0x0400BB8D RID: 48013
+	// Token: 0x0400BF1B RID: 48923
 	[Nullable(1)]
 	[StaticVariableRuleIgnore]
 	private static readonly Vector TmpVector = Vector.Create();
 
-	// Token: 0x0400BB8E RID: 48014
+	// Token: 0x0400BF1C RID: 48924
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/NewWorld/Character/Common/Blueprint/Utils/TsControlBlueprintFunctionLibrary.TsControlBlueprintFunctionLibrary_C";
 
-	// Token: 0x0400BB8F RID: 48015
+	// Token: 0x0400BF1D RID: 48925
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400BB90 RID: 48016
+	// Token: 0x0400BF1E RID: 48926
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x020093A5 RID: 37797
+	// Token: 0x020085CB RID: 34251
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetMoveVectorCache_FunctionParams
 	{
-		// Token: 0x0402FA3D RID: 195133
+		// Token: 0x0402B0C3 RID: 176323
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402FA3E RID: 195134
+		// Token: 0x0402B0C4 RID: 176324
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402FA3F RID: 195135
+		// Token: 0x0402B0C5 RID: 176325
 		[FieldOffset(16)]
 		public FVector2D __Result;
 	}
 
-	// Token: 0x020093A6 RID: 37798
+	// Token: 0x020085CC RID: 34252
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetMoveDirectionCache_FunctionParams
 	{
-		// Token: 0x0402FA40 RID: 195136
+		// Token: 0x0402B0C6 RID: 176326
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402FA41 RID: 195137
+		// Token: 0x0402B0C7 RID: 176327
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402FA42 RID: 195138
+		// Token: 0x0402B0C8 RID: 176328
 		[FieldOffset(16)]
 		public FVector2D __Result;
 	}
 
-	// Token: 0x020093A7 RID: 37799
+	// Token: 0x020085CD RID: 34253
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetWorldMoveDirectionCache_FunctionParams
 	{
-		// Token: 0x0402FA43 RID: 195139
+		// Token: 0x0402B0C9 RID: 176329
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402FA44 RID: 195140
+		// Token: 0x0402B0CA RID: 176330
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402FA45 RID: 195141
+		// Token: 0x0402B0CB RID: 176331
 		[FieldOffset(16)]
 		public FVector2D __Result;
 	}
 
-	// Token: 0x020093A8 RID: 37800
+	// Token: 0x020085CE RID: 34254
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetMoveVector_FunctionParams
 	{
-		// Token: 0x0402FA46 RID: 195142
+		// Token: 0x0402B0CC RID: 176332
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402FA47 RID: 195143
+		// Token: 0x0402B0CD RID: 176333
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402FA48 RID: 195144
+		// Token: 0x0402B0CE RID: 176334
 		[FieldOffset(16)]
 		public FVector2D __Result;
 	}
 
-	// Token: 0x020093A9 RID: 37801
+	// Token: 0x020085CF RID: 34255
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __GetMoveDirection_FunctionParams
 	{
-		// Token: 0x0402FA49 RID: 195145
+		// Token: 0x0402B0CF RID: 176335
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402FA4A RID: 195146
+		// Token: 0x0402B0D0 RID: 176336
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 
-		// Token: 0x0402FA4B RID: 195147
+		// Token: 0x0402B0D1 RID: 176337
 		[FieldOffset(16)]
 		public FVector2D __Result;
 	}
 
-	// Token: 0x020093AA RID: 37802
+	// Token: 0x020085D0 RID: 34256
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __PlayKuroForceFeedback_FunctionParams
 	{
-		// Token: 0x0402FA4C RID: 195148
+		// Token: 0x0402B0D2 RID: 176338
 		[FieldOffset(0)]
 		public IntPtr forceFeedbackEffect;
 
-		// Token: 0x0402FA4D RID: 195149
+		// Token: 0x0402B0D3 RID: 176339
 		[FieldOffset(8)]
 		public FName tag;
 
-		// Token: 0x0402FA4E RID: 195150
+		// Token: 0x0402B0D4 RID: 176340
 		[FieldOffset(20)]
 		public bool bLooping;
 
-		// Token: 0x0402FA4F RID: 195151
+		// Token: 0x0402B0D5 RID: 176341
 		[FieldOffset(21)]
 		public bool bIgnoreTimeDilation;
 
-		// Token: 0x0402FA50 RID: 195152
+		// Token: 0x0402B0D6 RID: 176342
 		[FieldOffset(22)]
 		public bool bPlayWhilePaused;
 
-		// Token: 0x0402FA51 RID: 195153
+		// Token: 0x0402B0D7 RID: 176343
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020093AB RID: 37803
+	// Token: 0x020085D1 RID: 34257
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 32)]
 	protected ref struct __StopKuroForceFeedback_FunctionParams
 	{
-		// Token: 0x0402FA52 RID: 195154
+		// Token: 0x0402B0D8 RID: 176344
 		[FieldOffset(0)]
 		public IntPtr forceFeedbackEffect;
 
-		// Token: 0x0402FA53 RID: 195155
+		// Token: 0x0402B0D9 RID: 176345
 		[FieldOffset(8)]
 		public FName tag;
 
-		// Token: 0x0402FA54 RID: 195156
+		// Token: 0x0402B0DA RID: 176346
 		[FieldOffset(24)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020093AC RID: 37804
+	// Token: 0x020085D2 RID: 34258
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __BpInputReceiveEndPlay_FunctionParams
 	{
-		// Token: 0x0402FA55 RID: 195157
+		// Token: 0x0402B0DB RID: 176347
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402FA56 RID: 195158
+		// Token: 0x0402B0DC RID: 176348
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020093AD RID: 37805
+	// Token: 0x020085D3 RID: 34259
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 16)]
 	protected ref struct __SetUseControllerRotationYaw_FunctionParams
 	{
-		// Token: 0x0402FA57 RID: 195159
+		// Token: 0x0402B0DD RID: 176349
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402FA58 RID: 195160
+		// Token: 0x0402B0DE RID: 176350
 		[FieldOffset(4)]
 		public bool value;
 
-		// Token: 0x0402FA59 RID: 195161
+		// Token: 0x0402B0DF RID: 176351
 		[FieldOffset(8)]
 		public IntPtr __WorldContext;
 	}
 
-	// Token: 0x020093AE RID: 37806
+	// Token: 0x020085D4 RID: 34260
 	[CompilerFeatureRequired("RefStructs")]
 	[StructLayout(LayoutKind.Explicit, Size = 24)]
 	protected ref struct __SetBpInputComponent_FunctionParams
 	{
-		// Token: 0x0402FA5A RID: 195162
+		// Token: 0x0402B0E0 RID: 176352
 		[FieldOffset(0)]
 		public int entityId;
 
-		// Token: 0x0402FA5B RID: 195163
+		// Token: 0x0402B0E1 RID: 176353
 		[FieldOffset(8)]
 		public IntPtr bpInputComp;
 
-		// Token: 0x0402FA5C RID: 195164
+		// Token: 0x0402B0E2 RID: 176354
 		[FieldOffset(16)]
 		public IntPtr __WorldContext;
 	}

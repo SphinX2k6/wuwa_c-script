@@ -7,13 +7,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.World.Define
 {
-	// Token: 0x02004532 RID: 17714
+	// Token: 0x0200345A RID: 13402
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GameBudgetAllocatorConfigCreator : Singleton
 	{
-		// Token: 0x1700751C RID: 29980
-		// (get) Token: 0x0602DC19 RID: 187417 RVA: 0x00A8318D File Offset: 0x00A8138D
+		// Token: 0x170047D2 RID: 18386
+		// (get) Token: 0x060222F4 RID: 140020 RVA: 0x009AE613 File Offset: 0x009AC813
 		public TsGameBudgetGroupConfigCache TsNormalEntityGroupConfig
 		{
 			get
@@ -22,8 +22,8 @@ namespace CSharpScript.Game.World.Define
 			}
 		}
 
-		// Token: 0x1700751D RID: 29981
-		// (get) Token: 0x0602DC1A RID: 187418 RVA: 0x00A83195 File Offset: 0x00A81395
+		// Token: 0x170047D3 RID: 18387
+		// (get) Token: 0x060222F5 RID: 140021 RVA: 0x009AE61B File Offset: 0x009AC81B
 		public TsGameBudgetGroupConfigCache TsBossEntityGroupConfig
 		{
 			get
@@ -32,8 +32,8 @@ namespace CSharpScript.Game.World.Define
 			}
 		}
 
-		// Token: 0x1700751E RID: 29982
-		// (get) Token: 0x0602DC1B RID: 187419 RVA: 0x00A8319D File Offset: 0x00A8139D
+		// Token: 0x170047D4 RID: 18388
+		// (get) Token: 0x060222F6 RID: 140022 RVA: 0x009AE623 File Offset: 0x009AC823
 		public TsGameBudgetGroupConfigCache TsCharacterEntityGroupConfig
 		{
 			get
@@ -42,8 +42,8 @@ namespace CSharpScript.Game.World.Define
 			}
 		}
 
-		// Token: 0x1700751F RID: 29983
-		// (get) Token: 0x0602DC1C RID: 187420 RVA: 0x00A831A5 File Offset: 0x00A813A5
+		// Token: 0x170047D5 RID: 18389
+		// (get) Token: 0x060222F7 RID: 140023 RVA: 0x009AE62B File Offset: 0x009AC82B
 		public TsGameBudgetGroupConfigCache TsNormalNpcEntityGroupConfig
 		{
 			get
@@ -52,8 +52,8 @@ namespace CSharpScript.Game.World.Define
 			}
 		}
 
-		// Token: 0x17007520 RID: 29984
-		// (get) Token: 0x0602DC1D RID: 187421 RVA: 0x00A831AD File Offset: 0x00A813AD
+		// Token: 0x170047D6 RID: 18390
+		// (get) Token: 0x060222F8 RID: 140024 RVA: 0x009AE633 File Offset: 0x009AC833
 		public TsGameBudgetGroupConfigCache TsSimpleNpcEntityGroupConfig
 		{
 			get
@@ -62,8 +62,8 @@ namespace CSharpScript.Game.World.Define
 			}
 		}
 
-		// Token: 0x17007521 RID: 29985
-		// (get) Token: 0x0602DC1E RID: 187422 RVA: 0x00A831B5 File Offset: 0x00A813B5
+		// Token: 0x170047D7 RID: 18391
+		// (get) Token: 0x060222F9 RID: 140025 RVA: 0x009AE63B File Offset: 0x009AC83B
 		public TsGameBudgetGroupConfigCache TsFightEffectGroupConfig
 		{
 			get
@@ -72,8 +72,8 @@ namespace CSharpScript.Game.World.Define
 			}
 		}
 
-		// Token: 0x17007522 RID: 29986
-		// (get) Token: 0x0602DC1F RID: 187423 RVA: 0x00A831BD File Offset: 0x00A813BD
+		// Token: 0x170047D8 RID: 18392
+		// (get) Token: 0x060222FA RID: 140026 RVA: 0x009AE643 File Offset: 0x009AC843
 		public TsGameBudgetGroupConfigCache TsEffectGroupConfig
 		{
 			get
@@ -82,8 +82,8 @@ namespace CSharpScript.Game.World.Define
 			}
 		}
 
-		// Token: 0x17007523 RID: 29987
-		// (get) Token: 0x0602DC20 RID: 187424 RVA: 0x00A831C5 File Offset: 0x00A813C5
+		// Token: 0x170047D9 RID: 18393
+		// (get) Token: 0x060222FB RID: 140027 RVA: 0x009AE64B File Offset: 0x009AC84B
 		public TsGameBudgetGroupConfigCache TsEffectInportanceGroupConfig
 		{
 			get
@@ -92,8 +92,8 @@ namespace CSharpScript.Game.World.Define
 			}
 		}
 
-		// Token: 0x17007524 RID: 29988
-		// (get) Token: 0x0602DC21 RID: 187425 RVA: 0x00A831CD File Offset: 0x00A813CD
+		// Token: 0x170047DA RID: 18394
+		// (get) Token: 0x060222FC RID: 140028 RVA: 0x009AE653 File Offset: 0x009AC853
 		public TsGameBudgetGroupConfigCache TsAlwaysTickConfig
 		{
 			get
@@ -102,8 +102,8 @@ namespace CSharpScript.Game.World.Define
 			}
 		}
 
-		// Token: 0x17007525 RID: 29989
-		// (get) Token: 0x0602DC22 RID: 187426 RVA: 0x00A831D5 File Offset: 0x00A813D5
+		// Token: 0x170047DB RID: 18395
+		// (get) Token: 0x060222FD RID: 140029 RVA: 0x009AE65B File Offset: 0x009AC85B
 		public TsGameBudgetGroupConfigCache TsPlayerAlwaysTickConfig
 		{
 			get
@@ -112,8 +112,8 @@ namespace CSharpScript.Game.World.Define
 			}
 		}
 
-		// Token: 0x17007526 RID: 29990
-		// (get) Token: 0x0602DC23 RID: 187427 RVA: 0x00A831DD File Offset: 0x00A813DD
+		// Token: 0x170047DC RID: 18396
+		// (get) Token: 0x060222FE RID: 140030 RVA: 0x009AE663 File Offset: 0x009AC863
 		public TsGameBudgetGroupConfigCache TsNormalEntityAlwaysTickConfig
 		{
 			get
@@ -122,8 +122,8 @@ namespace CSharpScript.Game.World.Define
 			}
 		}
 
-		// Token: 0x17007527 RID: 29991
-		// (get) Token: 0x0602DC24 RID: 187428 RVA: 0x00A831E5 File Offset: 0x00A813E5
+		// Token: 0x170047DD RID: 18397
+		// (get) Token: 0x060222FF RID: 140031 RVA: 0x009AE66B File Offset: 0x009AC86B
 		public TsGameBudgetGroupConfigCache TsNormalEntityAlwaysTickWithoutNotRenderedConfig
 		{
 			get
@@ -132,8 +132,8 @@ namespace CSharpScript.Game.World.Define
 			}
 		}
 
-		// Token: 0x17007528 RID: 29992
-		// (get) Token: 0x0602DC25 RID: 187429 RVA: 0x00A831ED File Offset: 0x00A813ED
+		// Token: 0x170047DE RID: 18398
+		// (get) Token: 0x06022300 RID: 140032 RVA: 0x009AE673 File Offset: 0x009AC873
 		public TsGameBudgetGroupConfigCache TsIdleExecConfig
 		{
 			get
@@ -142,8 +142,8 @@ namespace CSharpScript.Game.World.Define
 			}
 		}
 
-		// Token: 0x17007529 RID: 29993
-		// (get) Token: 0x0602DC26 RID: 187430 RVA: 0x00A831F5 File Offset: 0x00A813F5
+		// Token: 0x170047DF RID: 18399
+		// (get) Token: 0x06022301 RID: 140033 RVA: 0x009AE67B File Offset: 0x009AC87B
 		public TsGameBudgetGroupConfigCache TsAlwaysTick2Config
 		{
 			get
@@ -152,8 +152,8 @@ namespace CSharpScript.Game.World.Define
 			}
 		}
 
-		// Token: 0x1700752A RID: 29994
-		// (get) Token: 0x0602DC27 RID: 187431 RVA: 0x00A831FD File Offset: 0x00A813FD
+		// Token: 0x170047E0 RID: 18400
+		// (get) Token: 0x06022302 RID: 140034 RVA: 0x009AE683 File Offset: 0x009AC883
 		public TsGameBudgetGroupConfigCache TsHUDTickConfig
 		{
 			get
@@ -162,8 +162,8 @@ namespace CSharpScript.Game.World.Define
 			}
 		}
 
-		// Token: 0x1700752B RID: 29995
-		// (get) Token: 0x0602DC28 RID: 187432 RVA: 0x00A83205 File Offset: 0x00A81405
+		// Token: 0x170047E1 RID: 18401
+		// (get) Token: 0x06022303 RID: 140035 RVA: 0x009AE68B File Offset: 0x009AC88B
 		public TsGameBudgetGroupConfigCache TsCharacterRenderConfig
 		{
 			get
@@ -172,8 +172,8 @@ namespace CSharpScript.Game.World.Define
 			}
 		}
 
-		// Token: 0x1700752C RID: 29996
-		// (get) Token: 0x0602DC29 RID: 187433 RVA: 0x00A8320D File Offset: 0x00A8140D
+		// Token: 0x170047E2 RID: 18402
+		// (get) Token: 0x06022304 RID: 140036 RVA: 0x009AE693 File Offset: 0x009AC893
 		public TsGameBudgetGroupConfigCache TsNpcRenderConfig
 		{
 			get
@@ -182,8 +182,8 @@ namespace CSharpScript.Game.World.Define
 			}
 		}
 
-		// Token: 0x1700752D RID: 29997
-		// (get) Token: 0x0602DC2A RID: 187434 RVA: 0x00A83215 File Offset: 0x00A81415
+		// Token: 0x170047E3 RID: 18403
+		// (get) Token: 0x06022305 RID: 140037 RVA: 0x009AE69B File Offset: 0x009AC89B
 		public TsGameBudgetGroupConfigCache TsStabilizeLowEntityGroupConfig
 		{
 			get
@@ -192,8 +192,8 @@ namespace CSharpScript.Game.World.Define
 			}
 		}
 
-		// Token: 0x1700752E RID: 29998
-		// (get) Token: 0x0602DC2B RID: 187435 RVA: 0x00A8321D File Offset: 0x00A8141D
+		// Token: 0x170047E4 RID: 18404
+		// (get) Token: 0x06022306 RID: 140038 RVA: 0x009AE6A3 File Offset: 0x009AC8A3
 		public TsGameBudgetGroupConfigCache TsBattleHeadStateViewConfig
 		{
 			get
@@ -202,8 +202,8 @@ namespace CSharpScript.Game.World.Define
 			}
 		}
 
-		// Token: 0x1700752F RID: 29999
-		// (get) Token: 0x0602DC2C RID: 187436 RVA: 0x00A83225 File Offset: 0x00A81425
+		// Token: 0x170047E5 RID: 18405
+		// (get) Token: 0x06022307 RID: 140039 RVA: 0x009AE6AB File Offset: 0x009AC8AB
 		public GameBudgetAllocatorConfig TsCharacterDtailConfig
 		{
 			get
@@ -212,8 +212,8 @@ namespace CSharpScript.Game.World.Define
 			}
 		}
 
-		// Token: 0x17007530 RID: 30000
-		// (get) Token: 0x0602DC2D RID: 187437 RVA: 0x00A8322D File Offset: 0x00A8142D
+		// Token: 0x170047E6 RID: 18406
+		// (get) Token: 0x06022308 RID: 140040 RVA: 0x009AE6B3 File Offset: 0x009AC8B3
 		public TsGameBudgetGroupConfigCache TsAlwaysTickHotFixConfig
 		{
 			get
@@ -222,8 +222,8 @@ namespace CSharpScript.Game.World.Define
 			}
 		}
 
-		// Token: 0x17007531 RID: 30001
-		// (get) Token: 0x0602DC2E RID: 187438 RVA: 0x00A83235 File Offset: 0x00A81435
+		// Token: 0x170047E7 RID: 18407
+		// (get) Token: 0x06022309 RID: 140041 RVA: 0x009AE6BB File Offset: 0x009AC8BB
 		public TsGameBudgetGroupConfigCache TsMoveSceneItemEntityConfig
 		{
 			get
@@ -232,8 +232,8 @@ namespace CSharpScript.Game.World.Define
 			}
 		}
 
-		// Token: 0x17007532 RID: 30002
-		// (get) Token: 0x0602DC2F RID: 187439 RVA: 0x00A8323D File Offset: 0x00A8143D
+		// Token: 0x170047E8 RID: 18408
+		// (get) Token: 0x0602230A RID: 140042 RVA: 0x009AE6C3 File Offset: 0x009AC8C3
 		public TsGameBudgetGroupConfigCache TsCollisionPlantConfig
 		{
 			get
@@ -242,8 +242,8 @@ namespace CSharpScript.Game.World.Define
 			}
 		}
 
-		// Token: 0x17007533 RID: 30003
-		// (get) Token: 0x0602DC30 RID: 187440 RVA: 0x00A83245 File Offset: 0x00A81445
+		// Token: 0x170047E9 RID: 18409
+		// (get) Token: 0x0602230B RID: 140043 RVA: 0x009AE6CB File Offset: 0x009AC8CB
 		public TsGameBudgetGroupConfigCache TsBlueprintSingletonConfig
 		{
 			get
@@ -252,8 +252,8 @@ namespace CSharpScript.Game.World.Define
 			}
 		}
 
-		// Token: 0x17007534 RID: 30004
-		// (get) Token: 0x0602DC31 RID: 187441 RVA: 0x00A8324D File Offset: 0x00A8144D
+		// Token: 0x170047EA RID: 18410
+		// (get) Token: 0x0602230C RID: 140044 RVA: 0x009AE6D3 File Offset: 0x009AC8D3
 		public TsGameBudgetGroupConfigCache TsSceneBlueprintActorConfig
 		{
 			get
@@ -262,8 +262,8 @@ namespace CSharpScript.Game.World.Define
 			}
 		}
 
-		// Token: 0x17007535 RID: 30005
-		// (get) Token: 0x0602DC32 RID: 187442 RVA: 0x00A83255 File Offset: 0x00A81455
+		// Token: 0x170047EB RID: 18411
+		// (get) Token: 0x0602230D RID: 140045 RVA: 0x009AE6DB File Offset: 0x009AC8DB
 		public TsGameBudgetGroupConfigCache TsFarBlueprintActorConfig
 		{
 			get
@@ -272,8 +272,8 @@ namespace CSharpScript.Game.World.Define
 			}
 		}
 
-		// Token: 0x17007536 RID: 30006
-		// (get) Token: 0x0602DC33 RID: 187443 RVA: 0x00A8325D File Offset: 0x00A8145D
+		// Token: 0x170047EC RID: 18412
+		// (get) Token: 0x0602230E RID: 140046 RVA: 0x009AE6E3 File Offset: 0x009AC8E3
 		public TsGameBudgetGroupConfigCache TsSuperFarBlueprintActorConfig
 		{
 			get
@@ -282,8 +282,8 @@ namespace CSharpScript.Game.World.Define
 			}
 		}
 
-		// Token: 0x17007537 RID: 30007
-		// (get) Token: 0x0602DC34 RID: 187444 RVA: 0x00A83265 File Offset: 0x00A81465
+		// Token: 0x170047ED RID: 18413
+		// (get) Token: 0x0602230F RID: 140047 RVA: 0x009AE6EB File Offset: 0x009AC8EB
 		public TsGameBudgetGroupConfigCache TsDynamicPhysicsInteractionActorConfig
 		{
 			get
@@ -292,8 +292,8 @@ namespace CSharpScript.Game.World.Define
 			}
 		}
 
-		// Token: 0x17007538 RID: 30008
-		// (get) Token: 0x0602DC35 RID: 187445 RVA: 0x00A8326D File Offset: 0x00A8146D
+		// Token: 0x170047EE RID: 18414
+		// (get) Token: 0x06022310 RID: 140048 RVA: 0x009AE6F3 File Offset: 0x009AC8F3
 		public TsGameBudgetGroupConfigCache TsStaticPhysicsInteractionActorConfig
 		{
 			get
@@ -302,8 +302,8 @@ namespace CSharpScript.Game.World.Define
 			}
 		}
 
-		// Token: 0x17007539 RID: 30009
-		// (get) Token: 0x0602DC36 RID: 187446 RVA: 0x00A83275 File Offset: 0x00A81475
+		// Token: 0x170047EF RID: 18415
+		// (get) Token: 0x06022311 RID: 140049 RVA: 0x009AE6FB File Offset: 0x009AC8FB
 		public TsGameBudgetGroupConfigCache TsHighPriorityPhysicsInteractionActorConfig
 		{
 			get
@@ -312,8 +312,8 @@ namespace CSharpScript.Game.World.Define
 			}
 		}
 
-		// Token: 0x1700753A RID: 30010
-		// (get) Token: 0x0602DC37 RID: 187447 RVA: 0x00A8327D File Offset: 0x00A8147D
+		// Token: 0x170047F0 RID: 18416
+		// (get) Token: 0x06022312 RID: 140050 RVA: 0x009AE703 File Offset: 0x009AC903
 		public TsGameBudgetGroupConfigCache TsSpecialBlueprintActorConfig
 		{
 			get
@@ -322,8 +322,8 @@ namespace CSharpScript.Game.World.Define
 			}
 		}
 
-		// Token: 0x1700753B RID: 30011
-		// (get) Token: 0x0602DC38 RID: 187448 RVA: 0x00A83285 File Offset: 0x00A81485
+		// Token: 0x170047F1 RID: 18417
+		// (get) Token: 0x06022313 RID: 140051 RVA: 0x009AE70B File Offset: 0x009AC90B
 		public TsGameBudgetGroupConfigCache TsSparseGridPhysicsInteractionActorConfig
 		{
 			get
@@ -332,13 +332,23 @@ namespace CSharpScript.Game.World.Define
 			}
 		}
 
-		// Token: 0x0602DC39 RID: 187449 RVA: 0x00A8328D File Offset: 0x00A8148D
+		// Token: 0x170047F2 RID: 18418
+		// (get) Token: 0x06022314 RID: 140052 RVA: 0x009AE713 File Offset: 0x009AC913
+		public TsGameBudgetGroupConfigCache TsScreenDecalActorConfig
+		{
+			get
+			{
+				return this.TsScreenDecalActorConfigInternal;
+			}
+		}
+
+		// Token: 0x06022315 RID: 140053 RVA: 0x009AE71B File Offset: 0x009AC91B
 		public void CreateCharacterEntityConfigOnly()
 		{
 			this.TsCharacterDtailConfigInternal = this.CreateCharacterEntityConfig(new GameBudgetAllocatorConfigMobileCreator(), false);
 		}
 
-		// Token: 0x0602DC3A RID: 187450 RVA: 0x00A832A4 File Offset: 0x00A814A4
+		// Token: 0x06022316 RID: 140054 RVA: 0x009AE730 File Offset: 0x009AC930
 		public void CreateConfigs()
 		{
 			IGamebudgetAllocatorConfigPlatformCreator creator;
@@ -381,23 +391,37 @@ namespace CSharpScript.Game.World.Define
 			this.CreateHighPriorityPhysicsInteractionActorConfig(creator);
 			this.CreateSpecialBlueprintActorConfig(creator);
 			this.CreateSparseGridPhysicsInteractionActorConfig(creator);
+			this.CreateScreenDecalActorConfig(creator);
 		}
 
-		// Token: 0x0602DC3B RID: 187451 RVA: 0x00A833AE File Offset: 0x00A815AE
+		// Token: 0x06022317 RID: 140055 RVA: 0x009AE844 File Offset: 0x009ACA44
+		private void CreateScreenDecalActorConfig(IGamebudgetAllocatorConfigPlatformCreator creator)
+		{
+			GameBudgetAllocatorConfig detailConfigs = creator.CreateScreenDecalActorConfig();
+			FGameBudgetAllocatorGroupConfig fgameBudgetAllocatorGroupConfig = new FGameBudgetAllocatorGroupConfig();
+			fgameBudgetAllocatorGroupConfig.GroupName = FNameUtil.GetDynamicFName("BlueprintTick.ScreenDecalActor").Value;
+			fgameBudgetAllocatorGroupConfig.SignificanceGroup = ESignificanceGroup.High;
+			fgameBudgetAllocatorGroupConfig.TickPriority = 2U;
+			fgameBudgetAllocatorGroupConfig.DisableActorTickStrategy = EDisableActorTickStrategy.DisableActorTickStrategy_None;
+			this.TsScreenDecalActorConfigInternal = new TsGameBudgetGroupConfigCache(fgameBudgetAllocatorGroupConfig);
+			this.ApplyGroupConfig(fgameBudgetAllocatorGroupConfig, detailConfigs);
+		}
+
+		// Token: 0x06022318 RID: 140056 RVA: 0x009AE89F File Offset: 0x009ACA9F
 		public void UpdateGroupConfigTickStrategy(TsGameBudgetGroupConfigCache tsGroupConfig, int tickStrategy, uint distance)
 		{
 			tsGroupConfig.ueGroupConfig.DisableActorTickStrategy = (EDisableActorTickStrategy)tickStrategy;
 			tsGroupConfig.ueGroupConfig.DisableActorTickDistance = distance;
 		}
 
-		// Token: 0x0602DC3C RID: 187452 RVA: 0x00A833C9 File Offset: 0x00A815C9
+		// Token: 0x06022319 RID: 140057 RVA: 0x009AE8BA File Offset: 0x009ACABA
 		public void RestoreGroupConfigTickStrategy(TsGameBudgetGroupConfigCache tsGroupConfig)
 		{
 			tsGroupConfig.ueGroupConfig.DisableActorTickStrategy = tsGroupConfig.DefaultDisableActorTickStrategy;
 			tsGroupConfig.ueGroupConfig.DisableActorTickDistance = tsGroupConfig.DefaultDisableActorTickDistance;
 		}
 
-		// Token: 0x0602DC3D RID: 187453 RVA: 0x00A833F0 File Offset: 0x00A815F0
+		// Token: 0x0602231A RID: 140058 RVA: 0x009AE8E0 File Offset: 0x009ACAE0
 		private void ApplyGroupConfig(FGameBudgetAllocatorGroupConfig groupConfig, GameBudgetAllocatorConfig detailConfigs)
 		{
 			FName groupName;
@@ -436,7 +460,7 @@ namespace CSharpScript.Game.World.Define
 			UKuroGameBudgetAllocatorCSharpInterface.SetGroupConfig(groupName, groupConfig);
 		}
 
-		// Token: 0x0602DC3E RID: 187454 RVA: 0x00A83534 File Offset: 0x00A81734
+		// Token: 0x0602231B RID: 140059 RVA: 0x009AEA24 File Offset: 0x009ACC24
 		private void CreateIdleExecConfig(IGamebudgetAllocatorConfigPlatformCreator creator)
 		{
 			TsGameBudgetAllocatorTickIntervalDetailConfig tsGameBudgetAllocatorTickIntervalDetailConfig = creator.CreateIdleExecConfig();
@@ -450,7 +474,7 @@ namespace CSharpScript.Game.World.Define
 			UKuroGameBudgetAllocatorCSharpInterface.SetGroupConfig(groupName, fgameBudgetAllocatorGroupConfig);
 		}
 
-		// Token: 0x0602DC3F RID: 187455 RVA: 0x00A835BC File Offset: 0x00A817BC
+		// Token: 0x0602231C RID: 140060 RVA: 0x009AEAAC File Offset: 0x009ACCAC
 		private GameBudgetAllocatorConfig CreateBossEntityConfig(IGamebudgetAllocatorConfigPlatformCreator creator, bool isApply = true)
 		{
 			GameBudgetAllocatorConfig gameBudgetAllocatorConfig = creator.CreateBossEntityConfig();
@@ -466,7 +490,7 @@ namespace CSharpScript.Game.World.Define
 			return gameBudgetAllocatorConfig;
 		}
 
-		// Token: 0x0602DC40 RID: 187456 RVA: 0x00A83614 File Offset: 0x00A81814
+		// Token: 0x0602231D RID: 140061 RVA: 0x009AEB04 File Offset: 0x009ACD04
 		private GameBudgetAllocatorConfig CreateCharacterEntityConfig(IGamebudgetAllocatorConfigPlatformCreator creator, bool isApply = true)
 		{
 			GameBudgetAllocatorConfig gameBudgetAllocatorConfig = creator.CreateCharacterEntityConfig();
@@ -482,7 +506,7 @@ namespace CSharpScript.Game.World.Define
 			return gameBudgetAllocatorConfig;
 		}
 
-		// Token: 0x0602DC41 RID: 187457 RVA: 0x00A83670 File Offset: 0x00A81870
+		// Token: 0x0602231E RID: 140062 RVA: 0x009AEB60 File Offset: 0x009ACD60
 		private GameBudgetAllocatorConfig CreateNormalNpcEntityConfig(IGamebudgetAllocatorConfigPlatformCreator creator, bool isApply = true)
 		{
 			GameBudgetAllocatorConfig gameBudgetAllocatorConfig = creator.CreateNormalNpcEntityConfig();
@@ -498,7 +522,7 @@ namespace CSharpScript.Game.World.Define
 			return gameBudgetAllocatorConfig;
 		}
 
-		// Token: 0x0602DC42 RID: 187458 RVA: 0x00A836CC File Offset: 0x00A818CC
+		// Token: 0x0602231F RID: 140063 RVA: 0x009AEBBC File Offset: 0x009ACDBC
 		private GameBudgetAllocatorConfig CreateSimpleNpcEntityConfig(IGamebudgetAllocatorConfigPlatformCreator creator, bool isApply = true)
 		{
 			GameBudgetAllocatorConfig gameBudgetAllocatorConfig = creator.CreateSimpleNpcEntityConfig();
@@ -516,7 +540,7 @@ namespace CSharpScript.Game.World.Define
 			return gameBudgetAllocatorConfig;
 		}
 
-		// Token: 0x0602DC43 RID: 187459 RVA: 0x00A83738 File Offset: 0x00A81938
+		// Token: 0x06022320 RID: 140064 RVA: 0x009AEC28 File Offset: 0x009ACE28
 		private void CreateNormalEntityConfig(IGamebudgetAllocatorConfigPlatformCreator creator)
 		{
 			GameBudgetAllocatorConfig detailConfigs = creator.CreateNormalEntityConfig();
@@ -528,7 +552,7 @@ namespace CSharpScript.Game.World.Define
 			this.ApplyGroupConfig(fgameBudgetAllocatorGroupConfig, detailConfigs);
 		}
 
-		// Token: 0x0602DC44 RID: 187460 RVA: 0x00A83790 File Offset: 0x00A81990
+		// Token: 0x06022321 RID: 140065 RVA: 0x009AEC80 File Offset: 0x009ACE80
 		private void CreateFightEffectConfig(IGamebudgetAllocatorConfigPlatformCreator creator)
 		{
 			TsGameBudgetAllocatorTickIntervalDetailConfig tsGameBudgetAllocatorTickIntervalDetailConfig = creator.CreateFightEffectConfig();
@@ -544,7 +568,7 @@ namespace CSharpScript.Game.World.Define
 			UKuroGameBudgetAllocatorCSharpInterface.SetGroupConfig(groupName, fgameBudgetAllocatorGroupConfig);
 		}
 
-		// Token: 0x0602DC45 RID: 187461 RVA: 0x00A83818 File Offset: 0x00A81A18
+		// Token: 0x06022322 RID: 140066 RVA: 0x009AED08 File Offset: 0x009ACF08
 		private void CreateEffectConfig(IGamebudgetAllocatorConfigPlatformCreator creator)
 		{
 			GameBudgetAllocatorConfig detailConfigs = creator.CreateEffectConfig();
@@ -558,7 +582,7 @@ namespace CSharpScript.Game.World.Define
 			this.ApplyGroupConfig(fgameBudgetAllocatorGroupConfig, detailConfigs);
 		}
 
-		// Token: 0x0602DC46 RID: 187462 RVA: 0x00A83880 File Offset: 0x00A81A80
+		// Token: 0x06022323 RID: 140067 RVA: 0x009AED70 File Offset: 0x009ACF70
 		private void CreateEffectImportanceConfig(IGamebudgetAllocatorConfigPlatformCreator creator)
 		{
 			GameBudgetAllocatorConfig detailConfigs = creator.CreateEffectImportanceConfig();
@@ -572,7 +596,7 @@ namespace CSharpScript.Game.World.Define
 			this.ApplyGroupConfig(fgameBudgetAllocatorGroupConfig, detailConfigs);
 		}
 
-		// Token: 0x0602DC47 RID: 187463 RVA: 0x00A838E8 File Offset: 0x00A81AE8
+		// Token: 0x06022324 RID: 140068 RVA: 0x009AEDD8 File Offset: 0x009ACFD8
 		private void CreateStabilizeLowEntityConfig(IGamebudgetAllocatorConfigPlatformCreator creator)
 		{
 			GameBudgetAllocatorConfig detailConfigs = creator.CreateStabilizeLowEntityConfig();
@@ -585,7 +609,7 @@ namespace CSharpScript.Game.World.Define
 			this.ApplyGroupConfig(fgameBudgetAllocatorGroupConfig, detailConfigs);
 		}
 
-		// Token: 0x0602DC48 RID: 187464 RVA: 0x00A83944 File Offset: 0x00A81B44
+		// Token: 0x06022325 RID: 140069 RVA: 0x009AEE34 File Offset: 0x009AD034
 		private void CreateAlwaysTickHotfixConfig(IGamebudgetAllocatorConfigPlatformCreator creator)
 		{
 			GameBudgetAllocatorConfig detailConfigs = creator.CreateAlwaysTickHotfixConfig();
@@ -598,7 +622,7 @@ namespace CSharpScript.Game.World.Define
 			this.ApplyGroupConfig(fgameBudgetAllocatorGroupConfig, detailConfigs);
 		}
 
-		// Token: 0x0602DC49 RID: 187465 RVA: 0x00A839A0 File Offset: 0x00A81BA0
+		// Token: 0x06022326 RID: 140070 RVA: 0x009AEE90 File Offset: 0x009AD090
 		private void CreateMoveSceneItemEntityConfig(IGamebudgetAllocatorConfigPlatformCreator creator)
 		{
 			GameBudgetAllocatorConfig detailConfigs = creator.CreateMoveSceneItemEntityConfig();
@@ -610,7 +634,7 @@ namespace CSharpScript.Game.World.Define
 			this.ApplyGroupConfig(fgameBudgetAllocatorGroupConfig, detailConfigs);
 		}
 
-		// Token: 0x0602DC4A RID: 187466 RVA: 0x00A839F4 File Offset: 0x00A81BF4
+		// Token: 0x06022327 RID: 140071 RVA: 0x009AEEE4 File Offset: 0x009AD0E4
 		private void CreatePlayerAlwaysTickConfig(IGamebudgetAllocatorConfigPlatformCreator creator)
 		{
 			TsGameBudgetAllocatorTickIntervalDetailConfig tsGameBudgetAllocatorTickIntervalDetailConfig = creator.CreatePlayerAlwaysTickConfig();
@@ -624,7 +648,7 @@ namespace CSharpScript.Game.World.Define
 			UKuroGameBudgetAllocatorCSharpInterface.SetGroupConfig(groupName, fgameBudgetAllocatorGroupConfig);
 		}
 
-		// Token: 0x0602DC4B RID: 187467 RVA: 0x00A83A6C File Offset: 0x00A81C6C
+		// Token: 0x06022328 RID: 140072 RVA: 0x009AEF5C File Offset: 0x009AD15C
 		private void CreateNormalEntityAlwaysTickConfig(IGamebudgetAllocatorConfigPlatformCreator creator)
 		{
 			GameBudgetAllocatorConfig detailConfigs = creator.CreateNormalEntityAlwaysTickConfig();
@@ -637,7 +661,7 @@ namespace CSharpScript.Game.World.Define
 			this.ApplyGroupConfig(fgameBudgetAllocatorGroupConfig, detailConfigs);
 		}
 
-		// Token: 0x0602DC4C RID: 187468 RVA: 0x00A83AC8 File Offset: 0x00A81CC8
+		// Token: 0x06022329 RID: 140073 RVA: 0x009AEFB8 File Offset: 0x009AD1B8
 		private void CreateNormalEntityAlwaysTickWithoutNotRenderedConfig(IGamebudgetAllocatorConfigPlatformCreator creator)
 		{
 			GameBudgetAllocatorConfig detailConfigs = creator.CreateNormalEntityAlwaysTickWithoutNotRenderedConfig();
@@ -650,7 +674,7 @@ namespace CSharpScript.Game.World.Define
 			this.ApplyGroupConfig(fgameBudgetAllocatorGroupConfig, detailConfigs);
 		}
 
-		// Token: 0x0602DC4D RID: 187469 RVA: 0x00A83B24 File Offset: 0x00A81D24
+		// Token: 0x0602232A RID: 140074 RVA: 0x009AF014 File Offset: 0x009AD214
 		private void CreateAlwaysTickConfig(IGamebudgetAllocatorConfigPlatformCreator creator)
 		{
 			TsGameBudgetAllocatorTickIntervalDetailConfig tsGameBudgetAllocatorTickIntervalDetailConfig = creator.CreateAlwaysTickConfig();
@@ -664,7 +688,7 @@ namespace CSharpScript.Game.World.Define
 			UKuroGameBudgetAllocatorCSharpInterface.SetGroupConfig(groupName, fgameBudgetAllocatorGroupConfig);
 		}
 
-		// Token: 0x0602DC4E RID: 187470 RVA: 0x00A83B9C File Offset: 0x00A81D9C
+		// Token: 0x0602232B RID: 140075 RVA: 0x009AF08C File Offset: 0x009AD28C
 		private void CreateCameraAlwaysTickConfig(IGamebudgetAllocatorConfigPlatformCreator creator)
 		{
 			TsGameBudgetAllocatorTickIntervalDetailConfig tsGameBudgetAllocatorTickIntervalDetailConfig = creator.CreateCameraAlwaysTickConfig();
@@ -678,7 +702,7 @@ namespace CSharpScript.Game.World.Define
 			UKuroGameBudgetAllocatorCSharpInterface.SetGroupConfig(groupName, fgameBudgetAllocatorGroupConfig);
 		}
 
-		// Token: 0x0602DC4F RID: 187471 RVA: 0x00A83C14 File Offset: 0x00A81E14
+		// Token: 0x0602232C RID: 140076 RVA: 0x009AF104 File Offset: 0x009AD304
 		private void CreateHUDTickConfig(IGamebudgetAllocatorConfigPlatformCreator creator)
 		{
 			TsGameBudgetAllocatorTickIntervalDetailConfig tsGameBudgetAllocatorTickIntervalDetailConfig = creator.CreateHUDTickConfig();
@@ -694,7 +718,7 @@ namespace CSharpScript.Game.World.Define
 			UKuroGameBudgetAllocatorCSharpInterface.SetGroupConfig(groupName, fgameBudgetAllocatorGroupConfig);
 		}
 
-		// Token: 0x0602DC50 RID: 187472 RVA: 0x00A83C9C File Offset: 0x00A81E9C
+		// Token: 0x0602232D RID: 140077 RVA: 0x009AF18C File Offset: 0x009AD38C
 		private void CreateBattleHeadViewConfig(IGamebudgetAllocatorConfigPlatformCreator creator)
 		{
 			TsGameBudgetAllocatorTickIntervalDetailConfig tsGameBudgetAllocatorTickIntervalDetailConfig = creator.CreateBattleHeadViewConfig();
@@ -710,7 +734,7 @@ namespace CSharpScript.Game.World.Define
 			UKuroGameBudgetAllocatorCSharpInterface.SetGroupConfig(groupName, fgameBudgetAllocatorGroupConfig);
 		}
 
-		// Token: 0x0602DC51 RID: 187473 RVA: 0x00A83D24 File Offset: 0x00A81F24
+		// Token: 0x0602232E RID: 140078 RVA: 0x009AF214 File Offset: 0x009AD414
 		public void CreateCharacterRenderConfig(IGamebudgetAllocatorConfigPlatformCreator creator)
 		{
 			GameBudgetAllocatorConfig detailConfigs = creator.CreateCharacterRenderConfig();
@@ -724,7 +748,7 @@ namespace CSharpScript.Game.World.Define
 			this.ApplyGroupConfig(fgameBudgetAllocatorGroupConfig, detailConfigs);
 		}
 
-		// Token: 0x0602DC52 RID: 187474 RVA: 0x00A83D8C File Offset: 0x00A81F8C
+		// Token: 0x0602232F RID: 140079 RVA: 0x009AF27C File Offset: 0x009AD47C
 		public void CreateNpcRenderConfig(IGamebudgetAllocatorConfigPlatformCreator creator)
 		{
 			GameBudgetAllocatorConfig detailConfigs = creator.CreateNpcRenderConfig();
@@ -738,7 +762,7 @@ namespace CSharpScript.Game.World.Define
 			this.ApplyGroupConfig(fgameBudgetAllocatorGroupConfig, detailConfigs);
 		}
 
-		// Token: 0x0602DC53 RID: 187475 RVA: 0x00A83DF4 File Offset: 0x00A81FF4
+		// Token: 0x06022330 RID: 140080 RVA: 0x009AF2E4 File Offset: 0x009AD4E4
 		private void CreateCollisionPlantConfig(IGamebudgetAllocatorConfigPlatformCreator creator)
 		{
 			GameBudgetAllocatorConfig detailConfigs = creator.CreateCollisionPlantConfig();
@@ -752,7 +776,7 @@ namespace CSharpScript.Game.World.Define
 			this.ApplyGroupConfig(fgameBudgetAllocatorGroupConfig, detailConfigs);
 		}
 
-		// Token: 0x0602DC54 RID: 187476 RVA: 0x00A83E5C File Offset: 0x00A8205C
+		// Token: 0x06022331 RID: 140081 RVA: 0x009AF34C File Offset: 0x009AD54C
 		private void CreateBlueprintSingletonConfig(IGamebudgetAllocatorConfigPlatformCreator creator)
 		{
 			TsGameBudgetAllocatorTickIntervalDetailConfig tsGameBudgetAllocatorTickIntervalDetailConfig = creator.CreateBlueprintSingletonConfig();
@@ -767,7 +791,7 @@ namespace CSharpScript.Game.World.Define
 			UKuroGameBudgetAllocatorCSharpInterface.SetGroupConfig(groupName, fgameBudgetAllocatorGroupConfig);
 		}
 
-		// Token: 0x0602DC55 RID: 187477 RVA: 0x00A83EDC File Offset: 0x00A820DC
+		// Token: 0x06022332 RID: 140082 RVA: 0x009AF3CC File Offset: 0x009AD5CC
 		private void CreateSceneBlueprintActorConfig(IGamebudgetAllocatorConfigPlatformCreator creator)
 		{
 			GameBudgetAllocatorConfig detailConfigs = creator.CreateSceneBlueprintActorConfig();
@@ -781,7 +805,7 @@ namespace CSharpScript.Game.World.Define
 			this.ApplyGroupConfig(fgameBudgetAllocatorGroupConfig, detailConfigs);
 		}
 
-		// Token: 0x0602DC56 RID: 187478 RVA: 0x00A83F44 File Offset: 0x00A82144
+		// Token: 0x06022333 RID: 140083 RVA: 0x009AF434 File Offset: 0x009AD634
 		private void CreateFarBlueprintActorConfig(IGamebudgetAllocatorConfigPlatformCreator creator)
 		{
 			GameBudgetAllocatorConfig detailConfigs = creator.CreateFarBlueprintActorConfig();
@@ -795,7 +819,7 @@ namespace CSharpScript.Game.World.Define
 			this.ApplyGroupConfig(fgameBudgetAllocatorGroupConfig, detailConfigs);
 		}
 
-		// Token: 0x0602DC57 RID: 187479 RVA: 0x00A83FAC File Offset: 0x00A821AC
+		// Token: 0x06022334 RID: 140084 RVA: 0x009AF49C File Offset: 0x009AD69C
 		private void CreateSuperFarBlueprintActorConfig(IGamebudgetAllocatorConfigPlatformCreator creator)
 		{
 			GameBudgetAllocatorConfig detailConfigs = creator.CreateSuperFarBlueprintActorConfig();
@@ -808,7 +832,7 @@ namespace CSharpScript.Game.World.Define
 			this.ApplyGroupConfig(fgameBudgetAllocatorGroupConfig, detailConfigs);
 		}
 
-		// Token: 0x0602DC58 RID: 187480 RVA: 0x00A84008 File Offset: 0x00A82208
+		// Token: 0x06022335 RID: 140085 RVA: 0x009AF4F8 File Offset: 0x009AD6F8
 		private void CreateDynamicPhysicsInteractionActorConfig(IGamebudgetAllocatorConfigPlatformCreator creator)
 		{
 			GameBudgetAllocatorConfig detailConfigs = creator.CreateDynamicPhysicsInteractionActorConfig();
@@ -822,7 +846,7 @@ namespace CSharpScript.Game.World.Define
 			this.ApplyGroupConfig(fgameBudgetAllocatorGroupConfig, detailConfigs);
 		}
 
-		// Token: 0x0602DC59 RID: 187481 RVA: 0x00A84070 File Offset: 0x00A82270
+		// Token: 0x06022336 RID: 140086 RVA: 0x009AF560 File Offset: 0x009AD760
 		private void CreateStaticPhysicsInteractionActorConfig(IGamebudgetAllocatorConfigPlatformCreator creator)
 		{
 			GameBudgetAllocatorConfig detailConfigs = creator.CreateStaticPhysicsInteractionActorConfig();
@@ -836,7 +860,7 @@ namespace CSharpScript.Game.World.Define
 			this.ApplyGroupConfig(fgameBudgetAllocatorGroupConfig, detailConfigs);
 		}
 
-		// Token: 0x0602DC5A RID: 187482 RVA: 0x00A840D8 File Offset: 0x00A822D8
+		// Token: 0x06022337 RID: 140087 RVA: 0x009AF5C8 File Offset: 0x009AD7C8
 		private void CreateHighPriorityPhysicsInteractionActorConfig(IGamebudgetAllocatorConfigPlatformCreator creator)
 		{
 			GameBudgetAllocatorConfig detailConfigs = creator.CreateHighPriorityPhysicsInteractionActorConfig();
@@ -850,7 +874,7 @@ namespace CSharpScript.Game.World.Define
 			this.ApplyGroupConfig(fgameBudgetAllocatorGroupConfig, detailConfigs);
 		}
 
-		// Token: 0x0602DC5B RID: 187483 RVA: 0x00A84140 File Offset: 0x00A82340
+		// Token: 0x06022338 RID: 140088 RVA: 0x009AF630 File Offset: 0x009AD830
 		private void CreateSpecialBlueprintActorConfig(IGamebudgetAllocatorConfigPlatformCreator creator)
 		{
 			GameBudgetAllocatorConfig detailConfigs = creator.CreateSpecialBlueprintActorConfig();
@@ -863,7 +887,7 @@ namespace CSharpScript.Game.World.Define
 			this.ApplyGroupConfig(fgameBudgetAllocatorGroupConfig, detailConfigs);
 		}
 
-		// Token: 0x0602DC5C RID: 187484 RVA: 0x00A8419C File Offset: 0x00A8239C
+		// Token: 0x06022339 RID: 140089 RVA: 0x009AF68C File Offset: 0x009AD88C
 		private void CreateSparseGridPhysicsInteractionActorConfig(IGamebudgetAllocatorConfigPlatformCreator creator)
 		{
 			GameBudgetAllocatorConfig detailConfigs = creator.CreateDynamicPhysicsInteractionActorConfig();
@@ -876,7 +900,7 @@ namespace CSharpScript.Game.World.Define
 			this.ApplyGroupConfig(fgameBudgetAllocatorGroupConfig, detailConfigs);
 		}
 
-		// Token: 0x0602DC5D RID: 187485 RVA: 0x00A841F8 File Offset: 0x00A823F8
+		// Token: 0x0602233A RID: 140090 RVA: 0x009AF6E8 File Offset: 0x009AD8E8
 		public TsGameBudgetGroupConfigCache GetEffectDynamicGroup(uint inMaxDistance)
 		{
 			uint num = inMaxDistance;
@@ -929,8 +953,8 @@ namespace CSharpScript.Game.World.Define
 			return tsGameBudgetGroupConfigCache;
 		}
 
-		// Token: 0x1700753C RID: 30012
-		// (get) Token: 0x0602DC5E RID: 187486 RVA: 0x00A84488 File Offset: 0x00A82688
+		// Token: 0x170047F3 RID: 18419
+		// (get) Token: 0x0602233B RID: 140091 RVA: 0x009AF978 File Offset: 0x009ADB78
 		public static GameBudgetAllocatorConfigCreator Instance
 		{
 			get
@@ -944,12 +968,12 @@ namespace CSharpScript.Game.World.Define
 			}
 		}
 
-		// Token: 0x0602DC5F RID: 187487 RVA: 0x00A844AB File Offset: 0x00A826AB
+		// Token: 0x0602233C RID: 140092 RVA: 0x009AF99B File Offset: 0x009ADB9B
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602DC60 RID: 187488 RVA: 0x00A844AD File Offset: 0x00A826AD
+		// Token: 0x0602233D RID: 140093 RVA: 0x009AF99D File Offset: 0x009ADB9D
 		public static void ResetStaticDefaultValue()
 		{
 			GameBudgetAllocatorConfigCreator instance = GameBudgetAllocatorConfigCreator._instance;
@@ -960,190 +984,196 @@ namespace CSharpScript.Game.World.Define
 			GameBudgetAllocatorConfigCreator._instance = null;
 		}
 
-		// Token: 0x0602DC61 RID: 187489 RVA: 0x00A844C6 File Offset: 0x00A826C6
+		// Token: 0x0602233E RID: 140094 RVA: 0x009AF9B6 File Offset: 0x009ADBB6
 		static GameBudgetAllocatorConfigCreator()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(GameBudgetAllocatorConfigCreator.CreateStaticDefaultValue), new Action(GameBudgetAllocatorConfigCreator.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040186DA RID: 100058
+		// Token: 0x04012D0B RID: 77067
+		private const int SCREEN_DECAL_PRIORITY = 2;
+
+		// Token: 0x04012D0C RID: 77068
 		private const int PRE_PLAYER_MOVE_TICK_PRIORITY = 3;
 
-		// Token: 0x040186DB RID: 100059
+		// Token: 0x04012D0D RID: 77069
 		private const int PLAYER_ALWAYS_TICK_PRIORITY = 4;
 
-		// Token: 0x040186DC RID: 100060
+		// Token: 0x04012D0E RID: 77070
 		private const int ALWAYS_TICK_PRIORITY = 5;
 
-		// Token: 0x040186DD RID: 100061
+		// Token: 0x04012D0F RID: 77071
 		private const int FIGHT_EFFECT_PRIPRITY = 7;
 
-		// Token: 0x040186DE RID: 100062
+		// Token: 0x04012D10 RID: 77072
 		private const int Boss_PRIORITY = 8;
 
-		// Token: 0x040186DF RID: 100063
+		// Token: 0x04012D11 RID: 77073
 		private const int ROLE_PRIORITY = 9;
 
-		// Token: 0x040186E0 RID: 100064
+		// Token: 0x04012D12 RID: 77074
 		private const int NPC_PRIORITY = 10;
 
-		// Token: 0x040186E1 RID: 100065
+		// Token: 0x04012D13 RID: 77075
 		private const int SIMPLE_NPC_PRIORITY = 11;
 
-		// Token: 0x040186E2 RID: 100066
+		// Token: 0x04012D14 RID: 77076
 		private const int HUD_PRIORITY = 12;
 
-		// Token: 0x040186E3 RID: 100067
+		// Token: 0x04012D15 RID: 77077
 		private const int BATTLE_HEAD_STATE_VIEW_PRIORITY = 12;
 
-		// Token: 0x040186E4 RID: 100068
+		// Token: 0x04012D16 RID: 77078
 		private const int OTHER_PRIORITY = 12;
 
-		// Token: 0x040186E5 RID: 100069
+		// Token: 0x04012D17 RID: 77079
 		private const int CAMERA_PRIORITY = 90;
 
-		// Token: 0x040186E6 RID: 100070
+		// Token: 0x04012D18 RID: 77080
 		private const int IDLE_EXEC_PRIORITY = 100;
 
-		// Token: 0x040186E7 RID: 100071
+		// Token: 0x04012D19 RID: 77081
 		public const int EFFECT_ENABLE_RANGE = 30001;
 
-		// Token: 0x040186E8 RID: 100072
+		// Token: 0x04012D1A RID: 77082
 		public const int EFFECT_USE_BOUNDS_RANGE = 10000;
 
-		// Token: 0x040186E9 RID: 100073
+		// Token: 0x04012D1B RID: 77083
 		public const int EFFECT_IMPORTANCE_ENABLE_RANGE = 200000;
 
-		// Token: 0x040186EA RID: 100074
+		// Token: 0x04012D1C RID: 77084
 		private const int EFFECT_IMPORTANCE_ENABLE_MAX_RANGE = 1000000;
 
-		// Token: 0x040186EB RID: 100075
+		// Token: 0x04012D1D RID: 77085
 		private const int HUD_ENABLE_RANGE = 5000;
 
-		// Token: 0x040186EC RID: 100076
+		// Token: 0x04012D1E RID: 77086
 		private const int BATTLE_HEAD_STATE_VIEW_RANGE = 5000;
 
-		// Token: 0x040186ED RID: 100077
+		// Token: 0x04012D1F RID: 77087
 		private const int CHARCTER_RENDER_ENABLE_MAX_RANGE = 18000;
 
-		// Token: 0x040186EE RID: 100078
+		// Token: 0x04012D20 RID: 77088
 		private const int COLLISION_PLANT_RANGE = 1000;
 
-		// Token: 0x040186EF RID: 100079
+		// Token: 0x04012D21 RID: 77089
 		private const int SCENE_BLUEPRINT_ACTOR_RANGE = 10000;
 
-		// Token: 0x040186F0 RID: 100080
+		// Token: 0x04012D22 RID: 77090
 		private const int FAR_BLUEPRINT_ACTOR_RANGE = 28000;
 
-		// Token: 0x040186F1 RID: 100081
+		// Token: 0x04012D23 RID: 77091
 		private const int HIGH_PRIORITY_PHYSICS_INTERACTION_ACTOR_RANGE = 5000;
 
-		// Token: 0x040186F2 RID: 100082
+		// Token: 0x04012D24 RID: 77092
 		private const int DYNAMIC_PHYSICS_INTERACTION_ACTOR_RANGE = 2500;
 
-		// Token: 0x040186F3 RID: 100083
+		// Token: 0x04012D25 RID: 77093
 		private const int STATIC_PHYSICS_INTERACTION_ACTOR_RANGE = 1500;
 
-		// Token: 0x040186F4 RID: 100084
+		// Token: 0x04012D26 RID: 77094
 		private TsGameBudgetGroupConfigCache TsNormalEntityGroupConfigInternal;
 
-		// Token: 0x040186F5 RID: 100085
+		// Token: 0x04012D27 RID: 77095
 		private TsGameBudgetGroupConfigCache TsBossEntityGroupConfigInternal;
 
-		// Token: 0x040186F6 RID: 100086
+		// Token: 0x04012D28 RID: 77096
 		private TsGameBudgetGroupConfigCache TsCharacterEntityGroupConfigInternal;
 
-		// Token: 0x040186F7 RID: 100087
+		// Token: 0x04012D29 RID: 77097
 		private TsGameBudgetGroupConfigCache TsNormalNpcEntityGroupConfigInternal;
 
-		// Token: 0x040186F8 RID: 100088
+		// Token: 0x04012D2A RID: 77098
 		private TsGameBudgetGroupConfigCache TsSimpleNpcEntityGroupConfigInternal;
 
-		// Token: 0x040186F9 RID: 100089
+		// Token: 0x04012D2B RID: 77099
 		private TsGameBudgetGroupConfigCache TsFightEffectGroupConfigInternal;
 
-		// Token: 0x040186FA RID: 100090
+		// Token: 0x04012D2C RID: 77100
 		private TsGameBudgetGroupConfigCache TsEffectGroupConfigInternal;
 
-		// Token: 0x040186FB RID: 100091
+		// Token: 0x04012D2D RID: 77101
 		private TsGameBudgetGroupConfigCache TsEffectInportanceGroupConfigInternal;
 
-		// Token: 0x040186FC RID: 100092
+		// Token: 0x04012D2E RID: 77102
 		private TsGameBudgetGroupConfigCache TsAlwaysTickConfigInternal;
 
-		// Token: 0x040186FD RID: 100093
+		// Token: 0x04012D2F RID: 77103
 		private TsGameBudgetGroupConfigCache TsPlayerAlwaysTickConfigInternal;
 
-		// Token: 0x040186FE RID: 100094
+		// Token: 0x04012D30 RID: 77104
 		private TsGameBudgetGroupConfigCache TsNormalEntityAlwaysTickConfigInternal;
 
-		// Token: 0x040186FF RID: 100095
+		// Token: 0x04012D31 RID: 77105
 		private TsGameBudgetGroupConfigCache TsNormalEntityAlwaysTickWithoutNotRenderedConfigInternal;
 
-		// Token: 0x04018700 RID: 100096
+		// Token: 0x04012D32 RID: 77106
 		private TsGameBudgetGroupConfigCache TsIdleExecConfigInternal;
 
-		// Token: 0x04018701 RID: 100097
+		// Token: 0x04012D33 RID: 77107
 		private TsGameBudgetGroupConfigCache TsAlwaysTick2ConfigInternal;
 
-		// Token: 0x04018702 RID: 100098
+		// Token: 0x04012D34 RID: 77108
 		private TsGameBudgetGroupConfigCache TsHUDTickConfigInternal;
 
-		// Token: 0x04018703 RID: 100099
+		// Token: 0x04012D35 RID: 77109
 		private TsGameBudgetGroupConfigCache TsCharacterRenderConfigInternal;
 
-		// Token: 0x04018704 RID: 100100
+		// Token: 0x04012D36 RID: 77110
 		private TsGameBudgetGroupConfigCache TsNpcRenderConfigInternal;
 
-		// Token: 0x04018705 RID: 100101
+		// Token: 0x04012D37 RID: 77111
 		private TsGameBudgetGroupConfigCache TsStabilizeLowEntityGroupConfigInternal;
 
-		// Token: 0x04018706 RID: 100102
+		// Token: 0x04012D38 RID: 77112
 		private TsGameBudgetGroupConfigCache TsBattleHeadStateViewConfigInternal;
 
-		// Token: 0x04018707 RID: 100103
+		// Token: 0x04012D39 RID: 77113
 		private GameBudgetAllocatorConfig TsCharacterDtailConfigInternal;
 
-		// Token: 0x04018708 RID: 100104
+		// Token: 0x04012D3A RID: 77114
 		private TsGameBudgetGroupConfigCache TsAlwaysTickHotFixConfigInternal;
 
-		// Token: 0x04018709 RID: 100105
+		// Token: 0x04012D3B RID: 77115
 		private TsGameBudgetGroupConfigCache TsMoveSceneItemEntityConfigInternal;
 
-		// Token: 0x0401870A RID: 100106
+		// Token: 0x04012D3C RID: 77116
 		private TsGameBudgetGroupConfigCache TsCollisionPlantConfigInternal;
 
-		// Token: 0x0401870B RID: 100107
+		// Token: 0x04012D3D RID: 77117
 		private TsGameBudgetGroupConfigCache TsBlueprintSingletonConfigInternal;
 
-		// Token: 0x0401870C RID: 100108
+		// Token: 0x04012D3E RID: 77118
 		private TsGameBudgetGroupConfigCache TsSceneBlueprintActorConfigInternal;
 
-		// Token: 0x0401870D RID: 100109
+		// Token: 0x04012D3F RID: 77119
 		private TsGameBudgetGroupConfigCache TsFarBlueprintActorConfigInternal;
 
-		// Token: 0x0401870E RID: 100110
+		// Token: 0x04012D40 RID: 77120
 		private TsGameBudgetGroupConfigCache TsSuperFarBlueprintActorConfigInternal;
 
-		// Token: 0x0401870F RID: 100111
+		// Token: 0x04012D41 RID: 77121
 		private TsGameBudgetGroupConfigCache TsDynamicPhysicsInteractionActorConfigInternal;
 
-		// Token: 0x04018710 RID: 100112
+		// Token: 0x04012D42 RID: 77122
 		private TsGameBudgetGroupConfigCache TsStaticPhysicsInteractionActorConfigInternal;
 
-		// Token: 0x04018711 RID: 100113
+		// Token: 0x04012D43 RID: 77123
 		private TsGameBudgetGroupConfigCache TsHighPriorityPhysicsInteractionActorConfigInternal;
 
-		// Token: 0x04018712 RID: 100114
+		// Token: 0x04012D44 RID: 77124
 		private TsGameBudgetGroupConfigCache TsSpecialBlueprintActorConfigInternal;
 
-		// Token: 0x04018713 RID: 100115
+		// Token: 0x04012D45 RID: 77125
 		private TsGameBudgetGroupConfigCache TsSparseGridPhysicsInteractionActorConfigInternal;
 
-		// Token: 0x04018714 RID: 100116
+		// Token: 0x04012D46 RID: 77126
+		private TsGameBudgetGroupConfigCache TsScreenDecalActorConfigInternal;
+
+		// Token: 0x04012D47 RID: 77127
 		public readonly Dictionary<uint, TsGameBudgetGroupConfigCache> TsEffectDynamicGroupConfigMap = new Dictionary<uint, TsGameBudgetGroupConfigCache>();
 
-		// Token: 0x04018715 RID: 100117
+		// Token: 0x04012D48 RID: 77128
 		[Nullable(2)]
 		private static GameBudgetAllocatorConfigCreator _instance;
 	}

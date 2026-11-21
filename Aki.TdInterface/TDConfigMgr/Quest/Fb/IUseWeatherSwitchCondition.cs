@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001411 RID: 5137
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001568 RID: 5480
 	public class IUseWeatherSwitchCondition : IQuestCondition
 	{
-		// Token: 0x060074C8 RID: 29896 RVA: 0x001172A5 File Offset: 0x001154A5
+		// Token: 0x06007B89 RID: 31625 RVA: 0x00125C89 File Offset: 0x00123E89
 		public static IUseWeatherSwitchCondition Create(IUseWeatherSwitchCondition? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002679 RID: 9849
-		// (get) Token: 0x060074C9 RID: 29897 RVA: 0x001172C4 File Offset: 0x001154C4
+		// Token: 0x1700285B RID: 10331
+		// (get) Token: 0x06007B8A RID: 31626 RVA: 0x00125CA8 File Offset: 0x00123EA8
 		public override EChildQuest Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700267A RID: 9850
-		// (get) Token: 0x060074CA RID: 29898 RVA: 0x001172D1 File Offset: 0x001154D1
+		// Token: 0x1700285C RID: 10332
+		// (get) Token: 0x06007B8B RID: 31627 RVA: 0x00125CB5 File Offset: 0x00123EB5
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -51,8 +49,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700267B RID: 9851
-		// (get) Token: 0x060074CB RID: 29899 RVA: 0x00117305 File Offset: 0x00115505
+		// Token: 0x1700285D RID: 10333
+		// (get) Token: 0x06007B8C RID: 31628 RVA: 0x00125CE9 File Offset: 0x00123EE9
 		public virtual IUseWeatherSwitchConditionBase CheckType
 		{
 			get
@@ -67,20 +65,20 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400439B RID: 17307
+		// Token: 0x0400472C RID: 18220
 		private IUseWeatherSwitchCondition Instance;
 
-		// Token: 0x0400439C RID: 17308
+		// Token: 0x0400472D RID: 18221
 		[Nullable(2)]
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x0400439D RID: 17309
+		// Token: 0x0400472E RID: 18222
 		private bool _PreConditionsInited;
 
-		// Token: 0x0400439E RID: 17310
+		// Token: 0x0400472F RID: 18223
 		private IUseWeatherSwitchConditionBase _CheckTypeCache;
 
-		// Token: 0x0400439F RID: 17311
+		// Token: 0x04004730 RID: 18224
 		private bool _CheckTypeInited;
 	}
 }

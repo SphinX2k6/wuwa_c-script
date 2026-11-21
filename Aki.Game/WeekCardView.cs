@@ -11,12 +11,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020023AE RID: 9134
+// Token: 0x02001893 RID: 6291
 [NullableContext(1)]
 [Nullable(0)]
 public class WeekCardView : UiTabViewBase
 {
-	// Token: 0x0601242C RID: 74796 RVA: 0x0047F1A8 File Offset: 0x0047D3A8
+	// Token: 0x0600F8DE RID: 63710 RVA: 0x0048C67C File Offset: 0x0048A87C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 13;
@@ -59,7 +59,7 @@ public class WeekCardView : UiTabViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0601242D RID: 74797 RVA: 0x0047F3C0 File Offset: 0x0047D5C0
+	// Token: 0x0600F8DF RID: 63711 RVA: 0x0048C894 File Offset: 0x0048AA94
 	protected override void AddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.ReceiveWeekCardDataEvent, new Action(this.OnReceiveMonthCardDataEvent));
@@ -67,7 +67,7 @@ public class WeekCardView : UiTabViewBase
 		EventSystem.Instance.Add<ESdkDialogResult>(EEventName.SdkPayEnd, new Action<ESdkDialogResult>(this.CheckIfNeedShowPlayStationStoreIcon));
 	}
 
-	// Token: 0x0601242E RID: 74798 RVA: 0x0047F420 File Offset: 0x0047D620
+	// Token: 0x0600F8E0 RID: 63712 RVA: 0x0048C8F4 File Offset: 0x0048AAF4
 	protected override void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.ReceiveWeekCardDataEvent, new Action(this.OnReceiveMonthCardDataEvent));
@@ -75,7 +75,7 @@ public class WeekCardView : UiTabViewBase
 		EventSystem.Instance.Remove(EEventName.SdkPayEnd, new Action<ESdkDialogResult>(this.CheckIfNeedShowPlayStationStoreIcon));
 	}
 
-	// Token: 0x0601242F RID: 74799 RVA: 0x0047F480 File Offset: 0x0047D680
+	// Token: 0x0600F8E1 RID: 63713 RVA: 0x0048C954 File Offset: 0x0048AB54
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WeekCardView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -86,7 +86,7 @@ public class WeekCardView : UiTabViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012430 RID: 74800 RVA: 0x0047F4C3 File Offset: 0x0047D6C3
+	// Token: 0x0600F8E2 RID: 63714 RVA: 0x0048C997 File Offset: 0x0048AB97
 	protected override void OnBeforeHide()
 	{
 		PlatformSdkNew platformSdk = PlatformSdkManagerNew.Instance.GetPlatformSdk();
@@ -97,7 +97,7 @@ public class WeekCardView : UiTabViewBase
 		platformSdk.HidePlayStationStoreIcon();
 	}
 
-	// Token: 0x06012431 RID: 74801 RVA: 0x0047F4DC File Offset: 0x0047D6DC
+	// Token: 0x0600F8E3 RID: 63715 RVA: 0x0048C9B0 File Offset: 0x0048ABB0
 	protected override void OnAfterShow()
 	{
 		UiTabSequence tabBehavior = base.GetTabBehavior<UiTabSequence>();
@@ -110,7 +110,7 @@ public class WeekCardView : UiTabViewBase
 		vm.OnAfterShow();
 	}
 
-	// Token: 0x06012432 RID: 74802 RVA: 0x0047F520 File Offset: 0x0047D720
+	// Token: 0x0600F8E4 RID: 63716 RVA: 0x0048C9F4 File Offset: 0x0048ABF4
 	private bool CheckSdkProductInfoConfirmIfCanShow(int payGiftDataId)
 	{
 		PlatformSdkNew platformSdk = PlatformSdkManagerNew.Instance.GetPlatformSdk();
@@ -135,7 +135,7 @@ public class WeekCardView : UiTabViewBase
 		return false;
 	}
 
-	// Token: 0x06012433 RID: 74803 RVA: 0x0047F5DC File Offset: 0x0047D7DC
+	// Token: 0x0600F8E5 RID: 63717 RVA: 0x0048CAB0 File Offset: 0x0048ACB0
 	private UniTask OpenThirdPartyMessageBox()
 	{
 		WeekCardView.<OpenThirdPartyMessageBox>d__15 <OpenThirdPartyMessageBox>d__;
@@ -145,7 +145,7 @@ public class WeekCardView : UiTabViewBase
 		return <OpenThirdPartyMessageBox>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012434 RID: 74804 RVA: 0x0047F618 File Offset: 0x0047D818
+	// Token: 0x0600F8E6 RID: 63718 RVA: 0x0048CAEC File Offset: 0x0048ACEC
 	private UniTask CreateCardItems()
 	{
 		WeekCardView.<CreateCardItems>d__16 <CreateCardItems>d__;
@@ -156,7 +156,7 @@ public class WeekCardView : UiTabViewBase
 		return <CreateCardItems>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012435 RID: 74805 RVA: 0x0047F65C File Offset: 0x0047D85C
+	// Token: 0x0600F8E7 RID: 63719 RVA: 0x0048CB30 File Offset: 0x0048AD30
 	private UniTask CreateSendCostItem()
 	{
 		WeekCardView.<CreateSendCostItem>d__17 <CreateSendCostItem>d__;
@@ -167,13 +167,13 @@ public class WeekCardView : UiTabViewBase
 		return <CreateSendCostItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012436 RID: 74806 RVA: 0x0047F69F File Offset: 0x0047D89F
+	// Token: 0x0600F8E8 RID: 63720 RVA: 0x0048CB73 File Offset: 0x0048AD73
 	private void CreateTotalCostItem()
 	{
 		this.TotalRewardLayout = new GenericLayout<WeekCardCostGrid, IWeekCostData>(base.GetHorizontalLayout(5), () => new WeekCardCostGrid(), null, false, true);
 	}
 
-	// Token: 0x06012437 RID: 74807 RVA: 0x0047F6D8 File Offset: 0x0047D8D8
+	// Token: 0x0600F8E9 RID: 63721 RVA: 0x0048CBAC File Offset: 0x0048ADAC
 	private UniTask CreateBuyButton()
 	{
 		WeekCardView.<CreateBuyButton>d__19 <CreateBuyButton>d__;
@@ -184,13 +184,13 @@ public class WeekCardView : UiTabViewBase
 		return <CreateBuyButton>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012438 RID: 74808 RVA: 0x0047F71B File Offset: 0x0047D91B
+	// Token: 0x0600F8EA RID: 63722 RVA: 0x0048CBEF File Offset: 0x0048ADEF
 	protected override void OnStart()
 	{
 		this.RefreshAllView();
 	}
 
-	// Token: 0x06012439 RID: 74809 RVA: 0x0047F723 File Offset: 0x0047D923
+	// Token: 0x0600F8EB RID: 63723 RVA: 0x0048CBF7 File Offset: 0x0048ADF7
 	private void RefreshAllView()
 	{
 		this.RefreshCountDown();
@@ -203,14 +203,14 @@ public class WeekCardView : UiTabViewBase
 		this.RefreshDiscountSprite();
 	}
 
-	// Token: 0x0601243A RID: 74810 RVA: 0x0047F758 File Offset: 0x0047D958
+	// Token: 0x0600F8EC RID: 63724 RVA: 0x0048CC2C File Offset: 0x0048AE2C
 	private void RefreshDiscountSprite()
 	{
 		WeekCardViewModel vm = this.Vm;
 		base.TrySetSpriteByPath((vm != null) ? vm.GetDiscountTexturePath() : null, base.GetSprite(12), false, null, null);
 	}
 
-	// Token: 0x0601243B RID: 74811 RVA: 0x0047F790 File Offset: 0x0047D990
+	// Token: 0x0600F8ED RID: 63725 RVA: 0x0048CC64 File Offset: 0x0048AE64
 	private bool RefreshCountDown()
 	{
 		WeekCardViewModel vm = this.Vm;
@@ -231,7 +231,7 @@ public class WeekCardView : UiTabViewBase
 		return result;
 	}
 
-	// Token: 0x0601243C RID: 74812 RVA: 0x0047F864 File Offset: 0x0047DA64
+	// Token: 0x0600F8EE RID: 63726 RVA: 0x0048CD38 File Offset: 0x0048AF38
 	private void RefreshWeekCardItems()
 	{
 		for (int i = 0; i < this.WeekCardItems.Length; i++)
@@ -245,7 +245,7 @@ public class WeekCardView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0601243D RID: 74813 RVA: 0x0047F8B0 File Offset: 0x0047DAB0
+	// Token: 0x0600F8EF RID: 63727 RVA: 0x0048CD84 File Offset: 0x0048AF84
 	private void RefreshBuyButton()
 	{
 		WeekCardViewModel vm = this.Vm;
@@ -256,7 +256,7 @@ public class WeekCardView : UiTabViewBase
 		buyButton.SetLocalTextNew(((vm2 != null) ? vm2.GetBuyButtonText() : null) ?? "", Array.Empty<object>());
 	}
 
-	// Token: 0x0601243E RID: 74814 RVA: 0x0047F90A File Offset: 0x0047DB0A
+	// Token: 0x0600F8F0 RID: 63728 RVA: 0x0048CDDE File Offset: 0x0048AFDE
 	private void RefreshTotalCost()
 	{
 		GenericLayout<WeekCardCostGrid, IWeekCostData> totalRewardLayout = this.TotalRewardLayout;
@@ -264,7 +264,7 @@ public class WeekCardView : UiTabViewBase
 		totalRewardLayout.RefreshByData(((vm != null) ? vm.GetTotalRewardData() : null) ?? new List<IWeekCostData>(), null, false);
 	}
 
-	// Token: 0x0601243F RID: 74815 RVA: 0x0047F934 File Offset: 0x0047DB34
+	// Token: 0x0600F8F1 RID: 63729 RVA: 0x0048CE08 File Offset: 0x0048B008
 	private void RefreshSendCostItem()
 	{
 		WeekCardViewModel vm = this.Vm;
@@ -278,7 +278,7 @@ public class WeekCardView : UiTabViewBase
 		this.SendCostItem.Refresh(weekScoreData);
 	}
 
-	// Token: 0x06012440 RID: 74816 RVA: 0x0047F97C File Offset: 0x0047DB7C
+	// Token: 0x0600F8F2 RID: 63730 RVA: 0x0048CE50 File Offset: 0x0048B050
 	private void RefreshPrice()
 	{
 		UUIText text = base.GetText(9);
@@ -286,7 +286,7 @@ public class WeekCardView : UiTabViewBase
 		text.SetText(((vm != null) ? vm.GetPrice() : null) ?? "", true);
 	}
 
-	// Token: 0x06012441 RID: 74817 RVA: 0x0047F9A8 File Offset: 0x0047DBA8
+	// Token: 0x0600F8F3 RID: 63731 RVA: 0x0048CE7C File Offset: 0x0048B07C
 	private void RefreshTitle()
 	{
 		WeekCardViewModel vm = this.Vm;
@@ -299,13 +299,13 @@ public class WeekCardView : UiTabViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(11), text, Array.Empty<object>());
 	}
 
-	// Token: 0x06012442 RID: 74818 RVA: 0x0047FA01 File Offset: 0x0047DC01
+	// Token: 0x0600F8F4 RID: 63732 RVA: 0x0048CED5 File Offset: 0x0048B0D5
 	private void OnReceiveMonthCardDataEvent()
 	{
 		this.RefreshAllView();
 	}
 
-	// Token: 0x06012443 RID: 74819 RVA: 0x0047FA0C File Offset: 0x0047DC0C
+	// Token: 0x0600F8F5 RID: 63733 RVA: 0x0048CEE0 File Offset: 0x0048B0E0
 	private void OnClickHelpButton()
 	{
 		WeekCardViewModel vm = this.Vm;
@@ -317,7 +317,7 @@ public class WeekCardView : UiTabViewBase
 		HelpController.Instance.OpenHelpById(num.Value);
 	}
 
-	// Token: 0x06012444 RID: 74820 RVA: 0x0047FA4F File Offset: 0x0047DC4F
+	// Token: 0x0600F8F6 RID: 63734 RVA: 0x0048CF23 File Offset: 0x0048B123
 	private void OnClickBuyButton(int _)
 	{
 		WeekCardViewModel vm = this.Vm;
@@ -333,7 +333,7 @@ public class WeekCardView : UiTabViewBase
 		vm2.OnBuy();
 	}
 
-	// Token: 0x06012445 RID: 74821 RVA: 0x0047FA76 File Offset: 0x0047DC76
+	// Token: 0x0600F8F7 RID: 63735 RVA: 0x0048CF4A File Offset: 0x0048B14A
 	private void OnDiscountShopTimerRefresh()
 	{
 		if (this.RefreshCountDown())
@@ -342,7 +342,7 @@ public class WeekCardView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x06012446 RID: 74822 RVA: 0x0047FA86 File Offset: 0x0047DC86
+	// Token: 0x0600F8F8 RID: 63736 RVA: 0x0048CF5A File Offset: 0x0048B15A
 	private void CheckIfNeedShowPlayStationStoreIcon(ESdkDialogResult eSdkDialogResult)
 	{
 		PlatformSdkNew platformSdk = PlatformSdkManagerNew.Instance.GetPlatformSdk();
@@ -353,7 +353,7 @@ public class WeekCardView : UiTabViewBase
 		platformSdk.ShowPlayStationStoreIcon(0);
 	}
 
-	// Token: 0x06012447 RID: 74823 RVA: 0x0047FA9D File Offset: 0x0047DC9D
+	// Token: 0x0600F8F9 RID: 63737 RVA: 0x0048CF71 File Offset: 0x0048B171
 	protected void TryEmitRefreshTips()
 	{
 		PayShopController.Instance.ClosePayShopGoodDetailPopView();
@@ -364,10 +364,10 @@ public class WeekCardView : UiTabViewBase
 		EventSystem.Instance.Emit<int, bool>(EEventName.RefreshPayShop, 1, true);
 	}
 
-	// Token: 0x040089E8 RID: 35304
+	// Token: 0x04008B2F RID: 35631
 	private readonly ButtonItem BuyButton = new ButtonItem(null);
 
-	// Token: 0x040089E9 RID: 35305
+	// Token: 0x04008B30 RID: 35632
 	private readonly WeekCardItem[] WeekCardItems = new WeekCardItem[]
 	{
 		new WeekCardItem(),
@@ -375,7 +375,7 @@ public class WeekCardView : UiTabViewBase
 		new WeekCardItem()
 	};
 
-	// Token: 0x040089EA RID: 35306
+	// Token: 0x04008B31 RID: 35633
 	[Nullable(new byte[]
 	{
 		2,
@@ -384,60 +384,60 @@ public class WeekCardView : UiTabViewBase
 	})]
 	private GenericLayout<WeekCardCostGrid, IWeekCostData> TotalRewardLayout;
 
-	// Token: 0x040089EB RID: 35307
+	// Token: 0x04008B32 RID: 35634
 	private readonly WeekCardScoreItem SendCostItem = new WeekCardScoreItem();
 
-	// Token: 0x040089EC RID: 35308
+	// Token: 0x04008B33 RID: 35635
 	private EWeekCardKind Kind;
 
-	// Token: 0x040089ED RID: 35309
+	// Token: 0x04008B34 RID: 35636
 	[Nullable(2)]
 	private WeekCardViewModel Vm;
 
-	// Token: 0x040089EE RID: 35310
+	// Token: 0x04008B35 RID: 35637
 	private bool CountDownExpired;
 
-	// Token: 0x0200894A RID: 35146
+	// Token: 0x02007AD3 RID: 31443
 	[NullableContext(0)]
 	private class EChildType
 	{
-		// Token: 0x0402CA0E RID: 182798
+		// Token: 0x04027D29 RID: 163113
 		public const int CardItem1 = 0;
 
-		// Token: 0x0402CA0F RID: 182799
+		// Token: 0x04027D2A RID: 163114
 		public const int CardItem2 = 1;
 
-		// Token: 0x0402CA10 RID: 182800
+		// Token: 0x04027D2B RID: 163115
 		public const int CardItem3 = 2;
 
-		// Token: 0x0402CA11 RID: 182801
+		// Token: 0x04027D2C RID: 163116
 		public const int CostItemSend = 3;
 
-		// Token: 0x0402CA12 RID: 182802
+		// Token: 0x04027D2D RID: 163117
 		public const int TextLeftTime = 4;
 
-		// Token: 0x0402CA13 RID: 182803
+		// Token: 0x04027D2E RID: 163118
 		public const int PanelTotalReward = 5;
 
-		// Token: 0x0402CA14 RID: 182804
+		// Token: 0x04027D2F RID: 163119
 		public const int CostItemTotal = 6;
 
-		// Token: 0x0402CA15 RID: 182805
+		// Token: 0x04027D30 RID: 163120
 		public const int BtnBuy = 7;
 
-		// Token: 0x0402CA16 RID: 182806
+		// Token: 0x04027D31 RID: 163121
 		public const int BtnHelp = 8;
 
-		// Token: 0x0402CA17 RID: 182807
+		// Token: 0x04027D32 RID: 163122
 		public const int TextPrice = 9;
 
-		// Token: 0x0402CA18 RID: 182808
+		// Token: 0x04027D33 RID: 163123
 		public const int TitleText = 10;
 
-		// Token: 0x0402CA19 RID: 182809
+		// Token: 0x04027D34 RID: 163124
 		public const int TitleTextOutline = 11;
 
-		// Token: 0x0402CA1A RID: 182810
+		// Token: 0x04027D35 RID: 163125
 		public const int SpriteDiscount = 12;
 	}
 }

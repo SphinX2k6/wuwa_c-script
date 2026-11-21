@@ -2,30 +2,30 @@
 
 namespace CSharpScript.Game.AI.StateMachine.Task
 {
-	// Token: 0x02007322 RID: 29474
+	// Token: 0x020064A5 RID: 25765
 	public interface IAiTaskMontage
 	{
-		// Token: 0x17009F8D RID: 40845
-		// (get) Token: 0x0604858F RID: 296335
-		// (set) Token: 0x06048590 RID: 296336
+		// Token: 0x1700772B RID: 30507
+		// (get) Token: 0x0603E9DC RID: 256476
+		// (set) Token: 0x0603E9DD RID: 256477
 		bool Playing { get; set; }
 
-		// Token: 0x17009F8E RID: 40846
-		// (get) Token: 0x06048591 RID: 296337
+		// Token: 0x1700772C RID: 30508
+		// (get) Token: 0x0603E9DE RID: 256478
 		bool HasResource { get; }
 
-		// Token: 0x06048592 RID: 296338
+		// Token: 0x0603E9DF RID: 256479
 		double GetTimeElapsing();
 
-		// Token: 0x17009F8F RID: 40847
-		// (get) Token: 0x06048593 RID: 296339
-		// (set) Token: 0x06048594 RID: 296340
+		// Token: 0x1700772D RID: 30509
+		// (get) Token: 0x0603E9E0 RID: 256480
+		// (set) Token: 0x0603E9E1 RID: 256481
 		float RemainedTrigger { get; set; }
 
-		// Token: 0x06048595 RID: 296341
+		// Token: 0x0603E9E2 RID: 256482
 		double GetTimeLength();
 
-		// Token: 0x06048596 RID: 296342
+		// Token: 0x0603E9E3 RID: 256483
 		double GetTimeRemaining();
 	}
 }

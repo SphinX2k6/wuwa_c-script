@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001A2B RID: 6699
+// Token: 0x02000EEA RID: 3818
 [NullableContext(2)]
 [Nullable(0)]
 public class DangoAbyssAttributeParentItem : UiPanelBase, IDynamicScrollItem<DangoAbyssDefine.EquipViewAttributeData>
 {
-	// Token: 0x0600C507 RID: 50439 RVA: 0x002CB0E4 File Offset: 0x002C92E4
+	// Token: 0x06009917 RID: 39191 RVA: 0x002D6204 File Offset: 0x002D4404
 	[NullableContext(1)]
 	public UniTask Init(UUIItem actor)
 	{
@@ -25,7 +25,7 @@ public class DangoAbyssAttributeParentItem : UiPanelBase, IDynamicScrollItem<Dan
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C508 RID: 50440 RVA: 0x002CB130 File Offset: 0x002C9330
+	// Token: 0x06009918 RID: 39192 RVA: 0x002D6250 File Offset: 0x002D4450
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,7 +36,7 @@ public class DangoAbyssAttributeParentItem : UiPanelBase, IDynamicScrollItem<Dan
 		};
 	}
 
-	// Token: 0x0600C509 RID: 50441 RVA: 0x002CB18C File Offset: 0x002C938C
+	// Token: 0x06009919 RID: 39193 RVA: 0x002D62AC File Offset: 0x002D44AC
 	[NullableContext(1)]
 	public AUIBaseActor GetUsingItem(DangoAbyssDefine.EquipViewAttributeData data)
 	{
@@ -51,7 +51,7 @@ public class DangoAbyssAttributeParentItem : UiPanelBase, IDynamicScrollItem<Dan
 		return base.GetItem(0).GetOwner() as AUIBaseActor;
 	}
 
-	// Token: 0x0600C50A RID: 50442 RVA: 0x002CB1E0 File Offset: 0x002C93E0
+	// Token: 0x0600991A RID: 39194 RVA: 0x002D6300 File Offset: 0x002D4500
 	protected override void OnStart()
 	{
 		this.ItemTitle = new DangoAbyssAttributeTitleItem();
@@ -62,7 +62,7 @@ public class DangoAbyssAttributeParentItem : UiPanelBase, IDynamicScrollItem<Dan
 		this.ItemTag.Initialize(base.GetItem(2));
 	}
 
-	// Token: 0x0600C50B RID: 50443 RVA: 0x002CB244 File Offset: 0x002C9444
+	// Token: 0x0600991B RID: 39195 RVA: 0x002D6364 File Offset: 0x002D4564
 	[NullableContext(1)]
 	public void Update(DangoAbyssDefine.EquipViewAttributeData data, int index)
 	{
@@ -83,7 +83,7 @@ public class DangoAbyssAttributeParentItem : UiPanelBase, IDynamicScrollItem<Dan
 		this.ItemTitle.Refresh(data);
 	}
 
-	// Token: 0x0600C50C RID: 50444 RVA: 0x002CB2B4 File Offset: 0x002C94B4
+	// Token: 0x0600991C RID: 39196 RVA: 0x002D63D4 File Offset: 0x002D45D4
 	public void ClearItem()
 	{
 		this.Data = null;
@@ -107,15 +107,15 @@ public class DangoAbyssAttributeParentItem : UiPanelBase, IDynamicScrollItem<Dan
 		this.ItemTag = null;
 	}
 
-	// Token: 0x04005AD2 RID: 23250
+	// Token: 0x04005BA1 RID: 23457
 	public DangoAbyssDefine.EquipViewAttributeData Data;
 
-	// Token: 0x04005AD3 RID: 23251
+	// Token: 0x04005BA2 RID: 23458
 	public DangoAbyssAttributeTitleItem ItemTitle;
 
-	// Token: 0x04005AD4 RID: 23252
+	// Token: 0x04005BA3 RID: 23459
 	public DangoAbyssAttributeItem ItemAttribute;
 
-	// Token: 0x04005AD5 RID: 23253
+	// Token: 0x04005BA4 RID: 23460
 	public DangoAbyssAttributeTagItem ItemTag;
 }

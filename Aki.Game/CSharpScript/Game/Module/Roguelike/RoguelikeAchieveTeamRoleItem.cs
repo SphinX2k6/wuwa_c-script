@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -9,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DB4 RID: 19892
+	// Token: 0x02003D7D RID: 15741
 	public class RoguelikeAchieveTeamRoleItem : UiPanelBase
 	{
-		// Token: 0x060335B4 RID: 210356 RVA: 0x00BFD9D4 File Offset: 0x00BFBBD4
+		// Token: 0x06028421 RID: 164897 RVA: 0x00B46F04 File Offset: 0x00B45104
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -28,13 +27,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060335B5 RID: 210357 RVA: 0x00BFDA5E File Offset: 0x00BFBC5E
+		// Token: 0x06028422 RID: 164898 RVA: 0x00B46F8E File Offset: 0x00B4518E
 		protected override void OnStart()
 		{
 			this.SetEmptyState(true);
 		}
 
-		// Token: 0x060335B6 RID: 210358 RVA: 0x00BFDA68 File Offset: 0x00BFBC68
+		// Token: 0x06028423 RID: 164899 RVA: 0x00B46F98 File Offset: 0x00B45198
 		[NullableContext(2)]
 		public void Refresh(RogueArchiveInfoData archiveInfoData, int roleIndex)
 		{
@@ -43,7 +42,7 @@ namespace CSharpScript.Game.Module.Roguelike
 				this.SetEmptyState(true);
 				return;
 			}
-			int num = (archiveInfoData != null) ? archiveInfoData.RoleIds.ElementAtOrDefault(roleIndex) : 0;
+			int num = (archiveInfoData != null && roleIndex >= 0 && roleIndex < archiveInfoData.RoleIds.Count) ? archiveInfoData.RoleIds[roleIndex] : 0;
 			if (num <= 0)
 			{
 				this.SetEmptyState(true);
@@ -62,23 +61,23 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.SetEmptyState(false);
 		}
 
-		// Token: 0x060335B7 RID: 210359 RVA: 0x00BFDB2A File Offset: 0x00BFBD2A
+		// Token: 0x06028424 RID: 164900 RVA: 0x00B4706C File Offset: 0x00B4526C
 		private void SetEmptyState(bool isEmpty)
 		{
 			base.GetItem(1).SetUIActive(isEmpty);
 			base.GetTexture(2).SetUIActive(!isEmpty);
 		}
 
-		// Token: 0x0200AF2B RID: 44843
+		// Token: 0x02009960 RID: 39264
 		private class ERoguelikeAchieveTeamRoleItemComponents
 		{
-			// Token: 0x04035317 RID: 217879
+			// Token: 0x0402FD4C RID: 195916
 			public const int BtnItem = 0;
 
-			// Token: 0x04035318 RID: 217880
+			// Token: 0x0402FD4D RID: 195917
 			public const int PnlEmpty = 1;
 
-			// Token: 0x04035319 RID: 217881
+			// Token: 0x0402FD4E RID: 195918
 			public const int TexRoleAvatar = 2;
 		}
 	}

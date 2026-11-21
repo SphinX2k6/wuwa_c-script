@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C6F RID: 3183
+	// Token: 0x02000D4E RID: 3406
 	public class ICustomBulletLogic
 	{
-		// Token: 0x060048F7 RID: 18679 RVA: 0x000B73E9 File Offset: 0x000B55E9
-		[NullableContext(1)]
+		// Token: 0x06004D96 RID: 19862 RVA: 0x000C1BED File Offset: 0x000BFDED
 		public static ICustomBulletLogic Create(ICustomBulletLogic? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170015D6 RID: 5590
-		// (get) Token: 0x060048F8 RID: 18680 RVA: 0x000B7408 File Offset: 0x000B5608
+		// Token: 0x170016F5 RID: 5877
+		// (get) Token: 0x06004D97 RID: 19863 RVA: 0x000C1C0C File Offset: 0x000BFE0C
 		public virtual ECustomBulletLogic Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040029A2 RID: 10658
+		// Token: 0x04002C0F RID: 11279
 		private ICustomBulletLogic Instance;
 	}
 }

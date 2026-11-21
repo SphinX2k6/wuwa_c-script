@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F39 RID: 24377
+	// Token: 0x0200657D RID: 25981
 	public enum EClientEventPianoEventType : byte
 	{
-		// Token: 0x0400FC8E RID: 64654
+		// Token: 0x04010A04 RID: 68100
 		UpdateSubtitle,
-		// Token: 0x0400FC8F RID: 64655
+		// Token: 0x04010A05 RID: 68101
 		SwitchPhase
 	}
 }

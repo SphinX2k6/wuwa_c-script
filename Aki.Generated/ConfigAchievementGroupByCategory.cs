@@ -9,13 +9,13 @@ namespace Aki.Config
 	// Token: 0x02000038 RID: 56
 	public class ConfigAchievementGroupByCategory : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000150 RID: 336 RVA: 0x00061260 File Offset: 0x0005F460
+		// Token: 0x06000150 RID: 336 RVA: 0x00064B00 File Offset: 0x00062D00
 		static ConfigAchievementGroupByCategory()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAchievementGroupByCategory.CreateStaticDefaultValue), new Action(ConfigAchievementGroupByCategory.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000151 RID: 337 RVA: 0x00061280 File Offset: 0x0005F480
+		// Token: 0x06000151 RID: 337 RVA: 0x00064B20 File Offset: 0x00062D20
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAchievementGroupByCategory.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000152 RID: 338 RVA: 0x000612FF File Offset: 0x0005F4FF
+		// Token: 0x06000152 RID: 338 RVA: 0x00064B9F File Offset: 0x00062D9F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAchievementGroupByCategory.LogPair = null;
 			ConfigAchievementGroupByCategory.HandleId = 0;
 		}
 
-		// Token: 0x06000153 RID: 339 RVA: 0x0006130D File Offset: 0x0005F50D
+		// Token: 0x06000153 RID: 339 RVA: 0x00064BAD File Offset: 0x00062DAD
 		public static void Init()
 		{
 			ConfigAchievementGroupByCategory.HandleId = ConfigCommon.InitDataStatement(ConfigAchievementGroupByCategory.HandleId, "db_achievement.db", "select BinData from `AchievementGroup` where Category=?");
 		}
 
-		// Token: 0x06000154 RID: 340 RVA: 0x00061328 File Offset: 0x0005F528
+		// Token: 0x06000154 RID: 340 RVA: 0x00064BC8 File Offset: 0x00062DC8
 		[NullableContext(2)]
 		public static IReadOnlyList<AchievementGroup> GetConfigList(int p0Category, bool useCache = true)
 		{

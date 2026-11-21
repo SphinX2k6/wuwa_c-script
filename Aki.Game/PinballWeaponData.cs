@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 
-// Token: 0x020013E9 RID: 5097
+// Token: 0x0200089D RID: 2205
 [NullableContext(1)]
 [Nullable(0)]
 public class PinballWeaponData
 {
-	// Token: 0x06008FF7 RID: 36855 RVA: 0x001F24AC File Offset: 0x001F06AC
+	// Token: 0x0600638C RID: 25484 RVA: 0x001FAFE8 File Offset: 0x001F91E8
 	public void Phrase(PinballWeapon info)
 	{
 		this.Id = info.ConfigId;
@@ -42,13 +42,13 @@ public class PinballWeaponData
 		}
 	}
 
-	// Token: 0x06008FF8 RID: 36856 RVA: 0x001F260C File Offset: 0x001F080C
+	// Token: 0x0600638D RID: 25485 RVA: 0x001FB148 File Offset: 0x001F9348
 	public bool GetCanDecompose()
 	{
 		return !this.GetIsLock() && this.RoleId == 0;
 	}
 
-	// Token: 0x06008FF9 RID: 36857 RVA: 0x001F2621 File Offset: 0x001F0821
+	// Token: 0x0600638E RID: 25486 RVA: 0x001FB15D File Offset: 0x001F935D
 	public void SetIsLock(bool lockVal)
 	{
 		if (lockVal)
@@ -59,54 +59,54 @@ public class PinballWeaponData
 		this.FuncValue &= -2;
 	}
 
-	// Token: 0x06008FFA RID: 36858 RVA: 0x001F2644 File Offset: 0x001F0844
+	// Token: 0x0600638F RID: 25487 RVA: 0x001FB180 File Offset: 0x001F9380
 	public bool GetIsLock()
 	{
 		return (this.FuncValue & 1) > 0;
 	}
 
-	// Token: 0x06008FFB RID: 36859 RVA: 0x001F2651 File Offset: 0x001F0851
+	// Token: 0x06006390 RID: 25488 RVA: 0x001FB18D File Offset: 0x001F938D
 	public bool GetIsPersonWeapon()
 	{
 		return this.PersonType > 0;
 	}
 
-	// Token: 0x04003F9C RID: 16284
+	// Token: 0x04004034 RID: 16436
 	public int Id;
 
-	// Token: 0x04003F9D RID: 16285
+	// Token: 0x04004035 RID: 16437
 	public int IncId;
 
-	// Token: 0x04003F9E RID: 16286
+	// Token: 0x04004036 RID: 16438
 	public int FuncValue;
 
-	// Token: 0x04003F9F RID: 16287
+	// Token: 0x04004037 RID: 16439
 	public int RoleId;
 
-	// Token: 0x04003FA0 RID: 16288
+	// Token: 0x04004038 RID: 16440
 	public int MainEntryId;
 
-	// Token: 0x04003FA1 RID: 16289
+	// Token: 0x04004039 RID: 16441
 	public int SubEntryId;
 
-	// Token: 0x04003FA2 RID: 16290
+	// Token: 0x0400403A RID: 16442
 	public int Quality;
 
-	// Token: 0x04003FA3 RID: 16291
+	// Token: 0x0400403B RID: 16443
 	public string Name = "";
 
-	// Token: 0x04003FA4 RID: 16292
+	// Token: 0x0400403C RID: 16444
 	public int Type;
 
-	// Token: 0x04003FA5 RID: 16293
+	// Token: 0x0400403D RID: 16445
 	public string Icon = "";
 
-	// Token: 0x04003FA6 RID: 16294
+	// Token: 0x0400403E RID: 16446
 	public int[] PropList = Array.Empty<int>();
 
-	// Token: 0x04003FA7 RID: 16295
+	// Token: 0x0400403F RID: 16447
 	public bool IsSelected;
 
-	// Token: 0x04003FA8 RID: 16296
+	// Token: 0x04004040 RID: 16448
 	public int PersonType;
 }

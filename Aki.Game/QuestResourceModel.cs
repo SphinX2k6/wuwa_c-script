@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -12,14 +11,14 @@ using CSharpScript.Launcher.Util;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x0200266A RID: 9834
+// Token: 0x02001B55 RID: 6997
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class QuestResourceModel : ModelBase
 {
-	// Token: 0x170019A3 RID: 6563
-	// (get) Token: 0x06014218 RID: 82456 RVA: 0x00515EB5 File Offset: 0x005140B5
+	// Token: 0x170019DB RID: 6619
+	// (get) Token: 0x060116FA RID: 71418 RVA: 0x00524B6D File Offset: 0x00522D6D
 	public bool IsSeparateVideo
 	{
 		get
@@ -28,7 +27,7 @@ public class QuestResourceModel : ModelBase
 		}
 	}
 
-	// Token: 0x06014219 RID: 82457 RVA: 0x00515EC4 File Offset: 0x005140C4
+	// Token: 0x060116FB RID: 71419 RVA: 0x00524B7C File Offset: 0x00522D7C
 	protected override bool OnInit()
 	{
 		if (!VideoResUpdate.Instance.GetIsSeparateVideo())
@@ -95,8 +94,8 @@ public class QuestResourceModel : ModelBase
 				}
 			}
 		}
-		VideoResUpdate.Instance.SetAllSpecialVideoResPak(EVideoResSizeType.FemalePrepare, hashSet2.ToList<string>());
-		VideoResUpdate.Instance.SetAllSpecialVideoResPak(EVideoResSizeType.MalePrepare, hashSet.ToList<string>());
+		VideoResUpdate.Instance.SetAllSpecialVideoResPak(EVideoResSizeType.FemalePrepare, new List<string>(hashSet2));
+		VideoResUpdate.Instance.SetAllSpecialVideoResPak(EVideoResSizeType.MalePrepare, new List<string>(hashSet));
 		VideoResUpdate.Instance.CheckVideoManifestsData();
 		this.UserFirstSelectedVideoUpdate = LauncherStorageLib.Instance.GetDeviceSaved<int>(ELauncherStorageDeviceKey.UserFirstSelectedVideoUpdate, 0);
 		Log instance = Log.Instance;
@@ -108,8 +107,8 @@ public class QuestResourceModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x170019A4 RID: 6564
-	// (get) Token: 0x0601421A RID: 82458 RVA: 0x00516164 File Offset: 0x00514364
+	// Token: 0x170019DC RID: 6620
+	// (get) Token: 0x060116FC RID: 71420 RVA: 0x00524E1C File Offset: 0x0052301C
 	public Dictionary<int, List<string>> FemaleQuestIdToPack
 	{
 		get
@@ -118,8 +117,8 @@ public class QuestResourceModel : ModelBase
 		}
 	}
 
-	// Token: 0x170019A5 RID: 6565
-	// (get) Token: 0x0601421B RID: 82459 RVA: 0x0051616C File Offset: 0x0051436C
+	// Token: 0x170019DD RID: 6621
+	// (get) Token: 0x060116FD RID: 71421 RVA: 0x00524E24 File Offset: 0x00523024
 	public Dictionary<int, List<string>> MaleQuestIdToPack
 	{
 		get
@@ -128,8 +127,8 @@ public class QuestResourceModel : ModelBase
 		}
 	}
 
-	// Token: 0x170019A6 RID: 6566
-	// (get) Token: 0x0601421C RID: 82460 RVA: 0x00516174 File Offset: 0x00514374
+	// Token: 0x170019DE RID: 6622
+	// (get) Token: 0x060116FE RID: 71422 RVA: 0x00524E2C File Offset: 0x0052302C
 	public Dictionary<int, HashSet<int>> QuestIdToCgIds
 	{
 		get
@@ -138,20 +137,20 @@ public class QuestResourceModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601421D RID: 82461 RVA: 0x0051617C File Offset: 0x0051437C
+	// Token: 0x060116FF RID: 71423 RVA: 0x00524E34 File Offset: 0x00523034
 	protected override bool OnClear()
 	{
 		VideoResUpdate.Instance.GetIsSeparateVideo();
 		return true;
 	}
 
-	// Token: 0x0601421E RID: 82462 RVA: 0x0051618A File Offset: 0x0051438A
+	// Token: 0x06011700 RID: 71424 RVA: 0x00524E42 File Offset: 0x00523042
 	public void ClearCheckQuests()
 	{
 		this.LoginQuests.Clear();
 	}
 
-	// Token: 0x0601421F RID: 82463 RVA: 0x00516198 File Offset: 0x00514398
+	// Token: 0x06011701 RID: 71425 RVA: 0x00524E50 File Offset: 0x00523050
 	public void FillCheckQuests(int[] quests)
 	{
 		this.LoginQuests.Clear();
@@ -168,7 +167,7 @@ public class QuestResourceModel : ModelBase
 		this.LoginQuestsInitialed = true;
 	}
 
-	// Token: 0x06014220 RID: 82464 RVA: 0x00516204 File Offset: 0x00514404
+	// Token: 0x06011702 RID: 71426 RVA: 0x00524EBC File Offset: 0x005230BC
 	public void FillFinishedQuests(int[] quests)
 	{
 		this.LoginFinishedQuests.Clear();
@@ -185,7 +184,7 @@ public class QuestResourceModel : ModelBase
 		this.LoginFinishedQuestsInitialed = true;
 	}
 
-	// Token: 0x06014221 RID: 82465 RVA: 0x00516270 File Offset: 0x00514470
+	// Token: 0x06011703 RID: 71427 RVA: 0x00524F28 File Offset: 0x00523128
 	private List<string> GetLoginPakNamesWithoutFinishedQuests(EPlayerGender gender = EPlayerGender.None)
 	{
 		HashSet<string> hashSet = new HashSet<string>();
@@ -217,12 +216,12 @@ public class QuestResourceModel : ModelBase
 		}
 		if (hashSet.Count > 0)
 		{
-			return hashSet.ToList<string>();
+			return new List<string>(hashSet);
 		}
 		return new List<string>();
 	}
 
-	// Token: 0x06014222 RID: 82466 RVA: 0x005163D8 File Offset: 0x005145D8
+	// Token: 0x06011704 RID: 71428 RVA: 0x00525090 File Offset: 0x00523290
 	private List<string> GetLoginQuestsPakNames()
 	{
 		if (this.LoginQuests.Count == 0)
@@ -267,12 +266,12 @@ public class QuestResourceModel : ModelBase
 		IL_11A:
 		if (hashSet.Count > 0)
 		{
-			return hashSet.ToList<string>();
+			return new List<string>(hashSet);
 		}
 		return new List<string>();
 	}
 
-	// Token: 0x06014223 RID: 82467 RVA: 0x00516548 File Offset: 0x00514748
+	// Token: 0x06011705 RID: 71429 RVA: 0x00525200 File Offset: 0x00523400
 	public bool NeedCheckQuestResource()
 	{
 		List<string> loginNeedDownloadPakNames = this.GetLoginNeedDownloadPakNames();
@@ -280,7 +279,7 @@ public class QuestResourceModel : ModelBase
 		return valueTuple.Item2 != valueTuple.Item3;
 	}
 
-	// Token: 0x06014224 RID: 82468 RVA: 0x00516579 File Offset: 0x00514779
+	// Token: 0x06011706 RID: 71430 RVA: 0x00525231 File Offset: 0x00523431
 	public List<string> GetLoginNeedDownloadPakNames()
 	{
 		if (ResourceDiffUpdaterManager.Instance.IsGrayBoxHit())
@@ -290,7 +289,7 @@ public class QuestResourceModel : ModelBase
 		return this.GetLoginPakNamesWithoutFinishedQuests(EPlayerGender.None);
 	}
 
-	// Token: 0x06014225 RID: 82469 RVA: 0x00516598 File Offset: 0x00514798
+	// Token: 0x06011707 RID: 71431 RVA: 0x00525250 File Offset: 0x00523450
 	public void UserClicked()
 	{
 		if (this.UserClickPromise != null)
@@ -301,7 +300,7 @@ public class QuestResourceModel : ModelBase
 		Log.Instance.Error(ELogModule.QuestResource, ELogAuthor.ZWY, "检查任务数据点击回调错误", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x06014226 RID: 82470 RVA: 0x005165D8 File Offset: 0x005147D8
+	// Token: 0x06011708 RID: 71432 RVA: 0x00525290 File Offset: 0x00523490
 	public void UserDownloadSuc()
 	{
 		if (this.UserDownloadSucPromise != null)
@@ -312,7 +311,7 @@ public class QuestResourceModel : ModelBase
 		Log.Instance.Error(ELogModule.QuestResource, ELogAuthor.ZWY, "检查任务下载回调错误", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x06014227 RID: 82471 RVA: 0x00516618 File Offset: 0x00514818
+	// Token: 0x06011709 RID: 71433 RVA: 0x005252D0 File Offset: 0x005234D0
 	public void UserClickOutOfMemoryView(bool result)
 	{
 		if (this.UserClickOutOfMemoryViewPromise != null)
@@ -323,7 +322,7 @@ public class QuestResourceModel : ModelBase
 		Log.Instance.Error(ELogModule.QuestResource, ELogAuthor.ZWY, "检查任务硬盘不足回调错误", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x06014228 RID: 82472 RVA: 0x00516658 File Offset: 0x00514858
+	// Token: 0x0601170A RID: 71434 RVA: 0x00525310 File Offset: 0x00523510
 	public void UserClickNetWorkError(bool result)
 	{
 		if (this.UserClickNetWorkErrorPromise != null)
@@ -334,19 +333,19 @@ public class QuestResourceModel : ModelBase
 		Log.Instance.Error(ELogModule.QuestResource, ELogAuthor.ZWY, "检查任务网络异常回调错误", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x06014229 RID: 82473 RVA: 0x00516696 File Offset: 0x00514896
+	// Token: 0x0601170B RID: 71435 RVA: 0x0052534E File Offset: 0x0052354E
 	public void SetIsDownloadNotEnoughSpaceError(bool result)
 	{
 		this.IsDownloadNotEnoughSpaceError = result;
 	}
 
-	// Token: 0x0601422A RID: 82474 RVA: 0x0051669F File Offset: 0x0051489F
+	// Token: 0x0601170C RID: 71436 RVA: 0x00525357 File Offset: 0x00523557
 	public void SetIsReportDownloadNotEnoughSpace(bool result)
 	{
 		this.IsReportDownloadNotEnoughSpace = new bool?(result);
 	}
 
-	// Token: 0x0601422B RID: 82475 RVA: 0x005166B0 File Offset: 0x005148B0
+	// Token: 0x0601170D RID: 71437 RVA: 0x00525368 File Offset: 0x00523568
 	public UniTask CheckQuestResource()
 	{
 		QuestResourceModel.<CheckQuestResource>d__41 <CheckQuestResource>d__;
@@ -357,7 +356,7 @@ public class QuestResourceModel : ModelBase
 		return <CheckQuestResource>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601422C RID: 82476 RVA: 0x005166F4 File Offset: 0x005148F4
+	// Token: 0x0601170E RID: 71438 RVA: 0x005253AC File Offset: 0x005235AC
 	private void OpenWaitNetworkTypeUserConfirm()
 	{
 		Log.Instance.Info(ELogModule.QuestResource, ELogAuthor.ZYL, "检查网络: 打开蜂窝网络下载同意弹窗", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -390,7 +389,7 @@ public class QuestResourceModel : ModelBase
 		});
 	}
 
-	// Token: 0x0601422D RID: 82477 RVA: 0x005167C4 File Offset: 0x005149C4
+	// Token: 0x0601170F RID: 71439 RVA: 0x0052547C File Offset: 0x0052367C
 	private void CloseWaitNetworkTypeUserConfirm(bool bConfirm)
 	{
 		Log instance = Log.Instance;
@@ -409,7 +408,7 @@ public class QuestResourceModel : ModelBase
 		waitUserConfirmNetworkTypePromise.SetResult(bConfirm);
 	}
 
-	// Token: 0x0601422E RID: 82478 RVA: 0x00516828 File Offset: 0x00514A28
+	// Token: 0x06011710 RID: 71440 RVA: 0x005254E0 File Offset: 0x005236E0
 	[NullableContext(0)]
 	private UniTask<bool> WaitNetworkTypeUserConfirmResult()
 	{
@@ -421,7 +420,7 @@ public class QuestResourceModel : ModelBase
 		return <WaitNetworkTypeUserConfirmResult>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601422F RID: 82479 RVA: 0x0051686C File Offset: 0x00514A6C
+	// Token: 0x06011711 RID: 71441 RVA: 0x00525524 File Offset: 0x00523724
 	public UniTask TryCheckQuestResource()
 	{
 		QuestResourceModel.<TryCheckQuestResource>d__45 <TryCheckQuestResource>d__;
@@ -432,7 +431,7 @@ public class QuestResourceModel : ModelBase
 		return <TryCheckQuestResource>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014230 RID: 82480 RVA: 0x005168B0 File Offset: 0x00514AB0
+	// Token: 0x06011712 RID: 71442 RVA: 0x00525568 File Offset: 0x00523768
 	[NullableContext(0)]
 	public UniTask<bool> CheckQuestData()
 	{
@@ -444,7 +443,7 @@ public class QuestResourceModel : ModelBase
 		return <CheckQuestData>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014231 RID: 82481 RVA: 0x005168F4 File Offset: 0x00514AF4
+	// Token: 0x06011713 RID: 71443 RVA: 0x005255AC File Offset: 0x005237AC
 	[NullableContext(2)]
 	private bool HandlePullResourcePackageResponse(ClientPullResourcePackageResponse response)
 	{
@@ -463,12 +462,16 @@ public class QuestResourceModel : ModelBase
 			instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 			return false;
 		}
-		this.FillCheckQuests(response.NeedConfirmQuestIds.ToArray<int>());
-		this.FillFinishedQuests(response.FinishMp4QuestIds.ToArray<int>());
+		int[] array = new int[response.NeedConfirmQuestIds.Count];
+		response.NeedConfirmQuestIds.CopyTo(array, 0);
+		this.FillCheckQuests(array);
+		int[] array2 = new int[response.FinishMp4QuestIds.Count];
+		response.FinishMp4QuestIds.CopyTo(array2, 0);
+		this.FillFinishedQuests(array2);
 		return true;
 	}
 
-	// Token: 0x06014232 RID: 82482 RVA: 0x00516980 File Offset: 0x00514B80
+	// Token: 0x06011714 RID: 71444 RVA: 0x00525660 File Offset: 0x00523860
 	public unsafe void CalcPrepareResource()
 	{
 		if (!VideoResUpdate.Instance.GetIsSeparateVideo())
@@ -502,12 +505,12 @@ public class QuestResourceModel : ModelBase
 				}
 			}
 		}
-		ValueTuple<List<RequireFileInfo>, long, long, List<LocalFileInfo>> valueTuple = VideoResUpdate.Instance.AnalyzeRequireFilesByNames(hashSet.ToList<string>());
+		ValueTuple<List<RequireFileInfo>, long, long, List<LocalFileInfo>> valueTuple = VideoResUpdate.Instance.AnalyzeRequireFilesByNames(new List<string>(hashSet));
 		long item2 = valueTuple.Item2;
 		long item3 = valueTuple.Item3;
 		VideoResUpdate.Instance.SetVideoResSize(EVideoResSizeType.FemalePrepare, item2);
 		VideoResUpdate.Instance.SetVideoResSavedSize(EVideoResSizeType.FemalePrepare, item3);
-		VideoResUpdate.Instance.SetVideoResPak(EVideoResSizeType.FemalePrepare, hashSet.ToList<string>());
+		VideoResUpdate.Instance.SetVideoResPak(EVideoResSizeType.FemalePrepare, new List<string>(hashSet));
 		if (VideoUpdateManager.Instance.GetVideoUpdater(EVideoResSizeType.FemalePrepare).GetDownLoadState() == EVideoDownloadStatus.None)
 		{
 			VideoUpdateManager.Instance.GetVideoUpdater(EVideoResSizeType.FemalePrepare).SetDownLoadProgress(item3, item2);
@@ -542,12 +545,12 @@ public class QuestResourceModel : ModelBase
 				}
 			}
 		}
-		ValueTuple<List<RequireFileInfo>, long, long, List<LocalFileInfo>> valueTuple2 = VideoResUpdate.Instance.AnalyzeRequireFilesByNames(hashSet2.ToList<string>());
+		ValueTuple<List<RequireFileInfo>, long, long, List<LocalFileInfo>> valueTuple2 = VideoResUpdate.Instance.AnalyzeRequireFilesByNames(new List<string>(hashSet2));
 		long item5 = valueTuple2.Item2;
 		long item6 = valueTuple2.Item3;
 		VideoResUpdate.Instance.SetVideoResSize(EVideoResSizeType.MalePrepare, item5);
 		VideoResUpdate.Instance.SetVideoResSavedSize(EVideoResSizeType.MalePrepare, item6);
-		VideoResUpdate.Instance.SetVideoResPak(EVideoResSizeType.MalePrepare, hashSet2.ToList<string>());
+		VideoResUpdate.Instance.SetVideoResPak(EVideoResSizeType.MalePrepare, new List<string>(hashSet2));
 		if (VideoUpdateManager.Instance.GetVideoUpdater(EVideoResSizeType.MalePrepare).GetDownLoadState() == EVideoDownloadStatus.None)
 		{
 			VideoUpdateManager.Instance.GetVideoUpdater(EVideoResSizeType.MalePrepare).SetDownLoadProgress(item6, item5);
@@ -563,13 +566,13 @@ public class QuestResourceModel : ModelBase
 		this.UseCachePrepareResourceSize = true;
 	}
 
-	// Token: 0x06014233 RID: 82483 RVA: 0x00516E20 File Offset: 0x00515020
+	// Token: 0x06011715 RID: 71445 RVA: 0x00525B00 File Offset: 0x00523D00
 	public void RefreshCachePrepareResourceSize()
 	{
 		this.UseCachePrepareResourceSize = false;
 	}
 
-	// Token: 0x06014234 RID: 82484 RVA: 0x00516E2C File Offset: 0x0051502C
+	// Token: 0x06011716 RID: 71446 RVA: 0x00525B0C File Offset: 0x00523D0C
 	public List<string> GetQuestRefPakNames(int questId, EPlayerGender gender)
 	{
 		List<string> list = new List<string>();
@@ -590,27 +593,41 @@ public class QuestResourceModel : ModelBase
 			{
 				list = list4;
 			}
-			List<string> second;
-			if (this.FemaleQuestRef.TryGetValue(questId, out second))
+			List<string> list5;
+			if (this.FemaleQuestRef.TryGetValue(questId, out list5))
 			{
-				list = list.Concat(second).ToList<string>();
+				List<string> list6 = new List<string>(list.Count + list5.Count);
+				list6.AddRange(list);
+				list6.AddRange(list5);
+				list = list6;
 			}
 		}
-		return list.Distinct<string>().ToList<string>();
+		List<string> list7 = new List<string>(list.Count);
+		HashSet<string> hashSet = new HashSet<string>();
+		foreach (string item in list)
+		{
+			if (hashSet.Add(item))
+			{
+				list7.Add(item);
+			}
+		}
+		return list7;
 	}
 
-	// Token: 0x06014235 RID: 82485 RVA: 0x00516EAC File Offset: 0x005150AC
+	// Token: 0x06011717 RID: 71447 RVA: 0x00525BF8 File Offset: 0x00523DF8
 	public int[] GetQuestRefCgIds(int questId)
 	{
-		HashSet<int> source;
-		if (this.QuestRefCgIds.TryGetValue(questId, out source))
+		HashSet<int> hashSet;
+		if (this.QuestRefCgIds.TryGetValue(questId, out hashSet))
 		{
-			return source.ToArray<int>();
+			int[] array = new int[hashSet.Count];
+			hashSet.CopyTo(array, 0);
+			return array;
 		}
 		return Array.Empty<int>();
 	}
 
-	// Token: 0x06014236 RID: 82486 RVA: 0x00516ED8 File Offset: 0x005150D8
+	// Token: 0x06011718 RID: 71448 RVA: 0x00525C30 File Offset: 0x00523E30
 	public unsafe List<int> FilterVideoByFinishedQuest(IReadOnlyList<int> videoIds)
 	{
 		List<int> list = new List<int>();
@@ -643,8 +660,8 @@ public class QuestResourceModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x170019A7 RID: 6567
-	// (get) Token: 0x06014237 RID: 82487 RVA: 0x00517028 File Offset: 0x00515228
+	// Token: 0x170019DF RID: 6623
+	// (get) Token: 0x06011719 RID: 71449 RVA: 0x00525D80 File Offset: 0x00523F80
 	public static QuestResourceModel Instance
 	{
 		get
@@ -653,7 +670,7 @@ public class QuestResourceModel : ModelBase
 		}
 	}
 
-	// Token: 0x06014238 RID: 82488 RVA: 0x0051702F File Offset: 0x0051522F
+	// Token: 0x0601171A RID: 71450 RVA: 0x00525D87 File Offset: 0x00523F87
 	public static QuestResourceModel GetOrCreateInstance()
 	{
 		if (QuestResourceModel._Instance == null)
@@ -663,7 +680,7 @@ public class QuestResourceModel : ModelBase
 		return QuestResourceModel._Instance;
 	}
 
-	// Token: 0x06014239 RID: 82489 RVA: 0x00517043 File Offset: 0x00515243
+	// Token: 0x0601171B RID: 71451 RVA: 0x00525D9B File Offset: 0x00523F9B
 	public static bool CreateInstance()
 	{
 		if (QuestResourceModel._Instance != null)
@@ -674,24 +691,24 @@ public class QuestResourceModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601423A RID: 82490 RVA: 0x00517059 File Offset: 0x00515259
+	// Token: 0x0601171C RID: 71452 RVA: 0x00525DB1 File Offset: 0x00523FB1
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601423B RID: 82491 RVA: 0x0051705B File Offset: 0x0051525B
+	// Token: 0x0601171D RID: 71453 RVA: 0x00525DB3 File Offset: 0x00523FB3
 	public static void ResetStaticDefaultValue()
 	{
 		QuestResourceModel._Instance = null;
 	}
 
-	// Token: 0x0601423C RID: 82492 RVA: 0x00517063 File Offset: 0x00515263
+	// Token: 0x0601171E RID: 71454 RVA: 0x00525DBB File Offset: 0x00523FBB
 	static QuestResourceModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(QuestResourceModel.CreateStaticDefaultValue), new Action(QuestResourceModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601423E RID: 82494 RVA: 0x005170C1 File Offset: 0x005152C1
+	// Token: 0x06011720 RID: 71456 RVA: 0x00525E19 File Offset: 0x00524019
 	[CompilerGenerated]
 	private void <OpenWaitNetworkTypeUserConfirm>g__OnConfirm|42_0()
 	{
@@ -706,7 +723,7 @@ public class QuestResourceModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601423F RID: 82495 RVA: 0x005170FC File Offset: 0x005152FC
+	// Token: 0x06011721 RID: 71457 RVA: 0x00525E54 File Offset: 0x00524054
 	[CompilerGenerated]
 	private void <OpenWaitNetworkTypeUserConfirm>g__OnCancelOrClose|42_1()
 	{
@@ -720,65 +737,65 @@ public class QuestResourceModel : ModelBase
 		}
 	}
 
-	// Token: 0x040097AF RID: 38831
+	// Token: 0x04009907 RID: 39175
 	private readonly Dictionary<int, List<string>> MaleQuestRef = new Dictionary<int, List<string>>();
 
-	// Token: 0x040097B0 RID: 38832
+	// Token: 0x04009908 RID: 39176
 	private readonly Dictionary<int, List<string>> FemaleQuestRef = new Dictionary<int, List<string>>();
 
-	// Token: 0x040097B1 RID: 38833
+	// Token: 0x04009909 RID: 39177
 	private readonly Dictionary<int, HashSet<int>> QuestRefCgIds = new Dictionary<int, HashSet<int>>();
 
-	// Token: 0x040097B2 RID: 38834
+	// Token: 0x0400990A RID: 39178
 	private bool UseCachePrepareResourceSize;
 
-	// Token: 0x040097B3 RID: 38835
+	// Token: 0x0400990B RID: 39179
 	private int UserFirstSelectedVideoUpdate;
 
-	// Token: 0x040097B4 RID: 38836
+	// Token: 0x0400990C RID: 39180
 	[Nullable(2)]
 	protected CustomPromise UserClickPromise;
 
-	// Token: 0x040097B5 RID: 38837
+	// Token: 0x0400990D RID: 39181
 	[Nullable(2)]
 	protected CustomPromise UserDownloadSucPromise;
 
-	// Token: 0x040097B6 RID: 38838
+	// Token: 0x0400990E RID: 39182
 	[Nullable(2)]
 	protected CustomPromise<bool> UserClickOutOfMemoryViewPromise;
 
-	// Token: 0x040097B7 RID: 38839
+	// Token: 0x0400990F RID: 39183
 	[Nullable(2)]
 	protected CustomPromise<bool> UserClickNetWorkErrorPromise;
 
-	// Token: 0x040097B8 RID: 38840
+	// Token: 0x04009910 RID: 39184
 	public readonly HashSet<int> LoginQuests = new HashSet<int>();
 
-	// Token: 0x040097B9 RID: 38841
+	// Token: 0x04009911 RID: 39185
 	public readonly HashSet<int> LoginFinishedQuests = new HashSet<int>();
 
-	// Token: 0x040097BA RID: 38842
+	// Token: 0x04009912 RID: 39186
 	private bool LoginQuestsInitialed;
 
-	// Token: 0x040097BB RID: 38843
+	// Token: 0x04009913 RID: 39187
 	private bool LoginFinishedQuestsInitialed;
 
-	// Token: 0x040097BC RID: 38844
+	// Token: 0x04009914 RID: 39188
 	private QuestResourceUpdateProxy UpdateProxy;
 
-	// Token: 0x040097BD RID: 38845
+	// Token: 0x04009915 RID: 39189
 	private int WaitUserConfirmNetworkTypeViewId;
 
-	// Token: 0x040097BE RID: 38846
+	// Token: 0x04009916 RID: 39190
 	private CustomPromise<bool> WaitUserConfirmNetworkTypePromise;
 
-	// Token: 0x040097BF RID: 38847
+	// Token: 0x04009917 RID: 39191
 	private bool IsDownloadNotEnoughSpaceError;
 
-	// Token: 0x040097C0 RID: 38848
+	// Token: 0x04009918 RID: 39192
 	private bool? IsReportDownloadNotEnoughSpace;
 
-	// Token: 0x040097C1 RID: 38849
+	// Token: 0x04009919 RID: 39193
 	[Nullable(2)]
 	private static QuestResourceModel _Instance;
 }

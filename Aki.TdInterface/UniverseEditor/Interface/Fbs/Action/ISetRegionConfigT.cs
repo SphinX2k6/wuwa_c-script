@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200705F RID: 28767
+	// Token: 0x0200782B RID: 30763
 	public class ISetRegionConfigT
 	{
-		// Token: 0x1700D5D7 RID: 54743
-		// (get) Token: 0x06032F04 RID: 208644 RVA: 0x006DF58E File Offset: 0x006DD78E
-		// (set) Token: 0x06032F05 RID: 208645 RVA: 0x006DF596 File Offset: 0x006DD796
+		// Token: 0x1700E1BA RID: 57786
+		// (get) Token: 0x060361A5 RID: 221605 RVA: 0x0073FB42 File Offset: 0x0073DD42
+		// (set) Token: 0x060361A6 RID: 221606 RVA: 0x0073FB4A File Offset: 0x0073DD4A
 		public ERegionConfigType Type { get; set; }
 
-		// Token: 0x06032F06 RID: 208646 RVA: 0x006DF59F File Offset: 0x006DD79F
+		// Token: 0x060361A7 RID: 221607 RVA: 0x0073FB53 File Offset: 0x0073DD53
 		public ISetRegionConfigT()
 		{
 			this.Type = ERegionConfigType.Mpc;

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005DEF RID: 24047
+	// Token: 0x0200642C RID: 25644
 	public class IGiantTriggerTypeT
 	{
-		// Token: 0x1700B3FC RID: 46076
-		// (get) Token: 0x060292A6 RID: 168614 RVA: 0x005A6132 File Offset: 0x005A4332
-		// (set) Token: 0x060292A7 RID: 168615 RVA: 0x005A613A File Offset: 0x005A433A
+		// Token: 0x1700BD62 RID: 48482
+		// (get) Token: 0x0602B930 RID: 178480 RVA: 0x005EEE62 File Offset: 0x005ED062
+		// (set) Token: 0x0602B931 RID: 178481 RVA: 0x005EEE6A File Offset: 0x005ED06A
 		public EGiantTriggerType Type { get; set; }
 
-		// Token: 0x060292A8 RID: 168616 RVA: 0x005A6143 File Offset: 0x005A4343
+		// Token: 0x0602B932 RID: 178482 RVA: 0x005EEE73 File Offset: 0x005ED073
 		public IGiantTriggerTypeT()
 		{
 			this.Type = EGiantTriggerType.RoleState;

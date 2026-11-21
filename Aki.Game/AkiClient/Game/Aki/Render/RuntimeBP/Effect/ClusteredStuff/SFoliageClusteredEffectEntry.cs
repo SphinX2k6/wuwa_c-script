@@ -7,7 +7,7 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.Effect.ClusteredStuff
 {
-	// Token: 0x02003DE1 RID: 15841
+	// Token: 0x02003115 RID: 12565
 	[NullableContext(2)]
 	[Nullable(0)]
 	[HasGetTypeHash]
@@ -15,134 +15,124 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Effect.ClusteredStuff
 	[UnrealStructLayout(24, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 24)]
 	public class SFoliageClusteredEffectEntry : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x060277FC RID: 161788 RVA: 0x00993251 File Offset: 0x00991451
+		// Token: 0x0601EC81 RID: 126081 RVA: 0x0091D2F5 File Offset: 0x0091B4F5
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SFoliageClusteredEffectEntry._ScriptStructPtr != 0) ? SFoliageClusteredEffectEntry._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Render/RuntimeBP/Effect/ClusteredStuff/SFoliageClusteredEffectEntry.SFoliageClusteredEffectEntry", ref SFoliageClusteredEffectEntry._ScriptStructPtr);
 		}
 
-		// Token: 0x17005872 RID: 22642
-		// (get) Token: 0x060277FD RID: 161789 RVA: 0x00993275 File Offset: 0x00991475
-		// (set) Token: 0x060277FE RID: 161790 RVA: 0x00993289 File Offset: 0x00991489
+		// Token: 0x17003585 RID: 13701
+		// (get) Token: 0x0601EC82 RID: 126082 RVA: 0x0091D319 File Offset: 0x0091B519
+		// (set) Token: 0x0601EC83 RID: 126083 RVA: 0x0091D32D File Offset: 0x0091B52D
 		public unsafe UFoliageType FoliageType
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UFoliageType>(base.NativePtr / (IntPtr)sizeof(void*) + SFoliageClusteredEffectEntry.__PropertyOffset_0);
+				return BuiltinUtils.ObjectPropertyGetter<UFoliageType>(base.NativePtr / (IntPtr)sizeof(void*) + SFoliageClusteredEffectEntry.__PropertyOffset_FoliageType);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + SFoliageClusteredEffectEntry.__PropertyOffset_0, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + SFoliageClusteredEffectEntry.__PropertyOffset_FoliageType, value);
 			}
 		}
 
-		// Token: 0x17005873 RID: 22643
-		// (get) Token: 0x060277FF RID: 161791 RVA: 0x0099329E File Offset: 0x0099149E
-		// (set) Token: 0x06027800 RID: 161792 RVA: 0x009932B2 File Offset: 0x009914B2
+		// Token: 0x17003586 RID: 13702
+		// (get) Token: 0x0601EC84 RID: 126084 RVA: 0x0091D342 File Offset: 0x0091B542
+		// (set) Token: 0x0601EC85 RID: 126085 RVA: 0x0091D356 File Offset: 0x0091B556
 		public unsafe EffectClusteredStuffSettings EffectSetting
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<EffectClusteredStuffSettings>(base.NativePtr / (IntPtr)sizeof(void*) + SFoliageClusteredEffectEntry.__PropertyOffset_1);
+				return BuiltinUtils.ObjectPropertyGetter<EffectClusteredStuffSettings>(base.NativePtr / (IntPtr)sizeof(void*) + SFoliageClusteredEffectEntry.__PropertyOffset_EffectSetting);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + SFoliageClusteredEffectEntry.__PropertyOffset_1, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + SFoliageClusteredEffectEntry.__PropertyOffset_EffectSetting, value);
 			}
 		}
 
-		// Token: 0x17005874 RID: 22644
-		// (get) Token: 0x06027801 RID: 161793 RVA: 0x009932C7 File Offset: 0x009914C7
-		// (set) Token: 0x06027802 RID: 161794 RVA: 0x009932D7 File Offset: 0x009914D7
+		// Token: 0x17003587 RID: 13703
+		// (get) Token: 0x0601EC86 RID: 126086 RVA: 0x0091D36B File Offset: 0x0091B56B
+		// (set) Token: 0x0601EC87 RID: 126087 RVA: 0x0091D37B File Offset: 0x0091B57B
 		public unsafe int NumMin
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SFoliageClusteredEffectEntry.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)SFoliageClusteredEffectEntry.__PropertyOffset_NumMin);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SFoliageClusteredEffectEntry.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)SFoliageClusteredEffectEntry.__PropertyOffset_NumMin) = value;
 			}
 		}
 
-		// Token: 0x17005875 RID: 22645
-		// (get) Token: 0x06027803 RID: 161795 RVA: 0x009932E8 File Offset: 0x009914E8
-		// (set) Token: 0x06027804 RID: 161796 RVA: 0x009932F8 File Offset: 0x009914F8
+		// Token: 0x17003588 RID: 13704
+		// (get) Token: 0x0601EC88 RID: 126088 RVA: 0x0091D38C File Offset: 0x0091B58C
+		// (set) Token: 0x0601EC89 RID: 126089 RVA: 0x0091D39C File Offset: 0x0091B59C
 		public unsafe int NumMax
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SFoliageClusteredEffectEntry.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)SFoliageClusteredEffectEntry.__PropertyOffset_NumMax);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SFoliageClusteredEffectEntry.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)SFoliageClusteredEffectEntry.__PropertyOffset_NumMax) = value;
 			}
 		}
 
-		// Token: 0x06027805 RID: 161797 RVA: 0x00993309 File Offset: 0x00991509
+		// Token: 0x0601EC8A RID: 126090 RVA: 0x0091D3AD File Offset: 0x0091B5AD
 		public SFoliageClusteredEffectEntry()
 		{
 		}
 
-		// Token: 0x06027806 RID: 161798 RVA: 0x00993311 File Offset: 0x00991511
-		[NullableContext(1)]
-		public SFoliageClusteredEffectEntry(UFoliageType FoliageType, EffectClusteredStuffSettings EffectSetting, int NumMin, int NumMax)
-		{
-			this.FoliageType = FoliageType;
-			this.EffectSetting = EffectSetting;
-			this.NumMin = NumMin;
-			this.NumMax = NumMax;
-		}
-
-		// Token: 0x06027807 RID: 161799 RVA: 0x00993336 File Offset: 0x00991536
+		// Token: 0x0601EC8B RID: 126091 RVA: 0x0091D3B5 File Offset: 0x0091B5B5
 		protected override IntPtr GetUStructPtr()
 		{
 			return SFoliageClusteredEffectEntry.StaticStruct();
 		}
 
-		// Token: 0x06027808 RID: 161800 RVA: 0x00993342 File Offset: 0x00991542
+		// Token: 0x0601EC8C RID: 126092 RVA: 0x0091D3C1 File Offset: 0x0091B5C1
 		public SFoliageClusteredEffectEntry(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06027809 RID: 161801 RVA: 0x0099334C File Offset: 0x0099154C
+		// Token: 0x0601EC8D RID: 126093 RVA: 0x0091D3CB File Offset: 0x0091B5CB
 		public SFoliageClusteredEffectEntry(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602780A RID: 161802 RVA: 0x00993357 File Offset: 0x00991557
+		// Token: 0x0601EC8E RID: 126094 RVA: 0x0091D3D6 File Offset: 0x0091B5D6
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SFoliageClusteredEffectEntry(Pointer, false, true);
 		}
 
-		// Token: 0x0602780B RID: 161803 RVA: 0x00993361 File Offset: 0x00991561
+		// Token: 0x0601EC8F RID: 126095 RVA: 0x0091D3E0 File Offset: 0x0091B5E0
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SFoliageClusteredEffectEntry(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04013F75 RID: 81781
+		// Token: 0x040105A5 RID: 66981
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/Render/RuntimeBP/Effect/ClusteredStuff/SFoliageClusteredEffectEntry.SFoliageClusteredEffectEntry";
 
-		// Token: 0x04013F76 RID: 81782
+		// Token: 0x040105A6 RID: 66982
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04013F77 RID: 81783
-		internal static int __PropertyOffset_0;
+		// Token: 0x040105A7 RID: 66983
+		internal static int __PropertyOffset_FoliageType;
 
-		// Token: 0x04013F78 RID: 81784
-		internal static int __PropertyOffset_1;
+		// Token: 0x040105A8 RID: 66984
+		internal static int __PropertyOffset_EffectSetting;
 
-		// Token: 0x04013F79 RID: 81785
-		internal static int __PropertyOffset_2;
+		// Token: 0x040105A9 RID: 66985
+		internal static int __PropertyOffset_NumMin;
 
-		// Token: 0x04013F7A RID: 81786
-		internal static int __PropertyOffset_3;
+		// Token: 0x040105AA RID: 66986
+		internal static int __PropertyOffset_NumMax;
 	}
 }

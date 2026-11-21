@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006BB3 RID: 27571
+	// Token: 0x020072FF RID: 29439
 	public class INpcExitCurrentInteractT
 	{
-		// Token: 0x1700CCEF RID: 52463
-		// (get) Token: 0x060306FB RID: 198395 RVA: 0x00693F82 File Offset: 0x00692182
-		// (set) Token: 0x060306FC RID: 198396 RVA: 0x00693F8A File Offset: 0x0069218A
+		// Token: 0x1700D7DB RID: 55259
+		// (get) Token: 0x06033575 RID: 210293 RVA: 0x006EC922 File Offset: 0x006EAB22
+		// (set) Token: 0x06033576 RID: 210294 RVA: 0x006EC92A File Offset: 0x006EAB2A
 		public ENpcLeisureInteract Type { get; set; }
 
-		// Token: 0x1700CCF0 RID: 52464
-		// (get) Token: 0x060306FD RID: 198397 RVA: 0x00693F93 File Offset: 0x00692193
-		// (set) Token: 0x060306FE RID: 198398 RVA: 0x00693F9B File Offset: 0x0069219B
+		// Token: 0x1700D7DC RID: 55260
+		// (get) Token: 0x06033577 RID: 210295 RVA: 0x006EC933 File Offset: 0x006EAB33
+		// (set) Token: 0x06033578 RID: 210296 RVA: 0x006EC93B File Offset: 0x006EAB3B
 		public bool KeepState { get; set; }
 
-		// Token: 0x1700CCF1 RID: 52465
-		// (get) Token: 0x060306FF RID: 198399 RVA: 0x00693FA4 File Offset: 0x006921A4
-		// (set) Token: 0x06030700 RID: 198400 RVA: 0x00693FAC File Offset: 0x006921AC
+		// Token: 0x1700D7DD RID: 55261
+		// (get) Token: 0x06033579 RID: 210297 RVA: 0x006EC944 File Offset: 0x006EAB44
+		// (set) Token: 0x0603357A RID: 210298 RVA: 0x006EC94C File Offset: 0x006EAB4C
 		public byte NullMask { get; set; }
 
-		// Token: 0x06030701 RID: 198401 RVA: 0x00693FB5 File Offset: 0x006921B5
+		// Token: 0x0603357B RID: 210299 RVA: 0x006EC955 File Offset: 0x006EAB55
 		public INpcExitCurrentInteractT()
 		{
 			this.Type = ENpcLeisureInteract.SitDown;

@@ -2,58 +2,58 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02003138 RID: 12600
+// Token: 0x02002694 RID: 9876
 [NullableContext(2)]
 [Nullable(0)]
 public class SkillParam : ISkillParam
 {
-	// Token: 0x1700257C RID: 9596
-	// (get) Token: 0x0601B133 RID: 110899 RVA: 0x0075AE11 File Offset: 0x00759011
-	// (set) Token: 0x0601B134 RID: 110900 RVA: 0x0075AE19 File Offset: 0x00759019
+	// Token: 0x1700272F RID: 10031
+	// (get) Token: 0x06018B9F RID: 101279 RVA: 0x00781177 File Offset: 0x0077F377
+	// (set) Token: 0x06018BA0 RID: 101280 RVA: 0x0078117F File Offset: 0x0077F37F
 	public Entity Target { get; set; }
 
-	// Token: 0x1700257D RID: 9597
-	// (get) Token: 0x0601B135 RID: 110901 RVA: 0x0075AE22 File Offset: 0x00759022
-	// (set) Token: 0x0601B136 RID: 110902 RVA: 0x0075AE2A File Offset: 0x0075902A
+	// Token: 0x17002730 RID: 10032
+	// (get) Token: 0x06018BA1 RID: 101281 RVA: 0x00781188 File Offset: 0x0077F388
+	// (set) Token: 0x06018BA2 RID: 101282 RVA: 0x00781190 File Offset: 0x0077F390
 	public AActor TargetActor { get; set; }
 
-	// Token: 0x1700257E RID: 9598
-	// (get) Token: 0x0601B137 RID: 110903 RVA: 0x0075AE33 File Offset: 0x00759033
-	// (set) Token: 0x0601B138 RID: 110904 RVA: 0x0075AE3B File Offset: 0x0075903B
+	// Token: 0x17002731 RID: 10033
+	// (get) Token: 0x06018BA3 RID: 101283 RVA: 0x00781199 File Offset: 0x0077F399
+	// (set) Token: 0x06018BA4 RID: 101284 RVA: 0x007811A1 File Offset: 0x0077F3A1
 	public string SocketName { get; set; }
 
-	// Token: 0x1700257F RID: 9599
-	// (get) Token: 0x0601B139 RID: 110905 RVA: 0x0075AE44 File Offset: 0x00759044
-	// (set) Token: 0x0601B13A RID: 110906 RVA: 0x0075AE4C File Offset: 0x0075904C
+	// Token: 0x17002732 RID: 10034
+	// (get) Token: 0x06018BA5 RID: 101285 RVA: 0x007811AA File Offset: 0x0077F3AA
+	// (set) Token: 0x06018BA6 RID: 101286 RVA: 0x007811B2 File Offset: 0x0077F3B2
 	public long? ContextId { get; set; }
 
-	// Token: 0x17002580 RID: 9600
-	// (get) Token: 0x0601B13B RID: 110907 RVA: 0x0075AE55 File Offset: 0x00759055
-	// (set) Token: 0x0601B13C RID: 110908 RVA: 0x0075AE5D File Offset: 0x0075905D
+	// Token: 0x17002733 RID: 10035
+	// (get) Token: 0x06018BA7 RID: 101287 RVA: 0x007811BB File Offset: 0x0077F3BB
+	// (set) Token: 0x06018BA8 RID: 101288 RVA: 0x007811C3 File Offset: 0x0077F3C3
 	public string Reason { get; set; }
 
-	// Token: 0x17002581 RID: 9601
-	// (get) Token: 0x0601B13D RID: 110909 RVA: 0x0075AE66 File Offset: 0x00759066
-	// (set) Token: 0x0601B13E RID: 110910 RVA: 0x0075AE6E File Offset: 0x0075906E
+	// Token: 0x17002734 RID: 10036
+	// (get) Token: 0x06018BA9 RID: 101289 RVA: 0x007811CC File Offset: 0x0077F3CC
+	// (set) Token: 0x06018BAA RID: 101290 RVA: 0x007811D4 File Offset: 0x0077F3D4
 	public int? MontageIndex { get; set; }
 
-	// Token: 0x17002582 RID: 9602
-	// (get) Token: 0x0601B13F RID: 110911 RVA: 0x0075AE77 File Offset: 0x00759077
-	// (set) Token: 0x0601B140 RID: 110912 RVA: 0x0075AE7F File Offset: 0x0075907F
+	// Token: 0x17002735 RID: 10037
+	// (get) Token: 0x06018BAB RID: 101291 RVA: 0x007811DD File Offset: 0x0077F3DD
+	// (set) Token: 0x06018BAC RID: 101292 RVA: 0x007811E5 File Offset: 0x0077F3E5
 	public bool? CheckMultiSkill { get; set; }
 
-	// Token: 0x17002583 RID: 9603
-	// (get) Token: 0x0601B141 RID: 110913 RVA: 0x0075AE88 File Offset: 0x00759088
-	// (set) Token: 0x0601B142 RID: 110914 RVA: 0x0075AE90 File Offset: 0x00759090
+	// Token: 0x17002736 RID: 10038
+	// (get) Token: 0x06018BAD RID: 101293 RVA: 0x007811EE File Offset: 0x0077F3EE
+	// (set) Token: 0x06018BAE RID: 101294 RVA: 0x007811F6 File Offset: 0x0077F3F6
 	public int? NextSkillId { get; set; }
 
-	// Token: 0x17002584 RID: 9604
-	// (get) Token: 0x0601B143 RID: 110915 RVA: 0x0075AE99 File Offset: 0x00759099
-	// (set) Token: 0x0601B144 RID: 110916 RVA: 0x0075AEA1 File Offset: 0x007590A1
+	// Token: 0x17002737 RID: 10039
+	// (get) Token: 0x06018BAF RID: 101295 RVA: 0x007811FF File Offset: 0x0077F3FF
+	// (set) Token: 0x06018BB0 RID: 101296 RVA: 0x00781207 File Offset: 0x0077F407
 	public bool? IsAsync { get; set; }
 
-	// Token: 0x17002585 RID: 9605
-	// (get) Token: 0x0601B145 RID: 110917 RVA: 0x0075AEAA File Offset: 0x007590AA
-	// (set) Token: 0x0601B146 RID: 110918 RVA: 0x0075AEB2 File Offset: 0x007590B2
+	// Token: 0x17002738 RID: 10040
+	// (get) Token: 0x06018BB1 RID: 101297 RVA: 0x00781210 File Offset: 0x0077F410
+	// (set) Token: 0x06018BB2 RID: 101298 RVA: 0x00781218 File Offset: 0x0077F418
 	public FVectorDouble? ExtraTargetLocation { get; set; }
 }

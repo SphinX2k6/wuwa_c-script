@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020010DF RID: 4319
+	// Token: 0x02001215 RID: 4629
 	public struct SpecialFormation : IFlatbufferObject
 	{
-		// Token: 0x170037CB RID: 14283
-		// (get) Token: 0x0600D7D3 RID: 55251 RVA: 0x0031DD38 File Offset: 0x0031BF38
+		// Token: 0x17003B21 RID: 15137
+		// (get) Token: 0x0600E51E RID: 58654 RVA: 0x003493AC File Offset: 0x003475AC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D7D4 RID: 55252 RVA: 0x0031DD45 File Offset: 0x0031BF45
+		// Token: 0x0600E51F RID: 58655 RVA: 0x003493B9 File Offset: 0x003475B9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600D7D5 RID: 55253 RVA: 0x0031DD4C File Offset: 0x0031BF4C
+		// Token: 0x0600E520 RID: 58656 RVA: 0x003493C0 File Offset: 0x003475C0
 		public static SpecialFormation GetRootAsSpecialFormation(ByteBuffer _bb)
 		{
 			return SpecialFormation.GetRootAsSpecialFormation(_bb, default(SpecialFormation));
 		}
 
-		// Token: 0x0600D7D6 RID: 55254 RVA: 0x0031DD68 File Offset: 0x0031BF68
+		// Token: 0x0600E521 RID: 58657 RVA: 0x003493DC File Offset: 0x003475DC
 		public static SpecialFormation GetRootAsSpecialFormation(ByteBuffer _bb, SpecialFormation obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600D7D7 RID: 55255 RVA: 0x0031DD85 File Offset: 0x0031BF85
+		// Token: 0x0600E522 RID: 58658 RVA: 0x003493F9 File Offset: 0x003475F9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600D7D8 RID: 55256 RVA: 0x0031DD94 File Offset: 0x0031BF94
+		// Token: 0x0600E523 RID: 58659 RVA: 0x00349408 File Offset: 0x00347608
 		public SpecialFormation __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170037CC RID: 14284
-		// (get) Token: 0x0600D7D9 RID: 55257 RVA: 0x0031DDA4 File Offset: 0x0031BFA4
+		// Token: 0x17003B22 RID: 15138
+		// (get) Token: 0x0600E524 RID: 58660 RVA: 0x00349418 File Offset: 0x00347618
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170037CD RID: 14285
-		// (get) Token: 0x0600D7DA RID: 55258 RVA: 0x0031DDE0 File Offset: 0x0031BFE0
+		// Token: 0x17003B23 RID: 15139
+		// (get) Token: 0x0600E525 RID: 58661 RVA: 0x00349454 File Offset: 0x00347654
 		public int Type
 		{
 			get
@@ -79,7 +79,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D7DB RID: 55259 RVA: 0x0031DE1C File Offset: 0x0031C01C
+		// Token: 0x0600E526 RID: 58662 RVA: 0x00349490 File Offset: 0x00347690
 		public int CharacterId(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -90,8 +90,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170037CE RID: 14286
-		// (get) Token: 0x0600D7DC RID: 55260 RVA: 0x0031DE5C File Offset: 0x0031C05C
+		// Token: 0x17003B24 RID: 15140
+		// (get) Token: 0x0600E527 RID: 58663 RVA: 0x003494D0 File Offset: 0x003476D0
 		public int CharacterIdLength
 		{
 			get
@@ -105,37 +105,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D7DD RID: 55261 RVA: 0x0031DE87 File Offset: 0x0031C087
+		// Token: 0x0600E528 RID: 58664 RVA: 0x003494FB File Offset: 0x003476FB
 		public Span<int> GetCharacterIdBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x0600D7DE RID: 55262 RVA: 0x0031DE96 File Offset: 0x0031C096
+		// Token: 0x0600E529 RID: 58665 RVA: 0x0034950A File Offset: 0x0034770A
 		public int[] GetCharacterIdArray()
 		{
 			return this.__p.__vector_as_array<int>(8) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600D7DF RID: 55263 RVA: 0x0031DEB0 File Offset: 0x0031C0B0
+		// Token: 0x0600E52A RID: 58666 RVA: 0x00349521 File Offset: 0x00347721
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用CharacterIdIter()或GetCharacterIdBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] CharacterId()
+		public int[] CharacterId()
 		{
-			SpecialFormation specialFormation = this;
-			return specialFormation.GetCharacterIdArray() ?? Array.Empty<int>();
+			return this.GetCharacterIdArray();
 		}
 
-		// Token: 0x0600D7E0 RID: 55264 RVA: 0x0031DED4 File Offset: 0x0031C0D4
+		// Token: 0x0600E52B RID: 58667 RVA: 0x00349529 File Offset: 0x00347729
 		[NullableContext(1)]
-		public readonly IEnumerable<int> CharacterIdIter()
+		public IEnumerable<int> CharacterIdIter()
 		{
 			SpecialFormation.<CharacterIdIter>d__18 <CharacterIdIter>d__ = new SpecialFormation.<CharacterIdIter>d__18(-2);
 			<CharacterIdIter>d__.<>3__<>4__this = this;
 			return <CharacterIdIter>d__;
 		}
 
-		// Token: 0x04005212 RID: 21010
+		// Token: 0x04005855 RID: 22613
 		private Table __p;
 	}
 }

@@ -7,12 +7,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000642 RID: 1602
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020006DF RID: 1759
 	public class IQuickHackSkillContent
 	{
-		// Token: 0x06002238 RID: 8760 RVA: 0x0005E20C File Offset: 0x0005C40C
+		// Token: 0x0600253E RID: 9534 RVA: 0x00064F20 File Offset: 0x00063120
 		private IQuickHackSkillContent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,7 +25,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002239 RID: 8761 RVA: 0x0005E244 File Offset: 0x0005C444
+		// Token: 0x0600253F RID: 9535 RVA: 0x00064F58 File Offset: 0x00063158
 		public static IQuickHackSkillContent Create([Nullable(2)] IQuickHackSkillContent instance)
 		{
 			if (instance == null)
@@ -40,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600223A RID: 8762 RVA: 0x0005E257 File Offset: 0x0005C457
+		// Token: 0x06002540 RID: 9536 RVA: 0x00064F6B File Offset: 0x0006316B
 		public static IQuickHackSkillContent CreateFromSetValue([Nullable(2)] IQuickHackSkillContent_SetValue value)
 		{
 			if (value == null)
@@ -53,7 +51,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600223B RID: 8763 RVA: 0x0005E26A File Offset: 0x0005C46A
+		// Token: 0x06002541 RID: 9537 RVA: 0x00064F7E File Offset: 0x0006317E
 		public IQuickHackSkillContent_SetValue ToSetValue()
 		{
 			return new IQuickHackSkillContent_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000918 RID: 2328
-		// (get) Token: 0x0600223C RID: 8764 RVA: 0x0005E289 File Offset: 0x0005C489
-		// (set) Token: 0x0600223D RID: 8765 RVA: 0x0005E2B4 File Offset: 0x0005C4B4
+		// Token: 0x170009CF RID: 2511
+		// (get) Token: 0x06002542 RID: 9538 RVA: 0x00064F9D File Offset: 0x0006319D
+		// (set) Token: 0x06002543 RID: 9539 RVA: 0x00064FC8 File Offset: 0x000631C8
 		public virtual string EntityState
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000919 RID: 2329
-		// (get) Token: 0x0600223E RID: 8766 RVA: 0x0005E2C4 File Offset: 0x0005C4C4
-		// (set) Token: 0x0600223F RID: 8767 RVA: 0x0005E357 File Offset: 0x0005C557
+		// Token: 0x170009D0 RID: 2512
+		// (get) Token: 0x06002544 RID: 9540 RVA: 0x00064FD8 File Offset: 0x000631D8
+		// (set) Token: 0x06002545 RID: 9541 RVA: 0x0006506B File Offset: 0x0006326B
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> Actions
 		{
 			get
@@ -124,18 +122,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040017C6 RID: 6086
+		// Token: 0x040019B8 RID: 6584
 		[Nullable(2)]
 		protected IQuickHackSkillContent FbInstance;
 
-		// Token: 0x040017C7 RID: 6087
+		// Token: 0x040019B9 RID: 6585
 		[Nullable(2)]
 		protected IQuickHackSkillContent_SetValue PocoInterface;
 
-		// Token: 0x040017C8 RID: 6088
+		// Token: 0x040019BA RID: 6586
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _ActionsCache;
 
-		// Token: 0x040017C9 RID: 6089
+		// Token: 0x040019BB RID: 6587
 		private bool _ActionsInited;
 	}
 }

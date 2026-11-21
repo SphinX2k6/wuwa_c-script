@@ -5,7 +5,7 @@ using CSharpScript.Game.Module.Common.MediumItemGrid;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E9A RID: 20122
+	// Token: 0x02003E63 RID: 15971
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -14,7 +14,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 	})]
 	public class RogueBattleSettleInfoRoleGrid : LoopScrollMediumItemGrid<RogueResGainData>
 	{
-		// Token: 0x06033B94 RID: 211860 RVA: 0x00C1DE64 File Offset: 0x00C1C064
+		// Token: 0x060289FF RID: 166399 RVA: 0x00B67380 File Offset: 0x00B65580
 		protected override void OnRefresh(RogueResGainData data, bool isSelected, int gridIndex)
 		{
 			RoleDataBase roleDataById = RoleModel.Instance.GetRoleDataById(data.RogueResRole.RoleIdOrTrialRoleId, true);

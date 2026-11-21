@@ -5,13 +5,13 @@ using AkiClient.Game.Aki.Character.Input.Structures;
 using CSharpScript.Core.Common;
 using CSharpScript.Game.Ui;
 
-// Token: 0x020032EA RID: 13034
+// Token: 0x0200285C RID: 10332
 [NullableContext(1)]
 [Nullable(0)]
 public class GongduolaInputComponent : VehicleInputComponent
 {
-	// Token: 0x1700273F RID: 10047
-	// (get) Token: 0x0601C5AE RID: 116142 RVA: 0x007EE92D File Offset: 0x007ECB2D
+	// Token: 0x17002AA2 RID: 10914
+	// (get) Token: 0x0601A265 RID: 107109 RVA: 0x00815061 File Offset: 0x00813261
 	[Nullable(2)]
 	protected new GongduolaPerformComponent PerformComp
 	{
@@ -22,22 +22,22 @@ public class GongduolaInputComponent : VehicleInputComponent
 		}
 	}
 
-	// Token: 0x0601C5AF RID: 116143 RVA: 0x007EE93C File Offset: 0x007ECB3C
+	// Token: 0x0601A266 RID: 107110 RVA: 0x00815070 File Offset: 0x00813270
 	protected override void UpdateVehicleInputDirectAndFacing()
 	{
 		base.UpdateMoveCache();
 		this.InputAdjusted(this.TmpVector1);
 		this.ActorComp.Value.Switch(delegate(CharacterActorComponent t1)
 		{
-			t1.SetInputDirect(this.TmpVector1, true);
+			t1.SetInputDirect(this.TmpVector1, true, EInputDirectSpace.Relative);
 		}, delegate(VehicleActorComponent t2)
 		{
-			t2.SetInputDirect(this.TmpVector1, true);
+			t2.SetInputDirect(this.TmpVector1, true, EInputDirectSpace.Relative);
 		});
 		this.SetInputFacingFromInputDirect(true);
 	}
 
-	// Token: 0x0601C5B0 RID: 116144 RVA: 0x007EE990 File Offset: 0x007ECB90
+	// Token: 0x0601A267 RID: 107111 RVA: 0x008150C4 File Offset: 0x008132C4
 	protected override void SetInputFacingFromInputDirect(bool clearWhenNoInput = true)
 	{
 		OneOf<CharacterActorComponent, VehicleActorComponent> value;
@@ -90,7 +90,7 @@ public class GongduolaInputComponent : VehicleInputComponent
 		}
 	}
 
-	// Token: 0x0601C5B1 RID: 116145 RVA: 0x007EEB98 File Offset: 0x007ECD98
+	// Token: 0x0601A268 RID: 107112 RVA: 0x008152CC File Offset: 0x008134CC
 	protected void InputAdjusted(Vector output)
 	{
 		output.DeepCopy(this.MoveVectorCache);
@@ -134,7 +134,7 @@ public class GongduolaInputComponent : VehicleInputComponent
 		this.LastInput.DeepCopy(output);
 	}
 
-	// Token: 0x0601C5B2 RID: 116146 RVA: 0x007EEDD2 File Offset: 0x007ECFD2
+	// Token: 0x0601A269 RID: 107113 RVA: 0x00815506 File Offset: 0x00813706
 	protected override void ExecuteSprint(SInputCommand command)
 	{
 		GongduolaPerformComponent component = base.Entity.GetComponent<GongduolaPerformComponent>();
@@ -145,7 +145,7 @@ public class GongduolaInputComponent : VehicleInputComponent
 		component.TryEnterSprint(false);
 	}
 
-	// Token: 0x0601C5B3 RID: 116147 RVA: 0x007EEDEC File Offset: 0x007ECFEC
+	// Token: 0x0601A26A RID: 107114 RVA: 0x00815520 File Offset: 0x00813720
 	protected override void ExecuteSkill(SInputCommand command)
 	{
 		int intValue = command.IntValue;
@@ -172,7 +172,7 @@ public class GongduolaInputComponent : VehicleInputComponent
 		}
 	}
 
-	// Token: 0x0601C5B4 RID: 116148 RVA: 0x007EEE8C File Offset: 0x007ED08C
+	// Token: 0x0601A26B RID: 107115 RVA: 0x008155C0 File Offset: 0x008137C0
 	protected override void AddBlockEvents()
 	{
 		base.AddBlockEvents();
@@ -182,7 +182,7 @@ public class GongduolaInputComponent : VehicleInputComponent
 		this.TagEventChangeRoll3 = base.AddBlockActionEvent(GameplayTagDefine.EGameplayTagId["战斗状态.输入限制.禁止切换角色3"], EInputAction.切换角色3);
 	}
 
-	// Token: 0x0601C5B5 RID: 116149 RVA: 0x007EEF26 File Offset: 0x007ED126
+	// Token: 0x0601A26C RID: 107116 RVA: 0x0081565A File Offset: 0x0081385A
 	protected override void RemoveBlockActionEvents()
 	{
 		base.RemoveBlockActionEvents();
@@ -196,7 +196,7 @@ public class GongduolaInputComponent : VehicleInputComponent
 		this.TagEventChangeRoll3.EndTask();
 	}
 
-	// Token: 0x0601C5B6 RID: 116150 RVA: 0x007EEF60 File Offset: 0x007ED160
+	// Token: 0x0601A26D RID: 107117 RVA: 0x00815694 File Offset: 0x00813894
 	protected override void InitPassengerInputForbidTagInfo()
 	{
 		base.InitPassengerInputForbidTagInfo();
@@ -205,7 +205,7 @@ public class GongduolaInputComponent : VehicleInputComponent
 		this.PassengerInputForbidTagArray.Add(GameplayTagDefine.EGameplayTagId["战斗状态.输入限制.禁止切换角色3"]);
 	}
 
-	// Token: 0x0601C5B7 RID: 116151 RVA: 0x007EEFC4 File Offset: 0x007ED1C4
+	// Token: 0x0601A26E RID: 107118 RVA: 0x008156F8 File Offset: 0x008138F8
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -213,146 +213,150 @@ public class GongduolaInputComponent : VehicleInputComponent
 			return false;
 		}
 		GongduolaInputComponent gongduolaInputComponent = (GongduolaInputComponent)componentTemplate;
-		if (base.CanResetComponentProperty("TurningForceInputFactor"))
+		this.TurningForceInputFactor = gongduolaInputComponent.TurningForceInputFactor;
+		this.TurnForwardInputMinX = gongduolaInputComponent.TurnForwardInputMinX;
+		this.TurnBackwardInputMaxX = gongduolaInputComponent.TurnBackwardInputMaxX;
+		this.MaxForwardThreshold = gongduolaInputComponent.MaxForwardThreshold;
+		this.MaxRightThreshold = gongduolaInputComponent.MaxRightThreshold;
+		if (gongduolaInputComponent.LastInput == null)
 		{
-			this.TurningForceInputFactor = gongduolaInputComponent.TurningForceInputFactor;
+			this.LastInput = null;
 		}
-		if (base.CanResetComponentProperty("TurnForwardInputMinX"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastInput), "LastInput"))
 		{
-			this.TurnForwardInputMinX = gongduolaInputComponent.TurnForwardInputMinX;
+			return false;
 		}
-		if (base.CanResetComponentProperty("TurnBackwardInputMaxX"))
+		if (gongduolaInputComponent.TmpVector1 == null)
 		{
-			this.TurnBackwardInputMaxX = gongduolaInputComponent.TurnBackwardInputMaxX;
+			this.TmpVector1 = null;
 		}
-		if (base.CanResetComponentProperty("MaxForwardThreshold"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector1), "TmpVector1"))
 		{
-			this.MaxForwardThreshold = gongduolaInputComponent.MaxForwardThreshold;
+			return false;
 		}
-		if (base.CanResetComponentProperty("MaxRightThreshold"))
+		if (gongduolaInputComponent.TmpVector2 == null)
 		{
-			this.MaxRightThreshold = gongduolaInputComponent.MaxRightThreshold;
+			this.TmpVector2 = null;
 		}
-		if (base.CanResetComponentProperty("LastInput"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector2), "TmpVector2"))
 		{
-			if (gongduolaInputComponent.LastInput == null)
-			{
-				this.LastInput = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.LastInput), "LastInput"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("TmpVector1"))
+		if (gongduolaInputComponent.TagEventChangeRoll1 == null)
 		{
-			if (gongduolaInputComponent.TmpVector1 == null)
-			{
-				this.TmpVector1 = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TmpVector1), "TmpVector1"))
-			{
-				return false;
-			}
+			this.TagEventChangeRoll1 = null;
 		}
-		if (base.CanResetComponentProperty("TmpVector2"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagEventChangeRoll1), "TagEventChangeRoll1"))
 		{
-			if (gongduolaInputComponent.TmpVector2 == null)
-			{
-				this.TmpVector2 = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TmpVector2), "TmpVector2"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("TagEventChangeRoll1"))
+		if (gongduolaInputComponent.TagEventChangeRoll2 == null)
 		{
-			if (gongduolaInputComponent.TagEventChangeRoll1 == null)
-			{
-				this.TagEventChangeRoll1 = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.TagEventChangeRoll1), "TagEventChangeRoll1"))
-			{
-				return false;
-			}
+			this.TagEventChangeRoll2 = null;
 		}
-		if (base.CanResetComponentProperty("TagEventChangeRoll2"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagEventChangeRoll2), "TagEventChangeRoll2"))
 		{
-			if (gongduolaInputComponent.TagEventChangeRoll2 == null)
-			{
-				this.TagEventChangeRoll2 = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.TagEventChangeRoll2), "TagEventChangeRoll2"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("TagEventChangeRoll3"))
+		if (gongduolaInputComponent.TagEventChangeRoll3 == null)
 		{
-			if (gongduolaInputComponent.TagEventChangeRoll3 == null)
-			{
-				this.TagEventChangeRoll3 = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.TagEventChangeRoll3), "TagEventChangeRoll3"))
-			{
-				return false;
-			}
+			this.TagEventChangeRoll3 = null;
 		}
-		if (base.CanResetComponentProperty("TagEventSprint"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagEventChangeRoll3), "TagEventChangeRoll3"))
 		{
-			if (gongduolaInputComponent.TagEventSprint == null)
-			{
-				this.TagEventSprint = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.TagEventSprint), "TagEventSprint"))
-			{
-				return false;
-			}
+			return false;
+		}
+		if (gongduolaInputComponent.TagEventSprint == null)
+		{
+			this.TagEventSprint = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagEventSprint), "TagEventSprint"))
+		{
+			return false;
 		}
 		return true;
 	}
 
-	// Token: 0x0400E0E4 RID: 57572
+	// Token: 0x17002AA3 RID: 10915
+	// (get) Token: 0x0601A26F RID: 107119 RVA: 0x00815881 File Offset: 0x00813A81
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002AA4 RID: 10916
+	// (get) Token: 0x0601A270 RID: 107120 RVA: 0x00815884 File Offset: 0x00813A84
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002AA5 RID: 10917
+	// (get) Token: 0x0601A271 RID: 107121 RVA: 0x00815887 File Offset: 0x00813A87
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002AA6 RID: 10918
+	// (get) Token: 0x0601A272 RID: 107122 RVA: 0x0081588A File Offset: 0x00813A8A
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400E58F RID: 58767
 	private const int SKILL_ID_RIDER_SHARING = 100034;
 
-	// Token: 0x0400E0E5 RID: 57573
+	// Token: 0x0400E590 RID: 58768
 	public float TurningForceInputFactor;
 
-	// Token: 0x0400E0E6 RID: 57574
+	// Token: 0x0400E591 RID: 58769
 	public float TurnForwardInputMinX;
 
-	// Token: 0x0400E0E7 RID: 57575
+	// Token: 0x0400E592 RID: 58770
 	public float TurnBackwardInputMaxX;
 
-	// Token: 0x0400E0E8 RID: 57576
+	// Token: 0x0400E593 RID: 58771
 	public float MaxForwardThreshold = 1f;
 
-	// Token: 0x0400E0E9 RID: 57577
+	// Token: 0x0400E594 RID: 58772
 	public float MaxRightThreshold = 1f;
 
-	// Token: 0x0400E0EA RID: 57578
+	// Token: 0x0400E595 RID: 58773
 	protected Vector LastInput = Vector.Create();
 
-	// Token: 0x0400E0EB RID: 57579
+	// Token: 0x0400E596 RID: 58774
 	protected Vector TmpVector1 = Vector.Create();
 
-	// Token: 0x0400E0EC RID: 57580
+	// Token: 0x0400E597 RID: 58775
 	protected Vector TmpVector2 = Vector.Create();
 
-	// Token: 0x0400E0ED RID: 57581
+	// Token: 0x0400E598 RID: 58776
 	[Nullable(2)]
 	protected ITagTask TagEventChangeRoll1;
 
-	// Token: 0x0400E0EE RID: 57582
+	// Token: 0x0400E599 RID: 58777
 	[Nullable(2)]
 	protected ITagTask TagEventChangeRoll2;
 
-	// Token: 0x0400E0EF RID: 57583
+	// Token: 0x0400E59A RID: 58778
 	[Nullable(2)]
 	protected ITagTask TagEventChangeRoll3;
 
-	// Token: 0x0400E0F0 RID: 57584
+	// Token: 0x0400E59B RID: 58779
 	[Nullable(2)]
 	protected ITagTask TagEventSprint;
 }

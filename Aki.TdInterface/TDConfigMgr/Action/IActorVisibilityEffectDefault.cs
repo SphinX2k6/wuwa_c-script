@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020017A4 RID: 6052
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001925 RID: 6437
 	public class IActorVisibilityEffectDefault : IActorVisibilityEffectType
 	{
-		// Token: 0x06008019 RID: 32793 RVA: 0x00131D98 File Offset: 0x0012FF98
+		// Token: 0x06008709 RID: 34569 RVA: 0x00140FF8 File Offset: 0x0013F1F8
 		private IActorVisibilityEffectDefault_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600801A RID: 32794 RVA: 0x00131DD0 File Offset: 0x0012FFD0
+		// Token: 0x0600870A RID: 34570 RVA: 0x00141030 File Offset: 0x0013F230
 		public static IActorVisibilityEffectDefault Create([Nullable(2)] IActorVisibilityEffectDefault instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600801B RID: 32795 RVA: 0x00131DE3 File Offset: 0x0012FFE3
+		// Token: 0x0600870B RID: 34571 RVA: 0x00141043 File Offset: 0x0013F243
 		public static IActorVisibilityEffectDefault CreateFromSetValue([Nullable(2)] IActorVisibilityEffectDefault_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600801C RID: 32796 RVA: 0x00131DF6 File Offset: 0x0012FFF6
+		// Token: 0x0600870C RID: 34572 RVA: 0x00141056 File Offset: 0x0013F256
 		public new IActorVisibilityEffectDefault_SetValue ToSetValue()
 		{
 			return new IActorVisibilityEffectDefault_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170029EB RID: 10731
-		// (get) Token: 0x0600801D RID: 32797 RVA: 0x00131E09 File Offset: 0x00130009
-		// (set) Token: 0x0600801E RID: 32798 RVA: 0x00131E34 File Offset: 0x00130034
+		// Token: 0x17002BD9 RID: 11225
+		// (get) Token: 0x0600870D RID: 34573 RVA: 0x00141069 File Offset: 0x0013F269
+		// (set) Token: 0x0600870E RID: 34574 RVA: 0x00141094 File Offset: 0x0013F294
 		public override EActorVisibilityEffectType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005152 RID: 20818
+		// Token: 0x04005588 RID: 21896
 		[Nullable(2)]
 		protected new IActorVisibilityEffectDefault FbInstance;
 
-		// Token: 0x04005153 RID: 20819
+		// Token: 0x04005589 RID: 21897
 		[Nullable(2)]
 		protected new IActorVisibilityEffectDefault_SetValue PocoInterface;
 	}

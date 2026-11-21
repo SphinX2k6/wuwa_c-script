@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020026B4 RID: 9908
+// Token: 0x02001B9F RID: 7071
 [NullableContext(1)]
 [Nullable(0)]
 public class QuestTreeNodeLocatingHelper
 {
-	// Token: 0x060144D3 RID: 83155 RVA: 0x005218A3 File Offset: 0x0051FAA3
+	// Token: 0x060119B5 RID: 72117 RVA: 0x005305DB File Offset: 0x0052E7DB
 	public QuestTreeNodeLocatingHelper(UUIScrollViewComponent scroll)
 	{
 		this.Scroll = scroll;
 	}
 
-	// Token: 0x060144D4 RID: 83156 RVA: 0x005218CC File Offset: 0x0051FACC
+	// Token: 0x060119B6 RID: 72118 RVA: 0x00530604 File Offset: 0x0052E804
 	[NullableContext(2)]
 	public void LocateToNode(UUIItem target, bool tween = false, bool useScreenAsRoot = false)
 	{
@@ -74,7 +74,7 @@ public class QuestTreeNodeLocatingHelper
 		uuiitem.SetLGUISpaceAbsolutePosition(this.OffsetVector);
 	}
 
-	// Token: 0x060144D5 RID: 83157 RVA: 0x00521B71 File Offset: 0x0051FD71
+	// Token: 0x060119B7 RID: 72119 RVA: 0x005308A9 File Offset: 0x0052EAA9
 	public void Clear()
 	{
 		if (this.MoveTweener != null)
@@ -84,13 +84,13 @@ public class QuestTreeNodeLocatingHelper
 		}
 	}
 
-	// Token: 0x040098B7 RID: 39095
+	// Token: 0x04009A0F RID: 39439
 	private FVector OffsetVector = new FVector(0f, 0f, 0f);
 
-	// Token: 0x040098B8 RID: 39096
+	// Token: 0x04009A10 RID: 39440
 	private readonly UUIScrollViewComponent Scroll;
 
-	// Token: 0x040098B9 RID: 39097
+	// Token: 0x04009A11 RID: 39441
 	[Nullable(2)]
 	public ULTweener MoveTweener;
 }

@@ -3,23 +3,23 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 
-// Token: 0x020028F2 RID: 10482
+// Token: 0x02001E6D RID: 7789
 public class RoleNewJoinTipView : UiViewBase
 {
-	// Token: 0x06015A3C RID: 88636 RVA: 0x00576400 File Offset: 0x00574600
+	// Token: 0x06013440 RID: 78912 RVA: 0x005A12D4 File Offset: 0x0059F4D4
 	[NullableContext(1)]
 	public RoleNewJoinTipView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06015A3D RID: 88637 RVA: 0x00576409 File Offset: 0x00574609
+	// Token: 0x06013441 RID: 78913 RVA: 0x005A12DD File Offset: 0x0059F4DD
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>();
 		this.BtnBindInfo = new List<ValueTuple<int, Delegate>>();
 	}
 
-	// Token: 0x06015A3E RID: 88638 RVA: 0x00576424 File Offset: 0x00574624
+	// Token: 0x06013442 RID: 78914 RVA: 0x005A12F8 File Offset: 0x0059F4F8
 	protected override void OnAfterPlayStartSequence()
 	{
 		int num = (int)(this.OpenParam ?? 0);

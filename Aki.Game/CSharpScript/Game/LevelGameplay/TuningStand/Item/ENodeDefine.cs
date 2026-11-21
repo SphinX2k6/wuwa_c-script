@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.LevelGamePlay.TuningStand.Item
 {
-	// Token: 0x020069CF RID: 27087
+	// Token: 0x02005B2B RID: 23339
 	public enum ENodeDefine
 	{
-		// Token: 0x040232A8 RID: 144040
+		// Token: 0x0401E498 RID: 124056
 		Panel,
-		// Token: 0x040232A9 RID: 144041
+		// Token: 0x0401E499 RID: 124057
 		Active2,
-		// Token: 0x040232AA RID: 144042
+		// Token: 0x0401E49A RID: 124058
 		Active1
 	}
 }

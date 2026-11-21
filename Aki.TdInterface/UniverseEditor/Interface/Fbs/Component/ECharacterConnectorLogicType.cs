@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004D7B RID: 19835
+	// Token: 0x0200527A RID: 21114
 	public enum ECharacterConnectorLogicType : byte
 	{
-		// Token: 0x0400D828 RID: 55336
+		// Token: 0x0400E362 RID: 58210
 		Range
 	}
 }

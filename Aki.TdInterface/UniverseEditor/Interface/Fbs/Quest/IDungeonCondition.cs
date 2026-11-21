@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003DE2 RID: 15842
+	// Token: 0x0200421D RID: 16925
 	public struct IDungeonCondition : IFlatbufferObject
 	{
-		// Token: 0x17006D68 RID: 28008
-		// (get) Token: 0x06016217 RID: 90647 RVA: 0x00332C4A File Offset: 0x00330E4A
+		// Token: 0x17007348 RID: 29512
+		// (get) Token: 0x06017836 RID: 96310 RVA: 0x0035B64E File Offset: 0x0035984E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016218 RID: 90648 RVA: 0x00332C57 File Offset: 0x00330E57
+		// Token: 0x06017837 RID: 96311 RVA: 0x0035B65B File Offset: 0x0035985B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06016219 RID: 90649 RVA: 0x00332C60 File Offset: 0x00330E60
+		// Token: 0x06017838 RID: 96312 RVA: 0x0035B664 File Offset: 0x00359864
 		public static IDungeonCondition GetRootAsIDungeonCondition(ByteBuffer _bb)
 		{
 			return IDungeonCondition.GetRootAsIDungeonCondition(_bb, default(IDungeonCondition));
 		}
 
-		// Token: 0x0601621A RID: 90650 RVA: 0x00332C7C File Offset: 0x00330E7C
+		// Token: 0x06017839 RID: 96313 RVA: 0x0035B680 File Offset: 0x00359880
 		public static IDungeonCondition GetRootAsIDungeonCondition(ByteBuffer _bb, IDungeonCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601621B RID: 90651 RVA: 0x00332C99 File Offset: 0x00330E99
+		// Token: 0x0601783A RID: 96314 RVA: 0x0035B69D File Offset: 0x0035989D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601621C RID: 90652 RVA: 0x00332CA8 File Offset: 0x00330EA8
+		// Token: 0x0601783B RID: 96315 RVA: 0x0035B6AC File Offset: 0x003598AC
 		public IDungeonCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006D69 RID: 28009
-		// (get) Token: 0x0601621D RID: 90653 RVA: 0x00332CB8 File Offset: 0x00330EB8
+		// Token: 0x17007349 RID: 29513
+		// (get) Token: 0x0601783C RID: 96316 RVA: 0x0035B6BC File Offset: 0x003598BC
 		public EDungeonConditionType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006D6A RID: 28010
-		// (get) Token: 0x0601621E RID: 90654 RVA: 0x00332CF4 File Offset: 0x00330EF4
+		// Token: 0x1700734A RID: 29514
+		// (get) Token: 0x0601783D RID: 96317 RVA: 0x0035B6F8 File Offset: 0x003598F8
 		public int Count
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006D6B RID: 28011
-		// (get) Token: 0x0601621F RID: 90655 RVA: 0x00332D30 File Offset: 0x00330F30
+		// Token: 0x1700734B RID: 29515
+		// (get) Token: 0x0601783E RID: 96318 RVA: 0x0035B734 File Offset: 0x00359934
 		public bool IsExitDungeon
 		{
 			get
@@ -88,8 +88,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006D6C RID: 28012
-		// (get) Token: 0x06016220 RID: 90656 RVA: 0x00332D70 File Offset: 0x00330F70
+		// Token: 0x1700734C RID: 29516
+		// (get) Token: 0x0601783F RID: 96319 RVA: 0x0035B774 File Offset: 0x00359974
 		public byte NullMask
 		{
 			get
@@ -103,7 +103,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016221 RID: 90657 RVA: 0x00332DAD File Offset: 0x00330FAD
+		// Token: 0x06017840 RID: 96320 RVA: 0x0035B7B1 File Offset: 0x003599B1
 		public static Offset<IDungeonCondition> CreateIDungeonCondition(FlatBufferBuilder builder, EDungeonConditionType Type = EDungeonConditionType.DungeonSubType, int Count = 0, bool IsExitDungeon = false, byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -114,43 +114,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IDungeonCondition.EndIDungeonCondition(builder);
 		}
 
-		// Token: 0x06016222 RID: 90658 RVA: 0x00332DD9 File Offset: 0x00330FD9
+		// Token: 0x06017841 RID: 96321 RVA: 0x0035B7DD File Offset: 0x003599DD
 		public static void StartIDungeonCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06016223 RID: 90659 RVA: 0x00332DE2 File Offset: 0x00330FE2
+		// Token: 0x06017842 RID: 96322 RVA: 0x0035B7E6 File Offset: 0x003599E6
 		public static void AddType(FlatBufferBuilder builder, EDungeonConditionType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06016224 RID: 90660 RVA: 0x00332DED File Offset: 0x00330FED
+		// Token: 0x06017843 RID: 96323 RVA: 0x0035B7F1 File Offset: 0x003599F1
 		public static void AddCount(FlatBufferBuilder builder, int count)
 		{
 			builder.AddInt(1, count, 0);
 		}
 
-		// Token: 0x06016225 RID: 90661 RVA: 0x00332DF8 File Offset: 0x00330FF8
+		// Token: 0x06017844 RID: 96324 RVA: 0x0035B7FC File Offset: 0x003599FC
 		public static void AddIsExitDungeon(FlatBufferBuilder builder, bool isExitDungeon)
 		{
 			builder.AddBool(2, isExitDungeon, false);
 		}
 
-		// Token: 0x06016226 RID: 90662 RVA: 0x00332E03 File Offset: 0x00331003
+		// Token: 0x06017845 RID: 96325 RVA: 0x0035B807 File Offset: 0x00359A07
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x06016227 RID: 90663 RVA: 0x00332E0E File Offset: 0x0033100E
+		// Token: 0x06017846 RID: 96326 RVA: 0x0035B812 File Offset: 0x00359A12
 		public static Offset<IDungeonCondition> EndIDungeonCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<IDungeonCondition>(builder.EndTable());
 		}
 
-		// Token: 0x06016228 RID: 90664 RVA: 0x00332E1C File Offset: 0x0033101C
+		// Token: 0x06017847 RID: 96327 RVA: 0x0035B820 File Offset: 0x00359A20
 		public IDungeonConditionT UnPack()
 		{
 			IDungeonConditionT dungeonConditionT = new IDungeonConditionT();
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return dungeonConditionT;
 		}
 
-		// Token: 0x06016229 RID: 90665 RVA: 0x00332E37 File Offset: 0x00331037
+		// Token: 0x06017848 RID: 96328 RVA: 0x0035B83B File Offset: 0x00359A3B
 		public void UnPackTo(IDungeonConditionT _o)
 		{
 			_o.Type = this.Type;
@@ -167,7 +167,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0601622A RID: 90666 RVA: 0x00332E6C File Offset: 0x0033106C
+		// Token: 0x06017849 RID: 96329 RVA: 0x0035B870 File Offset: 0x00359A70
 		public static Offset<IDungeonCondition> Pack(FlatBufferBuilder builder, IDungeonConditionT _o)
 		{
 			if (_o == null)
@@ -177,7 +177,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IDungeonCondition.CreateIDungeonCondition(builder, _o.Type, _o.Count, _o.IsExitDungeon, _o.NullMask);
 		}
 
-		// Token: 0x0400B72B RID: 46891
+		// Token: 0x0400C0FF RID: 49407
 		private Table __p;
 	}
 }

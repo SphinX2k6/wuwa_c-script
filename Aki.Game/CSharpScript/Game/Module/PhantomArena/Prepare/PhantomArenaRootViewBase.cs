@@ -7,33 +7,33 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Prepare
 {
-	// Token: 0x02005149 RID: 20809
+	// Token: 0x02004119 RID: 16665
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class PhantomArenaRootViewBase<[Nullable(0)] TViewModel> : UiViewBase, IPhantomArenaRootViewBase where TViewModel : IPhantomArenaTabViewModelBase
 	{
-		// Token: 0x060352D1 RID: 217809 RVA: 0x00C99607 File Offset: 0x00C97807
+		// Token: 0x0602A1CD RID: 172493 RVA: 0x00BE6B07 File Offset: 0x00BE4D07
 		public PhantomArenaRootViewBase(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x060352D2 RID: 217810 RVA: 0x00C99626 File Offset: 0x00C97826
+		// Token: 0x0602A1CE RID: 172494 RVA: 0x00BE6B26 File Offset: 0x00BE4D26
 		protected override void OnBeforeCreate()
 		{
 			this.OnRegisterViewData();
 			this.OnRegisterDefaultChildView();
 		}
 
-		// Token: 0x060352D3 RID: 217811
+		// Token: 0x0602A1CF RID: 172495
 		protected abstract void OnRegisterDefaultChildView();
 
-		// Token: 0x060352D4 RID: 217812
+		// Token: 0x0602A1D0 RID: 172496
 		protected abstract void OnRegisterContentItem();
 
-		// Token: 0x060352D5 RID: 217813
+		// Token: 0x0602A1D1 RID: 172497
 		protected abstract void OnRegisterViewData();
 
-		// Token: 0x060352D6 RID: 217814 RVA: 0x00C99634 File Offset: 0x00C97834
+		// Token: 0x0602A1D2 RID: 172498 RVA: 0x00BE6B34 File Offset: 0x00BE4D34
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PhantomArenaRootViewBase<TViewModel>.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060352D7 RID: 217815 RVA: 0x00C99678 File Offset: 0x00C97878
+		// Token: 0x0602A1D3 RID: 172499 RVA: 0x00BE6B78 File Offset: 0x00BE4D78
 		protected override UniTask OnShowAsyncImplementImplement()
 		{
 			PhantomArenaRootViewBase<TViewModel>.<OnShowAsyncImplementImplement>d__12 <OnShowAsyncImplementImplement>d__;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare
 			return <OnShowAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060352D8 RID: 217816 RVA: 0x00C996BC File Offset: 0x00C978BC
+		// Token: 0x0602A1D4 RID: 172500 RVA: 0x00BE6BBC File Offset: 0x00BE4DBC
 		protected override UniTask OnHideAsyncImplementImplement()
 		{
 			PhantomArenaRootViewBase<TViewModel>.<OnHideAsyncImplementImplement>d__13 <OnHideAsyncImplementImplement>d__;
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare
 			return <OnHideAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060352D9 RID: 217817 RVA: 0x00C99700 File Offset: 0x00C97900
+		// Token: 0x0602A1D5 RID: 172501 RVA: 0x00BE6C00 File Offset: 0x00BE4E00
 		protected override UniTask OnDestroyAsyncImplementImplement()
 		{
 			PhantomArenaRootViewBase<TViewModel>.<OnDestroyAsyncImplementImplement>d__14 <OnDestroyAsyncImplementImplement>d__;
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare
 			return <OnDestroyAsyncImplementImplement>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060352DA RID: 217818 RVA: 0x00C99744 File Offset: 0x00C97944
+		// Token: 0x0602A1D6 RID: 172502 RVA: 0x00BE6C44 File Offset: 0x00BE4E44
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare
 			return <CreateChildViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060352DB RID: 217819 RVA: 0x00C99790 File Offset: 0x00C97990
+		// Token: 0x0602A1D7 RID: 172503 RVA: 0x00BE6C90 File Offset: 0x00BE4E90
 		public void OpenChildView(EPhantomArenaChildViewName viewName)
 		{
 			PhantomArenaRootViewBase<TViewModel>.<>c__DisplayClass16_0 CS$<>8__locals1 = new PhantomArenaRootViewBase<TViewModel>.<>c__DisplayClass16_0();
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare
 			base.RunAsyncTask(task);
 		}
 
-		// Token: 0x060352DC RID: 217820 RVA: 0x00C997D4 File Offset: 0x00C979D4
+		// Token: 0x0602A1D8 RID: 172504 RVA: 0x00BE6CD4 File Offset: 0x00BE4ED4
 		public UniTask OpenChildViewAsync(EPhantomArenaChildViewName viewName)
 		{
 			PhantomArenaRootViewBase<TViewModel>.<OpenChildViewAsync>d__17 <OpenChildViewAsync>d__;
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare
 			return <OpenChildViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060352DD RID: 217821 RVA: 0x00C99820 File Offset: 0x00C97A20
+		// Token: 0x0602A1D9 RID: 172505 RVA: 0x00BE6D20 File Offset: 0x00BE4F20
 		public void CloseCurChildView()
 		{
 			UiAsyncTask task = new UiAsyncTask("PhantomArenaRootViewBase", delegate()
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare
 			base.RunAsyncTask(task);
 		}
 
-		// Token: 0x060352DE RID: 217822 RVA: 0x00C99850 File Offset: 0x00C97A50
+		// Token: 0x0602A1DA RID: 172506 RVA: 0x00BE6D50 File Offset: 0x00BE4F50
 		[NullableContext(0)]
 		public UniTask<bool> CloseCurChildViewAsync()
 		{
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare
 			return <CloseCurChildViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060352DF RID: 217823 RVA: 0x00C99894 File Offset: 0x00C97A94
+		// Token: 0x0602A1DB RID: 172507 RVA: 0x00BE6D94 File Offset: 0x00BE4F94
 		public void CloseChildView(PhantomArenaChildViewBase childView)
 		{
 			PhantomArenaRootViewBase<TViewModel>.<>c__DisplayClass20_0 CS$<>8__locals1 = new PhantomArenaRootViewBase<TViewModel>.<>c__DisplayClass20_0();
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare
 			base.RunAsyncTask(task);
 		}
 
-		// Token: 0x060352E0 RID: 217824 RVA: 0x00C998D8 File Offset: 0x00C97AD8
+		// Token: 0x0602A1DC RID: 172508 RVA: 0x00BE6DD8 File Offset: 0x00BE4FD8
 		[NullableContext(0)]
 		public UniTask<bool> CloseChildViewAsync([Nullable(1)] PhantomArenaChildViewBase childView)
 		{
@@ -182,13 +182,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare
 			return <CloseChildViewAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060352E1 RID: 217825 RVA: 0x00C99923 File Offset: 0x00C97B23
+		// Token: 0x0602A1DD RID: 172509 RVA: 0x00BE6E23 File Offset: 0x00BE5023
 		protected PhantomArenaChildViewBase GetCurChildView()
 		{
 			return this.ChildViewStack.Peek();
 		}
 
-		// Token: 0x060352E2 RID: 217826 RVA: 0x00C99930 File Offset: 0x00C97B30
+		// Token: 0x0602A1DE RID: 172510 RVA: 0x00BE6E30 File Offset: 0x00BE5030
 		public void Back()
 		{
 			if (this.ChildViewStack.Size > 1)
@@ -199,23 +199,23 @@ namespace CSharpScript.Game.Module.PhantomArena.Prepare
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0401C521 RID: 116001
+		// Token: 0x04016F56 RID: 94038
 		public TViewModel ViewModel;
 
-		// Token: 0x0401C522 RID: 116002
+		// Token: 0x04016F57 RID: 94039
 		public int ActivityId;
 
-		// Token: 0x0401C523 RID: 116003
+		// Token: 0x04016F58 RID: 94040
 		[Nullable(2)]
 		protected UUIItem ContentItem;
 
-		// Token: 0x0401C524 RID: 116004
+		// Token: 0x04016F59 RID: 94041
 		protected EPhantomArenaChildViewName? DefaultChildViewName;
 
-		// Token: 0x0401C525 RID: 116005
+		// Token: 0x04016F5A RID: 94042
 		private readonly Stack<PhantomArenaChildViewBase> ChildViewStack = new Stack<PhantomArenaChildViewBase>();
 
-		// Token: 0x0401C526 RID: 116006
+		// Token: 0x04016F5B RID: 94043
 		protected UiMask ViewMask = new UiMask();
 	}
 }

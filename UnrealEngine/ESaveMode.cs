@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x020028F8 RID: 10488
+	// Token: 0x0200084C RID: 2124
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/TASdkPlugin.ESaveMode")]
 	public enum ESaveMode : byte
 	{
-		// Token: 0x040155BF RID: 87487
+		// Token: 0x04005424 RID: 21540
 		None_Save,
-		// Token: 0x040155C0 RID: 87488
+		// Token: 0x04005425 RID: 21541
 		SaveGame,
-		// Token: 0x040155C1 RID: 87489
+		// Token: 0x04005426 RID: 21542
 		Sqlite,
-		// Token: 0x040155C2 RID: 87490
+		// Token: 0x04005427 RID: 21543
 		ESaveMode_MAX
 	}
 }

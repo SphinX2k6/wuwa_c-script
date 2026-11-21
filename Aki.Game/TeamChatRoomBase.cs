@@ -1,18 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x0200179C RID: 6044
+// Token: 0x02000C55 RID: 3157
 public class TeamChatRoomBase : ChatRoom
 {
-	// Token: 0x0600B028 RID: 45096 RVA: 0x0027C1A5 File Offset: 0x0027A3A5
+	// Token: 0x06008410 RID: 33808 RVA: 0x002866C1 File Offset: 0x002848C1
 	public TeamChatRoomBase(EChatRoomType chatRoomType, int configId) : base(chatRoomType, configId)
 	{
 	}
 
-	// Token: 0x0600B029 RID: 45097 RVA: 0x0027C1B0 File Offset: 0x0027A3B0
+	// Token: 0x06008411 RID: 33809 RVA: 0x002866CC File Offset: 0x002848CC
 	[NullableContext(1)]
 	public override void AddHistoryChatContent(List<IChatHistory> chatContents)
 	{
@@ -49,6 +48,15 @@ public class TeamChatRoomBase : ChatRoom
 			chatContentData = chatContentData2;
 			list.Add(chatContentData2);
 		}
-		this.ChatContentList = list.Concat(this.ChatContentList).ToList<ChatContentData>();
+		List<ChatContentData> list2 = new List<ChatContentData>();
+		foreach (ChatContentData item in list)
+		{
+			list2.Add(item);
+		}
+		foreach (ChatContentData item2 in this.ChatContentList)
+		{
+			list2.Add(item2);
+		}
+		this.ChatContentList = list2;
 	}
 }

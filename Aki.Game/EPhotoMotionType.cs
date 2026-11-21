@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002588 RID: 9608
+// Token: 0x02001A73 RID: 6771
 public enum EPhotoMotionType
 {
-	// Token: 0x040092B9 RID: 37561
+	// Token: 0x04009411 RID: 37905
 	Motion,
-	// Token: 0x040092BA RID: 37562
+	// Token: 0x04009412 RID: 37906
 	Expression
 }

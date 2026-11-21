@@ -5,12 +5,12 @@ using Aki.Protocol;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02001AE6 RID: 6886
+// Token: 0x02000FA5 RID: 4005
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchGroupActionData : FloroRanchAsyncActionBase
 {
-	// Token: 0x0600CC20 RID: 52256 RVA: 0x002E9528 File Offset: 0x002E7728
+	// Token: 0x0600A031 RID: 41009 RVA: 0x002F46BC File Offset: 0x002F28BC
 	public void InitActionData(List<FloroRanchUnitActionMsg> actionDataList)
 	{
 		this.ActionDataList.Clear();
@@ -21,7 +21,7 @@ public class FloroRanchGroupActionData : FloroRanchAsyncActionBase
 		}
 	}
 
-	// Token: 0x0600CC21 RID: 52257 RVA: 0x002E958C File Offset: 0x002E778C
+	// Token: 0x0600A032 RID: 41010 RVA: 0x002F4720 File Offset: 0x002F2920
 	public override UniTask OnExecute()
 	{
 		FloroRanchGroupActionData.<OnExecute>d__3 <OnExecute>d__;
@@ -32,7 +32,7 @@ public class FloroRanchGroupActionData : FloroRanchAsyncActionBase
 		return <OnExecute>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CC22 RID: 52258 RVA: 0x002E95CF File Offset: 0x002E77CF
+	// Token: 0x0600A033 RID: 41011 RVA: 0x002F4763 File Offset: 0x002F2963
 	protected override void OnPause()
 	{
 		if (this.CurActionData != null)
@@ -41,7 +41,7 @@ public class FloroRanchGroupActionData : FloroRanchAsyncActionBase
 		}
 	}
 
-	// Token: 0x0600CC23 RID: 52259 RVA: 0x002E95E4 File Offset: 0x002E77E4
+	// Token: 0x0600A034 RID: 41012 RVA: 0x002F4778 File Offset: 0x002F2978
 	protected override void OnResume()
 	{
 		if (this.CurActionData != null)
@@ -50,7 +50,7 @@ public class FloroRanchGroupActionData : FloroRanchAsyncActionBase
 		}
 	}
 
-	// Token: 0x0600CC24 RID: 52260 RVA: 0x002E95FC File Offset: 0x002E77FC
+	// Token: 0x0600A035 RID: 41013 RVA: 0x002F4790 File Offset: 0x002F2990
 	protected override void OnExit()
 	{
 		if (this.CurActionData != null)
@@ -64,7 +64,7 @@ public class FloroRanchGroupActionData : FloroRanchAsyncActionBase
 		this.ActionDataList.Clear();
 	}
 
-	// Token: 0x0600CC25 RID: 52261 RVA: 0x002E966C File Offset: 0x002E786C
+	// Token: 0x0600A036 RID: 41014 RVA: 0x002F4800 File Offset: 0x002F2A00
 	public void SetIgnoreCasterEntityAnim(int entityId)
 	{
 		foreach (FloroRanchAsyncActionBase floroRanchAsyncActionBase in this.ActionDataList)
@@ -76,10 +76,10 @@ public class FloroRanchGroupActionData : FloroRanchAsyncActionBase
 		}
 	}
 
-	// Token: 0x04005DD5 RID: 24021
+	// Token: 0x04005EA4 RID: 24228
 	private readonly List<FloroRanchAsyncActionBase> ActionDataList = new List<FloroRanchAsyncActionBase>();
 
-	// Token: 0x04005DD6 RID: 24022
+	// Token: 0x04005EA5 RID: 24229
 	[Nullable(2)]
 	private FloroRanchAsyncActionBase CurActionData;
 }

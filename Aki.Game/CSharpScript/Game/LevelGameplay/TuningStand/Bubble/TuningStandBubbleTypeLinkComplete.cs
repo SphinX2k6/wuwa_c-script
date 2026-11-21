@@ -3,10 +3,10 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.TuningStand.Bubble
 {
-	// Token: 0x020069E3 RID: 27107
+	// Token: 0x02005B3F RID: 23359
 	public class TuningStandBubbleTypeLinkComplete : TuningStandBubbleTypeBase
 	{
-		// Token: 0x060436E3 RID: 276195 RVA: 0x0107A9AB File Offset: 0x01078BAB
+		// Token: 0x0603971F RID: 235295 RVA: 0x0101EE5F File Offset: 0x0101D05F
 		public override bool TryStartBubble(bool canPlay)
 		{
 			if (this.PlayFlow == null)
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.LevelGamePlay.TuningStand.Bubble
 			return true;
 		}
 
-		// Token: 0x04023304 RID: 144132
+		// Token: 0x0401E4F4 RID: 124148
 		protected new ETuningStandBubbleTriggerType BubbleType = ETuningStandBubbleTriggerType.LinkComplete;
 	}
 }

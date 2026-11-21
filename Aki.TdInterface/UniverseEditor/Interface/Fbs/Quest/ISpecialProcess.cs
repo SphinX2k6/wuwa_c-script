@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200413C RID: 16700
+	// Token: 0x0200457D RID: 17789
 	public struct ISpecialProcess : IFlatbufferObject
 	{
-		// Token: 0x17007646 RID: 30278
-		// (get) Token: 0x060187E2 RID: 100322 RVA: 0x00387D98 File Offset: 0x00385F98
+		// Token: 0x17007C4C RID: 31820
+		// (get) Token: 0x06019E85 RID: 106117 RVA: 0x003B1DA0 File Offset: 0x003AFFA0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060187E3 RID: 100323 RVA: 0x00387DA5 File Offset: 0x00385FA5
+		// Token: 0x06019E86 RID: 106118 RVA: 0x003B1DAD File Offset: 0x003AFFAD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060187E4 RID: 100324 RVA: 0x00387DAC File Offset: 0x00385FAC
+		// Token: 0x06019E87 RID: 106119 RVA: 0x003B1DB4 File Offset: 0x003AFFB4
 		public static ISpecialProcess GetRootAsISpecialProcess(ByteBuffer _bb)
 		{
 			return ISpecialProcess.GetRootAsISpecialProcess(_bb, default(ISpecialProcess));
 		}
 
-		// Token: 0x060187E5 RID: 100325 RVA: 0x00387DC8 File Offset: 0x00385FC8
+		// Token: 0x06019E88 RID: 106120 RVA: 0x003B1DD0 File Offset: 0x003AFFD0
 		public static ISpecialProcess GetRootAsISpecialProcess(ByteBuffer _bb, ISpecialProcess obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060187E6 RID: 100326 RVA: 0x00387DE5 File Offset: 0x00385FE5
+		// Token: 0x06019E89 RID: 106121 RVA: 0x003B1DED File Offset: 0x003AFFED
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060187E7 RID: 100327 RVA: 0x00387DF4 File Offset: 0x00385FF4
+		// Token: 0x06019E8A RID: 106122 RVA: 0x003B1DFC File Offset: 0x003AFFFC
 		public ISpecialProcess __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007647 RID: 30279
-		// (get) Token: 0x060187E8 RID: 100328 RVA: 0x00387E04 File Offset: 0x00386004
+		// Token: 0x17007C4D RID: 31821
+		// (get) Token: 0x06019E8B RID: 106123 RVA: 0x003B1E0C File Offset: 0x003B000C
 		public ESpecialProcess Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060187E9 RID: 100329 RVA: 0x00387E40 File Offset: 0x00386040
+		// Token: 0x06019E8C RID: 106124 RVA: 0x003B1E48 File Offset: 0x003B0048
 		public static Offset<ISpecialProcess> CreateISpecialProcess(FlatBufferBuilder builder, ESpecialProcess Type = ESpecialProcess.LowMemorySceneSwitch)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ISpecialProcess.EndISpecialProcess(builder);
 		}
 
-		// Token: 0x060187EA RID: 100330 RVA: 0x00387E56 File Offset: 0x00386056
+		// Token: 0x06019E8D RID: 106125 RVA: 0x003B1E5E File Offset: 0x003B005E
 		public static void StartISpecialProcess(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060187EB RID: 100331 RVA: 0x00387E5F File Offset: 0x0038605F
+		// Token: 0x06019E8E RID: 106126 RVA: 0x003B1E67 File Offset: 0x003B0067
 		public static void AddType(FlatBufferBuilder builder, ESpecialProcess type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060187EC RID: 100332 RVA: 0x00387E6A File Offset: 0x0038606A
+		// Token: 0x06019E8F RID: 106127 RVA: 0x003B1E72 File Offset: 0x003B0072
 		public static Offset<ISpecialProcess> EndISpecialProcess(FlatBufferBuilder builder)
 		{
 			return new Offset<ISpecialProcess>(builder.EndTable());
 		}
 
-		// Token: 0x060187ED RID: 100333 RVA: 0x00387E78 File Offset: 0x00386078
+		// Token: 0x06019E90 RID: 106128 RVA: 0x003B1E80 File Offset: 0x003B0080
 		public ISpecialProcessT UnPack()
 		{
 			ISpecialProcessT specialProcessT = new ISpecialProcessT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return specialProcessT;
 		}
 
-		// Token: 0x060187EE RID: 100334 RVA: 0x00387E93 File Offset: 0x00386093
+		// Token: 0x06019E91 RID: 106129 RVA: 0x003B1E9B File Offset: 0x003B009B
 		public void UnPackTo(ISpecialProcessT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060187EF RID: 100335 RVA: 0x00387EA4 File Offset: 0x003860A4
+		// Token: 0x06019E92 RID: 106130 RVA: 0x003B1EAC File Offset: 0x003B00AC
 		public static Offset<ISpecialProcess> Pack(FlatBufferBuilder builder, ISpecialProcessT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ISpecialProcess.CreateISpecialProcess(builder, _o.Type);
 		}
 
-		// Token: 0x0400BD44 RID: 48452
+		// Token: 0x0400C72D RID: 50989
 		private Table __p;
 	}
 }

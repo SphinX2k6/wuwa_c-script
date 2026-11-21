@@ -7,7 +7,7 @@ using CSharpScript.Game.Module.ActivityGamePlay.CommonFSMManager;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.FSM
 {
-	// Token: 0x02006889 RID: 26761
+	// Token: 0x020057D9 RID: 22489
 	[Nullable(new byte[]
 	{
 		0,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.FSM
 	})]
 	public class DangoBrawlFsm : CommonFsmManager<ActivityGameplayTurnStateBase<EDangoBrawlFsmState>, EDangoBrawlFsmState>
 	{
-		// Token: 0x06042CEB RID: 273643 RVA: 0x01043224 File Offset: 0x01041424
+		// Token: 0x06037843 RID: 227395 RVA: 0x00F847A4 File Offset: 0x00F829A4
 		protected unsafe override void InitState()
 		{
 			base.RegisterState(EDangoBrawlFsmState.GameStart, new DangoBrawlGameStartState());

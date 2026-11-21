@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000BDC RID: 3036
+	// Token: 0x02000CBE RID: 3262
 	public struct DangoMonopolyPropertyType : IFlatbufferObject
 	{
-		// Token: 0x17000BFF RID: 3071
-		// (get) Token: 0x060060A2 RID: 24738 RVA: 0x0020FFCD File Offset: 0x0020E1CD
+		// Token: 0x17000C45 RID: 3141
+		// (get) Token: 0x0600667B RID: 26235 RVA: 0x0022F615 File Offset: 0x0022D815
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060060A3 RID: 24739 RVA: 0x0020FFDA File Offset: 0x0020E1DA
+		// Token: 0x0600667C RID: 26236 RVA: 0x0022F622 File Offset: 0x0022D822
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060060A4 RID: 24740 RVA: 0x0020FFE4 File Offset: 0x0020E1E4
+		// Token: 0x0600667D RID: 26237 RVA: 0x0022F62C File Offset: 0x0022D82C
 		public static DangoMonopolyPropertyType GetRootAsDangoMonopolyPropertyType(ByteBuffer _bb)
 		{
 			return DangoMonopolyPropertyType.GetRootAsDangoMonopolyPropertyType(_bb, default(DangoMonopolyPropertyType));
 		}
 
-		// Token: 0x060060A5 RID: 24741 RVA: 0x00210000 File Offset: 0x0020E200
+		// Token: 0x0600667E RID: 26238 RVA: 0x0022F648 File Offset: 0x0022D848
 		public static DangoMonopolyPropertyType GetRootAsDangoMonopolyPropertyType(ByteBuffer _bb, DangoMonopolyPropertyType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060060A6 RID: 24742 RVA: 0x0021001D File Offset: 0x0020E21D
+		// Token: 0x0600667F RID: 26239 RVA: 0x0022F665 File Offset: 0x0022D865
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060060A7 RID: 24743 RVA: 0x0021002C File Offset: 0x0020E22C
+		// Token: 0x06006680 RID: 26240 RVA: 0x0022F674 File Offset: 0x0022D874
 		public DangoMonopolyPropertyType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000C00 RID: 3072
-		// (get) Token: 0x060060A8 RID: 24744 RVA: 0x0021003C File Offset: 0x0020E23C
+		// Token: 0x17000C46 RID: 3142
+		// (get) Token: 0x06006681 RID: 26241 RVA: 0x0022F684 File Offset: 0x0022D884
 		public int PropertyType
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000C01 RID: 3073
-		// (get) Token: 0x060060A9 RID: 24745 RVA: 0x00210078 File Offset: 0x0020E278
+		// Token: 0x17000C47 RID: 3143
+		// (get) Token: 0x06006682 RID: 26242 RVA: 0x0022F6C0 File Offset: 0x0022D8C0
 		public int TriggerType
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004C09 RID: 19465
+		// Token: 0x040051EB RID: 20971
 		private Table __p;
 	}
 }

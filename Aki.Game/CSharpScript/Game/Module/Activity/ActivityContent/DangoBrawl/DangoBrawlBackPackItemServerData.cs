@@ -4,19 +4,19 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067BD RID: 26557
+	// Token: 0x0200570D RID: 22285
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlBackPackItemServerData
 	{
-		// Token: 0x0604225E RID: 270942 RVA: 0x0100A9AD File Offset: 0x01008BAD
+		// Token: 0x06036DB4 RID: 224692 RVA: 0x00F4BD91 File Offset: 0x00F49F91
 		public DangoBrawlBackPackItemServerData(DangoBrawlNormalBagItemInfo data)
 		{
 			this.ServerData = data;
 		}
 
-		// Token: 0x170096AD RID: 38573
-		// (get) Token: 0x0604225F RID: 270943 RVA: 0x0100A9BC File Offset: 0x01008BBC
+		// Token: 0x170069EE RID: 27118
+		// (get) Token: 0x06036DB5 RID: 224693 RVA: 0x00F4BDA0 File Offset: 0x00F49FA0
 		public int Uid
 		{
 			get
@@ -25,8 +25,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096AE RID: 38574
-		// (get) Token: 0x06042260 RID: 270944 RVA: 0x0100A9CE File Offset: 0x01008BCE
+		// Token: 0x170069EF RID: 27119
+		// (get) Token: 0x06036DB6 RID: 224694 RVA: 0x00F4BDB2 File Offset: 0x00F49FB2
 		public int ConfigId
 		{
 			get
@@ -35,8 +35,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x170096AF RID: 38575
-		// (get) Token: 0x06042261 RID: 270945 RVA: 0x0100A9E0 File Offset: 0x01008BE0
+		// Token: 0x170069F0 RID: 27120
+		// (get) Token: 0x06036DB7 RID: 224695 RVA: 0x00F4BDC4 File Offset: 0x00F49FC4
 		public EDangoBrawlRotate Rotate
 		{
 			get
@@ -45,13 +45,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x06042262 RID: 270946 RVA: 0x0100A9ED File Offset: 0x01008BED
+		// Token: 0x06036DB8 RID: 224696 RVA: 0x00F4BDD1 File Offset: 0x00F49FD1
 		public PanelPos GetPosInPanel()
 		{
 			return new PanelPos(this.ServerData.Y, this.ServerData.X);
 		}
 
-		// Token: 0x06042263 RID: 270947 RVA: 0x0100AA0C File Offset: 0x01008C0C
+		// Token: 0x06036DB9 RID: 224697 RVA: 0x00F4BDF0 File Offset: 0x00F49FF0
 		public static DangoBrawlBackPackItemServerData MakeData(int uid, int configId, PanelPos leftTopPos, EDangoBrawlRotate rotate)
 		{
 			DangoBrawlNormalBagItemInfo dangoBrawlNormalBagItemInfo = DangoBrawlNormalBagItemInfo.Create();
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return new DangoBrawlBackPackItemServerData(dangoBrawlNormalBagItemInfo);
 		}
 
-		// Token: 0x04022899 RID: 141465
+		// Token: 0x0401D0F6 RID: 119030
 		private readonly DangoBrawlNormalBagItemInfo ServerData;
 	}
 }

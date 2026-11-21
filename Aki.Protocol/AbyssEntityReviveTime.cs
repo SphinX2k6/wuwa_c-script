@@ -10,7 +10,7 @@ namespace Aki.Protocol
 	// Token: 0x02000024 RID: 36
 	public sealed class AbyssEntityReviveTime : IMessage<AbyssEntityReviveTime>, IMessage, IEquatable<AbyssEntityReviveTime>, IDeepCloneable<AbyssEntityReviveTime>, IBufferMessage
 	{
-		// Token: 0x0600115C RID: 4444 RVA: 0x000305F2 File Offset: 0x0002E7F2
+		// Token: 0x06001187 RID: 4487 RVA: 0x00030BA6 File Offset: 0x0002EDA6
 		[NullableContext(1)]
 		public static AbyssEntityReviveTime Create()
 		{
@@ -18,7 +18,7 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x17000088 RID: 136
-		// (get) Token: 0x0600115D RID: 4445 RVA: 0x000305F9 File Offset: 0x0002E7F9
+		// (get) Token: 0x06001188 RID: 4488 RVA: 0x00030BAD File Offset: 0x0002EDAD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<AbyssEntityReviveTime> Parser
@@ -30,7 +30,7 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x17000089 RID: 137
-		// (get) Token: 0x0600115E RID: 4446 RVA: 0x00030600 File Offset: 0x0002E800
+		// (get) Token: 0x06001189 RID: 4489 RVA: 0x00030BB4 File Offset: 0x0002EDB4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -42,7 +42,7 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x1700008A RID: 138
-		// (get) Token: 0x0600115F RID: 4447 RVA: 0x00030603 File Offset: 0x0002E803
+		// (get) Token: 0x0600118A RID: 4490 RVA: 0x00030BB7 File Offset: 0x0002EDB7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -53,14 +53,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06001160 RID: 4448 RVA: 0x0003060A File Offset: 0x0002E80A
+		// Token: 0x0600118B RID: 4491 RVA: 0x00030BBE File Offset: 0x0002EDBE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AbyssEntityReviveTime()
 		{
 		}
 
-		// Token: 0x06001161 RID: 4449 RVA: 0x00030612 File Offset: 0x0002E812
+		// Token: 0x0600118C RID: 4492 RVA: 0x00030BC6 File Offset: 0x0002EDC6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AbyssEntityReviveTime(AbyssEntityReviveTime other) : this()
@@ -70,7 +70,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06001162 RID: 4450 RVA: 0x00030643 File Offset: 0x0002E843
+		// Token: 0x0600118D RID: 4493 RVA: 0x00030BF7 File Offset: 0x0002EDF7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public AbyssEntityReviveTime Clone()
@@ -79,8 +79,8 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x1700008B RID: 139
-		// (get) Token: 0x06001163 RID: 4451 RVA: 0x0003064B File Offset: 0x0002E84B
-		// (set) Token: 0x06001164 RID: 4452 RVA: 0x00030653 File Offset: 0x0002E853
+		// (get) Token: 0x0600118E RID: 4494 RVA: 0x00030BFF File Offset: 0x0002EDFF
+		// (set) Token: 0x0600118F RID: 4495 RVA: 0x00030C07 File Offset: 0x0002EE07
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long EntityId
@@ -96,8 +96,8 @@ namespace Aki.Protocol
 		}
 
 		// Token: 0x1700008C RID: 140
-		// (get) Token: 0x06001165 RID: 4453 RVA: 0x0003065C File Offset: 0x0002E85C
-		// (set) Token: 0x06001166 RID: 4454 RVA: 0x00030664 File Offset: 0x0002E864
+		// (get) Token: 0x06001190 RID: 4496 RVA: 0x00030C10 File Offset: 0x0002EE10
+		// (set) Token: 0x06001191 RID: 4497 RVA: 0x00030C18 File Offset: 0x0002EE18
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long ReviveTime
@@ -112,7 +112,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06001167 RID: 4455 RVA: 0x0003066D File Offset: 0x0002E86D
+		// Token: 0x06001192 RID: 4498 RVA: 0x00030C21 File Offset: 0x0002EE21
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -120,7 +120,7 @@ namespace Aki.Protocol
 			return this.Equals(other as AbyssEntityReviveTime);
 		}
 
-		// Token: 0x06001168 RID: 4456 RVA: 0x0003067B File Offset: 0x0002E87B
+		// Token: 0x06001193 RID: 4499 RVA: 0x00030C2F File Offset: 0x0002EE2F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(AbyssEntityReviveTime other)
@@ -128,7 +128,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.EntityId == other.EntityId && this.ReviveTime == other.ReviveTime && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06001169 RID: 4457 RVA: 0x000306BC File Offset: 0x0002E8BC
+		// Token: 0x06001194 RID: 4500 RVA: 0x00030C70 File Offset: 0x0002EE70
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -149,7 +149,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600116A RID: 4458 RVA: 0x00030714 File Offset: 0x0002E914
+		// Token: 0x06001195 RID: 4501 RVA: 0x00030CC8 File Offset: 0x0002EEC8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -157,7 +157,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600116B RID: 4459 RVA: 0x00030721 File Offset: 0x0002E921
+		// Token: 0x06001196 RID: 4502 RVA: 0x00030CD5 File Offset: 0x0002EED5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -165,7 +165,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600116C RID: 4460 RVA: 0x0003072C File Offset: 0x0002E92C
+		// Token: 0x06001197 RID: 4503 RVA: 0x00030CE0 File Offset: 0x0002EEE0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -186,7 +186,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600116D RID: 4461 RVA: 0x00030784 File Offset: 0x0002E984
+		// Token: 0x06001198 RID: 4504 RVA: 0x00030D38 File Offset: 0x0002EF38
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -207,7 +207,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600116E RID: 4462 RVA: 0x000307DC File Offset: 0x0002E9DC
+		// Token: 0x06001199 RID: 4505 RVA: 0x00030D90 File Offset: 0x0002EF90
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(AbyssEntityReviveTime other)
@@ -227,7 +227,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600116F RID: 4463 RVA: 0x0003082C File Offset: 0x0002EA2C
+		// Token: 0x0600119A RID: 4506 RVA: 0x00030DE0 File Offset: 0x0002EFE0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -235,7 +235,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06001170 RID: 4464 RVA: 0x00030838 File Offset: 0x0002EA38
+		// Token: 0x0600119B RID: 4507 RVA: 0x00030DEC File Offset: 0x0002EFEC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -265,22 +265,22 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04001F72 RID: 8050
+		// Token: 0x04001FC8 RID: 8136
 		private static readonly MessageParser<AbyssEntityReviveTime> _parser = new MessageParser<AbyssEntityReviveTime>(() => new AbyssEntityReviveTime());
 
-		// Token: 0x04001F73 RID: 8051
+		// Token: 0x04001FC9 RID: 8137
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04001F74 RID: 8052
+		// Token: 0x04001FCA RID: 8138
 		public const int EntityIdFieldNumber = 1;
 
-		// Token: 0x04001F75 RID: 8053
+		// Token: 0x04001FCB RID: 8139
 		private long entityId_;
 
-		// Token: 0x04001F76 RID: 8054
+		// Token: 0x04001FCC RID: 8140
 		public const int ReviveTimeFieldNumber = 2;
 
-		// Token: 0x04001F77 RID: 8055
+		// Token: 0x04001FCD RID: 8141
 		private long reviveTime_;
 	}
 }

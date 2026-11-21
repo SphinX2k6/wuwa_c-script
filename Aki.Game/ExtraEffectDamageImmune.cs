@@ -2,17 +2,17 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.NewWorld.Character.Common.Component.Abilities;
 
-// Token: 0x02002F2D RID: 12077
+// Token: 0x02002480 RID: 9344
 [NullableContext(1)]
 [Nullable(0)]
 public class ExtraEffectDamageImmune : BuffEffect
 {
-	// Token: 0x06019BAF RID: 105391 RVA: 0x006B35BA File Offset: 0x006B17BA
+	// Token: 0x060174BA RID: 95418 RVA: 0x006D98D2 File Offset: 0x006D7AD2
 	public ExtraEffectDamageImmune(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019BB0 RID: 105392 RVA: 0x006B35D8 File Offset: 0x006B17D8
+	// Token: 0x060174BB RID: 95419 RVA: 0x006D98F0 File Offset: 0x006D7AF0
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -23,7 +23,7 @@ public class ExtraEffectDamageImmune : BuffEffect
 		}
 	}
 
-	// Token: 0x06019BB1 RID: 105393 RVA: 0x006B360C File Offset: 0x006B180C
+	// Token: 0x060174BC RID: 95420 RVA: 0x006D9924 File Offset: 0x006D7B24
 	[return: Nullable(2)]
 	public override object OnExecute(params object[] parameters)
 	{
@@ -38,7 +38,7 @@ public class ExtraEffectDamageImmune : BuffEffect
 		return false;
 	}
 
-	// Token: 0x06019BB2 RID: 105394 RVA: 0x006B3644 File Offset: 0x006B1844
+	// Token: 0x060174BD RID: 95421 RVA: 0x006D995C File Offset: 0x006D7B5C
 	public static bool ApplyEffects(RequirementPayload requirements, TDamageParam inputParam, SnapshotPayload snapshots)
 	{
 		CharacterBuffComponent ownerBuffComponent = snapshots.Attacker.OwnerBuffComponent;
@@ -55,6 +55,6 @@ public class ExtraEffectDamageImmune : BuffEffect
 		return false;
 	}
 
-	// Token: 0x0400C1EE RID: 49646
+	// Token: 0x0400C590 RID: 50576
 	private bool[] ImmuneElements = new bool[7];
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002051 RID: 8273
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200229A RID: 8858
 	public class IVisionSettlementHardTip : ICommonTipType
 	{
-		// Token: 0x0600B5C6 RID: 46534 RVA: 0x001A5DA4 File Offset: 0x001A3FA4
+		// Token: 0x0600C0EC RID: 49388 RVA: 0x001BC510 File Offset: 0x001BA710
 		private IVisionSettlementHardTip_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B5C7 RID: 46535 RVA: 0x001A5DDC File Offset: 0x001A3FDC
+		// Token: 0x0600C0ED RID: 49389 RVA: 0x001BC548 File Offset: 0x001BA748
 		public static IVisionSettlementHardTip Create([Nullable(2)] IVisionSettlementHardTip instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B5C8 RID: 46536 RVA: 0x001A5DEF File Offset: 0x001A3FEF
+		// Token: 0x0600C0EE RID: 49390 RVA: 0x001BC55B File Offset: 0x001BA75B
 		public static IVisionSettlementHardTip CreateFromSetValue([Nullable(2)] IVisionSettlementHardTip_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B5C9 RID: 46537 RVA: 0x001A5E04 File Offset: 0x001A4004
+		// Token: 0x0600C0EF RID: 49391 RVA: 0x001BC570 File Offset: 0x001BA770
 		public new IVisionSettlementHardTip_SetValue ToSetValue()
 		{
 			return new IVisionSettlementHardTip_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170037C2 RID: 14274
-		// (get) Token: 0x0600B5CA RID: 46538 RVA: 0x001A5E52 File Offset: 0x001A4052
-		// (set) Token: 0x0600B5CB RID: 46539 RVA: 0x001A5E7D File Offset: 0x001A407D
+		// Token: 0x17003A9F RID: 15007
+		// (get) Token: 0x0600C0F0 RID: 49392 RVA: 0x001BC5BE File Offset: 0x001BA7BE
+		// (set) Token: 0x0600C0F1 RID: 49393 RVA: 0x001BC5E9 File Offset: 0x001BA7E9
 		public override ECommonTipType Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170037C3 RID: 14275
-		// (get) Token: 0x0600B5CC RID: 46540 RVA: 0x001A5E8B File Offset: 0x001A408B
-		// (set) Token: 0x0600B5CD RID: 46541 RVA: 0x001A5EB6 File Offset: 0x001A40B6
+		// Token: 0x17003AA0 RID: 15008
+		// (get) Token: 0x0600C0F2 RID: 49394 RVA: 0x001BC5F7 File Offset: 0x001BA7F7
+		// (set) Token: 0x0600C0F3 RID: 49395 RVA: 0x001BC622 File Offset: 0x001BA822
 		public virtual string TidMainText
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170037C4 RID: 14276
-		// (get) Token: 0x0600B5CE RID: 46542 RVA: 0x001A5EC4 File Offset: 0x001A40C4
-		// (set) Token: 0x0600B5CF RID: 46543 RVA: 0x001A5EEF File Offset: 0x001A40EF
+		// Token: 0x17003AA1 RID: 15009
+		// (get) Token: 0x0600C0F4 RID: 49396 RVA: 0x001BC630 File Offset: 0x001BA830
+		// (set) Token: 0x0600C0F5 RID: 49397 RVA: 0x001BC65B File Offset: 0x001BA85B
 		public virtual string TidSubText
 		{
 			get
@@ -132,9 +130,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170037C5 RID: 14277
-		// (get) Token: 0x0600B5D0 RID: 46544 RVA: 0x001A5EFD File Offset: 0x001A40FD
-		// (set) Token: 0x0600B5D1 RID: 46545 RVA: 0x001A5F14 File Offset: 0x001A4114
+		// Token: 0x17003AA2 RID: 15010
+		// (get) Token: 0x0600C0F6 RID: 49398 RVA: 0x001BC669 File Offset: 0x001BA869
+		// (set) Token: 0x0600C0F7 RID: 49399 RVA: 0x001BC680 File Offset: 0x001BA880
 		[Nullable(2)]
 		public virtual string EdTidMainText
 		{
@@ -154,9 +152,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170037C6 RID: 14278
-		// (get) Token: 0x0600B5D2 RID: 46546 RVA: 0x001A5F22 File Offset: 0x001A4122
-		// (set) Token: 0x0600B5D3 RID: 46547 RVA: 0x001A5F39 File Offset: 0x001A4139
+		// Token: 0x17003AA3 RID: 15011
+		// (get) Token: 0x0600C0F8 RID: 49400 RVA: 0x001BC68E File Offset: 0x001BA88E
+		// (set) Token: 0x0600C0F9 RID: 49401 RVA: 0x001BC6A5 File Offset: 0x001BA8A5
 		[Nullable(2)]
 		public virtual string EdTidSubText
 		{
@@ -176,11 +174,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006D4F RID: 27983
+		// Token: 0x04007358 RID: 29528
 		[Nullable(2)]
 		protected new IVisionSettlementHardTip FbInstance;
 
-		// Token: 0x04006D50 RID: 27984
+		// Token: 0x04007359 RID: 29529
 		[Nullable(2)]
 		protected new IVisionSettlementHardTip_SetValue PocoInterface;
 	}

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BE5 RID: 3045
+	// Token: 0x02000CB4 RID: 3252
 	public class ILifeStageConfig
 	{
-		// Token: 0x060045F0 RID: 17904 RVA: 0x000B0CFF File Offset: 0x000AEEFF
-		[NullableContext(1)]
+		// Token: 0x06004A4E RID: 19022 RVA: 0x000BAE7B File Offset: 0x000B907B
 		public static ILifeStageConfig Create(ILifeStageConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170013E3 RID: 5091
-		// (get) Token: 0x060045F1 RID: 17905 RVA: 0x000B0D20 File Offset: 0x000AEF20
+		// Token: 0x170014E1 RID: 5345
+		// (get) Token: 0x06004A4F RID: 19023 RVA: 0x000BAE9C File Offset: 0x000B909C
 		public virtual float? PerformDuration
 		{
 			get
@@ -35,7 +33,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040027D0 RID: 10192
+		// Token: 0x04002A1B RID: 10779
 		private ILifeStageConfig Instance;
 	}
 }

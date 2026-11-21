@@ -6,10 +6,10 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200279A RID: 10138
+// Token: 0x02001D14 RID: 7444
 public class RoleBackgroundMusicSwitchItem : UiPanelBase
 {
-	// Token: 0x06014D0B RID: 85259 RVA: 0x00548084 File Offset: 0x00546284
+	// Token: 0x060126DC RID: 75484 RVA: 0x00572124 File Offset: 0x00570324
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -25,7 +25,7 @@ public class RoleBackgroundMusicSwitchItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06014D0C RID: 85260 RVA: 0x00548110 File Offset: 0x00546310
+	// Token: 0x060126DD RID: 75485 RVA: 0x005721B0 File Offset: 0x005703B0
 	protected override void OnStart()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -35,13 +35,13 @@ public class RoleBackgroundMusicSwitchItem : UiPanelBase
 		EventSystem.Instance.Add<int, bool>(EEventName.OnRoleBackgroundMusicEnabledChanged, new Action<int, bool>(this.OnRoleBackgroundMusicEnabledChanged));
 	}
 
-	// Token: 0x06014D0D RID: 85261 RVA: 0x00548164 File Offset: 0x00546364
+	// Token: 0x060126DE RID: 75486 RVA: 0x00572204 File Offset: 0x00570404
 	protected override void OnBeforeDestroy()
 	{
 		EventSystem.Instance.Remove<int, bool>(EEventName.OnRoleBackgroundMusicEnabledChanged, new Action<int, bool>(this.OnRoleBackgroundMusicEnabledChanged));
 	}
 
-	// Token: 0x06014D0E RID: 85262 RVA: 0x00548182 File Offset: 0x00546382
+	// Token: 0x060126DF RID: 75487 RVA: 0x00572222 File Offset: 0x00570422
 	[NullableContext(1)]
 	public void RefreshByRoleData(RoleDataBase roleData)
 	{
@@ -49,7 +49,7 @@ public class RoleBackgroundMusicSwitchItem : UiPanelBase
 		this.Refresh();
 	}
 
-	// Token: 0x06014D0F RID: 85263 RVA: 0x00548194 File Offset: 0x00546394
+	// Token: 0x060126E0 RID: 75488 RVA: 0x00572234 File Offset: 0x00570434
 	public void Refresh()
 	{
 		if (this.RoleData == null)
@@ -62,7 +62,7 @@ public class RoleBackgroundMusicSwitchItem : UiPanelBase
 		extendToggle.SetToggleState(state, false, false, false);
 	}
 
-	// Token: 0x06014D10 RID: 85264 RVA: 0x005481F4 File Offset: 0x005463F4
+	// Token: 0x060126E1 RID: 75489 RVA: 0x00572294 File Offset: 0x00570494
 	private void OnPointUpCallBackInternal(EToggleState state)
 	{
 		if (this.RoleData == null || this.RoleData.IsTrialRole())
@@ -80,7 +80,7 @@ public class RoleBackgroundMusicSwitchItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06014D11 RID: 85265 RVA: 0x0054824D File Offset: 0x0054644D
+	// Token: 0x060126E2 RID: 75490 RVA: 0x005722ED File Offset: 0x005704ED
 	private void OnRoleBackgroundMusicEnabledChanged(int roleDataId, bool _)
 	{
 		if (this.RoleData == null || this.RoleData.GetDataId() != roleDataId)
@@ -90,18 +90,18 @@ public class RoleBackgroundMusicSwitchItem : UiPanelBase
 		this.Refresh();
 	}
 
-	// Token: 0x04009CB2 RID: 40114
+	// Token: 0x0400A080 RID: 41088
 	[Nullable(2)]
 	public RoleDataBase RoleData;
 
-	// Token: 0x02008E0E RID: 36366
+	// Token: 0x02008052 RID: 32850
 	private enum EComponentDefine
 	{
-		// Token: 0x0402E176 RID: 188790
+		// Token: 0x04029850 RID: 170064
 		SwitchToggle,
-		// Token: 0x0402E177 RID: 188791
+		// Token: 0x04029851 RID: 170065
 		DescText,
-		// Token: 0x0402E178 RID: 188792
+		// Token: 0x04029852 RID: 170066
 		RoleIconTexture
 	}
 }

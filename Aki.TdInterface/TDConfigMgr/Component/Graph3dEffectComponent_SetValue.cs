@@ -1,22 +1,20 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000188 RID: 392
+	// Token: 0x0200019F RID: 415
 	public class Graph3dEffectComponent_SetValue
 	{
-		// Token: 0x04000775 RID: 1909
+		// Token: 0x040007CB RID: 1995
 		public bool? Disabled;
 
-		// Token: 0x04000776 RID: 1910
+		// Token: 0x040007CC RID: 1996
 		public bool? EdIsLocked;
 
-		// Token: 0x04000777 RID: 1911
+		// Token: 0x040007CD RID: 1997
 		public int Graph3dEntityId;
 
-		// Token: 0x04000778 RID: 1912
-		[Nullable(1)]
+		// Token: 0x040007CE RID: 1998
 		public IFireBoxFishEffect EffectType;
 	}
 }

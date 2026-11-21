@@ -8,14 +8,14 @@ using CSharpScript.Game.Module.Audio;
 using CSharpScript.Game.Utils;
 using UnrealEngine;
 
-// Token: 0x02003046 RID: 12358
+// Token: 0x0200259C RID: 9628
 [NullableContext(1)]
 [Nullable(0)]
-public class CharacterAkComponent : EntityComponent, IComponentDependency
+public class CharacterAkComponent : EntityComponent
 {
-	// Token: 0x17002425 RID: 9253
-	// (get) Token: 0x0601A3CF RID: 107471 RVA: 0x006EAD19 File Offset: 0x006E8F19
-	public static Type[] Dependencies
+	// Token: 0x17002523 RID: 9507
+	// (get) Token: 0x06017D4B RID: 97611 RVA: 0x007124D1 File Offset: 0x007106D1
+	public override Type[] Dependencies
 	{
 		get
 		{
@@ -27,7 +27,7 @@ public class CharacterAkComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601A3D0 RID: 107472 RVA: 0x006EAD3B File Offset: 0x006E8F3B
+	// Token: 0x06017D4C RID: 97612 RVA: 0x007124F3 File Offset: 0x007106F3
 	[NullableContext(2)]
 	protected override bool OnInitData(IEntityArgs args = null)
 	{
@@ -36,7 +36,7 @@ public class CharacterAkComponent : EntityComponent, IComponentDependency
 		return true;
 	}
 
-	// Token: 0x0601A3D1 RID: 107473 RVA: 0x006EAD54 File Offset: 0x006E8F54
+	// Token: 0x06017D4D RID: 97613 RVA: 0x0071250C File Offset: 0x0071070C
 	protected override bool OnStart()
 	{
 		this.CreatureData = base.Entity.GetComponent<CreatureDataComponent>();
@@ -62,7 +62,7 @@ public class CharacterAkComponent : EntityComponent, IComponentDependency
 		return true;
 	}
 
-	// Token: 0x0601A3D2 RID: 107474 RVA: 0x006EADEF File Offset: 0x006E8FEF
+	// Token: 0x06017D4E RID: 97614 RVA: 0x007125A7 File Offset: 0x007107A7
 	protected override void OnTick(float delta)
 	{
 		if (this.Debug)
@@ -80,7 +80,7 @@ public class CharacterAkComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601A3D3 RID: 107475 RVA: 0x006EAE30 File Offset: 0x006E9030
+	// Token: 0x06017D4F RID: 97615 RVA: 0x007125E8 File Offset: 0x007107E8
 	protected override void OnActivate()
 	{
 		CreatureDataComponent creatureData = this.CreatureData;
@@ -119,7 +119,7 @@ public class CharacterAkComponent : EntityComponent, IComponentDependency
 		this.UpdateSwitch();
 	}
 
-	// Token: 0x0601A3D4 RID: 107476 RVA: 0x006EAF20 File Offset: 0x006E9120
+	// Token: 0x06017D50 RID: 97616 RVA: 0x007126D8 File Offset: 0x007108D8
 	private void UpdateSwitch()
 	{
 		CharacterActorComponent actorComp = this.ActorComp;
@@ -130,7 +130,7 @@ public class CharacterAkComponent : EntityComponent, IComponentDependency
 		GameAudioController.Instance.SetRolePriority(this.IsP1 ? ERoleAudioPriorityType.PlayerControl : ERoleAudioPriorityType.OtherControl, this.ActorComp.Actor);
 	}
 
-	// Token: 0x0601A3D5 RID: 107477 RVA: 0x006EAF5C File Offset: 0x006E915C
+	// Token: 0x06017D51 RID: 97617 RVA: 0x00712714 File Offset: 0x00710914
 	private void UpdateMoveState()
 	{
 		if (AkComponentStatic.AkMoveState == EAkMoveState.Normal)
@@ -175,7 +175,7 @@ public class CharacterAkComponent : EntityComponent, IComponentDependency
 		AudioSystem.Instance.SetState("role_move", "Normal", true);
 	}
 
-	// Token: 0x0601A3D6 RID: 107478 RVA: 0x006EB0CC File Offset: 0x006E92CC
+	// Token: 0x06017D52 RID: 97618 RVA: 0x00712884 File Offset: 0x00710A84
 	private void RefreshEntityTypesVolumeControl()
 	{
 		CreatureDataComponent creatureData = this.CreatureData;
@@ -217,7 +217,7 @@ public class CharacterAkComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601A3D7 RID: 107479 RVA: 0x006EB210 File Offset: 0x006E9410
+	// Token: 0x06017D53 RID: 97619 RVA: 0x007129C8 File Offset: 0x00710BC8
 	protected override bool OnEnd()
 	{
 		this.DynamicConditionProxy.Clear();
@@ -229,7 +229,7 @@ public class CharacterAkComponent : EntityComponent, IComponentDependency
 		return true;
 	}
 
-	// Token: 0x0601A3D8 RID: 107480 RVA: 0x006EB238 File Offset: 0x006E9438
+	// Token: 0x06017D54 RID: 97620 RVA: 0x007129F0 File Offset: 0x00710BF0
 	public void PostAudioEvent(string action)
 	{
 		int roleId = base.Entity.GetComponent<CreatureDataComponent>().GetRoleId();
@@ -254,7 +254,7 @@ public class CharacterAkComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601A3D9 RID: 107481 RVA: 0x006EB300 File Offset: 0x006E9500
+	// Token: 0x06017D55 RID: 97621 RVA: 0x00712AB8 File Offset: 0x00710CB8
 	public unsafe void SetSwitchByData(UAkComponent charAkComponent, string[] switchData)
 	{
 		for (int i = 0; i < switchData.Length; i++)
@@ -278,7 +278,7 @@ public class CharacterAkComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601A3DA RID: 107482 RVA: 0x006EB3A8 File Offset: 0x006E95A8
+	// Token: 0x06017D56 RID: 97622 RVA: 0x00712B60 File Offset: 0x00710D60
 	public unsafe void SetSwitchByUeData(UAkComponent charAkComponent, TArray<string> switchData)
 	{
 		for (int i = 0; i < switchData.Num(); i++)
@@ -302,7 +302,7 @@ public class CharacterAkComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601A3DB RID: 107483 RVA: 0x006EB454 File Offset: 0x006E9654
+	// Token: 0x06017D57 RID: 97623 RVA: 0x00712C0C File Offset: 0x00710E0C
 	public int PostAkEvent(UAkComponent charAkComponent, [Nullable(2)] UAkAudioEvent eventPtr, string attachName, TArray<string> switchData, bool bFollow)
 	{
 		if (eventPtr == null)
@@ -326,19 +326,19 @@ public class CharacterAkComponent : EntityComponent, IComponentDependency
 		return UAkGameplayStatics.D_PostEventAtLocation(eventPtr, this.ActorComp.ActorLocation, global::Rotator.ZeroRotator, eventPtr.GetName(), this.ActorComp.Actor);
 	}
 
-	// Token: 0x0601A3DC RID: 107484 RVA: 0x006EB4F4 File Offset: 0x006E96F4
+	// Token: 0x06017D58 RID: 97624 RVA: 0x00712CAC File Offset: 0x00710EAC
 	public void SetDebug(bool bDebug)
 	{
 		this.Debug = bDebug;
 	}
 
-	// Token: 0x0601A3DD RID: 107485 RVA: 0x006EB4FD File Offset: 0x006E96FD
+	// Token: 0x06017D59 RID: 97625 RVA: 0x00712CB5 File Offset: 0x00710EB5
 	public bool GetDebug()
 	{
 		return this.Debug;
 	}
 
-	// Token: 0x0601A3DE RID: 107486 RVA: 0x006EB508 File Offset: 0x006E9708
+	// Token: 0x06017D5A RID: 97626 RVA: 0x00712CC0 File Offset: 0x00710EC0
 	private unsafe void DebugText()
 	{
 		TsBaseCharacter actor = this.ActorComp.Actor;
@@ -376,7 +376,7 @@ public class CharacterAkComponent : EntityComponent, IComponentDependency
 		instance3.Info(module3, author3, message3, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
 	}
 
-	// Token: 0x0601A3DF RID: 107487 RVA: 0x006EB66C File Offset: 0x006E986C
+	// Token: 0x06017D5B RID: 97627 RVA: 0x00712E24 File Offset: 0x00711024
 	public UAkComponent GetAkComponentBySocketName(FName socketName)
 	{
 		FName fname = socketName;
@@ -412,7 +412,7 @@ public class CharacterAkComponent : EntityComponent, IComponentDependency
 		return uakComponent;
 	}
 
-	// Token: 0x0601A3E0 RID: 107488 RVA: 0x006EB7A4 File Offset: 0x006E99A4
+	// Token: 0x06017D5C RID: 97628 RVA: 0x00712F5C File Offset: 0x0071115C
 	private void UpdateAudioEnvironment()
 	{
 		if (Time.Instance.Now - this.LastUpdateEnvironmentAudioTime > 500.0)
@@ -431,7 +431,7 @@ public class CharacterAkComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601A3E1 RID: 107489 RVA: 0x006EB83C File Offset: 0x006E9A3C
+	// Token: 0x06017D5D RID: 97629 RVA: 0x00712FF4 File Offset: 0x007111F4
 	public void SetFoleySynthFileDebug(bool debug, int[] models)
 	{
 		FoleySynthController foleySynthController = this.FoleySynthController;
@@ -442,7 +442,7 @@ public class CharacterAkComponent : EntityComponent, IComponentDependency
 		foleySynthController.SetDebug(debug, models);
 	}
 
-	// Token: 0x0601A3E2 RID: 107490 RVA: 0x006EB850 File Offset: 0x006E9A50
+	// Token: 0x06017D5E RID: 97630 RVA: 0x00713008 File Offset: 0x00711208
 	public static void SetGlobalCharacterFoleySynthFileDebug(bool debug, int[] models)
 	{
 		if (Global.BaseCharacter == null)
@@ -462,7 +462,7 @@ public class CharacterAkComponent : EntityComponent, IComponentDependency
 		component.SetDebug(debug);
 	}
 
-	// Token: 0x0601A3E3 RID: 107491 RVA: 0x006EB894 File Offset: 0x006E9A94
+	// Token: 0x06017D5F RID: 97631 RVA: 0x0071304C File Offset: 0x0071124C
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -470,127 +470,122 @@ public class CharacterAkComponent : EntityComponent, IComponentDependency
 			return false;
 		}
 		CharacterAkComponent characterAkComponent = (CharacterAkComponent)componentTemplate;
-		if (base.CanResetComponentProperty("CreatureData"))
+		if (characterAkComponent.CreatureData == null)
 		{
-			if (characterAkComponent.CreatureData == null)
-			{
-				this.CreatureData = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureData), "CreatureData"))
-			{
-				return false;
-			}
+			this.CreatureData = null;
 		}
-		if (base.CanResetComponentProperty("ActorComp"))
-		{
-			if (characterAkComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("MoveComp"))
-		{
-			if (characterAkComponent.MoveComp == null)
-			{
-				this.MoveComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseMoveComponent>(this.MoveComp), "MoveComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TagComp"))
-		{
-			if (characterAkComponent.TagComp == null)
-			{
-				this.TagComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComp), "TagComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("IsFirstGet"))
-		{
-			this.IsFirstGet = characterAkComponent.IsFirstGet;
-		}
-		if (base.CanResetComponentProperty("IsRole"))
-		{
-			this.IsRole = characterAkComponent.IsRole;
-		}
-		if (base.CanResetComponentProperty("IsP1"))
-		{
-			this.IsP1 = characterAkComponent.IsP1;
-		}
-		if (base.CanResetComponentProperty("AkComponentConfig"))
-		{
-			this.AkComponentConfig = characterAkComponent.AkComponentConfig;
-		}
-		if (base.CanResetComponentProperty("FoleySynthAllConfig") && characterAkComponent.FoleySynthAllConfig != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<FoleySynthAllConfig>(this.FoleySynthAllConfig), "FoleySynthAllConfig"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureData), "CreatureData"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("Debug"))
+		if (characterAkComponent.ActorComp == null)
 		{
-			this.Debug = characterAkComponent.Debug;
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("WaterDepth"))
-		{
-			this.WaterDepth = characterAkComponent.WaterDepth;
-		}
-		if (base.CanResetComponentProperty("FoleySynthController"))
-		{
-			if (characterAkComponent.FoleySynthController == null)
-			{
-				this.FoleySynthController = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<FoleySynthController>(this.FoleySynthController), "FoleySynthController"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("DynamicConditionProxy"))
-		{
-			if (characterAkComponent.DynamicConditionProxy == null)
-			{
-				this.DynamicConditionProxy = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AkComponentDynamicConditionProxy>(this.DynamicConditionProxy), "DynamicConditionProxy"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("FootSwitch"))
-		{
-			this.FootSwitch = characterAkComponent.FootSwitch;
-		}
-		if (base.CanResetComponentProperty("LastUpdateEnvironmentAudioTime"))
-		{
-			this.LastUpdateEnvironmentAudioTime = characterAkComponent.LastUpdateEnvironmentAudioTime;
-		}
-		if (base.CanResetComponentProperty("LastUpdateEnvironmentAudioLocation") && characterAkComponent.LastUpdateEnvironmentAudioLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.LastUpdateEnvironmentAudioLocation), "LastUpdateEnvironmentAudioLocation"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("AudioResult"))
+		if (characterAkComponent.MoveComp == null)
 		{
-			if (characterAkComponent.AudioResult == null)
-			{
-				this.AudioResult = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PlayResult>(this.AudioResult), "AudioResult"))
-			{
-				return false;
-			}
+			this.MoveComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MoveComp), "MoveComp"))
+		{
+			return false;
+		}
+		if (characterAkComponent.TagComp == null)
+		{
+			this.TagComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComp), "TagComp"))
+		{
+			return false;
+		}
+		this.IsFirstGet = characterAkComponent.IsFirstGet;
+		this.IsRole = characterAkComponent.IsRole;
+		this.IsP1 = characterAkComponent.IsP1;
+		this.AkComponentConfig = characterAkComponent.AkComponentConfig;
+		if (characterAkComponent.FoleySynthAllConfig != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.FoleySynthAllConfig), "FoleySynthAllConfig"))
+		{
+			return false;
+		}
+		this.Debug = characterAkComponent.Debug;
+		this.WaterDepth = characterAkComponent.WaterDepth;
+		if (characterAkComponent.FoleySynthController == null)
+		{
+			this.FoleySynthController = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FoleySynthController), "FoleySynthController"))
+		{
+			return false;
+		}
+		if (characterAkComponent.DynamicConditionProxy == null)
+		{
+			this.DynamicConditionProxy = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DynamicConditionProxy), "DynamicConditionProxy"))
+		{
+			return false;
+		}
+		this.FootSwitch = characterAkComponent.FootSwitch;
+		this.LastUpdateEnvironmentAudioTime = characterAkComponent.LastUpdateEnvironmentAudioTime;
+		if (characterAkComponent.LastUpdateEnvironmentAudioLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastUpdateEnvironmentAudioLocation), "LastUpdateEnvironmentAudioLocation"))
+		{
+			return false;
+		}
+		if (characterAkComponent.AudioResult == null)
+		{
+			this.AudioResult = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AudioResult), "AudioResult"))
+		{
+			return false;
 		}
 		return true;
 	}
 
-	// Token: 0x0601A3E5 RID: 107493 RVA: 0x006EBB80 File Offset: 0x006E9D80
+	// Token: 0x17002524 RID: 9508
+	// (get) Token: 0x06017D60 RID: 97632 RVA: 0x0071323D File Offset: 0x0071143D
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002525 RID: 9509
+	// (get) Token: 0x06017D61 RID: 97633 RVA: 0x00713240 File Offset: 0x00711440
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002526 RID: 9510
+	// (get) Token: 0x06017D62 RID: 97634 RVA: 0x00713243 File Offset: 0x00711443
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002527 RID: 9511
+	// (get) Token: 0x06017D63 RID: 97635 RVA: 0x00713246 File Offset: 0x00711446
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x06017D65 RID: 97637 RVA: 0x00713268 File Offset: 0x00711468
 	// Note: this type is marked as 'beforefieldinit'.
 	static CharacterAkComponent()
 	{
@@ -605,79 +600,79 @@ public class CharacterAkComponent : EntityComponent, IComponentDependency
 		CharacterAkComponent.AUDIO_ENTITY_TYPE_VOLUME_CONTROL = dictionary;
 	}
 
-	// Token: 0x0400C7A2 RID: 51106
+	// Token: 0x0400CB7C RID: 52092
 	private const int DEBUG_RADIUS = 15;
 
-	// Token: 0x0400C7A3 RID: 51107
+	// Token: 0x0400CB7D RID: 52093
 	private const int DEBUG_SEG = 12;
 
-	// Token: 0x0400C7A4 RID: 51108
+	// Token: 0x0400CB7E RID: 52094
 	public const string ROLE_MOVE_GROUP = "role_move";
 
-	// Token: 0x0400C7A5 RID: 51109
+	// Token: 0x0400CB7F RID: 52095
 	private const int ENVIRONMENT_AUDIO_UPDATE_INTERVAL = 500;
 
-	// Token: 0x0400C7A6 RID: 51110
+	// Token: 0x0400CB80 RID: 52096
 	private const int ENVIRONMENT_AUDIO_UPDATE_DIST_SQUARED = 4;
 
-	// Token: 0x0400C7A7 RID: 51111
+	// Token: 0x0400CB81 RID: 52097
 	[StaticVariableRuleIgnore]
 	private static readonly Dictionary<EEntityType, string> AUDIO_ENTITY_TYPE_VOLUME_CONTROL;
 
-	// Token: 0x0400C7A8 RID: 51112
+	// Token: 0x0400CB82 RID: 52098
 	[Nullable(2)]
 	private CreatureDataComponent CreatureData;
 
-	// Token: 0x0400C7A9 RID: 51113
+	// Token: 0x0400CB83 RID: 52099
 	[Nullable(2)]
 	private CharacterActorComponent ActorComp;
 
-	// Token: 0x0400C7AA RID: 51114
+	// Token: 0x0400CB84 RID: 52100
 	[Nullable(2)]
 	private BaseMoveComponent MoveComp;
 
-	// Token: 0x0400C7AB RID: 51115
+	// Token: 0x0400CB85 RID: 52101
 	[Nullable(2)]
 	private BaseTagComponent TagComp;
 
-	// Token: 0x0400C7AC RID: 51116
+	// Token: 0x0400CB86 RID: 52102
 	private bool IsFirstGet;
 
-	// Token: 0x0400C7AD RID: 51117
+	// Token: 0x0400CB87 RID: 52103
 	public bool IsRole;
 
-	// Token: 0x0400C7AE RID: 51118
+	// Token: 0x0400CB88 RID: 52104
 	public bool IsP1;
 
-	// Token: 0x0400C7AF RID: 51119
+	// Token: 0x0400CB89 RID: 52105
 	public EntityAudioConfig? AkComponentConfig;
 
-	// Token: 0x0400C7B0 RID: 51120
+	// Token: 0x0400CB8A RID: 52106
 	[Nullable(2)]
 	private readonly FoleySynthAllConfig FoleySynthAllConfig;
 
-	// Token: 0x0400C7B1 RID: 51121
+	// Token: 0x0400CB8B RID: 52107
 	private bool Debug;
 
-	// Token: 0x0400C7B2 RID: 51122
+	// Token: 0x0400CB8C RID: 52108
 	public double WaterDepth;
 
-	// Token: 0x0400C7B3 RID: 51123
+	// Token: 0x0400CB8D RID: 52109
 	[Nullable(2)]
 	private FoleySynthController FoleySynthController;
 
-	// Token: 0x0400C7B4 RID: 51124
+	// Token: 0x0400CB8E RID: 52110
 	public AkComponentDynamicConditionProxy DynamicConditionProxy;
 
-	// Token: 0x0400C7B5 RID: 51125
+	// Token: 0x0400CB8F RID: 52111
 	public string FootSwitch = "";
 
-	// Token: 0x0400C7B6 RID: 51126
+	// Token: 0x0400CB90 RID: 52112
 	private double LastUpdateEnvironmentAudioTime;
 
-	// Token: 0x0400C7B7 RID: 51127
+	// Token: 0x0400CB91 RID: 52113
 	private readonly global::Vector LastUpdateEnvironmentAudioLocation = global::Vector.Create();
 
-	// Token: 0x0400C7B8 RID: 51128
+	// Token: 0x0400CB92 RID: 52114
 	private PlayResult AudioResult;
 }

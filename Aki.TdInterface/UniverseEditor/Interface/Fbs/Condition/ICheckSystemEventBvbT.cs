@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Common;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004B3C RID: 19260
+	// Token: 0x02005023 RID: 20515
 	public class ICheckSystemEventBvbT
 	{
-		// Token: 0x17008BBD RID: 35773
-		// (get) Token: 0x0601E502 RID: 124162 RVA: 0x0043F450 File Offset: 0x0043D650
-		// (set) Token: 0x0601E503 RID: 124163 RVA: 0x0043F458 File Offset: 0x0043D658
+		// Token: 0x170092CD RID: 37581
+		// (get) Token: 0x0602008D RID: 131213 RVA: 0x00471BFC File Offset: 0x0046FDFC
+		// (set) Token: 0x0602008E RID: 131214 RVA: 0x00471C04 File Offset: 0x0046FE04
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008BBE RID: 35774
-		// (get) Token: 0x0601E504 RID: 124164 RVA: 0x0043F461 File Offset: 0x0043D661
-		// (set) Token: 0x0601E505 RID: 124165 RVA: 0x0043F469 File Offset: 0x0043D669
+		// Token: 0x170092CE RID: 37582
+		// (get) Token: 0x0602008F RID: 131215 RVA: 0x00471C0D File Offset: 0x0046FE0D
+		// (set) Token: 0x06020090 RID: 131216 RVA: 0x00471C15 File Offset: 0x0046FE15
 		public EBvbEventName EventName { get; set; }
 
-		// Token: 0x0601E506 RID: 124166 RVA: 0x0043F472 File Offset: 0x0043D672
+		// Token: 0x06020091 RID: 131217 RVA: 0x00471C1E File Offset: 0x0046FE1E
 		public ICheckSystemEventBvbT()
 		{
 			this.Type = ECondition.CompareVar;

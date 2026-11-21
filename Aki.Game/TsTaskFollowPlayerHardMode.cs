@@ -14,9 +14,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskFollowPlayerHardMode.TsTaskFollowPlayerHardMode_C")]
 public class TsTaskFollowPlayerHardMode : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x17000168 RID: 360
-	// (get) Token: 0x06000868 RID: 2152 RVA: 0x00029C5F File Offset: 0x00027E5F
-	// (set) Token: 0x06000869 RID: 2153 RVA: 0x00029C6F File Offset: 0x00027E6F
+	// Token: 0x1700016A RID: 362
+	// (get) Token: 0x0600086C RID: 2156 RVA: 0x0002AADB File Offset: 0x00028CDB
+	// (set) Token: 0x0600086D RID: 2157 RVA: 0x0002AAEB File Offset: 0x00028CEB
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float MoveSpeed
 	{
@@ -30,9 +30,9 @@ public class TsTaskFollowPlayerHardMode : TsTaskAbortImmediatelyBase, IUnrealUOb
 		}
 	}
 
-	// Token: 0x17000169 RID: 361
-	// (get) Token: 0x0600086A RID: 2154 RVA: 0x00029C80 File Offset: 0x00027E80
-	// (set) Token: 0x0600086B RID: 2155 RVA: 0x00029C90 File Offset: 0x00027E90
+	// Token: 0x1700016B RID: 363
+	// (get) Token: 0x0600086E RID: 2158 RVA: 0x0002AAFC File Offset: 0x00028CFC
+	// (set) Token: 0x0600086F RID: 2159 RVA: 0x0002AB0C File Offset: 0x00028D0C
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float RotateSpeed
 	{
@@ -46,9 +46,9 @@ public class TsTaskFollowPlayerHardMode : TsTaskAbortImmediatelyBase, IUnrealUOb
 		}
 	}
 
-	// Token: 0x1700016A RID: 362
-	// (get) Token: 0x0600086C RID: 2156 RVA: 0x00029CA1 File Offset: 0x00027EA1
-	// (set) Token: 0x0600086D RID: 2157 RVA: 0x00029CB5 File Offset: 0x00027EB5
+	// Token: 0x1700016C RID: 364
+	// (get) Token: 0x06000870 RID: 2160 RVA: 0x0002AB1D File Offset: 0x00028D1D
+	// (set) Token: 0x06000871 RID: 2161 RVA: 0x0002AB31 File Offset: 0x00028D31
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FVector LocationOffset
 	{
@@ -62,9 +62,9 @@ public class TsTaskFollowPlayerHardMode : TsTaskAbortImmediatelyBase, IUnrealUOb
 		}
 	}
 
-	// Token: 0x1700016B RID: 363
-	// (get) Token: 0x0600086E RID: 2158 RVA: 0x00029CCA File Offset: 0x00027ECA
-	// (set) Token: 0x0600086F RID: 2159 RVA: 0x00029CDA File Offset: 0x00027EDA
+	// Token: 0x1700016D RID: 365
+	// (get) Token: 0x06000872 RID: 2162 RVA: 0x0002AB46 File Offset: 0x00028D46
+	// (set) Token: 0x06000873 RID: 2163 RVA: 0x0002AB56 File Offset: 0x00028D56
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float ForceMoveDistance
 	{
@@ -78,9 +78,9 @@ public class TsTaskFollowPlayerHardMode : TsTaskAbortImmediatelyBase, IUnrealUOb
 		}
 	}
 
-	// Token: 0x1700016C RID: 364
-	// (get) Token: 0x06000870 RID: 2160 RVA: 0x00029CEB File Offset: 0x00027EEB
-	// (set) Token: 0x06000871 RID: 2161 RVA: 0x00029CFB File Offset: 0x00027EFB
+	// Token: 0x1700016E RID: 366
+	// (get) Token: 0x06000874 RID: 2164 RVA: 0x0002AB67 File Offset: 0x00028D67
+	// (set) Token: 0x06000875 RID: 2165 RVA: 0x0002AB77 File Offset: 0x00028D77
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool LookAtTarget
 	{
@@ -94,9 +94,9 @@ public class TsTaskFollowPlayerHardMode : TsTaskAbortImmediatelyBase, IUnrealUOb
 		}
 	}
 
-	// Token: 0x1700016D RID: 365
-	// (get) Token: 0x06000872 RID: 2162 RVA: 0x00029D0C File Offset: 0x00027F0C
-	// (set) Token: 0x06000873 RID: 2163 RVA: 0x00029D1C File Offset: 0x00027F1C
+	// Token: 0x1700016F RID: 367
+	// (get) Token: 0x06000876 RID: 2166 RVA: 0x0002AB88 File Offset: 0x00028D88
+	// (set) Token: 0x06000877 RID: 2167 RVA: 0x0002AB98 File Offset: 0x00028D98
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float DetectTargetDistance
 	{
@@ -110,9 +110,9 @@ public class TsTaskFollowPlayerHardMode : TsTaskAbortImmediatelyBase, IUnrealUOb
 		}
 	}
 
-	// Token: 0x1700016E RID: 366
-	// (get) Token: 0x06000874 RID: 2164 RVA: 0x00029D30 File Offset: 0x00027F30
-	// (set) Token: 0x06000875 RID: 2165 RVA: 0x00029D69 File Offset: 0x00027F69
+	// Token: 0x17000170 RID: 368
+	// (get) Token: 0x06000878 RID: 2168 RVA: 0x0002ABAC File Offset: 0x00028DAC
+	// (set) Token: 0x06000879 RID: 2169 RVA: 0x0002ABE5 File Offset: 0x00028DE5
 	[Nullable(new byte[]
 	{
 		1,
@@ -147,7 +147,7 @@ public class TsTaskFollowPlayerHardMode : TsTaskAbortImmediatelyBase, IUnrealUOb
 		}
 	}
 
-	// Token: 0x06000876 RID: 2166 RVA: 0x00029D78 File Offset: 0x00027F78
+	// Token: 0x0600087A RID: 2170 RVA: 0x0002ABF4 File Offset: 0x00028DF4
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -172,30 +172,27 @@ public class TsTaskFollowPlayerHardMode : TsTaskAbortImmediatelyBase, IUnrealUOb
 		}
 	}
 
-	// Token: 0x06000877 RID: 2167 RVA: 0x00029E44 File Offset: 0x00028044
+	// Token: 0x0600087B RID: 2171 RVA: 0x0002ACC0 File Offset: 0x00028EC0
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveExecuteAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskFollowPlayerHardMode) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveExecuteAI"), TsTaskFollowPlayerHardMode.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			this.ReceiveExecuteAI_Implementation(ownerController, controlledPawn);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000878 RID: 2168 RVA: 0x00029EE0 File Offset: 0x000280E0
+	// Token: 0x0600087C RID: 2172 RVA: 0x0002AD70 File Offset: 0x00028F70
 	[NullableContext(2)]
 	protected virtual void ReceiveExecuteAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -256,31 +253,28 @@ public class TsTaskFollowPlayerHardMode : TsTaskAbortImmediatelyBase, IUnrealUOb
 		}
 	}
 
-	// Token: 0x06000879 RID: 2169 RVA: 0x0002A0D8 File Offset: 0x000282D8
+	// Token: 0x0600087D RID: 2173 RVA: 0x0002AF68 File Offset: 0x00029168
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveTickAI(AAIController ownerController, APawn controlledPawn, float deltaSeconds)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveTickAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskFollowPlayerHardMode) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveTickAI"), TsTaskFollowPlayerHardMode.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
-			ptr2->DeltaSeconds = deltaSeconds;
+			this.ReceiveTickAI_Implementation(ownerController, controlledPawn, deltaSeconds);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		ptr->DeltaSeconds = deltaSeconds;
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x0600087A RID: 2170 RVA: 0x0002A178 File Offset: 0x00028378
+	// Token: 0x0600087E RID: 2174 RVA: 0x0002B020 File Offset: 0x00029220
 	[NullableContext(2)]
 	protected virtual void ReceiveTickAI_Implementation(AAIController ownerController, APawn controlledPawn, float deltaSeconds)
 	{
@@ -375,7 +369,7 @@ public class TsTaskFollowPlayerHardMode : TsTaskAbortImmediatelyBase, IUnrealUOb
 		}
 	}
 
-	// Token: 0x0600087B RID: 2171 RVA: 0x0002A4D8 File Offset: 0x000286D8
+	// Token: 0x0600087F RID: 2175 RVA: 0x0002B380 File Offset: 0x00029580
 	private bool CheckObstacle(Vector startLocation, Vector endLocation)
 	{
 		if (this.TraceElement == null)
@@ -392,7 +386,7 @@ public class TsTaskFollowPlayerHardMode : TsTaskAbortImmediatelyBase, IUnrealUOb
 		return false;
 	}
 
-	// Token: 0x0600087C RID: 2172 RVA: 0x0002A540 File Offset: 0x00028740
+	// Token: 0x06000880 RID: 2176 RVA: 0x0002B3E8 File Offset: 0x000295E8
 	private void UpdateRotateOffset(float deltaSeconds, Vector selfLocation)
 	{
 		if (this.LineElement == null)
@@ -437,7 +431,7 @@ public class TsTaskFollowPlayerHardMode : TsTaskAbortImmediatelyBase, IUnrealUOb
 		this.RotateOffset.SubtractionEqual(this.TempRotator);
 	}
 
-	// Token: 0x0600087D RID: 2173 RVA: 0x0002A6B2 File Offset: 0x000288B2
+	// Token: 0x06000881 RID: 2177 RVA: 0x0002B55A File Offset: 0x0002975A
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskFollowPlayerHardMode._ClassPtr == IntPtr.Zero)
@@ -447,22 +441,22 @@ public class TsTaskFollowPlayerHardMode : TsTaskAbortImmediatelyBase, IUnrealUOb
 		return TsTaskFollowPlayerHardMode._ClassPtr;
 	}
 
-	// Token: 0x0600087E RID: 2174 RVA: 0x0002A6D8 File Offset: 0x000288D8
+	// Token: 0x06000882 RID: 2178 RVA: 0x0002B580 File Offset: 0x00029780
 	public TsTaskFollowPlayerHardMode() : this(BuiltinUtils.AllocNativeUObject(TsTaskFollowPlayerHardMode.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0600087F RID: 2175 RVA: 0x0002A700 File Offset: 0x00028900
+	// Token: 0x06000883 RID: 2179 RVA: 0x0002B5A8 File Offset: 0x000297A8
 	public TsTaskFollowPlayerHardMode(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskFollowPlayerHardMode.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06000880 RID: 2176 RVA: 0x0002A734 File Offset: 0x00028934
+	// Token: 0x06000884 RID: 2180 RVA: 0x0002B5DC File Offset: 0x000297DC
 	protected TsTaskFollowPlayerHardMode(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06000881 RID: 2177 RVA: 0x0002A798 File Offset: 0x00028998
+	// Token: 0x06000885 RID: 2181 RVA: 0x0002B640 File Offset: 0x00029840
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
@@ -471,7 +465,7 @@ public class TsTaskFollowPlayerHardMode : TsTaskAbortImmediatelyBase, IUnrealUOb
 		this.ReceiveExecuteAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x06000882 RID: 2178 RVA: 0x0002A7C8 File Offset: 0x000289C8
+	// Token: 0x06000886 RID: 2182 RVA: 0x0002B670 File Offset: 0x00029870
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveTickAI_Implementation(UBTTask_BlueprintBase.__ReceiveTickAI_FunctionParams* __Params)
 	{
@@ -480,94 +474,94 @@ public class TsTaskFollowPlayerHardMode : TsTaskAbortImmediatelyBase, IUnrealUOb
 		this.ReceiveTickAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2, __Params->DeltaSeconds);
 	}
 
-	// Token: 0x04000653 RID: 1619
+	// Token: 0x04000657 RID: 1623
 	private const float UPDATE_ROTATE_OFFSET_INTERVAL = 200f;
 
-	// Token: 0x04000654 RID: 1620
+	// Token: 0x04000658 RID: 1624
 	private float TsMoveSpeed;
 
-	// Token: 0x04000655 RID: 1621
+	// Token: 0x04000659 RID: 1625
 	private float TsRotateSpeed;
 
-	// Token: 0x04000656 RID: 1622
+	// Token: 0x0400065A RID: 1626
 	private Vector TsLocationOffset = Vector.Create();
 
-	// Token: 0x04000657 RID: 1623
+	// Token: 0x0400065B RID: 1627
 	private float TsForceMoveDistance;
 
-	// Token: 0x04000658 RID: 1624
+	// Token: 0x0400065C RID: 1628
 	private bool TsLookAtTarget;
 
-	// Token: 0x04000659 RID: 1625
+	// Token: 0x0400065D RID: 1629
 	private float TsDetectTargetDistance;
 
-	// Token: 0x0400065A RID: 1626
+	// Token: 0x0400065E RID: 1630
 	[Nullable(2)]
 	private BaseMoveComponent MoveComp;
 
-	// Token: 0x0400065B RID: 1627
+	// Token: 0x0400065F RID: 1631
 	[Nullable(2)]
 	private UTraceCapsuleElement TraceElement;
 
-	// Token: 0x0400065C RID: 1628
+	// Token: 0x04000660 RID: 1632
 	[Nullable(2)]
 	private UTraceLineElement LineElement;
 
-	// Token: 0x0400065D RID: 1629
+	// Token: 0x04000661 RID: 1633
 	private Rotator RotateOffset = Rotator.Create();
 
-	// Token: 0x0400065E RID: 1630
+	// Token: 0x04000662 RID: 1634
 	private float UpdateRotateOffsetTime;
 
-	// Token: 0x0400065F RID: 1631
+	// Token: 0x04000663 RID: 1635
 	private Rotator TempRotator = Rotator.Create();
 
-	// Token: 0x04000660 RID: 1632
+	// Token: 0x04000664 RID: 1636
 	private Vector TempTargetLocation = Vector.Create();
 
-	// Token: 0x04000661 RID: 1633
+	// Token: 0x04000665 RID: 1637
 	private Vector TempTargetForward = Vector.Create();
 
-	// Token: 0x04000662 RID: 1634
+	// Token: 0x04000666 RID: 1638
 	private Vector TempMoveVector = Vector.Create();
 
-	// Token: 0x04000663 RID: 1635
+	// Token: 0x04000667 RID: 1639
 	private Vector TempVector = Vector.Create();
 
-	// Token: 0x04000664 RID: 1636
+	// Token: 0x04000668 RID: 1640
 	private bool IsInitTsVariables;
 
-	// Token: 0x04000665 RID: 1637
+	// Token: 0x04000669 RID: 1641
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskFollowPlayerHardMode.TsTaskFollowPlayerHardMode_C";
 
-	// Token: 0x04000666 RID: 1638
+	// Token: 0x0400066A RID: 1642
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04000667 RID: 1639
+	// Token: 0x0400066B RID: 1643
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x04000668 RID: 1640
+	// Token: 0x0400066C RID: 1644
 	private static int __PropertyOffset_MoveSpeed;
 
-	// Token: 0x04000669 RID: 1641
+	// Token: 0x0400066D RID: 1645
 	private static int __PropertyOffset_RotateSpeed;
 
-	// Token: 0x0400066A RID: 1642
+	// Token: 0x0400066E RID: 1646
 	private static int __PropertyOffset_LocationOffset;
 
-	// Token: 0x0400066B RID: 1643
+	// Token: 0x0400066F RID: 1647
 	private static int __PropertyOffset_ForceMoveDistance;
 
-	// Token: 0x0400066C RID: 1644
+	// Token: 0x04000670 RID: 1648
 	private static int __PropertyOffset_LookAtTarget;
 
-	// Token: 0x0400066D RID: 1645
+	// Token: 0x04000671 RID: 1649
 	private static int __PropertyOffset_DetectTargetDistance;
 
-	// Token: 0x0400066E RID: 1646
+	// Token: 0x04000672 RID: 1650
 	private static int __PropertyOffset_DetectTargetTypes;
 
-	// Token: 0x0400066F RID: 1647
+	// Token: 0x04000673 RID: 1651
 	[Nullable(new byte[]
 	{
 		2,

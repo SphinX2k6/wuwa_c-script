@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000245 RID: 581
+	// Token: 0x02000259 RID: 601
 	public class ConfigDungeonPackInfoByDungeonId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000DA2 RID: 3490 RVA: 0x000A6933 File Offset: 0x000A4B33
+		// Token: 0x06000E1A RID: 3610 RVA: 0x000ACBF7 File Offset: 0x000AADF7
 		static ConfigDungeonPackInfoByDungeonId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDungeonPackInfoByDungeonId.CreateStaticDefaultValue), new Action(ConfigDungeonPackInfoByDungeonId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000DA3 RID: 3491 RVA: 0x000A6954 File Offset: 0x000A4B54
+		// Token: 0x06000E1B RID: 3611 RVA: 0x000ACC18 File Offset: 0x000AAE18
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDungeonPackInfoByDungeonId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000DA4 RID: 3492 RVA: 0x000A69D3 File Offset: 0x000A4BD3
+		// Token: 0x06000E1C RID: 3612 RVA: 0x000ACC97 File Offset: 0x000AAE97
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDungeonPackInfoByDungeonId.LogPair = null;
 			ConfigDungeonPackInfoByDungeonId.HandleId = 0;
 		}
 
-		// Token: 0x06000DA5 RID: 3493 RVA: 0x000A69E1 File Offset: 0x000A4BE1
+		// Token: 0x06000E1D RID: 3613 RVA: 0x000ACCA5 File Offset: 0x000AAEA5
 		public static void Init()
 		{
 			ConfigDungeonPackInfoByDungeonId.HandleId = ConfigCommon.InitDataStatement(ConfigDungeonPackInfoByDungeonId.HandleId, "db_dungeonpackinfo.db", "select BinData from `DungeonPackInfo` where DungeonId=?");
 		}
 
-		// Token: 0x06000DA6 RID: 3494 RVA: 0x000A69FC File Offset: 0x000A4BFC
+		// Token: 0x06000E1E RID: 3614 RVA: 0x000ACCC0 File Offset: 0x000AAEC0
 		public static DungeonPackInfo? GetConfig(int p0DungeonId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigDungeonPackInfoByDungeonId.HandleId, ConfigDungeonPackInfoByDungeonId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new DungeonPackInfo?(rootAsDungeonPackInfo);
 		}
 
-		// Token: 0x04000FC7 RID: 4039
+		// Token: 0x04001053 RID: 4179
 		private const string DB = "db_dungeonpackinfo.db";
 
-		// Token: 0x04000FC8 RID: 4040
+		// Token: 0x04001054 RID: 4180
 		private const string FILE = "UniverseEditor/QuestRefMapBlockConfig/DungeonPackInfo.csv";
 
-		// Token: 0x04000FC9 RID: 4041
+		// Token: 0x04001055 RID: 4181
 		private const string TABLE = "DungeonPackInfo";
 
-		// Token: 0x04000FCA RID: 4042
+		// Token: 0x04001056 RID: 4182
 		private const string COMMAND = "select BinData from `DungeonPackInfo` where DungeonId=?";
 
-		// Token: 0x04000FCB RID: 4043
+		// Token: 0x04001057 RID: 4183
 		private const string KEY_PREFIX = "DungeonPackInfoByDungeonId";
 
-		// Token: 0x04000FCC RID: 4044
+		// Token: 0x04001058 RID: 4184
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000FCD RID: 4045
+		// Token: 0x04001059 RID: 4185
 		private static int HandleId;
 	}
 }

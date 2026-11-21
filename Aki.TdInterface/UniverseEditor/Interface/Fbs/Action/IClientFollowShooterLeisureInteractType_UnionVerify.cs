@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020063C6 RID: 25542
+	// Token: 0x02006A40 RID: 27200
 	public static class IClientFollowShooterLeisureInteractType_UnionVerify
 	{
-		// Token: 0x0602C2E8 RID: 180968 RVA: 0x00610EB8 File Offset: 0x0060F0B8
+		// Token: 0x0602EA7D RID: 191101 RVA: 0x0065C3F4 File Offset: 0x0065A5F4
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;
@@ -20,6 +20,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 				break;
 			case 3:
 				result = IClientFollowShooterPlayAnimationVerify.Verify(verifier, tablePos);
+				break;
+			case 4:
+				result = IClientFollowShooterPlaySkillVerify.Verify(verifier, tablePos);
 				break;
 			default:
 				result = true;

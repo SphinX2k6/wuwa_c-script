@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200105A RID: 4186
+// Token: 0x0200050E RID: 1294
 [NullableContext(1)]
 [Nullable(0)]
 public class PlayCardInfo : IPlayCardInfo
 {
-	// Token: 0x170008AB RID: 2219
-	// (get) Token: 0x06006B36 RID: 27446 RVA: 0x00159141 File Offset: 0x00157341
-	// (set) Token: 0x06006B37 RID: 27447 RVA: 0x00159149 File Offset: 0x00157349
+	// Token: 0x170008CB RID: 2251
+	// (get) Token: 0x06003ECB RID: 16075 RVA: 0x00161A69 File Offset: 0x0015FC69
+	// (set) Token: 0x06003ECC RID: 16076 RVA: 0x00161A71 File Offset: 0x0015FC71
 	public int Value { get; set; }
 
-	// Token: 0x170008AC RID: 2220
-	// (get) Token: 0x06006B38 RID: 27448 RVA: 0x00159152 File Offset: 0x00157352
-	// (set) Token: 0x06006B39 RID: 27449 RVA: 0x0015915A File Offset: 0x0015735A
+	// Token: 0x170008CC RID: 2252
+	// (get) Token: 0x06003ECD RID: 16077 RVA: 0x00161A7A File Offset: 0x0015FC7A
+	// (set) Token: 0x06003ECE RID: 16078 RVA: 0x00161A82 File Offset: 0x0015FC82
 	public int[] CardIdList { get; set; } = Array.Empty<int>();
 }

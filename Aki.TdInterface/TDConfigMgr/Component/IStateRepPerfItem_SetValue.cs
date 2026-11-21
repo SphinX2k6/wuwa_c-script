@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000716 RID: 1814
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020007B7 RID: 1975
 	public class IStateRepPerfItem_SetValue
 	{
-		// Token: 0x04001A59 RID: 6745
+		// Token: 0x04001C58 RID: 7256
 		public string StateTag;
 
-		// Token: 0x04001A5A RID: 6746
+		// Token: 0x04001C59 RID: 7257
 		public IStateRepPerfBase ReplacePerformance;
 	}
 }

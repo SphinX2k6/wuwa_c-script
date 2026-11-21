@@ -7,17 +7,17 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents.OpenSystem
 {
-	// Token: 0x02006C02 RID: 27650
+	// Token: 0x02005D7B RID: 23931
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class OpenSystemMowBuffDistribute : OpenSystemBase
 	{
-		// Token: 0x0604441A RID: 279578 RVA: 0x010D1E9B File Offset: 0x010D009B
+		// Token: 0x0603A572 RID: 238962 RVA: 0x0107BDEF File Offset: 0x01079FEF
 		public OpenSystemMowBuffDistribute(LevelEventOpenSystem eventBase) : base(eventBase)
 		{
 		}
 
-		// Token: 0x0604441B RID: 279579 RVA: 0x010D1EA4 File Offset: 0x010D00A4
+		// Token: 0x0603A573 RID: 238963 RVA: 0x0107BDF8 File Offset: 0x01079FF8
 		[return: Nullable(0)]
 		public override UniTask<bool> ExecuteOpenView(OpenSystemBoard inParams, GeneralContext context)
 		{
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents.OpenSystem
 			return <ExecuteOpenView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604441C RID: 279580 RVA: 0x010D1EDF File Offset: 0x010D00DF
+		// Token: 0x0603A574 RID: 238964 RVA: 0x0107BE33 File Offset: 0x0107A033
 		[NullableContext(2)]
 		public override EUiViewName? GetViewName(OpenSystemBoard inParams = null, GeneralContext context = null)
 		{

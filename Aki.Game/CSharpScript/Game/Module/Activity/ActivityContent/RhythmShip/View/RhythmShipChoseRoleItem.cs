@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 {
-	// Token: 0x0200621F RID: 25119
+	// Token: 0x0200519D RID: 20893
 	[NullableContext(2)]
 	[Nullable(0)]
 	internal class RhythmShipChoseRoleItem : GridProxyAbstract<int>
 	{
-		// Token: 0x0603F5C3 RID: 259523 RVA: 0x00F5096C File Offset: 0x00F4EB6C
+		// Token: 0x06034284 RID: 213636 RVA: 0x00E978C4 File Offset: 0x00E95AC4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,19 +34,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			};
 		}
 
-		// Token: 0x0603F5C4 RID: 259524 RVA: 0x00F50A6E File Offset: 0x00F4EC6E
+		// Token: 0x06034285 RID: 213637 RVA: 0x00E979C6 File Offset: 0x00E95BC6
 		protected override void OnStart()
 		{
 			EventSystem.Instance.Add(EEventName.OnRhythmShipRedDotRefresh, new Action<List<int>, List<int>, List<int>>(this.OnRhythmShipRedDotRefresh));
 		}
 
-		// Token: 0x0603F5C5 RID: 259525 RVA: 0x00F50A8C File Offset: 0x00F4EC8C
+		// Token: 0x06034286 RID: 213638 RVA: 0x00E979E4 File Offset: 0x00E95BE4
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove(EEventName.OnRhythmShipRedDotRefresh, new Action<List<int>, List<int>, List<int>>(this.OnRhythmShipRedDotRefresh));
 		}
 
-		// Token: 0x0603F5C6 RID: 259526 RVA: 0x00F50AAC File Offset: 0x00F4ECAC
+		// Token: 0x06034287 RID: 213639 RVA: 0x00E97A04 File Offset: 0x00E95C04
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			RhythmShipData activityData = RhythmShipModel.Instance.ActivityData;
@@ -78,14 +78,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			base.GetItem(9).SetUIActive(this.HaveRedDotItem);
 		}
 
-		// Token: 0x0603F5C7 RID: 259527 RVA: 0x00F50C07 File Offset: 0x00F4EE07
+		// Token: 0x06034288 RID: 213640 RVA: 0x00E97B5F File Offset: 0x00E95D5F
 		public void SetCurrentLevelSelectState(bool isSelected)
 		{
 			base.GetItem(7).SetUIActive(isSelected);
 			base.GetExtendToggle(6).SetToggleState(isSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, true, false, false);
 		}
 
-		// Token: 0x0603F5C8 RID: 259528 RVA: 0x00F50C30 File Offset: 0x00F4EE30
+		// Token: 0x06034289 RID: 213641 RVA: 0x00E97B88 File Offset: 0x00E95D88
 		private void OnClickToggle(EToggleState state)
 		{
 			if (this.IsUnLock)
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			onClickToggleCallBack2(0, base.GetExtendToggle(6));
 		}
 
-		// Token: 0x0603F5C9 RID: 259529 RVA: 0x00F50CED File Offset: 0x00F4EEED
+		// Token: 0x0603428A RID: 213642 RVA: 0x00E97C45 File Offset: 0x00E95E45
 		private void OnRhythmShipRedDotRefresh(List<int> planet, List<int> subLevel, List<int> role)
 		{
 			if (role == null || !role.Contains(this.RoleId))
@@ -125,16 +125,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 			base.GetItem(9).SetUIActive(false);
 		}
 
-		// Token: 0x04021114 RID: 135444
+		// Token: 0x0401BA43 RID: 113219
 		public int RoleId;
 
-		// Token: 0x04021115 RID: 135445
+		// Token: 0x0401BA44 RID: 113220
 		private bool IsUnLock;
 
-		// Token: 0x04021116 RID: 135446
+		// Token: 0x0401BA45 RID: 113221
 		private bool HaveRedDotItem;
 
-		// Token: 0x04021117 RID: 135447
+		// Token: 0x0401BA46 RID: 113222
 		public Action<int, UUIExtendToggle> OnClickToggleCallBack;
 	}
 }

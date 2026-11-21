@@ -1,21 +1,21 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02003159 RID: 12633
+// Token: 0x020026C6 RID: 9926
 [NullableContext(1)]
 [Nullable(0)]
 public class IToken
 {
-	// Token: 0x0601B302 RID: 111362 RVA: 0x00768036 File Offset: 0x00766236
+	// Token: 0x06018E07 RID: 101895 RVA: 0x0078FA02 File Offset: 0x0078DC02
 	public IToken()
 	{
 		this.Type = string.Empty;
 		this.Value = string.Empty;
 	}
 
-	// Token: 0x0400D399 RID: 54169
+	// Token: 0x0400D7FC RID: 55292
 	public string Type;
 
-	// Token: 0x0400D39A RID: 54170
+	// Token: 0x0400D7FD RID: 55293
 	public string Value;
 }

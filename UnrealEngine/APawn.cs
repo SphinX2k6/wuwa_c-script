@@ -7,39 +7,33 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000FCF RID: 4047
+	// Token: 0x0200025A RID: 602
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.Pawn")]
 	[UnrealStructLayout(1136, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1136)]
-	public class APawn : AActor, IUnrealUObject, IUnrealObject, INavAgentInterface, IUnrealNativeInterface, IUnrealInterface
+	public class APawn : AActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0600DA4C RID: 55884 RVA: 0x00142219 File Offset: 0x00140419
+		// Token: 0x0600333B RID: 13115 RVA: 0x000497D7 File Offset: 0x000479D7
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return APawn._ClassPtr;
 		}
 
-		// Token: 0x0600DA4D RID: 55885 RVA: 0x00142225 File Offset: 0x00140425
-		int INavAgentInterface.InterfaceOffset()
-		{
-			return APawn.__InterfaceOffset_INavAgentInterface;
-		}
-
-		// Token: 0x0600DA4E RID: 55886 RVA: 0x0014222C File Offset: 0x0014042C
+		// Token: 0x0600333C RID: 13116 RVA: 0x000497E4 File Offset: 0x000479E4
 		public APawn() : this(BuiltinUtils.AllocNativeUObject(APawn.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0600DA4F RID: 55887 RVA: 0x00142254 File Offset: 0x00140454
+		// Token: 0x0600333D RID: 13117 RVA: 0x0004980C File Offset: 0x00047A0C
 		[NullableContext(1)]
 		public APawn(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(APawn.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700338A RID: 13194
-		// (get) Token: 0x0600DA50 RID: 55888 RVA: 0x00142287 File Offset: 0x00140487
-		// (set) Token: 0x0600DA51 RID: 55889 RVA: 0x001422A0 File Offset: 0x001404A0
+		// Token: 0x17000723 RID: 1827
+		// (get) Token: 0x0600333E RID: 13118 RVA: 0x0004983F File Offset: 0x00047A3F
+		// (set) Token: 0x0600333F RID: 13119 RVA: 0x00049858 File Offset: 0x00047A58
 		public unsafe bool bUseControllerRotationPitch
 		{
 			get
@@ -52,9 +46,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700338B RID: 13195
-		// (get) Token: 0x0600DA52 RID: 55890 RVA: 0x001422D0 File Offset: 0x001404D0
-		// (set) Token: 0x0600DA53 RID: 55891 RVA: 0x001422E9 File Offset: 0x001404E9
+		// Token: 0x17000724 RID: 1828
+		// (get) Token: 0x06003340 RID: 13120 RVA: 0x00049888 File Offset: 0x00047A88
+		// (set) Token: 0x06003341 RID: 13121 RVA: 0x000498A1 File Offset: 0x00047AA1
 		public unsafe bool bUseControllerRotationYaw
 		{
 			get
@@ -67,9 +61,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700338C RID: 13196
-		// (get) Token: 0x0600DA54 RID: 55892 RVA: 0x00142319 File Offset: 0x00140519
-		// (set) Token: 0x0600DA55 RID: 55893 RVA: 0x00142332 File Offset: 0x00140532
+		// Token: 0x17000725 RID: 1829
+		// (get) Token: 0x06003342 RID: 13122 RVA: 0x000498D1 File Offset: 0x00047AD1
+		// (set) Token: 0x06003343 RID: 13123 RVA: 0x000498EA File Offset: 0x00047AEA
 		public unsafe bool bUseControllerRotationRoll
 		{
 			get
@@ -82,9 +76,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700338D RID: 13197
-		// (get) Token: 0x0600DA56 RID: 55894 RVA: 0x00142362 File Offset: 0x00140562
-		// (set) Token: 0x0600DA57 RID: 55895 RVA: 0x0014237B File Offset: 0x0014057B
+		// Token: 0x17000726 RID: 1830
+		// (get) Token: 0x06003344 RID: 13124 RVA: 0x0004991A File Offset: 0x00047B1A
+		// (set) Token: 0x06003345 RID: 13125 RVA: 0x00049933 File Offset: 0x00047B33
 		public unsafe bool bCanAffectNavigationGeneration
 		{
 			get
@@ -97,9 +91,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700338E RID: 13198
-		// (get) Token: 0x0600DA58 RID: 55896 RVA: 0x001423AB File Offset: 0x001405AB
-		// (set) Token: 0x0600DA59 RID: 55897 RVA: 0x001423BB File Offset: 0x001405BB
+		// Token: 0x17000727 RID: 1831
+		// (get) Token: 0x06003346 RID: 13126 RVA: 0x00049963 File Offset: 0x00047B63
+		// (set) Token: 0x06003347 RID: 13127 RVA: 0x00049973 File Offset: 0x00047B73
 		public unsafe float BaseEyeHeight
 		{
 			get
@@ -112,27 +106,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700338F RID: 13199
-		// (get) Token: 0x0600DA5A RID: 55898 RVA: 0x001423CC File Offset: 0x001405CC
-		// (set) Token: 0x0600DA5B RID: 55899 RVA: 0x001423E0 File Offset: 0x001405E0
-		[Nullable(0)]
-		public unsafe TEnumAsByte<EAutoReceiveInput> AutoPossessPlayer
-		{
-			[NullableContext(0)]
-			get
-			{
-				return *(base.NativePtr + (IntPtr)APawn.__PropertyOffset_AutoPossessPlayer);
-			}
-			[NullableContext(0)]
-			set
-			{
-				*(base.NativePtr + (IntPtr)APawn.__PropertyOffset_AutoPossessPlayer) = value;
-			}
-		}
-
-		// Token: 0x17003390 RID: 13200
-		// (get) Token: 0x0600DA5C RID: 55900 RVA: 0x001423F5 File Offset: 0x001405F5
-		// (set) Token: 0x0600DA5D RID: 55901 RVA: 0x00142405 File Offset: 0x00140605
+		// Token: 0x17000728 RID: 1832
+		// (get) Token: 0x06003348 RID: 13128 RVA: 0x00049984 File Offset: 0x00047B84
+		// (set) Token: 0x06003349 RID: 13129 RVA: 0x00049994 File Offset: 0x00047B94
 		public unsafe EAutoPossessAI AutoPossessAI
 		{
 			get
@@ -145,9 +121,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003391 RID: 13201
-		// (get) Token: 0x0600DA5E RID: 55902 RVA: 0x00142416 File Offset: 0x00140616
-		// (set) Token: 0x0600DA5F RID: 55903 RVA: 0x00142426 File Offset: 0x00140626
+		// Token: 0x17000729 RID: 1833
+		// (get) Token: 0x0600334A RID: 13130 RVA: 0x000499A5 File Offset: 0x00047BA5
+		// (set) Token: 0x0600334B RID: 13131 RVA: 0x000499B5 File Offset: 0x00047BB5
 		public unsafe byte RemoteViewPitch
 		{
 			get
@@ -160,9 +136,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003392 RID: 13202
-		// (get) Token: 0x0600DA60 RID: 55904 RVA: 0x00142437 File Offset: 0x00140637
-		// (set) Token: 0x0600DA61 RID: 55905 RVA: 0x0014244B File Offset: 0x0014064B
+		// Token: 0x1700072A RID: 1834
+		// (get) Token: 0x0600334C RID: 13132 RVA: 0x000499C6 File Offset: 0x00047BC6
+		// (set) Token: 0x0600334D RID: 13133 RVA: 0x000499DA File Offset: 0x00047BDA
 		[Nullable(new byte[]
 		{
 			0,
@@ -190,24 +166,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003393 RID: 13203
-		// (get) Token: 0x0600DA62 RID: 55906 RVA: 0x00142460 File Offset: 0x00140660
-		// (set) Token: 0x0600DA63 RID: 55907 RVA: 0x00142474 File Offset: 0x00140674
-		public unsafe APlayerState PlayerState
-		{
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<APlayerState>(base.NativePtr / (IntPtr)sizeof(void*) + APawn.__PropertyOffset_PlayerState);
-			}
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + APawn.__PropertyOffset_PlayerState, value);
-			}
-		}
-
-		// Token: 0x17003394 RID: 13204
-		// (get) Token: 0x0600DA64 RID: 55908 RVA: 0x00142489 File Offset: 0x00140689
-		// (set) Token: 0x0600DA65 RID: 55909 RVA: 0x0014249D File Offset: 0x0014069D
+		// Token: 0x1700072B RID: 1835
+		// (get) Token: 0x0600334E RID: 13134 RVA: 0x000499EF File Offset: 0x00047BEF
+		// (set) Token: 0x0600334F RID: 13135 RVA: 0x00049A03 File Offset: 0x00047C03
 		public unsafe AController LastHitBy
 		{
 			get
@@ -220,9 +181,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003395 RID: 13205
-		// (get) Token: 0x0600DA66 RID: 55910 RVA: 0x001424B2 File Offset: 0x001406B2
-		// (set) Token: 0x0600DA67 RID: 55911 RVA: 0x001424C6 File Offset: 0x001406C6
+		// Token: 0x1700072C RID: 1836
+		// (get) Token: 0x06003350 RID: 13136 RVA: 0x00049A18 File Offset: 0x00047C18
+		// (set) Token: 0x06003351 RID: 13137 RVA: 0x00049A2C File Offset: 0x00047C2C
 		public unsafe AController Controller
 		{
 			get
@@ -235,9 +196,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003396 RID: 13206
-		// (get) Token: 0x0600DA68 RID: 55912 RVA: 0x001424DB File Offset: 0x001406DB
-		// (set) Token: 0x0600DA69 RID: 55913 RVA: 0x001424EF File Offset: 0x001406EF
+		// Token: 0x1700072D RID: 1837
+		// (get) Token: 0x06003352 RID: 13138 RVA: 0x00049A41 File Offset: 0x00047C41
+		// (set) Token: 0x06003353 RID: 13139 RVA: 0x00049A55 File Offset: 0x00047C55
 		public unsafe FVector ControlInputVector
 		{
 			get
@@ -250,9 +211,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003397 RID: 13207
-		// (get) Token: 0x0600DA6A RID: 55914 RVA: 0x00142504 File Offset: 0x00140704
-		// (set) Token: 0x0600DA6B RID: 55915 RVA: 0x00142518 File Offset: 0x00140718
+		// Token: 0x1700072E RID: 1838
+		// (get) Token: 0x06003354 RID: 13140 RVA: 0x00049A6A File Offset: 0x00047C6A
+		// (set) Token: 0x06003355 RID: 13141 RVA: 0x00049A7E File Offset: 0x00047C7E
 		public unsafe FVector LastControlInputVector
 		{
 			get
@@ -265,402 +226,393 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600DA6C RID: 55916 RVA: 0x0014252D File Offset: 0x0014072D
+		// Token: 0x06003356 RID: 13142 RVA: 0x00049A93 File Offset: 0x00047C93
 		public void SpawnDefaultController()
 		{
 			APawn.__SpawnDefaultController_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600DA6D RID: 55917 RVA: 0x0014253A File Offset: 0x0014073A
+		// Token: 0x06003357 RID: 13143 RVA: 0x00049AA0 File Offset: 0x00047CA0
 		public void SetCanAffectNavigationGeneration(bool bNewValue, bool bForceUpdate = false)
 		{
 			APawn.__SetCanAffectNavigationGeneration_Internal(base.NativePtr, bNewValue, bForceUpdate);
 		}
 
-		// Token: 0x0600DA6E RID: 55918 RVA: 0x00142549 File Offset: 0x00140749
+		// Token: 0x06003358 RID: 13144 RVA: 0x00049AAF File Offset: 0x00047CAF
 		public virtual void ReceiveUnpossessed(AController OldController)
 		{
 			APawn.__ReceiveUnpossessed_Internal(base.NativePtr, (OldController != null) ? OldController.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0600DA6F RID: 55919 RVA: 0x00142566 File Offset: 0x00140766
+		// Token: 0x06003359 RID: 13145 RVA: 0x00049ACC File Offset: 0x00047CCC
 		public virtual void ReceivePossessed(AController NewController)
 		{
 			APawn.__ReceivePossessed_Internal(base.NativePtr, (NewController != null) ? NewController.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0600DA70 RID: 55920 RVA: 0x00142583 File Offset: 0x00140783
+		// Token: 0x0600335A RID: 13146 RVA: 0x00049AE9 File Offset: 0x00047CE9
 		public void PawnMakeNoise(float Loudness, FVector NoiseLocation, bool bUseNoiseMakerLocation = true, AActor NoiseMaker = null)
 		{
 			APawn.__PawnMakeNoise_Internal(base.NativePtr, Loudness, NoiseLocation, bUseNoiseMakerLocation, (NoiseMaker != null) ? NoiseMaker.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0600DA71 RID: 55921 RVA: 0x001425A5 File Offset: 0x001407A5
+		// Token: 0x0600335B RID: 13147 RVA: 0x00049B0B File Offset: 0x00047D0B
 		public void OnRep_PlayerState()
 		{
 			APawn.__OnRep_PlayerState_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600DA72 RID: 55922 RVA: 0x001425B2 File Offset: 0x001407B2
+		// Token: 0x0600335C RID: 13148 RVA: 0x00049B18 File Offset: 0x00047D18
 		public void OnRep_Controller()
 		{
 			APawn.__OnRep_Controller_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600DA73 RID: 55923 RVA: 0x001425BF File Offset: 0x001407BF
+		// Token: 0x0600335D RID: 13149 RVA: 0x00049B25 File Offset: 0x00047D25
 		public void LaunchPawn(FVector LaunchVelocity, bool bXYOverride, bool bZOverride)
 		{
 			APawn.__LaunchPawn_Internal(base.NativePtr, LaunchVelocity, bXYOverride, bZOverride);
 		}
 
-		// Token: 0x0600DA74 RID: 55924 RVA: 0x001425CF File Offset: 0x001407CF
+		// Token: 0x0600335E RID: 13150 RVA: 0x00049B35 File Offset: 0x00047D35
 		public FVector K2_GetMovementInputVector()
 		{
 			return APawn.__K2_GetMovementInputVector_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600DA75 RID: 55925 RVA: 0x001425DC File Offset: 0x001407DC
+		// Token: 0x0600335F RID: 13151 RVA: 0x00049B42 File Offset: 0x00047D42
 		public bool IsPlayerControlled()
 		{
 			return APawn.__IsPlayerControlled_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600DA76 RID: 55926 RVA: 0x001425E9 File Offset: 0x001407E9
+		// Token: 0x06003360 RID: 13152 RVA: 0x00049B4F File Offset: 0x00047D4F
 		public bool IsPawnControlled()
 		{
 			return APawn.__IsPawnControlled_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600DA77 RID: 55927 RVA: 0x001425F6 File Offset: 0x001407F6
+		// Token: 0x06003361 RID: 13153 RVA: 0x00049B5C File Offset: 0x00047D5C
 		public bool IsMoveInputIgnored()
 		{
 			return APawn.__IsMoveInputIgnored_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600DA78 RID: 55928 RVA: 0x00142603 File Offset: 0x00140803
+		// Token: 0x06003362 RID: 13154 RVA: 0x00049B69 File Offset: 0x00047D69
 		public bool IsLocallyControlled()
 		{
 			return APawn.__IsLocallyControlled_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600DA79 RID: 55929 RVA: 0x00142610 File Offset: 0x00140810
+		// Token: 0x06003363 RID: 13155 RVA: 0x00049B76 File Offset: 0x00047D76
 		public bool IsControlled()
 		{
 			return APawn.__IsControlled_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600DA7A RID: 55930 RVA: 0x0014261D File Offset: 0x0014081D
+		// Token: 0x06003364 RID: 13156 RVA: 0x00049B83 File Offset: 0x00047D83
 		public bool IsBotControlled()
 		{
 			return APawn.__IsBotControlled_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600DA7B RID: 55931 RVA: 0x0014262A File Offset: 0x0014082A
+		// Token: 0x06003365 RID: 13157 RVA: 0x00049B90 File Offset: 0x00047D90
 		public FVector GetPendingMovementInputVector()
 		{
 			return APawn.__GetPendingMovementInputVector_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600DA7C RID: 55932 RVA: 0x00142637 File Offset: 0x00140837
+		// Token: 0x06003366 RID: 13158 RVA: 0x00049B9D File Offset: 0x00047D9D
 		public FVector GetNavAgentLocation()
 		{
 			return APawn.__GetNavAgentLocation_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600DA7D RID: 55933 RVA: 0x00142644 File Offset: 0x00140844
+		// Token: 0x06003367 RID: 13159 RVA: 0x00049BAA File Offset: 0x00047DAA
 		public UPawnMovementComponent GetMovementComponent()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UPawnMovementComponent>(APawn.__GetMovementComponent_Internal(base.NativePtr));
 		}
 
-		// Token: 0x0600DA7E RID: 55934 RVA: 0x00142656 File Offset: 0x00140856
+		// Token: 0x06003368 RID: 13160 RVA: 0x00049BBC File Offset: 0x00047DBC
 		public static AActor GetMovementBaseActor(APawn Pawn)
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<AActor>(APawn.__GetMovementBaseActor_Internal((Pawn != null) ? Pawn.NativePtr : IntPtr.Zero));
 		}
 
-		// Token: 0x0600DA7F RID: 55935 RVA: 0x00142672 File Offset: 0x00140872
+		// Token: 0x06003369 RID: 13161 RVA: 0x00049BD8 File Offset: 0x00047DD8
 		public FVector GetLastMovementInputVector()
 		{
 			return APawn.__GetLastMovementInputVector_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600DA80 RID: 55936 RVA: 0x0014267F File Offset: 0x0014087F
+		// Token: 0x0600336A RID: 13162 RVA: 0x00049BE5 File Offset: 0x00047DE5
 		public FRotator GetControlRotation()
 		{
 			return APawn.__GetControlRotation_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600DA81 RID: 55937 RVA: 0x0014268C File Offset: 0x0014088C
+		// Token: 0x0600336B RID: 13163 RVA: 0x00049BF2 File Offset: 0x00047DF2
 		public AController GetController()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<AController>(APawn.__GetController_Internal(base.NativePtr));
 		}
 
-		// Token: 0x0600DA82 RID: 55938 RVA: 0x0014269E File Offset: 0x0014089E
+		// Token: 0x0600336C RID: 13164 RVA: 0x00049C04 File Offset: 0x00047E04
 		public FRotator GetBaseAimRotation()
 		{
 			return APawn.__GetBaseAimRotation_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600DA83 RID: 55939 RVA: 0x001426AB File Offset: 0x001408AB
+		// Token: 0x0600336D RID: 13165 RVA: 0x00049C11 File Offset: 0x00047E11
 		public void DetachFromControllerPendingDestroy()
 		{
 			APawn.__DetachFromControllerPendingDestroy_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600DA84 RID: 55940 RVA: 0x001426B8 File Offset: 0x001408B8
+		// Token: 0x0600336E RID: 13166 RVA: 0x00049C1E File Offset: 0x00047E1E
 		public void D_AddMovementInput(FVectorDouble WorldDirection, float ScaleValue = 1f, bool bForce = false)
 		{
 			APawn.__D_AddMovementInput_Internal(base.NativePtr, WorldDirection, ScaleValue, bForce);
 		}
 
-		// Token: 0x0600DA85 RID: 55941 RVA: 0x001426C8 File Offset: 0x001408C8
+		// Token: 0x0600336F RID: 13167 RVA: 0x00049C2E File Offset: 0x00047E2E
 		public FVector ConsumeMovementInputVector()
 		{
 			return APawn.__ConsumeMovementInputVector_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0600DA86 RID: 55942 RVA: 0x001426D5 File Offset: 0x001408D5
+		// Token: 0x06003370 RID: 13168 RVA: 0x00049C3B File Offset: 0x00047E3B
 		public void AddMovementInput(FVector WorldDirection, float ScaleValue = 1f, bool bForce = false)
 		{
 			APawn.__AddMovementInput_Internal(base.NativePtr, WorldDirection, ScaleValue, bForce);
 		}
 
-		// Token: 0x0600DA87 RID: 55943 RVA: 0x001426E5 File Offset: 0x001408E5
+		// Token: 0x06003371 RID: 13169 RVA: 0x00049C4B File Offset: 0x00047E4B
 		public void AddControllerYawInput(float Val)
 		{
 			APawn.__AddControllerYawInput_Internal(base.NativePtr, Val);
 		}
 
-		// Token: 0x0600DA88 RID: 55944 RVA: 0x001426F3 File Offset: 0x001408F3
+		// Token: 0x06003372 RID: 13170 RVA: 0x00049C59 File Offset: 0x00047E59
 		public void AddControllerRollInput(float Val)
 		{
 			APawn.__AddControllerRollInput_Internal(base.NativePtr, Val);
 		}
 
-		// Token: 0x0600DA89 RID: 55945 RVA: 0x00142701 File Offset: 0x00140901
+		// Token: 0x06003373 RID: 13171 RVA: 0x00049C67 File Offset: 0x00047E67
 		public void AddControllerPitchInput(float Val)
 		{
 			APawn.__AddControllerPitchInput_Internal(base.NativePtr, Val);
 		}
 
-		// Token: 0x0600DA8A RID: 55946
+		// Token: 0x06003374 RID: 13172
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SpawnDefaultController_Internal(IntPtr @this);
 
-		// Token: 0x0600DA8B RID: 55947
+		// Token: 0x06003375 RID: 13173
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetCanAffectNavigationGeneration_Internal(IntPtr @this, bool bNewValue, bool bForceUpdate);
 
-		// Token: 0x0600DA8C RID: 55948
+		// Token: 0x06003376 RID: 13174
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ReceiveUnpossessed_Internal(IntPtr @this, IntPtr OldController);
 
-		// Token: 0x0600DA8D RID: 55949
+		// Token: 0x06003377 RID: 13175
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ReceivePossessed_Internal(IntPtr @this, IntPtr NewController);
 
-		// Token: 0x0600DA8E RID: 55950
+		// Token: 0x06003378 RID: 13176
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __PawnMakeNoise_Internal(IntPtr @this, float Loudness, FVector NoiseLocation, bool bUseNoiseMakerLocation, IntPtr NoiseMaker);
 
-		// Token: 0x0600DA8F RID: 55951
+		// Token: 0x06003379 RID: 13177
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnRep_PlayerState_Internal(IntPtr @this);
 
-		// Token: 0x0600DA90 RID: 55952
+		// Token: 0x0600337A RID: 13178
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnRep_Controller_Internal(IntPtr @this);
 
-		// Token: 0x0600DA91 RID: 55953
+		// Token: 0x0600337B RID: 13179
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __LaunchPawn_Internal(IntPtr @this, FVector LaunchVelocity, bool bXYOverride, bool bZOverride);
 
-		// Token: 0x0600DA92 RID: 55954
+		// Token: 0x0600337C RID: 13180
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __K2_GetMovementInputVector_Internal(IntPtr @this);
 
-		// Token: 0x0600DA93 RID: 55955
+		// Token: 0x0600337D RID: 13181
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsPlayerControlled_Internal(IntPtr @this);
 
-		// Token: 0x0600DA94 RID: 55956
+		// Token: 0x0600337E RID: 13182
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsPawnControlled_Internal(IntPtr @this);
 
-		// Token: 0x0600DA95 RID: 55957
+		// Token: 0x0600337F RID: 13183
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsMoveInputIgnored_Internal(IntPtr @this);
 
-		// Token: 0x0600DA96 RID: 55958
+		// Token: 0x06003380 RID: 13184
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsLocallyControlled_Internal(IntPtr @this);
 
-		// Token: 0x0600DA97 RID: 55959
+		// Token: 0x06003381 RID: 13185
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsControlled_Internal(IntPtr @this);
 
-		// Token: 0x0600DA98 RID: 55960
+		// Token: 0x06003382 RID: 13186
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __IsBotControlled_Internal(IntPtr @this);
 
-		// Token: 0x0600DA99 RID: 55961
+		// Token: 0x06003383 RID: 13187
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetPendingMovementInputVector_Internal(IntPtr @this);
 
-		// Token: 0x0600DA9A RID: 55962
+		// Token: 0x06003384 RID: 13188
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetNavAgentLocation_Internal(IntPtr @this);
 
-		// Token: 0x0600DA9B RID: 55963
+		// Token: 0x06003385 RID: 13189
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetMovementComponent_Internal(IntPtr @this);
 
-		// Token: 0x0600DA9C RID: 55964
+		// Token: 0x06003386 RID: 13190
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetMovementBaseActor_Internal(IntPtr Pawn);
 
-		// Token: 0x0600DA9D RID: 55965
+		// Token: 0x06003387 RID: 13191
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __GetLastMovementInputVector_Internal(IntPtr @this);
 
-		// Token: 0x0600DA9E RID: 55966
+		// Token: 0x06003388 RID: 13192
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FRotator __GetControlRotation_Internal(IntPtr @this);
 
-		// Token: 0x0600DA9F RID: 55967
+		// Token: 0x06003389 RID: 13193
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetController_Internal(IntPtr @this);
 
-		// Token: 0x0600DAA0 RID: 55968
+		// Token: 0x0600338A RID: 13194
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FRotator __GetBaseAimRotation_Internal(IntPtr @this);
 
-		// Token: 0x0600DAA1 RID: 55969
+		// Token: 0x0600338B RID: 13195
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __DetachFromControllerPendingDestroy_Internal(IntPtr @this);
 
-		// Token: 0x0600DAA2 RID: 55970
+		// Token: 0x0600338C RID: 13196
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __D_AddMovementInput_Internal(IntPtr @this, FVectorDouble WorldDirection, float ScaleValue, bool bForce);
 
-		// Token: 0x0600DAA3 RID: 55971
+		// Token: 0x0600338D RID: 13197
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector __ConsumeMovementInputVector_Internal(IntPtr @this);
 
-		// Token: 0x0600DAA4 RID: 55972
+		// Token: 0x0600338E RID: 13198
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AddMovementInput_Internal(IntPtr @this, FVector WorldDirection, float ScaleValue, bool bForce);
 
-		// Token: 0x0600DAA5 RID: 55973
+		// Token: 0x0600338F RID: 13199
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AddControllerYawInput_Internal(IntPtr @this, float Val);
 
-		// Token: 0x0600DAA6 RID: 55974
+		// Token: 0x06003390 RID: 13200
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AddControllerRollInput_Internal(IntPtr @this, float Val);
 
-		// Token: 0x0600DAA7 RID: 55975
+		// Token: 0x06003391 RID: 13201
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __AddControllerPitchInput_Internal(IntPtr @this, float Val);
 
-		// Token: 0x0600DAA8 RID: 55976 RVA: 0x0014270F File Offset: 0x0014090F
+		// Token: 0x06003392 RID: 13202 RVA: 0x00049C75 File Offset: 0x00047E75
 		static APawn()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.Pawn");
 		}
 
-		// Token: 0x0600DAA9 RID: 55977 RVA: 0x0014271D File Offset: 0x0014091D
+		// Token: 0x06003393 RID: 13203 RVA: 0x00049C83 File Offset: 0x00047E83
 		protected APawn(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04007656 RID: 30294
-		internal static int __InterfaceOffset_INavAgentInterface;
-
-		// Token: 0x04007657 RID: 30295
+		// Token: 0x040011DA RID: 4570
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.Pawn";
 
-		// Token: 0x04007658 RID: 30296
+		// Token: 0x040011DB RID: 4571
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04007659 RID: 30297
+		// Token: 0x040011DC RID: 4572
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400765A RID: 30298
+		// Token: 0x040011DD RID: 4573
 		internal static int __PropertyOffset_bUseControllerRotationPitch;
 
-		// Token: 0x0400765B RID: 30299
+		// Token: 0x040011DE RID: 4574
 		internal static byte __PropertyMask_bUseControllerRotationPitch;
 
-		// Token: 0x0400765C RID: 30300
+		// Token: 0x040011DF RID: 4575
 		internal static int __PropertyOffset_bUseControllerRotationYaw;
 
-		// Token: 0x0400765D RID: 30301
+		// Token: 0x040011E0 RID: 4576
 		internal static byte __PropertyMask_bUseControllerRotationYaw;
 
-		// Token: 0x0400765E RID: 30302
+		// Token: 0x040011E1 RID: 4577
 		internal static int __PropertyOffset_bUseControllerRotationRoll;
 
-		// Token: 0x0400765F RID: 30303
+		// Token: 0x040011E2 RID: 4578
 		internal static byte __PropertyMask_bUseControllerRotationRoll;
 
-		// Token: 0x04007660 RID: 30304
+		// Token: 0x040011E3 RID: 4579
 		internal static int __PropertyOffset_bCanAffectNavigationGeneration;
 
-		// Token: 0x04007661 RID: 30305
+		// Token: 0x040011E4 RID: 4580
 		internal static byte __PropertyMask_bCanAffectNavigationGeneration;
 
-		// Token: 0x04007662 RID: 30306
+		// Token: 0x040011E5 RID: 4581
 		internal static int __PropertyOffset_BaseEyeHeight;
 
-		// Token: 0x04007663 RID: 30307
-		internal static int __PropertyOffset_AutoPossessPlayer;
-
-		// Token: 0x04007664 RID: 30308
+		// Token: 0x040011E6 RID: 4582
 		internal static int __PropertyOffset_AutoPossessAI;
 
-		// Token: 0x04007665 RID: 30309
+		// Token: 0x040011E7 RID: 4583
 		internal static int __PropertyOffset_RemoteViewPitch;
 
-		// Token: 0x04007666 RID: 30310
+		// Token: 0x040011E8 RID: 4584
 		internal static int __PropertyOffset_AIControllerClass;
 
-		// Token: 0x04007667 RID: 30311
-		internal static int __PropertyOffset_PlayerState;
-
-		// Token: 0x04007668 RID: 30312
+		// Token: 0x040011E9 RID: 4585
 		internal static int __PropertyOffset_LastHitBy;
 
-		// Token: 0x04007669 RID: 30313
+		// Token: 0x040011EA RID: 4586
 		internal static int __PropertyOffset_Controller;
 
-		// Token: 0x0400766A RID: 30314
+		// Token: 0x040011EB RID: 4587
 		internal static int __PropertyOffset_ControlInputVector;
 
-		// Token: 0x0400766B RID: 30315
+		// Token: 0x040011EC RID: 4588
 		internal static int __PropertyOffset_LastControlInputVector;
 
-		// Token: 0x02002DBD RID: 11709
+		// Token: 0x020009DF RID: 2527
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __ReceiveUnpossessed_FunctionParams
 		{
-			// Token: 0x040167F5 RID: 92149
+			// Token: 0x04005971 RID: 22897
 			[FieldOffset(0)]
 			public IntPtr OldController;
 		}
 
-		// Token: 0x02002DBE RID: 11710
+		// Token: 0x020009E0 RID: 2528
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __ReceivePossessed_FunctionParams
 		{
-			// Token: 0x040167F6 RID: 92150
+			// Token: 0x04005972 RID: 22898
 			[FieldOffset(0)]
 			public IntPtr NewController;
 		}

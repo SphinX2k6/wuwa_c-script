@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C66 RID: 3174
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D3F RID: 3391
 	public class ISwordRiderRailSpline : ISplineType
 	{
-		// Token: 0x060048BF RID: 18623 RVA: 0x000B6B2E File Offset: 0x000B4D2E
+		// Token: 0x06004D44 RID: 19780 RVA: 0x000C1122 File Offset: 0x000BF322
 		public static ISwordRiderRailSpline Create(ISwordRiderRailSpline? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170015B0 RID: 5552
-		// (get) Token: 0x060048C0 RID: 18624 RVA: 0x000B6B4D File Offset: 0x000B4D4D
+		// Token: 0x170016C1 RID: 5825
+		// (get) Token: 0x06004D45 RID: 19781 RVA: 0x000C1141 File Offset: 0x000BF341
 		public override ESplineType Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015B1 RID: 5553
-		// (get) Token: 0x060048C1 RID: 18625 RVA: 0x000B6B5A File Offset: 0x000B4D5A
+		// Token: 0x170016C2 RID: 5826
+		// (get) Token: 0x06004D46 RID: 19782 RVA: 0x000C114E File Offset: 0x000BF34E
 		public virtual ESwordRiderRailWall WallType
 		{
 			get
@@ -43,8 +41,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015B2 RID: 5554
-		// (get) Token: 0x060048C2 RID: 18626 RVA: 0x000B6B67 File Offset: 0x000B4D67
+		// Token: 0x170016C3 RID: 5827
+		// (get) Token: 0x06004D47 RID: 19783 RVA: 0x000C115B File Offset: 0x000BF35B
 		[Nullable(2)]
 		public virtual string PathEffect
 		{
@@ -55,8 +53,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170015B3 RID: 5555
-		// (get) Token: 0x060048C3 RID: 18627 RVA: 0x000B6B74 File Offset: 0x000B4D74
+		// Token: 0x170016C4 RID: 5828
+		// (get) Token: 0x06004D48 RID: 19784 RVA: 0x000C1168 File Offset: 0x000BF368
 		public virtual List<ISwordRiderRailSplinePoint> Points
 		{
 			get
@@ -76,13 +74,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400297D RID: 10621
+		// Token: 0x04002BDE RID: 11230
 		private ISwordRiderRailSpline Instance;
 
-		// Token: 0x0400297E RID: 10622
+		// Token: 0x04002BDF RID: 11231
 		private List<ISwordRiderRailSplinePoint> _PointsCache;
 
-		// Token: 0x0400297F RID: 10623
+		// Token: 0x04002BE0 RID: 11232
 		private bool _PointsInited;
 	}
 }

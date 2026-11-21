@@ -4,20 +4,20 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Character.Input.Enum
 {
-	// Token: 0x02004262 RID: 16994
+	// Token: 0x020032D4 RID: 13012
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Character/Input/Enum/EInputState.EInputState")]
 	public enum EInputState : byte
 	{
-		// Token: 0x0401703D RID: 94269
+		// Token: 0x04011DD5 RID: 73173
 		None,
-		// Token: 0x0401703E RID: 94270
+		// Token: 0x04011DD6 RID: 73174
 		Press,
-		// Token: 0x0401703F RID: 94271
+		// Token: 0x04011DD7 RID: 73175
 		Release,
-		// Token: 0x04017040 RID: 94272
+		// Token: 0x04011DD8 RID: 73176
 		Hold,
-		// Token: 0x04017041 RID: 94273
+		// Token: 0x04011DD9 RID: 73177
 		EInputState_MAX
 	}
 }

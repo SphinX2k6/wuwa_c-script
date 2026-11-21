@@ -1,27 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
 	// Token: 0x02000047 RID: 71
-	[NullableContext(1)]
-	[Nullable(0)]
 	public class CombinedVisibleGroupComponent_SetValue
 	{
-		// Token: 0x0400017C RID: 380
+		// Token: 0x04000181 RID: 385
 		public bool? Disabled;
 
-		// Token: 0x0400017D RID: 381
+		// Token: 0x04000182 RID: 386
 		public bool? EdIsLocked;
 
-		// Token: 0x0400017E RID: 382
+		// Token: 0x04000183 RID: 387
 		public List<int> AreaIds;
 
-		// Token: 0x0400017F RID: 383
+		// Token: 0x04000184 RID: 388
 		public bool IncludeSubArea;
 
-		// Token: 0x04000180 RID: 384
+		// Token: 0x04000185 RID: 389
 		public List<int> EntityIds;
 	}
 }

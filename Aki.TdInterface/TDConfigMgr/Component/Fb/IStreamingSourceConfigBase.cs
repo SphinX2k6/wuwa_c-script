@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E35 RID: 3637
+	// Token: 0x02000F31 RID: 3889
 	public class IStreamingSourceConfigBase
 	{
-		// Token: 0x06005236 RID: 21046 RVA: 0x000CA8C9 File Offset: 0x000C8AC9
-		[NullableContext(1)]
+		// Token: 0x0600575D RID: 22365 RVA: 0x000D6191 File Offset: 0x000D4391
 		public static IStreamingSourceConfigBase Create(IStreamingSourceConfigBase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001B89 RID: 7049
-		// (get) Token: 0x06005237 RID: 21047 RVA: 0x000CA8E8 File Offset: 0x000C8AE8
+		// Token: 0x17001CF6 RID: 7414
+		// (get) Token: 0x0600575E RID: 22366 RVA: 0x000D61B0 File Offset: 0x000D43B0
 		public virtual EStreamingSourceMode Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002F60 RID: 12128
+		// Token: 0x04003228 RID: 12840
 		private IStreamingSourceConfigBase Instance;
 	}
 }

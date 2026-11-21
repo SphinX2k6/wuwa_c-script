@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025CF RID: 9679
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200288E RID: 10382
 	public class IPlotModeUiStyleLevelD : IPlotModeUiStyleBase
 	{
-		// Token: 0x0600D98F RID: 55695 RVA: 0x0020713E File Offset: 0x0020533E
+		// Token: 0x0600E757 RID: 59223 RVA: 0x002237F5 File Offset: 0x002219F5
 		public static IPlotModeUiStyleLevelD Create(IPlotModeUiStyleLevelD? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003FB3 RID: 16307
-		// (get) Token: 0x0600D990 RID: 55696 RVA: 0x0020715D File Offset: 0x0020535D
+		// Token: 0x170042E9 RID: 17129
+		// (get) Token: 0x0600E758 RID: 59224 RVA: 0x00223814 File Offset: 0x00221A14
 		public override EPlotModeUiStyleType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003FB4 RID: 16308
-		// (get) Token: 0x0600D991 RID: 55697 RVA: 0x0020716A File Offset: 0x0020536A
+		// Token: 0x170042EA RID: 17130
+		// (get) Token: 0x0600E759 RID: 59225 RVA: 0x00223821 File Offset: 0x00221A21
 		public virtual IUiStyleBaseOfLevelD UiStyle
 		{
 			get
@@ -48,13 +45,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040078CD RID: 30925
+		// Token: 0x04007F64 RID: 32612
 		private IPlotModeUiStyleLevelD Instance;
 
-		// Token: 0x040078CE RID: 30926
+		// Token: 0x04007F65 RID: 32613
 		private IUiStyleBaseOfLevelD _UiStyleCache;
 
-		// Token: 0x040078CF RID: 30927
+		// Token: 0x04007F66 RID: 32614
 		private bool _UiStyleInited;
 	}
 }

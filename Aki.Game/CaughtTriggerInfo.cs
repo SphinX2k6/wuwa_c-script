@@ -5,12 +5,12 @@ using AkiClient.Game.Aki.Character.BaseCharacter;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x02003050 RID: 12368
+// Token: 0x020025A6 RID: 9638
 [NullableContext(2)]
 [Nullable(0)]
 public class CaughtTriggerInfo
 {
-	// Token: 0x0601A493 RID: 107667 RVA: 0x006F3AF4 File Offset: 0x006F1CF4
+	// Token: 0x06017E25 RID: 97829 RVA: 0x0071AD48 File Offset: 0x00718F48
 	[NullableContext(1)]
 	public unsafe void Init(string caughtId, SCaughtInfo info, CharacterActorComponent entityActorComp, CharacterCaughtNewComponent caughtComp, int skillId)
 	{
@@ -61,7 +61,7 @@ public class CaughtTriggerInfo
 		instance2.Warn(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 2));
 	}
 
-	// Token: 0x0601A494 RID: 107668 RVA: 0x006F3CF8 File Offset: 0x006F1EF8
+	// Token: 0x06017E26 RID: 97830 RVA: 0x0071AF4C File Offset: 0x0071914C
 	public unsafe void Clear()
 	{
 		if (this.BulletEntity != null)
@@ -90,29 +90,29 @@ public class CaughtTriggerInfo
 		this.DebugBulletId = 0;
 	}
 
-	// Token: 0x0400C85E RID: 51294
+	// Token: 0x0400CC37 RID: 52279
 	private Entity Entity;
 
-	// Token: 0x0400C85F RID: 51295
+	// Token: 0x0400CC38 RID: 52280
 	public int Index;
 
-	// Token: 0x0400C860 RID: 51296
+	// Token: 0x0400CC39 RID: 52281
 	[Nullable(1)]
 	public string CaughtId = "";
 
-	// Token: 0x0400C861 RID: 51297
+	// Token: 0x0400CC3A RID: 52282
 	private SCaughtInfo CaughtInfo;
 
-	// Token: 0x0400C862 RID: 51298
+	// Token: 0x0400CC3B RID: 52283
 	public SCaughtTriggerInfo TriggerInfo;
 
-	// Token: 0x0400C863 RID: 51299
+	// Token: 0x0400CC3C RID: 52284
 	public BulletEntity BulletEntity;
 
-	// Token: 0x0400C864 RID: 51300
+	// Token: 0x0400CC3D RID: 52285
 	public BulletActorComponent BulletActorComponent;
 
-	// Token: 0x0400C865 RID: 51301
+	// Token: 0x0400CC3E RID: 52286
 	[Nullable(new byte[]
 	{
 		2,
@@ -121,6 +121,6 @@ public class CaughtTriggerInfo
 	})]
 	public Action<global::HitInformation, HitContext> Handle;
 
-	// Token: 0x0400C866 RID: 51302
+	// Token: 0x0400CC3F RID: 52287
 	private int DebugBulletId;
 }

@@ -2,14 +2,14 @@
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02001B4A RID: 6986
+// Token: 0x02001009 RID: 4105
 [NullableContext(1)]
 [Nullable(0)]
 public struct FloroRanchShopViewParam
 {
-	// Token: 0x04005F62 RID: 24418
+	// Token: 0x04006031 RID: 24625
 	public FloroRanchShop ShopData;
 
-	// Token: 0x04005F63 RID: 24419
+	// Token: 0x04006032 RID: 24626
 	public Action CloseCallback;
 }

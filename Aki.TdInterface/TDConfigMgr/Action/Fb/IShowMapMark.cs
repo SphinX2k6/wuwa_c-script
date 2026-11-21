@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002960 RID: 10592
+	// Token: 0x02002C45 RID: 11333
 	public class IShowMapMark : ToggleMapMarkState
 	{
-		// Token: 0x0600EAD3 RID: 60115 RVA: 0x00226158 File Offset: 0x00224358
-		[NullableContext(1)]
+		// Token: 0x0600F949 RID: 63817 RVA: 0x00243810 File Offset: 0x00241A10
 		public static IShowMapMark Create(IShowMapMark? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170049D5 RID: 18901
-		// (get) Token: 0x0600EAD4 RID: 60116 RVA: 0x00226177 File Offset: 0x00224377
+		// Token: 0x17004D6D RID: 19821
+		// (get) Token: 0x0600F94A RID: 63818 RVA: 0x0024382F File Offset: 0x00241A2F
 		public override EMapMarkState Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170049D6 RID: 18902
-		// (get) Token: 0x0600EAD5 RID: 60117 RVA: 0x00226184 File Offset: 0x00224384
+		// Token: 0x17004D6E RID: 19822
+		// (get) Token: 0x0600F94B RID: 63819 RVA: 0x0024383C File Offset: 0x00241A3C
 		public virtual int MarkId
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170049D7 RID: 18903
-		// (get) Token: 0x0600EAD6 RID: 60118 RVA: 0x00226194 File Offset: 0x00224394
+		// Token: 0x17004D6F RID: 19823
+		// (get) Token: 0x0600F94C RID: 63820 RVA: 0x0024384C File Offset: 0x00241A4C
 		public virtual bool? IsFocusOnFirstShow
 		{
 			get
@@ -55,7 +53,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008168 RID: 33128
+		// Token: 0x04008849 RID: 34889
 		private IShowMapMark Instance;
 	}
 }

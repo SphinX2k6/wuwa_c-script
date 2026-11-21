@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020056A1 RID: 22177
+	// Token: 0x02005C45 RID: 23621
 	public struct IOnMoveWithSplineEndAttachTiming : IFlatbufferObject
 	{
-		// Token: 0x1700A4EC RID: 42220
-		// (get) Token: 0x06025030 RID: 151600 RVA: 0x0051C7D7 File Offset: 0x0051A9D7
+		// Token: 0x1700AD80 RID: 44416
+		// (get) Token: 0x06027285 RID: 160389 RVA: 0x0055D71F File Offset: 0x0055B91F
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025031 RID: 151601 RVA: 0x0051C7E4 File Offset: 0x0051A9E4
+		// Token: 0x06027286 RID: 160390 RVA: 0x0055D72C File Offset: 0x0055B92C
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06025032 RID: 151602 RVA: 0x0051C7EC File Offset: 0x0051A9EC
+		// Token: 0x06027287 RID: 160391 RVA: 0x0055D734 File Offset: 0x0055B934
 		public static IOnMoveWithSplineEndAttachTiming GetRootAsIOnMoveWithSplineEndAttachTiming(ByteBuffer _bb)
 		{
 			return IOnMoveWithSplineEndAttachTiming.GetRootAsIOnMoveWithSplineEndAttachTiming(_bb, default(IOnMoveWithSplineEndAttachTiming));
 		}
 
-		// Token: 0x06025033 RID: 151603 RVA: 0x0051C808 File Offset: 0x0051AA08
+		// Token: 0x06027288 RID: 160392 RVA: 0x0055D750 File Offset: 0x0055B950
 		public static IOnMoveWithSplineEndAttachTiming GetRootAsIOnMoveWithSplineEndAttachTiming(ByteBuffer _bb, IOnMoveWithSplineEndAttachTiming obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06025034 RID: 151604 RVA: 0x0051C825 File Offset: 0x0051AA25
+		// Token: 0x06027289 RID: 160393 RVA: 0x0055D76D File Offset: 0x0055B96D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06025035 RID: 151605 RVA: 0x0051C834 File Offset: 0x0051AA34
+		// Token: 0x0602728A RID: 160394 RVA: 0x0055D77C File Offset: 0x0055B97C
 		public IOnMoveWithSplineEndAttachTiming __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A4ED RID: 42221
-		// (get) Token: 0x06025036 RID: 151606 RVA: 0x0051C844 File Offset: 0x0051AA44
+		// Token: 0x1700AD81 RID: 44417
+		// (get) Token: 0x0602728B RID: 160395 RVA: 0x0055D78C File Offset: 0x0055B98C
 		public EAttachTimingType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A4EE RID: 42222
-		// (get) Token: 0x06025037 RID: 151607 RVA: 0x0051C880 File Offset: 0x0051AA80
+		// Token: 0x1700AD82 RID: 44418
+		// (get) Token: 0x0602728C RID: 160396 RVA: 0x0055D7C8 File Offset: 0x0055B9C8
 		public int SplineEntityId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025038 RID: 151608 RVA: 0x0051C8BC File Offset: 0x0051AABC
+		// Token: 0x0602728D RID: 160397 RVA: 0x0055D804 File Offset: 0x0055BA04
 		public static Offset<IOnMoveWithSplineEndAttachTiming> CreateIOnMoveWithSplineEndAttachTiming(FlatBufferBuilder builder, EAttachTimingType Type = EAttachTimingType.Default, int SplineEntityId = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IOnMoveWithSplineEndAttachTiming.EndIOnMoveWithSplineEndAttachTiming(builder);
 		}
 
-		// Token: 0x06025039 RID: 151609 RVA: 0x0051C8D9 File Offset: 0x0051AAD9
+		// Token: 0x0602728E RID: 160398 RVA: 0x0055D821 File Offset: 0x0055BA21
 		public static void StartIOnMoveWithSplineEndAttachTiming(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602503A RID: 151610 RVA: 0x0051C8E2 File Offset: 0x0051AAE2
+		// Token: 0x0602728F RID: 160399 RVA: 0x0055D82A File Offset: 0x0055BA2A
 		public static void AddType(FlatBufferBuilder builder, EAttachTimingType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602503B RID: 151611 RVA: 0x0051C8ED File Offset: 0x0051AAED
+		// Token: 0x06027290 RID: 160400 RVA: 0x0055D835 File Offset: 0x0055BA35
 		public static void AddSplineEntityId(FlatBufferBuilder builder, int splineEntityId)
 		{
 			builder.AddInt(1, splineEntityId, 0);
 		}
 
-		// Token: 0x0602503C RID: 151612 RVA: 0x0051C8F8 File Offset: 0x0051AAF8
+		// Token: 0x06027291 RID: 160401 RVA: 0x0055D840 File Offset: 0x0055BA40
 		public static Offset<IOnMoveWithSplineEndAttachTiming> EndIOnMoveWithSplineEndAttachTiming(FlatBufferBuilder builder)
 		{
 			return new Offset<IOnMoveWithSplineEndAttachTiming>(builder.EndTable());
 		}
 
-		// Token: 0x0602503D RID: 151613 RVA: 0x0051C908 File Offset: 0x0051AB08
+		// Token: 0x06027292 RID: 160402 RVA: 0x0055D850 File Offset: 0x0055BA50
 		public IOnMoveWithSplineEndAttachTimingT UnPack()
 		{
 			IOnMoveWithSplineEndAttachTimingT onMoveWithSplineEndAttachTimingT = new IOnMoveWithSplineEndAttachTimingT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return onMoveWithSplineEndAttachTimingT;
 		}
 
-		// Token: 0x0602503E RID: 151614 RVA: 0x0051C923 File Offset: 0x0051AB23
+		// Token: 0x06027293 RID: 160403 RVA: 0x0055D86B File Offset: 0x0055BA6B
 		public void UnPackTo(IOnMoveWithSplineEndAttachTimingT _o)
 		{
 			_o.Type = this.Type;
 			_o.SplineEntityId = this.SplineEntityId;
 		}
 
-		// Token: 0x0602503F RID: 151615 RVA: 0x0051C940 File Offset: 0x0051AB40
+		// Token: 0x06027294 RID: 160404 RVA: 0x0055D888 File Offset: 0x0055BA88
 		public static Offset<IOnMoveWithSplineEndAttachTiming> Pack(FlatBufferBuilder builder, IOnMoveWithSplineEndAttachTimingT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IOnMoveWithSplineEndAttachTiming.CreateIOnMoveWithSplineEndAttachTiming(builder, _o.Type, _o.SplineEntityId);
 		}
 
-		// Token: 0x0400EAC5 RID: 60101
+		// Token: 0x0400F731 RID: 63281
 		private Table __p;
 	}
 }

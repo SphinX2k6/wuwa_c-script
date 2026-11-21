@@ -3,22 +3,22 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001ABC RID: 6844
+	// Token: 0x02001C5B RID: 7259
 	public class IFoxPushBox_SetValue
 	{
-		// Token: 0x04005A50 RID: 23120
+		// Token: 0x04005EC9 RID: 24265
 		public ELeisureInteract Type;
 
-		// Token: 0x04005A51 RID: 23121
+		// Token: 0x04005ECA RID: 24266
 		public int EntityId;
 
-		// Token: 0x04005A52 RID: 23122
+		// Token: 0x04005ECB RID: 24267
 		public int CollisionRadius;
 
-		// Token: 0x04005A53 RID: 23123
+		// Token: 0x04005ECC RID: 24268
 		public int SplineEntityId;
 
-		// Token: 0x04005A54 RID: 23124
+		// Token: 0x04005ECD RID: 24269
 		[Nullable(2)]
 		public string SendEntityEventOnSplineFinish;
 	}

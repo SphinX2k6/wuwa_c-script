@@ -2,75 +2,75 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006C70 RID: 27760
+	// Token: 0x020073D7 RID: 29655
 	public class IPathLineMoveT
 	{
-		// Token: 0x1700CEC0 RID: 52928
-		// (get) Token: 0x06030EA9 RID: 200361 RVA: 0x006A4A91 File Offset: 0x006A2C91
-		// (set) Token: 0x06030EAA RID: 200362 RVA: 0x006A4A99 File Offset: 0x006A2C99
+		// Token: 0x1700D9DB RID: 55771
+		// (get) Token: 0x06033E04 RID: 212484 RVA: 0x006FEF91 File Offset: 0x006FD191
+		// (set) Token: 0x06033E05 RID: 212485 RVA: 0x006FEF99 File Offset: 0x006FD199
 		public ESplineMovePattern Type { get; set; }
 
-		// Token: 0x1700CEC1 RID: 52929
-		// (get) Token: 0x06030EAB RID: 200363 RVA: 0x006A4AA2 File Offset: 0x006A2CA2
-		// (set) Token: 0x06030EAC RID: 200364 RVA: 0x006A4AAA File Offset: 0x006A2CAA
+		// Token: 0x1700D9DC RID: 55772
+		// (get) Token: 0x06033E06 RID: 212486 RVA: 0x006FEFA2 File Offset: 0x006FD1A2
+		// (set) Token: 0x06033E07 RID: 212487 RVA: 0x006FEFAA File Offset: 0x006FD1AA
 		public float MaxOffsetDistance { get; set; }
 
-		// Token: 0x1700CEC2 RID: 52930
-		// (get) Token: 0x06030EAD RID: 200365 RVA: 0x006A4AB3 File Offset: 0x006A2CB3
-		// (set) Token: 0x06030EAE RID: 200366 RVA: 0x006A4ABB File Offset: 0x006A2CBB
+		// Token: 0x1700D9DD RID: 55773
+		// (get) Token: 0x06033E08 RID: 212488 RVA: 0x006FEFB3 File Offset: 0x006FD1B3
+		// (set) Token: 0x06033E09 RID: 212489 RVA: 0x006FEFBB File Offset: 0x006FD1BB
 		public bool IsOneWay { get; set; }
 
-		// Token: 0x1700CEC3 RID: 52931
-		// (get) Token: 0x06030EAF RID: 200367 RVA: 0x006A4AC4 File Offset: 0x006A2CC4
-		// (set) Token: 0x06030EB0 RID: 200368 RVA: 0x006A4ACC File Offset: 0x006A2CCC
+		// Token: 0x1700D9DE RID: 55774
+		// (get) Token: 0x06033E0A RID: 212490 RVA: 0x006FEFC4 File Offset: 0x006FD1C4
+		// (set) Token: 0x06033E0B RID: 212491 RVA: 0x006FEFCC File Offset: 0x006FD1CC
 		public float LayerVerticalLimit { get; set; }
 
-		// Token: 0x1700CEC4 RID: 52932
-		// (get) Token: 0x06030EB1 RID: 200369 RVA: 0x006A4AD5 File Offset: 0x006A2CD5
-		// (set) Token: 0x06030EB2 RID: 200370 RVA: 0x006A4ADD File Offset: 0x006A2CDD
+		// Token: 0x1700D9DF RID: 55775
+		// (get) Token: 0x06033E0C RID: 212492 RVA: 0x006FEFD5 File Offset: 0x006FD1D5
+		// (set) Token: 0x06033E0D RID: 212493 RVA: 0x006FEFDD File Offset: 0x006FD1DD
 		public bool DynamicGravity { get; set; }
 
-		// Token: 0x1700CEC5 RID: 52933
-		// (get) Token: 0x06030EB3 RID: 200371 RVA: 0x006A4AE6 File Offset: 0x006A2CE6
-		// (set) Token: 0x06030EB4 RID: 200372 RVA: 0x006A4AEE File Offset: 0x006A2CEE
+		// Token: 0x1700D9E0 RID: 55776
+		// (get) Token: 0x06033E0E RID: 212494 RVA: 0x006FEFE6 File Offset: 0x006FD1E6
+		// (set) Token: 0x06033E0F RID: 212495 RVA: 0x006FEFEE File Offset: 0x006FD1EE
 		public float GravitySwitchAngularVelocity { get; set; }
 
-		// Token: 0x1700CEC6 RID: 52934
-		// (get) Token: 0x06030EB5 RID: 200373 RVA: 0x006A4AF7 File Offset: 0x006A2CF7
-		// (set) Token: 0x06030EB6 RID: 200374 RVA: 0x006A4AFF File Offset: 0x006A2CFF
+		// Token: 0x1700D9E1 RID: 55777
+		// (get) Token: 0x06033E10 RID: 212496 RVA: 0x006FEFF7 File Offset: 0x006FD1F7
+		// (set) Token: 0x06033E11 RID: 212497 RVA: 0x006FEFFF File Offset: 0x006FD1FF
 		public int AutoExitDistance { get; set; }
 
-		// Token: 0x1700CEC7 RID: 52935
-		// (get) Token: 0x06030EB7 RID: 200375 RVA: 0x006A4B08 File Offset: 0x006A2D08
-		// (set) Token: 0x06030EB8 RID: 200376 RVA: 0x006A4B10 File Offset: 0x006A2D10
+		// Token: 0x1700D9E2 RID: 55778
+		// (get) Token: 0x06033E12 RID: 212498 RVA: 0x006FF008 File Offset: 0x006FD208
+		// (set) Token: 0x06033E13 RID: 212499 RVA: 0x006FF010 File Offset: 0x006FD210
 		public TPathLineFacingConfigUnion FacingConfig { get; set; }
 
-		// Token: 0x1700CEC8 RID: 52936
-		// (get) Token: 0x06030EB9 RID: 200377 RVA: 0x006A4B19 File Offset: 0x006A2D19
-		// (set) Token: 0x06030EBA RID: 200378 RVA: 0x006A4B21 File Offset: 0x006A2D21
+		// Token: 0x1700D9E3 RID: 55779
+		// (get) Token: 0x06033E14 RID: 212500 RVA: 0x006FF019 File Offset: 0x006FD219
+		// (set) Token: 0x06033E15 RID: 212501 RVA: 0x006FF021 File Offset: 0x006FD221
 		public string SplineMoveConfigDaPath { get; set; }
 
-		// Token: 0x1700CEC9 RID: 52937
-		// (get) Token: 0x06030EBB RID: 200379 RVA: 0x006A4B2A File Offset: 0x006A2D2A
-		// (set) Token: 0x06030EBC RID: 200380 RVA: 0x006A4B32 File Offset: 0x006A2D32
+		// Token: 0x1700D9E4 RID: 55780
+		// (get) Token: 0x06033E16 RID: 212502 RVA: 0x006FF02A File Offset: 0x006FD22A
+		// (set) Token: 0x06033E17 RID: 212503 RVA: 0x006FF032 File Offset: 0x006FD232
 		public bool IsAdaptiveClimbInput { get; set; }
 
-		// Token: 0x1700CECA RID: 52938
-		// (get) Token: 0x06030EBD RID: 200381 RVA: 0x006A4B3B File Offset: 0x006A2D3B
-		// (set) Token: 0x06030EBE RID: 200382 RVA: 0x006A4B43 File Offset: 0x006A2D43
+		// Token: 0x1700D9E5 RID: 55781
+		// (get) Token: 0x06033E18 RID: 212504 RVA: 0x006FF03B File Offset: 0x006FD23B
+		// (set) Token: 0x06033E19 RID: 212505 RVA: 0x006FF043 File Offset: 0x006FD243
 		public bool IsDisableStopAnim { get; set; }
 
-		// Token: 0x1700CECB RID: 52939
-		// (get) Token: 0x06030EBF RID: 200383 RVA: 0x006A4B4C File Offset: 0x006A2D4C
-		// (set) Token: 0x06030EC0 RID: 200384 RVA: 0x006A4B54 File Offset: 0x006A2D54
+		// Token: 0x1700D9E6 RID: 55782
+		// (get) Token: 0x06033E1A RID: 212506 RVA: 0x006FF04C File Offset: 0x006FD24C
+		// (set) Token: 0x06033E1B RID: 212507 RVA: 0x006FF054 File Offset: 0x006FD254
 		public bool IsAllowEarlyExitClimb { get; set; }
 
-		// Token: 0x1700CECC RID: 52940
-		// (get) Token: 0x06030EC1 RID: 200385 RVA: 0x006A4B5D File Offset: 0x006A2D5D
-		// (set) Token: 0x06030EC2 RID: 200386 RVA: 0x006A4B65 File Offset: 0x006A2D65
+		// Token: 0x1700D9E7 RID: 55783
+		// (get) Token: 0x06033E1C RID: 212508 RVA: 0x006FF05D File Offset: 0x006FD25D
+		// (set) Token: 0x06033E1D RID: 212509 RVA: 0x006FF065 File Offset: 0x006FD265
 		public ushort NullMask { get; set; }
 
-		// Token: 0x06030EC3 RID: 200387 RVA: 0x006A4B70 File Offset: 0x006A2D70
+		// Token: 0x06033E1E RID: 212510 RVA: 0x006FF070 File Offset: 0x006FD270
 		public IPathLineMoveT()
 		{
 			this.Type = ESplineMovePattern.PathLine;

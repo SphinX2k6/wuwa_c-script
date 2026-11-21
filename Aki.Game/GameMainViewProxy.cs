@@ -7,27 +7,28 @@ using CSharpScript.Game.InputSetting;
 using CSharpScript.Game.Module.BattleUi;
 using CSharpScript.Game.Module.BattleUi.Views;
 using CSharpScript.Game.Module.GameMainView.CommonChildPanel;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001CB0 RID: 7344
+// Token: 0x02001172 RID: 4466
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class GameMainViewProxy
 {
-	// Token: 0x170011FF RID: 4607
-	// (get) Token: 0x0600DDC2 RID: 56770
+	// Token: 0x17001229 RID: 4649
+	// (get) Token: 0x0600B1DF RID: 45535
 	protected abstract EBattleUiCommonChildVisibleReason? BattleUiCommonChildVisibleReason { get; }
 
-	// Token: 0x0600DDC3 RID: 56771 RVA: 0x0033D985 File Offset: 0x0033BB85
+	// Token: 0x0600B1E0 RID: 45536 RVA: 0x003493C1 File Offset: 0x003475C1
 	public void RegisterView(CommonGameMainView view)
 	{
 		this.View = view;
 	}
 
-	// Token: 0x0600DDC4 RID: 56772 RVA: 0x0033D990 File Offset: 0x0033BB90
+	// Token: 0x0600B1E1 RID: 45537 RVA: 0x003493CC File Offset: 0x003475CC
 	public UniTask BeforeStartAsync()
 	{
 		GameMainViewProxy.<BeforeStartAsync>d__12 <BeforeStartAsync>d__;
@@ -38,7 +39,7 @@ public abstract class GameMainViewProxy
 		return <BeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DDC5 RID: 56773 RVA: 0x0033D9D3 File Offset: 0x0033BBD3
+	// Token: 0x0600B1E2 RID: 45538 RVA: 0x0034940F File Offset: 0x0034760F
 	public void Start()
 	{
 		this.SetJoystickPanelHierarchyIndex();
@@ -46,7 +47,7 @@ public abstract class GameMainViewProxy
 		this.AddEventListenerByStart();
 	}
 
-	// Token: 0x0600DDC6 RID: 56774 RVA: 0x0033D9E8 File Offset: 0x0033BBE8
+	// Token: 0x0600B1E3 RID: 45539 RVA: 0x00349424 File Offset: 0x00347624
 	public void BeforeShow()
 	{
 		foreach (BattleChildViewPanel battleChildViewPanel in this.ChildPanelMap.Values)
@@ -60,7 +61,7 @@ public abstract class GameMainViewProxy
 		this.IsFirstShow = true;
 	}
 
-	// Token: 0x0600DDC7 RID: 56775 RVA: 0x0033DA60 File Offset: 0x0033BC60
+	// Token: 0x0600B1E4 RID: 45540 RVA: 0x0034949C File Offset: 0x0034769C
 	public void AfterShow()
 	{
 		this.ApplyTouchUiEditData();
@@ -71,7 +72,7 @@ public abstract class GameMainViewProxy
 		EventSystem.Instance.Emit(EEventName.RedDotStart);
 	}
 
-	// Token: 0x0600DDC8 RID: 56776 RVA: 0x0033DA9A File Offset: 0x0033BC9A
+	// Token: 0x0600B1E5 RID: 45541 RVA: 0x003494D6 File Offset: 0x003476D6
 	public void BeforeHide()
 	{
 		this.OnBeforeHide();
@@ -80,7 +81,7 @@ public abstract class GameMainViewProxy
 		EventSystem.Instance.Emit(EEventName.DisActiveBattleView);
 	}
 
-	// Token: 0x0600DDC9 RID: 56777 RVA: 0x0033DAC0 File Offset: 0x0033BCC0
+	// Token: 0x0600B1E6 RID: 45542 RVA: 0x003494FC File Offset: 0x003476FC
 	public void AfterHide()
 	{
 		foreach (BattleChildViewPanel battleChildViewPanel in this.ChildPanelMap.Values)
@@ -91,35 +92,35 @@ public abstract class GameMainViewProxy
 		this.TryRemoveBattleUiCommonChildVisibleReason();
 	}
 
-	// Token: 0x0600DDCA RID: 56778 RVA: 0x0033DB24 File Offset: 0x0033BD24
+	// Token: 0x0600B1E7 RID: 45543 RVA: 0x00349560 File Offset: 0x00347760
 	private void AddEventListenerByStart()
 	{
 		EventSystem.Instance.Add(EEventName.OnRouletteViewVisibleChanged, new Action<bool>(this.OnRouletteViewVisibleChanged));
 		this.OnAddEventListenerByStart();
 	}
 
-	// Token: 0x0600DDCB RID: 56779 RVA: 0x0033DB48 File Offset: 0x0033BD48
+	// Token: 0x0600B1E8 RID: 45544 RVA: 0x00349584 File Offset: 0x00347784
 	private void RemoveEventListenerForStart()
 	{
 		EventSystem.Instance.Remove(EEventName.OnRouletteViewVisibleChanged, new Action<bool>(this.OnRouletteViewVisibleChanged));
 		this.OnRemoveEventListenerForStart();
 	}
 
-	// Token: 0x0600DDCC RID: 56780 RVA: 0x0033DB6C File Offset: 0x0033BD6C
+	// Token: 0x0600B1E9 RID: 45545 RVA: 0x003495A8 File Offset: 0x003477A8
 	public void AddEventListener()
 	{
 		EventSystem.Instance.Add<EInputControllerType, EInputControllerType>(EEventName.InputControllerChange, new Action<EInputControllerType, EInputControllerType>(this.InputControllerChange));
 		this.OnAddEventListener();
 	}
 
-	// Token: 0x0600DDCD RID: 56781 RVA: 0x0033DB90 File Offset: 0x0033BD90
+	// Token: 0x0600B1EA RID: 45546 RVA: 0x003495CC File Offset: 0x003477CC
 	public void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.InputControllerChange, new Action<EInputControllerType, EInputControllerType>(this.InputControllerChange));
 		this.OnRemoveEventListener();
 	}
 
-	// Token: 0x0600DDCE RID: 56782 RVA: 0x0033DBB4 File Offset: 0x0033BDB4
+	// Token: 0x0600B1EB RID: 45547 RVA: 0x003495F0 File Offset: 0x003477F0
 	public void BeforeDestroy()
 	{
 		this.RemoveEventListenerForStart();
@@ -129,7 +130,7 @@ public abstract class GameMainViewProxy
 		this.OnBeforeDestroy();
 	}
 
-	// Token: 0x0600DDCF RID: 56783 RVA: 0x0033DBDC File Offset: 0x0033BDDC
+	// Token: 0x0600B1EC RID: 45548 RVA: 0x00349618 File Offset: 0x00347818
 	public void Tick(float delta)
 	{
 		foreach (BattleChildViewPanel battleChildViewPanel in this.TickPanelList)
@@ -142,7 +143,7 @@ public abstract class GameMainViewProxy
 		this.OnTick(delta);
 	}
 
-	// Token: 0x0600DDD0 RID: 56784 RVA: 0x0033DC40 File Offset: 0x0033BE40
+	// Token: 0x0600B1ED RID: 45549 RVA: 0x0034967C File Offset: 0x0034787C
 	public void AfterTick(float delta)
 	{
 		foreach (BattleChildViewPanel battleChildViewPanel in this.TickPanelList)
@@ -155,7 +156,7 @@ public abstract class GameMainViewProxy
 		this.OnAfterTick(delta);
 	}
 
-	// Token: 0x0600DDD1 RID: 56785 RVA: 0x0033DCA4 File Offset: 0x0033BEA4
+	// Token: 0x0600B1EE RID: 45550 RVA: 0x003496E0 File Offset: 0x003478E0
 	public UniTask PlayHideSequenceAsync()
 	{
 		GameMainViewProxy.<PlayHideSequenceAsync>d__25 <PlayHideSequenceAsync>d__;
@@ -166,7 +167,7 @@ public abstract class GameMainViewProxy
 		return <PlayHideSequenceAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DDD2 RID: 56786 RVA: 0x0033DCE8 File Offset: 0x0033BEE8
+	// Token: 0x0600B1EF RID: 45551 RVA: 0x00349724 File Offset: 0x00347924
 	private UniTask StartAsyncInner()
 	{
 		GameMainViewProxy.<StartAsyncInner>d__26 <StartAsyncInner>d__;
@@ -177,7 +178,7 @@ public abstract class GameMainViewProxy
 		return <StartAsyncInner>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DDD3 RID: 56787 RVA: 0x0033DD2B File Offset: 0x0033BF2B
+	// Token: 0x0600B1F0 RID: 45552 RVA: 0x00349767 File Offset: 0x00347967
 	private void SetJoystickPanelHierarchyIndex()
 	{
 		if (this.JoystickPanel != null)
@@ -186,7 +187,7 @@ public abstract class GameMainViewProxy
 		}
 	}
 
-	// Token: 0x0600DDD4 RID: 56788 RVA: 0x0033DD48 File Offset: 0x0033BF48
+	// Token: 0x0600B1F1 RID: 45553 RVA: 0x00349784 File Offset: 0x00347984
 	private UniTask CreateJoystickPanel()
 	{
 		GameMainViewProxy.<CreateJoystickPanel>d__28 <CreateJoystickPanel>d__;
@@ -197,7 +198,7 @@ public abstract class GameMainViewProxy
 		return <CreateJoystickPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DDD5 RID: 56789 RVA: 0x0033DD8C File Offset: 0x0033BF8C
+	// Token: 0x0600B1F2 RID: 45554 RVA: 0x003497C8 File Offset: 0x003479C8
 	private UniTask CreateJoystickPanelInner()
 	{
 		GameMainViewProxy.<CreateJoystickPanelInner>d__29 <CreateJoystickPanelInner>d__;
@@ -208,7 +209,7 @@ public abstract class GameMainViewProxy
 		return <CreateJoystickPanelInner>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DDD6 RID: 56790 RVA: 0x0033DDD0 File Offset: 0x0033BFD0
+	// Token: 0x0600B1F3 RID: 45555 RVA: 0x0034980C File Offset: 0x00347A0C
 	private UniTask CreatePositionPanel()
 	{
 		GameMainViewProxy.<CreatePositionPanel>d__30 <CreatePositionPanel>d__;
@@ -219,14 +220,14 @@ public abstract class GameMainViewProxy
 		return <CreatePositionPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DDD7 RID: 56791 RVA: 0x0033DE13 File Offset: 0x0033C013
+	// Token: 0x0600B1F4 RID: 45556 RVA: 0x0034984F File Offset: 0x00347A4F
 	private void InputControllerChange(EInputControllerType last, EInputControllerType now)
 	{
 		this.CreateJoystickPanel().Forget();
 		this.OnInputControllerChange();
 	}
 
-	// Token: 0x0600DDD8 RID: 56792 RVA: 0x0033DE28 File Offset: 0x0033C028
+	// Token: 0x0600B1F5 RID: 45557 RVA: 0x00349864 File Offset: 0x00347A64
 	private void OnRouletteViewVisibleChanged(bool visible)
 	{
 		if (Info.Instance.IsInTouch() && this.JoystickPanel != null)
@@ -253,7 +254,7 @@ public abstract class GameMainViewProxy
 		this.OnRouletteViewVisibleChangedInner(visible);
 	}
 
-	// Token: 0x0600DDD9 RID: 56793 RVA: 0x0033DF04 File Offset: 0x0033C104
+	// Token: 0x0600B1F6 RID: 45558 RVA: 0x00349940 File Offset: 0x00347B40
 	private void ResetAllChildViewPanels()
 	{
 		foreach (BattleChildViewPanel battleChildViewPanel in this.ChildPanelMap.Values)
@@ -267,7 +268,7 @@ public abstract class GameMainViewProxy
 		this.TickPanelList.Clear();
 	}
 
-	// Token: 0x0600DDDA RID: 56794 RVA: 0x0033DF74 File Offset: 0x0033C174
+	// Token: 0x0600B1F7 RID: 45559 RVA: 0x003499B0 File Offset: 0x00347BB0
 	private void ApplyTouchUiEditData()
 	{
 		if (this.TouchUiEditGroup == null)
@@ -284,7 +285,7 @@ public abstract class GameMainViewProxy
 		}
 	}
 
-	// Token: 0x0600DDDB RID: 56795 RVA: 0x0033DFFC File Offset: 0x0033C1FC
+	// Token: 0x0600B1F8 RID: 45560 RVA: 0x00349A38 File Offset: 0x00347C38
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -306,83 +307,83 @@ public abstract class GameMainViewProxy
 		return <CreateChildPanel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DDDC RID: 56796 RVA: 0x0033E072 File Offset: 0x0033C272
+	// Token: 0x0600B1F9 RID: 45561 RVA: 0x00349AAE File Offset: 0x00347CAE
 	protected virtual UniTask OnBeforeStartAsync()
 	{
 		return UniTask.CompletedTask;
 	}
 
-	// Token: 0x0600DDDD RID: 56797 RVA: 0x0033E079 File Offset: 0x0033C279
+	// Token: 0x0600B1FA RID: 45562 RVA: 0x00349AB5 File Offset: 0x00347CB5
 	protected virtual void OnStart()
 	{
 	}
 
-	// Token: 0x0600DDDE RID: 56798 RVA: 0x0033E07B File Offset: 0x0033C27B
+	// Token: 0x0600B1FB RID: 45563 RVA: 0x00349AB7 File Offset: 0x00347CB7
 	protected virtual void OnBeforeShow(bool isFirstShow)
 	{
 	}
 
-	// Token: 0x0600DDDF RID: 56799 RVA: 0x0033E07D File Offset: 0x0033C27D
+	// Token: 0x0600B1FC RID: 45564 RVA: 0x00349AB9 File Offset: 0x00347CB9
 	protected virtual void OnAfterShow()
 	{
 	}
 
-	// Token: 0x0600DDE0 RID: 56800 RVA: 0x0033E07F File Offset: 0x0033C27F
+	// Token: 0x0600B1FD RID: 45565 RVA: 0x00349ABB File Offset: 0x00347CBB
 	protected virtual void OnBeforeHide()
 	{
 	}
 
-	// Token: 0x0600DDE1 RID: 56801 RVA: 0x0033E081 File Offset: 0x0033C281
+	// Token: 0x0600B1FE RID: 45566 RVA: 0x00349ABD File Offset: 0x00347CBD
 	protected virtual void OnAfterHide()
 	{
 	}
 
-	// Token: 0x0600DDE2 RID: 56802 RVA: 0x0033E083 File Offset: 0x0033C283
+	// Token: 0x0600B1FF RID: 45567 RVA: 0x00349ABF File Offset: 0x00347CBF
 	protected virtual void OnAddEventListenerByStart()
 	{
 	}
 
-	// Token: 0x0600DDE3 RID: 56803 RVA: 0x0033E085 File Offset: 0x0033C285
+	// Token: 0x0600B200 RID: 45568 RVA: 0x00349AC1 File Offset: 0x00347CC1
 	protected virtual void OnRemoveEventListenerForStart()
 	{
 	}
 
-	// Token: 0x0600DDE4 RID: 56804 RVA: 0x0033E087 File Offset: 0x0033C287
+	// Token: 0x0600B201 RID: 45569 RVA: 0x00349AC3 File Offset: 0x00347CC3
 	protected virtual void OnAddEventListener()
 	{
 	}
 
-	// Token: 0x0600DDE5 RID: 56805 RVA: 0x0033E089 File Offset: 0x0033C289
+	// Token: 0x0600B202 RID: 45570 RVA: 0x00349AC5 File Offset: 0x00347CC5
 	protected virtual void OnRemoveEventListener()
 	{
 	}
 
-	// Token: 0x0600DDE6 RID: 56806 RVA: 0x0033E08B File Offset: 0x0033C28B
+	// Token: 0x0600B203 RID: 45571 RVA: 0x00349AC7 File Offset: 0x00347CC7
 	protected virtual void OnBeforeDestroy()
 	{
 	}
 
-	// Token: 0x0600DDE7 RID: 56807 RVA: 0x0033E08D File Offset: 0x0033C28D
+	// Token: 0x0600B204 RID: 45572 RVA: 0x00349AC9 File Offset: 0x00347CC9
 	protected virtual void OnTick(float delta)
 	{
 	}
 
-	// Token: 0x0600DDE8 RID: 56808 RVA: 0x0033E08F File Offset: 0x0033C28F
+	// Token: 0x0600B205 RID: 45573 RVA: 0x00349ACB File Offset: 0x00347CCB
 	protected virtual void OnAfterTick(float delta)
 	{
 	}
 
-	// Token: 0x0600DDE9 RID: 56809 RVA: 0x0033E091 File Offset: 0x0033C291
+	// Token: 0x0600B206 RID: 45574 RVA: 0x00349ACD File Offset: 0x00347CCD
 	protected virtual void OnInputControllerChange()
 	{
 	}
 
-	// Token: 0x0600DDEA RID: 56810 RVA: 0x0033E093 File Offset: 0x0033C293
+	// Token: 0x0600B207 RID: 45575 RVA: 0x00349ACF File Offset: 0x00347CCF
 	protected virtual void OnRouletteViewVisibleChangedInner(bool visible)
 	{
 	}
 
-	// Token: 0x0600DDEB RID: 56811 RVA: 0x0033E095 File Offset: 0x0033C295
+	// Token: 0x0600B208 RID: 45576 RVA: 0x00349AD1 File Offset: 0x00347CD1
 	protected virtual void HideViewOperation()
 	{
 		if (UiManager.Instance.IsViewOpen(EUiViewName.PhantomExploreView))
@@ -391,13 +392,13 @@ public abstract class GameMainViewProxy
 		}
 	}
 
-	// Token: 0x0600DDEC RID: 56812 RVA: 0x0033E0B8 File Offset: 0x0033C2B8
+	// Token: 0x0600B209 RID: 45577 RVA: 0x00349AF4 File Offset: 0x00347CF4
 	protected virtual bool ShouldCreateJoystickPanel()
 	{
 		return true;
 	}
 
-	// Token: 0x0600DDED RID: 56813 RVA: 0x0033E0BC File Offset: 0x0033C2BC
+	// Token: 0x0600B20A RID: 45578 RVA: 0x00349AF8 File Offset: 0x00347CF8
 	protected virtual UniTask OnPlayingHideSequenceAsync()
 	{
 		GameMainViewProxy.<OnPlayingHideSequenceAsync>d__53 <OnPlayingHideSequenceAsync>d__;
@@ -407,23 +408,23 @@ public abstract class GameMainViewProxy
 		return <OnPlayingHideSequenceAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DDEE RID: 56814 RVA: 0x0033E0F7 File Offset: 0x0033C2F7
+	// Token: 0x0600B20B RID: 45579 RVA: 0x00349B33 File Offset: 0x00347D33
 	public virtual bool NeedUiCameraBehavior()
 	{
 		return false;
 	}
 
-	// Token: 0x0600DDEF RID: 56815 RVA: 0x0033E0FA File Offset: 0x0033C2FA
-	public virtual void PushCameraHandle(EUiViewName viewName, int viewId, bool isBlend)
+	// Token: 0x0600B20C RID: 45580 RVA: 0x00349B36 File Offset: 0x00347D36
+	public virtual void PushCameraHandleByOpenView(EUiViewName viewName, int viewId, EUiCameraHandleOperationType operationType)
 	{
 	}
 
-	// Token: 0x0600DDF0 RID: 56816 RVA: 0x0033E0FC File Offset: 0x0033C2FC
-	public virtual void PopCameraHandle(EUiViewName viewName, UiViewInfo stackTopInfo, int closeViewId, bool popOrDelete)
+	// Token: 0x0600B20D RID: 45581 RVA: 0x00349B38 File Offset: 0x00347D38
+	public virtual void PopCameraHandleByCloseView(EUiViewName viewName, EUiViewName? nextViewName, int closeViewId, EUiCameraHandleOperationType operationType)
 	{
 	}
 
-	// Token: 0x0600DDF1 RID: 56817 RVA: 0x0033E100 File Offset: 0x0033C300
+	// Token: 0x0600B20E RID: 45582 RVA: 0x00349B3C File Offset: 0x00347D3C
 	private void TryAddBattleUiCommonChildVisibleReason()
 	{
 		if (this.BattleUiCommonChildVisibleReason != null)
@@ -432,7 +433,7 @@ public abstract class GameMainViewProxy
 		}
 	}
 
-	// Token: 0x0600DDF2 RID: 56818 RVA: 0x0033E13C File Offset: 0x0033C33C
+	// Token: 0x0600B20F RID: 45583 RVA: 0x00349B78 File Offset: 0x00347D78
 	private void TryRemoveBattleUiCommonChildVisibleReason()
 	{
 		if (this.BattleUiCommonChildVisibleReason != null)
@@ -441,8 +442,8 @@ public abstract class GameMainViewProxy
 		}
 	}
 
-	// Token: 0x17001200 RID: 4608
-	// (get) Token: 0x0600DDF3 RID: 56819 RVA: 0x0033E176 File Offset: 0x0033C376
+	// Token: 0x1700122A RID: 4650
+	// (get) Token: 0x0600B210 RID: 45584 RVA: 0x00349BB2 File Offset: 0x00347DB2
 	protected virtual bool NeedForceShowCursor
 	{
 		get
@@ -451,8 +452,8 @@ public abstract class GameMainViewProxy
 		}
 	}
 
-	// Token: 0x17001201 RID: 4609
-	// (get) Token: 0x0600DDF4 RID: 56820 RVA: 0x0033E179 File Offset: 0x0033C379
+	// Token: 0x1700122B RID: 4651
+	// (get) Token: 0x0600B211 RID: 45585 RVA: 0x00349BB5 File Offset: 0x00347DB5
 	private string ForceShowCursorTag
 	{
 		get
@@ -461,7 +462,7 @@ public abstract class GameMainViewProxy
 		}
 	}
 
-	// Token: 0x0600DDF5 RID: 56821 RVA: 0x0033E190 File Offset: 0x0033C390
+	// Token: 0x0600B212 RID: 45586 RVA: 0x00349BCC File Offset: 0x00347DCC
 	private void RegisterForceShowCursorIfNeeded()
 	{
 		if (!this.NeedForceShowCursor || this.ForceShowCursorRegistered)
@@ -472,7 +473,7 @@ public abstract class GameMainViewProxy
 		InputExtraShowCursorCenter.Instance.RegisterExtraRefreshData(this.ForceShowCursorTag, new GameMainViewProxy.ForceShowCursor());
 	}
 
-	// Token: 0x0600DDF6 RID: 56822 RVA: 0x0033E1BF File Offset: 0x0033C3BF
+	// Token: 0x0600B213 RID: 45587 RVA: 0x00349BFB File Offset: 0x00347DFB
 	private void UnregisterForceShowCursorIfNeeded()
 	{
 		if (!this.ForceShowCursorRegistered)
@@ -484,7 +485,7 @@ public abstract class GameMainViewProxy
 		EventSystem.Instance.Emit(EEventName.RefreshCursor);
 	}
 
-	// Token: 0x0600DDF7 RID: 56823 RVA: 0x0033E1F4 File Offset: 0x0033C3F4
+	// Token: 0x0600B214 RID: 45588 RVA: 0x00349C30 File Offset: 0x00347E30
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -523,44 +524,44 @@ public abstract class GameMainViewProxy
 		}
 	}
 
-	// Token: 0x040065C2 RID: 26050
+	// Token: 0x040066A1 RID: 26273
 	[Nullable(2)]
 	protected CommonGameMainView View;
 
-	// Token: 0x040065C3 RID: 26051
+	// Token: 0x040066A2 RID: 26274
 	protected Dictionary<Type, BattleChildViewPanel> ChildPanelMap = new Dictionary<Type, BattleChildViewPanel>();
 
-	// Token: 0x040065C4 RID: 26052
+	// Token: 0x040066A3 RID: 26275
 	protected List<BattleChildViewPanel> TickPanelList = new List<BattleChildViewPanel>();
 
-	// Token: 0x040065C5 RID: 26053
+	// Token: 0x040066A4 RID: 26276
 	[Nullable(2)]
 	protected JoystickPanel JoystickPanel;
 
-	// Token: 0x040065C6 RID: 26054
+	// Token: 0x040066A5 RID: 26277
 	protected int JoystickPanelOriginalIndex;
 
-	// Token: 0x040065C7 RID: 26055
+	// Token: 0x040066A6 RID: 26278
 	[Nullable(2)]
 	protected PositionPanel PositionPanel;
 
-	// Token: 0x040065C8 RID: 26056
+	// Token: 0x040066A7 RID: 26279
 	protected bool IsFirstShow;
 
-	// Token: 0x040065C9 RID: 26057
+	// Token: 0x040066A8 RID: 26280
 	protected readonly Dictionary<string, UiPanelBase> PanelResIdMap = new Dictionary<string, UiPanelBase>();
 
-	// Token: 0x040065CA RID: 26058
+	// Token: 0x040066A9 RID: 26281
 	protected ECommonTouchUiEditGroup? TouchUiEditGroup;
 
-	// Token: 0x040065CB RID: 26059
+	// Token: 0x040066AA RID: 26282
 	private bool ForceShowCursorRegistered;
 
-	// Token: 0x02008291 RID: 33425
+	// Token: 0x0200741B RID: 29723
 	[NullableContext(0)]
 	private sealed class ForceShowCursor : IExtraShowCursor
 	{
-		// Token: 0x0604A327 RID: 303911 RVA: 0x0134B662 File Offset: 0x01349862
+		// Token: 0x06040730 RID: 263984 RVA: 0x012EEAFA File Offset: 0x012ECCFA
 		public bool IsShowCursor()
 		{
 			return true;

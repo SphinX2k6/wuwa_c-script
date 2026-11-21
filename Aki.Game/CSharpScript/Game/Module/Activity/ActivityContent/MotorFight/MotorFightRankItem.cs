@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 {
-	// Token: 0x02006417 RID: 25623
+	// Token: 0x02005395 RID: 21397
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 	})]
 	public class MotorFightRankItem : GridProxyAbstract<MotorFightRankData>
 	{
-		// Token: 0x0604070E RID: 263950 RVA: 0x00F97264 File Offset: 0x00F95464
+		// Token: 0x060353CF RID: 218063 RVA: 0x00EDE204 File Offset: 0x00EDC404
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 11;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0604070F RID: 263951 RVA: 0x00F97438 File Offset: 0x00F95638
+		// Token: 0x060353D0 RID: 218064 RVA: 0x00EDE3D8 File Offset: 0x00EDC5D8
 		public override void Refresh(MotorFightRankData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -146,57 +146,57 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			text5.SetUIActive(data.ItemList.Count == 0);
 		}
 
-		// Token: 0x06040710 RID: 263952 RVA: 0x00F976B7 File Offset: 0x00F958B7
+		// Token: 0x060353D1 RID: 218065 RVA: 0x00EDE657 File Offset: 0x00EDC857
 		private MotorFightItemSmallGrid CreateItem()
 		{
 			return new MotorFightItemSmallGrid();
 		}
 
-		// Token: 0x06040711 RID: 263953 RVA: 0x00F976BE File Offset: 0x00F958BE
+		// Token: 0x060353D2 RID: 218066 RVA: 0x00EDE65E File Offset: 0x00EDC85E
 		private void OnGotoBtnClick()
 		{
 			UiManager.Instance.OpenView(EUiViewName.MotorFightRankDetailView, this.Data, null);
 		}
 
-		// Token: 0x04021813 RID: 137235
+		// Token: 0x0401C142 RID: 115010
 		[Nullable(2)]
 		private MotorFightRankData Data;
 
-		// Token: 0x0200C63B RID: 50747
+		// Token: 0x0200B022 RID: 45090
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x0403BD8F RID: 245135
+			// Token: 0x040366EC RID: 222956
 			public const int TextureBgLight = 0;
 
-			// Token: 0x0403BD90 RID: 245136
+			// Token: 0x040366ED RID: 222957
 			public const int TextureBg = 1;
 
-			// Token: 0x0403BD91 RID: 245137
+			// Token: 0x040366EE RID: 222958
 			public const int ArtTextRankNum = 2;
 
-			// Token: 0x0403BD92 RID: 245138
+			// Token: 0x040366EF RID: 222959
 			public const int TextureRole = 3;
 
-			// Token: 0x0403BD93 RID: 245139
+			// Token: 0x040366F0 RID: 222960
 			public const int TextPlayerName = 4;
 
-			// Token: 0x0403BD94 RID: 245140
+			// Token: 0x040366F1 RID: 222961
 			public const int TextScore = 5;
 
-			// Token: 0x0403BD95 RID: 245141
+			// Token: 0x040366F2 RID: 222962
 			public const int ScrollLayoutItem = 6;
 
-			// Token: 0x0403BD96 RID: 245142
+			// Token: 0x040366F3 RID: 222963
 			public const int ItemBase = 7;
 
-			// Token: 0x0403BD97 RID: 245143
+			// Token: 0x040366F4 RID: 222964
 			public const int BtnGoto = 8;
 
-			// Token: 0x0403BD98 RID: 245144
+			// Token: 0x040366F5 RID: 222965
 			public const int TextEmpty = 9;
 
-			// Token: 0x0403BD99 RID: 245145
+			// Token: 0x040366F6 RID: 222966
 			public const int TextureRoleShadow = 10;
 		}
 	}

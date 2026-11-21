@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001170 RID: 4464
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020012A8 RID: 4776
 	public class ITakePhoto2PosCondition
 	{
-		// Token: 0x0600656A RID: 25962 RVA: 0x000F36B0 File Offset: 0x000F18B0
+		// Token: 0x06006B99 RID: 27545 RVA: 0x00100DC0 File Offset: 0x000FEFC0
 		private ITakePhoto2PosCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600656B RID: 25963 RVA: 0x000F36E8 File Offset: 0x000F18E8
+		// Token: 0x06006B9A RID: 27546 RVA: 0x00100DF8 File Offset: 0x000FEFF8
 		public static ITakePhoto2PosCondition Create([Nullable(2)] ITakePhoto2PosCondition instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600656C RID: 25964 RVA: 0x000F36FB File Offset: 0x000F18FB
+		// Token: 0x06006B9B RID: 27547 RVA: 0x00100E0B File Offset: 0x000FF00B
 		public static ITakePhoto2PosCondition CreateFromSetValue([Nullable(2)] ITakePhoto2PosCondition_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600656D RID: 25965 RVA: 0x000F370E File Offset: 0x000F190E
+		// Token: 0x06006B9C RID: 27548 RVA: 0x00100E1E File Offset: 0x000FF01E
 		public ITakePhoto2PosCondition_SetValue ToSetValue()
 		{
 			return new ITakePhoto2PosCondition_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17002112 RID: 8466
-		// (get) Token: 0x0600656E RID: 25966 RVA: 0x000F3721 File Offset: 0x000F1921
-		// (set) Token: 0x0600656F RID: 25967 RVA: 0x000F374C File Offset: 0x000F194C
+		// Token: 0x170022D0 RID: 8912
+		// (get) Token: 0x06006B9D RID: 27549 RVA: 0x00100E31 File Offset: 0x000FF031
+		// (set) Token: 0x06006B9E RID: 27550 RVA: 0x00100E5C File Offset: 0x000FF05C
 		public virtual int RangeEntity
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003CE1 RID: 15585
+		// Token: 0x04004046 RID: 16454
 		[Nullable(2)]
 		protected ITakePhoto2PosCondition FbInstance;
 
-		// Token: 0x04003CE2 RID: 15586
+		// Token: 0x04004047 RID: 16455
 		[Nullable(2)]
 		protected ITakePhoto2PosCondition_SetValue PocoInterface;
 	}

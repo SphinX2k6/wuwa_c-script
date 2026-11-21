@@ -3,19 +3,19 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000EA9 RID: 3753
+	// Token: 0x02000FBF RID: 4031
 	[EnumExtensions]
 	public enum ETrackType
 	{
-		// Token: 0x04003209 RID: 12809
+		// Token: 0x04003516 RID: 13590
 		Locations,
-		// Token: 0x0400320A RID: 12810
+		// Token: 0x04003517 RID: 13591
 		Entities,
-		// Token: 0x0400320B RID: 12811
+		// Token: 0x04003518 RID: 13592
 		CaptureVisions,
-		// Token: 0x0400320C RID: 12812
+		// Token: 0x04003519 RID: 13593
 		EntityGroup,
-		// Token: 0x0400320D RID: 12813
+		// Token: 0x0400351A RID: 13594
 		LevelPlay
 	}
 }

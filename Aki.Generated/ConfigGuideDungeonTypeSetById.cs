@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020003BC RID: 956
+	// Token: 0x020003D2 RID: 978
 	public class ConfigGuideDungeonTypeSetById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600166F RID: 5743 RVA: 0x000D8571 File Offset: 0x000D6771
+		// Token: 0x060016F3 RID: 5875 RVA: 0x000DECC5 File Offset: 0x000DCEC5
 		static ConfigGuideDungeonTypeSetById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigGuideDungeonTypeSetById.CreateStaticDefaultValue), new Action(ConfigGuideDungeonTypeSetById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001670 RID: 5744 RVA: 0x000D8590 File Offset: 0x000D6790
+		// Token: 0x060016F4 RID: 5876 RVA: 0x000DECE4 File Offset: 0x000DCEE4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigGuideDungeonTypeSetById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001671 RID: 5745 RVA: 0x000D860F File Offset: 0x000D680F
+		// Token: 0x060016F5 RID: 5877 RVA: 0x000DED63 File Offset: 0x000DCF63
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigGuideDungeonTypeSetById.LogPair = null;
 			ConfigGuideDungeonTypeSetById.HandleId = 0;
 		}
 
-		// Token: 0x06001672 RID: 5746 RVA: 0x000D861D File Offset: 0x000D681D
+		// Token: 0x060016F6 RID: 5878 RVA: 0x000DED71 File Offset: 0x000DCF71
 		public static void Init()
 		{
 			ConfigGuideDungeonTypeSetById.HandleId = ConfigCommon.InitDataStatement(ConfigGuideDungeonTypeSetById.HandleId, "db_guide_new.db", "select BinData from `GuideDungeonTypeSet` where Id=?");
 		}
 
-		// Token: 0x06001673 RID: 5747 RVA: 0x000D8638 File Offset: 0x000D6838
+		// Token: 0x060016F7 RID: 5879 RVA: 0x000DED8C File Offset: 0x000DCF8C
 		public static GuideDungeonTypeSet? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigGuideDungeonTypeSetById.HandleId, ConfigGuideDungeonTypeSetById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new GuideDungeonTypeSet?(rootAsGuideDungeonTypeSet);
 		}
 
-		// Token: 0x04001A08 RID: 6664
+		// Token: 0x04001AA2 RID: 6818
 		private const string DB = "db_guide_new.db";
 
-		// Token: 0x04001A09 RID: 6665
+		// Token: 0x04001AA3 RID: 6819
 		private const string FILE = "y.引导(新).xlsx";
 
-		// Token: 0x04001A0A RID: 6666
+		// Token: 0x04001AA4 RID: 6820
 		private const string TABLE = "GuideDungeonTypeSet";
 
-		// Token: 0x04001A0B RID: 6667
+		// Token: 0x04001AA5 RID: 6821
 		private const string COMMAND = "select BinData from `GuideDungeonTypeSet` where Id=?";
 
-		// Token: 0x04001A0C RID: 6668
+		// Token: 0x04001AA6 RID: 6822
 		private const string KEY_PREFIX = "GuideDungeonTypeSetById";
 
-		// Token: 0x04001A0D RID: 6669
+		// Token: 0x04001AA7 RID: 6823
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001A0E RID: 6670
+		// Token: 0x04001AA8 RID: 6824
 		private static int HandleId;
 	}
 }

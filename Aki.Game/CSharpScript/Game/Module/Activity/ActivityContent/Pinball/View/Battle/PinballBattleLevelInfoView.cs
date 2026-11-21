@@ -9,17 +9,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 {
-	// Token: 0x02006371 RID: 25457
+	// Token: 0x020052EF RID: 21231
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballBattleLevelInfoView : UiPanelBase
 	{
-		// Token: 0x17009344 RID: 37700
-		// (get) Token: 0x0604008F RID: 262287 RVA: 0x00F7DE71 File Offset: 0x00F7C071
-		// (set) Token: 0x06040090 RID: 262288 RVA: 0x00F7DE79 File Offset: 0x00F7C079
+		// Token: 0x170066A6 RID: 26278
+		// (get) Token: 0x06034D50 RID: 216400 RVA: 0x00EC4DD1 File Offset: 0x00EC2FD1
+		// (set) Token: 0x06034D51 RID: 216401 RVA: 0x00EC4DD9 File Offset: 0x00EC2FD9
 		public new IPinballBattleLevelInfoViewParam OpenParam { get; set; }
 
-		// Token: 0x06040091 RID: 262289 RVA: 0x00F7DE84 File Offset: 0x00F7C084
+		// Token: 0x06034D52 RID: 216402 RVA: 0x00EC4DE4 File Offset: 0x00EC2FE4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -41,19 +41,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06040092 RID: 262290 RVA: 0x00F7DF71 File Offset: 0x00F7C171
+		// Token: 0x06034D53 RID: 216403 RVA: 0x00EC4ED1 File Offset: 0x00EC30D1
 		protected override void OnStart()
 		{
 			this.StarLayout = new GenericLayout<PinballBattleLevelInfoTargetItem, PinballBattleLevelInfoTargetData>(base.GetVerticalLayout(4), new Func<PinballBattleLevelInfoTargetItem>(this.InitStarItem), base.GetItem(5).GetOwner() as AUIBaseActor, false, true);
 		}
 
-		// Token: 0x06040093 RID: 262291 RVA: 0x00F7DFA4 File Offset: 0x00F7C1A4
+		// Token: 0x06034D54 RID: 216404 RVA: 0x00EC4F04 File Offset: 0x00EC3104
 		private PinballBattleLevelInfoTargetItem InitStarItem()
 		{
 			return new PinballBattleLevelInfoTargetItem();
 		}
 
-		// Token: 0x06040094 RID: 262292 RVA: 0x00F7DFAC File Offset: 0x00F7C1AC
+		// Token: 0x06034D55 RID: 216405 RVA: 0x00EC4F0C File Offset: 0x00EC310C
 		protected override void OnBeforeShow()
 		{
 			PinballLevelConfig? pinballLevelConfigById = PinballConfig.Instance.GetPinballLevelConfigById(this.OpenParam.LevelId);
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 			}
 		}
 
-		// Token: 0x040215FB RID: 136699
+		// Token: 0x0401BF2A RID: 114474
 		[Nullable(new byte[]
 		{
 			2,
@@ -141,21 +141,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 		})]
 		private GenericLayout<PinballBattleLevelInfoTargetItem, PinballBattleLevelInfoTargetData> StarLayout;
 
-		// Token: 0x0200C58C RID: 50572
+		// Token: 0x0200AF73 RID: 44915
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403BA13 RID: 244243
+			// Token: 0x04036375 RID: 222069
 			Scroll,
-			// Token: 0x0403BA14 RID: 244244
+			// Token: 0x04036376 RID: 222070
 			LevelDesc,
-			// Token: 0x0403BA15 RID: 244245
+			// Token: 0x04036377 RID: 222071
 			PnlLevelTarget,
-			// Token: 0x0403BA16 RID: 244246
+			// Token: 0x04036378 RID: 222072
 			TextTargetTitle,
-			// Token: 0x0403BA17 RID: 244247
+			// Token: 0x04036379 RID: 222073
 			LevelTargetLayout,
-			// Token: 0x0403BA18 RID: 244248
+			// Token: 0x0403637A RID: 222074
 			LevelTargetLayoutItem
 		}
 	}

@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DBE RID: 23998
+	// Token: 0x02004DA2 RID: 19874
 	public class ShipTowerBuffBattleView : BattleVisibleChildView
 	{
-		// Token: 0x0603CFB7 RID: 249783 RVA: 0x00EA96EC File Offset: 0x00EA78EC
+		// Token: 0x06031F2E RID: 204590 RVA: 0x00DFA5C8 File Offset: 0x00DF87C8
 		[NullableContext(2)]
 		public override void Initialize(object param = null)
 		{
@@ -21,14 +21,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AddEvents();
 		}
 
-		// Token: 0x0603CFB8 RID: 249784 RVA: 0x00EA9715 File Offset: 0x00EA7915
+		// Token: 0x06031F2F RID: 204591 RVA: 0x00DFA5F1 File Offset: 0x00DF87F1
 		public override void Reset()
 		{
 			base.Reset();
 			this.RemoveEvents();
 		}
 
-		// Token: 0x0603CFB9 RID: 249785 RVA: 0x00EA9724 File Offset: 0x00EA7924
+		// Token: 0x06031F30 RID: 204592 RVA: 0x00DFA600 File Offset: 0x00DF8800
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -49,19 +49,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603CFBA RID: 249786 RVA: 0x00EA97CA File Offset: 0x00EA79CA
+		// Token: 0x06031F31 RID: 204593 RVA: 0x00DFA6A6 File Offset: 0x00DF88A6
 		private void AddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.BattleUiToggleShipTowerBuffInfo, new Action(this.OnToggleShipTowerBuffInfoView));
 		}
 
-		// Token: 0x0603CFBB RID: 249787 RVA: 0x00EA97E8 File Offset: 0x00EA79E8
+		// Token: 0x06031F32 RID: 204594 RVA: 0x00DFA6C4 File Offset: 0x00DF88C4
 		private void RemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.BattleUiToggleShipTowerBuffInfo, new Action(this.OnToggleShipTowerBuffInfoView));
 		}
 
-		// Token: 0x0603CFBC RID: 249788 RVA: 0x00EA9806 File Offset: 0x00EA7A06
+		// Token: 0x06031F33 RID: 204595 RVA: 0x00DFA6E2 File Offset: 0x00DF88E2
 		public void StartShow()
 		{
 			this.Panel.UpdateInfo(ShipTowerModel.Instance.GetInTheBattleBuffInfo());
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			environmentKeyData.SetEnvironmentKeyVisible(EEnvironmentKey.ShipTowerBuff, true);
 		}
 
-		// Token: 0x0603CFBD RID: 249789 RVA: 0x00EA983C File Offset: 0x00EA7A3C
+		// Token: 0x06031F34 RID: 204596 RVA: 0x00DFA718 File Offset: 0x00DF8918
 		public void EndShow()
 		{
 			this.Panel.EndShow();
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			environmentKeyData.SetEnvironmentKeyVisible(EEnvironmentKey.ShipTowerBuff, false);
 		}
 
-		// Token: 0x0603CFBE RID: 249790 RVA: 0x00EA9889 File Offset: 0x00EA7A89
+		// Token: 0x06031F35 RID: 204597 RVA: 0x00DFA765 File Offset: 0x00DF8965
 		protected override void OnAfterDestroy()
 		{
 			BattleUiEnvironmentKeyData environmentKeyData = BattleUiModel.Instance.EnvironmentKeyData;
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			environmentKeyData.SetEnvironmentKeyVisible(EEnvironmentKey.ShipTowerBuff, false);
 		}
 
-		// Token: 0x0603CFBF RID: 249791 RVA: 0x00EA98A4 File Offset: 0x00EA7AA4
+		// Token: 0x06031F36 RID: 204598 RVA: 0x00DFA780 File Offset: 0x00DF8980
 		private void OnClickToggle(EToggleState toggleState)
 		{
 			if (toggleState == EToggleState.ETT_Checked)
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.Panel.EndShow();
 		}
 
-		// Token: 0x0603CFC0 RID: 249792 RVA: 0x00EA98E0 File Offset: 0x00EA7AE0
+		// Token: 0x06031F37 RID: 204599 RVA: 0x00DFA7BC File Offset: 0x00DF89BC
 		private void OnToggleShipTowerBuffInfoView()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -130,23 +130,23 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401FC67 RID: 130151
+		// Token: 0x0401A724 RID: 108324
 		[Nullable(2)]
 		private BattleUiHoverTipsD Panel;
 
-		// Token: 0x0200C0BB RID: 49339
+		// Token: 0x0200AAC4 RID: 43716
 		private enum EVisibleReason
 		{
-			// Token: 0x0403A27C RID: 238204
+			// Token: 0x04034C4E RID: 216142
 			Default = 1
 		}
 
-		// Token: 0x0200C0BC RID: 49340
+		// Token: 0x0200AAC5 RID: 43717
 		private enum EChildComponent
 		{
-			// Token: 0x0403A27E RID: 238206
+			// Token: 0x04034C50 RID: 216144
 			Toggle,
-			// Token: 0x0403A27F RID: 238207
+			// Token: 0x04034C51 RID: 216145
 			PanelNode
 		}
 	}

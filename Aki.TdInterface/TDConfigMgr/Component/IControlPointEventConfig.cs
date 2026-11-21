@@ -7,12 +7,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000285 RID: 645
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020002C8 RID: 712
 	public class IControlPointEventConfig
 	{
-		// Token: 0x06000C01 RID: 3073 RVA: 0x0002F4C4 File Offset: 0x0002D6C4
+		// Token: 0x06000D1B RID: 3355 RVA: 0x000321B4 File Offset: 0x000303B4
 		private IControlPointEventConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -27,7 +25,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000C02 RID: 3074 RVA: 0x0002F4FC File Offset: 0x0002D6FC
+		// Token: 0x06000D1C RID: 3356 RVA: 0x000321EC File Offset: 0x000303EC
 		public static IControlPointEventConfig Create([Nullable(2)] IControlPointEventConfig instance)
 		{
 			if (instance == null)
@@ -40,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000C03 RID: 3075 RVA: 0x0002F50F File Offset: 0x0002D70F
+		// Token: 0x06000D1D RID: 3357 RVA: 0x000321FF File Offset: 0x000303FF
 		public static IControlPointEventConfig CreateFromSetValue([Nullable(2)] IControlPointEventConfig_SetValue value)
 		{
 			if (value == null)
@@ -53,7 +51,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000C04 RID: 3076 RVA: 0x0002F524 File Offset: 0x0002D724
+		// Token: 0x06000D1E RID: 3358 RVA: 0x00032214 File Offset: 0x00030414
 		public IControlPointEventConfig_SetValue ToSetValue()
 		{
 			return new IControlPointEventConfig_SetValue
@@ -66,9 +64,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000396 RID: 918
-		// (get) Token: 0x06000C05 RID: 3077 RVA: 0x0002F572 File Offset: 0x0002D772
-		// (set) Token: 0x06000C06 RID: 3078 RVA: 0x0002F59D File Offset: 0x0002D79D
+		// Token: 0x170003DE RID: 990
+		// (get) Token: 0x06000D1F RID: 3359 RVA: 0x00032262 File Offset: 0x00030462
+		// (set) Token: 0x06000D20 RID: 3360 RVA: 0x0003228D File Offset: 0x0003048D
 		public virtual int Index
 		{
 			get
@@ -89,20 +87,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000397 RID: 919
-		// (get) Token: 0x06000C07 RID: 3079 RVA: 0x0002F5AC File Offset: 0x0002D7AC
-		// (set) Token: 0x06000C08 RID: 3080 RVA: 0x0002F63F File Offset: 0x0002D83F
+		// Token: 0x170003DF RID: 991
+		// (get) Token: 0x06000D21 RID: 3361 RVA: 0x0003229C File Offset: 0x0003049C
+		// (set) Token: 0x06000D22 RID: 3362 RVA: 0x0003232F File Offset: 0x0003052F
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> LeftInEventActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -133,7 +131,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -142,20 +140,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000398 RID: 920
-		// (get) Token: 0x06000C09 RID: 3081 RVA: 0x0002F654 File Offset: 0x0002D854
-		// (set) Token: 0x06000C0A RID: 3082 RVA: 0x0002F6E7 File Offset: 0x0002D8E7
+		// Token: 0x170003E0 RID: 992
+		// (get) Token: 0x06000D23 RID: 3363 RVA: 0x00032344 File Offset: 0x00030544
+		// (set) Token: 0x06000D24 RID: 3364 RVA: 0x000323D7 File Offset: 0x000305D7
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> LeftOutEventActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -186,7 +184,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -195,20 +193,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000399 RID: 921
-		// (get) Token: 0x06000C0B RID: 3083 RVA: 0x0002F6FC File Offset: 0x0002D8FC
-		// (set) Token: 0x06000C0C RID: 3084 RVA: 0x0002F78F File Offset: 0x0002D98F
+		// Token: 0x170003E1 RID: 993
+		// (get) Token: 0x06000D25 RID: 3365 RVA: 0x000323EC File Offset: 0x000305EC
+		// (set) Token: 0x06000D26 RID: 3366 RVA: 0x0003247F File Offset: 0x0003067F
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> RightInEventActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -239,7 +237,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -248,20 +246,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700039A RID: 922
-		// (get) Token: 0x06000C0D RID: 3085 RVA: 0x0002F7A4 File Offset: 0x0002D9A4
-		// (set) Token: 0x06000C0E RID: 3086 RVA: 0x0002F837 File Offset: 0x0002DA37
+		// Token: 0x170003E2 RID: 994
+		// (get) Token: 0x06000D27 RID: 3367 RVA: 0x00032494 File Offset: 0x00030694
+		// (set) Token: 0x06000D28 RID: 3368 RVA: 0x00032527 File Offset: 0x00030727
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> RightOutEventActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -292,7 +290,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -301,56 +299,56 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000B71 RID: 2929
+		// Token: 0x04000C52 RID: 3154
 		[Nullable(2)]
 		protected IControlPointEventConfig FbInstance;
 
-		// Token: 0x04000B72 RID: 2930
+		// Token: 0x04000C53 RID: 3155
 		[Nullable(2)]
 		protected IControlPointEventConfig_SetValue PocoInterface;
 
-		// Token: 0x04000B73 RID: 2931
+		// Token: 0x04000C54 RID: 3156
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _LeftInEventActionsCache;
 
-		// Token: 0x04000B74 RID: 2932
+		// Token: 0x04000C55 RID: 3157
 		private bool _LeftInEventActionsInited;
 
-		// Token: 0x04000B75 RID: 2933
+		// Token: 0x04000C56 RID: 3158
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _LeftOutEventActionsCache;
 
-		// Token: 0x04000B76 RID: 2934
+		// Token: 0x04000C57 RID: 3159
 		private bool _LeftOutEventActionsInited;
 
-		// Token: 0x04000B77 RID: 2935
+		// Token: 0x04000C58 RID: 3160
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _RightInEventActionsCache;
 
-		// Token: 0x04000B78 RID: 2936
+		// Token: 0x04000C59 RID: 3161
 		private bool _RightInEventActionsInited;
 
-		// Token: 0x04000B79 RID: 2937
+		// Token: 0x04000C5A RID: 3162
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _RightOutEventActionsCache;
 
-		// Token: 0x04000B7A RID: 2938
+		// Token: 0x04000C5B RID: 3163
 		private bool _RightOutEventActionsInited;
 	}
 }

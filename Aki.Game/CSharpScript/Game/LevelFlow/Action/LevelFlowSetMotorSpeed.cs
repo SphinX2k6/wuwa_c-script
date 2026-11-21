@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006F9E RID: 28574
+	// Token: 0x0200611F RID: 24863
 	public class LevelFlowSetMotorSpeed : LevelFlowActionBase
 	{
-		// Token: 0x06045773 RID: 284531 RVA: 0x0113AE39 File Offset: 0x01139039
+		// Token: 0x0603B921 RID: 244001 RVA: 0x010E4C3D File Offset: 0x010E2E3D
 		[NullableContext(1)]
 		public LevelFlowSetMotorSpeed Init(SetMotorSpeed params_)
 		{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			return this;
 		}
 
-		// Token: 0x06045774 RID: 284532 RVA: 0x0113AE44 File Offset: 0x01139044
+		// Token: 0x0603B922 RID: 244002 RVA: 0x010E4C48 File Offset: 0x010E2E48
 		protected override void OnExecute()
 		{
 			if (this.Params == null)
@@ -101,11 +101,11 @@ namespace CSharpScript.Game.LevelFlow.Action
 			base.FinishExecute(false);
 		}
 
-		// Token: 0x040243EE RID: 148462
+		// Token: 0x0401F6A3 RID: 128675
 		[Nullable(2)]
 		private SetMotorSpeed Params;
 
-		// Token: 0x040243EF RID: 148463
+		// Token: 0x0401F6A4 RID: 128676
 		private const float MTOCM = 100f;
 	}
 }

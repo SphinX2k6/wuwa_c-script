@@ -3,28 +3,28 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Menu
 {
-	// Token: 0x020053F2 RID: 21490
+	// Token: 0x020043D5 RID: 17365
 	[NullableContext(1)]
 	public interface IRepeatKeyInfo
 	{
-		// Token: 0x170083FC RID: 33788
-		// (get) Token: 0x06036EF4 RID: 225012
-		// (set) Token: 0x06036EF5 RID: 225013
+		// Token: 0x170057C8 RID: 22472
+		// (get) Token: 0x0602BE3C RID: 179772
+		// (set) Token: 0x0602BE3D RID: 179773
 		EInputControllerType InputControllerType { get; set; }
 
-		// Token: 0x170083FD RID: 33789
-		// (get) Token: 0x06036EF6 RID: 225014
-		// (set) Token: 0x06036EF7 RID: 225015
+		// Token: 0x170057C9 RID: 22473
+		// (get) Token: 0x0602BE3E RID: 179774
+		// (set) Token: 0x0602BE3F RID: 179775
 		KeySettingRowData CurrentKeySettingRowData { get; set; }
 
-		// Token: 0x170083FE RID: 33790
-		// (get) Token: 0x06036EF8 RID: 225016
-		// (set) Token: 0x06036EF9 RID: 225017
+		// Token: 0x170057CA RID: 22474
+		// (get) Token: 0x0602BE40 RID: 179776
+		// (set) Token: 0x0602BE41 RID: 179777
 		KeySettingRowData RepeatKeySettingRowData { get; set; }
 
-		// Token: 0x170083FF RID: 33791
-		// (get) Token: 0x06036EFA RID: 225018
-		// (set) Token: 0x06036EFB RID: 225019
+		// Token: 0x170057CB RID: 22475
+		// (get) Token: 0x0602BE42 RID: 179778
+		// (set) Token: 0x0602BE43 RID: 179779
 		[Nullable(2)]
 		Action<bool> OnCloseCallback { [NullableContext(2)] get; [NullableContext(2)] set; }
 	}

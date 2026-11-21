@@ -4,20 +4,20 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine.Extension;
 
-// Token: 0x0200005B RID: 91
+// Token: 0x0200005D RID: 93
 [NullableContext(2)]
 [Nullable(0)]
-public class Queue<T> : IEnumerable<T>, IEnumerable, IClearable
+public class Queue<T> : IEnumerable<!0>, IEnumerable, IClearable
 {
-	// Token: 0x060002A3 RID: 675 RVA: 0x0000E3FE File Offset: 0x0000C5FE
+	// Token: 0x060002DE RID: 734 RVA: 0x0000F1E6 File Offset: 0x0000D3E6
 	public Queue(int capacity = 4)
 	{
 		this.DefaultCapacity = capacity;
 		this.DataArray = new T[capacity];
 	}
 
-	// Token: 0x1700005E RID: 94
-	// (get) Token: 0x060002A4 RID: 676 RVA: 0x0000E419 File Offset: 0x0000C619
+	// Token: 0x17000065 RID: 101
+	// (get) Token: 0x060002DF RID: 735 RVA: 0x0000F201 File Offset: 0x0000D401
 	public int Size
 	{
 		get
@@ -26,7 +26,7 @@ public class Queue<T> : IEnumerable<T>, IEnumerable, IClearable
 		}
 	}
 
-	// Token: 0x060002A5 RID: 677 RVA: 0x0000E424 File Offset: 0x0000C624
+	// Token: 0x060002E0 RID: 736 RVA: 0x0000F20C File Offset: 0x0000D40C
 	[NullableContext(1)]
 	public void Push(T element)
 	{
@@ -45,7 +45,7 @@ public class Queue<T> : IEnumerable<T>, IEnumerable, IClearable
 		this.Version++;
 	}
 
-	// Token: 0x060002A6 RID: 678 RVA: 0x0000E4B0 File Offset: 0x0000C6B0
+	// Token: 0x060002E1 RID: 737 RVA: 0x0000F298 File Offset: 0x0000D498
 	public T Pop()
 	{
 		if (this.SizeInternal == 0)
@@ -74,7 +74,7 @@ public class Queue<T> : IEnumerable<T>, IEnumerable, IClearable
 		return result;
 	}
 
-	// Token: 0x060002A7 RID: 679 RVA: 0x0000E588 File Offset: 0x0000C788
+	// Token: 0x060002E2 RID: 738 RVA: 0x0000F370 File Offset: 0x0000D570
 	public bool TryPop(out T Result)
 	{
 		if (this.SizeInternal == 0)
@@ -103,8 +103,8 @@ public class Queue<T> : IEnumerable<T>, IEnumerable, IClearable
 		return true;
 	}
 
-	// Token: 0x1700005F RID: 95
-	// (get) Token: 0x060002A8 RID: 680 RVA: 0x0000E648 File Offset: 0x0000C848
+	// Token: 0x17000066 RID: 102
+	// (get) Token: 0x060002E3 RID: 739 RVA: 0x0000F430 File Offset: 0x0000D630
 	public T Front
 	{
 		get
@@ -118,7 +118,7 @@ public class Queue<T> : IEnumerable<T>, IEnumerable, IClearable
 		}
 	}
 
-	// Token: 0x060002A9 RID: 681 RVA: 0x0000E693 File Offset: 0x0000C893
+	// Token: 0x060002E4 RID: 740 RVA: 0x0000F47B File Offset: 0x0000D67B
 	public bool TryGetFront(out T Result)
 	{
 		if (this.SizeInternal == 0)
@@ -130,7 +130,7 @@ public class Queue<T> : IEnumerable<T>, IEnumerable, IClearable
 		return true;
 	}
 
-	// Token: 0x060002AA RID: 682 RVA: 0x0000E6C0 File Offset: 0x0000C8C0
+	// Token: 0x060002E5 RID: 741 RVA: 0x0000F4A8 File Offset: 0x0000D6A8
 	public unsafe T Get(int index)
 	{
 		if (this.SizeInternal == 0)
@@ -153,7 +153,7 @@ public class Queue<T> : IEnumerable<T>, IEnumerable, IClearable
 		return this.DataArray[(this.Head + index) % this.DataArray.Length];
 	}
 
-	// Token: 0x060002AB RID: 683 RVA: 0x0000E790 File Offset: 0x0000C990
+	// Token: 0x060002E6 RID: 742 RVA: 0x0000F578 File Offset: 0x0000D778
 	private void SetCapacity(int capacity)
 	{
 		if (this.SizeInternal == 0)
@@ -242,8 +242,8 @@ public class Queue<T> : IEnumerable<T>, IEnumerable, IClearable
 		}
 	}
 
-	// Token: 0x17000060 RID: 96
-	// (get) Token: 0x060002AC RID: 684 RVA: 0x0000EA27 File Offset: 0x0000CC27
+	// Token: 0x17000067 RID: 103
+	// (get) Token: 0x060002E7 RID: 743 RVA: 0x0000F80F File Offset: 0x0000DA0F
 	public bool Empty
 	{
 		get
@@ -252,7 +252,7 @@ public class Queue<T> : IEnumerable<T>, IEnumerable, IClearable
 		}
 	}
 
-	// Token: 0x060002AD RID: 685 RVA: 0x0000EA32 File Offset: 0x0000CC32
+	// Token: 0x060002E8 RID: 744 RVA: 0x0000F81A File Offset: 0x0000DA1A
 	public void Clear()
 	{
 		Array.Clear(this.DataArray, 0, this.DataArray.Length);
@@ -262,30 +262,30 @@ public class Queue<T> : IEnumerable<T>, IEnumerable, IClearable
 		this.Version++;
 	}
 
-	// Token: 0x060002AE RID: 686 RVA: 0x0000EA6B File Offset: 0x0000CC6B
+	// Token: 0x060002E9 RID: 745 RVA: 0x0000F853 File Offset: 0x0000DA53
 	[NullableContext(1)]
 	public IEnumerator<T> GetEnumerator()
 	{
 		return new Queue<T>.Enumerator(this);
 	}
 
-	// Token: 0x060002AF RID: 687 RVA: 0x0000EA78 File Offset: 0x0000CC78
+	// Token: 0x060002EA RID: 746 RVA: 0x0000F860 File Offset: 0x0000DA60
 	[NullableContext(1)]
 	IEnumerator IEnumerable.GetEnumerator()
 	{
 		return this.GetEnumerator();
 	}
 
-	// Token: 0x040001EB RID: 491
+	// Token: 0x04000201 RID: 513
 	private const int MINIMUM_GROW = 4;
 
-	// Token: 0x040001EC RID: 492
+	// Token: 0x04000202 RID: 514
 	private const float THREE_QUARTER = 0.75f;
 
-	// Token: 0x040001ED RID: 493
+	// Token: 0x04000203 RID: 515
 	private int Version;
 
-	// Token: 0x040001EE RID: 494
+	// Token: 0x04000204 RID: 516
 	[Nullable(new byte[]
 	{
 		1,
@@ -293,24 +293,24 @@ public class Queue<T> : IEnumerable<T>, IEnumerable, IClearable
 	})]
 	private T[] DataArray;
 
-	// Token: 0x040001EF RID: 495
+	// Token: 0x04000205 RID: 517
 	private readonly int DefaultCapacity;
 
-	// Token: 0x040001F0 RID: 496
+	// Token: 0x04000206 RID: 518
 	private int Head;
 
-	// Token: 0x040001F1 RID: 497
+	// Token: 0x04000207 RID: 519
 	private int Tail;
 
-	// Token: 0x040001F2 RID: 498
+	// Token: 0x04000208 RID: 520
 	private int SizeInternal;
 
-	// Token: 0x02000197 RID: 407
+	// Token: 0x020001A1 RID: 417
 	[NullableContext(1)]
 	[Nullable(0)]
-	private struct Enumerator : IEnumerator<T>, IEnumerator, IDisposable
+	private struct Enumerator : IEnumerator<!0>, IEnumerator, IDisposable
 	{
-		// Token: 0x06000CF3 RID: 3315 RVA: 0x0003D416 File Offset: 0x0003B616
+		// Token: 0x06000D58 RID: 3416 RVA: 0x0003E304 File Offset: 0x0003C504
 		public Enumerator(Queue<T> queue)
 		{
 			this.<queue>P = queue;
@@ -319,7 +319,7 @@ public class Queue<T> : IEnumerable<T>, IEnumerable, IClearable
 			this.Version = this.<queue>P.Version;
 		}
 
-		// Token: 0x06000CF4 RID: 3316 RVA: 0x0003D444 File Offset: 0x0003B644
+		// Token: 0x06000D59 RID: 3417 RVA: 0x0003E334 File Offset: 0x0003C534
 		public bool MoveNext()
 		{
 			if (this.Version != this.<queue>P.Version)
@@ -337,14 +337,14 @@ public class Queue<T> : IEnumerable<T>, IEnumerable, IClearable
 			return false;
 		}
 
-		// Token: 0x06000CF5 RID: 3317 RVA: 0x0003D4A7 File Offset: 0x0003B6A7
+		// Token: 0x06000D5A RID: 3418 RVA: 0x0003E397 File Offset: 0x0003C597
 		public void Reset()
 		{
 			this.Index = 0;
 		}
 
-		// Token: 0x17000147 RID: 327
-		// (get) Token: 0x06000CF6 RID: 3318 RVA: 0x0003D4B0 File Offset: 0x0003B6B0
+		// Token: 0x1700015C RID: 348
+		// (get) Token: 0x06000D5B RID: 3419 RVA: 0x0003E3A0 File Offset: 0x0003C5A0
 		T IEnumerator<!0>.Current
 		{
 			get
@@ -353,8 +353,8 @@ public class Queue<T> : IEnumerable<T>, IEnumerable, IClearable
 			}
 		}
 
-		// Token: 0x17000148 RID: 328
-		// (get) Token: 0x06000CF7 RID: 3319 RVA: 0x0003D4B8 File Offset: 0x0003B6B8
+		// Token: 0x1700015D RID: 349
+		// (get) Token: 0x06000D5C RID: 3420 RVA: 0x0003E3A8 File Offset: 0x0003C5A8
 		[Nullable(2)]
 		object IEnumerator.Current
 		{
@@ -365,22 +365,22 @@ public class Queue<T> : IEnumerable<T>, IEnumerable, IClearable
 			}
 		}
 
-		// Token: 0x06000CF8 RID: 3320 RVA: 0x0003D4C5 File Offset: 0x0003B6C5
+		// Token: 0x06000D5D RID: 3421 RVA: 0x0003E3B5 File Offset: 0x0003C5B5
 		public void Dispose()
 		{
 		}
 
-		// Token: 0x040007BD RID: 1981
+		// Token: 0x040007DD RID: 2013
 		[CompilerGenerated]
 		private Queue<T> <queue>P;
 
-		// Token: 0x040007BE RID: 1982
+		// Token: 0x040007DE RID: 2014
 		private readonly int Version;
 
-		// Token: 0x040007BF RID: 1983
+		// Token: 0x040007DF RID: 2015
 		private int Index;
 
-		// Token: 0x040007C0 RID: 1984
+		// Token: 0x040007E0 RID: 2016
 		private T Current;
 	}
 }

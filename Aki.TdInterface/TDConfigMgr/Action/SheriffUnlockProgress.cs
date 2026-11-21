@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021FD RID: 8701
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002468 RID: 9320
 	public class SheriffUnlockProgress : ActionParams
 	{
-		// Token: 0x0600BF0F RID: 48911 RVA: 0x001B770C File Offset: 0x001B590C
+		// Token: 0x0600CACB RID: 51915 RVA: 0x001CED98 File Offset: 0x001CCF98
 		private SheriffUnlockProgress_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BF10 RID: 48912 RVA: 0x001B7744 File Offset: 0x001B5944
+		// Token: 0x0600CACC RID: 51916 RVA: 0x001CEDD0 File Offset: 0x001CCFD0
 		public static SheriffUnlockProgress Create([Nullable(2)] SheriffUnlockProgress instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BF11 RID: 48913 RVA: 0x001B7757 File Offset: 0x001B5957
+		// Token: 0x0600CACD RID: 51917 RVA: 0x001CEDE3 File Offset: 0x001CCFE3
 		public static SheriffUnlockProgress CreateFromSetValue([Nullable(2)] SheriffUnlockProgress_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BF12 RID: 48914 RVA: 0x001B776A File Offset: 0x001B596A
+		// Token: 0x0600CACE RID: 51918 RVA: 0x001CEDF6 File Offset: 0x001CCFF6
 		public SheriffUnlockProgress_SetValue ToSetValue()
 		{
 			return new SheriffUnlockProgress_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170039EE RID: 14830
-		// (get) Token: 0x0600BF13 RID: 48915 RVA: 0x001B777D File Offset: 0x001B597D
-		// (set) Token: 0x0600BF14 RID: 48916 RVA: 0x001B77A8 File Offset: 0x001B59A8
+		// Token: 0x17003CE3 RID: 15587
+		// (get) Token: 0x0600CACF RID: 51919 RVA: 0x001CEE09 File Offset: 0x001CD009
+		// (set) Token: 0x0600CAD0 RID: 51920 RVA: 0x001CEE34 File Offset: 0x001CD034
 		public virtual int ProgressId
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040071E9 RID: 29161
+		// Token: 0x04007832 RID: 30770
 		[Nullable(2)]
 		protected new SheriffUnlockProgress FbInstance;
 
-		// Token: 0x040071EA RID: 29162
+		// Token: 0x04007833 RID: 30771
 		[Nullable(2)]
 		protected SheriffUnlockProgress_SetValue PocoInterface;
 	}

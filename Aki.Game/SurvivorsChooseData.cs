@@ -1,13 +1,13 @@
 ﻿using System;
 
-// Token: 0x02002ADE RID: 10974
+// Token: 0x0200205A RID: 8282
 internal class SurvivorsChooseData : ISurvivorsChooseData
 {
-	// Token: 0x17001E60 RID: 7776
-	// (get) Token: 0x06016D6A RID: 93546 RVA: 0x005CC244 File Offset: 0x005CA444
+	// Token: 0x17001EB8 RID: 7864
+	// (get) Token: 0x0601479B RID: 83867 RVA: 0x005F8D94 File Offset: 0x005F6F94
 	public ESurvivorsObtainMode ObtainMode { get; }
 
-	// Token: 0x06016D6B RID: 93547 RVA: 0x005CC24C File Offset: 0x005CA44C
+	// Token: 0x0601479C RID: 83868 RVA: 0x005F8D9C File Offset: 0x005F6F9C
 	public SurvivorsChooseData(ESurvivorsObtainMode obtainMode)
 	{
 		this.ObtainMode = obtainMode;

@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005E10 RID: 24080
+	// Token: 0x0200644D RID: 25677
 	public class INightmareSettlementSystemVarT
 	{
-		// Token: 0x1700B430 RID: 46128
-		// (get) Token: 0x060293A8 RID: 168872 RVA: 0x005A7ECB File Offset: 0x005A60CB
-		// (set) Token: 0x060293A9 RID: 168873 RVA: 0x005A7ED3 File Offset: 0x005A60D3
+		// Token: 0x1700BD96 RID: 48534
+		// (get) Token: 0x0602BA32 RID: 178738 RVA: 0x005F0BFB File Offset: 0x005EEDFB
+		// (set) Token: 0x0602BA33 RID: 178739 RVA: 0x005F0C03 File Offset: 0x005EEE03
 		public ENightmareSettlementSystemVarType VarType { get; set; }
 
-		// Token: 0x1700B431 RID: 46129
-		// (get) Token: 0x060293AA RID: 168874 RVA: 0x005A7EDC File Offset: 0x005A60DC
-		// (set) Token: 0x060293AB RID: 168875 RVA: 0x005A7EE4 File Offset: 0x005A60E4
+		// Token: 0x1700BD97 RID: 48535
+		// (get) Token: 0x0602BA34 RID: 178740 RVA: 0x005F0C0C File Offset: 0x005EEE0C
+		// (set) Token: 0x0602BA35 RID: 178741 RVA: 0x005F0C14 File Offset: 0x005EEE14
 		public TVarRefUnion VarRef { get; set; }
 
-		// Token: 0x060293AC RID: 168876 RVA: 0x005A7EED File Offset: 0x005A60ED
+		// Token: 0x0602BA36 RID: 178742 RVA: 0x005F0C1D File Offset: 0x005EEE1D
 		public INightmareSettlementSystemVarT()
 		{
 			this.VarType = ENightmareSettlementSystemVarType.MonsterKilled;

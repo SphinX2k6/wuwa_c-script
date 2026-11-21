@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000223 RID: 547
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200024A RID: 586
 	public class ICategoryMatchingFoundation : IItemFoundationType
 	{
-		// Token: 0x06000966 RID: 2406 RVA: 0x00029080 File Offset: 0x00027280
+		// Token: 0x060009DA RID: 2522 RVA: 0x0002A840 File Offset: 0x00028A40
 		private ICategoryMatchingFoundation_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000967 RID: 2407 RVA: 0x000290B8 File Offset: 0x000272B8
+		// Token: 0x060009DB RID: 2523 RVA: 0x0002A878 File Offset: 0x00028A78
 		public static ICategoryMatchingFoundation Create([Nullable(2)] ICategoryMatchingFoundation instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000968 RID: 2408 RVA: 0x000290CB File Offset: 0x000272CB
+		// Token: 0x060009DC RID: 2524 RVA: 0x0002A88B File Offset: 0x00028A8B
 		public static ICategoryMatchingFoundation CreateFromSetValue([Nullable(2)] ICategoryMatchingFoundation_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000969 RID: 2409 RVA: 0x000290DE File Offset: 0x000272DE
+		// Token: 0x060009DD RID: 2525 RVA: 0x0002A89E File Offset: 0x00028A9E
 		public new ICategoryMatchingFoundation_SetValue ToSetValue()
 		{
 			return new ICategoryMatchingFoundation_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170002DC RID: 732
-		// (get) Token: 0x0600096A RID: 2410 RVA: 0x00029109 File Offset: 0x00027309
-		// (set) Token: 0x0600096B RID: 2411 RVA: 0x00029134 File Offset: 0x00027334
+		// Token: 0x170002FB RID: 763
+		// (get) Token: 0x060009DE RID: 2526 RVA: 0x0002A8C9 File Offset: 0x00028AC9
+		// (set) Token: 0x060009DF RID: 2527 RVA: 0x0002A8F4 File Offset: 0x00028AF4
 		public override EItemFoundation Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170002DD RID: 733
-		// (get) Token: 0x0600096C RID: 2412 RVA: 0x00029144 File Offset: 0x00027344
-		// (set) Token: 0x0600096D RID: 2413 RVA: 0x0002917E File Offset: 0x0002737E
+		// Token: 0x170002FC RID: 764
+		// (get) Token: 0x060009E0 RID: 2528 RVA: 0x0002A904 File Offset: 0x00028B04
+		// (set) Token: 0x060009E1 RID: 2529 RVA: 0x0002A93E File Offset: 0x00028B3E
 		public virtual int? InitMatchEntity
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170002DE RID: 734
-		// (get) Token: 0x0600096E RID: 2414 RVA: 0x0002918C File Offset: 0x0002738C
-		// (set) Token: 0x0600096F RID: 2415 RVA: 0x0002921F File Offset: 0x0002741F
+		// Token: 0x170002FD RID: 765
+		// (get) Token: 0x060009E2 RID: 2530 RVA: 0x0002A94C File Offset: 0x00028B4C
+		// (set) Token: 0x060009E3 RID: 2531 RVA: 0x0002A9DF File Offset: 0x00028BDF
 		public virtual List<ICategoryMatchingConfig> MatchingConfigs
 		{
 			get
@@ -147,18 +145,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040009C6 RID: 2502
+		// Token: 0x04000A50 RID: 2640
 		[Nullable(2)]
 		protected new ICategoryMatchingFoundation FbInstance;
 
-		// Token: 0x040009C7 RID: 2503
+		// Token: 0x04000A51 RID: 2641
 		[Nullable(2)]
 		protected new ICategoryMatchingFoundation_SetValue PocoInterface;
 
-		// Token: 0x040009C8 RID: 2504
+		// Token: 0x04000A52 RID: 2642
 		private List<ICategoryMatchingConfig> _MatchingConfigsCache;
 
-		// Token: 0x040009C9 RID: 2505
+		// Token: 0x04000A53 RID: 2643
 		private bool _MatchingConfigsInited;
 	}
 }

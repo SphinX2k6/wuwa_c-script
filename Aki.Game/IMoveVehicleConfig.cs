@@ -1,38 +1,38 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020032D6 RID: 13014
+// Token: 0x02002848 RID: 10312
 [NullableContext(2)]
 [Nullable(0)]
 public class IMoveVehicleConfig
 {
-	// Token: 0x0400DFF3 RID: 57331
+	// Token: 0x0400E49E RID: 58526
 	public int SplineId;
 
-	// Token: 0x0400DFF4 RID: 57332
+	// Token: 0x0400E49F RID: 58527
 	public bool? SimulateRotation;
 
-	// Token: 0x0400DFF5 RID: 57333
+	// Token: 0x0400E4A0 RID: 58528
 	public bool? FixedPitch;
 
-	// Token: 0x0400DFF6 RID: 57334
+	// Token: 0x0400E4A1 RID: 58529
 	public bool? NeedSync;
 
-	// Token: 0x0400DFF7 RID: 57335
+	// Token: 0x0400E4A2 RID: 58530
 	public bool? DynamicGravity;
 
-	// Token: 0x0400DFF8 RID: 57336
+	// Token: 0x0400E4A3 RID: 58531
 	public bool? StartFromNearest;
 
-	// Token: 0x0400DFF9 RID: 57337
+	// Token: 0x0400E4A4 RID: 58532
 	public bool? ForceToFirstPoint;
 
-	// Token: 0x0400DFFA RID: 57338
+	// Token: 0x0400E4A5 RID: 58533
 	public bool? KeepForward;
 
-	// Token: 0x0400DFFB RID: 57339
+	// Token: 0x0400E4A6 RID: 58534
 	public Action<bool> OnArriveStartPointHandle;
 
-	// Token: 0x0400DFFC RID: 57340
+	// Token: 0x0400E4A7 RID: 58535
 	public Action<bool> OnMoveEndHandle;
 }

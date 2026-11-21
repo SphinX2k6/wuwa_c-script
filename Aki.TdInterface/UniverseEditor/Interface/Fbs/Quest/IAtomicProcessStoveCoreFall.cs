@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003D1F RID: 15647
+	// Token: 0x02004136 RID: 16694
 	public struct IAtomicProcessStoveCoreFall : IFlatbufferObject
 	{
-		// Token: 0x17006B53 RID: 27475
-		// (get) Token: 0x06015973 RID: 88435 RVA: 0x0031E1E2 File Offset: 0x0031C3E2
+		// Token: 0x1700710D RID: 28941
+		// (get) Token: 0x06016EAB RID: 93867 RVA: 0x0034545A File Offset: 0x0034365A
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015974 RID: 88436 RVA: 0x0031E1EF File Offset: 0x0031C3EF
+		// Token: 0x06016EAC RID: 93868 RVA: 0x00345467 File Offset: 0x00343667
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06015975 RID: 88437 RVA: 0x0031E1F8 File Offset: 0x0031C3F8
+		// Token: 0x06016EAD RID: 93869 RVA: 0x00345470 File Offset: 0x00343670
 		public static IAtomicProcessStoveCoreFall GetRootAsIAtomicProcessStoveCoreFall(ByteBuffer _bb)
 		{
 			return IAtomicProcessStoveCoreFall.GetRootAsIAtomicProcessStoveCoreFall(_bb, default(IAtomicProcessStoveCoreFall));
 		}
 
-		// Token: 0x06015976 RID: 88438 RVA: 0x0031E214 File Offset: 0x0031C414
+		// Token: 0x06016EAE RID: 93870 RVA: 0x0034548C File Offset: 0x0034368C
 		public static IAtomicProcessStoveCoreFall GetRootAsIAtomicProcessStoveCoreFall(ByteBuffer _bb, IAtomicProcessStoveCoreFall obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06015977 RID: 88439 RVA: 0x0031E231 File Offset: 0x0031C431
+		// Token: 0x06016EAF RID: 93871 RVA: 0x003454A9 File Offset: 0x003436A9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06015978 RID: 88440 RVA: 0x0031E240 File Offset: 0x0031C440
+		// Token: 0x06016EB0 RID: 93872 RVA: 0x003454B8 File Offset: 0x003436B8
 		public IAtomicProcessStoveCoreFall __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006B54 RID: 27476
-		// (get) Token: 0x06015979 RID: 88441 RVA: 0x0031E250 File Offset: 0x0031C450
+		// Token: 0x1700710E RID: 28942
+		// (get) Token: 0x06016EB1 RID: 93873 RVA: 0x003454C8 File Offset: 0x003436C8
 		public EAtomicProcess Type
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601597A RID: 88442 RVA: 0x0031E28C File Offset: 0x0031C48C
+		// Token: 0x06016EB2 RID: 93874 RVA: 0x00345504 File Offset: 0x00343704
 		public int SplineEntityIds(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17006B55 RID: 27477
-		// (get) Token: 0x0601597B RID: 88443 RVA: 0x0031E2CC File Offset: 0x0031C4CC
+		// Token: 0x1700710F RID: 28943
+		// (get) Token: 0x06016EB3 RID: 93875 RVA: 0x00345544 File Offset: 0x00343744
 		public int SplineEntityIdsLength
 		{
 			get
@@ -89,19 +89,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601597C RID: 88444 RVA: 0x0031E2F7 File Offset: 0x0031C4F7
+		// Token: 0x06016EB4 RID: 93876 RVA: 0x0034556F File Offset: 0x0034376F
 		public Span<int> GetSplineEntityIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x0601597D RID: 88445 RVA: 0x0031E306 File Offset: 0x0031C506
+		// Token: 0x06016EB5 RID: 93877 RVA: 0x0034557E File Offset: 0x0034377E
 		public int[] GetSplineEntityIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(6);
 		}
 
-		// Token: 0x0601597E RID: 88446 RVA: 0x0031E314 File Offset: 0x0031C514
+		// Token: 0x06016EB6 RID: 93878 RVA: 0x0034558C File Offset: 0x0034378C
 		public static Offset<IAtomicProcessStoveCoreFall> CreateIAtomicProcessStoveCoreFall(FlatBufferBuilder builder, EAtomicProcess Type = EAtomicProcess.StoveCoreFall, VectorOffset SplineEntityIdsOffset = default(VectorOffset))
 		{
 			builder.StartTable(2);
@@ -110,25 +110,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IAtomicProcessStoveCoreFall.EndIAtomicProcessStoveCoreFall(builder);
 		}
 
-		// Token: 0x0601597F RID: 88447 RVA: 0x0031E331 File Offset: 0x0031C531
+		// Token: 0x06016EB7 RID: 93879 RVA: 0x003455A9 File Offset: 0x003437A9
 		public static void StartIAtomicProcessStoveCoreFall(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06015980 RID: 88448 RVA: 0x0031E33A File Offset: 0x0031C53A
+		// Token: 0x06016EB8 RID: 93880 RVA: 0x003455B2 File Offset: 0x003437B2
 		public static void AddType(FlatBufferBuilder builder, EAtomicProcess type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06015981 RID: 88449 RVA: 0x0031E345 File Offset: 0x0031C545
+		// Token: 0x06016EB9 RID: 93881 RVA: 0x003455BD File Offset: 0x003437BD
 		public static void AddSplineEntityIds(FlatBufferBuilder builder, VectorOffset splineEntityIdsOffset)
 		{
 			builder.AddOffset(1, splineEntityIdsOffset.Value, 0);
 		}
 
-		// Token: 0x06015982 RID: 88450 RVA: 0x0031E358 File Offset: 0x0031C558
+		// Token: 0x06016EBA RID: 93882 RVA: 0x003455D0 File Offset: 0x003437D0
 		public static VectorOffset CreateSplineEntityIdsVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -139,7 +139,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06015983 RID: 88451 RVA: 0x0031E38F File Offset: 0x0031C58F
+		// Token: 0x06016EBB RID: 93883 RVA: 0x00345607 File Offset: 0x00343807
 		public static VectorOffset CreateSplineEntityIdsVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -147,7 +147,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06015984 RID: 88452 RVA: 0x0031E3A9 File Offset: 0x0031C5A9
+		// Token: 0x06016EBC RID: 93884 RVA: 0x00345621 File Offset: 0x00343821
 		public static VectorOffset CreateSplineEntityIdsVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -155,7 +155,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06015985 RID: 88453 RVA: 0x0031E3C7 File Offset: 0x0031C5C7
+		// Token: 0x06016EBD RID: 93885 RVA: 0x0034563F File Offset: 0x0034383F
 		public static VectorOffset CreateSplineEntityIdsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -163,19 +163,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06015986 RID: 88454 RVA: 0x0031E3E0 File Offset: 0x0031C5E0
+		// Token: 0x06016EBE RID: 93886 RVA: 0x00345658 File Offset: 0x00343858
 		public static void StartSplineEntityIdsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06015987 RID: 88455 RVA: 0x0031E3EB File Offset: 0x0031C5EB
+		// Token: 0x06016EBF RID: 93887 RVA: 0x00345663 File Offset: 0x00343863
 		public static Offset<IAtomicProcessStoveCoreFall> EndIAtomicProcessStoveCoreFall(FlatBufferBuilder builder)
 		{
 			return new Offset<IAtomicProcessStoveCoreFall>(builder.EndTable());
 		}
 
-		// Token: 0x06015988 RID: 88456 RVA: 0x0031E3F8 File Offset: 0x0031C5F8
+		// Token: 0x06016EC0 RID: 93888 RVA: 0x00345670 File Offset: 0x00343870
 		public IAtomicProcessStoveCoreFallT UnPack()
 		{
 			IAtomicProcessStoveCoreFallT atomicProcessStoveCoreFallT = new IAtomicProcessStoveCoreFallT();
@@ -183,7 +183,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return atomicProcessStoveCoreFallT;
 		}
 
-		// Token: 0x06015989 RID: 88457 RVA: 0x0031E414 File Offset: 0x0031C614
+		// Token: 0x06016EC1 RID: 93889 RVA: 0x0034568C File Offset: 0x0034388C
 		public void UnPackTo(IAtomicProcessStoveCoreFallT _o)
 		{
 			_o.Type = this.Type;
@@ -194,7 +194,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601598A RID: 88458 RVA: 0x0031E45C File Offset: 0x0031C65C
+		// Token: 0x06016EC2 RID: 93890 RVA: 0x003456D4 File Offset: 0x003438D4
 		public static Offset<IAtomicProcessStoveCoreFall> Pack(FlatBufferBuilder builder, IAtomicProcessStoveCoreFallT _o)
 		{
 			if (_o == null)
@@ -210,7 +210,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IAtomicProcessStoveCoreFall.CreateIAtomicProcessStoveCoreFall(builder, _o.Type, splineEntityIdsOffset);
 		}
 
-		// Token: 0x0400B5D6 RID: 46550
+		// Token: 0x0400BF83 RID: 49027
 		private Table __p;
 	}
 }

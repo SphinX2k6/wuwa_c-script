@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonChasing
 {
-	// Token: 0x02006472 RID: 25714
+	// Token: 0x020053F0 RID: 21488
 	public interface IScaleArea
 	{
-		// Token: 0x17009499 RID: 38041
-		// (get) Token: 0x060409CF RID: 264655
-		// (set) Token: 0x060409D0 RID: 264656
+		// Token: 0x170067FB RID: 26619
+		// (get) Token: 0x06035690 RID: 218768
+		// (set) Token: 0x06035691 RID: 218769
 		double Min { get; set; }
 
-		// Token: 0x1700949A RID: 38042
-		// (get) Token: 0x060409D1 RID: 264657
-		// (set) Token: 0x060409D2 RID: 264658
+		// Token: 0x170067FC RID: 26620
+		// (get) Token: 0x06035692 RID: 218770
+		// (set) Token: 0x06035693 RID: 218771
 		double Max { get; set; }
 	}
 }

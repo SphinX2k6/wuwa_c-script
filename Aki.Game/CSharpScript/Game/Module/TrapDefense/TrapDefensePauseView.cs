@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004AEB RID: 19179
+	// Token: 0x02003A93 RID: 14995
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefensePauseView : UiViewBase
 	{
-		// Token: 0x06031AE2 RID: 203490 RVA: 0x00B8862A File Offset: 0x00B8682A
+		// Token: 0x06026872 RID: 157810 RVA: 0x00ACC5DE File Offset: 0x00ACA7DE
 		public TrapDefensePauseView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06031AE3 RID: 203491 RVA: 0x00B88634 File Offset: 0x00B86834
+		// Token: 0x06026873 RID: 157811 RVA: 0x00ACC5E8 File Offset: 0x00ACA7E8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06031AE4 RID: 203492 RVA: 0x00B88808 File Offset: 0x00B86A08
+		// Token: 0x06026874 RID: 157812 RVA: 0x00ACC7BC File Offset: 0x00ACA9BC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TrapDefensePauseView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031AE5 RID: 203493 RVA: 0x00B8884C File Offset: 0x00B86A4C
+		// Token: 0x06026875 RID: 157813 RVA: 0x00ACC800 File Offset: 0x00ACAA00
 		protected override void OnStart()
 		{
 			this.Layout = new GenericLayout<TrapDefenseResultInfoItem, ITrapDefensePauseInfo>(base.GetHorizontalLayout(2), new Func<TrapDefenseResultInfoItem>(this.CreateItem), base.GetItem(3).GetOwner() as AUIBaseActor, false, true);
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031AE6 RID: 203494 RVA: 0x00B88935 File Offset: 0x00B86B35
+		// Token: 0x06026876 RID: 157814 RVA: 0x00ACC8E9 File Offset: 0x00ACAAE9
 		protected override void OnBeforeDestroy()
 		{
 			this.BtnBuff = null;
@@ -122,19 +122,19 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.BtnEnd = null;
 		}
 
-		// Token: 0x06031AE7 RID: 203495 RVA: 0x00B88953 File Offset: 0x00B86B53
+		// Token: 0x06026877 RID: 157815 RVA: 0x00ACC907 File Offset: 0x00ACAB07
 		private void OnClickClose()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06031AE8 RID: 203496 RVA: 0x00B8895C File Offset: 0x00B86B5C
+		// Token: 0x06026878 RID: 157816 RVA: 0x00ACC910 File Offset: 0x00ACAB10
 		private void OnClickSetting()
 		{
 			TrapDefenseModel.Instance.OpenViewKeySetting();
 		}
 
-		// Token: 0x06031AE9 RID: 203497 RVA: 0x00B88968 File Offset: 0x00B86B68
+		// Token: 0x06026879 RID: 157817 RVA: 0x00ACC91C File Offset: 0x00ACAB1C
 		private void OnClickBuff()
 		{
 			if (!TrapDefenseModel.Instance.GetCurInstIsRogue())
@@ -144,13 +144,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			TrapDefenseModel.Instance.OpenViewBdSum(null, null, null);
 		}
 
-		// Token: 0x06031AEA RID: 203498 RVA: 0x00B889A8 File Offset: 0x00B86BA8
+		// Token: 0x0602687A RID: 157818 RVA: 0x00ACC95C File Offset: 0x00ACAB5C
 		private void OnClickMonsterInfo()
 		{
 			TrapDefenseModel.Instance.OpenViewMonster(null, new ETrapDefenseMonsterTabType?(ETrapDefenseMonsterTabType.MonsterWave), null);
 		}
 
-		// Token: 0x06031AEB RID: 203499 RVA: 0x00B889D7 File Offset: 0x00B86BD7
+		// Token: 0x0602687B RID: 157819 RVA: 0x00ACC98B File Offset: 0x00ACAB8B
 		private void OnClickSaveAndLeave()
 		{
 			if (!TrapDefenseModel.Instance.GetCurInstToLevelData().Config.IsCanSave)
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			TrapDefenseController.Instance.RequestTrapDefenseChallengeQuit(false);
 		}
 
-		// Token: 0x06031AEC RID: 203500 RVA: 0x00B88A07 File Offset: 0x00B86C07
+		// Token: 0x0602687C RID: 157820 RVA: 0x00ACC9BB File Offset: 0x00ACABBB
 		private void OnClickEndAndLeave()
 		{
 			TrapDefenseController.Instance.RequestTrapDefenseChallengeQuit(true).ContinueWith(delegate(bool task)
@@ -173,25 +173,25 @@ namespace CSharpScript.Game.Module.TrapDefense
 			});
 		}
 
-		// Token: 0x06031AED RID: 203501 RVA: 0x00B88A26 File Offset: 0x00B86C26
+		// Token: 0x0602687D RID: 157821 RVA: 0x00ACC9DA File Offset: 0x00ACABDA
 		private TrapDefenseResultInfoItem CreateItem()
 		{
 			return new TrapDefenseResultInfoItem();
 		}
 
-		// Token: 0x0401A883 RID: 108675
+		// Token: 0x040151D5 RID: 86485
 		protected GenericLayout<TrapDefenseResultInfoItem, ITrapDefensePauseInfo> Layout;
 
-		// Token: 0x0401A884 RID: 108676
+		// Token: 0x040151D6 RID: 86486
 		protected TrapDefenseResultInfoBtn BtnBuff;
 
-		// Token: 0x0401A885 RID: 108677
+		// Token: 0x040151D7 RID: 86487
 		protected TrapDefenseResultInfoBtn BtnMonster;
 
-		// Token: 0x0401A886 RID: 108678
+		// Token: 0x040151D8 RID: 86488
 		protected TrapDefenseResultInfoBtn BtnSave;
 
-		// Token: 0x0401A887 RID: 108679
+		// Token: 0x040151D9 RID: 86489
 		protected TrapDefenseResultInfoBtn BtnEnd;
 	}
 }

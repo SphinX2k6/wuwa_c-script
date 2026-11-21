@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005531 RID: 21809
+	// Token: 0x02005AB7 RID: 23223
 	public class IMechascoutDragTypeBaseT
 	{
-		// Token: 0x1700A10B RID: 41227
-		// (get) Token: 0x06024097 RID: 147607 RVA: 0x004FA9F2 File Offset: 0x004F8BF2
-		// (set) Token: 0x06024098 RID: 147608 RVA: 0x004FA9FA File Offset: 0x004F8BFA
+		// Token: 0x1700A945 RID: 43333
+		// (get) Token: 0x06026151 RID: 155985 RVA: 0x00537B16 File Offset: 0x00535D16
+		// (set) Token: 0x06026152 RID: 155986 RVA: 0x00537B1E File Offset: 0x00535D1E
 		public EMechascoutDragType Type { get; set; }
 
-		// Token: 0x06024099 RID: 147609 RVA: 0x004FAA03 File Offset: 0x004F8C03
+		// Token: 0x06026153 RID: 155987 RVA: 0x00537B27 File Offset: 0x00535D27
 		public IMechascoutDragTypeBaseT()
 		{
 			this.Type = EMechascoutDragType.Instant;

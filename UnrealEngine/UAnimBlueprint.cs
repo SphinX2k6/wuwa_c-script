@@ -6,37 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020007EB RID: 2027
+	// Token: 0x02000176 RID: 374
 	[UnrealObjectPath("/Script/Engine.AnimBlueprint")]
-	[UnrealStructLayout(1448, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1448)]
-	public class UAnimBlueprint : UBlueprint, IUnrealUObject, IUnrealObject, IInterface_PreviewMeshProvider, IUnrealNativeInterface, IUnrealInterface
+	[UnrealStructLayout(1456, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1456)]
+	public class UAnimBlueprint : UBlueprint, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06006C25 RID: 27685 RVA: 0x0009B858 File Offset: 0x00099A58
+		// Token: 0x060016C5 RID: 5829 RVA: 0x00023839 File Offset: 0x00021A39
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UAnimBlueprint._ClassPtr;
 		}
 
-		// Token: 0x06006C26 RID: 27686 RVA: 0x0009B864 File Offset: 0x00099A64
-		int IInterface_PreviewMeshProvider.InterfaceOffset()
-		{
-			return UAnimBlueprint.__InterfaceOffset_IInterface_PreviewMeshProvider;
-		}
-
-		// Token: 0x06006C27 RID: 27687 RVA: 0x0009B86C File Offset: 0x00099A6C
+		// Token: 0x060016C6 RID: 5830 RVA: 0x00023848 File Offset: 0x00021A48
 		public UAnimBlueprint() : this(BuiltinUtils.AllocNativeUObject(UAnimBlueprint.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06006C28 RID: 27688 RVA: 0x0009B894 File Offset: 0x00099A94
+		// Token: 0x060016C7 RID: 5831 RVA: 0x00023870 File Offset: 0x00021A70
 		[NullableContext(1)]
 		public UAnimBlueprint(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UAnimBlueprint.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700197C RID: 6524
-		// (get) Token: 0x06006C29 RID: 27689 RVA: 0x0009B8C7 File Offset: 0x00099AC7
-		// (set) Token: 0x06006C2A RID: 27690 RVA: 0x0009B8DB File Offset: 0x00099ADB
+		// Token: 0x1700025B RID: 603
+		// (get) Token: 0x060016C8 RID: 5832 RVA: 0x000238A3 File Offset: 0x00021AA3
+		// (set) Token: 0x060016C9 RID: 5833 RVA: 0x000238B7 File Offset: 0x00021AB7
 		[Nullable(2)]
 		public unsafe USkeleton TargetSkeleton
 		{
@@ -52,33 +46,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700197D RID: 6525
-		// (get) Token: 0x06006C2B RID: 27691 RVA: 0x0009B8F0 File Offset: 0x00099AF0
-		// (set) Token: 0x06006C2C RID: 27692 RVA: 0x0009B929 File Offset: 0x00099B29
-		[Nullable(1)]
-		public TArray<FAnimGroupInfo> Groups
-		{
-			[NullableContext(1)]
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<FAnimGroupInfo> result;
-				if ((result = this._Groups) == null)
-				{
-					result = (this._Groups = new TArray<FAnimGroupInfo>(base.NativePtr + (IntPtr)UAnimBlueprint.__PropertyOffset_Groups, this));
-				}
-				return result;
-			}
-			[NullableContext(1)]
-			set
-			{
-				this.Groups.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x1700197E RID: 6526
-		// (get) Token: 0x06006C2D RID: 27693 RVA: 0x0009B937 File Offset: 0x00099B37
-		// (set) Token: 0x06006C2E RID: 27694 RVA: 0x0009B947 File Offset: 0x00099B47
+		// Token: 0x1700025C RID: 604
+		// (get) Token: 0x060016CA RID: 5834 RVA: 0x000238CC File Offset: 0x00021ACC
+		// (set) Token: 0x060016CB RID: 5835 RVA: 0x000238DC File Offset: 0x00021ADC
 		public unsafe bool bUseMultiThreadedAnimationUpdate
 		{
 			get
@@ -91,9 +61,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700197F RID: 6527
-		// (get) Token: 0x06006C2F RID: 27695 RVA: 0x0009B958 File Offset: 0x00099B58
-		// (set) Token: 0x06006C30 RID: 27696 RVA: 0x0009B968 File Offset: 0x00099B68
+		// Token: 0x1700025D RID: 605
+		// (get) Token: 0x060016CC RID: 5836 RVA: 0x000238ED File Offset: 0x00021AED
+		// (set) Token: 0x060016CD RID: 5837 RVA: 0x000238FD File Offset: 0x00021AFD
 		public unsafe bool bWarnAboutBlueprintUsage
 		{
 			get
@@ -106,48 +76,34 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06006C31 RID: 27697 RVA: 0x0009B979 File Offset: 0x00099B79
+		// Token: 0x060016CE RID: 5838 RVA: 0x0002390E File Offset: 0x00021B0E
 		static UAnimBlueprint()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.AnimBlueprint");
 		}
 
-		// Token: 0x06006C32 RID: 27698 RVA: 0x0009B987 File Offset: 0x00099B87
+		// Token: 0x060016CF RID: 5839 RVA: 0x0002391C File Offset: 0x00021B1C
 		protected UAnimBlueprint(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04003408 RID: 13320
-		internal static int __InterfaceOffset_IInterface_PreviewMeshProvider;
-
-		// Token: 0x04003409 RID: 13321
+		// Token: 0x04000741 RID: 1857
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.AnimBlueprint";
 
-		// Token: 0x0400340A RID: 13322
+		// Token: 0x04000742 RID: 1858
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400340B RID: 13323
+		// Token: 0x04000743 RID: 1859
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400340C RID: 13324
+		// Token: 0x04000744 RID: 1860
 		internal static int __PropertyOffset_TargetSkeleton;
 
-		// Token: 0x0400340D RID: 13325
-		internal static int __PropertyOffset_Groups;
-
-		// Token: 0x0400340E RID: 13326
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<FAnimGroupInfo> _Groups;
-
-		// Token: 0x0400340F RID: 13327
+		// Token: 0x04000745 RID: 1861
 		internal static int __PropertyOffset_bUseMultiThreadedAnimationUpdate;
 
-		// Token: 0x04003410 RID: 13328
+		// Token: 0x04000746 RID: 1862
 		internal static int __PropertyOffset_bWarnAboutBlueprintUsage;
 	}
 }

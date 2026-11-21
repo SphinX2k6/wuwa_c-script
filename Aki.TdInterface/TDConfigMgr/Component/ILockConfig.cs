@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004CE RID: 1230
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000527 RID: 1319
 	public class ILockConfig
 	{
-		// Token: 0x060018FA RID: 6394 RVA: 0x0004A4BC File Offset: 0x000486BC
+		// Token: 0x06001A94 RID: 6804 RVA: 0x0004E204 File Offset: 0x0004C404
 		private ILockConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060018FB RID: 6395 RVA: 0x0004A4F4 File Offset: 0x000486F4
+		// Token: 0x06001A95 RID: 6805 RVA: 0x0004E23C File Offset: 0x0004C43C
 		public static ILockConfig Create([Nullable(2)] ILockConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060018FC RID: 6396 RVA: 0x0004A507 File Offset: 0x00048707
+		// Token: 0x06001A96 RID: 6806 RVA: 0x0004E24F File Offset: 0x0004C44F
 		public static ILockConfig CreateFromSetValue([Nullable(2)] ILockConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060018FD RID: 6397 RVA: 0x0004A51A File Offset: 0x0004871A
+		// Token: 0x06001A97 RID: 6807 RVA: 0x0004E262 File Offset: 0x0004C462
 		public ILockConfig_SetValue ToSetValue()
 		{
 			return new ILockConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170006A7 RID: 1703
-		// (get) Token: 0x060018FE RID: 6398 RVA: 0x0004A539 File Offset: 0x00048739
-		// (set) Token: 0x060018FF RID: 6399 RVA: 0x0004A564 File Offset: 0x00048764
+		// Token: 0x1700070E RID: 1806
+		// (get) Token: 0x06001A98 RID: 6808 RVA: 0x0004E281 File Offset: 0x0004C481
+		// (set) Token: 0x06001A99 RID: 6809 RVA: 0x0004E2AC File Offset: 0x0004C4AC
 		public virtual bool IsInitLock
 		{
 			get
@@ -79,9 +77,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170006A8 RID: 1704
-		// (get) Token: 0x06001900 RID: 6400 RVA: 0x0004A574 File Offset: 0x00048774
-		// (set) Token: 0x06001901 RID: 6401 RVA: 0x0004A5AE File Offset: 0x000487AE
+		// Token: 0x1700070F RID: 1807
+		// (get) Token: 0x06001A9A RID: 6810 RVA: 0x0004E2BC File Offset: 0x0004C4BC
+		// (set) Token: 0x06001A9B RID: 6811 RVA: 0x0004E2F6 File Offset: 0x0004C4F6
 		public virtual ELockType? LockType
 		{
 			get
@@ -103,11 +101,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400126F RID: 4719
+		// Token: 0x04001391 RID: 5009
 		[Nullable(2)]
 		protected ILockConfig FbInstance;
 
-		// Token: 0x04001270 RID: 4720
+		// Token: 0x04001392 RID: 5010
 		[Nullable(2)]
 		protected ILockConfig_SetValue PocoInterface;
 	}

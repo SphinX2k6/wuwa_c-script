@@ -1,27 +1,27 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200332F RID: 13103
+// Token: 0x020028A1 RID: 10401
 [NullableContext(1)]
 [Nullable(0)]
 public class RedDotEventData
 {
-	// Token: 0x170027A2 RID: 10146
-	// (get) Token: 0x0601C918 RID: 117016 RVA: 0x008038B5 File Offset: 0x00801AB5
-	// (set) Token: 0x0601C919 RID: 117017 RVA: 0x008038BD File Offset: 0x00801ABD
+	// Token: 0x17002B3E RID: 11070
+	// (get) Token: 0x0601A610 RID: 108048 RVA: 0x00829E79 File Offset: 0x00828079
+	// (set) Token: 0x0601A611 RID: 108049 RVA: 0x00829E81 File Offset: 0x00828081
 	public TRedDotCheckEvent Event { get; set; }
 
-	// Token: 0x170027A3 RID: 10147
-	// (get) Token: 0x0601C91A RID: 117018 RVA: 0x008038C6 File Offset: 0x00801AC6
-	// (set) Token: 0x0601C91B RID: 117019 RVA: 0x008038CE File Offset: 0x00801ACE
+	// Token: 0x17002B3F RID: 11071
+	// (get) Token: 0x0601A612 RID: 108050 RVA: 0x00829E8A File Offset: 0x0082808A
+	// (set) Token: 0x0601A613 RID: 108051 RVA: 0x00829E92 File Offset: 0x00828092
 	public int Id { get; set; }
 
-	// Token: 0x170027A4 RID: 10148
-	// (get) Token: 0x0601C91C RID: 117020 RVA: 0x008038D7 File Offset: 0x00801AD7
-	// (set) Token: 0x0601C91D RID: 117021 RVA: 0x008038DF File Offset: 0x00801ADF
+	// Token: 0x17002B40 RID: 11072
+	// (get) Token: 0x0601A614 RID: 108052 RVA: 0x00829E9B File Offset: 0x0082809B
+	// (set) Token: 0x0601A615 RID: 108053 RVA: 0x00829EA3 File Offset: 0x008280A3
 	public string RedDotName { get; set; }
 
-	// Token: 0x0601C91E RID: 117022 RVA: 0x008038E8 File Offset: 0x00801AE8
+	// Token: 0x0601A616 RID: 108054 RVA: 0x00829EAC File Offset: 0x008280AC
 	public RedDotEventData(TRedDotCheckEvent @event, int id, string redDotName)
 	{
 		this.Event = @event;
@@ -29,7 +29,7 @@ public class RedDotEventData
 		this.RedDotName = redDotName;
 	}
 
-	// Token: 0x0601C91F RID: 117023 RVA: 0x00803905 File Offset: 0x00801B05
+	// Token: 0x0601A617 RID: 108055 RVA: 0x00829EC9 File Offset: 0x008280C9
 	public void HandleEvent()
 	{
 		this.Event(this.Id);

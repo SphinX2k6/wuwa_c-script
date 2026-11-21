@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B82 RID: 2946
+	// Token: 0x02000C50 RID: 3152
 	public class ISpawnMonsterConstraintAnnularSector : ISpwanMonsterMode
 	{
-		// Token: 0x060043CC RID: 17356 RVA: 0x000AC938 File Offset: 0x000AAB38
-		[NullableContext(1)]
+		// Token: 0x06004825 RID: 18469 RVA: 0x000B69FC File Offset: 0x000B4BFC
 		public static ISpawnMonsterConstraintAnnularSector Create(ISpawnMonsterConstraintAnnularSector? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001285 RID: 4741
-		// (get) Token: 0x060043CD RID: 17357 RVA: 0x000AC957 File Offset: 0x000AAB57
+		// Token: 0x17001380 RID: 4992
+		// (get) Token: 0x06004826 RID: 18470 RVA: 0x000B6A1B File Offset: 0x000B4C1B
 		public override ESpawnMonsterConstraint Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001286 RID: 4742
-		// (get) Token: 0x060043CE RID: 17358 RVA: 0x000AC964 File Offset: 0x000AAB64
+		// Token: 0x17001381 RID: 4993
+		// (get) Token: 0x06004827 RID: 18471 RVA: 0x000B6A28 File Offset: 0x000B4C28
 		public virtual float InnerRadius
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001287 RID: 4743
-		// (get) Token: 0x060043CF RID: 17359 RVA: 0x000AC971 File Offset: 0x000AAB71
+		// Token: 0x17001382 RID: 4994
+		// (get) Token: 0x06004828 RID: 18472 RVA: 0x000B6A35 File Offset: 0x000B4C35
 		public virtual float OuterRadius
 		{
 			get
@@ -51,8 +49,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001288 RID: 4744
-		// (get) Token: 0x060043D0 RID: 17360 RVA: 0x000AC97E File Offset: 0x000AAB7E
+		// Token: 0x17001383 RID: 4995
+		// (get) Token: 0x06004829 RID: 18473 RVA: 0x000B6A42 File Offset: 0x000B4C42
 		public virtual float Angle
 		{
 			get
@@ -61,7 +59,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400263B RID: 9787
+		// Token: 0x04002883 RID: 10371
 		private ISpawnMonsterConstraintAnnularSector Instance;
 	}
 }

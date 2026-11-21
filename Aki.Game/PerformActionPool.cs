@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200311B RID: 12571
+// Token: 0x02002676 RID: 9846
 [NullableContext(1)]
 [Nullable(0)]
 public class PerformActionPool : IStaticVariableResetter
 {
-	// Token: 0x0601B042 RID: 110658 RVA: 0x00754EFB File Offset: 0x007530FB
+	// Token: 0x06018A9D RID: 101021 RVA: 0x0077AF67 File Offset: 0x00779167
 	static PerformActionPool()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PerformActionPool.CreateStaticDefaultValue), new Action(PerformActionPool.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x1700256A RID: 9578
-	// (get) Token: 0x0601B043 RID: 110659 RVA: 0x00754F1A File Offset: 0x0075311A
+	// Token: 0x17002715 RID: 10005
+	// (get) Token: 0x06018A9E RID: 101022 RVA: 0x0077AF86 File Offset: 0x00779186
 	private static Dictionary<EPerformAction, List<PerformActionBase>> Pool
 	{
 		get
@@ -23,7 +23,7 @@ public class PerformActionPool : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601B044 RID: 110660 RVA: 0x00754F24 File Offset: 0x00753124
+	// Token: 0x06018A9F RID: 101023 RVA: 0x0077AF90 File Offset: 0x00779190
 	public static IPerformActionBase GetAction(EPerformAction action, int id, IActionParamMap param, BasePerformComponent performComp, EPerformGroup group, Action onFinish, [Nullable(2)] Action<int> onBeforeExecute = null, [Nullable(2)] Action<int> onAfterExecute = null)
 	{
 		PerformActionBase performActionBase;
@@ -46,7 +46,7 @@ public class PerformActionPool : IStaticVariableResetter
 		return performActionBase;
 	}
 
-	// Token: 0x0601B045 RID: 110661 RVA: 0x00754FDC File Offset: 0x007531DC
+	// Token: 0x06018AA0 RID: 101024 RVA: 0x0077B048 File Offset: 0x00779248
 	public static void ReturnAction(IPerformActionBase inAction)
 	{
 		PerformActionBase performActionBase = inAction as PerformActionBase;
@@ -59,25 +59,25 @@ public class PerformActionPool : IStaticVariableResetter
 		PerformActionPool.Pool[name].Add(performActionBase);
 	}
 
-	// Token: 0x0601B046 RID: 110662 RVA: 0x0075502B File Offset: 0x0075322B
+	// Token: 0x06018AA1 RID: 101025 RVA: 0x0077B097 File Offset: 0x00779297
 	public static void Clear()
 	{
 		PerformActionPool._pool = new Dictionary<EPerformAction, List<PerformActionBase>>();
 	}
 
-	// Token: 0x0601B047 RID: 110663 RVA: 0x00755037 File Offset: 0x00753237
+	// Token: 0x06018AA2 RID: 101026 RVA: 0x0077B0A3 File Offset: 0x007792A3
 	public static void CreateStaticDefaultValue()
 	{
 		PerformActionPool._pool = new Dictionary<EPerformAction, List<PerformActionBase>>();
 	}
 
-	// Token: 0x0601B048 RID: 110664 RVA: 0x00755043 File Offset: 0x00753243
+	// Token: 0x06018AA3 RID: 101027 RVA: 0x0077B0AF File Offset: 0x007792AF
 	public static void ResetStaticDefaultValue()
 	{
 		PerformActionPool._pool = null;
 	}
 
-	// Token: 0x0400D217 RID: 53783
+	// Token: 0x0400D639 RID: 54841
 	[Nullable(new byte[]
 	{
 		2,

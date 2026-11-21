@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007619 RID: 30233
+	// Token: 0x02007E27 RID: 32295
 	public struct IWriteLetterConfig : IFlatbufferObject
 	{
-		// Token: 0x1700E598 RID: 58776
-		// (get) Token: 0x06037112 RID: 225554 RVA: 0x007781AA File Offset: 0x007763AA
+		// Token: 0x1700F1D6 RID: 61910
+		// (get) Token: 0x0603A5B7 RID: 239031 RVA: 0x007DC2A6 File Offset: 0x007DA4A6
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06037113 RID: 225555 RVA: 0x007781B7 File Offset: 0x007763B7
+		// Token: 0x0603A5B8 RID: 239032 RVA: 0x007DC2B3 File Offset: 0x007DA4B3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06037114 RID: 225556 RVA: 0x007781C0 File Offset: 0x007763C0
+		// Token: 0x0603A5B9 RID: 239033 RVA: 0x007DC2BC File Offset: 0x007DA4BC
 		public static IWriteLetterConfig GetRootAsIWriteLetterConfig(ByteBuffer _bb)
 		{
 			return IWriteLetterConfig.GetRootAsIWriteLetterConfig(_bb, default(IWriteLetterConfig));
 		}
 
-		// Token: 0x06037115 RID: 225557 RVA: 0x007781DC File Offset: 0x007763DC
+		// Token: 0x0603A5BA RID: 239034 RVA: 0x007DC2D8 File Offset: 0x007DA4D8
 		public static IWriteLetterConfig GetRootAsIWriteLetterConfig(ByteBuffer _bb, IWriteLetterConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06037116 RID: 225558 RVA: 0x007781F9 File Offset: 0x007763F9
+		// Token: 0x0603A5BB RID: 239035 RVA: 0x007DC2F5 File Offset: 0x007DA4F5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06037117 RID: 225559 RVA: 0x00778208 File Offset: 0x00776408
+		// Token: 0x0603A5BC RID: 239036 RVA: 0x007DC304 File Offset: 0x007DA504
 		public IWriteLetterConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E599 RID: 58777
-		// (get) Token: 0x06037118 RID: 225560 RVA: 0x00778218 File Offset: 0x00776418
+		// Token: 0x1700F1D7 RID: 61911
+		// (get) Token: 0x0603A5BD RID: 239037 RVA: 0x007DC314 File Offset: 0x007DA514
 		public int LetterId
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06037119 RID: 225561 RVA: 0x00778254 File Offset: 0x00776454
+		// Token: 0x0603A5BE RID: 239038 RVA: 0x007DC350 File Offset: 0x007DA550
 		public static Offset<IWriteLetterConfig> CreateIWriteLetterConfig(FlatBufferBuilder builder, int LetterId = 0)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IWriteLetterConfig.EndIWriteLetterConfig(builder);
 		}
 
-		// Token: 0x0603711A RID: 225562 RVA: 0x0077826A File Offset: 0x0077646A
+		// Token: 0x0603A5BF RID: 239039 RVA: 0x007DC366 File Offset: 0x007DA566
 		public static void StartIWriteLetterConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0603711B RID: 225563 RVA: 0x00778273 File Offset: 0x00776473
+		// Token: 0x0603A5C0 RID: 239040 RVA: 0x007DC36F File Offset: 0x007DA56F
 		public static void AddLetterId(FlatBufferBuilder builder, int letterId)
 		{
 			builder.AddInt(0, letterId, 0);
 		}
 
-		// Token: 0x0603711C RID: 225564 RVA: 0x0077827E File Offset: 0x0077647E
+		// Token: 0x0603A5C1 RID: 239041 RVA: 0x007DC37A File Offset: 0x007DA57A
 		public static Offset<IWriteLetterConfig> EndIWriteLetterConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IWriteLetterConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0603711D RID: 225565 RVA: 0x0077828C File Offset: 0x0077648C
+		// Token: 0x0603A5C2 RID: 239042 RVA: 0x007DC388 File Offset: 0x007DA588
 		public IWriteLetterConfigT UnPack()
 		{
 			IWriteLetterConfigT writeLetterConfigT = new IWriteLetterConfigT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return writeLetterConfigT;
 		}
 
-		// Token: 0x0603711E RID: 225566 RVA: 0x007782A7 File Offset: 0x007764A7
+		// Token: 0x0603A5C3 RID: 239043 RVA: 0x007DC3A3 File Offset: 0x007DA5A3
 		public void UnPackTo(IWriteLetterConfigT _o)
 		{
 			_o.LetterId = this.LetterId;
 		}
 
-		// Token: 0x0603711F RID: 225567 RVA: 0x007782B8 File Offset: 0x007764B8
+		// Token: 0x0603A5C4 RID: 239044 RVA: 0x007DC3B4 File Offset: 0x007DA5B4
 		public static Offset<IWriteLetterConfig> Pack(FlatBufferBuilder builder, IWriteLetterConfigT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IWriteLetterConfig.CreateIWriteLetterConfig(builder, _o.LetterId);
 		}
 
-		// Token: 0x04012586 RID: 75142
+		// Token: 0x040135D0 RID: 79312
 		private Table __p;
 	}
 }

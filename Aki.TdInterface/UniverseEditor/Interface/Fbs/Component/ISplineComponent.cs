@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005980 RID: 22912
+	// Token: 0x02005F8D RID: 24461
 	public struct ISplineComponent : IFlatbufferObject
 	{
-		// Token: 0x1700ABEC RID: 44012
-		// (get) Token: 0x06026C95 RID: 158869 RVA: 0x00556B8B File Offset: 0x00554D8B
+		// Token: 0x1700B520 RID: 46368
+		// (get) Token: 0x060291FF RID: 168447 RVA: 0x0059D7F7 File Offset: 0x0059B9F7
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026C96 RID: 158870 RVA: 0x00556B98 File Offset: 0x00554D98
+		// Token: 0x06029200 RID: 168448 RVA: 0x0059D804 File Offset: 0x0059BA04
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06026C97 RID: 158871 RVA: 0x00556BA0 File Offset: 0x00554DA0
+		// Token: 0x06029201 RID: 168449 RVA: 0x0059D80C File Offset: 0x0059BA0C
 		public static ISplineComponent GetRootAsISplineComponent(ByteBuffer _bb)
 		{
 			return ISplineComponent.GetRootAsISplineComponent(_bb, default(ISplineComponent));
 		}
 
-		// Token: 0x06026C98 RID: 158872 RVA: 0x00556BBC File Offset: 0x00554DBC
+		// Token: 0x06029202 RID: 168450 RVA: 0x0059D828 File Offset: 0x0059BA28
 		public static ISplineComponent GetRootAsISplineComponent(ByteBuffer _bb, ISplineComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06026C99 RID: 158873 RVA: 0x00556BD9 File Offset: 0x00554DD9
+		// Token: 0x06029203 RID: 168451 RVA: 0x0059D845 File Offset: 0x0059BA45
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06026C9A RID: 158874 RVA: 0x00556BE8 File Offset: 0x00554DE8
+		// Token: 0x06029204 RID: 168452 RVA: 0x0059D854 File Offset: 0x0059BA54
 		public ISplineComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700ABED RID: 44013
-		// (get) Token: 0x06026C9B RID: 158875 RVA: 0x00556BF8 File Offset: 0x00554DF8
+		// Token: 0x1700B521 RID: 46369
+		// (get) Token: 0x06029205 RID: 168453 RVA: 0x0059D864 File Offset: 0x0059BA64
 		public bool Disabled
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700ABEE RID: 44014
-		// (get) Token: 0x06026C9C RID: 158876 RVA: 0x00556C38 File Offset: 0x00554E38
+		// Token: 0x1700B522 RID: 46370
+		// (get) Token: 0x06029206 RID: 168454 RVA: 0x0059D8A4 File Offset: 0x0059BAA4
 		public TSplineOption OptionType
 		{
 			get
@@ -73,7 +73,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026C9D RID: 158877 RVA: 0x00556C74 File Offset: 0x00554E74
+		// Token: 0x06029207 RID: 168455 RVA: 0x0059D8E0 File Offset: 0x0059BAE0
 		public TTable? Option<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -84,86 +84,86 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06026C9E RID: 158878 RVA: 0x00556CB8 File Offset: 0x00554EB8
+		// Token: 0x06029208 RID: 168456 RVA: 0x0059D924 File Offset: 0x0059BB24
 		public IAirPassageSpline OptionAsIAirPassageSpline()
 		{
 			return this.Option<IAirPassageSpline>().Value;
 		}
 
-		// Token: 0x06026C9F RID: 158879 RVA: 0x00556CD4 File Offset: 0x00554ED4
+		// Token: 0x06029209 RID: 168457 RVA: 0x0059D940 File Offset: 0x0059BB40
 		public IButterflySpline OptionAsIButterflySpline()
 		{
 			return this.Option<IButterflySpline>().Value;
 		}
 
-		// Token: 0x06026CA0 RID: 158880 RVA: 0x00556CF0 File Offset: 0x00554EF0
+		// Token: 0x0602920A RID: 168458 RVA: 0x0059D95C File Offset: 0x0059BB5C
 		public ICommonSpline OptionAsICommonSpline()
 		{
 			return this.Option<ICommonSpline>().Value;
 		}
 
-		// Token: 0x06026CA1 RID: 158881 RVA: 0x00556D0C File Offset: 0x00554F0C
+		// Token: 0x0602920B RID: 168459 RVA: 0x0059D978 File Offset: 0x0059BB78
 		public IContinuesVariableSpeedMovementSpline OptionAsIContinuesVariableSpeedMovementSpline()
 		{
 			return this.Option<IContinuesVariableSpeedMovementSpline>().Value;
 		}
 
-		// Token: 0x06026CA2 RID: 158882 RVA: 0x00556D28 File Offset: 0x00554F28
+		// Token: 0x0602920C RID: 168460 RVA: 0x0059D994 File Offset: 0x0059BB94
 		public IEffectSpline OptionAsIEffectSpline()
 		{
 			return this.Option<IEffectSpline>().Value;
 		}
 
-		// Token: 0x06026CA3 RID: 158883 RVA: 0x00556D44 File Offset: 0x00554F44
+		// Token: 0x0602920D RID: 168461 RVA: 0x0059D9B0 File Offset: 0x0059BBB0
 		public ILevelAISpline OptionAsILevelAISpline()
 		{
 			return this.Option<ILevelAISpline>().Value;
 		}
 
-		// Token: 0x06026CA4 RID: 158884 RVA: 0x00556D60 File Offset: 0x00554F60
+		// Token: 0x0602920E RID: 168462 RVA: 0x0059D9CC File Offset: 0x0059BBCC
 		public IMotorSlideSpline OptionAsIMotorSlideSpline()
 		{
 			return this.Option<IMotorSlideSpline>().Value;
 		}
 
-		// Token: 0x06026CA5 RID: 158885 RVA: 0x00556D7C File Offset: 0x00554F7C
+		// Token: 0x0602920F RID: 168463 RVA: 0x0059D9E8 File Offset: 0x0059BBE8
 		public IParkourSpline OptionAsIParkourSpline()
 		{
 			return this.Option<IParkourSpline>().Value;
 		}
 
-		// Token: 0x06026CA6 RID: 158886 RVA: 0x00556D98 File Offset: 0x00554F98
+		// Token: 0x06029210 RID: 168464 RVA: 0x0059DA04 File Offset: 0x0059BC04
 		public IPatrolSpline OptionAsIPatrolSpline()
 		{
 			return this.Option<IPatrolSpline>().Value;
 		}
 
-		// Token: 0x06026CA7 RID: 158887 RVA: 0x00556DB4 File Offset: 0x00554FB4
+		// Token: 0x06029211 RID: 168465 RVA: 0x0059DA20 File Offset: 0x0059BC20
 		public IRangeSpline OptionAsIRangeSpline()
 		{
 			return this.Option<IRangeSpline>().Value;
 		}
 
-		// Token: 0x06026CA8 RID: 158888 RVA: 0x00556DD0 File Offset: 0x00554FD0
+		// Token: 0x06029212 RID: 168466 RVA: 0x0059DA3C File Offset: 0x0059BC3C
 		public ISwordRiderRailSpline OptionAsISwordRiderRailSpline()
 		{
 			return this.Option<ISwordRiderRailSpline>().Value;
 		}
 
-		// Token: 0x06026CA9 RID: 158889 RVA: 0x00556DEC File Offset: 0x00554FEC
+		// Token: 0x06029213 RID: 168467 RVA: 0x0059DA58 File Offset: 0x0059BC58
 		public ITimePatrolSpline OptionAsITimePatrolSpline()
 		{
 			return this.Option<ITimePatrolSpline>().Value;
 		}
 
-		// Token: 0x06026CAA RID: 158890 RVA: 0x00556E08 File Offset: 0x00555008
+		// Token: 0x06029214 RID: 168468 RVA: 0x0059DA74 File Offset: 0x0059BC74
 		public IWaySpline OptionAsIWaySpline()
 		{
 			return this.Option<IWaySpline>().Value;
 		}
 
-		// Token: 0x1700ABEF RID: 44015
-		// (get) Token: 0x06026CAB RID: 158891 RVA: 0x00556E24 File Offset: 0x00555024
+		// Token: 0x1700B523 RID: 46371
+		// (get) Token: 0x06029215 RID: 168469 RVA: 0x0059DA90 File Offset: 0x0059BC90
 		public byte NullMask
 		{
 			get
@@ -177,7 +177,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026CAC RID: 158892 RVA: 0x00556E61 File Offset: 0x00555061
+		// Token: 0x06029216 RID: 168470 RVA: 0x0059DACD File Offset: 0x0059BCCD
 		public static Offset<ISplineComponent> CreateISplineComponent(FlatBufferBuilder builder, bool Disabled = false, TSplineOption Option_type = TSplineOption.NONE, int OptionOffset = 0, byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -188,43 +188,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISplineComponent.EndISplineComponent(builder);
 		}
 
-		// Token: 0x06026CAD RID: 158893 RVA: 0x00556E8D File Offset: 0x0055508D
+		// Token: 0x06029217 RID: 168471 RVA: 0x0059DAF9 File Offset: 0x0059BCF9
 		public static void StartISplineComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06026CAE RID: 158894 RVA: 0x00556E96 File Offset: 0x00555096
+		// Token: 0x06029218 RID: 168472 RVA: 0x0059DB02 File Offset: 0x0059BD02
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x06026CAF RID: 158895 RVA: 0x00556EA1 File Offset: 0x005550A1
+		// Token: 0x06029219 RID: 168473 RVA: 0x0059DB0D File Offset: 0x0059BD0D
 		public static void AddOptionType(FlatBufferBuilder builder, TSplineOption optionType)
 		{
 			builder.AddByte(1, (byte)optionType, 0);
 		}
 
-		// Token: 0x06026CB0 RID: 158896 RVA: 0x00556EAC File Offset: 0x005550AC
+		// Token: 0x0602921A RID: 168474 RVA: 0x0059DB18 File Offset: 0x0059BD18
 		public static void AddOption(FlatBufferBuilder builder, int optionOffset)
 		{
 			builder.AddOffset(2, optionOffset, 0);
 		}
 
-		// Token: 0x06026CB1 RID: 158897 RVA: 0x00556EB7 File Offset: 0x005550B7
+		// Token: 0x0602921B RID: 168475 RVA: 0x0059DB23 File Offset: 0x0059BD23
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x06026CB2 RID: 158898 RVA: 0x00556EC2 File Offset: 0x005550C2
+		// Token: 0x0602921C RID: 168476 RVA: 0x0059DB2E File Offset: 0x0059BD2E
 		public static Offset<ISplineComponent> EndISplineComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<ISplineComponent>(builder.EndTable());
 		}
 
-		// Token: 0x06026CB3 RID: 158899 RVA: 0x00556ED0 File Offset: 0x005550D0
+		// Token: 0x0602921D RID: 168477 RVA: 0x0059DB3C File Offset: 0x0059BD3C
 		public ISplineComponentT UnPack()
 		{
 			ISplineComponentT splineComponentT = new ISplineComponentT();
@@ -232,7 +232,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return splineComponentT;
 		}
 
-		// Token: 0x06026CB4 RID: 158900 RVA: 0x00556EEC File Offset: 0x005550EC
+		// Token: 0x0602921E RID: 168478 RVA: 0x0059DB58 File Offset: 0x0059BD58
 		public void UnPackTo(ISplineComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -283,7 +283,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06026CB5 RID: 158901 RVA: 0x00557274 File Offset: 0x00555474
+		// Token: 0x0602921F RID: 168479 RVA: 0x0059DEE0 File Offset: 0x0059C0E0
 		public static Offset<ISplineComponent> Pack(FlatBufferBuilder builder, ISplineComponentT _o)
 		{
 			if (_o == null)
@@ -295,7 +295,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISplineComponent.CreateISplineComponent(builder, _o.Disabled, option_type, optionOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400EF70 RID: 61296
+		// Token: 0x0400FC65 RID: 64613
 		private Table __p;
 	}
 }

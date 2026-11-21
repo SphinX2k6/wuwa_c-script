@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002AF1 RID: 10993
+	// Token: 0x02002DE5 RID: 11749
 	public class IEasterEggTrackingEvent : ITrackingEventTypeBase
 	{
-		// Token: 0x0600F0DE RID: 61662 RVA: 0x0022F480 File Offset: 0x0022D680
-		[NullableContext(1)]
+		// Token: 0x0600FF94 RID: 65428 RVA: 0x0024D18C File Offset: 0x0024B38C
 		public static IEasterEggTrackingEvent Create(IEasterEggTrackingEvent? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004CBE RID: 19646
-		// (get) Token: 0x0600F0DF RID: 61663 RVA: 0x0022F49F File Offset: 0x0022D69F
+		// Token: 0x17005078 RID: 20600
+		// (get) Token: 0x0600FF95 RID: 65429 RVA: 0x0024D1AB File Offset: 0x0024B3AB
 		public override ETrackingEventType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004CBF RID: 19647
-		// (get) Token: 0x0600F0E0 RID: 61664 RVA: 0x0022F4AC File Offset: 0x0022D6AC
+		// Token: 0x17005079 RID: 20601
+		// (get) Token: 0x0600FF96 RID: 65430 RVA: 0x0024D1B8 File Offset: 0x0024B3B8
 		public virtual int EasterEggId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008481 RID: 33921
+		// Token: 0x04008B85 RID: 35717
 		private IEasterEggTrackingEvent Instance;
 	}
 }

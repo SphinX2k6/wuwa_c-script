@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001AAD RID: 6829
+// Token: 0x02000F6C RID: 3948
 [NullableContext(1)]
 [Nullable(0)]
 public class AreaExplorePlayState : IAreaExplorePlayState
 {
-	// Token: 0x170010B8 RID: 4280
-	// (get) Token: 0x0600CA45 RID: 51781 RVA: 0x002E1940 File Offset: 0x002DFB40
-	// (set) Token: 0x0600CA46 RID: 51782 RVA: 0x002E1948 File Offset: 0x002DFB48
+	// Token: 0x170010DD RID: 4317
+	// (get) Token: 0x06009E56 RID: 40534 RVA: 0x002ECA90 File Offset: 0x002EAC90
+	// (set) Token: 0x06009E57 RID: 40535 RVA: 0x002ECA98 File Offset: 0x002EAC98
 	public EExploreType ExploreType { get; set; }
 
-	// Token: 0x170010B9 RID: 4281
-	// (get) Token: 0x0600CA47 RID: 51783 RVA: 0x002E1951 File Offset: 0x002DFB51
-	// (set) Token: 0x0600CA48 RID: 51784 RVA: 0x002E1959 File Offset: 0x002DFB59
+	// Token: 0x170010DE RID: 4318
+	// (get) Token: 0x06009E58 RID: 40536 RVA: 0x002ECAA1 File Offset: 0x002EACA1
+	// (set) Token: 0x06009E59 RID: 40537 RVA: 0x002ECAA9 File Offset: 0x002EACA9
 	public List<EPlayPointState> PlayPointStateList { get; set; }
 }

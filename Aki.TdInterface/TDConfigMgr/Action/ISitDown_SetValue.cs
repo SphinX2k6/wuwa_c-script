@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E74 RID: 7796
+	// Token: 0x020020A9 RID: 8361
 	public class ISitDown_SetValue
 	{
-		// Token: 0x040063A2 RID: 25506
+		// Token: 0x04006986 RID: 27014
 		public ELeisureInteract Type;
 
-		// Token: 0x040063A3 RID: 25507
+		// Token: 0x04006987 RID: 27015
 		public bool? OnlyAllowForwardStandUp;
 	}
 }

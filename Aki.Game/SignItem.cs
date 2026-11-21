@@ -4,10 +4,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200144A RID: 5194
+// Token: 0x020008FE RID: 2302
 public class SignItem : UiPanelBase
 {
-	// Token: 0x060092B4 RID: 37556 RVA: 0x001F7AA4 File Offset: 0x001F5CA4
+	// Token: 0x06006649 RID: 26185 RVA: 0x002005E0 File Offset: 0x001FE7E0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -35,7 +35,7 @@ public class SignItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060092B5 RID: 37557 RVA: 0x001F7BF8 File Offset: 0x001F5DF8
+	// Token: 0x0600664A RID: 26186 RVA: 0x00200734 File Offset: 0x001FE934
 	public void RefreshSignItem(bool isHyper, bool haveRedDot)
 	{
 		base.GetItem(1).SetUIActive(!isHyper);
@@ -47,40 +47,40 @@ public class SignItem : UiPanelBase
 		base.GetItem(7).SetUIActive(isHyper && haveRedDot);
 	}
 
-	// Token: 0x02007A82 RID: 31362
+	// Token: 0x02006C06 RID: 27654
 	private class ESignItem
 	{
-		// Token: 0x04028507 RID: 165127
+		// Token: 0x04023821 RID: 145441
 		public const int Button = 0;
 
-		// Token: 0x04028508 RID: 165128
+		// Token: 0x04023822 RID: 145442
 		public const int NormalItem1 = 1;
 
-		// Token: 0x04028509 RID: 165129
+		// Token: 0x04023823 RID: 145443
 		public const int NormalItem2 = 2;
 
-		// Token: 0x0402850A RID: 165130
+		// Token: 0x04023824 RID: 145444
 		public const int NormalItem3 = 3;
 
-		// Token: 0x0402850B RID: 165131
+		// Token: 0x04023825 RID: 145445
 		public const int GoldenItem1 = 4;
 
-		// Token: 0x0402850C RID: 165132
+		// Token: 0x04023826 RID: 145446
 		public const int GoldenItem2 = 5;
 
-		// Token: 0x0402850D RID: 165133
+		// Token: 0x04023827 RID: 145447
 		public const int GoldenItem3 = 6;
 
-		// Token: 0x0402850E RID: 165134
+		// Token: 0x04023828 RID: 145448
 		public const int GoldenItem4 = 7;
 
-		// Token: 0x0402850F RID: 165135
+		// Token: 0x04023829 RID: 145449
 		public const int ItemTexture = 8;
 
-		// Token: 0x04028510 RID: 165136
+		// Token: 0x0402382A RID: 145450
 		public const int ItemText = 9;
 
-		// Token: 0x04028511 RID: 165137
+		// Token: 0x0402382B RID: 145451
 		public const int RedDotItem = 10;
 	}
 }

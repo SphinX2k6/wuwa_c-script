@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A3C RID: 10812
+	// Token: 0x02002D29 RID: 11561
 	public class IFlyingFeatherScanEffect : ISpecificScanEffect
 	{
-		// Token: 0x0600EE1A RID: 60954 RVA: 0x0022AE96 File Offset: 0x00229096
-		[NullableContext(1)]
+		// Token: 0x0600FCB2 RID: 64690 RVA: 0x0024884A File Offset: 0x00246A4A
 		public static IFlyingFeatherScanEffect Create(IFlyingFeatherScanEffect? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B64 RID: 19300
-		// (get) Token: 0x0600EE1B RID: 60955 RVA: 0x0022AEB5 File Offset: 0x002290B5
+		// Token: 0x17004F0E RID: 20238
+		// (get) Token: 0x0600FCB3 RID: 64691 RVA: 0x00248869 File Offset: 0x00246A69
 		public override ESpecificScanType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004B65 RID: 19301
-		// (get) Token: 0x0600EE1C RID: 60956 RVA: 0x0022AEC2 File Offset: 0x002290C2
+		// Token: 0x17004F0F RID: 20239
+		// (get) Token: 0x0600FCB4 RID: 64692 RVA: 0x00248876 File Offset: 0x00246A76
 		public virtual int TriggerPosEntityId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008308 RID: 33544
+		// Token: 0x040089FB RID: 35323
 		private IFlyingFeatherScanEffect Instance;
 	}
 }

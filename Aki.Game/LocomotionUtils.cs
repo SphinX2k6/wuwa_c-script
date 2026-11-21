@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020031BF RID: 12735
+// Token: 0x0200272E RID: 10030
 [NullableContext(1)]
 [Nullable(0)]
 public class LocomotionUtils
 {
-	// Token: 0x0601B732 RID: 112434 RVA: 0x00782BEC File Offset: 0x00780DEC
+	// Token: 0x06019266 RID: 103014 RVA: 0x007AADF8 File Offset: 0x007A8FF8
 	private static EDetectCapsuleResult DetectCapsuleSizeLocationInternal(UShapeComponent shape, UTraceCapsuleElement element, UTraceSphereElement element2, Vector start, Vector outVector)
 	{
 		TraceElementCommon.Instance.SetStartLocation(element, start);
@@ -28,7 +28,7 @@ public class LocomotionUtils
 		return EDetectCapsuleResult.NormalHit;
 	}
 
-	// Token: 0x0601B733 RID: 112435 RVA: 0x00782CBC File Offset: 0x00780EBC
+	// Token: 0x06019267 RID: 103015 RVA: 0x007AAEC8 File Offset: 0x007A90C8
 	public static EResultForExitClimb FindSpaceForExitClimb(CharacterActorComponent actorComp, float halfHeight, float radius, float minRadius, Vector outVector)
 	{
 		UCapsuleComponent capsuleComponent = actorComp.Actor.CapsuleComponent;
@@ -107,7 +107,7 @@ public class LocomotionUtils
 		return EResultForExitClimb.NoSafety;
 	}
 
-	// Token: 0x0601B734 RID: 112436 RVA: 0x00782F34 File Offset: 0x00781134
+	// Token: 0x06019268 RID: 103016 RVA: 0x007AB140 File Offset: 0x007A9340
 	public static bool FindSpaceForSafety(CharacterActorComponent actorComp, float halfHeight, float radius, Vector outVector)
 	{
 		UCapsuleComponent capsuleComponent = actorComp.Actor.CapsuleComponent;
@@ -156,21 +156,21 @@ public class LocomotionUtils
 		return false;
 	}
 
-	// Token: 0x0400D748 RID: 55112
+	// Token: 0x0400DBCF RID: 56271
 	private const string PROFILE_KEY = "DetectCapsuleSizeLocation";
 
-	// Token: 0x0400D749 RID: 55113
+	// Token: 0x0400DBD0 RID: 56272
 	private const float HIT_TIME_THREHOLD = 0.95f;
 
-	// Token: 0x0400D74A RID: 55114
+	// Token: 0x0400DBD1 RID: 56273
 	[StaticVariableRuleIgnore]
 	private static readonly float SinCos45 = (float)Math.Cos(0.7853981633974483);
 
-	// Token: 0x0400D74B RID: 55115
+	// Token: 0x0400DBD2 RID: 56274
 	[StaticVariableRuleIgnore]
 	private static readonly Vector TmpVector = Vector.Create();
 
-	// Token: 0x0400D74C RID: 55116
+	// Token: 0x0400DBD3 RID: 56275
 	[StaticVariableRuleIgnore]
 	private static readonly Vector TmpVector2 = Vector.Create();
 }

@@ -12,14 +12,14 @@ using CSharpScript.Game.Module.Menu;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200202A RID: 8234
+// Token: 0x020014FD RID: 5373
 [NullableContext(1)]
 [Nullable(0)]
 [StaticVariableRuleIgnore]
 public class KeySettingViewModel
 {
-	// Token: 0x170013B2 RID: 5042
-	// (get) Token: 0x0601024D RID: 66125 RVA: 0x003EE2DF File Offset: 0x003EC4DF
+	// Token: 0x170013DF RID: 5087
+	// (get) Token: 0x0600D6B5 RID: 54965 RVA: 0x003FA8D7 File Offset: 0x003F8AD7
 	public static bool IsEditing
 	{
 		get
@@ -28,9 +28,9 @@ public class KeySettingViewModel
 		}
 	}
 
-	// Token: 0x170013B3 RID: 5043
-	// (get) Token: 0x0601024E RID: 66126 RVA: 0x003EE2E6 File Offset: 0x003EC4E6
-	// (set) Token: 0x0601024F RID: 66127 RVA: 0x003EE2ED File Offset: 0x003EC4ED
+	// Token: 0x170013E0 RID: 5088
+	// (get) Token: 0x0600D6B6 RID: 54966 RVA: 0x003FA8DE File Offset: 0x003F8ADE
+	// (set) Token: 0x0600D6B7 RID: 54967 RVA: 0x003FA8E5 File Offset: 0x003F8AE5
 	public static CSharpScript.Game.Module.Menu.EInputControllerType InputControllerType
 	{
 		get
@@ -43,8 +43,8 @@ public class KeySettingViewModel
 		}
 	}
 
-	// Token: 0x170013B4 RID: 5044
-	// (get) Token: 0x06010250 RID: 66128 RVA: 0x003EE2F8 File Offset: 0x003EC4F8
+	// Token: 0x170013E1 RID: 5089
+	// (get) Token: 0x0600D6B8 RID: 54968 RVA: 0x003FA8F0 File Offset: 0x003F8AF0
 	public static EKeySettingDeviceType CurrentDeviceType
 	{
 		get
@@ -62,7 +62,7 @@ public class KeySettingViewModel
 		}
 	}
 
-	// Token: 0x06010251 RID: 66129 RVA: 0x003EE31A File Offset: 0x003EC51A
+	// Token: 0x0600D6B9 RID: 54969 RVA: 0x003FA912 File Offset: 0x003F8B12
 	public static void OnViewStart()
 	{
 		KeySettingViewModel.AddEvents();
@@ -77,7 +77,7 @@ public class KeySettingViewModel
 		}
 	}
 
-	// Token: 0x06010252 RID: 66130 RVA: 0x003EE348 File Offset: 0x003EC548
+	// Token: 0x0600D6BA RID: 54970 RVA: 0x003FA940 File Offset: 0x003F8B40
 	public static void InitData(EKeySettingExclusiveType type = EKeySettingExclusiveType.None)
 	{
 		IReadOnlyList<KeyType> allKeyTypeConfig = MenuBaseConfig.Instance.GetAllKeyTypeConfig();
@@ -91,7 +91,7 @@ public class KeySettingViewModel
 		KeySettingViewModel.InitializeXboxKeySettingRowData(allKeyTypeConfig, type);
 	}
 
-	// Token: 0x06010253 RID: 66131 RVA: 0x003EE386 File Offset: 0x003EC586
+	// Token: 0x0600D6BB RID: 54971 RVA: 0x003FA97E File Offset: 0x003F8B7E
 	public static List<KeySettingRowData> GetKeySettingDataList()
 	{
 		if (KeySettingViewModel.InputControllerType == CSharpScript.Game.Module.Menu.EInputControllerType.Keyboard)
@@ -105,13 +105,13 @@ public class KeySettingViewModel
 		return new List<KeySettingRowData>();
 	}
 
-	// Token: 0x06010254 RID: 66132 RVA: 0x003EE3A9 File Offset: 0x003EC5A9
+	// Token: 0x0600D6BC RID: 54972 RVA: 0x003FA9A1 File Offset: 0x003F8BA1
 	public static void OnViewDestroy()
 	{
 		KeySettingViewModel.Clear();
 	}
 
-	// Token: 0x06010255 RID: 66133 RVA: 0x003EE3B0 File Offset: 0x003EC5B0
+	// Token: 0x0600D6BD RID: 54973 RVA: 0x003FA9A8 File Offset: 0x003F8BA8
 	public static void ResetSettings()
 	{
 		foreach (KeySettingRowData keySettingRowData in KeySettingViewModel.KeyBoardSettingRowDataList)
@@ -132,13 +132,13 @@ public class KeySettingViewModel
 		}
 	}
 
-	// Token: 0x06010256 RID: 66134 RVA: 0x003EE4C0 File Offset: 0x003EC6C0
+	// Token: 0x0600D6BE RID: 54974 RVA: 0x003FAAB8 File Offset: 0x003F8CB8
 	public static void ExternalFinishEditKey()
 	{
 		KeySettingViewModel.FinishEditKey();
 	}
 
-	// Token: 0x06010257 RID: 66135 RVA: 0x003EE4C8 File Offset: 0x003EC6C8
+	// Token: 0x0600D6BF RID: 54975 RVA: 0x003FAAC0 File Offset: 0x003F8CC0
 	public static void WaitKeySetting(KeySettingRowData data, IKeySettingItem item)
 	{
 		KeySettingViewModel.WaitKeySettingRowData = data;
@@ -187,26 +187,26 @@ public class KeySettingViewModel
 		KeySettingViewModel.BeginEditKey();
 	}
 
-	// Token: 0x06010258 RID: 66136 RVA: 0x003EE5C9 File Offset: 0x003EC7C9
+	// Token: 0x0600D6C0 RID: 54976 RVA: 0x003FABC1 File Offset: 0x003F8DC1
 	[NullableContext(2)]
 	public static void SelectKey(KeySettingRowData data)
 	{
 		KeySettingViewModel.NotifyOnKeySelected(data);
 	}
 
-	// Token: 0x06010259 RID: 66137 RVA: 0x003EE5D1 File Offset: 0x003EC7D1
+	// Token: 0x0600D6C1 RID: 54977 RVA: 0x003FABC9 File Offset: 0x003F8DC9
 	public static void HoverKey(KeySettingRowData data)
 	{
 		KeySettingViewModel.NotifyOnKeyHover(data);
 	}
 
-	// Token: 0x0601025A RID: 66138 RVA: 0x003EE5D9 File Offset: 0x003EC7D9
+	// Token: 0x0600D6C2 RID: 54978 RVA: 0x003FABD1 File Offset: 0x003F8DD1
 	public static void UnHoverKey(KeySettingRowData data)
 	{
 		KeySettingViewModel.NotifyOnKeyUnHover(data);
 	}
 
-	// Token: 0x0601025B RID: 66139 RVA: 0x003EE5E1 File Offset: 0x003EC7E1
+	// Token: 0x0600D6C3 RID: 54979 RVA: 0x003FABD9 File Offset: 0x003F8DD9
 	public static void AddOnWaitKeySettingDelegate(Action<KeySettingRowData, IKeySettingItem> d)
 	{
 		if (!KeySettingViewModel.DelegatesOnWaitKeySetting.Contains(d))
@@ -215,7 +215,7 @@ public class KeySettingViewModel
 		}
 	}
 
-	// Token: 0x0601025C RID: 66140 RVA: 0x003EE5FC File Offset: 0x003EC7FC
+	// Token: 0x0600D6C4 RID: 54980 RVA: 0x003FABF4 File Offset: 0x003F8DF4
 	public static void RemoveOnWaitKeySettingDelegate(Action<KeySettingRowData, IKeySettingItem> d)
 	{
 		int num = KeySettingViewModel.DelegatesOnWaitKeySetting.IndexOf(d);
@@ -225,7 +225,7 @@ public class KeySettingViewModel
 		}
 	}
 
-	// Token: 0x0601025D RID: 66141 RVA: 0x003EE624 File Offset: 0x003EC824
+	// Token: 0x0600D6C5 RID: 54981 RVA: 0x003FAC1C File Offset: 0x003F8E1C
 	public static void AddOnKeyChangeDelegate(Action<KeySettingRowData, CSharpScript.Game.Module.Menu.EInputControllerType> d)
 	{
 		if (!KeySettingViewModel.DelegatesOnKeyChange.Contains(d))
@@ -234,7 +234,7 @@ public class KeySettingViewModel
 		}
 	}
 
-	// Token: 0x0601025E RID: 66142 RVA: 0x003EE640 File Offset: 0x003EC840
+	// Token: 0x0600D6C6 RID: 54982 RVA: 0x003FAC38 File Offset: 0x003F8E38
 	public static void RemoveOnKeyChangeDelegate(Action<KeySettingRowData, CSharpScript.Game.Module.Menu.EInputControllerType> d)
 	{
 		int num = KeySettingViewModel.DelegatesOnKeyChange.IndexOf(d);
@@ -244,7 +244,7 @@ public class KeySettingViewModel
 		}
 	}
 
-	// Token: 0x0601025F RID: 66143 RVA: 0x003EE668 File Offset: 0x003EC868
+	// Token: 0x0600D6C7 RID: 54983 RVA: 0x003FAC60 File Offset: 0x003F8E60
 	public static void AddOnKeySelectedDelegate([Nullable(new byte[]
 	{
 		1,
@@ -257,7 +257,7 @@ public class KeySettingViewModel
 		}
 	}
 
-	// Token: 0x06010260 RID: 66144 RVA: 0x003EE684 File Offset: 0x003EC884
+	// Token: 0x0600D6C8 RID: 54984 RVA: 0x003FAC7C File Offset: 0x003F8E7C
 	public static void RemoveOnKeySelectedDelegate([Nullable(new byte[]
 	{
 		1,
@@ -271,7 +271,7 @@ public class KeySettingViewModel
 		}
 	}
 
-	// Token: 0x06010261 RID: 66145 RVA: 0x003EE6AC File Offset: 0x003EC8AC
+	// Token: 0x0600D6C9 RID: 54985 RVA: 0x003FACA4 File Offset: 0x003F8EA4
 	public static void AddOnBeforeBeginEditKeyDelegate(Action d)
 	{
 		if (!KeySettingViewModel.DelegatesOnBeforeBeginEditKey.Contains(d))
@@ -280,7 +280,7 @@ public class KeySettingViewModel
 		}
 	}
 
-	// Token: 0x06010262 RID: 66146 RVA: 0x003EE6C8 File Offset: 0x003EC8C8
+	// Token: 0x0600D6CA RID: 54986 RVA: 0x003FACC0 File Offset: 0x003F8EC0
 	public static void RemoveOnBeforeBeginEditKeyDelegate(Action d)
 	{
 		int num = KeySettingViewModel.DelegatesOnBeforeBeginEditKey.IndexOf(d);
@@ -290,7 +290,7 @@ public class KeySettingViewModel
 		}
 	}
 
-	// Token: 0x06010263 RID: 66147 RVA: 0x003EE6F0 File Offset: 0x003EC8F0
+	// Token: 0x0600D6CB RID: 54987 RVA: 0x003FACE8 File Offset: 0x003F8EE8
 	public static void AddOnBeginEditKeyDelegate(Action d)
 	{
 		if (!KeySettingViewModel.DelegatesOnBeginEditKey.Contains(d))
@@ -299,7 +299,7 @@ public class KeySettingViewModel
 		}
 	}
 
-	// Token: 0x06010264 RID: 66148 RVA: 0x003EE70C File Offset: 0x003EC90C
+	// Token: 0x0600D6CC RID: 54988 RVA: 0x003FAD04 File Offset: 0x003F8F04
 	public static void RemoveOnBeginEditKeyDelegate(Action d)
 	{
 		int num = KeySettingViewModel.DelegatesOnBeginEditKey.IndexOf(d);
@@ -309,7 +309,7 @@ public class KeySettingViewModel
 		}
 	}
 
-	// Token: 0x06010265 RID: 66149 RVA: 0x003EE734 File Offset: 0x003EC934
+	// Token: 0x0600D6CD RID: 54989 RVA: 0x003FAD2C File Offset: 0x003F8F2C
 	public static void AddOnFinishEditKeyDelegate(Action d)
 	{
 		if (!KeySettingViewModel.DelegatesOnFinishEditKey.Contains(d))
@@ -318,7 +318,7 @@ public class KeySettingViewModel
 		}
 	}
 
-	// Token: 0x06010266 RID: 66150 RVA: 0x003EE750 File Offset: 0x003EC950
+	// Token: 0x0600D6CE RID: 54990 RVA: 0x003FAD48 File Offset: 0x003F8F48
 	public static void RemoveOnFinishEditKeyDelegate(Action d)
 	{
 		int num = KeySettingViewModel.DelegatesOnFinishEditKey.IndexOf(d);
@@ -328,7 +328,7 @@ public class KeySettingViewModel
 		}
 	}
 
-	// Token: 0x06010267 RID: 66151 RVA: 0x003EE778 File Offset: 0x003EC978
+	// Token: 0x0600D6CF RID: 54991 RVA: 0x003FAD70 File Offset: 0x003F8F70
 	public static void AddOnKeyHoverDelegate(Action<KeySettingRowData> d)
 	{
 		if (!KeySettingViewModel.DelegatesOnKeyHover.Contains(d))
@@ -337,7 +337,7 @@ public class KeySettingViewModel
 		}
 	}
 
-	// Token: 0x06010268 RID: 66152 RVA: 0x003EE794 File Offset: 0x003EC994
+	// Token: 0x0600D6D0 RID: 54992 RVA: 0x003FAD8C File Offset: 0x003F8F8C
 	public static void RemoveOnKeyHoverDelegate(Action<KeySettingRowData> d)
 	{
 		int num = KeySettingViewModel.DelegatesOnKeyHover.IndexOf(d);
@@ -347,7 +347,7 @@ public class KeySettingViewModel
 		}
 	}
 
-	// Token: 0x06010269 RID: 66153 RVA: 0x003EE7BC File Offset: 0x003EC9BC
+	// Token: 0x0600D6D1 RID: 54993 RVA: 0x003FADB4 File Offset: 0x003F8FB4
 	public static void AddOnKeyUnHoverDelegate(Action<KeySettingRowData> d)
 	{
 		if (!KeySettingViewModel.DelegatesOnKeyUnHover.Contains(d))
@@ -356,7 +356,7 @@ public class KeySettingViewModel
 		}
 	}
 
-	// Token: 0x0601026A RID: 66154 RVA: 0x003EE7D8 File Offset: 0x003EC9D8
+	// Token: 0x0600D6D2 RID: 54994 RVA: 0x003FADD0 File Offset: 0x003F8FD0
 	public static void RemoveOnKeyUnHoverDelegate(Action<KeySettingRowData> d)
 	{
 		int num = KeySettingViewModel.DelegatesOnKeyUnHover.IndexOf(d);
@@ -366,7 +366,7 @@ public class KeySettingViewModel
 		}
 	}
 
-	// Token: 0x0601026B RID: 66155 RVA: 0x003EE800 File Offset: 0x003ECA00
+	// Token: 0x0600D6D3 RID: 54995 RVA: 0x003FADF8 File Offset: 0x003F8FF8
 	private static void NotifyOnWaitKeySetting(KeySettingRowData data, IKeySettingItem item)
 	{
 		foreach (Action<KeySettingRowData, IKeySettingItem> action in KeySettingViewModel.DelegatesOnWaitKeySetting)
@@ -375,7 +375,7 @@ public class KeySettingViewModel
 		}
 	}
 
-	// Token: 0x0601026C RID: 66156 RVA: 0x003EE854 File Offset: 0x003ECA54
+	// Token: 0x0600D6D4 RID: 54996 RVA: 0x003FAE4C File Offset: 0x003F904C
 	private static void NotifyOnKeyChange(KeySettingRowData data, CSharpScript.Game.Module.Menu.EInputControllerType inputControllerType)
 	{
 		foreach (Action<KeySettingRowData, CSharpScript.Game.Module.Menu.EInputControllerType> action in KeySettingViewModel.DelegatesOnKeyChange)
@@ -385,7 +385,7 @@ public class KeySettingViewModel
 		EventSystem.Instance.Emit<KeySettingRowData, CSharpScript.Game.Module.Menu.EInputControllerType>(EEventName.OnCommonKeySettingKeyChange, data, inputControllerType);
 	}
 
-	// Token: 0x0601026D RID: 66157 RVA: 0x003EE8B8 File Offset: 0x003ECAB8
+	// Token: 0x0600D6D5 RID: 54997 RVA: 0x003FAEB0 File Offset: 0x003F90B0
 	[NullableContext(2)]
 	private static void NotifyOnKeySelected(KeySettingRowData data)
 	{
@@ -395,7 +395,7 @@ public class KeySettingViewModel
 		}
 	}
 
-	// Token: 0x0601026E RID: 66158 RVA: 0x003EE908 File Offset: 0x003ECB08
+	// Token: 0x0600D6D6 RID: 54998 RVA: 0x003FAF00 File Offset: 0x003F9100
 	private static void NotifyOnBeforeBeginEditKey()
 	{
 		foreach (Action action in KeySettingViewModel.DelegatesOnBeforeBeginEditKey)
@@ -404,7 +404,7 @@ public class KeySettingViewModel
 		}
 	}
 
-	// Token: 0x0601026F RID: 66159 RVA: 0x003EE958 File Offset: 0x003ECB58
+	// Token: 0x0600D6D7 RID: 54999 RVA: 0x003FAF50 File Offset: 0x003F9150
 	private static void NotifyOnBeginEditKey()
 	{
 		foreach (Action action in KeySettingViewModel.DelegatesOnBeginEditKey)
@@ -413,7 +413,7 @@ public class KeySettingViewModel
 		}
 	}
 
-	// Token: 0x06010270 RID: 66160 RVA: 0x003EE9A8 File Offset: 0x003ECBA8
+	// Token: 0x0600D6D8 RID: 55000 RVA: 0x003FAFA0 File Offset: 0x003F91A0
 	private static void NotifyOnFinishEditKey()
 	{
 		foreach (Action action in KeySettingViewModel.DelegatesOnFinishEditKey)
@@ -422,7 +422,7 @@ public class KeySettingViewModel
 		}
 	}
 
-	// Token: 0x06010271 RID: 66161 RVA: 0x003EE9F8 File Offset: 0x003ECBF8
+	// Token: 0x0600D6D9 RID: 55001 RVA: 0x003FAFF0 File Offset: 0x003F91F0
 	private static void NotifyOnKeyHover(KeySettingRowData data)
 	{
 		foreach (Action<KeySettingRowData> action in KeySettingViewModel.DelegatesOnKeyHover)
@@ -431,7 +431,7 @@ public class KeySettingViewModel
 		}
 	}
 
-	// Token: 0x06010272 RID: 66162 RVA: 0x003EEA48 File Offset: 0x003ECC48
+	// Token: 0x0600D6DA RID: 55002 RVA: 0x003FB040 File Offset: 0x003F9240
 	private static void NotifyOnKeyUnHover(KeySettingRowData data)
 	{
 		foreach (Action<KeySettingRowData> action in KeySettingViewModel.DelegatesOnKeyUnHover)
@@ -440,7 +440,7 @@ public class KeySettingViewModel
 		}
 	}
 
-	// Token: 0x06010273 RID: 66163 RVA: 0x003EEA98 File Offset: 0x003ECC98
+	// Token: 0x0600D6DB RID: 55003 RVA: 0x003FB090 File Offset: 0x003F9290
 	private static void AddEvents()
 	{
 		EventSystem instance = EventSystem.Instance;
@@ -453,7 +453,7 @@ public class KeySettingViewModel
 		instance.Add(name, handle);
 	}
 
-	// Token: 0x06010274 RID: 66164 RVA: 0x003EEAC5 File Offset: 0x003ECCC5
+	// Token: 0x0600D6DC RID: 55004 RVA: 0x003FB0BD File Offset: 0x003F92BD
 	private static void RemoveEvents()
 	{
 		EventSystem instance = EventSystem.Instance;
@@ -466,7 +466,7 @@ public class KeySettingViewModel
 		instance.Remove(name, handle);
 	}
 
-	// Token: 0x06010275 RID: 66165 RVA: 0x003EEAF4 File Offset: 0x003ECCF4
+	// Token: 0x0600D6DD RID: 55005 RVA: 0x003FB0EC File Offset: 0x003F92EC
 	private static void Clear()
 	{
 		KeySettingViewModel.DelegatesOnWaitKeySetting.Clear();
@@ -488,7 +488,7 @@ public class KeySettingViewModel
 		KeySettingViewModel.RemoveEvents();
 	}
 
-	// Token: 0x06010276 RID: 66166 RVA: 0x003EEB9C File Offset: 0x003ECD9C
+	// Token: 0x0600D6DE RID: 55006 RVA: 0x003FB194 File Offset: 0x003F9394
 	private static void InitializeKeyBoardSettingRowData(IReadOnlyList<KeyType> keyTypeConfigList, EKeySettingExclusiveType exclusiveType)
 	{
 		KeySettingViewModel.KeyBoardSettingRowDataList.Clear();
@@ -536,7 +536,7 @@ public class KeySettingViewModel
 		}
 	}
 
-	// Token: 0x06010277 RID: 66167 RVA: 0x003EED40 File Offset: 0x003ECF40
+	// Token: 0x0600D6DF RID: 55007 RVA: 0x003FB338 File Offset: 0x003F9538
 	private static void InitializeXboxKeySettingRowData(IReadOnlyList<KeyType> keyTypeConfigList, EKeySettingExclusiveType exclusiveType)
 	{
 		KeySettingViewModel.GamepadKeySettingRowDataList.Clear();
@@ -584,7 +584,7 @@ public class KeySettingViewModel
 		}
 	}
 
-	// Token: 0x06010278 RID: 66168 RVA: 0x003EEEE4 File Offset: 0x003ED0E4
+	// Token: 0x0600D6E0 RID: 55008 RVA: 0x003FB4DC File Offset: 0x003F96DC
 	private static void RecordEditKey(string keyName)
 	{
 		KeySettingViewModel.EditKeyNameList.Add(keyName);
@@ -596,13 +596,13 @@ public class KeySettingViewModel
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x06010279 RID: 66169 RVA: 0x003EEF2C File Offset: 0x003ED12C
+	// Token: 0x0600D6E1 RID: 55009 RVA: 0x003FB524 File Offset: 0x003F9724
 	private static void ClearEditKeyNameList()
 	{
 		KeySettingViewModel.EditKeyNameList.Clear();
 	}
 
-	// Token: 0x0601027A RID: 66170 RVA: 0x003EEF38 File Offset: 0x003ED138
+	// Token: 0x0600D6E2 RID: 55010 RVA: 0x003FB530 File Offset: 0x003F9730
 	private static void BeginEditKey()
 	{
 		KeySettingViewModel.NotifyOnBeforeBeginEditKey();
@@ -616,7 +616,7 @@ public class KeySettingViewModel
 		}, null, null);
 	}
 
-	// Token: 0x0601027B RID: 66171 RVA: 0x003EEF70 File Offset: 0x003ED170
+	// Token: 0x0600D6E3 RID: 55011 RVA: 0x003FB568 File Offset: 0x003F9768
 	private static void FinishEditKey()
 	{
 		Log.Instance.Info(ELogModule.InputSettings, ELogAuthor.XXJ, "[KeySetting]当输入改键结束时", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -628,7 +628,7 @@ public class KeySettingViewModel
 		KeySettingViewModel.IsEditingInternal = false;
 	}
 
-	// Token: 0x0601027C RID: 66172 RVA: 0x003EEFC8 File Offset: 0x003ED1C8
+	// Token: 0x0600D6E4 RID: 55012 RVA: 0x003FB5C0 File Offset: 0x003F97C0
 	private static void SetInputDisable(bool isDisable)
 	{
 		Log instance = Log.Instance;
@@ -643,7 +643,7 @@ public class KeySettingViewModel
 		UiLayer.Instance.SetShowMaskLayer("KeySettingMask", isDisable);
 	}
 
-	// Token: 0x0601027D RID: 66173 RVA: 0x003EF02B File Offset: 0x003ED22B
+	// Token: 0x0600D6E5 RID: 55013 RVA: 0x003FB623 File Offset: 0x003F9823
 	private static void RemoveEditKeyTimerHandle()
 	{
 		if (KeySettingViewModel.EditKeyTimerHandle != null && TimerSystem.GameplayTimeInstance.Has(KeySettingViewModel.EditKeyTimerHandle))
@@ -653,7 +653,7 @@ public class KeySettingViewModel
 		}
 	}
 
-	// Token: 0x0601027E RID: 66174 RVA: 0x003EF05C File Offset: 0x003ED25C
+	// Token: 0x0600D6E6 RID: 55014 RVA: 0x003FB654 File Offset: 0x003F9854
 	[return: Nullable(2)]
 	private static KeySettingRowData GetSameKeySettingRowData(List<KeySettingRowData> keySettingRowDataList, List<string> checkKeyNameList, [Nullable(2)] KeySettingRowData filterKeyRowData)
 	{
@@ -671,7 +671,7 @@ public class KeySettingViewModel
 		return null;
 	}
 
-	// Token: 0x0601027F RID: 66175 RVA: 0x003EF0CC File Offset: 0x003ED2CC
+	// Token: 0x0600D6E7 RID: 55015 RVA: 0x003FB6C4 File Offset: 0x003F98C4
 	private static List<KeySettingRowData> SetConnectedKey(KeySettingRowData keySettingRawData, List<string> keyNameList)
 	{
 		List<KeySettingRowData> list = new List<KeySettingRowData>();
@@ -696,7 +696,7 @@ public class KeySettingViewModel
 		return list;
 	}
 
-	// Token: 0x06010280 RID: 66176 RVA: 0x003EF17C File Offset: 0x003ED37C
+	// Token: 0x0600D6E8 RID: 55016 RVA: 0x003FB774 File Offset: 0x003F9974
 	private static void SetAndRefreshConnectedKey(KeySettingRowData keySettingRawData, List<string> keyNameList)
 	{
 		foreach (KeySettingRowData data in KeySettingViewModel.SetConnectedKey(keySettingRawData, keyNameList))
@@ -705,7 +705,7 @@ public class KeySettingViewModel
 		}
 	}
 
-	// Token: 0x06010281 RID: 66177 RVA: 0x003EF1D4 File Offset: 0x003ED3D4
+	// Token: 0x0600D6E9 RID: 55017 RVA: 0x003FB7CC File Offset: 0x003F99CC
 	private unsafe static void OnInputAnyKey(bool bPress, FKey key)
 	{
 		if (UiManager.Instance.IsViewOpen(EUiViewName.RepeatKeyTipsView))
@@ -873,7 +873,7 @@ public class KeySettingViewModel
 		}
 	}
 
-	// Token: 0x06010282 RID: 66178 RVA: 0x003EF5D0 File Offset: 0x003ED7D0
+	// Token: 0x0600D6EA RID: 55018 RVA: 0x003FBBC8 File Offset: 0x003F9DC8
 	private static void OnConfirmChangeBothAction(bool bRevert)
 	{
 		if (KeySettingViewModel.WaitKeySettingRowData == null)
@@ -891,13 +891,13 @@ public class KeySettingViewModel
 		KeySettingViewModel.FinishEditKey();
 	}
 
-	// Token: 0x04007768 RID: 30568
+	// Token: 0x04007851 RID: 30801
 	private static readonly List<Action<KeySettingRowData, IKeySettingItem>> DelegatesOnWaitKeySetting = new List<Action<KeySettingRowData, IKeySettingItem>>();
 
-	// Token: 0x04007769 RID: 30569
+	// Token: 0x04007852 RID: 30802
 	private static readonly List<Action<KeySettingRowData, CSharpScript.Game.Module.Menu.EInputControllerType>> DelegatesOnKeyChange = new List<Action<KeySettingRowData, CSharpScript.Game.Module.Menu.EInputControllerType>>();
 
-	// Token: 0x0400776A RID: 30570
+	// Token: 0x04007853 RID: 30803
 	[Nullable(new byte[]
 	{
 		1,
@@ -906,65 +906,65 @@ public class KeySettingViewModel
 	})]
 	private static readonly List<Action<KeySettingRowData>> DelegatesOnKeySelected = new List<Action<KeySettingRowData>>();
 
-	// Token: 0x0400776B RID: 30571
+	// Token: 0x04007854 RID: 30804
 	private static readonly List<Action> DelegatesOnBeforeBeginEditKey = new List<Action>();
 
-	// Token: 0x0400776C RID: 30572
+	// Token: 0x04007855 RID: 30805
 	private static readonly List<Action> DelegatesOnBeginEditKey = new List<Action>();
 
-	// Token: 0x0400776D RID: 30573
+	// Token: 0x04007856 RID: 30806
 	private static readonly List<Action> DelegatesOnFinishEditKey = new List<Action>();
 
-	// Token: 0x0400776E RID: 30574
+	// Token: 0x04007857 RID: 30807
 	private static readonly List<Action<KeySettingRowData>> DelegatesOnKeyHover = new List<Action<KeySettingRowData>>();
 
-	// Token: 0x0400776F RID: 30575
+	// Token: 0x04007858 RID: 30808
 	private static readonly List<Action<KeySettingRowData>> DelegatesOnKeyUnHover = new List<Action<KeySettingRowData>>();
 
-	// Token: 0x04007770 RID: 30576
+	// Token: 0x04007859 RID: 30809
 	[Nullable(2)]
 	private static KeySettingRowData WaitKeySettingRowData;
 
-	// Token: 0x04007771 RID: 30577
+	// Token: 0x0400785A RID: 30810
 	private static readonly List<string> EditKeyNameList = new List<string>();
 
-	// Token: 0x04007772 RID: 30578
+	// Token: 0x0400785B RID: 30811
 	private static readonly List<KeySettingRowData> GamepadKeySettingRowDataList = new List<KeySettingRowData>();
 
-	// Token: 0x04007773 RID: 30579
+	// Token: 0x0400785C RID: 30812
 	private static readonly List<KeySettingRowData> HiddenGamepadKeySettingRowDataList = new List<KeySettingRowData>();
 
-	// Token: 0x04007774 RID: 30580
+	// Token: 0x0400785D RID: 30813
 	private static readonly List<KeySettingRowData> KeyBoardSettingRowDataList = new List<KeySettingRowData>();
 
-	// Token: 0x04007775 RID: 30581
+	// Token: 0x0400785E RID: 30814
 	private static readonly List<KeySettingRowData> HiddenKeyBoardSettingRowDataList = new List<KeySettingRowData>();
 
-	// Token: 0x04007776 RID: 30582
+	// Token: 0x0400785F RID: 30815
 	private static readonly Dictionary<int, KeySettingRowData> KeySettingRowDataMap = new Dictionary<int, KeySettingRowData>();
 
-	// Token: 0x04007777 RID: 30583
+	// Token: 0x04007860 RID: 30816
 	private static readonly Dictionary<int, KeySettingRowData> HiddenKeySettingRowDataMap = new Dictionary<int, KeySettingRowData>();
 
-	// Token: 0x04007778 RID: 30584
+	// Token: 0x04007861 RID: 30817
 	private static CSharpScript.Game.Module.Menu.EInputControllerType InputControllerTypeInternal = CSharpScript.Game.Module.Menu.EInputControllerType.None;
 
-	// Token: 0x04007779 RID: 30585
+	// Token: 0x04007862 RID: 30818
 	private static bool IsEditingInternal = false;
 
-	// Token: 0x0400777A RID: 30586
+	// Token: 0x04007863 RID: 30819
 	[Nullable(2)]
 	private static TimerHandle EditKeyTimerHandle;
 
-	// Token: 0x02008620 RID: 34336
+	// Token: 0x020077A7 RID: 30631
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x0402BA56 RID: 178774
+		// Token: 0x04026D65 RID: 159077
 		[Nullable(0)]
 		public static Action<bool> <0>__OnConfirmChangeBothAction;
 
-		// Token: 0x0402BA57 RID: 178775
+		// Token: 0x04026D66 RID: 159078
 		[Nullable(new byte[]
 		{
 			0,

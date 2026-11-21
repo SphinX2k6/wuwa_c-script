@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020076F6 RID: 30454
+	// Token: 0x02007F0A RID: 32522
 	public class TInfrastructureItemDeliveryOptionUnion
 	{
-		// Token: 0x1700E63D RID: 58941
-		// (get) Token: 0x060375B8 RID: 226744 RVA: 0x0077F742 File Offset: 0x0077D942
-		// (set) Token: 0x060375B9 RID: 226745 RVA: 0x0077F74A File Offset: 0x0077D94A
+		// Token: 0x1700F27F RID: 62079
+		// (get) Token: 0x0603AA85 RID: 240261 RVA: 0x007E3C4E File Offset: 0x007E1E4E
+		// (set) Token: 0x0603AA86 RID: 240262 RVA: 0x007E3C56 File Offset: 0x007E1E56
 		public TInfrastructureItemDeliveryOption Type { get; set; }
 
-		// Token: 0x1700E63E RID: 58942
-		// (get) Token: 0x060375BA RID: 226746 RVA: 0x0077F753 File Offset: 0x0077D953
-		// (set) Token: 0x060375BB RID: 226747 RVA: 0x0077F75B File Offset: 0x0077D95B
+		// Token: 0x1700F280 RID: 62080
+		// (get) Token: 0x0603AA87 RID: 240263 RVA: 0x007E3C5F File Offset: 0x007E1E5F
+		// (set) Token: 0x0603AA88 RID: 240264 RVA: 0x007E3C67 File Offset: 0x007E1E67
 		public object Value { get; set; }
 
-		// Token: 0x060375BC RID: 226748 RVA: 0x0077F764 File Offset: 0x0077D964
+		// Token: 0x0603AA89 RID: 240265 RVA: 0x007E3C70 File Offset: 0x007E1E70
 		public TInfrastructureItemDeliveryOptionUnion()
 		{
 			this.Type = TInfrastructureItemDeliveryOption.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060375BD RID: 226749 RVA: 0x0077F77A File Offset: 0x0077D97A
+		// Token: 0x0603AA8A RID: 240266 RVA: 0x007E3C86 File Offset: 0x007E1E86
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060375BE RID: 226750 RVA: 0x0077F78C File Offset: 0x0077D98C
+		// Token: 0x0603AA8B RID: 240267 RVA: 0x007E3C98 File Offset: 0x007E1E98
 		public IInfrastructureItemDeliveryObservatoryT AsIInfrastructureItemDeliveryObservatory()
 		{
 			return this.As<IInfrastructureItemDeliveryObservatoryT>();
 		}
 
-		// Token: 0x060375BF RID: 226751 RVA: 0x0077F794 File Offset: 0x0077D994
+		// Token: 0x0603AA8C RID: 240268 RVA: 0x007E3CA0 File Offset: 0x007E1EA0
 		public static TInfrastructureItemDeliveryOptionUnion FromIInfrastructureItemDeliveryObservatory(IInfrastructureItemDeliveryObservatoryT _iinfrastructureitemdeliveryobservatory)
 		{
 			return new TInfrastructureItemDeliveryOptionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060375C0 RID: 226752 RVA: 0x0077F7A9 File Offset: 0x0077D9A9
+		// Token: 0x0603AA8D RID: 240269 RVA: 0x007E3CB5 File Offset: 0x007E1EB5
 		public IInfrastructureItemDeliveryRoadBuildT AsIInfrastructureItemDeliveryRoadBuild()
 		{
 			return this.As<IInfrastructureItemDeliveryRoadBuildT>();
 		}
 
-		// Token: 0x060375C1 RID: 226753 RVA: 0x0077F7B1 File Offset: 0x0077D9B1
+		// Token: 0x0603AA8E RID: 240270 RVA: 0x007E3CBD File Offset: 0x007E1EBD
 		public static TInfrastructureItemDeliveryOptionUnion FromIInfrastructureItemDeliveryRoadBuild(IInfrastructureItemDeliveryRoadBuildT _iinfrastructureitemdeliveryroadbuild)
 		{
 			return new TInfrastructureItemDeliveryOptionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060375C2 RID: 226754 RVA: 0x0077F7C8 File Offset: 0x0077D9C8
+		// Token: 0x0603AA8F RID: 240271 RVA: 0x007E3CD4 File Offset: 0x007E1ED4
 		public static int Pack(FlatBufferBuilder builder, TInfrastructureItemDeliveryOptionUnion _o)
 		{
 			TInfrastructureItemDeliveryOption type = _o.Type;

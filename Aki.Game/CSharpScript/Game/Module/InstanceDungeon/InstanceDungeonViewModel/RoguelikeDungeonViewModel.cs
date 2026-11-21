@@ -12,12 +12,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonViewModel
 {
-	// Token: 0x02005891 RID: 22673
+	// Token: 0x02004869 RID: 18537
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RoguelikeDungeonViewModel : InstanceDungeonViewModelBase
 	{
-		// Token: 0x06039B2B RID: 236331 RVA: 0x00DB61D8 File Offset: 0x00DB43D8
+		// Token: 0x0602EA4E RID: 191054 RVA: 0x00D050F0 File Offset: 0x00D032F0
 		public override UniTask OnBeforeStartAsync()
 		{
 			RoguelikeDungeonViewModel.<OnBeforeStartAsync>d__1 <OnBeforeStartAsync>d__;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonViewModel
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039B2C RID: 236332 RVA: 0x00DB621C File Offset: 0x00DB441C
+		// Token: 0x0602EA4F RID: 191055 RVA: 0x00D05134 File Offset: 0x00D03334
 		private UniTask CreateRoguelikeBtnPanel()
 		{
 			RoguelikeDungeonViewModel.<CreateRoguelikeBtnPanel>d__2 <CreateRoguelikeBtnPanel>d__;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonViewModel
 			return <CreateRoguelikeBtnPanel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06039B2D RID: 236333 RVA: 0x00DB6260 File Offset: 0x00DB4460
+		// Token: 0x0602EA50 RID: 191056 RVA: 0x00D05178 File Offset: 0x00D03378
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonViewModel
 			return new ValueTuple<InstanceDetectionDynamicData[], int>(list.ToArray(), num);
 		}
 
-		// Token: 0x06039B2E RID: 236334 RVA: 0x00DB63E8 File Offset: 0x00DB45E8
+		// Token: 0x0602EA51 RID: 191057 RVA: 0x00D05300 File Offset: 0x00D03500
 		public override void OnBeforeDestroy()
 		{
 			RoguelikeInstanceBtnPanel roguelikeBtnPanel = this.RoguelikeBtnPanel;
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonViewModel
 			roguelikeBtnPanel.UnBindRedDot();
 		}
 
-		// Token: 0x06039B2F RID: 236335 RVA: 0x00DB63FC File Offset: 0x00DB45FC
+		// Token: 0x0602EA52 RID: 191058 RVA: 0x00D05314 File Offset: 0x00D03514
 		private static string GetInstanceDungeonTypeNameByKey(RogueSeason season, int typeId)
 		{
 			for (int i = 0; i < season.InstanceDungeonTypeNameLength; i++)
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonViewModel
 			return null;
 		}
 
-		// Token: 0x06039B30 RID: 236336 RVA: 0x00DB6458 File Offset: 0x00DB4658
+		// Token: 0x0602EA53 RID: 191059 RVA: 0x00D05370 File Offset: 0x00D03570
 		protected override InstanceDungeonEntranceViewSelectData OnGetDefaultSelectData()
 		{
 			ActivityRogueData currentActivityData = ActivityRogueController.Instance.GetCurrentActivityData();
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon.InstanceDungeonViewModel
 			};
 		}
 
-		// Token: 0x0401E244 RID: 123460
+		// Token: 0x04018CE1 RID: 101601
 		private RoguelikeInstanceBtnPanel RoguelikeBtnPanel;
 	}
 }

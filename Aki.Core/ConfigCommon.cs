@@ -12,13 +12,13 @@ using UnrealEngine;
 [Nullable(0)]
 public class ConfigCommon : IStaticVariableResetter
 {
-	// Token: 0x060001BC RID: 444 RVA: 0x0000A705 File Offset: 0x00008905
+	// Token: 0x060001BD RID: 445 RVA: 0x0000A3E9 File Offset: 0x000085E9
 	static ConfigCommon()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ConfigCommon.CreateStaticDefaultValue), new Action(ConfigCommon.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x060001BD RID: 445 RVA: 0x0000A724 File Offset: 0x00008924
+	// Token: 0x060001BE RID: 446 RVA: 0x0000A408 File Offset: 0x00008608
 	public static void CreateStaticDefaultValue()
 	{
 		ConfigCommon.ProjectContentDir = "";
@@ -39,7 +39,7 @@ public class ConfigCommon : IStaticVariableResetter
 		ConfigCommon.IsUseDynamicConnectDb = true;
 	}
 
-	// Token: 0x060001BE RID: 446 RVA: 0x0000A880 File Offset: 0x00008A80
+	// Token: 0x060001BF RID: 447 RVA: 0x0000A564 File Offset: 0x00008764
 	public static void ResetStaticDefaultValue()
 	{
 		ConfigCommon.ProjectContentDir = null;
@@ -60,7 +60,7 @@ public class ConfigCommon : IStaticVariableResetter
 		ConfigCommon.IsUseDynamicConnectDb = true;
 	}
 
-	// Token: 0x060001BF RID: 447 RVA: 0x0000A8ED File Offset: 0x00008AED
+	// Token: 0x060001C0 RID: 448 RVA: 0x0000A5D1 File Offset: 0x000087D1
 	public static void SetLruBufferCapacity(int capacity)
 	{
 		if (ConfigCommon.LruBuffer != null)
@@ -69,7 +69,7 @@ public class ConfigCommon : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x060001C0 RID: 448 RVA: 0x0000A901 File Offset: 0x00008B01
+	// Token: 0x060001C1 RID: 449 RVA: 0x0000A5E5 File Offset: 0x000087E5
 	public static void SetLruCapacity(int capacity)
 	{
 		if (ConfigCommon.Lru != null)
@@ -78,26 +78,26 @@ public class ConfigCommon : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x060001C1 RID: 449 RVA: 0x0000A915 File Offset: 0x00008B15
+	// Token: 0x060001C2 RID: 450 RVA: 0x0000A5F9 File Offset: 0x000087F9
 	public static void SetDynamicConnectDb(bool isDynamic)
 	{
 		ConfigCommon.IsUseDynamicConnectDb = isDynamic;
 	}
 
-	// Token: 0x060001C2 RID: 450 RVA: 0x0000A91D File Offset: 0x00008B1D
+	// Token: 0x060001C3 RID: 451 RVA: 0x0000A601 File Offset: 0x00008801
 	public static bool GetDynamicConnectDb()
 	{
 		return ConfigCommon.IsUseDynamicConnectDb;
 	}
 
-	// Token: 0x060001C3 RID: 451 RVA: 0x0000A924 File Offset: 0x00008B24
+	// Token: 0x060001C4 RID: 452 RVA: 0x0000A608 File Offset: 0x00008808
 	[NullableContext(1)]
 	public static void SaveConfig(string key, object config, int valueSize = 1)
 	{
 		ConfigCommon.Lru.Put(key, config, valueSize);
 	}
 
-	// Token: 0x060001C4 RID: 452 RVA: 0x0000A934 File Offset: 0x00008B34
+	// Token: 0x060001C5 RID: 453 RVA: 0x0000A618 File Offset: 0x00008818
 	[NullableContext(1)]
 	[return: Nullable(2)]
 	public static object GetConfig(string key)
@@ -105,14 +105,14 @@ public class ConfigCommon : IStaticVariableResetter
 		return ConfigCommon.Lru.Get(key);
 	}
 
-	// Token: 0x060001C5 RID: 453 RVA: 0x0000A941 File Offset: 0x00008B41
+	// Token: 0x060001C6 RID: 454 RVA: 0x0000A625 File Offset: 0x00008825
 	[NullableContext(1)]
 	public static void SaveConfigBuffer(string key, ByteBuffer configBuffer, int valueSize = 1)
 	{
 		ConfigCommon.LruBuffer.Put(key, configBuffer, valueSize);
 	}
 
-	// Token: 0x060001C6 RID: 454 RVA: 0x0000A951 File Offset: 0x00008B51
+	// Token: 0x060001C7 RID: 455 RVA: 0x0000A635 File Offset: 0x00008835
 	[NullableContext(1)]
 	[return: Nullable(2)]
 	public static ByteBuffer GetConfigBuffer(string key)
@@ -120,7 +120,7 @@ public class ConfigCommon : IStaticVariableResetter
 		return ConfigCommon.LruBuffer.Get(key);
 	}
 
-	// Token: 0x060001C7 RID: 455 RVA: 0x0000A960 File Offset: 0x00008B60
+	// Token: 0x060001C8 RID: 456 RVA: 0x0000A644 File Offset: 0x00008844
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -144,7 +144,7 @@ public class ConfigCommon : IStaticVariableResetter
 		return list;
 	}
 
-	// Token: 0x060001C8 RID: 456 RVA: 0x0000A99D File Offset: 0x00008B9D
+	// Token: 0x060001C9 RID: 457 RVA: 0x0000A681 File Offset: 0x00008881
 	[NullableContext(1)]
 	public static string GetProjectContentDir()
 	{
@@ -155,7 +155,7 @@ public class ConfigCommon : IStaticVariableResetter
 		return ConfigCommon.ProjectContentDir;
 	}
 
-	// Token: 0x060001C9 RID: 457 RVA: 0x0000A9BC File Offset: 0x00008BBC
+	// Token: 0x060001CA RID: 458 RVA: 0x0000A6A0 File Offset: 0x000088A0
 	[NullableContext(1)]
 	public unsafe static int InitDataStatement(int handleId, string dbName, string command)
 	{
@@ -199,7 +199,7 @@ public class ConfigCommon : IStaticVariableResetter
 		return num;
 	}
 
-	// Token: 0x060001CA RID: 458 RVA: 0x0000AAA0 File Offset: 0x00008CA0
+	// Token: 0x060001CB RID: 459 RVA: 0x0000A784 File Offset: 0x00008984
 	[NullableContext(1)]
 	public unsafe static int GetLangStatementId(string tableName, string dbName, string command, string culture = "")
 	{
@@ -252,7 +252,7 @@ public class ConfigCommon : IStaticVariableResetter
 		return num;
 	}
 
-	// Token: 0x060001CB RID: 459 RVA: 0x0000ABE0 File Offset: 0x00008DE0
+	// Token: 0x060001CC RID: 460 RVA: 0x0000A8C4 File Offset: 0x00008AC4
 	[NullableContext(1)]
 	public static void ClearLangAllStatementId(string tableName, string dbName)
 	{
@@ -273,7 +273,7 @@ public class ConfigCommon : IStaticVariableResetter
 		ConfigCommon.HandleIdMap.Remove(key);
 	}
 
-	// Token: 0x060001CC RID: 460 RVA: 0x0000AC6C File Offset: 0x00008E6C
+	// Token: 0x060001CD RID: 461 RVA: 0x0000A950 File Offset: 0x00008B50
 	public static bool CheckStatement(int handleId, [ParamCollection] [Nullable(new byte[]
 	{
 		1,
@@ -308,7 +308,7 @@ public class ConfigCommon : IStaticVariableResetter
 		return result;
 	}
 
-	// Token: 0x060001CD RID: 461 RVA: 0x0000ACD8 File Offset: 0x00008ED8
+	// Token: 0x060001CE RID: 462 RVA: 0x0000A9BC File Offset: 0x00008BBC
 	public static bool BindBigInt(int handleId, int bindingIndex, long value, [ParamCollection] [Nullable(new byte[]
 	{
 		1,
@@ -337,7 +337,7 @@ public class ConfigCommon : IStaticVariableResetter
 		return flag;
 	}
 
-	// Token: 0x060001CE RID: 462 RVA: 0x0000AD48 File Offset: 0x00008F48
+	// Token: 0x060001CF RID: 463 RVA: 0x0000AA2C File Offset: 0x00008C2C
 	public static bool BindInt(int handleId, int bindingIndex, int value, [ParamCollection] [Nullable(new byte[]
 	{
 		1,
@@ -366,7 +366,7 @@ public class ConfigCommon : IStaticVariableResetter
 		return flag;
 	}
 
-	// Token: 0x060001CF RID: 463 RVA: 0x0000ADB8 File Offset: 0x00008FB8
+	// Token: 0x060001D0 RID: 464 RVA: 0x0000AA9C File Offset: 0x00008C9C
 	public static bool BindFloat(int handleId, int bindingIndex, float value, [ParamCollection] [Nullable(new byte[]
 	{
 		1,
@@ -395,7 +395,7 @@ public class ConfigCommon : IStaticVariableResetter
 		return flag;
 	}
 
-	// Token: 0x060001D0 RID: 464 RVA: 0x0000AE28 File Offset: 0x00009028
+	// Token: 0x060001D1 RID: 465 RVA: 0x0000AB0C File Offset: 0x00008D0C
 	public static bool BindFloat64(int handleId, int bindingIndex, double value, [ParamCollection] [Nullable(new byte[]
 	{
 		1,
@@ -424,7 +424,7 @@ public class ConfigCommon : IStaticVariableResetter
 		return flag;
 	}
 
-	// Token: 0x060001D1 RID: 465 RVA: 0x0000AE9C File Offset: 0x0000909C
+	// Token: 0x060001D2 RID: 466 RVA: 0x0000AB80 File Offset: 0x00008D80
 	public static bool BindBool(int handleId, int bindingIndex, bool value, [ParamCollection] [Nullable(new byte[]
 	{
 		1,
@@ -453,7 +453,7 @@ public class ConfigCommon : IStaticVariableResetter
 		return flag;
 	}
 
-	// Token: 0x060001D2 RID: 466 RVA: 0x0000AF0C File Offset: 0x0000910C
+	// Token: 0x060001D3 RID: 467 RVA: 0x0000ABF0 File Offset: 0x00008DF0
 	[NullableContext(1)]
 	public static bool BindString(int handleId, int bindingIndex, string value, [ParamCollection] [Nullable(new byte[]
 	{
@@ -483,7 +483,7 @@ public class ConfigCommon : IStaticVariableResetter
 		return flag;
 	}
 
-	// Token: 0x060001D3 RID: 467 RVA: 0x0000AF7C File Offset: 0x0000917C
+	// Token: 0x060001D4 RID: 468 RVA: 0x0000AC60 File Offset: 0x00008E60
 	public static void ClearBind(int handleId)
 	{
 		if (ConfigCommon.IsUseDynamicConnectDb)
@@ -494,7 +494,7 @@ public class ConfigCommon : IStaticVariableResetter
 		UKuroPrepareStatementLib.ClearBindings(handleId);
 	}
 
-	// Token: 0x060001D4 RID: 468 RVA: 0x0000AF94 File Offset: 0x00009194
+	// Token: 0x060001D5 RID: 469 RVA: 0x0000AC78 File Offset: 0x00008E78
 	public static bool Reset(int handleId, [ParamCollection] [Nullable(new byte[]
 	{
 		1,
@@ -521,7 +521,7 @@ public class ConfigCommon : IStaticVariableResetter
 		return flag;
 	}
 
-	// Token: 0x060001D5 RID: 469 RVA: 0x0000AFEC File Offset: 0x000091EC
+	// Token: 0x060001D6 RID: 470 RVA: 0x0000ACD0 File Offset: 0x00008ED0
 	public static int Step(int handleId, bool errZero = false, [ParamCollection] [Nullable(new byte[]
 	{
 		1,
@@ -568,7 +568,7 @@ public class ConfigCommon : IStaticVariableResetter
 		return result;
 	}
 
-	// Token: 0x060001D6 RID: 470 RVA: 0x0000B0A8 File Offset: 0x000092A8
+	// Token: 0x060001D7 RID: 471 RVA: 0x0000AD8C File Offset: 0x00008F8C
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -602,7 +602,7 @@ public class ConfigCommon : IStaticVariableResetter
 		return new ValueTuple<bool, byte[]>(columnValueBytes, item);
 	}
 
-	// Token: 0x060001D7 RID: 471 RVA: 0x0000B120 File Offset: 0x00009320
+	// Token: 0x060001D8 RID: 472 RVA: 0x0000AE04 File Offset: 0x00009004
 	[NullableContext(0)]
 	public static ValueTuple<bool, int?> GetValueInt(int handleId, int columnIndex, [ParamCollection] [Nullable(new byte[]
 	{
@@ -627,7 +627,7 @@ public class ConfigCommon : IStaticVariableResetter
 		return new ValueTuple<bool, int?>(columnValueInt, new int?(value));
 	}
 
-	// Token: 0x060001D8 RID: 472 RVA: 0x0000B188 File Offset: 0x00009388
+	// Token: 0x060001D9 RID: 473 RVA: 0x0000AE6C File Offset: 0x0000906C
 	public static void CloseAllConnection()
 	{
 		if (ConfigCommon.IsUseDynamicConnectDb)
@@ -638,10 +638,10 @@ public class ConfigCommon : IStaticVariableResetter
 		ConfigStatementLibSync.CloseAllConnection();
 	}
 
-	// Token: 0x04000190 RID: 400
+	// Token: 0x04000192 RID: 402
 	private static string ProjectContentDir;
 
-	// Token: 0x04000191 RID: 401
+	// Token: 0x04000193 RID: 403
 	[Nullable(new byte[]
 	{
 		2,
@@ -651,7 +651,7 @@ public class ConfigCommon : IStaticVariableResetter
 	})]
 	private static Dictionary<string, Dictionary<string, int>> HandleIdMap;
 
-	// Token: 0x04000192 RID: 402
+	// Token: 0x04000194 RID: 404
 	[Nullable(new byte[]
 	{
 		2,
@@ -660,7 +660,7 @@ public class ConfigCommon : IStaticVariableResetter
 	})]
 	private static TrimLru<string, ByteBuffer> LruBuffer;
 
-	// Token: 0x04000193 RID: 403
+	// Token: 0x04000195 RID: 405
 	[Nullable(new byte[]
 	{
 		2,
@@ -669,39 +669,39 @@ public class ConfigCommon : IStaticVariableResetter
 	})]
 	private static TrimLru<string, object> Lru;
 
-	// Token: 0x04000194 RID: 404
+	// Token: 0x04000196 RID: 406
 	private static Stat InitDataStatementStat;
 
-	// Token: 0x04000195 RID: 405
+	// Token: 0x04000197 RID: 407
 	private static Stat GetLangStatementIdStat;
 
-	// Token: 0x04000196 RID: 406
+	// Token: 0x04000198 RID: 408
 	private static Stat BindBigIntStat;
 
-	// Token: 0x04000197 RID: 407
+	// Token: 0x04000199 RID: 409
 	private static Stat BindIntStat;
 
-	// Token: 0x04000198 RID: 408
+	// Token: 0x0400019A RID: 410
 	private static Stat BindFloatStat;
 
-	// Token: 0x04000199 RID: 409
+	// Token: 0x0400019B RID: 411
 	private static Stat BindBoolStat;
 
-	// Token: 0x0400019A RID: 410
+	// Token: 0x0400019C RID: 412
 	private static Stat BindStringStat;
 
-	// Token: 0x0400019B RID: 411
+	// Token: 0x0400019D RID: 413
 	private static Stat BindFloat64Stat;
 
-	// Token: 0x0400019C RID: 412
+	// Token: 0x0400019E RID: 414
 	private static Stat GetValueStat;
 
-	// Token: 0x0400019D RID: 413
+	// Token: 0x0400019F RID: 415
 	private static Stat GetValueIntStat;
 
-	// Token: 0x0400019E RID: 414
+	// Token: 0x040001A0 RID: 416
 	public static Stat AllConfigStatementStat;
 
-	// Token: 0x0400019F RID: 415
+	// Token: 0x040001A1 RID: 417
 	public static bool IsUseDynamicConnectDb;
 }

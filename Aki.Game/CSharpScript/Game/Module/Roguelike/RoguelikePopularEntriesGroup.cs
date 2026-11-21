@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DD9 RID: 19929
+	// Token: 0x02003DA2 RID: 15778
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Roguelike
 	})]
 	public class RoguelikePopularEntriesGroup : GridProxyAbstract<RoguelikeEntriesGroupData>
 	{
-		// Token: 0x06033715 RID: 210709 RVA: 0x00C04824 File Offset: 0x00C02A24
+		// Token: 0x06028580 RID: 165248 RVA: 0x00B4DD34 File Offset: 0x00B4BF34
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 11;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06033716 RID: 210710 RVA: 0x00C049BC File Offset: 0x00C02BBC
+		// Token: 0x06028581 RID: 165249 RVA: 0x00B4DECC File Offset: 0x00B4C0CC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoguelikePopularEntriesGroup.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033717 RID: 210711 RVA: 0x00C04A00 File Offset: 0x00C02C00
+		// Token: 0x06028582 RID: 165250 RVA: 0x00B4DF10 File Offset: 0x00B4C110
 		protected override void OnStart()
 		{
 			this.LayoutRow1 = new GenericLayout<RoguelikePopularEntryItem, RoguelikeEntryData>(base.GetHorizontalLayout(0), new Func<RoguelikePopularEntryItem>(this.CreateEntryItem), null, false, true);
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.LayoutRow3 = new GenericLayout<RoguelikePopularEntryItem, RoguelikeEntryData>(base.GetHorizontalLayout(2), new Func<RoguelikePopularEntryItem>(this.CreateEntryItem), null, false, true);
 		}
 
-		// Token: 0x06033718 RID: 210712 RVA: 0x00C04A70 File Offset: 0x00C02C70
+		// Token: 0x06028583 RID: 165251 RVA: 0x00B4DF80 File Offset: 0x00B4C180
 		protected override void OnBeforeDestroy()
 		{
 			if (this.Data != null)
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x06033719 RID: 210713 RVA: 0x00C04A94 File Offset: 0x00C02C94
+		// Token: 0x06028584 RID: 165252 RVA: 0x00B4DFA4 File Offset: 0x00B4C1A4
 		[NullableContext(1)]
 		public override UniTask RefreshAsync(RoguelikeEntriesGroupData data, bool isSelected, int gridIndex)
 		{
@@ -93,14 +93,14 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <RefreshAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603371A RID: 210714 RVA: 0x00C04AE7 File Offset: 0x00C02CE7
+		// Token: 0x06028585 RID: 165253 RVA: 0x00B4DFF7 File Offset: 0x00B4C1F7
 		[NullableContext(1)]
 		private RoguelikePopularEntryItem CreateEntryItem()
 		{
 			return new RoguelikePopularEntryItem();
 		}
 
-		// Token: 0x0603371B RID: 210715 RVA: 0x00C04AEE File Offset: 0x00C02CEE
+		// Token: 0x06028586 RID: 165254 RVA: 0x00B4DFFE File Offset: 0x00B4C1FE
 		[NullableContext(1)]
 		private List<RoguelikePopularEntryItem> GetAllEntryItems()
 		{
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return list;
 		}
 
-		// Token: 0x0603371C RID: 210716 RVA: 0x00C04B28 File Offset: 0x00C02D28
+		// Token: 0x06028587 RID: 165255 RVA: 0x00B4E038 File Offset: 0x00B4C238
 		private void ActiveStateChange(bool isActive)
 		{
 			this.BarLevelSequencePlayer.StopPlayingSequence(false, true);
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x0603371D RID: 210717 RVA: 0x00C04BAC File Offset: 0x00C02DAC
+		// Token: 0x06028588 RID: 165256 RVA: 0x00B4E0BC File Offset: 0x00B4C2BC
 		private void FocusStateChange(bool isFocus)
 		{
 			foreach (RoguelikePopularEntryItem roguelikePopularEntryItem in this.GetAllEntryItems())
@@ -131,17 +131,17 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x0603371E RID: 210718 RVA: 0x00C04C00 File Offset: 0x00C02E00
+		// Token: 0x06028589 RID: 165257 RVA: 0x00B4E110 File Offset: 0x00B4C310
 		[NullableContext(1)]
 		public override object GetKey(RoguelikeEntriesGroupData data, int displayIndex)
 		{
 			return data.Id;
 		}
 
-		// Token: 0x0401B4EE RID: 111854
+		// Token: 0x04015EC1 RID: 89793
 		private RoguelikeEntriesGroupData Data;
 
-		// Token: 0x0401B4EF RID: 111855
+		// Token: 0x04015EC2 RID: 89794
 		[Nullable(new byte[]
 		{
 			2,
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.Module.Roguelike
 		})]
 		private GenericLayout<RoguelikePopularEntryItem, RoguelikeEntryData> LayoutRow1;
 
-		// Token: 0x0401B4F0 RID: 111856
+		// Token: 0x04015EC3 RID: 89795
 		[Nullable(new byte[]
 		{
 			2,
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Module.Roguelike
 		})]
 		private GenericLayout<RoguelikePopularEntryItem, RoguelikeEntryData> LayoutRow2;
 
-		// Token: 0x0401B4F1 RID: 111857
+		// Token: 0x04015EC4 RID: 89796
 		[Nullable(new byte[]
 		{
 			2,
@@ -168,56 +168,56 @@ namespace CSharpScript.Game.Module.Roguelike
 		})]
 		private GenericLayout<RoguelikePopularEntryItem, RoguelikeEntryData> LayoutRow3;
 
-		// Token: 0x0401B4F2 RID: 111858
+		// Token: 0x04015EC5 RID: 89797
 		private RoguelikePopularEntryItem EntryRow1;
 
-		// Token: 0x0401B4F3 RID: 111859
+		// Token: 0x04015EC6 RID: 89798
 		private RoguelikePopularEntryItem EntryRow2;
 
-		// Token: 0x0401B4F4 RID: 111860
+		// Token: 0x04015EC7 RID: 89799
 		private RoguelikePopularEntryItem EntryRow3;
 
-		// Token: 0x0401B4F5 RID: 111861
+		// Token: 0x04015EC8 RID: 89800
 		private LevelSequencePlayer BarLevelSequencePlayer;
 
-		// Token: 0x0401B4F6 RID: 111862
+		// Token: 0x04015EC9 RID: 89801
 		public Func<int, bool> IsLastGroup;
 
-		// Token: 0x0200AF5C RID: 44892
+		// Token: 0x02009991 RID: 39313
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x040353EB RID: 218091
+			// Token: 0x0402FE1E RID: 196126
 			public const int LayoutGroupRow1 = 0;
 
-			// Token: 0x040353EC RID: 218092
+			// Token: 0x0402FE1F RID: 196127
 			public const int LayoutGroupRow2 = 1;
 
-			// Token: 0x040353ED RID: 218093
+			// Token: 0x0402FE20 RID: 196128
 			public const int LayoutGroupRow3 = 2;
 
-			// Token: 0x040353EE RID: 218094
+			// Token: 0x0402FE21 RID: 196129
 			public const int LayoutItemRow1 = 3;
 
-			// Token: 0x040353EF RID: 218095
+			// Token: 0x0402FE22 RID: 196130
 			public const int LayoutItemRow2 = 4;
 
-			// Token: 0x040353F0 RID: 218096
+			// Token: 0x0402FE23 RID: 196131
 			public const int LayoutItemRow3 = 5;
 
-			// Token: 0x040353F1 RID: 218097
+			// Token: 0x0402FE24 RID: 196132
 			public const int ItemLine = 6;
 
-			// Token: 0x040353F2 RID: 218098
+			// Token: 0x0402FE25 RID: 196133
 			public const int PanelValue = 7;
 
-			// Token: 0x040353F3 RID: 218099
+			// Token: 0x0402FE26 RID: 196134
 			public const int TxtMultiplier = 8;
 
-			// Token: 0x040353F4 RID: 218100
+			// Token: 0x0402FE27 RID: 196135
 			public const int PanelLock = 9;
 
-			// Token: 0x040353F5 RID: 218101
+			// Token: 0x0402FE28 RID: 196136
 			public const int SpriteLock = 10;
 		}
 	}

@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F1D RID: 24349
+	// Token: 0x02006561 RID: 25953
 	public enum EAvgShakeUiIntensity : byte
 	{
-		// Token: 0x0400FC1E RID: 64542
+		// Token: 0x04010994 RID: 67988
 		Weak,
-		// Token: 0x0400FC1F RID: 64543
+		// Token: 0x04010995 RID: 67989
 		Strong
 	}
 }

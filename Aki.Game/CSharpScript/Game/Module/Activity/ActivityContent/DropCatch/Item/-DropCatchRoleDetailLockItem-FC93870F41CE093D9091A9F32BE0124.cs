@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Item
 {
-	// Token: 0x020066E6 RID: 26342
+	// Token: 0x02005636 RID: 22070
 	internal enum <DropCatchRoleDetailLockItem>FC93870F41CE093D9091A9F32BE0124E85F806240DFD48506EA9FDD1AEFAC776D__ELockComponent
 	{
-		// Token: 0x040224A7 RID: 140455
+		// Token: 0x0401CD00 RID: 118016
 		LockSprite,
-		// Token: 0x040224A8 RID: 140456
+		// Token: 0x0401CD01 RID: 118017
 		LockDescriptionText,
-		// Token: 0x040224A9 RID: 140457
+		// Token: 0x0401CD02 RID: 118018
 		FunctionButton
 	}
 }

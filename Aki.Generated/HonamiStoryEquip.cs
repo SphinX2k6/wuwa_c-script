@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000D35 RID: 3381
+	// Token: 0x02000E1A RID: 3610
 	public struct HonamiStoryEquip : IFlatbufferObject
 	{
-		// Token: 0x17001783 RID: 6019
-		// (get) Token: 0x06007F74 RID: 32628 RVA: 0x002566DD File Offset: 0x002548DD
+		// Token: 0x170017E6 RID: 6118
+		// (get) Token: 0x0600858E RID: 34190 RVA: 0x00274EF5 File Offset: 0x002730F5
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06007F75 RID: 32629 RVA: 0x002566EA File Offset: 0x002548EA
+		// Token: 0x0600858F RID: 34191 RVA: 0x00274F02 File Offset: 0x00273102
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06007F76 RID: 32630 RVA: 0x002566F4 File Offset: 0x002548F4
+		// Token: 0x06008590 RID: 34192 RVA: 0x00274F0C File Offset: 0x0027310C
 		public static HonamiStoryEquip GetRootAsHonamiStoryEquip(ByteBuffer _bb)
 		{
 			return HonamiStoryEquip.GetRootAsHonamiStoryEquip(_bb, default(HonamiStoryEquip));
 		}
 
-		// Token: 0x06007F77 RID: 32631 RVA: 0x00256710 File Offset: 0x00254910
+		// Token: 0x06008591 RID: 34193 RVA: 0x00274F28 File Offset: 0x00273128
 		public static HonamiStoryEquip GetRootAsHonamiStoryEquip(ByteBuffer _bb, HonamiStoryEquip obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06007F78 RID: 32632 RVA: 0x0025672D File Offset: 0x0025492D
+		// Token: 0x06008592 RID: 34194 RVA: 0x00274F45 File Offset: 0x00273145
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06007F79 RID: 32633 RVA: 0x0025673C File Offset: 0x0025493C
+		// Token: 0x06008593 RID: 34195 RVA: 0x00274F54 File Offset: 0x00273154
 		public HonamiStoryEquip __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001784 RID: 6020
-		// (get) Token: 0x06007F7A RID: 32634 RVA: 0x0025674C File Offset: 0x0025494C
+		// Token: 0x170017E7 RID: 6119
+		// (get) Token: 0x06008594 RID: 34196 RVA: 0x00274F64 File Offset: 0x00273164
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001785 RID: 6021
-		// (get) Token: 0x06007F7B RID: 32635 RVA: 0x00256788 File Offset: 0x00254988
+		// Token: 0x170017E8 RID: 6120
+		// (get) Token: 0x06008595 RID: 34197 RVA: 0x00274FA0 File Offset: 0x002731A0
 		public int EnhanceLevel
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001786 RID: 6022
-		// (get) Token: 0x06007F7C RID: 32636 RVA: 0x002567C4 File Offset: 0x002549C4
+		// Token: 0x170017E9 RID: 6121
+		// (get) Token: 0x06008596 RID: 34198 RVA: 0x00274FDC File Offset: 0x002731DC
 		public int RoleId
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001787 RID: 6023
-		// (get) Token: 0x06007F7D RID: 32637 RVA: 0x00256800 File Offset: 0x00254A00
+		// Token: 0x170017EA RID: 6122
+		// (get) Token: 0x06008597 RID: 34199 RVA: 0x00275018 File Offset: 0x00273218
 		public int RoleEnhanceLevel
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001788 RID: 6024
-		// (get) Token: 0x06007F7E RID: 32638 RVA: 0x00256840 File Offset: 0x00254A40
+		// Token: 0x170017EB RID: 6123
+		// (get) Token: 0x06008598 RID: 34200 RVA: 0x00275058 File Offset: 0x00273258
 		public int Tag
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001789 RID: 6025
-		// (get) Token: 0x06007F7F RID: 32639 RVA: 0x00256880 File Offset: 0x00254A80
+		// Token: 0x170017EC RID: 6124
+		// (get) Token: 0x06008599 RID: 34201 RVA: 0x00275098 File Offset: 0x00273298
 		public int TagEnhanceLevel
 		{
 			get
@@ -137,8 +137,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700178A RID: 6026
-		// (get) Token: 0x06007F80 RID: 32640 RVA: 0x002568C0 File Offset: 0x00254AC0
+		// Token: 0x170017ED RID: 6125
+		// (get) Token: 0x0600859A RID: 34202 RVA: 0x002750D8 File Offset: 0x002732D8
 		public int GroupId
 		{
 			get
@@ -152,7 +152,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004DAF RID: 19887
+		// Token: 0x04005394 RID: 21396
 		private Table __p;
 	}
 }

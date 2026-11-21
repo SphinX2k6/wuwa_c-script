@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020000A5 RID: 165
+	// Token: 0x020000AD RID: 173
 	public class ConfigAreaMapGroupAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060003DF RID: 991 RVA: 0x0006F900 File Offset: 0x0006DB00
+		// Token: 0x0600040F RID: 1039 RVA: 0x000741B4 File Offset: 0x000723B4
 		static ConfigAreaMapGroupAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAreaMapGroupAll.CreateStaticDefaultValue), new Action(ConfigAreaMapGroupAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060003E0 RID: 992 RVA: 0x0006F920 File Offset: 0x0006DB20
+		// Token: 0x06000410 RID: 1040 RVA: 0x000741D4 File Offset: 0x000723D4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAreaMapGroupAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060003E1 RID: 993 RVA: 0x0006F99F File Offset: 0x0006DB9F
+		// Token: 0x06000411 RID: 1041 RVA: 0x00074253 File Offset: 0x00072453
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAreaMapGroupAll.LogPair = null;
 			ConfigAreaMapGroupAll.HandleId = 0;
 		}
 
-		// Token: 0x060003E2 RID: 994 RVA: 0x0006F9AD File Offset: 0x0006DBAD
+		// Token: 0x06000412 RID: 1042 RVA: 0x00074261 File Offset: 0x00072461
 		public static void Init()
 		{
 			ConfigAreaMapGroupAll.HandleId = ConfigCommon.InitDataStatement(ConfigAreaMapGroupAll.HandleId, "db_areaterminal.db", "select BinData from `AreaMapGroup`");
 		}
 
-		// Token: 0x060003E3 RID: 995 RVA: 0x0006F9C8 File Offset: 0x0006DBC8
+		// Token: 0x06000413 RID: 1043 RVA: 0x0007427C File Offset: 0x0007247C
 		[NullableContext(2)]
 		public static IReadOnlyList<AreaMapGroup> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04000467 RID: 1127
+		// Token: 0x0400049F RID: 1183
 		private const string DB = "db_areaterminal.db";
 
-		// Token: 0x04000468 RID: 1128
+		// Token: 0x040004A0 RID: 1184
 		private const string FILE = "q.区域终端.xlsx";
 
-		// Token: 0x04000469 RID: 1129
+		// Token: 0x040004A1 RID: 1185
 		private const string TABLE = "AreaMapGroup";
 
-		// Token: 0x0400046A RID: 1130
+		// Token: 0x040004A2 RID: 1186
 		private const string COMMAND = "select BinData from `AreaMapGroup`";
 
-		// Token: 0x0400046B RID: 1131
+		// Token: 0x040004A3 RID: 1187
 		private const string KEY_PREFIX = "AreaMapGroupAll";
 
-		// Token: 0x0400046C RID: 1132
+		// Token: 0x040004A4 RID: 1188
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400046D RID: 1133
+		// Token: 0x040004A5 RID: 1189
 		private static int HandleId;
 	}
 }

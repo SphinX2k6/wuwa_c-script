@@ -5,16 +5,16 @@ using CSharpScript.Game.Input;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050AB RID: 20651
+	// Token: 0x0200407B RID: 16507
 	public class FlowActionCameraLookAt : FlowActionLevelAsyncAction
 	{
-		// Token: 0x06034EAC RID: 216748 RVA: 0x00C887D0 File Offset: 0x00C869D0
+		// Token: 0x06029DA5 RID: 171429 RVA: 0x00BD5A8D File Offset: 0x00BD3C8D
 		protected override void OnBackgroundExecute()
 		{
 			base.FinishExecute(true, true);
 		}
 
-		// Token: 0x06034EAD RID: 216749 RVA: 0x00C887DC File Offset: 0x00C869DC
+		// Token: 0x06029DA6 RID: 171430 RVA: 0x00BD5A98 File Offset: 0x00BD3C98
 		protected override void OnInterruptExecute()
 		{
 			global::Log.Instance.Info(ELogModule.Camera, ELogAuthor.LJM, "[CameraLookAt] FlowActionCameraLookAt", default(ReadOnlySpan<ValueTuple<string, object>>));

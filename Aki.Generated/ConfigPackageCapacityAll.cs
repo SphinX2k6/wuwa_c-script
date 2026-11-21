@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000634 RID: 1588
+	// Token: 0x0200064C RID: 1612
 	public class ConfigPackageCapacityAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002548 RID: 9544 RVA: 0x0012C76C File Offset: 0x0012A96C
+		// Token: 0x060025D8 RID: 9688 RVA: 0x001331E8 File Offset: 0x001313E8
 		static ConfigPackageCapacityAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPackageCapacityAll.CreateStaticDefaultValue), new Action(ConfigPackageCapacityAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002549 RID: 9545 RVA: 0x0012C78C File Offset: 0x0012A98C
+		// Token: 0x060025D9 RID: 9689 RVA: 0x00133208 File Offset: 0x00131408
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPackageCapacityAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600254A RID: 9546 RVA: 0x0012C80B File Offset: 0x0012AA0B
+		// Token: 0x060025DA RID: 9690 RVA: 0x00133287 File Offset: 0x00131487
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPackageCapacityAll.LogPair = null;
 			ConfigPackageCapacityAll.HandleId = 0;
 		}
 
-		// Token: 0x0600254B RID: 9547 RVA: 0x0012C819 File Offset: 0x0012AA19
+		// Token: 0x060025DB RID: 9691 RVA: 0x00133295 File Offset: 0x00131495
 		public static void Init()
 		{
 			ConfigPackageCapacityAll.HandleId = ConfigCommon.InitDataStatement(ConfigPackageCapacityAll.HandleId, "db_bag.db", "select BinData from `PackageCapacity`");
 		}
 
-		// Token: 0x0600254C RID: 9548 RVA: 0x0012C834 File Offset: 0x0012AA34
+		// Token: 0x060025DC RID: 9692 RVA: 0x001332B0 File Offset: 0x001314B0
 		[NullableContext(2)]
 		public static IReadOnlyList<PackageCapacity> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04002B52 RID: 11090
+		// Token: 0x04002BFA RID: 11258
 		private const string DB = "db_bag.db";
 
-		// Token: 0x04002B53 RID: 11091
+		// Token: 0x04002BFB RID: 11259
 		private const string FILE = "b.背包.xlsx";
 
-		// Token: 0x04002B54 RID: 11092
+		// Token: 0x04002BFC RID: 11260
 		private const string TABLE = "PackageCapacity";
 
-		// Token: 0x04002B55 RID: 11093
+		// Token: 0x04002BFD RID: 11261
 		private const string COMMAND = "select BinData from `PackageCapacity`";
 
-		// Token: 0x04002B56 RID: 11094
+		// Token: 0x04002BFE RID: 11262
 		private const string KEY_PREFIX = "PackageCapacityAll";
 
-		// Token: 0x04002B57 RID: 11095
+		// Token: 0x04002BFF RID: 11263
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002B58 RID: 11096
+		// Token: 0x04002C00 RID: 11264
 		private static int HandleId;
 	}
 }

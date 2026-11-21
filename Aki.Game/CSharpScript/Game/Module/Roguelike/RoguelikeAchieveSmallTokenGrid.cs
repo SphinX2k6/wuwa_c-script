@@ -5,7 +5,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DB1 RID: 19889
+	// Token: 0x02003D7A RID: 15738
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -14,14 +14,14 @@ namespace CSharpScript.Game.Module.Roguelike
 	})]
 	public class RoguelikeAchieveSmallTokenGrid : LoopScrollSmallItemGrid<RogueGainEntry>
 	{
-		// Token: 0x060335A2 RID: 210338 RVA: 0x00BFD3BB File Offset: 0x00BFB5BB
+		// Token: 0x0602840F RID: 164879 RVA: 0x00B468EB File Offset: 0x00B44AEB
 		protected override void OnStart()
 		{
 			base.SetToggleInteractive(false);
 			base.BindOnCanExecuteChange((object _, bool _, EToggleState _) => false);
 		}
 
-		// Token: 0x060335A3 RID: 210339 RVA: 0x00BFD3EC File Offset: 0x00BFB5EC
+		// Token: 0x06028410 RID: 164880 RVA: 0x00B4691C File Offset: 0x00B44B1C
 		protected override void OnRefresh(RogueGainEntry data, bool isSelected, int gridIndex)
 		{
 			RogueBuffPool? rogueBuffConfig = RoguelikeConfig.Instance.GetRogueBuffConfig(data.ConfigId);

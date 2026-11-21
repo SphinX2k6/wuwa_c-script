@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020075D2 RID: 30162
+	// Token: 0x02007DD7 RID: 32215
 	public class IVisualNovelPortraitTransformT
 	{
-		// Token: 0x1700E524 RID: 58660
-		// (get) Token: 0x06036F16 RID: 225046 RVA: 0x00775010 File Offset: 0x00773210
-		// (set) Token: 0x06036F17 RID: 225047 RVA: 0x00775018 File Offset: 0x00773218
+		// Token: 0x1700F156 RID: 61782
+		// (get) Token: 0x0603A381 RID: 238465 RVA: 0x007D8BCC File Offset: 0x007D6DCC
+		// (set) Token: 0x0603A382 RID: 238466 RVA: 0x007D8BD4 File Offset: 0x007D6DD4
 		public int PosX { get; set; }
 
-		// Token: 0x1700E525 RID: 58661
-		// (get) Token: 0x06036F18 RID: 225048 RVA: 0x00775021 File Offset: 0x00773221
-		// (set) Token: 0x06036F19 RID: 225049 RVA: 0x00775029 File Offset: 0x00773229
+		// Token: 0x1700F157 RID: 61783
+		// (get) Token: 0x0603A383 RID: 238467 RVA: 0x007D8BDD File Offset: 0x007D6DDD
+		// (set) Token: 0x0603A384 RID: 238468 RVA: 0x007D8BE5 File Offset: 0x007D6DE5
 		public int PosY { get; set; }
 
-		// Token: 0x1700E526 RID: 58662
-		// (get) Token: 0x06036F1A RID: 225050 RVA: 0x00775032 File Offset: 0x00773232
-		// (set) Token: 0x06036F1B RID: 225051 RVA: 0x0077503A File Offset: 0x0077323A
+		// Token: 0x1700F158 RID: 61784
+		// (get) Token: 0x0603A385 RID: 238469 RVA: 0x007D8BEE File Offset: 0x007D6DEE
+		// (set) Token: 0x0603A386 RID: 238470 RVA: 0x007D8BF6 File Offset: 0x007D6DF6
 		public float Scale { get; set; }
 
-		// Token: 0x1700E527 RID: 58663
-		// (get) Token: 0x06036F1C RID: 225052 RVA: 0x00775043 File Offset: 0x00773243
-		// (set) Token: 0x06036F1D RID: 225053 RVA: 0x0077504B File Offset: 0x0077324B
+		// Token: 0x1700F159 RID: 61785
+		// (get) Token: 0x0603A387 RID: 238471 RVA: 0x007D8BFF File Offset: 0x007D6DFF
+		// (set) Token: 0x0603A388 RID: 238472 RVA: 0x007D8C07 File Offset: 0x007D6E07
 		public byte NullMask { get; set; }
 
-		// Token: 0x06036F1E RID: 225054 RVA: 0x00775054 File Offset: 0x00773254
+		// Token: 0x0603A389 RID: 238473 RVA: 0x007D8C10 File Offset: 0x007D6E10
 		public IVisualNovelPortraitTransformT()
 		{
 			this.PosX = 0;

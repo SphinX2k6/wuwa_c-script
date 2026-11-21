@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02001395 RID: 5013
+// Token: 0x02000849 RID: 2121
 public enum EMowingRewardType
 {
-	// Token: 0x04003E60 RID: 15968
+	// Token: 0x04003EF8 RID: 16120
 	Level,
-	// Token: 0x04003E61 RID: 15969
+	// Token: 0x04003EF9 RID: 16121
 	Score
 }

@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001A1D RID: 6685
+// Token: 0x02000EDC RID: 3804
 public class DangoAbyssDefine : IStaticVariableResetter
 {
-	// Token: 0x0600C435 RID: 50229 RVA: 0x002C6CC5 File Offset: 0x002C4EC5
+	// Token: 0x06009845 RID: 38981 RVA: 0x002D1D79 File Offset: 0x002CFF79
 	static DangoAbyssDefine()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(DangoAbyssDefine.CreateStaticDefaultValue), new Action(DangoAbyssDefine.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600C436 RID: 50230 RVA: 0x002C6CE4 File Offset: 0x002C4EE4
+	// Token: 0x06009846 RID: 38982 RVA: 0x002D1D98 File Offset: 0x002CFF98
 	public static void CreateStaticDefaultValue()
 	{
 		DangoAbyssDefine.textSlotType = new Dictionary<DangoAbyssDefine.ESlotType, string>
@@ -62,7 +62,7 @@ public class DangoAbyssDefine : IStaticVariableResetter
 		};
 	}
 
-	// Token: 0x0600C437 RID: 50231 RVA: 0x002C6D72 File Offset: 0x002C4F72
+	// Token: 0x06009847 RID: 38983 RVA: 0x002D1E26 File Offset: 0x002D0026
 	public static void ResetStaticDefaultValue()
 	{
 		DangoAbyssDefine.textSlotType = null;
@@ -70,268 +70,268 @@ public class DangoAbyssDefine : IStaticVariableResetter
 		DangoAbyssDefine.iconSizeBySlotType = null;
 	}
 
-	// Token: 0x04005A93 RID: 23187
+	// Token: 0x04005B62 RID: 23394
 	public const int BADDANGOID = 999;
 
-	// Token: 0x04005A94 RID: 23188
+	// Token: 0x04005B63 RID: 23395
 	public const int SLOT_COUNT = 9;
 
-	// Token: 0x04005A95 RID: 23189
+	// Token: 0x04005B64 RID: 23396
 	public const int CURRENCY_ITEM_EXP_ID = 80200001;
 
-	// Token: 0x04005A96 RID: 23190
+	// Token: 0x04005B65 RID: 23397
 	public const int CURRENCY_ITEM_TOKEN_ID = 80200002;
 
-	// Token: 0x04005A97 RID: 23191
+	// Token: 0x04005B66 RID: 23398
 	public const int CURRENCY_ITEM_KEY_ID = 80200003;
 
-	// Token: 0x04005A98 RID: 23192
+	// Token: 0x04005B67 RID: 23399
 	[Nullable(1)]
 	public static Dictionary<DangoAbyssDefine.ESlotType, string> textSlotType;
 
-	// Token: 0x04005A99 RID: 23193
+	// Token: 0x04005B68 RID: 23400
 	[Nullable(1)]
 	public static Dictionary<DangoAbyssDefine.ESlotType, string> textPluginType;
 
-	// Token: 0x04005A9A RID: 23194
+	// Token: 0x04005B69 RID: 23401
 	[Nullable(1)]
 	public const string TEXT_EQUIP_ERROR_DANGO = "Text_DangoEquipErrorDango_Text";
 
-	// Token: 0x04005A9B RID: 23195
+	// Token: 0x04005B6A RID: 23402
 	[Nullable(1)]
 	public const string TEXT_EQUIP_SAME = "Text_DangoEquipSame_Text";
 
-	// Token: 0x04005A9C RID: 23196
+	// Token: 0x04005B6B RID: 23403
 	[Nullable(1)]
 	public const string TEXT_EQUIP_REPEAT = "Text_DangoEquipRepeat_Text";
 
-	// Token: 0x04005A9D RID: 23197
+	// Token: 0x04005B6C RID: 23404
 	[Nullable(1)]
 	public const string TEXT_DANGO_LEVEL = "Text_DangoLevel_Text";
 
-	// Token: 0x04005A9E RID: 23198
+	// Token: 0x04005B6D RID: 23405
 	[Nullable(1)]
 	public const string TEXT_PLUGIN_COUNT = "Text_DangoPluginCount_Text";
 
-	// Token: 0x04005A9F RID: 23199
+	// Token: 0x04005B6E RID: 23406
 	[Nullable(1)]
 	public const string TEXT_RECOVERY_SELECT = "Text_RecoverySelect_Text";
 
-	// Token: 0x04005AA0 RID: 23200
+	// Token: 0x04005B6F RID: 23407
 	[Nullable(1)]
 	public const string TEXT_RECOVERY_TIMES = "Text_RecoveryTimes_Text";
 
-	// Token: 0x04005AA1 RID: 23201
+	// Token: 0x04005B70 RID: 23408
 	public const int RECOVERY_NEEDS_COUNT = 1;
 
-	// Token: 0x04005AA2 RID: 23202
+	// Token: 0x04005B71 RID: 23409
 	public const int ROLE_ATTRIBUTE_LENGTH = 6;
 
-	// Token: 0x04005AA3 RID: 23203
+	// Token: 0x04005B72 RID: 23410
 	[Nullable(1)]
 	public static Dictionary<DangoAbyssDefine.ESlotType, int> iconSizeBySlotType;
 
-	// Token: 0x02007F57 RID: 32599
+	// Token: 0x020070E6 RID: 28902
 	public class DangoListRoleData
 	{
-		// Token: 0x04029933 RID: 170291
+		// Token: 0x04024C70 RID: 150640
 		public int Id;
 
-		// Token: 0x04029934 RID: 170292
+		// Token: 0x04024C71 RID: 150641
 		[Nullable(2)]
 		public AbyssDangoRoleData Data;
 
-		// Token: 0x04029935 RID: 170293
+		// Token: 0x04024C72 RID: 150642
 		[Nullable(1)]
 		public Action<DangoAbyssDefine.DangoListRoleData> OnClickCallBack = delegate(DangoAbyssDefine.DangoListRoleData data)
 		{
 		};
 	}
 
-	// Token: 0x02007F58 RID: 32600
+	// Token: 0x020070E7 RID: 28903
 	public enum EAbyssItemTipsState
 	{
-		// Token: 0x04029937 RID: 170295
+		// Token: 0x04024C74 RID: 150644
 		None,
-		// Token: 0x04029938 RID: 170296
+		// Token: 0x04024C75 RID: 150645
 		ErrorDango,
-		// Token: 0x04029939 RID: 170297
+		// Token: 0x04024C76 RID: 150646
 		DiffDango,
-		// Token: 0x0402993A RID: 170298
+		// Token: 0x04024C77 RID: 150647
 		TakeOff,
-		// Token: 0x0402993B RID: 170299
+		// Token: 0x04024C78 RID: 150648
 		Switch,
-		// Token: 0x0402993C RID: 170300
+		// Token: 0x04024C79 RID: 150649
 		Move,
-		// Token: 0x0402993D RID: 170301
+		// Token: 0x04024C7A RID: 150650
 		Replace,
-		// Token: 0x0402993E RID: 170302
+		// Token: 0x04024C7B RID: 150651
 		PutOn,
-		// Token: 0x0402993F RID: 170303
+		// Token: 0x04024C7C RID: 150652
 		Same,
-		// Token: 0x04029940 RID: 170304
+		// Token: 0x04024C7D RID: 150653
 		Repeat
 	}
 
-	// Token: 0x02007F59 RID: 32601
+	// Token: 0x020070E8 RID: 28904
 	public class IAbyssItemTipsData
 	{
-		// Token: 0x04029941 RID: 170305
+		// Token: 0x04024C7E RID: 150654
 		public int DangoId;
 
-		// Token: 0x04029942 RID: 170306
+		// Token: 0x04024C7F RID: 150655
 		public int SlotIndex;
 
-		// Token: 0x04029943 RID: 170307
+		// Token: 0x04024C80 RID: 150656
 		public int IncId;
 	}
 
-	// Token: 0x02007F5A RID: 32602
+	// Token: 0x020070E9 RID: 28905
 	public enum ETagAddType
 	{
-		// Token: 0x04029945 RID: 170309
+		// Token: 0x04024C82 RID: 150658
 		Value = 1,
-		// Token: 0x04029946 RID: 170310
+		// Token: 0x04024C83 RID: 150659
 		Ratio,
-		// Token: 0x04029947 RID: 170311
+		// Token: 0x04024C84 RID: 150660
 		Seconds,
-		// Token: 0x04029948 RID: 170312
+		// Token: 0x04024C85 RID: 150661
 		Level,
-		// Token: 0x04029949 RID: 170313
+		// Token: 0x04024C86 RID: 150662
 		Name
 	}
 
-	// Token: 0x02007F5B RID: 32603
+	// Token: 0x020070EA RID: 28906
 	public enum ESlotType
 	{
-		// Token: 0x0402994B RID: 170315
+		// Token: 0x04024C88 RID: 150664
 		Normal,
-		// Token: 0x0402994C RID: 170316
+		// Token: 0x04024C89 RID: 150665
 		Core,
-		// Token: 0x0402994D RID: 170317
+		// Token: 0x04024C8A RID: 150666
 		Passive
 	}
 
-	// Token: 0x02007F5C RID: 32604
+	// Token: 0x020070EB RID: 28907
 	public class DangoAbyssTagData
 	{
-		// Token: 0x0402994E RID: 170318
+		// Token: 0x04024C8B RID: 150667
 		public int TagId;
 
-		// Token: 0x0402994F RID: 170319
+		// Token: 0x04024C8C RID: 150668
 		public int Value;
 	}
 
-	// Token: 0x02007F5D RID: 32605
+	// Token: 0x020070EC RID: 28908
 	public enum ETagDataGetType
 	{
-		// Token: 0x04029951 RID: 170321
+		// Token: 0x04024C8E RID: 150670
 		All,
-		// Token: 0x04029952 RID: 170322
+		// Token: 0x04024C8F RID: 150671
 		Valid,
-		// Token: 0x04029953 RID: 170323
+		// Token: 0x04024C90 RID: 150672
 		InValid
 	}
 
-	// Token: 0x02007F5E RID: 32606
+	// Token: 0x020070ED RID: 28909
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class EquipViewAttributeData
 	{
-		// Token: 0x04029954 RID: 170324
+		// Token: 0x04024C91 RID: 150673
 		public bool IsValid;
 
-		// Token: 0x04029955 RID: 170325
+		// Token: 0x04024C92 RID: 150674
 		public AttrListScrollData Attribute;
 
-		// Token: 0x04029956 RID: 170326
+		// Token: 0x04024C93 RID: 150675
 		public DangoAbyssDefine.DangoAbyssTagData Tag;
 
-		// Token: 0x04029957 RID: 170327
+		// Token: 0x04024C94 RID: 150676
 		public bool IsChange;
 	}
 
-	// Token: 0x02007F5F RID: 32607
+	// Token: 0x020070EE RID: 28910
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class IDangoAbyssActorData
 	{
-		// Token: 0x04029958 RID: 170328
+		// Token: 0x04024C95 RID: 150677
 		public int DangoId;
 
-		// Token: 0x04029959 RID: 170329
+		// Token: 0x04024C96 RID: 150678
 		public int MeshId;
 
-		// Token: 0x0402995A RID: 170330
+		// Token: 0x04024C97 RID: 150679
 		public string DangoPointCase;
 
-		// Token: 0x0402995B RID: 170331
+		// Token: 0x04024C98 RID: 150680
 		public FTransform? Transform;
 
-		// Token: 0x0402995C RID: 170332
+		// Token: 0x04024C99 RID: 150681
 		public string StandAnimationName;
 	}
 
-	// Token: 0x02007F60 RID: 32608
+	// Token: 0x020070EF RID: 28911
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class IDangoUnlockData
 	{
-		// Token: 0x0402995D RID: 170333
+		// Token: 0x04024C9A RID: 150682
 		public int DangoId;
 
-		// Token: 0x0402995E RID: 170334
+		// Token: 0x04024C9B RID: 150683
 		public int DangoLevel;
 
-		// Token: 0x0402995F RID: 170335
+		// Token: 0x04024C9C RID: 150684
 		public string UnlockTitle;
 
-		// Token: 0x04029960 RID: 170336
+		// Token: 0x04024C9D RID: 150685
 		public string UnlockSubTitle;
 
-		// Token: 0x04029961 RID: 170337
+		// Token: 0x04024C9E RID: 150686
 		public string UnlockWutheringWaveTitleSpritePath;
 
-		// Token: 0x04029962 RID: 170338
+		// Token: 0x04024C9F RID: 150687
 		public string DetailName;
 
-		// Token: 0x04029963 RID: 170339
+		// Token: 0x04024CA0 RID: 150688
 		public string DetailDialog;
 	}
 
-	// Token: 0x02007F61 RID: 32609
+	// Token: 0x020070F0 RID: 28912
 	public enum ESlotSwitchType
 	{
-		// Token: 0x04029965 RID: 170341
+		// Token: 0x04024CA2 RID: 150690
 		None,
-		// Token: 0x04029966 RID: 170342
+		// Token: 0x04024CA3 RID: 150691
 		TakeOff,
-		// Token: 0x04029967 RID: 170343
+		// Token: 0x04024CA4 RID: 150692
 		Replace,
-		// Token: 0x04029968 RID: 170344
+		// Token: 0x04024CA5 RID: 150693
 		PutOn
 	}
 
-	// Token: 0x02007F62 RID: 32610
+	// Token: 0x020070F1 RID: 28913
 	public class IRecoveryRewardData
 	{
-		// Token: 0x04029969 RID: 170345
+		// Token: 0x04024CA6 RID: 150694
 		public int ItemId;
 
-		// Token: 0x0402996A RID: 170346
+		// Token: 0x04024CA7 RID: 150695
 		public int Count;
 
-		// Token: 0x0402996B RID: 170347
+		// Token: 0x04024CA8 RID: 150696
 		public int? IncId;
 	}
 
-	// Token: 0x02007F63 RID: 32611
+	// Token: 0x020070F2 RID: 28914
 	public class IAbyssLikeRecord
 	{
-		// Token: 0x0402996C RID: 170348
+		// Token: 0x04024CA9 RID: 150697
 		public int PlayerId;
 
-		// Token: 0x0402996D RID: 170349
+		// Token: 0x04024CAA RID: 150698
 		[Nullable(1)]
 		public List<int> LikedPlayerIdList;
 	}

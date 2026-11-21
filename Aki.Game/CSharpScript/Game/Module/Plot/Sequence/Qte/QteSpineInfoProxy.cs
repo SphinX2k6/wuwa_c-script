@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 {
-	// Token: 0x0200501F RID: 20511
+	// Token: 0x02003FE9 RID: 16361
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class QteSpineInfoProxy
 	{
-		// Token: 0x060347D8 RID: 215000 RVA: 0x00C5D594 File Offset: 0x00C5B794
+		// Token: 0x0602967B RID: 169595 RVA: 0x00BA8AE0 File Offset: 0x00BA6CE0
 		private static List<SpineDataProxy> CreateSpineDataList([Nullable(new byte[]
 		{
 			2,
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			return list;
 		}
 
-		// Token: 0x060347D9 RID: 215001 RVA: 0x00C5D5F0 File Offset: 0x00C5B7F0
+		// Token: 0x0602967C RID: 169596 RVA: 0x00BA8B3C File Offset: 0x00BA6D3C
 		private static List<QteProgressSpineSegmentProxy> CreateProgressSpineSegmentList([Nullable(new byte[]
 		{
 			2,
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			return list;
 		}
 
-		// Token: 0x060347DA RID: 215002 RVA: 0x00C5D71C File Offset: 0x00C5B91C
+		// Token: 0x0602967D RID: 169597 RVA: 0x00BA8C68 File Offset: 0x00BA6E68
 		[NullableContext(2)]
 		public unsafe static QteSpineInfoProxy CreateQteSpineInfo(FQteSpineInfo config)
 		{
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			return null;
 		}
 
-		// Token: 0x060347DB RID: 215003 RVA: 0x00C5D89C File Offset: 0x00C5BA9C
+		// Token: 0x0602967E RID: 169598 RVA: 0x00BA8DE8 File Offset: 0x00BA6FE8
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			return list;
 		}
 
-		// Token: 0x060347DC RID: 215004 RVA: 0x00C5D924 File Offset: 0x00C5BB24
+		// Token: 0x0602967F RID: 169599 RVA: 0x00BA8E70 File Offset: 0x00BA7070
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			return null;
 		}
 
-		// Token: 0x060347DD RID: 215005 RVA: 0x00C5D961 File Offset: 0x00C5BB61
+		// Token: 0x06029680 RID: 169600 RVA: 0x00BA8EAD File Offset: 0x00BA70AD
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -197,13 +197,13 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 			return null;
 		}
 
-		// Token: 0x0401BF95 RID: 114581
+		// Token: 0x04016980 RID: 92544
 		private const float PERCENT = 0.01f;
 
-		// Token: 0x0401BF96 RID: 114582
+		// Token: 0x04016981 RID: 92545
 		private const float BLEND_OUT_TIME = 0.5f;
 
-		// Token: 0x0401BF97 RID: 114583
+		// Token: 0x04016982 RID: 92546
 		[Nullable(new byte[]
 		{
 			2,
@@ -211,7 +211,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 		})]
 		public List<SpineDataProxy> EndSpine;
 
-		// Token: 0x0401BF98 RID: 114584
+		// Token: 0x04016983 RID: 92547
 		[Nullable(new byte[]
 		{
 			2,
@@ -219,7 +219,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 		})]
 		public List<SpineDataProxy> FailSpine;
 
-		// Token: 0x0401BF99 RID: 114585
+		// Token: 0x04016984 RID: 92548
 		[Nullable(new byte[]
 		{
 			2,
@@ -227,7 +227,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 		})]
 		public List<SpineDataProxy> ProgressSpine;
 
-		// Token: 0x0401BF9A RID: 114586
+		// Token: 0x04016985 RID: 92549
 		[Nullable(new byte[]
 		{
 			2,
@@ -235,7 +235,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 		})]
 		public List<QteProgressSpineSegmentProxy> ProgressSpineSegments;
 
-		// Token: 0x0401BF9B RID: 114587
+		// Token: 0x04016986 RID: 92550
 		[Nullable(new byte[]
 		{
 			2,
@@ -243,7 +243,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 		})]
 		public List<SpineDataProxy> StartLoopSpines;
 
-		// Token: 0x0401BF9C RID: 114588
+		// Token: 0x04016987 RID: 92551
 		[Nullable(new byte[]
 		{
 			2,
@@ -251,7 +251,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 		})]
 		public List<SpineDataProxy> SuccessSpine;
 
-		// Token: 0x0401BF9D RID: 114589
+		// Token: 0x04016988 RID: 92552
 		[Nullable(new byte[]
 		{
 			2,
@@ -259,7 +259,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Qte
 		})]
 		public List<string> NiagaraParamNames;
 
-		// Token: 0x0401BF9E RID: 114590
+		// Token: 0x04016989 RID: 92553
 		public bool WaitEndSpineFinish;
 	}
 }

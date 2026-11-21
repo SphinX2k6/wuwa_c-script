@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DC1 RID: 3521
+	// Token: 0x02000EBD RID: 3773
 	public class ILookAtTargetBase
 	{
-		// Token: 0x06004FE8 RID: 20456 RVA: 0x000C5A3F File Offset: 0x000C3C3F
-		[NullableContext(1)]
+		// Token: 0x0600550D RID: 21773 RVA: 0x000D128F File Offset: 0x000CF48F
 		public static ILookAtTargetBase Create(ILookAtTargetBase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001A23 RID: 6691
-		// (get) Token: 0x06004FE9 RID: 20457 RVA: 0x000C5A5E File Offset: 0x000C3C5E
+		// Token: 0x17001B8E RID: 7054
+		// (get) Token: 0x0600550E RID: 21774 RVA: 0x000D12AE File Offset: 0x000CF4AE
 		public virtual ELookAtTargetType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002DD4 RID: 11732
+		// Token: 0x0400309A RID: 12442
 		private ILookAtTargetBase Instance;
 	}
 }

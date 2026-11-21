@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002178 RID: 8568
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020023D9 RID: 9177
 	public class RotatorEntity : ActionParams
 	{
-		// Token: 0x0600BC5C RID: 48220 RVA: 0x001B2548 File Offset: 0x001B0748
+		// Token: 0x0600C7EA RID: 51178 RVA: 0x001C96FC File Offset: 0x001C78FC
 		private RotatorEntity_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BC5D RID: 48221 RVA: 0x001B2580 File Offset: 0x001B0780
+		// Token: 0x0600C7EB RID: 51179 RVA: 0x001C9734 File Offset: 0x001C7934
 		public static RotatorEntity Create([Nullable(2)] RotatorEntity instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BC5E RID: 48222 RVA: 0x001B2593 File Offset: 0x001B0793
+		// Token: 0x0600C7EC RID: 51180 RVA: 0x001C9747 File Offset: 0x001C7947
 		public static RotatorEntity CreateFromSetValue([Nullable(2)] RotatorEntity_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BC5F RID: 48223 RVA: 0x001B25A6 File Offset: 0x001B07A6
+		// Token: 0x0600C7ED RID: 51181 RVA: 0x001C975A File Offset: 0x001C795A
 		public RotatorEntity_SetValue ToSetValue()
 		{
 			return new RotatorEntity_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700395A RID: 14682
-		// (get) Token: 0x0600BC60 RID: 48224 RVA: 0x001B25B9 File Offset: 0x001B07B9
-		// (set) Token: 0x0600BC61 RID: 48225 RVA: 0x001B25E0 File Offset: 0x001B07E0
+		// Token: 0x17003C47 RID: 15431
+		// (get) Token: 0x0600C7EE RID: 51182 RVA: 0x001C976D File Offset: 0x001C796D
+		// (set) Token: 0x0600C7EF RID: 51183 RVA: 0x001C9794 File Offset: 0x001C7994
 		public virtual ITargetEntityType Entity
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04007082 RID: 28802
+		// Token: 0x040076B7 RID: 30391
 		[Nullable(2)]
 		protected new RotatorEntity FbInstance;
 
-		// Token: 0x04007083 RID: 28803
+		// Token: 0x040076B8 RID: 30392
 		[Nullable(2)]
 		protected RotatorEntity_SetValue PocoInterface;
 	}

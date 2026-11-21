@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006BDD RID: 27613
+	// Token: 0x02007341 RID: 29505
 	public class INpcNewSplineMoveTargetT
 	{
-		// Token: 0x1700CD2F RID: 52527
-		// (get) Token: 0x0603082C RID: 198700 RVA: 0x00696114 File Offset: 0x00694314
-		// (set) Token: 0x0603082D RID: 198701 RVA: 0x0069611C File Offset: 0x0069431C
+		// Token: 0x1700D83B RID: 55355
+		// (get) Token: 0x06033748 RID: 210760 RVA: 0x006EFA14 File Offset: 0x006EDC14
+		// (set) Token: 0x06033749 RID: 210761 RVA: 0x006EFA1C File Offset: 0x006EDC1C
 		public ENewSplineMoveTargetType Type { get; set; }
 
-		// Token: 0x1700CD30 RID: 52528
-		// (get) Token: 0x0603082E RID: 198702 RVA: 0x00696125 File Offset: 0x00694325
-		// (set) Token: 0x0603082F RID: 198703 RVA: 0x0069612D File Offset: 0x0069432D
+		// Token: 0x1700D83C RID: 55356
+		// (get) Token: 0x0603374A RID: 210762 RVA: 0x006EFA25 File Offset: 0x006EDC25
+		// (set) Token: 0x0603374B RID: 210763 RVA: 0x006EFA2D File Offset: 0x006EDC2D
 		public int NpcId { get; set; }
 
-		// Token: 0x06030830 RID: 198704 RVA: 0x00696136 File Offset: 0x00694336
+		// Token: 0x0603374C RID: 210764 RVA: 0x006EFA36 File Offset: 0x006EDC36
 		public INpcNewSplineMoveTargetT()
 		{
 			this.Type = ENewSplineMoveTargetType.Player;

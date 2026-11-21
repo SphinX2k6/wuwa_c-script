@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006D06 RID: 27910
+	// Token: 0x02007481 RID: 29825
 	public class IPlayerNewSplineMoveTargetT
 	{
-		// Token: 0x1700CFDB RID: 53211
-		// (get) Token: 0x06031380 RID: 201600 RVA: 0x006AD3E2 File Offset: 0x006AB5E2
-		// (set) Token: 0x06031381 RID: 201601 RVA: 0x006AD3EA File Offset: 0x006AB5EA
+		// Token: 0x1700DB1F RID: 56095
+		// (get) Token: 0x06034374 RID: 213876 RVA: 0x00708912 File Offset: 0x00706B12
+		// (set) Token: 0x06034375 RID: 213877 RVA: 0x0070891A File Offset: 0x00706B1A
 		public ENewSplineMoveTargetType Type { get; set; }
 
-		// Token: 0x06031382 RID: 201602 RVA: 0x006AD3F3 File Offset: 0x006AB5F3
+		// Token: 0x06034376 RID: 213878 RVA: 0x00708923 File Offset: 0x00706B23
 		public IPlayerNewSplineMoveTargetT()
 		{
 			this.Type = ENewSplineMoveTargetType.Player;

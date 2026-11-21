@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.Login
 {
-	// Token: 0x020056B3 RID: 22195
+	// Token: 0x02004689 RID: 18057
 	public enum ELoginQueueTipsViewCom
 	{
-		// Token: 0x0401DA6B RID: 121451
+		// Token: 0x040184F6 RID: 99574
 		BigText,
-		// Token: 0x0401DA6C RID: 121452
+		// Token: 0x040184F7 RID: 99575
 		ExpectWaitingTimeText,
-		// Token: 0x0401DA6D RID: 121453
+		// Token: 0x040184F8 RID: 99576
 		AddWaitingTimeText,
-		// Token: 0x0401DA6E RID: 121454
+		// Token: 0x040184F9 RID: 99577
 		QuitButton
 	}
 }

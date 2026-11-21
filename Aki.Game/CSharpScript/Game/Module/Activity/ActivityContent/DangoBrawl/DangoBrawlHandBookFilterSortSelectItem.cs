@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006802 RID: 26626
+	// Token: 0x02005752 RID: 22354
 	internal class DangoBrawlHandBookFilterSortSelectItem : GridProxyAbstract<int>
 	{
-		// Token: 0x06042690 RID: 272016 RVA: 0x01020628 File Offset: 0x0101E828
+		// Token: 0x060371E5 RID: 225765 RVA: 0x00F61B6C File Offset: 0x00F5FD6C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06042691 RID: 272017 RVA: 0x01020710 File Offset: 0x0101E910
+		// Token: 0x060371E6 RID: 225766 RVA: 0x00F61C54 File Offset: 0x00F5FE54
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			this.ItemId = data;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			extendToggle.SetToggleStateForce(state, false, false, false);
 		}
 
-		// Token: 0x06042692 RID: 272018 RVA: 0x010207BD File Offset: 0x0101E9BD
+		// Token: 0x060371E7 RID: 225767 RVA: 0x00F61D01 File Offset: 0x00F5FF01
 		private void OnToggleClick(EToggleState state)
 		{
 			Action<int> onClickSortSelect = this.OnClickSortSelect;
@@ -67,27 +67,27 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			onClickSortSelect(this.ItemId);
 		}
 
-		// Token: 0x040229CD RID: 141773
+		// Token: 0x0401D22A RID: 119338
 		[Nullable(2)]
 		public Action<int> OnClickSortSelect;
 
-		// Token: 0x040229CE RID: 141774
+		// Token: 0x0401D22B RID: 119339
 		[Nullable(2)]
 		public Func<int, bool> IsSelectedCheck;
 
-		// Token: 0x040229CF RID: 141775
+		// Token: 0x0401D22C RID: 119340
 		private int ItemId = -1;
 
-		// Token: 0x0200C973 RID: 51571
+		// Token: 0x0200B340 RID: 45888
 		private enum EItemComponent
 		{
-			// Token: 0x0403CD4E RID: 249166
+			// Token: 0x0403763B RID: 226875
 			TxtTog,
-			// Token: 0x0403CD4F RID: 249167
+			// Token: 0x0403763C RID: 226876
 			TogSort,
-			// Token: 0x0403CD50 RID: 249168
+			// Token: 0x0403763D RID: 226877
 			TexBuff,
-			// Token: 0x0403CD51 RID: 249169
+			// Token: 0x0403763E RID: 226878
 			SprSuggest
 		}
 	}

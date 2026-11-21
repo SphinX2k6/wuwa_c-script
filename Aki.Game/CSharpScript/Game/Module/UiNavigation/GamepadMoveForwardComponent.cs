@@ -3,15 +3,15 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004967 RID: 18791
+	// Token: 0x020038DF RID: 14559
 	public class GamepadMoveForwardComponent : GamepadInteractComponentBase
 	{
-		// Token: 0x06031047 RID: 200775 RVA: 0x00B61548 File Offset: 0x00B5F748
+		// Token: 0x06025B77 RID: 154487 RVA: 0x00A9C428 File Offset: 0x00A9A628
 		public GamepadMoveForwardComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x06031048 RID: 200776 RVA: 0x00B61551 File Offset: 0x00B5F751
+		// Token: 0x06025B78 RID: 154488 RVA: 0x00A9C431 File Offset: 0x00A9A631
 		[NullableContext(1)]
 		protected override void OnInputAxis(string axisName, float value)
 		{

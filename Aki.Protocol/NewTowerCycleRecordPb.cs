@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000B31 RID: 2865
+	// Token: 0x02000B20 RID: 2848
 	public sealed class NewTowerCycleRecordPb : IMessage<NewTowerCycleRecordPb>, IMessage, IEquatable<NewTowerCycleRecordPb>, IDeepCloneable<NewTowerCycleRecordPb>, IBufferMessage
 	{
-		// Token: 0x0600F8B6 RID: 63670 RVA: 0x0024482B File Offset: 0x00242A2B
+		// Token: 0x0600F79C RID: 63388 RVA: 0x0024260F File Offset: 0x0024080F
 		[NullableContext(1)]
 		public static NewTowerCycleRecordPb Create()
 		{
 			return new NewTowerCycleRecordPb();
 		}
 
-		// Token: 0x170032B4 RID: 12980
-		// (get) Token: 0x0600F8B7 RID: 63671 RVA: 0x00244832 File Offset: 0x00242A32
+		// Token: 0x17003276 RID: 12918
+		// (get) Token: 0x0600F79D RID: 63389 RVA: 0x00242616 File Offset: 0x00240816
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170032B5 RID: 12981
-		// (get) Token: 0x0600F8B8 RID: 63672 RVA: 0x00244835 File Offset: 0x00242A35
+		// Token: 0x17003277 RID: 12919
+		// (get) Token: 0x0600F79E RID: 63390 RVA: 0x00242619 File Offset: 0x00240819
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600F8B9 RID: 63673 RVA: 0x0024483C File Offset: 0x00242A3C
+		// Token: 0x0600F79F RID: 63391 RVA: 0x00242620 File Offset: 0x00240820
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NewTowerCycleRecordPb()
 		{
 		}
 
-		// Token: 0x0600F8BA RID: 63674 RVA: 0x0024484F File Offset: 0x00242A4F
+		// Token: 0x0600F7A0 RID: 63392 RVA: 0x00242633 File Offset: 0x00240833
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NewTowerCycleRecordPb(NewTowerCycleRecordPb other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600F8BB RID: 63675 RVA: 0x00244885 File Offset: 0x00242A85
+		// Token: 0x0600F7A1 RID: 63393 RVA: 0x00242669 File Offset: 0x00240869
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NewTowerCycleRecordPb Clone()
@@ -67,9 +67,9 @@ namespace Aki.Protocol
 			return new NewTowerCycleRecordPb(this);
 		}
 
-		// Token: 0x170032B6 RID: 12982
-		// (get) Token: 0x0600F8BC RID: 63676 RVA: 0x0024488D File Offset: 0x00242A8D
-		// (set) Token: 0x0600F8BD RID: 63677 RVA: 0x00244895 File Offset: 0x00242A95
+		// Token: 0x17003278 RID: 12920
+		// (get) Token: 0x0600F7A2 RID: 63394 RVA: 0x00242671 File Offset: 0x00240871
+		// (set) Token: 0x0600F7A3 RID: 63395 RVA: 0x00242679 File Offset: 0x00240879
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CycleId
@@ -84,8 +84,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170032B7 RID: 12983
-		// (get) Token: 0x0600F8BE RID: 63678 RVA: 0x0024489E File Offset: 0x00242A9E
+		// Token: 0x17003279 RID: 12921
+		// (get) Token: 0x0600F7A4 RID: 63396 RVA: 0x00242682 File Offset: 0x00240882
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<NewTowerLevelRecordPb> NewTowerLevelRecordPbs
@@ -96,7 +96,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600F8BF RID: 63679 RVA: 0x002448A6 File Offset: 0x00242AA6
+		// Token: 0x0600F7A5 RID: 63397 RVA: 0x0024268A File Offset: 0x0024088A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -104,7 +104,7 @@ namespace Aki.Protocol
 			return this.Equals(other as NewTowerCycleRecordPb);
 		}
 
-		// Token: 0x0600F8C0 RID: 63680 RVA: 0x002448B4 File Offset: 0x00242AB4
+		// Token: 0x0600F7A6 RID: 63398 RVA: 0x00242698 File Offset: 0x00240898
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(NewTowerCycleRecordPb other)
@@ -112,7 +112,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.CycleId == other.CycleId && this.newTowerLevelRecordPbs_.Equals(other.newTowerLevelRecordPbs_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600F8C1 RID: 63681 RVA: 0x00244904 File Offset: 0x00242B04
+		// Token: 0x0600F7A7 RID: 63399 RVA: 0x002426E8 File Offset: 0x002408E8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -130,7 +130,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600F8C2 RID: 63682 RVA: 0x00244951 File Offset: 0x00242B51
+		// Token: 0x0600F7A8 RID: 63400 RVA: 0x00242735 File Offset: 0x00240935
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600F8C3 RID: 63683 RVA: 0x0024495E File Offset: 0x00242B5E
+		// Token: 0x0600F7A9 RID: 63401 RVA: 0x00242742 File Offset: 0x00240942
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600F8C4 RID: 63684 RVA: 0x00244968 File Offset: 0x00242B68
+		// Token: 0x0600F7AA RID: 63402 RVA: 0x0024274C File Offset: 0x0024094C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -163,7 +163,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600F8C5 RID: 63685 RVA: 0x002449B8 File Offset: 0x00242BB8
+		// Token: 0x0600F7AB RID: 63403 RVA: 0x0024279C File Offset: 0x0024099C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -181,7 +181,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600F8C6 RID: 63686 RVA: 0x00244A0C File Offset: 0x00242C0C
+		// Token: 0x0600F7AC RID: 63404 RVA: 0x002427F0 File Offset: 0x002409F0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(NewTowerCycleRecordPb other)
@@ -198,7 +198,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600F8C7 RID: 63687 RVA: 0x00244A59 File Offset: 0x00242C59
+		// Token: 0x0600F7AD RID: 63405 RVA: 0x0024283D File Offset: 0x00240A3D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -206,7 +206,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600F8C8 RID: 63688 RVA: 0x00244A64 File Offset: 0x00242C64
+		// Token: 0x0600F7AE RID: 63406 RVA: 0x00242848 File Offset: 0x00240A48
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -236,22 +236,22 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040063BF RID: 25535
+		// Token: 0x040063C8 RID: 25544
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040063C0 RID: 25536
+		// Token: 0x040063C9 RID: 25545
 		public const int CycleIdFieldNumber = 1;
 
-		// Token: 0x040063C1 RID: 25537
+		// Token: 0x040063CA RID: 25546
 		private int cycleId_;
 
-		// Token: 0x040063C2 RID: 25538
+		// Token: 0x040063CB RID: 25547
 		public const int NewTowerLevelRecordPbsFieldNumber = 2;
 
-		// Token: 0x040063C3 RID: 25539
+		// Token: 0x040063CC RID: 25548
 		private static readonly FieldCodec<NewTowerLevelRecordPb> _repeated_newTowerLevelRecordPbs_codec = FieldCodec.ForMessage<NewTowerLevelRecordPb>(18U, NewTowerLevelRecordPb.Parser);
 
-		// Token: 0x040063C4 RID: 25540
+		// Token: 0x040063CD RID: 25549
 		private readonly RepeatedField<NewTowerLevelRecordPb> newTowerLevelRecordPbs_ = new RepeatedField<NewTowerLevelRecordPb>();
 	}
 }

@@ -2,18 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C9C RID: 23708
+	// Token: 0x020062CD RID: 25293
 	public enum TRenderSpecifiedRangeConfig : byte
 	{
-		// Token: 0x0400F52D RID: 62765
+		// Token: 0x04010273 RID: 66163
 		NONE,
-		// Token: 0x0400F52E RID: 62766
+		// Token: 0x04010274 RID: 66164
+		IRenderBeforeYourEyesSceneReveal,
+		// Token: 0x04010275 RID: 66165
 		IRenderBookPage,
-		// Token: 0x0400F52F RID: 62767
+		// Token: 0x04010276 RID: 66166
 		IRenderFlowerBridge,
-		// Token: 0x0400F530 RID: 62768
+		// Token: 0x04010277 RID: 66167
 		IRenderFogBarrier,
-		// Token: 0x0400F531 RID: 62769
+		// Token: 0x04010278 RID: 66168
 		IRenderQuantumFollowShooter
 	}
 }

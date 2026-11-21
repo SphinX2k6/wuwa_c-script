@@ -5,15 +5,15 @@ using CSharpScript.Game.NewWorld.Character.Common.Component.Move;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B85 RID: 27525
+	// Token: 0x02005CFD RID: 23805
 	public class LevelEventSlidePerformStart : LevelEventBase
 	{
-		// Token: 0x06044274 RID: 279156 RVA: 0x010CACA7 File Offset: 0x010C8EA7
+		// Token: 0x0603A3C6 RID: 238534 RVA: 0x0107493F File Offset: 0x01072B3F
 		public LevelEventSlidePerformStart(int id) : base(id)
 		{
 		}
 
-		// Token: 0x06044275 RID: 279157 RVA: 0x010CACB0 File Offset: 0x010C8EB0
+		// Token: 0x0603A3C7 RID: 238535 RVA: 0x01074948 File Offset: 0x01072B48
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{

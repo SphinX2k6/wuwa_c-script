@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020007DA RID: 2010
+	// Token: 0x020007F6 RID: 2038
 	public class ConfigRegressRewardsById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002F2E RID: 12078 RVA: 0x00163E43 File Offset: 0x00162043
+		// Token: 0x06002FD6 RID: 12246 RVA: 0x0016B12B File Offset: 0x0016932B
 		static ConfigRegressRewardsById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRegressRewardsById.CreateStaticDefaultValue), new Action(ConfigRegressRewardsById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002F2F RID: 12079 RVA: 0x00163E64 File Offset: 0x00162064
+		// Token: 0x06002FD7 RID: 12247 RVA: 0x0016B14C File Offset: 0x0016934C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRegressRewardsById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002F30 RID: 12080 RVA: 0x00163EE3 File Offset: 0x001620E3
+		// Token: 0x06002FD8 RID: 12248 RVA: 0x0016B1CB File Offset: 0x001693CB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRegressRewardsById.LogPair = null;
 			ConfigRegressRewardsById.HandleId = 0;
 		}
 
-		// Token: 0x06002F31 RID: 12081 RVA: 0x00163EF1 File Offset: 0x001620F1
+		// Token: 0x06002FD9 RID: 12249 RVA: 0x0016B1D9 File Offset: 0x001693D9
 		public static void Init()
 		{
 			ConfigRegressRewardsById.HandleId = ConfigCommon.InitDataStatement(ConfigRegressRewardsById.HandleId, "db_circumfluence.db", "select BinData from `RegressRewards` where Id=?");
 		}
 
-		// Token: 0x06002F32 RID: 12082 RVA: 0x00163F0C File Offset: 0x0016210C
+		// Token: 0x06002FDA RID: 12250 RVA: 0x0016B1F4 File Offset: 0x001693F4
 		public static RegressRewards? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRegressRewardsById.HandleId, ConfigRegressRewardsById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RegressRewards?(rootAsRegressRewards);
 		}
 
-		// Token: 0x040036DC RID: 14044
+		// Token: 0x040037A0 RID: 14240
 		private const string DB = "db_circumfluence.db";
 
-		// Token: 0x040036DD RID: 14045
+		// Token: 0x040037A1 RID: 14241
 		private const string FILE = "h.回流活动.xlsx";
 
-		// Token: 0x040036DE RID: 14046
+		// Token: 0x040037A2 RID: 14242
 		private const string TABLE = "RegressRewards";
 
-		// Token: 0x040036DF RID: 14047
+		// Token: 0x040037A3 RID: 14243
 		private const string COMMAND = "select BinData from `RegressRewards` where Id=?";
 
-		// Token: 0x040036E0 RID: 14048
+		// Token: 0x040037A4 RID: 14244
 		private const string KEY_PREFIX = "RegressRewardsById";
 
-		// Token: 0x040036E1 RID: 14049
+		// Token: 0x040037A5 RID: 14245
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040036E2 RID: 14050
+		// Token: 0x040037A6 RID: 14246
 		private static int HandleId;
 	}
 }

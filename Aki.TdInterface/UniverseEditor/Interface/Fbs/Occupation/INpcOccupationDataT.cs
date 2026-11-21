@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Occupation
 {
-	// Token: 0x020043AB RID: 17323
+	// Token: 0x0200480D RID: 18445
 	public class INpcOccupationDataT
 	{
-		// Token: 0x17007A74 RID: 31348
-		// (get) Token: 0x06019CB6 RID: 105654 RVA: 0x003B145A File Offset: 0x003AF65A
-		// (set) Token: 0x06019CB7 RID: 105655 RVA: 0x003B1462 File Offset: 0x003AF662
+		// Token: 0x170080A9 RID: 32937
+		// (get) Token: 0x0601B444 RID: 111684 RVA: 0x003DCE82 File Offset: 0x003DB082
+		// (set) Token: 0x0601B445 RID: 111685 RVA: 0x003DCE8A File Offset: 0x003DB08A
 		public EOccupationType Type { get; set; }
 
-		// Token: 0x06019CB8 RID: 105656 RVA: 0x003B146B File Offset: 0x003AF66B
+		// Token: 0x0601B446 RID: 111686 RVA: 0x003DCE93 File Offset: 0x003DB093
 		public INpcOccupationDataT()
 		{
 			this.Type = EOccupationType.Npc;

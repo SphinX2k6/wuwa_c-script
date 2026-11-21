@@ -10,12 +10,12 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 {
-	// Token: 0x020047C8 RID: 18376
+	// Token: 0x020036F9 RID: 14073
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class WorldMapSecondaryUiLayoutB : WorldMapSecondaryUi
 	{
-		// Token: 0x06030279 RID: 197241 RVA: 0x00B28EE0 File Offset: 0x00B270E0
+		// Token: 0x06024A49 RID: 150089 RVA: 0x00A58D4C File Offset: 0x00A56F4C
 		protected unsafe override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = WorldMapDefine.SecondaryUiPanelComponentsRegisterInfoB;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			this.BtnBindInfo = list;
 		}
 
-		// Token: 0x0603027A RID: 197242 RVA: 0x00B28F38 File Offset: 0x00B27138
+		// Token: 0x06024A4A RID: 150090 RVA: 0x00A58DA4 File Offset: 0x00A56FA4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			WorldMapSecondaryUiLayoutB.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603027B RID: 197243 RVA: 0x00B28F7C File Offset: 0x00B2717C
+		// Token: 0x06024A4B RID: 150091 RVA: 0x00A58DE8 File Offset: 0x00A56FE8
 		private void InitButtons()
 		{
 			this.LeftConfirmBtn = new ButtonItem(base.GetItem(7));
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			this.MiddleCenterBtn.SetFunction(new Action<int>(this.OnMiddleCenterBtnClick));
 		}
 
-		// Token: 0x0603027C RID: 197244 RVA: 0x00B29012 File Offset: 0x00B27212
+		// Token: 0x06024A4C RID: 150092 RVA: 0x00A58E7E File Offset: 0x00A5707E
 		private void InitLayoutContext()
 		{
 			this.LayoutContext = new WorldMapSecondaryUiContext();
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			this.LayoutContext.MapTipsActivateTipPanel = this.MapTipsActivateTipPanel;
 		}
 
-		// Token: 0x0603027D RID: 197245 RVA: 0x00B29044 File Offset: 0x00B27244
+		// Token: 0x06024A4D RID: 150093 RVA: 0x00A58EB0 File Offset: 0x00A570B0
 		[NullableContext(1)]
 		private UniTask InitAutoPilotContext(WorldMapSecondaryUiContext layoutContext)
 		{
@@ -71,14 +71,14 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			return <InitAutoPilotContext>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603027E RID: 197246 RVA: 0x00B2908F File Offset: 0x00B2728F
+		// Token: 0x06024A4E RID: 150094 RVA: 0x00A58EFB File Offset: 0x00A570FB
 		protected override void OnStart()
 		{
 			this.RootItem.SetRaycastTarget(false);
 			this.SetDelBtnActive(false);
 		}
 
-		// Token: 0x0603027F RID: 197247 RVA: 0x00B290A4 File Offset: 0x00B272A4
+		// Token: 0x06024A4F RID: 150095 RVA: 0x00A58F10 File Offset: 0x00A57110
 		protected override void OnBeforeDestroy()
 		{
 			this.LeftConfirmBtn.Destroy(null);
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			this.MiddleCenterBtn.Destroy(null);
 		}
 
-		// Token: 0x06030280 RID: 197248 RVA: 0x00B290CC File Offset: 0x00B272CC
+		// Token: 0x06024A50 RID: 150096 RVA: 0x00A58F38 File Offset: 0x00A57138
 		protected override void SetupWorldMapSecondaryUiLayout()
 		{
 			MapTipsActivateTipPanel mapTipsActivateTipPanel = this.MapTipsActivateTipPanel;
@@ -117,39 +117,39 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			autoPilotContext4.RefreshAutoPilotTrackBtnGroup(false);
 		}
 
-		// Token: 0x06030281 RID: 197249 RVA: 0x00B29137 File Offset: 0x00B27337
+		// Token: 0x06024A51 RID: 150097 RVA: 0x00A58FA3 File Offset: 0x00A571A3
 		protected virtual void OnLeftConfirmBtnClick(int index)
 		{
 		}
 
-		// Token: 0x06030282 RID: 197250 RVA: 0x00B29139 File Offset: 0x00B27339
+		// Token: 0x06024A52 RID: 150098 RVA: 0x00A58FA5 File Offset: 0x00A571A5
 		protected virtual void OnRightConfirmBtnClick(int index)
 		{
 		}
 
-		// Token: 0x06030283 RID: 197251 RVA: 0x00B2913B File Offset: 0x00B2733B
+		// Token: 0x06024A53 RID: 150099 RVA: 0x00A58FA7 File Offset: 0x00A571A7
 		protected virtual void OnMiddleCenterBtnClick(int index)
 		{
 		}
 
-		// Token: 0x06030284 RID: 197252 RVA: 0x00B2913D File Offset: 0x00B2733D
+		// Token: 0x06024A54 RID: 150100 RVA: 0x00A58FA9 File Offset: 0x00A571A9
 		protected virtual void OnDelBtnClick()
 		{
 		}
 
-		// Token: 0x06030285 RID: 197253 RVA: 0x00B29140 File Offset: 0x00B27340
+		// Token: 0x06024A55 RID: 150101 RVA: 0x00A58FAC File Offset: 0x00A571AC
 		protected void SetDelBtnActive(bool active)
 		{
 			base.GetButton(10).RootUIComp.Get().SetUIActive(active);
 		}
 
-		// Token: 0x06030286 RID: 197254 RVA: 0x00B29168 File Offset: 0x00B27368
+		// Token: 0x06024A56 RID: 150102 RVA: 0x00A58FD4 File Offset: 0x00A571D4
 		protected void SetDelBtnSelfInteractive(bool interactive)
 		{
 			base.GetButton(10).SetSelfInteractive(interactive);
 		}
 
-		// Token: 0x06030287 RID: 197255 RVA: 0x00B29178 File Offset: 0x00B27378
+		// Token: 0x06024A57 RID: 150103 RVA: 0x00A58FE4 File Offset: 0x00A571E4
 		protected override void OnAfterShowWorldMapSecondaryUi()
 		{
 			WorldMapSecondaryUiAutoPilotContext autoPilotContext = this.AutoPilotContext;
@@ -160,33 +160,33 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.WorldMapSecondaryUiLayout
 			autoPilotContext.UpdateAutoPilotState();
 		}
 
-		// Token: 0x06030288 RID: 197256 RVA: 0x00B2918A File Offset: 0x00B2738A
+		// Token: 0x06024A58 RID: 150104 RVA: 0x00A58FF6 File Offset: 0x00A571F6
 		private void RefreshPanel(MarkItem selectedMarkItem = null)
 		{
 			this.OnRefreshPanel(selectedMarkItem);
 		}
 
-		// Token: 0x06030289 RID: 197257 RVA: 0x00B29193 File Offset: 0x00B27393
+		// Token: 0x06024A59 RID: 150105 RVA: 0x00A58FFF File Offset: 0x00A571FF
 		protected virtual void OnRefreshPanel(MarkItem selectedMarkItem = null)
 		{
 		}
 
-		// Token: 0x04019EFE RID: 106238
+		// Token: 0x040145B2 RID: 83378
 		protected ButtonItem LeftConfirmBtn;
 
-		// Token: 0x04019EFF RID: 106239
+		// Token: 0x040145B3 RID: 83379
 		protected ButtonItem RightConfirmBtn;
 
-		// Token: 0x04019F00 RID: 106240
+		// Token: 0x040145B4 RID: 83380
 		protected ButtonItem MiddleCenterBtn;
 
-		// Token: 0x04019F01 RID: 106241
+		// Token: 0x040145B5 RID: 83381
 		protected WorldMapSecondaryUiContext LayoutContext;
 
-		// Token: 0x04019F02 RID: 106242
+		// Token: 0x040145B6 RID: 83382
 		protected WorldMapSecondaryUiAutoPilotContext AutoPilotContext;
 
-		// Token: 0x04019F03 RID: 106243
+		// Token: 0x040145B7 RID: 83383
 		protected MapTipsActivateTipPanel MapTipsActivateTipPanel;
 	}
 }

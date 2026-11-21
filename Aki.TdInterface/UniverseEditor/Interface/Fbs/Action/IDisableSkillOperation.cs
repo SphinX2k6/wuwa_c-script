@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020065F4 RID: 26100
+	// Token: 0x02006C65 RID: 27749
 	public struct IDisableSkillOperation : IFlatbufferObject
 	{
-		// Token: 0x1700C1EA RID: 49642
-		// (get) Token: 0x0602D4E5 RID: 185573 RVA: 0x00635A43 File Offset: 0x00633C43
+		// Token: 0x1700CB88 RID: 52104
+		// (get) Token: 0x0602FCB6 RID: 195766 RVA: 0x006825AB File Offset: 0x006807AB
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D4E6 RID: 185574 RVA: 0x00635A50 File Offset: 0x00633C50
+		// Token: 0x0602FCB7 RID: 195767 RVA: 0x006825B8 File Offset: 0x006807B8
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602D4E7 RID: 185575 RVA: 0x00635A58 File Offset: 0x00633C58
+		// Token: 0x0602FCB8 RID: 195768 RVA: 0x006825C0 File Offset: 0x006807C0
 		public static IDisableSkillOperation GetRootAsIDisableSkillOperation(ByteBuffer _bb)
 		{
 			return IDisableSkillOperation.GetRootAsIDisableSkillOperation(_bb, default(IDisableSkillOperation));
 		}
 
-		// Token: 0x0602D4E8 RID: 185576 RVA: 0x00635A74 File Offset: 0x00633C74
+		// Token: 0x0602FCB9 RID: 195769 RVA: 0x006825DC File Offset: 0x006807DC
 		public static IDisableSkillOperation GetRootAsIDisableSkillOperation(ByteBuffer _bb, IDisableSkillOperation obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602D4E9 RID: 185577 RVA: 0x00635A91 File Offset: 0x00633C91
+		// Token: 0x0602FCBA RID: 195770 RVA: 0x006825F9 File Offset: 0x006807F9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602D4EA RID: 185578 RVA: 0x00635AA0 File Offset: 0x00633CA0
+		// Token: 0x0602FCBB RID: 195771 RVA: 0x00682608 File Offset: 0x00680808
 		public IDisableSkillOperation __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C1EB RID: 49643
-		// (get) Token: 0x0602D4EB RID: 185579 RVA: 0x00635AB0 File Offset: 0x00633CB0
+		// Token: 0x1700CB89 RID: 52105
+		// (get) Token: 0x0602FCBC RID: 195772 RVA: 0x00682618 File Offset: 0x00680818
 		public ESkillOperationType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C1EC RID: 49644
-		// (get) Token: 0x0602D4EC RID: 185580 RVA: 0x00635AEC File Offset: 0x00633CEC
+		// Token: 0x1700CB8A RID: 52106
+		// (get) Token: 0x0602FCBD RID: 195773 RVA: 0x00682654 File Offset: 0x00680854
 		public EDisplayModeInSkillOp DisplayMode
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C1ED RID: 49645
-		// (get) Token: 0x0602D4ED RID: 185581 RVA: 0x00635B28 File Offset: 0x00633D28
+		// Token: 0x1700CB8B RID: 52107
+		// (get) Token: 0x0602FCBE RID: 195774 RVA: 0x00682690 File Offset: 0x00680890
 		public bool DisableSkillWheel
 		{
 			get
@@ -88,8 +88,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C1EE RID: 49646
-		// (get) Token: 0x0602D4EE RID: 185582 RVA: 0x00635B68 File Offset: 0x00633D68
+		// Token: 0x1700CB8C RID: 52108
+		// (get) Token: 0x0602FCBF RID: 195775 RVA: 0x006826D0 File Offset: 0x006808D0
 		public byte NullMask
 		{
 			get
@@ -103,7 +103,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602D4EF RID: 185583 RVA: 0x00635BA5 File Offset: 0x00633DA5
+		// Token: 0x0602FCC0 RID: 195776 RVA: 0x0068270D File Offset: 0x0068090D
 		public static Offset<IDisableSkillOperation> CreateIDisableSkillOperation(FlatBufferBuilder builder, ESkillOperationType Type = ESkillOperationType.Enable, EDisplayModeInSkillOp DisplayMode = EDisplayModeInSkillOp.Ashen, bool DisableSkillWheel = false, byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -114,43 +114,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IDisableSkillOperation.EndIDisableSkillOperation(builder);
 		}
 
-		// Token: 0x0602D4F0 RID: 185584 RVA: 0x00635BD1 File Offset: 0x00633DD1
+		// Token: 0x0602FCC1 RID: 195777 RVA: 0x00682739 File Offset: 0x00680939
 		public static void StartIDisableSkillOperation(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0602D4F1 RID: 185585 RVA: 0x00635BDA File Offset: 0x00633DDA
+		// Token: 0x0602FCC2 RID: 195778 RVA: 0x00682742 File Offset: 0x00680942
 		public static void AddType(FlatBufferBuilder builder, ESkillOperationType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602D4F2 RID: 185586 RVA: 0x00635BE5 File Offset: 0x00633DE5
+		// Token: 0x0602FCC3 RID: 195779 RVA: 0x0068274D File Offset: 0x0068094D
 		public static void AddDisplayMode(FlatBufferBuilder builder, EDisplayModeInSkillOp displayMode)
 		{
 			builder.AddByte(1, (byte)displayMode, 0);
 		}
 
-		// Token: 0x0602D4F3 RID: 185587 RVA: 0x00635BF0 File Offset: 0x00633DF0
+		// Token: 0x0602FCC4 RID: 195780 RVA: 0x00682758 File Offset: 0x00680958
 		public static void AddDisableSkillWheel(FlatBufferBuilder builder, bool disableSkillWheel)
 		{
 			builder.AddBool(2, disableSkillWheel, false);
 		}
 
-		// Token: 0x0602D4F4 RID: 185588 RVA: 0x00635BFB File Offset: 0x00633DFB
+		// Token: 0x0602FCC5 RID: 195781 RVA: 0x00682763 File Offset: 0x00680963
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x0602D4F5 RID: 185589 RVA: 0x00635C06 File Offset: 0x00633E06
+		// Token: 0x0602FCC6 RID: 195782 RVA: 0x0068276E File Offset: 0x0068096E
 		public static Offset<IDisableSkillOperation> EndIDisableSkillOperation(FlatBufferBuilder builder)
 		{
 			return new Offset<IDisableSkillOperation>(builder.EndTable());
 		}
 
-		// Token: 0x0602D4F6 RID: 185590 RVA: 0x00635C14 File Offset: 0x00633E14
+		// Token: 0x0602FCC7 RID: 195783 RVA: 0x0068277C File Offset: 0x0068097C
 		public IDisableSkillOperationT UnPack()
 		{
 			IDisableSkillOperationT disableSkillOperationT = new IDisableSkillOperationT();
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return disableSkillOperationT;
 		}
 
-		// Token: 0x0602D4F7 RID: 185591 RVA: 0x00635C2F File Offset: 0x00633E2F
+		// Token: 0x0602FCC8 RID: 195784 RVA: 0x00682797 File Offset: 0x00680997
 		public void UnPackTo(IDisableSkillOperationT _o)
 		{
 			_o.Type = this.Type;
@@ -167,7 +167,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602D4F8 RID: 185592 RVA: 0x00635C64 File Offset: 0x00633E64
+		// Token: 0x0602FCC9 RID: 195785 RVA: 0x006827CC File Offset: 0x006809CC
 		public static Offset<IDisableSkillOperation> Pack(FlatBufferBuilder builder, IDisableSkillOperationT _o)
 		{
 			if (_o == null)
@@ -177,7 +177,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IDisableSkillOperation.CreateIDisableSkillOperation(builder, _o.Type, _o.DisplayMode, _o.DisableSkillWheel, _o.NullMask);
 		}
 
-		// Token: 0x04010C76 RID: 68726
+		// Token: 0x04011A91 RID: 72337
 		private Table __p;
 	}
 }

@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029C0 RID: 10688
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002CAD RID: 11437
 	public class VehicleExitPlayer : ActionParams
 	{
-		// Token: 0x0600EC53 RID: 60499 RVA: 0x00228403 File Offset: 0x00226603
+		// Token: 0x0600FAEA RID: 64234 RVA: 0x00245D87 File Offset: 0x00243F87
 		public static VehicleExitPlayer Create(IVehicleExitPlayer? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004A95 RID: 19093
-		// (get) Token: 0x0600EC54 RID: 60500 RVA: 0x00228424 File Offset: 0x00226624
+		// Token: 0x17004E3E RID: 20030
+		// (get) Token: 0x0600FAEB RID: 64235 RVA: 0x00245DA8 File Offset: 0x00243FA8
 		public virtual bool? DestroyVehicle
 		{
 			get
@@ -36,8 +33,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004A96 RID: 19094
-		// (get) Token: 0x0600EC55 RID: 60501 RVA: 0x0022845A File Offset: 0x0022665A
+		// Token: 0x17004E3F RID: 20031
+		// (get) Token: 0x0600FAEC RID: 64236 RVA: 0x00245DDE File Offset: 0x00243FDE
 		public virtual IExitVehicleType ExitType
 		{
 			get
@@ -52,13 +49,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400821C RID: 33308
+		// Token: 0x0400890D RID: 35085
 		private IVehicleExitPlayer Instance;
 
-		// Token: 0x0400821D RID: 33309
+		// Token: 0x0400890E RID: 35086
 		private IExitVehicleType _ExitTypeCache;
 
-		// Token: 0x0400821E RID: 33310
+		// Token: 0x0400890F RID: 35087
 		private bool _ExitTypeInited;
 	}
 }

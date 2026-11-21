@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
@@ -8,20 +7,20 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.ActorFxEmote
 {
-	// Token: 0x02005EEC RID: 24300
+	// Token: 0x02004ED3 RID: 20179
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class ActorFxEmoteController : ControllerBase
 	{
-		// Token: 0x0603DBF8 RID: 252920 RVA: 0x00EED343 File Offset: 0x00EEB543
+		// Token: 0x06032B93 RID: 207763 RVA: 0x00E3EFE3 File Offset: 0x00E3D1E3
 		protected override bool OnInit()
 		{
 			EventSystem.Instance.Add(EEventName.RemoveEntity, new Action<ERemoveEntityType, EntityHandle>(this.OnRemoveEntity));
 			return true;
 		}
 
-		// Token: 0x0603DBF9 RID: 252921 RVA: 0x00EED362 File Offset: 0x00EEB562
+		// Token: 0x06032B94 RID: 207764 RVA: 0x00E3F002 File Offset: 0x00E3D202
 		protected override bool OnClear()
 		{
 			EventSystem.Instance.Remove(EEventName.RemoveEntity, new Action<ERemoveEntityType, EntityHandle>(this.OnRemoveEntity));
@@ -29,7 +28,7 @@ namespace CSharpScript.Game.Module.ActorFxEmote
 			return true;
 		}
 
-		// Token: 0x0603DBFA RID: 252922 RVA: 0x00EED388 File Offset: 0x00EEB588
+		// Token: 0x06032B95 RID: 207765 RVA: 0x00E3F028 File Offset: 0x00E3D228
 		public int Play(int entityId, long fxEmoteId, string socketName, global::Vector relativePosition, global::Rotator relativeRotation, global::Vector scale)
 		{
 			BaseGameplayCueComponent cueComp = this.GetCueComp(entityId);
@@ -85,7 +84,7 @@ namespace CSharpScript.Game.Module.ActorFxEmote
 			return num;
 		}
 
-		// Token: 0x0603DBFB RID: 252923 RVA: 0x00EED56C File Offset: 0x00EEB76C
+		// Token: 0x06032B96 RID: 207766 RVA: 0x00E3F20C File Offset: 0x00E3D40C
 		public void StopSocket(int entityId, string socketName)
 		{
 			ActorFxEmoteData entityData = ActorFxEmoteModel.Instance.GetEntityData(entityId);
@@ -101,7 +100,7 @@ namespace CSharpScript.Game.Module.ActorFxEmote
 			this.RemoveSocketHandle(entityData, cueComp, socketName ?? "__default");
 		}
 
-		// Token: 0x0603DBFC RID: 252924 RVA: 0x00EED5A8 File Offset: 0x00EEB7A8
+		// Token: 0x06032B97 RID: 207767 RVA: 0x00E3F248 File Offset: 0x00E3D448
 		public void StopEntity(int entityId)
 		{
 			ActorFxEmoteData entityData = ActorFxEmoteModel.Instance.GetEntityData(entityId);
@@ -121,7 +120,7 @@ namespace CSharpScript.Game.Module.ActorFxEmote
 			ActorFxEmoteModel.Instance.RemoveEntityData(entityId);
 		}
 
-		// Token: 0x0603DBFD RID: 252925 RVA: 0x00EED634 File Offset: 0x00EEB834
+		// Token: 0x06032B98 RID: 207768 RVA: 0x00E3F2D4 File Offset: 0x00E3D4D4
 		public void StopAll()
 		{
 			ActorFxEmoteModel.Instance.ForEachEntityData(delegate(int entityId, ActorFxEmoteData entityData)
@@ -138,7 +137,7 @@ namespace CSharpScript.Game.Module.ActorFxEmote
 			});
 		}
 
-		// Token: 0x0603DBFE RID: 252926 RVA: 0x00EED64C File Offset: 0x00EEB84C
+		// Token: 0x06032B99 RID: 207769 RVA: 0x00E3F2EC File Offset: 0x00E3D4EC
 		private void RemoveSocketHandle(ActorFxEmoteData entityData, BaseGameplayCueComponent queComp, string socketKey)
 		{
 			int num;
@@ -149,10 +148,10 @@ namespace CSharpScript.Game.Module.ActorFxEmote
 			entityData.SocketHandles.Remove(socketKey);
 		}
 
-		// Token: 0x0603DBFF RID: 252927 RVA: 0x00EED684 File Offset: 0x00EEB884
+		// Token: 0x06032B9A RID: 207770 RVA: 0x00E3F324 File Offset: 0x00E3D524
 		private void RemoveHandlesByCueId(ActorFxEmoteData entityData, BaseGameplayCueComponent queComp, long cueId)
 		{
-			foreach (KeyValuePair<string, int> keyValuePair in entityData.SocketHandles.ToArray<KeyValuePair<string, int>>())
+			foreach (KeyValuePair<string, int> keyValuePair in new List<KeyValuePair<string, int>>(entityData.SocketHandles))
 			{
 				string text;
 				int num;
@@ -168,14 +167,14 @@ namespace CSharpScript.Game.Module.ActorFxEmote
 			}
 		}
 
-		// Token: 0x0603DC00 RID: 252928 RVA: 0x00EED6F8 File Offset: 0x00EEB8F8
+		// Token: 0x06032B9B RID: 207771 RVA: 0x00E3F3BC File Offset: 0x00E3D5BC
 		[NullableContext(2)]
 		private BaseGameplayCueComponent GetCueComp(int entityId)
 		{
 			return EntitySystem.Instance.GetComponent<BaseGameplayCueComponent>(entityId);
 		}
 
-		// Token: 0x0603DC01 RID: 252929 RVA: 0x00EED705 File Offset: 0x00EEB905
+		// Token: 0x06032B9C RID: 207772 RVA: 0x00E3F3C9 File Offset: 0x00E3D5C9
 		private void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle handle)
 		{
 			if (handle == null)
@@ -185,8 +184,8 @@ namespace CSharpScript.Game.Module.ActorFxEmote
 			this.StopEntity(handle.Id);
 		}
 
-		// Token: 0x17008EE8 RID: 36584
-		// (get) Token: 0x0603DC02 RID: 252930 RVA: 0x00EED717 File Offset: 0x00EEB917
+		// Token: 0x170062BA RID: 25274
+		// (get) Token: 0x06032B9D RID: 207773 RVA: 0x00E3F3DB File Offset: 0x00E3D5DB
 		public static ActorFxEmoteController Instance
 		{
 			get
@@ -195,7 +194,7 @@ namespace CSharpScript.Game.Module.ActorFxEmote
 			}
 		}
 
-		// Token: 0x0603DC03 RID: 252931 RVA: 0x00EED71E File Offset: 0x00EEB91E
+		// Token: 0x06032B9E RID: 207774 RVA: 0x00E3F3E2 File Offset: 0x00E3D5E2
 		public static ActorFxEmoteController GetOrCreateInstance()
 		{
 			if (ActorFxEmoteController._Instance == null)
@@ -205,7 +204,7 @@ namespace CSharpScript.Game.Module.ActorFxEmote
 			return ActorFxEmoteController._Instance;
 		}
 
-		// Token: 0x0603DC04 RID: 252932 RVA: 0x00EED732 File Offset: 0x00EEB932
+		// Token: 0x06032B9F RID: 207775 RVA: 0x00E3F3F6 File Offset: 0x00E3D5F6
 		public static bool CreateInstance()
 		{
 			if (ActorFxEmoteController._Instance != null)
@@ -216,50 +215,50 @@ namespace CSharpScript.Game.Module.ActorFxEmote
 			return true;
 		}
 
-		// Token: 0x0603DC05 RID: 252933 RVA: 0x00EED748 File Offset: 0x00EEB948
+		// Token: 0x06032BA0 RID: 207776 RVA: 0x00E3F40C File Offset: 0x00E3D60C
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603DC06 RID: 252934 RVA: 0x00EED74A File Offset: 0x00EEB94A
+		// Token: 0x06032BA1 RID: 207777 RVA: 0x00E3F40E File Offset: 0x00E3D60E
 		public static void ResetStaticDefaultValue()
 		{
 			ActorFxEmoteController._Instance = null;
 		}
 
-		// Token: 0x0603DC07 RID: 252935 RVA: 0x00EED752 File Offset: 0x00EEB952
+		// Token: 0x06032BA2 RID: 207778 RVA: 0x00E3F416 File Offset: 0x00E3D616
 		static ActorFxEmoteController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ActorFxEmoteController.CreateStaticDefaultValue), new Action(ActorFxEmoteController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04020450 RID: 132176
+		// Token: 0x0401AF22 RID: 110370
 		[Nullable(2)]
 		private static ActorFxEmoteController _Instance;
 
-		// Token: 0x0200C226 RID: 49702
+		// Token: 0x0200AC34 RID: 44084
 		[NullableContext(2)]
 		[Nullable(0)]
 		private class GameplayCueEffectOverrideImpl : IGameplayCueEffectOverride
 		{
-			// Token: 0x1700A277 RID: 41591
-			// (get) Token: 0x060505A0 RID: 329120 RVA: 0x0159C23E File Offset: 0x0159A43E
-			// (set) Token: 0x060505A1 RID: 329121 RVA: 0x0159C246 File Offset: 0x0159A446
+			// Token: 0x17007A14 RID: 31252
+			// (get) Token: 0x06046AEA RID: 289514 RVA: 0x01555C0A File Offset: 0x01553E0A
+			// (set) Token: 0x06046AEB RID: 289515 RVA: 0x01555C12 File Offset: 0x01553E12
 			public string SocketName { get; set; }
 
-			// Token: 0x1700A278 RID: 41592
-			// (get) Token: 0x060505A2 RID: 329122 RVA: 0x0159C24F File Offset: 0x0159A44F
-			// (set) Token: 0x060505A3 RID: 329123 RVA: 0x0159C257 File Offset: 0x0159A457
+			// Token: 0x17007A15 RID: 31253
+			// (get) Token: 0x06046AEC RID: 289516 RVA: 0x01555C1B File Offset: 0x01553E1B
+			// (set) Token: 0x06046AED RID: 289517 RVA: 0x01555C23 File Offset: 0x01553E23
 			public FVector? RelativePosition { get; set; }
 
-			// Token: 0x1700A279 RID: 41593
-			// (get) Token: 0x060505A4 RID: 329124 RVA: 0x0159C260 File Offset: 0x0159A460
-			// (set) Token: 0x060505A5 RID: 329125 RVA: 0x0159C268 File Offset: 0x0159A468
+			// Token: 0x17007A16 RID: 31254
+			// (get) Token: 0x06046AEE RID: 289518 RVA: 0x01555C2C File Offset: 0x01553E2C
+			// (set) Token: 0x06046AEF RID: 289519 RVA: 0x01555C34 File Offset: 0x01553E34
 			public FVector? RelativeRotation { get; set; }
 
-			// Token: 0x1700A27A RID: 41594
-			// (get) Token: 0x060505A6 RID: 329126 RVA: 0x0159C271 File Offset: 0x0159A471
-			// (set) Token: 0x060505A7 RID: 329127 RVA: 0x0159C279 File Offset: 0x0159A479
+			// Token: 0x17007A17 RID: 31255
+			// (get) Token: 0x06046AF0 RID: 289520 RVA: 0x01555C3D File Offset: 0x01553E3D
+			// (set) Token: 0x06046AF1 RID: 289521 RVA: 0x01555C45 File Offset: 0x01553E45
 			public FVector? Scale { get; set; }
 		}
 	}

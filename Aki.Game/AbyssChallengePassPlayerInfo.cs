@@ -3,30 +3,30 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02001A19 RID: 6681
+// Token: 0x02000ED8 RID: 3800
 [NullableContext(1)]
 [Nullable(0)]
 public class AbyssChallengePassPlayerInfo
 {
-	// Token: 0x0600C427 RID: 50215 RVA: 0x002C6B34 File Offset: 0x002C4D34
+	// Token: 0x06009837 RID: 38967 RVA: 0x002D1BB8 File Offset: 0x002CFDB8
 	public string GetName()
 	{
 		return this.Name;
 	}
 
-	// Token: 0x0600C428 RID: 50216 RVA: 0x002C6B3C File Offset: 0x002C4D3C
+	// Token: 0x06009838 RID: 38968 RVA: 0x002D1BC0 File Offset: 0x002CFDC0
 	public int GetPlayerId()
 	{
 		return this.PlayerId;
 	}
 
-	// Token: 0x0600C429 RID: 50217 RVA: 0x002C6B44 File Offset: 0x002C4D44
+	// Token: 0x06009839 RID: 38969 RVA: 0x002D1BC8 File Offset: 0x002CFDC8
 	public AbyssChallengePassRoleInfo[] GetPassRoleInfoList()
 	{
 		return this.PassRoleInfoList;
 	}
 
-	// Token: 0x0600C42A RID: 50218 RVA: 0x002C6B4C File Offset: 0x002C4D4C
+	// Token: 0x0600983A RID: 38970 RVA: 0x002D1BD0 File Offset: 0x002CFDD0
 	public void Phrase(Aki.Protocol.AbyssChallengePassPlayerInfo data)
 	{
 		this.Name = data.Name;
@@ -43,12 +43,12 @@ public class AbyssChallengePassPlayerInfo
 		this.PassRoleInfoList = list.ToArray();
 	}
 
-	// Token: 0x04005A80 RID: 23168
+	// Token: 0x04005B4F RID: 23375
 	private string Name = "";
 
-	// Token: 0x04005A81 RID: 23169
+	// Token: 0x04005B50 RID: 23376
 	private int PlayerId;
 
-	// Token: 0x04005A82 RID: 23170
+	// Token: 0x04005B51 RID: 23377
 	private AbyssChallengePassRoleInfo[] PassRoleInfoList = Array.Empty<AbyssChallengePassRoleInfo>();
 }

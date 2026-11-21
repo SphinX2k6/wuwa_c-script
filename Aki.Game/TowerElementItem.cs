@@ -5,10 +5,10 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002BEE RID: 11246
+// Token: 0x02002169 RID: 8553
 public class TowerElementItem : GridProxyAbstract<int>
 {
-	// Token: 0x060175B5 RID: 95669 RVA: 0x005F0D20 File Offset: 0x005EEF20
+	// Token: 0x06014FE6 RID: 85990 RVA: 0x0061D880 File Offset: 0x0061BA80
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -22,12 +22,12 @@ public class TowerElementItem : GridProxyAbstract<int>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060175B6 RID: 95670 RVA: 0x005F0D89 File Offset: 0x005EEF89
+	// Token: 0x06014FE7 RID: 85991 RVA: 0x0061D8E9 File Offset: 0x0061BAE9
 	protected override void OnStart()
 	{
 	}
 
-	// Token: 0x060175B7 RID: 95671 RVA: 0x005F0D8C File Offset: 0x005EEF8C
+	// Token: 0x06014FE8 RID: 85992 RVA: 0x0061D8EC File Offset: 0x0061BAEC
 	public override void Refresh(int elementId, bool isSelected, int gridIndex)
 	{
 		ElementInfo? elementInfo = ElementInfoConfig.Instance.GetElementInfo(elementId);
@@ -40,12 +40,12 @@ public class TowerElementItem : GridProxyAbstract<int>
 		item.SetColor(FColor.FromHex(elementInfo.Value.ElementColor));
 	}
 
-	// Token: 0x020091AB RID: 37291
+	// Token: 0x020083EE RID: 33774
 	private enum EChildType
 	{
-		// Token: 0x0402F219 RID: 193049
+		// Token: 0x0402A91A RID: 174362
 		ElementColorBg,
-		// Token: 0x0402F21A RID: 193050
+		// Token: 0x0402A91B RID: 174363
 		ElementText
 	}
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.RoleUi;
@@ -10,17 +9,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001193 RID: 4499
+// Token: 0x02000647 RID: 1607
 [NullableContext(1)]
 [Nullable(0)]
 public class BeginnerCarnivalChoseRoleView : UiViewBase
 {
-	// Token: 0x06007712 RID: 30482 RVA: 0x0018D418 File Offset: 0x0018B618
+	// Token: 0x06004AA9 RID: 19113 RVA: 0x00196004 File Offset: 0x00194204
 	public BeginnerCarnivalChoseRoleView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06007713 RID: 30483 RVA: 0x0018D424 File Offset: 0x0018B624
+	// Token: 0x06004AAA RID: 19114 RVA: 0x00196010 File Offset: 0x00194210
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -38,7 +37,7 @@ public class BeginnerCarnivalChoseRoleView : UiViewBase
 		};
 	}
 
-	// Token: 0x06007714 RID: 30484 RVA: 0x0018D4E4 File Offset: 0x0018B6E4
+	// Token: 0x06004AAB RID: 19115 RVA: 0x001960D0 File Offset: 0x001942D0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		BeginnerCarnivalChoseRoleView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -49,11 +48,11 @@ public class BeginnerCarnivalChoseRoleView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007715 RID: 30485 RVA: 0x0018D528 File Offset: 0x0018B728
+	// Token: 0x06004AAC RID: 19116 RVA: 0x00196114 File Offset: 0x00194314
 	protected override void OnStart()
 	{
-		NewbieCarnivalParam? newbieCarnivalParam;
-		List<int> list = ((BeginnerCarnivalConfig.Instance.GetNewbieCarnivalParam(BeginnerCarnivalController.Instance.ActivityId) != null) ? newbieCarnivalParam.GetValueOrDefault().GetRolesArray().ToList<int>() : null) ?? new List<int>();
+		NewbieCarnivalParam? newbieCarnivalParam = BeginnerCarnivalConfig.Instance.GetNewbieCarnivalParam(BeginnerCarnivalController.Instance.ActivityId);
+		List<int> list = (newbieCarnivalParam == null) ? new List<int>() : new List<int>(newbieCarnivalParam.Value.GetRolesArray());
 		GenericScrollViewNew<RoleSelectItem, int> selectionScrollView = this.SelectionScrollView;
 		if (selectionScrollView != null)
 		{
@@ -71,7 +70,7 @@ public class BeginnerCarnivalChoseRoleView : UiViewBase
 		BeginnerCarnivalController.Instance.GetBeginnerCarnivalData().SetChoseRoleViewEnter();
 	}
 
-	// Token: 0x06007716 RID: 30486 RVA: 0x0018D5B9 File Offset: 0x0018B7B9
+	// Token: 0x06004AAD RID: 19117 RVA: 0x001961A0 File Offset: 0x001943A0
 	private void OnClickConfirmBtn()
 	{
 		if (this.RoleId != BeginnerCarnivalController.Instance.GetBeginnerCarnivalData().ChoseRoleId)
@@ -81,7 +80,7 @@ public class BeginnerCarnivalChoseRoleView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06007717 RID: 30487 RVA: 0x0018D5E9 File Offset: 0x0018B7E9
+	// Token: 0x06004AAE RID: 19118 RVA: 0x001961D0 File Offset: 0x001943D0
 	private RoleSelectItem CreateSelectionItem()
 	{
 		return new RoleSelectItem
@@ -91,7 +90,7 @@ public class BeginnerCarnivalChoseRoleView : UiViewBase
 		};
 	}
 
-	// Token: 0x06007718 RID: 30488 RVA: 0x0018D614 File Offset: 0x0018B814
+	// Token: 0x06004AAF RID: 19119 RVA: 0x001961FB File Offset: 0x001943FB
 	private void SelectItemByIndex(int gridIndex, int roleId)
 	{
 		GenericScrollViewNew<RoleSelectItem, int> selectionScrollView = this.SelectionScrollView;
@@ -107,7 +106,7 @@ public class BeginnerCarnivalChoseRoleView : UiViewBase
 		this.RoleId = roleId;
 	}
 
-	// Token: 0x06007719 RID: 30489 RVA: 0x0018D644 File Offset: 0x0018B844
+	// Token: 0x06004AB0 RID: 19120 RVA: 0x0019622C File Offset: 0x0019442C
 	private bool CanToggleChange(int gridIndex)
 	{
 		GenericScrollViewNew<RoleSelectItem, int> selectionScrollView = this.SelectionScrollView;
@@ -126,7 +125,7 @@ public class BeginnerCarnivalChoseRoleView : UiViewBase
 		return !(gridIndex == num3.GetValueOrDefault() & num3 != null);
 	}
 
-	// Token: 0x0600771A RID: 30490 RVA: 0x0018D69C File Offset: 0x0018B89C
+	// Token: 0x06004AB1 RID: 19121 RVA: 0x00196284 File Offset: 0x00194484
 	private void OnItemSelect(int roleId)
 	{
 		RoleInfo value = RoleConfig.Instance.GetRoleConfig(roleId).Value;
@@ -144,10 +143,10 @@ public class BeginnerCarnivalChoseRoleView : UiViewBase
 		curSelectedItem.Apply<CharacterSmallItemGrid>(parameters);
 	}
 
-	// Token: 0x0400369E RID: 13982
+	// Token: 0x04003737 RID: 14135
 	private int RoleId;
 
-	// Token: 0x0400369F RID: 13983
+	// Token: 0x04003738 RID: 14136
 	[Nullable(new byte[]
 	{
 		2,
@@ -155,7 +154,7 @@ public class BeginnerCarnivalChoseRoleView : UiViewBase
 	})]
 	private GenericScrollViewNew<RoleSelectItem, int> SelectionScrollView;
 
-	// Token: 0x040036A0 RID: 13984
+	// Token: 0x04003739 RID: 14137
 	[Nullable(2)]
 	private SmallItemGrid CurSelectedItem;
 }

@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F30 RID: 3888
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001046 RID: 4166
 	public class ICrossSceneSyncKillMonster : IQuestCondition
 	{
-		// Token: 0x06005666 RID: 22118 RVA: 0x000D3C68 File Offset: 0x000D1E68
+		// Token: 0x06005BE2 RID: 23522 RVA: 0x000DFE10 File Offset: 0x000DE010
 		private ICrossSceneSyncKillMonster_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005667 RID: 22119 RVA: 0x000D3CA0 File Offset: 0x000D1EA0
+		// Token: 0x06005BE3 RID: 23523 RVA: 0x000DFE48 File Offset: 0x000DE048
 		public static ICrossSceneSyncKillMonster Create([Nullable(2)] ICrossSceneSyncKillMonster instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005668 RID: 22120 RVA: 0x000D3CB3 File Offset: 0x000D1EB3
+		// Token: 0x06005BE4 RID: 23524 RVA: 0x000DFE5B File Offset: 0x000DE05B
 		public static ICrossSceneSyncKillMonster CreateFromSetValue([Nullable(2)] ICrossSceneSyncKillMonster_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005669 RID: 22121 RVA: 0x000D3CC6 File Offset: 0x000D1EC6
+		// Token: 0x06005BE5 RID: 23525 RVA: 0x000DFE6E File Offset: 0x000DE06E
 		public new ICrossSceneSyncKillMonster_SetValue ToSetValue()
 		{
 			return new ICrossSceneSyncKillMonster_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001CEC RID: 7404
-		// (get) Token: 0x0600566A RID: 22122 RVA: 0x000D3CFD File Offset: 0x000D1EFD
-		// (set) Token: 0x0600566B RID: 22123 RVA: 0x000D3D28 File Offset: 0x000D1F28
+		// Token: 0x17001E84 RID: 7812
+		// (get) Token: 0x06005BE6 RID: 23526 RVA: 0x000DFEA5 File Offset: 0x000DE0A5
+		// (set) Token: 0x06005BE7 RID: 23527 RVA: 0x000DFED0 File Offset: 0x000DE0D0
 		public override EChildQuest Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001CED RID: 7405
-		// (get) Token: 0x0600566C RID: 22124 RVA: 0x000D3D38 File Offset: 0x000D1F38
-		// (set) Token: 0x0600566D RID: 22125 RVA: 0x000D3D99 File Offset: 0x000D1F99
+		// Token: 0x17001E85 RID: 7813
+		// (get) Token: 0x06005BE8 RID: 23528 RVA: 0x000DFEE0 File Offset: 0x000DE0E0
+		// (set) Token: 0x06005BE9 RID: 23529 RVA: 0x000DFF41 File Offset: 0x000DE141
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -119,9 +117,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001CEE RID: 7406
-		// (get) Token: 0x0600566E RID: 22126 RVA: 0x000D3DAE File Offset: 0x000D1FAE
-		// (set) Token: 0x0600566F RID: 22127 RVA: 0x000D3DD9 File Offset: 0x000D1FD9
+		// Token: 0x17001E86 RID: 7814
+		// (get) Token: 0x06005BEA RID: 23530 RVA: 0x000DFF56 File Offset: 0x000DE156
+		// (set) Token: 0x06005BEB RID: 23531 RVA: 0x000DFF81 File Offset: 0x000DE181
 		public virtual int EntityBundleId
 		{
 			get
@@ -142,9 +140,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001CEF RID: 7407
-		// (get) Token: 0x06005670 RID: 22128 RVA: 0x000D3DE7 File Offset: 0x000D1FE7
-		// (set) Token: 0x06005671 RID: 22129 RVA: 0x000D3E12 File Offset: 0x000D2012
+		// Token: 0x17001E87 RID: 7815
+		// (get) Token: 0x06005BEC RID: 23532 RVA: 0x000DFF8F File Offset: 0x000DE18F
+		// (set) Token: 0x06005BED RID: 23533 RVA: 0x000DFFBA File Offset: 0x000DE1BA
 		public virtual int PosEntityId
 		{
 			get
@@ -165,18 +163,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003461 RID: 13409
+		// Token: 0x0400376E RID: 14190
 		[Nullable(2)]
 		protected new ICrossSceneSyncKillMonster FbInstance;
 
-		// Token: 0x04003462 RID: 13410
+		// Token: 0x0400376F RID: 14191
 		[Nullable(2)]
 		protected new ICrossSceneSyncKillMonster_SetValue PocoInterface;
 
-		// Token: 0x04003463 RID: 13411
+		// Token: 0x04003770 RID: 14192
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x04003464 RID: 13412
+		// Token: 0x04003771 RID: 14193
 		private bool _PreConditionsInited;
 	}
 }

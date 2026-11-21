@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F99 RID: 3993
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020010C3 RID: 4291
 	public class IFocusModeSetting
 	{
-		// Token: 0x060058F2 RID: 22770 RVA: 0x000D8E44 File Offset: 0x000D7044
+		// Token: 0x06005EC4 RID: 24260 RVA: 0x000E586C File Offset: 0x000E3A6C
 		private IFocusModeSetting_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060058F3 RID: 22771 RVA: 0x000D8E7C File Offset: 0x000D707C
+		// Token: 0x06005EC5 RID: 24261 RVA: 0x000E58A4 File Offset: 0x000E3AA4
 		public static IFocusModeSetting Create([Nullable(2)] IFocusModeSetting instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060058F4 RID: 22772 RVA: 0x000D8E8F File Offset: 0x000D708F
+		// Token: 0x06005EC6 RID: 24262 RVA: 0x000E58B7 File Offset: 0x000E3AB7
 		public static IFocusModeSetting CreateFromSetValue([Nullable(2)] IFocusModeSetting_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060058F5 RID: 22773 RVA: 0x000D8EA2 File Offset: 0x000D70A2
+		// Token: 0x06005EC7 RID: 24263 RVA: 0x000E58CA File Offset: 0x000E3ACA
 		public IFocusModeSetting_SetValue ToSetValue()
 		{
 			return new IFocusModeSetting_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001D95 RID: 7573
-		// (get) Token: 0x060058F6 RID: 22774 RVA: 0x000D8EDC File Offset: 0x000D70DC
-		// (set) Token: 0x060058F7 RID: 22775 RVA: 0x000D8F16 File Offset: 0x000D7116
+		// Token: 0x17001F3A RID: 7994
+		// (get) Token: 0x06005EC8 RID: 24264 RVA: 0x000E5904 File Offset: 0x000E3B04
+		// (set) Token: 0x06005EC9 RID: 24265 RVA: 0x000E593E File Offset: 0x000E3B3E
 		public virtual bool? CanOpenFocusMode
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D96 RID: 7574
-		// (get) Token: 0x060058F8 RID: 22776 RVA: 0x000D8F24 File Offset: 0x000D7124
-		// (set) Token: 0x060058F9 RID: 22777 RVA: 0x000D8F5E File Offset: 0x000D715E
+		// Token: 0x17001F3B RID: 7995
+		// (get) Token: 0x06005ECA RID: 24266 RVA: 0x000E594C File Offset: 0x000E3B4C
+		// (set) Token: 0x06005ECB RID: 24267 RVA: 0x000E5986 File Offset: 0x000E3B86
 		public virtual bool? IsFocusModeInherit
 		{
 			get
@@ -110,9 +108,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D97 RID: 7575
-		// (get) Token: 0x060058FA RID: 22778 RVA: 0x000D8F6C File Offset: 0x000D716C
-		// (set) Token: 0x060058FB RID: 22779 RVA: 0x000D8FA6 File Offset: 0x000D71A6
+		// Token: 0x17001F3C RID: 7996
+		// (get) Token: 0x06005ECC RID: 24268 RVA: 0x000E5994 File Offset: 0x000E3B94
+		// (set) Token: 0x06005ECD RID: 24269 RVA: 0x000E59CE File Offset: 0x000E3BCE
 		public virtual bool? CanAcceptInFocusMode
 		{
 			get
@@ -134,9 +132,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001D98 RID: 7576
-		// (get) Token: 0x060058FC RID: 22780 RVA: 0x000D8FB4 File Offset: 0x000D71B4
-		// (set) Token: 0x060058FD RID: 22781 RVA: 0x000D8FEE File Offset: 0x000D71EE
+		// Token: 0x17001F3D RID: 7997
+		// (get) Token: 0x06005ECE RID: 24270 RVA: 0x000E59DC File Offset: 0x000E3BDC
+		// (set) Token: 0x06005ECF RID: 24271 RVA: 0x000E5A16 File Offset: 0x000E3C16
 		public virtual bool? IsFocusModeWhiteList
 		{
 			get
@@ -158,11 +156,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040035B6 RID: 13750
+		// Token: 0x040038E6 RID: 14566
 		[Nullable(2)]
 		protected IFocusModeSetting FbInstance;
 
-		// Token: 0x040035B7 RID: 13751
+		// Token: 0x040038E7 RID: 14567
 		[Nullable(2)]
 		protected IFocusModeSetting_SetValue PocoInterface;
 	}

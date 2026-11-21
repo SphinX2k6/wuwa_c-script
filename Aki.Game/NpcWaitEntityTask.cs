@@ -3,19 +3,19 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x0200321A RID: 12826
+// Token: 0x02002789 RID: 10121
 [NullableContext(1)]
 [Nullable(0)]
 internal class NpcWaitEntityTask
 {
-	// Token: 0x0601BA85 RID: 113285 RVA: 0x00799E7C File Offset: 0x0079807C
+	// Token: 0x0601960A RID: 103946 RVA: 0x007C2618 File Offset: 0x007C0818
 	public NpcWaitEntityTask(Entity npcEntity, int pbDataId)
 	{
 		this.NpcEntity = npcEntity;
 		this.PbDataIdToWait = pbDataId;
 	}
 
-	// Token: 0x0601BA86 RID: 113286 RVA: 0x00799E94 File Offset: 0x00798094
+	// Token: 0x0601960B RID: 103947 RVA: 0x007C2630 File Offset: 0x007C0830
 	public void Start()
 	{
 		if (this.Phase != ETaskPhase.None)
@@ -30,7 +30,7 @@ internal class NpcWaitEntityTask
 		this.WaitEntityTaskHandle = WaitEntityTask.CreateWithPbDataId("NpcWaitEntityTask.Start", this.PbDataIdToWait, new Action<bool?>(this.OnEntityAdd), 30000, false, true);
 	}
 
-	// Token: 0x0601BA87 RID: 113287 RVA: 0x00799EE4 File Offset: 0x007980E4
+	// Token: 0x0601960C RID: 103948 RVA: 0x007C2680 File Offset: 0x007C0880
 	public void Stop()
 	{
 		if (this.Phase != ETaskPhase.Succeeded)
@@ -50,7 +50,7 @@ internal class NpcWaitEntityTask
 		this.TryReset(entityHandle.Entity);
 	}
 
-	// Token: 0x0601BA88 RID: 113288 RVA: 0x00799F40 File Offset: 0x00798140
+	// Token: 0x0601960D RID: 103949 RVA: 0x007C26DC File Offset: 0x007C08DC
 	public void Cancel()
 	{
 		if (this.WaitEntityTaskHandle != null)
@@ -80,13 +80,13 @@ internal class NpcWaitEntityTask
 		}
 	}
 
-	// Token: 0x0601BA89 RID: 113289 RVA: 0x00799FE0 File Offset: 0x007981E0
+	// Token: 0x0601960E RID: 103950 RVA: 0x007C277C File Offset: 0x007C097C
 	protected void Finish()
 	{
 		this.Phase = ETaskPhase.Succeeded;
 	}
 
-	// Token: 0x0601BA8A RID: 113290 RVA: 0x00799FEC File Offset: 0x007981EC
+	// Token: 0x0601960F RID: 103951 RVA: 0x007C2788 File Offset: 0x007C0988
 	protected void OnEntityAdd(bool? result)
 	{
 		this.WaitEntityTaskHandle = null;
@@ -105,7 +105,7 @@ internal class NpcWaitEntityTask
 		this.TryExecute(entityHandle.Entity);
 	}
 
-	// Token: 0x0601BA8B RID: 113291 RVA: 0x0079A050 File Offset: 0x00798250
+	// Token: 0x06019610 RID: 103952 RVA: 0x007C27EC File Offset: 0x007C09EC
 	protected void TryExecute(Entity entity)
 	{
 		CreatureDataComponent component = entity.GetComponent<CreatureDataComponent>();
@@ -128,7 +128,7 @@ internal class NpcWaitEntityTask
 		this.Execute(entity);
 	}
 
-	// Token: 0x0601BA8C RID: 113292 RVA: 0x0079A098 File Offset: 0x00798298
+	// Token: 0x06019611 RID: 103953 RVA: 0x007C2834 File Offset: 0x007C0A34
 	protected void TryExecuteWithSceneItemActor(Entity entity)
 	{
 		SceneItemActorComponent component = entity.GetComponent<SceneItemActorComponent>();
@@ -140,7 +140,7 @@ internal class NpcWaitEntityTask
 		this.Execute(entity);
 	}
 
-	// Token: 0x0601BA8D RID: 113293 RVA: 0x0079A0D8 File Offset: 0x007982D8
+	// Token: 0x06019612 RID: 103954 RVA: 0x007C2874 File Offset: 0x007C0A74
 	protected void OnSceneItemLoadComplete()
 	{
 		CreatureModel instance = CreatureModel.Instance;
@@ -149,7 +149,7 @@ internal class NpcWaitEntityTask
 		this.Execute(worldEntity);
 	}
 
-	// Token: 0x0601BA8E RID: 113294 RVA: 0x0079A126 File Offset: 0x00798326
+	// Token: 0x06019613 RID: 103955 RVA: 0x007C28C2 File Offset: 0x007C0AC2
 	protected void TryReset(Entity entity)
 	{
 		if (entity.GetComponent<CreatureDataComponent>() == null)
@@ -159,7 +159,7 @@ internal class NpcWaitEntityTask
 		this.Reset(entity);
 	}
 
-	// Token: 0x0601BA8F RID: 113295 RVA: 0x0079A138 File Offset: 0x00798338
+	// Token: 0x06019614 RID: 103956 RVA: 0x007C28D4 File Offset: 0x007C0AD4
 	protected virtual void Reset(Entity entity)
 	{
 		SceneItemActorComponent component = entity.GetComponent<SceneItemActorComponent>();
@@ -169,26 +169,26 @@ internal class NpcWaitEntityTask
 		}
 	}
 
-	// Token: 0x0601BA90 RID: 113296 RVA: 0x0079A14D File Offset: 0x0079834D
+	// Token: 0x06019615 RID: 103957 RVA: 0x007C28E9 File Offset: 0x007C0AE9
 	protected virtual void Execute(Entity entity)
 	{
 		this.Finish();
 	}
 
-	// Token: 0x0400D99C RID: 55708
+	// Token: 0x0400DE3B RID: 56891
 	[Nullable(2)]
 	public Entity NpcEntity;
 
-	// Token: 0x0400D99D RID: 55709
+	// Token: 0x0400DE3C RID: 56892
 	public int PbDataIdToWait;
 
-	// Token: 0x0400D99E RID: 55710
+	// Token: 0x0400DE3D RID: 56893
 	public EEntityType? EntityType;
 
-	// Token: 0x0400D99F RID: 55711
+	// Token: 0x0400DE3E RID: 56894
 	[Nullable(2)]
 	public WaitEntityTask WaitEntityTaskHandle;
 
-	// Token: 0x0400D9A0 RID: 55712
+	// Token: 0x0400DE3F RID: 56895
 	public ETaskPhase Phase;
 }

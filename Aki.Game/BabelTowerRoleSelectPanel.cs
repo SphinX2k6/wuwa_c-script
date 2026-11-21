@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001167 RID: 4455
+// Token: 0x0200061B RID: 1563
 [NullableContext(1)]
 [Nullable(0)]
 public class BabelTowerRoleSelectPanel : UiPanelBase
 {
-	// Token: 0x060075A6 RID: 30118 RVA: 0x00184ED0 File Offset: 0x001830D0
+	// Token: 0x0600493D RID: 18749 RVA: 0x0018DA4C File Offset: 0x0018BC4C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -25,7 +24,7 @@ public class BabelTowerRoleSelectPanel : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060075A7 RID: 30119 RVA: 0x00184F3C File Offset: 0x0018313C
+	// Token: 0x0600493E RID: 18750 RVA: 0x0018DAB8 File Offset: 0x0018BCB8
 	protected override void OnStart()
 	{
 		this.RoleMultiTemplateScrollView = new MultiTemplateScrollView(base.GetMultiTemplateScrollViewComponent(0));
@@ -33,7 +32,7 @@ public class BabelTowerRoleSelectPanel : UiPanelBase
 		this.FilterSortEntrance = new FilterSortEntrance<RoleDataBase>(item, new TUpdateDataListFunction<RoleDataBase>(this.OnFilterSort));
 	}
 
-	// Token: 0x060075A8 RID: 30120 RVA: 0x00184F7B File Offset: 0x0018317B
+	// Token: 0x0600493F RID: 18751 RVA: 0x0018DAF7 File Offset: 0x0018BCF7
 	protected override void OnBeforeDestroy()
 	{
 		FilterSortEntrance<RoleDataBase> filterSortEntrance = this.FilterSortEntrance;
@@ -44,7 +43,7 @@ public class BabelTowerRoleSelectPanel : UiPanelBase
 		this.FilterSortEntrance = null;
 	}
 
-	// Token: 0x060075A9 RID: 30121 RVA: 0x00184F96 File Offset: 0x00183196
+	// Token: 0x06004940 RID: 18752 RVA: 0x0018DB12 File Offset: 0x0018BD12
 	public void Refresh(List<RoleDataBase> roleList)
 	{
 		this.RoleList = roleList;
@@ -56,7 +55,7 @@ public class BabelTowerRoleSelectPanel : UiPanelBase
 		this.RefreshScroll();
 	}
 
-	// Token: 0x060075AA RID: 30122 RVA: 0x00184FC3 File Offset: 0x001831C3
+	// Token: 0x06004941 RID: 18753 RVA: 0x0018DB3F File Offset: 0x0018BD3F
 	public void RefreshWithSelectedState(List<RoleDataBase> roleList)
 	{
 		this.RoleList = roleList;
@@ -68,15 +67,20 @@ public class BabelTowerRoleSelectPanel : UiPanelBase
 		this.RefreshScroll();
 	}
 
-	// Token: 0x060075AB RID: 30123 RVA: 0x00184FF0 File Offset: 0x001831F0
+	// Token: 0x06004942 RID: 18754 RVA: 0x0018DB6C File Offset: 0x0018BD6C
 	private void OnFilterSort(List<RoleDataBase> dataList, bool isOutSideChange, EFilterSortType operationType)
 	{
 		this.RoleList = dataList;
 		if (operationType == EFilterSortType.Filter)
 		{
-			HashSet<int> hashSet = new HashSet<int>(from r in dataList
-			select r.GetDataId());
-			foreach (int item in this.SelectedConfigIds.ToList<int>())
+			HashSet<int> hashSet = new HashSet<int>();
+			for (int i = 0; i < dataList.Count; i++)
+			{
+				hashSet.Add(dataList[i].GetDataId());
+			}
+			int[] array = new int[this.SelectedConfigIds.Count];
+			this.SelectedConfigIds.CopyTo(array);
+			foreach (int item in array)
 			{
 				if (!hashSet.Contains(item))
 				{
@@ -87,7 +91,7 @@ public class BabelTowerRoleSelectPanel : UiPanelBase
 		this.RefreshScroll();
 	}
 
-	// Token: 0x060075AC RID: 30124 RVA: 0x00185094 File Offset: 0x00183294
+	// Token: 0x06004943 RID: 18755 RVA: 0x0018DC08 File Offset: 0x0018BE08
 	private void RefreshScroll()
 	{
 		this.DataList = this.BuildDataList();
@@ -102,31 +106,47 @@ public class BabelTowerRoleSelectPanel : UiPanelBase
 		roleMultiTemplateScrollView.RefreshByData(multiTemplateScrollViewRefreshContext);
 	}
 
-	// Token: 0x060075AD RID: 30125 RVA: 0x001850D8 File Offset: 0x001832D8
+	// Token: 0x06004944 RID: 18756 RVA: 0x0018DC4C File Offset: 0x0018BE4C
 	public List<RoleDataBase> GetTrialRoleList()
 	{
-		return (from r in this.RoleList
-		where r.IsTrialRole()
-		select r).ToList<RoleDataBase>();
+		List<RoleDataBase> list = new List<RoleDataBase>();
+		for (int i = 0; i < this.RoleList.Count; i++)
+		{
+			if (this.RoleList[i].IsTrialRole())
+			{
+				list.Add(this.RoleList[i]);
+			}
+		}
+		return list;
 	}
 
-	// Token: 0x060075AE RID: 30126 RVA: 0x0018510C File Offset: 0x0018330C
+	// Token: 0x06004945 RID: 18757 RVA: 0x0018DC9C File Offset: 0x0018BE9C
 	[NullableContext(2)]
 	public RoleDataBase FindRoleDataById(int configId)
 	{
 		return this.RoleList.Find((RoleDataBase r) => r.GetDataId() == configId);
 	}
 
-	// Token: 0x060075AF RID: 30127 RVA: 0x00185140 File Offset: 0x00183340
+	// Token: 0x06004946 RID: 18758 RVA: 0x0018DCD0 File Offset: 0x0018BED0
 	private List<IMultiTemplateGridData> BuildDataList()
 	{
 		List<IMultiTemplateGridData> list = new List<IMultiTemplateGridData>();
-		List<RoleDataBase> list2 = (from r in this.RoleList
-		where r.IsTrialRole()
-		select r).ToList<RoleDataBase>();
-		List<RoleDataBase> list3 = (from r in this.RoleList
-		where !r.IsTrialRole()
-		select r).ToList<RoleDataBase>();
+		List<RoleDataBase> list2 = new List<RoleDataBase>();
+		for (int i = 0; i < this.RoleList.Count; i++)
+		{
+			if (this.RoleList[i].IsTrialRole())
+			{
+				list2.Add(this.RoleList[i]);
+			}
+		}
+		List<RoleDataBase> list3 = new List<RoleDataBase>();
+		for (int j = 0; j < this.RoleList.Count; j++)
+		{
+			if (!this.RoleList[j].IsTrialRole())
+			{
+				list3.Add(this.RoleList[j]);
+			}
+		}
 		if (list2.Count > 0)
 		{
 			list.Add(new RoleGroupTitleData
@@ -176,7 +196,7 @@ public class BabelTowerRoleSelectPanel : UiPanelBase
 		return list;
 	}
 
-	// Token: 0x060075B0 RID: 30128 RVA: 0x00185318 File Offset: 0x00183518
+	// Token: 0x06004947 RID: 18759 RVA: 0x0018DED0 File Offset: 0x0018C0D0
 	public void RefreshRole(int roleId)
 	{
 		if (this.RoleList.FindIndex((RoleDataBase r) => r.GetDataId() == roleId) < 0)
@@ -186,7 +206,7 @@ public class BabelTowerRoleSelectPanel : UiPanelBase
 		this.RefreshRoleGridProxy(roleId);
 	}
 
-	// Token: 0x060075B1 RID: 30129 RVA: 0x0018535C File Offset: 0x0018355C
+	// Token: 0x06004948 RID: 18760 RVA: 0x0018DF14 File Offset: 0x0018C114
 	public int GetGridIndexByRoleId(int roleId)
 	{
 		for (int i = 0; i < this.DataList.Count; i++)
@@ -215,7 +235,7 @@ public class BabelTowerRoleSelectPanel : UiPanelBase
 		return -1;
 	}
 
-	// Token: 0x060075B2 RID: 30130 RVA: 0x001853E0 File Offset: 0x001835E0
+	// Token: 0x06004949 RID: 18761 RVA: 0x0018DF98 File Offset: 0x0018C198
 	public void RefreshRoleGridProxy(int roleId)
 	{
 		int gridIndexByRoleId = this.GetGridIndexByRoleId(roleId);
@@ -231,7 +251,7 @@ public class BabelTowerRoleSelectPanel : UiPanelBase
 		roleMultiTemplateScrollView.RefreshProxyByData(gridIndexByRoleId, this.DataList[gridIndexByRoleId]);
 	}
 
-	// Token: 0x060075B3 RID: 30131 RVA: 0x00185418 File Offset: 0x00183618
+	// Token: 0x0600494A RID: 18762 RVA: 0x0018DFD0 File Offset: 0x0018C1D0
 	public void RefreshSelectedRoleGridProxies()
 	{
 		HashSet<int> selectedRoleSet = RoleSelectModel.Instance.SelectedRoleSet;
@@ -254,10 +274,10 @@ public class BabelTowerRoleSelectPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x040035FD RID: 13821
+	// Token: 0x04003696 RID: 13974
 	private const int MAX_SELECT_ROLE_COUNT = 3;
 
-	// Token: 0x040035FE RID: 13822
+	// Token: 0x04003697 RID: 13975
 	[Nullable(new byte[]
 	{
 		2,
@@ -265,15 +285,15 @@ public class BabelTowerRoleSelectPanel : UiPanelBase
 	})]
 	public Action<RoleDataBase, bool> OnRoleSelect;
 
-	// Token: 0x040035FF RID: 13823
+	// Token: 0x04003698 RID: 13976
 	[Nullable(2)]
 	public Action OnMaxSelectReached;
 
-	// Token: 0x04003600 RID: 13824
+	// Token: 0x04003699 RID: 13977
 	[Nullable(2)]
 	private MultiTemplateScrollView RoleMultiTemplateScrollView;
 
-	// Token: 0x04003601 RID: 13825
+	// Token: 0x0400369A RID: 13978
 	[Nullable(new byte[]
 	{
 		2,
@@ -281,23 +301,23 @@ public class BabelTowerRoleSelectPanel : UiPanelBase
 	})]
 	private FilterSortEntrance<RoleDataBase> FilterSortEntrance;
 
-	// Token: 0x04003602 RID: 13826
+	// Token: 0x0400369B RID: 13979
 	private List<RoleDataBase> RoleList = new List<RoleDataBase>();
 
-	// Token: 0x04003603 RID: 13827
+	// Token: 0x0400369C RID: 13980
 	private List<IMultiTemplateGridData> DataList = new List<IMultiTemplateGridData>();
 
-	// Token: 0x04003604 RID: 13828
+	// Token: 0x0400369D RID: 13981
 	public readonly HashSet<int> SelectedConfigIds = new HashSet<int>();
 
-	// Token: 0x0200773A RID: 30522
+	// Token: 0x020068C8 RID: 26824
 	[NullableContext(0)]
 	private class EComp
 	{
-		// Token: 0x0402754B RID: 161099
+		// Token: 0x04022889 RID: 141449
 		public const int RoleScrollView = 0;
 
-		// Token: 0x0402754C RID: 161100
+		// Token: 0x0402288A RID: 141450
 		public const int SortFilter = 1;
 	}
 }

@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200596F RID: 22895
+	// Token: 0x02005F7C RID: 24444
 	public class ISpecialAnimalTypeConfig_UnionUnion
 	{
-		// Token: 0x1700ABD2 RID: 43986
-		// (get) Token: 0x06026C15 RID: 158741 RVA: 0x00555EC5 File Offset: 0x005540C5
-		// (set) Token: 0x06026C16 RID: 158742 RVA: 0x00555ECD File Offset: 0x005540CD
+		// Token: 0x1700B506 RID: 46342
+		// (get) Token: 0x0602917F RID: 168319 RVA: 0x0059CB31 File Offset: 0x0059AD31
+		// (set) Token: 0x06029180 RID: 168320 RVA: 0x0059CB39 File Offset: 0x0059AD39
 		public ISpecialAnimalTypeConfig_Union Type { get; set; }
 
-		// Token: 0x1700ABD3 RID: 43987
-		// (get) Token: 0x06026C17 RID: 158743 RVA: 0x00555ED6 File Offset: 0x005540D6
-		// (set) Token: 0x06026C18 RID: 158744 RVA: 0x00555EDE File Offset: 0x005540DE
+		// Token: 0x1700B507 RID: 46343
+		// (get) Token: 0x06029181 RID: 168321 RVA: 0x0059CB42 File Offset: 0x0059AD42
+		// (set) Token: 0x06029182 RID: 168322 RVA: 0x0059CB4A File Offset: 0x0059AD4A
 		public object Value { get; set; }
 
-		// Token: 0x06026C19 RID: 158745 RVA: 0x00555EE7 File Offset: 0x005540E7
+		// Token: 0x06029183 RID: 168323 RVA: 0x0059CB53 File Offset: 0x0059AD53
 		public ISpecialAnimalTypeConfig_UnionUnion()
 		{
 			this.Type = ISpecialAnimalTypeConfig_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06026C1A RID: 158746 RVA: 0x00555EFD File Offset: 0x005540FD
+		// Token: 0x06029184 RID: 168324 RVA: 0x0059CB69 File Offset: 0x0059AD69
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06026C1B RID: 158747 RVA: 0x00555F0F File Offset: 0x0055410F
+		// Token: 0x06029185 RID: 168325 RVA: 0x0059CB7B File Offset: 0x0059AD7B
 		public ISpecialAnimalTypeConfigT AsISpecialAnimalTypeConfig()
 		{
 			return this.As<ISpecialAnimalTypeConfigT>();
 		}
 
-		// Token: 0x06026C1C RID: 158748 RVA: 0x00555F17 File Offset: 0x00554117
+		// Token: 0x06029186 RID: 168326 RVA: 0x0059CB83 File Offset: 0x0059AD83
 		public static ISpecialAnimalTypeConfig_UnionUnion FromISpecialAnimalTypeConfig(ISpecialAnimalTypeConfigT _ispecialanimaltypeconfig)
 		{
 			return new ISpecialAnimalTypeConfig_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06026C1D RID: 158749 RVA: 0x00555F2C File Offset: 0x0055412C
+		// Token: 0x06029187 RID: 168327 RVA: 0x0059CB98 File Offset: 0x0059AD98
 		public ICollectAnimalConfigT AsICollectAnimalConfig()
 		{
 			return this.As<ICollectAnimalConfigT>();
 		}
 
-		// Token: 0x06026C1E RID: 158750 RVA: 0x00555F34 File Offset: 0x00554134
+		// Token: 0x06029188 RID: 168328 RVA: 0x0059CBA0 File Offset: 0x0059ADA0
 		public static ISpecialAnimalTypeConfig_UnionUnion FromICollectAnimalConfig(ICollectAnimalConfigT _icollectanimalconfig)
 		{
 			return new ISpecialAnimalTypeConfig_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06026C1F RID: 158751 RVA: 0x00555F4C File Offset: 0x0055414C
+		// Token: 0x06029189 RID: 168329 RVA: 0x0059CBB8 File Offset: 0x0059ADB8
 		public static int Pack(FlatBufferBuilder builder, ISpecialAnimalTypeConfig_UnionUnion _o)
 		{
 			ISpecialAnimalTypeConfig_Union type = _o.Type;

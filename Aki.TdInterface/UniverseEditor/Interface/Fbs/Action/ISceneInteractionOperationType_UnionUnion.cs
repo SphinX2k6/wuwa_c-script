@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006F37 RID: 28471
+	// Token: 0x020076BE RID: 30398
 	public class ISceneInteractionOperationType_UnionUnion
 	{
-		// Token: 0x1700D39A RID: 54170
-		// (get) Token: 0x060324D1 RID: 206033 RVA: 0x006CB3DD File Offset: 0x006C95DD
-		// (set) Token: 0x060324D2 RID: 206034 RVA: 0x006CB3E5 File Offset: 0x006C95E5
+		// Token: 0x1700DEF6 RID: 57078
+		// (get) Token: 0x06035529 RID: 218409 RVA: 0x00727345 File Offset: 0x00725545
+		// (set) Token: 0x0603552A RID: 218410 RVA: 0x0072734D File Offset: 0x0072554D
 		public ISceneInteractionOperationType_Union Type { get; set; }
 
-		// Token: 0x1700D39B RID: 54171
-		// (get) Token: 0x060324D3 RID: 206035 RVA: 0x006CB3EE File Offset: 0x006C95EE
-		// (set) Token: 0x060324D4 RID: 206036 RVA: 0x006CB3F6 File Offset: 0x006C95F6
+		// Token: 0x1700DEF7 RID: 57079
+		// (get) Token: 0x0603552B RID: 218411 RVA: 0x00727356 File Offset: 0x00725556
+		// (set) Token: 0x0603552C RID: 218412 RVA: 0x0072735E File Offset: 0x0072555E
 		public object Value { get; set; }
 
-		// Token: 0x060324D5 RID: 206037 RVA: 0x006CB3FF File Offset: 0x006C95FF
+		// Token: 0x0603552D RID: 218413 RVA: 0x00727367 File Offset: 0x00725567
 		public ISceneInteractionOperationType_UnionUnion()
 		{
 			this.Type = ISceneInteractionOperationType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060324D6 RID: 206038 RVA: 0x006CB415 File Offset: 0x006C9615
+		// Token: 0x0603552E RID: 218414 RVA: 0x0072737D File Offset: 0x0072557D
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060324D7 RID: 206039 RVA: 0x006CB427 File Offset: 0x006C9627
+		// Token: 0x0603552F RID: 218415 RVA: 0x0072738F File Offset: 0x0072558F
 		public ISceneInteractionOperationTypeT AsISceneInteractionOperationType()
 		{
 			return this.As<ISceneInteractionOperationTypeT>();
 		}
 
-		// Token: 0x060324D8 RID: 206040 RVA: 0x006CB42F File Offset: 0x006C962F
+		// Token: 0x06035530 RID: 218416 RVA: 0x00727397 File Offset: 0x00725597
 		public static ISceneInteractionOperationType_UnionUnion FromISceneInteractionOperationType(ISceneInteractionOperationTypeT _isceneinteractionoperationtype)
 		{
 			return new ISceneInteractionOperationType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060324D9 RID: 206041 RVA: 0x006CB444 File Offset: 0x006C9644
+		// Token: 0x06035531 RID: 218417 RVA: 0x007273AC File Offset: 0x007255AC
 		public IEnableSceneInteractionOperationT AsIEnableSceneInteractionOperation()
 		{
 			return this.As<IEnableSceneInteractionOperationT>();
 		}
 
-		// Token: 0x060324DA RID: 206042 RVA: 0x006CB44C File Offset: 0x006C964C
+		// Token: 0x06035532 RID: 218418 RVA: 0x007273B4 File Offset: 0x007255B4
 		public static ISceneInteractionOperationType_UnionUnion FromIEnableSceneInteractionOperation(IEnableSceneInteractionOperationT _ienablesceneinteractionoperation)
 		{
 			return new ISceneInteractionOperationType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060324DB RID: 206043 RVA: 0x006CB461 File Offset: 0x006C9661
+		// Token: 0x06035533 RID: 218419 RVA: 0x007273C9 File Offset: 0x007255C9
 		public IDisableSceneInteractionOperationT AsIDisableSceneInteractionOperation()
 		{
 			return this.As<IDisableSceneInteractionOperationT>();
 		}
 
-		// Token: 0x060324DC RID: 206044 RVA: 0x006CB469 File Offset: 0x006C9669
+		// Token: 0x06035534 RID: 218420 RVA: 0x007273D1 File Offset: 0x007255D1
 		public static ISceneInteractionOperationType_UnionUnion FromIDisableSceneInteractionOperation(IDisableSceneInteractionOperationT _idisablesceneinteractionoperation)
 		{
 			return new ISceneInteractionOperationType_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x060324DD RID: 206045 RVA: 0x006CB480 File Offset: 0x006C9680
+		// Token: 0x06035535 RID: 218421 RVA: 0x007273E8 File Offset: 0x007255E8
 		public static int Pack(FlatBufferBuilder builder, ISceneInteractionOperationType_UnionUnion _o)
 		{
 			switch (_o.Type)

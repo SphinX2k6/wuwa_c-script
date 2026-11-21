@@ -2,28 +2,28 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067AB RID: 26539
+	// Token: 0x020056FB RID: 22267
 	public class DangoBrawlCombineViewOpenData
 	{
-		// Token: 0x0402284E RID: 141390
+		// Token: 0x0401D0AB RID: 118955
 		public int FocusConfigId;
 
-		// Token: 0x0402284F RID: 141391
+		// Token: 0x0401D0AC RID: 118956
 		public bool AllowCombine;
 
-		// Token: 0x04022850 RID: 141392
+		// Token: 0x0401D0AD RID: 118957
 		public int FocusUid;
 
-		// Token: 0x04022851 RID: 141393
+		// Token: 0x0401D0AE RID: 118958
 		public bool UseActData;
 
-		// Token: 0x04022852 RID: 141394
+		// Token: 0x0401D0AF RID: 118959
 		public bool ShowIntoSelf;
 
-		// Token: 0x04022853 RID: 141395
+		// Token: 0x0401D0B0 RID: 118960
 		public bool ShowSelfIntoOther;
 
-		// Token: 0x04022854 RID: 141396
+		// Token: 0x0401D0B1 RID: 118961
 		public bool UseIntoSelfTitleQuick;
 	}
 }

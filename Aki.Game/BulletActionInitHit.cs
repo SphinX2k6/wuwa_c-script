@@ -4,17 +4,17 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.BaseCharacter;
 using UnrealEngine;
 
-// Token: 0x02002D91 RID: 11665
+// Token: 0x020022EB RID: 8939
 [NullableContext(1)]
 [Nullable(0)]
 public class BulletActionInitHit : BulletActionBase
 {
-	// Token: 0x0601880E RID: 100366 RVA: 0x0063DF48 File Offset: 0x0063C148
+	// Token: 0x060160B0 RID: 90288 RVA: 0x00663C2C File Offset: 0x00661E2C
 	public BulletActionInitHit(EBulletAction type) : base(type)
 	{
 	}
 
-	// Token: 0x0601880F RID: 100367 RVA: 0x0063DF54 File Offset: 0x0063C154
+	// Token: 0x060160B1 RID: 90289 RVA: 0x00663C38 File Offset: 0x00661E38
 	protected unsafe override void OnExecute()
 	{
 		BulletDataMain bulletDataMain = this.BulletInfo.BulletDataMain;
@@ -59,7 +59,7 @@ public class BulletActionInitHit : BulletActionBase
 		this.InitIgnoreChannels();
 	}
 
-	// Token: 0x06018810 RID: 100368 RVA: 0x0063E0B8 File Offset: 0x0063C2B8
+	// Token: 0x060160B2 RID: 90290 RVA: 0x00663D9C File Offset: 0x00661F9C
 	private void InitIgnoreChannels()
 	{
 		ECollisionChannel attackerCollisionChannel = this.GetAttackerCollisionChannel();
@@ -87,7 +87,7 @@ public class BulletActionInitHit : BulletActionBase
 		}
 	}
 
-	// Token: 0x06018811 RID: 100369 RVA: 0x0063E18D File Offset: 0x0063C38D
+	// Token: 0x060160B3 RID: 90291 RVA: 0x00663E71 File Offset: 0x00662071
 	private ECollisionChannel GetAttackerCollisionChannel()
 	{
 		if (this.BulletInfo.AttackerCamp == ECamp.Player)
@@ -101,22 +101,22 @@ public class BulletActionInitHit : BulletActionBase
 		return KuroCollisionChannel.Pawn;
 	}
 
-	// Token: 0x0400B5BE RID: 46526
+	// Token: 0x0400B933 RID: 47411
 	public const int SELF_NUMBER = 1;
 
-	// Token: 0x0400B5BF RID: 46527
+	// Token: 0x0400B934 RID: 47412
 	public const int FRIEND_NUMBER = 2;
 
-	// Token: 0x0400B5C0 RID: 46528
+	// Token: 0x0400B935 RID: 47413
 	public const int TEAM_NUMBER = 3;
 
-	// Token: 0x0400B5C1 RID: 46529
+	// Token: 0x0400B936 RID: 47414
 	public const int ENEMY_NUMBER = 4;
 
-	// Token: 0x0400B5C2 RID: 46530
+	// Token: 0x0400B937 RID: 47415
 	public const int PLAYER_GROUP_NUMBER = 11;
 
-	// Token: 0x0400B5C3 RID: 46531
+	// Token: 0x0400B938 RID: 47416
 	[StaticVariableRuleIgnore]
 	private static readonly int[] campNumbers = new int[]
 	{
@@ -127,7 +127,7 @@ public class BulletActionInitHit : BulletActionBase
 		11
 	};
 
-	// Token: 0x0400B5C4 RID: 46532
+	// Token: 0x0400B939 RID: 47417
 	[StaticVariableRuleIgnore]
 	private static readonly Dictionary<ECollisionChannel, EObjectTypeQuery> CollisionChannelToObjectTypeQueryMap = new Dictionary<ECollisionChannel, EObjectTypeQuery>
 	{

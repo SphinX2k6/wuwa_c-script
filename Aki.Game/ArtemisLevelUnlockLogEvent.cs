@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002143 RID: 8515
+// Token: 0x0200161B RID: 5659
 [NullableContext(1)]
 [Nullable(0)]
 public class ArtemisLevelUnlockLogEvent : PlayerCommonLogData
 {
-	// Token: 0x170014E8 RID: 5352
-	// (get) Token: 0x06010A03 RID: 68099 RVA: 0x0040BDEB File Offset: 0x00409FEB
-	// (set) Token: 0x06010A04 RID: 68100 RVA: 0x0040BDF3 File Offset: 0x00409FF3
+	// Token: 0x17001516 RID: 5398
+	// (get) Token: 0x0600DE76 RID: 56950 RVA: 0x00418533 File Offset: 0x00416733
+	// (set) Token: 0x0600DE77 RID: 56951 RVA: 0x0041853B File Offset: 0x0041673B
 	public override string event_id { get; set; } = "1814";
 
-	// Token: 0x04007D8E RID: 32142
+	// Token: 0x04007E9E RID: 32414
 	public int i_id;
 }

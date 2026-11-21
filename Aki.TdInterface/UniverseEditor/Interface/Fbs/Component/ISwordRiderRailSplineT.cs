@@ -3,30 +3,30 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005A14 RID: 23060
+	// Token: 0x02006021 RID: 24609
 	public class ISwordRiderRailSplineT
 	{
-		// Token: 0x1700AD4F RID: 44367
-		// (get) Token: 0x06027289 RID: 160393 RVA: 0x00563014 File Offset: 0x00561214
-		// (set) Token: 0x0602728A RID: 160394 RVA: 0x0056301C File Offset: 0x0056121C
+		// Token: 0x1700B687 RID: 46727
+		// (get) Token: 0x06029801 RID: 169985 RVA: 0x005A9FD8 File Offset: 0x005A81D8
+		// (set) Token: 0x06029802 RID: 169986 RVA: 0x005A9FE0 File Offset: 0x005A81E0
 		public ESplineType Type { get; set; }
 
-		// Token: 0x1700AD50 RID: 44368
-		// (get) Token: 0x0602728B RID: 160395 RVA: 0x00563025 File Offset: 0x00561225
-		// (set) Token: 0x0602728C RID: 160396 RVA: 0x0056302D File Offset: 0x0056122D
+		// Token: 0x1700B688 RID: 46728
+		// (get) Token: 0x06029803 RID: 169987 RVA: 0x005A9FE9 File Offset: 0x005A81E9
+		// (set) Token: 0x06029804 RID: 169988 RVA: 0x005A9FF1 File Offset: 0x005A81F1
 		public ESwordRiderRailWall WallType { get; set; }
 
-		// Token: 0x1700AD51 RID: 44369
-		// (get) Token: 0x0602728D RID: 160397 RVA: 0x00563036 File Offset: 0x00561236
-		// (set) Token: 0x0602728E RID: 160398 RVA: 0x0056303E File Offset: 0x0056123E
+		// Token: 0x1700B689 RID: 46729
+		// (get) Token: 0x06029805 RID: 169989 RVA: 0x005A9FFA File Offset: 0x005A81FA
+		// (set) Token: 0x06029806 RID: 169990 RVA: 0x005AA002 File Offset: 0x005A8202
 		public string PathEffect { get; set; }
 
-		// Token: 0x1700AD52 RID: 44370
-		// (get) Token: 0x0602728F RID: 160399 RVA: 0x00563047 File Offset: 0x00561247
-		// (set) Token: 0x06027290 RID: 160400 RVA: 0x0056304F File Offset: 0x0056124F
+		// Token: 0x1700B68A RID: 46730
+		// (get) Token: 0x06029807 RID: 169991 RVA: 0x005AA00B File Offset: 0x005A820B
+		// (set) Token: 0x06029808 RID: 169992 RVA: 0x005AA013 File Offset: 0x005A8213
 		public List<ISwordRiderRailSplinePointT> Points { get; set; }
 
-		// Token: 0x06027291 RID: 160401 RVA: 0x00563058 File Offset: 0x00561258
+		// Token: 0x06029809 RID: 169993 RVA: 0x005AA01C File Offset: 0x005A821C
 		public ISwordRiderRailSplineT()
 		{
 			this.Type = ESplineType.Common;

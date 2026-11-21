@@ -1,17 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using Aki.Game.LevelGamePlay.ElementalCasket.ElementalField;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 {
-	// Token: 0x02006EAD RID: 28333
+	// Token: 0x0200602D RID: 24621
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneItemElementalFieldActorController : IElementalFieldCameraBlockTarget
 	{
-		// Token: 0x06045052 RID: 282706 RVA: 0x0110DB5C File Offset: 0x0110BD5C
+		// Token: 0x0603B1F3 RID: 242163 RVA: 0x010B7C38 File Offset: 0x010B5E38
 		public SceneItemElementalFieldActorController(string actorKey, List<int> entityPbDataIds)
 		{
 			this.ActorKey = actorKey;
@@ -19,7 +20,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			EventSystem.Instance.Add(EEventName.OnSceneItemElementalFieldReady, new Action<int>(this.OnFieldComponentReady));
 		}
 
-		// Token: 0x06045053 RID: 282707 RVA: 0x0110DBC6 File Offset: 0x0110BDC6
+		// Token: 0x0603B1F4 RID: 242164 RVA: 0x010B7CA2 File Offset: 0x010B5EA2
 		private void OnFieldComponentReady(int pbDataId)
 		{
 			if (!this.EntityPbDataIds.Contains(pbDataId))
@@ -29,7 +30,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			this.TrySubscribeAll();
 		}
 
-		// Token: 0x06045054 RID: 282708 RVA: 0x0110DBE0 File Offset: 0x0110BDE0
+		// Token: 0x0603B1F5 RID: 242165 RVA: 0x010B7CBC File Offset: 0x010B5EBC
 		public void OnActorReady(AActor actor)
 		{
 			UStaticMeshComponent ustaticMeshComponent = actor.GetComponentByClass(UStaticMeshComponent.StaticClass()) as UStaticMeshComponent;
@@ -49,7 +50,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			this.TrySubscribeAll();
 		}
 
-		// Token: 0x06045055 RID: 282709 RVA: 0x0110DC72 File Offset: 0x0110BE72
+		// Token: 0x0603B1F6 RID: 242166 RVA: 0x010B7D4E File Offset: 0x010B5F4E
 		private void InitCameraBlock()
 		{
 			this.CameraBlockApplied = false;
@@ -57,7 +58,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			ElementalFieldCameraBlockController.Instance.RegisterTarget(this);
 		}
 
-		// Token: 0x06045056 RID: 282710 RVA: 0x0110DC8E File Offset: 0x0110BE8E
+		// Token: 0x0603B1F7 RID: 242167 RVA: 0x010B7D6A File Offset: 0x010B5F6A
 		public bool ApplyCameraBlock(bool block)
 		{
 			if (this.CameraBlockApplied == block)
@@ -73,7 +74,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			return true;
 		}
 
-		// Token: 0x06045057 RID: 282711 RVA: 0x0110DCBE File Offset: 0x0110BEBE
+		// Token: 0x0603B1F8 RID: 242168 RVA: 0x010B7D9A File Offset: 0x010B5F9A
 		private bool ApplyCameraBlockInternal(bool block)
 		{
 			UStaticMeshComponent meshComponent = this.MeshComponent;
@@ -85,7 +86,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			return true;
 		}
 
-		// Token: 0x06045058 RID: 282712 RVA: 0x0110DCF4 File Offset: 0x0110BEF4
+		// Token: 0x0603B1F9 RID: 242169 RVA: 0x010B7DD0 File Offset: 0x010B5FD0
 		public void TrySubscribeAll()
 		{
 			ElementalCasketModel.Instance.ElementalFieldAllControllers.Add(this);
@@ -115,7 +116,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			this.Refresh();
 		}
 
-		// Token: 0x06045059 RID: 282713 RVA: 0x0110DDEC File Offset: 0x0110BFEC
+		// Token: 0x0603B1FA RID: 242170 RVA: 0x010B7EC8 File Offset: 0x010B60C8
 		private void UnsubscribeAll()
 		{
 			foreach (SceneItemElementalFieldComponent target in this.SubscribedComponents)
@@ -125,14 +126,14 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			this.SubscribedComponents.Clear();
 		}
 
-		// Token: 0x0604505A RID: 282714 RVA: 0x0110DE60 File Offset: 0x0110C060
+		// Token: 0x0603B1FB RID: 242171 RVA: 0x010B7F3C File Offset: 0x010B613C
 		[NullableContext(2)]
 		private void OnSnapshotChange(ISceneItemElementalFieldSnapshot<ESceneItemElementalFieldShapeType> snapshot)
 		{
 			this.Refresh();
 		}
 
-		// Token: 0x0604505B RID: 282715 RVA: 0x0110DE68 File Offset: 0x0110C068
+		// Token: 0x0603B1FC RID: 242172 RVA: 0x010B7F44 File Offset: 0x010B6144
 		public void Destroy()
 		{
 			ElementalCasketModel.Instance.ElementalFieldAllControllers.Remove(this);
@@ -143,7 +144,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			this.MeshComponent = null;
 		}
 
-		// Token: 0x0604505C RID: 282716 RVA: 0x0110DEC4 File Offset: 0x0110C0C4
+		// Token: 0x0603B1FD RID: 242173 RVA: 0x010B7FA0 File Offset: 0x010B61A0
 		private unsafe bool CheckComponent(string paramName, object value)
 		{
 			UStaticMeshComponent meshComponent = this.MeshComponent;
@@ -163,7 +164,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			return true;
 		}
 
-		// Token: 0x0604505D RID: 282717 RVA: 0x0110DF5C File Offset: 0x0110C15C
+		// Token: 0x0603B1FE RID: 242174 RVA: 0x010B8038 File Offset: 0x010B6238
 		private void SetScalarParam(string paramName, float value)
 		{
 			if (!this.CheckComponent(paramName, value))
@@ -174,7 +175,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			this.MeshComponent.SetScalarParameterValueOnMaterials(dynamicFName ?? FNameUtil.NONE, value);
 		}
 
-		// Token: 0x0604505E RID: 282718 RVA: 0x0110DFA8 File Offset: 0x0110C1A8
+		// Token: 0x0603B1FF RID: 242175 RVA: 0x010B8084 File Offset: 0x010B6284
 		private void SetVectorParam(string paramName, FVector value)
 		{
 			if (!this.CheckComponent(paramName, value))
@@ -185,7 +186,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			this.MeshComponent.SetVectorParameterValueOnMaterials(dynamicFName ?? FNameUtil.NONE, value);
 		}
 
-		// Token: 0x0604505F RID: 282719 RVA: 0x0110DFF4 File Offset: 0x0110C1F4
+		// Token: 0x0603B200 RID: 242176 RVA: 0x010B80D0 File Offset: 0x010B62D0
 		private void Refresh()
 		{
 			UStaticMeshComponent meshComponent = this.MeshComponent;
@@ -236,7 +237,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			this.ApplyParams(list, sceneItemElementalFieldConeSnapshot);
 		}
 
-		// Token: 0x06045060 RID: 282720 RVA: 0x0110E18C File Offset: 0x0110C38C
+		// Token: 0x0603B201 RID: 242177 RVA: 0x010B8268 File Offset: 0x010B6468
 		private void ApplyParams(List<ISceneItemElementalFieldSphereSnapshot> spheres, [Nullable(2)] ISceneItemElementalFieldConeSnapshot cone)
 		{
 			for (int i = 0; i < 2; i++)
@@ -265,20 +266,20 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 			this.SetScalarParam("InfluenceCone_Enable", 0f);
 		}
 
-		// Token: 0x04023EE7 RID: 147175
+		// Token: 0x0401F19A RID: 127386
 		private readonly string ActorKey = "";
 
-		// Token: 0x04023EE8 RID: 147176
+		// Token: 0x0401F19B RID: 127387
 		private readonly List<int> EntityPbDataIds = new List<int>();
 
-		// Token: 0x04023EE9 RID: 147177
+		// Token: 0x0401F19C RID: 127388
 		[Nullable(2)]
 		private UStaticMeshComponent MeshComponent;
 
-		// Token: 0x04023EEA RID: 147178
+		// Token: 0x0401F19D RID: 127389
 		private readonly HashSet<SceneItemElementalFieldComponent> SubscribedComponents = new HashSet<SceneItemElementalFieldComponent>();
 
-		// Token: 0x04023EEB RID: 147179
+		// Token: 0x0401F19E RID: 127390
 		private bool CameraBlockApplied;
 	}
 }

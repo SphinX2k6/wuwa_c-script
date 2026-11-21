@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000A14 RID: 2580
+	// Token: 0x02000AD9 RID: 2777
 	public static class ESpawnMonsterPreConditionExtensions
 	{
-		// Token: 0x0600390B RID: 14603 RVA: 0x00093608 File Offset: 0x00091808
+		// Token: 0x06003CE3 RID: 15587 RVA: 0x0009BEF8 File Offset: 0x0009A0F8
 		public static string ToEnumString(this ESpawnMonsterPreCondition value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600390C RID: 14604 RVA: 0x00093630 File Offset: 0x00091830
+		// Token: 0x06003CE4 RID: 15588 RVA: 0x0009BF20 File Offset: 0x0009A120
 		public static ESpawnMonsterPreCondition FromString(string name)
 		{
 			ESpawnMonsterPreCondition result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600390D RID: 14605 RVA: 0x00093659 File Offset: 0x00091859
+		// Token: 0x06003CE5 RID: 15589 RVA: 0x0009BF49 File Offset: 0x0009A149
 		public static bool TryFromString(string name, out ESpawnMonsterPreCondition value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x0600390E RID: 14606 RVA: 0x0009367E File Offset: 0x0009187E
+		// Token: 0x06003CE6 RID: 15590 RVA: 0x0009BF6E File Offset: 0x0009A16E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600390F RID: 14607 RVA: 0x0009368E File Offset: 0x0009188E
+		// Token: 0x06003CE7 RID: 15591 RVA: 0x0009BF7E File Offset: 0x0009A17E
 		public static ESpawnMonsterPreCondition[] GetValues()
 		{
 			return new ESpawnMonsterPreCondition[1];
 		}
 
-		// Token: 0x06003910 RID: 14608 RVA: 0x00093696 File Offset: 0x00091896
+		// Token: 0x06003CE8 RID: 15592 RVA: 0x0009BF86 File Offset: 0x0009A186
 		public static string[] GetNames()
 		{
 			return new string[]

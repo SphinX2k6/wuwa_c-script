@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002D3 RID: 723
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200031A RID: 794
 	public class IDrawConfig
 	{
-		// Token: 0x06000DC7 RID: 3527 RVA: 0x00032F08 File Offset: 0x00031108
+		// Token: 0x06000EF7 RID: 3831 RVA: 0x00035E3C File Offset: 0x0003403C
 		private IDrawConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000DC8 RID: 3528 RVA: 0x00032F40 File Offset: 0x00031140
+		// Token: 0x06000EF8 RID: 3832 RVA: 0x00035E74 File Offset: 0x00034074
 		public static IDrawConfig Create([Nullable(2)] IDrawConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000DC9 RID: 3529 RVA: 0x00032F53 File Offset: 0x00031153
+		// Token: 0x06000EF9 RID: 3833 RVA: 0x00035E87 File Offset: 0x00034087
 		public static IDrawConfig CreateFromSetValue([Nullable(2)] IDrawConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000DCA RID: 3530 RVA: 0x00032F68 File Offset: 0x00031168
+		// Token: 0x06000EFA RID: 3834 RVA: 0x00035E9C File Offset: 0x0003409C
 		public IDrawConfig_SetValue ToSetValue()
 		{
 			return new IDrawConfig_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000404 RID: 1028
-		// (get) Token: 0x06000DCB RID: 3531 RVA: 0x00032FB6 File Offset: 0x000311B6
-		// (set) Token: 0x06000DCC RID: 3532 RVA: 0x00032FE1 File Offset: 0x000311E1
+		// Token: 0x17000451 RID: 1105
+		// (get) Token: 0x06000EFB RID: 3835 RVA: 0x00035EEA File Offset: 0x000340EA
+		// (set) Token: 0x06000EFC RID: 3836 RVA: 0x00035F15 File Offset: 0x00034115
 		public virtual int DrawDelay
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000405 RID: 1029
-		// (get) Token: 0x06000DCD RID: 3533 RVA: 0x00032FEF File Offset: 0x000311EF
-		// (set) Token: 0x06000DCE RID: 3534 RVA: 0x0003301A File Offset: 0x0003121A
+		// Token: 0x17000452 RID: 1106
+		// (get) Token: 0x06000EFD RID: 3837 RVA: 0x00035F23 File Offset: 0x00034123
+		// (set) Token: 0x06000EFE RID: 3838 RVA: 0x00035F4E File Offset: 0x0003414E
 		public virtual int DrawTime
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000406 RID: 1030
-		// (get) Token: 0x06000DCF RID: 3535 RVA: 0x00033028 File Offset: 0x00031228
-		// (set) Token: 0x06000DD0 RID: 3536 RVA: 0x00033053 File Offset: 0x00031253
+		// Token: 0x17000453 RID: 1107
+		// (get) Token: 0x06000EFF RID: 3839 RVA: 0x00035F5C File Offset: 0x0003415C
+		// (set) Token: 0x06000F00 RID: 3840 RVA: 0x00035F87 File Offset: 0x00034187
 		public virtual int DrawAlignTime
 		{
 			get
@@ -132,9 +130,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000407 RID: 1031
-		// (get) Token: 0x06000DD1 RID: 3537 RVA: 0x00033061 File Offset: 0x00031261
-		// (set) Token: 0x06000DD2 RID: 3538 RVA: 0x0003308C File Offset: 0x0003128C
+		// Token: 0x17000454 RID: 1108
+		// (get) Token: 0x06000F01 RID: 3841 RVA: 0x00035F95 File Offset: 0x00034195
+		// (set) Token: 0x06000F02 RID: 3842 RVA: 0x00035FC0 File Offset: 0x000341C0
 		public virtual int DrawAlignHeight
 		{
 			get
@@ -155,9 +153,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000408 RID: 1032
-		// (get) Token: 0x06000DD3 RID: 3539 RVA: 0x0003309A File Offset: 0x0003129A
-		// (set) Token: 0x06000DD4 RID: 3540 RVA: 0x000330C5 File Offset: 0x000312C5
+		// Token: 0x17000455 RID: 1109
+		// (get) Token: 0x06000F03 RID: 3843 RVA: 0x00035FCE File Offset: 0x000341CE
+		// (set) Token: 0x06000F04 RID: 3844 RVA: 0x00035FF9 File Offset: 0x000341F9
 		public virtual string DrawCameraShake
 		{
 			get
@@ -178,11 +176,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000C65 RID: 3173
+		// Token: 0x04000D4F RID: 3407
 		[Nullable(2)]
 		protected IDrawConfig FbInstance;
 
-		// Token: 0x04000C66 RID: 3174
+		// Token: 0x04000D50 RID: 3408
 		[Nullable(2)]
 		protected IDrawConfig_SetValue PocoInterface;
 	}

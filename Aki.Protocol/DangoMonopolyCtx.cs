@@ -7,18 +7,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000384 RID: 900
+	// Token: 0x0200038C RID: 908
 	public sealed class DangoMonopolyCtx : IMessage<DangoMonopolyCtx>, IMessage, IEquatable<DangoMonopolyCtx>, IDeepCloneable<DangoMonopolyCtx>, IBufferMessage
 	{
-		// Token: 0x0600591D RID: 22813 RVA: 0x000D92B1 File Offset: 0x000D74B1
+		// Token: 0x06005A0A RID: 23050 RVA: 0x000DB939 File Offset: 0x000D9B39
 		[NullableContext(1)]
 		public static DangoMonopolyCtx Create()
 		{
 			return new DangoMonopolyCtx();
 		}
 
-		// Token: 0x1700106F RID: 4207
-		// (get) Token: 0x0600591E RID: 22814 RVA: 0x000D92B8 File Offset: 0x000D74B8
+		// Token: 0x170010A0 RID: 4256
+		// (get) Token: 0x06005A0B RID: 23051 RVA: 0x000DB940 File Offset: 0x000D9B40
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -29,8 +29,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001070 RID: 4208
-		// (get) Token: 0x0600591F RID: 22815 RVA: 0x000D92BB File Offset: 0x000D74BB
+		// Token: 0x170010A1 RID: 4257
+		// (get) Token: 0x06005A0C RID: 23052 RVA: 0x000DB943 File Offset: 0x000D9B43
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -41,14 +41,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06005920 RID: 22816 RVA: 0x000D92C2 File Offset: 0x000D74C2
+		// Token: 0x06005A0D RID: 23053 RVA: 0x000DB94A File Offset: 0x000D9B4A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DangoMonopolyCtx()
 		{
 		}
 
-		// Token: 0x06005921 RID: 22817 RVA: 0x000D92CA File Offset: 0x000D74CA
+		// Token: 0x06005A0E RID: 23054 RVA: 0x000DB952 File Offset: 0x000D9B52
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DangoMonopolyCtx(DangoMonopolyCtx other) : this()
@@ -57,7 +57,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06005922 RID: 22818 RVA: 0x000D92EF File Offset: 0x000D74EF
+		// Token: 0x06005A0F RID: 23055 RVA: 0x000DB977 File Offset: 0x000D9B77
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DangoMonopolyCtx Clone()
@@ -65,9 +65,9 @@ namespace Aki.Protocol
 			return new DangoMonopolyCtx(this);
 		}
 
-		// Token: 0x17001071 RID: 4209
-		// (get) Token: 0x06005923 RID: 22819 RVA: 0x000D92F7 File Offset: 0x000D74F7
-		// (set) Token: 0x06005924 RID: 22820 RVA: 0x000D92FF File Offset: 0x000D74FF
+		// Token: 0x170010A2 RID: 4258
+		// (get) Token: 0x06005A10 RID: 23056 RVA: 0x000DB97F File Offset: 0x000D9B7F
+		// (set) Token: 0x06005A11 RID: 23057 RVA: 0x000DB987 File Offset: 0x000D9B87
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ActivityId
@@ -82,7 +82,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06005925 RID: 22821 RVA: 0x000D9308 File Offset: 0x000D7508
+		// Token: 0x06005A12 RID: 23058 RVA: 0x000DB990 File Offset: 0x000D9B90
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -90,7 +90,7 @@ namespace Aki.Protocol
 			return this.Equals(other as DangoMonopolyCtx);
 		}
 
-		// Token: 0x06005926 RID: 22822 RVA: 0x000D9316 File Offset: 0x000D7516
+		// Token: 0x06005A13 RID: 23059 RVA: 0x000DB99E File Offset: 0x000D9B9E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(DangoMonopolyCtx other)
@@ -98,7 +98,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ActivityId == other.ActivityId && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06005927 RID: 22823 RVA: 0x000D9344 File Offset: 0x000D7544
+		// Token: 0x06005A14 RID: 23060 RVA: 0x000DB9CC File Offset: 0x000D9BCC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -115,7 +115,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06005928 RID: 22824 RVA: 0x000D9383 File Offset: 0x000D7583
+		// Token: 0x06005A15 RID: 23061 RVA: 0x000DBA0B File Offset: 0x000D9C0B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -123,7 +123,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06005929 RID: 22825 RVA: 0x000D9390 File Offset: 0x000D7590
+		// Token: 0x06005A16 RID: 23062 RVA: 0x000DBA18 File Offset: 0x000D9C18
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600592A RID: 22826 RVA: 0x000D9399 File Offset: 0x000D7599
+		// Token: 0x06005A17 RID: 23063 RVA: 0x000DBA21 File Offset: 0x000D9C21
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -147,7 +147,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600592B RID: 22827 RVA: 0x000D93CC File Offset: 0x000D75CC
+		// Token: 0x06005A18 RID: 23064 RVA: 0x000DBA54 File Offset: 0x000D9C54
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600592C RID: 22828 RVA: 0x000D940A File Offset: 0x000D760A
+		// Token: 0x06005A19 RID: 23065 RVA: 0x000DBA92 File Offset: 0x000D9C92
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(DangoMonopolyCtx other)
@@ -180,7 +180,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600592D RID: 22829 RVA: 0x000D943B File Offset: 0x000D763B
+		// Token: 0x06005A1A RID: 23066 RVA: 0x000DBAC3 File Offset: 0x000D9CC3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -188,7 +188,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600592E RID: 22830 RVA: 0x000D9444 File Offset: 0x000D7644
+		// Token: 0x06005A1B RID: 23067 RVA: 0x000DBACC File Offset: 0x000D9CCC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -211,13 +211,13 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400354F RID: 13647
+		// Token: 0x040035EB RID: 13803
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04003550 RID: 13648
+		// Token: 0x040035EC RID: 13804
 		public const int ActivityIdFieldNumber = 1;
 
-		// Token: 0x04003551 RID: 13649
+		// Token: 0x040035ED RID: 13805
 		private int activityId_;
 	}
 }

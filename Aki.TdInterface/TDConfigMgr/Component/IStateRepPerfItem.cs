@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000715 RID: 1813
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020007B6 RID: 1974
 	public class IStateRepPerfItem
 	{
-		// Token: 0x060026FD RID: 9981 RVA: 0x00067EC4 File Offset: 0x000660C4
+		// Token: 0x06002A1D RID: 10781 RVA: 0x0006EF34 File Offset: 0x0006D134
 		private IStateRepPerfItem_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060026FE RID: 9982 RVA: 0x00067EFC File Offset: 0x000660FC
+		// Token: 0x06002A1E RID: 10782 RVA: 0x0006EF6C File Offset: 0x0006D16C
 		public static IStateRepPerfItem Create([Nullable(2)] IStateRepPerfItem instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060026FF RID: 9983 RVA: 0x00067F0F File Offset: 0x0006610F
+		// Token: 0x06002A1F RID: 10783 RVA: 0x0006EF7F File Offset: 0x0006D17F
 		public static IStateRepPerfItem CreateFromSetValue([Nullable(2)] IStateRepPerfItem_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002700 RID: 9984 RVA: 0x00067F22 File Offset: 0x00066122
+		// Token: 0x06002A20 RID: 10784 RVA: 0x0006EF92 File Offset: 0x0006D192
 		public IStateRepPerfItem_SetValue ToSetValue()
 		{
 			return new IStateRepPerfItem_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000A3F RID: 2623
-		// (get) Token: 0x06002701 RID: 9985 RVA: 0x00067F41 File Offset: 0x00066141
-		// (set) Token: 0x06002702 RID: 9986 RVA: 0x00067F6C File Offset: 0x0006616C
+		// Token: 0x17000AFD RID: 2813
+		// (get) Token: 0x06002A21 RID: 10785 RVA: 0x0006EFB1 File Offset: 0x0006D1B1
+		// (set) Token: 0x06002A22 RID: 10786 RVA: 0x0006EFDC File Offset: 0x0006D1DC
 		public virtual string StateTag
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000A40 RID: 2624
-		// (get) Token: 0x06002703 RID: 9987 RVA: 0x00067F7A File Offset: 0x0006617A
-		// (set) Token: 0x06002704 RID: 9988 RVA: 0x00067FA1 File Offset: 0x000661A1
+		// Token: 0x17000AFE RID: 2814
+		// (get) Token: 0x06002A23 RID: 10787 RVA: 0x0006EFEA File Offset: 0x0006D1EA
+		// (set) Token: 0x06002A24 RID: 10788 RVA: 0x0006F011 File Offset: 0x0006D211
 		public virtual IStateRepPerfBase ReplacePerformance
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001A57 RID: 6743
+		// Token: 0x04001C56 RID: 7254
 		[Nullable(2)]
 		protected IStateRepPerfItem FbInstance;
 
-		// Token: 0x04001A58 RID: 6744
+		// Token: 0x04001C57 RID: 7255
 		[Nullable(2)]
 		protected IStateRepPerfItem_SetValue PocoInterface;
 	}

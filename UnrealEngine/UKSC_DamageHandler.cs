@@ -6,47 +6,47 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001D43 RID: 7491
+	// Token: 0x02000565 RID: 1381
 	[UnrealObjectPath("/Script/KuroSimpleCombat.KSC_DamageHandler")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 48)]
 	public class UKSC_DamageHandler : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601CB0D RID: 117517 RVA: 0x002A69B1 File Offset: 0x002A4BB1
+		// Token: 0x06007DCE RID: 32206 RVA: 0x000BA87D File Offset: 0x000B8A7D
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKSC_DamageHandler._ClassPtr;
 		}
 
-		// Token: 0x0601CB0E RID: 117518 RVA: 0x002A69C0 File Offset: 0x002A4BC0
+		// Token: 0x06007DCF RID: 32207 RVA: 0x000BA88C File Offset: 0x000B8A8C
 		public UKSC_DamageHandler() : this(BuiltinUtils.AllocNativeUObject(UKSC_DamageHandler.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601CB0F RID: 117519 RVA: 0x002A69E8 File Offset: 0x002A4BE8
+		// Token: 0x06007DD0 RID: 32208 RVA: 0x000BA8B4 File Offset: 0x000B8AB4
 		[NullableContext(1)]
 		public UKSC_DamageHandler(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKSC_DamageHandler.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x0601CB10 RID: 117520 RVA: 0x002A6A1B File Offset: 0x002A4C1B
+		// Token: 0x06007DD1 RID: 32209 RVA: 0x000BA8E7 File Offset: 0x000B8AE7
 		static UKSC_DamageHandler()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroSimpleCombat.KSC_DamageHandler");
 		}
 
-		// Token: 0x0601CB11 RID: 117521 RVA: 0x002A6A29 File Offset: 0x002A4C29
+		// Token: 0x06007DD2 RID: 32210 RVA: 0x000BA8F5 File Offset: 0x000B8AF5
 		protected UKSC_DamageHandler(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400F8E2 RID: 63714
+		// Token: 0x040036D6 RID: 14038
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroSimpleCombat.KSC_DamageHandler";
 
-		// Token: 0x0400F8E3 RID: 63715
+		// Token: 0x040036D7 RID: 14039
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400F8E4 RID: 63716
+		// Token: 0x040036D8 RID: 14040
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200288F RID: 10383
+	// Token: 0x02002B64 RID: 11108
 	public class SwitchSubLevels : ActionParams
 	{
-		// Token: 0x0600E5F6 RID: 58870 RVA: 0x0021CC6F File Offset: 0x0021AE6F
-		[NullableContext(1)]
+		// Token: 0x0600F425 RID: 62501 RVA: 0x00239BEF File Offset: 0x00237DEF
 		public static SwitchSubLevels Create(ISwitchSubLevels? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700469A RID: 18074
-		// (get) Token: 0x0600E5F7 RID: 58871 RVA: 0x0021CC8E File Offset: 0x0021AE8E
+		// Token: 0x17004A0B RID: 18955
+		// (get) Token: 0x0600F426 RID: 62502 RVA: 0x00239C0E File Offset: 0x00237E0E
 		public virtual ESwitchSubLevelsType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007F21 RID: 32545
+		// Token: 0x040085E0 RID: 34272
 		private ISwitchSubLevels Instance;
 	}
 }

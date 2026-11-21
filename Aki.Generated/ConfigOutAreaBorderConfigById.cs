@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000632 RID: 1586
+	// Token: 0x0200064A RID: 1610
 	public class ConfigOutAreaBorderConfigById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600253C RID: 9532 RVA: 0x0012C2DC File Offset: 0x0012A4DC
+		// Token: 0x060025CC RID: 9676 RVA: 0x00132D58 File Offset: 0x00130F58
 		static ConfigOutAreaBorderConfigById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigOutAreaBorderConfigById.CreateStaticDefaultValue), new Action(ConfigOutAreaBorderConfigById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600253D RID: 9533 RVA: 0x0012C2FC File Offset: 0x0012A4FC
+		// Token: 0x060025CD RID: 9677 RVA: 0x00132D78 File Offset: 0x00130F78
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigOutAreaBorderConfigById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600253E RID: 9534 RVA: 0x0012C37B File Offset: 0x0012A57B
+		// Token: 0x060025CE RID: 9678 RVA: 0x00132DF7 File Offset: 0x00130FF7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigOutAreaBorderConfigById.LogPair = null;
 			ConfigOutAreaBorderConfigById.HandleId = 0;
 		}
 
-		// Token: 0x0600253F RID: 9535 RVA: 0x0012C389 File Offset: 0x0012A589
+		// Token: 0x060025CF RID: 9679 RVA: 0x00132E05 File Offset: 0x00131005
 		public static void Init()
 		{
 			ConfigOutAreaBorderConfigById.HandleId = ConfigCommon.InitDataStatement(ConfigOutAreaBorderConfigById.HandleId, "db_outareaborderconfig.db", "select BinData from `OutAreaBorderConfig` where Id = ?");
 		}
 
-		// Token: 0x06002540 RID: 9536 RVA: 0x0012C3A4 File Offset: 0x0012A5A4
+		// Token: 0x060025D0 RID: 9680 RVA: 0x00132E20 File Offset: 0x00131020
 		public static OutAreaBorderConfig? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigOutAreaBorderConfigById.HandleId, ConfigOutAreaBorderConfigById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new OutAreaBorderConfig?(rootAsOutAreaBorderConfig);
 		}
 
-		// Token: 0x04002B44 RID: 11076
+		// Token: 0x04002BEC RID: 11244
 		private const string DB = "db_outareaborderconfig.db";
 
-		// Token: 0x04002B45 RID: 11077
+		// Token: 0x04002BED RID: 11245
 		private const string FILE = "k.可视化编辑/c.Csv/q.区域出界效果/*.csv*";
 
-		// Token: 0x04002B46 RID: 11078
+		// Token: 0x04002BEE RID: 11246
 		private const string TABLE = "OutAreaBorderConfig";
 
-		// Token: 0x04002B47 RID: 11079
+		// Token: 0x04002BEF RID: 11247
 		private const string COMMAND = "select BinData from `OutAreaBorderConfig` where Id = ?";
 
-		// Token: 0x04002B48 RID: 11080
+		// Token: 0x04002BF0 RID: 11248
 		private const string KEY_PREFIX = "OutAreaBorderConfigById";
 
-		// Token: 0x04002B49 RID: 11081
+		// Token: 0x04002BF1 RID: 11249
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002B4A RID: 11082
+		// Token: 0x04002BF2 RID: 11250
 		private static int HandleId;
 	}
 }

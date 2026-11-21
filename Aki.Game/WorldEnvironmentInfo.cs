@@ -4,12 +4,12 @@ using Aki.Protocol;
 using Google.Protobuf;
 using UnrealEngine;
 
-// Token: 0x0200352F RID: 13615
+// Token: 0x02002AA4 RID: 10916
 public class WorldEnvironmentInfo
 {
-	// Token: 0x1700295F RID: 10591
-	// (get) Token: 0x0601DEAD RID: 122541 RVA: 0x0086324F File Offset: 0x0086144F
-	public global::EDataLayerType DataLayerType
+	// Token: 0x17002CF8 RID: 11512
+	// (get) Token: 0x0601BBD5 RID: 113621 RVA: 0x0088AE87 File Offset: 0x00889087
+	public EDataLayerType DataLayerType
 	{
 		get
 		{
@@ -17,8 +17,8 @@ public class WorldEnvironmentInfo
 		}
 	}
 
-	// Token: 0x17002960 RID: 10592
-	// (get) Token: 0x0601DEAE RID: 122542 RVA: 0x00863257 File Offset: 0x00861457
+	// Token: 0x17002CF9 RID: 11513
+	// (get) Token: 0x0601BBD6 RID: 113622 RVA: 0x0088AE8F File Offset: 0x0088908F
 	public ESubDataLayerType SubDataLayerType
 	{
 		get
@@ -27,9 +27,9 @@ public class WorldEnvironmentInfo
 		}
 	}
 
-	// Token: 0x17002961 RID: 10593
-	// (get) Token: 0x0601DEAF RID: 122543 RVA: 0x0086325F File Offset: 0x0086145F
-	// (set) Token: 0x0601DEB0 RID: 122544 RVA: 0x00863267 File Offset: 0x00861467
+	// Token: 0x17002CFA RID: 11514
+	// (get) Token: 0x0601BBD7 RID: 113623 RVA: 0x0088AE97 File Offset: 0x00889097
+	// (set) Token: 0x0601BBD8 RID: 113624 RVA: 0x0088AE9F File Offset: 0x0088909F
 	public EActorCavernMode GlobalCaveMode
 	{
 		get
@@ -47,7 +47,7 @@ public class WorldEnvironmentInfo
 		}
 	}
 
-	// Token: 0x0601DEB1 RID: 122545 RVA: 0x00863280 File Offset: 0x00861480
+	// Token: 0x0601BBD9 RID: 113625 RVA: 0x0088AEB8 File Offset: 0x008890B8
 	public void RequestUpdateVoxelEnv()
 	{
 		if (this.GlobalCaveModeInternal == this.ServerCaveMode)
@@ -77,20 +77,20 @@ public class WorldEnvironmentInfo
 		this.LastUpdateTime = Time.Instance.Now;
 	}
 
-	// Token: 0x0601DEB2 RID: 122546 RVA: 0x008632F8 File Offset: 0x008614F8
+	// Token: 0x0601BBDA RID: 113626 RVA: 0x0088AF30 File Offset: 0x00889130
 	public bool IsEqual(long type)
 	{
 		return (long)this.Type == type;
 	}
 
-	// Token: 0x0601DEB3 RID: 122547 RVA: 0x00863304 File Offset: 0x00861504
+	// Token: 0x0601BBDB RID: 113627 RVA: 0x0088AF3C File Offset: 0x0088913C
 	public bool IsEnCloseEnvironment()
 	{
 		return (long)this.Type == 0L || (long)this.Type == 1L;
 	}
 
-	// Token: 0x17002962 RID: 10594
-	// (get) Token: 0x0601DEB4 RID: 122548 RVA: 0x0086331C File Offset: 0x0086151C
+	// Token: 0x17002CFB RID: 11515
+	// (get) Token: 0x0601BBDC RID: 113628 RVA: 0x0088AF54 File Offset: 0x00889154
 	public int EnvType
 	{
 		get
@@ -99,24 +99,24 @@ public class WorldEnvironmentInfo
 		}
 	}
 
-	// Token: 0x0601DEB5 RID: 122549 RVA: 0x00863324 File Offset: 0x00861524
+	// Token: 0x0601BBDD RID: 113629 RVA: 0x0088AF5C File Offset: 0x0088915C
 	[NullableContext(1)]
 	public void SetInfo(FKuroVoxelInfo info)
 	{
 		switch (info.EnvType)
 		{
 		case 0:
-			this.DataLayer = global::EDataLayerType.Cave;
+			this.DataLayer = EDataLayerType.Cave;
 			this.SubDataLayer = ESubDataLayerType.Cave;
 			this.GlobalCaveMode = EActorCavernMode.ActorCavernMode_Inside;
 			break;
 		case 1:
-			this.DataLayer = global::EDataLayerType.Room;
+			this.DataLayer = EDataLayerType.Room;
 			this.SubDataLayer = ESubDataLayerType.Room;
 			this.GlobalCaveMode = EActorCavernMode.ActorCavernMode_Inside;
 			break;
 		case 2:
-			this.DataLayer = global::EDataLayerType.Cave;
+			this.DataLayer = EDataLayerType.Cave;
 			this.SubDataLayer = ESubDataLayerType.Cave;
 			this.GlobalCaveMode = EActorCavernMode.ActorCavernMode_IntermediateZone;
 			break;
@@ -127,7 +127,7 @@ public class WorldEnvironmentInfo
 		this.Type = (int)info.EnvType;
 	}
 
-	// Token: 0x0601DEB6 RID: 122550 RVA: 0x008633A4 File Offset: 0x008615A4
+	// Token: 0x0601BBDE RID: 113630 RVA: 0x0088AFDC File Offset: 0x008891DC
 	public void ResetInfo()
 	{
 		this.Type = 255;
@@ -137,26 +137,26 @@ public class WorldEnvironmentInfo
 		{
 			return;
 		}
-		FName? dynamicFName = FNameUtil.GetDynamicFName(global::EDataLayerType.Cave.ToEnumString());
+		FName? dynamicFName = FNameUtil.GetDynamicFName(EDataLayerType.Cave.ToEnumString());
 		FName? dynamicFName2 = FNameUtil.GetDynamicFName(ESubDataLayerType.Cave.ToEnumString());
 		WorldController.Instance.ChangeCaveOrRoomDatalayer(world, dynamicFName, dynamicFName2, false);
 	}
 
-	// Token: 0x0400EAFD RID: 60157
+	// Token: 0x0400EFBA RID: 61370
 	private int Type = 255;
 
-	// Token: 0x0400EAFE RID: 60158
-	private global::EDataLayerType DataLayer;
+	// Token: 0x0400EFBB RID: 61371
+	private EDataLayerType DataLayer;
 
-	// Token: 0x0400EAFF RID: 60159
+	// Token: 0x0400EFBC RID: 61372
 	private ESubDataLayerType SubDataLayer;
 
-	// Token: 0x0400EB00 RID: 60160
+	// Token: 0x0400EFBD RID: 61373
 	private EActorCavernMode GlobalCaveModeInternal = EActorCavernMode.ActorCavernMode_Outside;
 
-	// Token: 0x0400EB01 RID: 60161
+	// Token: 0x0400EFBE RID: 61374
 	public EActorCavernMode ServerCaveMode = EActorCavernMode.ActorCavernMode_Outside;
 
-	// Token: 0x0400EB02 RID: 60162
+	// Token: 0x0400EFBF RID: 61375
 	private double LastUpdateTime;
 }

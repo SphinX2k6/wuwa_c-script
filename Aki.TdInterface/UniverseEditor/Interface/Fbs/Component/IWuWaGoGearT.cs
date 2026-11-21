@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005BAB RID: 23467
+	// Token: 0x020061C1 RID: 25025
 	public class IWuWaGoGearT
 	{
-		// Token: 0x1700B151 RID: 45393
-		// (get) Token: 0x06028301 RID: 164609 RVA: 0x00585C8B File Offset: 0x00583E8B
-		// (set) Token: 0x06028302 RID: 164610 RVA: 0x00585C93 File Offset: 0x00583E93
+		// Token: 0x1700BA99 RID: 47769
+		// (get) Token: 0x0602A8C5 RID: 174277 RVA: 0x005CD71B File Offset: 0x005CB91B
+		// (set) Token: 0x0602A8C6 RID: 174278 RVA: 0x005CD723 File Offset: 0x005CB923
 		public EWuWaGoEntityType Type { get; set; }
 
-		// Token: 0x1700B152 RID: 45394
-		// (get) Token: 0x06028303 RID: 164611 RVA: 0x00585C9C File Offset: 0x00583E9C
-		// (set) Token: 0x06028304 RID: 164612 RVA: 0x00585CA4 File Offset: 0x00583EA4
+		// Token: 0x1700BA9A RID: 47770
+		// (get) Token: 0x0602A8C7 RID: 174279 RVA: 0x005CD72C File Offset: 0x005CB92C
+		// (set) Token: 0x0602A8C8 RID: 174280 RVA: 0x005CD734 File Offset: 0x005CB934
 		public List<int> GridEntityIds { get; set; }
 
-		// Token: 0x06028305 RID: 164613 RVA: 0x00585CAD File Offset: 0x00583EAD
+		// Token: 0x0602A8C9 RID: 174281 RVA: 0x005CD73D File Offset: 0x005CB93D
 		public IWuWaGoGearT()
 		{
 			this.Type = EWuWaGoEntityType.LevelCenter;

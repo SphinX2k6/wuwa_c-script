@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020031B3 RID: 12723
+// Token: 0x02002722 RID: 10018
 public enum EWeaponExtraVisibleType
 {
-	// Token: 0x0400D6F4 RID: 55028
+	// Token: 0x0400DB7B RID: 56187
 	LowCustom,
-	// Token: 0x0400D6F5 RID: 55029
+	// Token: 0x0400DB7C RID: 56188
 	HighCustom,
-	// Token: 0x0400D6F6 RID: 55030
+	// Token: 0x0400DB7D RID: 56189
 	ExtraTag
 }

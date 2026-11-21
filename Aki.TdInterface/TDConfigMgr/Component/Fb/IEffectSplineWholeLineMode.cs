@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C43 RID: 3139
+	// Token: 0x02000D16 RID: 3350
 	public class IEffectSplineWholeLineMode : IEffectSplineCreationMode
 	{
-		// Token: 0x060047DF RID: 18399 RVA: 0x000B4D8D File Offset: 0x000B2F8D
-		[NullableContext(1)]
+		// Token: 0x06004C4F RID: 19535 RVA: 0x000BF13D File Offset: 0x000BD33D
 		public static IEffectSplineWholeLineMode Create(IEffectSplineWholeLineMode? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001516 RID: 5398
-		// (get) Token: 0x060047E0 RID: 18400 RVA: 0x000B4DAC File Offset: 0x000B2FAC
+		// Token: 0x1700161E RID: 5662
+		// (get) Token: 0x06004C50 RID: 19536 RVA: 0x000BF15C File Offset: 0x000BD35C
 		public override EEffectSplineCreateMode Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040028E8 RID: 10472
+		// Token: 0x04002B3D RID: 11069
 		private IEffectSplineWholeLineMode Instance;
 	}
 }

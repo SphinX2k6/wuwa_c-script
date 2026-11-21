@@ -4,18 +4,19 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Core.Framework;
 using CSharpScript.Game.Module.Plot;
 using CSharpScript.Game.Module.Teleport;
+using CSharpScript.Game.Module.UiCamera;
 using CSharpScript.Game.NewWorld.Character.Common.Component;
 using CSharpScript.Game.NewWorld.Character.Common.Component.Move;
 using CSharpScript.Game.NewWorld.Character.Role.Component;
 using UnrealEngine;
 
-// Token: 0x020016E6 RID: 5862
+// Token: 0x02000B9E RID: 2974
 [NullableContext(1)]
 [Nullable(0)]
 [TickController(0)]
 public class AnimController : ControllerBase
 {
-	// Token: 0x0600A802 RID: 43010 RVA: 0x0025B8E4 File Offset: 0x00259AE4
+	// Token: 0x06007BE2 RID: 31714 RVA: 0x00265CEC File Offset: 0x00263EEC
 	protected override bool OnInit()
 	{
 		Log.Instance.Info(ELogModule.Controller, ELogAuthor.WY, "AnimController.OnInit", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -27,11 +28,12 @@ public class AnimController : ControllerBase
 		UKuroAnimJsSubsystemProxy.RegisterUpdateNpcInfoCsFunction(GlobalData.GameInstance, updateAnimInfoCsFunction3);
 		UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "p.KuroHumanIK.CVarExtendClimbTraceRadius 0", null);
 		UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "a.EnableSoftAnimAssetRelease 1", null);
-		UeMovementTickController.MovementPredictMode = false;
+		UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "a.EnableKuroPredictMotion 0", null);
+		UeTickManageDefine.MovementPredictMode = false;
 		return true;
 	}
 
-	// Token: 0x0600A803 RID: 43011 RVA: 0x0025B990 File Offset: 0x00259B90
+	// Token: 0x06007BE3 RID: 31715 RVA: 0x00265DA8 File Offset: 0x00263FA8
 	protected override bool OnClear()
 	{
 		Log.Instance.Info(ELogModule.Controller, ELogAuthor.WY, "AnimController.OnClear", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -39,7 +41,7 @@ public class AnimController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0600A804 RID: 43012 RVA: 0x0025B9C8 File Offset: 0x00259BC8
+	// Token: 0x06007BE4 RID: 31716 RVA: 0x00265DE0 File Offset: 0x00263FE0
 	protected override void OnTick(float delta)
 	{
 		this.DeleteArray.Clear();
@@ -56,7 +58,7 @@ public class AnimController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600A805 RID: 43013 RVA: 0x0025BA88 File Offset: 0x00259C88
+	// Token: 0x06007BE5 RID: 31717 RVA: 0x00265EA0 File Offset: 0x002640A0
 	public void SetSeatMorph(Entity seatEntity, int charEntityId, double seatMorphValue)
 	{
 		SeatMorphRuntimeStruct seatMorphRuntimeStruct;
@@ -68,37 +70,37 @@ public class AnimController : ControllerBase
 		seatMorphRuntimeStruct.TrySetTargetSeatMorph(charEntityId, seatMorphValue);
 	}
 
-	// Token: 0x0600A806 RID: 43014 RVA: 0x0025BACD File Offset: 0x00259CCD
+	// Token: 0x06007BE6 RID: 31718 RVA: 0x00265EE5 File Offset: 0x002640E5
 	public void CacheForceDisableAnimOptimization(int pbDataId)
 	{
 		AnimController.Instance.ForceDisableAnimOptimizationCache.Add(pbDataId);
 	}
 
-	// Token: 0x0600A807 RID: 43015 RVA: 0x0025BAE0 File Offset: 0x00259CE0
+	// Token: 0x06007BE7 RID: 31719 RVA: 0x00265EF8 File Offset: 0x002640F8
 	public bool ConsumeForceDisableAnimOptimization(int pbDataId)
 	{
 		return AnimController.Instance.ForceDisableAnimOptimizationCache.Remove(pbDataId);
 	}
 
-	// Token: 0x0600A808 RID: 43016 RVA: 0x0025BAF2 File Offset: 0x00259CF2
+	// Token: 0x06007BE8 RID: 31720 RVA: 0x00265F0A File Offset: 0x0026410A
 	public void ClearForceDisableAnimOptimizationCache()
 	{
 		AnimController.Instance.ForceDisableAnimOptimizationCache.Clear();
 	}
 
-	// Token: 0x0600A809 RID: 43017 RVA: 0x0025BB03 File Offset: 0x00259D03
+	// Token: 0x06007BE9 RID: 31721 RVA: 0x00265F1B File Offset: 0x0026411B
 	public void RegisterUpdateAnimInfoEntity(int entityId)
 	{
 		UKuroAnimJsSubsystemProxy.RegisterEntity(GlobalData.GameInstance, entityId);
 	}
 
-	// Token: 0x0600A80A RID: 43018 RVA: 0x0025BB10 File Offset: 0x00259D10
+	// Token: 0x06007BEA RID: 31722 RVA: 0x00265F28 File Offset: 0x00264128
 	public void UnregisterUpdateAnimInfoEntity(int entityId)
 	{
 		UKuroAnimJsSubsystemProxy.UnregisterEntity(GlobalData.GameInstance, entityId);
 	}
 
-	// Token: 0x0600A80B RID: 43019 RVA: 0x0025BB1D File Offset: 0x00259D1D
+	// Token: 0x06007BEB RID: 31723 RVA: 0x00265F35 File Offset: 0x00264135
 	public void UpdateAnimInfo(int entityId)
 	{
 		this.UpdateAnimInfoMove(entityId);
@@ -110,7 +112,7 @@ public class AnimController : ControllerBase
 		this.UpdateAnimInfoVehicle(entityId);
 	}
 
-	// Token: 0x0600A80C RID: 43020 RVA: 0x0025BB50 File Offset: 0x00259D50
+	// Token: 0x06007BEC RID: 31724 RVA: 0x00265F68 File Offset: 0x00264168
 	public void UpdateMonsterAnimInfo(int entityId)
 	{
 		this.UpdateMonsterAnimInfoHit(entityId);
@@ -120,14 +122,14 @@ public class AnimController : ControllerBase
 		this.UpdateAnimInfoHoldingHands(entityId);
 	}
 
-	// Token: 0x0600A80D RID: 43021 RVA: 0x0025BB75 File Offset: 0x00259D75
+	// Token: 0x06007BED RID: 31725 RVA: 0x00265F8D File Offset: 0x0026418D
 	public void UpdateNpcAnimInfo(int entityId)
 	{
 		this.UpdateNpcAnimInfoMove(entityId);
 		this.UpdateNpcAnimInfoUnifiedState(entityId);
 	}
 
-	// Token: 0x0600A80E RID: 43022 RVA: 0x0025BB88 File Offset: 0x00259D88
+	// Token: 0x06007BEE RID: 31726 RVA: 0x00265FA0 File Offset: 0x002641A0
 	public void UpdateAnimInfoMove(int entityId)
 	{
 		CharacterAnimationComponent component = EntitySystem.Instance.GetComponent<CharacterAnimationComponent>(entityId);
@@ -151,6 +153,7 @@ public class AnimController : ControllerBase
 			{
 				animLogicParamsSetter.InputRotator.DeepCopy(inputRotatorProxy);
 				logicParams.InputRotatorRef = inputRotatorProxy.ToUeRotator();
+				logicParams.bUpdateInputRotatorRef = true;
 			}
 		}
 		BaseMoveComponent component3 = EntitySystem.Instance.GetComponent<BaseMoveComponent>(entityId);
@@ -343,7 +346,7 @@ public class AnimController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600A80F RID: 43023 RVA: 0x0025C148 File Offset: 0x0025A348
+	// Token: 0x06007BEF RID: 31727 RVA: 0x00266568 File Offset: 0x00264768
 	public void UpdateAnimInfoMeshAnim(int entityId)
 	{
 		CharacterAnimationComponent component = EntitySystem.Instance.GetComponent<CharacterAnimationComponent>(entityId);
@@ -396,7 +399,7 @@ public class AnimController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600A810 RID: 43024 RVA: 0x0025C284 File Offset: 0x0025A484
+	// Token: 0x06007BF0 RID: 31728 RVA: 0x002666A4 File Offset: 0x002648A4
 	public void UpdateAnimInfoHit(int entityId)
 	{
 		CharacterAnimationComponent component = EntitySystem.Instance.GetComponent<CharacterAnimationComponent>(entityId);
@@ -441,7 +444,7 @@ public class AnimController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600A811 RID: 43025 RVA: 0x0025C3B4 File Offset: 0x0025A5B4
+	// Token: 0x06007BF1 RID: 31729 RVA: 0x002667D4 File Offset: 0x002649D4
 	public void UpdateAnimInfoUnifiedState(int entityId)
 	{
 		CharacterAnimationComponent component = EntitySystem.Instance.GetComponent<CharacterAnimationComponent>(entityId);
@@ -550,7 +553,7 @@ public class AnimController : ControllerBase
 			flag4 = true;
 		}
 		bool flag5 = flag4;
-		bool flag6 = UiCameraAnimationManager.Instance.IsDisablePlayer() || flag5;
+		bool flag6 = UiCameraModel.Instance.IsDisablePlayer() || flag5;
 		if (animLogicParamsSetter.IsInUiCamera != flag6)
 		{
 			animLogicParamsSetter.IsInUiCamera = flag6;
@@ -558,7 +561,7 @@ public class AnimController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600A812 RID: 43026 RVA: 0x0025C640 File Offset: 0x0025A840
+	// Token: 0x06007BF2 RID: 31730 RVA: 0x00266A60 File Offset: 0x00264C60
 	public void UpdateAnimInfoSceneInteract(int entityId)
 	{
 		CharacterAnimationComponent component = EntitySystem.Instance.GetComponent<CharacterAnimationComponent>(entityId);
@@ -599,7 +602,7 @@ public class AnimController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600A813 RID: 43027 RVA: 0x0025C71C File Offset: 0x0025A91C
+	// Token: 0x06007BF3 RID: 31731 RVA: 0x00266B3C File Offset: 0x00264D3C
 	public void UpdateAnimInfoVehicle(int entityId)
 	{
 		CharacterAnimationComponent component = EntitySystem.Instance.GetComponent<CharacterAnimationComponent>(entityId);
@@ -694,7 +697,7 @@ public class AnimController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600A814 RID: 43028 RVA: 0x0025C960 File Offset: 0x0025AB60
+	// Token: 0x06007BF4 RID: 31732 RVA: 0x00266D80 File Offset: 0x00264F80
 	public void UpdateAnimInfoHoldingHands(int entityId)
 	{
 		CharacterAnimationComponent component = EntitySystem.Instance.GetComponent<CharacterAnimationComponent>(entityId);
@@ -758,7 +761,7 @@ public class AnimController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600A815 RID: 43029 RVA: 0x0025CAB0 File Offset: 0x0025ACB0
+	// Token: 0x06007BF5 RID: 31733 RVA: 0x00266ED0 File Offset: 0x002650D0
 	public void UpdateMonsterAnimInfoMove(int entityId)
 	{
 		CharacterAnimationComponent component = EntitySystem.Instance.GetComponent<CharacterAnimationComponent>(entityId);
@@ -786,7 +789,7 @@ public class AnimController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600A816 RID: 43030 RVA: 0x0025CB80 File Offset: 0x0025AD80
+	// Token: 0x06007BF6 RID: 31734 RVA: 0x00266FA0 File Offset: 0x002651A0
 	public void UpdateMonsterAnimInfoSkill(int entityId)
 	{
 		CharacterAnimationComponent component = EntitySystem.Instance.GetComponent<CharacterAnimationComponent>(entityId);
@@ -831,7 +834,7 @@ public class AnimController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600A817 RID: 43031 RVA: 0x0025CC34 File Offset: 0x0025AE34
+	// Token: 0x06007BF7 RID: 31735 RVA: 0x00267054 File Offset: 0x00265254
 	public void UpdateMonsterAnimInfoHit(int entityId)
 	{
 		CharacterAnimationComponent component = EntitySystem.Instance.GetComponent<CharacterAnimationComponent>(entityId);
@@ -893,7 +896,7 @@ public class AnimController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600A818 RID: 43032 RVA: 0x0025CE20 File Offset: 0x0025B020
+	// Token: 0x06007BF8 RID: 31736 RVA: 0x00267240 File Offset: 0x00265440
 	public void UpdateMonsterAnimInfoUnifiedState(int entityId)
 	{
 		CharacterAnimationComponent component = EntitySystem.Instance.GetComponent<CharacterAnimationComponent>(entityId);
@@ -928,7 +931,7 @@ public class AnimController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600A819 RID: 43033 RVA: 0x0025CEDC File Offset: 0x0025B0DC
+	// Token: 0x06007BF9 RID: 31737 RVA: 0x002672FC File Offset: 0x002654FC
 	public void UpdateNpcAnimInfoMove(int entityId)
 	{
 		CharacterAnimationComponent component = EntitySystem.Instance.GetComponent<CharacterAnimationComponent>(entityId);
@@ -950,7 +953,7 @@ public class AnimController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600A81A RID: 43034 RVA: 0x0025CF70 File Offset: 0x0025B170
+	// Token: 0x06007BFA RID: 31738 RVA: 0x00267390 File Offset: 0x00265590
 	public void UpdateNpcAnimInfoUnifiedState(int entityId)
 	{
 		CharacterAnimationComponent component = EntitySystem.Instance.GetComponent<CharacterAnimationComponent>(entityId);
@@ -985,8 +988,8 @@ public class AnimController : ControllerBase
 		}
 	}
 
-	// Token: 0x17000DED RID: 3565
-	// (get) Token: 0x0600A81B RID: 43035 RVA: 0x0025D02C File Offset: 0x0025B22C
+	// Token: 0x17000E0E RID: 3598
+	// (get) Token: 0x06007BFB RID: 31739 RVA: 0x0026744C File Offset: 0x0026564C
 	public static AnimController Instance
 	{
 		get
@@ -995,7 +998,7 @@ public class AnimController : ControllerBase
 		}
 	}
 
-	// Token: 0x0600A81C RID: 43036 RVA: 0x0025D033 File Offset: 0x0025B233
+	// Token: 0x06007BFC RID: 31740 RVA: 0x00267453 File Offset: 0x00265653
 	public static AnimController GetOrCreateInstance()
 	{
 		if (AnimController._Instance == null)
@@ -1005,7 +1008,7 @@ public class AnimController : ControllerBase
 		return AnimController._Instance;
 	}
 
-	// Token: 0x0600A81D RID: 43037 RVA: 0x0025D047 File Offset: 0x0025B247
+	// Token: 0x06007BFD RID: 31741 RVA: 0x00267467 File Offset: 0x00265667
 	public static bool CreateInstance()
 	{
 		if (AnimController._Instance != null)
@@ -1016,33 +1019,33 @@ public class AnimController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0600A81E RID: 43038 RVA: 0x0025D05D File Offset: 0x0025B25D
+	// Token: 0x06007BFE RID: 31742 RVA: 0x0026747D File Offset: 0x0026567D
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600A81F RID: 43039 RVA: 0x0025D05F File Offset: 0x0025B25F
+	// Token: 0x06007BFF RID: 31743 RVA: 0x0026747F File Offset: 0x0026567F
 	public static void ResetStaticDefaultValue()
 	{
 		AnimController._Instance = null;
 	}
 
-	// Token: 0x0600A820 RID: 43040 RVA: 0x0025D067 File Offset: 0x0025B267
+	// Token: 0x06007C00 RID: 31744 RVA: 0x00267487 File Offset: 0x00265687
 	static AnimController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(AnimController.CreateStaticDefaultValue), new Action(AnimController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04004BB5 RID: 19381
+	// Token: 0x04004C5C RID: 19548
 	public HashSet<int> ForceDisableAnimOptimizationCache = new HashSet<int>();
 
-	// Token: 0x04004BB6 RID: 19382
+	// Token: 0x04004C5D RID: 19549
 	private Dictionary<int, SeatMorphRuntimeStruct> SeatMorphRuntimeMap = new Dictionary<int, SeatMorphRuntimeStruct>();
 
-	// Token: 0x04004BB7 RID: 19383
+	// Token: 0x04004C5E RID: 19550
 	private List<int> DeleteArray = new List<int>();
 
-	// Token: 0x04004BB8 RID: 19384
+	// Token: 0x04004C5F RID: 19551
 	[Nullable(2)]
 	private static AnimController _Instance;
 }

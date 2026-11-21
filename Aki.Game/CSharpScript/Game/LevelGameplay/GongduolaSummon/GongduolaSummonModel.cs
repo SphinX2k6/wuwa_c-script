@@ -4,13 +4,13 @@ using AkiClient.Game.Aki.Data.Level.SummonGongduola;
 
 namespace CSharpScript.Game.LevelGamePlay.GongduolaSummon
 {
-	// Token: 0x02006E21 RID: 28193
+	// Token: 0x02005FA1 RID: 24481
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Model(0)]
 	public class GongduolaSummonModel : ModelBase
 	{
-		// Token: 0x06044BB9 RID: 281529 RVA: 0x010F70FF File Offset: 0x010F52FF
+		// Token: 0x0603AD22 RID: 240930 RVA: 0x010A163B File Offset: 0x0109F83B
 		protected override bool OnInit()
 		{
 			ResourceSystem.Instance.LoadAsync<BP_SummonGongduolaConfig_C>(this.ConfigDaPath, delegate([Nullable(2)] BP_SummonGongduolaConfig_C result, string _)
@@ -26,8 +26,8 @@ namespace CSharpScript.Game.LevelGamePlay.GongduolaSummon
 			return true;
 		}
 
-		// Token: 0x170099FE RID: 39422
-		// (get) Token: 0x06044BBA RID: 281530 RVA: 0x010F7126 File Offset: 0x010F5326
+		// Token: 0x17006F01 RID: 28417
+		// (get) Token: 0x0603AD23 RID: 240931 RVA: 0x010A1662 File Offset: 0x0109F862
 		public static GongduolaSummonModel Instance
 		{
 			get
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.LevelGamePlay.GongduolaSummon
 			}
 		}
 
-		// Token: 0x06044BBB RID: 281531 RVA: 0x010F712D File Offset: 0x010F532D
+		// Token: 0x0603AD24 RID: 240932 RVA: 0x010A1669 File Offset: 0x0109F869
 		public static GongduolaSummonModel GetOrCreateInstance()
 		{
 			if (GongduolaSummonModel._Instance == null)
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.LevelGamePlay.GongduolaSummon
 			return GongduolaSummonModel._Instance;
 		}
 
-		// Token: 0x06044BBC RID: 281532 RVA: 0x010F7141 File Offset: 0x010F5341
+		// Token: 0x0603AD25 RID: 240933 RVA: 0x010A167D File Offset: 0x0109F87D
 		public static bool CreateInstance()
 		{
 			if (GongduolaSummonModel._Instance != null)
@@ -57,59 +57,59 @@ namespace CSharpScript.Game.LevelGamePlay.GongduolaSummon
 			return true;
 		}
 
-		// Token: 0x06044BBD RID: 281533 RVA: 0x010F7157 File Offset: 0x010F5357
+		// Token: 0x0603AD26 RID: 240934 RVA: 0x010A1693 File Offset: 0x0109F893
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06044BBE RID: 281534 RVA: 0x010F7159 File Offset: 0x010F5359
+		// Token: 0x0603AD27 RID: 240935 RVA: 0x010A1695 File Offset: 0x0109F895
 		public static void ResetStaticDefaultValue()
 		{
 			GongduolaSummonModel._Instance = null;
 		}
 
-		// Token: 0x06044BBF RID: 281535 RVA: 0x010F7161 File Offset: 0x010F5361
+		// Token: 0x0603AD28 RID: 240936 RVA: 0x010A169D File Offset: 0x0109F89D
 		static GongduolaSummonModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(GongduolaSummonModel.CreateStaticDefaultValue), new Action(GongduolaSummonModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04023C0E RID: 146446
+		// Token: 0x0401EEB1 RID: 126641
 		public readonly string CancelSummonAmPath = "/Game/Aki/Character/NPC/AlienNPC/Level_B/SB1Gongduola3/BaseAnim/AM_CancelSummon.AM_CancelSummon";
 
-		// Token: 0x04023C0F RID: 146447
+		// Token: 0x0401EEB2 RID: 126642
 		public readonly string SummonAmPath = "/Game/Aki/Character/NPC/AlienNPC/Level_B/SB1Gongduola3/BaseAnim/AM_Summon.AM_Summon";
 
-		// Token: 0x04023C10 RID: 146448
+		// Token: 0x0401EEB3 RID: 126643
 		private readonly string ConfigDaPath = "/Game/Aki/Data/Level/SummonGongduola/DA_SummonGongduolaConfig.DA_SummonGongduolaConfig";
 
-		// Token: 0x04023C11 RID: 146449
+		// Token: 0x0401EEB4 RID: 126644
 		[Nullable(2)]
 		public BaseActorComponent SummonedActorComp;
 
-		// Token: 0x04023C12 RID: 146450
+		// Token: 0x0401EEB5 RID: 126645
 		[Nullable(2)]
 		public Vector SummonLocation;
 
-		// Token: 0x04023C13 RID: 146451
+		// Token: 0x0401EEB6 RID: 126646
 		[Nullable(2)]
 		public Rotator SummonRotation;
 
-		// Token: 0x04023C14 RID: 146452
+		// Token: 0x0401EEB7 RID: 126647
 		[Nullable(2)]
 		public Vector SummonGravityDir;
 
-		// Token: 0x04023C15 RID: 146453
+		// Token: 0x0401EEB8 RID: 126648
 		[Nullable(2)]
 		public BP_SummonGongduolaConfig_C SummonConfig;
 
-		// Token: 0x04023C16 RID: 146454
+		// Token: 0x0401EEB9 RID: 126649
 		public readonly string BanInputReason = "SummonGongduola Ban Input";
 
-		// Token: 0x04023C17 RID: 146455
+		// Token: 0x0401EEBA RID: 126650
 		public bool IsLoaded;
 
-		// Token: 0x04023C18 RID: 146456
+		// Token: 0x0401EEBB RID: 126651
 		[Nullable(2)]
 		private static GongduolaSummonModel _Instance;
 	}

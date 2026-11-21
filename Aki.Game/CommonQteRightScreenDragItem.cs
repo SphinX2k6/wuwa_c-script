@@ -9,7 +9,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002617 RID: 9751
+// Token: 0x02001B02 RID: 6914
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -18,7 +18,7 @@ using UnrealEngine;
 })]
 public class CommonQteRightScreenDragItem : CommonQteItemBase<CommonQteDragContext>
 {
-	// Token: 0x06013EAD RID: 81581 RVA: 0x005015E0 File Offset: 0x004FF7E0
+	// Token: 0x0601138F RID: 70543 RVA: 0x005104A4 File Offset: 0x0050E6A4
 	protected override void OnRegisterComponent()
 	{
 		base.OnRegisterComponent();
@@ -33,7 +33,7 @@ public class CommonQteRightScreenDragItem : CommonQteItemBase<CommonQteDragConte
 		}
 	}
 
-	// Token: 0x06013EAE RID: 81582 RVA: 0x00501654 File Offset: 0x004FF854
+	// Token: 0x06011390 RID: 70544 RVA: 0x00510518 File Offset: 0x0050E718
 	protected override UniTask OnBeforeStartAsync()
 	{
 		CommonQteRightScreenDragItem.<OnBeforeStartAsync>d__20 <OnBeforeStartAsync>d__;
@@ -44,7 +44,7 @@ public class CommonQteRightScreenDragItem : CommonQteItemBase<CommonQteDragConte
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013EAF RID: 81583 RVA: 0x00501698 File Offset: 0x004FF898
+	// Token: 0x06011391 RID: 70545 RVA: 0x0051055C File Offset: 0x0050E75C
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -61,13 +61,13 @@ public class CommonQteRightScreenDragItem : CommonQteItemBase<CommonQteDragConte
 		draggable.OnPointerUpCallBack.Bind(new Action<ULGUIPointerEventData>(this.OnPointerUpCallBack));
 	}
 
-	// Token: 0x06013EB0 RID: 81584 RVA: 0x0050175E File Offset: 0x004FF95E
+	// Token: 0x06011392 RID: 70546 RVA: 0x00510622 File Offset: 0x0050E822
 	protected override bool IsContextMatched(CommonQteContextBase context)
 	{
 		return context is CommonQteDragContext;
 	}
 
-	// Token: 0x06013EB1 RID: 81585 RVA: 0x00501769 File Offset: 0x004FF969
+	// Token: 0x06011393 RID: 70547 RVA: 0x0051062D File Offset: 0x0050E82D
 	protected override void OnRefreshActionUi(string action)
 	{
 		InputMultiKeyItem keyItem = this.KeyItem;
@@ -86,7 +86,7 @@ public class CommonQteRightScreenDragItem : CommonQteItemBase<CommonQteDragConte
 		keyItem2.Show(null);
 	}
 
-	// Token: 0x06013EB2 RID: 81586 RVA: 0x0050179C File Offset: 0x004FF99C
+	// Token: 0x06011394 RID: 70548 RVA: 0x00510660 File Offset: 0x0050E860
 	[NullableContext(2)]
 	protected override void TryApplyQteUiConfig(object uiConfig)
 	{
@@ -100,7 +100,7 @@ public class CommonQteRightScreenDragItem : CommonQteItemBase<CommonQteDragConte
 		}
 	}
 
-	// Token: 0x06013EB3 RID: 81587 RVA: 0x005017F8 File Offset: 0x004FF9F8
+	// Token: 0x06011395 RID: 70549 RVA: 0x005106BC File Offset: 0x0050E8BC
 	private void OnSequenceEndEvent(string sequenceName)
 	{
 		if (sequenceName == "Start")
@@ -133,7 +133,7 @@ public class CommonQteRightScreenDragItem : CommonQteItemBase<CommonQteDragConte
 		}
 	}
 
-	// Token: 0x06013EB4 RID: 81588 RVA: 0x00501878 File Offset: 0x004FFA78
+	// Token: 0x06011396 RID: 70550 RVA: 0x0051073C File Offset: 0x0050E93C
 	protected override void OnPlayQteStart()
 	{
 		base.SetUiActive(true);
@@ -153,7 +153,7 @@ public class CommonQteRightScreenDragItem : CommonQteItemBase<CommonQteDragConte
 		}
 	}
 
-	// Token: 0x06013EB5 RID: 81589 RVA: 0x005018D0 File Offset: 0x004FFAD0
+	// Token: 0x06011397 RID: 70551 RVA: 0x00510794 File Offset: 0x0050E994
 	protected override void RefreshUiOffset()
 	{
 		if (this.CommonQteContext != null)
@@ -172,13 +172,13 @@ public class CommonQteRightScreenDragItem : CommonQteItemBase<CommonQteDragConte
 		}
 	}
 
-	// Token: 0x06013EB6 RID: 81590 RVA: 0x00501942 File Offset: 0x004FFB42
+	// Token: 0x06011398 RID: 70552 RVA: 0x00510806 File Offset: 0x0050EA06
 	protected override bool IsUseBaseAction()
 	{
 		return false;
 	}
 
-	// Token: 0x06013EB7 RID: 81591 RVA: 0x00501948 File Offset: 0x004FFB48
+	// Token: 0x06011399 RID: 70553 RVA: 0x0051080C File Offset: 0x0050EA0C
 	protected override void OnBindAction()
 	{
 		InputDistributeController.Instance.BindAxisIgnoreLimit("UiTurn", new TInputHandle<float>(this.OnInputTurn));
@@ -186,7 +186,7 @@ public class CommonQteRightScreenDragItem : CommonQteItemBase<CommonQteDragConte
 		EventSystem.Instance.Add<EInputControllerType, EInputControllerType>(EEventName.InputControllerChange, new Action<EInputControllerType, EInputControllerType>(this.OnInputControllerChange));
 	}
 
-	// Token: 0x06013EB8 RID: 81592 RVA: 0x005019A8 File Offset: 0x004FFBA8
+	// Token: 0x0601139A RID: 70554 RVA: 0x0051086C File Offset: 0x0050EA6C
 	protected override void OnUnbindAction()
 	{
 		InputDistributeController.Instance.UnBindAxisIgnoreLimit("UiTurn", new TInputHandle<float>(this.OnInputTurn));
@@ -194,7 +194,7 @@ public class CommonQteRightScreenDragItem : CommonQteItemBase<CommonQteDragConte
 		EventSystem.Instance.Remove<EInputControllerType, EInputControllerType>(EEventName.InputControllerChange, new Action<EInputControllerType, EInputControllerType>(this.OnInputControllerChange));
 	}
 
-	// Token: 0x06013EB9 RID: 81593 RVA: 0x00501A08 File Offset: 0x004FFC08
+	// Token: 0x0601139B RID: 70555 RVA: 0x005108CC File Offset: 0x0050EACC
 	private void OnInputControllerChange(EInputControllerType last, EInputControllerType now)
 	{
 		if (!Info.Instance.IsInGamepad())
@@ -212,7 +212,7 @@ public class CommonQteRightScreenDragItem : CommonQteItemBase<CommonQteDragConte
 		this.SetIsDragging(false);
 	}
 
-	// Token: 0x06013EBA RID: 81594 RVA: 0x00501A60 File Offset: 0x004FFC60
+	// Token: 0x0601139C RID: 70556 RVA: 0x00510924 File Offset: 0x0050EB24
 	protected override void OnHandleQteEnd()
 	{
 		InputMultiKeyItem keyItem = this.KeyItem;
@@ -233,7 +233,7 @@ public class CommonQteRightScreenDragItem : CommonQteItemBase<CommonQteDragConte
 		levelSequencePlayer2.PlayLevelSequenceByName("Close", false, null, false);
 	}
 
-	// Token: 0x06013EBB RID: 81595 RVA: 0x00501AB4 File Offset: 0x004FFCB4
+	// Token: 0x0601139D RID: 70557 RVA: 0x00510978 File Offset: 0x0050EB78
 	private void OnInputTurn(string name, float value, InputIdentification inputIdentification)
 	{
 		if (!base.IsValidInput() || !Info.Instance.IsInGamepad())
@@ -245,7 +245,7 @@ public class CommonQteRightScreenDragItem : CommonQteItemBase<CommonQteDragConte
 		this.SetIsDragging(this.HasInputTurn || this.HasInputLookup);
 	}
 
-	// Token: 0x06013EBC RID: 81596 RVA: 0x00501B0C File Offset: 0x004FFD0C
+	// Token: 0x0601139E RID: 70558 RVA: 0x005109D0 File Offset: 0x0050EBD0
 	private void OnInputLookup(string name, float value, InputIdentification inputIdentification)
 	{
 		if (!base.IsValidInput() || !Info.Instance.IsInGamepad())
@@ -257,21 +257,21 @@ public class CommonQteRightScreenDragItem : CommonQteItemBase<CommonQteDragConte
 		this.SetIsDragging(this.HasInputTurn || this.HasInputLookup);
 	}
 
-	// Token: 0x06013EBD RID: 81597 RVA: 0x00501B64 File Offset: 0x004FFD64
+	// Token: 0x0601139F RID: 70559 RVA: 0x00510A28 File Offset: 0x0050EC28
 	[NullableContext(2)]
 	private void OnPointerDownCallBack(ULGUIPointerEventData eventData)
 	{
 		this.DerivedProgress = this.CacheProgress;
 	}
 
-	// Token: 0x06013EBE RID: 81598 RVA: 0x00501B72 File Offset: 0x004FFD72
+	// Token: 0x060113A0 RID: 70560 RVA: 0x00510A36 File Offset: 0x0050EC36
 	[NullableContext(2)]
 	private void OnPointerUpCallBack(ULGUIPointerEventData eventData)
 	{
 		this.DerivedProgress = 0f;
 	}
 
-	// Token: 0x06013EBF RID: 81599 RVA: 0x00501B80 File Offset: 0x004FFD80
+	// Token: 0x060113A1 RID: 70561 RVA: 0x00510A44 File Offset: 0x0050EC44
 	[NullableContext(2)]
 	private void OnPointerBeginDragCallBack(ULGUIPointerEventData eventData)
 	{
@@ -286,7 +286,7 @@ public class CommonQteRightScreenDragItem : CommonQteItemBase<CommonQteDragConte
 		this.DragValid = true;
 	}
 
-	// Token: 0x06013EC0 RID: 81600 RVA: 0x00501BD8 File Offset: 0x004FFDD8
+	// Token: 0x060113A2 RID: 70562 RVA: 0x00510A9C File Offset: 0x0050EC9C
 	[NullableContext(2)]
 	private void OnPointerDragCallBack(ULGUIPointerEventData eventData)
 	{
@@ -308,7 +308,7 @@ public class CommonQteRightScreenDragItem : CommonQteItemBase<CommonQteDragConte
 		LguiUtil.Instance.ConvertPointerPositionToLguiCenterPosition(pointerPosition, this.CurDrag);
 	}
 
-	// Token: 0x06013EC1 RID: 81601 RVA: 0x00501C40 File Offset: 0x004FFE40
+	// Token: 0x060113A3 RID: 70563 RVA: 0x00510B04 File Offset: 0x0050ED04
 	[NullableContext(2)]
 	private void OnPointerEndDragCallBack(ULGUIPointerEventData eventData)
 	{
@@ -323,7 +323,7 @@ public class CommonQteRightScreenDragItem : CommonQteItemBase<CommonQteDragConte
 		this.SetIsDragging(false);
 	}
 
-	// Token: 0x06013EC2 RID: 81602 RVA: 0x00501C8D File Offset: 0x004FFE8D
+	// Token: 0x060113A4 RID: 70564 RVA: 0x00510B51 File Offset: 0x0050ED51
 	private void SetIsDragging(bool isDragging)
 	{
 		if (isDragging == this.IsDragging)
@@ -353,7 +353,7 @@ public class CommonQteRightScreenDragItem : CommonQteItemBase<CommonQteDragConte
 		}
 	}
 
-	// Token: 0x06013EC3 RID: 81603 RVA: 0x00501CC4 File Offset: 0x004FFEC4
+	// Token: 0x060113A5 RID: 70565 RVA: 0x00510B88 File Offset: 0x0050ED88
 	protected override void OnTickQteItem(float delta)
 	{
 		if (Info.Instance.IsInGamepad())
@@ -401,72 +401,72 @@ public class CommonQteRightScreenDragItem : CommonQteItemBase<CommonQteDragConte
 		}
 	}
 
-	// Token: 0x04009618 RID: 38424
+	// Token: 0x0400976F RID: 38767
 	private const string CURVE_PATH = "/Game/Aki/UI/UIResources/UiFight/Curve/PlotQTE/PlotQteDragRT1.PlotQteDragRT1";
 
-	// Token: 0x04009619 RID: 38425
+	// Token: 0x04009770 RID: 38768
 	[Nullable(2)]
 	private InputMultiKeyItem KeyItem;
 
-	// Token: 0x0400961A RID: 38426
+	// Token: 0x04009771 RID: 38769
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x0400961B RID: 38427
+	// Token: 0x04009772 RID: 38770
 	[Nullable(2)]
 	private UCurveFloat MoveCurve;
 
-	// Token: 0x0400961C RID: 38428
+	// Token: 0x04009773 RID: 38771
 	private bool HasInputTurn;
 
-	// Token: 0x0400961D RID: 38429
+	// Token: 0x04009774 RID: 38772
 	private bool HasInputLookup;
 
-	// Token: 0x0400961E RID: 38430
+	// Token: 0x04009775 RID: 38773
 	private bool IsDragging;
 
-	// Token: 0x0400961F RID: 38431
+	// Token: 0x04009776 RID: 38774
 	private bool DragValid;
 
-	// Token: 0x04009620 RID: 38432
+	// Token: 0x04009777 RID: 38775
 	private float CurrentProgress;
 
-	// Token: 0x04009621 RID: 38433
+	// Token: 0x04009778 RID: 38776
 	private float DerivedProgress;
 
-	// Token: 0x04009622 RID: 38434
+	// Token: 0x04009779 RID: 38777
 	private float CacheProgress;
 
-	// Token: 0x04009623 RID: 38435
+	// Token: 0x0400977A RID: 38778
 	private float LerpSpeed;
 
-	// Token: 0x04009624 RID: 38436
+	// Token: 0x0400977B RID: 38779
 	private float Bounds;
 
-	// Token: 0x04009625 RID: 38437
+	// Token: 0x0400977C RID: 38780
 	private float Length;
 
-	// Token: 0x04009626 RID: 38438
+	// Token: 0x0400977D RID: 38781
 	private readonly Vector2D StartDrag = Vector2D.Create();
 
-	// Token: 0x04009627 RID: 38439
+	// Token: 0x0400977E RID: 38782
 	private readonly Vector2D CurDrag = Vector2D.Create();
 
-	// Token: 0x04009628 RID: 38440
+	// Token: 0x0400977F RID: 38783
 	private readonly Vector2D GamepadOffset = Vector2D.Create();
 
-	// Token: 0x04009629 RID: 38441
+	// Token: 0x04009780 RID: 38784
 	private bool CheckByRealTimeInput;
 
-	// Token: 0x02008C5C RID: 35932
+	// Token: 0x02007DE5 RID: 32229
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x0402D8FF RID: 186623
+		// Token: 0x04028C16 RID: 166934
 		Prefab,
-		// Token: 0x0402D900 RID: 186624
+		// Token: 0x04028C17 RID: 166935
 		Drag,
-		// Token: 0x0402D901 RID: 186625
+		// Token: 0x04028C18 RID: 166936
 		HotKey
 	}
 }

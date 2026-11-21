@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020056F8 RID: 22264
+	// Token: 0x02005CE7 RID: 23783
 	public enum IPathDrivenActorSpawnBase_Union : byte
 	{
-		// Token: 0x0400EB4B RID: 60235
+		// Token: 0x0400F818 RID: 63512
 		NONE,
-		// Token: 0x0400EB4C RID: 60236
+		// Token: 0x0400F819 RID: 63513
 		IPathDrivenActorSpawnBase,
-		// Token: 0x0400EB4D RID: 60237
+		// Token: 0x0400F81A RID: 63514
 		IIntervalSplineSpawn
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200187E RID: 6270
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001A09 RID: 6665
 	public class ICharacterGroupNew
 	{
-		// Token: 0x060086B7 RID: 34487 RVA: 0x0013FD60 File Offset: 0x0013DF60
+		// Token: 0x06008DDF RID: 36319 RVA: 0x0014F594 File Offset: 0x0014D794
 		private ICharacterGroupNew_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060086B8 RID: 34488 RVA: 0x0013FD98 File Offset: 0x0013DF98
+		// Token: 0x06008DE0 RID: 36320 RVA: 0x0014F5CC File Offset: 0x0014D7CC
 		public static ICharacterGroupNew Create([Nullable(2)] ICharacterGroupNew instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060086B9 RID: 34489 RVA: 0x0013FDAB File Offset: 0x0013DFAB
+		// Token: 0x06008DE1 RID: 36321 RVA: 0x0014F5DF File Offset: 0x0014D7DF
 		public static ICharacterGroupNew CreateFromSetValue([Nullable(2)] ICharacterGroupNew_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060086BA RID: 34490 RVA: 0x0013FDBE File Offset: 0x0013DFBE
+		// Token: 0x06008DE2 RID: 36322 RVA: 0x0014F5F2 File Offset: 0x0014D7F2
 		public ICharacterGroupNew_SetValue ToSetValue()
 		{
 			return new ICharacterGroupNew_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002BF3 RID: 11251
-		// (get) Token: 0x060086BB RID: 34491 RVA: 0x0013FDDD File Offset: 0x0013DFDD
-		// (set) Token: 0x060086BC RID: 34492 RVA: 0x0013FE08 File Offset: 0x0013E008
+		// Token: 0x17002DEE RID: 11758
+		// (get) Token: 0x06008DE3 RID: 36323 RVA: 0x0014F611 File Offset: 0x0014D811
+		// (set) Token: 0x06008DE4 RID: 36324 RVA: 0x0014F63C File Offset: 0x0014D83C
 		public virtual int CharacterId
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002BF4 RID: 11252
-		// (get) Token: 0x060086BD RID: 34493 RVA: 0x0013FE16 File Offset: 0x0013E016
-		// (set) Token: 0x060086BE RID: 34494 RVA: 0x0013FE41 File Offset: 0x0013E041
+		// Token: 0x17002DEF RID: 11759
+		// (get) Token: 0x06008DE5 RID: 36325 RVA: 0x0014F64A File Offset: 0x0014D84A
+		// (set) Token: 0x06008DE6 RID: 36326 RVA: 0x0014F675 File Offset: 0x0014D875
 		public virtual bool IsAiCharacter
 		{
 			get
@@ -102,11 +100,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040054EA RID: 21738
+		// Token: 0x04005937 RID: 22839
 		[Nullable(2)]
 		protected ICharacterGroupNew FbInstance;
 
-		// Token: 0x040054EB RID: 21739
+		// Token: 0x04005938 RID: 22840
 		[Nullable(2)]
 		protected ICharacterGroupNew_SetValue PocoInterface;
 	}

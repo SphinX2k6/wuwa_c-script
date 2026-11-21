@@ -4,13 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F42 RID: 8002
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x0200217B RID: 8571
 	public class ITalkItemDisableAutoSelectOptionGroup
 	{
-		// Token: 0x0600AD56 RID: 44374 RVA: 0x0018D114 File Offset: 0x0018B314
-		[NullableContext(1)]
+		// Token: 0x0600B828 RID: 47144 RVA: 0x001A310C File Offset: 0x001A130C
 		private ITalkItemDisableAutoSelectOptionGroup_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600AD57 RID: 44375 RVA: 0x0018D14C File Offset: 0x0018B34C
-		[NullableContext(1)]
+		// Token: 0x0600B829 RID: 47145 RVA: 0x001A3144 File Offset: 0x001A1344
 		public static ITalkItemDisableAutoSelectOptionGroup Create([Nullable(2)] ITalkItemDisableAutoSelectOptionGroup instance)
 		{
 			if (instance == null)
@@ -39,8 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600AD58 RID: 44376 RVA: 0x0018D15F File Offset: 0x0018B35F
-		[NullableContext(1)]
+		// Token: 0x0600B82A RID: 47146 RVA: 0x001A3157 File Offset: 0x001A1357
 		public static ITalkItemDisableAutoSelectOptionGroup CreateFromSetValue([Nullable(2)] ITalkItemDisableAutoSelectOptionGroup_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600AD59 RID: 44377 RVA: 0x0018D172 File Offset: 0x0018B372
-		[NullableContext(1)]
+		// Token: 0x0600B82B RID: 47147 RVA: 0x001A316A File Offset: 0x001A136A
 		public ITalkItemDisableAutoSelectOptionGroup_SetValue ToSetValue()
 		{
 			return new ITalkItemDisableAutoSelectOptionGroup_SetValue
@@ -64,11 +58,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003520 RID: 13600
-		// (get) Token: 0x0600AD5A RID: 44378 RVA: 0x0018D191 File Offset: 0x0018B391
-		// (set) Token: 0x0600AD5B RID: 44379 RVA: 0x0018D1B8 File Offset: 0x0018B3B8
+		// Token: 0x170037EB RID: 14315
+		// (get) Token: 0x0600B82C RID: 47148 RVA: 0x001A3189 File Offset: 0x001A1389
+		// (set) Token: 0x0600B82D RID: 47149 RVA: 0x001A31B0 File Offset: 0x001A13B0
+		[Nullable(2)]
 		public virtual string TextKey
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -82,15 +78,16 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return pocoInterface.TextKey;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().TextKey = value;
 			}
 		}
 
-		// Token: 0x17003521 RID: 13601
-		// (get) Token: 0x0600AD5C RID: 44380 RVA: 0x0018D1C8 File Offset: 0x0018B3C8
-		// (set) Token: 0x0600AD5D RID: 44381 RVA: 0x0018D202 File Offset: 0x0018B402
+		// Token: 0x170037EC RID: 14316
+		// (get) Token: 0x0600B82E RID: 47150 RVA: 0x001A31C0 File Offset: 0x001A13C0
+		// (set) Token: 0x0600B82F RID: 47151 RVA: 0x001A31FA File Offset: 0x001A13FA
 		public virtual int? IconId
 		{
 			get
@@ -112,10 +109,12 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040067E9 RID: 26601
+		// Token: 0x04006DD8 RID: 28120
+		[Nullable(2)]
 		protected ITalkItemDisableAutoSelectOptionGroup FbInstance;
 
-		// Token: 0x040067EA RID: 26602
+		// Token: 0x04006DD9 RID: 28121
+		[Nullable(2)]
 		protected ITalkItemDisableAutoSelectOptionGroup_SetValue PocoInterface;
 	}
 }

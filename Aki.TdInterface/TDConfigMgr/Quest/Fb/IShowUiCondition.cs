@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013A8 RID: 5032
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020014F9 RID: 5369
 	public class IShowUiCondition : IQuestCondition
 	{
-		// Token: 0x060072F6 RID: 29430 RVA: 0x0011436D File Offset: 0x0011256D
+		// Token: 0x0600799D RID: 31133 RVA: 0x00122A29 File Offset: 0x00120C29
 		public static IShowUiCondition Create(IShowUiCondition? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002579 RID: 9593
-		// (get) Token: 0x060072F7 RID: 29431 RVA: 0x0011438C File Offset: 0x0011258C
+		// Token: 0x1700274D RID: 10061
+		// (get) Token: 0x0600799E RID: 31134 RVA: 0x00122A48 File Offset: 0x00120C48
 		public override EChildQuest Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700257A RID: 9594
-		// (get) Token: 0x060072F8 RID: 29432 RVA: 0x00114399 File Offset: 0x00112599
+		// Token: 0x1700274E RID: 10062
+		// (get) Token: 0x0600799F RID: 31135 RVA: 0x00122A55 File Offset: 0x00120C55
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -51,8 +49,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700257B RID: 9595
-		// (get) Token: 0x060072F9 RID: 29433 RVA: 0x001143CD File Offset: 0x001125CD
+		// Token: 0x1700274F RID: 10063
+		// (get) Token: 0x060079A0 RID: 31136 RVA: 0x00122A89 File Offset: 0x00120C89
 		public virtual IShowUi UiType
 		{
 			get
@@ -67,8 +65,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700257C RID: 9596
-		// (get) Token: 0x060072FA RID: 29434 RVA: 0x001143FC File Offset: 0x001125FC
+		// Token: 0x17002750 RID: 10064
+		// (get) Token: 0x060079A1 RID: 31137 RVA: 0x00122AB8 File Offset: 0x00120CB8
 		public virtual bool? KeepUiOpen
 		{
 			get
@@ -81,20 +79,20 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004278 RID: 17016
+		// Token: 0x040045F9 RID: 17913
 		private IShowUiCondition Instance;
 
-		// Token: 0x04004279 RID: 17017
+		// Token: 0x040045FA RID: 17914
 		[Nullable(2)]
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x0400427A RID: 17018
+		// Token: 0x040045FB RID: 17915
 		private bool _PreConditionsInited;
 
-		// Token: 0x0400427B RID: 17019
+		// Token: 0x040045FC RID: 17916
 		private IShowUi _UiTypeCache;
 
-		// Token: 0x0400427C RID: 17020
+		// Token: 0x040045FD RID: 17917
 		private bool _UiTypeInited;
 	}
 }

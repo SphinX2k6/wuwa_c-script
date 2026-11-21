@@ -6,30 +6,30 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlement
 {
-	// Token: 0x020062F3 RID: 25331
+	// Token: 0x02005271 RID: 21105
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballSettleResultDailyStrategy : PinballSettleResultStrategyBase
 	{
-		// Token: 0x0603FBD3 RID: 261075 RVA: 0x00F6C25C File Offset: 0x00F6A45C
+		// Token: 0x06034894 RID: 215188 RVA: 0x00EB31B8 File Offset: 0x00EB13B8
 		public override bool GetIsNeedRewardView()
 		{
 			return base.Context.GetOpenParam().IsWin;
 		}
 
-		// Token: 0x0603FBD4 RID: 261076 RVA: 0x00F6C26E File Offset: 0x00F6A46E
+		// Token: 0x06034895 RID: 215189 RVA: 0x00EB31CA File Offset: 0x00EB13CA
 		public override bool GetIsNeedDialogView()
 		{
 			return !base.Context.GetOpenParam().IsWin;
 		}
 
-		// Token: 0x0603FBD5 RID: 261077 RVA: 0x00F6C283 File Offset: 0x00F6A483
+		// Token: 0x06034896 RID: 215190 RVA: 0x00EB31DF File Offset: 0x00EB13DF
 		public override bool GetIsNeedFailTipsView()
 		{
 			return !base.Context.GetOpenParam().IsWin;
 		}
 
-		// Token: 0x0603FBD6 RID: 261078 RVA: 0x00F6C298 File Offset: 0x00F6A498
+		// Token: 0x06034897 RID: 215191 RVA: 0x00EB31F4 File Offset: 0x00EB13F4
 		public override void RefreshRewards()
 		{
 			if (!base.Context.GetOpenParam().IsWin)
@@ -41,14 +41,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			base.Context.ShowRewards(dropPackagePreviewItemList);
 		}
 
-		// Token: 0x0603FBD7 RID: 261079 RVA: 0x00F6C2E0 File Offset: 0x00F6A4E0
+		// Token: 0x06034898 RID: 215192 RVA: 0x00EB323C File Offset: 0x00EB143C
 		public override void RefreshButtons()
 		{
 			base.Context.BindRestartButton();
 			base.Context.BindBackButton();
 		}
 
-		// Token: 0x0603FBD8 RID: 261080 RVA: 0x00F6C2F8 File Offset: 0x00F6A4F8
+		// Token: 0x06034899 RID: 215193 RVA: 0x00EB3254 File Offset: 0x00EB1454
 		public override void OnClickBtnRestart(Action callback)
 		{
 			if (base.Context.GetNeedAdjustFormation())
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			callback();
 		}
 
-		// Token: 0x0603FBD9 RID: 261081 RVA: 0x00F6C31B File Offset: 0x00F6A51B
+		// Token: 0x0603489A RID: 215194 RVA: 0x00EB3277 File Offset: 0x00EB1477
 		public override void OnClickBtnBack(Action callback)
 		{
 			if (base.Context.GetOpenParam().IsWin)

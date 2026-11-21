@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001452 RID: 5202
+	// Token: 0x020015AB RID: 5547
 	public class IRecallData
 	{
-		// Token: 0x06007646 RID: 30278 RVA: 0x0011A8C2 File Offset: 0x00118AC2
-		[NullableContext(1)]
+		// Token: 0x06007D13 RID: 32019 RVA: 0x001294A6 File Offset: 0x001276A6
 		public static IRecallData Create(IRecallData? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002775 RID: 10101
-		// (get) Token: 0x06007647 RID: 30279 RVA: 0x0011A8E1 File Offset: 0x00118AE1
+		// Token: 0x1700295F RID: 10591
+		// (get) Token: 0x06007D14 RID: 32020 RVA: 0x001294C5 File Offset: 0x001276C5
 		public virtual ERecallDataType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002776 RID: 10102
-		// (get) Token: 0x06007648 RID: 30280 RVA: 0x0011A8EE File Offset: 0x00118AEE
+		// Token: 0x17002960 RID: 10592
+		// (get) Token: 0x06007D15 RID: 32021 RVA: 0x001294D2 File Offset: 0x001276D2
 		public virtual int Id
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040044AC RID: 17580
+		// Token: 0x04004845 RID: 18501
 		private IRecallData Instance;
 	}
 }

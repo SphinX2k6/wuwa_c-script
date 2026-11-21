@@ -3,53 +3,53 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.HonamiStory;
 using UnrealEngine;
 
-// Token: 0x02001ED6 RID: 7894
+// Token: 0x02001398 RID: 5016
 [NullableContext(2)]
 [Nullable(0)]
 public class HonamiStoryMainButtonConfig : IHonamiStoryMainButtonConfig
 {
-	// Token: 0x170012F8 RID: 4856
-	// (get) Token: 0x0600F2BA RID: 62138 RVA: 0x003A81E0 File Offset: 0x003A63E0
-	// (set) Token: 0x0600F2BB RID: 62139 RVA: 0x003A81E8 File Offset: 0x003A63E8
+	// Token: 0x17001322 RID: 4898
+	// (get) Token: 0x0600C6D9 RID: 50905 RVA: 0x003B3CE0 File Offset: 0x003B1EE0
+	// (set) Token: 0x0600C6DA RID: 50906 RVA: 0x003B3CE8 File Offset: 0x003B1EE8
 	public EHonamiStoryMainButtonFunctionType Type { get; set; }
 
-	// Token: 0x170012F9 RID: 4857
-	// (get) Token: 0x0600F2BC RID: 62140 RVA: 0x003A81F1 File Offset: 0x003A63F1
-	// (set) Token: 0x0600F2BD RID: 62141 RVA: 0x003A81F9 File Offset: 0x003A63F9
+	// Token: 0x17001323 RID: 4899
+	// (get) Token: 0x0600C6DB RID: 50907 RVA: 0x003B3CF1 File Offset: 0x003B1EF1
+	// (set) Token: 0x0600C6DC RID: 50908 RVA: 0x003B3CF9 File Offset: 0x003B1EF9
 	public EHonamiStoryMainComponent ComponentId { get; set; }
 
-	// Token: 0x170012FA RID: 4858
-	// (get) Token: 0x0600F2BE RID: 62142 RVA: 0x003A8202 File Offset: 0x003A6402
-	// (set) Token: 0x0600F2BF RID: 62143 RVA: 0x003A820A File Offset: 0x003A640A
+	// Token: 0x17001324 RID: 4900
+	// (get) Token: 0x0600C6DD RID: 50909 RVA: 0x003B3D02 File Offset: 0x003B1F02
+	// (set) Token: 0x0600C6DE RID: 50910 RVA: 0x003B3D0A File Offset: 0x003B1F0A
 	public EFunctionType? FunctionId { get; set; }
 
-	// Token: 0x170012FB RID: 4859
-	// (get) Token: 0x0600F2C0 RID: 62144 RVA: 0x003A8213 File Offset: 0x003A6413
-	// (set) Token: 0x0600F2C1 RID: 62145 RVA: 0x003A821B File Offset: 0x003A641B
+	// Token: 0x17001325 RID: 4901
+	// (get) Token: 0x0600C6DF RID: 50911 RVA: 0x003B3D13 File Offset: 0x003B1F13
+	// (set) Token: 0x0600C6E0 RID: 50912 RVA: 0x003B3D1B File Offset: 0x003B1F1B
 	public Func<bool> ShowRedDot { get; set; }
 
-	// Token: 0x170012FC RID: 4860
-	// (get) Token: 0x0600F2C2 RID: 62146 RVA: 0x003A8224 File Offset: 0x003A6424
-	// (set) Token: 0x0600F2C3 RID: 62147 RVA: 0x003A822C File Offset: 0x003A642C
+	// Token: 0x17001326 RID: 4902
+	// (get) Token: 0x0600C6E1 RID: 50913 RVA: 0x003B3D24 File Offset: 0x003B1F24
+	// (set) Token: 0x0600C6E2 RID: 50914 RVA: 0x003B3D2C File Offset: 0x003B1F2C
 	public Action<UUIText> SetTextCallback { get; set; }
 
-	// Token: 0x170012FD RID: 4861
-	// (get) Token: 0x0600F2C4 RID: 62148 RVA: 0x003A8235 File Offset: 0x003A6435
-	// (set) Token: 0x0600F2C5 RID: 62149 RVA: 0x003A823D File Offset: 0x003A643D
+	// Token: 0x17001327 RID: 4903
+	// (get) Token: 0x0600C6E3 RID: 50915 RVA: 0x003B3D35 File Offset: 0x003B1F35
+	// (set) Token: 0x0600C6E4 RID: 50916 RVA: 0x003B3D3D File Offset: 0x003B1F3D
 	public Action OnClickCallback { get; set; }
 
-	// Token: 0x170012FE RID: 4862
-	// (get) Token: 0x0600F2C6 RID: 62150 RVA: 0x003A8246 File Offset: 0x003A6446
-	// (set) Token: 0x0600F2C7 RID: 62151 RVA: 0x003A824E File Offset: 0x003A644E
+	// Token: 0x17001328 RID: 4904
+	// (get) Token: 0x0600C6E5 RID: 50917 RVA: 0x003B3D46 File Offset: 0x003B1F46
+	// (set) Token: 0x0600C6E6 RID: 50918 RVA: 0x003B3D4E File Offset: 0x003B1F4E
 	public Func<bool> ShowCallback { get; set; }
 
-	// Token: 0x170012FF RID: 4863
-	// (get) Token: 0x0600F2C8 RID: 62152 RVA: 0x003A8257 File Offset: 0x003A6457
-	// (set) Token: 0x0600F2C9 RID: 62153 RVA: 0x003A825F File Offset: 0x003A645F
+	// Token: 0x17001329 RID: 4905
+	// (get) Token: 0x0600C6E7 RID: 50919 RVA: 0x003B3D57 File Offset: 0x003B1F57
+	// (set) Token: 0x0600C6E8 RID: 50920 RVA: 0x003B3D5F File Offset: 0x003B1F5F
 	public string SpecialSequenceName { get; set; }
 
-	// Token: 0x17001300 RID: 4864
-	// (get) Token: 0x0600F2CA RID: 62154 RVA: 0x003A8268 File Offset: 0x003A6468
-	// (set) Token: 0x0600F2CB RID: 62155 RVA: 0x003A8270 File Offset: 0x003A6470
+	// Token: 0x1700132A RID: 4906
+	// (get) Token: 0x0600C6E9 RID: 50921 RVA: 0x003B3D68 File Offset: 0x003B1F68
+	// (set) Token: 0x0600C6EA RID: 50922 RVA: 0x003B3D70 File Offset: 0x003B1F70
 	public string SpecialParamName { get; set; }
 }

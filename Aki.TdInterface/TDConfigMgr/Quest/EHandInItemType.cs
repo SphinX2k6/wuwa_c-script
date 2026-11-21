@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000E69 RID: 3689
+	// Token: 0x02000F7C RID: 3964
 	[EnumExtensions]
 	public enum EHandInItemType
 	{
-		// Token: 0x04003097 RID: 12439
+		// Token: 0x04003399 RID: 13209
 		ItemIds,
-		// Token: 0x04003098 RID: 12440
+		// Token: 0x0400339A RID: 13210
 		ItemType
 	}
 }

@@ -5,7 +5,7 @@ using System.Text.Json.Serialization;
 
 namespace CSharpScript.Launcher.DiffPatch.Data
 {
-	// Token: 0x02000223 RID: 547
+	// Token: 0x02000228 RID: 552
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -14,7 +14,7 @@ namespace CSharpScript.Launcher.DiffPatch.Data
 	})]
 	public class ResFileInfoConverter : JsonConverter<ResFileInfo>
 	{
-		// Token: 0x06000E09 RID: 3593 RVA: 0x00054A28 File Offset: 0x00052C28
+		// Token: 0x06000E4A RID: 3658 RVA: 0x0005751C File Offset: 0x0005571C
 		public override ResFileInfo Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			if (reader.TokenType == JsonTokenType.Null)
@@ -84,7 +84,7 @@ namespace CSharpScript.Launcher.DiffPatch.Data
 			throw new JsonException("Unexpected end of JSON input");
 		}
 
-		// Token: 0x06000E0A RID: 3594 RVA: 0x00054BE0 File Offset: 0x00052DE0
+		// Token: 0x06000E4B RID: 3659 RVA: 0x000576D4 File Offset: 0x000558D4
 		public override void Write(Utf8JsonWriter writer, ResFileInfo value, JsonSerializerOptions options)
 		{
 			writer.WriteStartObject();

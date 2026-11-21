@@ -3,35 +3,35 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E72 RID: 20082
+	// Token: 0x02005383 RID: 21379
 	public class IAiAlertNotifyComponentT
 	{
-		// Token: 0x17008FCC RID: 36812
-		// (get) Token: 0x0601F8CE RID: 129230 RVA: 0x00464DAF File Offset: 0x00462FAF
-		// (set) Token: 0x0601F8CF RID: 129231 RVA: 0x00464DB7 File Offset: 0x00462FB7
+		// Token: 0x17009705 RID: 38661
+		// (get) Token: 0x06021519 RID: 136473 RVA: 0x00498DC7 File Offset: 0x00496FC7
+		// (set) Token: 0x0602151A RID: 136474 RVA: 0x00498DCF File Offset: 0x00496FCF
 		public bool Disabled { get; set; }
 
-		// Token: 0x17008FCD RID: 36813
-		// (get) Token: 0x0601F8D0 RID: 129232 RVA: 0x00464DC0 File Offset: 0x00462FC0
-		// (set) Token: 0x0601F8D1 RID: 129233 RVA: 0x00464DC8 File Offset: 0x00462FC8
+		// Token: 0x17009706 RID: 38662
+		// (get) Token: 0x0602151B RID: 136475 RVA: 0x00498DD8 File Offset: 0x00496FD8
+		// (set) Token: 0x0602151C RID: 136476 RVA: 0x00498DE0 File Offset: 0x00496FE0
 		public IExtraAiAlertT ExtraAiAlert { get; set; }
 
-		// Token: 0x17008FCE RID: 36814
-		// (get) Token: 0x0601F8D2 RID: 129234 RVA: 0x00464DD1 File Offset: 0x00462FD1
-		// (set) Token: 0x0601F8D3 RID: 129235 RVA: 0x00464DD9 File Offset: 0x00462FD9
+		// Token: 0x17009707 RID: 38663
+		// (get) Token: 0x0602151D RID: 136477 RVA: 0x00498DE9 File Offset: 0x00496FE9
+		// (set) Token: 0x0602151E RID: 136478 RVA: 0x00498DF1 File Offset: 0x00496FF1
 		public List<int> ExcludeEntities { get; set; }
 
-		// Token: 0x17008FCF RID: 36815
-		// (get) Token: 0x0601F8D4 RID: 129236 RVA: 0x00464DE2 File Offset: 0x00462FE2
-		// (set) Token: 0x0601F8D5 RID: 129237 RVA: 0x00464DEA File Offset: 0x00462FEA
+		// Token: 0x17009708 RID: 38664
+		// (get) Token: 0x0602151F RID: 136479 RVA: 0x00498DFA File Offset: 0x00496FFA
+		// (set) Token: 0x06021520 RID: 136480 RVA: 0x00498E02 File Offset: 0x00497002
 		public string AlertSound { get; set; }
 
-		// Token: 0x17008FD0 RID: 36816
-		// (get) Token: 0x0601F8D6 RID: 129238 RVA: 0x00464DF3 File Offset: 0x00462FF3
-		// (set) Token: 0x0601F8D7 RID: 129239 RVA: 0x00464DFB File Offset: 0x00462FFB
+		// Token: 0x17009709 RID: 38665
+		// (get) Token: 0x06021521 RID: 136481 RVA: 0x00498E0B File Offset: 0x0049700B
+		// (set) Token: 0x06021522 RID: 136482 RVA: 0x00498E13 File Offset: 0x00497013
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601F8D8 RID: 129240 RVA: 0x00464E04 File Offset: 0x00463004
+		// Token: 0x06021523 RID: 136483 RVA: 0x00498E1C File Offset: 0x0049701C
 		public IAiAlertNotifyComponentT()
 		{
 			this.Disabled = false;

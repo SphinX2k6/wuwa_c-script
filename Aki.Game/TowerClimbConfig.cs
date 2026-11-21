@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02002BCF RID: 11215
+// Token: 0x0200214A RID: 8522
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class TowerClimbConfig : ConfigBase
 {
-	// Token: 0x06017493 RID: 95379 RVA: 0x005EB400 File Offset: 0x005E9600
+	// Token: 0x06014EC4 RID: 85700 RVA: 0x00617F98 File Offset: 0x00616198
 	public int GetAreaFloorNumber(int season, int difficulty, int area)
 	{
 		IReadOnlyList<TowerConfig> configList = ConfigTowerConfigBySeason.GetConfigList((difficulty == 3) ? season : 0, true);
@@ -27,7 +27,7 @@ public class TowerClimbConfig : ConfigBase
 		return num;
 	}
 
-	// Token: 0x06017494 RID: 95380 RVA: 0x005EB470 File Offset: 0x005E9670
+	// Token: 0x06014EC5 RID: 85701 RVA: 0x00618008 File Offset: 0x00616208
 	public int GetDifficultyFloorNumber(int season, int difficulty)
 	{
 		IReadOnlyList<TowerConfig> configList = ConfigTowerConfigBySeason.GetConfigList((difficulty == 3) ? season : 0, true);
@@ -45,7 +45,7 @@ public class TowerClimbConfig : ConfigBase
 		return num;
 	}
 
-	// Token: 0x06017495 RID: 95381 RVA: 0x005EB4D4 File Offset: 0x005E96D4
+	// Token: 0x06014EC6 RID: 85702 RVA: 0x0061806C File Offset: 0x0061626C
 	public int GetDifficultyLastFloor(int season, int difficulty)
 	{
 		IReadOnlyList<TowerConfig> configList = ConfigTowerConfigBySeason.GetConfigList((difficulty == 3) ? season : 0, true);
@@ -73,7 +73,7 @@ public class TowerClimbConfig : ConfigBase
 		return result;
 	}
 
-	// Token: 0x06017496 RID: 95382 RVA: 0x005EB564 File Offset: 0x005E9764
+	// Token: 0x06014EC7 RID: 85703 RVA: 0x006180FC File Offset: 0x006162FC
 	public int[] GetDifficultyAllFloor(int season, int difficulty)
 	{
 		IReadOnlyList<TowerConfig> configList = ConfigTowerConfigBySeason.GetConfigList((difficulty == 3) ? season : 0, true);
@@ -91,7 +91,7 @@ public class TowerClimbConfig : ConfigBase
 		return list.ToArray();
 	}
 
-	// Token: 0x06017497 RID: 95383 RVA: 0x005EB5DC File Offset: 0x005E97DC
+	// Token: 0x06014EC8 RID: 85704 RVA: 0x00618174 File Offset: 0x00616374
 	public int[] GetDifficultyAllAreaFirstFloor(int season, int difficulty)
 	{
 		IReadOnlyList<TowerConfig> configList = ConfigTowerConfigBySeason.GetConfigList((difficulty == 3) ? season : 0, true);
@@ -111,7 +111,7 @@ public class TowerClimbConfig : ConfigBase
 		return list.ToArray();
 	}
 
-	// Token: 0x06017498 RID: 95384 RVA: 0x005EB668 File Offset: 0x005E9868
+	// Token: 0x06014EC9 RID: 85705 RVA: 0x00618200 File Offset: 0x00616400
 	public int[] GetDifficultyAreaAllFloor(int season, int difficulty, int area)
 	{
 		IReadOnlyList<TowerConfig> configList = ConfigTowerConfigBySeason.GetConfigList((difficulty == 3) ? season : 0, true);
@@ -129,7 +129,7 @@ public class TowerClimbConfig : ConfigBase
 		return list.ToArray();
 	}
 
-	// Token: 0x06017499 RID: 95385 RVA: 0x005EB6E8 File Offset: 0x005E98E8
+	// Token: 0x06014ECA RID: 85706 RVA: 0x00618280 File Offset: 0x00616480
 	[NullableContext(2)]
 	public IReadOnlyList<IntPair> GetDifficultyReward(int difficulty, int rewardGroup)
 	{
@@ -152,19 +152,19 @@ public class TowerClimbConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x0601749A RID: 95386 RVA: 0x005EB754 File Offset: 0x005E9954
+	// Token: 0x06014ECB RID: 85707 RVA: 0x006182EC File Offset: 0x006164EC
 	public string GetTowerBuffDesc(long buffId)
 	{
 		return ConfigMultiTextLang.GetLocalTextNew(this.GetTowerBuffConfig(buffId).Value.Desc, null);
 	}
 
-	// Token: 0x0601749B RID: 95387 RVA: 0x005EB780 File Offset: 0x005E9980
+	// Token: 0x06014ECC RID: 85708 RVA: 0x00618318 File Offset: 0x00616518
 	public string GetTowerBuffName(long buffId)
 	{
 		return ConfigMultiTextLang.GetLocalTextNew(this.GetTowerBuffConfig(buffId).Value.Name, null);
 	}
 
-	// Token: 0x0601749C RID: 95388 RVA: 0x005EB7AC File Offset: 0x005E99AC
+	// Token: 0x06014ECD RID: 85709 RVA: 0x00618344 File Offset: 0x00616544
 	[NullableContext(2)]
 	public string GetTowerBuffIcon(long buffId)
 	{
@@ -176,7 +176,7 @@ public class TowerClimbConfig : ConfigBase
 		return towerBuffConfig.GetValueOrDefault().Icon;
 	}
 
-	// Token: 0x0601749D RID: 95389 RVA: 0x005EB7DC File Offset: 0x005E99DC
+	// Token: 0x06014ECE RID: 85710 RVA: 0x00618374 File Offset: 0x00616574
 	public TowerBuff? GetTowerBuffConfig(long buffId)
 	{
 		TowerBuff? config = ConfigTowerBuffById.GetConfig(buffId, true);
@@ -187,7 +187,7 @@ public class TowerClimbConfig : ConfigBase
 		return null;
 	}
 
-	// Token: 0x0601749E RID: 95390 RVA: 0x005EB808 File Offset: 0x005E9A08
+	// Token: 0x06014ECF RID: 85711 RVA: 0x006183A0 File Offset: 0x006165A0
 	[NullableContext(2)]
 	public IReadOnlyList<int> GetFloorTarget(int floorId)
 	{
@@ -199,13 +199,13 @@ public class TowerClimbConfig : ConfigBase
 		return config.GetValueOrDefault().TargetConfig();
 	}
 
-	// Token: 0x0601749F RID: 95391 RVA: 0x005EB837 File Offset: 0x005E9A37
+	// Token: 0x06014ED0 RID: 85712 RVA: 0x006183CF File Offset: 0x006165CF
 	public TowerTarget? GetTargetConfig(int targetId)
 	{
 		return ConfigTowerTargetById.GetConfig(targetId, true);
 	}
 
-	// Token: 0x060174A0 RID: 95392 RVA: 0x005EB840 File Offset: 0x005E9A40
+	// Token: 0x06014ED1 RID: 85713 RVA: 0x006183D8 File Offset: 0x006165D8
 	public int GetNextFloorInArea(int towerId)
 	{
 		TowerConfig? config = ConfigTowerConfigById.GetConfig(towerId, true);
@@ -224,7 +224,7 @@ public class TowerClimbConfig : ConfigBase
 		return 0;
 	}
 
-	// Token: 0x060174A1 RID: 95393 RVA: 0x005EB8FC File Offset: 0x005E9AFC
+	// Token: 0x06014ED2 RID: 85714 RVA: 0x00618494 File Offset: 0x00616694
 	public int GetLastFloorInArea(int towerId)
 	{
 		TowerConfig? config = ConfigTowerConfigById.GetConfig(towerId, true);
@@ -247,25 +247,25 @@ public class TowerClimbConfig : ConfigBase
 		return result;
 	}
 
-	// Token: 0x060174A2 RID: 95394 RVA: 0x005EB9CC File Offset: 0x005E9BCC
+	// Token: 0x06014ED3 RID: 85715 RVA: 0x00618564 File Offset: 0x00616764
 	public TowerConfig? GetTowerInfo(int towerId)
 	{
 		return ConfigTowerConfigById.GetConfig(towerId, true);
 	}
 
-	// Token: 0x060174A3 RID: 95395 RVA: 0x005EB9D5 File Offset: 0x005E9BD5
+	// Token: 0x06014ED4 RID: 85716 RVA: 0x0061856D File Offset: 0x0061676D
 	public TowerSeason? GetTowerSeason(int seasonId)
 	{
 		return ConfigTowerSeasonById.GetConfig(seasonId, true);
 	}
 
-	// Token: 0x060174A4 RID: 95396 RVA: 0x005EB9E0 File Offset: 0x005E9BE0
+	// Token: 0x06014ED5 RID: 85717 RVA: 0x00618578 File Offset: 0x00616778
 	public string GetTowerAreaName(int towerId)
 	{
 		return ConfigMultiTextLang.GetLocalTextNew(ConfigTowerConfigById.GetConfig(towerId, true).Value.AreaName, null);
 	}
 
-	// Token: 0x060174A5 RID: 95397 RVA: 0x005EBA0C File Offset: 0x005E9C0C
+	// Token: 0x06014ED6 RID: 85718 RVA: 0x006185A4 File Offset: 0x006167A4
 	public string GetNewTowerDifficultTitle(int difficultId)
 	{
 		switch (difficultId)
@@ -283,8 +283,8 @@ public class TowerClimbConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x17001F64 RID: 8036
-	// (get) Token: 0x060174A6 RID: 95398 RVA: 0x005EBA9B File Offset: 0x005E9C9B
+	// Token: 0x17001FBC RID: 8124
+	// (get) Token: 0x06014ED7 RID: 85719 RVA: 0x00618633 File Offset: 0x00616833
 	public static TowerClimbConfig Instance
 	{
 		get
@@ -293,7 +293,7 @@ public class TowerClimbConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x060174A7 RID: 95399 RVA: 0x005EBAA2 File Offset: 0x005E9CA2
+	// Token: 0x06014ED8 RID: 85720 RVA: 0x0061863A File Offset: 0x0061683A
 	public static TowerClimbConfig GetOrCreateInstance()
 	{
 		if (TowerClimbConfig._Instance == null)
@@ -303,7 +303,7 @@ public class TowerClimbConfig : ConfigBase
 		return TowerClimbConfig._Instance;
 	}
 
-	// Token: 0x060174A8 RID: 95400 RVA: 0x005EBAB6 File Offset: 0x005E9CB6
+	// Token: 0x06014ED9 RID: 85721 RVA: 0x0061864E File Offset: 0x0061684E
 	public static bool CreateInstance()
 	{
 		if (TowerClimbConfig._Instance != null)
@@ -314,24 +314,24 @@ public class TowerClimbConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x060174A9 RID: 95401 RVA: 0x005EBACC File Offset: 0x005E9CCC
+	// Token: 0x06014EDA RID: 85722 RVA: 0x00618664 File Offset: 0x00616864
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060174AA RID: 95402 RVA: 0x005EBACE File Offset: 0x005E9CCE
+	// Token: 0x06014EDB RID: 85723 RVA: 0x00618666 File Offset: 0x00616866
 	public static void ResetStaticDefaultValue()
 	{
 		TowerClimbConfig._Instance = null;
 	}
 
-	// Token: 0x060174AB RID: 95403 RVA: 0x005EBAD6 File Offset: 0x005E9CD6
+	// Token: 0x06014EDC RID: 85724 RVA: 0x0061866E File Offset: 0x0061686E
 	static TowerClimbConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TowerClimbConfig.CreateStaticDefaultValue), new Action(TowerClimbConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400AE49 RID: 44617
+	// Token: 0x0400B24E RID: 45646
 	[Nullable(2)]
 	private static TowerClimbConfig _Instance;
 }

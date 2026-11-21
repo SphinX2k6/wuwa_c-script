@@ -7,7 +7,7 @@ namespace CSharpScript.Game.Module.Launcher.Action
 	// Token: 0x0200002C RID: 44
 	public static class HotFixDownSubPackageDownLoadMobileClearPopViewDefine
 	{
-		// Token: 0x040000C6 RID: 198
+		// Token: 0x040000C7 RID: 199
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		public static readonly Dictionary<int, int> ClearTypeToTipsNumber = new Dictionary<int, int>

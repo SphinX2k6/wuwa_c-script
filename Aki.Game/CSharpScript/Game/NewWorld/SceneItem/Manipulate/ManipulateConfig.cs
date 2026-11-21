@@ -7,13 +7,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 {
-	// Token: 0x020071DC RID: 29148
+	// Token: 0x02006291 RID: 25233
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Config(0)]
 	public class ManipulateConfig : ConfigBase
 	{
-		// Token: 0x06047571 RID: 292209 RVA: 0x012239B0 File Offset: 0x01221BB0
+		// Token: 0x0603CE73 RID: 249459 RVA: 0x0117D7E4 File Offset: 0x0117B9E4
 		protected override bool OnInit()
 		{
 			this.ManipulatePrecastLinesValue = new string[]
@@ -56,8 +56,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			return true;
 		}
 
-		// Token: 0x17009DF7 RID: 40439
-		// (get) Token: 0x06047572 RID: 292210 RVA: 0x01223BC8 File Offset: 0x01221DC8
+		// Token: 0x1700734E RID: 29518
+		// (get) Token: 0x0603CE74 RID: 249460 RVA: 0x0117D9FC File Offset: 0x0117BBFC
 		public string[] ManipulatePrecastLines
 		{
 			get
@@ -66,8 +66,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x17009DF8 RID: 40440
-		// (get) Token: 0x06047573 RID: 292211 RVA: 0x01223BD0 File Offset: 0x01221DD0
+		// Token: 0x1700734F RID: 29519
+		// (get) Token: 0x0603CE75 RID: 249461 RVA: 0x0117DA04 File Offset: 0x0117BC04
 		public float DisconnectDistance
 		{
 			get
@@ -76,8 +76,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x17009DF9 RID: 40441
-		// (get) Token: 0x06047574 RID: 292212 RVA: 0x01223BD8 File Offset: 0x01221DD8
+		// Token: 0x17007350 RID: 29520
+		// (get) Token: 0x0603CE76 RID: 249462 RVA: 0x0117DA0C File Offset: 0x0117BC0C
 		public float SearchRange
 		{
 			get
@@ -86,8 +86,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x17009DFA RID: 40442
-		// (get) Token: 0x06047575 RID: 292213 RVA: 0x01223BE0 File Offset: 0x01221DE0
+		// Token: 0x17007351 RID: 29521
+		// (get) Token: 0x0603CE77 RID: 249463 RVA: 0x0117DA14 File Offset: 0x0117BC14
 		public string PushEffectPath
 		{
 			get
@@ -96,8 +96,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x17009DFB RID: 40443
-		// (get) Token: 0x06047576 RID: 292214 RVA: 0x01223BE8 File Offset: 0x01221DE8
+		// Token: 0x17007352 RID: 29522
+		// (get) Token: 0x0603CE78 RID: 249464 RVA: 0x0117DA1C File Offset: 0x0117BC1C
 		public List<float> SearchAnglesCos
 		{
 			get
@@ -106,8 +106,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x17009DFC RID: 40444
-		// (get) Token: 0x06047577 RID: 292215 RVA: 0x01223BF0 File Offset: 0x01221DF0
+		// Token: 0x17007353 RID: 29523
+		// (get) Token: 0x0603CE79 RID: 249465 RVA: 0x0117DA24 File Offset: 0x0117BC24
 		public List<float> SearchAnglesWeight
 		{
 			get
@@ -116,8 +116,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x17009DFD RID: 40445
-		// (get) Token: 0x06047578 RID: 292216 RVA: 0x01223BF8 File Offset: 0x01221DF8
+		// Token: 0x17007354 RID: 29524
+		// (get) Token: 0x0603CE7A RID: 249466 RVA: 0x0117DA2C File Offset: 0x0117BC2C
 		public float PrecastTime
 		{
 			get
@@ -126,8 +126,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x17009DFE RID: 40446
-		// (get) Token: 0x06047579 RID: 292217 RVA: 0x01223C00 File Offset: 0x01221E00
+		// Token: 0x17007355 RID: 29525
+		// (get) Token: 0x0603CE7B RID: 249467 RVA: 0x0117DA34 File Offset: 0x0117BC34
 		public float DontUseLineDistance
 		{
 			get
@@ -136,8 +136,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x17009DFF RID: 40447
-		// (get) Token: 0x0604757A RID: 292218 RVA: 0x01223C08 File Offset: 0x01221E08
+		// Token: 0x17007356 RID: 29526
+		// (get) Token: 0x0603CE7C RID: 249468 RVA: 0x0117DA3C File Offset: 0x0117BC3C
 		public string CommonItemLine
 		{
 			get
@@ -146,8 +146,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x17009E00 RID: 40448
-		// (get) Token: 0x0604757B RID: 292219 RVA: 0x01223C10 File Offset: 0x01221E10
+		// Token: 0x17007357 RID: 29527
+		// (get) Token: 0x0603CE7D RID: 249469 RVA: 0x0117DA44 File Offset: 0x0117BC44
 		public string LineFxNsPath
 		{
 			get
@@ -156,8 +156,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x17009E01 RID: 40449
-		// (get) Token: 0x0604757C RID: 292220 RVA: 0x01223C18 File Offset: 0x01221E18
+		// Token: 0x17007358 RID: 29528
+		// (get) Token: 0x0603CE7E RID: 249470 RVA: 0x0117DA4C File Offset: 0x0117BC4C
 		public string MatControllerDaPath
 		{
 			get
@@ -166,8 +166,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x17009E02 RID: 40450
-		// (get) Token: 0x0604757D RID: 292221 RVA: 0x01223C20 File Offset: 0x01221E20
+		// Token: 0x17007359 RID: 29529
+		// (get) Token: 0x0603CE7F RID: 249471 RVA: 0x0117DA54 File Offset: 0x0117BC54
 		public string HandFxPath
 		{
 			get
@@ -176,8 +176,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x17009E03 RID: 40451
-		// (get) Token: 0x0604757E RID: 292222 RVA: 0x01223C28 File Offset: 0x01221E28
+		// Token: 0x1700735A RID: 29530
+		// (get) Token: 0x0603CE80 RID: 249472 RVA: 0x0117DA5C File Offset: 0x0117BC5C
 		public float ItemMass
 		{
 			get
@@ -186,8 +186,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x17009E04 RID: 40452
-		// (get) Token: 0x0604757F RID: 292223 RVA: 0x01223C30 File Offset: 0x01221E30
+		// Token: 0x1700735B RID: 29531
+		// (get) Token: 0x0603CE81 RID: 249473 RVA: 0x0117DA64 File Offset: 0x0117BC64
 		public float ItemLinearDamping
 		{
 			get
@@ -196,8 +196,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x17009E05 RID: 40453
-		// (get) Token: 0x06047580 RID: 292224 RVA: 0x01223C38 File Offset: 0x01221E38
+		// Token: 0x1700735C RID: 29532
+		// (get) Token: 0x0603CE82 RID: 249474 RVA: 0x0117DA6C File Offset: 0x0117BC6C
 		public float ItemAngularDampling
 		{
 			get
@@ -206,7 +206,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x06047581 RID: 292225 RVA: 0x01223C40 File Offset: 0x01221E40
+		// Token: 0x0603CE83 RID: 249475 RVA: 0x0117DA74 File Offset: 0x0117BC74
 		public FVector? GetPrecastLineValue(string rowName, float time)
 		{
 			SManipulateConfig dataTableRowFromName = DataTableUtil.GetDataTableRowFromName<SManipulateConfig>(EDataTable.ManipulatePrecast, rowName);
@@ -223,7 +223,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			return new FVector?(this.GetLocationByTime(dataTableRowFromName.ManipulatePoints, dataTableRowFromName.Duration, time));
 		}
 
-		// Token: 0x06047582 RID: 292226 RVA: 0x01223CA8 File Offset: 0x01221EA8
+		// Token: 0x0603CE84 RID: 249476 RVA: 0x0117DADC File Offset: 0x0117BCDC
 		public FVector? GetItemLineValue(string rowName, float time)
 		{
 			SManipulateConfig dataTableRowFromName = DataTableUtil.GetDataTableRowFromName<SManipulateConfig>(EDataTable.ManipulateItem, rowName);
@@ -240,7 +240,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			return new FVector?(this.GetLocationByTime(dataTableRowFromName.ManipulatePoints, dataTableRowFromName.Duration, time));
 		}
 
-		// Token: 0x06047583 RID: 292227 RVA: 0x01223D10 File Offset: 0x01221F10
+		// Token: 0x0603CE85 RID: 249477 RVA: 0x0117DB44 File Offset: 0x0117BD44
 		private FVector GetLocationByTime(TArray<SManipulatePointInfo> points, float duration, float time)
 		{
 			int num = points.Num();
@@ -272,7 +272,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			return this.CubicInterp(smanipulatePointInfo.Location, smanipulatePointInfo.LeaveTangent, smanipulatePointInfo2.Location, smanipulatePointInfo2.ArriveTangent, num5);
 		}
 
-		// Token: 0x06047584 RID: 292228 RVA: 0x01223DFC File Offset: 0x01221FFC
+		// Token: 0x0603CE86 RID: 249478 RVA: 0x0117DC30 File Offset: 0x0117BE30
 		protected override bool OnClear()
 		{
 			this.ManipulatePrecastLinesValue = null;
@@ -280,7 +280,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			return true;
 		}
 
-		// Token: 0x06047585 RID: 292229 RVA: 0x01223E10 File Offset: 0x01222010
+		// Token: 0x0603CE87 RID: 249479 RVA: 0x0117DC44 File Offset: 0x0117BE44
 		private FVector CubicInterp(FVector p0, FVector t0, FVector p1, FVector t1, float a)
 		{
 			float num = a * a;
@@ -297,8 +297,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			return vector.ToUeVectorOld();
 		}
 
-		// Token: 0x17009E06 RID: 40454
-		// (get) Token: 0x06047586 RID: 292230 RVA: 0x01223ECE File Offset: 0x012220CE
+		// Token: 0x1700735D RID: 29533
+		// (get) Token: 0x0603CE88 RID: 249480 RVA: 0x0117DD02 File Offset: 0x0117BF02
 		public static ManipulateConfig Instance
 		{
 			get
@@ -307,7 +307,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x06047587 RID: 292231 RVA: 0x01223ED5 File Offset: 0x012220D5
+		// Token: 0x0603CE89 RID: 249481 RVA: 0x0117DD09 File Offset: 0x0117BF09
 		public static ManipulateConfig GetOrCreateInstance()
 		{
 			if (ManipulateConfig._Instance == null)
@@ -317,7 +317,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			return ManipulateConfig._Instance;
 		}
 
-		// Token: 0x06047588 RID: 292232 RVA: 0x01223EE9 File Offset: 0x012220E9
+		// Token: 0x0603CE8A RID: 249482 RVA: 0x0117DD1D File Offset: 0x0117BF1D
 		public static bool CreateInstance()
 		{
 			if (ManipulateConfig._Instance != null)
@@ -328,27 +328,27 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			return true;
 		}
 
-		// Token: 0x06047589 RID: 292233 RVA: 0x01223EFF File Offset: 0x012220FF
+		// Token: 0x0603CE8B RID: 249483 RVA: 0x0117DD33 File Offset: 0x0117BF33
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0604758A RID: 292234 RVA: 0x01223F01 File Offset: 0x01222101
+		// Token: 0x0603CE8C RID: 249484 RVA: 0x0117DD35 File Offset: 0x0117BF35
 		public static void ResetStaticDefaultValue()
 		{
 			ManipulateConfig._Instance = null;
 		}
 
-		// Token: 0x0604758B RID: 292235 RVA: 0x01223F09 File Offset: 0x01222109
+		// Token: 0x0603CE8D RID: 249485 RVA: 0x0117DD3D File Offset: 0x0117BF3D
 		static ManipulateConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ManipulateConfig.CreateStaticDefaultValue), new Action(ManipulateConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04025819 RID: 153625
+		// Token: 0x04020488 RID: 132232
 		private const int SECOND_TO_MICROSECOND = 1000;
 
-		// Token: 0x0402581A RID: 153626
+		// Token: 0x04020489 RID: 132233
 		[Nullable(new byte[]
 		{
 			2,
@@ -356,50 +356,50 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 		})]
 		private string[] ManipulatePrecastLinesValue;
 
-		// Token: 0x0402581B RID: 153627
+		// Token: 0x0402048A RID: 132234
 		private float DisconnectDistanceValue;
 
-		// Token: 0x0402581C RID: 153628
+		// Token: 0x0402048B RID: 132235
 		private float SearchRangeValue;
 
-		// Token: 0x0402581D RID: 153629
+		// Token: 0x0402048C RID: 132236
 		[Nullable(2)]
 		private string PushEffectPathValue;
 
-		// Token: 0x0402581E RID: 153630
+		// Token: 0x0402048D RID: 132237
 		private List<float> SearchAngleCosValue = new List<float>();
 
-		// Token: 0x0402581F RID: 153631
+		// Token: 0x0402048E RID: 132238
 		private List<float> SearchAngleWeightValue = new List<float>();
 
-		// Token: 0x04025820 RID: 153632
+		// Token: 0x0402048F RID: 132239
 		private float PrecastTimeValue;
 
-		// Token: 0x04025821 RID: 153633
+		// Token: 0x04020490 RID: 132240
 		private float DontUseLineDistanceValue;
 
-		// Token: 0x04025822 RID: 153634
+		// Token: 0x04020491 RID: 132241
 		private string CommonItemLineValue = "";
 
-		// Token: 0x04025823 RID: 153635
+		// Token: 0x04020492 RID: 132242
 		private string LineFxNsPathValue = "";
 
-		// Token: 0x04025824 RID: 153636
+		// Token: 0x04020493 RID: 132243
 		private string HandFxPathValue = "";
 
-		// Token: 0x04025825 RID: 153637
+		// Token: 0x04020494 RID: 132244
 		private string MatControllerDaPathValue = "";
 
-		// Token: 0x04025826 RID: 153638
+		// Token: 0x04020495 RID: 132245
 		private float ItemMassValue;
 
-		// Token: 0x04025827 RID: 153639
+		// Token: 0x04020496 RID: 132246
 		private float ItemLinearDampingValue;
 
-		// Token: 0x04025828 RID: 153640
+		// Token: 0x04020497 RID: 132247
 		private float ItemAngularDampingValue;
 
-		// Token: 0x04025829 RID: 153641
+		// Token: 0x04020498 RID: 132248
 		[Nullable(2)]
 		private static ManipulateConfig _Instance;
 	}

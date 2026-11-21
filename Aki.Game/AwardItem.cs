@@ -7,10 +7,10 @@ using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020011C4 RID: 4548
+// Token: 0x02000678 RID: 1656
 public class AwardItem : UiPanelBase
 {
-	// Token: 0x06007917 RID: 30999 RVA: 0x001979A8 File Offset: 0x00195BA8
+	// Token: 0x06004CAE RID: 19630 RVA: 0x001A0658 File Offset: 0x0019E858
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -32,7 +32,7 @@ public class AwardItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06007918 RID: 31000 RVA: 0x00197A98 File Offset: 0x00195C98
+	// Token: 0x06004CAF RID: 19631 RVA: 0x001A0748 File Offset: 0x0019E948
 	[NullableContext(1)]
 	public void Refresh(TimePointRewardData data, IntPair rewardItem)
 	{
@@ -51,7 +51,7 @@ public class AwardItem : UiPanelBase
 		base.GetText(3).SetText(rewardItem.Item2.ToString(), true);
 	}
 
-	// Token: 0x06007919 RID: 31001 RVA: 0x00197B34 File Offset: 0x00195D34
+	// Token: 0x06004CB0 RID: 19632 RVA: 0x001A07E4 File Offset: 0x0019E9E4
 	[NullableContext(1)]
 	public void RefreshState(TimePointRewardData data)
 	{
@@ -64,25 +64,25 @@ public class AwardItem : UiPanelBase
 		base.GetSprite(5).SetUIActive(uiactive3);
 	}
 
-	// Token: 0x020077B1 RID: 30641
+	// Token: 0x0200693C RID: 26940
 	private class EComponents
 	{
-		// Token: 0x0402775F RID: 161631
+		// Token: 0x04022A91 RID: 141969
 		public const int DefaultBgSprite = 0;
 
-		// Token: 0x04027760 RID: 161632
+		// Token: 0x04022A92 RID: 141970
 		public const int SelectBgSprite = 1;
 
-		// Token: 0x04027761 RID: 161633
+		// Token: 0x04022A93 RID: 141971
 		public const int IconTexture = 2;
 
-		// Token: 0x04027762 RID: 161634
+		// Token: 0x04022A94 RID: 141972
 		public const int CountText = 3;
 
-		// Token: 0x04027763 RID: 161635
+		// Token: 0x04022A95 RID: 141973
 		public const int MaskSprite = 4;
 
-		// Token: 0x04027764 RID: 161636
+		// Token: 0x04022A96 RID: 141974
 		public const int ReceivedBgSprite = 5;
 	}
 }

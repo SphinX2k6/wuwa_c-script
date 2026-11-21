@@ -3,22 +3,22 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket.ElementalField
 {
-	// Token: 0x02006E9C RID: 28316
+	// Token: 0x0200601C RID: 24604
 	public interface ISceneItemElementalFieldConeSnapshot : ISceneItemElementalFieldSnapshot<ESceneItemElementalFieldShapeType>
 	{
-		// Token: 0x17009A65 RID: 39525
-		// (get) Token: 0x06045005 RID: 282629
-		// (set) Token: 0x06045006 RID: 282630
+		// Token: 0x17006F9C RID: 28572
+		// (get) Token: 0x0603B1A6 RID: 242086
+		// (set) Token: 0x0603B1A7 RID: 242087
 		FVector ConeAxis { get; set; }
 
-		// Token: 0x17009A66 RID: 39526
-		// (get) Token: 0x06045007 RID: 282631
-		// (set) Token: 0x06045008 RID: 282632
+		// Token: 0x17006F9D RID: 28573
+		// (get) Token: 0x0603B1A8 RID: 242088
+		// (set) Token: 0x0603B1A9 RID: 242089
 		double ConeHalfAngle { get; set; }
 
-		// Token: 0x17009A67 RID: 39527
-		// (get) Token: 0x06045009 RID: 282633
-		// (set) Token: 0x0604500A RID: 282634
+		// Token: 0x17006F9E RID: 28574
+		// (get) Token: 0x0603B1AA RID: 242090
+		// (set) Token: 0x0603B1AB RID: 242091
 		double ConeHeight { get; set; }
 	}
 }

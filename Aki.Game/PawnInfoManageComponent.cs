@@ -9,12 +9,12 @@ using CSharpScript.Game.NewWorld.Pawn.Component;
 using CSharpScript.Game.NewWorld.Pawn.Controllers;
 using CSharpScript.Game.NewWorld.SceneItem;
 
-// Token: 0x02003288 RID: 12936
+// Token: 0x020027F9 RID: 10233
 [NullableContext(2)]
 [Nullable(0)]
 public class PawnInfoManageComponent : EntityComponent
 {
-	// Token: 0x0601BFE9 RID: 114665 RVA: 0x007C7B0A File Offset: 0x007C5D0A
+	// Token: 0x06019BED RID: 105453 RVA: 0x007EEE9A File Offset: 0x007ED09A
 	protected override bool OnInit()
 	{
 		this.CreatureData = base.Entity.GetComponent<CreatureDataComponent>();
@@ -22,8 +22,8 @@ public class PawnInfoManageComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x170026A7 RID: 9895
-	// (get) Token: 0x0601BFEA RID: 114666 RVA: 0x007C7B2F File Offset: 0x007C5D2F
+	// Token: 0x1700295C RID: 10588
+	// (get) Token: 0x06019BEE RID: 105454 RVA: 0x007EEEBF File Offset: 0x007ED0BF
 	public float LockRange
 	{
 		get
@@ -32,8 +32,8 @@ public class PawnInfoManageComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x170026A8 RID: 9896
-	// (get) Token: 0x0601BFEB RID: 114667 RVA: 0x007C7B37 File Offset: 0x007C5D37
+	// Token: 0x1700295D RID: 10589
+	// (get) Token: 0x06019BEF RID: 105455 RVA: 0x007EEEC7 File Offset: 0x007ED0C7
 	public IAutoLockControl LockControl
 	{
 		get
@@ -42,9 +42,9 @@ public class PawnInfoManageComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x170026A9 RID: 9897
-	// (get) Token: 0x0601BFEC RID: 114668 RVA: 0x007C7B3F File Offset: 0x007C5D3F
-	// (set) Token: 0x0601BFED RID: 114669 RVA: 0x007C7B64 File Offset: 0x007C5D64
+	// Token: 0x1700295E RID: 10590
+	// (get) Token: 0x06019BF0 RID: 105456 RVA: 0x007EEECF File Offset: 0x007ED0CF
+	// (set) Token: 0x06019BF1 RID: 105457 RVA: 0x007EEEF4 File Offset: 0x007ED0F4
 	[Nullable(1)]
 	public string PawnName
 	{
@@ -64,8 +64,8 @@ public class PawnInfoManageComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x170026AA RID: 9898
-	// (get) Token: 0x0601BFEE RID: 114670 RVA: 0x007C7B6D File Offset: 0x007C5D6D
+	// Token: 0x1700295F RID: 10591
+	// (get) Token: 0x06019BF2 RID: 105458 RVA: 0x007EEEFD File Offset: 0x007ED0FD
 	public string SecondName
 	{
 		get
@@ -74,8 +74,8 @@ public class PawnInfoManageComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x170026AB RID: 9899
-	// (get) Token: 0x0601BFEF RID: 114671 RVA: 0x007C7B75 File Offset: 0x007C5D75
+	// Token: 0x17002960 RID: 10592
+	// (get) Token: 0x06019BF3 RID: 105459 RVA: 0x007EEF05 File Offset: 0x007ED105
 	public string FunctionIcon
 	{
 		get
@@ -84,20 +84,20 @@ public class PawnInfoManageComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BFF0 RID: 114672 RVA: 0x007C7B7D File Offset: 0x007C5D7D
+	// Token: 0x06019BF4 RID: 105460 RVA: 0x007EEF0D File Offset: 0x007ED10D
 	public void UpdateNameAndHeadInfo()
 	{
 		this.UpdateName();
 		this.UpdateHeadInfo();
 	}
 
-	// Token: 0x0601BFF1 RID: 114673 RVA: 0x007C7B8B File Offset: 0x007C5D8B
+	// Token: 0x06019BF5 RID: 105461 RVA: 0x007EEF1B File Offset: 0x007ED11B
 	public string GetPawnNameKey()
 	{
 		return this.PawnNameKeyInternal;
 	}
 
-	// Token: 0x0601BFF2 RID: 114674 RVA: 0x007C7B93 File Offset: 0x007C5D93
+	// Token: 0x06019BF6 RID: 105462 RVA: 0x007EEF23 File Offset: 0x007ED123
 	[NullableContext(1)]
 	public void SetPawnNameKey(string inName)
 	{
@@ -105,7 +105,7 @@ public class PawnInfoManageComponent : EntityComponent
 		this.UpdateName();
 	}
 
-	// Token: 0x0601BFF3 RID: 114675 RVA: 0x007C7BA4 File Offset: 0x007C5DA4
+	// Token: 0x06019BF7 RID: 105463 RVA: 0x007EEF34 File Offset: 0x007ED134
 	private void UpdateName()
 	{
 		this.CurrentLanguage = LanguageSystem.Instance.PackageLanguage;
@@ -129,7 +129,7 @@ public class PawnInfoManageComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BFF4 RID: 114676 RVA: 0x007C7C4C File Offset: 0x007C5E4C
+	// Token: 0x06019BF8 RID: 105464 RVA: 0x007EEFDC File Offset: 0x007ED1DC
 	private void UpdateHeadInfo()
 	{
 		CreatureDataComponent creatureData = this.CreatureData;
@@ -172,8 +172,8 @@ public class PawnInfoManageComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x170026AC RID: 9900
-	// (get) Token: 0x0601BFF5 RID: 114677 RVA: 0x007C7D5C File Offset: 0x007C5F5C
+	// Token: 0x17002961 RID: 10593
+	// (get) Token: 0x06019BF9 RID: 105465 RVA: 0x007EF0EC File Offset: 0x007ED2EC
 	public int? DropItemId
 	{
 		get
@@ -192,8 +192,8 @@ public class PawnInfoManageComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x170026AD RID: 9901
-	// (get) Token: 0x0601BFF6 RID: 114678 RVA: 0x007C7D9C File Offset: 0x007C5F9C
+	// Token: 0x17002962 RID: 10594
+	// (get) Token: 0x06019BFA RID: 105466 RVA: 0x007EF12C File Offset: 0x007ED32C
 	public int? DropItemCount
 	{
 		get
@@ -207,8 +207,8 @@ public class PawnInfoManageComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x170026AE RID: 9902
-	// (get) Token: 0x0601BFF7 RID: 114679 RVA: 0x007C7DCC File Offset: 0x007C5FCC
+	// Token: 0x17002963 RID: 10595
+	// (get) Token: 0x06019BFB RID: 105467 RVA: 0x007EF15C File Offset: 0x007ED35C
 	public int EntityId
 	{
 		get
@@ -217,8 +217,8 @@ public class PawnInfoManageComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x170026AF RID: 9903
-	// (get) Token: 0x0601BFF8 RID: 114680 RVA: 0x007C7DDC File Offset: 0x007C5FDC
+	// Token: 0x17002964 RID: 10596
+	// (get) Token: 0x06019BFC RID: 105468 RVA: 0x007EF16C File Offset: 0x007ED36C
 	public bool HasQuestOption
 	{
 		get
@@ -233,7 +233,7 @@ public class PawnInfoManageComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BFF9 RID: 114681 RVA: 0x007C7E0C File Offset: 0x007C600C
+	// Token: 0x06019BFD RID: 105469 RVA: 0x007EF19C File Offset: 0x007ED39C
 	private unsafe bool InitEntityConfig()
 	{
 		this.EntityConfigNew = this.CreatureData.GetPbEntityInitData();
@@ -270,7 +270,7 @@ public class PawnInfoManageComponent : EntityComponent
 		return false;
 	}
 
-	// Token: 0x0601BFFA RID: 114682 RVA: 0x007C7F3E File Offset: 0x007C613E
+	// Token: 0x06019BFE RID: 105470 RVA: 0x007EF2CE File Offset: 0x007ED4CE
 	protected override bool OnStart()
 	{
 		if (this.InitEntityConfig())
@@ -280,13 +280,13 @@ public class PawnInfoManageComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601BFFB RID: 114683 RVA: 0x007C7F4F File Offset: 0x007C614F
+	// Token: 0x06019BFF RID: 105471 RVA: 0x007EF2DF File Offset: 0x007ED4DF
 	public bool IsDropItem()
 	{
 		return this.DropItemComp != null;
 	}
 
-	// Token: 0x0601BFFC RID: 114684 RVA: 0x007C7F5C File Offset: 0x007C615C
+	// Token: 0x06019C00 RID: 105472 RVA: 0x007EF2EC File Offset: 0x007ED4EC
 	[NullableContext(1)]
 	public string GetHeadStateSocketName()
 	{
@@ -317,7 +317,7 @@ public class PawnInfoManageComponent : EntityComponent
 		return text2;
 	}
 
-	// Token: 0x0601BFFD RID: 114685 RVA: 0x007C7FA8 File Offset: 0x007C61A8
+	// Token: 0x06019C01 RID: 105473 RVA: 0x007EF338 File Offset: 0x007ED538
 	public float GetHeadStateOffset()
 	{
 		BaseInfoComponent baseInfo = this.CreatureData.GetBaseInfo();
@@ -345,7 +345,7 @@ public class PawnInfoManageComponent : EntityComponent
 		return 0f;
 	}
 
-	// Token: 0x0601BFFE RID: 114686 RVA: 0x007C8038 File Offset: 0x007C6238
+	// Token: 0x06019C02 RID: 105474 RVA: 0x007EF3C8 File Offset: 0x007ED5C8
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -354,108 +354,98 @@ public class PawnInfoManageComponent : EntityComponent
 			return false;
 		}
 		PawnInfoManageComponent pawnInfoManageComponent = (PawnInfoManageComponent)componentTemplate;
-		if (base.CanResetComponentProperty("Name"))
+		this.Name = pawnInfoManageComponent.Name;
+		this.SecondNameInternal = pawnInfoManageComponent.SecondNameInternal;
+		this.FunctionIconInternal = pawnInfoManageComponent.FunctionIconInternal;
+		if (pawnInfoManageComponent.CreatureData == null)
 		{
-			this.Name = pawnInfoManageComponent.Name;
+			this.CreatureData = null;
 		}
-		if (base.CanResetComponentProperty("SecondNameInternal"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureData), "CreatureData"))
 		{
-			this.SecondNameInternal = pawnInfoManageComponent.SecondNameInternal;
+			return false;
 		}
-		if (base.CanResetComponentProperty("FunctionIconInternal"))
+		if (pawnInfoManageComponent.DropItemComp == null)
 		{
-			this.FunctionIconInternal = pawnInfoManageComponent.FunctionIconInternal;
+			this.DropItemComp = null;
 		}
-		if (base.CanResetComponentProperty("CreatureData"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DropItemComp), "DropItemComp"))
 		{
-			if (pawnInfoManageComponent.CreatureData == null)
-			{
-				this.CreatureData = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureData), "CreatureData"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("DropItemComp"))
+		if (pawnInfoManageComponent.EntityConfigNew == null)
 		{
-			if (pawnInfoManageComponent.DropItemComp == null)
-			{
-				this.DropItemComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemDropItemComponent>(this.DropItemComp), "DropItemComp"))
-			{
-				return false;
-			}
+			this.EntityConfigNew = null;
 		}
-		if (base.CanResetComponentProperty("EntityConfigNew"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.EntityConfigNew), "EntityConfigNew"))
 		{
-			if (pawnInfoManageComponent.EntityConfigNew == null)
-			{
-				this.EntityConfigNew = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<IEntityData>(this.EntityConfigNew), "EntityConfigNew"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("LockRangeInternal"))
+		this.LockRangeInternal = pawnInfoManageComponent.LockRangeInternal;
+		if (pawnInfoManageComponent.LockControlInternal == null)
 		{
-			this.LockRangeInternal = pawnInfoManageComponent.LockRangeInternal;
+			this.LockControlInternal = null;
 		}
-		if (base.CanResetComponentProperty("LockControlInternal"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LockControlInternal), "LockControlInternal"))
 		{
-			if (pawnInfoManageComponent.LockControlInternal == null)
-			{
-				this.LockControlInternal = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<IAutoLockControl>(this.LockControlInternal), "LockControlInternal"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("CurrentLanguage"))
-		{
-			this.CurrentLanguage = pawnInfoManageComponent.CurrentLanguage;
-		}
-		if (base.CanResetComponentProperty("PawnNameKeyInternal"))
-		{
-			this.PawnNameKeyInternal = pawnInfoManageComponent.PawnNameKeyInternal;
-		}
+		this.CurrentLanguage = pawnInfoManageComponent.CurrentLanguage;
+		this.PawnNameKeyInternal = pawnInfoManageComponent.PawnNameKeyInternal;
 		return true;
 	}
 
-	// Token: 0x0400DD4F RID: 56655
+	// Token: 0x17002965 RID: 10597
+	// (get) Token: 0x06019C03 RID: 105475 RVA: 0x007EF4DC File Offset: 0x007ED6DC
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002966 RID: 10598
+	// (get) Token: 0x06019C04 RID: 105476 RVA: 0x007EF4DF File Offset: 0x007ED6DF
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400E1F5 RID: 57845
 	[Nullable(1)]
 	private const string SOCKET_NAME = "MarkCase";
 
-	// Token: 0x0400DD50 RID: 56656
+	// Token: 0x0400E1F6 RID: 57846
 	private string Name = "";
 
-	// Token: 0x0400DD51 RID: 56657
+	// Token: 0x0400E1F7 RID: 57847
 	private string SecondNameInternal;
 
-	// Token: 0x0400DD52 RID: 56658
+	// Token: 0x0400E1F8 RID: 57848
 	private string FunctionIconInternal;
 
-	// Token: 0x0400DD53 RID: 56659
+	// Token: 0x0400E1F9 RID: 57849
 	private CreatureDataComponent CreatureData;
 
-	// Token: 0x0400DD54 RID: 56660
+	// Token: 0x0400E1FA RID: 57850
 	private SceneItemDropItemComponent DropItemComp;
 
-	// Token: 0x0400DD55 RID: 56661
+	// Token: 0x0400E1FB RID: 57851
 	private IEntityData EntityConfigNew;
 
-	// Token: 0x0400DD56 RID: 56662
+	// Token: 0x0400E1FC RID: 57852
 	private float LockRangeInternal = -1f;
 
-	// Token: 0x0400DD57 RID: 56663
+	// Token: 0x0400E1FD RID: 57853
 	private IAutoLockControl LockControlInternal;
 
-	// Token: 0x0400DD58 RID: 56664
+	// Token: 0x0400E1FE RID: 57854
 	private string CurrentLanguage;
 
-	// Token: 0x0400DD59 RID: 56665
+	// Token: 0x0400E1FF RID: 57855
 	private string PawnNameKeyInternal;
 }

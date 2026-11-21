@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005981 RID: 22913
+	// Token: 0x02005F8E RID: 24462
 	public class ISplineComponentT
 	{
-		// Token: 0x1700ABF0 RID: 44016
-		// (get) Token: 0x06026CB6 RID: 158902 RVA: 0x005572D1 File Offset: 0x005554D1
-		// (set) Token: 0x06026CB7 RID: 158903 RVA: 0x005572D9 File Offset: 0x005554D9
+		// Token: 0x1700B524 RID: 46372
+		// (get) Token: 0x06029220 RID: 168480 RVA: 0x0059DF3D File Offset: 0x0059C13D
+		// (set) Token: 0x06029221 RID: 168481 RVA: 0x0059DF45 File Offset: 0x0059C145
 		public bool Disabled { get; set; }
 
-		// Token: 0x1700ABF1 RID: 44017
-		// (get) Token: 0x06026CB8 RID: 158904 RVA: 0x005572E2 File Offset: 0x005554E2
-		// (set) Token: 0x06026CB9 RID: 158905 RVA: 0x005572EA File Offset: 0x005554EA
+		// Token: 0x1700B525 RID: 46373
+		// (get) Token: 0x06029222 RID: 168482 RVA: 0x0059DF4E File Offset: 0x0059C14E
+		// (set) Token: 0x06029223 RID: 168483 RVA: 0x0059DF56 File Offset: 0x0059C156
 		public TSplineOptionUnion Option { get; set; }
 
-		// Token: 0x1700ABF2 RID: 44018
-		// (get) Token: 0x06026CBA RID: 158906 RVA: 0x005572F3 File Offset: 0x005554F3
-		// (set) Token: 0x06026CBB RID: 158907 RVA: 0x005572FB File Offset: 0x005554FB
+		// Token: 0x1700B526 RID: 46374
+		// (get) Token: 0x06029224 RID: 168484 RVA: 0x0059DF5F File Offset: 0x0059C15F
+		// (set) Token: 0x06029225 RID: 168485 RVA: 0x0059DF67 File Offset: 0x0059C167
 		public byte NullMask { get; set; }
 
-		// Token: 0x06026CBC RID: 158908 RVA: 0x00557304 File Offset: 0x00555504
+		// Token: 0x06029226 RID: 168486 RVA: 0x0059DF70 File Offset: 0x0059C170
 		public ISplineComponentT()
 		{
 			this.Disabled = false;

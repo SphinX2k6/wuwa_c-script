@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Giant
 {
-	// Token: 0x02005967 RID: 22887
+	// Token: 0x02004940 RID: 18752
 	public class GiantSystemMainOpenParam : IGiantSystemMainOpenParam
 	{
-		// Token: 0x17008B2D RID: 35629
-		// (get) Token: 0x0603A121 RID: 237857 RVA: 0x00DCD849 File Offset: 0x00DCBA49
-		// (set) Token: 0x0603A122 RID: 237858 RVA: 0x00DCD851 File Offset: 0x00DCBA51
+		// Token: 0x17005EFA RID: 24314
+		// (get) Token: 0x0602F045 RID: 192581 RVA: 0x00D1CAB1 File Offset: 0x00D1ACB1
+		// (set) Token: 0x0602F046 RID: 192582 RVA: 0x00D1CAB9 File Offset: 0x00D1ACB9
 		public int ActivityId { get; set; }
 	}
 }

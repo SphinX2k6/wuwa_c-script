@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200058C RID: 1420
+	// Token: 0x02000577 RID: 1399
 	[NetMessage(EMessageId.FishingTechInfoUpdateNotify)]
 	public sealed class FishingTechInfoUpdateNotify : IMessage<FishingTechInfoUpdateNotify>, IMessage, IEquatable<FishingTechInfoUpdateNotify>, IDeepCloneable<FishingTechInfoUpdateNotify>, IBufferMessage
 	{
-		// Token: 0x060083B0 RID: 33712 RVA: 0x0013D1AE File Offset: 0x0013B3AE
+		// Token: 0x06008248 RID: 33352 RVA: 0x0013A5A2 File Offset: 0x001387A2
 		[NullableContext(1)]
 		public static FishingTechInfoUpdateNotify Create()
 		{
 			return new FishingTechInfoUpdateNotify();
 		}
 
-		// Token: 0x170019A9 RID: 6569
-		// (get) Token: 0x060083B1 RID: 33713 RVA: 0x0013D1B5 File Offset: 0x0013B3B5
+		// Token: 0x1700195C RID: 6492
+		// (get) Token: 0x06008249 RID: 33353 RVA: 0x0013A5A9 File Offset: 0x001387A9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170019AA RID: 6570
-		// (get) Token: 0x060083B2 RID: 33714 RVA: 0x0013D1B8 File Offset: 0x0013B3B8
+		// Token: 0x1700195D RID: 6493
+		// (get) Token: 0x0600824A RID: 33354 RVA: 0x0013A5AC File Offset: 0x001387AC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060083B3 RID: 33715 RVA: 0x0013D1BF File Offset: 0x0013B3BF
+		// Token: 0x0600824B RID: 33355 RVA: 0x0013A5B3 File Offset: 0x001387B3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FishingTechInfoUpdateNotify()
 		{
 		}
 
-		// Token: 0x060083B4 RID: 33716 RVA: 0x0013D1C7 File Offset: 0x0013B3C7
+		// Token: 0x0600824C RID: 33356 RVA: 0x0013A5BB File Offset: 0x001387BB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FishingTechInfoUpdateNotify(FishingTechInfoUpdateNotify other) : this()
@@ -58,7 +58,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060083B5 RID: 33717 RVA: 0x0013D1FC File Offset: 0x0013B3FC
+		// Token: 0x0600824D RID: 33357 RVA: 0x0013A5F0 File Offset: 0x001387F0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FishingTechInfoUpdateNotify Clone()
@@ -66,9 +66,9 @@ namespace Aki.Protocol
 			return new FishingTechInfoUpdateNotify(this);
 		}
 
-		// Token: 0x170019AB RID: 6571
-		// (get) Token: 0x060083B6 RID: 33718 RVA: 0x0013D204 File Offset: 0x0013B404
-		// (set) Token: 0x060083B7 RID: 33719 RVA: 0x0013D20C File Offset: 0x0013B40C
+		// Token: 0x1700195E RID: 6494
+		// (get) Token: 0x0600824E RID: 33358 RVA: 0x0013A5F8 File Offset: 0x001387F8
+		// (set) Token: 0x0600824F RID: 33359 RVA: 0x0013A600 File Offset: 0x00138800
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FishingTechInfo TechInfo
@@ -83,7 +83,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060083B8 RID: 33720 RVA: 0x0013D215 File Offset: 0x0013B415
+		// Token: 0x06008250 RID: 33360 RVA: 0x0013A609 File Offset: 0x00138809
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -91,7 +91,7 @@ namespace Aki.Protocol
 			return this.Equals(other as FishingTechInfoUpdateNotify);
 		}
 
-		// Token: 0x060083B9 RID: 33721 RVA: 0x0013D223 File Offset: 0x0013B423
+		// Token: 0x06008251 RID: 33361 RVA: 0x0013A617 File Offset: 0x00138817
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(FishingTechInfoUpdateNotify other)
@@ -99,7 +99,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (object.Equals(this.TechInfo, other.TechInfo) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060083BA RID: 33722 RVA: 0x0013D258 File Offset: 0x0013B458
+		// Token: 0x06008252 RID: 33362 RVA: 0x0013A64C File Offset: 0x0013884C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -116,7 +116,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060083BB RID: 33723 RVA: 0x0013D294 File Offset: 0x0013B494
+		// Token: 0x06008253 RID: 33363 RVA: 0x0013A688 File Offset: 0x00138888
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -124,7 +124,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060083BC RID: 33724 RVA: 0x0013D2A1 File Offset: 0x0013B4A1
+		// Token: 0x06008254 RID: 33364 RVA: 0x0013A695 File Offset: 0x00138895
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -132,14 +132,14 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060083BD RID: 33725 RVA: 0x0013D2AA File Offset: 0x0013B4AA
+		// Token: 0x06008255 RID: 33365 RVA: 0x0013A69E File Offset: 0x0013889E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			if (this.techInfo_ != null)
 			{
-				output.WriteRawTag(66);
+				output.WriteRawTag(50);
 				output.WriteMessage(this.TechInfo);
 			}
 			if (this._unknownFields != null)
@@ -148,7 +148,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060083BE RID: 33726 RVA: 0x0013D2DC File Offset: 0x0013B4DC
+		// Token: 0x06008256 RID: 33366 RVA: 0x0013A6D0 File Offset: 0x001388D0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -165,7 +165,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060083BF RID: 33727 RVA: 0x0013D31C File Offset: 0x0013B51C
+		// Token: 0x06008257 RID: 33367 RVA: 0x0013A710 File Offset: 0x00138910
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(FishingTechInfoUpdateNotify other)
@@ -185,7 +185,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060083C0 RID: 33728 RVA: 0x0013D370 File Offset: 0x0013B570
+		// Token: 0x06008258 RID: 33368 RVA: 0x0013A764 File Offset: 0x00138964
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -193,7 +193,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060083C1 RID: 33729 RVA: 0x0013D37C File Offset: 0x0013B57C
+		// Token: 0x06008259 RID: 33369 RVA: 0x0013A770 File Offset: 0x00138970
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -205,7 +205,7 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 66U)
+				if (num != 50U)
 				{
 					this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 				}
@@ -220,13 +220,13 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04004188 RID: 16776
+		// Token: 0x0400417E RID: 16766
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04004189 RID: 16777
-		public const int TechInfoFieldNumber = 8;
+		// Token: 0x0400417F RID: 16767
+		public const int TechInfoFieldNumber = 6;
 
-		// Token: 0x0400418A RID: 16778
+		// Token: 0x04004180 RID: 16768
 		private FishingTechInfo techInfo_;
 	}
 }

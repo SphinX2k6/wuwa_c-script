@@ -9,18 +9,18 @@ using CSharpScript.Game.Module.GameMainView.Data;
 using CSharpScript.Game.Module.SkillButtonUi;
 using UnrealEngine;
 
-// Token: 0x02001D25 RID: 7461
+// Token: 0x020011E7 RID: 4583
 [NullableContext(2)]
 [Nullable(0)]
 public class SurvivorsRogueBattleSkillData : BattleSkillDataBase
 {
-	// Token: 0x0600E1E7 RID: 57831 RVA: 0x00350C68 File Offset: 0x0034EE68
+	// Token: 0x0600B604 RID: 46596 RVA: 0x0035C698 File Offset: 0x0035A898
 	public SurvivorsRogueBattleSkillData(int skillId)
 	{
 		this.SkillId = skillId;
 	}
 
-	// Token: 0x0600E1E8 RID: 57832 RVA: 0x00350C88 File Offset: 0x0034EE88
+	// Token: 0x0600B605 RID: 46597 RVA: 0x0035C6B8 File Offset: 0x0035A8B8
 	protected override void OnInitData()
 	{
 		if (this.SkillId == 0)
@@ -52,7 +52,7 @@ public class SurvivorsRogueBattleSkillData : BattleSkillDataBase
 		this.GroupSkillCdInfo = ((characterSkillCdComponent != null) ? characterSkillCdComponent.GetGroupSkillCdInfo(this.SkillId) : null);
 	}
 
-	// Token: 0x0600E1E9 RID: 57833 RVA: 0x00350D48 File Offset: 0x0034EF48
+	// Token: 0x0600B606 RID: 46598 RVA: 0x0035C778 File Offset: 0x0035A978
 	private SkillGameplayButton? GetActiveSkillButtonConfig()
 	{
 		SurvivorsRogueConfig instance = SurvivorsRogueConfig.Instance;
@@ -73,7 +73,7 @@ public class SurvivorsRogueBattleSkillData : BattleSkillDataBase
 		return null;
 	}
 
-	// Token: 0x0600E1EA RID: 57834 RVA: 0x00350DCC File Offset: 0x0034EFCC
+	// Token: 0x0600B607 RID: 46599 RVA: 0x0035C7FC File Offset: 0x0035A9FC
 	public void RefreshSkillCd()
 	{
 		if (this.CharacterSkillCdComponent != null)
@@ -88,13 +88,13 @@ public class SurvivorsRogueBattleSkillData : BattleSkillDataBase
 		this.IsEnableInternal = true;
 	}
 
-	// Token: 0x0600E1EB RID: 57835 RVA: 0x00350E03 File Offset: 0x0034F003
+	// Token: 0x0600B608 RID: 46600 RVA: 0x0035C833 File Offset: 0x0035AA33
 	public override int GetSkillId()
 	{
 		return this.SkillId;
 	}
 
-	// Token: 0x0600E1EC RID: 57836 RVA: 0x00350E0C File Offset: 0x0034F00C
+	// Token: 0x0600B609 RID: 46601 RVA: 0x0035C83C File Offset: 0x0035AA3C
 	public override string GetSkillTexturePath()
 	{
 		if (base.GetActionName() == "闪避")
@@ -121,7 +121,7 @@ public class SurvivorsRogueBattleSkillData : BattleSkillDataBase
 		}
 	}
 
-	// Token: 0x0600E1ED RID: 57837 RVA: 0x00350E74 File Offset: 0x0034F074
+	// Token: 0x0600B60A RID: 46602 RVA: 0x0035C8A4 File Offset: 0x0035AAA4
 	public override EInputAction GetActionType()
 	{
 		if (this.SkillButtonConfig != null)
@@ -131,7 +131,7 @@ public class SurvivorsRogueBattleSkillData : BattleSkillDataBase
 		return EInputAction.闪避;
 	}
 
-	// Token: 0x0600E1EE RID: 57838 RVA: 0x00350EB0 File Offset: 0x0034F0B0
+	// Token: 0x0600B60B RID: 46603 RVA: 0x0035C8E0 File Offset: 0x0035AAE0
 	public override ESkillButtonType GetButtonType()
 	{
 		if (this.SkillButtonConfig != null)
@@ -141,25 +141,25 @@ public class SurvivorsRogueBattleSkillData : BattleSkillDataBase
 		return ESkillButtonType.闪避;
 	}
 
-	// Token: 0x0600E1EF RID: 57839 RVA: 0x00350EDF File Offset: 0x0034F0DF
+	// Token: 0x0600B60C RID: 46604 RVA: 0x0035C90F File Offset: 0x0035AB0F
 	public override bool IsEnable()
 	{
 		return this.IsEnableInternal;
 	}
 
-	// Token: 0x0600E1F0 RID: 57840 RVA: 0x00350EE7 File Offset: 0x0034F0E7
+	// Token: 0x0600B60D RID: 46605 RVA: 0x0035C917 File Offset: 0x0035AB17
 	public override GroupSkillCdInfo GetGroupSkillCdInfo()
 	{
 		return this.GroupSkillCdInfo;
 	}
 
-	// Token: 0x0600E1F1 RID: 57841 RVA: 0x00350EEF File Offset: 0x0034F0EF
+	// Token: 0x0600B60E RID: 46606 RVA: 0x0035C91F File Offset: 0x0035AB1F
 	public override bool HasCdComponent()
 	{
 		return true;
 	}
 
-	// Token: 0x0600E1F2 RID: 57842 RVA: 0x00350EF2 File Offset: 0x0034F0F2
+	// Token: 0x0600B60F RID: 46607 RVA: 0x0035C922 File Offset: 0x0035AB22
 	public override float GetSkillRemainingCoolDown()
 	{
 		if (this.GroupSkillCdInfo != null)
@@ -169,36 +169,36 @@ public class SurvivorsRogueBattleSkillData : BattleSkillDataBase
 		return 0f;
 	}
 
-	// Token: 0x0600E1F3 RID: 57843 RVA: 0x00350F0D File Offset: 0x0034F10D
+	// Token: 0x0600B610 RID: 46608 RVA: 0x0035C93D File Offset: 0x0035AB3D
 	public override bool IsCdVisible()
 	{
 		return this.IsCdVisibleInternal;
 	}
 
-	// Token: 0x04006877 RID: 26743
+	// Token: 0x04006956 RID: 26966
 	private bool IsEnableInternal = true;
 
-	// Token: 0x04006878 RID: 26744
+	// Token: 0x04006957 RID: 26967
 	private readonly int SkillId;
 
-	// Token: 0x04006879 RID: 26745
+	// Token: 0x04006958 RID: 26968
 	private SkillGameplayButton? SkillButtonConfig;
 
-	// Token: 0x0400687A RID: 26746
+	// Token: 0x04006959 RID: 26969
 	private SSkillInfo SkillConfig;
 
-	// Token: 0x0400687B RID: 26747
+	// Token: 0x0400695A RID: 26970
 	private GroupSkillCdInfo GroupSkillCdInfo;
 
-	// Token: 0x0400687C RID: 26748
+	// Token: 0x0400695B RID: 26971
 	private EntityHandle EntityHandle;
 
-	// Token: 0x0400687D RID: 26749
+	// Token: 0x0400695C RID: 26972
 	private CharacterSkillComponent CharacterSkillComponent;
 
-	// Token: 0x0400687E RID: 26750
+	// Token: 0x0400695D RID: 26973
 	private CharacterSkillCdComponent CharacterSkillCdComponent;
 
-	// Token: 0x0400687F RID: 26751
+	// Token: 0x0400695E RID: 26974
 	private bool IsCdVisibleInternal = true;
 }

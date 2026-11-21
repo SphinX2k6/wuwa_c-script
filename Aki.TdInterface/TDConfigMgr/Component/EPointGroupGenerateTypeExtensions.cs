@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009D8 RID: 2520
+	// Token: 0x02000A9D RID: 2717
 	public static class EPointGroupGenerateTypeExtensions
 	{
-		// Token: 0x060037FD RID: 14333 RVA: 0x000914E0 File Offset: 0x0008F6E0
+		// Token: 0x06003BD5 RID: 15317 RVA: 0x00099DA0 File Offset: 0x00097FA0
 		public static string ToEnumString(this EPointGroupGenerateType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060037FE RID: 14334 RVA: 0x00091508 File Offset: 0x0008F708
+		// Token: 0x06003BD6 RID: 15318 RVA: 0x00099DC8 File Offset: 0x00097FC8
 		public static EPointGroupGenerateType FromString(string name)
 		{
 			EPointGroupGenerateType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060037FF RID: 14335 RVA: 0x00091531 File Offset: 0x0008F731
+		// Token: 0x06003BD7 RID: 15319 RVA: 0x00099DF1 File Offset: 0x00097FF1
 		public static bool TryFromString(string name, out EPointGroupGenerateType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x06003800 RID: 14336 RVA: 0x00091556 File Offset: 0x0008F756
+		// Token: 0x06003BD8 RID: 15320 RVA: 0x00099E16 File Offset: 0x00098016
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003801 RID: 14337 RVA: 0x00091566 File Offset: 0x0008F766
+		// Token: 0x06003BD9 RID: 15321 RVA: 0x00099E26 File Offset: 0x00098026
 		public static EPointGroupGenerateType[] GetValues()
 		{
 			return new EPointGroupGenerateType[1];
 		}
 
-		// Token: 0x06003802 RID: 14338 RVA: 0x0009156E File Offset: 0x0008F76E
+		// Token: 0x06003BDA RID: 15322 RVA: 0x00099E2E File Offset: 0x0009802E
 		public static string[] GetNames()
 		{
 			return new string[]

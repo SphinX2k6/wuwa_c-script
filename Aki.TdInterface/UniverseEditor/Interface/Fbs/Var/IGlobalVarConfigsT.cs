@@ -3,15 +3,15 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003A9A RID: 15002
+	// Token: 0x02003E9C RID: 16028
 	public class IGlobalVarConfigsT
 	{
-		// Token: 0x170066C7 RID: 26311
-		// (get) Token: 0x060145C8 RID: 83400 RVA: 0x002F8649 File Offset: 0x002F6849
-		// (set) Token: 0x060145C9 RID: 83401 RVA: 0x002F8651 File Offset: 0x002F6851
+		// Token: 0x17006C62 RID: 27746
+		// (get) Token: 0x06015A6E RID: 88686 RVA: 0x0031E855 File Offset: 0x0031CA55
+		// (set) Token: 0x06015A6F RID: 88687 RVA: 0x0031E85D File Offset: 0x0031CA5D
 		public List<IVarDefineT> Vars { get; set; }
 
-		// Token: 0x060145CA RID: 83402 RVA: 0x002F865A File Offset: 0x002F685A
+		// Token: 0x06015A70 RID: 88688 RVA: 0x0031E866 File Offset: 0x0031CA66
 		public IGlobalVarConfigsT()
 		{
 			this.Vars = null;

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000041 RID: 65
+	// Token: 0x02000049 RID: 73
 	public class ConfigActivityGamePlayPlotById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000186 RID: 390 RVA: 0x00062510 File Offset: 0x00060710
+		// Token: 0x060001B6 RID: 438 RVA: 0x00066DC4 File Offset: 0x00064FC4
 		static ConfigActivityGamePlayPlotById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigActivityGamePlayPlotById.CreateStaticDefaultValue), new Action(ConfigActivityGamePlayPlotById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000187 RID: 391 RVA: 0x00062530 File Offset: 0x00060730
+		// Token: 0x060001B7 RID: 439 RVA: 0x00066DE4 File Offset: 0x00064FE4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigActivityGamePlayPlotById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000188 RID: 392 RVA: 0x000625AF File Offset: 0x000607AF
+		// Token: 0x060001B8 RID: 440 RVA: 0x00066E63 File Offset: 0x00065063
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigActivityGamePlayPlotById.LogPair = null;
 			ConfigActivityGamePlayPlotById.HandleId = 0;
 		}
 
-		// Token: 0x06000189 RID: 393 RVA: 0x000625BD File Offset: 0x000607BD
+		// Token: 0x060001B9 RID: 441 RVA: 0x00066E71 File Offset: 0x00065071
 		public static void Init()
 		{
 			ConfigActivityGamePlayPlotById.HandleId = ConfigCommon.InitDataStatement(ConfigActivityGamePlayPlotById.HandleId, "db_activitygameplayplot.db", "select BinData from `ActivityGamePlayPlot` where Id=?");
 		}
 
-		// Token: 0x0600018A RID: 394 RVA: 0x000625D8 File Offset: 0x000607D8
+		// Token: 0x060001BA RID: 442 RVA: 0x00066E8C File Offset: 0x0006508C
 		public static ActivityGamePlayPlot? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigActivityGamePlayPlotById.HandleId, ConfigActivityGamePlayPlotById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new ActivityGamePlayPlot?(rootAsActivityGamePlayPlot);
 		}
 
-		// Token: 0x040001AB RID: 427
+		// Token: 0x040001E3 RID: 483
 		private const string DB = "db_activitygameplayplot.db";
 
-		// Token: 0x040001AC RID: 428
+		// Token: 0x040001E4 RID: 484
 		private const string FILE = "x.系统玩法对话配置.xlsx";
 
-		// Token: 0x040001AD RID: 429
+		// Token: 0x040001E5 RID: 485
 		private const string TABLE = "ActivityGamePlayPlot";
 
-		// Token: 0x040001AE RID: 430
+		// Token: 0x040001E6 RID: 486
 		private const string COMMAND = "select BinData from `ActivityGamePlayPlot` where Id=?";
 
-		// Token: 0x040001AF RID: 431
+		// Token: 0x040001E7 RID: 487
 		private const string KEY_PREFIX = "ActivityGamePlayPlotById";
 
-		// Token: 0x040001B0 RID: 432
+		// Token: 0x040001E8 RID: 488
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040001B1 RID: 433
+		// Token: 0x040001E9 RID: 489
 		private static int HandleId;
 	}
 }

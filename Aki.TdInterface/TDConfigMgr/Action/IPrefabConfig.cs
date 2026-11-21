@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D42 RID: 7490
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F53 RID: 8019
 	public class IPrefabConfig : ICreatePrefabConfig
 	{
-		// Token: 0x0600A0B7 RID: 41143 RVA: 0x0016E874 File Offset: 0x0016CA74
+		// Token: 0x0600AAA3 RID: 43683 RVA: 0x00182C98 File Offset: 0x00180E98
 		private IPrefabConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A0B8 RID: 41144 RVA: 0x0016E8AC File Offset: 0x0016CAAC
+		// Token: 0x0600AAA4 RID: 43684 RVA: 0x00182CD0 File Offset: 0x00180ED0
 		public static IPrefabConfig Create([Nullable(2)] IPrefabConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A0B9 RID: 41145 RVA: 0x0016E8BF File Offset: 0x0016CABF
+		// Token: 0x0600AAA5 RID: 43685 RVA: 0x00182CE3 File Offset: 0x00180EE3
 		public static IPrefabConfig CreateFromSetValue([Nullable(2)] IPrefabConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A0BA RID: 41146 RVA: 0x0016E8D2 File Offset: 0x0016CAD2
+		// Token: 0x0600AAA6 RID: 43686 RVA: 0x00182CF6 File Offset: 0x00180EF6
 		public new IPrefabConfig_SetValue ToSetValue()
 		{
 			return new IPrefabConfig_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170031CF RID: 12751
-		// (get) Token: 0x0600A0BB RID: 41147 RVA: 0x0016E8F1 File Offset: 0x0016CAF1
-		// (set) Token: 0x0600A0BC RID: 41148 RVA: 0x0016E91C File Offset: 0x0016CB1C
+		// Token: 0x17003463 RID: 13411
+		// (get) Token: 0x0600AAA7 RID: 43687 RVA: 0x00182D15 File Offset: 0x00180F15
+		// (set) Token: 0x0600AAA8 RID: 43688 RVA: 0x00182D40 File Offset: 0x00180F40
 		public override ECreatePrefabType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170031D0 RID: 12752
-		// (get) Token: 0x0600A0BD RID: 41149 RVA: 0x0016E92A File Offset: 0x0016CB2A
-		// (set) Token: 0x0600A0BE RID: 41150 RVA: 0x0016E955 File Offset: 0x0016CB55
+		// Token: 0x17003464 RID: 13412
+		// (get) Token: 0x0600AAA9 RID: 43689 RVA: 0x00182D4E File Offset: 0x00180F4E
+		// (set) Token: 0x0600AAAA RID: 43690 RVA: 0x00182D79 File Offset: 0x00180F79
 		public virtual int PrefabId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040060D4 RID: 24788
+		// Token: 0x04006650 RID: 26192
 		[Nullable(2)]
 		protected new IPrefabConfig FbInstance;
 
-		// Token: 0x040060D5 RID: 24789
+		// Token: 0x04006651 RID: 26193
 		[Nullable(2)]
 		protected new IPrefabConfig_SetValue PocoInterface;
 	}

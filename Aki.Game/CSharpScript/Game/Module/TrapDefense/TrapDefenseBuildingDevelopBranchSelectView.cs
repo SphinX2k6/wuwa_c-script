@@ -9,17 +9,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004AE0 RID: 19168
+	// Token: 0x02003A88 RID: 14984
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseBuildingDevelopBranchSelectView : UiViewBase
 	{
-		// Token: 0x06031A5E RID: 203358 RVA: 0x00B84F7F File Offset: 0x00B8317F
+		// Token: 0x060267EE RID: 157678 RVA: 0x00AC8F33 File Offset: 0x00AC7133
 		public TrapDefenseBuildingDevelopBranchSelectView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06031A5F RID: 203359 RVA: 0x00B84F9C File Offset: 0x00B8319C
+		// Token: 0x060267EF RID: 157679 RVA: 0x00AC8F50 File Offset: 0x00AC7150
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06031A60 RID: 203360 RVA: 0x00B850E8 File Offset: 0x00B832E8
+		// Token: 0x060267F0 RID: 157680 RVA: 0x00AC909C File Offset: 0x00AC729C
 		protected override void OnStart()
 		{
 			ITrapDefenseSelectBranchData trapDefenseSelectBranchData = this.OpenParam as ITrapDefenseSelectBranchData;
@@ -73,14 +73,14 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.UpdateData();
 		}
 
-		// Token: 0x06031A61 RID: 203361 RVA: 0x00B851BA File Offset: 0x00B833BA
+		// Token: 0x060267F1 RID: 157681 RVA: 0x00AC916E File Offset: 0x00AC736E
 		protected override void OnBeforeDestroy()
 		{
 			this.CaptionItem = null;
 			this.Data = null;
 		}
 
-		// Token: 0x06031A62 RID: 203362 RVA: 0x00B851CC File Offset: 0x00B833CC
+		// Token: 0x060267F2 RID: 157682 RVA: 0x00AC9180 File Offset: 0x00AC7380
 		protected void UpdateData()
 		{
 			if (!this.Data.GetHasBranch())
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			button.SetSelfInteractive(this.CurSelectedId != -1);
 		}
 
-		// Token: 0x06031A63 RID: 203363 RVA: 0x00B85340 File Offset: 0x00B83540
+		// Token: 0x060267F3 RID: 157683 RVA: 0x00AC92F4 File Offset: 0x00AC74F4
 		protected void UpdateSelected()
 		{
 			foreach (ITrapDefenseDevelopBranchSelectInfo trapDefenseDevelopBranchSelectInfo in this.DataList)
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x06031A64 RID: 203364 RVA: 0x00B853E4 File Offset: 0x00B835E4
+		// Token: 0x060267F4 RID: 157684 RVA: 0x00AC9398 File Offset: 0x00AC7598
 		private void OnClickedConfirm()
 		{
 			if (this.CurSelectedId == -1)
@@ -156,13 +156,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			});
 		}
 
-		// Token: 0x06031A65 RID: 203365 RVA: 0x00B85412 File Offset: 0x00B83612
+		// Token: 0x060267F5 RID: 157685 RVA: 0x00AC93C6 File Offset: 0x00AC75C6
 		private void OnClickedClose()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x06031A66 RID: 203366 RVA: 0x00B8541B File Offset: 0x00B8361B
+		// Token: 0x060267F6 RID: 157686 RVA: 0x00AC93CF File Offset: 0x00AC75CF
 		private void OnSelectedItem(int id)
 		{
 			this.CurSelectedId = ((id == this.CurSelectedId) ? -1 : id);
@@ -174,7 +174,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.UpdateSelected();
 		}
 
-		// Token: 0x06031A67 RID: 203367 RVA: 0x00B85454 File Offset: 0x00B83654
+		// Token: 0x060267F7 RID: 157687 RVA: 0x00AC9408 File Offset: 0x00AC7608
 		private TrapDefenseBuildingDevelopBranchSelectItem CreateItem()
 		{
 			return new TrapDefenseBuildingDevelopBranchSelectItem
@@ -183,47 +183,47 @@ namespace CSharpScript.Game.Module.TrapDefense
 			};
 		}
 
-		// Token: 0x0401A83B RID: 108603
+		// Token: 0x0401518D RID: 86413
 		protected TrapDefenseBuildingDevelopItemData Data;
 
-		// Token: 0x0401A83C RID: 108604
+		// Token: 0x0401518E RID: 86414
 		protected int CurSelectedId = -1;
 
-		// Token: 0x0401A83D RID: 108605
+		// Token: 0x0401518F RID: 86415
 		protected PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401A83E RID: 108606
+		// Token: 0x04015190 RID: 86416
 		protected List<ITrapDefenseDevelopBranchSelectInfo> DataList = new List<ITrapDefenseDevelopBranchSelectInfo>();
 
-		// Token: 0x0401A83F RID: 108607
+		// Token: 0x04015191 RID: 86417
 		protected GenericLayout<TrapDefenseBuildingDevelopBranchSelectItem, ITrapDefenseDevelopBranchSelectInfo> Layout;
 
-		// Token: 0x0401A840 RID: 108608
+		// Token: 0x04015192 RID: 86418
 		protected bool IsInDungeon;
 
-		// Token: 0x0200AC69 RID: 44137
+		// Token: 0x02009689 RID: 38537
 		[NullableContext(0)]
 		internal class EMainView
 		{
-			// Token: 0x0403465C RID: 214620
+			// Token: 0x0402F00D RID: 192525
 			public const int Caption = 0;
 
-			// Token: 0x0403465D RID: 214621
+			// Token: 0x0402F00E RID: 192526
 			public const int Icon = 1;
 
-			// Token: 0x0403465E RID: 214622
+			// Token: 0x0402F00F RID: 192527
 			public const int Title = 2;
 
-			// Token: 0x0403465F RID: 214623
+			// Token: 0x0402F010 RID: 192528
 			public const int PanelSelectLayout = 3;
 
-			// Token: 0x04034660 RID: 214624
+			// Token: 0x0402F011 RID: 192529
 			public const int SelectItem = 4;
 
-			// Token: 0x04034661 RID: 214625
+			// Token: 0x0402F012 RID: 192530
 			public const int StartLayout = 5;
 
-			// Token: 0x04034662 RID: 214626
+			// Token: 0x0402F013 RID: 192531
 			public const int BtnConfirm = 6;
 		}
 	}

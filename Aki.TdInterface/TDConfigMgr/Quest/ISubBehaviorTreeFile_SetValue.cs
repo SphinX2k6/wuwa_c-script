@@ -4,55 +4,53 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200114F RID: 4431
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200127F RID: 4735
 	public class ISubBehaviorTreeFile_SetValue
 	{
-		// Token: 0x04003C75 RID: 15477
+		// Token: 0x04003FC8 RID: 16328
 		public int Id;
 
-		// Token: 0x04003C76 RID: 15478
+		// Token: 0x04003FC9 RID: 16329
 		public string ParentUid;
 
-		// Token: 0x04003C77 RID: 15479
+		// Token: 0x04003FCA RID: 16330
 		public IBehaviorTree Tree;
 
-		// Token: 0x04003C78 RID: 15480
+		// Token: 0x04003FCB RID: 16331
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<string> Children;
 
-		// Token: 0x04003C79 RID: 15481
+		// Token: 0x04003FCC RID: 16332
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<string> Reference;
 
-		// Token: 0x04003C7A RID: 15482
+		// Token: 0x04003FCD RID: 16333
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<string> WeakReference;
 
-		// Token: 0x04003C7B RID: 15483
+		// Token: 0x04003FCE RID: 16334
 		public string _name;
 
-		// Token: 0x04003C7C RID: 15484
+		// Token: 0x04003FCF RID: 16335
 		public string _path;
 
-		// Token: 0x04003C7D RID: 15485
+		// Token: 0x04003FD0 RID: 16336
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<string> EdTextRef;
 	}

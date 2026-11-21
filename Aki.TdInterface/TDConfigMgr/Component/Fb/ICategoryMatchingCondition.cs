@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B57 RID: 2903
+	// Token: 0x02000C25 RID: 3109
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ICategoryMatchingCondition
 	{
-		// Token: 0x060042D8 RID: 17112 RVA: 0x000AA8E9 File Offset: 0x000A8AE9
-		[NullableContext(1)]
+		// Token: 0x06004731 RID: 18225 RVA: 0x000B49AD File Offset: 0x000B2BAD
+		[NullableContext(0)]
 		public static ICategoryMatchingCondition Create(ICategoryMatchingCondition? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170011E7 RID: 4583
-		// (get) Token: 0x060042D9 RID: 17113 RVA: 0x000AA908 File Offset: 0x000A8B08
+		// Token: 0x170012E2 RID: 4834
+		// (get) Token: 0x06004732 RID: 18226 RVA: 0x000B49CC File Offset: 0x000B2BCC
 		public virtual IDynamicEntityMatch EntityMatch
 		{
 			get
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170011E8 RID: 4584
-		// (get) Token: 0x060042DA RID: 17114 RVA: 0x000AA93C File Offset: 0x000A8B3C
+		// Token: 0x170012E3 RID: 4835
+		// (get) Token: 0x06004733 RID: 18227 RVA: 0x000B4A00 File Offset: 0x000B2C00
 		public virtual string SelfState
 		{
 			get
@@ -49,13 +49,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040025AC RID: 9644
+		// Token: 0x040027F4 RID: 10228
 		private ICategoryMatchingCondition Instance;
 
-		// Token: 0x040025AD RID: 9645
+		// Token: 0x040027F5 RID: 10229
 		private IDynamicEntityMatch _EntityMatchCache;
 
-		// Token: 0x040025AE RID: 9646
+		// Token: 0x040027F6 RID: 10230
 		private bool _EntityMatchInited;
 	}
 }

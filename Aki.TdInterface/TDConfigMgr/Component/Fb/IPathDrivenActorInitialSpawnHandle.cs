@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E1A RID: 3610
+	// Token: 0x02000F16 RID: 3862
 	public class IPathDrivenActorInitialSpawnHandle
 	{
-		// Token: 0x060051B5 RID: 20917 RVA: 0x000C9822 File Offset: 0x000C7A22
-		[NullableContext(1)]
+		// Token: 0x060056DC RID: 22236 RVA: 0x000D50EA File Offset: 0x000D32EA
 		public static IPathDrivenActorInitialSpawnHandle Create(IPathDrivenActorInitialSpawnHandle? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001B3E RID: 6974
-		// (get) Token: 0x060051B6 RID: 20918 RVA: 0x000C9841 File Offset: 0x000C7A41
+		// Token: 0x17001CAB RID: 7339
+		// (get) Token: 0x060056DD RID: 22237 RVA: 0x000D5109 File Offset: 0x000D3309
 		public virtual int Index
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B3F RID: 6975
-		// (get) Token: 0x060051B7 RID: 20919 RVA: 0x000C984E File Offset: 0x000C7A4E
+		// Token: 0x17001CAC RID: 7340
+		// (get) Token: 0x060056DE RID: 22238 RVA: 0x000D5116 File Offset: 0x000D3316
 		public virtual EPathDrivenActorInitialSpawnHandleType HandleType
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002F0F RID: 12047
+		// Token: 0x040031D7 RID: 12759
 		private IPathDrivenActorInitialSpawnHandle Instance;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021E6 RID: 8678
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002451 RID: 9297
 	public class SetTimeScale : ActionParams
 	{
-		// Token: 0x0600BEA5 RID: 48805 RVA: 0x001B6C90 File Offset: 0x001B4E90
+		// Token: 0x0600CA61 RID: 51809 RVA: 0x001CE31C File Offset: 0x001CC51C
 		private SetTimeScale_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BEA6 RID: 48806 RVA: 0x001B6CC8 File Offset: 0x001B4EC8
+		// Token: 0x0600CA62 RID: 51810 RVA: 0x001CE354 File Offset: 0x001CC554
 		public static SetTimeScale Create([Nullable(2)] SetTimeScale instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BEA7 RID: 48807 RVA: 0x001B6CDB File Offset: 0x001B4EDB
+		// Token: 0x0600CA63 RID: 51811 RVA: 0x001CE367 File Offset: 0x001CC567
 		public static SetTimeScale CreateFromSetValue([Nullable(2)] SetTimeScale_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BEA8 RID: 48808 RVA: 0x001B6CEE File Offset: 0x001B4EEE
+		// Token: 0x0600CA64 RID: 51812 RVA: 0x001CE37A File Offset: 0x001CC57A
 		public SetTimeScale_SetValue ToSetValue()
 		{
 			return new SetTimeScale_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170039DB RID: 14811
-		// (get) Token: 0x0600BEA9 RID: 48809 RVA: 0x001B6D04 File Offset: 0x001B4F04
-		// (set) Token: 0x0600BEAA RID: 48810 RVA: 0x001B6D65 File Offset: 0x001B4F65
+		// Token: 0x17003CD0 RID: 15568
+		// (get) Token: 0x0600CA65 RID: 51813 RVA: 0x001CE390 File Offset: 0x001CC590
+		// (set) Token: 0x0600CA66 RID: 51814 RVA: 0x001CE3F1 File Offset: 0x001CC5F1
 		public virtual ISetGlobalTimeScale Config
 		{
 			get
@@ -89,18 +87,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040071BD RID: 29117
+		// Token: 0x04007806 RID: 30726
 		[Nullable(2)]
 		protected new SetTimeScale FbInstance;
 
-		// Token: 0x040071BE RID: 29118
+		// Token: 0x04007807 RID: 30727
 		[Nullable(2)]
 		protected SetTimeScale_SetValue PocoInterface;
 
-		// Token: 0x040071BF RID: 29119
+		// Token: 0x04007808 RID: 30728
 		private ISetGlobalTimeScale _ConfigCache;
 
-		// Token: 0x040071C0 RID: 29120
+		// Token: 0x04007809 RID: 30729
 		private bool _ConfigInited;
 	}
 }

@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001252 RID: 4690
+// Token: 0x02000706 RID: 1798
 public class DangoMonopolyTipsViewParams
 {
-	// Token: 0x04003A00 RID: 14848
+	// Token: 0x04003A98 RID: 15000
 	[Nullable(1)]
 	public List<IDangoTipsInfo> TipsTextList = new List<IDangoTipsInfo>();
 
-	// Token: 0x04003A01 RID: 14849
+	// Token: 0x04003A99 RID: 15001
 	public float? ShowTime;
 }

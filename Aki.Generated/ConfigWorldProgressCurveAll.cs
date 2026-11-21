@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A9D RID: 2717
+	// Token: 0x02000B72 RID: 2930
 	public class ConfigWorldProgressCurveAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003FC3 RID: 16323 RVA: 0x001C2EA0 File Offset: 0x001C10A0
+		// Token: 0x060044C1 RID: 17601 RVA: 0x001E2234 File Offset: 0x001E0434
 		static ConfigWorldProgressCurveAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigWorldProgressCurveAll.CreateStaticDefaultValue), new Action(ConfigWorldProgressCurveAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003FC4 RID: 16324 RVA: 0x001C2EC0 File Offset: 0x001C10C0
+		// Token: 0x060044C2 RID: 17602 RVA: 0x001E2254 File Offset: 0x001E0454
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigWorldProgressCurveAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003FC5 RID: 16325 RVA: 0x001C2F3F File Offset: 0x001C113F
+		// Token: 0x060044C3 RID: 17603 RVA: 0x001E22D3 File Offset: 0x001E04D3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigWorldProgressCurveAll.LogPair = null;
 			ConfigWorldProgressCurveAll.HandleId = 0;
 		}
 
-		// Token: 0x06003FC6 RID: 16326 RVA: 0x001C2F4D File Offset: 0x001C114D
+		// Token: 0x060044C4 RID: 17604 RVA: 0x001E22E1 File Offset: 0x001E04E1
 		public static void Init()
 		{
 			ConfigWorldProgressCurveAll.HandleId = ConfigCommon.InitDataStatement(ConfigWorldProgressCurveAll.HandleId, "db_anniversaryt.db", "select BinData from `WorldProgressCurve`");
 		}
 
-		// Token: 0x06003FC7 RID: 16327 RVA: 0x001C2F68 File Offset: 0x001C1168
+		// Token: 0x060044C5 RID: 17605 RVA: 0x001E22FC File Offset: 0x001E04FC
 		[NullableContext(2)]
 		public static IReadOnlyList<WorldProgressCurve> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04004A31 RID: 18993
+		// Token: 0x04005004 RID: 20484
 		private const string DB = "db_anniversaryt.db";
 
-		// Token: 0x04004A32 RID: 18994
+		// Token: 0x04005005 RID: 20485
 		private const string FILE = "z.周年庆主题活动.xlsx";
 
-		// Token: 0x04004A33 RID: 18995
+		// Token: 0x04005006 RID: 20486
 		private const string TABLE = "WorldProgressCurve";
 
-		// Token: 0x04004A34 RID: 18996
+		// Token: 0x04005007 RID: 20487
 		private const string COMMAND = "select BinData from `WorldProgressCurve`";
 
-		// Token: 0x04004A35 RID: 18997
+		// Token: 0x04005008 RID: 20488
 		private const string KEY_PREFIX = "WorldProgressCurveAll";
 
-		// Token: 0x04004A36 RID: 18998
+		// Token: 0x04005009 RID: 20489
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004A37 RID: 18999
+		// Token: 0x0400500A RID: 20490
 		private static int HandleId;
 	}
 }

@@ -6,41 +6,34 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020022AE RID: 8878
+	// Token: 0x02000756 RID: 1878
+	[NullableContext(1)]
+	[Nullable(0)]
 	[UnrealObjectPath("/Script/MediaCompositing.MovieSceneMediaTrack")]
-	[UnrealStructLayout(240, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 240)]
-	public class UMovieSceneMediaTrack : UMovieSceneNameableTrack, IUnrealUObject, IUnrealObject, IMovieSceneTrackTemplateProducer, IUnrealNativeInterface, IUnrealInterface
+	[UnrealStructLayout(256, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 256)]
+	public class UMovieSceneMediaTrack : UMovieSceneNameableTrack, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06021BFF RID: 138239 RVA: 0x0031E6B9 File Offset: 0x0031C8B9
+		// Token: 0x0600A3FD RID: 41981 RVA: 0x000F21B2 File Offset: 0x000F03B2
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UMovieSceneMediaTrack._ClassPtr;
 		}
 
-		// Token: 0x06021C00 RID: 138240 RVA: 0x0031E6C5 File Offset: 0x0031C8C5
-		int IMovieSceneTrackTemplateProducer.InterfaceOffset()
-		{
-			return UMovieSceneMediaTrack.__InterfaceOffset_IMovieSceneTrackTemplateProducer;
-		}
-
-		// Token: 0x06021C01 RID: 138241 RVA: 0x0031E6CC File Offset: 0x0031C8CC
+		// Token: 0x0600A3FE RID: 41982 RVA: 0x000F21C0 File Offset: 0x000F03C0
 		public UMovieSceneMediaTrack() : this(BuiltinUtils.AllocNativeUObject(UMovieSceneMediaTrack.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06021C02 RID: 138242 RVA: 0x0031E6F4 File Offset: 0x0031C8F4
-		[NullableContext(1)]
+		// Token: 0x0600A3FF RID: 41983 RVA: 0x000F21E8 File Offset: 0x000F03E8
 		public UMovieSceneMediaTrack(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UMovieSceneMediaTrack.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170082EC RID: 33516
-		// (get) Token: 0x06021C03 RID: 138243 RVA: 0x0031E728 File Offset: 0x0031C928
-		// (set) Token: 0x06021C04 RID: 138244 RVA: 0x0031E761 File Offset: 0x0031C961
-		[Nullable(1)]
+		// Token: 0x17001E61 RID: 7777
+		// (get) Token: 0x0600A400 RID: 41984 RVA: 0x000F221C File Offset: 0x000F041C
+		// (set) Token: 0x0600A401 RID: 41985 RVA: 0x000F2255 File Offset: 0x000F0455
 		public TArray<UMovieSceneSection> MediaSections
 		{
-			[NullableContext(1)]
 			get
 			{
 				base.FastCheckIsValid();
@@ -51,41 +44,36 @@ namespace UnrealEngine
 				}
 				return result;
 			}
-			[NullableContext(1)]
 			set
 			{
 				this.MediaSections.CopyAssign(value);
 			}
 		}
 
-		// Token: 0x06021C05 RID: 138245 RVA: 0x0031E76F File Offset: 0x0031C96F
+		// Token: 0x0600A402 RID: 41986 RVA: 0x000F2263 File Offset: 0x000F0463
 		static UMovieSceneMediaTrack()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/MediaCompositing.MovieSceneMediaTrack");
 		}
 
-		// Token: 0x06021C06 RID: 138246 RVA: 0x0031E77D File Offset: 0x0031C97D
+		// Token: 0x0600A403 RID: 41987 RVA: 0x000F2271 File Offset: 0x000F0471
 		protected UMovieSceneMediaTrack(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0401201A RID: 73754
-		internal static int __InterfaceOffset_IMovieSceneTrackTemplateProducer;
-
-		// Token: 0x0401201B RID: 73755
-		[Nullable(1)]
+		// Token: 0x040045F1 RID: 17905
 		public new const string __ObjectPath = "/Script/MediaCompositing.MovieSceneMediaTrack";
 
-		// Token: 0x0401201C RID: 73756
+		// Token: 0x040045F2 RID: 17906
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401201D RID: 73757
+		// Token: 0x040045F3 RID: 17907
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401201E RID: 73758
+		// Token: 0x040045F4 RID: 17908
 		internal static int __PropertyOffset_MediaSections;
 
-		// Token: 0x0401201F RID: 73759
+		// Token: 0x040045F5 RID: 17909
 		[Nullable(new byte[]
 		{
 			2,

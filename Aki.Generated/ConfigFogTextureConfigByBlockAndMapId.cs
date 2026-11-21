@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000343 RID: 835
+	// Token: 0x02000358 RID: 856
 	public class ConfigFogTextureConfigByBlockAndMapId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001397 RID: 5015 RVA: 0x000C8121 File Offset: 0x000C6321
+		// Token: 0x06001415 RID: 5141 RVA: 0x000CE62D File Offset: 0x000CC82D
 		static ConfigFogTextureConfigByBlockAndMapId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigFogTextureConfigByBlockAndMapId.CreateStaticDefaultValue), new Action(ConfigFogTextureConfigByBlockAndMapId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001398 RID: 5016 RVA: 0x000C8140 File Offset: 0x000C6340
+		// Token: 0x06001416 RID: 5142 RVA: 0x000CE64C File Offset: 0x000CC84C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigFogTextureConfigByBlockAndMapId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001399 RID: 5017 RVA: 0x000C81BF File Offset: 0x000C63BF
+		// Token: 0x06001417 RID: 5143 RVA: 0x000CE6CB File Offset: 0x000CC8CB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigFogTextureConfigByBlockAndMapId.LogPair = null;
 			ConfigFogTextureConfigByBlockAndMapId.HandleId = 0;
 		}
 
-		// Token: 0x0600139A RID: 5018 RVA: 0x000C81CD File Offset: 0x000C63CD
+		// Token: 0x06001418 RID: 5144 RVA: 0x000CE6D9 File Offset: 0x000CC8D9
 		public static void Init()
 		{
 			ConfigFogTextureConfigByBlockAndMapId.HandleId = ConfigCommon.InitDataStatement(ConfigFogTextureConfigByBlockAndMapId.HandleId, "db_mapfog.db", "select BinData from `FogTextureConfig` where Block=? And MapId=?");
 		}
 
-		// Token: 0x0600139B RID: 5019 RVA: 0x000C81E8 File Offset: 0x000C63E8
+		// Token: 0x06001419 RID: 5145 RVA: 0x000CE6F4 File Offset: 0x000CC8F4
 		public static FogTextureConfig? GetConfig(string p0Block, int p1MapId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigFogTextureConfigByBlockAndMapId.HandleId, ConfigFogTextureConfigByBlockAndMapId.LogPair))
@@ -93,22 +93,22 @@ namespace Aki.Config
 			return new FogTextureConfig?(rootAsFogTextureConfig);
 		}
 
-		// Token: 0x040016B9 RID: 5817
+		// Token: 0x0400174C RID: 5964
 		private const string DB = "db_mapfog.db";
 
-		// Token: 0x040016BA RID: 5818
+		// Token: 0x0400174D RID: 5965
 		private const string FILE = "d.地图迷雾.xlsx";
 
-		// Token: 0x040016BB RID: 5819
+		// Token: 0x0400174E RID: 5966
 		private const string TABLE = "FogTextureConfig";
 
-		// Token: 0x040016BC RID: 5820
+		// Token: 0x0400174F RID: 5967
 		private const string COMMAND = "select BinData from `FogTextureConfig` where Block=? And MapId=?";
 
-		// Token: 0x040016BD RID: 5821
+		// Token: 0x04001750 RID: 5968
 		private const string KEY_PREFIX = "FogTextureConfigByBlockAndMapId";
 
-		// Token: 0x040016BE RID: 5822
+		// Token: 0x04001751 RID: 5969
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,7 +118,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040016BF RID: 5823
+		// Token: 0x04001752 RID: 5970
 		private static int HandleId;
 	}
 }

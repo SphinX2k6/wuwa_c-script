@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002193 RID: 8595
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020023FC RID: 9212
 	public class ServerSetPlayerPos : ActionParams
 	{
-		// Token: 0x0600BCCE RID: 48334 RVA: 0x001B3124 File Offset: 0x001B1324
+		// Token: 0x0600C87E RID: 51326 RVA: 0x001CA61C File Offset: 0x001C881C
 		private ServerSetPlayerPos_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BCCF RID: 48335 RVA: 0x001B315C File Offset: 0x001B135C
+		// Token: 0x0600C87F RID: 51327 RVA: 0x001CA654 File Offset: 0x001C8854
 		public static ServerSetPlayerPos Create([Nullable(2)] ServerSetPlayerPos instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BCD0 RID: 48336 RVA: 0x001B316F File Offset: 0x001B136F
+		// Token: 0x0600C880 RID: 51328 RVA: 0x001CA667 File Offset: 0x001C8867
 		public static ServerSetPlayerPos CreateFromSetValue([Nullable(2)] ServerSetPlayerPos_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BCD1 RID: 48337 RVA: 0x001B3182 File Offset: 0x001B1382
+		// Token: 0x0600C881 RID: 51329 RVA: 0x001CA67A File Offset: 0x001C887A
 		public ServerSetPlayerPos_SetValue ToSetValue()
 		{
 			return new ServerSetPlayerPos_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700396B RID: 14699
-		// (get) Token: 0x0600BCD2 RID: 48338 RVA: 0x001B3198 File Offset: 0x001B1398
-		// (set) Token: 0x0600BCD3 RID: 48339 RVA: 0x001B31F9 File Offset: 0x001B13F9
+		// Token: 0x17003C5D RID: 15453
+		// (get) Token: 0x0600C882 RID: 51330 RVA: 0x001CA690 File Offset: 0x001C8890
+		// (set) Token: 0x0600C883 RID: 51331 RVA: 0x001CA6F1 File Offset: 0x001C88F1
 		public virtual PosA Pos
 		{
 			get
@@ -89,18 +87,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040070B4 RID: 28852
+		// Token: 0x040076F6 RID: 30454
 		[Nullable(2)]
 		protected new ServerSetPlayerPos FbInstance;
 
-		// Token: 0x040070B5 RID: 28853
+		// Token: 0x040076F7 RID: 30455
 		[Nullable(2)]
 		protected ServerSetPlayerPos_SetValue PocoInterface;
 
-		// Token: 0x040070B6 RID: 28854
+		// Token: 0x040076F8 RID: 30456
 		private PosA _PosCache;
 
-		// Token: 0x040070B7 RID: 28855
+		// Token: 0x040076F9 RID: 30457
 		private bool _PosInited;
 	}
 }

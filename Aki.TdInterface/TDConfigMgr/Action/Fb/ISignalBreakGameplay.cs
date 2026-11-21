@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002859 RID: 10329
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B2C RID: 11052
 	public class ISignalBreakGameplay : IUiGame
 	{
-		// Token: 0x0600E4FB RID: 58619 RVA: 0x0021B04B File Offset: 0x0021924B
+		// Token: 0x0600F320 RID: 62240 RVA: 0x00237EAF File Offset: 0x002360AF
 		public static ISignalBreakGameplay Create(ISignalBreakGameplay? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700460B RID: 17931
-		// (get) Token: 0x0600E4FC RID: 58620 RVA: 0x0021B06A File Offset: 0x0021926A
+		// Token: 0x17004976 RID: 18806
+		// (get) Token: 0x0600F321 RID: 62241 RVA: 0x00237ECE File Offset: 0x002360CE
 		public override ESimpleGameplayType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700460C RID: 17932
-		// (get) Token: 0x0600E4FD RID: 58621 RVA: 0x0021B077 File Offset: 0x00219277
+		// Token: 0x17004977 RID: 18807
+		// (get) Token: 0x0600F322 RID: 62242 RVA: 0x00237EDB File Offset: 0x002360DB
 		public virtual string SignalBreakId
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007EAD RID: 32429
+		// Token: 0x0400856A RID: 34154
 		private ISignalBreakGameplay Instance;
 	}
 }

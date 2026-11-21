@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200277C RID: 10108
+	// Token: 0x02002A4E RID: 10830
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CloseFlowTemplate : ActionParams
 	{
-		// Token: 0x0600E10C RID: 57612 RVA: 0x00214031 File Offset: 0x00212231
-		[NullableContext(1)]
+		// Token: 0x0600EF2A RID: 61226 RVA: 0x00230DC5 File Offset: 0x0022EFC5
+		[NullableContext(0)]
 		public static CloseFlowTemplate Create(ICloseFlowTemplate? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170043D6 RID: 17366
-		// (get) Token: 0x0600E10D RID: 57613 RVA: 0x00214050 File Offset: 0x00212250
+		// Token: 0x1700473C RID: 18236
+		// (get) Token: 0x0600EF2B RID: 61227 RVA: 0x00230DE4 File Offset: 0x0022EFE4
 		public virtual bool IsResetPosition
 		{
 			get
@@ -33,8 +33,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043D7 RID: 17367
-		// (get) Token: 0x0600E10E RID: 57614 RVA: 0x0021405D File Offset: 0x0021225D
+		// Token: 0x1700473D RID: 18237
+		// (get) Token: 0x0600EF2C RID: 61228 RVA: 0x00230DF1 File Offset: 0x0022EFF1
 		public virtual IEndState EndState
 		{
 			get
@@ -49,8 +49,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043D8 RID: 17368
-		// (get) Token: 0x0600E10F RID: 57615 RVA: 0x00214094 File Offset: 0x00212294
+		// Token: 0x1700473E RID: 18238
+		// (get) Token: 0x0600EF2D RID: 61229 RVA: 0x00230E28 File Offset: 0x0022F028
 		public virtual bool? ExitFilmAspectRatio
 		{
 			get
@@ -63,13 +63,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007CA4 RID: 31908
+		// Token: 0x0400835A RID: 33626
 		private ICloseFlowTemplate Instance;
 
-		// Token: 0x04007CA5 RID: 31909
+		// Token: 0x0400835B RID: 33627
 		private IEndState _EndStateCache;
 
-		// Token: 0x04007CA6 RID: 31910
+		// Token: 0x0400835C RID: 33628
 		private bool _EndStateInited;
 	}
 }

@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020007D9 RID: 2009
+	// Token: 0x020007F5 RID: 2037
 	public class ConfigRegressRecommendByType : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002F28 RID: 12072 RVA: 0x00163C0C File Offset: 0x00161E0C
+		// Token: 0x06002FD0 RID: 12240 RVA: 0x0016AEF4 File Offset: 0x001690F4
 		static ConfigRegressRecommendByType()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRegressRecommendByType.CreateStaticDefaultValue), new Action(ConfigRegressRecommendByType.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002F29 RID: 12073 RVA: 0x00163C2C File Offset: 0x00161E2C
+		// Token: 0x06002FD1 RID: 12241 RVA: 0x0016AF14 File Offset: 0x00169114
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRegressRecommendByType.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002F2A RID: 12074 RVA: 0x00163CAB File Offset: 0x00161EAB
+		// Token: 0x06002FD2 RID: 12242 RVA: 0x0016AF93 File Offset: 0x00169193
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRegressRecommendByType.LogPair = null;
 			ConfigRegressRecommendByType.HandleId = 0;
 		}
 
-		// Token: 0x06002F2B RID: 12075 RVA: 0x00163CB9 File Offset: 0x00161EB9
+		// Token: 0x06002FD3 RID: 12243 RVA: 0x0016AFA1 File Offset: 0x001691A1
 		public static void Init()
 		{
 			ConfigRegressRecommendByType.HandleId = ConfigCommon.InitDataStatement(ConfigRegressRecommendByType.HandleId, "db_regressactivity.db", "select BinData from `RegressRecommend` where Type=?");
 		}
 
-		// Token: 0x06002F2C RID: 12076 RVA: 0x00163CD4 File Offset: 0x00161ED4
+		// Token: 0x06002FD4 RID: 12244 RVA: 0x0016AFBC File Offset: 0x001691BC
 		[NullableContext(2)]
 		public static IReadOnlyList<RegressRecommend> GetConfigList(int p0Type, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040036D5 RID: 14037
+		// Token: 0x04003799 RID: 14233
 		private const string DB = "db_regressactivity.db";
 
-		// Token: 0x040036D6 RID: 14038
+		// Token: 0x0400379A RID: 14234
 		private const string FILE = "h.回流活动(新).xlsx";
 
-		// Token: 0x040036D7 RID: 14039
+		// Token: 0x0400379B RID: 14235
 		private const string TABLE = "RegressRecommend";
 
-		// Token: 0x040036D8 RID: 14040
+		// Token: 0x0400379C RID: 14236
 		private const string COMMAND = "select BinData from `RegressRecommend` where Type=?";
 
-		// Token: 0x040036D9 RID: 14041
+		// Token: 0x0400379D RID: 14237
 		private const string KEY_PREFIX = "RegressRecommendByType";
 
-		// Token: 0x040036DA RID: 14042
+		// Token: 0x0400379E RID: 14238
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040036DB RID: 14043
+		// Token: 0x0400379F RID: 14239
 		private static int HandleId;
 	}
 }

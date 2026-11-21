@@ -6,12 +6,12 @@ using Aki.Protocol.Summon;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.NewWorld.Character.Common.Component.Abilities;
 
-// Token: 0x0200323D RID: 12861
+// Token: 0x020027AC RID: 10156
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleElementComponent : EntityComponent
 {
-	// Token: 0x0601BC20 RID: 113696 RVA: 0x007A6260 File Offset: 0x007A4460
+	// Token: 0x060197C6 RID: 104390 RVA: 0x007CEB3C File Offset: 0x007CCD3C
 	protected override bool OnStart()
 	{
 		this.ActorComponent = base.Entity.GetComponent<CharacterActorComponent>();
@@ -40,7 +40,7 @@ public class RoleElementComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601BC21 RID: 113697 RVA: 0x007A63FC File Offset: 0x007A45FC
+	// Token: 0x060197C7 RID: 104391 RVA: 0x007CECD8 File Offset: 0x007CCED8
 	protected override bool OnEnd()
 	{
 		BaseAttributeComponent attributeComponent = this.AttributeComponent;
@@ -64,9 +64,9 @@ public class RoleElementComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x17002641 RID: 9793
-	// (get) Token: 0x0601BC23 RID: 113699 RVA: 0x007A65FD File Offset: 0x007A47FD
-	// (set) Token: 0x0601BC22 RID: 113698 RVA: 0x007A6530 File Offset: 0x007A4730
+	// Token: 0x170028A0 RID: 10400
+	// (get) Token: 0x060197C9 RID: 104393 RVA: 0x007CEED9 File Offset: 0x007CD0D9
+	// (set) Token: 0x060197C8 RID: 104392 RVA: 0x007CEE0C File Offset: 0x007CD00C
 	private bool ElementActivated
 	{
 		get
@@ -114,8 +114,8 @@ public class RoleElementComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x17002642 RID: 9794
-	// (get) Token: 0x0601BC24 RID: 113700 RVA: 0x007A661F File Offset: 0x007A481F
+	// Token: 0x170028A1 RID: 10401
+	// (get) Token: 0x060197CA RID: 104394 RVA: 0x007CEEFB File Offset: 0x007CD0FB
 	public EElementType RoleElementType
 	{
 		get
@@ -125,8 +125,8 @@ public class RoleElementComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x17002643 RID: 9795
-	// (get) Token: 0x0601BC25 RID: 113701 RVA: 0x007A663A File Offset: 0x007A483A
+	// Token: 0x170028A2 RID: 10402
+	// (get) Token: 0x060197CB RID: 104395 RVA: 0x007CEF16 File Offset: 0x007CD116
 	public float RoleElementEnergy
 	{
 		get
@@ -140,8 +140,8 @@ public class RoleElementComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x17002644 RID: 9796
-	// (get) Token: 0x0601BC26 RID: 113702 RVA: 0x007A6653 File Offset: 0x007A4853
+	// Token: 0x170028A3 RID: 10403
+	// (get) Token: 0x060197CC RID: 104396 RVA: 0x007CEF2F File Offset: 0x007CD12F
 	public float RoleElementEnergyMax
 	{
 		get
@@ -155,7 +155,7 @@ public class RoleElementComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BC27 RID: 113703 RVA: 0x007A666C File Offset: 0x007A486C
+	// Token: 0x060197CD RID: 104397 RVA: 0x007CEF48 File Offset: 0x007CD148
 	private void OnElementEnergyChanged(EAttributeType attributeId, float newValue, float oldValue)
 	{
 		this.CheckEnergyFull(newValue);
@@ -164,7 +164,7 @@ public class RoleElementComponent : EntityComponent
 		EventSystem.Instance.Emit<EElementType, float, float>(EEventName.CharOnElementEnergyChanged, roleElementType, newValue, oldValue);
 	}
 
-	// Token: 0x0601BC28 RID: 113704 RVA: 0x007A66B4 File Offset: 0x007A48B4
+	// Token: 0x060197CE RID: 104398 RVA: 0x007CEF90 File Offset: 0x007CD190
 	private void CheckEnergyFull(float energy)
 	{
 		if (energy >= this.TriggerEnergy - 1E-45f)
@@ -205,7 +205,7 @@ public class RoleElementComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BC29 RID: 113705 RVA: 0x007A6774 File Offset: 0x007A4974
+	// Token: 0x060197CF RID: 104399 RVA: 0x007CF050 File Offset: 0x007CD250
 	private void OnStateInherit(Entity oldEntity, bool _)
 	{
 		if (FormationDataController.Instance.GlobalIsInFight)
@@ -214,7 +214,7 @@ public class RoleElementComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BC2A RID: 113706 RVA: 0x007A6789 File Offset: 0x007A4989
+	// Token: 0x060197D0 RID: 104400 RVA: 0x007CF065 File Offset: 0x007CD265
 	private void OnBattleStateChanged(bool inFight)
 	{
 		this.NeedCheckEnergy = inFight;
@@ -224,7 +224,7 @@ public class RoleElementComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BC2B RID: 113707 RVA: 0x007A679C File Offset: 0x007A499C
+	// Token: 0x060197D1 RID: 104401 RVA: 0x007CF078 File Offset: 0x007CD278
 	private void CheckEnergyOnce(global::HitInformation hitInformation, HitContext hitContext)
 	{
 		if (this.NeedCheckEnergy)
@@ -234,7 +234,7 @@ public class RoleElementComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BC2C RID: 113708 RVA: 0x007A67BC File Offset: 0x007A49BC
+	// Token: 0x060197D2 RID: 104402 RVA: 0x007CF098 File Offset: 0x007CD298
 	public void TriggerEvents(Entity newRole)
 	{
 		RoleElementComponent component = newRole.GetComponent<RoleElementComponent>();
@@ -258,7 +258,7 @@ public class RoleElementComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BC2D RID: 113709 RVA: 0x007A6823 File Offset: 0x007A4A23
+	// Token: 0x060197D3 RID: 104403 RVA: 0x007CF0FF File Offset: 0x007CD2FF
 	private void OnRoleRevive()
 	{
 		CharacterActorComponent actorComponent = this.ActorComponent;
@@ -268,7 +268,7 @@ public class RoleElementComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BC2E RID: 113710 RVA: 0x007A6847 File Offset: 0x007A4A47
+	// Token: 0x060197D4 RID: 104404 RVA: 0x007CF123 File Offset: 0x007CD323
 	private void OnRoleDead()
 	{
 		CharacterActorComponent actorComponent = this.ActorComponent;
@@ -278,7 +278,7 @@ public class RoleElementComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BC2F RID: 113711 RVA: 0x007A686C File Offset: 0x007A4A6C
+	// Token: 0x060197D5 RID: 104405 RVA: 0x007CF148 File Offset: 0x007CD348
 	public void ClearElementEnergy(Entity instigator, long consumeBuffId = 0L)
 	{
 		if (consumeBuffId == 0L)
@@ -298,7 +298,7 @@ public class RoleElementComponent : EntityComponent
 		buffComponent.AddBuff(buffId, addBuffParam);
 	}
 
-	// Token: 0x0601BC30 RID: 113712 RVA: 0x007A68C0 File Offset: 0x007A4AC0
+	// Token: 0x060197D6 RID: 104406 RVA: 0x007CF19C File Offset: 0x007CD39C
 	private void MultiQteGuide()
 	{
 		SceneTeamModel instance = SceneTeamModel.Instance;
@@ -331,7 +331,7 @@ public class RoleElementComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601BC31 RID: 113713 RVA: 0x007A6988 File Offset: 0x007A4B88
+	// Token: 0x060197D7 RID: 104407 RVA: 0x007CF264 File Offset: 0x007CD464
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -339,102 +339,98 @@ public class RoleElementComponent : EntityComponent
 			return false;
 		}
 		RoleElementComponent roleElementComponent = (RoleElementComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ActorComponent"))
+		if (roleElementComponent.ActorComponent == null)
 		{
-			if (roleElementComponent.ActorComponent == null)
-			{
-				this.ActorComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComponent), "ActorComponent"))
-			{
-				return false;
-			}
+			this.ActorComponent = null;
 		}
-		if (base.CanResetComponentProperty("AttributeComponent"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComponent), "ActorComponent"))
 		{
-			if (roleElementComponent.AttributeComponent == null)
-			{
-				this.AttributeComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseAttributeComponent>(this.AttributeComponent), "AttributeComponent"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("BuffComponent"))
+		if (roleElementComponent.AttributeComponent == null)
 		{
-			if (roleElementComponent.BuffComponent == null)
-			{
-				this.BuffComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterBuffComponent>(this.BuffComponent), "BuffComponent"))
-			{
-				return false;
-			}
+			this.AttributeComponent = null;
 		}
-		if (base.CanResetComponentProperty("SummonedEntity"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AttributeComponent), "AttributeComponent"))
 		{
-			if (roleElementComponent.SummonedEntity == null)
-			{
-				this.SummonedEntity = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<EntityHandle>(this.SummonedEntity), "SummonedEntity"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("TagComponent"))
+		if (roleElementComponent.BuffComponent == null)
 		{
-			if (roleElementComponent.TagComponent == null)
-			{
-				this.TagComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComponent), "TagComponent"))
-			{
-				return false;
-			}
+			this.BuffComponent = null;
 		}
-		if (base.CanResetComponentProperty("NeedCheckEnergy"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BuffComponent), "BuffComponent"))
 		{
-			this.NeedCheckEnergy = roleElementComponent.NeedCheckEnergy;
+			return false;
 		}
-		if (base.CanResetComponentProperty("TriggerEnergy"))
+		if (roleElementComponent.SummonedEntity == null)
 		{
-			this.TriggerEnergy = roleElementComponent.TriggerEnergy;
+			this.SummonedEntity = null;
 		}
-		if (base.CanResetComponentProperty("QteBuffId"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SummonedEntity), "SummonedEntity"))
 		{
-			this.QteBuffId = roleElementComponent.QteBuffId;
+			return false;
 		}
+		if (roleElementComponent.TagComponent == null)
+		{
+			this.TagComponent = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComponent), "TagComponent"))
+		{
+			return false;
+		}
+		this.NeedCheckEnergy = roleElementComponent.NeedCheckEnergy;
+		this.TriggerEnergy = roleElementComponent.TriggerEnergy;
+		this.QteBuffId = roleElementComponent.QteBuffId;
 		return true;
 	}
 
-	// Token: 0x0400DAA3 RID: 55971
+	// Token: 0x170028A4 RID: 10404
+	// (get) Token: 0x060197D8 RID: 104408 RVA: 0x007CF37F File Offset: 0x007CD57F
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170028A5 RID: 10405
+	// (get) Token: 0x060197D9 RID: 104409 RVA: 0x007CF382 File Offset: 0x007CD582
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400DF42 RID: 57154
 	[Nullable(2)]
 	private CharacterActorComponent ActorComponent;
 
-	// Token: 0x0400DAA4 RID: 55972
+	// Token: 0x0400DF43 RID: 57155
 	[Nullable(2)]
 	private BaseAttributeComponent AttributeComponent;
 
-	// Token: 0x0400DAA5 RID: 55973
+	// Token: 0x0400DF44 RID: 57156
 	[Nullable(2)]
 	private CharacterBuffComponent BuffComponent;
 
-	// Token: 0x0400DAA6 RID: 55974
+	// Token: 0x0400DF45 RID: 57157
 	[Nullable(2)]
 	private EntityHandle SummonedEntity;
 
-	// Token: 0x0400DAA7 RID: 55975
+	// Token: 0x0400DF46 RID: 57158
 	[Nullable(2)]
 	private BaseTagComponent TagComponent;
 
-	// Token: 0x0400DAA8 RID: 55976
+	// Token: 0x0400DF47 RID: 57159
 	private bool NeedCheckEnergy;
 
-	// Token: 0x0400DAA9 RID: 55977
+	// Token: 0x0400DF48 RID: 57160
 	public float TriggerEnergy;
 
-	// Token: 0x0400DAAA RID: 55978
+	// Token: 0x0400DF49 RID: 57161
 	private long QteBuffId;
 }

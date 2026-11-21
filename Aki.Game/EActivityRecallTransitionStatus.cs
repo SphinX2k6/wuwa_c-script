@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02001453 RID: 5203
+// Token: 0x02000907 RID: 2311
 public enum EActivityRecallTransitionStatus
 {
-	// Token: 0x04004127 RID: 16679
+	// Token: 0x040041BF RID: 16831
 	Init,
-	// Token: 0x04004128 RID: 16680
+	// Token: 0x040041C0 RID: 16832
 	WaitToGetReward,
-	// Token: 0x04004129 RID: 16681
+	// Token: 0x040041C1 RID: 16833
 	ReqRewardAndJumpActivity,
-	// Token: 0x0400412A RID: 16682
+	// Token: 0x040041C2 RID: 16834
 	Finish
 }

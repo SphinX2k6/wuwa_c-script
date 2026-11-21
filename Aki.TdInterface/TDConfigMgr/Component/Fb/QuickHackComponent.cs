@@ -6,13 +6,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DF2 RID: 3570
+	// Token: 0x02000EEE RID: 3822
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class QuickHackComponent : IComponentBase
 	{
-		// Token: 0x060050DF RID: 20703 RVA: 0x000C7ABE File Offset: 0x000C5CBE
-		[NullableContext(1)]
+		// Token: 0x06005606 RID: 22022 RVA: 0x000D3386 File Offset: 0x000D1586
+		[NullableContext(0)]
 		public static QuickHackComponent Create(IQuickHackComponent? instance)
 		{
 			if (instance == null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001AB8 RID: 6840
-		// (get) Token: 0x060050E0 RID: 20704 RVA: 0x000C7AE0 File Offset: 0x000C5CE0
+		// Token: 0x17001C25 RID: 7205
+		// (get) Token: 0x06005607 RID: 22023 RVA: 0x000D33A8 File Offset: 0x000D15A8
 		public override bool? Disabled
 		{
 			get
@@ -39,8 +39,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001AB9 RID: 6841
-		// (get) Token: 0x060050E1 RID: 20705 RVA: 0x000C7B18 File Offset: 0x000C5D18
+		// Token: 0x17001C26 RID: 7206
+		// (get) Token: 0x06005608 RID: 22024 RVA: 0x000D33E0 File Offset: 0x000D15E0
 		public override bool? EdIsLocked
 		{
 			get
@@ -49,8 +49,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001ABA RID: 6842
-		// (get) Token: 0x060050E2 RID: 20706 RVA: 0x000C7B2E File Offset: 0x000C5D2E
+		// Token: 0x17001C27 RID: 7207
+		// (get) Token: 0x06005609 RID: 22025 RVA: 0x000D33F6 File Offset: 0x000D15F6
 		public virtual float Time
 		{
 			get
@@ -59,8 +59,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001ABB RID: 6843
-		// (get) Token: 0x060050E3 RID: 20707 RVA: 0x000C7B3B File Offset: 0x000C5D3B
+		// Token: 0x17001C28 RID: 7208
+		// (get) Token: 0x0600560A RID: 22026 RVA: 0x000D3403 File Offset: 0x000D1603
 		public virtual VectorInfo IconOffset
 		{
 			get
@@ -75,12 +75,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001ABC RID: 6844
-		// (get) Token: 0x060050E4 RID: 20708 RVA: 0x000C7B70 File Offset: 0x000C5D70
-		[Nullable(1)]
+		// Token: 0x17001C29 RID: 7209
+		// (get) Token: 0x0600560B RID: 22027 RVA: 0x000D3438 File Offset: 0x000D1638
+		[Nullable(0)]
 		public virtual List<IQuickHackSkill> Skills
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._SkillsInited)
@@ -98,8 +98,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001ABD RID: 6845
-		// (get) Token: 0x060050E5 RID: 20709 RVA: 0x000C7BDC File Offset: 0x000C5DDC
+		// Token: 0x17001C2A RID: 7210
+		// (get) Token: 0x0600560C RID: 22028 RVA: 0x000D34A4 File Offset: 0x000D16A4
 		public virtual EQuickHackAutoCloseType? AutoClose
 		{
 			get
@@ -112,8 +112,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001ABE RID: 6846
-		// (get) Token: 0x060050E6 RID: 20710 RVA: 0x000C7C12 File Offset: 0x000C5E12
+		// Token: 0x17001C2B RID: 7211
+		// (get) Token: 0x0600560D RID: 22029 RVA: 0x000D34DA File Offset: 0x000D16DA
 		public virtual IQuickHackLinkEffect LinkEffect
 		{
 			get
@@ -128,26 +128,26 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002E7D RID: 11901
+		// Token: 0x04003145 RID: 12613
 		private IQuickHackComponent Instance;
 
-		// Token: 0x04002E7E RID: 11902
+		// Token: 0x04003146 RID: 12614
 		private VectorInfo _IconOffsetCache;
 
-		// Token: 0x04002E7F RID: 11903
+		// Token: 0x04003147 RID: 12615
 		private bool _IconOffsetInited;
 
-		// Token: 0x04002E80 RID: 11904
-		[Nullable(1)]
+		// Token: 0x04003148 RID: 12616
+		[Nullable(0)]
 		private List<IQuickHackSkill> _SkillsCache;
 
-		// Token: 0x04002E81 RID: 11905
+		// Token: 0x04003149 RID: 12617
 		private bool _SkillsInited;
 
-		// Token: 0x04002E82 RID: 11906
+		// Token: 0x0400314A RID: 12618
 		private IQuickHackLinkEffect _LinkEffectCache;
 
-		// Token: 0x04002E83 RID: 11907
+		// Token: 0x0400314B RID: 12619
 		private bool _LinkEffectInited;
 	}
 }

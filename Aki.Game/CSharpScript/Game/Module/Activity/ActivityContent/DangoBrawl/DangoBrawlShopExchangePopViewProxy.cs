@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.Inventory;
@@ -8,12 +7,12 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006840 RID: 26688
+	// Token: 0x02005790 RID: 22416
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlShopExchangePopViewProxy : CommonGameplayShopExchangePopViewProxy
 	{
-		// Token: 0x060429C5 RID: 272837 RVA: 0x01031EE9 File Offset: 0x010300E9
+		// Token: 0x06037519 RID: 226585 RVA: 0x00F733F5 File Offset: 0x00F715F5
 		public new void UpdateFromPayShopGoods(PayShopGoods payShopGoods)
 		{
 			base.UpdateFromPayShopGoods(payShopGoods);
@@ -21,7 +20,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.ApplyLeftTimePrefix();
 		}
 
-		// Token: 0x060429C6 RID: 272838 RVA: 0x01031F00 File Offset: 0x01030100
+		// Token: 0x0603751A RID: 226586 RVA: 0x00F7340C File Offset: 0x00F7160C
 		public override void UpdateShopItemData()
 		{
 			if (this.GoodsData == null)
@@ -34,13 +33,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.UpdateShopItemResource();
 		}
 
-		// Token: 0x060429C7 RID: 272839 RVA: 0x01031F35 File Offset: 0x01030135
+		// Token: 0x0603751B RID: 226587 RVA: 0x00F73441 File Offset: 0x00F71641
 		public override void UpdateShopItemResource()
 		{
 			base.ShopItemResource = "UiItem_DangoBrawlActShopItem";
 		}
 
-		// Token: 0x060429C8 RID: 272840 RVA: 0x01031F44 File Offset: 0x01030144
+		// Token: 0x0603751C RID: 226588 RVA: 0x00F73450 File Offset: 0x00F71650
 		public override void UpdateTipTitleItem()
 		{
 			if (this.GoodsData == null || !this.GoodsData.IsLimitGoods())
@@ -64,14 +63,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x060429C9 RID: 272841 RVA: 0x01031FF1 File Offset: 0x010301F1
+		// Token: 0x0603751D RID: 226589 RVA: 0x00F734FD File Offset: 0x00F716FD
 		public override UiPanelBase ShopItemCreate()
 		{
 			this.ShopItem = new DangoBrawlExchangeShopItem();
 			return this.ShopItem;
 		}
 
-		// Token: 0x060429CA RID: 272842 RVA: 0x01032004 File Offset: 0x01030204
+		// Token: 0x0603751E RID: 226590 RVA: 0x00F73510 File Offset: 0x00F71710
 		public override void ShopItemRefresh()
 		{
 			DangoBrawlExchangeShopItem dangoBrawlExchangeShopItem = this.ShopItem as DangoBrawlExchangeShopItem;
@@ -82,7 +81,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			dangoBrawlExchangeShopItem.RefreshByData((DangoBrawlExchangeShopItemProxy)base.ShopItemProxy);
 		}
 
-		// Token: 0x060429CB RID: 272843 RVA: 0x0103203C File Offset: 0x0103023C
+		// Token: 0x0603751F RID: 226591 RVA: 0x00F73548 File Offset: 0x00F71748
 		private void UpdateMaxBuyCount()
 		{
 			if (this.GoodsData == null)
@@ -113,11 +112,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 			ItemConfig itemConfigData = InventoryConfig.Instance.GetItemConfigData(goodsData.ItemId);
 			InventoryDefine.EItemDataType itemDataTypeByConfigId = InventoryConfig.Instance.GetItemDataTypeByConfigId(new int?(goodsData.ItemId));
-			if (itemConfigData != null && itemDataTypeByConfigId == InventoryDefine.EItemDataType.RoleItem && itemConfigData.ShowTypes.Contains(30))
+			if (itemConfigData != null && itemDataTypeByConfigId == InventoryDefine.EItemDataType.RoleItem && Array.IndexOf<int>(itemConfigData.ShowTypes, 30) >= 0)
 			{
 				num2 = 1;
 			}
-			if (itemConfigData != null && itemConfigData.ShowTypes.Contains(30))
+			if (itemConfigData != null && Array.IndexOf<int>(itemConfigData.ShowTypes, 30) >= 0)
 			{
 				int[] resonantItemRoleId = RoleModel.Instance.GetResonantItemRoleId(goodsData.ItemId);
 				int num3 = RoleModel.Instance.GetRoleLeftResonantCountWithInventoryItem(resonantItemRoleId[0]);
@@ -127,7 +126,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			base.MaxBuyCount = num2;
 		}
 
-		// Token: 0x060429CC RID: 272844 RVA: 0x01032164 File Offset: 0x01030364
+		// Token: 0x06037520 RID: 226592 RVA: 0x00F73670 File Offset: 0x00F71870
 		private void ApplyLeftTimePrefix()
 		{
 			if (!base.LeftTimeItemVisible)

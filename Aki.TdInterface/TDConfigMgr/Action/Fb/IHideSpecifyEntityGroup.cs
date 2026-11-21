@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002794 RID: 10132
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A66 RID: 10854
 	public class IHideSpecifyEntityGroup : IHideGroupType
 	{
-		// Token: 0x0600E189 RID: 57737 RVA: 0x002154AD File Offset: 0x002136AD
+		// Token: 0x0600EFA7 RID: 61351 RVA: 0x00232241 File Offset: 0x00230441
 		public static IHideSpecifyEntityGroup Create(IHideSpecifyEntityGroup? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004423 RID: 17443
-		// (get) Token: 0x0600E18A RID: 57738 RVA: 0x002154CC File Offset: 0x002136CC
+		// Token: 0x17004789 RID: 18313
+		// (get) Token: 0x0600EFA8 RID: 61352 RVA: 0x00232260 File Offset: 0x00230460
 		public override EHideType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004424 RID: 17444
-		// (get) Token: 0x0600E18B RID: 57739 RVA: 0x002154DC File Offset: 0x002136DC
+		// Token: 0x1700478A RID: 18314
+		// (get) Token: 0x0600EFA9 RID: 61353 RVA: 0x00232270 File Offset: 0x00230470
 		public virtual List<int> EntityIds
 		{
 			get
@@ -54,8 +51,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004425 RID: 17445
-		// (get) Token: 0x0600E18C RID: 57740 RVA: 0x00215540 File Offset: 0x00213740
+		// Token: 0x1700478B RID: 18315
+		// (get) Token: 0x0600EFAA RID: 61354 RVA: 0x002322D4 File Offset: 0x002304D4
 		public virtual bool? ForceClean
 		{
 			get
@@ -68,13 +65,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007D10 RID: 32016
+		// Token: 0x040083C6 RID: 33734
 		private IHideSpecifyEntityGroup Instance;
 
-		// Token: 0x04007D11 RID: 32017
+		// Token: 0x040083C7 RID: 33735
 		private List<int> _EntityIdsCache;
 
-		// Token: 0x04007D12 RID: 32018
+		// Token: 0x040083C8 RID: 33736
 		private bool _EntityIdsInited;
 	}
 }

@@ -5,77 +5,77 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.TowerDefenseEvent.Model
 {
-	// Token: 0x02004B11 RID: 19217
+	// Token: 0x02003AB9 RID: 15033
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TowerDefenseEventEntityModel : ITowerDefenseEventCombatInfo, ITowerDefenseEventEntityBaseModel
 	{
-		// Token: 0x17007B28 RID: 31528
-		// (get) Token: 0x06031C33 RID: 203827 RVA: 0x00B8DD0F File Offset: 0x00B8BF0F
-		// (set) Token: 0x06031C34 RID: 203828 RVA: 0x00B8DD17 File Offset: 0x00B8BF17
+		// Token: 0x17004ED5 RID: 20181
+		// (get) Token: 0x060269C3 RID: 158147 RVA: 0x00AD1D7B File Offset: 0x00ACFF7B
+		// (set) Token: 0x060269C4 RID: 158148 RVA: 0x00AD1D83 File Offset: 0x00ACFF83
 		public long Uid { get; set; }
 
-		// Token: 0x17007B29 RID: 31529
-		// (get) Token: 0x06031C35 RID: 203829 RVA: 0x00B8DD20 File Offset: 0x00B8BF20
-		// (set) Token: 0x06031C36 RID: 203830 RVA: 0x00B8DD28 File Offset: 0x00B8BF28
+		// Token: 0x17004ED6 RID: 20182
+		// (get) Token: 0x060269C5 RID: 158149 RVA: 0x00AD1D8C File Offset: 0x00ACFF8C
+		// (set) Token: 0x060269C6 RID: 158150 RVA: 0x00AD1D94 File Offset: 0x00ACFF94
 		public long OwnerId { get; set; }
 
-		// Token: 0x17007B2A RID: 31530
-		// (get) Token: 0x06031C37 RID: 203831 RVA: 0x00B8DD31 File Offset: 0x00B8BF31
-		// (set) Token: 0x06031C38 RID: 203832 RVA: 0x00B8DD39 File Offset: 0x00B8BF39
+		// Token: 0x17004ED7 RID: 20183
+		// (get) Token: 0x060269C7 RID: 158151 RVA: 0x00AD1D9D File Offset: 0x00ACFF9D
+		// (set) Token: 0x060269C8 RID: 158152 RVA: 0x00AD1DA5 File Offset: 0x00ACFFA5
 		public int TemplateId { get; set; }
 
-		// Token: 0x17007B2B RID: 31531
-		// (get) Token: 0x06031C39 RID: 203833 RVA: 0x00B8DD42 File Offset: 0x00B8BF42
-		// (set) Token: 0x06031C3A RID: 203834 RVA: 0x00B8DD4A File Offset: 0x00B8BF4A
+		// Token: 0x17004ED8 RID: 20184
+		// (get) Token: 0x060269C9 RID: 158153 RVA: 0x00AD1DAE File Offset: 0x00ACFFAE
+		// (set) Token: 0x060269CA RID: 158154 RVA: 0x00AD1DB6 File Offset: 0x00ACFFB6
 		public int CombatId { get; set; }
 
-		// Token: 0x17007B2C RID: 31532
-		// (get) Token: 0x06031C3B RID: 203835 RVA: 0x00B8DD53 File Offset: 0x00B8BF53
-		// (set) Token: 0x06031C3C RID: 203836 RVA: 0x00B8DD5B File Offset: 0x00B8BF5B
+		// Token: 0x17004ED9 RID: 20185
+		// (get) Token: 0x060269CB RID: 158155 RVA: 0x00AD1DBF File Offset: 0x00ACFFBF
+		// (set) Token: 0x060269CC RID: 158156 RVA: 0x00AD1DC7 File Offset: 0x00ACFFC7
 		public int SubTypeId { get; set; }
 
-		// Token: 0x17007B2D RID: 31533
-		// (get) Token: 0x06031C3D RID: 203837 RVA: 0x00B8DD64 File Offset: 0x00B8BF64
-		// (set) Token: 0x06031C3E RID: 203838 RVA: 0x00B8DD6C File Offset: 0x00B8BF6C
+		// Token: 0x17004EDA RID: 20186
+		// (get) Token: 0x060269CD RID: 158157 RVA: 0x00AD1DD0 File Offset: 0x00ACFFD0
+		// (set) Token: 0x060269CE RID: 158158 RVA: 0x00AD1DD8 File Offset: 0x00ACFFD8
 		[Nullable(2)]
 		public string PrefabPath { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x17007B2E RID: 31534
-		// (get) Token: 0x06031C3F RID: 203839 RVA: 0x00B8DD75 File Offset: 0x00B8BF75
-		// (set) Token: 0x06031C40 RID: 203840 RVA: 0x00B8DD7D File Offset: 0x00B8BF7D
+		// Token: 0x17004EDB RID: 20187
+		// (get) Token: 0x060269CF RID: 158159 RVA: 0x00AD1DE1 File Offset: 0x00ACFFE1
+		// (set) Token: 0x060269D0 RID: 158160 RVA: 0x00AD1DE9 File Offset: 0x00ACFFE9
 		[Nullable(2)]
 		public string AssetPath { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x17007B2F RID: 31535
-		// (get) Token: 0x06031C41 RID: 203841 RVA: 0x00B8DD86 File Offset: 0x00B8BF86
-		// (set) Token: 0x06031C42 RID: 203842 RVA: 0x00B8DD8E File Offset: 0x00B8BF8E
+		// Token: 0x17004EDC RID: 20188
+		// (get) Token: 0x060269D1 RID: 158161 RVA: 0x00AD1DF2 File Offset: 0x00ACFFF2
+		// (set) Token: 0x060269D2 RID: 158162 RVA: 0x00AD1DFA File Offset: 0x00ACFFFA
 		public int PropertyId { get; set; }
 
-		// Token: 0x17007B30 RID: 31536
-		// (get) Token: 0x06031C43 RID: 203843 RVA: 0x00B8DD97 File Offset: 0x00B8BF97
-		// (set) Token: 0x06031C44 RID: 203844 RVA: 0x00B8DD9F File Offset: 0x00B8BF9F
+		// Token: 0x17004EDD RID: 20189
+		// (get) Token: 0x060269D3 RID: 158163 RVA: 0x00AD1E03 File Offset: 0x00AD0003
+		// (set) Token: 0x060269D4 RID: 158164 RVA: 0x00AD1E0B File Offset: 0x00AD000B
 		public int? SplineId { get; set; }
 
-		// Token: 0x17007B31 RID: 31537
-		// (get) Token: 0x06031C45 RID: 203845 RVA: 0x00B8DDA8 File Offset: 0x00B8BFA8
-		// (set) Token: 0x06031C46 RID: 203846 RVA: 0x00B8DDB0 File Offset: 0x00B8BFB0
+		// Token: 0x17004EDE RID: 20190
+		// (get) Token: 0x060269D5 RID: 158165 RVA: 0x00AD1E14 File Offset: 0x00AD0014
+		// (set) Token: 0x060269D6 RID: 158166 RVA: 0x00AD1E1C File Offset: 0x00AD001C
 		[Nullable(2)]
 		public Dictionary<int, int> BuffIdLayers { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x17007B32 RID: 31538
-		// (get) Token: 0x06031C47 RID: 203847 RVA: 0x00B8DDB9 File Offset: 0x00B8BFB9
-		// (set) Token: 0x06031C48 RID: 203848 RVA: 0x00B8DDC1 File Offset: 0x00B8BFC1
+		// Token: 0x17004EDF RID: 20191
+		// (get) Token: 0x060269D7 RID: 158167 RVA: 0x00AD1E25 File Offset: 0x00AD0025
+		// (set) Token: 0x060269D8 RID: 158168 RVA: 0x00AD1E2D File Offset: 0x00AD002D
 		public global::Vector Position { get; set; } = global::Vector.Create(0.0, 0.0, 0.0);
 
-		// Token: 0x17007B33 RID: 31539
-		// (get) Token: 0x06031C49 RID: 203849 RVA: 0x00B8DDCA File Offset: 0x00B8BFCA
-		// (set) Token: 0x06031C4A RID: 203850 RVA: 0x00B8DDD2 File Offset: 0x00B8BFD2
+		// Token: 0x17004EE0 RID: 20192
+		// (get) Token: 0x060269D9 RID: 158169 RVA: 0x00AD1E36 File Offset: 0x00AD0036
+		// (set) Token: 0x060269DA RID: 158170 RVA: 0x00AD1E3E File Offset: 0x00AD003E
 		public global::Rotator Rotation { get; set; } = global::Rotator.Create(0f, 0f, 0f);
 
-		// Token: 0x17007B34 RID: 31540
-		// (get) Token: 0x06031C4B RID: 203851 RVA: 0x00B8DDDB File Offset: 0x00B8BFDB
-		// (set) Token: 0x06031C4C RID: 203852 RVA: 0x00B8DDE3 File Offset: 0x00B8BFE3
+		// Token: 0x17004EE1 RID: 20193
+		// (get) Token: 0x060269DB RID: 158171 RVA: 0x00AD1E47 File Offset: 0x00AD0047
+		// (set) Token: 0x060269DC RID: 158172 RVA: 0x00AD1E4F File Offset: 0x00AD004F
 		[Nullable(new byte[]
 		{
 			2,
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent.Model
 			1
 		})] set; }
 
-		// Token: 0x06031C4D RID: 203853 RVA: 0x00B8DDEC File Offset: 0x00B8BFEC
+		// Token: 0x060269DD RID: 158173 RVA: 0x00AD1E58 File Offset: 0x00AD0058
 		[return: Nullable(2)]
 		public static ITowerDefenseEventCombatInfo BuildModel(EntityPb entityData, Dictionary<string, EntityComponentPb> componentDataMap)
 		{
@@ -104,13 +104,13 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent.Model
 			return towerDefenseEventEntityModel;
 		}
 
-		// Token: 0x06031C4E RID: 203854 RVA: 0x00B8DE1D File Offset: 0x00B8C01D
+		// Token: 0x060269DE RID: 158174 RVA: 0x00AD1E89 File Offset: 0x00AD0089
 		public static void Clear()
 		{
 			TowerDefenseEventEntityModel.EntityPool.Clear();
 		}
 
-		// Token: 0x06031C4F RID: 203855 RVA: 0x00B8DE2C File Offset: 0x00B8C02C
+		// Token: 0x060269DF RID: 158175 RVA: 0x00AD1E98 File Offset: 0x00AD0098
 		protected virtual void InitFromProto(EntityPb entityData, Dictionary<string, EntityComponentPb> componentDataMap)
 		{
 			SimpleCombatComponentPb simpleCombatComponentPb = componentDataMap["SimpleCombatComponentPb"].SimpleCombatComponentPb;
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent.Model
 			}
 		}
 
-		// Token: 0x06031C50 RID: 203856 RVA: 0x00B8DF64 File Offset: 0x00B8C164
+		// Token: 0x060269E0 RID: 158176 RVA: 0x00AD1FD0 File Offset: 0x00AD01D0
 		public virtual void Update(ITowerDefenseEventCombatInfo other)
 		{
 			this.Uid = other.Uid;
@@ -160,13 +160,13 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent.Model
 			this.Rotation.Set(other.Rotation.Pitch, other.Rotation.Yaw, other.Rotation.Roll);
 		}
 
-		// Token: 0x06031C51 RID: 203857 RVA: 0x00B8E041 File Offset: 0x00B8C241
+		// Token: 0x060269E1 RID: 158177 RVA: 0x00AD20AD File Offset: 0x00AD02AD
 		public virtual bool IsValid()
 		{
 			return this.Uid > 0L;
 		}
 
-		// Token: 0x06031C52 RID: 203858 RVA: 0x00B8E050 File Offset: 0x00B8C250
+		// Token: 0x060269E2 RID: 158178 RVA: 0x00AD20BC File Offset: 0x00AD02BC
 		public virtual void Reset()
 		{
 			this.Uid = 0L;
@@ -183,14 +183,14 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent.Model
 			this.Rotation.Set(0f, 0f, 0f);
 		}
 
-		// Token: 0x06031C53 RID: 203859 RVA: 0x00B8E0ED File Offset: 0x00B8C2ED
+		// Token: 0x060269E3 RID: 158179 RVA: 0x00AD2159 File Offset: 0x00AD0359
 		public virtual void Release()
 		{
 			this.Reset();
 			TowerDefenseEventEntityModel.EntityPool.Put(this);
 		}
 
-		// Token: 0x06031C54 RID: 203860 RVA: 0x00B8E101 File Offset: 0x00B8C301
+		// Token: 0x060269E4 RID: 158180 RVA: 0x00AD216D File Offset: 0x00AD036D
 		public ITowerDefenseEventCombatInfo Clone()
 		{
 			TowerDefenseEventEntityModel towerDefenseEventEntityModel = TowerDefenseEventEntityModel.EntityPool.Get() ?? TowerDefenseEventEntityModel.EntityPool.Create();
@@ -198,10 +198,10 @@ namespace CSharpScript.Game.Module.TowerDefenseEvent.Model
 			return towerDefenseEventEntityModel;
 		}
 
-		// Token: 0x0401A905 RID: 108805
+		// Token: 0x04015257 RID: 86615
 		public const int ENTITY_POOL_SIZE = 100;
 
-		// Token: 0x0401A913 RID: 108819
+		// Token: 0x04015265 RID: 86629
 		[StaticVariableRuleIgnore]
 		private static readonly Pool<TowerDefenseEventEntityModel> EntityPool = new Pool<TowerDefenseEventEntityModel>(100, () => new TowerDefenseEventEntityModel(), null);
 	}

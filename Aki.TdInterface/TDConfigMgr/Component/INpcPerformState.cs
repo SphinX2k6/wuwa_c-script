@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200056A RID: 1386
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020005D1 RID: 1489
 	public class INpcPerformState
 	{
-		// Token: 0x06001C66 RID: 7270 RVA: 0x000513E0 File Offset: 0x0004F5E0
+		// Token: 0x06001E62 RID: 7778 RVA: 0x0005619C File Offset: 0x0005439C
 		private INpcPerformState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001C67 RID: 7271 RVA: 0x00051418 File Offset: 0x0004F618
+		// Token: 0x06001E63 RID: 7779 RVA: 0x000561D4 File Offset: 0x000543D4
 		public static INpcPerformState Create([Nullable(2)] INpcPerformState instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001C68 RID: 7272 RVA: 0x0005142B File Offset: 0x0004F62B
+		// Token: 0x06001E64 RID: 7780 RVA: 0x000561E7 File Offset: 0x000543E7
 		public static INpcPerformState CreateFromSetValue([Nullable(2)] INpcPerformState_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001C69 RID: 7273 RVA: 0x0005143E File Offset: 0x0004F63E
+		// Token: 0x06001E65 RID: 7781 RVA: 0x000561FA File Offset: 0x000543FA
 		public INpcPerformState_SetValue ToSetValue()
 		{
 			return new INpcPerformState_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000773 RID: 1907
-		// (get) Token: 0x06001C6A RID: 7274 RVA: 0x00051460 File Offset: 0x0004F660
-		// (set) Token: 0x06001C6B RID: 7275 RVA: 0x000514C1 File Offset: 0x0004F6C1
+		// Token: 0x170007F6 RID: 2038
+		// (get) Token: 0x06001E66 RID: 7782 RVA: 0x0005621C File Offset: 0x0005441C
+		// (set) Token: 0x06001E67 RID: 7783 RVA: 0x0005627D File Offset: 0x0005447D
 		public virtual IInitNpcPerformState InitState
 		{
 			get
@@ -92,9 +90,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000774 RID: 1908
-		// (get) Token: 0x06001C6C RID: 7276 RVA: 0x000514D8 File Offset: 0x0004F6D8
-		// (set) Token: 0x06001C6D RID: 7277 RVA: 0x0005156B File Offset: 0x0004F76B
+		// Token: 0x170007F7 RID: 2039
+		// (get) Token: 0x06001E68 RID: 7784 RVA: 0x00056294 File Offset: 0x00054494
+		// (set) Token: 0x06001E69 RID: 7785 RVA: 0x00056327 File Offset: 0x00054527
 		public virtual List<INpcPerformStateConfig> Configs
 		{
 			get
@@ -130,24 +128,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001445 RID: 5189
+		// Token: 0x040015AF RID: 5551
 		[Nullable(2)]
 		protected INpcPerformState FbInstance;
 
-		// Token: 0x04001446 RID: 5190
+		// Token: 0x040015B0 RID: 5552
 		[Nullable(2)]
 		protected INpcPerformState_SetValue PocoInterface;
 
-		// Token: 0x04001447 RID: 5191
+		// Token: 0x040015B1 RID: 5553
 		private IInitNpcPerformState _InitStateCache;
 
-		// Token: 0x04001448 RID: 5192
+		// Token: 0x040015B2 RID: 5554
 		private bool _InitStateInited;
 
-		// Token: 0x04001449 RID: 5193
+		// Token: 0x040015B3 RID: 5555
 		private List<INpcPerformStateConfig> _ConfigsCache;
 
-		// Token: 0x0400144A RID: 5194
+		// Token: 0x040015B4 RID: 5556
 		private bool _ConfigsInited;
 	}
 }

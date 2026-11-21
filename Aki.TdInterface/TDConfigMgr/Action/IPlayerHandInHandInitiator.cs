@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D02 RID: 7426
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001F13 RID: 7955
 	public class IPlayerHandInHandInitiator : IHandInHandInitiatorType
 	{
-		// Token: 0x06009F67 RID: 40807 RVA: 0x0016C2DC File Offset: 0x0016A4DC
+		// Token: 0x0600A951 RID: 43345 RVA: 0x0018067C File Offset: 0x0017E87C
 		private IPlayerHandInHandInitiator_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009F68 RID: 40808 RVA: 0x0016C314 File Offset: 0x0016A514
+		// Token: 0x0600A952 RID: 43346 RVA: 0x001806B4 File Offset: 0x0017E8B4
 		public static IPlayerHandInHandInitiator Create([Nullable(2)] IPlayerHandInHandInitiator instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009F69 RID: 40809 RVA: 0x0016C327 File Offset: 0x0016A527
+		// Token: 0x0600A953 RID: 43347 RVA: 0x001806C7 File Offset: 0x0017E8C7
 		public static IPlayerHandInHandInitiator CreateFromSetValue([Nullable(2)] IPlayerHandInHandInitiator_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009F6A RID: 40810 RVA: 0x0016C33A File Offset: 0x0016A53A
+		// Token: 0x0600A954 RID: 43348 RVA: 0x001806DA File Offset: 0x0017E8DA
 		public new IPlayerHandInHandInitiator_SetValue ToSetValue()
 		{
 			return new IPlayerHandInHandInitiator_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003187 RID: 12679
-		// (get) Token: 0x06009F6B RID: 40811 RVA: 0x0016C34D File Offset: 0x0016A54D
-		// (set) Token: 0x06009F6C RID: 40812 RVA: 0x0016C378 File Offset: 0x0016A578
+		// Token: 0x1700341A RID: 13338
+		// (get) Token: 0x0600A955 RID: 43349 RVA: 0x001806ED File Offset: 0x0017E8ED
+		// (set) Token: 0x0600A956 RID: 43350 RVA: 0x00180718 File Offset: 0x0017E918
 		public override EHandInHandInitiatorType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006038 RID: 24632
+		// Token: 0x040065B1 RID: 26033
 		[Nullable(2)]
 		protected new IPlayerHandInHandInitiator FbInstance;
 
-		// Token: 0x04006039 RID: 24633
+		// Token: 0x040065B2 RID: 26034
 		[Nullable(2)]
 		protected new IPlayerHandInHandInitiator_SetValue PocoInterface;
 	}

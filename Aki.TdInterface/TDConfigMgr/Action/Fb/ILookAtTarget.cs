@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A6F RID: 10863
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002D63 RID: 11619
 	public class ILookAtTarget : IDefaultLookAtType
 	{
-		// Token: 0x0600EEE1 RID: 61153 RVA: 0x0022C064 File Offset: 0x0022A264
+		// Token: 0x0600FD97 RID: 64919 RVA: 0x00249D70 File Offset: 0x00247F70
 		public static ILookAtTarget Create(ILookAtTarget? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004BC5 RID: 19397
-		// (get) Token: 0x0600EEE2 RID: 61154 RVA: 0x0022C083 File Offset: 0x0022A283
+		// Token: 0x17004F7F RID: 20351
+		// (get) Token: 0x0600FD98 RID: 64920 RVA: 0x00249D8F File Offset: 0x00247F8F
 		public override EDefaultLookAtType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004BC6 RID: 19398
-		// (get) Token: 0x0600EEE3 RID: 61155 RVA: 0x0022C090 File Offset: 0x0022A290
+		// Token: 0x17004F80 RID: 20352
+		// (get) Token: 0x0600FD99 RID: 64921 RVA: 0x00249D9C File Offset: 0x00247F9C
 		public virtual List<INpcLookAtConfig> LookAtConfigs
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008369 RID: 33641
+		// Token: 0x04008A6D RID: 35437
 		private ILookAtTarget Instance;
 
-		// Token: 0x0400836A RID: 33642
+		// Token: 0x04008A6E RID: 35438
 		private List<INpcLookAtConfig> _LookAtConfigsCache;
 
-		// Token: 0x0400836B RID: 33643
+		// Token: 0x04008A6F RID: 35439
 		private bool _LookAtConfigsInited;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004031 RID: 16433
+	// Token: 0x02004472 RID: 17522
 	public struct IQuestScheduleProgressValue : IFlatbufferObject
 	{
-		// Token: 0x1700739D RID: 29597
-		// (get) Token: 0x06017C4C RID: 97356 RVA: 0x0036DDE9 File Offset: 0x0036BFE9
+		// Token: 0x1700799F RID: 31135
+		// (get) Token: 0x060192E5 RID: 103141 RVA: 0x00397BDD File Offset: 0x00395DDD
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017C4D RID: 97357 RVA: 0x0036DDF6 File Offset: 0x0036BFF6
+		// Token: 0x060192E6 RID: 103142 RVA: 0x00397BEA File Offset: 0x00395DEA
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06017C4E RID: 97358 RVA: 0x0036DE00 File Offset: 0x0036C000
+		// Token: 0x060192E7 RID: 103143 RVA: 0x00397BF4 File Offset: 0x00395DF4
 		public static IQuestScheduleProgressValue GetRootAsIQuestScheduleProgressValue(ByteBuffer _bb)
 		{
 			return IQuestScheduleProgressValue.GetRootAsIQuestScheduleProgressValue(_bb, default(IQuestScheduleProgressValue));
 		}
 
-		// Token: 0x06017C4F RID: 97359 RVA: 0x0036DE1C File Offset: 0x0036C01C
+		// Token: 0x060192E8 RID: 103144 RVA: 0x00397C10 File Offset: 0x00395E10
 		public static IQuestScheduleProgressValue GetRootAsIQuestScheduleProgressValue(ByteBuffer _bb, IQuestScheduleProgressValue obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06017C50 RID: 97360 RVA: 0x0036DE39 File Offset: 0x0036C039
+		// Token: 0x060192E9 RID: 103145 RVA: 0x00397C2D File Offset: 0x00395E2D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06017C51 RID: 97361 RVA: 0x0036DE48 File Offset: 0x0036C048
+		// Token: 0x060192EA RID: 103146 RVA: 0x00397C3C File Offset: 0x00395E3C
 		public IQuestScheduleProgressValue __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700739E RID: 29598
-		// (get) Token: 0x06017C52 RID: 97362 RVA: 0x0036DE58 File Offset: 0x0036C058
+		// Token: 0x170079A0 RID: 31136
+		// (get) Token: 0x060192EB RID: 103147 RVA: 0x00397C4C File Offset: 0x00395E4C
 		public EQuestScheduleType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x1700739F RID: 29599
-		// (get) Token: 0x06017C53 RID: 97363 RVA: 0x0036DE94 File Offset: 0x0036C094
+		// Token: 0x170079A1 RID: 31137
+		// (get) Token: 0x060192EC RID: 103148 RVA: 0x00397C88 File Offset: 0x00395E88
 		public int TargetProgressEntity
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06017C54 RID: 97364 RVA: 0x0036DED0 File Offset: 0x0036C0D0
+		// Token: 0x060192ED RID: 103149 RVA: 0x00397CC4 File Offset: 0x00395EC4
 		public static Offset<IQuestScheduleProgressValue> CreateIQuestScheduleProgressValue(FlatBufferBuilder builder, EQuestScheduleType Type = EQuestScheduleType.None, int TargetProgressEntity = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IQuestScheduleProgressValue.EndIQuestScheduleProgressValue(builder);
 		}
 
-		// Token: 0x06017C55 RID: 97365 RVA: 0x0036DEED File Offset: 0x0036C0ED
+		// Token: 0x060192EE RID: 103150 RVA: 0x00397CE1 File Offset: 0x00395EE1
 		public static void StartIQuestScheduleProgressValue(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06017C56 RID: 97366 RVA: 0x0036DEF6 File Offset: 0x0036C0F6
+		// Token: 0x060192EF RID: 103151 RVA: 0x00397CEA File Offset: 0x00395EEA
 		public static void AddType(FlatBufferBuilder builder, EQuestScheduleType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06017C57 RID: 97367 RVA: 0x0036DF01 File Offset: 0x0036C101
+		// Token: 0x060192F0 RID: 103152 RVA: 0x00397CF5 File Offset: 0x00395EF5
 		public static void AddTargetProgressEntity(FlatBufferBuilder builder, int targetProgressEntity)
 		{
 			builder.AddInt(1, targetProgressEntity, 0);
 		}
 
-		// Token: 0x06017C58 RID: 97368 RVA: 0x0036DF0C File Offset: 0x0036C10C
+		// Token: 0x060192F1 RID: 103153 RVA: 0x00397D00 File Offset: 0x00395F00
 		public static Offset<IQuestScheduleProgressValue> EndIQuestScheduleProgressValue(FlatBufferBuilder builder)
 		{
 			return new Offset<IQuestScheduleProgressValue>(builder.EndTable());
 		}
 
-		// Token: 0x06017C59 RID: 97369 RVA: 0x0036DF1C File Offset: 0x0036C11C
+		// Token: 0x060192F2 RID: 103154 RVA: 0x00397D10 File Offset: 0x00395F10
 		public IQuestScheduleProgressValueT UnPack()
 		{
 			IQuestScheduleProgressValueT questScheduleProgressValueT = new IQuestScheduleProgressValueT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return questScheduleProgressValueT;
 		}
 
-		// Token: 0x06017C5A RID: 97370 RVA: 0x0036DF37 File Offset: 0x0036C137
+		// Token: 0x060192F3 RID: 103155 RVA: 0x00397D2B File Offset: 0x00395F2B
 		public void UnPackTo(IQuestScheduleProgressValueT _o)
 		{
 			_o.Type = this.Type;
 			_o.TargetProgressEntity = this.TargetProgressEntity;
 		}
 
-		// Token: 0x06017C5B RID: 97371 RVA: 0x0036DF54 File Offset: 0x0036C154
+		// Token: 0x060192F4 RID: 103156 RVA: 0x00397D48 File Offset: 0x00395F48
 		public static Offset<IQuestScheduleProgressValue> Pack(FlatBufferBuilder builder, IQuestScheduleProgressValueT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IQuestScheduleProgressValue.CreateIQuestScheduleProgressValue(builder, _o.Type, _o.TargetProgressEntity);
 		}
 
-		// Token: 0x0400BB5F RID: 47967
+		// Token: 0x0400C546 RID: 50502
 		private Table __p;
 	}
 }

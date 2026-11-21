@@ -2,32 +2,32 @@
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x02005609 RID: 22025
+	// Token: 0x020045DF RID: 17887
 	public class MapRogueRewardItemData : <MapRogueRewardView>F6052190ABB6DA9908C5F1F2C004492E9BCF65FA860F7AB1CF04DCB46982DF68C__IMapRogueRewardItemData
 	{
-		// Token: 0x17008723 RID: 34595
-		// (get) Token: 0x060380E0 RID: 229600 RVA: 0x00D466B6 File Offset: 0x00D448B6
-		// (set) Token: 0x060380E1 RID: 229601 RVA: 0x00D466BE File Offset: 0x00D448BE
+		// Token: 0x17005AEA RID: 23274
+		// (get) Token: 0x0602CFDE RID: 184286 RVA: 0x00C943FE File Offset: 0x00C925FE
+		// (set) Token: 0x0602CFDF RID: 184287 RVA: 0x00C94406 File Offset: 0x00C92606
 		public int Index { get; set; }
 
-		// Token: 0x17008724 RID: 34596
-		// (get) Token: 0x060380E2 RID: 229602 RVA: 0x00D466C7 File Offset: 0x00D448C7
-		// (set) Token: 0x060380E3 RID: 229603 RVA: 0x00D466CF File Offset: 0x00D448CF
+		// Token: 0x17005AEB RID: 23275
+		// (get) Token: 0x0602CFE0 RID: 184288 RVA: 0x00C9440F File Offset: 0x00C9260F
+		// (set) Token: 0x0602CFE1 RID: 184289 RVA: 0x00C94417 File Offset: 0x00C92617
 		public int ConfigId { get; set; }
 
-		// Token: 0x17008725 RID: 34597
-		// (get) Token: 0x060380E4 RID: 229604 RVA: 0x00D466D8 File Offset: 0x00D448D8
-		// (set) Token: 0x060380E5 RID: 229605 RVA: 0x00D466E0 File Offset: 0x00D448E0
+		// Token: 0x17005AEC RID: 23276
+		// (get) Token: 0x0602CFE2 RID: 184290 RVA: 0x00C94420 File Offset: 0x00C92620
+		// (set) Token: 0x0602CFE3 RID: 184291 RVA: 0x00C94428 File Offset: 0x00C92628
 		public int Count { get; set; }
 
-		// Token: 0x17008726 RID: 34598
-		// (get) Token: 0x060380E6 RID: 229606 RVA: 0x00D466E9 File Offset: 0x00D448E9
-		// (set) Token: 0x060380E7 RID: 229607 RVA: 0x00D466F1 File Offset: 0x00D448F1
+		// Token: 0x17005AED RID: 23277
+		// (get) Token: 0x0602CFE4 RID: 184292 RVA: 0x00C94431 File Offset: 0x00C92631
+		// (set) Token: 0x0602CFE5 RID: 184293 RVA: 0x00C94439 File Offset: 0x00C92639
 		public bool IsSelect { get; set; }
 
-		// Token: 0x17008727 RID: 34599
-		// (get) Token: 0x060380E8 RID: 229608 RVA: 0x00D466FA File Offset: 0x00D448FA
-		// (set) Token: 0x060380E9 RID: 229609 RVA: 0x00D46702 File Offset: 0x00D44902
+		// Token: 0x17005AEE RID: 23278
+		// (get) Token: 0x0602CFE6 RID: 184294 RVA: 0x00C94442 File Offset: 0x00C92642
+		// (set) Token: 0x0602CFE7 RID: 184295 RVA: 0x00C9444A File Offset: 0x00C9264A
 		public bool IsRole { get; set; }
 	}
 }

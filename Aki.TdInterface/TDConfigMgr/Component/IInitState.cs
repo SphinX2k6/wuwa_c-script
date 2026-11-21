@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000464 RID: 1124
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020004BD RID: 1213
 	public class IInitState
 	{
-		// Token: 0x060016AF RID: 5807 RVA: 0x00045A98 File Offset: 0x00043C98
+		// Token: 0x06001849 RID: 6217 RVA: 0x000497E0 File Offset: 0x000479E0
 		private IInitState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060016B0 RID: 5808 RVA: 0x00045AD0 File Offset: 0x00043CD0
+		// Token: 0x0600184A RID: 6218 RVA: 0x00049818 File Offset: 0x00047A18
 		public static IInitState Create([Nullable(2)] IInitState instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060016B1 RID: 5809 RVA: 0x00045AE3 File Offset: 0x00043CE3
+		// Token: 0x0600184B RID: 6219 RVA: 0x0004982B File Offset: 0x00047A2B
 		public static IInitState CreateFromSetValue([Nullable(2)] IInitState_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060016B2 RID: 5810 RVA: 0x00045AF6 File Offset: 0x00043CF6
+		// Token: 0x0600184C RID: 6220 RVA: 0x0004983E File Offset: 0x00047A3E
 		public IInitState_SetValue ToSetValue()
 		{
 			return new IInitState_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700061F RID: 1567
-		// (get) Token: 0x060016B3 RID: 5811 RVA: 0x00045B09 File Offset: 0x00043D09
-		// (set) Token: 0x060016B4 RID: 5812 RVA: 0x00045B34 File Offset: 0x00043D34
+		// Token: 0x17000686 RID: 1670
+		// (get) Token: 0x0600184D RID: 6221 RVA: 0x00049851 File Offset: 0x00047A51
+		// (set) Token: 0x0600184E RID: 6222 RVA: 0x0004987C File Offset: 0x00047A7C
 		public virtual EInitStateType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400113A RID: 4410
+		// Token: 0x0400125C RID: 4700
 		[Nullable(2)]
 		protected IInitState FbInstance;
 
-		// Token: 0x0400113B RID: 4411
+		// Token: 0x0400125D RID: 4701
 		[Nullable(2)]
 		protected IInitState_SetValue PocoInterface;
 	}

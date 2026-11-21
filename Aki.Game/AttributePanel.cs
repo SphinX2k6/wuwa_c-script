@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -11,10 +10,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001A5A RID: 6746
+// Token: 0x02000F19 RID: 3865
 internal class AttributePanel : UiPanelBase
 {
-	// Token: 0x0600C68E RID: 50830 RVA: 0x002D2CF8 File Offset: 0x002D0EF8
+	// Token: 0x06009A9E RID: 39582 RVA: 0x002DDE08 File Offset: 0x002DC008
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -41,13 +40,13 @@ internal class AttributePanel : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600C68F RID: 50831 RVA: 0x002D2E01 File Offset: 0x002D1001
+	// Token: 0x06009A9F RID: 39583 RVA: 0x002DDF11 File Offset: 0x002DC111
 	protected override void OnBeforeCreate()
 	{
 		this.ViewModel.Bind(new TCallback<EPluginEquipViewData>(this.OnDataUpdate));
 	}
 
-	// Token: 0x0600C690 RID: 50832 RVA: 0x002D2E1A File Offset: 0x002D101A
+	// Token: 0x06009AA0 RID: 39584 RVA: 0x002DDF2A File Offset: 0x002DC12A
 	private void OnDataUpdate(EPluginEquipViewData key)
 	{
 		switch (key)
@@ -63,42 +62,42 @@ internal class AttributePanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600C691 RID: 50833 RVA: 0x002D2E35 File Offset: 0x002D1035
+	// Token: 0x06009AA1 RID: 39585 RVA: 0x002DDF45 File Offset: 0x002DC145
 	protected override void OnAfterDestroy()
 	{
 		this.ViewModel.UnBind(new TCallback<EPluginEquipViewData>(this.OnDataUpdate));
 	}
 
-	// Token: 0x0600C692 RID: 50834 RVA: 0x002D2E50 File Offset: 0x002D1050
+	// Token: 0x06009AA2 RID: 39586 RVA: 0x002DDF60 File Offset: 0x002DC160
 	protected override void OnStart()
 	{
 		this.AttributeScroller = new GenericLayout<DangoAbyssRoleAttributeItem, AttrListScrollData>(base.GetVerticalLayout(0), new Func<DangoAbyssRoleAttributeItem>(this.CreateItem), base.GetItem(1).GetOwner() as AUIBaseActor, false, true);
 		this.TagScroller = new GenericLayout<global::DangoAbyssTagItem, DangoAbyssDefine.DangoAbyssTagData>(base.GetVerticalLayout(3), new Func<global::DangoAbyssTagItem>(this.CreateTagItem), base.GetItem(4).GetOwner() as AUIBaseActor, false, true);
 	}
 
-	// Token: 0x0600C693 RID: 50835 RVA: 0x002D2EBF File Offset: 0x002D10BF
+	// Token: 0x06009AA3 RID: 39587 RVA: 0x002DDFCF File Offset: 0x002DC1CF
 	[NullableContext(1)]
 	private global::DangoAbyssTagItem CreateTagItem()
 	{
 		return new global::DangoAbyssTagItem();
 	}
 
-	// Token: 0x0600C694 RID: 50836 RVA: 0x002D2EC6 File Offset: 0x002D10C6
+	// Token: 0x06009AA4 RID: 39588 RVA: 0x002DDFD6 File Offset: 0x002DC1D6
 	[NullableContext(1)]
 	private DangoAbyssRoleAttributeItem CreateItem()
 	{
 		return new DangoAbyssRoleAttributeItem();
 	}
 
-	// Token: 0x0600C695 RID: 50837 RVA: 0x002D2ED0 File Offset: 0x002D10D0
+	// Token: 0x06009AA5 RID: 39589 RVA: 0x002DDFE0 File Offset: 0x002DC1E0
 	private void OnMoreBtnClick()
 	{
 		int dangoId = this.ViewModel.GetDangoId();
 		AttrListScrollData[] dangoShowAttributeList = DangoAbyssModel.Instance.GetDangoShowAttributeList(dangoId);
-		UiManager.Instance.OpenView(EUiViewName.DangoAbyssAttributeDetailView, dangoShowAttributeList.ToList<AttrListScrollData>(), null);
+		UiManager.Instance.OpenView(EUiViewName.DangoAbyssAttributeDetailView, new List<AttrListScrollData>(dangoShowAttributeList), null);
 	}
 
-	// Token: 0x0600C696 RID: 50838 RVA: 0x002D2F0C File Offset: 0x002D110C
+	// Token: 0x06009AA6 RID: 39590 RVA: 0x002DE01C File Offset: 0x002DC21C
 	public void Refresh()
 	{
 		int dangoId = this.ViewModel.GetDangoId();
@@ -109,24 +108,24 @@ internal class AttributePanel : UiPanelBase
 		}
 		this.CurrentData = dangoAbyssRoleData;
 		DangoAbyssDefine.DangoAbyssTagData[] dangoTagData = DangoAbyssModel.Instance.GetDangoTagData(dangoId, DangoAbyssDefine.ETagDataGetType.Valid);
-		this.TagScroller.RefreshByData(dangoTagData.ToList<DangoAbyssDefine.DangoAbyssTagData>(), null, false);
+		this.TagScroller.RefreshByData(dangoTagData, null, false);
 		AttrListScrollData[] dangoShowAttributeList = DangoAbyssModel.Instance.GetDangoShowAttributeList(dangoId);
 		AttrListScrollData[] array = new AttrListScrollData[Math.Min(dangoShowAttributeList.Length, 6)];
 		Array.Copy(dangoShowAttributeList, 0, array, 0, array.Length);
-		this.AttributeScroller.RefreshByData(array.ToList<AttrListScrollData>(), null, false);
+		this.AttributeScroller.RefreshByData(array, null, false);
 	}
 
-	// Token: 0x0600C697 RID: 50839 RVA: 0x002D2F94 File Offset: 0x002D1194
+	// Token: 0x06009AA7 RID: 39591 RVA: 0x002DE09A File Offset: 0x002DC29A
 	private void OnDangoIdUpdate()
 	{
 		this.Refresh();
 	}
 
-	// Token: 0x04005B80 RID: 23424
+	// Token: 0x04005C4F RID: 23631
 	[Nullable(2)]
 	protected AbyssDangoRoleData CurrentData;
 
-	// Token: 0x04005B81 RID: 23425
+	// Token: 0x04005C50 RID: 23632
 	[Nullable(new byte[]
 	{
 		2,
@@ -135,7 +134,7 @@ internal class AttributePanel : UiPanelBase
 	})]
 	private GenericLayout<DangoAbyssRoleAttributeItem, AttrListScrollData> AttributeScroller;
 
-	// Token: 0x04005B82 RID: 23426
+	// Token: 0x04005C51 RID: 23633
 	[Nullable(new byte[]
 	{
 		2,
@@ -144,35 +143,35 @@ internal class AttributePanel : UiPanelBase
 	})]
 	private GenericLayout<global::DangoAbyssTagItem, DangoAbyssDefine.DangoAbyssTagData> TagScroller;
 
-	// Token: 0x04005B83 RID: 23427
+	// Token: 0x04005C52 RID: 23634
 	[Nullable(2)]
 	public PluginEquipViewModel ViewModel;
 
-	// Token: 0x02007FA4 RID: 32676
+	// Token: 0x02007133 RID: 28979
 	private class EAttributePanelComponent
 	{
-		// Token: 0x04029ADA RID: 170714
+		// Token: 0x04024E17 RID: 151063
 		public const int AttributeLayout = 0;
 
-		// Token: 0x04029ADB RID: 170715
+		// Token: 0x04024E18 RID: 151064
 		public const int AttributeItem = 1;
 
-		// Token: 0x04029ADC RID: 170716
+		// Token: 0x04024E19 RID: 151065
 		public const int BtnMore = 2;
 
-		// Token: 0x04029ADD RID: 170717
+		// Token: 0x04024E1A RID: 151066
 		public const int TagLayout = 3;
 
-		// Token: 0x04029ADE RID: 170718
+		// Token: 0x04024E1B RID: 151067
 		public const int TagItem = 4;
 	}
 
-	// Token: 0x02007FA5 RID: 32677
+	// Token: 0x02007134 RID: 28980
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class DangoRolePluginPanel : UiPanelBase
 	{
-		// Token: 0x06049DAF RID: 302511 RVA: 0x01324320 File Offset: 0x01322520
+		// Token: 0x060401CD RID: 262605 RVA: 0x012C781C File Offset: 0x012C5A1C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 15;
@@ -212,7 +211,7 @@ internal class AttributePanel : UiPanelBase
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06049DB0 RID: 302512 RVA: 0x01324540 File Offset: 0x01322740
+		// Token: 0x060401CE RID: 262606 RVA: 0x012C7A3C File Offset: 0x012C5C3C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			AttributePanel.DangoRolePluginPanel.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -223,13 +222,13 @@ internal class AttributePanel : UiPanelBase
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06049DB1 RID: 302513 RVA: 0x01324583 File Offset: 0x01322783
+		// Token: 0x060401CF RID: 262607 RVA: 0x012C7A7F File Offset: 0x012C5C7F
 		private AttributePanel.TagItem CreateTagItem()
 		{
 			return new AttributePanel.TagItem();
 		}
 
-		// Token: 0x06049DB2 RID: 302514 RVA: 0x0132458C File Offset: 0x0132278C
+		// Token: 0x060401D0 RID: 262608 RVA: 0x012C7A88 File Offset: 0x012C5C88
 		public void Refresh()
 		{
 			int dangoId = this.ViewModel.GetDangoId();
@@ -244,7 +243,7 @@ internal class AttributePanel : UiPanelBase
 			base.GetItem(14).SetAnchorOffsetY(0f);
 		}
 
-		// Token: 0x06049DB3 RID: 302515 RVA: 0x013245DC File Offset: 0x013227DC
+		// Token: 0x060401D1 RID: 262609 RVA: 0x012C7AD8 File Offset: 0x012C5CD8
 		private void RefreshPlugin(AbyssDangoRoleData data)
 		{
 			foreach (KeyValuePair<int, DangoAbyssPluginItem> keyValuePair in this.PluginMap)
@@ -254,15 +253,15 @@ internal class AttributePanel : UiPanelBase
 			}
 		}
 
-		// Token: 0x06049DB4 RID: 302516 RVA: 0x01324644 File Offset: 0x01322844
+		// Token: 0x060401D2 RID: 262610 RVA: 0x012C7B40 File Offset: 0x012C5D40
 		private void RefreshTags()
 		{
 			int dangoId = this.ViewModel.GetDangoId();
 			DangoAbyssDefine.DangoAbyssTagData[] dangoTagData = DangoAbyssModel.Instance.GetDangoTagData(dangoId, DangoAbyssDefine.ETagDataGetType.Valid);
-			this.TagLayout.RefreshByData(dangoTagData.ToList<DangoAbyssDefine.DangoAbyssTagData>(), null, false);
+			this.TagLayout.RefreshByData(dangoTagData, null, false);
 		}
 
-		// Token: 0x06049DB5 RID: 302517 RVA: 0x01324680 File Offset: 0x01322880
+		// Token: 0x060401D3 RID: 262611 RVA: 0x012C7B74 File Offset: 0x012C5D74
 		private void RefreshCastDesc(AbyssDangoRoleData data)
 		{
 			string skillCastTypeName = data.GetSkillCastTypeName();
@@ -273,10 +272,10 @@ internal class AttributePanel : UiPanelBase
 			base.GetText(11).SetText(skillDescByDangoId, true);
 		}
 
-		// Token: 0x04029ADF RID: 170719
+		// Token: 0x04024E1C RID: 151068
 		private readonly Dictionary<int, DangoAbyssPluginItem> PluginMap = new Dictionary<int, DangoAbyssPluginItem>();
 
-		// Token: 0x04029AE0 RID: 170720
+		// Token: 0x04024E1D RID: 151069
 		[Nullable(new byte[]
 		{
 			2,
@@ -285,62 +284,62 @@ internal class AttributePanel : UiPanelBase
 		})]
 		private GenericLayout<AttributePanel.TagItem, DangoAbyssDefine.DangoAbyssTagData> TagLayout;
 
-		// Token: 0x04029AE1 RID: 170721
+		// Token: 0x04024E1E RID: 151070
 		[Nullable(2)]
 		public PluginEquipViewModel ViewModel;
 
-		// Token: 0x0200D031 RID: 53297
+		// Token: 0x0200BC0E RID: 48142
 		[NullableContext(0)]
 		private class EPluginTabComponent
 		{
-			// Token: 0x0403E8A1 RID: 256161
+			// Token: 0x04039CE3 RID: 236771
 			public const int Slot0 = 0;
 
-			// Token: 0x0403E8A2 RID: 256162
+			// Token: 0x04039CE4 RID: 236772
 			public const int Slot1 = 1;
 
-			// Token: 0x0403E8A3 RID: 256163
+			// Token: 0x04039CE5 RID: 236773
 			public const int Slot2 = 2;
 
-			// Token: 0x0403E8A4 RID: 256164
+			// Token: 0x04039CE6 RID: 236774
 			public const int Slot3 = 3;
 
-			// Token: 0x0403E8A5 RID: 256165
+			// Token: 0x04039CE7 RID: 236775
 			public const int Slot4 = 4;
 
-			// Token: 0x0403E8A6 RID: 256166
+			// Token: 0x04039CE8 RID: 236776
 			public const int Slot5 = 5;
 
-			// Token: 0x0403E8A7 RID: 256167
+			// Token: 0x04039CE9 RID: 236777
 			public const int Slot6 = 6;
 
-			// Token: 0x0403E8A8 RID: 256168
+			// Token: 0x04039CEA RID: 236778
 			public const int Slot7 = 7;
 
-			// Token: 0x0403E8A9 RID: 256169
+			// Token: 0x04039CEB RID: 236779
 			public const int Slot8 = 8;
 
-			// Token: 0x0403E8AA RID: 256170
+			// Token: 0x04039CEC RID: 236780
 			public const int PluginTypeText = 9;
 
-			// Token: 0x0403E8AB RID: 256171
+			// Token: 0x04039CED RID: 236781
 			public const int PluginTypeIcon = 10;
 
-			// Token: 0x0403E8AC RID: 256172
+			// Token: 0x04039CEE RID: 236782
 			public const int DescText = 11;
 
-			// Token: 0x0403E8AD RID: 256173
+			// Token: 0x04039CEF RID: 236783
 			public const int TagHorizontalLayout = 12;
 
-			// Token: 0x0403E8AE RID: 256174
+			// Token: 0x04039CF0 RID: 236784
 			public const int TagItem = 13;
 
-			// Token: 0x0403E8AF RID: 256175
+			// Token: 0x04039CF1 RID: 236785
 			public const int ContentScroll = 14;
 		}
 	}
 
-	// Token: 0x02007FA6 RID: 32678
+	// Token: 0x02007135 RID: 28981
 	[Nullable(new byte[]
 	{
 		0,
@@ -348,7 +347,7 @@ internal class AttributePanel : UiPanelBase
 	})]
 	private class TagItem : GridProxyAbstract<DangoAbyssDefine.DangoAbyssTagData>
 	{
-		// Token: 0x06049DB7 RID: 302519 RVA: 0x01324700 File Offset: 0x01322900
+		// Token: 0x060401D5 RID: 262613 RVA: 0x012C7BF4 File Offset: 0x012C5DF4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -362,7 +361,7 @@ internal class AttributePanel : UiPanelBase
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06049DB8 RID: 302520 RVA: 0x0132476C File Offset: 0x0132296C
+		// Token: 0x060401D6 RID: 262614 RVA: 0x012C7C60 File Offset: 0x012C5E60
 		[NullableContext(1)]
 		public override void Refresh(DangoAbyssDefine.DangoAbyssTagData data, bool isSelected, int gridIndex)
 		{
@@ -373,13 +372,13 @@ internal class AttributePanel : UiPanelBase
 			base.GetSprite(0).SetColor(color);
 		}
 
-		// Token: 0x0200D033 RID: 53299
+		// Token: 0x0200BC10 RID: 48144
 		private class ETagItemComponent
 		{
-			// Token: 0x0403E8B4 RID: 256180
+			// Token: 0x04039CF6 RID: 236790
 			public const int BgSprite = 0;
 
-			// Token: 0x0403E8B5 RID: 256181
+			// Token: 0x04039CF7 RID: 236791
 			public const int Text = 1;
 		}
 	}

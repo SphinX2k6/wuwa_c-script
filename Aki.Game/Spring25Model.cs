@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -8,13 +7,13 @@ using Aki.Protocol;
 using CSharpScript.Game.Common;
 using CSharpScript.Game.Module.Activity.ActivityContent.Spring25;
 
-// Token: 0x0200150A RID: 5386
+// Token: 0x020009C2 RID: 2498
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class Spring25Model : ModelBase
 {
-	// Token: 0x060099CD RID: 39373 RVA: 0x002145DB File Offset: 0x002127DB
+	// Token: 0x06006DAB RID: 28075 RVA: 0x0021E393 File Offset: 0x0021C593
 	protected override bool OnInit()
 	{
 		this.ConfigContext = new Spring25ConfigContext(this);
@@ -23,7 +22,7 @@ public class Spring25Model : ModelBase
 		return true;
 	}
 
-	// Token: 0x060099CE RID: 39374 RVA: 0x00214602 File Offset: 0x00212802
+	// Token: 0x06006DAC RID: 28076 RVA: 0x0021E3BA File Offset: 0x0021C5BA
 	protected override bool OnClear()
 	{
 		this.ConfigContext.Dispose();
@@ -32,8 +31,8 @@ public class Spring25Model : ModelBase
 		return true;
 	}
 
-	// Token: 0x17000D31 RID: 3377
-	// (get) Token: 0x060099CF RID: 39375 RVA: 0x00214626 File Offset: 0x00212826
+	// Token: 0x17000D52 RID: 3410
+	// (get) Token: 0x06006DAD RID: 28077 RVA: 0x0021E3DE File Offset: 0x0021C5DE
 	public ActivityBaseData ActivityData
 	{
 		get
@@ -42,8 +41,8 @@ public class Spring25Model : ModelBase
 		}
 	}
 
-	// Token: 0x17000D32 RID: 3378
-	// (get) Token: 0x060099D0 RID: 39376 RVA: 0x0021462E File Offset: 0x0021282E
+	// Token: 0x17000D53 RID: 3411
+	// (get) Token: 0x06006DAE RID: 28078 RVA: 0x0021E3E6 File Offset: 0x0021C5E6
 	public int CurrentActivityId
 	{
 		get
@@ -52,8 +51,8 @@ public class Spring25Model : ModelBase
 		}
 	}
 
-	// Token: 0x17000D33 RID: 3379
-	// (get) Token: 0x060099D1 RID: 39377 RVA: 0x0021463B File Offset: 0x0021283B
+	// Token: 0x17000D54 RID: 3412
+	// (get) Token: 0x06006DAF RID: 28079 RVA: 0x0021E3F3 File Offset: 0x0021C5F3
 	public bool IsLetterListViewAvailable
 	{
 		get
@@ -62,8 +61,8 @@ public class Spring25Model : ModelBase
 		}
 	}
 
-	// Token: 0x17000D34 RID: 3380
-	// (get) Token: 0x060099D2 RID: 39378 RVA: 0x0021464B File Offset: 0x0021284B
+	// Token: 0x17000D55 RID: 3413
+	// (get) Token: 0x06006DB0 RID: 28080 RVA: 0x0021E403 File Offset: 0x0021C603
 	public bool IsInviteAvailableExternal
 	{
 		get
@@ -72,8 +71,8 @@ public class Spring25Model : ModelBase
 		}
 	}
 
-	// Token: 0x17000D35 RID: 3381
-	// (get) Token: 0x060099D3 RID: 39379 RVA: 0x00214658 File Offset: 0x00212858
+	// Token: 0x17000D56 RID: 3414
+	// (get) Token: 0x06006DB1 RID: 28081 RVA: 0x0021E410 File Offset: 0x0021C610
 	public bool IsAllInvited
 	{
 		get
@@ -82,8 +81,8 @@ public class Spring25Model : ModelBase
 		}
 	}
 
-	// Token: 0x17000D36 RID: 3382
-	// (get) Token: 0x060099D4 RID: 39380 RVA: 0x00214672 File Offset: 0x00212872
+	// Token: 0x17000D57 RID: 3415
+	// (get) Token: 0x06006DB2 RID: 28082 RVA: 0x0021E42A File Offset: 0x0021C62A
 	public int HelpId
 	{
 		get
@@ -92,8 +91,8 @@ public class Spring25Model : ModelBase
 		}
 	}
 
-	// Token: 0x17000D37 RID: 3383
-	// (get) Token: 0x060099D5 RID: 39381 RVA: 0x0021467F File Offset: 0x0021287F
+	// Token: 0x17000D58 RID: 3416
+	// (get) Token: 0x06006DB3 RID: 28083 RVA: 0x0021E437 File Offset: 0x0021C637
 	public bool IsSkinRewarded
 	{
 		get
@@ -102,8 +101,8 @@ public class Spring25Model : ModelBase
 		}
 	}
 
-	// Token: 0x17000D38 RID: 3384
-	// (get) Token: 0x060099D6 RID: 39382 RVA: 0x0021468C File Offset: 0x0021288C
+	// Token: 0x17000D59 RID: 3417
+	// (get) Token: 0x06006DB4 RID: 28084 RVA: 0x0021E444 File Offset: 0x0021C644
 	public bool NeedOpenEnvelopeView
 	{
 		get
@@ -112,8 +111,8 @@ public class Spring25Model : ModelBase
 		}
 	}
 
-	// Token: 0x17000D39 RID: 3385
-	// (get) Token: 0x060099D7 RID: 39383 RVA: 0x002146AC File Offset: 0x002128AC
+	// Token: 0x17000D5A RID: 3418
+	// (get) Token: 0x06006DB5 RID: 28085 RVA: 0x0021E464 File Offset: 0x0021C664
 	public bool HasNewLetter
 	{
 		get
@@ -137,8 +136,8 @@ public class Spring25Model : ModelBase
 		}
 	}
 
-	// Token: 0x17000D3A RID: 3386
-	// (get) Token: 0x060099D8 RID: 39384 RVA: 0x0021471C File Offset: 0x0021291C
+	// Token: 0x17000D5B RID: 3419
+	// (get) Token: 0x06006DB6 RID: 28086 RVA: 0x0021E4D4 File Offset: 0x0021C6D4
 	public bool HasAnyRewardExternal
 	{
 		get
@@ -147,8 +146,8 @@ public class Spring25Model : ModelBase
 		}
 	}
 
-	// Token: 0x17000D3B RID: 3387
-	// (get) Token: 0x060099D9 RID: 39385 RVA: 0x00214729 File Offset: 0x00212929
+	// Token: 0x17000D5C RID: 3420
+	// (get) Token: 0x06006DB7 RID: 28087 RVA: 0x0021E4E1 File Offset: 0x0021C6E1
 	public bool HasRedDot
 	{
 		get
@@ -157,8 +156,8 @@ public class Spring25Model : ModelBase
 		}
 	}
 
-	// Token: 0x17000D3C RID: 3388
-	// (get) Token: 0x060099DA RID: 39386 RVA: 0x0021473C File Offset: 0x0021293C
+	// Token: 0x17000D5D RID: 3421
+	// (get) Token: 0x06006DB8 RID: 28088 RVA: 0x0021E4F4 File Offset: 0x0021C6F4
 	public ESpring25InfoBottomState BottomStateInInfoView
 	{
 		get
@@ -179,8 +178,8 @@ public class Spring25Model : ModelBase
 		}
 	}
 
-	// Token: 0x17000D3D RID: 3389
-	// (get) Token: 0x060099DB RID: 39387 RVA: 0x0021478C File Offset: 0x0021298C
+	// Token: 0x17000D5E RID: 3422
+	// (get) Token: 0x06006DB9 RID: 28089 RVA: 0x0021E544 File Offset: 0x0021C744
 	public string SharePhotoPath
 	{
 		get
@@ -190,8 +189,8 @@ public class Spring25Model : ModelBase
 		}
 	}
 
-	// Token: 0x17000D3E RID: 3390
-	// (get) Token: 0x060099DC RID: 39388 RVA: 0x002147F4 File Offset: 0x002129F4
+	// Token: 0x17000D5F RID: 3423
+	// (get) Token: 0x06006DBA RID: 28090 RVA: 0x0021E5AC File Offset: 0x0021C7AC
 	public bool NeedStartDialog
 	{
 		get
@@ -200,7 +199,7 @@ public class Spring25Model : ModelBase
 		}
 	}
 
-	// Token: 0x060099DD RID: 39389 RVA: 0x00214810 File Offset: 0x00212A10
+	// Token: 0x06006DBB RID: 28091 RVA: 0x0021E5C8 File Offset: 0x0021C7C8
 	public bool IsLetterNewBySignId(int id)
 	{
 		Dictionary<int, bool> player = LocalStorage.GetPlayer<Dictionary<int, bool>>(ELocalStoragePlayerKey.Spring25FirstLetterClick, null);
@@ -208,7 +207,7 @@ public class Spring25Model : ModelBase
 		return player != null && player.TryGetValue(id, out flag) && !flag;
 	}
 
-	// Token: 0x060099DE RID: 39390 RVA: 0x0021483C File Offset: 0x00212A3C
+	// Token: 0x06006DBC RID: 28092 RVA: 0x0021E5F4 File Offset: 0x0021C7F4
 	public void SetLetterClickedBySignId(int id, bool value)
 	{
 		Dictionary<int, bool> dictionary = LocalStorage.GetPlayer<Dictionary<int, bool>>(ELocalStoragePlayerKey.Spring25FirstLetterClick, null) ?? new Dictionary<int, bool>();
@@ -216,7 +215,7 @@ public class Spring25Model : ModelBase
 		LocalStorage.SetPlayer<Dictionary<int, bool>>(ELocalStoragePlayerKey.Spring25FirstLetterClick, dictionary);
 	}
 
-	// Token: 0x060099DF RID: 39391 RVA: 0x0021486C File Offset: 0x00212A6C
+	// Token: 0x06006DBD RID: 28093 RVA: 0x0021E624 File Offset: 0x0021C824
 	public void SyncSpringSignDrawRoleResponse(SpringSignDrawRoleResponse response)
 	{
 		int drawId = response.DrawId;
@@ -239,25 +238,25 @@ public class Spring25Model : ModelBase
 		this.SetLetterClickedBySignId(drawId, false);
 	}
 
-	// Token: 0x060099E0 RID: 39392 RVA: 0x0021493C File Offset: 0x00212B3C
+	// Token: 0x06006DBE RID: 28094 RVA: 0x0021E6F4 File Offset: 0x0021C8F4
 	public void SyncSpringSignDrawRewardResponse(int id)
 	{
 		this.ProtocolContext.SyncTaskStateByTaskId(id);
 	}
 
-	// Token: 0x060099E1 RID: 39393 RVA: 0x0021494A File Offset: 0x00212B4A
+	// Token: 0x06006DBF RID: 28095 RVA: 0x0021E702 File Offset: 0x0021C902
 	public void SyncSpringSignSkinRewardResponse()
 	{
 		this.ProtocolContext.SyncSkinReward();
 	}
 
-	// Token: 0x060099E2 RID: 39394 RVA: 0x00214958 File Offset: 0x00212B58
+	// Token: 0x06006DC0 RID: 28096 RVA: 0x0021E710 File Offset: 0x0021C910
 	public void ResetCurrentSignId()
 	{
 		this.UiContext.CurrentSignId = null;
 	}
 
-	// Token: 0x060099E3 RID: 39395 RVA: 0x0021497C File Offset: 0x00212B7C
+	// Token: 0x06006DC1 RID: 28097 RVA: 0x0021E734 File Offset: 0x0021C934
 	public void TrySetCurrentLetterSignId(int id)
 	{
 		int? currentLetterSignId = this.UiContext.CurrentLetterSignId;
@@ -268,7 +267,7 @@ public class Spring25Model : ModelBase
 		this.UiContext.CurrentLetterSignId = new int?(id);
 	}
 
-	// Token: 0x060099E4 RID: 39396 RVA: 0x002149BC File Offset: 0x00212BBC
+	// Token: 0x06006DC2 RID: 28098 RVA: 0x0021E774 File Offset: 0x0021C974
 	public void InitLetterSignIdForLetterListView()
 	{
 		int? num = null;
@@ -288,7 +287,7 @@ public class Spring25Model : ModelBase
 		this.UiContext.CurrentLetterSignId = num;
 	}
 
-	// Token: 0x060099E5 RID: 39397 RVA: 0x00214A4C File Offset: 0x00212C4C
+	// Token: 0x06006DC3 RID: 28099 RVA: 0x0021E804 File Offset: 0x0021CA04
 	public Spring25ActivitySubViewData BuildActivitySubViewData()
 	{
 		return new Spring25ActivitySubViewData
@@ -304,7 +303,7 @@ public class Spring25Model : ModelBase
 		};
 	}
 
-	// Token: 0x060099E6 RID: 39398 RVA: 0x00214ADC File Offset: 0x00212CDC
+	// Token: 0x06006DC4 RID: 28100 RVA: 0x0021E894 File Offset: 0x0021CA94
 	public Spring25MainViewData BuildMainViewData(bool isOnlyRefresh = false)
 	{
 		Dictionary<ESpring25RoleType, bool> dictionary = new Dictionary<ESpring25RoleType, bool>();
@@ -337,7 +336,7 @@ public class Spring25Model : ModelBase
 		return spring25MainViewData;
 	}
 
-	// Token: 0x060099E7 RID: 39399 RVA: 0x00214C0C File Offset: 0x00212E0C
+	// Token: 0x06006DC5 RID: 28101 RVA: 0x0021E9C4 File Offset: 0x0021CBC4
 	public Spring25DialogueViewData BuildDialogueViewData()
 	{
 		int? currentSignId = this.UiContext.CurrentSignId;
@@ -356,7 +355,7 @@ public class Spring25Model : ModelBase
 		};
 	}
 
-	// Token: 0x060099E8 RID: 39400 RVA: 0x00214C74 File Offset: 0x00212E74
+	// Token: 0x06006DC6 RID: 28102 RVA: 0x0021EA2C File Offset: 0x0021CC2C
 	public Spring25DialogueViewData BuildStartDialogueViewData()
 	{
 		Spring25DialogueSpineData[] array = this.BuildStartSpineData();
@@ -370,7 +369,7 @@ public class Spring25Model : ModelBase
 		};
 	}
 
-	// Token: 0x060099E9 RID: 39401 RVA: 0x00214CB4 File Offset: 0x00212EB4
+	// Token: 0x06006DC7 RID: 28103 RVA: 0x0021EA6C File Offset: 0x0021CC6C
 	public Spring25InfoViewData BuildInfoViewData()
 	{
 		int invitedCount = this.ProtocolContext.InvitedCount;
@@ -387,7 +386,7 @@ public class Spring25Model : ModelBase
 		return spring25InfoViewData;
 	}
 
-	// Token: 0x060099EA RID: 39402 RVA: 0x00214D5C File Offset: 0x00212F5C
+	// Token: 0x06006DC8 RID: 28104 RVA: 0x0021EB14 File Offset: 0x0021CD14
 	public Spring25LetterListViewData BuildLetterListViewData()
 	{
 		string infoTextId = null;
@@ -406,7 +405,7 @@ public class Spring25Model : ModelBase
 		};
 	}
 
-	// Token: 0x060099EB RID: 39403 RVA: 0x00214DC8 File Offset: 0x00212FC8
+	// Token: 0x06006DC9 RID: 28105 RVA: 0x0021EB80 File Offset: 0x0021CD80
 	public Spring25EnvelopeViewData BuildEnvelopeViewData()
 	{
 		int? currentSignId = this.UiContext.CurrentSignId;
@@ -419,7 +418,7 @@ public class Spring25Model : ModelBase
 		};
 	}
 
-	// Token: 0x060099EC RID: 39404 RVA: 0x00214E34 File Offset: 0x00213034
+	// Token: 0x06006DCA RID: 28106 RVA: 0x0021EBEC File Offset: 0x0021CDEC
 	private unsafe List<Spring25InfoContentData> BuildContentListInInfoView()
 	{
 		List<Spring25InfoContentData> list = new List<Spring25InfoContentData>();
@@ -475,7 +474,7 @@ public class Spring25Model : ModelBase
 		return list;
 	}
 
-	// Token: 0x060099ED RID: 39405 RVA: 0x00214FC0 File Offset: 0x002131C0
+	// Token: 0x06006DCB RID: 28107 RVA: 0x0021ED78 File Offset: 0x0021CF78
 	private List<Spring25InfoProgressData> BuildProgressListInInfoView()
 	{
 		List<Spring25InfoProgressData> list = new List<Spring25InfoProgressData>();
@@ -502,12 +501,11 @@ public class Spring25Model : ModelBase
 		return list;
 	}
 
-	// Token: 0x060099EE RID: 39406 RVA: 0x00215044 File Offset: 0x00213244
+	// Token: 0x06006DCC RID: 28108 RVA: 0x0021EDFC File Offset: 0x0021CFFC
 	private List<Spring25LetterListTabData> BuildTabDataListInLetterListView()
 	{
-		List<int> list = (from id in this.ProtocolContext.InvitedRoleSet
-		orderby id
-		select id).ToList<int>();
+		List<int> list = new List<int>(this.ProtocolContext.InvitedRoleSet);
+		list.Sort();
 		List<Spring25LetterListTabData> list2 = new List<Spring25LetterListTabData>();
 		foreach (int num in list)
 		{
@@ -525,7 +523,7 @@ public class Spring25Model : ModelBase
 		return list2;
 	}
 
-	// Token: 0x060099EF RID: 39407 RVA: 0x0021512C File Offset: 0x0021332C
+	// Token: 0x06006DCD RID: 28109 RVA: 0x0021EEC8 File Offset: 0x0021D0C8
 	private List<Spring25DialogueChatData> BuildChatDataListInDialogViewByChatCfg(SpringChat? chatCfg)
 	{
 		List<Spring25DialogueChatData> list = new List<Spring25DialogueChatData>();
@@ -545,7 +543,7 @@ public class Spring25Model : ModelBase
 		return list;
 	}
 
-	// Token: 0x060099F0 RID: 39408 RVA: 0x002151B4 File Offset: 0x002133B4
+	// Token: 0x06006DCE RID: 28110 RVA: 0x0021EF50 File Offset: 0x0021D150
 	private Spring25DialogueSpineData[] BuildSpineDataByChatCfg(SpringChat? chatCfg)
 	{
 		return new Spring25DialogueSpineData[]
@@ -563,36 +561,36 @@ public class Spring25Model : ModelBase
 		};
 	}
 
-	// Token: 0x060099F1 RID: 39409 RVA: 0x0021525C File Offset: 0x0021345C
+	// Token: 0x06006DCF RID: 28111 RVA: 0x0021EFF8 File Offset: 0x0021D1F8
 	private List<Spring25DialogueChatData> BuildChatDataListInDialogViewBySignId(int id)
 	{
 		SpringChat? chatConfigBySignId = this.ConfigContext.GetChatConfigBySignId(id, PlayerInfoModel.Instance.GetPlayerGender());
 		return this.BuildChatDataListInDialogViewByChatCfg(chatConfigBySignId);
 	}
 
-	// Token: 0x060099F2 RID: 39410 RVA: 0x00215288 File Offset: 0x00213488
+	// Token: 0x06006DD0 RID: 28112 RVA: 0x0021F024 File Offset: 0x0021D224
 	private List<Spring25DialogueChatData> BuildStartChatDataListInDialogView()
 	{
 		SpringChat? chatCfg = this.ConfigContext.StartChatCfgByGender(PlayerInfoModel.Instance.GetPlayerGender());
 		return this.BuildChatDataListInDialogViewByChatCfg(chatCfg);
 	}
 
-	// Token: 0x060099F3 RID: 39411 RVA: 0x002152B4 File Offset: 0x002134B4
+	// Token: 0x06006DD1 RID: 28113 RVA: 0x0021F050 File Offset: 0x0021D250
 	private Spring25DialogueSpineData[] BuildSpineDataBySignId(int id)
 	{
 		SpringChat? chatConfigBySignId = this.ConfigContext.GetChatConfigBySignId(id, PlayerInfoModel.Instance.GetPlayerGender());
 		return this.BuildSpineDataByChatCfg(chatConfigBySignId);
 	}
 
-	// Token: 0x060099F4 RID: 39412 RVA: 0x002152E0 File Offset: 0x002134E0
+	// Token: 0x06006DD2 RID: 28114 RVA: 0x0021F07C File Offset: 0x0021D27C
 	private Spring25DialogueSpineData[] BuildStartSpineData()
 	{
 		SpringChat? chatCfg = this.ConfigContext.StartChatCfgByGender(PlayerInfoModel.Instance.GetPlayerGender());
 		return this.BuildSpineDataByChatCfg(chatCfg);
 	}
 
-	// Token: 0x17000D3F RID: 3391
-	// (get) Token: 0x060099F5 RID: 39413 RVA: 0x0021530A File Offset: 0x0021350A
+	// Token: 0x17000D60 RID: 3424
+	// (get) Token: 0x06006DD3 RID: 28115 RVA: 0x0021F0A6 File Offset: 0x0021D2A6
 	public static Spring25Model Instance
 	{
 		get
@@ -601,7 +599,7 @@ public class Spring25Model : ModelBase
 		}
 	}
 
-	// Token: 0x060099F6 RID: 39414 RVA: 0x00215311 File Offset: 0x00213511
+	// Token: 0x06006DD4 RID: 28116 RVA: 0x0021F0AD File Offset: 0x0021D2AD
 	public static Spring25Model GetOrCreateInstance()
 	{
 		if (Spring25Model._Instance == null)
@@ -611,7 +609,7 @@ public class Spring25Model : ModelBase
 		return Spring25Model._Instance;
 	}
 
-	// Token: 0x060099F7 RID: 39415 RVA: 0x00215325 File Offset: 0x00213525
+	// Token: 0x06006DD5 RID: 28117 RVA: 0x0021F0C1 File Offset: 0x0021D2C1
 	public static bool CreateInstance()
 	{
 		if (Spring25Model._Instance != null)
@@ -622,33 +620,33 @@ public class Spring25Model : ModelBase
 		return true;
 	}
 
-	// Token: 0x060099F8 RID: 39416 RVA: 0x0021533B File Offset: 0x0021353B
+	// Token: 0x06006DD6 RID: 28118 RVA: 0x0021F0D7 File Offset: 0x0021D2D7
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060099F9 RID: 39417 RVA: 0x0021533D File Offset: 0x0021353D
+	// Token: 0x06006DD7 RID: 28119 RVA: 0x0021F0D9 File Offset: 0x0021D2D9
 	public static void ResetStaticDefaultValue()
 	{
 		Spring25Model._Instance = null;
 	}
 
-	// Token: 0x060099FA RID: 39418 RVA: 0x00215345 File Offset: 0x00213545
+	// Token: 0x06006DD8 RID: 28120 RVA: 0x0021F0E1 File Offset: 0x0021D2E1
 	static Spring25Model()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(Spring25Model.CreateStaticDefaultValue), new Action(Spring25Model.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400437C RID: 17276
+	// Token: 0x04004422 RID: 17442
 	private Spring25ConfigContext ConfigContext;
 
-	// Token: 0x0400437D RID: 17277
+	// Token: 0x04004423 RID: 17443
 	private Spring25ProtocolContext ProtocolContext;
 
-	// Token: 0x0400437E RID: 17278
+	// Token: 0x04004424 RID: 17444
 	private Spring25UiContext UiContext;
 
-	// Token: 0x0400437F RID: 17279
+	// Token: 0x04004425 RID: 17445
 	[Nullable(2)]
 	private static Spring25Model _Instance;
 }

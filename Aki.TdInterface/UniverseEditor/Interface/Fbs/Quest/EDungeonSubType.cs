@@ -2,144 +2,146 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003C99 RID: 15513
+	// Token: 0x020040AD RID: 16557
 	public enum EDungeonSubType : byte
 	{
-		// Token: 0x0400B36F RID: 45935
+		// Token: 0x0400BD0F RID: 48399
 		Test,
-		// Token: 0x0400B370 RID: 45936
+		// Token: 0x0400BD10 RID: 48400
 		RolePlot,
-		// Token: 0x0400B371 RID: 45937
+		// Token: 0x0400BD11 RID: 48401
 		MainLine,
-		// Token: 0x0400B372 RID: 45938
+		// Token: 0x0400BD12 RID: 48402
 		Lord,
-		// Token: 0x0400B373 RID: 45939
+		// Token: 0x0400BD13 RID: 48403
 		BOSS,
-		// Token: 0x0400B374 RID: 45940
+		// Token: 0x0400BD14 RID: 48404
 		ConcertoResponse,
-		// Token: 0x0400B375 RID: 45941
+		// Token: 0x0400BD15 RID: 48405
 		Breakthrough,
-		// Token: 0x0400B376 RID: 45942
+		// Token: 0x0400BD16 RID: 48406
 		RoleTrial,
-		// Token: 0x0400B377 RID: 45943
+		// Token: 0x0400BD17 RID: 48407
 		SingleTower,
-		// Token: 0x0400B378 RID: 45944
+		// Token: 0x0400BD18 RID: 48408
 		LoopTower,
-		// Token: 0x0400B379 RID: 45945
+		// Token: 0x0400BD19 RID: 48409
 		WeaponMat,
-		// Token: 0x0400B37A RID: 45946
+		// Token: 0x0400BD1A RID: 48410
 		SkillMat,
-		// Token: 0x0400B37B RID: 45947
+		// Token: 0x0400BD1B RID: 48411
 		WorldDungeon,
-		// Token: 0x0400B37C RID: 45948
+		// Token: 0x0400BD1C RID: 48412
 		BigWorld,
-		// Token: 0x0400B37D RID: 45949
+		// Token: 0x0400BD1D RID: 48413
 		Activity,
-		// Token: 0x0400B37E RID: 45950
+		// Token: 0x0400BD1E RID: 48414
 		Roguelike,
-		// Token: 0x0400B37F RID: 45951
+		// Token: 0x0400BD1F RID: 48415
 		SingleDungeon,
-		// Token: 0x0400B380 RID: 45952
+		// Token: 0x0400BD20 RID: 48416
 		NewSingleTower,
-		// Token: 0x0400B381 RID: 45953
+		// Token: 0x0400BD21 RID: 48417
 		NewLoopTower,
-		// Token: 0x0400B382 RID: 45954
+		// Token: 0x0400BD22 RID: 48418
 		MowGrass,
-		// Token: 0x0400B383 RID: 45955
+		// Token: 0x0400BD23 RID: 48419
 		BossRush,
-		// Token: 0x0400B384 RID: 45956
+		// Token: 0x0400BD24 RID: 48420
 		TowerDefense,
-		// Token: 0x0400B385 RID: 45957
+		// Token: 0x0400BD25 RID: 48421
 		RiskHarvest,
-		// Token: 0x0400B386 RID: 45958
+		// Token: 0x0400BD26 RID: 48422
 		Link,
-		// Token: 0x0400B387 RID: 45959
+		// Token: 0x0400BD27 RID: 48423
 		MowTower,
-		// Token: 0x0400B388 RID: 45960
+		// Token: 0x0400BD28 RID: 48424
 		FarmGold,
-		// Token: 0x0400B389 RID: 45961
+		// Token: 0x0400BD29 RID: 48425
 		RoleSkinTrial,
-		// Token: 0x0400B38A RID: 45962
+		// Token: 0x0400BD2A RID: 48426
 		SlashAndTower,
-		// Token: 0x0400B38B RID: 45963
+		// Token: 0x0400BD2B RID: 48427
 		OnlineParkour,
-		// Token: 0x0400B38C RID: 45964
+		// Token: 0x0400BD2C RID: 48428
 		RogueWeekly,
-		// Token: 0x0400B38D RID: 45965
+		// Token: 0x0400BD2D RID: 48429
 		BabelTower,
-		// Token: 0x0400B38E RID: 45966
+		// Token: 0x0400BD2E RID: 48430
 		HorseBetting,
-		// Token: 0x0400B38F RID: 45967
+		// Token: 0x0400BD2F RID: 48431
 		TuanziPlot,
-		// Token: 0x0400B390 RID: 45968
+		// Token: 0x0400BD30 RID: 48432
 		TuanziCombat,
-		// Token: 0x0400B391 RID: 45969
+		// Token: 0x0400BD31 RID: 48433
 		RogueRes,
-		// Token: 0x0400B392 RID: 45970
+		// Token: 0x0400BD32 RID: 48434
 		DangoMonopoly,
-		// Token: 0x0400B393 RID: 45971
+		// Token: 0x0400BD33 RID: 48435
 		BvB,
-		// Token: 0x0400B394 RID: 45972
+		// Token: 0x0400BD34 RID: 48436
 		TrapDefense,
-		// Token: 0x0400B395 RID: 45973
+		// Token: 0x0400BD35 RID: 48437
 		FunPlay,
-		// Token: 0x0400B396 RID: 45974
+		// Token: 0x0400BD36 RID: 48438
 		HonamiStory,
-		// Token: 0x0400B397 RID: 45975
+		// Token: 0x0400BD37 RID: 48439
 		RoleTrial2,
-		// Token: 0x0400B398 RID: 45976
+		// Token: 0x0400BD38 RID: 48440
 		Survivors,
-		// Token: 0x0400B399 RID: 45977
+		// Token: 0x0400BD39 RID: 48441
 		PhotographFight,
-		// Token: 0x0400B39A RID: 45978
+		// Token: 0x0400BD3A RID: 48442
 		MotorParkour,
-		// Token: 0x0400B39B RID: 45979
+		// Token: 0x0400BD3B RID: 48443
 		MotorFight,
-		// Token: 0x0400B39C RID: 45980
+		// Token: 0x0400BD3C RID: 48444
 		Flipper,
-		// Token: 0x0400B39D RID: 45981
+		// Token: 0x0400BD3D RID: 48445
 		FurnitureDiy,
-		// Token: 0x0400B39E RID: 45982
+		// Token: 0x0400BD3E RID: 48446
 		NewTowerClimbing,
-		// Token: 0x0400B39F RID: 45983
+		// Token: 0x0400BD3F RID: 48447
 		LordGymV3,
-		// Token: 0x0400B3A0 RID: 45984
+		// Token: 0x0400BD40 RID: 48448
 		GachaPoolRoleSupportIns,
-		// Token: 0x0400B3A1 RID: 45985
+		// Token: 0x0400BD41 RID: 48449
 		NightmarePhantomIns,
-		// Token: 0x0400B3A2 RID: 45986
+		// Token: 0x0400BD42 RID: 48450
 		Kurotato,
-		// Token: 0x0400B3A3 RID: 45987
+		// Token: 0x0400BD43 RID: 48451
 		FlagChallenge,
-		// Token: 0x0400B3A4 RID: 45988
+		// Token: 0x0400BD44 RID: 48452
 		RhythmSpaceship,
-		// Token: 0x0400B3A5 RID: 45989
+		// Token: 0x0400BD45 RID: 48453
 		Tetris,
-		// Token: 0x0400B3A6 RID: 45990
+		// Token: 0x0400BD46 RID: 48454
 		BossPiling,
-		// Token: 0x0400B3A7 RID: 45991
+		// Token: 0x0400BD47 RID: 48455
 		EdgeRunnerLordGym,
-		// Token: 0x0400B3A8 RID: 45992
+		// Token: 0x0400BD48 RID: 48456
 		MultiMotor,
-		// Token: 0x0400B3A9 RID: 45993
+		// Token: 0x0400BD49 RID: 48457
 		DangoBrawl,
-		// Token: 0x0400B3AA RID: 45994
+		// Token: 0x0400BD4A RID: 48458
 		RoverRogue,
-		// Token: 0x0400B3AB RID: 45995
-		PlayInstShare = 61,
-		// Token: 0x0400B3AC RID: 45996
+		// Token: 0x0400BD4B RID: 48459
+		DarkTide,
+		// Token: 0x0400BD4C RID: 48460
+		PlayInstShare,
+		// Token: 0x0400BD4D RID: 48461
 		MonsterSettlementInstShare,
-		// Token: 0x0400B3AD RID: 45997
+		// Token: 0x0400BD4E RID: 48462
 		NightmareLordInstShare,
-		// Token: 0x0400B3AE RID: 45998
+		// Token: 0x0400BD4F RID: 48463
 		LordInstShare,
-		// Token: 0x0400B3AF RID: 45999
+		// Token: 0x0400BD50 RID: 48464
 		SilentAreaInstShare,
-		// Token: 0x0400B3B0 RID: 46000
+		// Token: 0x0400BD51 RID: 48465
 		DiceGame,
-		// Token: 0x0400B3B1 RID: 46001
+		// Token: 0x0400BD52 RID: 48466
 		RoleTower,
-		// Token: 0x0400B3B2 RID: 46002
+		// Token: 0x0400BD53 RID: 48467
 		MechaSync
 	}
 }

@@ -10,18 +10,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 {
-	// Token: 0x0200628E RID: 25230
+	// Token: 0x0200520C RID: 21004
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RewardPanel : UiPanelBase
 	{
-		// Token: 0x0603F7C8 RID: 260040 RVA: 0x00F59528 File Offset: 0x00F57728
+		// Token: 0x06034489 RID: 214153 RVA: 0x00EA0484 File Offset: 0x00E9E684
 		public RewardPanel(ActivityRealmBetweenData activityBaseData)
 		{
 			this.ActivityBaseData = activityBaseData;
 		}
 
-		// Token: 0x0603F7C9 RID: 260041 RVA: 0x00F59538 File Offset: 0x00F57738
+		// Token: 0x0603448A RID: 214154 RVA: 0x00EA0494 File Offset: 0x00E9E694
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			};
 		}
 
-		// Token: 0x0603F7CA RID: 260042 RVA: 0x00F595F8 File Offset: 0x00F577F8
+		// Token: 0x0603448B RID: 214155 RVA: 0x00EA0554 File Offset: 0x00E9E754
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RewardPanel.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -50,13 +50,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F7CB RID: 260043 RVA: 0x00F5963B File Offset: 0x00F5783B
+		// Token: 0x0603448C RID: 214156 RVA: 0x00EA0597 File Offset: 0x00E9E797
 		protected override void OnBeforeShow()
 		{
 			this.Refresh();
 		}
 
-		// Token: 0x0603F7CC RID: 260044 RVA: 0x00F59644 File Offset: 0x00F57844
+		// Token: 0x0603448D RID: 214157 RVA: 0x00EA05A0 File Offset: 0x00E9E7A0
 		public void Refresh()
 		{
 			RealmBetweenConfig activityConfig = this.ActivityBaseData.GetActivityConfig();
@@ -81,17 +81,17 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			this.RewardItemGrid.Refresh(data);
 		}
 
-		// Token: 0x0603F7CD RID: 260045 RVA: 0x00F59756 File Offset: 0x00F57956
+		// Token: 0x0603448E RID: 214158 RVA: 0x00EA06B2 File Offset: 0x00E9E8B2
 		private void OnClickedButton()
 		{
 			ActivityRealmBetweenController.Instance.RequestTakeTaskFinalReward();
 		}
 
-		// Token: 0x040212FF RID: 135935
+		// Token: 0x0401BC2E RID: 113710
 		[Nullable(2)]
 		private ActivitySmallItemGrid RewardItemGrid;
 
-		// Token: 0x04021300 RID: 135936
+		// Token: 0x0401BC2F RID: 113711
 		protected ActivityRealmBetweenData ActivityBaseData;
 	}
 }

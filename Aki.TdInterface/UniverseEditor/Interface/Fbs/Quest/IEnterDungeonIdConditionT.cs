@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003DFE RID: 15870
+	// Token: 0x02004239 RID: 16953
 	public class IEnterDungeonIdConditionT
 	{
-		// Token: 0x17006DAE RID: 28078
-		// (get) Token: 0x06016331 RID: 90929 RVA: 0x00334B94 File Offset: 0x00332D94
-		// (set) Token: 0x06016332 RID: 90930 RVA: 0x00334B9C File Offset: 0x00332D9C
+		// Token: 0x17007394 RID: 29588
+		// (get) Token: 0x0601795E RID: 96606 RVA: 0x0035D78C File Offset: 0x0035B98C
+		// (set) Token: 0x0601795F RID: 96607 RVA: 0x0035D794 File Offset: 0x0035B994
 		public EDungeonConditionType Type { get; set; }
 
-		// Token: 0x17006DAF RID: 28079
-		// (get) Token: 0x06016333 RID: 90931 RVA: 0x00334BA5 File Offset: 0x00332DA5
-		// (set) Token: 0x06016334 RID: 90932 RVA: 0x00334BAD File Offset: 0x00332DAD
+		// Token: 0x17007395 RID: 29589
+		// (get) Token: 0x06017960 RID: 96608 RVA: 0x0035D79D File Offset: 0x0035B99D
+		// (set) Token: 0x06017961 RID: 96609 RVA: 0x0035D7A5 File Offset: 0x0035B9A5
 		public int DungeonId { get; set; }
 
-		// Token: 0x06016335 RID: 90933 RVA: 0x00334BB6 File Offset: 0x00332DB6
+		// Token: 0x06017962 RID: 96610 RVA: 0x0035D7AE File Offset: 0x0035B9AE
 		public IEnterDungeonIdConditionT()
 		{
 			this.Type = EDungeonConditionType.DungeonSubType;

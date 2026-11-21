@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Common.Event;
@@ -11,17 +10,17 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x0200278E RID: 10126
+// Token: 0x02001C79 RID: 7289
 [NullableContext(1)]
 [Nullable(0)]
 public class QuickRoleSelectView : UiViewBase
 {
-	// Token: 0x06014C62 RID: 85090 RVA: 0x00542609 File Offset: 0x00540809
+	// Token: 0x0601214D RID: 74061 RVA: 0x005516DD File Offset: 0x0054F8DD
 	public QuickRoleSelectView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x06014C63 RID: 85091 RVA: 0x00542614 File Offset: 0x00540814
+	// Token: 0x0601214E RID: 74062 RVA: 0x005516E8 File Offset: 0x0054F8E8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -51,7 +50,7 @@ public class QuickRoleSelectView : UiViewBase
 		};
 	}
 
-	// Token: 0x06014C64 RID: 85092 RVA: 0x005427EC File Offset: 0x005409EC
+	// Token: 0x0601214F RID: 74063 RVA: 0x005518C0 File Offset: 0x0054FAC0
 	private void ConfirmClick()
 	{
 		Dictionary<int, RoleDataBase> roleIndexMap = RoleSelectModel.Instance.RoleIndexMap;
@@ -99,7 +98,7 @@ public class QuickRoleSelectView : UiViewBase
 		});
 	}
 
-	// Token: 0x06014C65 RID: 85093 RVA: 0x005428F0 File Offset: 0x00540AF0
+	// Token: 0x06012150 RID: 74064 RVA: 0x005519C4 File Offset: 0x0054FBC4
 	private void ShowLoading()
 	{
 		if (this.DelayLoadingTimer == null)
@@ -134,7 +133,7 @@ public class QuickRoleSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x06014C66 RID: 85094 RVA: 0x00542980 File Offset: 0x00540B80
+	// Token: 0x06012151 RID: 74065 RVA: 0x00551A54 File Offset: 0x0054FC54
 	private void BackClick()
 	{
 		QuickRoleSelectViewData data = this.Data;
@@ -149,11 +148,11 @@ public class QuickRoleSelectView : UiViewBase
 		UiManager.Instance.CloseView(this.ViewInfo.Name, null);
 	}
 
-	// Token: 0x06014C67 RID: 85095 RVA: 0x005429B4 File Offset: 0x00540BB4
+	// Token: 0x06012152 RID: 74066 RVA: 0x00551A88 File Offset: 0x0054FC88
 	private unsafe void OnDetailClick()
 	{
 		int num = this.LastAddFormationRoleId;
-		List<int> list = RoleSelectModel.Instance.SelectedRoleSet.ToList<int>();
+		List<int> list = new List<int>(RoleSelectModel.Instance.SelectedRoleSet);
 		if (list.Count > 0 && num == 0)
 		{
 			List<int> list2 = list;
@@ -162,7 +161,7 @@ public class QuickRoleSelectView : UiViewBase
 		List<int> list3;
 		if (num < 100000)
 		{
-			list3 = RoleModel.Instance.GetRoleIdList();
+			list3 = RoleModel.Instance.GetRoleIdList(null);
 		}
 		else
 		{
@@ -186,7 +185,7 @@ public class QuickRoleSelectView : UiViewBase
 		});
 	}
 
-	// Token: 0x06014C68 RID: 85096 RVA: 0x00542A50 File Offset: 0x00540C50
+	// Token: 0x06012153 RID: 74067 RVA: 0x00551B28 File Offset: 0x0054FD28
 	private void OnCloseView(EUiViewName viewName, int i)
 	{
 		if (viewName == EUiViewName.RoleRootView)
@@ -212,13 +211,13 @@ public class QuickRoleSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x06014C69 RID: 85097 RVA: 0x00542B17 File Offset: 0x00540D17
+	// Token: 0x06012154 RID: 74068 RVA: 0x00551BEF File Offset: 0x0054FDEF
 	private void OnRoleChangeEnd()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06014C6A RID: 85098 RVA: 0x00542B20 File Offset: 0x00540D20
+	// Token: 0x06012155 RID: 74069 RVA: 0x00551BF8 File Offset: 0x0054FDF8
 	protected override void OnStart()
 	{
 		this.Data = (this.OpenParam as QuickRoleSelectViewData);
@@ -257,7 +256,7 @@ public class QuickRoleSelectView : UiViewBase
 		this.RefreshRoleList();
 	}
 
-	// Token: 0x06014C6B RID: 85099 RVA: 0x00542C90 File Offset: 0x00540E90
+	// Token: 0x06012156 RID: 74070 RVA: 0x00551D68 File Offset: 0x0054FF68
 	protected void RefreshRoleList()
 	{
 		QuickRoleSelectViewData data = this.Data;
@@ -299,7 +298,7 @@ public class QuickRoleSelectView : UiViewBase
 		this.RefreshConfirmBtn();
 	}
 
-	// Token: 0x06014C6C RID: 85100 RVA: 0x00542E48 File Offset: 0x00541048
+	// Token: 0x06012157 RID: 74071 RVA: 0x00551F20 File Offset: 0x00550120
 	protected override void OnBeforeDestroy()
 	{
 		QuickRoleSelectViewData data = this.Data;
@@ -342,7 +341,7 @@ public class QuickRoleSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x06014C6D RID: 85101 RVA: 0x00542F01 File Offset: 0x00541101
+	// Token: 0x06012158 RID: 74072 RVA: 0x00551FD9 File Offset: 0x005501D9
 	private TeamRoleGrid OnGridProxyCreate()
 	{
 		TeamRoleGrid teamRoleGrid = new TeamRoleGrid();
@@ -352,14 +351,14 @@ public class QuickRoleSelectView : UiViewBase
 		return teamRoleGrid;
 	}
 
-	// Token: 0x06014C6E RID: 85102 RVA: 0x00542F3F File Offset: 0x0054113F
+	// Token: 0x06012159 RID: 74073 RVA: 0x00552017 File Offset: 0x00550217
 	protected bool IsShowGray(int roleId)
 	{
 		QuickRoleSelectViewData data = this.Data;
 		return data == null || !data.CanUseSpecialTrialRole || !RoleUtils.IsSpecialTrialRole(roleId);
 	}
 
-	// Token: 0x06014C6F RID: 85103 RVA: 0x00542F60 File Offset: 0x00541160
+	// Token: 0x0601215A RID: 74074 RVA: 0x00552038 File Offset: 0x00550238
 	protected void ToggleFunction(MediumItemGridExtendCallback @params)
 	{
 		Dictionary<int, RoleDataBase> roleIndexMap = RoleSelectModel.Instance.RoleIndexMap;
@@ -371,7 +370,7 @@ public class QuickRoleSelectView : UiViewBase
 		}
 		if (@params.State == EToggleState.ETT_UnChecked)
 		{
-			using (List<KeyValuePair<int, RoleDataBase>>.Enumerator enumerator = roleIndexMap.ToList<KeyValuePair<int, RoleDataBase>>().GetEnumerator())
+			using (List<KeyValuePair<int, RoleDataBase>>.Enumerator enumerator = new List<KeyValuePair<int, RoleDataBase>>(roleIndexMap).GetEnumerator())
 			{
 				while (enumerator.MoveNext())
 				{
@@ -410,7 +409,7 @@ public class QuickRoleSelectView : UiViewBase
 		this.RefreshConfirmBtn();
 	}
 
-	// Token: 0x06014C70 RID: 85104 RVA: 0x00543084 File Offset: 0x00541284
+	// Token: 0x0601215B RID: 74075 RVA: 0x0055215C File Offset: 0x0055035C
 	private void RefreshConfirmBtn()
 	{
 		if (this.Data == null || !this.Data.IsNeedChangeBtnState || this.Data.CanConfirm == null)
@@ -435,7 +434,7 @@ public class QuickRoleSelectView : UiViewBase
 		button.SetSelfInteractive(this.Data.CanConfirm(list.ToArray()));
 	}
 
-	// Token: 0x06014C71 RID: 85105 RVA: 0x00543110 File Offset: 0x00541310
+	// Token: 0x0601215C RID: 74076 RVA: 0x005521E8 File Offset: 0x005503E8
 	protected virtual bool CanExecuteChange(object data, bool isForceSelected, EToggleState state)
 	{
 		if (state != EToggleState.ETT_UnChecked)
@@ -481,8 +480,10 @@ public class QuickRoleSelectView : UiViewBase
 		Func<int, int[], bool> func = (data5 != null) ? data5.CanSelectRole : null;
 		if (func != null)
 		{
-			int[] arg = RoleSelectModel.Instance.SelectedRoleSet.ToArray<int>();
-			if (!func(roleDataBase.GetDataId(), arg))
+			HashSet<int> selectedRoleSet = RoleSelectModel.Instance.SelectedRoleSet;
+			int[] array = new int[selectedRoleSet.Count];
+			selectedRoleSet.CopyTo(array);
+			if (!func(roleDataBase.GetDataId(), array))
 			{
 				return false;
 			}
@@ -490,7 +491,7 @@ public class QuickRoleSelectView : UiViewBase
 		return true;
 	}
 
-	// Token: 0x06014C72 RID: 85106 RVA: 0x0054322C File Offset: 0x0054142C
+	// Token: 0x0601215D RID: 74077 RVA: 0x00552310 File Offset: 0x00550510
 	private void UpdateRoleList(List<RoleDataBase> list, bool isShowText, EFilterSortType type)
 	{
 		Dictionary<int, RoleDataBase> roleIndexMap = RoleSelectModel.Instance.RoleIndexMap;
@@ -553,11 +554,11 @@ public class QuickRoleSelectView : UiViewBase
 		this.RoleList = list2;
 	}
 
-	// Token: 0x04009C58 RID: 40024
+	// Token: 0x04009DBC RID: 40380
 	[Nullable(2)]
 	protected QuickRoleSelectViewData Data;
 
-	// Token: 0x04009C59 RID: 40025
+	// Token: 0x04009DBD RID: 40381
 	[Nullable(new byte[]
 	{
 		2,
@@ -565,7 +566,7 @@ public class QuickRoleSelectView : UiViewBase
 	})]
 	protected FilterSortEntrance<RoleDataBase> FilterSortEntrance;
 
-	// Token: 0x04009C5A RID: 40026
+	// Token: 0x04009DBE RID: 40382
 	[Nullable(new byte[]
 	{
 		2,
@@ -574,7 +575,7 @@ public class QuickRoleSelectView : UiViewBase
 	})]
 	protected LoopScrollView<TeamRoleGrid, RoleDataBase> RoleScrollView;
 
-	// Token: 0x04009C5B RID: 40027
+	// Token: 0x04009DBF RID: 40383
 	[Nullable(new byte[]
 	{
 		2,
@@ -582,60 +583,60 @@ public class QuickRoleSelectView : UiViewBase
 	})]
 	protected List<RoleDataBase> RoleList;
 
-	// Token: 0x04009C5C RID: 40028
+	// Token: 0x04009DC0 RID: 40384
 	[Nullable(2)]
 	protected TimerHandle DelayLoadingTimer;
 
-	// Token: 0x04009C5D RID: 40029
+	// Token: 0x04009DC1 RID: 40385
 	[Nullable(2)]
 	protected TimerHandle AutoCloseTimer;
 
-	// Token: 0x04009C5E RID: 40030
+	// Token: 0x04009DC2 RID: 40386
 	[Nullable(2)]
 	protected UiSequencePlayer LoadingSequencePlayer;
 
-	// Token: 0x04009C5F RID: 40031
+	// Token: 0x04009DC3 RID: 40387
 	private int LastAddFormationRoleId;
 
-	// Token: 0x02008DF5 RID: 36341
+	// Token: 0x02007F7C RID: 32636
 	[NullableContext(0)]
 	public enum EComponentType
 	{
-		// Token: 0x0402E0EB RID: 188651
+		// Token: 0x040293FE RID: 168958
 		ConfirmButtonInteractionGroup,
-		// Token: 0x0402E0EC RID: 188652
+		// Token: 0x040293FF RID: 168959
 		RoleScroll,
-		// Token: 0x0402E0ED RID: 188653
+		// Token: 0x04029400 RID: 168960
 		ConfirmText,
-		// Token: 0x0402E0EE RID: 188654
+		// Token: 0x04029401 RID: 168961
 		ConfirmButton,
-		// Token: 0x0402E0EF RID: 188655
+		// Token: 0x04029402 RID: 168962
 		CloseButton,
-		// Token: 0x0402E0F0 RID: 188656
+		// Token: 0x04029403 RID: 168963
 		BottomGroup,
-		// Token: 0x0402E0F1 RID: 188657
+		// Token: 0x04029404 RID: 168964
 		TeamRoleOne,
-		// Token: 0x0402E0F2 RID: 188658
+		// Token: 0x04029405 RID: 168965
 		TeamRoleTwo,
-		// Token: 0x0402E0F3 RID: 188659
+		// Token: 0x04029406 RID: 168966
 		FilterSortEntrance,
-		// Token: 0x0402E0F4 RID: 188660
+		// Token: 0x04029407 RID: 168967
 		TipsText,
-		// Token: 0x0402E0F5 RID: 188661
+		// Token: 0x04029408 RID: 168968
 		RoleItem,
-		// Token: 0x0402E0F6 RID: 188662
+		// Token: 0x04029409 RID: 168969
 		NoneRoleTips,
-		// Token: 0x0402E0F7 RID: 188663
+		// Token: 0x0402940A RID: 168970
 		DetailButton,
-		// Token: 0x0402E0F8 RID: 188664
+		// Token: 0x0402940B RID: 168971
 		LoadingItem,
-		// Token: 0x0402E0F9 RID: 188665
+		// Token: 0x0402940C RID: 168972
 		DisableClickMask,
-		// Token: 0x0402E0FA RID: 188666
+		// Token: 0x0402940D RID: 168973
 		BottomTipsText,
-		// Token: 0x0402E0FB RID: 188667
+		// Token: 0x0402940E RID: 168974
 		ItemYellowTipPanel,
-		// Token: 0x0402E0FC RID: 188668
+		// Token: 0x0402940F RID: 168975
 		TextYellowTip
 	}
 }

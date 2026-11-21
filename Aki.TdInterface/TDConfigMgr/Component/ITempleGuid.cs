@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000762 RID: 1890
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000803 RID: 2051
 	public class ITempleGuid
 	{
-		// Token: 0x060028DD RID: 10461 RVA: 0x0006C208 File Offset: 0x0006A408
+		// Token: 0x06002C01 RID: 11265 RVA: 0x000733B0 File Offset: 0x000715B0
 		private ITempleGuid_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060028DE RID: 10462 RVA: 0x0006C240 File Offset: 0x0006A440
+		// Token: 0x06002C02 RID: 11266 RVA: 0x000733E8 File Offset: 0x000715E8
 		public static ITempleGuid Create([Nullable(2)] ITempleGuid instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060028DF RID: 10463 RVA: 0x0006C253 File Offset: 0x0006A453
+		// Token: 0x06002C03 RID: 11267 RVA: 0x000733FB File Offset: 0x000715FB
 		public static ITempleGuid CreateFromSetValue([Nullable(2)] ITempleGuid_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060028E0 RID: 10464 RVA: 0x0006C266 File Offset: 0x0006A466
+		// Token: 0x06002C04 RID: 11268 RVA: 0x0007340E File Offset: 0x0007160E
 		public ITempleGuid_SetValue ToSetValue()
 		{
 			return new ITempleGuid_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000ABC RID: 2748
-		// (get) Token: 0x060028E1 RID: 10465 RVA: 0x0006C279 File Offset: 0x0006A479
-		// (set) Token: 0x060028E2 RID: 10466 RVA: 0x0006C2A4 File Offset: 0x0006A4A4
+		// Token: 0x17000B7C RID: 2940
+		// (get) Token: 0x06002C05 RID: 11269 RVA: 0x00073421 File Offset: 0x00071621
+		// (set) Token: 0x06002C06 RID: 11270 RVA: 0x0007344C File Offset: 0x0007164C
 		public virtual int TempleGuid
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001B7B RID: 7035
+		// Token: 0x04001D80 RID: 7552
 		[Nullable(2)]
 		protected ITempleGuid FbInstance;
 
-		// Token: 0x04001B7C RID: 7036
+		// Token: 0x04001D81 RID: 7553
 		[Nullable(2)]
 		protected ITempleGuid_SetValue PocoInterface;
 	}

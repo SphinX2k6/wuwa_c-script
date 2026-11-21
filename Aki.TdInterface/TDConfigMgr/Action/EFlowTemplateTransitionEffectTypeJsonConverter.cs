@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002340 RID: 9024
+	// Token: 0x020025B1 RID: 9649
 	public class EFlowTemplateTransitionEffectTypeJsonConverter : JsonConverter<EFlowTemplateTransitionEffectType>
 	{
-		// Token: 0x0600C520 RID: 50464 RVA: 0x001CC5DC File Offset: 0x001CA7DC
+		// Token: 0x0600D0F8 RID: 53496 RVA: 0x001E4694 File Offset: 0x001E2894
 		public override EFlowTemplateTransitionEffectType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EFlowTemplateTransitionEffectTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C521 RID: 50465 RVA: 0x001CC600 File Offset: 0x001CA800
+		// Token: 0x0600D0F9 RID: 53497 RVA: 0x001E46B8 File Offset: 0x001E28B8
 		public override void Write(Utf8JsonWriter writer, EFlowTemplateTransitionEffectType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

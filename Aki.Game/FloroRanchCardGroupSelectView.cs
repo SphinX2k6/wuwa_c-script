@@ -11,17 +11,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001B5A RID: 7002
+// Token: 0x02001019 RID: 4121
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchCardGroupSelectView : UiViewBase
 {
-	// Token: 0x0600CFB3 RID: 53171 RVA: 0x002F4F1F File Offset: 0x002F311F
+	// Token: 0x0600A3C4 RID: 41924 RVA: 0x002FFFF7 File Offset: 0x002FE1F7
 	public FloroRanchCardGroupSelectView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0600CFB4 RID: 53172 RVA: 0x002F4F40 File Offset: 0x002F3140
+	// Token: 0x0600A3C5 RID: 41925 RVA: 0x00300018 File Offset: 0x002FE218
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -58,7 +58,7 @@ public class FloroRanchCardGroupSelectView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600CFB5 RID: 53173 RVA: 0x002F50F4 File Offset: 0x002F32F4
+	// Token: 0x0600A3C6 RID: 41926 RVA: 0x003001CC File Offset: 0x002FE3CC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FloroRanchCardGroupSelectView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -69,7 +69,7 @@ public class FloroRanchCardGroupSelectView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CFB6 RID: 53174 RVA: 0x002F5137 File Offset: 0x002F3337
+	// Token: 0x0600A3C7 RID: 41927 RVA: 0x0030020F File Offset: 0x002FE40F
 	protected override void OnBeforeShow()
 	{
 		TsUiBlur uiBlur = this.UiBlur;
@@ -80,7 +80,7 @@ public class FloroRanchCardGroupSelectView : UiViewBase
 		uiBlur.SetEnableUiBlur(true);
 	}
 
-	// Token: 0x0600CFB7 RID: 53175 RVA: 0x002F514A File Offset: 0x002F334A
+	// Token: 0x0600A3C8 RID: 41928 RVA: 0x00300222 File Offset: 0x002FE422
 	protected override void OnBeforeHide()
 	{
 		TsUiBlur uiBlur = this.UiBlur;
@@ -91,19 +91,19 @@ public class FloroRanchCardGroupSelectView : UiViewBase
 		uiBlur.SetEnableUiBlur(false);
 	}
 
-	// Token: 0x0600CFB8 RID: 53176 RVA: 0x002F515D File Offset: 0x002F335D
+	// Token: 0x0600A3C9 RID: 41929 RVA: 0x00300235 File Offset: 0x002FE435
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<string>(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnAnimEvent));
 	}
 
-	// Token: 0x0600CFB9 RID: 53177 RVA: 0x002F517B File Offset: 0x002F337B
+	// Token: 0x0600A3CA RID: 41930 RVA: 0x00300253 File Offset: 0x002FE453
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnAnimEvent));
 	}
 
-	// Token: 0x0600CFBA RID: 53178 RVA: 0x002F519C File Offset: 0x002F339C
+	// Token: 0x0600A3CB RID: 41931 RVA: 0x00300274 File Offset: 0x002FE474
 	private void RefreshCardList()
 	{
 		this.CardLayout.RefreshByDataAsync(this.CardIdList, false, null).ContinueWith(delegate()
@@ -122,7 +122,7 @@ public class FloroRanchCardGroupSelectView : UiViewBase
 		});
 	}
 
-	// Token: 0x0600CFBB RID: 53179 RVA: 0x002F51D8 File Offset: 0x002F33D8
+	// Token: 0x0600A3CC RID: 41932 RVA: 0x003002B0 File Offset: 0x002FE4B0
 	private void PlayCardAppearAnim()
 	{
 		if (this.TimerId != null)
@@ -148,7 +148,7 @@ public class FloroRanchCardGroupSelectView : UiViewBase
 		}, 50f, totalCount, 1f, null, null, true);
 	}
 
-	// Token: 0x0600CFBC RID: 53180 RVA: 0x002F525A File Offset: 0x002F345A
+	// Token: 0x0600A3CD RID: 41933 RVA: 0x00300332 File Offset: 0x002FE532
 	private void ClearTimerId()
 	{
 		if (TimerSystem.GameplayTimeInstance.Has(this.TimerId))
@@ -158,13 +158,13 @@ public class FloroRanchCardGroupSelectView : UiViewBase
 		this.TimerId = null;
 	}
 
-	// Token: 0x0600CFBD RID: 53181 RVA: 0x002F5286 File Offset: 0x002F3486
+	// Token: 0x0600A3CE RID: 41934 RVA: 0x0030035E File Offset: 0x002FE55E
 	protected override void OnBeforeDestroy()
 	{
 		this.ClearTimerId();
 	}
 
-	// Token: 0x0600CFBE RID: 53182 RVA: 0x002F528E File Offset: 0x002F348E
+	// Token: 0x0600A3CF RID: 41935 RVA: 0x00300366 File Offset: 0x002FE566
 	private void InitUiBlur()
 	{
 		AUIBaseActor rootActor = this.RootActor;
@@ -177,7 +177,7 @@ public class FloroRanchCardGroupSelectView : UiViewBase
 		uiBlur.SetEnableUiBlur(false);
 	}
 
-	// Token: 0x0600CFBF RID: 53183 RVA: 0x002F52C8 File Offset: 0x002F34C8
+	// Token: 0x0600A3D0 RID: 41936 RVA: 0x003003A0 File Offset: 0x002FE5A0
 	private FloroRanchCardItem CreateCardItem()
 	{
 		FloroRanchCardItem floroRanchCardItem = new FloroRanchCardItem();
@@ -187,7 +187,7 @@ public class FloroRanchCardGroupSelectView : UiViewBase
 		return floroRanchCardItem;
 	}
 
-	// Token: 0x0600CFC0 RID: 53184 RVA: 0x002F530C File Offset: 0x002F350C
+	// Token: 0x0600A3D1 RID: 41937 RVA: 0x003003E4 File Offset: 0x002FE5E4
 	public void CardToggleClick(int gridIndex, int cardId)
 	{
 		if (this.SelectedGridIndexSet.Contains(gridIndex))
@@ -201,7 +201,7 @@ public class FloroRanchCardGroupSelectView : UiViewBase
 		base.GetButton(3).SetSelfInteractive(this.SelectedGridIndexSet.Count > 0);
 	}
 
-	// Token: 0x0600CFC1 RID: 53185 RVA: 0x002F5360 File Offset: 0x002F3560
+	// Token: 0x0600A3D2 RID: 41938 RVA: 0x00300438 File Offset: 0x002FE638
 	private void OnClickConfirmBtn()
 	{
 		global::FloroRanchActivityData activityData = FloroRanchGamePlayModel.Instance.GetCurrentActivityData();
@@ -246,7 +246,7 @@ public class FloroRanchCardGroupSelectView : UiViewBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x0600CFC2 RID: 53186 RVA: 0x002F53C4 File Offset: 0x002F35C4
+	// Token: 0x0600A3D3 RID: 41939 RVA: 0x0030049C File Offset: 0x002FE69C
 	private void OnAnimEvent(string param)
 	{
 		if (param == EFloroRanchAnimEvent.ListShow.ToString())
@@ -255,64 +255,64 @@ public class FloroRanchCardGroupSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600CFC3 RID: 53187 RVA: 0x002F53EE File Offset: 0x002F35EE
+	// Token: 0x0600A3D4 RID: 41940 RVA: 0x003004C6 File Offset: 0x002FE6C6
 	private void OnCloseView()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600CFC4 RID: 53188 RVA: 0x002F53F7 File Offset: 0x002F35F7
+	// Token: 0x0600A3D5 RID: 41941 RVA: 0x003004CF File Offset: 0x002FE6CF
 	private void OnClickHideButton()
 	{
 		FloroRanchGamePlayModel.Instance.HideRecordView();
 	}
 
-	// Token: 0x04005F7A RID: 24442
+	// Token: 0x04006049 RID: 24649
 	private GenericLayout<FloroRanchCardItem, int> CardLayout;
 
-	// Token: 0x04005F7B RID: 24443
+	// Token: 0x0400604A RID: 24650
 	private List<int> CardIdList = new List<int>();
 
-	// Token: 0x04005F7C RID: 24444
+	// Token: 0x0400604B RID: 24651
 	private readonly HashSet<int> SelectedGridIndexSet = new HashSet<int>();
 
-	// Token: 0x04005F7D RID: 24445
+	// Token: 0x0400604C RID: 24652
 	private FloroRanchCurrencyItem ItemCost;
 
-	// Token: 0x04005F7E RID: 24446
+	// Token: 0x0400604D RID: 24653
 	[Nullable(2)]
 	private TimerHandle TimerId;
 
-	// Token: 0x04005F7F RID: 24447
+	// Token: 0x0400604E RID: 24654
 	[Nullable(2)]
 	private TsUiBlur UiBlur;
 
-	// Token: 0x020080A7 RID: 32935
+	// Token: 0x02007235 RID: 29237
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x04029F63 RID: 171875
+		// Token: 0x04025297 RID: 152215
 		public const int LayoutCard = 0;
 
-		// Token: 0x04029F64 RID: 171876
+		// Token: 0x04025298 RID: 152216
 		public const int ItemCard = 1;
 
-		// Token: 0x04029F65 RID: 171877
+		// Token: 0x04025299 RID: 152217
 		public const int ButtonRefresh = 2;
 
-		// Token: 0x04029F66 RID: 171878
+		// Token: 0x0402529A RID: 152218
 		public const int ButtonConfirm = 3;
 
-		// Token: 0x04029F67 RID: 171879
+		// Token: 0x0402529B RID: 152219
 		public const int ButtonSkip = 4;
 
-		// Token: 0x04029F68 RID: 171880
+		// Token: 0x0402529C RID: 152220
 		public const int HideButton = 5;
 
-		// Token: 0x04029F69 RID: 171881
+		// Token: 0x0402529D RID: 152221
 		public const int ItemCost = 6;
 
-		// Token: 0x04029F6A RID: 171882
+		// Token: 0x0402529E RID: 152222
 		public const int ItemHidePanel = 7;
 	}
 }

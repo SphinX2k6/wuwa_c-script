@@ -12,13 +12,13 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 {
-	// Token: 0x02006406 RID: 25606
+	// Token: 0x02005384 RID: 21380
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class MotorFightController : ActivityControllerBase
 	{
-		// Token: 0x060406A6 RID: 263846 RVA: 0x00F9513C File Offset: 0x00F9333C
+		// Token: 0x06035367 RID: 217959 RVA: 0x00EDC0DC File Offset: 0x00EDA2DC
 		protected override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.MotorFightLevelUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.UpdateMotorFightLevel));
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			Net.Instance.Register(ENotifyMessageId.MotorFightGameOverNotify, new Action<IMessage, Net.CallbackStatus>(this.OnMotorFightGameOver));
 		}
 
-		// Token: 0x060406A7 RID: 263847 RVA: 0x00F951F4 File Offset: 0x00F933F4
+		// Token: 0x06035368 RID: 217960 RVA: 0x00EDC194 File Offset: 0x00EDA394
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.MotorFightLevelUpdateNotify);
@@ -40,39 +40,39 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			Net.Instance.UnRegister(ENotifyMessageId.MotorFightGameOverNotify);
 		}
 
-		// Token: 0x060406A8 RID: 263848 RVA: 0x00F95261 File Offset: 0x00F93461
+		// Token: 0x06035369 RID: 217961 RVA: 0x00EDC201 File Offset: 0x00EDA401
 		protected override void OnAddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.WorldDone, new Action(this.OnWorldDone));
 			EventSystem.Instance.Add<IReadOnlySet<int>>(EEventName.OnActivityClose, new Action<IReadOnlySet<int>>(this.OnActivityClose));
 		}
 
-		// Token: 0x060406A9 RID: 263849 RVA: 0x00F9529B File Offset: 0x00F9349B
+		// Token: 0x0603536A RID: 217962 RVA: 0x00EDC23B File Offset: 0x00EDA43B
 		protected override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.WorldDone, new Action(this.OnWorldDone));
 			EventSystem.Instance.Remove<IReadOnlySet<int>>(EEventName.OnActivityClose, new Action<IReadOnlySet<int>>(this.OnActivityClose));
 		}
 
-		// Token: 0x060406AA RID: 263850 RVA: 0x00F952D5 File Offset: 0x00F934D5
+		// Token: 0x0603536B RID: 217963 RVA: 0x00EDC275 File Offset: 0x00EDA475
 		protected override void OnOpenView(ActivityBaseData data)
 		{
 			throw new Exception("Method not implemented.");
 		}
 
-		// Token: 0x060406AB RID: 263851 RVA: 0x00F952E1 File Offset: 0x00F934E1
+		// Token: 0x0603536C RID: 217964 RVA: 0x00EDC281 File Offset: 0x00EDA481
 		protected override string OnGetActivityResource(ActivityBaseData data)
 		{
 			return "UiItem_MotorcycleBattleMain";
 		}
 
-		// Token: 0x060406AC RID: 263852 RVA: 0x00F952E8 File Offset: 0x00F934E8
+		// Token: 0x0603536D RID: 217965 RVA: 0x00EDC288 File Offset: 0x00EDA488
 		protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 		{
 			return new MotorFightActivitySubView();
 		}
 
-		// Token: 0x060406AD RID: 263853 RVA: 0x00F952F0 File Offset: 0x00F934F0
+		// Token: 0x0603536E RID: 217966 RVA: 0x00EDC290 File Offset: 0x00EDA490
 		protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 		{
 			MotorFightActivityData motorFightActivityData = new MotorFightActivityData();
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return motorFightActivityData;
 		}
 
-		// Token: 0x060406AE RID: 263854 RVA: 0x00F9530C File Offset: 0x00F9350C
+		// Token: 0x0603536F RID: 217967 RVA: 0x00EDC2AC File Offset: 0x00EDA4AC
 		protected override bool OnGetIsOpeningActivityRelativeView()
 		{
 			foreach (EUiViewName viewName in new List<EUiViewName>
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return false;
 		}
 
-		// Token: 0x060406AF RID: 263855 RVA: 0x00F953B8 File Offset: 0x00F935B8
+		// Token: 0x06035370 RID: 217968 RVA: 0x00EDC358 File Offset: 0x00EDA558
 		[NullableContext(2)]
 		public MotorFightActivityData GetMotorFightActivityData()
 		{
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return this.MotorFightActivityData;
 		}
 
-		// Token: 0x060406B0 RID: 263856 RVA: 0x00F953F4 File Offset: 0x00F935F4
+		// Token: 0x06035371 RID: 217969 RVA: 0x00EDC394 File Offset: 0x00EDA594
 		[NullableContext(0)]
 		protected override UniTask<bool> OnOpenSubView(EUiViewName viewName, int activityId = 0)
 		{
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return <OnOpenSubView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060406B1 RID: 263857 RVA: 0x00F95440 File Offset: 0x00F93640
+		// Token: 0x06035372 RID: 217970 RVA: 0x00EDC3E0 File Offset: 0x00EDA5E0
 		[NullableContext(2)]
 		private void UpdateMotorFightLevel(IMessage msg, Net.CallbackStatus status)
 		{
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			motorFightActivityData.UpdateLevelDataList(motorFightLevelUpdateNotify.MotorFightLevelPb, true);
 		}
 
-		// Token: 0x060406B2 RID: 263858 RVA: 0x00F9546C File Offset: 0x00F9366C
+		// Token: 0x06035373 RID: 217971 RVA: 0x00EDC40C File Offset: 0x00EDA60C
 		[NullableContext(2)]
 		private void UpdateMotorFightItem(IMessage msg, Net.CallbackStatus status)
 		{
@@ -153,7 +153,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			motorFightActivityData.UpdateMotorFightItemDataList(motorFightItemUpdateNotify.UnlockedItem, true);
 		}
 
-		// Token: 0x060406B3 RID: 263859 RVA: 0x00F95498 File Offset: 0x00F93698
+		// Token: 0x06035374 RID: 217972 RVA: 0x00EDC438 File Offset: 0x00EDA638
 		[NullableContext(2)]
 		private void UpdateMotorFightRole(IMessage msg, Net.CallbackStatus status)
 		{
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			motorFightActivityData.UpdateRoleData(motorFightRoleUpdateNotify.UnlockedRole, true);
 		}
 
-		// Token: 0x060406B4 RID: 263860 RVA: 0x00F954C4 File Offset: 0x00F936C4
+		// Token: 0x06035375 RID: 217973 RVA: 0x00EDC464 File Offset: 0x00EDA664
 		[NullableContext(2)]
 		private void UpdateMotorFightTask(IMessage msg, Net.CallbackStatus status)
 		{
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			motorFightActivityData.UpdateTaskData(motorFightTaskUpdateNotify.Task, true);
 		}
 
-		// Token: 0x060406B5 RID: 263861 RVA: 0x00F954F0 File Offset: 0x00F936F0
+		// Token: 0x06035376 RID: 217974 RVA: 0x00EDC490 File Offset: 0x00EDA690
 		[NullableContext(2)]
 		private void UpdateMotorFightTalentTree(IMessage msg, Net.CallbackStatus status)
 		{
@@ -192,7 +192,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			motorFightActivityData.UpdateMotorFightTalentDataList(motorFightTalentTreeUpdateNotify.Talent, true);
 		}
 
-		// Token: 0x060406B6 RID: 263862 RVA: 0x00F9551C File Offset: 0x00F9371C
+		// Token: 0x06035377 RID: 217975 RVA: 0x00EDC4BC File Offset: 0x00EDA6BC
 		[NullableContext(2)]
 		private void OnMotorFightGameOver(IMessage msg, Net.CallbackStatus status)
 		{
@@ -212,7 +212,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			UiManager.Instance.OpenView(EUiViewName.MotorFightFailView, null, null);
 		}
 
-		// Token: 0x060406B7 RID: 263863 RVA: 0x00F955A4 File Offset: 0x00F937A4
+		// Token: 0x06035378 RID: 217976 RVA: 0x00EDC544 File Offset: 0x00EDA744
 		public void RequestUnlockTalentNode(int talentId, Action callback)
 		{
 			MotorFightTalentUpRequest motorFightTalentUpRequest = MotorFightTalentUpRequest.Create();
@@ -226,7 +226,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 				}
 				if (motorFightTalentUpResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(motorFightTalentUpResponse.ErrorCode, 19118, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(motorFightTalentUpResponse.ErrorCode, 24183, null, true, true);
 					return;
 				}
 				MotorFightActivityData motorFightActivityData = this.GetMotorFightActivityData();
@@ -238,7 +238,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}, 0);
 		}
 
-		// Token: 0x060406B8 RID: 263864 RVA: 0x00F955FC File Offset: 0x00F937FC
+		// Token: 0x06035379 RID: 217977 RVA: 0x00EDC59C File Offset: 0x00EDA79C
 		public void RequestTaskReward(List<int> taskIds)
 		{
 			MotorFightOneKeyRewardRequest motorFightOneKeyRewardRequest = MotorFightOneKeyRewardRequest.Create();
@@ -252,7 +252,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 				}
 				if (motorFightOneKeyRewardResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(motorFightOneKeyRewardResponse.ErrorCode, 26998, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(motorFightOneKeyRewardResponse.ErrorCode, 18713, null, true, true);
 					return;
 				}
 				MotorFightActivityData motorFightActivityData = this.GetMotorFightActivityData();
@@ -264,7 +264,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}, 0);
 		}
 
-		// Token: 0x060406B9 RID: 263865 RVA: 0x00F95654 File Offset: 0x00F93854
+		// Token: 0x0603537A RID: 217978 RVA: 0x00EDC5F4 File Offset: 0x00EDA7F4
 		public UniTask RequestRankDataList()
 		{
 			MotorFightController.<RequestRankDataList>d__24 <RequestRankDataList>d__;
@@ -275,7 +275,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return <RequestRankDataList>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060406BA RID: 263866 RVA: 0x00F95698 File Offset: 0x00F93898
+		// Token: 0x0603537B RID: 217979 RVA: 0x00EDC638 File Offset: 0x00EDA838
 		public UniTask RequestMyRankData()
 		{
 			MotorFightController.<RequestMyRankData>d__25 <RequestMyRankData>d__;
@@ -286,7 +286,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return <RequestMyRankData>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060406BB RID: 263867 RVA: 0x00F956DC File Offset: 0x00F938DC
+		// Token: 0x0603537C RID: 217980 RVA: 0x00EDC67C File Offset: 0x00EDA87C
 		[NullableContext(2)]
 		public void RequestSettlement(bool isShowSettleView, Action callback = null)
 		{
@@ -300,7 +300,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 				}
 				if (motorFightSettleResponse.ErrCode != Aki.Protocol.ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(motorFightSettleResponse.ErrCode, 28563, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(motorFightSettleResponse.ErrCode, 19184, null, true, true);
 					return;
 				}
 				Action callback2 = callback;
@@ -333,7 +333,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}, 0);
 		}
 
-		// Token: 0x060406BC RID: 263868 RVA: 0x00F95728 File Offset: 0x00F93928
+		// Token: 0x0603537D RID: 217981 RVA: 0x00EDC6C8 File Offset: 0x00EDA8C8
 		public UniTask RequestLastSavedLevelData()
 		{
 			MotorFightController.<RequestLastSavedLevelData>d__27 <RequestLastSavedLevelData>d__;
@@ -344,7 +344,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return <RequestLastSavedLevelData>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060406BD RID: 263869 RVA: 0x00F9576C File Offset: 0x00F9396C
+		// Token: 0x0603537E RID: 217982 RVA: 0x00EDC70C File Offset: 0x00EDA90C
 		public void EnterMotorFightDungeonDirectly(int levelId, int roleId, bool isContinue = false)
 		{
 			this.LastLevelId = levelId;
@@ -363,7 +363,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}, 0, 0, null, null);
 		}
 
-		// Token: 0x060406BE RID: 263870 RVA: 0x00F95800 File Offset: 0x00F93A00
+		// Token: 0x0603537F RID: 217983 RVA: 0x00EDC7A0 File Offset: 0x00EDA9A0
 		public void ReChallengeMotorFightDungeon()
 		{
 			MotorFightCtx motorFightCtx = MotorFightCtx.Create();
@@ -377,7 +377,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}, 0, 0, null, null);
 		}
 
-		// Token: 0x060406BF RID: 263871 RVA: 0x00F95863 File Offset: 0x00F93A63
+		// Token: 0x06035380 RID: 217984 RVA: 0x00EDC803 File Offset: 0x00EDAA03
 		private void OnWorldDone()
 		{
 			if (this.IsNeedShowMotorFightMainView)
@@ -386,7 +386,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x060406C0 RID: 263872 RVA: 0x00F95873 File Offset: 0x00F93A73
+		// Token: 0x06035381 RID: 217985 RVA: 0x00EDC813 File Offset: 0x00EDAA13
 		public void LeaveInstanceDungeon()
 		{
 			if (this.MotorFightActivityData != null && !this.MotorFightActivityData.CheckIfClose())
@@ -396,7 +396,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			InstanceDungeonEntranceController.Instance.LeaveInstanceDungeonRequest(LeaveInstWay.Default);
 		}
 
-		// Token: 0x060406C1 RID: 263873 RVA: 0x00F958A0 File Offset: 0x00F93AA0
+		// Token: 0x06035382 RID: 217986 RVA: 0x00EDC840 File Offset: 0x00EDAA40
 		private void AddMainViewSplashTask()
 		{
 			MotorFightActivityData activityData = this.GetMotorFightActivityData();
@@ -411,7 +411,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			SplashScreenController.Instance.PushSplashScreenTask(splashScreenTask, false);
 		}
 
-		// Token: 0x060406C2 RID: 263874 RVA: 0x00F958E8 File Offset: 0x00F93AE8
+		// Token: 0x06035383 RID: 217987 RVA: 0x00EDC888 File Offset: 0x00EDAA88
 		private void OnActivityClose(IReadOnlySet<int> closeActivities)
 		{
 			if (this.MotorFightActivityData == null)
@@ -427,7 +427,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x060406C3 RID: 263875 RVA: 0x00F95960 File Offset: 0x00F93B60
+		// Token: 0x06035384 RID: 217988 RVA: 0x00EDC900 File Offset: 0x00EDAB00
 		public bool CheckInMotorFightDungeon()
 		{
 			if (GameModeController.Instance.IsInInstance())
@@ -439,8 +439,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return false;
 		}
 
-		// Token: 0x1700946F RID: 37999
-		// (get) Token: 0x060406C4 RID: 263876 RVA: 0x00F959B0 File Offset: 0x00F93BB0
+		// Token: 0x170067D1 RID: 26577
+		// (get) Token: 0x06035385 RID: 217989 RVA: 0x00EDC950 File Offset: 0x00EDAB50
 		public static MotorFightController Instance
 		{
 			get
@@ -449,7 +449,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			}
 		}
 
-		// Token: 0x060406C5 RID: 263877 RVA: 0x00F959B7 File Offset: 0x00F93BB7
+		// Token: 0x06035386 RID: 217990 RVA: 0x00EDC957 File Offset: 0x00EDAB57
 		public static MotorFightController GetOrCreateInstance()
 		{
 			if (MotorFightController._Instance == null)
@@ -459,7 +459,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return MotorFightController._Instance;
 		}
 
-		// Token: 0x060406C6 RID: 263878 RVA: 0x00F959CB File Offset: 0x00F93BCB
+		// Token: 0x06035387 RID: 217991 RVA: 0x00EDC96B File Offset: 0x00EDAB6B
 		public static bool CreateInstance()
 		{
 			if (MotorFightController._Instance != null)
@@ -470,40 +470,40 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 			return true;
 		}
 
-		// Token: 0x060406C7 RID: 263879 RVA: 0x00F959E1 File Offset: 0x00F93BE1
+		// Token: 0x06035388 RID: 217992 RVA: 0x00EDC981 File Offset: 0x00EDAB81
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060406C8 RID: 263880 RVA: 0x00F959E3 File Offset: 0x00F93BE3
+		// Token: 0x06035389 RID: 217993 RVA: 0x00EDC983 File Offset: 0x00EDAB83
 		public static void ResetStaticDefaultValue()
 		{
 			MotorFightController._Instance = null;
 		}
 
-		// Token: 0x060406C9 RID: 263881 RVA: 0x00F959EB File Offset: 0x00F93BEB
+		// Token: 0x0603538A RID: 217994 RVA: 0x00EDC98B File Offset: 0x00EDAB8B
 		static MotorFightController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MotorFightController.CreateStaticDefaultValue), new Action(MotorFightController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040217EA RID: 137194
+		// Token: 0x0401C119 RID: 114969
 		[Nullable(2)]
 		private MotorFightActivityData MotorFightActivityData;
 
-		// Token: 0x040217EB RID: 137195
+		// Token: 0x0401C11A RID: 114970
 		public bool IsNeedShowMotorFightMainView;
 
-		// Token: 0x040217EC RID: 137196
+		// Token: 0x0401C11B RID: 114971
 		private int LastLevelId;
 
-		// Token: 0x040217ED RID: 137197
+		// Token: 0x0401C11C RID: 114972
 		private int LastMotorFightRoleId;
 
-		// Token: 0x040217EE RID: 137198
+		// Token: 0x0401C11D RID: 114973
 		private int LastRealRoleId;
 
-		// Token: 0x040217EF RID: 137199
+		// Token: 0x0401C11E RID: 114974
 		[Nullable(2)]
 		private static MotorFightController _Instance;
 	}

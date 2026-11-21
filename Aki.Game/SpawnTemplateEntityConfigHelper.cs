@@ -4,16 +4,16 @@ using System.Runtime.CompilerServices;
 using System.Text.Json;
 using UnrealEngine;
 
-// Token: 0x020034D0 RID: 13520
+// Token: 0x02002A44 RID: 10820
 public class SpawnTemplateEntityConfigHelper : IStaticVariableResetter
 {
-	// Token: 0x0601D71C RID: 120604 RVA: 0x00837A43 File Offset: 0x00835C43
+	// Token: 0x0601B41B RID: 111643 RVA: 0x0085EEEB File Offset: 0x0085D0EB
 	static SpawnTemplateEntityConfigHelper()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(SpawnTemplateEntityConfigHelper.CreateStaticDefaultValue), new Action(SpawnTemplateEntityConfigHelper.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601D71D RID: 120605 RVA: 0x00837A62 File Offset: 0x00835C62
+	// Token: 0x0601B41C RID: 111644 RVA: 0x0085EF0A File Offset: 0x0085D10A
 	public static void CreateStaticDefaultValue()
 	{
 		SpawnTemplateEntityConfigHelper.CachedEntries = null;
@@ -21,7 +21,7 @@ public class SpawnTemplateEntityConfigHelper : IStaticVariableResetter
 		SpawnTemplateEntityConfigHelper.CachedBlueprintHash = 0UL;
 	}
 
-	// Token: 0x0601D71E RID: 120606 RVA: 0x00837A78 File Offset: 0x00835C78
+	// Token: 0x0601B41D RID: 111645 RVA: 0x0085EF20 File Offset: 0x0085D120
 	public static void ResetStaticDefaultValue()
 	{
 		SpawnTemplateEntityConfigHelper.CachedEntries = null;
@@ -29,7 +29,7 @@ public class SpawnTemplateEntityConfigHelper : IStaticVariableResetter
 		SpawnTemplateEntityConfigHelper.CachedBlueprintHash = 0UL;
 	}
 
-	// Token: 0x0601D71F RID: 120607 RVA: 0x00837A90 File Offset: 0x00835C90
+	// Token: 0x0601B41E RID: 111646 RVA: 0x0085EF38 File Offset: 0x0085D138
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -165,7 +165,7 @@ public class SpawnTemplateEntityConfigHelper : IStaticVariableResetter
 		return result;
 	}
 
-	// Token: 0x0601D720 RID: 120608 RVA: 0x00837DEC File Offset: 0x00835FEC
+	// Token: 0x0601B41F RID: 111647 RVA: 0x0085F294 File Offset: 0x0085D494
 	private unsafe static ulong Fnv1a64(ReadOnlySpan<byte> data)
 	{
 		ulong num = 14695981039346656037UL;
@@ -187,7 +187,7 @@ public class SpawnTemplateEntityConfigHelper : IStaticVariableResetter
 		return num;
 	}
 
-	// Token: 0x0400E7FE RID: 59390
+	// Token: 0x0400ECB2 RID: 60594
 	[Nullable(new byte[]
 	{
 		2,
@@ -195,9 +195,9 @@ public class SpawnTemplateEntityConfigHelper : IStaticVariableResetter
 	})]
 	private static string[] CachedEntries;
 
-	// Token: 0x0400E7FF RID: 59391
+	// Token: 0x0400ECB3 RID: 60595
 	private static ulong CachedTemplateHash;
 
-	// Token: 0x0400E800 RID: 59392
+	// Token: 0x0400ECB4 RID: 60596
 	private static ulong CachedBlueprintHash;
 }

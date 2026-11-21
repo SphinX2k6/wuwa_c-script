@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B3B RID: 2875
+	// Token: 0x02000C09 RID: 3081
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IOnCollisionCondition : IBulletCreateCondition
 	{
-		// Token: 0x06004255 RID: 16981 RVA: 0x000A9CD1 File Offset: 0x000A7ED1
-		[NullableContext(1)]
+		// Token: 0x060046AE RID: 18094 RVA: 0x000B3D95 File Offset: 0x000B1F95
+		[NullableContext(0)]
 		public static IOnCollisionCondition Create(IOnCollisionCondition? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700119C RID: 4508
-		// (get) Token: 0x06004256 RID: 16982 RVA: 0x000A9CF0 File Offset: 0x000A7EF0
+		// Token: 0x17001297 RID: 4759
+		// (get) Token: 0x060046AF RID: 18095 RVA: 0x000B3DB4 File Offset: 0x000B1FB4
 		public override EBulletCreateCondition Type
 		{
 			get
@@ -33,8 +33,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700119D RID: 4509
-		// (get) Token: 0x06004257 RID: 16983 RVA: 0x000A9CFD File Offset: 0x000A7EFD
+		// Token: 0x17001298 RID: 4760
+		// (get) Token: 0x060046B0 RID: 18096 RVA: 0x000B3DC1 File Offset: 0x000B1FC1
 		public override long BulletId
 		{
 			get
@@ -43,8 +43,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700119E RID: 4510
-		// (get) Token: 0x06004258 RID: 16984 RVA: 0x000A9D0A File Offset: 0x000A7F0A
+		// Token: 0x17001299 RID: 4761
+		// (get) Token: 0x060046B1 RID: 18097 RVA: 0x000B3DCE File Offset: 0x000B1FCE
 		public virtual ITriggerCountConfig TriggerCount
 		{
 			get
@@ -59,13 +59,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002564 RID: 9572
+		// Token: 0x040027AC RID: 10156
 		private IOnCollisionCondition Instance;
 
-		// Token: 0x04002565 RID: 9573
+		// Token: 0x040027AD RID: 10157
 		private ITriggerCountConfig _TriggerCountCache;
 
-		// Token: 0x04002566 RID: 9574
+		// Token: 0x040027AE RID: 10158
 		private bool _TriggerCountInited;
 	}
 }

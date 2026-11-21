@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02003089 RID: 12425
+// Token: 0x020025E0 RID: 9696
 [NullableContext(1)]
 [Nullable(0)]
 public class SpecialTagListener
 {
-	// Token: 0x0601A8B5 RID: 108725 RVA: 0x0071BB54 File Offset: 0x00719D54
+	// Token: 0x0601829C RID: 98972 RVA: 0x00741F0C File Offset: 0x0074010C
 	public void InitTagListener(BaseTagComponent tagComp, int tag, List<int> forbid, List<int> target, [Nullable(2)] Func<double, bool> check = null)
 	{
 		this.TagComp = tagComp;
@@ -26,7 +26,7 @@ public class SpecialTagListener
 		}
 	}
 
-	// Token: 0x0601A8B6 RID: 108726 RVA: 0x0071BC08 File Offset: 0x00719E08
+	// Token: 0x0601829D RID: 98973 RVA: 0x00741FC0 File Offset: 0x007401C0
 	public void ClearTagListener()
 	{
 		if (this.TagComp == null)
@@ -40,7 +40,7 @@ public class SpecialTagListener
 		}
 	}
 
-	// Token: 0x0601A8B7 RID: 108727 RVA: 0x0071BC94 File Offset: 0x00719E94
+	// Token: 0x0601829E RID: 98974 RVA: 0x0074204C File Offset: 0x0074024C
 	private void TagListenerStateChange(int tagId, bool tagExist)
 	{
 		this.HasListenerTag = tagExist;
@@ -48,7 +48,7 @@ public class SpecialTagListener
 		this.UpdateTargetTagList();
 	}
 
-	// Token: 0x0601A8B8 RID: 108728 RVA: 0x0071BCB4 File Offset: 0x00719EB4
+	// Token: 0x0601829F RID: 98975 RVA: 0x0074206C File Offset: 0x0074026C
 	private void ForbidTagListenerStateChange(int tagId, bool tagExist)
 	{
 		if (tagExist)
@@ -66,7 +66,7 @@ public class SpecialTagListener
 		this.UpdateTargetTagList();
 	}
 
-	// Token: 0x0601A8B9 RID: 108729 RVA: 0x0071BD14 File Offset: 0x00719F14
+	// Token: 0x060182A0 RID: 98976 RVA: 0x007420CC File Offset: 0x007402CC
 	private void UpdateTargetTagList()
 	{
 		if (this.TagComp == null)
@@ -87,7 +87,7 @@ public class SpecialTagListener
 		}
 	}
 
-	// Token: 0x0601A8BA RID: 108730 RVA: 0x0071BDD4 File Offset: 0x00719FD4
+	// Token: 0x060182A1 RID: 98977 RVA: 0x0074218C File Offset: 0x0074038C
 	private bool RefreshCondition(double delta)
 	{
 		if (this.CheckCondition == null)
@@ -103,7 +103,7 @@ public class SpecialTagListener
 		return false;
 	}
 
-	// Token: 0x0601A8BB RID: 108731 RVA: 0x0071BE0B File Offset: 0x0071A00B
+	// Token: 0x060182A2 RID: 98978 RVA: 0x007421C3 File Offset: 0x007403C3
 	public void UpdateCondition(double delta)
 	{
 		if (this.RefreshCondition(delta))
@@ -112,29 +112,29 @@ public class SpecialTagListener
 		}
 	}
 
-	// Token: 0x0400CBF2 RID: 52210
+	// Token: 0x0400CFD5 RID: 53205
 	[Nullable(2)]
 	private BaseTagComponent TagComp;
 
-	// Token: 0x0400CBF3 RID: 52211
+	// Token: 0x0400CFD6 RID: 53206
 	private int ListenerTag;
 
-	// Token: 0x0400CBF4 RID: 52212
+	// Token: 0x0400CFD7 RID: 53207
 	private bool Condition = true;
 
-	// Token: 0x0400CBF5 RID: 52213
+	// Token: 0x0400CFD8 RID: 53208
 	private bool HasListenerTag;
 
-	// Token: 0x0400CBF6 RID: 52214
+	// Token: 0x0400CFD9 RID: 53209
 	private List<int> ForbidTagList = new List<int>();
 
-	// Token: 0x0400CBF7 RID: 52215
+	// Token: 0x0400CFDA RID: 53210
 	private List<int> TargetTagList = new List<int>();
 
-	// Token: 0x0400CBF8 RID: 52216
+	// Token: 0x0400CFDB RID: 53211
 	private HashSet<int> ForbidTagSet = new HashSet<int>();
 
-	// Token: 0x0400CBF9 RID: 52217
+	// Token: 0x0400CFDC RID: 53212
 	[Nullable(2)]
 	private Func<double, bool> CheckCondition;
 }

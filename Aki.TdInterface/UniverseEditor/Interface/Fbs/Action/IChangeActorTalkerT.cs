@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020062CA RID: 25290
+	// Token: 0x0200693B RID: 26939
 	public class IChangeActorTalkerT
 	{
-		// Token: 0x1700BCC8 RID: 48328
-		// (get) Token: 0x0602BB5D RID: 179037 RVA: 0x00603E74 File Offset: 0x00602074
-		// (set) Token: 0x0602BB5E RID: 179038 RVA: 0x00603E7C File Offset: 0x0060207C
+		// Token: 0x1700C652 RID: 50770
+		// (get) Token: 0x0602E2C6 RID: 189126 RVA: 0x0064EE80 File Offset: 0x0064D080
+		// (set) Token: 0x0602E2C7 RID: 189127 RVA: 0x0064EE88 File Offset: 0x0064D088
 		public int ActorIndex { get; set; }
 
-		// Token: 0x1700BCC9 RID: 48329
-		// (get) Token: 0x0602BB5F RID: 179039 RVA: 0x00603E85 File Offset: 0x00602085
-		// (set) Token: 0x0602BB60 RID: 179040 RVA: 0x00603E8D File Offset: 0x0060208D
+		// Token: 0x1700C653 RID: 50771
+		// (get) Token: 0x0602E2C8 RID: 189128 RVA: 0x0064EE91 File Offset: 0x0064D091
+		// (set) Token: 0x0602E2C9 RID: 189129 RVA: 0x0064EE99 File Offset: 0x0064D099
 		public int Talker { get; set; }
 
-		// Token: 0x0602BB61 RID: 179041 RVA: 0x00603E96 File Offset: 0x00602096
+		// Token: 0x0602E2CA RID: 189130 RVA: 0x0064EEA2 File Offset: 0x0064D0A2
 		public IChangeActorTalkerT()
 		{
 			this.ActorIndex = 0;

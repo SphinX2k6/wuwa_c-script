@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E39 RID: 7737
+	// Token: 0x0200206E RID: 8302
 	public class ISetNpcSupportedWalkingPerform_SetValue
 	{
-		// Token: 0x040062F9 RID: 25337
+		// Token: 0x040068DD RID: 26845
 		public ENpcGroupPerformType Type;
 
-		// Token: 0x040062FA RID: 25338
-		[Nullable(1)]
+		// Token: 0x040068DE RID: 26846
 		public IPlayerInitiator Initiator;
 
-		// Token: 0x040062FB RID: 25339
+		// Token: 0x040068DF RID: 26847
 		public int Target;
 	}
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020009BE RID: 2494
+	// Token: 0x02000A93 RID: 2707
 	public class ConfigTakeWeedsDifficultyById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003A88 RID: 14984 RVA: 0x001A4CBF File Offset: 0x001A2EBF
+		// Token: 0x06003F86 RID: 16262 RVA: 0x001C4053 File Offset: 0x001C2253
 		static ConfigTakeWeedsDifficultyById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigTakeWeedsDifficultyById.CreateStaticDefaultValue), new Action(ConfigTakeWeedsDifficultyById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003A89 RID: 14985 RVA: 0x001A4CE0 File Offset: 0x001A2EE0
+		// Token: 0x06003F87 RID: 16263 RVA: 0x001C4074 File Offset: 0x001C2274
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigTakeWeedsDifficultyById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003A8A RID: 14986 RVA: 0x001A4D5F File Offset: 0x001A2F5F
+		// Token: 0x06003F88 RID: 16264 RVA: 0x001C40F3 File Offset: 0x001C22F3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigTakeWeedsDifficultyById.LogPair = null;
 			ConfigTakeWeedsDifficultyById.HandleId = 0;
 		}
 
-		// Token: 0x06003A8B RID: 14987 RVA: 0x001A4D6D File Offset: 0x001A2F6D
+		// Token: 0x06003F89 RID: 16265 RVA: 0x001C4101 File Offset: 0x001C2301
 		public static void Init()
 		{
 			ConfigTakeWeedsDifficultyById.HandleId = ConfigCommon.InitDataStatement(ConfigTakeWeedsDifficultyById.HandleId, "db_takeweeds.db", "select BinData from `TakeWeedsDifficulty` where Id=?");
 		}
 
-		// Token: 0x06003A8C RID: 14988 RVA: 0x001A4D88 File Offset: 0x001A2F88
+		// Token: 0x06003F8A RID: 16266 RVA: 0x001C411C File Offset: 0x001C231C
 		public static TakeWeedsDifficulty? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigTakeWeedsDifficultyById.HandleId, ConfigTakeWeedsDifficultyById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new TakeWeedsDifficulty?(rootAsTakeWeedsDifficulty);
 		}
 
-		// Token: 0x04004418 RID: 17432
+		// Token: 0x040049EB RID: 18923
 		private const string DB = "db_takeweeds.db";
 
-		// Token: 0x04004419 RID: 17433
+		// Token: 0x040049EC RID: 18924
 		private const string FILE = "g.割草活动.xlsx";
 
-		// Token: 0x0400441A RID: 17434
+		// Token: 0x040049ED RID: 18925
 		private const string TABLE = "TakeWeedsDifficulty";
 
-		// Token: 0x0400441B RID: 17435
+		// Token: 0x040049EE RID: 18926
 		private const string COMMAND = "select BinData from `TakeWeedsDifficulty` where Id=?";
 
-		// Token: 0x0400441C RID: 17436
+		// Token: 0x040049EF RID: 18927
 		private const string KEY_PREFIX = "TakeWeedsDifficultyById";
 
-		// Token: 0x0400441D RID: 17437
+		// Token: 0x040049F0 RID: 18928
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400441E RID: 17438
+		// Token: 0x040049F1 RID: 18929
 		private static int HandleId;
 	}
 }

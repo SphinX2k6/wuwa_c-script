@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000383 RID: 899
+	// Token: 0x02000399 RID: 921
 	public class ConfigGenderTextByMaleText : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001518 RID: 5400 RVA: 0x000D0E7C File Offset: 0x000CF07C
+		// Token: 0x0600159C RID: 5532 RVA: 0x000D75D0 File Offset: 0x000D57D0
 		static ConfigGenderTextByMaleText()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigGenderTextByMaleText.CreateStaticDefaultValue), new Action(ConfigGenderTextByMaleText.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001519 RID: 5401 RVA: 0x000D0E9C File Offset: 0x000CF09C
+		// Token: 0x0600159D RID: 5533 RVA: 0x000D75F0 File Offset: 0x000D57F0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigGenderTextByMaleText.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600151A RID: 5402 RVA: 0x000D0F1B File Offset: 0x000CF11B
+		// Token: 0x0600159E RID: 5534 RVA: 0x000D766F File Offset: 0x000D586F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigGenderTextByMaleText.LogPair = null;
 			ConfigGenderTextByMaleText.HandleId = 0;
 		}
 
-		// Token: 0x0600151B RID: 5403 RVA: 0x000D0F29 File Offset: 0x000CF129
+		// Token: 0x0600159F RID: 5535 RVA: 0x000D767D File Offset: 0x000D587D
 		public static void Init()
 		{
 			ConfigGenderTextByMaleText.HandleId = ConfigCommon.InitDataStatement(ConfigGenderTextByMaleText.HandleId, "db_gender_text.db", "select BinData from `GenderText` where MaleText=?");
 		}
 
-		// Token: 0x0600151C RID: 5404 RVA: 0x000D0F44 File Offset: 0x000CF144
+		// Token: 0x060015A0 RID: 5536 RVA: 0x000D7698 File Offset: 0x000D5898
 		public static GenderText? GetConfig(string p0MaleText, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigGenderTextByMaleText.HandleId, ConfigGenderTextByMaleText.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new GenderText?(rootAsGenderText);
 		}
 
-		// Token: 0x04001879 RID: 6265
+		// Token: 0x04001913 RID: 6419
 		private const string DB = "db_gender_text.db";
 
-		// Token: 0x0400187A RID: 6266
+		// Token: 0x04001914 RID: 6420
 		private const string FILE = "k.可视化编辑/c.Csv/x.性别通配符表/*.csv*";
 
-		// Token: 0x0400187B RID: 6267
+		// Token: 0x04001915 RID: 6421
 		private const string TABLE = "GenderText";
 
-		// Token: 0x0400187C RID: 6268
+		// Token: 0x04001916 RID: 6422
 		private const string COMMAND = "select BinData from `GenderText` where MaleText=?";
 
-		// Token: 0x0400187D RID: 6269
+		// Token: 0x04001917 RID: 6423
 		private const string KEY_PREFIX = "GenderTextByMaleText";
 
-		// Token: 0x0400187E RID: 6270
+		// Token: 0x04001918 RID: 6424
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400187F RID: 6271
+		// Token: 0x04001919 RID: 6425
 		private static int HandleId;
 	}
 }

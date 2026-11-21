@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006CA0 RID: 27808
+	// Token: 0x02005E1A RID: 24090
 	public class LevelConditionCheckGravityFlipEntityDirectionSameAsPlayer : LevelConditionBase
 	{
-		// Token: 0x060445D2 RID: 280018 RVA: 0x010DBB50 File Offset: 0x010D9D50
+		// Token: 0x0603A72C RID: 239404 RVA: 0x01085AFC File Offset: 0x01083CFC
 		[NullableContext(1)]
 		public override bool CheckNew(ICondition2 inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{

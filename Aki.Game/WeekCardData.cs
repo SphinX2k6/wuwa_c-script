@@ -1,23 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Module.PayShop;
 
-// Token: 0x020023A0 RID: 9120
+// Token: 0x02001885 RID: 6277
 [NullableContext(1)]
 [Nullable(0)]
 public class WeekCardData
 {
-	// Token: 0x060123DA RID: 74714 RVA: 0x0047E504 File Offset: 0x0047C704
+	// Token: 0x0600F88C RID: 63628 RVA: 0x0048B99C File Offset: 0x00489B9C
 	public WeekCardData(WeekCardInfo info)
 	{
 		this.Update(info);
 	}
 
-	// Token: 0x060123DB RID: 74715 RVA: 0x0047E520 File Offset: 0x0047C720
+	// Token: 0x0600F88D RID: 63629 RVA: 0x0048B9B8 File Offset: 0x00489BB8
 	public void Update(WeekCardInfo info)
 	{
 		this.WeekCardIdInner = info.WeekCardId;
@@ -27,8 +26,8 @@ public class WeekCardData
 		this.WeekCardContentInfosInner = new List<WeekCardContentInfo>(info.WeekCardContentInfos);
 	}
 
-	// Token: 0x170017A5 RID: 6053
-	// (get) Token: 0x060123DC RID: 74716 RVA: 0x0047E56E File Offset: 0x0047C76E
+	// Token: 0x170017DF RID: 6111
+	// (get) Token: 0x0600F88E RID: 63630 RVA: 0x0048BA06 File Offset: 0x00489C06
 	public int WeekCardId
 	{
 		get
@@ -37,8 +36,8 @@ public class WeekCardData
 		}
 	}
 
-	// Token: 0x170017A6 RID: 6054
-	// (get) Token: 0x060123DD RID: 74717 RVA: 0x0047E576 File Offset: 0x0047C776
+	// Token: 0x170017E0 RID: 6112
+	// (get) Token: 0x0600F88F RID: 63631 RVA: 0x0048BA0E File Offset: 0x00489C0E
 	public int Days
 	{
 		get
@@ -47,8 +46,8 @@ public class WeekCardData
 		}
 	}
 
-	// Token: 0x170017A7 RID: 6055
-	// (get) Token: 0x060123DE RID: 74718 RVA: 0x0047E57E File Offset: 0x0047C77E
+	// Token: 0x170017E1 RID: 6113
+	// (get) Token: 0x0600F890 RID: 63632 RVA: 0x0048BA16 File Offset: 0x00489C16
 	public long BuyTimeStamp
 	{
 		get
@@ -57,8 +56,8 @@ public class WeekCardData
 		}
 	}
 
-	// Token: 0x170017A8 RID: 6056
-	// (get) Token: 0x060123DF RID: 74719 RVA: 0x0047E586 File Offset: 0x0047C786
+	// Token: 0x170017E2 RID: 6114
+	// (get) Token: 0x0600F891 RID: 63633 RVA: 0x0048BA1E File Offset: 0x00489C1E
 	public long EndTimeStamp
 	{
 		get
@@ -67,19 +66,19 @@ public class WeekCardData
 		}
 	}
 
-	// Token: 0x060123E0 RID: 74720 RVA: 0x0047E58E File Offset: 0x0047C78E
+	// Token: 0x0600F892 RID: 63634 RVA: 0x0048BA26 File Offset: 0x00489C26
 	public WeekCardContentInfo GetWeekCardContentInfo(int index)
 	{
 		return this.WeekCardContentInfosInner[index];
 	}
 
-	// Token: 0x060123E1 RID: 74721 RVA: 0x0047E59C File Offset: 0x0047C79C
+	// Token: 0x0600F893 RID: 63635 RVA: 0x0048BA34 File Offset: 0x00489C34
 	public List<WeekCardContentInfo> GetAllWeekCardContentInfos()
 	{
 		return this.WeekCardContentInfosInner;
 	}
 
-	// Token: 0x060123E2 RID: 74722 RVA: 0x0047E5A4 File Offset: 0x0047C7A4
+	// Token: 0x0600F894 RID: 63636 RVA: 0x0048BA3C File Offset: 0x00489C3C
 	[NullableContext(2)]
 	public PayPackageData GetWeekCardGiftData()
 	{
@@ -88,10 +87,17 @@ public class WeekCardData
 		{
 			return null;
 		}
-		return PayGiftModel.Instance.GetPayGiftDataByType(EPayGiftType.WeekCard).FirstOrDefault((PayPackageData g) => g.Id == config.Value.PayGiftId);
+		foreach (PayPackageData payPackageData in PayGiftModel.Instance.GetPayGiftDataByType(EPayGiftType.WeekCard))
+		{
+			if (payPackageData.Id == config.Value.PayGiftId)
+			{
+				return payPackageData;
+			}
+		}
+		return null;
 	}
 
-	// Token: 0x060123E3 RID: 74723 RVA: 0x0047E5F8 File Offset: 0x0047C7F8
+	// Token: 0x0600F895 RID: 63637 RVA: 0x0048BACC File Offset: 0x00489CCC
 	public long GetActivityBeginTime()
 	{
 		PayPackageData weekCardGiftData = this.GetWeekCardGiftData();
@@ -102,7 +108,7 @@ public class WeekCardData
 		return weekCardGiftData.BeginTime;
 	}
 
-	// Token: 0x060123E4 RID: 74724 RVA: 0x0047E60C File Offset: 0x0047C80C
+	// Token: 0x0600F896 RID: 63638 RVA: 0x0048BAE0 File Offset: 0x00489CE0
 	public long GetActivityEndTime()
 	{
 		PayPackageData weekCardGiftData = this.GetWeekCardGiftData();
@@ -113,26 +119,26 @@ public class WeekCardData
 		return weekCardGiftData.EndTime;
 	}
 
-	// Token: 0x060123E5 RID: 74725 RVA: 0x0047E620 File Offset: 0x0047C820
+	// Token: 0x0600F897 RID: 63639 RVA: 0x0048BAF4 File Offset: 0x00489CF4
 	public bool GetIsWeekCardBuyOpen()
 	{
 		double serverTime = TimeUtil.Instance.GetServerTime();
 		return (double)this.GetActivityEndTime() > serverTime && serverTime >= (double)this.GetActivityBeginTime();
 	}
 
-	// Token: 0x060123E6 RID: 74726 RVA: 0x0047E651 File Offset: 0x0047C851
+	// Token: 0x0600F898 RID: 63640 RVA: 0x0048BB25 File Offset: 0x00489D25
 	public bool GetHasBuyWeekCard()
 	{
 		return this.EndTimeStampInner > 0L;
 	}
 
-	// Token: 0x060123E7 RID: 74727 RVA: 0x0047E65D File Offset: 0x0047C85D
+	// Token: 0x0600F899 RID: 63641 RVA: 0x0048BB31 File Offset: 0x00489D31
 	public bool GetIsWeekCardInRewardStage()
 	{
 		return this.GetHasBuyWeekCard() && TimeUtil.Instance.SetTimeSecond((double)this.EndTimeStampInner) > TimeUtil.Instance.GetServerTime();
 	}
 
-	// Token: 0x060123E8 RID: 74728 RVA: 0x0047E688 File Offset: 0x0047C888
+	// Token: 0x0600F89A RID: 63642 RVA: 0x0048BB5C File Offset: 0x00489D5C
 	public bool HasRewardUnReceive()
 	{
 		if (!this.GetIsWeekCardInRewardStage())
@@ -152,7 +158,7 @@ public class WeekCardData
 		return false;
 	}
 
-	// Token: 0x060123E9 RID: 74729 RVA: 0x0047E6EC File Offset: 0x0047C8EC
+	// Token: 0x0600F89B RID: 63643 RVA: 0x0048BBC0 File Offset: 0x00489DC0
 	public bool GetWeekCardRedDotState()
 	{
 		if (!this.HasRewardUnReceive())
@@ -174,7 +180,7 @@ public class WeekCardData
 		return true;
 	}
 
-	// Token: 0x060123EA RID: 74730 RVA: 0x0047E73E File Offset: 0x0047C93E
+	// Token: 0x0600F89C RID: 63644 RVA: 0x0048BC12 File Offset: 0x00489E12
 	public bool GetWeekCardIsOpen()
 	{
 		if (this.GetHasBuyWeekCard())
@@ -184,18 +190,18 @@ public class WeekCardData
 		return this.GetIsWeekCardBuyOpen();
 	}
 
-	// Token: 0x040089C4 RID: 35268
+	// Token: 0x04008B0B RID: 35595
 	private int WeekCardIdInner;
 
-	// Token: 0x040089C5 RID: 35269
+	// Token: 0x04008B0C RID: 35596
 	private int DaysInner;
 
-	// Token: 0x040089C6 RID: 35270
+	// Token: 0x04008B0D RID: 35597
 	private long BuyTimeStampInner;
 
-	// Token: 0x040089C7 RID: 35271
+	// Token: 0x04008B0E RID: 35598
 	private long EndTimeStampInner;
 
-	// Token: 0x040089C8 RID: 35272
+	// Token: 0x04008B0F RID: 35599
 	private List<WeekCardContentInfo> WeekCardContentInfosInner = new List<WeekCardContentInfo>();
 }

@@ -9,18 +9,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x02005624 RID: 22052
+	// Token: 0x020045FA RID: 17914
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MapRoguePanelRole : UiPanelBase
 	{
-		// Token: 0x060381B1 RID: 229809 RVA: 0x00D4A944 File Offset: 0x00D48B44
+		// Token: 0x0602D0AF RID: 184495 RVA: 0x00C9868C File Offset: 0x00C9688C
 		public MapRoguePanelRole(MapRogueGameInfo gameInfo)
 		{
 			this.GameInfo = gameInfo;
 		}
 
-		// Token: 0x060381B2 RID: 229810 RVA: 0x00D4A998 File Offset: 0x00D48B98
+		// Token: 0x0602D0B0 RID: 184496 RVA: 0x00C986E0 File Offset: 0x00C968E0
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x060381B3 RID: 229811 RVA: 0x00D4AA4C File Offset: 0x00D48C4C
+		// Token: 0x0602D0B1 RID: 184497 RVA: 0x00C98794 File Offset: 0x00C96994
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MapRoguePanelRole.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060381B4 RID: 229812 RVA: 0x00D4AA8F File Offset: 0x00D48C8F
+		// Token: 0x0602D0B2 RID: 184498 RVA: 0x00C987D7 File Offset: 0x00C969D7
 		public void OnTick(float delta)
 		{
 			if (base.IsShow)
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x060381B5 RID: 229813 RVA: 0x00D4AAAC File Offset: 0x00D48CAC
+		// Token: 0x0602D0B3 RID: 184499 RVA: 0x00C987F4 File Offset: 0x00C969F4
 		private UniTask InitRole()
 		{
 			MapRoguePanelRole.<InitRole>d__13 <InitRole>d__;
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return <InitRole>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060381B6 RID: 229814 RVA: 0x00D4AAEF File Offset: 0x00D48CEF
+		// Token: 0x0602D0B4 RID: 184500 RVA: 0x00C98837 File Offset: 0x00C96A37
 		public void SetRoleDirection(bool directionRight)
 		{
 			this.DirectionRight = directionRight;
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			base.GetItem(6).SetUIActive(directionRight);
 		}
 
-		// Token: 0x060381B7 RID: 229815 RVA: 0x00D4AB18 File Offset: 0x00D48D18
+		// Token: 0x0602D0B5 RID: 184501 RVA: 0x00C98860 File Offset: 0x00C96A60
 		public void SetRoleAnim(EMapRogueSpineAnim anim, bool loop = true)
 		{
 			MapRoguePanelRole.<>c__DisplayClass15_0 CS$<>8__locals1 = new MapRoguePanelRole.<>c__DisplayClass15_0();
@@ -93,19 +93,19 @@ namespace CSharpScript.Game.Module.MapRogue
 			}
 		}
 
-		// Token: 0x060381B8 RID: 229816 RVA: 0x00D4ABA1 File Offset: 0x00D48DA1
+		// Token: 0x0602D0B6 RID: 184502 RVA: 0x00C988E9 File Offset: 0x00C96AE9
 		public void SetRolePosItemVisible(bool bVisible)
 		{
 			base.GetItem(0).SetUIActive(bVisible);
 		}
 
-		// Token: 0x060381B9 RID: 229817 RVA: 0x00D4ABB0 File Offset: 0x00D48DB0
+		// Token: 0x0602D0B7 RID: 184503 RVA: 0x00C988F8 File Offset: 0x00C96AF8
 		public void SetListRootItem(global::Vector scaleVector)
 		{
 			base.GetVerticalLayout(1).RootUIComp.Get().SetUIItemScale(scaleVector.ToUeVectorOld());
 		}
 
-		// Token: 0x060381BA RID: 229818 RVA: 0x00D4ABDC File Offset: 0x00D48DDC
+		// Token: 0x0602D0B8 RID: 184504 RVA: 0x00C98924 File Offset: 0x00C96B24
 		private void InitListSlider()
 		{
 			this.ListSliderControl = new ListSliderControl<RogueGetListItem>(new ListSliderControlData<RogueGetListItem>(base.GetItem(2).GetParentAsUIItem(), new Func<RogueGetListItem>(this.CreateProxyFunction), new Func<bool>(this.CheckNext))
@@ -120,19 +120,19 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.ListSliderControl.DisEnableParentLayout();
 		}
 
-		// Token: 0x060381BB RID: 229819 RVA: 0x00D4AC85 File Offset: 0x00D48E85
+		// Token: 0x0602D0B9 RID: 184505 RVA: 0x00C989CD File Offset: 0x00C96BCD
 		private RogueGetListItem CreateProxyFunction()
 		{
 			return new RogueGetListItem();
 		}
 
-		// Token: 0x060381BC RID: 229820 RVA: 0x00D4AC8C File Offset: 0x00D48E8C
+		// Token: 0x0602D0BA RID: 184506 RVA: 0x00C989D4 File Offset: 0x00C96BD4
 		private bool CheckNext()
 		{
 			return !this.GameInfo.IsGetItemDataEmpty();
 		}
 
-		// Token: 0x0401D83A RID: 120890
+		// Token: 0x040182C5 RID: 99013
 		[Nullable(new byte[]
 		{
 			2,
@@ -140,28 +140,28 @@ namespace CSharpScript.Game.Module.MapRogue
 		})]
 		protected ListSliderControl<RogueGetListItem> ListSliderControl;
 
-		// Token: 0x0401D83B RID: 120891
+		// Token: 0x040182C6 RID: 99014
 		private readonly int ListMaxCount = ConfigCommonParamById.GetIntConfig("MapRogueGetListMaxCount").GetValueOrDefault(1);
 
-		// Token: 0x0401D83C RID: 120892
+		// Token: 0x040182C7 RID: 99015
 		private readonly float ListAddItemTime = ConfigCommonParamById.GetFloatConfig("MapRogueGetListIntervalTime").GetValueOrDefault();
 
-		// Token: 0x0401D83D RID: 120893
+		// Token: 0x040182C8 RID: 99016
 		private const string MALE_L_SPINE_ATLAS = "/Game/Aki/UI/UIResources/Common/Spine/RogueNanzhu/Avatar_HeroL/Avatar_HeroL.Avatar_HeroL-atlas";
 
-		// Token: 0x0401D83E RID: 120894
+		// Token: 0x040182C9 RID: 99017
 		private const string MALE_L_SPINE_SKELETON = "/Game/Aki/UI/UIResources/Common/Spine/RogueNanzhu/Avatar_HeroL/Avatar_HeroL.Avatar_HeroL-data";
 
-		// Token: 0x0401D83F RID: 120895
+		// Token: 0x040182CA RID: 99018
 		private const string MALE_R_SPINE_ATLAS = "/Game/Aki/UI/UIResources/Common/Spine/RogueNanzhu/Avatar_HeroR/Avatar_HeroR.Avatar_HeroR-atlas";
 
-		// Token: 0x0401D840 RID: 120896
+		// Token: 0x040182CB RID: 99019
 		private const string MALE_R_SPINE_SKELETON = "/Game/Aki/UI/UIResources/Common/Spine/RogueNanzhu/Avatar_HeroR/Avatar_HeroR.Avatar_HeroR-data";
 
-		// Token: 0x0401D841 RID: 120897
+		// Token: 0x040182CC RID: 99020
 		protected MapRogueGameInfo GameInfo;
 
-		// Token: 0x0401D842 RID: 120898
+		// Token: 0x040182CD RID: 99021
 		protected bool DirectionRight = true;
 	}
 }

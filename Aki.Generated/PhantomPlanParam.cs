@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000EF4 RID: 3828
+	// Token: 0x02000FD9 RID: 4057
 	public struct PhantomPlanParam : IFlatbufferObject
 	{
-		// Token: 0x17002737 RID: 10039
-		// (get) Token: 0x0600A9DE RID: 43486 RVA: 0x002B61C6 File Offset: 0x002B43C6
+		// Token: 0x1700279D RID: 10141
+		// (get) Token: 0x0600AFFF RID: 45055 RVA: 0x002D3042 File Offset: 0x002D1242
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A9DF RID: 43487 RVA: 0x002B61D3 File Offset: 0x002B43D3
+		// Token: 0x0600B000 RID: 45056 RVA: 0x002D304F File Offset: 0x002D124F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600A9E0 RID: 43488 RVA: 0x002B61DC File Offset: 0x002B43DC
+		// Token: 0x0600B001 RID: 45057 RVA: 0x002D3058 File Offset: 0x002D1258
 		public static PhantomPlanParam GetRootAsPhantomPlanParam(ByteBuffer _bb)
 		{
 			return PhantomPlanParam.GetRootAsPhantomPlanParam(_bb, default(PhantomPlanParam));
 		}
 
-		// Token: 0x0600A9E1 RID: 43489 RVA: 0x002B61F8 File Offset: 0x002B43F8
+		// Token: 0x0600B002 RID: 45058 RVA: 0x002D3074 File Offset: 0x002D1274
 		public static PhantomPlanParam GetRootAsPhantomPlanParam(ByteBuffer _bb, PhantomPlanParam obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600A9E2 RID: 43490 RVA: 0x002B6215 File Offset: 0x002B4415
+		// Token: 0x0600B003 RID: 45059 RVA: 0x002D3091 File Offset: 0x002D1291
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600A9E3 RID: 43491 RVA: 0x002B6224 File Offset: 0x002B4424
+		// Token: 0x0600B004 RID: 45060 RVA: 0x002D30A0 File Offset: 0x002D12A0
 		public PhantomPlanParam __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002738 RID: 10040
-		// (get) Token: 0x0600A9E4 RID: 43492 RVA: 0x002B6234 File Offset: 0x002B4434
+		// Token: 0x1700279E RID: 10142
+		// (get) Token: 0x0600B005 RID: 45061 RVA: 0x002D30B0 File Offset: 0x002D12B0
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002739 RID: 10041
-		// (get) Token: 0x0600A9E5 RID: 43493 RVA: 0x002B6270 File Offset: 0x002B4470
+		// Token: 0x1700279F RID: 10143
+		// (get) Token: 0x0600B006 RID: 45062 RVA: 0x002D30EC File Offset: 0x002D12EC
 		public int SkillBranchId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700273A RID: 10042
-		// (get) Token: 0x0600A9E6 RID: 43494 RVA: 0x002B62AC File Offset: 0x002B44AC
+		// Token: 0x170027A0 RID: 10144
+		// (get) Token: 0x0600B007 RID: 45063 RVA: 0x002D3128 File Offset: 0x002D1328
 		public string SkillBranchText
 		{
 			get
@@ -92,19 +92,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600A9E7 RID: 43495 RVA: 0x002B62E3 File Offset: 0x002B44E3
+		// Token: 0x0600B008 RID: 45064 RVA: 0x002D315F File Offset: 0x002D135F
 		public Span<byte> GetSkillBranchTextBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0600A9E8 RID: 43496 RVA: 0x002B62F2 File Offset: 0x002B44F2
+		// Token: 0x0600B009 RID: 45065 RVA: 0x002D316E File Offset: 0x002D136E
 		public byte[] GetSkillBranchTextArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04004FB9 RID: 20409
+		// Token: 0x0400559E RID: 21918
 		private Table __p;
 	}
 }

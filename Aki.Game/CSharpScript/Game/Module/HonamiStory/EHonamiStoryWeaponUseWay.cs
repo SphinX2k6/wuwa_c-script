@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.HonamiStory
 {
-	// Token: 0x0200593D RID: 22845
+	// Token: 0x02004916 RID: 18710
 	public enum EHonamiStoryWeaponUseWay
 	{
-		// Token: 0x0401E40E RID: 123918
+		// Token: 0x04018EAB RID: 102059
 		Equip,
-		// Token: 0x0401E40F RID: 123919
+		// Token: 0x04018EAC RID: 102060
 		Change
 	}
 }

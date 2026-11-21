@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A8A RID: 2698
+	// Token: 0x02000B5F RID: 2911
 	public class ConfigWeaponSkinByIsShow : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003F50 RID: 16208 RVA: 0x001C04D8 File Offset: 0x001BE6D8
+		// Token: 0x0600444E RID: 17486 RVA: 0x001DF86C File Offset: 0x001DDA6C
 		static ConfigWeaponSkinByIsShow()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigWeaponSkinByIsShow.CreateStaticDefaultValue), new Action(ConfigWeaponSkinByIsShow.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003F51 RID: 16209 RVA: 0x001C04F8 File Offset: 0x001BE6F8
+		// Token: 0x0600444F RID: 17487 RVA: 0x001DF88C File Offset: 0x001DDA8C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigWeaponSkinByIsShow.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003F52 RID: 16210 RVA: 0x001C0577 File Offset: 0x001BE777
+		// Token: 0x06004450 RID: 17488 RVA: 0x001DF90B File Offset: 0x001DDB0B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigWeaponSkinByIsShow.LogPair = null;
 			ConfigWeaponSkinByIsShow.HandleId = 0;
 		}
 
-		// Token: 0x06003F53 RID: 16211 RVA: 0x001C0585 File Offset: 0x001BE785
+		// Token: 0x06004451 RID: 17489 RVA: 0x001DF919 File Offset: 0x001DDB19
 		public static void Init()
 		{
 			ConfigWeaponSkinByIsShow.HandleId = ConfigCommon.InitDataStatement(ConfigWeaponSkinByIsShow.HandleId, "db_weapon.db", "select BinData from `WeaponSkin` where IsShow = ?");
 		}
 
-		// Token: 0x06003F54 RID: 16212 RVA: 0x001C05A0 File Offset: 0x001BE7A0
+		// Token: 0x06004452 RID: 17490 RVA: 0x001DF934 File Offset: 0x001DDB34
 		[NullableContext(2)]
 		public static IReadOnlyList<WeaponSkin> GetConfigList(bool p0IsShow, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040049AC RID: 18860
+		// Token: 0x04004F7F RID: 20351
 		private const string DB = "db_weapon.db";
 
-		// Token: 0x040049AD RID: 18861
+		// Token: 0x04004F80 RID: 20352
 		private const string FILE = "w.武器基础配置.xlsx";
 
-		// Token: 0x040049AE RID: 18862
+		// Token: 0x04004F81 RID: 20353
 		private const string TABLE = "WeaponSkin";
 
-		// Token: 0x040049AF RID: 18863
+		// Token: 0x04004F82 RID: 20354
 		private const string COMMAND = "select BinData from `WeaponSkin` where IsShow = ?";
 
-		// Token: 0x040049B0 RID: 18864
+		// Token: 0x04004F83 RID: 20355
 		private const string KEY_PREFIX = "WeaponSkinByIsShow";
 
-		// Token: 0x040049B1 RID: 18865
+		// Token: 0x04004F84 RID: 20356
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040049B2 RID: 18866
+		// Token: 0x04004F85 RID: 20357
 		private static int HandleId;
 	}
 }

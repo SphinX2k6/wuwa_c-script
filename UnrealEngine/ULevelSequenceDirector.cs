@@ -6,31 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001FBA RID: 8122
+	// Token: 0x02000642 RID: 1602
 	[UnrealObjectPath("/Script/LevelSequence.LevelSequenceDirector")]
 	[UnrealStructLayout(56, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 56)]
 	public class ULevelSequenceDirector : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601ED39 RID: 126265 RVA: 0x002DD0A2 File Offset: 0x002DB2A2
+		// Token: 0x06008D18 RID: 36120 RVA: 0x000D4374 File Offset: 0x000D2574
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return ULevelSequenceDirector._ClassPtr;
 		}
 
-		// Token: 0x0601ED3A RID: 126266 RVA: 0x002DD0B0 File Offset: 0x002DB2B0
+		// Token: 0x06008D19 RID: 36121 RVA: 0x000D4380 File Offset: 0x000D2580
 		public ULevelSequenceDirector() : this(BuiltinUtils.AllocNativeUObject(ULevelSequenceDirector.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601ED3B RID: 126267 RVA: 0x002DD0D8 File Offset: 0x002DB2D8
+		// Token: 0x06008D1A RID: 36122 RVA: 0x000D43A8 File Offset: 0x000D25A8
 		[NullableContext(1)]
 		public ULevelSequenceDirector(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(ULevelSequenceDirector.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17007ABD RID: 31421
-		// (get) Token: 0x0601ED3C RID: 126268 RVA: 0x002DD10B File Offset: 0x002DB30B
-		// (set) Token: 0x0601ED3D RID: 126269 RVA: 0x002DD11F File Offset: 0x002DB31F
+		// Token: 0x17001ABA RID: 6842
+		// (get) Token: 0x06008D1B RID: 36123 RVA: 0x000D43DB File Offset: 0x000D25DB
+		// (set) Token: 0x06008D1C RID: 36124 RVA: 0x000D43EF File Offset: 0x000D25EF
 		[Nullable(2)]
 		public unsafe ULevelSequencePlayer Player
 		{
@@ -46,38 +46,38 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601ED3E RID: 126270 RVA: 0x002DD134 File Offset: 0x002DB334
+		// Token: 0x06008D1D RID: 36125 RVA: 0x000D4404 File Offset: 0x000D2604
 		public virtual void OnCreated()
 		{
 			ULevelSequenceDirector.__OnCreated_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601ED3F RID: 126271
+		// Token: 0x06008D1E RID: 36126
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnCreated_Internal(IntPtr @this);
 
-		// Token: 0x0601ED40 RID: 126272 RVA: 0x002DD141 File Offset: 0x002DB341
+		// Token: 0x06008D1F RID: 36127 RVA: 0x000D4411 File Offset: 0x000D2611
 		static ULevelSequenceDirector()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/LevelSequence.LevelSequenceDirector");
 		}
 
-		// Token: 0x0601ED41 RID: 126273 RVA: 0x002DD14F File Offset: 0x002DB34F
+		// Token: 0x06008D20 RID: 36128 RVA: 0x000D441F File Offset: 0x000D261F
 		protected ULevelSequenceDirector(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04010A8F RID: 68239
+		// Token: 0x04003D6C RID: 15724
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/LevelSequence.LevelSequenceDirector";
 
-		// Token: 0x04010A90 RID: 68240
+		// Token: 0x04003D6D RID: 15725
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04010A91 RID: 68241
+		// Token: 0x04003D6E RID: 15726
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04010A92 RID: 68242
+		// Token: 0x04003D6F RID: 15727
 		internal static int __PropertyOffset_Player;
 	}
 }

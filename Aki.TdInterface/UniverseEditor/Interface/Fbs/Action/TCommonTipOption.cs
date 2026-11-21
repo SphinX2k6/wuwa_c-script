@@ -2,74 +2,84 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200768F RID: 30351
+	// Token: 0x02007E9A RID: 32410
 	public enum TCommonTipOption : byte
 	{
-		// Token: 0x04012695 RID: 75413
+		// Token: 0x040136D9 RID: 79577
 		NONE,
-		// Token: 0x04012696 RID: 75414
+		// Token: 0x040136DA RID: 79578
 		IBadBuKingChallengeTip,
-		// Token: 0x04012697 RID: 75415
+		// Token: 0x040136DB RID: 79579
 		IBlackCatWarning,
-		// Token: 0x04012698 RID: 75416
+		// Token: 0x040136DC RID: 79580
 		ICommonTipChallengeCondition,
-		// Token: 0x04012699 RID: 75417
+		// Token: 0x040136DD RID: 79581
 		ICommonTipChallengeFail,
-		// Token: 0x0401269A RID: 75418
+		// Token: 0x040136DE RID: 79582
 		ICommonTipChallengeSuccess,
-		// Token: 0x0401269B RID: 75419
+		// Token: 0x040136DF RID: 79583
 		ICommonTipEnterInRange,
-		// Token: 0x0401269C RID: 75420
+		// Token: 0x040136E0 RID: 79584
 		ICommonTipFirstComplete,
-		// Token: 0x0401269D RID: 75421
+		// Token: 0x040136E1 RID: 79585
 		ICommonTipGeneralFloatingTip,
-		// Token: 0x0401269E RID: 75422
+		// Token: 0x040136E2 RID: 79586
 		ICommonTipId,
-		// Token: 0x0401269F RID: 75423
+		// Token: 0x040136E3 RID: 79587
 		ICommonTipMissionComplete,
-		// Token: 0x040126A0 RID: 75424
+		// Token: 0x040136E4 RID: 79588
 		ICommonTipMissionCompleteNew,
-		// Token: 0x040126A1 RID: 75425
+		// Token: 0x040136E5 RID: 79589
 		ICommonTipPrepareCountdown,
-		// Token: 0x040126A2 RID: 75426
+		// Token: 0x040136E6 RID: 79590
 		ICommonTipReachChallenge,
-		// Token: 0x040126A3 RID: 75427
+		// Token: 0x040136E7 RID: 79591
 		ICommonTipTriggerDelegation,
-		// Token: 0x040126A4 RID: 75428
+		// Token: 0x040136E8 RID: 79592
 		IDreamlessWarning,
-		// Token: 0x040126A5 RID: 75429
+		// Token: 0x040136E9 RID: 79593
 		IFlipperTip,
-		// Token: 0x040126A6 RID: 75430
+		// Token: 0x040136EA RID: 79594
+		IFrequencyDetectionTip,
+		// Token: 0x040136EB RID: 79595
 		IGreatSwordChallenge,
-		// Token: 0x040126A7 RID: 75431
+		// Token: 0x040136EC RID: 79596
 		IMoraleAreaTip,
-		// Token: 0x040126A8 RID: 75432
+		// Token: 0x040136ED RID: 79597
 		INightmareLordTip,
-		// Token: 0x040126A9 RID: 75433
+		// Token: 0x040136EE RID: 79598
 		INightmareSpawnPointTip,
-		// Token: 0x040126AA RID: 75434
+		// Token: 0x040136EF RID: 79599
 		IPhotographicTip,
-		// Token: 0x040126AB RID: 75435
+		// Token: 0x040136F0 RID: 79600
 		IPunishReport,
-		// Token: 0x040126AC RID: 75436
+		// Token: 0x040136F1 RID: 79601
+		IRedNameMonsterTip,
+		// Token: 0x040136F2 RID: 79602
 		IRemainStarWarning,
-		// Token: 0x040126AD RID: 75437
+		// Token: 0x040136F3 RID: 79603
+		IRoleTowerStrongEnemyWarning,
+		// Token: 0x040136F4 RID: 79604
 		ISheriffCashSettlement,
-		// Token: 0x040126AE RID: 75438
+		// Token: 0x040136F5 RID: 79605
 		ISheriffCriminalArrested,
-		// Token: 0x040126AF RID: 75439
+		// Token: 0x040136F6 RID: 79606
 		ISheriffStartTrack,
-		// Token: 0x040126B0 RID: 75440
+		// Token: 0x040136F7 RID: 79607
 		ISlashAndTowerTip,
-		// Token: 0x040126B1 RID: 75441
+		// Token: 0x040136F8 RID: 79608
 		ISwordIntentTip,
-		// Token: 0x040126B2 RID: 75442
+		// Token: 0x040136F9 RID: 79609
+		ITeachAutoShowEnd,
+		// Token: 0x040136FA RID: 79610
+		ITeachAutoShowStart,
+		// Token: 0x040136FB RID: 79611
 		ITrapDefenseTip,
-		// Token: 0x040126B3 RID: 75443
+		// Token: 0x040136FC RID: 79612
 		IVisionSettlementHardTip,
-		// Token: 0x040126B4 RID: 75444
+		// Token: 0x040136FD RID: 79613
 		IVisionSettlementTip,
-		// Token: 0x040126B5 RID: 75445
+		// Token: 0x040136FE RID: 79614
 		IWhiteCatWarning
 	}
 }

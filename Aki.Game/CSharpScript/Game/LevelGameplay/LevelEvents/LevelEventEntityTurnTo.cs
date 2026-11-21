@@ -8,24 +8,24 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B22 RID: 27426
+	// Token: 0x02005C9A RID: 23706
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventEntityTurnTo : LevelEventBase
 	{
-		// Token: 0x060440CB RID: 278731 RVA: 0x010BA99B File Offset: 0x010B8B9B
+		// Token: 0x0603A21D RID: 238109 RVA: 0x01064227 File Offset: 0x01062427
 		public LevelEventEntityTurnTo(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060440CC RID: 278732 RVA: 0x010BA9A4 File Offset: 0x010B8BA4
+		// Token: 0x0603A21E RID: 238110 RVA: 0x01064230 File Offset: 0x01062430
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			this.Param = (inParams as EntityTurnTo);
 			base.CreateWaitEntityTask(this.Param.EntityId);
 		}
 
-		// Token: 0x060440CD RID: 278733 RVA: 0x010BA9C4 File Offset: 0x010B8BC4
+		// Token: 0x0603A21F RID: 238111 RVA: 0x01064250 File Offset: 0x01062450
 		protected override void ExecuteWhenEntitiesReady()
 		{
 			EntityHandle entityByPbDataId = CreatureModel.Instance.GetEntityByPbDataId(this.Param.EntityId);
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x060440CE RID: 278734 RVA: 0x010BACC0 File Offset: 0x010B8EC0
+		// Token: 0x0603A220 RID: 238112 RVA: 0x0106454C File Offset: 0x0106274C
 		private void OnRemoveEntity(ERemoveEntityType removeType, EntityHandle handle)
 		{
 			if (this.EntityHandle != handle)
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.OnEnd(0);
 		}
 
-		// Token: 0x060440CF RID: 278735 RVA: 0x010BAD10 File Offset: 0x010B8F10
+		// Token: 0x0603A221 RID: 238113 RVA: 0x0106459C File Offset: 0x0106279C
 		private void OnEnd(int _)
 		{
 			if (EventSystem.Instance.HasWithTarget<ERemoveEntityType, EntityHandle>(this.EntityHandle, EEventName.RemoveEntity, new Action<ERemoveEntityType, EntityHandle>(this.OnRemoveEntity)))
@@ -160,11 +160,11 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x040238F5 RID: 145653
+		// Token: 0x0401EB97 RID: 125847
 		[Nullable(2)]
 		private EntityTurnTo Param;
 
-		// Token: 0x040238F6 RID: 145654
+		// Token: 0x0401EB98 RID: 125848
 		[Nullable(2)]
 		private EntityHandle EntityHandle;
 	}

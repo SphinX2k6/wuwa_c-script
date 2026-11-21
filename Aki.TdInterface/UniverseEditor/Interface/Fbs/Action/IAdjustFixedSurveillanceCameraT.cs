@@ -4,145 +4,145 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006162 RID: 24930
+	// Token: 0x020067C7 RID: 26567
 	public class IAdjustFixedSurveillanceCameraT
 	{
-		// Token: 0x1700B93A RID: 47418
-		// (get) Token: 0x0602AD79 RID: 175481 RVA: 0x005E89FB File Offset: 0x005E6BFB
-		// (set) Token: 0x0602AD7A RID: 175482 RVA: 0x005E8A03 File Offset: 0x005E6C03
+		// Token: 0x1700C2AA RID: 49834
+		// (get) Token: 0x0602D472 RID: 185458 RVA: 0x00632BD7 File Offset: 0x00630DD7
+		// (set) Token: 0x0602D473 RID: 185459 RVA: 0x00632BDF File Offset: 0x00630DDF
 		public EAdjustPlayerCamera Type { get; set; }
 
-		// Token: 0x1700B93B RID: 47419
-		// (get) Token: 0x0602AD7B RID: 175483 RVA: 0x005E8A0C File Offset: 0x005E6C0C
-		// (set) Token: 0x0602AD7C RID: 175484 RVA: 0x005E8A14 File Offset: 0x005E6C14
+		// Token: 0x1700C2AB RID: 49835
+		// (get) Token: 0x0602D474 RID: 185460 RVA: 0x00632BE8 File Offset: 0x00630DE8
+		// (set) Token: 0x0602D475 RID: 185461 RVA: 0x00632BF0 File Offset: 0x00630DF0
 		public int Priority { get; set; }
 
-		// Token: 0x1700B93C RID: 47420
-		// (get) Token: 0x0602AD7D RID: 175485 RVA: 0x005E8A1D File Offset: 0x005E6C1D
-		// (set) Token: 0x0602AD7E RID: 175486 RVA: 0x005E8A25 File Offset: 0x005E6C25
+		// Token: 0x1700C2AC RID: 49836
+		// (get) Token: 0x0602D476 RID: 185462 RVA: 0x00632BF9 File Offset: 0x00630DF9
+		// (set) Token: 0x0602D477 RID: 185463 RVA: 0x00632C01 File Offset: 0x00630E01
 		public float FadeInTime { get; set; }
 
-		// Token: 0x1700B93D RID: 47421
-		// (get) Token: 0x0602AD7F RID: 175487 RVA: 0x005E8A2E File Offset: 0x005E6C2E
-		// (set) Token: 0x0602AD80 RID: 175488 RVA: 0x005E8A36 File Offset: 0x005E6C36
+		// Token: 0x1700C2AD RID: 49837
+		// (get) Token: 0x0602D478 RID: 185464 RVA: 0x00632C0A File Offset: 0x00630E0A
+		// (set) Token: 0x0602D479 RID: 185465 RVA: 0x00632C12 File Offset: 0x00630E12
 		public IBaseCurveT FadeInCurve { get; set; }
 
-		// Token: 0x1700B93E RID: 47422
-		// (get) Token: 0x0602AD81 RID: 175489 RVA: 0x005E8A3F File Offset: 0x005E6C3F
-		// (set) Token: 0x0602AD82 RID: 175490 RVA: 0x005E8A47 File Offset: 0x005E6C47
+		// Token: 0x1700C2AE RID: 49838
+		// (get) Token: 0x0602D47A RID: 185466 RVA: 0x00632C1B File Offset: 0x00630E1B
+		// (set) Token: 0x0602D47B RID: 185467 RVA: 0x00632C23 File Offset: 0x00630E23
 		public float FadeOutTime { get; set; }
 
-		// Token: 0x1700B93F RID: 47423
-		// (get) Token: 0x0602AD83 RID: 175491 RVA: 0x005E8A50 File Offset: 0x005E6C50
-		// (set) Token: 0x0602AD84 RID: 175492 RVA: 0x005E8A58 File Offset: 0x005E6C58
+		// Token: 0x1700C2AF RID: 49839
+		// (get) Token: 0x0602D47C RID: 185468 RVA: 0x00632C2C File Offset: 0x00630E2C
+		// (set) Token: 0x0602D47D RID: 185469 RVA: 0x00632C34 File Offset: 0x00630E34
 		public IBaseCurveT FadeOutCurve { get; set; }
 
-		// Token: 0x1700B940 RID: 47424
-		// (get) Token: 0x0602AD85 RID: 175493 RVA: 0x005E8A61 File Offset: 0x005E6C61
-		// (set) Token: 0x0602AD86 RID: 175494 RVA: 0x005E8A69 File Offset: 0x005E6C69
+		// Token: 0x1700C2B0 RID: 49840
+		// (get) Token: 0x0602D47E RID: 185470 RVA: 0x00632C3D File Offset: 0x00630E3D
+		// (set) Token: 0x0602D47F RID: 185471 RVA: 0x00632C45 File Offset: 0x00630E45
 		public float ArmLength { get; set; }
 
-		// Token: 0x1700B941 RID: 47425
-		// (get) Token: 0x0602AD87 RID: 175495 RVA: 0x005E8A72 File Offset: 0x005E6C72
-		// (set) Token: 0x0602AD88 RID: 175496 RVA: 0x005E8A7A File Offset: 0x005E6C7A
+		// Token: 0x1700C2B1 RID: 49841
+		// (get) Token: 0x0602D480 RID: 185472 RVA: 0x00632C4E File Offset: 0x00630E4E
+		// (set) Token: 0x0602D481 RID: 185473 RVA: 0x00632C56 File Offset: 0x00630E56
 		public float MinumArmLength { get; set; }
 
-		// Token: 0x1700B942 RID: 47426
-		// (get) Token: 0x0602AD89 RID: 175497 RVA: 0x005E8A83 File Offset: 0x005E6C83
-		// (set) Token: 0x0602AD8A RID: 175498 RVA: 0x005E8A8B File Offset: 0x005E6C8B
+		// Token: 0x1700C2B2 RID: 49842
+		// (get) Token: 0x0602D482 RID: 185474 RVA: 0x00632C5F File Offset: 0x00630E5F
+		// (set) Token: 0x0602D483 RID: 185475 RVA: 0x00632C67 File Offset: 0x00630E67
 		public float MaxiumArmLength { get; set; }
 
-		// Token: 0x1700B943 RID: 47427
-		// (get) Token: 0x0602AD8B RID: 175499 RVA: 0x005E8A94 File Offset: 0x005E6C94
-		// (set) Token: 0x0602AD8C RID: 175500 RVA: 0x005E8A9C File Offset: 0x005E6C9C
+		// Token: 0x1700C2B3 RID: 49843
+		// (get) Token: 0x0602D484 RID: 185476 RVA: 0x00632C70 File Offset: 0x00630E70
+		// (set) Token: 0x0602D485 RID: 185477 RVA: 0x00632C78 File Offset: 0x00630E78
 		public IVectorInfoT Offset { get; set; }
 
-		// Token: 0x1700B944 RID: 47428
-		// (get) Token: 0x0602AD8D RID: 175501 RVA: 0x005E8AA5 File Offset: 0x005E6CA5
-		// (set) Token: 0x0602AD8E RID: 175502 RVA: 0x005E8AAD File Offset: 0x005E6CAD
+		// Token: 0x1700C2B4 RID: 49844
+		// (get) Token: 0x0602D486 RID: 185478 RVA: 0x00632C81 File Offset: 0x00630E81
+		// (set) Token: 0x0602D487 RID: 185479 RVA: 0x00632C89 File Offset: 0x00630E89
 		public IVectorInfoT ArmOffset { get; set; }
 
-		// Token: 0x1700B945 RID: 47429
-		// (get) Token: 0x0602AD8F RID: 175503 RVA: 0x005E8AB6 File Offset: 0x005E6CB6
-		// (set) Token: 0x0602AD90 RID: 175504 RVA: 0x005E8ABE File Offset: 0x005E6CBE
+		// Token: 0x1700C2B5 RID: 49845
+		// (get) Token: 0x0602D488 RID: 185480 RVA: 0x00632C92 File Offset: 0x00630E92
+		// (set) Token: 0x0602D489 RID: 185481 RVA: 0x00632C9A File Offset: 0x00630E9A
 		public float YawLimitMin { get; set; }
 
-		// Token: 0x1700B946 RID: 47430
-		// (get) Token: 0x0602AD91 RID: 175505 RVA: 0x005E8AC7 File Offset: 0x005E6CC7
-		// (set) Token: 0x0602AD92 RID: 175506 RVA: 0x005E8ACF File Offset: 0x005E6CCF
+		// Token: 0x1700C2B6 RID: 49846
+		// (get) Token: 0x0602D48A RID: 185482 RVA: 0x00632CA3 File Offset: 0x00630EA3
+		// (set) Token: 0x0602D48B RID: 185483 RVA: 0x00632CAB File Offset: 0x00630EAB
 		public float YawLimitMax { get; set; }
 
-		// Token: 0x1700B947 RID: 47431
-		// (get) Token: 0x0602AD93 RID: 175507 RVA: 0x005E8AD8 File Offset: 0x005E6CD8
-		// (set) Token: 0x0602AD94 RID: 175508 RVA: 0x005E8AE0 File Offset: 0x005E6CE0
+		// Token: 0x1700C2B7 RID: 49847
+		// (get) Token: 0x0602D48C RID: 185484 RVA: 0x00632CB4 File Offset: 0x00630EB4
+		// (set) Token: 0x0602D48D RID: 185485 RVA: 0x00632CBC File Offset: 0x00630EBC
 		public float PitchLimitMin { get; set; }
 
-		// Token: 0x1700B948 RID: 47432
-		// (get) Token: 0x0602AD95 RID: 175509 RVA: 0x005E8AE9 File Offset: 0x005E6CE9
-		// (set) Token: 0x0602AD96 RID: 175510 RVA: 0x005E8AF1 File Offset: 0x005E6CF1
+		// Token: 0x1700C2B8 RID: 49848
+		// (get) Token: 0x0602D48E RID: 185486 RVA: 0x00632CC5 File Offset: 0x00630EC5
+		// (set) Token: 0x0602D48F RID: 185487 RVA: 0x00632CCD File Offset: 0x00630ECD
 		public float PitchLimitMax { get; set; }
 
-		// Token: 0x1700B949 RID: 47433
-		// (get) Token: 0x0602AD97 RID: 175511 RVA: 0x005E8AFA File Offset: 0x005E6CFA
-		// (set) Token: 0x0602AD98 RID: 175512 RVA: 0x005E8B02 File Offset: 0x005E6D02
+		// Token: 0x1700C2B9 RID: 49849
+		// (get) Token: 0x0602D490 RID: 185488 RVA: 0x00632CD6 File Offset: 0x00630ED6
+		// (set) Token: 0x0602D491 RID: 185489 RVA: 0x00632CDE File Offset: 0x00630EDE
 		public float Fov { get; set; }
 
-		// Token: 0x1700B94A RID: 47434
-		// (get) Token: 0x0602AD99 RID: 175513 RVA: 0x005E8B0B File Offset: 0x005E6D0B
-		// (set) Token: 0x0602AD9A RID: 175514 RVA: 0x005E8B13 File Offset: 0x005E6D13
+		// Token: 0x1700C2BA RID: 49850
+		// (get) Token: 0x0602D492 RID: 185490 RVA: 0x00632CE7 File Offset: 0x00630EE7
+		// (set) Token: 0x0602D493 RID: 185491 RVA: 0x00632CEF File Offset: 0x00630EEF
 		public bool IsDisableResetFocus { get; set; }
 
-		// Token: 0x1700B94B RID: 47435
-		// (get) Token: 0x0602AD9B RID: 175515 RVA: 0x005E8B1C File Offset: 0x005E6D1C
-		// (set) Token: 0x0602AD9C RID: 175516 RVA: 0x005E8B24 File Offset: 0x005E6D24
+		// Token: 0x1700C2BB RID: 49851
+		// (get) Token: 0x0602D494 RID: 185492 RVA: 0x00632CF8 File Offset: 0x00630EF8
+		// (set) Token: 0x0602D495 RID: 185493 RVA: 0x00632D00 File Offset: 0x00630F00
 		public TGravityDirectionUnion GravityDirection { get; set; }
 
-		// Token: 0x1700B94C RID: 47436
-		// (get) Token: 0x0602AD9D RID: 175517 RVA: 0x005E8B2D File Offset: 0x005E6D2D
-		// (set) Token: 0x0602AD9E RID: 175518 RVA: 0x005E8B35 File Offset: 0x005E6D35
+		// Token: 0x1700C2BC RID: 49852
+		// (get) Token: 0x0602D496 RID: 185494 RVA: 0x00632D09 File Offset: 0x00630F09
+		// (set) Token: 0x0602D497 RID: 185495 RVA: 0x00632D11 File Offset: 0x00630F11
 		public bool IsDisableCollision { get; set; }
 
-		// Token: 0x1700B94D RID: 47437
-		// (get) Token: 0x0602AD9F RID: 175519 RVA: 0x005E8B3E File Offset: 0x005E6D3E
-		// (set) Token: 0x0602ADA0 RID: 175520 RVA: 0x005E8B46 File Offset: 0x005E6D46
+		// Token: 0x1700C2BD RID: 49853
+		// (get) Token: 0x0602D498 RID: 185496 RVA: 0x00632D1A File Offset: 0x00630F1A
+		// (set) Token: 0x0602D499 RID: 185497 RVA: 0x00632D22 File Offset: 0x00630F22
 		public bool IsDisableDither { get; set; }
 
-		// Token: 0x1700B94E RID: 47438
-		// (get) Token: 0x0602ADA1 RID: 175521 RVA: 0x005E8B4F File Offset: 0x005E6D4F
-		// (set) Token: 0x0602ADA2 RID: 175522 RVA: 0x005E8B57 File Offset: 0x005E6D57
+		// Token: 0x1700C2BE RID: 49854
+		// (get) Token: 0x0602D49A RID: 185498 RVA: 0x00632D2B File Offset: 0x00630F2B
+		// (set) Token: 0x0602D49B RID: 185499 RVA: 0x00632D33 File Offset: 0x00630F33
 		public string SubScreenBindKey { get; set; }
 
-		// Token: 0x1700B94F RID: 47439
-		// (get) Token: 0x0602ADA3 RID: 175523 RVA: 0x005E8B60 File Offset: 0x005E6D60
-		// (set) Token: 0x0602ADA4 RID: 175524 RVA: 0x005E8B68 File Offset: 0x005E6D68
+		// Token: 0x1700C2BF RID: 49855
+		// (get) Token: 0x0602D49C RID: 185500 RVA: 0x00632D3C File Offset: 0x00630F3C
+		// (set) Token: 0x0602D49D RID: 185501 RVA: 0x00632D44 File Offset: 0x00630F44
 		public IVectorInfoT CenterPos { get; set; }
 
-		// Token: 0x1700B950 RID: 47440
-		// (get) Token: 0x0602ADA5 RID: 175525 RVA: 0x005E8B71 File Offset: 0x005E6D71
-		// (set) Token: 0x0602ADA6 RID: 175526 RVA: 0x005E8B79 File Offset: 0x005E6D79
+		// Token: 0x1700C2C0 RID: 49856
+		// (get) Token: 0x0602D49E RID: 185502 RVA: 0x00632D4D File Offset: 0x00630F4D
+		// (set) Token: 0x0602D49F RID: 185503 RVA: 0x00632D55 File Offset: 0x00630F55
 		public IBlendFunctionT BlendIn { get; set; }
 
-		// Token: 0x1700B951 RID: 47441
-		// (get) Token: 0x0602ADA7 RID: 175527 RVA: 0x005E8B82 File Offset: 0x005E6D82
-		// (set) Token: 0x0602ADA8 RID: 175528 RVA: 0x005E8B8A File Offset: 0x005E6D8A
+		// Token: 0x1700C2C1 RID: 49857
+		// (get) Token: 0x0602D4A0 RID: 185504 RVA: 0x00632D5E File Offset: 0x00630F5E
+		// (set) Token: 0x0602D4A1 RID: 185505 RVA: 0x00632D66 File Offset: 0x00630F66
 		public IBlendFunctionT BlendOut { get; set; }
 
-		// Token: 0x1700B952 RID: 47442
-		// (get) Token: 0x0602ADA9 RID: 175529 RVA: 0x005E8B93 File Offset: 0x005E6D93
-		// (set) Token: 0x0602ADAA RID: 175530 RVA: 0x005E8B9B File Offset: 0x005E6D9B
+		// Token: 0x1700C2C2 RID: 49858
+		// (get) Token: 0x0602D4A2 RID: 185506 RVA: 0x00632D6F File Offset: 0x00630F6F
+		// (set) Token: 0x0602D4A3 RID: 185507 RVA: 0x00632D77 File Offset: 0x00630F77
 		public IAdjustFixedCameraOrthogonalConfigT OrthogonalConfig { get; set; }
 
-		// Token: 0x1700B953 RID: 47443
-		// (get) Token: 0x0602ADAB RID: 175531 RVA: 0x005E8BA4 File Offset: 0x005E6DA4
-		// (set) Token: 0x0602ADAC RID: 175532 RVA: 0x005E8BAC File Offset: 0x005E6DAC
+		// Token: 0x1700C2C3 RID: 49859
+		// (get) Token: 0x0602D4A4 RID: 185508 RVA: 0x00632D80 File Offset: 0x00630F80
+		// (set) Token: 0x0602D4A5 RID: 185509 RVA: 0x00632D88 File Offset: 0x00630F88
 		public TTargetEntityUnion FollowTarget { get; set; }
 
-		// Token: 0x1700B954 RID: 47444
-		// (get) Token: 0x0602ADAD RID: 175533 RVA: 0x005E8BB5 File Offset: 0x005E6DB5
-		// (set) Token: 0x0602ADAE RID: 175534 RVA: 0x005E8BBD File Offset: 0x005E6DBD
+		// Token: 0x1700C2C4 RID: 49860
+		// (get) Token: 0x0602D4A6 RID: 185510 RVA: 0x00632D91 File Offset: 0x00630F91
+		// (set) Token: 0x0602D4A7 RID: 185511 RVA: 0x00632D99 File Offset: 0x00630F99
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602ADAF RID: 175535 RVA: 0x005E8BC8 File Offset: 0x005E6DC8
+		// Token: 0x0602D4A8 RID: 185512 RVA: 0x00632DA4 File Offset: 0x00630FA4
 		public IAdjustFixedSurveillanceCameraT()
 		{
 			this.Type = EAdjustPlayerCamera.Basic;

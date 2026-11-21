@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000ECE RID: 3790
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000FE4 RID: 4068
 	public class IAtomicProcess : IQuestCondition
 	{
-		// Token: 0x060053AC RID: 21420 RVA: 0x000CDBBC File Offset: 0x000CBDBC
+		// Token: 0x06005928 RID: 22824 RVA: 0x000D9D64 File Offset: 0x000D7F64
 		private IAtomicProcess_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060053AD RID: 21421 RVA: 0x000CDBF4 File Offset: 0x000CBDF4
+		// Token: 0x06005929 RID: 22825 RVA: 0x000D9D9C File Offset: 0x000D7F9C
 		public static IAtomicProcess Create([Nullable(2)] IAtomicProcess instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060053AE RID: 21422 RVA: 0x000CDC07 File Offset: 0x000CBE07
+		// Token: 0x0600592A RID: 22826 RVA: 0x000D9DAF File Offset: 0x000D7FAF
 		public static IAtomicProcess CreateFromSetValue([Nullable(2)] IAtomicProcess_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060053AF RID: 21423 RVA: 0x000CDC1A File Offset: 0x000CBE1A
+		// Token: 0x0600592B RID: 22827 RVA: 0x000D9DC2 File Offset: 0x000D7FC2
 		public new IAtomicProcess_SetValue ToSetValue()
 		{
 			return new IAtomicProcess_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001C20 RID: 7200
-		// (get) Token: 0x060053B0 RID: 21424 RVA: 0x000CDC45 File Offset: 0x000CBE45
-		// (set) Token: 0x060053B1 RID: 21425 RVA: 0x000CDC70 File Offset: 0x000CBE70
+		// Token: 0x17001DB8 RID: 7608
+		// (get) Token: 0x0600592C RID: 22828 RVA: 0x000D9DED File Offset: 0x000D7FED
+		// (set) Token: 0x0600592D RID: 22829 RVA: 0x000D9E18 File Offset: 0x000D8018
 		public override EChildQuest Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C21 RID: 7201
-		// (get) Token: 0x060053B2 RID: 21426 RVA: 0x000CDC80 File Offset: 0x000CBE80
-		// (set) Token: 0x060053B3 RID: 21427 RVA: 0x000CDCE1 File Offset: 0x000CBEE1
+		// Token: 0x17001DB9 RID: 7609
+		// (get) Token: 0x0600592E RID: 22830 RVA: 0x000D9E28 File Offset: 0x000D8028
+		// (set) Token: 0x0600592F RID: 22831 RVA: 0x000D9E89 File Offset: 0x000D8089
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -118,9 +116,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C22 RID: 7202
-		// (get) Token: 0x060053B4 RID: 21428 RVA: 0x000CDCF8 File Offset: 0x000CBEF8
-		// (set) Token: 0x060053B5 RID: 21429 RVA: 0x000CDD59 File Offset: 0x000CBF59
+		// Token: 0x17001DBA RID: 7610
+		// (get) Token: 0x06005930 RID: 22832 RVA: 0x000D9EA0 File Offset: 0x000D80A0
+		// (set) Token: 0x06005931 RID: 22833 RVA: 0x000D9F01 File Offset: 0x000D8101
 		public virtual IAtomicProcessStoveCoreFall AtomicProcessType
 		{
 			get
@@ -148,24 +146,24 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040032AA RID: 12970
+		// Token: 0x040035B7 RID: 13751
 		[Nullable(2)]
 		protected new IAtomicProcess FbInstance;
 
-		// Token: 0x040032AB RID: 12971
+		// Token: 0x040035B8 RID: 13752
 		[Nullable(2)]
 		protected new IAtomicProcess_SetValue PocoInterface;
 
-		// Token: 0x040032AC RID: 12972
+		// Token: 0x040035B9 RID: 13753
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x040032AD RID: 12973
+		// Token: 0x040035BA RID: 13754
 		private bool _PreConditionsInited;
 
-		// Token: 0x040032AE RID: 12974
+		// Token: 0x040035BB RID: 13755
 		private IAtomicProcessStoveCoreFall _AtomicProcessTypeCache;
 
-		// Token: 0x040032AF RID: 12975
+		// Token: 0x040035BC RID: 13756
 		private bool _AtomicProcessTypeInited;
 	}
 }

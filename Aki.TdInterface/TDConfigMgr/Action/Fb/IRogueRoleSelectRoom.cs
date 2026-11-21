@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026C7 RID: 9927
+	// Token: 0x0200298B RID: 10635
 	public class IRogueRoleSelectRoom : IRogueSelectRoomType
 	{
-		// Token: 0x0600DE00 RID: 56832 RVA: 0x0020F41D File Offset: 0x0020D61D
-		[NullableContext(1)]
+		// Token: 0x0600EBDC RID: 60380 RVA: 0x0022BC5D File Offset: 0x00229E5D
 		public static IRogueRoleSelectRoom Create(IRogueRoleSelectRoom? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004234 RID: 16948
-		// (get) Token: 0x0600DE01 RID: 56833 RVA: 0x0020F43C File Offset: 0x0020D63C
+		// Token: 0x17004574 RID: 17780
+		// (get) Token: 0x0600EBDD RID: 60381 RVA: 0x0022BC7C File Offset: 0x00229E7C
 		public override ERogueSelectRoomType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007B43 RID: 31555
+		// Token: 0x040081E3 RID: 33251
 		private IRogueRoleSelectRoom Instance;
 	}
 }

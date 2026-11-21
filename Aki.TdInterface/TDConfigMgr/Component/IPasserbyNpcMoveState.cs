@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005C8 RID: 1480
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000645 RID: 1605
 	public class IPasserbyNpcMoveState
 	{
-		// Token: 0x06001F52 RID: 8018 RVA: 0x00058024 File Offset: 0x00056224
+		// Token: 0x060021B2 RID: 8626 RVA: 0x0005D8FC File Offset: 0x0005BAFC
 		private IPasserbyNpcMoveState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001F53 RID: 8019 RVA: 0x0005805C File Offset: 0x0005625C
+		// Token: 0x060021B3 RID: 8627 RVA: 0x0005D934 File Offset: 0x0005BB34
 		public static IPasserbyNpcMoveState Create([Nullable(2)] IPasserbyNpcMoveState instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001F54 RID: 8020 RVA: 0x0005806F File Offset: 0x0005626F
+		// Token: 0x060021B4 RID: 8628 RVA: 0x0005D947 File Offset: 0x0005BB47
 		public static IPasserbyNpcMoveState CreateFromSetValue([Nullable(2)] IPasserbyNpcMoveState_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001F55 RID: 8021 RVA: 0x00058082 File Offset: 0x00056282
+		// Token: 0x060021B5 RID: 8629 RVA: 0x0005D95A File Offset: 0x0005BB5A
 		public IPasserbyNpcMoveState_SetValue ToSetValue()
 		{
 			return new IPasserbyNpcMoveState_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700085C RID: 2140
-		// (get) Token: 0x06001F56 RID: 8022 RVA: 0x000580B9 File Offset: 0x000562B9
-		// (set) Token: 0x06001F57 RID: 8023 RVA: 0x000580E4 File Offset: 0x000562E4
+		// Token: 0x170008F0 RID: 2288
+		// (get) Token: 0x060021B6 RID: 8630 RVA: 0x0005D991 File Offset: 0x0005BB91
+		// (set) Token: 0x060021B7 RID: 8631 RVA: 0x0005D9BC File Offset: 0x0005BBBC
 		public virtual EPatrolMoveState MoveState
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700085D RID: 2141
-		// (get) Token: 0x06001F58 RID: 8024 RVA: 0x000580F4 File Offset: 0x000562F4
-		// (set) Token: 0x06001F59 RID: 8025 RVA: 0x0005812E File Offset: 0x0005632E
+		// Token: 0x170008F1 RID: 2289
+		// (get) Token: 0x060021B8 RID: 8632 RVA: 0x0005D9CC File Offset: 0x0005BBCC
+		// (set) Token: 0x060021B9 RID: 8633 RVA: 0x0005DA06 File Offset: 0x0005BC06
 		public virtual ECharPositionStateType? CharPositionState
 		{
 			get
@@ -110,9 +108,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700085E RID: 2142
-		// (get) Token: 0x06001F5A RID: 8026 RVA: 0x0005813C File Offset: 0x0005633C
-		// (set) Token: 0x06001F5B RID: 8027 RVA: 0x00058176 File Offset: 0x00056376
+		// Token: 0x170008F2 RID: 2290
+		// (get) Token: 0x060021BA RID: 8634 RVA: 0x0005DA14 File Offset: 0x0005BC14
+		// (set) Token: 0x060021BB RID: 8635 RVA: 0x0005DA4E File Offset: 0x0005BC4E
 		public virtual int? MoveSpeed
 		{
 			get
@@ -134,9 +132,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700085F RID: 2143
-		// (get) Token: 0x06001F5C RID: 8028 RVA: 0x00058184 File Offset: 0x00056384
-		// (set) Token: 0x06001F5D RID: 8029 RVA: 0x000581BE File Offset: 0x000563BE
+		// Token: 0x170008F3 RID: 2291
+		// (get) Token: 0x060021BC RID: 8636 RVA: 0x0005DA5C File Offset: 0x0005BC5C
+		// (set) Token: 0x060021BD RID: 8637 RVA: 0x0005DA96 File Offset: 0x0005BC96
 		public virtual bool? UseAbpMappingSpeed
 		{
 			get
@@ -158,11 +156,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400162C RID: 5676
+		// Token: 0x040017C7 RID: 6087
 		[Nullable(2)]
 		protected IPasserbyNpcMoveState FbInstance;
 
-		// Token: 0x0400162D RID: 5677
+		// Token: 0x040017C8 RID: 6088
 		[Nullable(2)]
 		protected IPasserbyNpcMoveState_SetValue PocoInterface;
 	}

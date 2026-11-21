@@ -3,22 +3,22 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Map.MapDefine
 {
-	// Token: 0x02005568 RID: 21864
+	// Token: 0x0200453B RID: 17723
 	public interface IMarkShowState
 	{
-		// Token: 0x17008603 RID: 34307
-		// (get) Token: 0x06037C02 RID: 228354
-		// (set) Token: 0x06037C03 RID: 228355
+		// Token: 0x170059AC RID: 22956
+		// (get) Token: 0x0602CADC RID: 183004
+		// (set) Token: 0x0602CADD RID: 183005
 		int Id { get; set; }
 
-		// Token: 0x17008604 RID: 34308
-		// (get) Token: 0x06037C04 RID: 228356
-		// (set) Token: 0x06037C05 RID: 228357
+		// Token: 0x170059AD RID: 22957
+		// (get) Token: 0x0602CADE RID: 183006
+		// (set) Token: 0x0602CADF RID: 183007
 		bool NeedFocus { get; set; }
 
-		// Token: 0x17008605 RID: 34309
-		// (get) Token: 0x06037C06 RID: 228358
-		// (set) Token: 0x06037C07 RID: 228359
+		// Token: 0x170059AE RID: 22958
+		// (get) Token: 0x0602CAE0 RID: 183008
+		// (set) Token: 0x0602CAE1 RID: 183009
 		MapMarkShowFlag ShowFlag { get; set; }
 	}
 }

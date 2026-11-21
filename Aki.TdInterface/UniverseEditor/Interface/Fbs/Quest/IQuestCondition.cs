@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003FCE RID: 16334
+	// Token: 0x0200440F RID: 17423
 	public struct IQuestCondition : IFlatbufferObject
 	{
-		// Token: 0x1700726C RID: 29292
-		// (get) Token: 0x060176F5 RID: 95989 RVA: 0x00361393 File Offset: 0x0035F593
+		// Token: 0x1700786C RID: 30828
+		// (get) Token: 0x06018D88 RID: 101768 RVA: 0x0038B0BB File Offset: 0x003892BB
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060176F6 RID: 95990 RVA: 0x003613A0 File Offset: 0x0035F5A0
+		// Token: 0x06018D89 RID: 101769 RVA: 0x0038B0C8 File Offset: 0x003892C8
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060176F7 RID: 95991 RVA: 0x003613A8 File Offset: 0x0035F5A8
+		// Token: 0x06018D8A RID: 101770 RVA: 0x0038B0D0 File Offset: 0x003892D0
 		public static IQuestCondition GetRootAsIQuestCondition(ByteBuffer _bb)
 		{
 			return IQuestCondition.GetRootAsIQuestCondition(_bb, default(IQuestCondition));
 		}
 
-		// Token: 0x060176F8 RID: 95992 RVA: 0x003613C4 File Offset: 0x0035F5C4
+		// Token: 0x06018D8B RID: 101771 RVA: 0x0038B0EC File Offset: 0x003892EC
 		public static IQuestCondition GetRootAsIQuestCondition(ByteBuffer _bb, IQuestCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060176F9 RID: 95993 RVA: 0x003613E1 File Offset: 0x0035F5E1
+		// Token: 0x06018D8C RID: 101772 RVA: 0x0038B109 File Offset: 0x00389309
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060176FA RID: 95994 RVA: 0x003613F0 File Offset: 0x0035F5F0
+		// Token: 0x06018D8D RID: 101773 RVA: 0x0038B118 File Offset: 0x00389318
 		public IQuestCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700726D RID: 29293
-		// (get) Token: 0x060176FB RID: 95995 RVA: 0x00361400 File Offset: 0x0035F600
+		// Token: 0x1700786D RID: 30829
+		// (get) Token: 0x06018D8E RID: 101774 RVA: 0x0038B128 File Offset: 0x00389328
 		public EChildQuest Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x1700726E RID: 29294
-		// (get) Token: 0x060176FC RID: 95996 RVA: 0x0036143C File Offset: 0x0035F63C
+		// Token: 0x1700786E RID: 30830
+		// (get) Token: 0x06018D8F RID: 101775 RVA: 0x0038B164 File Offset: 0x00389364
 		public IConditionGroup? PreConditions
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x060176FD RID: 95997 RVA: 0x00361499 File Offset: 0x0035F699
+		// Token: 0x06018D90 RID: 101776 RVA: 0x0038B1C1 File Offset: 0x003893C1
 		public static Offset<IQuestCondition> CreateIQuestCondition(FlatBufferBuilder builder, EChildQuest Type = EChildQuest.DoInteract, Offset<IConditionGroup> PreConditionsOffset = default(Offset<IConditionGroup>))
 		{
 			builder.StartTable(2);
@@ -87,31 +87,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IQuestCondition.EndIQuestCondition(builder);
 		}
 
-		// Token: 0x060176FE RID: 95998 RVA: 0x003614B6 File Offset: 0x0035F6B6
+		// Token: 0x06018D91 RID: 101777 RVA: 0x0038B1DE File Offset: 0x003893DE
 		public static void StartIQuestCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x060176FF RID: 95999 RVA: 0x003614BF File Offset: 0x0035F6BF
+		// Token: 0x06018D92 RID: 101778 RVA: 0x0038B1E7 File Offset: 0x003893E7
 		public static void AddType(FlatBufferBuilder builder, EChildQuest type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06017700 RID: 96000 RVA: 0x003614CA File Offset: 0x0035F6CA
+		// Token: 0x06018D93 RID: 101779 RVA: 0x0038B1F2 File Offset: 0x003893F2
 		public static void AddPreConditions(FlatBufferBuilder builder, Offset<IConditionGroup> preConditionsOffset)
 		{
 			builder.AddOffset(1, preConditionsOffset.Value, 0);
 		}
 
-		// Token: 0x06017701 RID: 96001 RVA: 0x003614DA File Offset: 0x0035F6DA
+		// Token: 0x06018D94 RID: 101780 RVA: 0x0038B202 File Offset: 0x00389402
 		public static Offset<IQuestCondition> EndIQuestCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<IQuestCondition>(builder.EndTable());
 		}
 
-		// Token: 0x06017702 RID: 96002 RVA: 0x003614E8 File Offset: 0x0035F6E8
+		// Token: 0x06018D95 RID: 101781 RVA: 0x0038B210 File Offset: 0x00389410
 		public IQuestConditionT UnPack()
 		{
 			IQuestConditionT questConditionT = new IQuestConditionT();
@@ -119,14 +119,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return questConditionT;
 		}
 
-		// Token: 0x06017703 RID: 96003 RVA: 0x00361504 File Offset: 0x0035F704
+		// Token: 0x06018D96 RID: 101782 RVA: 0x0038B22C File Offset: 0x0038942C
 		public void UnPackTo(IQuestConditionT _o)
 		{
 			_o.Type = this.Type;
 			_o.PreConditions = ((this.PreConditions != null) ? this.PreConditions.Value.UnPack() : null);
 		}
 
-		// Token: 0x06017704 RID: 96004 RVA: 0x0036154C File Offset: 0x0035F74C
+		// Token: 0x06018D97 RID: 101783 RVA: 0x0038B274 File Offset: 0x00389474
 		public static Offset<IQuestCondition> Pack(FlatBufferBuilder builder, IQuestConditionT _o)
 		{
 			if (_o == null)
@@ -137,7 +137,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IQuestCondition.CreateIQuestCondition(builder, _o.Type, preConditionsOffset);
 		}
 
-		// Token: 0x0400BA6E RID: 47726
+		// Token: 0x0400C454 RID: 50260
 		private Table __p;
 	}
 }

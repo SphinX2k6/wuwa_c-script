@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200253A RID: 9530
+// Token: 0x02001A23 RID: 6691
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -10,19 +10,19 @@ using System.Runtime.CompilerServices;
 })]
 public class EndLineChatGridData : MultiTemplateGridDataBase<bool, EndLineChatItem>
 {
-	// Token: 0x06013275 RID: 78453 RVA: 0x004C1387 File Offset: 0x004BF587
+	// Token: 0x06010748 RID: 67400 RVA: 0x004CF94B File Offset: 0x004CDB4B
 	public EndLineChatGridData(bool data)
 	{
 		base.Data = data;
 	}
 
-	// Token: 0x06013276 RID: 78454 RVA: 0x004C1396 File Offset: 0x004BF596
+	// Token: 0x06010749 RID: 67401 RVA: 0x004CF95A File Offset: 0x004CDB5A
 	public override int GetTemplateIndex()
 	{
 		return 6;
 	}
 
-	// Token: 0x06013277 RID: 78455 RVA: 0x004C1399 File Offset: 0x004BF599
+	// Token: 0x0601074A RID: 67402 RVA: 0x004CF95D File Offset: 0x004CDB5D
 	public override EndLineChatItem CreateProxy()
 	{
 		return new EndLineChatItem();

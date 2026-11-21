@@ -11,7 +11,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 {
-	// Token: 0x020068C2 RID: 26818
+	// Token: 0x02005812 RID: 22546
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -20,19 +20,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 	})]
 	public class CyberPunkTaskSliderItem : GridProxyAbstract<CyberPunkTaskData>
 	{
-		// Token: 0x06042EDE RID: 274142 RVA: 0x0104C5BF File Offset: 0x0104A7BF
+		// Token: 0x06037A36 RID: 227894 RVA: 0x00F8DBE7 File Offset: 0x00F8BDE7
 		public int GetCurrentItemId()
 		{
 			return this.CurrentItemId;
 		}
 
-		// Token: 0x06042EDF RID: 274143 RVA: 0x0104C5C7 File Offset: 0x0104A7C7
+		// Token: 0x06037A37 RID: 227895 RVA: 0x00F8DBEF File Offset: 0x00F8BDEF
 		public void SetOnClaim(Action<int> callback)
 		{
 			this.OnClaimCallback = callback;
 		}
 
-		// Token: 0x06042EE0 RID: 274144 RVA: 0x0104C5D0 File Offset: 0x0104A7D0
+		// Token: 0x06037A38 RID: 227896 RVA: 0x00F8DBF8 File Offset: 0x00F8BDF8
 		public override void Refresh(CyberPunkTaskData data, bool isSelected, int gridIndex)
 		{
 			this.TaskData = data;
@@ -46,13 +46,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.RefreshState(data.Status);
 		}
 
-		// Token: 0x06042EE1 RID: 274145 RVA: 0x0104C63B File Offset: 0x0104A83B
+		// Token: 0x06037A39 RID: 227897 RVA: 0x00F8DC63 File Offset: 0x00F8BE63
 		public override object GetKey(CyberPunkTaskData data, int displayIndex)
 		{
 			return data.Id;
 		}
 
-		// Token: 0x06042EE2 RID: 274146 RVA: 0x0104C648 File Offset: 0x0104A848
+		// Token: 0x06037A3A RID: 227898 RVA: 0x00F8DC70 File Offset: 0x00F8BE70
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06042EE3 RID: 274147 RVA: 0x0104C7D8 File Offset: 0x0104A9D8
+		// Token: 0x06037A3B RID: 227899 RVA: 0x00F8DE00 File Offset: 0x00F8C000
 		protected override void OnStart()
 		{
 			UUIItem item = base.GetItem(0);
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			}
 		}
 
-		// Token: 0x06042EE4 RID: 274148 RVA: 0x0104C818 File Offset: 0x0104AA18
+		// Token: 0x06037A3C RID: 227900 RVA: 0x00F8DE40 File Offset: 0x00F8C040
 		private void RefreshProgress(int targetScore, int currentValue)
 		{
 			float fillAmount = Math.Min((float)currentValue / (float)targetScore, 1f);
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			sprite.SetFillAmount(fillAmount);
 		}
 
-		// Token: 0x06042EE5 RID: 274149 RVA: 0x0104C88C File Offset: 0x0104AA8C
+		// Token: 0x06037A3D RID: 227901 RVA: 0x00F8DEB4 File Offset: 0x00F8C0B4
 		private void RefreshRewardItem(int dropId)
 		{
 			if (dropId <= 0)
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			rewardItemGrid.RefreshByConfigId(itemId, null, null, false, false);
 		}
 
-		// Token: 0x06042EE6 RID: 274150 RVA: 0x0104C94C File Offset: 0x0104AB4C
+		// Token: 0x06037A3E RID: 227902 RVA: 0x00F8DF74 File Offset: 0x00F8C174
 		private void RefreshState(ConditionTaskState status)
 		{
 			bool uiactive = status == ConditionTaskState.ConditionTaskRunning;
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			item2.SetUIActive(uiactive2);
 		}
 
-		// Token: 0x06042EE7 RID: 274151 RVA: 0x0104C9C0 File Offset: 0x0104ABC0
+		// Token: 0x06037A3F RID: 227903 RVA: 0x00F8DFE8 File Offset: 0x00F8C1E8
 		private void OnClickGetBtn()
 		{
 			if (this.TaskData == null || this.OnClaimCallback == null)
@@ -193,50 +193,50 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.CyberPunk
 			this.OnClaimCallback(this.TaskData.Id);
 		}
 
-		// Token: 0x04022D16 RID: 142614
+		// Token: 0x0401D572 RID: 120178
 		[Nullable(2)]
 		private CyberPunkTaskData TaskData;
 
-		// Token: 0x04022D17 RID: 142615
+		// Token: 0x0401D573 RID: 120179
 		[Nullable(2)]
 		private Action<int> OnClaimCallback;
 
-		// Token: 0x04022D18 RID: 142616
+		// Token: 0x0401D574 RID: 120180
 		[Nullable(2)]
 		private CommonItemSmallItemGrid RewardItemGrid;
 
-		// Token: 0x04022D19 RID: 142617
+		// Token: 0x0401D575 RID: 120181
 		private int CurrentItemId;
 
-		// Token: 0x0200CA9B RID: 51867
+		// Token: 0x0200B463 RID: 46179
 		[NullableContext(0)]
 		private static class EComponentDefine
 		{
-			// Token: 0x0403D3D4 RID: 250836
+			// Token: 0x04037CAE RID: 228526
 			public const int PropItem = 0;
 
-			// Token: 0x0403D3D5 RID: 250837
+			// Token: 0x04037CAF RID: 228527
 			public const int TxtName = 1;
 
-			// Token: 0x0403D3D6 RID: 250838
+			// Token: 0x04037CB0 RID: 228528
 			public const int TxtDesc = 2;
 
-			// Token: 0x0403D3D7 RID: 250839
+			// Token: 0x04037CB1 RID: 228529
 			public const int TxtValue = 3;
 
-			// Token: 0x0403D3D8 RID: 250840
+			// Token: 0x04037CB2 RID: 228530
 			public const int ExpBarFill = 4;
 
-			// Token: 0x0403D3D9 RID: 250841
+			// Token: 0x04037CB3 RID: 228531
 			public const int TxtDoing = 5;
 
-			// Token: 0x0403D3DA RID: 250842
+			// Token: 0x04037CB4 RID: 228532
 			public const int GetBtn = 6;
 
-			// Token: 0x0403D3DB RID: 250843
+			// Token: 0x04037CB5 RID: 228533
 			public const int FinishState = 7;
 
-			// Token: 0x0403D3DC RID: 250844
+			// Token: 0x04037CB6 RID: 228534
 			public const int RedPoint = 8;
 		}
 	}

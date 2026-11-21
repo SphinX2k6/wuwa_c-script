@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023F6 RID: 9206
+	// Token: 0x0200268D RID: 9869
 	public class ERogueRewardReceiveTypeJsonConverter : JsonConverter<ERogueRewardReceiveType>
 	{
-		// Token: 0x0600C853 RID: 51283 RVA: 0x001D51FC File Offset: 0x001D33FC
+		// Token: 0x0600D4D6 RID: 54486 RVA: 0x001EE9A8 File Offset: 0x001ECBA8
 		public override ERogueRewardReceiveType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return ERogueRewardReceiveTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C854 RID: 51284 RVA: 0x001D5220 File Offset: 0x001D3420
+		// Token: 0x0600D4D7 RID: 54487 RVA: 0x001EE9CC File Offset: 0x001ECBCC
 		public override void Write(Utf8JsonWriter writer, ERogueRewardReceiveType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

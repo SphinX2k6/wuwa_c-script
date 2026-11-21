@@ -3,10 +3,10 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x0200696E RID: 26990
+	// Token: 0x02005ACA RID: 23242
 	public class ActionPlotChangeRole : ActionParams
 	{
-		// Token: 0x04023001 RID: 143361
+		// Token: 0x0401E1EB RID: 123371
 		public bool Enable;
 	}
 }

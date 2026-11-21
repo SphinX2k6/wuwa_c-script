@@ -8,17 +8,17 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents.OpenSystem
 {
-	// Token: 0x02006C04 RID: 27652
+	// Token: 0x02005D7D RID: 23933
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class OpenSystemPhantomArenaChallengeView : OpenSystemBase
 	{
-		// Token: 0x06044420 RID: 279584 RVA: 0x010D1F43 File Offset: 0x010D0143
+		// Token: 0x0603A578 RID: 238968 RVA: 0x0107BE97 File Offset: 0x0107A097
 		public OpenSystemPhantomArenaChallengeView(LevelEventOpenSystem eventBase) : base(eventBase)
 		{
 		}
 
-		// Token: 0x06044421 RID: 279585 RVA: 0x010D1F4C File Offset: 0x010D014C
+		// Token: 0x0603A579 RID: 238969 RVA: 0x0107BEA0 File Offset: 0x0107A0A0
 		[NullableContext(2)]
 		public override EUiViewName? GetViewName(OpenSystemBoard inParams = null, GeneralContext context = null)
 		{
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents.OpenSystem
 			return new EUiViewName?(EUiViewName.PhantomArenaMainView);
 		}
 
-		// Token: 0x06044422 RID: 279586 RVA: 0x010D1F98 File Offset: 0x010D0198
+		// Token: 0x0603A57A RID: 238970 RVA: 0x0107BEEC File Offset: 0x0107A0EC
 		[return: Nullable(0)]
 		public override UniTask<bool> ExecuteOpenView(OpenSystemBoard inParams, GeneralContext context)
 		{

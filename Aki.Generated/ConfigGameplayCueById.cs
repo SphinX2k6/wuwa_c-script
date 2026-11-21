@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200037C RID: 892
+	// Token: 0x02000391 RID: 913
 	public class ConfigGameplayCueById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060014EE RID: 5358 RVA: 0x000CFF39 File Offset: 0x000CE139
+		// Token: 0x0600156C RID: 5484 RVA: 0x000D6445 File Offset: 0x000D4645
 		static ConfigGameplayCueById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigGameplayCueById.CreateStaticDefaultValue), new Action(ConfigGameplayCueById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060014EF RID: 5359 RVA: 0x000CFF58 File Offset: 0x000CE158
+		// Token: 0x0600156D RID: 5485 RVA: 0x000D6464 File Offset: 0x000D4664
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigGameplayCueById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060014F0 RID: 5360 RVA: 0x000CFFD7 File Offset: 0x000CE1D7
+		// Token: 0x0600156E RID: 5486 RVA: 0x000D64E3 File Offset: 0x000D46E3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigGameplayCueById.LogPair = null;
 			ConfigGameplayCueById.HandleId = 0;
 		}
 
-		// Token: 0x060014F1 RID: 5361 RVA: 0x000CFFE5 File Offset: 0x000CE1E5
+		// Token: 0x0600156F RID: 5487 RVA: 0x000D64F1 File Offset: 0x000D46F1
 		public static void Init()
 		{
 			ConfigGameplayCueById.HandleId = ConfigCommon.InitDataStatement(ConfigGameplayCueById.HandleId, "db_buffeffect.db", "select BinData from `GameplayCue` where Id=?");
 		}
 
-		// Token: 0x060014F2 RID: 5362 RVA: 0x000D0000 File Offset: 0x000CE200
+		// Token: 0x06001570 RID: 5488 RVA: 0x000D650C File Offset: 0x000D470C
 		public static GameplayCue? GetConfig(long p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigGameplayCueById.HandleId, ConfigGameplayCueById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new GameplayCue?(rootAsGameplayCue);
 		}
 
-		// Token: 0x04001848 RID: 6216
+		// Token: 0x040018DB RID: 6363
 		private const string DB = "db_buffeffect.db";
 
-		// Token: 0x04001849 RID: 6217
+		// Token: 0x040018DC RID: 6364
 		private const string FILE = "b.Buff特效.xlsx";
 
-		// Token: 0x0400184A RID: 6218
+		// Token: 0x040018DD RID: 6365
 		private const string TABLE = "GameplayCue";
 
-		// Token: 0x0400184B RID: 6219
+		// Token: 0x040018DE RID: 6366
 		private const string COMMAND = "select BinData from `GameplayCue` where Id=?";
 
-		// Token: 0x0400184C RID: 6220
+		// Token: 0x040018DF RID: 6367
 		private const string KEY_PREFIX = "GameplayCueById";
 
-		// Token: 0x0400184D RID: 6221
+		// Token: 0x040018E0 RID: 6368
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400184E RID: 6222
+		// Token: 0x040018E1 RID: 6369
 		private static int HandleId;
 	}
 }

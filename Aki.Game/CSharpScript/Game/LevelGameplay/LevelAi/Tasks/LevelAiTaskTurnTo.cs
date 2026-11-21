@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 {
-	// Token: 0x02006DC8 RID: 28104
+	// Token: 0x02005F47 RID: 24391
 	public class LevelAiTaskTurnTo : LevelAiTask
 	{
-		// Token: 0x060448F1 RID: 280817 RVA: 0x010E8A50 File Offset: 0x010E6C50
+		// Token: 0x0603AA55 RID: 240213 RVA: 0x01092CA0 File Offset: 0x01090EA0
 		protected override ELevelAiNodeResult ExecuteTask()
 		{
 			EntityLookAt entityLookAt = this.Params as EntityLookAt;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 			return ELevelAiNodeResult.InProgress;
 		}
 
-		// Token: 0x060448F2 RID: 280818 RVA: 0x010E8B74 File Offset: 0x010E6D74
+		// Token: 0x0603AA56 RID: 240214 RVA: 0x01092DC4 File Offset: 0x01090FC4
 		protected override void TickTask(float deltaTime)
 		{
 			if (this.Character.InputRotatorProxy.Equals(this.Character.ActorRotationProxy, 10f))
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 			}
 		}
 
-		// Token: 0x060448F3 RID: 280819 RVA: 0x010E8BCF File Offset: 0x010E6DCF
+		// Token: 0x0603AA57 RID: 240215 RVA: 0x01092E1F File Offset: 0x0109101F
 		protected override ELevelAiNodeResult AbortTask()
 		{
 			CharacterActorComponent character = this.Character;
@@ -63,24 +63,24 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 			return ELevelAiNodeResult.Aborted;
 		}
 
-		// Token: 0x060448F4 RID: 280820 RVA: 0x010E8BE5 File Offset: 0x010E6DE5
+		// Token: 0x0603AA58 RID: 240216 RVA: 0x01092E35 File Offset: 0x01091035
 		protected override void OnTaskFinished(ELevelAiNodeResult result)
 		{
 			this.Character = null;
 			this.MovementMode = EMovementMode.MOVE_None;
 		}
 
-		// Token: 0x04023A77 RID: 146039
+		// Token: 0x0401ED19 RID: 126233
 		private const float TURN_SPEED = 200f;
 
-		// Token: 0x04023A78 RID: 146040
+		// Token: 0x0401ED1A RID: 126234
 		private const float TOLERANCE = 10f;
 
-		// Token: 0x04023A79 RID: 146041
+		// Token: 0x0401ED1B RID: 126235
 		[Nullable(2)]
 		private CharacterActorComponent Character;
 
-		// Token: 0x04023A7A RID: 146042
+		// Token: 0x0401ED1C RID: 126236
 		private EMovementMode MovementMode;
 	}
 }

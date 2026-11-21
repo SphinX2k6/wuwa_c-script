@@ -8,18 +8,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BEA RID: 23530
+	// Token: 0x02004BCA RID: 19402
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CiacconaGalChapterRestartPanel : UiPanelBase
 	{
-		// Token: 0x0603B79A RID: 243610 RVA: 0x00E2ED6D File Offset: 0x00E2CF6D
+		// Token: 0x060306E5 RID: 198373 RVA: 0x00D7F07D File Offset: 0x00D7D27D
 		public CiacconaGalChapterRestartPanel(CiacconaGalChapterData chapterData)
 		{
 			this.ChapterData = chapterData;
 		}
 
-		// Token: 0x0603B79B RID: 243611 RVA: 0x00E2ED7C File Offset: 0x00E2CF7C
+		// Token: 0x060306E6 RID: 198374 RVA: 0x00D7F08C File Offset: 0x00D7D28C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603B79C RID: 243612 RVA: 0x00E2EE08 File Offset: 0x00E2D008
+		// Token: 0x060306E7 RID: 198375 RVA: 0x00D7F118 File Offset: 0x00D7D318
 		protected unsafe override void OnStart()
 		{
 			this.Layout = new GenericLayout<CiacconaGalChapterRestartChoiceItem, ICiacconaGalChapterRestartChoiceParam>(base.GetVerticalLayout(1), new Func<CiacconaGalChapterRestartChoiceItem>(this.GetChoiceGrid), null, false, true);
@@ -65,29 +65,29 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), textId, Array.Empty<object>());
 		}
 
-		// Token: 0x0603B79D RID: 243613 RVA: 0x00E2EEE8 File Offset: 0x00E2D0E8
+		// Token: 0x060306E8 RID: 198376 RVA: 0x00D7F1F8 File Offset: 0x00D7D3F8
 		private CiacconaGalChapterRestartChoiceItem GetChoiceGrid()
 		{
 			return new CiacconaGalChapterRestartChoiceItem();
 		}
 
-		// Token: 0x0401EFC4 RID: 126916
+		// Token: 0x04019A75 RID: 105077
 		private GenericLayout<CiacconaGalChapterRestartChoiceItem, ICiacconaGalChapterRestartChoiceParam> Layout;
 
-		// Token: 0x0401EFC5 RID: 126917
+		// Token: 0x04019A76 RID: 105078
 		private CiacconaGalChapterData ChapterData;
 
-		// Token: 0x0200BDCE RID: 48590
+		// Token: 0x0200A7D6 RID: 42966
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x040393B4 RID: 234420
+			// Token: 0x04033D77 RID: 212343
 			public const int TextTitle = 0;
 
-			// Token: 0x040393B5 RID: 234421
+			// Token: 0x04033D78 RID: 212344
 			public const int LayoutChoices = 1;
 
-			// Token: 0x040393B6 RID: 234422
+			// Token: 0x04033D79 RID: 212345
 			public const int ItemChoice = 2;
 		}
 	}

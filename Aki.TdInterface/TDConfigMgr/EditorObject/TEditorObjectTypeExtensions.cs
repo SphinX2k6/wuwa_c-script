@@ -5,7 +5,7 @@ namespace Aki.TDConfigMgr.EditorObject
 	// Token: 0x0200000E RID: 14
 	public static class TEditorObjectTypeExtensions
 	{
-		// Token: 0x06000021 RID: 33 RVA: 0x00013CDC File Offset: 0x00011EDC
+		// Token: 0x06000021 RID: 33 RVA: 0x00014544 File Offset: 0x00012744
 		public static string ToEnumString(this TEditorObjectType value)
 		{
 			string result;
@@ -35,6 +35,9 @@ namespace Aki.TDConfigMgr.EditorObject
 			case TEditorObjectType.Prefab:
 				result = "Prefab";
 				break;
+			case TEditorObjectType.PrefabElement:
+				result = "PrefabElement";
+				break;
 			case TEditorObjectType.Quest:
 				result = "Quest";
 				break;
@@ -45,7 +48,7 @@ namespace Aki.TDConfigMgr.EditorObject
 			return result;
 		}
 
-		// Token: 0x06000022 RID: 34 RVA: 0x00013D6C File Offset: 0x00011F6C
+		// Token: 0x06000022 RID: 34 RVA: 0x000145E0 File Offset: 0x000127E0
 		public static TEditorObjectType FromString(string name)
 		{
 			TEditorObjectType result;
@@ -56,7 +59,7 @@ namespace Aki.TDConfigMgr.EditorObject
 			return result;
 		}
 
-		// Token: 0x06000023 RID: 35 RVA: 0x00013D98 File Offset: 0x00011F98
+		// Token: 0x06000023 RID: 35 RVA: 0x0001460C File Offset: 0x0001280C
 		public static bool TryFromString(string name, out TEditorObjectType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -108,7 +111,6 @@ namespace Aki.TDConfigMgr.EditorObject
 				case 10:
 				case 11:
 				case 12:
-				case 13:
 					break;
 				case 8:
 					if (name == "CommonBt")
@@ -138,6 +140,13 @@ namespace Aki.TDConfigMgr.EditorObject
 					}
 					break;
 				}
+				case 13:
+					if (name == "PrefabElement")
+					{
+						value = TEditorObjectType.PrefabElement;
+						return true;
+					}
+					break;
 				case 14:
 					if (name == "EntityTemplate")
 					{
@@ -161,7 +170,7 @@ namespace Aki.TDConfigMgr.EditorObject
 			return false;
 		}
 
-		// Token: 0x06000024 RID: 36 RVA: 0x00013EF0 File Offset: 0x000120F0
+		// Token: 0x06000024 RID: 36 RVA: 0x00014784 File Offset: 0x00012984
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -174,11 +183,12 @@ namespace Aki.TDConfigMgr.EditorObject
 				"FlowState",
 				"LevelPlay",
 				"Prefab",
+				"PrefabElement",
 				"Quest"
 			};
 		}
 
-		// Token: 0x06000025 RID: 37 RVA: 0x00013F4C File Offset: 0x0001214C
+		// Token: 0x06000025 RID: 37 RVA: 0x000147E9 File Offset: 0x000129E9
 		public static TEditorObjectType[] GetValues()
 		{
 			return new TEditorObjectType[]
@@ -191,11 +201,12 @@ namespace Aki.TDConfigMgr.EditorObject
 				TEditorObjectType.FlowState,
 				TEditorObjectType.LevelPlay,
 				TEditorObjectType.Prefab,
+				TEditorObjectType.PrefabElement,
 				TEditorObjectType.Quest
 			};
 		}
 
-		// Token: 0x06000026 RID: 38 RVA: 0x00013F60 File Offset: 0x00012160
+		// Token: 0x06000026 RID: 38 RVA: 0x00014800 File Offset: 0x00012A00
 		public static string[] GetNames()
 		{
 			return new string[]
@@ -208,6 +219,7 @@ namespace Aki.TDConfigMgr.EditorObject
 				"FlowState",
 				"LevelPlay",
 				"Prefab",
+				"PrefabElement",
 				"Quest"
 			};
 		}

@@ -9,18 +9,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x0200718B RID: 29067
+	// Token: 0x0200623F RID: 25151
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemProceduralMaterialComponent : EntityComponent
 	{
-		// Token: 0x06047175 RID: 291189 RVA: 0x012089B3 File Offset: 0x01206BB3
+		// Token: 0x0603CA2B RID: 248363 RVA: 0x0116299F File Offset: 0x01160B9F
 		public bool HasCustomType(SceneItemProceduralMaterialComponent.ECustomPrimitiveDataSceneItemType type)
 		{
 			return this.CustomPrimitiveDataConfigs.ContainsKey(type);
 		}
 
-		// Token: 0x06047176 RID: 291190 RVA: 0x012089C4 File Offset: 0x01206BC4
+		// Token: 0x0603CA2C RID: 248364 RVA: 0x011629B0 File Offset: 0x01160BB0
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			this.CreatureDataComp = base.Entity.GetComponent<CreatureDataComponent>();
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06047177 RID: 291191 RVA: 0x01208A4C File Offset: 0x01206C4C
+		// Token: 0x0603CA2D RID: 248365 RVA: 0x01162A38 File Offset: 0x01160C38
 		protected override bool OnStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<SceneItemActorComponent>();
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06047178 RID: 291192 RVA: 0x01208AA4 File Offset: 0x01206CA4
+		// Token: 0x0603CA2E RID: 248366 RVA: 0x01162A90 File Offset: 0x01160C90
 		protected override bool OnEnd()
 		{
 			if (this.ChildEntityWaitTask != null)
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06047179 RID: 291193 RVA: 0x01208B2C File Offset: 0x01206D2C
+		// Token: 0x0603CA2F RID: 248367 RVA: 0x01162B18 File Offset: 0x01160D18
 		private void OnSceneInteractionLoadCompleted()
 		{
 			SceneInteractionActor sceneInteractionActor = this.ActorComp.GetInteractionMainActor() as SceneInteractionActor;
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604717A RID: 291194 RVA: 0x01208BBC File Offset: 0x01206DBC
+		// Token: 0x0603CA30 RID: 248368 RVA: 0x01162BA8 File Offset: 0x01160DA8
 		[NullableContext(1)]
 		private unsafe void ConstructCustomPrimitiveDataConfig(ICustomPrimitiveDataConfig primitiveDataConfig, TMap<string, AActor> allRefActors, bool fromOutside = false)
 		{
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604717B RID: 291195 RVA: 0x01208DD8 File Offset: 0x01206FD8
+		// Token: 0x0603CA31 RID: 248369 RVA: 0x01162DC4 File Offset: 0x01160FC4
 		private void ConnectChildEntity()
 		{
 			SceneItemProceduralMaterialComponent.<>c__DisplayClass14_0 CS$<>8__locals1 = new SceneItemProceduralMaterialComponent.<>c__DisplayClass14_0();
@@ -203,7 +203,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}, 60000, true, false);
 		}
 
-		// Token: 0x0604717C RID: 291196 RVA: 0x01208E64 File Offset: 0x01207064
+		// Token: 0x0603CA32 RID: 248370 RVA: 0x01162E50 File Offset: 0x01161050
 		public void SetCustomPrimitiveData(SceneItemProceduralMaterialComponent.ECustomPrimitiveDataSceneItemType type, float value)
 		{
 			SceneItemProceduralMaterialComponent.CustomPrimitiveDataConfig customPrimitiveDataConfig;
@@ -241,7 +241,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604717D RID: 291197 RVA: 0x01208F94 File Offset: 0x01207194
+		// Token: 0x0603CA33 RID: 248371 RVA: 0x01162F80 File Offset: 0x01161180
 		public void ConstructCustomPrimitiveDataConfigByMainEntity(int mainEntityId)
 		{
 			EntityHandle entityByPbDataId = CreatureModel.Instance.GetEntityByPbDataId(mainEntityId);
@@ -279,7 +279,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x0604717E RID: 291198 RVA: 0x01209084 File Offset: 0x01207284
+		// Token: 0x0603CA34 RID: 248372 RVA: 0x01163070 File Offset: 0x01161270
 		[NullableContext(1)]
 		private void OnMainEntityRemove(ERemoveEntityType removeType, EntityHandle handle)
 		{
@@ -292,7 +292,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			EventSystem.Instance.RemoveWithTarget<ERemoveEntityType, EntityHandle>(handle, EEventName.RemoveEntity, new Action<ERemoveEntityType, EntityHandle>(this.OnMainEntityRemove));
 		}
 
-		// Token: 0x0604717F RID: 291199 RVA: 0x012090C0 File Offset: 0x012072C0
+		// Token: 0x0603CA35 RID: 248373 RVA: 0x011630AC File Offset: 0x011612AC
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -301,110 +301,115 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemProceduralMaterialComponent sceneItemProceduralMaterialComponent = (SceneItemProceduralMaterialComponent)componentTemplate;
-			if (base.CanResetComponentProperty("CreatureDataComp"))
+			if (sceneItemProceduralMaterialComponent.CreatureDataComp == null)
 			{
-				if (sceneItemProceduralMaterialComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
+				this.CreatureDataComp = null;
 			}
-			if (base.CanResetComponentProperty("ActorComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 			{
-				if (sceneItemProceduralMaterialComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("Config"))
+			if (sceneItemProceduralMaterialComponent.ActorComp == null)
 			{
-				if (sceneItemProceduralMaterialComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ProceduralMaterialComponent>(this.Config), "Config"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("ChildEntityWaitTask"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				if (sceneItemProceduralMaterialComponent.ChildEntityWaitTask == null)
-				{
-					this.ChildEntityWaitTask = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<WaitEntityTask>(this.ChildEntityWaitTask), "ChildEntityWaitTask"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("MainEntityHandle"))
+			if (sceneItemProceduralMaterialComponent.Config == null)
 			{
-				if (sceneItemProceduralMaterialComponent.MainEntityHandle == null)
-				{
-					this.MainEntityHandle = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<EntityHandle>(this.MainEntityHandle), "MainEntityHandle"))
-				{
-					return false;
-				}
+				this.Config = null;
 			}
-			return !base.CanResetComponentProperty("CustomPrimitiveDataConfigs") || sceneItemProceduralMaterialComponent.CustomPrimitiveDataConfigs == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<SceneItemProceduralMaterialComponent.ECustomPrimitiveDataSceneItemType, SceneItemProceduralMaterialComponent.CustomPrimitiveDataConfig>>(this.CustomPrimitiveDataConfigs), "CustomPrimitiveDataConfigs");
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
+			{
+				return false;
+			}
+			if (sceneItemProceduralMaterialComponent.ChildEntityWaitTask == null)
+			{
+				this.ChildEntityWaitTask = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ChildEntityWaitTask), "ChildEntityWaitTask"))
+			{
+				return false;
+			}
+			if (sceneItemProceduralMaterialComponent.MainEntityHandle == null)
+			{
+				this.MainEntityHandle = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MainEntityHandle), "MainEntityHandle"))
+			{
+				return false;
+			}
+			return sceneItemProceduralMaterialComponent.CustomPrimitiveDataConfigs == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.CustomPrimitiveDataConfigs), "CustomPrimitiveDataConfigs");
 		}
 
-		// Token: 0x040255E6 RID: 153062
+		// Token: 0x170072AF RID: 29359
+		// (get) Token: 0x0603CA36 RID: 248374 RVA: 0x011631C5 File Offset: 0x011613C5
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170072B0 RID: 29360
+		// (get) Token: 0x0603CA37 RID: 248375 RVA: 0x011631C8 File Offset: 0x011613C8
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0402024D RID: 131661
 		private CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x040255E7 RID: 153063
+		// Token: 0x0402024E RID: 131662
 		private SceneItemActorComponent ActorComp;
 
-		// Token: 0x040255E8 RID: 153064
+		// Token: 0x0402024F RID: 131663
 		private ProceduralMaterialComponent Config;
 
-		// Token: 0x040255E9 RID: 153065
+		// Token: 0x04020250 RID: 131664
 		private WaitEntityTask ChildEntityWaitTask;
 
-		// Token: 0x040255EA RID: 153066
+		// Token: 0x04020251 RID: 131665
 		private EntityHandle MainEntityHandle;
 
-		// Token: 0x040255EB RID: 153067
+		// Token: 0x04020252 RID: 131666
 		[Nullable(1)]
 		private readonly Dictionary<SceneItemProceduralMaterialComponent.ECustomPrimitiveDataSceneItemType, SceneItemProceduralMaterialComponent.CustomPrimitiveDataConfig> CustomPrimitiveDataConfigs = new Dictionary<SceneItemProceduralMaterialComponent.ECustomPrimitiveDataSceneItemType, SceneItemProceduralMaterialComponent.CustomPrimitiveDataConfig>();
 
-		// Token: 0x0200CEDD RID: 52957
+		// Token: 0x0200BA73 RID: 47731
 		[NullableContext(0)]
 		[EnumExtensions]
 		public enum ECustomPrimitiveDataSceneItemType
 		{
-			// Token: 0x0403E3C2 RID: 254914
+			// Token: 0x040396E8 RID: 235240
 			Chair
 		}
 
-		// Token: 0x0200CEDE RID: 52958
+		// Token: 0x0200BA74 RID: 47732
 		[NullableContext(1)]
 		[Nullable(0)]
 		private class CustomPrimitiveDataConfig
 		{
-			// Token: 0x06051FBA RID: 335802 RVA: 0x016464E4 File Offset: 0x016446E4
+			// Token: 0x06048764 RID: 296804 RVA: 0x0161860C File Offset: 0x0161680C
 			public CustomPrimitiveDataConfig(SceneItemProceduralMaterialComponent.ECustomPrimitiveDataSceneItemType type)
 			{
 				this.Type = type;
 			}
 
-			// Token: 0x0403E3C3 RID: 254915
+			// Token: 0x040396E9 RID: 235241
 			public SceneItemProceduralMaterialComponent.ECustomPrimitiveDataSceneItemType Type;
 
-			// Token: 0x0403E3C4 RID: 254916
+			// Token: 0x040396EA RID: 235242
 			public List<int> IndexList = new List<int>();
 
-			// Token: 0x0403E3C5 RID: 254917
+			// Token: 0x040396EB RID: 235243
 			public List<AActor> ReferenceActors = new List<AActor>();
 		}
 	}

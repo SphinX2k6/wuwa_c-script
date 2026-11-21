@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F50 RID: 8016
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002189 RID: 8585
 	public class ITalkItemPhoneMessageSystemTip : ITalkItemPhoneMessageBase
 	{
-		// Token: 0x0600AE60 RID: 44640 RVA: 0x001919EC File Offset: 0x0018FBEC
+		// Token: 0x0600B932 RID: 47410 RVA: 0x001A79E4 File Offset: 0x001A5BE4
 		private ITalkItemPhoneMessageSystemTip_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600AE61 RID: 44641 RVA: 0x00191A24 File Offset: 0x0018FC24
+		// Token: 0x0600B933 RID: 47411 RVA: 0x001A7A1C File Offset: 0x001A5C1C
 		public static ITalkItemPhoneMessageSystemTip Create([Nullable(2)] ITalkItemPhoneMessageSystemTip instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600AE62 RID: 44642 RVA: 0x00191A37 File Offset: 0x0018FC37
+		// Token: 0x0600B934 RID: 47412 RVA: 0x001A7A2F File Offset: 0x001A5C2F
 		public static ITalkItemPhoneMessageSystemTip CreateFromSetValue([Nullable(2)] ITalkItemPhoneMessageSystemTip_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600AE63 RID: 44643 RVA: 0x00191A4A File Offset: 0x0018FC4A
+		// Token: 0x0600B935 RID: 47413 RVA: 0x001A7A42 File Offset: 0x001A5C42
 		public new ITalkItemPhoneMessageSystemTip_SetValue ToSetValue()
 		{
 			return new ITalkItemPhoneMessageSystemTip_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003590 RID: 13712
-		// (get) Token: 0x0600AE64 RID: 44644 RVA: 0x00191A5D File Offset: 0x0018FC5D
-		// (set) Token: 0x0600AE65 RID: 44645 RVA: 0x00191A88 File Offset: 0x0018FC88
+		// Token: 0x1700385B RID: 14427
+		// (get) Token: 0x0600B936 RID: 47414 RVA: 0x001A7A55 File Offset: 0x001A5C55
+		// (set) Token: 0x0600B937 RID: 47415 RVA: 0x001A7A80 File Offset: 0x001A5C80
 		public override EPhoneMessageType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040068D2 RID: 26834
+		// Token: 0x04006EC1 RID: 28353
 		[Nullable(2)]
 		protected new ITalkItemPhoneMessageSystemTip FbInstance;
 
-		// Token: 0x040068D3 RID: 26835
+		// Token: 0x04006EC2 RID: 28354
 		[Nullable(2)]
 		protected new ITalkItemPhoneMessageSystemTip_SetValue PocoInterface;
 	}

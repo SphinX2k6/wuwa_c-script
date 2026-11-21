@@ -5,34 +5,47 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 {
-	// Token: 0x02004D3C RID: 19772
+	// Token: 0x02003CFB RID: 15611
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class RoleDevelopProjectBasePanel : UiPanelBase
 	{
-		// Token: 0x0603315F RID: 209247 RVA: 0x00BE7937 File Offset: 0x00BE5B37
+		// Token: 0x06027F67 RID: 163687 RVA: 0x00B2E3A7 File Offset: 0x00B2C5A7
 		protected override void OnBeforeCreateImplement()
 		{
 			this.UiViewSequence = new UiBehaviorLevelSequence(this);
 			base.AddUiBehavior(this.UiViewSequence);
 		}
 
-		// Token: 0x06033160 RID: 209248 RVA: 0x00BE7951 File Offset: 0x00BE5B51
-		public void RefreshView(RoleDevelopData data, bool forceRefresh = false)
+		// Token: 0x06027F68 RID: 163688 RVA: 0x00B2E3C4 File Offset: 0x00B2C5C4
+		public void RefreshView(RoleDevelopData data, bool forceRefresh = false, bool isActive = true)
 		{
 			this.Data = data;
-			this.OnRefreshView(forceRefresh);
+			this.OnDataChanged();
+			bool flag = forceRefresh || this.PendingForceRefresh;
+			if (!isActive)
+			{
+				this.PendingForceRefresh = flag;
+				return;
+			}
+			this.PendingForceRefresh = false;
+			this.OnRefreshView(flag);
 		}
 
-		// Token: 0x06033161 RID: 209249
+		// Token: 0x06027F69 RID: 163689
 		protected abstract void OnRefreshView(bool forceRefresh);
 
-		// Token: 0x06033162 RID: 209250 RVA: 0x00BE7961 File Offset: 0x00BE5B61
+		// Token: 0x06027F6A RID: 163690 RVA: 0x00B2E404 File Offset: 0x00B2C604
+		protected virtual void OnDataChanged()
+		{
+		}
+
+		// Token: 0x06027F6B RID: 163691 RVA: 0x00B2E406 File Offset: 0x00B2C606
 		public virtual void OnCommonItemCountAnyChange(int configId)
 		{
 		}
 
-		// Token: 0x06033163 RID: 209251 RVA: 0x00BE7964 File Offset: 0x00BE5B64
+		// Token: 0x06027F6C RID: 163692 RVA: 0x00B2E408 File Offset: 0x00B2C608
 		public void PlaySequenceByName(string sequenceName, bool blockClick = false)
 		{
 			UiBehaviorLevelSequence uiViewSequence = this.UiViewSequence;
@@ -43,7 +56,7 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			uiViewSequence.PlayOrReplaySequenceByName(sequenceName, blockClick, null);
 		}
 
-		// Token: 0x06033164 RID: 209252 RVA: 0x00BE798C File Offset: 0x00BE5B8C
+		// Token: 0x06027F6D RID: 163693 RVA: 0x00B2E430 File Offset: 0x00B2C630
 		public void StopSequenceByName(string sequenceName, bool needEvent = false, bool toLastFrame = false)
 		{
 			UiBehaviorLevelSequence uiViewSequence = this.UiViewSequence;
@@ -54,12 +67,15 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			uiViewSequence.StopSequenceByKey(sequenceName, needEvent, toLastFrame);
 		}
 
-		// Token: 0x0401B292 RID: 111250
+		// Token: 0x04015C4E RID: 89166
 		[Nullable(2)]
 		protected RoleDevelopData Data;
 
-		// Token: 0x0401B293 RID: 111251
+		// Token: 0x04015C4F RID: 89167
 		[Nullable(2)]
 		public UiBehaviorLevelSequence UiViewSequence;
+
+		// Token: 0x04015C50 RID: 89168
+		private bool PendingForceRefresh;
 	}
 }

@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020007BC RID: 1980
+	// Token: 0x020007D6 RID: 2006
 	public class ConfigRecallEntityAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002E7A RID: 11898 RVA: 0x001601A8 File Offset: 0x0015E3A8
+		// Token: 0x06002F16 RID: 12054 RVA: 0x001670B4 File Offset: 0x001652B4
 		static ConfigRecallEntityAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRecallEntityAll.CreateStaticDefaultValue), new Action(ConfigRecallEntityAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002E7B RID: 11899 RVA: 0x001601C8 File Offset: 0x0015E3C8
+		// Token: 0x06002F17 RID: 12055 RVA: 0x001670D4 File Offset: 0x001652D4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRecallEntityAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002E7C RID: 11900 RVA: 0x00160247 File Offset: 0x0015E447
+		// Token: 0x06002F18 RID: 12056 RVA: 0x00167153 File Offset: 0x00165353
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRecallEntityAll.LogPair = null;
 			ConfigRecallEntityAll.HandleId = 0;
 		}
 
-		// Token: 0x06002E7D RID: 11901 RVA: 0x00160255 File Offset: 0x0015E455
+		// Token: 0x06002F19 RID: 12057 RVA: 0x00167161 File Offset: 0x00165361
 		public static void Init()
 		{
 			ConfigRecallEntityAll.HandleId = ConfigCommon.InitDataStatement(ConfigRecallEntityAll.HandleId, "db_questrecall.db", "select BinData from `RecallEntity`");
 		}
 
-		// Token: 0x06002E7E RID: 11902 RVA: 0x00160270 File Offset: 0x0015E470
+		// Token: 0x06002F1A RID: 12058 RVA: 0x0016717C File Offset: 0x0016537C
 		[NullableContext(2)]
 		public static IReadOnlyList<RecallEntity> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x0400360A RID: 13834
+		// Token: 0x040036C0 RID: 14016
 		private const string DB = "db_questrecall.db";
 
-		// Token: 0x0400360B RID: 13835
+		// Token: 0x040036C1 RID: 14017
 		private const string FILE = "r.任务回顾.xlsx";
 
-		// Token: 0x0400360C RID: 13836
+		// Token: 0x040036C2 RID: 14018
 		private const string TABLE = "RecallEntity";
 
-		// Token: 0x0400360D RID: 13837
+		// Token: 0x040036C3 RID: 14019
 		private const string COMMAND = "select BinData from `RecallEntity`";
 
-		// Token: 0x0400360E RID: 13838
+		// Token: 0x040036C4 RID: 14020
 		private const string KEY_PREFIX = "RecallEntityAll";
 
-		// Token: 0x0400360F RID: 13839
+		// Token: 0x040036C5 RID: 14021
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003610 RID: 13840
+		// Token: 0x040036C6 RID: 14022
 		private static int HandleId;
 	}
 }

@@ -1,19 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x020023FA RID: 9210
+// Token: 0x020018DF RID: 6367
 [NullableContext(1)]
 [Nullable(0)]
 public class PhantomManagerConfigData
 {
-	// Token: 0x060126B4 RID: 75444 RVA: 0x0048AA44 File Offset: 0x00488C44
-	public void UpdateFetterMap(List<PhBaOneSuitPlan> fetterData)
+	// Token: 0x0600FB66 RID: 64358 RVA: 0x00497F4C File Offset: 0x0049614C
+	public void UpdateFetterMap(IEnumerable<PhBaOneSuitPlan> fetterData)
 	{
 		HashSet<int> hashSet = new HashSet<int>();
 		foreach (PhBaOneSuitPlan phBaOneSuitPlan in fetterData)
@@ -25,7 +24,7 @@ public class PhantomManagerConfigData
 				this.FetterMap[suitId] = new PhantomManagerConfigFetterData(suitId);
 			}
 			this.UpdateFetterUsing(suitId, phBaOneSuitPlan.IsOpen);
-			this.FetterMap[suitId].UpdateMainPropMap(phBaOneSuitPlan.OneCostList.ToList<PhBaOneCostPlan>());
+			this.FetterMap[suitId].UpdateMainPropMap(phBaOneSuitPlan.OneCostList);
 		}
 		foreach (KeyValuePair<int, PhantomManagerConfigFetterData> keyValuePair in this.FetterMap)
 		{
@@ -37,8 +36,8 @@ public class PhantomManagerConfigData
 		}
 	}
 
-	// Token: 0x060126B5 RID: 75445 RVA: 0x0048AB54 File Offset: 0x00488D54
-	public void CacheShareFetterMap(List<PhBaOneSuitPlan> fetterData)
+	// Token: 0x0600FB67 RID: 64359 RVA: 0x00498054 File Offset: 0x00496254
+	public void CacheShareFetterMap(IEnumerable<PhBaOneSuitPlan> fetterData)
 	{
 		HashSet<int> hashSet = new HashSet<int>();
 		foreach (PhBaOneSuitPlan phBaOneSuitPlan in fetterData)
@@ -49,7 +48,7 @@ public class PhantomManagerConfigData
 			{
 				this.FetterMap[suitId] = new PhantomManagerConfigFetterData(suitId);
 			}
-			this.FetterMap[suitId].CacheSharePropMap(phBaOneSuitPlan.OneCostList.ToList<PhBaOneCostPlan>());
+			this.FetterMap[suitId].CacheSharePropMap(phBaOneSuitPlan.OneCostList);
 		}
 		foreach (KeyValuePair<int, PhantomManagerConfigFetterData> keyValuePair in this.FetterMap)
 		{
@@ -60,19 +59,19 @@ public class PhantomManagerConfigData
 		}
 	}
 
-	// Token: 0x060126B6 RID: 75446 RVA: 0x0048AC4C File Offset: 0x00488E4C
+	// Token: 0x0600FB68 RID: 64360 RVA: 0x00498140 File Offset: 0x00496340
 	public void UpdateFetterUsing(int fetterId, bool isOpen)
 	{
 		this.IsUsingMap[fetterId] = isOpen;
 	}
 
-	// Token: 0x060126B7 RID: 75447 RVA: 0x0048AC5B File Offset: 0x00488E5B
+	// Token: 0x0600FB69 RID: 64361 RVA: 0x0049814F File Offset: 0x0049634F
 	public bool CheckHasInited()
 	{
 		return this.FetterMap.Count > 0;
 	}
 
-	// Token: 0x060126B8 RID: 75448 RVA: 0x0048AC6C File Offset: 0x00488E6C
+	// Token: 0x0600FB6A RID: 64362 RVA: 0x00498160 File Offset: 0x00496360
 	public EPhantomManagerConfigState GetPropCurrentState(IPhantomManagerConfigNewSettingDetailInfo data)
 	{
 		PhantomManagerConfigFetterData phantomManagerConfigFetterData;
@@ -83,7 +82,7 @@ public class PhantomManagerConfigData
 		return phantomManagerConfigFetterData.GetPropCurrentState(data);
 	}
 
-	// Token: 0x060126B9 RID: 75449 RVA: 0x0048AC98 File Offset: 0x00488E98
+	// Token: 0x0600FB6B RID: 64363 RVA: 0x0049818C File Offset: 0x0049638C
 	public void SetPropCurrentState(IPhantomManagerConfigNewSettingDetailInfo data, EPhantomManagerConfigState state, bool isCache)
 	{
 		if (!this.FetterMap.ContainsKey(data.FetterId))
@@ -93,7 +92,7 @@ public class PhantomManagerConfigData
 		this.FetterMap[data.FetterId].SetPropState(data, state, isCache);
 	}
 
-	// Token: 0x060126BA RID: 75450 RVA: 0x0048ACF0 File Offset: 0x00488EF0
+	// Token: 0x0600FB6C RID: 64364 RVA: 0x004981E4 File Offset: 0x004963E4
 	public void DoCacheDataUpdate(bool apply)
 	{
 		foreach (KeyValuePair<int, PhantomManagerConfigFetterData> keyValuePair in this.FetterMap)
@@ -102,7 +101,7 @@ public class PhantomManagerConfigData
 		}
 	}
 
-	// Token: 0x060126BB RID: 75451 RVA: 0x0048AD4C File Offset: 0x00488F4C
+	// Token: 0x0600FB6D RID: 64365 RVA: 0x00498240 File Offset: 0x00496440
 	[NullableContext(2)]
 	public PhBaOneAllSuitPlan GetCacheStateProto()
 	{
@@ -126,7 +125,7 @@ public class PhantomManagerConfigData
 		return phBaOneAllSuitPlan;
 	}
 
-	// Token: 0x060126BC RID: 75452 RVA: 0x0048ADE4 File Offset: 0x00488FE4
+	// Token: 0x0600FB6E RID: 64366 RVA: 0x004982D8 File Offset: 0x004964D8
 	public void ResetFetterConfig(int fetterId)
 	{
 		PhantomManagerConfigFetterData phantomManagerConfigFetterData;
@@ -136,7 +135,7 @@ public class PhantomManagerConfigData
 		}
 	}
 
-	// Token: 0x060126BD RID: 75453 RVA: 0x0048AE07 File Offset: 0x00489007
+	// Token: 0x0600FB6F RID: 64367 RVA: 0x004982FB File Offset: 0x004964FB
 	public bool CheckEditFetterConfigRecommendDirty(int fetterId)
 	{
 		if (!this.FetterMap.ContainsKey(fetterId))
@@ -146,7 +145,7 @@ public class PhantomManagerConfigData
 		return this.FetterMap[fetterId].GetEditFetterConfigRecommendDirty();
 	}
 
-	// Token: 0x060126BE RID: 75454 RVA: 0x0048AE3A File Offset: 0x0048903A
+	// Token: 0x0600FB70 RID: 64368 RVA: 0x0049832E File Offset: 0x0049652E
 	public bool SetFetterConfigRecommend(int fetterId)
 	{
 		if (!this.FetterMap.ContainsKey(fetterId))
@@ -156,14 +155,14 @@ public class PhantomManagerConfigData
 		return this.FetterMap[fetterId].SetFetterConfigRecommend();
 	}
 
-	// Token: 0x060126BF RID: 75455 RVA: 0x0048AE70 File Offset: 0x00489070
+	// Token: 0x0600FB71 RID: 64369 RVA: 0x00498364 File Offset: 0x00496564
 	public bool GetFetterConfigIsOpen(int fetterId)
 	{
 		bool flag;
 		return this.IsUsingMap.TryGetValue(fetterId, out flag) && flag;
 	}
 
-	// Token: 0x060126C0 RID: 75456 RVA: 0x0048AE90 File Offset: 0x00489090
+	// Token: 0x0600FB72 RID: 64370 RVA: 0x00498384 File Offset: 0x00496584
 	[NullableContext(0)]
 	public UniTask<bool> ResetAllFetterOpen(bool needResetConfig)
 	{
@@ -176,7 +175,7 @@ public class PhantomManagerConfigData
 		return <ResetAllFetterOpen>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060126C1 RID: 75457 RVA: 0x0048AEDC File Offset: 0x004890DC
+	// Token: 0x0600FB73 RID: 64371 RVA: 0x004983D0 File Offset: 0x004965D0
 	public bool CheckDirty()
 	{
 		bool flag = false;
@@ -187,7 +186,7 @@ public class PhantomManagerConfigData
 		return flag;
 	}
 
-	// Token: 0x060126C2 RID: 75458 RVA: 0x0048AF40 File Offset: 0x00489140
+	// Token: 0x0600FB74 RID: 64372 RVA: 0x00498434 File Offset: 0x00496634
 	public IPhantomManagerApplySettingDetailInfo GetPhantomPlanMatchApplyData()
 	{
 		PhantomManagerApplySettingDetailInfo phantomManagerApplySettingDetailInfo = new PhantomManagerApplySettingDetailInfo();
@@ -222,7 +221,7 @@ public class PhantomManagerConfigData
 		return phantomManagerApplySettingDetailInfo;
 	}
 
-	// Token: 0x060126C3 RID: 75459 RVA: 0x0048B098 File Offset: 0x00489298
+	// Token: 0x0600FB75 RID: 64373 RVA: 0x0049858C File Offset: 0x0049678C
 	[NullableContext(0)]
 	public UniTask<bool> DoApplyOpera([Nullable(1)] IPhantomManagerApplySettingDetailInfo applyData)
 	{
@@ -234,7 +233,7 @@ public class PhantomManagerConfigData
 		return <DoApplyOpera>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060126C4 RID: 75460 RVA: 0x0048B0DC File Offset: 0x004892DC
+	// Token: 0x0600FB76 RID: 64374 RVA: 0x004985D0 File Offset: 0x004967D0
 	public List<PhantomItemData> GetPhantomSmartDiscardUserPlan()
 	{
 		List<PhantomItemData> list = new List<PhantomItemData>();
@@ -266,7 +265,7 @@ public class PhantomManagerConfigData
 		return list;
 	}
 
-	// Token: 0x060126C5 RID: 75461 RVA: 0x0048B1EC File Offset: 0x004893EC
+	// Token: 0x0600FB77 RID: 64375 RVA: 0x004986E0 File Offset: 0x004968E0
 	public List<PhantomItemData> GetPhantomSmartDiscardRecommendPlan()
 	{
 		List<PhantomItemData> list = new List<PhantomItemData>();
@@ -310,7 +309,7 @@ public class PhantomManagerConfigData
 		return list;
 	}
 
-	// Token: 0x060126C6 RID: 75462 RVA: 0x0048B394 File Offset: 0x00489594
+	// Token: 0x0600FB78 RID: 64376 RVA: 0x00498888 File Offset: 0x00496A88
 	public void DoLogReport(List<int> fetterList, bool isRecommendAll = false)
 	{
 		foreach (int num in fetterList)
@@ -330,39 +329,39 @@ public class PhantomManagerConfigData
 		}
 	}
 
-	// Token: 0x060126C7 RID: 75463 RVA: 0x0048B440 File Offset: 0x00489640
+	// Token: 0x0600FB79 RID: 64377 RVA: 0x00498934 File Offset: 0x00496B34
 	private bool IsPhantomSmartPlanDataValid(PhantomBattleData phantomBattleData)
 	{
 		return phantomBattleData.GetVisionNoCultivated() && !phantomBattleData.GetIsDeprecated() && !PhantomBattleController.Instance.CheckIsEquip(phantomBattleData.GetUniqueId());
 	}
 
-	// Token: 0x04008B4B RID: 35659
+	// Token: 0x04008C92 RID: 35986
 	protected readonly Dictionary<int, PhantomManagerConfigFetterData> FetterMap = new Dictionary<int, PhantomManagerConfigFetterData>();
 
-	// Token: 0x04008B4C RID: 35660
+	// Token: 0x04008C93 RID: 35987
 	public Dictionary<int, bool> IsUsingMap = new Dictionary<int, bool>();
 
-	// Token: 0x04008B4D RID: 35661
+	// Token: 0x04008C94 RID: 35988
 	public string SelfPhantomConfigCode = string.Empty;
 
-	// Token: 0x04008B4E RID: 35662
+	// Token: 0x04008C95 RID: 35989
 	public bool PhantomSelfConfigNeedUpdate;
 
-	// Token: 0x04008B4F RID: 35663
+	// Token: 0x04008C96 RID: 35990
 	public bool DownFiveStarSwitch;
 
-	// Token: 0x04008B50 RID: 35664
+	// Token: 0x04008C97 RID: 35991
 	public HashSet<EConfirmBoxConfigId> ConfirmBoxLoginSet = new HashSet<EConfirmBoxConfigId>();
 
-	// Token: 0x04008B51 RID: 35665
+	// Token: 0x04008C98 RID: 35992
 	public EPhantomManagerEditCloseState ConfigViewEditCloseSelect;
 
-	// Token: 0x04008B52 RID: 35666
+	// Token: 0x04008C99 RID: 35993
 	public EPhantomManagerEditCloseState ConfigViewShareUpdateSelect;
 
-	// Token: 0x04008B53 RID: 35667
+	// Token: 0x04008C9A RID: 35994
 	public long LastSharedCheckTime;
 
-	// Token: 0x04008B54 RID: 35668
+	// Token: 0x04008C9B RID: 35995
 	protected readonly Dictionary<int, Dictionary<int, HashSet<int>>> RecommendAllDiscardMap = new Dictionary<int, Dictionary<int, HashSet<int>>>();
 }

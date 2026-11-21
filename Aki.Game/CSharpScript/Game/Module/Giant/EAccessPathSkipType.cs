@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Giant
 {
-	// Token: 0x0200595F RID: 22879
+	// Token: 0x02004938 RID: 18744
 	public enum EAccessPathSkipType
 	{
-		// Token: 0x0401E478 RID: 124024
+		// Token: 0x04018F15 RID: 102165
 		NoSkip = 1,
-		// Token: 0x0401E479 RID: 124025
+		// Token: 0x04018F16 RID: 102166
 		HasSkip
 	}
 }

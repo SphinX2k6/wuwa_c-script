@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000FEB RID: 4075
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001117 RID: 4375
 	public class IKurotatoSystemVar
 	{
-		// Token: 0x06005AAE RID: 23214 RVA: 0x000DC280 File Offset: 0x000DA480
+		// Token: 0x0600608E RID: 24718 RVA: 0x000E8EC0 File Offset: 0x000E70C0
 		private IKurotatoSystemVar_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005AAF RID: 23215 RVA: 0x000DC2B8 File Offset: 0x000DA4B8
+		// Token: 0x0600608F RID: 24719 RVA: 0x000E8EF8 File Offset: 0x000E70F8
 		public static IKurotatoSystemVar Create([Nullable(2)] IKurotatoSystemVar instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005AB0 RID: 23216 RVA: 0x000DC2CB File Offset: 0x000DA4CB
+		// Token: 0x06006090 RID: 24720 RVA: 0x000E8F0B File Offset: 0x000E710B
 		public static IKurotatoSystemVar CreateFromSetValue([Nullable(2)] IKurotatoSystemVar_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005AB1 RID: 23217 RVA: 0x000DC2DE File Offset: 0x000DA4DE
+		// Token: 0x06006091 RID: 24721 RVA: 0x000E8F1E File Offset: 0x000E711E
 		public IKurotatoSystemVar_SetValue ToSetValue()
 		{
 			return new IKurotatoSystemVar_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001DF8 RID: 7672
-		// (get) Token: 0x06005AB2 RID: 23218 RVA: 0x000DC2FD File Offset: 0x000DA4FD
-		// (set) Token: 0x06005AB3 RID: 23219 RVA: 0x000DC328 File Offset: 0x000DA528
+		// Token: 0x17001FA1 RID: 8097
+		// (get) Token: 0x06006092 RID: 24722 RVA: 0x000E8F3D File Offset: 0x000E713D
+		// (set) Token: 0x06006093 RID: 24723 RVA: 0x000E8F68 File Offset: 0x000E7168
 		public virtual EKurotatoSystemVarType VarType
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001DF9 RID: 7673
-		// (get) Token: 0x06005AB4 RID: 23220 RVA: 0x000DC336 File Offset: 0x000DA536
-		// (set) Token: 0x06005AB5 RID: 23221 RVA: 0x000DC35D File Offset: 0x000DA55D
+		// Token: 0x17001FA2 RID: 8098
+		// (get) Token: 0x06006094 RID: 24724 RVA: 0x000E8F76 File Offset: 0x000E7176
+		// (set) Token: 0x06006095 RID: 24725 RVA: 0x000E8F9D File Offset: 0x000E719D
 		public virtual VarRef VarRef
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003695 RID: 13973
+		// Token: 0x040039CD RID: 14797
 		[Nullable(2)]
 		protected IKurotatoSystemVar FbInstance;
 
-		// Token: 0x04003696 RID: 13974
+		// Token: 0x040039CE RID: 14798
 		[Nullable(2)]
 		protected IKurotatoSystemVar_SetValue PocoInterface;
 	}

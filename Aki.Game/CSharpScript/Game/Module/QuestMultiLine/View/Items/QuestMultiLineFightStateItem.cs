@@ -6,16 +6,16 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 {
-	// Token: 0x02004FB6 RID: 20406
+	// Token: 0x02003F7F RID: 16255
 	public class QuestMultiLineFightStateItem : UiPanelBase
 	{
-		// Token: 0x060343C3 RID: 213955 RVA: 0x00C43271 File Offset: 0x00C41471
+		// Token: 0x06029231 RID: 168497 RVA: 0x00B8CA1D File Offset: 0x00B8AC1D
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new LevelSequencePlayer(base.GetRootItem());
 		}
 
-		// Token: 0x060343C4 RID: 213956 RVA: 0x00C43284 File Offset: 0x00C41484
+		// Token: 0x06029232 RID: 168498 RVA: 0x00B8CA30 File Offset: 0x00B8AC30
 		protected override void OnBeforeDestroy()
 		{
 			LevelSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			this.SequencePlayer = null;
 		}
 
-		// Token: 0x060343C5 RID: 213957 RVA: 0x00C432A0 File Offset: 0x00C414A0
+		// Token: 0x06029233 RID: 168499 RVA: 0x00B8CA4C File Offset: 0x00B8AC4C
 		public UniTask PlayStartAsync()
 		{
 			QuestMultiLineFightStateItem.<PlayStartAsync>d__3 <PlayStartAsync>d__;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.View.Items
 			return <PlayStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401BC63 RID: 113763
+		// Token: 0x04016638 RID: 91704
 		[Nullable(2)]
 		private LevelSequencePlayer SequencePlayer;
 	}

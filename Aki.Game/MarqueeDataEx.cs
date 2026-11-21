@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020021FE RID: 8702
+// Token: 0x020016E2 RID: 5858
 public class MarqueeDataEx
 {
-	// Token: 0x0400809D RID: 32925
+	// Token: 0x040081DB RID: 33243
 	public int id;
 
-	// Token: 0x0400809E RID: 32926
+	// Token: 0x040081DC RID: 33244
 	[Nullable(new byte[]
 	{
 		2,
@@ -16,19 +16,19 @@ public class MarqueeDataEx
 	})]
 	public List<MarqueeContent> contents;
 
-	// Token: 0x0400809F RID: 32927
+	// Token: 0x040081DD RID: 33245
 	public int timeInterval;
 
-	// Token: 0x040080A0 RID: 32928
+	// Token: 0x040081DE RID: 33246
 	public int times;
 
-	// Token: 0x040080A1 RID: 32929
+	// Token: 0x040081DF RID: 33247
 	public double startTimeMs;
 
-	// Token: 0x040080A2 RID: 32930
+	// Token: 0x040081E0 RID: 33248
 	public double endTimeMs;
 
-	// Token: 0x040080A3 RID: 32931
+	// Token: 0x040081E1 RID: 33249
 	[Nullable(new byte[]
 	{
 		2,
@@ -36,11 +36,11 @@ public class MarqueeDataEx
 	})]
 	public List<string> whiteList;
 
-	// Token: 0x040080A4 RID: 32932
+	// Token: 0x040081E2 RID: 33250
 	[Nullable(2)]
 	public List<int> platform;
 
-	// Token: 0x040080A5 RID: 32933
+	// Token: 0x040081E3 RID: 33251
 	[Nullable(new byte[]
 	{
 		2,

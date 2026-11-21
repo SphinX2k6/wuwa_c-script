@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020017FD RID: 6141
+// Token: 0x02000CB6 RID: 3254
 [NullableContext(1)]
 [Nullable(0)]
 public class CommonWarningItem : UiPanelBase
 {
-	// Token: 0x0600B3D0 RID: 46032 RVA: 0x0028A250 File Offset: 0x00288450
+	// Token: 0x060087BA RID: 34746 RVA: 0x0029494C File Offset: 0x00292B4C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -26,13 +26,13 @@ public class CommonWarningItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600B3D1 RID: 46033 RVA: 0x0028A2DC File Offset: 0x002884DC
+	// Token: 0x060087BB RID: 34747 RVA: 0x002949D8 File Offset: 0x00292BD8
 	public void SetWarningIcon(string iconPath)
 	{
 		base.SetTextureByPath(iconPath, base.GetTexture(1), null, null);
 	}
 
-	// Token: 0x0600B3D2 RID: 46034 RVA: 0x0028A301 File Offset: 0x00288501
+	// Token: 0x060087BC RID: 34748 RVA: 0x002949FD File Offset: 0x00292BFD
 	public void SetIconVisible(bool visible)
 	{
 		UUITexture texture = base.GetTexture(1);
@@ -43,47 +43,47 @@ public class CommonWarningItem : UiPanelBase
 		texture.SetUIActive(visible);
 	}
 
-	// Token: 0x0600B3D3 RID: 46035 RVA: 0x0028A315 File Offset: 0x00288515
+	// Token: 0x060087BD RID: 34749 RVA: 0x00294A11 File Offset: 0x00292C11
 	public void SetLocalText(string textId, params object[] args)
 	{
 		LguiUtil.Instance.SetLocalText(base.GetText(2), textId, args);
 	}
 
-	// Token: 0x0600B3D4 RID: 46036 RVA: 0x0028A32A File Offset: 0x0028852A
+	// Token: 0x060087BE RID: 34750 RVA: 0x00294A26 File Offset: 0x00292C26
 	public void SetLocalTextNew(string textId, params object[] args)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(2), textId, args);
 	}
 
-	// Token: 0x0600B3D5 RID: 46037 RVA: 0x0028A33F File Offset: 0x0028853F
+	// Token: 0x060087BF RID: 34751 RVA: 0x00294A3B File Offset: 0x00292C3B
 	public void TrySetLocalTextNew(string textId, params object[] args)
 	{
 		LguiUtil.Instance.TrySetLocalTextNew(base.GetText(2), textId, args);
 	}
 
-	// Token: 0x0600B3D6 RID: 46038 RVA: 0x0028A354 File Offset: 0x00288554
+	// Token: 0x060087C0 RID: 34752 RVA: 0x00294A50 File Offset: 0x00292C50
 	public void SetShowText(string text)
 	{
 		base.GetText(2).SetText(text, true);
 	}
 
-	// Token: 0x0600B3D7 RID: 46039 RVA: 0x0028A364 File Offset: 0x00288564
+	// Token: 0x060087C1 RID: 34753 RVA: 0x00294A60 File Offset: 0x00292C60
 	public void SetTextShowState(bool state)
 	{
 		base.GetText(2).SetUIActive(state);
 	}
 
-	// Token: 0x02007DFA RID: 32250
+	// Token: 0x02006F80 RID: 28544
 	[NullableContext(0)]
 	private class EComponent
 	{
-		// Token: 0x040293A1 RID: 168865
+		// Token: 0x040246CC RID: 149196
 		public const int ItemSelf = 0;
 
-		// Token: 0x040293A2 RID: 168866
+		// Token: 0x040246CD RID: 149197
 		public const int TextureIcon = 1;
 
-		// Token: 0x040293A3 RID: 168867
+		// Token: 0x040246CE RID: 149198
 		public const int TextTip = 2;
 	}
 }

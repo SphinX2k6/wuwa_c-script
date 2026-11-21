@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x02001C94 RID: 7316
+// Token: 0x02001153 RID: 4435
 public interface IGachaViewOpenData
 {
-	// Token: 0x170011F4 RID: 4596
-	// (get) Token: 0x0600DCE6 RID: 56550
-	// (set) Token: 0x0600DCE7 RID: 56551
+	// Token: 0x1700121A RID: 4634
+	// (get) Token: 0x0600B0FC RID: 45308
+	// (set) Token: 0x0600B0FD RID: 45309
 	bool SkipOnLoadResourceFinish { get; set; }
 
-	// Token: 0x170011F5 RID: 4597
-	// (get) Token: 0x0600DCE8 RID: 56552
-	// (set) Token: 0x0600DCE9 RID: 56553
+	// Token: 0x1700121B RID: 4635
+	// (get) Token: 0x0600B0FE RID: 45310
+	// (set) Token: 0x0600B0FF RID: 45311
 	bool ResultViewHideExtraReward { get; set; }
 
-	// Token: 0x170011F6 RID: 4598
-	// (get) Token: 0x0600DCEA RID: 56554
-	// (set) Token: 0x0600DCEB RID: 56555
+	// Token: 0x1700121C RID: 4636
+	// (get) Token: 0x0600B100 RID: 45312
+	// (set) Token: 0x0600B101 RID: 45313
 	bool IsOnlyShowGold { get; set; }
 }

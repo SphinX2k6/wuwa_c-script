@@ -1,125 +1,125 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002342 RID: 9026
+// Token: 0x02001827 RID: 6183
 [NullableContext(1)]
 public interface IGameplayShopItemBaseProxy
 {
-	// Token: 0x170016FF RID: 5887
-	// (get) Token: 0x06011E6C RID: 73324
-	// (set) Token: 0x06011E6D RID: 73325
+	// Token: 0x17001739 RID: 5945
+	// (get) Token: 0x0600F31C RID: 62236
+	// (set) Token: 0x0600F31D RID: 62237
 	int CurrencyId { get; set; }
 
-	// Token: 0x17001700 RID: 5888
-	// (get) Token: 0x06011E6E RID: 73326
-	// (set) Token: 0x06011E6F RID: 73327
+	// Token: 0x1700173A RID: 5946
+	// (get) Token: 0x0600F31E RID: 62238
+	// (set) Token: 0x0600F31F RID: 62239
 	int ItemId { get; set; }
 
-	// Token: 0x17001701 RID: 5889
-	// (get) Token: 0x06011E70 RID: 73328
-	// (set) Token: 0x06011E71 RID: 73329
+	// Token: 0x1700173B RID: 5947
+	// (get) Token: 0x0600F320 RID: 62240
+	// (set) Token: 0x0600F321 RID: 62241
 	string QualitySpritePath { get; set; }
 
-	// Token: 0x17001702 RID: 5890
-	// (get) Token: 0x06011E72 RID: 73330
-	// (set) Token: 0x06011E73 RID: 73331
+	// Token: 0x1700173C RID: 5948
+	// (get) Token: 0x0600F322 RID: 62242
+	// (set) Token: 0x0600F323 RID: 62243
 	string ItemTexturePath { get; set; }
 
-	// Token: 0x17001703 RID: 5891
-	// (get) Token: 0x06011E74 RID: 73332
-	// (set) Token: 0x06011E75 RID: 73333
+	// Token: 0x1700173D RID: 5949
+	// (get) Token: 0x0600F324 RID: 62244
+	// (set) Token: 0x0600F325 RID: 62245
 	bool ItemTextureVisible { get; set; }
 
-	// Token: 0x17001704 RID: 5892
-	// (get) Token: 0x06011E76 RID: 73334
-	// (set) Token: 0x06011E77 RID: 73335
+	// Token: 0x1700173E RID: 5950
+	// (get) Token: 0x0600F326 RID: 62246
+	// (set) Token: 0x0600F327 RID: 62247
 	string BigItemIconTexturePath { get; set; }
 
-	// Token: 0x17001705 RID: 5893
-	// (get) Token: 0x06011E78 RID: 73336
-	// (set) Token: 0x06011E79 RID: 73337
+	// Token: 0x1700173F RID: 5951
+	// (get) Token: 0x0600F328 RID: 62248
+	// (set) Token: 0x0600F329 RID: 62249
 	bool BigItemIconVisible { get; set; }
 
-	// Token: 0x17001706 RID: 5894
-	// (get) Token: 0x06011E7A RID: 73338
-	// (set) Token: 0x06011E7B RID: 73339
+	// Token: 0x17001740 RID: 5952
+	// (get) Token: 0x0600F32A RID: 62250
+	// (set) Token: 0x0600F32B RID: 62251
 	GameplayShopTextData ItemNameTextData { get; set; }
 
-	// Token: 0x17001707 RID: 5895
-	// (get) Token: 0x06011E7C RID: 73340
-	// (set) Token: 0x06011E7D RID: 73341
+	// Token: 0x17001741 RID: 5953
+	// (get) Token: 0x0600F32C RID: 62252
+	// (set) Token: 0x0600F32D RID: 62253
 	bool TipsButtonVisible { get; set; }
 
-	// Token: 0x17001708 RID: 5896
-	// (get) Token: 0x06011E7E RID: 73342
-	// (set) Token: 0x06011E7F RID: 73343
+	// Token: 0x17001742 RID: 5954
+	// (get) Token: 0x0600F32E RID: 62254
+	// (set) Token: 0x0600F32F RID: 62255
 	bool BottomBgVisible { get; set; }
 
-	// Token: 0x17001709 RID: 5897
-	// (get) Token: 0x06011E80 RID: 73344
-	// (set) Token: 0x06011E81 RID: 73345
+	// Token: 0x17001743 RID: 5955
+	// (get) Token: 0x0600F330 RID: 62256
+	// (set) Token: 0x0600F331 RID: 62257
 	GameplayShopTextData BuyLimitCountTextData { get; set; }
 
-	// Token: 0x1700170A RID: 5898
-	// (get) Token: 0x06011E82 RID: 73346
-	// (set) Token: 0x06011E83 RID: 73347
+	// Token: 0x17001744 RID: 5956
+	// (get) Token: 0x0600F332 RID: 62258
+	// (set) Token: 0x0600F333 RID: 62259
 	bool BuyLimitCountTextVisible { get; set; }
 
-	// Token: 0x1700170B RID: 5899
-	// (get) Token: 0x06011E84 RID: 73348
-	// (set) Token: 0x06011E85 RID: 73349
+	// Token: 0x17001745 RID: 5957
+	// (get) Token: 0x0600F334 RID: 62260
+	// (set) Token: 0x0600F335 RID: 62261
 	bool PriceItemVisible { get; set; }
 
-	// Token: 0x1700170C RID: 5900
-	// (get) Token: 0x06011E86 RID: 73350
-	// (set) Token: 0x06011E87 RID: 73351
+	// Token: 0x17001746 RID: 5958
+	// (get) Token: 0x0600F336 RID: 62262
+	// (set) Token: 0x0600F337 RID: 62263
 	bool CurrencyIconVisible { get; set; }
 
-	// Token: 0x1700170D RID: 5901
-	// (get) Token: 0x06011E88 RID: 73352
-	// (set) Token: 0x06011E89 RID: 73353
+	// Token: 0x17001747 RID: 5959
+	// (get) Token: 0x0600F338 RID: 62264
+	// (set) Token: 0x0600F339 RID: 62265
 	GameplayShopTextData NowPriceTextData { get; set; }
 
-	// Token: 0x1700170E RID: 5902
-	// (get) Token: 0x06011E8A RID: 73354
-	// (set) Token: 0x06011E8B RID: 73355
+	// Token: 0x17001748 RID: 5960
+	// (get) Token: 0x0600F33A RID: 62266
+	// (set) Token: 0x0600F33B RID: 62267
 	string NowPriceTextColor { get; set; }
 
-	// Token: 0x1700170F RID: 5903
-	// (get) Token: 0x06011E8C RID: 73356
-	// (set) Token: 0x06011E8D RID: 73357
+	// Token: 0x17001749 RID: 5961
+	// (get) Token: 0x0600F33C RID: 62268
+	// (set) Token: 0x0600F33D RID: 62269
 	GameplayShopTextData OriginalPriceTextData { get; set; }
 
-	// Token: 0x17001710 RID: 5904
-	// (get) Token: 0x06011E8E RID: 73358
-	// (set) Token: 0x06011E8F RID: 73359
+	// Token: 0x1700174A RID: 5962
+	// (get) Token: 0x0600F33E RID: 62270
+	// (set) Token: 0x0600F33F RID: 62271
 	bool OriginalPriceVisible { get; set; }
 
-	// Token: 0x17001711 RID: 5905
-	// (get) Token: 0x06011E90 RID: 73360
-	// (set) Token: 0x06011E91 RID: 73361
+	// Token: 0x1700174B RID: 5963
+	// (get) Token: 0x0600F340 RID: 62272
+	// (set) Token: 0x0600F341 RID: 62273
 	GameplayShopTextData PriceTipsTextData { get; set; }
 
-	// Token: 0x17001712 RID: 5906
-	// (get) Token: 0x06011E92 RID: 73362
-	// (set) Token: 0x06011E93 RID: 73363
+	// Token: 0x1700174C RID: 5964
+	// (get) Token: 0x0600F342 RID: 62274
+	// (set) Token: 0x0600F343 RID: 62275
 	bool PriceTipsTextVisible { get; set; }
 
-	// Token: 0x17001713 RID: 5907
-	// (get) Token: 0x06011E94 RID: 73364
-	// (set) Token: 0x06011E95 RID: 73365
+	// Token: 0x1700174D RID: 5965
+	// (get) Token: 0x0600F344 RID: 62276
+	// (set) Token: 0x0600F345 RID: 62277
 	bool RedDotVisible { get; set; }
 
-	// Token: 0x17001714 RID: 5908
-	// (get) Token: 0x06011E96 RID: 73366
-	// (set) Token: 0x06011E97 RID: 73367
+	// Token: 0x1700174E RID: 5966
+	// (get) Token: 0x0600F346 RID: 62278
+	// (set) Token: 0x0600F347 RID: 62279
 	bool ItemBgItemVisible { get; set; }
 
-	// Token: 0x17001715 RID: 5909
-	// (get) Token: 0x06011E98 RID: 73368
-	// (set) Token: 0x06011E99 RID: 73369
+	// Token: 0x1700174F RID: 5967
+	// (get) Token: 0x0600F348 RID: 62280
+	// (set) Token: 0x0600F349 RID: 62281
 	bool RaycastTarget { get; set; }
 
-	// Token: 0x06011E9A RID: 73370
+	// Token: 0x0600F34A RID: 62282
 	void OnTipsButtonClick();
 }

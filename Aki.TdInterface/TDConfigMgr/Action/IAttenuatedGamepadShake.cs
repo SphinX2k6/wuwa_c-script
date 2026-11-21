@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020017E4 RID: 6116
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200196D RID: 6509
 	public class IAttenuatedGamepadShake : IGamepadShakeConfig
 	{
-		// Token: 0x06008357 RID: 33623 RVA: 0x00139AD4 File Offset: 0x00137CD4
+		// Token: 0x06008A73 RID: 35443 RVA: 0x001491BC File Offset: 0x001473BC
 		private IAttenuatedGamepadShake_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008358 RID: 33624 RVA: 0x00139B0C File Offset: 0x00137D0C
+		// Token: 0x06008A74 RID: 35444 RVA: 0x001491F4 File Offset: 0x001473F4
 		public static IAttenuatedGamepadShake Create([Nullable(2)] IAttenuatedGamepadShake instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008359 RID: 33625 RVA: 0x00139B1F File Offset: 0x00137D1F
+		// Token: 0x06008A75 RID: 35445 RVA: 0x00149207 File Offset: 0x00147407
 		public static IAttenuatedGamepadShake CreateFromSetValue([Nullable(2)] IAttenuatedGamepadShake_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600835A RID: 33626 RVA: 0x00139B34 File Offset: 0x00137D34
+		// Token: 0x06008A76 RID: 35446 RVA: 0x0014921C File Offset: 0x0014741C
 		public new IAttenuatedGamepadShake_SetValue ToSetValue()
 		{
 			return new IAttenuatedGamepadShake_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002B2A RID: 11050
-		// (get) Token: 0x0600835B RID: 33627 RVA: 0x00139B8E File Offset: 0x00137D8E
-		// (set) Token: 0x0600835C RID: 33628 RVA: 0x00139BB9 File Offset: 0x00137DB9
+		// Token: 0x17002D22 RID: 11554
+		// (get) Token: 0x06008A77 RID: 35447 RVA: 0x00149276 File Offset: 0x00147476
+		// (set) Token: 0x06008A78 RID: 35448 RVA: 0x001492A1 File Offset: 0x001474A1
 		public override EGamepadShakeType Type
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B2B RID: 11051
-		// (get) Token: 0x0600835D RID: 33629 RVA: 0x00139BC7 File Offset: 0x00137DC7
-		// (set) Token: 0x0600835E RID: 33630 RVA: 0x00139BF2 File Offset: 0x00137DF2
+		// Token: 0x17002D23 RID: 11555
+		// (get) Token: 0x06008A79 RID: 35449 RVA: 0x001492AF File Offset: 0x001474AF
+		// (set) Token: 0x06008A7A RID: 35450 RVA: 0x001492DA File Offset: 0x001474DA
 		public virtual int CenterEntity
 		{
 			get
@@ -110,9 +108,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B2C RID: 11052
-		// (get) Token: 0x0600835F RID: 33631 RVA: 0x00139C00 File Offset: 0x00137E00
-		// (set) Token: 0x06008360 RID: 33632 RVA: 0x00139C2B File Offset: 0x00137E2B
+		// Token: 0x17002D24 RID: 11556
+		// (get) Token: 0x06008A7B RID: 35451 RVA: 0x001492E8 File Offset: 0x001474E8
+		// (set) Token: 0x06008A7C RID: 35452 RVA: 0x00149313 File Offset: 0x00147513
 		public virtual bool IsFollowEntityMovement
 		{
 			get
@@ -129,9 +127,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B2D RID: 11053
-		// (get) Token: 0x06008361 RID: 33633 RVA: 0x00139C39 File Offset: 0x00137E39
-		// (set) Token: 0x06008362 RID: 33634 RVA: 0x00139C64 File Offset: 0x00137E64
+		// Token: 0x17002D25 RID: 11557
+		// (get) Token: 0x06008A7D RID: 35453 RVA: 0x00149321 File Offset: 0x00147521
+		// (set) Token: 0x06008A7E RID: 35454 RVA: 0x0014934C File Offset: 0x0014754C
 		public virtual string ForceFeedbackAttenuation
 		{
 			get
@@ -152,9 +150,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B2E RID: 11054
-		// (get) Token: 0x06008363 RID: 33635 RVA: 0x00139C72 File Offset: 0x00137E72
-		// (set) Token: 0x06008364 RID: 33636 RVA: 0x00139CA1 File Offset: 0x00137EA1
+		// Token: 0x17002D26 RID: 11558
+		// (get) Token: 0x06008A7F RID: 35455 RVA: 0x0014935A File Offset: 0x0014755A
+		// (set) Token: 0x06008A80 RID: 35456 RVA: 0x00149389 File Offset: 0x00147589
 		public virtual float Duration
 		{
 			get
@@ -175,9 +173,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B2F RID: 11055
-		// (get) Token: 0x06008365 RID: 33637 RVA: 0x00139CAF File Offset: 0x00137EAF
-		// (set) Token: 0x06008366 RID: 33638 RVA: 0x00139CDA File Offset: 0x00137EDA
+		// Token: 0x17002D27 RID: 11559
+		// (get) Token: 0x06008A81 RID: 35457 RVA: 0x00149397 File Offset: 0x00147597
+		// (set) Token: 0x06008A82 RID: 35458 RVA: 0x001493C2 File Offset: 0x001475C2
 		public virtual bool IsLoop
 		{
 			get
@@ -194,11 +192,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400535D RID: 21341
+		// Token: 0x040057A5 RID: 22437
 		[Nullable(2)]
 		protected new IAttenuatedGamepadShake FbInstance;
 
-		// Token: 0x0400535E RID: 21342
+		// Token: 0x040057A6 RID: 22438
 		[Nullable(2)]
 		protected new IAttenuatedGamepadShake_SetValue PocoInterface;
 	}

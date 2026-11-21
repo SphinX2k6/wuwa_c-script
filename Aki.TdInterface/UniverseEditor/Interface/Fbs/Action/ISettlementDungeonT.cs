@@ -2,7 +2,7 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200709B RID: 28827
+	// Token: 0x02007867 RID: 30823
 	public class ISettlementDungeonT
 	{
 	}

@@ -5,7 +5,7 @@ using Aki.Config;
 using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Item;
 
-// Token: 0x0200280C RID: 10252
+// Token: 0x02001D87 RID: 7559
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using CSharpScript.Game.Module.Item;
 })]
 public class RoleDevPhantomVisionSuitDisplayItem : LoopScrollSmallItemGrid<IRoleDevPhantomSuitDisplayItemData>
 {
-	// Token: 0x0601509F RID: 86175 RVA: 0x00553A08 File Offset: 0x00551C08
+	// Token: 0x06012A9F RID: 76447 RVA: 0x0057E7DC File Offset: 0x0057C9DC
 	protected override void OnRefresh(IRoleDevPhantomSuitDisplayItemData data, bool isSelected, int gridIndex)
 	{
 		this.ItemData = data;
@@ -29,19 +29,19 @@ public class RoleDevPhantomVisionSuitDisplayItem : LoopScrollSmallItemGrid<IRole
 		this.SetSelected(isSelected, false);
 	}
 
-	// Token: 0x060150A0 RID: 86176 RVA: 0x00553A43 File Offset: 0x00551C43
+	// Token: 0x06012AA0 RID: 76448 RVA: 0x0057E817 File Offset: 0x0057CA17
 	public override void OnSelected(bool fireEvent)
 	{
 		this.SetSelected(true, false);
 	}
 
-	// Token: 0x060150A1 RID: 86177 RVA: 0x00553A4D File Offset: 0x00551C4D
+	// Token: 0x06012AA1 RID: 76449 RVA: 0x0057E821 File Offset: 0x0057CA21
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetSelected(false, true);
 	}
 
-	// Token: 0x060150A2 RID: 86178 RVA: 0x00553A58 File Offset: 0x00551C58
+	// Token: 0x06012AA2 RID: 76450 RVA: 0x0057E82C File Offset: 0x0057CA2C
 	private void RefreshRewardItem(IDropRewardItemData data)
 	{
 		if (InventoryConfig.Instance.GetItemConfigData(data.ItemId) == null)
@@ -57,14 +57,14 @@ public class RoleDevPhantomVisionSuitDisplayItem : LoopScrollSmallItemGrid<IRole
 		base.Apply<PropSmallItemGrid>(parameters);
 	}
 
-	// Token: 0x060150A3 RID: 86179 RVA: 0x00553AC0 File Offset: 0x00551CC0
+	// Token: 0x06012AA3 RID: 76451 RVA: 0x0057E894 File Offset: 0x0057CA94
 	protected override void OnExtendToggleClicked()
 	{
 		IRoleDevPhantomSuitDisplayItemData itemData = this.ItemData;
 		IDropRewardItemData dropRewardItemData = (itemData != null) ? itemData.RewardData : null;
 		if (dropRewardItemData != null)
 		{
-			ItemController.Instance.OpenItemTipsByItemId(dropRewardItemData.ItemId, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(dropRewardItemData.ItemId, true, null, false);
 			return;
 		}
 		IRoleDevPhantomSuitDisplayItemData itemData2 = this.ItemData;
@@ -75,7 +75,7 @@ public class RoleDevPhantomVisionSuitDisplayItem : LoopScrollSmallItemGrid<IRole
 		}
 	}
 
-	// Token: 0x060150A4 RID: 86180 RVA: 0x00553B20 File Offset: 0x00551D20
+	// Token: 0x06012AA4 RID: 76452 RVA: 0x0057E8F4 File Offset: 0x0057CAF4
 	private void RefreshMonsterItem(IPhantomMonsterItemData data)
 	{
 		bool flag = HandBookModel.Instance.GetHandBookInfo(EHandBookTabType.Phantom, data.MonsterId) != null;
@@ -125,13 +125,13 @@ public class RoleDevPhantomVisionSuitDisplayItem : LoopScrollSmallItemGrid<IRole
 		base.Apply<PhantomSmallItemGrid>(parameters);
 	}
 
-	// Token: 0x060150A5 RID: 86181 RVA: 0x00553CB8 File Offset: 0x00551EB8
+	// Token: 0x06012AA5 RID: 76453 RVA: 0x0057EA8C File Offset: 0x0057CC8C
 	protected override bool OnCanExecuteChange()
 	{
 		return false;
 	}
 
-	// Token: 0x04009E27 RID: 40487
+	// Token: 0x0400A210 RID: 41488
 	[Nullable(2)]
 	private IRoleDevPhantomSuitDisplayItemData ItemData;
 }

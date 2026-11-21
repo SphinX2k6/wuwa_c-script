@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002560 RID: 9568
+	// Token: 0x02002809 RID: 10249
 	public class IAvgPlayRoleActionItem
 	{
-		// Token: 0x0600D6D4 RID: 54996 RVA: 0x002005A2 File Offset: 0x001FE7A2
-		[NullableContext(1)]
+		// Token: 0x0600E43E RID: 58430 RVA: 0x0021C19E File Offset: 0x0021A39E
 		public static IAvgPlayRoleActionItem Create(IAvgPlayRoleActionItem? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003DD6 RID: 15830
-		// (get) Token: 0x0600D6D5 RID: 54997 RVA: 0x002005C1 File Offset: 0x001FE7C1
+		// Token: 0x170040DA RID: 16602
+		// (get) Token: 0x0600E43F RID: 58431 RVA: 0x0021C1BD File Offset: 0x0021A3BD
 		public virtual EAvgPlayRoleActionType ActionType
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003DD7 RID: 15831
-		// (get) Token: 0x0600D6D6 RID: 54998 RVA: 0x002005CE File Offset: 0x001FE7CE
+		// Token: 0x170040DB RID: 16603
+		// (get) Token: 0x0600E440 RID: 58432 RVA: 0x0021C1CA File Offset: 0x0021A3CA
 		public virtual int RoleId
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003DD8 RID: 15832
-		// (get) Token: 0x0600D6D7 RID: 54999 RVA: 0x002005DC File Offset: 0x001FE7DC
+		// Token: 0x170040DC RID: 16604
+		// (get) Token: 0x0600E441 RID: 58433 RVA: 0x0021C1D8 File Offset: 0x0021A3D8
 		public virtual EAvgRolePosition? PositionConfig
 		{
 			get
@@ -55,8 +53,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003DD9 RID: 15833
-		// (get) Token: 0x0600D6D8 RID: 55000 RVA: 0x00200612 File Offset: 0x001FE812
+		// Token: 0x170040DD RID: 16605
+		// (get) Token: 0x0600E442 RID: 58434 RVA: 0x0021C20E File Offset: 0x0021A40E
 		public virtual EAvgRoleAnimationType AnimationType
 		{
 			get
@@ -65,8 +63,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003DDA RID: 15834
-		// (get) Token: 0x0600D6D9 RID: 55001 RVA: 0x00200620 File Offset: 0x001FE820
+		// Token: 0x170040DE RID: 16606
+		// (get) Token: 0x0600E443 RID: 58435 RVA: 0x0021C21C File Offset: 0x0021A41C
 		public virtual bool? IsAnimationLoop
 		{
 			get
@@ -79,8 +77,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003DDB RID: 15835
-		// (get) Token: 0x0600D6DA RID: 55002 RVA: 0x00200658 File Offset: 0x001FE858
+		// Token: 0x170040DF RID: 16607
+		// (get) Token: 0x0600E444 RID: 58436 RVA: 0x0021C254 File Offset: 0x0021A454
 		public virtual EAvgVisualEffect? VisualEffect
 		{
 			get
@@ -93,7 +91,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040076FE RID: 30462
+		// Token: 0x04007D5B RID: 32091
 		private IAvgPlayRoleActionItem Instance;
 	}
 }

@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DA0 RID: 3488
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E9C RID: 3740
 	public class GridObjectComponent : IComponentBase
 	{
-		// Token: 0x06004F48 RID: 20296 RVA: 0x000C47EF File Offset: 0x000C29EF
+		// Token: 0x0600546D RID: 21613 RVA: 0x000D003F File Offset: 0x000CE23F
 		public static GridObjectComponent Create(IGridObjectComponent? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170019C5 RID: 6597
-		// (get) Token: 0x06004F49 RID: 20297 RVA: 0x000C4810 File Offset: 0x000C2A10
+		// Token: 0x17001B30 RID: 6960
+		// (get) Token: 0x0600546E RID: 21614 RVA: 0x000D0060 File Offset: 0x000CE260
 		public override bool? Disabled
 		{
 			get
@@ -37,8 +35,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170019C6 RID: 6598
-		// (get) Token: 0x06004F4A RID: 20298 RVA: 0x000C4848 File Offset: 0x000C2A48
+		// Token: 0x17001B31 RID: 6961
+		// (get) Token: 0x0600546F RID: 21615 RVA: 0x000D0098 File Offset: 0x000CE298
 		public override bool? EdIsLocked
 		{
 			get
@@ -47,8 +45,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170019C7 RID: 6599
-		// (get) Token: 0x06004F4B RID: 20299 RVA: 0x000C485E File Offset: 0x000C2A5E
+		// Token: 0x17001B32 RID: 6962
+		// (get) Token: 0x06005470 RID: 21616 RVA: 0x000D00AE File Offset: 0x000CE2AE
 		public virtual IVector2 CellSize
 		{
 			get
@@ -63,14 +61,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002D83 RID: 11651
+		// Token: 0x04003049 RID: 12361
 		private IGridObjectComponent Instance;
 
-		// Token: 0x04002D84 RID: 11652
+		// Token: 0x0400304A RID: 12362
 		[Nullable(2)]
 		private IVector2 _CellSizeCache;
 
-		// Token: 0x04002D85 RID: 11653
+		// Token: 0x0400304B RID: 12363
 		private bool _CellSizeInited;
 	}
 }

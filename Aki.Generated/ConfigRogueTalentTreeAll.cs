@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000868 RID: 2152
+	// Token: 0x02000884 RID: 2180
 	public class ConfigRogueTalentTreeAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003282 RID: 12930 RVA: 0x00177094 File Offset: 0x00175294
+		// Token: 0x0600332A RID: 13098 RVA: 0x0017E37C File Offset: 0x0017C57C
 		static ConfigRogueTalentTreeAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRogueTalentTreeAll.CreateStaticDefaultValue), new Action(ConfigRogueTalentTreeAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003283 RID: 12931 RVA: 0x001770B4 File Offset: 0x001752B4
+		// Token: 0x0600332B RID: 13099 RVA: 0x0017E39C File Offset: 0x0017C59C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRogueTalentTreeAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003284 RID: 12932 RVA: 0x00177133 File Offset: 0x00175333
+		// Token: 0x0600332C RID: 13100 RVA: 0x0017E41B File Offset: 0x0017C61B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRogueTalentTreeAll.LogPair = null;
 			ConfigRogueTalentTreeAll.HandleId = 0;
 		}
 
-		// Token: 0x06003285 RID: 12933 RVA: 0x00177141 File Offset: 0x00175341
+		// Token: 0x0600332D RID: 13101 RVA: 0x0017E429 File Offset: 0x0017C629
 		public static void Init()
 		{
 			ConfigRogueTalentTreeAll.HandleId = ConfigCommon.InitDataStatement(ConfigRogueTalentTreeAll.HandleId, "db_rogue.db", "select BinData from `RogueTalentTree`");
 		}
 
-		// Token: 0x06003286 RID: 12934 RVA: 0x0017715C File Offset: 0x0017535C
+		// Token: 0x0600332E RID: 13102 RVA: 0x0017E444 File Offset: 0x0017C644
 		[NullableContext(2)]
 		public static IReadOnlyList<RogueTalentTree> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04003ABE RID: 15038
+		// Token: 0x04003B82 RID: 15234
 		private const string DB = "db_rogue.db";
 
-		// Token: 0x04003ABF RID: 15039
+		// Token: 0x04003B83 RID: 15235
 		private const string FILE = "r.肉鸽.xlsx";
 
-		// Token: 0x04003AC0 RID: 15040
+		// Token: 0x04003B84 RID: 15236
 		private const string TABLE = "RogueTalentTree";
 
-		// Token: 0x04003AC1 RID: 15041
+		// Token: 0x04003B85 RID: 15237
 		private const string COMMAND = "select BinData from `RogueTalentTree`";
 
-		// Token: 0x04003AC2 RID: 15042
+		// Token: 0x04003B86 RID: 15238
 		private const string KEY_PREFIX = "RogueTalentTreeAll";
 
-		// Token: 0x04003AC3 RID: 15043
+		// Token: 0x04003B87 RID: 15239
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003AC4 RID: 15044
+		// Token: 0x04003B88 RID: 15240
 		private static int HandleId;
 	}
 }

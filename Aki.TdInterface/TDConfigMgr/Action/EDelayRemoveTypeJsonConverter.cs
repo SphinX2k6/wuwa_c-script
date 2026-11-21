@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022FA RID: 8954
+	// Token: 0x0200256B RID: 9579
 	public class EDelayRemoveTypeJsonConverter : JsonConverter<EDelayRemoveType>
 	{
-		// Token: 0x0600C3E5 RID: 50149 RVA: 0x001C9C38 File Offset: 0x001C7E38
+		// Token: 0x0600CFBD RID: 53181 RVA: 0x001E1BDC File Offset: 0x001DFDDC
 		public override EDelayRemoveType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EDelayRemoveTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C3E6 RID: 50150 RVA: 0x001C9C5C File Offset: 0x001C7E5C
+		// Token: 0x0600CFBE RID: 53182 RVA: 0x001E1C00 File Offset: 0x001DFE00
 		public override void Write(Utf8JsonWriter writer, EDelayRemoveType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

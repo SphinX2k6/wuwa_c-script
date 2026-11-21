@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020029A7 RID: 10663
+	// Token: 0x02000865 RID: 2149
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FOnItemIsHoveredChangedDynamic : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06027710 RID: 161552 RVA: 0x003C28CF File Offset: 0x003C0ACF
+		// Token: 0x0600BAE8 RID: 47848 RVA: 0x0012B312 File Offset: 0x00129512
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnItemIsHoveredChangedDynamic.StaticFunctionPtr();
 		}
 
-		// Token: 0x06027711 RID: 161553 RVA: 0x003C28DB File Offset: 0x003C0ADB
+		// Token: 0x0600BAE9 RID: 47849 RVA: 0x0012B31E File Offset: 0x0012951E
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnItemIsHoveredChangedDynamic._FunctionPtr == IntPtr.Zero)
@@ -27,31 +27,30 @@ namespace UnrealEngine
 			return FOnItemIsHoveredChangedDynamic._FunctionPtr;
 		}
 
-		// Token: 0x06027712 RID: 161554 RVA: 0x003C28FE File Offset: 0x003C0AFE
+		// Token: 0x0600BAEA RID: 47850 RVA: 0x0012B341 File Offset: 0x00129541
 		public FOnItemIsHoveredChangedDynamic()
 		{
 		}
 
-		// Token: 0x06027713 RID: 161555 RVA: 0x003C2906 File Offset: 0x003C0B06
+		// Token: 0x0600BAEB RID: 47851 RVA: 0x0012B349 File Offset: 0x00129549
 		[NullableContext(2)]
 		public FOnItemIsHoveredChangedDynamic(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06027714 RID: 161556 RVA: 0x003C2910 File Offset: 0x003C0B10
+		// Token: 0x0600BAEC RID: 47852 RVA: 0x0012B353 File Offset: 0x00129553
 		public FOnItemIsHoveredChangedDynamic(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06027715 RID: 161557 RVA: 0x003C291B File Offset: 0x003C0B1B
+		// Token: 0x0600BAED RID: 47853 RVA: 0x0012B35E File Offset: 0x0012955E
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<UObject, bool>) ?? ((Action<UObject, bool>)Delegate.CreateDelegate(typeof(Action<UObject, bool>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06027716 RID: 161558 RVA: 0x003C294D File Offset: 0x003C0B4D
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0600BAEE RID: 47854 RVA: 0x0012B390 File Offset: 0x00129590
 		public void Add([Nullable(new byte[]
 		{
 			1,
@@ -70,8 +69,7 @@ namespace UnrealEngine
 			base.Add(Callback, FOnItemIsHoveredChangedDynamic.RegisterId);
 		}
 
-		// Token: 0x06027717 RID: 161559 RVA: 0x003C2987 File Offset: 0x003C0B87
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0600BAEF RID: 47855 RVA: 0x0012B3CA File Offset: 0x001295CA
 		public void Remove([Nullable(new byte[]
 		{
 			1,
@@ -81,10 +79,9 @@ namespace UnrealEngine
 			base.Remove(Callback);
 		}
 
-		// Token: 0x06027718 RID: 161560 RVA: 0x003C2990 File Offset: 0x003C0B90
+		// Token: 0x0600BAF0 RID: 47856 RVA: 0x0012B3D4 File Offset: 0x001295D4
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(UObject Item, bool bIsHovered)
 		{
 			FOnItemIsHoveredChangedDynamic.__FOnItemIsHoveredChangedDynamic_DelegateParams* ptr = stackalloc FOnItemIsHoveredChangedDynamic.__FOnItemIsHoveredChangedDynamic_DelegateParams[(UIntPtr)31] + 15L / (long)sizeof(FOnItemIsHoveredChangedDynamic.__FOnItemIsHoveredChangedDynamic_DelegateParams) & -16L;
@@ -94,10 +91,9 @@ namespace UnrealEngine
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x06027719 RID: 161561 RVA: 0x003C29E4 File Offset: 0x003C0BE4
+		// Token: 0x0600BAF1 RID: 47857 RVA: 0x0012B428 File Offset: 0x00129628
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<UObject, bool> action = target as Action<UObject, bool>;
@@ -109,35 +105,35 @@ namespace UnrealEngine
 			action(orCreateUObjectByNativePointer, ((FOnItemIsHoveredChangedDynamic.__FOnItemIsHoveredChangedDynamic_DelegateParams*)__Parameters)->bIsHovered);
 		}
 
-		// Token: 0x04015A54 RID: 88660
+		// Token: 0x040054B9 RID: 21689
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04015A55 RID: 88661
+		// Token: 0x040054BA RID: 21690
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/UMG.OnItemIsHoveredChangedDynamic__DelegateSignature";
 
-		// Token: 0x04015A56 RID: 88662
+		// Token: 0x040054BB RID: 21691
 		private static int RegisterId;
 
-		// Token: 0x02003BA5 RID: 15269
+		// Token: 0x020013FF RID: 5119
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
-		protected ref struct __FOnItemIsHoveredChangedDynamic_DelegateParams
+		private ref struct __FOnItemIsHoveredChangedDynamic_DelegateParams
 		{
-			// Token: 0x04017D84 RID: 97668
+			// Token: 0x040068A9 RID: 26793
 			[FieldOffset(0)]
 			public IntPtr Item;
 
-			// Token: 0x04017D85 RID: 97669
+			// Token: 0x040068AA RID: 26794
 			[FieldOffset(8)]
 			public bool bIsHovered;
 		}
 
-		// Token: 0x02003BA6 RID: 15270
+		// Token: 0x02001400 RID: 5120
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017D86 RID: 97670
+			// Token: 0x040068AB RID: 26795
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

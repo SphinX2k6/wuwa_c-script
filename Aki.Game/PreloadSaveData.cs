@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02003525 RID: 13605
+// Token: 0x02002A9A RID: 10906
 public class PreloadSaveData
 {
-	// Token: 0x0400EAB6 RID: 60086
+	// Token: 0x0400EF73 RID: 61299
 	[Nullable(new byte[]
 	{
 		2,
@@ -13,7 +13,7 @@ public class PreloadSaveData
 	})]
 	public List<string> Animations;
 
-	// Token: 0x0400EAB7 RID: 60087
+	// Token: 0x0400EF74 RID: 61300
 	[Nullable(1)]
 	public List<string> Others = new List<string>();
 }

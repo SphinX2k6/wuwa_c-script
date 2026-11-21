@@ -4,11 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021FF RID: 8703
+	// Token: 0x0200246A RID: 9322
 	public class ShowAllHidedGroupInFlow : ActionParams
 	{
-		// Token: 0x0600BF17 RID: 48919 RVA: 0x001B77C6 File Offset: 0x001B59C6
-		[NullableContext(1)]
+		// Token: 0x0600CAD3 RID: 51923 RVA: 0x001CEE52 File Offset: 0x001CD052
 		public static ShowAllHidedGroupInFlow Create([Nullable(2)] ShowAllHidedGroupInFlow instance)
 		{
 			if (instance == null)
@@ -21,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x040071EC RID: 29164
+		// Token: 0x04007835 RID: 30773
 		[Nullable(2)]
 		protected new ShowAllHidedGroupInFlow FbInstance;
 	}

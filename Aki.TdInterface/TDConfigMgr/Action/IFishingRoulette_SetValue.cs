@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A6C RID: 6764
+	// Token: 0x02001C01 RID: 7169
 	public class IFishingRoulette_SetValue
 	{
-		// Token: 0x04005963 RID: 22883
+		// Token: 0x04005DC8 RID: 24008
 		public ESimpleGameplayType Type;
 	}
 }

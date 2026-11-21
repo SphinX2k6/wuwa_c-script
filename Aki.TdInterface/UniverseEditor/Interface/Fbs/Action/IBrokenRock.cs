@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006227 RID: 25127
+	// Token: 0x02006898 RID: 26776
 	public struct IBrokenRock : IFlatbufferObject
 	{
-		// Token: 0x1700BB3A RID: 47930
-		// (get) Token: 0x0602B4F8 RID: 177400 RVA: 0x005F6DC8 File Offset: 0x005F4FC8
+		// Token: 0x1700C4C2 RID: 50370
+		// (get) Token: 0x0602DC59 RID: 187481 RVA: 0x00641BD0 File Offset: 0x0063FDD0
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602B4F9 RID: 177401 RVA: 0x005F6DD5 File Offset: 0x005F4FD5
+		// Token: 0x0602DC5A RID: 187482 RVA: 0x00641BDD File Offset: 0x0063FDDD
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602B4FA RID: 177402 RVA: 0x005F6DDC File Offset: 0x005F4FDC
+		// Token: 0x0602DC5B RID: 187483 RVA: 0x00641BE4 File Offset: 0x0063FDE4
 		public static IBrokenRock GetRootAsIBrokenRock(ByteBuffer _bb)
 		{
 			return IBrokenRock.GetRootAsIBrokenRock(_bb, default(IBrokenRock));
 		}
 
-		// Token: 0x0602B4FB RID: 177403 RVA: 0x005F6DF8 File Offset: 0x005F4FF8
+		// Token: 0x0602DC5C RID: 187484 RVA: 0x00641C00 File Offset: 0x0063FE00
 		public static IBrokenRock GetRootAsIBrokenRock(ByteBuffer _bb, IBrokenRock obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602B4FC RID: 177404 RVA: 0x005F6E15 File Offset: 0x005F5015
+		// Token: 0x0602DC5D RID: 187485 RVA: 0x00641C1D File Offset: 0x0063FE1D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602B4FD RID: 177405 RVA: 0x005F6E24 File Offset: 0x005F5024
+		// Token: 0x0602DC5E RID: 187486 RVA: 0x00641C2C File Offset: 0x0063FE2C
 		public IBrokenRock __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BB3B RID: 47931
-		// (get) Token: 0x0602B4FE RID: 177406 RVA: 0x005F6E34 File Offset: 0x005F5034
+		// Token: 0x1700C4C3 RID: 50371
+		// (get) Token: 0x0602DC5F RID: 187487 RVA: 0x00641C3C File Offset: 0x0063FE3C
 		public ESimpleGameplayType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700BB3C RID: 47932
-		// (get) Token: 0x0602B4FF RID: 177407 RVA: 0x005F6E70 File Offset: 0x005F5070
+		// Token: 0x1700C4C4 RID: 50372
+		// (get) Token: 0x0602DC60 RID: 187488 RVA: 0x00641C78 File Offset: 0x0063FE78
 		public int Id
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602B500 RID: 177408 RVA: 0x005F6EAC File Offset: 0x005F50AC
+		// Token: 0x0602DC61 RID: 187489 RVA: 0x00641CB4 File Offset: 0x0063FEB4
 		public static Offset<IBrokenRock> CreateIBrokenRock(FlatBufferBuilder builder, ESimpleGameplayType Type = ESimpleGameplayType.Cipher, int Id = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IBrokenRock.EndIBrokenRock(builder);
 		}
 
-		// Token: 0x0602B501 RID: 177409 RVA: 0x005F6EC9 File Offset: 0x005F50C9
+		// Token: 0x0602DC62 RID: 187490 RVA: 0x00641CD1 File Offset: 0x0063FED1
 		public static void StartIBrokenRock(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602B502 RID: 177410 RVA: 0x005F6ED2 File Offset: 0x005F50D2
+		// Token: 0x0602DC63 RID: 187491 RVA: 0x00641CDA File Offset: 0x0063FEDA
 		public static void AddType(FlatBufferBuilder builder, ESimpleGameplayType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602B503 RID: 177411 RVA: 0x005F6EDD File Offset: 0x005F50DD
+		// Token: 0x0602DC64 RID: 187492 RVA: 0x00641CE5 File Offset: 0x0063FEE5
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(1, id, 0);
 		}
 
-		// Token: 0x0602B504 RID: 177412 RVA: 0x005F6EE8 File Offset: 0x005F50E8
+		// Token: 0x0602DC65 RID: 187493 RVA: 0x00641CF0 File Offset: 0x0063FEF0
 		public static Offset<IBrokenRock> EndIBrokenRock(FlatBufferBuilder builder)
 		{
 			return new Offset<IBrokenRock>(builder.EndTable());
 		}
 
-		// Token: 0x0602B505 RID: 177413 RVA: 0x005F6EF8 File Offset: 0x005F50F8
+		// Token: 0x0602DC66 RID: 187494 RVA: 0x00641D00 File Offset: 0x0063FF00
 		public IBrokenRockT UnPack()
 		{
 			IBrokenRockT brokenRockT = new IBrokenRockT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return brokenRockT;
 		}
 
-		// Token: 0x0602B506 RID: 177414 RVA: 0x005F6F13 File Offset: 0x005F5113
+		// Token: 0x0602DC67 RID: 187495 RVA: 0x00641D1B File Offset: 0x0063FF1B
 		public void UnPackTo(IBrokenRockT _o)
 		{
 			_o.Type = this.Type;
 			_o.Id = this.Id;
 		}
 
-		// Token: 0x0602B507 RID: 177415 RVA: 0x005F6F30 File Offset: 0x005F5130
+		// Token: 0x0602DC68 RID: 187496 RVA: 0x00641D38 File Offset: 0x0063FF38
 		public static Offset<IBrokenRock> Pack(FlatBufferBuilder builder, IBrokenRockT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IBrokenRock.CreateIBrokenRock(builder, _o.Type, _o.Id);
 		}
 
-		// Token: 0x0401076A RID: 67434
+		// Token: 0x0401157F RID: 71039
 		private Table __p;
 	}
 }

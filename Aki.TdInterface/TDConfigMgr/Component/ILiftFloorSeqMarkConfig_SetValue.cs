@@ -1,18 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004CB RID: 1227
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000524 RID: 1316
 	public class ILiftFloorSeqMarkConfig_SetValue
 	{
-		// Token: 0x04001269 RID: 4713
+		// Token: 0x0400138B RID: 5003
 		public string SequencePath;
 
-		// Token: 0x0400126A RID: 4714
+		// Token: 0x0400138C RID: 5004
 		public List<ILiftFloorSeqMark> FloorMarks;
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001603 RID: 5635
+	// Token: 0x02001765 RID: 5989
 	public enum EInteractUnlockType
 	{
-		// Token: 0x04004B6C RID: 19308
+		// Token: 0x04004F32 RID: 20274
 		Sequence
 	}
 }

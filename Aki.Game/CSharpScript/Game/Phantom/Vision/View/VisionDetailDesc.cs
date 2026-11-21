@@ -5,36 +5,36 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Phantom.Vision.View
 {
-	// Token: 0x020045FD RID: 17917
+	// Token: 0x02003526 RID: 13606
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class VisionDetailDesc
 	{
-		// Token: 0x0602E32D RID: 189229 RVA: 0x00AAE5F5 File Offset: 0x00AAC7F5
+		// Token: 0x06022A22 RID: 141858 RVA: 0x009DACE9 File Offset: 0x009D8EE9
 		public void SetNeedCheckChangeColor(bool state)
 		{
 			this.NeedCheckChangeColor = state;
 		}
 
-		// Token: 0x0602E32E RID: 189230 RVA: 0x00AAE5FE File Offset: 0x00AAC7FE
+		// Token: 0x06022A23 RID: 141859 RVA: 0x009DACF2 File Offset: 0x009D8EF2
 		public bool GetNeedCheckChangeColor()
 		{
 			return this.NeedCheckChangeColor;
 		}
 
-		// Token: 0x0602E32F RID: 189231 RVA: 0x00AAE606 File Offset: 0x00AAC806
+		// Token: 0x06022A24 RID: 141860 RVA: 0x009DACFA File Offset: 0x009D8EFA
 		public bool GetNeedWarn()
 		{
 			return this.EquipSameMonster || this.EquipOverNeed;
 		}
 
-		// Token: 0x0602E330 RID: 189232 RVA: 0x00AAE618 File Offset: 0x00AAC818
+		// Token: 0x06022A25 RID: 141861 RVA: 0x009DAD0C File Offset: 0x009D8F0C
 		public bool GetIsFetterData()
 		{
 			return this.FetterId > 0;
 		}
 
-		// Token: 0x0602E331 RID: 189233 RVA: 0x00AAE624 File Offset: 0x00AAC824
+		// Token: 0x06022A26 RID: 141862 RVA: 0x009DAD18 File Offset: 0x009D8F18
 		public static List<VisionDetailDesc> CreateEmptySkillDescData()
 		{
 			return new List<VisionDetailDesc>
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Phantom.Vision.View
 			};
 		}
 
-		// Token: 0x0602E332 RID: 189234 RVA: 0x00AAE68C File Offset: 0x00AAC88C
+		// Token: 0x06022A27 RID: 141863 RVA: 0x009DAD80 File Offset: 0x009D8F80
 		public static List<VisionDetailDesc> CreateEmptyFetterDescData()
 		{
 			return new List<VisionDetailDesc>
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Phantom.Vision.View
 			};
 		}
 
-		// Token: 0x0602E333 RID: 189235 RVA: 0x00AAE6F4 File Offset: 0x00AAC8F4
+		// Token: 0x06022A28 RID: 141864 RVA: 0x009DADE8 File Offset: 0x009D8FE8
 		public static List<VisionDetailDesc> CreateSameMonsterTips()
 		{
 			return new List<VisionDetailDesc>
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Phantom.Vision.View
 			};
 		}
 
-		// Token: 0x0602E334 RID: 189236 RVA: 0x00AAE73C File Offset: 0x00AAC93C
+		// Token: 0x06022A29 RID: 141865 RVA: 0x009DAE30 File Offset: 0x009D9030
 		public static List<VisionDetailDesc> CreateOverNeedTips()
 		{
 			return new List<VisionDetailDesc>
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Phantom.Vision.View
 			};
 		}
 
-		// Token: 0x0602E335 RID: 189237 RVA: 0x00AAE784 File Offset: 0x00AAC984
+		// Token: 0x06022A2A RID: 141866 RVA: 0x009DAE78 File Offset: 0x009D9078
 		public static List<VisionDetailDesc> ConvertVisionSkillDescToDescData(PhantomSkill data, int level, bool ifMainPosition, bool ifPreview, int quality)
 		{
 			List<VisionDetailDesc> list = new List<VisionDetailDesc>();
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Phantom.Vision.View
 			return list;
 		}
 
-		// Token: 0x0602E336 RID: 189238 RVA: 0x00AAE844 File Offset: 0x00AACA44
+		// Token: 0x06022A2B RID: 141867 RVA: 0x009DAF38 File Offset: 0x009D9138
 		public static List<VisionDetailDesc> ConvertVisionFetterDataToDetailDescData(List<VisionFetterData> data, bool ifEquipSameMonster, bool? ifEquipOverNeed = null, [Nullable(2)] Action jumpCallBack = null)
 		{
 			List<VisionDetailDesc> list = new List<VisionDetailDesc>();
@@ -160,85 +160,85 @@ namespace CSharpScript.Game.Phantom.Vision.View
 			return list;
 		}
 
-		// Token: 0x0602E338 RID: 189240 RVA: 0x00AAE984 File Offset: 0x00AACB84
+		// Token: 0x06022A2D RID: 141869 RVA: 0x009DB078 File Offset: 0x009D9278
 		[CompilerGenerated]
 		internal static void <ConvertVisionSkillDescToDescData>g__callback|32_0()
 		{
 			HelpController.Instance.OpenHelpById(59);
 		}
 
-		// Token: 0x04018CAD RID: 101549
+		// Token: 0x040132EC RID: 78572
 		public string Title = "";
 
-		// Token: 0x04018CAE RID: 101550
+		// Token: 0x040132ED RID: 78573
 		public bool TitleItemShowState = true;
 
-		// Token: 0x04018CAF RID: 101551
+		// Token: 0x040132EE RID: 78574
 		[Nullable(2)]
 		public Action JumpCallBack;
 
-		// Token: 0x04018CB0 RID: 101552
+		// Token: 0x040132EF RID: 78575
 		public bool NeedActiveState;
 
-		// Token: 0x04018CB1 RID: 101553
+		// Token: 0x040132F0 RID: 78576
 		public bool GreenActiveState;
 
-		// Token: 0x04018CB2 RID: 101554
+		// Token: 0x040132F1 RID: 78577
 		public bool NewState;
 
-		// Token: 0x04018CB3 RID: 101555
+		// Token: 0x040132F2 RID: 78578
 		public int FetterId;
 
-		// Token: 0x04018CB4 RID: 101556
+		// Token: 0x040132F3 RID: 78579
 		[Nullable(2)]
 		public VisionFetterData FetterData;
 
-		// Token: 0x04018CB5 RID: 101557
+		// Token: 0x040132F4 RID: 78580
 		public bool IfMainPosition;
 
-		// Token: 0x04018CB6 RID: 101558
+		// Token: 0x040132F5 RID: 78581
 		public bool EmptyState;
 
-		// Token: 0x04018CB7 RID: 101559
+		// Token: 0x040132F6 RID: 78582
 		public string EmptyText = "";
 
-		// Token: 0x04018CB8 RID: 101560
+		// Token: 0x040132F7 RID: 78583
 		public string EmptyContentText = "";
 
-		// Token: 0x04018CB9 RID: 101561
+		// Token: 0x040132F8 RID: 78584
 		public PhantomSkill? SkillConfig;
 
-		// Token: 0x04018CBA RID: 101562
+		// Token: 0x040132F9 RID: 78585
 		public int Level;
 
-		// Token: 0x04018CBB RID: 101563
+		// Token: 0x040132FA RID: 78586
 		public int FetterGroupId;
 
-		// Token: 0x04018CBC RID: 101564
+		// Token: 0x040132FB RID: 78587
 		private bool NeedCheckChangeColor = true;
 
-		// Token: 0x04018CBD RID: 101565
+		// Token: 0x040132FC RID: 78588
 		public bool DoNotNeedCheckSimplyState;
 
-		// Token: 0x04018CBE RID: 101566
+		// Token: 0x040132FD RID: 78589
 		public bool NeedSimplyStateChangeAnimation;
 
-		// Token: 0x04018CBF RID: 101567
+		// Token: 0x040132FE RID: 78590
 		public bool AnimationState = true;
 
-		// Token: 0x04018CC0 RID: 101568
+		// Token: 0x040132FF RID: 78591
 		public int Quality;
 
-		// Token: 0x04018CC1 RID: 101569
+		// Token: 0x04013300 RID: 78592
 		public int TitleType = -1;
 
-		// Token: 0x04018CC2 RID: 101570
+		// Token: 0x04013301 RID: 78593
 		public bool EquipSameMonster;
 
-		// Token: 0x04018CC3 RID: 101571
+		// Token: 0x04013302 RID: 78594
 		public bool EquipOverNeed;
 
-		// Token: 0x04018CC4 RID: 101572
+		// Token: 0x04013303 RID: 78595
 		public bool CompareState;
 	}
 }

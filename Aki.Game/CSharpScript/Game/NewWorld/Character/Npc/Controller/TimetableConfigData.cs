@@ -4,21 +4,21 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.NewWorld.Character.Npc.Controller
 {
-	// Token: 0x0200709A RID: 28826
+	// Token: 0x020062FF RID: 25343
 	public class TimetableConfigData
 	{
-		// Token: 0x04024CE7 RID: 150759
+		// Token: 0x04020839 RID: 133177
 		[Nullable(1)]
 		public string BehaviorTreePath = "";
 
-		// Token: 0x04024CE8 RID: 150760
+		// Token: 0x0402083A RID: 133178
 		[Nullable(2)]
 		public ICommonBtOverride CommonBtOverride;
 
-		// Token: 0x04024CE9 RID: 150761
+		// Token: 0x0402083B RID: 133179
 		public int StartTime;
 
-		// Token: 0x04024CEA RID: 150762
+		// Token: 0x0402083C RID: 133180
 		public int SplineId;
 	}
 }

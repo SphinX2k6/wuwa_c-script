@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D2E RID: 23854
+	// Token: 0x02004D10 RID: 19728
 	public class FullScreenNiagaraItem : BattleChildView
 	{
-		// Token: 0x0603C7EC RID: 247788 RVA: 0x00E835D8 File Offset: 0x00E817D8
+		// Token: 0x06031745 RID: 202565 RVA: 0x00DD3D78 File Offset: 0x00DD1F78
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C7ED RID: 247789 RVA: 0x00E83620 File Offset: 0x00E81820
+		// Token: 0x06031746 RID: 202566 RVA: 0x00DD3DC0 File Offset: 0x00DD1FC0
 		public override void Reset()
 		{
 			UUINiagara fullScreenNiagara = this.FullScreenNiagara;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.Reset();
 		}
 
-		// Token: 0x0603C7EE RID: 247790 RVA: 0x00E83648 File Offset: 0x00E81848
+		// Token: 0x06031747 RID: 202567 RVA: 0x00DD3DE8 File Offset: 0x00DD1FE8
 		public UniTask<bool> LoadNiagara([Nullable(2)] string niagaraPath)
 		{
 			FullScreenNiagaraItem.<LoadNiagara>d__5 <LoadNiagara>d__;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <LoadNiagara>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C7EF RID: 247791 RVA: 0x00E83693 File Offset: 0x00E81893
+		// Token: 0x06031748 RID: 202568 RVA: 0x00DD3E33 File Offset: 0x00DD2033
 		[NullableContext(1)]
 		public void SetNiagaraFloatValue(string key, float value)
 		{
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			fullScreenNiagara.SetNiagaraVarFloat(key, value);
 		}
 
-		// Token: 0x0603C7F0 RID: 247792 RVA: 0x00E836A8 File Offset: 0x00E818A8
+		// Token: 0x06031749 RID: 202569 RVA: 0x00DD3E48 File Offset: 0x00DD2048
 		public void SetVisible(bool bVisible)
 		{
 			UUINiagara uiNiagara = base.GetUiNiagara(0);
@@ -76,18 +76,18 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetActive(bVisible);
 		}
 
-		// Token: 0x0401F85A RID: 129114
+		// Token: 0x0401A313 RID: 107283
 		[Nullable(2)]
 		private string NiagaraPath;
 
-		// Token: 0x0401F85B RID: 129115
+		// Token: 0x0401A314 RID: 107284
 		[Nullable(2)]
 		private UUINiagara FullScreenNiagara;
 
-		// Token: 0x0200BFC0 RID: 49088
+		// Token: 0x0200A9C6 RID: 43462
 		private enum EChildType
 		{
-			// Token: 0x04039D97 RID: 236951
+			// Token: 0x04034759 RID: 214873
 			PoisonScreenNiagara
 		}
 	}

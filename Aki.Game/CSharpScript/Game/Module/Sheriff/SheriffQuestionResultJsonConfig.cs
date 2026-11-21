@@ -4,39 +4,39 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Sheriff
 {
-	// Token: 0x02004C37 RID: 19511
+	// Token: 0x02003BE8 RID: 15336
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SheriffQuestionResultJsonConfig : ISheriffQuestionResultJsonConfig
 	{
-		// Token: 0x17007C9A RID: 31898
-		// (get) Token: 0x0603279E RID: 206750 RVA: 0x00BC30C7 File Offset: 0x00BC12C7
-		// (set) Token: 0x0603279F RID: 206751 RVA: 0x00BC30CF File Offset: 0x00BC12CF
+		// Token: 0x17005044 RID: 20548
+		// (get) Token: 0x06027551 RID: 161105 RVA: 0x00B07CDF File Offset: 0x00B05EDF
+		// (set) Token: 0x06027552 RID: 161106 RVA: 0x00B07CE7 File Offset: 0x00B05EE7
 		public List<int> ClueCombination { get; set; } = new List<int>();
 
-		// Token: 0x17007C9B RID: 31899
-		// (get) Token: 0x060327A0 RID: 206752 RVA: 0x00BC30D8 File Offset: 0x00BC12D8
-		// (set) Token: 0x060327A1 RID: 206753 RVA: 0x00BC30E0 File Offset: 0x00BC12E0
+		// Token: 0x17005045 RID: 20549
+		// (get) Token: 0x06027553 RID: 161107 RVA: 0x00B07CF0 File Offset: 0x00B05EF0
+		// (set) Token: 0x06027554 RID: 161108 RVA: 0x00B07CF8 File Offset: 0x00B05EF8
 		public List<string> ReasoningStateId { get; set; } = new List<string>();
 
-		// Token: 0x17007C9C RID: 31900
-		// (get) Token: 0x060327A2 RID: 206754 RVA: 0x00BC30E9 File Offset: 0x00BC12E9
-		// (set) Token: 0x060327A3 RID: 206755 RVA: 0x00BC30F1 File Offset: 0x00BC12F1
+		// Token: 0x17005046 RID: 20550
+		// (get) Token: 0x06027555 RID: 161109 RVA: 0x00B07D01 File Offset: 0x00B05F01
+		// (set) Token: 0x06027556 RID: 161110 RVA: 0x00B07D09 File Offset: 0x00B05F09
 		public List<string> ResultDesc { get; set; } = new List<string>();
 
-		// Token: 0x17007C9D RID: 31901
-		// (get) Token: 0x060327A4 RID: 206756 RVA: 0x00BC30FA File Offset: 0x00BC12FA
-		// (set) Token: 0x060327A5 RID: 206757 RVA: 0x00BC3102 File Offset: 0x00BC1302
+		// Token: 0x17005047 RID: 20551
+		// (get) Token: 0x06027557 RID: 161111 RVA: 0x00B07D12 File Offset: 0x00B05F12
+		// (set) Token: 0x06027558 RID: 161112 RVA: 0x00B07D1A File Offset: 0x00B05F1A
 		public int? NextQuestionId { get; set; }
 
-		// Token: 0x17007C9E RID: 31902
-		// (get) Token: 0x060327A6 RID: 206758 RVA: 0x00BC310B File Offset: 0x00BC130B
-		// (set) Token: 0x060327A7 RID: 206759 RVA: 0x00BC3113 File Offset: 0x00BC1313
+		// Token: 0x17005048 RID: 20552
+		// (get) Token: 0x06027559 RID: 161113 RVA: 0x00B07D23 File Offset: 0x00B05F23
+		// (set) Token: 0x0602755A RID: 161114 RVA: 0x00B07D2B File Offset: 0x00B05F2B
 		public int? CaseProgressId { get; set; }
 
-		// Token: 0x17007C9F RID: 31903
-		// (get) Token: 0x060327A8 RID: 206760 RVA: 0x00BC311C File Offset: 0x00BC131C
-		// (set) Token: 0x060327A9 RID: 206761 RVA: 0x00BC3124 File Offset: 0x00BC1324
+		// Token: 0x17005049 RID: 20553
+		// (get) Token: 0x0602755B RID: 161115 RVA: 0x00B07D34 File Offset: 0x00B05F34
+		// (set) Token: 0x0602755C RID: 161116 RVA: 0x00B07D3C File Offset: 0x00B05F3C
 		public int? EndingId { get; set; }
 	}
 }

@@ -10,17 +10,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.PlotView
 {
-	// Token: 0x0200503D RID: 20541
+	// Token: 0x0200400C RID: 16396
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BlackScreenTextView : UiViewBase
 	{
-		// Token: 0x06034932 RID: 215346 RVA: 0x00C6A2A7 File Offset: 0x00C684A7
+		// Token: 0x0602980E RID: 169998 RVA: 0x00BB7347 File Offset: 0x00BB5547
 		public BlackScreenTextView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06034933 RID: 215347 RVA: 0x00C6A2B0 File Offset: 0x00C684B0
+		// Token: 0x0602980F RID: 169999 RVA: 0x00BB7350 File Offset: 0x00BB5550
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06034934 RID: 215348 RVA: 0x00C6A35C File Offset: 0x00C6855C
+		// Token: 0x06029810 RID: 170000 RVA: 0x00BB73FC File Offset: 0x00BB55FC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			BlackScreenTextView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034935 RID: 215349 RVA: 0x00C6A3A0 File Offset: 0x00C685A0
+		// Token: 0x06029811 RID: 170001 RVA: 0x00BB7440 File Offset: 0x00BB5640
 		protected override UniTask OnPlayingStartSequenceAsync()
 		{
 			BlackScreenTextView.<OnPlayingStartSequenceAsync>d__5 <OnPlayingStartSequenceAsync>d__;
@@ -60,13 +60,13 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return <OnPlayingStartSequenceAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034936 RID: 215350 RVA: 0x00C6A3E3 File Offset: 0x00C685E3
+		// Token: 0x06029812 RID: 170002 RVA: 0x00BB7483 File Offset: 0x00BB5683
 		protected override void OnBeforeDestroy()
 		{
 			this.StopAudio();
 		}
 
-		// Token: 0x06034937 RID: 215351 RVA: 0x00C6A3EC File Offset: 0x00C685EC
+		// Token: 0x06029813 RID: 170003 RVA: 0x00BB748C File Offset: 0x00BB568C
 		private UniTask InitText(IFadeBackgroundUiPrefabBlackScreenWhiteText param)
 		{
 			BlackScreenTextView.<InitText>d__7 <InitText>d__;
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return <InitText>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034938 RID: 215352 RVA: 0x00C6A438 File Offset: 0x00C68638
+		// Token: 0x06029814 RID: 170004 RVA: 0x00BB74D8 File Offset: 0x00BB56D8
 		[NullableContext(2)]
 		private void PlayAudio(string audioEvent)
 		{
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x06034939 RID: 215353 RVA: 0x00C6A4A4 File Offset: 0x00C686A4
+		// Token: 0x06029815 RID: 170005 RVA: 0x00BB7544 File Offset: 0x00BB5744
 		private void StopAudio()
 		{
 			if (this.AudioHandle == 0)
@@ -114,10 +114,10 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.AudioHandle = 0;
 		}
 
-		// Token: 0x0401C03D RID: 114749
+		// Token: 0x04016A60 RID: 92768
 		private int AudioHandle;
 
-		// Token: 0x0401C03E RID: 114750
+		// Token: 0x04016A61 RID: 92769
 		[Nullable(2)]
 		private LevelSequencePlayer LevelSequencePlayer;
 	}

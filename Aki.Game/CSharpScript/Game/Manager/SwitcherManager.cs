@@ -5,12 +5,12 @@ using CSharpScript.Game.Render;
 
 namespace CSharpScript.Game.Manager
 {
-	// Token: 0x02006948 RID: 26952
+	// Token: 0x02005AA3 RID: 23203
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SwitcherManager : Singleton
 	{
-		// Token: 0x0604328B RID: 275083 RVA: 0x0105E7C0 File Offset: 0x0105C9C0
+		// Token: 0x060392C2 RID: 234178 RVA: 0x0100297C File Offset: 0x01000B7C
 		public void Initialize()
 		{
 			this.AllSwitcher["特效生成Log"] = new ValueTuple<Func<bool>, Action<bool>>(() => EffectGlobal.Instance.EnableSpawnLog, delegate(bool value)
@@ -23,8 +23,8 @@ namespace CSharpScript.Game.Manager
 			});
 		}
 
-		// Token: 0x170097FC RID: 38908
-		// (get) Token: 0x0604328C RID: 275084 RVA: 0x0105E873 File Offset: 0x0105CA73
+		// Token: 0x17006CDC RID: 27868
+		// (get) Token: 0x060392C3 RID: 234179 RVA: 0x01002A2F File Offset: 0x01000C2F
 		public static SwitcherManager Instance
 		{
 			get
@@ -38,12 +38,12 @@ namespace CSharpScript.Game.Manager
 			}
 		}
 
-		// Token: 0x0604328D RID: 275085 RVA: 0x0105E896 File Offset: 0x0105CA96
+		// Token: 0x060392C4 RID: 234180 RVA: 0x01002A52 File Offset: 0x01000C52
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0604328E RID: 275086 RVA: 0x0105E898 File Offset: 0x0105CA98
+		// Token: 0x060392C5 RID: 234181 RVA: 0x01002A54 File Offset: 0x01000C54
 		public static void ResetStaticDefaultValue()
 		{
 			SwitcherManager instance = SwitcherManager._instance;
@@ -54,13 +54,13 @@ namespace CSharpScript.Game.Manager
 			SwitcherManager._instance = null;
 		}
 
-		// Token: 0x0604328F RID: 275087 RVA: 0x0105E8B1 File Offset: 0x0105CAB1
+		// Token: 0x060392C6 RID: 234182 RVA: 0x01002A6D File Offset: 0x01000C6D
 		static SwitcherManager()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SwitcherManager.CreateStaticDefaultValue), new Action(SwitcherManager.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04022F9D RID: 143261
+		// Token: 0x0401E187 RID: 123271
 		[TupleElementNames(new string[]
 		{
 			"GetValue",
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Manager
 		})]
 		public readonly Dictionary<string, ValueTuple<Func<bool>, Action<bool>>> AllSwitcher = new Dictionary<string, ValueTuple<Func<bool>, Action<bool>>>();
 
-		// Token: 0x04022F9E RID: 143262
+		// Token: 0x0401E188 RID: 123272
 		[Nullable(2)]
 		private static SwitcherManager _instance;
 	}

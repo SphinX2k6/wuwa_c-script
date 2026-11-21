@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000480 RID: 1152
+	// Token: 0x02000496 RID: 1174
 	public class ConfigKujiQuestAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001B0A RID: 6922 RVA: 0x000F237B File Offset: 0x000F057B
+		// Token: 0x06001B8E RID: 7054 RVA: 0x000F8ACF File Offset: 0x000F6CCF
 		static ConfigKujiQuestAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigKujiQuestAll.CreateStaticDefaultValue), new Action(ConfigKujiQuestAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001B0B RID: 6923 RVA: 0x000F239C File Offset: 0x000F059C
+		// Token: 0x06001B8F RID: 7055 RVA: 0x000F8AF0 File Offset: 0x000F6CF0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigKujiQuestAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001B0C RID: 6924 RVA: 0x000F241B File Offset: 0x000F061B
+		// Token: 0x06001B90 RID: 7056 RVA: 0x000F8B6F File Offset: 0x000F6D6F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigKujiQuestAll.LogPair = null;
 			ConfigKujiQuestAll.HandleId = 0;
 		}
 
-		// Token: 0x06001B0D RID: 6925 RVA: 0x000F2429 File Offset: 0x000F0629
+		// Token: 0x06001B91 RID: 7057 RVA: 0x000F8B7D File Offset: 0x000F6D7D
 		public static void Init()
 		{
 			ConfigKujiQuestAll.HandleId = ConfigCommon.InitDataStatement(ConfigKujiQuestAll.HandleId, "db_wuwukuji.db", "select BinData from `KujiQuest`");
 		}
 
-		// Token: 0x06001B0E RID: 6926 RVA: 0x000F2444 File Offset: 0x000F0644
+		// Token: 0x06001B92 RID: 7058 RVA: 0x000F8B98 File Offset: 0x000F6D98
 		[NullableContext(2)]
 		public static IReadOnlyList<KujiQuest> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04001F64 RID: 8036
+		// Token: 0x04001FFE RID: 8190
 		private const string DB = "db_wuwukuji.db";
 
-		// Token: 0x04001F65 RID: 8037
+		// Token: 0x04001FFF RID: 8191
 		private const string FILE = "w.呜呜一番赏.xlsx";
 
-		// Token: 0x04001F66 RID: 8038
+		// Token: 0x04002000 RID: 8192
 		private const string TABLE = "KujiQuest";
 
-		// Token: 0x04001F67 RID: 8039
+		// Token: 0x04002001 RID: 8193
 		private const string COMMAND = "select BinData from `KujiQuest`";
 
-		// Token: 0x04001F68 RID: 8040
+		// Token: 0x04002002 RID: 8194
 		private const string KEY_PREFIX = "KujiQuestAll";
 
-		// Token: 0x04001F69 RID: 8041
+		// Token: 0x04002003 RID: 8195
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001F6A RID: 8042
+		// Token: 0x04002004 RID: 8196
 		private static int HandleId;
 	}
 }

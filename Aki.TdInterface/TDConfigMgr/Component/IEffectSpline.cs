@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002F3 RID: 755
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200033A RID: 826
 	public class IEffectSpline : ISplineType
 	{
-		// Token: 0x06000E8F RID: 3727 RVA: 0x00034908 File Offset: 0x00032B08
+		// Token: 0x06000FBF RID: 4031 RVA: 0x0003783C File Offset: 0x00035A3C
 		private IEffectSpline_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000E90 RID: 3728 RVA: 0x00034940 File Offset: 0x00032B40
+		// Token: 0x06000FC0 RID: 4032 RVA: 0x00037874 File Offset: 0x00035A74
 		public static IEffectSpline Create([Nullable(2)] IEffectSpline instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000E91 RID: 3729 RVA: 0x00034953 File Offset: 0x00032B53
+		// Token: 0x06000FC1 RID: 4033 RVA: 0x00037887 File Offset: 0x00035A87
 		public static IEffectSpline CreateFromSetValue([Nullable(2)] IEffectSpline_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000E92 RID: 3730 RVA: 0x00034966 File Offset: 0x00032B66
+		// Token: 0x06000FC2 RID: 4034 RVA: 0x0003789A File Offset: 0x00035A9A
 		public new IEffectSpline_SetValue ToSetValue()
 		{
 			return new IEffectSpline_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000438 RID: 1080
-		// (get) Token: 0x06000E93 RID: 3731 RVA: 0x0003499D File Offset: 0x00032B9D
-		// (set) Token: 0x06000E94 RID: 3732 RVA: 0x000349C8 File Offset: 0x00032BC8
+		// Token: 0x17000485 RID: 1157
+		// (get) Token: 0x06000FC3 RID: 4035 RVA: 0x000378D1 File Offset: 0x00035AD1
+		// (set) Token: 0x06000FC4 RID: 4036 RVA: 0x000378FC File Offset: 0x00035AFC
 		public override ESplineType Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000439 RID: 1081
-		// (get) Token: 0x06000E95 RID: 3733 RVA: 0x000349D6 File Offset: 0x00032BD6
-		// (set) Token: 0x06000E96 RID: 3734 RVA: 0x00034A01 File Offset: 0x00032C01
+		// Token: 0x17000486 RID: 1158
+		// (get) Token: 0x06000FC5 RID: 4037 RVA: 0x0003790A File Offset: 0x00035B0A
+		// (set) Token: 0x06000FC6 RID: 4038 RVA: 0x00037935 File Offset: 0x00035B35
 		public virtual string Effect
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700043A RID: 1082
-		// (get) Token: 0x06000E97 RID: 3735 RVA: 0x00034A0F File Offset: 0x00032C0F
-		// (set) Token: 0x06000E98 RID: 3736 RVA: 0x00034A36 File Offset: 0x00032C36
+		// Token: 0x17000487 RID: 1159
+		// (get) Token: 0x06000FC7 RID: 4039 RVA: 0x00037943 File Offset: 0x00035B43
+		// (set) Token: 0x06000FC8 RID: 4040 RVA: 0x0003796A File Offset: 0x00035B6A
 		public virtual IEffectSplineCreationMode CreateOption
 		{
 			get
@@ -133,9 +131,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700043B RID: 1083
-		// (get) Token: 0x06000E99 RID: 3737 RVA: 0x00034A44 File Offset: 0x00032C44
-		// (set) Token: 0x06000E9A RID: 3738 RVA: 0x00034AD7 File Offset: 0x00032CD7
+		// Token: 0x17000488 RID: 1160
+		// (get) Token: 0x06000FC9 RID: 4041 RVA: 0x00037978 File Offset: 0x00035B78
+		// (set) Token: 0x06000FCA RID: 4042 RVA: 0x00037A0B File Offset: 0x00035C0B
 		public virtual List<ICommonSplinePoint> Points
 		{
 			get
@@ -171,18 +169,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000CD7 RID: 3287
+		// Token: 0x04000DC1 RID: 3521
 		[Nullable(2)]
 		protected new IEffectSpline FbInstance;
 
-		// Token: 0x04000CD8 RID: 3288
+		// Token: 0x04000DC2 RID: 3522
 		[Nullable(2)]
 		protected new IEffectSpline_SetValue PocoInterface;
 
-		// Token: 0x04000CD9 RID: 3289
+		// Token: 0x04000DC3 RID: 3523
 		private List<ICommonSplinePoint> _PointsCache;
 
-		// Token: 0x04000CDA RID: 3290
+		// Token: 0x04000DC4 RID: 3524
 		private bool _PointsInited;
 	}
 }

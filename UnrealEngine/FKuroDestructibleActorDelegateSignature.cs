@@ -5,16 +5,16 @@ using UnrealEngine.Interface;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001AE0 RID: 6880
+	// Token: 0x020004BE RID: 1214
 	public sealed class FKuroDestructibleActorDelegateSignature : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x06019A44 RID: 105028 RVA: 0x0025E491 File Offset: 0x0025C691
+		// Token: 0x06006FE4 RID: 28644 RVA: 0x000A55B1 File Offset: 0x000A37B1
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FKuroDestructibleActorDelegateSignature.StaticFunctionPtr();
 		}
 
-		// Token: 0x06019A45 RID: 105029 RVA: 0x0025E49D File Offset: 0x0025C69D
+		// Token: 0x06006FE5 RID: 28645 RVA: 0x000A55BD File Offset: 0x000A37BD
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FKuroDestructibleActorDelegateSignature._FunctionPtr == IntPtr.Zero)
@@ -24,32 +24,31 @@ namespace UnrealEngine
 			return FKuroDestructibleActorDelegateSignature._FunctionPtr;
 		}
 
-		// Token: 0x06019A46 RID: 105030 RVA: 0x0025E4C0 File Offset: 0x0025C6C0
+		// Token: 0x06006FE6 RID: 28646 RVA: 0x000A55E0 File Offset: 0x000A37E0
 		public FKuroDestructibleActorDelegateSignature()
 		{
 		}
 
-		// Token: 0x06019A47 RID: 105031 RVA: 0x0025E4C8 File Offset: 0x0025C6C8
+		// Token: 0x06006FE7 RID: 28647 RVA: 0x000A55E8 File Offset: 0x000A37E8
 		[NullableContext(2)]
 		public FKuroDestructibleActorDelegateSignature(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06019A48 RID: 105032 RVA: 0x0025E4D2 File Offset: 0x0025C6D2
+		// Token: 0x06006FE8 RID: 28648 RVA: 0x000A55F2 File Offset: 0x000A37F2
 		public FKuroDestructibleActorDelegateSignature(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06019A49 RID: 105033 RVA: 0x0025E4DD File Offset: 0x0025C6DD
+		// Token: 0x06006FE9 RID: 28649 RVA: 0x000A55FD File Offset: 0x000A37FD
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action) ?? ((Action)Delegate.CreateDelegate(typeof(Action), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06019A4A RID: 105034 RVA: 0x0025E50F File Offset: 0x0025C70F
+		// Token: 0x06006FEA RID: 28650 RVA: 0x000A562F File Offset: 0x000A382F
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action Callback)
 		{
 			if (FKuroDestructibleActorDelegateSignature.RegisterId == 0)
@@ -64,18 +63,16 @@ namespace UnrealEngine
 			base.Bind(Callback, FKuroDestructibleActorDelegateSignature.RegisterId);
 		}
 
-		// Token: 0x06019A4B RID: 105035 RVA: 0x0025E549 File Offset: 0x0025C749
+		// Token: 0x06006FEB RID: 28651 RVA: 0x000A5669 File Offset: 0x000A3869
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Execute()
 		{
 			base.ExecuteInternal(null);
 		}
 
-		// Token: 0x06019A4C RID: 105036 RVA: 0x0025E554 File Offset: 0x0025C754
+		// Token: 0x06006FEC RID: 28652 RVA: 0x000A5674 File Offset: 0x000A3874
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action action = target as Action;
@@ -86,21 +83,21 @@ namespace UnrealEngine
 			action();
 		}
 
-		// Token: 0x0400DF35 RID: 57141
+		// Token: 0x0400304F RID: 12367
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400DF36 RID: 57142
+		// Token: 0x04003050 RID: 12368
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroRenderingRuntimeBPPlugin.KuroDestructibleActorDelegateSignature__DelegateSignature";
 
-		// Token: 0x0400DF37 RID: 57143
+		// Token: 0x04003051 RID: 12369
 		private static int RegisterId;
 
-		// Token: 0x02003138 RID: 12600
+		// Token: 0x02000C06 RID: 3078
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016F48 RID: 94024
+			// Token: 0x04005E3B RID: 24123
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

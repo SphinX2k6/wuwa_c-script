@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000237 RID: 567
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200025E RID: 606
 	public class IChargingDevice : IProgressBarControl
 	{
-		// Token: 0x06000A08 RID: 2568 RVA: 0x0002A8C8 File Offset: 0x00028AC8
+		// Token: 0x06000A7C RID: 2684 RVA: 0x0002C088 File Offset: 0x0002A288
 		private IChargingDevice_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000A09 RID: 2569 RVA: 0x0002A900 File Offset: 0x00028B00
+		// Token: 0x06000A7D RID: 2685 RVA: 0x0002C0C0 File Offset: 0x0002A2C0
 		public static IChargingDevice Create([Nullable(2)] IChargingDevice instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000A0A RID: 2570 RVA: 0x0002A913 File Offset: 0x00028B13
+		// Token: 0x06000A7E RID: 2686 RVA: 0x0002C0D3 File Offset: 0x0002A2D3
 		public static IChargingDevice CreateFromSetValue([Nullable(2)] IChargingDevice_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000A0B RID: 2571 RVA: 0x0002A928 File Offset: 0x00028B28
+		// Token: 0x06000A7F RID: 2687 RVA: 0x0002C0E8 File Offset: 0x0002A2E8
 		public new IChargingDevice_SetValue ToSetValue()
 		{
 			return new IChargingDevice_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700030F RID: 783
-		// (get) Token: 0x06000A0C RID: 2572 RVA: 0x0002A982 File Offset: 0x00028B82
-		// (set) Token: 0x06000A0D RID: 2573 RVA: 0x0002A9AD File Offset: 0x00028BAD
+		// Token: 0x1700032E RID: 814
+		// (get) Token: 0x06000A80 RID: 2688 RVA: 0x0002C142 File Offset: 0x0002A342
+		// (set) Token: 0x06000A81 RID: 2689 RVA: 0x0002C16D File Offset: 0x0002A36D
 		public override EProgressBarControlType Type
 		{
 			get
@@ -87,9 +85,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000310 RID: 784
-		// (get) Token: 0x06000A0E RID: 2574 RVA: 0x0002A9BB File Offset: 0x00028BBB
-		// (set) Token: 0x06000A0F RID: 2575 RVA: 0x0002A9E6 File Offset: 0x00028BE6
+		// Token: 0x1700032F RID: 815
+		// (get) Token: 0x06000A82 RID: 2690 RVA: 0x0002C17B File Offset: 0x0002A37B
+		// (set) Token: 0x06000A83 RID: 2691 RVA: 0x0002C1A6 File Offset: 0x0002A3A6
 		public override int MaxValue
 		{
 			get
@@ -110,9 +108,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000311 RID: 785
-		// (get) Token: 0x06000A10 RID: 2576 RVA: 0x0002A9F4 File Offset: 0x00028BF4
-		// (set) Token: 0x06000A11 RID: 2577 RVA: 0x0002AA1F File Offset: 0x00028C1F
+		// Token: 0x17000330 RID: 816
+		// (get) Token: 0x06000A84 RID: 2692 RVA: 0x0002C1B4 File Offset: 0x0002A3B4
+		// (set) Token: 0x06000A85 RID: 2693 RVA: 0x0002C1DF File Offset: 0x0002A3DF
 		public override int InitValue
 		{
 			get
@@ -133,9 +131,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000312 RID: 786
-		// (get) Token: 0x06000A12 RID: 2578 RVA: 0x0002AA30 File Offset: 0x00028C30
-		// (set) Token: 0x06000A13 RID: 2579 RVA: 0x0002AA6A File Offset: 0x00028C6A
+		// Token: 0x17000331 RID: 817
+		// (get) Token: 0x06000A86 RID: 2694 RVA: 0x0002C1F0 File Offset: 0x0002A3F0
+		// (set) Token: 0x06000A87 RID: 2695 RVA: 0x0002C22A File Offset: 0x0002A42A
 		public override int? ProgressPerformanceAttribute
 		{
 			get
@@ -157,9 +155,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000313 RID: 787
-		// (get) Token: 0x06000A14 RID: 2580 RVA: 0x0002AA78 File Offset: 0x00028C78
-		// (set) Token: 0x06000A15 RID: 2581 RVA: 0x0002AAA3 File Offset: 0x00028CA3
+		// Token: 0x17000332 RID: 818
+		// (get) Token: 0x06000A88 RID: 2696 RVA: 0x0002C238 File Offset: 0x0002A438
+		// (set) Token: 0x06000A89 RID: 2697 RVA: 0x0002C263 File Offset: 0x0002A463
 		public virtual int IncreaseSpeed
 		{
 			get
@@ -180,9 +178,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000314 RID: 788
-		// (get) Token: 0x06000A16 RID: 2582 RVA: 0x0002AAB1 File Offset: 0x00028CB1
-		// (set) Token: 0x06000A17 RID: 2583 RVA: 0x0002AADC File Offset: 0x00028CDC
+		// Token: 0x17000333 RID: 819
+		// (get) Token: 0x06000A8A RID: 2698 RVA: 0x0002C271 File Offset: 0x0002A471
+		// (set) Token: 0x06000A8B RID: 2699 RVA: 0x0002C29C File Offset: 0x0002A49C
 		public virtual int HitExtraValue
 		{
 			get
@@ -203,11 +201,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000A2D RID: 2605
+		// Token: 0x04000AB7 RID: 2743
 		[Nullable(2)]
 		protected new IChargingDevice FbInstance;
 
-		// Token: 0x04000A2E RID: 2606
+		// Token: 0x04000AB8 RID: 2744
 		[Nullable(2)]
 		protected new IChargingDevice_SetValue PocoInterface;
 	}

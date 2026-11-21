@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020000A0 RID: 160
+	// Token: 0x020000A8 RID: 168
 	public class ConfigAreaByAreaId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060003C0 RID: 960 RVA: 0x0006EBF8 File Offset: 0x0006CDF8
+		// Token: 0x060003F0 RID: 1008 RVA: 0x000734AC File Offset: 0x000716AC
 		static ConfigAreaByAreaId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAreaByAreaId.CreateStaticDefaultValue), new Action(ConfigAreaByAreaId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060003C1 RID: 961 RVA: 0x0006EC18 File Offset: 0x0006CE18
+		// Token: 0x060003F1 RID: 1009 RVA: 0x000734CC File Offset: 0x000716CC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAreaByAreaId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060003C2 RID: 962 RVA: 0x0006EC97 File Offset: 0x0006CE97
+		// Token: 0x060003F2 RID: 1010 RVA: 0x0007354B File Offset: 0x0007174B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAreaByAreaId.LogPair = null;
 			ConfigAreaByAreaId.HandleId = 0;
 		}
 
-		// Token: 0x060003C3 RID: 963 RVA: 0x0006ECA5 File Offset: 0x0006CEA5
+		// Token: 0x060003F3 RID: 1011 RVA: 0x00073559 File Offset: 0x00071759
 		public static void Init()
 		{
 			ConfigAreaByAreaId.HandleId = ConfigCommon.InitDataStatement(ConfigAreaByAreaId.HandleId, "db_area.db", "select BinData from `Area` where AreaId=?");
 		}
 
-		// Token: 0x060003C4 RID: 964 RVA: 0x0006ECC0 File Offset: 0x0006CEC0
+		// Token: 0x060003F4 RID: 1012 RVA: 0x00073574 File Offset: 0x00071774
 		public static Area? GetConfig(int p0AreaId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigAreaByAreaId.HandleId, ConfigAreaByAreaId.LogPair))
@@ -89,7 +89,7 @@ namespace Aki.Config
 			return new Area?(rootAsArea);
 		}
 
-		// Token: 0x060003C5 RID: 965 RVA: 0x0006EE38 File Offset: 0x0006D038
+		// Token: 0x060003F5 RID: 1013 RVA: 0x000736EC File Offset: 0x000718EC
 		[NullableContext(2)]
 		public static IReadOnlyList<Area> GetConfigList(int p0AreaId, bool useCache = true)
 		{
@@ -142,22 +142,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04000444 RID: 1092
+		// Token: 0x0400047C RID: 1148
 		private const string DB = "db_area.db";
 
-		// Token: 0x04000445 RID: 1093
+		// Token: 0x0400047D RID: 1149
 		private const string FILE = "q.区域.xlsx";
 
-		// Token: 0x04000446 RID: 1094
+		// Token: 0x0400047E RID: 1150
 		private const string TABLE = "Area";
 
-		// Token: 0x04000447 RID: 1095
+		// Token: 0x0400047F RID: 1151
 		private const string COMMAND = "select BinData from `Area` where AreaId=?";
 
-		// Token: 0x04000448 RID: 1096
+		// Token: 0x04000480 RID: 1152
 		private const string KEY_PREFIX = "AreaByAreaId";
 
-		// Token: 0x04000449 RID: 1097
+		// Token: 0x04000481 RID: 1153
 		[Nullable(new byte[]
 		{
 			2,
@@ -167,7 +167,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400044A RID: 1098
+		// Token: 0x04000482 RID: 1154
 		private static int HandleId;
 	}
 }

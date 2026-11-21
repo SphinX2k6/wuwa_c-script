@@ -3,10 +3,10 @@ using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001080 RID: 4224
+	// Token: 0x020011AE RID: 4526
 	public class IQuestFailedConfig_SetValue
 	{
-		// Token: 0x0400396D RID: 14701
+		// Token: 0x04003CBA RID: 15546
 		public EOnlineParticipateRule? OnlineParticipateRule;
 	}
 }

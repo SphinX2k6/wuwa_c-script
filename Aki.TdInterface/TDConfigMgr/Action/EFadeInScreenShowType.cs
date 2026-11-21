@@ -4,14 +4,14 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020015E3 RID: 5603
+	// Token: 0x02001743 RID: 5955
 	[JsonConverter(typeof(EFadeInScreenShowTypeJsonConverter))]
 	[EnumExtensions]
 	public enum EFadeInScreenShowType
 	{
-		// Token: 0x04004AC4 RID: 19140
+		// Token: 0x04004E84 RID: 20100
 		White,
-		// Token: 0x04004AC5 RID: 19141
+		// Token: 0x04004E85 RID: 20101
 		Black
 	}
 }

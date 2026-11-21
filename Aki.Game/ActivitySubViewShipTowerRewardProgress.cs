@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001505 RID: 5381
+// Token: 0x020009BD RID: 2493
 public class ActivitySubViewShipTowerRewardProgress : UiPanelBase
 {
-	// Token: 0x0600998E RID: 39310 RVA: 0x00213BA0 File Offset: 0x00211DA0
+	// Token: 0x06006D68 RID: 28008 RVA: 0x0021D8BC File Offset: 0x0021BABC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -22,7 +22,7 @@ public class ActivitySubViewShipTowerRewardProgress : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600998F RID: 39311 RVA: 0x00213C0C File Offset: 0x00211E0C
+	// Token: 0x06006D69 RID: 28009 RVA: 0x0021D928 File Offset: 0x0021BB28
 	[NullableContext(1)]
 	public void SetData(ShipTowerAreaItemData data)
 	{
@@ -48,12 +48,12 @@ public class ActivitySubViewShipTowerRewardProgress : UiPanelBase
 		text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 	}
 
-	// Token: 0x02007B3F RID: 31551
+	// Token: 0x02006CCA RID: 27850
 	private enum EChildTypeRewardProgress
 	{
-		// Token: 0x04028883 RID: 166019
+		// Token: 0x04023BBF RID: 146367
 		TxtRewardName,
-		// Token: 0x04028884 RID: 166020
+		// Token: 0x04023BC0 RID: 146368
 		TxtRewardProgress
 	}
 }

@@ -2,34 +2,34 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004D27 RID: 19751
+	// Token: 0x02005223 RID: 21027
 	public enum TAccessQuestCondition : byte
 	{
-		// Token: 0x0400D716 RID: 55062
+		// Token: 0x0400E244 RID: 57924
 		NONE,
-		// Token: 0x0400D717 RID: 55063
+		// Token: 0x0400E245 RID: 57925
 		IDungeonQuestPreCondition,
-		// Token: 0x0400D718 RID: 55064
+		// Token: 0x0400E246 RID: 57926
 		IExploreLevelCondtion,
-		// Token: 0x0400D719 RID: 55065
+		// Token: 0x0400E247 RID: 57927
 		IFeatureCollectionLevelPreCondition,
-		// Token: 0x0400D71A RID: 55066
+		// Token: 0x0400E248 RID: 57928
 		IItemCondition,
-		// Token: 0x0400D71B RID: 55067
+		// Token: 0x0400E249 RID: 57929
 		IPreChildQuestCondtion,
-		// Token: 0x0400D71C RID: 55068
+		// Token: 0x0400E24A RID: 57930
 		IPreGenderCondtion,
-		// Token: 0x0400D71D RID: 55069
+		// Token: 0x0400E24B RID: 57931
 		IPreLevelPlayCondtion,
-		// Token: 0x0400D71E RID: 55070
+		// Token: 0x0400E24C RID: 57932
 		IPreQuestCondtion,
-		// Token: 0x0400D71F RID: 55071
+		// Token: 0x0400E24D RID: 57933
 		IReachAreaCondtion,
-		// Token: 0x0400D720 RID: 55072
+		// Token: 0x0400E24E RID: 57934
 		ISystemStateConditon,
-		// Token: 0x0400D721 RID: 55073
+		// Token: 0x0400E24F RID: 57935
 		IOpenDateConditon,
-		// Token: 0x0400D722 RID: 55074
+		// Token: 0x0400E250 RID: 57936
 		IMapThemedActivityReachRank
 	}
 }

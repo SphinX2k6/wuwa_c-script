@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002FB1 RID: 12209
+// Token: 0x02002505 RID: 9477
 [NullableContext(2)]
 [Nullable(0)]
 public class GameplayCueArcRope : GameplayCueBase
 {
-	// Token: 0x06019E27 RID: 106023 RVA: 0x006C4774 File Offset: 0x006C2974
+	// Token: 0x06017738 RID: 96056 RVA: 0x006EB020 File Offset: 0x006E9220
 	protected override void OnInit()
 	{
 		string[] array = this.CueConfig.Socket.Split('#', StringSplitOptions.None);
@@ -19,7 +19,7 @@ public class GameplayCueArcRope : GameplayCueBase
 		}
 	}
 
-	// Token: 0x06019E28 RID: 106024 RVA: 0x006C47D4 File Offset: 0x006C29D4
+	// Token: 0x06017739 RID: 96057 RVA: 0x006EB080 File Offset: 0x006E9280
 	protected override void OnCreate()
 	{
 		this.RopeActor = this.CreateRopeActor();
@@ -39,7 +39,7 @@ public class GameplayCueArcRope : GameplayCueBase
 		this.LoadDataAssetAndSetup();
 	}
 
-	// Token: 0x06019E29 RID: 106025 RVA: 0x006C4874 File Offset: 0x006C2A74
+	// Token: 0x0601773A RID: 96058 RVA: 0x006EB120 File Offset: 0x006E9320
 	protected override void OnTick(float delta)
 	{
 		if (this.ArcRopeComponent == null || this.PendingNiagara == null)
@@ -82,7 +82,7 @@ public class GameplayCueArcRope : GameplayCueBase
 		this.ArcRopeComponent.SetEndpoints(targetPoint, meshSocketLocation);
 	}
 
-	// Token: 0x06019E2A RID: 106026 RVA: 0x006C49A0 File Offset: 0x006C2BA0
+	// Token: 0x0601773B RID: 96059 RVA: 0x006EB24C File Offset: 0x006E944C
 	protected override void OnDestroy()
 	{
 		this.IsActive = false;
@@ -100,13 +100,13 @@ public class GameplayCueArcRope : GameplayCueBase
 		this.ArcRopeComponent = null;
 	}
 
-	// Token: 0x06019E2B RID: 106027 RVA: 0x006C4A16 File Offset: 0x006C2C16
+	// Token: 0x0601773C RID: 96060 RVA: 0x006EB2C2 File Offset: 0x006E94C2
 	public new static bool IsSingleInstance()
 	{
 		return false;
 	}
 
-	// Token: 0x06019E2C RID: 106028 RVA: 0x006C4A1C File Offset: 0x006C2C1C
+	// Token: 0x0601773D RID: 96061 RVA: 0x006EB2C8 File Offset: 0x006E94C8
 	private AActor CreateRopeActor()
 	{
 		AActor aactor = ActorSystem.Instance.Get(AActor.StaticClass(), MathUtils.Instance.DefaultTransformDouble, null, true);
@@ -124,7 +124,7 @@ public class GameplayCueArcRope : GameplayCueBase
 		return aactor;
 	}
 
-	// Token: 0x06019E2D RID: 106029 RVA: 0x006C4AC4 File Offset: 0x006C2CC4
+	// Token: 0x0601773E RID: 96062 RVA: 0x006EB370 File Offset: 0x006E9570
 	private void LoadDataAssetAndSetup()
 	{
 		UArcRopeComponent comp = this.ArcRopeComponent;
@@ -168,7 +168,7 @@ public class GameplayCueArcRope : GameplayCueBase
 		}, 100, "js_undefined");
 	}
 
-	// Token: 0x06019E2E RID: 106030 RVA: 0x006C4B74 File Offset: 0x006C2D74
+	// Token: 0x0601773F RID: 96063 RVA: 0x006EB420 File Offset: 0x006E9620
 	[NullableContext(1)]
 	private void SetupRope(UArcRopeComponent rope, UArcRopeDataAsset dataAsset)
 	{
@@ -210,7 +210,7 @@ public class GameplayCueArcRope : GameplayCueBase
 		}, 100, "js_undefined");
 	}
 
-	// Token: 0x06019E2F RID: 106031 RVA: 0x006C4C2D File Offset: 0x006C2E2D
+	// Token: 0x06017740 RID: 96064 RVA: 0x006EB4D9 File Offset: 0x006E96D9
 	private void SetRopeVisible(bool visible)
 	{
 		if (this.IsRopeHidden == !visible)
@@ -226,7 +226,7 @@ public class GameplayCueArcRope : GameplayCueBase
 		ropeActor.SetActorHiddenInGame(!visible);
 	}
 
-	// Token: 0x06019E30 RID: 106032 RVA: 0x006C4C5C File Offset: 0x006C2E5C
+	// Token: 0x06017741 RID: 96065 RVA: 0x006EB508 File Offset: 0x006E9708
 	private void RefreshTarget()
 	{
 		EntityHandle entityHandle = null;
@@ -289,7 +289,7 @@ public class GameplayCueArcRope : GameplayCueBase
 		this.TargetSocket = targetSocket;
 	}
 
-	// Token: 0x06019E31 RID: 106033 RVA: 0x006C4D84 File Offset: 0x006C2F84
+	// Token: 0x06017742 RID: 96066 RVA: 0x006EB630 File Offset: 0x006E9830
 	[NullableContext(1)]
 	private FVector GetTargetPoint(TsBaseCharacter targetActor, string socketName)
 	{
@@ -316,7 +316,7 @@ public class GameplayCueArcRope : GameplayCueBase
 		return mesh.GetSocketLocation(fname2.Value);
 	}
 
-	// Token: 0x06019E32 RID: 106034 RVA: 0x006C4E0C File Offset: 0x006C300C
+	// Token: 0x06017743 RID: 96067 RVA: 0x006EB6B8 File Offset: 0x006E98B8
 	[NullableContext(1)]
 	private static FVector GetMeshSocketLocation(ABaseCharacter actor, FName? socket)
 	{
@@ -328,35 +328,35 @@ public class GameplayCueArcRope : GameplayCueBase
 		return actor.K2_GetActorLocation();
 	}
 
-	// Token: 0x0400C3C6 RID: 50118
+	// Token: 0x0400C76F RID: 51055
 	private AActor RopeActor;
 
-	// Token: 0x0400C3C7 RID: 50119
+	// Token: 0x0400C770 RID: 51056
 	private UArcRopeComponent ArcRopeComponent;
 
-	// Token: 0x0400C3C8 RID: 50120
+	// Token: 0x0400C771 RID: 51057
 	private List<FName> Sockets;
 
-	// Token: 0x0400C3C9 RID: 50121
+	// Token: 0x0400C772 RID: 51058
 	private UNiagaraSystem PendingNiagara;
 
-	// Token: 0x0400C3CA RID: 50122
+	// Token: 0x0400C773 RID: 51059
 	private bool NiagaraStarted;
 
-	// Token: 0x0400C3CB RID: 50123
+	// Token: 0x0400C774 RID: 51060
 	private int LoadGeneration;
 
-	// Token: 0x0400C3CC RID: 50124
+	// Token: 0x0400C775 RID: 51061
 	private bool IsRopeHidden;
 
-	// Token: 0x0400C3CD RID: 50125
+	// Token: 0x0400C776 RID: 51062
 	private TsBaseCharacter TargetActor;
 
-	// Token: 0x0400C3CE RID: 50126
+	// Token: 0x0400C777 RID: 51063
 	[Nullable(1)]
 	private string TargetSocket = string.Empty;
 
-	// Token: 0x0400C3CF RID: 50127
+	// Token: 0x0400C778 RID: 51064
 	[Nullable(1)]
 	private FHitResult SweepHitResult;
 }

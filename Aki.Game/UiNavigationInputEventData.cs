@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002CCA RID: 11466
+// Token: 0x02002223 RID: 8739
 [NullableContext(1)]
 [Nullable(0)]
 public class UiNavigationInputEventData : IStaticVariableResetter
 {
-	// Token: 0x06018052 RID: 98386 RVA: 0x0061AF6D File Offset: 0x0061916D
+	// Token: 0x060158CF RID: 88271 RVA: 0x00640B69 File Offset: 0x0063ED69
 	static UiNavigationInputEventData()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(UiNavigationInputEventData.CreateStaticDefaultValue), new Action(UiNavigationInputEventData.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06018053 RID: 98387 RVA: 0x0061AF8C File Offset: 0x0061918C
+	// Token: 0x060158D0 RID: 88272 RVA: 0x00640B88 File Offset: 0x0063ED88
 	public static void CreateStaticDefaultValue()
 	{
 		UiNavigationInputEventData.CurrentMaxEventId = 999;
@@ -21,7 +21,7 @@ public class UiNavigationInputEventData : IStaticVariableResetter
 		UiNavigationInputEventData.InUseInputEventDataMap = new Dictionary<int, Dictionary<TsUiNavigationBehaviorListener, int>>();
 	}
 
-	// Token: 0x06018054 RID: 98388 RVA: 0x0061AFAC File Offset: 0x006191AC
+	// Token: 0x060158D1 RID: 88273 RVA: 0x00640BA8 File Offset: 0x0063EDA8
 	public static void ResetStaticDefaultValue()
 	{
 		UiNavigationInputEventData.CurrentMaxEventId = 999;
@@ -29,13 +29,13 @@ public class UiNavigationInputEventData : IStaticVariableResetter
 		UiNavigationInputEventData.InUseInputEventDataMap = null;
 	}
 
-	// Token: 0x06018055 RID: 98389 RVA: 0x0061AFC4 File Offset: 0x006191C4
+	// Token: 0x060158D2 RID: 88274 RVA: 0x00640BC0 File Offset: 0x0063EDC0
 	public static int ActivateInputEventDataOnce()
 	{
 		return UiNavigationInputEventData.CurrentMaxEventId;
 	}
 
-	// Token: 0x06018056 RID: 98390 RVA: 0x0061AFCC File Offset: 0x006191CC
+	// Token: 0x060158D3 RID: 88275 RVA: 0x00640BC8 File Offset: 0x0063EDC8
 	public static int CreateInputEventData(int configId, TsUiNavigationBehaviorListener listener)
 	{
 		Dictionary<TsUiNavigationBehaviorListener, int> dictionary;
@@ -63,7 +63,7 @@ public class UiNavigationInputEventData : IStaticVariableResetter
 		return num;
 	}
 
-	// Token: 0x06018057 RID: 98391 RVA: 0x0061B04C File Offset: 0x0061924C
+	// Token: 0x060158D4 RID: 88276 RVA: 0x00640C48 File Offset: 0x0063EE48
 	public static int RecycleInputEventData(int configId, TsUiNavigationBehaviorListener listener)
 	{
 		Dictionary<TsUiNavigationBehaviorListener, int> dictionary;
@@ -81,7 +81,7 @@ public class UiNavigationInputEventData : IStaticVariableResetter
 		return 999;
 	}
 
-	// Token: 0x06018058 RID: 98392 RVA: 0x0061B09C File Offset: 0x0061929C
+	// Token: 0x060158D5 RID: 88277 RVA: 0x00640C98 File Offset: 0x0063EE98
 	public static List<int> TryClearUnValidData()
 	{
 		List<int> list = new List<int>();
@@ -108,12 +108,12 @@ public class UiNavigationInputEventData : IStaticVariableResetter
 		return list;
 	}
 
-	// Token: 0x0400B2E5 RID: 45797
+	// Token: 0x0400B651 RID: 46673
 	protected static int CurrentMaxEventId;
 
-	// Token: 0x0400B2E6 RID: 45798
+	// Token: 0x0400B652 RID: 46674
 	protected static List<int> EmptyEventIdList;
 
-	// Token: 0x0400B2E7 RID: 45799
+	// Token: 0x0400B653 RID: 46675
 	protected static Dictionary<int, Dictionary<TsUiNavigationBehaviorListener, int>> InUseInputEventDataMap;
 }

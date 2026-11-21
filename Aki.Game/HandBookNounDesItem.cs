@@ -5,12 +5,12 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001E3E RID: 7742
+// Token: 0x02001300 RID: 4864
 [NullableContext(2)]
 [Nullable(0)]
 internal class HandBookNounDesItem : UiPanelBase
 {
-	// Token: 0x0600EB4C RID: 60236 RVA: 0x0037C858 File Offset: 0x0037AA58
+	// Token: 0x0600BF6B RID: 49003 RVA: 0x003884F8 File Offset: 0x003866F8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,13 +28,13 @@ internal class HandBookNounDesItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600EB4D RID: 60237 RVA: 0x0037C917 File Offset: 0x0037AB17
+	// Token: 0x0600BF6C RID: 49004 RVA: 0x003885B7 File Offset: 0x003867B7
 	protected override void OnStart()
 	{
 		this.Toggle = base.GetExtendToggle(0);
 	}
 
-	// Token: 0x0600EB4E RID: 60238 RVA: 0x0037C926 File Offset: 0x0037AB26
+	// Token: 0x0600BF6D RID: 49005 RVA: 0x003885C6 File Offset: 0x003867C6
 	private void OnToggleClicked(EToggleState state)
 	{
 		if (this.OnChildToggleCallback != null && state == EToggleState.ETT_Checked)
@@ -43,7 +43,7 @@ internal class HandBookNounDesItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600EB4F RID: 60239 RVA: 0x0037C950 File Offset: 0x0037AB50
+	// Token: 0x0600BF6E RID: 49006 RVA: 0x003885F0 File Offset: 0x003867F0
 	public void Refresh(int data, bool isSelect)
 	{
 		NounHandBook? nounHandBookConfig = HandBookConfig.Instance.GetNounHandBookConfig(data);
@@ -91,14 +91,14 @@ internal class HandBookNounDesItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600EB50 RID: 60240 RVA: 0x0037CA81 File Offset: 0x0037AC81
+	// Token: 0x0600BF6F RID: 49007 RVA: 0x00388721 File Offset: 0x00386921
 	[NullableContext(1)]
 	public void BindChildToggleCallback(TChildNounToggleFunction toggleFunction)
 	{
 		this.OnChildToggleCallback = toggleFunction;
 	}
 
-	// Token: 0x0600EB51 RID: 60241 RVA: 0x0037CA8C File Offset: 0x0037AC8C
+	// Token: 0x0600BF70 RID: 49008 RVA: 0x0038872C File Offset: 0x0038692C
 	public void RefreshNewState()
 	{
 		if (this.NounConfig == null)
@@ -110,15 +110,15 @@ internal class HandBookNounDesItem : UiPanelBase
 		base.GetItem(4).SetUIActive(uiactive);
 	}
 
-	// Token: 0x04006D32 RID: 27954
+	// Token: 0x04006E13 RID: 28179
 	private TChildNounToggleFunction OnChildToggleCallback;
 
-	// Token: 0x04006D33 RID: 27955
+	// Token: 0x04006E14 RID: 28180
 	private NounHandBook? NounConfig;
 
-	// Token: 0x04006D34 RID: 27956
+	// Token: 0x04006E15 RID: 28181
 	private bool IsLock;
 
-	// Token: 0x04006D35 RID: 27957
+	// Token: 0x04006E16 RID: 28182
 	private UUIExtendToggle Toggle;
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.Activity.ActivityContent.Roverlike;
@@ -9,31 +8,31 @@ using Google.FlatBuffers;
 
 namespace CSharpScript.Game.Module.Inventory
 {
-	// Token: 0x0200582F RID: 22575
+	// Token: 0x02004806 RID: 18438
 	[NullableContext(2)]
 	[Nullable(0)]
 	[Config(0)]
 	public class InventoryConfig : ConfigBase
 	{
-		// Token: 0x060395A4 RID: 234916 RVA: 0x00D9A2A4 File Offset: 0x00D984A4
+		// Token: 0x0602E4B8 RID: 189624 RVA: 0x00CE9138 File Offset: 0x00CE7338
 		public InventoryConfig()
 		{
 			this.Lru = new Lru<int, ItemConfig>(256, new Func<int, ItemConfig>(this.GetItemConfigDataRef), null);
 		}
 
-		// Token: 0x060395A5 RID: 234917 RVA: 0x00D9A30F File Offset: 0x00D9850F
+		// Token: 0x0602E4B9 RID: 189625 RVA: 0x00CE91A3 File Offset: 0x00CE73A3
 		public IReadOnlyList<ItemMainType> GetAllMainTypeConfig()
 		{
 			return ConfigItemMainTypeAll.GetConfigList(true);
 		}
 
-		// Token: 0x060395A6 RID: 234918 RVA: 0x00D9A317 File Offset: 0x00D98517
+		// Token: 0x0602E4BA RID: 189626 RVA: 0x00CE91AB File Offset: 0x00CE73AB
 		public ItemMainType? GetItemMainTypeConfig(int itemTypeId)
 		{
 			return ConfigItemMainTypeById.GetConfig(itemTypeId, true);
 		}
 
-		// Token: 0x060395A7 RID: 234919 RVA: 0x00D9A320 File Offset: 0x00D98520
+		// Token: 0x0602E4BB RID: 189627 RVA: 0x00CE91B4 File Offset: 0x00CE73B4
 		public int? GetItemMainTypeFilterSortUseWayId(int itemTypeId)
 		{
 			ItemMainType? itemMainTypeConfig = this.GetItemMainTypeConfig(itemTypeId);
@@ -44,19 +43,19 @@ namespace CSharpScript.Game.Module.Inventory
 			return new int?(itemMainTypeConfig.Value.UseWayId);
 		}
 
-		// Token: 0x060395A8 RID: 234920 RVA: 0x00D9A35C File Offset: 0x00D9855C
+		// Token: 0x0602E4BC RID: 189628 RVA: 0x00CE91F0 File Offset: 0x00CE73F0
 		public AccessPath? GetAccessPathConfig(int accessPathId)
 		{
 			return ConfigAccessPathById.GetConfig(accessPathId, true);
 		}
 
-		// Token: 0x060395A9 RID: 234921 RVA: 0x00D9A365 File Offset: 0x00D98565
+		// Token: 0x0602E4BD RID: 189629 RVA: 0x00CE91F9 File Offset: 0x00CE73F9
 		public QualityInfo? GetItemQualityConfig(int qualityId)
 		{
 			return ConfigQualityInfoById.GetConfig(qualityId, true);
 		}
 
-		// Token: 0x060395AA RID: 234922 RVA: 0x00D9A370 File Offset: 0x00D98570
+		// Token: 0x0602E4BE RID: 189630 RVA: 0x00CE9204 File Offset: 0x00CE7404
 		public ItemConfig GetItemConfigData(int configId)
 		{
 			ItemConfig itemConfig = this.Lru.Get(configId);
@@ -74,7 +73,7 @@ namespace CSharpScript.Game.Module.Inventory
 			return itemConfig;
 		}
 
-		// Token: 0x060395AB RID: 234923 RVA: 0x00D9A3BC File Offset: 0x00D985BC
+		// Token: 0x0602E4BF RID: 189631 RVA: 0x00CE9250 File Offset: 0x00CE7450
 		public string GetItemConfigValueByParam(int configId, string param, [Nullable(1)] string tag)
 		{
 			ItemConfig itemConfigDataRef = this.GetItemConfigDataRef(configId);
@@ -107,7 +106,7 @@ namespace CSharpScript.Game.Module.Inventory
 			return itemConfigDataRef.IconBig;
 		}
 
-		// Token: 0x060395AC RID: 234924 RVA: 0x00D9A458 File Offset: 0x00D98658
+		// Token: 0x0602E4C0 RID: 189632 RVA: 0x00CE92EC File Offset: 0x00CE74EC
 		private ItemConfig GetItemConfigDataRef(int configId)
 		{
 			IFlatbufferObject flatbufferObject = null;
@@ -242,7 +241,7 @@ namespace CSharpScript.Game.Module.Inventory
 			return itemConfig;
 		}
 
-		// Token: 0x060395AD RID: 234925 RVA: 0x00D9A7D4 File Offset: 0x00D989D4
+		// Token: 0x0602E4C1 RID: 189633 RVA: 0x00CE9668 File Offset: 0x00CE7868
 		public InventoryDefine.EItemDataType GetItemDataTypeByConfigId(int? configId)
 		{
 			if (configId == null)
@@ -253,7 +252,19 @@ namespace CSharpScript.Game.Module.Inventory
 			{
 				this.ErrorPhantomSpecialIdList = this.GetErrorPhantomSpecialIdList();
 			}
-			if (this.ErrorPhantomSpecialIdList != null && this.ErrorPhantomSpecialIdList.Contains(configId.Value))
+			bool flag = false;
+			if (this.ErrorPhantomSpecialIdList != null)
+			{
+				for (int i = 0; i < this.ErrorPhantomSpecialIdList.Count; i++)
+				{
+					if (this.ErrorPhantomSpecialIdList[i] == configId.Value)
+					{
+						flag = true;
+						break;
+					}
+				}
+			}
+			if (flag)
 			{
 				return InventoryDefine.EItemDataType.PhantomCustomize;
 			}
@@ -634,37 +645,37 @@ namespace CSharpScript.Game.Module.Inventory
 			return InventoryDefine.EItemDataType.CommonItem;
 		}
 
-		// Token: 0x060395AE RID: 234926 RVA: 0x00D9B108 File Offset: 0x00D99308
+		// Token: 0x0602E4C2 RID: 189634 RVA: 0x00CE9FBC File Offset: 0x00CE81BC
 		public ItemInfo? GetItemConfig(int itemConfigId)
 		{
 			return ConfigItemInfoById.GetConfig(itemConfigId, true);
 		}
 
-		// Token: 0x060395AF RID: 234927 RVA: 0x00D9B111 File Offset: 0x00D99311
+		// Token: 0x0602E4C3 RID: 189635 RVA: 0x00CE9FC5 File Offset: 0x00CE81C5
 		public PreviewItem? GetPreviewItemConfig(int itemConfigId)
 		{
 			return ConfigPreviewItemById.GetConfig(itemConfigId, true);
 		}
 
-		// Token: 0x060395B0 RID: 234928 RVA: 0x00D9B11A File Offset: 0x00D9931A
+		// Token: 0x0602E4C4 RID: 189636 RVA: 0x00CE9FCE File Offset: 0x00CE81CE
 		public WeaponConf? GetWeaponItemConfig(int configId)
 		{
 			return ConfigWeaponConfByItemId.GetConfig(configId, true);
 		}
 
-		// Token: 0x060395B1 RID: 234929 RVA: 0x00D9B123 File Offset: 0x00D99323
+		// Token: 0x0602E4C5 RID: 189637 RVA: 0x00CE9FD7 File Offset: 0x00CE81D7
 		public PhantomItem? GetPhantomItemConfig(int configId)
 		{
 			return ConfigPhantomItemByItemId.GetConfig(configId, true);
 		}
 
-		// Token: 0x060395B2 RID: 234930 RVA: 0x00D9B12C File Offset: 0x00D9932C
+		// Token: 0x0602E4C6 RID: 189638 RVA: 0x00CE9FE0 File Offset: 0x00CE81E0
 		public PhantomCustomizeItem? GetPhantomCustomizeItemConfig(int configId)
 		{
 			return ConfigPhantomCustomizeItemByItemId.GetConfig(configId, true);
 		}
 
-		// Token: 0x060395B3 RID: 234931 RVA: 0x00D9B138 File Offset: 0x00D99338
+		// Token: 0x0602E4C7 RID: 189639 RVA: 0x00CE9FEC File Offset: 0x00CE81EC
 		public IReadOnlyList<PhantomItem> GetPhantomItemConfigListByMonsterId(int monsterId)
 		{
 			IReadOnlyList<PhantomItem> configList = ConfigPhantomItemByMonsterId.GetConfigList(monsterId, true);
@@ -680,49 +691,49 @@ namespace CSharpScript.Game.Module.Inventory
 			return configList;
 		}
 
-		// Token: 0x060395B4 RID: 234932 RVA: 0x00D9B17A File Offset: 0x00D9937A
+		// Token: 0x0602E4C8 RID: 189640 RVA: 0x00CEA02E File Offset: 0x00CE822E
 		public BackgroundCard? GetCardItemConfig(int configId)
 		{
 			return ConfigBackgroundCardById.GetConfig(configId, true);
 		}
 
-		// Token: 0x060395B5 RID: 234933 RVA: 0x00D9B183 File Offset: 0x00D99383
+		// Token: 0x0602E4C9 RID: 189641 RVA: 0x00CEA037 File Offset: 0x00CE8237
 		public IReadOnlyList<int> GetErrorPhantomSpecialIdList()
 		{
 			return ConfigCommonParamById.GetIntArrayConfig("SpecialPhantomCustomizeItem");
 		}
 
-		// Token: 0x060395B6 RID: 234934 RVA: 0x00D9B18F File Offset: 0x00D9938F
+		// Token: 0x0602E4CA RID: 189642 RVA: 0x00CEA043 File Offset: 0x00CE8243
 		public IReadOnlyList<PackageCapacity> GetAllPackageConfig()
 		{
 			return ConfigPackageCapacityAll.GetConfigList(true);
 		}
 
-		// Token: 0x060395B7 RID: 234935 RVA: 0x00D9B197 File Offset: 0x00D99397
+		// Token: 0x0602E4CB RID: 189643 RVA: 0x00CEA04B File Offset: 0x00CE824B
 		public PackageCapacity? GetPackageConfig(int packageConfigId)
 		{
 			return ConfigPackageCapacityByPackageId.GetConfig(packageConfigId, true);
 		}
 
-		// Token: 0x060395B8 RID: 234936 RVA: 0x00D9B1A0 File Offset: 0x00D993A0
+		// Token: 0x0602E4CC RID: 189644 RVA: 0x00CEA054 File Offset: 0x00CE8254
 		public TypeInfo? GetItemTypeConfig(int itemType)
 		{
 			return ConfigTypeInfoById.GetConfig(itemType, true);
 		}
 
-		// Token: 0x060395B9 RID: 234937 RVA: 0x00D9B1A9 File Offset: 0x00D993A9
+		// Token: 0x0602E4CD RID: 189645 RVA: 0x00CEA05D File Offset: 0x00CE825D
 		public ItemShowType? GetItemShowTypeConfig(int showItemType)
 		{
 			return ConfigItemShowTypeById.GetConfig(showItemType, true);
 		}
 
-		// Token: 0x060395BA RID: 234938 RVA: 0x00D9B1B2 File Offset: 0x00D993B2
+		// Token: 0x0602E4CE RID: 189646 RVA: 0x00CEA066 File Offset: 0x00CE8266
 		public PlayerTitle? GetPlayerTitleItemConfig(int configId)
 		{
 			return ConfigPlayerTitleById.GetConfig(configId, true);
 		}
 
-		// Token: 0x060395BB RID: 234939 RVA: 0x00D9B1BC File Offset: 0x00D993BC
+		// Token: 0x0602E4CF RID: 189647 RVA: 0x00CEA070 File Offset: 0x00CE8270
 		public TItemQualityConfig GetItemQualityByItemIdAndQuality(int? configId, int qualityId)
 		{
 			if (configId == null)
@@ -767,7 +778,7 @@ namespace CSharpScript.Game.Module.Inventory
 			}
 		}
 
-		// Token: 0x060395BC RID: 234940 RVA: 0x00D9B280 File Offset: 0x00D99480
+		// Token: 0x0602E4D0 RID: 189648 RVA: 0x00CEA134 File Offset: 0x00CE8334
 		[NullableContext(1)]
 		[return: Nullable(2)]
 		public TItemQualityConfig GetItemQualityByConfig(ItemConfig config)
@@ -803,19 +814,19 @@ namespace CSharpScript.Game.Module.Inventory
 			}
 		}
 
-		// Token: 0x060395BD RID: 234941 RVA: 0x00D9B320 File Offset: 0x00D99520
+		// Token: 0x0602E4D1 RID: 189649 RVA: 0x00CEA1D4 File Offset: 0x00CE83D4
 		public int GetPhantomFusionThreshold()
 		{
 			return ConfigCommonParamById.GetIntConfig("PhantomFusionThreshold").GetValueOrDefault(1000);
 		}
 
-		// Token: 0x060395BE RID: 234942 RVA: 0x00D9B344 File Offset: 0x00D99544
+		// Token: 0x0602E4D2 RID: 189650 RVA: 0x00CEA1F8 File Offset: 0x00CE83F8
 		public int GetPhantomDiscardThreshold()
 		{
 			return ConfigCommonParamById.GetIntConfig("PhantomDiscardThreshold").GetValueOrDefault(2500);
 		}
 
-		// Token: 0x060395BF RID: 234943 RVA: 0x00D9B368 File Offset: 0x00D99568
+		// Token: 0x0602E4D3 RID: 189651 RVA: 0x00CEA21C File Offset: 0x00CE841C
 		protected override bool OnClear()
 		{
 			this.CommonItemConfigMap.Clear();
@@ -825,8 +836,8 @@ namespace CSharpScript.Game.Module.Inventory
 			return true;
 		}
 
-		// Token: 0x17008A2D RID: 35373
-		// (get) Token: 0x060395C0 RID: 234944 RVA: 0x00D9B397 File Offset: 0x00D99597
+		// Token: 0x17005DF7 RID: 24055
+		// (get) Token: 0x0602E4D4 RID: 189652 RVA: 0x00CEA24B File Offset: 0x00CE844B
 		[Nullable(1)]
 		public static InventoryConfig Instance
 		{
@@ -837,7 +848,7 @@ namespace CSharpScript.Game.Module.Inventory
 			}
 		}
 
-		// Token: 0x060395C1 RID: 234945 RVA: 0x00D9B39E File Offset: 0x00D9959E
+		// Token: 0x0602E4D5 RID: 189653 RVA: 0x00CEA252 File Offset: 0x00CE8452
 		[NullableContext(1)]
 		public static InventoryConfig GetOrCreateInstance()
 		{
@@ -848,7 +859,7 @@ namespace CSharpScript.Game.Module.Inventory
 			return InventoryConfig._Instance;
 		}
 
-		// Token: 0x060395C2 RID: 234946 RVA: 0x00D9B3B2 File Offset: 0x00D995B2
+		// Token: 0x0602E4D6 RID: 189654 RVA: 0x00CEA266 File Offset: 0x00CE8466
 		public static bool CreateInstance()
 		{
 			if (InventoryConfig._Instance != null)
@@ -859,50 +870,50 @@ namespace CSharpScript.Game.Module.Inventory
 			return true;
 		}
 
-		// Token: 0x060395C3 RID: 234947 RVA: 0x00D9B3C8 File Offset: 0x00D995C8
+		// Token: 0x0602E4D7 RID: 189655 RVA: 0x00CEA27C File Offset: 0x00CE847C
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060395C4 RID: 234948 RVA: 0x00D9B3CA File Offset: 0x00D995CA
+		// Token: 0x0602E4D8 RID: 189656 RVA: 0x00CEA27E File Offset: 0x00CE847E
 		public static void ResetStaticDefaultValue()
 		{
 			InventoryConfig._Instance = null;
 		}
 
-		// Token: 0x060395C5 RID: 234949 RVA: 0x00D9B3D2 File Offset: 0x00D995D2
+		// Token: 0x0602E4D9 RID: 189657 RVA: 0x00CEA286 File Offset: 0x00CE8486
 		static InventoryConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(InventoryConfig.CreateStaticDefaultValue), new Action(InventoryConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401DFE4 RID: 122852
+		// Token: 0x04018A7D RID: 100989
 		private IReadOnlyList<int> ErrorPhantomSpecialIdList;
 
-		// Token: 0x0401DFE5 RID: 122853
+		// Token: 0x04018A7E RID: 100990
 		[Nullable(1)]
 		private readonly Dictionary<int, ItemInfo> CommonItemConfigMap = new Dictionary<int, ItemInfo>();
 
-		// Token: 0x0401DFE6 RID: 122854
+		// Token: 0x04018A7F RID: 100991
 		[Nullable(1)]
 		private readonly Dictionary<int, WeaponConf> WeaponItemConfigMap = new Dictionary<int, WeaponConf>();
 
-		// Token: 0x0401DFE7 RID: 122855
+		// Token: 0x04018A80 RID: 100992
 		[Nullable(1)]
 		private readonly Dictionary<int, PhantomItem> PhantomItemConfigMap = new Dictionary<int, PhantomItem>();
 
-		// Token: 0x0401DFE8 RID: 122856
+		// Token: 0x04018A81 RID: 100993
 		[Nullable(1)]
 		private readonly Stat StatGetItemConfigData = Stat.Create("GetItemConfigData", "", "");
 
-		// Token: 0x0401DFE9 RID: 122857
+		// Token: 0x04018A82 RID: 100994
 		[Nullable(1)]
 		private readonly Lru<int, ItemConfig> Lru;
 
-		// Token: 0x0401DFEA RID: 122858
+		// Token: 0x04018A83 RID: 100995
 		private const int ITEM_LRU_SIZE = 256;
 
-		// Token: 0x0401DFEB RID: 122859
+		// Token: 0x04018A84 RID: 100996
 		private static InventoryConfig _Instance;
 	}
 }

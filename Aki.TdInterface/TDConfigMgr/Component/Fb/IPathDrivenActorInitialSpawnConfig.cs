@@ -5,11 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E1B RID: 3611
+	// Token: 0x02000F17 RID: 3863
 	public class IPathDrivenActorInitialSpawnConfig
 	{
-		// Token: 0x060051B9 RID: 20921 RVA: 0x000C9863 File Offset: 0x000C7A63
-		[NullableContext(1)]
+		// Token: 0x060056E0 RID: 22240 RVA: 0x000D512B File Offset: 0x000D332B
 		public static IPathDrivenActorInitialSpawnConfig Create(IPathDrivenActorInitialSpawnConfig? instance)
 		{
 			if (instance == null)
@@ -22,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001B40 RID: 6976
-		// (get) Token: 0x060051BA RID: 20922 RVA: 0x000C9882 File Offset: 0x000C7A82
+		// Token: 0x17001CAD RID: 7341
+		// (get) Token: 0x060056E1 RID: 22241 RVA: 0x000D514A File Offset: 0x000D334A
 		public virtual bool EnableInitialSpawn
 		{
 			get
@@ -32,19 +31,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B41 RID: 6977
-		// (get) Token: 0x060051BB RID: 20923 RVA: 0x000C9890 File Offset: 0x000C7A90
+		// Token: 0x17001CAE RID: 7342
+		// (get) Token: 0x060056E2 RID: 22242 RVA: 0x000D5158 File Offset: 0x000D3358
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IPathDrivenActorInitialSpawnHandle> InitialSpawnHandles
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -67,18 +66,18 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002F10 RID: 12048
+		// Token: 0x040031D8 RID: 12760
 		private IPathDrivenActorInitialSpawnConfig Instance;
 
-		// Token: 0x04002F11 RID: 12049
+		// Token: 0x040031D9 RID: 12761
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IPathDrivenActorInitialSpawnHandle> _InitialSpawnHandlesCache;
 
-		// Token: 0x04002F12 RID: 12050
+		// Token: 0x040031DA RID: 12762
 		private bool _InitialSpawnHandlesInited;
 	}
 }

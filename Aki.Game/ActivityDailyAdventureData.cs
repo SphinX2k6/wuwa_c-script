@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x0200120C RID: 4620
+// Token: 0x020006C0 RID: 1728
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityDailyAdventureData : ActivityBaseData
 {
-	// Token: 0x06007BBF RID: 31679 RVA: 0x001A18B4 File Offset: 0x0019FAB4
+	// Token: 0x06004F55 RID: 20309 RVA: 0x001AA56C File Offset: 0x001A876C
 	public void SetProgressPoint(int pt)
 	{
 		this.ProgressPoint = pt;
@@ -21,7 +20,7 @@ public class ActivityDailyAdventureData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06007BC0 RID: 31680 RVA: 0x001A1924 File Offset: 0x0019FB24
+	// Token: 0x06004F56 RID: 20310 RVA: 0x001AA5DC File Offset: 0x001A87DC
 	protected unsafe override void PhraseEx(ActivityData data)
 	{
 		DailyAdventureActivity? activityDailyAdventureConfig = ActivityDailyAdventureConfig.Instance.GetActivityDailyAdventureConfig(base.Id);
@@ -35,7 +34,7 @@ public class ActivityDailyAdventureData : ActivityBaseData
 			instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 			return;
 		}
-		this.CreatePointRewardMap(activityDailyAdventureConfig.Value.GetRewardListArray().ToList<int>());
+		this.CreatePointRewardMap(activityDailyAdventureConfig.Value.GetRewardListArray());
 		DailyAdventureActivityData dailyAdventureActivityData = data.DailyAdventureActivityData;
 		if (dailyAdventureActivityData == null)
 		{
@@ -67,8 +66,8 @@ public class ActivityDailyAdventureData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06007BC1 RID: 31681 RVA: 0x001A1B3C File Offset: 0x0019FD3C
-	private void CreatePointRewardMap(List<int> rewardIdList)
+	// Token: 0x06004F57 RID: 20311 RVA: 0x001AA7F0 File Offset: 0x001A89F0
+	private void CreatePointRewardMap(IEnumerable<int> rewardIdList)
 	{
 		this.PointRewardMap.Clear();
 		foreach (int num in rewardIdList)
@@ -90,23 +89,31 @@ public class ActivityDailyAdventureData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06007BC2 RID: 31682 RVA: 0x001A1C08 File Offset: 0x0019FE08
+	// Token: 0x06004F58 RID: 20312 RVA: 0x001AA8B8 File Offset: 0x001A8AB8
 	public List<DailyAdventureRewardData> GetAllPointReward()
 	{
-		return (from a in this.PointRewardMap.Values.ToList<DailyAdventureRewardData>()
-		orderby a.RewardId
-		select a).ToList<DailyAdventureRewardData>();
+		List<DailyAdventureRewardData> list = new List<DailyAdventureRewardData>(this.PointRewardMap.Values);
+		list.Sort((DailyAdventureRewardData a, DailyAdventureRewardData b) => a.RewardId.CompareTo(b.RewardId));
+		return list;
 	}
 
-	// Token: 0x06007BC3 RID: 31683 RVA: 0x001A1C44 File Offset: 0x0019FE44
+	// Token: 0x06004F59 RID: 20313 RVA: 0x001AA8EF File Offset: 0x001A8AEF
 	public List<DailyAdventureTaskData> GetAllTaskInfo()
 	{
-		return (from a in this.TaskInfoMap.Values.ToList<DailyAdventureTaskData>()
-		orderby a.TaskState, a.TaskId
-		select a).ToList<DailyAdventureTaskData>();
+		List<DailyAdventureTaskData> list = new List<DailyAdventureTaskData>(this.TaskInfoMap.Values);
+		list.Sort(delegate(DailyAdventureTaskData a, DailyAdventureTaskData b)
+		{
+			int num = a.TaskState.CompareTo(b.TaskState);
+			if (num == 0)
+			{
+				return a.TaskId.CompareTo(b.TaskId);
+			}
+			return num;
+		});
+		return list;
 	}
 
-	// Token: 0x06007BC4 RID: 31684 RVA: 0x001A1CB0 File Offset: 0x0019FEB0
+	// Token: 0x06004F5A RID: 20314 RVA: 0x001AA928 File Offset: 0x001A8B28
 	public void SetPointReward(int id, bool hasTaken)
 	{
 		DailyAdventureRewardData dailyAdventureRewardData;
@@ -116,7 +123,7 @@ public class ActivityDailyAdventureData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06007BC5 RID: 31685 RVA: 0x001A1CE0 File Offset: 0x0019FEE0
+	// Token: 0x06004F5B RID: 20315 RVA: 0x001AA958 File Offset: 0x001A8B58
 	public void SetTaskInfo(int id, ERewardState? state = null, int? currentProgress = null)
 	{
 		DailyAdventureTaskData dailyAdventureTaskData;
@@ -133,7 +140,7 @@ public class ActivityDailyAdventureData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06007BC6 RID: 31686 RVA: 0x001A1D2C File Offset: 0x0019FF2C
+	// Token: 0x06004F5C RID: 20316 RVA: 0x001AA9A4 File Offset: 0x001A8BA4
 	public int GetDefaultMapMarkId()
 	{
 		DailyAdventureActivity? activityDailyAdventureConfig = ActivityDailyAdventureConfig.Instance.GetActivityDailyAdventureConfig(base.Id);
@@ -144,25 +151,25 @@ public class ActivityDailyAdventureData : ActivityBaseData
 		return activityDailyAdventureConfig.Value.AreaDefaultMarkId;
 	}
 
-	// Token: 0x06007BC7 RID: 31687 RVA: 0x001A1D64 File Offset: 0x0019FF64
+	// Token: 0x06004F5D RID: 20317 RVA: 0x001AA9DC File Offset: 0x001A8BDC
 	public override bool GetExDataRedPointShowState()
 	{
 		return !this.IsAllPointRewardFinished() && (this.IsTaskHasReward() || this.IsPointHasReward() || this.IsDailyTips());
 	}
 
-	// Token: 0x06007BC8 RID: 31688 RVA: 0x001A1D88 File Offset: 0x0019FF88
+	// Token: 0x06004F5E RID: 20318 RVA: 0x001AAA00 File Offset: 0x001A8C00
 	protected override bool GetExDataFinishShowState()
 	{
 		return this.IsAllPointRewardFinished();
 	}
 
-	// Token: 0x06007BC9 RID: 31689 RVA: 0x001A1D90 File Offset: 0x0019FF90
+	// Token: 0x06004F5F RID: 20319 RVA: 0x001AAA08 File Offset: 0x001A8C08
 	public override bool NeedSelfControlFirstRedPoint()
 	{
 		return false;
 	}
 
-	// Token: 0x06007BCA RID: 31690 RVA: 0x001A1D94 File Offset: 0x0019FF94
+	// Token: 0x06004F60 RID: 20320 RVA: 0x001AAA0C File Offset: 0x001A8C0C
 	public bool IsTaskHasReward()
 	{
 		using (Dictionary<int, DailyAdventureTaskData>.ValueCollection.Enumerator enumerator = this.TaskInfoMap.Values.GetEnumerator())
@@ -178,7 +185,7 @@ public class ActivityDailyAdventureData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x06007BCB RID: 31691 RVA: 0x001A1DF4 File Offset: 0x0019FFF4
+	// Token: 0x06004F61 RID: 20321 RVA: 0x001AAA6C File Offset: 0x001A8C6C
 	public bool IsPointHasReward()
 	{
 		using (Dictionary<int, DailyAdventureRewardData>.ValueCollection.Enumerator enumerator = this.PointRewardMap.Values.GetEnumerator())
@@ -194,7 +201,7 @@ public class ActivityDailyAdventureData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x06007BCC RID: 31692 RVA: 0x001A1E54 File Offset: 0x001A0054
+	// Token: 0x06004F62 RID: 20322 RVA: 0x001AAACC File Offset: 0x001A8CCC
 	public bool IsDailyTips()
 	{
 		int num = (int)TimeUtil.Instance.GetCurrentCrossDayStamp();
@@ -202,7 +209,7 @@ public class ActivityDailyAdventureData : ActivityBaseData
 		return num != activityCacheData;
 	}
 
-	// Token: 0x06007BCD RID: 31693 RVA: 0x001A1E88 File Offset: 0x001A0088
+	// Token: 0x06004F63 RID: 20323 RVA: 0x001AAB00 File Offset: 0x001A8D00
 	public void ReadDailyTips()
 	{
 		double currentCrossDayStamp = TimeUtil.Instance.GetCurrentCrossDayStamp();
@@ -210,7 +217,7 @@ public class ActivityDailyAdventureData : ActivityBaseData
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 	}
 
-	// Token: 0x06007BCE RID: 31694 RVA: 0x001A1ECC File Offset: 0x001A00CC
+	// Token: 0x06004F64 RID: 20324 RVA: 0x001AAB44 File Offset: 0x001A8D44
 	private bool IsAllPointRewardFinished()
 	{
 		using (Dictionary<int, DailyAdventureRewardData>.ValueCollection.Enumerator enumerator = this.PointRewardMap.Values.GetEnumerator())
@@ -226,15 +233,15 @@ public class ActivityDailyAdventureData : ActivityBaseData
 		return true;
 	}
 
-	// Token: 0x040038A8 RID: 14504
+	// Token: 0x04003941 RID: 14657
 	private const int DAILY_TIME_FLAG = 1;
 
-	// Token: 0x040038A9 RID: 14505
+	// Token: 0x04003942 RID: 14658
 	public int ProgressPoint;
 
-	// Token: 0x040038AA RID: 14506
+	// Token: 0x04003943 RID: 14659
 	private readonly Dictionary<int, DailyAdventureRewardData> PointRewardMap = new Dictionary<int, DailyAdventureRewardData>();
 
-	// Token: 0x040038AB RID: 14507
+	// Token: 0x04003944 RID: 14660
 	private readonly Dictionary<int, DailyAdventureTaskData> TaskInfoMap = new Dictionary<int, DailyAdventureTaskData>();
 }

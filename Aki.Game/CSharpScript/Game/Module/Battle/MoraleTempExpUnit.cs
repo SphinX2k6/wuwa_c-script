@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Battle
 {
-	// Token: 0x02005C56 RID: 23638
+	// Token: 0x02004C36 RID: 19510
 	public class MoraleTempExpUnit : UiPanelBase
 	{
-		// Token: 0x0603BC0B RID: 244747 RVA: 0x00E45AEC File Offset: 0x00E43CEC
+		// Token: 0x06030B56 RID: 199510 RVA: 0x00D95EB8 File Offset: 0x00D940B8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.Battle
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603BC0C RID: 244748 RVA: 0x00E45BB8 File Offset: 0x00E43DB8
+		// Token: 0x06030B57 RID: 199511 RVA: 0x00D95F84 File Offset: 0x00D94184
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -107,33 +107,33 @@ namespace CSharpScript.Game.Module.Battle
 			this.ArrowSprite = base.GetSprite(0);
 		}
 
-		// Token: 0x0603BC0D RID: 244749 RVA: 0x00E45D6C File Offset: 0x00E43F6C
+		// Token: 0x06030B58 RID: 199512 RVA: 0x00D9614C File Offset: 0x00D9434C
 		public void Clean()
 		{
 			this.TweenInComps = null;
 			this.TweenOutComps = null;
 		}
 
-		// Token: 0x0603BC0E RID: 244750 RVA: 0x00E45D7C File Offset: 0x00E43F7C
+		// Token: 0x06030B59 RID: 199513 RVA: 0x00D9615C File Offset: 0x00D9435C
 		public void SetIndex(int index)
 		{
 			this.Index = index;
 			this.StartProgress = (float)index * 0.1f;
 		}
 
-		// Token: 0x0603BC0F RID: 244751 RVA: 0x00E45D93 File Offset: 0x00E43F93
+		// Token: 0x06030B5A RID: 199514 RVA: 0x00D96173 File Offset: 0x00D94373
 		public bool IsShowUnit(float progress)
 		{
 			return progress > this.StartProgress;
 		}
 
-		// Token: 0x0603BC10 RID: 244752 RVA: 0x00E45D9E File Offset: 0x00E43F9E
+		// Token: 0x06030B5B RID: 199515 RVA: 0x00D9617E File Offset: 0x00D9437E
 		public bool IsHideUnit(float progress)
 		{
 			return progress <= this.StartProgress;
 		}
 
-		// Token: 0x0603BC11 RID: 244753 RVA: 0x00E45DAC File Offset: 0x00E43FAC
+		// Token: 0x06030B5C RID: 199516 RVA: 0x00D9618C File Offset: 0x00D9438C
 		public void Reset()
 		{
 			if (this.IsPlayTweenOut)
@@ -151,19 +151,19 @@ namespace CSharpScript.Game.Module.Battle
 			this.IsPlayTweenRed = false;
 		}
 
-		// Token: 0x0603BC12 RID: 244754 RVA: 0x00E45DF9 File Offset: 0x00E43FF9
+		// Token: 0x06030B5D RID: 199517 RVA: 0x00D961D9 File Offset: 0x00D943D9
 		public void ShowUnit()
 		{
 			base.SetUiActive(true);
 		}
 
-		// Token: 0x0603BC13 RID: 244755 RVA: 0x00E45E02 File Offset: 0x00E44002
+		// Token: 0x06030B5E RID: 199518 RVA: 0x00D961E2 File Offset: 0x00D943E2
 		public void HideUnit(bool playAnim = true)
 		{
 			base.SetUiActive(false);
 		}
 
-		// Token: 0x0603BC14 RID: 244756 RVA: 0x00E45E0C File Offset: 0x00E4400C
+		// Token: 0x06030B5F RID: 199519 RVA: 0x00D961EC File Offset: 0x00D943EC
 		public void PlayTweenIn()
 		{
 			if (this.TweenInComps == null || this.IsPlayTweenIn)
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BC15 RID: 244757 RVA: 0x00E45E74 File Offset: 0x00E44074
+		// Token: 0x06030B60 RID: 199520 RVA: 0x00D96254 File Offset: 0x00D94454
 		public void PlayTweenOut()
 		{
 			if (this.TweenOutComps == null || this.IsPlayTweenOut)
@@ -191,7 +191,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BC16 RID: 244758 RVA: 0x00E45EDC File Offset: 0x00E440DC
+		// Token: 0x06030B61 RID: 199521 RVA: 0x00D962BC File Offset: 0x00D944BC
 		public void PlayTweenRed()
 		{
 			if (this.TweenRedComps == null)
@@ -205,7 +205,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BC17 RID: 244759 RVA: 0x00E45F3C File Offset: 0x00E4413C
+		// Token: 0x06030B62 RID: 199522 RVA: 0x00D9631C File Offset: 0x00D9451C
 		public void StopTweenOut()
 		{
 			if (this.TweenOutComps == null || !this.IsPlayTweenOut)
@@ -219,7 +219,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BC18 RID: 244760 RVA: 0x00E45FA4 File Offset: 0x00E441A4
+		// Token: 0x06030B63 RID: 199523 RVA: 0x00D96384 File Offset: 0x00D94584
 		public void PlayTweenAnim(MoraleTempExpView.ETweenAnimType tweenType)
 		{
 			switch (tweenType)
@@ -240,7 +240,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0401F1D0 RID: 127440
+		// Token: 0x04019C81 RID: 105601
 		[Nullable(new byte[]
 		{
 			2,
@@ -248,7 +248,7 @@ namespace CSharpScript.Game.Module.Battle
 		})]
 		private List<ULGUIPlayTweenComponent> TweenInComps;
 
-		// Token: 0x0401F1D1 RID: 127441
+		// Token: 0x04019C82 RID: 105602
 		[Nullable(new byte[]
 		{
 			2,
@@ -256,7 +256,7 @@ namespace CSharpScript.Game.Module.Battle
 		})]
 		private List<ULGUIPlayTweenComponent> TweenOutComps;
 
-		// Token: 0x0401F1D2 RID: 127442
+		// Token: 0x04019C83 RID: 105603
 		[Nullable(new byte[]
 		{
 			2,
@@ -264,37 +264,37 @@ namespace CSharpScript.Game.Module.Battle
 		})]
 		private List<ULGUIPlayTweenComponent> TweenRedComps;
 
-		// Token: 0x0401F1D3 RID: 127443
+		// Token: 0x04019C84 RID: 105604
 		[Nullable(2)]
 		private UUISprite ArrowSprite;
 
-		// Token: 0x0401F1D4 RID: 127444
+		// Token: 0x04019C85 RID: 105605
 		public int Index;
 
-		// Token: 0x0401F1D5 RID: 127445
+		// Token: 0x04019C86 RID: 105606
 		private float StartProgress;
 
-		// Token: 0x0401F1D6 RID: 127446
+		// Token: 0x04019C87 RID: 105607
 		private bool IsPlayTweenIn;
 
-		// Token: 0x0401F1D7 RID: 127447
+		// Token: 0x04019C88 RID: 105608
 		private bool IsPlayTweenOut;
 
-		// Token: 0x0401F1D8 RID: 127448
+		// Token: 0x04019C89 RID: 105609
 		private bool IsPlayTweenRed;
 
-		// Token: 0x0200BE6D RID: 48749
+		// Token: 0x0200A873 RID: 43123
 		private enum EUnitChildType
 		{
-			// Token: 0x040396D1 RID: 235217
+			// Token: 0x04034092 RID: 213138
 			ArrowSprite,
-			// Token: 0x040396D2 RID: 235218
+			// Token: 0x04034093 RID: 213139
 			TweenIn,
-			// Token: 0x040396D3 RID: 235219
+			// Token: 0x04034094 RID: 213140
 			TweenOut,
-			// Token: 0x040396D4 RID: 235220
+			// Token: 0x04034095 RID: 213141
 			TweenBreakOff,
-			// Token: 0x040396D5 RID: 235221
+			// Token: 0x04034096 RID: 213142
 			TweenRed
 		}
 	}

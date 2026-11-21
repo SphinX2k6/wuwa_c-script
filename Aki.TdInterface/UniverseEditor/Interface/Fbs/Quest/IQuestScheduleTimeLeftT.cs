@@ -3,40 +3,40 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x0200403E RID: 16446
+	// Token: 0x0200447F RID: 17535
 	public class IQuestScheduleTimeLeftT
 	{
-		// Token: 0x170073C4 RID: 29636
-		// (get) Token: 0x06017CF6 RID: 97526 RVA: 0x0036F884 File Offset: 0x0036DA84
-		// (set) Token: 0x06017CF7 RID: 97527 RVA: 0x0036F88C File Offset: 0x0036DA8C
+		// Token: 0x170079C6 RID: 31174
+		// (get) Token: 0x0601938F RID: 103311 RVA: 0x00399678 File Offset: 0x00397878
+		// (set) Token: 0x06019390 RID: 103312 RVA: 0x00399680 File Offset: 0x00397880
 		public EQuestScheduleType Type { get; set; }
 
-		// Token: 0x170073C5 RID: 29637
-		// (get) Token: 0x06017CF8 RID: 97528 RVA: 0x0036F895 File Offset: 0x0036DA95
-		// (set) Token: 0x06017CF9 RID: 97529 RVA: 0x0036F89D File Offset: 0x0036DA9D
+		// Token: 0x170079C7 RID: 31175
+		// (get) Token: 0x06019391 RID: 103313 RVA: 0x00399689 File Offset: 0x00397889
+		// (set) Token: 0x06019392 RID: 103314 RVA: 0x00399691 File Offset: 0x00397891
 		public ETimerType TimerType { get; set; }
 
-		// Token: 0x170073C6 RID: 29638
-		// (get) Token: 0x06017CFA RID: 97530 RVA: 0x0036F8A6 File Offset: 0x0036DAA6
-		// (set) Token: 0x06017CFB RID: 97531 RVA: 0x0036F8AE File Offset: 0x0036DAAE
+		// Token: 0x170079C8 RID: 31176
+		// (get) Token: 0x06019393 RID: 103315 RVA: 0x0039969A File Offset: 0x0039789A
+		// (set) Token: 0x06019394 RID: 103316 RVA: 0x003996A2 File Offset: 0x003978A2
 		public int TimeLeft { get; set; }
 
-		// Token: 0x170073C7 RID: 29639
-		// (get) Token: 0x06017CFC RID: 97532 RVA: 0x0036F8B7 File Offset: 0x0036DAB7
-		// (set) Token: 0x06017CFD RID: 97533 RVA: 0x0036F8BF File Offset: 0x0036DABF
+		// Token: 0x170079C9 RID: 31177
+		// (get) Token: 0x06019395 RID: 103317 RVA: 0x003996AB File Offset: 0x003978AB
+		// (set) Token: 0x06019396 RID: 103318 RVA: 0x003996B3 File Offset: 0x003978B3
 		public ETimeLeftIconType IconType { get; set; }
 
-		// Token: 0x170073C8 RID: 29640
-		// (get) Token: 0x06017CFE RID: 97534 RVA: 0x0036F8C8 File Offset: 0x0036DAC8
-		// (set) Token: 0x06017CFF RID: 97535 RVA: 0x0036F8D0 File Offset: 0x0036DAD0
+		// Token: 0x170079CA RID: 31178
+		// (get) Token: 0x06019397 RID: 103319 RVA: 0x003996BC File Offset: 0x003978BC
+		// (set) Token: 0x06019398 RID: 103320 RVA: 0x003996C4 File Offset: 0x003978C4
 		public bool ShowTime { get; set; }
 
-		// Token: 0x170073C9 RID: 29641
-		// (get) Token: 0x06017D00 RID: 97536 RVA: 0x0036F8D9 File Offset: 0x0036DAD9
-		// (set) Token: 0x06017D01 RID: 97537 RVA: 0x0036F8E1 File Offset: 0x0036DAE1
+		// Token: 0x170079CB RID: 31179
+		// (get) Token: 0x06019399 RID: 103321 RVA: 0x003996CD File Offset: 0x003978CD
+		// (set) Token: 0x0601939A RID: 103322 RVA: 0x003996D5 File Offset: 0x003978D5
 		public byte NullMask { get; set; }
 
-		// Token: 0x06017D02 RID: 97538 RVA: 0x0036F8EA File Offset: 0x0036DAEA
+		// Token: 0x0601939B RID: 103323 RVA: 0x003996DE File Offset: 0x003978DE
 		public IQuestScheduleTimeLeftT()
 		{
 			this.Type = EQuestScheduleType.None;

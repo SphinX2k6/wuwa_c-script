@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x020019FE RID: 6654
+// Token: 0x02000EBD RID: 3773
 public class DamageViewOffsetInfo
 {
-	// Token: 0x0600C2D7 RID: 49879 RVA: 0x002C0557 File Offset: 0x002BE757
+	// Token: 0x060096E5 RID: 38629 RVA: 0x002CB543 File Offset: 0x002C9743
 	public void Reset()
 	{
 		this.LastUpdateTime = 0.0;
@@ -14,21 +14,21 @@ public class DamageViewOffsetInfo
 		this.DistanceScale = 0f;
 	}
 
-	// Token: 0x040059D1 RID: 22993
+	// Token: 0x04005AA0 RID: 23200
 	public double LastUpdateTime;
 
-	// Token: 0x040059D2 RID: 22994
+	// Token: 0x04005AA1 RID: 23201
 	public float OffsetX;
 
-	// Token: 0x040059D3 RID: 22995
+	// Token: 0x04005AA2 RID: 23202
 	public float OffsetY;
 
-	// Token: 0x040059D4 RID: 22996
+	// Token: 0x04005AA3 RID: 23203
 	public int Index;
 
-	// Token: 0x040059D5 RID: 22997
+	// Token: 0x04005AA4 RID: 23204
 	public int DamageTextAreaId;
 
-	// Token: 0x040059D6 RID: 22998
+	// Token: 0x04005AA5 RID: 23205
 	public float DistanceScale;
 }

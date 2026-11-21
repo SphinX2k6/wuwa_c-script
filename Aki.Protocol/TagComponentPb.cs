@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200131B RID: 4891
+	// Token: 0x02001388 RID: 5000
 	public sealed class TagComponentPb : IMessage<TagComponentPb>, IMessage, IEquatable<TagComponentPb>, IDeepCloneable<TagComponentPb>, IBufferMessage
 	{
-		// Token: 0x06019FE5 RID: 106469 RVA: 0x003C6C96 File Offset: 0x003C4E96
+		// Token: 0x0601A9F5 RID: 109045 RVA: 0x003E0F52 File Offset: 0x003DF152
 		[NullableContext(1)]
 		public static TagComponentPb Create()
 		{
 			return new TagComponentPb();
 		}
 
-		// Token: 0x170057AA RID: 22442
-		// (get) Token: 0x06019FE6 RID: 106470 RVA: 0x003C6C9D File Offset: 0x003C4E9D
+		// Token: 0x17005A24 RID: 23076
+		// (get) Token: 0x0601A9F6 RID: 109046 RVA: 0x003E0F59 File Offset: 0x003DF159
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170057AB RID: 22443
-		// (get) Token: 0x06019FE7 RID: 106471 RVA: 0x003C6CA0 File Offset: 0x003C4EA0
+		// Token: 0x17005A25 RID: 23077
+		// (get) Token: 0x0601A9F7 RID: 109047 RVA: 0x003E0F5C File Offset: 0x003DF15C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06019FE8 RID: 106472 RVA: 0x003C6CA7 File Offset: 0x003C4EA7
+		// Token: 0x0601A9F8 RID: 109048 RVA: 0x003E0F63 File Offset: 0x003DF163
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TagComponentPb()
 		{
 		}
 
-		// Token: 0x06019FE9 RID: 106473 RVA: 0x003C6CC8 File Offset: 0x003C4EC8
+		// Token: 0x0601A9F9 RID: 109049 RVA: 0x003E0F84 File Offset: 0x003DF184
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TagComponentPb(TagComponentPb other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06019FEA RID: 106474 RVA: 0x003C6D1A File Offset: 0x003C4F1A
+		// Token: 0x0601A9FA RID: 109050 RVA: 0x003E0FD6 File Offset: 0x003DF1D6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public TagComponentPb Clone()
@@ -68,8 +68,8 @@ namespace Aki.Protocol
 			return new TagComponentPb(this);
 		}
 
-		// Token: 0x170057AC RID: 22444
-		// (get) Token: 0x06019FEB RID: 106475 RVA: 0x003C6D22 File Offset: 0x003C4F22
+		// Token: 0x17005A26 RID: 23078
+		// (get) Token: 0x0601A9FB RID: 109051 RVA: 0x003E0FDE File Offset: 0x003DF1DE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<GameplayTagData> GameplayTags
@@ -80,8 +80,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170057AD RID: 22445
-		// (get) Token: 0x06019FEC RID: 106476 RVA: 0x003C6D2A File Offset: 0x003C4F2A
+		// Token: 0x17005A27 RID: 23079
+		// (get) Token: 0x0601A9FC RID: 109052 RVA: 0x003E0FE6 File Offset: 0x003DF1E6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> EntityCommonTags
@@ -92,9 +92,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170057AE RID: 22446
-		// (get) Token: 0x06019FED RID: 106477 RVA: 0x003C6D32 File Offset: 0x003C4F32
-		// (set) Token: 0x06019FEE RID: 106478 RVA: 0x003C6D3A File Offset: 0x003C4F3A
+		// Token: 0x17005A28 RID: 23080
+		// (get) Token: 0x0601A9FD RID: 109053 RVA: 0x003E0FEE File Offset: 0x003DF1EE
+		// (set) Token: 0x0601A9FE RID: 109054 RVA: 0x003E0FF6 File Offset: 0x003DF1F6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool InitGameplayTag
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06019FEF RID: 106479 RVA: 0x003C6D43 File Offset: 0x003C4F43
+		// Token: 0x0601A9FF RID: 109055 RVA: 0x003E0FFF File Offset: 0x003DF1FF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return this.Equals(other as TagComponentPb);
 		}
 
-		// Token: 0x06019FF0 RID: 106480 RVA: 0x003C6D54 File Offset: 0x003C4F54
+		// Token: 0x0601AA00 RID: 109056 RVA: 0x003E1010 File Offset: 0x003DF210
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(TagComponentPb other)
@@ -125,7 +125,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.gameplayTags_.Equals(other.gameplayTags_) && this.entityCommonTags_.Equals(other.entityCommonTags_) && this.InitGameplayTag == other.InitGameplayTag && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06019FF1 RID: 106481 RVA: 0x003C6DB8 File Offset: 0x003C4FB8
+		// Token: 0x0601AA01 RID: 109057 RVA: 0x003E1074 File Offset: 0x003DF274
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -144,7 +144,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06019FF2 RID: 106482 RVA: 0x003C6E13 File Offset: 0x003C5013
+		// Token: 0x0601AA02 RID: 109058 RVA: 0x003E10CF File Offset: 0x003DF2CF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -152,7 +152,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06019FF3 RID: 106483 RVA: 0x003C6E20 File Offset: 0x003C5020
+		// Token: 0x0601AA03 RID: 109059 RVA: 0x003E10DC File Offset: 0x003DF2DC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -160,7 +160,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06019FF4 RID: 106484 RVA: 0x003C6E2C File Offset: 0x003C502C
+		// Token: 0x0601AA04 RID: 109060 RVA: 0x003E10E8 File Offset: 0x003DF2E8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -178,7 +178,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06019FF5 RID: 106485 RVA: 0x003C6E8C File Offset: 0x003C508C
+		// Token: 0x0601AA05 RID: 109061 RVA: 0x003E1148 File Offset: 0x003DF348
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -197,7 +197,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06019FF6 RID: 106486 RVA: 0x003C6EE4 File Offset: 0x003C50E4
+		// Token: 0x0601AA06 RID: 109062 RVA: 0x003E11A0 File Offset: 0x003DF3A0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(TagComponentPb other)
@@ -215,7 +215,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06019FF7 RID: 106487 RVA: 0x003C6F42 File Offset: 0x003C5142
+		// Token: 0x0601AA07 RID: 109063 RVA: 0x003E11FE File Offset: 0x003DF3FE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -223,7 +223,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06019FF8 RID: 106488 RVA: 0x003C6F4C File Offset: 0x003C514C
+		// Token: 0x0601AA08 RID: 109064 RVA: 0x003E1208 File Offset: 0x003DF408
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -266,31 +266,31 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040097DF RID: 38879
+		// Token: 0x04009C01 RID: 39937
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040097E0 RID: 38880
+		// Token: 0x04009C02 RID: 39938
 		public const int GameplayTagsFieldNumber = 1;
 
-		// Token: 0x040097E1 RID: 38881
+		// Token: 0x04009C03 RID: 39939
 		private static readonly FieldCodec<GameplayTagData> _repeated_gameplayTags_codec = FieldCodec.ForMessage<GameplayTagData>(10U, GameplayTagData.Parser);
 
-		// Token: 0x040097E2 RID: 38882
+		// Token: 0x04009C04 RID: 39940
 		private readonly RepeatedField<GameplayTagData> gameplayTags_ = new RepeatedField<GameplayTagData>();
 
-		// Token: 0x040097E3 RID: 38883
+		// Token: 0x04009C05 RID: 39941
 		public const int EntityCommonTagsFieldNumber = 2;
 
-		// Token: 0x040097E4 RID: 38884
+		// Token: 0x04009C06 RID: 39942
 		private static readonly FieldCodec<int> _repeated_entityCommonTags_codec = FieldCodec.ForInt32(18U);
 
-		// Token: 0x040097E5 RID: 38885
+		// Token: 0x04009C07 RID: 39943
 		private readonly RepeatedField<int> entityCommonTags_ = new RepeatedField<int>();
 
-		// Token: 0x040097E6 RID: 38886
+		// Token: 0x04009C08 RID: 39944
 		public const int InitGameplayTagFieldNumber = 3;
 
-		// Token: 0x040097E7 RID: 38887
+		// Token: 0x04009C09 RID: 39945
 		private bool initGameplayTag_;
 	}
 }

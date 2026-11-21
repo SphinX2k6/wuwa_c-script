@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 
-// Token: 0x02002776 RID: 10102
+// Token: 0x02001C61 RID: 7265
 public class RogueBattleTeamEditData : UiPopViewData
 {
-	// Token: 0x06014B58 RID: 84824 RVA: 0x0053DD06 File Offset: 0x0053BF06
+	// Token: 0x0601203B RID: 73787 RVA: 0x0054CB16 File Offset: 0x0054AD16
 	public RogueBattleTeamEditData(int formationIndex, [Nullable(new byte[]
 	{
 		2,
@@ -18,10 +18,10 @@ public class RogueBattleTeamEditData : UiPopViewData
 		this.OnTeamEditConfirm = onTeamEditConfirm;
 	}
 
-	// Token: 0x04009BD0 RID: 39888
+	// Token: 0x04009D28 RID: 40232
 	public int FormationIndex;
 
-	// Token: 0x04009BD1 RID: 39889
+	// Token: 0x04009D29 RID: 40233
 	[Nullable(new byte[]
 	{
 		2,

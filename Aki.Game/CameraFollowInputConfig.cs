@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.Role.Common.Data.Structure;
 using UnrealEngine;
 
-// Token: 0x02003071 RID: 12401
+// Token: 0x020025C8 RID: 9672
 [NullableContext(1)]
 [Nullable(0)]
 public class CameraFollowInputConfig
 {
-	// Token: 0x0601A6BB RID: 108219 RVA: 0x0070BA34 File Offset: 0x00709C34
+	// Token: 0x06018076 RID: 98422 RVA: 0x0073222C File Offset: 0x0073042C
 	public void Init(BP_FirstPersonConfig_C asset, int triggerTagId)
 	{
 		this.TriggerTagId = triggerTagId;
@@ -41,18 +41,18 @@ public class CameraFollowInputConfig
 		}
 	}
 
-	// Token: 0x0400CA95 RID: 51861
+	// Token: 0x0400CE6F RID: 52847
 	public int TriggerTagId;
 
-	// Token: 0x0400CA96 RID: 51862
+	// Token: 0x0400CE70 RID: 52848
 	public float ForwardAngle = 50f;
 
-	// Token: 0x0400CA97 RID: 51863
+	// Token: 0x0400CE71 RID: 52849
 	public bool DashInForwardAngle = true;
 
-	// Token: 0x0400CA98 RID: 51864
+	// Token: 0x0400CE72 RID: 52850
 	public List<int> FirstPersonTagList = new List<int>();
 
-	// Token: 0x0400CA99 RID: 51865
+	// Token: 0x0400CE73 RID: 52851
 	public List<int> ForbidRotationTagList = new List<int>();
 }

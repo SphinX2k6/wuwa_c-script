@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002DB8 RID: 11704
+// Token: 0x02002312 RID: 8978
 public enum EBulletHitDirectionType
 {
-	// Token: 0x0400B6ED RID: 46829
+	// Token: 0x0400BA67 RID: 47719
 	OwnerToVictim,
-	// Token: 0x0400B6EE RID: 46830
+	// Token: 0x0400BA68 RID: 47720
 	BulletToVictim
 }

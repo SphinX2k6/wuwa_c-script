@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022EC RID: 8940
+	// Token: 0x0200255B RID: 9563
 	public class ECommonBtPlaceholderTargetTypeJsonConverter : JsonConverter<ECommonBtPlaceholderTargetType>
 	{
-		// Token: 0x0600C3A6 RID: 50086 RVA: 0x001C9450 File Offset: 0x001C7650
+		// Token: 0x0600CF75 RID: 53109 RVA: 0x001E129C File Offset: 0x001DF49C
 		public override ECommonBtPlaceholderTargetType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return ECommonBtPlaceholderTargetTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C3A7 RID: 50087 RVA: 0x001C9474 File Offset: 0x001C7674
+		// Token: 0x0600CF76 RID: 53110 RVA: 0x001E12C0 File Offset: 0x001DF4C0
 		public override void Write(Utf8JsonWriter writer, ECommonBtPlaceholderTargetType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 {
-	// Token: 0x02006EE6 RID: 28390
+	// Token: 0x02006066 RID: 24678
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class DollGrabMachineCaptionPanel : UiPanelBase
 	{
-		// Token: 0x0604525E RID: 283230 RVA: 0x0111A480 File Offset: 0x01118680
+		// Token: 0x0603B407 RID: 242695 RVA: 0x010C4210 File Offset: 0x010C2410
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 8;
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0604525F RID: 283231 RVA: 0x0111A610 File Offset: 0x01118810
+		// Token: 0x0603B408 RID: 242696 RVA: 0x010C43A0 File Offset: 0x010C25A0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DollGrabMachineCaptionPanel.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06045260 RID: 283232 RVA: 0x0111A654 File Offset: 0x01118854
+		// Token: 0x0603B409 RID: 242697 RVA: 0x010C43E4 File Offset: 0x010C25E4
 		protected override void OnBeforeCreate()
 		{
 			UUIItem rootItem = this.RootItem;
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			EventSystem.Instance.Add<Action>(EEventName.OnDollGrabMachineStartCoolDown, new Action<Action>(this.OnDollGrabMachineStartCoolDown));
 		}
 
-		// Token: 0x06045261 RID: 283233 RVA: 0x0111A708 File Offset: 0x01118908
+		// Token: 0x0603B40A RID: 242698 RVA: 0x010C4498 File Offset: 0x010C2698
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Remove<EDollGrabMachineEndReason>(EEventName.OnDollGrabMachineEnd, new Action<EDollGrabMachineEndReason>(this.OnDollGrabMachineEnd));
@@ -98,19 +98,19 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			}
 		}
 
-		// Token: 0x06045262 RID: 283234 RVA: 0x0111A7A2 File Offset: 0x011189A2
+		// Token: 0x0603B40B RID: 242699 RVA: 0x010C4532 File Offset: 0x010C2732
 		private void OnBackButtonClick()
 		{
 			DollGrabMachineController.Instance.PauseDollGrabMachine(false);
 		}
 
-		// Token: 0x06045263 RID: 283235 RVA: 0x0111A7AF File Offset: 0x011189AF
+		// Token: 0x0603B40C RID: 242700 RVA: 0x010C453F File Offset: 0x010C273F
 		private void OnHelpInfoButtonClick()
 		{
 			DollGrabMachineController.Instance.PauseDollGrabMachine(true);
 		}
 
-		// Token: 0x06045264 RID: 283236 RVA: 0x0111A7BC File Offset: 0x011189BC
+		// Token: 0x0603B40D RID: 242701 RVA: 0x010C454C File Offset: 0x010C274C
 		private void RefreashButton(bool toggle)
 		{
 			UUIButtonComponent btnBack = this.BtnBack;
@@ -126,13 +126,13 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			btnHelpInfo.SetSelfInteractive(toggle);
 		}
 
-		// Token: 0x06045265 RID: 283237 RVA: 0x0111A7E1 File Offset: 0x011189E1
+		// Token: 0x0603B40E RID: 242702 RVA: 0x010C4571 File Offset: 0x010C2771
 		private void OnDollGrabMachineEnd(EDollGrabMachineEndReason endReason)
 		{
 			this.RefreashButton(false);
 		}
 
-		// Token: 0x06045266 RID: 283238 RVA: 0x0111A7EA File Offset: 0x011189EA
+		// Token: 0x0603B40F RID: 242703 RVA: 0x010C457A File Offset: 0x010C277A
 		private void OnDollGrabMachineRestart()
 		{
 			this.RefreashButton(true);
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			}
 		}
 
-		// Token: 0x06045267 RID: 283239 RVA: 0x0111A80C File Offset: 0x01118A0C
+		// Token: 0x0603B410 RID: 242704 RVA: 0x010C459C File Offset: 0x010C279C
 		private void OnDollGrabMachineStartCoolDown(Action callback)
 		{
 			this.RefreashButton(false);
@@ -153,16 +153,16 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			}
 		}
 
-		// Token: 0x06045268 RID: 283240 RVA: 0x0111A84A File Offset: 0x01118A4A
+		// Token: 0x0603B411 RID: 242705 RVA: 0x010C45DA File Offset: 0x010C27DA
 		private void OnDollGrabMachineEndCoolDown()
 		{
 			this.RefreashButton(true);
 		}
 
-		// Token: 0x0402404B RID: 147531
+		// Token: 0x0401F2FE RID: 127742
 		private UUIButtonComponent BtnHelpInfo;
 
-		// Token: 0x0402404C RID: 147532
+		// Token: 0x0401F2FF RID: 127743
 		private UUIButtonComponent BtnBack;
 	}
 }

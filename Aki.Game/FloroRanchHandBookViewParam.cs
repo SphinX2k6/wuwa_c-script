@@ -1,8 +1,8 @@
 ﻿using System;
 
-// Token: 0x02001B65 RID: 7013
+// Token: 0x02001024 RID: 4132
 public struct FloroRanchHandBookViewParam
 {
-	// Token: 0x04005FB1 RID: 24497
+	// Token: 0x04006080 RID: 24704
 	public EFloroRanchActivityDataType ActivityDataType;
 }

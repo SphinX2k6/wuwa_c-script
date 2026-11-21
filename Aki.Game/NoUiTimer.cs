@@ -1,23 +1,23 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001D9D RID: 7581
+// Token: 0x0200125F RID: 4703
 public class NoUiTimer : LogicTreeTimerBase
 {
-	// Token: 0x0600E627 RID: 58919 RVA: 0x00363B13 File Offset: 0x00361D13
+	// Token: 0x0600BA45 RID: 47685 RVA: 0x0036F773 File Offset: 0x0036D973
 	[NullableContext(1)]
 	public NoUiTimer(long treeIncId, string timerType, bool needTick = true, double intervalTime = 20.0) : base(treeIncId, timerType, needTick, intervalTime)
 	{
 	}
 
-	// Token: 0x0600E628 RID: 58920 RVA: 0x00363B20 File Offset: 0x00361D20
+	// Token: 0x0600BA46 RID: 47686 RVA: 0x0036F780 File Offset: 0x0036D980
 	public override void StartShowTimer(double endTime, double pauseTime)
 	{
 		this.TimerEndTime = endTime;
 		this.TimerPauseTime = pauseTime;
 	}
 
-	// Token: 0x0600E629 RID: 58921 RVA: 0x00363B30 File Offset: 0x00361D30
+	// Token: 0x0600BA47 RID: 47687 RVA: 0x0036F790 File Offset: 0x0036D990
 	public override double GetRemainTime()
 	{
 		double val = (this.TimerEndTime - TimeUtil.Instance.GetServerStopTimeStamp()) / 1000.0;
@@ -25,9 +25,9 @@ public class NoUiTimer : LogicTreeTimerBase
 		return Math.Max(val, Math.Max(val2, 0.0));
 	}
 
-	// Token: 0x04006A7A RID: 27258
+	// Token: 0x04006B5B RID: 27483
 	private double TimerEndTime;
 
-	// Token: 0x04006A7B RID: 27259
+	// Token: 0x04006B5C RID: 27484
 	private double TimerPauseTime;
 }

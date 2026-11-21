@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004134 RID: 16692
+	// Token: 0x02004575 RID: 17781
 	public class ISneakPlayConditionT
 	{
-		// Token: 0x17007640 RID: 30272
-		// (get) Token: 0x060187BA RID: 100282 RVA: 0x00387A12 File Offset: 0x00385C12
-		// (set) Token: 0x060187BB RID: 100283 RVA: 0x00387A1A File Offset: 0x00385C1A
+		// Token: 0x17007C46 RID: 31814
+		// (get) Token: 0x06019E5D RID: 106077 RVA: 0x003B1A1A File Offset: 0x003AFC1A
+		// (set) Token: 0x06019E5E RID: 106078 RVA: 0x003B1A22 File Offset: 0x003AFC22
 		public int Time { get; set; }
 
-		// Token: 0x060187BC RID: 100284 RVA: 0x00387A23 File Offset: 0x00385C23
+		// Token: 0x06019E5F RID: 106079 RVA: 0x003B1A2B File Offset: 0x003AFC2B
 		public ISneakPlayConditionT()
 		{
 			this.Time = 0;

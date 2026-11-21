@@ -6,37 +6,37 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BE1 RID: 23521
+	// Token: 0x02004BC1 RID: 19393
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class CiacconaGalTextAnimHandler : ICiacconaGalTextAnimHandler, IStaticVariableResetter
 	{
-		// Token: 0x0603B74C RID: 243532 RVA: 0x00E2D40F File Offset: 0x00E2B60F
+		// Token: 0x06030697 RID: 198295 RVA: 0x00D7D717 File Offset: 0x00D7B917
 		static CiacconaGalTextAnimHandler()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(CiacconaGalTextAnimHandler.CreateStaticDefaultValue), new Action(CiacconaGalTextAnimHandler.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0603B74D RID: 243533 RVA: 0x00E2D42E File Offset: 0x00E2B62E
+		// Token: 0x06030698 RID: 198296 RVA: 0x00D7D736 File Offset: 0x00D7B936
 		public static void CreateStaticDefaultValue()
 		{
 			CiacconaGalTextAnimHandler.AudioEventHandle = 0;
 		}
 
-		// Token: 0x0603B74E RID: 243534 RVA: 0x00E2D436 File Offset: 0x00E2B636
+		// Token: 0x06030699 RID: 198297 RVA: 0x00D7D73E File Offset: 0x00D7B93E
 		public static void ResetStaticDefaultValue()
 		{
 			CiacconaGalTextAnimHandler.AudioEventHandle = 0;
 		}
 
-		// Token: 0x0603B74F RID: 243535 RVA: 0x00E2D43E File Offset: 0x00E2B63E
+		// Token: 0x0603069A RID: 198298 RVA: 0x00D7D746 File Offset: 0x00D7B946
 		public CiacconaGalTextAnimHandler(ULGUIPlayTweenComponent animCompInternal)
 		{
 			this.AnimCompInternal = animCompInternal;
 		}
 
-		// Token: 0x17008D63 RID: 36195
-		// (get) Token: 0x0603B750 RID: 243536 RVA: 0x00E2D44D File Offset: 0x00E2B64D
+		// Token: 0x17006135 RID: 24885
+		// (get) Token: 0x0603069B RID: 198299 RVA: 0x00D7D755 File Offset: 0x00D7B955
 		private ULGUIPlayTweenComponent AnimComp
 		{
 			get
@@ -49,13 +49,13 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0603B751 RID: 243537 RVA: 0x00E2D46C File Offset: 0x00E2B66C
+		// Token: 0x0603069C RID: 198300 RVA: 0x00D7D774 File Offset: 0x00D7B974
 		public void SetData(CiacconaGalStepData data)
 		{
 			this.Data = data;
 		}
 
-		// Token: 0x0603B752 RID: 243538 RVA: 0x00E2D478 File Offset: 0x00E2B678
+		// Token: 0x0603069D RID: 198301 RVA: 0x00D7D780 File Offset: 0x00D7B980
 		public void Play()
 		{
 			this.StopAudio();
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}));
 		}
 
-		// Token: 0x0603B753 RID: 243539 RVA: 0x00E2D524 File Offset: 0x00E2B724
+		// Token: 0x0603069E RID: 198302 RVA: 0x00D7D82C File Offset: 0x00D7BA2C
 		private void PlayDefault()
 		{
 			Log instance = Log.Instance;
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			this.StartTime = (float)TimeUtil.Instance.GetServerTime();
 		}
 
-		// Token: 0x0603B754 RID: 243540 RVA: 0x00E2D5AC File Offset: 0x00E2B7AC
+		// Token: 0x0603069F RID: 198303 RVA: 0x00D7D8B4 File Offset: 0x00D7BAB4
 		public void Stop()
 		{
 			this.StopAudio();
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			tweener.Kill(false);
 		}
 
-		// Token: 0x0603B755 RID: 243541 RVA: 0x00E2D5DC File Offset: 0x00E2B7DC
+		// Token: 0x060306A0 RID: 198304 RVA: 0x00D7D8E4 File Offset: 0x00D7BAE4
 		public void Skip()
 		{
 			ULTweener tweener = this.AnimComp.GetPlayTween().GetTweener();
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0603B756 RID: 243542 RVA: 0x00E2D658 File Offset: 0x00E2B858
+		// Token: 0x060306A1 RID: 198305 RVA: 0x00D7D960 File Offset: 0x00D7BB60
 		private void StopAudio()
 		{
 			if (CiacconaGalTextAnimHandler.AudioEventHandle != 0)
@@ -157,19 +157,19 @@ namespace CSharpScript.Game.Module.CiacconaGal
 			}
 		}
 
-		// Token: 0x0401EFA0 RID: 126880
+		// Token: 0x04019A51 RID: 105041
 		private CiacconaGalStepData Data;
 
-		// Token: 0x0401EFA1 RID: 126881
+		// Token: 0x04019A52 RID: 105042
 		private static int AudioEventHandle;
 
-		// Token: 0x0401EFA2 RID: 126882
+		// Token: 0x04019A53 RID: 105043
 		private float Duration;
 
-		// Token: 0x0401EFA3 RID: 126883
+		// Token: 0x04019A54 RID: 105044
 		private float StartTime;
 
-		// Token: 0x0401EFA4 RID: 126884
+		// Token: 0x04019A55 RID: 105045
 		private ULGUIPlayTweenComponent AnimCompInternal;
 	}
 }

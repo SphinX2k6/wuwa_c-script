@@ -8,12 +8,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020000CC RID: 204
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020000D4 RID: 212
 	public class ElementalBoxFoundationComponent : IComponentBase
 	{
-		// Token: 0x0600036C RID: 876 RVA: 0x0001BC18 File Offset: 0x00019E18
+		// Token: 0x06000370 RID: 880 RVA: 0x0001C58C File Offset: 0x0001A78C
 		private ElementalBoxFoundationComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -28,7 +26,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600036D RID: 877 RVA: 0x0001BC50 File Offset: 0x00019E50
+		// Token: 0x06000371 RID: 881 RVA: 0x0001C5C4 File Offset: 0x0001A7C4
 		public static ElementalBoxFoundationComponent Create([Nullable(2)] ElementalBoxFoundationComponent instance)
 		{
 			if (instance == null)
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600036E RID: 878 RVA: 0x0001BC63 File Offset: 0x00019E63
+		// Token: 0x06000372 RID: 882 RVA: 0x0001C5D7 File Offset: 0x0001A7D7
 		public static ElementalBoxFoundationComponent CreateFromSetValue([Nullable(2)] ElementalBoxFoundationComponent_SetValue value)
 		{
 			if (value == null)
@@ -54,7 +52,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600036F RID: 879 RVA: 0x0001BC78 File Offset: 0x00019E78
+		// Token: 0x06000373 RID: 883 RVA: 0x0001C5EC File Offset: 0x0001A7EC
 		public new ElementalBoxFoundationComponent_SetValue ToSetValue()
 		{
 			return new ElementalBoxFoundationComponent_SetValue
@@ -70,9 +68,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000126 RID: 294
-		// (get) Token: 0x06000370 RID: 880 RVA: 0x0001BCEC File Offset: 0x00019EEC
-		// (set) Token: 0x06000371 RID: 881 RVA: 0x0001BD26 File Offset: 0x00019F26
+		// Token: 0x17000128 RID: 296
+		// (get) Token: 0x06000374 RID: 884 RVA: 0x0001C660 File Offset: 0x0001A860
+		// (set) Token: 0x06000375 RID: 885 RVA: 0x0001C69A File Offset: 0x0001A89A
 		public override bool? Disabled
 		{
 			get
@@ -94,9 +92,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000127 RID: 295
-		// (get) Token: 0x06000372 RID: 882 RVA: 0x0001BD34 File Offset: 0x00019F34
-		// (set) Token: 0x06000373 RID: 883 RVA: 0x0001BD5E File Offset: 0x00019F5E
+		// Token: 0x17000129 RID: 297
+		// (get) Token: 0x06000376 RID: 886 RVA: 0x0001C6A8 File Offset: 0x0001A8A8
+		// (set) Token: 0x06000377 RID: 887 RVA: 0x0001C6D2 File Offset: 0x0001A8D2
 		public override bool? EdIsLocked
 		{
 			get
@@ -113,9 +111,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000128 RID: 296
-		// (get) Token: 0x06000374 RID: 884 RVA: 0x0001BD6C File Offset: 0x00019F6C
-		// (set) Token: 0x06000375 RID: 885 RVA: 0x0001BD97 File Offset: 0x00019F97
+		// Token: 0x1700012A RID: 298
+		// (get) Token: 0x06000378 RID: 888 RVA: 0x0001C6E0 File Offset: 0x0001A8E0
+		// (set) Token: 0x06000379 RID: 889 RVA: 0x0001C70B File Offset: 0x0001A90B
 		public virtual EElementalType ElementalType
 		{
 			get
@@ -136,9 +134,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000129 RID: 297
-		// (get) Token: 0x06000376 RID: 886 RVA: 0x0001BDA5 File Offset: 0x00019FA5
-		// (set) Token: 0x06000377 RID: 887 RVA: 0x0001BDD0 File Offset: 0x00019FD0
+		// Token: 0x1700012B RID: 299
+		// (get) Token: 0x0600037A RID: 890 RVA: 0x0001C719 File Offset: 0x0001A919
+		// (set) Token: 0x0600037B RID: 891 RVA: 0x0001C744 File Offset: 0x0001A944
 		public virtual int MaxCarryRange
 		{
 			get
@@ -159,9 +157,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700012A RID: 298
-		// (get) Token: 0x06000378 RID: 888 RVA: 0x0001BDE0 File Offset: 0x00019FE0
-		// (set) Token: 0x06000379 RID: 889 RVA: 0x0001BE1A File Offset: 0x0001A01A
+		// Token: 0x1700012C RID: 300
+		// (get) Token: 0x0600037C RID: 892 RVA: 0x0001C754 File Offset: 0x0001A954
+		// (set) Token: 0x0600037D RID: 893 RVA: 0x0001C78E File Offset: 0x0001A98E
 		public virtual int? InitialActiveElementalBoxId
 		{
 			get
@@ -183,9 +181,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700012B RID: 299
-		// (get) Token: 0x0600037A RID: 890 RVA: 0x0001BE28 File Offset: 0x0001A028
-		// (set) Token: 0x0600037B RID: 891 RVA: 0x0001BE62 File Offset: 0x0001A062
+		// Token: 0x1700012D RID: 301
+		// (get) Token: 0x0600037E RID: 894 RVA: 0x0001C79C File Offset: 0x0001A99C
+		// (set) Token: 0x0600037F RID: 895 RVA: 0x0001C7D6 File Offset: 0x0001A9D6
 		public virtual int? LoopTeleportMappingFoundationId
 		{
 			get
@@ -207,20 +205,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700012C RID: 300
-		// (get) Token: 0x0600037C RID: 892 RVA: 0x0001BE70 File Offset: 0x0001A070
-		// (set) Token: 0x0600037D RID: 893 RVA: 0x0001BF03 File Offset: 0x0001A103
+		// Token: 0x1700012E RID: 302
+		// (get) Token: 0x06000380 RID: 896 RVA: 0x0001C7E4 File Offset: 0x0001A9E4
+		// (set) Token: 0x06000381 RID: 897 RVA: 0x0001C877 File Offset: 0x0001AA77
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> OnObtainNucleusActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -251,7 +249,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -260,20 +258,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700012D RID: 301
-		// (get) Token: 0x0600037E RID: 894 RVA: 0x0001BF18 File Offset: 0x0001A118
-		// (set) Token: 0x0600037F RID: 895 RVA: 0x0001BFAB File Offset: 0x0001A1AB
+		// Token: 0x1700012F RID: 303
+		// (get) Token: 0x06000382 RID: 898 RVA: 0x0001C88C File Offset: 0x0001AA8C
+		// (set) Token: 0x06000383 RID: 899 RVA: 0x0001C91F File Offset: 0x0001AB1F
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> OnReturnNucleusActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -304,7 +302,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -313,34 +311,34 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000478 RID: 1144
+		// Token: 0x0400049C RID: 1180
 		[Nullable(2)]
 		protected new ElementalBoxFoundationComponent FbInstance;
 
-		// Token: 0x04000479 RID: 1145
+		// Token: 0x0400049D RID: 1181
 		[Nullable(2)]
 		protected new ElementalBoxFoundationComponent_SetValue PocoInterface;
 
-		// Token: 0x0400047A RID: 1146
+		// Token: 0x0400049E RID: 1182
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _OnObtainNucleusActionsCache;
 
-		// Token: 0x0400047B RID: 1147
+		// Token: 0x0400049F RID: 1183
 		private bool _OnObtainNucleusActionsInited;
 
-		// Token: 0x0400047C RID: 1148
+		// Token: 0x040004A0 RID: 1184
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _OnReturnNucleusActionsCache;
 
-		// Token: 0x0400047D RID: 1149
+		// Token: 0x040004A1 RID: 1185
 		private bool _OnReturnNucleusActionsInited;
 	}
 }

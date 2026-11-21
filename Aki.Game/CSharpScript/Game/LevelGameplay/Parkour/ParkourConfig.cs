@@ -7,14 +7,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.Parkour
 {
-	// Token: 0x02006ABC RID: 27324
+	// Token: 0x02005C34 RID: 23604
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ParkourConfig
 	{
-		// Token: 0x1700995C RID: 39260
-		// (get) Token: 0x06043E34 RID: 278068 RVA: 0x010A49E1 File Offset: 0x010A2BE1
-		// (set) Token: 0x06043E33 RID: 278067 RVA: 0x010A49D8 File Offset: 0x010A2BD8
+		// Token: 0x17006E5F RID: 28255
+		// (get) Token: 0x06039F7B RID: 237435 RVA: 0x0104DFC5 File Offset: 0x0104C1C5
+		// (set) Token: 0x06039F7A RID: 237434 RVA: 0x0104DFBC File Offset: 0x0104C1BC
 		public int ConfigId
 		{
 			get
@@ -27,9 +27,9 @@ namespace CSharpScript.Game.LevelGamePlay.Parkour
 			}
 		}
 
-		// Token: 0x1700995D RID: 39261
-		// (get) Token: 0x06043E36 RID: 278070 RVA: 0x010A49F2 File Offset: 0x010A2BF2
-		// (set) Token: 0x06043E35 RID: 278069 RVA: 0x010A49E9 File Offset: 0x010A2BE9
+		// Token: 0x17006E60 RID: 28256
+		// (get) Token: 0x06039F7D RID: 237437 RVA: 0x0104DFD6 File Offset: 0x0104C1D6
+		// (set) Token: 0x06039F7C RID: 237436 RVA: 0x0104DFCD File Offset: 0x0104C1CD
 		[Nullable(new byte[]
 		{
 			2,
@@ -60,9 +60,9 @@ namespace CSharpScript.Game.LevelGamePlay.Parkour
 			}
 		}
 
-		// Token: 0x1700995E RID: 39262
-		// (get) Token: 0x06043E38 RID: 278072 RVA: 0x010A4A03 File Offset: 0x010A2C03
-		// (set) Token: 0x06043E37 RID: 278071 RVA: 0x010A49FA File Offset: 0x010A2BFA
+		// Token: 0x17006E61 RID: 28257
+		// (get) Token: 0x06039F7F RID: 237439 RVA: 0x0104DFE7 File Offset: 0x0104C1E7
+		// (set) Token: 0x06039F7E RID: 237438 RVA: 0x0104DFDE File Offset: 0x0104C1DE
 		public GeneralLogicTreeContext ParkourContext
 		{
 			get
@@ -75,9 +75,9 @@ namespace CSharpScript.Game.LevelGamePlay.Parkour
 			}
 		}
 
-		// Token: 0x1700995F RID: 39263
-		// (get) Token: 0x06043E39 RID: 278073 RVA: 0x010A4A0B File Offset: 0x010A2C0B
-		// (set) Token: 0x06043E3A RID: 278074 RVA: 0x010A4A13 File Offset: 0x010A2C13
+		// Token: 0x17006E62 RID: 28258
+		// (get) Token: 0x06039F80 RID: 237440 RVA: 0x0104DFEF File Offset: 0x0104C1EF
+		// (set) Token: 0x06039F81 RID: 237441 RVA: 0x0104DFF7 File Offset: 0x0104C1F7
 		public IParkourSpline ParkourInfo
 		{
 			get
@@ -90,9 +90,9 @@ namespace CSharpScript.Game.LevelGamePlay.Parkour
 			}
 		}
 
-		// Token: 0x17009960 RID: 39264
-		// (get) Token: 0x06043E3C RID: 278076 RVA: 0x010A4A25 File Offset: 0x010A2C25
-		// (set) Token: 0x06043E3B RID: 278075 RVA: 0x010A4A1C File Offset: 0x010A2C1C
+		// Token: 0x17006E63 RID: 28259
+		// (get) Token: 0x06039F83 RID: 237443 RVA: 0x0104E009 File Offset: 0x0104C209
+		// (set) Token: 0x06039F82 RID: 237442 RVA: 0x0104E000 File Offset: 0x0104C200
 		public int CurCheckPointCount
 		{
 			get
@@ -105,9 +105,9 @@ namespace CSharpScript.Game.LevelGamePlay.Parkour
 			}
 		}
 
-		// Token: 0x17009961 RID: 39265
-		// (get) Token: 0x06043E3E RID: 278078 RVA: 0x010A4A36 File Offset: 0x010A2C36
-		// (set) Token: 0x06043E3D RID: 278077 RVA: 0x010A4A2D File Offset: 0x010A2C2D
+		// Token: 0x17006E64 RID: 28260
+		// (get) Token: 0x06039F85 RID: 237445 RVA: 0x0104E01A File Offset: 0x0104C21A
+		// (set) Token: 0x06039F84 RID: 237444 RVA: 0x0104E011 File Offset: 0x0104C211
 		public Vector OriginLocation
 		{
 			get
@@ -120,9 +120,9 @@ namespace CSharpScript.Game.LevelGamePlay.Parkour
 			}
 		}
 
-		// Token: 0x17009962 RID: 39266
-		// (get) Token: 0x06043E40 RID: 278080 RVA: 0x010A4A47 File Offset: 0x010A2C47
-		// (set) Token: 0x06043E3F RID: 278079 RVA: 0x010A4A3E File Offset: 0x010A2C3E
+		// Token: 0x17006E65 RID: 28261
+		// (get) Token: 0x06039F87 RID: 237447 RVA: 0x0104E02B File Offset: 0x0104C22B
+		// (set) Token: 0x06039F86 RID: 237446 RVA: 0x0104E022 File Offset: 0x0104C222
 		public Rotator OriginRotation
 		{
 			get
@@ -135,8 +135,8 @@ namespace CSharpScript.Game.LevelGamePlay.Parkour
 			}
 		}
 
-		// Token: 0x17009963 RID: 39267
-		// (get) Token: 0x06043E41 RID: 278081 RVA: 0x010A4A4F File Offset: 0x010A2C4F
+		// Token: 0x17006E66 RID: 28262
+		// (get) Token: 0x06039F88 RID: 237448 RVA: 0x0104E033 File Offset: 0x0104C233
 		public Dictionary<int, int> TotalScore
 		{
 			get
@@ -145,9 +145,9 @@ namespace CSharpScript.Game.LevelGamePlay.Parkour
 			}
 		}
 
-		// Token: 0x17009964 RID: 39268
-		// (get) Token: 0x06043E42 RID: 278082 RVA: 0x010A4A57 File Offset: 0x010A2C57
-		// (set) Token: 0x06043E43 RID: 278083 RVA: 0x010A4A5F File Offset: 0x010A2C5F
+		// Token: 0x17006E67 RID: 28263
+		// (get) Token: 0x06039F89 RID: 237449 RVA: 0x0104E03B File Offset: 0x0104C23B
+		// (set) Token: 0x06039F8A RID: 237450 RVA: 0x0104E043 File Offset: 0x0104C243
 		[Nullable(new byte[]
 		{
 			2,
@@ -175,13 +175,13 @@ namespace CSharpScript.Game.LevelGamePlay.Parkour
 			}
 		}
 
-		// Token: 0x06043E44 RID: 278084 RVA: 0x010A4A68 File Offset: 0x010A2C68
+		// Token: 0x06039F8B RID: 237451 RVA: 0x0104E04C File Offset: 0x0104C24C
 		public void ClearTotalScore()
 		{
 			this.Score = new Dictionary<int, int>();
 		}
 
-		// Token: 0x06043E45 RID: 278085 RVA: 0x010A4A78 File Offset: 0x010A2C78
+		// Token: 0x06039F8C RID: 237452 RVA: 0x0104E05C File Offset: 0x0104C25C
 		public void ClearParkourActorList()
 		{
 			if (this.ParkourActors == null || this.ParkourActors.Count == 0)
@@ -206,13 +206,13 @@ namespace CSharpScript.Game.LevelGamePlay.Parkour
 			this.ParkourActors.Clear();
 		}
 
-		// Token: 0x040237BA RID: 145338
+		// Token: 0x0401EA57 RID: 125527
 		private int ConfigInternal;
 
-		// Token: 0x040237BB RID: 145339
+		// Token: 0x0401EA58 RID: 125528
 		private IParkourSpline Info;
 
-		// Token: 0x040237BC RID: 145340
+		// Token: 0x0401EA59 RID: 125529
 		[Nullable(new byte[]
 		{
 			2,
@@ -221,22 +221,22 @@ namespace CSharpScript.Game.LevelGamePlay.Parkour
 		})]
 		private List<List<ParkourPointInfo>> ParkourActors;
 
-		// Token: 0x040237BD RID: 145341
+		// Token: 0x0401EA5A RID: 125530
 		private int CurCount;
 
-		// Token: 0x040237BE RID: 145342
+		// Token: 0x0401EA5B RID: 125531
 		private GeneralLogicTreeContext Context;
 
-		// Token: 0x040237BF RID: 145343
+		// Token: 0x0401EA5C RID: 125532
 		private Vector Location;
 
-		// Token: 0x040237C0 RID: 145344
+		// Token: 0x0401EA5D RID: 125533
 		private Rotator Rotation;
 
-		// Token: 0x040237C1 RID: 145345
+		// Token: 0x0401EA5E RID: 125534
 		private Dictionary<int, int> Score;
 
-		// Token: 0x040237C2 RID: 145346
+		// Token: 0x0401EA5F RID: 125535
 		[Nullable(new byte[]
 		{
 			2,

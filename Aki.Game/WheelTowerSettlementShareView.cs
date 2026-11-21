@@ -10,12 +10,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200164B RID: 5707
+// Token: 0x02000B03 RID: 2819
 [NullableContext(1)]
 [Nullable(0)]
 public class WheelTowerSettlementShareView : UiPanelBase
 {
-	// Token: 0x0600A03C RID: 41020 RVA: 0x00234424 File Offset: 0x00232624
+	// Token: 0x0600741A RID: 29722 RVA: 0x0023E260 File Offset: 0x0023C460
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -41,7 +41,7 @@ public class WheelTowerSettlementShareView : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600A03D RID: 41021 RVA: 0x00234554 File Offset: 0x00232754
+	// Token: 0x0600741B RID: 29723 RVA: 0x0023E390 File Offset: 0x0023C590
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WheelTowerSettlementShareView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -52,13 +52,13 @@ public class WheelTowerSettlementShareView : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600A03E RID: 41022 RVA: 0x00234597 File Offset: 0x00232797
+	// Token: 0x0600741C RID: 29724 RVA: 0x0023E3D3 File Offset: 0x0023C5D3
 	private WheelTowerSettlementRoleItem CreateRoleItem()
 	{
 		return new WheelTowerSettlementRoleItem();
 	}
 
-	// Token: 0x0600A03F RID: 41023 RVA: 0x002345A0 File Offset: 0x002327A0
+	// Token: 0x0600741D RID: 29725 RVA: 0x0023E3DC File Offset: 0x0023C5DC
 	protected override void OnStart()
 	{
 		IWheelTowerSettlementViewData wheelTowerSettlementViewData = this.OpenParam as IWheelTowerSettlementViewData;
@@ -116,7 +116,7 @@ public class WheelTowerSettlementShareView : UiPanelBase
 		bossResultPanel2.SetBossScrollEnable(false);
 	}
 
-	// Token: 0x0600A040 RID: 41024 RVA: 0x00234728 File Offset: 0x00232928
+	// Token: 0x0600741E RID: 29726 RVA: 0x0023E564 File Offset: 0x0023C764
 	[NullableContext(0)]
 	[return: TupleElementNames(new string[]
 	{
@@ -138,40 +138,40 @@ public class WheelTowerSettlementShareView : UiPanelBase
 		return new ValueTuple<int, int>(num, item);
 	}
 
-	// Token: 0x040048FF RID: 18687
+	// Token: 0x040049A5 RID: 18853
 	private WheelTowerModeSettlementTitleItem ModeTitleItem;
 
-	// Token: 0x04004900 RID: 18688
+	// Token: 0x040049A6 RID: 18854
 	private WheelTowerSettlementRoundPanel RoundPanel;
 
-	// Token: 0x04004901 RID: 18689
+	// Token: 0x040049A7 RID: 18855
 	private WheelTowerSettlementScorePanel ScorePanel;
 
-	// Token: 0x04004902 RID: 18690
+	// Token: 0x040049A8 RID: 18856
 	private WheelTowerSettlementBossResultPanel BossResultPanel;
 
-	// Token: 0x04004903 RID: 18691
+	// Token: 0x040049A9 RID: 18857
 	private GenericLayout<WheelTowerSettlementRoleItem, RoleDataWithBranch> RoleLayout;
 
-	// Token: 0x02007C0B RID: 31755
+	// Token: 0x02006D93 RID: 28051
 	[NullableContext(0)]
 	private enum EComp
 	{
-		// Token: 0x04028BB2 RID: 166834
+		// Token: 0x04023EE5 RID: 147173
 		BgModeTitle,
-		// Token: 0x04028BB3 RID: 166835
+		// Token: 0x04023EE6 RID: 147174
 		BgRoundPoints,
-		// Token: 0x04028BB4 RID: 166836
+		// Token: 0x04023EE7 RID: 147175
 		BgScore,
-		// Token: 0x04028BB5 RID: 166837
+		// Token: 0x04023EE8 RID: 147176
 		BgBattleBoss,
-		// Token: 0x04028BB6 RID: 166838
+		// Token: 0x04023EE9 RID: 147177
 		RoleLayout,
-		// Token: 0x04028BB7 RID: 166839
+		// Token: 0x04023EEA RID: 147178
 		RoleItem,
-		// Token: 0x04028BB8 RID: 166840
+		// Token: 0x04023EEB RID: 147179
 		SeasonTexture,
-		// Token: 0x04028BB9 RID: 166841
+		// Token: 0x04023EEC RID: 147180
 		CharacterBg
 	}
 }

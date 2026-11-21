@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F5F RID: 24415
+	// Token: 0x020065A3 RID: 26019
 	public enum EEnableFunctionType : byte
 	{
-		// Token: 0x0400FD23 RID: 64803
+		// Token: 0x04010AA1 RID: 68257
 		TeleportDungeon,
-		// Token: 0x0400FD24 RID: 64804
+		// Token: 0x04010AA2 RID: 68258
 		MotorRadioUI,
-		// Token: 0x0400FD25 RID: 64805
+		// Token: 0x04010AA3 RID: 68259
 		InteractiveItems
 	}
 }

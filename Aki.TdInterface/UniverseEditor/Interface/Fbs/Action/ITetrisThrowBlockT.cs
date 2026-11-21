@@ -2,50 +2,50 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020073CB RID: 29643
+	// Token: 0x02007BB2 RID: 31666
 	public class ITetrisThrowBlockT
 	{
-		// Token: 0x1700E126 RID: 57638
-		// (get) Token: 0x06035D79 RID: 220537 RVA: 0x007544F3 File Offset: 0x007526F3
-		// (set) Token: 0x06035D7A RID: 220538 RVA: 0x007544FB File Offset: 0x007526FB
+		// Token: 0x1700ED36 RID: 60726
+		// (get) Token: 0x06039114 RID: 233748 RVA: 0x007B6A33 File Offset: 0x007B4C33
+		// (set) Token: 0x06039115 RID: 233749 RVA: 0x007B6A3B File Offset: 0x007B4C3B
 		public string ShapeName { get; set; }
 
-		// Token: 0x1700E127 RID: 57639
-		// (get) Token: 0x06035D7B RID: 220539 RVA: 0x00754504 File Offset: 0x00752704
-		// (set) Token: 0x06035D7C RID: 220540 RVA: 0x0075450C File Offset: 0x0075270C
+		// Token: 0x1700ED37 RID: 60727
+		// (get) Token: 0x06039116 RID: 233750 RVA: 0x007B6A44 File Offset: 0x007B4C44
+		// (set) Token: 0x06039117 RID: 233751 RVA: 0x007B6A4C File Offset: 0x007B4C4C
 		public int PosIndex { get; set; }
 
-		// Token: 0x1700E128 RID: 57640
-		// (get) Token: 0x06035D7D RID: 220541 RVA: 0x00754515 File Offset: 0x00752715
-		// (set) Token: 0x06035D7E RID: 220542 RVA: 0x0075451D File Offset: 0x0075271D
+		// Token: 0x1700ED38 RID: 60728
+		// (get) Token: 0x06039118 RID: 233752 RVA: 0x007B6A55 File Offset: 0x007B4C55
+		// (set) Token: 0x06039119 RID: 233753 RVA: 0x007B6A5D File Offset: 0x007B4C5D
 		public int HeightIndex { get; set; }
 
-		// Token: 0x1700E129 RID: 57641
-		// (get) Token: 0x06035D7F RID: 220543 RVA: 0x00754526 File Offset: 0x00752726
-		// (set) Token: 0x06035D80 RID: 220544 RVA: 0x0075452E File Offset: 0x0075272E
+		// Token: 0x1700ED39 RID: 60729
+		// (get) Token: 0x0603911A RID: 233754 RVA: 0x007B6A66 File Offset: 0x007B4C66
+		// (set) Token: 0x0603911B RID: 233755 RVA: 0x007B6A6E File Offset: 0x007B4C6E
 		public ETetrisRotation Rotation { get; set; }
 
-		// Token: 0x1700E12A RID: 57642
-		// (get) Token: 0x06035D81 RID: 220545 RVA: 0x00754537 File Offset: 0x00752737
-		// (set) Token: 0x06035D82 RID: 220546 RVA: 0x0075453F File Offset: 0x0075273F
+		// Token: 0x1700ED3A RID: 60730
+		// (get) Token: 0x0603911C RID: 233756 RVA: 0x007B6A77 File Offset: 0x007B4C77
+		// (set) Token: 0x0603911D RID: 233757 RVA: 0x007B6A7F File Offset: 0x007B4C7F
 		public bool IsDelayFall { get; set; }
 
-		// Token: 0x1700E12B RID: 57643
-		// (get) Token: 0x06035D83 RID: 220547 RVA: 0x00754548 File Offset: 0x00752748
-		// (set) Token: 0x06035D84 RID: 220548 RVA: 0x00754550 File Offset: 0x00752750
+		// Token: 0x1700ED3B RID: 60731
+		// (get) Token: 0x0603911E RID: 233758 RVA: 0x007B6A88 File Offset: 0x007B4C88
+		// (set) Token: 0x0603911F RID: 233759 RVA: 0x007B6A90 File Offset: 0x007B4C90
 		public int FallSpeed { get; set; }
 
-		// Token: 0x1700E12C RID: 57644
-		// (get) Token: 0x06035D85 RID: 220549 RVA: 0x00754559 File Offset: 0x00752759
-		// (set) Token: 0x06035D86 RID: 220550 RVA: 0x00754561 File Offset: 0x00752761
+		// Token: 0x1700ED3C RID: 60732
+		// (get) Token: 0x06039120 RID: 233760 RVA: 0x007B6A99 File Offset: 0x007B4C99
+		// (set) Token: 0x06039121 RID: 233761 RVA: 0x007B6AA1 File Offset: 0x007B4CA1
 		public int FallAcceleration { get; set; }
 
-		// Token: 0x1700E12D RID: 57645
-		// (get) Token: 0x06035D87 RID: 220551 RVA: 0x0075456A File Offset: 0x0075276A
-		// (set) Token: 0x06035D88 RID: 220552 RVA: 0x00754572 File Offset: 0x00752772
+		// Token: 0x1700ED3D RID: 60733
+		// (get) Token: 0x06039122 RID: 233762 RVA: 0x007B6AAA File Offset: 0x007B4CAA
+		// (set) Token: 0x06039123 RID: 233763 RVA: 0x007B6AB2 File Offset: 0x007B4CB2
 		public byte NullMask { get; set; }
 
-		// Token: 0x06035D89 RID: 220553 RVA: 0x0075457B File Offset: 0x0075277B
+		// Token: 0x06039124 RID: 233764 RVA: 0x007B6ABB File Offset: 0x007B4CBB
 		public ITetrisThrowBlockT()
 		{
 			this.ShapeName = null;

@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002CC4 RID: 11460
+// Token: 0x0200221D RID: 8733
 [NullableContext(1)]
 [Nullable(0)]
 public class UiModelBase
 {
-	// Token: 0x06017F41 RID: 98113 RVA: 0x006176E4 File Offset: 0x006158E4
+	// Token: 0x060157BA RID: 87994 RVA: 0x0063D3A4 File Offset: 0x0063B5A4
 	public UiModelBase(int id, EUiModelUseWay useWay)
 	{
 		this.Id = id;
 		this.UseWay = useWay;
 	}
 
-	// Token: 0x06017F42 RID: 98114 RVA: 0x0061773C File Offset: 0x0061593C
+	// Token: 0x060157BB RID: 87995 RVA: 0x0063D3FC File Offset: 0x0063B5FC
 	[NullableContext(0)]
 	[return: Nullable(2)]
 	public T GetComponent<T>() where T : UiModelComponentBase
@@ -28,7 +28,7 @@ public class UiModelBase
 		return default(T);
 	}
 
-	// Token: 0x06017F43 RID: 98115 RVA: 0x00617778 File Offset: 0x00615978
+	// Token: 0x060157BC RID: 87996 RVA: 0x0063D438 File Offset: 0x0063B638
 	[NullableContext(0)]
 	[return: Nullable(2)]
 	public T GetComponentByCtor<T>() where T : UiModelComponentBase
@@ -44,7 +44,7 @@ public class UiModelBase
 		return default(T);
 	}
 
-	// Token: 0x06017F44 RID: 98116 RVA: 0x006177F0 File Offset: 0x006159F0
+	// Token: 0x060157BD RID: 87997 RVA: 0x0063D4B0 File Offset: 0x0063B6B0
 	[NullableContext(0)]
 	[return: Nullable(2)]
 	public unsafe T CheckGetComponent<T>() where T : UiModelComponentBase
@@ -65,7 +65,7 @@ public class UiModelBase
 		return component;
 	}
 
-	// Token: 0x06017F45 RID: 98117 RVA: 0x0061789C File Offset: 0x00615A9C
+	// Token: 0x060157BE RID: 87998 RVA: 0x0063D55C File Offset: 0x0063B75C
 	public unsafe void AddComponent(Type componentType)
 	{
 		if (this.ComponentMap.ContainsKey(componentType))
@@ -108,7 +108,7 @@ public class UiModelBase
 		}
 	}
 
-	// Token: 0x06017F46 RID: 98118 RVA: 0x006179A0 File Offset: 0x00615BA0
+	// Token: 0x060157BF RID: 87999 RVA: 0x0063D660 File Offset: 0x0063B860
 	public void Init()
 	{
 		foreach (KeyValuePair<Type, UiModelComponentBase> keyValuePair in this.ComponentMap)
@@ -117,7 +117,7 @@ public class UiModelBase
 		}
 	}
 
-	// Token: 0x06017F47 RID: 98119 RVA: 0x006179F8 File Offset: 0x00615BF8
+	// Token: 0x060157C0 RID: 88000 RVA: 0x0063D6B8 File Offset: 0x0063B8B8
 	public void Start()
 	{
 		foreach (KeyValuePair<Type, UiModelComponentBase> keyValuePair in this.ComponentMap)
@@ -126,7 +126,7 @@ public class UiModelBase
 		}
 	}
 
-	// Token: 0x06017F48 RID: 98120 RVA: 0x00617A50 File Offset: 0x00615C50
+	// Token: 0x060157C1 RID: 88001 RVA: 0x0063D710 File Offset: 0x0063B910
 	public void Tick(float deltaTime)
 	{
 		foreach (KeyValuePair<Type, UiModelComponentBase> keyValuePair in this.ComponentMap)
@@ -138,7 +138,7 @@ public class UiModelBase
 		}
 	}
 
-	// Token: 0x06017F49 RID: 98121 RVA: 0x00617AB8 File Offset: 0x00615CB8
+	// Token: 0x060157C2 RID: 88002 RVA: 0x0063D778 File Offset: 0x0063B978
 	public void End()
 	{
 		foreach (KeyValuePair<Type, UiModelComponentBase> keyValuePair in this.ComponentMap)
@@ -147,7 +147,7 @@ public class UiModelBase
 		}
 	}
 
-	// Token: 0x06017F4A RID: 98122 RVA: 0x00617B10 File Offset: 0x00615D10
+	// Token: 0x060157C3 RID: 88003 RVA: 0x0063D7D0 File Offset: 0x0063B9D0
 	public void Clear()
 	{
 		foreach (KeyValuePair<Type, UiModelComponentBase> keyValuePair in this.ComponentMap)
@@ -159,7 +159,7 @@ public class UiModelBase
 		this.PlanarReflectionRenderOffsetComponents.Clear();
 	}
 
-	// Token: 0x06017F4B RID: 98123 RVA: 0x00617B8C File Offset: 0x00615D8C
+	// Token: 0x060157C4 RID: 88004 RVA: 0x0063D84C File Offset: 0x0063BA4C
 	public void OnVisibleChange(bool visible)
 	{
 		this.VisibleComponents.ForEach(delegate(IUiModelVisible c)
@@ -168,7 +168,7 @@ public class UiModelBase
 		});
 	}
 
-	// Token: 0x06017F4C RID: 98124 RVA: 0x00617BC0 File Offset: 0x00615DC0
+	// Token: 0x060157C5 RID: 88005 RVA: 0x0063D880 File Offset: 0x0063BA80
 	public void OnSetDitherEffect(float value)
 	{
 		this.DitherComponents.ForEach(delegate(IUiModelSetDitherEffect c)
@@ -177,7 +177,7 @@ public class UiModelBase
 		});
 	}
 
-	// Token: 0x06017F4D RID: 98125 RVA: 0x00617BF4 File Offset: 0x00615DF4
+	// Token: 0x060157C6 RID: 88006 RVA: 0x0063D8B4 File Offset: 0x0063BAB4
 	public void OnPlanarReflectionRenderOffsetChange(bool enable, FVector? offset)
 	{
 		this.PlanarReflectionRenderOffsetComponents.ForEach(delegate(IUiModelSetPlanarReflectionRenderOffset c)
@@ -186,7 +186,7 @@ public class UiModelBase
 		});
 	}
 
-	// Token: 0x06017F4E RID: 98126 RVA: 0x00617C2C File Offset: 0x00615E2C
+	// Token: 0x060157C7 RID: 88007 RVA: 0x0063D8EC File Offset: 0x0063BAEC
 	public void OnRenderingMaterialAdd(int materialId, UObject data, bool isGroup, bool withAnimObject)
 	{
 		this.RenderingMaterialChangeComponents.ForEach(delegate(IUiModelRenderingMaterialChange c)
@@ -195,7 +195,7 @@ public class UiModelBase
 		});
 	}
 
-	// Token: 0x06017F4F RID: 98127 RVA: 0x00617C74 File Offset: 0x00615E74
+	// Token: 0x060157C8 RID: 88008 RVA: 0x0063D934 File Offset: 0x0063BB34
 	public void OnRenderingMaterialRemove(int materialId, bool isGroup, bool withAnimObject)
 	{
 		this.RenderingMaterialChangeComponents.ForEach(delegate(IUiModelRenderingMaterialChange c)
@@ -204,24 +204,24 @@ public class UiModelBase
 		});
 	}
 
-	// Token: 0x0400B27E RID: 45694
+	// Token: 0x0400B5E9 RID: 46569
 	private readonly OrderedDictionary<Type, UiModelComponentBase> ComponentMap = new OrderedDictionary<Type, UiModelComponentBase>();
 
-	// Token: 0x0400B27F RID: 45695
+	// Token: 0x0400B5EA RID: 46570
 	public readonly EUiModelUseWay UseWay;
 
-	// Token: 0x0400B280 RID: 45696
+	// Token: 0x0400B5EB RID: 46571
 	public readonly int Id;
 
-	// Token: 0x0400B281 RID: 45697
+	// Token: 0x0400B5EC RID: 46572
 	private readonly List<IUiModelVisible> VisibleComponents = new List<IUiModelVisible>();
 
-	// Token: 0x0400B282 RID: 45698
+	// Token: 0x0400B5ED RID: 46573
 	private readonly List<IUiModelSetDitherEffect> DitherComponents = new List<IUiModelSetDitherEffect>();
 
-	// Token: 0x0400B283 RID: 45699
+	// Token: 0x0400B5EE RID: 46574
 	private readonly List<IUiModelRenderingMaterialChange> RenderingMaterialChangeComponents = new List<IUiModelRenderingMaterialChange>();
 
-	// Token: 0x0400B284 RID: 45700
+	// Token: 0x0400B5EF RID: 46575
 	private readonly List<IUiModelSetPlanarReflectionRenderOffset> PlanarReflectionRenderOffsetComponents = new List<IUiModelSetPlanarReflectionRenderOffset>();
 }

@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Manufacture.Compose.View
 {
-	// Token: 0x0200566E RID: 22126
+	// Token: 0x02004644 RID: 17988
 	[NullableContext(2)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 	})]
 	public class ComposeCircleItem : AutoAttachItem<IBaseItemData>
 	{
-		// Token: 0x060384B7 RID: 230583 RVA: 0x00D59D98 File Offset: 0x00D57F98
+		// Token: 0x0602D3B4 RID: 185268 RVA: 0x00CA7E98 File Offset: 0x00CA6098
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060384B8 RID: 230584 RVA: 0x00D59EC2 File Offset: 0x00D580C2
+		// Token: 0x0602D3B5 RID: 185269 RVA: 0x00CA7FC2 File Offset: 0x00CA61C2
 		protected override void OnStart()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(1);
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			extendToggle.CanExecuteChange.Bind(new Func<bool>(this.CheckCanClick));
 		}
 
-		// Token: 0x060384B9 RID: 230585 RVA: 0x00D59EE8 File Offset: 0x00D580E8
+		// Token: 0x0602D3B6 RID: 185270 RVA: 0x00CA7FE8 File Offset: 0x00CA61E8
 		protected override void OnMoveItem()
 		{
 			float currentMovePercentage = base.GetCurrentMovePercentage();
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			extendToggle.RootUIComp.Get().SetUIItemScale(new FVector(floatValue, floatValue, 1f));
 		}
 
-		// Token: 0x060384BA RID: 230586 RVA: 0x00D59F34 File Offset: 0x00D58134
+		// Token: 0x0602D3B7 RID: 185271 RVA: 0x00CA8034 File Offset: 0x00CA6234
 		protected override void OnRefreshItem(IBaseItemData data)
 		{
 			this.CurrentData = data;
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			base.GetItem(4).SetUIActive(true);
 		}
 
-		// Token: 0x060384BB RID: 230587 RVA: 0x00D5A0E4 File Offset: 0x00D582E4
+		// Token: 0x0602D3B8 RID: 185272 RVA: 0x00CA81E4 File Offset: 0x00CA63E4
 		public override void OnSelect()
 		{
 			Action<IBaseItemData, EComposeListType, bool?> buttonFunction = this.ButtonFunction;
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			extendToggle.SetToggleStateForce(EToggleState.ETT_Checked, false, false, false);
 		}
 
-		// Token: 0x060384BC RID: 230588 RVA: 0x00D5A131 File Offset: 0x00D58331
+		// Token: 0x0602D3B9 RID: 185273 RVA: 0x00CA8231 File Offset: 0x00CA6431
 		private void SelectedItem(EToggleState toggleState)
 		{
 			Action<IBaseItemData, EComposeListType, bool?> buttonFunction = this.ButtonFunction;
@@ -146,7 +146,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			extendToggle.SetToggleStateForce(EToggleState.ETT_Checked, false, false, false);
 		}
 
-		// Token: 0x060384BD RID: 230589 RVA: 0x00D5A170 File Offset: 0x00D58370
+		// Token: 0x0602D3BA RID: 185274 RVA: 0x00CA8270 File Offset: 0x00CA6470
 		protected override void OnUnSelect()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(1);
@@ -157,49 +157,49 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			extendToggle.SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x060384BE RID: 230590 RVA: 0x00D5A187 File Offset: 0x00D58387
+		// Token: 0x0602D3BB RID: 185275 RVA: 0x00CA8287 File Offset: 0x00CA6487
 		private bool CheckCanClick()
 		{
 			return this.CheckToggleCanClick == null || this.CheckToggleCanClick();
 		}
 
-		// Token: 0x060384BF RID: 230591 RVA: 0x00D5A19E File Offset: 0x00D5839E
+		// Token: 0x0602D3BC RID: 185276 RVA: 0x00CA829E File Offset: 0x00CA649E
 		public ComposeCircleItem() : base(null)
 		{
 		}
 
-		// Token: 0x0401D98B RID: 121227
+		// Token: 0x04018416 RID: 99350
 		public Action<IBaseItemData, EComposeListType, bool?> ButtonFunction;
 
-		// Token: 0x0401D98C RID: 121228
+		// Token: 0x04018417 RID: 99351
 		public Func<bool> CheckToggleCanClick;
 
-		// Token: 0x0401D98D RID: 121229
+		// Token: 0x04018418 RID: 99352
 		private IBaseItemData CurrentData;
 
-		// Token: 0x0401D98E RID: 121230
+		// Token: 0x04018419 RID: 99353
 		public UCurveFloat ItemCurve;
 
-		// Token: 0x0200B82F RID: 47151
+		// Token: 0x0200A257 RID: 41559
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x04037BD6 RID: 228310
+			// Token: 0x040325F4 RID: 206324
 			public const int LineSprite = 0;
 
-			// Token: 0x04037BD7 RID: 228311
+			// Token: 0x040325F5 RID: 206325
 			public const int Toggle = 1;
 
-			// Token: 0x04037BD8 RID: 228312
+			// Token: 0x040325F6 RID: 206326
 			public const int QualitySprite = 2;
 
-			// Token: 0x04037BD9 RID: 228313
+			// Token: 0x040325F7 RID: 206327
 			public const int ItemTexture = 3;
 
-			// Token: 0x04037BDA RID: 228314
+			// Token: 0x040325F8 RID: 206328
 			public const int LockItem = 4;
 
-			// Token: 0x04037BDB RID: 228315
+			// Token: 0x040325F9 RID: 206329
 			public const int NumberText = 5;
 		}
 	}

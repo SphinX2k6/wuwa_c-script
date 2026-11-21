@@ -11,18 +11,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DD6 RID: 19926
+	// Token: 0x02003D9F RID: 15775
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RoguelikeEntranceView : UiViewBase
 	{
-		// Token: 0x060336E0 RID: 210656 RVA: 0x00C02C64 File Offset: 0x00C00E64
+		// Token: 0x0602854D RID: 165197 RVA: 0x00B4C1BC File Offset: 0x00B4A3BC
 		[NullableContext(1)]
 		public RoguelikeEntranceView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x060336E1 RID: 210657 RVA: 0x00C02C70 File Offset: 0x00C00E70
+		// Token: 0x0602854E RID: 165198 RVA: 0x00B4C1C8 File Offset: 0x00B4A3C8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060336E2 RID: 210658 RVA: 0x00C02D80 File Offset: 0x00C00F80
+		// Token: 0x0602854F RID: 165199 RVA: 0x00B4C2D8 File Offset: 0x00B4A4D8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoguelikeEntranceView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060336E3 RID: 210659 RVA: 0x00C02DC4 File Offset: 0x00C00FC4
+		// Token: 0x06028550 RID: 165200 RVA: 0x00B4C31C File Offset: 0x00B4A51C
 		protected override void OnStart()
 		{
 			this.RoleSelectPanel.ShowNewUnlockRole(this.Vm.ShowNewUnlockRole);
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			EventSystem.Instance.Emit<string>(EEventName.OnGuideTriggerEvent, "RoguelikeEntranceLockSetMultiplier");
 		}
 
-		// Token: 0x060336E4 RID: 210660 RVA: 0x00C02E20 File Offset: 0x00C01020
+		// Token: 0x06028551 RID: 165201 RVA: 0x00B4C378 File Offset: 0x00B4A578
 		protected override void OnBeforeShow()
 		{
 			RoguelikeEntryData currentSelectEntryData = this.Vm.CurrentSelectEntryData;
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x060336E5 RID: 210661 RVA: 0x00C02E86 File Offset: 0x00C01086
+		// Token: 0x06028552 RID: 165202 RVA: 0x00B4C3DE File Offset: 0x00B4A5DE
 		protected override void OnAfterShow()
 		{
 			if (this.NewUnlockEntriesGroupId != null)
@@ -96,21 +96,21 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x060336E6 RID: 210662 RVA: 0x00C02EB7 File Offset: 0x00C010B7
+		// Token: 0x06028553 RID: 165203 RVA: 0x00B4C40F File Offset: 0x00B4A60F
 		protected override void OnBeforeDestroy()
 		{
 			this.UnlockLevelSequencePlayer = null;
 			RoguelikeModel.Instance.ClearEntranceViewModel();
 		}
 
-		// Token: 0x060336E7 RID: 210663 RVA: 0x00C02ECA File Offset: 0x00C010CA
+		// Token: 0x06028554 RID: 165204 RVA: 0x00B4C422 File Offset: 0x00B4A622
 		private void OnBtnBack()
 		{
 			InstanceDungeonEntranceController.Instance.RevertEntranceFlowStep();
 			base.CloseMe(null);
 		}
 
-		// Token: 0x060336E8 RID: 210664 RVA: 0x00C02EE0 File Offset: 0x00C010E0
+		// Token: 0x06028555 RID: 165205 RVA: 0x00B4C438 File Offset: 0x00B4A638
 		private UniTask InitEntriesPanel()
 		{
 			RoguelikeEntranceView.<InitEntriesPanel>d__16 <InitEntriesPanel>d__;
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <InitEntriesPanel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060336E9 RID: 210665 RVA: 0x00C02F24 File Offset: 0x00C01124
+		// Token: 0x06028556 RID: 165206 RVA: 0x00B4C47C File Offset: 0x00B4A67C
 		private UniTask InitEntriesDescPanel()
 		{
 			RoguelikeEntranceView.<InitEntriesDescPanel>d__17 <InitEntriesDescPanel>d__;
@@ -132,7 +132,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <InitEntriesDescPanel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060336EA RID: 210666 RVA: 0x00C02F68 File Offset: 0x00C01168
+		// Token: 0x06028557 RID: 165207 RVA: 0x00B4C4C0 File Offset: 0x00B4A6C0
 		private void OnMultiplierChange(bool isAdd)
 		{
 			int currentEntriesGroupIndex = this.Vm.CurrentEntriesGroupIndex;
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x060336EB RID: 210667 RVA: 0x00C02FF4 File Offset: 0x00C011F4
+		// Token: 0x06028558 RID: 165208 RVA: 0x00B4C54C File Offset: 0x00B4A74C
 		[NullableContext(1)]
 		private void OnClickEntry(bool isSelect, RoguelikeEntryData data)
 		{
@@ -170,7 +170,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.EntriesPanel.RefreshSelectEntry(this.Vm, data, true);
 		}
 
-		// Token: 0x060336EC RID: 210668 RVA: 0x00C0306C File Offset: 0x00C0126C
+		// Token: 0x06028559 RID: 165209 RVA: 0x00B4C5C4 File Offset: 0x00B4A7C4
 		[NullableContext(0)]
 		public UniTask ShowNewUnlockEntriesGroupId(ValueTuple<int, int> groupId)
 		{
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <ShowNewUnlockEntriesGroupId>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060336ED RID: 210669 RVA: 0x00C030B8 File Offset: 0x00C012B8
+		// Token: 0x0602855A RID: 165210 RVA: 0x00B4C610 File Offset: 0x00B4A810
 		private UniTask InitRoleSelectPanel()
 		{
 			RoguelikeEntranceView.<InitRoleSelectPanel>d__21 <InitRoleSelectPanel>d__;
@@ -194,7 +194,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <InitRoleSelectPanel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060336EE RID: 210670 RVA: 0x00C030FC File Offset: 0x00C012FC
+		// Token: 0x0602855B RID: 165211 RVA: 0x00B4C654 File Offset: 0x00B4A854
 		private void OnClickRoleItemFunc(int index)
 		{
 			int selectRoleId = this.Vm.FormationIdList[index];
@@ -257,20 +257,20 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x060336EF RID: 210671 RVA: 0x00C0325C File Offset: 0x00C0145C
+		// Token: 0x0602855C RID: 165212 RVA: 0x00B4C7B4 File Offset: 0x00B4A9B4
 		private bool IsNeedRevive(int roleConfigId)
 		{
 			RoleDataBase roleDataById = RoleModel.Instance.GetRoleDataById(roleConfigId, true);
 			return !((roleDataById != null) ? new bool?(roleDataById.IsTrialRole()) : null).GetValueOrDefault() && FormationModel.Instance.IsRoleDead(roleConfigId);
 		}
 
-		// Token: 0x060336F0 RID: 210672 RVA: 0x00C032A8 File Offset: 0x00C014A8
+		// Token: 0x0602855D RID: 165213 RVA: 0x00B4C800 File Offset: 0x00B4AA00
 		private bool GetDetailButtonVisible(int roleId)
 		{
 			return false;
 		}
 
-		// Token: 0x060336F1 RID: 210673 RVA: 0x00C032AC File Offset: 0x00C014AC
+		// Token: 0x0602855E RID: 165214 RVA: 0x00B4C804 File Offset: 0x00B4AA04
 		private bool CanJoinTeam(int roleId)
 		{
 			RoleDataBase roleDataById = RoleModel.Instance.GetRoleDataById(roleId, true);
@@ -290,7 +290,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return true;
 		}
 
-		// Token: 0x060336F2 RID: 210674 RVA: 0x00C03370 File Offset: 0x00C01570
+		// Token: 0x0602855F RID: 165215 RVA: 0x00B4C8C8 File Offset: 0x00B4AAC8
 		private void OnEnterInst()
 		{
 			Action action = delegate()
@@ -324,52 +324,52 @@ namespace CSharpScript.Game.Module.Roguelike
 			action();
 		}
 
-		// Token: 0x0401B4D6 RID: 111830
+		// Token: 0x04015EA9 RID: 89769
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401B4D7 RID: 111831
+		// Token: 0x04015EAA RID: 89770
 		private RoguelikePopularEntriesDescPanel EntriesDescPanel;
 
-		// Token: 0x0401B4D8 RID: 111832
+		// Token: 0x04015EAB RID: 89771
 		private RoguelikePopularEntriesPanel EntriesPanel;
 
-		// Token: 0x0401B4D9 RID: 111833
+		// Token: 0x04015EAC RID: 89772
 		private RoguelikeRoleSelectPanel RoleSelectPanel;
 
-		// Token: 0x0401B4DA RID: 111834
+		// Token: 0x04015EAD RID: 89773
 		[Nullable(1)]
 		private RoguelikeEntranceViewModel Vm;
 
-		// Token: 0x0401B4DB RID: 111835
+		// Token: 0x04015EAE RID: 89774
 		[Nullable(0)]
 		private ValueTuple<int, int>? NewUnlockEntriesGroupId;
 
-		// Token: 0x0401B4DC RID: 111836
+		// Token: 0x04015EAF RID: 89775
 		private LevelSequencePlayer UnlockLevelSequencePlayer;
 
-		// Token: 0x0200AF50 RID: 44880
+		// Token: 0x02009985 RID: 39301
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x040353B6 RID: 218038
+			// Token: 0x0402FDEB RID: 196075
 			public const int CaptionItem = 0;
 
-			// Token: 0x040353B7 RID: 218039
+			// Token: 0x0402FDEC RID: 196076
 			public const int PopularEntriesPanel = 1;
 
-			// Token: 0x040353B8 RID: 218040
+			// Token: 0x0402FDED RID: 196077
 			public const int PopularEntriesDescPanel = 2;
 
-			// Token: 0x040353B9 RID: 218041
+			// Token: 0x0402FDEE RID: 196078
 			public const int RoleSelectPanel = 3;
 
-			// Token: 0x040353BA RID: 218042
+			// Token: 0x0402FDEF RID: 196079
 			public const int PanelEntriesGroupNewUnlock = 4;
 
-			// Token: 0x040353BB RID: 218043
+			// Token: 0x0402FDF0 RID: 196080
 			public const int TxtLastGroup = 5;
 
-			// Token: 0x040353BC RID: 218044
+			// Token: 0x0402FDF1 RID: 196081
 			public const int TxtNewGroup = 6;
 		}
 	}

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000B32 RID: 2866
+	// Token: 0x02000C12 RID: 3090
 	public struct BirthDay : IFlatbufferObject
 	{
-		// Token: 0x17000524 RID: 1316
-		// (get) Token: 0x06004D42 RID: 19778 RVA: 0x001E3A74 File Offset: 0x001E1C74
+		// Token: 0x17000564 RID: 1380
+		// (get) Token: 0x06005304 RID: 21252 RVA: 0x00203DD8 File Offset: 0x00201FD8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004D43 RID: 19779 RVA: 0x001E3A81 File Offset: 0x001E1C81
+		// Token: 0x06005305 RID: 21253 RVA: 0x00203DE5 File Offset: 0x00201FE5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06004D44 RID: 19780 RVA: 0x001E3A88 File Offset: 0x001E1C88
+		// Token: 0x06005306 RID: 21254 RVA: 0x00203DEC File Offset: 0x00201FEC
 		public static BirthDay GetRootAsBirthDay(ByteBuffer _bb)
 		{
 			return BirthDay.GetRootAsBirthDay(_bb, default(BirthDay));
 		}
 
-		// Token: 0x06004D45 RID: 19781 RVA: 0x001E3AA4 File Offset: 0x001E1CA4
+		// Token: 0x06005307 RID: 21255 RVA: 0x00203E08 File Offset: 0x00202008
 		public static BirthDay GetRootAsBirthDay(ByteBuffer _bb, BirthDay obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06004D46 RID: 19782 RVA: 0x001E3AC1 File Offset: 0x001E1CC1
+		// Token: 0x06005308 RID: 21256 RVA: 0x00203E25 File Offset: 0x00202025
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06004D47 RID: 19783 RVA: 0x001E3AD0 File Offset: 0x001E1CD0
+		// Token: 0x06005309 RID: 21257 RVA: 0x00203E34 File Offset: 0x00202034
 		public BirthDay __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000525 RID: 1317
-		// (get) Token: 0x06004D48 RID: 19784 RVA: 0x001E3AE0 File Offset: 0x001E1CE0
+		// Token: 0x17000565 RID: 1381
+		// (get) Token: 0x0600530A RID: 21258 RVA: 0x00203E44 File Offset: 0x00202044
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000526 RID: 1318
-		// (get) Token: 0x06004D49 RID: 19785 RVA: 0x001E3B1C File Offset: 0x001E1D1C
+		// Token: 0x17000566 RID: 1382
+		// (get) Token: 0x0600530B RID: 21259 RVA: 0x00203E80 File Offset: 0x00202080
 		public int LimitYear
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000527 RID: 1319
-		// (get) Token: 0x06004D4A RID: 19786 RVA: 0x001E3B58 File Offset: 0x001E1D58
+		// Token: 0x17000567 RID: 1383
+		// (get) Token: 0x0600530C RID: 21260 RVA: 0x00203EBC File Offset: 0x002020BC
 		public int BirthDayCardItemId
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000528 RID: 1320
-		// (get) Token: 0x06004D4B RID: 19787 RVA: 0x001E3B94 File Offset: 0x001E1D94
+		// Token: 0x17000568 RID: 1384
+		// (get) Token: 0x0600530D RID: 21261 RVA: 0x00203EF8 File Offset: 0x002020F8
 		public int SendShortMessage
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000529 RID: 1321
-		// (get) Token: 0x06004D4C RID: 19788 RVA: 0x001E3BD4 File Offset: 0x001E1DD4
+		// Token: 0x17000569 RID: 1385
+		// (get) Token: 0x0600530E RID: 21262 RVA: 0x00203F38 File Offset: 0x00202138
 		public int BirthDayReward
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700052A RID: 1322
-		// (get) Token: 0x06004D4D RID: 19789 RVA: 0x001E3C14 File Offset: 0x001E1E14
+		// Token: 0x1700056A RID: 1386
+		// (get) Token: 0x0600530F RID: 21263 RVA: 0x00203F78 File Offset: 0x00202178
 		public int ValidDay
 		{
 			get
@@ -137,8 +137,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700052B RID: 1323
-		// (get) Token: 0x06004D4E RID: 19790 RVA: 0x001E3C54 File Offset: 0x001E1E54
+		// Token: 0x1700056B RID: 1387
+		// (get) Token: 0x06005310 RID: 21264 RVA: 0x00203FB8 File Offset: 0x002021B8
 		public string CakePic
 		{
 			get
@@ -152,20 +152,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004D4F RID: 19791 RVA: 0x001E3C8C File Offset: 0x001E1E8C
+		// Token: 0x06005311 RID: 21265 RVA: 0x00203FF0 File Offset: 0x002021F0
 		public Span<byte> GetCakePicBytes()
 		{
 			return this.__p.__vector_as_span<byte>(16, 1);
 		}
 
-		// Token: 0x06004D50 RID: 19792 RVA: 0x001E3C9C File Offset: 0x001E1E9C
+		// Token: 0x06005312 RID: 21266 RVA: 0x00204000 File Offset: 0x00202200
 		public byte[] GetCakePicArray()
 		{
 			return this.__p.__vector_as_array<byte>(16) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700052C RID: 1324
-		// (get) Token: 0x06004D51 RID: 19793 RVA: 0x001E3CB4 File Offset: 0x001E1EB4
+		// Token: 0x1700056C RID: 1388
+		// (get) Token: 0x06005313 RID: 21267 RVA: 0x00204018 File Offset: 0x00202218
 		public string PhoneMsgCakeIcon
 		{
 			get
@@ -179,20 +179,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004D52 RID: 19794 RVA: 0x001E3CEC File Offset: 0x001E1EEC
+		// Token: 0x06005314 RID: 21268 RVA: 0x00204050 File Offset: 0x00202250
 		public Span<byte> GetPhoneMsgCakeIconBytes()
 		{
 			return this.__p.__vector_as_span<byte>(18, 1);
 		}
 
-		// Token: 0x06004D53 RID: 19795 RVA: 0x001E3CFC File Offset: 0x001E1EFC
+		// Token: 0x06005315 RID: 21269 RVA: 0x00204060 File Offset: 0x00202260
 		public byte[] GetPhoneMsgCakeIconArray()
 		{
 			return this.__p.__vector_as_array<byte>(18) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700052D RID: 1325
-		// (get) Token: 0x06004D54 RID: 19796 RVA: 0x001E3D14 File Offset: 0x001E1F14
+		// Token: 0x1700056D RID: 1389
+		// (get) Token: 0x06005316 RID: 21270 RVA: 0x00204078 File Offset: 0x00202278
 		public string PhoneMsgCakeBg
 		{
 			get
@@ -206,20 +206,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004D55 RID: 19797 RVA: 0x001E3D4C File Offset: 0x001E1F4C
+		// Token: 0x06005317 RID: 21271 RVA: 0x002040B0 File Offset: 0x002022B0
 		public Span<byte> GetPhoneMsgCakeBgBytes()
 		{
 			return this.__p.__vector_as_span<byte>(20, 1);
 		}
 
-		// Token: 0x06004D56 RID: 19798 RVA: 0x001E3D5C File Offset: 0x001E1F5C
+		// Token: 0x06005318 RID: 21272 RVA: 0x002040C0 File Offset: 0x002022C0
 		public byte[] GetPhoneMsgCakeBgArray()
 		{
 			return this.__p.__vector_as_array<byte>(20) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700052E RID: 1326
-		// (get) Token: 0x06004D57 RID: 19799 RVA: 0x001E3D74 File Offset: 0x001E1F74
+		// Token: 0x1700056E RID: 1390
+		// (get) Token: 0x06005319 RID: 21273 RVA: 0x002040D8 File Offset: 0x002022D8
 		public string PhoneMsgHighLightCakeBg
 		{
 			get
@@ -233,19 +233,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004D58 RID: 19800 RVA: 0x001E3DAC File Offset: 0x001E1FAC
+		// Token: 0x0600531A RID: 21274 RVA: 0x00204110 File Offset: 0x00202310
 		public Span<byte> GetPhoneMsgHighLightCakeBgBytes()
 		{
 			return this.__p.__vector_as_span<byte>(22, 1);
 		}
 
-		// Token: 0x06004D59 RID: 19801 RVA: 0x001E3DBC File Offset: 0x001E1FBC
+		// Token: 0x0600531B RID: 21275 RVA: 0x00204120 File Offset: 0x00202320
 		public byte[] GetPhoneMsgHighLightCakeBgArray()
 		{
 			return this.__p.__vector_as_array<byte>(22) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04004B2D RID: 19245
+		// Token: 0x0400510D RID: 20749
 		private Table __p;
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002323 RID: 8995
+	// Token: 0x02002592 RID: 9618
 	public static class EEntityControlCameraModeExtensions
 	{
-		// Token: 0x0600C49C RID: 50332 RVA: 0x001CB1B8 File Offset: 0x001C93B8
+		// Token: 0x0600D06B RID: 53355 RVA: 0x001E3080 File Offset: 0x001E1280
 		public static string ToEnumString(this EEntityControlCameraMode value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C49D RID: 50333 RVA: 0x001CB1F0 File Offset: 0x001C93F0
+		// Token: 0x0600D06C RID: 53356 RVA: 0x001E30B8 File Offset: 0x001E12B8
 		public static EEntityControlCameraMode FromString(string name)
 		{
 			EEntityControlCameraMode result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C49E RID: 50334 RVA: 0x001CB219 File Offset: 0x001C9419
+		// Token: 0x0600D06D RID: 53357 RVA: 0x001E30E1 File Offset: 0x001E12E1
 		public static bool TryFromString(string name, out EEntityControlCameraMode value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C49F RID: 50335 RVA: 0x001CB252 File Offset: 0x001C9452
+		// Token: 0x0600D06E RID: 53358 RVA: 0x001E311A File Offset: 0x001E131A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C4A0 RID: 50336 RVA: 0x001CB26A File Offset: 0x001C946A
+		// Token: 0x0600D06F RID: 53359 RVA: 0x001E3132 File Offset: 0x001E1332
 		public static EEntityControlCameraMode[] GetValues()
 		{
 			return new EEntityControlCameraMode[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C4A1 RID: 50337 RVA: 0x001CB276 File Offset: 0x001C9476
+		// Token: 0x0600D070 RID: 53360 RVA: 0x001E313E File Offset: 0x001E133E
 		public static string[] GetNames()
 		{
 			return new string[]

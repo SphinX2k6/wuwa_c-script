@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorDecalLink
 {
-	// Token: 0x0200643B RID: 25659
+	// Token: 0x020053B9 RID: 21433
 	public enum EMotorDecalQuestState
 	{
-		// Token: 0x040218A8 RID: 137384
+		// Token: 0x0401C1D7 RID: 115159
 		ProgressCanSkip,
-		// Token: 0x040218A9 RID: 137385
+		// Token: 0x0401C1D8 RID: 115160
 		Progress,
-		// Token: 0x040218AA RID: 137386
+		// Token: 0x0401C1D9 RID: 115161
 		CanReceive,
-		// Token: 0x040218AB RID: 137387
+		// Token: 0x0401C1DA RID: 115162
 		Done
 	}
 }

@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005F3 RID: 1523
+	// Token: 0x02000690 RID: 1680
 	public class IPerformanceVehicleFeature_SetValue
 	{
-		// Token: 0x040016B4 RID: 5812
+		// Token: 0x040018A4 RID: 6308
 		public EVehicleFeatureFlag Type;
 
-		// Token: 0x040016B5 RID: 5813
-		[Nullable(1)]
+		// Token: 0x040018A5 RID: 6309
 		public string PerformConfig;
 	}
 }

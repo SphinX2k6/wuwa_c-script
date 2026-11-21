@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 {
-	// Token: 0x0200640A RID: 25610
+	// Token: 0x02005388 RID: 21384
 	public class MotorFightDefine
 	{
-		// Token: 0x040217FD RID: 137213
+		// Token: 0x0401C12C RID: 114988
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		public static readonly Dictionary<EMotorFightAttrShowType, string> motorFightAttrShowTypeToName = new Dictionary<EMotorFightAttrShowType, string>

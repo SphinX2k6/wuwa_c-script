@@ -8,19 +8,19 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 
-// Token: 0x020019EA RID: 6634
+// Token: 0x02000EA9 RID: 3753
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class DailyActivityController : UiControllerBase
 {
-	// Token: 0x0600C211 RID: 49681 RVA: 0x002BCC7A File Offset: 0x002BAE7A
+	// Token: 0x0600961E RID: 38430 RVA: 0x002C7C52 File Offset: 0x002C5E52
 	protected override bool OnInit()
 	{
 		return true;
 	}
 
-	// Token: 0x0600C212 RID: 49682 RVA: 0x002BCC80 File Offset: 0x002BAE80
+	// Token: 0x0600961F RID: 38431 RVA: 0x002C7C58 File Offset: 0x002C5E58
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.LivenessUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnReceiveDailyActivityUpdateNotify));
@@ -28,7 +28,7 @@ public class DailyActivityController : UiControllerBase
 		Net.Instance.Register(ENotifyMessageId.LivenessCountUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnReceiveDailyActivityValueNotify));
 	}
 
-	// Token: 0x0600C213 RID: 49683 RVA: 0x002BCCE1 File Offset: 0x002BAEE1
+	// Token: 0x06009620 RID: 38432 RVA: 0x002C7CB9 File Offset: 0x002C5EB9
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.LivenessUpdateNotify);
@@ -36,28 +36,28 @@ public class DailyActivityController : UiControllerBase
 		Net.Instance.UnRegister(ENotifyMessageId.LivenessCountUpdateNotify);
 	}
 
-	// Token: 0x0600C214 RID: 49684 RVA: 0x002BCD13 File Offset: 0x002BAF13
+	// Token: 0x06009621 RID: 38433 RVA: 0x002C7CEB File Offset: 0x002C5EEB
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.OnLoadingNetDataDone, new Action(this.OnLoadingNetDataDone));
 		EventSystem.Instance.Add(EEventName.CrossDay, new Action(this.OnCrossDay));
 	}
 
-	// Token: 0x0600C215 RID: 49685 RVA: 0x002BCD4D File Offset: 0x002BAF4D
+	// Token: 0x06009622 RID: 38434 RVA: 0x002C7D25 File Offset: 0x002C5F25
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OnLoadingNetDataDone, new Action(this.OnLoadingNetDataDone));
 		EventSystem.Instance.Remove(EEventName.CrossDay, new Action(this.OnCrossDay));
 	}
 
-	// Token: 0x0600C216 RID: 49686 RVA: 0x002BCD87 File Offset: 0x002BAF87
+	// Token: 0x06009623 RID: 38435 RVA: 0x002C7D5F File Offset: 0x002C5F5F
 	private void OnLoadingNetDataDone()
 	{
 		DailyActivityModel.Instance.InitGoalData();
 		this.RequestDailyActivityData().Forget<bool>();
 	}
 
-	// Token: 0x0600C217 RID: 49687 RVA: 0x002BCD9E File Offset: 0x002BAF9E
+	// Token: 0x06009624 RID: 38436 RVA: 0x002C7D76 File Offset: 0x002C5F76
 	private void OnCrossDay()
 	{
 		this.RequestDailyActivityData().ContinueWith(delegate(bool success)
@@ -66,7 +66,7 @@ public class DailyActivityController : UiControllerBase
 		}).Forget();
 	}
 
-	// Token: 0x0600C218 RID: 49688 RVA: 0x002BCDD0 File Offset: 0x002BAFD0
+	// Token: 0x06009625 RID: 38437 RVA: 0x002C7DA8 File Offset: 0x002C5FA8
 	[NullableContext(0)]
 	public UniTask<bool> RequestDailyActivityData()
 	{
@@ -77,7 +77,7 @@ public class DailyActivityController : UiControllerBase
 		return <RequestDailyActivityData>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C219 RID: 49689 RVA: 0x002BCE0C File Offset: 0x002BB00C
+	// Token: 0x06009626 RID: 38438 RVA: 0x002C7DE4 File Offset: 0x002C5FE4
 	[NullableContext(0)]
 	public UniTask<bool> RequestDailyActivityTaskRewardAsync([Nullable(1)] List<int> taskIds)
 	{
@@ -89,7 +89,7 @@ public class DailyActivityController : UiControllerBase
 		return <RequestDailyActivityTaskRewardAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600C21A RID: 49690 RVA: 0x002BCE50 File Offset: 0x002BB050
+	// Token: 0x06009627 RID: 38439 RVA: 0x002C7E28 File Offset: 0x002C6028
 	public void RequestDailyActivityReward(List<int> goalIds, [Nullable(2)] Action onRewardClose = null)
 	{
 		DailyActivityController.<>c__DisplayClass9_0 CS$<>8__locals1 = new DailyActivityController.<>c__DisplayClass9_0();
@@ -104,7 +104,7 @@ public class DailyActivityController : UiControllerBase
 		Net.Instance.Call(ERequestMessageId.LivenessTakeRequest, livenessTakeRequest, new Action<IMessage, Net.CallbackStatus>(CS$<>8__locals1.<RequestDailyActivityReward>g__responseAction|0), 0);
 	}
 
-	// Token: 0x0600C21B RID: 49691 RVA: 0x002BCEC4 File Offset: 0x002BB0C4
+	// Token: 0x06009628 RID: 38440 RVA: 0x002C7E9C File Offset: 0x002C609C
 	[NullableContext(2)]
 	private void OnReceiveDailyActivityUpdateNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -112,7 +112,7 @@ public class DailyActivityController : UiControllerBase
 		DailyActivityModel.Instance.UpdateDailyActivityData(livenessUpdateNotify.LivenessInfo);
 	}
 
-	// Token: 0x0600C21C RID: 49692 RVA: 0x002BCEE8 File Offset: 0x002BB0E8
+	// Token: 0x06009629 RID: 38441 RVA: 0x002C7EC0 File Offset: 0x002C60C0
 	[NullableContext(2)]
 	private void OnReceiveDailyActivityRefreshNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -120,7 +120,7 @@ public class DailyActivityController : UiControllerBase
 		DailyActivityModel.Instance.RefreshDailyActivityData(livenessRefreshNotify.LivenessInfo);
 	}
 
-	// Token: 0x0600C21D RID: 49693 RVA: 0x002BCF0C File Offset: 0x002BB10C
+	// Token: 0x0600962A RID: 38442 RVA: 0x002C7EE4 File Offset: 0x002C60E4
 	[NullableContext(2)]
 	private void OnReceiveDailyActivityValueNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -128,7 +128,7 @@ public class DailyActivityController : UiControllerBase
 		DailyActivityModel.Instance.RefreshActivityValue(livenessCountUpdateNotify.LivenessCount);
 	}
 
-	// Token: 0x0600C21E RID: 49694 RVA: 0x002BCF30 File Offset: 0x002BB130
+	// Token: 0x0600962B RID: 38443 RVA: 0x002C7F08 File Offset: 0x002C6108
 	public void RequestAllAvailableActivityReward()
 	{
 		Dictionary<int, DailyActivityDefine.IActivityGoalData> dailyActivityGoalMap = DailyActivityModel.Instance.DailyActivityGoalMap;
@@ -144,8 +144,8 @@ public class DailyActivityController : UiControllerBase
 		this.RequestDailyActivityReward(list, null);
 	}
 
-	// Token: 0x17001035 RID: 4149
-	// (get) Token: 0x0600C21F RID: 49695 RVA: 0x002BCFAC File Offset: 0x002BB1AC
+	// Token: 0x1700105A RID: 4186
+	// (get) Token: 0x0600962C RID: 38444 RVA: 0x002C7F84 File Offset: 0x002C6184
 	public static DailyActivityController Instance
 	{
 		get
@@ -154,7 +154,7 @@ public class DailyActivityController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600C220 RID: 49696 RVA: 0x002BCFB3 File Offset: 0x002BB1B3
+	// Token: 0x0600962D RID: 38445 RVA: 0x002C7F8B File Offset: 0x002C618B
 	public static DailyActivityController GetOrCreateInstance()
 	{
 		if (DailyActivityController._Instance == null)
@@ -164,7 +164,7 @@ public class DailyActivityController : UiControllerBase
 		return DailyActivityController._Instance;
 	}
 
-	// Token: 0x0600C221 RID: 49697 RVA: 0x002BCFC7 File Offset: 0x002BB1C7
+	// Token: 0x0600962E RID: 38446 RVA: 0x002C7F9F File Offset: 0x002C619F
 	public static bool CreateInstance()
 	{
 		if (DailyActivityController._Instance != null)
@@ -175,24 +175,24 @@ public class DailyActivityController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0600C222 RID: 49698 RVA: 0x002BCFDD File Offset: 0x002BB1DD
+	// Token: 0x0600962F RID: 38447 RVA: 0x002C7FB5 File Offset: 0x002C61B5
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600C223 RID: 49699 RVA: 0x002BCFDF File Offset: 0x002BB1DF
+	// Token: 0x06009630 RID: 38448 RVA: 0x002C7FB7 File Offset: 0x002C61B7
 	public static void ResetStaticDefaultValue()
 	{
 		DailyActivityController._Instance = null;
 	}
 
-	// Token: 0x0600C224 RID: 49700 RVA: 0x002BCFE7 File Offset: 0x002BB1E7
+	// Token: 0x06009631 RID: 38449 RVA: 0x002C7FBF File Offset: 0x002C61BF
 	static DailyActivityController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(DailyActivityController.CreateStaticDefaultValue), new Action(DailyActivityController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400595A RID: 22874
+	// Token: 0x04005A29 RID: 23081
 	[Nullable(2)]
 	private static DailyActivityController _Instance;
 }

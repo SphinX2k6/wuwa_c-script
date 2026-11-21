@@ -3,40 +3,40 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Plot.PlotView.PlotComponent;
 using UnrealEngine;
 
-// Token: 0x02001430 RID: 5168
+// Token: 0x020008E4 RID: 2276
 [NullableContext(1)]
 [Nullable(0)]
 public class PlotAutoPlayComponentContext : IPlotAutoPlayComponentContext
 {
-	// Token: 0x17000CC2 RID: 3266
-	// (get) Token: 0x060091D7 RID: 37335 RVA: 0x001F3188 File Offset: 0x001F1388
-	// (set) Token: 0x060091D8 RID: 37336 RVA: 0x001F3190 File Offset: 0x001F1390
+	// Token: 0x17000CE2 RID: 3298
+	// (get) Token: 0x0600656C RID: 25964 RVA: 0x001FBCC4 File Offset: 0x001F9EC4
+	// (set) Token: 0x0600656D RID: 25965 RVA: 0x001FBCCC File Offset: 0x001F9ECC
 	public UUIExtendToggle Toggle { get; set; }
 
-	// Token: 0x17000CC3 RID: 3267
-	// (get) Token: 0x060091D9 RID: 37337 RVA: 0x001F3199 File Offset: 0x001F1399
-	// (set) Token: 0x060091DA RID: 37338 RVA: 0x001F31A1 File Offset: 0x001F13A1
+	// Token: 0x17000CE3 RID: 3299
+	// (get) Token: 0x0600656E RID: 25966 RVA: 0x001FBCD5 File Offset: 0x001F9ED5
+	// (set) Token: 0x0600656F RID: 25967 RVA: 0x001FBCDD File Offset: 0x001F9EDD
 	public float WaitTime { get; set; }
 
-	// Token: 0x17000CC4 RID: 3268
-	// (get) Token: 0x060091DB RID: 37339 RVA: 0x001F31AA File Offset: 0x001F13AA
-	// (set) Token: 0x060091DC RID: 37340 RVA: 0x001F31B2 File Offset: 0x001F13B2
+	// Token: 0x17000CE4 RID: 3300
+	// (get) Token: 0x06006570 RID: 25968 RVA: 0x001FBCE6 File Offset: 0x001F9EE6
+	// (set) Token: 0x06006571 RID: 25969 RVA: 0x001FBCEE File Offset: 0x001F9EEE
 	[Nullable(2)]
 	public string AutoInSeqName { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-	// Token: 0x17000CC5 RID: 3269
-	// (get) Token: 0x060091DD RID: 37341 RVA: 0x001F31BB File Offset: 0x001F13BB
-	// (set) Token: 0x060091DE RID: 37342 RVA: 0x001F31C3 File Offset: 0x001F13C3
+	// Token: 0x17000CE5 RID: 3301
+	// (get) Token: 0x06006572 RID: 25970 RVA: 0x001FBCF7 File Offset: 0x001F9EF7
+	// (set) Token: 0x06006573 RID: 25971 RVA: 0x001FBCFF File Offset: 0x001F9EFF
 	[Nullable(2)]
 	public string AutoOutSeqName { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-	// Token: 0x17000CC6 RID: 3270
-	// (get) Token: 0x060091DF RID: 37343 RVA: 0x001F31CC File Offset: 0x001F13CC
-	// (set) Token: 0x060091E0 RID: 37344 RVA: 0x001F31D4 File Offset: 0x001F13D4
+	// Token: 0x17000CE6 RID: 3302
+	// (get) Token: 0x06006574 RID: 25972 RVA: 0x001FBD08 File Offset: 0x001F9F08
+	// (set) Token: 0x06006575 RID: 25973 RVA: 0x001FBD10 File Offset: 0x001F9F10
 	public Func<bool> CheckTalkFinishedDelegate { get; set; }
 
-	// Token: 0x17000CC7 RID: 3271
-	// (get) Token: 0x060091E1 RID: 37345 RVA: 0x001F31DD File Offset: 0x001F13DD
-	// (set) Token: 0x060091E2 RID: 37346 RVA: 0x001F31E5 File Offset: 0x001F13E5
+	// Token: 0x17000CE7 RID: 3303
+	// (get) Token: 0x06006576 RID: 25974 RVA: 0x001FBD19 File Offset: 0x001F9F19
+	// (set) Token: 0x06006577 RID: 25975 RVA: 0x001FBD21 File Offset: 0x001F9F21
 	public Action ContinueToNextTalkDelegate { get; set; }
 }

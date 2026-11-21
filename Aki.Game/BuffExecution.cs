@@ -2,54 +2,54 @@
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02002F83 RID: 12163
+// Token: 0x020024D7 RID: 9431
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class BuffExecution : BuffEffectBase
 {
-	// Token: 0x06019D6F RID: 105839 RVA: 0x006BE757 File Offset: 0x006BC957
+	// Token: 0x06017681 RID: 95873 RVA: 0x006E504F File Offset: 0x006E324F
 	protected BuffExecution(RequireAndLimits requireAndLimits) : base(requireAndLimits)
 	{
 	}
 
-	// Token: 0x06019D70 RID: 105840
+	// Token: 0x06017682 RID: 95874
 	[return: Nullable(2)]
 	public abstract object OnExecute(params object[] args);
 
-	// Token: 0x06019D71 RID: 105841 RVA: 0x006BE760 File Offset: 0x006BC960
+	// Token: 0x06017683 RID: 95875 RVA: 0x006E5058 File Offset: 0x006E3258
 	public virtual void OnBuffRemovedCallback(ActiveBuffInternal buff)
 	{
 	}
 
-	// Token: 0x06019D72 RID: 105842 RVA: 0x006BE762 File Offset: 0x006BC962
+	// Token: 0x06017684 RID: 95876 RVA: 0x006E505A File Offset: 0x006E325A
 	public virtual void OnBuffActiveChangedCallback(ActiveBuffInternal buff, bool isActive)
 	{
 	}
 
-	// Token: 0x06019D73 RID: 105843 RVA: 0x006BE764 File Offset: 0x006BC964
-	public static T Create<[Nullable(0)] T>(long buffId, int index, RequireAndLimits requireAndLimits, ExtraEffectParameters parameters) where T : BuffExecution
+	// Token: 0x06017685 RID: 95877 RVA: 0x006E505C File Offset: 0x006E325C
+	public static BuffExecution Create(Type buffExecutionType, long buffId, int index, RequireAndLimits requireAndLimits, [Nullable(2)] ExtraEffectParameters parameters)
 	{
-		T t = (T)((object)Activator.CreateInstance(typeof(T), new object[]
+		BuffExecution buffExecution = (BuffExecution)Activator.CreateInstance(buffExecutionType, new object[]
 		{
 			requireAndLimits
-		}));
-		t.BuffId = buffId;
-		t.Index = index;
+		});
+		buffExecution.BuffId = buffId;
+		buffExecution.Index = index;
 		if (parameters != null)
 		{
-			t.InitParameters(parameters);
+			buffExecution.InitParameters(parameters);
 		}
-		return t;
+		return buffExecution;
 	}
 
-	// Token: 0x06019D74 RID: 105844 RVA: 0x006BE7B8 File Offset: 0x006BC9B8
+	// Token: 0x06017686 RID: 95878 RVA: 0x006E509A File Offset: 0x006E329A
 	protected override bool CheckExecutable()
 	{
 		IBuffComponent ownerBuffComponent = this.OwnerBuffComponent;
 		return ownerBuffComponent != null && ownerBuffComponent.HasBuffAuthority();
 	}
 
-	// Token: 0x06019D75 RID: 105845 RVA: 0x006BE7CB File Offset: 0x006BC9CB
+	// Token: 0x06017687 RID: 95879 RVA: 0x006E50AD File Offset: 0x006E32AD
 	[NullableContext(2)]
 	protected bool Check(Partial_RequirementPayload context)
 	{
@@ -62,7 +62,7 @@ public abstract class BuffExecution : BuffEffectBase
 		return base.CheckRequirements(context ?? new Partial_RequirementPayload());
 	}
 
-	// Token: 0x06019D76 RID: 105846 RVA: 0x006BE80C File Offset: 0x006BCA0C
+	// Token: 0x06017688 RID: 95880 RVA: 0x006E50EC File Offset: 0x006E32EC
 	public unsafe bool SetExecuteContext(ActiveBuffInternal buff)
 	{
 		this.Level = buff.Level;
@@ -89,14 +89,14 @@ public abstract class BuffExecution : BuffEffectBase
 		return true;
 	}
 
-	// Token: 0x06019D77 RID: 105847 RVA: 0x006BE8CB File Offset: 0x006BCACB
+	// Token: 0x06017689 RID: 95881 RVA: 0x006E51AB File Offset: 0x006E33AB
 	public void ClearExecuteContext()
 	{
 		this.OwnerBuffComponent = null;
 		this.Buff = null;
 	}
 
-	// Token: 0x06019D78 RID: 105848 RVA: 0x006BE8DC File Offset: 0x006BCADC
+	// Token: 0x0601768A RID: 95882 RVA: 0x006E51BC File Offset: 0x006E33BC
 	public bool TryExecute(ActiveBuffInternal buff, params object[] parameters)
 	{
 		if (!base.CheckLoop())
@@ -119,7 +119,7 @@ public abstract class BuffExecution : BuffEffectBase
 		return true;
 	}
 
-	// Token: 0x06019D79 RID: 105849 RVA: 0x006BE93C File Offset: 0x006BCB3C
+	// Token: 0x0601768B RID: 95883 RVA: 0x006E521C File Offset: 0x006E341C
 	[NullableContext(2)]
 	protected IBuffComponent GetEffectTarget()
 	{
@@ -143,17 +143,17 @@ public abstract class BuffExecution : BuffEffectBase
 		return result;
 	}
 
-	// Token: 0x06019D7A RID: 105850 RVA: 0x006BE96E File Offset: 0x006BCB6E
+	// Token: 0x0601768C RID: 95884 RVA: 0x006E524E File Offset: 0x006E344E
 	public virtual void OnBuffAddedCallback(ActiveBuffInternal buff, bool isIterable)
 	{
 	}
 
-	// Token: 0x06019D7B RID: 105851 RVA: 0x006BE970 File Offset: 0x006BCB70
+	// Token: 0x0601768D RID: 95885 RVA: 0x006E5250 File Offset: 0x006E3450
 	public virtual void OnPeriodCallback(ActiveBuffInternal buff)
 	{
 	}
 
-	// Token: 0x06019D7C RID: 105852 RVA: 0x006BE972 File Offset: 0x006BCB72
+	// Token: 0x0601768E RID: 95886 RVA: 0x006E5252 File Offset: 0x006E3452
 	public override void OnBuffStackOverflow(ActiveBuffInternal buff, int oldStack, int newStack, int stackLimitMax)
 	{
 		if (!this.SetExecuteContext(buff))
@@ -164,7 +164,7 @@ public abstract class BuffExecution : BuffEffectBase
 		this.ClearExecuteContext();
 	}
 
-	// Token: 0x06019D7D RID: 105853 RVA: 0x006BE990 File Offset: 0x006BCB90
+	// Token: 0x0601768F RID: 95887 RVA: 0x006E5270 File Offset: 0x006E3470
 	public void BuffEffectExecutePush()
 	{
 		Entity exactOwnerEntity = base.ExactOwnerEntity;
@@ -184,7 +184,7 @@ public abstract class BuffExecution : BuffEffectBase
 		CombatNet.Instance.Send(EPushMessageId.BuffEffectExecutePush, exactOwnerEntity, buffEffectExecutePush, null, null, null);
 	}
 
-	// Token: 0x06019D7E RID: 105854 RVA: 0x006BEA28 File Offset: 0x006BCC28
+	// Token: 0x06017690 RID: 95888 RVA: 0x006E5308 File Offset: 0x006E3508
 	protected void PostExecuted()
 	{
 		if (this.Buff == null || this.Buff.Handle < 0 || this.OwnerBuffComponent == null)
@@ -198,13 +198,13 @@ public abstract class BuffExecution : BuffEffectBase
 		}
 	}
 
-	// Token: 0x0400C326 RID: 49958
+	// Token: 0x0400C6CF RID: 50895
 	[Nullable(2)]
 	protected IActiveBuff Buff;
 
-	// Token: 0x0400C327 RID: 49959
+	// Token: 0x0400C6D0 RID: 50896
 	protected int Index;
 
-	// Token: 0x0400C328 RID: 49960
+	// Token: 0x0400C6D1 RID: 50897
 	protected EExecutionTargetType TargetType;
 }

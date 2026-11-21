@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000218 RID: 536
+	// Token: 0x0200022A RID: 554
 	public class ConfigDownLoadTabAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000C93 RID: 3219 RVA: 0x000A0A23 File Offset: 0x0009EC23
+		// Token: 0x06000CFF RID: 3327 RVA: 0x000A695B File Offset: 0x000A4B5B
 		static ConfigDownLoadTabAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDownLoadTabAll.CreateStaticDefaultValue), new Action(ConfigDownLoadTabAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000C94 RID: 3220 RVA: 0x000A0A44 File Offset: 0x0009EC44
+		// Token: 0x06000D00 RID: 3328 RVA: 0x000A697C File Offset: 0x000A4B7C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDownLoadTabAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000C95 RID: 3221 RVA: 0x000A0AC3 File Offset: 0x0009ECC3
+		// Token: 0x06000D01 RID: 3329 RVA: 0x000A69FB File Offset: 0x000A4BFB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDownLoadTabAll.LogPair = null;
 			ConfigDownLoadTabAll.HandleId = 0;
 		}
 
-		// Token: 0x06000C96 RID: 3222 RVA: 0x000A0AD1 File Offset: 0x0009ECD1
+		// Token: 0x06000D02 RID: 3330 RVA: 0x000A6A09 File Offset: 0x000A4C09
 		public static void Init()
 		{
 			ConfigDownLoadTabAll.HandleId = ConfigCommon.InitDataStatement(ConfigDownLoadTabAll.HandleId, "db_download.db", "select BinData from `DownLoadTab`");
 		}
 
-		// Token: 0x06000C97 RID: 3223 RVA: 0x000A0AEC File Offset: 0x0009ECEC
+		// Token: 0x06000D03 RID: 3331 RVA: 0x000A6A24 File Offset: 0x000A4C24
 		[NullableContext(2)]
 		public static IReadOnlyList<DownLoadTab> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04000E8C RID: 3724
+		// Token: 0x04000F0A RID: 3850
 		private const string DB = "db_download.db";
 
-		// Token: 0x04000E8D RID: 3725
+		// Token: 0x04000F0B RID: 3851
 		private const string FILE = "b.包体管理.xlsx";
 
-		// Token: 0x04000E8E RID: 3726
+		// Token: 0x04000F0C RID: 3852
 		private const string TABLE = "DownLoadTab";
 
-		// Token: 0x04000E8F RID: 3727
+		// Token: 0x04000F0D RID: 3853
 		private const string COMMAND = "select BinData from `DownLoadTab`";
 
-		// Token: 0x04000E90 RID: 3728
+		// Token: 0x04000F0E RID: 3854
 		private const string KEY_PREFIX = "DownLoadTabAll";
 
-		// Token: 0x04000E91 RID: 3729
+		// Token: 0x04000F0F RID: 3855
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000E92 RID: 3730
+		// Token: 0x04000F10 RID: 3856
 		private static int HandleId;
 	}
 }

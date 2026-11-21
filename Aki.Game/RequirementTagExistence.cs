@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002F11 RID: 12049
+// Token: 0x02002464 RID: 9316
 [RequiredMember]
 public class RequirementTagExistence : IRequirement
 {
-	// Token: 0x170023A1 RID: 9121
-	// (get) Token: 0x06019B53 RID: 105299 RVA: 0x006B1B27 File Offset: 0x006AFD27
+	// Token: 0x17002463 RID: 9315
+	// (get) Token: 0x0601745E RID: 95326 RVA: 0x006D7E3F File Offset: 0x006D603F
 	public EExtraEffectRequire Type
 	{
 		get
@@ -15,22 +15,22 @@ public class RequirementTagExistence : IRequirement
 		}
 	}
 
-	// Token: 0x06019B54 RID: 105300 RVA: 0x006B1B2B File Offset: 0x006AFD2B
+	// Token: 0x0601745F RID: 95327 RVA: 0x006D7E43 File Offset: 0x006D6043
 	[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 	[CompilerFeatureRequired("RequiredMembers")]
 	public RequirementTagExistence()
 	{
 	}
 
-	// Token: 0x0400C176 RID: 49526
+	// Token: 0x0400C518 RID: 50456
 	[RequiredMember]
 	public bool IsExist;
 
-	// Token: 0x0400C177 RID: 49527
+	// Token: 0x0400C519 RID: 50457
 	[RequiredMember]
 	public ERequirementTargetType RequireTargetType;
 
-	// Token: 0x0400C178 RID: 49528
+	// Token: 0x0400C51A RID: 50458
 	[Nullable(1)]
 	[RequiredMember]
 	public int[] RequireTagContainer;

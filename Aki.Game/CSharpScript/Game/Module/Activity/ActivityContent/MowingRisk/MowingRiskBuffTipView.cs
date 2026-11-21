@@ -8,16 +8,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 {
-	// Token: 0x020063E0 RID: 25568
+	// Token: 0x0200535E RID: 21342
 	public class MowingRiskBuffTipView : GenericPromptFloatTipsBase
 	{
-		// Token: 0x060404FC RID: 263420 RVA: 0x00F8E28F File Offset: 0x00F8C48F
+		// Token: 0x060351BD RID: 217533 RVA: 0x00ED5227 File Offset: 0x00ED3427
 		[NullableContext(1)]
 		public MowingRiskBuffTipView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x060404FD RID: 263421 RVA: 0x00F8E298 File Offset: 0x00F8C498
+		// Token: 0x060351BE RID: 217534 RVA: 0x00ED5230 File Offset: 0x00ED3430
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060404FE RID: 263422 RVA: 0x00F8E304 File Offset: 0x00F8C504
+		// Token: 0x060351BF RID: 217535 RVA: 0x00ED529C File Offset: 0x00ED349C
 		protected override void OnStart()
 		{
 			IMowingRiskInBattleBuffData mowingRiskInBattleBuffData = this.OpenParam as IMowingRiskInBattleBuffData;
@@ -39,13 +39,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), mowingRiskInBattleBuffData.TitleTextId, Array.Empty<object>());
 		}
 
-		// Token: 0x0200C5F8 RID: 50680
+		// Token: 0x0200AFDF RID: 45023
 		private class EComponent
 		{
-			// Token: 0x0403BC5D RID: 244829
+			// Token: 0x040365BC RID: 222652
 			public const int IconTexture = 0;
 
-			// Token: 0x0403BC5E RID: 244830
+			// Token: 0x040365BD RID: 222653
 			public const int TitleText = 1;
 		}
 	}

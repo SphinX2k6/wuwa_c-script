@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000EF4 RID: 3828
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200100A RID: 4106
 	public class ICheckPlayerInputCondition : IQuestCondition
 	{
-		// Token: 0x06005474 RID: 21620 RVA: 0x000CF558 File Offset: 0x000CD758
+		// Token: 0x060059F0 RID: 23024 RVA: 0x000DB700 File Offset: 0x000D9900
 		private ICheckPlayerInputCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005475 RID: 21621 RVA: 0x000CF590 File Offset: 0x000CD790
+		// Token: 0x060059F1 RID: 23025 RVA: 0x000DB738 File Offset: 0x000D9938
 		public static ICheckPlayerInputCondition Create([Nullable(2)] ICheckPlayerInputCondition instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005476 RID: 21622 RVA: 0x000CF5A3 File Offset: 0x000CD7A3
+		// Token: 0x060059F2 RID: 23026 RVA: 0x000DB74B File Offset: 0x000D994B
 		public static ICheckPlayerInputCondition CreateFromSetValue([Nullable(2)] ICheckPlayerInputCondition_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005477 RID: 21623 RVA: 0x000CF5B6 File Offset: 0x000CD7B6
+		// Token: 0x060059F3 RID: 23027 RVA: 0x000DB75E File Offset: 0x000D995E
 		public new ICheckPlayerInputCondition_SetValue ToSetValue()
 		{
 			return new ICheckPlayerInputCondition_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001C4D RID: 7245
-		// (get) Token: 0x06005478 RID: 21624 RVA: 0x000CF5E1 File Offset: 0x000CD7E1
-		// (set) Token: 0x06005479 RID: 21625 RVA: 0x000CF60C File Offset: 0x000CD80C
+		// Token: 0x17001DE5 RID: 7653
+		// (get) Token: 0x060059F4 RID: 23028 RVA: 0x000DB789 File Offset: 0x000D9989
+		// (set) Token: 0x060059F5 RID: 23029 RVA: 0x000DB7B4 File Offset: 0x000D99B4
 		public override EChildQuest Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C4E RID: 7246
-		// (get) Token: 0x0600547A RID: 21626 RVA: 0x000CF61C File Offset: 0x000CD81C
-		// (set) Token: 0x0600547B RID: 21627 RVA: 0x000CF67D File Offset: 0x000CD87D
+		// Token: 0x17001DE6 RID: 7654
+		// (get) Token: 0x060059F6 RID: 23030 RVA: 0x000DB7C4 File Offset: 0x000D99C4
+		// (set) Token: 0x060059F7 RID: 23031 RVA: 0x000DB825 File Offset: 0x000D9A25
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -118,9 +116,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001C4F RID: 7247
-		// (get) Token: 0x0600547C RID: 21628 RVA: 0x000CF694 File Offset: 0x000CD894
-		// (set) Token: 0x0600547D RID: 21629 RVA: 0x000CF6F5 File Offset: 0x000CD8F5
+		// Token: 0x17001DE7 RID: 7655
+		// (get) Token: 0x060059F8 RID: 23032 RVA: 0x000DB83C File Offset: 0x000D9A3C
+		// (set) Token: 0x060059F9 RID: 23033 RVA: 0x000DB89D File Offset: 0x000D9A9D
 		public virtual ICheckPlayerPressButton CheckInput
 		{
 			get
@@ -148,24 +146,24 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003328 RID: 13096
+		// Token: 0x04003635 RID: 13877
 		[Nullable(2)]
 		protected new ICheckPlayerInputCondition FbInstance;
 
-		// Token: 0x04003329 RID: 13097
+		// Token: 0x04003636 RID: 13878
 		[Nullable(2)]
 		protected new ICheckPlayerInputCondition_SetValue PocoInterface;
 
-		// Token: 0x0400332A RID: 13098
+		// Token: 0x04003637 RID: 13879
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x0400332B RID: 13099
+		// Token: 0x04003638 RID: 13880
 		private bool _PreConditionsInited;
 
-		// Token: 0x0400332C RID: 13100
+		// Token: 0x04003639 RID: 13881
 		private ICheckPlayerPressButton _CheckInputCache;
 
-		// Token: 0x0400332D RID: 13101
+		// Token: 0x0400363A RID: 13882
 		private bool _CheckInputInited;
 	}
 }

@@ -11,7 +11,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 {
-	// Token: 0x02005A0D RID: 23053
+	// Token: 0x020049E9 RID: 18921
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 	})]
 	public class DangoBrawlBattleBuffItem : GridProxyAbstract<DangoBrawlBattleBuffItemData>
 	{
-		// Token: 0x0603A751 RID: 239441 RVA: 0x00DE8B40 File Offset: 0x00DE6D40
+		// Token: 0x0602F69A RID: 194202 RVA: 0x00D390C0 File Offset: 0x00D372C0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603A752 RID: 239442 RVA: 0x00DE8C4C File Offset: 0x00DE6E4C
+		// Token: 0x0602F69B RID: 194203 RVA: 0x00D391CC File Offset: 0x00D373CC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DangoBrawlBattleBuffItem.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A753 RID: 239443 RVA: 0x00DE8C90 File Offset: 0x00DE6E90
+		// Token: 0x0602F69C RID: 194204 RVA: 0x00D39210 File Offset: 0x00D37410
 		protected override void OnStart()
 		{
 			UUITexture texture = base.GetTexture(0);
@@ -78,13 +78,13 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			this.SeqPlayer = new LevelSequencePlayer(base.GetRootItem());
 		}
 
-		// Token: 0x0603A754 RID: 239444 RVA: 0x00DE8CE6 File Offset: 0x00DE6EE6
+		// Token: 0x0602F69D RID: 194205 RVA: 0x00D39266 File Offset: 0x00D37466
 		protected override void OnBeforeDestroy()
 		{
 			this.ClearBuffTipsHover();
 		}
 
-		// Token: 0x0603A755 RID: 239445 RVA: 0x00DE8CF0 File Offset: 0x00DE6EF0
+		// Token: 0x0602F69E RID: 194206 RVA: 0x00D39270 File Offset: 0x00D37470
 		private UniTask CreateBuffTips()
 		{
 			DangoBrawlBattleBuffItem.<CreateBuffTips>d__14 <CreateBuffTips>d__;
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			return <CreateBuffTips>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A756 RID: 239446 RVA: 0x00DE8D33 File Offset: 0x00DE6F33
+		// Token: 0x0602F69F RID: 194207 RVA: 0x00D392B3 File Offset: 0x00D374B3
 		private void ClearBuffTipsHover()
 		{
 			this.CancelTipsHoverHideTimer();
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			button.OnPointExitCallBack.Unbind();
 		}
 
-		// Token: 0x0603A757 RID: 239447 RVA: 0x00DE8D64 File Offset: 0x00DE6F64
+		// Token: 0x0602F6A0 RID: 194208 RVA: 0x00D392E4 File Offset: 0x00D374E4
 		private void SetBuffActive(bool isActivate)
 		{
 			this.IsBuffActivate = isActivate;
@@ -135,7 +135,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			}
 		}
 
-		// Token: 0x0603A758 RID: 239448 RVA: 0x00DE8DBD File Offset: 0x00DE6FBD
+		// Token: 0x0602F6A1 RID: 194209 RVA: 0x00D3933D File Offset: 0x00D3753D
 		private void SetBuffNum(int floorValue)
 		{
 			this.CurFloorValue = floorValue;
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			text.SetText((floorValue <= 0) ? string.Empty : floorValue.ToString(), true);
 		}
 
-		// Token: 0x0603A759 RID: 239449 RVA: 0x00DE8DEA File Offset: 0x00DE6FEA
+		// Token: 0x0602F6A2 RID: 194210 RVA: 0x00D3936A File Offset: 0x00D3756A
 		public override void Refresh(DangoBrawlBattleBuffItemData data, bool isSelected, int gridIndex)
 		{
 			LevelSequencePlayer seqPlayer = this.SeqPlayer;
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			this.HandleBuffByOperation(data);
 		}
 
-		// Token: 0x0603A75A RID: 239450 RVA: 0x00DE8E14 File Offset: 0x00DE7014
+		// Token: 0x0602F6A3 RID: 194211 RVA: 0x00D39394 File Offset: 0x00D37594
 		private UniTask RefreshInternal(DangoBrawlBattleBuffItemData data)
 		{
 			DangoBrawlBattleBuffItem.<RefreshInternal>d__19 <RefreshInternal>d__;
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			return <RefreshInternal>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A75B RID: 239451 RVA: 0x00DE8E60 File Offset: 0x00DE7060
+		// Token: 0x0602F6A4 RID: 194212 RVA: 0x00D393E0 File Offset: 0x00D375E0
 		private UniTask LoadAllTextures(string grayIcon, string icon, string holdIcon)
 		{
 			DangoBrawlBattleBuffItem.<LoadAllTextures>d__20 <LoadAllTextures>d__;
@@ -185,7 +185,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			return <LoadAllTextures>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A75C RID: 239452 RVA: 0x00DE8EBC File Offset: 0x00DE70BC
+		// Token: 0x0602F6A5 RID: 194213 RVA: 0x00D3943C File Offset: 0x00D3763C
 		private void HandleBuffByOperation(DangoBrawlBattleBuffItemData data)
 		{
 			EDangoBrawlBuffVisualOp? operation = data.Operation;
@@ -216,7 +216,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			}
 		}
 
-		// Token: 0x0603A75D RID: 239453 RVA: 0x00DE8F30 File Offset: 0x00DE7130
+		// Token: 0x0602F6A6 RID: 194214 RVA: 0x00D394B0 File Offset: 0x00D376B0
 		private void HandleBuffAdd(DangoBrawlBattleBuffItemData data)
 		{
 			this.SetBuffActive(true);
@@ -229,7 +229,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			seqPlayer.PlayLevelSequenceByName("BuffUp", false, null, false);
 		}
 
-		// Token: 0x0603A75E RID: 239454 RVA: 0x00DE8F70 File Offset: 0x00DE7170
+		// Token: 0x0602F6A7 RID: 194215 RVA: 0x00D394F0 File Offset: 0x00D376F0
 		private void HandleBuffStackChange(DangoBrawlBattleBuffItemData data)
 		{
 			int curFloorValue = this.CurFloorValue;
@@ -246,26 +246,26 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			}
 		}
 
-		// Token: 0x0603A75F RID: 239455 RVA: 0x00DE8FB6 File Offset: 0x00DE71B6
+		// Token: 0x0602F6A8 RID: 194216 RVA: 0x00D39536 File Offset: 0x00D37736
 		private void HandleBuffRemove(DangoBrawlBattleBuffItemData data)
 		{
 			this.SetBuffActive(false);
 			this.SetBuffNum(0);
 		}
 
-		// Token: 0x0603A760 RID: 239456 RVA: 0x00DE8FC6 File Offset: 0x00DE71C6
+		// Token: 0x0602F6A9 RID: 194217 RVA: 0x00D39546 File Offset: 0x00D37746
 		public override object GetKey(DangoBrawlBattleBuffItemData data, int displayIndex)
 		{
 			return data.ConfigId;
 		}
 
-		// Token: 0x0603A761 RID: 239457 RVA: 0x00DE8FD3 File Offset: 0x00DE71D3
+		// Token: 0x0602F6AA RID: 194218 RVA: 0x00D39553 File Offset: 0x00D37753
 		private static bool CanHoverBuffTips()
 		{
 			return !Info.Instance.IsMobileInputModel();
 		}
 
-		// Token: 0x0603A762 RID: 239458 RVA: 0x00DE8FE2 File Offset: 0x00DE71E2
+		// Token: 0x0602F6AB RID: 194219 RVA: 0x00D39562 File Offset: 0x00D37762
 		private void OnBuffTipsPointEnter()
 		{
 			if (!DangoBrawlBattleBuffItem.CanHoverBuffTips() || !this.IsBuffActivate)
@@ -281,7 +281,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			buffTips.Show(false);
 		}
 
-		// Token: 0x0603A763 RID: 239459 RVA: 0x00DE900B File Offset: 0x00DE720B
+		// Token: 0x0602F6AC RID: 194220 RVA: 0x00D3958B File Offset: 0x00D3778B
 		private void OnBuffTipsPointExit()
 		{
 			if (!DangoBrawlBattleBuffItem.CanHoverBuffTips() || !this.IsBuffActivate)
@@ -291,7 +291,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			this.ScheduleTipsHoverHide();
 		}
 
-		// Token: 0x0603A764 RID: 239460 RVA: 0x00DE9023 File Offset: 0x00DE7223
+		// Token: 0x0602F6AD RID: 194221 RVA: 0x00D395A3 File Offset: 0x00D377A3
 		private void ScheduleTipsHoverHide()
 		{
 			this.CancelTipsHoverHideTimer();
@@ -307,7 +307,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			}, 50f, null, null, true, 1f);
 		}
 
-		// Token: 0x0603A765 RID: 239461 RVA: 0x00DE9054 File Offset: 0x00DE7254
+		// Token: 0x0602F6AE RID: 194222 RVA: 0x00D395D4 File Offset: 0x00D377D4
 		private void CancelTipsHoverHideTimer()
 		{
 			TimerHandle tipsHoverHideTimer = this.TipsHoverHideTimer;
@@ -318,7 +318,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			this.TipsHoverHideTimer = null;
 		}
 
-		// Token: 0x0603A766 RID: 239462 RVA: 0x00DE906F File Offset: 0x00DE726F
+		// Token: 0x0602F6AF RID: 194223 RVA: 0x00D395EF File Offset: 0x00D377EF
 		private void CloseBuffTips()
 		{
 			this.CancelTipsHoverHideTimer();
@@ -329,7 +329,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			}
 		}
 
-		// Token: 0x0603A767 RID: 239463 RVA: 0x00DE9096 File Offset: 0x00DE7296
+		// Token: 0x0602F6B0 RID: 194224 RVA: 0x00D39616 File Offset: 0x00D37816
 		private void OnClickBtnBuffDetail()
 		{
 			this.CloseBuffTips();
@@ -341,50 +341,50 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			onClickBuff(this.CurBuffConfigId);
 		}
 
-		// Token: 0x0401E756 RID: 124758
+		// Token: 0x040191FD RID: 102909
 		[Nullable(2)]
 		public Action<int> OnClickBuff;
 
-		// Token: 0x0401E757 RID: 124759
+		// Token: 0x040191FE RID: 102910
 		private int CurBuffConfigId;
 
-		// Token: 0x0401E758 RID: 124760
+		// Token: 0x040191FF RID: 102911
 		private int CurFloorValue;
 
-		// Token: 0x0401E759 RID: 124761
+		// Token: 0x04019200 RID: 102912
 		private bool IsBuffActivate;
 
-		// Token: 0x0401E75A RID: 124762
+		// Token: 0x04019201 RID: 102913
 		[Nullable(2)]
 		private LevelSequencePlayer SeqPlayer;
 
-		// Token: 0x0401E75B RID: 124763
+		// Token: 0x04019202 RID: 102914
 		[Nullable(2)]
 		private DangoBrawlSmallTips BuffTips;
 
-		// Token: 0x0401E75C RID: 124764
+		// Token: 0x04019203 RID: 102915
 		[Nullable(2)]
 		private TimerHandle TipsHoverHideTimer;
 
-		// Token: 0x0401E75D RID: 124765
+		// Token: 0x04019204 RID: 102916
 		private const string SEQ_BUFF_ADD = "BuffUp";
 
-		// Token: 0x0401E75E RID: 124766
+		// Token: 0x04019205 RID: 102917
 		private const string SEQ_BUFF_UP = "BuffStart";
 
-		// Token: 0x0200BC73 RID: 48243
+		// Token: 0x0200A67C RID: 42620
 		[NullableContext(0)]
 		private enum EComp
 		{
-			// Token: 0x04038DC1 RID: 232897
+			// Token: 0x0403378D RID: 210829
 			TexBuffDisactive,
-			// Token: 0x04038DC2 RID: 232898
+			// Token: 0x0403378E RID: 210830
 			TexBuffActive,
-			// Token: 0x04038DC3 RID: 232899
+			// Token: 0x0403378F RID: 210831
 			TxtBuffNum,
-			// Token: 0x04038DC4 RID: 232900
+			// Token: 0x04033790 RID: 210832
 			BtnBuffDetail,
-			// Token: 0x04038DC5 RID: 232901
+			// Token: 0x04033791 RID: 210833
 			BuffDetailTips
 		}
 	}

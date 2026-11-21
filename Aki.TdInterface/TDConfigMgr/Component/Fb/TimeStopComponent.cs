@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000CF5 RID: 3317
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000DED RID: 3565
 	public class TimeStopComponent : IComponentBase
 	{
-		// Token: 0x06004BC8 RID: 19400 RVA: 0x000BD2C4 File Offset: 0x000BB4C4
+		// Token: 0x060050D6 RID: 20694 RVA: 0x000C87F4 File Offset: 0x000C69F4
 		public static TimeStopComponent Create(ITimeStopComponent? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700179B RID: 6043
-		// (get) Token: 0x06004BC9 RID: 19401 RVA: 0x000BD2E4 File Offset: 0x000BB4E4
+		// Token: 0x170018F7 RID: 6391
+		// (get) Token: 0x060050D7 RID: 20695 RVA: 0x000C8814 File Offset: 0x000C6A14
 		public override bool? Disabled
 		{
 			get
@@ -36,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700179C RID: 6044
-		// (get) Token: 0x06004BCA RID: 19402 RVA: 0x000BD31C File Offset: 0x000BB51C
+		// Token: 0x170018F8 RID: 6392
+		// (get) Token: 0x060050D8 RID: 20696 RVA: 0x000C884C File Offset: 0x000C6A4C
 		public override bool? EdIsLocked
 		{
 			get
@@ -46,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700179D RID: 6045
-		// (get) Token: 0x06004BCB RID: 19403 RVA: 0x000BD332 File Offset: 0x000BB532
+		// Token: 0x170018F9 RID: 6393
+		// (get) Token: 0x060050D9 RID: 20697 RVA: 0x000C8862 File Offset: 0x000C6A62
 		public virtual string ActiveState
 		{
 			get
@@ -56,8 +54,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700179E RID: 6046
-		// (get) Token: 0x06004BCC RID: 19404 RVA: 0x000BD33F File Offset: 0x000BB53F
+		// Token: 0x170018FA RID: 6394
+		// (get) Token: 0x060050DA RID: 20698 RVA: 0x000C886F File Offset: 0x000C6A6F
 		public virtual int StopTime
 		{
 			get
@@ -66,8 +64,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700179F RID: 6047
-		// (get) Token: 0x06004BCD RID: 19405 RVA: 0x000BD34C File Offset: 0x000BB54C
+		// Token: 0x170018FB RID: 6395
+		// (get) Token: 0x060050DB RID: 20699 RVA: 0x000C887C File Offset: 0x000C6A7C
 		public virtual ITimeStopTarget Target
 		{
 			get
@@ -82,14 +80,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002B56 RID: 11094
+		// Token: 0x04002E10 RID: 11792
 		private ITimeStopComponent Instance;
 
-		// Token: 0x04002B57 RID: 11095
+		// Token: 0x04002E11 RID: 11793
 		[Nullable(2)]
 		private ITimeStopTarget _TargetCache;
 
-		// Token: 0x04002B58 RID: 11096
+		// Token: 0x04002E12 RID: 11794
 		private bool _TargetInited;
 	}
 }

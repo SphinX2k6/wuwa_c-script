@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 {
-	// Token: 0x02006397 RID: 25495
+	// Token: 0x02005315 RID: 21269
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MultiMotorRankItem : UiPanelBase
 	{
-		// Token: 0x060401E5 RID: 262629 RVA: 0x00F85424 File Offset: 0x00F83624
+		// Token: 0x06034EA6 RID: 216742 RVA: 0x00ECC398 File Offset: 0x00ECA598
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 16;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060401E6 RID: 262630 RVA: 0x00F85664 File Offset: 0x00F83864
+		// Token: 0x06034EA7 RID: 216743 RVA: 0x00ECC5D8 File Offset: 0x00ECA7D8
 		protected override void OnStart()
 		{
 			this.OffsetTween = new LguiIntTween();
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}, false);
 		}
 
-		// Token: 0x060401E7 RID: 262631 RVA: 0x00F85760 File Offset: 0x00F83960
+		// Token: 0x06034EA8 RID: 216744 RVA: 0x00ECC6D4 File Offset: 0x00ECA8D4
 		protected override void OnDestroy()
 		{
 			this.OffsetTween.Destroy();
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			EventSystem.Instance.Remove(EEventName.MultiMotorPassLine, new Action<int>(this.OnMultiMotorPassLine));
 		}
 
-		// Token: 0x060401E8 RID: 262632 RVA: 0x00F857E2 File Offset: 0x00F839E2
+		// Token: 0x06034EA9 RID: 216745 RVA: 0x00ECC756 File Offset: 0x00ECA956
 		public void RefreshRankNumber(int rankNumber)
 		{
 			this.RankNumber = rankNumber;
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			this.RefreshRankInfo();
 		}
 
-		// Token: 0x060401E9 RID: 262633 RVA: 0x00F85807 File Offset: 0x00F83A07
+		// Token: 0x06034EAA RID: 216746 RVA: 0x00ECC77B File Offset: 0x00ECA97B
 		public void InitPlayerId(int playerId, UCurveFloat lerpCurve, float offsetY)
 		{
 			this.PlayerId = playerId;
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			this.RefreshOnlineModelInfo();
 		}
 
-		// Token: 0x060401EA RID: 262634 RVA: 0x00F8582C File Offset: 0x00F83A2C
+		// Token: 0x06034EAB RID: 216747 RVA: 0x00ECC7A0 File Offset: 0x00ECA9A0
 		private void OnMultiMotorBuffRefresh(int playerId, int buffId)
 		{
 			if (playerId != this.PlayerId)
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			this.ShowAccelerateState(motorBuffById.Value.EffectTime);
 		}
 
-		// Token: 0x060401EB RID: 262635 RVA: 0x00F8589D File Offset: 0x00F83A9D
+		// Token: 0x06034EAC RID: 216748 RVA: 0x00ECC811 File Offset: 0x00ECAA11
 		private void OnMultiMotorPassLine(int playerId)
 		{
 			if (playerId == this.PlayerId)
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		}
 
-		// Token: 0x060401EC RID: 262636 RVA: 0x00F858B0 File Offset: 0x00F83AB0
+		// Token: 0x06034EAD RID: 216749 RVA: 0x00ECC824 File Offset: 0x00ECAA24
 		public void ShowLeaderState(int effectTime)
 		{
 			TimerHandle leadTimerHandle = this.LeadTimerHandle;
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}, (float)(effectTime * 1000), null, null, true, 1f);
 		}
 
-		// Token: 0x060401ED RID: 262637 RVA: 0x00F8592C File Offset: 0x00F83B2C
+		// Token: 0x06034EAE RID: 216750 RVA: 0x00ECC8A0 File Offset: 0x00ECAAA0
 		public void ShowAccelerateState(int effectTime)
 		{
 			TimerHandle accelerateTimerHandle = this.AccelerateTimerHandle;
@@ -205,7 +205,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}, (float)(effectTime * 1000), null, null, true, 1f);
 		}
 
-		// Token: 0x060401EE RID: 262638 RVA: 0x00F859E8 File Offset: 0x00F83BE8
+		// Token: 0x06034EAF RID: 216751 RVA: 0x00ECC95C File Offset: 0x00ECAB5C
 		public void TickAccelerateCountdown(float delta)
 		{
 			if (this.AccelerateCountdownTotal <= 0f)
@@ -226,7 +226,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		}
 
-		// Token: 0x060401EF RID: 262639 RVA: 0x00F85A70 File Offset: 0x00F83C70
+		// Token: 0x06034EB0 RID: 216752 RVA: 0x00ECC9E4 File Offset: 0x00ECABE4
 		public void ShowFinishState()
 		{
 			UUIItem item = base.GetItem(9);
@@ -276,8 +276,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			this.RefreshRankColor();
 		}
 
-		// Token: 0x17009367 RID: 37735
-		// (get) Token: 0x060401F0 RID: 262640 RVA: 0x00F85B8C File Offset: 0x00F83D8C
+		// Token: 0x170066C9 RID: 26313
+		// (get) Token: 0x06034EB1 RID: 216753 RVA: 0x00ECCB00 File Offset: 0x00ECAD00
 		private bool IsSelf
 		{
 			get
@@ -288,7 +288,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		}
 
-		// Token: 0x060401F1 RID: 262641 RVA: 0x00F85BC0 File Offset: 0x00F83DC0
+		// Token: 0x06034EB2 RID: 216754 RVA: 0x00ECCB34 File Offset: 0x00ECAD34
 		private unsafe void RefreshOnlineModelInfo()
 		{
 			OnlineTeamData currentTeamListById = OnlineModel.Instance.GetCurrentTeamListById(this.PlayerId);
@@ -387,7 +387,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			this.RefreshPing(currentTeamListById.PingState);
 		}
 
-		// Token: 0x060401F2 RID: 262642 RVA: 0x00F85DF0 File Offset: 0x00F83FF0
+		// Token: 0x06034EB3 RID: 216755 RVA: 0x00ECCD64 File Offset: 0x00ECAF64
 		private void RefreshOnlineNumber(int onlineNumber)
 		{
 			string inString;
@@ -407,7 +407,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			this.SetSpriteByPath(resourcePath, base.GetSprite(2), false, null, null);
 		}
 
-		// Token: 0x060401F3 RID: 262643 RVA: 0x00F85E50 File Offset: 0x00F84050
+		// Token: 0x06034EB4 RID: 216756 RVA: 0x00ECCDC4 File Offset: 0x00ECAFC4
 		private void RefreshSelfItem()
 		{
 			bool isSelf = this.IsSelf;
@@ -419,7 +419,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			}
 		}
 
-		// Token: 0x060401F4 RID: 262644 RVA: 0x00F85E9C File Offset: 0x00F8409C
+		// Token: 0x06034EB5 RID: 216757 RVA: 0x00ECCE10 File Offset: 0x00ECB010
 		private void RefreshPing(ENetPingState ping)
 		{
 			string text = null;
@@ -445,7 +445,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			sprite.SetUIActive(true);
 		}
 
-		// Token: 0x060401F5 RID: 262645 RVA: 0x00F85F00 File Offset: 0x00F84100
+		// Token: 0x06034EB6 RID: 216758 RVA: 0x00ECCE74 File Offset: 0x00ECB074
 		private void NonePlayerState()
 		{
 			string resourcePath = UiResourceConfig.Instance.GetResourcePath("T_RankRoleHeadEmpty");
@@ -457,13 +457,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			base.GetSprite(4).SetUIActive(false);
 		}
 
-		// Token: 0x060401F6 RID: 262646 RVA: 0x00F85F86 File Offset: 0x00F84186
+		// Token: 0x06034EB7 RID: 216759 RVA: 0x00ECCEFA File Offset: 0x00ECB0FA
 		private void RefreshRankInfo()
 		{
 			this.RefreshRankSprite();
 		}
 
-		// Token: 0x060401F7 RID: 262647 RVA: 0x00F85F90 File Offset: 0x00F84190
+		// Token: 0x06034EB8 RID: 216760 RVA: 0x00ECCF04 File Offset: 0x00ECB104
 		private void RefreshRankSprite()
 		{
 			base.GetSprite(3).SetUIActive(true);
@@ -473,7 +473,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			this.SetSpriteByPath(resourcePath, base.GetSprite(3), false, null, null);
 		}
 
-		// Token: 0x060401F8 RID: 262648 RVA: 0x00F85FE4 File Offset: 0x00F841E4
+		// Token: 0x06034EB9 RID: 216761 RVA: 0x00ECCF58 File Offset: 0x00ECB158
 		private void RefreshRankColor()
 		{
 			if (this.RankNumber == 0)
@@ -511,113 +511,113 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MultiMotor
 			text.SetColor(FColor.FromHex(hexStr4));
 		}
 
-		// Token: 0x060401F9 RID: 262649 RVA: 0x00F860A8 File Offset: 0x00F842A8
+		// Token: 0x06034EBA RID: 216762 RVA: 0x00ECD01C File Offset: 0x00ECB21C
 		public void RefreshOffsetY(float offsetY)
 		{
 			int start = (int)this.GetOriginalItem().GetAnchorOffsetY();
 			this.OffsetTween.PlayTween(start, (int)offsetY, 0.3f, null);
 		}
 
-		// Token: 0x060401FA RID: 262650 RVA: 0x00F860D6 File Offset: 0x00F842D6
+		// Token: 0x06034EBB RID: 216763 RVA: 0x00ECD04A File Offset: 0x00ECB24A
 		private void UpdateOffsetY(int value)
 		{
 			this.GetOriginalItem().SetAnchorOffsetY((float)value);
 		}
 
-		// Token: 0x04021689 RID: 136841
+		// Token: 0x0401BFB8 RID: 114616
 		private const float TWEEN_DURATION = 0.3f;
 
-		// Token: 0x0402168A RID: 136842
+		// Token: 0x0401BFB9 RID: 114617
 		public int PlayerId;
 
-		// Token: 0x0402168B RID: 136843
+		// Token: 0x0401BFBA RID: 114618
 		private int RankNumber;
 
-		// Token: 0x0402168C RID: 136844
+		// Token: 0x0401BFBB RID: 114619
 		protected LguiIntTween OffsetTween;
 
-		// Token: 0x0402168D RID: 136845
+		// Token: 0x0401BFBC RID: 114620
 		protected UCurveFloat LerpCurve;
 
-		// Token: 0x0402168E RID: 136846
+		// Token: 0x0401BFBD RID: 114621
 		private LevelSequencePlayer FinishSequencePlayer;
 
-		// Token: 0x0402168F RID: 136847
+		// Token: 0x0401BFBE RID: 114622
 		private LevelSequencePlayer LeadSequencePlayer;
 
-		// Token: 0x04021690 RID: 136848
+		// Token: 0x0401BFBF RID: 114623
 		private LevelSequencePlayer AccelerateSequencePlayer;
 
-		// Token: 0x04021691 RID: 136849
+		// Token: 0x0401BFC0 RID: 114624
 		[Nullable(2)]
 		private TimerHandle LeadTimerHandle;
 
-		// Token: 0x04021692 RID: 136850
+		// Token: 0x0401BFC1 RID: 114625
 		[Nullable(2)]
 		private TimerHandle AccelerateTimerHandle;
 
-		// Token: 0x04021693 RID: 136851
+		// Token: 0x0401BFC2 RID: 114626
 		private float AccelerateLeftSpriteStartX;
 
-		// Token: 0x04021694 RID: 136852
+		// Token: 0x0401BFC3 RID: 114627
 		private float AccelerateLeftSpriteEndX;
 
-		// Token: 0x04021695 RID: 136853
+		// Token: 0x0401BFC4 RID: 114628
 		private float AccelerateCountdownElapsed;
 
-		// Token: 0x04021696 RID: 136854
+		// Token: 0x0401BFC5 RID: 114629
 		private float AccelerateCountdownTotal;
 
-		// Token: 0x0200C5AF RID: 50607
+		// Token: 0x0200AF96 RID: 44950
 		[NullableContext(0)]
 		private class EItemComponents
 		{
-			// Token: 0x0403BAE6 RID: 244454
+			// Token: 0x04036447 RID: 222279
 			public const int NameText = 0;
 
-			// Token: 0x0403BAE7 RID: 244455
+			// Token: 0x04036448 RID: 222280
 			public const int RoleHeadTexture = 1;
 
-			// Token: 0x0403BAE8 RID: 244456
+			// Token: 0x04036449 RID: 222281
 			public const int OnlineNumberSprite = 2;
 
-			// Token: 0x0403BAE9 RID: 244457
+			// Token: 0x0403644A RID: 222282
 			public const int RankSprite = 3;
 
-			// Token: 0x0403BAEA RID: 244458
+			// Token: 0x0403644B RID: 222283
 			public const int PingSprite = 4;
 
-			// Token: 0x0403BAEB RID: 244459
+			// Token: 0x0403644C RID: 222284
 			public const int PanelDisconnectItem = 5;
 
-			// Token: 0x0403BAEC RID: 244460
+			// Token: 0x0403644D RID: 222285
 			public const int LeadItem = 6;
 
-			// Token: 0x0403BAED RID: 244461
+			// Token: 0x0403644E RID: 222286
 			public const int AccelerateItem = 7;
 
-			// Token: 0x0403BAEE RID: 244462
+			// Token: 0x0403644F RID: 222287
 			public const int AccelerateLeftSprite = 8;
 
-			// Token: 0x0403BAEF RID: 244463
+			// Token: 0x04036450 RID: 222288
 			public const int FinishItem = 9;
 
-			// Token: 0x0403BAF0 RID: 244464
+			// Token: 0x04036451 RID: 222289
 			public const int FinishSubItem1 = 10;
 
-			// Token: 0x0403BAF1 RID: 244465
+			// Token: 0x04036452 RID: 222290
 			public const int FinishSubItem2 = 11;
 
-			// Token: 0x0403BAF2 RID: 244466
+			// Token: 0x04036453 RID: 222291
 			public const int FinishSubItem3 = 12;
 
-			// Token: 0x0403BAF3 RID: 244467
+			// Token: 0x04036454 RID: 222292
 			public const int SelfItem = 13;
 
-			// Token: 0x0403BAF4 RID: 244468
+			// Token: 0x04036455 RID: 222293
 			public const int SelfBgItem = 14;
 
-			// Token: 0x0403BAF5 RID: 244469
+			// Token: 0x04036456 RID: 222294
 			public const int FinishNiagara = 15;
 		}
 	}

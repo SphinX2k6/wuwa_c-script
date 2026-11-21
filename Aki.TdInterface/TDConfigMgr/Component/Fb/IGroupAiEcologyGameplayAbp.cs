@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D57 RID: 3415
+	// Token: 0x02000E51 RID: 3665
 	public class IGroupAiEcologyGameplayAbp
 	{
-		// Token: 0x06004DD3 RID: 19923 RVA: 0x000C16EB File Offset: 0x000BF8EB
-		[NullableContext(1)]
+		// Token: 0x060052EF RID: 21231 RVA: 0x000CCE2F File Offset: 0x000CB02F
 		public static IGroupAiEcologyGameplayAbp Create(IGroupAiEcologyGameplayAbp? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170018E2 RID: 6370
-		// (get) Token: 0x06004DD4 RID: 19924 RVA: 0x000C170A File Offset: 0x000BF90A
+		// Token: 0x17001A48 RID: 6728
+		// (get) Token: 0x060052F0 RID: 21232 RVA: 0x000CCE4E File Offset: 0x000CB04E
 		public virtual EGroupAiEcologyGameplayType GameplayType
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002C9C RID: 11420
+		// Token: 0x04002F5C RID: 12124
 		private IGroupAiEcologyGameplayAbp Instance;
 	}
 }

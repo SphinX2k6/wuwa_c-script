@@ -5,20 +5,20 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000947 RID: 2375
+	// Token: 0x020001A9 RID: 425
 	[UnrealObjectPath("/Script/Engine.CollisionResponseContainer")]
 	[UnrealStructLayout(32, 1, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 32)]
 	public class FCollisionResponseContainer : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0600863A RID: 34362 RVA: 0x000BF4D7 File Offset: 0x000BD6D7
+		// Token: 0x06001F92 RID: 8082 RVA: 0x0002DA8C File Offset: 0x0002BC8C
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FCollisionResponseContainer._ScriptStructPtr != 0) ? FCollisionResponseContainer._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/Engine.CollisionResponseContainer", ref FCollisionResponseContainer._ScriptStructPtr);
 		}
 
-		// Token: 0x17001FB0 RID: 8112
-		// (get) Token: 0x0600863B RID: 34363 RVA: 0x000BF4FB File Offset: 0x000BD6FB
-		// (set) Token: 0x0600863C RID: 34364 RVA: 0x000BF50F File Offset: 0x000BD70F
+		// Token: 0x17000452 RID: 1106
+		// (get) Token: 0x06001F93 RID: 8083 RVA: 0x0002DAB0 File Offset: 0x0002BCB0
+		// (set) Token: 0x06001F94 RID: 8084 RVA: 0x0002DAC4 File Offset: 0x0002BCC4
 		public unsafe TEnumAsByte<ECollisionResponse> WorldStatic
 		{
 			get
@@ -31,9 +31,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001FB1 RID: 8113
-		// (get) Token: 0x0600863D RID: 34365 RVA: 0x000BF524 File Offset: 0x000BD724
-		// (set) Token: 0x0600863E RID: 34366 RVA: 0x000BF538 File Offset: 0x000BD738
+		// Token: 0x17000453 RID: 1107
+		// (get) Token: 0x06001F95 RID: 8085 RVA: 0x0002DAD9 File Offset: 0x0002BCD9
+		// (set) Token: 0x06001F96 RID: 8086 RVA: 0x0002DAED File Offset: 0x0002BCED
 		public unsafe TEnumAsByte<ECollisionResponse> WorldDynamic
 		{
 			get
@@ -46,9 +46,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001FB2 RID: 8114
-		// (get) Token: 0x0600863F RID: 34367 RVA: 0x000BF54D File Offset: 0x000BD74D
-		// (set) Token: 0x06008640 RID: 34368 RVA: 0x000BF561 File Offset: 0x000BD761
+		// Token: 0x17000454 RID: 1108
+		// (get) Token: 0x06001F97 RID: 8087 RVA: 0x0002DB02 File Offset: 0x0002BD02
+		// (set) Token: 0x06001F98 RID: 8088 RVA: 0x0002DB16 File Offset: 0x0002BD16
 		public unsafe TEnumAsByte<ECollisionResponse> Pawn
 		{
 			get
@@ -61,9 +61,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001FB3 RID: 8115
-		// (get) Token: 0x06008641 RID: 34369 RVA: 0x000BF576 File Offset: 0x000BD776
-		// (set) Token: 0x06008642 RID: 34370 RVA: 0x000BF58A File Offset: 0x000BD78A
+		// Token: 0x17000455 RID: 1109
+		// (get) Token: 0x06001F99 RID: 8089 RVA: 0x0002DB2B File Offset: 0x0002BD2B
+		// (set) Token: 0x06001F9A RID: 8090 RVA: 0x0002DB3F File Offset: 0x0002BD3F
 		public unsafe TEnumAsByte<ECollisionResponse> Visibility
 		{
 			get
@@ -76,9 +76,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001FB4 RID: 8116
-		// (get) Token: 0x06008643 RID: 34371 RVA: 0x000BF59F File Offset: 0x000BD79F
-		// (set) Token: 0x06008644 RID: 34372 RVA: 0x000BF5B3 File Offset: 0x000BD7B3
+		// Token: 0x17000456 RID: 1110
+		// (get) Token: 0x06001F9B RID: 8091 RVA: 0x0002DB54 File Offset: 0x0002BD54
+		// (set) Token: 0x06001F9C RID: 8092 RVA: 0x0002DB68 File Offset: 0x0002BD68
 		public unsafe TEnumAsByte<ECollisionResponse> Camera
 		{
 			get
@@ -91,9 +91,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001FB5 RID: 8117
-		// (get) Token: 0x06008645 RID: 34373 RVA: 0x000BF5C8 File Offset: 0x000BD7C8
-		// (set) Token: 0x06008646 RID: 34374 RVA: 0x000BF5DC File Offset: 0x000BD7DC
+		// Token: 0x17000457 RID: 1111
+		// (get) Token: 0x06001F9D RID: 8093 RVA: 0x0002DB7D File Offset: 0x0002BD7D
+		// (set) Token: 0x06001F9E RID: 8094 RVA: 0x0002DB91 File Offset: 0x0002BD91
 		public unsafe TEnumAsByte<ECollisionResponse> PhysicsBody
 		{
 			get
@@ -106,9 +106,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001FB6 RID: 8118
-		// (get) Token: 0x06008647 RID: 34375 RVA: 0x000BF5F1 File Offset: 0x000BD7F1
-		// (set) Token: 0x06008648 RID: 34376 RVA: 0x000BF605 File Offset: 0x000BD805
+		// Token: 0x17000458 RID: 1112
+		// (get) Token: 0x06001F9F RID: 8095 RVA: 0x0002DBA6 File Offset: 0x0002BDA6
+		// (set) Token: 0x06001FA0 RID: 8096 RVA: 0x0002DBBA File Offset: 0x0002BDBA
 		public unsafe TEnumAsByte<ECollisionResponse> Vehicle
 		{
 			get
@@ -121,9 +121,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001FB7 RID: 8119
-		// (get) Token: 0x06008649 RID: 34377 RVA: 0x000BF61A File Offset: 0x000BD81A
-		// (set) Token: 0x0600864A RID: 34378 RVA: 0x000BF62E File Offset: 0x000BD82E
+		// Token: 0x17000459 RID: 1113
+		// (get) Token: 0x06001FA1 RID: 8097 RVA: 0x0002DBCF File Offset: 0x0002BDCF
+		// (set) Token: 0x06001FA2 RID: 8098 RVA: 0x0002DBE3 File Offset: 0x0002BDE3
 		public unsafe TEnumAsByte<ECollisionResponse> Destructible
 		{
 			get
@@ -136,9 +136,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001FB8 RID: 8120
-		// (get) Token: 0x0600864B RID: 34379 RVA: 0x000BF643 File Offset: 0x000BD843
-		// (set) Token: 0x0600864C RID: 34380 RVA: 0x000BF657 File Offset: 0x000BD857
+		// Token: 0x1700045A RID: 1114
+		// (get) Token: 0x06001FA3 RID: 8099 RVA: 0x0002DBF8 File Offset: 0x0002BDF8
+		// (set) Token: 0x06001FA4 RID: 8100 RVA: 0x0002DC0C File Offset: 0x0002BE0C
 		public unsafe TEnumAsByte<ECollisionResponse> EngineTraceChannel1
 		{
 			get
@@ -151,9 +151,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001FB9 RID: 8121
-		// (get) Token: 0x0600864D RID: 34381 RVA: 0x000BF66C File Offset: 0x000BD86C
-		// (set) Token: 0x0600864E RID: 34382 RVA: 0x000BF680 File Offset: 0x000BD880
+		// Token: 0x1700045B RID: 1115
+		// (get) Token: 0x06001FA5 RID: 8101 RVA: 0x0002DC21 File Offset: 0x0002BE21
+		// (set) Token: 0x06001FA6 RID: 8102 RVA: 0x0002DC35 File Offset: 0x0002BE35
 		public unsafe TEnumAsByte<ECollisionResponse> EngineTraceChannel2
 		{
 			get
@@ -166,9 +166,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001FBA RID: 8122
-		// (get) Token: 0x0600864F RID: 34383 RVA: 0x000BF695 File Offset: 0x000BD895
-		// (set) Token: 0x06008650 RID: 34384 RVA: 0x000BF6A9 File Offset: 0x000BD8A9
+		// Token: 0x1700045C RID: 1116
+		// (get) Token: 0x06001FA7 RID: 8103 RVA: 0x0002DC4A File Offset: 0x0002BE4A
+		// (set) Token: 0x06001FA8 RID: 8104 RVA: 0x0002DC5E File Offset: 0x0002BE5E
 		public unsafe TEnumAsByte<ECollisionResponse> EngineTraceChannel3
 		{
 			get
@@ -181,9 +181,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001FBB RID: 8123
-		// (get) Token: 0x06008651 RID: 34385 RVA: 0x000BF6BE File Offset: 0x000BD8BE
-		// (set) Token: 0x06008652 RID: 34386 RVA: 0x000BF6D2 File Offset: 0x000BD8D2
+		// Token: 0x1700045D RID: 1117
+		// (get) Token: 0x06001FA9 RID: 8105 RVA: 0x0002DC73 File Offset: 0x0002BE73
+		// (set) Token: 0x06001FAA RID: 8106 RVA: 0x0002DC87 File Offset: 0x0002BE87
 		public unsafe TEnumAsByte<ECollisionResponse> EngineTraceChannel4
 		{
 			get
@@ -196,9 +196,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001FBC RID: 8124
-		// (get) Token: 0x06008653 RID: 34387 RVA: 0x000BF6E7 File Offset: 0x000BD8E7
-		// (set) Token: 0x06008654 RID: 34388 RVA: 0x000BF6FB File Offset: 0x000BD8FB
+		// Token: 0x1700045E RID: 1118
+		// (get) Token: 0x06001FAB RID: 8107 RVA: 0x0002DC9C File Offset: 0x0002BE9C
+		// (set) Token: 0x06001FAC RID: 8108 RVA: 0x0002DCB0 File Offset: 0x0002BEB0
 		public unsafe TEnumAsByte<ECollisionResponse> EngineTraceChannel5
 		{
 			get
@@ -211,9 +211,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001FBD RID: 8125
-		// (get) Token: 0x06008655 RID: 34389 RVA: 0x000BF710 File Offset: 0x000BD910
-		// (set) Token: 0x06008656 RID: 34390 RVA: 0x000BF724 File Offset: 0x000BD924
+		// Token: 0x1700045F RID: 1119
+		// (get) Token: 0x06001FAD RID: 8109 RVA: 0x0002DCC5 File Offset: 0x0002BEC5
+		// (set) Token: 0x06001FAE RID: 8110 RVA: 0x0002DCD9 File Offset: 0x0002BED9
 		public unsafe TEnumAsByte<ECollisionResponse> EngineTraceChannel6
 		{
 			get
@@ -226,9 +226,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001FBE RID: 8126
-		// (get) Token: 0x06008657 RID: 34391 RVA: 0x000BF739 File Offset: 0x000BD939
-		// (set) Token: 0x06008658 RID: 34392 RVA: 0x000BF74D File Offset: 0x000BD94D
+		// Token: 0x17000460 RID: 1120
+		// (get) Token: 0x06001FAF RID: 8111 RVA: 0x0002DCEE File Offset: 0x0002BEEE
+		// (set) Token: 0x06001FB0 RID: 8112 RVA: 0x0002DD02 File Offset: 0x0002BF02
 		public unsafe TEnumAsByte<ECollisionResponse> GameTraceChannel1
 		{
 			get
@@ -241,9 +241,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001FBF RID: 8127
-		// (get) Token: 0x06008659 RID: 34393 RVA: 0x000BF762 File Offset: 0x000BD962
-		// (set) Token: 0x0600865A RID: 34394 RVA: 0x000BF776 File Offset: 0x000BD976
+		// Token: 0x17000461 RID: 1121
+		// (get) Token: 0x06001FB1 RID: 8113 RVA: 0x0002DD17 File Offset: 0x0002BF17
+		// (set) Token: 0x06001FB2 RID: 8114 RVA: 0x0002DD2B File Offset: 0x0002BF2B
 		public unsafe TEnumAsByte<ECollisionResponse> GameTraceChannel2
 		{
 			get
@@ -256,9 +256,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001FC0 RID: 8128
-		// (get) Token: 0x0600865B RID: 34395 RVA: 0x000BF78B File Offset: 0x000BD98B
-		// (set) Token: 0x0600865C RID: 34396 RVA: 0x000BF79F File Offset: 0x000BD99F
+		// Token: 0x17000462 RID: 1122
+		// (get) Token: 0x06001FB3 RID: 8115 RVA: 0x0002DD40 File Offset: 0x0002BF40
+		// (set) Token: 0x06001FB4 RID: 8116 RVA: 0x0002DD54 File Offset: 0x0002BF54
 		public unsafe TEnumAsByte<ECollisionResponse> GameTraceChannel3
 		{
 			get
@@ -271,9 +271,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001FC1 RID: 8129
-		// (get) Token: 0x0600865D RID: 34397 RVA: 0x000BF7B4 File Offset: 0x000BD9B4
-		// (set) Token: 0x0600865E RID: 34398 RVA: 0x000BF7C8 File Offset: 0x000BD9C8
+		// Token: 0x17000463 RID: 1123
+		// (get) Token: 0x06001FB5 RID: 8117 RVA: 0x0002DD69 File Offset: 0x0002BF69
+		// (set) Token: 0x06001FB6 RID: 8118 RVA: 0x0002DD7D File Offset: 0x0002BF7D
 		public unsafe TEnumAsByte<ECollisionResponse> GameTraceChannel4
 		{
 			get
@@ -286,9 +286,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001FC2 RID: 8130
-		// (get) Token: 0x0600865F RID: 34399 RVA: 0x000BF7DD File Offset: 0x000BD9DD
-		// (set) Token: 0x06008660 RID: 34400 RVA: 0x000BF7F1 File Offset: 0x000BD9F1
+		// Token: 0x17000464 RID: 1124
+		// (get) Token: 0x06001FB7 RID: 8119 RVA: 0x0002DD92 File Offset: 0x0002BF92
+		// (set) Token: 0x06001FB8 RID: 8120 RVA: 0x0002DDA6 File Offset: 0x0002BFA6
 		public unsafe TEnumAsByte<ECollisionResponse> GameTraceChannel5
 		{
 			get
@@ -301,9 +301,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001FC3 RID: 8131
-		// (get) Token: 0x06008661 RID: 34401 RVA: 0x000BF806 File Offset: 0x000BDA06
-		// (set) Token: 0x06008662 RID: 34402 RVA: 0x000BF81A File Offset: 0x000BDA1A
+		// Token: 0x17000465 RID: 1125
+		// (get) Token: 0x06001FB9 RID: 8121 RVA: 0x0002DDBB File Offset: 0x0002BFBB
+		// (set) Token: 0x06001FBA RID: 8122 RVA: 0x0002DDCF File Offset: 0x0002BFCF
 		public unsafe TEnumAsByte<ECollisionResponse> GameTraceChannel6
 		{
 			get
@@ -316,9 +316,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001FC4 RID: 8132
-		// (get) Token: 0x06008663 RID: 34403 RVA: 0x000BF82F File Offset: 0x000BDA2F
-		// (set) Token: 0x06008664 RID: 34404 RVA: 0x000BF843 File Offset: 0x000BDA43
+		// Token: 0x17000466 RID: 1126
+		// (get) Token: 0x06001FBB RID: 8123 RVA: 0x0002DDE4 File Offset: 0x0002BFE4
+		// (set) Token: 0x06001FBC RID: 8124 RVA: 0x0002DDF8 File Offset: 0x0002BFF8
 		public unsafe TEnumAsByte<ECollisionResponse> GameTraceChannel7
 		{
 			get
@@ -331,9 +331,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001FC5 RID: 8133
-		// (get) Token: 0x06008665 RID: 34405 RVA: 0x000BF858 File Offset: 0x000BDA58
-		// (set) Token: 0x06008666 RID: 34406 RVA: 0x000BF86C File Offset: 0x000BDA6C
+		// Token: 0x17000467 RID: 1127
+		// (get) Token: 0x06001FBD RID: 8125 RVA: 0x0002DE0D File Offset: 0x0002C00D
+		// (set) Token: 0x06001FBE RID: 8126 RVA: 0x0002DE21 File Offset: 0x0002C021
 		public unsafe TEnumAsByte<ECollisionResponse> GameTraceChannel8
 		{
 			get
@@ -346,9 +346,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001FC6 RID: 8134
-		// (get) Token: 0x06008667 RID: 34407 RVA: 0x000BF881 File Offset: 0x000BDA81
-		// (set) Token: 0x06008668 RID: 34408 RVA: 0x000BF895 File Offset: 0x000BDA95
+		// Token: 0x17000468 RID: 1128
+		// (get) Token: 0x06001FBF RID: 8127 RVA: 0x0002DE36 File Offset: 0x0002C036
+		// (set) Token: 0x06001FC0 RID: 8128 RVA: 0x0002DE4A File Offset: 0x0002C04A
 		public unsafe TEnumAsByte<ECollisionResponse> GameTraceChannel9
 		{
 			get
@@ -361,9 +361,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001FC7 RID: 8135
-		// (get) Token: 0x06008669 RID: 34409 RVA: 0x000BF8AA File Offset: 0x000BDAAA
-		// (set) Token: 0x0600866A RID: 34410 RVA: 0x000BF8BE File Offset: 0x000BDABE
+		// Token: 0x17000469 RID: 1129
+		// (get) Token: 0x06001FC1 RID: 8129 RVA: 0x0002DE5F File Offset: 0x0002C05F
+		// (set) Token: 0x06001FC2 RID: 8130 RVA: 0x0002DE73 File Offset: 0x0002C073
 		public unsafe TEnumAsByte<ECollisionResponse> GameTraceChannel10
 		{
 			get
@@ -376,9 +376,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001FC8 RID: 8136
-		// (get) Token: 0x0600866B RID: 34411 RVA: 0x000BF8D3 File Offset: 0x000BDAD3
-		// (set) Token: 0x0600866C RID: 34412 RVA: 0x000BF8E7 File Offset: 0x000BDAE7
+		// Token: 0x1700046A RID: 1130
+		// (get) Token: 0x06001FC3 RID: 8131 RVA: 0x0002DE88 File Offset: 0x0002C088
+		// (set) Token: 0x06001FC4 RID: 8132 RVA: 0x0002DE9C File Offset: 0x0002C09C
 		public unsafe TEnumAsByte<ECollisionResponse> GameTraceChannel11
 		{
 			get
@@ -391,9 +391,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001FC9 RID: 8137
-		// (get) Token: 0x0600866D RID: 34413 RVA: 0x000BF8FC File Offset: 0x000BDAFC
-		// (set) Token: 0x0600866E RID: 34414 RVA: 0x000BF910 File Offset: 0x000BDB10
+		// Token: 0x1700046B RID: 1131
+		// (get) Token: 0x06001FC5 RID: 8133 RVA: 0x0002DEB1 File Offset: 0x0002C0B1
+		// (set) Token: 0x06001FC6 RID: 8134 RVA: 0x0002DEC5 File Offset: 0x0002C0C5
 		public unsafe TEnumAsByte<ECollisionResponse> GameTraceChannel12
 		{
 			get
@@ -406,9 +406,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001FCA RID: 8138
-		// (get) Token: 0x0600866F RID: 34415 RVA: 0x000BF925 File Offset: 0x000BDB25
-		// (set) Token: 0x06008670 RID: 34416 RVA: 0x000BF939 File Offset: 0x000BDB39
+		// Token: 0x1700046C RID: 1132
+		// (get) Token: 0x06001FC7 RID: 8135 RVA: 0x0002DEDA File Offset: 0x0002C0DA
+		// (set) Token: 0x06001FC8 RID: 8136 RVA: 0x0002DEEE File Offset: 0x0002C0EE
 		public unsafe TEnumAsByte<ECollisionResponse> GameTraceChannel13
 		{
 			get
@@ -421,9 +421,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001FCB RID: 8139
-		// (get) Token: 0x06008671 RID: 34417 RVA: 0x000BF94E File Offset: 0x000BDB4E
-		// (set) Token: 0x06008672 RID: 34418 RVA: 0x000BF962 File Offset: 0x000BDB62
+		// Token: 0x1700046D RID: 1133
+		// (get) Token: 0x06001FC9 RID: 8137 RVA: 0x0002DF03 File Offset: 0x0002C103
+		// (set) Token: 0x06001FCA RID: 8138 RVA: 0x0002DF17 File Offset: 0x0002C117
 		public unsafe TEnumAsByte<ECollisionResponse> GameTraceChannel14
 		{
 			get
@@ -436,9 +436,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001FCC RID: 8140
-		// (get) Token: 0x06008673 RID: 34419 RVA: 0x000BF977 File Offset: 0x000BDB77
-		// (set) Token: 0x06008674 RID: 34420 RVA: 0x000BF98B File Offset: 0x000BDB8B
+		// Token: 0x1700046E RID: 1134
+		// (get) Token: 0x06001FCB RID: 8139 RVA: 0x0002DF2C File Offset: 0x0002C12C
+		// (set) Token: 0x06001FCC RID: 8140 RVA: 0x0002DF40 File Offset: 0x0002C140
 		public unsafe TEnumAsByte<ECollisionResponse> GameTraceChannel15
 		{
 			get
@@ -451,9 +451,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001FCD RID: 8141
-		// (get) Token: 0x06008675 RID: 34421 RVA: 0x000BF9A0 File Offset: 0x000BDBA0
-		// (set) Token: 0x06008676 RID: 34422 RVA: 0x000BF9B4 File Offset: 0x000BDBB4
+		// Token: 0x1700046F RID: 1135
+		// (get) Token: 0x06001FCD RID: 8141 RVA: 0x0002DF55 File Offset: 0x0002C155
+		// (set) Token: 0x06001FCE RID: 8142 RVA: 0x0002DF69 File Offset: 0x0002C169
 		public unsafe TEnumAsByte<ECollisionResponse> GameTraceChannel16
 		{
 			get
@@ -466,9 +466,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001FCE RID: 8142
-		// (get) Token: 0x06008677 RID: 34423 RVA: 0x000BF9C9 File Offset: 0x000BDBC9
-		// (set) Token: 0x06008678 RID: 34424 RVA: 0x000BF9DD File Offset: 0x000BDBDD
+		// Token: 0x17000470 RID: 1136
+		// (get) Token: 0x06001FCF RID: 8143 RVA: 0x0002DF7E File Offset: 0x0002C17E
+		// (set) Token: 0x06001FD0 RID: 8144 RVA: 0x0002DF92 File Offset: 0x0002C192
 		public unsafe TEnumAsByte<ECollisionResponse> GameTraceChannel17
 		{
 			get
@@ -481,9 +481,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17001FCF RID: 8143
-		// (get) Token: 0x06008679 RID: 34425 RVA: 0x000BF9F2 File Offset: 0x000BDBF2
-		// (set) Token: 0x0600867A RID: 34426 RVA: 0x000BFA06 File Offset: 0x000BDC06
+		// Token: 0x17000471 RID: 1137
+		// (get) Token: 0x06001FD1 RID: 8145 RVA: 0x0002DFA7 File Offset: 0x0002C1A7
+		// (set) Token: 0x06001FD2 RID: 8146 RVA: 0x0002DFBB File Offset: 0x0002C1BB
 		public unsafe TEnumAsByte<ECollisionResponse> GameTraceChannel18
 		{
 			get
@@ -496,180 +496,143 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600867B RID: 34427 RVA: 0x000BFA1B File Offset: 0x000BDC1B
+		// Token: 0x06001FD3 RID: 8147 RVA: 0x0002DFD0 File Offset: 0x0002C1D0
 		public FCollisionResponseContainer()
 		{
 		}
 
-		// Token: 0x0600867C RID: 34428 RVA: 0x000BFA24 File Offset: 0x000BDC24
-		public FCollisionResponseContainer(TEnumAsByte<ECollisionResponse> WorldStatic, TEnumAsByte<ECollisionResponse> WorldDynamic, TEnumAsByte<ECollisionResponse> Pawn, TEnumAsByte<ECollisionResponse> Visibility, TEnumAsByte<ECollisionResponse> Camera, TEnumAsByte<ECollisionResponse> PhysicsBody, TEnumAsByte<ECollisionResponse> Vehicle, TEnumAsByte<ECollisionResponse> Destructible, TEnumAsByte<ECollisionResponse> EngineTraceChannel1, TEnumAsByte<ECollisionResponse> EngineTraceChannel2, TEnumAsByte<ECollisionResponse> EngineTraceChannel3, TEnumAsByte<ECollisionResponse> EngineTraceChannel4, TEnumAsByte<ECollisionResponse> EngineTraceChannel5, TEnumAsByte<ECollisionResponse> EngineTraceChannel6, TEnumAsByte<ECollisionResponse> GameTraceChannel1, TEnumAsByte<ECollisionResponse> GameTraceChannel2, TEnumAsByte<ECollisionResponse> GameTraceChannel3, TEnumAsByte<ECollisionResponse> GameTraceChannel4, TEnumAsByte<ECollisionResponse> GameTraceChannel5, TEnumAsByte<ECollisionResponse> GameTraceChannel6, TEnumAsByte<ECollisionResponse> GameTraceChannel7, TEnumAsByte<ECollisionResponse> GameTraceChannel8, TEnumAsByte<ECollisionResponse> GameTraceChannel9, TEnumAsByte<ECollisionResponse> GameTraceChannel10, TEnumAsByte<ECollisionResponse> GameTraceChannel11, TEnumAsByte<ECollisionResponse> GameTraceChannel12, TEnumAsByte<ECollisionResponse> GameTraceChannel13, TEnumAsByte<ECollisionResponse> GameTraceChannel14, TEnumAsByte<ECollisionResponse> GameTraceChannel15, TEnumAsByte<ECollisionResponse> GameTraceChannel16, TEnumAsByte<ECollisionResponse> GameTraceChannel17, TEnumAsByte<ECollisionResponse> GameTraceChannel18)
-		{
-			this.WorldStatic = WorldStatic;
-			this.WorldDynamic = WorldDynamic;
-			this.Pawn = Pawn;
-			this.Visibility = Visibility;
-			this.Camera = Camera;
-			this.PhysicsBody = PhysicsBody;
-			this.Vehicle = Vehicle;
-			this.Destructible = Destructible;
-			this.EngineTraceChannel1 = EngineTraceChannel1;
-			this.EngineTraceChannel2 = EngineTraceChannel2;
-			this.EngineTraceChannel3 = EngineTraceChannel3;
-			this.EngineTraceChannel4 = EngineTraceChannel4;
-			this.EngineTraceChannel5 = EngineTraceChannel5;
-			this.EngineTraceChannel6 = EngineTraceChannel6;
-			this.GameTraceChannel1 = GameTraceChannel1;
-			this.GameTraceChannel2 = GameTraceChannel2;
-			this.GameTraceChannel3 = GameTraceChannel3;
-			this.GameTraceChannel4 = GameTraceChannel4;
-			this.GameTraceChannel5 = GameTraceChannel5;
-			this.GameTraceChannel6 = GameTraceChannel6;
-			this.GameTraceChannel7 = GameTraceChannel7;
-			this.GameTraceChannel8 = GameTraceChannel8;
-			this.GameTraceChannel9 = GameTraceChannel9;
-			this.GameTraceChannel10 = GameTraceChannel10;
-			this.GameTraceChannel11 = GameTraceChannel11;
-			this.GameTraceChannel12 = GameTraceChannel12;
-			this.GameTraceChannel13 = GameTraceChannel13;
-			this.GameTraceChannel14 = GameTraceChannel14;
-			this.GameTraceChannel15 = GameTraceChannel15;
-			this.GameTraceChannel16 = GameTraceChannel16;
-			this.GameTraceChannel17 = GameTraceChannel17;
-			this.GameTraceChannel18 = GameTraceChannel18;
-		}
-
-		// Token: 0x0600867D RID: 34429 RVA: 0x000BFB34 File Offset: 0x000BDD34
+		// Token: 0x06001FD4 RID: 8148 RVA: 0x0002DFD8 File Offset: 0x0002C1D8
 		protected override IntPtr GetUStructPtr()
 		{
 			return FCollisionResponseContainer.StaticStruct();
 		}
 
-		// Token: 0x0600867E RID: 34430 RVA: 0x000BFB40 File Offset: 0x000BDD40
+		// Token: 0x06001FD5 RID: 8149 RVA: 0x0002DFE4 File Offset: 0x0002C1E4
 		[NullableContext(2)]
 		public FCollisionResponseContainer(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0600867F RID: 34431 RVA: 0x000BFB4A File Offset: 0x000BDD4A
+		// Token: 0x06001FD6 RID: 8150 RVA: 0x0002DFEE File Offset: 0x0002C1EE
 		public FCollisionResponseContainer(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06008680 RID: 34432 RVA: 0x000BFB55 File Offset: 0x000BDD55
+		// Token: 0x06001FD7 RID: 8151 RVA: 0x0002DFF9 File Offset: 0x0002C1F9
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FCollisionResponseContainer(Pointer, false, true);
 		}
 
-		// Token: 0x06008681 RID: 34433 RVA: 0x000BFB5F File Offset: 0x000BDD5F
+		// Token: 0x06001FD8 RID: 8152 RVA: 0x0002E003 File Offset: 0x0002C203
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FCollisionResponseContainer(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04003FDC RID: 16348
+		// Token: 0x04000A75 RID: 2677
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/Engine.CollisionResponseContainer";
 
-		// Token: 0x04003FDD RID: 16349
+		// Token: 0x04000A76 RID: 2678
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04003FDE RID: 16350
+		// Token: 0x04000A77 RID: 2679
 		internal static int __PropertyOffset_WorldStatic;
 
-		// Token: 0x04003FDF RID: 16351
+		// Token: 0x04000A78 RID: 2680
 		internal static int __PropertyOffset_WorldDynamic;
 
-		// Token: 0x04003FE0 RID: 16352
+		// Token: 0x04000A79 RID: 2681
 		internal static int __PropertyOffset_Pawn;
 
-		// Token: 0x04003FE1 RID: 16353
+		// Token: 0x04000A7A RID: 2682
 		internal static int __PropertyOffset_Visibility;
 
-		// Token: 0x04003FE2 RID: 16354
+		// Token: 0x04000A7B RID: 2683
 		internal static int __PropertyOffset_Camera;
 
-		// Token: 0x04003FE3 RID: 16355
+		// Token: 0x04000A7C RID: 2684
 		internal static int __PropertyOffset_PhysicsBody;
 
-		// Token: 0x04003FE4 RID: 16356
+		// Token: 0x04000A7D RID: 2685
 		internal static int __PropertyOffset_Vehicle;
 
-		// Token: 0x04003FE5 RID: 16357
+		// Token: 0x04000A7E RID: 2686
 		internal static int __PropertyOffset_Destructible;
 
-		// Token: 0x04003FE6 RID: 16358
+		// Token: 0x04000A7F RID: 2687
 		internal static int __PropertyOffset_EngineTraceChannel1;
 
-		// Token: 0x04003FE7 RID: 16359
+		// Token: 0x04000A80 RID: 2688
 		internal static int __PropertyOffset_EngineTraceChannel2;
 
-		// Token: 0x04003FE8 RID: 16360
+		// Token: 0x04000A81 RID: 2689
 		internal static int __PropertyOffset_EngineTraceChannel3;
 
-		// Token: 0x04003FE9 RID: 16361
+		// Token: 0x04000A82 RID: 2690
 		internal static int __PropertyOffset_EngineTraceChannel4;
 
-		// Token: 0x04003FEA RID: 16362
+		// Token: 0x04000A83 RID: 2691
 		internal static int __PropertyOffset_EngineTraceChannel5;
 
-		// Token: 0x04003FEB RID: 16363
+		// Token: 0x04000A84 RID: 2692
 		internal static int __PropertyOffset_EngineTraceChannel6;
 
-		// Token: 0x04003FEC RID: 16364
+		// Token: 0x04000A85 RID: 2693
 		internal static int __PropertyOffset_GameTraceChannel1;
 
-		// Token: 0x04003FED RID: 16365
+		// Token: 0x04000A86 RID: 2694
 		internal static int __PropertyOffset_GameTraceChannel2;
 
-		// Token: 0x04003FEE RID: 16366
+		// Token: 0x04000A87 RID: 2695
 		internal static int __PropertyOffset_GameTraceChannel3;
 
-		// Token: 0x04003FEF RID: 16367
+		// Token: 0x04000A88 RID: 2696
 		internal static int __PropertyOffset_GameTraceChannel4;
 
-		// Token: 0x04003FF0 RID: 16368
+		// Token: 0x04000A89 RID: 2697
 		internal static int __PropertyOffset_GameTraceChannel5;
 
-		// Token: 0x04003FF1 RID: 16369
+		// Token: 0x04000A8A RID: 2698
 		internal static int __PropertyOffset_GameTraceChannel6;
 
-		// Token: 0x04003FF2 RID: 16370
+		// Token: 0x04000A8B RID: 2699
 		internal static int __PropertyOffset_GameTraceChannel7;
 
-		// Token: 0x04003FF3 RID: 16371
+		// Token: 0x04000A8C RID: 2700
 		internal static int __PropertyOffset_GameTraceChannel8;
 
-		// Token: 0x04003FF4 RID: 16372
+		// Token: 0x04000A8D RID: 2701
 		internal static int __PropertyOffset_GameTraceChannel9;
 
-		// Token: 0x04003FF5 RID: 16373
+		// Token: 0x04000A8E RID: 2702
 		internal static int __PropertyOffset_GameTraceChannel10;
 
-		// Token: 0x04003FF6 RID: 16374
+		// Token: 0x04000A8F RID: 2703
 		internal static int __PropertyOffset_GameTraceChannel11;
 
-		// Token: 0x04003FF7 RID: 16375
+		// Token: 0x04000A90 RID: 2704
 		internal static int __PropertyOffset_GameTraceChannel12;
 
-		// Token: 0x04003FF8 RID: 16376
+		// Token: 0x04000A91 RID: 2705
 		internal static int __PropertyOffset_GameTraceChannel13;
 
-		// Token: 0x04003FF9 RID: 16377
+		// Token: 0x04000A92 RID: 2706
 		internal static int __PropertyOffset_GameTraceChannel14;
 
-		// Token: 0x04003FFA RID: 16378
+		// Token: 0x04000A93 RID: 2707
 		internal static int __PropertyOffset_GameTraceChannel15;
 
-		// Token: 0x04003FFB RID: 16379
+		// Token: 0x04000A94 RID: 2708
 		internal static int __PropertyOffset_GameTraceChannel16;
 
-		// Token: 0x04003FFC RID: 16380
+		// Token: 0x04000A95 RID: 2709
 		internal static int __PropertyOffset_GameTraceChannel17;
 
-		// Token: 0x04003FFD RID: 16381
+		// Token: 0x04000A96 RID: 2710
 		internal static int __PropertyOffset_GameTraceChannel18;
 	}
 }

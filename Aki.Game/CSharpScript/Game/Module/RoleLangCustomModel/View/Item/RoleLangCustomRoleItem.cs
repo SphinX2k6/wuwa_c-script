@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleLangCustomModel.View.Item
 {
-	// Token: 0x02004D83 RID: 19843
+	// Token: 0x02003D4C RID: 15692
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View.Item
 	})]
 	public class RoleLangCustomRoleItem : GridProxyAbstract<RoleInstance>
 	{
-		// Token: 0x060334C7 RID: 210119 RVA: 0x00BF9264 File Offset: 0x00BF7464
+		// Token: 0x06028334 RID: 164660 RVA: 0x00B42860 File Offset: 0x00B40A60
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -41,13 +41,13 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View.Item
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060334C8 RID: 210120 RVA: 0x00BF9372 File Offset: 0x00BF7572
+		// Token: 0x06028335 RID: 164661 RVA: 0x00B4296E File Offset: 0x00B40B6E
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(4).OnStateChange.Add(new Action<EToggleState>(this.OnToggleStateChanged));
 		}
 
-		// Token: 0x060334C9 RID: 210121 RVA: 0x00BF9394 File Offset: 0x00BF7594
+		// Token: 0x06028336 RID: 164662 RVA: 0x00B42990 File Offset: 0x00B40B90
 		public override void Refresh(RoleInstance roleData, bool isSelected, int gridIndex)
 		{
 			int roleId = roleData.GetRoleId();
@@ -110,19 +110,19 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View.Item
 			}
 		}
 
-		// Token: 0x060334CA RID: 210122 RVA: 0x00BF95DC File Offset: 0x00BF77DC
+		// Token: 0x06028337 RID: 164663 RVA: 0x00B42BD8 File Offset: 0x00B40DD8
 		public void RefreshByData()
 		{
 			this.Refresh(this.RoleData, true, 0);
 		}
 
-		// Token: 0x060334CB RID: 210123 RVA: 0x00BF95EC File Offset: 0x00BF77EC
+		// Token: 0x06028338 RID: 164664 RVA: 0x00B42BE8 File Offset: 0x00B40DE8
 		public void SetSelected(bool isSelected, bool fireEvent = false)
 		{
 			base.GetExtendToggle(4).SetToggleState(isSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, fireEvent, false, false);
 		}
 
-		// Token: 0x060334CC RID: 210124 RVA: 0x00BF9605 File Offset: 0x00BF7805
+		// Token: 0x06028339 RID: 164665 RVA: 0x00B42C01 File Offset: 0x00B40E01
 		private void OnToggleStateChanged(EToggleState state)
 		{
 			if (this.OnToggleStateChangedCallback != null)
@@ -131,37 +131,37 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View.Item
 			}
 		}
 
-		// Token: 0x0401B395 RID: 111509
+		// Token: 0x04015D68 RID: 89448
 		protected int RoleId;
 
-		// Token: 0x0401B396 RID: 111510
+		// Token: 0x04015D69 RID: 89449
 		protected RoleInstance RoleData;
 
-		// Token: 0x0401B397 RID: 111511
+		// Token: 0x04015D6A RID: 89450
 		[Nullable(2)]
 		public Func<int, bool> OnToggleSelectedCheck;
 
-		// Token: 0x0401B398 RID: 111512
+		// Token: 0x04015D6B RID: 89451
 		[Nullable(2)]
 		public Action<int> OnToggleStateChangedCallback;
 
-		// Token: 0x0200AEFB RID: 44795
+		// Token: 0x0200992F RID: 39215
 		[NullableContext(0)]
 		private enum EDefine
 		{
-			// Token: 0x04035275 RID: 217717
+			// Token: 0x0402FCA9 RID: 195753
 			TexRole,
-			// Token: 0x04035276 RID: 217718
+			// Token: 0x0402FCAA RID: 195754
 			TexElementIcon,
-			// Token: 0x04035277 RID: 217719
+			// Token: 0x0402FCAB RID: 195755
 			TxtLanguage,
-			// Token: 0x04035278 RID: 217720
+			// Token: 0x0402FCAC RID: 195756
 			TxtCVName,
-			// Token: 0x04035279 RID: 217721
+			// Token: 0x0402FCAD RID: 195757
 			Toggle,
-			// Token: 0x0403527A RID: 217722
+			// Token: 0x0402FCAE RID: 195758
 			TexRoleShadow,
-			// Token: 0x0403527B RID: 217723
+			// Token: 0x0402FCAF RID: 195759
 			PanelInTeam
 		}
 	}

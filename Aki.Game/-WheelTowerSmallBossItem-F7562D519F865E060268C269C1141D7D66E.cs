@@ -1,48 +1,48 @@
 ﻿using System;
 
-// Token: 0x020015C3 RID: 5571
+// Token: 0x02000A7B RID: 2683
 internal enum <WheelTowerSmallBossItem>F7562D519F865E060268C269C1141D7D66EDC5986F7559BE6409AD73A4394BD77__EWheelTowerSmallBossItemComponent
 {
-	// Token: 0x040045FB RID: 17915
+	// Token: 0x040046A1 RID: 18081
 	ToggleRoot,
-	// Token: 0x040045FC RID: 17916
+	// Token: 0x040046A2 RID: 18082
 	ItemSmallPanel,
-	// Token: 0x040045FD RID: 17917
+	// Token: 0x040046A3 RID: 18083
 	TextureBossSmall,
-	// Token: 0x040045FE RID: 17918
+	// Token: 0x040046A4 RID: 18084
 	ItemFinishSmall,
-	// Token: 0x040045FF RID: 17919
+	// Token: 0x040046A5 RID: 18085
 	ItemBigPanel,
-	// Token: 0x04004600 RID: 17920
+	// Token: 0x040046A6 RID: 18086
 	TextureBossBig,
-	// Token: 0x04004601 RID: 17921
+	// Token: 0x040046A7 RID: 18087
 	ItemRoundPanel,
-	// Token: 0x04004602 RID: 17922
+	// Token: 0x040046A8 RID: 18088
 	TextRoundNum,
-	// Token: 0x04004603 RID: 17923
+	// Token: 0x040046A9 RID: 18089
 	ItemProgressPanel,
-	// Token: 0x04004604 RID: 17924
+	// Token: 0x040046AA RID: 18090
 	TextProgress,
-	// Token: 0x04004605 RID: 17925
+	// Token: 0x040046AB RID: 18091
 	SpriteProgressFill,
-	// Token: 0x04004606 RID: 17926
+	// Token: 0x040046AC RID: 18092
 	ItemFinishBig,
-	// Token: 0x04004607 RID: 17927
+	// Token: 0x040046AD RID: 18093
 	ItemCurrentIcon,
-	// Token: 0x04004608 RID: 17928
+	// Token: 0x040046AE RID: 18094
 	SpriteSelectLight,
-	// Token: 0x04004609 RID: 17929
+	// Token: 0x040046AF RID: 18095
 	TextureBgLight,
-	// Token: 0x0400460A RID: 17930
+	// Token: 0x040046B0 RID: 18096
 	SpriteProgressBarEndless,
-	// Token: 0x0400460B RID: 17931
+	// Token: 0x040046B1 RID: 18097
 	SpriteProgressBarNormal,
-	// Token: 0x0400460C RID: 17932
+	// Token: 0x040046B2 RID: 18098
 	TextureBgFrame,
-	// Token: 0x0400460D RID: 17933
+	// Token: 0x040046B3 RID: 18099
 	Niagara1,
-	// Token: 0x0400460E RID: 17934
+	// Token: 0x040046B4 RID: 18100
 	Niagara2,
-	// Token: 0x0400460F RID: 17935
+	// Token: 0x040046B5 RID: 18101
 	ItemCurrentSmallIcon
 }

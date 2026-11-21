@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013C6 RID: 5062
+	// Token: 0x0200151D RID: 5405
 	public class ICheckPlayerPressButton : ICheckPlayerInputBase
 	{
-		// Token: 0x0600739A RID: 29594 RVA: 0x001155D1 File Offset: 0x001137D1
-		[NullableContext(1)]
+		// Token: 0x06007A5B RID: 31323 RVA: 0x00123FB6 File Offset: 0x001221B6
 		public static ICheckPlayerPressButton Create(ICheckPlayerPressButton? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170025E1 RID: 9697
-		// (get) Token: 0x0600739B RID: 29595 RVA: 0x001155F0 File Offset: 0x001137F0
+		// Token: 0x170027C3 RID: 10179
+		// (get) Token: 0x06007A5C RID: 31324 RVA: 0x00123FD5 File Offset: 0x001221D5
 		public override ECheckPlayerInputType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170025E2 RID: 9698
-		// (get) Token: 0x0600739C RID: 29596 RVA: 0x001155FD File Offset: 0x001137FD
+		// Token: 0x170027C4 RID: 10180
+		// (get) Token: 0x06007A5D RID: 31325 RVA: 0x00123FE2 File Offset: 0x001221E2
 		public virtual EPlayerButtonType ButtonType
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040042EC RID: 17132
+		// Token: 0x0400467D RID: 18045
 		private ICheckPlayerPressButton Instance;
 	}
 }

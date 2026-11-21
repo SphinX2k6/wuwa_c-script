@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.FishingQte
 {
-	// Token: 0x02006E39 RID: 28217
+	// Token: 0x02005FBA RID: 24506
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FishingQteRingItem : UiPanelBase
 	{
-		// Token: 0x06044CA4 RID: 281764 RVA: 0x010F96E8 File Offset: 0x010F78E8
+		// Token: 0x0603AE31 RID: 241201 RVA: 0x010A3C68 File Offset: 0x010A1E68
 		public void Init(IFishingQteConfig config, FishingQteGameInfo gameInfo)
 		{
 			this.GameInfo = gameInfo;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			}
 		}
 
-		// Token: 0x06044CA5 RID: 281765 RVA: 0x010F974C File Offset: 0x010F794C
+		// Token: 0x0603AE32 RID: 241202 RVA: 0x010A3CCC File Offset: 0x010A1ECC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06044CA6 RID: 281766 RVA: 0x010F97F8 File Offset: 0x010F79F8
+		// Token: 0x0603AE33 RID: 241203 RVA: 0x010A3D78 File Offset: 0x010A1F78
 		protected override UniTask OnBeforeStartAsync()
 		{
 			FishingQteRingItem.<OnBeforeStartAsync>d__17 <OnBeforeStartAsync>d__;
@@ -58,13 +58,13 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06044CA7 RID: 281767 RVA: 0x010F983B File Offset: 0x010F7A3B
+		// Token: 0x0603AE34 RID: 241204 RVA: 0x010A3DBB File Offset: 0x010A1FBB
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 		}
 
-		// Token: 0x06044CA8 RID: 281768 RVA: 0x010F984E File Offset: 0x010F7A4E
+		// Token: 0x0603AE35 RID: 241205 RVA: 0x010A3DCE File Offset: 0x010A1FCE
 		protected override void OnBeforeDestroy()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			this.LevelSequencePlayer = null;
 		}
 
-		// Token: 0x06044CA9 RID: 281769 RVA: 0x010F9868 File Offset: 0x010F7A68
+		// Token: 0x0603AE36 RID: 241206 RVA: 0x010A3DE8 File Offset: 0x010A1FE8
 		public void InitRing()
 		{
 			this.RingInfo.ClearValidAreas();
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			this.UpdateRotateMode((cursorSpeed > 0f) ? EFishingRotateMode.Arrow : EFishingRotateMode.Ring);
 		}
 
-		// Token: 0x06044CAA RID: 281770 RVA: 0x010F98F4 File Offset: 0x010F7AF4
+		// Token: 0x0603AE37 RID: 241207 RVA: 0x010A3E74 File Offset: 0x010A2074
 		[NullableContext(2)]
 		public void OnAreaClick(EFishingAreaType areaType, ContinuousRingArea area)
 		{
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			}
 		}
 
-		// Token: 0x06044CAB RID: 281771 RVA: 0x010F996C File Offset: 0x010F7B6C
+		// Token: 0x0603AE38 RID: 241208 RVA: 0x010A3EEC File Offset: 0x010A20EC
 		public void OnArrowStayAreaUpdate(int relativeValidAreaIndex)
 		{
 			List<RingArea> validAreas = this.RingInfo.GetValidAreas();
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			arrow.SetUIRelativeRotation(frotator);
 		}
 
-		// Token: 0x06044CAC RID: 281772 RVA: 0x010F9A38 File Offset: 0x010F7C38
+		// Token: 0x0603AE39 RID: 241209 RVA: 0x010A3FB8 File Offset: 0x010A21B8
 		public void OnTick(float delta)
 		{
 			if (this.GameInfo.IsGamePause())
@@ -211,7 +211,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			}
 		}
 
-		// Token: 0x06044CAD RID: 281773 RVA: 0x010F9C24 File Offset: 0x010F7E24
+		// Token: 0x0603AE3A RID: 241210 RVA: 0x010A41A4 File Offset: 0x010A23A4
 		private float GetRotatorYaw(int direction, float cursorSpeed, float deltaSecond)
 		{
 			float num = this.CurrentRotator.Yaw;
@@ -240,13 +240,13 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			return num % 720f;
 		}
 
-		// Token: 0x06044CAE RID: 281774 RVA: 0x010F9CB1 File Offset: 0x010F7EB1
+		// Token: 0x0603AE3B RID: 241211 RVA: 0x010A4231 File Offset: 0x010A2431
 		private int GetCurrentArrowStayCellIndex()
 		{
 			return (int)Math.Floor((double)(Math.Abs(this.CurrentRotator.Yaw) % 360f / 10f)) + 1;
 		}
 
-		// Token: 0x06044CAF RID: 281775 RVA: 0x010F9CD8 File Offset: 0x010F7ED8
+		// Token: 0x0603AE3C RID: 241212 RVA: 0x010A4258 File Offset: 0x010A2458
 		private float GetAlphaInAlphaPeriod(float currentTime)
 		{
 			float num = this.RingConfig.HiddenInterval[0];
@@ -272,7 +272,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			return 1f;
 		}
 
-		// Token: 0x06044CB0 RID: 281776 RVA: 0x010F9D64 File Offset: 0x010F7F64
+		// Token: 0x0603AE3D RID: 241213 RVA: 0x010A42E4 File Offset: 0x010A24E4
 		private void UpdateRotateMode(EFishingRotateMode mode)
 		{
 			this.RotateMode = mode;
@@ -286,72 +286,72 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			}
 		}
 
-		// Token: 0x06044CB1 RID: 281777 RVA: 0x010F9DC4 File Offset: 0x010F7FC4
+		// Token: 0x0603AE3E RID: 241214 RVA: 0x010A4344 File Offset: 0x010A2544
 		public void SpawnContinuousArea(int continuousIndex, EFishingAreaType type = EFishingAreaType.QteArea)
 		{
 			this.RingQte.SpawnContinuousArea(continuousIndex, type);
 		}
 
-		// Token: 0x04023C9E RID: 146590
+		// Token: 0x0401EF53 RID: 126803
 		private const float YAW_MAX_ANGLE = 720f;
 
-		// Token: 0x04023C9F RID: 146591
+		// Token: 0x0401EF54 RID: 126804
 		protected IFishingQteConfig RingConfig;
 
-		// Token: 0x04023CA0 RID: 146592
+		// Token: 0x0401EF55 RID: 126805
 		protected FishingQteGameInfo GameInfo;
 
-		// Token: 0x04023CA1 RID: 146593
+		// Token: 0x0401EF56 RID: 126806
 		protected FishingQteRingInfo RingInfo;
 
-		// Token: 0x04023CA2 RID: 146594
+		// Token: 0x0401EF57 RID: 126807
 		[Nullable(2)]
 		protected FishingQteRingBgItem RingBg;
 
-		// Token: 0x04023CA3 RID: 146595
+		// Token: 0x0401EF58 RID: 126808
 		[Nullable(2)]
 		protected FishingQteRingQteItem RingQte;
 
-		// Token: 0x04023CA4 RID: 146596
+		// Token: 0x0401EF59 RID: 126809
 		[Nullable(2)]
 		protected LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x04023CA5 RID: 146597
+		// Token: 0x0401EF5A RID: 126810
 		[Nullable(2)]
 		private UUIItem Arrow;
 
-		// Token: 0x04023CA6 RID: 146598
+		// Token: 0x0401EF5B RID: 126811
 		private Rotator CurrentRotator = Rotator.Create();
 
-		// Token: 0x04023CA7 RID: 146599
+		// Token: 0x0401EF5C RID: 126812
 		private float ArrowActiveStartYawAngle;
 
-		// Token: 0x04023CA8 RID: 146600
+		// Token: 0x0401EF5D RID: 126813
 		private float ArrowActiveEndYawAngle;
 
-		// Token: 0x04023CA9 RID: 146601
+		// Token: 0x0401EF5E RID: 126814
 		protected float PeriodAlphaTotalTime;
 
-		// Token: 0x04023CAA RID: 146602
+		// Token: 0x0401EF5F RID: 126815
 		protected float PeriodAlphaCurrentTime;
 
-		// Token: 0x04023CAB RID: 146603
+		// Token: 0x0401EF60 RID: 126816
 		protected EFishingRotateMode RotateMode;
 
-		// Token: 0x0200CCE9 RID: 52457
+		// Token: 0x0200B8D9 RID: 47321
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403DCBA RID: 253114
+			// Token: 0x040390DC RID: 233692
 			public const int Arrow = 0;
 
-			// Token: 0x0403DCBB RID: 253115
+			// Token: 0x040390DD RID: 233693
 			public const int RingBg = 1;
 
-			// Token: 0x0403DCBC RID: 253116
+			// Token: 0x040390DE RID: 233694
 			public const int RingQte = 2;
 
-			// Token: 0x0403DCBD RID: 253117
+			// Token: 0x040390DF RID: 233695
 			public const int TexArrow = 3;
 		}
 	}

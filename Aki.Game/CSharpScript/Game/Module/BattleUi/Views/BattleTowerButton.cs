@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CDB RID: 23771
+	// Token: 0x02004CBD RID: 19645
 	public class BattleTowerButton : BattleEntranceButton
 	{
-		// Token: 0x0603C26F RID: 246383 RVA: 0x00E6659C File Offset: 0x00E6479C
+		// Token: 0x060311C5 RID: 201157 RVA: 0x00DB6B50 File Offset: 0x00DB4D50
 		protected override void OnRegisterComponent()
 		{
 			base.OnRegisterComponent();
@@ -16,19 +16,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos.Add(new ValueTuple<int, Type>(3, typeof(UUINiagara)));
 		}
 
-		// Token: 0x0603C270 RID: 246384 RVA: 0x00E665DA File Offset: 0x00E647DA
+		// Token: 0x060311C6 RID: 201158 RVA: 0x00DB6B8E File Offset: 0x00DB4D8E
 		protected void AddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.OnTowerGuideClose, new Action(this.OnTowerGuideClose));
 		}
 
-		// Token: 0x0603C271 RID: 246385 RVA: 0x00E665F8 File Offset: 0x00E647F8
+		// Token: 0x060311C7 RID: 201159 RVA: 0x00DB6BAC File Offset: 0x00DB4DAC
 		protected void RemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.OnTowerGuideClose, new Action(this.OnTowerGuideClose));
 		}
 
-		// Token: 0x0603C272 RID: 246386 RVA: 0x00E66616 File Offset: 0x00E64816
+		// Token: 0x060311C8 RID: 201160 RVA: 0x00DB6BCA File Offset: 0x00DB4DCA
 		[NullableContext(2)]
 		public override void Initialize(object param = null)
 		{
@@ -36,14 +36,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AddEvents();
 		}
 
-		// Token: 0x0603C273 RID: 246387 RVA: 0x00E66625 File Offset: 0x00E64825
+		// Token: 0x060311C9 RID: 201161 RVA: 0x00DB6BD9 File Offset: 0x00DB4DD9
 		public override void Reset()
 		{
 			this.RemoveEvents();
 			base.Reset();
 		}
 
-		// Token: 0x0603C274 RID: 246388 RVA: 0x00E66634 File Offset: 0x00E64834
+		// Token: 0x060311CA RID: 201162 RVA: 0x00DB6BE8 File Offset: 0x00DB4DE8
 		private void OnTowerGuideClose()
 		{
 			UUINiagara uiNiagara = base.GetUiNiagara(2);
@@ -72,16 +72,16 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}, null, null);
 		}
 
-		// Token: 0x0200BF33 RID: 48947
+		// Token: 0x0200A939 RID: 43321
 		private enum EChildType
 		{
-			// Token: 0x04039AC5 RID: 236229
+			// Token: 0x04034487 RID: 214151
 			Button,
-			// Token: 0x04039AC6 RID: 236230
+			// Token: 0x04034488 RID: 214152
 			RedDotItem,
-			// Token: 0x04039AC7 RID: 236231
+			// Token: 0x04034489 RID: 214153
 			NiagaraItem1,
-			// Token: 0x04039AC8 RID: 236232
+			// Token: 0x0403448A RID: 214154
 			NiagaraItem2
 		}
 	}

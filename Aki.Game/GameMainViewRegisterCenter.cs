@@ -3,10 +3,10 @@ using CSharpScript.Game.Module.AdventureGuide;
 using CSharpScript.Game.Module.GameMainView.DangoBrawl;
 using CSharpScript.Game.Module.GameMainView.PinballBattle;
 
-// Token: 0x02001CB1 RID: 7345
+// Token: 0x02001173 RID: 4467
 public class GameMainViewRegisterCenter
 {
-	// Token: 0x0600DDF9 RID: 56825 RVA: 0x0033E284 File Offset: 0x0033C484
+	// Token: 0x0600B216 RID: 45590 RVA: 0x00349CC0 File Offset: 0x00347EC0
 	public static void Init()
 	{
 		GameMainViewStorage.RegisterMainViewInfo(EDungeonSubType.TowerDefenseEvent, typeof(TrapDefenseMainViewProxy));

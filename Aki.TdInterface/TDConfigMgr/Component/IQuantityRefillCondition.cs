@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200063C RID: 1596
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020006D9 RID: 1753
 	public class IQuantityRefillCondition : ISpawnMonsterCompleteCondition
 	{
-		// Token: 0x06002214 RID: 8724 RVA: 0x0005DD40 File Offset: 0x0005BF40
+		// Token: 0x0600251A RID: 9498 RVA: 0x00064A54 File Offset: 0x00062C54
 		private IQuantityRefillCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002215 RID: 8725 RVA: 0x0005DD78 File Offset: 0x0005BF78
+		// Token: 0x0600251B RID: 9499 RVA: 0x00064A8C File Offset: 0x00062C8C
 		public static IQuantityRefillCondition Create([Nullable(2)] IQuantityRefillCondition instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002216 RID: 8726 RVA: 0x0005DD8B File Offset: 0x0005BF8B
+		// Token: 0x0600251C RID: 9500 RVA: 0x00064A9F File Offset: 0x00062C9F
 		public static IQuantityRefillCondition CreateFromSetValue([Nullable(2)] IQuantityRefillCondition_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002217 RID: 8727 RVA: 0x0005DD9E File Offset: 0x0005BF9E
+		// Token: 0x0600251D RID: 9501 RVA: 0x00064AB2 File Offset: 0x00062CB2
 		public new IQuantityRefillCondition_SetValue ToSetValue()
 		{
 			return new IQuantityRefillCondition_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700090F RID: 2319
-		// (get) Token: 0x06002218 RID: 8728 RVA: 0x0005DDC9 File Offset: 0x0005BFC9
-		// (set) Token: 0x06002219 RID: 8729 RVA: 0x0005DDF4 File Offset: 0x0005BFF4
+		// Token: 0x170009C6 RID: 2502
+		// (get) Token: 0x0600251E RID: 9502 RVA: 0x00064ADD File Offset: 0x00062CDD
+		// (set) Token: 0x0600251F RID: 9503 RVA: 0x00064B08 File Offset: 0x00062D08
 		public override ESpawnMonsterCompleteCondition Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000910 RID: 2320
-		// (get) Token: 0x0600221A RID: 8730 RVA: 0x0005DE02 File Offset: 0x0005C002
-		// (set) Token: 0x0600221B RID: 8731 RVA: 0x0005DE2D File Offset: 0x0005C02D
+		// Token: 0x170009C7 RID: 2503
+		// (get) Token: 0x06002520 RID: 9504 RVA: 0x00064B16 File Offset: 0x00062D16
+		// (set) Token: 0x06002521 RID: 9505 RVA: 0x00064B41 File Offset: 0x00062D41
 		public virtual int Quantity
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000911 RID: 2321
-		// (get) Token: 0x0600221C RID: 8732 RVA: 0x0005DE3C File Offset: 0x0005C03C
-		// (set) Token: 0x0600221D RID: 8733 RVA: 0x0005DE76 File Offset: 0x0005C076
+		// Token: 0x170009C8 RID: 2504
+		// (get) Token: 0x06002522 RID: 9506 RVA: 0x00064B50 File Offset: 0x00062D50
+		// (set) Token: 0x06002523 RID: 9507 RVA: 0x00064B8A File Offset: 0x00062D8A
 		public virtual float? DelayRefill
 		{
 			get
@@ -131,11 +129,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040017B1 RID: 6065
+		// Token: 0x040019A3 RID: 6563
 		[Nullable(2)]
 		protected new IQuantityRefillCondition FbInstance;
 
-		// Token: 0x040017B2 RID: 6066
+		// Token: 0x040019A4 RID: 6564
 		[Nullable(2)]
 		protected new IQuantityRefillCondition_SetValue PocoInterface;
 	}

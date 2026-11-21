@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005742 RID: 22338
+	// Token: 0x02005D49 RID: 23881
 	public struct IPilotThrowTarget : IFlatbufferObject
 	{
-		// Token: 0x1700A6A2 RID: 42658
-		// (get) Token: 0x060256C9 RID: 153289 RVA: 0x0052A2A8 File Offset: 0x005284A8
+		// Token: 0x1700AFC6 RID: 44998
+		// (get) Token: 0x06027BE9 RID: 162793 RVA: 0x00570434 File Offset: 0x0056E634
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060256CA RID: 153290 RVA: 0x0052A2B5 File Offset: 0x005284B5
+		// Token: 0x06027BEA RID: 162794 RVA: 0x00570441 File Offset: 0x0056E641
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060256CB RID: 153291 RVA: 0x0052A2BC File Offset: 0x005284BC
+		// Token: 0x06027BEB RID: 162795 RVA: 0x00570448 File Offset: 0x0056E648
 		public static IPilotThrowTarget GetRootAsIPilotThrowTarget(ByteBuffer _bb)
 		{
 			return IPilotThrowTarget.GetRootAsIPilotThrowTarget(_bb, default(IPilotThrowTarget));
 		}
 
-		// Token: 0x060256CC RID: 153292 RVA: 0x0052A2D8 File Offset: 0x005284D8
+		// Token: 0x06027BEC RID: 162796 RVA: 0x00570464 File Offset: 0x0056E664
 		public static IPilotThrowTarget GetRootAsIPilotThrowTarget(ByteBuffer _bb, IPilotThrowTarget obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060256CD RID: 153293 RVA: 0x0052A2F5 File Offset: 0x005284F5
+		// Token: 0x06027BED RID: 162797 RVA: 0x00570481 File Offset: 0x0056E681
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060256CE RID: 153294 RVA: 0x0052A304 File Offset: 0x00528504
+		// Token: 0x06027BEE RID: 162798 RVA: 0x00570490 File Offset: 0x0056E690
 		public IPilotThrowTarget __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A6A3 RID: 42659
-		// (get) Token: 0x060256CF RID: 153295 RVA: 0x0052A314 File Offset: 0x00528514
+		// Token: 0x1700AFC7 RID: 44999
+		// (get) Token: 0x06027BEF RID: 162799 RVA: 0x005704A0 File Offset: 0x0056E6A0
 		public string TidTargetName
 		{
 			get
@@ -64,20 +64,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060256D0 RID: 153296 RVA: 0x0052A34B File Offset: 0x0052854B
+		// Token: 0x06027BF0 RID: 162800 RVA: 0x005704D7 File Offset: 0x0056E6D7
 		public Span<byte> GetTidTargetNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x060256D1 RID: 153297 RVA: 0x0052A35A File Offset: 0x0052855A
+		// Token: 0x06027BF1 RID: 162801 RVA: 0x005704E6 File Offset: 0x0056E6E6
 		public byte[] GetTidTargetNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x1700A6A4 RID: 42660
-		// (get) Token: 0x060256D2 RID: 153298 RVA: 0x0052A368 File Offset: 0x00528568
+		// Token: 0x1700AFC8 RID: 45000
+		// (get) Token: 0x06027BF2 RID: 162802 RVA: 0x005704F4 File Offset: 0x0056E6F4
 		public IVectorInfo? Position
 		{
 			get
@@ -91,8 +91,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A6A5 RID: 42661
-		// (get) Token: 0x060256D3 RID: 153299 RVA: 0x0052A3C8 File Offset: 0x005285C8
+		// Token: 0x1700AFC9 RID: 45001
+		// (get) Token: 0x06027BF3 RID: 162803 RVA: 0x00570554 File Offset: 0x0056E754
 		public EPilotThrowPointVisualType VisualType
 		{
 			get
@@ -106,8 +106,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A6A6 RID: 42662
-		// (get) Token: 0x060256D4 RID: 153300 RVA: 0x0052A404 File Offset: 0x00528604
+		// Token: 0x1700AFCA RID: 45002
+		// (get) Token: 0x06027BF4 RID: 162804 RVA: 0x00570590 File Offset: 0x0056E790
 		public IConditionGroup? Conditions
 		{
 			get
@@ -121,8 +121,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A6A7 RID: 42663
-		// (get) Token: 0x060256D5 RID: 153301 RVA: 0x0052A464 File Offset: 0x00528664
+		// Token: 0x1700AFCB RID: 45003
+		// (get) Token: 0x06027BF5 RID: 162805 RVA: 0x005705F0 File Offset: 0x0056E7F0
 		public bool IsQuest
 		{
 			get
@@ -132,8 +132,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A6A8 RID: 42664
-		// (get) Token: 0x060256D6 RID: 153302 RVA: 0x0052A4A4 File Offset: 0x005286A4
+		// Token: 0x1700AFCC RID: 45004
+		// (get) Token: 0x06027BF6 RID: 162806 RVA: 0x00570630 File Offset: 0x0056E830
 		public float UiScale
 		{
 			get
@@ -147,8 +147,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A6A9 RID: 42665
-		// (get) Token: 0x060256D7 RID: 153303 RVA: 0x0052A4E8 File Offset: 0x005286E8
+		// Token: 0x1700AFCD RID: 45005
+		// (get) Token: 0x06027BF7 RID: 162807 RVA: 0x00570674 File Offset: 0x0056E874
 		public byte NullMask
 		{
 			get
@@ -162,7 +162,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060256D8 RID: 153304 RVA: 0x0052A528 File Offset: 0x00528728
+		// Token: 0x06027BF8 RID: 162808 RVA: 0x005706B4 File Offset: 0x0056E8B4
 		public static Offset<IPilotThrowTarget> CreateIPilotThrowTarget(FlatBufferBuilder builder, StringOffset TidTargetNameOffset = default(StringOffset), Offset<IVectorInfo> PositionOffset = default(Offset<IVectorInfo>), EPilotThrowPointVisualType VisualType = EPilotThrowPointVisualType.Normal, Offset<IConditionGroup> ConditionsOffset = default(Offset<IConditionGroup>), bool IsQuest = false, float UiScale = 0f, byte NullMask = 0)
 		{
 			builder.StartTable(7);
@@ -176,61 +176,61 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IPilotThrowTarget.EndIPilotThrowTarget(builder);
 		}
 
-		// Token: 0x060256D9 RID: 153305 RVA: 0x0052A577 File Offset: 0x00528777
+		// Token: 0x06027BF9 RID: 162809 RVA: 0x00570703 File Offset: 0x0056E903
 		public static void StartIPilotThrowTarget(FlatBufferBuilder builder)
 		{
 			builder.StartTable(7);
 		}
 
-		// Token: 0x060256DA RID: 153306 RVA: 0x0052A580 File Offset: 0x00528780
+		// Token: 0x06027BFA RID: 162810 RVA: 0x0057070C File Offset: 0x0056E90C
 		public static void AddTidTargetName(FlatBufferBuilder builder, StringOffset tidTargetNameOffset)
 		{
 			builder.AddOffset(0, tidTargetNameOffset.Value, 0);
 		}
 
-		// Token: 0x060256DB RID: 153307 RVA: 0x0052A590 File Offset: 0x00528790
+		// Token: 0x06027BFB RID: 162811 RVA: 0x0057071C File Offset: 0x0056E91C
 		public static void AddPosition(FlatBufferBuilder builder, Offset<IVectorInfo> positionOffset)
 		{
 			builder.AddOffset(1, positionOffset.Value, 0);
 		}
 
-		// Token: 0x060256DC RID: 153308 RVA: 0x0052A5A0 File Offset: 0x005287A0
+		// Token: 0x06027BFC RID: 162812 RVA: 0x0057072C File Offset: 0x0056E92C
 		public static void AddVisualType(FlatBufferBuilder builder, EPilotThrowPointVisualType visualType)
 		{
 			builder.AddByte(2, (byte)visualType, 0);
 		}
 
-		// Token: 0x060256DD RID: 153309 RVA: 0x0052A5AB File Offset: 0x005287AB
+		// Token: 0x06027BFD RID: 162813 RVA: 0x00570737 File Offset: 0x0056E937
 		public static void AddConditions(FlatBufferBuilder builder, Offset<IConditionGroup> conditionsOffset)
 		{
 			builder.AddOffset(3, conditionsOffset.Value, 0);
 		}
 
-		// Token: 0x060256DE RID: 153310 RVA: 0x0052A5BB File Offset: 0x005287BB
+		// Token: 0x06027BFE RID: 162814 RVA: 0x00570747 File Offset: 0x0056E947
 		public static void AddIsQuest(FlatBufferBuilder builder, bool isQuest)
 		{
 			builder.AddBool(4, isQuest, false);
 		}
 
-		// Token: 0x060256DF RID: 153311 RVA: 0x0052A5C6 File Offset: 0x005287C6
+		// Token: 0x06027BFF RID: 162815 RVA: 0x00570752 File Offset: 0x0056E952
 		public static void AddUiScale(FlatBufferBuilder builder, float uiScale)
 		{
 			builder.AddFloat(5, uiScale, 0.0);
 		}
 
-		// Token: 0x060256E0 RID: 153312 RVA: 0x0052A5D9 File Offset: 0x005287D9
+		// Token: 0x06027C00 RID: 162816 RVA: 0x00570765 File Offset: 0x0056E965
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(6, nullMask, 0);
 		}
 
-		// Token: 0x060256E1 RID: 153313 RVA: 0x0052A5E4 File Offset: 0x005287E4
+		// Token: 0x06027C01 RID: 162817 RVA: 0x00570770 File Offset: 0x0056E970
 		public static Offset<IPilotThrowTarget> EndIPilotThrowTarget(FlatBufferBuilder builder)
 		{
 			return new Offset<IPilotThrowTarget>(builder.EndTable());
 		}
 
-		// Token: 0x060256E2 RID: 153314 RVA: 0x0052A5F4 File Offset: 0x005287F4
+		// Token: 0x06027C02 RID: 162818 RVA: 0x00570780 File Offset: 0x0056E980
 		public IPilotThrowTargetT UnPack()
 		{
 			IPilotThrowTargetT pilotThrowTargetT = new IPilotThrowTargetT();
@@ -238,7 +238,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return pilotThrowTargetT;
 		}
 
-		// Token: 0x060256E3 RID: 153315 RVA: 0x0052A610 File Offset: 0x00528810
+		// Token: 0x06027C03 RID: 162819 RVA: 0x0057079C File Offset: 0x0056E99C
 		public void UnPackTo(IPilotThrowTargetT _o)
 		{
 			_o.TidTargetName = this.TidTargetName;
@@ -250,7 +250,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x060256E4 RID: 153316 RVA: 0x0052A6B8 File Offset: 0x005288B8
+		// Token: 0x06027C04 RID: 162820 RVA: 0x00570844 File Offset: 0x0056EA44
 		public static Offset<IPilotThrowTarget> Pack(FlatBufferBuilder builder, IPilotThrowTargetT _o)
 		{
 			if (_o == null)
@@ -263,7 +263,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IPilotThrowTarget.CreateIPilotThrowTarget(builder, tidTargetNameOffset, positionOffset, _o.VisualType, conditionsOffset, _o.IsQuest, _o.UiScale, _o.NullMask);
 		}
 
-		// Token: 0x0400EBDB RID: 60379
+		// Token: 0x0400F8C6 RID: 63686
 		private Table __p;
 	}
 }

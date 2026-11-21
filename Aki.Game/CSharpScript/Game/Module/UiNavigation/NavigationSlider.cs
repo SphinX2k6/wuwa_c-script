@@ -5,17 +5,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x0200491C RID: 18716
+	// Token: 0x02003893 RID: 14483
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class NavigationSlider : NavigationSelectableBase
 	{
-		// Token: 0x06030E76 RID: 200310 RVA: 0x00B5AE11 File Offset: 0x00B59011
+		// Token: 0x060259A3 RID: 154019 RVA: 0x00A95C81 File Offset: 0x00A93E81
 		public NavigationSlider(ULGUIBehaviour selectable, string type, List<string> paramList) : base(selectable, type, paramList)
 		{
 		}
 
-		// Token: 0x06030E77 RID: 200311 RVA: 0x00B5AE1C File Offset: 0x00B5901C
+		// Token: 0x060259A4 RID: 154020 RVA: 0x00A95C8C File Offset: 0x00A93E8C
 		protected override bool OnHandlePointerSelect(ULGUIPointerEventData eventData)
 		{
 			return false;

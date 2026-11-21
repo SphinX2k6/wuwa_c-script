@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Menu.Views
 {
-	// Token: 0x02005411 RID: 21521
+	// Token: 0x020043F4 RID: 17396
 	public class MenuScrollSettingTitleItem : MenuScrollSettingBaseItem
 	{
-		// Token: 0x06037028 RID: 225320 RVA: 0x00D08F33 File Offset: 0x00D07133
+		// Token: 0x0602BF71 RID: 180081 RVA: 0x00C5835B File Offset: 0x00C5655B
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			};
 		}
 
-		// Token: 0x06037029 RID: 225321 RVA: 0x00D08F6C File Offset: 0x00D0716C
+		// Token: 0x0602BF72 RID: 180082 RVA: 0x00C58394 File Offset: 0x00C56594
 		protected override void OnStart()
 		{
 			if (this.SequencePlayer == null)
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			}
 		}
 
-		// Token: 0x0603702A RID: 225322 RVA: 0x00D08F87 File Offset: 0x00D07187
+		// Token: 0x0602BF73 RID: 180083 RVA: 0x00C583AF File Offset: 0x00C565AF
 		protected override void OnBeforeDestroy()
 		{
 			if (this.SequencePlayer != null)
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Menu.Views
 			}
 		}
 
-		// Token: 0x0603702B RID: 225323 RVA: 0x00D08FA7 File Offset: 0x00D071A7
+		// Token: 0x0602BF74 RID: 180084 RVA: 0x00C583CF File Offset: 0x00C565CF
 		[NullableContext(1)]
 		public override void Update(MenuData data, bool bGameSettingsUpdate)
 		{
@@ -48,14 +48,14 @@ namespace CSharpScript.Game.Module.Menu.Views
 			this.RefreshTitle();
 		}
 
-		// Token: 0x0603702C RID: 225324 RVA: 0x00D08FB8 File Offset: 0x00D071B8
+		// Token: 0x0602BF75 RID: 180085 RVA: 0x00C583E0 File Offset: 0x00C565E0
 		private void RefreshTitle()
 		{
 			this.SetSpriteByPath(this.Data.SubImage, base.GetSprite(0), false, null, null);
 			base.GetText(1).ShowTextNew(this.Data.SubName ?? "");
 		}
 
-		// Token: 0x0603702D RID: 225325 RVA: 0x00D09008 File Offset: 0x00D07208
+		// Token: 0x0602BF76 RID: 180086 RVA: 0x00C58430 File Offset: 0x00C56630
 		[NullableContext(1)]
 		public override void PlaySequenceFromName(string name)
 		{
@@ -67,22 +67,22 @@ namespace CSharpScript.Game.Module.Menu.Views
 			sequencePlayer.PlayLevelSequenceByName(name, false, null, false);
 		}
 
-		// Token: 0x0603702E RID: 225326 RVA: 0x00D09031 File Offset: 0x00D07231
+		// Token: 0x0602BF77 RID: 180087 RVA: 0x00C58459 File Offset: 0x00C56659
 		public override void SetInteractionActive(bool val)
 		{
 		}
 
-		// Token: 0x0401D043 RID: 118851
+		// Token: 0x04017ADC RID: 96988
 		[Nullable(2)]
 		private LevelSequencePlayer SequencePlayer;
 
-		// Token: 0x0200B6AA RID: 46762
+		// Token: 0x0200A0E2 RID: 41186
 		private class EComponents
 		{
-			// Token: 0x04037578 RID: 226680
+			// Token: 0x04031FCD RID: 204749
 			public const int TitleSprite = 0;
 
-			// Token: 0x04037579 RID: 226681
+			// Token: 0x04031FCE RID: 204750
 			public const int TitleText = 1;
 		}
 	}

@@ -4,27 +4,27 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.Guide
 {
-	// Token: 0x020052A4 RID: 21156
+	// Token: 0x02004274 RID: 17012
 	[NullableContext(1)]
 	public interface IPhantomArenaTabViewModelBase
 	{
-		// Token: 0x170082E4 RID: 33508
-		// (get) Token: 0x06036244 RID: 221764
-		// (set) Token: 0x06036245 RID: 221765
+		// Token: 0x170056A4 RID: 22180
+		// (get) Token: 0x0602B13F RID: 176447
+		// (set) Token: 0x0602B140 RID: 176448
 		string Tips { get; set; }
 
-		// Token: 0x170082E5 RID: 33509
-		// (get) Token: 0x06036246 RID: 221766
-		// (set) Token: 0x06036247 RID: 221767
+		// Token: 0x170056A5 RID: 22181
+		// (get) Token: 0x0602B141 RID: 176449
+		// (set) Token: 0x0602B142 RID: 176450
 		EBvbPlayerOperationType Type { get; set; }
 
-		// Token: 0x06036248 RID: 221768
+		// Token: 0x0602B143 RID: 176451
 		bool CheckCanExecute(params object[] params_);
 
-		// Token: 0x06036249 RID: 221769
+		// Token: 0x0602B144 RID: 176452
 		void CacheGuideData(params object[] params_);
 
-		// Token: 0x0603624A RID: 221770
+		// Token: 0x0602B145 RID: 176453
 		bool CheckCanFinishGuide(params object[] params_);
 	}
 }

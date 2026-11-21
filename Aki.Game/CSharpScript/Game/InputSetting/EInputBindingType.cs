@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.InputSetting
 {
-	// Token: 0x02006FE6 RID: 28646
+	// Token: 0x02006167 RID: 24935
 	public enum EInputBindingType
 	{
-		// Token: 0x040245B1 RID: 148913
+		// Token: 0x0401F866 RID: 129126
 		Original,
-		// Token: 0x040245B2 RID: 148914
+		// Token: 0x0401F867 RID: 129127
 		Motor
 	}
 }

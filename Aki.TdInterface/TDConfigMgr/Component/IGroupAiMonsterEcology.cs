@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020003F4 RID: 1012
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200044D RID: 1101
 	public class IGroupAiMonsterEcology : IGroupAiMode
 	{
-		// Token: 0x0600145D RID: 5213 RVA: 0x000411DC File Offset: 0x0003F3DC
+		// Token: 0x060015F7 RID: 5623 RVA: 0x00044F24 File Offset: 0x00043124
 		private IGroupAiMonsterEcology_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600145E RID: 5214 RVA: 0x00041214 File Offset: 0x0003F414
+		// Token: 0x060015F8 RID: 5624 RVA: 0x00044F5C File Offset: 0x0004315C
 		public static IGroupAiMonsterEcology Create([Nullable(2)] IGroupAiMonsterEcology instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600145F RID: 5215 RVA: 0x00041227 File Offset: 0x0003F427
+		// Token: 0x060015F9 RID: 5625 RVA: 0x00044F6F File Offset: 0x0004316F
 		public static IGroupAiMonsterEcology CreateFromSetValue([Nullable(2)] IGroupAiMonsterEcology_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001460 RID: 5216 RVA: 0x0004123A File Offset: 0x0003F43A
+		// Token: 0x060015FA RID: 5626 RVA: 0x00044F82 File Offset: 0x00043182
 		public new IGroupAiMonsterEcology_SetValue ToSetValue()
 		{
 			return new IGroupAiMonsterEcology_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700059E RID: 1438
-		// (get) Token: 0x06001461 RID: 5217 RVA: 0x00041265 File Offset: 0x0003F465
-		// (set) Token: 0x06001462 RID: 5218 RVA: 0x00041290 File Offset: 0x0003F490
+		// Token: 0x17000605 RID: 1541
+		// (get) Token: 0x060015FB RID: 5627 RVA: 0x00044FAD File Offset: 0x000431AD
+		// (set) Token: 0x060015FC RID: 5628 RVA: 0x00044FD8 File Offset: 0x000431D8
 		public override EGroupAiMode Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700059F RID: 1439
-		// (get) Token: 0x06001463 RID: 5219 RVA: 0x0004129E File Offset: 0x0003F49E
-		// (set) Token: 0x06001464 RID: 5220 RVA: 0x000412C9 File Offset: 0x0003F4C9
+		// Token: 0x17000606 RID: 1542
+		// (get) Token: 0x060015FD RID: 5629 RVA: 0x00044FE6 File Offset: 0x000431E6
+		// (set) Token: 0x060015FE RID: 5630 RVA: 0x00045011 File Offset: 0x00043211
 		public virtual int Leader
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170005A0 RID: 1440
-		// (get) Token: 0x06001465 RID: 5221 RVA: 0x000412D8 File Offset: 0x0003F4D8
-		// (set) Token: 0x06001466 RID: 5222 RVA: 0x0004136B File Offset: 0x0003F56B
+		// Token: 0x17000607 RID: 1543
+		// (get) Token: 0x060015FF RID: 5631 RVA: 0x00045020 File Offset: 0x00043220
+		// (set) Token: 0x06001600 RID: 5632 RVA: 0x000450B3 File Offset: 0x000432B3
 		public virtual List<IGroupAiMonsterMember> Members
 		{
 			get
@@ -146,18 +144,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001005 RID: 4101
+		// Token: 0x04001127 RID: 4391
 		[Nullable(2)]
 		protected new IGroupAiMonsterEcology FbInstance;
 
-		// Token: 0x04001006 RID: 4102
+		// Token: 0x04001128 RID: 4392
 		[Nullable(2)]
 		protected new IGroupAiMonsterEcology_SetValue PocoInterface;
 
-		// Token: 0x04001007 RID: 4103
+		// Token: 0x04001129 RID: 4393
 		private List<IGroupAiMonsterMember> _MembersCache;
 
-		// Token: 0x04001008 RID: 4104
+		// Token: 0x0400112A RID: 4394
 		private bool _MembersInited;
 	}
 }

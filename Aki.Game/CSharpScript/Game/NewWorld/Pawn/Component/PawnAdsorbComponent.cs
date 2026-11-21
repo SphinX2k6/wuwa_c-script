@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Pawn.Component
 {
-	// Token: 0x02007069 RID: 28777
+	// Token: 0x020061EA RID: 25066
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class PawnAdsorbComponent : EntityComponent
 	{
-		// Token: 0x060460C8 RID: 286920 RVA: 0x011783B0 File Offset: 0x011765B0
+		// Token: 0x0603C2C4 RID: 246468 RVA: 0x01122078 File Offset: 0x01120278
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
 			AdsorbComponent adsorbComponent = args.GetP1<CreateEntityData>().GetParam<PawnAdsorbComponent>() as AdsorbComponent;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			return true;
 		}
 
-		// Token: 0x060460C9 RID: 286921 RVA: 0x01178420 File Offset: 0x01176620
+		// Token: 0x0603C2C5 RID: 246469 RVA: 0x011220E8 File Offset: 0x011202E8
 		protected unsafe override bool OnStart()
 		{
 			this.ActorComp = base.Entity.GetComponent<BaseActorComponent>();
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			return true;
 		}
 
-		// Token: 0x060460CA RID: 286922 RVA: 0x0117863C File Offset: 0x0117683C
+		// Token: 0x0603C2C6 RID: 246470 RVA: 0x01122304 File Offset: 0x01120504
 		protected override void OnTick(float delta)
 		{
 			if (this.IsLock || this.HasCompleted)
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			}
 		}
 
-		// Token: 0x060460CB RID: 286923 RVA: 0x011786C4 File Offset: 0x011768C4
+		// Token: 0x0603C2C7 RID: 246471 RVA: 0x0112238C File Offset: 0x0112058C
 		private void SyncItemLocation()
 		{
 			MoveSceneItemPush moveSceneItemPush = MoveSceneItemPush.Create();
@@ -140,14 +140,14 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			Net.Instance.Send(EPushMessageId.MoveSceneItemPush, moveSceneItemPush);
 		}
 
-		// Token: 0x060460CC RID: 286924 RVA: 0x011787DF File Offset: 0x011769DF
+		// Token: 0x0603C2C8 RID: 246472 RVA: 0x011224A7 File Offset: 0x011206A7
 		protected override bool OnEnd()
 		{
 			this.RemoveEvents();
 			return true;
 		}
 
-		// Token: 0x060460CD RID: 286925 RVA: 0x011787E8 File Offset: 0x011769E8
+		// Token: 0x0603C2C9 RID: 246473 RVA: 0x011224B0 File Offset: 0x011206B0
 		private bool CheckRange()
 		{
 			if (this.HasTriggered || this.IsInOnlineCheck)
@@ -170,7 +170,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			return this.IsInAdsorbRange;
 		}
 
-		// Token: 0x060460CE RID: 286926 RVA: 0x01178860 File Offset: 0x01176A60
+		// Token: 0x0603C2CA RID: 246474 RVA: 0x01122528 File Offset: 0x01120728
 		private bool CheckHost()
 		{
 			int? id = PlayerInfoModel.Instance.GetId();
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			return id.GetValueOrDefault() == worldOwner & id != null;
 		}
 
-		// Token: 0x060460CF RID: 286927 RVA: 0x01178898 File Offset: 0x01176A98
+		// Token: 0x0603C2CB RID: 246475 RVA: 0x01122560 File Offset: 0x01120760
 		private bool CheckOnlineType()
 		{
 			if (!GameModeModel.Instance.IsMulti)
@@ -203,7 +203,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			return false;
 		}
 
-		// Token: 0x060460D0 RID: 286928 RVA: 0x01178918 File Offset: 0x01176B18
+		// Token: 0x0603C2CC RID: 246476 RVA: 0x011225E0 File Offset: 0x011207E0
 		private void CheckOnlineCondition()
 		{
 			double serverTimeStamp = TimeUtil.Instance.GetServerTimeStamp();
@@ -226,7 +226,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			}
 		}
 
-		// Token: 0x060460D1 RID: 286929 RVA: 0x01178970 File Offset: 0x01176B70
+		// Token: 0x0603C2CD RID: 246477 RVA: 0x01122638 File Offset: 0x01120838
 		private bool AdsorptionLaunch()
 		{
 			if (this.HasTriggered || this.HasCompleted)
@@ -252,7 +252,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			return true;
 		}
 
-		// Token: 0x060460D2 RID: 286930 RVA: 0x01178A44 File Offset: 0x01176C44
+		// Token: 0x0603C2CE RID: 246478 RVA: 0x0112270C File Offset: 0x0112090C
 		private void AdsorptionUpdate(float delta)
 		{
 			if (!this.HasTriggered || this.HasCompleted)
@@ -294,7 +294,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			this.ActorComp.AddActorWorldOffset(this.DisplacementCache.ToUeVector(false), "Pawn吸附更新", true);
 		}
 
-		// Token: 0x060460D3 RID: 286931 RVA: 0x01178BAF File Offset: 0x01176DAF
+		// Token: 0x0603C2CF RID: 246479 RVA: 0x01122877 File Offset: 0x01120A77
 		private void PrePerformance()
 		{
 			if (this.HasPrePerformed)
@@ -309,7 +309,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			this.HasPrePerformed = true;
 		}
 
-		// Token: 0x060460D4 RID: 286932 RVA: 0x01178BE8 File Offset: 0x01176DE8
+		// Token: 0x0603C2D0 RID: 246480 RVA: 0x011228B0 File Offset: 0x01120AB0
 		private void AdsorptionComplete()
 		{
 			if (Global.BaseCharacter == null)
@@ -329,7 +329,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			this.HasCompleted = true;
 		}
 
-		// Token: 0x060460D5 RID: 286933 RVA: 0x01178C9C File Offset: 0x01176E9C
+		// Token: 0x0603C2D1 RID: 246481 RVA: 0x01122964 File Offset: 0x01120B64
 		private void AddEvents()
 		{
 			EventSystem.Instance.AddWithTarget(base.Entity, EEventName.EnterLogicRange, new Action(this.OnEnterLogicRange));
@@ -342,7 +342,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			commonTagComp.AddTagAddOrRemoveListener(GameplayTagDefine.EGameplayTagId["关卡.Common.属性.锁定"], new BaseTagComponent.TTagSwitchedCallback(this.OnGameplayTagChanged), null);
 		}
 
-		// Token: 0x060460D6 RID: 286934 RVA: 0x01178D1C File Offset: 0x01176F1C
+		// Token: 0x0603C2D2 RID: 246482 RVA: 0x011229E4 File Offset: 0x01120BE4
 		private void RemoveEvents()
 		{
 			EventSystem.Instance.RemoveWithTarget(base.Entity, EEventName.EnterLogicRange, new Action(this.OnEnterLogicRange));
@@ -355,19 +355,19 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			commonTagComp.RemoveTagAddOrRemoveListener(GameplayTagDefine.EGameplayTagId["关卡.Common.属性.锁定"], new BaseTagComponent.TTagSwitchedCallback(this.OnGameplayTagChanged));
 		}
 
-		// Token: 0x060460D7 RID: 286935 RVA: 0x01178D98 File Offset: 0x01176F98
+		// Token: 0x0603C2D3 RID: 246483 RVA: 0x01122A60 File Offset: 0x01120C60
 		private void OnEnterLogicRange()
 		{
 			this.IsInSensoryRange = true;
 		}
 
-		// Token: 0x060460D8 RID: 286936 RVA: 0x01178DA1 File Offset: 0x01176FA1
+		// Token: 0x0603C2D4 RID: 246484 RVA: 0x01122A69 File Offset: 0x01120C69
 		private void OnLeaveLogicRange()
 		{
 			this.IsInSensoryRange = false;
 		}
 
-		// Token: 0x060460D9 RID: 286937 RVA: 0x01178DAA File Offset: 0x01176FAA
+		// Token: 0x0603C2D5 RID: 246485 RVA: 0x01122A72 File Offset: 0x01120C72
 		private void OnGameplayTagChanged(int tagId, bool tagExist)
 		{
 			if (this.HasTriggered || this.CommonTagComp == null)
@@ -384,7 +384,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			this.ResetCache();
 		}
 
-		// Token: 0x060460DA RID: 286938 RVA: 0x01178DDC File Offset: 0x01176FDC
+		// Token: 0x0603C2D6 RID: 246486 RVA: 0x01122AA4 File Offset: 0x01120CA4
 		private void ResetCache()
 		{
 			this.Direction.DeepCopy(global::Vector.ZeroVectorProxy);
@@ -395,7 +395,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 			this.AccelerationCache = 0.0;
 		}
 
-		// Token: 0x060460DB RID: 286939 RVA: 0x01178E48 File Offset: 0x01177048
+		// Token: 0x0603C2D7 RID: 246487 RVA: 0x01122B10 File Offset: 0x01120D10
 		[NullableContext(1)]
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
@@ -404,264 +404,216 @@ namespace CSharpScript.Game.NewWorld.Pawn.Component
 				return false;
 			}
 			PawnAdsorbComponent pawnAdsorbComponent = (PawnAdsorbComponent)componentTemplate;
-			if (base.CanResetComponentProperty("ActorComp"))
+			if (pawnAdsorbComponent.ActorComp == null)
 			{
-				if (pawnAdsorbComponent.ActorComp == null)
-				{
-					this.ActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.ActorComp), "ActorComp"))
-				{
-					return false;
-				}
+				this.ActorComp = null;
 			}
-			if (base.CanResetComponentProperty("PawnInteractComponentInternal"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 			{
-				if (pawnAdsorbComponent.PawnInteractComponentInternal == null)
-				{
-					this.PawnInteractComponentInternal = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PawnInteractBaseComponent>(this.PawnInteractComponentInternal), "PawnInteractComponentInternal"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("CommonTagComp"))
+			if (pawnAdsorbComponent.PawnInteractComponentInternal == null)
 			{
-				if (pawnAdsorbComponent.CommonTagComp == null)
-				{
-					this.CommonTagComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LevelTagComponent>(this.CommonTagComp), "CommonTagComp"))
-				{
-					return false;
-				}
+				this.PawnInteractComponentInternal = null;
 			}
-			if (base.CanResetComponentProperty("TriggerRangeInternal"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PawnInteractComponentInternal), "PawnInteractComponentInternal"))
 			{
-				this.TriggerRangeInternal = pawnAdsorbComponent.TriggerRangeInternal;
+				return false;
 			}
-			if (base.CanResetComponentProperty("InitialVelocity"))
+			if (pawnAdsorbComponent.CommonTagComp == null)
 			{
-				this.InitialVelocity = pawnAdsorbComponent.InitialVelocity;
+				this.CommonTagComp = null;
 			}
-			if (base.CanResetComponentProperty("Acceleration"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CommonTagComp), "CommonTagComp"))
 			{
-				this.Acceleration = pawnAdsorbComponent.Acceleration;
+				return false;
 			}
-			if (base.CanResetComponentProperty("TargetActorComp"))
+			this.TriggerRangeInternal = pawnAdsorbComponent.TriggerRangeInternal;
+			this.InitialVelocity = pawnAdsorbComponent.InitialVelocity;
+			this.Acceleration = pawnAdsorbComponent.Acceleration;
+			if (pawnAdsorbComponent.TargetActorComp == null)
 			{
-				if (pawnAdsorbComponent.TargetActorComp == null)
-				{
-					this.TargetActorComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.TargetActorComp), "TargetActorComp"))
-				{
-					return false;
-				}
+				this.TargetActorComp = null;
 			}
-			if (base.CanResetComponentProperty("Direction"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TargetActorComp), "TargetActorComp"))
 			{
-				if (pawnAdsorbComponent.Direction == null)
-				{
-					this.Direction = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.Direction), "Direction"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("HasTriggered"))
+			if (pawnAdsorbComponent.Direction == null)
 			{
-				this.HasTriggered = pawnAdsorbComponent.HasTriggered;
+				this.Direction = null;
 			}
-			if (base.CanResetComponentProperty("HasPrePerformed"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Direction), "Direction"))
 			{
-				this.HasPrePerformed = pawnAdsorbComponent.HasPrePerformed;
+				return false;
 			}
-			if (base.CanResetComponentProperty("HasCompleted"))
+			this.HasTriggered = pawnAdsorbComponent.HasTriggered;
+			this.HasPrePerformed = pawnAdsorbComponent.HasPrePerformed;
+			this.HasCompleted = pawnAdsorbComponent.HasCompleted;
+			if (pawnAdsorbComponent.DisplacementCache == null)
 			{
-				this.HasCompleted = pawnAdsorbComponent.HasCompleted;
+				this.DisplacementCache = null;
 			}
-			if (base.CanResetComponentProperty("DisplacementCache"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DisplacementCache), "DisplacementCache"))
 			{
-				if (pawnAdsorbComponent.DisplacementCache == null)
-				{
-					this.DisplacementCache = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.DisplacementCache), "DisplacementCache"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("LocationCache"))
+			if (pawnAdsorbComponent.LocationCache == null)
 			{
-				if (pawnAdsorbComponent.LocationCache == null)
-				{
-					this.LocationCache = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.LocationCache), "LocationCache"))
-				{
-					return false;
-				}
+				this.LocationCache = null;
 			}
-			if (base.CanResetComponentProperty("ItemVelocityCache"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LocationCache), "LocationCache"))
 			{
-				if (pawnAdsorbComponent.ItemVelocityCache == null)
-				{
-					this.ItemVelocityCache = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.ItemVelocityCache), "ItemVelocityCache"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("VelocityCache"))
+			if (pawnAdsorbComponent.ItemVelocityCache == null)
 			{
-				this.VelocityCache = pawnAdsorbComponent.VelocityCache;
+				this.ItemVelocityCache = null;
 			}
-			if (base.CanResetComponentProperty("AccelerationCache"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ItemVelocityCache), "ItemVelocityCache"))
 			{
-				this.AccelerationCache = pawnAdsorbComponent.AccelerationCache;
+				return false;
 			}
-			if (base.CanResetComponentProperty("IsInAdsorbRange"))
+			this.VelocityCache = pawnAdsorbComponent.VelocityCache;
+			this.AccelerationCache = pawnAdsorbComponent.AccelerationCache;
+			this.IsInAdsorbRange = pawnAdsorbComponent.IsInAdsorbRange;
+			this.InteractRangeSquared = pawnAdsorbComponent.InteractRangeSquared;
+			if (pawnAdsorbComponent.PawnSensoryInfo == null)
 			{
-				this.IsInAdsorbRange = pawnAdsorbComponent.IsInAdsorbRange;
+				this.PawnSensoryInfo = null;
 			}
-			if (base.CanResetComponentProperty("InteractRangeSquared"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PawnSensoryInfo), "PawnSensoryInfo"))
 			{
-				this.InteractRangeSquared = pawnAdsorbComponent.InteractRangeSquared;
+				return false;
 			}
-			if (base.CanResetComponentProperty("PawnSensoryInfo"))
-			{
-				if (pawnAdsorbComponent.PawnSensoryInfo == null)
-				{
-					this.PawnSensoryInfo = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PawnSensoryInfoComponent>(this.PawnSensoryInfo), "PawnSensoryInfo"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("IsInSensoryRange"))
-			{
-				this.IsInSensoryRange = pawnAdsorbComponent.IsInSensoryRange;
-			}
-			if (base.CanResetComponentProperty("IsLock"))
-			{
-				this.IsLock = pawnAdsorbComponent.IsLock;
-			}
-			if (base.CanResetComponentProperty("ConfigId"))
-			{
-				this.ConfigId = pawnAdsorbComponent.ConfigId;
-			}
-			if (base.CanResetComponentProperty("EntityOnlineType"))
-			{
-				this.EntityOnlineType = pawnAdsorbComponent.EntityOnlineType;
-			}
-			if (base.CanResetComponentProperty("OnlineConditionCheckTimeStamp"))
-			{
-				this.OnlineConditionCheckTimeStamp = pawnAdsorbComponent.OnlineConditionCheckTimeStamp;
-			}
-			if (base.CanResetComponentProperty("IsInOnlineCheck"))
-			{
-				this.IsInOnlineCheck = pawnAdsorbComponent.IsInOnlineCheck;
-			}
-			if (base.CanResetComponentProperty("IsOnlineCheckPass"))
-			{
-				this.IsOnlineCheckPass = pawnAdsorbComponent.IsOnlineCheckPass;
-			}
+			this.IsInSensoryRange = pawnAdsorbComponent.IsInSensoryRange;
+			this.IsLock = pawnAdsorbComponent.IsLock;
+			this.ConfigId = pawnAdsorbComponent.ConfigId;
+			this.EntityOnlineType = pawnAdsorbComponent.EntityOnlineType;
+			this.OnlineConditionCheckTimeStamp = pawnAdsorbComponent.OnlineConditionCheckTimeStamp;
+			this.IsInOnlineCheck = pawnAdsorbComponent.IsInOnlineCheck;
+			this.IsOnlineCheckPass = pawnAdsorbComponent.IsOnlineCheckPass;
 			return true;
 		}
 
-		// Token: 0x04024AD9 RID: 150233
+		// Token: 0x1700718D RID: 29069
+		// (get) Token: 0x0603C2D8 RID: 246488 RVA: 0x01122D7F File Offset: 0x01120F7F
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700718E RID: 29070
+		// (get) Token: 0x0603C2D9 RID: 246489 RVA: 0x01122D82 File Offset: 0x01120F82
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700718F RID: 29071
+		// (get) Token: 0x0603C2DA RID: 246490 RVA: 0x01122D85 File Offset: 0x01120F85
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FD94 RID: 130452
 		private const int SENSORY_RANGE = 1500;
 
-		// Token: 0x04024ADA RID: 150234
+		// Token: 0x0401FD95 RID: 130453
 		private const int MAX_SPEED = 1500;
 
-		// Token: 0x04024ADB RID: 150235
+		// Token: 0x0401FD96 RID: 130454
 		private const float NORMALIZE = 0.01f;
 
-		// Token: 0x04024ADC RID: 150236
+		// Token: 0x0401FD97 RID: 130455
 		private const int CONDITION_CHECK_TIME = 2000;
 
-		// Token: 0x04024ADD RID: 150237
+		// Token: 0x0401FD98 RID: 130456
 		private BaseActorComponent ActorComp;
 
-		// Token: 0x04024ADE RID: 150238
+		// Token: 0x0401FD99 RID: 130457
 		private PawnInteractBaseComponent PawnInteractComponentInternal;
 
-		// Token: 0x04024ADF RID: 150239
+		// Token: 0x0401FD9A RID: 130458
 		private LevelTagComponent CommonTagComp;
 
-		// Token: 0x04024AE0 RID: 150240
+		// Token: 0x0401FD9B RID: 130459
 		private double TriggerRangeInternal;
 
-		// Token: 0x04024AE1 RID: 150241
+		// Token: 0x0401FD9C RID: 130460
 		private double InitialVelocity;
 
-		// Token: 0x04024AE2 RID: 150242
+		// Token: 0x0401FD9D RID: 130461
 		private double Acceleration;
 
-		// Token: 0x04024AE3 RID: 150243
+		// Token: 0x0401FD9E RID: 130462
 		private BaseActorComponent TargetActorComp;
 
-		// Token: 0x04024AE4 RID: 150244
+		// Token: 0x0401FD9F RID: 130463
 		private global::Vector Direction;
 
-		// Token: 0x04024AE5 RID: 150245
+		// Token: 0x0401FDA0 RID: 130464
 		private bool HasTriggered;
 
-		// Token: 0x04024AE6 RID: 150246
+		// Token: 0x0401FDA1 RID: 130465
 		private bool HasPrePerformed;
 
-		// Token: 0x04024AE7 RID: 150247
+		// Token: 0x0401FDA2 RID: 130466
 		private bool HasCompleted;
 
-		// Token: 0x04024AE8 RID: 150248
+		// Token: 0x0401FDA3 RID: 130467
 		private global::Vector DisplacementCache;
 
-		// Token: 0x04024AE9 RID: 150249
+		// Token: 0x0401FDA4 RID: 130468
 		private global::Vector LocationCache;
 
-		// Token: 0x04024AEA RID: 150250
+		// Token: 0x0401FDA5 RID: 130469
 		private global::Vector ItemVelocityCache;
 
-		// Token: 0x04024AEB RID: 150251
+		// Token: 0x0401FDA6 RID: 130470
 		private double VelocityCache;
 
-		// Token: 0x04024AEC RID: 150252
+		// Token: 0x0401FDA7 RID: 130471
 		private double AccelerationCache;
 
-		// Token: 0x04024AED RID: 150253
+		// Token: 0x0401FDA8 RID: 130472
 		private bool IsInAdsorbRange;
 
-		// Token: 0x04024AEE RID: 150254
+		// Token: 0x0401FDA9 RID: 130473
 		private double InteractRangeSquared;
 
-		// Token: 0x04024AEF RID: 150255
+		// Token: 0x0401FDAA RID: 130474
 		private PawnSensoryInfoComponent PawnSensoryInfo;
 
-		// Token: 0x04024AF0 RID: 150256
+		// Token: 0x0401FDAB RID: 130475
 		protected bool IsInSensoryRange;
 
-		// Token: 0x04024AF1 RID: 150257
+		// Token: 0x0401FDAC RID: 130476
 		private bool IsLock;
 
-		// Token: 0x04024AF2 RID: 150258
+		// Token: 0x0401FDAD RID: 130477
 		private int ConfigId;
 
-		// Token: 0x04024AF3 RID: 150259
+		// Token: 0x0401FDAE RID: 130478
 		private EOnlineInteractType? EntityOnlineType;
 
-		// Token: 0x04024AF4 RID: 150260
+		// Token: 0x0401FDAF RID: 130479
 		private double OnlineConditionCheckTimeStamp;
 
-		// Token: 0x04024AF5 RID: 150261
+		// Token: 0x0401FDB0 RID: 130480
 		private bool IsInOnlineCheck;
 
-		// Token: 0x04024AF6 RID: 150262
+		// Token: 0x0401FDB1 RID: 130481
 		private bool IsOnlineCheckPass;
 	}
 }

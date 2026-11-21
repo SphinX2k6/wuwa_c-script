@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02002939 RID: 10553
+// Token: 0x02001EB4 RID: 7860
 public interface IRouletteAssemblyTabData
 {
-	// Token: 0x17001D39 RID: 7481
-	// (get) Token: 0x06015C8A RID: 89226
-	// (set) Token: 0x06015C8B RID: 89227
+	// Token: 0x17001D93 RID: 7571
+	// (get) Token: 0x0601368F RID: 79503
+	// (set) Token: 0x06013690 RID: 79504
 	ERouletteType Type { get; set; }
 
-	// Token: 0x17001D3A RID: 7482
-	// (get) Token: 0x06015C8C RID: 89228
-	// (set) Token: 0x06015C8D RID: 89229
+	// Token: 0x17001D94 RID: 7572
+	// (get) Token: 0x06013691 RID: 79505
+	// (set) Token: 0x06013692 RID: 79506
 	int SortId { get; set; }
 }

@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 {
-	// Token: 0x020060C2 RID: 24770
+	// Token: 0x02005040 RID: 20544
 	public interface IAbyssDescData
 	{
-		// Token: 0x17009115 RID: 37141
-		// (get) Token: 0x0603EA11 RID: 256529
-		// (set) Token: 0x0603EA12 RID: 256530
+		// Token: 0x17006477 RID: 25719
+		// (get) Token: 0x060336D5 RID: 210645
+		// (set) Token: 0x060336D6 RID: 210646
 		int Id { get; set; }
 
-		// Token: 0x17009116 RID: 37142
-		// (get) Token: 0x0603EA13 RID: 256531
-		// (set) Token: 0x0603EA14 RID: 256532
+		// Token: 0x17006478 RID: 25720
+		// (get) Token: 0x060336D7 RID: 210647
+		// (set) Token: 0x060336D8 RID: 210648
 		int Count { get; set; }
 	}
 }

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020067E1 RID: 26593
+	// Token: 0x02006E61 RID: 28257
 	public class IFixTeleControllerResetPosT
 	{
-		// Token: 0x1700C55F RID: 50527
-		// (get) Token: 0x0602E4BB RID: 189627 RVA: 0x006522CA File Offset: 0x006504CA
-		// (set) Token: 0x0602E4BC RID: 189628 RVA: 0x006522D2 File Offset: 0x006504D2
+		// Token: 0x1700CF15 RID: 53013
+		// (get) Token: 0x06030D01 RID: 199937 RVA: 0x0069FA0E File Offset: 0x0069DC0E
+		// (set) Token: 0x06030D02 RID: 199938 RVA: 0x0069FA16 File Offset: 0x0069DC16
 		public int PositionEntityId { get; set; }
 
-		// Token: 0x0602E4BD RID: 189629 RVA: 0x006522DB File Offset: 0x006504DB
+		// Token: 0x06030D03 RID: 199939 RVA: 0x0069FA1F File Offset: 0x0069DC1F
 		public IFixTeleControllerResetPosT()
 		{
 			this.PositionEntityId = 0;

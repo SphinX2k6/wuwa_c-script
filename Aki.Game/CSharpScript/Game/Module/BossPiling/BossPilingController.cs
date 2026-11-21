@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -14,24 +13,24 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.BossPiling
 {
-	// Token: 0x02005BFA RID: 23546
+	// Token: 0x02004BDA RID: 19418
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class BossPilingController : ActivityControllerBase
 	{
-		// Token: 0x0603B824 RID: 243748 RVA: 0x00E319C9 File Offset: 0x00E2FBC9
+		// Token: 0x0603076F RID: 198511 RVA: 0x00D81D11 File Offset: 0x00D7FF11
 		protected override void OnOpenView(ActivityBaseData data)
 		{
 		}
 
-		// Token: 0x0603B825 RID: 243749 RVA: 0x00E319CB File Offset: 0x00E2FBCB
+		// Token: 0x06030770 RID: 198512 RVA: 0x00D81D13 File Offset: 0x00D7FF13
 		protected override string OnGetActivityResource(ActivityBaseData data)
 		{
 			return "UiItem_BossPilingActivityMain";
 		}
 
-		// Token: 0x0603B826 RID: 243750 RVA: 0x00E319D4 File Offset: 0x00E2FBD4
+		// Token: 0x06030771 RID: 198513 RVA: 0x00D81D1C File Offset: 0x00D7FF1C
 		[NullableContext(0)]
 		protected override UniTask<bool> OnOpenSubView(EUiViewName viewName, int activityId = 0)
 		{
@@ -42,26 +41,26 @@ namespace CSharpScript.Game.Module.BossPiling
 			return <OnOpenSubView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B827 RID: 243751 RVA: 0x00E31A0F File Offset: 0x00E2FC0F
+		// Token: 0x06030772 RID: 198514 RVA: 0x00D81D57 File Offset: 0x00D7FF57
 		protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 		{
 			return new BossPilingSubView();
 		}
 
-		// Token: 0x0603B828 RID: 243752 RVA: 0x00E31A16 File Offset: 0x00E2FC16
+		// Token: 0x06030773 RID: 198515 RVA: 0x00D81D5E File Offset: 0x00D7FF5E
 		protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 		{
 			this.ActivityId = data.Id;
 			return new BossPilingActivityData();
 		}
 
-		// Token: 0x0603B829 RID: 243753 RVA: 0x00E31A29 File Offset: 0x00E2FC29
+		// Token: 0x06030774 RID: 198516 RVA: 0x00D81D71 File Offset: 0x00D7FF71
 		protected override bool OnGetIsOpeningActivityRelativeView()
 		{
 			return false;
 		}
 
-		// Token: 0x0603B82A RID: 243754 RVA: 0x00E31A2C File Offset: 0x00E2FC2C
+		// Token: 0x06030775 RID: 198517 RVA: 0x00D81D74 File Offset: 0x00D7FF74
 		[NullableContext(2)]
 		public BossPilingActivityData GetActivityData()
 		{
@@ -73,7 +72,7 @@ namespace CSharpScript.Game.Module.BossPiling
 			return bossPilingActivityData;
 		}
 
-		// Token: 0x0603B82B RID: 243755 RVA: 0x00E31A58 File Offset: 0x00E2FC58
+		// Token: 0x06030776 RID: 198518 RVA: 0x00D81DA0 File Offset: 0x00D7FFA0
 		protected override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.BossPilingLevelInfoUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnBossPilingLevelInfoUpdateNotify));
@@ -83,7 +82,7 @@ namespace CSharpScript.Game.Module.BossPiling
 			Net.Instance.Register(ENotifyMessageId.BossPilingTaskInfoUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnBossPilingTaskNotify));
 		}
 
-		// Token: 0x0603B82C RID: 243756 RVA: 0x00E31AF4 File Offset: 0x00E2FCF4
+		// Token: 0x06030777 RID: 198519 RVA: 0x00D81E3C File Offset: 0x00D8003C
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.BossPilingLevelInfoUpdateNotify);
@@ -93,15 +92,15 @@ namespace CSharpScript.Game.Module.BossPiling
 			Net.Instance.UnRegister(ENotifyMessageId.BossPilingTaskInfoUpdateNotify);
 		}
 
-		// Token: 0x0603B82D RID: 243757 RVA: 0x00E31B54 File Offset: 0x00E2FD54
+		// Token: 0x06030778 RID: 198520 RVA: 0x00D81E9C File Offset: 0x00D8009C
 		[NullableContext(2)]
 		private void OnBossPilingLevelInfoUpdateNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			BossPilingLevelInfoUpdateNotify bossPilingLevelInfoUpdateNotify = (BossPilingLevelInfoUpdateNotify)msg;
-			BossPilingModel.Instance.GetActivityData().UpdateLevelData(bossPilingLevelInfoUpdateNotify.BossPilingLevelInfo.ToArray<BossPilingLevelInfo>());
+			BossPilingModel.Instance.GetActivityData().UpdateLevelData(bossPilingLevelInfoUpdateNotify.BossPilingLevelInfo);
 		}
 
-		// Token: 0x0603B82E RID: 243758 RVA: 0x00E31B84 File Offset: 0x00E2FD84
+		// Token: 0x06030779 RID: 198521 RVA: 0x00D81EC8 File Offset: 0x00D800C8
 		[NullableContext(2)]
 		private void OnBossPilingInstNotify(IMessage msg, Net.CallbackStatus _)
 		{
@@ -118,19 +117,19 @@ namespace CSharpScript.Game.Module.BossPiling
 				return;
 			}
 			BossPilingModel.Instance.InstBuffAcquireCount = 0;
-			BossPilingModel.Instance.GetActivityData().InitDungeon(bossPilingInstNotify.BossPilingLevelId, bossPilingInstNotify.BossPilingBuffs.ToDictionary<int, int>());
+			BossPilingModel.Instance.GetActivityData().InitDungeon(bossPilingInstNotify.BossPilingLevelId, new Dictionary<int, int>(bossPilingInstNotify.BossPilingBuffs));
 		}
 
-		// Token: 0x0603B82F RID: 243759 RVA: 0x00E31C3C File Offset: 0x00E2FE3C
+		// Token: 0x0603077A RID: 198522 RVA: 0x00D81F80 File Offset: 0x00D80180
 		[NullableContext(2)]
 		private void OnBossPilingBuffUpdateNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			BossPilingBuffUpdateNotify bossPilingBuffUpdateNotify = (BossPilingBuffUpdateNotify)msg;
-			this.RefreshBuffView(bossPilingBuffUpdateNotify.BossPilingBuffs.ToDictionary<int, int>());
-			BossPilingModel.Instance.GetActivityData().UpdateDungeonBuff(bossPilingBuffUpdateNotify.BossPilingBuffs.ToDictionary<int, int>());
+			this.RefreshBuffView(new Dictionary<int, int>(bossPilingBuffUpdateNotify.BossPilingBuffs));
+			BossPilingModel.Instance.GetActivityData().UpdateDungeonBuff(new Dictionary<int, int>(bossPilingBuffUpdateNotify.BossPilingBuffs));
 		}
 
-		// Token: 0x0603B830 RID: 243760 RVA: 0x00E31C7C File Offset: 0x00E2FE7C
+		// Token: 0x0603077B RID: 198523 RVA: 0x00D81FC0 File Offset: 0x00D801C0
 		[NullableContext(2)]
 		private void OnBossPilingSettleNotify(IMessage msg, Net.CallbackStatus _)
 		{
@@ -138,16 +137,16 @@ namespace CSharpScript.Game.Module.BossPiling
 			UiManager.Instance.OpenView(EUiViewName.BossPilingSettleView, param, null);
 		}
 
-		// Token: 0x0603B831 RID: 243761 RVA: 0x00E31CA4 File Offset: 0x00E2FEA4
+		// Token: 0x0603077C RID: 198524 RVA: 0x00D81FE8 File Offset: 0x00D801E8
 		[NullableContext(2)]
 		private void OnBossPilingTaskNotify(IMessage msg, Net.CallbackStatus _)
 		{
 			BossPilingTaskInfoUpdateNotify bossPilingTaskInfoUpdateNotify = (BossPilingTaskInfoUpdateNotify)msg;
-			BossPilingModel.Instance.GetActivityData().UpdateTaskData(bossPilingTaskInfoUpdateNotify.ConditionTasks.ToArray<ConditionTask>());
+			BossPilingModel.Instance.GetActivityData().UpdateTaskData(bossPilingTaskInfoUpdateNotify.ConditionTasks);
 			EventSystem.Instance.Emit(EEventName.OnBossPilingReward);
 		}
 
-		// Token: 0x0603B832 RID: 243762 RVA: 0x00E31CE4 File Offset: 0x00E2FEE4
+		// Token: 0x0603077D RID: 198525 RVA: 0x00D82024 File Offset: 0x00D80224
 		private void RefreshBuffView(Dictionary<int, int> buffInfo)
 		{
 			foreach (int num in buffInfo.Keys)
@@ -163,7 +162,7 @@ namespace CSharpScript.Game.Module.BossPiling
 			}
 		}
 
-		// Token: 0x0603B833 RID: 243763 RVA: 0x00E31D94 File Offset: 0x00E2FF94
+		// Token: 0x0603077E RID: 198526 RVA: 0x00D820D4 File Offset: 0x00D802D4
 		[NullableContext(0)]
 		public UniTask<bool> RequestBossPilingReward(int levelId)
 		{
@@ -175,7 +174,7 @@ namespace CSharpScript.Game.Module.BossPiling
 			return <RequestBossPilingReward>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B834 RID: 243764 RVA: 0x00E31DD8 File Offset: 0x00E2FFD8
+		// Token: 0x0603077F RID: 198527 RVA: 0x00D82118 File Offset: 0x00D80318
 		public void RequestChallenge(int levelId, List<int> teamList, List<int> tagList, bool isBoss = false)
 		{
 			BossPilingLevels value2 = BossPilingConfig.Instance.GetLevelInfo(levelId).Value;
@@ -204,7 +203,7 @@ namespace CSharpScript.Game.Module.BossPiling
 			});
 		}
 
-		// Token: 0x0603B835 RID: 243765 RVA: 0x00E31EDC File Offset: 0x00E300DC
+		// Token: 0x06030780 RID: 198528 RVA: 0x00D8221C File Offset: 0x00D8041C
 		[NullableContext(0)]
 		public UniTask<bool> RequestBossPilingSettle()
 		{
@@ -215,7 +214,7 @@ namespace CSharpScript.Game.Module.BossPiling
 			return <RequestBossPilingSettle>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603B836 RID: 243766 RVA: 0x00E31F18 File Offset: 0x00E30118
+		// Token: 0x06030781 RID: 198529 RVA: 0x00D82258 File Offset: 0x00D80458
 		public void OpenPauseView()
 		{
 			InstanceDungeon? instanceDungeon = GameModeModel.Instance.InstanceDungeon;
@@ -243,13 +242,13 @@ namespace CSharpScript.Game.Module.BossPiling
 			};
 			confirmBoxDataNew.FunctionMap[2] = delegate()
 			{
-				InstanceDungeonController.Instance.SingleInstReChallengeRequest();
+				InstanceDungeonController.Instance.SingleInstReChallengeRequest(false);
 			};
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x17008D70 RID: 36208
-		// (get) Token: 0x0603B837 RID: 243767 RVA: 0x00E3200C File Offset: 0x00E3020C
+		// Token: 0x17006142 RID: 24898
+		// (get) Token: 0x06030782 RID: 198530 RVA: 0x00D8234C File Offset: 0x00D8054C
 		public static BossPilingController Instance
 		{
 			get
@@ -258,7 +257,7 @@ namespace CSharpScript.Game.Module.BossPiling
 			}
 		}
 
-		// Token: 0x0603B838 RID: 243768 RVA: 0x00E32013 File Offset: 0x00E30213
+		// Token: 0x06030783 RID: 198531 RVA: 0x00D82353 File Offset: 0x00D80553
 		public static BossPilingController GetOrCreateInstance()
 		{
 			if (BossPilingController._Instance == null)
@@ -268,7 +267,7 @@ namespace CSharpScript.Game.Module.BossPiling
 			return BossPilingController._Instance;
 		}
 
-		// Token: 0x0603B839 RID: 243769 RVA: 0x00E32027 File Offset: 0x00E30227
+		// Token: 0x06030784 RID: 198532 RVA: 0x00D82367 File Offset: 0x00D80567
 		public static bool CreateInstance()
 		{
 			if (BossPilingController._Instance != null)
@@ -279,40 +278,40 @@ namespace CSharpScript.Game.Module.BossPiling
 			return true;
 		}
 
-		// Token: 0x0603B83A RID: 243770 RVA: 0x00E3203D File Offset: 0x00E3023D
+		// Token: 0x06030785 RID: 198533 RVA: 0x00D8237D File Offset: 0x00D8057D
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603B83B RID: 243771 RVA: 0x00E3203F File Offset: 0x00E3023F
+		// Token: 0x06030786 RID: 198534 RVA: 0x00D8237F File Offset: 0x00D8057F
 		public static void ResetStaticDefaultValue()
 		{
 			BossPilingController._Instance = null;
 		}
 
-		// Token: 0x0603B83C RID: 243772 RVA: 0x00E32047 File Offset: 0x00E30247
+		// Token: 0x06030787 RID: 198535 RVA: 0x00D82387 File Offset: 0x00D80587
 		static BossPilingController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(BossPilingController.CreateStaticDefaultValue), new Action(BossPilingController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401EFF2 RID: 126962
+		// Token: 0x04019AA3 RID: 105123
 		public int ActivityId;
 
-		// Token: 0x0401EFF3 RID: 126963
+		// Token: 0x04019AA4 RID: 105124
 		public int CacheLevelId;
 
-		// Token: 0x0401EFF4 RID: 126964
+		// Token: 0x04019AA5 RID: 105125
 		[Nullable(2)]
 		public Dictionary<int, int> CacheBuffMap;
 
-		// Token: 0x0401EFF5 RID: 126965
+		// Token: 0x04019AA6 RID: 105126
 		public List<int> CurTeamRole = new List<int>();
 
-		// Token: 0x0401EFF6 RID: 126966
+		// Token: 0x04019AA7 RID: 105127
 		public List<int> CurTeamTag = new List<int>();
 
-		// Token: 0x0401EFF7 RID: 126967
+		// Token: 0x04019AA8 RID: 105128
 		[Nullable(2)]
 		private static BossPilingController _Instance;
 	}

@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020022C3 RID: 8899
+	// Token: 0x02002532 RID: 9522
 	public static class EBpActorFuncTypeExtensions
 	{
-		// Token: 0x0600C2EC RID: 49900 RVA: 0x001C7A94 File Offset: 0x001C5C94
+		// Token: 0x0600CEBB RID: 52923 RVA: 0x001DF89C File Offset: 0x001DDA9C
 		public static string ToEnumString(this EBpActorFuncType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C2ED RID: 49901 RVA: 0x001C7ACC File Offset: 0x001C5CCC
+		// Token: 0x0600CEBC RID: 52924 RVA: 0x001DF8D4 File Offset: 0x001DDAD4
 		public static EBpActorFuncType FromString(string name)
 		{
 			EBpActorFuncType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C2EE RID: 49902 RVA: 0x001C7AF5 File Offset: 0x001C5CF5
+		// Token: 0x0600CEBD RID: 52925 RVA: 0x001DF8FD File Offset: 0x001DDAFD
 		public static bool TryFromString(string name, out EBpActorFuncType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C2EF RID: 49903 RVA: 0x001C7B2E File Offset: 0x001C5D2E
+		// Token: 0x0600CEBE RID: 52926 RVA: 0x001DF936 File Offset: 0x001DDB36
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C2F0 RID: 49904 RVA: 0x001C7B46 File Offset: 0x001C5D46
+		// Token: 0x0600CEBF RID: 52927 RVA: 0x001DF94E File Offset: 0x001DDB4E
 		public static EBpActorFuncType[] GetValues()
 		{
 			return new EBpActorFuncType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C2F1 RID: 49905 RVA: 0x001C7B52 File Offset: 0x001C5D52
+		// Token: 0x0600CEC0 RID: 52928 RVA: 0x001DF95A File Offset: 0x001DDB5A
 		public static string[] GetNames()
 		{
 			return new string[]

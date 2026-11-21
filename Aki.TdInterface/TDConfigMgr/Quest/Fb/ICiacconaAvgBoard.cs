@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013A2 RID: 5026
+	// Token: 0x020014F3 RID: 5363
 	public class ICiacconaAvgBoard : IShowUi
 	{
-		// Token: 0x060072DA RID: 29402 RVA: 0x00113DC8 File Offset: 0x00111FC8
-		[NullableContext(1)]
+		// Token: 0x06007981 RID: 31105 RVA: 0x00122484 File Offset: 0x00120684
 		public static ICiacconaAvgBoard Create(ICiacconaAvgBoard? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002569 RID: 9577
-		// (get) Token: 0x060072DB RID: 29403 RVA: 0x00113DE7 File Offset: 0x00111FE7
+		// Token: 0x1700273D RID: 10045
+		// (get) Token: 0x06007982 RID: 31106 RVA: 0x001224A3 File Offset: 0x001206A3
 		public override EShowUiType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700256A RID: 9578
-		// (get) Token: 0x060072DC RID: 29404 RVA: 0x00113DF4 File Offset: 0x00111FF4
+		// Token: 0x1700273E RID: 10046
+		// (get) Token: 0x06007983 RID: 31107 RVA: 0x001224B0 File Offset: 0x001206B0
 		public virtual int? EndingId
 		{
 			get
@@ -45,7 +43,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04004260 RID: 16992
+		// Token: 0x040045E1 RID: 17889
 		private ICiacconaAvgBoard Instance;
 	}
 }

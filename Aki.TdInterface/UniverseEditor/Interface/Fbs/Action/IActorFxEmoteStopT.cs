@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020060B4 RID: 24756
+	// Token: 0x02006716 RID: 26390
 	public class IActorFxEmoteStopT
 	{
-		// Token: 0x1700B677 RID: 46711
-		// (get) Token: 0x0602A450 RID: 173136 RVA: 0x005D3B97 File Offset: 0x005D1D97
-		// (set) Token: 0x0602A451 RID: 173137 RVA: 0x005D3B9F File Offset: 0x005D1D9F
+		// Token: 0x1700BFE2 RID: 49122
+		// (get) Token: 0x0602CB31 RID: 183089 RVA: 0x0061DB3F File Offset: 0x0061BD3F
+		// (set) Token: 0x0602CB32 RID: 183090 RVA: 0x0061DB47 File Offset: 0x0061BD47
 		public EActorFxEmoteType Type { get; set; }
 
-		// Token: 0x1700B678 RID: 46712
-		// (get) Token: 0x0602A452 RID: 173138 RVA: 0x005D3BA8 File Offset: 0x005D1DA8
-		// (set) Token: 0x0602A453 RID: 173139 RVA: 0x005D3BB0 File Offset: 0x005D1DB0
+		// Token: 0x1700BFE3 RID: 49123
+		// (get) Token: 0x0602CB33 RID: 183091 RVA: 0x0061DB50 File Offset: 0x0061BD50
+		// (set) Token: 0x0602CB34 RID: 183092 RVA: 0x0061DB58 File Offset: 0x0061BD58
 		public TActorFxEmoteStopSubTypeUnion StopType { get; set; }
 
-		// Token: 0x1700B679 RID: 46713
-		// (get) Token: 0x0602A454 RID: 173140 RVA: 0x005D3BB9 File Offset: 0x005D1DB9
-		// (set) Token: 0x0602A455 RID: 173141 RVA: 0x005D3BC1 File Offset: 0x005D1DC1
+		// Token: 0x1700BFE4 RID: 49124
+		// (get) Token: 0x0602CB35 RID: 183093 RVA: 0x0061DB61 File Offset: 0x0061BD61
+		// (set) Token: 0x0602CB36 RID: 183094 RVA: 0x0061DB69 File Offset: 0x0061BD69
 		public float DelayTime { get; set; }
 
-		// Token: 0x1700B67A RID: 46714
-		// (get) Token: 0x0602A456 RID: 173142 RVA: 0x005D3BCA File Offset: 0x005D1DCA
-		// (set) Token: 0x0602A457 RID: 173143 RVA: 0x005D3BD2 File Offset: 0x005D1DD2
+		// Token: 0x1700BFE5 RID: 49125
+		// (get) Token: 0x0602CB37 RID: 183095 RVA: 0x0061DB72 File Offset: 0x0061BD72
+		// (set) Token: 0x0602CB38 RID: 183096 RVA: 0x0061DB7A File Offset: 0x0061BD7A
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602A458 RID: 173144 RVA: 0x005D3BDB File Offset: 0x005D1DDB
+		// Token: 0x0602CB39 RID: 183097 RVA: 0x0061DB83 File Offset: 0x0061BD83
 		public IActorFxEmoteStopT()
 		{
 			this.Type = EActorFxEmoteType.Play;

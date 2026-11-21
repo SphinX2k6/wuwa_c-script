@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 {
-	// Token: 0x02006925 RID: 26917
+	// Token: 0x02005875 RID: 22645
 	[Nullable(new byte[]
 	{
 		0,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 	})]
 	public class AnniversaryEnterRewardProgressItem : GridProxyAbstract<AnniversarySubActivityDataBase>
 	{
-		// Token: 0x060431C0 RID: 274880 RVA: 0x0105AF70 File Offset: 0x01059170
+		// Token: 0x06037D18 RID: 228632 RVA: 0x00F9C59C File Offset: 0x00F9A79C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			};
 		}
 
-		// Token: 0x060431C1 RID: 274881 RVA: 0x0105AFAC File Offset: 0x010591AC
+		// Token: 0x06037D19 RID: 228633 RVA: 0x00F9C5D8 File Offset: 0x00F9A7D8
 		[NullableContext(1)]
 		public override void Refresh(AnniversarySubActivityDataBase data, bool isSelected, int gridIndex)
 		{
@@ -50,13 +50,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Anniversary
 			text2.ShowTextNew((activityConfig != null) ? activityConfig.Value.Title : "");
 		}
 
-		// Token: 0x0200CACB RID: 51915
+		// Token: 0x0200B493 RID: 46227
 		private class EComponents
 		{
-			// Token: 0x0403D49E RID: 251038
+			// Token: 0x04037D78 RID: 228728
 			public const int TxtTitle = 0;
 
-			// Token: 0x0403D49F RID: 251039
+			// Token: 0x04037D79 RID: 228729
 			public const int TxtValue = 1;
 		}
 	}

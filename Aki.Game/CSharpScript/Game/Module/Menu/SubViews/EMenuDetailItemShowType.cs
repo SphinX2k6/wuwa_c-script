@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Menu.SubViews
 {
-	// Token: 0x02005425 RID: 21541
+	// Token: 0x02004408 RID: 17416
 	public enum EMenuDetailItemShowType
 	{
-		// Token: 0x0401D0A9 RID: 118953
+		// Token: 0x04017B42 RID: 97090
 		Picture,
-		// Token: 0x0401D0AA RID: 118954
+		// Token: 0x04017B43 RID: 97091
 		Video,
-		// Token: 0x0401D0AB RID: 118955
+		// Token: 0x04017B44 RID: 97092
 		WideVideo
 	}
 }

@@ -5,7 +5,7 @@ using CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 {
-	// Token: 0x020051DB RID: 20955
+	// Token: 0x020041AB RID: 16811
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -14,7 +14,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 	})]
 	public class DetailViewCardItem : CommonBaseCardItem<DetailViewCardItemData>
 	{
-		// Token: 0x06035A08 RID: 219656 RVA: 0x00CB478C File Offset: 0x00CB298C
+		// Token: 0x0602A903 RID: 174339 RVA: 0x00C01DC8 File Offset: 0x00BFFFC8
 		protected override void OnRegisterCardComponent()
 		{
 			string resourceId = this.IsNewPhantomArenaActivity ? "UiItem_CardLockNew" : "UiItem_CardLock";
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 			};
 		}
 
-		// Token: 0x06035A09 RID: 219657 RVA: 0x00CB4828 File Offset: 0x00CB2A28
+		// Token: 0x0602A904 RID: 174340 RVA: 0x00C01E64 File Offset: 0x00C00064
 		public override void Refresh(DetailViewCardItemData data)
 		{
 			this.Data = data;
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 			this.RefreshIsLocked();
 		}
 
-		// Token: 0x06035A0A RID: 219658 RVA: 0x00CB4918 File Offset: 0x00CB2B18
+		// Token: 0x0602A905 RID: 174341 RVA: 0x00C01F54 File Offset: 0x00C00154
 		public void RefreshIsLocked()
 		{
 			CardLockComponent component = base.GetComponent<CardLockComponent>(ECardItemComponent.CardLockComponent);
@@ -89,16 +89,16 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 			component.Refresh(this.Data.IsLock);
 		}
 
-		// Token: 0x06035A0B RID: 219659 RVA: 0x00CB4936 File Offset: 0x00CB2B36
+		// Token: 0x0602A906 RID: 174342 RVA: 0x00C01F72 File Offset: 0x00C00172
 		private bool CanToggleChange()
 		{
 			return false;
 		}
 
-		// Token: 0x0401C75F RID: 116575
+		// Token: 0x04017194 RID: 94612
 		protected DetailViewCardItemData Data;
 
-		// Token: 0x0401C760 RID: 116576
+		// Token: 0x04017195 RID: 94613
 		public bool IsNewPhantomArenaActivity;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020075EF RID: 30191
+	// Token: 0x02007DFD RID: 32253
 	public struct IVisualNovelTransitionPerformanceSolarSchool : IFlatbufferObject
 	{
-		// Token: 0x1700E554 RID: 58708
-		// (get) Token: 0x06036FDA RID: 225242 RVA: 0x0077626A File Offset: 0x0077446A
+		// Token: 0x1700F192 RID: 61842
+		// (get) Token: 0x0603A47F RID: 238719 RVA: 0x007DA366 File Offset: 0x007D8566
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036FDB RID: 225243 RVA: 0x00776277 File Offset: 0x00774477
+		// Token: 0x0603A480 RID: 238720 RVA: 0x007DA373 File Offset: 0x007D8573
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06036FDC RID: 225244 RVA: 0x00776280 File Offset: 0x00774480
+		// Token: 0x0603A481 RID: 238721 RVA: 0x007DA37C File Offset: 0x007D857C
 		public static IVisualNovelTransitionPerformanceSolarSchool GetRootAsIVisualNovelTransitionPerformanceSolarSchool(ByteBuffer _bb)
 		{
 			return IVisualNovelTransitionPerformanceSolarSchool.GetRootAsIVisualNovelTransitionPerformanceSolarSchool(_bb, default(IVisualNovelTransitionPerformanceSolarSchool));
 		}
 
-		// Token: 0x06036FDD RID: 225245 RVA: 0x0077629C File Offset: 0x0077449C
+		// Token: 0x0603A482 RID: 238722 RVA: 0x007DA398 File Offset: 0x007D8598
 		public static IVisualNovelTransitionPerformanceSolarSchool GetRootAsIVisualNovelTransitionPerformanceSolarSchool(ByteBuffer _bb, IVisualNovelTransitionPerformanceSolarSchool obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06036FDE RID: 225246 RVA: 0x007762B9 File Offset: 0x007744B9
+		// Token: 0x0603A483 RID: 238723 RVA: 0x007DA3B5 File Offset: 0x007D85B5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06036FDF RID: 225247 RVA: 0x007762C8 File Offset: 0x007744C8
+		// Token: 0x0603A484 RID: 238724 RVA: 0x007DA3C4 File Offset: 0x007D85C4
 		public IVisualNovelTransitionPerformanceSolarSchool __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E555 RID: 58709
-		// (get) Token: 0x06036FE0 RID: 225248 RVA: 0x007762D8 File Offset: 0x007744D8
+		// Token: 0x1700F193 RID: 61843
+		// (get) Token: 0x0603A485 RID: 238725 RVA: 0x007DA3D4 File Offset: 0x007D85D4
 		public EVisualNovelSubType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E556 RID: 58710
-		// (get) Token: 0x06036FE1 RID: 225249 RVA: 0x00776314 File Offset: 0x00774514
+		// Token: 0x1700F194 RID: 61844
+		// (get) Token: 0x0603A486 RID: 238726 RVA: 0x007DA410 File Offset: 0x007D8610
 		public TVisualNovelTransitionConfig TransitionConfigType
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036FE2 RID: 225250 RVA: 0x00776350 File Offset: 0x00774550
+		// Token: 0x0603A487 RID: 238727 RVA: 0x007DA44C File Offset: 0x007D864C
 		public TTable? TransitionConfig<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -88,19 +88,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06036FE3 RID: 225251 RVA: 0x00776394 File Offset: 0x00774594
+		// Token: 0x0603A488 RID: 238728 RVA: 0x007DA490 File Offset: 0x007D8690
 		public IVisualNovelTransitionLocation TransitionConfigAsIVisualNovelTransitionLocation()
 		{
 			return this.TransitionConfig<IVisualNovelTransitionLocation>().Value;
 		}
 
-		// Token: 0x06036FE4 RID: 225252 RVA: 0x007763B0 File Offset: 0x007745B0
+		// Token: 0x0603A489 RID: 238729 RVA: 0x007DA4AC File Offset: 0x007D86AC
 		public IVisualNovelTransitionTime TransitionConfigAsIVisualNovelTransitionTime()
 		{
 			return this.TransitionConfig<IVisualNovelTransitionTime>().Value;
 		}
 
-		// Token: 0x06036FE5 RID: 225253 RVA: 0x007763CB File Offset: 0x007745CB
+		// Token: 0x0603A48A RID: 238730 RVA: 0x007DA4C7 File Offset: 0x007D86C7
 		public static Offset<IVisualNovelTransitionPerformanceSolarSchool> CreateIVisualNovelTransitionPerformanceSolarSchool(FlatBufferBuilder builder, EVisualNovelSubType Type = EVisualNovelSubType.SolarSchool, TVisualNovelTransitionConfig TransitionConfig_type = TVisualNovelTransitionConfig.NONE, int TransitionConfigOffset = 0)
 		{
 			builder.StartTable(3);
@@ -110,37 +110,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IVisualNovelTransitionPerformanceSolarSchool.EndIVisualNovelTransitionPerformanceSolarSchool(builder);
 		}
 
-		// Token: 0x06036FE6 RID: 225254 RVA: 0x007763EF File Offset: 0x007745EF
+		// Token: 0x0603A48B RID: 238731 RVA: 0x007DA4EB File Offset: 0x007D86EB
 		public static void StartIVisualNovelTransitionPerformanceSolarSchool(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06036FE7 RID: 225255 RVA: 0x007763F8 File Offset: 0x007745F8
+		// Token: 0x0603A48C RID: 238732 RVA: 0x007DA4F4 File Offset: 0x007D86F4
 		public static void AddType(FlatBufferBuilder builder, EVisualNovelSubType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06036FE8 RID: 225256 RVA: 0x00776403 File Offset: 0x00774603
+		// Token: 0x0603A48D RID: 238733 RVA: 0x007DA4FF File Offset: 0x007D86FF
 		public static void AddTransitionConfigType(FlatBufferBuilder builder, TVisualNovelTransitionConfig transitionConfigType)
 		{
 			builder.AddByte(1, (byte)transitionConfigType, 0);
 		}
 
-		// Token: 0x06036FE9 RID: 225257 RVA: 0x0077640E File Offset: 0x0077460E
+		// Token: 0x0603A48E RID: 238734 RVA: 0x007DA50A File Offset: 0x007D870A
 		public static void AddTransitionConfig(FlatBufferBuilder builder, int transitionConfigOffset)
 		{
 			builder.AddOffset(2, transitionConfigOffset, 0);
 		}
 
-		// Token: 0x06036FEA RID: 225258 RVA: 0x00776419 File Offset: 0x00774619
+		// Token: 0x0603A48F RID: 238735 RVA: 0x007DA515 File Offset: 0x007D8715
 		public static Offset<IVisualNovelTransitionPerformanceSolarSchool> EndIVisualNovelTransitionPerformanceSolarSchool(FlatBufferBuilder builder)
 		{
 			return new Offset<IVisualNovelTransitionPerformanceSolarSchool>(builder.EndTable());
 		}
 
-		// Token: 0x06036FEB RID: 225259 RVA: 0x00776428 File Offset: 0x00774628
+		// Token: 0x0603A490 RID: 238736 RVA: 0x007DA524 File Offset: 0x007D8724
 		public IVisualNovelTransitionPerformanceSolarSchoolT UnPack()
 		{
 			IVisualNovelTransitionPerformanceSolarSchoolT visualNovelTransitionPerformanceSolarSchoolT = new IVisualNovelTransitionPerformanceSolarSchoolT();
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return visualNovelTransitionPerformanceSolarSchoolT;
 		}
 
-		// Token: 0x06036FEC RID: 225260 RVA: 0x00776444 File Offset: 0x00774644
+		// Token: 0x0603A491 RID: 238737 RVA: 0x007DA540 File Offset: 0x007D8740
 		public void UnPackTo(IVisualNovelTransitionPerformanceSolarSchoolT _o)
 		{
 			_o.Type = this.Type;
@@ -167,7 +167,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.TransitionConfig.Value = ((this.TransitionConfig<IVisualNovelTransitionTime>() != null) ? this.TransitionConfig<IVisualNovelTransitionTime>().Value.UnPack() : null);
 		}
 
-		// Token: 0x06036FED RID: 225261 RVA: 0x007764F4 File Offset: 0x007746F4
+		// Token: 0x0603A492 RID: 238738 RVA: 0x007DA5F0 File Offset: 0x007D87F0
 		public static Offset<IVisualNovelTransitionPerformanceSolarSchool> Pack(FlatBufferBuilder builder, IVisualNovelTransitionPerformanceSolarSchoolT _o)
 		{
 			if (_o == null)
@@ -179,7 +179,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IVisualNovelTransitionPerformanceSolarSchool.CreateIVisualNovelTransitionPerformanceSolarSchool(builder, _o.Type, transitionConfig_type, transitionConfigOffset);
 		}
 
-		// Token: 0x0401255D RID: 75101
+		// Token: 0x040135A7 RID: 79271
 		private Table __p;
 	}
 }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A89 RID: 10889
+	// Token: 0x02002D7D RID: 11645
 	public class TrapDefenseChangeMiniMap : ActionParams
 	{
-		// Token: 0x0600EF48 RID: 61256 RVA: 0x0022CB5C File Offset: 0x0022AD5C
-		[NullableContext(1)]
+		// Token: 0x0600FDFE RID: 65022 RVA: 0x0024A868 File Offset: 0x00248A68
 		public static TrapDefenseChangeMiniMap Create(ITrapDefenseChangeMiniMap? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004BF8 RID: 19448
-		// (get) Token: 0x0600EF49 RID: 61257 RVA: 0x0022CB7B File Offset: 0x0022AD7B
+		// Token: 0x17004FB2 RID: 20402
+		// (get) Token: 0x0600FDFF RID: 65023 RVA: 0x0024A887 File Offset: 0x00248A87
 		public virtual int MiniMapId
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040083A9 RID: 33705
+		// Token: 0x04008AAD RID: 35501
 		private ITrapDefenseChangeMiniMap Instance;
 	}
 }

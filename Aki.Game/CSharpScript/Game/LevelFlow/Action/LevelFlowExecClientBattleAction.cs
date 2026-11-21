@@ -5,10 +5,10 @@ using CSharpScript.Game.LevelGamePlay.LevelEvents;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006F86 RID: 28550
+	// Token: 0x02006107 RID: 24839
 	public class LevelFlowExecClientBattleAction : LevelFlowActionBase
 	{
-		// Token: 0x060456EF RID: 284399 RVA: 0x01137AF6 File Offset: 0x01135CF6
+		// Token: 0x0603B89D RID: 243869 RVA: 0x010E18FA File Offset: 0x010DFAFA
 		[NullableContext(1)]
 		public LevelFlowExecClientBattleAction Init(ExecClientBattleAction param)
 		{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			return this;
 		}
 
-		// Token: 0x060456F0 RID: 284400 RVA: 0x01137B00 File Offset: 0x01135D00
+		// Token: 0x0603B89E RID: 243870 RVA: 0x010E1904 File Offset: 0x010DFB04
 		protected override void OnExecute()
 		{
 			if (this.Param == null)
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			}
 		}
 
-		// Token: 0x060456F1 RID: 284401 RVA: 0x01137C94 File Offset: 0x01135E94
+		// Token: 0x0603B89F RID: 243871 RVA: 0x010E1A98 File Offset: 0x010DFC98
 		protected unsafe override void LogExecuteInfo()
 		{
 			global::Log instance = global::Log.Instance;
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 		}
 
-		// Token: 0x040243B8 RID: 148408
+		// Token: 0x0401F66D RID: 128621
 		[Nullable(2)]
 		private ExecClientBattleAction Param;
 	}

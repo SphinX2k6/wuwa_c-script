@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020011C5 RID: 4549
+// Token: 0x02000679 RID: 1657
 [NullableContext(1)]
 [Nullable(0)]
 public class AwardPanel : UiPanelBase
 {
-	// Token: 0x0600791B RID: 31003 RVA: 0x00197B9C File Offset: 0x00195D9C
+	// Token: 0x06004CB2 RID: 19634 RVA: 0x001A084C File Offset: 0x0019EA4C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 15;
@@ -67,7 +67,7 @@ public class AwardPanel : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600791C RID: 31004 RVA: 0x00197E60 File Offset: 0x00196060
+	// Token: 0x06004CB3 RID: 19635 RVA: 0x001A0B10 File Offset: 0x0019ED10
 	protected override UniTask OnBeforeStartAsync()
 	{
 		AwardPanel.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -78,13 +78,13 @@ public class AwardPanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600791D RID: 31005 RVA: 0x00197EA3 File Offset: 0x001960A3
+	// Token: 0x06004CB4 RID: 19636 RVA: 0x001A0B53 File Offset: 0x0019ED53
 	public void SetActivityId(int activeId)
 	{
 		this.ActivityId = new int?(activeId);
 	}
 
-	// Token: 0x0600791E RID: 31006 RVA: 0x00197EB4 File Offset: 0x001960B4
+	// Token: 0x06004CB5 RID: 19637 RVA: 0x001A0B64 File Offset: 0x0019ED64
 	public void Refresh(TimePointRewardData data)
 	{
 		this.Data = data;
@@ -100,7 +100,7 @@ public class AwardPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600791F RID: 31007 RVA: 0x00197F28 File Offset: 0x00196128
+	// Token: 0x06004CB6 RID: 19638 RVA: 0x001A0BD8 File Offset: 0x0019EDD8
 	public void RefreshState(TimePointRewardData data, string tipsTextId)
 	{
 		bool flag = data.RewardState == ETimePointRewardState.Lock;
@@ -136,7 +136,7 @@ public class AwardPanel : UiPanelBase
 		this.RefreshItemBtn(data);
 	}
 
-	// Token: 0x06007920 RID: 31008 RVA: 0x00198064 File Offset: 0x00196264
+	// Token: 0x06004CB7 RID: 19639 RVA: 0x001A0D14 File Offset: 0x0019EF14
 	private void RefreshItemBtn(TimePointRewardData data)
 	{
 		for (int i = 0; i < 3; i++)
@@ -145,7 +145,7 @@ public class AwardPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06007921 RID: 31009 RVA: 0x00198090 File Offset: 0x00196290
+	// Token: 0x06004CB8 RID: 19640 RVA: 0x001A0D40 File Offset: 0x0019EF40
 	private void SetTimeText(double leftTime)
 	{
 		double num = leftTime * TimeUtil.Instance.Millisecond;
@@ -246,7 +246,7 @@ public class AwardPanel : UiPanelBase
 		instance4.SetLocalTextNew(text4, textStringId4, new <>z__ReadOnlySingleElementList<object>(defaultInterpolatedStringHandler.ToStringAndClear()));
 	}
 
-	// Token: 0x06007922 RID: 31010 RVA: 0x0019840E File Offset: 0x0019660E
+	// Token: 0x06004CB9 RID: 19641 RVA: 0x001A10BE File Offset: 0x0019F2BE
 	private void OnClickReceive()
 	{
 		if (this.Data.RewardState != ETimePointRewardState.UnlockAndUnClaimed)
@@ -256,25 +256,25 @@ public class AwardPanel : UiPanelBase
 		ActivityTimePointRewardController.Instance.GetRewardById(this.ActivityId.Value, this.Data.Id);
 	}
 
-	// Token: 0x06007923 RID: 31011 RVA: 0x0019843F File Offset: 0x0019663F
+	// Token: 0x06004CBA RID: 19642 RVA: 0x001A10EF File Offset: 0x0019F2EF
 	private void OnClickItem1()
 	{
 		this.OnClickItem(0);
 	}
 
-	// Token: 0x06007924 RID: 31012 RVA: 0x00198448 File Offset: 0x00196648
+	// Token: 0x06004CBB RID: 19643 RVA: 0x001A10F8 File Offset: 0x0019F2F8
 	private void OnClickItem2()
 	{
 		this.OnClickItem(1);
 	}
 
-	// Token: 0x06007925 RID: 31013 RVA: 0x00198451 File Offset: 0x00196651
+	// Token: 0x06004CBC RID: 19644 RVA: 0x001A1101 File Offset: 0x0019F301
 	private void OnClickItem3()
 	{
 		this.OnClickItem(2);
 	}
 
-	// Token: 0x06007926 RID: 31014 RVA: 0x0019845C File Offset: 0x0019665C
+	// Token: 0x06004CBD RID: 19645 RVA: 0x001A110C File Offset: 0x0019F30C
 	private void OnClickItem(int awardIndex)
 	{
 		if (this.Data == null)
@@ -292,69 +292,69 @@ public class AwardPanel : UiPanelBase
 			return;
 		}
 		int item = intPair.Value.Item1;
-		ItemController.Instance.OpenItemTipsByItemId(item, true, null);
+		ItemController.Instance.OpenItemTipsByItemId(item, true, null, false);
 	}
 
-	// Token: 0x040037AC RID: 14252
+	// Token: 0x04003845 RID: 14405
 	[Nullable(2)]
 	private TimePointRewardData Data;
 
-	// Token: 0x040037AD RID: 14253
+	// Token: 0x04003846 RID: 14406
 	private int? ActivityId;
 
-	// Token: 0x040037AE RID: 14254
+	// Token: 0x04003847 RID: 14407
 	private readonly List<AwardItem> AwardItems = new List<AwardItem>();
 
-	// Token: 0x040037AF RID: 14255
+	// Token: 0x04003848 RID: 14408
 	private const int REWARD_COUNT = 3;
 
-	// Token: 0x020077B2 RID: 30642
+	// Token: 0x0200693D RID: 26941
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x04027765 RID: 161637
+		// Token: 0x04022A97 RID: 141975
 		public const int CommonRedDotItem = 0;
 
-		// Token: 0x04027766 RID: 161638
+		// Token: 0x04022A98 RID: 141976
 		public const int RewardBtn1 = 1;
 
-		// Token: 0x04027767 RID: 161639
+		// Token: 0x04022A99 RID: 141977
 		public const int RewardBtn2 = 2;
 
-		// Token: 0x04027768 RID: 161640
+		// Token: 0x04022A9A RID: 141978
 		public const int RewardBtn3 = 3;
 
-		// Token: 0x04027769 RID: 161641
+		// Token: 0x04022A9B RID: 141979
 		public const int TimeItem = 4;
 
-		// Token: 0x0402776A RID: 161642
+		// Token: 0x04022A9C RID: 141980
 		public const int TimeCountText = 5;
 
-		// Token: 0x0402776B RID: 161643
+		// Token: 0x04022A9D RID: 141981
 		public const int TimeTipsItem = 6;
 
-		// Token: 0x0402776C RID: 161644
+		// Token: 0x04022A9E RID: 141982
 		public const int TimeTipsText = 7;
 
-		// Token: 0x0402776D RID: 161645
+		// Token: 0x04022A9F RID: 141983
 		public const int RewardReceiveItem = 8;
 
-		// Token: 0x0402776E RID: 161646
+		// Token: 0x04022AA0 RID: 141984
 		public const int RewardSelfBtn = 9;
 
-		// Token: 0x0402776F RID: 161647
+		// Token: 0x04022AA1 RID: 141985
 		public const int UnClaimableItem = 10;
 
-		// Token: 0x04027770 RID: 161648
+		// Token: 0x04022AA2 RID: 141986
 		public const int ClaimableItem = 11;
 
-		// Token: 0x04027771 RID: 161649
+		// Token: 0x04022AA3 RID: 141987
 		public const int ClaimedItem = 12;
 
-		// Token: 0x04027772 RID: 161650
+		// Token: 0x04022AA4 RID: 141988
 		public const int ClaimedMaskItem = 13;
 
-		// Token: 0x04027773 RID: 161651
+		// Token: 0x04022AA5 RID: 141989
 		public const int ClaimedTextItem = 14;
 	}
 }

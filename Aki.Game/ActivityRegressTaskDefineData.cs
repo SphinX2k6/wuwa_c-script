@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020014A9 RID: 5289
+// Token: 0x0200095D RID: 2397
 public class ActivityRegressTaskDefineData : IStaticVariableResetter
 {
-	// Token: 0x060095C3 RID: 38339 RVA: 0x00204BE3 File Offset: 0x00202DE3
+	// Token: 0x06006958 RID: 26968 RVA: 0x0020DB4B File Offset: 0x0020BD4B
 	static ActivityRegressTaskDefineData()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActivityRegressTaskDefineData.CreateStaticDefaultValue), new Action(ActivityRegressTaskDefineData.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x060095C4 RID: 38340 RVA: 0x00204C04 File Offset: 0x00202E04
+	// Token: 0x06006959 RID: 26969 RVA: 0x0020DB6C File Offset: 0x0020BD6C
 	public static void CreateStaticDefaultValue()
 	{
 		ActivityRegressTaskDefineData.taskSubViewTabDataMap = new Dictionary<EActivityRegressTaskSubViewType, ITaskSubViewTabData>
@@ -49,13 +49,13 @@ public class ActivityRegressTaskDefineData : IStaticVariableResetter
 		};
 	}
 
-	// Token: 0x060095C5 RID: 38341 RVA: 0x00204CDE File Offset: 0x00202EDE
+	// Token: 0x0600695A RID: 26970 RVA: 0x0020DC46 File Offset: 0x0020BE46
 	public static void ResetStaticDefaultValue()
 	{
 		ActivityRegressTaskDefineData.taskSubViewTabDataMap = null;
 	}
 
-	// Token: 0x04004239 RID: 16953
+	// Token: 0x040042D1 RID: 17105
 	[Nullable(2)]
 	public static Dictionary<EActivityRegressTaskSubViewType, ITaskSubViewTabData> taskSubViewTabDataMap;
 }

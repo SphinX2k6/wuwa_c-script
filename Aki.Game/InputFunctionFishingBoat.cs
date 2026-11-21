@@ -7,14 +7,13 @@ using AkiClient.Game.Aki.Character.Input.Structures;
 using AkiClient.Game.Aki.Character.Vision;
 using CSharpScript.Core.Common;
 using CSharpScript.Game.Module.Activity.ActivityContent.Fishing;
-using UnrealEngine;
 
-// Token: 0x020030B3 RID: 12467
+// Token: 0x0200260B RID: 9739
 [NullableContext(2)]
 [Nullable(0)]
 public static class InputFunctionFishingBoat
 {
-	// Token: 0x0601AB5E RID: 109406 RVA: 0x00732070 File Offset: 0x00730270
+	// Token: 0x0601856D RID: 99693 RVA: 0x007579D8 File Offset: 0x00755BD8
 	private static EFishingSkillType? GetFishingSkillType(int exploreToolId)
 	{
 		switch (exploreToolId)
@@ -32,7 +31,7 @@ public static class InputFunctionFishingBoat
 		}
 	}
 
-	// Token: 0x0601AB5F RID: 109407 RVA: 0x007320C4 File Offset: 0x007302C4
+	// Token: 0x0601856E RID: 99694 RVA: 0x00757A2C File Offset: 0x00755C2C
 	private static SInputCommand VisionSkill1Function(float time)
 	{
 		EntityHandle entityHandle = FishingModel.Instance.GetShipData().GetEntityHandle();
@@ -103,7 +102,7 @@ public static class InputFunctionFishingBoat
 		return sinputCommand;
 	}
 
-	// Token: 0x0601AB60 RID: 109408 RVA: 0x00732239 File Offset: 0x00730439
+	// Token: 0x0601856F RID: 99695 RVA: 0x00757BA1 File Offset: 0x00755DA1
 	public static SInputCommand FishingBoatVisionSkill1OnPress(float time)
 	{
 		if (Info.Instance.IsInTouch())
@@ -113,7 +112,7 @@ public static class InputFunctionFishingBoat
 		return InputFunctionFishingBoat.VisionSkill1Function(time);
 	}
 
-	// Token: 0x0601AB61 RID: 109409 RVA: 0x0073224F File Offset: 0x0073044F
+	// Token: 0x06018570 RID: 99696 RVA: 0x00757BB7 File Offset: 0x00755DB7
 	public static SInputCommand FishingBoatVisionSkill1OnRelease(float time)
 	{
 		if (!Info.Instance.IsInTouch())
@@ -127,14 +126,18 @@ public static class InputFunctionFishingBoat
 		return InputFunctionFishingBoat.VisionSkill1Function(time);
 	}
 
-	// Token: 0x0601AB62 RID: 109410 RVA: 0x00732270 File Offset: 0x00730470
+	// Token: 0x06018571 RID: 99697 RVA: 0x00757BD8 File Offset: 0x00755DD8
 	public static SInputCommand CreateFishingBoatSprintCommand(int skillId)
 	{
 		EntityHandle entityHandle = FishingModel.Instance.GetShipData().GetEntityHandle();
 		WorldEntity worldEntity = (entityHandle != null) ? entityHandle.Entity : null;
 		if (worldEntity == null || !worldEntity.Valid)
 		{
-			return new SInputCommand(ECommandType.Skill, skillId, default(FGameplayTag));
+			return new SInputCommand
+			{
+				CommandType = ECommandType.Skill,
+				IntValue = skillId
+			};
 		}
 		FishingBoatPerformComponent component = worldEntity.GetComponent<FishingBoatPerformComponent>();
 		if (component == null || !component.CheckCanSprint())
@@ -144,7 +147,7 @@ public static class InputFunctionFishingBoat
 		return InputFunctionCommon.CreateSkillCommand(worldEntity, skillId);
 	}
 
-	// Token: 0x0601AB63 RID: 109411 RVA: 0x007322DB File Offset: 0x007304DB
+	// Token: 0x06018572 RID: 99698 RVA: 0x00757C46 File Offset: 0x00755E46
 	// Note: this type is marked as 'beforefieldinit'.
 	static InputFunctionFishingBoat()
 	{
@@ -154,7 +157,7 @@ public static class InputFunctionFishingBoat
 		InputFunctionFishingBoat.NeedConfirmSkillMap = dictionary;
 	}
 
-	// Token: 0x0400CE50 RID: 52816
+	// Token: 0x0400D23C RID: 53820
 	[Nullable(1)]
 	[StaticVariableRuleIgnore]
 	private static readonly Dictionary<EFishingSkillType, EConfirmBoxConfigId> NeedConfirmSkillMap;

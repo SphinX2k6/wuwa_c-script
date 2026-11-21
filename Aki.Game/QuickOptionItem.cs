@@ -6,16 +6,16 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001157 RID: 4439
+// Token: 0x0200060B RID: 1547
 public class QuickOptionItem : GridProxyAbstract<BabelTowerQuick>
 {
-	// Token: 0x060074CA RID: 29898 RVA: 0x0017F800 File Offset: 0x0017DA00
+	// Token: 0x06004861 RID: 18529 RVA: 0x0018834C File Offset: 0x0018654C
 	public BabelTowerQuick? GetCurrentData()
 	{
 		return this.CurrentData;
 	}
 
-	// Token: 0x060074CB RID: 29899 RVA: 0x0017F808 File Offset: 0x0017DA08
+	// Token: 0x06004862 RID: 18530 RVA: 0x00188354 File Offset: 0x00186554
 	private bool CheckIfLocked(BabelTowerQuick data)
 	{
 		for (int i = 0; i < data.BuffGroupLength; i++)
@@ -30,7 +30,7 @@ public class QuickOptionItem : GridProxyAbstract<BabelTowerQuick>
 		return false;
 	}
 
-	// Token: 0x060074CC RID: 29900 RVA: 0x0017F854 File Offset: 0x0017DA54
+	// Token: 0x06004863 RID: 18531 RVA: 0x001883A0 File Offset: 0x001865A0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -59,14 +59,14 @@ public class QuickOptionItem : GridProxyAbstract<BabelTowerQuick>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060074CD RID: 29901 RVA: 0x0017F97E File Offset: 0x0017DB7E
+	// Token: 0x06004864 RID: 18532 RVA: 0x001884CA File Offset: 0x001866CA
 	[NullableContext(2)]
 	public UUIExtendToggle GetQuickToggle()
 	{
 		return base.GetExtendToggle(0);
 	}
 
-	// Token: 0x060074CE RID: 29902 RVA: 0x0017F988 File Offset: 0x0017DB88
+	// Token: 0x06004865 RID: 18533 RVA: 0x001884D4 File Offset: 0x001866D4
 	private void OnQuickItemClick(EToggleState state)
 	{
 		if (this.IsLocked)
@@ -90,7 +90,7 @@ public class QuickOptionItem : GridProxyAbstract<BabelTowerQuick>
 		}
 	}
 
-	// Token: 0x060074CF RID: 29903 RVA: 0x0017F9EC File Offset: 0x0017DBEC
+	// Token: 0x06004866 RID: 18534 RVA: 0x00188538 File Offset: 0x00186738
 	public override void Refresh(BabelTowerQuick data, bool isSelected, int gridIndex)
 	{
 		this.QuickId = data.Id;
@@ -116,7 +116,7 @@ public class QuickOptionItem : GridProxyAbstract<BabelTowerQuick>
 		item.SetUIActive(this.IsLocked);
 	}
 
-	// Token: 0x060074D0 RID: 29904 RVA: 0x0017FA88 File Offset: 0x0017DC88
+	// Token: 0x06004867 RID: 18535 RVA: 0x001885D4 File Offset: 0x001867D4
 	private void SetDeLevelArt(BabelTowerQuick data, bool isSelected)
 	{
 		UUIArtText artText = base.GetArtText(4);
@@ -146,45 +146,45 @@ public class QuickOptionItem : GridProxyAbstract<BabelTowerQuick>
 		}
 	}
 
-	// Token: 0x060074D1 RID: 29905 RVA: 0x0017FB55 File Offset: 0x0017DD55
+	// Token: 0x06004868 RID: 18536 RVA: 0x001886A1 File Offset: 0x001868A1
 	[NullableContext(1)]
 	private void SetDifficultyText(string textKey)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(2), textKey, Array.Empty<object>());
 	}
 
-	// Token: 0x040035B4 RID: 13748
+	// Token: 0x0400364D RID: 13901
 	public int QuickId;
 
-	// Token: 0x040035B5 RID: 13749
+	// Token: 0x0400364E RID: 13902
 	[Nullable(2)]
 	public Action<BabelTowerQuick, int> OnQuickOptionClickWithIndex;
 
-	// Token: 0x040035B6 RID: 13750
+	// Token: 0x0400364F RID: 13903
 	private BabelTowerQuick? CurrentData;
 
-	// Token: 0x040035B7 RID: 13751
+	// Token: 0x04003650 RID: 13904
 	private bool IsLocked;
 
-	// Token: 0x02007715 RID: 30485
+	// Token: 0x020068A4 RID: 26788
 	private class EBuffItemSubComponent
 	{
-		// Token: 0x04027486 RID: 160902
+		// Token: 0x040227C7 RID: 141255
 		public const int QuickItem = 0;
 
-		// Token: 0x04027487 RID: 160903
+		// Token: 0x040227C8 RID: 141256
 		public const int ColorSprite = 1;
 
-		// Token: 0x04027488 RID: 160904
+		// Token: 0x040227C9 RID: 141257
 		public const int TitleText = 2;
 
-		// Token: 0x04027489 RID: 160905
+		// Token: 0x040227CA RID: 141258
 		public const int DescText = 3;
 
-		// Token: 0x0402748A RID: 160906
+		// Token: 0x040227CB RID: 141259
 		public const int DeLevelArt = 4;
 
-		// Token: 0x0402748B RID: 160907
+		// Token: 0x040227CC RID: 141260
 		public const int LockItem = 5;
 	}
 }

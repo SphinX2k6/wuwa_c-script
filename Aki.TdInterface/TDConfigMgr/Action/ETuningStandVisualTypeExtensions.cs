@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200248D RID: 9357
+	// Token: 0x02002730 RID: 10032
 	public static class ETuningStandVisualTypeExtensions
 	{
-		// Token: 0x0600CAF9 RID: 51961 RVA: 0x001DE2C0 File Offset: 0x001DC4C0
+		// Token: 0x0600D7B2 RID: 55218 RVA: 0x001F8488 File Offset: 0x001F6688
 		public static string ToEnumString(this ETuningStandVisualType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CAFA RID: 51962 RVA: 0x001DE2F8 File Offset: 0x001DC4F8
+		// Token: 0x0600D7B3 RID: 55219 RVA: 0x001F84C0 File Offset: 0x001F66C0
 		public static ETuningStandVisualType FromString(string name)
 		{
 			ETuningStandVisualType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CAFB RID: 51963 RVA: 0x001DE321 File Offset: 0x001DC521
+		// Token: 0x0600D7B4 RID: 55220 RVA: 0x001F84E9 File Offset: 0x001F66E9
 		public static bool TryFromString(string name, out ETuningStandVisualType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600CAFC RID: 51964 RVA: 0x001DE35A File Offset: 0x001DC55A
+		// Token: 0x0600D7B5 RID: 55221 RVA: 0x001F8522 File Offset: 0x001F6722
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CAFD RID: 51965 RVA: 0x001DE372 File Offset: 0x001DC572
+		// Token: 0x0600D7B6 RID: 55222 RVA: 0x001F853A File Offset: 0x001F673A
 		public static ETuningStandVisualType[] GetValues()
 		{
 			return new ETuningStandVisualType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CAFE RID: 51966 RVA: 0x001DE37E File Offset: 0x001DC57E
+		// Token: 0x0600D7B7 RID: 55223 RVA: 0x001F8546 File Offset: 0x001F6746
 		public static string[] GetNames()
 		{
 			return new string[]

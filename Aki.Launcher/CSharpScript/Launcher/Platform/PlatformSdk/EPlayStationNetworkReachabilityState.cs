@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Launcher.Platform.PlatformSdk
 {
-	// Token: 0x0200019A RID: 410
+	// Token: 0x0200019E RID: 414
 	public enum EPlayStationNetworkReachabilityState
 	{
-		// Token: 0x040006F2 RID: 1778
+		// Token: 0x0400072D RID: 1837
 		Unavailable,
-		// Token: 0x040006F3 RID: 1779
+		// Token: 0x0400072E RID: 1838
 		Available,
-		// Token: 0x040006F4 RID: 1780
+		// Token: 0x0400072F RID: 1839
 		Reachable
 	}
 }

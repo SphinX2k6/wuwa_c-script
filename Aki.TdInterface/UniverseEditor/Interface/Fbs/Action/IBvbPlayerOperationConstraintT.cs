@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200624C RID: 25164
+	// Token: 0x020068BD RID: 26813
 	public class IBvbPlayerOperationConstraintT
 	{
-		// Token: 0x1700BB8D RID: 48013
-		// (get) Token: 0x0602B660 RID: 177760 RVA: 0x005F9717 File Offset: 0x005F7917
-		// (set) Token: 0x0602B661 RID: 177761 RVA: 0x005F971F File Offset: 0x005F791F
+		// Token: 0x1700C515 RID: 50453
+		// (get) Token: 0x0602DDC1 RID: 187841 RVA: 0x0064451F File Offset: 0x0064271F
+		// (set) Token: 0x0602DDC2 RID: 187842 RVA: 0x00644527 File Offset: 0x00642727
 		public TBvbPlayerOperationTypeUnion EnableOperation { get; set; }
 
-		// Token: 0x1700BB8E RID: 48014
-		// (get) Token: 0x0602B662 RID: 177762 RVA: 0x005F9728 File Offset: 0x005F7928
-		// (set) Token: 0x0602B663 RID: 177763 RVA: 0x005F9730 File Offset: 0x005F7930
+		// Token: 0x1700C516 RID: 50454
+		// (get) Token: 0x0602DDC3 RID: 187843 RVA: 0x00644530 File Offset: 0x00642730
+		// (set) Token: 0x0602DDC4 RID: 187844 RVA: 0x00644538 File Offset: 0x00642738
 		public bool IsTheLast { get; set; }
 
-		// Token: 0x1700BB8F RID: 48015
-		// (get) Token: 0x0602B664 RID: 177764 RVA: 0x005F9739 File Offset: 0x005F7939
-		// (set) Token: 0x0602B665 RID: 177765 RVA: 0x005F9741 File Offset: 0x005F7941
+		// Token: 0x1700C517 RID: 50455
+		// (get) Token: 0x0602DDC5 RID: 187845 RVA: 0x00644541 File Offset: 0x00642741
+		// (set) Token: 0x0602DDC6 RID: 187846 RVA: 0x00644549 File Offset: 0x00642749
 		public string TidPromptTxt { get; set; }
 
-		// Token: 0x1700BB90 RID: 48016
-		// (get) Token: 0x0602B666 RID: 177766 RVA: 0x005F974A File Offset: 0x005F794A
-		// (set) Token: 0x0602B667 RID: 177767 RVA: 0x005F9752 File Offset: 0x005F7952
+		// Token: 0x1700C518 RID: 50456
+		// (get) Token: 0x0602DDC7 RID: 187847 RVA: 0x00644552 File Offset: 0x00642752
+		// (set) Token: 0x0602DDC8 RID: 187848 RVA: 0x0064455A File Offset: 0x0064275A
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602B668 RID: 177768 RVA: 0x005F975B File Offset: 0x005F795B
+		// Token: 0x0602DDC9 RID: 187849 RVA: 0x00644563 File Offset: 0x00642763
 		public IBvbPlayerOperationConstraintT()
 		{
 			this.EnableOperation = null;

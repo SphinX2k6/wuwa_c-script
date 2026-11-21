@@ -2,12 +2,12 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000EA3 RID: 3747
+	// Token: 0x02000FB9 RID: 4025
 	public enum ETimeLeftIconType
 	{
-		// Token: 0x040031F1 RID: 12785
+		// Token: 0x040034FE RID: 13566
 		AkiWorld,
-		// Token: 0x040031F2 RID: 12786
+		// Token: 0x040034FF RID: 13567
 		Tower
 	}
 }

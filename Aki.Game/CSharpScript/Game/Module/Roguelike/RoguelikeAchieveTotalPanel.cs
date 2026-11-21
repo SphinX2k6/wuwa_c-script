@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DB9 RID: 19897
+	// Token: 0x02003D82 RID: 15746
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoguelikeAchieveTotalPanel : UiPanelBase
 	{
-		// Token: 0x060335E0 RID: 210400 RVA: 0x00BFE508 File Offset: 0x00BFC708
+		// Token: 0x0602844D RID: 164941 RVA: 0x00B47A48 File Offset: 0x00B45C48
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 12;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060335E1 RID: 210401 RVA: 0x00BFE6FC File Offset: 0x00BFC8FC
+		// Token: 0x0602844E RID: 164942 RVA: 0x00B47C3C File Offset: 0x00B45E3C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoguelikeAchieveTotalPanel.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060335E2 RID: 210402 RVA: 0x00BFE740 File Offset: 0x00BFC940
+		// Token: 0x0602844F RID: 164943 RVA: 0x00B47C80 File Offset: 0x00B45E80
 		protected override void OnStart()
 		{
 			this.ElementLayout = new GenericLayout<ElementItem, ElementInfo>(base.GetHorizontalLayout(1), new Func<ElementItem>(this.CreateElementItem), base.GetItem(2).GetOwner() as AUIBaseActor, false, true);
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			button.SetSelfInteractive(false);
 		}
 
-		// Token: 0x060335E3 RID: 210403 RVA: 0x00BFE7DD File Offset: 0x00BFC9DD
+		// Token: 0x06028450 RID: 164944 RVA: 0x00B47D1D File Offset: 0x00B45F1D
 		protected override void OnBeforeDestroy()
 		{
 			this.CurrentArchiveInfoData = null;
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.Vm = null;
 		}
 
-		// Token: 0x060335E4 RID: 210404 RVA: 0x00BFE810 File Offset: 0x00BFCA10
+		// Token: 0x06028451 RID: 164945 RVA: 0x00B47D50 File Offset: 0x00B45F50
 		public void SetViewModel(RoguelikeAchieveViewModel vm)
 		{
 			this.Vm = vm;
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			button.SetSelfInteractive(this.CurrentArchiveInfoData != null);
 		}
 
-		// Token: 0x060335E5 RID: 210405 RVA: 0x00BFE834 File Offset: 0x00BFCA34
+		// Token: 0x06028452 RID: 164946 RVA: 0x00B47D74 File Offset: 0x00B45F74
 		[NullableContext(2)]
 		public void Refresh(RogueArchiveInfoData archiveInfoData)
 		{
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.RefreshPhantomSection(roguelikeInfo);
 		}
 
-		// Token: 0x060335E6 RID: 210406 RVA: 0x00BFE8D0 File Offset: 0x00BFCAD0
+		// Token: 0x06028453 RID: 164947 RVA: 0x00B47E10 File Offset: 0x00B46010
 		private void OnBtnDetailClick()
 		{
 			RogueArchiveInfoData currentArchiveInfoData = this.CurrentArchiveInfoData;
@@ -155,19 +155,19 @@ namespace CSharpScript.Game.Module.Roguelike
 			RoguelikeController.Instance.OpenRogueInfoView(this.CurrentArchiveInfoData.RoguelikeInfo, false, false, ERogueInfoViewPage.Overview);
 		}
 
-		// Token: 0x060335E7 RID: 210407 RVA: 0x00BFE8FF File Offset: 0x00BFCAFF
+		// Token: 0x06028454 RID: 164948 RVA: 0x00B47E3F File Offset: 0x00B4603F
 		private ElementItem CreateElementItem()
 		{
 			return new ElementItem();
 		}
 
-		// Token: 0x060335E8 RID: 210408 RVA: 0x00BFE906 File Offset: 0x00BFCB06
+		// Token: 0x06028455 RID: 164949 RVA: 0x00B47E46 File Offset: 0x00B46046
 		private RoguelikePhantomAffixStateItem CreatePhantomAffixStateItem()
 		{
 			return new RoguelikePhantomAffixStateItem();
 		}
 
-		// Token: 0x060335E9 RID: 210409 RVA: 0x00BFE910 File Offset: 0x00BFCB10
+		// Token: 0x06028456 RID: 164950 RVA: 0x00B47E50 File Offset: 0x00B46050
 		private void RefreshElementLayout(RoguelikeInfo roguelikeInfo)
 		{
 			List<ElementInfo> list = new List<ElementInfo>();
@@ -185,7 +185,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			elementLayout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x060335EA RID: 210410 RVA: 0x00BFE9B0 File Offset: 0x00BFCBB0
+		// Token: 0x06028457 RID: 164951 RVA: 0x00B47EF0 File Offset: 0x00B460F0
 		private void RefreshPhantomAffixStateItemLayout(RoguelikeInfo roguelikeInfo, List<AffixEntry> affixEntryList)
 		{
 			List<IRoguelikePhantomAffixStateItemData> list = new List<IRoguelikePhantomAffixStateItemData>();
@@ -205,7 +205,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			phantomAffixStateItemLayout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x060335EB RID: 210411 RVA: 0x00BFEA30 File Offset: 0x00BFCC30
+		// Token: 0x06028458 RID: 164952 RVA: 0x00B47F70 File Offset: 0x00B46170
 		private void RefreshPhantomSection(RoguelikeInfo roguelikeInfo)
 		{
 			RogueGainEntry phantomEntry = roguelikeInfo.PhantomEntry;
@@ -226,7 +226,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			phantomAffixStateItemLayout.RefreshByData(new List<IRoguelikePhantomAffixStateItemData>(), null, false);
 		}
 
-		// Token: 0x060335EC RID: 210412 RVA: 0x00BFEAA4 File Offset: 0x00BFCCA4
+		// Token: 0x06028459 RID: 164953 RVA: 0x00B47FE4 File Offset: 0x00B461E4
 		private void RefreshPhantomAvatar(int phantomConfigId)
 		{
 			UUITexture texture = base.GetTexture(7);
@@ -242,14 +242,14 @@ namespace CSharpScript.Game.Module.Roguelike
 			base.SetTextureByPath(text, texture, null, null);
 		}
 
-		// Token: 0x060335ED RID: 210413 RVA: 0x00BFEB24 File Offset: 0x00BFCD24
+		// Token: 0x0602845A RID: 164954 RVA: 0x00B48064 File Offset: 0x00B46264
 		private void SetPhantomContentState(bool hasPhantom)
 		{
 			base.GetItem(10).SetUIActive(hasPhantom);
 			base.GetItem(11).SetUIActive(!hasPhantom);
 		}
 
-		// Token: 0x0401B478 RID: 111736
+		// Token: 0x04015E4B RID: 89675
 		[Nullable(new byte[]
 		{
 			2,
@@ -258,19 +258,19 @@ namespace CSharpScript.Game.Module.Roguelike
 		})]
 		private GenericLayout<ElementItem, ElementInfo> ElementLayout;
 
-		// Token: 0x0401B479 RID: 111737
+		// Token: 0x04015E4C RID: 89676
 		[Nullable(2)]
 		private RoguelikeAchieveBtnMainRoleItem MainRolePanel;
 
-		// Token: 0x0401B47A RID: 111738
+		// Token: 0x04015E4D RID: 89677
 		[Nullable(2)]
 		private RoguelikeAchieveTeamRoleItem TeamRolePanel1;
 
-		// Token: 0x0401B47B RID: 111739
+		// Token: 0x04015E4E RID: 89678
 		[Nullable(2)]
 		private RoguelikeAchieveTeamRoleItem TeamRolePanel2;
 
-		// Token: 0x0401B47C RID: 111740
+		// Token: 0x04015E4F RID: 89679
 		[Nullable(new byte[]
 		{
 			2,
@@ -279,52 +279,52 @@ namespace CSharpScript.Game.Module.Roguelike
 		})]
 		private GenericLayout<RoguelikePhantomAffixStateItem, IRoguelikePhantomAffixStateItemData> PhantomAffixStateItemLayout;
 
-		// Token: 0x0401B47D RID: 111741
+		// Token: 0x04015E50 RID: 89680
 		[Nullable(2)]
 		private RogueArchiveInfoData CurrentArchiveInfoData;
 
-		// Token: 0x0401B47E RID: 111742
+		// Token: 0x04015E51 RID: 89681
 		[Nullable(2)]
 		private RoguelikeAchieveViewModel Vm;
 
-		// Token: 0x0200AF2F RID: 44847
+		// Token: 0x02009964 RID: 39268
 		[NullableContext(0)]
 		private class ERoguelikeAchieveTotalPanelComponents
 		{
-			// Token: 0x04035329 RID: 217897
+			// Token: 0x0402FD5E RID: 195934
 			public const int TotalPanel = 0;
 
-			// Token: 0x0403532A RID: 217898
+			// Token: 0x0402FD5F RID: 195935
 			public const int ElementLayout = 1;
 
-			// Token: 0x0403532B RID: 217899
+			// Token: 0x0402FD60 RID: 195936
 			public const int ElementItem = 2;
 
-			// Token: 0x0403532C RID: 217900
+			// Token: 0x0402FD61 RID: 195937
 			public const int BtnDetail = 3;
 
-			// Token: 0x0403532D RID: 217901
+			// Token: 0x0402FD62 RID: 195938
 			public const int MainRoleItem = 4;
 
-			// Token: 0x0403532E RID: 217902
+			// Token: 0x0402FD63 RID: 195939
 			public const int TeamRoleAItem = 5;
 
-			// Token: 0x0403532F RID: 217903
+			// Token: 0x0402FD64 RID: 195940
 			public const int TeamRoleBItem = 6;
 
-			// Token: 0x04035330 RID: 217904
+			// Token: 0x0402FD65 RID: 195941
 			public const int TexVisionAvatar = 7;
 
-			// Token: 0x04035331 RID: 217905
+			// Token: 0x0402FD66 RID: 195942
 			public const int PhantomAffixStateLayout = 8;
 
-			// Token: 0x04035332 RID: 217906
+			// Token: 0x0402FD67 RID: 195943
 			public const int PhantomAffixStateItem = 9;
 
-			// Token: 0x04035333 RID: 217907
+			// Token: 0x0402FD68 RID: 195944
 			public const int PnlContent = 10;
 
-			// Token: 0x04035334 RID: 217908
+			// Token: 0x0402FD69 RID: 195945
 			public const int PnlEmpty = 11;
 		}
 	}

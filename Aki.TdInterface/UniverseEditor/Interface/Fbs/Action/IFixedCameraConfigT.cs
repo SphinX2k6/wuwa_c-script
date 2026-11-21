@@ -3,50 +3,50 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020067CC RID: 26572
+	// Token: 0x02006E4C RID: 28236
 	public class IFixedCameraConfigT
 	{
-		// Token: 0x1700C541 RID: 50497
-		// (get) Token: 0x0602E41F RID: 189471 RVA: 0x00651336 File Offset: 0x0064F536
-		// (set) Token: 0x0602E420 RID: 189472 RVA: 0x0065133E File Offset: 0x0064F53E
+		// Token: 0x1700CEF7 RID: 52983
+		// (get) Token: 0x06030C65 RID: 199781 RVA: 0x0069EA7A File Offset: 0x0069CC7A
+		// (set) Token: 0x06030C66 RID: 199782 RVA: 0x0069EA82 File Offset: 0x0069CC82
 		public float FadeInTime { get; set; }
 
-		// Token: 0x1700C542 RID: 50498
-		// (get) Token: 0x0602E421 RID: 189473 RVA: 0x00651347 File Offset: 0x0064F547
-		// (set) Token: 0x0602E422 RID: 189474 RVA: 0x0065134F File Offset: 0x0064F54F
+		// Token: 0x1700CEF8 RID: 52984
+		// (get) Token: 0x06030C67 RID: 199783 RVA: 0x0069EA8B File Offset: 0x0069CC8B
+		// (set) Token: 0x06030C68 RID: 199784 RVA: 0x0069EA93 File Offset: 0x0069CC93
 		public float FadeOutTime { get; set; }
 
-		// Token: 0x1700C543 RID: 50499
-		// (get) Token: 0x0602E423 RID: 189475 RVA: 0x00651358 File Offset: 0x0064F558
-		// (set) Token: 0x0602E424 RID: 189476 RVA: 0x00651360 File Offset: 0x0064F560
+		// Token: 0x1700CEF9 RID: 52985
+		// (get) Token: 0x06030C69 RID: 199785 RVA: 0x0069EA9C File Offset: 0x0069CC9C
+		// (set) Token: 0x06030C6A RID: 199786 RVA: 0x0069EAA4 File Offset: 0x0069CCA4
 		public float Fov { get; set; }
 
-		// Token: 0x1700C544 RID: 50500
-		// (get) Token: 0x0602E425 RID: 189477 RVA: 0x00651369 File Offset: 0x0064F569
-		// (set) Token: 0x0602E426 RID: 189478 RVA: 0x00651371 File Offset: 0x0064F571
+		// Token: 0x1700CEFA RID: 52986
+		// (get) Token: 0x06030C6B RID: 199787 RVA: 0x0069EAAD File Offset: 0x0069CCAD
+		// (set) Token: 0x06030C6C RID: 199788 RVA: 0x0069EAB5 File Offset: 0x0069CCB5
 		public bool IsDisableCollision { get; set; }
 
-		// Token: 0x1700C545 RID: 50501
-		// (get) Token: 0x0602E427 RID: 189479 RVA: 0x0065137A File Offset: 0x0064F57A
-		// (set) Token: 0x0602E428 RID: 189480 RVA: 0x00651382 File Offset: 0x0064F582
+		// Token: 0x1700CEFB RID: 52987
+		// (get) Token: 0x06030C6D RID: 199789 RVA: 0x0069EABE File Offset: 0x0069CCBE
+		// (set) Token: 0x06030C6E RID: 199790 RVA: 0x0069EAC6 File Offset: 0x0069CCC6
 		public bool IsDisableDither { get; set; }
 
-		// Token: 0x1700C546 RID: 50502
-		// (get) Token: 0x0602E429 RID: 189481 RVA: 0x0065138B File Offset: 0x0064F58B
-		// (set) Token: 0x0602E42A RID: 189482 RVA: 0x00651393 File Offset: 0x0064F593
+		// Token: 0x1700CEFC RID: 52988
+		// (get) Token: 0x06030C6F RID: 199791 RVA: 0x0069EACF File Offset: 0x0069CCCF
+		// (set) Token: 0x06030C70 RID: 199792 RVA: 0x0069EAD7 File Offset: 0x0069CCD7
 		public IVectorInfoT CenterPos { get; set; }
 
-		// Token: 0x1700C547 RID: 50503
-		// (get) Token: 0x0602E42B RID: 189483 RVA: 0x0065139C File Offset: 0x0064F59C
-		// (set) Token: 0x0602E42C RID: 189484 RVA: 0x006513A4 File Offset: 0x0064F5A4
+		// Token: 0x1700CEFD RID: 52989
+		// (get) Token: 0x06030C71 RID: 199793 RVA: 0x0069EAE0 File Offset: 0x0069CCE0
+		// (set) Token: 0x06030C72 RID: 199794 RVA: 0x0069EAE8 File Offset: 0x0069CCE8
 		public IVectorInfoT CenterRot { get; set; }
 
-		// Token: 0x1700C548 RID: 50504
-		// (get) Token: 0x0602E42D RID: 189485 RVA: 0x006513AD File Offset: 0x0064F5AD
-		// (set) Token: 0x0602E42E RID: 189486 RVA: 0x006513B5 File Offset: 0x0064F5B5
+		// Token: 0x1700CEFE RID: 52990
+		// (get) Token: 0x06030C73 RID: 199795 RVA: 0x0069EAF1 File Offset: 0x0069CCF1
+		// (set) Token: 0x06030C74 RID: 199796 RVA: 0x0069EAF9 File Offset: 0x0069CCF9
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602E42F RID: 189487 RVA: 0x006513C0 File Offset: 0x0064F5C0
+		// Token: 0x06030C75 RID: 199797 RVA: 0x0069EB04 File Offset: 0x0069CD04
 		public IFixedCameraConfigT()
 		{
 			this.FadeInTime = 0f;

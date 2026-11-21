@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001856 RID: 6230
+// Token: 0x02000D0F RID: 3343
 [NullableContext(2)]
 [Nullable(0)]
 public class FilterToggleItem : UiPanelBase
 {
-	// Token: 0x0600B68C RID: 46732 RVA: 0x00294498 File Offset: 0x00292698
+	// Token: 0x06008A75 RID: 35445 RVA: 0x0029EBC4 File Offset: 0x0029CDC4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -22,7 +22,7 @@ public class FilterToggleItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600B68D RID: 46733 RVA: 0x002944E0 File Offset: 0x002926E0
+	// Token: 0x06008A76 RID: 35446 RVA: 0x0029EC0C File Offset: 0x0029CE0C
 	protected override void OnStart()
 	{
 		this.Toggle = base.GetExtendToggle(0);
@@ -34,7 +34,7 @@ public class FilterToggleItem : UiPanelBase
 		toggle.OnStateChange.Add(new Action<EToggleState>(this.OnToggleStateChange));
 	}
 
-	// Token: 0x0600B68E RID: 46734 RVA: 0x00294510 File Offset: 0x00292710
+	// Token: 0x06008A77 RID: 35447 RVA: 0x0029EC3C File Offset: 0x0029CE3C
 	protected override void OnBeforeDestroy()
 	{
 		UUIExtendToggle toggle = this.Toggle;
@@ -46,7 +46,7 @@ public class FilterToggleItem : UiPanelBase
 		this.ToggleFunction = null;
 	}
 
-	// Token: 0x0600B68F RID: 46735 RVA: 0x00294542 File Offset: 0x00292742
+	// Token: 0x06008A78 RID: 35448 RVA: 0x0029EC6E File Offset: 0x0029CE6E
 	private void OnToggleStateChange(EToggleState state)
 	{
 		Action<EToggleState> toggleFunction = this.ToggleFunction;
@@ -57,14 +57,14 @@ public class FilterToggleItem : UiPanelBase
 		toggleFunction(state);
 	}
 
-	// Token: 0x0600B690 RID: 46736 RVA: 0x00294555 File Offset: 0x00292755
+	// Token: 0x06008A79 RID: 35449 RVA: 0x0029EC81 File Offset: 0x0029CE81
 	[NullableContext(1)]
 	public void SetFunction(Action<EToggleState> toggleFunction)
 	{
 		this.ToggleFunction = toggleFunction;
 	}
 
-	// Token: 0x0600B691 RID: 46737 RVA: 0x0029455E File Offset: 0x0029275E
+	// Token: 0x06008A7A RID: 35450 RVA: 0x0029EC8A File Offset: 0x0029CE8A
 	public void SetToggleState(EToggleState state)
 	{
 		UUIExtendToggle toggle = this.Toggle;
@@ -75,7 +75,7 @@ public class FilterToggleItem : UiPanelBase
 		toggle.SetToggleStateForce(state, false, false, false);
 	}
 
-	// Token: 0x0600B692 RID: 46738 RVA: 0x00294574 File Offset: 0x00292774
+	// Token: 0x06008A7B RID: 35451 RVA: 0x0029ECA0 File Offset: 0x0029CEA0
 	public UUIItem GetFilterToggleItem()
 	{
 		UUIExtendToggle toggle = this.Toggle;
@@ -86,17 +86,17 @@ public class FilterToggleItem : UiPanelBase
 		return toggle.RootUIComp.Get();
 	}
 
-	// Token: 0x04005281 RID: 21121
+	// Token: 0x0400532C RID: 21292
 	private UUIExtendToggle Toggle;
 
-	// Token: 0x04005282 RID: 21122
+	// Token: 0x0400532D RID: 21293
 	private Action<EToggleState> ToggleFunction;
 
-	// Token: 0x02007E19 RID: 32281
+	// Token: 0x02006FA0 RID: 28576
 	[NullableContext(0)]
 	private class EFilterToggleComp
 	{
-		// Token: 0x0402945F RID: 169055
+		// Token: 0x0402478C RID: 149388
 		public const int Toggle = 0;
 	}
 }

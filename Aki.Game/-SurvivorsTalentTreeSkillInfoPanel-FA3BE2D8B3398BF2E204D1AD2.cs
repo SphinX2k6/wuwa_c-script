@@ -1,38 +1,38 @@
 ﻿using System;
 
-// Token: 0x02002B4F RID: 11087
+// Token: 0x020020CB RID: 8395
 internal enum <SurvivorsTalentTreeSkillInfoPanel>FA3BE2D8B3398BF2E204D1AD2964BF22E55DF1AAB783BE1E47B14194C9EA4C469__EComponentTalentInfo
 {
-	// Token: 0x0400ABA1 RID: 43937
+	// Token: 0x0400AFA7 RID: 44967
 	ItemTag,
-	// Token: 0x0400ABA2 RID: 43938
+	// Token: 0x0400AFA8 RID: 44968
 	TxtTag,
-	// Token: 0x0400ABA3 RID: 43939
+	// Token: 0x0400AFA9 RID: 44969
 	SprIconBg,
-	// Token: 0x0400ABA4 RID: 43940
+	// Token: 0x0400AFAA RID: 44970
 	SprLockBg,
-	// Token: 0x0400ABA5 RID: 43941
+	// Token: 0x0400AFAB RID: 44971
 	SprSkillIcon,
-	// Token: 0x0400ABA6 RID: 43942
+	// Token: 0x0400AFAC RID: 44972
 	TxtSkillName,
-	// Token: 0x0400ABA7 RID: 43943
+	// Token: 0x0400AFAD RID: 44973
 	NodeSkillInfo,
-	// Token: 0x0400ABA8 RID: 43944
+	// Token: 0x0400AFAE RID: 44974
 	TxtSkillInfo,
-	// Token: 0x0400ABA9 RID: 43945
+	// Token: 0x0400AFAF RID: 44975
 	PnlRewardItem,
-	// Token: 0x0400ABAA RID: 43946
+	// Token: 0x0400AFB0 RID: 44976
 	ItemRewardLayout,
-	// Token: 0x0400ABAB RID: 43947
+	// Token: 0x0400AFB1 RID: 44977
 	ItemRewardItem,
-	// Token: 0x0400ABAC RID: 43948
+	// Token: 0x0400AFB2 RID: 44978
 	PnlCost,
-	// Token: 0x0400ABAD RID: 43949
+	// Token: 0x0400AFB3 RID: 44979
 	PnlLockTips,
-	// Token: 0x0400ABAE RID: 43950
+	// Token: 0x0400AFB4 RID: 44980
 	PnlUnLockTips,
-	// Token: 0x0400ABAF RID: 43951
+	// Token: 0x0400AFB5 RID: 44981
 	BtnConfirm,
-	// Token: 0x0400ABB0 RID: 43952
+	// Token: 0x0400AFB6 RID: 44982
 	SpriteTag
 }

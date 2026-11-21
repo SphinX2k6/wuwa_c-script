@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002525 RID: 9509
+	// Token: 0x020027CC RID: 10188
 	public class IActorFaceExpressionType
 	{
-		// Token: 0x0600D40C RID: 54284 RVA: 0x001F67BF File Offset: 0x001F49BF
-		[NullableContext(1)]
+		// Token: 0x0600E16C RID: 57708 RVA: 0x0021221F File Offset: 0x0021041F
 		public static IActorFaceExpressionType Create(IActorFaceExpressionType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003B84 RID: 15236
-		// (get) Token: 0x0600D40D RID: 54285 RVA: 0x001F67DE File Offset: 0x001F49DE
+		// Token: 0x17003E82 RID: 16002
+		// (get) Token: 0x0600E16D RID: 57709 RVA: 0x0021223E File Offset: 0x0021043E
 		public virtual EActorFaceExpressionType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400742B RID: 29739
+		// Token: 0x04007A80 RID: 31360
 		private IActorFaceExpressionType Instance;
 	}
 }

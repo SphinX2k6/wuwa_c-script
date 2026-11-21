@@ -3,13 +3,13 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020015D5 RID: 5589
+	// Token: 0x02001647 RID: 5703
 	public enum TemplateSpawnerConditionListenType
 	{
-		// Token: 0x0400BD89 RID: 48521
+		// Token: 0x0400C27D RID: 49789
 		[OriginalName("Create")]
 		Create,
-		// Token: 0x0400BD8A RID: 48522
+		// Token: 0x0400C27E RID: 49790
 		[OriginalName("Clear")]
 		Clear
 	}

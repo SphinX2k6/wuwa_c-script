@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002306 RID: 8966
+	// Token: 0x02002575 RID: 9589
 	public class EDisplayModeInSkillOpJsonConverter : JsonConverter<EDisplayModeInSkillOp>
 	{
-		// Token: 0x0600C41B RID: 50203 RVA: 0x001CA244 File Offset: 0x001C8444
+		// Token: 0x0600CFEA RID: 53226 RVA: 0x001E210C File Offset: 0x001E030C
 		public override EDisplayModeInSkillOp Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EDisplayModeInSkillOpExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C41C RID: 50204 RVA: 0x001CA268 File Offset: 0x001C8468
+		// Token: 0x0600CFEB RID: 53227 RVA: 0x001E2130 File Offset: 0x001E0330
 		public override void Write(Utf8JsonWriter writer, EDisplayModeInSkillOp value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

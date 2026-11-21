@@ -3,10 +3,10 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050D1 RID: 20689
+	// Token: 0x020040A1 RID: 16545
 	public class FlowActionSetFlowTemplate : FlowActionBase
 	{
-		// Token: 0x06034F2E RID: 216878 RVA: 0x00C8AC70 File Offset: 0x00C88E70
+		// Token: 0x06029E27 RID: 171559 RVA: 0x00BD7F58 File Offset: 0x00BD6158
 		protected override void OnExecute()
 		{
 			if (PlotModel.Instance.PlotConfig.PlotLevel.GetValueOrDefault() != EPlotLevel.LevelC)
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			});
 		}
 
-		// Token: 0x06034F2F RID: 216879 RVA: 0x00C8ACC3 File Offset: 0x00C88EC3
+		// Token: 0x06029E28 RID: 171560 RVA: 0x00BD7FAB File Offset: 0x00BD61AB
 		protected override void OnBackgroundExecute()
 		{
 			this.OnExecute();

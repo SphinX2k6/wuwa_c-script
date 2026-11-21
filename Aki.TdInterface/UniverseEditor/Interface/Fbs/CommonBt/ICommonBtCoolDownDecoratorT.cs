@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.CommonBt
 {
-	// Token: 0x02005EB2 RID: 24242
+	// Token: 0x020064F5 RID: 25845
 	public class ICommonBtCoolDownDecoratorT
 	{
-		// Token: 0x1700B527 RID: 46375
-		// (get) Token: 0x06029921 RID: 170273 RVA: 0x005B3EF8 File Offset: 0x005B20F8
-		// (set) Token: 0x06029922 RID: 170274 RVA: 0x005B3F00 File Offset: 0x005B2100
+		// Token: 0x1700BE92 RID: 48786
+		// (get) Token: 0x0602BFD5 RID: 180181 RVA: 0x005FD3DC File Offset: 0x005FB5DC
+		// (set) Token: 0x0602BFD6 RID: 180182 RVA: 0x005FD3E4 File Offset: 0x005FB5E4
 		public ECommonBtDecoratorType Type { get; set; }
 
-		// Token: 0x1700B528 RID: 46376
-		// (get) Token: 0x06029923 RID: 170275 RVA: 0x005B3F09 File Offset: 0x005B2109
-		// (set) Token: 0x06029924 RID: 170276 RVA: 0x005B3F11 File Offset: 0x005B2111
+		// Token: 0x1700BE93 RID: 48787
+		// (get) Token: 0x0602BFD7 RID: 180183 RVA: 0x005FD3ED File Offset: 0x005FB5ED
+		// (set) Token: 0x0602BFD8 RID: 180184 RVA: 0x005FD3F5 File Offset: 0x005FB5F5
 		public int CoolDown { get; set; }
 
-		// Token: 0x06029925 RID: 170277 RVA: 0x005B3F1A File Offset: 0x005B211A
+		// Token: 0x0602BFD9 RID: 180185 RVA: 0x005FD3FE File Offset: 0x005FB5FE
 		public ICommonBtCoolDownDecoratorT()
 		{
 			this.Type = ECommonBtDecoratorType.Condition;

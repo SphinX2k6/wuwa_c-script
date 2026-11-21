@@ -10,12 +10,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200226F RID: 8815
+// Token: 0x02001753 RID: 5971
 [NullableContext(1)]
 [Nullable(0)]
 public class MotorcycleTaskTabView : UiTabViewBase
 {
-	// Token: 0x0601135E RID: 70494 RVA: 0x00432144 File Offset: 0x00430344
+	// Token: 0x0600E7F4 RID: 59380 RVA: 0x0043ED50 File Offset: 0x0043CF50
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,7 +36,7 @@ public class MotorcycleTaskTabView : UiTabViewBase
 		};
 	}
 
-	// Token: 0x0601135F RID: 70495 RVA: 0x00432248 File Offset: 0x00430448
+	// Token: 0x0600E7F5 RID: 59381 RVA: 0x0043EE54 File Offset: 0x0043D054
 	protected override void OnStart()
 	{
 		this.TabComponent = new TabComponent<MotorcycleTreeTypeTabItem>(base.GetHorizontalLayout(6).RootUIComp.Get(), new Func<UUIItem, int?, MotorcycleTreeTypeTabItem>(this.InitTreeTabItem), new Action<int>(this.ToggleCallBack), base.GetItem(7));
@@ -45,7 +45,7 @@ public class MotorcycleTaskTabView : UiTabViewBase
 		this.TaskLoopScroll = new LoopScrollView<MotorcycleTaskItem, MotorTechTaskNode>(loopScrollViewComponent, gridActor, new Func<MotorcycleTaskItem>(this.InitTaskItem), true);
 	}
 
-	// Token: 0x06011360 RID: 70496 RVA: 0x004322C8 File Offset: 0x004304C8
+	// Token: 0x0600E7F6 RID: 59382 RVA: 0x0043EED4 File Offset: 0x0043D0D4
 	protected override void OnBeforeShow()
 	{
 		UUIInturnAnimController uuiinturnAnimController = base.GetLoopScrollViewComponent(0).Content.Get().GetComponentByClass(UUIInturnAnimController.StaticClass()) as UUIInturnAnimController;
@@ -61,19 +61,19 @@ public class MotorcycleTaskTabView : UiTabViewBase
 		this.OnTabUpdateAsync();
 	}
 
-	// Token: 0x06011361 RID: 70497 RVA: 0x0043233E File Offset: 0x0043053E
+	// Token: 0x0600E7F7 RID: 59383 RVA: 0x0043EF4A File Offset: 0x0043D14A
 	protected override void AddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.MotorDevelopTaskUpdate, new Action(this.OnTaskUpdate));
 	}
 
-	// Token: 0x06011362 RID: 70498 RVA: 0x0043235C File Offset: 0x0043055C
+	// Token: 0x0600E7F8 RID: 59384 RVA: 0x0043EF68 File Offset: 0x0043D168
 	protected override void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.MotorDevelopTaskUpdate, new Action(this.OnTaskUpdate));
 	}
 
-	// Token: 0x06011363 RID: 70499 RVA: 0x0043237A File Offset: 0x0043057A
+	// Token: 0x0600E7F9 RID: 59385 RVA: 0x0043EF86 File Offset: 0x0043D186
 	private void OnTaskUpdate()
 	{
 		new UiAsyncTask("TabUpdate", delegate()
@@ -87,7 +87,7 @@ public class MotorcycleTaskTabView : UiTabViewBase
 		}, null).Run();
 	}
 
-	// Token: 0x06011364 RID: 70500 RVA: 0x0043239C File Offset: 0x0043059C
+	// Token: 0x0600E7FA RID: 59386 RVA: 0x0043EFA8 File Offset: 0x0043D1A8
 	private UniTask OnTabUpdateAsync()
 	{
 		MotorcycleTaskTabView.<OnTabUpdateAsync>d__10 <OnTabUpdateAsync>d__;
@@ -98,7 +98,7 @@ public class MotorcycleTaskTabView : UiTabViewBase
 		return <OnTabUpdateAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011365 RID: 70501 RVA: 0x004323E0 File Offset: 0x004305E0
+	// Token: 0x0600E7FB RID: 59387 RVA: 0x0043EFEC File Offset: 0x0043D1EC
 	private void ToggleCallBack(int index)
 	{
 		List<int> activatedTreeTypeList = MotorcycleDevelopModel.Instance.GetActivatedTreeTypeList();
@@ -113,7 +113,7 @@ public class MotorcycleTaskTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x06011366 RID: 70502 RVA: 0x00432454 File Offset: 0x00430654
+	// Token: 0x0600E7FC RID: 59388 RVA: 0x0043F060 File Offset: 0x0043D260
 	private void RefreshTaskList()
 	{
 		MotorcycleTaskTabView.<>c__DisplayClass12_0 CS$<>8__locals1 = new MotorcycleTaskTabView.<>c__DisplayClass12_0();
@@ -130,7 +130,7 @@ public class MotorcycleTaskTabView : UiTabViewBase
 		}, null).Run();
 	}
 
-	// Token: 0x06011367 RID: 70503 RVA: 0x004324A4 File Offset: 0x004306A4
+	// Token: 0x0600E7FD RID: 59389 RVA: 0x0043F0B0 File Offset: 0x0043D2B0
 	private void RefreshOther()
 	{
 		MotorTechTree? motorTechTreeConfig = MotorConfig.Instance.GetMotorTechTreeConfig(this.TreeType);
@@ -150,25 +150,25 @@ public class MotorcycleTaskTabView : UiTabViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(3), "MotorBike_TechCube_CurrentAvailable", new <>z__ReadOnlySingleElementList<object>(freePointByTree));
 	}
 
-	// Token: 0x06011368 RID: 70504 RVA: 0x004325A4 File Offset: 0x004307A4
+	// Token: 0x0600E7FE RID: 59390 RVA: 0x0043F1B0 File Offset: 0x0043D3B0
 	private MotorcycleTreeTypeTabItem InitTreeTabItem([Nullable(2)] UUIItem uiItem, int? index)
 	{
 		return new MotorcycleTreeTypeTabItem();
 	}
 
-	// Token: 0x06011369 RID: 70505 RVA: 0x004325AB File Offset: 0x004307AB
+	// Token: 0x0600E7FF RID: 59391 RVA: 0x0043F1B7 File Offset: 0x0043D3B7
 	private MotorcycleTaskItem InitTaskItem()
 	{
 		return new MotorcycleTaskItem();
 	}
 
-	// Token: 0x0601136A RID: 70506 RVA: 0x004325B2 File Offset: 0x004307B2
+	// Token: 0x0600E800 RID: 59392 RVA: 0x0043F1BE File Offset: 0x0043D3BE
 	private void OnBtnAskClick()
 	{
 		HelpController.Instance.OpenHelpById(471);
 	}
 
-	// Token: 0x0601136B RID: 70507 RVA: 0x004325C4 File Offset: 0x004307C4
+	// Token: 0x0600E801 RID: 59393 RVA: 0x0043F1D0 File Offset: 0x0043D3D0
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -220,7 +220,7 @@ public class MotorcycleTaskTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x040082FB RID: 33531
+	// Token: 0x04008439 RID: 33849
 	[Nullable(new byte[]
 	{
 		2,
@@ -228,7 +228,7 @@ public class MotorcycleTaskTabView : UiTabViewBase
 	})]
 	private TabComponent<MotorcycleTreeTypeTabItem> TabComponent;
 
-	// Token: 0x040082FC RID: 33532
+	// Token: 0x0400843A RID: 33850
 	[Nullable(new byte[]
 	{
 		2,
@@ -237,38 +237,38 @@ public class MotorcycleTaskTabView : UiTabViewBase
 	})]
 	private LoopScrollView<MotorcycleTaskItem, MotorTechTaskNode> TaskLoopScroll;
 
-	// Token: 0x040082FD RID: 33533
+	// Token: 0x0400843B RID: 33851
 	private int TreeType;
 
-	// Token: 0x020087A0 RID: 34720
+	// Token: 0x02007929 RID: 31017
 	[NullableContext(0)]
 	private class EMotorTaskComponent
 	{
-		// Token: 0x0402C13A RID: 180538
+		// Token: 0x04027452 RID: 160850
 		public const int LoopScrollView = 0;
 
-		// Token: 0x0402C13B RID: 180539
+		// Token: 0x04027453 RID: 160851
 		public const int PnlItem = 1;
 
-		// Token: 0x0402C13C RID: 180540
+		// Token: 0x04027454 RID: 160852
 		public const int TxtProgress = 2;
 
-		// Token: 0x0402C13D RID: 180541
+		// Token: 0x04027455 RID: 160853
 		public const int TxtCurFree = 3;
 
-		// Token: 0x0402C13E RID: 180542
+		// Token: 0x04027456 RID: 160854
 		public const int BtnAsk = 4;
 
-		// Token: 0x0402C13F RID: 180543
+		// Token: 0x04027457 RID: 160855
 		public const int SprProgress = 5;
 
-		// Token: 0x0402C140 RID: 180544
+		// Token: 0x04027458 RID: 160856
 		public const int TabLayout = 6;
 
-		// Token: 0x0402C141 RID: 180545
+		// Token: 0x04027459 RID: 160857
 		public const int TabItem = 7;
 
-		// Token: 0x0402C142 RID: 180546
+		// Token: 0x0402745A RID: 160858
 		public const int TexIcon = 8;
 	}
 }

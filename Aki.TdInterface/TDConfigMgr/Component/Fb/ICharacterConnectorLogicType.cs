@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D29 RID: 3369
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E23 RID: 3619
 	public class ICharacterConnectorLogicType
 	{
-		// Token: 0x06004CDF RID: 19679 RVA: 0x000BF486 File Offset: 0x000BD686
+		// Token: 0x060051FB RID: 20987 RVA: 0x000CABCA File Offset: 0x000C8DCA
 		public static ICharacterConnectorLogicType Create(ICharacterConnectorLogicType? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700184A RID: 6218
-		// (get) Token: 0x06004CE0 RID: 19680 RVA: 0x000BF4A5 File Offset: 0x000BD6A5
+		// Token: 0x170019B0 RID: 6576
+		// (get) Token: 0x060051FC RID: 20988 RVA: 0x000CABE9 File Offset: 0x000C8DE9
 		public virtual ECharacterConnectorLogicType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700184B RID: 6219
-		// (get) Token: 0x06004CE1 RID: 19681 RVA: 0x000BF4B2 File Offset: 0x000BD6B2
+		// Token: 0x170019B1 RID: 6577
+		// (get) Token: 0x060051FD RID: 20989 RVA: 0x000CABF6 File Offset: 0x000C8DF6
 		public virtual IConnectorEffectConfig EffectConfig
 		{
 			get
@@ -48,14 +46,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002BFE RID: 11262
+		// Token: 0x04002EBE RID: 11966
 		private ICharacterConnectorLogicType Instance;
 
-		// Token: 0x04002BFF RID: 11263
+		// Token: 0x04002EBF RID: 11967
 		[Nullable(2)]
 		private IConnectorEffectConfig _EffectConfigCache;
 
-		// Token: 0x04002C00 RID: 11264
+		// Token: 0x04002EC0 RID: 11968
 		private bool _EffectConfigInited;
 	}
 }

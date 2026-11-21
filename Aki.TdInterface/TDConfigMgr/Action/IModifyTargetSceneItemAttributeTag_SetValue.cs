@@ -1,24 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001BEF RID: 7151
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001DDE RID: 7646
 	public class IModifyTargetSceneItemAttributeTag_SetValue
 	{
-		// Token: 0x04005D47 RID: 23879
+		// Token: 0x0400626D RID: 25197
 		public EChangeEntityPrefabPerformanceType Type;
 
-		// Token: 0x04005D48 RID: 23880
+		// Token: 0x0400626E RID: 25198
 		public bool IsAddTag;
 
-		// Token: 0x04005D49 RID: 23881
+		// Token: 0x0400626F RID: 25199
 		public List<int> PerformanceTag;
 
-		// Token: 0x04005D4A RID: 23882
+		// Token: 0x04006270 RID: 25200
 		public List<int> EntityIds;
 	}
 }

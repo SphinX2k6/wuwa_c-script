@@ -5,13 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019F8 RID: 6648
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02001B8B RID: 7051
 	public class IEndState
 	{
-		// Token: 0x06008E71 RID: 36465 RVA: 0x0014D310 File Offset: 0x0014B510
-		[NullableContext(1)]
+		// Token: 0x060095D3 RID: 38355 RVA: 0x0015D180 File Offset: 0x0015B380
 		private IEndState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008E72 RID: 36466 RVA: 0x0014D348 File Offset: 0x0014B548
-		[NullableContext(1)]
+		// Token: 0x060095D4 RID: 38356 RVA: 0x0015D1B8 File Offset: 0x0015B3B8
 		public static IEndState Create([Nullable(2)] IEndState instance)
 		{
 			if (instance == null)
@@ -40,8 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008E73 RID: 36467 RVA: 0x0014D35B File Offset: 0x0014B55B
-		[NullableContext(1)]
+		// Token: 0x060095D5 RID: 38357 RVA: 0x0015D1CB File Offset: 0x0015B3CB
 		public static IEndState CreateFromSetValue([Nullable(2)] IEndState_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008E74 RID: 36468 RVA: 0x0014D36E File Offset: 0x0014B56E
-		[NullableContext(1)]
+		// Token: 0x060095D6 RID: 38358 RVA: 0x0015D1DE File Offset: 0x0015B3DE
 		public IEndState_SetValue ToSetValue()
 		{
 			return new IEndState_SetValue
@@ -64,11 +58,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002D99 RID: 11673
-		// (get) Token: 0x06008E75 RID: 36469 RVA: 0x0014D381 File Offset: 0x0014B581
-		// (set) Token: 0x06008E76 RID: 36470 RVA: 0x0014D3A8 File Offset: 0x0014B5A8
+		// Token: 0x17002FA5 RID: 12197
+		// (get) Token: 0x060095D7 RID: 38359 RVA: 0x0015D1F1 File Offset: 0x0015B3F1
+		// (set) Token: 0x060095D8 RID: 38360 RVA: 0x0015D218 File Offset: 0x0015B418
+		[Nullable(2)]
 		public virtual List<int> StayFlowMontageActors
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -82,16 +78,19 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return pocoInterface.StayFlowMontageActors;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().StayFlowMontageActors = value;
 			}
 		}
 
-		// Token: 0x0400584C RID: 22604
+		// Token: 0x04005CAE RID: 23726
+		[Nullable(2)]
 		protected IEndState FbInstance;
 
-		// Token: 0x0400584D RID: 22605
+		// Token: 0x04005CAF RID: 23727
+		[Nullable(2)]
 		protected IEndState_SetValue PocoInterface;
 	}
 }

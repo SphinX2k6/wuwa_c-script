@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000296 RID: 662
+	// Token: 0x020000D9 RID: 217
 	public sealed class FOnSetCurrentAudioCultureCallback : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x060024FB RID: 9467 RVA: 0x00037262 File Offset: 0x00035462
+		// Token: 0x06000F60 RID: 3936 RVA: 0x00017C67 File Offset: 0x00015E67
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnSetCurrentAudioCultureCallback.StaticFunctionPtr();
 		}
 
-		// Token: 0x060024FC RID: 9468 RVA: 0x0003726E File Offset: 0x0003546E
+		// Token: 0x06000F61 RID: 3937 RVA: 0x00017C73 File Offset: 0x00015E73
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnSetCurrentAudioCultureCallback._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FOnSetCurrentAudioCultureCallback._FunctionPtr;
 		}
 
-		// Token: 0x060024FD RID: 9469 RVA: 0x00037291 File Offset: 0x00035491
+		// Token: 0x06000F62 RID: 3938 RVA: 0x00017C96 File Offset: 0x00015E96
 		public FOnSetCurrentAudioCultureCallback()
 		{
 		}
 
-		// Token: 0x060024FE RID: 9470 RVA: 0x00037299 File Offset: 0x00035499
+		// Token: 0x06000F63 RID: 3939 RVA: 0x00017C9E File Offset: 0x00015E9E
 		[NullableContext(2)]
 		public FOnSetCurrentAudioCultureCallback(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060024FF RID: 9471 RVA: 0x000372A3 File Offset: 0x000354A3
+		// Token: 0x06000F64 RID: 3940 RVA: 0x00017CA8 File Offset: 0x00015EA8
 		public FOnSetCurrentAudioCultureCallback(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06002500 RID: 9472 RVA: 0x000372AE File Offset: 0x000354AE
+		// Token: 0x06000F65 RID: 3941 RVA: 0x00017CB3 File Offset: 0x00015EB3
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<bool>) ?? ((Action<bool>)Delegate.CreateDelegate(typeof(Action<bool>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06002501 RID: 9473 RVA: 0x000372E0 File Offset: 0x000354E0
+		// Token: 0x06000F66 RID: 3942 RVA: 0x00017CE5 File Offset: 0x00015EE5
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<bool> Callback)
 		{
 			if (FOnSetCurrentAudioCultureCallback.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FOnSetCurrentAudioCultureCallback.RegisterId);
 		}
 
-		// Token: 0x06002502 RID: 9474 RVA: 0x0003731C File Offset: 0x0003551C
+		// Token: 0x06000F67 RID: 3943 RVA: 0x00017D20 File Offset: 0x00015F20
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(bool Succeeded)
 		{
 			FOnSetCurrentAudioCultureCallback.__FOnSetCurrentAudioCultureCallback_DelegateParams* ptr = stackalloc FOnSetCurrentAudioCultureCallback.__FOnSetCurrentAudioCultureCallback_DelegateParams[(UIntPtr)16] + 15L / (long)sizeof(FOnSetCurrentAudioCultureCallback.__FOnSetCurrentAudioCultureCallback_DelegateParams) & -16L;
@@ -76,10 +74,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x06002503 RID: 9475 RVA: 0x0003735C File Offset: 0x0003555C
+		// Token: 0x06000F68 RID: 3944 RVA: 0x00017D60 File Offset: 0x00015F60
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<bool> action = target as Action<bool>;
@@ -90,31 +87,31 @@ namespace UnrealEngine
 			action(((FOnSetCurrentAudioCultureCallback.__FOnSetCurrentAudioCultureCallback_DelegateParams*)__Parameters)->Succeeded);
 		}
 
-		// Token: 0x04000E0C RID: 3596
+		// Token: 0x0400036A RID: 874
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04000E0D RID: 3597
+		// Token: 0x0400036B RID: 875
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/AkAudio.OnSetCurrentAudioCultureCallback__DelegateSignature";
 
-		// Token: 0x04000E0E RID: 3598
+		// Token: 0x0400036C RID: 876
 		private static int RegisterId;
 
-		// Token: 0x02002BA1 RID: 11169
+		// Token: 0x02000907 RID: 2311
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
-		protected ref struct __FOnSetCurrentAudioCultureCallback_DelegateParams
+		private ref struct __FOnSetCurrentAudioCultureCallback_DelegateParams
 		{
-			// Token: 0x04016437 RID: 91191
+			// Token: 0x040057E1 RID: 22497
 			[FieldOffset(0)]
 			public bool Succeeded;
 		}
 
-		// Token: 0x02002BA2 RID: 11170
+		// Token: 0x02000908 RID: 2312
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016438 RID: 91192
+			// Token: 0x040057E2 RID: 22498
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

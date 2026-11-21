@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002946 RID: 10566
+	// Token: 0x02002C28 RID: 11304
 	public class IDisableCharacterSectionalSkillOption
 	{
-		// Token: 0x0600EA50 RID: 59984 RVA: 0x0022500A File Offset: 0x0022320A
-		[NullableContext(1)]
+		// Token: 0x0600F8BB RID: 63675 RVA: 0x002425EA File Offset: 0x002407EA
 		public static IDisableCharacterSectionalSkillOption Create(IDisableCharacterSectionalSkillOption? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004986 RID: 18822
-		// (get) Token: 0x0600EA51 RID: 59985 RVA: 0x0022502C File Offset: 0x0022322C
+		// Token: 0x17004D19 RID: 19737
+		// (get) Token: 0x0600F8BC RID: 63676 RVA: 0x0024260C File Offset: 0x0024080C
 		public virtual bool? DisableJump
 		{
 			get
@@ -35,8 +33,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004987 RID: 18823
-		// (get) Token: 0x0600EA52 RID: 59986 RVA: 0x00225064 File Offset: 0x00223264
+		// Token: 0x17004D1A RID: 19738
+		// (get) Token: 0x0600F8BD RID: 63677 RVA: 0x00242644 File Offset: 0x00240844
 		public virtual bool? DisableShowClimb
 		{
 			get
@@ -49,8 +47,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004988 RID: 18824
-		// (get) Token: 0x0600EA53 RID: 59987 RVA: 0x0022509C File Offset: 0x0022329C
+		// Token: 0x17004D1B RID: 19739
+		// (get) Token: 0x0600F8BE RID: 63678 RVA: 0x0024267C File Offset: 0x0024087C
 		public virtual bool? DisableAttack
 		{
 			get
@@ -63,8 +61,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004989 RID: 18825
-		// (get) Token: 0x0600EA54 RID: 59988 RVA: 0x002250D4 File Offset: 0x002232D4
+		// Token: 0x17004D1C RID: 19740
+		// (get) Token: 0x0600F8BF RID: 63679 RVA: 0x002426B4 File Offset: 0x002408B4
 		public virtual bool? DisableDodge
 		{
 			get
@@ -77,8 +75,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700498A RID: 18826
-		// (get) Token: 0x0600EA55 RID: 59989 RVA: 0x0022510C File Offset: 0x0022330C
+		// Token: 0x17004D1D RID: 19741
+		// (get) Token: 0x0600F8C0 RID: 63680 RVA: 0x002426EC File Offset: 0x002408EC
 		public virtual bool? DisableSkill1
 		{
 			get
@@ -91,8 +89,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700498B RID: 18827
-		// (get) Token: 0x0600EA56 RID: 59990 RVA: 0x00225144 File Offset: 0x00223344
+		// Token: 0x17004D1E RID: 19742
+		// (get) Token: 0x0600F8C1 RID: 63681 RVA: 0x00242724 File Offset: 0x00240924
 		public virtual bool? DisableUltimateSkill
 		{
 			get
@@ -105,8 +103,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700498C RID: 18828
-		// (get) Token: 0x0600EA57 RID: 59991 RVA: 0x0022517C File Offset: 0x0022337C
+		// Token: 0x17004D1F RID: 19743
+		// (get) Token: 0x0600F8C2 RID: 63682 RVA: 0x0024275C File Offset: 0x0024095C
 		public virtual bool? DisableExploreInput
 		{
 			get
@@ -119,8 +117,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700498D RID: 18829
-		// (get) Token: 0x0600EA58 RID: 59992 RVA: 0x002251B4 File Offset: 0x002233B4
+		// Token: 0x17004D20 RID: 19744
+		// (get) Token: 0x0600F8C3 RID: 63683 RVA: 0x00242794 File Offset: 0x00240994
 		public virtual bool? DisableSwitchRole1
 		{
 			get
@@ -133,8 +131,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700498E RID: 18830
-		// (get) Token: 0x0600EA59 RID: 59993 RVA: 0x002251F0 File Offset: 0x002233F0
+		// Token: 0x17004D21 RID: 19745
+		// (get) Token: 0x0600F8C4 RID: 63684 RVA: 0x002427D0 File Offset: 0x002409D0
 		public virtual bool? DisableSwitchRole2
 		{
 			get
@@ -147,8 +145,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700498F RID: 18831
-		// (get) Token: 0x0600EA5A RID: 59994 RVA: 0x0022522C File Offset: 0x0022342C
+		// Token: 0x17004D22 RID: 19746
+		// (get) Token: 0x0600F8C5 RID: 63685 RVA: 0x0024280C File Offset: 0x00240A0C
 		public virtual bool? DisableSwitchRole3
 		{
 			get
@@ -161,8 +159,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004990 RID: 18832
-		// (get) Token: 0x0600EA5B RID: 59995 RVA: 0x00225268 File Offset: 0x00223468
+		// Token: 0x17004D23 RID: 19747
+		// (get) Token: 0x0600F8C6 RID: 63686 RVA: 0x00242848 File Offset: 0x00240A48
 		public virtual bool? DisableLock
 		{
 			get
@@ -175,8 +173,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004991 RID: 18833
-		// (get) Token: 0x0600EA5C RID: 59996 RVA: 0x002252A4 File Offset: 0x002234A4
+		// Token: 0x17004D24 RID: 19748
+		// (get) Token: 0x0600F8C7 RID: 63687 RVA: 0x00242884 File Offset: 0x00240A84
 		public virtual bool? DisableAim
 		{
 			get
@@ -189,7 +187,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008130 RID: 33072
+		// Token: 0x0400880C RID: 34828
 		private IDisableCharacterSectionalSkillOption Instance;
 	}
 }

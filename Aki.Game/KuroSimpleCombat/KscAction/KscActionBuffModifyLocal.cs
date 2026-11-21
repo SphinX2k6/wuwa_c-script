@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace KuroSimpleCombat.KscAction
 {
-	// Token: 0x020044E3 RID: 17635
+	// Token: 0x0200302F RID: 12335
 	public class KscActionBuffModifyLocal : KscActionBase
 	{
-		// Token: 0x0602D6DC RID: 186076 RVA: 0x00A40EF9 File Offset: 0x00A3F0F9
+		// Token: 0x0601D426 RID: 119846 RVA: 0x008EED91 File Offset: 0x008ECF91
 		public KscActionBuffModifyLocal(long creatureId, int kscEntityId, bool isAdd, int buffId) : base(creatureId)
 		{
 			this.KscEntityId = kscEntityId;
@@ -19,7 +19,7 @@ namespace KuroSimpleCombat.KscAction
 			this.BuffId = buffId;
 		}
 
-		// Token: 0x0602D6DD RID: 186077 RVA: 0x00A40F18 File Offset: 0x00A3F118
+		// Token: 0x0601D427 RID: 119847 RVA: 0x008EEDB0 File Offset: 0x008ECFB0
 		protected override UniTask RunContent()
 		{
 			KscActionBuffModifyLocal.<RunContent>d__4 <RunContent>d__;
@@ -30,7 +30,7 @@ namespace KuroSimpleCombat.KscAction
 			return <RunContent>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602D6DE RID: 186078 RVA: 0x00A40F5C File Offset: 0x00A3F15C
+		// Token: 0x0601D428 RID: 119848 RVA: 0x008EEDF4 File Offset: 0x008ECFF4
 		private unsafe void ModifyBuffAsync(int kscEntityId)
 		{
 			bool isAdd = this.IsAdd;
@@ -105,13 +105,13 @@ namespace KuroSimpleCombat.KscAction
 			KscUtil.AsyncLoadKscAsset<UKSC_DA_Buff>(loadAssetParams);
 		}
 
-		// Token: 0x040184AE RID: 99502
+		// Token: 0x0400F679 RID: 63097
 		public int KscEntityId;
 
-		// Token: 0x040184AF RID: 99503
+		// Token: 0x0400F67A RID: 63098
 		public bool IsAdd;
 
-		// Token: 0x040184B0 RID: 99504
+		// Token: 0x0400F67B RID: 63099
 		public int BuffId;
 	}
 }

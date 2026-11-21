@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002093 RID: 8339
+// Token: 0x02001569 RID: 5481
 public class HttpConnectResultData
 {
-	// Token: 0x0400794B RID: 31051
+	// Token: 0x04007A44 RID: 31300
 	public bool Success;
 
-	// Token: 0x0400794C RID: 31052
+	// Token: 0x04007A45 RID: 31301
 	[Nullable(2)]
-	public HttpResult HttpResult;
+	public global::HttpResult HttpResult;
 }

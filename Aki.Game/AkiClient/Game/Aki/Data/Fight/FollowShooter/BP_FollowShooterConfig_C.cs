@@ -10,14 +10,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Data.Fight.FollowShooter
 {
-	// Token: 0x02003F77 RID: 16247
+	// Token: 0x02003214 RID: 12820
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Data/Fight/FollowShooter/BP_FollowShooterConfig.BP_FollowShooterConfig_C")]
 	[UnrealStructLayout(672, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 672)]
 	public class BP_FollowShooterConfig_C : UPrimaryDataAsset, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060297C0 RID: 169920 RVA: 0x009C53EB File Offset: 0x009C35EB
+		// Token: 0x0601FFA8 RID: 130984 RVA: 0x0093A247 File Offset: 0x00938447
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_FollowShooterConfig_C._ClassPtr == IntPtr.Zero)
@@ -27,49 +27,49 @@ namespace AkiClient.Game.Aki.Data.Fight.FollowShooter
 			return BP_FollowShooterConfig_C._ClassPtr;
 		}
 
-		// Token: 0x060297C1 RID: 169921 RVA: 0x009C5410 File Offset: 0x009C3610
+		// Token: 0x0601FFA9 RID: 130985 RVA: 0x0093A26C File Offset: 0x0093846C
 		public BP_FollowShooterConfig_C() : this(BuiltinUtils.AllocNativeUObject(BP_FollowShooterConfig_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060297C2 RID: 169922 RVA: 0x009C5438 File Offset: 0x009C3638
+		// Token: 0x0601FFAA RID: 130986 RVA: 0x0093A294 File Offset: 0x00938494
 		public BP_FollowShooterConfig_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_FollowShooterConfig_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x1700638C RID: 25484
-		// (get) Token: 0x060297C3 RID: 169923 RVA: 0x009C546B File Offset: 0x009C366B
-		// (set) Token: 0x060297C4 RID: 169924 RVA: 0x009C547B File Offset: 0x009C367B
+		// Token: 0x17003C8D RID: 15501
+		// (get) Token: 0x0601FFAB RID: 130987 RVA: 0x0093A2C7 File Offset: 0x009384C7
+		// (set) Token: 0x0601FFAC RID: 130988 RVA: 0x0093A2D7 File Offset: 0x009384D7
 		public unsafe bool AutoEnable
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_0) != 0;
+				return *(base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_AutoEnable) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_0) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_AutoEnable) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x1700638D RID: 25485
-		// (get) Token: 0x060297C5 RID: 169925 RVA: 0x009C548C File Offset: 0x009C368C
-		// (set) Token: 0x060297C6 RID: 169926 RVA: 0x009C549C File Offset: 0x009C369C
+		// Token: 0x17003C8E RID: 15502
+		// (get) Token: 0x0601FFAD RID: 130989 RVA: 0x0093A2E8 File Offset: 0x009384E8
+		// (set) Token: 0x0601FFAE RID: 130990 RVA: 0x0093A2F8 File Offset: 0x009384F8
 		public unsafe bool NeedUploadData
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_1) != 0;
+				return *(base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_NeedUploadData) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_1) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_NeedUploadData) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x1700638E RID: 25486
-		// (get) Token: 0x060297C7 RID: 169927 RVA: 0x009C54B0 File Offset: 0x009C36B0
-		// (set) Token: 0x060297C8 RID: 169928 RVA: 0x009C54E9 File Offset: 0x009C36E9
+		// Token: 0x17003C8F RID: 15503
+		// (get) Token: 0x0601FFAF RID: 130991 RVA: 0x0093A30C File Offset: 0x0093850C
+		// (set) Token: 0x0601FFB0 RID: 130992 RVA: 0x0093A345 File Offset: 0x00938545
 		public TArray<SInputAction> NeedInputActions
 		{
 			get
@@ -78,7 +78,7 @@ namespace AkiClient.Game.Aki.Data.Fight.FollowShooter
 				TArray<SInputAction> result;
 				if ((result = this._NeedInputActions) == null)
 				{
-					result = (this._NeedInputActions = new TArray<SInputAction>(base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_2, this));
+					result = (this._NeedInputActions = new TArray<SInputAction>(base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_NeedInputActions, this));
 				}
 				return result;
 			}
@@ -88,9 +88,9 @@ namespace AkiClient.Game.Aki.Data.Fight.FollowShooter
 			}
 		}
 
-		// Token: 0x1700638F RID: 25487
-		// (get) Token: 0x060297C9 RID: 169929 RVA: 0x009C54F8 File Offset: 0x009C36F8
-		// (set) Token: 0x060297CA RID: 169930 RVA: 0x009C5531 File Offset: 0x009C3731
+		// Token: 0x17003C90 RID: 15504
+		// (get) Token: 0x0601FFB1 RID: 130993 RVA: 0x0093A354 File Offset: 0x00938554
+		// (set) Token: 0x0601FFB2 RID: 130994 RVA: 0x0093A38D File Offset: 0x0093858D
 		public TArray<FGameplayTag> AddTagsWhenEnable
 		{
 			get
@@ -99,7 +99,7 @@ namespace AkiClient.Game.Aki.Data.Fight.FollowShooter
 				TArray<FGameplayTag> result;
 				if ((result = this._AddTagsWhenEnable) == null)
 				{
-					result = (this._AddTagsWhenEnable = new TArray<FGameplayTag>(base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_3, this));
+					result = (this._AddTagsWhenEnable = new TArray<FGameplayTag>(base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_AddTagsWhenEnable, this));
 				}
 				return result;
 			}
@@ -109,9 +109,9 @@ namespace AkiClient.Game.Aki.Data.Fight.FollowShooter
 			}
 		}
 
-		// Token: 0x17006390 RID: 25488
-		// (get) Token: 0x060297CB RID: 169931 RVA: 0x009C5540 File Offset: 0x009C3740
-		// (set) Token: 0x060297CC RID: 169932 RVA: 0x009C5579 File Offset: 0x009C3779
+		// Token: 0x17003C91 RID: 15505
+		// (get) Token: 0x0601FFB3 RID: 130995 RVA: 0x0093A39C File Offset: 0x0093859C
+		// (set) Token: 0x0601FFB4 RID: 130996 RVA: 0x0093A3D5 File Offset: 0x009385D5
 		public TArray<FGameplayTag> AddTagsToPlayerWhenPossess
 		{
 			get
@@ -120,7 +120,7 @@ namespace AkiClient.Game.Aki.Data.Fight.FollowShooter
 				TArray<FGameplayTag> result;
 				if ((result = this._AddTagsToPlayerWhenPossess) == null)
 				{
-					result = (this._AddTagsToPlayerWhenPossess = new TArray<FGameplayTag>(base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_4, this));
+					result = (this._AddTagsToPlayerWhenPossess = new TArray<FGameplayTag>(base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_AddTagsToPlayerWhenPossess, this));
 				}
 				return result;
 			}
@@ -130,9 +130,9 @@ namespace AkiClient.Game.Aki.Data.Fight.FollowShooter
 			}
 		}
 
-		// Token: 0x17006391 RID: 25489
-		// (get) Token: 0x060297CD RID: 169933 RVA: 0x009C5588 File Offset: 0x009C3788
-		// (set) Token: 0x060297CE RID: 169934 RVA: 0x009C55C1 File Offset: 0x009C37C1
+		// Token: 0x17003C92 RID: 15506
+		// (get) Token: 0x0601FFB5 RID: 130997 RVA: 0x0093A3E4 File Offset: 0x009385E4
+		// (set) Token: 0x0601FFB6 RID: 130998 RVA: 0x0093A41D File Offset: 0x0093861D
 		public TArray<FGameplayTag> DisableWhenCurrentRoleHasTags
 		{
 			get
@@ -141,7 +141,7 @@ namespace AkiClient.Game.Aki.Data.Fight.FollowShooter
 				TArray<FGameplayTag> result;
 				if ((result = this._DisableWhenCurrentRoleHasTags) == null)
 				{
-					result = (this._DisableWhenCurrentRoleHasTags = new TArray<FGameplayTag>(base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_5, this));
+					result = (this._DisableWhenCurrentRoleHasTags = new TArray<FGameplayTag>(base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_DisableWhenCurrentRoleHasTags, this));
 				}
 				return result;
 			}
@@ -151,9 +151,9 @@ namespace AkiClient.Game.Aki.Data.Fight.FollowShooter
 			}
 		}
 
-		// Token: 0x17006392 RID: 25490
-		// (get) Token: 0x060297CF RID: 169935 RVA: 0x009C55D0 File Offset: 0x009C37D0
-		// (set) Token: 0x060297D0 RID: 169936 RVA: 0x009C5609 File Offset: 0x009C3809
+		// Token: 0x17003C93 RID: 15507
+		// (get) Token: 0x0601FFB7 RID: 130999 RVA: 0x0093A42C File Offset: 0x0093862C
+		// (set) Token: 0x0601FFB8 RID: 131000 RVA: 0x0093A465 File Offset: 0x00938665
 		public TMap<FGameplayTag, FGameplayTagContainer> AddTagsWhenCurrentRoleHasAnyTags
 		{
 			get
@@ -162,7 +162,7 @@ namespace AkiClient.Game.Aki.Data.Fight.FollowShooter
 				TMap<FGameplayTag, FGameplayTagContainer> result;
 				if ((result = this._AddTagsWhenCurrentRoleHasAnyTags) == null)
 				{
-					result = (this._AddTagsWhenCurrentRoleHasAnyTags = new TMap<FGameplayTag, FGameplayTagContainer>(base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_6, this));
+					result = (this._AddTagsWhenCurrentRoleHasAnyTags = new TMap<FGameplayTag, FGameplayTagContainer>(base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_AddTagsWhenCurrentRoleHasAnyTags, this));
 				}
 				return result;
 			}
@@ -172,24 +172,24 @@ namespace AkiClient.Game.Aki.Data.Fight.FollowShooter
 			}
 		}
 
-		// Token: 0x17006393 RID: 25491
-		// (get) Token: 0x060297D1 RID: 169937 RVA: 0x009C5617 File Offset: 0x009C3817
-		// (set) Token: 0x060297D2 RID: 169938 RVA: 0x009C5627 File Offset: 0x009C3827
+		// Token: 0x17003C94 RID: 15508
+		// (get) Token: 0x0601FFB9 RID: 131001 RVA: 0x0093A473 File Offset: 0x00938673
+		// (set) Token: 0x0601FFBA RID: 131002 RVA: 0x0093A483 File Offset: 0x00938683
 		public unsafe int DelayDisappearMillisecond
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_7);
+				return *(base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_DelayDisappearMillisecond);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_7) = value;
+				*(base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_DelayDisappearMillisecond) = value;
 			}
 		}
 
-		// Token: 0x17006394 RID: 25492
-		// (get) Token: 0x060297D3 RID: 169939 RVA: 0x009C5638 File Offset: 0x009C3838
-		// (set) Token: 0x060297D4 RID: 169940 RVA: 0x009C5671 File Offset: 0x009C3871
+		// Token: 0x17003C95 RID: 15509
+		// (get) Token: 0x0601FFBB RID: 131003 RVA: 0x0093A494 File Offset: 0x00938694
+		// (set) Token: 0x0601FFBC RID: 131004 RVA: 0x0093A4CD File Offset: 0x009386CD
 		public SLockOnFollowShooter LockOnConfig
 		{
 			get
@@ -198,49 +198,49 @@ namespace AkiClient.Game.Aki.Data.Fight.FollowShooter
 				SLockOnFollowShooter result;
 				if ((result = this._LockOnConfig) == null)
 				{
-					result = (this._LockOnConfig = new SLockOnFollowShooter(base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_8, this));
+					result = (this._LockOnConfig = new SLockOnFollowShooter(base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_LockOnConfig, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SLockOnFollowShooter.StaticStruct(), base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_8, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SLockOnFollowShooter.StaticStruct(), base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_LockOnConfig, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17006395 RID: 25493
-		// (get) Token: 0x060297D5 RID: 169941 RVA: 0x009C5692 File Offset: 0x009C3892
-		// (set) Token: 0x060297D6 RID: 169942 RVA: 0x009C56A2 File Offset: 0x009C38A2
+		// Token: 0x17003C96 RID: 15510
+		// (get) Token: 0x0601FFBD RID: 131005 RVA: 0x0093A4EE File Offset: 0x009386EE
+		// (set) Token: 0x0601FFBE RID: 131006 RVA: 0x0093A4FE File Offset: 0x009386FE
 		public unsafe int AimType
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_9);
+				return *(base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_AimType);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_9) = value;
+				*(base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_AimType) = value;
 			}
 		}
 
-		// Token: 0x17006396 RID: 25494
-		// (get) Token: 0x060297D7 RID: 169943 RVA: 0x009C56B3 File Offset: 0x009C38B3
-		// (set) Token: 0x060297D8 RID: 169944 RVA: 0x009C56C7 File Offset: 0x009C38C7
+		// Token: 0x17003C97 RID: 15511
+		// (get) Token: 0x0601FFBF RID: 131007 RVA: 0x0093A50F File Offset: 0x0093870F
+		// (set) Token: 0x0601FFC0 RID: 131008 RVA: 0x0093A523 File Offset: 0x00938723
 		public unsafe string SightResId
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_10)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_SightResId)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_10)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_SightResId)), value);
 			}
 		}
 
-		// Token: 0x17006397 RID: 25495
-		// (get) Token: 0x060297D9 RID: 169945 RVA: 0x009C56DC File Offset: 0x009C38DC
-		// (set) Token: 0x060297DA RID: 169946 RVA: 0x009C5715 File Offset: 0x009C3915
+		// Token: 0x17003C98 RID: 15512
+		// (get) Token: 0x0601FFC1 RID: 131009 RVA: 0x0093A538 File Offset: 0x00938738
+		// (set) Token: 0x0601FFC2 RID: 131010 RVA: 0x0093A571 File Offset: 0x00938771
 		public SBornTransform BornTransform
 		{
 			get
@@ -249,19 +249,19 @@ namespace AkiClient.Game.Aki.Data.Fight.FollowShooter
 				SBornTransform result;
 				if ((result = this._BornTransform) == null)
 				{
-					result = (this._BornTransform = new SBornTransform(base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_11, this));
+					result = (this._BornTransform = new SBornTransform(base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_BornTransform, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SBornTransform.StaticStruct(), base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_11, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SBornTransform.StaticStruct(), base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_BornTransform, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17006398 RID: 25496
-		// (get) Token: 0x060297DB RID: 169947 RVA: 0x009C5738 File Offset: 0x009C3938
-		// (set) Token: 0x060297DC RID: 169948 RVA: 0x009C5771 File Offset: 0x009C3971
+		// Token: 0x17003C99 RID: 15513
+		// (get) Token: 0x0601FFC3 RID: 131011 RVA: 0x0093A594 File Offset: 0x00938794
+		// (set) Token: 0x0601FFC4 RID: 131012 RVA: 0x0093A5CD File Offset: 0x009387CD
 		public TArray<SFollowShooterTagConfig> AddTagByCheckCurrentRoleTag
 		{
 			get
@@ -270,7 +270,7 @@ namespace AkiClient.Game.Aki.Data.Fight.FollowShooter
 				TArray<SFollowShooterTagConfig> result;
 				if ((result = this._AddTagByCheckCurrentRoleTag) == null)
 				{
-					result = (this._AddTagByCheckCurrentRoleTag = new TArray<SFollowShooterTagConfig>(base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_12, this));
+					result = (this._AddTagByCheckCurrentRoleTag = new TArray<SFollowShooterTagConfig>(base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_AddTagByCheckCurrentRoleTag, this));
 				}
 				return result;
 			}
@@ -280,24 +280,24 @@ namespace AkiClient.Game.Aki.Data.Fight.FollowShooter
 			}
 		}
 
-		// Token: 0x17006399 RID: 25497
-		// (get) Token: 0x060297DD RID: 169949 RVA: 0x009C577F File Offset: 0x009C397F
-		// (set) Token: 0x060297DE RID: 169950 RVA: 0x009C578F File Offset: 0x009C398F
+		// Token: 0x17003C9A RID: 15514
+		// (get) Token: 0x0601FFC5 RID: 131013 RVA: 0x0093A5DB File Offset: 0x009387DB
+		// (set) Token: 0x0601FFC6 RID: 131014 RVA: 0x0093A5EB File Offset: 0x009387EB
 		public unsafe bool SetEntityEnableAfterMaterialController
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_13) != 0;
+				return *(base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_SetEntityEnableAfterMaterialController) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_13) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_SetEntityEnableAfterMaterialController) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x1700639A RID: 25498
-		// (get) Token: 0x060297DF RID: 169951 RVA: 0x009C57A0 File Offset: 0x009C39A0
-		// (set) Token: 0x060297E0 RID: 169952 RVA: 0x009C57D9 File Offset: 0x009C39D9
+		// Token: 0x17003C9B RID: 15515
+		// (get) Token: 0x0601FFC7 RID: 131015 RVA: 0x0093A5FC File Offset: 0x009387FC
+		// (set) Token: 0x0601FFC8 RID: 131016 RVA: 0x0093A635 File Offset: 0x00938835
 		public FGameplayTagContainer DisableInputWhenHasTags
 		{
 			get
@@ -306,19 +306,19 @@ namespace AkiClient.Game.Aki.Data.Fight.FollowShooter
 				FGameplayTagContainer result;
 				if ((result = this._DisableInputWhenHasTags) == null)
 				{
-					result = (this._DisableInputWhenHasTags = new FGameplayTagContainer(base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_14, this));
+					result = (this._DisableInputWhenHasTags = new FGameplayTagContainer(base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_DisableInputWhenHasTags, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_14, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_DisableInputWhenHasTags, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x1700639B RID: 25499
-		// (get) Token: 0x060297E1 RID: 169953 RVA: 0x009C57FC File Offset: 0x009C39FC
-		// (set) Token: 0x060297E2 RID: 169954 RVA: 0x009C5835 File Offset: 0x009C3A35
+		// Token: 0x17003C9C RID: 15516
+		// (get) Token: 0x0601FFC9 RID: 131017 RVA: 0x0093A658 File Offset: 0x00938858
+		// (set) Token: 0x0601FFCA RID: 131018 RVA: 0x0093A691 File Offset: 0x00938891
 		public TArray<SFollowShooterEnablePriorityInfo> EnablePriority
 		{
 			get
@@ -327,7 +327,7 @@ namespace AkiClient.Game.Aki.Data.Fight.FollowShooter
 				TArray<SFollowShooterEnablePriorityInfo> result;
 				if ((result = this._EnablePriority) == null)
 				{
-					result = (this._EnablePriority = new TArray<SFollowShooterEnablePriorityInfo>(base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_15, this));
+					result = (this._EnablePriority = new TArray<SFollowShooterEnablePriorityInfo>(base.NativePtr + (IntPtr)BP_FollowShooterConfig_C.__PropertyOffset_EnablePriority, this));
 				}
 				return result;
 			}
@@ -337,58 +337,58 @@ namespace AkiClient.Game.Aki.Data.Fight.FollowShooter
 			}
 		}
 
-		// Token: 0x060297E3 RID: 169955 RVA: 0x009C5843 File Offset: 0x009C3A43
+		// Token: 0x0601FFCB RID: 131019 RVA: 0x0093A69F File Offset: 0x0093889F
 		protected BP_FollowShooterConfig_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04015418 RID: 87064
+		// Token: 0x040112BB RID: 70331
 		public new const string __ObjectPath = "/Game/Aki/Data/Fight/FollowShooter/BP_FollowShooterConfig.BP_FollowShooterConfig_C";
 
-		// Token: 0x04015419 RID: 87065
+		// Token: 0x040112BC RID: 70332
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401541A RID: 87066
+		// Token: 0x040112BD RID: 70333
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401541B RID: 87067
-		internal static int __PropertyOffset_0;
+		// Token: 0x040112BE RID: 70334
+		internal static int __PropertyOffset_AutoEnable;
 
-		// Token: 0x0401541C RID: 87068
-		internal static int __PropertyOffset_1;
+		// Token: 0x040112BF RID: 70335
+		internal static int __PropertyOffset_NeedUploadData;
 
-		// Token: 0x0401541D RID: 87069
-		internal static int __PropertyOffset_2;
+		// Token: 0x040112C0 RID: 70336
+		internal static int __PropertyOffset_NeedInputActions;
 
-		// Token: 0x0401541E RID: 87070
+		// Token: 0x040112C1 RID: 70337
 		[Nullable(2)]
 		private TArray<SInputAction> _NeedInputActions;
 
-		// Token: 0x0401541F RID: 87071
-		internal static int __PropertyOffset_3;
+		// Token: 0x040112C2 RID: 70338
+		internal static int __PropertyOffset_AddTagsWhenEnable;
 
-		// Token: 0x04015420 RID: 87072
+		// Token: 0x040112C3 RID: 70339
 		[Nullable(2)]
 		private TArray<FGameplayTag> _AddTagsWhenEnable;
 
-		// Token: 0x04015421 RID: 87073
-		internal static int __PropertyOffset_4;
+		// Token: 0x040112C4 RID: 70340
+		internal static int __PropertyOffset_AddTagsToPlayerWhenPossess;
 
-		// Token: 0x04015422 RID: 87074
+		// Token: 0x040112C5 RID: 70341
 		[Nullable(2)]
 		private TArray<FGameplayTag> _AddTagsToPlayerWhenPossess;
 
-		// Token: 0x04015423 RID: 87075
-		internal static int __PropertyOffset_5;
+		// Token: 0x040112C6 RID: 70342
+		internal static int __PropertyOffset_DisableWhenCurrentRoleHasTags;
 
-		// Token: 0x04015424 RID: 87076
+		// Token: 0x040112C7 RID: 70343
 		[Nullable(2)]
 		private TArray<FGameplayTag> _DisableWhenCurrentRoleHasTags;
 
-		// Token: 0x04015425 RID: 87077
-		internal static int __PropertyOffset_6;
+		// Token: 0x040112C8 RID: 70344
+		internal static int __PropertyOffset_AddTagsWhenCurrentRoleHasAnyTags;
 
-		// Token: 0x04015426 RID: 87078
+		// Token: 0x040112C9 RID: 70345
 		[Nullable(new byte[]
 		{
 			2,
@@ -396,33 +396,33 @@ namespace AkiClient.Game.Aki.Data.Fight.FollowShooter
 		})]
 		private TMap<FGameplayTag, FGameplayTagContainer> _AddTagsWhenCurrentRoleHasAnyTags;
 
-		// Token: 0x04015427 RID: 87079
-		internal static int __PropertyOffset_7;
+		// Token: 0x040112CA RID: 70346
+		internal static int __PropertyOffset_DelayDisappearMillisecond;
 
-		// Token: 0x04015428 RID: 87080
-		internal static int __PropertyOffset_8;
+		// Token: 0x040112CB RID: 70347
+		internal static int __PropertyOffset_LockOnConfig;
 
-		// Token: 0x04015429 RID: 87081
+		// Token: 0x040112CC RID: 70348
 		[Nullable(2)]
 		private SLockOnFollowShooter _LockOnConfig;
 
-		// Token: 0x0401542A RID: 87082
-		internal static int __PropertyOffset_9;
+		// Token: 0x040112CD RID: 70349
+		internal static int __PropertyOffset_AimType;
 
-		// Token: 0x0401542B RID: 87083
-		internal static int __PropertyOffset_10;
+		// Token: 0x040112CE RID: 70350
+		internal static int __PropertyOffset_SightResId;
 
-		// Token: 0x0401542C RID: 87084
-		internal static int __PropertyOffset_11;
+		// Token: 0x040112CF RID: 70351
+		internal static int __PropertyOffset_BornTransform;
 
-		// Token: 0x0401542D RID: 87085
+		// Token: 0x040112D0 RID: 70352
 		[Nullable(2)]
 		private SBornTransform _BornTransform;
 
-		// Token: 0x0401542E RID: 87086
-		internal static int __PropertyOffset_12;
+		// Token: 0x040112D1 RID: 70353
+		internal static int __PropertyOffset_AddTagByCheckCurrentRoleTag;
 
-		// Token: 0x0401542F RID: 87087
+		// Token: 0x040112D2 RID: 70354
 		[Nullable(new byte[]
 		{
 			2,
@@ -430,20 +430,20 @@ namespace AkiClient.Game.Aki.Data.Fight.FollowShooter
 		})]
 		private TArray<SFollowShooterTagConfig> _AddTagByCheckCurrentRoleTag;
 
-		// Token: 0x04015430 RID: 87088
-		internal static int __PropertyOffset_13;
+		// Token: 0x040112D3 RID: 70355
+		internal static int __PropertyOffset_SetEntityEnableAfterMaterialController;
 
-		// Token: 0x04015431 RID: 87089
-		internal static int __PropertyOffset_14;
+		// Token: 0x040112D4 RID: 70356
+		internal static int __PropertyOffset_DisableInputWhenHasTags;
 
-		// Token: 0x04015432 RID: 87090
+		// Token: 0x040112D5 RID: 70357
 		[Nullable(2)]
 		private FGameplayTagContainer _DisableInputWhenHasTags;
 
-		// Token: 0x04015433 RID: 87091
-		internal static int __PropertyOffset_15;
+		// Token: 0x040112D6 RID: 70358
+		internal static int __PropertyOffset_EnablePriority;
 
-		// Token: 0x04015434 RID: 87092
+		// Token: 0x040112D7 RID: 70359
 		[Nullable(2)]
 		private TArray<SFollowShooterEnablePriorityInfo> _EnablePriority;
 	}

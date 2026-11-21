@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x02004421 RID: 17441
+	// Token: 0x02004889 RID: 18569
 	public enum EFindSunSpiritGridType : byte
 	{
-		// Token: 0x0400C39C RID: 50076
+		// Token: 0x0400CDC9 RID: 52681
 		Empty,
-		// Token: 0x0400C39D RID: 50077
+		// Token: 0x0400CDCA RID: 52682
 		NormalFloor,
-		// Token: 0x0400C39E RID: 50078
+		// Token: 0x0400CDCB RID: 52683
 		MutableFloor,
-		// Token: 0x0400C39F RID: 50079
+		// Token: 0x0400CDCC RID: 52684
 		BeginFloor,
-		// Token: 0x0400C3A0 RID: 50080
+		// Token: 0x0400CDCD RID: 52685
 		EndFloor
 	}
 }

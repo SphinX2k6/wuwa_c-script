@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Launcher.DiffPatch.Data
 {
-	// Token: 0x02000221 RID: 545
+	// Token: 0x02000226 RID: 550
 	public class PatchManifestJson
 	{
-		// Token: 0x040008CF RID: 2255
+		// Token: 0x04000910 RID: 2320
 		[Nullable(1)]
 		public PatchManifest DiffPatch;
 	}

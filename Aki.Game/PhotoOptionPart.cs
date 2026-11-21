@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020025AA RID: 9642
+// Token: 0x02001A95 RID: 6805
 public class PhotoOptionPart : IPhotoSnapshotPart
 {
-	// Token: 0x06013855 RID: 79957 RVA: 0x004E0974 File Offset: 0x004DEB74
+	// Token: 0x06010D37 RID: 68919 RVA: 0x004EF4A8 File Offset: 0x004ED6A8
 	public void Capture()
 	{
 		this.SetUpValueMap.Clear();
@@ -18,7 +18,7 @@ public class PhotoOptionPart : IPhotoSnapshotPart
 		}
 	}
 
-	// Token: 0x06013856 RID: 79958 RVA: 0x004E09F8 File Offset: 0x004DEBF8
+	// Token: 0x06010D38 RID: 68920 RVA: 0x004EF52C File Offset: 0x004ED72C
 	public float? TryGetValue(EPhotoSetupValueType valueType)
 	{
 		float value;
@@ -29,12 +29,12 @@ public class PhotoOptionPart : IPhotoSnapshotPart
 		return new float?(value);
 	}
 
-	// Token: 0x06013857 RID: 79959 RVA: 0x004E0A25 File Offset: 0x004DEC25
+	// Token: 0x06010D39 RID: 68921 RVA: 0x004EF559 File Offset: 0x004ED759
 	public void Apply()
 	{
 	}
 
-	// Token: 0x04009366 RID: 37734
+	// Token: 0x040094BE RID: 38078
 	[Nullable(1)]
 	public readonly Dictionary<EPhotoSetupValueType, float> SetUpValueMap = new Dictionary<EPhotoSetupValueType, float>();
 }

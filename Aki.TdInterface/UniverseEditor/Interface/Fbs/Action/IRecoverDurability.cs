@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006E16 RID: 28182
+	// Token: 0x02007591 RID: 30097
 	public struct IRecoverDurability : IFlatbufferObject
 	{
-		// Token: 0x1700D20F RID: 53775
-		// (get) Token: 0x06031CAE RID: 203950 RVA: 0x006BDC0A File Offset: 0x006BBE0A
+		// Token: 0x1700DD57 RID: 56663
+		// (get) Token: 0x06034CAA RID: 216234 RVA: 0x007192F2 File Offset: 0x007174F2
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031CAF RID: 203951 RVA: 0x006BDC17 File Offset: 0x006BBE17
+		// Token: 0x06034CAB RID: 216235 RVA: 0x007192FF File Offset: 0x007174FF
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06031CB0 RID: 203952 RVA: 0x006BDC20 File Offset: 0x006BBE20
+		// Token: 0x06034CAC RID: 216236 RVA: 0x00719308 File Offset: 0x00717508
 		public static IRecoverDurability GetRootAsIRecoverDurability(ByteBuffer _bb)
 		{
 			return IRecoverDurability.GetRootAsIRecoverDurability(_bb, default(IRecoverDurability));
 		}
 
-		// Token: 0x06031CB1 RID: 203953 RVA: 0x006BDC3C File Offset: 0x006BBE3C
+		// Token: 0x06034CAD RID: 216237 RVA: 0x00719324 File Offset: 0x00717524
 		public static IRecoverDurability GetRootAsIRecoverDurability(ByteBuffer _bb, IRecoverDurability obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06031CB2 RID: 203954 RVA: 0x006BDC59 File Offset: 0x006BBE59
+		// Token: 0x06034CAE RID: 216238 RVA: 0x00719341 File Offset: 0x00717541
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06031CB3 RID: 203955 RVA: 0x006BDC68 File Offset: 0x006BBE68
+		// Token: 0x06034CAF RID: 216239 RVA: 0x00719350 File Offset: 0x00717550
 		public IRecoverDurability __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D210 RID: 53776
-		// (get) Token: 0x06031CB4 RID: 203956 RVA: 0x006BDC78 File Offset: 0x006BBE78
+		// Token: 0x1700DD58 RID: 56664
+		// (get) Token: 0x06034CB0 RID: 216240 RVA: 0x00719360 File Offset: 0x00717560
 		public int EntityId
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031CB5 RID: 203957 RVA: 0x006BDCB4 File Offset: 0x006BBEB4
+		// Token: 0x06034CB1 RID: 216241 RVA: 0x0071939C File Offset: 0x0071759C
 		public static Offset<IRecoverDurability> CreateIRecoverDurability(FlatBufferBuilder builder, int EntityId = 0)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IRecoverDurability.EndIRecoverDurability(builder);
 		}
 
-		// Token: 0x06031CB6 RID: 203958 RVA: 0x006BDCCA File Offset: 0x006BBECA
+		// Token: 0x06034CB2 RID: 216242 RVA: 0x007193B2 File Offset: 0x007175B2
 		public static void StartIRecoverDurability(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06031CB7 RID: 203959 RVA: 0x006BDCD3 File Offset: 0x006BBED3
+		// Token: 0x06034CB3 RID: 216243 RVA: 0x007193BB File Offset: 0x007175BB
 		public static void AddEntityId(FlatBufferBuilder builder, int entityId)
 		{
 			builder.AddInt(0, entityId, 0);
 		}
 
-		// Token: 0x06031CB8 RID: 203960 RVA: 0x006BDCDE File Offset: 0x006BBEDE
+		// Token: 0x06034CB4 RID: 216244 RVA: 0x007193C6 File Offset: 0x007175C6
 		public static Offset<IRecoverDurability> EndIRecoverDurability(FlatBufferBuilder builder)
 		{
 			return new Offset<IRecoverDurability>(builder.EndTable());
 		}
 
-		// Token: 0x06031CB9 RID: 203961 RVA: 0x006BDCEC File Offset: 0x006BBEEC
+		// Token: 0x06034CB5 RID: 216245 RVA: 0x007193D4 File Offset: 0x007175D4
 		public IRecoverDurabilityT UnPack()
 		{
 			IRecoverDurabilityT recoverDurabilityT = new IRecoverDurabilityT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return recoverDurabilityT;
 		}
 
-		// Token: 0x06031CBA RID: 203962 RVA: 0x006BDD07 File Offset: 0x006BBF07
+		// Token: 0x06034CB6 RID: 216246 RVA: 0x007193EF File Offset: 0x007175EF
 		public void UnPackTo(IRecoverDurabilityT _o)
 		{
 			_o.EntityId = this.EntityId;
 		}
 
-		// Token: 0x06031CBB RID: 203963 RVA: 0x006BDD18 File Offset: 0x006BBF18
+		// Token: 0x06034CB7 RID: 216247 RVA: 0x00719400 File Offset: 0x00717600
 		public static Offset<IRecoverDurability> Pack(FlatBufferBuilder builder, IRecoverDurabilityT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IRecoverDurability.CreateIRecoverDurability(builder, _o.EntityId);
 		}
 
-		// Token: 0x040117FE RID: 71678
+		// Token: 0x0401277A RID: 75642
 		private Table __p;
 	}
 }

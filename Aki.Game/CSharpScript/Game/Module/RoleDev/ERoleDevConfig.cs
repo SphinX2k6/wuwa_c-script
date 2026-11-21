@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.RoleDev
 {
-	// Token: 0x02004CAC RID: 19628
+	// Token: 0x02003C5D RID: 15453
 	public enum ERoleDevConfig
 	{
-		// Token: 0x0401AFF5 RID: 110581
+		// Token: 0x04015956 RID: 88406
 		MaxLevel = 90
 	}
 }

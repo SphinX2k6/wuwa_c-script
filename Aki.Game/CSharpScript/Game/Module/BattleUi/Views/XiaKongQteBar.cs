@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E2C RID: 24108
+	// Token: 0x02004E11 RID: 19985
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class XiaKongQteBar : UiPanelBase
 	{
-		// Token: 0x0603D4FD RID: 251133 RVA: 0x00EC753C File Offset: 0x00EC573C
+		// Token: 0x0603248D RID: 205965 RVA: 0x00E18AA8 File Offset: 0x00E16CA8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603D4FE RID: 251134 RVA: 0x00EC75A5 File Offset: 0x00EC57A5
+		// Token: 0x0603248E RID: 205966 RVA: 0x00E18B11 File Offset: 0x00E16D11
 		[NullableContext(1)]
 		public void Init(XiaKongQteSkillItem skillItem)
 		{
@@ -34,13 +34,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SkillItem.SetEnable(this.ClickTipVisible);
 		}
 
-		// Token: 0x0603D4FF RID: 251135 RVA: 0x00EC75BF File Offset: 0x00EC57BF
+		// Token: 0x0603248F RID: 205967 RVA: 0x00E18B2B File Offset: 0x00E16D2B
 		public void Refresh(SpecialSkillXiaKong specialSkill)
 		{
 			this.SpecialSkill = specialSkill;
 		}
 
-		// Token: 0x0603D500 RID: 251136 RVA: 0x00EC75C8 File Offset: 0x00EC57C8
+		// Token: 0x06032490 RID: 205968 RVA: 0x00E18B34 File Offset: 0x00E16D34
 		protected override void OnStart()
 		{
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ClickTipVisible = false;
 		}
 
-		// Token: 0x0603D501 RID: 251137 RVA: 0x00EC7600 File Offset: 0x00EC5800
+		// Token: 0x06032491 RID: 205969 RVA: 0x00E18B6C File Offset: 0x00E16D6C
 		protected override void OnBeforeDestroy()
 		{
 			if (this.LevelSequencePlayer != null)
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D502 RID: 251138 RVA: 0x00EC7624 File Offset: 0x00EC5824
+		// Token: 0x06032492 RID: 205970 RVA: 0x00E18B90 File Offset: 0x00E16D90
 		public void Tick(float delta)
 		{
 			if (this.SpecialSkill == null)
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetClickTipVisible(false);
 		}
 
-		// Token: 0x0603D503 RID: 251139 RVA: 0x00EC76B0 File Offset: 0x00EC58B0
+		// Token: 0x06032493 RID: 205971 RVA: 0x00E18C1C File Offset: 0x00E16E1C
 		private void SetVisible(bool visible)
 		{
 			if (this.IsVisible == visible)
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			skillItem.SetActive(visible);
 		}
 
-		// Token: 0x0603D504 RID: 251140 RVA: 0x00EC76DC File Offset: 0x00EC58DC
+		// Token: 0x06032494 RID: 205972 RVA: 0x00E18C48 File Offset: 0x00E16E48
 		private void SetClickTipVisible(bool visible)
 		{
 			if (this.ClickTipVisible == visible)
@@ -143,28 +143,28 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401FF9F RID: 130975
+		// Token: 0x0401AA66 RID: 109158
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401FFA0 RID: 130976
+		// Token: 0x0401AA67 RID: 109159
 		private XiaKongQteSkillItem SkillItem;
 
-		// Token: 0x0401FFA1 RID: 130977
+		// Token: 0x0401AA68 RID: 109160
 		private SpecialSkillXiaKong SpecialSkill;
 
-		// Token: 0x0401FFA2 RID: 130978
+		// Token: 0x0401AA69 RID: 109161
 		private bool IsVisible = true;
 
-		// Token: 0x0401FFA3 RID: 130979
+		// Token: 0x0401AA6A RID: 109162
 		private bool ClickTipVisible;
 
-		// Token: 0x0200C1AC RID: 49580
+		// Token: 0x0200ABBB RID: 43963
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x0403A865 RID: 239717
+			// Token: 0x04035257 RID: 217687
 			BarTexture,
-			// Token: 0x0403A866 RID: 239718
+			// Token: 0x04035258 RID: 217688
 			BarLightTexture
 		}
 	}

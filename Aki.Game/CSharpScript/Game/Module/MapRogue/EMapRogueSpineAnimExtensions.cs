@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x02005640 RID: 22080
+	// Token: 0x02004616 RID: 17942
 	public static class EMapRogueSpineAnimExtensions
 	{
-		// Token: 0x0603823B RID: 229947 RVA: 0x00D4C490 File Offset: 0x00D4A690
+		// Token: 0x0602D139 RID: 184633 RVA: 0x00C9A1D8 File Offset: 0x00C983D8
 		public static string ToEnumString(this EMapRogueSpineAnim value)
 		{
 			string result;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return result;
 		}
 
-		// Token: 0x0603823C RID: 229948 RVA: 0x00D4C4E4 File Offset: 0x00D4A6E4
+		// Token: 0x0602D13A RID: 184634 RVA: 0x00C9A22C File Offset: 0x00C9842C
 		public static EMapRogueSpineAnim FromString(string name)
 		{
 			EMapRogueSpineAnim result;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return result;
 		}
 
-		// Token: 0x0603823D RID: 229949 RVA: 0x00D4C510 File Offset: 0x00D4A710
+		// Token: 0x0602D13B RID: 184635 RVA: 0x00C9A258 File Offset: 0x00C98458
 		public static bool TryFromString(string name, out EMapRogueSpineAnim value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			return true;
 		}
 
-		// Token: 0x0603823E RID: 229950 RVA: 0x00D4C578 File Offset: 0x00D4A778
+		// Token: 0x0602D13C RID: 184636 RVA: 0x00C9A2C0 File Offset: 0x00C984C0
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x0603823F RID: 229951 RVA: 0x00D4C5A0 File Offset: 0x00D4A7A0
+		// Token: 0x0602D13D RID: 184637 RVA: 0x00C9A2E8 File Offset: 0x00C984E8
 		public static EMapRogueSpineAnim[] GetValues()
 		{
 			return new EMapRogueSpineAnim[]
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x06038240 RID: 229952 RVA: 0x00D4C5B3 File Offset: 0x00D4A7B3
+		// Token: 0x0602D13E RID: 184638 RVA: 0x00C9A2FB File Offset: 0x00C984FB
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -2,13 +2,13 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 {
-	// Token: 0x02006693 RID: 26259
+	// Token: 0x020055E3 RID: 21987
 	public class IMoveRoleCommandParams
 	{
-		// Token: 0x040223B1 RID: 140209
+		// Token: 0x0401CC0A RID: 117770
 		public EDropCatchRoleDirection Direction;
 
-		// Token: 0x040223B2 RID: 140210
+		// Token: 0x0401CC0B RID: 117771
 		public float Duration;
 	}
 }

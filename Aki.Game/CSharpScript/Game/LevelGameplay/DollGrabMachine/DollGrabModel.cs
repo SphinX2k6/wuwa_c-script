@@ -16,13 +16,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 {
-	// Token: 0x02006ECC RID: 28364
+	// Token: 0x0200604C RID: 24652
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DollGrabModel : ModelBase
 	{
-		// Token: 0x17009ACE RID: 39630
-		// (get) Token: 0x06045126 RID: 282918 RVA: 0x01110B75 File Offset: 0x0110ED75
+		// Token: 0x17007005 RID: 28677
+		// (get) Token: 0x0603B2C7 RID: 242375 RVA: 0x010BAC51 File Offset: 0x010B8E51
 		public float DangerousCountdown
 		{
 			get
@@ -31,8 +31,8 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x17009ACF RID: 39631
-		// (get) Token: 0x06045127 RID: 282919 RVA: 0x01110B7D File Offset: 0x0110ED7D
+		// Token: 0x17007006 RID: 28678
+		// (get) Token: 0x0603B2C8 RID: 242376 RVA: 0x010BAC59 File Offset: 0x010B8E59
 		public float ClawReleaseStateCanMoveTime
 		{
 			get
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x06045128 RID: 282920 RVA: 0x01110B88 File Offset: 0x0110ED88
+		// Token: 0x0603B2C9 RID: 242377 RVA: 0x010BAC64 File Offset: 0x010B8E64
 		protected unsafe override bool OnInit()
 		{
 			Dictionary<string, List<HashSet<int>>> dictionary = new Dictionary<string, List<HashSet<int>>>();
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			return true;
 		}
 
-		// Token: 0x06045129 RID: 282921 RVA: 0x01110CCC File Offset: 0x0110EECC
+		// Token: 0x0603B2CA RID: 242378 RVA: 0x010BADA8 File Offset: 0x010B8FA8
 		public void LoadDollGrabMachineGlobalConfig()
 		{
 			if (this.DollGrabMachineGlobalConfig != null)
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}, "js_undefined");
 		}
 
-		// Token: 0x0604512A RID: 282922 RVA: 0x01110D0C File Offset: 0x0110EF0C
+		// Token: 0x0603B2CB RID: 242379 RVA: 0x010BADE8 File Offset: 0x010B8FE8
 		public void ExecuteAdjustPlayerCamera(SceneItemActorComponent actorComp, DollGrabCameraConfig cameraInfo, string reason, [Nullable(2)] Action<ELevelEventState> finishCallback = null)
 		{
 			MathUtils.Instance.CommonTempVector.FromUeVector(cameraInfo.CameraLocation);
@@ -155,13 +155,13 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x0604512B RID: 282923 RVA: 0x01110E78 File Offset: 0x0110F078
+		// Token: 0x0603B2CC RID: 242380 RVA: 0x010BAF54 File Offset: 0x010B9154
 		public void ExecuteRestorePlayerCamera(string reason, [Nullable(2)] Action finishCallback = null)
 		{
 			CameraController.Instance.MainModel.SceneCamera.PlayerComponent.ExitGameplaySubCamera(reason, finishCallback, false);
 		}
 
-		// Token: 0x0604512C RID: 282924 RVA: 0x01110E98 File Offset: 0x0110F098
+		// Token: 0x0603B2CD RID: 242381 RVA: 0x010BAF74 File Offset: 0x010B9174
 		[NullableContext(2)]
 		public void LoadDollGrabClawSequence(Action finishCallback)
 		{
@@ -207,7 +207,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			this.LoadLightGroupSequence(this.DollGrabMachineGlobalConfig.开启玩法灯光.ToAssetPathName(), EDollGrabMachineLightGroupState.BeforePlay);
 		}
 
-		// Token: 0x0604512D RID: 282925 RVA: 0x01110F84 File Offset: 0x0110F184
+		// Token: 0x0603B2CE RID: 242382 RVA: 0x010BB060 File Offset: 0x010B9260
 		public void SetDollMapInfo(IReadOnlyList<SceneDollDeliveryInfo> deliveryInfos, IReadOnlyList<SceneUnlimitedScoreInfo> scoreInfos)
 		{
 			this.DollMapInfoData.Clear();
@@ -259,7 +259,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x0604512E RID: 282926 RVA: 0x011111F4 File Offset: 0x0110F3F4
+		// Token: 0x0603B2CF RID: 242383 RVA: 0x010BB2D0 File Offset: 0x010B94D0
 		private EDollDeliveryState GetDollDeliveryState(int mapId, string belongType, int itemId)
 		{
 			InventoryModel instance = InventoryModel.Instance;
@@ -284,7 +284,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			return EDollDeliveryState.Delivered;
 		}
 
-		// Token: 0x0604512F RID: 282927 RVA: 0x0111124C File Offset: 0x0110F44C
+		// Token: 0x0603B2D0 RID: 242384 RVA: 0x010BB328 File Offset: 0x010B9528
 		[NullableContext(2)]
 		private DollGrabMachineComponent GetDollGrabMachineComponentByShowCaseEntityId(int? entityId, int mapId)
 		{
@@ -296,7 +296,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			return this.GetDollGrabMachineComponentByEntityId(dollShowCaseComponentByEntityId.BindInfiniteModeDollGrabEntityId, mapId);
 		}
 
-		// Token: 0x06045130 RID: 282928 RVA: 0x01111274 File Offset: 0x0110F474
+		// Token: 0x0603B2D1 RID: 242385 RVA: 0x010BB350 File Offset: 0x010B9550
 		public bool CanDeliveryDollByAreaId(int mapId, int entityId)
 		{
 			Dictionary<string, List<HashSet<int>>> dictionary;
@@ -339,7 +339,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			return false;
 		}
 
-		// Token: 0x06045131 RID: 282929 RVA: 0x0111137C File Offset: 0x0110F57C
+		// Token: 0x0603B2D2 RID: 242386 RVA: 0x010BB458 File Offset: 0x010B9658
 		public bool IsDollGrabMachineDeliveryComplete(int mapId, int entityId)
 		{
 			DollGrabMachineComponent dollGrabMachineComponentByShowCaseEntityId = this.GetDollGrabMachineComponentByShowCaseEntityId(new int?(entityId), mapId);
@@ -373,7 +373,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			return valueOrDefault.CurrentScore >= valueOrDefault2;
 		}
 
-		// Token: 0x06045132 RID: 282930 RVA: 0x01111410 File Offset: 0x0110F610
+		// Token: 0x0603B2D3 RID: 242387 RVA: 0x010BB4EC File Offset: 0x010B96EC
 		public int GetDollGrabMachineDeliveryScore(int mapId, int entityId)
 		{
 			DollGrabMachineComponent dollGrabMachineComponentByShowCaseEntityId = this.GetDollGrabMachineComponentByShowCaseEntityId(new int?(entityId), mapId);
@@ -396,7 +396,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			return num2.GetValueOrDefault();
 		}
 
-		// Token: 0x06045133 RID: 282931 RVA: 0x0111146C File Offset: 0x0110F66C
+		// Token: 0x0603B2D4 RID: 242388 RVA: 0x010BB548 File Offset: 0x010B9748
 		public CommonLevelPlayPanelRewardData GetDollGrabMachineReward(int mapId, int entityId)
 		{
 			DollGrabMachineComponent dollGrabMachineComponentByShowCaseEntityId = this.GetDollGrabMachineComponentByShowCaseEntityId(new int?(entityId), mapId);
@@ -447,7 +447,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			};
 		}
 
-		// Token: 0x06045134 RID: 282932 RVA: 0x01111590 File Offset: 0x0110F790
+		// Token: 0x0603B2D5 RID: 242389 RVA: 0x010BB66C File Offset: 0x010B986C
 		public void ToggleCancelShadowCache(bool toggle)
 		{
 			if (toggle)
@@ -462,7 +462,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			UKuroStaticLibrary.SetConsoleVariableWithCurrentPriority_String("r.Shadow.DirectLightCacheNeedOriginChange", this.DirectLightCacheNeedOriginChange);
 		}
 
-		// Token: 0x06045135 RID: 282933 RVA: 0x01111600 File Offset: 0x0110F800
+		// Token: 0x0603B2D6 RID: 242390 RVA: 0x010BB6DC File Offset: 0x010B98DC
 		private void LoadLightGroupSequence(string path, EDollGrabMachineLightGroupState state)
 		{
 			ResourceSystem.Instance.LoadAsync<ULevelSequence>(path, delegate([Nullable(2)] ULevelSequence sequence, string _)
@@ -481,7 +481,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}, 100, "js_undefined");
 		}
 
-		// Token: 0x06045136 RID: 282934 RVA: 0x0111164C File Offset: 0x0110F84C
+		// Token: 0x0603B2D7 RID: 242391 RVA: 0x010BB728 File Offset: 0x010B9928
 		[NullableContext(2)]
 		private DollGrabShowcaseComponent GetDollShowCaseComponentByEntityId(int? entityId, int mapId)
 		{
@@ -493,7 +493,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			return TdUtils.GetComponent<DollGrabShowcaseComponent>(completeEntityData.ComponentsData, EConfigComponent.DollGrabShowcaseComponent);
 		}
 
-		// Token: 0x06045137 RID: 282935 RVA: 0x01111680 File Offset: 0x0110F880
+		// Token: 0x0603B2D8 RID: 242392 RVA: 0x010BB75C File Offset: 0x010B995C
 		[NullableContext(2)]
 		private DollGrabMachineComponent GetDollGrabMachineComponentByEntityId(int? entityId, int mapId)
 		{
@@ -505,8 +505,8 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			return TdUtils.GetComponent<DollGrabMachineComponent>(completeEntityData.ComponentsData, EConfigComponent.DollGrabMachineComponent);
 		}
 
-		// Token: 0x17009AD0 RID: 39632
-		// (get) Token: 0x06045138 RID: 282936 RVA: 0x011116B4 File Offset: 0x0110F8B4
+		// Token: 0x17007007 RID: 28679
+		// (get) Token: 0x0603B2D9 RID: 242393 RVA: 0x010BB790 File Offset: 0x010B9990
 		public static DollGrabModel Instance
 		{
 			get
@@ -515,7 +515,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			}
 		}
 
-		// Token: 0x06045139 RID: 282937 RVA: 0x011116BB File Offset: 0x0110F8BB
+		// Token: 0x0603B2DA RID: 242394 RVA: 0x010BB797 File Offset: 0x010B9997
 		public static DollGrabModel GetOrCreateInstance()
 		{
 			if (DollGrabModel._Instance == null)
@@ -525,7 +525,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			return DollGrabModel._Instance;
 		}
 
-		// Token: 0x0604513A RID: 282938 RVA: 0x011116CF File Offset: 0x0110F8CF
+		// Token: 0x0603B2DB RID: 242395 RVA: 0x010BB7AB File Offset: 0x010B99AB
 		public static bool CreateInstance()
 		{
 			if (DollGrabModel._Instance != null)
@@ -536,63 +536,63 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 			return true;
 		}
 
-		// Token: 0x0604513B RID: 282939 RVA: 0x011116E5 File Offset: 0x0110F8E5
+		// Token: 0x0603B2DC RID: 242396 RVA: 0x010BB7C1 File Offset: 0x010B99C1
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0604513C RID: 282940 RVA: 0x011116E7 File Offset: 0x0110F8E7
+		// Token: 0x0603B2DD RID: 242397 RVA: 0x010BB7C3 File Offset: 0x010B99C3
 		public static void ResetStaticDefaultValue()
 		{
 			DollGrabModel._Instance = null;
 		}
 
-		// Token: 0x0604513D RID: 282941 RVA: 0x011116EF File Offset: 0x0110F8EF
+		// Token: 0x0603B2DE RID: 242398 RVA: 0x010BB7CB File Offset: 0x010B99CB
 		static DollGrabModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(DollGrabModel.CreateStaticDefaultValue), new Action(DollGrabModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04023F78 RID: 147320
+		// Token: 0x0401F22B RID: 127531
 		[Nullable(2)]
 		public BP_DollGrabMachineGlobalConfig_C DollGrabMachineGlobalConfig;
 
-		// Token: 0x04023F79 RID: 147321
+		// Token: 0x0401F22C RID: 127532
 		[Nullable(2)]
 		public ULevelSequence DollGrabClawSequence;
 
-		// Token: 0x04023F7A RID: 147322
+		// Token: 0x0401F22D RID: 127533
 		[Nullable(2)]
 		public ULevelSequence DollGrabShowSequence;
 
-		// Token: 0x04023F7B RID: 147323
+		// Token: 0x0401F22E RID: 127534
 		private float DangerousCountdownInternal;
 
-		// Token: 0x04023F7C RID: 147324
+		// Token: 0x0401F22F RID: 127535
 		public readonly Dictionary<EDollGrabMachineLightGroupState, ULevelSequence> LightGroupSequenceMap = new Dictionary<EDollGrabMachineLightGroupState, ULevelSequence>();
 
-		// Token: 0x04023F7D RID: 147325
+		// Token: 0x0401F230 RID: 127536
 		private readonly Dictionary<int, Dictionary<string, DollMapInfo>> DollMapInfoData = new Dictionary<int, Dictionary<string, DollMapInfo>>();
 
-		// Token: 0x04023F7E RID: 147326
+		// Token: 0x0401F231 RID: 127537
 		private readonly Dictionary<int, Dictionary<string, List<HashSet<int>>>> DollCacheData = new Dictionary<int, Dictionary<string, List<HashSet<int>>>>();
 
-		// Token: 0x04023F7F RID: 147327
+		// Token: 0x0401F232 RID: 127538
 		public readonly List<RewardItemData> DollDeliveryRewardData = new List<RewardItemData>();
 
-		// Token: 0x04023F80 RID: 147328
+		// Token: 0x0401F233 RID: 127539
 		protected float ClawReleaseStateCanMoveTimeInternal;
 
-		// Token: 0x04023F81 RID: 147329
+		// Token: 0x0401F234 RID: 127540
 		public float ClawReleaseStateCanMoveTimeLeave;
 
-		// Token: 0x04023F82 RID: 147330
+		// Token: 0x0401F235 RID: 127541
 		private string CacheMode3CacheUpdateIntervals = "0,0,0";
 
-		// Token: 0x04023F83 RID: 147331
+		// Token: 0x0401F236 RID: 127542
 		private string DirectLightCacheNeedOriginChange = "0,0,0";
 
-		// Token: 0x04023F84 RID: 147332
+		// Token: 0x0401F237 RID: 127543
 		[Nullable(2)]
 		private static DollGrabModel _Instance;
 	}

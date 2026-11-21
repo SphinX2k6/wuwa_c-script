@@ -2,14 +2,14 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02003519 RID: 13593
+// Token: 0x02002A8E RID: 10894
 [NullableContext(1)]
 [Nullable(0)]
 public class AoiModel : ModelBase
 {
-	// Token: 0x1700290F RID: 10511
-	// (get) Token: 0x0601DCD2 RID: 122066 RVA: 0x0085A082 File Offset: 0x00858282
-	// (set) Token: 0x0601DCD3 RID: 122067 RVA: 0x0085A08A File Offset: 0x0085828A
+	// Token: 0x17002CA8 RID: 11432
+	// (get) Token: 0x0601B9EC RID: 113132 RVA: 0x0088262A File Offset: 0x0088082A
+	// (set) Token: 0x0601B9ED RID: 113133 RVA: 0x00882632 File Offset: 0x00880832
 	public FVector? MinCoordinate
 	{
 		get
@@ -22,9 +22,9 @@ public class AoiModel : ModelBase
 		}
 	}
 
-	// Token: 0x17002910 RID: 10512
-	// (get) Token: 0x0601DCD4 RID: 122068 RVA: 0x0085A093 File Offset: 0x00858293
-	// (set) Token: 0x0601DCD5 RID: 122069 RVA: 0x0085A09B File Offset: 0x0085829B
+	// Token: 0x17002CA9 RID: 11433
+	// (get) Token: 0x0601B9EE RID: 113134 RVA: 0x0088263B File Offset: 0x0088083B
+	// (set) Token: 0x0601B9EF RID: 113135 RVA: 0x00882643 File Offset: 0x00880843
 	public FVector? MaxCoordinate
 	{
 		get
@@ -37,7 +37,7 @@ public class AoiModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601DCD6 RID: 122070 RVA: 0x0085A0A4 File Offset: 0x008582A4
+	// Token: 0x0601B9F0 RID: 113136 RVA: 0x0088264C File Offset: 0x0088084C
 	protected override bool OnInit()
 	{
 		this.MinCoordinateInternal = new FVector?(new FVector());
@@ -45,7 +45,7 @@ public class AoiModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601DCD7 RID: 122071 RVA: 0x0085A0C7 File Offset: 0x008582C7
+	// Token: 0x0601B9F1 RID: 113137 RVA: 0x0088266F File Offset: 0x0088086F
 	protected override bool OnClear()
 	{
 		this.MinCoordinateInternal = null;
@@ -53,14 +53,14 @@ public class AoiModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601DCD8 RID: 122072 RVA: 0x0085A0E2 File Offset: 0x008582E2
+	// Token: 0x0601B9F2 RID: 113138 RVA: 0x0088268A File Offset: 0x0088088A
 	protected override bool OnLeaveLevel()
 	{
 		return true;
 	}
 
-	// Token: 0x17002911 RID: 10513
-	// (get) Token: 0x0601DCD9 RID: 122073 RVA: 0x0085A0E5 File Offset: 0x008582E5
+	// Token: 0x17002CAA RID: 11434
+	// (get) Token: 0x0601B9F3 RID: 113139 RVA: 0x0088268D File Offset: 0x0088088D
 	public static AoiModel Instance
 	{
 		get
@@ -69,7 +69,7 @@ public class AoiModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601DCDA RID: 122074 RVA: 0x0085A0EC File Offset: 0x008582EC
+	// Token: 0x0601B9F4 RID: 113140 RVA: 0x00882694 File Offset: 0x00880894
 	public static AoiModel GetOrCreateInstance()
 	{
 		if (AoiModel._Instance == null)
@@ -79,7 +79,7 @@ public class AoiModel : ModelBase
 		return AoiModel._Instance;
 	}
 
-	// Token: 0x0601DCDB RID: 122075 RVA: 0x0085A100 File Offset: 0x00858300
+	// Token: 0x0601B9F5 RID: 113141 RVA: 0x008826A8 File Offset: 0x008808A8
 	public static bool CreateInstance()
 	{
 		if (AoiModel._Instance != null)
@@ -90,30 +90,30 @@ public class AoiModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601DCDC RID: 122076 RVA: 0x0085A116 File Offset: 0x00858316
+	// Token: 0x0601B9F6 RID: 113142 RVA: 0x008826BE File Offset: 0x008808BE
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601DCDD RID: 122077 RVA: 0x0085A118 File Offset: 0x00858318
+	// Token: 0x0601B9F7 RID: 113143 RVA: 0x008826C0 File Offset: 0x008808C0
 	public static void ResetStaticDefaultValue()
 	{
 		AoiModel._Instance = null;
 	}
 
-	// Token: 0x0601DCDE RID: 122078 RVA: 0x0085A120 File Offset: 0x00858320
+	// Token: 0x0601B9F8 RID: 113144 RVA: 0x008826C8 File Offset: 0x008808C8
 	static AoiModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(AoiModel.CreateStaticDefaultValue), new Action(AoiModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400E9EC RID: 59884
+	// Token: 0x0400EEA7 RID: 61095
 	private FVector? MinCoordinateInternal;
 
-	// Token: 0x0400E9ED RID: 59885
+	// Token: 0x0400EEA8 RID: 61096
 	private FVector? MaxCoordinateInternal;
 
-	// Token: 0x0400E9EE RID: 59886
+	// Token: 0x0400EEA9 RID: 61097
 	[Nullable(2)]
 	private static AoiModel _Instance;
 }

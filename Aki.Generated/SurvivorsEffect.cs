@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020010FA RID: 4346
+	// Token: 0x02001230 RID: 4656
 	public struct SurvivorsEffect : IFlatbufferObject
 	{
-		// Token: 0x170038BE RID: 14526
-		// (get) Token: 0x0600DA62 RID: 55906 RVA: 0x00323A41 File Offset: 0x00321C41
+		// Token: 0x17003C14 RID: 15380
+		// (get) Token: 0x0600E7AD RID: 59309 RVA: 0x0034EE18 File Offset: 0x0034D018
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600DA63 RID: 55907 RVA: 0x00323A4E File Offset: 0x00321C4E
+		// Token: 0x0600E7AE RID: 59310 RVA: 0x0034EE25 File Offset: 0x0034D025
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600DA64 RID: 55908 RVA: 0x00323A58 File Offset: 0x00321C58
+		// Token: 0x0600E7AF RID: 59311 RVA: 0x0034EE2C File Offset: 0x0034D02C
 		public static SurvivorsEffect GetRootAsSurvivorsEffect(ByteBuffer _bb)
 		{
 			return SurvivorsEffect.GetRootAsSurvivorsEffect(_bb, default(SurvivorsEffect));
 		}
 
-		// Token: 0x0600DA65 RID: 55909 RVA: 0x00323A74 File Offset: 0x00321C74
+		// Token: 0x0600E7B0 RID: 59312 RVA: 0x0034EE48 File Offset: 0x0034D048
 		public static SurvivorsEffect GetRootAsSurvivorsEffect(ByteBuffer _bb, SurvivorsEffect obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600DA66 RID: 55910 RVA: 0x00323A91 File Offset: 0x00321C91
+		// Token: 0x0600E7B1 RID: 59313 RVA: 0x0034EE65 File Offset: 0x0034D065
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600DA67 RID: 55911 RVA: 0x00323AA0 File Offset: 0x00321CA0
+		// Token: 0x0600E7B2 RID: 59314 RVA: 0x0034EE74 File Offset: 0x0034D074
 		public SurvivorsEffect __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170038BF RID: 14527
-		// (get) Token: 0x0600DA68 RID: 55912 RVA: 0x00323AB0 File Offset: 0x00321CB0
+		// Token: 0x17003C15 RID: 15381
+		// (get) Token: 0x0600E7B3 RID: 59315 RVA: 0x0034EE84 File Offset: 0x0034D084
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170038C0 RID: 14528
-		// (get) Token: 0x0600DA69 RID: 55913 RVA: 0x00323AEC File Offset: 0x00321CEC
+		// Token: 0x17003C16 RID: 15382
+		// (get) Token: 0x0600E7B4 RID: 59316 RVA: 0x0034EEC0 File Offset: 0x0034D0C0
 		public int DescIntParam
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04005230 RID: 21040
+		// Token: 0x04005873 RID: 22643
 		private Table __p;
 	}
 }

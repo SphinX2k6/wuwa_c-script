@@ -3,22 +3,21 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A50 RID: 6736
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02001BE5 RID: 7141
 	public class IFadeBackgroundImage_SetValue
 	{
-		// Token: 0x04005911 RID: 22801
+		// Token: 0x04005D76 RID: 23926
 		public EFadeBackgroundType Type;
 
-		// Token: 0x04005912 RID: 22802
-		[Nullable(1)]
+		// Token: 0x04005D77 RID: 23927
 		public string BackgroundImage;
 
-		// Token: 0x04005913 RID: 22803
+		// Token: 0x04005D78 RID: 23928
+		[Nullable(2)]
 		public IFadeBackgroundFadeInEffect FadeInEffect;
 
-		// Token: 0x04005914 RID: 22804
+		// Token: 0x04005D79 RID: 23929
+		[Nullable(2)]
 		public IFadeBackgroundFadeOutEffect FadeOutEffect;
 	}
 }

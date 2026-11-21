@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003E6C RID: 15980
+	// Token: 0x020042A7 RID: 17063
 	public struct IFocusModeSetting : IFlatbufferObject
 	{
-		// Token: 0x17006EC7 RID: 28359
-		// (get) Token: 0x06016803 RID: 92163 RVA: 0x003409DC File Offset: 0x0033EBDC
+		// Token: 0x170074AB RID: 29867
+		// (get) Token: 0x06017E2A RID: 97834 RVA: 0x0036950C File Offset: 0x0036770C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016804 RID: 92164 RVA: 0x003409E9 File Offset: 0x0033EBE9
+		// Token: 0x06017E2B RID: 97835 RVA: 0x00369519 File Offset: 0x00367719
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06016805 RID: 92165 RVA: 0x003409F0 File Offset: 0x0033EBF0
+		// Token: 0x06017E2C RID: 97836 RVA: 0x00369520 File Offset: 0x00367720
 		public static IFocusModeSetting GetRootAsIFocusModeSetting(ByteBuffer _bb)
 		{
 			return IFocusModeSetting.GetRootAsIFocusModeSetting(_bb, default(IFocusModeSetting));
 		}
 
-		// Token: 0x06016806 RID: 92166 RVA: 0x00340A0C File Offset: 0x0033EC0C
+		// Token: 0x06017E2D RID: 97837 RVA: 0x0036953C File Offset: 0x0036773C
 		public static IFocusModeSetting GetRootAsIFocusModeSetting(ByteBuffer _bb, IFocusModeSetting obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06016807 RID: 92167 RVA: 0x00340A29 File Offset: 0x0033EC29
+		// Token: 0x06017E2E RID: 97838 RVA: 0x00369559 File Offset: 0x00367759
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06016808 RID: 92168 RVA: 0x00340A38 File Offset: 0x0033EC38
+		// Token: 0x06017E2F RID: 97839 RVA: 0x00369568 File Offset: 0x00367768
 		public IFocusModeSetting __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006EC8 RID: 28360
-		// (get) Token: 0x06016809 RID: 92169 RVA: 0x00340A48 File Offset: 0x0033EC48
+		// Token: 0x170074AC RID: 29868
+		// (get) Token: 0x06017E30 RID: 97840 RVA: 0x00369578 File Offset: 0x00367778
 		public bool CanOpenFocusMode
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006EC9 RID: 28361
-		// (get) Token: 0x0601680A RID: 92170 RVA: 0x00340A88 File Offset: 0x0033EC88
+		// Token: 0x170074AD RID: 29869
+		// (get) Token: 0x06017E31 RID: 97841 RVA: 0x003695B8 File Offset: 0x003677B8
 		public bool IsFocusModeInherit
 		{
 			get
@@ -69,8 +69,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006ECA RID: 28362
-		// (get) Token: 0x0601680B RID: 92171 RVA: 0x00340AC8 File Offset: 0x0033ECC8
+		// Token: 0x170074AE RID: 29870
+		// (get) Token: 0x06017E32 RID: 97842 RVA: 0x003695F8 File Offset: 0x003677F8
 		public bool CanAcceptInFocusMode
 		{
 			get
@@ -80,8 +80,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006ECB RID: 28363
-		// (get) Token: 0x0601680C RID: 92172 RVA: 0x00340B08 File Offset: 0x0033ED08
+		// Token: 0x170074AF RID: 29871
+		// (get) Token: 0x06017E33 RID: 97843 RVA: 0x00369638 File Offset: 0x00367838
 		public bool IsFocusModeWhiteList
 		{
 			get
@@ -91,8 +91,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006ECC RID: 28364
-		// (get) Token: 0x0601680D RID: 92173 RVA: 0x00340B48 File Offset: 0x0033ED48
+		// Token: 0x170074B0 RID: 29872
+		// (get) Token: 0x06017E34 RID: 97844 RVA: 0x00369678 File Offset: 0x00367878
 		public byte NullMask
 		{
 			get
@@ -106,7 +106,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601680E RID: 92174 RVA: 0x00340B85 File Offset: 0x0033ED85
+		// Token: 0x06017E35 RID: 97845 RVA: 0x003696B5 File Offset: 0x003678B5
 		public static Offset<IFocusModeSetting> CreateIFocusModeSetting(FlatBufferBuilder builder, bool CanOpenFocusMode = false, bool IsFocusModeInherit = false, bool CanAcceptInFocusMode = false, bool IsFocusModeWhiteList = false, byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -118,49 +118,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IFocusModeSetting.EndIFocusModeSetting(builder);
 		}
 
-		// Token: 0x0601680F RID: 92175 RVA: 0x00340BB9 File Offset: 0x0033EDB9
+		// Token: 0x06017E36 RID: 97846 RVA: 0x003696E9 File Offset: 0x003678E9
 		public static void StartIFocusModeSetting(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x06016810 RID: 92176 RVA: 0x00340BC2 File Offset: 0x0033EDC2
+		// Token: 0x06017E37 RID: 97847 RVA: 0x003696F2 File Offset: 0x003678F2
 		public static void AddCanOpenFocusMode(FlatBufferBuilder builder, bool canOpenFocusMode)
 		{
 			builder.AddBool(0, canOpenFocusMode, false);
 		}
 
-		// Token: 0x06016811 RID: 92177 RVA: 0x00340BCD File Offset: 0x0033EDCD
+		// Token: 0x06017E38 RID: 97848 RVA: 0x003696FD File Offset: 0x003678FD
 		public static void AddIsFocusModeInherit(FlatBufferBuilder builder, bool isFocusModeInherit)
 		{
 			builder.AddBool(1, isFocusModeInherit, false);
 		}
 
-		// Token: 0x06016812 RID: 92178 RVA: 0x00340BD8 File Offset: 0x0033EDD8
+		// Token: 0x06017E39 RID: 97849 RVA: 0x00369708 File Offset: 0x00367908
 		public static void AddCanAcceptInFocusMode(FlatBufferBuilder builder, bool canAcceptInFocusMode)
 		{
 			builder.AddBool(2, canAcceptInFocusMode, false);
 		}
 
-		// Token: 0x06016813 RID: 92179 RVA: 0x00340BE3 File Offset: 0x0033EDE3
+		// Token: 0x06017E3A RID: 97850 RVA: 0x00369713 File Offset: 0x00367913
 		public static void AddIsFocusModeWhiteList(FlatBufferBuilder builder, bool isFocusModeWhiteList)
 		{
 			builder.AddBool(3, isFocusModeWhiteList, false);
 		}
 
-		// Token: 0x06016814 RID: 92180 RVA: 0x00340BEE File Offset: 0x0033EDEE
+		// Token: 0x06017E3B RID: 97851 RVA: 0x0036971E File Offset: 0x0036791E
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x06016815 RID: 92181 RVA: 0x00340BF9 File Offset: 0x0033EDF9
+		// Token: 0x06017E3C RID: 97852 RVA: 0x00369729 File Offset: 0x00367929
 		public static Offset<IFocusModeSetting> EndIFocusModeSetting(FlatBufferBuilder builder)
 		{
 			return new Offset<IFocusModeSetting>(builder.EndTable());
 		}
 
-		// Token: 0x06016816 RID: 92182 RVA: 0x00340C08 File Offset: 0x0033EE08
+		// Token: 0x06017E3D RID: 97853 RVA: 0x00369738 File Offset: 0x00367938
 		public IFocusModeSettingT UnPack()
 		{
 			IFocusModeSettingT focusModeSettingT = new IFocusModeSettingT();
@@ -168,7 +168,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return focusModeSettingT;
 		}
 
-		// Token: 0x06016817 RID: 92183 RVA: 0x00340C23 File Offset: 0x0033EE23
+		// Token: 0x06017E3E RID: 97854 RVA: 0x00369753 File Offset: 0x00367953
 		public void UnPackTo(IFocusModeSettingT _o)
 		{
 			_o.CanOpenFocusMode = this.CanOpenFocusMode;
@@ -178,7 +178,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06016818 RID: 92184 RVA: 0x00340C64 File Offset: 0x0033EE64
+		// Token: 0x06017E3F RID: 97855 RVA: 0x00369794 File Offset: 0x00367994
 		public static Offset<IFocusModeSetting> Pack(FlatBufferBuilder builder, IFocusModeSettingT _o)
 		{
 			if (_o == null)
@@ -188,7 +188,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IFocusModeSetting.CreateIFocusModeSetting(builder, _o.CanOpenFocusMode, _o.IsFocusModeInherit, _o.CanAcceptInFocusMode, _o.IsFocusModeWhiteList, _o.NullMask);
 		}
 
-		// Token: 0x0400B81D RID: 47133
+		// Token: 0x0400C1F4 RID: 49652
 		private Table __p;
 	}
 }

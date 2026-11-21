@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x0200324D RID: 12877
+// Token: 0x020027BC RID: 10172
 public class RolePartyComponent : EntityComponent
 {
-	// Token: 0x0601BC90 RID: 113808 RVA: 0x007AA628 File Offset: 0x007A8828
+	// Token: 0x0601984B RID: 104523 RVA: 0x007D2C04 File Offset: 0x007D0E04
 	protected override bool OnStart()
 	{
 		CreatureDataComponent component = base.Entity.GetComponent<CreatureDataComponent>();
@@ -29,15 +28,13 @@ public class RolePartyComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601BC91 RID: 113809 RVA: 0x007AA6E8 File Offset: 0x007A88E8
-	[NullableContext(1)]
-	public override bool ClearComponent(EntityComponent componentTemplate)
+	// Token: 0x170028BB RID: 10427
+	// (get) Token: 0x0601984C RID: 104524 RVA: 0x007D2CC4 File Offset: 0x007D0EC4
+	public override bool NeedStartInternal
 	{
-		if (!base.ClearComponent(componentTemplate))
+		get
 		{
-			return false;
+			return true;
 		}
-		RolePartyComponent rolePartyComponent = (RolePartyComponent)componentTemplate;
-		return true;
 	}
 }

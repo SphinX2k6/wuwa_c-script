@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02001AA0 RID: 6816
+// Token: 0x02000F5F RID: 3935
 public enum EPlayPointState
 {
-	// Token: 0x04005CF5 RID: 23797
+	// Token: 0x04005DC4 RID: 24004
 	Locked,
-	// Token: 0x04005CF6 RID: 23798
+	// Token: 0x04005DC5 RID: 24005
 	ToBeCompleted,
-	// Token: 0x04005CF7 RID: 23799
+	// Token: 0x04005DC6 RID: 24006
 	Completed
 }

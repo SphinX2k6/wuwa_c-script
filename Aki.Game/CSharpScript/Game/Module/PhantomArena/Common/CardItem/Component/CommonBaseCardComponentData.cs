@@ -4,69 +4,69 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 {
-	// Token: 0x020051F7 RID: 20983
+	// Token: 0x020041C7 RID: 16839
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CommonBaseCardComponentData : ICommonBaseCardComponentData
 	{
-		// Token: 0x170081E6 RID: 33254
-		// (get) Token: 0x06035AC0 RID: 219840 RVA: 0x00CB5DB3 File Offset: 0x00CB3FB3
-		// (set) Token: 0x06035AC1 RID: 219841 RVA: 0x00CB5DBB File Offset: 0x00CB3FBB
+		// Token: 0x170055A6 RID: 21926
+		// (get) Token: 0x0602A9BB RID: 174523 RVA: 0x00C033EF File Offset: 0x00C015EF
+		// (set) Token: 0x0602A9BC RID: 174524 RVA: 0x00C033F7 File Offset: 0x00C015F7
 		public int CardId { get; set; }
 
-		// Token: 0x170081E7 RID: 33255
-		// (get) Token: 0x06035AC2 RID: 219842 RVA: 0x00CB5DC4 File Offset: 0x00CB3FC4
-		// (set) Token: 0x06035AC3 RID: 219843 RVA: 0x00CB5DCC File Offset: 0x00CB3FCC
+		// Token: 0x170055A7 RID: 21927
+		// (get) Token: 0x0602A9BD RID: 174525 RVA: 0x00C03400 File Offset: 0x00C01600
+		// (set) Token: 0x0602A9BE RID: 174526 RVA: 0x00C03408 File Offset: 0x00C01608
 		public int Cost { get; set; }
 
-		// Token: 0x170081E8 RID: 33256
-		// (get) Token: 0x06035AC4 RID: 219844 RVA: 0x00CB5DD5 File Offset: 0x00CB3FD5
-		// (set) Token: 0x06035AC5 RID: 219845 RVA: 0x00CB5DDD File Offset: 0x00CB3FDD
+		// Token: 0x170055A8 RID: 21928
+		// (get) Token: 0x0602A9BF RID: 174527 RVA: 0x00C03411 File Offset: 0x00C01611
+		// (set) Token: 0x0602A9C0 RID: 174528 RVA: 0x00C03419 File Offset: 0x00C01619
 		public int Attack { get; set; }
 
-		// Token: 0x170081E9 RID: 33257
-		// (get) Token: 0x06035AC6 RID: 219846 RVA: 0x00CB5DE6 File Offset: 0x00CB3FE6
-		// (set) Token: 0x06035AC7 RID: 219847 RVA: 0x00CB5DEE File Offset: 0x00CB3FEE
+		// Token: 0x170055A9 RID: 21929
+		// (get) Token: 0x0602A9C1 RID: 174529 RVA: 0x00C03422 File Offset: 0x00C01622
+		// (set) Token: 0x0602A9C2 RID: 174530 RVA: 0x00C0342A File Offset: 0x00C0162A
 		public int Life { get; set; }
 
-		// Token: 0x170081EA RID: 33258
-		// (get) Token: 0x06035AC8 RID: 219848 RVA: 0x00CB5DF7 File Offset: 0x00CB3FF7
-		// (set) Token: 0x06035AC9 RID: 219849 RVA: 0x00CB5DFF File Offset: 0x00CB3FFF
+		// Token: 0x170055AA RID: 21930
+		// (get) Token: 0x0602A9C3 RID: 174531 RVA: 0x00C03433 File Offset: 0x00C01633
+		// (set) Token: 0x0602A9C4 RID: 174532 RVA: 0x00C0343B File Offset: 0x00C0163B
 		public int Element { get; set; }
 
-		// Token: 0x170081EB RID: 33259
-		// (get) Token: 0x06035ACA RID: 219850 RVA: 0x00CB5E08 File Offset: 0x00CB4008
-		// (set) Token: 0x06035ACB RID: 219851 RVA: 0x00CB5E10 File Offset: 0x00CB4010
+		// Token: 0x170055AB RID: 21931
+		// (get) Token: 0x0602A9C5 RID: 174533 RVA: 0x00C03444 File Offset: 0x00C01644
+		// (set) Token: 0x0602A9C6 RID: 174534 RVA: 0x00C0344C File Offset: 0x00C0164C
 		public bool ShowCardFaceTexture { get; set; }
 
-		// Token: 0x170081EC RID: 33260
-		// (get) Token: 0x06035ACC RID: 219852 RVA: 0x00CB5E19 File Offset: 0x00CB4019
-		// (set) Token: 0x06035ACD RID: 219853 RVA: 0x00CB5E21 File Offset: 0x00CB4021
+		// Token: 0x170055AC RID: 21932
+		// (get) Token: 0x0602A9C7 RID: 174535 RVA: 0x00C03455 File Offset: 0x00C01655
+		// (set) Token: 0x0602A9C8 RID: 174536 RVA: 0x00C0345D File Offset: 0x00C0165D
 		public bool OutlookUnlocked { get; set; }
 
-		// Token: 0x170081ED RID: 33261
-		// (get) Token: 0x06035ACE RID: 219854 RVA: 0x00CB5E2A File Offset: 0x00CB402A
-		// (set) Token: 0x06035ACF RID: 219855 RVA: 0x00CB5E32 File Offset: 0x00CB4032
+		// Token: 0x170055AD RID: 21933
+		// (get) Token: 0x0602A9C9 RID: 174537 RVA: 0x00C03466 File Offset: 0x00C01666
+		// (set) Token: 0x0602A9CA RID: 174538 RVA: 0x00C0346E File Offset: 0x00C0166E
 		public string CardFaceTexturePath { get; set; }
 
-		// Token: 0x170081EE RID: 33262
-		// (get) Token: 0x06035AD0 RID: 219856 RVA: 0x00CB5E3B File Offset: 0x00CB403B
-		// (set) Token: 0x06035AD1 RID: 219857 RVA: 0x00CB5E43 File Offset: 0x00CB4043
+		// Token: 0x170055AE RID: 21934
+		// (get) Token: 0x0602A9CB RID: 174539 RVA: 0x00C03477 File Offset: 0x00C01677
+		// (set) Token: 0x0602A9CC RID: 174540 RVA: 0x00C0347F File Offset: 0x00C0167F
 		public EToggleState? ToggleState { get; set; }
 
-		// Token: 0x170081EF RID: 33263
-		// (get) Token: 0x06035AD2 RID: 219858 RVA: 0x00CB5E4C File Offset: 0x00CB404C
-		// (set) Token: 0x06035AD3 RID: 219859 RVA: 0x00CB5E54 File Offset: 0x00CB4054
+		// Token: 0x170055AF RID: 21935
+		// (get) Token: 0x0602A9CD RID: 174541 RVA: 0x00C03488 File Offset: 0x00C01688
+		// (set) Token: 0x0602A9CE RID: 174542 RVA: 0x00C03490 File Offset: 0x00C01690
 		public Action OnPointerUp { get; set; }
 
-		// Token: 0x170081F0 RID: 33264
-		// (get) Token: 0x06035AD4 RID: 219860 RVA: 0x00CB5E5D File Offset: 0x00CB405D
-		// (set) Token: 0x06035AD5 RID: 219861 RVA: 0x00CB5E65 File Offset: 0x00CB4065
+		// Token: 0x170055B0 RID: 21936
+		// (get) Token: 0x0602A9CF RID: 174543 RVA: 0x00C03499 File Offset: 0x00C01699
+		// (set) Token: 0x0602A9D0 RID: 174544 RVA: 0x00C034A1 File Offset: 0x00C016A1
 		public Action<EToggleState> OnToggleStateChanged { get; set; }
 
-		// Token: 0x170081F1 RID: 33265
-		// (get) Token: 0x06035AD6 RID: 219862 RVA: 0x00CB5E6E File Offset: 0x00CB406E
-		// (set) Token: 0x06035AD7 RID: 219863 RVA: 0x00CB5E76 File Offset: 0x00CB4076
+		// Token: 0x170055B1 RID: 21937
+		// (get) Token: 0x0602A9D1 RID: 174545 RVA: 0x00C034AA File Offset: 0x00C016AA
+		// (set) Token: 0x0602A9D2 RID: 174546 RVA: 0x00C034B2 File Offset: 0x00C016B2
 		public Func<bool> CanToggleExecuteChange { get; set; }
 	}
 }

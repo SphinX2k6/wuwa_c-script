@@ -5,13 +5,13 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Battle
 {
-	// Token: 0x02005C4C RID: 23628
+	// Token: 0x02004C2C RID: 19500
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Config(0)]
 	public class MoraleBattleConfig : ConfigBase
 	{
-		// Token: 0x0603BB59 RID: 244569 RVA: 0x00E42768 File Offset: 0x00E40968
+		// Token: 0x06030AA4 RID: 199332 RVA: 0x00D92B34 File Offset: 0x00D90D34
 		public MoralePlay? GetMoraleConfig(int id)
 		{
 			if (id == 0)
@@ -21,40 +21,40 @@ namespace CSharpScript.Game.Module.Battle
 			return ConfigMoralePlayById.GetConfig(id, true);
 		}
 
-		// Token: 0x0603BB5A RID: 244570 RVA: 0x00E42789 File Offset: 0x00E40989
+		// Token: 0x06030AA5 RID: 199333 RVA: 0x00D92B55 File Offset: 0x00D90D55
 		public MoraleKeepLevel? GetExpConfig(int id)
 		{
 			return ConfigMoraleKeepLevelById.GetConfig(id, true);
 		}
 
-		// Token: 0x0603BB5B RID: 244571 RVA: 0x00E42792 File Offset: 0x00E40992
+		// Token: 0x06030AA6 RID: 199334 RVA: 0x00D92B5E File Offset: 0x00D90D5E
 		[NullableContext(2)]
 		public IReadOnlyList<MoraleKeepLevel> GetAllExpConfig()
 		{
 			return ConfigMoraleKeepLevelAll.GetConfigList(true);
 		}
 
-		// Token: 0x0603BB5C RID: 244572 RVA: 0x00E4279A File Offset: 0x00E4099A
+		// Token: 0x06030AA7 RID: 199335 RVA: 0x00D92B66 File Offset: 0x00D90D66
 		public MoraleLevelDiff? GetLevelDiffConfig(int id)
 		{
 			return ConfigMoraleLevelDiffById.GetConfig(id, true);
 		}
 
-		// Token: 0x0603BB5D RID: 244573 RVA: 0x00E427A3 File Offset: 0x00E409A3
+		// Token: 0x06030AA8 RID: 199336 RVA: 0x00D92B6F File Offset: 0x00D90D6F
 		public MoraleLevelDiffShow? GetLevelDiffShowConfig(int id)
 		{
 			return ConfigMoraleLevelDiffShowById.GetConfig(id, true);
 		}
 
-		// Token: 0x0603BB5E RID: 244574 RVA: 0x00E427AC File Offset: 0x00E409AC
+		// Token: 0x06030AA9 RID: 199337 RVA: 0x00D92B78 File Offset: 0x00D90D78
 		[NullableContext(2)]
 		public IReadOnlyList<MoraleLevelDiffShow> GetAllLevelDiffShowConfig()
 		{
 			return ConfigMoraleLevelDiffShowAll.GetConfigList(true);
 		}
 
-		// Token: 0x17008DB9 RID: 36281
-		// (get) Token: 0x0603BB5F RID: 244575 RVA: 0x00E427B4 File Offset: 0x00E409B4
+		// Token: 0x1700618B RID: 24971
+		// (get) Token: 0x06030AAA RID: 199338 RVA: 0x00D92B80 File Offset: 0x00D90D80
 		public static MoraleBattleConfig Instance
 		{
 			get
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Module.Battle
 			}
 		}
 
-		// Token: 0x0603BB60 RID: 244576 RVA: 0x00E427BB File Offset: 0x00E409BB
+		// Token: 0x06030AAB RID: 199339 RVA: 0x00D92B87 File Offset: 0x00D90D87
 		public static MoraleBattleConfig GetOrCreateInstance()
 		{
 			if (MoraleBattleConfig._Instance == null)
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.Battle
 			return MoraleBattleConfig._Instance;
 		}
 
-		// Token: 0x0603BB61 RID: 244577 RVA: 0x00E427CF File Offset: 0x00E409CF
+		// Token: 0x06030AAC RID: 199340 RVA: 0x00D92B9B File Offset: 0x00D90D9B
 		public static bool CreateInstance()
 		{
 			if (MoraleBattleConfig._Instance != null)
@@ -84,24 +84,24 @@ namespace CSharpScript.Game.Module.Battle
 			return true;
 		}
 
-		// Token: 0x0603BB62 RID: 244578 RVA: 0x00E427E5 File Offset: 0x00E409E5
+		// Token: 0x06030AAD RID: 199341 RVA: 0x00D92BB1 File Offset: 0x00D90DB1
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603BB63 RID: 244579 RVA: 0x00E427E7 File Offset: 0x00E409E7
+		// Token: 0x06030AAE RID: 199342 RVA: 0x00D92BB3 File Offset: 0x00D90DB3
 		public static void ResetStaticDefaultValue()
 		{
 			MoraleBattleConfig._Instance = null;
 		}
 
-		// Token: 0x0603BB64 RID: 244580 RVA: 0x00E427EF File Offset: 0x00E409EF
+		// Token: 0x06030AAF RID: 199343 RVA: 0x00D92BBB File Offset: 0x00D90DBB
 		static MoraleBattleConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(MoraleBattleConfig.CreateStaticDefaultValue), new Action(MoraleBattleConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401F168 RID: 127336
+		// Token: 0x04019C19 RID: 105497
 		[Nullable(2)]
 		private static MoraleBattleConfig _Instance;
 	}

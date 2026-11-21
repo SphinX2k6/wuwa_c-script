@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000092 RID: 146
+// Token: 0x02000094 RID: 148
 [NullableContext(1)]
 [Nullable(0)]
 public readonly struct EventArgs<[Nullable(2)] T1, [Nullable(2)] T2> : IEventArgs
 {
-	// Token: 0x0600046B RID: 1131 RVA: 0x00019BFB File Offset: 0x00017DFB
+	// Token: 0x060004AC RID: 1196 RVA: 0x0001A35F File Offset: 0x0001855F
 	public EventArgs(T1 p1, T2 p2)
 	{
 		this.<p1>P = p1;
 		this.<p2>P = p2;
 	}
 
-	// Token: 0x0600046C RID: 1132 RVA: 0x00019C0C File Offset: 0x00017E0C
+	// Token: 0x060004AD RID: 1197 RVA: 0x0001A370 File Offset: 0x00018570
 	public bool Invoke(Enum name, Delegate handle)
 	{
 		Action<T1, T2> action = handle as Action<T1, T2>;
@@ -38,7 +38,7 @@ public readonly struct EventArgs<[Nullable(2)] T1, [Nullable(2)] T2> : IEventArg
 		return true;
 	}
 
-	// Token: 0x0600046D RID: 1133 RVA: 0x00019C80 File Offset: 0x00017E80
+	// Token: 0x060004AE RID: 1198 RVA: 0x0001A3E4 File Offset: 0x000185E4
 	public bool Invoke(long name, Delegate handle)
 	{
 		Action<T1, T2> action = handle as Action<T1, T2>;
@@ -63,11 +63,11 @@ public readonly struct EventArgs<[Nullable(2)] T1, [Nullable(2)] T2> : IEventArg
 		return true;
 	}
 
-	// Token: 0x040003F0 RID: 1008
+	// Token: 0x040003FE RID: 1022
 	[CompilerGenerated]
 	private readonly T1 <p1>P;
 
-	// Token: 0x040003F1 RID: 1009
+	// Token: 0x040003FF RID: 1023
 	[CompilerGenerated]
 	private readonly T2 <p2>P;
 }

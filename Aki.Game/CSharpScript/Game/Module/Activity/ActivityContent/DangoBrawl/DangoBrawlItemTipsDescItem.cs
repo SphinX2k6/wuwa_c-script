@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006819 RID: 26649
+	// Token: 0x02005769 RID: 22377
 	[Nullable(new byte[]
 	{
 		0,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 	})]
 	public class DangoBrawlItemTipsDescItem : GridProxyAbstract<DangoBrawlItemTipsDescData>
 	{
-		// Token: 0x060427CC RID: 272332 RVA: 0x010277AC File Offset: 0x010259AC
+		// Token: 0x06037321 RID: 226081 RVA: 0x00F68CF0 File Offset: 0x00F66EF0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -27,29 +27,29 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060427CD RID: 272333 RVA: 0x010277F4 File Offset: 0x010259F4
+		// Token: 0x06037322 RID: 226082 RVA: 0x00F68D38 File Offset: 0x00F66F38
 		protected override void OnStart()
 		{
 			ActivityDangoBrawlController.Instance.RegisterTermHyperlink(base.GetText(0));
 		}
 
-		// Token: 0x060427CE RID: 272334 RVA: 0x01027808 File Offset: 0x01025A08
+		// Token: 0x06037323 RID: 226083 RVA: 0x00F68D4C File Offset: 0x00F66F4C
 		protected override void OnBeforeDestroy()
 		{
 			ActivityDangoBrawlController.Instance.UnRegisterTermHyperlink(base.GetText(0));
 		}
 
-		// Token: 0x060427CF RID: 272335 RVA: 0x0102781B File Offset: 0x01025A1B
+		// Token: 0x06037324 RID: 226084 RVA: 0x00F68D5F File Offset: 0x00F66F5F
 		[NullableContext(1)]
 		public override void Refresh(DangoBrawlItemTipsDescData data, bool isSelected, int gridIndex)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), data.Desc, data.DescParams);
 		}
 
-		// Token: 0x0200C9AB RID: 51627
+		// Token: 0x0200B378 RID: 45944
 		private enum EDescComponent
 		{
-			// Token: 0x0403CEA3 RID: 249507
+			// Token: 0x04037790 RID: 227216
 			TxtDesc
 		}
 	}

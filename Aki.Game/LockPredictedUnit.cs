@@ -6,10 +6,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001F4C RID: 8012
+// Token: 0x0200140E RID: 5134
 public class LockPredictedUnit : HudUnitBase
 {
-	// Token: 0x0600F7C2 RID: 63426 RVA: 0x003BED24 File Offset: 0x003BCF24
+	// Token: 0x0600CBE1 RID: 52193 RVA: 0x003CA810 File Offset: 0x003C8A10
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -27,20 +27,20 @@ public class LockPredictedUnit : HudUnitBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600F7C3 RID: 63427 RVA: 0x003BEDCF File Offset: 0x003BCFCF
+	// Token: 0x0600CBE2 RID: 52194 RVA: 0x003CA8BB File Offset: 0x003C8ABB
 	protected override void OnStart()
 	{
 		base.InitTweenAnim(2);
 		base.InitTweenAnim(3);
 	}
 
-	// Token: 0x0600F7C4 RID: 63428 RVA: 0x003BEDDF File Offset: 0x003BCFDF
+	// Token: 0x0600CBE3 RID: 52195 RVA: 0x003CA8CB File Offset: 0x003C8ACB
 	protected override void OnAfterShow()
 	{
 		this.PlayStartAnim();
 	}
 
-	// Token: 0x0600F7C5 RID: 63429 RVA: 0x003BEDE8 File Offset: 0x003BCFE8
+	// Token: 0x0600CBE4 RID: 52196 RVA: 0x003CA8D4 File Offset: 0x003C8AD4
 	protected override UniTask OnBeforeHideAsync()
 	{
 		LockPredictedUnit.<OnBeforeHideAsync>d__8 <OnBeforeHideAsync>d__;
@@ -51,7 +51,7 @@ public class LockPredictedUnit : HudUnitBase
 		return <OnBeforeHideAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F7C6 RID: 63430 RVA: 0x003BEE2B File Offset: 0x003BD02B
+	// Token: 0x0600CBE5 RID: 52197 RVA: 0x003CA917 File Offset: 0x003C8B17
 	private void OnCloseAnimTimerEnd()
 	{
 		this.CloseTimer = null;
@@ -59,7 +59,7 @@ public class LockPredictedUnit : HudUnitBase
 		this.Promise = null;
 	}
 
-	// Token: 0x0600F7C7 RID: 63431 RVA: 0x003BEE46 File Offset: 0x003BD046
+	// Token: 0x0600CBE6 RID: 52198 RVA: 0x003CA932 File Offset: 0x003C8B32
 	protected override void OnBeforeDestroy()
 	{
 		if (this.CloseTimer != null)
@@ -71,60 +71,60 @@ public class LockPredictedUnit : HudUnitBase
 		}
 	}
 
-	// Token: 0x0600F7C8 RID: 63432 RVA: 0x003BEE7A File Offset: 0x003BD07A
+	// Token: 0x0600CBE7 RID: 52199 RVA: 0x003CA966 File Offset: 0x003C8B66
 	public void Activate()
 	{
 		base.SetVisible(true, 0);
 	}
 
-	// Token: 0x0600F7C9 RID: 63433 RVA: 0x003BEE84 File Offset: 0x003BD084
+	// Token: 0x0600CBE8 RID: 52200 RVA: 0x003CA970 File Offset: 0x003C8B70
 	public void Deactivate()
 	{
 		base.SetVisible(false, 0);
 	}
 
-	// Token: 0x0600F7CA RID: 63434 RVA: 0x003BEE8E File Offset: 0x003BD08E
+	// Token: 0x0600CBE9 RID: 52201 RVA: 0x003CA97A File Offset: 0x003C8B7A
 	private void PlayStartAnim()
 	{
 		base.StopTweenAnim(3);
 		base.PlayTweenAnim(2);
 	}
 
-	// Token: 0x0600F7CB RID: 63435 RVA: 0x003BEE9E File Offset: 0x003BD09E
+	// Token: 0x0600CBEA RID: 52202 RVA: 0x003CA98A File Offset: 0x003C8B8A
 	private void PlayCloseAnim()
 	{
 		base.StopTweenAnim(2);
 		base.PlayTweenAnim(3);
 	}
 
-	// Token: 0x040072E2 RID: 29410
+	// Token: 0x040073C3 RID: 29635
 	private const int CLOSE_ANIM_TIME = 200;
 
-	// Token: 0x040072E3 RID: 29411
+	// Token: 0x040073C4 RID: 29636
 	[Nullable(2)]
 	private TimerHandle CloseTimer;
 
-	// Token: 0x040072E4 RID: 29412
+	// Token: 0x040073C5 RID: 29637
 	[Nullable(2)]
 	private CustomPromise Promise;
 
-	// Token: 0x02008542 RID: 34114
+	// Token: 0x020076C7 RID: 30407
 	private enum EChildType
 	{
-		// Token: 0x0402B622 RID: 177698
+		// Token: 0x04026946 RID: 158022
 		Arrow,
-		// Token: 0x0402B623 RID: 177699
+		// Token: 0x04026947 RID: 158023
 		CenterPoint,
-		// Token: 0x0402B624 RID: 177700
+		// Token: 0x04026948 RID: 158024
 		AnimStart,
-		// Token: 0x0402B625 RID: 177701
+		// Token: 0x04026949 RID: 158025
 		AnimClose
 	}
 
-	// Token: 0x02008543 RID: 34115
+	// Token: 0x020076C8 RID: 30408
 	private enum EVisibleReason
 	{
-		// Token: 0x0402B627 RID: 177703
+		// Token: 0x0402694B RID: 158027
 		Default
 	}
 }

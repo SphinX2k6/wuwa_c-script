@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace ActivityNamespace.MapTravel
 {
-	// Token: 0x020044CF RID: 17615
+	// Token: 0x02002F5C RID: 12124
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MapTravelTabDynamicItem : UiPanelBase, IDynamicScrollBaseItem<MapTravelAreaData>
 	{
-		// Token: 0x0602D642 RID: 185922 RVA: 0x00A3E4A8 File Offset: 0x00A3C6A8
+		// Token: 0x0601CB80 RID: 117632 RVA: 0x008C4108 File Offset: 0x008C2308
 		public UniTask Init(UUIItem actor)
 		{
 			MapTravelTabDynamicItem.<Init>d__1 <Init>d__;
@@ -27,7 +27,7 @@ namespace ActivityNamespace.MapTravel
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602D643 RID: 185923 RVA: 0x00A3E4F4 File Offset: 0x00A3C6F4
+		// Token: 0x0601CB81 RID: 117633 RVA: 0x008C4154 File Offset: 0x008C2354
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -41,7 +41,7 @@ namespace ActivityNamespace.MapTravel
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0602D644 RID: 185924 RVA: 0x00A3E560 File Offset: 0x00A3C760
+		// Token: 0x0601CB82 RID: 117634 RVA: 0x008C41C0 File Offset: 0x008C23C0
 		public FVector2D GetItemSize(MapTravelAreaData itemData)
 		{
 			UUIItem rootItem = base.GetRootItem();
@@ -49,22 +49,22 @@ namespace ActivityNamespace.MapTravel
 			return this.VectorValue.ToUeVector2D(false);
 		}
 
-		// Token: 0x0602D645 RID: 185925 RVA: 0x00A3E599 File Offset: 0x00A3C799
+		// Token: 0x0601CB83 RID: 117635 RVA: 0x008C41F9 File Offset: 0x008C23F9
 		public void ClearItem()
 		{
 		}
 
-		// Token: 0x04018472 RID: 99442
+		// Token: 0x0400F21A RID: 61978
 		private Vector2D VectorValue;
 
-		// Token: 0x0200A711 RID: 42769
+		// Token: 0x02008BE7 RID: 35815
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x04032751 RID: 206673
+			// Token: 0x0402C51F RID: 181535
 			public const int NormalItem = 0;
 
-			// Token: 0x04032752 RID: 206674
+			// Token: 0x0402C520 RID: 181536
 			public const int LockItem = 1;
 		}
 	}

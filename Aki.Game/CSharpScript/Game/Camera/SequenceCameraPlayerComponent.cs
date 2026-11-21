@@ -14,13 +14,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072E1 RID: 29409
+	// Token: 0x02006464 RID: 25700
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SequenceCameraPlayerComponent : EntityComponent
 	{
-		// Token: 0x17009F46 RID: 40774
-		// (get) Token: 0x060482AE RID: 295598 RVA: 0x01284B78 File Offset: 0x01282D78
+		// Token: 0x170076D6 RID: 30422
+		// (get) Token: 0x0603E6E5 RID: 255717 RVA: 0x0122762A File Offset: 0x0122582A
 		public bool IsDitherEffectEnabled
 		{
 			get
@@ -29,25 +29,31 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x060482AF RID: 295599 RVA: 0x01284B88 File Offset: 0x01282D88
+		// Token: 0x170076D7 RID: 30423
+		// (get) Token: 0x0603E6E6 RID: 255718 RVA: 0x0122763A File Offset: 0x0122583A
+		[Nullable(2)]
+		public CameraModelInstance CameraModel
+		{
+			[NullableContext(2)]
+			get
+			{
+				return this.CameraModelInstanceInternal;
+			}
+		}
+
+		// Token: 0x0603E6E7 RID: 255719 RVA: 0x01227642 File Offset: 0x01225842
 		public void SetPlayCameraSequenceEnabled(bool enabled)
 		{
 			this.IsPlayCameraSequenceEnabled = enabled;
 		}
 
-		// Token: 0x060482B0 RID: 295600 RVA: 0x01284B91 File Offset: 0x01282D91
-		public void SetDitherEffectEnable(ESequenceCameraDitherEffectEnum ditherEffectEnum)
+		// Token: 0x0603E6E8 RID: 255720 RVA: 0x0122764B File Offset: 0x0122584B
+		public void SetSeparateSequencePlayerLogicEnabled(bool enabled)
 		{
-			this.DitherEffectEnableSet.Add(ditherEffectEnum);
+			this.IsSeparateSequencePlayerLogicEnabled = enabled;
 		}
 
-		// Token: 0x060482B1 RID: 295601 RVA: 0x01284BA0 File Offset: 0x01282DA0
-		public void SetDitherEffectDisable(ESequenceCameraDitherEffectEnum ditherEffectEnum)
-		{
-			this.DitherEffectEnableSet.Remove(ditherEffectEnum);
-		}
-
-		// Token: 0x060482B2 RID: 295602 RVA: 0x01284BB0 File Offset: 0x01282DB0
+		// Token: 0x0603E6E9 RID: 255721 RVA: 0x01227654 File Offset: 0x01225854
 		[NullableContext(2)]
 		public void SetPawn(APawn pawn)
 		{
@@ -58,7 +64,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x060482B3 RID: 295603 RVA: 0x01284BCE File Offset: 0x01282DCE
+		// Token: 0x0603E6EA RID: 255722 RVA: 0x01227672 File Offset: 0x01225872
 		public void SetCharacter(TsBaseCharacter character)
 		{
 			TsBaseCharacter oldCharacter = this.OldCharacter;
@@ -70,7 +76,7 @@ namespace CSharpScript.Game.Camera
 			this.Character = character;
 		}
 
-		// Token: 0x060482B4 RID: 295604 RVA: 0x01284BF3 File Offset: 0x01282DF3
+		// Token: 0x0603E6EB RID: 255723 RVA: 0x01227697 File Offset: 0x01225897
 		[NullableContext(2)]
 		protected override bool OnCreate(IEntityArgs args = null)
 		{
@@ -78,7 +84,7 @@ namespace CSharpScript.Game.Camera
 			return base.OnCreate(args);
 		}
 
-		// Token: 0x060482B5 RID: 295605 RVA: 0x01284C10 File Offset: 0x01282E10
+		// Token: 0x0603E6EC RID: 255724 RVA: 0x012276B4 File Offset: 0x012258B4
 		public bool PlayCameraSequence(SSequenceCamera_Settings settings, bool resetFightCamera, FRotator additiveRotation, TsBaseCharacter target, FName socketName, FName lockSocketName, FVector relativeLocation, float radius, bool isShowLine, bool ignoreCharacterCollision = false, bool disableMovementInput = true, bool disableLookAtInput = true, bool disableMotionBlur = false, bool isIgnoreInitialSphereDetect = false, [Nullable(2)] SSequenceCamera_SpecificConfig specificConfig = null, int? skillEntityId = null, long? skillId = null)
 		{
 			if (!this.IsPlayCameraSequenceEnabled)
@@ -136,7 +142,7 @@ namespace CSharpScript.Game.Camera
 				this.HideHud(settings);
 				EventSystem.Instance.Emit<bool, string>(EEventName.OnSequenceCameraStatus, true, this.CameraModelInstanceInternal.CameraName);
 				CameraNearClipController.Instance.EnableSequenceCameraPlayerComponentNearClip(1f);
-				Log.Instance.Info(ELogModule.Camera, ELogAuthor.ZWY, "进入Sequence相机，最小近裁面", default(ReadOnlySpan<ValueTuple<string, object>>));
+				Log.Instance.Info(ELogModule.Camera, ELogAuthor.LJM, "进入Sequence相机，最小近裁面", default(ReadOnlySpan<ValueTuple<string, object>>));
 				if (disableMotionBlur)
 				{
 					UKismetSystemLibrary.ExecuteConsoleCommand(GlobalData.World, "r.MotionBlur.Amount 0", null);
@@ -146,10 +152,10 @@ namespace CSharpScript.Game.Camera
 			return flag;
 		}
 
-		// Token: 0x060482B6 RID: 295606 RVA: 0x01284EA8 File Offset: 0x012830A8
+		// Token: 0x0603E6ED RID: 255725 RVA: 0x0122794C File Offset: 0x01225B4C
 		private void BindSkillEndEvent(bool isFinishBySkillInterrupt, int? skillEntityId, long? skillId)
 		{
-			this.UnbindSkillEndEvent();
+			this.UnBindSkillEndEvent();
 			if (skillEntityId == null || skillId == null)
 			{
 				return;
@@ -165,21 +171,21 @@ namespace CSharpScript.Game.Camera
 			}
 			this.BindSkillEntity = entity;
 			this.BindSkillId = skillId;
-			EventSystem.Instance.AddWithTarget(entity, EEventName.CharInterruptSkill, new Action<int, int>(this.OnCharInterruptSkill));
+			EventSystem.Instance.AddWithTarget<int, int>(entity, EEventName.CharInterruptSkill, new Action<int, int>(this.OnCharInterruptSkill));
 		}
 
-		// Token: 0x060482B7 RID: 295607 RVA: 0x01284F10 File Offset: 0x01283110
-		private void UnbindSkillEndEvent()
+		// Token: 0x0603E6EE RID: 255726 RVA: 0x012279B4 File Offset: 0x01225BB4
+		private void UnBindSkillEndEvent()
 		{
-			if (this.BindSkillEntity != null && EventSystem.Instance.HasWithTarget(this.BindSkillEntity, EEventName.CharInterruptSkill, new Action<int, int>(this.OnCharInterruptSkill)))
+			if (this.BindSkillEntity != null && EventSystem.Instance.HasWithTarget<int, int>(this.BindSkillEntity, EEventName.CharInterruptSkill, new Action<int, int>(this.OnCharInterruptSkill)))
 			{
-				EventSystem.Instance.RemoveWithTarget(this.BindSkillEntity, EEventName.CharInterruptSkill, new Action<int, int>(this.OnCharInterruptSkill));
+				EventSystem.Instance.RemoveWithTarget<int, int>(this.BindSkillEntity, EEventName.CharInterruptSkill, new Action<int, int>(this.OnCharInterruptSkill));
 			}
 			this.BindSkillEntity = null;
 			this.BindSkillId = null;
 		}
 
-		// Token: 0x060482B8 RID: 295608 RVA: 0x01284F78 File Offset: 0x01283178
+		// Token: 0x0603E6EF RID: 255727 RVA: 0x01227A1C File Offset: 0x01225C1C
 		private void OnCharInterruptSkill(int skillEntityId, int skillId)
 		{
 			if (this.BindSkillEntity != null && this.BindSkillEntity.Id == skillEntityId)
@@ -194,40 +200,40 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x060482B9 RID: 295609 RVA: 0x01284FDB File Offset: 0x012831DB
+		// Token: 0x0603E6F0 RID: 255728 RVA: 0x01227A7F File Offset: 0x01225C7F
 		public void StopSequence()
 		{
 			this.SequenceStopInternal();
 		}
 
-		// Token: 0x060482BA RID: 295610 RVA: 0x01284FE3 File Offset: 0x012831E3
+		// Token: 0x0603E6F1 RID: 255729 RVA: 0x01227A87 File Offset: 0x01225C87
 		public void SetBlendTime(float inBlendIn, float inBlendOut)
 		{
 			this.SequenceCameraBlendInTime = inBlendIn;
 			this.SequenceCameraBlendOutTime = inBlendOut;
 		}
 
-		// Token: 0x060482BB RID: 295611 RVA: 0x01284FF3 File Offset: 0x012831F3
+		// Token: 0x0603E6F2 RID: 255730 RVA: 0x01227A97 File Offset: 0x01225C97
 		[NullableContext(2)]
 		public ALevelSequenceActor GetCurrentLevelSequenceActor()
 		{
 			return this.CameraSequenceActor;
 		}
 
-		// Token: 0x060482BC RID: 295612 RVA: 0x01284FFB File Offset: 0x012831FB
+		// Token: 0x0603E6F3 RID: 255731 RVA: 0x01227A9F File Offset: 0x01225C9F
 		public bool GetIsInCinematic()
 		{
 			return this.IsInCinematic;
 		}
 
-		// Token: 0x060482BD RID: 295613 RVA: 0x01285003 File Offset: 0x01283203
+		// Token: 0x0603E6F4 RID: 255732 RVA: 0x01227AA7 File Offset: 0x01225CA7
 		[NullableContext(2)]
 		public TsBaseCharacter GetCharacter()
 		{
 			return this.Character;
 		}
 
-		// Token: 0x060482BE RID: 295614 RVA: 0x0128500C File Offset: 0x0128320C
+		// Token: 0x0603E6F5 RID: 255733 RVA: 0x01227AB0 File Offset: 0x01225CB0
 		public void ResetCameraRatioSetting()
 		{
 			SequenceCameraDisplayComponent displayComponent = this.DisplayComponent;
@@ -247,11 +253,14 @@ namespace CSharpScript.Game.Camera
 				return;
 			}
 			string defaultFilmbackPresetName = ucineCameraComponent2.GetDefaultFilmbackPresetName();
-			ucineCameraComponent2.SetFilmbackPresetByName(defaultFilmbackPresetName);
+			if (!string.IsNullOrEmpty(defaultFilmbackPresetName))
+			{
+				ucineCameraComponent2.SetFilmbackPresetByName(defaultFilmbackPresetName);
+			}
 			ucineCameraComponent2.bConstrainAspectRatio = false;
 		}
 
-		// Token: 0x060482BF RID: 295615 RVA: 0x01285051 File Offset: 0x01283251
+		// Token: 0x0603E6F6 RID: 255734 RVA: 0x01227AFD File Offset: 0x01225CFD
 		protected override bool OnStart()
 		{
 			this.InitTraceElements();
@@ -259,7 +268,7 @@ namespace CSharpScript.Game.Camera
 			return this.DisplayComponent.Valid;
 		}
 
-		// Token: 0x060482C0 RID: 295616 RVA: 0x01285078 File Offset: 0x01283278
+		// Token: 0x0603E6F7 RID: 255735 RVA: 0x01227B24 File Offset: 0x01225D24
 		private void InitTraceElements()
 		{
 			this.SphereSingle = new UTraceSphereElement();
@@ -269,7 +278,11 @@ namespace CSharpScript.Game.Camera
 			this.SphereMultiply = new UTraceSphereElement();
 			this.SphereMultiply.bIsSingle = false;
 			this.SphereMultiply.bIgnoreSelf = true;
-			this.SphereMultiply.ActorsToIgnore = this.IgnoreActors;
+			this.SphereMultiply.ActorsToIgnore.Empty(true);
+			for (int i = 0; i < this.IgnoreActors.Num(); i++)
+			{
+				this.SphereMultiply.ActorsToIgnore.Add(this.IgnoreActors.Get(i));
+			}
 			this.SphereMultiply.AddObjectTypeQuery(KuroObjectTypeQuery.Pawn);
 			this.SphereMultiply.AddObjectTypeQuery(KuroObjectTypeQuery.PawnPlayer);
 			this.SphereMultiply.AddObjectTypeQuery(KuroObjectTypeQuery.PawnMonster);
@@ -290,18 +303,24 @@ namespace CSharpScript.Game.Camera
 			this.CameraCheckSphereTrace.SetTraceTypeQuery(KuroTraceTypeQuery.Camera);
 		}
 
-		// Token: 0x060482C1 RID: 295617 RVA: 0x012851C0 File Offset: 0x012833C0
+		// Token: 0x0603E6F8 RID: 255736 RVA: 0x01227C9C File Offset: 0x01225E9C
 		protected override bool OnEnd()
 		{
-			this.UnbindSkillEndEvent();
+			this.UnBindSkillEndEvent();
 			this.DisplayComponent = null;
 			this.BindingActors.Empty(true);
 			if (this.CameraSequenceActor != null)
 			{
+				this.UnregisterMainLevelSequenceActor(this.CameraSequenceActor);
 				ULevelSequencePlayer sequencePlayer = this.CameraSequenceActor.SequencePlayer;
 				if (sequencePlayer != null)
 				{
 					sequencePlayer.OnStop.Clear();
+				}
+				ULevelSequencePlayer sequencePlayer2 = this.CameraSequenceActor.SequencePlayer;
+				if (sequencePlayer2 != null)
+				{
+					sequencePlayer2.Stop();
 				}
 				ALevelSequenceActor tmp = this.CameraSequenceActor;
 				TimerSystem.Instance.Next(delegate(float _)
@@ -330,7 +349,7 @@ namespace CSharpScript.Game.Camera
 			return true;
 		}
 
-		// Token: 0x060482C2 RID: 295618 RVA: 0x012852FC File Offset: 0x012834FC
+		// Token: 0x0603E6F9 RID: 255737 RVA: 0x01227DF8 File Offset: 0x01225FF8
 		protected override void OnAfterTick(float delta)
 		{
 			if (this.CameraSequenceActor != null)
@@ -367,6 +386,7 @@ namespace CSharpScript.Game.Camera
 			this.ProcessMeshPosition();
 			this.CheckCollision(false);
 			this.ProcessDitherEffect();
+			this.UpdateSeparateSequencePlayers();
 			if (this.PlayedTime >= this.TimeLength)
 			{
 				this.SequenceStopInternal();
@@ -383,7 +403,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x060482C3 RID: 295619 RVA: 0x012854BC File Offset: 0x012836BC
+		// Token: 0x0603E6FA RID: 255738 RVA: 0x01227FC0 File Offset: 0x012261C0
 		private void ProcessTimeScale()
 		{
 			TsBaseCharacter character = this.Character;
@@ -409,13 +429,115 @@ namespace CSharpScript.Game.Camera
 			this.PlaySpeed = num2.GetValueOrDefault(1f);
 		}
 
-		// Token: 0x060482C4 RID: 295620 RVA: 0x01285523 File Offset: 0x01283723
+		// Token: 0x0603E6FB RID: 255739 RVA: 0x01228027 File Offset: 0x01226227
 		private TsBaseCharacter GetTargetCharacter()
 		{
 			return (this.Target ?? CameraController.Instance.GetCharacter()) as TsBaseCharacter;
 		}
 
-		// Token: 0x060482C5 RID: 295621 RVA: 0x01285540 File Offset: 0x01283740
+		// Token: 0x0603E6FC RID: 255740 RVA: 0x01228044 File Offset: 0x01226244
+		private void UpdateSeparateSequencePlayers()
+		{
+			TsBaseCharacter character = this.Character;
+			if (character == null || !character.IsValid())
+			{
+				return;
+			}
+			this.UpdateSeparateSequencePlayersFromMain(character, this.LockSocketName, this.IsEnableCollision);
+		}
+
+		// Token: 0x0603E6FD RID: 255741 RVA: 0x01228080 File Offset: 0x01226280
+		private void UpdateSeparateSequencePlayersFromMain(TsBaseCharacter character, FName lockSocketName, bool isEnableCollision)
+		{
+			CameraModelInstance cameraModelInstanceInternal = this.CameraModelInstanceInternal;
+			if (((cameraModelInstanceInternal != null) ? cameraModelInstanceInternal.CameraName : null) != "MainCamera")
+			{
+				return;
+			}
+			CameraModel instance = CSharpScript.Game.Camera.CameraModel.Instance;
+			if (instance == null)
+			{
+				return;
+			}
+			instance.ModelIterator(delegate(CameraModelInstance cameraModelInstance)
+			{
+				if (cameraModelInstance.CameraName == "MainCamera")
+				{
+					return;
+				}
+				SequenceCamera sequenceCamera = cameraModelInstance.SequenceCamera;
+				SequenceCameraPlayerComponent sequenceCameraPlayerComponent = (sequenceCamera != null) ? sequenceCamera.PlayerComponent : null;
+				if (sequenceCameraPlayerComponent == null)
+				{
+					return;
+				}
+				sequenceCameraPlayerComponent.UpdateFromMainSequence(character, lockSocketName, isEnableCollision);
+			});
+		}
+
+		// Token: 0x0603E6FE RID: 255742 RVA: 0x012280E4 File Offset: 0x012262E4
+		public void UpdateFromMainSequence(TsBaseCharacter character, FName lockSocketName, bool isEnableCollision)
+		{
+			if (this.IsSeparateSequencePlayerLogicEnabled)
+			{
+				CameraModelInstance cameraModelInstanceInternal = this.CameraModelInstanceInternal;
+				if (!(((cameraModelInstanceInternal != null) ? cameraModelInstanceInternal.CameraName : null) == "MainCamera") && character.IsValid())
+				{
+					SequenceCameraDisplayComponent displayComponent = this.DisplayComponent;
+					bool flag;
+					if (displayComponent == null)
+					{
+						flag = true;
+					}
+					else
+					{
+						BP_CineCamera_C cineCamera = displayComponent.CineCamera;
+						flag = !((cineCamera != null) ? new bool?(cineCamera.IsValid()) : null).GetValueOrDefault();
+					}
+					if (!flag)
+					{
+						this.Character = character;
+						this.LockSocketName = lockSocketName;
+						this.IsEnableCollision = isEnableCollision;
+						this.ProcessSocketTransform();
+						this.CheckCollision(false);
+						return;
+					}
+				}
+			}
+		}
+
+		// Token: 0x0603E6FF RID: 255743 RVA: 0x0122817A File Offset: 0x0122637A
+		private void RegisterMainLevelSequenceActor(ALevelSequenceActor levelSequenceActor)
+		{
+			CameraModelInstance cameraModelInstanceInternal = this.CameraModelInstanceInternal;
+			if (((cameraModelInstanceInternal != null) ? cameraModelInstanceInternal.CameraName : null) == "MainCamera")
+			{
+				SequenceCamera sequenceCamera = this.CameraModelInstanceInternal.SequenceCamera;
+				if (sequenceCamera == null)
+				{
+					return;
+				}
+				sequenceCamera.RegisterLevelSequenceActor(levelSequenceActor);
+			}
+		}
+
+		// Token: 0x0603E700 RID: 255744 RVA: 0x012281B0 File Offset: 0x012263B0
+		private void UnregisterMainLevelSequenceActor(ALevelSequenceActor levelSequenceActor)
+		{
+			CameraModelInstance cameraModelInstanceInternal = this.CameraModelInstanceInternal;
+			if (((cameraModelInstanceInternal != null) ? cameraModelInstanceInternal.CameraName : null) == "MainCamera")
+			{
+				SequenceCamera sequenceCamera = this.CameraModelInstanceInternal.SequenceCamera;
+				if (sequenceCamera == null)
+				{
+					return;
+				}
+				sequenceCamera.UnregisterLevelSequenceActor(levelSequenceActor);
+			}
+		}
+
+		// Token: 0x0603E701 RID: 255745 RVA: 0x012281E8 File Offset: 0x012263E8
 		private void SetupCameraSequence(SSequenceCamera_Settings settings, bool disableMovementInput = true, bool disableLookAtInput = true, [Nullable(2)] SSequenceCamera_SpecificConfig specificConfig = null)
 		{
 			this.IsEnableCollision = true;
@@ -443,6 +565,7 @@ namespace CSharpScript.Game.Camera
 			this.CameraSequenceActor = (ActorSystem.Instance.Get(ALevelSequenceActor.StaticClass(), new FTransformDouble(), null, false) as ALevelSequenceActor);
 			this.CameraSequenceActor.PlaybackSettings = fmovieSceneSequencePlaybackSettings;
 			this.CameraSequenceActor.SetSequence(this.CameraSequence);
+			this.RegisterMainLevelSequenceActor(this.CameraSequenceActor);
 			FQualifiedFrameTime startTime = this.CameraSequenceActor.SequencePlayer.GetStartTime();
 			this.PlayedTime = ((float)startTime.Time.FrameNumber.Value + startTime.Time.SubFrame) * (float)startTime.Rate.Denominator / (float)startTime.Rate.Numerator;
 			FQualifiedFrameTime endTime = this.CameraSequenceActor.SequencePlayer.GetEndTime();
@@ -468,7 +591,7 @@ namespace CSharpScript.Game.Camera
 			this.BindActors();
 		}
 
-		// Token: 0x060482C6 RID: 295622 RVA: 0x01285758 File Offset: 0x01283958
+		// Token: 0x0603E702 RID: 255746 RVA: 0x0122840C File Offset: 0x0122660C
 		private void HideHud(SSequenceCamera_Settings settings)
 		{
 			this.IsHideHud = settings.IsHideHud;
@@ -497,25 +620,27 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x060482C7 RID: 295623 RVA: 0x0128583C File Offset: 0x01283A3C
+		// Token: 0x0603E703 RID: 255747 RVA: 0x012284F0 File Offset: 0x012266F0
 		private void BindActors()
 		{
 			if (this.CameraSequenceActor == null)
 			{
 				return;
 			}
+			this.BindingActors.Empty(true);
 			this.BindingActors.Add(this.DisplayComponent.CineCamera);
 			this.CameraSequenceActor.SetBindingByTag(SequenceCameraPlayerComponent.SequenceCamera, this.BindingActors, false, false);
 			this.BindingActors.Empty(true);
 			if (this.Character != null)
 			{
+				this.BindingCharacterActors.Empty(true);
 				this.BindingCharacterActors.Add(this.Character);
 				this.CameraSequenceActor.SetBindingByTag(SequenceCameraPlayerComponent.RoleTag, this.BindingCharacterActors, false, false);
 				this.BindingCharacterActors.Empty(true);
 			}
 		}
 
-		// Token: 0x060482C8 RID: 295624 RVA: 0x012858CC File Offset: 0x01283ACC
+		// Token: 0x0603E704 RID: 255748 RVA: 0x01228598 File Offset: 0x01226798
 		private bool Play(bool isIgnoreInitialSphereDetect, bool ignoreCharacterCollision)
 		{
 			bool result = false;
@@ -535,7 +660,7 @@ namespace CSharpScript.Game.Camera
 			return result;
 		}
 
-		// Token: 0x060482C9 RID: 295625 RVA: 0x01285910 File Offset: 0x01283B10
+		// Token: 0x0603E705 RID: 255749 RVA: 0x012285DC File Offset: 0x012267DC
 		private bool CheckCameraLocation(bool ignoreCharacterCollision)
 		{
 			UMovieScene3DTransformTrack umovieScene3DTransformTrack = UKuroStaticLibrary.GetTrackByClass(UKuroStaticLibrary.GetSequenceTracksForObjectBindingID(this.CameraSequenceActor, SequenceCameraPlayerComponent.SequenceCamera), UMovieScene3DTransformTrack.StaticClass()) as UMovieScene3DTransformTrack;
@@ -568,7 +693,7 @@ namespace CSharpScript.Game.Camera
 			return flag;
 		}
 
-		// Token: 0x060482CA RID: 295626 RVA: 0x01285A68 File Offset: 0x01283C68
+		// Token: 0x0603E706 RID: 255750 RVA: 0x01228734 File Offset: 0x01226934
 		private bool ActivateCamera()
 		{
 			if (this.CameraSequence == null)
@@ -648,10 +773,10 @@ namespace CSharpScript.Game.Camera
 			return true;
 		}
 
-		// Token: 0x060482CB RID: 295627 RVA: 0x01285BCC File Offset: 0x01283DCC
+		// Token: 0x0603E707 RID: 255751 RVA: 0x01228898 File Offset: 0x01226A98
 		private void SequenceStopInternal()
 		{
-			this.UnbindSkillEndEvent();
+			this.UnBindSkillEndEvent();
 			if (this.IsEnableFrameAbstract && this.OriginMeshRelativeTransform != null)
 			{
 				TsBaseCharacter character = this.Character;
@@ -736,6 +861,7 @@ namespace CSharpScript.Game.Camera
 			this.BlendingOutRestTime = this.SequenceCameraBlendOutTime;
 			if (this.CameraSequenceActor != null)
 			{
+				this.UnregisterMainLevelSequenceActor(this.CameraSequenceActor);
 				this.CameraSequenceActor.SequencePlayer.Stop();
 				this.CameraSequenceActor.PlaybackSettings.bDisableMovementInput = false;
 				this.CameraSequenceActor.PlaybackSettings.bDisableLookAtInput = false;
@@ -776,7 +902,7 @@ namespace CSharpScript.Game.Camera
 			GameSettingsManager.Instance.ReApply(EFunction.MOTIONBLUR, EGameSettingsApplyReason.AnyTime, true);
 		}
 
-		// Token: 0x060482CC RID: 295628 RVA: 0x01285F94 File Offset: 0x01284194
+		// Token: 0x0603E708 RID: 255752 RVA: 0x01228C6C File Offset: 0x01226E6C
 		private void ProcessPlatformMoving()
 		{
 			if (!this.CharacterMoveComponent.HasDeltaBaseMovementData)
@@ -791,7 +917,7 @@ namespace CSharpScript.Game.Camera
 			this.OriginRootTransform = new FTransformDouble?(value);
 		}
 
-		// Token: 0x060482CD RID: 295629 RVA: 0x01285FFC File Offset: 0x012841FC
+		// Token: 0x0603E709 RID: 255753 RVA: 0x01228CD4 File Offset: 0x01226ED4
 		private void ProcessIkOffset()
 		{
 			if (this.IsAttachToActor)
@@ -832,7 +958,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x060482CE RID: 295630 RVA: 0x01286160 File Offset: 0x01284360
+		// Token: 0x0603E70A RID: 255754 RVA: 0x01228E38 File Offset: 0x01227038
 		private void ProcessMeshPosition()
 		{
 			if (!this.IsEnableFrameAbstract || this.CameraTransformTrack == null || this.Character == null || this.FrameAbstractDelta < 0.05f)
@@ -844,15 +970,20 @@ namespace CSharpScript.Game.Camera
 			{
 				this.FrameAbstractTime = num;
 				float time = (float)num * this.FrameAbstractDelta;
-				this.FrameAbstractRelativeCameraTransform = SequenceUtils.GetLevelSequenceTransform(this.CameraSequence, this.CameraTransformTrack, time).Inverse();
+				this.FrameAbstractRelativeCameraTransform = new FTransformDouble?(SequenceUtils.GetLevelSequenceTransform(this.CameraSequence, this.CameraTransformTrack, time).Inverse());
+			}
+			if (this.FrameAbstractRelativeCameraTransform == null)
+			{
+				return;
 			}
 			CharacterAnimationComponent component = this.Character.GetEntityNoBlueprint().GetComponent<CharacterAnimationComponent>();
 			if (component == null || !component.Valid)
 			{
 				return;
 			}
+			FTransformDouble value = this.FrameAbstractRelativeCameraTransform.Value;
 			FTransformDouble ftransformDouble = this.DisplayComponent.CineCamera.D_GetTransform();
-			FTransformDouble ftransformDouble2 = this.FrameAbstractRelativeCameraTransform * ftransformDouble;
+			FTransformDouble ftransformDouble2 = value * ftransformDouble;
 			TsBaseCharacter actor = component.Actor;
 			if (actor == null)
 			{
@@ -866,7 +997,7 @@ namespace CSharpScript.Game.Camera
 			mesh.D_K2_SetWorldTransform(ftransformDouble2, false, ref WorldGlobal.SweepHitResult, true);
 		}
 
-		// Token: 0x060482CF RID: 295631 RVA: 0x0128624C File Offset: 0x0128444C
+		// Token: 0x0603E70B RID: 255755 RVA: 0x01228F40 File Offset: 0x01227140
 		private void ProcessDitherEffect()
 		{
 			if (!this.IsDitherEffectEnabled)
@@ -915,7 +1046,7 @@ namespace CSharpScript.Game.Camera
 			this.Character.SetDitherEffect(dither, ECharacterDitherType.Fight);
 		}
 
-		// Token: 0x060482D0 RID: 295632 RVA: 0x012863D4 File Offset: 0x012845D4
+		// Token: 0x0603E70C RID: 255756 RVA: 0x012290C8 File Offset: 0x012272C8
 		[NullableContext(2)]
 		private bool CheckBreakSequence(TsBaseCharacter character, TsBaseCharacter target)
 		{
@@ -939,7 +1070,7 @@ namespace CSharpScript.Game.Camera
 			return obj2 != null && obj2.IsRole() && creatureDataComponent != null && creatureDataComponent.IsMonster();
 		}
 
-		// Token: 0x060482D1 RID: 295633 RVA: 0x01286450 File Offset: 0x01284650
+		// Token: 0x0603E70D RID: 255757 RVA: 0x01229144 File Offset: 0x01227344
 		private void PlaySequence()
 		{
 			this.IgnoreActors.Empty(true);
@@ -957,7 +1088,7 @@ namespace CSharpScript.Game.Camera
 			this.IsInCinematic = true;
 		}
 
-		// Token: 0x060482D2 RID: 295634 RVA: 0x012864F4 File Offset: 0x012846F4
+		// Token: 0x0603E70E RID: 255758 RVA: 0x012291E8 File Offset: 0x012273E8
 		private FTransformDouble ConstructTransform(FTransformDouble transform)
 		{
 			FQuat rotation = transform.GetRotation();
@@ -966,12 +1097,12 @@ namespace CSharpScript.Game.Camera
 			return new FTransformDouble(ref rotation, ref translation, ref scale3D);
 		}
 
-		// Token: 0x060482D3 RID: 295635 RVA: 0x01286524 File Offset: 0x01284724
+		// Token: 0x0603E70F RID: 255759 RVA: 0x01229218 File Offset: 0x01227418
 		protected override void OnChangeTimeDilation(float timeDilation)
 		{
 		}
 
-		// Token: 0x060482D4 RID: 295636 RVA: 0x01286528 File Offset: 0x01284728
+		// Token: 0x0603E710 RID: 255760 RVA: 0x0122921C File Offset: 0x0122741C
 		private void ProcessSocketTransform()
 		{
 			TsBaseCharacter character = this.Character;
@@ -988,7 +1119,7 @@ namespace CSharpScript.Game.Camera
 			this.SocketTransform = this.GetBoneTransform(this.LockSocketName);
 		}
 
-		// Token: 0x060482D5 RID: 295637 RVA: 0x01286594 File Offset: 0x01284794
+		// Token: 0x0603E711 RID: 255761 RVA: 0x01229288 File Offset: 0x01227488
 		public void CheckCollision(bool isBlendOut)
 		{
 			if (this.SocketTransform == null || !this.SocketTransform.GetValueOrDefault().IsValid())
@@ -999,7 +1130,11 @@ namespace CSharpScript.Game.Camera
 			this.CameraSphereTrace.WorldContextObject = GlobalData.World;
 			this.IgnoreActors.Empty(true);
 			this.IgnoreActors.Add(CameraController.Instance.GetCharacter());
-			this.CameraSphereTrace.ActorsToIgnore = this.IgnoreActors;
+			this.CameraSphereTrace.ActorsToIgnore.Empty(true);
+			for (int i = 0; i < this.IgnoreActors.Num(); i++)
+			{
+				this.CameraSphereTrace.ActorsToIgnore.Add(this.IgnoreActors.Get(i));
+			}
 			TraceElementCommon.Instance.SetStartLocation(this.CameraSphereTrace, this.SocketTransform.Value.GetLocation());
 			Vector cameraLocation = this.CameraLocation;
 			FVectorDouble fvectorDouble = this.DisplayComponent.CineCamera.D_K2_GetActorLocation();
@@ -1014,7 +1149,7 @@ namespace CSharpScript.Game.Camera
 			}
 		}
 
-		// Token: 0x060482D6 RID: 295638 RVA: 0x01286700 File Offset: 0x01284900
+		// Token: 0x0603E712 RID: 255762 RVA: 0x01229424 File Offset: 0x01227624
 		public bool CheckSphereCollision()
 		{
 			if (this.CheckRadius == 0f)
@@ -1036,26 +1171,42 @@ namespace CSharpScript.Game.Camera
 			this.SourceLocation.Addition(this.Up, this.SourceLocation);
 			this.IgnoreActors.Empty(true);
 			this.IgnoreActors.Add(CameraController.Instance.GetCharacter());
-			this.CameraCheckSphereTrace.ActorsToIgnore = this.IgnoreActors;
+			this.CameraCheckSphereTrace.ActorsToIgnore.Empty(true);
+			for (int i = 0; i < this.IgnoreActors.Num(); i++)
+			{
+				this.CameraCheckSphereTrace.ActorsToIgnore.Add(this.IgnoreActors.Get(i));
+			}
 			TraceElementCommon.Instance.SetStartLocation(this.CameraCheckSphereTrace, this.SourceLocation);
 			TraceElementCommon.Instance.SetEndLocation(this.CameraCheckSphereTrace, this.SourceLocation);
 			this.CameraCheckSphereTrace.Radius = this.CheckRadius;
 			return TraceElementCommon.Instance.SphereTrace(this.CameraCheckSphereTrace, "SequenceCameraPlayerComponent_ProcessHideShelterCharacter");
 		}
 
-		// Token: 0x060482D7 RID: 295639 RVA: 0x012868B8 File Offset: 0x01284AB8
+		// Token: 0x0603E713 RID: 255763 RVA: 0x0122960E File Offset: 0x0122780E
 		public FTransformDouble? GetBoneTransform(FName boneName)
 		{
 			return new FTransformDouble?(this.Character.Mesh.D_GetSocketTransform(boneName, ERelativeTransformSpace.RTS_World));
 		}
 
-		// Token: 0x060482D8 RID: 295640 RVA: 0x012868D1 File Offset: 0x01284AD1
+		// Token: 0x0603E714 RID: 255764 RVA: 0x01229627 File Offset: 0x01227827
+		public void SetDitherEffectEnable(ESequenceCameraDitherEffectEnum ditherEffectEnum)
+		{
+			this.DitherEffectEnableSet.Add(ditherEffectEnum);
+		}
+
+		// Token: 0x0603E715 RID: 255765 RVA: 0x01229636 File Offset: 0x01227836
+		public void SetDitherEffectDisable(ESequenceCameraDitherEffectEnum ditherEffectEnum)
+		{
+			this.DitherEffectEnableSet.Remove(ditherEffectEnum);
+		}
+
+		// Token: 0x0603E716 RID: 255766 RVA: 0x01229645 File Offset: 0x01227845
 		public void SetCameraCollisionState(bool isEnableCollision)
 		{
 			this.IsEnableCollision = isEnableCollision;
 		}
 
-		// Token: 0x060482D9 RID: 295641 RVA: 0x012868DC File Offset: 0x01284ADC
+		// Token: 0x0603E717 RID: 255767 RVA: 0x01229650 File Offset: 0x01227850
 		protected void DrawCube(FTransformDouble transform, float duration, float colorValue)
 		{
 			FLinearColor lineColor = new FLinearColor(colorValue, colorValue, colorValue, colorValue);
@@ -1074,7 +1225,7 @@ namespace CSharpScript.Game.Camera
 			UKismetSystemLibrary.D_DrawDebugLine(GlobalData.World, lineStart2, lineEnd2, lineColor, duration, (float)num2);
 		}
 
-		// Token: 0x060482DA RID: 295642 RVA: 0x01286A3C File Offset: 0x01284C3C
+		// Token: 0x0603E718 RID: 255768 RVA: 0x012297B0 File Offset: 0x012279B0
 		public SeqCameraThings SaveSeqCamera()
 		{
 			return new SeqCameraThings
@@ -1091,20 +1242,20 @@ namespace CSharpScript.Game.Camera
 			};
 		}
 
-		// Token: 0x060482DB RID: 295643 RVA: 0x01286B0F File Offset: 0x01284D0F
+		// Token: 0x0603E719 RID: 255769 RVA: 0x01229883 File Offset: 0x01227A83
 		public bool GetIfNeedWaitInPlot()
 		{
 			return this.NeedWaitInPlot;
 		}
 
-		// Token: 0x060482DC RID: 295644 RVA: 0x01286B17 File Offset: 0x01284D17
+		// Token: 0x0603E71A RID: 255770 RVA: 0x0122988B File Offset: 0x01227A8B
 		protected override bool OnClear()
 		{
 			this.CameraModelInstanceInternal = null;
 			return true;
 		}
 
-		// Token: 0x060482DD RID: 295645 RVA: 0x01286B24 File Offset: 0x01284D24
+		// Token: 0x0603E71B RID: 255771 RVA: 0x01229898 File Offset: 0x01227A98
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -1112,607 +1263,527 @@ namespace CSharpScript.Game.Camera
 				return false;
 			}
 			SequenceCameraPlayerComponent sequenceCameraPlayerComponent = (SequenceCameraPlayerComponent)componentTemplate;
-			if (base.CanResetComponentProperty("CameraModelInstanceInternal"))
+			if (sequenceCameraPlayerComponent.CameraModelInstanceInternal == null)
 			{
-				if (sequenceCameraPlayerComponent.CameraModelInstanceInternal == null)
-				{
-					this.CameraModelInstanceInternal = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CameraModelInstance>(this.CameraModelInstanceInternal), "CameraModelInstanceInternal"))
-				{
-					return false;
-				}
+				this.CameraModelInstanceInternal = null;
 			}
-			if (base.CanResetComponentProperty("DisplayComponent"))
-			{
-				if (sequenceCameraPlayerComponent.DisplayComponent == null)
-				{
-					this.DisplayComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SequenceCameraDisplayComponent>(this.DisplayComponent), "DisplayComponent"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("IgnoreActors") && sequenceCameraPlayerComponent.IgnoreActors != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.IgnoreActors), "IgnoreActors"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CameraModelInstanceInternal), "CameraModelInstanceInternal"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("CameraSequence"))
+			if (sequenceCameraPlayerComponent.DisplayComponent == null)
 			{
-				if (sequenceCameraPlayerComponent.CameraSequence == null)
-				{
-					this.CameraSequence = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ULevelSequence>(this.CameraSequence), "CameraSequence"))
-				{
-					return false;
-				}
+				this.DisplayComponent = null;
 			}
-			if (base.CanResetComponentProperty("CameraSequenceActor"))
-			{
-				if (sequenceCameraPlayerComponent.CameraSequenceActor == null)
-				{
-					this.CameraSequenceActor = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ALevelSequenceActor>(this.CameraSequenceActor), "CameraSequenceActor"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("PlayedTime"))
-			{
-				this.PlayedTime = sequenceCameraPlayerComponent.PlayedTime;
-			}
-			if (base.CanResetComponentProperty("TimeLength"))
-			{
-				this.TimeLength = sequenceCameraPlayerComponent.TimeLength;
-			}
-			if (base.CanResetComponentProperty("PlaySpeed"))
-			{
-				this.PlaySpeed = sequenceCameraPlayerComponent.PlaySpeed;
-			}
-			if (base.CanResetComponentProperty("SequenceCameraBlendInTime"))
-			{
-				this.SequenceCameraBlendInTime = sequenceCameraPlayerComponent.SequenceCameraBlendInTime;
-			}
-			if (base.CanResetComponentProperty("SequenceCameraBlendOutTime"))
-			{
-				this.SequenceCameraBlendOutTime = sequenceCameraPlayerComponent.SequenceCameraBlendOutTime;
-			}
-			if (base.CanResetComponentProperty("BlendingOutRestTime"))
-			{
-				this.BlendingOutRestTime = sequenceCameraPlayerComponent.BlendingOutRestTime;
-			}
-			if (base.CanResetComponentProperty("LevelSequenceData"))
-			{
-				if (sequenceCameraPlayerComponent.LevelSequenceData == null)
-				{
-					this.LevelSequenceData = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UDefaultLevelSequenceInstanceData>(this.LevelSequenceData), "LevelSequenceData"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("AnimInstance"))
-			{
-				if (sequenceCameraPlayerComponent.AnimInstance == null)
-				{
-					this.AnimInstance = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UKuroAnimInstanceRole>(this.AnimInstance), "AnimInstance"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("OriginRootTransform"))
-			{
-				this.OriginRootTransform = sequenceCameraPlayerComponent.OriginRootTransform;
-			}
-			if (base.CanResetComponentProperty("OriginMeshRelativeTransform"))
-			{
-				this.OriginMeshRelativeTransform = sequenceCameraPlayerComponent.OriginMeshRelativeTransform;
-			}
-			if (base.CanResetComponentProperty("CharacterMoveComponent"))
-			{
-				if (sequenceCameraPlayerComponent.CharacterMoveComponent == null)
-				{
-					this.CharacterMoveComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseMoveComponent>(this.CharacterMoveComponent), "CharacterMoveComponent"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("IsInCinematic"))
-			{
-				this.IsInCinematic = sequenceCameraPlayerComponent.IsInCinematic;
-			}
-			if (base.CanResetComponentProperty("IsHideHud"))
-			{
-				this.IsHideHud = sequenceCameraPlayerComponent.IsHideHud;
-			}
-			if (base.CanResetComponentProperty("HideHudTime"))
-			{
-				this.HideHudTime = sequenceCameraPlayerComponent.HideHudTime;
-			}
-			if (base.CanResetComponentProperty("BindingActors") && sequenceCameraPlayerComponent.BindingActors != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.BindingActors), "BindingActors"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DisplayComponent), "DisplayComponent"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("BindingCharacterActors") && sequenceCameraPlayerComponent.BindingCharacterActors != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.BindingCharacterActors), "BindingCharacterActors"))
+			if (sequenceCameraPlayerComponent.IgnoreActors != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.IgnoreActors), "IgnoreActors"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("ResetAdditiveRotation"))
+			if (sequenceCameraPlayerComponent.CameraSequence == null)
 			{
-				this.ResetAdditiveRotation = sequenceCameraPlayerComponent.ResetAdditiveRotation;
+				this.CameraSequence = null;
 			}
-			if (base.CanResetComponentProperty("ResetFightCameraOnStop"))
-			{
-				this.ResetFightCameraOnStop = sequenceCameraPlayerComponent.ResetFightCameraOnStop;
-			}
-			if (base.CanResetComponentProperty("RecoverRotation"))
-			{
-				this.RecoverRotation = sequenceCameraPlayerComponent.RecoverRotation;
-			}
-			if (base.CanResetComponentProperty("IsRecoverRotation"))
-			{
-				this.IsRecoverRotation = sequenceCameraPlayerComponent.IsRecoverRotation;
-			}
-			if (base.CanResetComponentProperty("Target"))
-			{
-				if (sequenceCameraPlayerComponent.Target == null)
-				{
-					this.Target = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TsBaseCharacter>(this.Target), "Target"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("Character"))
-			{
-				if (sequenceCameraPlayerComponent.Character == null)
-				{
-					this.Character = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TsBaseCharacter>(this.Character), "Character"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("OldCharacter"))
-			{
-				if (sequenceCameraPlayerComponent.OldCharacter == null)
-				{
-					this.OldCharacter = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TsBaseCharacter>(this.OldCharacter), "OldCharacter"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("SphereSingle"))
-			{
-				if (sequenceCameraPlayerComponent.SphereSingle == null)
-				{
-					this.SphereSingle = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UTraceSphereElement>(this.SphereSingle), "SphereSingle"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("SphereMultiply"))
-			{
-				if (sequenceCameraPlayerComponent.SphereMultiply == null)
-				{
-					this.SphereMultiply = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UTraceSphereElement>(this.SphereMultiply), "SphereMultiply"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("SocketName"))
-			{
-				this.SocketName = sequenceCameraPlayerComponent.SocketName;
-			}
-			if (base.CanResetComponentProperty("LockSocketName"))
-			{
-				this.LockSocketName = sequenceCameraPlayerComponent.LockSocketName;
-			}
-			if (base.CanResetComponentProperty("TransformOriginActor"))
-			{
-				if (sequenceCameraPlayerComponent.TransformOriginActor == null)
-				{
-					this.TransformOriginActor = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.TransformOriginActor), "TransformOriginActor"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("RelativeLocation") && sequenceCameraPlayerComponent.RelativeLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.RelativeLocation), "RelativeLocation"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CameraSequence), "CameraSequence"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("ShowLog"))
+			if (sequenceCameraPlayerComponent.CameraSequenceActor == null)
 			{
-				this.ShowLog = sequenceCameraPlayerComponent.ShowLog;
+				this.CameraSequenceActor = null;
 			}
-			if (base.CanResetComponentProperty("CheckRadius"))
-			{
-				this.CheckRadius = sequenceCameraPlayerComponent.CheckRadius;
-			}
-			if (base.CanResetComponentProperty("IsEnableCollision"))
-			{
-				this.IsEnableCollision = sequenceCameraPlayerComponent.IsEnableCollision;
-			}
-			if (base.CanResetComponentProperty("NeedWaitInPlot"))
-			{
-				this.NeedWaitInPlot = sequenceCameraPlayerComponent.NeedWaitInPlot;
-			}
-			if (base.CanResetComponentProperty("IsPlayCameraSequenceEnabled"))
-			{
-				this.IsPlayCameraSequenceEnabled = sequenceCameraPlayerComponent.IsPlayCameraSequenceEnabled;
-			}
-			if (base.CanResetComponentProperty("IsEnableFrameAbstract"))
-			{
-				this.IsEnableFrameAbstract = sequenceCameraPlayerComponent.IsEnableFrameAbstract;
-			}
-			if (base.CanResetComponentProperty("FrameAbstractDelta"))
-			{
-				this.FrameAbstractDelta = sequenceCameraPlayerComponent.FrameAbstractDelta;
-			}
-			if (base.CanResetComponentProperty("FrameAbstractTime"))
-			{
-				this.FrameAbstractTime = sequenceCameraPlayerComponent.FrameAbstractTime;
-			}
-			if (base.CanResetComponentProperty("CameraTransformTrack"))
-			{
-				if (sequenceCameraPlayerComponent.CameraTransformTrack == null)
-				{
-					this.CameraTransformTrack = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UMovieSceneTrack>(this.CameraTransformTrack), "CameraTransformTrack"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("FrameAbstractRelativeCameraTransform"))
-			{
-				this.FrameAbstractRelativeCameraTransform = sequenceCameraPlayerComponent.FrameAbstractRelativeCameraTransform;
-			}
-			if (base.CanResetComponentProperty("IsAttachToActor"))
-			{
-				this.IsAttachToActor = sequenceCameraPlayerComponent.IsAttachToActor;
-			}
-			if (base.CanResetComponentProperty("DitherEffectEnableSet") && sequenceCameraPlayerComponent.DitherEffectEnableSet != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<ESequenceCameraDitherEffectEnum>(this.DitherEffectEnableSet), "DitherEffectEnableSet"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CameraSequenceActor), "CameraSequenceActor"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("BindSkillEntity"))
+			this.PlayedTime = sequenceCameraPlayerComponent.PlayedTime;
+			this.TimeLength = sequenceCameraPlayerComponent.TimeLength;
+			this.PlaySpeed = sequenceCameraPlayerComponent.PlaySpeed;
+			this.SequenceCameraBlendInTime = sequenceCameraPlayerComponent.SequenceCameraBlendInTime;
+			this.SequenceCameraBlendOutTime = sequenceCameraPlayerComponent.SequenceCameraBlendOutTime;
+			this.BlendingOutRestTime = sequenceCameraPlayerComponent.BlendingOutRestTime;
+			if (sequenceCameraPlayerComponent.LevelSequenceData == null)
 			{
-				if (sequenceCameraPlayerComponent.BindSkillEntity == null)
-				{
-					this.BindSkillEntity = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Entity>(this.BindSkillEntity), "BindSkillEntity"))
-				{
-					return false;
-				}
+				this.LevelSequenceData = null;
 			}
-			if (base.CanResetComponentProperty("BindSkillId"))
-			{
-				this.BindSkillId = sequenceCameraPlayerComponent.BindSkillId;
-			}
-			if (base.CanResetComponentProperty("MeshRotator") && sequenceCameraPlayerComponent.MeshRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Rotator>(this.MeshRotator), "MeshRotator"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LevelSequenceData), "LevelSequenceData"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TmpVector") && sequenceCameraPlayerComponent.TmpVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TmpVector), "TmpVector"))
+			if (sequenceCameraPlayerComponent.AnimInstance == null)
+			{
+				this.AnimInstance = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.AnimInstance), "AnimInstance"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TmpTransformDouble"))
+			this.OriginRootTransform = sequenceCameraPlayerComponent.OriginRootTransform;
+			this.OriginMeshRelativeTransform = sequenceCameraPlayerComponent.OriginMeshRelativeTransform;
+			if (sequenceCameraPlayerComponent.CharacterMoveComponent == null)
 			{
-				this.TmpTransformDouble = sequenceCameraPlayerComponent.TmpTransformDouble;
+				this.CharacterMoveComponent = null;
 			}
-			if (base.CanResetComponentProperty("TmpRotator") && sequenceCameraPlayerComponent.TmpRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Rotator>(this.TmpRotator), "TmpRotator"))
-			{
-				return false;
-			}
-			if (base.CanResetComponentProperty("TmpQuat") && sequenceCameraPlayerComponent.TmpQuat != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Quat>(this.TmpQuat), "TmpQuat"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CharacterMoveComponent), "CharacterMoveComponent"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("CameraSphereTrace"))
-			{
-				if (sequenceCameraPlayerComponent.CameraSphereTrace == null)
-				{
-					this.CameraSphereTrace = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UTraceSphereElement>(this.CameraSphereTrace), "CameraSphereTrace"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CameraCheckSphereTrace"))
-			{
-				if (sequenceCameraPlayerComponent.CameraCheckSphereTrace == null)
-				{
-					this.CameraCheckSphereTrace = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UTraceSphereElement>(this.CameraCheckSphereTrace), "CameraCheckSphereTrace"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("IsHit"))
-			{
-				this.IsHit = sequenceCameraPlayerComponent.IsHit;
-			}
-			if (base.CanResetComponentProperty("HitLocation") && sequenceCameraPlayerComponent.HitLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.HitLocation), "HitLocation"))
+			this.IsInCinematic = sequenceCameraPlayerComponent.IsInCinematic;
+			this.IsHideHud = sequenceCameraPlayerComponent.IsHideHud;
+			this.HideHudTime = sequenceCameraPlayerComponent.HideHudTime;
+			if (sequenceCameraPlayerComponent.BindingActors != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.BindingActors), "BindingActors"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("CameraLocation") && sequenceCameraPlayerComponent.CameraLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.CameraLocation), "CameraLocation"))
+			if (sequenceCameraPlayerComponent.BindingCharacterActors != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.BindingCharacterActors), "BindingCharacterActors"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("CameraRotation") && sequenceCameraPlayerComponent.CameraRotation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Rotator>(this.CameraRotation), "CameraRotation"))
+			this.ResetAdditiveRotation = sequenceCameraPlayerComponent.ResetAdditiveRotation;
+			this.ResetFightCameraOnStop = sequenceCameraPlayerComponent.ResetFightCameraOnStop;
+			this.RecoverRotation = sequenceCameraPlayerComponent.RecoverRotation;
+			this.IsRecoverRotation = sequenceCameraPlayerComponent.IsRecoverRotation;
+			if (sequenceCameraPlayerComponent.Target == null)
+			{
+				this.Target = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Target), "Target"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("CameraRotationInGravity") && sequenceCameraPlayerComponent.CameraRotationInGravity != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Rotator>(this.CameraRotationInGravity), "CameraRotationInGravity"))
+			if (sequenceCameraPlayerComponent.Character == null)
+			{
+				this.Character = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Character), "Character"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("SocketTransform"))
+			if (sequenceCameraPlayerComponent.OldCharacter == null)
 			{
-				this.SocketTransform = sequenceCameraPlayerComponent.SocketTransform;
+				this.OldCharacter = null;
 			}
-			return (!base.CanResetComponentProperty("SourceLocation") || sequenceCameraPlayerComponent.SourceLocation == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.SourceLocation), "SourceLocation")) && (!base.CanResetComponentProperty("SourceForward") || sequenceCameraPlayerComponent.SourceForward == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.SourceForward), "SourceForward")) && (!base.CanResetComponentProperty("HorizontalVector") || sequenceCameraPlayerComponent.HorizontalVector == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.HorizontalVector), "HorizontalVector")) && (!base.CanResetComponentProperty("Up") || sequenceCameraPlayerComponent.Up == null || base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.Up), "Up"));
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.OldCharacter), "OldCharacter"))
+			{
+				return false;
+			}
+			if (sequenceCameraPlayerComponent.SphereSingle == null)
+			{
+				this.SphereSingle = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SphereSingle), "SphereSingle"))
+			{
+				return false;
+			}
+			if (sequenceCameraPlayerComponent.SphereMultiply == null)
+			{
+				this.SphereMultiply = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SphereMultiply), "SphereMultiply"))
+			{
+				return false;
+			}
+			this.SocketName = sequenceCameraPlayerComponent.SocketName;
+			this.LockSocketName = sequenceCameraPlayerComponent.LockSocketName;
+			if (sequenceCameraPlayerComponent.TransformOriginActor == null)
+			{
+				this.TransformOriginActor = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TransformOriginActor), "TransformOriginActor"))
+			{
+				return false;
+			}
+			if (sequenceCameraPlayerComponent.RelativeLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.RelativeLocation), "RelativeLocation"))
+			{
+				return false;
+			}
+			this.ShowLog = sequenceCameraPlayerComponent.ShowLog;
+			this.CheckRadius = sequenceCameraPlayerComponent.CheckRadius;
+			this.IsEnableCollision = sequenceCameraPlayerComponent.IsEnableCollision;
+			this.IsSeparateSequencePlayerLogicEnabled = sequenceCameraPlayerComponent.IsSeparateSequencePlayerLogicEnabled;
+			this.NeedWaitInPlot = sequenceCameraPlayerComponent.NeedWaitInPlot;
+			this.IsPlayCameraSequenceEnabled = sequenceCameraPlayerComponent.IsPlayCameraSequenceEnabled;
+			this.IsEnableFrameAbstract = sequenceCameraPlayerComponent.IsEnableFrameAbstract;
+			this.FrameAbstractDelta = sequenceCameraPlayerComponent.FrameAbstractDelta;
+			this.FrameAbstractTime = sequenceCameraPlayerComponent.FrameAbstractTime;
+			if (sequenceCameraPlayerComponent.CameraTransformTrack == null)
+			{
+				this.CameraTransformTrack = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CameraTransformTrack), "CameraTransformTrack"))
+			{
+				return false;
+			}
+			this.FrameAbstractRelativeCameraTransform = sequenceCameraPlayerComponent.FrameAbstractRelativeCameraTransform;
+			this.IsAttachToActor = sequenceCameraPlayerComponent.IsAttachToActor;
+			if (sequenceCameraPlayerComponent.DitherEffectEnableSet != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<ESequenceCameraDitherEffectEnum>(this.DitherEffectEnableSet), "DitherEffectEnableSet"))
+			{
+				return false;
+			}
+			if (sequenceCameraPlayerComponent.BindSkillEntity == null)
+			{
+				this.BindSkillEntity = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BindSkillEntity), "BindSkillEntity"))
+			{
+				return false;
+			}
+			this.BindSkillId = sequenceCameraPlayerComponent.BindSkillId;
+			if (sequenceCameraPlayerComponent.MeshRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.MeshRotator), "MeshRotator"))
+			{
+				return false;
+			}
+			if (sequenceCameraPlayerComponent.TmpVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector), "TmpVector"))
+			{
+				return false;
+			}
+			this.TmpTransformDouble = sequenceCameraPlayerComponent.TmpTransformDouble;
+			if (sequenceCameraPlayerComponent.TmpRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpRotator), "TmpRotator"))
+			{
+				return false;
+			}
+			if (sequenceCameraPlayerComponent.TmpQuat != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpQuat), "TmpQuat"))
+			{
+				return false;
+			}
+			if (sequenceCameraPlayerComponent.CameraSphereTrace == null)
+			{
+				this.CameraSphereTrace = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CameraSphereTrace), "CameraSphereTrace"))
+			{
+				return false;
+			}
+			if (sequenceCameraPlayerComponent.CameraCheckSphereTrace == null)
+			{
+				this.CameraCheckSphereTrace = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CameraCheckSphereTrace), "CameraCheckSphereTrace"))
+			{
+				return false;
+			}
+			this.IsHit = sequenceCameraPlayerComponent.IsHit;
+			if (sequenceCameraPlayerComponent.HitLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.HitLocation), "HitLocation"))
+			{
+				return false;
+			}
+			if (sequenceCameraPlayerComponent.CameraLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CameraLocation), "CameraLocation"))
+			{
+				return false;
+			}
+			if (sequenceCameraPlayerComponent.CameraRotation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CameraRotation), "CameraRotation"))
+			{
+				return false;
+			}
+			if (sequenceCameraPlayerComponent.CameraRotationInGravity != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CameraRotationInGravity), "CameraRotationInGravity"))
+			{
+				return false;
+			}
+			this.SocketTransform = sequenceCameraPlayerComponent.SocketTransform;
+			return (sequenceCameraPlayerComponent.SourceLocation == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.SourceLocation), "SourceLocation")) && (sequenceCameraPlayerComponent.SourceForward == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.SourceForward), "SourceForward")) && (sequenceCameraPlayerComponent.HorizontalVector == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.HorizontalVector), "HorizontalVector")) && (sequenceCameraPlayerComponent.Up == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.Up), "Up"));
 		}
 
-		// Token: 0x0402616A RID: 156010
+		// Token: 0x170076D8 RID: 30424
+		// (get) Token: 0x0603E71C RID: 255772 RVA: 0x01229F55 File Offset: 0x01228155
+		public override bool NeedCreateInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170076D9 RID: 30425
+		// (get) Token: 0x0603E71D RID: 255773 RVA: 0x01229F58 File Offset: 0x01228158
+		public override bool NeedClearInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170076DA RID: 30426
+		// (get) Token: 0x0603E71E RID: 255774 RVA: 0x01229F5B File Offset: 0x0122815B
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170076DB RID: 30427
+		// (get) Token: 0x0603E71F RID: 255775 RVA: 0x01229F5E File Offset: 0x0122815E
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170076DC RID: 30428
+		// (get) Token: 0x0603E720 RID: 255776 RVA: 0x01229F61 File Offset: 0x01228161
+		public override bool NeedAfterTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170076DD RID: 30429
+		// (get) Token: 0x0603E721 RID: 255777 RVA: 0x01229F64 File Offset: 0x01228164
+		public override bool NeedChangeTimeDilationInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04021454 RID: 136276
 		private const string PROFILE_KEY1 = "SequenceCameraPlayerComponent_CheckCameraLocation";
 
-		// Token: 0x0402616B RID: 156011
+		// Token: 0x04021455 RID: 136277
 		private const string PROFILE_KEY2 = "SequenceCameraPlayerComponent_ProcessHideShelterCharacter";
 
-		// Token: 0x0402616C RID: 156012
+		// Token: 0x04021456 RID: 136278
 		private const double RELATIVE_LENGTH = 10000.0;
 
-		// Token: 0x0402616D RID: 156013
+		// Token: 0x04021457 RID: 136279
 		private const float MINI_FRAME_ABSTRACT_DELTA = 0.05f;
 
-		// Token: 0x0402616E RID: 156014
+		// Token: 0x04021458 RID: 136280
 		[StaticVariableRuleIgnore]
 		private static readonly Stat SequenceTransformStat = Stat.Create("SequenceTransformStat", "", "");
 
-		// Token: 0x0402616F RID: 156015
+		// Token: 0x04021459 RID: 136281
 		private static readonly FName SequenceCamera = new FName("SequenceCamera");
 
-		// Token: 0x04026170 RID: 156016
+		// Token: 0x0402145A RID: 136282
 		private static readonly FName RoleTag = new FName("Role");
 
-		// Token: 0x04026171 RID: 156017
+		// Token: 0x0402145B RID: 136283
 		[Nullable(2)]
 		private CameraModelInstance CameraModelInstanceInternal;
 
-		// Token: 0x04026172 RID: 156018
+		// Token: 0x0402145C RID: 136284
 		[Nullable(2)]
 		private SequenceCameraDisplayComponent DisplayComponent;
 
-		// Token: 0x04026173 RID: 156019
+		// Token: 0x0402145D RID: 136285
 		private readonly TArray<AActor> IgnoreActors = new TArray<AActor>();
 
-		// Token: 0x04026174 RID: 156020
+		// Token: 0x0402145E RID: 136286
 		[Nullable(2)]
 		private ULevelSequence CameraSequence;
 
-		// Token: 0x04026175 RID: 156021
+		// Token: 0x0402145F RID: 136287
 		[Nullable(2)]
 		private ALevelSequenceActor CameraSequenceActor;
 
-		// Token: 0x04026176 RID: 156022
+		// Token: 0x04021460 RID: 136288
 		private float PlayedTime;
 
-		// Token: 0x04026177 RID: 156023
+		// Token: 0x04021461 RID: 136289
 		private float TimeLength;
 
-		// Token: 0x04026178 RID: 156024
+		// Token: 0x04021462 RID: 136290
 		private float PlaySpeed = 1f;
 
-		// Token: 0x04026179 RID: 156025
+		// Token: 0x04021463 RID: 136291
 		private float SequenceCameraBlendInTime = 1f;
 
-		// Token: 0x0402617A RID: 156026
+		// Token: 0x04021464 RID: 136292
 		private float SequenceCameraBlendOutTime = 1f;
 
-		// Token: 0x0402617B RID: 156027
+		// Token: 0x04021465 RID: 136293
 		private float BlendingOutRestTime;
 
-		// Token: 0x0402617C RID: 156028
+		// Token: 0x04021466 RID: 136294
 		[Nullable(2)]
 		private UDefaultLevelSequenceInstanceData LevelSequenceData;
 
-		// Token: 0x0402617D RID: 156029
+		// Token: 0x04021467 RID: 136295
 		[Nullable(2)]
 		private UKuroAnimInstanceRole AnimInstance;
 
-		// Token: 0x0402617E RID: 156030
+		// Token: 0x04021468 RID: 136296
 		private FTransformDouble? OriginRootTransform;
 
-		// Token: 0x0402617F RID: 156031
+		// Token: 0x04021469 RID: 136297
 		private FTransformDouble? OriginMeshRelativeTransform;
 
-		// Token: 0x04026180 RID: 156032
+		// Token: 0x0402146A RID: 136298
 		[Nullable(2)]
 		private BaseMoveComponent CharacterMoveComponent;
 
-		// Token: 0x04026181 RID: 156033
+		// Token: 0x0402146B RID: 136299
 		private bool IsInCinematic;
 
-		// Token: 0x04026182 RID: 156034
+		// Token: 0x0402146C RID: 136300
 		private bool IsHideHud;
 
-		// Token: 0x04026183 RID: 156035
+		// Token: 0x0402146D RID: 136301
 		private float HideHudTime;
 
-		// Token: 0x04026184 RID: 156036
+		// Token: 0x0402146E RID: 136302
 		private readonly TArray<AActor> BindingActors = new TArray<AActor>();
 
-		// Token: 0x04026185 RID: 156037
+		// Token: 0x0402146F RID: 136303
 		private readonly TArray<AActor> BindingCharacterActors = new TArray<AActor>();
 
-		// Token: 0x04026186 RID: 156038
+		// Token: 0x04021470 RID: 136304
 		private FRotator? ResetAdditiveRotation;
 
-		// Token: 0x04026187 RID: 156039
+		// Token: 0x04021471 RID: 136305
 		private bool ResetFightCameraOnStop;
 
-		// Token: 0x04026188 RID: 156040
+		// Token: 0x04021472 RID: 136306
 		private FRotator? RecoverRotation;
 
-		// Token: 0x04026189 RID: 156041
+		// Token: 0x04021473 RID: 136307
 		private bool IsRecoverRotation;
 
-		// Token: 0x0402618A RID: 156042
+		// Token: 0x04021474 RID: 136308
 		[Nullable(2)]
 		private TsBaseCharacter Target;
 
-		// Token: 0x0402618B RID: 156043
+		// Token: 0x04021475 RID: 136309
 		[Nullable(2)]
 		private TsBaseCharacter Character;
 
-		// Token: 0x0402618C RID: 156044
+		// Token: 0x04021476 RID: 136310
 		[Nullable(2)]
 		private TsBaseCharacter OldCharacter;
 
-		// Token: 0x0402618D RID: 156045
+		// Token: 0x04021477 RID: 136311
 		[Nullable(2)]
 		private UTraceSphereElement SphereSingle;
 
-		// Token: 0x0402618E RID: 156046
+		// Token: 0x04021478 RID: 136312
 		[Nullable(2)]
 		private UTraceSphereElement SphereMultiply;
 
-		// Token: 0x0402618F RID: 156047
+		// Token: 0x04021479 RID: 136313
 		private FName SocketName = FNameUtil.EMPTY;
 
-		// Token: 0x04026190 RID: 156048
+		// Token: 0x0402147A RID: 136314
 		private FName LockSocketName = FNameUtil.EMPTY;
 
-		// Token: 0x04026191 RID: 156049
+		// Token: 0x0402147B RID: 136315
 		[Nullable(2)]
 		private AActor TransformOriginActor;
 
-		// Token: 0x04026192 RID: 156050
+		// Token: 0x0402147C RID: 136316
 		private readonly Vector RelativeLocation = Vector.Create(10000.0, 10000.0, 10000.0);
 
-		// Token: 0x04026193 RID: 156051
+		// Token: 0x0402147D RID: 136317
 		private bool ShowLog;
 
-		// Token: 0x04026194 RID: 156052
+		// Token: 0x0402147E RID: 136318
 		private float CheckRadius;
 
-		// Token: 0x04026195 RID: 156053
+		// Token: 0x0402147F RID: 136319
 		private bool IsEnableCollision = true;
 
-		// Token: 0x04026196 RID: 156054
+		// Token: 0x04021480 RID: 136320
+		private bool IsSeparateSequencePlayerLogicEnabled;
+
+		// Token: 0x04021481 RID: 136321
 		private bool NeedWaitInPlot;
 
-		// Token: 0x04026197 RID: 156055
+		// Token: 0x04021482 RID: 136322
 		private bool IsPlayCameraSequenceEnabled = true;
 
-		// Token: 0x04026198 RID: 156056
+		// Token: 0x04021483 RID: 136323
 		private bool IsEnableFrameAbstract;
 
-		// Token: 0x04026199 RID: 156057
+		// Token: 0x04021484 RID: 136324
 		private float FrameAbstractDelta;
 
-		// Token: 0x0402619A RID: 156058
+		// Token: 0x04021485 RID: 136325
 		private int FrameAbstractTime;
 
-		// Token: 0x0402619B RID: 156059
+		// Token: 0x04021486 RID: 136326
 		[Nullable(2)]
 		private UMovieSceneTrack CameraTransformTrack;
 
-		// Token: 0x0402619C RID: 156060
-		private FTransformDouble FrameAbstractRelativeCameraTransform;
+		// Token: 0x04021487 RID: 136327
+		private FTransformDouble? FrameAbstractRelativeCameraTransform;
 
-		// Token: 0x0402619D RID: 156061
+		// Token: 0x04021488 RID: 136328
 		private readonly bool DebugFrameAbstract;
 
-		// Token: 0x0402619E RID: 156062
+		// Token: 0x04021489 RID: 136329
 		private bool IsAttachToActor;
 
-		// Token: 0x0402619F RID: 156063
+		// Token: 0x0402148A RID: 136330
 		private readonly HashSet<ESequenceCameraDitherEffectEnum> DitherEffectEnableSet = new HashSet<ESequenceCameraDitherEffectEnum>();
 
-		// Token: 0x040261A0 RID: 156064
+		// Token: 0x0402148B RID: 136331
 		[Nullable(2)]
 		private Entity BindSkillEntity;
 
-		// Token: 0x040261A1 RID: 156065
+		// Token: 0x0402148C RID: 136332
 		private long? BindSkillId;
 
-		// Token: 0x040261A2 RID: 156066
+		// Token: 0x0402148D RID: 136333
 		private readonly Rotator MeshRotator = Rotator.Create(0f, -90f, 0f);
 
-		// Token: 0x040261A3 RID: 156067
+		// Token: 0x0402148E RID: 136334
 		private readonly Vector TmpVector = Vector.Create();
 
-		// Token: 0x040261A4 RID: 156068
+		// Token: 0x0402148F RID: 136335
 		private FTransformDouble TmpTransformDouble = new FTransformDouble();
 
-		// Token: 0x040261A5 RID: 156069
+		// Token: 0x04021490 RID: 136336
 		private readonly Rotator TmpRotator = Rotator.Create();
 
-		// Token: 0x040261A6 RID: 156070
+		// Token: 0x04021491 RID: 136337
 		private readonly Quat TmpQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x040261A7 RID: 156071
+		// Token: 0x04021492 RID: 136338
 		[Nullable(2)]
 		private UTraceSphereElement CameraSphereTrace;
 
-		// Token: 0x040261A8 RID: 156072
+		// Token: 0x04021493 RID: 136339
 		[Nullable(2)]
 		private UTraceSphereElement CameraCheckSphereTrace;
 
-		// Token: 0x040261A9 RID: 156073
+		// Token: 0x04021494 RID: 136340
 		private bool IsHit;
 
-		// Token: 0x040261AA RID: 156074
+		// Token: 0x04021495 RID: 136341
 		private readonly Vector HitLocation = Vector.Create();
 
-		// Token: 0x040261AB RID: 156075
+		// Token: 0x04021496 RID: 136342
 		private readonly Vector CameraLocation = Vector.Create();
 
-		// Token: 0x040261AC RID: 156076
+		// Token: 0x04021497 RID: 136343
 		private readonly Rotator CameraRotation = Rotator.Create();
 
-		// Token: 0x040261AD RID: 156077
+		// Token: 0x04021498 RID: 136344
 		private readonly Rotator CameraRotationInGravity = Rotator.Create();
 
-		// Token: 0x040261AE RID: 156078
+		// Token: 0x04021499 RID: 136345
 		private FTransformDouble? SocketTransform;
 
-		// Token: 0x040261AF RID: 156079
+		// Token: 0x0402149A RID: 136346
 		private readonly Vector SourceLocation = Vector.Create();
 
-		// Token: 0x040261B0 RID: 156080
+		// Token: 0x0402149B RID: 136347
 		private readonly Vector SourceForward = Vector.Create();
 
-		// Token: 0x040261B1 RID: 156081
+		// Token: 0x0402149C RID: 136348
 		private readonly Vector HorizontalVector = Vector.Create();
 
-		// Token: 0x040261B2 RID: 156082
+		// Token: 0x0402149D RID: 136349
 		private readonly Vector Up = Vector.Create();
 	}
 }

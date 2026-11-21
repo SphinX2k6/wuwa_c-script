@@ -6,17 +6,17 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002016 RID: 8214
+	// Token: 0x02000662 RID: 1634
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FHoverEvent : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601EF4C RID: 126796 RVA: 0x002E0937 File Offset: 0x002DEB37
+		// Token: 0x06008DB5 RID: 36277 RVA: 0x000D56A2 File Offset: 0x000D38A2
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FHoverEvent.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601EF4D RID: 126797 RVA: 0x002E0943 File Offset: 0x002DEB43
+		// Token: 0x06008DB6 RID: 36278 RVA: 0x000D56AE File Offset: 0x000D38AE
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FHoverEvent._FunctionPtr == IntPtr.Zero)
@@ -26,32 +26,31 @@ namespace UnrealEngine
 			return FHoverEvent._FunctionPtr;
 		}
 
-		// Token: 0x0601EF4E RID: 126798 RVA: 0x002E0966 File Offset: 0x002DEB66
+		// Token: 0x06008DB7 RID: 36279 RVA: 0x000D56D1 File Offset: 0x000D38D1
 		public FHoverEvent()
 		{
 		}
 
-		// Token: 0x0601EF4F RID: 126799 RVA: 0x002E096E File Offset: 0x002DEB6E
+		// Token: 0x06008DB8 RID: 36280 RVA: 0x000D56D9 File Offset: 0x000D38D9
 		[NullableContext(2)]
 		public FHoverEvent(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601EF50 RID: 126800 RVA: 0x002E0978 File Offset: 0x002DEB78
+		// Token: 0x06008DB9 RID: 36281 RVA: 0x000D56E3 File Offset: 0x000D38E3
 		public FHoverEvent(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601EF51 RID: 126801 RVA: 0x002E0983 File Offset: 0x002DEB83
+		// Token: 0x06008DBA RID: 36282 RVA: 0x000D56EE File Offset: 0x000D38EE
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action) ?? ((Action)Delegate.CreateDelegate(typeof(Action), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601EF52 RID: 126802 RVA: 0x002E09B5 File Offset: 0x002DEBB5
+		// Token: 0x06008DBB RID: 36283 RVA: 0x000D5720 File Offset: 0x000D3920
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action Callback)
 		{
 			if (FHoverEvent.RegisterId == 0)
@@ -66,26 +65,23 @@ namespace UnrealEngine
 			base.Add(Callback, FHoverEvent.RegisterId);
 		}
 
-		// Token: 0x0601EF53 RID: 126803 RVA: 0x002E09EF File Offset: 0x002DEBEF
+		// Token: 0x06008DBC RID: 36284 RVA: 0x000D575A File Offset: 0x000D395A
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601EF54 RID: 126804 RVA: 0x002E09F8 File Offset: 0x002DEBF8
+		// Token: 0x06008DBD RID: 36285 RVA: 0x000D5763 File Offset: 0x000D3963
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Broadcast()
 		{
 			base.BroadcastInternal(null);
 		}
 
-		// Token: 0x0601EF55 RID: 126805 RVA: 0x002E0A04 File Offset: 0x002DEC04
+		// Token: 0x06008DBE RID: 36286 RVA: 0x000D5770 File Offset: 0x000D3970
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action action = target as Action;
@@ -96,21 +92,21 @@ namespace UnrealEngine
 			action();
 		}
 
-		// Token: 0x04010D4A RID: 68938
+		// Token: 0x04003E74 RID: 15988
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04010D4B RID: 68939
+		// Token: 0x04003E75 RID: 15989
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/LGUI.HoverEvent__DelegateSignature";
 
-		// Token: 0x04010D4C RID: 68940
+		// Token: 0x04003E76 RID: 15990
 		private static int RegisterId;
 
-		// Token: 0x02003427 RID: 13351
+		// Token: 0x02000E6A RID: 3690
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017403 RID: 95235
+			// Token: 0x04006212 RID: 25106
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

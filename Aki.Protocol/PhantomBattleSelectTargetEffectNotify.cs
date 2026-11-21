@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000CB2 RID: 3250
+	// Token: 0x02000CA2 RID: 3234
 	[NetMessage(EMessageId.PhantomBattleSelectTargetEffectNotify)]
 	public sealed class PhantomBattleSelectTargetEffectNotify : IMessage<PhantomBattleSelectTargetEffectNotify>, IMessage, IEquatable<PhantomBattleSelectTargetEffectNotify>, IDeepCloneable<PhantomBattleSelectTargetEffectNotify>, IBufferMessage
 	{
-		// Token: 0x060119AC RID: 72108 RVA: 0x00293F48 File Offset: 0x00292148
+		// Token: 0x060118AC RID: 71852 RVA: 0x002921DD File Offset: 0x002903DD
 		[NullableContext(1)]
 		public static PhantomBattleSelectTargetEffectNotify Create()
 		{
 			return new PhantomBattleSelectTargetEffectNotify();
 		}
 
-		// Token: 0x17003A52 RID: 14930
-		// (get) Token: 0x060119AD RID: 72109 RVA: 0x00293F4F File Offset: 0x0029214F
+		// Token: 0x17003A1B RID: 14875
+		// (get) Token: 0x060118AD RID: 71853 RVA: 0x002921E4 File Offset: 0x002903E4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003A53 RID: 14931
-		// (get) Token: 0x060119AE RID: 72110 RVA: 0x00293F52 File Offset: 0x00292152
+		// Token: 0x17003A1C RID: 14876
+		// (get) Token: 0x060118AE RID: 71854 RVA: 0x002921E7 File Offset: 0x002903E7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060119AF RID: 72111 RVA: 0x00293F59 File Offset: 0x00292159
+		// Token: 0x060118AF RID: 71855 RVA: 0x002921EE File Offset: 0x002903EE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhantomBattleSelectTargetEffectNotify()
 		{
 		}
 
-		// Token: 0x060119B0 RID: 72112 RVA: 0x00293F6C File Offset: 0x0029216C
+		// Token: 0x060118B0 RID: 71856 RVA: 0x00292204 File Offset: 0x00290404
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhantomBattleSelectTargetEffectNotify(PhantomBattleSelectTargetEffectNotify other) : this()
@@ -62,7 +62,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060119B1 RID: 72113 RVA: 0x00293FC5 File Offset: 0x002921C5
+		// Token: 0x060118B1 RID: 71857 RVA: 0x0029225D File Offset: 0x0029045D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhantomBattleSelectTargetEffectNotify Clone()
@@ -70,8 +70,8 @@ namespace Aki.Protocol
 			return new PhantomBattleSelectTargetEffectNotify(this);
 		}
 
-		// Token: 0x17003A54 RID: 14932
-		// (get) Token: 0x060119B2 RID: 72114 RVA: 0x00293FCD File Offset: 0x002921CD
+		// Token: 0x17003A1D RID: 14877
+		// (get) Token: 0x060118B2 RID: 71858 RVA: 0x00292265 File Offset: 0x00290465
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> FighterUId
@@ -82,9 +82,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003A55 RID: 14933
-		// (get) Token: 0x060119B3 RID: 72115 RVA: 0x00293FD5 File Offset: 0x002921D5
-		// (set) Token: 0x060119B4 RID: 72116 RVA: 0x00293FDD File Offset: 0x002921DD
+		// Token: 0x17003A1E RID: 14878
+		// (get) Token: 0x060118B3 RID: 71859 RVA: 0x0029226D File Offset: 0x0029046D
+		// (set) Token: 0x060118B4 RID: 71860 RVA: 0x00292275 File Offset: 0x00290475
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Num
@@ -99,9 +99,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003A56 RID: 14934
-		// (get) Token: 0x060119B5 RID: 72117 RVA: 0x00293FE6 File Offset: 0x002921E6
-		// (set) Token: 0x060119B6 RID: 72118 RVA: 0x00293FEE File Offset: 0x002921EE
+		// Token: 0x17003A1F RID: 14879
+		// (get) Token: 0x060118B5 RID: 71861 RVA: 0x0029227E File Offset: 0x0029047E
+		// (set) Token: 0x060118B6 RID: 71862 RVA: 0x00292286 File Offset: 0x00290486
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int EffectType
@@ -116,9 +116,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003A57 RID: 14935
-		// (get) Token: 0x060119B7 RID: 72119 RVA: 0x00293FF7 File Offset: 0x002921F7
-		// (set) Token: 0x060119B8 RID: 72120 RVA: 0x00293FFF File Offset: 0x002921FF
+		// Token: 0x17003A20 RID: 14880
+		// (get) Token: 0x060118B7 RID: 71863 RVA: 0x0029228F File Offset: 0x0029048F
+		// (set) Token: 0x060118B8 RID: 71864 RVA: 0x00292297 File Offset: 0x00290497
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int OwnerUid
@@ -133,7 +133,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060119B9 RID: 72121 RVA: 0x00294008 File Offset: 0x00292208
+		// Token: 0x060118B9 RID: 71865 RVA: 0x002922A0 File Offset: 0x002904A0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -141,7 +141,7 @@ namespace Aki.Protocol
 			return this.Equals(other as PhantomBattleSelectTargetEffectNotify);
 		}
 
-		// Token: 0x060119BA RID: 72122 RVA: 0x00294018 File Offset: 0x00292218
+		// Token: 0x060118BA RID: 71866 RVA: 0x002922B0 File Offset: 0x002904B0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(PhantomBattleSelectTargetEffectNotify other)
@@ -149,7 +149,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.fighterUId_.Equals(other.fighterUId_) && this.Num == other.Num && this.EffectType == other.EffectType && this.OwnerUid == other.OwnerUid && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060119BB RID: 72123 RVA: 0x00294088 File Offset: 0x00292288
+		// Token: 0x060118BB RID: 71867 RVA: 0x00292320 File Offset: 0x00290520
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060119BC RID: 72124 RVA: 0x00294107 File Offset: 0x00292307
+		// Token: 0x060118BC RID: 71868 RVA: 0x0029239F File Offset: 0x0029059F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -183,7 +183,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060119BD RID: 72125 RVA: 0x00294114 File Offset: 0x00292314
+		// Token: 0x060118BD RID: 71869 RVA: 0x002923AC File Offset: 0x002905AC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -191,34 +191,34 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060119BE RID: 72126 RVA: 0x00294120 File Offset: 0x00292320
+		// Token: 0x060118BE RID: 71870 RVA: 0x002923B8 File Offset: 0x002905B8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			this.fighterUId_.WriteTo(ref output, PhantomBattleSelectTargetEffectNotify._repeated_fighterUId_codec);
-			if (this.OwnerUid != 0)
-			{
-				output.WriteRawTag(24);
-				output.WriteInt32(this.OwnerUid);
-			}
 			if (this.Num != 0)
 			{
-				output.WriteRawTag(64);
+				output.WriteRawTag(24);
 				output.WriteInt32(this.Num);
 			}
 			if (this.EffectType != 0)
 			{
-				output.WriteRawTag(80);
+				output.WriteRawTag(40);
 				output.WriteInt32(this.EffectType);
 			}
+			if (this.OwnerUid != 0)
+			{
+				output.WriteRawTag(56);
+				output.WriteInt32(this.OwnerUid);
+			}
+			this.fighterUId_.WriteTo(ref output, PhantomBattleSelectTargetEffectNotify._repeated_fighterUId_codec);
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x060119BF RID: 72127 RVA: 0x002941A8 File Offset: 0x002923A8
+		// Token: 0x060118BF RID: 71871 RVA: 0x00292440 File Offset: 0x00290640
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -244,7 +244,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060119C0 RID: 72128 RVA: 0x0029422C File Offset: 0x0029242C
+		// Token: 0x060118C0 RID: 71872 RVA: 0x002924C4 File Offset: 0x002906C4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(PhantomBattleSelectTargetEffectNotify other)
@@ -269,7 +269,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060119C1 RID: 72129 RVA: 0x002942A1 File Offset: 0x002924A1
+		// Token: 0x060118C1 RID: 71873 RVA: 0x00292539 File Offset: 0x00290739
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -277,7 +277,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060119C2 RID: 72130 RVA: 0x002942AC File Offset: 0x002924AC
+		// Token: 0x060118C2 RID: 71874 RVA: 0x00292544 File Offset: 0x00290744
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -289,29 +289,29 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 18U)
+				if (num <= 40U)
 				{
-					if (num == 16U || num == 18U)
+					if (num == 24U)
 					{
-						this.fighterUId_.AddEntriesFrom(ref input, PhantomBattleSelectTargetEffectNotify._repeated_fighterUId_codec);
+						this.Num = input.ReadInt32();
+						continue;
+					}
+					if (num == 40U)
+					{
+						this.EffectType = input.ReadInt32();
 						continue;
 					}
 				}
 				else
 				{
-					if (num == 24U)
+					if (num == 56U)
 					{
 						this.OwnerUid = input.ReadInt32();
 						continue;
 					}
-					if (num == 64U)
+					if (num == 104U || num == 106U)
 					{
-						this.Num = input.ReadInt32();
-						continue;
-					}
-					if (num == 80U)
-					{
-						this.EffectType = input.ReadInt32();
+						this.fighterUId_.AddEntriesFrom(ref input, PhantomBattleSelectTargetEffectNotify._repeated_fighterUId_codec);
 						continue;
 					}
 				}
@@ -319,34 +319,34 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04006EE1 RID: 28385
+		// Token: 0x04006EF5 RID: 28405
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04006EE2 RID: 28386
-		public const int FighterUIdFieldNumber = 2;
+		// Token: 0x04006EF6 RID: 28406
+		public const int FighterUIdFieldNumber = 13;
 
-		// Token: 0x04006EE3 RID: 28387
-		private static readonly FieldCodec<int> _repeated_fighterUId_codec = FieldCodec.ForInt32(18U);
+		// Token: 0x04006EF7 RID: 28407
+		private static readonly FieldCodec<int> _repeated_fighterUId_codec = FieldCodec.ForInt32(106U);
 
-		// Token: 0x04006EE4 RID: 28388
+		// Token: 0x04006EF8 RID: 28408
 		private readonly RepeatedField<int> fighterUId_ = new RepeatedField<int>();
 
-		// Token: 0x04006EE5 RID: 28389
-		public const int NumFieldNumber = 8;
+		// Token: 0x04006EF9 RID: 28409
+		public const int NumFieldNumber = 3;
 
-		// Token: 0x04006EE6 RID: 28390
+		// Token: 0x04006EFA RID: 28410
 		private int num_;
 
-		// Token: 0x04006EE7 RID: 28391
-		public const int EffectTypeFieldNumber = 10;
+		// Token: 0x04006EFB RID: 28411
+		public const int EffectTypeFieldNumber = 5;
 
-		// Token: 0x04006EE8 RID: 28392
+		// Token: 0x04006EFC RID: 28412
 		private int effectType_;
 
-		// Token: 0x04006EE9 RID: 28393
-		public const int OwnerUidFieldNumber = 3;
+		// Token: 0x04006EFD RID: 28413
+		public const int OwnerUidFieldNumber = 7;
 
-		// Token: 0x04006EEA RID: 28394
+		// Token: 0x04006EFE RID: 28414
 		private int ownerUid_;
 	}
 }

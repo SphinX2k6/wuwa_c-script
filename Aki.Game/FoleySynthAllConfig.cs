@@ -2,29 +2,29 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200301F RID: 12319
+// Token: 0x02002575 RID: 9589
 [NullableContext(1)]
 [Nullable(0)]
 public class FoleySynthAllConfig
 {
-	// Token: 0x0601A178 RID: 106872 RVA: 0x006D7894 File Offset: 0x006D5A94
+	// Token: 0x06017AC0 RID: 96960 RVA: 0x006FF79C File Offset: 0x006FD99C
 	public bool IsLoadSuccess()
 	{
 		return this.CurLoadCount == 0;
 	}
 
-	// Token: 0x0400C5D7 RID: 50647
+	// Token: 0x0400C9A4 RID: 51620
 	public List<FoleySynthModel1Config> FoleySynthModel1Configs = new List<FoleySynthModel1Config>();
 
-	// Token: 0x0400C5D8 RID: 50648
+	// Token: 0x0400C9A5 RID: 51621
 	public List<FoleySynthModel2Config> FoleySynthModel2Configs = new List<FoleySynthModel2Config>();
 
-	// Token: 0x0400C5D9 RID: 50649
+	// Token: 0x0400C9A6 RID: 51622
 	public int Model2AccelerationMaxCount;
 
-	// Token: 0x0400C5DA RID: 50650
+	// Token: 0x0400C9A7 RID: 51623
 	public int Model2VelocityMaxCount;
 
-	// Token: 0x0400C5DB RID: 50651
+	// Token: 0x0400C9A8 RID: 51624
 	public int CurLoadCount;
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200029F RID: 671
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020002E4 RID: 740
 	public class ICustomViewDistance : IViewDistanceMode
 	{
-		// Token: 0x06000C87 RID: 3207 RVA: 0x000305A4 File Offset: 0x0002E7A4
+		// Token: 0x06000DAB RID: 3499 RVA: 0x00033394 File Offset: 0x00031594
 		private ICustomViewDistance_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000C88 RID: 3208 RVA: 0x000305DC File Offset: 0x0002E7DC
+		// Token: 0x06000DAC RID: 3500 RVA: 0x000333CC File Offset: 0x000315CC
 		public static ICustomViewDistance Create([Nullable(2)] ICustomViewDistance instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000C89 RID: 3209 RVA: 0x000305EF File Offset: 0x0002E7EF
+		// Token: 0x06000DAD RID: 3501 RVA: 0x000333DF File Offset: 0x000315DF
 		public static ICustomViewDistance CreateFromSetValue([Nullable(2)] ICustomViewDistance_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000C8A RID: 3210 RVA: 0x00030602 File Offset: 0x0002E802
+		// Token: 0x06000DAE RID: 3502 RVA: 0x000333F2 File Offset: 0x000315F2
 		public new ICustomViewDistance_SetValue ToSetValue()
 		{
 			return new ICustomViewDistance_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170003B2 RID: 946
-		// (get) Token: 0x06000C8B RID: 3211 RVA: 0x00030621 File Offset: 0x0002E821
-		// (set) Token: 0x06000C8C RID: 3212 RVA: 0x0003064C File Offset: 0x0002E84C
+		// Token: 0x170003FC RID: 1020
+		// (get) Token: 0x06000DAF RID: 3503 RVA: 0x00033411 File Offset: 0x00031611
+		// (set) Token: 0x06000DB0 RID: 3504 RVA: 0x0003343C File Offset: 0x0003163C
 		public override EViewDistanceType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170003B3 RID: 947
-		// (get) Token: 0x06000C8D RID: 3213 RVA: 0x0003065A File Offset: 0x0002E85A
-		// (set) Token: 0x06000C8E RID: 3214 RVA: 0x00030685 File Offset: 0x0002E885
+		// Token: 0x170003FD RID: 1021
+		// (get) Token: 0x06000DB1 RID: 3505 RVA: 0x0003344A File Offset: 0x0003164A
+		// (set) Token: 0x06000DB2 RID: 3506 RVA: 0x00033475 File Offset: 0x00031675
 		public virtual int Distance
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000BB7 RID: 2999
+		// Token: 0x04000C9C RID: 3228
 		[Nullable(2)]
 		protected new ICustomViewDistance FbInstance;
 
-		// Token: 0x04000BB8 RID: 3000
+		// Token: 0x04000C9D RID: 3229
 		[Nullable(2)]
 		protected new ICustomViewDistance_SetValue PocoInterface;
 	}

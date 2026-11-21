@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi
 {
-	// Token: 0x02005C9F RID: 23711
+	// Token: 0x02004C81 RID: 19585
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class BattleUiRoleData
 	{
-		// Token: 0x0603BE82 RID: 245378 RVA: 0x00E500E0 File Offset: 0x00E4E2E0
+		// Token: 0x06030DD5 RID: 200149 RVA: 0x00DA0768 File Offset: 0x00D9E968
 		[NullableContext(1)]
 		public void Init(EntityHandle handle, bool isCurEntity)
 		{
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.AddEntityEvents();
 		}
 
-		// Token: 0x0603BE83 RID: 245379 RVA: 0x00E5038E File Offset: 0x00E4E58E
+		// Token: 0x06030DD6 RID: 200150 RVA: 0x00DA0A16 File Offset: 0x00D9EC16
 		public void OnChangeRole(bool isCurEntity)
 		{
 			this.IsCurEntity = isCurEntity;
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			specialData.OnChangeRole(isCurEntity);
 		}
 
-		// Token: 0x0603BE84 RID: 245380 RVA: 0x00E503A8 File Offset: 0x00E4E5A8
+		// Token: 0x06030DD7 RID: 200151 RVA: 0x00DA0A30 File Offset: 0x00D9EC30
 		public void Clear()
 		{
 			this.RemoveEntityEvents();
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.HasEnergyTag = false;
 		}
 
-		// Token: 0x0603BE85 RID: 245381 RVA: 0x00E504B8 File Offset: 0x00E4E6B8
+		// Token: 0x06030DD8 RID: 200152 RVA: 0x00DA0B40 File Offset: 0x00D9ED40
 		private void AddEntityEvents()
 		{
 			foreach (int tagId in BattleUiRoleData.HideElementTagList)
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BE86 RID: 245382 RVA: 0x00E5074C File Offset: 0x00E4E94C
+		// Token: 0x06030DD9 RID: 200153 RVA: 0x00DA0DD4 File Offset: 0x00D9EFD4
 		private void RemoveEntityEvents()
 		{
 			foreach (ITagTask tagTask in this.TagSignificantChangedTaskList)
@@ -185,7 +185,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BE87 RID: 245383 RVA: 0x00E508D8 File Offset: 0x00E4EAD8
+		// Token: 0x06030DDA RID: 200154 RVA: 0x00DA0F60 File Offset: 0x00D9F160
 		[NullableContext(1)]
 		public void ListenForTagSignificantChanged(int tagId, BaseTagComponent.TTagSwitchedCallback callback, bool checkExistImmediately = false)
 		{
@@ -205,55 +205,55 @@ namespace CSharpScript.Game.Module.BattleUi
 			this.TagSignificantChangedTaskList.Add(tagTask);
 		}
 
-		// Token: 0x0603BE88 RID: 245384 RVA: 0x00E50929 File Offset: 0x00E4EB29
+		// Token: 0x06030DDB RID: 200155 RVA: 0x00DA0FB1 File Offset: 0x00D9F1B1
 		private void OnElementEnergyChanged(EAttributeType attributeId, float newValue, float oldValue)
 		{
 			EventSystem.Instance.Emit<int>(EEventName.BattleUiElementEnergyChanged, this.EntityHandle.Id);
 		}
 
-		// Token: 0x0603BE89 RID: 245385 RVA: 0x00E50946 File Offset: 0x00E4EB46
+		// Token: 0x06030DDC RID: 200156 RVA: 0x00DA0FCE File Offset: 0x00D9F1CE
 		private void OnEnergyChanged(EAttributeType attributeId, float newValue, float oldValue)
 		{
 			EventSystem.Instance.Emit<int>(EEventName.BattleUiEnergyChanged, this.EntityHandle.Id);
 		}
 
-		// Token: 0x0603BE8A RID: 245386 RVA: 0x00E50963 File Offset: 0x00E4EB63
+		// Token: 0x06030DDD RID: 200157 RVA: 0x00DA0FEB File Offset: 0x00D9F1EB
 		private void OnElementHideTagChanged(int tagId, bool tagExist)
 		{
 			EventSystem.Instance.Emit<int, int, bool>(EEventName.BattleUiElementHideTagChanged, this.EntityHandle.Id, tagId, tagExist);
 		}
 
-		// Token: 0x0603BE8B RID: 245387 RVA: 0x00E50982 File Offset: 0x00E4EB82
+		// Token: 0x06030DDE RID: 200158 RVA: 0x00DA100A File Offset: 0x00D9F20A
 		private void OnDeadTagChanged(int tagId, bool tagExist)
 		{
 			EventSystem.Instance.Emit<int, int, bool>(EEventName.BattleUiDeadTagChanged, this.EntityHandle.Id, tagId, tagExist);
 		}
 
-		// Token: 0x0603BE8C RID: 245388 RVA: 0x00E509A1 File Offset: 0x00E4EBA1
+		// Token: 0x06030DDF RID: 200159 RVA: 0x00DA1029 File Offset: 0x00D9F229
 		private void OnQteEnableTagChanged(int tagId, bool tagExist)
 		{
 			EventSystem.Instance.Emit<int, int, bool>(EEventName.BattleUiQteEnableTagChanged, this.EntityHandle.Id, tagId, tagExist);
 		}
 
-		// Token: 0x0603BE8D RID: 245389 RVA: 0x00E509C0 File Offset: 0x00E4EBC0
+		// Token: 0x06030DE0 RID: 200160 RVA: 0x00DA1048 File Offset: 0x00D9F248
 		private void OnQteCdTagChanged(int tagId, bool tagExist)
 		{
 			EventSystem.Instance.Emit<int, int, bool>(EEventName.BattleUiQteCdTagChanged, this.EntityHandle.Id, tagId, tagExist);
 		}
 
-		// Token: 0x0603BE8E RID: 245390 RVA: 0x00E509DF File Offset: 0x00E4EBDF
+		// Token: 0x06030DE1 RID: 200161 RVA: 0x00DA1067 File Offset: 0x00D9F267
 		private void OnUseQteTagChanged(int tagId, bool tagExist)
 		{
 			EventSystem.Instance.Emit<int, int, bool>(EEventName.BattleUiUseQteTagChanged, this.EntityHandle.Id, tagId, tagExist);
 		}
 
-		// Token: 0x0603BE8F RID: 245391 RVA: 0x00E509FE File Offset: 0x00E4EBFE
+		// Token: 0x06030DE2 RID: 200162 RVA: 0x00DA1086 File Offset: 0x00D9F286
 		private void OnConcertoEnableTagChanged(int tagId, bool tagExist)
 		{
 			EventSystem.Instance.Emit<int, int, bool>(EEventName.BattleUiConcertoEnableTagChanged, this.EntityHandle.Id, tagId, tagExist);
 		}
 
-		// Token: 0x0603BE90 RID: 245392 RVA: 0x00E50A1D File Offset: 0x00E4EC1D
+		// Token: 0x06030DE3 RID: 200163 RVA: 0x00DA10A5 File Offset: 0x00D9F2A5
 		private void OnMigrationTagChanged(int tagId, bool tagExist)
 		{
 			if (tagExist)
@@ -262,7 +262,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BE91 RID: 245393 RVA: 0x00E50A2D File Offset: 0x00E4EC2D
+		// Token: 0x06030DE4 RID: 200164 RVA: 0x00DA10B5 File Offset: 0x00D9F2B5
 		private void OnFlyRaceTagChanged(int tagId, bool tagExist)
 		{
 			if (tagExist)
@@ -271,7 +271,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BE92 RID: 245394 RVA: 0x00E50A40 File Offset: 0x00E4EC40
+		// Token: 0x06030DE5 RID: 200165 RVA: 0x00DA10C8 File Offset: 0x00D9F2C8
 		private void OnRoleSpecialStateTagChanged(int tagId, bool tagExist)
 		{
 			ERoleSpecialState eroleSpecialState;
@@ -285,7 +285,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BE93 RID: 245395 RVA: 0x00E50A7C File Offset: 0x00E4EC7C
+		// Token: 0x06030DE6 RID: 200166 RVA: 0x00DA1104 File Offset: 0x00D9F304
 		private void CharOnDirectionStateChanged(ECharDirectionState oldDirectionState, ECharDirectionState newDirectionState)
 		{
 			if (!this.IsCurEntity)
@@ -299,19 +299,19 @@ namespace CSharpScript.Game.Module.BattleUi
 			EventSystem.Instance.Emit(EEventName.OnAimStateChanged);
 		}
 
-		// Token: 0x0603BE94 RID: 245396 RVA: 0x00E50A9C File Offset: 0x00E4EC9C
+		// Token: 0x06030DE7 RID: 200167 RVA: 0x00DA1124 File Offset: 0x00D9F324
 		private void OnShieldChanged(float shield)
 		{
 			EventSystem.Instance.Emit<int>(EEventName.BattleUiShieldChanged, this.EntityHandle.Id);
 		}
 
-		// Token: 0x0603BE95 RID: 245397 RVA: 0x00E50AB9 File Offset: 0x00E4ECB9
+		// Token: 0x06030DE8 RID: 200168 RVA: 0x00DA1141 File Offset: 0x00D9F341
 		private void OnQteTagRowNameChanged()
 		{
 			this.UpdateQteCdTagListen();
 		}
 
-		// Token: 0x0603BE96 RID: 245398 RVA: 0x00E50AC4 File Offset: 0x00E4ECC4
+		// Token: 0x06030DE9 RID: 200169 RVA: 0x00DA114C File Offset: 0x00D9F34C
 		private void UpdateQteCdTagListen()
 		{
 			RoleQteComponent roleQteComponent = this.RoleQteComponent;
@@ -342,25 +342,25 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BE97 RID: 245399 RVA: 0x00E50B68 File Offset: 0x00E4ED68
+		// Token: 0x06030DEA RID: 200170 RVA: 0x00DA11F0 File Offset: 0x00D9F3F0
 		private void OnHealthChanged(EAttributeType attributeId, float newValue, float oldValue)
 		{
 			EventSystem.Instance.Emit<int>(EEventName.BattleUiHealthChanged, this.EntityHandle.Id);
 		}
 
-		// Token: 0x0603BE98 RID: 245400 RVA: 0x00E50B85 File Offset: 0x00E4ED85
+		// Token: 0x06030DEB RID: 200171 RVA: 0x00DA120D File Offset: 0x00D9F40D
 		private void OnLevelChanged(EAttributeType attributeId, float newValue, float oldValue)
 		{
 			EventSystem.Instance.Emit<int>(EEventName.BattleUiLevelChanged, this.EntityHandle.Id);
 		}
 
-		// Token: 0x0603BE99 RID: 245401 RVA: 0x00E50BA4 File Offset: 0x00E4EDA4
+		// Token: 0x06030DEC RID: 200172 RVA: 0x00DA122C File Offset: 0x00D9F42C
 		public bool GetTopButtonVisible()
 		{
 			return this.RoleBattleViewInfo == null || this.RoleBattleViewInfo.Value.TopButtonVisible;
 		}
 
-		// Token: 0x0603BE9A RID: 245402 RVA: 0x00E50BD4 File Offset: 0x00E4EDD4
+		// Token: 0x06030DED RID: 200173 RVA: 0x00DA125C File Offset: 0x00D9F45C
 		public float GetElementAttributePercent()
 		{
 			if (this.RoleElementComponent == null)
@@ -376,13 +376,13 @@ namespace CSharpScript.Game.Module.BattleUi
 			return roleElementEnergy / roleElementEnergyMax;
 		}
 
-		// Token: 0x0603BE9B RID: 245403 RVA: 0x00E50C18 File Offset: 0x00E4EE18
+		// Token: 0x06030DEE RID: 200174 RVA: 0x00DA12A0 File Offset: 0x00D9F4A0
 		public bool IsPhantom()
 		{
 			return this.RoleConfig != null && this.RoleConfig.GetValueOrDefault().RoleType == 2;
 		}
 
-		// Token: 0x0603BE9C RID: 245404 RVA: 0x00E50C48 File Offset: 0x00E4EE48
+		// Token: 0x06030DEF RID: 200175 RVA: 0x00DA12D0 File Offset: 0x00D9F4D0
 		public bool CanUseUltraSkill()
 		{
 			if (this.CheckEnergyTag)
@@ -399,7 +399,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			return currentValue >= currentValue2;
 		}
 
-		// Token: 0x0603BE9D RID: 245405 RVA: 0x00E50C89 File Offset: 0x00E4EE89
+		// Token: 0x06030DF0 RID: 200176 RVA: 0x00DA1311 File Offset: 0x00D9F511
 		public void SetHasEnergyTag(bool tagExist)
 		{
 			if (this.HasEnergyTag == tagExist)
@@ -410,14 +410,14 @@ namespace CSharpScript.Game.Module.BattleUi
 			EventSystem.Instance.Emit<int>(EEventName.BattleUiEnergyChanged, this.EntityHandle.Id);
 		}
 
-		// Token: 0x0603BE9E RID: 245406 RVA: 0x00E50CB7 File Offset: 0x00E4EEB7
+		// Token: 0x06030DF1 RID: 200177 RVA: 0x00DA133F File Offset: 0x00D9F53F
 		public void SetOverrideRoleHeadIcon(string headIconPath)
 		{
 			this.OverrideRoleHeadIcon = headIconPath;
 			EventSystem.Instance.Emit<int>(EEventName.BattleUiRoleHeadChanged, this.EntityHandle.Id);
 		}
 
-		// Token: 0x0603BEA0 RID: 245408 RVA: 0x00E50D00 File Offset: 0x00E4EF00
+		// Token: 0x06030DF3 RID: 200179 RVA: 0x00DA1388 File Offset: 0x00D9F588
 		// Note: this type is marked as 'beforefieldinit'.
 		static BattleUiRoleData()
 		{
@@ -436,6 +436,8 @@ namespace CSharpScript.Game.Module.BattleUi
 			dictionary[key6] = ERoleSpecialState.MotorcycleFirstPersonDisabled;
 			int key7 = GameplayTagDefine.EGameplayTagId["功能.功能制作.隐藏状态功能.隐藏战斗UI仅允许战斗输入"];
 			dictionary[key7] = ERoleSpecialState.OnlyAllowFightInput;
+			int key8 = GameplayTagDefine.EGameplayTagId["关卡.副本.3_8花瓣玩法"];
+			dictionary[key8] = ERoleSpecialState.PetalMechanic;
 			BattleUiRoleData.SpecialStateTagMap = dictionary;
 			BattleUiRoleData.SpecialRoleDataClassMap = new Dictionary<int, Func<BattleUiSpecialRoleDataBase>>
 			{
@@ -474,7 +476,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			};
 		}
 
-		// Token: 0x0401F3FC RID: 127996
+		// Token: 0x04019EB5 RID: 106165
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		public static readonly int[] HideElementTagList = new int[]
@@ -487,112 +489,112 @@ namespace CSharpScript.Game.Module.BattleUi
 			GameplayTagDefine.EGameplayTagId["功能.人物属性.锁定高温能量"]
 		};
 
-		// Token: 0x0401F3FD RID: 127997
+		// Token: 0x04019EB6 RID: 106166
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		public static readonly Dictionary<int, ERoleSpecialState> SpecialStateTagMap;
 
-		// Token: 0x0401F3FE RID: 127998
+		// Token: 0x04019EB7 RID: 106167
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<int, Func<BattleUiSpecialRoleDataBase>> SpecialRoleDataClassMap;
 
-		// Token: 0x0401F3FF RID: 127999
+		// Token: 0x04019EB8 RID: 106168
 		public bool IsCurEntity;
 
-		// Token: 0x0401F400 RID: 128000
+		// Token: 0x04019EB9 RID: 106169
 		public EntityHandle EntityHandle;
 
-		// Token: 0x0401F401 RID: 128001
+		// Token: 0x04019EBA RID: 106170
 		public BaseAttributeComponent AttributeComponent;
 
-		// Token: 0x0401F402 RID: 128002
+		// Token: 0x04019EBB RID: 106171
 		public BaseTagComponent GameplayTagComponent;
 
-		// Token: 0x0401F403 RID: 128003
+		// Token: 0x04019EBC RID: 106172
 		public RoleElementComponent RoleElementComponent;
 
-		// Token: 0x0401F404 RID: 128004
+		// Token: 0x04019EBD RID: 106173
 		public CharacterBuffComponent BuffComponent;
 
-		// Token: 0x0401F405 RID: 128005
+		// Token: 0x04019EBE RID: 106174
 		public CharacterShieldComponent ShieldComponent;
 
-		// Token: 0x0401F406 RID: 128006
+		// Token: 0x04019EBF RID: 106175
 		public RoleQteComponent RoleQteComponent;
 
-		// Token: 0x0401F407 RID: 128007
+		// Token: 0x04019EC0 RID: 106176
 		public CreatureDataComponent CreatureDataComponent;
 
-		// Token: 0x0401F408 RID: 128008
+		// Token: 0x04019EC1 RID: 106177
 		public BaseDeathComponent BaseDeathComponent;
 
-		// Token: 0x0401F409 RID: 128009
+		// Token: 0x04019EC2 RID: 106178
 		public CharacterActorComponent ActorComp;
 
-		// Token: 0x0401F40A RID: 128010
+		// Token: 0x04019EC3 RID: 106179
 		public EElementType? ElementType;
 
-		// Token: 0x0401F40B RID: 128011
+		// Token: 0x04019EC4 RID: 106180
 		public ElementInfo? ElementConfig;
 
-		// Token: 0x0401F40C RID: 128012
+		// Token: 0x04019EC5 RID: 106181
 		public FColor? ElementColor;
 
-		// Token: 0x0401F40D RID: 128013
+		// Token: 0x04019EC6 RID: 106182
 		public FLinearColor? ElementLinearColor;
 
-		// Token: 0x0401F40E RID: 128014
+		// Token: 0x04019EC7 RID: 106183
 		public FColor? UltimateSkillColor;
 
-		// Token: 0x0401F40F RID: 128015
+		// Token: 0x04019EC8 RID: 106184
 		public long CreatureDataId;
 
-		// Token: 0x0401F410 RID: 128016
+		// Token: 0x04019EC9 RID: 106185
 		public int CreatureRoleId;
 
-		// Token: 0x0401F411 RID: 128017
+		// Token: 0x04019ECA RID: 106186
 		public int? CreatureSkinId;
 
-		// Token: 0x0401F412 RID: 128018
+		// Token: 0x04019ECB RID: 106187
 		public RoleInfo? RoleConfig;
 
-		// Token: 0x0401F413 RID: 128019
+		// Token: 0x04019ECC RID: 106188
 		public RoleBattleViewInfo? RoleBattleViewInfo;
 
-		// Token: 0x0401F414 RID: 128020
+		// Token: 0x04019ECD RID: 106189
 		public HeadIconEnergyBar? HeadIconEnergyBarConfig;
 
-		// Token: 0x0401F415 RID: 128021
+		// Token: 0x04019ECE RID: 106190
 		public int QteCdTagId;
 
-		// Token: 0x0401F416 RID: 128022
+		// Token: 0x04019ECF RID: 106191
 		private ITagTask QteCdTagTask;
 
-		// Token: 0x0401F417 RID: 128023
+		// Token: 0x04019ED0 RID: 106192
 		[Nullable(1)]
 		public Dictionary<ERoleSpecialState, bool> SpecialStateMap = new Dictionary<ERoleSpecialState, bool>();
 
-		// Token: 0x0401F418 RID: 128024
+		// Token: 0x04019ED1 RID: 106193
 		public bool MorphShowSpecialEnergyBar = true;
 
-		// Token: 0x0401F419 RID: 128025
+		// Token: 0x04019ED2 RID: 106194
 		public bool OnlyBattleInput;
 
-		// Token: 0x0401F41A RID: 128026
+		// Token: 0x04019ED3 RID: 106195
 		public bool HasEnergyTag;
 
-		// Token: 0x0401F41B RID: 128027
+		// Token: 0x04019ED4 RID: 106196
 		public bool CheckEnergyTag;
 
-		// Token: 0x0401F41C RID: 128028
+		// Token: 0x04019ED5 RID: 106197
 		public string OverrideRoleHeadIcon;
 
-		// Token: 0x0401F41D RID: 128029
+		// Token: 0x04019ED6 RID: 106198
 		[Nullable(1)]
 		private readonly List<ITagTask> TagSignificantChangedTaskList = new List<ITagTask>();
 
-		// Token: 0x0401F41E RID: 128030
+		// Token: 0x04019ED7 RID: 106199
 		private BattleUiSpecialRoleDataBase SpecialData;
 	}
 }

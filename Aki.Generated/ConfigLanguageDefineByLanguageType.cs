@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020004C9 RID: 1225
+	// Token: 0x020004DF RID: 1247
 	public class ConfigLanguageDefineByLanguageType : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001CC1 RID: 7361 RVA: 0x000FBAA1 File Offset: 0x000F9CA1
+		// Token: 0x06001D45 RID: 7493 RVA: 0x001021F5 File Offset: 0x001003F5
 		static ConfigLanguageDefineByLanguageType()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigLanguageDefineByLanguageType.CreateStaticDefaultValue), new Action(ConfigLanguageDefineByLanguageType.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001CC2 RID: 7362 RVA: 0x000FBAC0 File Offset: 0x000F9CC0
+		// Token: 0x06001D46 RID: 7494 RVA: 0x00102214 File Offset: 0x00100414
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigLanguageDefineByLanguageType.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001CC3 RID: 7363 RVA: 0x000FBB3F File Offset: 0x000F9D3F
+		// Token: 0x06001D47 RID: 7495 RVA: 0x00102293 File Offset: 0x00100493
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigLanguageDefineByLanguageType.LogPair = null;
 			ConfigLanguageDefineByLanguageType.HandleId = 0;
 		}
 
-		// Token: 0x06001CC4 RID: 7364 RVA: 0x000FBB4D File Offset: 0x000F9D4D
+		// Token: 0x06001D48 RID: 7496 RVA: 0x001022A1 File Offset: 0x001004A1
 		public static void Init()
 		{
 			ConfigLanguageDefineByLanguageType.HandleId = ConfigCommon.InitDataStatement(ConfigLanguageDefineByLanguageType.HandleId, "db_menu.db", "select BinData from `LanguageDefine` where LanguageType = ?");
 		}
 
-		// Token: 0x06001CC5 RID: 7365 RVA: 0x000FBB68 File Offset: 0x000F9D68
+		// Token: 0x06001D49 RID: 7497 RVA: 0x001022BC File Offset: 0x001004BC
 		public static LanguageDefine? GetConfig(int p0LanguageType, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigLanguageDefineByLanguageType.HandleId, ConfigLanguageDefineByLanguageType.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new LanguageDefine?(rootAsLanguageDefine);
 		}
 
-		// Token: 0x04002163 RID: 8547
+		// Token: 0x040021FD RID: 8701
 		private const string DB = "db_menu.db";
 
-		// Token: 0x04002164 RID: 8548
+		// Token: 0x040021FE RID: 8702
 		private const string FILE = "s.设置系统.xlsx";
 
-		// Token: 0x04002165 RID: 8549
+		// Token: 0x040021FF RID: 8703
 		private const string TABLE = "LanguageDefine";
 
-		// Token: 0x04002166 RID: 8550
+		// Token: 0x04002200 RID: 8704
 		private const string COMMAND = "select BinData from `LanguageDefine` where LanguageType = ?";
 
-		// Token: 0x04002167 RID: 8551
+		// Token: 0x04002201 RID: 8705
 		private const string KEY_PREFIX = "LanguageDefineByLanguageType";
 
-		// Token: 0x04002168 RID: 8552
+		// Token: 0x04002202 RID: 8706
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002169 RID: 8553
+		// Token: 0x04002203 RID: 8707
 		private static int HandleId;
 	}
 }

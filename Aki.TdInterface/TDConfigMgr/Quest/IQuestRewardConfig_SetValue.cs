@@ -4,16 +4,16 @@ using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001098 RID: 4248
+	// Token: 0x020011C6 RID: 4550
 	public class IQuestRewardConfig_SetValue
 	{
-		// Token: 0x040039C4 RID: 14788
+		// Token: 0x04003D11 RID: 15633
 		public int RewardId;
 
-		// Token: 0x040039C5 RID: 14789
+		// Token: 0x04003D12 RID: 15634
 		public EItemGetUiType? RewardGetUiType;
 
-		// Token: 0x040039C6 RID: 14790
+		// Token: 0x04003D13 RID: 15635
 		[Nullable(2)]
 		public IItemGetUiConfigSpecialQuest UiConfig;
 	}

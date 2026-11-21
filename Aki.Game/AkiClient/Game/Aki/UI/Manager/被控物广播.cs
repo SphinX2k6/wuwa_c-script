@@ -7,17 +7,17 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.UI.Manager
 {
-	// Token: 0x02003A01 RID: 14849
+	// Token: 0x02003058 RID: 12376
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class 被控物广播 : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601F1BA RID: 127418 RVA: 0x008AADFB File Offset: 0x008A8FFB
+		// Token: 0x0601D61B RID: 120347 RVA: 0x008F345B File Offset: 0x008F165B
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return 被控物广播.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601F1BB RID: 127419 RVA: 0x008AAE07 File Offset: 0x008A9007
+		// Token: 0x0601D61C RID: 120348 RVA: 0x008F3467 File Offset: 0x008F1667
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (BP_EventManager_C.__被控物广播__DelegateSignature_NativeFunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace AkiClient.Game.Aki.UI.Manager
 			return BP_EventManager_C.__被控物广播__DelegateSignature_NativeFunctionPtr;
 		}
 
-		// Token: 0x0601F1BC RID: 127420 RVA: 0x008AAE2A File Offset: 0x008A902A
+		// Token: 0x0601D61D RID: 120349 RVA: 0x008F348A File Offset: 0x008F168A
 		public 被控物广播()
 		{
 		}
 
-		// Token: 0x0601F1BD RID: 127421 RVA: 0x008AAE32 File Offset: 0x008A9032
+		// Token: 0x0601D61E RID: 120350 RVA: 0x008F3492 File Offset: 0x008F1692
 		[NullableContext(2)]
 		public 被控物广播(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F1BE RID: 127422 RVA: 0x008AAE3C File Offset: 0x008A903C
+		// Token: 0x0601D61F RID: 120351 RVA: 0x008F349C File Offset: 0x008F169C
 		public 被控物广播(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F1BF RID: 127423 RVA: 0x008AAE47 File Offset: 0x008A9047
+		// Token: 0x0601D620 RID: 120352 RVA: 0x008F34A7 File Offset: 0x008F16A7
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action) ?? ((Action)Delegate.CreateDelegate(typeof(Action), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601F1C0 RID: 127424 RVA: 0x008AAE79 File Offset: 0x008A9079
+		// Token: 0x0601D621 RID: 120353 RVA: 0x008F34D9 File Offset: 0x008F16D9
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action Callback)
 		{
 			if (被控物广播.RegisterId == 0)
@@ -67,26 +66,23 @@ namespace AkiClient.Game.Aki.UI.Manager
 			base.Add(Callback, 被控物广播.RegisterId);
 		}
 
-		// Token: 0x0601F1C1 RID: 127425 RVA: 0x008AAEB3 File Offset: 0x008A90B3
+		// Token: 0x0601D622 RID: 120354 RVA: 0x008F3513 File Offset: 0x008F1713
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601F1C2 RID: 127426 RVA: 0x008AAEBC File Offset: 0x008A90BC
+		// Token: 0x0601D623 RID: 120355 RVA: 0x008F351C File Offset: 0x008F171C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Broadcast()
 		{
 			base.BroadcastInternal(null);
 		}
 
-		// Token: 0x0601F1C3 RID: 127427 RVA: 0x008AAEC8 File Offset: 0x008A90C8
+		// Token: 0x0601D624 RID: 120356 RVA: 0x008F3528 File Offset: 0x008F1728
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action action = target as Action;
@@ -97,18 +93,18 @@ namespace AkiClient.Game.Aki.UI.Manager
 			action();
 		}
 
-		// Token: 0x0400EE44 RID: 60996
+		// Token: 0x0400F76C RID: 63340
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/UI/Manager/BP_EventManager.BP_EventManager_C:被控物广播__DelegateSignature";
 
-		// Token: 0x0400EE45 RID: 60997
+		// Token: 0x0400F76D RID: 63341
 		private static int RegisterId;
 
-		// Token: 0x02009A0D RID: 39437
+		// Token: 0x02008CC1 RID: 36033
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04030EEE RID: 200430
+			// Token: 0x0402C7CE RID: 182222
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

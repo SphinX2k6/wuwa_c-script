@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002B15 RID: 11029
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002E33 RID: 11827
 	public class TCsvCommonBtOverrideData
 	{
-		// Token: 0x0600F169 RID: 61801 RVA: 0x0023017B File Offset: 0x0022E37B
+		// Token: 0x060100BD RID: 65725 RVA: 0x0024EC13 File Offset: 0x0024CE13
 		public static TCsvCommonBtOverrideData Create(TCsvCommonBtOverrideData? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004D01 RID: 19713
-		// (get) Token: 0x0600F16A RID: 61802 RVA: 0x0023019A File Offset: 0x0022E39A
+		// Token: 0x17005105 RID: 20741
+		// (get) Token: 0x060100BE RID: 65726 RVA: 0x0024EC32 File Offset: 0x0024CE32
 		public virtual int Id
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004D02 RID: 19714
-		// (get) Token: 0x0600F16B RID: 61803 RVA: 0x002301A7 File Offset: 0x0022E3A7
+		// Token: 0x17005106 RID: 20742
+		// (get) Token: 0x060100BF RID: 65727 RVA: 0x0024EC3F File Offset: 0x0024CE3F
 		public virtual ICommonBtOverride Data
 		{
 			get
@@ -48,14 +46,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040084C9 RID: 33993
+		// Token: 0x04008C11 RID: 35857
 		private TCsvCommonBtOverrideData Instance;
 
-		// Token: 0x040084CA RID: 33994
+		// Token: 0x04008C12 RID: 35858
 		[Nullable(2)]
 		private ICommonBtOverride _DataCache;
 
-		// Token: 0x040084CB RID: 33995
+		// Token: 0x04008C13 RID: 35859
 		private bool _DataInited;
 	}
 }

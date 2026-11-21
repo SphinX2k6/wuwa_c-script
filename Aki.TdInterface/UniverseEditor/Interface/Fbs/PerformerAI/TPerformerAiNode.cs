@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.PerformerAI
 {
-	// Token: 0x02004384 RID: 17284
+	// Token: 0x020047E6 RID: 18406
 	public enum TPerformerAiNode : byte
 	{
-		// Token: 0x0400C1A8 RID: 49576
+		// Token: 0x0400CBC6 RID: 52166
 		NONE,
-		// Token: 0x0400C1A9 RID: 49577
+		// Token: 0x0400CBC7 RID: 52167
 		IPerformerAiProbability,
-		// Token: 0x0400C1AA RID: 49578
+		// Token: 0x0400CBC8 RID: 52168
 		IPerformerAiSelector,
-		// Token: 0x0400C1AB RID: 49579
+		// Token: 0x0400CBC9 RID: 52169
 		IPerformerAiSequence,
-		// Token: 0x0400C1AC RID: 49580
+		// Token: 0x0400CBCA RID: 52170
 		IPerformerAiStart,
-		// Token: 0x0400C1AD RID: 49581
+		// Token: 0x0400CBCB RID: 52171
 		IPerformerAiTask
 	}
 }

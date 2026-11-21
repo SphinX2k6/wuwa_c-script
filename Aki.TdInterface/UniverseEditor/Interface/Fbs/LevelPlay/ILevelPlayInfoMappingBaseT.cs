@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020044F2 RID: 17650
+	// Token: 0x0200495A RID: 18778
 	public class ILevelPlayInfoMappingBaseT
 	{
-		// Token: 0x17007D14 RID: 32020
-		// (get) Token: 0x0601A7D3 RID: 108499 RVA: 0x003C8B3A File Offset: 0x003C6D3A
-		// (set) Token: 0x0601A7D4 RID: 108500 RVA: 0x003C8B42 File Offset: 0x003C6D42
+		// Token: 0x17008355 RID: 33621
+		// (get) Token: 0x0601BFA8 RID: 114600 RVA: 0x003F4DD6 File Offset: 0x003F2FD6
+		// (set) Token: 0x0601BFA9 RID: 114601 RVA: 0x003F4DDE File Offset: 0x003F2FDE
 		public ELevelPlayInfoMappingType Type { get; set; }
 
-		// Token: 0x0601A7D5 RID: 108501 RVA: 0x003C8B4B File Offset: 0x003C6D4B
+		// Token: 0x0601BFAA RID: 114602 RVA: 0x003F4DE7 File Offset: 0x003F2FE7
 		public ILevelPlayInfoMappingBaseT()
 		{
 			this.Type = ELevelPlayInfoMappingType.PunishReport;

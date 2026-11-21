@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006829 RID: 26665
+	// Token: 0x02006EAF RID: 28335
 	public class IFlowTemplateModeT
 	{
-		// Token: 0x1700C615 RID: 50709
-		// (get) Token: 0x0602E7CF RID: 190415 RVA: 0x006582EC File Offset: 0x006564EC
-		// (set) Token: 0x0602E7D0 RID: 190416 RVA: 0x006582F4 File Offset: 0x006564F4
+		// Token: 0x1700CFD9 RID: 53209
+		// (get) Token: 0x06031057 RID: 200791 RVA: 0x006A622C File Offset: 0x006A442C
+		// (set) Token: 0x06031058 RID: 200792 RVA: 0x006A6234 File Offset: 0x006A4434
 		public int Id { get; set; }
 
-		// Token: 0x1700C616 RID: 50710
-		// (get) Token: 0x0602E7D1 RID: 190417 RVA: 0x006582FD File Offset: 0x006564FD
-		// (set) Token: 0x0602E7D2 RID: 190418 RVA: 0x00658305 File Offset: 0x00656505
+		// Token: 0x1700CFDA RID: 53210
+		// (get) Token: 0x06031059 RID: 200793 RVA: 0x006A623D File Offset: 0x006A443D
+		// (set) Token: 0x0603105A RID: 200794 RVA: 0x006A6245 File Offset: 0x006A4445
 		public int CameraId { get; set; }
 
-		// Token: 0x0602E7D3 RID: 190419 RVA: 0x0065830E File Offset: 0x0065650E
+		// Token: 0x0603105B RID: 200795 RVA: 0x006A624E File Offset: 0x006A444E
 		public IFlowTemplateModeT()
 		{
 			this.Id = 0;

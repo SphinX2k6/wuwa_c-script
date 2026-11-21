@@ -10,12 +10,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002542 RID: 9538
+// Token: 0x02001A2B RID: 6699
 [NullableContext(2)]
 [Nullable(0)]
 public class PhoneSystemChatPanel : UiPanelBase
 {
-	// Token: 0x060132CE RID: 78542 RVA: 0x004C3518 File Offset: 0x004C1718
+	// Token: 0x060107A1 RID: 67489 RVA: 0x004D1B60 File Offset: 0x004CFD60
 	private void OnClickedBtnMask()
 	{
 		if (this.IsPlaying)
@@ -47,8 +47,8 @@ public class PhoneSystemChatPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x170018D2 RID: 6354
-	// (get) Token: 0x060132CF RID: 78543 RVA: 0x004C357F File Offset: 0x004C177F
+	// Token: 0x1700190C RID: 6412
+	// (get) Token: 0x060107A2 RID: 67490 RVA: 0x004D1BC7 File Offset: 0x004CFDC7
 	public bool GetIsPlaying
 	{
 		get
@@ -57,7 +57,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x060132D0 RID: 78544 RVA: 0x004C3588 File Offset: 0x004C1788
+	// Token: 0x060107A3 RID: 67491 RVA: 0x004D1BD0 File Offset: 0x004CFDD0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -91,7 +91,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x060132D1 RID: 78545 RVA: 0x004C37B8 File Offset: 0x004C19B8
+	// Token: 0x060107A4 RID: 67492 RVA: 0x004D1E00 File Offset: 0x004D0000
 	protected override void OnStart()
 	{
 		Dictionary<int, UUIItem> dictionary = new Dictionary<int, UUIItem>
@@ -108,6 +108,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		dictionary[4] = base.GetItem(11);
 		dictionary[5] = base.GetItem(12);
 		dictionary[6] = base.GetItem(13);
+		dictionary[7] = base.GetItem(10);
 		this.ChatMultiTemplateComponent = new MultiTemplateComponent(base.GetVerticalLayout(5).RootUIComp, dictionary);
 		base.GetButton(14).RootUIComp.Get().SetUIActive(true);
 		EventSystem.Instance.Add(EEventName.OnPhoneMsgChatShowChange, new Action(this.RefreshChatBgShow));
@@ -131,7 +132,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x060132D2 RID: 78546 RVA: 0x004C3960 File Offset: 0x004C1B60
+	// Token: 0x060107A5 RID: 67493 RVA: 0x004D1FB8 File Offset: 0x004D01B8
 	protected override void OnBeforeShow()
 	{
 		this.Ticker = TickSystem.Instance.Add(new Action<float>(this.OnTick), "PhoneSystemChatPanel", ETickingGroup.TG_PrePhysics, true, 0, true);
@@ -140,7 +141,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		this.RefreshChatThemeShow();
 	}
 
-	// Token: 0x060132D3 RID: 78547 RVA: 0x004C39BB File Offset: 0x004C1BBB
+	// Token: 0x060107A6 RID: 67494 RVA: 0x004D2013 File Offset: 0x004D0213
 	protected override void OnBeforeHide()
 	{
 		this.HandleLastData();
@@ -154,13 +155,13 @@ public class PhoneSystemChatPanel : UiPanelBase
 		this.StopVoice();
 	}
 
-	// Token: 0x060132D4 RID: 78548 RVA: 0x004C39F7 File Offset: 0x004C1BF7
+	// Token: 0x060107A7 RID: 67495 RVA: 0x004D204F File Offset: 0x004D024F
 	public void SetIsBigView(bool isbig)
 	{
 		this.IsBigView = isbig;
 	}
 
-	// Token: 0x060132D5 RID: 78549 RVA: 0x004C3A00 File Offset: 0x004C1C00
+	// Token: 0x060107A8 RID: 67496 RVA: 0x004D2058 File Offset: 0x004D0258
 	protected override void OnBeforeDestroy()
 	{
 		this.Reset();
@@ -175,7 +176,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		this.title2SeqPlayer = null;
 	}
 
-	// Token: 0x060132D6 RID: 78550 RVA: 0x004C3A69 File Offset: 0x004C1C69
+	// Token: 0x060107A9 RID: 67497 RVA: 0x004D20C1 File Offset: 0x004D02C1
 	private void OnTick(float deltaTime)
 	{
 		if (this.ReadyToScroll)
@@ -185,7 +186,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x060132D7 RID: 78551 RVA: 0x004C3A8C File Offset: 0x004C1C8C
+	// Token: 0x060107AA RID: 67498 RVA: 0x004D20E4 File Offset: 0x004D02E4
 	private void OnLateTick(float _)
 	{
 		if (this.NeedScrollToEndOnLateTick)
@@ -211,7 +212,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x060132D8 RID: 78552 RVA: 0x004C3B04 File Offset: 0x004C1D04
+	// Token: 0x060107AB RID: 67499 RVA: 0x004D215C File Offset: 0x004D035C
 	private bool CompareContentAndViewPort()
 	{
 		UUIScrollViewWithScrollbarComponent scrollViewWithScrollbar = base.GetScrollViewWithScrollbar(4);
@@ -229,7 +230,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		return tweakObjectPtr.Value.Get().GetHeight() < height;
 	}
 
-	// Token: 0x060132D9 RID: 78553 RVA: 0x004C3B88 File Offset: 0x004C1D88
+	// Token: 0x060107AC RID: 67500 RVA: 0x004D21E0 File Offset: 0x004D03E0
 	private bool CheckLastItemOutOfContent()
 	{
 		UUIVerticalLayout verticalLayout = base.GetVerticalLayout(5);
@@ -248,7 +249,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		return uuiitem.GetRelativeTransform().GetLocation().Y + uuiitem.GetLocalSpaceBottom() < -height;
 	}
 
-	// Token: 0x060132DA RID: 78554 RVA: 0x004C3C2C File Offset: 0x004C1E2C
+	// Token: 0x060107AD RID: 67501 RVA: 0x004D2284 File Offset: 0x004D0484
 	private void RefreshChatBgShow()
 	{
 		int currentUsingChatBgId = PhoneMsgModel.Instance.CurrentUsingChatBgId;
@@ -260,13 +261,13 @@ public class PhoneSystemChatPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x060132DB RID: 78555 RVA: 0x004C3C82 File Offset: 0x004C1E82
+	// Token: 0x060107AE RID: 67502 RVA: 0x004D22DA File Offset: 0x004D04DA
 	private void RefreshChatThemeShow()
 	{
 		this.RefreshByTheme(PhoneMsgModel.Instance.CurrentUsingChatThemeId);
 	}
 
-	// Token: 0x060132DC RID: 78556 RVA: 0x004C3C94 File Offset: 0x004C1E94
+	// Token: 0x060107AF RID: 67503 RVA: 0x004D22EC File Offset: 0x004D04EC
 	private bool ShouldShowSignature()
 	{
 		if (this.DisplayData == null)
@@ -282,7 +283,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		return chatPartnerConfigNew != null && !chatPartnerConfigNew.Value.IsGroupChat && !string.IsNullOrEmpty(chatPartnerConfigNew.Value.Desc);
 	}
 
-	// Token: 0x060132DD RID: 78557 RVA: 0x004C3D1C File Offset: 0x004C1F1C
+	// Token: 0x060107B0 RID: 67504 RVA: 0x004D2374 File Offset: 0x004D0574
 	private void RefreshByTheme(int themeId)
 	{
 		ChatTheme? chatThemeConfig = PhoneMsgConfig.Instance.GetChatThemeConfig(themeId);
@@ -370,7 +371,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x060132DE RID: 78558 RVA: 0x004C4000 File Offset: 0x004C2200
+	// Token: 0x060107B1 RID: 67505 RVA: 0x004D2658 File Offset: 0x004D0858
 	[NullableContext(1)]
 	private UniTask CreateTitle2AndPlayAsync(string prefabPath, UUIItem parentItem)
 	{
@@ -384,7 +385,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		return <CreateTitle2AndPlayAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060132DF RID: 78559 RVA: 0x004C4054 File Offset: 0x004C2254
+	// Token: 0x060107B2 RID: 67506 RVA: 0x004D26AC File Offset: 0x004D08AC
 	private void CheckNaviBtnBlankShow()
 	{
 		if (this.DisplayData.ChatDataList.Count <= 0)
@@ -404,7 +405,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		item.SetUIActive(uiactive);
 	}
 
-	// Token: 0x060132E0 RID: 78560 RVA: 0x004C40BC File Offset: 0x004C22BC
+	// Token: 0x060107B3 RID: 67507 RVA: 0x004D2714 File Offset: 0x004D0914
 	private void CheckToRemoveTicker()
 	{
 		if (this.Ticker != null)
@@ -414,7 +415,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x060132E1 RID: 78561 RVA: 0x004C40E4 File Offset: 0x004C22E4
+	// Token: 0x060107B4 RID: 67508 RVA: 0x004D273C File Offset: 0x004D093C
 	public void UpdateChatDialogData()
 	{
 		if (this.DisplayData == null)
@@ -429,7 +430,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x060132E2 RID: 78562 RVA: 0x004C4130 File Offset: 0x004C2330
+	// Token: 0x060107B5 RID: 67509 RVA: 0x004D2788 File Offset: 0x004D0988
 	public void UpdateChatScrollViewData()
 	{
 		if (this.DisplayData == null)
@@ -461,7 +462,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x060132E3 RID: 78563 RVA: 0x004C41DC File Offset: 0x004C23DC
+	// Token: 0x060107B6 RID: 67510 RVA: 0x004D2834 File Offset: 0x004D0A34
 	public void RefreshChatShow()
 	{
 		this.UpdateChatDialogData();
@@ -469,7 +470,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		this.RefreshChatBg();
 	}
 
-	// Token: 0x060132E4 RID: 78564 RVA: 0x004C41F0 File Offset: 0x004C23F0
+	// Token: 0x060107B7 RID: 67511 RVA: 0x004D2848 File Offset: 0x004D0A48
 	private void RefreshChatDialog()
 	{
 		if (((this.DisplayData != null) ? this.DisplayData.ChatDialogId : 0) <= 0)
@@ -479,7 +480,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		this.ShowReadChatContents();
 	}
 
-	// Token: 0x060132E5 RID: 78565 RVA: 0x004C4214 File Offset: 0x004C2414
+	// Token: 0x060107B8 RID: 67512 RVA: 0x004D286C File Offset: 0x004D0A6C
 	private void RefreshChatBg()
 	{
 		int num = (this.DisplayData != null) ? this.DisplayData.ChatBgId : 0;
@@ -496,7 +497,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		base.SetTextureByPath(chatBgPathBig, base.GetTexture(6), null, null);
 	}
 
-	// Token: 0x060132E6 RID: 78566 RVA: 0x004C427C File Offset: 0x004C247C
+	// Token: 0x060107B9 RID: 67513 RVA: 0x004D28D4 File Offset: 0x004D0AD4
 	[NullableContext(1)]
 	public void RefreshByData(ShortMessageDisplayData displayData)
 	{
@@ -527,7 +528,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		this.CheckNaviBtnBlankShow();
 	}
 
-	// Token: 0x060132E7 RID: 78567 RVA: 0x004C432C File Offset: 0x004C252C
+	// Token: 0x060107BA RID: 67514 RVA: 0x004D2984 File Offset: 0x004D0B84
 	private UniTask HandleLastData()
 	{
 		PhoneSystemChatPanel.<HandleLastData>d__54 <HandleLastData>d__;
@@ -538,7 +539,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		return <HandleLastData>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060132E8 RID: 78568 RVA: 0x004C4370 File Offset: 0x004C2570
+	// Token: 0x060107BB RID: 67515 RVA: 0x004D29C8 File Offset: 0x004D0BC8
 	public void Reset()
 	{
 		this.StopVoice();
@@ -568,7 +569,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		chatMultiTemplateComponent.RefreshByData(this.DisplayedChatScrollViewDataList, false);
 	}
 
-	// Token: 0x060132E9 RID: 78569 RVA: 0x004C43FC File Offset: 0x004C25FC
+	// Token: 0x060107BC RID: 67516 RVA: 0x004D2A54 File Offset: 0x004D0C54
 	private void AddAllMessageTasks()
 	{
 		if (this.DisplayData == null)
@@ -591,7 +592,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x060132EA RID: 78570 RVA: 0x004C446C File Offset: 0x004C266C
+	// Token: 0x060107BD RID: 67517 RVA: 0x004D2AC4 File Offset: 0x004D0CC4
 	private void AddShowMessageTask(int chatIndex)
 	{
 		if (this.DisplayData == null)
@@ -601,7 +602,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		PhoneMsgChatData phoneMsgChatData = this.DisplayData.ChatDataList[chatIndex];
 		EPhoneMsgContentType chatContentType = phoneMsgChatData.ChatContentType;
 		this.AddRefreshReadIndexTask(chatIndex);
-		if (chatContentType == EPhoneMsgContentType.Tips && phoneMsgChatData.ContentType == EChatMsgType.Task)
+		if (chatContentType == EPhoneMsgContentType.Tips && (phoneMsgChatData.ContentType == EChatMsgType.Task || phoneMsgChatData.ContentType == EChatMsgType.Activity || phoneMsgChatData.ContentType == EChatMsgType.ActivityMainView))
 		{
 			this.AddUpdateProgressTask(this.DisplayData);
 		}
@@ -630,16 +631,24 @@ public class PhoneSystemChatPanel : UiPanelBase
 			case EChatMsgType.Tips:
 				this.AddShowSystemTipsAnimationTask(chatIndex);
 				return;
+			case EChatMsgType.TextOption:
+			case EChatMsgType.EmojiOption:
+			case EChatMsgType.Voice:
+				break;
+			case EChatMsgType.Activity:
+			case EChatMsgType.ActivityMainView:
+				this.AddShowActivityAnimationTask(chatIndex);
+				break;
 			default:
 				return;
 			}
-			break;
+			return;
 		default:
 			return;
 		}
 	}
 
-	// Token: 0x060132EB RID: 78571 RVA: 0x004C452C File Offset: 0x004C272C
+	// Token: 0x060107BE RID: 67518 RVA: 0x004D2BB4 File Offset: 0x004D0DB4
 	private void RefreshOtherInfo()
 	{
 		if (this.DisplayData == null)
@@ -684,7 +693,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		this.RefreshChatBg();
 	}
 
-	// Token: 0x060132EC RID: 78572 RVA: 0x004C468C File Offset: 0x004C288C
+	// Token: 0x060107BF RID: 67519 RVA: 0x004D2D14 File Offset: 0x004D0F14
 	[NullableContext(1)]
 	[return: Nullable(2)]
 	private IMultiTemplateGridData CreateChatData(PhoneMsgChatData data)
@@ -716,22 +725,23 @@ public class PhoneSystemChatPanel : UiPanelBase
 				};
 			case EChatMsgType.Tips:
 				return new TipsChatGridData(data);
-			default:
-				return null;
+			case EChatMsgType.Activity:
+			case EChatMsgType.ActivityMainView:
+				return new ActivityChatGridData(data);
 			}
-			break;
+			return null;
 		default:
 			return null;
 		}
 	}
 
-	// Token: 0x060132ED RID: 78573 RVA: 0x004C474D File Offset: 0x004C294D
+	// Token: 0x060107C0 RID: 67520 RVA: 0x004D2DF0 File Offset: 0x004D0FF0
 	private void OnRewardClick()
 	{
 		this.AddReceiveRewardTask();
 	}
 
-	// Token: 0x060132EE RID: 78574 RVA: 0x004C4755 File Offset: 0x004C2955
+	// Token: 0x060107C1 RID: 67521 RVA: 0x004D2DF8 File Offset: 0x004D0FF8
 	private void ShowReadChatContents()
 	{
 		if (this.ChatMultiTemplateComponent == null)
@@ -742,7 +752,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		this.NeedScrollToEndOnLateTick = true;
 	}
 
-	// Token: 0x060132EF RID: 78575 RVA: 0x004C477C File Offset: 0x004C297C
+	// Token: 0x060107C2 RID: 67522 RVA: 0x004D2E1C File Offset: 0x004D101C
 	private void ScrollToChatItem(int index, bool bTween = true)
 	{
 		if (this.ChatMultiTemplateComponent == null)
@@ -762,14 +772,14 @@ public class PhoneSystemChatPanel : UiPanelBase
 		scrollViewWithScrollbar.ScrollTo(itemByDisplayIndex, bTween);
 	}
 
-	// Token: 0x060132F0 RID: 78576 RVA: 0x004C47B8 File Offset: 0x004C29B8
+	// Token: 0x060107C3 RID: 67523 RVA: 0x004D2E58 File Offset: 0x004D1058
 	private void AddRefreshReadIndexTask(int chatIndex)
 	{
 		UiAsyncTask task = new UiAsyncTask("ChatPerformance", () => this.RefreshReadIndexAsync(chatIndex), null);
 		base.RunAsyncTask(task);
 	}
 
-	// Token: 0x060132F1 RID: 78577 RVA: 0x004C47FC File Offset: 0x004C29FC
+	// Token: 0x060107C4 RID: 67524 RVA: 0x004D2E9C File Offset: 0x004D109C
 	private UniTask RefreshReadIndexAsync(int chatIndex)
 	{
 		ShortMessageDisplayData displayData = this.DisplayData;
@@ -782,14 +792,14 @@ public class PhoneSystemChatPanel : UiPanelBase
 		return UniTask.CompletedTask;
 	}
 
-	// Token: 0x060132F2 RID: 78578 RVA: 0x004C484C File Offset: 0x004C2A4C
+	// Token: 0x060107C5 RID: 67525 RVA: 0x004D2EEC File Offset: 0x004D10EC
 	private void AddRefreshChatContentTask(int chatIndex)
 	{
 		UiAsyncTask task = new UiAsyncTask("ChatPerformance", () => this.RefreshChatContentAsync(chatIndex), null);
 		base.RunAsyncTask(task);
 	}
 
-	// Token: 0x060132F3 RID: 78579 RVA: 0x004C4890 File Offset: 0x004C2A90
+	// Token: 0x060107C6 RID: 67526 RVA: 0x004D2F30 File Offset: 0x004D1130
 	private UniTask RefreshChatContentAsync(int chatIndex)
 	{
 		ShortMessageDisplayData displayData = this.DisplayData;
@@ -807,7 +817,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		return UniTask.CompletedTask;
 	}
 
-	// Token: 0x060132F4 RID: 78580 RVA: 0x004C48F4 File Offset: 0x004C2AF4
+	// Token: 0x060107C7 RID: 67527 RVA: 0x004D2F94 File Offset: 0x004D1194
 	private void AddShowInputtingAnimationTask(int chatIndex)
 	{
 		UiAsyncTask task = null;
@@ -821,7 +831,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		base.RunAsyncTask(task);
 	}
 
-	// Token: 0x060132F5 RID: 78581 RVA: 0x004C4954 File Offset: 0x004C2B54
+	// Token: 0x060107C8 RID: 67528 RVA: 0x004D2FF4 File Offset: 0x004D11F4
 	private UniTask ShowInputtingAnimationAsync(int chatIndex)
 	{
 		PhoneSystemChatPanel.<ShowInputtingAnimationAsync>d__68 <ShowInputtingAnimationAsync>d__;
@@ -833,7 +843,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		return <ShowInputtingAnimationAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060132F6 RID: 78582 RVA: 0x004C49A0 File Offset: 0x004C2BA0
+	// Token: 0x060107C9 RID: 67529 RVA: 0x004D3040 File Offset: 0x004D1240
 	private void OnShowInputtingAnimationCanceled(EUiAsyncTaskStatus status, int chatIndex)
 	{
 		this.IsInInputtingAnimation = false;
@@ -854,7 +864,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		this.StopScrollTweenAnimation();
 	}
 
-	// Token: 0x060132F7 RID: 78583 RVA: 0x004C49F0 File Offset: 0x004C2BF0
+	// Token: 0x060107CA RID: 67530 RVA: 0x004D3090 File Offset: 0x004D1290
 	private void AddShowSpeakerContentAnimationTask(int chatIndex)
 	{
 		UiAsyncTask task = null;
@@ -868,7 +878,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		base.RunAsyncTask(task);
 	}
 
-	// Token: 0x060132F8 RID: 78584 RVA: 0x004C4A50 File Offset: 0x004C2C50
+	// Token: 0x060107CB RID: 67531 RVA: 0x004D30F0 File Offset: 0x004D12F0
 	private UniTask ShowSpeakerContentAnimationAsync(int chatIndex)
 	{
 		PhoneSystemChatPanel.<ShowSpeakerContentAnimationAsync>d__71 <ShowSpeakerContentAnimationAsync>d__;
@@ -880,7 +890,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		return <ShowSpeakerContentAnimationAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060132F9 RID: 78585 RVA: 0x004C4A9C File Offset: 0x004C2C9C
+	// Token: 0x060107CC RID: 67532 RVA: 0x004D313C File Offset: 0x004D133C
 	private void OnShowSpeakerContentAnimationCanceled(EUiAsyncTaskStatus status, int chatIndex)
 	{
 		if (status != EUiAsyncTaskStatus.Running)
@@ -900,7 +910,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		this.StopScrollTweenAnimation();
 	}
 
-	// Token: 0x060132FA RID: 78586 RVA: 0x004C4AE4 File Offset: 0x004C2CE4
+	// Token: 0x060107CD RID: 67533 RVA: 0x004D3184 File Offset: 0x004D1384
 	private void AddShowSystemTipsAnimationTask(int chatIndex)
 	{
 		UiAsyncTask task = null;
@@ -914,7 +924,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		base.RunAsyncTask(task);
 	}
 
-	// Token: 0x060132FB RID: 78587 RVA: 0x004C4B44 File Offset: 0x004C2D44
+	// Token: 0x060107CE RID: 67534 RVA: 0x004D31E4 File Offset: 0x004D13E4
 	private UniTask ShowSystemTipsAnimationAsync(int chatIndex)
 	{
 		PhoneSystemChatPanel.<ShowSystemTipsAnimationAsync>d__74 <ShowSystemTipsAnimationAsync>d__;
@@ -926,7 +936,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		return <ShowSystemTipsAnimationAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060132FC RID: 78588 RVA: 0x004C4B90 File Offset: 0x004C2D90
+	// Token: 0x060107CF RID: 67535 RVA: 0x004D3230 File Offset: 0x004D1430
 	private void OnShowSystemTipsAnimationCanceled(EUiAsyncTaskStatus status, int chatIndex)
 	{
 		if (status != EUiAsyncTaskStatus.Running)
@@ -945,7 +955,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		this.StopScrollTweenAnimation();
 	}
 
-	// Token: 0x060132FD RID: 78589 RVA: 0x004C4BD4 File Offset: 0x004C2DD4
+	// Token: 0x060107D0 RID: 67536 RVA: 0x004D3274 File Offset: 0x004D1474
 	private void AddShowRewardAnimationTask(int chatIndex)
 	{
 		UiAsyncTask task = null;
@@ -959,7 +969,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		base.RunAsyncTask(task);
 	}
 
-	// Token: 0x060132FE RID: 78590 RVA: 0x004C4C34 File Offset: 0x004C2E34
+	// Token: 0x060107D1 RID: 67537 RVA: 0x004D32D4 File Offset: 0x004D14D4
 	private UniTask ShowRewardAnimationAsync(int chatIndex)
 	{
 		PhoneSystemChatPanel.<ShowRewardAnimationAsync>d__77 <ShowRewardAnimationAsync>d__;
@@ -971,7 +981,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		return <ShowRewardAnimationAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060132FF RID: 78591 RVA: 0x004C4C80 File Offset: 0x004C2E80
+	// Token: 0x060107D2 RID: 67538 RVA: 0x004D3320 File Offset: 0x004D1520
 	private void OnShowRewardAnimationCanceled(EUiAsyncTaskStatus status, int chatIndex)
 	{
 		if (status != EUiAsyncTaskStatus.Running)
@@ -990,7 +1000,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		this.StopScrollTweenAnimation();
 	}
 
-	// Token: 0x06013300 RID: 78592 RVA: 0x004C4CC4 File Offset: 0x004C2EC4
+	// Token: 0x060107D3 RID: 67539 RVA: 0x004D3364 File Offset: 0x004D1564
 	private void AddShowBirthdayAnimationTask(int chatIndex)
 	{
 		UiAsyncTask task = null;
@@ -1004,7 +1014,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		base.RunAsyncTask(task);
 	}
 
-	// Token: 0x06013301 RID: 78593 RVA: 0x004C4D24 File Offset: 0x004C2F24
+	// Token: 0x060107D4 RID: 67540 RVA: 0x004D33C4 File Offset: 0x004D15C4
 	private UniTask ShowBirthdayAnimationAsync(int chatIndex)
 	{
 		PhoneSystemChatPanel.<ShowBirthdayAnimationAsync>d__80 <ShowBirthdayAnimationAsync>d__;
@@ -1016,7 +1026,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		return <ShowBirthdayAnimationAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013302 RID: 78594 RVA: 0x004C4D70 File Offset: 0x004C2F70
+	// Token: 0x060107D5 RID: 67541 RVA: 0x004D3410 File Offset: 0x004D1610
 	private void OnShowBirthdayAnimationCanceled(EUiAsyncTaskStatus status, int chatIndex)
 	{
 		if (status != EUiAsyncTaskStatus.Running)
@@ -1035,7 +1045,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		this.StopScrollTweenAnimation();
 	}
 
-	// Token: 0x06013303 RID: 78595 RVA: 0x004C4DB4 File Offset: 0x004C2FB4
+	// Token: 0x060107D6 RID: 67542 RVA: 0x004D3454 File Offset: 0x004D1654
 	private void AddShowTaskAnimationTask(int chatIndex)
 	{
 		UiAsyncTask task = null;
@@ -1049,7 +1059,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		base.RunAsyncTask(task);
 	}
 
-	// Token: 0x06013304 RID: 78596 RVA: 0x004C4E14 File Offset: 0x004C3014
+	// Token: 0x060107D7 RID: 67543 RVA: 0x004D34B4 File Offset: 0x004D16B4
 	private UniTask ShowTaskAnimationAsync(int chatIndex)
 	{
 		PhoneSystemChatPanel.<ShowTaskAnimationAsync>d__83 <ShowTaskAnimationAsync>d__;
@@ -1061,7 +1071,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		return <ShowTaskAnimationAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013305 RID: 78597 RVA: 0x004C4E60 File Offset: 0x004C3060
+	// Token: 0x060107D8 RID: 67544 RVA: 0x004D3500 File Offset: 0x004D1700
 	private void OnShowTaskAnimationCanceled(EUiAsyncTaskStatus status, int chatIndex)
 	{
 		if (status != EUiAsyncTaskStatus.Running)
@@ -1080,7 +1090,52 @@ public class PhoneSystemChatPanel : UiPanelBase
 		this.StopScrollTweenAnimation();
 	}
 
-	// Token: 0x06013306 RID: 78598 RVA: 0x004C4EA4 File Offset: 0x004C30A4
+	// Token: 0x060107D9 RID: 67545 RVA: 0x004D3544 File Offset: 0x004D1744
+	private void AddShowActivityAnimationTask(int chatIndex)
+	{
+		UiAsyncTask task = null;
+		task = new UiAsyncTask("ChatPerformance", () => this.ShowActivityAnimationAsync(chatIndex), delegate()
+		{
+			if (task != null)
+			{
+				this.OnShowActivityAnimationCanceled(task.Status, chatIndex);
+			}
+		});
+		base.RunAsyncTask(task);
+	}
+
+	// Token: 0x060107DA RID: 67546 RVA: 0x004D35A4 File Offset: 0x004D17A4
+	private UniTask ShowActivityAnimationAsync(int chatIndex)
+	{
+		PhoneSystemChatPanel.<ShowActivityAnimationAsync>d__86 <ShowActivityAnimationAsync>d__;
+		<ShowActivityAnimationAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
+		<ShowActivityAnimationAsync>d__.<>4__this = this;
+		<ShowActivityAnimationAsync>d__.chatIndex = chatIndex;
+		<ShowActivityAnimationAsync>d__.<>1__state = -1;
+		<ShowActivityAnimationAsync>d__.<>t__builder.Start<PhoneSystemChatPanel.<ShowActivityAnimationAsync>d__86>(ref <ShowActivityAnimationAsync>d__);
+		return <ShowActivityAnimationAsync>d__.<>t__builder.Task;
+	}
+
+	// Token: 0x060107DB RID: 67547 RVA: 0x004D35F0 File Offset: 0x004D17F0
+	private void OnShowActivityAnimationCanceled(EUiAsyncTaskStatus status, int chatIndex)
+	{
+		if (status != EUiAsyncTaskStatus.Running)
+		{
+			return;
+		}
+		if (this.ChatMultiTemplateComponent.GetTemplateIndexByDisplayIndex(chatIndex) != 7)
+		{
+			return;
+		}
+		ActivityChatItem activityChatItem = this.ChatMultiTemplateComponent.GetProxyByDisplayIndex(chatIndex) as ActivityChatItem;
+		if (activityChatItem != null)
+		{
+			activityChatItem.StopActivityAnimation();
+		}
+		this.StopScrollTweenAnimation();
+	}
+
+	// Token: 0x060107DC RID: 67548 RVA: 0x004D3634 File Offset: 0x004D1834
 	private void AddEndLineTask()
 	{
 		UiAsyncTask task = null;
@@ -1094,18 +1149,18 @@ public class PhoneSystemChatPanel : UiPanelBase
 		base.RunAsyncTask(task);
 	}
 
-	// Token: 0x06013307 RID: 78599 RVA: 0x004C4EFC File Offset: 0x004C30FC
+	// Token: 0x060107DD RID: 67549 RVA: 0x004D368C File Offset: 0x004D188C
 	private UniTask ShowEndLineAsync()
 	{
-		PhoneSystemChatPanel.<ShowEndLineAsync>d__86 <ShowEndLineAsync>d__;
+		PhoneSystemChatPanel.<ShowEndLineAsync>d__89 <ShowEndLineAsync>d__;
 		<ShowEndLineAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<ShowEndLineAsync>d__.<>4__this = this;
 		<ShowEndLineAsync>d__.<>1__state = -1;
-		<ShowEndLineAsync>d__.<>t__builder.Start<PhoneSystemChatPanel.<ShowEndLineAsync>d__86>(ref <ShowEndLineAsync>d__);
+		<ShowEndLineAsync>d__.<>t__builder.Start<PhoneSystemChatPanel.<ShowEndLineAsync>d__89>(ref <ShowEndLineAsync>d__);
 		return <ShowEndLineAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013308 RID: 78600 RVA: 0x004C4F3F File Offset: 0x004C313F
+	// Token: 0x060107DE RID: 67550 RVA: 0x004D36CF File Offset: 0x004D18CF
 	private void OnEndLineCanceled(EUiAsyncTaskStatus status)
 	{
 		if (status != EUiAsyncTaskStatus.Running)
@@ -1115,7 +1170,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		this.StopScrollTweenAnimation();
 	}
 
-	// Token: 0x06013309 RID: 78601 RVA: 0x004C4F4C File Offset: 0x004C314C
+	// Token: 0x060107DF RID: 67551 RVA: 0x004D36DC File Offset: 0x004D18DC
 	private void AddMaskEnableTask()
 	{
 		UiAsyncTask task = new UiAsyncTask("ChatPerformance", new Func<UniTask>(this.MaskEnableAsync), delegate()
@@ -1125,7 +1180,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		base.RunAsyncTask(task);
 	}
 
-	// Token: 0x0601330A RID: 78602 RVA: 0x004C4F84 File Offset: 0x004C3184
+	// Token: 0x060107E0 RID: 67552 RVA: 0x004D3714 File Offset: 0x004D1914
 	private UniTask MaskEnableAsync()
 	{
 		UUIScrollViewWithScrollbarComponent scrollViewWithScrollbar = base.GetScrollViewWithScrollbar(4);
@@ -1147,7 +1202,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		return UniTask.CompletedTask;
 	}
 
-	// Token: 0x0601330B RID: 78603 RVA: 0x004C4FD7 File Offset: 0x004C31D7
+	// Token: 0x060107E1 RID: 67553 RVA: 0x004D3767 File Offset: 0x004D1967
 	private void OnMaskEnableCanceled(EUiAsyncTaskStatus status)
 	{
 		UUIScrollViewWithScrollbarComponent scrollViewWithScrollbar = base.GetScrollViewWithScrollbar(4);
@@ -1163,7 +1218,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		this.IsPlaying = false;
 	}
 
-	// Token: 0x0601330C RID: 78604 RVA: 0x004C5008 File Offset: 0x004C3208
+	// Token: 0x060107E2 RID: 67554 RVA: 0x004D3798 File Offset: 0x004D1998
 	private void AddMaskDisableTask()
 	{
 		UiAsyncTask task = new UiAsyncTask("ChatPerformance", new Func<UniTask>(this.MaskDisableAsync), delegate()
@@ -1173,7 +1228,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		base.RunAsyncTask(task);
 	}
 
-	// Token: 0x0601330D RID: 78605 RVA: 0x004C5040 File Offset: 0x004C3240
+	// Token: 0x060107E3 RID: 67555 RVA: 0x004D37D0 File Offset: 0x004D19D0
 	private UniTask MaskDisableAsync()
 	{
 		UUIScrollViewWithScrollbarComponent scrollViewWithScrollbar = base.GetScrollViewWithScrollbar(4);
@@ -1191,7 +1246,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		return UniTask.CompletedTask;
 	}
 
-	// Token: 0x0601330E RID: 78606 RVA: 0x004C507A File Offset: 0x004C327A
+	// Token: 0x060107E4 RID: 67556 RVA: 0x004D380A File Offset: 0x004D1A0A
 	private void OnMaskDisableCanceled(EUiAsyncTaskStatus status)
 	{
 		if (status != EUiAsyncTaskStatus.Running)
@@ -1211,7 +1266,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		this.IsPlaying = false;
 	}
 
-	// Token: 0x0601330F RID: 78607 RVA: 0x004C50B0 File Offset: 0x004C32B0
+	// Token: 0x060107E5 RID: 67557 RVA: 0x004D3840 File Offset: 0x004D1A40
 	[NullableContext(1)]
 	private void AddUpdateProgressTask(ShortMessageDisplayData displayData)
 	{
@@ -1219,33 +1274,33 @@ public class PhoneSystemChatPanel : UiPanelBase
 		base.RunAsyncTask(task);
 	}
 
-	// Token: 0x06013310 RID: 78608 RVA: 0x004C50F1 File Offset: 0x004C32F1
+	// Token: 0x060107E6 RID: 67558 RVA: 0x004D3881 File Offset: 0x004D1A81
 	[NullableContext(1)]
 	private UniTask UpdateProgressAsync(ShortMessageDisplayData displayData)
 	{
 		return this.UpdateProgressToServerAsync(displayData);
 	}
 
-	// Token: 0x06013311 RID: 78609 RVA: 0x004C50FC File Offset: 0x004C32FC
+	// Token: 0x060107E7 RID: 67559 RVA: 0x004D388C File Offset: 0x004D1A8C
 	[NullableContext(1)]
 	private UniTask UpdateProgressToServerAsync(ShortMessageDisplayData displayData)
 	{
-		PhoneSystemChatPanel.<UpdateProgressToServerAsync>d__96 <UpdateProgressToServerAsync>d__;
+		PhoneSystemChatPanel.<UpdateProgressToServerAsync>d__99 <UpdateProgressToServerAsync>d__;
 		<UpdateProgressToServerAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<UpdateProgressToServerAsync>d__.displayData = displayData;
 		<UpdateProgressToServerAsync>d__.<>1__state = -1;
-		<UpdateProgressToServerAsync>d__.<>t__builder.Start<PhoneSystemChatPanel.<UpdateProgressToServerAsync>d__96>(ref <UpdateProgressToServerAsync>d__);
+		<UpdateProgressToServerAsync>d__.<>t__builder.Start<PhoneSystemChatPanel.<UpdateProgressToServerAsync>d__99>(ref <UpdateProgressToServerAsync>d__);
 		return <UpdateProgressToServerAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013312 RID: 78610 RVA: 0x004C5140 File Offset: 0x004C3340
+	// Token: 0x060107E8 RID: 67560 RVA: 0x004D38D0 File Offset: 0x004D1AD0
 	private void AddExecuteEndCallBackTask()
 	{
 		UiAsyncTask task = new UiAsyncTask("ChatPerformance", new Func<UniTask>(this.ExecuteEndCallBackAsync), null);
 		base.RunAsyncTask(task);
 	}
 
-	// Token: 0x06013313 RID: 78611 RVA: 0x004C516D File Offset: 0x004C336D
+	// Token: 0x060107E9 RID: 67561 RVA: 0x004D38FD File Offset: 0x004D1AFD
 	private UniTask ExecuteEndCallBackAsync()
 	{
 		if (this.DisplayData != null)
@@ -1260,39 +1315,39 @@ public class PhoneSystemChatPanel : UiPanelBase
 		return UniTask.CompletedTask;
 	}
 
-	// Token: 0x06013314 RID: 78612 RVA: 0x004C51A0 File Offset: 0x004C33A0
+	// Token: 0x060107EA RID: 67562 RVA: 0x004D3930 File Offset: 0x004D1B30
 	private void AddSelectOptionTask(int chatItemIndex, int selectedIndex)
 	{
-		PhoneSystemChatPanel.<>c__DisplayClass99_0 CS$<>8__locals1 = new PhoneSystemChatPanel.<>c__DisplayClass99_0();
+		PhoneSystemChatPanel.<>c__DisplayClass102_0 CS$<>8__locals1 = new PhoneSystemChatPanel.<>c__DisplayClass102_0();
 		CS$<>8__locals1.<>4__this = this;
 		CS$<>8__locals1.chatItemIndex = chatItemIndex;
 		CS$<>8__locals1.selectedIndex = selectedIndex;
 		UiAsyncTask task = new UiAsyncTask("ChatPerformance", delegate()
 		{
-			PhoneSystemChatPanel.<>c__DisplayClass99_0.<<AddSelectOptionTask>b__0>d <<AddSelectOptionTask>b__0>d;
+			PhoneSystemChatPanel.<>c__DisplayClass102_0.<<AddSelectOptionTask>b__0>d <<AddSelectOptionTask>b__0>d;
 			<<AddSelectOptionTask>b__0>d.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<<AddSelectOptionTask>b__0>d.<>4__this = CS$<>8__locals1;
 			<<AddSelectOptionTask>b__0>d.<>1__state = -1;
-			<<AddSelectOptionTask>b__0>d.<>t__builder.Start<PhoneSystemChatPanel.<>c__DisplayClass99_0.<<AddSelectOptionTask>b__0>d>(ref <<AddSelectOptionTask>b__0>d);
+			<<AddSelectOptionTask>b__0>d.<>t__builder.Start<PhoneSystemChatPanel.<>c__DisplayClass102_0.<<AddSelectOptionTask>b__0>d>(ref <<AddSelectOptionTask>b__0>d);
 			return <<AddSelectOptionTask>b__0>d.<>t__builder.Task;
 		}, null);
 		base.RunAsyncTask(task);
 	}
 
-	// Token: 0x06013315 RID: 78613 RVA: 0x004C51E8 File Offset: 0x004C33E8
+	// Token: 0x060107EB RID: 67563 RVA: 0x004D3978 File Offset: 0x004D1B78
 	private UniTask SelectOptionAsync(int chatItemIndex, int selectedIndex)
 	{
-		PhoneSystemChatPanel.<SelectOptionAsync>d__100 <SelectOptionAsync>d__;
+		PhoneSystemChatPanel.<SelectOptionAsync>d__103 <SelectOptionAsync>d__;
 		<SelectOptionAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<SelectOptionAsync>d__.<>4__this = this;
 		<SelectOptionAsync>d__.chatItemIndex = chatItemIndex;
 		<SelectOptionAsync>d__.selectedIndex = selectedIndex;
 		<SelectOptionAsync>d__.<>1__state = -1;
-		<SelectOptionAsync>d__.<>t__builder.Start<PhoneSystemChatPanel.<SelectOptionAsync>d__100>(ref <SelectOptionAsync>d__);
+		<SelectOptionAsync>d__.<>t__builder.Start<PhoneSystemChatPanel.<SelectOptionAsync>d__103>(ref <SelectOptionAsync>d__);
 		return <SelectOptionAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013316 RID: 78614 RVA: 0x004C523C File Offset: 0x004C343C
+	// Token: 0x060107EC RID: 67564 RVA: 0x004D39CC File Offset: 0x004D1BCC
 	private void AddAnswerItemHideOptionTask(int chatItemIndex)
 	{
 		UiAsyncTask task = null;
@@ -1306,19 +1361,19 @@ public class PhoneSystemChatPanel : UiPanelBase
 		base.RunAsyncTask(task);
 	}
 
-	// Token: 0x06013317 RID: 78615 RVA: 0x004C529C File Offset: 0x004C349C
+	// Token: 0x060107ED RID: 67565 RVA: 0x004D3A2C File Offset: 0x004D1C2C
 	private UniTask AnswerItemHideOptionAsync(int chatItemIndex)
 	{
-		PhoneSystemChatPanel.<AnswerItemHideOptionAsync>d__102 <AnswerItemHideOptionAsync>d__;
+		PhoneSystemChatPanel.<AnswerItemHideOptionAsync>d__105 <AnswerItemHideOptionAsync>d__;
 		<AnswerItemHideOptionAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<AnswerItemHideOptionAsync>d__.<>4__this = this;
 		<AnswerItemHideOptionAsync>d__.chatItemIndex = chatItemIndex;
 		<AnswerItemHideOptionAsync>d__.<>1__state = -1;
-		<AnswerItemHideOptionAsync>d__.<>t__builder.Start<PhoneSystemChatPanel.<AnswerItemHideOptionAsync>d__102>(ref <AnswerItemHideOptionAsync>d__);
+		<AnswerItemHideOptionAsync>d__.<>t__builder.Start<PhoneSystemChatPanel.<AnswerItemHideOptionAsync>d__105>(ref <AnswerItemHideOptionAsync>d__);
 		return <AnswerItemHideOptionAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013318 RID: 78616 RVA: 0x004C52E8 File Offset: 0x004C34E8
+	// Token: 0x060107EE RID: 67566 RVA: 0x004D3A78 File Offset: 0x004D1C78
 	private void OnAnswerItemHideOptionCanceled(EUiAsyncTaskStatus status, int chatItemIndex)
 	{
 		if (status != EUiAsyncTaskStatus.Running)
@@ -1339,7 +1394,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		verticalLayout.SetHeightFitToChildren(true);
 	}
 
-	// Token: 0x06013319 RID: 78617 RVA: 0x004C5330 File Offset: 0x004C3530
+	// Token: 0x060107EF RID: 67567 RVA: 0x004D3AC0 File Offset: 0x004D1CC0
 	private void AddAnswerItemShowChatContentTask(int chatItemIndex)
 	{
 		UiAsyncTask task = null;
@@ -1353,19 +1408,19 @@ public class PhoneSystemChatPanel : UiPanelBase
 		base.RunAsyncTask(task);
 	}
 
-	// Token: 0x0601331A RID: 78618 RVA: 0x004C5390 File Offset: 0x004C3590
+	// Token: 0x060107F0 RID: 67568 RVA: 0x004D3B20 File Offset: 0x004D1D20
 	private UniTask AnswerItemShowChatContentAsync(int chatItemIndex)
 	{
-		PhoneSystemChatPanel.<AnswerItemShowChatContentAsync>d__105 <AnswerItemShowChatContentAsync>d__;
+		PhoneSystemChatPanel.<AnswerItemShowChatContentAsync>d__108 <AnswerItemShowChatContentAsync>d__;
 		<AnswerItemShowChatContentAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<AnswerItemShowChatContentAsync>d__.<>4__this = this;
 		<AnswerItemShowChatContentAsync>d__.chatItemIndex = chatItemIndex;
 		<AnswerItemShowChatContentAsync>d__.<>1__state = -1;
-		<AnswerItemShowChatContentAsync>d__.<>t__builder.Start<PhoneSystemChatPanel.<AnswerItemShowChatContentAsync>d__105>(ref <AnswerItemShowChatContentAsync>d__);
+		<AnswerItemShowChatContentAsync>d__.<>t__builder.Start<PhoneSystemChatPanel.<AnswerItemShowChatContentAsync>d__108>(ref <AnswerItemShowChatContentAsync>d__);
 		return <AnswerItemShowChatContentAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601331B RID: 78619 RVA: 0x004C53DC File Offset: 0x004C35DC
+	// Token: 0x060107F1 RID: 67569 RVA: 0x004D3B6C File Offset: 0x004D1D6C
 	private void OnAnswerItemShowChatContentCanceled(EUiAsyncTaskStatus status, int chatItemIndex)
 	{
 		if (status != EUiAsyncTaskStatus.Running)
@@ -1380,7 +1435,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		phoneMsgSelfChatItem.StopChatContentAnimation(true);
 	}
 
-	// Token: 0x0601331C RID: 78620 RVA: 0x004C540C File Offset: 0x004C360C
+	// Token: 0x060107F2 RID: 67570 RVA: 0x004D3B9C File Offset: 0x004D1D9C
 	private void AddAfterAnswerTask(int chatItemIndex)
 	{
 		UiAsyncTask task = null;
@@ -1394,7 +1449,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		base.RunAsyncTask(task);
 	}
 
-	// Token: 0x0601331D RID: 78621 RVA: 0x004C5469 File Offset: 0x004C3669
+	// Token: 0x060107F3 RID: 67571 RVA: 0x004D3BF9 File Offset: 0x004D1DF9
 	private UniTask AfterAnswerAsync(int chatItemIndex)
 	{
 		this.AddAnswerItemHideOptionTask(chatItemIndex);
@@ -1404,7 +1459,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		return UniTask.CompletedTask;
 	}
 
-	// Token: 0x0601331E RID: 78622 RVA: 0x004C548A File Offset: 0x004C368A
+	// Token: 0x060107F4 RID: 67572 RVA: 0x004D3C1A File Offset: 0x004D1E1A
 	private void OnAfterAnswerCanceled(EUiAsyncTaskStatus status, int chatItemIndex)
 	{
 		if (status != EUiAsyncTaskStatus.Running)
@@ -1414,36 +1469,36 @@ public class PhoneSystemChatPanel : UiPanelBase
 		base.CancelAllAsyncTask();
 	}
 
-	// Token: 0x0601331F RID: 78623 RVA: 0x004C5498 File Offset: 0x004C3698
+	// Token: 0x060107F5 RID: 67573 RVA: 0x004D3C28 File Offset: 0x004D1E28
 	private void AddReceiveRewardTask()
 	{
 		UiAsyncTask task = new UiAsyncTask("ChatPerformance", new Func<UniTask>(this.ReceiveRewardAsync), null);
 		base.RunAsyncTask(task);
 	}
 
-	// Token: 0x06013320 RID: 78624 RVA: 0x004C54C8 File Offset: 0x004C36C8
+	// Token: 0x060107F6 RID: 67574 RVA: 0x004D3C58 File Offset: 0x004D1E58
 	private UniTask ReceiveRewardAsync()
 	{
-		PhoneSystemChatPanel.<ReceiveRewardAsync>d__111 <ReceiveRewardAsync>d__;
+		PhoneSystemChatPanel.<ReceiveRewardAsync>d__114 <ReceiveRewardAsync>d__;
 		<ReceiveRewardAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<ReceiveRewardAsync>d__.<>4__this = this;
 		<ReceiveRewardAsync>d__.<>1__state = -1;
-		<ReceiveRewardAsync>d__.<>t__builder.Start<PhoneSystemChatPanel.<ReceiveRewardAsync>d__111>(ref <ReceiveRewardAsync>d__);
+		<ReceiveRewardAsync>d__.<>t__builder.Start<PhoneSystemChatPanel.<ReceiveRewardAsync>d__114>(ref <ReceiveRewardAsync>d__);
 		return <ReceiveRewardAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013321 RID: 78625 RVA: 0x004C550C File Offset: 0x004C370C
+	// Token: 0x060107F7 RID: 67575 RVA: 0x004D3C9C File Offset: 0x004D1E9C
 	private UniTask PlayScrollTweenAnimationAsync()
 	{
-		PhoneSystemChatPanel.<PlayScrollTweenAnimationAsync>d__112 <PlayScrollTweenAnimationAsync>d__;
+		PhoneSystemChatPanel.<PlayScrollTweenAnimationAsync>d__115 <PlayScrollTweenAnimationAsync>d__;
 		<PlayScrollTweenAnimationAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<PlayScrollTweenAnimationAsync>d__.<>4__this = this;
 		<PlayScrollTweenAnimationAsync>d__.<>1__state = -1;
-		<PlayScrollTweenAnimationAsync>d__.<>t__builder.Start<PhoneSystemChatPanel.<PlayScrollTweenAnimationAsync>d__112>(ref <PlayScrollTweenAnimationAsync>d__);
+		<PlayScrollTweenAnimationAsync>d__.<>t__builder.Start<PhoneSystemChatPanel.<PlayScrollTweenAnimationAsync>d__115>(ref <PlayScrollTweenAnimationAsync>d__);
 		return <PlayScrollTweenAnimationAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013322 RID: 78626 RVA: 0x004C5550 File Offset: 0x004C3750
+	// Token: 0x060107F8 RID: 67576 RVA: 0x004D3CE0 File Offset: 0x004D1EE0
 	private void SkipPlayScrollTweenAnimation()
 	{
 		this.StopScrollTweenAnimation();
@@ -1459,7 +1514,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		this.ScrollTweenHandle = null;
 	}
 
-	// Token: 0x06013323 RID: 78627 RVA: 0x004C55AB File Offset: 0x004C37AB
+	// Token: 0x060107F9 RID: 67577 RVA: 0x004D3D3B File Offset: 0x004D1F3B
 	private void StopScrollTweenAnimation()
 	{
 		this.NeedScrollTween = false;
@@ -1467,7 +1522,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		base.GetScrollViewWithScrollbar(4).StopMovement();
 	}
 
-	// Token: 0x06013324 RID: 78628 RVA: 0x004C55C7 File Offset: 0x004C37C7
+	// Token: 0x060107FA RID: 67578 RVA: 0x004D3D57 File Offset: 0x004D1F57
 	private void OnOptionItemClick(int chatItemIndex, int selectedIndex)
 	{
 		if (this.IsPlaying)
@@ -1483,7 +1538,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		this.AddAfterAnswerTask(chatItemIndex);
 	}
 
-	// Token: 0x06013325 RID: 78629 RVA: 0x004C55FC File Offset: 0x004C37FC
+	// Token: 0x060107FB RID: 67579 RVA: 0x004D3D8C File Offset: 0x004D1F8C
 	public void LogReport(int shortMessageId, int viewType)
 	{
 		PhoneMsgConfig instance = PhoneMsgConfig.Instance;
@@ -1509,7 +1564,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		LogReportController.Instance.LogReport(onSelectShortMessageLogEvent);
 	}
 
-	// Token: 0x06013326 RID: 78630 RVA: 0x004C56BC File Offset: 0x004C38BC
+	// Token: 0x060107FC RID: 67580 RVA: 0x004D3E4C File Offset: 0x004D204C
 	private void OnChatItemClick(int chatItemIndex)
 	{
 		PhoneMsgChatData phoneMsgChatData = this.DisplayData.ChatDataList[chatItemIndex];
@@ -1523,13 +1578,13 @@ public class PhoneSystemChatPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06013327 RID: 78631 RVA: 0x004C56F0 File Offset: 0x004C38F0
+	// Token: 0x060107FD RID: 67581 RVA: 0x004D3E80 File Offset: 0x004D2080
 	private void SetPlayerState(EFavorPlayerStatus playerStatus)
 	{
 		this.CurPlayerStatus = playerStatus;
 	}
 
-	// Token: 0x06013328 RID: 78632 RVA: 0x004C56FC File Offset: 0x004C38FC
+	// Token: 0x060107FE RID: 67582 RVA: 0x004D3E8C File Offset: 0x004D208C
 	private void PlayVoice(int index)
 	{
 		if (!this.IsPlaying)
@@ -1553,7 +1608,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		this.CurPlayingVoiceItemIndex = index;
 	}
 
-	// Token: 0x06013329 RID: 78633 RVA: 0x004C576F File Offset: 0x004C396F
+	// Token: 0x060107FF RID: 67583 RVA: 0x004D3EFF File Offset: 0x004D20FF
 	private void StopVoice()
 	{
 		PhoneMsgAudioComponent voiceAudioComp = this.VoiceAudioComp;
@@ -1564,7 +1619,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		this.ResetVoicePlaying();
 	}
 
-	// Token: 0x0601332A RID: 78634 RVA: 0x004C5788 File Offset: 0x004C3988
+	// Token: 0x06010800 RID: 67584 RVA: 0x004D3F18 File Offset: 0x004D2118
 	private EFavorPlayerStatus PlayOrStopVoiceByIndex(int index)
 	{
 		if (this.CurPlayerStatus == EFavorPlayerStatus.Play && this.CurPlayingVoiceItemIndex == index)
@@ -1574,13 +1629,13 @@ public class PhoneSystemChatPanel : UiPanelBase
 		return EFavorPlayerStatus.Play;
 	}
 
-	// Token: 0x0601332B RID: 78635 RVA: 0x004C579E File Offset: 0x004C399E
+	// Token: 0x06010801 RID: 67585 RVA: 0x004D3F2E File Offset: 0x004D212E
 	private void OnVoiceAudioStart()
 	{
 		this.SetPlayerState(EFavorPlayerStatus.Play);
 	}
 
-	// Token: 0x0601332C RID: 78636 RVA: 0x004C57A7 File Offset: 0x004C39A7
+	// Token: 0x06010802 RID: 67586 RVA: 0x004D3F37 File Offset: 0x004D2137
 	private void OnVoiceAudioEnd()
 	{
 		if (!this.TryJumpToNextUnPlayedVoiceItem())
@@ -1589,13 +1644,13 @@ public class PhoneSystemChatPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0601332D RID: 78637 RVA: 0x004C57B7 File Offset: 0x004C39B7
+	// Token: 0x06010803 RID: 67587 RVA: 0x004D3F47 File Offset: 0x004D2147
 	private void OnVoiceAudioLoadTimeout()
 	{
 		this.ResetVoicePlaying();
 	}
 
-	// Token: 0x0601332E RID: 78638 RVA: 0x004C57C0 File Offset: 0x004C39C0
+	// Token: 0x06010804 RID: 67588 RVA: 0x004D3F50 File Offset: 0x004D2150
 	private void OnVoiceChatItemClick(int itemIndex)
 	{
 		if (this.VoiceAudioComp == null)
@@ -1652,7 +1707,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		this.StopVoice();
 	}
 
-	// Token: 0x0601332F RID: 78639 RVA: 0x004C58C0 File Offset: 0x004C3AC0
+	// Token: 0x06010805 RID: 67589 RVA: 0x004D4050 File Offset: 0x004D2250
 	private bool TryJumpToNextUnPlayedVoiceItem()
 	{
 		if (!this.IsNeedJump)
@@ -1676,7 +1731,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		return false;
 	}
 
-	// Token: 0x06013330 RID: 78640 RVA: 0x004C5944 File Offset: 0x004C3B44
+	// Token: 0x06010806 RID: 67590 RVA: 0x004D40D4 File Offset: 0x004D22D4
 	private void OnScrollViewPointerUp(ULGUIPointerEventData eventData)
 	{
 		if (eventData == null || eventData.dragComponent != null)
@@ -1697,7 +1752,7 @@ public class PhoneSystemChatPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06013331 RID: 78641 RVA: 0x004C5978 File Offset: 0x004C3B78
+	// Token: 0x06010807 RID: 67591 RVA: 0x004D4108 File Offset: 0x004D2308
 	private void ResetVoicePlaying()
 	{
 		this.SetPlayerState(EFavorPlayerStatus.Stop);
@@ -1710,83 +1765,83 @@ public class PhoneSystemChatPanel : UiPanelBase
 		this.CurPlayingChatItemProxy = null;
 	}
 
-	// Token: 0x040090ED RID: 37101
+	// Token: 0x04009247 RID: 37447
 	private ShortMessageDisplayData DisplayData;
 
-	// Token: 0x040090EE RID: 37102
+	// Token: 0x04009248 RID: 37448
 	[Nullable(1)]
 	private readonly List<IMultiTemplateGridData> DisplayedChatScrollViewDataList = new List<IMultiTemplateGridData>();
 
-	// Token: 0x040090EF RID: 37103
+	// Token: 0x04009249 RID: 37449
 	private Ticker Ticker;
 
-	// Token: 0x040090F0 RID: 37104
+	// Token: 0x0400924A RID: 37450
 	private bool NeedScrollOnNextTick;
 
-	// Token: 0x040090F1 RID: 37105
+	// Token: 0x0400924B RID: 37451
 	private bool ReadyToScroll;
 
-	// Token: 0x040090F2 RID: 37106
+	// Token: 0x0400924C RID: 37452
 	private bool NeedScrollTween;
 
-	// Token: 0x040090F3 RID: 37107
+	// Token: 0x0400924D RID: 37453
 	private bool NeedCheckAdapt;
 
-	// Token: 0x040090F4 RID: 37108
+	// Token: 0x0400924E RID: 37454
 	private bool NeedScrollToEndOnLateTick;
 
-	// Token: 0x040090F5 RID: 37109
+	// Token: 0x0400924F RID: 37455
 	private int NeedScrollToIndex = -1;
 
-	// Token: 0x040090F6 RID: 37110
+	// Token: 0x04009250 RID: 37456
 	private bool IsPlaying;
 
-	// Token: 0x040090F7 RID: 37111
+	// Token: 0x04009251 RID: 37457
 	private bool IsBigView;
 
-	// Token: 0x040090F8 RID: 37112
+	// Token: 0x04009252 RID: 37458
 	private bool IsInInputtingAnimation;
 
-	// Token: 0x040090F9 RID: 37113
+	// Token: 0x04009253 RID: 37459
 	private int InputtingAnimationChatIndex = -1;
 
-	// Token: 0x040090FA RID: 37114
+	// Token: 0x04009254 RID: 37460
 	private TimerHandle ScrollTweenHandle;
 
-	// Token: 0x040090FB RID: 37115
+	// Token: 0x04009255 RID: 37461
 	private CustomPromise<bool> ScrollTweenCustomPromise;
 
-	// Token: 0x040090FC RID: 37116
+	// Token: 0x04009256 RID: 37462
 	private EFavorPlayerStatus CurPlayerStatus = EFavorPlayerStatus.Stop;
 
-	// Token: 0x040090FD RID: 37117
+	// Token: 0x04009257 RID: 37463
 	private PhoneMsgAudioComponent VoiceAudioComp;
 
-	// Token: 0x040090FE RID: 37118
+	// Token: 0x04009258 RID: 37464
 	private UUIScrollViewWithScrollbarComponent ScrollComponent;
 
-	// Token: 0x040090FF RID: 37119
+	// Token: 0x04009259 RID: 37465
 	private int CurPlayingVoiceItemIndex = -1;
 
-	// Token: 0x04009100 RID: 37120
+	// Token: 0x0400925A RID: 37466
 	private bool IsNeedJump;
 
-	// Token: 0x04009101 RID: 37121
+	// Token: 0x0400925B RID: 37467
 	private IPhoneMsgChatItem CurPlayingChatItemProxy;
 
-	// Token: 0x04009102 RID: 37122
+	// Token: 0x0400925C RID: 37468
 	private UiPanelBase title2pre;
 
-	// Token: 0x04009103 RID: 37123
+	// Token: 0x0400925D RID: 37469
 	private string title2prepath = "";
 
-	// Token: 0x04009104 RID: 37124
+	// Token: 0x0400925E RID: 37470
 	private LevelSequencePlayer title2SeqPlayer;
 
-	// Token: 0x04009105 RID: 37125
+	// Token: 0x0400925F RID: 37471
 	private MultiTemplateComponent ChatMultiTemplateComponent;
 
-	// Token: 0x04009106 RID: 37126
+	// Token: 0x04009260 RID: 37472
 	[Nullable(new byte[]
 	{
 		2,
@@ -1794,56 +1849,56 @@ public class PhoneSystemChatPanel : UiPanelBase
 	})]
 	public Action<string> OnAfterOneMsgShow;
 
-	// Token: 0x04009107 RID: 37127
+	// Token: 0x04009261 RID: 37473
 	public Action<int> OnMsgReadFinished;
 
-	// Token: 0x02008AD7 RID: 35543
+	// Token: 0x02007C60 RID: 31840
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402D14E RID: 184654
+		// Token: 0x0402846E RID: 164974
 		NameText,
-		// Token: 0x0402D14F RID: 184655
+		// Token: 0x0402846F RID: 164975
 		DescriptionText,
-		// Token: 0x0402D150 RID: 184656
+		// Token: 0x04028470 RID: 164976
 		GroupPanel,
-		// Token: 0x0402D151 RID: 184657
+		// Token: 0x04028471 RID: 164977
 		GroupNumberText,
-		// Token: 0x0402D152 RID: 184658
+		// Token: 0x04028472 RID: 164978
 		ChatScrollView,
-		// Token: 0x0402D153 RID: 184659
+		// Token: 0x04028473 RID: 164979
 		ChatContent,
-		// Token: 0x0402D154 RID: 184660
+		// Token: 0x04028474 RID: 164980
 		ChatBackgroundTexture,
-		// Token: 0x0402D155 RID: 184661
+		// Token: 0x04028475 RID: 164981
 		ChatLeftTemplateItem,
-		// Token: 0x0402D156 RID: 184662
+		// Token: 0x04028476 RID: 164982
 		ChatRightTemplateItem,
-		// Token: 0x0402D157 RID: 184663
+		// Token: 0x04028477 RID: 164983
 		ChatTipsTemplateItem,
-		// Token: 0x0402D158 RID: 184664
+		// Token: 0x04028478 RID: 164984
 		ChatTaskTemplateItem,
-		// Token: 0x0402D159 RID: 184665
+		// Token: 0x04028479 RID: 164985
 		ChatBirthdayTemplateItem,
-		// Token: 0x0402D15A RID: 184666
+		// Token: 0x0402847A RID: 164986
 		ChatRewardTemplateItem,
-		// Token: 0x0402D15B RID: 184667
+		// Token: 0x0402847B RID: 164987
 		ChatEndLineTemplateItem,
-		// Token: 0x0402D15C RID: 184668
+		// Token: 0x0402847C RID: 164988
 		BtnMask,
-		// Token: 0x0402D15D RID: 184669
+		// Token: 0x0402847D RID: 164989
 		TexChatBgDefault,
-		// Token: 0x0402D15E RID: 184670
+		// Token: 0x0402847E RID: 164990
 		NaviBtnBlank,
-		// Token: 0x0402D15F RID: 184671
+		// Token: 0x0402847F RID: 164991
 		TexModelT,
-		// Token: 0x0402D160 RID: 184672
+		// Token: 0x04028480 RID: 164992
 		SprTxtNameBg,
-		// Token: 0x0402D161 RID: 184673
+		// Token: 0x04028481 RID: 164993
 		SprTxtDescri,
-		// Token: 0x0402D162 RID: 184674
+		// Token: 0x04028482 RID: 164994
 		SprBg,
-		// Token: 0x0402D163 RID: 184675
+		// Token: 0x04028483 RID: 164995
 		PnlContentSkinT
 	}
 }

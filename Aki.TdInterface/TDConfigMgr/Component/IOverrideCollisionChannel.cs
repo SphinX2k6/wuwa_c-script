@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005B6 RID: 1462
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000621 RID: 1569
 	public class IOverrideCollisionChannel
 	{
-		// Token: 0x06001EDC RID: 7900 RVA: 0x00057068 File Offset: 0x00055268
+		// Token: 0x060020EC RID: 8428 RVA: 0x0005C094 File Offset: 0x0005A294
 		private IOverrideCollisionChannel_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001EDD RID: 7901 RVA: 0x000570A0 File Offset: 0x000552A0
+		// Token: 0x060020ED RID: 8429 RVA: 0x0005C0CC File Offset: 0x0005A2CC
 		public static IOverrideCollisionChannel Create([Nullable(2)] IOverrideCollisionChannel instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001EDE RID: 7902 RVA: 0x000570B3 File Offset: 0x000552B3
+		// Token: 0x060020EE RID: 8430 RVA: 0x0005C0DF File Offset: 0x0005A2DF
 		public static IOverrideCollisionChannel CreateFromSetValue([Nullable(2)] IOverrideCollisionChannel_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001EDF RID: 7903 RVA: 0x000570C6 File Offset: 0x000552C6
+		// Token: 0x060020EF RID: 8431 RVA: 0x0005C0F2 File Offset: 0x0005A2F2
 		public IOverrideCollisionChannel_SetValue ToSetValue()
 		{
 			return new IOverrideCollisionChannel_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700083C RID: 2108
-		// (get) Token: 0x06001EE0 RID: 7904 RVA: 0x000570E8 File Offset: 0x000552E8
-		// (set) Token: 0x06001EE1 RID: 7905 RVA: 0x00057122 File Offset: 0x00055322
+		// Token: 0x170008C3 RID: 2243
+		// (get) Token: 0x060020F0 RID: 8432 RVA: 0x0005C114 File Offset: 0x0005A314
+		// (set) Token: 0x060020F1 RID: 8433 RVA: 0x0005C14E File Offset: 0x0005A34E
 		public virtual ECollisionChannelPreset? CollisionChannelPreset
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700083D RID: 2109
-		// (get) Token: 0x06001EE2 RID: 7906 RVA: 0x00057130 File Offset: 0x00055330
-		// (set) Token: 0x06001EE3 RID: 7907 RVA: 0x0005716A File Offset: 0x0005536A
+		// Token: 0x170008C4 RID: 2244
+		// (get) Token: 0x060020F2 RID: 8434 RVA: 0x0005C15C File Offset: 0x0005A35C
+		// (set) Token: 0x060020F3 RID: 8435 RVA: 0x0005C196 File Offset: 0x0005A396
 		public virtual float? BlurResponseRadius
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040015E8 RID: 5608
+		// Token: 0x0400175C RID: 5980
 		[Nullable(2)]
 		protected IOverrideCollisionChannel FbInstance;
 
-		// Token: 0x040015E9 RID: 5609
+		// Token: 0x0400175D RID: 5981
 		[Nullable(2)]
 		protected IOverrideCollisionChannel_SetValue PocoInterface;
 	}

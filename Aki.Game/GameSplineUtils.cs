@@ -10,12 +10,12 @@ using CSharpScript.Core;
 using CSharpScript.Game.Effect;
 using UnrealEngine;
 
-// Token: 0x02000ED9 RID: 3801
+// Token: 0x0200038E RID: 910
 [NullableContext(1)]
 [Nullable(0)]
 public class GameSplineUtils
 {
-	// Token: 0x06005ED1 RID: 24273 RVA: 0x0011A098 File Offset: 0x00118298
+	// Token: 0x06003268 RID: 12904 RVA: 0x00121D84 File Offset: 0x0011FF84
 	[return: Nullable(2)]
 	public static USplineComponent InitGameSpline(AActor inSplineAsset, BaseActorComponent inActorComp)
 	{
@@ -69,7 +69,7 @@ public class GameSplineUtils
 		return usplineComponent;
 	}
 
-	// Token: 0x06005ED2 RID: 24274 RVA: 0x0011A1A4 File Offset: 0x001183A4
+	// Token: 0x06003269 RID: 12905 RVA: 0x00121E90 File Offset: 0x00120090
 	[return: Nullable(2)]
 	public static USplineComponent InitGameSplineBySplineEntity(int pbDataId, TsGameSplineActor inSplineActor)
 	{
@@ -192,7 +192,7 @@ public class GameSplineUtils
 		return usplineComponent;
 	}
 
-	// Token: 0x06005ED3 RID: 24275 RVA: 0x0011A460 File Offset: 0x00118660
+	// Token: 0x0600326A RID: 12906 RVA: 0x0012214C File Offset: 0x0012034C
 	public static TArray<FSplinePoint> CreateCommonPoints(IReadOnlyList<IBaseSplinePointType> points)
 	{
 		TArray<FSplinePoint> tarray = new TArray<FSplinePoint>();
@@ -242,14 +242,23 @@ public class GameSplineUtils
 			}
 			for (int i = 0; i < points.Count; i++)
 			{
-				FSplinePoint value = new FSplinePoint((float)i, list[i].ToUeVectorOld(), list3[i].ToUeVectorOld(), list4[i].ToUeVectorOld(), list2[i].ToUeRotator(), Vector.OneVector, list5[i]);
+				FSplinePoint value = new FSplinePoint
+				{
+					InputKey = (float)i,
+					Position = list[i].ToUeVectorOld(),
+					ArriveTangent = list3[i].ToUeVectorOld(),
+					LeaveTangent = list4[i].ToUeVectorOld(),
+					Rotation = list2[i].ToUeRotator(),
+					Scale = Vector.OneVector,
+					Type = list5[i]
+				};
 				tarray.Add(value);
 			}
 		}
 		return tarray;
 	}
 
-	// Token: 0x06005ED4 RID: 24276 RVA: 0x0011A714 File Offset: 0x00118914
+	// Token: 0x0600326B RID: 12907 RVA: 0x00122430 File Offset: 0x00120630
 	[return: Nullable(2)]
 	public static IGuideEffectSpline GenerateGuideEffect(Vector position, TArray<FVectorDouble> splinePoints, string effectPath)
 	{
@@ -277,7 +286,7 @@ public class GameSplineUtils
 		};
 	}
 
-	// Token: 0x06005ED5 RID: 24277 RVA: 0x0011A7F8 File Offset: 0x001189F8
+	// Token: 0x0600326C RID: 12908 RVA: 0x00122514 File Offset: 0x00120714
 	[return: Nullable(2)]
 	public static IGuideEffectSpline GenerateGuideEffectWithSplineData(FTransformDouble transform, IReadOnlyList<IBaseSplinePointType> points, string effectPath)
 	{
@@ -310,7 +319,7 @@ public class GameSplineUtils
 		};
 	}
 
-	// Token: 0x06005ED6 RID: 24278 RVA: 0x0011A8D8 File Offset: 0x00118AD8
+	// Token: 0x0600326D RID: 12909 RVA: 0x001225F4 File Offset: 0x001207F4
 	[NullableContext(2)]
 	public static AActor SpawnSplineHostActor(FVectorDouble location, string debugLabel = null)
 	{
@@ -330,7 +339,7 @@ public class GameSplineUtils
 		return aactor;
 	}
 
-	// Token: 0x06005ED7 RID: 24279 RVA: 0x0011A97C File Offset: 0x00118B7C
+	// Token: 0x0600326E RID: 12910 RVA: 0x00122698 File Offset: 0x00120898
 	[return: Nullable(2)]
 	public static USplineComponent AddSplineComponent(AActor actor, IReadOnlyList<Vector> points)
 	{
@@ -349,7 +358,16 @@ public class GameSplineUtils
 		{
 			Vector vector = points[i];
 			FVector position = new FVector((float)(vector.X - fvectorDouble.X), (float)(vector.Y - fvectorDouble.Y), (float)(vector.Z - fvectorDouble.Z));
-			FSplinePoint value = new FSplinePoint((float)i, position, Vector.ZeroVector, Vector.ZeroVector, Rotator.ZeroRotator, Vector.OneVector, ESplinePointType.Linear);
+			FSplinePoint value = new FSplinePoint
+			{
+				InputKey = (float)i,
+				Position = position,
+				ArriveTangent = Vector.ZeroVector,
+				LeaveTangent = Vector.ZeroVector,
+				Rotation = Rotator.ZeroRotator,
+				Scale = Vector.OneVector,
+				Type = ESplinePointType.Linear
+			};
 			tarray.Add(value);
 		}
 		usplineComponent.AddPoints(tarray, true);
@@ -357,7 +375,7 @@ public class GameSplineUtils
 		return usplineComponent;
 	}
 
-	// Token: 0x06005ED8 RID: 24280 RVA: 0x0011AA6C File Offset: 0x00118C6C
+	// Token: 0x0600326F RID: 12911 RVA: 0x001227B8 File Offset: 0x001209B8
 	public static int SpawnEffectAttachedToActor(AActor actor, FVectorDouble location, string effectPath, string reason, int? entityId = null)
 	{
 		if (string.IsNullOrEmpty(effectPath))
@@ -378,7 +396,7 @@ public class GameSplineUtils
 		return num;
 	}
 
-	// Token: 0x06005ED9 RID: 24281 RVA: 0x0011AAE0 File Offset: 0x00118CE0
+	// Token: 0x06003270 RID: 12912 RVA: 0x0012282C File Offset: 0x00120A2C
 	public static void DebugDrawSplines(IReadOnlyList<USplineComponent> splineComponents, string debugKey)
 	{
 		SundryModel instance = SundryModel.Instance;
@@ -439,19 +457,19 @@ public class GameSplineUtils
 		}
 	}
 
-	// Token: 0x04002B0E RID: 11022
+	// Token: 0x04002BA9 RID: 11177
 	private const int DEBUG_DRAW_SPLINE_SAMPLE_STEP = 50;
 
-	// Token: 0x04002B0F RID: 11023
+	// Token: 0x04002BAA RID: 11178
 	private const int DEBUG_DRAW_SPLINE_LINE_THICKNESS = 2;
 
-	// Token: 0x04002B10 RID: 11024
+	// Token: 0x04002BAB RID: 11179
 	private const int DEBUG_DRAW_SPLINE_KEY_POINT_SIZE = 20;
 
-	// Token: 0x04002B11 RID: 11025
+	// Token: 0x04002BAC RID: 11180
 	private const float DEBUG_DRAW_SPLINE_PERSISTENT_DURATION = 100000000f;
 
-	// Token: 0x04002B12 RID: 11026
+	// Token: 0x04002BAD RID: 11181
 	[StaticVariableRuleIgnore]
 	private static readonly FLinearColor[] splineDebugColors = new FLinearColor[]
 	{

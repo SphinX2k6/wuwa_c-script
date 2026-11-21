@@ -9,10 +9,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001EAB RID: 7851
+// Token: 0x0200136D RID: 4973
 public class HonamiStoryItemTipsComponent : UiPanelBase, IItemTipsUiProxy
 {
-	// Token: 0x0600F160 RID: 61792 RVA: 0x003A09E4 File Offset: 0x0039EBE4
+	// Token: 0x0600C57F RID: 50559 RVA: 0x003AC4EC File Offset: 0x003AA6EC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -46,7 +46,7 @@ public class HonamiStoryItemTipsComponent : UiPanelBase, IItemTipsUiProxy
 		};
 	}
 
-	// Token: 0x0600F161 RID: 61793 RVA: 0x003A0C4C File Offset: 0x0039EE4C
+	// Token: 0x0600C580 RID: 50560 RVA: 0x003AC754 File Offset: 0x003AA954
 	protected override void OnStart()
 	{
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
@@ -73,13 +73,13 @@ public class HonamiStoryItemTipsComponent : UiPanelBase, IItemTipsUiProxy
 		base.GetRootItem().SetAnchorOffset(new FVector2D(0f, 0f));
 	}
 
-	// Token: 0x0600F162 RID: 61794 RVA: 0x003A0D78 File Offset: 0x0039EF78
+	// Token: 0x0600C581 RID: 50561 RVA: 0x003AC880 File Offset: 0x003AAA80
 	protected override void OnBeforeShow()
 	{
 		this.PlayStartSequence();
 	}
 
-	// Token: 0x0600F163 RID: 61795 RVA: 0x003A0D80 File Offset: 0x0039EF80
+	// Token: 0x0600C582 RID: 50562 RVA: 0x003AC888 File Offset: 0x003AAA88
 	private void PlayStartSequence()
 	{
 		LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -90,7 +90,7 @@ public class HonamiStoryItemTipsComponent : UiPanelBase, IItemTipsUiProxy
 		levelSequencePlayer.PlaySequencePurely("Start", false, false, null, null, false);
 	}
 
-	// Token: 0x0600F164 RID: 61796 RVA: 0x003A0DB0 File Offset: 0x0039EFB0
+	// Token: 0x0600C583 RID: 50563 RVA: 0x003AC8B8 File Offset: 0x003AAAB8
 	public UniTask PlayCloseSequence()
 	{
 		HonamiStoryItemTipsComponent.<PlayCloseSequence>d__8 <PlayCloseSequence>d__;
@@ -101,7 +101,7 @@ public class HonamiStoryItemTipsComponent : UiPanelBase, IItemTipsUiProxy
 		return <PlayCloseSequence>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F165 RID: 61797 RVA: 0x003A0DF4 File Offset: 0x0039EFF4
+	// Token: 0x0600C584 RID: 50564 RVA: 0x003AC8FC File Offset: 0x003AAAFC
 	[NullableContext(1)]
 	public void Refresh(ItemTipsData dataFrom)
 	{
@@ -156,25 +156,25 @@ public class HonamiStoryItemTipsComponent : UiPanelBase, IItemTipsUiProxy
 		}
 	}
 
-	// Token: 0x0600F166 RID: 61798 RVA: 0x003A1069 File Offset: 0x0039F269
+	// Token: 0x0600C585 RID: 50565 RVA: 0x003ACB71 File Offset: 0x003AAD71
 	[NullableContext(1)]
 	private HonamiStoryTipsPropertyItem CreateProp()
 	{
 		return new HonamiStoryTipsPropertyItem();
 	}
 
-	// Token: 0x0600F167 RID: 61799 RVA: 0x003A1070 File Offset: 0x0039F270
+	// Token: 0x0600C586 RID: 50566 RVA: 0x003ACB78 File Offset: 0x003AAD78
 	[NullableContext(1)]
 	private HonamiStoryTipsTextItem CreateSkill()
 	{
 		return new HonamiStoryTipsTextItem();
 	}
 
-	// Token: 0x04006FA9 RID: 28585
+	// Token: 0x0400708A RID: 28810
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x04006FAA RID: 28586
+	// Token: 0x0400708B RID: 28811
 	[Nullable(new byte[]
 	{
 		2,
@@ -183,7 +183,7 @@ public class HonamiStoryItemTipsComponent : UiPanelBase, IItemTipsUiProxy
 	})]
 	private GenericLayout<HonamiStoryTipsPropertyItem, IHonamiStoryTipsPropertyData> PropertyLayout;
 
-	// Token: 0x04006FAB RID: 28587
+	// Token: 0x0400708C RID: 28812
 	[Nullable(new byte[]
 	{
 		2,
@@ -192,60 +192,60 @@ public class HonamiStoryItemTipsComponent : UiPanelBase, IItemTipsUiProxy
 	})]
 	private GenericLayout<HonamiStoryTipsTextItem, IHonamiStoryTipsBuffInfo> SkillLayout;
 
-	// Token: 0x0200847E RID: 33918
+	// Token: 0x02007603 RID: 30211
 	private enum EDefine
 	{
-		// Token: 0x0402B1F4 RID: 176628
+		// Token: 0x04026518 RID: 156952
 		TxtName,
-		// Token: 0x0402B1F5 RID: 176629
+		// Token: 0x04026519 RID: 156953
 		SpriteTitleBg,
-		// Token: 0x0402B1F6 RID: 176630
+		// Token: 0x0402651A RID: 156954
 		SpriteTypeIcon,
-		// Token: 0x0402B1F7 RID: 176631
+		// Token: 0x0402651B RID: 156955
 		TxtType,
-		// Token: 0x0402B1F8 RID: 176632
+		// Token: 0x0402651C RID: 156956
 		TexCost,
-		// Token: 0x0402B1F9 RID: 176633
+		// Token: 0x0402651D RID: 156957
 		TxtLevel,
-		// Token: 0x0402B1FA RID: 176634
+		// Token: 0x0402651E RID: 156958
 		TogLock,
-		// Token: 0x0402B1FB RID: 176635
+		// Token: 0x0402651F RID: 156959
 		PanelTipsTime,
-		// Token: 0x0402B1FC RID: 176636
+		// Token: 0x04026520 RID: 156960
 		TxtTime,
-		// Token: 0x0402B1FD RID: 176637
+		// Token: 0x04026521 RID: 156961
 		PanelTipsProperty,
-		// Token: 0x0402B1FE RID: 176638
+		// Token: 0x04026522 RID: 156962
 		PanelList,
-		// Token: 0x0402B1FF RID: 176639
+		// Token: 0x04026523 RID: 156963
 		PanelSkill,
-		// Token: 0x0402B200 RID: 176640
+		// Token: 0x04026524 RID: 156964
 		MainDescItem,
-		// Token: 0x0402B201 RID: 176641
+		// Token: 0x04026525 RID: 156965
 		TxtDesc,
-		// Token: 0x0402B202 RID: 176642
+		// Token: 0x04026526 RID: 156966
 		BtnConfirmA,
-		// Token: 0x0402B203 RID: 176643
+		// Token: 0x04026527 RID: 156967
 		BtnConfirmB,
-		// Token: 0x0402B204 RID: 176644
+		// Token: 0x04026528 RID: 156968
 		PanelBtnR,
-		// Token: 0x0402B205 RID: 176645
+		// Token: 0x04026529 RID: 156969
 		BtnRA,
-		// Token: 0x0402B206 RID: 176646
+		// Token: 0x0402652A RID: 156970
 		BtnRB,
-		// Token: 0x0402B207 RID: 176647
+		// Token: 0x0402652B RID: 156971
 		PanelBtnL,
-		// Token: 0x0402B208 RID: 176648
+		// Token: 0x0402652C RID: 156972
 		BtnLA,
-		// Token: 0x0402B209 RID: 176649
+		// Token: 0x0402652D RID: 156973
 		BtnLB,
-		// Token: 0x0402B20A RID: 176650
+		// Token: 0x0402652E RID: 156974
 		TexItemIcon,
-		// Token: 0x0402B20B RID: 176651
+		// Token: 0x0402652F RID: 156975
 		PanelBottom,
-		// Token: 0x0402B20C RID: 176652
+		// Token: 0x04026530 RID: 156976
 		PanelDoubleClicked,
-		// Token: 0x0402B20D RID: 176653
+		// Token: 0x04026531 RID: 156977
 		TxtDoubleClicked
 	}
 }

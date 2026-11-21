@@ -7,17 +7,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.Update
 {
-	// Token: 0x02000085 RID: 133
+	// Token: 0x02000088 RID: 136
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AppUtil
 	{
-		// Token: 0x060004BC RID: 1212 RVA: 0x0002E22B File Offset: 0x0002C42B
+		// Token: 0x060004D3 RID: 1235 RVA: 0x0002F793 File Offset: 0x0002D993
 		public static void SetWorldContext(UObject worldContext)
 		{
 		}
 
-		// Token: 0x060004BD RID: 1213 RVA: 0x0002E230 File Offset: 0x0002C430
+		// Token: 0x060004D4 RID: 1236 RVA: 0x0002F798 File Offset: 0x0002D998
 		public static void QuitGame(string reason = "")
 		{
 			if (Platform.Instance.IsPs5Platform())
@@ -33,7 +33,7 @@ namespace CSharpScript.Launcher.Update
 			KuroApplication.ExitWithReason(false, reason);
 		}
 
-		// Token: 0x060004BE RID: 1214 RVA: 0x0002E280 File Offset: 0x0002C480
+		// Token: 0x060004D5 RID: 1237 RVA: 0x0002F7E8 File Offset: 0x0002D9E8
 		public unsafe static void QuitGameOnPatchSuccess(string reason = "", bool hasUpdate = true)
 		{
 			if (!Platform.Instance.IsCloudGameRunningHotPatch())
@@ -51,7 +51,7 @@ namespace CSharpScript.Launcher.Update
 			KuroApplication.ExitWithCode(false, reason, num);
 		}
 
-		// Token: 0x060004BF RID: 1215 RVA: 0x0002E31C File Offset: 0x0002C51C
+		// Token: 0x060004D6 RID: 1238 RVA: 0x0002F884 File Offset: 0x0002DA84
 		public unsafe static ENetworkType GetNetworkConnectionType()
 		{
 			string text = KuroApplication.IniPlatformName();
@@ -68,19 +68,19 @@ namespace CSharpScript.Launcher.Update
 			return (ENetworkType)UKuroLauncherLibrary.GetNetworkConnectionType();
 		}
 
-		// Token: 0x060004C0 RID: 1216 RVA: 0x0002E3B1 File Offset: 0x0002C5B1
+		// Token: 0x060004D7 RID: 1239 RVA: 0x0002F919 File Offset: 0x0002DB19
 		public static bool IsPioneerApp()
 		{
 			return BaseConfigController.Instance.GetPublicValue("AppTag") == "Pioneer";
 		}
 
-		// Token: 0x060004C1 RID: 1217 RVA: 0x0002E3CC File Offset: 0x0002C5CC
+		// Token: 0x060004D8 RID: 1240 RVA: 0x0002F934 File Offset: 0x0002DB34
 		public static string GetAppVersion()
 		{
 			return UKuroLauncherLibrary.GetAppVersion();
 		}
 
-		// Token: 0x040002D0 RID: 720
+		// Token: 0x040002FE RID: 766
 		private const string PIONEER_APP_TAG = "Pioneer";
 	}
 }

@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02001875 RID: 6261
+// Token: 0x02000D2E RID: 3374
 public enum ECalabashCollectWayType
 {
-	// Token: 0x040052E5 RID: 21221
+	// Token: 0x04005390 RID: 21392
 	Quality = 1,
-	// Token: 0x040052E6 RID: 21222
+	// Token: 0x04005391 RID: 21393
 	SortId,
-	// Token: 0x040052E7 RID: 21223
+	// Token: 0x04005392 RID: 21394
 	MonsterId,
-	// Token: 0x040052E8 RID: 21224
+	// Token: 0x04005393 RID: 21395
 	Experience,
-	// Token: 0x040052E9 RID: 21225
+	// Token: 0x04005394 RID: 21396
 	Skin
 }

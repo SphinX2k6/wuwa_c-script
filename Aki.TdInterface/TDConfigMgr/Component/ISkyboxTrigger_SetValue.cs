@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006D7 RID: 1751
+	// Token: 0x02000778 RID: 1912
 	public class ISkyboxTrigger_SetValue
 	{
-		// Token: 0x040019AB RID: 6571
+		// Token: 0x04001BAA RID: 7082
 		public ETriggerMode Type;
 	}
 }

@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001BDB RID: 7131
+	// Token: 0x020004EC RID: 1260
 	public sealed class FKuroUiSceneVisibleCompleteDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601B5FE RID: 112126 RVA: 0x00285662 File Offset: 0x00283862
+		// Token: 0x060076DB RID: 30427 RVA: 0x000ADA52 File Offset: 0x000ABC52
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FKuroUiSceneVisibleCompleteDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601B5FF RID: 112127 RVA: 0x0028566E File Offset: 0x0028386E
+		// Token: 0x060076DC RID: 30428 RVA: 0x000ADA5E File Offset: 0x000ABC5E
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FKuroUiSceneVisibleCompleteDelegate._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FKuroUiSceneVisibleCompleteDelegate._FunctionPtr;
 		}
 
-		// Token: 0x0601B600 RID: 112128 RVA: 0x00285691 File Offset: 0x00283891
+		// Token: 0x060076DD RID: 30429 RVA: 0x000ADA81 File Offset: 0x000ABC81
 		public FKuroUiSceneVisibleCompleteDelegate()
 		{
 		}
 
-		// Token: 0x0601B601 RID: 112129 RVA: 0x00285699 File Offset: 0x00283899
+		// Token: 0x060076DE RID: 30430 RVA: 0x000ADA89 File Offset: 0x000ABC89
 		[NullableContext(2)]
 		public FKuroUiSceneVisibleCompleteDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601B602 RID: 112130 RVA: 0x002856A3 File Offset: 0x002838A3
+		// Token: 0x060076DF RID: 30431 RVA: 0x000ADA93 File Offset: 0x000ABC93
 		public FKuroUiSceneVisibleCompleteDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601B603 RID: 112131 RVA: 0x002856AE File Offset: 0x002838AE
+		// Token: 0x060076E0 RID: 30432 RVA: 0x000ADA9E File Offset: 0x000ABC9E
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<string>) ?? ((Action<string>)Delegate.CreateDelegate(typeof(Action<string>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601B604 RID: 112132 RVA: 0x002856E0 File Offset: 0x002838E0
+		// Token: 0x060076E1 RID: 30433 RVA: 0x000ADAD0 File Offset: 0x000ABCD0
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<string> Callback)
 		{
 			if (FKuroUiSceneVisibleCompleteDelegate.RegisterId == 0)
@@ -65,10 +64,9 @@ namespace UnrealEngine
 			base.Bind(Callback, FKuroUiSceneVisibleCompleteDelegate.RegisterId);
 		}
 
-		// Token: 0x0601B605 RID: 112133 RVA: 0x0028571C File Offset: 0x0028391C
+		// Token: 0x060076E2 RID: 30434 RVA: 0x000ADB0C File Offset: 0x000ABD0C
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(string ScenePath)
 		{
 			FKuroUiSceneVisibleCompleteDelegate.__FKuroUiSceneVisibleCompleteDelegate_DelegateParams* ptr = stackalloc FKuroUiSceneVisibleCompleteDelegate.__FKuroUiSceneVisibleCompleteDelegate_DelegateParams[(UIntPtr)31] + 15L / (long)sizeof(FKuroUiSceneVisibleCompleteDelegate.__FKuroUiSceneVisibleCompleteDelegate_DelegateParams) & -16L;
@@ -78,10 +76,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(FKuroUiSceneVisibleCompleteDelegate._FunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0601B606 RID: 112134 RVA: 0x00285770 File Offset: 0x00283970
+		// Token: 0x060076E3 RID: 30435 RVA: 0x000ADB60 File Offset: 0x000ABD60
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<string> action = target as Action<string>;
@@ -93,31 +90,31 @@ namespace UnrealEngine
 			action(obj);
 		}
 
-		// Token: 0x0400EBC9 RID: 60361
+		// Token: 0x0400321B RID: 12827
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400EBCA RID: 60362
+		// Token: 0x0400321C RID: 12828
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroRenderingRuntimeBPPlugin.KuroUiSceneVisibleCompleteDelegate__DelegateSignature";
 
-		// Token: 0x0400EBCB RID: 60363
+		// Token: 0x0400321D RID: 12829
 		private static int RegisterId;
 
-		// Token: 0x02003186 RID: 12678
+		// Token: 0x02000C2B RID: 3115
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
-		protected ref struct __FKuroUiSceneVisibleCompleteDelegate_DelegateParams
+		private ref struct __FKuroUiSceneVisibleCompleteDelegate_DelegateParams
 		{
-			// Token: 0x04016FC4 RID: 94148
+			// Token: 0x04005E78 RID: 24184
 			[FieldOffset(0)]
 			public FString ScenePath;
 		}
 
-		// Token: 0x02003187 RID: 12679
+		// Token: 0x02000C2C RID: 3116
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016FC5 RID: 94149
+			// Token: 0x04005E79 RID: 24185
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

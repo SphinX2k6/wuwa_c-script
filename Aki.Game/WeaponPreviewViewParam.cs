@@ -1,24 +1,24 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002D0E RID: 11534
+// Token: 0x02002268 RID: 8808
 [NullableContext(1)]
 [Nullable(0)]
 public class WeaponPreviewViewParam : IWeaponPreviewViewParam
 {
-	// Token: 0x170020B2 RID: 8370
-	// (get) Token: 0x060183E5 RID: 99301 RVA: 0x0062B758 File Offset: 0x00629958
-	// (set) Token: 0x060183E6 RID: 99302 RVA: 0x0062B760 File Offset: 0x00629960
+	// Token: 0x1700210D RID: 8461
+	// (get) Token: 0x06015C86 RID: 89222 RVA: 0x00651750 File Offset: 0x0064F950
+	// (set) Token: 0x06015C87 RID: 89223 RVA: 0x00651758 File Offset: 0x0064F958
 	public WeaponDataBase[] WeaponDataList { get; set; }
 
-	// Token: 0x170020B3 RID: 8371
-	// (get) Token: 0x060183E7 RID: 99303 RVA: 0x0062B769 File Offset: 0x00629969
-	// (set) Token: 0x060183E8 RID: 99304 RVA: 0x0062B771 File Offset: 0x00629971
+	// Token: 0x1700210E RID: 8462
+	// (get) Token: 0x06015C88 RID: 89224 RVA: 0x00651761 File Offset: 0x0064F961
+	// (set) Token: 0x06015C89 RID: 89225 RVA: 0x00651769 File Offset: 0x0064F969
 	public int SelectedIndex { get; set; }
 
-	// Token: 0x170020B4 RID: 8372
-	// (get) Token: 0x060183E9 RID: 99305 RVA: 0x0062B77A File Offset: 0x0062997A
-	// (set) Token: 0x060183EA RID: 99306 RVA: 0x0062B782 File Offset: 0x00629982
+	// Token: 0x1700210F RID: 8463
+	// (get) Token: 0x06015C8A RID: 89226 RVA: 0x00651772 File Offset: 0x0064F972
+	// (set) Token: 0x06015C8B RID: 89227 RVA: 0x0065177A File Offset: 0x0064F97A
 	[Nullable(2)]
 	public WeaponSkeletalObserverHandles WeaponObservers { [NullableContext(2)] get; [NullableContext(2)] set; }
 }

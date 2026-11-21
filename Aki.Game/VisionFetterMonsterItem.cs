@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002443 RID: 9283
+// Token: 0x02001928 RID: 6440
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class VisionFetterMonsterItem : GridProxyAbstract<VisionFetterMonsterData>
 {
-	// Token: 0x060129CF RID: 76239 RVA: 0x00497F48 File Offset: 0x00496148
+	// Token: 0x0600FE85 RID: 65157 RVA: 0x004A551C File Offset: 0x004A371C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,26 +24,26 @@ public class VisionFetterMonsterItem : GridProxyAbstract<VisionFetterMonsterData
 		};
 	}
 
-	// Token: 0x060129D0 RID: 76240 RVA: 0x00497FA2 File Offset: 0x004961A2
+	// Token: 0x0600FE86 RID: 65158 RVA: 0x004A5576 File Offset: 0x004A3776
 	protected override void OnStart()
 	{
 		this.MonsterLayout = new GenericLayout<VisionDetailMonsterItem, VisionDetailMonsterItemData>(base.GetGridLayout(1), new Func<VisionDetailMonsterItem>(this.InitMonsterItem), null, false, true);
 	}
 
-	// Token: 0x060129D1 RID: 76241 RVA: 0x00497FC5 File Offset: 0x004961C5
+	// Token: 0x0600FE87 RID: 65159 RVA: 0x004A5599 File Offset: 0x004A3799
 	private VisionDetailMonsterItem InitMonsterItem()
 	{
 		return new VisionDetailMonsterItem();
 	}
 
-	// Token: 0x060129D2 RID: 76242 RVA: 0x00497FCC File Offset: 0x004961CC
+	// Token: 0x0600FE88 RID: 65160 RVA: 0x004A55A0 File Offset: 0x004A37A0
 	public override void Refresh(VisionFetterMonsterData data, bool isSelected, int gridIndex)
 	{
 		this.RefreshCost(data);
 		this.RefreshMonster(data);
 	}
 
-	// Token: 0x060129D3 RID: 76243 RVA: 0x00497FDC File Offset: 0x004961DC
+	// Token: 0x0600FE89 RID: 65161 RVA: 0x004A55B0 File Offset: 0x004A37B0
 	private void RefreshCost(VisionFetterMonsterData data)
 	{
 		int cost = data.Cost;
@@ -53,13 +53,13 @@ public class VisionFetterMonsterItem : GridProxyAbstract<VisionFetterMonsterData
 		text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 	}
 
-	// Token: 0x060129D4 RID: 76244 RVA: 0x00498015 File Offset: 0x00496215
+	// Token: 0x0600FE8A RID: 65162 RVA: 0x004A55E9 File Offset: 0x004A37E9
 	private void RefreshMonster(VisionFetterMonsterData data)
 	{
 		this.MonsterLayout.RefreshByData(data.MonsterList, null, false);
 	}
 
-	// Token: 0x04008C53 RID: 35923
+	// Token: 0x04008D9A RID: 36250
 	[Nullable(new byte[]
 	{
 		2,
@@ -68,15 +68,15 @@ public class VisionFetterMonsterItem : GridProxyAbstract<VisionFetterMonsterData
 	})]
 	private GenericLayout<VisionDetailMonsterItem, VisionDetailMonsterItemData> MonsterLayout;
 
-	// Token: 0x020089CD RID: 35277
+	// Token: 0x02007B54 RID: 31572
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402CC46 RID: 183366
+		// Token: 0x04027F5C RID: 163676
 		CostText,
-		// Token: 0x0402CC47 RID: 183367
+		// Token: 0x04027F5D RID: 163677
 		MonsterLayout,
-		// Token: 0x0402CC48 RID: 183368
+		// Token: 0x04027F5E RID: 163678
 		MonsterItem
 	}
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200074A RID: 1866
+	// Token: 0x02000762 RID: 1890
 	public class ConfigPlotGuestByGuestID : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002BCD RID: 11213 RVA: 0x001510ED File Offset: 0x0014F2ED
+		// Token: 0x06002C5D RID: 11357 RVA: 0x00157B69 File Offset: 0x00155D69
 		static ConfigPlotGuestByGuestID()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPlotGuestByGuestID.CreateStaticDefaultValue), new Action(ConfigPlotGuestByGuestID.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002BCE RID: 11214 RVA: 0x0015110C File Offset: 0x0014F30C
+		// Token: 0x06002C5E RID: 11358 RVA: 0x00157B88 File Offset: 0x00155D88
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPlotGuestByGuestID.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002BCF RID: 11215 RVA: 0x0015118B File Offset: 0x0014F38B
+		// Token: 0x06002C5F RID: 11359 RVA: 0x00157C07 File Offset: 0x00155E07
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPlotGuestByGuestID.LogPair = null;
 			ConfigPlotGuestByGuestID.HandleId = 0;
 		}
 
-		// Token: 0x06002BD0 RID: 11216 RVA: 0x00151199 File Offset: 0x0014F399
+		// Token: 0x06002C60 RID: 11360 RVA: 0x00157C15 File Offset: 0x00155E15
 		public static void Init()
 		{
 			ConfigPlotGuestByGuestID.HandleId = ConfigCommon.InitDataStatement(ConfigPlotGuestByGuestID.HandleId, "db_plotguest.db", "select BinData from `PlotGuest` where GuestID=?");
 		}
 
-		// Token: 0x06002BD1 RID: 11217 RVA: 0x001511B4 File Offset: 0x0014F3B4
+		// Token: 0x06002C61 RID: 11361 RVA: 0x00157C30 File Offset: 0x00155E30
 		public static PlotGuest? GetConfig(int p0GuestID, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPlotGuestByGuestID.HandleId, ConfigPlotGuestByGuestID.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new PlotGuest?(rootAsPlotGuest);
 		}
 
-		// Token: 0x040032EC RID: 13036
+		// Token: 0x04003394 RID: 13204
 		private const string DB = "db_plotguest.db";
 
-		// Token: 0x040032ED RID: 13037
+		// Token: 0x04003395 RID: 13205
 		private const string FILE = "j.剧情Guest.xlsx";
 
-		// Token: 0x040032EE RID: 13038
+		// Token: 0x04003396 RID: 13206
 		private const string TABLE = "PlotGuest";
 
-		// Token: 0x040032EF RID: 13039
+		// Token: 0x04003397 RID: 13207
 		private const string COMMAND = "select BinData from `PlotGuest` where GuestID=?";
 
-		// Token: 0x040032F0 RID: 13040
+		// Token: 0x04003398 RID: 13208
 		private const string KEY_PREFIX = "PlotGuestByGuestID";
 
-		// Token: 0x040032F1 RID: 13041
+		// Token: 0x04003399 RID: 13209
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040032F2 RID: 13042
+		// Token: 0x0400339A RID: 13210
 		private static int HandleId;
 	}
 }

@@ -10,20 +10,20 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.InstanceDungeon
 {
-	// Token: 0x02005875 RID: 22645
+	// Token: 0x0200484D RID: 18509
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InstanceDungeonGrid : UiPanelBase
 	{
-		// Token: 0x060399DE RID: 235998 RVA: 0x00DB132C File Offset: 0x00DAF52C
+		// Token: 0x0602E8FF RID: 190719 RVA: 0x00D001F9 File Offset: 0x00CFE3F9
 		public InstanceDungeonGrid(int id, UUIItem uiItem)
 		{
 			this.InstanceId = id;
 		}
 
-		// Token: 0x17008A67 RID: 35431
-		// (get) Token: 0x060399DF RID: 235999 RVA: 0x00DB133B File Offset: 0x00DAF53B
-		// (set) Token: 0x060399E0 RID: 236000 RVA: 0x00DB1343 File Offset: 0x00DAF543
+		// Token: 0x17005E33 RID: 24115
+		// (get) Token: 0x0602E900 RID: 190720 RVA: 0x00D00208 File Offset: 0x00CFE408
+		// (set) Token: 0x0602E901 RID: 190721 RVA: 0x00D00210 File Offset: 0x00CFE410
 		public Action<int> ClickCallback
 		{
 			get
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x060399E1 RID: 236001 RVA: 0x00DB134C File Offset: 0x00DAF54C
+		// Token: 0x0602E902 RID: 190722 RVA: 0x00D0021C File Offset: 0x00CFE41C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 11;
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060399E2 RID: 236002 RVA: 0x00DB151E File Offset: 0x00DAF71E
+		// Token: 0x0602E903 RID: 190723 RVA: 0x00D003EE File Offset: 0x00CFE5EE
 		private void OnClickToggle(EToggleState toState)
 		{
 			if (toState == EToggleState.ETT_Checked)
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			}
 		}
 
-		// Token: 0x060399E3 RID: 236003 RVA: 0x00DB1538 File Offset: 0x00DAF738
+		// Token: 0x0602E904 RID: 190724 RVA: 0x00D00408 File Offset: 0x00CFE608
 		protected override void OnStart()
 		{
 			base.GetItem(4).SetUIActive(false);
@@ -100,12 +100,12 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			item.SetUIActive(false);
 		}
 
-		// Token: 0x060399E4 RID: 236004 RVA: 0x00DB1592 File Offset: 0x00DAF792
+		// Token: 0x0602E905 RID: 190725 RVA: 0x00D00462 File Offset: 0x00CFE662
 		protected override void OnBeforeDestroy()
 		{
 		}
 
-		// Token: 0x060399E5 RID: 236005 RVA: 0x00DB1594 File Offset: 0x00DAF794
+		// Token: 0x0602E906 RID: 190726 RVA: 0x00D00464 File Offset: 0x00CFE664
 		public void ShowTitle(int titleId)
 		{
 			base.GetItem(4).SetUIActive(true);
@@ -144,7 +144,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			base.GetItem(7).SetUIActive(false);
 		}
 
-		// Token: 0x060399E6 RID: 236006 RVA: 0x00DB1730 File Offset: 0x00DAF930
+		// Token: 0x0602E907 RID: 190727 RVA: 0x00D00600 File Offset: 0x00CFE800
 		public void SetSelected(bool value, bool ignoreAnim = false)
 		{
 			if (!ignoreAnim)
@@ -155,19 +155,19 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			base.GetExtendToggle(2).SetToggleStateForce(value ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, true, false);
 		}
 
-		// Token: 0x060399E7 RID: 236007 RVA: 0x00DB1763 File Offset: 0x00DAF963
+		// Token: 0x0602E908 RID: 190728 RVA: 0x00D00633 File Offset: 0x00CFE833
 		public void OnDeselected(bool fireEvent)
 		{
 			this.SetSelected(false, fireEvent);
 		}
 
-		// Token: 0x060399E8 RID: 236008 RVA: 0x00DB176D File Offset: 0x00DAF96D
+		// Token: 0x0602E909 RID: 190729 RVA: 0x00D0063D File Offset: 0x00CFE83D
 		public void Refresh()
 		{
 			this.UpdateView(this.InstanceId);
 		}
 
-		// Token: 0x060399E9 RID: 236009 RVA: 0x00DB177C File Offset: 0x00DAF97C
+		// Token: 0x0602E90A RID: 190730 RVA: 0x00D0064C File Offset: 0x00CFE84C
 		public void UpdateView(int instanceId)
 		{
 			if (instanceId == 0)
@@ -181,47 +181,47 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			base.GetItem(3).SetUIActive(!InstanceDungeonEntranceModel.Instance.CheckInstanceUnlock(instanceId));
 		}
 
-		// Token: 0x0401E1E1 RID: 123361
+		// Token: 0x04018C7E RID: 101502
 		private readonly int InstanceId;
 
-		// Token: 0x0401E1E2 RID: 123362
+		// Token: 0x04018C7F RID: 101503
 		private Action<int> ClickCallbackInternal;
 
-		// Token: 0x0200BAD1 RID: 47825
+		// Token: 0x0200A4EA RID: 42218
 		[NullableContext(0)]
 		private static class EChildCom
 		{
-			// Token: 0x0403873F RID: 231231
+			// Token: 0x04033140 RID: 209216
 			public const int TextName = 0;
 
-			// Token: 0x04038740 RID: 231232
+			// Token: 0x04033141 RID: 209217
 			public const int TextRecommendLevel = 1;
 
-			// Token: 0x04038741 RID: 231233
+			// Token: 0x04033142 RID: 209218
 			public const int ToggleClick = 2;
 
-			// Token: 0x04038742 RID: 231234
+			// Token: 0x04033143 RID: 209219
 			public const int UIItemLock = 3;
 
-			// Token: 0x04038743 RID: 231235
+			// Token: 0x04033144 RID: 209220
 			public const int UIItemTitle = 4;
 
-			// Token: 0x04038744 RID: 231236
+			// Token: 0x04033145 RID: 209221
 			public const int TextTitle = 5;
 
-			// Token: 0x04038745 RID: 231237
+			// Token: 0x04033146 RID: 209222
 			public const int UIItemFrequency = 6;
 
-			// Token: 0x04038746 RID: 231238
+			// Token: 0x04033147 RID: 209223
 			public const int UIItemTime = 7;
 
-			// Token: 0x04038747 RID: 231239
+			// Token: 0x04033148 RID: 209224
 			public const int TextFrequency = 8;
 
-			// Token: 0x04038748 RID: 231240
+			// Token: 0x04033149 RID: 209225
 			public const int TextTime = 9;
 
-			// Token: 0x04038749 RID: 231241
+			// Token: 0x0403314A RID: 209226
 			public const int UIItemFinish = 10;
 		}
 	}

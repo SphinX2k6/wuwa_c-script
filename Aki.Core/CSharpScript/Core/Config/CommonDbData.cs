@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Core.Config
 {
-	// Token: 0x02000161 RID: 353
+	// Token: 0x02000166 RID: 358
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CommonDbData
 	{
-		// Token: 0x06000C30 RID: 3120 RVA: 0x00039F3F File Offset: 0x0003813F
+		// Token: 0x06000C8F RID: 3215 RVA: 0x0003AC83 File Offset: 0x00038E83
 		public CommonDbData(int incrementId, string dbName, string command, string culture)
 		{
 			this.IncrementId = incrementId;
@@ -17,19 +17,19 @@ namespace CSharpScript.Core.Config
 			this.Culture = culture;
 		}
 
-		// Token: 0x04000719 RID: 1817
+		// Token: 0x04000728 RID: 1832
 		public const int UNVALID_INCREMENT_ID = 0;
 
-		// Token: 0x0400071A RID: 1818
+		// Token: 0x04000729 RID: 1833
 		public string DbName;
 
-		// Token: 0x0400071B RID: 1819
+		// Token: 0x0400072A RID: 1834
 		public string Command;
 
-		// Token: 0x0400071C RID: 1820
+		// Token: 0x0400072B RID: 1835
 		public int IncrementId;
 
-		// Token: 0x0400071D RID: 1821
+		// Token: 0x0400072C RID: 1836
 		public string Culture;
 	}
 }

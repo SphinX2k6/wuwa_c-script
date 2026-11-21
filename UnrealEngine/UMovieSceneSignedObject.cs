@@ -6,31 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200243C RID: 9276
+	// Token: 0x0200078D RID: 1933
 	[UnrealObjectPath("/Script/MovieScene.MovieSceneSignedObject")]
-	[UnrealStructLayout(88, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 88)]
+	[UnrealStructLayout(104, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 104)]
 	public class UMovieSceneSignedObject : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06022C85 RID: 142469 RVA: 0x00336DB7 File Offset: 0x00334FB7
+		// Token: 0x0600A72D RID: 42797 RVA: 0x000F6C11 File Offset: 0x000F4E11
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UMovieSceneSignedObject._ClassPtr;
 		}
 
-		// Token: 0x06022C86 RID: 142470 RVA: 0x00336DC4 File Offset: 0x00334FC4
+		// Token: 0x0600A72E RID: 42798 RVA: 0x000F6C20 File Offset: 0x000F4E20
 		public UMovieSceneSignedObject() : this(BuiltinUtils.AllocNativeUObject(UMovieSceneSignedObject.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06022C87 RID: 142471 RVA: 0x00336DEC File Offset: 0x00334FEC
+		// Token: 0x0600A72F RID: 42799 RVA: 0x000F6C48 File Offset: 0x000F4E48
 		[NullableContext(1)]
 		public UMovieSceneSignedObject(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UMovieSceneSignedObject.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170085BD RID: 34237
-		// (get) Token: 0x06022C88 RID: 142472 RVA: 0x00336E1F File Offset: 0x0033501F
-		// (set) Token: 0x06022C89 RID: 142473 RVA: 0x00336E33 File Offset: 0x00335033
+		// Token: 0x17001F0D RID: 7949
+		// (get) Token: 0x0600A730 RID: 42800 RVA: 0x000F6C7B File Offset: 0x000F4E7B
+		// (set) Token: 0x0600A731 RID: 42801 RVA: 0x000F6C8F File Offset: 0x000F4E8F
 		public unsafe FGuid Signature
 		{
 			get
@@ -43,28 +43,28 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06022C8A RID: 142474 RVA: 0x00336E48 File Offset: 0x00335048
+		// Token: 0x0600A732 RID: 42802 RVA: 0x000F6CA4 File Offset: 0x000F4EA4
 		static UMovieSceneSignedObject()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/MovieScene.MovieSceneSignedObject");
 		}
 
-		// Token: 0x06022C8B RID: 142475 RVA: 0x00336E56 File Offset: 0x00335056
+		// Token: 0x0600A733 RID: 42803 RVA: 0x000F6CB2 File Offset: 0x000F4EB2
 		protected UMovieSceneSignedObject(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04012923 RID: 76067
+		// Token: 0x04004793 RID: 18323
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/MovieScene.MovieSceneSignedObject";
 
-		// Token: 0x04012924 RID: 76068
+		// Token: 0x04004794 RID: 18324
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04012925 RID: 76069
+		// Token: 0x04004795 RID: 18325
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04012926 RID: 76070
+		// Token: 0x04004796 RID: 18326
 		internal static int __PropertyOffset_Signature;
 	}
 }

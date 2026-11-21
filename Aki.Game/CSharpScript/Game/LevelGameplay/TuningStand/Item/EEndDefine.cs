@@ -2,36 +2,36 @@
 
 namespace CSharpScript.Game.LevelGamePlay.TuningStand.Item
 {
-	// Token: 0x020069D4 RID: 27092
+	// Token: 0x02005B30 RID: 23344
 	public enum EEndDefine
 	{
-		// Token: 0x040232B5 RID: 144053
+		// Token: 0x0401E4A5 RID: 124069
 		PanelBlue,
-		// Token: 0x040232B6 RID: 144054
+		// Token: 0x0401E4A6 RID: 124070
 		SpriteNotBlue,
-		// Token: 0x040232B7 RID: 144055
+		// Token: 0x0401E4A7 RID: 124071
 		PanelRed,
-		// Token: 0x040232B8 RID: 144056
+		// Token: 0x0401E4A8 RID: 124072
 		SpriteNotRed,
-		// Token: 0x040232B9 RID: 144057
+		// Token: 0x0401E4A9 RID: 124073
 		SpriteEndBlue,
-		// Token: 0x040232BA RID: 144058
+		// Token: 0x0401E4AA RID: 124074
 		SpriteEndHighlightBlue,
-		// Token: 0x040232BB RID: 144059
+		// Token: 0x0401E4AB RID: 124075
 		SpriteEndRed,
-		// Token: 0x040232BC RID: 144060
+		// Token: 0x0401E4AC RID: 124076
 		SpriteEndHighlightRed,
-		// Token: 0x040232BD RID: 144061
+		// Token: 0x0401E4AD RID: 124077
 		PanelError,
-		// Token: 0x040232BE RID: 144062
+		// Token: 0x0401E4AE RID: 124078
 		ExtendToggle,
-		// Token: 0x040232BF RID: 144063
+		// Token: 0x0401E4AF RID: 124079
 		GuideLeft,
-		// Token: 0x040232C0 RID: 144064
+		// Token: 0x0401E4B0 RID: 124080
 		GuideRight,
-		// Token: 0x040232C1 RID: 144065
+		// Token: 0x0401E4B1 RID: 124081
 		GuideTop,
-		// Token: 0x040232C2 RID: 144066
+		// Token: 0x0401E4B2 RID: 124082
 		GuideBottom
 	}
 }

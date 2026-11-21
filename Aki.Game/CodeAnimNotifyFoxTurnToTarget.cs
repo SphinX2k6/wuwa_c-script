@@ -2,7 +2,7 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02003169 RID: 12649
+// Token: 0x020026D6 RID: 9942
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -11,12 +11,12 @@ using UnrealEngine;
 })]
 public class CodeAnimNotifyFoxTurnToTarget : CodeAnimNotifyBase<SpecialSkillAnimalFox>
 {
-	// Token: 0x0601B362 RID: 111458 RVA: 0x0076AAEC File Offset: 0x00768CEC
+	// Token: 0x06018E67 RID: 101991 RVA: 0x00792450 File Offset: 0x00790650
 	public CodeAnimNotifyFoxTurnToTarget(SpecialSkillAnimalFox specialSkill) : base(specialSkill)
 	{
 	}
 
-	// Token: 0x0601B363 RID: 111459 RVA: 0x0076ABA4 File Offset: 0x00768DA4
+	// Token: 0x06018E68 RID: 101992 RVA: 0x00792508 File Offset: 0x00790708
 	public override void OnNotifyBegin(float totalDuration, FKuroCodeFunctionPayload payload, [Nullable(2)] UAnimSequenceBase animation)
 	{
 		Entity ownerEntity = this.SpecialSkill.GetOwnerEntity();
@@ -53,7 +53,7 @@ public class CodeAnimNotifyFoxTurnToTarget : CodeAnimNotifyBase<SpecialSkillAnim
 		this.TargetQuat.Rotator(outR);
 	}
 
-	// Token: 0x0601B364 RID: 111460 RVA: 0x0076AD30 File Offset: 0x00768F30
+	// Token: 0x06018E69 RID: 101993 RVA: 0x00792694 File Offset: 0x00790894
 	public override void OnNotifyTick(float delta, FKuroCodeFunctionPayload payload, [Nullable(2)] UAnimSequenceBase animation)
 	{
 		if (this.ActorComp == null || this.TotalDuration <= 0f)
@@ -67,37 +67,37 @@ public class CodeAnimNotifyFoxTurnToTarget : CodeAnimNotifyBase<SpecialSkillAnim
 		this.ActorComp.SetActorRotation(this.ResultRotator.ToUeRotator(), "CodeAnimNotifyFoxTurnToTarget", false);
 	}
 
-	// Token: 0x0601B365 RID: 111461 RVA: 0x0076ADC1 File Offset: 0x00768FC1
+	// Token: 0x06018E6A RID: 101994 RVA: 0x00792725 File Offset: 0x00790925
 	public override void OnNotifyEnd(FKuroCodeFunctionPayload payload, [Nullable(2)] UAnimSequenceBase animation)
 	{
 		this.ActorComp = null;
 	}
 
-	// Token: 0x0400D40C RID: 54284
+	// Token: 0x0400D86F RID: 55407
 	public const string EventName = "Fox.TurnToTarget";
 
-	// Token: 0x0400D40D RID: 54285
+	// Token: 0x0400D870 RID: 55408
 	private readonly Vector TmpDir = Vector.Create();
 
-	// Token: 0x0400D40E RID: 54286
+	// Token: 0x0400D871 RID: 55409
 	private readonly Quat StartQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400D40F RID: 54287
+	// Token: 0x0400D872 RID: 55410
 	private readonly Quat TargetQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400D410 RID: 54288
+	// Token: 0x0400D873 RID: 55411
 	private readonly Quat ResultQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400D411 RID: 54289
+	// Token: 0x0400D874 RID: 55412
 	private readonly Rotator ResultRotator = Rotator.Create();
 
-	// Token: 0x0400D412 RID: 54290
+	// Token: 0x0400D875 RID: 55413
 	private float TotalDuration;
 
-	// Token: 0x0400D413 RID: 54291
+	// Token: 0x0400D876 RID: 55414
 	private float ElapsedTime;
 
-	// Token: 0x0400D414 RID: 54292
+	// Token: 0x0400D877 RID: 55415
 	[Nullable(2)]
 	private CharacterActorComponent ActorComp;
 }

@@ -5,22 +5,22 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001F13 RID: 7955
+	// Token: 0x0200061E RID: 1566
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroUtility.XboxAchievementInfo")]
 	[UnrealStructLayout(24, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 24)]
 	public class FXboxAchievementInfo : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0601E2F8 RID: 123640 RVA: 0x002CE20E File Offset: 0x002CC40E
+		// Token: 0x0600891E RID: 35102 RVA: 0x000CEE82 File Offset: 0x000CD082
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FXboxAchievementInfo._ScriptStructPtr != 0) ? FXboxAchievementInfo._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroUtility.XboxAchievementInfo", ref FXboxAchievementInfo._ScriptStructPtr);
 		}
 
-		// Token: 0x170077E3 RID: 30691
-		// (get) Token: 0x0601E2F9 RID: 123641 RVA: 0x002CE232 File Offset: 0x002CC432
-		// (set) Token: 0x0601E2FA RID: 123642 RVA: 0x002CE246 File Offset: 0x002CC446
+		// Token: 0x17001993 RID: 6547
+		// (get) Token: 0x0600891F RID: 35103 RVA: 0x000CEEA6 File Offset: 0x000CD0A6
+		// (set) Token: 0x06008920 RID: 35104 RVA: 0x000CEEBA File Offset: 0x000CD0BA
 		public unsafe string Id
 		{
 			get
@@ -33,9 +33,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170077E4 RID: 30692
-		// (get) Token: 0x0601E2FB RID: 123643 RVA: 0x002CE25B File Offset: 0x002CC45B
-		// (set) Token: 0x0601E2FC RID: 123644 RVA: 0x002CE26B File Offset: 0x002CC46B
+		// Token: 0x17001994 RID: 6548
+		// (get) Token: 0x06008921 RID: 35105 RVA: 0x000CEECF File Offset: 0x000CD0CF
+		// (set) Token: 0x06008922 RID: 35106 RVA: 0x000CEEDF File Offset: 0x000CD0DF
 		public unsafe bool bIsAchieved
 		{
 			get
@@ -48,9 +48,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170077E5 RID: 30693
-		// (get) Token: 0x0601E2FD RID: 123645 RVA: 0x002CE27C File Offset: 0x002CC47C
-		// (set) Token: 0x0601E2FE RID: 123646 RVA: 0x002CE28C File Offset: 0x002CC48C
+		// Token: 0x17001995 RID: 6549
+		// (get) Token: 0x06008923 RID: 35107 RVA: 0x000CEEF0 File Offset: 0x000CD0F0
+		// (set) Token: 0x06008924 RID: 35108 RVA: 0x000CEF00 File Offset: 0x000CD100
 		public unsafe int ProgressState
 		{
 			get
@@ -63,61 +63,53 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601E2FF RID: 123647 RVA: 0x002CE29D File Offset: 0x002CC49D
+		// Token: 0x06008925 RID: 35109 RVA: 0x000CEF11 File Offset: 0x000CD111
 		public FXboxAchievementInfo()
 		{
 		}
 
-		// Token: 0x0601E300 RID: 123648 RVA: 0x002CE2A5 File Offset: 0x002CC4A5
-		public FXboxAchievementInfo(string Id, bool bIsAchieved, int ProgressState)
-		{
-			this.Id = Id;
-			this.bIsAchieved = bIsAchieved;
-			this.ProgressState = ProgressState;
-		}
-
-		// Token: 0x0601E301 RID: 123649 RVA: 0x002CE2C2 File Offset: 0x002CC4C2
+		// Token: 0x06008926 RID: 35110 RVA: 0x000CEF19 File Offset: 0x000CD119
 		protected override IntPtr GetUStructPtr()
 		{
 			return FXboxAchievementInfo.StaticStruct();
 		}
 
-		// Token: 0x0601E302 RID: 123650 RVA: 0x002CE2CE File Offset: 0x002CC4CE
+		// Token: 0x06008927 RID: 35111 RVA: 0x000CEF25 File Offset: 0x000CD125
 		[NullableContext(2)]
 		public FXboxAchievementInfo(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601E303 RID: 123651 RVA: 0x002CE2D8 File Offset: 0x002CC4D8
+		// Token: 0x06008928 RID: 35112 RVA: 0x000CEF2F File Offset: 0x000CD12F
 		public FXboxAchievementInfo(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601E304 RID: 123652 RVA: 0x002CE2E3 File Offset: 0x002CC4E3
+		// Token: 0x06008929 RID: 35113 RVA: 0x000CEF3A File Offset: 0x000CD13A
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FXboxAchievementInfo(Pointer, false, true);
 		}
 
-		// Token: 0x0601E305 RID: 123653 RVA: 0x002CE2ED File Offset: 0x002CC4ED
+		// Token: 0x0600892A RID: 35114 RVA: 0x000CEF44 File Offset: 0x000CD144
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FXboxAchievementInfo(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x040104B9 RID: 66745
+		// Token: 0x04003B84 RID: 15236
 		public const string __ObjectPath = "/Script/KuroUtility.XboxAchievementInfo";
 
-		// Token: 0x040104BA RID: 66746
+		// Token: 0x04003B85 RID: 15237
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040104BB RID: 66747
+		// Token: 0x04003B86 RID: 15238
 		internal static int __PropertyOffset_Id;
 
-		// Token: 0x040104BC RID: 66748
+		// Token: 0x04003B87 RID: 15239
 		internal static int __PropertyOffset_bIsAchieved;
 
-		// Token: 0x040104BD RID: 66749
+		// Token: 0x04003B88 RID: 15240
 		internal static int __PropertyOffset_ProgressState;
 	}
 }

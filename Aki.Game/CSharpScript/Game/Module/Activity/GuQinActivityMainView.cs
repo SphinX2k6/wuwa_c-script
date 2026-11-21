@@ -15,17 +15,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity
 {
-	// Token: 0x02005EF8 RID: 24312
+	// Token: 0x02004EDF RID: 20191
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GuQinActivityMainView : UiViewBase
 	{
-		// Token: 0x0603DC57 RID: 253015 RVA: 0x00EEE692 File Offset: 0x00EEC892
+		// Token: 0x06032BF2 RID: 207858 RVA: 0x00E40356 File Offset: 0x00E3E556
 		public GuQinActivityMainView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x0603DC58 RID: 253016 RVA: 0x00EEE6B4 File Offset: 0x00EEC8B4
+		// Token: 0x06032BF3 RID: 207859 RVA: 0x00E40378 File Offset: 0x00E3E578
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 20;
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.Activity
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603DC59 RID: 253017 RVA: 0x00EEE9BC File Offset: 0x00EECBBC
+		// Token: 0x06032BF4 RID: 207860 RVA: 0x00E40680 File Offset: 0x00E3E880
 		protected override UniTask OnBeforeStartAsync()
 		{
 			GuQinActivityMainView.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.Activity
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603DC5A RID: 253018 RVA: 0x00EEEA00 File Offset: 0x00EECC00
+		// Token: 0x06032BF5 RID: 207861 RVA: 0x00E406C4 File Offset: 0x00E3E8C4
 		protected override void OnStart()
 		{
 			int index = 0;
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.Activity
 			this.ToggleItems[index].SetToggleState(EToggleState.ETT_Checked, true);
 		}
 
-		// Token: 0x0603DC5B RID: 253019 RVA: 0x00EEEAD0 File Offset: 0x00EECCD0
+		// Token: 0x06032BF6 RID: 207862 RVA: 0x00E40794 File Offset: 0x00E3E994
 		private CommonItemSmallItemGrid InitGridItem()
 		{
 			return new CommonItemSmallItemGrid
@@ -136,19 +136,19 @@ namespace CSharpScript.Game.Module.Activity
 			};
 		}
 
-		// Token: 0x0603DC5C RID: 253020 RVA: 0x00EEEAE9 File Offset: 0x00EECCE9
+		// Token: 0x06032BF7 RID: 207863 RVA: 0x00E407AD File Offset: 0x00E3E9AD
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int>(EEventName.ActivityViewRefreshCurrent, new Action<int>(this.OnActivityRefresh));
 		}
 
-		// Token: 0x0603DC5D RID: 253021 RVA: 0x00EEEB07 File Offset: 0x00EECD07
+		// Token: 0x06032BF8 RID: 207864 RVA: 0x00E407CB File Offset: 0x00E3E9CB
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<int>(EEventName.ActivityViewRefreshCurrent, new Action<int>(this.OnActivityRefresh));
 		}
 
-		// Token: 0x0603DC5E RID: 253022 RVA: 0x00EEEB28 File Offset: 0x00EECD28
+		// Token: 0x06032BF9 RID: 207865 RVA: 0x00E407EC File Offset: 0x00E3E9EC
 		private void OnActivityRefresh(int activityId)
 		{
 			if (activityId != this.Data.Id)
@@ -171,19 +171,19 @@ namespace CSharpScript.Game.Module.Activity
 			}
 		}
 
-		// Token: 0x0603DC5F RID: 253023 RVA: 0x00EEEBBC File Offset: 0x00EECDBC
+		// Token: 0x06032BFA RID: 207866 RVA: 0x00E40880 File Offset: 0x00E3EA80
 		private void OnCloseBtnClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603DC60 RID: 253024 RVA: 0x00EEEBC5 File Offset: 0x00EECDC5
+		// Token: 0x06032BFB RID: 207867 RVA: 0x00E40889 File Offset: 0x00E3EA89
 		private void OnHelpBtnClick()
 		{
 			HelpController.Instance.OpenHelpById(655);
 		}
 
-		// Token: 0x0603DC61 RID: 253025 RVA: 0x00EEEBD8 File Offset: 0x00EECDD8
+		// Token: 0x06032BFC RID: 207868 RVA: 0x00E4089C File Offset: 0x00E3EA9C
 		private void FocusBackToSelectedToggle()
 		{
 			if (!Info.Instance.IsInGamepad())
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.Module.Activity
 			UiNavigationNewController.Instance.SetNavigationFocusForView(currentSelectToggleItem.GetRootItem(), true, true, false);
 		}
 
-		// Token: 0x0603DC62 RID: 253026 RVA: 0x00EEEC14 File Offset: 0x00EECE14
+		// Token: 0x06032BFD RID: 207869 RVA: 0x00E408D8 File Offset: 0x00E3EAD8
 		private void OnToggleSelect(GuQinActivityMainViewToggleItem item, GuQinActivityTabData data)
 		{
 			GuQinActivityMainViewToggleItem currentSelectToggleItem = this.CurrentSelectToggleItem;
@@ -227,7 +227,7 @@ namespace CSharpScript.Game.Module.Activity
 			uiViewSequence.PlayOrReplaySequenceByName("Switch", false, null);
 		}
 
-		// Token: 0x0603DC63 RID: 253027 RVA: 0x00EEECBC File Offset: 0x00EECEBC
+		// Token: 0x06032BFE RID: 207870 RVA: 0x00E40980 File Offset: 0x00E3EB80
 		private void RefreshSubToggles(GuQinActivityTabData data)
 		{
 			for (int i = 0; i < data.TaskList.Count; i++)
@@ -245,7 +245,7 @@ namespace CSharpScript.Game.Module.Activity
 			base.GetText(7).SetText((openDay + 3).ToString(), true);
 		}
 
-		// Token: 0x0603DC64 RID: 253028 RVA: 0x00EEED6C File Offset: 0x00EECF6C
+		// Token: 0x06032BFF RID: 207871 RVA: 0x00E40A30 File Offset: 0x00E3EC30
 		private void OnSubToggleSelect(GuQinActivityMainViewSubToggleItem item, GuQinActivityTaskData data)
 		{
 			GuQinActivityMainViewSubToggleItem currentSelectSubToggleItem = this.CurrentSelectSubToggleItem;
@@ -264,7 +264,7 @@ namespace CSharpScript.Game.Module.Activity
 			uiViewSequence.PlayOrReplaySequenceByName("Switch2", false, null);
 		}
 
-		// Token: 0x0603DC65 RID: 253029 RVA: 0x00EEEDC0 File Offset: 0x00EECFC0
+		// Token: 0x06032C00 RID: 207872 RVA: 0x00E40A84 File Offset: 0x00E3EC84
 		private void RefreshUi()
 		{
 			GuQinActivityTask config = this.CurrentTaskData.GetConfig();
@@ -323,20 +323,20 @@ namespace CSharpScript.Game.Module.Activity
 			functionButton2.SetRedDotVisible(this.CurrentTaskData.GetIsUnlockRedDot());
 		}
 
-		// Token: 0x0603DC66 RID: 253030 RVA: 0x00EEEFA8 File Offset: 0x00EED1A8
+		// Token: 0x06032C01 RID: 207873 RVA: 0x00E40C6C File Offset: 0x00E3EE6C
 		private void OnReceivedBtnClick()
 		{
 			GuQinActivityController.Instance.RequestReward(this.CurrentTaskData, new Action(this.OnRewardSuccess));
 		}
 
-		// Token: 0x0603DC67 RID: 253031 RVA: 0x00EEEFC6 File Offset: 0x00EED1C6
+		// Token: 0x06032C02 RID: 207874 RVA: 0x00E40C8A File Offset: 0x00E3EE8A
 		private void OnRewardSuccess()
 		{
 			this.RefreshUi();
 			this.RefreshRedDot();
 		}
 
-		// Token: 0x0603DC68 RID: 253032 RVA: 0x00EEEFD4 File Offset: 0x00EED1D4
+		// Token: 0x06032C03 RID: 207875 RVA: 0x00E40C98 File Offset: 0x00E3EE98
 		private void OnGotoBtnClick()
 		{
 			int questId = this.CurrentTaskData.GetConfig().QuestId;
@@ -345,7 +345,7 @@ namespace CSharpScript.Game.Module.Activity
 			UiManager.Instance.OpenView(EUiViewName.QuestView, questId, null);
 		}
 
-		// Token: 0x0603DC69 RID: 253033 RVA: 0x00EEF028 File Offset: 0x00EED228
+		// Token: 0x06032C04 RID: 207876 RVA: 0x00E40CEC File Offset: 0x00E3EEEC
 		private void RefreshRedDot()
 		{
 			foreach (GuQinActivityMainViewToggleItem guQinActivityMainViewToggleItem in this.ToggleItems)
@@ -369,41 +369,41 @@ namespace CSharpScript.Game.Module.Activity
 			functionButton.SetRedDotVisible(this.CurrentTaskData.GetIsUnlockRedDot());
 		}
 
-		// Token: 0x0402046A RID: 132202
+		// Token: 0x0401AF3C RID: 110396
 		private const int ToggleCount = 4;
 
-		// Token: 0x0402046B RID: 132203
+		// Token: 0x0401AF3D RID: 110397
 		private const int SubToggleCount = 2;
 
-		// Token: 0x0402046C RID: 132204
+		// Token: 0x0401AF3E RID: 110398
 		private GuQinActivityData Data;
 
-		// Token: 0x0402046D RID: 132205
+		// Token: 0x0401AF3F RID: 110399
 		[Nullable(2)]
 		private GuQinActivityMainViewToggleItem CurrentSelectToggleItem;
 
-		// Token: 0x0402046E RID: 132206
+		// Token: 0x0401AF40 RID: 110400
 		[Nullable(2)]
 		private GuQinActivityMainViewSubToggleItem CurrentSelectSubToggleItem;
 
-		// Token: 0x0402046F RID: 132207
+		// Token: 0x0401AF41 RID: 110401
 		private GuQinActivityTaskData CurrentTaskData;
 
-		// Token: 0x04020470 RID: 132208
+		// Token: 0x0401AF42 RID: 110402
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04020471 RID: 132209
+		// Token: 0x0401AF43 RID: 110403
 		[Nullable(2)]
 		private ActivityFunctionalTypeA FunctionalComponent;
 
-		// Token: 0x04020472 RID: 132210
+		// Token: 0x0401AF44 RID: 110404
 		private readonly List<GuQinActivityMainViewToggleItem> ToggleItems = new List<GuQinActivityMainViewToggleItem>();
 
-		// Token: 0x04020473 RID: 132211
+		// Token: 0x0401AF45 RID: 110405
 		private readonly List<GuQinActivityMainViewSubToggleItem> SubToggleItems = new List<GuQinActivityMainViewSubToggleItem>();
 
-		// Token: 0x04020474 RID: 132212
+		// Token: 0x0401AF46 RID: 110406
 		[Nullable(new byte[]
 		{
 			2,
@@ -411,68 +411,68 @@ namespace CSharpScript.Game.Module.Activity
 		})]
 		private GenericLayout<CommonItemSmallItemGrid, TItem> RewardLayout;
 
-		// Token: 0x0200C229 RID: 49705
+		// Token: 0x0200AC37 RID: 44087
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x0403AA8A RID: 240266
+			// Token: 0x0403547E RID: 218238
 			public const int CaptionItem = 0;
 
-			// Token: 0x0403AA8B RID: 240267
+			// Token: 0x0403547F RID: 218239
 			public const int Toggle1 = 1;
 
-			// Token: 0x0403AA8C RID: 240268
+			// Token: 0x04035480 RID: 218240
 			public const int Toggle2 = 2;
 
-			// Token: 0x0403AA8D RID: 240269
+			// Token: 0x04035481 RID: 218241
 			public const int Toggle3 = 3;
 
-			// Token: 0x0403AA8E RID: 240270
+			// Token: 0x04035482 RID: 218242
 			public const int Toggle4 = 4;
 
-			// Token: 0x0403AA8F RID: 240271
+			// Token: 0x04035483 RID: 218243
 			public const int PnlBottom = 5;
 
-			// Token: 0x0403AA90 RID: 240272
+			// Token: 0x04035484 RID: 218244
 			public const int TextNumLeft = 6;
 
-			// Token: 0x0403AA91 RID: 240273
+			// Token: 0x04035485 RID: 218245
 			public const int TextNumRight = 7;
 
-			// Token: 0x0403AA92 RID: 240274
+			// Token: 0x04035486 RID: 218246
 			public const int SubToggle1 = 8;
 
-			// Token: 0x0403AA93 RID: 240275
+			// Token: 0x04035487 RID: 218247
 			public const int SubToggle2 = 9;
 
-			// Token: 0x0403AA94 RID: 240276
+			// Token: 0x04035488 RID: 218248
 			public const int TextTitle = 10;
 
-			// Token: 0x0403AA95 RID: 240277
+			// Token: 0x04035489 RID: 218249
 			public const int TextDesc = 11;
 
-			// Token: 0x0403AA96 RID: 240278
+			// Token: 0x0403548A RID: 218250
 			public const int RewardLayout = 12;
 
-			// Token: 0x0403AA97 RID: 240279
+			// Token: 0x0403548B RID: 218251
 			public const int RewardLayoutItem = 13;
 
-			// Token: 0x0403AA98 RID: 240280
+			// Token: 0x0403548C RID: 218252
 			public const int PnlDone = 14;
 
-			// Token: 0x0403AA99 RID: 240281
+			// Token: 0x0403548D RID: 218253
 			public const int PnlUnDone = 15;
 
-			// Token: 0x0403AA9A RID: 240282
+			// Token: 0x0403548E RID: 218254
 			public const int BtnReceived = 16;
 
-			// Token: 0x0403AA9B RID: 240283
+			// Token: 0x0403548F RID: 218255
 			public const int FunctionTypeItem = 17;
 
-			// Token: 0x0403AA9C RID: 240284
+			// Token: 0x04035490 RID: 218256
 			public const int TexBg = 18;
 
-			// Token: 0x0403AA9D RID: 240285
+			// Token: 0x04035491 RID: 218257
 			public const int RewardRedDot = 19;
 		}
 	}

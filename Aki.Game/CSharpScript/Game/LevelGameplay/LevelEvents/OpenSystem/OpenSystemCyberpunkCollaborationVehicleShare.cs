@@ -7,17 +7,17 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents.OpenSystem
 {
-	// Token: 0x02006BD2 RID: 27602
+	// Token: 0x02005D4B RID: 23883
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class OpenSystemCyberpunkCollaborationVehicleShare : OpenSystemBase
 	{
-		// Token: 0x0604438B RID: 279435 RVA: 0x010D0B49 File Offset: 0x010CED49
+		// Token: 0x0603A4E3 RID: 238819 RVA: 0x0107AA9D File Offset: 0x01078C9D
 		public OpenSystemCyberpunkCollaborationVehicleShare(LevelEventOpenSystem eventBase) : base(eventBase)
 		{
 		}
 
-		// Token: 0x0604438C RID: 279436 RVA: 0x010D0B54 File Offset: 0x010CED54
+		// Token: 0x0603A4E4 RID: 238820 RVA: 0x0107AAA8 File Offset: 0x01078CA8
 		[return: Nullable(0)]
 		public override UniTask<bool> ExecuteOpenView(OpenSystemBoard inParams, GeneralContext context)
 		{
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents.OpenSystem
 			return <ExecuteOpenView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604438D RID: 279437 RVA: 0x010D0B97 File Offset: 0x010CED97
+		// Token: 0x0603A4E5 RID: 238821 RVA: 0x0107AAEB File Offset: 0x01078CEB
 		[NullableContext(2)]
 		public override EUiViewName? GetViewName(OpenSystemBoard inParams = null, GeneralContext context = null)
 		{

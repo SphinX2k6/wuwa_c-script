@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005FE7 RID: 24551
+	// Token: 0x02006641 RID: 26177
 	public enum EResetPlayerFocusType : byte
 	{
-		// Token: 0x0400FF99 RID: 65433
+		// Token: 0x04010D6A RID: 68970
 		ResetToDefaultDirection,
-		// Token: 0x0400FF9A RID: 65434
+		// Token: 0x04010D6B RID: 68971
 		ResetToFixedDirection
 	}
 }

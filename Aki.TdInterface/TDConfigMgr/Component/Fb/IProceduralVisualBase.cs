@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DC0 RID: 3520
+	// Token: 0x02000EBC RID: 3772
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IProceduralVisualBase
 	{
-		// Token: 0x06004FE4 RID: 20452 RVA: 0x000C59D7 File Offset: 0x000C3BD7
-		[NullableContext(1)]
+		// Token: 0x06005509 RID: 21769 RVA: 0x000D1227 File Offset: 0x000CF427
+		[NullableContext(0)]
 		public static IProceduralVisualBase Create(IProceduralVisualBase? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001A21 RID: 6689
-		// (get) Token: 0x06004FE5 RID: 20453 RVA: 0x000C59F6 File Offset: 0x000C3BF6
+		// Token: 0x17001B8C RID: 7052
+		// (get) Token: 0x0600550A RID: 21770 RVA: 0x000D1246 File Offset: 0x000CF446
 		public virtual EProceduralVisualType Type
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001A22 RID: 6690
-		// (get) Token: 0x06004FE6 RID: 20454 RVA: 0x000C5A03 File Offset: 0x000C3C03
+		// Token: 0x17001B8D RID: 7053
+		// (get) Token: 0x0600550B RID: 21771 RVA: 0x000D1253 File Offset: 0x000CF453
 		public virtual IConditionGroup Condition
 		{
 			get
@@ -50,13 +50,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002DD1 RID: 11729
+		// Token: 0x04003097 RID: 12439
 		private IProceduralVisualBase Instance;
 
-		// Token: 0x04002DD2 RID: 11730
+		// Token: 0x04003098 RID: 12440
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x04002DD3 RID: 11731
+		// Token: 0x04003099 RID: 12441
 		private bool _ConditionInited;
 	}
 }

@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001B9A RID: 7066
+// Token: 0x02001059 RID: 4185
 public struct FloroRanchRaceSelectViewParam
 {
-	// Token: 0x0400607C RID: 24700
+	// Token: 0x0400614B RID: 24907
 	[Nullable(1)]
 	public FloroRanchSubDungeonData SubDungeonData;
 
-	// Token: 0x0400607D RID: 24701
+	// Token: 0x0400614C RID: 24908
 	public EFloroRanchActivityDataType ActivityDataType;
 }

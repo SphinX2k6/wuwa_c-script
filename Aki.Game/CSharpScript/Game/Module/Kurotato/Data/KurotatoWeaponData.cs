@@ -5,21 +5,21 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.Kurotato.Data
 {
-	// Token: 0x020057A2 RID: 22434
+	// Token: 0x02004779 RID: 18297
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class KurotatoWeaponData
 	{
-		// Token: 0x06039010 RID: 233488 RVA: 0x00D8C53F File Offset: 0x00D8A73F
+		// Token: 0x0602DF20 RID: 188192 RVA: 0x00CDB2BB File Offset: 0x00CD94BB
 		public KurotatoWeaponData(KurotatoWeapon config, int activityId)
 		{
 			this.Config = config;
 			this.ActivityId = activityId;
 		}
 
-		// Token: 0x170088CA RID: 35018
-		// (get) Token: 0x06039011 RID: 233489 RVA: 0x00D8C555 File Offset: 0x00D8A755
-		// (set) Token: 0x06039012 RID: 233490 RVA: 0x00D8C55D File Offset: 0x00D8A75D
+		// Token: 0x17005C92 RID: 23698
+		// (get) Token: 0x0602DF21 RID: 188193 RVA: 0x00CDB2D1 File Offset: 0x00CD94D1
+		// (set) Token: 0x0602DF22 RID: 188194 RVA: 0x00CDB2D9 File Offset: 0x00CD94D9
 		public bool IsUnLock
 		{
 			get
@@ -32,8 +32,8 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			}
 		}
 
-		// Token: 0x170088CB RID: 35019
-		// (get) Token: 0x06039013 RID: 233491 RVA: 0x00D8C566 File Offset: 0x00D8A766
+		// Token: 0x17005C93 RID: 23699
+		// (get) Token: 0x0602DF23 RID: 188195 RVA: 0x00CDB2E2 File Offset: 0x00CD94E2
 		public bool HasRedDot
 		{
 			get
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			}
 		}
 
-		// Token: 0x06039014 RID: 233492 RVA: 0x00D8C598 File Offset: 0x00D8A798
+		// Token: 0x0602DF24 RID: 188196 RVA: 0x00CDB314 File Offset: 0x00CD9514
 		public void ReadRedDot(bool emitEvent = true)
 		{
 			if (!this.IsUnLock)
@@ -62,8 +62,8 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			EventSystem.Instance.Emit(EEventName.OnRefreshKurotatoWeaponAndPropRedDot);
 		}
 
-		// Token: 0x170088CC RID: 35020
-		// (get) Token: 0x06039015 RID: 233493 RVA: 0x00D8C5FC File Offset: 0x00D8A7FC
+		// Token: 0x17005C94 RID: 23700
+		// (get) Token: 0x0602DF25 RID: 188197 RVA: 0x00CDB378 File Offset: 0x00CD9578
 		public int Id
 		{
 			get
@@ -72,8 +72,8 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			}
 		}
 
-		// Token: 0x170088CD RID: 35021
-		// (get) Token: 0x06039016 RID: 233494 RVA: 0x00D8C618 File Offset: 0x00D8A818
+		// Token: 0x17005C95 RID: 23701
+		// (get) Token: 0x0602DF26 RID: 188198 RVA: 0x00CDB394 File Offset: 0x00CD9594
 		public string Name
 		{
 			get
@@ -82,8 +82,8 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			}
 		}
 
-		// Token: 0x170088CE RID: 35022
-		// (get) Token: 0x06039017 RID: 233495 RVA: 0x00D8C634 File Offset: 0x00D8A834
+		// Token: 0x17005C96 RID: 23702
+		// (get) Token: 0x0602DF27 RID: 188199 RVA: 0x00CDB3B0 File Offset: 0x00CD95B0
 		public string Desc
 		{
 			get
@@ -92,8 +92,8 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			}
 		}
 
-		// Token: 0x170088CF RID: 35023
-		// (get) Token: 0x06039018 RID: 233496 RVA: 0x00D8C650 File Offset: 0x00D8A850
+		// Token: 0x17005C97 RID: 23703
+		// (get) Token: 0x0602DF28 RID: 188200 RVA: 0x00CDB3CC File Offset: 0x00CD95CC
 		public string[] DescParam
 		{
 			get
@@ -108,8 +108,8 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			}
 		}
 
-		// Token: 0x170088D0 RID: 35024
-		// (get) Token: 0x06039019 RID: 233497 RVA: 0x00D8C694 File Offset: 0x00D8A894
+		// Token: 0x17005C98 RID: 23704
+		// (get) Token: 0x0602DF29 RID: 188201 RVA: 0x00CDB410 File Offset: 0x00CD9610
 		public int ConditionId
 		{
 			get
@@ -118,8 +118,8 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			}
 		}
 
-		// Token: 0x170088D1 RID: 35025
-		// (get) Token: 0x0603901A RID: 233498 RVA: 0x00D8C6CC File Offset: 0x00D8A8CC
+		// Token: 0x17005C99 RID: 23705
+		// (get) Token: 0x0602DF2A RID: 188202 RVA: 0x00CDB448 File Offset: 0x00CD9648
 		public int Quality
 		{
 			get
@@ -128,13 +128,13 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			}
 		}
 
-		// Token: 0x0401DDD1 RID: 122321
+		// Token: 0x04018867 RID: 100455
 		private readonly KurotatoWeapon Config;
 
-		// Token: 0x0401DDD2 RID: 122322
+		// Token: 0x04018868 RID: 100456
 		private bool IsUnLockInternal;
 
-		// Token: 0x0401DDD3 RID: 122323
+		// Token: 0x04018869 RID: 100457
 		private readonly int ActivityId;
 	}
 }

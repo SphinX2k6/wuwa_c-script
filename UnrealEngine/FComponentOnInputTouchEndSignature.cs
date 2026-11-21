@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200095D RID: 2397
+	// Token: 0x020001B6 RID: 438
 	[UnrealStructLayout(1, 1, UnrealReflectionPropertyTypeCode.MulticastSparseDelegate)]
 	public sealed class FComponentOnInputTouchEndSignature : FSparseDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0600877F RID: 34687 RVA: 0x000C1E97 File Offset: 0x000C0097
+		// Token: 0x06002045 RID: 8261 RVA: 0x0002F5D7 File Offset: 0x0002D7D7
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FComponentOnInputTouchEndSignature.StaticFunctionPtr();
 		}
 
-		// Token: 0x06008780 RID: 34688 RVA: 0x000C1EA3 File Offset: 0x000C00A3
+		// Token: 0x06002046 RID: 8262 RVA: 0x0002F5E3 File Offset: 0x0002D7E3
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FComponentOnInputTouchEndSignature._FunctionPtr == IntPtr.Zero)
@@ -27,8 +27,8 @@ namespace UnrealEngine
 			return FComponentOnInputTouchEndSignature._FunctionPtr;
 		}
 
-		// Token: 0x17002004 RID: 8196
-		// (get) Token: 0x06008781 RID: 34689 RVA: 0x000C1EC6 File Offset: 0x000C00C6
+		// Token: 0x1700047E RID: 1150
+		// (get) Token: 0x06002047 RID: 8263 RVA: 0x0002F606 File Offset: 0x0002D806
 		public override FName DelegateName
 		{
 			get
@@ -37,21 +37,20 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06008782 RID: 34690 RVA: 0x000C1ECD File Offset: 0x000C00CD
+		// Token: 0x06002048 RID: 8264 RVA: 0x0002F60D File Offset: 0x0002D80D
 		[NullableContext(2)]
 		public FComponentOnInputTouchEndSignature(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06008783 RID: 34691 RVA: 0x000C1ED7 File Offset: 0x000C00D7
+		// Token: 0x06002049 RID: 8265 RVA: 0x0002F617 File Offset: 0x0002D817
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<TEnumAsByte<ETouchIndex>, UPrimitiveComponent>) ?? ((Action<TEnumAsByte<ETouchIndex>, UPrimitiveComponent>)Delegate.CreateDelegate(typeof(Action<TEnumAsByte<ETouchIndex>, UPrimitiveComponent>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x06008784 RID: 34692 RVA: 0x000C1F0C File Offset: 0x000C010C
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0600204A RID: 8266 RVA: 0x0002F64C File Offset: 0x0002D84C
 		public void Add([Nullable(new byte[]
 		{
 			1,
@@ -72,8 +71,7 @@ namespace UnrealEngine
 			base.Add(delegateName, Callback, FComponentOnInputTouchEndSignature.RegisterId);
 		}
 
-		// Token: 0x06008785 RID: 34693 RVA: 0x000C1F5C File Offset: 0x000C015C
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x0600204B RID: 8267 RVA: 0x0002F69C File Offset: 0x0002D89C
 		public void Remove([Nullable(new byte[]
 		{
 			1,
@@ -85,10 +83,9 @@ namespace UnrealEngine
 			base.Remove(delegateName, Callback);
 		}
 
-		// Token: 0x06008786 RID: 34694 RVA: 0x000C1F7C File Offset: 0x000C017C
+		// Token: 0x0600204C RID: 8268 RVA: 0x0002F6BC File Offset: 0x0002D8BC
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(ETouchIndex FingerIndex, UPrimitiveComponent TouchedComponent)
 		{
 			FComponentOnInputTouchEndSignature.__FComponentOnInputTouchEndSignature_DelegateParams* ptr = stackalloc FComponentOnInputTouchEndSignature.__FComponentOnInputTouchEndSignature_DelegateParams[(UIntPtr)31] + 15L / (long)sizeof(FComponentOnInputTouchEndSignature.__FComponentOnInputTouchEndSignature_DelegateParams) & -16L;
@@ -98,10 +95,9 @@ namespace UnrealEngine
 			FSparseDelegate.BroadcastInternal(base.GetOwner().NativePtr, this.DelegateName, (void*)ptr);
 		}
 
-		// Token: 0x06008787 RID: 34695 RVA: 0x000C1FE4 File Offset: 0x000C01E4
+		// Token: 0x0600204D RID: 8269 RVA: 0x0002F724 File Offset: 0x0002D924
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<TEnumAsByte<ETouchIndex>, UPrimitiveComponent> action = target as Action<TEnumAsByte<ETouchIndex>, UPrimitiveComponent>;
@@ -113,35 +109,35 @@ namespace UnrealEngine
 			action(((FComponentOnInputTouchEndSignature.__FComponentOnInputTouchEndSignature_DelegateParams*)__Parameters)->FingerIndex, orCreateUObjectByNativePointer);
 		}
 
-		// Token: 0x0400406F RID: 16495
+		// Token: 0x04000ABB RID: 2747
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x04004070 RID: 16496
+		// Token: 0x04000ABC RID: 2748
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/Engine.ComponentOnInputTouchEndSignature__DelegateSignature";
 
-		// Token: 0x04004071 RID: 16497
+		// Token: 0x04000ABD RID: 2749
 		private static int RegisterId;
 
-		// Token: 0x02002CD7 RID: 11479
+		// Token: 0x02000993 RID: 2451
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
-		protected ref struct __FComponentOnInputTouchEndSignature_DelegateParams
+		private ref struct __FComponentOnInputTouchEndSignature_DelegateParams
 		{
-			// Token: 0x04016681 RID: 91777
+			// Token: 0x040058F6 RID: 22774
 			[FieldOffset(0)]
 			public TEnumAsByte<ETouchIndex> FingerIndex;
 
-			// Token: 0x04016682 RID: 91778
+			// Token: 0x040058F7 RID: 22775
 			[FieldOffset(8)]
 			public IntPtr TouchedComponent;
 		}
 
-		// Token: 0x02002CD8 RID: 11480
+		// Token: 0x02000994 RID: 2452
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04016683 RID: 91779
+			// Token: 0x040058F8 RID: 22776
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

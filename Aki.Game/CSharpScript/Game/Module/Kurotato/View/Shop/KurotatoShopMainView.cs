@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -16,17 +15,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.Shop
 {
-	// Token: 0x0200571E RID: 22302
+	// Token: 0x020046F5 RID: 18165
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class KurotatoShopMainView : UiViewBase
 	{
-		// Token: 0x06038B2F RID: 232239 RVA: 0x00D73A17 File Offset: 0x00D71C17
+		// Token: 0x0602DA3E RID: 186942 RVA: 0x00CC1FF7 File Offset: 0x00CC01F7
 		public KurotatoShopMainView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06038B30 RID: 232240 RVA: 0x00D73A58 File Offset: 0x00D71C58
+		// Token: 0x0602DA3F RID: 186943 RVA: 0x00CC2038 File Offset: 0x00CC0238
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 17;
@@ -79,7 +78,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06038B31 RID: 232241 RVA: 0x00D73D1C File Offset: 0x00D71F1C
+		// Token: 0x0602DA40 RID: 186944 RVA: 0x00CC22FC File Offset: 0x00CC04FC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			KurotatoShopMainView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -90,7 +89,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038B32 RID: 232242 RVA: 0x00D73D60 File Offset: 0x00D71F60
+		// Token: 0x0602DA41 RID: 186945 RVA: 0x00CC2340 File Offset: 0x00CC0540
 		private UniTask CreatePopupPanel()
 		{
 			KurotatoShopMainView.<CreatePopupPanel>d__9 <CreatePopupPanel>d__;
@@ -101,7 +100,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			return <CreatePopupPanel>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038B33 RID: 232243 RVA: 0x00D73DA3 File Offset: 0x00D71FA3
+		// Token: 0x0602DA42 RID: 186946 RVA: 0x00CC2383 File Offset: 0x00CC0583
 		private void CreateItemSelectLayout()
 		{
 			this.ItemSelectLayout = new GenericLayout<KurotatoShopSelectCard, IKurotatoShopSelectCardData>(base.GetHorizontalLayout(4), delegate()
@@ -114,7 +113,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			}, null, false, true);
 		}
 
-		// Token: 0x06038B34 RID: 232244 RVA: 0x00D73DC6 File Offset: 0x00D71FC6
+		// Token: 0x0602DA43 RID: 186947 RVA: 0x00CC23A6 File Offset: 0x00CC05A6
 		private void CreateItemLayout()
 		{
 			this.WeaponLayout = new GenericLayout<KurotatoWeaponSmallItemGrid, IKurotatoSmallItemGridData>(base.GetHorizontalLayout(13), delegate()
@@ -125,7 +124,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			}, null, false, true);
 		}
 
-		// Token: 0x06038B35 RID: 232245 RVA: 0x00D73DEC File Offset: 0x00D71FEC
+		// Token: 0x0602DA44 RID: 186948 RVA: 0x00CC23CC File Offset: 0x00CC05CC
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.KurotatoOnShopDataChanged, new Action(this.OnUpgradeRewardChanged));
@@ -136,7 +135,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			KurotatoModel.Instance.BattleData.BehaviorDelegate.AddTreeVarUpdateDelegate(EKurotatoSystemVarType.Gold.ToEnumString(), new TTreeVarUpdateDelegate(this.OnCurrencyUpdate));
 		}
 
-		// Token: 0x06038B36 RID: 232246 RVA: 0x00D73EAC File Offset: 0x00D720AC
+		// Token: 0x0602DA45 RID: 186949 RVA: 0x00CC248C File Offset: 0x00CC068C
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.KurotatoOnShopDataChanged, new Action(this.OnUpgradeRewardChanged));
@@ -147,7 +146,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			KurotatoModel.Instance.BattleData.BehaviorDelegate.RemoveTreeVarUpdateDelegate(EKurotatoSystemVarType.Gold.ToEnumString(), new TTreeVarUpdateDelegate(this.OnCurrencyUpdate));
 		}
 
-		// Token: 0x06038B37 RID: 232247 RVA: 0x00D73F6B File Offset: 0x00D7216B
+		// Token: 0x0602DA46 RID: 186950 RVA: 0x00CC254B File Offset: 0x00CC074B
 		protected override void OnStart()
 		{
 			this.PendingShopRefreshAnim = true;
@@ -155,14 +154,14 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			this.CommonPopupPanel.SetTitleLocalText("Kurotato_Shop_Title");
 		}
 
-		// Token: 0x06038B38 RID: 232248 RVA: 0x00D73F8A File Offset: 0x00D7218A
+		// Token: 0x0602DA47 RID: 186951 RVA: 0x00CC256A File Offset: 0x00CC076A
 		protected override void OnBeforeShow()
 		{
 			this.CommonPopupPanel.HideAttrChangeFx();
 			this.OnUpgradeRewardChanged();
 		}
 
-		// Token: 0x06038B39 RID: 232249 RVA: 0x00D73FA0 File Offset: 0x00D721A0
+		// Token: 0x0602DA48 RID: 186952 RVA: 0x00CC2580 File Offset: 0x00CC0780
 		private void RefreshSelectLayout()
 		{
 			KurotatoModel instance = KurotatoModel.Instance;
@@ -207,7 +206,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			}
 		}
 
-		// Token: 0x06038B3A RID: 232250 RVA: 0x00D7415C File Offset: 0x00D7235C
+		// Token: 0x0602DA49 RID: 186953 RVA: 0x00CC273C File Offset: 0x00CC093C
 		private bool IsSelectDataSame(List<IKurotatoShopSelectCardData> newData)
 		{
 			IReadOnlyList<IKurotatoShopSelectCardData> datas = this.ItemSelectLayout.GetDatas();
@@ -227,7 +226,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			return true;
 		}
 
-		// Token: 0x06038B3B RID: 232251 RVA: 0x00D74220 File Offset: 0x00D72420
+		// Token: 0x0602DA4A RID: 186954 RVA: 0x00CC2800 File Offset: 0x00CC0A00
 		private void RefreshWave()
 		{
 			KurotatoModel instance = KurotatoModel.Instance;
@@ -245,7 +244,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			uuitext.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x06038B3C RID: 232252 RVA: 0x00D74298 File Offset: 0x00D72498
+		// Token: 0x0602DA4B RID: 186955 RVA: 0x00CC2878 File Offset: 0x00CC0A78
 		private void RefreshRefreshInfo()
 		{
 			KurotatoModel instance = KurotatoModel.Instance;
@@ -264,7 +263,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			uuiitem.SetChangeColor(bUseChangeColor, fcolor);
 		}
 
-		// Token: 0x06038B3D RID: 232253 RVA: 0x00D7431C File Offset: 0x00D7251C
+		// Token: 0x0602DA4C RID: 186956 RVA: 0x00CC28FC File Offset: 0x00CC0AFC
 		private void RefreshWeaponLayout(int? composeIncId = null)
 		{
 			List<IKurotatoWeaponData> holdWeaponData = KurotatoModel.Instance.GetHoldWeaponData();
@@ -290,7 +289,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			this.WeaponLayout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x06038B3E RID: 232254 RVA: 0x00D74420 File Offset: 0x00D72620
+		// Token: 0x0602DA4D RID: 186957 RVA: 0x00CC2A00 File Offset: 0x00CC0C00
 		private bool IsWeaponDataSame(List<IKurotatoSmallItemGridData> newData)
 		{
 			IReadOnlyList<IKurotatoSmallItemGridData> datas = this.WeaponLayout.GetDatas();
@@ -316,7 +315,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			return true;
 		}
 
-		// Token: 0x06038B3F RID: 232255 RVA: 0x00D744D0 File Offset: 0x00D726D0
+		// Token: 0x0602DA4E RID: 186958 RVA: 0x00CC2AB0 File Offset: 0x00CC0CB0
 		private void RefreshWaveTip()
 		{
 			KurotatoModel instance = KurotatoModel.Instance;
@@ -358,15 +357,32 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			}
 		}
 
-		// Token: 0x06038B40 RID: 232256 RVA: 0x00D74694 File Offset: 0x00D72894
+		// Token: 0x0602DA4F RID: 186959 RVA: 0x00CC2C74 File Offset: 0x00CC0E74
 		private void OnClickSelectConfirm(int selectionId)
 		{
 			List<KurotatoShopProductPbData> shopData = KurotatoModel.Instance.GetShopData();
-			if (shopData.Any((KurotatoShopProductPbData item) => item.SelectionId == selectionId && item.IsBought))
+			bool flag = false;
+			for (int i = 0; i < shopData.Count; i++)
+			{
+				if (shopData[i].SelectionId == selectionId && shopData[i].IsBought)
+				{
+					flag = true;
+					break;
+				}
+			}
+			if (flag)
 			{
 				return;
 			}
-			KurotatoShopProductPbData kurotatoShopProductPbData = shopData.FirstOrDefault((KurotatoShopProductPbData item) => item.SelectionId == selectionId);
+			KurotatoShopProductPbData kurotatoShopProductPbData = null;
+			for (int j = 0; j < shopData.Count; j++)
+			{
+				if (shopData[j].SelectionId == selectionId)
+				{
+					kurotatoShopProductPbData = shopData[j];
+					break;
+				}
+			}
 			if (((kurotatoShopProductPbData != null) ? kurotatoShopProductPbData.ItemData : null) != null && this.IsShopItemQuantityMax(kurotatoShopProductPbData.ItemData.ItemId))
 			{
 				ScrollingTipsController.Instance.ShowTipsByTextId("Kurotato_Item_Quantity_Max", Array.Empty<object>());
@@ -388,14 +404,14 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			KurotatoController.Instance.RequestKurotatoShopProductSelect(selectionId).Forget<bool>();
 		}
 
-		// Token: 0x06038B41 RID: 232257 RVA: 0x00D747C4 File Offset: 0x00D729C4
+		// Token: 0x0602DA50 RID: 186960 RVA: 0x00CC2DD8 File Offset: 0x00CC0FD8
 		private bool IsShopItemQuantityMax(int itemId)
 		{
 			KurotatoItem? itemConfigByItemId = KurotatoConfig.Instance.GetItemConfigByItemId(itemId);
 			return itemConfigByItemId != null && KurotatoModel.Instance.GetHoldItemCount(itemId) >= itemConfigByItemId.Value.MaxStackCount;
 		}
 
-		// Token: 0x06038B42 RID: 232258 RVA: 0x00D74808 File Offset: 0x00D72A08
+		// Token: 0x0602DA51 RID: 186961 RVA: 0x00CC2E1C File Offset: 0x00CC101C
 		private bool CanComposeAnyHoldWeapon()
 		{
 			KurotatoConfig instance = KurotatoConfig.Instance;
@@ -422,7 +438,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			return false;
 		}
 
-		// Token: 0x06038B43 RID: 232259 RVA: 0x00D74904 File Offset: 0x00D72B04
+		// Token: 0x0602DA52 RID: 186962 RVA: 0x00CC2F18 File Offset: 0x00CC1118
 		private void OnUpgradeRewardChanged()
 		{
 			this.RefreshSelectLayout();
@@ -430,7 +446,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			this.RefreshWaveTip();
 		}
 
-		// Token: 0x06038B44 RID: 232260 RVA: 0x00D74918 File Offset: 0x00D72B18
+		// Token: 0x0602DA53 RID: 186963 RVA: 0x00CC2F2C File Offset: 0x00CC112C
 		private void OnUpdateWeapon()
 		{
 			this.RefreshWeaponLayout(null);
@@ -439,14 +455,14 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			this.RefreshCardsBuildTagLevel();
 		}
 
-		// Token: 0x06038B45 RID: 232261 RVA: 0x00D74946 File Offset: 0x00D72B46
+		// Token: 0x0602DA54 RID: 186964 RVA: 0x00CC2F5A File Offset: 0x00CC115A
 		private void OnWeaponRefined(int newWeaponIncId)
 		{
 			this.RefreshWeaponLayout(new int?(newWeaponIncId));
 			this.RefreshCardsComposeState();
 		}
 
-		// Token: 0x06038B46 RID: 232262 RVA: 0x00D7495C File Offset: 0x00D72B5C
+		// Token: 0x0602DA55 RID: 186965 RVA: 0x00CC2F70 File Offset: 0x00CC1170
 		private void OnItemUpdate(int itemId, bool bIsAdd)
 		{
 			this.RefreshWaveTip();
@@ -457,13 +473,13 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			}
 		}
 
-		// Token: 0x06038B47 RID: 232263 RVA: 0x00D749C8 File Offset: 0x00D72BC8
+		// Token: 0x0602DA56 RID: 186966 RVA: 0x00CC2FDC File Offset: 0x00CC11DC
 		private void OnNextWaveTypeUpdate()
 		{
 			this.RefreshWaveTip();
 		}
 
-		// Token: 0x06038B48 RID: 232264 RVA: 0x00D749D0 File Offset: 0x00D72BD0
+		// Token: 0x0602DA57 RID: 186967 RVA: 0x00CC2FE4 File Offset: 0x00CC11E4
 		private void RefreshCardsComposeState()
 		{
 			HashSet<int> upgradeSelectionIds = this.ComposeHighlight.UpgradeSelectionIds;
@@ -474,7 +490,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			}
 		}
 
-		// Token: 0x06038B49 RID: 232265 RVA: 0x00D74A50 File Offset: 0x00D72C50
+		// Token: 0x0602DA58 RID: 186968 RVA: 0x00CC3064 File Offset: 0x00CC1264
 		private void RefreshCardsBuildTagLevel()
 		{
 			GenericLayout<KurotatoShopSelectCard, IKurotatoShopSelectCardData> itemSelectLayout = this.ItemSelectLayout;
@@ -484,7 +500,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			}
 		}
 
-		// Token: 0x06038B4A RID: 232266 RVA: 0x00D74AB8 File Offset: 0x00D72CB8
+		// Token: 0x0602DA59 RID: 186969 RVA: 0x00CC30CC File Offset: 0x00CC12CC
 		private void OnCurrencyUpdate([Nullable(2)] VarDefinePb lastVarDefine, VarDefinePb newVarDefine)
 		{
 			GenericLayout<KurotatoShopSelectCard, IKurotatoShopSelectCardData> itemSelectLayout = this.ItemSelectLayout;
@@ -495,18 +511,24 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			this.RefreshRefreshInfo();
 		}
 
-		// Token: 0x06038B4B RID: 232267 RVA: 0x00D74B24 File Offset: 0x00D72D24
+		// Token: 0x0602DA5A RID: 186970 RVA: 0x00CC3138 File Offset: 0x00CC1338
 		private void OnClickRefresh()
 		{
 			KurotatoModel instance = KurotatoModel.Instance;
 			List<KurotatoShopProductPbData> shopData = instance.GetShopData();
-			if (shopData.Count > 0)
+			bool flag = shopData.Count > 0;
+			for (int i = 0; i < shopData.Count; i++)
 			{
-				if (shopData.All((KurotatoShopProductPbData item) => !item.IsBought && item.IsLocked))
+				if (shopData[i].IsBought || !shopData[i].IsLocked)
 				{
-					ScrollingTipsController.Instance.ShowTipsByTextId("ErrorCode_KurotatoShopReflashFail_Text", Array.Empty<object>());
-					return;
+					flag = false;
+					break;
 				}
+			}
+			if (flag)
+			{
+				ScrollingTipsController.Instance.ShowTipsByTextId("ErrorCode_KurotatoShopReflashFail_Text", Array.Empty<object>());
+				return;
 			}
 			if (instance.BattleData.GetCurrencyCount() < instance.GetRefreshCost())
 			{
@@ -523,7 +545,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			}).Forget();
 		}
 
-		// Token: 0x06038B4C RID: 232268 RVA: 0x00D74BD4 File Offset: 0x00D72DD4
+		// Token: 0x0602DA5B RID: 186971 RVA: 0x00CC31F4 File Offset: 0x00CC13F4
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -608,7 +630,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			}
 		}
 
-		// Token: 0x06038B4D RID: 232269 RVA: 0x00D74D04 File Offset: 0x00D72F04
+		// Token: 0x0602DA5C RID: 186972 RVA: 0x00CC3324 File Offset: 0x00CC1524
 		[NullableContext(2)]
 		private KurotatoShopSelectCard GetNthRecommendCard(int idx)
 		{
@@ -633,7 +655,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			return null;
 		}
 
-		// Token: 0x06038B4E RID: 232270 RVA: 0x00D74D80 File Offset: 0x00D72F80
+		// Token: 0x0602DA5D RID: 186973 RVA: 0x00CC33A0 File Offset: 0x00CC15A0
 		[NullableContext(2)]
 		private KurotatoShopSelectCard GetNthBuildTagCard(int idx)
 		{
@@ -658,15 +680,23 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			return null;
 		}
 
-		// Token: 0x06038B4F RID: 232271 RVA: 0x00D74DFC File Offset: 0x00D72FFC
+		// Token: 0x0602DA5E RID: 186974 RVA: 0x00CC341C File Offset: 0x00CC161C
 		private bool HasAvailableShopItem()
 		{
 			KurotatoModel instance = KurotatoModel.Instance;
 			int currencyCount = instance.BattleData.GetCurrencyCount();
-			return instance.GetShopData().Any((KurotatoShopProductPbData item) => !item.IsBought && currencyCount >= item.Cost);
+			List<KurotatoShopProductPbData> shopData = instance.GetShopData();
+			for (int i = 0; i < shopData.Count; i++)
+			{
+				if (!shopData[i].IsBought && currencyCount >= shopData[i].Cost)
+				{
+					return true;
+				}
+			}
+			return false;
 		}
 
-		// Token: 0x06038B50 RID: 232272 RVA: 0x00D74E40 File Offset: 0x00D73040
+		// Token: 0x0602DA5F RID: 186975 RVA: 0x00CC3474 File Offset: 0x00CC1674
 		private void OpenNotBuyConfirm(bool isEndLess)
 		{
 			ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.KurotatoNotBuyConfirm);
@@ -686,7 +716,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 		}
 
-		// Token: 0x06038B51 RID: 232273 RVA: 0x00D74EE7 File Offset: 0x00D730E7
+		// Token: 0x0602DA60 RID: 186976 RVA: 0x00CC351B File Offset: 0x00CC171B
 		private void OnClickGo()
 		{
 			if (KurotatoModel.Instance.HideShopNotBuyConfirmBox || !this.HasAvailableShopItem())
@@ -697,13 +727,13 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			this.OpenNotBuyConfirm(false);
 		}
 
-		// Token: 0x06038B52 RID: 232274 RVA: 0x00D74F15 File Offset: 0x00D73115
+		// Token: 0x0602DA61 RID: 186977 RVA: 0x00CC3549 File Offset: 0x00CC1749
 		private void OnToggleNotBuyConfirm(bool isSelectedOn)
 		{
 			KurotatoModel.Instance.HideShopNotBuyConfirmBox = isSelectedOn;
 		}
 
-		// Token: 0x06038B53 RID: 232275 RVA: 0x00D74F24 File Offset: 0x00D73124
+		// Token: 0x0602DA62 RID: 186978 RVA: 0x00CC3558 File Offset: 0x00CC1758
 		private void OnClickWeaponGrid(IKurotatoSmallItemGridData data, EToggleState state, int gridIndex)
 		{
 			KurotatoWeaponSmallItemGrid layoutItemByIndex = this.WeaponLayout.GetLayoutItemByIndex(gridIndex);
@@ -749,7 +779,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			});
 		}
 
-		// Token: 0x06038B54 RID: 232276 RVA: 0x00D75068 File Offset: 0x00D73268
+		// Token: 0x0602DA63 RID: 186979 RVA: 0x00CC369C File Offset: 0x00CC189C
 		private void OnClickBuildTag(int selectionId, EToggleState state)
 		{
 			if (state != EToggleState.ETT_Checked)
@@ -765,7 +795,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			}
 		}
 
-		// Token: 0x06038B55 RID: 232277 RVA: 0x00D750D0 File Offset: 0x00D732D0
+		// Token: 0x0602DA64 RID: 186980 RVA: 0x00CC3704 File Offset: 0x00CC1904
 		private void OnCardAttrPreview(int selectionId, bool active, IReadOnlyList<IKurotatoAttrPreviewDelta> deltas)
 		{
 			if (!active)
@@ -784,10 +814,10 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			}
 		}
 
-		// Token: 0x0401DC25 RID: 121893
+		// Token: 0x040186BB RID: 100027
 		private readonly KurotatoCommonPopupPanel CommonPopupPanel = new KurotatoCommonPopupPanel();
 
-		// Token: 0x0401DC26 RID: 121894
+		// Token: 0x040186BC RID: 100028
 		[Nullable(new byte[]
 		{
 			2,
@@ -796,7 +826,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 		})]
 		private GenericLayout<KurotatoShopSelectCard, IKurotatoShopSelectCardData> ItemSelectLayout;
 
-		// Token: 0x0401DC27 RID: 121895
+		// Token: 0x040186BD RID: 100029
 		[Nullable(new byte[]
 		{
 			2,
@@ -805,10 +835,10 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 		})]
 		private GenericLayout<KurotatoWeaponSmallItemGrid, IKurotatoSmallItemGridData> WeaponLayout;
 
-		// Token: 0x0401DC28 RID: 121896
+		// Token: 0x040186BE RID: 100030
 		private bool PendingShopRefreshAnim;
 
-		// Token: 0x0401DC29 RID: 121897
+		// Token: 0x040186BF RID: 100031
 		private IKurotatoComposeHighlight ComposeHighlight = new KurotatoComposeHighlight
 		{
 			UpgradeSelectionIds = new HashSet<int>(),
@@ -816,59 +846,59 @@ namespace CSharpScript.Game.Module.Kurotato.View.Shop
 			BagPairArrowIncIds = new HashSet<int>()
 		};
 
-		// Token: 0x0200B8D4 RID: 47316
+		// Token: 0x0200A2F8 RID: 41720
 		[NullableContext(0)]
 		private class EChildComp
 		{
-			// Token: 0x04037E91 RID: 229009
+			// Token: 0x040328A6 RID: 207014
 			public const int CommonPopupPanel = 0;
 
-			// Token: 0x04037E92 RID: 229010
+			// Token: 0x040328A7 RID: 207015
 			public const int TipItem = 1;
 
-			// Token: 0x04037E93 RID: 229011
+			// Token: 0x040328A8 RID: 207016
 			public const int PanelWave = 2;
 
-			// Token: 0x04037E94 RID: 229012
+			// Token: 0x040328A9 RID: 207017
 			public const int TextWaveNum = 3;
 
-			// Token: 0x04037E95 RID: 229013
+			// Token: 0x040328AA RID: 207018
 			public const int HorizontalLayoutCard = 4;
 
-			// Token: 0x04037E96 RID: 229014
+			// Token: 0x040328AB RID: 207019
 			public const int CardItem = 5;
 
-			// Token: 0x04037E97 RID: 229015
+			// Token: 0x040328AC RID: 207020
 			public const int ButtonRefresh = 6;
 
-			// Token: 0x04037E98 RID: 229016
+			// Token: 0x040328AD RID: 207021
 			public const int TextRefreshNum = 7;
 
-			// Token: 0x04037E99 RID: 229017
+			// Token: 0x040328AE RID: 207022
 			public const int TextRefreshDiscount = 8;
 
-			// Token: 0x04037E9A RID: 229018
+			// Token: 0x040328AF RID: 207023
 			public const int ButtonGo = 9;
 
-			// Token: 0x04037E9B RID: 229019
+			// Token: 0x040328B0 RID: 207024
 			public const int PanelTipGoNormal = 10;
 
-			// Token: 0x04037E9C RID: 229020
+			// Token: 0x040328B1 RID: 207025
 			public const int PanelTipGoBoss = 11;
 
-			// Token: 0x04037E9D RID: 229021
+			// Token: 0x040328B2 RID: 207026
 			public const int TextBtnGoTip = 12;
 
-			// Token: 0x04037E9E RID: 229022
+			// Token: 0x040328B3 RID: 207027
 			public const int HorizontalLayoutItem = 13;
 
-			// Token: 0x04037E9F RID: 229023
+			// Token: 0x040328B4 RID: 207028
 			public const int ItemBase = 14;
 
-			// Token: 0x04037EA0 RID: 229024
+			// Token: 0x040328B5 RID: 207029
 			public const int PanelTipSpecial = 15;
 
-			// Token: 0x04037EA1 RID: 229025
+			// Token: 0x040328B6 RID: 207030
 			public const int PanelTipGoElite = 16;
 		}
 	}

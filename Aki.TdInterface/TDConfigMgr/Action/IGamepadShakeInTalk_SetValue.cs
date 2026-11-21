@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001AC8 RID: 6856
+	// Token: 0x02001C6F RID: 7279
 	public class IGamepadShakeInTalk_SetValue
 	{
-		// Token: 0x04005A70 RID: 23152
+		// Token: 0x04005EFA RID: 24314
 		public float DelayTime;
 
-		// Token: 0x04005A71 RID: 23153
-		[Nullable(1)]
+		// Token: 0x04005EFB RID: 24315
 		public IGamepadShakeOptions Options;
 	}
 }

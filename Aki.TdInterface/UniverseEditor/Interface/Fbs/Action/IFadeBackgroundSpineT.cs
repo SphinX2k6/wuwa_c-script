@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200677E RID: 26494
+	// Token: 0x02006DFE RID: 28158
 	public class IFadeBackgroundSpineT
 	{
-		// Token: 0x1700C4AA RID: 50346
-		// (get) Token: 0x0602E187 RID: 188807 RVA: 0x0064C21F File Offset: 0x0064A41F
-		// (set) Token: 0x0602E188 RID: 188808 RVA: 0x0064C227 File Offset: 0x0064A427
+		// Token: 0x1700CE60 RID: 52832
+		// (get) Token: 0x060309CD RID: 199117 RVA: 0x00699963 File Offset: 0x00697B63
+		// (set) Token: 0x060309CE RID: 199118 RVA: 0x0069996B File Offset: 0x00697B6B
 		public EFadeBackgroundType Type { get; set; }
 
-		// Token: 0x1700C4AB RID: 50347
-		// (get) Token: 0x0602E189 RID: 188809 RVA: 0x0064C230 File Offset: 0x0064A430
-		// (set) Token: 0x0602E18A RID: 188810 RVA: 0x0064C238 File Offset: 0x0064A438
+		// Token: 0x1700CE61 RID: 52833
+		// (get) Token: 0x060309CF RID: 199119 RVA: 0x00699974 File Offset: 0x00697B74
+		// (set) Token: 0x060309D0 RID: 199120 RVA: 0x0069997C File Offset: 0x00697B7C
 		public int SpineId { get; set; }
 
-		// Token: 0x1700C4AC RID: 50348
-		// (get) Token: 0x0602E18B RID: 188811 RVA: 0x0064C241 File Offset: 0x0064A441
-		// (set) Token: 0x0602E18C RID: 188812 RVA: 0x0064C249 File Offset: 0x0064A449
+		// Token: 0x1700CE62 RID: 52834
+		// (get) Token: 0x060309D1 RID: 199121 RVA: 0x00699985 File Offset: 0x00697B85
+		// (set) Token: 0x060309D2 RID: 199122 RVA: 0x0069998D File Offset: 0x00697B8D
 		public IFadeBackgroundFadeInEffectT FadeInEffect { get; set; }
 
-		// Token: 0x1700C4AD RID: 50349
-		// (get) Token: 0x0602E18D RID: 188813 RVA: 0x0064C252 File Offset: 0x0064A452
-		// (set) Token: 0x0602E18E RID: 188814 RVA: 0x0064C25A File Offset: 0x0064A45A
+		// Token: 0x1700CE63 RID: 52835
+		// (get) Token: 0x060309D3 RID: 199123 RVA: 0x00699996 File Offset: 0x00697B96
+		// (set) Token: 0x060309D4 RID: 199124 RVA: 0x0069999E File Offset: 0x00697B9E
 		public IFadeBackgroundFadeOutEffectT FadeOutEffect { get; set; }
 
-		// Token: 0x0602E18F RID: 188815 RVA: 0x0064C263 File Offset: 0x0064A463
+		// Token: 0x060309D5 RID: 199125 RVA: 0x006999A7 File Offset: 0x00697BA7
 		public IFadeBackgroundSpineT()
 		{
 			this.Type = EFadeBackgroundType.Spine;

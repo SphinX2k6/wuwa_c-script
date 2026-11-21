@@ -4,13 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020EE RID: 8430
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x0200234F RID: 9039
 	public class OpenSimpleGameplay : ActionParams
 	{
-		// Token: 0x0600B946 RID: 47430 RVA: 0x001AC580 File Offset: 0x001AA780
-		[NullableContext(1)]
+		// Token: 0x0600C4D2 RID: 50386 RVA: 0x001C36E0 File Offset: 0x001C18E0
 		private OpenSimpleGameplay_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B947 RID: 47431 RVA: 0x001AC5B8 File Offset: 0x001AA7B8
-		[NullableContext(1)]
+		// Token: 0x0600C4D3 RID: 50387 RVA: 0x001C3718 File Offset: 0x001C1918
 		public static OpenSimpleGameplay Create([Nullable(2)] OpenSimpleGameplay instance)
 		{
 			if (instance == null)
@@ -39,8 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B948 RID: 47432 RVA: 0x001AC5CB File Offset: 0x001AA7CB
-		[NullableContext(1)]
+		// Token: 0x0600C4D4 RID: 50388 RVA: 0x001C372B File Offset: 0x001C192B
 		public static OpenSimpleGameplay CreateFromSetValue([Nullable(2)] OpenSimpleGameplay_SetValue value)
 		{
 			if (value == null)
@@ -53,8 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B949 RID: 47433 RVA: 0x001AC5DE File Offset: 0x001AA7DE
-		[NullableContext(1)]
+		// Token: 0x0600C4D5 RID: 50389 RVA: 0x001C373E File Offset: 0x001C193E
 		public OpenSimpleGameplay_SetValue ToSetValue()
 		{
 			return new OpenSimpleGameplay_SetValue
@@ -65,13 +59,11 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003897 RID: 14487
-		// (get) Token: 0x0600B94A RID: 47434 RVA: 0x001AC609 File Offset: 0x001AA809
-		// (set) Token: 0x0600B94B RID: 47435 RVA: 0x001AC630 File Offset: 0x001AA830
-		[Nullable(1)]
+		// Token: 0x17003B83 RID: 15235
+		// (get) Token: 0x0600C4D6 RID: 50390 RVA: 0x001C3769 File Offset: 0x001C1969
+		// (set) Token: 0x0600C4D7 RID: 50391 RVA: 0x001C3790 File Offset: 0x001C1990
 		public virtual IUiGame GameplayConfig
 		{
-			[NullableContext(1)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -85,18 +77,19 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return pocoInterface.GameplayConfig;
 			}
-			[NullableContext(1)]
 			set
 			{
 				this.GetOrCreatePoco().GameplayConfig = value;
 			}
 		}
 
-		// Token: 0x17003898 RID: 14488
-		// (get) Token: 0x0600B94C RID: 47436 RVA: 0x001AC63E File Offset: 0x001AA83E
-		// (set) Token: 0x0600B94D RID: 47437 RVA: 0x001AC665 File Offset: 0x001AA865
+		// Token: 0x17003B84 RID: 15236
+		// (get) Token: 0x0600C4D8 RID: 50392 RVA: 0x001C379E File Offset: 0x001C199E
+		// (set) Token: 0x0600C4D9 RID: 50393 RVA: 0x001C37C5 File Offset: 0x001C19C5
+		[Nullable(2)]
 		public virtual string FinishSendSelfEvent
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -110,17 +103,20 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return pocoInterface.FinishSendSelfEvent;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().FinishSendSelfEvent = value;
 			}
 		}
 
-		// Token: 0x17003899 RID: 14489
-		// (get) Token: 0x0600B94E RID: 47438 RVA: 0x001AC673 File Offset: 0x001AA873
-		// (set) Token: 0x0600B94F RID: 47439 RVA: 0x001AC69A File Offset: 0x001AA89A
+		// Token: 0x17003B85 RID: 15237
+		// (get) Token: 0x0600C4DA RID: 50394 RVA: 0x001C37D3 File Offset: 0x001C19D3
+		// (set) Token: 0x0600C4DB RID: 50395 RVA: 0x001C37FA File Offset: 0x001C19FA
+		[Nullable(2)]
 		public virtual string FailSendSelfEvent
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -134,16 +130,19 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return pocoInterface.FailSendSelfEvent;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().FailSendSelfEvent = value;
 			}
 		}
 
-		// Token: 0x04006EF3 RID: 28403
+		// Token: 0x04007527 RID: 29991
+		[Nullable(2)]
 		protected new OpenSimpleGameplay FbInstance;
 
-		// Token: 0x04006EF4 RID: 28404
+		// Token: 0x04007528 RID: 29992
+		[Nullable(2)]
 		protected OpenSimpleGameplay_SetValue PocoInterface;
 	}
 }

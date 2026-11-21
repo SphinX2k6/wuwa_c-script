@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001311 RID: 4881
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001461 RID: 5217
 	public class ITrackRuleFindFirstNotMatchState : ITrackRuleTypeBase
 	{
-		// Token: 0x06007017 RID: 28695 RVA: 0x0010EE01 File Offset: 0x0010D001
+		// Token: 0x060076B7 RID: 30391 RVA: 0x0011D36D File Offset: 0x0011B56D
 		public static ITrackRuleFindFirstNotMatchState Create(ITrackRuleFindFirstNotMatchState? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170023C8 RID: 9160
-		// (get) Token: 0x06007018 RID: 28696 RVA: 0x0010EE20 File Offset: 0x0010D020
+		// Token: 0x17002597 RID: 9623
+		// (get) Token: 0x060076B8 RID: 30392 RVA: 0x0011D38C File Offset: 0x0011B58C
 		public override ETrackRuleType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170023C9 RID: 9161
-		// (get) Token: 0x06007019 RID: 28697 RVA: 0x0010EE2D File Offset: 0x0010D02D
+		// Token: 0x17002598 RID: 9624
+		// (get) Token: 0x060076B9 RID: 30393 RVA: 0x0011D399 File Offset: 0x0011B599
 		public virtual string State
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040040A7 RID: 16551
+		// Token: 0x04004423 RID: 17443
 		private ITrackRuleFindFirstNotMatchState Instance;
 	}
 }

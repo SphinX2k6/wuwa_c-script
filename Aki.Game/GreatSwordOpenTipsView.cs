@@ -5,16 +5,16 @@ using Aki.TDConfigMgr.Action;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001DB1 RID: 7601
+// Token: 0x02001273 RID: 4723
 public class GreatSwordOpenTipsView : UiViewBase
 {
-	// Token: 0x0600E6BA RID: 59066 RVA: 0x00365CE9 File Offset: 0x00363EE9
+	// Token: 0x0600BAD8 RID: 47832 RVA: 0x00371949 File Offset: 0x0036FB49
 	[NullableContext(1)]
 	public GreatSwordOpenTipsView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600E6BB RID: 59067 RVA: 0x00365CF2 File Offset: 0x00363EF2
+	// Token: 0x0600BAD9 RID: 47833 RVA: 0x00371952 File Offset: 0x0036FB52
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,7 +24,7 @@ public class GreatSwordOpenTipsView : UiViewBase
 		};
 	}
 
-	// Token: 0x0600E6BC RID: 59068 RVA: 0x00365D2C File Offset: 0x00363F2C
+	// Token: 0x0600BADA RID: 47834 RVA: 0x0037198C File Offset: 0x0036FB8C
 	protected override void OnStart()
 	{
 		IGreatSwordChallenge greatSwordChallenge = this.OpenParam as IGreatSwordChallenge;
@@ -42,7 +42,7 @@ public class GreatSwordOpenTipsView : UiViewBase
 		}
 	}
 
-	// Token: 0x0600E6BD RID: 59069 RVA: 0x00365D9B File Offset: 0x00363F9B
+	// Token: 0x0600BADB RID: 47835 RVA: 0x003719FB File Offset: 0x0036FBFB
 	protected override void OnAfterShow()
 	{
 		base.CloseMe(null);

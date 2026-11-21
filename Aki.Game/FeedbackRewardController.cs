@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
@@ -9,25 +8,25 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 
-// Token: 0x02001AD3 RID: 6867
+// Token: 0x02000F92 RID: 3986
 [NullableContext(2)]
 [Nullable(0)]
 [Controller(0)]
 public class FeedbackRewardController : UiControllerBase
 {
-	// Token: 0x0600CBBF RID: 52159 RVA: 0x002E80C5 File Offset: 0x002E62C5
+	// Token: 0x06009FD0 RID: 40912 RVA: 0x002F3219 File Offset: 0x002F1419
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.GivebackInfoUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.GivebackInfoUpdateNotify));
 	}
 
-	// Token: 0x0600CBC0 RID: 52160 RVA: 0x002E80E3 File Offset: 0x002E62E3
+	// Token: 0x06009FD1 RID: 40913 RVA: 0x002F3237 File Offset: 0x002F1437
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.GivebackInfoUpdateNotify);
 	}
 
-	// Token: 0x0600CBC1 RID: 52161 RVA: 0x002E80F5 File Offset: 0x002E62F5
+	// Token: 0x06009FD2 RID: 40914 RVA: 0x002F3249 File Offset: 0x002F1449
 	protected override void OnAddEvents()
 	{
 		base.OnAddEvents();
@@ -35,7 +34,7 @@ public class FeedbackRewardController : UiControllerBase
 		EventSystem.Instance.Add(EEventName.WorldDone, new Action(this.WorldDone));
 	}
 
-	// Token: 0x0600CBC2 RID: 52162 RVA: 0x002E8135 File Offset: 0x002E6335
+	// Token: 0x06009FD3 RID: 40915 RVA: 0x002F3289 File Offset: 0x002F1489
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OnLoadingNetDataDone, new Action(this.OnLoadingNetDataDone));
@@ -43,19 +42,19 @@ public class FeedbackRewardController : UiControllerBase
 		base.OnRemoveEvents();
 	}
 
-	// Token: 0x0600CBC3 RID: 52163 RVA: 0x002E8175 File Offset: 0x002E6375
+	// Token: 0x06009FD4 RID: 40916 RVA: 0x002F32C9 File Offset: 0x002F14C9
 	private void OnLoadingNetDataDone()
 	{
 		this.GivebackInfoRequest().Forget();
 	}
 
-	// Token: 0x0600CBC4 RID: 52164 RVA: 0x002E8182 File Offset: 0x002E6382
+	// Token: 0x06009FD5 RID: 40917 RVA: 0x002F32D6 File Offset: 0x002F14D6
 	private void WorldDone()
 	{
 		this.TryPushSplashScreenTask(false);
 	}
 
-	// Token: 0x0600CBC5 RID: 52165 RVA: 0x002E818C File Offset: 0x002E638C
+	// Token: 0x06009FD6 RID: 40918 RVA: 0x002F32E0 File Offset: 0x002F14E0
 	private void TryPushSplashScreenTask(bool isInstantly = false)
 	{
 		if (this.HaveShowFeedbackRewardStartView || GameModeController.Instance.IsInInstance())
@@ -78,7 +77,7 @@ public class FeedbackRewardController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600CBC6 RID: 52166 RVA: 0x002E81E8 File Offset: 0x002E63E8
+	// Token: 0x06009FD7 RID: 40919 RVA: 0x002F333C File Offset: 0x002F153C
 	public UniTask GivebackInfoRequest()
 	{
 		FeedbackRewardController.<GivebackInfoRequest>d__8 <GivebackInfoRequest>d__;
@@ -89,12 +88,12 @@ public class FeedbackRewardController : UiControllerBase
 		return <GivebackInfoRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CBC7 RID: 52167 RVA: 0x002E822B File Offset: 0x002E642B
+	// Token: 0x06009FD8 RID: 40920 RVA: 0x002F337F File Offset: 0x002F157F
 	private void GivebackInfoResponse(GivebackInfoResponse response, Net.CallbackStatus _)
 	{
 	}
 
-	// Token: 0x0600CBC8 RID: 52168 RVA: 0x002E8230 File Offset: 0x002E6430
+	// Token: 0x06009FD9 RID: 40921 RVA: 0x002F3384 File Offset: 0x002F1584
 	public UniTask GivebackRewardRequest()
 	{
 		FeedbackRewardController.<GivebackRewardRequest>d__10 <GivebackRewardRequest>d__;
@@ -105,12 +104,12 @@ public class FeedbackRewardController : UiControllerBase
 		return <GivebackRewardRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CBC9 RID: 52169 RVA: 0x002E8273 File Offset: 0x002E6473
+	// Token: 0x06009FDA RID: 40922 RVA: 0x002F33C7 File Offset: 0x002F15C7
 	private void GivebackRewardResponse(GivebackRewardResponse response, Net.CallbackStatus _)
 	{
 	}
 
-	// Token: 0x0600CBCA RID: 52170 RVA: 0x002E8278 File Offset: 0x002E6478
+	// Token: 0x06009FDB RID: 40923 RVA: 0x002F33CC File Offset: 0x002F15CC
 	private void GivebackInfoUpdateNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		GivebackInfoPb givebackInfo = ((GivebackInfoUpdateNotify)msg).GivebackInfo;
@@ -120,14 +119,19 @@ public class FeedbackRewardController : UiControllerBase
 		}
 		FeedbackRewardModel.Instance.CurrentPointCount = givebackInfo.TotalScore;
 		FeedbackRewardModel.Instance.CurrentLoginDayCount = givebackInfo.ActiveDay;
-		FeedbackRewardModel.Instance.RefreshFeedBackRewardMapState(givebackInfo.RewardedIds.ToArray<int>());
-		FeedbackRewardModel.Instance.RefreshFeedBackTask(givebackInfo.Task.ToArray<GivebackTaskPb>());
+		int[] array = new int[givebackInfo.RewardedIds.Count];
+		for (int i = 0; i < array.Length; i++)
+		{
+			array[i] = givebackInfo.RewardedIds[i];
+		}
+		FeedbackRewardModel.Instance.RefreshFeedBackRewardMapState(array);
+		FeedbackRewardModel.Instance.RefreshFeedBackTask(givebackInfo.Task);
 		EventSystem.Instance.Emit(EEventName.FeedbackRewardRefresh);
 		this.TryPushSplashScreenTask(true);
 	}
 
-	// Token: 0x170010D4 RID: 4308
-	// (get) Token: 0x0600CBCB RID: 52171 RVA: 0x002E82F6 File Offset: 0x002E64F6
+	// Token: 0x170010F9 RID: 4345
+	// (get) Token: 0x06009FDC RID: 40924 RVA: 0x002F3469 File Offset: 0x002F1669
 	[Nullable(1)]
 	public static FeedbackRewardController Instance
 	{
@@ -138,7 +142,7 @@ public class FeedbackRewardController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600CBCC RID: 52172 RVA: 0x002E82FD File Offset: 0x002E64FD
+	// Token: 0x06009FDD RID: 40925 RVA: 0x002F3470 File Offset: 0x002F1670
 	[NullableContext(1)]
 	public static FeedbackRewardController GetOrCreateInstance()
 	{
@@ -149,7 +153,7 @@ public class FeedbackRewardController : UiControllerBase
 		return FeedbackRewardController._Instance;
 	}
 
-	// Token: 0x0600CBCD RID: 52173 RVA: 0x002E8311 File Offset: 0x002E6511
+	// Token: 0x06009FDE RID: 40926 RVA: 0x002F3484 File Offset: 0x002F1684
 	public static bool CreateInstance()
 	{
 		if (FeedbackRewardController._Instance != null)
@@ -160,26 +164,26 @@ public class FeedbackRewardController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0600CBCE RID: 52174 RVA: 0x002E8327 File Offset: 0x002E6527
+	// Token: 0x06009FDF RID: 40927 RVA: 0x002F349A File Offset: 0x002F169A
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600CBCF RID: 52175 RVA: 0x002E8329 File Offset: 0x002E6529
+	// Token: 0x06009FE0 RID: 40928 RVA: 0x002F349C File Offset: 0x002F169C
 	public static void ResetStaticDefaultValue()
 	{
 		FeedbackRewardController._Instance = null;
 	}
 
-	// Token: 0x0600CBD0 RID: 52176 RVA: 0x002E8331 File Offset: 0x002E6531
+	// Token: 0x06009FE1 RID: 40929 RVA: 0x002F34A4 File Offset: 0x002F16A4
 	static FeedbackRewardController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(FeedbackRewardController.CreateStaticDefaultValue), new Action(FeedbackRewardController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04005DAE RID: 23982
+	// Token: 0x04005E7D RID: 24189
 	private bool HaveShowFeedbackRewardStartView;
 
-	// Token: 0x04005DAF RID: 23983
+	// Token: 0x04005E7E RID: 24190
 	private static FeedbackRewardController _Instance;
 }

@@ -8,22 +8,22 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001AB5 RID: 6837
+// Token: 0x02000F74 RID: 3956
 [NullableContext(2)]
 [Nullable(0)]
 public class ExploreAreaParentItem : UiPanelBase, IDynamicScrollItem<ExploreAreaViewData>
 {
-	// Token: 0x170010BC RID: 4284
-	// (get) Token: 0x0600CA8C RID: 51852 RVA: 0x002E26C8 File Offset: 0x002E08C8
-	// (set) Token: 0x0600CA8D RID: 51853 RVA: 0x002E26D0 File Offset: 0x002E08D0
+	// Token: 0x170010E1 RID: 4321
+	// (get) Token: 0x06009E9D RID: 40605 RVA: 0x002ED818 File Offset: 0x002EBA18
+	// (set) Token: 0x06009E9E RID: 40606 RVA: 0x002ED820 File Offset: 0x002EBA20
 	public ExploreAreaViewData Data { get; private set; }
 
-	// Token: 0x170010BD RID: 4285
-	// (get) Token: 0x0600CA8E RID: 51854 RVA: 0x002E26D9 File Offset: 0x002E08D9
-	// (set) Token: 0x0600CA8F RID: 51855 RVA: 0x002E26E1 File Offset: 0x002E08E1
+	// Token: 0x170010E2 RID: 4322
+	// (get) Token: 0x06009E9F RID: 40607 RVA: 0x002ED829 File Offset: 0x002EBA29
+	// (set) Token: 0x06009EA0 RID: 40608 RVA: 0x002ED831 File Offset: 0x002EBA31
 	public ExploreAreaItem ExploreAreaItem { get; private set; }
 
-	// Token: 0x0600CA90 RID: 51856 RVA: 0x002E26EC File Offset: 0x002E08EC
+	// Token: 0x06009EA1 RID: 40609 RVA: 0x002ED83C File Offset: 0x002EBA3C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -37,7 +37,7 @@ public class ExploreAreaParentItem : UiPanelBase, IDynamicScrollItem<ExploreArea
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600CA91 RID: 51857 RVA: 0x002E2755 File Offset: 0x002E0955
+	// Token: 0x06009EA2 RID: 40610 RVA: 0x002ED8A5 File Offset: 0x002EBAA5
 	[NullableContext(1)]
 	public AUIBaseActor GetUsingItem(ExploreAreaViewData data)
 	{
@@ -48,7 +48,7 @@ public class ExploreAreaParentItem : UiPanelBase, IDynamicScrollItem<ExploreArea
 		return base.GetItem(1).GetOwner() as AUIBaseActor;
 	}
 
-	// Token: 0x0600CA92 RID: 51858 RVA: 0x002E2784 File Offset: 0x002E0984
+	// Token: 0x06009EA3 RID: 40611 RVA: 0x002ED8D4 File Offset: 0x002EBAD4
 	[NullableContext(1)]
 	public UniTask Init(UUIItem actor)
 	{
@@ -61,7 +61,7 @@ public class ExploreAreaParentItem : UiPanelBase, IDynamicScrollItem<ExploreArea
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CA93 RID: 51859 RVA: 0x002E27CF File Offset: 0x002E09CF
+	// Token: 0x06009EA4 RID: 40612 RVA: 0x002ED91F File Offset: 0x002EBB1F
 	protected override void OnStart()
 	{
 		this.ExploreCountryItem = new ExploreCountryItem();
@@ -70,7 +70,7 @@ public class ExploreAreaParentItem : UiPanelBase, IDynamicScrollItem<ExploreArea
 		this.ExploreAreaItem.Initialize(base.GetItem(1));
 	}
 
-	// Token: 0x0600CA94 RID: 51860 RVA: 0x002E280B File Offset: 0x002E0A0B
+	// Token: 0x06009EA5 RID: 40613 RVA: 0x002ED95B File Offset: 0x002EBB5B
 	[NullableContext(1)]
 	private void OnCountrySelected(ExploreCountryItem exploreCountryItem, ExploreAreaViewData data, EToggleState state)
 	{
@@ -82,7 +82,7 @@ public class ExploreAreaParentItem : UiPanelBase, IDynamicScrollItem<ExploreArea
 		onCountrySelectedCallback(exploreCountryItem, data, state);
 	}
 
-	// Token: 0x0600CA95 RID: 51861 RVA: 0x002E2820 File Offset: 0x002E0A20
+	// Token: 0x06009EA6 RID: 40614 RVA: 0x002ED970 File Offset: 0x002EBB70
 	[NullableContext(1)]
 	private void OnAreaSelected(ExploreAreaItem exploreAreaItem, ExploreAreaViewData data, bool bSelected)
 	{
@@ -94,7 +94,7 @@ public class ExploreAreaParentItem : UiPanelBase, IDynamicScrollItem<ExploreArea
 		onAreaSelectedCallback(exploreAreaItem, data, bSelected);
 	}
 
-	// Token: 0x0600CA96 RID: 51862 RVA: 0x002E2838 File Offset: 0x002E0A38
+	// Token: 0x06009EA7 RID: 40615 RVA: 0x002ED988 File Offset: 0x002EBB88
 	[NullableContext(1)]
 	public void Update(ExploreAreaViewData data, int index)
 	{
@@ -116,33 +116,33 @@ public class ExploreAreaParentItem : UiPanelBase, IDynamicScrollItem<ExploreArea
 		this.ExploreAreaItem.SetActive(!isCountry);
 	}
 
-	// Token: 0x0600CA97 RID: 51863 RVA: 0x002E28E7 File Offset: 0x002E0AE7
+	// Token: 0x06009EA8 RID: 40616 RVA: 0x002EDA37 File Offset: 0x002EBC37
 	private bool OnCountryItemCanExecuteChange()
 	{
 		return true;
 	}
 
-	// Token: 0x0600CA98 RID: 51864 RVA: 0x002E28EA File Offset: 0x002E0AEA
+	// Token: 0x06009EA9 RID: 40617 RVA: 0x002EDA3A File Offset: 0x002EBC3A
 	private bool OnAreaItemCanExecuteChange()
 	{
 		return true;
 	}
 
-	// Token: 0x0600CA99 RID: 51865 RVA: 0x002E28ED File Offset: 0x002E0AED
+	// Token: 0x06009EAA RID: 40618 RVA: 0x002EDA3D File Offset: 0x002EBC3D
 	[NullableContext(1)]
 	public void BindOnCountrySelected(Action<ExploreCountryItem, ExploreAreaViewData, EToggleState> onSelectedCallback)
 	{
 		this.OnCountrySelectedCallback = onSelectedCallback;
 	}
 
-	// Token: 0x0600CA9A RID: 51866 RVA: 0x002E28F6 File Offset: 0x002E0AF6
+	// Token: 0x06009EAB RID: 40619 RVA: 0x002EDA46 File Offset: 0x002EBC46
 	[NullableContext(1)]
 	public void BindOnAreaSelected(Action<ExploreAreaItem, ExploreAreaViewData, bool> onSelectedCallback)
 	{
 		this.OnAreaSelectedCallback = onSelectedCallback;
 	}
 
-	// Token: 0x0600CA9B RID: 51867 RVA: 0x002E28FF File Offset: 0x002E0AFF
+	// Token: 0x06009EAC RID: 40620 RVA: 0x002EDA4F File Offset: 0x002EBC4F
 	public void ClearItem()
 	{
 		this.Data = null;
@@ -160,10 +160,10 @@ public class ExploreAreaParentItem : UiPanelBase, IDynamicScrollItem<ExploreArea
 		this.ExploreAreaItem = null;
 	}
 
-	// Token: 0x04005D47 RID: 23879
+	// Token: 0x04005E16 RID: 24086
 	private ExploreCountryItem ExploreCountryItem;
 
-	// Token: 0x04005D49 RID: 23881
+	// Token: 0x04005E18 RID: 24088
 	[Nullable(new byte[]
 	{
 		2,
@@ -172,7 +172,7 @@ public class ExploreAreaParentItem : UiPanelBase, IDynamicScrollItem<ExploreArea
 	})]
 	private Action<ExploreCountryItem, ExploreAreaViewData, EToggleState> OnCountrySelectedCallback;
 
-	// Token: 0x04005D4A RID: 23882
+	// Token: 0x04005E19 RID: 24089
 	[Nullable(new byte[]
 	{
 		2,
@@ -181,13 +181,13 @@ public class ExploreAreaParentItem : UiPanelBase, IDynamicScrollItem<ExploreArea
 	})]
 	private Action<ExploreAreaItem, ExploreAreaViewData, bool> OnAreaSelectedCallback;
 
-	// Token: 0x02008009 RID: 32777
+	// Token: 0x02007198 RID: 29080
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x04029CC9 RID: 171209
+		// Token: 0x04025003 RID: 151555
 		CountryItem,
-		// Token: 0x04029CCA RID: 171210
+		// Token: 0x04025004 RID: 151556
 		AreaItem
 	}
 }

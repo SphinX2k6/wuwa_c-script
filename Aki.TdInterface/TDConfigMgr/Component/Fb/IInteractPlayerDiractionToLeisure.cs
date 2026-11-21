@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A73 RID: 2675
+	// Token: 0x02000B3D RID: 2877
 	public class IInteractPlayerDiractionToLeisure : IInteractPlayerDiractionType
 	{
-		// Token: 0x06003DA3 RID: 15779 RVA: 0x0009E229 File Offset: 0x0009C429
-		[NullableContext(1)]
+		// Token: 0x060041CC RID: 16844 RVA: 0x000A77E1 File Offset: 0x000A59E1
 		public static IInteractPlayerDiractionToLeisure Create(IInteractPlayerDiractionToLeisure? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000E7A RID: 3706
-		// (get) Token: 0x06003DA4 RID: 15780 RVA: 0x0009E248 File Offset: 0x0009C448
+		// Token: 0x17000F4D RID: 3917
+		// (get) Token: 0x060041CD RID: 16845 RVA: 0x000A7800 File Offset: 0x000A5A00
 		public override EInteractPlayerDiractionType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E7B RID: 3707
-		// (get) Token: 0x06003DA5 RID: 15781 RVA: 0x0009E255 File Offset: 0x0009C455
+		// Token: 0x17000F4E RID: 3918
+		// (get) Token: 0x060041CE RID: 16846 RVA: 0x000A780D File Offset: 0x000A5A0D
 		public virtual int Begin
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E7C RID: 3708
-		// (get) Token: 0x06003DA6 RID: 15782 RVA: 0x0009E262 File Offset: 0x0009C462
+		// Token: 0x17000F4F RID: 3919
+		// (get) Token: 0x060041CF RID: 16847 RVA: 0x000A781A File Offset: 0x000A5A1A
 		public virtual int End
 		{
 			get
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002254 RID: 8788
+		// Token: 0x04002470 RID: 9328
 		private IInteractPlayerDiractionToLeisure Instance;
 	}
 }

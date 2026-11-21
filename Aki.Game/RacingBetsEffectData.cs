@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x020026F1 RID: 9969
+// Token: 0x02001BDC RID: 7132
 public class RacingBetsEffectData : IRacingBetsEffectData
 {
-	// Token: 0x17001A94 RID: 6804
-	// (get) Token: 0x060146FE RID: 83710 RVA: 0x0052B9A0 File Offset: 0x00529BA0
-	// (set) Token: 0x060146FF RID: 83711 RVA: 0x0052B9A8 File Offset: 0x00529BA8
+	// Token: 0x17001ACC RID: 6860
+	// (get) Token: 0x06011BE0 RID: 72672 RVA: 0x0053A6BC File Offset: 0x005388BC
+	// (set) Token: 0x06011BE1 RID: 72673 RVA: 0x0053A6C4 File Offset: 0x005388C4
 	public int Handle { get; set; }
 
-	// Token: 0x17001A95 RID: 6805
-	// (get) Token: 0x06014700 RID: 83712 RVA: 0x0052B9B1 File Offset: 0x00529BB1
-	// (set) Token: 0x06014701 RID: 83713 RVA: 0x0052B9B9 File Offset: 0x00529BB9
+	// Token: 0x17001ACD RID: 6861
+	// (get) Token: 0x06011BE2 RID: 72674 RVA: 0x0053A6CD File Offset: 0x005388CD
+	// (set) Token: 0x06011BE3 RID: 72675 RVA: 0x0053A6D5 File Offset: 0x005388D5
 	public ERacingBetsEffectType Type { get; set; }
 }

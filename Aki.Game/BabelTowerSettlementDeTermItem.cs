@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001186 RID: 4486
+// Token: 0x0200063A RID: 1594
 public class BabelTowerSettlementDeTermItem : GridProxyAbstract<int>
 {
-	// Token: 0x060076A4 RID: 30372 RVA: 0x0018B070 File Offset: 0x00189270
+	// Token: 0x06004A3B RID: 19003 RVA: 0x00193C20 File Offset: 0x00191E20
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -30,14 +30,14 @@ public class BabelTowerSettlementDeTermItem : GridProxyAbstract<int>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060076A5 RID: 30373 RVA: 0x0018B118 File Offset: 0x00189318
+	// Token: 0x06004A3C RID: 19004 RVA: 0x00193CC8 File Offset: 0x00191EC8
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		this.DeTermId = data;
 		base.SetTextureByPath(ConfigBabelTowerDeTermById.GetConfig(data, true).Value.Texture, base.GetTexture(0), null, null);
 	}
 
-	// Token: 0x060076A6 RID: 30374 RVA: 0x0018B15C File Offset: 0x0018935C
+	// Token: 0x06004A3D RID: 19005 RVA: 0x00193D0C File Offset: 0x00191F0C
 	private void OnClickBtn()
 	{
 		BabelTowerItemInfoViewInfo param = new BabelTowerItemInfoViewInfo
@@ -49,22 +49,22 @@ public class BabelTowerSettlementDeTermItem : GridProxyAbstract<int>
 		UiManager.Instance.OpenView(EUiViewName.BabelTowerItemInfoView, param, null);
 	}
 
-	// Token: 0x0400366F RID: 13935
+	// Token: 0x04003708 RID: 14088
 	private int DeTermId;
 
-	// Token: 0x02007762 RID: 30562
+	// Token: 0x020068EF RID: 26863
 	private class EComponents
 	{
-		// Token: 0x04027616 RID: 161302
+		// Token: 0x0402294F RID: 141647
 		public const int IconTexture = 0;
 
-		// Token: 0x04027617 RID: 161303
+		// Token: 0x04022950 RID: 141648
 		public const int BgSprite = 1;
 
-		// Token: 0x04027618 RID: 161304
+		// Token: 0x04022951 RID: 141649
 		public const int NameText = 2;
 
-		// Token: 0x04027619 RID: 161305
+		// Token: 0x04022952 RID: 141650
 		public const int Btn = 3;
 	}
 }

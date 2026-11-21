@@ -5,79 +5,79 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.SkillButtonUi
 {
-	// Token: 0x02004BFE RID: 19454
+	// Token: 0x02003BAF RID: 15279
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SkillButtonConfig : ConfigBase
 	{
-		// Token: 0x060324DB RID: 206043 RVA: 0x00BB05CB File Offset: 0x00BAE7CB
+		// Token: 0x06027281 RID: 160385 RVA: 0x00AF4BDF File Offset: 0x00AF2DDF
 		public IReadOnlyList<SkillButton> GetAllSkillButtonConfig(int roleId)
 		{
 			return ConfigSkillButtonByRoleId.GetConfigList(roleId, true);
 		}
 
-		// Token: 0x060324DC RID: 206044 RVA: 0x00BB05D4 File Offset: 0x00BAE7D4
+		// Token: 0x06027282 RID: 160386 RVA: 0x00AF4BE8 File Offset: 0x00AF2DE8
 		public IReadOnlyList<SkillCommonButton> GetAllSkillCommonButtonConfig()
 		{
 			return ConfigSkillCommonButtonAll.GetConfigList(true);
 		}
 
-		// Token: 0x060324DD RID: 206045 RVA: 0x00BB05DC File Offset: 0x00BAE7DC
+		// Token: 0x06027283 RID: 160387 RVA: 0x00AF4BF0 File Offset: 0x00AF2DF0
 		public IReadOnlyList<SkillFollowerButton> GetAllSkillFollowerButtonConfig(int pbDataId)
 		{
 			return ConfigSkillFollowerButtonByPbDataId.GetConfigList(pbDataId, true);
 		}
 
-		// Token: 0x060324DE RID: 206046 RVA: 0x00BB05E5 File Offset: 0x00BAE7E5
+		// Token: 0x06027284 RID: 160388 RVA: 0x00AF4BF9 File Offset: 0x00AF2DF9
 		public IReadOnlyList<SkillVehicleButton> GetAllSkillVehicleButtonConfig(int templateId)
 		{
 			return ConfigSkillVehicleButtonByTemplateId.GetConfigList(templateId, true);
 		}
 
-		// Token: 0x060324DF RID: 206047 RVA: 0x00BB05EE File Offset: 0x00BAE7EE
+		// Token: 0x06027285 RID: 160389 RVA: 0x00AF4C02 File Offset: 0x00AF2E02
 		public IReadOnlyList<SkillPriorityButton> GetAllSkillPriorityButtonConfig()
 		{
 			return ConfigSkillPriorityButtonAll.GetConfigList(true);
 		}
 
-		// Token: 0x060324E0 RID: 206048 RVA: 0x00BB05F6 File Offset: 0x00BAE7F6
+		// Token: 0x06027286 RID: 160390 RVA: 0x00AF4C0A File Offset: 0x00AF2E0A
 		public SkillButtonIndex? GetSkillIndexConfig(int id)
 		{
 			return ConfigSkillButtonIndexById.GetConfig(id, true);
 		}
 
-		// Token: 0x060324E1 RID: 206049 RVA: 0x00BB05FF File Offset: 0x00BAE7FF
+		// Token: 0x06027287 RID: 160391 RVA: 0x00AF4C13 File Offset: 0x00AF2E13
 		public IReadOnlyList<SkillButtonIndex> GetSkillIndexConfigListByRoleType(int roleType)
 		{
 			return ConfigSkillButtonIndexByRoleType.GetConfigList(roleType, true);
 		}
 
-		// Token: 0x060324E2 RID: 206050 RVA: 0x00BB0608 File Offset: 0x00BAE808
+		// Token: 0x06027288 RID: 160392 RVA: 0x00AF4C1C File Offset: 0x00AF2E1C
 		public SkillIcon? GetSkillIconConfigByTag(int tagId)
 		{
 			return ConfigSkillIconByTag.GetConfig(tagId, true);
 		}
 
-		// Token: 0x060324E3 RID: 206051 RVA: 0x00BB0611 File Offset: 0x00BAE811
+		// Token: 0x06027289 RID: 160393 RVA: 0x00AF4C25 File Offset: 0x00AF2E25
 		public SkillButtonEffect? GetSkillButtonEffectConfig(int configId)
 		{
 			return ConfigSkillButtonEffectById.GetConfig(configId, true);
 		}
 
-		// Token: 0x060324E4 RID: 206052 RVA: 0x00BB061A File Offset: 0x00BAE81A
+		// Token: 0x0602728A RID: 160394 RVA: 0x00AF4C2E File Offset: 0x00AF2E2E
 		public IReadOnlyList<BehaviorCommonButton> GetAllBehaviorCommonButtonConfig()
 		{
 			return ConfigBehaviorCommonButtonAll.GetConfigList(true);
 		}
 
-		// Token: 0x060324E5 RID: 206053 RVA: 0x00BB0622 File Offset: 0x00BAE822
+		// Token: 0x0602728B RID: 160395 RVA: 0x00AF4C36 File Offset: 0x00AF2E36
 		public BehaviorCommonButton? GetBehaviorCommonButtonConfig(int configId)
 		{
 			return ConfigBehaviorCommonButtonById.GetConfig(configId, true);
 		}
 
-		// Token: 0x17007C76 RID: 31862
-		// (get) Token: 0x060324E6 RID: 206054 RVA: 0x00BB062B File Offset: 0x00BAE82B
+		// Token: 0x17005020 RID: 20512
+		// (get) Token: 0x0602728C RID: 160396 RVA: 0x00AF4C3F File Offset: 0x00AF2E3F
 		[Nullable(1)]
 		public static SkillButtonConfig Instance
 		{
@@ -88,7 +88,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			}
 		}
 
-		// Token: 0x060324E7 RID: 206055 RVA: 0x00BB0632 File Offset: 0x00BAE832
+		// Token: 0x0602728D RID: 160397 RVA: 0x00AF4C46 File Offset: 0x00AF2E46
 		[NullableContext(1)]
 		public static SkillButtonConfig GetOrCreateInstance()
 		{
@@ -99,7 +99,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			return SkillButtonConfig._Instance;
 		}
 
-		// Token: 0x060324E8 RID: 206056 RVA: 0x00BB0646 File Offset: 0x00BAE846
+		// Token: 0x0602728E RID: 160398 RVA: 0x00AF4C5A File Offset: 0x00AF2E5A
 		public static bool CreateInstance()
 		{
 			if (SkillButtonConfig._Instance != null)
@@ -110,24 +110,24 @@ namespace CSharpScript.Game.Module.SkillButtonUi
 			return true;
 		}
 
-		// Token: 0x060324E9 RID: 206057 RVA: 0x00BB065C File Offset: 0x00BAE85C
+		// Token: 0x0602728F RID: 160399 RVA: 0x00AF4C70 File Offset: 0x00AF2E70
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060324EA RID: 206058 RVA: 0x00BB065E File Offset: 0x00BAE85E
+		// Token: 0x06027290 RID: 160400 RVA: 0x00AF4C72 File Offset: 0x00AF2E72
 		public static void ResetStaticDefaultValue()
 		{
 			SkillButtonConfig._Instance = null;
 		}
 
-		// Token: 0x060324EB RID: 206059 RVA: 0x00BB0666 File Offset: 0x00BAE866
+		// Token: 0x06027291 RID: 160401 RVA: 0x00AF4C7A File Offset: 0x00AF2E7A
 		static SkillButtonConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SkillButtonConfig.CreateStaticDefaultValue), new Action(SkillButtonConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401AC23 RID: 109603
+		// Token: 0x0401557D RID: 87421
 		private static SkillButtonConfig _Instance;
 	}
 }

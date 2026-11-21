@@ -7,10 +7,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001F1B RID: 7963
+// Token: 0x020013DD RID: 5085
 public class HudUnitBase : UiPanelBase
 {
-	// Token: 0x0600F54C RID: 62796 RVA: 0x003B2D88 File Offset: 0x003B0F88
+	// Token: 0x0600C96B RID: 51563 RVA: 0x003BE874 File Offset: 0x003BCA74
 	[NullableContext(1)]
 	public UniTask Initialize(string resourceId, bool showAfterCreate, bool needSafeZone)
 	{
@@ -25,17 +25,17 @@ public class HudUnitBase : UiPanelBase
 		return <Initialize>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600F54D RID: 62797 RVA: 0x003B2DE3 File Offset: 0x003B0FE3
+	// Token: 0x0600C96C RID: 51564 RVA: 0x003BE8CF File Offset: 0x003BCACF
 	public virtual void Tick(float delta)
 	{
 	}
 
-	// Token: 0x0600F54E RID: 62798 RVA: 0x003B2DE5 File Offset: 0x003B0FE5
+	// Token: 0x0600C96D RID: 51565 RVA: 0x003BE8D1 File Offset: 0x003BCAD1
 	public virtual void AfterTick(float delta)
 	{
 	}
 
-	// Token: 0x0600F54F RID: 62799 RVA: 0x003B2DE8 File Offset: 0x003B0FE8
+	// Token: 0x0600C96E RID: 51566 RVA: 0x003BE8D4 File Offset: 0x003BCAD4
 	public void SetVisible(bool bVisible, int type = 0)
 	{
 		bool visible = this.GetVisible();
@@ -48,13 +48,13 @@ public class HudUnitBase : UiPanelBase
 		this.SetActive(bVisible);
 	}
 
-	// Token: 0x0600F550 RID: 62800 RVA: 0x003B2E29 File Offset: 0x003B1029
+	// Token: 0x0600C96F RID: 51567 RVA: 0x003BE915 File Offset: 0x003BCB15
 	public bool GetVisible()
 	{
 		return VisibleStateUtil.GetVisible(this.VisibleState);
 	}
 
-	// Token: 0x0600F551 RID: 62801 RVA: 0x003B2E36 File Offset: 0x003B1036
+	// Token: 0x0600C970 RID: 51568 RVA: 0x003BE922 File Offset: 0x003BCB22
 	protected override void OnBeforeDestroy()
 	{
 		if (this.TweenAnimMap != null)
@@ -63,7 +63,7 @@ public class HudUnitBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600F552 RID: 62802 RVA: 0x003B2E4B File Offset: 0x003B104B
+	// Token: 0x0600C971 RID: 51569 RVA: 0x003BE937 File Offset: 0x003BCB37
 	public void SetAnchorOffset(float x, float y)
 	{
 		if (this.RootItem == null)
@@ -74,7 +74,7 @@ public class HudUnitBase : UiPanelBase
 		this.RootItem.SetAnchorOffsetY(y);
 	}
 
-	// Token: 0x0600F553 RID: 62803 RVA: 0x003B2E70 File Offset: 0x003B1070
+	// Token: 0x0600C972 RID: 51570 RVA: 0x003BE95C File Offset: 0x003BCB5C
 	protected void InitTweenAnim(int componentType)
 	{
 		List<ULGUIPlayTweenComponent> list = new List<ULGUIPlayTweenComponent>();
@@ -91,7 +91,7 @@ public class HudUnitBase : UiPanelBase
 		this.TweenAnimMap[componentType] = list.ToArray();
 	}
 
-	// Token: 0x0600F554 RID: 62804 RVA: 0x003B2EEC File Offset: 0x003B10EC
+	// Token: 0x0600C973 RID: 51571 RVA: 0x003BE9D8 File Offset: 0x003BCBD8
 	protected void PlayTweenAnim(int componentType)
 	{
 		ULGUIPlayTweenComponent[] array;
@@ -106,7 +106,7 @@ public class HudUnitBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600F555 RID: 62805 RVA: 0x003B2F24 File Offset: 0x003B1124
+	// Token: 0x0600C974 RID: 51572 RVA: 0x003BEA10 File Offset: 0x003BCC10
 	protected void StopTweenAnim(int componentType)
 	{
 		ULGUIPlayTweenComponent[] array;
@@ -121,14 +121,14 @@ public class HudUnitBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x0400716C RID: 29036
+	// Token: 0x0400724D RID: 29261
 	[Nullable(2)]
 	public string ResourceId;
 
-	// Token: 0x0400716D RID: 29037
+	// Token: 0x0400724E RID: 29262
 	protected int VisibleState;
 
-	// Token: 0x0400716E RID: 29038
+	// Token: 0x0400724F RID: 29263
 	[Nullable(new byte[]
 	{
 		2,

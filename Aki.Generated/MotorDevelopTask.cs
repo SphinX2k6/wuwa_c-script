@@ -7,11 +7,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000E37 RID: 3639
+	// Token: 0x02000F1C RID: 3868
 	public struct MotorDevelopTask : IFlatbufferObject
 	{
-		// Token: 0x17002058 RID: 8280
-		// (get) Token: 0x0600977A RID: 38778 RVA: 0x0028CAA8 File Offset: 0x0028ACA8
+		// Token: 0x170020BD RID: 8381
+		// (get) Token: 0x06009D9A RID: 40346 RVA: 0x002AA728 File Offset: 0x002A8928
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -20,39 +20,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600977B RID: 38779 RVA: 0x0028CAB5 File Offset: 0x0028ACB5
+		// Token: 0x06009D9B RID: 40347 RVA: 0x002AA735 File Offset: 0x002A8935
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600977C RID: 38780 RVA: 0x0028CABC File Offset: 0x0028ACBC
+		// Token: 0x06009D9C RID: 40348 RVA: 0x002AA73C File Offset: 0x002A893C
 		public static MotorDevelopTask GetRootAsMotorDevelopTask(ByteBuffer _bb)
 		{
 			return MotorDevelopTask.GetRootAsMotorDevelopTask(_bb, default(MotorDevelopTask));
 		}
 
-		// Token: 0x0600977D RID: 38781 RVA: 0x0028CAD8 File Offset: 0x0028ACD8
+		// Token: 0x06009D9D RID: 40349 RVA: 0x002AA758 File Offset: 0x002A8958
 		public static MotorDevelopTask GetRootAsMotorDevelopTask(ByteBuffer _bb, MotorDevelopTask obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600977E RID: 38782 RVA: 0x0028CAF5 File Offset: 0x0028ACF5
+		// Token: 0x06009D9E RID: 40350 RVA: 0x002AA775 File Offset: 0x002A8975
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600977F RID: 38783 RVA: 0x0028CB04 File Offset: 0x0028AD04
+		// Token: 0x06009D9F RID: 40351 RVA: 0x002AA784 File Offset: 0x002A8984
 		public MotorDevelopTask __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002059 RID: 8281
-		// (get) Token: 0x06009780 RID: 38784 RVA: 0x0028CB14 File Offset: 0x0028AD14
+		// Token: 0x170020BE RID: 8382
+		// (get) Token: 0x06009DA0 RID: 40352 RVA: 0x002AA794 File Offset: 0x002A8994
 		public int TaskId
 		{
 			get
@@ -66,8 +66,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700205A RID: 8282
-		// (get) Token: 0x06009781 RID: 38785 RVA: 0x0028CB50 File Offset: 0x0028AD50
+		// Token: 0x170020BF RID: 8383
+		// (get) Token: 0x06009DA1 RID: 40353 RVA: 0x002AA7D0 File Offset: 0x002A89D0
 		public int ActivityId
 		{
 			get
@@ -81,8 +81,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700205B RID: 8283
-		// (get) Token: 0x06009782 RID: 38786 RVA: 0x0028CB8C File Offset: 0x0028AD8C
+		// Token: 0x170020C0 RID: 8384
+		// (get) Token: 0x06009DA2 RID: 40354 RVA: 0x002AA80C File Offset: 0x002A8A0C
 		public string TaskName
 		{
 			get
@@ -96,19 +96,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009783 RID: 38787 RVA: 0x0028CBC3 File Offset: 0x0028ADC3
+		// Token: 0x06009DA3 RID: 40355 RVA: 0x002AA843 File Offset: 0x002A8A43
 		public Span<byte> GetTaskNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x06009784 RID: 38788 RVA: 0x0028CBD2 File Offset: 0x0028ADD2
+		// Token: 0x06009DA4 RID: 40356 RVA: 0x002AA852 File Offset: 0x002A8A52
 		public byte[] GetTaskNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x06009785 RID: 38789 RVA: 0x0028CBEC File Offset: 0x0028ADEC
+		// Token: 0x06009DA5 RID: 40357 RVA: 0x002AA86C File Offset: 0x002A8A6C
 		public DicIntInt? TaskReward(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -119,8 +119,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700205C RID: 8284
-		// (get) Token: 0x06009786 RID: 38790 RVA: 0x0028CC50 File Offset: 0x0028AE50
+		// Token: 0x170020C1 RID: 8385
+		// (get) Token: 0x06009DA6 RID: 40358 RVA: 0x002AA8D0 File Offset: 0x002A8AD0
 		public int TaskRewardLength
 		{
 			get
@@ -134,7 +134,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009787 RID: 38791 RVA: 0x0028CC7C File Offset: 0x0028AE7C
+		// Token: 0x06009DA7 RID: 40359 RVA: 0x002AA8FC File Offset: 0x002A8AFC
 		public DicIntInt? TaskRewardShow(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -145,8 +145,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700205D RID: 8285
-		// (get) Token: 0x06009788 RID: 38792 RVA: 0x0028CCE0 File Offset: 0x0028AEE0
+		// Token: 0x170020C2 RID: 8386
+		// (get) Token: 0x06009DA8 RID: 40360 RVA: 0x002AA960 File Offset: 0x002A8B60
 		public int TaskRewardShowLength
 		{
 			get
@@ -160,41 +160,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009789 RID: 38793 RVA: 0x0028CD0C File Offset: 0x0028AF0C
+		// Token: 0x06009DA9 RID: 40361 RVA: 0x002AA98C File Offset: 0x002A8B8C
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用TaskRewardFrozenDict()缓存字典，遍历请使用TaskRewardIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> TaskReward()
+		public Dictionary<int, int> TaskReward()
 		{
 			return this.TaskRewardIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x0600978A RID: 38794 RVA: 0x0028CD62 File Offset: 0x0028AF62
+		// Token: 0x06009DAA RID: 40362 RVA: 0x002AA9E2 File Offset: 0x002A8BE2
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> TaskRewardIter()
+		public IEnumerable<DicIntInt> TaskRewardIter()
 		{
 			MotorDevelopTask.<TaskRewardIter>d__23 <TaskRewardIter>d__ = new MotorDevelopTask.<TaskRewardIter>d__23(-2);
 			<TaskRewardIter>d__.<>3__<>4__this = this;
 			return <TaskRewardIter>d__;
 		}
 
-		// Token: 0x0600978B RID: 38795 RVA: 0x0028CD78 File Offset: 0x0028AF78
+		// Token: 0x06009DAB RID: 40363 RVA: 0x002AA9F8 File Offset: 0x002A8BF8
 		[NullableContext(1)]
-		[Obsolete("已废弃，请使用TaskRewardShowFrozenDict()缓存字典，遍历请使用TaskRewardShowIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> TaskRewardShow()
+		public Dictionary<int, int> TaskRewardShow()
 		{
 			return this.TaskRewardShowIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x0600978C RID: 38796 RVA: 0x0028CDCE File Offset: 0x0028AFCE
+		// Token: 0x06009DAC RID: 40364 RVA: 0x002AAA4E File Offset: 0x002A8C4E
 		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> TaskRewardShowIter()
+		public IEnumerable<DicIntInt> TaskRewardShowIter()
 		{
 			MotorDevelopTask.<TaskRewardShowIter>d__25 <TaskRewardShowIter>d__ = new MotorDevelopTask.<TaskRewardShowIter>d__25(-2);
 			<TaskRewardShowIter>d__.<>3__<>4__this = this;
 			return <TaskRewardShowIter>d__;
 		}
 
-		// Token: 0x0600978D RID: 38797 RVA: 0x0028CDE4 File Offset: 0x0028AFE4
+		// Token: 0x06009DAD RID: 40365 RVA: 0x002AAA64 File Offset: 0x002A8C64
 		public int? GetTaskReward(int key)
 		{
 			this.EnsureTaskRewardCacheIfNeeded();
@@ -206,7 +204,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x0600978E RID: 38798 RVA: 0x0028CE18 File Offset: 0x0028B018
+		// Token: 0x06009DAE RID: 40366 RVA: 0x002AAA98 File Offset: 0x002A8C98
 		public int? GetTaskRewardShow(int key)
 		{
 			this.EnsureTaskRewardShowCacheIfNeeded();
@@ -218,7 +216,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x0600978F RID: 38799 RVA: 0x0028CE4C File Offset: 0x0028B04C
+		// Token: 0x06009DAF RID: 40367 RVA: 0x002AAACC File Offset: 0x002A8CCC
 		private void EnsureTaskRewardCacheIfNeeded()
 		{
 			if (this.TaskRewardCache != null)
@@ -228,7 +226,7 @@ namespace Aki.Config
 			this.TaskRewardCache = this.TaskRewardIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x06009790 RID: 38800 RVA: 0x0028CEB4 File Offset: 0x0028B0B4
+		// Token: 0x06009DB0 RID: 40368 RVA: 0x002AAB34 File Offset: 0x002A8D34
 		private void EnsureTaskRewardShowCacheIfNeeded()
 		{
 			if (this.TaskRewardShowCache != null)
@@ -238,30 +236,30 @@ namespace Aki.Config
 			this.TaskRewardShowCache = this.TaskRewardShowIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x06009791 RID: 38801 RVA: 0x0028CF1A File Offset: 0x0028B11A
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetTaskRewardFrozenDict(int key)
+		// Token: 0x06009DB1 RID: 40369 RVA: 0x002AAB9A File Offset: 0x002A8D9A
+		[NullableContext(1)]
+		public FrozenDictionary<int, int> GetTaskRewardFrozenDict()
 		{
 			this.EnsureTaskRewardCacheIfNeeded();
 			return this.TaskRewardCache;
 		}
 
-		// Token: 0x06009792 RID: 38802 RVA: 0x0028CF28 File Offset: 0x0028B128
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetTaskRewardShowFrozenDict(int key)
+		// Token: 0x06009DB2 RID: 40370 RVA: 0x002AABA8 File Offset: 0x002A8DA8
+		[NullableContext(1)]
+		public FrozenDictionary<int, int> GetTaskRewardShowFrozenDict()
 		{
 			this.EnsureTaskRewardShowCacheIfNeeded();
 			return this.TaskRewardShowCache;
 		}
 
-		// Token: 0x04004EDD RID: 20189
+		// Token: 0x040054C2 RID: 21698
 		private Table __p;
 
-		// Token: 0x04004EDE RID: 20190
+		// Token: 0x040054C3 RID: 21699
 		[Nullable(2)]
 		private FrozenDictionary<int, int> TaskRewardCache;
 
-		// Token: 0x04004EDF RID: 20191
+		// Token: 0x040054C4 RID: 21700
 		[Nullable(2)]
 		private FrozenDictionary<int, int> TaskRewardShowCache;
 	}

@@ -1,5 +1,5 @@
 ﻿using System;
 
-// Token: 0x02000EFF RID: 3839
-// (Invoke) Token: 0x0600604F RID: 24655
+// Token: 0x020003B4 RID: 948
+// (Invoke) Token: 0x060033E7 RID: 13287
 public delegate void TValueListener(EFormationAttributeId attrId, float newValue, float oldValue);

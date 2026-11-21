@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DEB RID: 3563
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000EE7 RID: 3815
 	public class IFlowerPollutionSplineConfig
 	{
-		// Token: 0x060050BB RID: 20667 RVA: 0x000C7442 File Offset: 0x000C5642
+		// Token: 0x060055E2 RID: 21986 RVA: 0x000D2D0A File Offset: 0x000D0F0A
 		public static IFlowerPollutionSplineConfig Create(IFlowerPollutionSplineConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001AA2 RID: 6818
-		// (get) Token: 0x060050BC RID: 20668 RVA: 0x000C7464 File Offset: 0x000C5664
+		// Token: 0x17001C0F RID: 7183
+		// (get) Token: 0x060055E3 RID: 21987 RVA: 0x000D2D2C File Offset: 0x000D0F2C
 		public virtual List<int> SplineEntityIds
 		{
 			get
@@ -44,13 +41,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002E5A RID: 11866
+		// Token: 0x04003122 RID: 12578
 		private IFlowerPollutionSplineConfig Instance;
 
-		// Token: 0x04002E5B RID: 11867
+		// Token: 0x04003123 RID: 12579
 		private List<int> _SplineEntityIdsCache;
 
-		// Token: 0x04002E5C RID: 11868
+		// Token: 0x04003124 RID: 12580
 		private bool _SplineEntityIdsInited;
 	}
 }

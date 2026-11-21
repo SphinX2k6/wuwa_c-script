@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020026FD RID: 9981
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020029C3 RID: 10691
 	public class IMonsterNpcInteract : IExecClientBattleActionType
 	{
-		// Token: 0x0600DED0 RID: 57040 RVA: 0x00210B27 File Offset: 0x0020ED27
+		// Token: 0x0600ECB8 RID: 60600 RVA: 0x0022D48F File Offset: 0x0022B68F
 		public static IMonsterNpcInteract Create(IMonsterNpcInteract? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004298 RID: 17048
-		// (get) Token: 0x0600DED1 RID: 57041 RVA: 0x00210B46 File Offset: 0x0020ED46
+		// Token: 0x170045E0 RID: 17888
+		// (get) Token: 0x0600ECB9 RID: 60601 RVA: 0x0022D4AE File Offset: 0x0022B6AE
 		public override EExecClientBattleActionType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004299 RID: 17049
-		// (get) Token: 0x0600DED2 RID: 57042 RVA: 0x00210B53 File Offset: 0x0020ED53
+		// Token: 0x170045E1 RID: 17889
+		// (get) Token: 0x0600ECBA RID: 60602 RVA: 0x0022D4BB File Offset: 0x0022B6BB
 		public virtual int MonsterNpcEntityId
 		{
 			get
@@ -42,8 +40,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700429A RID: 17050
-		// (get) Token: 0x0600DED3 RID: 57043 RVA: 0x00210B60 File Offset: 0x0020ED60
+		// Token: 0x170045E2 RID: 17890
+		// (get) Token: 0x0600ECBB RID: 60603 RVA: 0x0022D4C8 File Offset: 0x0022B6C8
 		public virtual IMonsterNpcInteractTriggerHook Config
 		{
 			get
@@ -58,14 +56,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007BAB RID: 31659
+		// Token: 0x0400824F RID: 33359
 		private IMonsterNpcInteract Instance;
 
-		// Token: 0x04007BAC RID: 31660
+		// Token: 0x04008250 RID: 33360
 		[Nullable(2)]
 		private IMonsterNpcInteractTriggerHook _ConfigCache;
 
-		// Token: 0x04007BAD RID: 31661
+		// Token: 0x04008251 RID: 33361
 		private bool _ConfigInited;
 	}
 }

@@ -5,10 +5,10 @@ using CSharpScript.Game.Module.BattleUi;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x0200468D RID: 18061
+	// Token: 0x020035BE RID: 13758
 	public class RoleMorphInputDistribute : InputDistributeSetup
 	{
-		// Token: 0x0602E9A6 RID: 190886 RVA: 0x00ACA7A8 File Offset: 0x00AC89A8
+		// Token: 0x060230F0 RID: 143600 RVA: 0x009F84DC File Offset: 0x009F66DC
 		public unsafe override bool OnRefresh()
 		{
 			BattleUiRoleData curRoleData = BattleUiModel.Instance.GetCurRoleData();

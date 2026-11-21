@@ -3,29 +3,29 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.NewWorld.Vehicle.Motorcycle
 {
-	// Token: 0x0200702B RID: 28715
+	// Token: 0x020061AC RID: 25004
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TraceWaterResult : ITraceWaterResult
 	{
-		// Token: 0x17009BCF RID: 39887
-		// (get) Token: 0x06045E7C RID: 286332 RVA: 0x0116555E File Offset: 0x0116375E
-		// (set) Token: 0x06045E7D RID: 286333 RVA: 0x01165566 File Offset: 0x01163766
+		// Token: 0x17007134 RID: 28980
+		// (get) Token: 0x0603C055 RID: 245845 RVA: 0x0110F4BD File Offset: 0x0110D6BD
+		// (set) Token: 0x0603C056 RID: 245846 RVA: 0x0110F4C5 File Offset: 0x0110D6C5
 		public bool FoundWater { get; set; }
 
-		// Token: 0x17009BD0 RID: 39888
-		// (get) Token: 0x06045E7E RID: 286334 RVA: 0x0116556F File Offset: 0x0116376F
-		// (set) Token: 0x06045E7F RID: 286335 RVA: 0x01165577 File Offset: 0x01163777
+		// Token: 0x17007135 RID: 28981
+		// (get) Token: 0x0603C057 RID: 245847 RVA: 0x0110F4CE File Offset: 0x0110D6CE
+		// (set) Token: 0x0603C058 RID: 245848 RVA: 0x0110F4D6 File Offset: 0x0110D6D6
 		public float MinWaterHeight { get; set; }
 
-		// Token: 0x17009BD1 RID: 39889
-		// (get) Token: 0x06045E80 RID: 286336 RVA: 0x01165580 File Offset: 0x01163780
-		// (set) Token: 0x06045E81 RID: 286337 RVA: 0x01165588 File Offset: 0x01163788
+		// Token: 0x17007136 RID: 28982
+		// (get) Token: 0x0603C059 RID: 245849 RVA: 0x0110F4DF File Offset: 0x0110D6DF
+		// (set) Token: 0x0603C05A RID: 245850 RVA: 0x0110F4E7 File Offset: 0x0110D6E7
 		public Vector ImpactPoint { get; set; }
 
-		// Token: 0x17009BD2 RID: 39890
-		// (get) Token: 0x06045E82 RID: 286338 RVA: 0x01165591 File Offset: 0x01163791
-		// (set) Token: 0x06045E83 RID: 286339 RVA: 0x01165599 File Offset: 0x01163799
+		// Token: 0x17007137 RID: 28983
+		// (get) Token: 0x0603C05B RID: 245851 RVA: 0x0110F4F0 File Offset: 0x0110D6F0
+		// (set) Token: 0x0603C05C RID: 245852 RVA: 0x0110F4F8 File Offset: 0x0110D6F8
 		public Vector ImpactNormal { get; set; }
 	}
 }

@@ -1,22 +1,22 @@
 ﻿using System;
 
-// Token: 0x0200122A RID: 4650
+// Token: 0x020006DE RID: 1758
 public enum EDangoMonopolyBuffType
 {
-	// Token: 0x04003937 RID: 14647
+	// Token: 0x040039CF RID: 14799
 	None,
-	// Token: 0x04003938 RID: 14648
+	// Token: 0x040039D0 RID: 14800
 	ProbabilityReRoll,
-	// Token: 0x04003939 RID: 14649
+	// Token: 0x040039D1 RID: 14801
 	RewardDouble,
-	// Token: 0x0400393A RID: 14650
+	// Token: 0x040039D2 RID: 14802
 	ProbabilityMoreStep,
-	// Token: 0x0400393B RID: 14651
+	// Token: 0x040039D3 RID: 14803
 	PointReplace,
-	// Token: 0x0400393C RID: 14652
+	// Token: 0x040039D4 RID: 14804
 	NextTimeY,
-	// Token: 0x0400393D RID: 14653
+	// Token: 0x040039D5 RID: 14805
 	ProbabilityPointDouble,
-	// Token: 0x0400393E RID: 14654
+	// Token: 0x040039D6 RID: 14806
 	NextTimeA
 }

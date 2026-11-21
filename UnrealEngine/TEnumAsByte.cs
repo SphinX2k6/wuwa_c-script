@@ -6,7 +6,7 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200008E RID: 142
+	// Token: 0x02000073 RID: 115
 	[NullableContext(1)]
 	[Nullable(0)]
 	[HasGetTypeHash]
@@ -15,7 +15,7 @@ namespace UnrealEngine
 	[StructLayout(LayoutKind.Sequential, Pack = 1)]
 	public struct TEnumAsByte<[Nullable(0)] T> : IEqualityOperators<TEnumAsByte<T>, TEnumAsByte<T>, bool>, IEquatable<TEnumAsByte<T>> where T : Enum
 	{
-		// Token: 0x06000FC8 RID: 4040 RVA: 0x0001807C File Offset: 0x0001627C
+		// Token: 0x06000B5B RID: 2907 RVA: 0x00012DA0 File Offset: 0x00010FA0
 		static TEnumAsByte()
 		{
 			if (!BitConverter.IsLittleEndian)
@@ -24,19 +24,19 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000FC9 RID: 4041 RVA: 0x00018090 File Offset: 0x00016290
+		// Token: 0x06000B5C RID: 2908 RVA: 0x00012DB4 File Offset: 0x00010FB4
 		public unsafe TEnumAsByte(T value)
 		{
 			this._value = *(byte*)(&value);
 		}
 
-		// Token: 0x06000FCA RID: 4042 RVA: 0x0001809C File Offset: 0x0001629C
+		// Token: 0x06000B5D RID: 2909 RVA: 0x00012DC0 File Offset: 0x00010FC0
 		public TEnumAsByte(byte value)
 		{
 			this._value = value;
 		}
 
-		// Token: 0x06000FCB RID: 4043 RVA: 0x000180A5 File Offset: 0x000162A5
+		// Token: 0x06000B5E RID: 2910 RVA: 0x00012DC9 File Offset: 0x00010FC9
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -47,7 +47,7 @@ namespace UnrealEngine
 			return new TEnumAsByte<T>(value);
 		}
 
-		// Token: 0x06000FCC RID: 4044 RVA: 0x000180B0 File Offset: 0x000162B0
+		// Token: 0x06000B5F RID: 2911 RVA: 0x00012DD4 File Offset: 0x00010FD4
 		public unsafe static implicit operator T([Nullable(new byte[]
 		{
 			0,
@@ -58,7 +58,7 @@ namespace UnrealEngine
 			return *(T*)(&num);
 		}
 
-		// Token: 0x06000FCD RID: 4045 RVA: 0x000180CD File Offset: 0x000162CD
+		// Token: 0x06000B60 RID: 2912 RVA: 0x00012DF1 File Offset: 0x00010FF1
 		public static implicit operator byte([Nullable(new byte[]
 		{
 			0,
@@ -68,7 +68,7 @@ namespace UnrealEngine
 			return value._value;
 		}
 
-		// Token: 0x06000FCE RID: 4046 RVA: 0x000180D5 File Offset: 0x000162D5
+		// Token: 0x06000B61 RID: 2913 RVA: 0x00012DF9 File Offset: 0x00010FF9
 		public bool Equals([Nullable(new byte[]
 		{
 			0,
@@ -78,7 +78,7 @@ namespace UnrealEngine
 			return this._value == other._value;
 		}
 
-		// Token: 0x06000FCF RID: 4047 RVA: 0x000180E8 File Offset: 0x000162E8
+		// Token: 0x06000B62 RID: 2914 RVA: 0x00012E0C File Offset: 0x0001100C
 		[NullableContext(2)]
 		public override bool Equals(object obj)
 		{
@@ -90,13 +90,13 @@ namespace UnrealEngine
 			return false;
 		}
 
-		// Token: 0x06000FD0 RID: 4048 RVA: 0x0001810D File Offset: 0x0001630D
+		// Token: 0x06000B63 RID: 2915 RVA: 0x00012E31 File Offset: 0x00011031
 		public override readonly int GetHashCode()
 		{
 			return this._value.GetHashCode();
 		}
 
-		// Token: 0x06000FD1 RID: 4049 RVA: 0x0001811A File Offset: 0x0001631A
+		// Token: 0x06000B64 RID: 2916 RVA: 0x00012E3E File Offset: 0x0001103E
 		public static bool operator ==([Nullable(new byte[]
 		{
 			0,
@@ -110,7 +110,7 @@ namespace UnrealEngine
 			return left._value == right._value;
 		}
 
-		// Token: 0x06000FD2 RID: 4050 RVA: 0x0001812A File Offset: 0x0001632A
+		// Token: 0x06000B65 RID: 2917 RVA: 0x00012E4E File Offset: 0x0001104E
 		public static bool operator !=([Nullable(new byte[]
 		{
 			0,
@@ -124,13 +124,13 @@ namespace UnrealEngine
 			return left._value != right._value;
 		}
 
-		// Token: 0x06000FD3 RID: 4051 RVA: 0x0001813D File Offset: 0x0001633D
+		// Token: 0x06000B66 RID: 2918 RVA: 0x00012E61 File Offset: 0x00011061
 		public override readonly string ToString()
 		{
 			return this._value.ToString();
 		}
 
-		// Token: 0x040001F6 RID: 502
+		// Token: 0x040001AF RID: 431
 		private byte _value;
 	}
 }

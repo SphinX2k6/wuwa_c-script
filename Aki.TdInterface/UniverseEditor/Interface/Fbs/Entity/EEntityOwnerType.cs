@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Entity
 {
-	// Token: 0x02004774 RID: 18292
+	// Token: 0x02004BDC RID: 19420
 	public enum EEntityOwnerType : byte
 	{
-		// Token: 0x0400CBC5 RID: 52165
+		// Token: 0x0400D5FB RID: 54779
 		Quest,
-		// Token: 0x0400CBC6 RID: 52166
+		// Token: 0x0400D5FC RID: 54780
 		LevelPlay,
-		// Token: 0x0400CBC7 RID: 52167
+		// Token: 0x0400D5FD RID: 54781
 		Entity
 	}
 }

@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200106C RID: 4204
+	// Token: 0x0200119A RID: 4506
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IQuestBuffActiveRange_SetValue
 	{
-		// Token: 0x040038FC RID: 14588
+		// Token: 0x04003C47 RID: 15431
 		public IQuestBuffActiveCenterRange QuestBuffActiveCenterRange;
 
-		// Token: 0x040038FD RID: 14589
+		// Token: 0x04003C48 RID: 15432
 		public List<int> QuestBuffActiveRangeEntities;
 
-		// Token: 0x040038FE RID: 14590
+		// Token: 0x04003C49 RID: 15433
 		public List<int> QuestBuffActiveRangeAreaIds;
 	}
 }

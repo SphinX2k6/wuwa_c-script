@@ -3,17 +3,17 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Launcher.Platform.PlatformSdk
 {
-	// Token: 0x02000185 RID: 389
+	// Token: 0x02000189 RID: 393
 	public class IBlockDataContent
 	{
-		// Token: 0x040006B7 RID: 1719
+		// Token: 0x040006F2 RID: 1778
 		[Nullable(1)]
 		public string accountId;
 
-		// Token: 0x040006B8 RID: 1720
+		// Token: 0x040006F3 RID: 1779
 		public bool isBlocking;
 
-		// Token: 0x040006B9 RID: 1721
+		// Token: 0x040006F4 RID: 1780
 		public bool isBlocked;
 	}
 }

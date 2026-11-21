@@ -3,16 +3,16 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200166A RID: 5738
+	// Token: 0x020016E6 RID: 5862
 	public enum RoleSettleResult
 	{
-		// Token: 0x0400C194 RID: 49556
+		// Token: 0x0400C6BD RID: 50877
 		[OriginalName("Bad")]
 		Bad,
-		// Token: 0x0400C195 RID: 49557
+		// Token: 0x0400C6BE RID: 50878
 		[OriginalName("Normal")]
 		Normal,
-		// Token: 0x0400C196 RID: 49558
+		// Token: 0x0400C6BF RID: 50879
 		[OriginalName("Good")]
 		Good
 	}

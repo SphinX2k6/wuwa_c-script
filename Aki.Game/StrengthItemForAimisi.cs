@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001F65 RID: 8037
+// Token: 0x02001427 RID: 5159
 public class StrengthItemForAimisi : StrengthItem
 {
-	// Token: 0x0600F95F RID: 63839 RVA: 0x003C6A25 File Offset: 0x003C4C25
+	// Token: 0x0600CD7E RID: 52606 RVA: 0x003D2511 File Offset: 0x003D0711
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_EnduranceAimisi";
 	}
 
-	// Token: 0x0600F960 RID: 63840 RVA: 0x003C6A2C File Offset: 0x003C4C2C
+	// Token: 0x0600CD7F RID: 52607 RVA: 0x003D2518 File Offset: 0x003D0718
 	protected override void OnRegisterComponent()
 	{
 		Dictionary<int, Type> dictionary = new Dictionary<int, Type>
@@ -39,7 +39,7 @@ public class StrengthItemForAimisi : StrengthItem
 		}
 	}
 
-	// Token: 0x0600F961 RID: 63841 RVA: 0x003C6AB4 File Offset: 0x003C4CB4
+	// Token: 0x0600CD80 RID: 52608 RVA: 0x003D25A0 File Offset: 0x003D07A0
 	private int GetEnumValue(int value)
 	{
 		int result;
@@ -50,13 +50,13 @@ public class StrengthItemForAimisi : StrengthItem
 		return result;
 	}
 
-	// Token: 0x0600F962 RID: 63842 RVA: 0x003C6AD4 File Offset: 0x003C4CD4
+	// Token: 0x0600CD81 RID: 52609 RVA: 0x003D25C0 File Offset: 0x003D07C0
 	protected override int ResolveChildType(int name)
 	{
 		return this.GetEnumValue(name);
 	}
 
-	// Token: 0x0600F963 RID: 63843 RVA: 0x003C6ADD File Offset: 0x003C4CDD
+	// Token: 0x0600CD82 RID: 52610 RVA: 0x003D25C9 File Offset: 0x003D07C9
 	protected override void OnBeforeShow()
 	{
 		base.OnBeforeShow();
@@ -66,17 +66,17 @@ public class StrengthItemForAimisi : StrengthItem
 		}
 	}
 
-	// Token: 0x0600F964 RID: 63844 RVA: 0x003C6AF9 File Offset: 0x003C4CF9
+	// Token: 0x0600CD83 RID: 52611 RVA: 0x003D25E5 File Offset: 0x003D07E5
 	protected override void InitUi()
 	{
 	}
 
-	// Token: 0x0600F965 RID: 63845 RVA: 0x003C6AFB File Offset: 0x003C4CFB
+	// Token: 0x0600CD84 RID: 52612 RVA: 0x003D25E7 File Offset: 0x003D07E7
 	protected override void OnAddEntityEvents()
 	{
 	}
 
-	// Token: 0x0600F966 RID: 63846 RVA: 0x003C6B00 File Offset: 0x003C4D00
+	// Token: 0x0600CD85 RID: 52613 RVA: 0x003D25EC File Offset: 0x003D07EC
 	protected override void SetNormal(bool bNormal)
 	{
 		if (this.IsNormalState == bNormal)
@@ -96,7 +96,7 @@ public class StrengthItemForAimisi : StrengthItem
 		}
 	}
 
-	// Token: 0x04007431 RID: 29745
+	// Token: 0x04007512 RID: 29970
 	[Nullable(1)]
 	private readonly Dictionary<int, int> ChildTypeMap = new Dictionary<int, int>
 	{
@@ -182,52 +182,52 @@ public class StrengthItemForAimisi : StrengthItem
 		}
 	};
 
-	// Token: 0x02008562 RID: 34146
+	// Token: 0x020076E7 RID: 30439
 	private new enum EChildType
 	{
-		// Token: 0x0402B6D0 RID: 177872
+		// Token: 0x040269F4 RID: 158196
 		NormalBarSprite,
-		// Token: 0x0402B6D1 RID: 177873
+		// Token: 0x040269F5 RID: 158197
 		LowBarSprite,
-		// Token: 0x0402B6D2 RID: 177874
+		// Token: 0x040269F6 RID: 158198
 		StrengthLineItem,
-		// Token: 0x0402B6D3 RID: 177875
+		// Token: 0x040269F7 RID: 158199
 		StrengthSingleLineItem,
-		// Token: 0x0402B6D4 RID: 177876
+		// Token: 0x040269F8 RID: 158200
 		FrontMarker,
-		// Token: 0x0402B6D5 RID: 177877
+		// Token: 0x040269F9 RID: 158201
 		TemporaryItem,
-		// Token: 0x0402B6D6 RID: 177878
+		// Token: 0x040269FA RID: 158202
 		TemporaryBarSprite,
-		// Token: 0x0402B6D7 RID: 177879
+		// Token: 0x040269FB RID: 158203
 		TemporaryLineItem,
-		// Token: 0x0402B6D8 RID: 177880
+		// Token: 0x040269FC RID: 158204
 		TemporarySingleLineItem,
-		// Token: 0x0402B6D9 RID: 177881
+		// Token: 0x040269FD RID: 158205
 		AnimStart,
-		// Token: 0x0402B6DA RID: 177882
+		// Token: 0x040269FE RID: 158206
 		AnimClose,
-		// Token: 0x0402B6DB RID: 177883
+		// Token: 0x040269FF RID: 158207
 		AnimFull,
-		// Token: 0x0402B6DC RID: 177884
+		// Token: 0x04026A00 RID: 158208
 		AnimNone,
-		// Token: 0x0402B6DD RID: 177885
+		// Token: 0x04026A01 RID: 158209
 		AnimPickUp,
-		// Token: 0x0402B6DE RID: 177886
+		// Token: 0x04026A02 RID: 158210
 		AnimTempStart,
-		// Token: 0x0402B6DF RID: 177887
+		// Token: 0x04026A03 RID: 158211
 		AnimTempClose,
-		// Token: 0x0402B6E0 RID: 177888
+		// Token: 0x04026A04 RID: 158212
 		AutoMovingItem,
-		// Token: 0x0402B6E1 RID: 177889
+		// Token: 0x04026A05 RID: 158213
 		NoneItem,
-		// Token: 0x0402B6E2 RID: 177890
+		// Token: 0x04026A06 RID: 158214
 		BuffItem,
-		// Token: 0x0402B6E3 RID: 177891
+		// Token: 0x04026A07 RID: 158215
 		DeBuffItem,
-		// Token: 0x0402B6E4 RID: 177892
+		// Token: 0x04026A08 RID: 158216
 		DisableItem,
-		// Token: 0x0402B6E5 RID: 177893
+		// Token: 0x04026A09 RID: 158217
 		MaxCount
 	}
 }

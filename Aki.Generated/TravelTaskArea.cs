@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02001174 RID: 4468
+	// Token: 0x020012AA RID: 4778
 	public struct TravelTaskArea : IFlatbufferObject
 	{
-		// Token: 0x17003CBC RID: 15548
-		// (get) Token: 0x0600E51A RID: 58650 RVA: 0x0033BFD1 File Offset: 0x0033A1D1
+		// Token: 0x17004020 RID: 16416
+		// (get) Token: 0x0600F288 RID: 62088 RVA: 0x00366E29 File Offset: 0x00365029
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E51B RID: 58651 RVA: 0x0033BFDE File Offset: 0x0033A1DE
+		// Token: 0x0600F289 RID: 62089 RVA: 0x00366E36 File Offset: 0x00365036
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600E51C RID: 58652 RVA: 0x0033BFE8 File Offset: 0x0033A1E8
+		// Token: 0x0600F28A RID: 62090 RVA: 0x00366E40 File Offset: 0x00365040
 		public static TravelTaskArea GetRootAsTravelTaskArea(ByteBuffer _bb)
 		{
 			return TravelTaskArea.GetRootAsTravelTaskArea(_bb, default(TravelTaskArea));
 		}
 
-		// Token: 0x0600E51D RID: 58653 RVA: 0x0033C004 File Offset: 0x0033A204
+		// Token: 0x0600F28B RID: 62091 RVA: 0x00366E5C File Offset: 0x0036505C
 		public static TravelTaskArea GetRootAsTravelTaskArea(ByteBuffer _bb, TravelTaskArea obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600E51E RID: 58654 RVA: 0x0033C021 File Offset: 0x0033A221
+		// Token: 0x0600F28C RID: 62092 RVA: 0x00366E79 File Offset: 0x00365079
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600E51F RID: 58655 RVA: 0x0033C030 File Offset: 0x0033A230
+		// Token: 0x0600F28D RID: 62093 RVA: 0x00366E88 File Offset: 0x00365088
 		public TravelTaskArea __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003CBD RID: 15549
-		// (get) Token: 0x0600E520 RID: 58656 RVA: 0x0033C040 File Offset: 0x0033A240
+		// Token: 0x17004021 RID: 16417
+		// (get) Token: 0x0600F28E RID: 62094 RVA: 0x00366E98 File Offset: 0x00365098
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003CBE RID: 15550
-		// (get) Token: 0x0600E521 RID: 58657 RVA: 0x0033C07C File Offset: 0x0033A27C
+		// Token: 0x17004022 RID: 16418
+		// (get) Token: 0x0600F28F RID: 62095 RVA: 0x00366ED4 File Offset: 0x003650D4
 		public int ActivityId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003CBF RID: 15551
-		// (get) Token: 0x0600E522 RID: 58658 RVA: 0x0033C0B8 File Offset: 0x0033A2B8
+		// Token: 0x17004023 RID: 16419
+		// (get) Token: 0x0600F290 RID: 62096 RVA: 0x00366F10 File Offset: 0x00365110
 		public int UnLockCondition
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003CC0 RID: 15552
-		// (get) Token: 0x0600E523 RID: 58659 RVA: 0x0033C0F4 File Offset: 0x0033A2F4
+		// Token: 0x17004024 RID: 16420
+		// (get) Token: 0x0600F291 RID: 62097 RVA: 0x00366F4C File Offset: 0x0036514C
 		public int UnlockAccessId
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003CC1 RID: 15553
-		// (get) Token: 0x0600E524 RID: 58660 RVA: 0x0033C134 File Offset: 0x0033A334
+		// Token: 0x17004025 RID: 16421
+		// (get) Token: 0x0600F292 RID: 62098 RVA: 0x00366F8C File Offset: 0x0036518C
 		public int Sort
 		{
 			get
@@ -122,7 +122,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x040052BA RID: 21178
+		// Token: 0x040058FD RID: 22781
 		private Table __p;
 	}
 }

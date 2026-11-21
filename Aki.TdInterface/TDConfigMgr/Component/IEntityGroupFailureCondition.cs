@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200031D RID: 797
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000364 RID: 868
 	public class IEntityGroupFailureCondition
 	{
-		// Token: 0x06000FAA RID: 4010 RVA: 0x000373B0 File Offset: 0x000355B0
+		// Token: 0x060010DC RID: 4316 RVA: 0x0003A37C File Offset: 0x0003857C
 		private IEntityGroupFailureCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000FAB RID: 4011 RVA: 0x000373E8 File Offset: 0x000355E8
+		// Token: 0x060010DD RID: 4317 RVA: 0x0003A3B4 File Offset: 0x000385B4
 		public static IEntityGroupFailureCondition Create([Nullable(2)] IEntityGroupFailureCondition instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000FAC RID: 4012 RVA: 0x000373FB File Offset: 0x000355FB
+		// Token: 0x060010DE RID: 4318 RVA: 0x0003A3C7 File Offset: 0x000385C7
 		public static IEntityGroupFailureCondition CreateFromSetValue([Nullable(2)] IEntityGroupFailureCondition_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000FAD RID: 4013 RVA: 0x0003740E File Offset: 0x0003560E
+		// Token: 0x060010DF RID: 4319 RVA: 0x0003A3DA File Offset: 0x000385DA
 		public IEntityGroupFailureCondition_SetValue ToSetValue()
 		{
 			return new IEntityGroupFailureCondition_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000486 RID: 1158
-		// (get) Token: 0x06000FAE RID: 4014 RVA: 0x00037421 File Offset: 0x00035621
-		// (set) Token: 0x06000FAF RID: 4015 RVA: 0x0003744C File Offset: 0x0003564C
+		// Token: 0x170004D4 RID: 1236
+		// (get) Token: 0x060010E0 RID: 4320 RVA: 0x0003A3ED File Offset: 0x000385ED
+		// (set) Token: 0x060010E1 RID: 4321 RVA: 0x0003A418 File Offset: 0x00038618
 		public virtual EEntityGroupFailureCondition Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000D5F RID: 3423
+		// Token: 0x04000E4A RID: 3658
 		[Nullable(2)]
 		protected IEntityGroupFailureCondition FbInstance;
 
-		// Token: 0x04000D60 RID: 3424
+		// Token: 0x04000E4B RID: 3659
 		[Nullable(2)]
 		protected IEntityGroupFailureCondition_SetValue PocoInterface;
 	}

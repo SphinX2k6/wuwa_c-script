@@ -3,23 +3,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Menu.SubViews
 {
-	// Token: 0x0200542E RID: 21550
+	// Token: 0x02004411 RID: 17425
 	public class ResolutionToggle : LanguageToggleBase
 	{
-		// Token: 0x060370BC RID: 225468 RVA: 0x00D0B768 File Offset: 0x00D09968
+		// Token: 0x0602C005 RID: 180229 RVA: 0x00C5AB88 File Offset: 0x00C58D88
 		protected override void OnRegisterComponent()
 		{
 			base.OnRegisterComponent();
 		}
 
-		// Token: 0x060370BD RID: 225469 RVA: 0x00D0B770 File Offset: 0x00D09970
+		// Token: 0x0602C006 RID: 180230 RVA: 0x00C5AB90 File Offset: 0x00C58D90
 		[NullableContext(1)]
 		public void SetMainRawText(string text)
 		{
 			this.MainText.SetText(text, true);
 		}
 
-		// Token: 0x060370BE RID: 225470 RVA: 0x00D0B77F File Offset: 0x00D0997F
+		// Token: 0x0602C007 RID: 180231 RVA: 0x00C5AB9F File Offset: 0x00C58D9F
 		protected override void OnStart()
 		{
 			base.OnStart();

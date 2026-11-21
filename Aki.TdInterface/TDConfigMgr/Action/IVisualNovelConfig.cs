@@ -1,16 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002067 RID: 8295
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x020022B0 RID: 8880
 	public class IVisualNovelConfig
 	{
-		// Token: 0x0600B636 RID: 46646 RVA: 0x001A68B8 File Offset: 0x001A4AB8
-		[NullableContext(1)]
+		// Token: 0x0600C15E RID: 49502 RVA: 0x001BD068 File Offset: 0x001BB268
 		private IVisualNovelConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,8 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B637 RID: 46647 RVA: 0x001A68F0 File Offset: 0x001A4AF0
-		[NullableContext(1)]
+		// Token: 0x0600C15F RID: 49503 RVA: 0x001BD0A0 File Offset: 0x001BB2A0
 		public static IVisualNovelConfig Create([Nullable(2)] IVisualNovelConfig instance)
 		{
 			if (instance == null)
@@ -39,8 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B638 RID: 46648 RVA: 0x001A6903 File Offset: 0x001A4B03
-		[NullableContext(1)]
+		// Token: 0x0600C160 RID: 49504 RVA: 0x001BD0B3 File Offset: 0x001BB2B3
 		public static IVisualNovelConfig CreateFromSetValue([Nullable(2)] IVisualNovelConfig_SetValue value)
 		{
 			if (value == null)
@@ -53,24 +49,25 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B639 RID: 46649 RVA: 0x001A6918 File Offset: 0x001A4B18
-		[NullableContext(1)]
+		// Token: 0x0600C161 RID: 49505 RVA: 0x001BD0C8 File Offset: 0x001BB2C8
 		public IVisualNovelConfig_SetValue ToSetValue()
 		{
 			return new IVisualNovelConfig_SetValue
 			{
 				VisualNovelSubType = this.VisualNovelSubType,
 				EnableReadRecord = this.EnableReadRecord,
+				EnableFastForward = this.EnableFastForward,
 				HideControlUi = this.HideControlUi,
 				InitialBackgroundId = this.InitialBackgroundId,
-				InitialAudioEvent = this.InitialAudioEvent,
-				InitialTime = this.InitialTime
+				InitialAudioEvents = this.InitialAudioEvents,
+				InitialTime = this.InitialTime,
+				EndFadeOutTime = this.EndFadeOutTime
 			};
 		}
 
-		// Token: 0x170037D9 RID: 14297
-		// (get) Token: 0x0600B63A RID: 46650 RVA: 0x001A6974 File Offset: 0x001A4B74
-		// (set) Token: 0x0600B63B RID: 46651 RVA: 0x001A69AE File Offset: 0x001A4BAE
+		// Token: 0x17003AB7 RID: 15031
+		// (get) Token: 0x0600C162 RID: 49506 RVA: 0x001BD13C File Offset: 0x001BB33C
+		// (set) Token: 0x0600C163 RID: 49507 RVA: 0x001BD176 File Offset: 0x001BB376
 		public virtual EVisualNovelSubType? VisualNovelSubType
 		{
 			get
@@ -92,9 +89,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170037DA RID: 14298
-		// (get) Token: 0x0600B63C RID: 46652 RVA: 0x001A69BC File Offset: 0x001A4BBC
-		// (set) Token: 0x0600B63D RID: 46653 RVA: 0x001A69F6 File Offset: 0x001A4BF6
+		// Token: 0x17003AB8 RID: 15032
+		// (get) Token: 0x0600C164 RID: 49508 RVA: 0x001BD184 File Offset: 0x001BB384
+		// (set) Token: 0x0600C165 RID: 49509 RVA: 0x001BD1BE File Offset: 0x001BB3BE
 		public virtual bool? EnableReadRecord
 		{
 			get
@@ -116,9 +113,33 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170037DB RID: 14299
-		// (get) Token: 0x0600B63E RID: 46654 RVA: 0x001A6A04 File Offset: 0x001A4C04
-		// (set) Token: 0x0600B63F RID: 46655 RVA: 0x001A6A3E File Offset: 0x001A4C3E
+		// Token: 0x17003AB9 RID: 15033
+		// (get) Token: 0x0600C166 RID: 49510 RVA: 0x001BD1CC File Offset: 0x001BB3CC
+		// (set) Token: 0x0600C167 RID: 49511 RVA: 0x001BD206 File Offset: 0x001BB406
+		public virtual bool? EnableFastForward
+		{
+			get
+			{
+				if (this.FbInstance != null)
+				{
+					return this.FbInstance.EnableFastForward;
+				}
+				IVisualNovelConfig_SetValue pocoInterface = this.PocoInterface;
+				if (pocoInterface == null)
+				{
+					return null;
+				}
+				return pocoInterface.EnableFastForward;
+			}
+			set
+			{
+				this.GetOrCreatePoco().EnableFastForward = value;
+			}
+		}
+
+		// Token: 0x17003ABA RID: 15034
+		// (get) Token: 0x0600C168 RID: 49512 RVA: 0x001BD214 File Offset: 0x001BB414
+		// (set) Token: 0x0600C169 RID: 49513 RVA: 0x001BD24E File Offset: 0x001BB44E
 		public virtual bool? HideControlUi
 		{
 			get
@@ -140,9 +161,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170037DC RID: 14300
-		// (get) Token: 0x0600B640 RID: 46656 RVA: 0x001A6A4C File Offset: 0x001A4C4C
-		// (set) Token: 0x0600B641 RID: 46657 RVA: 0x001A6A86 File Offset: 0x001A4C86
+		// Token: 0x17003ABB RID: 15035
+		// (get) Token: 0x0600C16A RID: 49514 RVA: 0x001BD25C File Offset: 0x001BB45C
+		// (set) Token: 0x0600C16B RID: 49515 RVA: 0x001BD296 File Offset: 0x001BB496
 		public virtual int? InitialBackgroundId
 		{
 			get
@@ -164,35 +185,52 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170037DD RID: 14301
-		// (get) Token: 0x0600B642 RID: 46658 RVA: 0x001A6A94 File Offset: 0x001A4C94
-		// (set) Token: 0x0600B643 RID: 46659 RVA: 0x001A6ABB File Offset: 0x001A4CBB
-		public virtual string InitialAudioEvent
+		// Token: 0x17003ABC RID: 15036
+		// (get) Token: 0x0600C16C RID: 49516 RVA: 0x001BD2A4 File Offset: 0x001BB4A4
+		// (set) Token: 0x0600C16D RID: 49517 RVA: 0x001BD2CB File Offset: 0x001BB4CB
+		[Nullable(new byte[]
 		{
+			2,
+			0
+		})]
+		public virtual List<string> InitialAudioEvents
+		{
+			[return: Nullable(new byte[]
+			{
+				2,
+				0
+			})]
 			get
 			{
 				if (this.FbInstance != null)
 				{
-					return this.FbInstance.InitialAudioEvent;
+					return this.FbInstance.InitialAudioEvents;
 				}
 				IVisualNovelConfig_SetValue pocoInterface = this.PocoInterface;
 				if (pocoInterface == null)
 				{
 					return null;
 				}
-				return pocoInterface.InitialAudioEvent;
+				return pocoInterface.InitialAudioEvents;
 			}
+			[param: Nullable(new byte[]
+			{
+				2,
+				0
+			})]
 			set
 			{
-				this.GetOrCreatePoco().InitialAudioEvent = value;
+				this.GetOrCreatePoco().InitialAudioEvents = value;
 			}
 		}
 
-		// Token: 0x170037DE RID: 14302
-		// (get) Token: 0x0600B644 RID: 46660 RVA: 0x001A6ACC File Offset: 0x001A4CCC
-		// (set) Token: 0x0600B645 RID: 46661 RVA: 0x001A6B2D File Offset: 0x001A4D2D
+		// Token: 0x17003ABD RID: 15037
+		// (get) Token: 0x0600C16E RID: 49518 RVA: 0x001BD2DC File Offset: 0x001BB4DC
+		// (set) Token: 0x0600C16F RID: 49519 RVA: 0x001BD33D File Offset: 0x001BB53D
+		[Nullable(2)]
 		public virtual ISolarSchoolTime InitialTime
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this._InitialTimeInited)
@@ -211,6 +249,7 @@ namespace Aki.TDConfigMgr.Action
 				}
 				return this._InitialTimeCache;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().InitialTime = value;
@@ -218,17 +257,42 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006D7C RID: 28028
+		// Token: 0x17003ABE RID: 15038
+		// (get) Token: 0x0600C170 RID: 49520 RVA: 0x001BD354 File Offset: 0x001BB554
+		// (set) Token: 0x0600C171 RID: 49521 RVA: 0x001BD38E File Offset: 0x001BB58E
+		public virtual float? EndFadeOutTime
+		{
+			get
+			{
+				if (this.FbInstance != null)
+				{
+					return this.FbInstance.EndFadeOutTime;
+				}
+				IVisualNovelConfig_SetValue pocoInterface = this.PocoInterface;
+				if (pocoInterface == null)
+				{
+					return null;
+				}
+				return pocoInterface.EndFadeOutTime;
+			}
+			set
+			{
+				this.GetOrCreatePoco().EndFadeOutTime = value;
+			}
+		}
+
+		// Token: 0x04007386 RID: 29574
+		[Nullable(2)]
 		protected IVisualNovelConfig FbInstance;
 
-		// Token: 0x04006D7D RID: 28029
+		// Token: 0x04007387 RID: 29575
+		[Nullable(2)]
 		protected IVisualNovelConfig_SetValue PocoInterface;
 
-		// Token: 0x04006D7E RID: 28030
-		[Nullable(1)]
+		// Token: 0x04007388 RID: 29576
 		private ISolarSchoolTime _InitialTimeCache;
 
-		// Token: 0x04006D7F RID: 28031
+		// Token: 0x04007389 RID: 29577
 		private bool _InitialTimeInited;
 	}
 }

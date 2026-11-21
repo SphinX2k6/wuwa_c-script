@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.InteractHandler
 {
-	// Token: 0x02007116 RID: 28950
+	// Token: 0x02006344 RID: 25412
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ShootSwordInteractHandler : ManipulateInteractHandlerBase
 	{
-		// Token: 0x06046AC3 RID: 289475 RVA: 0x011CA588 File Offset: 0x011C8788
+		// Token: 0x0603D908 RID: 252168 RVA: 0x011D338C File Offset: 0x011D158C
 		public ShootSwordInteractHandler(IManipulateInteractContext context) : base(context)
 		{
 			this.FightCameraLogicComp = CameraController.Instance.MainModel.FightCamera.GetComponent<FightCameraLogicComponent>();
@@ -27,18 +27,18 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.InteractHandler
 			this.SphereTrace.Radius = 1f;
 		}
 
-		// Token: 0x06046AC4 RID: 289476 RVA: 0x011CA64B File Offset: 0x011C884B
+		// Token: 0x0603D909 RID: 252169 RVA: 0x011D344F File Offset: 0x011D164F
 		public override bool Start()
 		{
 			return true;
 		}
 
-		// Token: 0x06046AC5 RID: 289477 RVA: 0x011CA64E File Offset: 0x011C884E
+		// Token: 0x0603D90A RID: 252170 RVA: 0x011D3452 File Offset: 0x011D1652
 		public override void End()
 		{
 		}
 
-		// Token: 0x06046AC6 RID: 289478 RVA: 0x011CA650 File Offset: 0x011C8850
+		// Token: 0x0603D90B RID: 252171 RVA: 0x011D3454 File Offset: 0x011D1654
 		public void Refresh()
 		{
 			HashSet<SceneItemExploreInteractComponent> shootSwordInRangePoints = ManipulateInteractModel.Instance.ShootSwordInRangePoints;
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.InteractHandler
 			this.RefreshSwordControlGroundView();
 		}
 
-		// Token: 0x06046AC7 RID: 289479 RVA: 0x011CA7E8 File Offset: 0x011C89E8
+		// Token: 0x0603D90C RID: 252172 RVA: 0x011D35EC File Offset: 0x011D17EC
 		public void Clear()
 		{
 			if (this.RuntimeDataMap.Count <= 0 && this.NotAvailablePoints.Count <= 0)
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.InteractHandler
 			this.RefreshSwordControlGroundView();
 		}
 
-		// Token: 0x06046AC8 RID: 289480 RVA: 0x011CA8F8 File Offset: 0x011C8AF8
+		// Token: 0x0603D90D RID: 252173 RVA: 0x011D36FC File Offset: 0x011D18FC
 		public void GetShootReadyActors(TArray<AActor> actors)
 		{
 			actors.Empty(true);
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.InteractHandler
 			}
 		}
 
-		// Token: 0x06046AC9 RID: 289481 RVA: 0x011CA97C File Offset: 0x011C8B7C
+		// Token: 0x0603D90E RID: 252174 RVA: 0x011D3780 File Offset: 0x011D1980
 		private void RefreshPoint(SceneItemExploreInteractComponent point)
 		{
 			if (point.ShootSwordOption == null)
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.InteractHandler
 			}
 		}
 
-		// Token: 0x06046ACA RID: 289482 RVA: 0x011CA9F0 File Offset: 0x011C8BF0
+		// Token: 0x0603D90F RID: 252175 RVA: 0x011D37F4 File Offset: 0x011D19F4
 		private void RefreshShootReadyPointsLimit()
 		{
 			int shootReadyPointsMaxCount = this.GetShootReadyPointsMaxCount();
@@ -199,7 +199,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.InteractHandler
 			}
 		}
 
-		// Token: 0x06046ACB RID: 289483 RVA: 0x011CAAE4 File Offset: 0x011C8CE4
+		// Token: 0x0603D910 RID: 252176 RVA: 0x011D38E8 File Offset: 0x011D1AE8
 		[return: Nullable(2)]
 		private ShootSwordInteractHandler.ShootSwordReadyPointSortData GetShootReadyPointSortData(SceneItemExploreInteractComponent point)
 		{
@@ -235,7 +235,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.InteractHandler
 			};
 		}
 
-		// Token: 0x06046ACC RID: 289484 RVA: 0x011CABFC File Offset: 0x011C8DFC
+		// Token: 0x0603D911 RID: 252177 RVA: 0x011D3A00 File Offset: 0x011D1C00
 		private static int CompareShootReadyPointSortData(ShootSwordInteractHandler.ShootSwordReadyPointSortData dataA, ShootSwordInteractHandler.ShootSwordReadyPointSortData dataB)
 		{
 			int num = dataA.ScreenCenterDistanceSquared.CompareTo(dataB.ScreenCenterDistanceSquared);
@@ -256,7 +256,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.InteractHandler
 			return dataA.Point.CreatureDataId.CompareTo(dataB.Point.CreatureDataId);
 		}
 
-		// Token: 0x06046ACD RID: 289485 RVA: 0x011CAC6C File Offset: 0x011C8E6C
+		// Token: 0x0603D912 RID: 252178 RVA: 0x011D3A70 File Offset: 0x011D1C70
 		private bool CheckPointAvailable(SceneItemExploreInteractComponent point)
 		{
 			if (point.IsLocked || point.IsForbidden || !point.OnlineTypeCanInteract)
@@ -293,20 +293,20 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.InteractHandler
 			return !point.CheckTraceResult(checkResult, this.SphereTrace);
 		}
 
-		// Token: 0x06046ACE RID: 289486 RVA: 0x011CAD58 File Offset: 0x011C8F58
+		// Token: 0x0603D913 RID: 252179 RVA: 0x011D3B5C File Offset: 0x011D1D5C
 		private static bool IsRegisteredEnterTimeChanged(double? registeredEnterTime, double? enterTime)
 		{
 			return registeredEnterTime != null != (enterTime != null) || (registeredEnterTime != null && !MathUtils.Instance.IsNearlyEqual(registeredEnterTime.Value, enterTime.Value, null));
 		}
 
-		// Token: 0x06046ACF RID: 289487 RVA: 0x011CADA8 File Offset: 0x011C8FA8
+		// Token: 0x0603D914 RID: 252180 RVA: 0x011D3BAC File Offset: 0x011D1DAC
 		private bool ProjectWorldLocationToScreenPosition(Vector worldLocation, bool keepInScreenCheck)
 		{
 			float num = keepInScreenCheck ? 0.2f : 0f;
 			return this.FightCameraLogicComp.CheckPositionInScreen(worldLocation, -num, 1f + num, -num, 1f + num);
 		}
 
-		// Token: 0x06046AD0 RID: 289488 RVA: 0x011CADE3 File Offset: 0x011C8FE3
+		// Token: 0x0603D915 RID: 252181 RVA: 0x011D3BE7 File Offset: 0x011D1DE7
 		private void ResetPoint(SceneItemExploreInteractComponent point, SceneItemExploreInteractComponent.EManipulateInteractPointState resetState = SceneItemExploreInteractComponent.EManipulateInteractPointState.Normal)
 		{
 			this.RuntimeDataMap.Remove(point);
@@ -316,7 +316,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.InteractHandler
 			point.TryChangeManipulateInteractPointState(resetState);
 		}
 
-		// Token: 0x06046AD1 RID: 289489 RVA: 0x011CAE20 File Offset: 0x011C9020
+		// Token: 0x0603D916 RID: 252182 RVA: 0x011D3C24 File Offset: 0x011D1E24
 		private void RefreshCameraTag()
 		{
 			bool flag = this.RuntimeDataMap.Count > 0;
@@ -341,7 +341,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.InteractHandler
 			this.CameraTagAdded = flag;
 		}
 
-		// Token: 0x06046AD2 RID: 289490 RVA: 0x011CAEF0 File Offset: 0x011C90F0
+		// Token: 0x0603D917 RID: 252183 RVA: 0x011D3CF4 File Offset: 0x011D1EF4
 		private void RefreshInteractReady()
 		{
 			if (!this.CameraTagAdded || this.InteractReady)
@@ -355,7 +355,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.InteractHandler
 			this.InteractReady = true;
 		}
 
-		// Token: 0x06046AD3 RID: 289491 RVA: 0x011CAF20 File Offset: 0x011C9120
+		// Token: 0x0603D918 RID: 252184 RVA: 0x011D3D24 File Offset: 0x011D1F24
 		private void RefreshInteractivePoints()
 		{
 			this.InteractivePoints.Clear();
@@ -374,7 +374,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.InteractHandler
 			}
 		}
 
-		// Token: 0x06046AD4 RID: 289492 RVA: 0x011CAFB8 File Offset: 0x011C91B8
+		// Token: 0x0603D919 RID: 252185 RVA: 0x011D3DBC File Offset: 0x011D1FBC
 		private void RefreshShootReady()
 		{
 			if (this.InteractivePoints.Count <= 0)
@@ -401,7 +401,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.InteractHandler
 			this.ShootReady = true;
 		}
 
-		// Token: 0x06046AD5 RID: 289493 RVA: 0x011CB034 File Offset: 0x011C9234
+		// Token: 0x0603D91A RID: 252186 RVA: 0x011D3E38 File Offset: 0x011D2038
 		private void RefreshShootReadyPoints()
 		{
 			this.ShootReadyPoints.Clear();
@@ -415,7 +415,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.InteractHandler
 			}
 		}
 
-		// Token: 0x06046AD6 RID: 289494 RVA: 0x011CB0A4 File Offset: 0x011C92A4
+		// Token: 0x0603D91B RID: 252187 RVA: 0x011D3EA8 File Offset: 0x011D20A8
 		private double GetInteractWaitTime()
 		{
 			double num = 0.0;
@@ -428,7 +428,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.InteractHandler
 			return num;
 		}
 
-		// Token: 0x06046AD7 RID: 289495 RVA: 0x011CB120 File Offset: 0x011C9320
+		// Token: 0x0603D91C RID: 252188 RVA: 0x011D3F24 File Offset: 0x011D2124
 		private double GetShootWaitTime()
 		{
 			double num = 0.0;
@@ -441,7 +441,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.InteractHandler
 			return num;
 		}
 
-		// Token: 0x06046AD8 RID: 289496 RVA: 0x011CB198 File Offset: 0x011C9398
+		// Token: 0x0603D91D RID: 252189 RVA: 0x011D3F9C File Offset: 0x011D219C
 		private void RefreshPlayerTag()
 		{
 			int num = Math.Min(this.ShootReadyPoints.Count, this.GetShootReadyPointsMaxCount());
@@ -452,13 +452,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.InteractHandler
 			}
 		}
 
-		// Token: 0x06046AD9 RID: 289497 RVA: 0x011CB1EF File Offset: 0x011C93EF
+		// Token: 0x0603D91E RID: 252190 RVA: 0x011D3FF3 File Offset: 0x011D21F3
 		private int GetShootReadyPointsMaxCount()
 		{
 			return Math.Min(this.Context.TagComp.GetTagCount(ShootSwordInteractHandler.SHOOT_SWORD_INTERACT_PLAYER_TAG_MAX_COUNT_TAG), 5);
 		}
 
-		// Token: 0x06046ADA RID: 289498 RVA: 0x011CB20C File Offset: 0x011C940C
+		// Token: 0x0603D91F RID: 252191 RVA: 0x011D4010 File Offset: 0x011D2210
 		private void RefreshSwordControlGroundView()
 		{
 			bool shootReady = this.ShootReady;
@@ -475,113 +475,113 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.InteractHandler
 			SwordControlGroundController.CloseByGameplay();
 		}
 
-		// Token: 0x0402518A RID: 151946
+		// Token: 0x04020A6A RID: 133738
 		private const string PROFILE_KEY = "ShootSwordInteractHandler_RefreshTarget";
 
-		// Token: 0x0402518B RID: 151947
+		// Token: 0x04020A6B RID: 133739
 		private const int SPHERE_TRACE_RADIUS = 1;
 
-		// Token: 0x0402518C RID: 151948
+		// Token: 0x04020A6C RID: 133740
 		private static readonly int SHOOT_SWORD_INTERACT_PLAYER_TAG = GameplayTagDefine.EGameplayTagId["角色.Common.技能通用标识.御剑剑意.瞄准数量"];
 
-		// Token: 0x0402518D RID: 151949
+		// Token: 0x04020A6D RID: 133741
 		private static readonly int SHOOT_SWORD_INTERACT_PLAYER_TAG_MAX_COUNT_TAG = GameplayTagDefine.EGameplayTagId["角色.Common.技能通用标识.御剑剑意.解锁层数"];
 
-		// Token: 0x0402518E RID: 151950
+		// Token: 0x04020A6E RID: 133742
 		private static readonly int SHOOT_SWORD_CAMERA_TAG = GameplayTagDefine.EGameplayTagId["关卡.Common.镜头.射箭交互点越肩镜头"];
 
-		// Token: 0x0402518F RID: 151951
+		// Token: 0x04020A6F RID: 133743
 		private static readonly int SHOOT_SWORD_FORBID_NORMAL_ATTACK_TAG = GameplayTagDefine.EGameplayTagId["战斗状态.技能限制.禁止普攻"];
 
-		// Token: 0x04025190 RID: 151952
+		// Token: 0x04020A70 RID: 133744
 		private const int SHOOT_SWORD_INTERACT_PLAYER_TAG_MAX_COUNT = 5;
 
-		// Token: 0x04025191 RID: 151953
+		// Token: 0x04020A71 RID: 133745
 		private const float KEEP_IN_SCREEN_BUFFER = 0.2f;
 
-		// Token: 0x04025192 RID: 151954
+		// Token: 0x04020A72 RID: 133746
 		private readonly Dictionary<SceneItemExploreInteractComponent, double?> RuntimeDataMap = new Dictionary<SceneItemExploreInteractComponent, double?>();
 
-		// Token: 0x04025193 RID: 151955
+		// Token: 0x04020A73 RID: 133747
 		private readonly HashSet<SceneItemExploreInteractComponent> NotAvailablePoints = new HashSet<SceneItemExploreInteractComponent>();
 
-		// Token: 0x04025194 RID: 151956
+		// Token: 0x04020A74 RID: 133748
 		private readonly HashSet<SceneItemExploreInteractComponent> InteractivePoints = new HashSet<SceneItemExploreInteractComponent>();
 
-		// Token: 0x04025195 RID: 151957
+		// Token: 0x04020A75 RID: 133749
 		private readonly HashSet<SceneItemExploreInteractComponent> ShootReadyPoints = new HashSet<SceneItemExploreInteractComponent>();
 
-		// Token: 0x04025196 RID: 151958
+		// Token: 0x04020A76 RID: 133750
 		private readonly UTraceSphereElement SphereTrace;
 
-		// Token: 0x04025197 RID: 151959
+		// Token: 0x04020A77 RID: 133751
 		private readonly FightCameraLogicComponent FightCameraLogicComp;
 
-		// Token: 0x04025198 RID: 151960
+		// Token: 0x04020A78 RID: 133752
 		private FVector2D ScreenPositionRef = new FVector2D();
 
-		// Token: 0x04025199 RID: 151961
+		// Token: 0x04020A79 RID: 133753
 		private int ViewPortSizeRefX;
 
-		// Token: 0x0402519A RID: 151962
+		// Token: 0x04020A7A RID: 133754
 		private int ViewPortSizeRefY;
 
-		// Token: 0x0402519B RID: 151963
+		// Token: 0x04020A7B RID: 133755
 		private int PlayerTagCount;
 
-		// Token: 0x0402519C RID: 151964
+		// Token: 0x04020A7C RID: 133756
 		private bool CameraTagAdded;
 
-		// Token: 0x0402519D RID: 151965
+		// Token: 0x04020A7D RID: 133757
 		private bool SwordControlGroundViewOpened;
 
-		// Token: 0x0402519E RID: 151966
+		// Token: 0x04020A7E RID: 133758
 		private bool InteractReady;
 
-		// Token: 0x0402519F RID: 151967
+		// Token: 0x04020A7F RID: 133759
 		private bool ShootReady;
 
-		// Token: 0x040251A0 RID: 151968
+		// Token: 0x04020A80 RID: 133760
 		private bool ShootReadyTimerStarted;
 
-		// Token: 0x040251A1 RID: 151969
+		// Token: 0x04020A81 RID: 133761
 		private double InteractReadyTime;
 
-		// Token: 0x040251A2 RID: 151970
+		// Token: 0x04020A82 RID: 133762
 		private double ShootReadyTime;
 
-		// Token: 0x0200CE7C RID: 52860
+		// Token: 0x0200BB44 RID: 47940
 		[NullableContext(0)]
 		[RequiredMember]
 		private class ShootSwordReadyPointSortData
 		{
-			// Token: 0x06051EB7 RID: 335543 RVA: 0x016427DA File Offset: 0x016409DA
+			// Token: 0x06048907 RID: 297223 RVA: 0x0161FBF1 File Offset: 0x0161DDF1
 			[Obsolete("Constructors of types with required members are not supported in this version of your compiler.", true)]
 			[CompilerFeatureRequired("RequiredMembers")]
 			public ShootSwordReadyPointSortData()
 			{
 			}
 
-			// Token: 0x0403E277 RID: 254583
+			// Token: 0x04039981 RID: 235905
 			[Nullable(1)]
 			[RequiredMember]
 			public SceneItemExploreInteractComponent Point;
 
-			// Token: 0x0403E278 RID: 254584
+			// Token: 0x04039982 RID: 235906
 			public double ScreenCenterDistanceSquared;
 
-			// Token: 0x0403E279 RID: 254585
+			// Token: 0x04039983 RID: 235907
 			public double DistanceSquared;
 
-			// Token: 0x0403E27A RID: 254586
+			// Token: 0x04039984 RID: 235908
 			public double RegisteredEnterTime;
 		}
 
-		// Token: 0x0200CE7D RID: 52861
+		// Token: 0x0200BB45 RID: 47941
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x0403E27B RID: 254587
+			// Token: 0x04039985 RID: 235909
 			[Nullable(new byte[]
 			{
 				0,

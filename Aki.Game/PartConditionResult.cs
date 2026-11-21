@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200259F RID: 9631
+// Token: 0x02001A8A RID: 6794
 [NullableContext(1)]
 [Nullable(0)]
 public class PartConditionResult : IPartConditionResult
 {
-	// Token: 0x17001916 RID: 6422
-	// (get) Token: 0x06013817 RID: 79895 RVA: 0x004DEE7B File Offset: 0x004DD07B
-	// (set) Token: 0x06013818 RID: 79896 RVA: 0x004DEE83 File Offset: 0x004DD083
+	// Token: 0x17001950 RID: 6480
+	// (get) Token: 0x06010CF9 RID: 68857 RVA: 0x004ED9AF File Offset: 0x004EBBAF
+	// (set) Token: 0x06010CFA RID: 68858 RVA: 0x004ED9B7 File Offset: 0x004EBBB7
 	public bool Satisfied { get; set; }
 
-	// Token: 0x17001917 RID: 6423
-	// (get) Token: 0x06013819 RID: 79897 RVA: 0x004DEE8C File Offset: 0x004DD08C
-	// (set) Token: 0x0601381A RID: 79898 RVA: 0x004DEE94 File Offset: 0x004DD094
+	// Token: 0x17001951 RID: 6481
+	// (get) Token: 0x06010CFB RID: 68859 RVA: 0x004ED9C0 File Offset: 0x004EBBC0
+	// (set) Token: 0x06010CFC RID: 68860 RVA: 0x004ED9C8 File Offset: 0x004EBBC8
 	public List<Vector> PartPositions { get; set; } = new List<Vector>();
 }

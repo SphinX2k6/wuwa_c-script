@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020003AA RID: 938
+	// Token: 0x020003C0 RID: 960
 	public class ConfigGongduolaPassengerVoiceConfigById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001603 RID: 5635 RVA: 0x000D5EF0 File Offset: 0x000D40F0
+		// Token: 0x06001687 RID: 5767 RVA: 0x000DC644 File Offset: 0x000DA844
 		static ConfigGongduolaPassengerVoiceConfigById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigGongduolaPassengerVoiceConfigById.CreateStaticDefaultValue), new Action(ConfigGongduolaPassengerVoiceConfigById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001604 RID: 5636 RVA: 0x000D5F10 File Offset: 0x000D4110
+		// Token: 0x06001688 RID: 5768 RVA: 0x000DC664 File Offset: 0x000DA864
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigGongduolaPassengerVoiceConfigById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001605 RID: 5637 RVA: 0x000D5F8F File Offset: 0x000D418F
+		// Token: 0x06001689 RID: 5769 RVA: 0x000DC6E3 File Offset: 0x000DA8E3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigGongduolaPassengerVoiceConfigById.LogPair = null;
 			ConfigGongduolaPassengerVoiceConfigById.HandleId = 0;
 		}
 
-		// Token: 0x06001606 RID: 5638 RVA: 0x000D5F9D File Offset: 0x000D419D
+		// Token: 0x0600168A RID: 5770 RVA: 0x000DC6F1 File Offset: 0x000DA8F1
 		public static void Init()
 		{
 			ConfigGongduolaPassengerVoiceConfigById.HandleId = ConfigCommon.InitDataStatement(ConfigGongduolaPassengerVoiceConfigById.HandleId, "db_gongduolapassengervoiceconfig.db", "select BinData from `GongduolaPassengerVoiceConfig` where Id=?");
 		}
 
-		// Token: 0x06001607 RID: 5639 RVA: 0x000D5FB8 File Offset: 0x000D41B8
+		// Token: 0x0600168B RID: 5771 RVA: 0x000DC70C File Offset: 0x000DA90C
 		public static GongduolaPassengerVoiceConfig? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigGongduolaPassengerVoiceConfigById.HandleId, ConfigGongduolaPassengerVoiceConfigById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new GongduolaPassengerVoiceConfig?(rootAsGongduolaPassengerVoiceConfig);
 		}
 
-		// Token: 0x0400198A RID: 6538
+		// Token: 0x04001A24 RID: 6692
 		private const string DB = "db_gongduolapassengervoiceconfig.db";
 
-		// Token: 0x0400198B RID: 6539
+		// Token: 0x04001A25 RID: 6693
 		private const string FILE = "k.可视化编辑/c.Csv/g.贡多拉共乘角色语音配置/*.csv*";
 
-		// Token: 0x0400198C RID: 6540
+		// Token: 0x04001A26 RID: 6694
 		private const string TABLE = "GongduolaPassengerVoiceConfig";
 
-		// Token: 0x0400198D RID: 6541
+		// Token: 0x04001A27 RID: 6695
 		private const string COMMAND = "select BinData from `GongduolaPassengerVoiceConfig` where Id=?";
 
-		// Token: 0x0400198E RID: 6542
+		// Token: 0x04001A28 RID: 6696
 		private const string KEY_PREFIX = "GongduolaPassengerVoiceConfigById";
 
-		// Token: 0x0400198F RID: 6543
+		// Token: 0x04001A29 RID: 6697
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001990 RID: 6544
+		// Token: 0x04001A2A RID: 6698
 		private static int HandleId;
 	}
 }

@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001480 RID: 5248
+// Token: 0x02000934 RID: 2356
 [NullableContext(2)]
 [Nullable(0)]
 public class RegressBpMainView : ActivityRegressMainSubViewBase
 {
-	// Token: 0x06009470 RID: 38000 RVA: 0x001FF694 File Offset: 0x001FD894
+	// Token: 0x06006805 RID: 26629 RVA: 0x002085F8 File Offset: 0x002067F8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,14 +37,14 @@ public class RegressBpMainView : ActivityRegressMainSubViewBase
 		};
 	}
 
-	// Token: 0x06009471 RID: 38001 RVA: 0x001FF7DC File Offset: 0x001FD9DC
+	// Token: 0x06006806 RID: 26630 RVA: 0x00208740 File Offset: 0x00206940
 	protected override void OnUpdate(int subTabIndex)
 	{
 		this.RefreshButton();
 		this.RefreshSubView();
 	}
 
-	// Token: 0x06009472 RID: 38002 RVA: 0x001FF7EC File Offset: 0x001FD9EC
+	// Token: 0x06006807 RID: 26631 RVA: 0x00208750 File Offset: 0x00206950
 	protected override UniTask OnBeforeStartAsync()
 	{
 		RegressBpMainView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -55,7 +55,7 @@ public class RegressBpMainView : ActivityRegressMainSubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009473 RID: 38003 RVA: 0x001FF82F File Offset: 0x001FDA2F
+	// Token: 0x06006808 RID: 26632 RVA: 0x00208793 File Offset: 0x00206993
 	private void OnInventoryUpdate(int configId, int count)
 	{
 		if (configId == 20)
@@ -64,7 +64,7 @@ public class RegressBpMainView : ActivityRegressMainSubViewBase
 		}
 	}
 
-	// Token: 0x06009474 RID: 38004 RVA: 0x001FF83C File Offset: 0x001FDA3C
+	// Token: 0x06006809 RID: 26633 RVA: 0x002087A0 File Offset: 0x002069A0
 	protected override void OnBeforeShow()
 	{
 		base.OnBeforeShow();
@@ -73,7 +73,7 @@ public class RegressBpMainView : ActivityRegressMainSubViewBase
 		this.RefreshView(true);
 	}
 
-	// Token: 0x06009475 RID: 38005 RVA: 0x001FF890 File Offset: 0x001FDA90
+	// Token: 0x0600680A RID: 26634 RVA: 0x002087F4 File Offset: 0x002069F4
 	protected override void OnBeforeHide()
 	{
 		base.OnBeforeHide();
@@ -82,7 +82,7 @@ public class RegressBpMainView : ActivityRegressMainSubViewBase
 		this.KillExpTween();
 	}
 
-	// Token: 0x06009476 RID: 38006 RVA: 0x001FF8E1 File Offset: 0x001FDAE1
+	// Token: 0x0600680B RID: 26635 RVA: 0x00208845 File Offset: 0x00206A45
 	protected override void OnBeforeDestroy()
 	{
 		base.OnBeforeDestroy();
@@ -90,7 +90,7 @@ public class RegressBpMainView : ActivityRegressMainSubViewBase
 		DelegateUtils.ReleaseManualReleaseDelegate(new Action<float>(this.OnExpTweenUpdate));
 	}
 
-	// Token: 0x06009477 RID: 38007 RVA: 0x001FF900 File Offset: 0x001FDB00
+	// Token: 0x0600680C RID: 26636 RVA: 0x00208864 File Offset: 0x00206A64
 	private void RefreshView(bool playAnim = false)
 	{
 		IRegressLevelProgressData curLevelProgressData = ActivityRegressModel.Instance.ActivityData.GetCurLevelProgressData();
@@ -106,7 +106,7 @@ public class RegressBpMainView : ActivityRegressMainSubViewBase
 		this.RefreshSubView(playAnim);
 	}
 
-	// Token: 0x06009478 RID: 38008 RVA: 0x001FF9A8 File Offset: 0x001FDBA8
+	// Token: 0x0600680D RID: 26637 RVA: 0x0020890C File Offset: 0x00206B0C
 	private void RefreshButton()
 	{
 		IRegressLevelProgressData curLevelProgressData = ActivityRegressModel.Instance.ActivityData.GetCurLevelProgressData();
@@ -115,7 +115,7 @@ public class RegressBpMainView : ActivityRegressMainSubViewBase
 		base.GetItem(9).SetUIActive(ActivityRegressModel.Instance.ActivityData.CheckBpPayButtonRedDot());
 	}
 
-	// Token: 0x06009479 RID: 38009 RVA: 0x001FFA28 File Offset: 0x001FDC28
+	// Token: 0x0600680E RID: 26638 RVA: 0x0020898C File Offset: 0x00206B8C
 	private void RefreshSubView(bool playAnim = false)
 	{
 		TabViewComponent<UiDynamicTab> tabViewComponent = this.TabViewComponent;
@@ -131,13 +131,13 @@ public class RegressBpMainView : ActivityRegressMainSubViewBase
 		regressBpTabView.RefreshBtnClaimVisible(base.GetButton(7).RootUIComp.Get());
 	}
 
-	// Token: 0x0600947A RID: 38010 RVA: 0x001FFA77 File Offset: 0x001FDC77
+	// Token: 0x0600680F RID: 26639 RVA: 0x002089DB File Offset: 0x00206BDB
 	private void RefreshSubView()
 	{
 		this.RefreshSubView(false);
 	}
 
-	// Token: 0x0600947B RID: 38011 RVA: 0x001FFA80 File Offset: 0x001FDC80
+	// Token: 0x06006810 RID: 26640 RVA: 0x002089E4 File Offset: 0x00206BE4
 	[NullableContext(1)]
 	public List<CommonTabItemData> CreateTabItemDataByLength(int length)
 	{
@@ -161,14 +161,14 @@ public class RegressBpMainView : ActivityRegressMainSubViewBase
 		return list;
 	}
 
-	// Token: 0x0600947C RID: 38012 RVA: 0x001FFB2D File Offset: 0x001FDD2D
+	// Token: 0x06006811 RID: 26641 RVA: 0x00208A91 File Offset: 0x00206C91
 	[NullableContext(1)]
 	private RegressBpTabItem TabItemProxyCreate([Nullable(2)] UUIItem uiItem, int? index)
 	{
 		return new RegressBpTabItem();
 	}
 
-	// Token: 0x0600947D RID: 38013 RVA: 0x001FFB34 File Offset: 0x001FDD34
+	// Token: 0x06006812 RID: 26642 RVA: 0x00208A98 File Offset: 0x00206C98
 	private void ToggleCallBack(int index)
 	{
 		UiDynamicTab data = this.TabDataList[index];
@@ -196,13 +196,13 @@ public class RegressBpMainView : ActivityRegressMainSubViewBase
 		sequencePlayer2.PlaySequence("Switch", false, null);
 	}
 
-	// Token: 0x0600947E RID: 38014 RVA: 0x001FFBE4 File Offset: 0x001FDDE4
+	// Token: 0x06006813 RID: 26643 RVA: 0x00208B48 File Offset: 0x00206D48
 	private void OnClickBtnBuyExp()
 	{
 		UiManager.Instance.OpenView(EUiViewName.RegressBpBuyLevelView, null, null);
 	}
 
-	// Token: 0x0600947F RID: 38015 RVA: 0x001FFBF7 File Offset: 0x001FDDF7
+	// Token: 0x06006814 RID: 26644 RVA: 0x00208B5B File Offset: 0x00206D5B
 	private void OnClickBtnClaimAll()
 	{
 		TabViewComponent<UiDynamicTab> tabViewComponent = this.TabViewComponent;
@@ -214,7 +214,7 @@ public class RegressBpMainView : ActivityRegressMainSubViewBase
 		regressBpTabView.OnClickBtnClaimAll();
 	}
 
-	// Token: 0x06009480 RID: 38016 RVA: 0x001FFC1C File Offset: 0x001FDE1C
+	// Token: 0x06006815 RID: 26645 RVA: 0x00208B80 File Offset: 0x00206D80
 	private void OnClickBtnPay()
 	{
 		ActivityRegressModel.Instance.ActivityData.SetBpPayButtonRedDotChecked();
@@ -230,13 +230,13 @@ public class RegressBpMainView : ActivityRegressMainSubViewBase
 		this.RefreshView(false);
 	}
 
-	// Token: 0x06009481 RID: 38017 RVA: 0x001FFC6E File Offset: 0x001FDE6E
+	// Token: 0x06006816 RID: 26646 RVA: 0x00208BD2 File Offset: 0x00206DD2
 	private void EventRegressBpExpAnim(int prevLevel, int curLevel, float startFillAmount, float endFillAmount)
 	{
 		this.OnRegressBpExpAnim(prevLevel, curLevel, startFillAmount, endFillAmount);
 	}
 
-	// Token: 0x06009482 RID: 38018 RVA: 0x001FFC7C File Offset: 0x001FDE7C
+	// Token: 0x06006817 RID: 26647 RVA: 0x00208BE0 File Offset: 0x00206DE0
 	private UniTask OnRegressBpExpAnim(int prevLevel, int curLevel, float startFillAmount, float endFillAmount)
 	{
 		RegressBpMainView.<OnRegressBpExpAnim>d__26 <OnRegressBpExpAnim>d__;
@@ -251,7 +251,7 @@ public class RegressBpMainView : ActivityRegressMainSubViewBase
 		return <OnRegressBpExpAnim>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009483 RID: 38019 RVA: 0x001FFCE0 File Offset: 0x001FDEE0
+	// Token: 0x06006818 RID: 26648 RVA: 0x00208C44 File Offset: 0x00206E44
 	private UniTask PlayExpBarAnim(float startFillAmount, float endFillAmount)
 	{
 		RegressBpMainView.<PlayExpBarAnim>d__27 <PlayExpBarAnim>d__;
@@ -264,7 +264,7 @@ public class RegressBpMainView : ActivityRegressMainSubViewBase
 		return <PlayExpBarAnim>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009484 RID: 38020 RVA: 0x001FFD34 File Offset: 0x001FDF34
+	// Token: 0x06006819 RID: 26649 RVA: 0x00208C98 File Offset: 0x00206E98
 	private void OnExpTweenUpdate(float value)
 	{
 		UUISprite sprite = base.GetSprite(4);
@@ -274,13 +274,13 @@ public class RegressBpMainView : ActivityRegressMainSubViewBase
 		}
 	}
 
-	// Token: 0x06009485 RID: 38021 RVA: 0x001FFD53 File Offset: 0x001FDF53
+	// Token: 0x0600681A RID: 26650 RVA: 0x00208CB7 File Offset: 0x00206EB7
 	private void OnExpTweenComplete()
 	{
 		this.KillExpTween();
 	}
 
-	// Token: 0x06009486 RID: 38022 RVA: 0x001FFD5C File Offset: 0x001FDF5C
+	// Token: 0x0600681B RID: 26651 RVA: 0x00208CC0 File Offset: 0x00206EC0
 	private void KillExpTween()
 	{
 		if (this.BarAnimPromise != null)
@@ -295,10 +295,10 @@ public class RegressBpMainView : ActivityRegressMainSubViewBase
 		this.ExpTweener = null;
 	}
 
-	// Token: 0x040041D1 RID: 16849
+	// Token: 0x04004269 RID: 17001
 	private const float EXP_BAR_ANIM_DURATION = 0.4f;
 
-	// Token: 0x040041D2 RID: 16850
+	// Token: 0x0400426A RID: 17002
 	[Nullable(new byte[]
 	{
 		2,
@@ -306,54 +306,54 @@ public class RegressBpMainView : ActivityRegressMainSubViewBase
 	})]
 	private TabComponent<RegressBpTabItem> TabComponent;
 
-	// Token: 0x040041D3 RID: 16851
+	// Token: 0x0400426B RID: 17003
 	private TabViewComponent<UiDynamicTab> TabViewComponent;
 
-	// Token: 0x040041D4 RID: 16852
+	// Token: 0x0400426C RID: 17004
 	[Nullable(1)]
 	private List<UiDynamicTab> TabDataList = new List<UiDynamicTab>();
 
-	// Token: 0x040041D5 RID: 16853
+	// Token: 0x0400426D RID: 17005
 	private ULTweener ExpTweener;
 
-	// Token: 0x040041D6 RID: 16854
+	// Token: 0x0400426E RID: 17006
 	private FLTweenFloatSetterDynamic ExpTweenDelegate;
 
-	// Token: 0x040041D7 RID: 16855
+	// Token: 0x0400426F RID: 17007
 	private CustomPromise BarAnimPromise;
 
-	// Token: 0x02007AA2 RID: 31394
+	// Token: 0x02006C26 RID: 27686
 	[NullableContext(0)]
 	private class ERegressBpComponents
 	{
-		// Token: 0x04028592 RID: 165266
+		// Token: 0x040238AC RID: 145580
 		public const int PanelTopMenu = 0;
 
-		// Token: 0x04028593 RID: 165267
+		// Token: 0x040238AD RID: 145581
 		public const int RoleDevelopToggle = 1;
 
-		// Token: 0x04028594 RID: 165268
+		// Token: 0x040238AE RID: 145582
 		public const int TxtLevel = 2;
 
-		// Token: 0x04028595 RID: 165269
+		// Token: 0x040238AF RID: 145583
 		public const int TxtExpValue = 3;
 
-		// Token: 0x04028596 RID: 165270
+		// Token: 0x040238B0 RID: 145584
 		public const int SpriteProgressFill = 4;
 
-		// Token: 0x04028597 RID: 165271
+		// Token: 0x040238B1 RID: 145585
 		public const int BtnBuyExp = 5;
 
-		// Token: 0x04028598 RID: 165272
+		// Token: 0x040238B2 RID: 145586
 		public const int PanelContent = 6;
 
-		// Token: 0x04028599 RID: 165273
+		// Token: 0x040238B3 RID: 145587
 		public const int BtnClaimAll = 7;
 
-		// Token: 0x0402859A RID: 165274
+		// Token: 0x040238B4 RID: 145588
 		public const int BtnPay = 8;
 
-		// Token: 0x0402859B RID: 165275
+		// Token: 0x040238B5 RID: 145589
 		public const int RedDot = 9;
 	}
 }

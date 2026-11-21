@@ -3,13 +3,13 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020015EC RID: 5612
+	// Token: 0x0200165E RID: 5726
 	public enum ZitherOpState
 	{
-		// Token: 0x0400BDF1 RID: 48625
+		// Token: 0x0400C2E5 RID: 49893
 		[OriginalName("OpEnter")]
 		OpEnter,
-		// Token: 0x0400BDF2 RID: 48626
+		// Token: 0x0400C2E6 RID: 49894
 		[OriginalName("OpExit")]
 		OpExit
 	}

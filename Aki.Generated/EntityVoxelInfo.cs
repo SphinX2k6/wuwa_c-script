@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000C39 RID: 3129
+	// Token: 0x02000D1C RID: 3356
 	public struct EntityVoxelInfo : IFlatbufferObject
 	{
-		// Token: 0x17000F3C RID: 3900
-		// (get) Token: 0x060069C9 RID: 27081 RVA: 0x00224794 File Offset: 0x00222994
+		// Token: 0x17000F95 RID: 3989
+		// (get) Token: 0x06006FCB RID: 28619 RVA: 0x00243ADC File Offset: 0x00241CDC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060069CA RID: 27082 RVA: 0x002247A1 File Offset: 0x002229A1
+		// Token: 0x06006FCC RID: 28620 RVA: 0x00243AE9 File Offset: 0x00241CE9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060069CB RID: 27083 RVA: 0x002247A8 File Offset: 0x002229A8
+		// Token: 0x06006FCD RID: 28621 RVA: 0x00243AF0 File Offset: 0x00241CF0
 		public static EntityVoxelInfo GetRootAsEntityVoxelInfo(ByteBuffer _bb)
 		{
 			return EntityVoxelInfo.GetRootAsEntityVoxelInfo(_bb, default(EntityVoxelInfo));
 		}
 
-		// Token: 0x060069CC RID: 27084 RVA: 0x002247C4 File Offset: 0x002229C4
+		// Token: 0x06006FCE RID: 28622 RVA: 0x00243B0C File Offset: 0x00241D0C
 		public static EntityVoxelInfo GetRootAsEntityVoxelInfo(ByteBuffer _bb, EntityVoxelInfo obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060069CD RID: 27085 RVA: 0x002247E1 File Offset: 0x002229E1
+		// Token: 0x06006FCF RID: 28623 RVA: 0x00243B29 File Offset: 0x00241D29
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060069CE RID: 27086 RVA: 0x002247F0 File Offset: 0x002229F0
+		// Token: 0x06006FD0 RID: 28624 RVA: 0x00243B38 File Offset: 0x00241D38
 		public EntityVoxelInfo __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000F3D RID: 3901
-		// (get) Token: 0x060069CF RID: 27087 RVA: 0x00224800 File Offset: 0x00222A00
+		// Token: 0x17000F96 RID: 3990
+		// (get) Token: 0x06006FD1 RID: 28625 RVA: 0x00243B48 File Offset: 0x00241D48
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000F3E RID: 3902
-		// (get) Token: 0x060069D0 RID: 27088 RVA: 0x0022483C File Offset: 0x00222A3C
+		// Token: 0x17000F97 RID: 3991
+		// (get) Token: 0x06006FD2 RID: 28626 RVA: 0x00243B84 File Offset: 0x00241D84
 		public int MapId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000F3F RID: 3903
-		// (get) Token: 0x060069D1 RID: 27089 RVA: 0x00224878 File Offset: 0x00222A78
+		// Token: 0x17000F98 RID: 3992
+		// (get) Token: 0x06006FD3 RID: 28627 RVA: 0x00243BC0 File Offset: 0x00241DC0
 		public int EntityId
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000F40 RID: 3904
-		// (get) Token: 0x060069D2 RID: 27090 RVA: 0x002248B4 File Offset: 0x00222AB4
+		// Token: 0x17000F99 RID: 3993
+		// (get) Token: 0x06006FD4 RID: 28628 RVA: 0x00243BFC File Offset: 0x00241DFC
 		public int EnvType
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004C79 RID: 19577
+		// Token: 0x0400525C RID: 21084
 		private Table __p;
 	}
 }

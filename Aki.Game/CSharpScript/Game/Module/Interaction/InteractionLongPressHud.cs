@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Interaction
 {
-	// Token: 0x0200585C RID: 22620
+	// Token: 0x02004834 RID: 18484
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class InteractionLongPressHud : UiPanelBase
 	{
-		// Token: 0x06039820 RID: 235552 RVA: 0x00DA73F8 File Offset: 0x00DA55F8
+		// Token: 0x0602E73D RID: 190269 RVA: 0x00CF6120 File Offset: 0x00CF4320
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06039821 RID: 235553 RVA: 0x00DA7461 File Offset: 0x00DA5661
+		// Token: 0x0602E73E RID: 190270 RVA: 0x00CF6189 File Offset: 0x00CF4389
 		protected override void OnStart()
 		{
 			this.ProgressSprite = base.GetSprite(0);
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.SetActive(false);
 		}
 
-		// Token: 0x06039822 RID: 235554 RVA: 0x00DA7484 File Offset: 0x00DA5684
+		// Token: 0x0602E73F RID: 190271 RVA: 0x00CF61AC File Offset: 0x00CF43AC
 		protected override void OnBeforeDestroy()
 		{
 			this.UnbindEntity();
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.TidContentText = null;
 		}
 
-		// Token: 0x06039823 RID: 235555 RVA: 0x00DA749C File Offset: 0x00DA569C
+		// Token: 0x0602E740 RID: 190272 RVA: 0x00CF61C4 File Offset: 0x00CF43C4
 		public void SetContentTid(string tid)
 		{
 			if (string.IsNullOrEmpty(tid))
@@ -63,13 +63,13 @@ namespace CSharpScript.Game.Module.Interaction
 			}
 		}
 
-		// Token: 0x06039824 RID: 235556 RVA: 0x00DA74CF File Offset: 0x00DA56CF
+		// Token: 0x0602E741 RID: 190273 RVA: 0x00CF61F7 File Offset: 0x00CF43F7
 		public void SetStartProgress(float? startProgress)
 		{
 			this.StartProgress = startProgress;
 		}
 
-		// Token: 0x06039825 RID: 235557 RVA: 0x00DA74D8 File Offset: 0x00DA56D8
+		// Token: 0x0602E742 RID: 190274 RVA: 0x00CF6200 File Offset: 0x00CF4400
 		public void BindEntity(Entity entity)
 		{
 			if (this.BoundEntity == entity)
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.SetActive(this.StartProgress == null);
 		}
 
-		// Token: 0x06039826 RID: 235558 RVA: 0x00DA7558 File Offset: 0x00DA5758
+		// Token: 0x0602E743 RID: 190275 RVA: 0x00CF6280 File Offset: 0x00CF4480
 		public void UnbindEntity()
 		{
 			if (this.BoundEntity != null)
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.Interaction
 			this.SetActive(false);
 		}
 
-		// Token: 0x06039827 RID: 235559 RVA: 0x00DA75C0 File Offset: 0x00DA57C0
+		// Token: 0x0602E744 RID: 190276 RVA: 0x00CF62E8 File Offset: 0x00CF44E8
 		private void OnInteractionLongPressProgressChange(float progress)
 		{
 			if (this.StartProgress != null && progress < this.StartProgress.Value)
@@ -122,26 +122,26 @@ namespace CSharpScript.Game.Module.Interaction
 			progressSprite.SetFillAmount(progress);
 		}
 
-		// Token: 0x0401E10E RID: 123150
+		// Token: 0x04018BAB RID: 101291
 		private UUISprite ProgressSprite;
 
-		// Token: 0x0401E10F RID: 123151
+		// Token: 0x04018BAC RID: 101292
 		private UUIText TidContentText;
 
-		// Token: 0x0401E110 RID: 123152
+		// Token: 0x04018BAD RID: 101293
 		private Entity BoundEntity;
 
-		// Token: 0x0401E111 RID: 123153
+		// Token: 0x04018BAE RID: 101294
 		private float? StartProgress;
 
-		// Token: 0x0200BA85 RID: 47749
+		// Token: 0x0200A49C RID: 42140
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x04038614 RID: 230932
+			// Token: 0x0403300B RID: 208907
 			public const int ProgressSprite = 0;
 
-			// Token: 0x04038615 RID: 230933
+			// Token: 0x0403300C RID: 208908
 			public const int TidContentText = 1;
 		}
 	}

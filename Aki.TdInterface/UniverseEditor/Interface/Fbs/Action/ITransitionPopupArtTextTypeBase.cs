@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200743F RID: 29759
+	// Token: 0x02007C32 RID: 31794
 	public struct ITransitionPopupArtTextTypeBase : IFlatbufferObject
 	{
-		// Token: 0x1700E1F3 RID: 57843
-		// (get) Token: 0x06036102 RID: 221442 RVA: 0x0075A6EC File Offset: 0x007588EC
+		// Token: 0x1700EE10 RID: 60944
+		// (get) Token: 0x060394EB RID: 234731 RVA: 0x007BD418 File Offset: 0x007BB618
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036103 RID: 221443 RVA: 0x0075A6F9 File Offset: 0x007588F9
+		// Token: 0x060394EC RID: 234732 RVA: 0x007BD425 File Offset: 0x007BB625
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06036104 RID: 221444 RVA: 0x0075A700 File Offset: 0x00758900
+		// Token: 0x060394ED RID: 234733 RVA: 0x007BD42C File Offset: 0x007BB62C
 		public static ITransitionPopupArtTextTypeBase GetRootAsITransitionPopupArtTextTypeBase(ByteBuffer _bb)
 		{
 			return ITransitionPopupArtTextTypeBase.GetRootAsITransitionPopupArtTextTypeBase(_bb, default(ITransitionPopupArtTextTypeBase));
 		}
 
-		// Token: 0x06036105 RID: 221445 RVA: 0x0075A71C File Offset: 0x0075891C
+		// Token: 0x060394EE RID: 234734 RVA: 0x007BD448 File Offset: 0x007BB648
 		public static ITransitionPopupArtTextTypeBase GetRootAsITransitionPopupArtTextTypeBase(ByteBuffer _bb, ITransitionPopupArtTextTypeBase obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06036106 RID: 221446 RVA: 0x0075A739 File Offset: 0x00758939
+		// Token: 0x060394EF RID: 234735 RVA: 0x007BD465 File Offset: 0x007BB665
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06036107 RID: 221447 RVA: 0x0075A748 File Offset: 0x00758948
+		// Token: 0x060394F0 RID: 234736 RVA: 0x007BD474 File Offset: 0x007BB674
 		public ITransitionPopupArtTextTypeBase __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E1F4 RID: 57844
-		// (get) Token: 0x06036108 RID: 221448 RVA: 0x0075A758 File Offset: 0x00758958
+		// Token: 0x1700EE11 RID: 60945
+		// (get) Token: 0x060394F1 RID: 234737 RVA: 0x007BD484 File Offset: 0x007BB684
 		public ETransitionPopupArtTextType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036109 RID: 221449 RVA: 0x0075A794 File Offset: 0x00758994
+		// Token: 0x060394F2 RID: 234738 RVA: 0x007BD4C0 File Offset: 0x007BB6C0
 		public static Offset<ITransitionPopupArtTextTypeBase> CreateITransitionPopupArtTextTypeBase(FlatBufferBuilder builder, ETransitionPopupArtTextType Type = ETransitionPopupArtTextType.YuanCheng)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITransitionPopupArtTextTypeBase.EndITransitionPopupArtTextTypeBase(builder);
 		}
 
-		// Token: 0x0603610A RID: 221450 RVA: 0x0075A7AA File Offset: 0x007589AA
+		// Token: 0x060394F3 RID: 234739 RVA: 0x007BD4D6 File Offset: 0x007BB6D6
 		public static void StartITransitionPopupArtTextTypeBase(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0603610B RID: 221451 RVA: 0x0075A7B3 File Offset: 0x007589B3
+		// Token: 0x060394F4 RID: 234740 RVA: 0x007BD4DF File Offset: 0x007BB6DF
 		public static void AddType(FlatBufferBuilder builder, ETransitionPopupArtTextType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0603610C RID: 221452 RVA: 0x0075A7BE File Offset: 0x007589BE
+		// Token: 0x060394F5 RID: 234741 RVA: 0x007BD4EA File Offset: 0x007BB6EA
 		public static Offset<ITransitionPopupArtTextTypeBase> EndITransitionPopupArtTextTypeBase(FlatBufferBuilder builder)
 		{
 			return new Offset<ITransitionPopupArtTextTypeBase>(builder.EndTable());
 		}
 
-		// Token: 0x0603610D RID: 221453 RVA: 0x0075A7CC File Offset: 0x007589CC
+		// Token: 0x060394F6 RID: 234742 RVA: 0x007BD4F8 File Offset: 0x007BB6F8
 		public ITransitionPopupArtTextTypeBaseT UnPack()
 		{
 			ITransitionPopupArtTextTypeBaseT transitionPopupArtTextTypeBaseT = new ITransitionPopupArtTextTypeBaseT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return transitionPopupArtTextTypeBaseT;
 		}
 
-		// Token: 0x0603610E RID: 221454 RVA: 0x0075A7E7 File Offset: 0x007589E7
+		// Token: 0x060394F7 RID: 234743 RVA: 0x007BD513 File Offset: 0x007BB713
 		public void UnPackTo(ITransitionPopupArtTextTypeBaseT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0603610F RID: 221455 RVA: 0x0075A7F8 File Offset: 0x007589F8
+		// Token: 0x060394F8 RID: 234744 RVA: 0x007BD524 File Offset: 0x007BB724
 		public static Offset<ITransitionPopupArtTextTypeBase> Pack(FlatBufferBuilder builder, ITransitionPopupArtTextTypeBaseT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITransitionPopupArtTextTypeBase.CreateITransitionPopupArtTextTypeBase(builder, _o.Type);
 		}
 
-		// Token: 0x040122BE RID: 74430
+		// Token: 0x040132E5 RID: 78565
 		private Table __p;
 	}
 }

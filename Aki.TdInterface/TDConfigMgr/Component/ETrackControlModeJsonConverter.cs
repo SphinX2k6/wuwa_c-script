@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000A3F RID: 2623
+	// Token: 0x02000B04 RID: 2820
 	public class ETrackControlModeJsonConverter : JsonConverter<ETrackControlMode>
 	{
-		// Token: 0x060039CE RID: 14798 RVA: 0x00095180 File Offset: 0x00093380
+		// Token: 0x06003DA6 RID: 15782 RVA: 0x0009DAB4 File Offset: 0x0009BCB4
 		public override ETrackControlMode Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return ETrackControlModeExtensions.FromString(@string);
 		}
 
-		// Token: 0x060039CF RID: 14799 RVA: 0x000951A4 File Offset: 0x000933A4
+		// Token: 0x06003DA7 RID: 15783 RVA: 0x0009DAD8 File Offset: 0x0009BCD8
 		public override void Write(Utf8JsonWriter writer, ETrackControlMode value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

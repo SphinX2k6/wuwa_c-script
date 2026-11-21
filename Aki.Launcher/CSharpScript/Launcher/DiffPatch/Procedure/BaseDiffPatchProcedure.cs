@@ -12,15 +12,15 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Launcher.DiffPatch.Procedure
 {
-	// Token: 0x02000215 RID: 533
+	// Token: 0x0200021A RID: 538
 	public abstract class BaseDiffPatchProcedure : IDiffPatchProcedure
 	{
-		// Token: 0x1700014F RID: 335
-		// (get) Token: 0x06000DD0 RID: 3536 RVA: 0x000534AB File Offset: 0x000516AB
-		// (set) Token: 0x06000DD1 RID: 3537 RVA: 0x000534B3 File Offset: 0x000516B3
+		// Token: 0x17000155 RID: 341
+		// (get) Token: 0x06000E11 RID: 3601 RVA: 0x00055F9F File Offset: 0x0005419F
+		// (set) Token: 0x06000E12 RID: 3602 RVA: 0x00055FA7 File Offset: 0x000541A7
 		public bool HadOldResCleaned { get; private set; }
 
-		// Token: 0x06000DD2 RID: 3538 RVA: 0x000534BC File Offset: 0x000516BC
+		// Token: 0x06000E13 RID: 3603 RVA: 0x00055FB0 File Offset: 0x000541B0
 		[NullableContext(1)]
 		public BaseDiffPatchProcedure(AppPathMisc pathMisc, HotFixManager viewMgr)
 		{
@@ -28,7 +28,7 @@ namespace CSharpScript.Launcher.DiffPatch.Procedure
 			this.ViewMgr = viewMgr;
 		}
 
-		// Token: 0x06000DD3 RID: 3539 RVA: 0x000534F8 File Offset: 0x000516F8
+		// Token: 0x06000E14 RID: 3604 RVA: 0x00055FEC File Offset: 0x000541EC
 		public UniTask<bool> Start()
 		{
 			BaseDiffPatchProcedure.<Start>d__9 <Start>d__;
@@ -39,7 +39,7 @@ namespace CSharpScript.Launcher.DiffPatch.Procedure
 			return <Start>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000DD4 RID: 3540 RVA: 0x0005353C File Offset: 0x0005173C
+		// Token: 0x06000E15 RID: 3605 RVA: 0x00056030 File Offset: 0x00054230
 		public UniTask<bool> GetRemoteVersionConfig()
 		{
 			BaseDiffPatchProcedure.<GetRemoteVersionConfig>d__10 <GetRemoteVersionConfig>d__;
@@ -50,19 +50,19 @@ namespace CSharpScript.Launcher.DiffPatch.Procedure
 			return <GetRemoteVersionConfig>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000DD5 RID: 3541 RVA: 0x00053580 File Offset: 0x00051780
+		// Token: 0x06000E16 RID: 3606 RVA: 0x00056074 File Offset: 0x00054274
 		public bool HasPreDownloadData()
 		{
 			return LauncherStorageLib.Instance.GetDeviceSaved<string>(ELauncherStorageDeviceKey.PreDownloadRecord, "") == RemoteInfo.Instance.NewConfig.PackageVersion || LauncherStorageLib.Instance.GetDeviceSaved<string>(ELauncherStorageDeviceKey.PreDownloadState, "") != "";
 		}
 
-		// Token: 0x06000DD6 RID: 3542 RVA: 0x000535D6 File Offset: 0x000517D6
+		// Token: 0x06000E17 RID: 3607 RVA: 0x000560CA File Offset: 0x000542CA
 		public bool IsFirstTimeUpdateForPackage()
 		{
 			return ProcedureUtil.IsFirstTimeUpdateForPackage();
 		}
 
-		// Token: 0x06000DD7 RID: 3543 RVA: 0x000535E0 File Offset: 0x000517E0
+		// Token: 0x06000E18 RID: 3608 RVA: 0x000560D4 File Offset: 0x000542D4
 		public unsafe EUpdateMode GetPatchUpdateMode()
 		{
 			if (!Platform.Instance.IsMobilePlatform())
@@ -90,7 +90,7 @@ namespace CSharpScript.Launcher.DiffPatch.Procedure
 			return EUpdateMode.All;
 		}
 
-		// Token: 0x06000DD8 RID: 3544 RVA: 0x0005369C File Offset: 0x0005189C
+		// Token: 0x06000E19 RID: 3609 RVA: 0x00056190 File Offset: 0x00054390
 		public UniTask<bool> IsAppVersionChange()
 		{
 			BaseDiffPatchProcedure.<IsAppVersionChange>d__14 <IsAppVersionChange>d__;
@@ -101,7 +101,7 @@ namespace CSharpScript.Launcher.DiffPatch.Procedure
 			return <IsAppVersionChange>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000DD9 RID: 3545 RVA: 0x000536E0 File Offset: 0x000518E0
+		// Token: 0x06000E1A RID: 3610 RVA: 0x000561D4 File Offset: 0x000543D4
 		public UniTask<bool> IsPostUpdateAppVersionChange()
 		{
 			BaseDiffPatchProcedure.<IsPostUpdateAppVersionChange>d__15 <IsPostUpdateAppVersionChange>d__;
@@ -112,7 +112,7 @@ namespace CSharpScript.Launcher.DiffPatch.Procedure
 			return <IsPostUpdateAppVersionChange>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000DDA RID: 3546 RVA: 0x00053724 File Offset: 0x00051924
+		// Token: 0x06000E1B RID: 3611 RVA: 0x00056218 File Offset: 0x00054418
 		public virtual UniTask<bool> UpdateResource(bool bUseBgDownload, [Nullable(1)] DiffUpdate update, bool bIsLauncher)
 		{
 			BaseDiffPatchProcedure.<UpdateResource>d__16 <UpdateResource>d__;
@@ -125,13 +125,13 @@ namespace CSharpScript.Launcher.DiffPatch.Procedure
 			return <UpdateResource>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x17000150 RID: 336
-		// (get) Token: 0x06000DDB RID: 3547 RVA: 0x00053777 File Offset: 0x00051977
-		// (set) Token: 0x06000DDC RID: 3548 RVA: 0x0005377F File Offset: 0x0005197F
+		// Token: 0x17000156 RID: 342
+		// (get) Token: 0x06000E1C RID: 3612 RVA: 0x0005626B File Offset: 0x0005446B
+		// (set) Token: 0x06000E1D RID: 3613 RVA: 0x00056273 File Offset: 0x00054473
 		[Nullable(1)]
 		public Func<DiffUpdate, HotFixManager, UniTask> RegistryExtraPack { [NullableContext(1)] get; [NullableContext(1)] set; } = (DiffUpdate update, HotFixManager hotFixManager) => UniTask.CompletedTask;
 
-		// Token: 0x06000DDD RID: 3549 RVA: 0x00053788 File Offset: 0x00051988
+		// Token: 0x06000E1E RID: 3614 RVA: 0x0005627C File Offset: 0x0005447C
 		public virtual void PreComplete()
 		{
 			RemoteInfo instance = RemoteInfo.Instance;
@@ -203,7 +203,7 @@ namespace CSharpScript.Launcher.DiffPatch.Procedure
 			}
 		}
 
-		// Token: 0x06000DDE RID: 3550 RVA: 0x00053908 File Offset: 0x00051B08
+		// Token: 0x06000E1F RID: 3615 RVA: 0x000563FC File Offset: 0x000545FC
 		public UniTask<bool> Complete()
 		{
 			BaseDiffPatchProcedure.<Complete>d__22 <Complete>d__;
@@ -214,7 +214,7 @@ namespace CSharpScript.Launcher.DiffPatch.Procedure
 			return <Complete>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000DDF RID: 3551 RVA: 0x0005394C File Offset: 0x00051B4C
+		// Token: 0x06000E20 RID: 3616 RVA: 0x00056440 File Offset: 0x00054640
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -233,7 +233,7 @@ namespace CSharpScript.Launcher.DiffPatch.Procedure
 			return <RequestRemoteConfig>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000DE0 RID: 3552 RVA: 0x000539A0 File Offset: 0x00051BA0
+		// Token: 0x06000E21 RID: 3617 RVA: 0x00056494 File Offset: 0x00054694
 		[NullableContext(1)]
 		private ERemoteConfigResult SetRemoteConfigInfo(int lastUpdateTime, [Nullable(2)] RemoteVersionConfig newestConfig, Dictionary<string, RemoteVersionConfig> configMap, bool ignoreOutDateAndIllegal)
 		{
@@ -297,7 +297,7 @@ namespace CSharpScript.Launcher.DiffPatch.Procedure
 				{
 					hotPatchLogResult.success = false;
 					hotPatchLogResult.info = "failed, get all remote configs failed.";
-					hotPatchLog.s_step_result = LauncherJson.Stringify<HotPatchLogResult>(hotPatchLogResult, null);
+					hotPatchLog.s_step_result = LauncherJson.Stringify(hotPatchLogResult, null);
 					HotPatchLogReport.Instance.Report(hotPatchLog);
 					return ERemoteConfigResult.None;
 				}
@@ -307,13 +307,13 @@ namespace CSharpScript.Launcher.DiffPatch.Procedure
 					{
 						hotPatchLogResult.success = false;
 						hotPatchLogResult.info = "failed, the most of remote configs is out of date.";
-						hotPatchLog.s_step_result = LauncherJson.Stringify<HotPatchLogResult>(hotPatchLogResult, null);
+						hotPatchLog.s_step_result = LauncherJson.Stringify(hotPatchLogResult, null);
 						HotPatchLogReport.Instance.Report(hotPatchLog);
 						return ERemoteConfigResult.OutDate;
 					}
 					hotPatchLogResult.success = false;
 					hotPatchLogResult.info = "failed, the most of remote config field is illegal.";
-					hotPatchLog.s_step_result = LauncherJson.Stringify<HotPatchLogResult>(hotPatchLogResult, null);
+					hotPatchLog.s_step_result = LauncherJson.Stringify(hotPatchLogResult, null);
 					HotPatchLogReport.Instance.Report(hotPatchLog);
 					return ERemoteConfigResult.FieldIllegal;
 				}
@@ -328,7 +328,7 @@ namespace CSharpScript.Launcher.DiffPatch.Procedure
 						LauncherLog.Instance.Error("所有远程配置更新时间戳字段都不可用，并且没有获取到有效的配置个数。", default(ReadOnlySpan<ValueTuple<string, object>>));
 						hotPatchLogResult.success = false;
 						hotPatchLogResult.info = "failed, can not assign a valid remote config.";
-						hotPatchLog.s_step_result = LauncherJson.Stringify<HotPatchLogResult>(hotPatchLogResult, null);
+						hotPatchLog.s_step_result = LauncherJson.Stringify(hotPatchLogResult, null);
 						HotPatchLogReport.Instance.Report(hotPatchLog);
 						return ERemoteConfigResult.None;
 					}
@@ -344,7 +344,7 @@ namespace CSharpScript.Launcher.DiffPatch.Procedure
 			}
 			hotPatchLogResult.success = true;
 			hotPatchLogResult.info = "success";
-			hotPatchLog.s_step_result = LauncherJson.Stringify<HotPatchLogResult>(hotPatchLogResult, null);
+			hotPatchLog.s_step_result = LauncherJson.Stringify(hotPatchLogResult, null);
 			HotPatchLogReport.Instance.Report(hotPatchLog);
 			RemoteInfo.Instance.NewConfig = remoteVersionConfig;
 			if (!ignoreOutDateAndIllegal)
@@ -359,7 +359,7 @@ namespace CSharpScript.Launcher.DiffPatch.Procedure
 			return ERemoteConfigResult.Success;
 		}
 
-		// Token: 0x06000DE1 RID: 3553 RVA: 0x00053D40 File Offset: 0x00051F40
+		// Token: 0x06000E22 RID: 3618 RVA: 0x00056834 File Offset: 0x00054A34
 		private UniTask<ERemoteConfigResult> InternalGetRemoteVersionConfig(bool ignoreOutDateAndIllegal = false)
 		{
 			BaseDiffPatchProcedure.<InternalGetRemoteVersionConfig>d__25 <InternalGetRemoteVersionConfig>d__;
@@ -371,7 +371,7 @@ namespace CSharpScript.Launcher.DiffPatch.Procedure
 			return <InternalGetRemoteVersionConfig>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000DE2 RID: 3554 RVA: 0x00053D8C File Offset: 0x00051F8C
+		// Token: 0x06000E23 RID: 3619 RVA: 0x00056880 File Offset: 0x00054A80
 		[NullableContext(1)]
 		[return: Nullable(0)]
 		private UniTask<bool> RequestTierVersionConfig(string urlPath, List<string> prefixList)
@@ -386,25 +386,25 @@ namespace CSharpScript.Launcher.DiffPatch.Procedure
 			return <RequestTierVersionConfig>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000DE3 RID: 3555 RVA: 0x00053DDF File Offset: 0x00051FDF
+		// Token: 0x06000E24 RID: 3620 RVA: 0x000568D3 File Offset: 0x00054AD3
 		[NullableContext(1)]
 		protected virtual UniTask OnAfterResolveManifests(DiffUpdate _update)
 		{
 			return UniTask.CompletedTask;
 		}
 
-		// Token: 0x040008A7 RID: 2215
+		// Token: 0x040008E8 RID: 2280
 		private bool IsInitUrlPrefix;
 
-		// Token: 0x040008A8 RID: 2216
+		// Token: 0x040008E9 RID: 2281
 		[Nullable(2)]
 		private string AppVersion;
 
-		// Token: 0x040008AA RID: 2218
+		// Token: 0x040008EB RID: 2283
 		[Nullable(2)]
 		private readonly AppPathMisc PathMisc;
 
-		// Token: 0x040008AB RID: 2219
+		// Token: 0x040008EC RID: 2284
 		[Nullable(2)]
 		protected readonly HotFixManager ViewMgr;
 	}

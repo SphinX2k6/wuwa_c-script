@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200088B RID: 2187
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200092E RID: 2350
 	public class SceneItemAiComponent : IComponentBase
 	{
-		// Token: 0x060030C1 RID: 12481 RVA: 0x0007D758 File Offset: 0x0007B958
+		// Token: 0x060033FD RID: 13309 RVA: 0x00084C40 File Offset: 0x00082E40
 		private SceneItemAiComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060030C2 RID: 12482 RVA: 0x0007D790 File Offset: 0x0007B990
+		// Token: 0x060033FE RID: 13310 RVA: 0x00084C78 File Offset: 0x00082E78
 		public static SceneItemAiComponent Create([Nullable(2)] SceneItemAiComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060030C3 RID: 12483 RVA: 0x0007D7A3 File Offset: 0x0007B9A3
+		// Token: 0x060033FF RID: 13311 RVA: 0x00084C8B File Offset: 0x00082E8B
 		public static SceneItemAiComponent CreateFromSetValue([Nullable(2)] SceneItemAiComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060030C4 RID: 12484 RVA: 0x0007D7B6 File Offset: 0x0007B9B6
+		// Token: 0x06003400 RID: 13312 RVA: 0x00084C9E File Offset: 0x00082E9E
 		public new SceneItemAiComponent_SetValue ToSetValue()
 		{
 			return new SceneItemAiComponent_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000CF3 RID: 3315
-		// (get) Token: 0x060030C5 RID: 12485 RVA: 0x0007D7E4 File Offset: 0x0007B9E4
-		// (set) Token: 0x060030C6 RID: 12486 RVA: 0x0007D81E File Offset: 0x0007BA1E
+		// Token: 0x17000DBC RID: 3516
+		// (get) Token: 0x06003401 RID: 13313 RVA: 0x00084CCC File Offset: 0x00082ECC
+		// (set) Token: 0x06003402 RID: 13314 RVA: 0x00084D06 File Offset: 0x00082F06
 		public override bool? Disabled
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CF4 RID: 3316
-		// (get) Token: 0x060030C7 RID: 12487 RVA: 0x0007D82C File Offset: 0x0007BA2C
-		// (set) Token: 0x060030C8 RID: 12488 RVA: 0x0007D856 File Offset: 0x0007BA56
+		// Token: 0x17000DBD RID: 3517
+		// (get) Token: 0x06003403 RID: 13315 RVA: 0x00084D14 File Offset: 0x00082F14
+		// (set) Token: 0x06003404 RID: 13316 RVA: 0x00084D3E File Offset: 0x00082F3E
 		public override bool? EdIsLocked
 		{
 			get
@@ -104,9 +102,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000CF5 RID: 3317
-		// (get) Token: 0x060030C9 RID: 12489 RVA: 0x0007D864 File Offset: 0x0007BA64
-		// (set) Token: 0x060030CA RID: 12490 RVA: 0x0007D8C5 File Offset: 0x0007BAC5
+		// Token: 0x17000DBE RID: 3518
+		// (get) Token: 0x06003405 RID: 13317 RVA: 0x00084D4C File Offset: 0x00082F4C
+		// (set) Token: 0x06003406 RID: 13318 RVA: 0x00084DAD File Offset: 0x00082FAD
 		public virtual ISceneItemPatrol AiConfig
 		{
 			get
@@ -134,18 +132,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04002015 RID: 8213
+		// Token: 0x04002227 RID: 8743
 		[Nullable(2)]
 		protected new SceneItemAiComponent FbInstance;
 
-		// Token: 0x04002016 RID: 8214
+		// Token: 0x04002228 RID: 8744
 		[Nullable(2)]
 		protected new SceneItemAiComponent_SetValue PocoInterface;
 
-		// Token: 0x04002017 RID: 8215
+		// Token: 0x04002229 RID: 8745
 		private ISceneItemPatrol _AiConfigCache;
 
-		// Token: 0x04002018 RID: 8216
+		// Token: 0x0400222A RID: 8746
 		private bool _AiConfigInited;
 	}
 }

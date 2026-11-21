@@ -8,12 +8,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.Effect
 {
-	// Token: 0x02003DB7 RID: 15799
+	// Token: 0x02003101 RID: 12545
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/Effect/BP_EffectPreview.BP_EffectPreview_C")]
 	[UnrealStructLayout(1080, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1080)]
 	public class BP_EffectPreview_C : AKuroEffectActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06027456 RID: 160854 RVA: 0x0098CE38 File Offset: 0x0098B038
+		// Token: 0x0601EB3C RID: 125756 RVA: 0x0091ADFF File Offset: 0x00918FFF
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_EffectPreview_C._ClassPtr == IntPtr.Zero)
@@ -23,84 +23,81 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Effect
 			return BP_EffectPreview_C._ClassPtr;
 		}
 
-		// Token: 0x06027457 RID: 160855 RVA: 0x0098CE5C File Offset: 0x0098B05C
+		// Token: 0x0601EB3D RID: 125757 RVA: 0x0091AE24 File Offset: 0x00919024
 		public BP_EffectPreview_C() : this(BuiltinUtils.AllocNativeUObject(BP_EffectPreview_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06027458 RID: 160856 RVA: 0x0098CE84 File Offset: 0x0098B084
+		// Token: 0x0601EB3E RID: 125758 RVA: 0x0091AE4C File Offset: 0x0091904C
 		[NullableContext(1)]
 		public BP_EffectPreview_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_EffectPreview_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005729 RID: 22313
-		// (get) Token: 0x06027459 RID: 160857 RVA: 0x0098CEB7 File Offset: 0x0098B0B7
-		// (set) Token: 0x0602745A RID: 160858 RVA: 0x0098CECB File Offset: 0x0098B0CB
+		// Token: 0x1700351E RID: 13598
+		// (get) Token: 0x0601EB3F RID: 125759 RVA: 0x0091AE7F File Offset: 0x0091907F
+		// (set) Token: 0x0601EB40 RID: 125760 RVA: 0x0091AE93 File Offset: 0x00919093
 		[Nullable(2)]
 		public unsafe USceneComponent DefaultSceneRoot
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_EffectPreview_C.__PropertyOffset_1);
+				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_EffectPreview_C.__PropertyOffset_DefaultSceneRoot);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_EffectPreview_C.__PropertyOffset_1, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_EffectPreview_C.__PropertyOffset_DefaultSceneRoot, value);
 			}
 		}
 
-		// Token: 0x1700572A RID: 22314
-		// (get) Token: 0x0602745B RID: 160859 RVA: 0x0098CEE0 File Offset: 0x0098B0E0
-		// (set) Token: 0x0602745C RID: 160860 RVA: 0x0098CEF0 File Offset: 0x0098B0F0
+		// Token: 0x1700351F RID: 13599
+		// (get) Token: 0x0601EB41 RID: 125761 RVA: 0x0091AEA8 File Offset: 0x009190A8
+		// (set) Token: 0x0601EB42 RID: 125762 RVA: 0x0091AEB8 File Offset: 0x009190B8
 		public unsafe int EffectView
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_EffectPreview_C.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)BP_EffectPreview_C.__PropertyOffset_EffectView);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_EffectPreview_C.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)BP_EffectPreview_C.__PropertyOffset_EffectView) = value;
 			}
 		}
 
-		// Token: 0x1700572B RID: 22315
-		// (get) Token: 0x0602745D RID: 160861 RVA: 0x0098CF01 File Offset: 0x0098B101
-		// (set) Token: 0x0602745E RID: 160862 RVA: 0x0098CF11 File Offset: 0x0098B111
+		// Token: 0x17003520 RID: 13600
+		// (get) Token: 0x0601EB43 RID: 125763 RVA: 0x0091AEC9 File Offset: 0x009190C9
+		// (set) Token: 0x0601EB44 RID: 125764 RVA: 0x0091AED9 File Offset: 0x009190D9
 		public unsafe int Transient
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_EffectPreview_C.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)BP_EffectPreview_C.__PropertyOffset_Transient);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_EffectPreview_C.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)BP_EffectPreview_C.__PropertyOffset_Transient) = value;
 			}
 		}
 
-		// Token: 0x0602745F RID: 160863 RVA: 0x0098CF22 File Offset: 0x0098B122
+		// Token: 0x0601EB45 RID: 125765 RVA: 0x0091AEEA File Offset: 0x009190EA
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void UserConstructionScript()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_EffectPreview_C.__UserConstructionScript_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06027460 RID: 160864 RVA: 0x0098CF36 File Offset: 0x0098B136
+		// Token: 0x0601EB46 RID: 125766 RVA: 0x0091AEFE File Offset: 0x009190FE
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void UserConstructionScript_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_EffectPreview_C.__UserConstructionScript_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_EffectPreview_C.__UserConstructionScript_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06027461 RID: 160865 RVA: 0x0098CF4C File Offset: 0x0098B14C
+		// Token: 0x0601EB47 RID: 125767 RVA: 0x0091AF14 File Offset: 0x00919114
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void EditorTick(float DeltaSeconds)
 		{
 			BP_EffectPreview_C.__EditorTick_FunctionParams* ptr = stackalloc BP_EffectPreview_C.__EditorTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_EffectPreview_C.__EditorTick_FunctionParams) & -16L;
@@ -109,53 +106,52 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Effect
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_EffectPreview_C.__EditorTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06027462 RID: 160866 RVA: 0x0098CF94 File Offset: 0x0098B194
+		// Token: 0x0601EB48 RID: 125768 RVA: 0x0091AF5C File Offset: 0x0091915C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void EditorTick_Implementation(float DeltaSeconds)
 		{
 			BP_EffectPreview_C.__EditorTick_FunctionParams* ptr = stackalloc BP_EffectPreview_C.__EditorTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_EffectPreview_C.__EditorTick_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(BP_EffectPreview_C.__EditorTick_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->DeltaSeconds = DeltaSeconds;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_EffectPreview_C.__EditorTick_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_EffectPreview_C.__EditorTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06027463 RID: 160867 RVA: 0x0098CFDB File Offset: 0x0098B1DB
+		// Token: 0x0601EB49 RID: 125769 RVA: 0x0091AFA2 File Offset: 0x009191A2
 		protected BP_EffectPreview_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04013D09 RID: 81161
+		// Token: 0x040104B4 RID: 66740
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Render/RuntimeBP/Effect/BP_EffectPreview.BP_EffectPreview_C";
 
-		// Token: 0x04013D0A RID: 81162
+		// Token: 0x040104B5 RID: 66741
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04013D0B RID: 81163
+		// Token: 0x040104B6 RID: 66742
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04013D0C RID: 81164
-		internal static int __PropertyOffset_1;
+		// Token: 0x040104B7 RID: 66743
+		internal static int __PropertyOffset_DefaultSceneRoot;
 
-		// Token: 0x04013D0D RID: 81165
-		internal static int __PropertyOffset_2;
+		// Token: 0x040104B8 RID: 66744
+		internal static int __PropertyOffset_EffectView;
 
-		// Token: 0x04013D0E RID: 81166
-		internal static int __PropertyOffset_3;
+		// Token: 0x040104B9 RID: 66745
+		internal static int __PropertyOffset_Transient;
 
-		// Token: 0x04013D0F RID: 81167
+		// Token: 0x040104BA RID: 66746
 		private static IntPtr __UserConstructionScript_NativeFunctionPtr;
 
-		// Token: 0x04013D10 RID: 81168
+		// Token: 0x040104BB RID: 66747
 		private static IntPtr __EditorTick_NativeFunctionPtr;
 
-		// Token: 0x0200A214 RID: 41492
+		// Token: 0x02008EC1 RID: 36545
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected new ref struct __EditorTick_FunctionParams
 		{
-			// Token: 0x04031E7E RID: 204414
+			// Token: 0x0402CB60 RID: 183136
 			[FieldOffset(0)]
 			public float DeltaSeconds;
 		}

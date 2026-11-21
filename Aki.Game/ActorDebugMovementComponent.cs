@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using UnrealEngine;
 
-// Token: 0x020031B7 RID: 12727
+// Token: 0x02002726 RID: 10022
 [NullableContext(1)]
 [Nullable(0)]
 public class ActorDebugMovementComponent : EntityComponent
 {
-	// Token: 0x0601B6FB RID: 112379 RVA: 0x0078112C File Offset: 0x0077F32C
+	// Token: 0x0601922E RID: 102958 RVA: 0x007A94AC File Offset: 0x007A76AC
 	protected override bool OnStart()
 	{
 		this.ActorComp = base.Entity.GetComponent<BaseActorComponent>();
@@ -22,7 +22,7 @@ public class ActorDebugMovementComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601B6FC RID: 112380 RVA: 0x00781194 File Offset: 0x0077F394
+	// Token: 0x0601922F RID: 102959 RVA: 0x007A9514 File Offset: 0x007A7714
 	public void SetDebug(bool newDebug)
 	{
 		if (this.IsDebug == newDebug)
@@ -41,7 +41,7 @@ public class ActorDebugMovementComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601B6FD RID: 112381 RVA: 0x00781214 File Offset: 0x0077F414
+	// Token: 0x06019230 RID: 102960 RVA: 0x007A9594 File Offset: 0x007A7794
 	public unsafe void MarkDebugRecord(string context, EKDMRecordType? type = 15, bool noInspection = false)
 	{
 		if (this.InspectionType && this.ActorComp != null)
@@ -80,13 +80,13 @@ public class ActorDebugMovementComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601B6FE RID: 112382 RVA: 0x00781402 File Offset: 0x0077F602
+	// Token: 0x06019231 RID: 102961 RVA: 0x007A9782 File Offset: 0x007A7982
 	public static void StaticMarkDebugRecord(Entity entity, string context, EKDMRecordType type = EKDMRecordType.KDM_ALL, global::Vector customVector = null)
 	{
 		entity.GetComponent<ActorDebugMovementComponent>().MarkDebugRecord(context, new EKDMRecordType?(type), false);
 	}
 
-	// Token: 0x0601B6FF RID: 112383 RVA: 0x00781418 File Offset: 0x0077F618
+	// Token: 0x06019232 RID: 102962 RVA: 0x007A9798 File Offset: 0x007A7998
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -94,71 +94,66 @@ public class ActorDebugMovementComponent : EntityComponent
 			return false;
 		}
 		ActorDebugMovementComponent actorDebugMovementComponent = (ActorDebugMovementComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ActorComp"))
+		if (actorDebugMovementComponent.ActorComp == null)
 		{
-			if (actorDebugMovementComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("UeDebugComp"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
-			if (actorDebugMovementComponent.UeDebugComp == null)
-			{
-				this.UeDebugComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UKuroDebugMovementComponent>(this.UeDebugComp), "UeDebugComp"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("IsDebug"))
+		if (actorDebugMovementComponent.UeDebugComp == null)
 		{
-			this.IsDebug = actorDebugMovementComponent.IsDebug;
+			this.UeDebugComp = null;
 		}
-		if (base.CanResetComponentProperty("LastRecordLocation"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.UeDebugComp), "UeDebugComp"))
 		{
-			if (actorDebugMovementComponent.LastRecordLocation == null)
-			{
-				this.LastRecordLocation = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<global::Vector>(this.LastRecordLocation), "LastRecordLocation"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("InspectionType"))
+		this.IsDebug = actorDebugMovementComponent.IsDebug;
+		if (actorDebugMovementComponent.LastRecordLocation == null)
 		{
-			this.InspectionType = actorDebugMovementComponent.InspectionType;
+			this.LastRecordLocation = null;
 		}
-		return !base.CanResetComponentProperty("InspectionTypeList") || actorDebugMovementComponent.InspectionTypeList == null || base.CheckClearObject(EntityComponentSystem.ClearObject<List<EEntityType>>(this.InspectionTypeList), "InspectionTypeList");
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastRecordLocation), "LastRecordLocation"))
+		{
+			return false;
+		}
+		this.InspectionType = actorDebugMovementComponent.InspectionType;
+		return actorDebugMovementComponent.InspectionTypeList == null || base.CheckClearObject(EntityComponentSystem.ClearObject(this.InspectionTypeList), "InspectionTypeList");
 	}
 
-	// Token: 0x0400D707 RID: 55047
+	// Token: 0x170027F4 RID: 10228
+	// (get) Token: 0x06019233 RID: 102963 RVA: 0x007A9873 File Offset: 0x007A7A73
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400DB8E RID: 56206
 	private const float WARNING_THRESHOLD_SQUARED = 25000000f;
 
-	// Token: 0x0400D708 RID: 55048
+	// Token: 0x0400DB8F RID: 56207
 	[Nullable(2)]
 	public BaseActorComponent ActorComp;
 
-	// Token: 0x0400D709 RID: 55049
+	// Token: 0x0400DB90 RID: 56208
 	[Nullable(2)]
 	public UKuroDebugMovementComponent UeDebugComp;
 
-	// Token: 0x0400D70A RID: 55050
+	// Token: 0x0400DB91 RID: 56209
 	public bool IsDebug;
 
-	// Token: 0x0400D70B RID: 55051
+	// Token: 0x0400DB92 RID: 56210
 	public global::Vector LastRecordLocation = global::Vector.Create();
 
-	// Token: 0x0400D70C RID: 55052
+	// Token: 0x0400DB93 RID: 56211
 	private bool InspectionType;
 
-	// Token: 0x0400D70D RID: 55053
+	// Token: 0x0400DB94 RID: 56212
 	private readonly List<EEntityType> InspectionTypeList = new List<EEntityType>
 	{
 		EEntityType.Monster,

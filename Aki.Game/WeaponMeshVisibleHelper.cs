@@ -2,43 +2,43 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020031B5 RID: 12725
+// Token: 0x02002724 RID: 10020
 [NullableContext(1)]
 [Nullable(0)]
 public class WeaponMeshVisibleHelper
 {
-	// Token: 0x170025EE RID: 9710
-	// (get) Token: 0x0601B6E3 RID: 112355 RVA: 0x00780C8A File Offset: 0x0077EE8A
+	// Token: 0x170027EB RID: 10219
+	// (get) Token: 0x06019216 RID: 102934 RVA: 0x007A900A File Offset: 0x007A720A
 	public Dictionary<EWeaponExtraVisibleType, WeaponVisibleState> WeaponVisibleTable { get; } = new Dictionary<EWeaponExtraVisibleType, WeaponVisibleState>();
 
-	// Token: 0x170025EF RID: 9711
-	// (get) Token: 0x0601B6E4 RID: 112356 RVA: 0x00780C92 File Offset: 0x0077EE92
-	// (set) Token: 0x0601B6E5 RID: 112357 RVA: 0x00780C9A File Offset: 0x0077EE9A
+	// Token: 0x170027EC RID: 10220
+	// (get) Token: 0x06019217 RID: 102935 RVA: 0x007A9012 File Offset: 0x007A7212
+	// (set) Token: 0x06019218 RID: 102936 RVA: 0x007A901A File Offset: 0x007A721A
 	public EWeaponBaseVisibleType DefaultVisibleType { get; set; }
 
-	// Token: 0x170025F0 RID: 9712
-	// (get) Token: 0x0601B6E6 RID: 112358 RVA: 0x00780CA3 File Offset: 0x0077EEA3
+	// Token: 0x170027ED RID: 10221
+	// (get) Token: 0x06019219 RID: 102937 RVA: 0x007A9023 File Offset: 0x007A7223
 	public WeaponVisibleState DefaultVisibleState { get; } = new WeaponVisibleState(false, true, 0);
 
-	// Token: 0x170025F1 RID: 9713
-	// (get) Token: 0x0601B6E7 RID: 112359 RVA: 0x00780CAB File Offset: 0x0077EEAB
+	// Token: 0x170027EE RID: 10222
+	// (get) Token: 0x0601921A RID: 102938 RVA: 0x007A902B File Offset: 0x007A722B
 	public WeaponVisibleTagHelper WeaponHiddenTag { get; } = new WeaponVisibleTagHelper();
 
-	// Token: 0x170025F2 RID: 9714
-	// (get) Token: 0x0601B6E8 RID: 112360 RVA: 0x00780CB3 File Offset: 0x0077EEB3
+	// Token: 0x170027EF RID: 10223
+	// (get) Token: 0x0601921B RID: 102939 RVA: 0x007A9033 File Offset: 0x007A7233
 	public WeaponVisibleTagHelper WeaponVisibleTag { get; } = new WeaponVisibleTagHelper();
 
-	// Token: 0x170025F3 RID: 9715
-	// (get) Token: 0x0601B6E9 RID: 112361 RVA: 0x00780CBB File Offset: 0x0077EEBB
+	// Token: 0x170027F0 RID: 10224
+	// (get) Token: 0x0601921C RID: 102940 RVA: 0x007A903B File Offset: 0x007A723B
 	public CharacterWeapon Owner { get; }
 
-	// Token: 0x0601B6EA RID: 112362 RVA: 0x00780CC3 File Offset: 0x0077EEC3
+	// Token: 0x0601921D RID: 102941 RVA: 0x007A9043 File Offset: 0x007A7243
 	public WeaponMeshVisibleHelper(CharacterWeapon owner)
 	{
 		this.Owner = owner;
 	}
 
-	// Token: 0x0601B6EB RID: 112363 RVA: 0x00780D04 File Offset: 0x0077EF04
+	// Token: 0x0601921E RID: 102942 RVA: 0x007A9084 File Offset: 0x007A7284
 	public void InitBaseTable(EWeaponBaseVisibleType normalType)
 	{
 		this.DefaultVisibleType = normalType;
@@ -50,21 +50,21 @@ public class WeaponMeshVisibleHelper
 		this.WeaponVisibleTable[EWeaponExtraVisibleType.ExtraTag] = value3;
 	}
 
-	// Token: 0x0601B6EC RID: 112364 RVA: 0x00780D5C File Offset: 0x0077EF5C
+	// Token: 0x0601921F RID: 102943 RVA: 0x007A90DC File Offset: 0x007A72DC
 	public void InitTagHelper(BaseTagComponent tagComp, string visibleTagNames, Action<bool, CharacterWeapon> visibleCallBack, string hiddenTagNames, Action<bool, CharacterWeapon> hiddenCallBack)
 	{
 		this.WeaponVisibleTag.Init(this.Owner, tagComp, (visibleTagNames != null) ? visibleTagNames.Split('#', StringSplitOptions.None) : null, visibleCallBack);
 		this.WeaponHiddenTag.Init(this.Owner, tagComp, (hiddenTagNames != null) ? hiddenTagNames.Split('#', StringSplitOptions.None) : null, hiddenCallBack);
 	}
 
-	// Token: 0x0601B6ED RID: 112365 RVA: 0x00780DB0 File Offset: 0x0077EFB0
+	// Token: 0x06019220 RID: 102944 RVA: 0x007A9130 File Offset: 0x007A7330
 	public void ClearTagHelper()
 	{
 		this.WeaponVisibleTag.Clear();
 		this.WeaponHiddenTag.Clear();
 	}
 
-	// Token: 0x0601B6EE RID: 112366 RVA: 0x00780DC8 File Offset: 0x0077EFC8
+	// Token: 0x06019221 RID: 102945 RVA: 0x007A9148 File Offset: 0x007A7348
 	public bool RequestAndUpdateHiddenInGame(bool bHidden, bool isNormal = true, EWeaponExtraVisibleType type = EWeaponExtraVisibleType.LowCustom)
 	{
 		bool result = false;
@@ -108,7 +108,7 @@ public class WeaponMeshVisibleHelper
 		return result;
 	}
 
-	// Token: 0x0601B6EF RID: 112367 RVA: 0x00780E58 File Offset: 0x0077F058
+	// Token: 0x06019222 RID: 102946 RVA: 0x007A91D8 File Offset: 0x007A73D8
 	public void EnableHiddenInGameByExtraVisibleType(EWeaponExtraVisibleType type, bool newEnable)
 	{
 		WeaponVisibleState weaponVisibleState;
@@ -118,7 +118,7 @@ public class WeaponMeshVisibleHelper
 		}
 	}
 
-	// Token: 0x0601B6F0 RID: 112368 RVA: 0x00780E7C File Offset: 0x0077F07C
+	// Token: 0x06019223 RID: 102947 RVA: 0x007A91FC File Offset: 0x007A73FC
 	[NullableContext(2)]
 	private WeaponVisibleState GetHiddenInGameByExtraVisibleType()
 	{

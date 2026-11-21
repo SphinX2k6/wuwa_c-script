@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009AE RID: 2478
+	// Token: 0x02000A63 RID: 2659
 	public static class ENoiseRemovalBoarderShapeExtensions
 	{
-		// Token: 0x06003740 RID: 14144 RVA: 0x0008FBB0 File Offset: 0x0008DDB0
+		// Token: 0x06003AD0 RID: 15056 RVA: 0x00097CA4 File Offset: 0x00095EA4
 		public static string ToEnumString(this ENoiseRemovalBoarderShape value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003741 RID: 14145 RVA: 0x0008FBE8 File Offset: 0x0008DDE8
+		// Token: 0x06003AD1 RID: 15057 RVA: 0x00097CDC File Offset: 0x00095EDC
 		public static ENoiseRemovalBoarderShape FromString(string name)
 		{
 			ENoiseRemovalBoarderShape result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003742 RID: 14146 RVA: 0x0008FC11 File Offset: 0x0008DE11
+		// Token: 0x06003AD2 RID: 15058 RVA: 0x00097D05 File Offset: 0x00095F05
 		public static bool TryFromString(string name, out ENoiseRemovalBoarderShape value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x06003743 RID: 14147 RVA: 0x0008FC4A File Offset: 0x0008DE4A
+		// Token: 0x06003AD3 RID: 15059 RVA: 0x00097D3E File Offset: 0x00095F3E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003744 RID: 14148 RVA: 0x0008FC62 File Offset: 0x0008DE62
+		// Token: 0x06003AD4 RID: 15060 RVA: 0x00097D56 File Offset: 0x00095F56
 		public static ENoiseRemovalBoarderShape[] GetValues()
 		{
 			return new ENoiseRemovalBoarderShape[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003745 RID: 14149 RVA: 0x0008FC6E File Offset: 0x0008DE6E
+		// Token: 0x06003AD5 RID: 15061 RVA: 0x00097D62 File Offset: 0x00095F62
 		public static string[] GetNames()
 		{
 			return new string[]

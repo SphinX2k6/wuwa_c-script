@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020F4 RID: 8436
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002355 RID: 9045
 	public class OpenSystemFunction : ActionParams
 	{
-		// Token: 0x0600B9A0 RID: 47520 RVA: 0x001AD324 File Offset: 0x001AB524
+		// Token: 0x0600C52C RID: 50476 RVA: 0x001C4484 File Offset: 0x001C2684
 		private OpenSystemFunction_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B9A1 RID: 47521 RVA: 0x001AD35C File Offset: 0x001AB55C
+		// Token: 0x0600C52D RID: 50477 RVA: 0x001C44BC File Offset: 0x001C26BC
 		public static OpenSystemFunction Create([Nullable(2)] OpenSystemFunction instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B9A2 RID: 47522 RVA: 0x001AD36F File Offset: 0x001AB56F
+		// Token: 0x0600C52E RID: 50478 RVA: 0x001C44CF File Offset: 0x001C26CF
 		public static OpenSystemFunction CreateFromSetValue([Nullable(2)] OpenSystemFunction_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B9A3 RID: 47523 RVA: 0x001AD382 File Offset: 0x001AB582
+		// Token: 0x0600C52F RID: 50479 RVA: 0x001C44E2 File Offset: 0x001C26E2
 		public OpenSystemFunction_SetValue ToSetValue()
 		{
 			return new OpenSystemFunction_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170038BB RID: 14523
-		// (get) Token: 0x0600B9A4 RID: 47524 RVA: 0x001AD395 File Offset: 0x001AB595
-		// (set) Token: 0x0600B9A5 RID: 47525 RVA: 0x001AD3C0 File Offset: 0x001AB5C0
+		// Token: 0x17003BA7 RID: 15271
+		// (get) Token: 0x0600C530 RID: 50480 RVA: 0x001C44F5 File Offset: 0x001C26F5
+		// (set) Token: 0x0600C531 RID: 50481 RVA: 0x001C4520 File Offset: 0x001C2720
 		public virtual int FunctionId
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006F2D RID: 28461
+		// Token: 0x04007561 RID: 30049
 		[Nullable(2)]
 		protected new OpenSystemFunction FbInstance;
 
-		// Token: 0x04006F2E RID: 28462
+		// Token: 0x04007562 RID: 30050
 		[Nullable(2)]
 		protected OpenSystemFunction_SetValue PocoInterface;
 	}

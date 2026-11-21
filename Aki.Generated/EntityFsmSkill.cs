@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000C34 RID: 3124
+	// Token: 0x02000D17 RID: 3351
 	public struct EntityFsmSkill : IFlatbufferObject
 	{
-		// Token: 0x17000F1B RID: 3867
-		// (get) Token: 0x06006964 RID: 26980 RVA: 0x00223AD1 File Offset: 0x00221CD1
+		// Token: 0x17000F74 RID: 3956
+		// (get) Token: 0x06006F66 RID: 28518 RVA: 0x00242E35 File Offset: 0x00241035
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006965 RID: 26981 RVA: 0x00223ADE File Offset: 0x00221CDE
+		// Token: 0x06006F67 RID: 28519 RVA: 0x00242E42 File Offset: 0x00241042
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06006966 RID: 26982 RVA: 0x00223AE8 File Offset: 0x00221CE8
+		// Token: 0x06006F68 RID: 28520 RVA: 0x00242E4C File Offset: 0x0024104C
 		public static EntityFsmSkill GetRootAsEntityFsmSkill(ByteBuffer _bb)
 		{
 			return EntityFsmSkill.GetRootAsEntityFsmSkill(_bb, default(EntityFsmSkill));
 		}
 
-		// Token: 0x06006967 RID: 26983 RVA: 0x00223B04 File Offset: 0x00221D04
+		// Token: 0x06006F69 RID: 28521 RVA: 0x00242E68 File Offset: 0x00241068
 		public static EntityFsmSkill GetRootAsEntityFsmSkill(ByteBuffer _bb, EntityFsmSkill obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06006968 RID: 26984 RVA: 0x00223B21 File Offset: 0x00221D21
+		// Token: 0x06006F6A RID: 28522 RVA: 0x00242E85 File Offset: 0x00241085
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06006969 RID: 26985 RVA: 0x00223B30 File Offset: 0x00221D30
+		// Token: 0x06006F6B RID: 28523 RVA: 0x00242E94 File Offset: 0x00241094
 		public EntityFsmSkill __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000F1C RID: 3868
-		// (get) Token: 0x0600696A RID: 26986 RVA: 0x00223B40 File Offset: 0x00221D40
+		// Token: 0x17000F75 RID: 3957
+		// (get) Token: 0x06006F6C RID: 28524 RVA: 0x00242EA4 File Offset: 0x002410A4
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000F1D RID: 3869
-		// (get) Token: 0x0600696B RID: 26987 RVA: 0x00223B7C File Offset: 0x00221D7C
+		// Token: 0x17000F76 RID: 3958
+		// (get) Token: 0x06006F6D RID: 28525 RVA: 0x00242EE0 File Offset: 0x002410E0
 		public int ConfigId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000F1E RID: 3870
-		// (get) Token: 0x0600696C RID: 26988 RVA: 0x00223BB8 File Offset: 0x00221DB8
+		// Token: 0x17000F77 RID: 3959
+		// (get) Token: 0x06006F6E RID: 28526 RVA: 0x00242F1C File Offset: 0x0024111C
 		public string SkillName
 		{
 			get
@@ -92,20 +92,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600696D RID: 26989 RVA: 0x00223BEF File Offset: 0x00221DEF
+		// Token: 0x06006F6F RID: 28527 RVA: 0x00242F53 File Offset: 0x00241153
 		public Span<byte> GetSkillNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0600696E RID: 26990 RVA: 0x00223BFE File Offset: 0x00221DFE
+		// Token: 0x06006F70 RID: 28528 RVA: 0x00242F62 File Offset: 0x00241162
 		public byte[] GetSkillNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17000F1F RID: 3871
-		// (get) Token: 0x0600696F RID: 26991 RVA: 0x00223C18 File Offset: 0x00221E18
+		// Token: 0x17000F78 RID: 3960
+		// (get) Token: 0x06006F71 RID: 28529 RVA: 0x00242F7C File Offset: 0x0024117C
 		public int SkillId
 		{
 			get
@@ -119,7 +119,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004C74 RID: 19572
+		// Token: 0x04005257 RID: 21079
 		private Table __p;
 	}
 }

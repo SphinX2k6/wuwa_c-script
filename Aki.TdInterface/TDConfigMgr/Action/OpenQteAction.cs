@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020020EA RID: 8426
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200234B RID: 9035
 	public class OpenQteAction : ActionParams
 	{
-		// Token: 0x0600B932 RID: 47410 RVA: 0x001AC348 File Offset: 0x001AA548
+		// Token: 0x0600C4BE RID: 50366 RVA: 0x001C34A8 File Offset: 0x001C16A8
 		private OpenQteAction_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B933 RID: 47411 RVA: 0x001AC380 File Offset: 0x001AA580
+		// Token: 0x0600C4BF RID: 50367 RVA: 0x001C34E0 File Offset: 0x001C16E0
 		public static OpenQteAction Create([Nullable(2)] OpenQteAction instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B934 RID: 47412 RVA: 0x001AC393 File Offset: 0x001AA593
+		// Token: 0x0600C4C0 RID: 50368 RVA: 0x001C34F3 File Offset: 0x001C16F3
 		public static OpenQteAction CreateFromSetValue([Nullable(2)] OpenQteAction_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B935 RID: 47413 RVA: 0x001AC3A6 File Offset: 0x001AA5A6
+		// Token: 0x0600C4C1 RID: 50369 RVA: 0x001C3506 File Offset: 0x001C1706
 		public OpenQteAction_SetValue ToSetValue()
 		{
 			return new OpenQteAction_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003893 RID: 14483
-		// (get) Token: 0x0600B936 RID: 47414 RVA: 0x001AC3B9 File Offset: 0x001AA5B9
-		// (set) Token: 0x0600B937 RID: 47415 RVA: 0x001AC3E0 File Offset: 0x001AA5E0
+		// Token: 0x17003B7F RID: 15231
+		// (get) Token: 0x0600C4C2 RID: 50370 RVA: 0x001C3519 File Offset: 0x001C1719
+		// (set) Token: 0x0600C4C3 RID: 50371 RVA: 0x001C3540 File Offset: 0x001C1740
 		public virtual IOpenQteConfig Config
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006EE9 RID: 28393
+		// Token: 0x0400751D RID: 29981
 		[Nullable(2)]
 		protected new OpenQteAction FbInstance;
 
-		// Token: 0x04006EEA RID: 28394
+		// Token: 0x0400751E RID: 29982
 		[Nullable(2)]
 		protected OpenQteAction_SetValue PocoInterface;
 	}

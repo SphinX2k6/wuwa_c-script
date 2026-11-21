@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Gm
 {
-	// Token: 0x0200469D RID: 18077
+	// Token: 0x02004B05 RID: 19205
 	public class IShowTipsViewT
 	{
-		// Token: 0x1700805E RID: 32862
-		// (get) Token: 0x0601B74F RID: 112463 RVA: 0x003E6370 File Offset: 0x003E4570
-		// (set) Token: 0x0601B750 RID: 112464 RVA: 0x003E6378 File Offset: 0x003E4578
+		// Token: 0x1700869F RID: 34463
+		// (get) Token: 0x0601CF24 RID: 118564 RVA: 0x0041260C File Offset: 0x0041080C
+		// (set) Token: 0x0601CF25 RID: 118565 RVA: 0x00412614 File Offset: 0x00410814
 		public EGmCommand Type { get; set; }
 
-		// Token: 0x1700805F RID: 32863
-		// (get) Token: 0x0601B751 RID: 112465 RVA: 0x003E6381 File Offset: 0x003E4581
-		// (set) Token: 0x0601B752 RID: 112466 RVA: 0x003E6389 File Offset: 0x003E4589
+		// Token: 0x170086A0 RID: 34464
+		// (get) Token: 0x0601CF26 RID: 118566 RVA: 0x0041261D File Offset: 0x0041081D
+		// (set) Token: 0x0601CF27 RID: 118567 RVA: 0x00412625 File Offset: 0x00410825
 		public bool IsShield { get; set; }
 
-		// Token: 0x0601B753 RID: 112467 RVA: 0x003E6392 File Offset: 0x003E4592
+		// Token: 0x0601CF28 RID: 118568 RVA: 0x0041262E File Offset: 0x0041082E
 		public IShowTipsViewT()
 		{
 			this.Type = EGmCommand.SkipToLevelPlayNode;

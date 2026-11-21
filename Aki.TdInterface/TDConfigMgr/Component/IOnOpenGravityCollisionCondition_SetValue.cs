@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005B1 RID: 1457
+	// Token: 0x0200061C RID: 1564
 	public class IOnOpenGravityCollisionCondition_SetValue
 	{
-		// Token: 0x040015DB RID: 5595
+		// Token: 0x0400174F RID: 5967
 		public EBulletCreateCondition Type;
 
-		// Token: 0x040015DC RID: 5596
+		// Token: 0x04001750 RID: 5968
 		public long BulletId;
 	}
 }

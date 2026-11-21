@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000888 RID: 2184
+	// Token: 0x02000877 RID: 2167
 	[NetMessage(EMessageId.KurotatoChestRewardNotify)]
 	public sealed class KurotatoChestRewardNotify : IMessage<KurotatoChestRewardNotify>, IMessage, IEquatable<KurotatoChestRewardNotify>, IDeepCloneable<KurotatoChestRewardNotify>, IBufferMessage
 	{
-		// Token: 0x0600C25B RID: 49755 RVA: 0x001CDAE6 File Offset: 0x001CBCE6
+		// Token: 0x0600C13F RID: 49471 RVA: 0x001CB7FE File Offset: 0x001C99FE
 		[NullableContext(1)]
 		public static KurotatoChestRewardNotify Create()
 		{
 			return new KurotatoChestRewardNotify();
 		}
 
-		// Token: 0x1700274E RID: 10062
-		// (get) Token: 0x0600C25C RID: 49756 RVA: 0x001CDAED File Offset: 0x001CBCED
+		// Token: 0x1700270F RID: 9999
+		// (get) Token: 0x0600C140 RID: 49472 RVA: 0x001CB805 File Offset: 0x001C9A05
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700274F RID: 10063
-		// (get) Token: 0x0600C25D RID: 49757 RVA: 0x001CDAF0 File Offset: 0x001CBCF0
+		// Token: 0x17002710 RID: 10000
+		// (get) Token: 0x0600C141 RID: 49473 RVA: 0x001CB808 File Offset: 0x001C9A08
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600C25E RID: 49758 RVA: 0x001CDAF7 File Offset: 0x001CBCF7
+		// Token: 0x0600C142 RID: 49474 RVA: 0x001CB80F File Offset: 0x001C9A0F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoChestRewardNotify()
 		{
 		}
 
-		// Token: 0x0600C25F RID: 49759 RVA: 0x001CDB00 File Offset: 0x001CBD00
+		// Token: 0x0600C143 RID: 49475 RVA: 0x001CB818 File Offset: 0x001C9A18
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoChestRewardNotify(KurotatoChestRewardNotify other) : this()
@@ -61,7 +61,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600C260 RID: 49760 RVA: 0x001CDB54 File Offset: 0x001CBD54
+		// Token: 0x0600C144 RID: 49476 RVA: 0x001CB86C File Offset: 0x001C9A6C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public KurotatoChestRewardNotify Clone()
@@ -69,9 +69,9 @@ namespace Aki.Protocol
 			return new KurotatoChestRewardNotify(this);
 		}
 
-		// Token: 0x17002750 RID: 10064
-		// (get) Token: 0x0600C261 RID: 49761 RVA: 0x001CDB5C File Offset: 0x001CBD5C
-		// (set) Token: 0x0600C262 RID: 49762 RVA: 0x001CDB64 File Offset: 0x001CBD64
+		// Token: 0x17002711 RID: 10001
+		// (get) Token: 0x0600C145 RID: 49477 RVA: 0x001CB874 File Offset: 0x001C9A74
+		// (set) Token: 0x0600C146 RID: 49478 RVA: 0x001CB87C File Offset: 0x001C9A7C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ItemId
@@ -86,9 +86,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002751 RID: 10065
-		// (get) Token: 0x0600C263 RID: 49763 RVA: 0x001CDB6D File Offset: 0x001CBD6D
-		// (set) Token: 0x0600C264 RID: 49764 RVA: 0x001CDB75 File Offset: 0x001CBD75
+		// Token: 0x17002712 RID: 10002
+		// (get) Token: 0x0600C147 RID: 49479 RVA: 0x001CB885 File Offset: 0x001C9A85
+		// (set) Token: 0x0600C148 RID: 49480 RVA: 0x001CB88D File Offset: 0x001C9A8D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int SoldPrice
@@ -103,9 +103,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002752 RID: 10066
-		// (get) Token: 0x0600C265 RID: 49765 RVA: 0x001CDB7E File Offset: 0x001CBD7E
-		// (set) Token: 0x0600C266 RID: 49766 RVA: 0x001CDB86 File Offset: 0x001CBD86
+		// Token: 0x17002713 RID: 10003
+		// (get) Token: 0x0600C149 RID: 49481 RVA: 0x001CB896 File Offset: 0x001C9A96
+		// (set) Token: 0x0600C14A RID: 49482 RVA: 0x001CB89E File Offset: 0x001C9A9E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int RewardIndex
@@ -120,9 +120,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17002753 RID: 10067
-		// (get) Token: 0x0600C267 RID: 49767 RVA: 0x001CDB8F File Offset: 0x001CBD8F
-		// (set) Token: 0x0600C268 RID: 49768 RVA: 0x001CDB97 File Offset: 0x001CBD97
+		// Token: 0x17002714 RID: 10004
+		// (get) Token: 0x0600C14B RID: 49483 RVA: 0x001CB8A7 File Offset: 0x001C9AA7
+		// (set) Token: 0x0600C14C RID: 49484 RVA: 0x001CB8AF File Offset: 0x001C9AAF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int TotalRewardCount
@@ -137,7 +137,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600C269 RID: 49769 RVA: 0x001CDBA0 File Offset: 0x001CBDA0
+		// Token: 0x0600C14D RID: 49485 RVA: 0x001CB8B8 File Offset: 0x001C9AB8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -145,7 +145,7 @@ namespace Aki.Protocol
 			return this.Equals(other as KurotatoChestRewardNotify);
 		}
 
-		// Token: 0x0600C26A RID: 49770 RVA: 0x001CDBB0 File Offset: 0x001CBDB0
+		// Token: 0x0600C14E RID: 49486 RVA: 0x001CB8C8 File Offset: 0x001C9AC8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(KurotatoChestRewardNotify other)
@@ -153,7 +153,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ItemId == other.ItemId && this.SoldPrice == other.SoldPrice && this.RewardIndex == other.RewardIndex && this.TotalRewardCount == other.TotalRewardCount && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600C26B RID: 49771 RVA: 0x001CDC1C File Offset: 0x001CBE1C
+		// Token: 0x0600C14F RID: 49487 RVA: 0x001CB934 File Offset: 0x001C9B34
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -182,7 +182,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600C26C RID: 49772 RVA: 0x001CDCA6 File Offset: 0x001CBEA6
+		// Token: 0x0600C150 RID: 49488 RVA: 0x001CB9BE File Offset: 0x001C9BBE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -190,7 +190,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600C26D RID: 49773 RVA: 0x001CDCB3 File Offset: 0x001CBEB3
+		// Token: 0x0600C151 RID: 49489 RVA: 0x001CB9CB File Offset: 0x001C9BCB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -198,30 +198,30 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600C26E RID: 49774 RVA: 0x001CDCBC File Offset: 0x001CBEBC
+		// Token: 0x0600C152 RID: 49490 RVA: 0x001CB9D4 File Offset: 0x001C9BD4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			if (this.ItemId != 0)
 			{
-				output.WriteRawTag(16);
+				output.WriteRawTag(24);
 				output.WriteInt32(this.ItemId);
 			}
 			if (this.RewardIndex != 0)
 			{
-				output.WriteRawTag(56);
+				output.WriteRawTag(48);
 				output.WriteInt32(this.RewardIndex);
-			}
-			if (this.TotalRewardCount != 0)
-			{
-				output.WriteRawTag(64);
-				output.WriteInt32(this.TotalRewardCount);
 			}
 			if (this.SoldPrice != 0)
 			{
-				output.WriteRawTag(88);
+				output.WriteRawTag(80);
 				output.WriteInt32(this.SoldPrice);
+			}
+			if (this.TotalRewardCount != 0)
+			{
+				output.WriteRawTag(112);
+				output.WriteInt32(this.TotalRewardCount);
 			}
 			if (this._unknownFields != null)
 			{
@@ -229,7 +229,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600C26F RID: 49775 RVA: 0x001CDD50 File Offset: 0x001CBF50
+		// Token: 0x0600C153 RID: 49491 RVA: 0x001CBA68 File Offset: 0x001C9C68
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -258,7 +258,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600C270 RID: 49776 RVA: 0x001CDDD8 File Offset: 0x001CBFD8
+		// Token: 0x0600C154 RID: 49492 RVA: 0x001CBAF0 File Offset: 0x001C9CF0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(KurotatoChestRewardNotify other)
@@ -286,7 +286,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600C271 RID: 49777 RVA: 0x001CDE50 File Offset: 0x001CC050
+		// Token: 0x0600C155 RID: 49493 RVA: 0x001CBB68 File Offset: 0x001C9D68
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -294,7 +294,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600C272 RID: 49778 RVA: 0x001CDE5C File Offset: 0x001CC05C
+		// Token: 0x0600C156 RID: 49494 RVA: 0x001CBB74 File Offset: 0x001C9D74
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -306,14 +306,14 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 56U)
+				if (num <= 48U)
 				{
-					if (num == 16U)
+					if (num == 24U)
 					{
 						this.ItemId = input.ReadInt32();
 						continue;
 					}
-					if (num == 56U)
+					if (num == 48U)
 					{
 						this.RewardIndex = input.ReadInt32();
 						continue;
@@ -321,14 +321,14 @@ namespace Aki.Protocol
 				}
 				else
 				{
-					if (num == 64U)
-					{
-						this.TotalRewardCount = input.ReadInt32();
-						continue;
-					}
-					if (num == 88U)
+					if (num == 80U)
 					{
 						this.SoldPrice = input.ReadInt32();
+						continue;
+					}
+					if (num == 112U)
+					{
+						this.TotalRewardCount = input.ReadInt32();
 						continue;
 					}
 				}
@@ -336,31 +336,31 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04005437 RID: 21559
+		// Token: 0x0400543E RID: 21566
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04005438 RID: 21560
-		public const int ItemIdFieldNumber = 2;
+		// Token: 0x0400543F RID: 21567
+		public const int ItemIdFieldNumber = 3;
 
-		// Token: 0x04005439 RID: 21561
+		// Token: 0x04005440 RID: 21568
 		private int itemId_;
 
-		// Token: 0x0400543A RID: 21562
-		public const int SoldPriceFieldNumber = 11;
+		// Token: 0x04005441 RID: 21569
+		public const int SoldPriceFieldNumber = 10;
 
-		// Token: 0x0400543B RID: 21563
+		// Token: 0x04005442 RID: 21570
 		private int soldPrice_;
 
-		// Token: 0x0400543C RID: 21564
-		public const int RewardIndexFieldNumber = 7;
+		// Token: 0x04005443 RID: 21571
+		public const int RewardIndexFieldNumber = 6;
 
-		// Token: 0x0400543D RID: 21565
+		// Token: 0x04005444 RID: 21572
 		private int rewardIndex_;
 
-		// Token: 0x0400543E RID: 21566
-		public const int TotalRewardCountFieldNumber = 8;
+		// Token: 0x04005445 RID: 21573
+		public const int TotalRewardCountFieldNumber = 14;
 
-		// Token: 0x0400543F RID: 21567
+		// Token: 0x04005446 RID: 21574
 		private int totalRewardCount_;
 	}
 }

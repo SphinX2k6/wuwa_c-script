@@ -2,27 +2,27 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x020065ED RID: 26093
+	// Token: 0x0200556B RID: 21867
 	public interface IItemRange
 	{
-		// Token: 0x1700959A RID: 38298
-		// (get) Token: 0x06041682 RID: 267906
-		// (set) Token: 0x06041683 RID: 267907
+		// Token: 0x170068FC RID: 26876
+		// (get) Token: 0x06036347 RID: 222023
+		// (set) Token: 0x06036348 RID: 222024
 		float Left { get; set; }
 
-		// Token: 0x1700959B RID: 38299
-		// (get) Token: 0x06041684 RID: 267908
-		// (set) Token: 0x06041685 RID: 267909
+		// Token: 0x170068FD RID: 26877
+		// (get) Token: 0x06036349 RID: 222025
+		// (set) Token: 0x0603634A RID: 222026
 		float Right { get; set; }
 
-		// Token: 0x1700959C RID: 38300
-		// (get) Token: 0x06041686 RID: 267910
-		// (set) Token: 0x06041687 RID: 267911
+		// Token: 0x170068FE RID: 26878
+		// (get) Token: 0x0603634B RID: 222027
+		// (set) Token: 0x0603634C RID: 222028
 		float Top { get; set; }
 
-		// Token: 0x1700959D RID: 38301
-		// (get) Token: 0x06041688 RID: 267912
-		// (set) Token: 0x06041689 RID: 267913
+		// Token: 0x170068FF RID: 26879
+		// (get) Token: 0x0603634D RID: 222029
+		// (set) Token: 0x0603634E RID: 222030
 		float Bottom { get; set; }
 	}
 }

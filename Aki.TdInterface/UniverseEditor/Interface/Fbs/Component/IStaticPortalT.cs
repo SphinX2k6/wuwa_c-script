@@ -2,40 +2,40 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020059C9 RID: 22985
+	// Token: 0x02005FD6 RID: 24534
 	public class IStaticPortalT
 	{
-		// Token: 0x1700ACA2 RID: 44194
-		// (get) Token: 0x06026FA6 RID: 159654 RVA: 0x0055D1E3 File Offset: 0x0055B3E3
-		// (set) Token: 0x06026FA7 RID: 159655 RVA: 0x0055D1EB File Offset: 0x0055B3EB
+		// Token: 0x1700B5DA RID: 46554
+		// (get) Token: 0x0602951E RID: 169246 RVA: 0x005A41A7 File Offset: 0x005A23A7
+		// (set) Token: 0x0602951F RID: 169247 RVA: 0x005A41AF File Offset: 0x005A23AF
 		public EPortalType Type { get; set; }
 
-		// Token: 0x1700ACA3 RID: 44195
-		// (get) Token: 0x06026FA8 RID: 159656 RVA: 0x0055D1F4 File Offset: 0x0055B3F4
-		// (set) Token: 0x06026FA9 RID: 159657 RVA: 0x0055D1FC File Offset: 0x0055B3FC
+		// Token: 0x1700B5DB RID: 46555
+		// (get) Token: 0x06029520 RID: 169248 RVA: 0x005A41B8 File Offset: 0x005A23B8
+		// (set) Token: 0x06029521 RID: 169249 RVA: 0x005A41C0 File Offset: 0x005A23C0
 		public EPortalModel PortalModel { get; set; }
 
-		// Token: 0x1700ACA4 RID: 44196
-		// (get) Token: 0x06026FAA RID: 159658 RVA: 0x0055D205 File Offset: 0x0055B405
-		// (set) Token: 0x06026FAB RID: 159659 RVA: 0x0055D20D File Offset: 0x0055B40D
+		// Token: 0x1700B5DC RID: 46556
+		// (get) Token: 0x06029522 RID: 169250 RVA: 0x005A41C9 File Offset: 0x005A23C9
+		// (set) Token: 0x06029523 RID: 169251 RVA: 0x005A41D1 File Offset: 0x005A23D1
 		public IPortalRenderConfigT RenderConfig { get; set; }
 
-		// Token: 0x1700ACA5 RID: 44197
-		// (get) Token: 0x06026FAC RID: 159660 RVA: 0x0055D216 File Offset: 0x0055B416
-		// (set) Token: 0x06026FAD RID: 159661 RVA: 0x0055D21E File Offset: 0x0055B41E
+		// Token: 0x1700B5DD RID: 46557
+		// (get) Token: 0x06029524 RID: 169252 RVA: 0x005A41DA File Offset: 0x005A23DA
+		// (set) Token: 0x06029525 RID: 169253 RVA: 0x005A41E2 File Offset: 0x005A23E2
 		public int LinkPortalEntityId { get; set; }
 
-		// Token: 0x1700ACA6 RID: 44198
-		// (get) Token: 0x06026FAE RID: 159662 RVA: 0x0055D227 File Offset: 0x0055B427
-		// (set) Token: 0x06026FAF RID: 159663 RVA: 0x0055D22F File Offset: 0x0055B42F
+		// Token: 0x1700B5DE RID: 46558
+		// (get) Token: 0x06029526 RID: 169254 RVA: 0x005A41EB File Offset: 0x005A23EB
+		// (set) Token: 0x06029527 RID: 169255 RVA: 0x005A41F3 File Offset: 0x005A23F3
 		public bool IsStreamSource { get; set; }
 
-		// Token: 0x1700ACA7 RID: 44199
-		// (get) Token: 0x06026FB0 RID: 159664 RVA: 0x0055D238 File Offset: 0x0055B438
-		// (set) Token: 0x06026FB1 RID: 159665 RVA: 0x0055D240 File Offset: 0x0055B440
+		// Token: 0x1700B5DF RID: 46559
+		// (get) Token: 0x06029528 RID: 169256 RVA: 0x005A41FC File Offset: 0x005A23FC
+		// (set) Token: 0x06029529 RID: 169257 RVA: 0x005A4204 File Offset: 0x005A2404
 		public byte NullMask { get; set; }
 
-		// Token: 0x06026FB2 RID: 159666 RVA: 0x0055D249 File Offset: 0x0055B449
+		// Token: 0x0602952A RID: 169258 RVA: 0x005A420D File Offset: 0x005A240D
 		public IStaticPortalT()
 		{
 			this.Type = EPortalType.Static;

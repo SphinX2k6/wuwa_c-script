@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007659 RID: 30297
+	// Token: 0x02007E67 RID: 32359
 	public enum TCenterTextShowAnim : byte
 	{
-		// Token: 0x0401261E RID: 75294
+		// Token: 0x04013668 RID: 79464
 		NONE,
-		// Token: 0x0401261F RID: 75295
+		// Token: 0x04013669 RID: 79465
 		IICenterTextFadeOut,
-		// Token: 0x04012620 RID: 75296
+		// Token: 0x0401366A RID: 79466
 		IICenterTextShowAll,
-		// Token: 0x04012621 RID: 75297
+		// Token: 0x0401366B RID: 79467
 		IICenterTextTypeWriter
 	}
 }

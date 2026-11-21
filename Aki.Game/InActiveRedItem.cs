@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020018AB RID: 6315
+// Token: 0x02000D64 RID: 3428
 [NullableContext(1)]
 [Nullable(0)]
 public class InActiveRedItem : UiPanelBase
 {
-	// Token: 0x0600B8D4 RID: 47316 RVA: 0x0029EDDC File Offset: 0x0029CFDC
+	// Token: 0x06008CBD RID: 36029 RVA: 0x002A94FC File Offset: 0x002A76FC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -33,51 +33,51 @@ public class InActiveRedItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600B8D5 RID: 47317 RVA: 0x0029EEA3 File Offset: 0x0029D0A3
+	// Token: 0x06008CBE RID: 36030 RVA: 0x002A95C3 File Offset: 0x002A77C3
 	private void OnDetailButtonClick()
 	{
 		this.OnClickDetailButtonCall();
 	}
 
-	// Token: 0x0600B8D6 RID: 47318 RVA: 0x0029EEB0 File Offset: 0x0029D0B0
+	// Token: 0x06008CBF RID: 36031 RVA: 0x002A95D0 File Offset: 0x002A77D0
 	public void BindDetailButtonCall(Action call)
 	{
 		this.OnClickDetailButtonCall = call;
 	}
 
-	// Token: 0x0600B8D7 RID: 47319 RVA: 0x0029EEBC File Offset: 0x0029D0BC
+	// Token: 0x06008CC0 RID: 36032 RVA: 0x002A95DC File Offset: 0x002A77DC
 	public void SetDetailButtonVisible(bool visible)
 	{
 		base.GetButton(2).RootUIComp.Get().SetUIActive(visible);
 	}
 
-	// Token: 0x0600B8D8 RID: 47320 RVA: 0x0029EEE3 File Offset: 0x0029D0E3
+	// Token: 0x06008CC1 RID: 36033 RVA: 0x002A9603 File Offset: 0x002A7803
 	public void SetLockItemVisible(bool visible)
 	{
 		base.GetItem(0).SetUIActive(visible);
 	}
 
-	// Token: 0x0600B8D9 RID: 47321 RVA: 0x0029EEF4 File Offset: 0x0029D0F4
+	// Token: 0x06008CC2 RID: 36034 RVA: 0x002A9614 File Offset: 0x002A7814
 	public void SetText([Nullable(2)] string textStringId, params object[] args)
 	{
 		UUIText text = base.GetText(1);
 		LguiUtil.Instance.TrySetLocalTextNew(text, textStringId, args);
 	}
 
-	// Token: 0x040053BE RID: 21438
+	// Token: 0x04005469 RID: 21609
 	private Action OnClickDetailButtonCall = delegate()
 	{
 	};
 
-	// Token: 0x02007E3A RID: 32314
+	// Token: 0x02006FC1 RID: 28609
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x040294F9 RID: 169209
+		// Token: 0x04024826 RID: 149542
 		LockItem,
-		// Token: 0x040294FA RID: 169210
+		// Token: 0x04024827 RID: 149543
 		TextInActive,
-		// Token: 0x040294FB RID: 169211
+		// Token: 0x04024828 RID: 149544
 		DetailButton
 	}
 }

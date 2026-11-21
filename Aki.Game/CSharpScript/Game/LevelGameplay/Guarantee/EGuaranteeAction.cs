@@ -3,41 +3,41 @@ using CSharpScript.Core.Common;
 
 namespace CSharpScript.Game.LevelGamePlay.Guarantee
 {
-	// Token: 0x02006E01 RID: 28161
+	// Token: 0x02005F80 RID: 24448
 	[EnumExtensions]
 	public enum EGuaranteeAction
 	{
-		// Token: 0x04023BCE RID: 146382
+		// Token: 0x0401EE71 RID: 126577
 		[EnumStringMember("EnablePlayerMoveControl")]
 		EnablePlayerMoveControl,
-		// Token: 0x04023BCF RID: 146383
+		// Token: 0x0401EE72 RID: 126578
 		[EnumStringMember("ExitOrbitalCamera")]
 		ExitOrbitalCamera,
-		// Token: 0x04023BD0 RID: 146384
+		// Token: 0x0401EE73 RID: 126579
 		[EnumStringMember("RestorePlayerCameraAdjustment")]
 		RestorePlayerCameraAdjustment,
-		// Token: 0x04023BD1 RID: 146385
+		// Token: 0x0401EE74 RID: 126580
 		[EnumStringMember("UnLimitPlayerOperation")]
 		UnLimitPlayerOperation,
-		// Token: 0x04023BD2 RID: 146386
+		// Token: 0x0401EE75 RID: 126581
 		[EnumStringMember("ActionBlackScreenFadeOut")]
 		ActionBlackScreenFadeOut,
-		// Token: 0x04023BD3 RID: 146387
+		// Token: 0x0401EE76 RID: 126582
 		[EnumStringMember("DisableSplineMoveModel")]
 		DisableSplineMoveModel,
-		// Token: 0x04023BD4 RID: 146388
+		// Token: 0x0401EE77 RID: 126583
 		[EnumStringMember("StopEffect")]
 		StopEffect,
-		// Token: 0x04023BD5 RID: 146389
+		// Token: 0x0401EE78 RID: 126584
 		[EnumStringMember("Preload")]
 		Preload,
-		// Token: 0x04023BD6 RID: 146390
+		// Token: 0x0401EE79 RID: 126585
 		[EnumStringMember("DisableKey4Func")]
 		DisableKey4Func,
-		// Token: 0x04023BD7 RID: 146391
+		// Token: 0x0401EE7A RID: 126586
 		[EnumStringMember("ActionExitMovieMode")]
 		ActionExitMovieMode,
-		// Token: 0x04023BD8 RID: 146392
+		// Token: 0x0401EE7B RID: 126587
 		[EnumStringMember("StopGamepadShake")]
 		StopGamepadShake
 	}

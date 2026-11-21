@@ -2,40 +2,40 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020067F3 RID: 26611
+	// Token: 0x02006E73 RID: 28275
 	public class IFlowActorUnitT
 	{
-		// Token: 0x1700C588 RID: 50568
-		// (get) Token: 0x0602E561 RID: 189793 RVA: 0x00653547 File Offset: 0x00651747
-		// (set) Token: 0x0602E562 RID: 189794 RVA: 0x0065354F File Offset: 0x0065174F
+		// Token: 0x1700CF3E RID: 53054
+		// (get) Token: 0x06030DA7 RID: 200103 RVA: 0x006A0C8B File Offset: 0x0069EE8B
+		// (set) Token: 0x06030DA8 RID: 200104 RVA: 0x006A0C93 File Offset: 0x0069EE93
 		public int EntityId { get; set; }
 
-		// Token: 0x1700C589 RID: 50569
-		// (get) Token: 0x0602E563 RID: 189795 RVA: 0x00653558 File Offset: 0x00651758
-		// (set) Token: 0x0602E564 RID: 189796 RVA: 0x00653560 File Offset: 0x00651760
+		// Token: 0x1700CF3F RID: 53055
+		// (get) Token: 0x06030DA9 RID: 200105 RVA: 0x006A0C9C File Offset: 0x0069EE9C
+		// (set) Token: 0x06030DAA RID: 200106 RVA: 0x006A0CA4 File Offset: 0x0069EEA4
 		public int TalkerId { get; set; }
 
-		// Token: 0x1700C58A RID: 50570
-		// (get) Token: 0x0602E565 RID: 189797 RVA: 0x00653569 File Offset: 0x00651769
-		// (set) Token: 0x0602E566 RID: 189798 RVA: 0x00653571 File Offset: 0x00651771
+		// Token: 0x1700CF40 RID: 53056
+		// (get) Token: 0x06030DAB RID: 200107 RVA: 0x006A0CAD File Offset: 0x0069EEAD
+		// (set) Token: 0x06030DAC RID: 200108 RVA: 0x006A0CB5 File Offset: 0x0069EEB5
 		public bool IsPlayer { get; set; }
 
-		// Token: 0x1700C58B RID: 50571
-		// (get) Token: 0x0602E567 RID: 189799 RVA: 0x0065357A File Offset: 0x0065177A
-		// (set) Token: 0x0602E568 RID: 189800 RVA: 0x00653582 File Offset: 0x00651782
+		// Token: 0x1700CF41 RID: 53057
+		// (get) Token: 0x06030DAD RID: 200109 RVA: 0x006A0CBE File Offset: 0x0069EEBE
+		// (set) Token: 0x06030DAE RID: 200110 RVA: 0x006A0CC6 File Offset: 0x0069EEC6
 		public bool IsResetPosition { get; set; }
 
-		// Token: 0x1700C58C RID: 50572
-		// (get) Token: 0x0602E569 RID: 189801 RVA: 0x0065358B File Offset: 0x0065178B
-		// (set) Token: 0x0602E56A RID: 189802 RVA: 0x00653593 File Offset: 0x00651793
+		// Token: 0x1700CF42 RID: 53058
+		// (get) Token: 0x06030DAF RID: 200111 RVA: 0x006A0CCF File Offset: 0x0069EECF
+		// (set) Token: 0x06030DB0 RID: 200112 RVA: 0x006A0CD7 File Offset: 0x0069EED7
 		public string SeqFacePath { get; set; }
 
-		// Token: 0x1700C58D RID: 50573
-		// (get) Token: 0x0602E56B RID: 189803 RVA: 0x0065359C File Offset: 0x0065179C
-		// (set) Token: 0x0602E56C RID: 189804 RVA: 0x006535A4 File Offset: 0x006517A4
+		// Token: 0x1700CF43 RID: 53059
+		// (get) Token: 0x06030DB1 RID: 200113 RVA: 0x006A0CE0 File Offset: 0x0069EEE0
+		// (set) Token: 0x06030DB2 RID: 200114 RVA: 0x006A0CE8 File Offset: 0x0069EEE8
 		public IActorInitialStateT InitialState { get; set; }
 
-		// Token: 0x0602E56D RID: 189805 RVA: 0x006535AD File Offset: 0x006517AD
+		// Token: 0x06030DB3 RID: 200115 RVA: 0x006A0CF1 File Offset: 0x0069EEF1
 		public IFlowActorUnitT()
 		{
 			this.EntityId = 0;

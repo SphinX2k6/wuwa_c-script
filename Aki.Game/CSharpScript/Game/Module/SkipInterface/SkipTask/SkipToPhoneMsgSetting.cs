@@ -5,10 +5,10 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 {
-	// Token: 0x02004BD5 RID: 19413
+	// Token: 0x02003B7F RID: 15231
 	public class SkipToPhoneMsgSetting : SkipTask
 	{
-		// Token: 0x0603233A RID: 205626 RVA: 0x00BAA72C File Offset: 0x00BA892C
+		// Token: 0x060270CB RID: 159947 RVA: 0x00AEE9E4 File Offset: 0x00AECBE4
 		protected override void OnRun([Nullable(new byte[]
 		{
 			1,
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 			this.OpenPhoneMsgSettingAsync(itemId).Forget();
 		}
 
-		// Token: 0x0603233B RID: 205627 RVA: 0x00BAA77C File Offset: 0x00BA897C
+		// Token: 0x060270CC RID: 159948 RVA: 0x00AEEA34 File Offset: 0x00AECC34
 		private UniTask OpenPhoneMsgSettingAsync(int itemId)
 		{
 			SkipToPhoneMsgSetting.<OpenPhoneMsgSettingAsync>d__1 <OpenPhoneMsgSettingAsync>d__;

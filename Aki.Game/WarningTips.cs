@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020015ED RID: 5613
+// Token: 0x02000AA5 RID: 2725
 [NullableContext(1)]
 [Nullable(0)]
 internal class WarningTips : UiPanelBase
 {
-	// Token: 0x06009E83 RID: 40579 RVA: 0x00229CC0 File Offset: 0x00227EC0
+	// Token: 0x06007261 RID: 29281 RVA: 0x00233A70 File Offset: 0x00231C70
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -26,7 +26,7 @@ internal class WarningTips : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009E84 RID: 40580 RVA: 0x00229D4A File Offset: 0x00227F4A
+	// Token: 0x06007262 RID: 29282 RVA: 0x00233AFA File Offset: 0x00231CFA
 	protected override void OnStart()
 	{
 		UUIItem item = base.GetItem(0);
@@ -42,7 +42,7 @@ internal class WarningTips : UiPanelBase
 		item2.SetUIActive(false);
 	}
 
-	// Token: 0x06009E85 RID: 40581 RVA: 0x00229D71 File Offset: 0x00227F71
+	// Token: 0x06007263 RID: 29283 RVA: 0x00233B21 File Offset: 0x00231D21
 	public void SetTextById(string textId)
 	{
 		UUIText text = base.GetText(1);
@@ -53,7 +53,7 @@ internal class WarningTips : UiPanelBase
 		text.ShowTextNew(textId);
 	}
 
-	// Token: 0x06009E86 RID: 40582 RVA: 0x00229D85 File Offset: 0x00227F85
+	// Token: 0x06007264 RID: 29284 RVA: 0x00233B35 File Offset: 0x00231D35
 	public void SetText(string text)
 	{
 		UUIText text2 = base.GetText(1);

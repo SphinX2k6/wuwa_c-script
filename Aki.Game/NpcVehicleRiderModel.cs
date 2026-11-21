@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02003201 RID: 12801
+// Token: 0x02002770 RID: 10096
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class NpcVehicleRiderModel : ModelBase
 {
-	// Token: 0x0601B9D2 RID: 113106 RVA: 0x00795211 File Offset: 0x00793411
+	// Token: 0x06019557 RID: 103767 RVA: 0x007BD85D File Offset: 0x007BBA5D
 	protected override bool OnClear()
 	{
 		this.FreeVehicleSet.Clear();
@@ -17,13 +17,13 @@ public class NpcVehicleRiderModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601B9D3 RID: 113107 RVA: 0x00795235 File Offset: 0x00793435
+	// Token: 0x06019558 RID: 103768 RVA: 0x007BD881 File Offset: 0x007BBA81
 	public void AddFreeVehicle(int vehicleEntityId, int seatCount)
 	{
 		this.RegisterVehicle(vehicleEntityId, seatCount);
 	}
 
-	// Token: 0x0601B9D4 RID: 113108 RVA: 0x0079523F File Offset: 0x0079343F
+	// Token: 0x06019559 RID: 103769 RVA: 0x007BD88B File Offset: 0x007BBA8B
 	public void RegisterVehicle(int vehicleEntityId, int seatCount)
 	{
 		if (vehicleEntityId == 0)
@@ -34,13 +34,13 @@ public class NpcVehicleRiderModel : ModelBase
 		this.RefreshVehicleFreeState(vehicleEntityId);
 	}
 
-	// Token: 0x0601B9D5 RID: 113109 RVA: 0x0079525A File Offset: 0x0079345A
+	// Token: 0x0601955A RID: 103770 RVA: 0x007BD8A6 File Offset: 0x007BBAA6
 	public void RemoveFreeVehicle(int vehicleEntityId)
 	{
 		this.RemoveVehicle(vehicleEntityId);
 	}
 
-	// Token: 0x0601B9D6 RID: 113110 RVA: 0x00795264 File Offset: 0x00793464
+	// Token: 0x0601955B RID: 103771 RVA: 0x007BD8B0 File Offset: 0x007BBAB0
 	private NpcVehicleInfo CreateVehicleInfo(int vehicleEntityId, int seatCount)
 	{
 		NpcVehicleInfo npcVehicleInfo = this.VehicleToNpcInfoMap.GetValueOrDefault(vehicleEntityId);
@@ -56,7 +56,7 @@ public class NpcVehicleRiderModel : ModelBase
 		return npcVehicleInfo;
 	}
 
-	// Token: 0x0601B9D7 RID: 113111 RVA: 0x007952A0 File Offset: 0x007934A0
+	// Token: 0x0601955C RID: 103772 RVA: 0x007BD8EC File Offset: 0x007BBAEC
 	private void AddFreeVehicleInternal(int vehicleEntityId)
 	{
 		if (this.FreeVehicleSet.Contains(vehicleEntityId))
@@ -66,7 +66,7 @@ public class NpcVehicleRiderModel : ModelBase
 		this.FreeVehicleSet.Add(vehicleEntityId);
 	}
 
-	// Token: 0x0601B9D8 RID: 113112 RVA: 0x007952C0 File Offset: 0x007934C0
+	// Token: 0x0601955D RID: 103773 RVA: 0x007BD90C File Offset: 0x007BBB0C
 	public unsafe int? TryReserveVehicleSeat(int npcEntityId, int vehicleEntityId)
 	{
 		if (npcEntityId == 0 || vehicleEntityId == 0)
@@ -131,13 +131,13 @@ public class NpcVehicleRiderModel : ModelBase
 		return num2;
 	}
 
-	// Token: 0x0601B9D9 RID: 113113 RVA: 0x0079551C File Offset: 0x0079371C
+	// Token: 0x0601955E RID: 103774 RVA: 0x007BDB68 File Offset: 0x007BBD68
 	public bool ReserveVehicle(int npcEntityId, int vehicleEntityId)
 	{
 		return this.TryReserveVehicleSeat(npcEntityId, vehicleEntityId) != null;
 	}
 
-	// Token: 0x0601B9DA RID: 113114 RVA: 0x0079553C File Offset: 0x0079373C
+	// Token: 0x0601955F RID: 103775 RVA: 0x007BDB88 File Offset: 0x007BBD88
 	public unsafe int? ReleaseVehicle(int npcEntityId, int vehicleEntityId = 0)
 	{
 		NpcVehicleInfo npcVehicleInfo = (vehicleEntityId != 0) ? this.VehicleToNpcInfoMap.GetValueOrDefault(vehicleEntityId) : this.FindVehicleInfoByNpc(npcEntityId);
@@ -169,7 +169,7 @@ public class NpcVehicleRiderModel : ModelBase
 		return num;
 	}
 
-	// Token: 0x0601B9DB RID: 113115 RVA: 0x0079564C File Offset: 0x0079384C
+	// Token: 0x06019560 RID: 103776 RVA: 0x007BDC98 File Offset: 0x007BBE98
 	public unsafe List<int> RemoveVehicle(int vehicleEntityId)
 	{
 		List<int> list = new List<int>();
@@ -195,7 +195,7 @@ public class NpcVehicleRiderModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0601B9DC RID: 113116 RVA: 0x0079573C File Offset: 0x0079393C
+	// Token: 0x06019561 RID: 103777 RVA: 0x007BDD88 File Offset: 0x007BBF88
 	public int? GetRidingVehicle(int npcEntityId)
 	{
 		NpcVehicleInfo npcVehicleInfo = this.FindVehicleInfoByNpc(npcEntityId);
@@ -206,7 +206,7 @@ public class NpcVehicleRiderModel : ModelBase
 		return new int?(npcVehicleInfo.VehicleEntityId);
 	}
 
-	// Token: 0x0601B9DD RID: 113117 RVA: 0x00795768 File Offset: 0x00793968
+	// Token: 0x06019562 RID: 103778 RVA: 0x007BDDB4 File Offset: 0x007BBFB4
 	public int? GetRideSeat(int npcEntityId, int vehicleEntityId = 0)
 	{
 		if (vehicleEntityId != 0)
@@ -229,7 +229,7 @@ public class NpcVehicleRiderModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601B9DE RID: 113118 RVA: 0x007957B4 File Offset: 0x007939B4
+	// Token: 0x06019563 RID: 103779 RVA: 0x007BDE00 File Offset: 0x007BC000
 	public bool SetNpcVehicleRideState(int npcEntityId, ENpcVehicleRideState state)
 	{
 		if (state == ENpcVehicleRideState.None)
@@ -245,7 +245,7 @@ public class NpcVehicleRiderModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601B9DF RID: 113119 RVA: 0x007957FF File Offset: 0x007939FF
+	// Token: 0x06019564 RID: 103780 RVA: 0x007BDE4B File Offset: 0x007BC04B
 	public ENpcVehicleRideState GetNpcVehicleRideState(int npcEntityId)
 	{
 		NpcVehicleInfo npcVehicleInfo = this.FindVehicleInfoByNpc(npcEntityId);
@@ -256,14 +256,14 @@ public class NpcVehicleRiderModel : ModelBase
 		return npcVehicleInfo.GetNpcRideState(npcEntityId);
 	}
 
-	// Token: 0x0601B9E0 RID: 113120 RVA: 0x00795814 File Offset: 0x00793A14
+	// Token: 0x06019565 RID: 103781 RVA: 0x007BDE60 File Offset: 0x007BC060
 	public bool SetNpcTargetSplinePbDataId(int npcEntityId, int splinePbDataId)
 	{
 		NpcVehicleInfo npcVehicleInfo = this.FindVehicleInfoByNpc(npcEntityId);
 		return npcVehicleInfo != null && npcVehicleInfo.SetNpcTargetSplinePbDataId(npcEntityId, splinePbDataId);
 	}
 
-	// Token: 0x0601B9E1 RID: 113121 RVA: 0x0079582C File Offset: 0x00793A2C
+	// Token: 0x06019566 RID: 103782 RVA: 0x007BDE78 File Offset: 0x007BC078
 	public int? GetNpcTargetSplinePbDataId(int npcEntityId)
 	{
 		NpcVehicleInfo npcVehicleInfo = this.FindVehicleInfoByNpc(npcEntityId);
@@ -274,7 +274,7 @@ public class NpcVehicleRiderModel : ModelBase
 		return npcVehicleInfo.GetNpcTargetSplinePbDataId(npcEntityId);
 	}
 
-	// Token: 0x0601B9E2 RID: 113122 RVA: 0x00795854 File Offset: 0x00793A54
+	// Token: 0x06019567 RID: 103783 RVA: 0x007BDEA0 File Offset: 0x007BC0A0
 	public bool GetVehicleIsWaitingNpc(int vehicleEntityId, int checkState)
 	{
 		NpcVehicleInfo valueOrDefault = this.VehicleToNpcInfoMap.GetValueOrDefault(vehicleEntityId);
@@ -296,14 +296,14 @@ public class NpcVehicleRiderModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x0601B9E3 RID: 113123 RVA: 0x007958D8 File Offset: 0x00793AD8
+	// Token: 0x06019568 RID: 103784 RVA: 0x007BDF24 File Offset: 0x007BC124
 	public bool IsVehicleMovingToTarget(int vehicleEntityId)
 	{
 		NpcVehicleInfo valueOrDefault = this.VehicleToNpcInfoMap.GetValueOrDefault(vehicleEntityId);
 		return valueOrDefault != null && valueOrDefault.IsMovingToTarget();
 	}
 
-	// Token: 0x0601B9E4 RID: 113124 RVA: 0x007958F4 File Offset: 0x00793AF4
+	// Token: 0x06019569 RID: 103785 RVA: 0x007BDF40 File Offset: 0x007BC140
 	public int? GetAvailableRouteNpc(int vehicleEntityId)
 	{
 		NpcVehicleInfo valueOrDefault = this.VehicleToNpcInfoMap.GetValueOrDefault(vehicleEntityId);
@@ -314,7 +314,7 @@ public class NpcVehicleRiderModel : ModelBase
 		return valueOrDefault.GetAvailableRouteNpcEntityId();
 	}
 
-	// Token: 0x0601B9E5 RID: 113125 RVA: 0x00795920 File Offset: 0x00793B20
+	// Token: 0x0601956A RID: 103786 RVA: 0x007BDF6C File Offset: 0x007BC16C
 	public unsafe int? ActivateNpcRouteBySpline(int vehicleEntityId, int splinePbDataId)
 	{
 		NpcVehicleInfo valueOrDefault = this.VehicleToNpcInfoMap.GetValueOrDefault(vehicleEntityId);
@@ -360,7 +360,7 @@ public class NpcVehicleRiderModel : ModelBase
 		return npcEntityIdBySplinePbDataId;
 	}
 
-	// Token: 0x0601B9E6 RID: 113126 RVA: 0x00795AC4 File Offset: 0x00793CC4
+	// Token: 0x0601956B RID: 103787 RVA: 0x007BE110 File Offset: 0x007BC310
 	public unsafe void RefreshVehicleRuntimeInfo(int vehicleEntityId)
 	{
 		NpcVehicleInfo valueOrDefault = this.VehicleToNpcInfoMap.GetValueOrDefault(vehicleEntityId);
@@ -383,7 +383,7 @@ public class NpcVehicleRiderModel : ModelBase
 		this.RefreshVehicleFreeState(vehicleEntityId);
 	}
 
-	// Token: 0x0601B9E7 RID: 113127 RVA: 0x00795B90 File Offset: 0x00793D90
+	// Token: 0x0601956C RID: 103788 RVA: 0x007BE1DC File Offset: 0x007BC3DC
 	public void RefreshAllVehicleRuntimeInfo()
 	{
 		foreach (int vehicleEntityId in this.VehicleToNpcInfoMap.Keys)
@@ -392,7 +392,7 @@ public class NpcVehicleRiderModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601B9E8 RID: 113128 RVA: 0x00795BE8 File Offset: 0x00793DE8
+	// Token: 0x0601956D RID: 103789 RVA: 0x007BE234 File Offset: 0x007BC434
 	private void RefreshVehicleFreeState(int vehicleEntityId)
 	{
 		NpcVehicleInfo valueOrDefault = this.VehicleToNpcInfoMap.GetValueOrDefault(vehicleEntityId);
@@ -404,13 +404,13 @@ public class NpcVehicleRiderModel : ModelBase
 		this.AddFreeVehicleInternal(vehicleEntityId);
 	}
 
-	// Token: 0x0601B9E9 RID: 113129 RVA: 0x00795C1C File Offset: 0x00793E1C
+	// Token: 0x0601956E RID: 103790 RVA: 0x007BE268 File Offset: 0x007BC468
 	private void RemoveFreeVehicleInternal(int vehicleEntityId)
 	{
 		this.FreeVehicleSet.Remove(vehicleEntityId);
 	}
 
-	// Token: 0x0601B9EA RID: 113130 RVA: 0x00795C2C File Offset: 0x00793E2C
+	// Token: 0x0601956F RID: 103791 RVA: 0x007BE278 File Offset: 0x007BC478
 	public void GetCurrentFreeVehicleList(List<int> outList)
 	{
 		outList.Clear();
@@ -420,14 +420,14 @@ public class NpcVehicleRiderModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601B9EB RID: 113131 RVA: 0x00795C88 File Offset: 0x00793E88
+	// Token: 0x06019570 RID: 103792 RVA: 0x007BE2D4 File Offset: 0x007BC4D4
 	public bool CheckVehicleIsFree(int vehicleEntityId)
 	{
 		NpcVehicleInfo valueOrDefault = this.VehicleToNpcInfoMap.GetValueOrDefault(vehicleEntityId);
 		return valueOrDefault == null || valueOrDefault.HasAvailableSeat();
 	}
 
-	// Token: 0x0601B9EC RID: 113132 RVA: 0x00795CB0 File Offset: 0x00793EB0
+	// Token: 0x06019571 RID: 103793 RVA: 0x007BE2FC File Offset: 0x007BC4FC
 	[NullableContext(2)]
 	private NpcVehicleInfo FindVehicleInfoByNpc(int npcEntityId)
 	{
@@ -441,8 +441,8 @@ public class NpcVehicleRiderModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x17002632 RID: 9778
-	// (get) Token: 0x0601B9ED RID: 113133 RVA: 0x00795D1C File Offset: 0x00793F1C
+	// Token: 0x17002873 RID: 10355
+	// (get) Token: 0x06019572 RID: 103794 RVA: 0x007BE368 File Offset: 0x007BC568
 	public static NpcVehicleRiderModel Instance
 	{
 		get
@@ -451,7 +451,7 @@ public class NpcVehicleRiderModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601B9EE RID: 113134 RVA: 0x00795D23 File Offset: 0x00793F23
+	// Token: 0x06019573 RID: 103795 RVA: 0x007BE36F File Offset: 0x007BC56F
 	public static NpcVehicleRiderModel GetOrCreateInstance()
 	{
 		if (NpcVehicleRiderModel._Instance == null)
@@ -461,7 +461,7 @@ public class NpcVehicleRiderModel : ModelBase
 		return NpcVehicleRiderModel._Instance;
 	}
 
-	// Token: 0x0601B9EF RID: 113135 RVA: 0x00795D37 File Offset: 0x00793F37
+	// Token: 0x06019574 RID: 103796 RVA: 0x007BE383 File Offset: 0x007BC583
 	public static bool CreateInstance()
 	{
 		if (NpcVehicleRiderModel._Instance != null)
@@ -472,33 +472,33 @@ public class NpcVehicleRiderModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601B9F0 RID: 113136 RVA: 0x00795D4D File Offset: 0x00793F4D
+	// Token: 0x06019575 RID: 103797 RVA: 0x007BE399 File Offset: 0x007BC599
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601B9F1 RID: 113137 RVA: 0x00795D4F File Offset: 0x00793F4F
+	// Token: 0x06019576 RID: 103798 RVA: 0x007BE39B File Offset: 0x007BC59B
 	public static void ResetStaticDefaultValue()
 	{
 		NpcVehicleRiderModel._Instance = null;
 	}
 
-	// Token: 0x0601B9F2 RID: 113138 RVA: 0x00795D57 File Offset: 0x00793F57
+	// Token: 0x06019577 RID: 103799 RVA: 0x007BE3A3 File Offset: 0x007BC5A3
 	static NpcVehicleRiderModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(NpcVehicleRiderModel.CreateStaticDefaultValue), new Action(NpcVehicleRiderModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400D923 RID: 55587
+	// Token: 0x0400DDC1 RID: 56769
 	private readonly HashSet<int> FreeVehicleSet = new HashSet<int>();
 
-	// Token: 0x0400D924 RID: 55588
+	// Token: 0x0400DDC2 RID: 56770
 	private readonly Dictionary<int, NpcVehicleInfo> VehicleToNpcInfoMap = new Dictionary<int, NpcVehicleInfo>();
 
-	// Token: 0x0400D925 RID: 55589
+	// Token: 0x0400DDC3 RID: 56771
 	private readonly List<int> TmpNpcEntityIdList = new List<int>();
 
-	// Token: 0x0400D926 RID: 55590
+	// Token: 0x0400DDC4 RID: 56772
 	[Nullable(2)]
 	private static NpcVehicleRiderModel _Instance;
 }

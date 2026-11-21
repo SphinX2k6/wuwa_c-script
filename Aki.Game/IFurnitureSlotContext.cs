@@ -1,13 +1,13 @@
 ﻿using System;
 
-// Token: 0x02000F9C RID: 3996
+// Token: 0x02000451 RID: 1105
 public interface IFurnitureSlotContext
 {
-	// Token: 0x17000812 RID: 2066
-	// (get) Token: 0x0600664A RID: 26186
+	// Token: 0x17000834 RID: 2100
+	// (get) Token: 0x060039E2 RID: 14818
 	int SlotEntityId { get; }
 
-	// Token: 0x17000813 RID: 2067
-	// (get) Token: 0x0600664B RID: 26187
+	// Token: 0x17000835 RID: 2101
+	// (get) Token: 0x060039E3 RID: 14819
 	int SubSlotIndex { get; }
 }

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using FilterDefine;
 
-// Token: 0x02001848 RID: 6216
+// Token: 0x02000D01 RID: 3329
 public class VisionAssembleFilter : CommonFilter
 {
-	// Token: 0x0600B618 RID: 46616 RVA: 0x00292BC0 File Offset: 0x00290DC0
+	// Token: 0x06008A03 RID: 35331 RVA: 0x0029D2F8 File Offset: 0x0029B4F8
 	[NullableContext(1)]
 	private object GetVisionAssembleGroupAttribute(object data, Dictionary<int, string> currentSelectMap)
 	{
@@ -24,7 +24,7 @@ public class VisionAssembleFilter : CommonFilter
 		return list.ToArray();
 	}
 
-	// Token: 0x0600B619 RID: 46617 RVA: 0x00292C50 File Offset: 0x00290E50
+	// Token: 0x06008A04 RID: 35332 RVA: 0x0029D388 File Offset: 0x0029B588
 	protected override void OnInitFilterMap()
 	{
 		this.FilterMap.Add(FilterDefine.EFilterType.Attribute, new TFilterConfig(this.GetVisionAssembleGroupAttribute));

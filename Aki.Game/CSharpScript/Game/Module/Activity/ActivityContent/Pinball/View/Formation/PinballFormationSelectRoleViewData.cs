@@ -4,29 +4,29 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Formation
 {
-	// Token: 0x02006363 RID: 25443
+	// Token: 0x020052E1 RID: 21217
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballFormationSelectRoleViewData : IPinballFormationSelectRoleViewData
 	{
-		// Token: 0x17009332 RID: 37682
-		// (get) Token: 0x0604002D RID: 262189 RVA: 0x00F7C4C7 File Offset: 0x00F7A6C7
-		// (set) Token: 0x0604002E RID: 262190 RVA: 0x00F7C4CF File Offset: 0x00F7A6CF
+		// Token: 0x17006694 RID: 26260
+		// (get) Token: 0x06034CEE RID: 216302 RVA: 0x00EC3427 File Offset: 0x00EC1627
+		// (set) Token: 0x06034CEF RID: 216303 RVA: 0x00EC342F File Offset: 0x00EC162F
 		public List<int> RoleList { get; set; } = new List<int>();
 
-		// Token: 0x17009333 RID: 37683
-		// (get) Token: 0x0604002F RID: 262191 RVA: 0x00F7C4D8 File Offset: 0x00F7A6D8
-		// (set) Token: 0x06040030 RID: 262192 RVA: 0x00F7C4E0 File Offset: 0x00F7A6E0
+		// Token: 0x17006695 RID: 26261
+		// (get) Token: 0x06034CF0 RID: 216304 RVA: 0x00EC3438 File Offset: 0x00EC1638
+		// (set) Token: 0x06034CF1 RID: 216305 RVA: 0x00EC3440 File Offset: 0x00EC1640
 		public List<int> RecommendRoleList { get; set; } = new List<int>();
 
-		// Token: 0x17009334 RID: 37684
-		// (get) Token: 0x06040031 RID: 262193 RVA: 0x00F7C4E9 File Offset: 0x00F7A6E9
-		// (set) Token: 0x06040032 RID: 262194 RVA: 0x00F7C4F1 File Offset: 0x00F7A6F1
+		// Token: 0x17006696 RID: 26262
+		// (get) Token: 0x06034CF2 RID: 216306 RVA: 0x00EC3449 File Offset: 0x00EC1649
+		// (set) Token: 0x06034CF3 RID: 216307 RVA: 0x00EC3451 File Offset: 0x00EC1651
 		public Action<List<int>> OnConfirm { get; set; }
 
-		// Token: 0x17009335 RID: 37685
-		// (get) Token: 0x06040033 RID: 262195 RVA: 0x00F7C4FA File Offset: 0x00F7A6FA
-		// (set) Token: 0x06040034 RID: 262196 RVA: 0x00F7C502 File Offset: 0x00F7A702
+		// Token: 0x17006697 RID: 26263
+		// (get) Token: 0x06034CF4 RID: 216308 RVA: 0x00EC345A File Offset: 0x00EC165A
+		// (set) Token: 0x06034CF5 RID: 216309 RVA: 0x00EC3462 File Offset: 0x00EC1662
 		public int? OpenRole { get; set; }
 	}
 }

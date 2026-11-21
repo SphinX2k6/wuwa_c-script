@@ -8,10 +8,10 @@ using CSharpScript.Game.Module.BattleUi.Views;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001115 RID: 4373
+// Token: 0x020005C9 RID: 1481
 public class BabelTowerBattleTopPanel : BattleVisibleChildView
 {
-	// Token: 0x0600725D RID: 29277 RVA: 0x00176968 File Offset: 0x00174B68
+	// Token: 0x060045F3 RID: 17907 RVA: 0x0017F324 File Offset: 0x0017D524
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -32,7 +32,7 @@ public class BabelTowerBattleTopPanel : BattleVisibleChildView
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600725E RID: 29278 RVA: 0x00176A0E File Offset: 0x00174C0E
+	// Token: 0x060045F4 RID: 17908 RVA: 0x0017F3CA File Offset: 0x0017D5CA
 	[NullableContext(1)]
 	public override void Initialize(object param = null)
 	{
@@ -41,13 +41,13 @@ public class BabelTowerBattleTopPanel : BattleVisibleChildView
 		base.SetVisible(1, false);
 	}
 
-	// Token: 0x0600725F RID: 29279 RVA: 0x00176A26 File Offset: 0x00174C26
+	// Token: 0x060045F5 RID: 17909 RVA: 0x0017F3E2 File Offset: 0x0017D5E2
 	public override void Reset()
 	{
 		base.Reset();
 	}
 
-	// Token: 0x06007260 RID: 29280 RVA: 0x00176A2E File Offset: 0x00174C2E
+	// Token: 0x060045F6 RID: 17910 RVA: 0x0017F3EA File Offset: 0x0017D5EA
 	private void AddEventListeners()
 	{
 		if (this.HasAddEventListener)
@@ -58,7 +58,7 @@ public class BabelTowerBattleTopPanel : BattleVisibleChildView
 		this.HasAddEventListener = true;
 	}
 
-	// Token: 0x06007261 RID: 29281 RVA: 0x00176A5C File Offset: 0x00174C5C
+	// Token: 0x060045F7 RID: 17911 RVA: 0x0017F418 File Offset: 0x0017D618
 	private void RemoveEventListeners()
 	{
 		if (!this.HasAddEventListener)
@@ -69,7 +69,7 @@ public class BabelTowerBattleTopPanel : BattleVisibleChildView
 		this.HasAddEventListener = false;
 	}
 
-	// Token: 0x06007262 RID: 29282 RVA: 0x00176A8C File Offset: 0x00174C8C
+	// Token: 0x060045F8 RID: 17912 RVA: 0x0017F448 File Offset: 0x0017D648
 	private void OnStarButtonClick()
 	{
 		List<IBabelTowerBuffItemData> list = new List<IBabelTowerBuffItemData>();
@@ -113,27 +113,27 @@ public class BabelTowerBattleTopPanel : BattleVisibleChildView
 		UiManager.Instance.OpenView(EUiViewName.BabelTowerBuffView, param, null);
 	}
 
-	// Token: 0x06007263 RID: 29283 RVA: 0x00176BD0 File Offset: 0x00174DD0
+	// Token: 0x060045F9 RID: 17913 RVA: 0x0017F58C File Offset: 0x0017D78C
 	private void OnBabelTowerBattleTopPanelUpdate()
 	{
 		int curStarNum = BabelTowerModel.Instance.GetCurStarNum();
 		this.Update(curStarNum);
 	}
 
-	// Token: 0x06007264 RID: 29284 RVA: 0x00176BEF File Offset: 0x00174DEF
+	// Token: 0x060045FA RID: 17914 RVA: 0x0017F5AB File Offset: 0x0017D7AB
 	public void Update(int starNum)
 	{
 		this.StarNum = starNum;
 		this.Refresh();
 	}
 
-	// Token: 0x06007265 RID: 29285 RVA: 0x00176BFE File Offset: 0x00174DFE
+	// Token: 0x060045FB RID: 17915 RVA: 0x0017F5BA File Offset: 0x0017D7BA
 	public void Refresh()
 	{
 		base.GetText(1).SetText(this.StarNum.ToString(), true);
 	}
 
-	// Token: 0x06007266 RID: 29286 RVA: 0x00176C18 File Offset: 0x00174E18
+	// Token: 0x060045FC RID: 17916 RVA: 0x0017F5D4 File Offset: 0x0017D7D4
 	public void StartShow()
 	{
 		BabelTowerInstanceData currentChallengeInstData = BabelTowerModel.Instance.CurrentChallengeInstData;
@@ -142,44 +142,44 @@ public class BabelTowerBattleTopPanel : BattleVisibleChildView
 		base.SetVisible(1, true);
 	}
 
-	// Token: 0x06007267 RID: 29287 RVA: 0x00176C4B File Offset: 0x00174E4B
+	// Token: 0x060045FD RID: 17917 RVA: 0x0017F607 File Offset: 0x0017D807
 	public void EndShow()
 	{
 		base.SetVisible(1, false);
 	}
 
-	// Token: 0x06007268 RID: 29288 RVA: 0x00176C55 File Offset: 0x00174E55
+	// Token: 0x060045FE RID: 17918 RVA: 0x0017F611 File Offset: 0x0017D811
 	protected override void OnShowBattleChildView()
 	{
 		this.AddEventListeners();
 	}
 
-	// Token: 0x06007269 RID: 29289 RVA: 0x00176C5D File Offset: 0x00174E5D
+	// Token: 0x060045FF RID: 17919 RVA: 0x0017F619 File Offset: 0x0017D819
 	protected override void OnHideBattleChildView()
 	{
 		this.RemoveEventListeners();
 	}
 
-	// Token: 0x040034F8 RID: 13560
+	// Token: 0x04003591 RID: 13713
 	private int StarNum;
 
-	// Token: 0x040034F9 RID: 13561
+	// Token: 0x04003592 RID: 13714
 	private bool HasAddEventListener;
 
-	// Token: 0x020076D8 RID: 30424
+	// Token: 0x0200686C RID: 26732
 	private enum EVisibleReason
 	{
-		// Token: 0x04027381 RID: 160641
+		// Token: 0x040226CA RID: 141002
 		Default = 1
 	}
 
-	// Token: 0x020076D9 RID: 30425
+	// Token: 0x0200686D RID: 26733
 	private class EComponents
 	{
-		// Token: 0x04027382 RID: 160642
+		// Token: 0x040226CB RID: 141003
 		public const int StarButton = 0;
 
-		// Token: 0x04027383 RID: 160643
+		// Token: 0x040226CC RID: 141004
 		public const int StarNumText = 1;
 	}
 }

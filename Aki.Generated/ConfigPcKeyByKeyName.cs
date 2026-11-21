@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200064C RID: 1612
+	// Token: 0x02000664 RID: 1636
 	public class ConfigPcKeyByKeyName : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060025D8 RID: 9688 RVA: 0x0012F9B8 File Offset: 0x0012DBB8
+		// Token: 0x06002668 RID: 9832 RVA: 0x00136434 File Offset: 0x00134634
 		static ConfigPcKeyByKeyName()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigPcKeyByKeyName.CreateStaticDefaultValue), new Action(ConfigPcKeyByKeyName.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060025D9 RID: 9689 RVA: 0x0012F9D8 File Offset: 0x0012DBD8
+		// Token: 0x06002669 RID: 9833 RVA: 0x00136454 File Offset: 0x00134654
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigPcKeyByKeyName.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060025DA RID: 9690 RVA: 0x0012FA57 File Offset: 0x0012DC57
+		// Token: 0x0600266A RID: 9834 RVA: 0x001364D3 File Offset: 0x001346D3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigPcKeyByKeyName.LogPair = null;
 			ConfigPcKeyByKeyName.HandleId = 0;
 		}
 
-		// Token: 0x060025DB RID: 9691 RVA: 0x0012FA65 File Offset: 0x0012DC65
+		// Token: 0x0600266B RID: 9835 RVA: 0x001364E1 File Offset: 0x001346E1
 		public static void Init()
 		{
 			ConfigPcKeyByKeyName.HandleId = ConfigCommon.InitDataStatement(ConfigPcKeyByKeyName.HandleId, "db_key.db", "select BinData from `PcKey` where KeyName=?");
 		}
 
-		// Token: 0x060025DC RID: 9692 RVA: 0x0012FA80 File Offset: 0x0012DC80
+		// Token: 0x0600266C RID: 9836 RVA: 0x001364FC File Offset: 0x001346FC
 		public static PcKey? GetConfig(string p0KeyName, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigPcKeyByKeyName.HandleId, ConfigPcKeyByKeyName.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new PcKey?(rootAsPcKey);
 		}
 
-		// Token: 0x04002BFA RID: 11258
+		// Token: 0x04002CA2 RID: 11426
 		private const string DB = "db_key.db";
 
-		// Token: 0x04002BFB RID: 11259
+		// Token: 0x04002CA3 RID: 11427
 		private const string FILE = "a.按键.xlsx";
 
-		// Token: 0x04002BFC RID: 11260
+		// Token: 0x04002CA4 RID: 11428
 		private const string TABLE = "PcKey";
 
-		// Token: 0x04002BFD RID: 11261
+		// Token: 0x04002CA5 RID: 11429
 		private const string COMMAND = "select BinData from `PcKey` where KeyName=?";
 
-		// Token: 0x04002BFE RID: 11262
+		// Token: 0x04002CA6 RID: 11430
 		private const string KEY_PREFIX = "PcKeyByKeyName";
 
-		// Token: 0x04002BFF RID: 11263
+		// Token: 0x04002CA7 RID: 11431
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002C00 RID: 11264
+		// Token: 0x04002CA8 RID: 11432
 		private static int HandleId;
 	}
 }

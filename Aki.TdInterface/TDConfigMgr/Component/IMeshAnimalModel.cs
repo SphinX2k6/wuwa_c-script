@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004F2 RID: 1266
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000553 RID: 1363
 	public class IMeshAnimalModel : IAnimalModelConfig
 	{
-		// Token: 0x060019CA RID: 6602 RVA: 0x0004BF90 File Offset: 0x0004A190
+		// Token: 0x06001BAC RID: 7084 RVA: 0x00050AD4 File Offset: 0x0004ECD4
 		private IMeshAnimalModel_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060019CB RID: 6603 RVA: 0x0004BFC8 File Offset: 0x0004A1C8
+		// Token: 0x06001BAD RID: 7085 RVA: 0x00050B0C File Offset: 0x0004ED0C
 		public static IMeshAnimalModel Create([Nullable(2)] IMeshAnimalModel instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060019CC RID: 6604 RVA: 0x0004BFDB File Offset: 0x0004A1DB
+		// Token: 0x06001BAE RID: 7086 RVA: 0x00050B1F File Offset: 0x0004ED1F
 		public static IMeshAnimalModel CreateFromSetValue([Nullable(2)] IMeshAnimalModel_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060019CD RID: 6605 RVA: 0x0004BFEE File Offset: 0x0004A1EE
+		// Token: 0x06001BAF RID: 7087 RVA: 0x00050B32 File Offset: 0x0004ED32
 		public new IMeshAnimalModel_SetValue ToSetValue()
 		{
 			return new IMeshAnimalModel_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170006D9 RID: 1753
-		// (get) Token: 0x060019CE RID: 6606 RVA: 0x0004C00D File Offset: 0x0004A20D
-		// (set) Token: 0x060019CF RID: 6607 RVA: 0x0004C038 File Offset: 0x0004A238
+		// Token: 0x17000758 RID: 1880
+		// (get) Token: 0x06001BB0 RID: 7088 RVA: 0x00050B51 File Offset: 0x0004ED51
+		// (set) Token: 0x06001BB1 RID: 7089 RVA: 0x00050B7C File Offset: 0x0004ED7C
 		public override EAnimalModelType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170006DA RID: 1754
-		// (get) Token: 0x060019D0 RID: 6608 RVA: 0x0004C046 File Offset: 0x0004A246
-		// (set) Token: 0x060019D1 RID: 6609 RVA: 0x0004C071 File Offset: 0x0004A271
+		// Token: 0x17000759 RID: 1881
+		// (get) Token: 0x06001BB2 RID: 7090 RVA: 0x00050B8A File Offset: 0x0004ED8A
+		// (set) Token: 0x06001BB3 RID: 7091 RVA: 0x00050BB5 File Offset: 0x0004EDB5
 		public virtual string Mesh
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040012DF RID: 4831
+		// Token: 0x0400143F RID: 5183
 		[Nullable(2)]
 		protected new IMeshAnimalModel FbInstance;
 
-		// Token: 0x040012E0 RID: 4832
+		// Token: 0x04001440 RID: 5184
 		[Nullable(2)]
 		protected new IMeshAnimalModel_SetValue PocoInterface;
 	}

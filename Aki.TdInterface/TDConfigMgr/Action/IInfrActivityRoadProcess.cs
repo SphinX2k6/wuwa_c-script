@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B2D RID: 6957
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001CDC RID: 7388
 	public class IInfrActivityRoadProcess : IInfrActivityBuildStageOption
 	{
-		// Token: 0x060094E8 RID: 38120 RVA: 0x001587E8 File Offset: 0x001569E8
+		// Token: 0x06009CD2 RID: 40146 RVA: 0x001694C4 File Offset: 0x001676C4
 		private IInfrActivityRoadProcess_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060094E9 RID: 38121 RVA: 0x00158820 File Offset: 0x00156A20
+		// Token: 0x06009CD3 RID: 40147 RVA: 0x001694FC File Offset: 0x001676FC
 		public static IInfrActivityRoadProcess Create([Nullable(2)] IInfrActivityRoadProcess instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060094EA RID: 38122 RVA: 0x00158833 File Offset: 0x00156A33
+		// Token: 0x06009CD4 RID: 40148 RVA: 0x0016950F File Offset: 0x0016770F
 		public static IInfrActivityRoadProcess CreateFromSetValue([Nullable(2)] IInfrActivityRoadProcess_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060094EB RID: 38123 RVA: 0x00158846 File Offset: 0x00156A46
+		// Token: 0x06009CD5 RID: 40149 RVA: 0x00169522 File Offset: 0x00167722
 		public new IInfrActivityRoadProcess_SetValue ToSetValue()
 		{
 			return new IInfrActivityRoadProcess_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002F06 RID: 12038
-		// (get) Token: 0x060094EC RID: 38124 RVA: 0x00158865 File Offset: 0x00156A65
-		// (set) Token: 0x060094ED RID: 38125 RVA: 0x00158890 File Offset: 0x00156A90
+		// Token: 0x1700312C RID: 12588
+		// (get) Token: 0x06009CD6 RID: 40150 RVA: 0x00169541 File Offset: 0x00167741
+		// (set) Token: 0x06009CD7 RID: 40151 RVA: 0x0016956C File Offset: 0x0016776C
 		public override EInfrActivityBuildStageType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002F07 RID: 12039
-		// (get) Token: 0x060094EE RID: 38126 RVA: 0x0015889E File Offset: 0x00156A9E
-		// (set) Token: 0x060094EF RID: 38127 RVA: 0x001588C9 File Offset: 0x00156AC9
+		// Token: 0x1700312D RID: 12589
+		// (get) Token: 0x06009CD8 RID: 40152 RVA: 0x0016957A File Offset: 0x0016777A
+		// (set) Token: 0x06009CD9 RID: 40153 RVA: 0x001695A5 File Offset: 0x001677A5
 		public virtual int Id
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005B31 RID: 23345
+		// Token: 0x04005FCF RID: 24527
 		[Nullable(2)]
 		protected new IInfrActivityRoadProcess FbInstance;
 
-		// Token: 0x04005B32 RID: 23346
+		// Token: 0x04005FD0 RID: 24528
 		[Nullable(2)]
 		protected new IInfrActivityRoadProcess_SetValue PocoInterface;
 	}

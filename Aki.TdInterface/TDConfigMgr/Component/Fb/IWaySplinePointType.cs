@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C58 RID: 3160
+	// Token: 0x02000D31 RID: 3377
 	public class IWaySplinePointType
 	{
-		// Token: 0x06004868 RID: 18536 RVA: 0x000B5FE1 File Offset: 0x000B41E1
-		[NullableContext(1)]
+		// Token: 0x06004CED RID: 19693 RVA: 0x000C05D5 File Offset: 0x000BE7D5
 		public static IWaySplinePointType Create(IWaySplinePointType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001575 RID: 5493
-		// (get) Token: 0x06004869 RID: 18537 RVA: 0x000B6000 File Offset: 0x000B4200
+		// Token: 0x17001686 RID: 5766
+		// (get) Token: 0x06004CEE RID: 19694 RVA: 0x000C05F4 File Offset: 0x000BE7F4
 		public virtual EWaySplinePointType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002943 RID: 10563
+		// Token: 0x04002BA4 RID: 11172
 		private IWaySplinePointType Instance;
 	}
 }

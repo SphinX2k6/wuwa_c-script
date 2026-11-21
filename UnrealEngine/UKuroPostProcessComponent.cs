@@ -6,33 +6,33 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001B8F RID: 7055
+	// Token: 0x020004D9 RID: 1241
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/KuroRenderingRuntimeBPPlugin.KuroPostProcessComponent")]
-	[UnrealStructLayout(8480, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 8480)]
+	[UnrealStructLayout(8544, 16, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 8544)]
 	public class UKuroPostProcessComponent : UPostProcessComponent, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601AC4D RID: 109645 RVA: 0x0027725C File Offset: 0x0027545C
+		// Token: 0x060073CC RID: 29644 RVA: 0x000A9BBA File Offset: 0x000A7DBA
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroPostProcessComponent._ClassPtr;
 		}
 
-		// Token: 0x0601AC4E RID: 109646 RVA: 0x00277268 File Offset: 0x00275468
+		// Token: 0x060073CD RID: 29645 RVA: 0x000A9BC8 File Offset: 0x000A7DC8
 		public UKuroPostProcessComponent() : this(BuiltinUtils.AllocNativeUObject(UKuroPostProcessComponent.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601AC4F RID: 109647 RVA: 0x00277290 File Offset: 0x00275490
+		// Token: 0x060073CE RID: 29646 RVA: 0x000A9BF0 File Offset: 0x000A7DF0
 		[NullableContext(1)]
 		public UKuroPostProcessComponent(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroPostProcessComponent.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17006BA4 RID: 27556
-		// (get) Token: 0x0601AC50 RID: 109648 RVA: 0x002772C3 File Offset: 0x002754C3
-		// (set) Token: 0x0601AC51 RID: 109649 RVA: 0x002772D7 File Offset: 0x002754D7
+		// Token: 0x170016AD RID: 5805
+		// (get) Token: 0x060073CF RID: 29647 RVA: 0x000A9C23 File Offset: 0x000A7E23
+		// (set) Token: 0x060073D0 RID: 29648 RVA: 0x000A9C37 File Offset: 0x000A7E37
 		public unsafe UKuroWeatherDataAsset WeatherDataAsset
 		{
 			get
@@ -45,9 +45,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006BA5 RID: 27557
-		// (get) Token: 0x0601AC52 RID: 109650 RVA: 0x002772EC File Offset: 0x002754EC
-		// (set) Token: 0x0601AC53 RID: 109651 RVA: 0x00277300 File Offset: 0x00275500
+		// Token: 0x170016AE RID: 5806
+		// (get) Token: 0x060073D1 RID: 29649 RVA: 0x000A9C4C File Offset: 0x000A7E4C
+		// (set) Token: 0x060073D2 RID: 29650 RVA: 0x000A9C60 File Offset: 0x000A7E60
 		public unsafe UKuroTODData PPTODDataAsset
 		{
 			get
@@ -60,57 +60,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006BA6 RID: 27558
-		// (get) Token: 0x0601AC54 RID: 109652 RVA: 0x00277318 File Offset: 0x00275518
-		// (set) Token: 0x0601AC55 RID: 109653 RVA: 0x00277351 File Offset: 0x00275551
-		[Nullable(1)]
-		public FKuroGISetting GISetting
-		{
-			[NullableContext(1)]
-			get
-			{
-				base.FastCheckIsValid();
-				FKuroGISetting result;
-				if ((result = this._GISetting) == null)
-				{
-					result = (this._GISetting = new FKuroGISetting(base.NativePtr + (IntPtr)UKuroPostProcessComponent.__PropertyOffset_GISetting, this));
-				}
-				return result;
-			}
-			[NullableContext(1)]
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FKuroGISetting.StaticStruct(), base.NativePtr + (IntPtr)UKuroPostProcessComponent.__PropertyOffset_GISetting, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x17006BA7 RID: 27559
-		// (get) Token: 0x0601AC56 RID: 109654 RVA: 0x00277374 File Offset: 0x00275574
-		// (set) Token: 0x0601AC57 RID: 109655 RVA: 0x002773AD File Offset: 0x002755AD
-		[Nullable(1)]
-		public FKuroGIPostProcessCustomData CustomData
-		{
-			[NullableContext(1)]
-			get
-			{
-				base.FastCheckIsValid();
-				FKuroGIPostProcessCustomData result;
-				if ((result = this._CustomData) == null)
-				{
-					result = (this._CustomData = new FKuroGIPostProcessCustomData(base.NativePtr + (IntPtr)UKuroPostProcessComponent.__PropertyOffset_CustomData, this));
-				}
-				return result;
-			}
-			[NullableContext(1)]
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FKuroGIPostProcessCustomData.StaticStruct(), base.NativePtr + (IntPtr)UKuroPostProcessComponent.__PropertyOffset_CustomData, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x17006BA8 RID: 27560
-		// (get) Token: 0x0601AC58 RID: 109656 RVA: 0x002773CE File Offset: 0x002755CE
-		// (set) Token: 0x0601AC59 RID: 109657 RVA: 0x002773E2 File Offset: 0x002755E2
+		// Token: 0x170016AF RID: 5807
+		// (get) Token: 0x060073D3 RID: 29651 RVA: 0x000A9C75 File Offset: 0x000A7E75
+		// (set) Token: 0x060073D4 RID: 29652 RVA: 0x000A9C89 File Offset: 0x000A7E89
 		public unsafe AVolume ReferencedVolumeActor
 		{
 			get
@@ -123,9 +75,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006BA9 RID: 27561
-		// (get) Token: 0x0601AC5A RID: 109658 RVA: 0x002773F7 File Offset: 0x002755F7
-		// (set) Token: 0x0601AC5B RID: 109659 RVA: 0x00277407 File Offset: 0x00275607
+		// Token: 0x170016B0 RID: 5808
+		// (get) Token: 0x060073D5 RID: 29653 RVA: 0x000A9C9E File Offset: 0x000A7E9E
+		// (set) Token: 0x060073D6 RID: 29654 RVA: 0x000A9CAE File Offset: 0x000A7EAE
 		public unsafe bool bUpdateOverrideWithTOD
 		{
 			get
@@ -138,89 +90,77 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601AC5C RID: 109660 RVA: 0x00277418 File Offset: 0x00275618
+		// Token: 0x060073D7 RID: 29655 RVA: 0x000A9CBF File Offset: 0x000A7EBF
 		public void SetWeatherDataAsset(UKuroWeatherDataAsset InWeatherDataAsset)
 		{
 			UKuroPostProcessComponent.__SetWeatherDataAsset_Internal(base.NativePtr, (InWeatherDataAsset != null) ? InWeatherDataAsset.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0601AC5D RID: 109661 RVA: 0x00277435 File Offset: 0x00275635
+		// Token: 0x060073D8 RID: 29656 RVA: 0x000A9CDC File Offset: 0x000A7EDC
 		public void SetReferencedVolumeActor(AVolume InReferencedVolumeActor)
 		{
 			UKuroPostProcessComponent.__SetReferencedVolumeActor_Internal(base.NativePtr, (InReferencedVolumeActor != null) ? InReferencedVolumeActor.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0601AC5E RID: 109662 RVA: 0x00277452 File Offset: 0x00275652
+		// Token: 0x060073D9 RID: 29657 RVA: 0x000A9CF9 File Offset: 0x000A7EF9
 		public void SetPPTODDataAsset(UKuroTODData InPPTODDataAsset)
 		{
 			UKuroPostProcessComponent.__SetPPTODDataAsset_Internal(base.NativePtr, (InPPTODDataAsset != null) ? InPPTODDataAsset.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x0601AC5F RID: 109663 RVA: 0x0027746F File Offset: 0x0027566F
+		// Token: 0x060073DA RID: 29658 RVA: 0x000A9D16 File Offset: 0x000A7F16
 		public void PostModify()
 		{
 			UKuroPostProcessComponent.__PostModify_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601AC60 RID: 109664
+		// Token: 0x060073DB RID: 29659
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetWeatherDataAsset_Internal(IntPtr @this, IntPtr InWeatherDataAsset);
 
-		// Token: 0x0601AC61 RID: 109665
+		// Token: 0x060073DC RID: 29660
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetReferencedVolumeActor_Internal(IntPtr @this, IntPtr InReferencedVolumeActor);
 
-		// Token: 0x0601AC62 RID: 109666
+		// Token: 0x060073DD RID: 29661
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __SetPPTODDataAsset_Internal(IntPtr @this, IntPtr InPPTODDataAsset);
 
-		// Token: 0x0601AC63 RID: 109667
+		// Token: 0x060073DE RID: 29662
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __PostModify_Internal(IntPtr @this);
 
-		// Token: 0x0601AC64 RID: 109668 RVA: 0x0027747C File Offset: 0x0027567C
+		// Token: 0x060073DF RID: 29663 RVA: 0x000A9D23 File Offset: 0x000A7F23
 		static UKuroPostProcessComponent()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroRenderingRuntimeBPPlugin.KuroPostProcessComponent");
 		}
 
-		// Token: 0x0601AC65 RID: 109669 RVA: 0x0027748A File Offset: 0x0027568A
+		// Token: 0x060073E0 RID: 29664 RVA: 0x000A9D31 File Offset: 0x000A7F31
 		protected UKuroPostProcessComponent(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400E7AB RID: 59307
+		// Token: 0x04003196 RID: 12694
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroRenderingRuntimeBPPlugin.KuroPostProcessComponent";
 
-		// Token: 0x0400E7AC RID: 59308
+		// Token: 0x04003197 RID: 12695
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400E7AD RID: 59309
+		// Token: 0x04003198 RID: 12696
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400E7AE RID: 59310
+		// Token: 0x04003199 RID: 12697
 		internal static int __PropertyOffset_WeatherDataAsset;
 
-		// Token: 0x0400E7AF RID: 59311
+		// Token: 0x0400319A RID: 12698
 		internal static int __PropertyOffset_PPTODDataAsset;
 
-		// Token: 0x0400E7B0 RID: 59312
-		internal static int __PropertyOffset_GISetting;
-
-		// Token: 0x0400E7B1 RID: 59313
-		private FKuroGISetting _GISetting;
-
-		// Token: 0x0400E7B2 RID: 59314
-		internal static int __PropertyOffset_CustomData;
-
-		// Token: 0x0400E7B3 RID: 59315
-		private FKuroGIPostProcessCustomData _CustomData;
-
-		// Token: 0x0400E7B4 RID: 59316
+		// Token: 0x0400319B RID: 12699
 		internal static int __PropertyOffset_ReferencedVolumeActor;
 
-		// Token: 0x0400E7B5 RID: 59317
+		// Token: 0x0400319C RID: 12700
 		internal static int __PropertyOffset_bUpdateOverrideWithTOD;
 	}
 }

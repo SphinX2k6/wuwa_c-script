@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003EAB RID: 16043
+	// Token: 0x020042E9 RID: 17129
 	public struct IInformationViewConfig : IFlatbufferObject
 	{
-		// Token: 0x17006F60 RID: 28512
-		// (get) Token: 0x06016A7C RID: 92796 RVA: 0x003457FF File Offset: 0x003439FF
+		// Token: 0x1700754D RID: 30029
+		// (get) Token: 0x060180C9 RID: 98505 RVA: 0x0036E787 File Offset: 0x0036C987
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016A7D RID: 92797 RVA: 0x0034580C File Offset: 0x00343A0C
+		// Token: 0x060180CA RID: 98506 RVA: 0x0036E794 File Offset: 0x0036C994
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06016A7E RID: 92798 RVA: 0x00345814 File Offset: 0x00343A14
+		// Token: 0x060180CB RID: 98507 RVA: 0x0036E79C File Offset: 0x0036C99C
 		public static IInformationViewConfig GetRootAsIInformationViewConfig(ByteBuffer _bb)
 		{
 			return IInformationViewConfig.GetRootAsIInformationViewConfig(_bb, default(IInformationViewConfig));
 		}
 
-		// Token: 0x06016A7F RID: 92799 RVA: 0x00345830 File Offset: 0x00343A30
+		// Token: 0x060180CC RID: 98508 RVA: 0x0036E7B8 File Offset: 0x0036C9B8
 		public static IInformationViewConfig GetRootAsIInformationViewConfig(ByteBuffer _bb, IInformationViewConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06016A80 RID: 92800 RVA: 0x0034584D File Offset: 0x00343A4D
+		// Token: 0x060180CD RID: 98509 RVA: 0x0036E7D5 File Offset: 0x0036C9D5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06016A81 RID: 92801 RVA: 0x0034585C File Offset: 0x00343A5C
+		// Token: 0x060180CE RID: 98510 RVA: 0x0036E7E4 File Offset: 0x0036C9E4
 		public IInformationViewConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006F61 RID: 28513
-		// (get) Token: 0x06016A82 RID: 92802 RVA: 0x0034586C File Offset: 0x00343A6C
+		// Token: 0x1700754E RID: 30030
+		// (get) Token: 0x060180CF RID: 98511 RVA: 0x0036E7F4 File Offset: 0x0036C9F4
 		public TInformationView InformationViewType
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016A83 RID: 92803 RVA: 0x003458A8 File Offset: 0x00343AA8
+		// Token: 0x060180D0 RID: 98512 RVA: 0x0036E830 File Offset: 0x0036CA30
 		public TTable? InformationView<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(6);
@@ -73,25 +73,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06016A84 RID: 92804 RVA: 0x003458EC File Offset: 0x00343AEC
+		// Token: 0x060180D1 RID: 98513 RVA: 0x0036E874 File Offset: 0x0036CA74
 		public IBossRushBuffInfoView InformationViewAsIBossRushBuffInfoView()
 		{
 			return this.InformationView<IBossRushBuffInfoView>().Value;
 		}
 
-		// Token: 0x06016A85 RID: 92805 RVA: 0x00345908 File Offset: 0x00343B08
+		// Token: 0x060180D2 RID: 98514 RVA: 0x0036E890 File Offset: 0x0036CA90
 		public IDangoAbyssInformationView InformationViewAsIDangoAbyssInformationView()
 		{
 			return this.InformationView<IDangoAbyssInformationView>().Value;
 		}
 
-		// Token: 0x06016A86 RID: 92806 RVA: 0x00345924 File Offset: 0x00343B24
+		// Token: 0x060180D3 RID: 98515 RVA: 0x0036E8AC File Offset: 0x0036CAAC
 		public ILevelPlayInformationView InformationViewAsILevelPlayInformationView()
 		{
 			return this.InformationView<ILevelPlayInformationView>().Value;
 		}
 
-		// Token: 0x06016A87 RID: 92807 RVA: 0x0034593F File Offset: 0x00343B3F
+		// Token: 0x060180D4 RID: 98516 RVA: 0x0036E8C7 File Offset: 0x0036CAC7
 		public static Offset<IInformationViewConfig> CreateIInformationViewConfig(FlatBufferBuilder builder, TInformationView InformationView_type = TInformationView.NONE, int InformationViewOffset = 0)
 		{
 			builder.StartTable(2);
@@ -100,31 +100,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IInformationViewConfig.EndIInformationViewConfig(builder);
 		}
 
-		// Token: 0x06016A88 RID: 92808 RVA: 0x0034595C File Offset: 0x00343B5C
+		// Token: 0x060180D5 RID: 98517 RVA: 0x0036E8E4 File Offset: 0x0036CAE4
 		public static void StartIInformationViewConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06016A89 RID: 92809 RVA: 0x00345965 File Offset: 0x00343B65
+		// Token: 0x060180D6 RID: 98518 RVA: 0x0036E8ED File Offset: 0x0036CAED
 		public static void AddInformationViewType(FlatBufferBuilder builder, TInformationView informationViewType)
 		{
 			builder.AddByte(0, (byte)informationViewType, 0);
 		}
 
-		// Token: 0x06016A8A RID: 92810 RVA: 0x00345970 File Offset: 0x00343B70
+		// Token: 0x060180D7 RID: 98519 RVA: 0x0036E8F8 File Offset: 0x0036CAF8
 		public static void AddInformationView(FlatBufferBuilder builder, int informationViewOffset)
 		{
 			builder.AddOffset(1, informationViewOffset, 0);
 		}
 
-		// Token: 0x06016A8B RID: 92811 RVA: 0x0034597B File Offset: 0x00343B7B
+		// Token: 0x060180D8 RID: 98520 RVA: 0x0036E903 File Offset: 0x0036CB03
 		public static Offset<IInformationViewConfig> EndIInformationViewConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IInformationViewConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06016A8C RID: 92812 RVA: 0x00345988 File Offset: 0x00343B88
+		// Token: 0x060180D9 RID: 98521 RVA: 0x0036E910 File Offset: 0x0036CB10
 		public IInformationViewConfigT UnPack()
 		{
 			IInformationViewConfigT informationViewConfigT = new IInformationViewConfigT();
@@ -132,7 +132,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return informationViewConfigT;
 		}
 
-		// Token: 0x06016A8D RID: 92813 RVA: 0x003459A4 File Offset: 0x00343BA4
+		// Token: 0x060180DA RID: 98522 RVA: 0x0036E92C File Offset: 0x0036CB2C
 		public void UnPackTo(IInformationViewConfigT _o)
 		{
 			_o.InformationView = new TInformationViewUnion();
@@ -153,7 +153,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016A8E RID: 92814 RVA: 0x00345A8C File Offset: 0x00343C8C
+		// Token: 0x060180DB RID: 98523 RVA: 0x0036EA14 File Offset: 0x0036CC14
 		public static Offset<IInformationViewConfig> Pack(FlatBufferBuilder builder, IInformationViewConfigT _o)
 		{
 			if (_o == null)
@@ -165,7 +165,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IInformationViewConfig.CreateIInformationViewConfig(builder, informationView_type, informationViewOffset);
 		}
 
-		// Token: 0x0400B878 RID: 47224
+		// Token: 0x0400C254 RID: 49748
 		private Table __p;
 	}
 }

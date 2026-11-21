@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200241C RID: 9244
+	// Token: 0x020026BB RID: 9915
 	public class ESkillBtnEffectTypeJsonConverter : JsonConverter<ESkillBtnEffectType>
 	{
-		// Token: 0x0600C8FE RID: 51454 RVA: 0x001D6FB8 File Offset: 0x001D51B8
+		// Token: 0x0600D5A5 RID: 54693 RVA: 0x001F0C8C File Offset: 0x001EEE8C
 		public override ESkillBtnEffectType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return ESkillBtnEffectTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C8FF RID: 51455 RVA: 0x001D6FDC File Offset: 0x001D51DC
+		// Token: 0x0600D5A6 RID: 54694 RVA: 0x001F0CB0 File Offset: 0x001EEEB0
 		public override void Write(Utf8JsonWriter writer, ESkillBtnEffectType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

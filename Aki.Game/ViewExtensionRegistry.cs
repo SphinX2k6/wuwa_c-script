@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001BD9 RID: 7129
+// Token: 0x02001098 RID: 4248
 [NullableContext(1)]
 [Nullable(0)]
 public class ViewExtensionRegistry
 {
-	// Token: 0x0600D489 RID: 54409 RVA: 0x0030EB24 File Offset: 0x0030CD24
+	// Token: 0x0600A89B RID: 43163 RVA: 0x00319C98 File Offset: 0x00317E98
 	public static List<IViewExtension> AttachAll(List<IViewExtension> all)
 	{
 		List<IViewExtension> list = new List<IViewExtension>();
@@ -49,7 +49,7 @@ public class ViewExtensionRegistry
 		return list;
 	}
 
-	// Token: 0x0600D48A RID: 54410 RVA: 0x0030EC34 File Offset: 0x0030CE34
+	// Token: 0x0600A89C RID: 43164 RVA: 0x00319DA8 File Offset: 0x00317FA8
 	public static void DetachAll(List<IViewExtension> extensions)
 	{
 		foreach (IViewExtension viewExtension in extensions)
@@ -70,7 +70,7 @@ public class ViewExtensionRegistry
 		}
 	}
 
-	// Token: 0x0600D48B RID: 54411 RVA: 0x0030ECB8 File Offset: 0x0030CEB8
+	// Token: 0x0600A89D RID: 43165 RVA: 0x00319E2C File Offset: 0x0031802C
 	public static void InvokeViewRefresh(List<IViewExtension> extensions)
 	{
 		foreach (IViewExtension viewExtension in extensions)
@@ -91,7 +91,7 @@ public class ViewExtensionRegistry
 		}
 	}
 
-	// Token: 0x0600D48C RID: 54412 RVA: 0x0030ED3C File Offset: 0x0030CF3C
+	// Token: 0x0600A89E RID: 43166 RVA: 0x00319EB0 File Offset: 0x003180B0
 	public static IEnterGateResult CollectEnterGate(List<IViewExtension> extensions)
 	{
 		foreach (IViewExtension viewExtension in extensions)

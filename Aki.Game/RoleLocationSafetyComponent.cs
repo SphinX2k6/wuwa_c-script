@@ -8,18 +8,18 @@ using CSharpScript.Game.Module.Teleport;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x0200324C RID: 12876
+// Token: 0x020027BB RID: 10171
 [NullableContext(1)]
 [Nullable(0)]
-public class RoleLocationSafetyComponent : EntityComponent, IComponentDependency, IStaticVariableResetter
+public class RoleLocationSafetyComponent : EntityComponent, IStaticVariableResetter
 {
-	// Token: 0x0601BC77 RID: 113783 RVA: 0x007A8F0C File Offset: 0x007A710C
+	// Token: 0x0601982C RID: 104492 RVA: 0x007D15D8 File Offset: 0x007CF7D8
 	static RoleLocationSafetyComponent()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(RoleLocationSafetyComponent.CreateStaticDefaultValue), new Action(RoleLocationSafetyComponent.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601BC78 RID: 113784 RVA: 0x007A8F66 File Offset: 0x007A7166
+	// Token: 0x0601982D RID: 104493 RVA: 0x007D1632 File Offset: 0x007CF832
 	public static void CreateStaticDefaultValue()
 	{
 		RoleLocationSafetyComponent.disableTag = new int[]
@@ -28,15 +28,15 @@ public class RoleLocationSafetyComponent : EntityComponent, IComponentDependency
 		};
 	}
 
-	// Token: 0x0601BC79 RID: 113785 RVA: 0x007A8F85 File Offset: 0x007A7185
+	// Token: 0x0601982E RID: 104494 RVA: 0x007D1651 File Offset: 0x007CF851
 	public static void ResetStaticDefaultValue()
 	{
 		RoleLocationSafetyComponent.disableTag = null;
 	}
 
-	// Token: 0x17002646 RID: 9798
-	// (get) Token: 0x0601BC7A RID: 113786 RVA: 0x007A8F8D File Offset: 0x007A718D
-	public static Type[] Dependencies
+	// Token: 0x170028B4 RID: 10420
+	// (get) Token: 0x0601982F RID: 104495 RVA: 0x007D1659 File Offset: 0x007CF859
+	public override Type[] Dependencies
 	{
 		get
 		{
@@ -48,7 +48,7 @@ public class RoleLocationSafetyComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601BC7B RID: 113787 RVA: 0x007A8FB0 File Offset: 0x007A71B0
+	// Token: 0x06019830 RID: 104496 RVA: 0x007D167C File Offset: 0x007CF87C
 	private unsafe void OnStateInherit(Entity oldEntity, bool _)
 	{
 		RoleLocationSafetyComponent component = oldEntity.GetComponent<RoleLocationSafetyComponent>();
@@ -155,13 +155,13 @@ public class RoleLocationSafetyComponent : EntityComponent, IComponentDependency
 		instance3.Info(module3, author3, message3, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray3, 3));
 	}
 
-	// Token: 0x0601BC7C RID: 113788 RVA: 0x007A9300 File Offset: 0x007A7500
+	// Token: 0x06019831 RID: 104497 RVA: 0x007D19CC File Offset: 0x007CFBCC
 	private void OnTeleportStart(bool b)
 	{
 		this.InTeleport = true;
 	}
 
-	// Token: 0x0601BC7D RID: 113789 RVA: 0x007A9309 File Offset: 0x007A7509
+	// Token: 0x06019832 RID: 104498 RVA: 0x007D19D5 File Offset: 0x007CFBD5
 	[NullableContext(2)]
 	private void OnTeleportComplete(TeleportContext teleportContext)
 	{
@@ -170,21 +170,21 @@ public class RoleLocationSafetyComponent : EntityComponent, IComponentDependency
 		this.NotSafetyCount = 0;
 	}
 
-	// Token: 0x0601BC7E RID: 113790 RVA: 0x007A9325 File Offset: 0x007A7525
+	// Token: 0x06019833 RID: 104499 RVA: 0x007D19F1 File Offset: 0x007CFBF1
 	private void OnElevatorMove()
 	{
 		this.LastSafetyLocationRecorder.IsSafety = false;
 		this.NotSafetyCount = 0;
 	}
 
-	// Token: 0x0601BC7F RID: 113791 RVA: 0x007A933A File Offset: 0x007A753A
+	// Token: 0x06019834 RID: 104500 RVA: 0x007D1A06 File Offset: 0x007CFC06
 	private void OnGravityDirectChanged(Vector _1, bool _2)
 	{
 		this.LastSafetyLocationRecorder.IsSafety = false;
 		this.NotSafetyCount = 0;
 	}
 
-	// Token: 0x0601BC80 RID: 113792 RVA: 0x007A9350 File Offset: 0x007A7550
+	// Token: 0x06019835 RID: 104501 RVA: 0x007D1A1C File Offset: 0x007CFC1C
 	protected override bool OnStart()
 	{
 		this.ActorComp = base.Entity.GetComponent<CharacterActorComponent>();
@@ -274,7 +274,7 @@ public class RoleLocationSafetyComponent : EntityComponent, IComponentDependency
 		return true;
 	}
 
-	// Token: 0x0601BC81 RID: 113793 RVA: 0x007A9644 File Offset: 0x007A7844
+	// Token: 0x06019836 RID: 104502 RVA: 0x007D1D10 File Offset: 0x007CFF10
 	private void OnDisableTagsChanged(int tagId, bool tagExists)
 	{
 		if (tagExists)
@@ -294,7 +294,7 @@ public class RoleLocationSafetyComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601BC82 RID: 113794 RVA: 0x007A96B8 File Offset: 0x007A78B8
+	// Token: 0x06019837 RID: 104503 RVA: 0x007D1D84 File Offset: 0x007CFF84
 	protected override bool OnEnd()
 	{
 		EventSystem.Instance.RemoveWithTarget(base.Entity, EEventName.RoleOnStateInherit, new Action<Entity, bool>(this.OnStateInherit));
@@ -315,14 +315,14 @@ public class RoleLocationSafetyComponent : EntityComponent, IComponentDependency
 		return true;
 	}
 
-	// Token: 0x0601BC83 RID: 113795 RVA: 0x007A97D4 File Offset: 0x007A79D4
+	// Token: 0x06019838 RID: 104504 RVA: 0x007D1EA0 File Offset: 0x007D00A0
 	protected override void OnActivate()
 	{
 		this.LastSafetyLocationRecorder.SafetyLocation.DeepCopy(this.ActorComp.ActorLocationProxy);
 		this.LastSafetyLocationRecorder.IsSafety = false;
 	}
 
-	// Token: 0x0601BC84 RID: 113796 RVA: 0x007A9800 File Offset: 0x007A7A00
+	// Token: 0x06019839 RID: 104505 RVA: 0x007D1ECC File Offset: 0x007D00CC
 	protected override void OnEnable()
 	{
 		if (this.ActorComp == null)
@@ -339,7 +339,7 @@ public class RoleLocationSafetyComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601BC85 RID: 113797 RVA: 0x007A9868 File Offset: 0x007A7A68
+	// Token: 0x0601983A RID: 104506 RVA: 0x007D1F34 File Offset: 0x007D0134
 	private bool SafetyPlaceTest(Vector location)
 	{
 		if (!MathUtils.Instance.IsValidVector(location, 100000000))
@@ -384,7 +384,7 @@ public class RoleLocationSafetyComponent : EntityComponent, IComponentDependency
 		return true;
 	}
 
-	// Token: 0x0601BC86 RID: 113798 RVA: 0x007A9A84 File Offset: 0x007A7C84
+	// Token: 0x0601983B RID: 104507 RVA: 0x007D2150 File Offset: 0x007D0350
 	protected override void OnTick(float delta)
 	{
 		if (this.NextCheckTime > Time.Instance.WorldTime)
@@ -426,7 +426,7 @@ public class RoleLocationSafetyComponent : EntityComponent, IComponentDependency
 		this.SafetyCheckAndFix();
 	}
 
-	// Token: 0x0601BC87 RID: 113799 RVA: 0x007A9B74 File Offset: 0x007A7D74
+	// Token: 0x0601983C RID: 104508 RVA: 0x007D2240 File Offset: 0x007D0440
 	private void SafetyCheckAndFix()
 	{
 		if (this.UnifiedComp.PositionState != ECharPositionState.Ground && !this.SafetyHeightTest(this.ActorComp.ActorLocationProxy))
@@ -458,7 +458,7 @@ public class RoleLocationSafetyComponent : EntityComponent, IComponentDependency
 		this.NotSafetyCount = 0;
 	}
 
-	// Token: 0x0601BC88 RID: 113800 RVA: 0x007A9C44 File Offset: 0x007A7E44
+	// Token: 0x0601983D RID: 104509 RVA: 0x007D2310 File Offset: 0x007D0510
 	protected override void OnAfterTick(float delta)
 	{
 		if (MathUtils.Instance.IsValidVector(this.ActorComp.ActorLocationProxy, 100000000))
@@ -525,7 +525,7 @@ public class RoleLocationSafetyComponent : EntityComponent, IComponentDependency
 		this.ActorComp.SetActorRotation(this.LastValidRotator.ToUeRotator(), "RoleSafetyNotValid", false);
 	}
 
-	// Token: 0x0601BC89 RID: 113801 RVA: 0x007A9E04 File Offset: 0x007A8004
+	// Token: 0x0601983E RID: 104510 RVA: 0x007D24D0 File Offset: 0x007D06D0
 	private bool SafetyHeightTest(Vector location)
 	{
 		if (Math.Abs(location.X) > 3200000.0 || Math.Abs(location.Y) > 3200000.0 || location.Z < -1000000.0)
@@ -541,7 +541,7 @@ public class RoleLocationSafetyComponent : EntityComponent, IComponentDependency
 		return true;
 	}
 
-	// Token: 0x0601BC8A RID: 113802 RVA: 0x007A9E78 File Offset: 0x007A8078
+	// Token: 0x0601983F RID: 104511 RVA: 0x007D2544 File Offset: 0x007D0744
 	private void UpdateSafetyTestFreq()
 	{
 		EDetectionFrequency key = EDetectionFrequency.Low;
@@ -575,7 +575,7 @@ public class RoleLocationSafetyComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601BC8B RID: 113803 RVA: 0x007A9F58 File Offset: 0x007A8158
+	// Token: 0x06019840 RID: 104512 RVA: 0x007D2624 File Offset: 0x007D0824
 	public void AddSafetyLocationConfig(Entity sceneItem, LocationSafetyComponent sceneItemConfig)
 	{
 		Log instance = Log.Instance;
@@ -588,7 +588,7 @@ public class RoleLocationSafetyComponent : EntityComponent, IComponentDependency
 		this.UpdateSafetyTestFreq();
 	}
 
-	// Token: 0x0601BC8C RID: 113804 RVA: 0x007A9FB4 File Offset: 0x007A81B4
+	// Token: 0x06019841 RID: 104513 RVA: 0x007D2680 File Offset: 0x007D0880
 	public void RemoveSafetyLocationConfig(Entity sceneItem)
 	{
 		Log instance = Log.Instance;
@@ -601,7 +601,7 @@ public class RoleLocationSafetyComponent : EntityComponent, IComponentDependency
 		this.UpdateSafetyTestFreq();
 	}
 
-	// Token: 0x0601BC8D RID: 113805 RVA: 0x007AA010 File Offset: 0x007A8210
+	// Token: 0x06019842 RID: 104514 RVA: 0x007D26DC File Offset: 0x007D08DC
 	protected unsafe void BackToSafetyPlace()
 	{
 		Log instance = Log.Instance;
@@ -660,7 +660,7 @@ public class RoleLocationSafetyComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601BC8E RID: 113806 RVA: 0x007AA248 File Offset: 0x007A8448
+	// Token: 0x06019843 RID: 104515 RVA: 0x007D2914 File Offset: 0x007D0B14
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -668,168 +668,192 @@ public class RoleLocationSafetyComponent : EntityComponent, IComponentDependency
 			return false;
 		}
 		RoleLocationSafetyComponent roleLocationSafetyComponent = (RoleLocationSafetyComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ActorComp"))
+		if (roleLocationSafetyComponent.ActorComp == null)
 		{
-			if (roleLocationSafetyComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
 		}
-		if (base.CanResetComponentProperty("UnifiedComp"))
-		{
-			if (roleLocationSafetyComponent.UnifiedComp == null)
-			{
-				this.UnifiedComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterUnifiedStateComponent>(this.UnifiedComp), "UnifiedComp"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("DisableTagTasks") && roleLocationSafetyComponent.DisableTagTasks != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<ITagTask>>(this.DisableTagTasks), "DisableTagTasks"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("DisableTagCount"))
+		if (roleLocationSafetyComponent.UnifiedComp == null)
 		{
-			this.DisableTagCount = roleLocationSafetyComponent.DisableTagCount;
+			this.UnifiedComp = null;
 		}
-		if (base.CanResetComponentProperty("DisableKey"))
-		{
-			this.DisableKey = roleLocationSafetyComponent.DisableKey;
-		}
-		if (base.CanResetComponentProperty("MaxNotSafetyCount"))
-		{
-			this.MaxNotSafetyCount = roleLocationSafetyComponent.MaxNotSafetyCount;
-		}
-		if (base.CanResetComponentProperty("TestInterval"))
-		{
-			this.TestInterval = roleLocationSafetyComponent.TestInterval;
-		}
-		if (base.CanResetComponentProperty("LastSafetyLocationRecorder") && roleLocationSafetyComponent.LastSafetyLocationRecorder != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<CachedSafetyLocationRecorder>(this.LastSafetyLocationRecorder), "LastSafetyLocationRecorder"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.UnifiedComp), "UnifiedComp"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("SceneSafetyLocationRecorder") && roleLocationSafetyComponent.SceneSafetyLocationRecorder != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<ConfigSafetyLocationRecorder>(this.SceneSafetyLocationRecorder), "SceneSafetyLocationRecorder"))
+		if (roleLocationSafetyComponent.DisableTagTasks != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.DisableTagTasks), "DisableTagTasks"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("NotSafetyCount"))
-		{
-			this.NotSafetyCount = roleLocationSafetyComponent.NotSafetyCount;
-		}
-		if (base.CanResetComponentProperty("Timer"))
-		{
-			if (roleLocationSafetyComponent.Timer == null)
-			{
-				this.Timer = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.Timer), "Timer"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("StartLocation") && roleLocationSafetyComponent.StartLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.StartLocation), "StartLocation"))
+		this.DisableTagCount = roleLocationSafetyComponent.DisableTagCount;
+		this.DisableKey = roleLocationSafetyComponent.DisableKey;
+		this.MaxNotSafetyCount = roleLocationSafetyComponent.MaxNotSafetyCount;
+		this.TestInterval = roleLocationSafetyComponent.TestInterval;
+		if (roleLocationSafetyComponent.LastSafetyLocationRecorder != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastSafetyLocationRecorder), "LastSafetyLocationRecorder"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("EndLocation") && roleLocationSafetyComponent.EndLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.EndLocation), "EndLocation"))
+		if (roleLocationSafetyComponent.SceneSafetyLocationRecorder != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.SceneSafetyLocationRecorder), "SceneSafetyLocationRecorder"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TmpVector") && roleLocationSafetyComponent.TmpVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.TmpVector), "TmpVector"))
+		this.NotSafetyCount = roleLocationSafetyComponent.NotSafetyCount;
+		if (roleLocationSafetyComponent.Timer == null)
+		{
+			this.Timer = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Timer), "Timer"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("InTeleport"))
-		{
-			this.InTeleport = roleLocationSafetyComponent.InTeleport;
-		}
-		if (base.CanResetComponentProperty("NextCheckTime"))
-		{
-			this.NextCheckTime = roleLocationSafetyComponent.NextCheckTime;
-		}
-		if (base.CanResetComponentProperty("LastValidLocation") && roleLocationSafetyComponent.LastValidLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Vector>(this.LastValidLocation), "LastValidLocation"))
+		if (roleLocationSafetyComponent.StartLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.StartLocation), "StartLocation"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("LastValidRotator") && roleLocationSafetyComponent.LastValidRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Rotator>(this.LastValidRotator), "LastValidRotator"))
+		if (roleLocationSafetyComponent.EndLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.EndLocation), "EndLocation"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("CacheHitActor"))
+		if (roleLocationSafetyComponent.TmpVector != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TmpVector), "TmpVector"))
 		{
-			if (roleLocationSafetyComponent.CacheHitActor == null)
-			{
-				this.CacheHitActor = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<AActor>(this.CacheHitActor), "CacheHitActor"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("CacheHitComponent"))
+		this.InTeleport = roleLocationSafetyComponent.InTeleport;
+		this.NextCheckTime = roleLocationSafetyComponent.NextCheckTime;
+		if (roleLocationSafetyComponent.LastValidLocation != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastValidLocation), "LastValidLocation"))
 		{
-			if (roleLocationSafetyComponent.CacheHitComponent == null)
-			{
-				this.CacheHitComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<UActorComponent>(this.CacheHitComponent), "CacheHitComponent"))
-			{
-				return false;
-			}
+			return false;
+		}
+		if (roleLocationSafetyComponent.LastValidRotator != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastValidRotator), "LastValidRotator"))
+		{
+			return false;
+		}
+		if (roleLocationSafetyComponent.CacheHitActor == null)
+		{
+			this.CacheHitActor = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CacheHitActor), "CacheHitActor"))
+		{
+			return false;
+		}
+		if (roleLocationSafetyComponent.CacheHitComponent == null)
+		{
+			this.CacheHitComponent = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CacheHitComponent), "CacheHitComponent"))
+		{
+			return false;
 		}
 		return true;
 	}
 
-	// Token: 0x0400DAE0 RID: 56032
+	// Token: 0x170028B5 RID: 10421
+	// (get) Token: 0x06019844 RID: 104516 RVA: 0x007D2B6F File Offset: 0x007D0D6F
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170028B6 RID: 10422
+	// (get) Token: 0x06019845 RID: 104517 RVA: 0x007D2B72 File Offset: 0x007D0D72
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170028B7 RID: 10423
+	// (get) Token: 0x06019846 RID: 104518 RVA: 0x007D2B75 File Offset: 0x007D0D75
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170028B8 RID: 10424
+	// (get) Token: 0x06019847 RID: 104519 RVA: 0x007D2B78 File Offset: 0x007D0D78
+	public override bool NeedEnableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170028B9 RID: 10425
+	// (get) Token: 0x06019848 RID: 104520 RVA: 0x007D2B7B File Offset: 0x007D0D7B
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170028BA RID: 10426
+	// (get) Token: 0x06019849 RID: 104521 RVA: 0x007D2B7E File Offset: 0x007D0D7E
+	public override bool NeedAfterTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400DF7F RID: 57215
 	public const string PROFILE_KEY = "SafetyTrace";
 
-	// Token: 0x0400DAE1 RID: 56033
+	// Token: 0x0400DF80 RID: 57216
 	public const float PLANAR_LIMIT = 3200000f;
 
-	// Token: 0x0400DAE2 RID: 56034
+	// Token: 0x0400DF81 RID: 57217
 	public const float HIGHT_LIMIT = -1000000f;
 
-	// Token: 0x0400DAE3 RID: 56035
+	// Token: 0x0400DF82 RID: 57218
 	public const float TELEPORT_THREHOLD = 1000f;
 
-	// Token: 0x0400DAE4 RID: 56036
+	// Token: 0x0400DF83 RID: 57219
 	public const float TELEPORT_THREHOLD_SQUARED = 1000000f;
 
-	// Token: 0x0400DAE5 RID: 56037
+	// Token: 0x0400DF84 RID: 57220
 	public const int LOW_FREQ_TEST_INTERNAL = 1000;
 
-	// Token: 0x0400DAE6 RID: 56038
+	// Token: 0x0400DF85 RID: 57221
 	public const int LOW_FREQ_MAX_NOT_SAFETY_COUNT = 3;
 
-	// Token: 0x0400DAE7 RID: 56039
+	// Token: 0x0400DF86 RID: 57222
 	public const int MID_FREQ_TEST_INTERNAL = 1000;
 
-	// Token: 0x0400DAE8 RID: 56040
+	// Token: 0x0400DF87 RID: 57223
 	public const int MID_FREQ_MAX_NOT_SAFETY_COUNT = 2;
 
-	// Token: 0x0400DAE9 RID: 56041
+	// Token: 0x0400DF88 RID: 57224
 	public const int HIGH_FREQ_TEST_INTERNAL = 500;
 
-	// Token: 0x0400DAEA RID: 56042
+	// Token: 0x0400DF89 RID: 57225
 	public const int HIGH_FREQ_MAX_NOT_SAFETY_COUNT = 2;
 
-	// Token: 0x0400DAEB RID: 56043
+	// Token: 0x0400DF8A RID: 57226
 	public const int SUPER_HIGH_FREQ_TEST_INTERNAL = 250;
 
-	// Token: 0x0400DAEC RID: 56044
+	// Token: 0x0400DF8B RID: 57227
 	public const int SUPER_HIGH_FREQ_MAX_NOT_SAFETY_COUNT = 2;
 
-	// Token: 0x0400DAED RID: 56045
+	// Token: 0x0400DF8C RID: 57228
 	[Nullable(2)]
 	public static int[] disableTag = null;
 
-	// Token: 0x0400DAEE RID: 56046
+	// Token: 0x0400DF8D RID: 57229
 	[StaticVariableRuleIgnore]
 	public static readonly Dictionary<EDetectionFrequency, int> freqEnumToLevelNum = new Dictionary<EDetectionFrequency, int>
 	{
@@ -851,68 +875,68 @@ public class RoleLocationSafetyComponent : EntityComponent, IComponentDependency
 		}
 	};
 
-	// Token: 0x0400DAEF RID: 56047
+	// Token: 0x0400DF8E RID: 57230
 	[Nullable(2)]
 	private CharacterActorComponent ActorComp;
 
-	// Token: 0x0400DAF0 RID: 56048
+	// Token: 0x0400DF8F RID: 57231
 	[Nullable(2)]
 	private CharacterUnifiedStateComponent UnifiedComp;
 
-	// Token: 0x0400DAF1 RID: 56049
+	// Token: 0x0400DF90 RID: 57232
 	private readonly List<ITagTask> DisableTagTasks = new List<ITagTask>();
 
-	// Token: 0x0400DAF2 RID: 56050
+	// Token: 0x0400DF91 RID: 57233
 	private int DisableTagCount;
 
-	// Token: 0x0400DAF3 RID: 56051
+	// Token: 0x0400DF92 RID: 57234
 	private int DisableKey;
 
-	// Token: 0x0400DAF4 RID: 56052
+	// Token: 0x0400DF93 RID: 57235
 	private int MaxNotSafetyCount = 3;
 
-	// Token: 0x0400DAF5 RID: 56053
+	// Token: 0x0400DF94 RID: 57236
 	private int TestInterval = 1000;
 
-	// Token: 0x0400DAF6 RID: 56054
+	// Token: 0x0400DF95 RID: 57237
 	private readonly CachedSafetyLocationRecorder LastSafetyLocationRecorder = new CachedSafetyLocationRecorder();
 
-	// Token: 0x0400DAF7 RID: 56055
+	// Token: 0x0400DF96 RID: 57238
 	private readonly ConfigSafetyLocationRecorder SceneSafetyLocationRecorder = new ConfigSafetyLocationRecorder();
 
-	// Token: 0x0400DAF8 RID: 56056
+	// Token: 0x0400DF97 RID: 57239
 	private int NotSafetyCount;
 
-	// Token: 0x0400DAF9 RID: 56057
+	// Token: 0x0400DF98 RID: 57240
 	[Nullable(2)]
 	private TimerHandle Timer;
 
-	// Token: 0x0400DAFA RID: 56058
+	// Token: 0x0400DF99 RID: 57241
 	private readonly Vector StartLocation = Vector.Create();
 
-	// Token: 0x0400DAFB RID: 56059
+	// Token: 0x0400DF9A RID: 57242
 	private readonly Vector EndLocation = Vector.Create();
 
-	// Token: 0x0400DAFC RID: 56060
+	// Token: 0x0400DF9B RID: 57243
 	private readonly Vector TmpVector = Vector.Create();
 
-	// Token: 0x0400DAFD RID: 56061
+	// Token: 0x0400DF9C RID: 57244
 	private bool InTeleport;
 
-	// Token: 0x0400DAFE RID: 56062
+	// Token: 0x0400DF9D RID: 57245
 	private double NextCheckTime;
 
-	// Token: 0x0400DAFF RID: 56063
+	// Token: 0x0400DF9E RID: 57246
 	private readonly Vector LastValidLocation = Vector.Create();
 
-	// Token: 0x0400DB00 RID: 56064
+	// Token: 0x0400DF9F RID: 57247
 	private readonly Rotator LastValidRotator = Rotator.Create();
 
-	// Token: 0x0400DB01 RID: 56065
+	// Token: 0x0400DFA0 RID: 57248
 	[Nullable(2)]
 	private AActor CacheHitActor;
 
-	// Token: 0x0400DB02 RID: 56066
+	// Token: 0x0400DFA1 RID: 57249
 	[Nullable(2)]
 	private UActorComponent CacheHitComponent;
 }

@@ -5,12 +5,12 @@ using CSharpScript.Game.Module.QuickTimeAction.Context;
 
 namespace CSharpScript.Game.Module.QuickTimeAction
 {
-	// Token: 0x02004F3F RID: 20287
+	// Token: 0x02003F08 RID: 16136
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class QtaLog
 	{
-		// Token: 0x06034032 RID: 213042 RVA: 0x00C32020 File Offset: 0x00C30220
+		// Token: 0x06028EA0 RID: 167584 RVA: 0x00B7B7C0 File Offset: 0x00B799C0
 		[NullableContext(2)]
 		private static void LogInternal(CombatLog.ELogType logType, QtaContextBase qtaContext, [Nullable(1)] string message, [Nullable(new byte[]
 		{
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			}
 		}
 
-		// Token: 0x06034033 RID: 213043 RVA: 0x00C32184 File Offset: 0x00C30384
+		// Token: 0x06028EA1 RID: 167585 RVA: 0x00B7B924 File Offset: 0x00B79B24
 		[Conditional("DEBUG")]
 		public static void Debug([Nullable(2)] QtaContextBase qtaContext, string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 		{
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 		{
 		}
 
-		// Token: 0x06034034 RID: 213044 RVA: 0x00C32186 File Offset: 0x00C30386
+		// Token: 0x06028EA2 RID: 167586 RVA: 0x00B7B926 File Offset: 0x00B79B26
 		public static void Info([Nullable(2)] QtaContextBase qtaContext, string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 		{
 			0,
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.QuickTimeAction
 			QtaLog.LogInternal(CombatLog.ELogType.Info, qtaContext, message, pairs, null);
 		}
 
-		// Token: 0x06034035 RID: 213045 RVA: 0x00C32192 File Offset: 0x00C30392
+		// Token: 0x06028EA3 RID: 167587 RVA: 0x00B7B932 File Offset: 0x00B79B32
 		public static void Error([Nullable(2)] QtaContextBase qtaContext, string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 		{
 			0,

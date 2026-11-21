@@ -2,46 +2,46 @@
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x0200561F RID: 22047
+	// Token: 0x020045F5 RID: 17909
 	internal enum <MapRogueMapModule>F1B5D7C28117C628B332FC430823851D6BB44C4EE3271A678D1727C703335954C__EComponents
 	{
-		// Token: 0x0401D7EF RID: 120815
+		// Token: 0x0401827A RID: 98938
 		DragPanel,
-		// Token: 0x0401D7F0 RID: 120816
+		// Token: 0x0401827B RID: 98939
 		LayerBg,
-		// Token: 0x0401D7F1 RID: 120817
+		// Token: 0x0401827C RID: 98940
 		LayerFog,
-		// Token: 0x0401D7F2 RID: 120818
+		// Token: 0x0401827D RID: 98941
 		LayerSign,
-		// Token: 0x0401D7F3 RID: 120819
+		// Token: 0x0401827E RID: 98942
 		LayerRole,
-		// Token: 0x0401D7F4 RID: 120820
+		// Token: 0x0401827F RID: 98943
 		ButtonMask,
-		// Token: 0x0401D7F5 RID: 120821
+		// Token: 0x04018280 RID: 98944
 		ItemScaleSlider,
-		// Token: 0x0401D7F6 RID: 120822
+		// Token: 0x04018281 RID: 98945
 		ScaleUp,
-		// Token: 0x0401D7F7 RID: 120823
+		// Token: 0x04018282 RID: 98946
 		ScaleDown,
-		// Token: 0x0401D7F8 RID: 120824
+		// Token: 0x04018283 RID: 98947
 		ScaleSlider,
-		// Token: 0x0401D7F9 RID: 120825
+		// Token: 0x04018284 RID: 98948
 		BtnBackPlane,
-		// Token: 0x0401D7FA RID: 120826
+		// Token: 0x04018285 RID: 98949
 		TexBg,
-		// Token: 0x0401D7FB RID: 120827
+		// Token: 0x04018286 RID: 98950
 		PanelKey,
-		// Token: 0x0401D7FC RID: 120828
+		// Token: 0x04018287 RID: 98951
 		KeyMove,
-		// Token: 0x0401D7FD RID: 120829
+		// Token: 0x04018288 RID: 98952
 		KeyCheck,
-		// Token: 0x0401D7FE RID: 120830
+		// Token: 0x04018289 RID: 98953
 		LayerEvent,
-		// Token: 0x0401D7FF RID: 120831
+		// Token: 0x0401828A RID: 98954
 		ButtonGroundMask,
-		// Token: 0x0401D800 RID: 120832
+		// Token: 0x0401828B RID: 98955
 		ItemBgPos,
-		// Token: 0x0401D801 RID: 120833
+		// Token: 0x0401828C RID: 98956
 		ItemFogPos
 	}
 }

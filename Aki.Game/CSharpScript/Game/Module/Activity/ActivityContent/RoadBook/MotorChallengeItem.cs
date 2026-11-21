@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 {
-	// Token: 0x020061EA RID: 25066
+	// Token: 0x02005168 RID: 20840
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,12 +16,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 	})]
 	public class MotorChallengeItem : RoadBookTaskItemBase<ActivityTaskData>
 	{
-		// Token: 0x0603F445 RID: 259141 RVA: 0x00F499E9 File Offset: 0x00F47BE9
+		// Token: 0x06034106 RID: 213254 RVA: 0x00E90941 File Offset: 0x00E8EB41
 		public MotorChallengeItem(ActivityRoadBookData activityBaseData) : base(activityBaseData)
 		{
 		}
 
-		// Token: 0x0603F446 RID: 259142 RVA: 0x00F499F4 File Offset: 0x00F47BF4
+		// Token: 0x06034107 RID: 213255 RVA: 0x00E9094C File Offset: 0x00E8EB4C
 		public override void Refresh(ActivityTaskData taskData, bool isSelected, int gridIndex)
 		{
 			this.TaskData = taskData;
@@ -40,13 +40,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			base.GetItem(5).SetUIActive(uiactive);
 		}
 
-		// Token: 0x0603F447 RID: 259143 RVA: 0x00F49AD3 File Offset: 0x00F47CD3
+		// Token: 0x06034108 RID: 213256 RVA: 0x00E90A2B File Offset: 0x00E8EC2B
 		public void SetClickRewardCb(Action clickRewardCb)
 		{
 			this.OnClickRewardCb = clickRewardCb;
 		}
 
-		// Token: 0x0603F448 RID: 259144 RVA: 0x00F49ADC File Offset: 0x00F47CDC
+		// Token: 0x06034109 RID: 213257 RVA: 0x00E90A34 File Offset: 0x00E8EC34
 		private void RefreshRewardData(int rewardId)
 		{
 			List<IItemGridData> list = new List<IItemGridData>();
@@ -62,7 +62,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			this.RewardScrollView.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x0603F449 RID: 259145 RVA: 0x00F49B6C File Offset: 0x00F47D6C
+		// Token: 0x0603410A RID: 213258 RVA: 0x00E90AC4 File Offset: 0x00E8ECC4
 		protected override void OnClickedRewardButton()
 		{
 			Action onClickRewardCb = this.OnClickRewardCb;
@@ -73,10 +73,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RoadBook
 			onClickRewardCb();
 		}
 
-		// Token: 0x04020FDD RID: 135133
+		// Token: 0x0401B90C RID: 112908
 		protected new ActivityTaskData TaskData;
 
-		// Token: 0x04020FDE RID: 135134
+		// Token: 0x0401B90D RID: 112909
 		[Nullable(2)]
 		private Action OnClickRewardCb;
 	}

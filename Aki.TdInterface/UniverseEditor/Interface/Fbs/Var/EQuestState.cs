@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x020039F8 RID: 14840
+	// Token: 0x02003DD3 RID: 15827
 	public enum EQuestState : byte
 	{
-		// Token: 0x0400AE0D RID: 44557
+		// Token: 0x0400B72E RID: 46894
 		InActive,
-		// Token: 0x0400AE0E RID: 44558
+		// Token: 0x0400B72F RID: 46895
 		Ready,
-		// Token: 0x0400AE0F RID: 44559
+		// Token: 0x0400B730 RID: 46896
 		Progress,
-		// Token: 0x0400AE10 RID: 44560
+		// Token: 0x0400B731 RID: 46897
 		Finish
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F55 RID: 24405
+	// Token: 0x02006599 RID: 26009
 	public enum EDungeonEventType : byte
 	{
-		// Token: 0x0400FD02 RID: 64770
+		// Token: 0x04010A80 RID: 68224
 		RecordTimeStamp
 	}
 }

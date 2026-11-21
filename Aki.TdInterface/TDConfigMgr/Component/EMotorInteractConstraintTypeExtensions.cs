@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009A4 RID: 2468
+	// Token: 0x02000A59 RID: 2649
 	public static class EMotorInteractConstraintTypeExtensions
 	{
-		// Token: 0x06003713 RID: 14099 RVA: 0x0008F380 File Offset: 0x0008D580
+		// Token: 0x06003AA3 RID: 15011 RVA: 0x00097444 File Offset: 0x00095644
 		public static string ToEnumString(this EMotorInteractConstraintType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003714 RID: 14100 RVA: 0x0008F3A8 File Offset: 0x0008D5A8
+		// Token: 0x06003AA4 RID: 15012 RVA: 0x0009746C File Offset: 0x0009566C
 		public static EMotorInteractConstraintType FromString(string name)
 		{
 			EMotorInteractConstraintType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003715 RID: 14101 RVA: 0x0008F3D1 File Offset: 0x0008D5D1
+		// Token: 0x06003AA5 RID: 15013 RVA: 0x00097495 File Offset: 0x00095695
 		public static bool TryFromString(string name, out EMotorInteractConstraintType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x06003716 RID: 14102 RVA: 0x0008F3F6 File Offset: 0x0008D5F6
+		// Token: 0x06003AA6 RID: 15014 RVA: 0x000974BA File Offset: 0x000956BA
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003717 RID: 14103 RVA: 0x0008F406 File Offset: 0x0008D606
+		// Token: 0x06003AA7 RID: 15015 RVA: 0x000974CA File Offset: 0x000956CA
 		public static EMotorInteractConstraintType[] GetValues()
 		{
 			return new EMotorInteractConstraintType[1];
 		}
 
-		// Token: 0x06003718 RID: 14104 RVA: 0x0008F40E File Offset: 0x0008D60E
+		// Token: 0x06003AA8 RID: 15016 RVA: 0x000974D2 File Offset: 0x000956D2
 		public static string[] GetNames()
 		{
 			return new string[]

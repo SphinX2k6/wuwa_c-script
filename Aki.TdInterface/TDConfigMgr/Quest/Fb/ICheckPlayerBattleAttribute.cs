@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001390 RID: 5008
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020014E1 RID: 5345
 	public class ICheckPlayerBattleAttribute : ITargetBattleAttribute
 	{
-		// Token: 0x06007288 RID: 29320 RVA: 0x001135BE File Offset: 0x001117BE
+		// Token: 0x0600792E RID: 31022 RVA: 0x00121C42 File Offset: 0x0011FE42
 		public static ICheckPlayerBattleAttribute Create(ICheckPlayerBattleAttribute? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700253B RID: 9531
-		// (get) Token: 0x06007289 RID: 29321 RVA: 0x001135DD File Offset: 0x001117DD
+		// Token: 0x1700270E RID: 9998
+		// (get) Token: 0x0600792F RID: 31023 RVA: 0x00121C61 File Offset: 0x0011FE61
 		public override ETargetBattleAttribute Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700253C RID: 9532
-		// (get) Token: 0x0600728A RID: 29322 RVA: 0x001135EA File Offset: 0x001117EA
+		// Token: 0x1700270F RID: 9999
+		// (get) Token: 0x06007930 RID: 31024 RVA: 0x00121C6E File Offset: 0x0011FE6E
 		public virtual IHealthAttributeToTarget Option
 		{
 			get
@@ -48,14 +46,14 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400422E RID: 16942
+		// Token: 0x040045AF RID: 17839
 		private ICheckPlayerBattleAttribute Instance;
 
-		// Token: 0x0400422F RID: 16943
+		// Token: 0x040045B0 RID: 17840
 		[Nullable(2)]
 		private IHealthAttributeToTarget _OptionCache;
 
-		// Token: 0x04004230 RID: 16944
+		// Token: 0x040045B1 RID: 17841
 		private bool _OptionInited;
 	}
 }

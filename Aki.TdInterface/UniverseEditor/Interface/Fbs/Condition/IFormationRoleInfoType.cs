@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004C28 RID: 19496
+	// Token: 0x0200511B RID: 20763
 	public struct IFormationRoleInfoType : IFlatbufferObject
 	{
-		// Token: 0x17008DA5 RID: 36261
-		// (get) Token: 0x0601EE41 RID: 126529 RVA: 0x00452BF8 File Offset: 0x00450DF8
+		// Token: 0x170094CE RID: 38094
+		// (get) Token: 0x06020A45 RID: 133701 RVA: 0x004864D4 File Offset: 0x004846D4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601EE42 RID: 126530 RVA: 0x00452C05 File Offset: 0x00450E05
+		// Token: 0x06020A46 RID: 133702 RVA: 0x004864E1 File Offset: 0x004846E1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601EE43 RID: 126531 RVA: 0x00452C0C File Offset: 0x00450E0C
+		// Token: 0x06020A47 RID: 133703 RVA: 0x004864E8 File Offset: 0x004846E8
 		public static IFormationRoleInfoType GetRootAsIFormationRoleInfoType(ByteBuffer _bb)
 		{
 			return IFormationRoleInfoType.GetRootAsIFormationRoleInfoType(_bb, default(IFormationRoleInfoType));
 		}
 
-		// Token: 0x0601EE44 RID: 126532 RVA: 0x00452C28 File Offset: 0x00450E28
+		// Token: 0x06020A48 RID: 133704 RVA: 0x00486504 File Offset: 0x00484704
 		public static IFormationRoleInfoType GetRootAsIFormationRoleInfoType(ByteBuffer _bb, IFormationRoleInfoType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601EE45 RID: 126533 RVA: 0x00452C45 File Offset: 0x00450E45
+		// Token: 0x06020A49 RID: 133705 RVA: 0x00486521 File Offset: 0x00484721
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601EE46 RID: 126534 RVA: 0x00452C54 File Offset: 0x00450E54
+		// Token: 0x06020A4A RID: 133706 RVA: 0x00486530 File Offset: 0x00484730
 		public IFormationRoleInfoType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008DA6 RID: 36262
-		// (get) Token: 0x0601EE47 RID: 126535 RVA: 0x00452C64 File Offset: 0x00450E64
+		// Token: 0x170094CF RID: 38095
+		// (get) Token: 0x06020A4B RID: 133707 RVA: 0x00486540 File Offset: 0x00484740
 		public EFormationRoleInfoType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601EE48 RID: 126536 RVA: 0x00452CA0 File Offset: 0x00450EA0
+		// Token: 0x06020A4C RID: 133708 RVA: 0x0048657C File Offset: 0x0048477C
 		public static Offset<IFormationRoleInfoType> CreateIFormationRoleInfoType(FlatBufferBuilder builder, EFormationRoleInfoType Type = EFormationRoleInfoType.RoleLevel)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IFormationRoleInfoType.EndIFormationRoleInfoType(builder);
 		}
 
-		// Token: 0x0601EE49 RID: 126537 RVA: 0x00452CB6 File Offset: 0x00450EB6
+		// Token: 0x06020A4D RID: 133709 RVA: 0x00486592 File Offset: 0x00484792
 		public static void StartIFormationRoleInfoType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0601EE4A RID: 126538 RVA: 0x00452CBF File Offset: 0x00450EBF
+		// Token: 0x06020A4E RID: 133710 RVA: 0x0048659B File Offset: 0x0048479B
 		public static void AddType(FlatBufferBuilder builder, EFormationRoleInfoType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601EE4B RID: 126539 RVA: 0x00452CCA File Offset: 0x00450ECA
+		// Token: 0x06020A4F RID: 133711 RVA: 0x004865A6 File Offset: 0x004847A6
 		public static Offset<IFormationRoleInfoType> EndIFormationRoleInfoType(FlatBufferBuilder builder)
 		{
 			return new Offset<IFormationRoleInfoType>(builder.EndTable());
 		}
 
-		// Token: 0x0601EE4C RID: 126540 RVA: 0x00452CD8 File Offset: 0x00450ED8
+		// Token: 0x06020A50 RID: 133712 RVA: 0x004865B4 File Offset: 0x004847B4
 		public IFormationRoleInfoTypeT UnPack()
 		{
 			IFormationRoleInfoTypeT formationRoleInfoTypeT = new IFormationRoleInfoTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return formationRoleInfoTypeT;
 		}
 
-		// Token: 0x0601EE4D RID: 126541 RVA: 0x00452CF3 File Offset: 0x00450EF3
+		// Token: 0x06020A51 RID: 133713 RVA: 0x004865CF File Offset: 0x004847CF
 		public void UnPackTo(IFormationRoleInfoTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0601EE4E RID: 126542 RVA: 0x00452D04 File Offset: 0x00450F04
+		// Token: 0x06020A52 RID: 133714 RVA: 0x004865E0 File Offset: 0x004847E0
 		public static Offset<IFormationRoleInfoType> Pack(FlatBufferBuilder builder, IFormationRoleInfoTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IFormationRoleInfoType.CreateIFormationRoleInfoType(builder, _o.Type);
 		}
 
-		// Token: 0x0400D5C4 RID: 54724
+		// Token: 0x0400E0E3 RID: 57571
 		private Table __p;
 	}
 }

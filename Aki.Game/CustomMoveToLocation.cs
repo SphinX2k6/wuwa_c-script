@@ -4,12 +4,12 @@ using Aki.TDConfigMgr.Component;
 using CSharpScript.Game.LevelGamePlay;
 using UnrealEngine;
 
-// Token: 0x02002EB6 RID: 11958
+// Token: 0x02002409 RID: 9225
 [NullableContext(1)]
 [Nullable(0)]
 public class CustomMoveToLocation : CustomActionBase
 {
-	// Token: 0x0601988E RID: 104590 RVA: 0x00699A7E File Offset: 0x00697C7E
+	// Token: 0x06017174 RID: 94580 RVA: 0x006BFD3E File Offset: 0x006BDF3E
 	public CustomMoveToLocation(CharacterMoveComponent moveComp, CharacterAnimationComponent animComp, Vector targetLocation, [Nullable(2)] Action callback = null, [Nullable(2)] Action onStart = null, int modelBufferTime = 200)
 	{
 		this.MoveComp = moveComp;
@@ -20,7 +20,7 @@ public class CustomMoveToLocation : CustomActionBase
 		this.ModelBufferTime = modelBufferTime;
 	}
 
-	// Token: 0x0601988F RID: 104591 RVA: 0x00699AB4 File Offset: 0x00697CB4
+	// Token: 0x06017175 RID: 94581 RVA: 0x006BFD74 File Offset: 0x006BDF74
 	protected override void OnRunAction()
 	{
 		if (this.MoveComp == null || this.TargetLocation == null)
@@ -72,21 +72,21 @@ public class CustomMoveToLocation : CustomActionBase
 		this.MoveComp.MoveAlongPath(config, "CustomMoveToLocation.OnStart");
 	}
 
-	// Token: 0x06019890 RID: 104592 RVA: 0x00699B72 File Offset: 0x00697D72
+	// Token: 0x06017176 RID: 94582 RVA: 0x006BFE32 File Offset: 0x006BE032
 	protected override void OnAbort()
 	{
 		this.MoveComp.MoveController.StopMoveWithCallback(ELevelEventState.Success, null);
 	}
 
-	// Token: 0x0400BEB0 RID: 48816
+	// Token: 0x0400C24B RID: 49739
 	private readonly CharacterMoveComponent MoveComp;
 
-	// Token: 0x0400BEB1 RID: 48817
+	// Token: 0x0400C24C RID: 49740
 	private readonly CharacterAnimationComponent AnimComp;
 
-	// Token: 0x0400BEB2 RID: 48818
+	// Token: 0x0400C24D RID: 49741
 	private readonly Vector TargetLocation;
 
-	// Token: 0x0400BEB3 RID: 48819
+	// Token: 0x0400C24E RID: 49742
 	private readonly int ModelBufferTime;
 }

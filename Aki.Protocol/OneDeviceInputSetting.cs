@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000B83 RID: 2947
+	// Token: 0x02000B73 RID: 2931
 	public sealed class OneDeviceInputSetting : IMessage<OneDeviceInputSetting>, IMessage, IEquatable<OneDeviceInputSetting>, IDeepCloneable<OneDeviceInputSetting>, IBufferMessage
 	{
-		// Token: 0x0600FF65 RID: 65381 RVA: 0x00253DD5 File Offset: 0x00251FD5
+		// Token: 0x0600FE61 RID: 65121 RVA: 0x00251F05 File Offset: 0x00250105
 		[NullableContext(1)]
 		public static OneDeviceInputSetting Create()
 		{
 			return new OneDeviceInputSetting();
 		}
 
-		// Token: 0x17003426 RID: 13350
-		// (get) Token: 0x0600FF66 RID: 65382 RVA: 0x00253DDC File Offset: 0x00251FDC
+		// Token: 0x170033ED RID: 13293
+		// (get) Token: 0x0600FE62 RID: 65122 RVA: 0x00251F0C File Offset: 0x0025010C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageParser<OneDeviceInputSetting> Parser
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003427 RID: 13351
-		// (get) Token: 0x0600FF67 RID: 65383 RVA: 0x00253DE3 File Offset: 0x00251FE3
+		// Token: 0x170033EE RID: 13294
+		// (get) Token: 0x0600FE63 RID: 65123 RVA: 0x00251F13 File Offset: 0x00250113
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -42,8 +42,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003428 RID: 13352
-		// (get) Token: 0x0600FF68 RID: 65384 RVA: 0x00253DE6 File Offset: 0x00251FE6
+		// Token: 0x170033EF RID: 13295
+		// (get) Token: 0x0600FE64 RID: 65124 RVA: 0x00251F16 File Offset: 0x00250116
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -54,14 +54,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600FF69 RID: 65385 RVA: 0x00253DED File Offset: 0x00251FED
+		// Token: 0x0600FE65 RID: 65125 RVA: 0x00251F1D File Offset: 0x0025011D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public OneDeviceInputSetting()
 		{
 		}
 
-		// Token: 0x0600FF6A RID: 65386 RVA: 0x00253E2C File Offset: 0x0025202C
+		// Token: 0x0600FE66 RID: 65126 RVA: 0x00251F5C File Offset: 0x0025015C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public OneDeviceInputSetting(OneDeviceInputSetting other) : this()
@@ -75,7 +75,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600FF6B RID: 65387 RVA: 0x00253EAC File Offset: 0x002520AC
+		// Token: 0x0600FE67 RID: 65127 RVA: 0x00251FDC File Offset: 0x002501DC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public OneDeviceInputSetting Clone()
@@ -83,9 +83,9 @@ namespace Aki.Protocol
 			return new OneDeviceInputSetting(this);
 		}
 
-		// Token: 0x17003429 RID: 13353
-		// (get) Token: 0x0600FF6C RID: 65388 RVA: 0x00253EB4 File Offset: 0x002520B4
-		// (set) Token: 0x0600FF6D RID: 65389 RVA: 0x00253EBC File Offset: 0x002520BC
+		// Token: 0x170033F0 RID: 13296
+		// (get) Token: 0x0600FE68 RID: 65128 RVA: 0x00251FE4 File Offset: 0x002501E4
+		// (set) Token: 0x0600FE69 RID: 65129 RVA: 0x00251FEC File Offset: 0x002501EC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public InputSettingDevice Device
@@ -100,9 +100,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700342A RID: 13354
-		// (get) Token: 0x0600FF6E RID: 65390 RVA: 0x00253EC5 File Offset: 0x002520C5
-		// (set) Token: 0x0600FF6F RID: 65391 RVA: 0x00253ECD File Offset: 0x002520CD
+		// Token: 0x170033F1 RID: 13297
+		// (get) Token: 0x0600FE6A RID: 65130 RVA: 0x00251FF5 File Offset: 0x002501F5
+		// (set) Token: 0x0600FE6B RID: 65131 RVA: 0x00251FFD File Offset: 0x002501FD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string DeviceSubType
@@ -117,8 +117,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700342B RID: 13355
-		// (get) Token: 0x0600FF70 RID: 65392 RVA: 0x00253EE0 File Offset: 0x002520E0
+		// Token: 0x170033F2 RID: 13298
+		// (get) Token: 0x0600FE6C RID: 65132 RVA: 0x00252010 File Offset: 0x00250210
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<InputAction> InputAction
@@ -129,8 +129,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700342C RID: 13356
-		// (get) Token: 0x0600FF71 RID: 65393 RVA: 0x00253EE8 File Offset: 0x002520E8
+		// Token: 0x170033F3 RID: 13299
+		// (get) Token: 0x0600FE6D RID: 65133 RVA: 0x00252018 File Offset: 0x00250218
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<InputAxis> InputAxis
@@ -141,8 +141,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700342D RID: 13357
-		// (get) Token: 0x0600FF72 RID: 65394 RVA: 0x00253EF0 File Offset: 0x002520F0
+		// Token: 0x170033F4 RID: 13300
+		// (get) Token: 0x0600FE6E RID: 65134 RVA: 0x00252020 File Offset: 0x00250220
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<CombinationAction> InputCombinationAction
@@ -153,8 +153,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700342E RID: 13358
-		// (get) Token: 0x0600FF73 RID: 65395 RVA: 0x00253EF8 File Offset: 0x002520F8
+		// Token: 0x170033F5 RID: 13301
+		// (get) Token: 0x0600FE6F RID: 65135 RVA: 0x00252028 File Offset: 0x00250228
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<CombinationAxis> InputCombinationAxis
@@ -165,7 +165,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600FF74 RID: 65396 RVA: 0x00253F00 File Offset: 0x00252100
+		// Token: 0x0600FE70 RID: 65136 RVA: 0x00252030 File Offset: 0x00250230
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -173,7 +173,7 @@ namespace Aki.Protocol
 			return this.Equals(other as OneDeviceInputSetting);
 		}
 
-		// Token: 0x0600FF75 RID: 65397 RVA: 0x00253F10 File Offset: 0x00252110
+		// Token: 0x0600FE71 RID: 65137 RVA: 0x00252040 File Offset: 0x00250240
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(OneDeviceInputSetting other)
@@ -181,7 +181,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.Device == other.Device && !(this.DeviceSubType != other.DeviceSubType) && this.inputAction_.Equals(other.inputAction_) && this.inputAxis_.Equals(other.inputAxis_) && this.inputCombinationAction_.Equals(other.inputCombinationAction_) && this.inputCombinationAxis_.Equals(other.inputCombinationAxis_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600FF76 RID: 65398 RVA: 0x00253FB4 File Offset: 0x002521B4
+		// Token: 0x0600FE72 RID: 65138 RVA: 0x002520E4 File Offset: 0x002502E4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -206,7 +206,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600FF77 RID: 65399 RVA: 0x0025404C File Offset: 0x0025224C
+		// Token: 0x0600FE73 RID: 65139 RVA: 0x0025217C File Offset: 0x0025037C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -214,7 +214,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600FF78 RID: 65400 RVA: 0x00254059 File Offset: 0x00252259
+		// Token: 0x0600FE74 RID: 65140 RVA: 0x00252189 File Offset: 0x00250389
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -222,7 +222,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600FF79 RID: 65401 RVA: 0x00254064 File Offset: 0x00252264
+		// Token: 0x0600FE75 RID: 65141 RVA: 0x00252194 File Offset: 0x00250394
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -247,7 +247,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600FF7A RID: 65402 RVA: 0x00254108 File Offset: 0x00252308
+		// Token: 0x0600FE76 RID: 65142 RVA: 0x00252238 File Offset: 0x00250438
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -272,7 +272,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600FF7B RID: 65403 RVA: 0x002541B0 File Offset: 0x002523B0
+		// Token: 0x0600FE77 RID: 65143 RVA: 0x002522E0 File Offset: 0x002504E0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(OneDeviceInputSetting other)
@@ -296,7 +296,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600FF7C RID: 65404 RVA: 0x00254249 File Offset: 0x00252449
+		// Token: 0x0600FE78 RID: 65144 RVA: 0x00252379 File Offset: 0x00250579
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -304,7 +304,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600FF7D RID: 65405 RVA: 0x00254254 File Offset: 0x00252454
+		// Token: 0x0600FE79 RID: 65145 RVA: 0x00252384 File Offset: 0x00250584
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -356,58 +356,58 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040065B5 RID: 26037
+		// Token: 0x040065C5 RID: 26053
 		private static readonly MessageParser<OneDeviceInputSetting> _parser = new MessageParser<OneDeviceInputSetting>(() => new OneDeviceInputSetting());
 
-		// Token: 0x040065B6 RID: 26038
+		// Token: 0x040065C6 RID: 26054
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040065B7 RID: 26039
+		// Token: 0x040065C7 RID: 26055
 		public const int DeviceFieldNumber = 5;
 
-		// Token: 0x040065B8 RID: 26040
+		// Token: 0x040065C8 RID: 26056
 		private InputSettingDevice device_;
 
-		// Token: 0x040065B9 RID: 26041
+		// Token: 0x040065C9 RID: 26057
 		public const int DeviceSubTypeFieldNumber = 6;
 
-		// Token: 0x040065BA RID: 26042
+		// Token: 0x040065CA RID: 26058
 		private string deviceSubType_ = "";
 
-		// Token: 0x040065BB RID: 26043
+		// Token: 0x040065CB RID: 26059
 		public const int InputActionFieldNumber = 7;
 
-		// Token: 0x040065BC RID: 26044
+		// Token: 0x040065CC RID: 26060
 		private static readonly FieldCodec<InputAction> _repeated_inputAction_codec = FieldCodec.ForMessage<InputAction>(58U, Aki.Protocol.InputAction.Parser);
 
-		// Token: 0x040065BD RID: 26045
+		// Token: 0x040065CD RID: 26061
 		private readonly RepeatedField<InputAction> inputAction_ = new RepeatedField<InputAction>();
 
-		// Token: 0x040065BE RID: 26046
+		// Token: 0x040065CE RID: 26062
 		public const int InputAxisFieldNumber = 8;
 
-		// Token: 0x040065BF RID: 26047
+		// Token: 0x040065CF RID: 26063
 		private static readonly FieldCodec<InputAxis> _repeated_inputAxis_codec = FieldCodec.ForMessage<InputAxis>(66U, Aki.Protocol.InputAxis.Parser);
 
-		// Token: 0x040065C0 RID: 26048
+		// Token: 0x040065D0 RID: 26064
 		private readonly RepeatedField<InputAxis> inputAxis_ = new RepeatedField<InputAxis>();
 
-		// Token: 0x040065C1 RID: 26049
+		// Token: 0x040065D1 RID: 26065
 		public const int InputCombinationActionFieldNumber = 9;
 
-		// Token: 0x040065C2 RID: 26050
+		// Token: 0x040065D2 RID: 26066
 		private static readonly FieldCodec<CombinationAction> _repeated_inputCombinationAction_codec = FieldCodec.ForMessage<CombinationAction>(74U, CombinationAction.Parser);
 
-		// Token: 0x040065C3 RID: 26051
+		// Token: 0x040065D3 RID: 26067
 		private readonly RepeatedField<CombinationAction> inputCombinationAction_ = new RepeatedField<CombinationAction>();
 
-		// Token: 0x040065C4 RID: 26052
+		// Token: 0x040065D4 RID: 26068
 		public const int InputCombinationAxisFieldNumber = 10;
 
-		// Token: 0x040065C5 RID: 26053
+		// Token: 0x040065D5 RID: 26069
 		private static readonly FieldCodec<CombinationAxis> _repeated_inputCombinationAxis_codec = FieldCodec.ForMessage<CombinationAxis>(82U, CombinationAxis.Parser);
 
-		// Token: 0x040065C6 RID: 26054
+		// Token: 0x040065D6 RID: 26070
 		private readonly RepeatedField<CombinationAxis> inputCombinationAxis_ = new RepeatedField<CombinationAxis>();
 	}
 }

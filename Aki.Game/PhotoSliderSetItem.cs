@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnrealEngine;
 
-// Token: 0x02002575 RID: 9589
+// Token: 0x02001A60 RID: 6752
 public class PhotoSliderSetItem : PhotographSetupBase
 {
-	// Token: 0x060135DD RID: 79325 RVA: 0x004D1A94 File Offset: 0x004CFC94
+	// Token: 0x06010AC0 RID: 68288 RVA: 0x004E06FC File Offset: 0x004DE8FC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -24,7 +24,7 @@ public class PhotoSliderSetItem : PhotographSetupBase
 		};
 	}
 
-	// Token: 0x060135DE RID: 79326 RVA: 0x004D1B6C File Offset: 0x004CFD6C
+	// Token: 0x06010AC1 RID: 68289 RVA: 0x004E07D4 File Offset: 0x004DE9D4
 	protected override void OnStart()
 	{
 		base.GetSlider(1).OnValueChangeCb.Bind(new Action<float>(this.OnValueChanged));
@@ -32,7 +32,7 @@ public class PhotoSliderSetItem : PhotographSetupBase
 		instance.OnPhotographOptionChanged = (Action<EPhotoSetupValueType, float>)Delegate.Combine(instance.OnPhotographOptionChanged, new Action<EPhotoSetupValueType, float>(this.OnPhotographOptionChanged));
 	}
 
-	// Token: 0x060135DF RID: 79327 RVA: 0x004D1BBC File Offset: 0x004CFDBC
+	// Token: 0x06010AC2 RID: 68290 RVA: 0x004E0824 File Offset: 0x004DEA24
 	private void OnPhotographOptionChanged(EPhotoSetupValueType valueType, float value)
 	{
 		if (!this.IsInCurrentMode)
@@ -46,7 +46,7 @@ public class PhotoSliderSetItem : PhotographSetupBase
 		this.Refresh();
 	}
 
-	// Token: 0x060135E0 RID: 79328 RVA: 0x004D1BD8 File Offset: 0x004CFDD8
+	// Token: 0x06010AC3 RID: 68291 RVA: 0x004E0840 File Offset: 0x004DEA40
 	public override void Refresh()
 	{
 		if (this.SetupConfig == null)
@@ -67,13 +67,13 @@ public class PhotoSliderSetItem : PhotographSetupBase
 		slider.SetValue(num, false);
 	}
 
-	// Token: 0x060135E1 RID: 79329 RVA: 0x004D1CB0 File Offset: 0x004CFEB0
+	// Token: 0x06010AC4 RID: 68292 RVA: 0x004E0918 File Offset: 0x004DEB18
 	private void SetNumText(float value)
 	{
 		base.GetText(0).SetText(MathUtils.Instance.GetFloatPointFloorString((double)value, this.SetupConfig.Value.Digits) + this.SetupConfig.Value.Unit, true);
 	}
 
-	// Token: 0x060135E2 RID: 79330 RVA: 0x004D1D01 File Offset: 0x004CFF01
+	// Token: 0x06010AC5 RID: 68293 RVA: 0x004E0969 File Offset: 0x004DEB69
 	protected override void OnBeforeDestroy()
 	{
 		base.GetSlider(1).OnValueChangeCb.Unbind();
@@ -81,7 +81,7 @@ public class PhotoSliderSetItem : PhotographSetupBase
 		instance.OnPhotographOptionChanged = (Action<EPhotoSetupValueType, float>)Delegate.Remove(instance.OnPhotographOptionChanged, new Action<EPhotoSetupValueType, float>(this.OnPhotographOptionChanged));
 	}
 
-	// Token: 0x060135E3 RID: 79331 RVA: 0x004D1D3C File Offset: 0x004CFF3C
+	// Token: 0x06010AC6 RID: 68294 RVA: 0x004E09A4 File Offset: 0x004DEBA4
 	private unsafe void OnValueChanged(float value)
 	{
 		if (this.SetupConfig == null)
@@ -98,7 +98,7 @@ public class PhotoSliderSetItem : PhotographSetupBase
 		this.SetNumText(num);
 	}
 
-	// Token: 0x060135E4 RID: 79332 RVA: 0x004D1DF8 File Offset: 0x004CFFF8
+	// Token: 0x06010AC7 RID: 68295 RVA: 0x004E0A60 File Offset: 0x004DEC60
 	private void OnResetClick()
 	{
 		if (this.SetupConfig == null)
@@ -115,7 +115,7 @@ public class PhotoSliderSetItem : PhotographSetupBase
 		base.GetSlider(1).SetValue(inValue, true);
 	}
 
-	// Token: 0x060135E5 RID: 79333 RVA: 0x004D1E68 File Offset: 0x004D0068
+	// Token: 0x06010AC8 RID: 68296 RVA: 0x004E0AD0 File Offset: 0x004DECD0
 	public override void SetSubItem(bool bSubItem)
 	{
 		UUIItem item = base.GetItem(11);
@@ -126,7 +126,7 @@ public class PhotoSliderSetItem : PhotographSetupBase
 		item.SetUIActive(bSubItem);
 	}
 
-	// Token: 0x060135E6 RID: 79334 RVA: 0x004D1E7D File Offset: 0x004D007D
+	// Token: 0x06010AC9 RID: 68297 RVA: 0x004E0AE5 File Offset: 0x004DECE5
 	public override void SetLock(bool bLock)
 	{
 		UUIItem item = base.GetItem(9);
@@ -140,32 +140,32 @@ public class PhotoSliderSetItem : PhotographSetupBase
 		}
 	}
 
-	// Token: 0x02008B67 RID: 35687
+	// Token: 0x02007CED RID: 31981
 	private enum EComponents
 	{
-		// Token: 0x0402D43A RID: 185402
+		// Token: 0x04028747 RID: 165703
 		TextValue,
-		// Token: 0x0402D43B RID: 185403
+		// Token: 0x04028748 RID: 165704
 		SliderInfoHor,
-		// Token: 0x0402D43C RID: 185404
+		// Token: 0x04028749 RID: 165705
 		SpriteHandle,
-		// Token: 0x0402D43D RID: 185405
+		// Token: 0x0402874A RID: 165706
 		SpriteNormalBg,
-		// Token: 0x0402D43E RID: 185406
+		// Token: 0x0402874B RID: 165707
 		SpriteTempBg,
-		// Token: 0x0402D43F RID: 185407
+		// Token: 0x0402874C RID: 165708
 		ItemFillArea,
-		// Token: 0x0402D440 RID: 185408
+		// Token: 0x0402874D RID: 165709
 		ToggleRoot,
-		// Token: 0x0402D441 RID: 185409
+		// Token: 0x0402874E RID: 165710
 		TextSettingTitle,
-		// Token: 0x0402D442 RID: 185410
+		// Token: 0x0402874F RID: 165711
 		BtnReset,
-		// Token: 0x0402D443 RID: 185411
+		// Token: 0x04028750 RID: 165712
 		ItemLock,
-		// Token: 0x0402D444 RID: 185412
+		// Token: 0x04028751 RID: 165713
 		ItemUnlock,
-		// Token: 0x0402D445 RID: 185413
+		// Token: 0x04028752 RID: 165714
 		ItemSubIconBg
 	}
 }

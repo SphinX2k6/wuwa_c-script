@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x020010CD RID: 4301
+// Token: 0x02000581 RID: 1409
 [Nullable(new byte[]
 {
 	0,
@@ -12,7 +12,7 @@ using UnrealEngine;
 })]
 public class AdvanceNoticeFetterSuitDetailItem : GridProxyAbstract<IAdvanceNoticeFetterSuitDetailItemData>
 {
-	// Token: 0x0600700B RID: 28683 RVA: 0x0016CDF0 File Offset: 0x0016AFF0
+	// Token: 0x060043A1 RID: 17313 RVA: 0x001757AC File Offset: 0x001739AC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -22,7 +22,7 @@ public class AdvanceNoticeFetterSuitDetailItem : GridProxyAbstract<IAdvanceNotic
 		};
 	}
 
-	// Token: 0x0600700C RID: 28684 RVA: 0x0016CE2C File Offset: 0x0016B02C
+	// Token: 0x060043A2 RID: 17314 RVA: 0x001757E8 File Offset: 0x001739E8
 	[NullableContext(1)]
 	public override void Refresh(IAdvanceNoticeFetterSuitDetailItemData data, bool isSelected, int gridIndex)
 	{
@@ -44,13 +44,13 @@ public class AdvanceNoticeFetterSuitDetailItem : GridProxyAbstract<IAdvanceNotic
 		base.GetText(1).SetUIActive(false);
 	}
 
-	// Token: 0x02007693 RID: 30355
+	// Token: 0x02006827 RID: 26663
 	private class EComponentDefine
 	{
-		// Token: 0x0402720E RID: 160270
+		// Token: 0x04022557 RID: 140631
 		public const int TitleText = 0;
 
-		// Token: 0x0402720F RID: 160271
+		// Token: 0x04022558 RID: 140632
 		public const int DescText = 1;
 	}
 }

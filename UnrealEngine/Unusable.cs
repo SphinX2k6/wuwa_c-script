@@ -6,15 +6,15 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020000A4 RID: 164
+	// Token: 0x02000089 RID: 137
 	public class Unusable
 	{
-		// Token: 0x060010BA RID: 4282 RVA: 0x00019171 File Offset: 0x00017371
+		// Token: 0x06000C4D RID: 3149 RVA: 0x00013E95 File Offset: 0x00012095
 		public static void DoNothing()
 		{
 		}
 
-		// Token: 0x060010BB RID: 4283 RVA: 0x00019174 File Offset: 0x00017374
+		// Token: 0x06000C4E RID: 3150 RVA: 0x00013E98 File Offset: 0x00012098
 		[NullableContext(1)]
 		public static void DoNothingButError(string msg)
 		{

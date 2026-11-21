@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005E5A RID: 24154
+	// Token: 0x0200649A RID: 25754
 	public struct IUnlockAtlasSystemTypeV2 : IFlatbufferObject
 	{
-		// Token: 0x1700B4A1 RID: 46241
-		// (get) Token: 0x060295DB RID: 169435 RVA: 0x005ABBF0 File Offset: 0x005A9DF0
+		// Token: 0x1700BE0A RID: 48650
+		// (get) Token: 0x0602BC77 RID: 179319 RVA: 0x005F4A98 File Offset: 0x005F2C98
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x060295DC RID: 169436 RVA: 0x005ABBFD File Offset: 0x005A9DFD
+		// Token: 0x0602BC78 RID: 179320 RVA: 0x005F4AA5 File Offset: 0x005F2CA5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060295DD RID: 169437 RVA: 0x005ABC04 File Offset: 0x005A9E04
+		// Token: 0x0602BC79 RID: 179321 RVA: 0x005F4AAC File Offset: 0x005F2CAC
 		public static IUnlockAtlasSystemTypeV2 GetRootAsIUnlockAtlasSystemTypeV2(ByteBuffer _bb)
 		{
 			return IUnlockAtlasSystemTypeV2.GetRootAsIUnlockAtlasSystemTypeV2(_bb, default(IUnlockAtlasSystemTypeV2));
 		}
 
-		// Token: 0x060295DE RID: 169438 RVA: 0x005ABC20 File Offset: 0x005A9E20
+		// Token: 0x0602BC7A RID: 179322 RVA: 0x005F4AC8 File Offset: 0x005F2CC8
 		public static IUnlockAtlasSystemTypeV2 GetRootAsIUnlockAtlasSystemTypeV2(ByteBuffer _bb, IUnlockAtlasSystemTypeV2 obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060295DF RID: 169439 RVA: 0x005ABC3D File Offset: 0x005A9E3D
+		// Token: 0x0602BC7B RID: 179323 RVA: 0x005F4AE5 File Offset: 0x005F2CE5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060295E0 RID: 169440 RVA: 0x005ABC4C File Offset: 0x005A9E4C
+		// Token: 0x0602BC7C RID: 179324 RVA: 0x005F4AF4 File Offset: 0x005F2CF4
 		public IUnlockAtlasSystemTypeV2 __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B4A2 RID: 46242
-		// (get) Token: 0x060295E1 RID: 169441 RVA: 0x005ABC5C File Offset: 0x005A9E5C
+		// Token: 0x1700BE0B RID: 48651
+		// (get) Token: 0x0602BC7D RID: 179325 RVA: 0x005F4B04 File Offset: 0x005F2D04
 		public EUnlockAtlasSystemTypeV2 Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x060295E2 RID: 169442 RVA: 0x005ABC98 File Offset: 0x005A9E98
+		// Token: 0x0602BC7E RID: 179326 RVA: 0x005F4B40 File Offset: 0x005F2D40
 		public static Offset<IUnlockAtlasSystemTypeV2> CreateIUnlockAtlasSystemTypeV2(FlatBufferBuilder builder, EUnlockAtlasSystemTypeV2 Type = EUnlockAtlasSystemTypeV2.GeographicalAtlas)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IUnlockAtlasSystemTypeV2.EndIUnlockAtlasSystemTypeV2(builder);
 		}
 
-		// Token: 0x060295E3 RID: 169443 RVA: 0x005ABCAE File Offset: 0x005A9EAE
+		// Token: 0x0602BC7F RID: 179327 RVA: 0x005F4B56 File Offset: 0x005F2D56
 		public static void StartIUnlockAtlasSystemTypeV2(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060295E4 RID: 169444 RVA: 0x005ABCB7 File Offset: 0x005A9EB7
+		// Token: 0x0602BC80 RID: 179328 RVA: 0x005F4B5F File Offset: 0x005F2D5F
 		public static void AddType(FlatBufferBuilder builder, EUnlockAtlasSystemTypeV2 type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060295E5 RID: 169445 RVA: 0x005ABCC2 File Offset: 0x005A9EC2
+		// Token: 0x0602BC81 RID: 179329 RVA: 0x005F4B6A File Offset: 0x005F2D6A
 		public static Offset<IUnlockAtlasSystemTypeV2> EndIUnlockAtlasSystemTypeV2(FlatBufferBuilder builder)
 		{
 			return new Offset<IUnlockAtlasSystemTypeV2>(builder.EndTable());
 		}
 
-		// Token: 0x060295E6 RID: 169446 RVA: 0x005ABCD0 File Offset: 0x005A9ED0
+		// Token: 0x0602BC82 RID: 179330 RVA: 0x005F4B78 File Offset: 0x005F2D78
 		public IUnlockAtlasSystemTypeV2T UnPack()
 		{
 			IUnlockAtlasSystemTypeV2T unlockAtlasSystemTypeV2T = new IUnlockAtlasSystemTypeV2T();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return unlockAtlasSystemTypeV2T;
 		}
 
-		// Token: 0x060295E7 RID: 169447 RVA: 0x005ABCEB File Offset: 0x005A9EEB
+		// Token: 0x0602BC83 RID: 179331 RVA: 0x005F4B93 File Offset: 0x005F2D93
 		public void UnPackTo(IUnlockAtlasSystemTypeV2T _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060295E8 RID: 169448 RVA: 0x005ABCFC File Offset: 0x005A9EFC
+		// Token: 0x0602BC84 RID: 179332 RVA: 0x005F4BA4 File Offset: 0x005F2DA4
 		public static Offset<IUnlockAtlasSystemTypeV2> Pack(FlatBufferBuilder builder, IUnlockAtlasSystemTypeV2T _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IUnlockAtlasSystemTypeV2.CreateIUnlockAtlasSystemTypeV2(builder, _o.Type);
 		}
 
-		// Token: 0x0400F866 RID: 63590
+		// Token: 0x040105C3 RID: 67011
 		private Table __p;
 	}
 }

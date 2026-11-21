@@ -15,9 +15,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/NPC/TsTaskNpcFindFleePosition.TsTaskNpcFindFleePosition_C")]
 public class TsTaskNpcFindFleePosition : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170000E5 RID: 229
-	// (get) Token: 0x0600059C RID: 1436 RVA: 0x0001B1F6 File Offset: 0x000193F6
-	// (set) Token: 0x0600059D RID: 1437 RVA: 0x0001B206 File Offset: 0x00019406
+	// Token: 0x170000E7 RID: 231
+	// (get) Token: 0x060005A0 RID: 1440 RVA: 0x0001BD3E File Offset: 0x00019F3E
+	// (set) Token: 0x060005A1 RID: 1441 RVA: 0x0001BD4E File Offset: 0x00019F4E
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float SearchRange
 	{
@@ -31,9 +31,9 @@ public class TsTaskNpcFindFleePosition : TsTaskAbortImmediatelyBase, IUnrealUObj
 		}
 	}
 
-	// Token: 0x170000E6 RID: 230
-	// (get) Token: 0x0600059E RID: 1438 RVA: 0x0001B217 File Offset: 0x00019417
-	// (set) Token: 0x0600059F RID: 1439 RVA: 0x0001B22B File Offset: 0x0001942B
+	// Token: 0x170000E8 RID: 232
+	// (get) Token: 0x060005A2 RID: 1442 RVA: 0x0001BD5F File Offset: 0x00019F5F
+	// (set) Token: 0x060005A3 RID: 1443 RVA: 0x0001BD73 File Offset: 0x00019F73
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe string BlackboardKey
 	{
@@ -47,7 +47,7 @@ public class TsTaskNpcFindFleePosition : TsTaskAbortImmediatelyBase, IUnrealUObj
 		}
 	}
 
-	// Token: 0x060005A0 RID: 1440 RVA: 0x0001B240 File Offset: 0x00019440
+	// Token: 0x060005A4 RID: 1444 RVA: 0x0001BD88 File Offset: 0x00019F88
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -58,30 +58,27 @@ public class TsTaskNpcFindFleePosition : TsTaskAbortImmediatelyBase, IUnrealUObj
 		}
 	}
 
-	// Token: 0x060005A1 RID: 1441 RVA: 0x0001B270 File Offset: 0x00019470
+	// Token: 0x060005A5 RID: 1445 RVA: 0x0001BDB8 File Offset: 0x00019FB8
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveExecuteAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskNpcFindFleePosition) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveExecuteAI"), TsTaskNpcFindFleePosition.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			this.ReceiveExecuteAI_Implementation(ownerController, controlledPawn);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x060005A2 RID: 1442 RVA: 0x0001B30C File Offset: 0x0001950C
+	// Token: 0x060005A6 RID: 1446 RVA: 0x0001BE68 File Offset: 0x0001A068
 	[NullableContext(2)]
 	protected virtual void ReceiveExecuteAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -131,7 +128,7 @@ public class TsTaskNpcFindFleePosition : TsTaskAbortImmediatelyBase, IUnrealUObj
 		base.FinishExecute(true);
 	}
 
-	// Token: 0x060005A3 RID: 1443 RVA: 0x0001B4C4 File Offset: 0x000196C4
+	// Token: 0x060005A7 RID: 1447 RVA: 0x0001C020 File Offset: 0x0001A220
 	private void InitTraceElement()
 	{
 		if (this.TraceElement == null)
@@ -144,7 +141,7 @@ public class TsTaskNpcFindFleePosition : TsTaskAbortImmediatelyBase, IUnrealUObj
 		this.TraceElement.WorldContextObject = this.GetWorld();
 	}
 
-	// Token: 0x060005A4 RID: 1444 RVA: 0x0001B520 File Offset: 0x00019720
+	// Token: 0x060005A8 RID: 1448 RVA: 0x0001C07C File Offset: 0x0001A27C
 	private void FindEnemies(IAiPerception aiPerception)
 	{
 		foreach (int id in aiPerception.AllEnemies)
@@ -157,7 +154,7 @@ public class TsTaskNpcFindFleePosition : TsTaskAbortImmediatelyBase, IUnrealUObj
 		}
 	}
 
-	// Token: 0x060005A5 RID: 1445 RVA: 0x0001B588 File Offset: 0x00019788
+	// Token: 0x060005A9 RID: 1449 RVA: 0x0001C0E4 File Offset: 0x0001A2E4
 	private List<Vector> GetNoTargetDirectionList(Vector nowPosition, CharacterActorComponent actorComp)
 	{
 		List<Vector> list = new List<Vector>();
@@ -183,7 +180,7 @@ public class TsTaskNpcFindFleePosition : TsTaskAbortImmediatelyBase, IUnrealUObj
 		return list;
 	}
 
-	// Token: 0x060005A6 RID: 1446 RVA: 0x0001B654 File Offset: 0x00019854
+	// Token: 0x060005AA RID: 1450 RVA: 0x0001C1B0 File Offset: 0x0001A3B0
 	private Vector GetOptimalDirection(Vector nowPosition, List<Vector> dirList)
 	{
 		int count = this.TempEnemyList.Count;
@@ -220,7 +217,7 @@ public class TsTaskNpcFindFleePosition : TsTaskAbortImmediatelyBase, IUnrealUObj
 		return dirList[index2];
 	}
 
-	// Token: 0x060005A7 RID: 1447 RVA: 0x0001B743 File Offset: 0x00019943
+	// Token: 0x060005AB RID: 1451 RVA: 0x0001C29F File Offset: 0x0001A49F
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskNpcFindFleePosition._ClassPtr == IntPtr.Zero)
@@ -230,22 +227,22 @@ public class TsTaskNpcFindFleePosition : TsTaskAbortImmediatelyBase, IUnrealUObj
 		return TsTaskNpcFindFleePosition._ClassPtr;
 	}
 
-	// Token: 0x060005A8 RID: 1448 RVA: 0x0001B768 File Offset: 0x00019968
+	// Token: 0x060005AC RID: 1452 RVA: 0x0001C2C4 File Offset: 0x0001A4C4
 	public TsTaskNpcFindFleePosition() : this(BuiltinUtils.AllocNativeUObject(TsTaskNpcFindFleePosition.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x060005A9 RID: 1449 RVA: 0x0001B790 File Offset: 0x00019990
+	// Token: 0x060005AD RID: 1453 RVA: 0x0001C2EC File Offset: 0x0001A4EC
 	public TsTaskNpcFindFleePosition(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskNpcFindFleePosition.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x060005AA RID: 1450 RVA: 0x0001B7C3 File Offset: 0x000199C3
+	// Token: 0x060005AE RID: 1454 RVA: 0x0001C31F File Offset: 0x0001A51F
 	protected TsTaskNpcFindFleePosition(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x060005AB RID: 1451 RVA: 0x0001B7D8 File Offset: 0x000199D8
+	// Token: 0x060005AF RID: 1455 RVA: 0x0001C334 File Offset: 0x0001A534
 	[NullableContext(0)]
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
@@ -254,16 +251,16 @@ public class TsTaskNpcFindFleePosition : TsTaskAbortImmediatelyBase, IUnrealUObj
 		this.ReceiveExecuteAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x04000405 RID: 1029
+	// Token: 0x04000409 RID: 1033
 	private const string PROFILE_KEY = "TsTaskNpcFindFleePosition_GetNoTargetDirectionList";
 
-	// Token: 0x04000406 RID: 1030
+	// Token: 0x0400040A RID: 1034
 	private const int CHECK_DEGREE_ADDITION = 15;
 
-	// Token: 0x04000407 RID: 1031
+	// Token: 0x0400040B RID: 1035
 	private const double PI_DEG_DOUBLE = 360.0;
 
-	// Token: 0x04000408 RID: 1032
+	// Token: 0x0400040C RID: 1036
 	[Nullable(new byte[]
 	{
 		2,
@@ -271,31 +268,31 @@ public class TsTaskNpcFindFleePosition : TsTaskAbortImmediatelyBase, IUnrealUObj
 	})]
 	private List<Entity> TempEnemyList;
 
-	// Token: 0x04000409 RID: 1033
+	// Token: 0x0400040D RID: 1037
 	[Nullable(2)]
 	private UTraceLineElement TraceElement;
 
-	// Token: 0x0400040A RID: 1034
+	// Token: 0x0400040E RID: 1038
 	private bool IsInitTsVariables;
 
-	// Token: 0x0400040B RID: 1035
+	// Token: 0x0400040F RID: 1039
 	private float TsSearchRange;
 
-	// Token: 0x0400040C RID: 1036
+	// Token: 0x04000410 RID: 1040
 	private string TsBlackboardKey = "";
 
-	// Token: 0x0400040D RID: 1037
+	// Token: 0x04000411 RID: 1041
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/NPC/TsTaskNpcFindFleePosition.TsTaskNpcFindFleePosition_C";
 
-	// Token: 0x0400040E RID: 1038
+	// Token: 0x04000412 RID: 1042
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400040F RID: 1039
+	// Token: 0x04000413 RID: 1043
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x04000410 RID: 1040
+	// Token: 0x04000414 RID: 1044
 	private static int __PropertyOffset_SearchRange;
 
-	// Token: 0x04000411 RID: 1041
+	// Token: 0x04000415 RID: 1045
 	private static int __PropertyOffset_BlackboardKey;
 }

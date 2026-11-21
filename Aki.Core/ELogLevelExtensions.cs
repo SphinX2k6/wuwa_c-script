@@ -3,7 +3,7 @@
 // Token: 0x0200010E RID: 270
 public static class ELogLevelExtensions
 {
-	// Token: 0x060009FE RID: 2558 RVA: 0x00032BF8 File Offset: 0x00030DF8
+	// Token: 0x06000A4F RID: 2639 RVA: 0x00033554 File Offset: 0x00031754
 	public static string ToEnumString(this ELogLevel value)
 	{
 		string result;
@@ -31,7 +31,7 @@ public static class ELogLevelExtensions
 		return result;
 	}
 
-	// Token: 0x060009FF RID: 2559 RVA: 0x00032C58 File Offset: 0x00030E58
+	// Token: 0x06000A50 RID: 2640 RVA: 0x000335B4 File Offset: 0x000317B4
 	public static ELogLevel FromString(string name)
 	{
 		ELogLevel result;
@@ -42,7 +42,7 @@ public static class ELogLevelExtensions
 		return result;
 	}
 
-	// Token: 0x06000A00 RID: 2560 RVA: 0x00032C84 File Offset: 0x00030E84
+	// Token: 0x06000A51 RID: 2641 RVA: 0x000335E0 File Offset: 0x000317E0
 	public static bool TryFromString(string name, out ELogLevel value)
 	{
 		if (string.IsNullOrEmpty(name))
@@ -79,7 +79,7 @@ public static class ELogLevelExtensions
 		return true;
 	}
 
-	// Token: 0x06000A01 RID: 2561 RVA: 0x00032CFE File Offset: 0x00030EFE
+	// Token: 0x06000A52 RID: 2642 RVA: 0x0003365A File Offset: 0x0003185A
 	public static string[] GetStringValues()
 	{
 		return new string[]
@@ -92,7 +92,7 @@ public static class ELogLevelExtensions
 		};
 	}
 
-	// Token: 0x06000A02 RID: 2562 RVA: 0x00032D2E File Offset: 0x00030F2E
+	// Token: 0x06000A53 RID: 2643 RVA: 0x0003368A File Offset: 0x0003188A
 	public static ELogLevel[] GetValues()
 	{
 		return new ELogLevel[]
@@ -105,7 +105,7 @@ public static class ELogLevelExtensions
 		};
 	}
 
-	// Token: 0x06000A03 RID: 2563 RVA: 0x00032D41 File Offset: 0x00030F41
+	// Token: 0x06000A54 RID: 2644 RVA: 0x0003369D File Offset: 0x0003189D
 	public static string[] GetNames()
 	{
 		return new string[]

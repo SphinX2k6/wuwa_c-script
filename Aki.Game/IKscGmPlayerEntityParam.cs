@@ -1,15 +1,15 @@
 ﻿using System;
 
-// Token: 0x02000E7F RID: 3711
+// Token: 0x02000334 RID: 820
 public interface IKscGmPlayerEntityParam
 {
-	// Token: 0x1700069F RID: 1695
-	// (get) Token: 0x06005AAD RID: 23213
-	// (set) Token: 0x06005AAE RID: 23214
+	// Token: 0x170006C3 RID: 1731
+	// (get) Token: 0x06002E44 RID: 11844
+	// (set) Token: 0x06002E45 RID: 11845
 	int SimpleCombatId { get; set; }
 
-	// Token: 0x170006A0 RID: 1696
-	// (get) Token: 0x06005AAF RID: 23215
-	// (set) Token: 0x06005AB0 RID: 23216
+	// Token: 0x170006C4 RID: 1732
+	// (get) Token: 0x06002E46 RID: 11846
+	// (set) Token: 0x06002E47 RID: 11847
 	int SubTypeId { get; set; }
 }

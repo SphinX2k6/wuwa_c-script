@@ -2,60 +2,60 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004F53 RID: 20307
+	// Token: 0x02005482 RID: 21634
 	public class ICaptureStrategicPointT
 	{
-		// Token: 0x1700927D RID: 37501
-		// (get) Token: 0x060202EF RID: 131823 RVA: 0x0047A89B File Offset: 0x00478A9B
-		// (set) Token: 0x060202F0 RID: 131824 RVA: 0x0047A8A3 File Offset: 0x00478AA3
+		// Token: 0x170099F6 RID: 39414
+		// (get) Token: 0x06022041 RID: 139329 RVA: 0x004B088B File Offset: 0x004AEA8B
+		// (set) Token: 0x06022042 RID: 139330 RVA: 0x004B0893 File Offset: 0x004AEA93
 		public EProgressBarControlType Type { get; set; }
 
-		// Token: 0x1700927E RID: 37502
-		// (get) Token: 0x060202F1 RID: 131825 RVA: 0x0047A8AC File Offset: 0x00478AAC
-		// (set) Token: 0x060202F2 RID: 131826 RVA: 0x0047A8B4 File Offset: 0x00478AB4
+		// Token: 0x170099F7 RID: 39415
+		// (get) Token: 0x06022043 RID: 139331 RVA: 0x004B089C File Offset: 0x004AEA9C
+		// (set) Token: 0x06022044 RID: 139332 RVA: 0x004B08A4 File Offset: 0x004AEAA4
 		public int MaxValue { get; set; }
 
-		// Token: 0x1700927F RID: 37503
-		// (get) Token: 0x060202F3 RID: 131827 RVA: 0x0047A8BD File Offset: 0x00478ABD
-		// (set) Token: 0x060202F4 RID: 131828 RVA: 0x0047A8C5 File Offset: 0x00478AC5
+		// Token: 0x170099F8 RID: 39416
+		// (get) Token: 0x06022045 RID: 139333 RVA: 0x004B08AD File Offset: 0x004AEAAD
+		// (set) Token: 0x06022046 RID: 139334 RVA: 0x004B08B5 File Offset: 0x004AEAB5
 		public int InitValue { get; set; }
 
-		// Token: 0x17009280 RID: 37504
-		// (get) Token: 0x060202F5 RID: 131829 RVA: 0x0047A8CE File Offset: 0x00478ACE
-		// (set) Token: 0x060202F6 RID: 131830 RVA: 0x0047A8D6 File Offset: 0x00478AD6
+		// Token: 0x170099F9 RID: 39417
+		// (get) Token: 0x06022047 RID: 139335 RVA: 0x004B08BE File Offset: 0x004AEABE
+		// (set) Token: 0x06022048 RID: 139336 RVA: 0x004B08C6 File Offset: 0x004AEAC6
 		public int ProgressPerformanceAttribute { get; set; }
 
-		// Token: 0x17009281 RID: 37505
-		// (get) Token: 0x060202F7 RID: 131831 RVA: 0x0047A8DF File Offset: 0x00478ADF
-		// (set) Token: 0x060202F8 RID: 131832 RVA: 0x0047A8E7 File Offset: 0x00478AE7
+		// Token: 0x170099FA RID: 39418
+		// (get) Token: 0x06022049 RID: 139337 RVA: 0x004B08CF File Offset: 0x004AEACF
+		// (set) Token: 0x0602204A RID: 139338 RVA: 0x004B08D7 File Offset: 0x004AEAD7
 		public int IncreaseSpeed { get; set; }
 
-		// Token: 0x17009282 RID: 37506
-		// (get) Token: 0x060202F9 RID: 131833 RVA: 0x0047A8F0 File Offset: 0x00478AF0
-		// (set) Token: 0x060202FA RID: 131834 RVA: 0x0047A8F8 File Offset: 0x00478AF8
+		// Token: 0x170099FB RID: 39419
+		// (get) Token: 0x0602204B RID: 139339 RVA: 0x004B08E0 File Offset: 0x004AEAE0
+		// (set) Token: 0x0602204C RID: 139340 RVA: 0x004B08E8 File Offset: 0x004AEAE8
 		public int DecreaseSpeed { get; set; }
 
-		// Token: 0x17009283 RID: 37507
-		// (get) Token: 0x060202FB RID: 131835 RVA: 0x0047A901 File Offset: 0x00478B01
-		// (set) Token: 0x060202FC RID: 131836 RVA: 0x0047A909 File Offset: 0x00478B09
+		// Token: 0x170099FC RID: 39420
+		// (get) Token: 0x0602204D RID: 139341 RVA: 0x004B08F1 File Offset: 0x004AEAF1
+		// (set) Token: 0x0602204E RID: 139342 RVA: 0x004B08F9 File Offset: 0x004AEAF9
 		public int UnoccupiedDecreaseSpeed { get; set; }
 
-		// Token: 0x17009284 RID: 37508
-		// (get) Token: 0x060202FD RID: 131837 RVA: 0x0047A912 File Offset: 0x00478B12
-		// (set) Token: 0x060202FE RID: 131838 RVA: 0x0047A91A File Offset: 0x00478B1A
+		// Token: 0x170099FD RID: 39421
+		// (get) Token: 0x0602204F RID: 139343 RVA: 0x004B0902 File Offset: 0x004AEB02
+		// (set) Token: 0x06022050 RID: 139344 RVA: 0x004B090A File Offset: 0x004AEB0A
 		public IStaticEntitiyMatchT EnemyEntitiyMatch { get; set; }
 
-		// Token: 0x17009285 RID: 37509
-		// (get) Token: 0x060202FF RID: 131839 RVA: 0x0047A923 File Offset: 0x00478B23
-		// (set) Token: 0x06020300 RID: 131840 RVA: 0x0047A92B File Offset: 0x00478B2B
+		// Token: 0x170099FE RID: 39422
+		// (get) Token: 0x06022051 RID: 139345 RVA: 0x004B0913 File Offset: 0x004AEB13
+		// (set) Token: 0x06022052 RID: 139346 RVA: 0x004B091B File Offset: 0x004AEB1B
 		public ECaptureStateType CaptureType { get; set; }
 
-		// Token: 0x17009286 RID: 37510
-		// (get) Token: 0x06020301 RID: 131841 RVA: 0x0047A934 File Offset: 0x00478B34
-		// (set) Token: 0x06020302 RID: 131842 RVA: 0x0047A93C File Offset: 0x00478B3C
+		// Token: 0x170099FF RID: 39423
+		// (get) Token: 0x06022053 RID: 139347 RVA: 0x004B0924 File Offset: 0x004AEB24
+		// (set) Token: 0x06022054 RID: 139348 RVA: 0x004B092C File Offset: 0x004AEB2C
 		public byte NullMask { get; set; }
 
-		// Token: 0x06020303 RID: 131843 RVA: 0x0047A948 File Offset: 0x00478B48
+		// Token: 0x06022055 RID: 139349 RVA: 0x004B0938 File Offset: 0x004AEB38
 		public ICaptureStrategicPointT()
 		{
 			this.Type = EProgressBarControlType.CaptureStrategicPoint;

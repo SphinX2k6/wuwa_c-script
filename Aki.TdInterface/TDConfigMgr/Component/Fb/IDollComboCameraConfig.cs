@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DFB RID: 3579
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000EF7 RID: 3831
 	public class IDollComboCameraConfig
 	{
-		// Token: 0x06005112 RID: 20754 RVA: 0x000C819A File Offset: 0x000C639A
+		// Token: 0x06005639 RID: 22073 RVA: 0x000D3A62 File Offset: 0x000D1C62
 		public static IDollComboCameraConfig Create(IDollComboCameraConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001AD9 RID: 6873
-		// (get) Token: 0x06005113 RID: 20755 RVA: 0x000C81B9 File Offset: 0x000C63B9
+		// Token: 0x17001C46 RID: 7238
+		// (get) Token: 0x0600563A RID: 22074 RVA: 0x000D3A81 File Offset: 0x000D1C81
 		public virtual int ComboId
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001ADA RID: 6874
-		// (get) Token: 0x06005114 RID: 20756 RVA: 0x000C81C6 File Offset: 0x000C63C6
+		// Token: 0x17001C47 RID: 7239
+		// (get) Token: 0x0600563B RID: 22075 RVA: 0x000D3A8E File Offset: 0x000D1C8E
 		public virtual PosAndRot PosAndRot
 		{
 			get
@@ -49,14 +47,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002E9C RID: 11932
+		// Token: 0x04003164 RID: 12644
 		private IDollComboCameraConfig Instance;
 
-		// Token: 0x04002E9D RID: 11933
+		// Token: 0x04003165 RID: 12645
 		[Nullable(2)]
 		private PosAndRot _PosAndRotCache;
 
-		// Token: 0x04002E9E RID: 11934
+		// Token: 0x04003166 RID: 12646
 		private bool _PosAndRotInited;
 	}
 }

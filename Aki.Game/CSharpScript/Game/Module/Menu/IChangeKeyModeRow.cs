@@ -3,23 +3,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Menu
 {
-	// Token: 0x020053FA RID: 21498
+	// Token: 0x020043DD RID: 17373
 	[NullableContext(1)]
 	public interface IChangeKeyModeRow
 	{
-		// Token: 0x1700840E RID: 33806
-		// (get) Token: 0x06036F1B RID: 225051
-		// (set) Token: 0x06036F1C RID: 225052
+		// Token: 0x170057DA RID: 22490
+		// (get) Token: 0x0602BE63 RID: 179811
+		// (set) Token: 0x0602BE64 RID: 179812
 		string RowSpriteResourceId { get; set; }
 
-		// Token: 0x1700840F RID: 33807
-		// (get) Token: 0x06036F1D RID: 225053
-		// (set) Token: 0x06036F1E RID: 225054
+		// Token: 0x170057DB RID: 22491
+		// (get) Token: 0x0602BE65 RID: 179813
+		// (set) Token: 0x0602BE66 RID: 179814
 		string DescriptionA { get; set; }
 
-		// Token: 0x17008410 RID: 33808
-		// (get) Token: 0x06036F1F RID: 225055
-		// (set) Token: 0x06036F20 RID: 225056
+		// Token: 0x170057DC RID: 22492
+		// (get) Token: 0x0602BE67 RID: 179815
+		// (set) Token: 0x0602BE68 RID: 179816
 		[Nullable(new byte[]
 		{
 			2,
@@ -35,14 +35,14 @@ namespace CSharpScript.Game.Module.Menu
 			1
 		})] set; }
 
-		// Token: 0x17008411 RID: 33809
-		// (get) Token: 0x06036F21 RID: 225057
-		// (set) Token: 0x06036F22 RID: 225058
+		// Token: 0x170057DD RID: 22493
+		// (get) Token: 0x0602BE69 RID: 179817
+		// (set) Token: 0x0602BE6A RID: 179818
 		string DescriptionB { get; set; }
 
-		// Token: 0x17008412 RID: 33810
-		// (get) Token: 0x06036F23 RID: 225059
-		// (set) Token: 0x06036F24 RID: 225060
+		// Token: 0x170057DE RID: 22494
+		// (get) Token: 0x0602BE6B RID: 179819
+		// (set) Token: 0x0602BE6C RID: 179820
 		[Nullable(new byte[]
 		{
 			2,

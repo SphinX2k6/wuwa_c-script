@@ -8,12 +8,12 @@ using CSharpScript.Game.Module.TowerDefenseEvent.Define;
 using CSharpScript.Game.Module.TowerDefenseEvent.Model;
 using UnrealEngine;
 
-// Token: 0x02002BCA RID: 11210
+// Token: 0x02002145 RID: 8517
 [NullableContext(1)]
 [Nullable(0)]
 internal class TowerDefenseEventSplineMonsterSpawner
 {
-	// Token: 0x06017477 RID: 95351 RVA: 0x005EA484 File Offset: 0x005E8684
+	// Token: 0x06014EA8 RID: 85672 RVA: 0x0061701C File Offset: 0x0061521C
 	public unsafe void Init(TowerDefenseEventPreviewMonsterSpawner owner, int splineId, TrapDefenseMonsterPbGroup group)
 	{
 		this.Owner = owner;
@@ -47,7 +47,7 @@ internal class TowerDefenseEventSplineMonsterSpawner
 		}
 	}
 
-	// Token: 0x06017478 RID: 95352 RVA: 0x005EA5FC File Offset: 0x005E87FC
+	// Token: 0x06014EA9 RID: 85673 RVA: 0x00617194 File Offset: 0x00615394
 	public void OnTick(float delta)
 	{
 		if (this.PreviewMonsters.Count == 0 || delta > 1000f)
@@ -65,7 +65,7 @@ internal class TowerDefenseEventSplineMonsterSpawner
 		this.SpawnIndex++;
 	}
 
-	// Token: 0x06017479 RID: 95353 RVA: 0x005EA688 File Offset: 0x005E8888
+	// Token: 0x06014EAA RID: 85674 RVA: 0x00617220 File Offset: 0x00615420
 	private unsafe void SpawnPreviewMonster()
 	{
 		ITowerDefenseEventMonsterInfo towerDefenseEventMonsterInfo = this.PreviewMonsters[this.SpawnIndex];
@@ -112,7 +112,7 @@ internal class TowerDefenseEventSplineMonsterSpawner
 		this.SpawnedMonsters[(long)spawnUid] = towerDefenseEventMonsterInfo;
 	}
 
-	// Token: 0x0601747A RID: 95354 RVA: 0x005EA7E8 File Offset: 0x005E89E8
+	// Token: 0x06014EAB RID: 85675 RVA: 0x00617380 File Offset: 0x00615580
 	public void RemovePreviewMonster(long uid)
 	{
 		ITowerDefenseEventMonsterInfo towerDefenseEventMonsterInfo;
@@ -132,7 +132,7 @@ internal class TowerDefenseEventSplineMonsterSpawner
 		this.SpawnedMonsters.Remove(uid);
 	}
 
-	// Token: 0x0601747B RID: 95355 RVA: 0x005EA85C File Offset: 0x005E8A5C
+	// Token: 0x06014EAC RID: 85676 RVA: 0x006173F4 File Offset: 0x006155F4
 	private void ReleasePreviewMonsters()
 	{
 		foreach (KeyValuePair<long, ITowerDefenseEventMonsterInfo> keyValuePair in this.SpawnedMonsters)
@@ -153,34 +153,34 @@ internal class TowerDefenseEventSplineMonsterSpawner
 		this.PreviewMonsters.Clear();
 	}
 
-	// Token: 0x0601747C RID: 95356 RVA: 0x005EA95C File Offset: 0x005E8B5C
+	// Token: 0x06014EAD RID: 85677 RVA: 0x006174F4 File Offset: 0x006156F4
 	public void Reset()
 	{
 		this.ReleasePreviewMonsters();
 	}
 
-	// Token: 0x0400AE28 RID: 44584
+	// Token: 0x0400B22D RID: 45613
 	[Nullable(2)]
 	private TowerDefenseEventPreviewMonsterSpawner Owner;
 
-	// Token: 0x0400AE29 RID: 44585
+	// Token: 0x0400B22E RID: 45614
 	private int SplineId;
 
-	// Token: 0x0400AE2A RID: 44586
+	// Token: 0x0400B22F RID: 45615
 	private double SpawnDelay;
 
-	// Token: 0x0400AE2B RID: 44587
+	// Token: 0x0400B230 RID: 45616
 	private double SpawnInterval;
 
-	// Token: 0x0400AE2C RID: 44588
+	// Token: 0x0400B231 RID: 45617
 	private readonly List<ITowerDefenseEventMonsterInfo> PreviewMonsters = new List<ITowerDefenseEventMonsterInfo>();
 
-	// Token: 0x0400AE2D RID: 44589
+	// Token: 0x0400B232 RID: 45618
 	private readonly Dictionary<long, ITowerDefenseEventMonsterInfo> SpawnedMonsters = new Dictionary<long, ITowerDefenseEventMonsterInfo>();
 
-	// Token: 0x0400AE2E RID: 44590
+	// Token: 0x0400B233 RID: 45619
 	private double SpawnTimestamp;
 
-	// Token: 0x0400AE2F RID: 44591
+	// Token: 0x0400B234 RID: 45620
 	private int SpawnIndex;
 }

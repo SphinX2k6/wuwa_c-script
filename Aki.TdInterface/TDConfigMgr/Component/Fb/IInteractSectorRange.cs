@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A70 RID: 2672
+	// Token: 0x02000B3A RID: 2874
 	public class IInteractSectorRange
 	{
-		// Token: 0x06003D99 RID: 15769 RVA: 0x0009E180 File Offset: 0x0009C380
-		[NullableContext(1)]
+		// Token: 0x060041C2 RID: 16834 RVA: 0x000A7738 File Offset: 0x000A5938
 		public static IInteractSectorRange Create(IInteractSectorRange? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000E76 RID: 3702
-		// (get) Token: 0x06003D9A RID: 15770 RVA: 0x0009E19F File Offset: 0x0009C39F
+		// Token: 0x17000F49 RID: 3913
+		// (get) Token: 0x060041C3 RID: 16835 RVA: 0x000A7757 File Offset: 0x000A5957
 		public virtual float Begin
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E77 RID: 3703
-		// (get) Token: 0x06003D9B RID: 15771 RVA: 0x0009E1AC File Offset: 0x0009C3AC
+		// Token: 0x17000F4A RID: 3914
+		// (get) Token: 0x060041C4 RID: 16836 RVA: 0x000A7764 File Offset: 0x000A5964
 		public virtual float End
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002251 RID: 8785
+		// Token: 0x0400246D RID: 9325
 		private IInteractSectorRange Instance;
 	}
 }

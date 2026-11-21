@@ -7,14 +7,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.ScreenEffect.Data
 {
-	// Token: 0x02003AE7 RID: 15079
+	// Token: 0x020030B1 RID: 12465
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/ScreenEffect/Data/EffectScreenPlayData.EffectScreenPlayData_C")]
 	[UnrealStructLayout(376, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 369)]
 	public class EffectScreenPlayData_C : UPrimaryDataAsset, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06020A57 RID: 133719 RVA: 0x008D8F68 File Offset: 0x008D7168
+		// Token: 0x0601DEF9 RID: 122617 RVA: 0x009067C3 File Offset: 0x009049C3
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (EffectScreenPlayData_C._ClassPtr == IntPtr.Zero)
@@ -24,334 +24,316 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.ScreenEffect.Data
 			return EffectScreenPlayData_C._ClassPtr;
 		}
 
-		// Token: 0x06020A58 RID: 133720 RVA: 0x008D8F8C File Offset: 0x008D718C
+		// Token: 0x0601DEFA RID: 122618 RVA: 0x009067E8 File Offset: 0x009049E8
 		public EffectScreenPlayData_C() : this(BuiltinUtils.AllocNativeUObject(EffectScreenPlayData_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06020A59 RID: 133721 RVA: 0x008D8FB4 File Offset: 0x008D71B4
+		// Token: 0x0601DEFB RID: 122619 RVA: 0x00906810 File Offset: 0x00904A10
 		public EffectScreenPlayData_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(EffectScreenPlayData_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170031CA RID: 12746
-		// (get) Token: 0x06020A5A RID: 133722 RVA: 0x008D8FE7 File Offset: 0x008D71E7
-		// (set) Token: 0x06020A5B RID: 133723 RVA: 0x008D8FF7 File Offset: 0x008D71F7
+		// Token: 0x17003129 RID: 12585
+		// (get) Token: 0x0601DEFC RID: 122620 RVA: 0x00906843 File Offset: 0x00904A43
+		// (set) Token: 0x0601DEFD RID: 122621 RVA: 0x00906853 File Offset: 0x00904A53
 		public unsafe float Start
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_Start);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_Start) = value;
 			}
 		}
 
-		// Token: 0x170031CB RID: 12747
-		// (get) Token: 0x06020A5C RID: 133724 RVA: 0x008D9008 File Offset: 0x008D7208
-		// (set) Token: 0x06020A5D RID: 133725 RVA: 0x008D9018 File Offset: 0x008D7218
+		// Token: 0x1700312A RID: 12586
+		// (get) Token: 0x0601DEFE RID: 122622 RVA: 0x00906864 File Offset: 0x00904A64
+		// (set) Token: 0x0601DEFF RID: 122623 RVA: 0x00906874 File Offset: 0x00904A74
 		public unsafe float Loop
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_Loop);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_Loop) = value;
 			}
 		}
 
-		// Token: 0x170031CC RID: 12748
-		// (get) Token: 0x06020A5E RID: 133726 RVA: 0x008D9029 File Offset: 0x008D7229
-		// (set) Token: 0x06020A5F RID: 133727 RVA: 0x008D9039 File Offset: 0x008D7239
+		// Token: 0x1700312B RID: 12587
+		// (get) Token: 0x0601DF00 RID: 122624 RVA: 0x00906885 File Offset: 0x00904A85
+		// (set) Token: 0x0601DF01 RID: 122625 RVA: 0x00906895 File Offset: 0x00904A95
 		public unsafe float End
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_End);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_End) = value;
 			}
 		}
 
-		// Token: 0x170031CD RID: 12749
-		// (get) Token: 0x06020A60 RID: 133728 RVA: 0x008D904A File Offset: 0x008D724A
-		// (set) Token: 0x06020A61 RID: 133729 RVA: 0x008D905E File Offset: 0x008D725E
-		[Nullable(0)]
-		public unsafe TEnumAsByte<E_SE_PlayOrder> PlayOrderType
-		{
-			[NullableContext(0)]
-			get
-			{
-				return *(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_3);
-			}
-			[NullableContext(0)]
-			set
-			{
-				*(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_3) = value;
-			}
-		}
-
-		// Token: 0x170031CE RID: 12750
-		// (get) Token: 0x06020A62 RID: 133730 RVA: 0x008D9073 File Offset: 0x008D7273
-		// (set) Token: 0x06020A63 RID: 133731 RVA: 0x008D9087 File Offset: 0x008D7287
+		// Token: 0x1700312C RID: 12588
+		// (get) Token: 0x0601DF02 RID: 122626 RVA: 0x009068A6 File Offset: 0x00904AA6
+		// (set) Token: 0x0601DF03 RID: 122627 RVA: 0x009068BA File Offset: 0x00904ABA
 		[Nullable(2)]
 		public unsafe UPrefabAsset LGUIPrefab
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UPrefabAsset>(base.NativePtr / (IntPtr)sizeof(void*) + EffectScreenPlayData_C.__PropertyOffset_4);
+				return BuiltinUtils.ObjectPropertyGetter<UPrefabAsset>(base.NativePtr / (IntPtr)sizeof(void*) + EffectScreenPlayData_C.__PropertyOffset_LGUIPrefab);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + EffectScreenPlayData_C.__PropertyOffset_4, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + EffectScreenPlayData_C.__PropertyOffset_LGUIPrefab, value);
 			}
 		}
 
-		// Token: 0x170031CF RID: 12751
-		// (get) Token: 0x06020A64 RID: 133732 RVA: 0x008D909C File Offset: 0x008D729C
-		// (set) Token: 0x06020A65 RID: 133733 RVA: 0x008D90AC File Offset: 0x008D72AC
+		// Token: 0x1700312D RID: 12589
+		// (get) Token: 0x0601DF04 RID: 122628 RVA: 0x009068CF File Offset: 0x00904ACF
+		// (set) Token: 0x0601DF05 RID: 122629 RVA: 0x009068DF File Offset: 0x00904ADF
 		public unsafe bool bStopByCall
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_5) != 0;
+				return *(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_bStopByCall) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_5) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_bStopByCall) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170031D0 RID: 12752
-		// (get) Token: 0x06020A66 RID: 133734 RVA: 0x008D90BD File Offset: 0x008D72BD
-		// (set) Token: 0x06020A67 RID: 133735 RVA: 0x008D90CD File Offset: 0x008D72CD
+		// Token: 0x1700312E RID: 12590
+		// (get) Token: 0x0601DF06 RID: 122630 RVA: 0x009068F0 File Offset: 0x00904AF0
+		// (set) Token: 0x0601DF07 RID: 122631 RVA: 0x00906900 File Offset: 0x00904B00
 		public unsafe bool bNormalizeTime
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_6) != 0;
+				return *(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_bNormalizeTime) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_6) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_bNormalizeTime) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170031D1 RID: 12753
-		// (get) Token: 0x06020A68 RID: 133736 RVA: 0x008D90DE File Offset: 0x008D72DE
-		// (set) Token: 0x06020A69 RID: 133737 RVA: 0x008D90EE File Offset: 0x008D72EE
+		// Token: 0x1700312F RID: 12591
+		// (get) Token: 0x0601DF08 RID: 122632 RVA: 0x00906911 File Offset: 0x00904B11
+		// (set) Token: 0x0601DF09 RID: 122633 RVA: 0x00906921 File Offset: 0x00904B21
 		public unsafe int Order
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_7);
+				return *(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_Order);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_7) = value;
+				*(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_Order) = value;
 			}
 		}
 
-		// Token: 0x170031D2 RID: 12754
-		// (get) Token: 0x06020A6A RID: 133738 RVA: 0x008D90FF File Offset: 0x008D72FF
-		// (set) Token: 0x06020A6B RID: 133739 RVA: 0x008D910F File Offset: 0x008D730F
+		// Token: 0x17003130 RID: 12592
+		// (get) Token: 0x0601DF0A RID: 122634 RVA: 0x00906932 File Offset: 0x00904B32
+		// (set) Token: 0x0601DF0B RID: 122635 RVA: 0x00906942 File Offset: 0x00904B42
 		public unsafe float fadeSpeed
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_8);
+				return *(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_fadeSpeed);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_8) = value;
+				*(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_fadeSpeed) = value;
 			}
 		}
 
-		// Token: 0x170031D3 RID: 12755
-		// (get) Token: 0x06020A6C RID: 133740 RVA: 0x008D9120 File Offset: 0x008D7320
-		// (set) Token: 0x06020A6D RID: 133741 RVA: 0x008D9130 File Offset: 0x008D7330
+		// Token: 0x17003131 RID: 12593
+		// (get) Token: 0x0601DF0C RID: 122636 RVA: 0x00906953 File Offset: 0x00904B53
+		// (set) Token: 0x0601DF0D RID: 122637 RVA: 0x00906963 File Offset: 0x00904B63
 		public unsafe bool OverrideFadeOutSpeed
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_9) != 0;
+				return *(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_OverrideFadeOutSpeed) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_9) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_OverrideFadeOutSpeed) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170031D4 RID: 12756
-		// (get) Token: 0x06020A6E RID: 133742 RVA: 0x008D9141 File Offset: 0x008D7341
-		// (set) Token: 0x06020A6F RID: 133743 RVA: 0x008D9151 File Offset: 0x008D7351
+		// Token: 0x17003132 RID: 12594
+		// (get) Token: 0x0601DF0E RID: 122638 RVA: 0x00906974 File Offset: 0x00904B74
+		// (set) Token: 0x0601DF0F RID: 122639 RVA: 0x00906984 File Offset: 0x00904B84
 		public unsafe float fadeOutSpeedOverride
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_10);
+				return *(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_fadeOutSpeedOverride);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_10) = value;
+				*(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_fadeOutSpeedOverride) = value;
 			}
 		}
 
-		// Token: 0x170031D5 RID: 12757
-		// (get) Token: 0x06020A70 RID: 133744 RVA: 0x008D9162 File Offset: 0x008D7362
-		// (set) Token: 0x06020A71 RID: 133745 RVA: 0x008D9172 File Offset: 0x008D7372
+		// Token: 0x17003133 RID: 12595
+		// (get) Token: 0x0601DF10 RID: 122640 RVA: 0x00906995 File Offset: 0x00904B95
+		// (set) Token: 0x0601DF11 RID: 122641 RVA: 0x009069A5 File Offset: 0x00904BA5
 		public unsafe bool bUsedForSequence
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_11) != 0;
+				return *(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_bUsedForSequence) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_11) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_bUsedForSequence) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170031D6 RID: 12758
-		// (get) Token: 0x06020A72 RID: 133746 RVA: 0x008D9183 File Offset: 0x008D7383
-		// (set) Token: 0x06020A73 RID: 133747 RVA: 0x008D9197 File Offset: 0x008D7397
+		// Token: 0x17003134 RID: 12596
+		// (get) Token: 0x0601DF12 RID: 122642 RVA: 0x009069B6 File Offset: 0x00904BB6
+		// (set) Token: 0x0601DF13 RID: 122643 RVA: 0x009069CA File Offset: 0x00904BCA
 		[Nullable(0)]
 		public unsafe TEnumAsByte<E_SE_RootType> RootType
 		{
 			[NullableContext(0)]
 			get
 			{
-				return *(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_12);
+				return *(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_RootType);
 			}
 			[NullableContext(0)]
 			set
 			{
-				*(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_12) = value;
+				*(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_RootType) = value;
 			}
 		}
 
-		// Token: 0x170031D7 RID: 12759
-		// (get) Token: 0x06020A74 RID: 133748 RVA: 0x008D91AC File Offset: 0x008D73AC
-		// (set) Token: 0x06020A75 RID: 133749 RVA: 0x008D91BC File Offset: 0x008D73BC
+		// Token: 0x17003135 RID: 12597
+		// (get) Token: 0x0601DF14 RID: 122644 RVA: 0x009069DF File Offset: 0x00904BDF
+		// (set) Token: 0x0601DF15 RID: 122645 RVA: 0x009069EF File Offset: 0x00904BEF
 		public unsafe bool bAutoDestroy
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_13) != 0;
+				return *(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_bAutoDestroy) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_13) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_bAutoDestroy) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170031D8 RID: 12760
-		// (get) Token: 0x06020A76 RID: 133750 RVA: 0x008D91CD File Offset: 0x008D73CD
-		// (set) Token: 0x06020A77 RID: 133751 RVA: 0x008D91DD File Offset: 0x008D73DD
+		// Token: 0x17003136 RID: 12598
+		// (get) Token: 0x0601DF16 RID: 122646 RVA: 0x00906A00 File Offset: 0x00904C00
+		// (set) Token: 0x0601DF17 RID: 122647 RVA: 0x00906A10 File Offset: 0x00904C10
 		public unsafe bool bUseAudio
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_14) != 0;
+				return *(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_bUseAudio) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_14) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_bUseAudio) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170031D9 RID: 12761
-		// (get) Token: 0x06020A78 RID: 133752 RVA: 0x008D91EE File Offset: 0x008D73EE
-		// (set) Token: 0x06020A79 RID: 133753 RVA: 0x008D9202 File Offset: 0x008D7402
+		// Token: 0x17003137 RID: 12599
+		// (get) Token: 0x0601DF18 RID: 122648 RVA: 0x00906A21 File Offset: 0x00904C21
+		// (set) Token: 0x0601DF19 RID: 122649 RVA: 0x00906A35 File Offset: 0x00904C35
 		[Nullable(2)]
 		public unsafe UAkAudioEvent AudioEvent
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UAkAudioEvent>(base.NativePtr / (IntPtr)sizeof(void*) + EffectScreenPlayData_C.__PropertyOffset_15);
+				return BuiltinUtils.ObjectPropertyGetter<UAkAudioEvent>(base.NativePtr / (IntPtr)sizeof(void*) + EffectScreenPlayData_C.__PropertyOffset_AudioEvent);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + EffectScreenPlayData_C.__PropertyOffset_15, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + EffectScreenPlayData_C.__PropertyOffset_AudioEvent, value);
 			}
 		}
 
-		// Token: 0x170031DA RID: 12762
-		// (get) Token: 0x06020A7A RID: 133754 RVA: 0x008D9217 File Offset: 0x008D7417
-		// (set) Token: 0x06020A7B RID: 133755 RVA: 0x008D922B File Offset: 0x008D742B
+		// Token: 0x17003138 RID: 12600
+		// (get) Token: 0x0601DF1A RID: 122650 RVA: 0x00906A4A File Offset: 0x00904C4A
+		// (set) Token: 0x0601DF1B RID: 122651 RVA: 0x00906A5E File Offset: 0x00904C5E
 		[Nullable(2)]
 		public unsafe UAkAudioEvent AudioEventEnd
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UAkAudioEvent>(base.NativePtr / (IntPtr)sizeof(void*) + EffectScreenPlayData_C.__PropertyOffset_16);
+				return BuiltinUtils.ObjectPropertyGetter<UAkAudioEvent>(base.NativePtr / (IntPtr)sizeof(void*) + EffectScreenPlayData_C.__PropertyOffset_AudioEventEnd);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + EffectScreenPlayData_C.__PropertyOffset_16, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + EffectScreenPlayData_C.__PropertyOffset_AudioEventEnd, value);
 			}
 		}
 
-		// Token: 0x170031DB RID: 12763
-		// (get) Token: 0x06020A7C RID: 133756 RVA: 0x008D9240 File Offset: 0x008D7440
-		// (set) Token: 0x06020A7D RID: 133757 RVA: 0x008D9250 File Offset: 0x008D7450
+		// Token: 0x17003139 RID: 12601
+		// (get) Token: 0x0601DF1C RID: 122652 RVA: 0x00906A73 File Offset: 0x00904C73
+		// (set) Token: 0x0601DF1D RID: 122653 RVA: 0x00906A83 File Offset: 0x00904C83
 		public unsafe float AudioEventEndDelay
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_17);
+				return *(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_AudioEventEndDelay);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_17) = value;
+				*(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_AudioEventEndDelay) = value;
 			}
 		}
 
-		// Token: 0x170031DC RID: 12764
-		// (get) Token: 0x06020A7E RID: 133758 RVA: 0x008D9261 File Offset: 0x008D7461
-		// (set) Token: 0x06020A7F RID: 133759 RVA: 0x008D9275 File Offset: 0x008D7475
+		// Token: 0x1700313A RID: 12602
+		// (get) Token: 0x0601DF1E RID: 122654 RVA: 0x00906A94 File Offset: 0x00904C94
+		// (set) Token: 0x0601DF1F RID: 122655 RVA: 0x00906AA8 File Offset: 0x00904CA8
 		public unsafe string ConsoleCommandOnBegin
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)EffectScreenPlayData_C.__PropertyOffset_18)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)EffectScreenPlayData_C.__PropertyOffset_ConsoleCommandOnBegin)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)EffectScreenPlayData_C.__PropertyOffset_18)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)EffectScreenPlayData_C.__PropertyOffset_ConsoleCommandOnBegin)), value);
 			}
 		}
 
-		// Token: 0x170031DD RID: 12765
-		// (get) Token: 0x06020A80 RID: 133760 RVA: 0x008D928A File Offset: 0x008D748A
-		// (set) Token: 0x06020A81 RID: 133761 RVA: 0x008D929E File Offset: 0x008D749E
+		// Token: 0x1700313B RID: 12603
+		// (get) Token: 0x0601DF20 RID: 122656 RVA: 0x00906ABD File Offset: 0x00904CBD
+		// (set) Token: 0x0601DF21 RID: 122657 RVA: 0x00906AD1 File Offset: 0x00904CD1
 		public unsafe string ConsoleCommandOnEnd
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)EffectScreenPlayData_C.__PropertyOffset_19)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)EffectScreenPlayData_C.__PropertyOffset_ConsoleCommandOnEnd)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)EffectScreenPlayData_C.__PropertyOffset_19)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)EffectScreenPlayData_C.__PropertyOffset_ConsoleCommandOnEnd)), value);
 			}
 		}
 
-		// Token: 0x170031DE RID: 12766
-		// (get) Token: 0x06020A82 RID: 133762 RVA: 0x008D92B4 File Offset: 0x008D74B4
-		// (set) Token: 0x06020A83 RID: 133763 RVA: 0x008D92ED File Offset: 0x008D74ED
+		// Token: 0x1700313C RID: 12604
+		// (get) Token: 0x0601DF22 RID: 122658 RVA: 0x00906AE8 File Offset: 0x00904CE8
+		// (set) Token: 0x0601DF23 RID: 122659 RVA: 0x00906B21 File Offset: 0x00904D21
 		public TMap<string, FKuroCurveLinearColor> LinearColorParameter
 		{
 			get
@@ -360,7 +342,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.ScreenEffect.Data
 				TMap<string, FKuroCurveLinearColor> result;
 				if ((result = this._LinearColorParameter) == null)
 				{
-					result = (this._LinearColorParameter = new TMap<string, FKuroCurveLinearColor>(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_20, this));
+					result = (this._LinearColorParameter = new TMap<string, FKuroCurveLinearColor>(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_LinearColorParameter, this));
 				}
 				return result;
 			}
@@ -370,9 +352,9 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.ScreenEffect.Data
 			}
 		}
 
-		// Token: 0x170031DF RID: 12767
-		// (get) Token: 0x06020A84 RID: 133764 RVA: 0x008D92FC File Offset: 0x008D74FC
-		// (set) Token: 0x06020A85 RID: 133765 RVA: 0x008D9335 File Offset: 0x008D7535
+		// Token: 0x1700313D RID: 12605
+		// (get) Token: 0x0601DF24 RID: 122660 RVA: 0x00906B30 File Offset: 0x00904D30
+		// (set) Token: 0x0601DF25 RID: 122661 RVA: 0x00906B69 File Offset: 0x00904D69
 		public TMap<string, FKuroCurveFloat> FloatParameter
 		{
 			get
@@ -381,7 +363,7 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.ScreenEffect.Data
 				TMap<string, FKuroCurveFloat> result;
 				if ((result = this._FloatParameter) == null)
 				{
-					result = (this._FloatParameter = new TMap<string, FKuroCurveFloat>(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_21, this));
+					result = (this._FloatParameter = new TMap<string, FKuroCurveFloat>(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_FloatParameter, this));
 				}
 				return result;
 			}
@@ -391,135 +373,111 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.ScreenEffect.Data
 			}
 		}
 
-		// Token: 0x170031E0 RID: 12768
-		// (get) Token: 0x06020A86 RID: 133766 RVA: 0x008D9343 File Offset: 0x008D7543
-		// (set) Token: 0x06020A87 RID: 133767 RVA: 0x008D9353 File Offset: 0x008D7553
+		// Token: 0x1700313E RID: 12606
+		// (get) Token: 0x0601DF26 RID: 122662 RVA: 0x00906B77 File Offset: 0x00904D77
+		// (set) Token: 0x0601DF27 RID: 122663 RVA: 0x00906B87 File Offset: 0x00904D87
 		public unsafe float EffectTweenSpeed
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_22);
+				return *(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_EffectTweenSpeed);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_22) = value;
+				*(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_EffectTweenSpeed) = value;
 			}
 		}
 
-		// Token: 0x170031E1 RID: 12769
-		// (get) Token: 0x06020A88 RID: 133768 RVA: 0x008D9364 File Offset: 0x008D7564
-		// (set) Token: 0x06020A89 RID: 133769 RVA: 0x008D939D File Offset: 0x008D759D
-		public TArray<SScreenEffectExtraState> ExtraStates
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<SScreenEffectExtraState> result;
-				if ((result = this._ExtraStates) == null)
-				{
-					result = (this._ExtraStates = new TArray<SScreenEffectExtraState>(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_23, this));
-				}
-				return result;
-			}
-			set
-			{
-				this.ExtraStates.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x170031E2 RID: 12770
-		// (get) Token: 0x06020A8A RID: 133770 RVA: 0x008D93AB File Offset: 0x008D75AB
-		// (set) Token: 0x06020A8B RID: 133771 RVA: 0x008D93BB File Offset: 0x008D75BB
+		// Token: 0x1700313F RID: 12607
+		// (get) Token: 0x0601DF28 RID: 122664 RVA: 0x00906B98 File Offset: 0x00904D98
+		// (set) Token: 0x0601DF29 RID: 122665 RVA: 0x00906BA8 File Offset: 0x00904DA8
 		public unsafe bool bStartLoopEndByCurve
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_24) != 0;
+				return *(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_bStartLoopEndByCurve) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_24) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)EffectScreenPlayData_C.__PropertyOffset_bStartLoopEndByCurve) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x06020A8C RID: 133772 RVA: 0x008D93CC File Offset: 0x008D75CC
+		// Token: 0x0601DF2A RID: 122666 RVA: 0x00906BB9 File Offset: 0x00904DB9
 		protected EffectScreenPlayData_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400FD64 RID: 64868
+		// Token: 0x0400FCF8 RID: 64760
 		public new const string __ObjectPath = "/Game/Aki/Render/RuntimeBP/ScreenEffect/Data/EffectScreenPlayData.EffectScreenPlayData_C";
 
-		// Token: 0x0400FD65 RID: 64869
+		// Token: 0x0400FCF9 RID: 64761
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400FD66 RID: 64870
+		// Token: 0x0400FCFA RID: 64762
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400FD67 RID: 64871
-		internal static int __PropertyOffset_0;
+		// Token: 0x0400FCFB RID: 64763
+		internal static int __PropertyOffset_Start;
 
-		// Token: 0x0400FD68 RID: 64872
-		internal static int __PropertyOffset_1;
+		// Token: 0x0400FCFC RID: 64764
+		internal static int __PropertyOffset_Loop;
 
-		// Token: 0x0400FD69 RID: 64873
-		internal static int __PropertyOffset_2;
+		// Token: 0x0400FCFD RID: 64765
+		internal static int __PropertyOffset_End;
 
-		// Token: 0x0400FD6A RID: 64874
-		internal static int __PropertyOffset_3;
+		// Token: 0x0400FCFE RID: 64766
+		internal static int __PropertyOffset_LGUIPrefab;
 
-		// Token: 0x0400FD6B RID: 64875
-		internal static int __PropertyOffset_4;
+		// Token: 0x0400FCFF RID: 64767
+		internal static int __PropertyOffset_bStopByCall;
 
-		// Token: 0x0400FD6C RID: 64876
-		internal static int __PropertyOffset_5;
+		// Token: 0x0400FD00 RID: 64768
+		internal static int __PropertyOffset_bNormalizeTime;
 
-		// Token: 0x0400FD6D RID: 64877
-		internal static int __PropertyOffset_6;
+		// Token: 0x0400FD01 RID: 64769
+		internal static int __PropertyOffset_Order;
 
-		// Token: 0x0400FD6E RID: 64878
-		internal static int __PropertyOffset_7;
+		// Token: 0x0400FD02 RID: 64770
+		internal static int __PropertyOffset_fadeSpeed;
 
-		// Token: 0x0400FD6F RID: 64879
-		internal static int __PropertyOffset_8;
+		// Token: 0x0400FD03 RID: 64771
+		internal static int __PropertyOffset_OverrideFadeOutSpeed;
 
-		// Token: 0x0400FD70 RID: 64880
-		internal static int __PropertyOffset_9;
+		// Token: 0x0400FD04 RID: 64772
+		internal static int __PropertyOffset_fadeOutSpeedOverride;
 
-		// Token: 0x0400FD71 RID: 64881
-		internal static int __PropertyOffset_10;
+		// Token: 0x0400FD05 RID: 64773
+		internal static int __PropertyOffset_bUsedForSequence;
 
-		// Token: 0x0400FD72 RID: 64882
-		internal static int __PropertyOffset_11;
+		// Token: 0x0400FD06 RID: 64774
+		internal static int __PropertyOffset_RootType;
 
-		// Token: 0x0400FD73 RID: 64883
-		internal static int __PropertyOffset_12;
+		// Token: 0x0400FD07 RID: 64775
+		internal static int __PropertyOffset_bAutoDestroy;
 
-		// Token: 0x0400FD74 RID: 64884
-		internal static int __PropertyOffset_13;
+		// Token: 0x0400FD08 RID: 64776
+		internal static int __PropertyOffset_bUseAudio;
 
-		// Token: 0x0400FD75 RID: 64885
-		internal static int __PropertyOffset_14;
+		// Token: 0x0400FD09 RID: 64777
+		internal static int __PropertyOffset_AudioEvent;
 
-		// Token: 0x0400FD76 RID: 64886
-		internal static int __PropertyOffset_15;
+		// Token: 0x0400FD0A RID: 64778
+		internal static int __PropertyOffset_AudioEventEnd;
 
-		// Token: 0x0400FD77 RID: 64887
-		internal static int __PropertyOffset_16;
+		// Token: 0x0400FD0B RID: 64779
+		internal static int __PropertyOffset_AudioEventEndDelay;
 
-		// Token: 0x0400FD78 RID: 64888
-		internal static int __PropertyOffset_17;
+		// Token: 0x0400FD0C RID: 64780
+		internal static int __PropertyOffset_ConsoleCommandOnBegin;
 
-		// Token: 0x0400FD79 RID: 64889
-		internal static int __PropertyOffset_18;
+		// Token: 0x0400FD0D RID: 64781
+		internal static int __PropertyOffset_ConsoleCommandOnEnd;
 
-		// Token: 0x0400FD7A RID: 64890
-		internal static int __PropertyOffset_19;
+		// Token: 0x0400FD0E RID: 64782
+		internal static int __PropertyOffset_LinearColorParameter;
 
-		// Token: 0x0400FD7B RID: 64891
-		internal static int __PropertyOffset_20;
-
-		// Token: 0x0400FD7C RID: 64892
+		// Token: 0x0400FD0F RID: 64783
 		[Nullable(new byte[]
 		{
 			2,
@@ -528,10 +486,10 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.ScreenEffect.Data
 		})]
 		private TMap<string, FKuroCurveLinearColor> _LinearColorParameter;
 
-		// Token: 0x0400FD7D RID: 64893
-		internal static int __PropertyOffset_21;
+		// Token: 0x0400FD10 RID: 64784
+		internal static int __PropertyOffset_FloatParameter;
 
-		// Token: 0x0400FD7E RID: 64894
+		// Token: 0x0400FD11 RID: 64785
 		[Nullable(new byte[]
 		{
 			2,
@@ -540,21 +498,10 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.ScreenEffect.Data
 		})]
 		private TMap<string, FKuroCurveFloat> _FloatParameter;
 
-		// Token: 0x0400FD7F RID: 64895
-		internal static int __PropertyOffset_22;
+		// Token: 0x0400FD12 RID: 64786
+		internal static int __PropertyOffset_EffectTweenSpeed;
 
-		// Token: 0x0400FD80 RID: 64896
-		internal static int __PropertyOffset_23;
-
-		// Token: 0x0400FD81 RID: 64897
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<SScreenEffectExtraState> _ExtraStates;
-
-		// Token: 0x0400FD82 RID: 64898
-		internal static int __PropertyOffset_24;
+		// Token: 0x0400FD13 RID: 64787
+		internal static int __PropertyOffset_bStartLoopEndByCurve;
 	}
 }

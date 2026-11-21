@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020009CF RID: 2511
+	// Token: 0x02000AA4 RID: 2724
 	public class ConfigTemporaryTeleportMarkByMarkId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003AEE RID: 15086 RVA: 0x001A6FA4 File Offset: 0x001A51A4
+		// Token: 0x06003FEC RID: 16364 RVA: 0x001C6338 File Offset: 0x001C4538
 		static ConfigTemporaryTeleportMarkByMarkId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigTemporaryTeleportMarkByMarkId.CreateStaticDefaultValue), new Action(ConfigTemporaryTeleportMarkByMarkId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003AEF RID: 15087 RVA: 0x001A6FC4 File Offset: 0x001A51C4
+		// Token: 0x06003FED RID: 16365 RVA: 0x001C6358 File Offset: 0x001C4558
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigTemporaryTeleportMarkByMarkId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003AF0 RID: 15088 RVA: 0x001A7043 File Offset: 0x001A5243
+		// Token: 0x06003FEE RID: 16366 RVA: 0x001C63D7 File Offset: 0x001C45D7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigTemporaryTeleportMarkByMarkId.LogPair = null;
 			ConfigTemporaryTeleportMarkByMarkId.HandleId = 0;
 		}
 
-		// Token: 0x06003AF1 RID: 15089 RVA: 0x001A7051 File Offset: 0x001A5251
+		// Token: 0x06003FEF RID: 16367 RVA: 0x001C63E5 File Offset: 0x001C45E5
 		public static void Init()
 		{
 			ConfigTemporaryTeleportMarkByMarkId.HandleId = ConfigCommon.InitDataStatement(ConfigTemporaryTeleportMarkByMarkId.HandleId, "db_map_mark.db", "select BinData from `TemporaryTeleportMark` where MarkId=?");
 		}
 
-		// Token: 0x06003AF2 RID: 15090 RVA: 0x001A706C File Offset: 0x001A526C
+		// Token: 0x06003FF0 RID: 16368 RVA: 0x001C6400 File Offset: 0x001C4600
 		public static TemporaryTeleportMark? GetConfig(int p0MarkId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigTemporaryTeleportMarkByMarkId.HandleId, ConfigTemporaryTeleportMarkByMarkId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new TemporaryTeleportMark?(rootAsTemporaryTeleportMark);
 		}
 
-		// Token: 0x0400448F RID: 17551
+		// Token: 0x04004A62 RID: 19042
 		private const string DB = "db_map_mark.db";
 
-		// Token: 0x04004490 RID: 17552
+		// Token: 0x04004A63 RID: 19043
 		private const string FILE = "d.地图标记.xlsx";
 
-		// Token: 0x04004491 RID: 17553
+		// Token: 0x04004A64 RID: 19044
 		private const string TABLE = "TemporaryTeleportMark";
 
-		// Token: 0x04004492 RID: 17554
+		// Token: 0x04004A65 RID: 19045
 		private const string COMMAND = "select BinData from `TemporaryTeleportMark` where MarkId=?";
 
-		// Token: 0x04004493 RID: 17555
+		// Token: 0x04004A66 RID: 19046
 		private const string KEY_PREFIX = "TemporaryTeleportMarkByMarkId";
 
-		// Token: 0x04004494 RID: 17556
+		// Token: 0x04004A67 RID: 19047
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004495 RID: 17557
+		// Token: 0x04004A68 RID: 19048
 		private static int HandleId;
 	}
 }

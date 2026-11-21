@@ -10,18 +10,18 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02000F38 RID: 3896
+// Token: 0x020003ED RID: 1005
 [NullableContext(2)]
 [Nullable(0)]
 public class AcquireView : UiViewBase
 {
-	// Token: 0x060062F1 RID: 25329 RVA: 0x00135C3C File Offset: 0x00133E3C
+	// Token: 0x06003689 RID: 13961 RVA: 0x0013E564 File Offset: 0x0013C764
 	[NullableContext(1)]
 	public AcquireView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060062F2 RID: 25330 RVA: 0x00135C48 File Offset: 0x00133E48
+	// Token: 0x0600368A RID: 13962 RVA: 0x0013E570 File Offset: 0x0013C770
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -47,14 +47,14 @@ public class AcquireView : UiViewBase
 		};
 	}
 
-	// Token: 0x060062F3 RID: 25331 RVA: 0x00135DC0 File Offset: 0x00133FC0
+	// Token: 0x0600368B RID: 13963 RVA: 0x0013E6E8 File Offset: 0x0013C8E8
 	[NullableContext(1)]
 	private TableTextArgNew GetExchangeTableText(int selectValue)
 	{
 		return new TableTextArgNew(TextConfig.Instance.GetTextContentIdById("UseCount"), new <>z__ReadOnlySingleElementList<object>(selectValue));
 	}
 
-	// Token: 0x060062F4 RID: 25332 RVA: 0x00135DE1 File Offset: 0x00133FE1
+	// Token: 0x0600368C RID: 13964 RVA: 0x0013E709 File Offset: 0x0013C909
 	private void ValueChangeFunction(int selectValue)
 	{
 		if (this.AcquireData.GetRemainItemCount() > 0)
@@ -65,7 +65,7 @@ public class AcquireView : UiViewBase
 		this.AcquireData.SetAmount(0);
 	}
 
-	// Token: 0x060062F5 RID: 25333 RVA: 0x00135E0C File Offset: 0x0013400C
+	// Token: 0x0600368D RID: 13965 RVA: 0x0013E734 File Offset: 0x0013C934
 	private void InitNumberSelect()
 	{
 		this.NumberSelect = new NumberSelectComponent(base.GetItem(10));
@@ -83,7 +83,7 @@ public class AcquireView : UiViewBase
 		this.NumberSelect.Init(data);
 	}
 
-	// Token: 0x060062F6 RID: 25334 RVA: 0x00135E94 File Offset: 0x00134094
+	// Token: 0x0600368E RID: 13966 RVA: 0x0013E7BC File Offset: 0x0013C9BC
 	private bool CheckIfGiftItem()
 	{
 		int configId = this.AcquireData.GetConfigId();
@@ -100,7 +100,7 @@ public class AcquireView : UiViewBase
 		return itemType.GetValueOrDefault() == InventoryDefine.EItemType.Gift;
 	}
 
-	// Token: 0x060062F7 RID: 25335 RVA: 0x00135ED8 File Offset: 0x001340D8
+	// Token: 0x0600368F RID: 13967 RVA: 0x0013E800 File Offset: 0x0013CA00
 	protected override void OnStart()
 	{
 		this.AcquireData = (this.OpenParam as AcquireData);
@@ -115,7 +115,7 @@ public class AcquireView : UiViewBase
 		this.RefreshByAcquireData();
 	}
 
-	// Token: 0x060062F8 RID: 25336 RVA: 0x00135F78 File Offset: 0x00134178
+	// Token: 0x06003690 RID: 13968 RVA: 0x0013E8A0 File Offset: 0x0013CAA0
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<AcquireData>(EEventName.RefreshAcquireView, new Action<AcquireData>(this.Refresh));
@@ -123,7 +123,7 @@ public class AcquireView : UiViewBase
 		EventSystem.Instance.Add<EUiViewName, int>(EEventName.CloseView, new Action<EUiViewName, int>(this.OnCloseView));
 	}
 
-	// Token: 0x060062F9 RID: 25337 RVA: 0x00135FD8 File Offset: 0x001341D8
+	// Token: 0x06003691 RID: 13969 RVA: 0x0013E900 File Offset: 0x0013CB00
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.RefreshAcquireView, new Action<AcquireData>(this.Refresh));
@@ -131,7 +131,7 @@ public class AcquireView : UiViewBase
 		EventSystem.Instance.Remove(EEventName.CloseView, new Action<EUiViewName, int>(this.OnCloseView));
 	}
 
-	// Token: 0x060062FA RID: 25338 RVA: 0x00136036 File Offset: 0x00134236
+	// Token: 0x06003692 RID: 13970 RVA: 0x0013E95E File Offset: 0x0013CB5E
 	private void OnShowRewardView()
 	{
 		IUiPopFrameInterface childPopView = this.ChildPopView;
@@ -142,7 +142,7 @@ public class AcquireView : UiViewBase
 		childPopView.HidePopView();
 	}
 
-	// Token: 0x060062FB RID: 25339 RVA: 0x00136048 File Offset: 0x00134248
+	// Token: 0x06003693 RID: 13971 RVA: 0x0013E970 File Offset: 0x0013CB70
 	private void OnCloseView(EUiViewName viewName, int i)
 	{
 		if (viewName == EUiViewName.CommonRewardView || viewName == EUiViewName.CompositeRewardView || viewName == EUiViewName.ExploreRewardView)
@@ -156,7 +156,7 @@ public class AcquireView : UiViewBase
 		}
 	}
 
-	// Token: 0x060062FC RID: 25340 RVA: 0x00136084 File Offset: 0x00134284
+	// Token: 0x06003694 RID: 13972 RVA: 0x0013E9AC File Offset: 0x0013CBAC
 	[NullableContext(1)]
 	private void Refresh(AcquireData acquireData)
 	{
@@ -173,7 +173,7 @@ public class AcquireView : UiViewBase
 		this.NumberSelect.Refresh(this.AcquireData.GetRemainItemCount());
 	}
 
-	// Token: 0x060062FD RID: 25341 RVA: 0x001360EC File Offset: 0x001342EC
+	// Token: 0x06003695 RID: 13973 RVA: 0x0013EA14 File Offset: 0x0013CC14
 	protected void RefreshButtonState()
 	{
 		bool leftButtonFunction = this.AcquireData.GetLeftButtonFunction() != null;
@@ -207,7 +207,7 @@ public class AcquireView : UiViewBase
 		button3.RootUIComp.Get().SetUIActive(false);
 	}
 
-	// Token: 0x060062FE RID: 25342 RVA: 0x00136270 File Offset: 0x00134470
+	// Token: 0x06003696 RID: 13974 RVA: 0x0013EB98 File Offset: 0x0013CD98
 	[NullableContext(1)]
 	private ILayoutItem<CommonItemSmallItemGrid> CreatePropItem(object data, UUIItem uiItem, int index)
 	{
@@ -221,7 +221,7 @@ public class AcquireView : UiViewBase
 		};
 	}
 
-	// Token: 0x060062FF RID: 25343 RVA: 0x001362B4 File Offset: 0x001344B4
+	// Token: 0x06003697 RID: 13975 RVA: 0x0013EBDC File Offset: 0x0013CDDC
 	private void RefreshAmount()
 	{
 		bool flag = this.AcquireData.GetAcquireViewType() == EAcquireViewType.SelectAmount;
@@ -235,7 +235,7 @@ public class AcquireView : UiViewBase
 		LguiUtil.Instance.SetLocalText(this.TitleText, "AcquireGetReward", Array.Empty<object>());
 	}
 
-	// Token: 0x06006300 RID: 25344 RVA: 0x0013632C File Offset: 0x0013452C
+	// Token: 0x06003698 RID: 13976 RVA: 0x0013EC54 File Offset: 0x0013CE54
 	private void RefreshButton()
 	{
 		string leftButtonTextTableId = this.AcquireData.GetLeftButtonTextTableId();
@@ -244,14 +244,14 @@ public class AcquireView : UiViewBase
 		LguiUtil.Instance.SetLocalText(this.RightButtonText, rightButtonTextTableId ?? "AcquireConfirm", Array.Empty<object>());
 	}
 
-	// Token: 0x06006301 RID: 25345 RVA: 0x0013638F File Offset: 0x0013458F
+	// Token: 0x06003699 RID: 13977 RVA: 0x0013ECB7 File Offset: 0x0013CEB7
 	private void RefreshByAcquireData()
 	{
 		this.RefreshAmount();
 		this.RefreshButton();
 	}
 
-	// Token: 0x06006302 RID: 25346 RVA: 0x001363A0 File Offset: 0x001345A0
+	// Token: 0x0600369A RID: 13978 RVA: 0x0013ECC8 File Offset: 0x0013CEC8
 	protected override void OnBeforeDestroy()
 	{
 		Func<UniTask> midButtonFunction = this.AcquireData.GetMidButtonFunction();
@@ -269,13 +269,13 @@ public class AcquireView : UiViewBase
 		this.AcquireData = null;
 	}
 
-	// Token: 0x06006303 RID: 25347 RVA: 0x00136407 File Offset: 0x00134607
+	// Token: 0x0600369B RID: 13979 RVA: 0x0013ED2F File Offset: 0x0013CF2F
 	private void ClickClose()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06006304 RID: 25348 RVA: 0x00136410 File Offset: 0x00134610
+	// Token: 0x0600369C RID: 13980 RVA: 0x0013ED38 File Offset: 0x0013CF38
 	private void OnClickLeftButton()
 	{
 		Func<UniTask> leftButtonFunction = this.AcquireData.GetLeftButtonFunction();
@@ -287,7 +287,7 @@ public class AcquireView : UiViewBase
 		this.ClickClose();
 	}
 
-	// Token: 0x06006305 RID: 25349 RVA: 0x00136440 File Offset: 0x00134640
+	// Token: 0x0600369D RID: 13981 RVA: 0x0013ED68 File Offset: 0x0013CF68
 	private void OnClickRightButton()
 	{
 		Func<UniTask> rightButtonFunction = this.AcquireData.GetRightButtonFunction();
@@ -299,16 +299,16 @@ public class AcquireView : UiViewBase
 		this.ClickClose();
 	}
 
-	// Token: 0x06006306 RID: 25350 RVA: 0x0013646E File Offset: 0x0013466E
+	// Token: 0x0600369E RID: 13982 RVA: 0x0013ED96 File Offset: 0x0013CF96
 	private void OnClickMidButton()
 	{
 		this.ClickClose();
 	}
 
-	// Token: 0x04002CE1 RID: 11489
+	// Token: 0x04002D7A RID: 11642
 	private UUIText ItemNameText;
 
-	// Token: 0x04002CE2 RID: 11490
+	// Token: 0x04002D7B RID: 11643
 	[Nullable(new byte[]
 	{
 		2,
@@ -316,46 +316,46 @@ public class AcquireView : UiViewBase
 	})]
 	private GenericScrollView<CommonItemSmallItemGrid> GenericScrollView;
 
-	// Token: 0x04002CE3 RID: 11491
+	// Token: 0x04002D7C RID: 11644
 	private UUIText LeftButtonText;
 
-	// Token: 0x04002CE4 RID: 11492
+	// Token: 0x04002D7D RID: 11645
 	private UUIText RightButtonText;
 
-	// Token: 0x04002CE5 RID: 11493
+	// Token: 0x04002D7E RID: 11646
 	private UUIText TitleText;
 
-	// Token: 0x04002CE6 RID: 11494
+	// Token: 0x04002D7F RID: 11647
 	private AcquireData AcquireData;
 
-	// Token: 0x04002CE7 RID: 11495
+	// Token: 0x04002D80 RID: 11648
 	private NumberSelectComponent NumberSelect;
 
-	// Token: 0x02007583 RID: 30083
+	// Token: 0x02006717 RID: 26391
 	[NullableContext(0)]
 	public enum EAcquireViewDefine
 	{
-		// Token: 0x04026D93 RID: 159123
+		// Token: 0x040220DE RID: 139486
 		GenericScrollView,
-		// Token: 0x04026D94 RID: 159124
+		// Token: 0x040220DF RID: 139487
 		LoopScrollItem,
-		// Token: 0x04026D95 RID: 159125
+		// Token: 0x040220E0 RID: 139488
 		TitleText,
-		// Token: 0x04026D96 RID: 159126
+		// Token: 0x040220E1 RID: 139489
 		LeftButton,
-		// Token: 0x04026D97 RID: 159127
+		// Token: 0x040220E2 RID: 139490
 		RightButton,
-		// Token: 0x04026D98 RID: 159128
+		// Token: 0x040220E3 RID: 139491
 		ItemNameText,
-		// Token: 0x04026D99 RID: 159129
+		// Token: 0x040220E4 RID: 139492
 		LeftButtonText,
-		// Token: 0x04026D9A RID: 159130
+		// Token: 0x040220E5 RID: 139493
 		RightButtonText,
-		// Token: 0x04026D9B RID: 159131
+		// Token: 0x040220E6 RID: 139494
 		MidButton,
-		// Token: 0x04026D9C RID: 159132
+		// Token: 0x040220E7 RID: 139495
 		OpenNextButton,
-		// Token: 0x04026D9D RID: 159133
+		// Token: 0x040220E8 RID: 139496
 		NumberSelect
 	}
 }

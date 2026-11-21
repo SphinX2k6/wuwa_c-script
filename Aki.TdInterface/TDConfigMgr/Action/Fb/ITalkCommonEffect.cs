@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200253A RID: 9530
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020027E1 RID: 10209
 	public class ITalkCommonEffect : ITalkEffectType
 	{
-		// Token: 0x0600D462 RID: 54370 RVA: 0x001F7082 File Offset: 0x001F5282
+		// Token: 0x0600E1C2 RID: 57794 RVA: 0x00212AE2 File Offset: 0x00210CE2
 		public static ITalkCommonEffect Create(ITalkCommonEffect? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003BB0 RID: 15280
-		// (get) Token: 0x0600D463 RID: 54371 RVA: 0x001F70A1 File Offset: 0x001F52A1
+		// Token: 0x17003EAE RID: 16046
+		// (get) Token: 0x0600E1C3 RID: 57795 RVA: 0x00212B01 File Offset: 0x00210D01
 		public override ETalkEffectType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003BB1 RID: 15281
-		// (get) Token: 0x0600D464 RID: 54372 RVA: 0x001F70AE File Offset: 0x001F52AE
+		// Token: 0x17003EAF RID: 16047
+		// (get) Token: 0x0600E1C4 RID: 57796 RVA: 0x00212B0E File Offset: 0x00210D0E
 		public virtual string Path
 		{
 			get
@@ -42,8 +40,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003BB2 RID: 15282
-		// (get) Token: 0x0600D465 RID: 54373 RVA: 0x001F70BB File Offset: 0x001F52BB
+		// Token: 0x17003EB0 RID: 16048
+		// (get) Token: 0x0600E1C5 RID: 57797 RVA: 0x00212B1B File Offset: 0x00210D1B
 		public virtual IAbsolutePos2 Pos2
 		{
 			get
@@ -58,8 +56,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003BB3 RID: 15283
-		// (get) Token: 0x0600D466 RID: 54374 RVA: 0x001F70F0 File Offset: 0x001F52F0
+		// Token: 0x17003EB1 RID: 16049
+		// (get) Token: 0x0600E1C6 RID: 57798 RVA: 0x00212B50 File Offset: 0x00210D50
 		public virtual bool? StartFromLoop
 		{
 			get
@@ -72,14 +70,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007456 RID: 29782
+		// Token: 0x04007AAB RID: 31403
 		private ITalkCommonEffect Instance;
 
-		// Token: 0x04007457 RID: 29783
+		// Token: 0x04007AAC RID: 31404
 		[Nullable(2)]
 		private IAbsolutePos2 _Pos2Cache;
 
-		// Token: 0x04007458 RID: 29784
+		// Token: 0x04007AAD RID: 31405
 		private bool _Pos2Inited;
 	}
 }

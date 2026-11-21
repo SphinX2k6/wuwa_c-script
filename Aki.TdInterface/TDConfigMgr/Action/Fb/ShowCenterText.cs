@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025B6 RID: 9654
+	// Token: 0x02002865 RID: 10341
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ShowCenterText : ActionParams
 	{
-		// Token: 0x0600D92F RID: 55599 RVA: 0x002067CE File Offset: 0x002049CE
-		[NullableContext(1)]
+		// Token: 0x0600E6A9 RID: 59049 RVA: 0x002224A2 File Offset: 0x002206A2
+		[NullableContext(0)]
 		public static ShowCenterText Create(IShowCenterText? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003F85 RID: 16261
-		// (get) Token: 0x0600D930 RID: 55600 RVA: 0x002067ED File Offset: 0x002049ED
+		// Token: 0x1700428D RID: 17037
+		// (get) Token: 0x0600E6AA RID: 59050 RVA: 0x002224C1 File Offset: 0x002206C1
 		public virtual int TextId
 		{
 			get
@@ -33,8 +33,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F86 RID: 16262
-		// (get) Token: 0x0600D931 RID: 55601 RVA: 0x002067FA File Offset: 0x002049FA
+		// Token: 0x1700428E RID: 17038
+		// (get) Token: 0x0600E6AB RID: 59051 RVA: 0x002224CE File Offset: 0x002206CE
 		public virtual string TidCenterText
 		{
 			get
@@ -43,8 +43,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F87 RID: 16263
-		// (get) Token: 0x0600D932 RID: 55602 RVA: 0x00206807 File Offset: 0x00204A07
+		// Token: 0x1700428F RID: 17039
+		// (get) Token: 0x0600E6AC RID: 59052 RVA: 0x002224DB File Offset: 0x002206DB
 		public virtual string PlotLineKey
 		{
 			get
@@ -53,8 +53,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F88 RID: 16264
-		// (get) Token: 0x0600D933 RID: 55603 RVA: 0x00206814 File Offset: 0x00204A14
+		// Token: 0x17004290 RID: 17040
+		// (get) Token: 0x0600E6AD RID: 59053 RVA: 0x002224E8 File Offset: 0x002206E8
 		public virtual float? TotalTime
 		{
 			get
@@ -67,8 +67,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F89 RID: 16265
-		// (get) Token: 0x0600D934 RID: 55604 RVA: 0x0020684A File Offset: 0x00204A4A
+		// Token: 0x17004291 RID: 17041
+		// (get) Token: 0x0600E6AE RID: 59054 RVA: 0x0022251E File Offset: 0x0022071E
 		public virtual ITextStyle TextStyle
 		{
 			get
@@ -83,8 +83,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F8A RID: 16266
-		// (get) Token: 0x0600D935 RID: 55605 RVA: 0x0020687E File Offset: 0x00204A7E
+		// Token: 0x17004292 RID: 17042
+		// (get) Token: 0x0600E6AF RID: 59055 RVA: 0x00222552 File Offset: 0x00220752
 		public virtual string BgImageId
 		{
 			get
@@ -93,8 +93,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F8B RID: 16267
-		// (get) Token: 0x0600D936 RID: 55606 RVA: 0x0020688C File Offset: 0x00204A8C
+		// Token: 0x17004293 RID: 17043
+		// (get) Token: 0x0600E6B0 RID: 59056 RVA: 0x00222560 File Offset: 0x00220760
 		public virtual bool? IsMulLine
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F8C RID: 16268
-		// (get) Token: 0x0600D937 RID: 55607 RVA: 0x002068C4 File Offset: 0x00204AC4
+		// Token: 0x17004294 RID: 17044
+		// (get) Token: 0x0600E6B1 RID: 59057 RVA: 0x00222598 File Offset: 0x00220798
 		public virtual bool? IsManualNext
 		{
 			get
@@ -121,8 +121,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003F8D RID: 16269
-		// (get) Token: 0x0600D938 RID: 55608 RVA: 0x002068FC File Offset: 0x00204AFC
+		// Token: 0x17004295 RID: 17045
+		// (get) Token: 0x0600E6B2 RID: 59058 RVA: 0x002225D0 File Offset: 0x002207D0
 		public virtual bool? IsCancelAutoLine
 		{
 			get
@@ -135,13 +135,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040078A8 RID: 30888
+		// Token: 0x04007F0F RID: 32527
 		private IShowCenterText Instance;
 
-		// Token: 0x040078A9 RID: 30889
+		// Token: 0x04007F10 RID: 32528
 		private ITextStyle _TextStyleCache;
 
-		// Token: 0x040078AA RID: 30890
+		// Token: 0x04007F11 RID: 32529
 		private bool _TextStyleInited;
 	}
 }

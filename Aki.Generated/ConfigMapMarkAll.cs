@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000515 RID: 1301
+	// Token: 0x0200052B RID: 1323
 	public class ConfigMapMarkAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001E89 RID: 7817 RVA: 0x00105CA8 File Offset: 0x00103EA8
+		// Token: 0x06001F0D RID: 7949 RVA: 0x0010C3FC File Offset: 0x0010A5FC
 		static ConfigMapMarkAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMapMarkAll.CreateStaticDefaultValue), new Action(ConfigMapMarkAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001E8A RID: 7818 RVA: 0x00105CC8 File Offset: 0x00103EC8
+		// Token: 0x06001F0E RID: 7950 RVA: 0x0010C41C File Offset: 0x0010A61C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMapMarkAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001E8B RID: 7819 RVA: 0x00105D47 File Offset: 0x00103F47
+		// Token: 0x06001F0F RID: 7951 RVA: 0x0010C49B File Offset: 0x0010A69B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMapMarkAll.LogPair = null;
 			ConfigMapMarkAll.HandleId = 0;
 		}
 
-		// Token: 0x06001E8C RID: 7820 RVA: 0x00105D55 File Offset: 0x00103F55
+		// Token: 0x06001F10 RID: 7952 RVA: 0x0010C4A9 File Offset: 0x0010A6A9
 		public static void Init()
 		{
 			ConfigMapMarkAll.HandleId = ConfigCommon.InitDataStatement(ConfigMapMarkAll.HandleId, "db_map_mark.db", "select BinData from `MapMark`");
 		}
 
-		// Token: 0x06001E8D RID: 7821 RVA: 0x00105D70 File Offset: 0x00103F70
+		// Token: 0x06001F11 RID: 7953 RVA: 0x0010C4C4 File Offset: 0x0010A6C4
 		[NullableContext(2)]
 		public static IReadOnlyList<MapMark> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04002377 RID: 9079
+		// Token: 0x04002411 RID: 9233
 		private const string DB = "db_map_mark.db";
 
-		// Token: 0x04002378 RID: 9080
+		// Token: 0x04002412 RID: 9234
 		private const string FILE = "d.地图标记.xlsx";
 
-		// Token: 0x04002379 RID: 9081
+		// Token: 0x04002413 RID: 9235
 		private const string TABLE = "MapMark";
 
-		// Token: 0x0400237A RID: 9082
+		// Token: 0x04002414 RID: 9236
 		private const string COMMAND = "select BinData from `MapMark`";
 
-		// Token: 0x0400237B RID: 9083
+		// Token: 0x04002415 RID: 9237
 		private const string KEY_PREFIX = "MapMarkAll";
 
-		// Token: 0x0400237C RID: 9084
+		// Token: 0x04002416 RID: 9238
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400237D RID: 9085
+		// Token: 0x04002417 RID: 9239
 		private static int HandleId;
 	}
 }

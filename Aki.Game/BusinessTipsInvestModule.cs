@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.Common.NumberSelect;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200132C RID: 4908
+// Token: 0x020007E0 RID: 2016
 public class BusinessTipsInvestModule : UiPanelBase
 {
-	// Token: 0x0600884F RID: 34895 RVA: 0x001D15B8 File Offset: 0x001CF7B8
+	// Token: 0x06005BEA RID: 23530 RVA: 0x001DA424 File Offset: 0x001D8624
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,7 +29,7 @@ public class BusinessTipsInvestModule : UiPanelBase
 		};
 	}
 
-	// Token: 0x06008850 RID: 34896 RVA: 0x001D16A8 File Offset: 0x001CF8A8
+	// Token: 0x06005BEB RID: 23531 RVA: 0x001DA514 File Offset: 0x001D8714
 	protected override void OnStart()
 	{
 		int coinItemId = BusinessConfig.Instance.GetCoinItemId();
@@ -49,7 +49,7 @@ public class BusinessTipsInvestModule : UiPanelBase
 		this.NumberSelect.Init(data);
 	}
 
-	// Token: 0x06008851 RID: 34897 RVA: 0x001D1770 File Offset: 0x001CF970
+	// Token: 0x06005BEC RID: 23532 RVA: 0x001DA5DC File Offset: 0x001D87DC
 	private void ValueChangeFunction(int invest)
 	{
 		IInvestData investData = MoonChasingBusinessModel.Instance.GetInvestData(invest);
@@ -63,7 +63,7 @@ public class BusinessTipsInvestModule : UiPanelBase
 		costNum.SetText(invest.ToString(), true);
 	}
 
-	// Token: 0x06008852 RID: 34898 RVA: 0x001D17D8 File Offset: 0x001CF9D8
+	// Token: 0x06005BED RID: 23533 RVA: 0x001DA644 File Offset: 0x001D8844
 	private void OnCancel()
 	{
 		IInvestData investData = MoonChasingBusinessModel.Instance.GetInvestData(0);
@@ -71,7 +71,7 @@ public class BusinessTipsInvestModule : UiPanelBase
 		MoonChasingController.Instance.InvestRequest(resultData.EntrustId, 0, investData.Ratio, investData.Ratio);
 	}
 
-	// Token: 0x06008853 RID: 34899 RVA: 0x001D181C File Offset: 0x001CFA1C
+	// Token: 0x06005BEE RID: 23534 RVA: 0x001DA688 File Offset: 0x001D8888
 	private void OnConfirm()
 	{
 		DelegationResultData resultData = MoonChasingBusinessModel.Instance.GetResultData();
@@ -81,36 +81,36 @@ public class BusinessTipsInvestModule : UiPanelBase
 		MoonChasingController.Instance.InvestRequest(resultData.EntrustId, selectNumber, investData.Ratio, investData2.Ratio);
 	}
 
-	// Token: 0x04003CC6 RID: 15558
+	// Token: 0x04003D5E RID: 15710
 	[Nullable(1)]
 	protected NumberSelectComponent NumberSelect;
 
-	// Token: 0x04003CC7 RID: 15559
+	// Token: 0x04003D5F RID: 15711
 	[Nullable(2)]
 	private UUIText CostNum;
 
-	// Token: 0x02007982 RID: 31106
+	// Token: 0x02006B0C RID: 27404
 	private static class EComponentDefine
 	{
-		// Token: 0x0402802E RID: 163886
+		// Token: 0x0402335B RID: 144219
 		public const int SuccessProbability = 0;
 
-		// Token: 0x0402802F RID: 163887
+		// Token: 0x0402335C RID: 144220
 		public const int ReturnRatio = 1;
 
-		// Token: 0x04028030 RID: 163888
+		// Token: 0x0402335D RID: 144221
 		public const int NumberSelectItem = 2;
 
-		// Token: 0x04028031 RID: 163889
+		// Token: 0x0402335E RID: 144222
 		public const int CancelBtn = 3;
 
-		// Token: 0x04028032 RID: 163890
+		// Token: 0x0402335F RID: 144223
 		public const int ConfirmBtn = 4;
 
-		// Token: 0x04028033 RID: 163891
+		// Token: 0x04023360 RID: 144224
 		public const int CostIcon = 5;
 
-		// Token: 0x04028034 RID: 163892
+		// Token: 0x04023361 RID: 144225
 		public const int CostNum = 6;
 	}
 }

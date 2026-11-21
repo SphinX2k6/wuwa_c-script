@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200527D RID: 21117
+	// Token: 0x020057E5 RID: 22501
 	public class IFlowComponentT
 	{
-		// Token: 0x17009AC2 RID: 39618
-		// (get) Token: 0x0602260B RID: 140811 RVA: 0x004C3F09 File Offset: 0x004C2109
-		// (set) Token: 0x0602260C RID: 140812 RVA: 0x004C3F11 File Offset: 0x004C2111
+		// Token: 0x1700A2C0 RID: 41664
+		// (get) Token: 0x060245A5 RID: 148901 RVA: 0x004FEA79 File Offset: 0x004FCC79
+		// (set) Token: 0x060245A6 RID: 148902 RVA: 0x004FEA81 File Offset: 0x004FCC81
 		public bool Disabled { get; set; }
 
-		// Token: 0x17009AC3 RID: 39619
-		// (get) Token: 0x0602260D RID: 140813 RVA: 0x004C3F1A File Offset: 0x004C211A
-		// (set) Token: 0x0602260E RID: 140814 RVA: 0x004C3F22 File Offset: 0x004C2122
+		// Token: 0x1700A2C1 RID: 41665
+		// (get) Token: 0x060245A7 RID: 148903 RVA: 0x004FEA8A File Offset: 0x004FCC8A
+		// (set) Token: 0x060245A8 RID: 148904 RVA: 0x004FEA92 File Offset: 0x004FCC92
 		public IPlayFlowT InitState { get; set; }
 
-		// Token: 0x17009AC4 RID: 39620
-		// (get) Token: 0x0602260F RID: 140815 RVA: 0x004C3F2B File Offset: 0x004C212B
-		// (set) Token: 0x06022610 RID: 140816 RVA: 0x004C3F33 File Offset: 0x004C2133
+		// Token: 0x1700A2C2 RID: 41666
+		// (get) Token: 0x060245A9 RID: 148905 RVA: 0x004FEA9B File Offset: 0x004FCC9B
+		// (set) Token: 0x060245AA RID: 148906 RVA: 0x004FEAA3 File Offset: 0x004FCCA3
 		public byte NullMask { get; set; }
 
-		// Token: 0x06022611 RID: 140817 RVA: 0x004C3F3C File Offset: 0x004C213C
+		// Token: 0x060245AB RID: 148907 RVA: 0x004FEAAC File Offset: 0x004FCCAC
 		public IFlowComponentT()
 		{
 			this.Disabled = false;

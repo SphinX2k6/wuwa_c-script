@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Map;
-using CSharpScript.Game.Module.Map.Mark;
-using CSharpScript.Game.Module.Map.Mark.Component;
-using CSharpScript.Game.Module.Map.Marks;
 using CSharpScript.Game.Module.Map.Marks.MarkItem;
 using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
@@ -14,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.MarkMenu
 {
-	// Token: 0x02004800 RID: 18432
+	// Token: 0x02003731 RID: 14129
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MarkMenuItem : UiPanelBase
 	{
-		// Token: 0x06030444 RID: 197700 RVA: 0x00B321C0 File Offset: 0x00B303C0
+		// Token: 0x06024C14 RID: 150548 RVA: 0x00A62168 File Offset: 0x00A60368
 		[NullableContext(1)]
 		public UniTask Init(UUIItem uiItem, MarkItem markItem)
 		{
@@ -33,14 +30,14 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.MarkMenu
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030445 RID: 197701 RVA: 0x00B32214 File Offset: 0x00B30414
+		// Token: 0x06024C15 RID: 150549 RVA: 0x00A621BC File Offset: 0x00A603BC
 		protected override void OnStart()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
 			AUIBaseActor auibaseActor = ((extendToggle != null) ? extendToggle.GetOwner() : null) as AUIBaseActor;
 			UUIItem uuiitem = (auibaseActor != null) ? auibaseActor.GetUIItem() : null;
-			this.MarkInfoTextSizeAdapterProxy = new UiTextAdapterProxy(base.GetText(2));
-			UiTextAdapterProxy markInfoTextSizeAdapterProxy = this.MarkInfoTextSizeAdapterProxy;
+			this._markInfoTextSizeAdapterProxy = new UiTextAdapterProxy(base.GetText(2));
+			UiTextAdapterProxy markInfoTextSizeAdapterProxy = this._markInfoTextSizeAdapterProxy;
 			if (markInfoTextSizeAdapterProxy != null)
 			{
 				markInfoTextSizeAdapterProxy.Init();
@@ -51,13 +48,13 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.MarkMenu
 			}
 		}
 
-		// Token: 0x06030446 RID: 197702 RVA: 0x00B32278 File Offset: 0x00B30478
+		// Token: 0x06024C16 RID: 150550 RVA: 0x00A62220 File Offset: 0x00A60420
 		protected override void OnBeforeShow()
 		{
 			this.PlayAppearSequence();
 		}
 
-		// Token: 0x06030447 RID: 197703 RVA: 0x00B32280 File Offset: 0x00B30480
+		// Token: 0x06024C17 RID: 150551 RVA: 0x00A62228 File Offset: 0x00A60428
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -77,7 +74,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.MarkMenu
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06030448 RID: 197704 RVA: 0x00B3234C File Offset: 0x00B3054C
+		// Token: 0x06024C18 RID: 150552 RVA: 0x00A622F4 File Offset: 0x00A604F4
 		[NullableContext(1)]
 		public void SetOnClick(Action<EToggleState> onClick)
 		{
@@ -86,75 +83,64 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.MarkMenu
 			{
 				return;
 			}
-			FOnToggleStateChange onStateChange = extendToggle.OnStateChange;
-			if (onStateChange == null)
-			{
-				return;
-			}
-			onStateChange.Add(onClick);
+			extendToggle.OnStateChange.Add(onClick);
 		}
 
-		// Token: 0x06030449 RID: 197705 RVA: 0x00B3236C File Offset: 0x00B3056C
+		// Token: 0x06024C19 RID: 150553 RVA: 0x00A62310 File Offset: 0x00A60510
 		private void SetUp()
 		{
-			if (this.MarkItem == null)
+			if (this._markItem == null)
 			{
 				return;
 			}
-			this.SetSpriteByPath(this.MarkItem.IconPath, base.GetSprite(1), false, null, null);
-			EnrichmentAreaItem enrichmentAreaItem = this.MarkItem as EnrichmentAreaItem;
+			this.SetSpriteByPath(this._markItem.IconPath, base.GetSprite(1), false, null, null);
+			EnrichmentAreaItem enrichmentAreaItem = this._markItem as EnrichmentAreaItem;
 			if (enrichmentAreaItem != null)
 			{
 				string markTitle = enrichmentAreaItem.MarkConfig.MarkTitle;
-				MapConfig instance = MapConfig.Instance;
-				string text = (instance != null) ? instance.GetLocalText(enrichmentAreaItem.GetEnrichmentItemNameId()) : null;
-				UiTextAdapterProxy markInfoTextSizeAdapterProxy = this.MarkInfoTextSizeAdapterProxy;
+				string localText = MapConfig.Instance.GetLocalText(enrichmentAreaItem.GetEnrichmentItemNameId());
+				UiTextAdapterProxy markInfoTextSizeAdapterProxy = this._markInfoTextSizeAdapterProxy;
 				if (markInfoTextSizeAdapterProxy != null)
 				{
 					markInfoTextSizeAdapterProxy.SetLocalText(markTitle, new object[]
 					{
-						text
+						localText
 					});
 				}
 			}
 			else
 			{
-				UiTextAdapterProxy markInfoTextSizeAdapterProxy2 = this.MarkInfoTextSizeAdapterProxy;
+				UiTextAdapterProxy markInfoTextSizeAdapterProxy2 = this._markInfoTextSizeAdapterProxy;
 				if (markInfoTextSizeAdapterProxy2 != null)
 				{
-					markInfoTextSizeAdapterProxy2.SetText(this.MarkItem.GetTitleText());
+					markInfoTextSizeAdapterProxy2.SetText(this._markItem.GetTitleText());
 				}
 			}
-			MarkItemEntity markItemEntity = this.MarkItem.MarkItemEntity;
-			MarkViewLifeCircleComponent markViewLifeCircleComponent = (markItemEntity != null) ? markItemEntity.ViewLifeCircle : null;
-			if (markViewLifeCircleComponent != null)
+			bool showChildIcon = this._markItem.ShowChildIcon;
+			UUISprite sprite = base.GetSprite(3);
+			if (sprite != null)
 			{
-				bool flag = markViewLifeCircleComponent.IsChildViewVisible(EMarkViewComponentType.ChildIcon, false);
-				UUISprite sprite = base.GetSprite(3);
-				if (sprite != null)
-				{
-					sprite.SetUIActive(flag);
-				}
-				if (flag)
-				{
-					string childIconPath = this.MarkItem.MarkItemEntity.Resource.ChildIconPath;
-					this.SetSpriteByPath(childIconPath, base.GetSprite(3), false, null, null);
-				}
-				bool flag2 = markViewLifeCircleComponent.IsChildViewVisible(EMarkViewComponentType.TopRightIcon, false);
-				UUISprite sprite2 = base.GetSprite(4);
-				if (sprite2 != null)
-				{
-					sprite2.SetUIActive(flag2);
-				}
-				if (flag2)
-				{
-					string topRightIconPath = this.MarkItem.MarkItemEntity.Resource.TopRightIconPath;
-					this.SetSpriteByPath(topRightIconPath, base.GetSprite(4), false, null, null);
-				}
+				sprite.SetUIActive(showChildIcon);
+			}
+			if (showChildIcon)
+			{
+				string childIconPath = this._markItem.ChildIconPath;
+				this.SetSpriteByPath(childIconPath, base.GetSprite(3), false, null, null);
+			}
+			bool showTopRightIcon = this._markItem.ShowTopRightIcon;
+			UUISprite sprite2 = base.GetSprite(4);
+			if (sprite2 != null)
+			{
+				sprite2.SetUIActive(showTopRightIcon);
+			}
+			if (showTopRightIcon)
+			{
+				string topRightIconPath = this._markItem.TopRightIconPath;
+				this.SetSpriteByPath(topRightIconPath, base.GetSprite(4), false, null, null);
 			}
 		}
 
-		// Token: 0x0603044A RID: 197706 RVA: 0x00B324DC File Offset: 0x00B306DC
+		// Token: 0x06024C1A RID: 150554 RVA: 0x00A6244C File Offset: 0x00A6064C
 		protected override UniTask OnBeforeHideAsync()
 		{
 			MarkMenuItem.<OnBeforeHideAsync>d__9 <OnBeforeHideAsync>d__;
@@ -165,10 +151,10 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.MarkMenu
 			return <OnBeforeHideAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603044B RID: 197707 RVA: 0x00B32520 File Offset: 0x00B30720
+		// Token: 0x06024C1B RID: 150555 RVA: 0x00A62490 File Offset: 0x00A60690
 		protected override void OnBeforeDestroy()
 		{
-			UiTextAdapterProxy markInfoTextSizeAdapterProxy = this.MarkInfoTextSizeAdapterProxy;
+			UiTextAdapterProxy markInfoTextSizeAdapterProxy = this._markInfoTextSizeAdapterProxy;
 			if (markInfoTextSizeAdapterProxy != null)
 			{
 				markInfoTextSizeAdapterProxy.Clear();
@@ -176,11 +162,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.MarkMenu
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
 			if (extendToggle != null)
 			{
-				FOnToggleStateChange onStateChange = extendToggle.OnStateChange;
-				if (onStateChange != null)
-				{
-					onStateChange.Clear();
-				}
+				extendToggle.OnStateChange.Clear();
 			}
 			if (this.LevelSequencePlayer != null)
 			{
@@ -189,7 +171,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.MarkMenu
 			this.LevelSequencePlayer = null;
 		}
 
-		// Token: 0x0603044C RID: 197708 RVA: 0x00B32578 File Offset: 0x00B30778
+		// Token: 0x06024C1C RID: 150556 RVA: 0x00A624E0 File Offset: 0x00A606E0
 		public UniTask PlayReleaseSequence()
 		{
 			MarkMenuItem.<PlayReleaseSequence>d__11 <PlayReleaseSequence>d__;
@@ -200,7 +182,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.MarkMenu
 			return <PlayReleaseSequence>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603044D RID: 197709 RVA: 0x00B325BC File Offset: 0x00B307BC
+		// Token: 0x06024C1D RID: 150557 RVA: 0x00A62524 File Offset: 0x00A60724
 		public void PlayAppearSequence()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -211,7 +193,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.MarkMenu
 			levelSequencePlayer.PlayLevelSequenceByName("Start", false, null, false);
 		}
 
-		// Token: 0x0603044E RID: 197710 RVA: 0x00B325EC File Offset: 0x00B307EC
+		// Token: 0x06024C1E RID: 150558 RVA: 0x00A62554 File Offset: 0x00A60754
 		public UniTask PlayDisappearSequence()
 		{
 			MarkMenuItem.<PlayDisappearSequence>d__13 <PlayDisappearSequence>d__;
@@ -222,28 +204,28 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.MarkMenu
 			return <PlayDisappearSequence>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x04019FAB RID: 106411
-		private MarkItem MarkItem;
+		// Token: 0x0401465F RID: 83551
+		private MarkItem _markItem;
 
-		// Token: 0x04019FAC RID: 106412
+		// Token: 0x04014660 RID: 83552
 		protected LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x04019FAD RID: 106413
-		private UiTextAdapterProxy MarkInfoTextSizeAdapterProxy;
+		// Token: 0x04014661 RID: 83553
+		private UiTextAdapterProxy _markInfoTextSizeAdapterProxy;
 
-		// Token: 0x0200AACC RID: 43724
+		// Token: 0x0200947D RID: 38013
 		[NullableContext(0)]
 		private enum EComponents
 		{
-			// Token: 0x04033F1E RID: 212766
+			// Token: 0x0402E6A1 RID: 190113
 			Toggle,
-			// Token: 0x04033F1F RID: 212767
+			// Token: 0x0402E6A2 RID: 190114
 			Icon,
-			// Token: 0x04033F20 RID: 212768
+			// Token: 0x0402E6A3 RID: 190115
 			Info,
-			// Token: 0x04033F21 RID: 212769
+			// Token: 0x0402E6A4 RID: 190116
 			SprState,
-			// Token: 0x04033F22 RID: 212770
+			// Token: 0x0402E6A5 RID: 190117
 			TopRightIcon
 		}
 	}

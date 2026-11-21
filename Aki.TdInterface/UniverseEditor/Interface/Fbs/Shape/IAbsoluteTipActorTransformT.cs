@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003BDE RID: 15326
+	// Token: 0x02003FEA RID: 16362
 	public class IAbsoluteTipActorTransformT
 	{
-		// Token: 0x1700691F RID: 26911
-		// (get) Token: 0x0601510B RID: 86283 RVA: 0x0030DA8C File Offset: 0x0030BC8C
-		// (set) Token: 0x0601510C RID: 86284 RVA: 0x0030DA94 File Offset: 0x0030BC94
+		// Token: 0x17006EC7 RID: 28359
+		// (get) Token: 0x06016601 RID: 91649 RVA: 0x00334614 File Offset: 0x00332814
+		// (set) Token: 0x06016602 RID: 91650 RVA: 0x0033461C File Offset: 0x0033281C
 		public ETipsActorTransformType Type { get; set; }
 
-		// Token: 0x17006920 RID: 26912
-		// (get) Token: 0x0601510D RID: 86285 RVA: 0x0030DA9D File Offset: 0x0030BC9D
-		// (set) Token: 0x0601510E RID: 86286 RVA: 0x0030DAA5 File Offset: 0x0030BCA5
+		// Token: 0x17006EC8 RID: 28360
+		// (get) Token: 0x06016603 RID: 91651 RVA: 0x00334625 File Offset: 0x00332825
+		// (set) Token: 0x06016604 RID: 91652 RVA: 0x0033462D File Offset: 0x0033282D
 		public IVectorInfoT Pos { get; set; }
 
-		// Token: 0x17006921 RID: 26913
-		// (get) Token: 0x0601510F RID: 86287 RVA: 0x0030DAAE File Offset: 0x0030BCAE
-		// (set) Token: 0x06015110 RID: 86288 RVA: 0x0030DAB6 File Offset: 0x0030BCB6
+		// Token: 0x17006EC9 RID: 28361
+		// (get) Token: 0x06016605 RID: 91653 RVA: 0x00334636 File Offset: 0x00332836
+		// (set) Token: 0x06016606 RID: 91654 RVA: 0x0033463E File Offset: 0x0033283E
 		public IVectorInfoT Rot { get; set; }
 
-		// Token: 0x06015111 RID: 86289 RVA: 0x0030DABF File Offset: 0x0030BCBF
+		// Token: 0x06016607 RID: 91655 RVA: 0x00334647 File Offset: 0x00332847
 		public IAbsoluteTipActorTransformT()
 		{
 			this.Type = ETipsActorTransformType.Absolute;

@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E1E RID: 19998
+	// Token: 0x02003DE7 RID: 15847
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoguelikeSelectRoleBaseGrid : UiPanelBase, IDynamicScrollBaseItem<RoguelikeSelectRoleData>
 	{
-		// Token: 0x0603394C RID: 211276 RVA: 0x00C0FC84 File Offset: 0x00C0DE84
+		// Token: 0x060287B7 RID: 165815 RVA: 0x00B591BC File Offset: 0x00B573BC
 		public FVector2D GetItemSize(RoguelikeSelectRoleData data)
 		{
 			if (this.ItemSizeVector == null)
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return this.ItemSizeVector.ToUeVector2D(false);
 		}
 
-		// Token: 0x0603394D RID: 211277 RVA: 0x00C0FCD0 File Offset: 0x00C0DED0
+		// Token: 0x060287B8 RID: 165816 RVA: 0x00B59208 File Offset: 0x00B57408
 		public UniTask Init(UUIItem actor)
 		{
 			RoguelikeSelectRoleBaseGrid.<Init>d__2 <Init>d__;
@@ -37,12 +37,12 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603394E RID: 211278 RVA: 0x00C0FD1B File Offset: 0x00C0DF1B
+		// Token: 0x060287B9 RID: 165817 RVA: 0x00B59253 File Offset: 0x00B57453
 		public void ClearItem()
 		{
 		}
 
-		// Token: 0x0401B5BF RID: 112063
+		// Token: 0x04015F92 RID: 90002
 		private Vector2D ItemSizeVector;
 	}
 }

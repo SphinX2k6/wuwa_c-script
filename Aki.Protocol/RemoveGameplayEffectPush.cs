@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000EF9 RID: 3833
+	// Token: 0x02000EE9 RID: 3817
 	[NetMessage(EMessageId.RemoveGameplayEffectPush)]
 	public sealed class RemoveGameplayEffectPush : IMessage<RemoveGameplayEffectPush>, IMessage, IEquatable<RemoveGameplayEffectPush>, IDeepCloneable<RemoveGameplayEffectPush>, IBufferMessage
 	{
-		// Token: 0x06014894 RID: 84116 RVA: 0x002FBC67 File Offset: 0x002F9E67
+		// Token: 0x060147AF RID: 83887 RVA: 0x002FA5AE File Offset: 0x002F87AE
 		[NullableContext(1)]
 		public static RemoveGameplayEffectPush Create()
 		{
 			return new RemoveGameplayEffectPush();
 		}
 
-		// Token: 0x1700444B RID: 17483
-		// (get) Token: 0x06014895 RID: 84117 RVA: 0x002FBC6E File Offset: 0x002F9E6E
+		// Token: 0x17004421 RID: 17441
+		// (get) Token: 0x060147B0 RID: 83888 RVA: 0x002FA5B5 File Offset: 0x002F87B5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700444C RID: 17484
-		// (get) Token: 0x06014896 RID: 84118 RVA: 0x002FBC71 File Offset: 0x002F9E71
+		// Token: 0x17004422 RID: 17442
+		// (get) Token: 0x060147B1 RID: 83889 RVA: 0x002FA5B8 File Offset: 0x002F87B8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06014897 RID: 84119 RVA: 0x002FBC78 File Offset: 0x002F9E78
+		// Token: 0x060147B2 RID: 83890 RVA: 0x002FA5BF File Offset: 0x002F87BF
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RemoveGameplayEffectPush()
 		{
 		}
 
-		// Token: 0x06014898 RID: 84120 RVA: 0x002FBC8C File Offset: 0x002F9E8C
+		// Token: 0x060147B3 RID: 83891 RVA: 0x002FA5D4 File Offset: 0x002F87D4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RemoveGameplayEffectPush(RemoveGameplayEffectPush other) : this()
@@ -62,7 +62,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06014899 RID: 84121 RVA: 0x002FBCEC File Offset: 0x002F9EEC
+		// Token: 0x060147B4 RID: 83892 RVA: 0x002FA634 File Offset: 0x002F8834
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RemoveGameplayEffectPush Clone()
@@ -70,9 +70,9 @@ namespace Aki.Protocol
 			return new RemoveGameplayEffectPush(this);
 		}
 
-		// Token: 0x1700444D RID: 17485
-		// (get) Token: 0x0601489A RID: 84122 RVA: 0x002FBCF4 File Offset: 0x002F9EF4
-		// (set) Token: 0x0601489B RID: 84123 RVA: 0x002FBCFC File Offset: 0x002F9EFC
+		// Token: 0x17004423 RID: 17443
+		// (get) Token: 0x060147B5 RID: 83893 RVA: 0x002FA63C File Offset: 0x002F883C
+		// (set) Token: 0x060147B6 RID: 83894 RVA: 0x002FA644 File Offset: 0x002F8844
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int Handle
@@ -87,9 +87,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700444E RID: 17486
-		// (get) Token: 0x0601489C RID: 84124 RVA: 0x002FBD05 File Offset: 0x002F9F05
-		// (set) Token: 0x0601489D RID: 84125 RVA: 0x002FBD0D File Offset: 0x002F9F0D
+		// Token: 0x17004424 RID: 17444
+		// (get) Token: 0x060147B7 RID: 83895 RVA: 0x002FA64D File Offset: 0x002F884D
+		// (set) Token: 0x060147B8 RID: 83896 RVA: 0x002FA655 File Offset: 0x002F8855
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long EntityId
@@ -104,9 +104,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700444F RID: 17487
-		// (get) Token: 0x0601489E RID: 84126 RVA: 0x002FBD16 File Offset: 0x002F9F16
-		// (set) Token: 0x0601489F RID: 84127 RVA: 0x002FBD1E File Offset: 0x002F9F1E
+		// Token: 0x17004425 RID: 17445
+		// (get) Token: 0x060147B9 RID: 83897 RVA: 0x002FA65E File Offset: 0x002F885E
+		// (set) Token: 0x060147BA RID: 83898 RVA: 0x002FA666 File Offset: 0x002F8866
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool IsPrematureRemoval
@@ -121,9 +121,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004450 RID: 17488
-		// (get) Token: 0x060148A0 RID: 84128 RVA: 0x002FBD27 File Offset: 0x002F9F27
-		// (set) Token: 0x060148A1 RID: 84129 RVA: 0x002FBD2F File Offset: 0x002F9F2F
+		// Token: 0x17004426 RID: 17446
+		// (get) Token: 0x060147BB RID: 83899 RVA: 0x002FA66F File Offset: 0x002F886F
+		// (set) Token: 0x060147BC RID: 83900 RVA: 0x002FA677 File Offset: 0x002F8877
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public string Reason
@@ -138,9 +138,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004451 RID: 17489
-		// (get) Token: 0x060148A2 RID: 84130 RVA: 0x002FBD42 File Offset: 0x002F9F42
-		// (set) Token: 0x060148A3 RID: 84131 RVA: 0x002FBD4A File Offset: 0x002F9F4A
+		// Token: 0x17004427 RID: 17447
+		// (get) Token: 0x060147BD RID: 83901 RVA: 0x002FA68A File Offset: 0x002F888A
+		// (set) Token: 0x060147BE RID: 83902 RVA: 0x002FA692 File Offset: 0x002F8892
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long InstigatorId
@@ -155,7 +155,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060148A4 RID: 84132 RVA: 0x002FBD53 File Offset: 0x002F9F53
+		// Token: 0x060147BF RID: 83903 RVA: 0x002FA69B File Offset: 0x002F889B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -163,7 +163,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RemoveGameplayEffectPush);
 		}
 
-		// Token: 0x060148A5 RID: 84133 RVA: 0x002FBD64 File Offset: 0x002F9F64
+		// Token: 0x060147C0 RID: 83904 RVA: 0x002FA6AC File Offset: 0x002F88AC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RemoveGameplayEffectPush other)
@@ -171,7 +171,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.Handle == other.Handle && this.EntityId == other.EntityId && this.IsPrematureRemoval == other.IsPrematureRemoval && !(this.Reason != other.Reason) && this.InstigatorId == other.InstigatorId && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060148A6 RID: 84134 RVA: 0x002FBDE4 File Offset: 0x002F9FE4
+		// Token: 0x060147C1 RID: 83905 RVA: 0x002FA72C File Offset: 0x002F892C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -204,7 +204,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060148A7 RID: 84135 RVA: 0x002FBE89 File Offset: 0x002FA089
+		// Token: 0x060147C2 RID: 83906 RVA: 0x002FA7D1 File Offset: 0x002F89D1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -212,7 +212,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060148A8 RID: 84136 RVA: 0x002FBE96 File Offset: 0x002FA096
+		// Token: 0x060147C3 RID: 83907 RVA: 0x002FA7DE File Offset: 0x002F89DE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -220,34 +220,34 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060148A9 RID: 84137 RVA: 0x002FBEA0 File Offset: 0x002FA0A0
+		// Token: 0x060147C4 RID: 83908 RVA: 0x002FA7E8 File Offset: 0x002F89E8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.Reason.Length != 0)
-			{
-				output.WriteRawTag(10);
-				output.WriteString(this.Reason);
-			}
-			if (this.InstigatorId != 0L)
-			{
-				output.WriteRawTag(32);
-				output.WriteInt64(this.InstigatorId);
-			}
 			if (this.IsPrematureRemoval)
 			{
-				output.WriteRawTag(80);
+				output.WriteRawTag(8);
 				output.WriteBool(this.IsPrematureRemoval);
+			}
+			if (this.Reason.Length != 0)
+			{
+				output.WriteRawTag(42);
+				output.WriteString(this.Reason);
 			}
 			if (this.Handle != 0)
 			{
-				output.WriteRawTag(112);
+				output.WriteRawTag(64);
 				output.WriteInt32(this.Handle);
+			}
+			if (this.InstigatorId != 0L)
+			{
+				output.WriteRawTag(80);
+				output.WriteInt64(this.InstigatorId);
 			}
 			if (this.EntityId != 0L)
 			{
-				output.WriteRawTag(120);
+				output.WriteRawTag(112);
 				output.WriteInt64(this.EntityId);
 			}
 			if (this._unknownFields != null)
@@ -256,7 +256,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060148AA RID: 84138 RVA: 0x002FBF54 File Offset: 0x002FA154
+		// Token: 0x060147C5 RID: 83909 RVA: 0x002FA89C File Offset: 0x002F8A9C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -289,7 +289,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060148AB RID: 84139 RVA: 0x002FBFEC File Offset: 0x002FA1EC
+		// Token: 0x060147C6 RID: 83910 RVA: 0x002FA934 File Offset: 0x002F8B34
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RemoveGameplayEffectPush other)
@@ -321,7 +321,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060148AC RID: 84140 RVA: 0x002FC07D File Offset: 0x002FA27D
+		// Token: 0x060147C7 RID: 83911 RVA: 0x002FA9C5 File Offset: 0x002F8BC5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -329,7 +329,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060148AD RID: 84141 RVA: 0x002FC088 File Offset: 0x002FA288
+		// Token: 0x060147C8 RID: 83912 RVA: 0x002FA9D0 File Offset: 0x002F8BD0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -341,32 +341,32 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 32U)
+				if (num <= 42U)
 				{
-					if (num == 10U)
+					if (num == 8U)
 					{
-						this.Reason = input.ReadString();
+						this.IsPrematureRemoval = input.ReadBool();
 						continue;
 					}
-					if (num == 32U)
+					if (num == 42U)
 					{
-						this.InstigatorId = input.ReadInt64();
+						this.Reason = input.ReadString();
 						continue;
 					}
 				}
 				else
 				{
-					if (num == 80U)
-					{
-						this.IsPrematureRemoval = input.ReadBool();
-						continue;
-					}
-					if (num == 112U)
+					if (num == 64U)
 					{
 						this.Handle = input.ReadInt32();
 						continue;
 					}
-					if (num == 120U)
+					if (num == 80U)
+					{
+						this.InstigatorId = input.ReadInt64();
+						continue;
+					}
+					if (num == 112U)
 					{
 						this.EntityId = input.ReadInt64();
 						continue;
@@ -376,37 +376,37 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04007C79 RID: 31865
+		// Token: 0x04007CA3 RID: 31907
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04007C7A RID: 31866
-		public const int HandleFieldNumber = 14;
+		// Token: 0x04007CA4 RID: 31908
+		public const int HandleFieldNumber = 8;
 
-		// Token: 0x04007C7B RID: 31867
+		// Token: 0x04007CA5 RID: 31909
 		private int handle_;
 
-		// Token: 0x04007C7C RID: 31868
-		public const int EntityIdFieldNumber = 15;
+		// Token: 0x04007CA6 RID: 31910
+		public const int EntityIdFieldNumber = 14;
 
-		// Token: 0x04007C7D RID: 31869
+		// Token: 0x04007CA7 RID: 31911
 		private long entityId_;
 
-		// Token: 0x04007C7E RID: 31870
-		public const int IsPrematureRemovalFieldNumber = 10;
+		// Token: 0x04007CA8 RID: 31912
+		public const int IsPrematureRemovalFieldNumber = 1;
 
-		// Token: 0x04007C7F RID: 31871
+		// Token: 0x04007CA9 RID: 31913
 		private bool isPrematureRemoval_;
 
-		// Token: 0x04007C80 RID: 31872
-		public const int ReasonFieldNumber = 1;
+		// Token: 0x04007CAA RID: 31914
+		public const int ReasonFieldNumber = 5;
 
-		// Token: 0x04007C81 RID: 31873
+		// Token: 0x04007CAB RID: 31915
 		private string reason_ = "";
 
-		// Token: 0x04007C82 RID: 31874
-		public const int InstigatorIdFieldNumber = 4;
+		// Token: 0x04007CAC RID: 31916
+		public const int InstigatorIdFieldNumber = 10;
 
-		// Token: 0x04007C83 RID: 31875
+		// Token: 0x04007CAD RID: 31917
 		private long instigatorId_;
 	}
 }

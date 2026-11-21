@@ -10,7 +10,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 {
-	// Token: 0x0200576C RID: 22380
+	// Token: 0x02004743 RID: 18243
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -19,7 +19,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 	})]
 	public class KurotatoEnemyDetailBookBigItem : GridProxyAbstract<KurotatoEnemyDetailBookBigItemData>
 	{
-		// Token: 0x06038D9D RID: 232861 RVA: 0x00D81B30 File Offset: 0x00D7FD30
+		// Token: 0x0602DCAD RID: 187565 RVA: 0x00CD062C File Offset: 0x00CCE82C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -49,13 +49,13 @@ namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038D9E RID: 232862 RVA: 0x00D81CA3 File Offset: 0x00D7FEA3
+		// Token: 0x0602DCAE RID: 187566 RVA: 0x00CD079F File Offset: 0x00CCE99F
 		protected override void OnStart()
 		{
 			this.Layout = new GenericLayout<KurotatoEnemyDetailBookGridItem, KurotatoEnemyData>(base.GetGridLayout(8), new Func<KurotatoEnemyDetailBookGridItem>(this.InitGridItem), null, false, true);
 		}
 
-		// Token: 0x06038D9F RID: 232863 RVA: 0x00D81CC6 File Offset: 0x00D7FEC6
+		// Token: 0x0602DCAF RID: 187567 RVA: 0x00CD07C2 File Offset: 0x00CCE9C2
 		private KurotatoEnemyDetailBookGridItem InitGridItem()
 		{
 			return new KurotatoEnemyDetailBookGridItem
@@ -64,13 +64,13 @@ namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 			};
 		}
 
-		// Token: 0x06038DA0 RID: 232864 RVA: 0x00D81CDF File Offset: 0x00D7FEDF
+		// Token: 0x0602DCB0 RID: 187568 RVA: 0x00CD07DB File Offset: 0x00CCE9DB
 		public bool GetChildRefreshed()
 		{
 			return this.IsRefreshed;
 		}
 
-		// Token: 0x06038DA1 RID: 232865 RVA: 0x00D81CE8 File Offset: 0x00D7FEE8
+		// Token: 0x0602DCB1 RID: 187569 RVA: 0x00CD07E4 File Offset: 0x00CCE9E4
 		public override void Refresh(KurotatoEnemyDetailBookBigItemData data, bool isSelected, int gridIndex)
 		{
 			if (this.Layout == null)
@@ -120,7 +120,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 			base.GetItem(0).SetAlpha(1f);
 		}
 
-		// Token: 0x06038DA2 RID: 232866 RVA: 0x00D81DC8 File Offset: 0x00D7FFC8
+		// Token: 0x0602DCB2 RID: 187570 RVA: 0x00CD08C4 File Offset: 0x00CCEAC4
 		private void RefreshAsAllItem(KurotatoEnemyDetailBookBigItemData data)
 		{
 			this.Data = data;
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(4), name, Array.Empty<object>());
 		}
 
-		// Token: 0x06038DA3 RID: 232867 RVA: 0x00D81E58 File Offset: 0x00D80058
+		// Token: 0x0602DCB3 RID: 187571 RVA: 0x00CD0954 File Offset: 0x00CCEB54
 		private void RefreshAsWaveItem(KurotatoEnemyDetailBookBigItemData data)
 		{
 			this.Data = data;
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 			uuiitem2.SetChangeColor(bUseChangeColor2, fcolor);
 		}
 
-		// Token: 0x06038DA4 RID: 232868 RVA: 0x00D81FA4 File Offset: 0x00D801A4
+		// Token: 0x0602DCB4 RID: 187572 RVA: 0x00CD0AA0 File Offset: 0x00CCECA0
 		public void CheckSelectedStateIsInBigItem(KurotatoEnemyData data)
 		{
 			this.Layout.DeselectCurrentGridProxy();
@@ -200,23 +200,23 @@ namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 			layout.SelectGridProxy(gridIndex, false);
 		}
 
-		// Token: 0x06038DA5 RID: 232869 RVA: 0x00D81FDB File Offset: 0x00D801DB
+		// Token: 0x0602DCB5 RID: 187573 RVA: 0x00CD0AD7 File Offset: 0x00CCECD7
 		private void OnClickGridItem(KurotatoEnemyData data)
 		{
 			EventSystem.Instance.Emit<KurotatoEnemyData>(EEventName.KurotatoEnemyDetailBookGridItemClick, data);
 		}
 
-		// Token: 0x0401DD15 RID: 122133
+		// Token: 0x040187AB RID: 100267
 		[Nullable(2)]
 		private KurotatoEnemyDetailBookBigItemData Data;
 
-		// Token: 0x0401DD16 RID: 122134
+		// Token: 0x040187AC RID: 100268
 		private List<KurotatoEnemyData> DataList = new List<KurotatoEnemyData>();
 
-		// Token: 0x0401DD17 RID: 122135
+		// Token: 0x040187AD RID: 100269
 		private readonly bool IsRefreshed;
 
-		// Token: 0x0401DD18 RID: 122136
+		// Token: 0x040187AE RID: 100270
 		[Nullable(new byte[]
 		{
 			2,
@@ -225,7 +225,7 @@ namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 		})]
 		protected GenericLayout<KurotatoEnemyDetailBookGridItem, KurotatoEnemyData> Layout;
 
-		// Token: 0x0401DD19 RID: 122137
+		// Token: 0x040187AF RID: 100271
 		[Nullable(new byte[]
 		{
 			2,
@@ -233,38 +233,38 @@ namespace CSharpScript.Game.Module.Kurotato.View.EnemyDetailBook
 		})]
 		public Func<KurotatoEnemyData, bool> CanGridItemExecuteChangeCb;
 
-		// Token: 0x0200B975 RID: 47477
+		// Token: 0x0200A38F RID: 41871
 		[NullableContext(0)]
 		private class EBigItemComponent
 		{
-			// Token: 0x04038144 RID: 229700
+			// Token: 0x04032B3E RID: 207678
 			public const int TitleHorizontalLayout = 0;
 
-			// Token: 0x04038145 RID: 229701
+			// Token: 0x04032B3F RID: 207679
 			public const int ItemIconAll = 1;
 
-			// Token: 0x04038146 RID: 229702
+			// Token: 0x04032B40 RID: 207680
 			public const int SpriteIconAll = 2;
 
-			// Token: 0x04038147 RID: 229703
+			// Token: 0x04032B41 RID: 207681
 			public const int TextNumWave = 3;
 
-			// Token: 0x04038148 RID: 229704
+			// Token: 0x04032B42 RID: 207682
 			public const int TextTitle = 4;
 
-			// Token: 0x04038149 RID: 229705
+			// Token: 0x04032B43 RID: 207683
 			public const int ItemWarringWave = 5;
 
-			// Token: 0x0403814A RID: 229706
+			// Token: 0x04032B44 RID: 207684
 			public const int ItemDoneWave = 6;
 
-			// Token: 0x0403814B RID: 229707
+			// Token: 0x04032B45 RID: 207685
 			public const int ItemChoose = 7;
 
-			// Token: 0x0403814C RID: 229708
+			// Token: 0x04032B46 RID: 207686
 			public const int GridItemLayout = 8;
 
-			// Token: 0x0403814D RID: 229709
+			// Token: 0x04032B47 RID: 207687
 			public const int GridItem = 9;
 		}
 	}

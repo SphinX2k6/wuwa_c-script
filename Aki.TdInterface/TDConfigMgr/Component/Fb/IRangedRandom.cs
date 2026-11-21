@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B4C RID: 2892
+	// Token: 0x02000C1A RID: 3098
 	public class IRangedRandom
 	{
-		// Token: 0x060042A6 RID: 17062 RVA: 0x000AA326 File Offset: 0x000A8526
-		[NullableContext(1)]
+		// Token: 0x060046FF RID: 18175 RVA: 0x000B43EA File Offset: 0x000B25EA
 		public static IRangedRandom Create(IRangedRandom? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170011CB RID: 4555
-		// (get) Token: 0x060042A7 RID: 17063 RVA: 0x000AA345 File Offset: 0x000A8545
+		// Token: 0x170012C6 RID: 4806
+		// (get) Token: 0x06004700 RID: 18176 RVA: 0x000B4409 File Offset: 0x000B2609
 		public virtual float Left
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170011CC RID: 4556
-		// (get) Token: 0x060042A8 RID: 17064 RVA: 0x000AA352 File Offset: 0x000A8552
+		// Token: 0x170012C7 RID: 4807
+		// (get) Token: 0x06004701 RID: 18177 RVA: 0x000B4416 File Offset: 0x000B2616
 		public virtual float Right
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002583 RID: 9603
+		// Token: 0x040027CB RID: 10187
 		private IRangedRandom Instance;
 	}
 }

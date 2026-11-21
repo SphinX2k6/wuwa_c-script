@@ -8,12 +8,12 @@ using CSharpScript.Game.LevelGamePlay;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A29 RID: 18985
+	// Token: 0x020039D1 RID: 14801
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseLevelData
 	{
-		// Token: 0x060314AA RID: 201898 RVA: 0x00B6EA2D File Offset: 0x00B6CC2D
+		// Token: 0x0602623A RID: 156218 RVA: 0x00AB29D1 File Offset: 0x00AB0BD1
 		public static TrapDefenseLevelData Create(TrapDefenseActivity config)
 		{
 			TrapDefenseLevelData trapDefenseLevelData = new TrapDefenseLevelData(config.Id);
@@ -22,13 +22,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return trapDefenseLevelData;
 		}
 
-		// Token: 0x060314AB RID: 201899 RVA: 0x00B6EA48 File Offset: 0x00B6CC48
+		// Token: 0x0602623B RID: 156219 RVA: 0x00AB29EC File Offset: 0x00AB0BEC
 		private TrapDefenseLevelData(int id)
 		{
 			this.Id = id;
 		}
 
-		// Token: 0x060314AC RID: 201900 RVA: 0x00B6EA6C File Offset: 0x00B6CC6C
+		// Token: 0x0602623C RID: 156220 RVA: 0x00AB2A10 File Offset: 0x00AB0C10
 		private void Init()
 		{
 			foreach (int key in this.Config.RewardAuxiliaryTypesIter())
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.HasShop = this.CheckHasShop();
 		}
 
-		// Token: 0x060314AD RID: 201901 RVA: 0x00B6EB48 File Offset: 0x00B6CD48
+		// Token: 0x0602623D RID: 156221 RVA: 0x00AB2AEC File Offset: 0x00AB0CEC
 		private bool CheckHasShop()
 		{
 			foreach (TrapDefenseWave trapDefenseWave in TrapDefenseConfig.Instance.GetTrapDefenseWavesByLevelId(this.Id))
@@ -56,8 +56,8 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return false;
 		}
 
-		// Token: 0x17007A2F RID: 31279
-		// (get) Token: 0x060314AE RID: 201902 RVA: 0x00B6EBAC File Offset: 0x00B6CDAC
+		// Token: 0x17004DDC RID: 19932
+		// (get) Token: 0x0602623E RID: 156222 RVA: 0x00AB2B50 File Offset: 0x00AB0D50
 		public bool IsUnlock
 		{
 			get
@@ -66,13 +66,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x060314AF RID: 201903 RVA: 0x00B6EBBE File Offset: 0x00B6CDBE
+		// Token: 0x0602623F RID: 156223 RVA: 0x00AB2B62 File Offset: 0x00AB0D62
 		public void SetPosition(int pos)
 		{
 			this.Position = pos;
 		}
 
-		// Token: 0x060314B0 RID: 201904 RVA: 0x00B6EBC8 File Offset: 0x00B6CDC8
+		// Token: 0x06026240 RID: 156224 RVA: 0x00AB2B6C File Offset: 0x00AB0D6C
 		public void ProtoUpdateData(TrapDefenseChallengeInfo data)
 		{
 			this.IsUnlockCondition = data.Unlock;
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.MaxFinishWaveTimes = data.MaxWave;
 		}
 
-		// Token: 0x060314B1 RID: 201905 RVA: 0x00B6EC48 File Offset: 0x00B6CE48
+		// Token: 0x06026241 RID: 156225 RVA: 0x00AB2BEC File Offset: 0x00AB0DEC
 		public List<bool> GetStarStateList()
 		{
 			int count = this.ReachTargetIndexList.Count;
@@ -99,19 +99,19 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return list;
 		}
 
-		// Token: 0x060314B2 RID: 201906 RVA: 0x00B6EC88 File Offset: 0x00B6CE88
+		// Token: 0x06026242 RID: 156226 RVA: 0x00AB2C2C File Offset: 0x00AB0E2C
 		public bool IsDifficulty(ETrapDefenseDifficultyLevel difficulty)
 		{
 			return this.Config.Difficulty == (int)difficulty;
 		}
 
-		// Token: 0x060314B3 RID: 201907 RVA: 0x00B6EC98 File Offset: 0x00B6CE98
+		// Token: 0x06026243 RID: 156227 RVA: 0x00AB2C3C File Offset: 0x00AB0E3C
 		public string GetPositionFormat(int maxLen = 2)
 		{
 			return this.Position.ToString().PadLeft(maxLen, '0');
 		}
 
-		// Token: 0x060314B4 RID: 201908 RVA: 0x00B6ECB0 File Offset: 0x00B6CEB0
+		// Token: 0x06026244 RID: 156228 RVA: 0x00AB2C54 File Offset: 0x00AB0E54
 		public List<ITrapDefenseLevelTargetItemData> GetTargetInfoList()
 		{
 			int count = this.ReachTargetIndexList.Count;
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return list;
 		}
 
-		// Token: 0x060314B5 RID: 201909 RVA: 0x00B6ED70 File Offset: 0x00B6CF70
+		// Token: 0x06026245 RID: 156229 RVA: 0x00AB2D14 File Offset: 0x00AB0F14
 		public List<ITrapDefenseLevelRewardItemData> GetRewardShowList()
 		{
 			List<ITrapDefenseLevelRewardItemData> list = new List<ITrapDefenseLevelRewardItemData>();
@@ -170,7 +170,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return list;
 		}
 
-		// Token: 0x060314B6 RID: 201910 RVA: 0x00B6EE4C File Offset: 0x00B6D04C
+		// Token: 0x06026246 RID: 156230 RVA: 0x00AB2DF0 File Offset: 0x00AB0FF0
 		public List<ITrapDefenseResultUnlockInfo> GetRewardShowListMachineData()
 		{
 			List<ITrapDefenseResultUnlockInfo> list = new List<ITrapDefenseResultUnlockInfo>();
@@ -207,7 +207,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return list;
 		}
 
-		// Token: 0x060314B7 RID: 201911 RVA: 0x00B6EF80 File Offset: 0x00B6D180
+		// Token: 0x06026247 RID: 156231 RVA: 0x00AB2F24 File Offset: 0x00AB1124
 		public List<ITrapDefenseResultUnlockInfo> GetRewardShowListBdBuffData()
 		{
 			List<ITrapDefenseResultUnlockInfo> list = new List<ITrapDefenseResultUnlockInfo>();
@@ -223,25 +223,25 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return list;
 		}
 
-		// Token: 0x060314B8 RID: 201912 RVA: 0x00B6EFFC File Offset: 0x00B6D1FC
+		// Token: 0x06026248 RID: 156232 RVA: 0x00AB2FA0 File Offset: 0x00AB11A0
 		public bool IsReachOpenTime()
 		{
 			return this.UnlockTime <= 0.0 || TimeUtil.Instance.GetServerTime() >= this.UnlockTime;
 		}
 
-		// Token: 0x060314B9 RID: 201913 RVA: 0x00B6F026 File Offset: 0x00B6D226
+		// Token: 0x06026249 RID: 156233 RVA: 0x00AB2FCA File Offset: 0x00AB11CA
 		public bool IsReachOpenTimeIgnoreZero()
 		{
 			return this.UnlockTime > 0.0 && TimeUtil.Instance.GetServerTime() >= this.UnlockTime;
 		}
 
-		// Token: 0x060314BA RID: 201914 RVA: 0x00B6F050 File Offset: 0x00B6D250
+		// Token: 0x0602624A RID: 156234 RVA: 0x00AB2FF4 File Offset: 0x00AB11F4
 		public string GetUnlockTimeFormat()
 		{
 			return TimeUtil.Instance.DateFormat4String(this.UnlockTime);
 		}
 
-		// Token: 0x060314BB RID: 201915 RVA: 0x00B6F064 File Offset: 0x00B6D264
+		// Token: 0x0602624B RID: 156235 RVA: 0x00AB3008 File Offset: 0x00AB1208
 		public string GetShowActorLabelStr()
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(71, 8);
@@ -265,7 +265,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x060314BC RID: 201916 RVA: 0x00B6F15C File Offset: 0x00B6D35C
+		// Token: 0x0602624C RID: 156236 RVA: 0x00AB3100 File Offset: 0x00AB1300
 		public ITrapDefenseDifficultyLevelInfo GetDifficultyUiInfo()
 		{
 			ETrapDefenseDifficultyLevel difficulty = (ETrapDefenseDifficultyLevel)this.Config.Difficulty;
@@ -277,13 +277,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return result;
 		}
 
-		// Token: 0x060314BD RID: 201917 RVA: 0x00B6F191 File Offset: 0x00B6D391
+		// Token: 0x0602624D RID: 156237 RVA: 0x00AB3135 File Offset: 0x00AB1335
 		public string GetPreviewMapResource()
 		{
 			return this.Config.LevelMapUiShow;
 		}
 
-		// Token: 0x060314BE RID: 201918 RVA: 0x00B6F1A0 File Offset: 0x00B6D3A0
+		// Token: 0x0602624E RID: 156238 RVA: 0x00AB3144 File Offset: 0x00AB1344
 		public List<TrapDefenseBdData> GetShowBdList()
 		{
 			List<TrapDefenseBdData> list = new List<TrapDefenseBdData>();
@@ -298,13 +298,13 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return list;
 		}
 
-		// Token: 0x060314BF RID: 201919 RVA: 0x00B6F1FE File Offset: 0x00B6D3FE
+		// Token: 0x0602624F RID: 156239 RVA: 0x00AB31A2 File Offset: 0x00AB13A2
 		public bool IsFullStarPassed()
 		{
 			return this.IsPassed && this.Config.StarRatingConditionsLength >= this.ReachTargetIndexList.Count;
 		}
 
-		// Token: 0x060314C0 RID: 201920 RVA: 0x00B6F228 File Offset: 0x00B6D428
+		// Token: 0x06026250 RID: 156240 RVA: 0x00AB31CC File Offset: 0x00AB13CC
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -330,7 +330,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return new ValueTuple<ELevelGeneralCondition, int, string, Dictionary<string, string>>(ELevelGeneralCondition.AlwaysFalse, 0, string.Empty, new Dictionary<string, string>());
 		}
 
-		// Token: 0x060314C1 RID: 201921 RVA: 0x00B6F324 File Offset: 0x00B6D524
+		// Token: 0x06026251 RID: 156241 RVA: 0x00AB32C8 File Offset: 0x00AB14C8
 		public bool IsBossWave(int wave)
 		{
 			if (wave <= 0)
@@ -355,7 +355,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return this.IsBoosWaveFromMainId(this.Config.MonsterWaveMainId, wave);
 		}
 
-		// Token: 0x060314C2 RID: 201922 RVA: 0x00B6F3C0 File Offset: 0x00B6D5C0
+		// Token: 0x06026252 RID: 156242 RVA: 0x00AB3364 File Offset: 0x00AB1564
 		private bool IsBoosWaveFromMainId(int mainId, int wave)
 		{
 			List<ITrapDefenseBatch> csvMainConfigByMonsterWaveMainId = TrapDefenseConfig.Instance.GetCsvMainConfigByMonsterWaveMainId(mainId);
@@ -401,40 +401,40 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return false;
 		}
 
-		// Token: 0x0401A593 RID: 107923
+		// Token: 0x04014EEA RID: 85738
 		public int Id;
 
-		// Token: 0x0401A594 RID: 107924
+		// Token: 0x04014EEB RID: 85739
 		public TrapDefenseActivity Config;
 
-		// Token: 0x0401A595 RID: 107925
+		// Token: 0x04014EEC RID: 85740
 		public bool IsUnlockCondition;
 
-		// Token: 0x0401A596 RID: 107926
+		// Token: 0x04014EED RID: 85741
 		public bool IsPassed;
 
-		// Token: 0x0401A597 RID: 107927
+		// Token: 0x04014EEE RID: 85742
 		public bool IsRewarded;
 
-		// Token: 0x0401A598 RID: 107928
+		// Token: 0x04014EEF RID: 85743
 		public double UnlockTime;
 
-		// Token: 0x0401A599 RID: 107929
+		// Token: 0x04014EF0 RID: 85744
 		public bool IsLeaved;
 
-		// Token: 0x0401A59A RID: 107930
+		// Token: 0x04014EF1 RID: 85745
 		public List<int> ReachTargetIndexList = new List<int>();
 
-		// Token: 0x0401A59B RID: 107931
+		// Token: 0x04014EF2 RID: 85746
 		public int MaxFinishWaveTimes;
 
-		// Token: 0x0401A59C RID: 107932
+		// Token: 0x04014EF3 RID: 85747
 		public int Position = 1;
 
-		// Token: 0x0401A59D RID: 107933
+		// Token: 0x04014EF4 RID: 85748
 		public bool IsEndless;
 
-		// Token: 0x0401A59E RID: 107934
+		// Token: 0x04014EF5 RID: 85749
 		public bool HasShop;
 	}
 }

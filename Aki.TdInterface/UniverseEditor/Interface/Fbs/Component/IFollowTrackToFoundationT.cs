@@ -3,25 +3,25 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020052B3 RID: 21171
+	// Token: 0x0200581E RID: 22558
 	public class IFollowTrackToFoundationT
 	{
-		// Token: 0x17009B3F RID: 39743
-		// (get) Token: 0x06022849 RID: 141385 RVA: 0x004C8DF9 File Offset: 0x004C6FF9
-		// (set) Token: 0x0602284A RID: 141386 RVA: 0x004C8E01 File Offset: 0x004C7001
+		// Token: 0x1700A348 RID: 41800
+		// (get) Token: 0x0602480D RID: 149517 RVA: 0x00503EF5 File Offset: 0x005020F5
+		// (set) Token: 0x0602480E RID: 149518 RVA: 0x00503EFD File Offset: 0x005020FD
 		public EFollowTrackEndType Type { get; set; }
 
-		// Token: 0x17009B40 RID: 39744
-		// (get) Token: 0x0602284B RID: 141387 RVA: 0x004C8E0A File Offset: 0x004C700A
-		// (set) Token: 0x0602284C RID: 141388 RVA: 0x004C8E12 File Offset: 0x004C7012
+		// Token: 0x1700A349 RID: 41801
+		// (get) Token: 0x0602480F RID: 149519 RVA: 0x00503F06 File Offset: 0x00502106
+		// (set) Token: 0x06024810 RID: 149520 RVA: 0x00503F0E File Offset: 0x0050210E
 		public int FoundationId { get; set; }
 
-		// Token: 0x17009B41 RID: 39745
-		// (get) Token: 0x0602284D RID: 141389 RVA: 0x004C8E1B File Offset: 0x004C701B
-		// (set) Token: 0x0602284E RID: 141390 RVA: 0x004C8E23 File Offset: 0x004C7023
+		// Token: 0x1700A34A RID: 41802
+		// (get) Token: 0x06024811 RID: 149521 RVA: 0x00503F17 File Offset: 0x00502117
+		// (set) Token: 0x06024812 RID: 149522 RVA: 0x00503F1F File Offset: 0x0050211F
 		public IVectorInfoT FinalOffset { get; set; }
 
-		// Token: 0x0602284F RID: 141391 RVA: 0x004C8E2C File Offset: 0x004C702C
+		// Token: 0x06024813 RID: 149523 RVA: 0x00503F28 File Offset: 0x00502128
 		public IFollowTrackToFoundationT()
 		{
 			this.Type = EFollowTrackEndType.ToStart;

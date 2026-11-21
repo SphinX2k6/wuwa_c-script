@@ -6,12 +6,12 @@ using CSharpScript.Game.Module.Reward;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001667 RID: 5735
+// Token: 0x02000B1F RID: 2847
 [NullableContext(1)]
 [Nullable(0)]
 public class WuWuLogisticsMissionItem : GridProxyAbstract<int>
 {
-	// Token: 0x0600A1A0 RID: 41376 RVA: 0x0023A964 File Offset: 0x00238B64
+	// Token: 0x0600757E RID: 30078 RVA: 0x00244800 File Offset: 0x00242A00
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ public class WuWuLogisticsMissionItem : GridProxyAbstract<int>
 		};
 	}
 
-	// Token: 0x0600A1A1 RID: 41377 RVA: 0x0023AA2C File Offset: 0x00238C2C
+	// Token: 0x0600757F RID: 30079 RVA: 0x002448C8 File Offset: 0x00242AC8
 	protected override void OnStart()
 	{
 		this.RewardScrollView = new GenericScrollViewNew<CommonItemSmallItemGrid, TItem>(base.GetScrollViewWithScrollbar(2), new Func<CommonItemSmallItemGrid>(this.InitGridItem), null, false, null);
@@ -35,13 +35,13 @@ public class WuWuLogisticsMissionItem : GridProxyAbstract<int>
 		this.ConfirmQuick.SetFunction(new Action<int>(this.OnClickReceive));
 	}
 
-	// Token: 0x0600A1A2 RID: 41378 RVA: 0x0023AA8D File Offset: 0x00238C8D
+	// Token: 0x06007580 RID: 30080 RVA: 0x00244929 File Offset: 0x00242B29
 	public void SetClickCallback(Action<int> callback)
 	{
 		this.ClickCallback = callback;
 	}
 
-	// Token: 0x0600A1A3 RID: 41379 RVA: 0x0023AA96 File Offset: 0x00238C96
+	// Token: 0x06007581 RID: 30081 RVA: 0x00244932 File Offset: 0x00242B32
 	private CommonItemSmallItemGrid InitGridItem()
 	{
 		return new CommonItemSmallItemGrid
@@ -50,7 +50,7 @@ public class WuWuLogisticsMissionItem : GridProxyAbstract<int>
 		};
 	}
 
-	// Token: 0x0600A1A4 RID: 41380 RVA: 0x0023AAB0 File Offset: 0x00238CB0
+	// Token: 0x06007582 RID: 30082 RVA: 0x0024494C File Offset: 0x00242B4C
 	public override void Refresh(int taskId, bool isSelected, int gridIndex)
 	{
 		this.TaskId = taskId;
@@ -97,7 +97,7 @@ public class WuWuLogisticsMissionItem : GridProxyAbstract<int>
 		this.UpdateStateInfoItem(wuWuTaskData.State);
 	}
 
-	// Token: 0x0600A1A5 RID: 41381 RVA: 0x0023ABE0 File Offset: 0x00238DE0
+	// Token: 0x06007583 RID: 30083 RVA: 0x00244A7C File Offset: 0x00242C7C
 	private void UpdateStateInfoItem(EWuWuTaskState state)
 	{
 		bool uiactive = state == EWuWuTaskState.Running;
@@ -131,7 +131,7 @@ public class WuWuLogisticsMissionItem : GridProxyAbstract<int>
 		confirmQuick.SetRedDotVisible(flag);
 	}
 
-	// Token: 0x0600A1A6 RID: 41382 RVA: 0x0023AC68 File Offset: 0x00238E68
+	// Token: 0x06007584 RID: 30084 RVA: 0x00244B04 File Offset: 0x00242D04
 	[NullableContext(2)]
 	private string GetConditionProgress(EWuWuTaskConditionProgressShowType type, int progress, int target)
 	{
@@ -153,7 +153,7 @@ public class WuWuLogisticsMissionItem : GridProxyAbstract<int>
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0600A1A7 RID: 41383 RVA: 0x0023ACC8 File Offset: 0x00238EC8
+	// Token: 0x06007585 RID: 30085 RVA: 0x00244B64 File Offset: 0x00242D64
 	private void RefreshRewardItems(int dropId)
 	{
 		if (dropId <= 0)
@@ -169,7 +169,7 @@ public class WuWuLogisticsMissionItem : GridProxyAbstract<int>
 		rewardScrollView.RefreshByData(dropPackagePreviewItemList, null, false);
 	}
 
-	// Token: 0x0600A1A8 RID: 41384 RVA: 0x0023ACF9 File Offset: 0x00238EF9
+	// Token: 0x06007586 RID: 30086 RVA: 0x00244B95 File Offset: 0x00242D95
 	private void OnClickReceive(int data)
 	{
 		Action<int> clickCallback = this.ClickCallback;
@@ -180,15 +180,15 @@ public class WuWuLogisticsMissionItem : GridProxyAbstract<int>
 		clickCallback(this.TaskId);
 	}
 
-	// Token: 0x04004988 RID: 18824
+	// Token: 0x04004A2E RID: 18990
 	private int TaskId;
 
-	// Token: 0x04004989 RID: 18825
+	// Token: 0x04004A2F RID: 18991
 	private Action<int> ClickCallback = delegate(int _)
 	{
 	};
 
-	// Token: 0x0400498A RID: 18826
+	// Token: 0x04004A30 RID: 18992
 	[Nullable(new byte[]
 	{
 		2,
@@ -196,10 +196,10 @@ public class WuWuLogisticsMissionItem : GridProxyAbstract<int>
 	})]
 	private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> RewardScrollView;
 
-	// Token: 0x0400498B RID: 18827
+	// Token: 0x04004A31 RID: 18993
 	[Nullable(2)]
 	protected ButtonItem ConfirmQuick;
 
-	// Token: 0x0400498C RID: 18828
+	// Token: 0x04004A32 RID: 18994
 	private bool IsHadReward;
 }

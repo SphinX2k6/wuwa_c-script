@@ -8,17 +8,17 @@ using UnrealEngine.Bulitin.Utils;
 
 namespace UnrealEngine.Utils
 {
-	// Token: 0x02002AED RID: 10989
+	// Token: 0x0200089C RID: 2204
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class UnrealLogger
 	{
-		// Token: 0x0602844F RID: 164943
+		// Token: 0x0600BE04 RID: 48644
 		[NullableContext(0)]
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private unsafe static extern void Print(int logVerbosity, void* message);
 
-		// Token: 0x06028450 RID: 164944 RVA: 0x003D4201 File Offset: 0x003D2401
+		// Token: 0x0600BE05 RID: 48645 RVA: 0x0012F511 File Offset: 0x0012D711
 		public static void Info(string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 		{
 			0,
@@ -30,13 +30,13 @@ namespace UnrealEngine.Utils
 			UnrealLogger.Print(EUeLogVerbosity.Display, message, false, args);
 		}
 
-		// Token: 0x06028451 RID: 164945 RVA: 0x003D420C File Offset: 0x003D240C
+		// Token: 0x0600BE06 RID: 48646 RVA: 0x0012F51C File Offset: 0x0012D71C
 		public static void Info(string message)
 		{
 			UnrealLogger.Print(EUeLogVerbosity.Display, message, false);
 		}
 
-		// Token: 0x06028452 RID: 164946 RVA: 0x003D4216 File Offset: 0x003D2416
+		// Token: 0x0600BE07 RID: 48647 RVA: 0x0012F526 File Offset: 0x0012D726
 		public static void Warn(string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 		{
 			0,
@@ -48,13 +48,13 @@ namespace UnrealEngine.Utils
 			UnrealLogger.Print(EUeLogVerbosity.Warning, message, false, args);
 		}
 
-		// Token: 0x06028453 RID: 164947 RVA: 0x003D4221 File Offset: 0x003D2421
+		// Token: 0x0600BE08 RID: 48648 RVA: 0x0012F531 File Offset: 0x0012D731
 		public static void Warn(string message)
 		{
 			UnrealLogger.Print(EUeLogVerbosity.Warning, message, false);
 		}
 
-		// Token: 0x06028454 RID: 164948 RVA: 0x003D422B File Offset: 0x003D242B
+		// Token: 0x0600BE09 RID: 48649 RVA: 0x0012F53B File Offset: 0x0012D73B
 		public static void Error(string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 		{
 			0,
@@ -66,13 +66,13 @@ namespace UnrealEngine.Utils
 			UnrealLogger.Print(EUeLogVerbosity.Error, message, true, args);
 		}
 
-		// Token: 0x06028455 RID: 164949 RVA: 0x003D4236 File Offset: 0x003D2436
+		// Token: 0x0600BE0A RID: 48650 RVA: 0x0012F546 File Offset: 0x0012D746
 		public static void Error(string message)
 		{
 			UnrealLogger.Print(EUeLogVerbosity.Error, message, true);
 		}
 
-		// Token: 0x06028456 RID: 164950 RVA: 0x003D4240 File Offset: 0x003D2440
+		// Token: 0x0600BE0B RID: 48651 RVA: 0x0012F550 File Offset: 0x0012D750
 		public static void ErrorNoTrace(string message, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 		{
 			0,
@@ -84,13 +84,13 @@ namespace UnrealEngine.Utils
 			UnrealLogger.Print(EUeLogVerbosity.Error, message, false, args);
 		}
 
-		// Token: 0x06028457 RID: 164951 RVA: 0x003D424B File Offset: 0x003D244B
+		// Token: 0x0600BE0C RID: 48652 RVA: 0x0012F55B File Offset: 0x0012D75B
 		public static void ErrorNoTrace(string message)
 		{
 			UnrealLogger.Print(EUeLogVerbosity.Error, message, false);
 		}
 
-		// Token: 0x06028458 RID: 164952 RVA: 0x003D4258 File Offset: 0x003D2458
+		// Token: 0x0600BE0D RID: 48653 RVA: 0x0012F568 File Offset: 0x0012D768
 		private unsafe static void Print(EUeLogVerbosity logVerbosity, string message, bool trace, [ParamCollection] [ScopedRef] [Nullable(new byte[]
 		{
 			0,
@@ -150,7 +150,7 @@ namespace UnrealEngine.Utils
 			}
 		}
 
-		// Token: 0x06028459 RID: 164953 RVA: 0x003D4364 File Offset: 0x003D2564
+		// Token: 0x0600BE0E RID: 48654 RVA: 0x0012F674 File Offset: 0x0012D874
 		private static void AppendValueToBuilder(UnsafeStringBuilder builder, [Nullable(2)] object value)
 		{
 			if (value == null)
@@ -236,7 +236,7 @@ namespace UnrealEngine.Utils
 			}
 		}
 
-		// Token: 0x0602845A RID: 164954 RVA: 0x003D45A0 File Offset: 0x003D27A0
+		// Token: 0x0600BE0F RID: 48655 RVA: 0x0012F8B0 File Offset: 0x0012DAB0
 		private unsafe static void Print(EUeLogVerbosity logVerbosity, string message, bool trace)
 		{
 			if (trace)
@@ -269,7 +269,7 @@ namespace UnrealEngine.Utils
 			}
 		}
 
-		// Token: 0x0602845B RID: 164955 RVA: 0x003D460B File Offset: 0x003D280B
+		// Token: 0x0600BE10 RID: 48656 RVA: 0x0012F91B File Offset: 0x0012DB1B
 		public unsafe static void Print(EUeLogVerbosity logVerbosity, UnsafeStringBuilder sb)
 		{
 			if (sb.Length > 0)
@@ -278,13 +278,13 @@ namespace UnrealEngine.Utils
 			}
 		}
 
-		// Token: 0x0401629C RID: 90780
+		// Token: 0x040056B3 RID: 22195
 		private static readonly ThreadLocal<UnsafeStringBuilder> LocalSb = new ThreadLocal<UnsafeStringBuilder>(() => new UnsafeStringBuilder(1024));
 
-		// Token: 0x0401629D RID: 90781
+		// Token: 0x040056B4 RID: 22196
 		private const int MAX_CONTAINER_DEPTH = 4;
 
-		// Token: 0x0401629E RID: 90782
+		// Token: 0x040056B5 RID: 22197
 		[Nullable(new byte[]
 		{
 			2,
@@ -293,7 +293,7 @@ namespace UnrealEngine.Utils
 		[ThreadStatic]
 		private static HashSet<object> _visitedContainers;
 
-		// Token: 0x0401629F RID: 90783
+		// Token: 0x040056B6 RID: 22198
 		[ThreadStatic]
 		private static int _containerDepth;
 	}

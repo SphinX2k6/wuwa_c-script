@@ -7,12 +7,12 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 {
-	// Token: 0x02006203 RID: 25091
+	// Token: 0x02005181 RID: 20865
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RhythmShipData : ActivityBaseData
 	{
-		// Token: 0x0603F4F9 RID: 259321 RVA: 0x00F4C49C File Offset: 0x00F4A69C
+		// Token: 0x060341BA RID: 213434 RVA: 0x00E933F4 File Offset: 0x00E915F4
 		protected override void PhraseEx(ActivityData data)
 		{
 			RhythmActivityPb rhythmActivityPb = data.RhythmActivityPb;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			this.InitTaskTabList();
 		}
 
-		// Token: 0x0603F4FA RID: 259322 RVA: 0x00F4C744 File Offset: 0x00F4A944
+		// Token: 0x060341BB RID: 213435 RVA: 0x00E9369C File Offset: 0x00E9189C
 		private void InitPlanetInfo(RhythmShipPlanetPb planetInfo)
 		{
 			foreach (RhythmShipLevelPb rhythmShipLevelPb in planetInfo.RhythmShipLevelPb)
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			this.PlanetOpenTime[planetInfo.PlanetId] = planetInfo.OpenTime;
 		}
 
-		// Token: 0x0603F4FB RID: 259323 RVA: 0x00F4C7E8 File Offset: 0x00F4A9E8
+		// Token: 0x060341BC RID: 213436 RVA: 0x00E93740 File Offset: 0x00E91940
 		private void InitTaskTabList()
 		{
 			this.TaskTabList = new List<int>();
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			}
 		}
 
-		// Token: 0x0603F4FC RID: 259324 RVA: 0x00F4C8B4 File Offset: 0x00F4AAB4
+		// Token: 0x060341BD RID: 213437 RVA: 0x00E9380C File Offset: 0x00E91A0C
 		public bool GetCanTaskGetReward(int type)
 		{
 			foreach (KeyValuePair<int, ConditionTask> keyValuePair in ((type == 0) ? this.TaskInfoMap : this.LimitTaskInfoMap))
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return false;
 		}
 
-		// Token: 0x0603F4FD RID: 259325 RVA: 0x00F4C924 File Offset: 0x00F4AB24
+		// Token: 0x060341BE RID: 213438 RVA: 0x00E9387C File Offset: 0x00E91A7C
 		public bool GetGotoRhythmShipBtnRedDotActive()
 		{
 			if (!base.IsUnLock())
@@ -134,13 +134,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return false;
 		}
 
-		// Token: 0x0603F4FE RID: 259326 RVA: 0x00F4CA20 File Offset: 0x00F4AC20
+		// Token: 0x060341BF RID: 213439 RVA: 0x00E93978 File Offset: 0x00E91B78
 		public override bool GetExDataRedPointShowState()
 		{
 			return this.GetGotoRhythmShipBtnRedDotActive() || this.GetCanTaskGetReward(0) || this.GetCanTaskGetReward(1);
 		}
 
-		// Token: 0x0603F4FF RID: 259327 RVA: 0x00F4CA3C File Offset: 0x00F4AC3C
+		// Token: 0x060341C0 RID: 213440 RVA: 0x00E93994 File Offset: 0x00E91B94
 		public int GetRecommendQuestId()
 		{
 			RhythmActivity? rhythmActivity;
@@ -152,21 +152,21 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return num.Value;
 		}
 
-		// Token: 0x0603F500 RID: 259328 RVA: 0x00F4CAA0 File Offset: 0x00F4ACA0
+		// Token: 0x060341C1 RID: 213441 RVA: 0x00E939F8 File Offset: 0x00E91BF8
 		public bool IsRecommendQuestFinish()
 		{
 			int recommendQuestId = this.GetRecommendQuestId();
 			return recommendQuestId == 0 || QuestNewModel.Instance.CheckQuestFinished(recommendQuestId);
 		}
 
-		// Token: 0x0603F501 RID: 259329 RVA: 0x00F4CAC4 File Offset: 0x00F4ACC4
+		// Token: 0x060341C2 RID: 213442 RVA: 0x00E93A1C File Offset: 0x00E91C1C
 		public string GetRecommendQuestIdTips()
 		{
 			RhythmActivity? rhythmActivity;
 			return ((RhythmShipConfig.Instance.GetRhythmShipActivity(base.Id) != null) ? rhythmActivity.GetValueOrDefault().RecommendQuestTips : null) ?? "";
 		}
 
-		// Token: 0x0603F502 RID: 259330 RVA: 0x00F4CB08 File Offset: 0x00F4AD08
+		// Token: 0x060341C3 RID: 213443 RVA: 0x00E93A60 File Offset: 0x00E91C60
 		protected override bool GetExDataFinishShowState()
 		{
 			if (base.CheckIfInLimitTime())
@@ -189,29 +189,29 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return true;
 		}
 
-		// Token: 0x04021043 RID: 135235
+		// Token: 0x0401B972 RID: 113010
 		public int CurrentRole;
 
-		// Token: 0x04021044 RID: 135236
+		// Token: 0x0401B973 RID: 113011
 		public List<int> RoleUnlockList = new List<int>();
 
-		// Token: 0x04021045 RID: 135237
+		// Token: 0x0401B974 RID: 113012
 		public Dictionary<int, ConditionTask> TaskInfoMap = new Dictionary<int, ConditionTask>();
 
-		// Token: 0x04021046 RID: 135238
+		// Token: 0x0401B975 RID: 113013
 		public Dictionary<int, ConditionTask> LimitTaskInfoMap = new Dictionary<int, ConditionTask>();
 
-		// Token: 0x04021047 RID: 135239
+		// Token: 0x0401B976 RID: 113014
 		public Dictionary<int, RhythmSubLevelPb> SubLevelInfoMap = new Dictionary<int, RhythmSubLevelPb>();
 
-		// Token: 0x04021048 RID: 135240
+		// Token: 0x0401B977 RID: 113015
 		public Dictionary<int, long> PlanetOpenTime = new Dictionary<int, long>();
 
-		// Token: 0x04021049 RID: 135241
+		// Token: 0x0401B978 RID: 113016
 		[Nullable(2)]
 		public RhythmRedDotPb RedDotInfo;
 
-		// Token: 0x0402104A RID: 135242
+		// Token: 0x0401B979 RID: 113017
 		[Nullable(new byte[]
 		{
 			2,
@@ -219,7 +219,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 		})]
 		public List<RhythmPlayerRankingInfo> FriendLevelRatingInfoList;
 
-		// Token: 0x0402104B RID: 135243
+		// Token: 0x0401B97A RID: 113018
 		[Nullable(new byte[]
 		{
 			2,
@@ -227,7 +227,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 		})]
 		public List<RhythmPlayerRankingSubLevelInfo> SelfLevelRatingInfoList;
 
-		// Token: 0x0402104C RID: 135244
+		// Token: 0x0401B97B RID: 113019
 		public List<int> TaskTabList = new List<int>();
 	}
 }

@@ -6,25 +6,25 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 
-// Token: 0x020013DB RID: 5083
+// Token: 0x0200088F RID: 2191
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class ActivityPhantomCollectController : ActivityControllerBase
 {
-	// Token: 0x06008F7F RID: 36735 RVA: 0x001F0282 File Offset: 0x001EE482
+	// Token: 0x06006314 RID: 25364 RVA: 0x001F8DBA File Offset: 0x001F6FBA
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.PhantomCollectUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnPhantomCollectUpdateNotify));
 	}
 
-	// Token: 0x06008F80 RID: 36736 RVA: 0x001F02A0 File Offset: 0x001EE4A0
+	// Token: 0x06006315 RID: 25365 RVA: 0x001F8DD8 File Offset: 0x001F6FD8
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.PhantomCollectUpdateNotify);
 	}
 
-	// Token: 0x06008F81 RID: 36737 RVA: 0x001F02B4 File Offset: 0x001EE4B4
+	// Token: 0x06006316 RID: 25366 RVA: 0x001F8DEC File Offset: 0x001F6FEC
 	[NullableContext(2)]
 	protected void OnPhantomCollectUpdateNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -56,37 +56,37 @@ public class ActivityPhantomCollectController : ActivityControllerBase
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, this.ActivityId);
 	}
 
-	// Token: 0x06008F82 RID: 36738 RVA: 0x001F038D File Offset: 0x001EE58D
+	// Token: 0x06006317 RID: 25367 RVA: 0x001F8EC5 File Offset: 0x001F70C5
 	protected override string OnGetActivityResource(ActivityBaseData data)
 	{
 		return "UiItem_ActivityPhantomCollect";
 	}
 
-	// Token: 0x06008F83 RID: 36739 RVA: 0x001F0394 File Offset: 0x001EE594
+	// Token: 0x06006318 RID: 25368 RVA: 0x001F8ECC File Offset: 0x001F70CC
 	protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 	{
 		return new ActivitySubViewPhantomCollect();
 	}
 
-	// Token: 0x06008F84 RID: 36740 RVA: 0x001F039B File Offset: 0x001EE59B
+	// Token: 0x06006319 RID: 25369 RVA: 0x001F8ED3 File Offset: 0x001F70D3
 	protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 	{
 		this.ActivityId = data.Id;
 		return new ActivityPhantomCollectData();
 	}
 
-	// Token: 0x06008F85 RID: 36741 RVA: 0x001F03AE File Offset: 0x001EE5AE
+	// Token: 0x0600631A RID: 25370 RVA: 0x001F8EE6 File Offset: 0x001F70E6
 	protected override void OnOpenView(ActivityBaseData data)
 	{
 	}
 
-	// Token: 0x06008F86 RID: 36742 RVA: 0x001F03B0 File Offset: 0x001EE5B0
+	// Token: 0x0600631B RID: 25371 RVA: 0x001F8EE8 File Offset: 0x001F70E8
 	protected override bool OnGetIsOpeningActivityRelativeView()
 	{
 		return false;
 	}
 
-	// Token: 0x06008F87 RID: 36743 RVA: 0x001F03B4 File Offset: 0x001EE5B4
+	// Token: 0x0600631C RID: 25372 RVA: 0x001F8EEC File Offset: 0x001F70EC
 	public ActivityPhantomCollectData GetCurrentActivityDataById()
 	{
 		ActivityPhantomCollectData activityPhantomCollectData = ActivityModel.Instance.GetActivityById(this.ActivityId) as ActivityPhantomCollectData;
@@ -97,7 +97,7 @@ public class ActivityPhantomCollectController : ActivityControllerBase
 		return activityPhantomCollectData;
 	}
 
-	// Token: 0x06008F88 RID: 36744 RVA: 0x001F03E0 File Offset: 0x001EE5E0
+	// Token: 0x0600631D RID: 25373 RVA: 0x001F8F18 File Offset: 0x001F7118
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -114,8 +114,8 @@ public class ActivityPhantomCollectController : ActivityControllerBase
 		return <PhantomCollectRewardReceiveRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x17000C05 RID: 3077
-	// (get) Token: 0x06008F89 RID: 36745 RVA: 0x001F042B File Offset: 0x001EE62B
+	// Token: 0x17000C25 RID: 3109
+	// (get) Token: 0x0600631E RID: 25374 RVA: 0x001F8F63 File Offset: 0x001F7163
 	public static ActivityPhantomCollectController Instance
 	{
 		get
@@ -124,7 +124,7 @@ public class ActivityPhantomCollectController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06008F8A RID: 36746 RVA: 0x001F0432 File Offset: 0x001EE632
+	// Token: 0x0600631F RID: 25375 RVA: 0x001F8F6A File Offset: 0x001F716A
 	public static ActivityPhantomCollectController GetOrCreateInstance()
 	{
 		if (ActivityPhantomCollectController._Instance == null)
@@ -134,7 +134,7 @@ public class ActivityPhantomCollectController : ActivityControllerBase
 		return ActivityPhantomCollectController._Instance;
 	}
 
-	// Token: 0x06008F8B RID: 36747 RVA: 0x001F0446 File Offset: 0x001EE646
+	// Token: 0x06006320 RID: 25376 RVA: 0x001F8F7E File Offset: 0x001F717E
 	public static bool CreateInstance()
 	{
 		if (ActivityPhantomCollectController._Instance != null)
@@ -145,27 +145,27 @@ public class ActivityPhantomCollectController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x06008F8C RID: 36748 RVA: 0x001F045C File Offset: 0x001EE65C
+	// Token: 0x06006321 RID: 25377 RVA: 0x001F8F94 File Offset: 0x001F7194
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06008F8D RID: 36749 RVA: 0x001F045E File Offset: 0x001EE65E
+	// Token: 0x06006322 RID: 25378 RVA: 0x001F8F96 File Offset: 0x001F7196
 	public static void ResetStaticDefaultValue()
 	{
 		ActivityPhantomCollectController._Instance = null;
 	}
 
-	// Token: 0x06008F8E RID: 36750 RVA: 0x001F0466 File Offset: 0x001EE666
+	// Token: 0x06006323 RID: 25379 RVA: 0x001F8F9E File Offset: 0x001F719E
 	static ActivityPhantomCollectController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActivityPhantomCollectController.CreateStaticDefaultValue), new Action(ActivityPhantomCollectController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04003F74 RID: 16244
+	// Token: 0x0400400C RID: 16396
 	public int ActivityId;
 
-	// Token: 0x04003F75 RID: 16245
+	// Token: 0x0400400D RID: 16397
 	[Nullable(2)]
 	private static ActivityPhantomCollectController _Instance;
 }

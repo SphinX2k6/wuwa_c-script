@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020032C7 RID: 12999
+// Token: 0x02002838 RID: 10296
 [NullableContext(1)]
 [Nullable(0)]
 public class VehicleBuffComponent : CharacterBuffComponent
 {
-	// Token: 0x0601C3DD RID: 115677 RVA: 0x007DEE10 File Offset: 0x007DD010
+	// Token: 0x0601A044 RID: 106564 RVA: 0x00805B83 File Offset: 0x00803D83
 	protected override bool OnStart()
 	{
 		this.VehiclePerformComp = base.Entity.GetComponent<BaseVehiclePerformComponent>();
@@ -15,7 +15,7 @@ public class VehicleBuffComponent : CharacterBuffComponent
 		return base.OnStart();
 	}
 
-	// Token: 0x0601C3DE RID: 115678 RVA: 0x007DEE48 File Offset: 0x007DD048
+	// Token: 0x0601A045 RID: 106565 RVA: 0x00805BBC File Offset: 0x00803DBC
 	public override bool HasBuffAuthority()
 	{
 		CreatureDataComponent creatureDataComponent = this.CreatureDataComponent;
@@ -25,14 +25,14 @@ public class VehicleBuffComponent : CharacterBuffComponent
 		return id.GetValueOrDefault() == num2.GetValueOrDefault() & id != null == (num2 != null);
 	}
 
-	// Token: 0x0601C3DF RID: 115679 RVA: 0x007DEEA1 File Offset: 0x007DD0A1
+	// Token: 0x0601A046 RID: 106566 RVA: 0x00805C15 File Offset: 0x00803E15
 	[NullableContext(2)]
 	protected override bool NeedBroadcastBuff(ActiveBuffInternal buff, bool fromServer = false)
 	{
 		return (buff == null || !NoBroadCastBuff.Values.Contains(buff.Id)) && base.NeedBroadcastBuff(buff, fromServer);
 	}
 
-	// Token: 0x0601C3E0 RID: 115680 RVA: 0x007DEEC4 File Offset: 0x007DD0C4
+	// Token: 0x0601A047 RID: 106567 RVA: 0x00805C38 File Offset: 0x00803E38
 	public override void AddBuff(long buffId, AddBuffParam buffParams)
 	{
 		if (buffParams.PreMessageId == null && this.MotorContextId != 0L)
@@ -42,7 +42,7 @@ public class VehicleBuffComponent : CharacterBuffComponent
 		base.AddBuff(buffId, buffParams);
 	}
 
-	// Token: 0x0601C3E1 RID: 115681 RVA: 0x007DEF04 File Offset: 0x007DD104
+	// Token: 0x0601A048 RID: 106568 RVA: 0x00805C78 File Offset: 0x00803E78
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -50,28 +50,82 @@ public class VehicleBuffComponent : CharacterBuffComponent
 			return false;
 		}
 		VehicleBuffComponent vehicleBuffComponent = (VehicleBuffComponent)componentTemplate;
-		if (base.CanResetComponentProperty("VehiclePerformComp"))
+		if (vehicleBuffComponent.VehiclePerformComp == null)
 		{
-			if (vehicleBuffComponent.VehiclePerformComp == null)
-			{
-				this.VehiclePerformComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseVehiclePerformComponent>(this.VehiclePerformComp), "VehiclePerformComp"))
-			{
-				return false;
-			}
+			this.VehiclePerformComp = null;
 		}
-		if (base.CanResetComponentProperty("MotorContextId"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.VehiclePerformComp), "VehiclePerformComp"))
 		{
-			this.MotorContextId = vehicleBuffComponent.MotorContextId;
+			return false;
 		}
+		this.MotorContextId = vehicleBuffComponent.MotorContextId;
 		return true;
 	}
 
-	// Token: 0x0400DF6D RID: 57197
+	// Token: 0x17002A42 RID: 10818
+	// (get) Token: 0x0601A049 RID: 106569 RVA: 0x00805CCF File Offset: 0x00803ECF
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A43 RID: 10819
+	// (get) Token: 0x0601A04A RID: 106570 RVA: 0x00805CD2 File Offset: 0x00803ED2
+	public override bool NeedClearInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A44 RID: 10820
+	// (get) Token: 0x0601A04B RID: 106571 RVA: 0x00805CD5 File Offset: 0x00803ED5
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A45 RID: 10821
+	// (get) Token: 0x0601A04C RID: 106572 RVA: 0x00805CD8 File Offset: 0x00803ED8
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A46 RID: 10822
+	// (get) Token: 0x0601A04D RID: 106573 RVA: 0x00805CDB File Offset: 0x00803EDB
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002A47 RID: 10823
+	// (get) Token: 0x0601A04E RID: 106574 RVA: 0x00805CDE File Offset: 0x00803EDE
+	public override bool NeedChangeTimeDilationInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400E410 RID: 58384
 	[Nullable(2)]
 	public BaseVehiclePerformComponent VehiclePerformComp;
 
-	// Token: 0x0400DF6E RID: 57198
+	// Token: 0x0400E411 RID: 58385
 	public long MotorContextId;
 }

@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003D6E RID: 15726
+	// Token: 0x02004185 RID: 16773
 	public class ICheckSpringFestivalGuessJokerCompletedT
 	{
-		// Token: 0x17006BEA RID: 27626
-		// (get) Token: 0x06015C37 RID: 89143 RVA: 0x0032361A File Offset: 0x0032181A
-		// (set) Token: 0x06015C38 RID: 89144 RVA: 0x00323622 File Offset: 0x00321822
+		// Token: 0x170071A4 RID: 29092
+		// (get) Token: 0x0601716F RID: 94575 RVA: 0x0034A892 File Offset: 0x00348A92
+		// (set) Token: 0x06017170 RID: 94576 RVA: 0x0034A89A File Offset: 0x00348A9A
 		public ESpringFestivalGameplayType Type { get; set; }
 
-		// Token: 0x17006BEB RID: 27627
-		// (get) Token: 0x06015C39 RID: 89145 RVA: 0x0032362B File Offset: 0x0032182B
-		// (set) Token: 0x06015C3A RID: 89146 RVA: 0x00323633 File Offset: 0x00321833
+		// Token: 0x170071A5 RID: 29093
+		// (get) Token: 0x06017171 RID: 94577 RVA: 0x0034A8A3 File Offset: 0x00348AA3
+		// (set) Token: 0x06017172 RID: 94578 RVA: 0x0034A8AB File Offset: 0x00348AAB
 		public int Id { get; set; }
 
-		// Token: 0x17006BEC RID: 27628
-		// (get) Token: 0x06015C3B RID: 89147 RVA: 0x0032363C File Offset: 0x0032183C
-		// (set) Token: 0x06015C3C RID: 89148 RVA: 0x00323644 File Offset: 0x00321844
+		// Token: 0x170071A6 RID: 29094
+		// (get) Token: 0x06017173 RID: 94579 RVA: 0x0034A8B4 File Offset: 0x00348AB4
+		// (set) Token: 0x06017174 RID: 94580 RVA: 0x0034A8BC File Offset: 0x00348ABC
 		public byte NullMask { get; set; }
 
-		// Token: 0x06015C3D RID: 89149 RVA: 0x0032364D File Offset: 0x0032184D
+		// Token: 0x06017175 RID: 94581 RVA: 0x0034A8C5 File Offset: 0x00348AC5
 		public ICheckSpringFestivalGuessJokerCompletedT()
 		{
 			this.Type = ESpringFestivalGameplayType.MixDrinks;

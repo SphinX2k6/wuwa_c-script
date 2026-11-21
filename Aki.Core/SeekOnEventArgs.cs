@@ -7,7 +7,7 @@ using UnrealEngine;
 [Nullable(0)]
 public struct SeekOnEventArgs
 {
-	// Token: 0x060000BC RID: 188 RVA: 0x00006848 File Offset: 0x00004A48
+	// Token: 0x060000BE RID: 190 RVA: 0x000065C0 File Offset: 0x000047C0
 	public SeekOnEventArgs(AActor Actor, int? Handle, bool? SnapToMarker)
 	{
 		this.Actor = Actor;
@@ -15,12 +15,12 @@ public struct SeekOnEventArgs
 		this.SnapToMarker = SnapToMarker;
 	}
 
-	// Token: 0x040000AD RID: 173
+	// Token: 0x040000AE RID: 174
 	public AActor Actor;
 
-	// Token: 0x040000AE RID: 174
+	// Token: 0x040000AF RID: 175
 	public int? Handle;
 
-	// Token: 0x040000AF RID: 175
+	// Token: 0x040000B0 RID: 176
 	public bool? SnapToMarker;
 }

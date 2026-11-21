@@ -4,25 +4,25 @@ using Aki.Config;
 using CSharpScript.Game.Module.Plot;
 using CSharpScript.Game.Module.Plot.PlotView;
 
-// Token: 0x02001E25 RID: 7717
+// Token: 0x020012E7 RID: 4839
 [NullableContext(2)]
 [Nullable(0)]
 public class HandBookQuestPlotTalkAudioUtil : IStaticVariableResetter
 {
-	// Token: 0x0600EA74 RID: 60020 RVA: 0x00377986 File Offset: 0x00375B86
+	// Token: 0x0600BE93 RID: 48787 RVA: 0x0038368E File Offset: 0x0038188E
 	static HandBookQuestPlotTalkAudioUtil()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(HandBookQuestPlotTalkAudioUtil.CreateStaticDefaultValue), new Action(HandBookQuestPlotTalkAudioUtil.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600EA75 RID: 60021 RVA: 0x003779C1 File Offset: 0x00375BC1
+	// Token: 0x0600BE94 RID: 48788 RVA: 0x003836C9 File Offset: 0x003818C9
 	public static void CreateStaticDefaultValue()
 	{
 		HandBookQuestPlotTalkAudioUtil.PlotPlayEventResult = new PlayResult();
 		HandBookQuestPlotTalkAudioUtil.AudioDelegate = new PlotAudioDelegate();
 	}
 
-	// Token: 0x0600EA76 RID: 60022 RVA: 0x003779D7 File Offset: 0x00375BD7
+	// Token: 0x0600BE95 RID: 48789 RVA: 0x003836DF File Offset: 0x003818DF
 	public static void ResetStaticDefaultValue()
 	{
 		HandBookQuestPlotTalkAudioUtil.PlotPlayEventResult = null;
@@ -33,7 +33,7 @@ public class HandBookQuestPlotTalkAudioUtil : IStaticVariableResetter
 		HandBookQuestPlotTalkAudioUtil.LastCallBack = null;
 	}
 
-	// Token: 0x0600EA77 RID: 60023 RVA: 0x00377A04 File Offset: 0x00375C04
+	// Token: 0x0600BE96 RID: 48790 RVA: 0x0038370C File Offset: 0x0038190C
 	public static void PlayAudio(PlotAudio config, [Nullable(new byte[]
 	{
 		1,
@@ -65,7 +65,7 @@ public class HandBookQuestPlotTalkAudioUtil : IStaticVariableResetter
 		}, 3000f, null, null, true, 1f);
 	}
 
-	// Token: 0x0600EA78 RID: 60024 RVA: 0x00377AE2 File Offset: 0x00375CE2
+	// Token: 0x0600BE97 RID: 48791 RVA: 0x003837EA File Offset: 0x003819EA
 	public static void ClearCurPlayAudio()
 	{
 		HandBookQuestPlotTalkAudioUtil.CurrentPlayAudio = "";
@@ -75,7 +75,7 @@ public class HandBookQuestPlotTalkAudioUtil : IStaticVariableResetter
 		HandBookQuestPlotTalkAudioUtil.RemovePlayEndCallBackTimer(false, null);
 	}
 
-	// Token: 0x0600EA79 RID: 60025 RVA: 0x00377B1E File Offset: 0x00375D1E
+	// Token: 0x0600BE98 RID: 48792 RVA: 0x00383826 File Offset: 0x00381A26
 	private static void RemoveWaitAudioLoadTimer()
 	{
 		if (TimerSystem.GameplayTimeInstance.Has(HandBookQuestPlotTalkAudioUtil.WaitAudioLoadTimerId))
@@ -85,7 +85,7 @@ public class HandBookQuestPlotTalkAudioUtil : IStaticVariableResetter
 		HandBookQuestPlotTalkAudioUtil.WaitAudioLoadTimerId = null;
 	}
 
-	// Token: 0x0600EA7A RID: 60026 RVA: 0x00377B48 File Offset: 0x00375D48
+	// Token: 0x0600BE99 RID: 48793 RVA: 0x00383850 File Offset: 0x00381A50
 	private static void RemovePlayEndCallBackTimer(bool callBack = true, string nextAudio = null)
 	{
 		if (HandBookQuestPlotTalkAudioUtil.LastCallBack != null && callBack)
@@ -101,13 +101,13 @@ public class HandBookQuestPlotTalkAudioUtil : IStaticVariableResetter
 		HandBookQuestPlotTalkAudioUtil.PlayEndCallBackTimerId = null;
 	}
 
-	// Token: 0x0600EA7B RID: 60027 RVA: 0x00377BA3 File Offset: 0x00375DA3
+	// Token: 0x0600BE9A RID: 48794 RVA: 0x003838AB File Offset: 0x00381AAB
 	public static bool IsPlayingAudio(string audioId)
 	{
 		return HandBookQuestPlotTalkAudioUtil.CurrentPlayAudio == audioId;
 	}
 
-	// Token: 0x0600EA7C RID: 60028 RVA: 0x00377BB0 File Offset: 0x00375DB0
+	// Token: 0x0600BE9B RID: 48795 RVA: 0x003838B8 File Offset: 0x00381AB8
 	public static void ResetPlayEndCallBack([Nullable(new byte[]
 	{
 		1,
@@ -117,33 +117,33 @@ public class HandBookQuestPlotTalkAudioUtil : IStaticVariableResetter
 		HandBookQuestPlotTalkAudioUtil.LastCallBack = callback;
 	}
 
-	// Token: 0x04006CD1 RID: 27857
+	// Token: 0x04006DB2 RID: 28082
 	private const int BREAK_TIME = 1000;
 
-	// Token: 0x04006CD2 RID: 27858
+	// Token: 0x04006DB3 RID: 28083
 	private const int MAX_LOAD_AUDIO_TIME = 3000;
 
-	// Token: 0x04006CD3 RID: 27859
+	// Token: 0x04006DB4 RID: 28084
 	private const int PLAY_FLAG = 8;
 
-	// Token: 0x04006CD4 RID: 27860
+	// Token: 0x04006DB5 RID: 28085
 	[Nullable(1)]
 	private static PlayResult PlotPlayEventResult;
 
-	// Token: 0x04006CD5 RID: 27861
+	// Token: 0x04006DB6 RID: 28086
 	[Nullable(1)]
 	private static PlotAudioDelegate AudioDelegate;
 
-	// Token: 0x04006CD6 RID: 27862
+	// Token: 0x04006DB7 RID: 28087
 	private static TimerHandle WaitAudioLoadTimerId = null;
 
-	// Token: 0x04006CD7 RID: 27863
+	// Token: 0x04006DB8 RID: 28088
 	private static TimerHandle PlayEndCallBackTimerId = null;
 
-	// Token: 0x04006CD8 RID: 27864
+	// Token: 0x04006DB9 RID: 28089
 	[Nullable(1)]
 	private static string CurrentPlayAudio = "";
 
-	// Token: 0x04006CD9 RID: 27865
+	// Token: 0x04006DBA RID: 28090
 	private static Action<string> LastCallBack = null;
 }

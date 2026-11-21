@@ -3,35 +3,35 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001582 RID: 5506
+	// Token: 0x020016E0 RID: 5856
 	[EnumExtensions]
 	public enum EAdjustPlayerCamera
 	{
-		// Token: 0x0400492D RID: 18733
+		// Token: 0x04004CDC RID: 19676
 		[EnumStringMember("关卡.Common.镜头调整")]
 		Basic,
-		// Token: 0x0400492E RID: 18734
+		// Token: 0x04004CDD RID: 19677
 		[EnumStringMember("关卡.Common.镜头.横版镜头")]
 		Horizontal,
-		// Token: 0x0400492F RID: 18735
+		// Token: 0x04004CDE RID: 19678
 		[EnumStringMember("关卡.Common.镜头.对话镜头")]
 		Dialog,
-		// Token: 0x04004930 RID: 18736
+		// Token: 0x04004CDF RID: 19679
 		[EnumStringMember("关卡.Common.镜头.固定镜头")]
 		Fixed,
-		// Token: 0x04004931 RID: 18737
+		// Token: 0x04004CE0 RID: 19680
 		[EnumStringMember("关卡.Common.镜头.锁轴镜头")]
 		AxisLock,
-		// Token: 0x04004932 RID: 18738
+		// Token: 0x04004CE1 RID: 19681
 		[EnumStringMember("关卡.Common.镜头.第一人称镜头")]
 		FirstPerson,
-		// Token: 0x04004933 RID: 18739
+		// Token: 0x04004CE2 RID: 19682
 		[EnumStringMember("关卡.Common.镜头.固定镜头看向目标")]
 		FixedLookAt,
-		// Token: 0x04004934 RID: 18740
+		// Token: 0x04004CE3 RID: 19683
 		[EnumStringMember("关卡.Common.镜头.固定位置监控镜头")]
 		FixedSurveillance,
-		// Token: 0x04004935 RID: 18741
+		// Token: 0x04004CE4 RID: 19684
 		[EnumStringMember("关卡.Common.镜头.区域焦点镜头")]
 		ZoneFollow
 	}

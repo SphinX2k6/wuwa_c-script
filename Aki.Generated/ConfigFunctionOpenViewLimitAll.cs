@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200035D RID: 861
+	// Token: 0x02000372 RID: 882
 	public class ConfigFunctionOpenViewLimitAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001433 RID: 5171 RVA: 0x000CBA80 File Offset: 0x000C9C80
+		// Token: 0x060014B1 RID: 5297 RVA: 0x000D1F8C File Offset: 0x000D018C
 		static ConfigFunctionOpenViewLimitAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigFunctionOpenViewLimitAll.CreateStaticDefaultValue), new Action(ConfigFunctionOpenViewLimitAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001434 RID: 5172 RVA: 0x000CBAA0 File Offset: 0x000C9CA0
+		// Token: 0x060014B2 RID: 5298 RVA: 0x000D1FAC File Offset: 0x000D01AC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigFunctionOpenViewLimitAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001435 RID: 5173 RVA: 0x000CBB1F File Offset: 0x000C9D1F
+		// Token: 0x060014B3 RID: 5299 RVA: 0x000D202B File Offset: 0x000D022B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigFunctionOpenViewLimitAll.LogPair = null;
 			ConfigFunctionOpenViewLimitAll.HandleId = 0;
 		}
 
-		// Token: 0x06001436 RID: 5174 RVA: 0x000CBB2D File Offset: 0x000C9D2D
+		// Token: 0x060014B4 RID: 5300 RVA: 0x000D2039 File Offset: 0x000D0239
 		public static void Init()
 		{
 			ConfigFunctionOpenViewLimitAll.HandleId = ConfigCommon.InitDataStatement(ConfigFunctionOpenViewLimitAll.HandleId, "db_function.db", "select BinData from `FunctionOpenViewLimit`");
 		}
 
-		// Token: 0x06001437 RID: 5175 RVA: 0x000CBB48 File Offset: 0x000C9D48
+		// Token: 0x060014B5 RID: 5301 RVA: 0x000D2054 File Offset: 0x000D0254
 		[NullableContext(2)]
 		public static IReadOnlyList<FunctionOpenViewLimit> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x0400176F RID: 5999
+		// Token: 0x04001802 RID: 6146
 		private const string DB = "db_function.db";
 
-		// Token: 0x04001770 RID: 6000
+		// Token: 0x04001803 RID: 6147
 		private const string FILE = "g.功能开启.xlsx";
 
-		// Token: 0x04001771 RID: 6001
+		// Token: 0x04001804 RID: 6148
 		private const string TABLE = "FunctionOpenViewLimit";
 
-		// Token: 0x04001772 RID: 6002
+		// Token: 0x04001805 RID: 6149
 		private const string COMMAND = "select BinData from `FunctionOpenViewLimit`";
 
-		// Token: 0x04001773 RID: 6003
+		// Token: 0x04001806 RID: 6150
 		private const string KEY_PREFIX = "FunctionOpenViewLimitAll";
 
-		// Token: 0x04001774 RID: 6004
+		// Token: 0x04001807 RID: 6151
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001775 RID: 6005
+		// Token: 0x04001808 RID: 6152
 		private static int HandleId;
 	}
 }

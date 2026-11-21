@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003C43 RID: 15427
+	// Token: 0x02004052 RID: 16466
 	public struct ISphereTriggerShape : IFlatbufferObject
 	{
-		// Token: 0x17006A4B RID: 27211
-		// (get) Token: 0x06015505 RID: 87301 RVA: 0x003159C8 File Offset: 0x00313BC8
+		// Token: 0x17006FFC RID: 28668
+		// (get) Token: 0x06016A19 RID: 92697 RVA: 0x0033C868 File Offset: 0x0033AA68
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x06015506 RID: 87302 RVA: 0x003159D5 File Offset: 0x00313BD5
+		// Token: 0x06016A1A RID: 92698 RVA: 0x0033C875 File Offset: 0x0033AA75
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06015507 RID: 87303 RVA: 0x003159DC File Offset: 0x00313BDC
+		// Token: 0x06016A1B RID: 92699 RVA: 0x0033C87C File Offset: 0x0033AA7C
 		public static ISphereTriggerShape GetRootAsISphereTriggerShape(ByteBuffer _bb)
 		{
 			return ISphereTriggerShape.GetRootAsISphereTriggerShape(_bb, default(ISphereTriggerShape));
 		}
 
-		// Token: 0x06015508 RID: 87304 RVA: 0x003159F8 File Offset: 0x00313BF8
+		// Token: 0x06016A1C RID: 92700 RVA: 0x0033C898 File Offset: 0x0033AA98
 		public static ISphereTriggerShape GetRootAsISphereTriggerShape(ByteBuffer _bb, ISphereTriggerShape obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06015509 RID: 87305 RVA: 0x00315A15 File Offset: 0x00313C15
+		// Token: 0x06016A1D RID: 92701 RVA: 0x0033C8B5 File Offset: 0x0033AAB5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601550A RID: 87306 RVA: 0x00315A24 File Offset: 0x00313C24
+		// Token: 0x06016A1E RID: 92702 RVA: 0x0033C8C4 File Offset: 0x0033AAC4
 		public ISphereTriggerShape __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006A4C RID: 27212
-		// (get) Token: 0x0601550B RID: 87307 RVA: 0x00315A34 File Offset: 0x00313C34
+		// Token: 0x17006FFD RID: 28669
+		// (get) Token: 0x06016A1F RID: 92703 RVA: 0x0033C8D4 File Offset: 0x0033AAD4
 		public ETriggerShape Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x17006A4D RID: 27213
-		// (get) Token: 0x0601550C RID: 87308 RVA: 0x00315A70 File Offset: 0x00313C70
+		// Token: 0x17006FFE RID: 28670
+		// (get) Token: 0x06016A20 RID: 92704 RVA: 0x0033C910 File Offset: 0x0033AB10
 		public IVectorInfo? Center
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x17006A4E RID: 27214
-		// (get) Token: 0x0601550D RID: 87309 RVA: 0x00315AD0 File Offset: 0x00313CD0
+		// Token: 0x17006FFF RID: 28671
+		// (get) Token: 0x06016A21 RID: 92705 RVA: 0x0033C970 File Offset: 0x0033AB70
 		public int Radius
 		{
 			get
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x0601550E RID: 87310 RVA: 0x00315B0C File Offset: 0x00313D0C
+		// Token: 0x06016A22 RID: 92706 RVA: 0x0033C9AC File Offset: 0x0033ABAC
 		public static Offset<ISphereTriggerShape> CreateISphereTriggerShape(FlatBufferBuilder builder, ETriggerShape Type = ETriggerShape.Box, Offset<IVectorInfo> CenterOffset = default(Offset<IVectorInfo>), int Radius = 0)
 		{
 			builder.StartTable(3);
@@ -103,37 +103,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return ISphereTriggerShape.EndISphereTriggerShape(builder);
 		}
 
-		// Token: 0x0601550F RID: 87311 RVA: 0x00315B30 File Offset: 0x00313D30
+		// Token: 0x06016A23 RID: 92707 RVA: 0x0033C9D0 File Offset: 0x0033ABD0
 		public static void StartISphereTriggerShape(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06015510 RID: 87312 RVA: 0x00315B39 File Offset: 0x00313D39
+		// Token: 0x06016A24 RID: 92708 RVA: 0x0033C9D9 File Offset: 0x0033ABD9
 		public static void AddType(FlatBufferBuilder builder, ETriggerShape type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06015511 RID: 87313 RVA: 0x00315B44 File Offset: 0x00313D44
+		// Token: 0x06016A25 RID: 92709 RVA: 0x0033C9E4 File Offset: 0x0033ABE4
 		public static void AddCenter(FlatBufferBuilder builder, Offset<IVectorInfo> centerOffset)
 		{
 			builder.AddOffset(1, centerOffset.Value, 0);
 		}
 
-		// Token: 0x06015512 RID: 87314 RVA: 0x00315B54 File Offset: 0x00313D54
+		// Token: 0x06016A26 RID: 92710 RVA: 0x0033C9F4 File Offset: 0x0033ABF4
 		public static void AddRadius(FlatBufferBuilder builder, int radius)
 		{
 			builder.AddInt(2, radius, 0);
 		}
 
-		// Token: 0x06015513 RID: 87315 RVA: 0x00315B5F File Offset: 0x00313D5F
+		// Token: 0x06016A27 RID: 92711 RVA: 0x0033C9FF File Offset: 0x0033ABFF
 		public static Offset<ISphereTriggerShape> EndISphereTriggerShape(FlatBufferBuilder builder)
 		{
 			return new Offset<ISphereTriggerShape>(builder.EndTable());
 		}
 
-		// Token: 0x06015514 RID: 87316 RVA: 0x00315B6C File Offset: 0x00313D6C
+		// Token: 0x06016A28 RID: 92712 RVA: 0x0033CA0C File Offset: 0x0033AC0C
 		public ISphereTriggerShapeT UnPack()
 		{
 			ISphereTriggerShapeT sphereTriggerShapeT = new ISphereTriggerShapeT();
@@ -141,7 +141,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return sphereTriggerShapeT;
 		}
 
-		// Token: 0x06015515 RID: 87317 RVA: 0x00315B88 File Offset: 0x00313D88
+		// Token: 0x06016A29 RID: 92713 RVA: 0x0033CA28 File Offset: 0x0033AC28
 		public void UnPackTo(ISphereTriggerShapeT _o)
 		{
 			_o.Type = this.Type;
@@ -149,7 +149,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			_o.Radius = this.Radius;
 		}
 
-		// Token: 0x06015516 RID: 87318 RVA: 0x00315BDC File Offset: 0x00313DDC
+		// Token: 0x06016A2A RID: 92714 RVA: 0x0033CA7C File Offset: 0x0033AC7C
 		public static Offset<ISphereTriggerShape> Pack(FlatBufferBuilder builder, ISphereTriggerShapeT _o)
 		{
 			if (_o == null)
@@ -160,7 +160,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return ISphereTriggerShape.CreateISphereTriggerShape(builder, _o.Type, centerOffset, _o.Radius);
 		}
 
-		// Token: 0x0400B24B RID: 45643
+		// Token: 0x0400BBDB RID: 48091
 		private Table __p;
 	}
 }

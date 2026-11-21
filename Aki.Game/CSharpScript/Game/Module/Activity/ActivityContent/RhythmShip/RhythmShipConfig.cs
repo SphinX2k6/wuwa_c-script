@@ -5,19 +5,19 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 {
-	// Token: 0x020061FF RID: 25087
+	// Token: 0x0200517D RID: 20861
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Config(0)]
 	public class RhythmShipConfig : ConfigBase
 	{
-		// Token: 0x0603F4B2 RID: 259250 RVA: 0x00F4B6B2 File Offset: 0x00F498B2
+		// Token: 0x06034173 RID: 213363 RVA: 0x00E9260A File Offset: 0x00E9080A
 		public RhythmShipPlanet? GetRhythmShipPlanetById(int id)
 		{
 			return ConfigRhythmShipPlanetById.GetConfig(id, true);
 		}
 
-		// Token: 0x0603F4B3 RID: 259251 RVA: 0x00F4B6BC File Offset: 0x00F498BC
+		// Token: 0x06034174 RID: 213364 RVA: 0x00E92614 File Offset: 0x00E90814
 		public List<int> GetRhythmShipPlanetIdListByType(int type, int activityId)
 		{
 			List<int> list = new List<int>();
@@ -31,26 +31,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return list;
 		}
 
-		// Token: 0x0603F4B4 RID: 259252 RVA: 0x00F4B730 File Offset: 0x00F49930
+		// Token: 0x06034175 RID: 213365 RVA: 0x00E92688 File Offset: 0x00E90888
 		public RhythmShipLevel? GetRhythmShipLevelById(int id)
 		{
 			return ConfigRhythmShipLevelById.GetConfig(id, true);
 		}
 
-		// Token: 0x0603F4B5 RID: 259253 RVA: 0x00F4B739 File Offset: 0x00F49939
+		// Token: 0x06034176 RID: 213366 RVA: 0x00E92691 File Offset: 0x00E90891
 		public RhythmSubLevel? GetRhythmShipSubLevelById(int id)
 		{
 			return ConfigRhythmSubLevelById.GetConfig(id, true);
 		}
 
-		// Token: 0x0603F4B6 RID: 259254 RVA: 0x00F4B742 File Offset: 0x00F49942
+		// Token: 0x06034177 RID: 213367 RVA: 0x00E9269A File Offset: 0x00E9089A
 		[NullableContext(2)]
 		public IReadOnlyList<RhythmSubLevel> GetRhythmShipSubLevelByLevelId(int id)
 		{
 			return ConfigRhythmSubLevelByLevelId.GetConfigList(id, true);
 		}
 
-		// Token: 0x0603F4B7 RID: 259255 RVA: 0x00F4B74C File Offset: 0x00F4994C
+		// Token: 0x06034178 RID: 213368 RVA: 0x00E926A4 File Offset: 0x00E908A4
 		public List<int> GetRhythmShipSubLevelIdByLevelId(int id)
 		{
 			List<int> list = new List<int>();
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return list;
 		}
 
-		// Token: 0x0603F4B8 RID: 259256 RVA: 0x00F4B7B0 File Offset: 0x00F499B0
+		// Token: 0x06034179 RID: 213369 RVA: 0x00E92708 File Offset: 0x00E90908
 		public List<int> GetRhythmShipLevelIdListByPlanet(int planet)
 		{
 			List<int> list = new List<int>();
@@ -72,13 +72,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return list;
 		}
 
-		// Token: 0x0603F4B9 RID: 259257 RVA: 0x00F4B814 File Offset: 0x00F49A14
+		// Token: 0x0603417A RID: 213370 RVA: 0x00E9276C File Offset: 0x00E9096C
 		public RhythmRole? GetRhythmRoleById(int id)
 		{
 			return ConfigRhythmRoleById.GetConfig(id, true);
 		}
 
-		// Token: 0x0603F4BA RID: 259258 RVA: 0x00F4B820 File Offset: 0x00F49A20
+		// Token: 0x0603417B RID: 213371 RVA: 0x00E92778 File Offset: 0x00E90978
 		public RhythmEffect? GetRhythmRoleEffectById(int id)
 		{
 			RhythmEffect? config = ConfigRhythmEffectById.GetConfig(id, true);
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return config;
 		}
 
-		// Token: 0x0603F4BB RID: 259259 RVA: 0x00F4B878 File Offset: 0x00F49A78
+		// Token: 0x0603417C RID: 213372 RVA: 0x00E927D0 File Offset: 0x00E909D0
 		public List<int> GetRhythmRoleAll()
 		{
 			List<int> list = new List<int>();
@@ -106,13 +106,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return list;
 		}
 
-		// Token: 0x0603F4BC RID: 259260 RVA: 0x00F4B8DC File Offset: 0x00F49ADC
+		// Token: 0x0603417D RID: 213373 RVA: 0x00E92834 File Offset: 0x00E90A34
 		public RhythmTask? GetRhythmShipTaskById(int id)
 		{
 			return ConfigRhythmTaskById.GetConfig(id, true);
 		}
 
-		// Token: 0x0603F4BD RID: 259261 RVA: 0x00F4B8E8 File Offset: 0x00F49AE8
+		// Token: 0x0603417E RID: 213374 RVA: 0x00E92840 File Offset: 0x00E90A40
 		public List<int> GetRhythmShipTaskIdByTypeAndActivityId(int type, int activityData)
 		{
 			List<int> list = new List<int>();
@@ -123,13 +123,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return list;
 		}
 
-		// Token: 0x0603F4BE RID: 259262 RVA: 0x00F4B950 File Offset: 0x00F49B50
+		// Token: 0x0603417F RID: 213375 RVA: 0x00E928A8 File Offset: 0x00E90AA8
 		public RhythmTaskTab? GetRhythmShipTaskTabById(int id)
 		{
 			return ConfigRhythmTaskTabById.GetConfig(id, true);
 		}
 
-		// Token: 0x0603F4BF RID: 259263 RVA: 0x00F4B95C File Offset: 0x00F49B5C
+		// Token: 0x06034180 RID: 213376 RVA: 0x00E928B4 File Offset: 0x00E90AB4
 		public List<int> GetRhythmShipTaskTabByTabIdAndActivityId(int tab, int activityData)
 		{
 			List<int> list = new List<int>();
@@ -140,13 +140,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return list;
 		}
 
-		// Token: 0x0603F4C0 RID: 259264 RVA: 0x00F4B9C4 File Offset: 0x00F49BC4
+		// Token: 0x06034181 RID: 213377 RVA: 0x00E9291C File Offset: 0x00E90B1C
 		public RhythmBg? GetRhythmShipBgById(int id)
 		{
 			return ConfigRhythmBgById.GetConfig(id, true);
 		}
 
-		// Token: 0x0603F4C1 RID: 259265 RVA: 0x00F4B9D0 File Offset: 0x00F49BD0
+		// Token: 0x06034182 RID: 213378 RVA: 0x00E92928 File Offset: 0x00E90B28
 		public List<int> GetRhythmShipActionAll()
 		{
 			List<int> list = new List<int>();
@@ -157,20 +157,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return list;
 		}
 
-		// Token: 0x0603F4C2 RID: 259266 RVA: 0x00F4BA34 File Offset: 0x00F49C34
+		// Token: 0x06034183 RID: 213379 RVA: 0x00E9298C File Offset: 0x00E90B8C
 		public RhythmShipAction? GetRhythmShipActionById(int id)
 		{
 			return ConfigRhythmShipActionById.GetConfig(id, true);
 		}
 
-		// Token: 0x0603F4C3 RID: 259267 RVA: 0x00F4BA3D File Offset: 0x00F49C3D
+		// Token: 0x06034184 RID: 213380 RVA: 0x00E92995 File Offset: 0x00E90B95
 		public RhythmActivity? GetRhythmShipActivity(int id)
 		{
 			return ConfigRhythmActivityByActivityId.GetConfig(id, true);
 		}
 
-		// Token: 0x1700922E RID: 37422
-		// (get) Token: 0x0603F4C4 RID: 259268 RVA: 0x00F4BA46 File Offset: 0x00F49C46
+		// Token: 0x17006590 RID: 26000
+		// (get) Token: 0x06034185 RID: 213381 RVA: 0x00E9299E File Offset: 0x00E90B9E
 		public static RhythmShipConfig Instance
 		{
 			get
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			}
 		}
 
-		// Token: 0x0603F4C5 RID: 259269 RVA: 0x00F4BA4D File Offset: 0x00F49C4D
+		// Token: 0x06034186 RID: 213382 RVA: 0x00E929A5 File Offset: 0x00E90BA5
 		public static RhythmShipConfig GetOrCreateInstance()
 		{
 			if (RhythmShipConfig._Instance == null)
@@ -189,7 +189,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return RhythmShipConfig._Instance;
 		}
 
-		// Token: 0x0603F4C6 RID: 259270 RVA: 0x00F4BA61 File Offset: 0x00F49C61
+		// Token: 0x06034187 RID: 213383 RVA: 0x00E929B9 File Offset: 0x00E90BB9
 		public static bool CreateInstance()
 		{
 			if (RhythmShipConfig._Instance != null)
@@ -200,24 +200,24 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 			return true;
 		}
 
-		// Token: 0x0603F4C7 RID: 259271 RVA: 0x00F4BA77 File Offset: 0x00F49C77
+		// Token: 0x06034188 RID: 213384 RVA: 0x00E929CF File Offset: 0x00E90BCF
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603F4C8 RID: 259272 RVA: 0x00F4BA79 File Offset: 0x00F49C79
+		// Token: 0x06034189 RID: 213385 RVA: 0x00E929D1 File Offset: 0x00E90BD1
 		public static void ResetStaticDefaultValue()
 		{
 			RhythmShipConfig._Instance = null;
 		}
 
-		// Token: 0x0603F4C9 RID: 259273 RVA: 0x00F4BA81 File Offset: 0x00F49C81
+		// Token: 0x0603418A RID: 213386 RVA: 0x00E929D9 File Offset: 0x00E90BD9
 		static RhythmShipConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(RhythmShipConfig.CreateStaticDefaultValue), new Action(RhythmShipConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0402103B RID: 135227
+		// Token: 0x0401B96A RID: 113002
 		[Nullable(2)]
 		private static RhythmShipConfig _Instance;
 	}

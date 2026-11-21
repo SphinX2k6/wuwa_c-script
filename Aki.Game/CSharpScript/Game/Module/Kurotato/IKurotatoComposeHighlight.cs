@@ -4,23 +4,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Kurotato
 {
-	// Token: 0x020056FD RID: 22269
+	// Token: 0x020046D4 RID: 18132
 	[NullableContext(1)]
 	public interface IKurotatoComposeHighlight
 	{
-		// Token: 0x17008822 RID: 34850
-		// (get) Token: 0x06038A2D RID: 231981
-		// (set) Token: 0x06038A2E RID: 231982
+		// Token: 0x17005BEA RID: 23530
+		// (get) Token: 0x0602D93D RID: 186685
+		// (set) Token: 0x0602D93E RID: 186686
 		HashSet<int> UpgradeSelectionIds { get; set; }
 
-		// Token: 0x17008823 RID: 34851
-		// (get) Token: 0x06038A2F RID: 231983
-		// (set) Token: 0x06038A30 RID: 231984
+		// Token: 0x17005BEB RID: 23531
+		// (get) Token: 0x0602D93F RID: 186687
+		// (set) Token: 0x0602D940 RID: 186688
 		HashSet<int> ArrowIncIds { get; set; }
 
-		// Token: 0x17008824 RID: 34852
-		// (get) Token: 0x06038A31 RID: 231985
-		// (set) Token: 0x06038A32 RID: 231986
+		// Token: 0x17005BEC RID: 23532
+		// (get) Token: 0x0602D941 RID: 186689
+		// (set) Token: 0x0602D942 RID: 186690
 		HashSet<int> BagPairArrowIncIds { get; set; }
 	}
 }

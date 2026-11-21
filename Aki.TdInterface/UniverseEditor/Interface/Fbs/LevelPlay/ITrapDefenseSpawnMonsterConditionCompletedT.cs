@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020045C7 RID: 17863
+	// Token: 0x02004A2F RID: 18991
 	public class ITrapDefenseSpawnMonsterConditionCompletedT
 	{
-		// Token: 0x17007EF7 RID: 32503
-		// (get) Token: 0x0601B051 RID: 110673 RVA: 0x003D9FC8 File Offset: 0x003D81C8
-		// (set) Token: 0x0601B052 RID: 110674 RVA: 0x003D9FD0 File Offset: 0x003D81D0
+		// Token: 0x17008538 RID: 34104
+		// (get) Token: 0x0601C826 RID: 116774 RVA: 0x00406264 File Offset: 0x00404464
+		// (set) Token: 0x0601C827 RID: 116775 RVA: 0x0040626C File Offset: 0x0040446C
 		public ETrapDefenseSpawnMonsterCondition Type { get; set; }
 
-		// Token: 0x17007EF8 RID: 32504
-		// (get) Token: 0x0601B053 RID: 110675 RVA: 0x003D9FD9 File Offset: 0x003D81D9
-		// (set) Token: 0x0601B054 RID: 110676 RVA: 0x003D9FE1 File Offset: 0x003D81E1
+		// Token: 0x17008539 RID: 34105
+		// (get) Token: 0x0601C828 RID: 116776 RVA: 0x00406275 File Offset: 0x00404475
+		// (set) Token: 0x0601C829 RID: 116777 RVA: 0x0040627D File Offset: 0x0040447D
 		public int Id { get; set; }
 
-		// Token: 0x0601B055 RID: 110677 RVA: 0x003D9FEA File Offset: 0x003D81EA
+		// Token: 0x0601C82A RID: 116778 RVA: 0x00406286 File Offset: 0x00404486
 		public ITrapDefenseSpawnMonsterConditionCompletedT()
 		{
 			this.Type = ETrapDefenseSpawnMonsterCondition.Completed;

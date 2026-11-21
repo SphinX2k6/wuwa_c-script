@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002982 RID: 10626
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002C68 RID: 11368
 	public class ResetLevelPlay : ActionParams
 	{
-		// Token: 0x0600EB64 RID: 60260 RVA: 0x00226ECE File Offset: 0x002250CE
+		// Token: 0x0600F9DF RID: 63967 RVA: 0x00244626 File Offset: 0x00242826
 		public static ResetLevelPlay Create(IResetLevelPlay? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004A22 RID: 18978
-		// (get) Token: 0x0600EB65 RID: 60261 RVA: 0x00226EF0 File Offset: 0x002250F0
+		// Token: 0x17004DBD RID: 19901
+		// (get) Token: 0x0600F9E0 RID: 63968 RVA: 0x00244648 File Offset: 0x00242848
 		public virtual List<int> ResetLevelPlayList
 		{
 			get
@@ -44,13 +41,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040081A4 RID: 33188
+		// Token: 0x04008888 RID: 34952
 		private IResetLevelPlay Instance;
 
-		// Token: 0x040081A5 RID: 33189
+		// Token: 0x04008889 RID: 34953
 		private List<int> _ResetLevelPlayListCache;
 
-		// Token: 0x040081A6 RID: 33190
+		// Token: 0x0400888A RID: 34954
 		private bool _ResetLevelPlayListInited;
 	}
 }

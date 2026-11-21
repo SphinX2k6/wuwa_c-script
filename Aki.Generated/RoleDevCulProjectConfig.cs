@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200103F RID: 4159
+	// Token: 0x02001127 RID: 4391
 	public struct RoleDevCulProjectConfig : IFlatbufferObject
 	{
-		// Token: 0x17003217 RID: 12823
-		// (get) Token: 0x0600C79A RID: 51098 RVA: 0x002F850C File Offset: 0x002F670C
+		// Token: 0x17003292 RID: 12946
+		// (get) Token: 0x0600CDE4 RID: 52708 RVA: 0x00314380 File Offset: 0x00312580
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C79B RID: 51099 RVA: 0x002F8519 File Offset: 0x002F6719
+		// Token: 0x0600CDE5 RID: 52709 RVA: 0x0031438D File Offset: 0x0031258D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600C79C RID: 51100 RVA: 0x002F8520 File Offset: 0x002F6720
+		// Token: 0x0600CDE6 RID: 52710 RVA: 0x00314394 File Offset: 0x00312594
 		public static RoleDevCulProjectConfig GetRootAsRoleDevCulProjectConfig(ByteBuffer _bb)
 		{
 			return RoleDevCulProjectConfig.GetRootAsRoleDevCulProjectConfig(_bb, default(RoleDevCulProjectConfig));
 		}
 
-		// Token: 0x0600C79D RID: 51101 RVA: 0x002F853C File Offset: 0x002F673C
+		// Token: 0x0600CDE7 RID: 52711 RVA: 0x003143B0 File Offset: 0x003125B0
 		public static RoleDevCulProjectConfig GetRootAsRoleDevCulProjectConfig(ByteBuffer _bb, RoleDevCulProjectConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600C79E RID: 51102 RVA: 0x002F8559 File Offset: 0x002F6759
+		// Token: 0x0600CDE8 RID: 52712 RVA: 0x003143CD File Offset: 0x003125CD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600C79F RID: 51103 RVA: 0x002F8568 File Offset: 0x002F6768
+		// Token: 0x0600CDE9 RID: 52713 RVA: 0x003143DC File Offset: 0x003125DC
 		public RoleDevCulProjectConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003218 RID: 12824
-		// (get) Token: 0x0600C7A0 RID: 51104 RVA: 0x002F8578 File Offset: 0x002F6778
+		// Token: 0x17003293 RID: 12947
+		// (get) Token: 0x0600CDEA RID: 52714 RVA: 0x003143EC File Offset: 0x003125EC
 		public int Id
 		{
 			get
@@ -64,7 +64,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C7A1 RID: 51105 RVA: 0x002F85B4 File Offset: 0x002F67B4
+		// Token: 0x0600CDEB RID: 52715 RVA: 0x00314428 File Offset: 0x00312628
 		public int RoleLvUp(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -75,8 +75,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17003219 RID: 12825
-		// (get) Token: 0x0600C7A2 RID: 51106 RVA: 0x002F85F4 File Offset: 0x002F67F4
+		// Token: 0x17003294 RID: 12948
+		// (get) Token: 0x0600CDEC RID: 52716 RVA: 0x00314468 File Offset: 0x00312668
 		public int RoleLvUpLength
 		{
 			get
@@ -90,19 +90,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C7A3 RID: 51107 RVA: 0x002F861F File Offset: 0x002F681F
+		// Token: 0x0600CDED RID: 52717 RVA: 0x00314493 File Offset: 0x00312693
 		public Span<int> GetRoleLvUpBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x0600C7A4 RID: 51108 RVA: 0x002F862E File Offset: 0x002F682E
+		// Token: 0x0600CDEE RID: 52718 RVA: 0x003144A2 File Offset: 0x003126A2
 		public int[] GetRoleLvUpArray()
 		{
 			return this.__p.__vector_as_array<int>(6) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600C7A5 RID: 51109 RVA: 0x002F8648 File Offset: 0x002F6848
+		// Token: 0x0600CDEF RID: 52719 RVA: 0x003144BC File Offset: 0x003126BC
 		public int WeaponLvUp(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -113,8 +113,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700321A RID: 12826
-		// (get) Token: 0x0600C7A6 RID: 51110 RVA: 0x002F8688 File Offset: 0x002F6888
+		// Token: 0x17003295 RID: 12949
+		// (get) Token: 0x0600CDF0 RID: 52720 RVA: 0x003144FC File Offset: 0x003126FC
 		public int WeaponLvUpLength
 		{
 			get
@@ -128,19 +128,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C7A7 RID: 51111 RVA: 0x002F86B3 File Offset: 0x002F68B3
+		// Token: 0x0600CDF1 RID: 52721 RVA: 0x00314527 File Offset: 0x00312727
 		public Span<int> GetWeaponLvUpBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x0600C7A8 RID: 51112 RVA: 0x002F86C2 File Offset: 0x002F68C2
+		// Token: 0x0600CDF2 RID: 52722 RVA: 0x00314536 File Offset: 0x00312736
 		public int[] GetWeaponLvUpArray()
 		{
 			return this.__p.__vector_as_array<int>(8) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600C7A9 RID: 51113 RVA: 0x002F86DC File Offset: 0x002F68DC
+		// Token: 0x0600CDF3 RID: 52723 RVA: 0x00314550 File Offset: 0x00312750
 		public int SkillLvUp(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -151,8 +151,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700321B RID: 12827
-		// (get) Token: 0x0600C7AA RID: 51114 RVA: 0x002F871C File Offset: 0x002F691C
+		// Token: 0x17003296 RID: 12950
+		// (get) Token: 0x0600CDF4 RID: 52724 RVA: 0x00314590 File Offset: 0x00312790
 		public int SkillLvUpLength
 		{
 			get
@@ -166,20 +166,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C7AB RID: 51115 RVA: 0x002F8748 File Offset: 0x002F6948
+		// Token: 0x0600CDF5 RID: 52725 RVA: 0x003145BC File Offset: 0x003127BC
 		public Span<int> GetSkillLvUpBytes()
 		{
 			return this.__p.__vector_as_span<int>(10, 4);
 		}
 
-		// Token: 0x0600C7AC RID: 51116 RVA: 0x002F8758 File Offset: 0x002F6958
+		// Token: 0x0600CDF6 RID: 52726 RVA: 0x003145CC File Offset: 0x003127CC
 		public int[] GetSkillLvUpArray()
 		{
 			return this.__p.__vector_as_array<int>(10) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x1700321C RID: 12828
-		// (get) Token: 0x0600C7AD RID: 51117 RVA: 0x002F8770 File Offset: 0x002F6970
+		// Token: 0x17003297 RID: 12951
+		// (get) Token: 0x0600CDF7 RID: 52727 RVA: 0x003145E4 File Offset: 0x003127E4
 		public int UnknownItemId
 		{
 			get
@@ -193,8 +193,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700321D RID: 12829
-		// (get) Token: 0x0600C7AE RID: 51118 RVA: 0x002F87B0 File Offset: 0x002F69B0
+		// Token: 0x17003298 RID: 12952
+		// (get) Token: 0x0600CDF8 RID: 52728 RVA: 0x00314624 File Offset: 0x00312824
 		public string UnknownItemIcon
 		{
 			get
@@ -208,20 +208,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C7AF RID: 51119 RVA: 0x002F87E8 File Offset: 0x002F69E8
+		// Token: 0x0600CDF9 RID: 52729 RVA: 0x0031465C File Offset: 0x0031285C
 		public Span<byte> GetUnknownItemIconBytes()
 		{
 			return this.__p.__vector_as_span<byte>(14, 1);
 		}
 
-		// Token: 0x0600C7B0 RID: 51120 RVA: 0x002F87F8 File Offset: 0x002F69F8
+		// Token: 0x0600CDFA RID: 52730 RVA: 0x0031466C File Offset: 0x0031286C
 		public byte[] GetUnknownItemIconArray()
 		{
 			return this.__p.__vector_as_array<byte>(14) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700321E RID: 12830
-		// (get) Token: 0x0600C7B1 RID: 51121 RVA: 0x002F8810 File Offset: 0x002F6A10
+		// Token: 0x17003299 RID: 12953
+		// (get) Token: 0x0600CDFB RID: 52731 RVA: 0x00314684 File Offset: 0x00312884
 		public int OverflowExperience
 		{
 			get
@@ -235,8 +235,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700321F RID: 12831
-		// (get) Token: 0x0600C7B2 RID: 51122 RVA: 0x002F8850 File Offset: 0x002F6A50
+		// Token: 0x1700329A RID: 12954
+		// (get) Token: 0x0600CDFC RID: 52732 RVA: 0x003146C4 File Offset: 0x003128C4
 		public int WeaponQualityThreshold
 		{
 			get
@@ -250,8 +250,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003220 RID: 12832
-		// (get) Token: 0x0600C7B3 RID: 51123 RVA: 0x002F8890 File Offset: 0x002F6A90
+		// Token: 0x1700329B RID: 12955
+		// (get) Token: 0x0600CDFD RID: 52733 RVA: 0x00314704 File Offset: 0x00312904
 		public int PhantomNumThreshold
 		{
 			get
@@ -265,8 +265,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003221 RID: 12833
-		// (get) Token: 0x0600C7B4 RID: 51124 RVA: 0x002F88D0 File Offset: 0x002F6AD0
+		// Token: 0x1700329C RID: 12956
+		// (get) Token: 0x0600CDFE RID: 52734 RVA: 0x00314744 File Offset: 0x00312944
 		public int PhantomQualityThreshold
 		{
 			get
@@ -280,8 +280,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003222 RID: 12834
-		// (get) Token: 0x0600C7B5 RID: 51125 RVA: 0x002F8910 File Offset: 0x002F6B10
+		// Token: 0x1700329D RID: 12957
+		// (get) Token: 0x0600CDFF RID: 52735 RVA: 0x00314784 File Offset: 0x00312984
 		public int PhantomLevelThreshold
 		{
 			get
@@ -295,7 +295,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C7B6 RID: 51126 RVA: 0x002F8950 File Offset: 0x002F6B50
+		// Token: 0x0600CE00 RID: 52736 RVA: 0x003147C4 File Offset: 0x003129C4
 		public int PhantomSpecialGroupList(int j)
 		{
 			int num = this.__p.__offset(26);
@@ -306,8 +306,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17003223 RID: 12835
-		// (get) Token: 0x0600C7B7 RID: 51127 RVA: 0x002F8990 File Offset: 0x002F6B90
+		// Token: 0x1700329E RID: 12958
+		// (get) Token: 0x0600CE01 RID: 52737 RVA: 0x00314804 File Offset: 0x00312A04
 		public int PhantomSpecialGroupListLength
 		{
 			get
@@ -321,20 +321,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C7B8 RID: 51128 RVA: 0x002F89BC File Offset: 0x002F6BBC
+		// Token: 0x0600CE02 RID: 52738 RVA: 0x00314830 File Offset: 0x00312A30
 		public Span<int> GetPhantomSpecialGroupListBytes()
 		{
 			return this.__p.__vector_as_span<int>(26, 4);
 		}
 
-		// Token: 0x0600C7B9 RID: 51129 RVA: 0x002F89CC File Offset: 0x002F6BCC
+		// Token: 0x0600CE03 RID: 52739 RVA: 0x00314840 File Offset: 0x00312A40
 		public int[] GetPhantomSpecialGroupListArray()
 		{
 			return this.__p.__vector_as_array<int>(26) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17003224 RID: 12836
-		// (get) Token: 0x0600C7BA RID: 51130 RVA: 0x002F89E4 File Offset: 0x002F6BE4
+		// Token: 0x1700329F RID: 12959
+		// (get) Token: 0x0600CE04 RID: 52740 RVA: 0x00314858 File Offset: 0x00312A58
 		public int PopTipsTime
 		{
 			get
@@ -348,79 +348,71 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C7BB RID: 51131 RVA: 0x002F8A24 File Offset: 0x002F6C24
+		// Token: 0x0600CE05 RID: 52741 RVA: 0x00314895 File Offset: 0x00312A95
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用PhantomSpecialGroupListIter()或GetPhantomSpecialGroupListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] PhantomSpecialGroupList()
+		public int[] PhantomSpecialGroupList()
 		{
-			RoleDevCulProjectConfig roleDevCulProjectConfig = this;
-			return roleDevCulProjectConfig.GetPhantomSpecialGroupListArray() ?? Array.Empty<int>();
+			return this.GetPhantomSpecialGroupListArray();
 		}
 
-		// Token: 0x0600C7BC RID: 51132 RVA: 0x002F8A48 File Offset: 0x002F6C48
+		// Token: 0x0600CE06 RID: 52742 RVA: 0x0031489D File Offset: 0x00312A9D
 		[NullableContext(1)]
-		public readonly IEnumerable<int> PhantomSpecialGroupListIter()
+		public IEnumerable<int> PhantomSpecialGroupListIter()
 		{
 			RoleDevCulProjectConfig.<PhantomSpecialGroupListIter>d__49 <PhantomSpecialGroupListIter>d__ = new RoleDevCulProjectConfig.<PhantomSpecialGroupListIter>d__49(-2);
 			<PhantomSpecialGroupListIter>d__.<>3__<>4__this = this;
 			return <PhantomSpecialGroupListIter>d__;
 		}
 
-		// Token: 0x0600C7BD RID: 51133 RVA: 0x002F8A60 File Offset: 0x002F6C60
+		// Token: 0x0600CE07 RID: 52743 RVA: 0x003148B2 File Offset: 0x00312AB2
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用RoleLvUpIter()或GetRoleLvUpBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] RoleLvUp()
+		public int[] RoleLvUp()
 		{
-			RoleDevCulProjectConfig roleDevCulProjectConfig = this;
-			return roleDevCulProjectConfig.GetRoleLvUpArray() ?? Array.Empty<int>();
+			return this.GetRoleLvUpArray();
 		}
 
-		// Token: 0x0600C7BE RID: 51134 RVA: 0x002F8A84 File Offset: 0x002F6C84
+		// Token: 0x0600CE08 RID: 52744 RVA: 0x003148BA File Offset: 0x00312ABA
 		[NullableContext(1)]
-		public readonly IEnumerable<int> RoleLvUpIter()
+		public IEnumerable<int> RoleLvUpIter()
 		{
 			RoleDevCulProjectConfig.<RoleLvUpIter>d__51 <RoleLvUpIter>d__ = new RoleDevCulProjectConfig.<RoleLvUpIter>d__51(-2);
 			<RoleLvUpIter>d__.<>3__<>4__this = this;
 			return <RoleLvUpIter>d__;
 		}
 
-		// Token: 0x0600C7BF RID: 51135 RVA: 0x002F8A9C File Offset: 0x002F6C9C
+		// Token: 0x0600CE09 RID: 52745 RVA: 0x003148CF File Offset: 0x00312ACF
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用SkillLvUpIter()或GetSkillLvUpBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] SkillLvUp()
+		public int[] SkillLvUp()
 		{
-			RoleDevCulProjectConfig roleDevCulProjectConfig = this;
-			return roleDevCulProjectConfig.GetSkillLvUpArray() ?? Array.Empty<int>();
+			return this.GetSkillLvUpArray();
 		}
 
-		// Token: 0x0600C7C0 RID: 51136 RVA: 0x002F8AC0 File Offset: 0x002F6CC0
+		// Token: 0x0600CE0A RID: 52746 RVA: 0x003148D7 File Offset: 0x00312AD7
 		[NullableContext(1)]
-		public readonly IEnumerable<int> SkillLvUpIter()
+		public IEnumerable<int> SkillLvUpIter()
 		{
 			RoleDevCulProjectConfig.<SkillLvUpIter>d__53 <SkillLvUpIter>d__ = new RoleDevCulProjectConfig.<SkillLvUpIter>d__53(-2);
 			<SkillLvUpIter>d__.<>3__<>4__this = this;
 			return <SkillLvUpIter>d__;
 		}
 
-		// Token: 0x0600C7C1 RID: 51137 RVA: 0x002F8AD8 File Offset: 0x002F6CD8
+		// Token: 0x0600CE0B RID: 52747 RVA: 0x003148EC File Offset: 0x00312AEC
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用WeaponLvUpIter()或GetWeaponLvUpBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] WeaponLvUp()
+		public int[] WeaponLvUp()
 		{
-			RoleDevCulProjectConfig roleDevCulProjectConfig = this;
-			return roleDevCulProjectConfig.GetWeaponLvUpArray() ?? Array.Empty<int>();
+			return this.GetWeaponLvUpArray();
 		}
 
-		// Token: 0x0600C7C2 RID: 51138 RVA: 0x002F8AFC File Offset: 0x002F6CFC
+		// Token: 0x0600CE0C RID: 52748 RVA: 0x003148F4 File Offset: 0x00312AF4
 		[NullableContext(1)]
-		public readonly IEnumerable<int> WeaponLvUpIter()
+		public IEnumerable<int> WeaponLvUpIter()
 		{
 			RoleDevCulProjectConfig.<WeaponLvUpIter>d__55 <WeaponLvUpIter>d__ = new RoleDevCulProjectConfig.<WeaponLvUpIter>d__55(-2);
 			<WeaponLvUpIter>d__.<>3__<>4__this = this;
 			return <WeaponLvUpIter>d__;
 		}
 
-		// Token: 0x0400513D RID: 20797
+		// Token: 0x04005725 RID: 22309
 		private Table __p;
 	}
 }

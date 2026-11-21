@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004B8 RID: 1208
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000511 RID: 1297
 	public class ILevelAiPointOffsetConfig
 	{
-		// Token: 0x06001860 RID: 6240 RVA: 0x00048EB0 File Offset: 0x000470B0
+		// Token: 0x060019FA RID: 6650 RVA: 0x0004CBF8 File Offset: 0x0004ADF8
 		private ILevelAiPointOffsetConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001861 RID: 6241 RVA: 0x00048EE8 File Offset: 0x000470E8
+		// Token: 0x060019FB RID: 6651 RVA: 0x0004CC30 File Offset: 0x0004AE30
 		public static ILevelAiPointOffsetConfig Create([Nullable(2)] ILevelAiPointOffsetConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001862 RID: 6242 RVA: 0x00048EFB File Offset: 0x000470FB
+		// Token: 0x060019FC RID: 6652 RVA: 0x0004CC43 File Offset: 0x0004AE43
 		public static ILevelAiPointOffsetConfig CreateFromSetValue([Nullable(2)] ILevelAiPointOffsetConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001863 RID: 6243 RVA: 0x00048F0E File Offset: 0x0004710E
+		// Token: 0x060019FD RID: 6653 RVA: 0x0004CC56 File Offset: 0x0004AE56
 		public ILevelAiPointOffsetConfig_SetValue ToSetValue()
 		{
 			return new ILevelAiPointOffsetConfig_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700067B RID: 1659
-		// (get) Token: 0x06001864 RID: 6244 RVA: 0x00048F2D File Offset: 0x0004712D
-		// (set) Token: 0x06001865 RID: 6245 RVA: 0x00048F5C File Offset: 0x0004715C
+		// Token: 0x170006E2 RID: 1762
+		// (get) Token: 0x060019FE RID: 6654 RVA: 0x0004CC75 File Offset: 0x0004AE75
+		// (set) Token: 0x060019FF RID: 6655 RVA: 0x0004CCA4 File Offset: 0x0004AEA4
 		public virtual float Radius
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700067C RID: 1660
-		// (get) Token: 0x06001866 RID: 6246 RVA: 0x00048F6C File Offset: 0x0004716C
-		// (set) Token: 0x06001867 RID: 6247 RVA: 0x00048FCD File Offset: 0x000471CD
+		// Token: 0x170006E3 RID: 1763
+		// (get) Token: 0x06001A00 RID: 6656 RVA: 0x0004CCB4 File Offset: 0x0004AEB4
+		// (set) Token: 0x06001A01 RID: 6657 RVA: 0x0004CD15 File Offset: 0x0004AF15
 		[Nullable(2)]
 		public virtual VectorInfo Normal
 		{
@@ -117,18 +115,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001211 RID: 4625
+		// Token: 0x04001333 RID: 4915
 		[Nullable(2)]
 		protected ILevelAiPointOffsetConfig FbInstance;
 
-		// Token: 0x04001212 RID: 4626
+		// Token: 0x04001334 RID: 4916
 		[Nullable(2)]
 		protected ILevelAiPointOffsetConfig_SetValue PocoInterface;
 
-		// Token: 0x04001213 RID: 4627
+		// Token: 0x04001335 RID: 4917
 		private VectorInfo _NormalCache;
 
-		// Token: 0x04001214 RID: 4628
+		// Token: 0x04001336 RID: 4918
 		private bool _NormalInited;
 	}
 }

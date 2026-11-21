@@ -7,16 +7,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.PlotView
 {
-	// Token: 0x02005070 RID: 20592
+	// Token: 0x02004040 RID: 16448
 	public class SummaryPopView : UiViewBase
 	{
-		// Token: 0x06034C1C RID: 216092 RVA: 0x00C7BBD2 File Offset: 0x00C79DD2
+		// Token: 0x06029B11 RID: 170769 RVA: 0x00BC8FAA File Offset: 0x00BC71AA
 		[NullableContext(1)]
 		public SummaryPopView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06034C1D RID: 216093 RVA: 0x00C7BBDC File Offset: 0x00C79DDC
+		// Token: 0x06029B12 RID: 170770 RVA: 0x00BC8FB4 File Offset: 0x00BC71B4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06034C1E RID: 216094 RVA: 0x00C7BD0C File Offset: 0x00C79F0C
+		// Token: 0x06029B13 RID: 170771 RVA: 0x00BC90E4 File Offset: 0x00BC72E4
 		protected override void OnStart()
 		{
 			this.Done = false;
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			text.SetText(((summaryData != null) ? summaryData.Text : null) ?? string.Empty, true);
 		}
 
-		// Token: 0x06034C1F RID: 216095 RVA: 0x00C7BD54 File Offset: 0x00C79F54
+		// Token: 0x06029B14 RID: 170772 RVA: 0x00BC912C File Offset: 0x00BC732C
 		protected void OnConfirm()
 		{
 			if (this.Done)
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			});
 		}
 
-		// Token: 0x06034C20 RID: 216096 RVA: 0x00C7BDA8 File Offset: 0x00C79FA8
+		// Token: 0x06029B15 RID: 170773 RVA: 0x00BC9180 File Offset: 0x00BC7380
 		protected void OnCancel()
 		{
 			if (this.Done)
@@ -100,22 +100,22 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			});
 		}
 
-		// Token: 0x0401C1D4 RID: 115156
+		// Token: 0x04016BFF RID: 93183
 		private bool Done;
 
-		// Token: 0x0200B20C RID: 45580
+		// Token: 0x02009C45 RID: 40005
 		private static class EChildComp
 		{
-			// Token: 0x04035FC9 RID: 221129
+			// Token: 0x04030A1D RID: 199197
 			public const int Exit = 0;
 
-			// Token: 0x04035FCA RID: 221130
+			// Token: 0x04030A1E RID: 199198
 			public const int ConfirmButton = 1;
 
-			// Token: 0x04035FCB RID: 221131
+			// Token: 0x04030A1F RID: 199199
 			public const int CancelButton = 2;
 
-			// Token: 0x04035FCC RID: 221132
+			// Token: 0x04030A20 RID: 199200
 			public const int Text = 3;
 		}
 	}

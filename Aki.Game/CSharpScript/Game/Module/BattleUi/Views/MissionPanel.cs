@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CBF RID: 23743
+	// Token: 0x02004CA1 RID: 19617
 	public class MissionPanel : BattleChildViewPanel
 	{
-		// Token: 0x0603C09C RID: 245916 RVA: 0x00E5BE94 File Offset: 0x00E5A094
+		// Token: 0x06030FF1 RID: 200689 RVA: 0x00DAC5A8 File Offset: 0x00DAA7A8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603C09D RID: 245917 RVA: 0x00E5BF40 File Offset: 0x00E5A140
+		// Token: 0x06030FF2 RID: 200690 RVA: 0x00DAC654 File Offset: 0x00DAA854
 		public override UniTask InitializeAsync()
 		{
 			MissionPanel.<InitializeAsync>d__8 <InitializeAsync>d__;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitializeAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C09E RID: 245918 RVA: 0x00E5BF84 File Offset: 0x00E5A184
+		// Token: 0x06030FF3 RID: 200691 RVA: 0x00DAC698 File Offset: 0x00DAA898
 		private UniTask InitMissionItemView()
 		{
 			MissionPanel.<InitMissionItemView>d__9 <InitMissionItemView>d__;
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitMissionItemView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C09F RID: 245919 RVA: 0x00E5BFC8 File Offset: 0x00E5A1C8
+		// Token: 0x06030FF4 RID: 200692 RVA: 0x00DAC6DC File Offset: 0x00DAA8DC
 		private void RestoreMissionViewItemByData()
 		{
 			Dictionary<EMissionItemView, IMissionItemViewShowData> allMissionViewData = BattleUiModel.Instance.GetAllMissionViewData();
@@ -78,13 +78,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C0A0 RID: 245920 RVA: 0x00E5C060 File Offset: 0x00E5A260
+		// Token: 0x06030FF5 RID: 200693 RVA: 0x00DAC774 File Offset: 0x00DAA974
 		public void SetRestoreWhenInit(bool restoreWhenInit)
 		{
 			this.RestoreWhenInit = restoreWhenInit;
 		}
 
-		// Token: 0x0603C0A1 RID: 245921 RVA: 0x00E5C06C File Offset: 0x00E5A26C
+		// Token: 0x06030FF6 RID: 200694 RVA: 0x00DAC780 File Offset: 0x00DAA980
 		private UniTask AddControllers()
 		{
 			MissionPanel.<AddControllers>d__12 <AddControllers>d__;
@@ -95,13 +95,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <AddControllers>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C0A2 RID: 245922 RVA: 0x00E5C0AF File Offset: 0x00E5A2AF
+		// Token: 0x06030FF7 RID: 200695 RVA: 0x00DAC7C3 File Offset: 0x00DAA9C3
 		private bool CheckDeleteSameTreeHandle()
 		{
 			return !base.GetActive();
 		}
 
-		// Token: 0x0603C0A3 RID: 245923 RVA: 0x00E5C0BC File Offset: 0x00E5A2BC
+		// Token: 0x06030FF8 RID: 200696 RVA: 0x00DAC7D0 File Offset: 0x00DAA9D0
 		public override void Reset()
 		{
 			this.PendingShowViewsMap.Clear();
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.Reset();
 		}
 
-		// Token: 0x0603C0A4 RID: 245924 RVA: 0x00E5C120 File Offset: 0x00E5A320
+		// Token: 0x06030FF9 RID: 200697 RVA: 0x00DAC834 File Offset: 0x00DAAA34
 		protected override void OnShowBattleChildViewPanel(bool isFirst)
 		{
 			MissionViewItem[] missionItemViews = this.MissionItemViews;
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			((QuestUpdateTipsController)this.Controllers[1]).OnPanelShow();
 		}
 
-		// Token: 0x0603C0A5 RID: 245925 RVA: 0x00E5C15C File Offset: 0x00E5A35C
+		// Token: 0x06030FFA RID: 200698 RVA: 0x00DAC870 File Offset: 0x00DAAA70
 		protected override void OnHideBattleChildViewPanel()
 		{
 			MissionViewItem[] missionItemViews = this.MissionItemViews;
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			((QuestUpdateTipsController)this.Controllers[1]).OnPanelHide();
 		}
 
-		// Token: 0x0603C0A6 RID: 245926 RVA: 0x00E5C198 File Offset: 0x00E5A398
+		// Token: 0x06030FFB RID: 200699 RVA: 0x00DAC8AC File Offset: 0x00DAAAAC
 		protected override void AddEvents()
 		{
 			MissionPanelControllerBase[] controllers = this.Controllers;
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Add(EEventName.WorldDoneAndCloseLoading, new Action(this.OnWorldDoneAndCloseLoading));
 		}
 
-		// Token: 0x0603C0A7 RID: 245927 RVA: 0x00E5C218 File Offset: 0x00E5A418
+		// Token: 0x06030FFC RID: 200700 RVA: 0x00DAC92C File Offset: 0x00DAAB2C
 		protected override void RemoveEvents()
 		{
 			MissionPanelControllerBase[] controllers = this.Controllers;
@@ -167,7 +167,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Remove(EEventName.WorldDoneAndCloseLoading, new Action(this.OnWorldDoneAndCloseLoading));
 		}
 
-		// Token: 0x0603C0A8 RID: 245928 RVA: 0x00E5C296 File Offset: 0x00E5A496
+		// Token: 0x06030FFD RID: 200701 RVA: 0x00DAC9AA File Offset: 0x00DAABAA
 		public override void OnTickBattleChildViewPanel(float delta)
 		{
 			if (!GameModeModel.Instance.WorldDoneAndLoadingClosed)
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TreeViewTick(delta);
 		}
 
-		// Token: 0x0603C0A9 RID: 245929 RVA: 0x00E5C2C4 File Offset: 0x00E5A4C4
+		// Token: 0x06030FFE RID: 200702 RVA: 0x00DAC9D8 File Offset: 0x00DAABD8
 		private void TreeViewTick(float delta)
 		{
 			if (this.MissionItemViews[0] == null)
@@ -193,13 +193,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C0AA RID: 245930 RVA: 0x00E5C319 File Offset: 0x00E5A519
+		// Token: 0x06030FFF RID: 200703 RVA: 0x00DACA2D File Offset: 0x00DAAC2D
 		private bool CanShowFirstRow()
 		{
 			return !GameModeController.Instance.IsInInstance() || RecallQuestModel.Instance.CanMissionShowFirstRow();
 		}
 
-		// Token: 0x0603C0AB RID: 245931 RVA: 0x00E5C338 File Offset: 0x00E5A538
+		// Token: 0x06031000 RID: 200704 RVA: 0x00DACA4C File Offset: 0x00DAAC4C
 		private UniTask<bool> MissionItemViewStartTrackHandle([Nullable(1)] MissionItemViewStartTrackProcess processInfo)
 		{
 			MissionPanel.<MissionItemViewStartTrackHandle>d__22 <MissionItemViewStartTrackHandle>d__;
@@ -211,7 +211,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <MissionItemViewStartTrackHandle>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C0AC RID: 245932 RVA: 0x00E5C384 File Offset: 0x00E5A584
+		// Token: 0x06031001 RID: 200705 RVA: 0x00DACA98 File Offset: 0x00DAAC98
 		private UniTask<bool> MissionItemViewRefreshHandle([Nullable(1)] MissionItemViewRefreshProcess process)
 		{
 			MissionPanel.<MissionItemViewRefreshHandle>d__23 <MissionItemViewRefreshHandle>d__;
@@ -223,7 +223,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <MissionItemViewRefreshHandle>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C0AD RID: 245933 RVA: 0x00E5C3D0 File Offset: 0x00E5A5D0
+		// Token: 0x06031002 RID: 200706 RVA: 0x00DACAE4 File Offset: 0x00DAACE4
 		private UniTask<bool> MissionItemViewEndTrackHandle([Nullable(1)] MissionItemViewEndTrackProcess processInfo)
 		{
 			MissionPanel.<MissionItemViewEndTrackHandle>d__24 <MissionItemViewEndTrackHandle>d__;
@@ -235,7 +235,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <MissionItemViewEndTrackHandle>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C0AE RID: 245934 RVA: 0x00E5C41C File Offset: 0x00E5A61C
+		// Token: 0x06031003 RID: 200707 RVA: 0x00DACB30 File Offset: 0x00DAAD30
 		private UniTask<bool> CheckPendingShowViews(EMissionItemView viewType, [Nullable(1)] MissionItemViewEndTrackProcess processInfo)
 		{
 			MissionPanel.<CheckPendingShowViews>d__25 <CheckPendingShowViews>d__;
@@ -248,7 +248,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <CheckPendingShowViews>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C0AF RID: 245935 RVA: 0x00E5C470 File Offset: 0x00E5A670
+		// Token: 0x06031004 RID: 200708 RVA: 0x00DACB84 File Offset: 0x00DAAD84
 		[NullableContext(1)]
 		private void UpdatePendingShowViews(IMissionItemViewShowData showData)
 		{
@@ -267,7 +267,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C0B0 RID: 245936 RVA: 0x00E5C4EC File Offset: 0x00E5A6EC
+		// Token: 0x06031005 RID: 200709 RVA: 0x00DACC00 File Offset: 0x00DAAE00
 		private int FindInPendingViewIndex(EMissionItemView viewType, long id)
 		{
 			List<IMissionItemViewShowData> list;
@@ -278,7 +278,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return -1;
 		}
 
-		// Token: 0x0603C0B1 RID: 245937 RVA: 0x00E5C52C File Offset: 0x00E5A72C
+		// Token: 0x06031006 RID: 200710 RVA: 0x00DACC40 File Offset: 0x00DAAE40
 		private UniTask<bool> TryUsePendingViewShow(EMissionItemView viewType, int processId, [Nullable(1)] IMissionItemViewShowData showData, bool bSkipAnim)
 		{
 			MissionPanel.<TryUsePendingViewShow>d__28 <TryUsePendingViewShow>d__;
@@ -293,7 +293,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <TryUsePendingViewShow>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C0B2 RID: 245938 RVA: 0x00E5C590 File Offset: 0x00E5A790
+		// Token: 0x06031007 RID: 200711 RVA: 0x00DACCA4 File Offset: 0x00DAAEA4
 		private UniTask<bool> UpdatePendingShowView(EMissionItemView viewType, int processId, bool bSkipAnim)
 		{
 			MissionPanel.<UpdatePendingShowView>d__29 <UpdatePendingShowView>d__;
@@ -307,7 +307,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <UpdatePendingShowView>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C0B3 RID: 245939 RVA: 0x00E5C5EC File Offset: 0x00E5A7EC
+		// Token: 0x06031008 RID: 200712 RVA: 0x00DACD00 File Offset: 0x00DAAF00
 		private UniTask<bool> ShowQuestUpdateTipsHandle([Nullable(1)] ShowQuestUpdateTipsProcess process)
 		{
 			MissionPanel.<ShowQuestUpdateTipsHandle>d__30 <ShowQuestUpdateTipsHandle>d__;
@@ -319,7 +319,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <ShowQuestUpdateTipsHandle>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C0B4 RID: 245940 RVA: 0x00E5C638 File Offset: 0x00E5A838
+		// Token: 0x06031009 RID: 200713 RVA: 0x00DACD4C File Offset: 0x00DAAF4C
 		private UniTask<bool> StepConditionIndexChange([Nullable(1)] StepConditionIndexChangeProcess process)
 		{
 			MissionPanel.<StepConditionIndexChange>d__31 <StepConditionIndexChange>d__;
@@ -331,7 +331,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <StepConditionIndexChange>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C0B5 RID: 245941 RVA: 0x00E5C684 File Offset: 0x00E5A884
+		// Token: 0x0603100A RID: 200714 RVA: 0x00DACD98 File Offset: 0x00DAAF98
 		private bool CheckMissionItemViewShowEmptyHandle()
 		{
 			for (int i = 0; i < this.MissionItemViews.Length; i++)
@@ -346,7 +346,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return true;
 		}
 
-		// Token: 0x0603C0B6 RID: 245942 RVA: 0x00E5C6E8 File Offset: 0x00E5A8E8
+		// Token: 0x0603100B RID: 200715 RVA: 0x00DACDFC File Offset: 0x00DAAFFC
 		private void OnQuestUpdateTipsEndSequenceStart()
 		{
 			TPendingProcess currentProcess = ((PendingProcessController)this.Controllers[0]).GetCurrentProcess();
@@ -369,19 +369,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.UpdatePendingShowViews(showQuestUpdateTipsProcess.Info.MissionViewShowData);
 		}
 
-		// Token: 0x0603C0B7 RID: 245943 RVA: 0x00E5C775 File Offset: 0x00E5A975
+		// Token: 0x0603100C RID: 200716 RVA: 0x00DACE89 File Offset: 0x00DAB089
 		private void OnMissionTrackRuleChange()
 		{
 			this.RestoreMissionViewItemByData();
 		}
 
-		// Token: 0x0603C0B8 RID: 245944 RVA: 0x00E5C77D File Offset: 0x00E5A97D
+		// Token: 0x0603100D RID: 200717 RVA: 0x00DACE91 File Offset: 0x00DAB091
 		private void OnWorldDoneAndCloseLoading()
 		{
 			BattleUiModel.Instance.CheckAndUpdateRule();
 		}
 
-		// Token: 0x0603C0B9 RID: 245945 RVA: 0x00E5C78C File Offset: 0x00E5A98C
+		// Token: 0x0603100E RID: 200718 RVA: 0x00DACEA0 File Offset: 0x00DAB0A0
 		private UniTask NewDangoAbyssInfo()
 		{
 			MissionPanel.<NewDangoAbyssInfo>d__36 <NewDangoAbyssInfo>d__;
@@ -392,13 +392,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <NewDangoAbyssInfo>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603C0BA RID: 245946 RVA: 0x00E5C7CF File Offset: 0x00E5A9CF
+		// Token: 0x0603100F RID: 200719 RVA: 0x00DACEE3 File Offset: 0x00DAB0E3
 		protected override bool OnCheckBattleChildViewPanelShowCondition()
 		{
 			return BattleUiModel.Instance.IsMissionPanelVisible;
 		}
 
-		// Token: 0x0603C0BB RID: 245947 RVA: 0x00E5C7DB File Offset: 0x00E5A9DB
+		// Token: 0x06031010 RID: 200720 RVA: 0x00DACEEF File Offset: 0x00DAB0EF
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -419,40 +419,40 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return dangoAbyssBattlePanel.GetGuideUiItemAndUiItemForShowEx(configParams);
 		}
 
-		// Token: 0x0401F50D RID: 128269
+		// Token: 0x04019FC6 RID: 106438
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly Stat BattleViewTickStatsObject = Stat.Create("[BattleView]MissionPanelTick", "", "");
 
-		// Token: 0x0401F50E RID: 128270
+		// Token: 0x04019FC7 RID: 106439
 		private bool RestoreWhenInit = true;
 
-		// Token: 0x0401F50F RID: 128271
+		// Token: 0x04019FC8 RID: 106440
 		[Nullable(1)]
 		private readonly MissionPanelControllerBase[] Controllers = new MissionPanelControllerBase[2];
 
-		// Token: 0x0401F510 RID: 128272
+		// Token: 0x04019FC9 RID: 106441
 		[Nullable(1)]
 		private readonly MissionViewItem[] MissionItemViews = new MissionViewItem[3];
 
-		// Token: 0x0401F511 RID: 128273
+		// Token: 0x04019FCA RID: 106442
 		[Nullable(1)]
 		private readonly Dictionary<EMissionItemView, List<IMissionItemViewShowData>> PendingShowViewsMap = new Dictionary<EMissionItemView, List<IMissionItemViewShowData>>();
 
-		// Token: 0x0401F512 RID: 128274
+		// Token: 0x04019FCB RID: 106443
 		[Nullable(2)]
 		private DangoAbyssBattlePanel DangoAbyssBattlePanel;
 
-		// Token: 0x0200BEBE RID: 48830
+		// Token: 0x0200A8C4 RID: 43204
 		private enum EChildComponent
 		{
-			// Token: 0x0403986D RID: 235629
+			// Token: 0x0403422E RID: 213550
 			MissionItemView,
-			// Token: 0x0403986E RID: 235630
+			// Token: 0x0403422F RID: 213551
 			QuestUpdateTips,
-			// Token: 0x0403986F RID: 235631
+			// Token: 0x04034230 RID: 213552
 			MissionItemViewRoot,
-			// Token: 0x04039870 RID: 235632
+			// Token: 0x04034231 RID: 213553
 			ActMissionItem
 		}
 	}

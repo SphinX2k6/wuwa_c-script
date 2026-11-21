@@ -5,7 +5,7 @@ using CSharpScript.Game.Module.Util;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02002787 RID: 10119
+// Token: 0x02001C72 RID: 7282
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,18 +14,18 @@ using Cysharp.Threading.Tasks.CompilerServices;
 })]
 internal class RoleGrid : GridProxyAbstract<RoleGridContentData>
 {
-	// Token: 0x06014C21 RID: 85025 RVA: 0x00540C60 File Offset: 0x0053EE60
+	// Token: 0x06012104 RID: 73988 RVA: 0x0054FAF0 File Offset: 0x0054DCF0
 	protected override void OnStart()
 	{
 	}
 
-	// Token: 0x06014C22 RID: 85026 RVA: 0x00540C62 File Offset: 0x0053EE62
+	// Token: 0x06012105 RID: 73989 RVA: 0x0054FAF2 File Offset: 0x0054DCF2
 	public override void Refresh(RoleGridContentData data, bool isSelected, int gridIndex)
 	{
 		this.RefreshMediumItemGrid(data);
 	}
 
-	// Token: 0x06014C23 RID: 85027 RVA: 0x00540C6C File Offset: 0x0053EE6C
+	// Token: 0x06012106 RID: 73990 RVA: 0x0054FAFC File Offset: 0x0054DCFC
 	private UniTask RefreshMediumItemGrid(RoleGridContentData data)
 	{
 		RoleGrid.<RefreshMediumItemGrid>d__4 <RefreshMediumItemGrid>d__;
@@ -37,11 +37,11 @@ internal class RoleGrid : GridProxyAbstract<RoleGridContentData>
 		return <RefreshMediumItemGrid>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x04009C1C RID: 39964
+	// Token: 0x04009D76 RID: 40310
 	[Nullable(2)]
 	private CustomPromise LoadPromise;
 
-	// Token: 0x04009C1D RID: 39965
+	// Token: 0x04009D77 RID: 40311
 	[Nullable(2)]
 	private MediumItemGrid MediumItemGrid;
 }

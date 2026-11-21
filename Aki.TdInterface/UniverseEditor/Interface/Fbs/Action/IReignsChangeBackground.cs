@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006E25 RID: 28197
+	// Token: 0x020075A3 RID: 30115
 	public struct IReignsChangeBackground : IFlatbufferObject
 	{
-		// Token: 0x1700D228 RID: 53800
-		// (get) Token: 0x06031D23 RID: 204067 RVA: 0x006BE909 File Offset: 0x006BCB09
+		// Token: 0x1700DD77 RID: 56695
+		// (get) Token: 0x06034D39 RID: 216377 RVA: 0x0071A291 File Offset: 0x00718491
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031D24 RID: 204068 RVA: 0x006BE916 File Offset: 0x006BCB16
+		// Token: 0x06034D3A RID: 216378 RVA: 0x0071A29E File Offset: 0x0071849E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06031D25 RID: 204069 RVA: 0x006BE920 File Offset: 0x006BCB20
+		// Token: 0x06034D3B RID: 216379 RVA: 0x0071A2A8 File Offset: 0x007184A8
 		public static IReignsChangeBackground GetRootAsIReignsChangeBackground(ByteBuffer _bb)
 		{
 			return IReignsChangeBackground.GetRootAsIReignsChangeBackground(_bb, default(IReignsChangeBackground));
 		}
 
-		// Token: 0x06031D26 RID: 204070 RVA: 0x006BE93C File Offset: 0x006BCB3C
+		// Token: 0x06034D3C RID: 216380 RVA: 0x0071A2C4 File Offset: 0x007184C4
 		public static IReignsChangeBackground GetRootAsIReignsChangeBackground(ByteBuffer _bb, IReignsChangeBackground obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06031D27 RID: 204071 RVA: 0x006BE959 File Offset: 0x006BCB59
+		// Token: 0x06034D3D RID: 216381 RVA: 0x0071A2E1 File Offset: 0x007184E1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06031D28 RID: 204072 RVA: 0x006BE968 File Offset: 0x006BCB68
+		// Token: 0x06034D3E RID: 216382 RVA: 0x0071A2F0 File Offset: 0x007184F0
 		public IReignsChangeBackground __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D229 RID: 53801
-		// (get) Token: 0x06031D29 RID: 204073 RVA: 0x006BE978 File Offset: 0x006BCB78
+		// Token: 0x1700DD78 RID: 56696
+		// (get) Token: 0x06034D3F RID: 216383 RVA: 0x0071A300 File Offset: 0x00718500
 		public string Background
 		{
 			get
@@ -62,20 +62,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031D2A RID: 204074 RVA: 0x006BE9AF File Offset: 0x006BCBAF
+		// Token: 0x06034D40 RID: 216384 RVA: 0x0071A337 File Offset: 0x00718537
 		public Span<byte> GetBackgroundBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x06031D2B RID: 204075 RVA: 0x006BE9BE File Offset: 0x006BCBBE
+		// Token: 0x06034D41 RID: 216385 RVA: 0x0071A346 File Offset: 0x00718546
 		public byte[] GetBackgroundArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x1700D22A RID: 53802
-		// (get) Token: 0x06031D2C RID: 204076 RVA: 0x006BE9CC File Offset: 0x006BCBCC
+		// Token: 0x1700DD79 RID: 56697
+		// (get) Token: 0x06034D42 RID: 216386 RVA: 0x0071A354 File Offset: 0x00718554
 		public EReignsBackgroundChangeMode ChangeMode
 		{
 			get
@@ -89,7 +89,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031D2D RID: 204077 RVA: 0x006BEA08 File Offset: 0x006BCC08
+		// Token: 0x06034D43 RID: 216387 RVA: 0x0071A390 File Offset: 0x00718590
 		public static Offset<IReignsChangeBackground> CreateIReignsChangeBackground(FlatBufferBuilder builder, StringOffset BackgroundOffset = default(StringOffset), EReignsBackgroundChangeMode ChangeMode = EReignsBackgroundChangeMode.Instant)
 		{
 			builder.StartTable(2);
@@ -98,31 +98,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IReignsChangeBackground.EndIReignsChangeBackground(builder);
 		}
 
-		// Token: 0x06031D2E RID: 204078 RVA: 0x006BEA25 File Offset: 0x006BCC25
+		// Token: 0x06034D44 RID: 216388 RVA: 0x0071A3AD File Offset: 0x007185AD
 		public static void StartIReignsChangeBackground(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06031D2F RID: 204079 RVA: 0x006BEA2E File Offset: 0x006BCC2E
+		// Token: 0x06034D45 RID: 216389 RVA: 0x0071A3B6 File Offset: 0x007185B6
 		public static void AddBackground(FlatBufferBuilder builder, StringOffset backgroundOffset)
 		{
 			builder.AddOffset(0, backgroundOffset.Value, 0);
 		}
 
-		// Token: 0x06031D30 RID: 204080 RVA: 0x006BEA3E File Offset: 0x006BCC3E
+		// Token: 0x06034D46 RID: 216390 RVA: 0x0071A3C6 File Offset: 0x007185C6
 		public static void AddChangeMode(FlatBufferBuilder builder, EReignsBackgroundChangeMode changeMode)
 		{
 			builder.AddByte(1, (byte)changeMode, 0);
 		}
 
-		// Token: 0x06031D31 RID: 204081 RVA: 0x006BEA49 File Offset: 0x006BCC49
+		// Token: 0x06034D47 RID: 216391 RVA: 0x0071A3D1 File Offset: 0x007185D1
 		public static Offset<IReignsChangeBackground> EndIReignsChangeBackground(FlatBufferBuilder builder)
 		{
 			return new Offset<IReignsChangeBackground>(builder.EndTable());
 		}
 
-		// Token: 0x06031D32 RID: 204082 RVA: 0x006BEA58 File Offset: 0x006BCC58
+		// Token: 0x06034D48 RID: 216392 RVA: 0x0071A3E0 File Offset: 0x007185E0
 		public IReignsChangeBackgroundT UnPack()
 		{
 			IReignsChangeBackgroundT reignsChangeBackgroundT = new IReignsChangeBackgroundT();
@@ -130,14 +130,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return reignsChangeBackgroundT;
 		}
 
-		// Token: 0x06031D33 RID: 204083 RVA: 0x006BEA73 File Offset: 0x006BCC73
+		// Token: 0x06034D49 RID: 216393 RVA: 0x0071A3FB File Offset: 0x007185FB
 		public void UnPackTo(IReignsChangeBackgroundT _o)
 		{
 			_o.Background = this.Background;
 			_o.ChangeMode = this.ChangeMode;
 		}
 
-		// Token: 0x06031D34 RID: 204084 RVA: 0x006BEA90 File Offset: 0x006BCC90
+		// Token: 0x06034D4A RID: 216394 RVA: 0x0071A418 File Offset: 0x00718618
 		public static Offset<IReignsChangeBackground> Pack(FlatBufferBuilder builder, IReignsChangeBackgroundT _o)
 		{
 			if (_o == null)
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IReignsChangeBackground.CreateIReignsChangeBackground(builder, backgroundOffset, _o.ChangeMode);
 		}
 
-		// Token: 0x0401180D RID: 71693
+		// Token: 0x0401278D RID: 75661
 		private Table __p;
 	}
 }

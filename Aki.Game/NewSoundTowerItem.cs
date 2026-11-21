@@ -7,12 +7,12 @@ using CSharpScript.Game.Module.AdventureGuide.Views;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020016AA RID: 5802
+// Token: 0x02000B62 RID: 2914
 [NullableContext(1)]
 [Nullable(0)]
 public class NewSoundTowerItem : UiPanelBase, INewSoundItem
 {
-	// Token: 0x0600A584 RID: 42372 RVA: 0x0025000C File Offset: 0x0024E20C
+	// Token: 0x06007964 RID: 31076 RVA: 0x0025A420 File Offset: 0x00258620
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -34,7 +34,7 @@ public class NewSoundTowerItem : UiPanelBase, INewSoundItem
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600A585 RID: 42373 RVA: 0x002500F9 File Offset: 0x0024E2F9
+	// Token: 0x06007965 RID: 31077 RVA: 0x0025A50D File Offset: 0x0025870D
 	public void Update(NewSoundDetectItemData sourceData)
 	{
 		this.UpdateCommon(sourceData);
@@ -46,7 +46,7 @@ public class NewSoundTowerItem : UiPanelBase, INewSoundItem
 		this.UpdateTower(sourceData);
 	}
 
-	// Token: 0x0600A586 RID: 42374 RVA: 0x00250120 File Offset: 0x0024E320
+	// Token: 0x06007966 RID: 31078 RVA: 0x0025A534 File Offset: 0x00258734
 	private void UpdateCommon(NewSoundDetectItemData sourceData)
 	{
 		SoundAreaDetectionRecord detectRecordData = sourceData.DetectRecordData;
@@ -66,7 +66,7 @@ public class NewSoundTowerItem : UiPanelBase, INewSoundItem
 		uuiitem.SetUIActive(isLock.GetValueOrDefault() == flag & isLock != null);
 	}
 
-	// Token: 0x0600A587 RID: 42375 RVA: 0x002501DC File Offset: 0x0024E3DC
+	// Token: 0x06007967 RID: 31079 RVA: 0x0025A5F0 File Offset: 0x002587F0
 	private void UpdateTower(NewSoundDetectItemData sourceData)
 	{
 		if (sourceData.DetectRecordData.IsLock.GetValueOrDefault())
@@ -92,7 +92,7 @@ public class NewSoundTowerItem : UiPanelBase, INewSoundItem
 		item.SetUIActive(true);
 	}
 
-	// Token: 0x0600A588 RID: 42376 RVA: 0x00250280 File Offset: 0x0024E480
+	// Token: 0x06007968 RID: 31080 RVA: 0x0025A694 File Offset: 0x00258894
 	private void UpdateShipTower(NewSoundDetectItemData sourceData)
 	{
 		if (sourceData.DetectRecordData.IsLock.GetValueOrDefault())
@@ -109,33 +109,33 @@ public class NewSoundTowerItem : UiPanelBase, INewSoundItem
 		item.SetUIActive(false);
 	}
 
-	// Token: 0x0600A589 RID: 42377 RVA: 0x002502D6 File Offset: 0x0024E4D6
+	// Token: 0x06007969 RID: 31081 RVA: 0x0025A6EA File Offset: 0x002588EA
 	private void UpdateSubTitle(string subTitle)
 	{
 		base.GetText(2).SetText(subTitle, true);
 	}
 
-	// Token: 0x0600A58A RID: 42378 RVA: 0x002502E6 File Offset: 0x0024E4E6
+	// Token: 0x0600796A RID: 31082 RVA: 0x0025A6FA File Offset: 0x002588FA
 	private void UpdateProgressNumber(string progressStr)
 	{
 		base.GetText(3).SetText(progressStr, true);
 	}
 
-	// Token: 0x02007C82 RID: 31874
+	// Token: 0x02006E07 RID: 28167
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x04028D97 RID: 167319
+		// Token: 0x040240C0 RID: 147648
 		NameText,
-		// Token: 0x04028D98 RID: 167320
+		// Token: 0x040240C1 RID: 147649
 		IconTexture,
-		// Token: 0x04028D99 RID: 167321
+		// Token: 0x040240C2 RID: 147650
 		ProgressText,
-		// Token: 0x04028D9A RID: 167322
+		// Token: 0x040240C3 RID: 147651
 		ProgressNumberText,
-		// Token: 0x04028D9B RID: 167323
+		// Token: 0x040240C4 RID: 147652
 		SpriteIcon,
-		// Token: 0x04028D9C RID: 167324
+		// Token: 0x040240C5 RID: 147653
 		ItemTowerStar
 	}
 }

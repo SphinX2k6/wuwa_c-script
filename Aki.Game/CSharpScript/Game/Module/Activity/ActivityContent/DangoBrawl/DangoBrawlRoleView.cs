@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -12,13 +11,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006834 RID: 26676
+	// Token: 0x02005784 RID: 22404
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlRoleView : UiViewBase
 	{
-		// Token: 0x1700974B RID: 38731
-		// (get) Token: 0x06042940 RID: 272704 RVA: 0x0102EA49 File Offset: 0x0102CC49
+		// Token: 0x17006A8C RID: 27276
+		// (get) Token: 0x06037494 RID: 226452 RVA: 0x00F6FF85 File Offset: 0x00F6E185
 		private ActivityDangoBrawlData ActivityData
 		{
 			get
@@ -27,8 +26,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x1700974C RID: 38732
-		// (get) Token: 0x06042941 RID: 272705 RVA: 0x0102EA55 File Offset: 0x0102CC55
+		// Token: 0x17006A8D RID: 27277
+		// (get) Token: 0x06037495 RID: 226453 RVA: 0x00F6FF91 File Offset: 0x00F6E191
 		private DangoBrawlOutGameData OutGameData
 		{
 			get
@@ -37,12 +36,12 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x06042942 RID: 272706 RVA: 0x0102EA62 File Offset: 0x0102CC62
+		// Token: 0x06037496 RID: 226454 RVA: 0x00F6FF9E File Offset: 0x00F6E19E
 		public DangoBrawlRoleView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06042943 RID: 272707 RVA: 0x0102EA74 File Offset: 0x0102CC74
+		// Token: 0x06037497 RID: 226455 RVA: 0x00F6FFB0 File Offset: 0x00F6E1B0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 19;
@@ -101,7 +100,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06042944 RID: 272708 RVA: 0x0102EDA0 File Offset: 0x0102CFA0
+		// Token: 0x06037498 RID: 226456 RVA: 0x00F702DC File Offset: 0x00F6E4DC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DangoBrawlRoleView.<OnBeforeStartAsync>d__20 <OnBeforeStartAsync>d__;
@@ -112,7 +111,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042945 RID: 272709 RVA: 0x0102EDE3 File Offset: 0x0102CFE3
+		// Token: 0x06037499 RID: 226457 RVA: 0x00F7031F File Offset: 0x00F6E51F
 		protected override void OnStart()
 		{
 			ActivityDangoBrawlController.Instance.RegisterTermHyperlink(base.GetText(11));
@@ -124,7 +123,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			uiViewSequence.AddSequenceStartEvent("Start", new Action<string>(this.OnViewStartSequence));
 		}
 
-		// Token: 0x06042946 RID: 272710 RVA: 0x0102EE1C File Offset: 0x0102D01C
+		// Token: 0x0603749A RID: 226458 RVA: 0x00F70358 File Offset: 0x00F6E558
 		protected override void OnBeforeShow()
 		{
 			GenericLayout<DangoBrawlRoleItem, DangoBrawlRoleData> roleLayout = this.RoleLayout;
@@ -151,7 +150,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.SetRoleLightVisible(true);
 		}
 
-		// Token: 0x06042947 RID: 272711 RVA: 0x0102EEE0 File Offset: 0x0102D0E0
+		// Token: 0x0603749B RID: 226459 RVA: 0x00F7041C File Offset: 0x00F6E61C
 		protected override void OnBeforeDestroy()
 		{
 			ActivityDangoBrawlController.Instance.UnRegisterTermHyperlink(base.GetText(11));
@@ -161,7 +160,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.SetRoleLightVisible(false);
 		}
 
-		// Token: 0x06042948 RID: 272712 RVA: 0x0102EF15 File Offset: 0x0102D115
+		// Token: 0x0603749C RID: 226460 RVA: 0x00F70451 File Offset: 0x00F6E651
 		private void OnViewStartSequence(string _)
 		{
 			GenericLayout<DangoBrawlRoleItem, DangoBrawlRoleData> roleLayout = this.RoleLayout;
@@ -177,7 +176,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			uiAnimController.Play("", -1, false);
 		}
 
-		// Token: 0x06042949 RID: 272713 RVA: 0x0102EF38 File Offset: 0x0102D138
+		// Token: 0x0603749D RID: 226461 RVA: 0x00F70474 File Offset: 0x00F6E674
 		private List<DangoBrawlRoleData> GetRoleDataList()
 		{
 			DangoBrawlChallenge? challengeConfigById = DangoBrawlConfig.Instance.GetChallengeConfigById(this.SelectLevelId);
@@ -194,19 +193,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 						RoleId = dangoBrawlRole.Id,
 						SortIndex = dangoBrawlRole.SortIndex,
 						IsUnlocked = true,
-						IsRecommend = ((challengeConfigById != null) ? new bool?(challengeConfigById.GetValueOrDefault().RecommendRoleIdIter().Contains(dangoBrawlRole.Id)) : null),
+						IsRecommend = new bool?(challengeConfigById != null && NoLinq.Contains<int>(challengeConfigById.Value.GetRecommendRoleIdBytes(), dangoBrawlRole.Id)),
 						IsShowShadow = new bool?(true),
 						IsNew = new bool?(this.ActivityData.HasNewRoleRedDot(dangoBrawlRole.Id))
 					};
 					list.Add(item);
 				}
 			}
-			return (from data in list
-			orderby data.IsRecommend.GetValueOrDefault() descending, data.SortIndex
-			select data).ToList<DangoBrawlRoleData>();
+			NoLinq.SortStable<DangoBrawlRoleData>(list, delegate(DangoBrawlRoleData left, DangoBrawlRoleData right)
+			{
+				int num = right.IsRecommend.GetValueOrDefault().CompareTo(left.IsRecommend.GetValueOrDefault());
+				if (num == 0)
+				{
+					return left.SortIndex.CompareTo(right.SortIndex);
+				}
+				return num;
+			});
+			return list;
 		}
 
-		// Token: 0x0604294A RID: 272714 RVA: 0x0102F0C8 File Offset: 0x0102D2C8
+		// Token: 0x0603749E RID: 226462 RVA: 0x00F705D4 File Offset: 0x00F6E7D4
 		private DangoBrawlRoleItem CreateRoleItem()
 		{
 			return new DangoBrawlRoleItem
@@ -215,7 +221,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			};
 		}
 
-		// Token: 0x0604294B RID: 272715 RVA: 0x0102F0E4 File Offset: 0x0102D2E4
+		// Token: 0x0603749F RID: 226463 RVA: 0x00F705F0 File Offset: 0x00F6E7F0
 		private void MarkRoleItemRead(DangoBrawlRoleItem item)
 		{
 			DangoBrawlRoleData roleData = item.RoleData;
@@ -228,7 +234,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			item.SetNewVisible(false);
 		}
 
-		// Token: 0x0604294C RID: 272716 RVA: 0x0102F140 File Offset: 0x0102D340
+		// Token: 0x060374A0 RID: 226464 RVA: 0x00F7064C File Offset: 0x00F6E84C
 		private void OnClickRole(DangoBrawlRoleItem item)
 		{
 			DangoBrawlRoleData roleData = item.RoleData;
@@ -247,7 +253,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.MarkRoleItemRead(item);
 		}
 
-		// Token: 0x0604294D RID: 272717 RVA: 0x0102F1A0 File Offset: 0x0102D3A0
+		// Token: 0x060374A1 RID: 226465 RVA: 0x00F706AC File Offset: 0x00F6E8AC
 		private void RefreshAllInfo(DangoBrawlRoleData roleData)
 		{
 			DangoBrawlItemTipsBase itemTips = this.ItemTips;
@@ -300,7 +306,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.RefreshBackpackPanel(roleConfigById.Value.WobblePlateId);
 		}
 
-		// Token: 0x0604294E RID: 272718 RVA: 0x0102F408 File Offset: 0x0102D608
+		// Token: 0x060374A2 RID: 226466 RVA: 0x00F70914 File Offset: 0x00F6EB14
 		private UniTask InitRoleDangoActor(DangoBrawlRole roleConfig)
 		{
 			DangoBrawlRoleView.<InitRoleDangoActor>d__30 <InitRoleDangoActor>d__;
@@ -312,7 +318,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return <InitRoleDangoActor>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0604294F RID: 272719 RVA: 0x0102F454 File Offset: 0x0102D654
+		// Token: 0x060374A3 RID: 226467 RVA: 0x00F70960 File Offset: 0x00F6EB60
 		private void PlayRoleDangoIdle(DangoBrawlRole roleConfig)
 		{
 			TsUiSceneDangoActor actor = this.RoleDangoActor;
@@ -334,7 +340,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}).Forget();
 		}
 
-		// Token: 0x06042950 RID: 272720 RVA: 0x0102F4BA File Offset: 0x0102D6BA
+		// Token: 0x060374A4 RID: 226468 RVA: 0x00F709C6 File Offset: 0x00F6EBC6
 		private void DestroyRoleDangoActor()
 		{
 			if (this.RoleDangoActor != null)
@@ -344,7 +350,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x06042951 RID: 272721 RVA: 0x0102F4DB File Offset: 0x0102D6DB
+		// Token: 0x060374A5 RID: 226469 RVA: 0x00F709E7 File Offset: 0x00F6EBE7
 		private void DestroyLoadingDangoActor()
 		{
 			if (this.LoadingDangoActor != null)
@@ -354,7 +360,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x06042952 RID: 272722 RVA: 0x0102F4FC File Offset: 0x0102D6FC
+		// Token: 0x060374A6 RID: 226470 RVA: 0x00F70A08 File Offset: 0x00F6EC08
 		private void SetRoleLightVisible(bool visible)
 		{
 			AActor actorByTag = UiSceneManager.Instance.GetActorByTag("Born_CharacterLight");
@@ -365,13 +371,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			actorByTag.SetActorHiddenInGame(!visible);
 		}
 
-		// Token: 0x06042953 RID: 272723 RVA: 0x0102F51B File Offset: 0x0102D71B
+		// Token: 0x060374A7 RID: 226471 RVA: 0x00F70A27 File Offset: 0x00F6EC27
 		private void RefreshBackpackPanel(int wobblePlateId)
 		{
 			this.RefreshBackpackPanelAsync(wobblePlateId).Forget();
 		}
 
-		// Token: 0x06042954 RID: 272724 RVA: 0x0102F52C File Offset: 0x0102D72C
+		// Token: 0x060374A8 RID: 226472 RVA: 0x00F70A38 File Offset: 0x00F6EC38
 		private UniTask RefreshBackpackPanelAsync(int wobblePlateId)
 		{
 			DangoBrawlRoleView.<RefreshBackpackPanelAsync>d__36 <RefreshBackpackPanelAsync>d__;
@@ -383,7 +389,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return <RefreshBackpackPanelAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042955 RID: 272725 RVA: 0x0102F578 File Offset: 0x0102D778
+		// Token: 0x060374A9 RID: 226473 RVA: 0x00F70A84 File Offset: 0x00F6EC84
 		private UniTask CreateItemTips()
 		{
 			DangoBrawlRoleView.<CreateItemTips>d__37 <CreateItemTips>d__;
@@ -394,7 +400,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return <CreateItemTips>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042956 RID: 272726 RVA: 0x0102F5BC File Offset: 0x0102D7BC
+		// Token: 0x060374AA RID: 226474 RVA: 0x00F70AC8 File Offset: 0x00F6ECC8
 		private void OnBackpackItemClick(DangoBrawlOutBackpackItemBase item)
 		{
 			if (this.ItemTips == null || item.MyItemData == null)
@@ -411,7 +417,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}).Forget();
 		}
 
-		// Token: 0x06042957 RID: 272727 RVA: 0x0102F626 File Offset: 0x0102D826
+		// Token: 0x060374AB RID: 226475 RVA: 0x00F70B32 File Offset: 0x00F6ED32
 		private void OnItemTipsCombineInfoClick(DangoBrawlItemTipsData data)
 		{
 			UiManager.Instance.OpenView(EUiViewName.DangoBrawlCombineView, new DangoBrawlCombineViewOpenData
@@ -424,7 +430,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}, null);
 		}
 
-		// Token: 0x06042958 RID: 272728 RVA: 0x0102F665 File Offset: 0x0102D865
+		// Token: 0x060374AC RID: 226476 RVA: 0x00F70B71 File Offset: 0x00F6ED71
 		private void OnBackpackItemDeselect()
 		{
 			DangoBrawlItemTipsBase itemTips = this.ItemTips;
@@ -435,19 +441,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			itemTips.SetTipsVisible(false);
 		}
 
-		// Token: 0x06042959 RID: 272729 RVA: 0x0102F678 File Offset: 0x0102D878
+		// Token: 0x060374AD RID: 226477 RVA: 0x00F70B84 File Offset: 0x00F6ED84
 		private void OnHelpBtnClick()
 		{
 			HelpController.Instance.OpenHelpById(652);
 		}
 
-		// Token: 0x0604295A RID: 272730 RVA: 0x0102F689 File Offset: 0x0102D889
+		// Token: 0x060374AE RID: 226478 RVA: 0x00F70B95 File Offset: 0x00F6ED95
 		private void OnArchiveBtnClick()
 		{
 			HelpController.Instance.OpenHelpById(678);
 		}
 
-		// Token: 0x0604295B RID: 272731 RVA: 0x0102F69C File Offset: 0x0102D89C
+		// Token: 0x060374AF RID: 226479 RVA: 0x00F70BA8 File Offset: 0x00F6EDA8
 		private void OnCloseBtnClick()
 		{
 			if (this.IfReturnToLevelView)
@@ -469,7 +475,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0604295C RID: 272732 RVA: 0x0102F71E File Offset: 0x0102D91E
+		// Token: 0x060374B0 RID: 226480 RVA: 0x00F70C2A File Offset: 0x00F6EE2A
 		private void OnBtnClickLevelDetail()
 		{
 			UiManager.Instance.OpenView(EUiViewName.DangoBrawlLevelDetailView, new DangoBrawlLevelDetailViewOpenData
@@ -479,7 +485,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}, null);
 		}
 
-		// Token: 0x0604295D RID: 272733 RVA: 0x0102F748 File Offset: 0x0102D948
+		// Token: 0x060374B1 RID: 226481 RVA: 0x00F70C54 File Offset: 0x00F6EE54
 		private void OnBtnClickEnter()
 		{
 			int selectLevelId = this.SelectLevelId;
@@ -488,7 +494,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			ActivityDangoBrawlController.Instance.RequestEnterInstanceDungeon(selectLevelId, isEnterSave, selectRoleId).Forget<bool>();
 		}
 
-		// Token: 0x0604295E RID: 272734 RVA: 0x0102F781 File Offset: 0x0102D981
+		// Token: 0x060374B2 RID: 226482 RVA: 0x00F70C8D File Offset: 0x00F6EE8D
 		private void OnBtnClickMask()
 		{
 			DangoBrawlItemTipsBase itemTips = this.ItemTips;
@@ -504,17 +510,17 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			backpackPanel.ClearSelection();
 		}
 
-		// Token: 0x04022AF1 RID: 142065
+		// Token: 0x0401D34E RID: 119630
 		private const string DANGO_BRAWL_ROLE_SPAWN_POINT_CASE = "Born_Character";
 
-		// Token: 0x04022AF2 RID: 142066
+		// Token: 0x0401D34F RID: 119631
 		private const string DANGO_BRAWL_ROLE_LIGHT_CASE = "Born_CharacterLight";
 
-		// Token: 0x04022AF3 RID: 142067
+		// Token: 0x0401D350 RID: 119632
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04022AF4 RID: 142068
+		// Token: 0x0401D351 RID: 119633
 		[Nullable(new byte[]
 		{
 			2,
@@ -523,78 +529,78 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 		})]
 		private GenericLayout<DangoBrawlRoleItem, DangoBrawlRoleData> RoleLayout;
 
-		// Token: 0x04022AF5 RID: 142069
+		// Token: 0x0401D352 RID: 119634
 		[Nullable(2)]
 		private DangoBrawlOutBackpackPanel BackpackPanel;
 
-		// Token: 0x04022AF6 RID: 142070
+		// Token: 0x0401D353 RID: 119635
 		[Nullable(2)]
 		private DangoBrawlItemTipsBase ItemTips;
 
-		// Token: 0x04022AF7 RID: 142071
+		// Token: 0x0401D354 RID: 119636
 		[Nullable(2)]
 		private TsUiSceneDangoActor RoleDangoActor;
 
-		// Token: 0x04022AF8 RID: 142072
+		// Token: 0x0401D355 RID: 119637
 		[Nullable(2)]
 		private TsUiSceneDangoActor LoadingDangoActor;
 
-		// Token: 0x04022AF9 RID: 142073
+		// Token: 0x0401D356 RID: 119638
 		private int RoleModelLoadSerial;
 
-		// Token: 0x04022AFA RID: 142074
+		// Token: 0x0401D357 RID: 119639
 		private int SelectLevelId;
 
-		// Token: 0x04022AFB RID: 142075
+		// Token: 0x0401D358 RID: 119640
 		private int SelectRoleId;
 
-		// Token: 0x04022AFC RID: 142076
+		// Token: 0x0401D359 RID: 119641
 		private int SelectRoleIndex = -1;
 
-		// Token: 0x04022AFD RID: 142077
+		// Token: 0x0401D35A RID: 119642
 		private bool IfReturnToLevelView;
 
-		// Token: 0x0200C9EC RID: 51692
+		// Token: 0x0200B3B8 RID: 46008
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403D018 RID: 249880
+			// Token: 0x04037902 RID: 227586
 			CaptionItem,
-			// Token: 0x0403D019 RID: 249881
+			// Token: 0x04037903 RID: 227587
 			TexLevelTitleIcon,
-			// Token: 0x0403D01A RID: 249882
+			// Token: 0x04037904 RID: 227588
 			TxtLevelType,
-			// Token: 0x0403D01B RID: 249883
+			// Token: 0x04037905 RID: 227589
 			TxtLevelName,
-			// Token: 0x0403D01C RID: 249884
+			// Token: 0x04037906 RID: 227590
 			BtnLevelDetail,
-			// Token: 0x0403D01D RID: 249885
+			// Token: 0x04037907 RID: 227591
 			RoleLayout,
-			// Token: 0x0403D01E RID: 249886
+			// Token: 0x04037908 RID: 227592
 			RoleLayoutItem,
-			// Token: 0x0403D01F RID: 249887
+			// Token: 0x04037909 RID: 227593
 			TxtRoleName,
-			// Token: 0x0403D020 RID: 249888
+			// Token: 0x0403790A RID: 227594
 			TxtOccupationType,
-			// Token: 0x0403D021 RID: 249889
+			// Token: 0x0403790B RID: 227595
 			TexOccupation,
-			// Token: 0x0403D022 RID: 249890
+			// Token: 0x0403790C RID: 227596
 			TexBagIcon,
-			// Token: 0x0403D023 RID: 249891
+			// Token: 0x0403790D RID: 227597
 			TxtDesc,
-			// Token: 0x0403D024 RID: 249892
+			// Token: 0x0403790E RID: 227598
 			TxtBagWeight,
-			// Token: 0x0403D025 RID: 249893
+			// Token: 0x0403790F RID: 227599
 			BackpackPanelItem,
-			// Token: 0x0403D026 RID: 249894
+			// Token: 0x04037910 RID: 227600
 			BtnEnter,
-			// Token: 0x0403D027 RID: 249895
+			// Token: 0x04037911 RID: 227601
 			TxtRoleNameExtra,
-			// Token: 0x0403D028 RID: 249896
+			// Token: 0x04037912 RID: 227602
 			BtnMask,
-			// Token: 0x0403D029 RID: 249897
+			// Token: 0x04037913 RID: 227603
 			ItemTips,
-			// Token: 0x0403D02A RID: 249898
+			// Token: 0x04037914 RID: 227604
 			SprOccupationTypeBg
 		}
 	}

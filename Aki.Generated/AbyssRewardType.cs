@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000AB4 RID: 2740
+	// Token: 0x02000B89 RID: 2953
 	public struct AbyssRewardType : IFlatbufferObject
 	{
 		// Token: 0x170000AB RID: 171
-		// (get) Token: 0x060041C7 RID: 16839 RVA: 0x001C85F1 File Offset: 0x001C67F1
+		// (get) Token: 0x060046C5 RID: 18117 RVA: 0x001E7851 File Offset: 0x001E5A51
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,31 +16,31 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060041C8 RID: 16840 RVA: 0x001C85FE File Offset: 0x001C67FE
+		// Token: 0x060046C6 RID: 18118 RVA: 0x001E785E File Offset: 0x001E5A5E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060041C9 RID: 16841 RVA: 0x001C8608 File Offset: 0x001C6808
+		// Token: 0x060046C7 RID: 18119 RVA: 0x001E7868 File Offset: 0x001E5A68
 		public static AbyssRewardType GetRootAsAbyssRewardType(ByteBuffer _bb)
 		{
 			return AbyssRewardType.GetRootAsAbyssRewardType(_bb, default(AbyssRewardType));
 		}
 
-		// Token: 0x060041CA RID: 16842 RVA: 0x001C8624 File Offset: 0x001C6824
+		// Token: 0x060046C8 RID: 18120 RVA: 0x001E7884 File Offset: 0x001E5A84
 		public static AbyssRewardType GetRootAsAbyssRewardType(ByteBuffer _bb, AbyssRewardType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060041CB RID: 16843 RVA: 0x001C8641 File Offset: 0x001C6841
+		// Token: 0x060046C9 RID: 18121 RVA: 0x001E78A1 File Offset: 0x001E5AA1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060041CC RID: 16844 RVA: 0x001C8650 File Offset: 0x001C6850
+		// Token: 0x060046CA RID: 18122 RVA: 0x001E78B0 File Offset: 0x001E5AB0
 		public AbyssRewardType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
@@ -48,7 +48,7 @@ namespace Aki.Config
 		}
 
 		// Token: 0x170000AC RID: 172
-		// (get) Token: 0x060041CD RID: 16845 RVA: 0x001C8660 File Offset: 0x001C6860
+		// (get) Token: 0x060046CB RID: 18123 RVA: 0x001E78C0 File Offset: 0x001E5AC0
 		public int Id
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.Config
 		}
 
 		// Token: 0x170000AD RID: 173
-		// (get) Token: 0x060041CE RID: 16846 RVA: 0x001C869C File Offset: 0x001C689C
+		// (get) Token: 0x060046CC RID: 18124 RVA: 0x001E78FC File Offset: 0x001E5AFC
 		public int ActivityId
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.Config
 		}
 
 		// Token: 0x170000AE RID: 174
-		// (get) Token: 0x060041CF RID: 16847 RVA: 0x001C86D8 File Offset: 0x001C68D8
+		// (get) Token: 0x060046CD RID: 18125 RVA: 0x001E7938 File Offset: 0x001E5B38
 		public int RewardType
 		{
 			get
@@ -93,7 +93,7 @@ namespace Aki.Config
 		}
 
 		// Token: 0x170000AF RID: 175
-		// (get) Token: 0x060041D0 RID: 16848 RVA: 0x001C8714 File Offset: 0x001C6914
+		// (get) Token: 0x060046CE RID: 18126 RVA: 0x001E7974 File Offset: 0x001E5B74
 		public int TabId
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004A8A RID: 19082
+		// Token: 0x0400505D RID: 20573
 		private Table __p;
 	}
 }

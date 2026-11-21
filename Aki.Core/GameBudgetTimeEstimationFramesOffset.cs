@@ -4,22 +4,22 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Core.Common;
 using UnrealEngine;
 
-// Token: 0x020000AD RID: 173
+// Token: 0x020000AF RID: 175
 public class GameBudgetTimeEstimationFramesOffset : IGameBudgetTimeEstimation
 {
-	// Token: 0x0600053C RID: 1340 RVA: 0x0001BE0C File Offset: 0x0001A00C
+	// Token: 0x0600057D RID: 1405 RVA: 0x0001C4F4 File Offset: 0x0001A6F4
 	public GameBudgetTimeEstimationFramesOffset()
 	{
 		this.GtOffsetToleranceTime = this.GtFrameConsumeBaseTimeMs * this.GtOffsetToleranceTimePercentage;
 	}
 
-	// Token: 0x0600053D RID: 1341 RVA: 0x0001BE78 File Offset: 0x0001A078
+	// Token: 0x0600057E RID: 1406 RVA: 0x0001C560 File Offset: 0x0001A760
 	public void Initialize()
 	{
 		UKuroGameBudgetAllocatorCSharpInterface.SetBudgetTime(this.TickBudgetTime);
 	}
 
-	// Token: 0x0600053E RID: 1342 RVA: 0x0001BE88 File Offset: 0x0001A088
+	// Token: 0x0600057F RID: 1407 RVA: 0x0001C570 File Offset: 0x0001A770
 	public void SetMaximumFrameRate(int fps)
 	{
 		this.GtFrameConsumeBaseTimeMs = 1000f / (float)fps * (Info.Instance.IsMobilePlatform() ? 0.8f : 0.95f);
@@ -33,7 +33,7 @@ public class GameBudgetTimeEstimationFramesOffset : IGameBudgetTimeEstimation
 		UKuroGameBudgetAllocatorCSharpInterface.SetBudgetTime(this.TickBudgetTime);
 	}
 
-	// Token: 0x0600053F RID: 1343 RVA: 0x0001BF3C File Offset: 0x0001A13C
+	// Token: 0x06000580 RID: 1408 RVA: 0x0001C624 File Offset: 0x0001A824
 	public void UpdateBudgetTime(float delta)
 	{
 		float lastFrameGameThreadConsumeTime = UKuroGameBudgetAllocatorCSharpInterface.GetLastFrameGameThreadConsumeTime();
@@ -80,34 +80,34 @@ public class GameBudgetTimeEstimationFramesOffset : IGameBudgetTimeEstimation
 		bool debugEnabled = this.DebugEnabled;
 	}
 
-	// Token: 0x04000455 RID: 1109
+	// Token: 0x04000463 RID: 1123
 	private float GtFrameConsumeBaseTimeMs = 16.6f;
 
-	// Token: 0x04000456 RID: 1110
+	// Token: 0x04000464 RID: 1124
 	private float GtFrameMaxBudgetTimeMs = 5f;
 
-	// Token: 0x04000457 RID: 1111
+	// Token: 0x04000465 RID: 1125
 	private int GtAverageConsumeTimeStatisticsFrameCount = 60;
 
-	// Token: 0x04000458 RID: 1112
+	// Token: 0x04000466 RID: 1126
 	private float GtAverageOffsetTime;
 
-	// Token: 0x04000459 RID: 1113
+	// Token: 0x04000467 RID: 1127
 	private readonly float GtOffsetToleranceTimePercentage = 0.033333335f;
 
-	// Token: 0x0400045A RID: 1114
+	// Token: 0x04000468 RID: 1128
 	private float GtOffsetToleranceTime;
 
-	// Token: 0x0400045B RID: 1115
+	// Token: 0x04000469 RID: 1129
 	private int CurrentConsumeTimesPointer = -1;
 
-	// Token: 0x0400045C RID: 1116
+	// Token: 0x0400046A RID: 1130
 	[Nullable(1)]
 	private readonly List<float> GtHistoryConsumeTimes = new List<float>();
 
-	// Token: 0x0400045D RID: 1117
+	// Token: 0x0400046B RID: 1131
 	public float TickBudgetTime = 8f;
 
-	// Token: 0x0400045E RID: 1118
+	// Token: 0x0400046C RID: 1132
 	private readonly bool DebugEnabled;
 }

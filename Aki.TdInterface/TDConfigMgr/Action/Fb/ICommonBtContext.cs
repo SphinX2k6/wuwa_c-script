@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020024ED RID: 9453
+	// Token: 0x02002792 RID: 10130
 	public class ICommonBtContext : IVarContext
 	{
-		// Token: 0x0600D304 RID: 54020 RVA: 0x001F4B82 File Offset: 0x001F2D82
-		[NullableContext(1)]
+		// Token: 0x0600E05A RID: 57434 RVA: 0x0021041A File Offset: 0x0020E61A
 		public static ICommonBtContext Create(ICommonBtContext? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003AEC RID: 15084
-		// (get) Token: 0x0600D305 RID: 54021 RVA: 0x001F4BA1 File Offset: 0x001F2DA1
+		// Token: 0x17003DE4 RID: 15844
+		// (get) Token: 0x0600E05B RID: 57435 RVA: 0x00210439 File Offset: 0x0020E639
 		public override EVarContext Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003AED RID: 15085
-		// (get) Token: 0x0600D306 RID: 54022 RVA: 0x001F4BAE File Offset: 0x001F2DAE
+		// Token: 0x17003DE5 RID: 15845
+		// (get) Token: 0x0600E05C RID: 57436 RVA: 0x00210446 File Offset: 0x0020E646
 		public virtual int Id
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040073B7 RID: 29623
+		// Token: 0x04007A04 RID: 31236
 		private ICommonBtContext Instance;
 	}
 }

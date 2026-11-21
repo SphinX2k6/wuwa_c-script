@@ -6,7 +6,7 @@ using CSharpScript.Game.Module.SkipInterface;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002A5A RID: 10842
+// Token: 0x02001FD5 RID: 8149
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class RoleOrnamentObtainItem : GridProxyAbstract<IGetWayItemData>
 {
-	// Token: 0x0601697B RID: 92539 RVA: 0x005B9A84 File Offset: 0x005B7C84
+	// Token: 0x0601439C RID: 82844 RVA: 0x005E5C08 File Offset: 0x005E3E08
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -42,7 +42,7 @@ public class RoleOrnamentObtainItem : GridProxyAbstract<IGetWayItemData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0601697C RID: 92540 RVA: 0x005B9B8D File Offset: 0x005B7D8D
+	// Token: 0x0601439D RID: 82845 RVA: 0x005E5D11 File Offset: 0x005E3F11
 	private void OnClick()
 	{
 		if (this.Data.Type == EGetWayItemType.CanJump)
@@ -51,11 +51,16 @@ public class RoleOrnamentObtainItem : GridProxyAbstract<IGetWayItemData>
 		}
 	}
 
-	// Token: 0x0601697D RID: 92541 RVA: 0x005B9BC0 File Offset: 0x005B7DC0
+	// Token: 0x0601439E RID: 82846 RVA: 0x005E5D44 File Offset: 0x005E3F44
 	public override void Refresh(IGetWayItemData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
 		bool flag = this.Data.Type == EGetWayItemType.CanJump;
+		UUIButtonComponent button = base.GetButton(0);
+		if (button != null)
+		{
+			button.SetSelfInteractive(flag);
+		}
 		UUIItem item = base.GetItem(1);
 		if (item != null)
 		{
@@ -70,22 +75,22 @@ public class RoleOrnamentObtainItem : GridProxyAbstract<IGetWayItemData>
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(4), this.Data.Text, Array.Empty<object>());
 	}
 
-	// Token: 0x0400A7A3 RID: 42915
+	// Token: 0x0400ABA7 RID: 43943
 	private IGetWayItemData Data;
 
-	// Token: 0x0200909C RID: 37020
+	// Token: 0x020082E3 RID: 33507
 	[NullableContext(0)]
 	private enum EComponentDefine
 	{
-		// Token: 0x0402EDB9 RID: 191929
+		// Token: 0x0402A4B3 RID: 173235
 		Button,
-		// Token: 0x0402EDBA RID: 191930
+		// Token: 0x0402A4B4 RID: 173236
 		UnlockItem,
-		// Token: 0x0402EDBB RID: 191931
+		// Token: 0x0402A4B5 RID: 173237
 		LockItem,
-		// Token: 0x0402EDBC RID: 191932
+		// Token: 0x0402A4B6 RID: 173238
 		Name,
-		// Token: 0x0402EDBD RID: 191933
+		// Token: 0x0402A4B7 RID: 173239
 		LockName
 	}
 }

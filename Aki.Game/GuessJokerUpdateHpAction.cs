@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02001029 RID: 4137
+// Token: 0x020004DD RID: 1245
 public class GuessJokerUpdateHpAction : GuessJokerActionBase
 {
-	// Token: 0x06006A33 RID: 27187 RVA: 0x00154FA7 File Offset: 0x001531A7
+	// Token: 0x06003DC8 RID: 15816 RVA: 0x0015D8CF File Offset: 0x0015BACF
 	public GuessJokerUpdateHpAction(EGuessJokerPlayerType playerType, int hp)
 	{
 		this.PlayerType = playerType;
 		this.Hp = hp;
 	}
 
-	// Token: 0x06006A34 RID: 27188 RVA: 0x00154FC4 File Offset: 0x001531C4
+	// Token: 0x06003DC9 RID: 15817 RVA: 0x0015D8EC File Offset: 0x0015BAEC
 	protected override void OnStart()
 	{
 		GuessJokerGamePlayView gamePlayView = GuessJokerGamePlayModel.Instance.GetGamePlayView();
@@ -25,9 +25,9 @@ public class GuessJokerUpdateHpAction : GuessJokerActionBase
 		});
 	}
 
-	// Token: 0x040030F2 RID: 12530
+	// Token: 0x0400318B RID: 12683
 	public EGuessJokerPlayerType PlayerType = EGuessJokerPlayerType.Ai;
 
-	// Token: 0x040030F3 RID: 12531
+	// Token: 0x0400318C RID: 12684
 	public int Hp;
 }

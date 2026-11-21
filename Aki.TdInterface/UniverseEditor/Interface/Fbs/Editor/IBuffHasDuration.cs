@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x02004835 RID: 18485
+	// Token: 0x02004C9D RID: 19613
 	public struct IBuffHasDuration : IFlatbufferObject
 	{
-		// Token: 0x170084A5 RID: 33957
-		// (get) Token: 0x0601C927 RID: 117031 RVA: 0x0040A3A9 File Offset: 0x004085A9
+		// Token: 0x17008AF0 RID: 35568
+		// (get) Token: 0x0601E124 RID: 123172 RVA: 0x00436CF9 File Offset: 0x00434EF9
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601C928 RID: 117032 RVA: 0x0040A3B6 File Offset: 0x004085B6
+		// Token: 0x0601E125 RID: 123173 RVA: 0x00436D06 File Offset: 0x00434F06
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601C929 RID: 117033 RVA: 0x0040A3C0 File Offset: 0x004085C0
+		// Token: 0x0601E126 RID: 123174 RVA: 0x00436D10 File Offset: 0x00434F10
 		public static IBuffHasDuration GetRootAsIBuffHasDuration(ByteBuffer _bb)
 		{
 			return IBuffHasDuration.GetRootAsIBuffHasDuration(_bb, default(IBuffHasDuration));
 		}
 
-		// Token: 0x0601C92A RID: 117034 RVA: 0x0040A3DC File Offset: 0x004085DC
+		// Token: 0x0601E127 RID: 123175 RVA: 0x00436D2C File Offset: 0x00434F2C
 		public static IBuffHasDuration GetRootAsIBuffHasDuration(ByteBuffer _bb, IBuffHasDuration obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601C92B RID: 117035 RVA: 0x0040A3F9 File Offset: 0x004085F9
+		// Token: 0x0601E128 RID: 123176 RVA: 0x00436D49 File Offset: 0x00434F49
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601C92C RID: 117036 RVA: 0x0040A408 File Offset: 0x00408608
+		// Token: 0x0601E129 RID: 123177 RVA: 0x00436D58 File Offset: 0x00434F58
 		public IBuffHasDuration __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170084A6 RID: 33958
-		// (get) Token: 0x0601C92D RID: 117037 RVA: 0x0040A418 File Offset: 0x00408618
+		// Token: 0x17008AF1 RID: 35569
+		// (get) Token: 0x0601E12A RID: 123178 RVA: 0x00436D68 File Offset: 0x00434F68
 		public EBuffDurationType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x170084A7 RID: 33959
-		// (get) Token: 0x0601C92E RID: 117038 RVA: 0x0040A454 File Offset: 0x00408654
+		// Token: 0x17008AF2 RID: 35570
+		// (get) Token: 0x0601E12B RID: 123179 RVA: 0x00436DA4 File Offset: 0x00434FA4
 		public int Duration
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			}
 		}
 
-		// Token: 0x0601C92F RID: 117039 RVA: 0x0040A490 File Offset: 0x00408690
+		// Token: 0x0601E12C RID: 123180 RVA: 0x00436DE0 File Offset: 0x00434FE0
 		public static Offset<IBuffHasDuration> CreateIBuffHasDuration(FlatBufferBuilder builder, EBuffDurationType Type = EBuffDurationType.Instant, int Duration = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return IBuffHasDuration.EndIBuffHasDuration(builder);
 		}
 
-		// Token: 0x0601C930 RID: 117040 RVA: 0x0040A4AD File Offset: 0x004086AD
+		// Token: 0x0601E12D RID: 123181 RVA: 0x00436DFD File Offset: 0x00434FFD
 		public static void StartIBuffHasDuration(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601C931 RID: 117041 RVA: 0x0040A4B6 File Offset: 0x004086B6
+		// Token: 0x0601E12E RID: 123182 RVA: 0x00436E06 File Offset: 0x00435006
 		public static void AddType(FlatBufferBuilder builder, EBuffDurationType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601C932 RID: 117042 RVA: 0x0040A4C1 File Offset: 0x004086C1
+		// Token: 0x0601E12F RID: 123183 RVA: 0x00436E11 File Offset: 0x00435011
 		public static void AddDuration(FlatBufferBuilder builder, int duration)
 		{
 			builder.AddInt(1, duration, 0);
 		}
 
-		// Token: 0x0601C933 RID: 117043 RVA: 0x0040A4CC File Offset: 0x004086CC
+		// Token: 0x0601E130 RID: 123184 RVA: 0x00436E1C File Offset: 0x0043501C
 		public static Offset<IBuffHasDuration> EndIBuffHasDuration(FlatBufferBuilder builder)
 		{
 			return new Offset<IBuffHasDuration>(builder.EndTable());
 		}
 
-		// Token: 0x0601C934 RID: 117044 RVA: 0x0040A4DC File Offset: 0x004086DC
+		// Token: 0x0601E131 RID: 123185 RVA: 0x00436E2C File Offset: 0x0043502C
 		public IBuffHasDurationT UnPack()
 		{
 			IBuffHasDurationT buffHasDurationT = new IBuffHasDurationT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return buffHasDurationT;
 		}
 
-		// Token: 0x0601C935 RID: 117045 RVA: 0x0040A4F7 File Offset: 0x004086F7
+		// Token: 0x0601E132 RID: 123186 RVA: 0x00436E47 File Offset: 0x00435047
 		public void UnPackTo(IBuffHasDurationT _o)
 		{
 			_o.Type = this.Type;
 			_o.Duration = this.Duration;
 		}
 
-		// Token: 0x0601C936 RID: 117046 RVA: 0x0040A514 File Offset: 0x00408714
+		// Token: 0x0601E133 RID: 123187 RVA: 0x00436E64 File Offset: 0x00435064
 		public static Offset<IBuffHasDuration> Pack(FlatBufferBuilder builder, IBuffHasDurationT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			return IBuffHasDuration.CreateIBuffHasDuration(builder, _o.Type, _o.Duration);
 		}
 
-		// Token: 0x0400CD60 RID: 52576
+		// Token: 0x0400D79B RID: 55195
 		private Table __p;
 	}
 }

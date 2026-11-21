@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B20 RID: 2848
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000BEE RID: 3054
 	public class RoleMotionInteractComponent : IComponentBase
 	{
-		// Token: 0x060041C7 RID: 16839 RVA: 0x000A8BE2 File Offset: 0x000A6DE2
+		// Token: 0x06004620 RID: 17952 RVA: 0x000B2CA9 File Offset: 0x000B0EA9
 		public static RoleMotionInteractComponent Create(IRoleMotionInteractComponent? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001144 RID: 4420
-		// (get) Token: 0x060041C8 RID: 16840 RVA: 0x000A8C04 File Offset: 0x000A6E04
+		// Token: 0x1700123F RID: 4671
+		// (get) Token: 0x06004621 RID: 17953 RVA: 0x000B2CC8 File Offset: 0x000B0EC8
 		public override bool? Disabled
 		{
 			get
@@ -36,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001145 RID: 4421
-		// (get) Token: 0x060041C9 RID: 16841 RVA: 0x000A8C3C File Offset: 0x000A6E3C
+		// Token: 0x17001240 RID: 4672
+		// (get) Token: 0x06004622 RID: 17954 RVA: 0x000B2D00 File Offset: 0x000B0F00
 		public override bool? EdIsLocked
 		{
 			get
@@ -46,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001146 RID: 4422
-		// (get) Token: 0x060041CA RID: 16842 RVA: 0x000A8C52 File Offset: 0x000A6E52
+		// Token: 0x17001241 RID: 4673
+		// (get) Token: 0x06004623 RID: 17955 RVA: 0x000B2D16 File Offset: 0x000B0F16
 		public virtual IPetalGrabRoleMotionInteract MotionInteractConfig
 		{
 			get
@@ -62,14 +60,14 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002517 RID: 9495
+		// Token: 0x0400275F RID: 10079
 		private IRoleMotionInteractComponent Instance;
 
-		// Token: 0x04002518 RID: 9496
+		// Token: 0x04002760 RID: 10080
 		[Nullable(2)]
 		private IPetalGrabRoleMotionInteract _MotionInteractConfigCache;
 
-		// Token: 0x04002519 RID: 9497
+		// Token: 0x04002761 RID: 10081
 		private bool _MotionInteractConfigInited;
 	}
 }

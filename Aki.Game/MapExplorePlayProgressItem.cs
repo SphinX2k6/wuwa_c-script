@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001ACA RID: 6858
+// Token: 0x02000F89 RID: 3977
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 public class MapExplorePlayProgressItem : GridProxyAbstract<IExplorePlayProgressItemData>
 {
-	// Token: 0x0600CB84 RID: 52100 RVA: 0x002E726C File Offset: 0x002E546C
+	// Token: 0x06009F95 RID: 40853 RVA: 0x002F23C0 File Offset: 0x002F05C0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -36,13 +36,13 @@ public class MapExplorePlayProgressItem : GridProxyAbstract<IExplorePlayProgress
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600CB85 RID: 52101 RVA: 0x002E7359 File Offset: 0x002E5559
+	// Token: 0x06009F96 RID: 40854 RVA: 0x002F24AD File Offset: 0x002F06AD
 	protected override void OnBeforeCreate()
 	{
 		this.Sequence = new LevelSequencePlayer(this.RootItem);
 	}
 
-	// Token: 0x0600CB86 RID: 52102 RVA: 0x002E736C File Offset: 0x002E556C
+	// Token: 0x06009F97 RID: 40855 RVA: 0x002F24C0 File Offset: 0x002F06C0
 	[NullableContext(1)]
 	public override void Refresh(IExplorePlayProgressItemData data, bool isSelected, int gridIndex)
 	{
@@ -56,7 +56,7 @@ public class MapExplorePlayProgressItem : GridProxyAbstract<IExplorePlayProgress
 		this.UpdatePlayPointState(data.PlayPointState);
 	}
 
-	// Token: 0x0600CB87 RID: 52103 RVA: 0x002E73B8 File Offset: 0x002E55B8
+	// Token: 0x06009F98 RID: 40856 RVA: 0x002F250C File Offset: 0x002F070C
 	public void UpdatePlayPointType()
 	{
 		if (this.Data.IgnoreHiddenType.GetValueOrDefault())
@@ -72,7 +72,7 @@ public class MapExplorePlayProgressItem : GridProxyAbstract<IExplorePlayProgress
 		base.GetSprite(4).SetUIActive(false);
 	}
 
-	// Token: 0x0600CB88 RID: 52104 RVA: 0x002E7414 File Offset: 0x002E5614
+	// Token: 0x06009F99 RID: 40857 RVA: 0x002F2568 File Offset: 0x002F0768
 	private void UpdatePlayPointState(EPlayPointState playPointState)
 	{
 		base.GetSprite(1).SetUIActive(false);
@@ -97,7 +97,7 @@ public class MapExplorePlayProgressItem : GridProxyAbstract<IExplorePlayProgress
 		}
 	}
 
-	// Token: 0x0600CB89 RID: 52105 RVA: 0x002E74B8 File Offset: 0x002E56B8
+	// Token: 0x06009F9A RID: 40858 RVA: 0x002F260C File Offset: 0x002F080C
 	public void CheckPlayStateChanged()
 	{
 		if (this.Data.LastPlayPointState == null)
@@ -113,7 +113,7 @@ public class MapExplorePlayProgressItem : GridProxyAbstract<IExplorePlayProgress
 		this.Data.LastPlayPointState = null;
 	}
 
-	// Token: 0x0600CB8A RID: 52106 RVA: 0x002E7521 File Offset: 0x002E5721
+	// Token: 0x06009F9B RID: 40859 RVA: 0x002F2675 File Offset: 0x002F0875
 	protected override void OnBeforeDestroy()
 	{
 		LevelSequencePlayer sequence = this.Sequence;
@@ -124,27 +124,27 @@ public class MapExplorePlayProgressItem : GridProxyAbstract<IExplorePlayProgress
 		this.Sequence = null;
 	}
 
-	// Token: 0x04005D9D RID: 23965
+	// Token: 0x04005E6C RID: 24172
 	private LevelSequencePlayer Sequence;
 
-	// Token: 0x04005D9E RID: 23966
+	// Token: 0x04005E6D RID: 24173
 	private IExplorePlayProgressItemData Data;
 
-	// Token: 0x02008028 RID: 32808
+	// Token: 0x020071B6 RID: 29110
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x04029D83 RID: 171395
+		// Token: 0x040250B7 RID: 151735
 		IconRoot,
-		// Token: 0x04029D84 RID: 171396
+		// Token: 0x040250B8 RID: 151736
 		LockedIcon,
-		// Token: 0x04029D85 RID: 171397
+		// Token: 0x040250B9 RID: 151737
 		ToBeCompletedIcon,
-		// Token: 0x04029D86 RID: 171398
+		// Token: 0x040250BA RID: 151738
 		CompletedIcon,
-		// Token: 0x04029D87 RID: 171399
+		// Token: 0x040250BB RID: 151739
 		HiddenPoint,
-		// Token: 0x04029D88 RID: 171400
+		// Token: 0x040250BC RID: 151740
 		ProgressBar
 	}
 }

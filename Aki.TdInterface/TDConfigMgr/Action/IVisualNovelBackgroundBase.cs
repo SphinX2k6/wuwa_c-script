@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002059 RID: 8281
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020022A2 RID: 8866
 	public class IVisualNovelBackgroundBase
 	{
-		// Token: 0x0600B5F8 RID: 46584 RVA: 0x001A62C8 File Offset: 0x001A44C8
+		// Token: 0x0600C11E RID: 49438 RVA: 0x001BCA34 File Offset: 0x001BAC34
 		private IVisualNovelBackgroundBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B5F9 RID: 46585 RVA: 0x001A6300 File Offset: 0x001A4500
+		// Token: 0x0600C11F RID: 49439 RVA: 0x001BCA6C File Offset: 0x001BAC6C
 		public static IVisualNovelBackgroundBase Create([Nullable(2)] IVisualNovelBackgroundBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B5FA RID: 46586 RVA: 0x001A6313 File Offset: 0x001A4513
+		// Token: 0x0600C120 RID: 49440 RVA: 0x001BCA7F File Offset: 0x001BAC7F
 		public static IVisualNovelBackgroundBase CreateFromSetValue([Nullable(2)] IVisualNovelBackgroundBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B5FB RID: 46587 RVA: 0x001A6326 File Offset: 0x001A4526
+		// Token: 0x0600C121 RID: 49441 RVA: 0x001BCA92 File Offset: 0x001BAC92
 		public IVisualNovelBackgroundBase_SetValue ToSetValue()
 		{
 			return new IVisualNovelBackgroundBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170037CF RID: 14287
-		// (get) Token: 0x0600B5FC RID: 46588 RVA: 0x001A6339 File Offset: 0x001A4539
-		// (set) Token: 0x0600B5FD RID: 46589 RVA: 0x001A6364 File Offset: 0x001A4564
+		// Token: 0x17003AAC RID: 15020
+		// (get) Token: 0x0600C122 RID: 49442 RVA: 0x001BCAA5 File Offset: 0x001BACA5
+		// (set) Token: 0x0600C123 RID: 49443 RVA: 0x001BCAD0 File Offset: 0x001BACD0
 		public virtual EVisualNovelBackgroundType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006D64 RID: 28004
+		// Token: 0x0400736D RID: 29549
 		[Nullable(2)]
 		protected IVisualNovelBackgroundBase FbInstance;
 
-		// Token: 0x04006D65 RID: 28005
+		// Token: 0x0400736E RID: 29550
 		[Nullable(2)]
 		protected IVisualNovelBackgroundBase_SetValue PocoInterface;
 	}

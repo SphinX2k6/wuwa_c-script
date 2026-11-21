@@ -4,30 +4,30 @@ using Aki.UniverseEditor.Interface.Fbs.Actor;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005773 RID: 22387
+	// Token: 0x02005D7A RID: 23930
 	public class IPortalRenderConfigT
 	{
-		// Token: 0x1700A6FA RID: 42746
-		// (get) Token: 0x06025863 RID: 153699 RVA: 0x0052D4A4 File Offset: 0x0052B6A4
-		// (set) Token: 0x06025864 RID: 153700 RVA: 0x0052D4AC File Offset: 0x0052B6AC
+		// Token: 0x1700B01E RID: 45086
+		// (get) Token: 0x06027D83 RID: 163203 RVA: 0x00573630 File Offset: 0x00571830
+		// (set) Token: 0x06027D84 RID: 163204 RVA: 0x00573638 File Offset: 0x00571838
 		public TPortalViewDistanceConfigUnion ViewDistance { get; set; }
 
-		// Token: 0x1700A6FB RID: 42747
-		// (get) Token: 0x06025865 RID: 153701 RVA: 0x0052D4B5 File Offset: 0x0052B6B5
-		// (set) Token: 0x06025866 RID: 153702 RVA: 0x0052D4BD File Offset: 0x0052B6BD
+		// Token: 0x1700B01F RID: 45087
+		// (get) Token: 0x06027D85 RID: 163205 RVA: 0x00573641 File Offset: 0x00571841
+		// (set) Token: 0x06027D86 RID: 163206 RVA: 0x00573649 File Offset: 0x00571849
 		public List<IActorRefT> ForceRenderActors { get; set; }
 
-		// Token: 0x1700A6FC RID: 42748
-		// (get) Token: 0x06025867 RID: 153703 RVA: 0x0052D4C6 File Offset: 0x0052B6C6
-		// (set) Token: 0x06025868 RID: 153704 RVA: 0x0052D4CE File Offset: 0x0052B6CE
+		// Token: 0x1700B020 RID: 45088
+		// (get) Token: 0x06027D87 RID: 163207 RVA: 0x00573652 File Offset: 0x00571852
+		// (set) Token: 0x06027D88 RID: 163208 RVA: 0x0057365A File Offset: 0x0057185A
 		public List<IRenderFlagT> SetRenderFlags { get; set; }
 
-		// Token: 0x1700A6FD RID: 42749
-		// (get) Token: 0x06025869 RID: 153705 RVA: 0x0052D4D7 File Offset: 0x0052B6D7
-		// (set) Token: 0x0602586A RID: 153706 RVA: 0x0052D4DF File Offset: 0x0052B6DF
+		// Token: 0x1700B021 RID: 45089
+		// (get) Token: 0x06027D89 RID: 163209 RVA: 0x00573663 File Offset: 0x00571863
+		// (set) Token: 0x06027D8A RID: 163210 RVA: 0x0057366B File Offset: 0x0057186B
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602586B RID: 153707 RVA: 0x0052D4E8 File Offset: 0x0052B6E8
+		// Token: 0x06027D8B RID: 163211 RVA: 0x00573674 File Offset: 0x00571874
 		public IPortalRenderConfigT()
 		{
 			this.ViewDistance = null;

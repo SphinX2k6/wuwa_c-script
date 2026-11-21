@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.Menu.SubViews.EyeProtect
 {
-	// Token: 0x0200544F RID: 21583
+	// Token: 0x02004432 RID: 17458
 	public enum EModeValue
 	{
-		// Token: 0x0401D125 RID: 119077
+		// Token: 0x04017BBE RID: 97214
 		Strong,
-		// Token: 0x0401D126 RID: 119078
+		// Token: 0x04017BBF RID: 97215
 		Weak,
-		// Token: 0x0401D127 RID: 119079
+		// Token: 0x04017BC0 RID: 97216
 		Custom
 	}
 }

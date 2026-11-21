@@ -5,31 +5,31 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Common
 {
-	// Token: 0x02005B44 RID: 23364
+	// Token: 0x02004B25 RID: 19237
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Config(0)]
 	public class AudioConfig : ConfigBase
 	{
-		// Token: 0x0603B278 RID: 242296 RVA: 0x00E1B033 File Offset: 0x00E19233
+		// Token: 0x060301EA RID: 197098 RVA: 0x00D6BCD3 File Offset: 0x00D69ED3
 		public Audio? GetAudioPath(string name)
 		{
 			return ConfigAudioById.GetConfig(name, true);
 		}
 
-		// Token: 0x0603B279 RID: 242297 RVA: 0x00E1B03C File Offset: 0x00E1923C
+		// Token: 0x060301EB RID: 197099 RVA: 0x00D6BCDC File Offset: 0x00D69EDC
 		public MapAudio? GetMapConfig(int mapId)
 		{
 			return ConfigMapAudioById.GetConfig(mapId, true);
 		}
 
-		// Token: 0x0603B27A RID: 242298 RVA: 0x00E1B045 File Offset: 0x00E19245
+		// Token: 0x060301EC RID: 197100 RVA: 0x00D6BCE5 File Offset: 0x00D69EE5
 		public RoleSkinAudio? GetRoleConfig(int roleId)
 		{
 			return ConfigRoleSkinAudioById.GetConfig(roleId, true);
 		}
 
-		// Token: 0x0603B27B RID: 242299 RVA: 0x00E1B050 File Offset: 0x00E19250
+		// Token: 0x060301ED RID: 197101 RVA: 0x00D6BCF0 File Offset: 0x00D69EF0
 		public RoleInfoAudio? GetRoleInfoConfig(int roleId)
 		{
 			if (this.RoleInfoAudioList == null)
@@ -51,8 +51,8 @@ namespace CSharpScript.Game.Module.Common
 			return null;
 		}
 
-		// Token: 0x17008C9B RID: 35995
-		// (get) Token: 0x0603B27C RID: 242300 RVA: 0x00E1B0E0 File Offset: 0x00E192E0
+		// Token: 0x17006075 RID: 24693
+		// (get) Token: 0x060301EE RID: 197102 RVA: 0x00D6BD80 File Offset: 0x00D69F80
 		public static AudioConfig Instance
 		{
 			get
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Common
 			}
 		}
 
-		// Token: 0x0603B27D RID: 242301 RVA: 0x00E1B0E7 File Offset: 0x00E192E7
+		// Token: 0x060301EF RID: 197103 RVA: 0x00D6BD87 File Offset: 0x00D69F87
 		public static AudioConfig GetOrCreateInstance()
 		{
 			if (AudioConfig._Instance == null)
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.Common
 			return AudioConfig._Instance;
 		}
 
-		// Token: 0x0603B27E RID: 242302 RVA: 0x00E1B0FB File Offset: 0x00E192FB
+		// Token: 0x060301F0 RID: 197104 RVA: 0x00D6BD9B File Offset: 0x00D69F9B
 		public static bool CreateInstance()
 		{
 			if (AudioConfig._Instance != null)
@@ -82,28 +82,28 @@ namespace CSharpScript.Game.Module.Common
 			return true;
 		}
 
-		// Token: 0x0603B27F RID: 242303 RVA: 0x00E1B111 File Offset: 0x00E19311
+		// Token: 0x060301F1 RID: 197105 RVA: 0x00D6BDB1 File Offset: 0x00D69FB1
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603B280 RID: 242304 RVA: 0x00E1B113 File Offset: 0x00E19313
+		// Token: 0x060301F2 RID: 197106 RVA: 0x00D6BDB3 File Offset: 0x00D69FB3
 		public static void ResetStaticDefaultValue()
 		{
 			AudioConfig._Instance = null;
 		}
 
-		// Token: 0x0603B281 RID: 242305 RVA: 0x00E1B11B File Offset: 0x00E1931B
+		// Token: 0x060301F3 RID: 197107 RVA: 0x00D6BDBB File Offset: 0x00D69FBB
 		static AudioConfig()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(AudioConfig.CreateStaticDefaultValue), new Action(AudioConfig.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401ED53 RID: 126291
+		// Token: 0x0401980F RID: 104463
 		[Nullable(2)]
 		private List<int> RoleInfoAudioList;
 
-		// Token: 0x0401ED54 RID: 126292
+		// Token: 0x04019810 RID: 104464
 		[Nullable(2)]
 		private static AudioConfig _Instance;
 	}

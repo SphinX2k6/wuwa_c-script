@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001D90 RID: 7568
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001FA3 RID: 8099
 	public class IReignsSetUiEffect : ActionParams
 	{
-		// Token: 0x0600A239 RID: 41529 RVA: 0x00171170 File Offset: 0x0016F370
+		// Token: 0x0600AC31 RID: 44081 RVA: 0x001856DC File Offset: 0x001838DC
 		private IReignsSetUiEffect_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A23A RID: 41530 RVA: 0x001711A8 File Offset: 0x0016F3A8
+		// Token: 0x0600AC32 RID: 44082 RVA: 0x00185714 File Offset: 0x00183914
 		public static IReignsSetUiEffect Create([Nullable(2)] IReignsSetUiEffect instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A23B RID: 41531 RVA: 0x001711BB File Offset: 0x0016F3BB
+		// Token: 0x0600AC33 RID: 44083 RVA: 0x00185727 File Offset: 0x00183927
 		public static IReignsSetUiEffect CreateFromSetValue([Nullable(2)] IReignsSetUiEffect_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A23C RID: 41532 RVA: 0x001711CE File Offset: 0x0016F3CE
+		// Token: 0x0600AC34 RID: 44084 RVA: 0x0018573A File Offset: 0x0018393A
 		public IReignsSetUiEffect_SetValue ToSetValue()
 		{
 			return new IReignsSetUiEffect_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700321B RID: 12827
-		// (get) Token: 0x0600A23D RID: 41533 RVA: 0x001711ED File Offset: 0x0016F3ED
-		// (set) Token: 0x0600A23E RID: 41534 RVA: 0x00171218 File Offset: 0x0016F418
+		// Token: 0x170034B2 RID: 13490
+		// (get) Token: 0x0600AC35 RID: 44085 RVA: 0x00185759 File Offset: 0x00183959
+		// (set) Token: 0x0600AC36 RID: 44086 RVA: 0x00185784 File Offset: 0x00183984
 		public virtual string Effect
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700321C RID: 12828
-		// (get) Token: 0x0600A23F RID: 41535 RVA: 0x00171226 File Offset: 0x0016F426
-		// (set) Token: 0x0600A240 RID: 41536 RVA: 0x00171251 File Offset: 0x0016F451
+		// Token: 0x170034B3 RID: 13491
+		// (get) Token: 0x0600AC37 RID: 44087 RVA: 0x00185792 File Offset: 0x00183992
+		// (set) Token: 0x0600AC38 RID: 44088 RVA: 0x001857BD File Offset: 0x001839BD
 		public virtual bool IsVisible
 		{
 			get
@@ -102,11 +100,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006178 RID: 24952
+		// Token: 0x040066F9 RID: 26361
 		[Nullable(2)]
 		protected new IReignsSetUiEffect FbInstance;
 
-		// Token: 0x04006179 RID: 24953
+		// Token: 0x040066FA RID: 26362
 		[Nullable(2)]
 		protected IReignsSetUiEffect_SetValue PocoInterface;
 	}

@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020005A2 RID: 1442
+	// Token: 0x0200058D RID: 1421
 	[NetMessage(EMessageId.FlagStrongholdInfoUpdateNotify)]
 	public sealed class FlagStrongholdInfoUpdateNotify : IMessage<FlagStrongholdInfoUpdateNotify>, IMessage, IEquatable<FlagStrongholdInfoUpdateNotify>, IDeepCloneable<FlagStrongholdInfoUpdateNotify>, IBufferMessage
 	{
-		// Token: 0x06008561 RID: 34145 RVA: 0x00140A7F File Offset: 0x0013EC7F
+		// Token: 0x060083F9 RID: 33785 RVA: 0x0013DE77 File Offset: 0x0013C077
 		[NullableContext(1)]
 		public static FlagStrongholdInfoUpdateNotify Create()
 		{
 			return new FlagStrongholdInfoUpdateNotify();
 		}
 
-		// Token: 0x170019FF RID: 6655
-		// (get) Token: 0x06008562 RID: 34146 RVA: 0x00140A86 File Offset: 0x0013EC86
+		// Token: 0x170019B2 RID: 6578
+		// (get) Token: 0x060083FA RID: 33786 RVA: 0x0013DE7E File Offset: 0x0013C07E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001A00 RID: 6656
-		// (get) Token: 0x06008563 RID: 34147 RVA: 0x00140A89 File Offset: 0x0013EC89
+		// Token: 0x170019B3 RID: 6579
+		// (get) Token: 0x060083FB RID: 33787 RVA: 0x0013DE81 File Offset: 0x0013C081
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06008564 RID: 34148 RVA: 0x00140A90 File Offset: 0x0013EC90
+		// Token: 0x060083FC RID: 33788 RVA: 0x0013DE88 File Offset: 0x0013C088
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FlagStrongholdInfoUpdateNotify()
 		{
 		}
 
-		// Token: 0x06008565 RID: 34149 RVA: 0x00140AA3 File Offset: 0x0013ECA3
+		// Token: 0x060083FD RID: 33789 RVA: 0x0013DE9B File Offset: 0x0013C09B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FlagStrongholdInfoUpdateNotify(FlagStrongholdInfoUpdateNotify other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06008566 RID: 34150 RVA: 0x00140ACD File Offset: 0x0013ECCD
+		// Token: 0x060083FE RID: 33790 RVA: 0x0013DEC5 File Offset: 0x0013C0C5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FlagStrongholdInfoUpdateNotify Clone()
@@ -67,8 +67,8 @@ namespace Aki.Protocol
 			return new FlagStrongholdInfoUpdateNotify(this);
 		}
 
-		// Token: 0x17001A01 RID: 6657
-		// (get) Token: 0x06008567 RID: 34151 RVA: 0x00140AD5 File Offset: 0x0013ECD5
+		// Token: 0x170019B4 RID: 6580
+		// (get) Token: 0x060083FF RID: 33791 RVA: 0x0013DECD File Offset: 0x0013C0CD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<FlagStrongholdInfo> FlagStrongholdInfo
@@ -79,7 +79,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06008568 RID: 34152 RVA: 0x00140ADD File Offset: 0x0013ECDD
+		// Token: 0x06008400 RID: 33792 RVA: 0x0013DED5 File Offset: 0x0013C0D5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -87,7 +87,7 @@ namespace Aki.Protocol
 			return this.Equals(other as FlagStrongholdInfoUpdateNotify);
 		}
 
-		// Token: 0x06008569 RID: 34153 RVA: 0x00140AEB File Offset: 0x0013ECEB
+		// Token: 0x06008401 RID: 33793 RVA: 0x0013DEE3 File Offset: 0x0013C0E3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(FlagStrongholdInfoUpdateNotify other)
@@ -95,7 +95,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.flagStrongholdInfo_.Equals(other.flagStrongholdInfo_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600856A RID: 34154 RVA: 0x00140B20 File Offset: 0x0013ED20
+		// Token: 0x06008402 RID: 33794 RVA: 0x0013DF18 File Offset: 0x0013C118
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600856B RID: 34155 RVA: 0x00140B54 File Offset: 0x0013ED54
+		// Token: 0x06008403 RID: 33795 RVA: 0x0013DF4C File Offset: 0x0013C14C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600856C RID: 34156 RVA: 0x00140B61 File Offset: 0x0013ED61
+		// Token: 0x06008404 RID: 33796 RVA: 0x0013DF59 File Offset: 0x0013C159
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -125,7 +125,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600856D RID: 34157 RVA: 0x00140B6A File Offset: 0x0013ED6A
+		// Token: 0x06008405 RID: 33797 RVA: 0x0013DF62 File Offset: 0x0013C162
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -137,7 +137,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600856E RID: 34158 RVA: 0x00140B94 File Offset: 0x0013ED94
+		// Token: 0x06008406 RID: 33798 RVA: 0x0013DF8C File Offset: 0x0013C18C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -151,7 +151,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600856F RID: 34159 RVA: 0x00140BCD File Offset: 0x0013EDCD
+		// Token: 0x06008407 RID: 33799 RVA: 0x0013DFC5 File Offset: 0x0013C1C5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(FlagStrongholdInfoUpdateNotify other)
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06008570 RID: 34160 RVA: 0x00140BFB File Offset: 0x0013EDFB
+		// Token: 0x06008408 RID: 33800 RVA: 0x0013DFF3 File Offset: 0x0013C1F3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -172,7 +172,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06008571 RID: 34161 RVA: 0x00140C04 File Offset: 0x0013EE04
+		// Token: 0x06008409 RID: 33801 RVA: 0x0013DFFC File Offset: 0x0013C1FC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -184,7 +184,7 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 18U)
+				if (num != 122U)
 				{
 					this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 				}
@@ -195,16 +195,16 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040041F8 RID: 16888
+		// Token: 0x040041EE RID: 16878
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040041F9 RID: 16889
-		public const int FlagStrongholdInfoFieldNumber = 2;
+		// Token: 0x040041EF RID: 16879
+		public const int FlagStrongholdInfoFieldNumber = 15;
 
-		// Token: 0x040041FA RID: 16890
-		private static readonly FieldCodec<FlagStrongholdInfo> _repeated_flagStrongholdInfo_codec = FieldCodec.ForMessage<FlagStrongholdInfo>(18U, Aki.Protocol.FlagStrongholdInfo.Parser);
+		// Token: 0x040041F0 RID: 16880
+		private static readonly FieldCodec<FlagStrongholdInfo> _repeated_flagStrongholdInfo_codec = FieldCodec.ForMessage<FlagStrongholdInfo>(122U, Aki.Protocol.FlagStrongholdInfo.Parser);
 
-		// Token: 0x040041FB RID: 16891
+		// Token: 0x040041F1 RID: 16881
 		private readonly RepeatedField<FlagStrongholdInfo> flagStrongholdInfo_ = new RepeatedField<FlagStrongholdInfo>();
 	}
 }

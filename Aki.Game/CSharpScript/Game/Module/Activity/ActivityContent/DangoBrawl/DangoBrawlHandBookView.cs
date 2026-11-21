@@ -11,18 +11,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x0200680E RID: 26638
+	// Token: 0x0200575E RID: 22366
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class DangoBrawlHandBookView : UiViewBase
 	{
-		// Token: 0x06042700 RID: 272128 RVA: 0x01022EC2 File Offset: 0x010210C2
+		// Token: 0x06037255 RID: 225877 RVA: 0x00F64406 File Offset: 0x00F62606
 		[NullableContext(1)]
 		public DangoBrawlHandBookView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06042701 RID: 272129 RVA: 0x01022ED8 File Offset: 0x010210D8
+		// Token: 0x06037256 RID: 225878 RVA: 0x00F6441C File Offset: 0x00F6261C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06042702 RID: 272130 RVA: 0x01022F84 File Offset: 0x01021184
+		// Token: 0x06037257 RID: 225879 RVA: 0x00F644C8 File Offset: 0x00F626C8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DangoBrawlHandBookView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -51,19 +51,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042703 RID: 272131 RVA: 0x01022FC7 File Offset: 0x010211C7
+		// Token: 0x06037258 RID: 225880 RVA: 0x00F6450B File Offset: 0x00F6270B
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRedDotRefresh));
 		}
 
-		// Token: 0x06042704 RID: 272132 RVA: 0x01022FE5 File Offset: 0x010211E5
+		// Token: 0x06037259 RID: 225881 RVA: 0x00F64529 File Offset: 0x00F62729
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRedDotRefresh));
 		}
 
-		// Token: 0x06042705 RID: 272133 RVA: 0x01023004 File Offset: 0x01021204
+		// Token: 0x0603725A RID: 225882 RVA: 0x00F64548 File Offset: 0x00F62748
 		private void OnRedDotRefresh(int activityId)
 		{
 			ActivityDangoBrawlData myActivityData = ActivityDangoBrawlController.Instance.MyActivityData;
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.RefreshTopTabRedDots();
 		}
 
-		// Token: 0x06042706 RID: 272134 RVA: 0x01023030 File Offset: 0x01021230
+		// Token: 0x0603725B RID: 225883 RVA: 0x00F64574 File Offset: 0x00F62774
 		private void RefreshTopTabRedDots()
 		{
 			ActivityDangoBrawlData myActivityData = ActivityDangoBrawlController.Instance.MyActivityData;
@@ -91,13 +91,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			occupationTab.SetRedDotVisible(false);
 		}
 
-		// Token: 0x06042707 RID: 272135 RVA: 0x0102307F File Offset: 0x0102127F
+		// Token: 0x0603725C RID: 225884 RVA: 0x00F645C3 File Offset: 0x00F627C3
 		protected override void OnBeforeShow()
 		{
 			this.RefreshTopTabRedDots();
 		}
 
-		// Token: 0x06042708 RID: 272136 RVA: 0x01023087 File Offset: 0x01021287
+		// Token: 0x0603725D RID: 225885 RVA: 0x00F645CB File Offset: 0x00F627CB
 		protected override void OnBeforeDestroy()
 		{
 			TabViewComponent<UiDynamicTab> tabViewComponent = this.TabViewComponent;
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.TabViewComponent = null;
 		}
 
-		// Token: 0x06042709 RID: 272137 RVA: 0x010230A4 File Offset: 0x010212A4
+		// Token: 0x0603725E RID: 225886 RVA: 0x00F645E8 File Offset: 0x00F627E8
 		[NullableContext(1)]
 		private void ToggleCallBack(int index, UUIExtendToggle toggle)
 		{
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.TabViewComponent.ToggleCallBack(data, viewName, null, this.OpenParam as DangoBrawlHandBookViewOpenData, null);
 		}
 
-		// Token: 0x0604270A RID: 272138 RVA: 0x0102311C File Offset: 0x0102131C
+		// Token: 0x0603725F RID: 225887 RVA: 0x00F64660 File Offset: 0x00F62860
 		private EDangoBrawlHandBookTab GetOpenTab()
 		{
 			object openParam = this.OpenParam;
@@ -148,19 +148,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return result;
 		}
 
-		// Token: 0x0604270B RID: 272139 RVA: 0x0102315B File Offset: 0x0102135B
+		// Token: 0x06037260 RID: 225888 RVA: 0x00F6469F File Offset: 0x00F6289F
 		private void OnHelpBtnClick()
 		{
 			HelpController.Instance.OpenHelpById(682);
 		}
 
-		// Token: 0x0604270C RID: 272140 RVA: 0x0102316C File Offset: 0x0102136C
+		// Token: 0x06037261 RID: 225889 RVA: 0x00F646B0 File Offset: 0x00F628B0
 		private void CloseClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0604270D RID: 272141 RVA: 0x01023178 File Offset: 0x01021378
+		// Token: 0x06037262 RID: 225890 RVA: 0x00F646BC File Offset: 0x00F628BC
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -212,36 +212,36 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x04022A04 RID: 141828
+		// Token: 0x0401D261 RID: 119393
 		private DangoBrawlHandBookTabItem ItemTab;
 
-		// Token: 0x04022A05 RID: 141829
+		// Token: 0x0401D262 RID: 119394
 		private DangoBrawlHandBookTabItem OccupationTab;
 
-		// Token: 0x04022A06 RID: 141830
+		// Token: 0x0401D263 RID: 119395
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x04022A07 RID: 141831
+		// Token: 0x0401D264 RID: 119396
 		[Nullable(1)]
 		private List<UiDynamicTab> TabDataList = new List<UiDynamicTab>();
 
-		// Token: 0x04022A08 RID: 141832
+		// Token: 0x0401D265 RID: 119397
 		private TabViewComponent<UiDynamicTab> TabViewComponent;
 
-		// Token: 0x04022A09 RID: 141833
+		// Token: 0x0401D266 RID: 119398
 		private UUIExtendToggle CurSelectToggle;
 
-		// Token: 0x0200C987 RID: 51591
+		// Token: 0x0200B354 RID: 45908
 		[NullableContext(0)]
 		private enum EComponent
 		{
-			// Token: 0x0403CDCB RID: 249291
+			// Token: 0x040376B8 RID: 227000
 			TabItemA,
-			// Token: 0x0403CDCC RID: 249292
+			// Token: 0x040376B9 RID: 227001
 			TabItemB,
-			// Token: 0x0403CDCD RID: 249293
+			// Token: 0x040376BA RID: 227002
 			CaptionItem,
-			// Token: 0x0403CDCE RID: 249294
+			// Token: 0x040376BB RID: 227003
 			ItemContent
 		}
 	}

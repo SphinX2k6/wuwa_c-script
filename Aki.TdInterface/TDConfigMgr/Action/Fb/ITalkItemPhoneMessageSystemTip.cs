@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002557 RID: 9559
+	// Token: 0x02002800 RID: 10240
 	public class ITalkItemPhoneMessageSystemTip : ITalkItemPhoneMessageBase
 	{
-		// Token: 0x0600D5CF RID: 54735 RVA: 0x001FC1C4 File Offset: 0x001FA3C4
-		[NullableContext(1)]
+		// Token: 0x0600E339 RID: 58169 RVA: 0x00217DC0 File Offset: 0x00215FC0
 		public static ITalkItemPhoneMessageSystemTip Create(ITalkItemPhoneMessageSystemTip? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003CE3 RID: 15587
-		// (get) Token: 0x0600D5D0 RID: 54736 RVA: 0x001FC1E3 File Offset: 0x001FA3E3
+		// Token: 0x17003FE7 RID: 16359
+		// (get) Token: 0x0600E33A RID: 58170 RVA: 0x00217DDF File Offset: 0x00215FDF
 		public override EPhoneMessageType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040075C5 RID: 30149
+		// Token: 0x04007C22 RID: 31778
 		private ITalkItemPhoneMessageSystemTip Instance;
 	}
 }

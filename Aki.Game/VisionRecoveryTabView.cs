@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -13,12 +12,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001760 RID: 5984
+// Token: 0x02000C19 RID: 3097
 [NullableContext(1)]
 [Nullable(0)]
 public class VisionRecoveryTabView : UiTabViewBase
 {
-	// Token: 0x0600AD31 RID: 44337 RVA: 0x0026EFAC File Offset: 0x0026D1AC
+	// Token: 0x06008118 RID: 33048 RVA: 0x00279420 File Offset: 0x00277620
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -48,18 +47,18 @@ public class VisionRecoveryTabView : UiTabViewBase
 		};
 	}
 
-	// Token: 0x0600AD32 RID: 44338 RVA: 0x0026F180 File Offset: 0x0026D380
+	// Token: 0x06008119 RID: 33049 RVA: 0x002795F4 File Offset: 0x002777F4
 	protected override UniTask OnBeforeStartAsync()
 	{
-		VisionRecoveryTabView.<OnBeforeStartAsync>d__18 <OnBeforeStartAsync>d__;
+		VisionRecoveryTabView.<OnBeforeStartAsync>d__19 <OnBeforeStartAsync>d__;
 		<OnBeforeStartAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 		<OnBeforeStartAsync>d__.<>4__this = this;
 		<OnBeforeStartAsync>d__.<>1__state = -1;
-		<OnBeforeStartAsync>d__.<>t__builder.Start<VisionRecoveryTabView.<OnBeforeStartAsync>d__18>(ref <OnBeforeStartAsync>d__);
+		<OnBeforeStartAsync>d__.<>t__builder.Start<VisionRecoveryTabView.<OnBeforeStartAsync>d__19>(ref <OnBeforeStartAsync>d__);
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600AD33 RID: 44339 RVA: 0x0026F1C4 File Offset: 0x0026D3C4
+	// Token: 0x0600811A RID: 33050 RVA: 0x00279638 File Offset: 0x00277838
 	protected override void OnStart()
 	{
 		CalabashModel.Instance.DirectionalFusionTargetFetterGroup = 0;
@@ -141,7 +140,7 @@ public class VisionRecoveryTabView : UiTabViewBase
 		PhantomBattleModel.Instance.RecordVisionRecoveryAimRedDot(false);
 	}
 
-	// Token: 0x0600AD34 RID: 44340 RVA: 0x0026F2B0 File Offset: 0x0026D4B0
+	// Token: 0x0600811B RID: 33051 RVA: 0x00279724 File Offset: 0x00277924
 	protected override void AddEventListener()
 	{
 		EventSystem.Instance.Add<OneOf<PhantomBatchDirectRefiningResponse, PhantomRefiningResponse>>(EEventName.OnVisionRecoveryResult, new Action<OneOf<PhantomBatchDirectRefiningResponse, PhantomRefiningResponse>>(this.OnVisionRecoveryResult));
@@ -151,7 +150,7 @@ public class VisionRecoveryTabView : UiTabViewBase
 		EventSystem.Instance.Add(EEventName.PhantomDirectRefiningWeeklyReset, new Action(this.PhantomDirectRefiningWeeklyReset));
 	}
 
-	// Token: 0x0600AD35 RID: 44341 RVA: 0x0026F349 File Offset: 0x0026D549
+	// Token: 0x0600811C RID: 33052 RVA: 0x002797BD File Offset: 0x002779BD
 	protected override void OnBeforeShow()
 	{
 		if (this.IsShowRecoveryChoosePanel)
@@ -162,7 +161,7 @@ public class VisionRecoveryTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AD36 RID: 44342 RVA: 0x0026F37C File Offset: 0x0026D57C
+	// Token: 0x0600811D RID: 33053 RVA: 0x002797F0 File Offset: 0x002779F0
 	private void InitRecoveryChoosePanel(EVisionRecoveryMode recoveryMode)
 	{
 		this.HasInitRecoveryChoosePanel = true;
@@ -170,7 +169,7 @@ public class VisionRecoveryTabView : UiTabViewBase
 		this.RefreshRecoveryChoosePanel(this.AllVisionItemInfoList, this.SelectedVisionList);
 	}
 
-	// Token: 0x0600AD37 RID: 44343 RVA: 0x0026F3A8 File Offset: 0x0026D5A8
+	// Token: 0x0600811E RID: 33054 RVA: 0x0027981C File Offset: 0x00277A1C
 	private void InitPreviewReward()
 	{
 		int value = ConfigCommonParamById.GetIntConfig("VisionRecoveryPreviewRewardDropId").Value;
@@ -189,7 +188,7 @@ public class VisionRecoveryTabView : UiTabViewBase
 		this.BatchRewardLayout.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x0600AD38 RID: 44344 RVA: 0x0026F45C File Offset: 0x0026D65C
+	// Token: 0x0600811F RID: 33055 RVA: 0x002798D0 File Offset: 0x00277AD0
 	private void RefreshRecoveryChoosePanel(List<PhantomItemData> itemDataList, List<ISelectedData> selectedDataList)
 	{
 		CommonItemSelectViewOpenViewData<PhantomItemData> commonItemSelectViewOpenViewData = new CommonItemSelectViewOpenViewData<PhantomItemData>();
@@ -200,7 +199,7 @@ public class VisionRecoveryTabView : UiTabViewBase
 		selectableComponentData.IsSelectFrameFollowClick = true;
 		selectableComponentData.OnChangeSelectedFunction = new Action<List<ISelectedData>, SelectableExpData>(this.OnChangeSelectedFunction);
 		commonItemSelectViewOpenViewData.SelectableComponentType = ESelectableComponentType.VisionRecovery;
-		commonItemSelectViewOpenViewData.ItemDataBaseList = itemDataList.ToList<PhantomItemData>();
+		commonItemSelectViewOpenViewData.ItemDataBaseList = new List<PhantomItemData>(itemDataList);
 		commonItemSelectViewOpenViewData.SelectedDataList = selectedDataList;
 		commonItemSelectViewOpenViewData.ExpData = null;
 		commonItemSelectViewOpenViewData.SelectableComponentData = selectableComponentData;
@@ -210,7 +209,7 @@ public class VisionRecoveryTabView : UiTabViewBase
 		this.RecoveryChoosePanel.SetAllSelectToggleVisible(true);
 	}
 
-	// Token: 0x0600AD39 RID: 44345 RVA: 0x0026F50C File Offset: 0x0026D70C
+	// Token: 0x06008120 RID: 33056 RVA: 0x00279980 File Offset: 0x00277B80
 	private void RefreshRecoverySlotPanel(List<ISelectedData> selectedDataList)
 	{
 		List<PhantomItemData> list = new List<PhantomItemData>();
@@ -243,7 +242,7 @@ public class VisionRecoveryTabView : UiTabViewBase
 		}));
 	}
 
-	// Token: 0x0600AD3A RID: 44346 RVA: 0x0026F634 File Offset: 0x0026D834
+	// Token: 0x06008121 RID: 33057 RVA: 0x00279AA8 File Offset: 0x00277CA8
 	private void RefreshRecoveryBatchPanel(List<ISelectedData> selectedDataList)
 	{
 		int selectedUnitCount = PhantomStackUtil.GetSelectedUnitCount(selectedDataList);
@@ -273,7 +272,7 @@ public class VisionRecoveryTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AD3B RID: 44347 RVA: 0x0026F750 File Offset: 0x0026D950
+	// Token: 0x06008122 RID: 33058 RVA: 0x00279BC4 File Offset: 0x00277DC4
 	private void ShowRecoveryChoosePanel()
 	{
 		if (this.IsShowRecoveryChoosePanel)
@@ -288,7 +287,7 @@ public class VisionRecoveryTabView : UiTabViewBase
 		EventSystem.Instance.Emit(EEventName.CalabashEnterInternalView);
 	}
 
-	// Token: 0x0600AD3C RID: 44348 RVA: 0x0026F7D4 File Offset: 0x0026D9D4
+	// Token: 0x06008123 RID: 33059 RVA: 0x00279C48 File Offset: 0x00277E48
 	private void HideRecoveryChoosePanel()
 	{
 		if (!this.IsShowRecoveryChoosePanel)
@@ -306,9 +305,15 @@ public class VisionRecoveryTabView : UiTabViewBase
 		}
 		EventSystem.Instance.Emit<bool>(EEventName.OnRefreshCalabashTabShowState, false);
 		EventSystem.Instance.Emit(EEventName.CalabashQuitInternalView);
+		Action onQuitInternalViewCallback = this.OnQuitInternalViewCallback;
+		if (onQuitInternalViewCallback == null)
+		{
+			return;
+		}
+		onQuitInternalViewCallback();
 	}
 
-	// Token: 0x0600AD3D RID: 44349 RVA: 0x0026F880 File Offset: 0x0026DA80
+	// Token: 0x06008124 RID: 33060 RVA: 0x00279D04 File Offset: 0x00277F04
 	protected override void RemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnVisionRecoveryResult, new Action<OneOf<PhantomBatchDirectRefiningResponse, PhantomRefiningResponse>>(this.OnVisionRecoveryResult));
@@ -318,7 +323,7 @@ public class VisionRecoveryTabView : UiTabViewBase
 		EventSystem.Instance.Remove(EEventName.PhantomDirectRefiningWeeklyReset, new Action(this.PhantomDirectRefiningWeeklyReset));
 	}
 
-	// Token: 0x0600AD3E RID: 44350 RVA: 0x0026F91C File Offset: 0x0026DB1C
+	// Token: 0x06008125 RID: 33061 RVA: 0x00279DA0 File Offset: 0x00277FA0
 	private void PlayBatchInAnim()
 	{
 		this.UiViewSequence.StopPrevSequence(false, false);
@@ -327,7 +332,7 @@ public class VisionRecoveryTabView : UiTabViewBase
 		base.GetHorizontalLayout(11).RootUIComp.Get().SetUIActive(false);
 	}
 
-	// Token: 0x0600AD3F RID: 44351 RVA: 0x0026F978 File Offset: 0x0026DB78
+	// Token: 0x06008126 RID: 33062 RVA: 0x00279DFC File Offset: 0x00277FFC
 	private void PlayBatchOutAnim()
 	{
 		this.UiViewSequence.StopPrevSequence(false, false);
@@ -336,14 +341,14 @@ public class VisionRecoveryTabView : UiTabViewBase
 		base.GetHorizontalLayout(11).RootUIComp.Get().SetUIActive(uiactive);
 	}
 
-	// Token: 0x0600AD40 RID: 44352 RVA: 0x0026F9D7 File Offset: 0x0026DBD7
+	// Token: 0x06008127 RID: 33063 RVA: 0x00279E5B File Offset: 0x0027805B
 	private void OnRecoveryChoosePanelHideAniFinish(string _)
 	{
 		this.RecoveryChoosePanel.SetActive(false);
 		this.RecoveryChoosePanel.UiViewSequence.RemoveSequenceFinishEvent("SwitchB", new Action<string>(this.OnRecoveryChoosePanelHideAniFinish));
 	}
 
-	// Token: 0x0600AD41 RID: 44353 RVA: 0x0026FA08 File Offset: 0x0026DC08
+	// Token: 0x06008128 RID: 33064 RVA: 0x00279E8C File Offset: 0x0027808C
 	private void OnTabSequenceStart(string sequenceName)
 	{
 		if (sequenceName == "Start".ToString() || sequenceName == "ShowView".ToString() || sequenceName == "Sle".ToString())
@@ -352,7 +357,7 @@ public class VisionRecoveryTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AD42 RID: 44354 RVA: 0x0026FA60 File Offset: 0x0026DC60
+	// Token: 0x06008129 RID: 33065 RVA: 0x00279EE4 File Offset: 0x002780E4
 	private void OnTabSequenceFinish(string sequenceName)
 	{
 		if (sequenceName == "Start".ToString() || sequenceName == "ShowView".ToString() || sequenceName == "Sle".ToString())
@@ -362,40 +367,40 @@ public class VisionRecoveryTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AD43 RID: 44355 RVA: 0x0026FAC0 File Offset: 0x0026DCC0
+	// Token: 0x0600812A RID: 33066 RVA: 0x00279F44 File Offset: 0x00278144
 	private void ExecuteViewParams()
 	{
-		if (this.ExtraParams == null)
+		VisionRecoveryTabViewParam visionRecoveryTabViewParam = this.ExtraParams as VisionRecoveryTabViewParam;
+		if (visionRecoveryTabViewParam != null)
 		{
-			return;
-		}
-		EVisionRecoveryMode? evisionRecoveryMode = this.ExtraParams as EVisionRecoveryMode?;
-		if (evisionRecoveryMode == null)
-		{
-			return;
-		}
-		EVisionRecoveryMode value = evisionRecoveryMode.Value;
-		if (value != EVisionRecoveryMode.Batch)
-		{
-			if (value == EVisionRecoveryMode.DirectionalFusion)
+			this.OnQuitInternalViewCallback = visionRecoveryTabViewParam.OnQuitInternalView;
+			EVisionRecoveryMode? recoveryMode = visionRecoveryTabViewParam.RecoveryMode;
+			if (recoveryMode != null)
 			{
-				this.OnClickDirectionalFusionModelBtn();
+				EVisionRecoveryMode value = recoveryMode.Value;
+				if (value != EVisionRecoveryMode.Batch)
+				{
+					if (value == EVisionRecoveryMode.DirectionalFusion)
+					{
+						this.OnClickDirectionalFusionModelBtn();
+					}
+				}
+				else
+				{
+					this.OnClickRecoveryModelBtn();
+				}
 			}
-		}
-		else
-		{
-			this.OnClickRecoveryModelBtn();
 		}
 		this.ExtraParams = null;
 	}
 
-	// Token: 0x0600AD44 RID: 44356 RVA: 0x0026FB16 File Offset: 0x0026DD16
+	// Token: 0x0600812B RID: 33067 RVA: 0x00279FA1 File Offset: 0x002781A1
 	[NullableContext(2)]
 	private void OnClickSlotCallBack(bool isAddVision, PhantomItemData data)
 	{
 	}
 
-	// Token: 0x0600AD45 RID: 44357 RVA: 0x0026FB18 File Offset: 0x0026DD18
+	// Token: 0x0600812C RID: 33068 RVA: 0x00279FA4 File Offset: 0x002781A4
 	private void BatchQuickAddVisionItem()
 	{
 		if (!this.HasInitRecoveryChoosePanel)
@@ -443,7 +448,7 @@ public class VisionRecoveryTabView : UiTabViewBase
 		this.RefreshRecoveryChoosePanel(this.AllVisionItemInfoList, this.SelectedVisionList);
 	}
 
-	// Token: 0x0600AD46 RID: 44358 RVA: 0x0026FCC8 File Offset: 0x0026DEC8
+	// Token: 0x0600812D RID: 33069 RVA: 0x0027A154 File Offset: 0x00278354
 	[NullableContext(2)]
 	private ISelectedData FindSelectedVisionData(int incId)
 	{
@@ -457,7 +462,7 @@ public class VisionRecoveryTabView : UiTabViewBase
 		return null;
 	}
 
-	// Token: 0x0600AD47 RID: 44359 RVA: 0x0026FD24 File Offset: 0x0026DF24
+	// Token: 0x0600812E RID: 33070 RVA: 0x0027A1B0 File Offset: 0x002783B0
 	private void RefreshFilterVisionItemInfoList()
 	{
 		this.FilterVisionItemInfoList = InventoryModel.Instance.GetUnEquipPhantomItemDataList();
@@ -472,7 +477,7 @@ public class VisionRecoveryTabView : UiTabViewBase
 		SortModel.Instance.SortDataList<PhantomItemData>(this.FilterVisionItemInfoList, sortConfig.Value.Id, sortResultData, Array.Empty<object>());
 	}
 
-	// Token: 0x0600AD48 RID: 44360 RVA: 0x0026FDE1 File Offset: 0x0026DFE1
+	// Token: 0x0600812F RID: 33071 RVA: 0x0027A26D File Offset: 0x0027846D
 	private void RemoveAllVisionItem()
 	{
 		if (this.SelectedVisionList.Count <= 0)
@@ -484,14 +489,14 @@ public class VisionRecoveryTabView : UiTabViewBase
 		this.RefreshRecoveryChoosePanel(this.AllVisionItemInfoList, this.SelectedVisionList);
 	}
 
-	// Token: 0x0600AD49 RID: 44361 RVA: 0x0026FE1B File Offset: 0x0026E01B
+	// Token: 0x06008130 RID: 33072 RVA: 0x0027A2A7 File Offset: 0x002784A7
 	public void RemoveAllVisionItemOutside()
 	{
 		this.AllVisionItemInfoList = InventoryModel.Instance.GetUnEquipPhantomItemDataList();
 		this.RemoveAllVisionItem();
 	}
 
-	// Token: 0x0600AD4A RID: 44362 RVA: 0x0026FE34 File Offset: 0x0026E034
+	// Token: 0x06008131 RID: 33073 RVA: 0x0027A2C0 File Offset: 0x002784C0
 	private void OnClickRecoveryBtn()
 	{
 		if (!this.IsShowRecoveryChoosePanel)
@@ -538,7 +543,7 @@ public class VisionRecoveryTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AD4B RID: 44363 RVA: 0x0026FECC File Offset: 0x0026E0CC
+	// Token: 0x06008132 RID: 33074 RVA: 0x0027A358 File Offset: 0x00278558
 	private void VisionRecovery(Action refineRequest)
 	{
 		Action action = delegate()
@@ -640,13 +645,13 @@ public class VisionRecoveryTabView : UiTabViewBase
 		action();
 	}
 
-	// Token: 0x0600AD4C RID: 44364 RVA: 0x002700C8 File Offset: 0x0026E2C8
+	// Token: 0x06008133 RID: 33075 RVA: 0x0027A554 File Offset: 0x00278754
 	private void OnClickedNotShowConfirm(bool isSelectedOn)
 	{
 		CalabashModel.Instance.HideVisionRecoveryConfirmBox = isSelectedOn;
 	}
 
-	// Token: 0x0600AD4D RID: 44365 RVA: 0x002700D8 File Offset: 0x0026E2D8
+	// Token: 0x06008134 RID: 33076 RVA: 0x0027A564 File Offset: 0x00278764
 	private void OnClickRecoveryModelBtn()
 	{
 		this.VisionRecoveryMode = EVisionRecoveryMode.Batch;
@@ -668,7 +673,7 @@ public class VisionRecoveryTabView : UiTabViewBase
 		EventSystem.Instance.Emit<string>(EEventName.OnGuideTriggerEvent, "VisionRecoveryBatchStart");
 	}
 
-	// Token: 0x0600AD4E RID: 44366 RVA: 0x0027017C File Offset: 0x0026E37C
+	// Token: 0x06008135 RID: 33077 RVA: 0x0027A608 File Offset: 0x00278808
 	private void OnClickDirectionalFusionModelBtn()
 	{
 		if (CalabashModel.Instance.DirectionalFusionTimeMax - CalabashModel.Instance.DirectionalFusionTime <= 0)
@@ -683,7 +688,7 @@ public class VisionRecoveryTabView : UiTabViewBase
 		UiManager.Instance.OpenView(EUiViewName.VisionDirectionalFusionSelectTargetView, null, null);
 	}
 
-	// Token: 0x0600AD4F RID: 44367 RVA: 0x002701DC File Offset: 0x0026E3DC
+	// Token: 0x06008136 RID: 33078 RVA: 0x0027A668 File Offset: 0x00278868
 	private void OnEnterDirectionalFusionModel()
 	{
 		this.VisionRecoveryMode = EVisionRecoveryMode.DirectionalFusion;
@@ -714,7 +719,7 @@ public class VisionRecoveryTabView : UiTabViewBase
 		EventSystem.Instance.Emit<string>(EEventName.OnGuideTriggerEvent, "VisionRecoveryBatchStart");
 	}
 
-	// Token: 0x0600AD50 RID: 44368 RVA: 0x0027029C File Offset: 0x0026E49C
+	// Token: 0x06008137 RID: 33079 RVA: 0x0027A728 File Offset: 0x00278928
 	private void OnClickBatchRecoveryBtn()
 	{
 		if (!this.IsShowRecoveryChoosePanel)
@@ -761,13 +766,13 @@ public class VisionRecoveryTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AD51 RID: 44369 RVA: 0x00270331 File Offset: 0x0026E531
+	// Token: 0x06008138 RID: 33080 RVA: 0x0027A7BD File Offset: 0x002789BD
 	private CommonItemSmallItemGrid OnRewardLayoutUpdate()
 	{
 		return new CommonItemSmallItemGrid();
 	}
 
-	// Token: 0x0600AD52 RID: 44370 RVA: 0x00270338 File Offset: 0x0026E538
+	// Token: 0x06008139 RID: 33081 RVA: 0x0027A7C4 File Offset: 0x002789C4
 	private VisionRecoveryTabItem OnInitTabItem()
 	{
 		return new VisionRecoveryTabItem
@@ -776,7 +781,7 @@ public class VisionRecoveryTabView : UiTabViewBase
 		};
 	}
 
-	// Token: 0x0600AD53 RID: 44371 RVA: 0x00270354 File Offset: 0x0026E554
+	// Token: 0x0600813A RID: 33082 RVA: 0x0027A7E0 File Offset: 0x002789E0
 	private void OnClickTabItemCallBack(EVisionRecoveryTabViewType type, UUIExtendToggle toggle)
 	{
 		UUIExtendToggle currentSelectToggle = this.CurrentSelectToggle;
@@ -810,7 +815,7 @@ public class VisionRecoveryTabView : UiTabViewBase
 		uiViewSequence.PlaySequence("Change", false, null);
 	}
 
-	// Token: 0x0600AD54 RID: 44372 RVA: 0x00270450 File Offset: 0x0026E650
+	// Token: 0x0600813B RID: 33083 RVA: 0x0027A8DC File Offset: 0x00278ADC
 	private void RefreshRewardItemTag()
 	{
 		GenericLayout<CommonItemSmallItemGrid, TItem> rewardLayout = this.RewardLayout;
@@ -825,14 +830,14 @@ public class VisionRecoveryTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AD55 RID: 44373 RVA: 0x00270538 File Offset: 0x0026E738
+	// Token: 0x0600813C RID: 33084 RVA: 0x0027A9C4 File Offset: 0x00278BC4
 	private void OnChangeSelectedFunction(List<ISelectedData> selectedDataList, SelectableExpData _)
 	{
 		this.SelectedVisionList = selectedDataList;
 		this.RefreshRecoveryBatchPanel(this.SelectedVisionList);
 	}
 
-	// Token: 0x0600AD56 RID: 44374 RVA: 0x00270550 File Offset: 0x0026E750
+	// Token: 0x0600813D RID: 33085 RVA: 0x0027A9DC File Offset: 0x00278BDC
 	private void OnRecoveryChoosePanelClose()
 	{
 		this.SelectedVisionList = new List<ISelectedData>();
@@ -843,7 +848,7 @@ public class VisionRecoveryTabView : UiTabViewBase
 		this.HideRecoveryChoosePanel();
 	}
 
-	// Token: 0x0600AD57 RID: 44375 RVA: 0x0027059E File Offset: 0x0026E79E
+	// Token: 0x0600813E RID: 33086 RVA: 0x0027AA2A File Offset: 0x00278C2A
 	private void OnVisionRecoveryResult([Nullable(new byte[]
 	{
 		0,
@@ -862,7 +867,7 @@ public class VisionRecoveryTabView : UiTabViewBase
 		});
 	}
 
-	// Token: 0x0600AD58 RID: 44376 RVA: 0x002705D4 File Offset: 0x0026E7D4
+	// Token: 0x0600813F RID: 33087 RVA: 0x0027AA60 File Offset: 0x00278C60
 	private void OnVisionRecoveryBatchResult([Nullable(new byte[]
 	{
 		0,
@@ -880,10 +885,14 @@ public class VisionRecoveryTabView : UiTabViewBase
 			this.AllVisionItemInfoList = InventoryModel.Instance.GetUnEquipPhantomItemDataList();
 			this.RemoveAllVisionItem();
 			this.RefreshRecoverySlotPanel(this.SelectedVisionList);
+			if (this.CurrentShowType == EVisionRecoveryTabViewType.DirectionalFusion && CalabashModel.Instance.DirectionalFusionTimeMax - CalabashModel.Instance.DirectionalFusionTime <= 0)
+			{
+				this.OnRecoveryChoosePanelClose();
+			}
 		});
 	}
 
-	// Token: 0x0600AD59 RID: 44377 RVA: 0x00270630 File Offset: 0x0026E830
+	// Token: 0x06008140 RID: 33088 RVA: 0x0027AABC File Offset: 0x00278CBC
 	private void OnItemFuncValueChange(int uniqueId)
 	{
 		PhantomItemData phantomItemData = InventoryModel.Instance.GetPhantomItemData(uniqueId);
@@ -904,7 +913,7 @@ public class VisionRecoveryTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AD5A RID: 44378 RVA: 0x002706C4 File Offset: 0x0026E8C4
+	// Token: 0x06008141 RID: 33089 RVA: 0x0027AB50 File Offset: 0x00278D50
 	private int RemoveInvalidSelectedVisions()
 	{
 		int num = 0;
@@ -925,7 +934,7 @@ public class VisionRecoveryTabView : UiTabViewBase
 		return num;
 	}
 
-	// Token: 0x0600AD5B RID: 44379 RVA: 0x00270735 File Offset: 0x0026E935
+	// Token: 0x06008142 RID: 33090 RVA: 0x0027ABC1 File Offset: 0x00278DC1
 	private void SelectDirectionalFusionTarget()
 	{
 		VisionRecoveryDirectionalFusionItem directionalFusionItem = this.DirectionalFusionItem;
@@ -937,13 +946,13 @@ public class VisionRecoveryTabView : UiTabViewBase
 		this.OnEnterDirectionalFusionModel();
 	}
 
-	// Token: 0x0600AD5C RID: 44380 RVA: 0x00270754 File Offset: 0x0026E954
+	// Token: 0x06008143 RID: 33091 RVA: 0x0027ABE0 File Offset: 0x00278DE0
 	private void PhantomDirectRefiningWeeklyReset()
 	{
 		UiManager.Instance.CloseView(EUiViewName.CalabashRootView, null);
 	}
 
-	// Token: 0x0600AD5D RID: 44381 RVA: 0x00270766 File Offset: 0x0026E966
+	// Token: 0x06008144 RID: 33092 RVA: 0x0027ABF2 File Offset: 0x00278DF2
 	private void OnVisionChooseSortRefresh(List<PhantomItemData> list)
 	{
 		if (list != null)
@@ -952,7 +961,7 @@ public class VisionRecoveryTabView : UiTabViewBase
 		}
 	}
 
-	// Token: 0x0600AD5E RID: 44382 RVA: 0x00270772 File Offset: 0x0026E972
+	// Token: 0x06008145 RID: 33093 RVA: 0x0027ABFE File Offset: 0x00278DFE
 	private void OnClickSelectAllToggle(EToggleState state)
 	{
 		if (state == EToggleState.ETT_UnChecked)
@@ -963,7 +972,7 @@ public class VisionRecoveryTabView : UiTabViewBase
 		this.BatchQuickAddVisionItem();
 	}
 
-	// Token: 0x0600AD5F RID: 44383 RVA: 0x00270784 File Offset: 0x0026E984
+	// Token: 0x06008146 RID: 33094 RVA: 0x0027AC10 File Offset: 0x00278E10
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -987,16 +996,16 @@ public class VisionRecoveryTabView : UiTabViewBase
 		};
 	}
 
-	// Token: 0x04004EC0 RID: 20160
+	// Token: 0x04004F69 RID: 20329
 	private List<ISelectedData> SelectedVisionList = new List<ISelectedData>();
 
-	// Token: 0x04004EC1 RID: 20161
+	// Token: 0x04004F6A RID: 20330
 	private List<PhantomItemData> AllVisionItemInfoList = new List<PhantomItemData>();
 
-	// Token: 0x04004EC2 RID: 20162
+	// Token: 0x04004F6B RID: 20331
 	private List<PhantomItemData> FilterVisionItemInfoList = new List<PhantomItemData>();
 
-	// Token: 0x04004EC3 RID: 20163
+	// Token: 0x04004F6C RID: 20332
 	[Nullable(new byte[]
 	{
 		2,
@@ -1004,15 +1013,15 @@ public class VisionRecoveryTabView : UiTabViewBase
 	})]
 	private VisionRecoveryChoosePanel<PhantomItemData> RecoveryChoosePanel;
 
-	// Token: 0x04004EC4 RID: 20164
+	// Token: 0x04004F6D RID: 20333
 	[Nullable(2)]
 	private VisionRecoverySlotPanel RecoverySlotPanel;
 
-	// Token: 0x04004EC5 RID: 20165
+	// Token: 0x04004F6E RID: 20334
 	[Nullable(2)]
 	private VisionRecoveryDirectionalFusionItem DirectionalFusionItem;
 
-	// Token: 0x04004EC6 RID: 20166
+	// Token: 0x04004F6F RID: 20335
 	[Nullable(new byte[]
 	{
 		2,
@@ -1020,7 +1029,7 @@ public class VisionRecoveryTabView : UiTabViewBase
 	})]
 	private GenericLayout<VisionRecoveryTabItem, EVisionRecoveryTabViewType> TabLayout;
 
-	// Token: 0x04004EC7 RID: 20167
+	// Token: 0x04004F70 RID: 20336
 	[Nullable(new byte[]
 	{
 		2,
@@ -1028,7 +1037,7 @@ public class VisionRecoveryTabView : UiTabViewBase
 	})]
 	private GenericLayout<CommonItemSmallItemGrid, TItem> RewardLayout;
 
-	// Token: 0x04004EC8 RID: 20168
+	// Token: 0x04004F71 RID: 20337
 	[Nullable(new byte[]
 	{
 		2,
@@ -1036,65 +1045,69 @@ public class VisionRecoveryTabView : UiTabViewBase
 	})]
 	private GenericLayout<CommonItemSmallItemGrid, TItem> BatchRewardLayout;
 
-	// Token: 0x04004EC9 RID: 20169
+	// Token: 0x04004F72 RID: 20338
 	private bool IsShowRecoveryChoosePanel;
 
-	// Token: 0x04004ECA RID: 20170
+	// Token: 0x04004F73 RID: 20339
 	private bool HasInitRecoveryChoosePanel;
 
-	// Token: 0x04004ECB RID: 20171
+	// Token: 0x04004F74 RID: 20340
 	private EVisionRecoveryMode VisionRecoveryMode = EVisionRecoveryMode.Batch;
 
-	// Token: 0x04004ECC RID: 20172
+	// Token: 0x04004F75 RID: 20341
 	private readonly int SlotMaxNum = 5;
 
-	// Token: 0x04004ECD RID: 20173
+	// Token: 0x04004F76 RID: 20342
 	private int BatchMaxNum;
 
-	// Token: 0x04004ECE RID: 20174
+	// Token: 0x04004F77 RID: 20343
 	private EVisionRecoveryTabViewType CurrentShowType;
 
-	// Token: 0x04004ECF RID: 20175
+	// Token: 0x04004F78 RID: 20344
 	[Nullable(2)]
 	private UUIExtendToggle CurrentSelectToggle;
 
-	// Token: 0x02007D4C RID: 32076
+	// Token: 0x04004F79 RID: 20345
+	[Nullable(2)]
+	private Action OnQuitInternalViewCallback;
+
+	// Token: 0x02006ED2 RID: 28370
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x04029079 RID: 168057
+		// Token: 0x040243A4 RID: 148388
 		RecoverySlotPanel,
-		// Token: 0x0402907A RID: 168058
+		// Token: 0x040243A5 RID: 148389
 		RecoveryChoosePanelRoot,
-		// Token: 0x0402907B RID: 168059
+		// Token: 0x040243A6 RID: 148390
 		RecoveryCountText,
-		// Token: 0x0402907C RID: 168060
+		// Token: 0x040243A7 RID: 148391
 		RecoveryBtn,
-		// Token: 0x0402907D RID: 168061
+		// Token: 0x040243A8 RID: 148392
 		RewardLayout,
-		// Token: 0x0402907E RID: 168062
+		// Token: 0x040243A9 RID: 148393
 		NormalRecoveryRoot,
-		// Token: 0x0402907F RID: 168063
+		// Token: 0x040243AA RID: 148394
 		BatchRecoveryRoot,
-		// Token: 0x04029080 RID: 168064
+		// Token: 0x040243AB RID: 148395
 		BatchRewardLayout,
-		// Token: 0x04029081 RID: 168065
+		// Token: 0x040243AC RID: 148396
 		BatchMaterialText,
-		// Token: 0x04029082 RID: 168066
+		// Token: 0x040243AD RID: 148397
 		BatchCountText,
-		// Token: 0x04029083 RID: 168067
+		// Token: 0x040243AE RID: 148398
 		BatchRecoveryBtn,
-		// Token: 0x04029084 RID: 168068
+		// Token: 0x040243AF RID: 148399
 		TabLayout,
-		// Token: 0x04029085 RID: 168069
+		// Token: 0x040243B0 RID: 148400
 		TabItem,
-		// Token: 0x04029086 RID: 168070
+		// Token: 0x040243B1 RID: 148401
 		DirectionalItem,
-		// Token: 0x04029087 RID: 168071
+		// Token: 0x040243B2 RID: 148402
 		RecoveryCountTextItem,
-		// Token: 0x04029088 RID: 168072
+		// Token: 0x040243B3 RID: 148403
 		IntoBtnText,
-		// Token: 0x04029089 RID: 168073
+		// Token: 0x040243B4 RID: 148404
 		BatchRecoveryBtnText
 	}
 }

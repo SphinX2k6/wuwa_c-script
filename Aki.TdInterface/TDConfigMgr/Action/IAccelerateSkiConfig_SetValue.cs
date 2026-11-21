@@ -1,28 +1,26 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001753 RID: 5971
+	// Token: 0x020018D4 RID: 6356
 	public class IAccelerateSkiConfig_SetValue
 	{
-		// Token: 0x04005080 RID: 20608
+		// Token: 0x040054B6 RID: 21686
 		public ESkiConfig Type;
 
-		// Token: 0x04005081 RID: 20609
-		[Nullable(1)]
+		// Token: 0x040054B7 RID: 21687
 		public ITargetEntityType Target;
 
-		// Token: 0x04005082 RID: 20610
+		// Token: 0x040054B8 RID: 21688
 		public int Duration;
 
-		// Token: 0x04005083 RID: 20611
+		// Token: 0x040054B9 RID: 21689
 		public int LimitSpeed;
 
-		// Token: 0x04005084 RID: 20612
+		// Token: 0x040054BA RID: 21690
 		public int Acceleration;
 
-		// Token: 0x04005085 RID: 20613
+		// Token: 0x040054BB RID: 21691
 		public int? InstantSpeed;
 	}
 }

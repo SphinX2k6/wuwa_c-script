@@ -4,366 +4,366 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001CB8 RID: 7352
+	// Token: 0x0200054D RID: 1357
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/KuroSimpleCombat.EKSC_AttrType")]
 	public enum EKSC_AttrType : byte
 	{
-		// Token: 0x0400F521 RID: 62753
+		// Token: 0x04003579 RID: 13689
 		EAttributeType_None,
-		// Token: 0x0400F522 RID: 62754
+		// Token: 0x0400357A RID: 13690
 		Lv,
-		// Token: 0x0400F523 RID: 62755
+		// Token: 0x0400357B RID: 13691
 		LifeMax,
-		// Token: 0x0400F524 RID: 62756
+		// Token: 0x0400357C RID: 13692
 		Life,
-		// Token: 0x0400F525 RID: 62757
+		// Token: 0x0400357D RID: 13693
 		Shield,
-		// Token: 0x0400F526 RID: 62758
+		// Token: 0x0400357E RID: 13694
 		Atk = 7,
-		// Token: 0x0400F527 RID: 62759
+		// Token: 0x0400357F RID: 13695
 		Crit,
-		// Token: 0x0400F528 RID: 62760
+		// Token: 0x04003580 RID: 13696
 		CritDamage,
-		// Token: 0x0400F529 RID: 62761
+		// Token: 0x04003581 RID: 13697
 		Def,
-		// Token: 0x0400F52A RID: 62762
+		// Token: 0x04003582 RID: 13698
 		AtkChange,
-		// Token: 0x0400F52B RID: 62763
+		// Token: 0x04003583 RID: 13699
 		MaxLifeShieldChange,
-		// Token: 0x0400F52C RID: 62764
+		// Token: 0x04003584 RID: 13700
 		BaseLife,
-		// Token: 0x0400F52D RID: 62765
+		// Token: 0x04003585 RID: 13701
 		CritChange,
-		// Token: 0x0400F52E RID: 62766
+		// Token: 0x04003586 RID: 13702
 		DamageChange,
-		// Token: 0x0400F52F RID: 62767
+		// Token: 0x04003587 RID: 13703
 		DamageReduce,
-		// Token: 0x0400F530 RID: 62768
+		// Token: 0x04003588 RID: 13704
 		DamageLifeSteal,
-		// Token: 0x0400F531 RID: 62769
+		// Token: 0x04003589 RID: 13705
 		HealBase,
-		// Token: 0x0400F532 RID: 62770
+		// Token: 0x0400358A RID: 13706
 		DamageReduceCollision,
-		// Token: 0x0400F533 RID: 62771
+		// Token: 0x0400358B RID: 13707
 		DamageAbsorptionCount,
-		// Token: 0x0400F534 RID: 62772
+		// Token: 0x0400358C RID: 13708
 		DamageChangePhys,
-		// Token: 0x0400F535 RID: 62773
+		// Token: 0x0400358D RID: 13709
 		DamageChangeElement1,
-		// Token: 0x0400F536 RID: 62774
+		// Token: 0x0400358E RID: 13710
 		DamageChangeElement2,
-		// Token: 0x0400F537 RID: 62775
+		// Token: 0x0400358F RID: 13711
 		DamageChangeElement3,
-		// Token: 0x0400F538 RID: 62776
+		// Token: 0x04003590 RID: 13712
 		DamageChangeElement4,
-		// Token: 0x0400F539 RID: 62777
+		// Token: 0x04003591 RID: 13713
 		DamageChangeElement5,
-		// Token: 0x0400F53A RID: 62778
+		// Token: 0x04003592 RID: 13714
 		DamageChangeElement6,
-		// Token: 0x0400F53B RID: 62779
+		// Token: 0x04003593 RID: 13715
 		DamageResistancePhys,
-		// Token: 0x0400F53C RID: 62780
+		// Token: 0x04003594 RID: 13716
 		DamageResistanceElement1,
-		// Token: 0x0400F53D RID: 62781
+		// Token: 0x04003595 RID: 13717
 		DamageResistanceElement2,
-		// Token: 0x0400F53E RID: 62782
+		// Token: 0x04003596 RID: 13718
 		DamageResistanceElement3,
-		// Token: 0x0400F53F RID: 62783
+		// Token: 0x04003597 RID: 13719
 		DamageResistanceElement4,
-		// Token: 0x0400F540 RID: 62784
+		// Token: 0x04003598 RID: 13720
 		DamageResistanceElement5,
-		// Token: 0x0400F541 RID: 62785
+		// Token: 0x04003599 RID: 13721
 		DamageResistanceElement6,
-		// Token: 0x0400F542 RID: 62786
+		// Token: 0x0400359A RID: 13722
 		HealChange,
-		// Token: 0x0400F543 RID: 62787
+		// Token: 0x0400359B RID: 13723
 		HealedChange,
-		// Token: 0x0400F544 RID: 62788
+		// Token: 0x0400359C RID: 13724
 		DamageReducePhys,
-		// Token: 0x0400F545 RID: 62789
+		// Token: 0x0400359D RID: 13725
 		DamageReduceElement1,
-		// Token: 0x0400F546 RID: 62790
+		// Token: 0x0400359E RID: 13726
 		DamageReduceElement2,
-		// Token: 0x0400F547 RID: 62791
+		// Token: 0x0400359F RID: 13727
 		DamageReduceElement3,
-		// Token: 0x0400F548 RID: 62792
+		// Token: 0x040035A0 RID: 13728
 		DamageReduceElement4,
-		// Token: 0x0400F549 RID: 62793
+		// Token: 0x040035A1 RID: 13729
 		DamageReduceElement5,
-		// Token: 0x0400F54A RID: 62794
+		// Token: 0x040035A2 RID: 13730
 		DamageReduceElement6,
-		// Token: 0x0400F54B RID: 62795
+		// Token: 0x040035A3 RID: 13731
 		DamageAmplify1,
-		// Token: 0x0400F54C RID: 62796
+		// Token: 0x040035A4 RID: 13732
 		DamageAmplify2,
-		// Token: 0x0400F54D RID: 62797
+		// Token: 0x040035A5 RID: 13733
 		ShieldMax = 50,
-		// Token: 0x0400F54E RID: 62798
+		// Token: 0x040035A6 RID: 13734
 		ShieldChange,
-		// Token: 0x0400F54F RID: 62799
+		// Token: 0x040035A7 RID: 13735
 		LifeChange,
-		// Token: 0x0400F550 RID: 62800
+		// Token: 0x040035A8 RID: 13736
 		DefChange,
-		// Token: 0x0400F551 RID: 62801
+		// Token: 0x040035A9 RID: 13737
 		AtkExtra,
-		// Token: 0x0400F552 RID: 62802
+		// Token: 0x040035AA RID: 13738
 		DefExtra,
-		// Token: 0x0400F553 RID: 62803
+		// Token: 0x040035AB RID: 13739
 		LifeExtra,
-		// Token: 0x0400F554 RID: 62804
+		// Token: 0x040035AC RID: 13740
 		SpecialEnergy1 = 70,
-		// Token: 0x0400F555 RID: 62805
+		// Token: 0x040035AD RID: 13741
 		SpecialEnergy1Max,
-		// Token: 0x0400F556 RID: 62806
+		// Token: 0x040035AE RID: 13742
 		SpecialEnergy1RecoverSpeed,
-		// Token: 0x0400F557 RID: 62807
+		// Token: 0x040035AF RID: 13743
 		SpecialEnergy1ConsumeSpeed,
-		// Token: 0x0400F558 RID: 62808
+		// Token: 0x040035B0 RID: 13744
 		SpecialEnergy1ChargeEfficiency,
-		// Token: 0x0400F559 RID: 62809
+		// Token: 0x040035B1 RID: 13745
 		SpecialEnergy2,
-		// Token: 0x0400F55A RID: 62810
+		// Token: 0x040035B2 RID: 13746
 		SpecialEnergy2Max,
-		// Token: 0x0400F55B RID: 62811
+		// Token: 0x040035B3 RID: 13747
 		SpecialEnergy2RecoverSpeed,
-		// Token: 0x0400F55C RID: 62812
+		// Token: 0x040035B4 RID: 13748
 		SpecialEnergy2ConsumeSpeed,
-		// Token: 0x0400F55D RID: 62813
+		// Token: 0x040035B5 RID: 13749
 		SpecialEnergy2ChargeEfficiency,
-		// Token: 0x0400F55E RID: 62814
+		// Token: 0x040035B6 RID: 13750
 		SpecialEnergy3,
-		// Token: 0x0400F55F RID: 62815
+		// Token: 0x040035B7 RID: 13751
 		SpecialEnergy3Max,
-		// Token: 0x0400F560 RID: 62816
+		// Token: 0x040035B8 RID: 13752
 		SpecialEnergy3RecoverSpeed,
-		// Token: 0x0400F561 RID: 62817
+		// Token: 0x040035B9 RID: 13753
 		SpecialEnergy3ConsumeSpeed,
-		// Token: 0x0400F562 RID: 62818
+		// Token: 0x040035BA RID: 13754
 		SpecialEnergy3ChargeEfficiency,
-		// Token: 0x0400F563 RID: 62819
+		// Token: 0x040035BB RID: 13755
 		IgnoreDefRate = 99,
-		// Token: 0x0400F564 RID: 62820
+		// Token: 0x040035BC RID: 13756
 		IgnoreDamageResistancePhys,
-		// Token: 0x0400F565 RID: 62821
+		// Token: 0x040035BD RID: 13757
 		IgnoreDamageResistanceElement1,
-		// Token: 0x0400F566 RID: 62822
+		// Token: 0x040035BE RID: 13758
 		IgnoreDamageResistanceElement2,
-		// Token: 0x0400F567 RID: 62823
+		// Token: 0x040035BF RID: 13759
 		IgnoreDamageResistanceElement3,
-		// Token: 0x0400F568 RID: 62824
+		// Token: 0x040035C0 RID: 13760
 		IgnoreDamageResistanceElement4,
-		// Token: 0x0400F569 RID: 62825
+		// Token: 0x040035C1 RID: 13761
 		IgnoreDamageResistanceElement5,
-		// Token: 0x0400F56A RID: 62826
+		// Token: 0x040035C2 RID: 13762
 		IgnoreDamageResistanceElement6,
-		// Token: 0x0400F56B RID: 62827
+		// Token: 0x040035C3 RID: 13763
 		SkillCoolDown = 117,
-		// Token: 0x0400F56C RID: 62828
+		// Token: 0x040035C4 RID: 13764
 		SkillCoolDownChange,
-		// Token: 0x0400F56D RID: 62829
+		// Token: 0x040035C5 RID: 13765
 		SkillCoolDownChangeMin,
-		// Token: 0x0400F56E RID: 62830
+		// Token: 0x040035C6 RID: 13766
 		Custom120,
-		// Token: 0x0400F56F RID: 62831
+		// Token: 0x040035C7 RID: 13767
 		Custom121,
-		// Token: 0x0400F570 RID: 62832
+		// Token: 0x040035C8 RID: 13768
 		Custom122,
-		// Token: 0x0400F571 RID: 62833
+		// Token: 0x040035C9 RID: 13769
 		Custom123,
-		// Token: 0x0400F572 RID: 62834
+		// Token: 0x040035CA RID: 13770
 		Custom124,
-		// Token: 0x0400F573 RID: 62835
+		// Token: 0x040035CB RID: 13771
 		Custom125,
-		// Token: 0x0400F574 RID: 62836
+		// Token: 0x040035CC RID: 13772
 		Custom126,
-		// Token: 0x0400F575 RID: 62837
+		// Token: 0x040035CD RID: 13773
 		Custom127,
-		// Token: 0x0400F576 RID: 62838
+		// Token: 0x040035CE RID: 13774
 		Custom128,
-		// Token: 0x0400F577 RID: 62839
+		// Token: 0x040035CF RID: 13775
 		Custom129,
-		// Token: 0x0400F578 RID: 62840
+		// Token: 0x040035D0 RID: 13776
 		Custom130,
-		// Token: 0x0400F579 RID: 62841
+		// Token: 0x040035D1 RID: 13777
 		Custom131,
-		// Token: 0x0400F57A RID: 62842
+		// Token: 0x040035D2 RID: 13778
 		Custom132,
-		// Token: 0x0400F57B RID: 62843
+		// Token: 0x040035D3 RID: 13779
 		Custom133,
-		// Token: 0x0400F57C RID: 62844
+		// Token: 0x040035D4 RID: 13780
 		Custom134,
-		// Token: 0x0400F57D RID: 62845
+		// Token: 0x040035D5 RID: 13781
 		Custom135,
-		// Token: 0x0400F57E RID: 62846
+		// Token: 0x040035D6 RID: 13782
 		Custom136,
-		// Token: 0x0400F57F RID: 62847
+		// Token: 0x040035D7 RID: 13783
 		Custom137,
-		// Token: 0x0400F580 RID: 62848
+		// Token: 0x040035D8 RID: 13784
 		Custom138,
-		// Token: 0x0400F581 RID: 62849
+		// Token: 0x040035D9 RID: 13785
 		Custom139,
-		// Token: 0x0400F582 RID: 62850
+		// Token: 0x040035DA RID: 13786
 		Custom140,
-		// Token: 0x0400F583 RID: 62851
+		// Token: 0x040035DB RID: 13787
 		Custom141,
-		// Token: 0x0400F584 RID: 62852
+		// Token: 0x040035DC RID: 13788
 		Custom142,
-		// Token: 0x0400F585 RID: 62853
+		// Token: 0x040035DD RID: 13789
 		Custom143,
-		// Token: 0x0400F586 RID: 62854
+		// Token: 0x040035DE RID: 13790
 		Custom144,
-		// Token: 0x0400F587 RID: 62855
+		// Token: 0x040035DF RID: 13791
 		Custom145,
-		// Token: 0x0400F588 RID: 62856
+		// Token: 0x040035E0 RID: 13792
 		Custom146,
-		// Token: 0x0400F589 RID: 62857
+		// Token: 0x040035E1 RID: 13793
 		Custom147,
-		// Token: 0x0400F58A RID: 62858
+		// Token: 0x040035E2 RID: 13794
 		Custom148,
-		// Token: 0x0400F58B RID: 62859
+		// Token: 0x040035E3 RID: 13795
 		Custom149,
-		// Token: 0x0400F58C RID: 62860
+		// Token: 0x040035E4 RID: 13796
 		Custom150,
-		// Token: 0x0400F58D RID: 62861
+		// Token: 0x040035E5 RID: 13797
 		Custom151,
-		// Token: 0x0400F58E RID: 62862
+		// Token: 0x040035E6 RID: 13798
 		Custom152,
-		// Token: 0x0400F58F RID: 62863
+		// Token: 0x040035E7 RID: 13799
 		Custom153,
-		// Token: 0x0400F590 RID: 62864
+		// Token: 0x040035E8 RID: 13800
 		Custom154,
-		// Token: 0x0400F591 RID: 62865
+		// Token: 0x040035E9 RID: 13801
 		Custom155,
-		// Token: 0x0400F592 RID: 62866
+		// Token: 0x040035EA RID: 13802
 		Custom156,
-		// Token: 0x0400F593 RID: 62867
+		// Token: 0x040035EB RID: 13803
 		Custom157,
-		// Token: 0x0400F594 RID: 62868
+		// Token: 0x040035EC RID: 13804
 		Custom158,
-		// Token: 0x0400F595 RID: 62869
+		// Token: 0x040035ED RID: 13805
 		Custom159,
-		// Token: 0x0400F596 RID: 62870
+		// Token: 0x040035EE RID: 13806
 		Custom160,
-		// Token: 0x0400F597 RID: 62871
+		// Token: 0x040035EF RID: 13807
 		Custom161,
-		// Token: 0x0400F598 RID: 62872
+		// Token: 0x040035F0 RID: 13808
 		Custom162,
-		// Token: 0x0400F599 RID: 62873
+		// Token: 0x040035F1 RID: 13809
 		Custom163,
-		// Token: 0x0400F59A RID: 62874
+		// Token: 0x040035F2 RID: 13810
 		Custom164,
-		// Token: 0x0400F59B RID: 62875
+		// Token: 0x040035F3 RID: 13811
 		Custom165,
-		// Token: 0x0400F59C RID: 62876
+		// Token: 0x040035F4 RID: 13812
 		Custom166,
-		// Token: 0x0400F59D RID: 62877
+		// Token: 0x040035F5 RID: 13813
 		Custom167,
-		// Token: 0x0400F59E RID: 62878
+		// Token: 0x040035F6 RID: 13814
 		Custom168,
-		// Token: 0x0400F59F RID: 62879
+		// Token: 0x040035F7 RID: 13815
 		Custom169,
-		// Token: 0x0400F5A0 RID: 62880
+		// Token: 0x040035F8 RID: 13816
 		Custom170,
-		// Token: 0x0400F5A1 RID: 62881
+		// Token: 0x040035F9 RID: 13817
 		Custom171,
-		// Token: 0x0400F5A2 RID: 62882
+		// Token: 0x040035FA RID: 13818
 		Custom172,
-		// Token: 0x0400F5A3 RID: 62883
+		// Token: 0x040035FB RID: 13819
 		Custom173,
-		// Token: 0x0400F5A4 RID: 62884
+		// Token: 0x040035FC RID: 13820
 		Custom174,
-		// Token: 0x0400F5A5 RID: 62885
+		// Token: 0x040035FD RID: 13821
 		Custom175,
-		// Token: 0x0400F5A6 RID: 62886
+		// Token: 0x040035FE RID: 13822
 		Custom176,
-		// Token: 0x0400F5A7 RID: 62887
+		// Token: 0x040035FF RID: 13823
 		Custom177,
-		// Token: 0x0400F5A8 RID: 62888
+		// Token: 0x04003600 RID: 13824
 		Custom178,
-		// Token: 0x0400F5A9 RID: 62889
+		// Token: 0x04003601 RID: 13825
 		Custom179,
-		// Token: 0x0400F5AA RID: 62890
+		// Token: 0x04003602 RID: 13826
 		Custom180,
-		// Token: 0x0400F5AB RID: 62891
+		// Token: 0x04003603 RID: 13827
 		Custom181,
-		// Token: 0x0400F5AC RID: 62892
+		// Token: 0x04003604 RID: 13828
 		Custom182,
-		// Token: 0x0400F5AD RID: 62893
+		// Token: 0x04003605 RID: 13829
 		Custom183,
-		// Token: 0x0400F5AE RID: 62894
+		// Token: 0x04003606 RID: 13830
 		Custom184,
-		// Token: 0x0400F5AF RID: 62895
+		// Token: 0x04003607 RID: 13831
 		Custom185,
-		// Token: 0x0400F5B0 RID: 62896
+		// Token: 0x04003608 RID: 13832
 		Custom186,
-		// Token: 0x0400F5B1 RID: 62897
+		// Token: 0x04003609 RID: 13833
 		Custom187,
-		// Token: 0x0400F5B2 RID: 62898
+		// Token: 0x0400360A RID: 13834
 		Custom188,
-		// Token: 0x0400F5B3 RID: 62899
+		// Token: 0x0400360B RID: 13835
 		Custom189,
-		// Token: 0x0400F5B4 RID: 62900
+		// Token: 0x0400360C RID: 13836
 		MoveSpeed,
-		// Token: 0x0400F5B5 RID: 62901
+		// Token: 0x0400360D RID: 13837
 		MoveSpeedAdd,
-		// Token: 0x0400F5B6 RID: 62902
+		// Token: 0x0400360E RID: 13838
 		MoveSpeedReduce,
-		// Token: 0x0400F5B7 RID: 62903
+		// Token: 0x0400360F RID: 13839
 		AddBuffDuration = 199,
-		// Token: 0x0400F5B8 RID: 62904
+		// Token: 0x04003610 RID: 13840
 		BuffDuration,
-		// Token: 0x0400F5B9 RID: 62905
+		// Token: 0x04003611 RID: 13841
 		SpecialDamageChange1,
-		// Token: 0x0400F5BA RID: 62906
+		// Token: 0x04003612 RID: 13842
 		SpecialDamageChange2,
-		// Token: 0x0400F5BB RID: 62907
+		// Token: 0x04003613 RID: 13843
 		SpecialDamageChange3,
-		// Token: 0x0400F5BC RID: 62908
+		// Token: 0x04003614 RID: 13844
 		SpecialDamageChange4,
-		// Token: 0x0400F5BD RID: 62909
+		// Token: 0x04003615 RID: 13845
 		SpecialDamageChange5,
-		// Token: 0x0400F5BE RID: 62910
+		// Token: 0x04003616 RID: 13846
 		SpecialDamageChange6,
-		// Token: 0x0400F5BF RID: 62911
+		// Token: 0x04003617 RID: 13847
 		SpecialDamageChange7,
-		// Token: 0x0400F5C0 RID: 62912
+		// Token: 0x04003618 RID: 13848
 		SpecialChange0 = 210,
-		// Token: 0x0400F5C1 RID: 62913
+		// Token: 0x04003619 RID: 13849
 		SpecialChange1,
-		// Token: 0x0400F5C2 RID: 62914
+		// Token: 0x0400361A RID: 13850
 		SpecialChange2,
-		// Token: 0x0400F5C3 RID: 62915
+		// Token: 0x0400361B RID: 13851
 		SpecialChange3,
-		// Token: 0x0400F5C4 RID: 62916
+		// Token: 0x0400361C RID: 13852
 		SpecialChange4,
-		// Token: 0x0400F5C5 RID: 62917
+		// Token: 0x0400361D RID: 13853
 		SpecialChange5,
-		// Token: 0x0400F5C6 RID: 62918
+		// Token: 0x0400361E RID: 13854
 		SpecialChange6,
-		// Token: 0x0400F5C7 RID: 62919
+		// Token: 0x0400361F RID: 13855
 		SpecialChange7,
-		// Token: 0x0400F5C8 RID: 62920
+		// Token: 0x04003620 RID: 13856
 		SpecialChange8,
-		// Token: 0x0400F5C9 RID: 62921
+		// Token: 0x04003621 RID: 13857
 		SpecialChange9,
-		// Token: 0x0400F5CA RID: 62922
+		// Token: 0x04003622 RID: 13858
 		AttackSpeed,
-		// Token: 0x0400F5CB RID: 62923
+		// Token: 0x04003623 RID: 13859
 		AttackSpeedChange,
-		// Token: 0x0400F5CC RID: 62924
+		// Token: 0x04003624 RID: 13860
 		AccumulatedDamage = 225,
-		// Token: 0x0400F5CD RID: 62925
+		// Token: 0x04003625 RID: 13861
 		SpecialDamageReduce1 = 230,
-		// Token: 0x0400F5CE RID: 62926
+		// Token: 0x04003626 RID: 13862
 		SpecialDamageReduce2,
-		// Token: 0x0400F5CF RID: 62927
+		// Token: 0x04003627 RID: 13863
 		SpecialDamageReduce3,
-		// Token: 0x0400F5D0 RID: 62928
+		// Token: 0x04003628 RID: 13864
 		SpecialDamageReduce4,
-		// Token: 0x0400F5D1 RID: 62929
+		// Token: 0x04003629 RID: 13865
 		SpecialDamageReduce5,
-		// Token: 0x0400F5D2 RID: 62930
+		// Token: 0x0400362A RID: 13866
 		AttributeType_Max = 255
 	}
 }

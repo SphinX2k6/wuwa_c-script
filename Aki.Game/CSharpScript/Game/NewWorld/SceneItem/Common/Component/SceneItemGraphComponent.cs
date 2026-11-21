@@ -13,12 +13,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 {
-	// Token: 0x0200721C RID: 29212
+	// Token: 0x020062D1 RID: 25297
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneItemGraphComponent : EntityComponent, ISceneItemGraph
 	{
-		// Token: 0x0604783E RID: 292926 RVA: 0x0123C1B4 File Offset: 0x0123A3B4
+		// Token: 0x0603D169 RID: 250217 RVA: 0x01195824 File Offset: 0x01193A24
 		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
@@ -53,28 +53,28 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return true;
 		}
 
-		// Token: 0x0604783F RID: 292927 RVA: 0x0123C298 File Offset: 0x0123A498
+		// Token: 0x0603D16A RID: 250218 RVA: 0x01195908 File Offset: 0x01193B08
 		protected override bool OnStart()
 		{
 			SceneItemGraphController.Instance.Register(base.Entity.Id, this);
 			return true;
 		}
 
-		// Token: 0x06047840 RID: 292928 RVA: 0x0123C2B1 File Offset: 0x0123A4B1
+		// Token: 0x0603D16B RID: 250219 RVA: 0x01195921 File Offset: 0x01193B21
 		protected override bool OnEnd()
 		{
 			SceneItemGraphController.Instance.Unregister(base.Entity.Id);
 			return true;
 		}
 
-		// Token: 0x06047841 RID: 292929 RVA: 0x0123C2C9 File Offset: 0x0123A4C9
+		// Token: 0x0603D16C RID: 250220 RVA: 0x01195939 File Offset: 0x01193B39
 		protected override bool OnClear()
 		{
 			this.InternalGraph = null;
 			return true;
 		}
 
-		// Token: 0x06047842 RID: 292930 RVA: 0x0123C2D4 File Offset: 0x0123A4D4
+		// Token: 0x0603D16D RID: 250221 RVA: 0x01195944 File Offset: 0x01193B44
 		public void DebugDraw(int debugLevel)
 		{
 			if (this.InternalGraph == null)
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			}
 		}
 
-		// Token: 0x06047843 RID: 292931 RVA: 0x0123C478 File Offset: 0x0123A678
+		// Token: 0x0603D16E RID: 250222 RVA: 0x01195AE8 File Offset: 0x01193CE8
 		public int? GetNodeIdAtLocation(Vector location, double radius)
 		{
 			Graph<Vector> internalGraph = this.InternalGraph;
@@ -123,7 +123,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return internalGraph.GetNodeIdAtLocation(location, radius);
 		}
 
-		// Token: 0x06047844 RID: 292932 RVA: 0x0123C4A0 File Offset: 0x0123A6A0
+		// Token: 0x0603D16F RID: 250223 RVA: 0x01195B10 File Offset: 0x01193D10
 		[NullableContext(0)]
 		public ValueTuple<int, int>? GetCurrentEdge([Nullable(1)] Vector location)
 		{
@@ -135,14 +135,14 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return internalGraph.GetCurrentEdge(location);
 		}
 
-		// Token: 0x06047845 RID: 292933 RVA: 0x0123C4C7 File Offset: 0x0123A6C7
+		// Token: 0x0603D170 RID: 250224 RVA: 0x01195B37 File Offset: 0x01193D37
 		public List<int> GetNeighborNodeIds(int nodeId)
 		{
 			Graph<Vector> internalGraph = this.InternalGraph;
 			return ((internalGraph != null) ? internalGraph.GetNeighborNodeIds(nodeId) : null) ?? new List<int>();
 		}
 
-		// Token: 0x06047846 RID: 292934 RVA: 0x0123C4E5 File Offset: 0x0123A6E5
+		// Token: 0x0603D171 RID: 250225 RVA: 0x01195B55 File Offset: 0x01193D55
 		[NullableContext(2)]
 		public Vector GetNodeLocation(int nodeId)
 		{
@@ -154,7 +154,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return internalGraph.GetNodeLocation(nodeId);
 		}
 
-		// Token: 0x06047847 RID: 292935 RVA: 0x0123C4FC File Offset: 0x0123A6FC
+		// Token: 0x0603D172 RID: 250226 RVA: 0x01195B6C File Offset: 0x01193D6C
 		public double? GetNearestNodeDistSquared(Vector location)
 		{
 			Graph<Vector> internalGraph = this.InternalGraph;
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return internalGraph.GetNearestNodeDistSquared(location);
 		}
 
-		// Token: 0x06047848 RID: 292936 RVA: 0x0123C523 File Offset: 0x0123A723
+		// Token: 0x0603D173 RID: 250227 RVA: 0x01195B93 File Offset: 0x01193D93
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -176,7 +176,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return this.InternalGraph;
 		}
 
-		// Token: 0x06047849 RID: 292937 RVA: 0x0123C52C File Offset: 0x0123A72C
+		// Token: 0x0603D174 RID: 250228 RVA: 0x01195B9C File Offset: 0x01193D9C
 		private static Graph<Vector> CreateGraphFromConfig(IGraph3dBase config, [Nullable(2)] Aki.TDConfigMgr.Action.ITransform entityTransform, bool directed = false)
 		{
 			Graph<Vector> graph = new Graph<Vector>(GraphDefine.vector3Space, directed);
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return graph;
 		}
 
-		// Token: 0x0604784A RID: 292938 RVA: 0x0123C654 File Offset: 0x0123A854
+		// Token: 0x0603D175 RID: 250229 RVA: 0x01195CC4 File Offset: 0x01193EC4
 		private static Transform CreateTransformFromConfig([Nullable(2)] Aki.TDConfigMgr.Action.ITransform configTransform)
 		{
 			Transform transform = Transform.Create();
@@ -222,29 +222,55 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Common.Component
 			return transform;
 		}
 
-		// Token: 0x0604784B RID: 292939 RVA: 0x0123C7A4 File Offset: 0x0123A9A4
+		// Token: 0x0603D176 RID: 250230 RVA: 0x01195E14 File Offset: 0x01194014
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
 			{
 				return false;
 			}
-			SceneItemGraphComponent sceneItemGraphComponent = (SceneItemGraphComponent)componentTemplate;
-			if (base.CanResetComponentProperty("InternalGraph"))
+			if (((SceneItemGraphComponent)componentTemplate).InternalGraph == null)
 			{
-				if (sceneItemGraphComponent.InternalGraph == null)
-				{
-					this.InternalGraph = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Graph<Vector>>(this.InternalGraph), "InternalGraph"))
-				{
-					return false;
-				}
+				this.InternalGraph = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.InternalGraph), "InternalGraph"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x040259FD RID: 154109
+		// Token: 0x170073A8 RID: 29608
+		// (get) Token: 0x0603D177 RID: 250231 RVA: 0x01195E52 File Offset: 0x01194052
+		public override bool NeedClearInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170073A9 RID: 29609
+		// (get) Token: 0x0603D178 RID: 250232 RVA: 0x01195E55 File Offset: 0x01194055
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170073AA RID: 29610
+		// (get) Token: 0x0603D179 RID: 250233 RVA: 0x01195E58 File Offset: 0x01194058
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0402066C RID: 132716
 		[Nullable(new byte[]
 		{
 			2,

@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02001707 RID: 5895
+// Token: 0x02000BBF RID: 3007
 public class BirthdayDefine
 {
-	// Token: 0x02007CC1 RID: 31937
+	// Token: 0x02006E46 RID: 28230
 	public enum ETriggerType
 	{
-		// Token: 0x04028EC6 RID: 167622
+		// Token: 0x040241EF RID: 147951
 		Natural,
-		// Token: 0x04028EC7 RID: 167623
+		// Token: 0x040241F0 RID: 147952
 		Item,
-		// Token: 0x04028EC8 RID: 167624
+		// Token: 0x040241F1 RID: 147953
 		ReSelect
 	}
 }

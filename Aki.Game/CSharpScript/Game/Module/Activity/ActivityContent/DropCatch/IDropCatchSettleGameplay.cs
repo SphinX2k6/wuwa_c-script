@@ -2,13 +2,13 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 {
-	// Token: 0x020066AB RID: 26283
+	// Token: 0x020055FB RID: 22011
 	public class IDropCatchSettleGameplay
 	{
-		// Token: 0x040223F1 RID: 140273
+		// Token: 0x0401CC4A RID: 117834
 		public int GameplayId;
 
-		// Token: 0x040223F2 RID: 140274
+		// Token: 0x0401CC4B RID: 117835
 		public float Score;
 	}
 }

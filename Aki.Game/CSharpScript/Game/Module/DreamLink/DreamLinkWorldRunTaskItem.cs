@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.DreamLink
 {
-	// Token: 0x02005AB7 RID: 23223
+	// Token: 0x02004A93 RID: 19091
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.DreamLink
 	})]
 	public class DreamLinkWorldRunTaskItem : GridProxyAbstract<DreamLinkRunTaskData>
 	{
-		// Token: 0x0603AD21 RID: 240929 RVA: 0x00E03C6C File Offset: 0x00E01E6C
+		// Token: 0x0602FC6D RID: 195693 RVA: 0x00D54234 File Offset: 0x00D52434
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 11;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603AD22 RID: 240930 RVA: 0x00E03E40 File Offset: 0x00E02040
+		// Token: 0x0602FC6E RID: 195694 RVA: 0x00D54408 File Offset: 0x00D52608
 		protected override void OnStart()
 		{
 			this.RewardScrollView = new GenericScrollViewNew<ActivitySmallItemGrid, IItemGridData>(base.GetScrollViewWithScrollbar(6), new Func<ActivitySmallItemGrid>(this.InitGridItem), null, false, null);
@@ -64,13 +64,13 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.JumpButton.SetFunction(new Action<int>(this.OnClickJump));
 		}
 
-		// Token: 0x0603AD23 RID: 240931 RVA: 0x00E03EA4 File Offset: 0x00E020A4
+		// Token: 0x0602FC6F RID: 195695 RVA: 0x00D5446C File Offset: 0x00D5266C
 		private ActivitySmallItemGrid InitGridItem()
 		{
 			return new ActivitySmallItemGrid();
 		}
 
-		// Token: 0x0603AD24 RID: 240932 RVA: 0x00E03EAC File Offset: 0x00E020AC
+		// Token: 0x0602FC70 RID: 195696 RVA: 0x00D54474 File Offset: 0x00D52674
 		public override void Refresh(DreamLinkRunTaskData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.RefreshRedDot();
 		}
 
-		// Token: 0x0603AD25 RID: 240933 RVA: 0x00E03FE0 File Offset: 0x00E021E0
+		// Token: 0x0602FC71 RID: 195697 RVA: 0x00D545A8 File Offset: 0x00D527A8
 		public void RefreshLockText()
 		{
 			if (this.Data == null || this.Data.Status != EDreamLinkRunTaskState.Lock)
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			base.GetText(5).SetText(this.Data.GetLockTxt(), true);
 		}
 
-		// Token: 0x0603AD26 RID: 240934 RVA: 0x00E0401C File Offset: 0x00E0221C
+		// Token: 0x0602FC72 RID: 195698 RVA: 0x00D545E4 File Offset: 0x00D527E4
 		private void RefreshRedDot()
 		{
 			DreamLinkData currentActivityData = DreamLinkController.Instance.GetCurrentActivityData();
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			}
 		}
 
-		// Token: 0x0603AD27 RID: 240935 RVA: 0x00E04062 File Offset: 0x00E02262
+		// Token: 0x0602FC73 RID: 195699 RVA: 0x00D5462A File Offset: 0x00D5282A
 		private void OnClickJump(int _)
 		{
 			DreamLinkData currentActivityData = DreamLinkController.Instance.GetCurrentActivityData();
@@ -142,17 +142,17 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.Data.JumpDelegate();
 		}
 
-		// Token: 0x0603AD28 RID: 240936 RVA: 0x00E04096 File Offset: 0x00E02296
+		// Token: 0x0602FC74 RID: 195700 RVA: 0x00D5465E File Offset: 0x00D5285E
 		private void OnClickGetButton()
 		{
 			this.Data.ReceiveDelegate();
 		}
 
-		// Token: 0x0401EB20 RID: 125728
+		// Token: 0x040195C7 RID: 103879
 		[Nullable(2)]
 		protected DreamLinkRunTaskData Data;
 
-		// Token: 0x0401EB21 RID: 125729
+		// Token: 0x040195C8 RID: 103880
 		[Nullable(new byte[]
 		{
 			2,
@@ -161,48 +161,48 @@ namespace CSharpScript.Game.Module.DreamLink
 		})]
 		private GenericScrollViewNew<ActivitySmallItemGrid, IItemGridData> RewardScrollView;
 
-		// Token: 0x0401EB22 RID: 125730
+		// Token: 0x040195C9 RID: 103881
 		[Nullable(2)]
 		private ButtonItem JumpButton;
 
-		// Token: 0x0401EB23 RID: 125731
+		// Token: 0x040195CA RID: 103882
 		private bool NeedTick;
 
-		// Token: 0x0200BD09 RID: 48393
+		// Token: 0x0200A711 RID: 42769
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x04039020 RID: 233504
+			// Token: 0x040339EA RID: 211434
 			public const int JumpBtn = 0;
 
-			// Token: 0x04039021 RID: 233505
+			// Token: 0x040339EB RID: 211435
 			public const int GetBtn = 1;
 
-			// Token: 0x04039022 RID: 233506
+			// Token: 0x040339EC RID: 211436
 			public const int PanelDone = 2;
 
-			// Token: 0x04039023 RID: 233507
+			// Token: 0x040339ED RID: 211437
 			public const int TxtName = 3;
 
-			// Token: 0x04039024 RID: 233508
+			// Token: 0x040339EE RID: 211438
 			public const int PanelLock = 4;
 
-			// Token: 0x04039025 RID: 233509
+			// Token: 0x040339EF RID: 211439
 			public const int TxtLock = 5;
 
-			// Token: 0x04039026 RID: 233510
+			// Token: 0x040339F0 RID: 211440
 			public const int RewardScroll = 6;
 
-			// Token: 0x04039027 RID: 233511
+			// Token: 0x040339F1 RID: 211441
 			public const int TxtGoing = 7;
 
-			// Token: 0x04039028 RID: 233512
+			// Token: 0x040339F2 RID: 211442
 			public const int PanelTime = 8;
 
-			// Token: 0x04039029 RID: 233513
+			// Token: 0x040339F3 RID: 211443
 			public const int TxtTime = 9;
 
-			// Token: 0x0403902A RID: 233514
+			// Token: 0x040339F4 RID: 211444
 			public const int RedDot = 10;
 		}
 	}

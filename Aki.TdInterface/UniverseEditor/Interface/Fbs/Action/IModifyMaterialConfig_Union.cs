@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006AC1 RID: 27329
+	// Token: 0x020071F5 RID: 29173
 	public enum IModifyMaterialConfig_Union : byte
 	{
-		// Token: 0x04011302 RID: 70402
+		// Token: 0x04012211 RID: 74257
 		NONE,
-		// Token: 0x04011303 RID: 70403
+		// Token: 0x04012212 RID: 74258
 		IModifyMaterialConfig,
-		// Token: 0x04011304 RID: 70404
+		// Token: 0x04012213 RID: 74259
 		IChangeActorMaterialData,
-		// Token: 0x04011305 RID: 70405
+		// Token: 0x04012214 RID: 74260
 		IChangeActorMPC
 	}
 }

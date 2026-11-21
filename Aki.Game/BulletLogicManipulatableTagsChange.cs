@@ -4,7 +4,7 @@ using CSharpScript.Game.NewWorld.Common.Component;
 using CSharpScript.Game.NewWorld.SceneItem;
 using UnrealEngine;
 
-// Token: 0x02002DD4 RID: 11732
+// Token: 0x0200232E RID: 9006
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,13 +14,13 @@ using UnrealEngine;
 })]
 public class BulletLogicManipulatableTagsChange : BulletLogicController<LogicDataManipulatableTagsChange, object>
 {
-	// Token: 0x06018A2D RID: 100909 RVA: 0x0064D978 File Offset: 0x0064BB78
+	// Token: 0x060162D5 RID: 90837 RVA: 0x0067375C File Offset: 0x0067195C
 	public BulletLogicManipulatableTagsChange(LogicDataManipulatableTagsChange bulletLogicBase, Entity bullet) : base(bulletLogicBase, bullet)
 	{
 		this.Parameter = bulletLogicBase;
 	}
 
-	// Token: 0x06018A2E RID: 100910 RVA: 0x0064D98C File Offset: 0x0064BB8C
+	// Token: 0x060162D6 RID: 90838 RVA: 0x00673770 File Offset: 0x00671970
 	[NullableContext(2)]
 	public override void BulletLogicActionOnHitObstacles(object param = null)
 	{
@@ -56,7 +56,7 @@ public class BulletLogicManipulatableTagsChange : BulletLogicController<LogicDat
 		}
 	}
 
-	// Token: 0x06018A2F RID: 100911 RVA: 0x0064DA80 File Offset: 0x0064BC80
+	// Token: 0x060162D7 RID: 90839 RVA: 0x00673864 File Offset: 0x00671A64
 	public bool CheckCondition(Entity victim)
 	{
 		LogicDataManipulatableTagsChange parameter = this.Parameter;
@@ -88,6 +88,6 @@ public class BulletLogicManipulatableTagsChange : BulletLogicController<LogicDat
 		return true;
 	}
 
-	// Token: 0x0400B776 RID: 46966
+	// Token: 0x0400BAF1 RID: 47857
 	public readonly LogicDataManipulatableTagsChange Parameter;
 }

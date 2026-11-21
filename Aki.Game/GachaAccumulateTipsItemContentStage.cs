@@ -6,12 +6,12 @@ using CSharpScript.Game.Module.ItemReward;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001C72 RID: 7282
+// Token: 0x02001131 RID: 4401
 [NullableContext(1)]
 [Nullable(0)]
 public class GachaAccumulateTipsItemContentStage : GachaAccumulateTipsContentBase
 {
-	// Token: 0x0600DB6F RID: 56175 RVA: 0x003308FC File Offset: 0x0032EAFC
+	// Token: 0x0600AF85 RID: 44933 RVA: 0x0033BD48 File Offset: 0x00339F48
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -44,19 +44,19 @@ public class GachaAccumulateTipsItemContentStage : GachaAccumulateTipsContentBas
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600DB70 RID: 56176 RVA: 0x00330A68 File Offset: 0x0032EC68
+	// Token: 0x0600AF86 RID: 44934 RVA: 0x0033BEB4 File Offset: 0x0033A0B4
 	protected override void OnStart()
 	{
 		this.UiSequencePlayer = new UiSequencePlayer(this.RootItem);
 	}
 
-	// Token: 0x0600DB71 RID: 56177 RVA: 0x00330A7B File Offset: 0x0032EC7B
+	// Token: 0x0600AF87 RID: 44935 RVA: 0x0033BEC7 File Offset: 0x0033A0C7
 	private void OnClickEntry()
 	{
 		UiManager.Instance.OpenView(EUiViewName.GachaAccumulateBonusView, this.AccumulateId, null);
 	}
 
-	// Token: 0x0600DB72 RID: 56178 RVA: 0x00330A98 File Offset: 0x0032EC98
+	// Token: 0x0600AF88 RID: 44936 RVA: 0x0033BEE4 File Offset: 0x0033A0E4
 	public override void RefreshView(int accumulateId, bool needAnimate = true)
 	{
 		this.AccumulateId = accumulateId;
@@ -82,7 +82,7 @@ public class GachaAccumulateTipsItemContentStage : GachaAccumulateTipsContentBas
 		}
 	}
 
-	// Token: 0x0600DB73 RID: 56179 RVA: 0x00330B0C File Offset: 0x0032ED0C
+	// Token: 0x0600AF89 RID: 44937 RVA: 0x0033BF58 File Offset: 0x0033A158
 	private void RefreshNextRewardIconAndCount(GachaAccumulateData accumulateData, bool allDone, bool allClaimed)
 	{
 		RewardItemData tipsShowReward = accumulateData.GetTipsShowReward();
@@ -103,7 +103,7 @@ public class GachaAccumulateTipsItemContentStage : GachaAccumulateTipsContentBas
 		}
 	}
 
-	// Token: 0x0600DB74 RID: 56180 RVA: 0x00330BA4 File Offset: 0x0032EDA4
+	// Token: 0x0600AF8A RID: 44938 RVA: 0x0033BFF0 File Offset: 0x0033A1F0
 	private void RefreshDescText(GachaAccumulateData accumulateData, bool allDone)
 	{
 		base.GetText(1).SetUIActive(true);
@@ -112,7 +112,7 @@ public class GachaAccumulateTipsItemContentStage : GachaAccumulateTipsContentBas
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(1), textStringId, new <>z__ReadOnlySingleElementList<object>(nextRewardNeedGachaNum.ToString()));
 	}
 
-	// Token: 0x0600DB75 RID: 56181 RVA: 0x00330BF4 File Offset: 0x0032EDF4
+	// Token: 0x0600AF8B RID: 44939 RVA: 0x0033C040 File Offset: 0x0033A240
 	private void RefreshUnTakeTips(GachaAccumulateData accumulateData)
 	{
 		int unTakeRewardNum = accumulateData.GetUnTakeRewardNum();
@@ -123,32 +123,32 @@ public class GachaAccumulateTipsItemContentStage : GachaAccumulateTipsContentBas
 		}
 	}
 
-	// Token: 0x0400649F RID: 25759
+	// Token: 0x04006571 RID: 25969
 	[Nullable(2)]
 	private UiSequencePlayer UiSequencePlayer;
 
-	// Token: 0x040064A0 RID: 25760
+	// Token: 0x04006572 RID: 25970
 	private int AccumulateId;
 
-	// Token: 0x02008229 RID: 33321
+	// Token: 0x020073B2 RID: 29618
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402A78F RID: 173967
+		// Token: 0x04025AB5 RID: 154293
 		ButtonClick,
-		// Token: 0x0402A790 RID: 173968
+		// Token: 0x04025AB6 RID: 154294
 		TextDescription,
-		// Token: 0x0402A791 RID: 173969
+		// Token: 0x04025AB7 RID: 154295
 		TextureIcon,
-		// Token: 0x0402A792 RID: 173970
+		// Token: 0x04025AB8 RID: 154296
 		PanelCheck,
-		// Token: 0x0402A793 RID: 173971
+		// Token: 0x04025AB9 RID: 154297
 		PanelCount,
-		// Token: 0x0402A794 RID: 173972
+		// Token: 0x04025ABA RID: 154298
 		TextCount,
-		// Token: 0x0402A795 RID: 173973
+		// Token: 0x04025ABB RID: 154299
 		PanelTips,
-		// Token: 0x0402A796 RID: 173974
+		// Token: 0x04025ABC RID: 154300
 		TextTips
 	}
 }

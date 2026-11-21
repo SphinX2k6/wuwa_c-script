@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Util
 {
-	// Token: 0x020048DB RID: 18651
+	// Token: 0x02003852 RID: 14418
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LoopAutoScrollView<TItem, [Nullable(2)] TData> where TItem : class, ILoopAutoScrollItem<TData>
 	{
-		// Token: 0x06030C15 RID: 199701 RVA: 0x00B52074 File Offset: 0x00B50274
+		// Token: 0x06025742 RID: 153410 RVA: 0x00A8CEE4 File Offset: 0x00A8B0E4
 		public LoopAutoScrollView(UUIItem viewport, UUIItem templateItem, UUIItem parent, Func<TItem> createFunction, bool isHorizontal = true)
 		{
 			this.Viewport = viewport;
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.Util
 			this.Horizontal = isHorizontal;
 		}
 
-		// Token: 0x06030C16 RID: 199702 RVA: 0x00B520F0 File Offset: 0x00B502F0
+		// Token: 0x06025743 RID: 153411 RVA: 0x00A8CF60 File Offset: 0x00A8B160
 		public UniTask ReloadItems(IReadOnlyList<TData> data)
 		{
 			LoopAutoScrollView<TItem, TData>.<ReloadItems>d__17 <ReloadItems>d__;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.Util
 			return <ReloadItems>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06030C17 RID: 199703 RVA: 0x00B5213B File Offset: 0x00B5033B
+		// Token: 0x06025744 RID: 153412 RVA: 0x00A8CFAB File Offset: 0x00A8B1AB
 		public void StartAutoScroll(float speed)
 		{
 			this.Speed = speed;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Util
 			this.TickId = TickSystem.Instance.Add(new Action<float>(this.OnTick), "LoopAutoScrollView", ETickingGroup.TG_PrePhysics, true, 0, true).Id;
 		}
 
-		// Token: 0x06030C18 RID: 199704 RVA: 0x00B5217B File Offset: 0x00B5037B
+		// Token: 0x06025745 RID: 153413 RVA: 0x00A8CFEB File Offset: 0x00A8B1EB
 		public void StopAutoScroll()
 		{
 			this.IsRunning = false;
@@ -55,13 +55,13 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x06030C19 RID: 199705 RVA: 0x00B521A5 File Offset: 0x00B503A5
+		// Token: 0x06025746 RID: 153414 RVA: 0x00A8D015 File Offset: 0x00A8B215
 		private int CalcTotalItemCount()
 		{
 			return (int)Math.Ceiling((double)(this.Horizontal ? this.Viewport.GetWidth() : this.Viewport.GetHeight()) / (double)this.ItemLength) + this.BufferCount;
 		}
 
-		// Token: 0x06030C1A RID: 199706 RVA: 0x00B521E0 File Offset: 0x00B503E0
+		// Token: 0x06025747 RID: 153415 RVA: 0x00A8D050 File Offset: 0x00A8B250
 		private void OnTick(float deltaTime)
 		{
 			if (!this.IsRunning || this.Speed == 0f || this.ActiveItems.Count <= 0)
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.Util
 			}
 		}
 
-		// Token: 0x06030C1B RID: 199707 RVA: 0x00B52310 File Offset: 0x00B50510
+		// Token: 0x06025748 RID: 153416 RVA: 0x00A8D180 File Offset: 0x00A8B380
 		private void Recycle(bool isForward)
 		{
 			if (this.TotalItemCount <= 0 || this.ActiveItems.Count <= 0 || this.Data.Count <= 0)
@@ -151,52 +151,52 @@ namespace CSharpScript.Game.Module.Util
 			titem2.Refresh(this.Data[index]);
 		}
 
-		// Token: 0x0401A2E0 RID: 107232
+		// Token: 0x04014B53 RID: 84819
 		protected bool Horizontal = true;
 
-		// Token: 0x0401A2E1 RID: 107233
+		// Token: 0x04014B54 RID: 84820
 		private readonly UUIItem Viewport;
 
-		// Token: 0x0401A2E2 RID: 107234
+		// Token: 0x04014B55 RID: 84821
 		private readonly UUIItem TemplateItem;
 
-		// Token: 0x0401A2E3 RID: 107235
+		// Token: 0x04014B56 RID: 84822
 		private IReadOnlyList<TData> Data = Array.Empty<TData>();
 
-		// Token: 0x0401A2E4 RID: 107236
+		// Token: 0x04014B57 RID: 84823
 		private readonly List<TItem> Items = new List<TItem>();
 
-		// Token: 0x0401A2E5 RID: 107237
+		// Token: 0x04014B58 RID: 84824
 		private readonly List<TItem> ActiveItems = new List<TItem>();
 
-		// Token: 0x0401A2E6 RID: 107238
+		// Token: 0x04014B59 RID: 84825
 		private float Speed;
 
-		// Token: 0x0401A2E7 RID: 107239
+		// Token: 0x04014B5A RID: 84826
 		private readonly int BufferCount = 2;
 
-		// Token: 0x0401A2E8 RID: 107240
+		// Token: 0x04014B5B RID: 84827
 		private bool IsRunning;
 
-		// Token: 0x0401A2E9 RID: 107241
+		// Token: 0x04014B5C RID: 84828
 		protected float ItemLength;
 
-		// Token: 0x0401A2EA RID: 107242
+		// Token: 0x04014B5D RID: 84829
 		private int WindowStartIndex;
 
-		// Token: 0x0401A2EB RID: 107243
+		// Token: 0x04014B5E RID: 84830
 		private float AccumulatedOffset;
 
-		// Token: 0x0401A2EC RID: 107244
+		// Token: 0x04014B5F RID: 84831
 		private int TickId = -1;
 
-		// Token: 0x0401A2ED RID: 107245
+		// Token: 0x04014B60 RID: 84832
 		private readonly Func<TItem> CreateFunction;
 
-		// Token: 0x0401A2EE RID: 107246
+		// Token: 0x04014B61 RID: 84833
 		private int TotalItemCount;
 
-		// Token: 0x0401A2EF RID: 107247
+		// Token: 0x04014B62 RID: 84834
 		private readonly UUIItem Parent;
 	}
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020007E5 RID: 2021
+	// Token: 0x02000801 RID: 2049
 	public class ConfigResonantChainByGroupIdAndGroupIndex : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002F70 RID: 12144 RVA: 0x00165567 File Offset: 0x00163767
+		// Token: 0x06003018 RID: 12312 RVA: 0x0016C84F File Offset: 0x0016AA4F
 		static ConfigResonantChainByGroupIdAndGroupIndex()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigResonantChainByGroupIdAndGroupIndex.CreateStaticDefaultValue), new Action(ConfigResonantChainByGroupIdAndGroupIndex.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002F71 RID: 12145 RVA: 0x00165588 File Offset: 0x00163788
+		// Token: 0x06003019 RID: 12313 RVA: 0x0016C870 File Offset: 0x0016AA70
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigResonantChainByGroupIdAndGroupIndex.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002F72 RID: 12146 RVA: 0x00165607 File Offset: 0x00163807
+		// Token: 0x0600301A RID: 12314 RVA: 0x0016C8EF File Offset: 0x0016AAEF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigResonantChainByGroupIdAndGroupIndex.LogPair = null;
 			ConfigResonantChainByGroupIdAndGroupIndex.HandleId = 0;
 		}
 
-		// Token: 0x06002F73 RID: 12147 RVA: 0x00165615 File Offset: 0x00163815
+		// Token: 0x0600301B RID: 12315 RVA: 0x0016C8FD File Offset: 0x0016AAFD
 		public static void Init()
 		{
 			ConfigResonantChainByGroupIdAndGroupIndex.HandleId = ConfigCommon.InitDataStatement(ConfigResonantChainByGroupIdAndGroupIndex.HandleId, "db_resonate_chain.db", "select BinData from `ResonantChain` where GroupId=? AND GroupIndex=?");
 		}
 
-		// Token: 0x06002F74 RID: 12148 RVA: 0x00165630 File Offset: 0x00163830
+		// Token: 0x0600301C RID: 12316 RVA: 0x0016C918 File Offset: 0x0016AB18
 		public static ResonantChain? GetConfig(int p0GroupId, int p1GroupIndex, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigResonantChainByGroupIdAndGroupIndex.HandleId, ConfigResonantChainByGroupIdAndGroupIndex.LogPair))
@@ -93,22 +93,22 @@ namespace Aki.Config
 			return new ResonantChain?(rootAsResonantChain);
 		}
 
-		// Token: 0x04003729 RID: 14121
+		// Token: 0x040037ED RID: 14317
 		private const string DB = "db_resonate_chain.db";
 
-		// Token: 0x0400372A RID: 14122
+		// Token: 0x040037EE RID: 14318
 		private const string FILE = "g.共鸣链.xlsx";
 
-		// Token: 0x0400372B RID: 14123
+		// Token: 0x040037EF RID: 14319
 		private const string TABLE = "ResonantChain";
 
-		// Token: 0x0400372C RID: 14124
+		// Token: 0x040037F0 RID: 14320
 		private const string COMMAND = "select BinData from `ResonantChain` where GroupId=? AND GroupIndex=?";
 
-		// Token: 0x0400372D RID: 14125
+		// Token: 0x040037F1 RID: 14321
 		private const string KEY_PREFIX = "ResonantChainByGroupIdAndGroupIndex";
 
-		// Token: 0x0400372E RID: 14126
+		// Token: 0x040037F2 RID: 14322
 		[Nullable(new byte[]
 		{
 			2,
@@ -118,7 +118,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400372F RID: 14127
+		// Token: 0x040037F3 RID: 14323
 		private static int HandleId;
 	}
 }

@@ -11,7 +11,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PayShop.MotorSkinTab
 {
-	// Token: 0x02005359 RID: 21337
+	// Token: 0x0200433C RID: 17212
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.PayShop.MotorSkinTab
 	})]
 	internal class SkinItemContent : GridProxyAbstract<SkinItemContentData>
 	{
-		// Token: 0x06036833 RID: 223283 RVA: 0x00CE86D8 File Offset: 0x00CE68D8
+		// Token: 0x0602B779 RID: 178041 RVA: 0x00C37560 File Offset: 0x00C35760
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -50,7 +50,7 @@ namespace CSharpScript.Game.Module.PayShop.MotorSkinTab
 			};
 		}
 
-		// Token: 0x06036834 RID: 223284 RVA: 0x00CE88A8 File Offset: 0x00CE6AA8
+		// Token: 0x0602B77A RID: 178042 RVA: 0x00C37730 File Offset: 0x00C35930
 		protected override void OnStart()
 		{
 			this.RewardLayout = new GenericLayout<RewardItemGrid, IRewardItemGridData>(base.GetHorizontalLayout(8), new Func<RewardItemGrid>(this.OnCreateRewardItem), null, false, true);
@@ -69,13 +69,13 @@ namespace CSharpScript.Game.Module.PayShop.MotorSkinTab
 			});
 		}
 
-		// Token: 0x06036835 RID: 223285 RVA: 0x00CE890C File Offset: 0x00CE6B0C
+		// Token: 0x0602B77B RID: 178043 RVA: 0x00C37794 File Offset: 0x00C35994
 		private RewardItemGrid OnCreateRewardItem()
 		{
 			return new RewardItemGrid();
 		}
 
-		// Token: 0x06036836 RID: 223286 RVA: 0x00CE8914 File Offset: 0x00CE6B14
+		// Token: 0x0602B77C RID: 178044 RVA: 0x00C3779C File Offset: 0x00C3599C
 		private void OnClickBuyButton()
 		{
 			if (this.CurrentShopMotorSkinData == null)
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.PayShop.MotorSkinTab
 			UiManager.Instance.OpenView(EUiViewName.MotorSkinBuyDetailView, motorSkinBuyDetailViewData, null);
 		}
 
-		// Token: 0x06036837 RID: 223287 RVA: 0x00CE899C File Offset: 0x00CE6B9C
+		// Token: 0x0602B77D RID: 178045 RVA: 0x00C37824 File Offset: 0x00C35A24
 		public override void Refresh(SkinItemContentData data, bool isSelected, int gridIndex)
 		{
 			ShopMotorSkinData shopMotorSkinData = data.ShopMotorSkinData;
@@ -142,7 +142,7 @@ namespace CSharpScript.Game.Module.PayShop.MotorSkinTab
 			rewardLayout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x06036838 RID: 223288 RVA: 0x00CE8B04 File Offset: 0x00CE6D04
+		// Token: 0x0602B77E RID: 178046 RVA: 0x00C3798C File Offset: 0x00C35B8C
 		private void RefreshName(MotorSkinShow config)
 		{
 			UUIText text = base.GetText(7);
@@ -153,13 +153,13 @@ namespace CSharpScript.Game.Module.PayShop.MotorSkinTab
 			text.ShowTextNew(config.Name);
 		}
 
-		// Token: 0x06036839 RID: 223289 RVA: 0x00CE8B20 File Offset: 0x00CE6D20
+		// Token: 0x0602B77F RID: 178047 RVA: 0x00C379A8 File Offset: 0x00C35BA8
 		private void RefreshIcon(MotorSkinShow config)
 		{
 			base.SetTextureByPath(config.Icon, base.GetTexture(3), null, null);
 		}
 
-		// Token: 0x0603683A RID: 223290 RVA: 0x00CE8B4C File Offset: 0x00CE6D4C
+		// Token: 0x0602B780 RID: 178048 RVA: 0x00C379D4 File Offset: 0x00C35BD4
 		private void RefreshQuality(MotorSkinShow config)
 		{
 			int qualityId = config.QualityId;
@@ -178,7 +178,7 @@ namespace CSharpScript.Game.Module.PayShop.MotorSkinTab
 			sprite2.SetChangeColor(bUseChangeColor2, fcolor);
 		}
 
-		// Token: 0x0603683B RID: 223291 RVA: 0x00CE8C28 File Offset: 0x00CE6E28
+		// Token: 0x0602B781 RID: 178049 RVA: 0x00C37AB0 File Offset: 0x00C35CB0
 		private void RefreshPrice(ShopMotorSkinData data)
 		{
 			IPriceData priceData = data.GetPriceData();
@@ -203,7 +203,7 @@ namespace CSharpScript.Game.Module.PayShop.MotorSkinTab
 			text2.SetText(data.GetDirectPriceText(), true);
 		}
 
-		// Token: 0x0603683C RID: 223292 RVA: 0x00CE8C88 File Offset: 0x00CE6E88
+		// Token: 0x0602B782 RID: 178050 RVA: 0x00C37B10 File Offset: 0x00C35D10
 		private void RefreshTime(ShopMotorSkinData data)
 		{
 			if (data == null)
@@ -233,7 +233,7 @@ namespace CSharpScript.Game.Module.PayShop.MotorSkinTab
 			}
 		}
 
-		// Token: 0x0603683D RID: 223293 RVA: 0x00CE8D3C File Offset: 0x00CE6F3C
+		// Token: 0x0602B783 RID: 178051 RVA: 0x00C37BC4 File Offset: 0x00C35DC4
 		private void RefreshLimit(ShopMotorSkinData data)
 		{
 			UUIText text = base.GetText(14);
@@ -256,7 +256,7 @@ namespace CSharpScript.Game.Module.PayShop.MotorSkinTab
 			}
 		}
 
-		// Token: 0x0603683E RID: 223294 RVA: 0x00CE8D88 File Offset: 0x00CE6F88
+		// Token: 0x0602B784 RID: 178052 RVA: 0x00C37C10 File Offset: 0x00C35E10
 		private void RefreshGotState(ShopMotorSkinData data)
 		{
 			bool uiactive = !data.GetIfCanBuy();
@@ -268,14 +268,14 @@ namespace CSharpScript.Game.Module.PayShop.MotorSkinTab
 			item.SetUIActive(uiactive);
 		}
 
-		// Token: 0x0603683F RID: 223295 RVA: 0x00CE8DB4 File Offset: 0x00CE6FB4
+		// Token: 0x0602B785 RID: 178053 RVA: 0x00C37C3C File Offset: 0x00C35E3C
 		private void RefreshRedDotState(ShopMotorSkinData data)
 		{
 			bool ifNeedRemind = data.GetCurrentGoodsData().GetIfNeedRemind();
 			base.GetItem(16).SetUIActive(ifNeedRemind);
 		}
 
-		// Token: 0x0401CD49 RID: 118089
+		// Token: 0x040177DD RID: 96221
 		[Nullable(new byte[]
 		{
 			2,
@@ -284,59 +284,59 @@ namespace CSharpScript.Game.Module.PayShop.MotorSkinTab
 		})]
 		private GenericLayout<RewardItemGrid, IRewardItemGridData> RewardLayout;
 
-		// Token: 0x0401CD4A RID: 118090
+		// Token: 0x040177DE RID: 96222
 		[Nullable(2)]
 		private SkinItemContentData CurrentShopMotorSkinData;
 
-		// Token: 0x0401CD4B RID: 118091
+		// Token: 0x040177DF RID: 96223
 		[Nullable(2)]
 		private TotalTopUpPayAdditiveTagItem TotalTopUpTagItem;
 
-		// Token: 0x0401CD4C RID: 118092
+		// Token: 0x040177E0 RID: 96224
 		private int CurrentIndex;
 
-		// Token: 0x0401CD4D RID: 118093
+		// Token: 0x040177E1 RID: 96225
 		private int? CacheTotalTopUpData;
 
-		// Token: 0x0200B5C2 RID: 46530
+		// Token: 0x02009FFB RID: 40955
 		[NullableContext(0)]
 		private enum EShopMotorItemComponents
 		{
-			// Token: 0x040370E0 RID: 225504
+			// Token: 0x04031B38 RID: 203576
 			BtnClick,
-			// Token: 0x040370E1 RID: 225505
+			// Token: 0x04031B39 RID: 203577
 			TexQualityBgA,
-			// Token: 0x040370E2 RID: 225506
+			// Token: 0x04031B3A RID: 203578
 			TexIconType,
-			// Token: 0x040370E3 RID: 225507
+			// Token: 0x04031B3B RID: 203579
 			TexIcon,
-			// Token: 0x040370E4 RID: 225508
+			// Token: 0x04031B3C RID: 203580
 			TexQualityBgB,
-			// Token: 0x040370E5 RID: 225509
+			// Token: 0x04031B3D RID: 203581
 			SpriteModelCol01,
-			// Token: 0x040370E6 RID: 225510
+			// Token: 0x04031B3E RID: 203582
 			SpriteModelCol02,
-			// Token: 0x040370E7 RID: 225511
+			// Token: 0x04031B3F RID: 203583
 			TxtName,
-			// Token: 0x040370E8 RID: 225512
+			// Token: 0x04031B40 RID: 203584
 			PanelRewardList,
-			// Token: 0x040370E9 RID: 225513
+			// Token: 0x04031B41 RID: 203585
 			BtnReward01,
-			// Token: 0x040370EA RID: 225514
+			// Token: 0x04031B42 RID: 203586
 			TexQualityBar,
-			// Token: 0x040370EB RID: 225515
+			// Token: 0x04031B43 RID: 203587
 			TxtPrice,
-			// Token: 0x040370EC RID: 225516
+			// Token: 0x04031B44 RID: 203588
 			PanelDiscountTime,
-			// Token: 0x040370ED RID: 225517
+			// Token: 0x04031B45 RID: 203589
 			TxtTime,
-			// Token: 0x040370EE RID: 225518
+			// Token: 0x04031B46 RID: 203590
 			TxtLimit,
-			// Token: 0x040370EF RID: 225519
+			// Token: 0x04031B47 RID: 203591
 			PanelGot,
-			// Token: 0x040370F0 RID: 225520
+			// Token: 0x04031B48 RID: 203592
 			PanelRedDot,
-			// Token: 0x040370F1 RID: 225521
+			// Token: 0x04031B49 RID: 203593
 			PanelTag
 		}
 	}

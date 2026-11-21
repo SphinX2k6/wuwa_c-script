@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using UnrealEngine;
 
-// Token: 0x02002870 RID: 10352
+// Token: 0x02001DEB RID: 7659
 public class RoleFavorPowerInfoComponent : RoleFavorViewComponentBase
 {
-	// Token: 0x060154E7 RID: 87271 RVA: 0x00561A18 File Offset: 0x0055FC18
+	// Token: 0x06012EE5 RID: 77541 RVA: 0x0058C774 File Offset: 0x0058A974
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -21,7 +21,7 @@ public class RoleFavorPowerInfoComponent : RoleFavorViewComponentBase
 		};
 	}
 
-	// Token: 0x060154E8 RID: 87272 RVA: 0x00561AB4 File Offset: 0x0055FCB4
+	// Token: 0x06012EE6 RID: 77542 RVA: 0x0058C810 File Offset: 0x0058AA10
 	[NullableContext(1)]
 	protected override void OnSetData(RoleFavorContentDataBase contentData)
 	{
@@ -38,7 +38,7 @@ public class RoleFavorPowerInfoComponent : RoleFavorViewComponentBase
 		this.FavorRoleInfoConfig = new FavorRoleInfo?(((RoleFavorRoleInfoContentData)contentData).ConfigData);
 	}
 
-	// Token: 0x060154E9 RID: 87273 RVA: 0x00561B14 File Offset: 0x0055FD14
+	// Token: 0x06012EE7 RID: 77543 RVA: 0x0058C870 File Offset: 0x0058AA70
 	protected override void OnRefreshView()
 	{
 		if (this.FavorRoleInfoConfig == null)
@@ -65,7 +65,7 @@ public class RoleFavorPowerInfoComponent : RoleFavorViewComponentBase
 		text4.ShowTextNew(this.FavorRoleInfoConfig.Value.TalentCertification);
 	}
 
-	// Token: 0x060154EA RID: 87274 RVA: 0x00561BBC File Offset: 0x0055FDBC
+	// Token: 0x06012EE8 RID: 77544 RVA: 0x0058C918 File Offset: 0x0058AB18
 	protected override void OnStart()
 	{
 		UUIText text = base.GetText(3);
@@ -85,7 +85,7 @@ public class RoleFavorPowerInfoComponent : RoleFavorViewComponentBase
 		}
 	}
 
-	// Token: 0x060154EB RID: 87275 RVA: 0x00561C60 File Offset: 0x0055FE60
+	// Token: 0x06012EE9 RID: 77545 RVA: 0x0058C9BC File Offset: 0x0058ABBC
 	protected override void OnBeforeDestroy()
 	{
 		this.FavorRoleInfoConfig = null;
@@ -106,6 +106,6 @@ public class RoleFavorPowerInfoComponent : RoleFavorViewComponentBase
 		}
 	}
 
-	// Token: 0x04009F3C RID: 40764
+	// Token: 0x0400A325 RID: 41765
 	private FavorRoleInfo? FavorRoleInfoConfig;
 }

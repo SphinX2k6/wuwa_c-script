@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004942 RID: 18754
+	// Token: 0x020038B9 RID: 14521
 	public enum ENavigationDirectionType
 	{
-		// Token: 0x0401A444 RID: 107588
+		// Token: 0x04014CB7 RID: 85175
 		Down,
-		// Token: 0x0401A445 RID: 107589
+		// Token: 0x04014CB8 RID: 85176
 		Up,
-		// Token: 0x0401A446 RID: 107590
+		// Token: 0x04014CB9 RID: 85177
 		Left,
-		// Token: 0x0401A447 RID: 107591
+		// Token: 0x04014CBA RID: 85178
 		Right
 	}
 }

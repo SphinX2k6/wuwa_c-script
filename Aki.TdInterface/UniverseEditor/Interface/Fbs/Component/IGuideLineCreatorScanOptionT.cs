@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200535D RID: 21341
+	// Token: 0x020058E3 RID: 22755
 	public class IGuideLineCreatorScanOptionT
 	{
-		// Token: 0x17009CCE RID: 40142
-		// (get) Token: 0x06022EA2 RID: 143010 RVA: 0x004D5F8A File Offset: 0x004D418A
-		// (set) Token: 0x06022EA3 RID: 143011 RVA: 0x004D5F92 File Offset: 0x004D4192
+		// Token: 0x1700A506 RID: 42246
+		// (get) Token: 0x06024F56 RID: 151382 RVA: 0x00512E5E File Offset: 0x0051105E
+		// (set) Token: 0x06024F57 RID: 151383 RVA: 0x00512E66 File Offset: 0x00511066
 		public int ResponseRange { get; set; }
 
-		// Token: 0x06022EA4 RID: 143012 RVA: 0x004D5F9B File Offset: 0x004D419B
+		// Token: 0x06024F58 RID: 151384 RVA: 0x00512E6F File Offset: 0x0051106F
 		public IGuideLineCreatorScanOptionT()
 		{
 			this.ResponseRange = 0;

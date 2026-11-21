@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02001FE7 RID: 8167
+// Token: 0x020014BA RID: 5306
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class ItemExchangeConfig : ConfigBase
 {
-	// Token: 0x06010000 RID: 65536 RVA: 0x003E6340 File Offset: 0x003E4540
+	// Token: 0x0600D468 RID: 54376 RVA: 0x003F2940 File Offset: 0x003F0B40
 	public IReadOnlyList<ItemExchangeContent> GetExChangeConfigList(int itemId)
 	{
 		IReadOnlyList<ItemExchangeContent> configList = ConfigItemExchangeContentAll.GetConfigList(true);
@@ -28,20 +28,20 @@ public class ItemExchangeConfig : ConfigBase
 		return list;
 	}
 
-	// Token: 0x06010001 RID: 65537 RVA: 0x003E63C8 File Offset: 0x003E45C8
+	// Token: 0x0600D469 RID: 54377 RVA: 0x003F29C8 File Offset: 0x003F0BC8
 	public ItemExchangeContent? GetFirstExChangeConfigList(int itemId)
 	{
 		return ConfigItemExchangeContentByItemId.GetConfig(itemId, true);
 	}
 
-	// Token: 0x06010002 RID: 65538 RVA: 0x003E63D1 File Offset: 0x003E45D1
+	// Token: 0x0600D46A RID: 54378 RVA: 0x003F29D1 File Offset: 0x003F0BD1
 	public ItemExchangeLimit? GetItemExchangeLimit(int itemId)
 	{
 		return ConfigItemExchangeLimitByItemId.GetConfig(itemId, true);
 	}
 
-	// Token: 0x17001363 RID: 4963
-	// (get) Token: 0x06010003 RID: 65539 RVA: 0x003E63DA File Offset: 0x003E45DA
+	// Token: 0x17001390 RID: 5008
+	// (get) Token: 0x0600D46B RID: 54379 RVA: 0x003F29DA File Offset: 0x003F0BDA
 	public static ItemExchangeConfig Instance
 	{
 		get
@@ -50,7 +50,7 @@ public class ItemExchangeConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x06010004 RID: 65540 RVA: 0x003E63E1 File Offset: 0x003E45E1
+	// Token: 0x0600D46C RID: 54380 RVA: 0x003F29E1 File Offset: 0x003F0BE1
 	public static ItemExchangeConfig GetOrCreateInstance()
 	{
 		if (ItemExchangeConfig._Instance == null)
@@ -60,7 +60,7 @@ public class ItemExchangeConfig : ConfigBase
 		return ItemExchangeConfig._Instance;
 	}
 
-	// Token: 0x06010005 RID: 65541 RVA: 0x003E63F5 File Offset: 0x003E45F5
+	// Token: 0x0600D46D RID: 54381 RVA: 0x003F29F5 File Offset: 0x003F0BF5
 	public static bool CreateInstance()
 	{
 		if (ItemExchangeConfig._Instance != null)
@@ -71,24 +71,24 @@ public class ItemExchangeConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x06010006 RID: 65542 RVA: 0x003E640B File Offset: 0x003E460B
+	// Token: 0x0600D46E RID: 54382 RVA: 0x003F2A0B File Offset: 0x003F0C0B
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06010007 RID: 65543 RVA: 0x003E640D File Offset: 0x003E460D
+	// Token: 0x0600D46F RID: 54383 RVA: 0x003F2A0D File Offset: 0x003F0C0D
 	public static void ResetStaticDefaultValue()
 	{
 		ItemExchangeConfig._Instance = null;
 	}
 
-	// Token: 0x06010008 RID: 65544 RVA: 0x003E6415 File Offset: 0x003E4615
+	// Token: 0x0600D470 RID: 54384 RVA: 0x003F2A15 File Offset: 0x003F0C15
 	static ItemExchangeConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ItemExchangeConfig.CreateStaticDefaultValue), new Action(ItemExchangeConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04007677 RID: 30327
+	// Token: 0x04007760 RID: 30560
 	[Nullable(2)]
 	private static ItemExchangeConfig _Instance;
 }

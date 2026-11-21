@@ -6,13 +6,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D08 RID: 3336
+	// Token: 0x02000E00 RID: 3584
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IAfterTeleportConfig
 	{
-		// Token: 0x06004C24 RID: 19492 RVA: 0x000BDCA4 File Offset: 0x000BBEA4
-		[NullableContext(1)]
+		// Token: 0x06005132 RID: 20786 RVA: 0x000C91D4 File Offset: 0x000C73D4
+		[NullableContext(0)]
 		public static IAfterTeleportConfig Create(IAfterTeleportConfig? instance)
 		{
 			if (instance == null)
@@ -25,8 +25,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170017D1 RID: 6097
-		// (get) Token: 0x06004C25 RID: 19493 RVA: 0x000BDCC3 File Offset: 0x000BBEC3
+		// Token: 0x1700192D RID: 6445
+		// (get) Token: 0x06005133 RID: 20787 RVA: 0x000C91F3 File Offset: 0x000C73F3
 		public virtual VectorInfo Direction
 		{
 			get
@@ -41,8 +41,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170017D2 RID: 6098
-		// (get) Token: 0x06004C26 RID: 19494 RVA: 0x000BDCF8 File Offset: 0x000BBEF8
+		// Token: 0x1700192E RID: 6446
+		// (get) Token: 0x06005134 RID: 20788 RVA: 0x000C9228 File Offset: 0x000C7428
 		public virtual List<int> BuffEffectIds
 		{
 			get
@@ -66,8 +66,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170017D3 RID: 6099
-		// (get) Token: 0x06004C27 RID: 19495 RVA: 0x000BDD6D File Offset: 0x000BBF6D
+		// Token: 0x1700192F RID: 6447
+		// (get) Token: 0x06005135 RID: 20789 RVA: 0x000C929D File Offset: 0x000C749D
 		public virtual VectorInfo TeleportToSelfPos
 		{
 			get
@@ -82,8 +82,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170017D4 RID: 6100
-		// (get) Token: 0x06004C28 RID: 19496 RVA: 0x000BDDA4 File Offset: 0x000BBFA4
+		// Token: 0x17001930 RID: 6448
+		// (get) Token: 0x06005136 RID: 20790 RVA: 0x000C92D4 File Offset: 0x000C74D4
 		public virtual int? RailEntityId
 		{
 			get
@@ -96,8 +96,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170017D5 RID: 6101
-		// (get) Token: 0x06004C29 RID: 19497 RVA: 0x000BDDDA File Offset: 0x000BBFDA
+		// Token: 0x17001931 RID: 6449
+		// (get) Token: 0x06005137 RID: 20791 RVA: 0x000C930A File Offset: 0x000C750A
 		public virtual string SlidePerformDaPath
 		{
 			get
@@ -106,25 +106,25 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002B8B RID: 11147
+		// Token: 0x04002E45 RID: 11845
 		private IAfterTeleportConfig Instance;
 
-		// Token: 0x04002B8C RID: 11148
+		// Token: 0x04002E46 RID: 11846
 		private VectorInfo _DirectionCache;
 
-		// Token: 0x04002B8D RID: 11149
+		// Token: 0x04002E47 RID: 11847
 		private bool _DirectionInited;
 
-		// Token: 0x04002B8E RID: 11150
+		// Token: 0x04002E48 RID: 11848
 		private List<int> _BuffEffectIdsCache;
 
-		// Token: 0x04002B8F RID: 11151
+		// Token: 0x04002E49 RID: 11849
 		private bool _BuffEffectIdsInited;
 
-		// Token: 0x04002B90 RID: 11152
+		// Token: 0x04002E4A RID: 11850
 		private VectorInfo _TeleportToSelfPosCache;
 
-		// Token: 0x04002B91 RID: 11153
+		// Token: 0x04002E4B RID: 11851
 		private bool _TeleportToSelfPosInited;
 	}
 }

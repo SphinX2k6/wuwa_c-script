@@ -7,67 +7,37 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002888 RID: 10376
+	// Token: 0x02000831 RID: 2097
 	[UnrealObjectPath("/Script/SMSystem.SMInstance")]
 	[UnrealStructLayout(1552, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1552)]
-	public class USMInstance : UObject, IUnrealUObject, IUnrealObject, ISMStateMachineInterface, IUnrealNativeInterface, IUnrealInterface, ISMInstanceInterface
+	public class USMInstance : UObject, IUnrealUObject, IUnrealObject, ISMInstanceInterface, IUnrealNativeInterface, IUnrealInterface
 	{
-		// Token: 0x0602666D RID: 157293 RVA: 0x003A5CB1 File Offset: 0x003A3EB1
+		// Token: 0x0600B66A RID: 46698 RVA: 0x001225B5 File Offset: 0x001207B5
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return USMInstance._ClassPtr;
 		}
 
-		// Token: 0x0602666E RID: 157294 RVA: 0x003A5CBD File Offset: 0x003A3EBD
-		int ISMStateMachineInterface.InterfaceOffset()
-		{
-			return USMInstance.__InterfaceOffset_ISMStateMachineInterface;
-		}
-
-		// Token: 0x0602666F RID: 157295 RVA: 0x003A5CC4 File Offset: 0x003A3EC4
+		// Token: 0x0600B66B RID: 46699 RVA: 0x001225C1 File Offset: 0x001207C1
 		int ISMInstanceInterface.InterfaceOffset()
 		{
 			return USMInstance.__InterfaceOffset_ISMInstanceInterface;
 		}
 
-		// Token: 0x06026670 RID: 157296 RVA: 0x003A5CCC File Offset: 0x003A3ECC
+		// Token: 0x0600B66C RID: 46700 RVA: 0x001225C8 File Offset: 0x001207C8
 		public USMInstance() : this(BuiltinUtils.AllocNativeUObject(USMInstance.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06026671 RID: 157297 RVA: 0x003A5CF4 File Offset: 0x003A3EF4
+		// Token: 0x0600B66D RID: 46701 RVA: 0x001225F0 File Offset: 0x001207F0
 		[NullableContext(1)]
 		public USMInstance(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(USMInstance.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17009416 RID: 37910
-		// (get) Token: 0x06026672 RID: 157298 RVA: 0x003A5D28 File Offset: 0x003A3F28
-		// (set) Token: 0x06026673 RID: 157299 RVA: 0x003A5D61 File Offset: 0x003A3F61
-		[Nullable(1)]
-		public TArray<FSMReferenceContainer> ReplicatedReferences
-		{
-			[NullableContext(1)]
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<FSMReferenceContainer> result;
-				if ((result = this._ReplicatedReferences) == null)
-				{
-					result = (this._ReplicatedReferences = new TArray<FSMReferenceContainer>(base.NativePtr + (IntPtr)USMInstance.__PropertyOffset_ReplicatedReferences, this));
-				}
-				return result;
-			}
-			[NullableContext(1)]
-			set
-			{
-				this.ReplicatedReferences.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17009417 RID: 37911
-		// (get) Token: 0x06026674 RID: 157300 RVA: 0x003A5D6F File Offset: 0x003A3F6F
-		// (set) Token: 0x06026675 RID: 157301 RVA: 0x003A5D83 File Offset: 0x003A3F83
+		// Token: 0x17002217 RID: 8727
+		// (get) Token: 0x0600B66E RID: 46702 RVA: 0x00122623 File Offset: 0x00120823
+		// (set) Token: 0x0600B66F RID: 46703 RVA: 0x00122637 File Offset: 0x00120837
 		public unsafe FGuid RootStateMachineGuid
 		{
 			get
@@ -80,9 +50,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009418 RID: 37912
-		// (get) Token: 0x06026676 RID: 157302 RVA: 0x003A5D98 File Offset: 0x003A3F98
-		// (set) Token: 0x06026677 RID: 157303 RVA: 0x003A5DD1 File Offset: 0x003A3FD1
+		// Token: 0x17002218 RID: 8728
+		// (get) Token: 0x0600B670 RID: 46704 RVA: 0x0012264C File Offset: 0x0012084C
+		// (set) Token: 0x0600B671 RID: 46705 RVA: 0x00122685 File Offset: 0x00120885
 		[Nullable(1)]
 		public TArray<USMStateMachineInstance> AllRootNodeInstances
 		{
@@ -104,9 +74,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009419 RID: 37913
-		// (get) Token: 0x06026678 RID: 157304 RVA: 0x003A5DE0 File Offset: 0x003A3FE0
-		// (set) Token: 0x06026679 RID: 157305 RVA: 0x003A5E19 File Offset: 0x003A4019
+		// Token: 0x17002219 RID: 8729
+		// (get) Token: 0x0600B672 RID: 46706 RVA: 0x00122694 File Offset: 0x00120894
+		// (set) Token: 0x0600B673 RID: 46707 RVA: 0x001226CD File Offset: 0x001208CD
 		[Nullable(1)]
 		public FOnStateMachineInitializedSignature OnPreStateMachineInitializedEvent
 		{
@@ -128,9 +98,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700941A RID: 37914
-		// (get) Token: 0x0602667A RID: 157306 RVA: 0x003A5E3C File Offset: 0x003A403C
-		// (set) Token: 0x0602667B RID: 157307 RVA: 0x003A5E75 File Offset: 0x003A4075
+		// Token: 0x1700221A RID: 8730
+		// (get) Token: 0x0600B674 RID: 46708 RVA: 0x001226F0 File Offset: 0x001208F0
+		// (set) Token: 0x0600B675 RID: 46709 RVA: 0x00122729 File Offset: 0x00120929
 		[Nullable(1)]
 		public FOnStateMachineInitializedSignature OnStateMachineInitializedEvent
 		{
@@ -152,9 +122,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700941B RID: 37915
-		// (get) Token: 0x0602667C RID: 157308 RVA: 0x003A5E98 File Offset: 0x003A4098
-		// (set) Token: 0x0602667D RID: 157309 RVA: 0x003A5ED1 File Offset: 0x003A40D1
+		// Token: 0x1700221B RID: 8731
+		// (get) Token: 0x0600B676 RID: 46710 RVA: 0x0012274C File Offset: 0x0012094C
+		// (set) Token: 0x0600B677 RID: 46711 RVA: 0x00122785 File Offset: 0x00120985
 		[Nullable(1)]
 		public FOnStateMachineStartedSignature OnStateMachineStartedEvent
 		{
@@ -176,9 +146,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700941C RID: 37916
-		// (get) Token: 0x0602667E RID: 157310 RVA: 0x003A5EF4 File Offset: 0x003A40F4
-		// (set) Token: 0x0602667F RID: 157311 RVA: 0x003A5F2D File Offset: 0x003A412D
+		// Token: 0x1700221C RID: 8732
+		// (get) Token: 0x0600B678 RID: 46712 RVA: 0x001227A8 File Offset: 0x001209A8
+		// (set) Token: 0x0600B679 RID: 46713 RVA: 0x001227E1 File Offset: 0x001209E1
 		[Nullable(1)]
 		public FOnStateMachineUpdatedSignature OnStateMachineUpdatedEvent
 		{
@@ -200,9 +170,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700941D RID: 37917
-		// (get) Token: 0x06026680 RID: 157312 RVA: 0x003A5F50 File Offset: 0x003A4150
-		// (set) Token: 0x06026681 RID: 157313 RVA: 0x003A5F89 File Offset: 0x003A4189
+		// Token: 0x1700221D RID: 8733
+		// (get) Token: 0x0600B67A RID: 46714 RVA: 0x00122804 File Offset: 0x00120A04
+		// (set) Token: 0x0600B67B RID: 46715 RVA: 0x0012283D File Offset: 0x00120A3D
 		[Nullable(1)]
 		public FOnStateMachineStoppedSignature OnStateMachineStoppedEvent
 		{
@@ -224,141 +194,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700941E RID: 37918
-		// (get) Token: 0x06026682 RID: 157314 RVA: 0x003A5FAC File Offset: 0x003A41AC
-		// (set) Token: 0x06026683 RID: 157315 RVA: 0x003A5FE5 File Offset: 0x003A41E5
-		[Nullable(1)]
-		public FOnStateMachineTransitionTakenSignature OnStateMachineTransitionTakenEvent
-		{
-			[NullableContext(1)]
-			get
-			{
-				base.FastCheckIsValid();
-				FOnStateMachineTransitionTakenSignature result;
-				if ((result = this._OnStateMachineTransitionTakenEvent) == null)
-				{
-					result = (this._OnStateMachineTransitionTakenEvent = new FOnStateMachineTransitionTakenSignature(base.NativePtr + (IntPtr)USMInstance.__PropertyOffset_OnStateMachineTransitionTakenEvent, this));
-				}
-				return result;
-			}
-			[NullableContext(1)]
-			set
-			{
-				FMulticastScriptDelegate.NativeCopy(base.NativePtr + (IntPtr)USMInstance.__PropertyOffset_OnStateMachineTransitionTakenEvent, (value != null) ? value.NativePtr : ((IntPtr)0));
-			}
-		}
-
-		// Token: 0x1700941F RID: 37919
-		// (get) Token: 0x06026684 RID: 157316 RVA: 0x003A6008 File Offset: 0x003A4208
-		// (set) Token: 0x06026685 RID: 157317 RVA: 0x003A6041 File Offset: 0x003A4241
-		[Nullable(1)]
-		public FOnStateMachineStateChangedSignature OnStateMachineStateChangedEvent
-		{
-			[NullableContext(1)]
-			get
-			{
-				base.FastCheckIsValid();
-				FOnStateMachineStateChangedSignature result;
-				if ((result = this._OnStateMachineStateChangedEvent) == null)
-				{
-					result = (this._OnStateMachineStateChangedEvent = new FOnStateMachineStateChangedSignature(base.NativePtr + (IntPtr)USMInstance.__PropertyOffset_OnStateMachineStateChangedEvent, this));
-				}
-				return result;
-			}
-			[NullableContext(1)]
-			set
-			{
-				FMulticastScriptDelegate.NativeCopy(base.NativePtr + (IntPtr)USMInstance.__PropertyOffset_OnStateMachineStateChangedEvent, (value != null) ? value.NativePtr : ((IntPtr)0));
-			}
-		}
-
-		// Token: 0x17009420 RID: 37920
-		// (get) Token: 0x06026686 RID: 157318 RVA: 0x003A6064 File Offset: 0x003A4264
-		// (set) Token: 0x06026687 RID: 157319 RVA: 0x003A609D File Offset: 0x003A429D
-		[Nullable(1)]
-		public FOnStateMachineStateStartedSignature OnStateMachineStateStartedEvent
-		{
-			[NullableContext(1)]
-			get
-			{
-				base.FastCheckIsValid();
-				FOnStateMachineStateStartedSignature result;
-				if ((result = this._OnStateMachineStateStartedEvent) == null)
-				{
-					result = (this._OnStateMachineStateStartedEvent = new FOnStateMachineStateStartedSignature(base.NativePtr + (IntPtr)USMInstance.__PropertyOffset_OnStateMachineStateStartedEvent, this));
-				}
-				return result;
-			}
-			[NullableContext(1)]
-			set
-			{
-				FMulticastScriptDelegate.NativeCopy(base.NativePtr + (IntPtr)USMInstance.__PropertyOffset_OnStateMachineStateStartedEvent, (value != null) ? value.NativePtr : ((IntPtr)0));
-			}
-		}
-
-		// Token: 0x17009421 RID: 37921
-		// (get) Token: 0x06026688 RID: 157320 RVA: 0x003A60BE File Offset: 0x003A42BE
-		// (set) Token: 0x06026689 RID: 157321 RVA: 0x003A60D2 File Offset: 0x003A42D2
-		[Nullable(2)]
-		public unsafe USMStateMachineComponent ComponentOwner
-		{
-			[NullableContext(2)]
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<USMStateMachineComponent>(base.NativePtr / (IntPtr)sizeof(void*) + USMInstance.__PropertyOffset_ComponentOwner);
-			}
-			[NullableContext(2)]
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + USMInstance.__PropertyOffset_ComponentOwner, value);
-			}
-		}
-
-		// Token: 0x17009422 RID: 37922
-		// (get) Token: 0x0602668A RID: 157322 RVA: 0x003A60E7 File Offset: 0x003A42E7
-		// (set) Token: 0x0602668B RID: 157323 RVA: 0x003A6101 File Offset: 0x003A4301
-		[Nullable(2)]
-		public unsafe ISMStateMachineNetworkedInterface NetworkInterface
-		{
-			[NullableContext(2)]
-			get
-			{
-				return (ISMStateMachineNetworkedInterface)BuiltinUtils.GetOrCreateUObjectByNativePointer(*(base.NativePtr + (IntPtr)USMInstance.__PropertyOffset_NetworkInterface));
-			}
-			[NullableContext(2)]
-			set
-			{
-				*(base.NativePtr + (IntPtr)USMInstance.__PropertyOffset_NetworkInterface) = new FScriptInterface(value, (value != null) ? value.InterfaceOffset() : 0);
-			}
-		}
-
-		// Token: 0x17009423 RID: 37923
-		// (get) Token: 0x0602668C RID: 157324 RVA: 0x003A6128 File Offset: 0x003A4328
-		// (set) Token: 0x0602668D RID: 157325 RVA: 0x003A6161 File Offset: 0x003A4361
-		[Nullable(1)]
-		public FSMStateMachine RootStateMachine
-		{
-			[NullableContext(1)]
-			get
-			{
-				base.FastCheckIsValid();
-				FSMStateMachine result;
-				if ((result = this._RootStateMachine) == null)
-				{
-					result = (this._RootStateMachine = new FSMStateMachine(base.NativePtr + (IntPtr)USMInstance.__PropertyOffset_RootStateMachine, this));
-				}
-				return result;
-			}
-			[NullableContext(1)]
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FSMStateMachine.StaticStruct(), base.NativePtr + (IntPtr)USMInstance.__PropertyOffset_RootStateMachine, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x17009424 RID: 37924
-		// (get) Token: 0x0602668E RID: 157326 RVA: 0x003A6182 File Offset: 0x003A4382
-		// (set) Token: 0x0602668F RID: 157327 RVA: 0x003A6196 File Offset: 0x003A4396
+		// Token: 0x1700221E RID: 8734
+		// (get) Token: 0x0600B67C RID: 46716 RVA: 0x0012285E File Offset: 0x00120A5E
+		// (set) Token: 0x0600B67D RID: 46717 RVA: 0x00122872 File Offset: 0x00120A72
 		[Nullable(2)]
 		public unsafe UObject R_StateMachineContext
 		{
@@ -374,9 +212,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009425 RID: 37925
-		// (get) Token: 0x06026690 RID: 157328 RVA: 0x003A61AB File Offset: 0x003A43AB
-		// (set) Token: 0x06026691 RID: 157329 RVA: 0x003A61BF File Offset: 0x003A43BF
+		// Token: 0x1700221F RID: 8735
+		// (get) Token: 0x0600B67E RID: 46718 RVA: 0x00122887 File Offset: 0x00120A87
+		// (set) Token: 0x0600B67F RID: 46719 RVA: 0x0012289B File Offset: 0x00120A9B
 		[Nullable(2)]
 		public unsafe USMInstance ReferenceOwner
 		{
@@ -392,9 +230,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009426 RID: 37926
-		// (get) Token: 0x06026692 RID: 157330 RVA: 0x003A61D4 File Offset: 0x003A43D4
-		// (set) Token: 0x06026693 RID: 157331 RVA: 0x003A61E8 File Offset: 0x003A43E8
+		// Token: 0x17002220 RID: 8736
+		// (get) Token: 0x0600B680 RID: 46720 RVA: 0x001228B0 File Offset: 0x00120AB0
+		// (set) Token: 0x0600B681 RID: 46721 RVA: 0x001228C4 File Offset: 0x00120AC4
 		[Nullable(new byte[]
 		{
 			0,
@@ -422,9 +260,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009427 RID: 37927
-		// (get) Token: 0x06026694 RID: 157332 RVA: 0x003A61FD File Offset: 0x003A43FD
-		// (set) Token: 0x06026695 RID: 157333 RVA: 0x003A6216 File Offset: 0x003A4416
+		// Token: 0x17002221 RID: 8737
+		// (get) Token: 0x0600B682 RID: 46722 RVA: 0x001228D9 File Offset: 0x00120AD9
+		// (set) Token: 0x0600B683 RID: 46723 RVA: 0x001228F2 File Offset: 0x00120AF2
 		public unsafe bool bAutoManageTime
 		{
 			get
@@ -437,9 +275,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009428 RID: 37928
-		// (get) Token: 0x06026696 RID: 157334 RVA: 0x003A6246 File Offset: 0x003A4446
-		// (set) Token: 0x06026697 RID: 157335 RVA: 0x003A625F File Offset: 0x003A445F
+		// Token: 0x17002222 RID: 8738
+		// (get) Token: 0x0600B684 RID: 46724 RVA: 0x00122922 File Offset: 0x00120B22
+		// (set) Token: 0x0600B685 RID: 46725 RVA: 0x0012293B File Offset: 0x00120B3B
 		public unsafe bool bStopOnEndState
 		{
 			get
@@ -452,9 +290,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009429 RID: 37929
-		// (get) Token: 0x06026698 RID: 157336 RVA: 0x003A628F File Offset: 0x003A448F
-		// (set) Token: 0x06026699 RID: 157337 RVA: 0x003A62A8 File Offset: 0x003A44A8
+		// Token: 0x17002223 RID: 8739
+		// (get) Token: 0x0600B686 RID: 46726 RVA: 0x0012296B File Offset: 0x00120B6B
+		// (set) Token: 0x0600B687 RID: 46727 RVA: 0x00122984 File Offset: 0x00120B84
 		public unsafe bool bCanEverTick
 		{
 			get
@@ -467,9 +305,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700942A RID: 37930
-		// (get) Token: 0x0602669A RID: 157338 RVA: 0x003A62D8 File Offset: 0x003A44D8
-		// (set) Token: 0x0602669B RID: 157339 RVA: 0x003A62F1 File Offset: 0x003A44F1
+		// Token: 0x17002224 RID: 8740
+		// (get) Token: 0x0600B688 RID: 46728 RVA: 0x001229B4 File Offset: 0x00120BB4
+		// (set) Token: 0x0600B689 RID: 46729 RVA: 0x001229CD File Offset: 0x00120BCD
 		public unsafe bool bCanTickWhenPaused
 		{
 			get
@@ -482,9 +320,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700942B RID: 37931
-		// (get) Token: 0x0602669C RID: 157340 RVA: 0x003A6321 File Offset: 0x003A4521
-		// (set) Token: 0x0602669D RID: 157341 RVA: 0x003A633A File Offset: 0x003A453A
+		// Token: 0x17002225 RID: 8741
+		// (get) Token: 0x0600B68A RID: 46730 RVA: 0x001229FD File Offset: 0x00120BFD
+		// (set) Token: 0x0600B68B RID: 46731 RVA: 0x00122A16 File Offset: 0x00120C16
 		public unsafe bool bTickRegistered
 		{
 			get
@@ -497,9 +335,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700942C RID: 37932
-		// (get) Token: 0x0602669E RID: 157342 RVA: 0x003A636A File Offset: 0x003A456A
-		// (set) Token: 0x0602669F RID: 157343 RVA: 0x003A6383 File Offset: 0x003A4583
+		// Token: 0x17002226 RID: 8742
+		// (get) Token: 0x0600B68C RID: 46732 RVA: 0x00122A46 File Offset: 0x00120C46
+		// (set) Token: 0x0600B68D RID: 46733 RVA: 0x00122A5F File Offset: 0x00120C5F
 		public unsafe bool bTickBeforeInitialize
 		{
 			get
@@ -512,9 +350,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700942D RID: 37933
-		// (get) Token: 0x060266A0 RID: 157344 RVA: 0x003A63B3 File Offset: 0x003A45B3
-		// (set) Token: 0x060266A1 RID: 157345 RVA: 0x003A63CC File Offset: 0x003A45CC
+		// Token: 0x17002227 RID: 8743
+		// (get) Token: 0x0600B68E RID: 46734 RVA: 0x00122A8F File Offset: 0x00120C8F
+		// (set) Token: 0x0600B68F RID: 46735 RVA: 0x00122AA8 File Offset: 0x00120CA8
 		public unsafe bool bTickBeforeBeginPlay
 		{
 			get
@@ -527,9 +365,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700942E RID: 37934
-		// (get) Token: 0x060266A2 RID: 157346 RVA: 0x003A63FC File Offset: 0x003A45FC
-		// (set) Token: 0x060266A3 RID: 157347 RVA: 0x003A640C File Offset: 0x003A460C
+		// Token: 0x17002228 RID: 8744
+		// (get) Token: 0x0600B690 RID: 46736 RVA: 0x00122AD8 File Offset: 0x00120CD8
+		// (set) Token: 0x0600B691 RID: 46737 RVA: 0x00122AE8 File Offset: 0x00120CE8
 		public unsafe float TickInterval
 		{
 			get
@@ -542,33 +380,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700942F RID: 37935
-		// (get) Token: 0x060266A4 RID: 157348 RVA: 0x003A6420 File Offset: 0x003A4620
-		// (set) Token: 0x060266A5 RID: 157349 RVA: 0x003A6459 File Offset: 0x003A4659
-		[Nullable(1)]
-		public TArray<FSMStateHistory> StateHistory
-		{
-			[NullableContext(1)]
-			get
-			{
-				base.FastCheckIsValid();
-				TArray<FSMStateHistory> result;
-				if ((result = this._StateHistory) == null)
-				{
-					result = (this._StateHistory = new TArray<FSMStateHistory>(base.NativePtr + (IntPtr)USMInstance.__PropertyOffset_StateHistory, this));
-				}
-				return result;
-			}
-			[NullableContext(1)]
-			set
-			{
-				this.StateHistory.CopyAssign(value);
-			}
-		}
-
-		// Token: 0x17009430 RID: 37936
-		// (get) Token: 0x060266A6 RID: 157350 RVA: 0x003A6467 File Offset: 0x003A4667
-		// (set) Token: 0x060266A7 RID: 157351 RVA: 0x003A6477 File Offset: 0x003A4677
+		// Token: 0x17002229 RID: 8745
+		// (get) Token: 0x0600B692 RID: 46738 RVA: 0x00122AF9 File Offset: 0x00120CF9
+		// (set) Token: 0x0600B693 RID: 46739 RVA: 0x00122B09 File Offset: 0x00120D09
 		public unsafe int StateHistoryMaxCount
 		{
 			get
@@ -581,9 +395,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009431 RID: 37937
-		// (get) Token: 0x060266A8 RID: 157352 RVA: 0x003A6488 File Offset: 0x003A4688
-		// (set) Token: 0x060266A9 RID: 157353 RVA: 0x003A64A1 File Offset: 0x003A46A1
+		// Token: 0x1700222A RID: 8746
+		// (get) Token: 0x0600B694 RID: 46740 RVA: 0x00122B1A File Offset: 0x00120D1A
+		// (set) Token: 0x0600B695 RID: 46741 RVA: 0x00122B33 File Offset: 0x00120D33
 		public unsafe bool bEnableLogging
 		{
 			get
@@ -596,9 +410,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009432 RID: 37938
-		// (get) Token: 0x060266AA RID: 157354 RVA: 0x003A64D1 File Offset: 0x003A46D1
-		// (set) Token: 0x060266AB RID: 157355 RVA: 0x003A64EA File Offset: 0x003A46EA
+		// Token: 0x1700222B RID: 8747
+		// (get) Token: 0x0600B696 RID: 46742 RVA: 0x00122B63 File Offset: 0x00120D63
+		// (set) Token: 0x0600B697 RID: 46743 RVA: 0x00122B7C File Offset: 0x00120D7C
 		public unsafe bool bLogStateChange
 		{
 			get
@@ -611,9 +425,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009433 RID: 37939
-		// (get) Token: 0x060266AC RID: 157356 RVA: 0x003A651A File Offset: 0x003A471A
-		// (set) Token: 0x060266AD RID: 157357 RVA: 0x003A6533 File Offset: 0x003A4733
+		// Token: 0x1700222C RID: 8748
+		// (get) Token: 0x0600B698 RID: 46744 RVA: 0x00122BAC File Offset: 0x00120DAC
+		// (set) Token: 0x0600B699 RID: 46745 RVA: 0x00122BC5 File Offset: 0x00120DC5
 		public unsafe bool bLogTransitionTaken
 		{
 			get
@@ -626,9 +440,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009434 RID: 37940
-		// (get) Token: 0x060266AE RID: 157358 RVA: 0x003A6563 File Offset: 0x003A4763
-		// (set) Token: 0x060266AF RID: 157359 RVA: 0x003A657C File Offset: 0x003A477C
+		// Token: 0x1700222D RID: 8749
+		// (get) Token: 0x0600B69A RID: 46746 RVA: 0x00122BF5 File Offset: 0x00120DF5
+		// (set) Token: 0x0600B69B RID: 46747 RVA: 0x00122C0E File Offset: 0x00120E0E
 		public unsafe bool bCanReplicateAsReference
 		{
 			get
@@ -641,9 +455,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009435 RID: 37941
-		// (get) Token: 0x060266B0 RID: 157360 RVA: 0x003A65AC File Offset: 0x003A47AC
-		// (set) Token: 0x060266B1 RID: 157361 RVA: 0x003A65E5 File Offset: 0x003A47E5
+		// Token: 0x1700222E RID: 8750
+		// (get) Token: 0x0600B69C RID: 46748 RVA: 0x00122C40 File Offset: 0x00120E40
+		// (set) Token: 0x0600B69D RID: 46749 RVA: 0x00122C79 File Offset: 0x00120E79
 		[Nullable(1)]
 		public TMap<FGuid, FGuid> PathGuidRedirectMap
 		{
@@ -665,9 +479,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17009436 RID: 37942
-		// (get) Token: 0x060266B2 RID: 157362 RVA: 0x003A65F4 File Offset: 0x003A47F4
-		// (set) Token: 0x060266B3 RID: 157363 RVA: 0x003A662D File Offset: 0x003A482D
+		// Token: 0x1700222F RID: 8751
+		// (get) Token: 0x0600B69E RID: 46750 RVA: 0x00122C88 File Offset: 0x00120E88
+		// (set) Token: 0x0600B69F RID: 46751 RVA: 0x00122CC1 File Offset: 0x00120EC1
 		[Nullable(1)]
 		public TArray<UObject> ReferenceTemplates
 		{
@@ -689,88 +503,18 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060266B4 RID: 157364 RVA: 0x003A663C File Offset: 0x003A483C
+		// Token: 0x0600B6A0 RID: 46752 RVA: 0x00122CD0 File Offset: 0x00120ED0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Update(float DeltaSeconds = 0f)
 		{
 			USMInstance.__Update_FunctionParams* ptr = stackalloc USMInstance.__Update_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(USMInstance.__Update_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__Update_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->DeltaSeconds = DeltaSeconds;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__Update_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__Update_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060266B5 RID: 157365 RVA: 0x003A6684 File Offset: 0x003A4884
-		[NullableContext(2)]
+		// Token: 0x0600B6A1 RID: 46753 RVA: 0x00122D18 File Offset: 0x00120F18
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe void TryGetTransitionInfo(in FGuid Guid, ref FSMTransitionInfo TransitionInfo, ref bool bSuccess)
-		{
-			USMInstance.__TryGetTransitionInfo_FunctionParams* ptr = stackalloc USMInstance.__TryGetTransitionInfo_FunctionParams[(UIntPtr)191] + 15L / (long)sizeof(USMInstance.__TryGetTransitionInfo_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(USMInstance.__TryGetTransitionInfo_NativeFunctionPtr, (void*)ptr, 1);
-			ptr->Guid = Guid;
-			if (TransitionInfo != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FSMTransitionInfo.StaticStruct(), &ptr->TransitionInfo, TransitionInfo.NativePtr, 1, false);
-			}
-			ptr->bSuccess = bSuccess;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__TryGetTransitionInfo_NativeFunctionPtr, (void*)ptr, 0);
-			if (TransitionInfo != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FSMTransitionInfo.StaticStruct(), TransitionInfo.NativePtr, &ptr->TransitionInfo, 1, false);
-			}
-			bSuccess = ptr->bSuccess;
-			UnrealReflectionUtils.DestroyStruct(USMInstance.__TryGetTransitionInfo_NativeFunctionPtr, (void*)ptr, 1);
-		}
-
-		// Token: 0x060266B6 RID: 157366 RVA: 0x003A673C File Offset: 0x003A493C
-		[NullableContext(2)]
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe void TryGetStateInfo(in FGuid Guid, ref FSMStateInfo StateInfo, ref bool bSuccess)
-		{
-			USMInstance.__TryGetStateInfo_FunctionParams* ptr = stackalloc USMInstance.__TryGetStateInfo_FunctionParams[(UIntPtr)167] + 15L / (long)sizeof(USMInstance.__TryGetStateInfo_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(USMInstance.__TryGetStateInfo_NativeFunctionPtr, (void*)ptr, 1);
-			ptr->Guid = Guid;
-			if (StateInfo != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FSMStateInfo.StaticStruct(), &ptr->StateInfo, StateInfo.NativePtr, 1, false);
-			}
-			ptr->bSuccess = bSuccess;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__TryGetStateInfo_NativeFunctionPtr, (void*)ptr, 0);
-			if (StateInfo != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FSMStateInfo.StaticStruct(), StateInfo.NativePtr, &ptr->StateInfo, 1, false);
-			}
-			bSuccess = ptr->bSuccess;
-			UnrealReflectionUtils.DestroyStruct(USMInstance.__TryGetStateInfo_NativeFunctionPtr, (void*)ptr, 1);
-		}
-
-		// Token: 0x060266B7 RID: 157367 RVA: 0x003A67F4 File Offset: 0x003A49F4
-		[NullableContext(2)]
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe void TryGetNestedActiveState(ref FSMStateInfo FoundState, ref bool bSuccess)
-		{
-			USMInstance.__TryGetNestedActiveState_FunctionParams* ptr = stackalloc USMInstance.__TryGetNestedActiveState_FunctionParams[(UIntPtr)151] + 15L / (long)sizeof(USMInstance.__TryGetNestedActiveState_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(USMInstance.__TryGetNestedActiveState_NativeFunctionPtr, (void*)ptr, 1);
-			if (FoundState != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FSMStateInfo.StaticStruct(), &ptr->FoundState, FoundState.NativePtr, 1, false);
-			}
-			ptr->bSuccess = bSuccess;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__TryGetNestedActiveState_NativeFunctionPtr, (void*)ptr, 0);
-			if (FoundState != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FSMStateInfo.StaticStruct(), FoundState.NativePtr, &ptr->FoundState, 1, false);
-			}
-			bSuccess = ptr->bSuccess;
-			UnrealReflectionUtils.DestroyStruct(USMInstance.__TryGetNestedActiveState_NativeFunctionPtr, (void*)ptr, 1);
-		}
-
-		// Token: 0x060266B8 RID: 157368 RVA: 0x003A68A0 File Offset: 0x003A4AA0
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void Tick(float DeltaTime)
 		{
 			USMInstance.__Tick_FunctionParams* ptr = stackalloc USMInstance.__Tick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(USMInstance.__Tick_FunctionParams) & -16L;
@@ -779,20 +523,18 @@ namespace UnrealEngine
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, USMInstance.__Tick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060266B9 RID: 157369 RVA: 0x003A68E8 File Offset: 0x003A4AE8
+		// Token: 0x0600B6A2 RID: 46754 RVA: 0x00122D60 File Offset: 0x00120F60
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void Tick_Implementation(float DeltaTime)
 		{
 			USMInstance.__Tick_FunctionParams* ptr = stackalloc USMInstance.__Tick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(USMInstance.__Tick_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__Tick_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->DeltaTime = DeltaTime;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__Tick_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__Tick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060266BA RID: 157370 RVA: 0x003A6930 File Offset: 0x003A4B30
+		// Token: 0x0600B6A3 RID: 46755 RVA: 0x00122DA8 File Offset: 0x00120FA8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool TakeTransitionChain([Nullable(new byte[]
 		{
 			2,
@@ -806,7 +548,7 @@ namespace UnrealEngine
 			{
 				tarray.MoveTo(&ptr->InTransitionChain);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__TakeTransitionChain_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__TakeTransitionChain_NativeFunctionPtr, (void*)ptr);
 			TArray<USMTransitionInstance> tarray2 = InTransitionChain;
 			if (tarray2 != null)
 			{
@@ -817,116 +559,105 @@ namespace UnrealEngine
 			return _Result;
 		}
 
-		// Token: 0x060266BB RID: 157371 RVA: 0x003A69B0 File Offset: 0x003A4BB0
+		// Token: 0x0600B6A4 RID: 46756 RVA: 0x00122E28 File Offset: 0x00121028
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SwitchActiveStateByQualifiedName(string InFullPath, bool bDeactivateOtherStates = true)
 		{
 			USMInstance.__SwitchActiveStateByQualifiedName_FunctionParams* ptr = stackalloc USMInstance.__SwitchActiveStateByQualifiedName_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(USMInstance.__SwitchActiveStateByQualifiedName_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__SwitchActiveStateByQualifiedName_NativeFunctionPtr, (void*)ptr, 1);
 			FString.CopyFrom((void*)(&ptr->InFullPath), InFullPath);
 			ptr->bDeactivateOtherStates = bDeactivateOtherStates;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__SwitchActiveStateByQualifiedName_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__SwitchActiveStateByQualifiedName_NativeFunctionPtr, (void*)ptr);
 			UnrealReflectionUtils.DestroyStruct(USMInstance.__SwitchActiveStateByQualifiedName_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060266BC RID: 157372 RVA: 0x003A6A18 File Offset: 0x003A4C18
+		// Token: 0x0600B6A5 RID: 46757 RVA: 0x00122E8C File Offset: 0x0012108C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SwitchActiveState(USMStateInstance_Base NewStateInstance, bool bDeactivateOtherStates = true)
 		{
 			USMInstance.__SwitchActiveState_FunctionParams* ptr = stackalloc USMInstance.__SwitchActiveState_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(USMInstance.__SwitchActiveState_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__SwitchActiveState_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->NewStateInstance = ((NewStateInstance != null) ? NewStateInstance.NativePtr : IntPtr.Zero);
 			ptr->bDeactivateOtherStates = bDeactivateOtherStates;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__SwitchActiveState_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__SwitchActiveState_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060266BD RID: 157373 RVA: 0x003A6A75 File Offset: 0x003A4C75
+		// Token: 0x0600B6A6 RID: 46758 RVA: 0x00122EE8 File Offset: 0x001210E8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Stop()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__Stop_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__Stop_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060266BE RID: 157374 RVA: 0x003A6A8C File Offset: 0x003A4C8C
+		// Token: 0x0600B6A7 RID: 46759 RVA: 0x00122EFC File Offset: 0x001210FC
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void StartWithNewContext(UObject Context)
 		{
 			USMInstance.__StartWithNewContext_FunctionParams* ptr = stackalloc USMInstance.__StartWithNewContext_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(USMInstance.__StartWithNewContext_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__StartWithNewContext_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->Context = ((Context != null) ? Context.NativePtr : IntPtr.Zero);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__StartWithNewContext_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__StartWithNewContext_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060266BF RID: 157375 RVA: 0x003A6AE2 File Offset: 0x003A4CE2
+		// Token: 0x0600B6A8 RID: 46760 RVA: 0x00122F51 File Offset: 0x00121151
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Start()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__Start_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__Start_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060266C0 RID: 157376 RVA: 0x003A6AF7 File Offset: 0x003A4CF7
+		// Token: 0x0600B6A9 RID: 46761 RVA: 0x00122F65 File Offset: 0x00121165
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Shutdown()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__Shutdown_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__Shutdown_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060266C1 RID: 157377 RVA: 0x003A6B0C File Offset: 0x003A4D0C
+		// Token: 0x0600B6AA RID: 46762 RVA: 0x00122F7C File Offset: 0x0012117C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetTickOnManualUpdate(bool Value)
 		{
 			USMInstance.__SetTickOnManualUpdate_FunctionParams* ptr = stackalloc USMInstance.__SetTickOnManualUpdate_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(USMInstance.__SetTickOnManualUpdate_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__SetTickOnManualUpdate_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->Value = Value;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__SetTickOnManualUpdate_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__SetTickOnManualUpdate_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060266C2 RID: 157378 RVA: 0x003A6B54 File Offset: 0x003A4D54
+		// Token: 0x0600B6AB RID: 46763 RVA: 0x00122FC4 File Offset: 0x001211C4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetTickInterval(float Value)
 		{
 			USMInstance.__SetTickInterval_FunctionParams* ptr = stackalloc USMInstance.__SetTickInterval_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(USMInstance.__SetTickInterval_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__SetTickInterval_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->Value = Value;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__SetTickInterval_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__SetTickInterval_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060266C3 RID: 157379 RVA: 0x003A6B9C File Offset: 0x003A4D9C
+		// Token: 0x0600B6AC RID: 46764 RVA: 0x0012300C File Offset: 0x0012120C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetTickBeforeBeginPlay(bool Value)
 		{
 			USMInstance.__SetTickBeforeBeginPlay_FunctionParams* ptr = stackalloc USMInstance.__SetTickBeforeBeginPlay_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(USMInstance.__SetTickBeforeBeginPlay_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__SetTickBeforeBeginPlay_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->Value = Value;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__SetTickBeforeBeginPlay_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__SetTickBeforeBeginPlay_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060266C4 RID: 157380 RVA: 0x003A6BE4 File Offset: 0x003A4DE4
+		// Token: 0x0600B6AD RID: 46765 RVA: 0x00123054 File Offset: 0x00121254
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetStopOnEndState(bool Value)
 		{
 			USMInstance.__SetStopOnEndState_FunctionParams* ptr = stackalloc USMInstance.__SetStopOnEndState_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(USMInstance.__SetStopOnEndState_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__SetStopOnEndState_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->Value = Value;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__SetStopOnEndState_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__SetStopOnEndState_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060266C5 RID: 157381 RVA: 0x003A6C2C File Offset: 0x003A4E2C
+		// Token: 0x0600B6AE RID: 46766 RVA: 0x0012309C File Offset: 0x0012129C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetStateMachineClass([Nullable(new byte[]
 		{
 			0,
@@ -936,24 +667,22 @@ namespace UnrealEngine
 			USMInstance.__SetStateMachineClass_FunctionParams* ptr = stackalloc USMInstance.__SetStateMachineClass_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(USMInstance.__SetStateMachineClass_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__SetStateMachineClass_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->NewStateMachineClass = NewStateMachineClass;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__SetStateMachineClass_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__SetStateMachineClass_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060266C6 RID: 157382 RVA: 0x003A6C74 File Offset: 0x003A4E74
+		// Token: 0x0600B6AF RID: 46767 RVA: 0x001230E4 File Offset: 0x001212E4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetStateHistoryMaxCount(int NewSize)
 		{
 			USMInstance.__SetStateHistoryMaxCount_FunctionParams* ptr = stackalloc USMInstance.__SetStateHistoryMaxCount_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(USMInstance.__SetStateHistoryMaxCount_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__SetStateHistoryMaxCount_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->NewSize = NewSize;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__SetStateHistoryMaxCount_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__SetStateHistoryMaxCount_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060266C7 RID: 157383 RVA: 0x003A6CBC File Offset: 0x003A4EBC
+		// Token: 0x0600B6B0 RID: 46768 RVA: 0x0012312C File Offset: 0x0012132C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetGuidRedirectMap(in TMap<FGuid, FGuid> InGuidMap)
 		{
 			USMInstance.__SetGuidRedirectMap_FunctionParams* ptr = stackalloc USMInstance.__SetGuidRedirectMap_FunctionParams[(UIntPtr)95] + 15L / (long)sizeof(USMInstance.__SetGuidRedirectMap_FunctionParams) & -16L;
@@ -963,7 +692,7 @@ namespace UnrealEngine
 			{
 				tmap.MoveTo(&ptr->InGuidMap);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__SetGuidRedirectMap_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__SetGuidRedirectMap_NativeFunctionPtr, (void*)ptr);
 			TMap<FGuid, FGuid> tmap2 = InGuidMap;
 			if (tmap2 != null)
 			{
@@ -972,113 +701,101 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(USMInstance.__SetGuidRedirectMap_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060266C8 RID: 157384 RVA: 0x003A6D38 File Offset: 0x003A4F38
+		// Token: 0x0600B6B1 RID: 46769 RVA: 0x001231A4 File Offset: 0x001213A4
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetContext(UObject Context)
 		{
 			USMInstance.__SetContext_FunctionParams* ptr = stackalloc USMInstance.__SetContext_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(USMInstance.__SetContext_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__SetContext_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->Context = ((Context != null) ? Context.NativePtr : IntPtr.Zero);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__SetContext_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__SetContext_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060266C9 RID: 157385 RVA: 0x003A6D90 File Offset: 0x003A4F90
+		// Token: 0x0600B6B2 RID: 46770 RVA: 0x001231FC File Offset: 0x001213FC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetCanTickWhenPaused(bool Value)
 		{
 			USMInstance.__SetCanTickWhenPaused_FunctionParams* ptr = stackalloc USMInstance.__SetCanTickWhenPaused_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(USMInstance.__SetCanTickWhenPaused_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__SetCanTickWhenPaused_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->Value = Value;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__SetCanTickWhenPaused_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__SetCanTickWhenPaused_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060266CA RID: 157386 RVA: 0x003A6DD8 File Offset: 0x003A4FD8
+		// Token: 0x0600B6B3 RID: 46771 RVA: 0x00123244 File Offset: 0x00121444
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetCanEverTick(bool Value)
 		{
 			USMInstance.__SetCanEverTick_FunctionParams* ptr = stackalloc USMInstance.__SetCanEverTick_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(USMInstance.__SetCanEverTick_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__SetCanEverTick_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->Value = Value;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__SetCanEverTick_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__SetCanEverTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060266CB RID: 157387 RVA: 0x003A6E20 File Offset: 0x003A5020
+		// Token: 0x0600B6B4 RID: 46772 RVA: 0x0012328C File Offset: 0x0012148C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void SetAutoManageTime(bool Value)
 		{
 			USMInstance.__SetAutoManageTime_FunctionParams* ptr = stackalloc USMInstance.__SetAutoManageTime_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(USMInstance.__SetAutoManageTime_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__SetAutoManageTime_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->Value = Value;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__SetAutoManageTime_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__SetAutoManageTime_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060266CC RID: 157388 RVA: 0x003A6E68 File Offset: 0x003A5068
+		// Token: 0x0600B6B5 RID: 46773 RVA: 0x001232D4 File Offset: 0x001214D4
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void RunUpdateAsReference(float DeltaSeconds)
 		{
 			USMInstance.__RunUpdateAsReference_FunctionParams* ptr = stackalloc USMInstance.__RunUpdateAsReference_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(USMInstance.__RunUpdateAsReference_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__RunUpdateAsReference_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->DeltaSeconds = DeltaSeconds;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__RunUpdateAsReference_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__RunUpdateAsReference_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060266CD RID: 157389 RVA: 0x003A6EAF File Offset: 0x003A50AF
+		// Token: 0x0600B6B6 RID: 46774 RVA: 0x0012331A File Offset: 0x0012151A
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Restart()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__Restart_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__Restart_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060266CE RID: 157390 RVA: 0x003A6EC4 File Offset: 0x003A50C4
+		// Token: 0x0600B6B7 RID: 46775 RVA: 0x0012332E File Offset: 0x0012152E
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void ReplicatedStop()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__ReplicatedStop_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__ReplicatedStop_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060266CF RID: 157391 RVA: 0x003A6ED9 File Offset: 0x003A50D9
+		// Token: 0x0600B6B8 RID: 46776 RVA: 0x00123342 File Offset: 0x00121542
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void ReplicatedStart()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__ReplicatedStart_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__ReplicatedStart_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060266D0 RID: 157392 RVA: 0x003A6EEE File Offset: 0x003A50EE
+		// Token: 0x0600B6B9 RID: 46777 RVA: 0x00123356 File Offset: 0x00121556
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void ReplicatedRestart()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__ReplicatedRestart_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__ReplicatedRestart_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060266D1 RID: 157393 RVA: 0x003A6F03 File Offset: 0x003A5103
+		// Token: 0x0600B6BA RID: 46778 RVA: 0x0012336A File Offset: 0x0012156A
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void REP_OnReplicatedReferencesLoaded()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__REP_OnReplicatedReferencesLoaded_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__REP_OnReplicatedReferencesLoaded_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060266D2 RID: 157394 RVA: 0x003A6F18 File Offset: 0x003A5118
+		// Token: 0x0600B6BB RID: 46779 RVA: 0x0012337E File Offset: 0x0012157E
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void PreloadAllNodeInstances()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__PreloadAllNodeInstances_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__PreloadAllNodeInstances_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060266D3 RID: 157395 RVA: 0x003A6F30 File Offset: 0x003A5130
+		// Token: 0x0600B6BC RID: 46780 RVA: 0x00123394 File Offset: 0x00121594
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void OnStateMachineUpdate(float DeltaSeconds)
 		{
 			USMInstance.__OnStateMachineUpdate_FunctionParams* ptr = stackalloc USMInstance.__OnStateMachineUpdate_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(USMInstance.__OnStateMachineUpdate_FunctionParams) & -16L;
@@ -1087,156 +804,46 @@ namespace UnrealEngine
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, USMInstance.__OnStateMachineUpdate_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060266D4 RID: 157396 RVA: 0x003A6F78 File Offset: 0x003A5178
+		// Token: 0x0600B6BD RID: 46781 RVA: 0x001233DC File Offset: 0x001215DC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void OnStateMachineUpdate_Implementation(float DeltaSeconds)
 		{
 			USMInstance.__OnStateMachineUpdate_FunctionParams* ptr = stackalloc USMInstance.__OnStateMachineUpdate_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(USMInstance.__OnStateMachineUpdate_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__OnStateMachineUpdate_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->DeltaSeconds = DeltaSeconds;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__OnStateMachineUpdate_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__OnStateMachineUpdate_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060266D5 RID: 157397 RVA: 0x003A6FC0 File Offset: 0x003A51C0
-		[NullableContext(2)]
+		// Token: 0x0600B6BE RID: 46782 RVA: 0x00123422 File Offset: 0x00121622
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe virtual void OnStateMachineTransitionTaken(in FSMTransitionInfo Transition)
-		{
-			USMInstance.__OnStateMachineTransitionTaken_FunctionParams* ptr = stackalloc USMInstance.__OnStateMachineTransitionTaken_FunctionParams[(UIntPtr)167] + 15L / (long)sizeof(USMInstance.__OnStateMachineTransitionTaken_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(USMInstance.__OnStateMachineTransitionTaken_NativeFunctionPtr, (void*)ptr, 1);
-			if (Transition != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FSMTransitionInfo.StaticStruct(), &ptr->Transition, Transition.NativePtr, 1, false);
-			}
-			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, USMInstance.__OnStateMachineTransitionTaken_NativeFunctionPtr, (void*)ptr);
-			UnrealReflectionUtils.DestroyStruct(USMInstance.__OnStateMachineTransitionTaken_NativeFunctionPtr, (void*)ptr, 1);
-		}
-
-		// Token: 0x060266D6 RID: 157398 RVA: 0x003A7038 File Offset: 0x003A5238
-		[NullableContext(2)]
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		protected unsafe virtual void OnStateMachineTransitionTaken_Implementation(in FSMTransitionInfo Transition)
-		{
-			USMInstance.__OnStateMachineTransitionTaken_FunctionParams* ptr = stackalloc USMInstance.__OnStateMachineTransitionTaken_FunctionParams[(UIntPtr)167] + 15L / (long)sizeof(USMInstance.__OnStateMachineTransitionTaken_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(USMInstance.__OnStateMachineTransitionTaken_NativeFunctionPtr, (void*)ptr, 1);
-			if (Transition != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FSMTransitionInfo.StaticStruct(), &ptr->Transition, Transition.NativePtr, 1, false);
-			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__OnStateMachineTransitionTaken_NativeFunctionPtr, (void*)ptr, 0);
-			UnrealReflectionUtils.DestroyStruct(USMInstance.__OnStateMachineTransitionTaken_NativeFunctionPtr, (void*)ptr, 1);
-		}
-
-		// Token: 0x060266D7 RID: 157399 RVA: 0x003A70B0 File Offset: 0x003A52B0
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void OnStateMachineStop()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, USMInstance.__OnStateMachineStop_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060266D8 RID: 157400 RVA: 0x003A70C4 File Offset: 0x003A52C4
+		// Token: 0x0600B6BF RID: 46783 RVA: 0x00123436 File Offset: 0x00121636
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void OnStateMachineStop_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__OnStateMachineStop_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__OnStateMachineStop_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060266D9 RID: 157401 RVA: 0x003A70DC File Offset: 0x003A52DC
-		[NullableContext(2)]
+		// Token: 0x0600B6C0 RID: 46784 RVA: 0x0012344A File Offset: 0x0012164A
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe virtual void OnStateMachineStateStarted(in FSMStateInfo State)
-		{
-			USMInstance.__OnStateMachineStateStarted_FunctionParams* ptr = stackalloc USMInstance.__OnStateMachineStateStarted_FunctionParams[(UIntPtr)143] + 15L / (long)sizeof(USMInstance.__OnStateMachineStateStarted_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(USMInstance.__OnStateMachineStateStarted_NativeFunctionPtr, (void*)ptr, 1);
-			if (State != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FSMStateInfo.StaticStruct(), &ptr->State, State.NativePtr, 1, false);
-			}
-			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, USMInstance.__OnStateMachineStateStarted_NativeFunctionPtr, (void*)ptr);
-			UnrealReflectionUtils.DestroyStruct(USMInstance.__OnStateMachineStateStarted_NativeFunctionPtr, (void*)ptr, 1);
-		}
-
-		// Token: 0x060266DA RID: 157402 RVA: 0x003A7154 File Offset: 0x003A5354
-		[NullableContext(2)]
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		protected unsafe virtual void OnStateMachineStateStarted_Implementation(in FSMStateInfo State)
-		{
-			USMInstance.__OnStateMachineStateStarted_FunctionParams* ptr = stackalloc USMInstance.__OnStateMachineStateStarted_FunctionParams[(UIntPtr)143] + 15L / (long)sizeof(USMInstance.__OnStateMachineStateStarted_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(USMInstance.__OnStateMachineStateStarted_NativeFunctionPtr, (void*)ptr, 1);
-			if (State != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FSMStateInfo.StaticStruct(), &ptr->State, State.NativePtr, 1, false);
-			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__OnStateMachineStateStarted_NativeFunctionPtr, (void*)ptr, 0);
-			UnrealReflectionUtils.DestroyStruct(USMInstance.__OnStateMachineStateStarted_NativeFunctionPtr, (void*)ptr, 1);
-		}
-
-		// Token: 0x060266DB RID: 157403 RVA: 0x003A71CC File Offset: 0x003A53CC
-		[NullableContext(2)]
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe virtual void OnStateMachineStateChanged(in FSMStateInfo ToState, in FSMStateInfo FromState)
-		{
-			USMInstance.__OnStateMachineStateChanged_FunctionParams* ptr = stackalloc USMInstance.__OnStateMachineStateChanged_FunctionParams[(UIntPtr)271] + 15L / (long)sizeof(USMInstance.__OnStateMachineStateChanged_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(USMInstance.__OnStateMachineStateChanged_NativeFunctionPtr, (void*)ptr, 1);
-			if (ToState != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FSMStateInfo.StaticStruct(), &ptr->ToState, ToState.NativePtr, 1, false);
-			}
-			if (FromState != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FSMStateInfo.StaticStruct(), &ptr->FromState, FromState.NativePtr, 1, false);
-			}
-			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, USMInstance.__OnStateMachineStateChanged_NativeFunctionPtr, (void*)ptr);
-			UnrealReflectionUtils.DestroyStruct(USMInstance.__OnStateMachineStateChanged_NativeFunctionPtr, (void*)ptr, 1);
-		}
-
-		// Token: 0x060266DC RID: 157404 RVA: 0x003A7268 File Offset: 0x003A5468
-		[NullableContext(2)]
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		protected unsafe virtual void OnStateMachineStateChanged_Implementation(in FSMStateInfo ToState, in FSMStateInfo FromState)
-		{
-			USMInstance.__OnStateMachineStateChanged_FunctionParams* ptr = stackalloc USMInstance.__OnStateMachineStateChanged_FunctionParams[(UIntPtr)271] + 15L / (long)sizeof(USMInstance.__OnStateMachineStateChanged_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(USMInstance.__OnStateMachineStateChanged_NativeFunctionPtr, (void*)ptr, 1);
-			if (ToState != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FSMStateInfo.StaticStruct(), &ptr->ToState, ToState.NativePtr, 1, false);
-			}
-			if (FromState != null)
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FSMStateInfo.StaticStruct(), &ptr->FromState, FromState.NativePtr, 1, false);
-			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__OnStateMachineStateChanged_NativeFunctionPtr, (void*)ptr, 0);
-			UnrealReflectionUtils.DestroyStruct(USMInstance.__OnStateMachineStateChanged_NativeFunctionPtr, (void*)ptr, 1);
-		}
-
-		// Token: 0x060266DD RID: 157405 RVA: 0x003A7304 File Offset: 0x003A5504
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void OnStateMachineStart()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, USMInstance.__OnStateMachineStart_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060266DE RID: 157406 RVA: 0x003A7318 File Offset: 0x003A5518
+		// Token: 0x0600B6C1 RID: 46785 RVA: 0x0012345E File Offset: 0x0012165E
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void OnStateMachineStart_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__OnStateMachineStart_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__OnStateMachineStart_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060266DF RID: 157407 RVA: 0x003A7330 File Offset: 0x003A5530
+		// Token: 0x0600B6C2 RID: 46786 RVA: 0x00123474 File Offset: 0x00121674
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void OnStateMachineInitialStateLoaded(in FGuid StateGuid)
 		{
 			USMInstance.__OnStateMachineInitialStateLoaded_FunctionParams* ptr = stackalloc USMInstance.__OnStateMachineInitialStateLoaded_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(USMInstance.__OnStateMachineInitialStateLoaded_FunctionParams) & -16L;
@@ -1245,68 +852,60 @@ namespace UnrealEngine
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, USMInstance.__OnStateMachineInitialStateLoaded_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060266E0 RID: 157408 RVA: 0x003A737C File Offset: 0x003A557C
+		// Token: 0x0600B6C3 RID: 46787 RVA: 0x001234C0 File Offset: 0x001216C0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void OnStateMachineInitialStateLoaded_Implementation(in FGuid StateGuid)
 		{
 			USMInstance.__OnStateMachineInitialStateLoaded_FunctionParams* ptr = stackalloc USMInstance.__OnStateMachineInitialStateLoaded_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(USMInstance.__OnStateMachineInitialStateLoaded_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__OnStateMachineInitialStateLoaded_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->StateGuid = StateGuid;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__OnStateMachineInitialStateLoaded_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__OnStateMachineInitialStateLoaded_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060266E1 RID: 157409 RVA: 0x003A73C8 File Offset: 0x003A55C8
+		// Token: 0x0600B6C4 RID: 46788 RVA: 0x0012350B File Offset: 0x0012170B
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void OnStateMachineInitialized()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, USMInstance.__OnStateMachineInitialized_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060266E2 RID: 157410 RVA: 0x003A73DC File Offset: 0x003A55DC
+		// Token: 0x0600B6C5 RID: 46789 RVA: 0x0012351F File Offset: 0x0012171F
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void OnStateMachineInitialized_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__OnStateMachineInitialized_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__OnStateMachineInitialized_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060266E3 RID: 157411 RVA: 0x003A73F1 File Offset: 0x003A55F1
+		// Token: 0x0600B6C6 RID: 46790 RVA: 0x00123533 File Offset: 0x00121733
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void OnPreStateMachineInitialized()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, USMInstance.__OnPreStateMachineInitialized_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060266E4 RID: 157412 RVA: 0x003A7405 File Offset: 0x003A5605
+		// Token: 0x0600B6C7 RID: 46791 RVA: 0x00123547 File Offset: 0x00121747
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void OnPreStateMachineInitialized_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__OnPreStateMachineInitialized_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__OnPreStateMachineInitialized_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060266E5 RID: 157413 RVA: 0x003A741A File Offset: 0x003A561A
+		// Token: 0x0600B6C8 RID: 46792 RVA: 0x0012355B File Offset: 0x0012175B
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void OnPostCompile()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, USMInstance.__OnPostCompile_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060266E6 RID: 157414 RVA: 0x003A742E File Offset: 0x003A562E
+		// Token: 0x0600B6C9 RID: 46793 RVA: 0x0012356F File Offset: 0x0012176F
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void OnPostCompile_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__OnPostCompile_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__OnPostCompile_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060266E7 RID: 157415 RVA: 0x003A7444 File Offset: 0x003A5644
+		// Token: 0x0600B6CA RID: 46794 RVA: 0x00123584 File Offset: 0x00121784
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void LoadFromState(in FGuid FromGuid, bool bAllParents = true, bool bNotify = true)
 		{
 			USMInstance.__LoadFromState_FunctionParams* ptr = stackalloc USMInstance.__LoadFromState_FunctionParams[(UIntPtr)35] + 15L / (long)sizeof(USMInstance.__LoadFromState_FunctionParams) & -16L;
@@ -1314,13 +913,12 @@ namespace UnrealEngine
 			ptr->FromGuid = FromGuid;
 			ptr->bAllParents = bAllParents;
 			ptr->bNotify = bNotify;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__LoadFromState_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__LoadFromState_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060266E8 RID: 157416 RVA: 0x003A74A0 File Offset: 0x003A56A0
+		// Token: 0x0600B6CB RID: 46795 RVA: 0x001235E0 File Offset: 0x001217E0
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void LoadFromMultipleStates(in TArray<FGuid> FromGuids, bool bNotify = true)
 		{
 			USMInstance.__LoadFromMultipleStates_FunctionParams* ptr = stackalloc USMInstance.__LoadFromMultipleStates_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(USMInstance.__LoadFromMultipleStates_FunctionParams) & -16L;
@@ -1331,7 +929,7 @@ namespace UnrealEngine
 				tarray.MoveTo(&ptr->FromGuids);
 			}
 			ptr->bNotify = bNotify;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__LoadFromMultipleStates_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__LoadFromMultipleStates_NativeFunctionPtr, (void*)ptr);
 			TArray<FGuid> tarray2 = FromGuids;
 			if (tarray2 != null)
 			{
@@ -1340,182 +938,149 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(USMInstance.__LoadFromMultipleStates_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x060266E9 RID: 157417 RVA: 0x003A7520 File Offset: 0x003A5720
-		[NullableContext(2)]
+		// Token: 0x0600B6CC RID: 46796 RVA: 0x00123660 File Offset: 0x00121860
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe void K2_TryGetNetworkInterface(ref ISMStateMachineNetworkedInterface Interface, ref bool bIsValid)
-		{
-			USMInstance.__K2_TryGetNetworkInterface_FunctionParams* ptr = stackalloc USMInstance.__K2_TryGetNetworkInterface_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(USMInstance.__K2_TryGetNetworkInterface_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(USMInstance.__K2_TryGetNetworkInterface_NativeFunctionPtr, (void*)ptr, 1);
-			ref USMInstance.__K2_TryGetNetworkInterface_FunctionParams ptr2 = ref *ptr;
-			IUnrealNativeInterface @object = Interface;
-			ISMStateMachineNetworkedInterface ismstateMachineNetworkedInterface = Interface;
-			ptr2.Interface = new FScriptInterface(@object, (ismstateMachineNetworkedInterface != null) ? ismstateMachineNetworkedInterface.InterfaceOffset() : 0);
-			ptr->bIsValid = bIsValid;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__K2_TryGetNetworkInterface_NativeFunctionPtr, (void*)ptr, 0);
-			Interface = (BuiltinUtils.GetOrCreateUObjectByNativePointer(ptr->Interface.ObjectPointer) as ISMStateMachineNetworkedInterface);
-			bIsValid = ptr->bIsValid;
-		}
-
-		// Token: 0x060266EA RID: 157418 RVA: 0x003A75A4 File Offset: 0x003A57A4
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool IsTickableWhenPaused()
 		{
 			USMInstance.__IsTickableWhenPaused_FunctionParams* ptr = stackalloc USMInstance.__IsTickableWhenPaused_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(USMInstance.__IsTickableWhenPaused_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__IsTickableWhenPaused_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__IsTickableWhenPaused_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__IsTickableWhenPaused_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x060266EB RID: 157419 RVA: 0x003A75EC File Offset: 0x003A57EC
+		// Token: 0x0600B6CD RID: 46797 RVA: 0x001236A8 File Offset: 0x001218A8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool IsTickable()
 		{
 			USMInstance.__IsTickable_FunctionParams* ptr = stackalloc USMInstance.__IsTickable_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(USMInstance.__IsTickable_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__IsTickable_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__IsTickable_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__IsTickable_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x060266EC RID: 157420 RVA: 0x003A7634 File Offset: 0x003A5834
+		// Token: 0x0600B6CE RID: 46798 RVA: 0x001236F0 File Offset: 0x001218F0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool IsInitialized()
 		{
 			USMInstance.__IsInitialized_FunctionParams* ptr = stackalloc USMInstance.__IsInitialized_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(USMInstance.__IsInitialized_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__IsInitialized_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__IsInitialized_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__IsInitialized_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x060266ED RID: 157421 RVA: 0x003A767C File Offset: 0x003A587C
+		// Token: 0x0600B6CF RID: 46799 RVA: 0x00123738 File Offset: 0x00121938
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool IsInEndState()
 		{
 			USMInstance.__IsInEndState_FunctionParams* ptr = stackalloc USMInstance.__IsInEndState_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(USMInstance.__IsInEndState_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__IsInEndState_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__IsInEndState_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__IsInEndState_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x060266EE RID: 157422 RVA: 0x003A76C4 File Offset: 0x003A58C4
+		// Token: 0x0600B6D0 RID: 46800 RVA: 0x00123780 File Offset: 0x00121980
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool IsActive()
 		{
 			USMInstance.__IsActive_FunctionParams* ptr = stackalloc USMInstance.__IsActive_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(USMInstance.__IsActive_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__IsActive_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__IsActive_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__IsActive_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x060266EF RID: 157423 RVA: 0x003A770C File Offset: 0x003A590C
+		// Token: 0x0600B6D1 RID: 46801 RVA: 0x001237C8 File Offset: 0x001219C8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Internal_Update(float DeltaSeconds)
 		{
 			USMInstance.__Internal_Update_FunctionParams* ptr = stackalloc USMInstance.__Internal_Update_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(USMInstance.__Internal_Update_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__Internal_Update_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->DeltaSeconds = DeltaSeconds;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__Internal_Update_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__Internal_Update_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060266F0 RID: 157424 RVA: 0x003A7753 File Offset: 0x003A5953
+		// Token: 0x0600B6D2 RID: 46802 RVA: 0x0012380E File Offset: 0x00121A0E
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Internal_EventUpdate()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__Internal_EventUpdate_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__Internal_EventUpdate_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060266F1 RID: 157425 RVA: 0x003A7768 File Offset: 0x003A5968
+		// Token: 0x0600B6D3 RID: 46803 RVA: 0x00123824 File Offset: 0x00121A24
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Internal_EventCleanup(in FGuid PathGuid)
 		{
 			USMInstance.__Internal_EventCleanup_FunctionParams* ptr = stackalloc USMInstance.__Internal_EventCleanup_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(USMInstance.__Internal_EventCleanup_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__Internal_EventCleanup_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->PathGuid = PathGuid;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__Internal_EventCleanup_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__Internal_EventCleanup_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060266F2 RID: 157426 RVA: 0x003A77B4 File Offset: 0x003A59B4
+		// Token: 0x0600B6D4 RID: 46804 RVA: 0x00123870 File Offset: 0x00121A70
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool Internal_EvaluateAndTakeTransitionChainByGuid(in FGuid PathGuid)
 		{
 			USMInstance.__Internal_EvaluateAndTakeTransitionChainByGuid_FunctionParams* ptr = stackalloc USMInstance.__Internal_EvaluateAndTakeTransitionChainByGuid_FunctionParams[(UIntPtr)35] + 15L / (long)sizeof(USMInstance.__Internal_EvaluateAndTakeTransitionChainByGuid_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__Internal_EvaluateAndTakeTransitionChainByGuid_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->PathGuid = PathGuid;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__Internal_EvaluateAndTakeTransitionChainByGuid_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__Internal_EvaluateAndTakeTransitionChainByGuid_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x060266F3 RID: 157427 RVA: 0x003A7808 File Offset: 0x003A5A08
+		// Token: 0x0600B6D5 RID: 46805 RVA: 0x001238C4 File Offset: 0x00121AC4
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Initialize(UObject Context)
 		{
 			USMInstance.__Initialize_FunctionParams* ptr = stackalloc USMInstance.__Initialize_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(USMInstance.__Initialize_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__Initialize_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->Context = ((Context != null) ? Context.NativePtr : IntPtr.Zero);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__Initialize_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__Initialize_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060266F4 RID: 157428 RVA: 0x003A7860 File Offset: 0x003A5A60
+		// Token: 0x0600B6D6 RID: 46806 RVA: 0x0012391C File Offset: 0x00121B1C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool HasStarted()
 		{
 			USMInstance.__HasStarted_FunctionParams* ptr = stackalloc USMInstance.__HasStarted_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(USMInstance.__HasStarted_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__HasStarted_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__HasStarted_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__HasStarted_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x060266F5 RID: 157429 RVA: 0x003A78A8 File Offset: 0x003A5AA8
+		// Token: 0x0600B6D7 RID: 46807 RVA: 0x00123964 File Offset: 0x00121B64
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe USMTransitionInstance GetTransitionInstanceByGuid(in FGuid Guid)
 		{
 			USMInstance.__GetTransitionInstanceByGuid_FunctionParams* ptr = stackalloc USMInstance.__GetTransitionInstanceByGuid_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(USMInstance.__GetTransitionInstanceByGuid_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__GetTransitionInstanceByGuid_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->Guid = Guid;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetTransitionInstanceByGuid_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetTransitionInstanceByGuid_NativeFunctionPtr, (void*)ptr);
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<USMTransitionInstance>(ptr->__Result);
 		}
 
-		// Token: 0x060266F6 RID: 157430 RVA: 0x003A7900 File Offset: 0x003A5B00
+		// Token: 0x0600B6D8 RID: 46808 RVA: 0x001239BC File Offset: 0x00121BBC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe float GetTickInterval()
 		{
 			USMInstance.__GetTickInterval_FunctionParams* ptr = stackalloc USMInstance.__GetTickInterval_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(USMInstance.__GetTickInterval_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__GetTickInterval_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetTickInterval_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetTickInterval_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x060266F7 RID: 157431 RVA: 0x003A7948 File Offset: 0x003A5B48
+		// Token: 0x0600B6D9 RID: 46809 RVA: 0x00123A04 File Offset: 0x00121C04
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool GetStopOnEndState()
 		{
 			USMInstance.__GetStopOnEndState_FunctionParams* ptr = stackalloc USMInstance.__GetStopOnEndState_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(USMInstance.__GetStopOnEndState_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__GetStopOnEndState_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetStopOnEndState_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetStopOnEndState_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x060266F8 RID: 157432 RVA: 0x003A7990 File Offset: 0x003A5B90
+		// Token: 0x0600B6DA RID: 46810 RVA: 0x00123A4C File Offset: 0x00121C4C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -1525,253 +1090,198 @@ namespace UnrealEngine
 		{
 			USMInstance.__GetStateMachineClass_FunctionParams* ptr = stackalloc USMInstance.__GetStateMachineClass_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(USMInstance.__GetStateMachineClass_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__GetStateMachineClass_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetStateMachineClass_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetStateMachineClass_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x060266F9 RID: 157433 RVA: 0x003A79D8 File Offset: 0x003A5BD8
+		// Token: 0x0600B6DB RID: 46811 RVA: 0x00123A94 File Offset: 0x00121C94
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		[return: Nullable(2)]
 		public unsafe USMStateInstance_Base GetStateInstanceByQualifiedName(string InFullPath)
 		{
 			USMInstance.__GetStateInstanceByQualifiedName_FunctionParams* ptr = stackalloc USMInstance.__GetStateInstanceByQualifiedName_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(USMInstance.__GetStateInstanceByQualifiedName_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__GetStateInstanceByQualifiedName_NativeFunctionPtr, (void*)ptr, 1);
 			FString.CopyFrom((void*)(&ptr->InFullPath), InFullPath);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetStateInstanceByQualifiedName_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetStateInstanceByQualifiedName_NativeFunctionPtr, (void*)ptr);
 			USMStateInstance_Base orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USMStateInstance_Base>(ptr->__Result);
 			UnrealReflectionUtils.DestroyStruct(USMInstance.__GetStateInstanceByQualifiedName_NativeFunctionPtr, (void*)ptr, 1);
 			return orCreateUObjectByNativePointer;
 		}
 
-		// Token: 0x060266FA RID: 157434 RVA: 0x003A7A44 File Offset: 0x003A5C44
+		// Token: 0x0600B6DC RID: 46812 RVA: 0x00123AFC File Offset: 0x00121CFC
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe USMStateInstance_Base GetStateInstanceByGuid(in FGuid Guid)
 		{
 			USMInstance.__GetStateInstanceByGuid_FunctionParams* ptr = stackalloc USMInstance.__GetStateInstanceByGuid_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(USMInstance.__GetStateInstanceByGuid_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__GetStateInstanceByGuid_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->Guid = Guid;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetStateInstanceByGuid_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetStateInstanceByGuid_NativeFunctionPtr, (void*)ptr);
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<USMStateInstance_Base>(ptr->__Result);
 		}
 
-		// Token: 0x060266FB RID: 157435 RVA: 0x003A7A9C File Offset: 0x003A5C9C
+		// Token: 0x0600B6DD RID: 46813 RVA: 0x00123B54 File Offset: 0x00121D54
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe int GetStateHistoryMaxCount()
 		{
 			USMInstance.__GetStateHistoryMaxCount_FunctionParams* ptr = stackalloc USMInstance.__GetStateHistoryMaxCount_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(USMInstance.__GetStateHistoryMaxCount_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__GetStateHistoryMaxCount_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetStateHistoryMaxCount_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetStateHistoryMaxCount_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x060266FC RID: 157436 RVA: 0x003A7AE4 File Offset: 0x003A5CE4
-		[NullableContext(1)]
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe TArray<FSMStateHistory> GetStateHistory()
-		{
-			USMInstance.__GetStateHistory_FunctionParams* ptr = stackalloc USMInstance.__GetStateHistory_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(USMInstance.__GetStateHistory_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(USMInstance.__GetStateHistory_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetStateHistory_NativeFunctionPtr, (void*)ptr, 0);
-			TArray<FSMStateHistory> result = new TArray<FSMStateHistory>(&ptr->__Result, true, true);
-			UnrealReflectionUtils.DestroyStruct(USMInstance.__GetStateHistory_NativeFunctionPtr, (void*)ptr, 1);
-			return result;
-		}
-
-		// Token: 0x060266FD RID: 157437 RVA: 0x003A7B44 File Offset: 0x003A5D44
+		// Token: 0x0600B6DE RID: 46814 RVA: 0x00123B9C File Offset: 0x00121D9C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe USMStateInstance_Base GetSingleActiveStateInstance(bool bCheckNested = true)
 		{
 			USMInstance.__GetSingleActiveStateInstance_FunctionParams* ptr = stackalloc USMInstance.__GetSingleActiveStateInstance_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(USMInstance.__GetSingleActiveStateInstance_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__GetSingleActiveStateInstance_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->bCheckNested = bCheckNested;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetSingleActiveStateInstance_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetSingleActiveStateInstance_NativeFunctionPtr, (void*)ptr);
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<USMStateInstance_Base>(ptr->__Result);
 		}
 
-		// Token: 0x060266FE RID: 157438 RVA: 0x003A7B98 File Offset: 0x003A5D98
+		// Token: 0x0600B6DF RID: 46815 RVA: 0x00123BF0 File Offset: 0x00121DF0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe FGuid GetSingleActiveStateGuid(bool bCheckNested = true)
 		{
 			USMInstance.__GetSingleActiveStateGuid_FunctionParams* ptr = stackalloc USMInstance.__GetSingleActiveStateGuid_FunctionParams[(UIntPtr)35] + 15L / (long)sizeof(USMInstance.__GetSingleActiveStateGuid_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__GetSingleActiveStateGuid_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->bCheckNested = bCheckNested;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetSingleActiveStateGuid_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetSingleActiveStateGuid_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x060266FF RID: 157439 RVA: 0x003A7BE8 File Offset: 0x003A5DE8
+		// Token: 0x0600B6E0 RID: 46816 RVA: 0x00123C3C File Offset: 0x00121E3C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe USMStateMachineInstance GetRootStateMachineNodeInstance()
 		{
 			USMInstance.__GetRootStateMachineNodeInstance_FunctionParams* ptr = stackalloc USMInstance.__GetRootStateMachineNodeInstance_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(USMInstance.__GetRootStateMachineNodeInstance_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__GetRootStateMachineNodeInstance_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetRootStateMachineNodeInstance_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetRootStateMachineNodeInstance_NativeFunctionPtr, (void*)ptr);
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<USMStateMachineInstance>(ptr->__Result);
 		}
 
-		// Token: 0x06026700 RID: 157440 RVA: 0x003A7C34 File Offset: 0x003A5E34
+		// Token: 0x0600B6E1 RID: 46817 RVA: 0x00123C88 File Offset: 0x00121E88
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe USMStateMachineInstance GetRootStateMachineInstance()
 		{
 			USMInstance.__GetRootStateMachineInstance_FunctionParams* ptr = stackalloc USMInstance.__GetRootStateMachineInstance_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(USMInstance.__GetRootStateMachineInstance_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__GetRootStateMachineInstance_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetRootStateMachineInstance_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetRootStateMachineInstance_NativeFunctionPtr, (void*)ptr);
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<USMStateMachineInstance>(ptr->__Result);
 		}
 
-		// Token: 0x06026701 RID: 157441 RVA: 0x003A7C80 File Offset: 0x003A5E80
+		// Token: 0x0600B6E2 RID: 46818 RVA: 0x00123CD4 File Offset: 0x00121ED4
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe USMInstance GetReferenceOwner()
 		{
 			USMInstance.__GetReferenceOwner_FunctionParams* ptr = stackalloc USMInstance.__GetReferenceOwner_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(USMInstance.__GetReferenceOwner_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__GetReferenceOwner_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetReferenceOwner_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetReferenceOwner_NativeFunctionPtr, (void*)ptr);
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<USMInstance>(ptr->__Result);
 		}
 
-		// Token: 0x06026702 RID: 157442 RVA: 0x003A7CCC File Offset: 0x003A5ECC
+		// Token: 0x0600B6E3 RID: 46819 RVA: 0x00123D20 File Offset: 0x00121F20
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe USMInstance GetReferencedInstanceByGuid(in FGuid Guid)
 		{
 			USMInstance.__GetReferencedInstanceByGuid_FunctionParams* ptr = stackalloc USMInstance.__GetReferencedInstanceByGuid_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(USMInstance.__GetReferencedInstanceByGuid_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__GetReferencedInstanceByGuid_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->Guid = Guid;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetReferencedInstanceByGuid_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetReferencedInstanceByGuid_NativeFunctionPtr, (void*)ptr);
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<USMInstance>(ptr->__Result);
 		}
 
-		// Token: 0x06026703 RID: 157443 RVA: 0x003A7D24 File Offset: 0x003A5F24
+		// Token: 0x0600B6E4 RID: 46820 RVA: 0x00123D78 File Offset: 0x00121F78
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe USMInstance GetPrimaryReferenceOwner()
 		{
 			USMInstance.__GetPrimaryReferenceOwner_FunctionParams* ptr = stackalloc USMInstance.__GetPrimaryReferenceOwner_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(USMInstance.__GetPrimaryReferenceOwner_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__GetPrimaryReferenceOwner_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetPrimaryReferenceOwner_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetPrimaryReferenceOwner_NativeFunctionPtr, (void*)ptr);
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<USMInstance>(ptr->__Result);
 		}
 
-		// Token: 0x06026704 RID: 157444 RVA: 0x003A7D70 File Offset: 0x003A5F70
+		// Token: 0x0600B6E5 RID: 46821 RVA: 0x00123DC4 File Offset: 0x00121FC4
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe USMNodeInstance GetNodeInstanceByGuid(in FGuid Guid)
 		{
 			USMInstance.__GetNodeInstanceByGuid_FunctionParams* ptr = stackalloc USMInstance.__GetNodeInstanceByGuid_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(USMInstance.__GetNodeInstanceByGuid_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__GetNodeInstanceByGuid_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->Guid = Guid;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetNodeInstanceByGuid_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetNodeInstanceByGuid_NativeFunctionPtr, (void*)ptr);
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<USMNodeInstance>(ptr->__Result);
 		}
 
-		// Token: 0x06026705 RID: 157445 RVA: 0x003A7DC8 File Offset: 0x003A5FC8
-		[NullableContext(2)]
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe ISMStateMachineNetworkedInterface GetNetworkInterface()
-		{
-			USMInstance.__GetNetworkInterface_FunctionParams* ptr = stackalloc USMInstance.__GetNetworkInterface_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(USMInstance.__GetNetworkInterface_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(USMInstance.__GetNetworkInterface_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetNetworkInterface_NativeFunctionPtr, (void*)ptr, 0);
-			return BuiltinUtils.GetOrCreateUObjectByNativePointer(ptr->__Result.ObjectPointer) as ISMStateMachineNetworkedInterface;
-		}
-
-		// Token: 0x06026706 RID: 157446 RVA: 0x003A7E20 File Offset: 0x003A6020
+		// Token: 0x0600B6E6 RID: 46822 RVA: 0x00123E1C File Offset: 0x0012201C
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe string GetNestedActiveStateName()
 		{
 			USMInstance.__GetNestedActiveStateName_FunctionParams* ptr = stackalloc USMInstance.__GetNestedActiveStateName_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(USMInstance.__GetNestedActiveStateName_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__GetNestedActiveStateName_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetNestedActiveStateName_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetNestedActiveStateName_NativeFunctionPtr, (void*)ptr);
 			string result = FString.ToString((void*)(&ptr->__Result));
 			UnrealReflectionUtils.DestroyStruct(USMInstance.__GetNestedActiveStateName_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x06026707 RID: 157447 RVA: 0x003A7E80 File Offset: 0x003A6080
+		// Token: 0x0600B6E7 RID: 46823 RVA: 0x00123E78 File Offset: 0x00122078
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe FGuid GetNestedActiveStateGuid()
 		{
 			USMInstance.__GetNestedActiveStateGuid_FunctionParams* ptr = stackalloc USMInstance.__GetNestedActiveStateGuid_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(USMInstance.__GetNestedActiveStateGuid_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__GetNestedActiveStateGuid_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetNestedActiveStateGuid_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetNestedActiveStateGuid_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06026708 RID: 157448 RVA: 0x003A7EC8 File Offset: 0x003A60C8
+		// Token: 0x0600B6E8 RID: 46824 RVA: 0x00123EC0 File Offset: 0x001220C0
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe USMInstance GetMasterReferenceOwner()
 		{
 			USMInstance.__GetMasterReferenceOwner_FunctionParams* ptr = stackalloc USMInstance.__GetMasterReferenceOwner_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(USMInstance.__GetMasterReferenceOwner_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__GetMasterReferenceOwner_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetMasterReferenceOwner_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetMasterReferenceOwner_NativeFunctionPtr, (void*)ptr);
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<USMInstance>(ptr->__Result);
 		}
 
-		// Token: 0x06026709 RID: 157449 RVA: 0x003A7F14 File Offset: 0x003A6114
+		// Token: 0x0600B6E9 RID: 46825 RVA: 0x00123F0C File Offset: 0x0012210C
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe TMap<FGuid, FGuid> GetGuidRedirectMap()
 		{
 			USMInstance.__GetGuidRedirectMap_FunctionParams* ptr = stackalloc USMInstance.__GetGuidRedirectMap_FunctionParams[(UIntPtr)95] + 15L / (long)sizeof(USMInstance.__GetGuidRedirectMap_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__GetGuidRedirectMap_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetGuidRedirectMap_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetGuidRedirectMap_NativeFunctionPtr, (void*)ptr);
 			TMap<FGuid, FGuid> result = new TMap<FGuid, FGuid>(&ptr->__Result, true, true);
 			UnrealReflectionUtils.DestroyStruct(USMInstance.__GetGuidRedirectMap_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x0602670A RID: 157450 RVA: 0x003A7F74 File Offset: 0x003A6174
+		// Token: 0x0600B6EA RID: 46826 RVA: 0x00123F6C File Offset: 0x0012216C
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe UObject GetContext()
 		{
 			USMInstance.__GetContext_FunctionParams* ptr = stackalloc USMInstance.__GetContext_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(USMInstance.__GetContext_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__GetContext_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetContext_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetContext_NativeFunctionPtr, (void*)ptr);
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UObject>(ptr->__Result);
 		}
 
-		// Token: 0x0602670B RID: 157451 RVA: 0x003A7FC0 File Offset: 0x003A61C0
-		[NullableContext(2)]
+		// Token: 0x0600B6EB RID: 46827 RVA: 0x00123FB8 File Offset: 0x001221B8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
-		public unsafe USMStateMachineComponent GetComponentOwner()
-		{
-			USMInstance.__GetComponentOwner_FunctionParams* ptr = stackalloc USMInstance.__GetComponentOwner_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(USMInstance.__GetComponentOwner_FunctionParams) & -16L;
-			UnrealReflectionUtils.InitializeStruct(USMInstance.__GetComponentOwner_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetComponentOwner_NativeFunctionPtr, (void*)ptr, 0);
-			return BuiltinUtils.GetOrCreateUObjectByNativePointer<USMStateMachineComponent>(ptr->__Result);
-		}
-
-		// Token: 0x0602670C RID: 157452 RVA: 0x003A800C File Offset: 0x003A620C
-		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void GetAllTransitionInstances([Nullable(new byte[]
 		{
 			2,
@@ -1785,7 +1295,7 @@ namespace UnrealEngine
 			{
 				tarray.MoveTo(&ptr->TransitionInstances);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetAllTransitionInstances_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetAllTransitionInstances_NativeFunctionPtr, (void*)ptr);
 			TArray<USMTransitionInstance> tarray2 = TransitionInstances;
 			if (tarray2 != null)
 			{
@@ -1794,9 +1304,8 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(USMInstance.__GetAllTransitionInstances_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0602670D RID: 157453 RVA: 0x003A8088 File Offset: 0x003A6288
+		// Token: 0x0600B6EC RID: 46828 RVA: 0x00124030 File Offset: 0x00122230
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void GetAllStateInstances([Nullable(new byte[]
 		{
 			2,
@@ -1810,7 +1319,7 @@ namespace UnrealEngine
 			{
 				tarray.MoveTo(&ptr->StateInstances);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetAllStateInstances_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetAllStateInstances_NativeFunctionPtr, (void*)ptr);
 			TArray<USMStateInstance_Base> tarray2 = StateInstances;
 			if (tarray2 != null)
 			{
@@ -1819,9 +1328,8 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(USMInstance.__GetAllStateInstances_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0602670E RID: 157454 RVA: 0x003A8104 File Offset: 0x003A6304
+		// Token: 0x0600B6ED RID: 46829 RVA: 0x001240A8 File Offset: 0x001222A8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void GetAllRootNodeInstance([Nullable(new byte[]
 		{
 			2,
@@ -1835,7 +1343,7 @@ namespace UnrealEngine
 			{
 				tarray.MoveTo(&ptr->Nodes);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetAllRootNodeInstance_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetAllRootNodeInstance_NativeFunctionPtr, (void*)ptr);
 			TArray<USMStateMachineInstance> tarray2 = Nodes;
 			if (tarray2 != null)
 			{
@@ -1844,38 +1352,35 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(USMInstance.__GetAllRootNodeInstance_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0602670F RID: 157455 RVA: 0x003A8180 File Offset: 0x003A6380
+		// Token: 0x0600B6EE RID: 46830 RVA: 0x00124120 File Offset: 0x00122320
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe TArray<USMInstance> GetAllReferencedInstances(bool bIncludeChildren = false)
 		{
 			USMInstance.__GetAllReferencedInstances_FunctionParams* ptr = stackalloc USMInstance.__GetAllReferencedInstances_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(USMInstance.__GetAllReferencedInstances_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__GetAllReferencedInstances_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->bIncludeChildren = bIncludeChildren;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetAllReferencedInstances_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetAllReferencedInstances_NativeFunctionPtr, (void*)ptr);
 			TArray<USMInstance> result = new TArray<USMInstance>(&ptr->__Result, true, true);
 			UnrealReflectionUtils.DestroyStruct(USMInstance.__GetAllReferencedInstances_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x06026710 RID: 157456 RVA: 0x003A81E8 File Offset: 0x003A63E8
+		// Token: 0x0600B6EF RID: 46831 RVA: 0x00124188 File Offset: 0x00122388
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe TArray<FGuid> GetAllCurrentStateGuids()
 		{
 			USMInstance.__GetAllCurrentStateGuids_FunctionParams* ptr = stackalloc USMInstance.__GetAllCurrentStateGuids_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(USMInstance.__GetAllCurrentStateGuids_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__GetAllCurrentStateGuids_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetAllCurrentStateGuids_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetAllCurrentStateGuids_NativeFunctionPtr, (void*)ptr);
 			TArray<FGuid> result = new TArray<FGuid>(&ptr->__Result, true, true);
 			UnrealReflectionUtils.DestroyStruct(USMInstance.__GetAllCurrentStateGuids_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x06026711 RID: 157457 RVA: 0x003A8248 File Offset: 0x003A6448
+		// Token: 0x0600B6F0 RID: 46832 RVA: 0x001241E8 File Offset: 0x001223E8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void GetAllActiveStateInstances([Nullable(new byte[]
 		{
 			2,
@@ -1889,7 +1394,7 @@ namespace UnrealEngine
 			{
 				tarray.MoveTo(&ptr->ActiveStateInstances);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetAllActiveStateInstances_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetAllActiveStateInstances_NativeFunctionPtr, (void*)ptr);
 			TArray<USMStateInstance_Base> tarray2 = ActiveStateInstances;
 			if (tarray2 != null)
 			{
@@ -1898,10 +1403,9 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(USMInstance.__GetAllActiveStateInstances_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06026712 RID: 157458 RVA: 0x003A82C4 File Offset: 0x003A64C4
+		// Token: 0x0600B6F1 RID: 46833 RVA: 0x00124260 File Offset: 0x00122460
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void GetAllActiveStateGuids(ref TArray<FGuid> ActiveGuids)
 		{
 			USMInstance.__GetAllActiveStateGuids_FunctionParams* ptr = stackalloc USMInstance.__GetAllActiveStateGuids_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(USMInstance.__GetAllActiveStateGuids_FunctionParams) & -16L;
@@ -1911,7 +1415,7 @@ namespace UnrealEngine
 			{
 				tarray.MoveTo(&ptr->ActiveGuids);
 			}
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetAllActiveStateGuids_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetAllActiveStateGuids_NativeFunctionPtr, (void*)ptr);
 			TArray<FGuid> tarray2 = ActiveGuids;
 			if (tarray2 != null)
 			{
@@ -1920,69 +1424,63 @@ namespace UnrealEngine
 			UnrealReflectionUtils.DestroyStruct(USMInstance.__GetAllActiveStateGuids_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x06026713 RID: 157459 RVA: 0x003A8340 File Offset: 0x003A6540
+		// Token: 0x0600B6F2 RID: 46834 RVA: 0x001242D8 File Offset: 0x001224D8
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe string GetActiveStateName()
 		{
 			USMInstance.__GetActiveStateName_FunctionParams* ptr = stackalloc USMInstance.__GetActiveStateName_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(USMInstance.__GetActiveStateName_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__GetActiveStateName_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetActiveStateName_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetActiveStateName_NativeFunctionPtr, (void*)ptr);
 			string result = FString.ToString((void*)(&ptr->__Result));
 			UnrealReflectionUtils.DestroyStruct(USMInstance.__GetActiveStateName_NativeFunctionPtr, (void*)ptr, 1);
 			return result;
 		}
 
-		// Token: 0x06026714 RID: 157460 RVA: 0x003A83A0 File Offset: 0x003A65A0
+		// Token: 0x0600B6F3 RID: 46835 RVA: 0x00124334 File Offset: 0x00122534
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe USMStateInstance_Base GetActiveStateInstance(bool bCheckNested = true)
 		{
 			USMInstance.__GetActiveStateInstance_FunctionParams* ptr = stackalloc USMInstance.__GetActiveStateInstance_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(USMInstance.__GetActiveStateInstance_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__GetActiveStateInstance_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->bCheckNested = bCheckNested;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetActiveStateInstance_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetActiveStateInstance_NativeFunctionPtr, (void*)ptr);
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<USMStateInstance_Base>(ptr->__Result);
 		}
 
-		// Token: 0x06026715 RID: 157461 RVA: 0x003A83F4 File Offset: 0x003A65F4
+		// Token: 0x0600B6F4 RID: 46836 RVA: 0x00124388 File Offset: 0x00122588
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe FGuid GetActiveStateGuid()
 		{
 			USMInstance.__GetActiveStateGuid_FunctionParams* ptr = stackalloc USMInstance.__GetActiveStateGuid_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(USMInstance.__GetActiveStateGuid_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__GetActiveStateGuid_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetActiveStateGuid_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__GetActiveStateGuid_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06026716 RID: 157462 RVA: 0x003A843A File Offset: 0x003A663A
+		// Token: 0x0600B6F5 RID: 46837 RVA: 0x001243CD File Offset: 0x001225CD
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void EvaluateTransitions()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__EvaluateTransitions_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__EvaluateTransitions_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06026717 RID: 157463 RVA: 0x003A8450 File Offset: 0x003A6650
+		// Token: 0x0600B6F6 RID: 46838 RVA: 0x001243E4 File Offset: 0x001225E4
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool EvaluateAndTakeTransitionChain(USMTransitionInstance InFirstTransitionInstance)
 		{
 			USMInstance.__EvaluateAndTakeTransitionChain_FunctionParams* ptr = stackalloc USMInstance.__EvaluateAndTakeTransitionChain_FunctionParams[(UIntPtr)31] + 15L / (long)sizeof(USMInstance.__EvaluateAndTakeTransitionChain_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__EvaluateAndTakeTransitionChain_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->InFirstTransitionInstance = ((InFirstTransitionInstance != null) ? InFirstTransitionInstance.NativePtr : IntPtr.Zero);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__EvaluateAndTakeTransitionChain_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__EvaluateAndTakeTransitionChain_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x06026718 RID: 157464 RVA: 0x003A84AC File Offset: 0x003A66AC
+		// Token: 0x0600B6F7 RID: 46839 RVA: 0x00124440 File Offset: 0x00122640
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool EvaluateAndFindTransitionChain(USMTransitionInstance InFirstTransitionInstance, [Nullable(new byte[]
 		{
 			2,
@@ -2001,7 +1499,7 @@ namespace UnrealEngine
 			USMStateInstance_Base usmstateInstance_Base = OutDestinationState;
 			ptr2.OutDestinationState = ((usmstateInstance_Base != null) ? usmstateInstance_Base.NativePtr : IntPtr.Zero);
 			ptr->bRequirePreviousStateActive = bRequirePreviousStateActive;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__EvaluateAndFindTransitionChain_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__EvaluateAndFindTransitionChain_NativeFunctionPtr, (void*)ptr);
 			TArray<USMTransitionInstance> tarray2 = OutTransitionChain;
 			if (tarray2 != null)
 			{
@@ -2013,111 +1511,91 @@ namespace UnrealEngine
 			return _Result;
 		}
 
-		// Token: 0x06026719 RID: 157465 RVA: 0x003A856E File Offset: 0x003A676E
+		// Token: 0x0600B6F8 RID: 46840 RVA: 0x00124501 File Offset: 0x00122701
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void ClearStateHistory()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__ClearStateHistory_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__ClearStateHistory_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602671A RID: 157466 RVA: 0x003A8583 File Offset: 0x003A6783
+		// Token: 0x0600B6F9 RID: 46841 RVA: 0x00124515 File Offset: 0x00122715
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void ClearLoadedStates()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__ClearLoadedStates_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__ClearLoadedStates_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x0602671B RID: 157467 RVA: 0x003A8598 File Offset: 0x003A6798
+		// Token: 0x0600B6FA RID: 46842 RVA: 0x0012452C File Offset: 0x0012272C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool CanTickOnManualUpdate()
 		{
 			USMInstance.__CanTickOnManualUpdate_FunctionParams* ptr = stackalloc USMInstance.__CanTickOnManualUpdate_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(USMInstance.__CanTickOnManualUpdate_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__CanTickOnManualUpdate_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__CanTickOnManualUpdate_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__CanTickOnManualUpdate_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x0602671C RID: 157468 RVA: 0x003A85E0 File Offset: 0x003A67E0
+		// Token: 0x0600B6FB RID: 46843 RVA: 0x00124574 File Offset: 0x00122774
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool CanEverTick()
 		{
 			USMInstance.__CanEverTick_FunctionParams* ptr = stackalloc USMInstance.__CanEverTick_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(USMInstance.__CanEverTick_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__CanEverTick_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__CanEverTick_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__CanEverTick_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x0602671D RID: 157469 RVA: 0x003A8628 File Offset: 0x003A6828
+		// Token: 0x0600B6FC RID: 46844 RVA: 0x001245BC File Offset: 0x001227BC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool CanAutoManageTime()
 		{
 			USMInstance.__CanAutoManageTime_FunctionParams* ptr = stackalloc USMInstance.__CanAutoManageTime_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(USMInstance.__CanAutoManageTime_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__CanAutoManageTime_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__CanAutoManageTime_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__CanAutoManageTime_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x0602671E RID: 157470 RVA: 0x003A8670 File Offset: 0x003A6870
+		// Token: 0x0600B6FD RID: 46845 RVA: 0x00124604 File Offset: 0x00122804
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe bool AreInitialStatesSetFromLoad()
 		{
 			USMInstance.__AreInitialStatesSetFromLoad_FunctionParams* ptr = stackalloc USMInstance.__AreInitialStatesSetFromLoad_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(USMInstance.__AreInitialStatesSetFromLoad_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(USMInstance.__AreInitialStatesSetFromLoad_NativeFunctionPtr, (void*)ptr, 1);
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__AreInitialStatesSetFromLoad_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, USMInstance.__AreInitialStatesSetFromLoad_NativeFunctionPtr, (void*)ptr);
 			return ptr->__Result;
 		}
 
-		// Token: 0x0602671F RID: 157471 RVA: 0x003A86B6 File Offset: 0x003A68B6
+		// Token: 0x0600B6FE RID: 46846 RVA: 0x00124649 File Offset: 0x00122849
 		static USMInstance()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/SMSystem.SMInstance");
 		}
 
-		// Token: 0x06026720 RID: 157472 RVA: 0x003A86C4 File Offset: 0x003A68C4
+		// Token: 0x0600B6FF RID: 46847 RVA: 0x00124657 File Offset: 0x00122857
 		protected USMInstance(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040150F2 RID: 86258
-		internal static int __InterfaceOffset_ISMStateMachineInterface;
-
-		// Token: 0x040150F3 RID: 86259
+		// Token: 0x04005274 RID: 21108
 		internal static int __InterfaceOffset_ISMInstanceInterface;
 
-		// Token: 0x040150F4 RID: 86260
+		// Token: 0x04005275 RID: 21109
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/SMSystem.SMInstance";
 
-		// Token: 0x040150F5 RID: 86261
+		// Token: 0x04005276 RID: 21110
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040150F6 RID: 86262
+		// Token: 0x04005277 RID: 21111
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040150F7 RID: 86263
-		internal static int __PropertyOffset_ReplicatedReferences;
-
-		// Token: 0x040150F8 RID: 86264
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<FSMReferenceContainer> _ReplicatedReferences;
-
-		// Token: 0x040150F9 RID: 86265
+		// Token: 0x04005278 RID: 21112
 		internal static int __PropertyOffset_RootStateMachineGuid;
 
-		// Token: 0x040150FA RID: 86266
+		// Token: 0x04005279 RID: 21113
 		internal static int __PropertyOffset_AllRootNodeInstances;
 
-		// Token: 0x040150FB RID: 86267
+		// Token: 0x0400527A RID: 21114
 		[Nullable(new byte[]
 		{
 			2,
@@ -2125,178 +1603,133 @@ namespace UnrealEngine
 		})]
 		private TArray<USMStateMachineInstance> _AllRootNodeInstances;
 
-		// Token: 0x040150FC RID: 86268
+		// Token: 0x0400527B RID: 21115
 		internal static int __PropertyOffset_OnPreStateMachineInitializedEvent;
 
-		// Token: 0x040150FD RID: 86269
+		// Token: 0x0400527C RID: 21116
 		[Nullable(2)]
 		private FOnStateMachineInitializedSignature _OnPreStateMachineInitializedEvent;
 
-		// Token: 0x040150FE RID: 86270
+		// Token: 0x0400527D RID: 21117
 		internal static int __PropertyOffset_OnStateMachineInitializedEvent;
 
-		// Token: 0x040150FF RID: 86271
+		// Token: 0x0400527E RID: 21118
 		[Nullable(2)]
 		private FOnStateMachineInitializedSignature _OnStateMachineInitializedEvent;
 
-		// Token: 0x04015100 RID: 86272
+		// Token: 0x0400527F RID: 21119
 		internal static int __PropertyOffset_OnStateMachineStartedEvent;
 
-		// Token: 0x04015101 RID: 86273
+		// Token: 0x04005280 RID: 21120
 		[Nullable(2)]
 		private FOnStateMachineStartedSignature _OnStateMachineStartedEvent;
 
-		// Token: 0x04015102 RID: 86274
+		// Token: 0x04005281 RID: 21121
 		internal static int __PropertyOffset_OnStateMachineUpdatedEvent;
 
-		// Token: 0x04015103 RID: 86275
+		// Token: 0x04005282 RID: 21122
 		[Nullable(2)]
 		private FOnStateMachineUpdatedSignature _OnStateMachineUpdatedEvent;
 
-		// Token: 0x04015104 RID: 86276
+		// Token: 0x04005283 RID: 21123
 		internal static int __PropertyOffset_OnStateMachineStoppedEvent;
 
-		// Token: 0x04015105 RID: 86277
+		// Token: 0x04005284 RID: 21124
 		[Nullable(2)]
 		private FOnStateMachineStoppedSignature _OnStateMachineStoppedEvent;
 
-		// Token: 0x04015106 RID: 86278
-		internal static int __PropertyOffset_OnStateMachineTransitionTakenEvent;
-
-		// Token: 0x04015107 RID: 86279
-		[Nullable(2)]
-		private FOnStateMachineTransitionTakenSignature _OnStateMachineTransitionTakenEvent;
-
-		// Token: 0x04015108 RID: 86280
-		internal static int __PropertyOffset_OnStateMachineStateChangedEvent;
-
-		// Token: 0x04015109 RID: 86281
-		[Nullable(2)]
-		private FOnStateMachineStateChangedSignature _OnStateMachineStateChangedEvent;
-
-		// Token: 0x0401510A RID: 86282
-		internal static int __PropertyOffset_OnStateMachineStateStartedEvent;
-
-		// Token: 0x0401510B RID: 86283
-		[Nullable(2)]
-		private FOnStateMachineStateStartedSignature _OnStateMachineStateStartedEvent;
-
-		// Token: 0x0401510C RID: 86284
-		internal static int __PropertyOffset_ComponentOwner;
-
-		// Token: 0x0401510D RID: 86285
-		internal static int __PropertyOffset_NetworkInterface;
-
-		// Token: 0x0401510E RID: 86286
-		internal static int __PropertyOffset_RootStateMachine;
-
-		// Token: 0x0401510F RID: 86287
-		[Nullable(2)]
-		private FSMStateMachine _RootStateMachine;
-
-		// Token: 0x04015110 RID: 86288
+		// Token: 0x04005285 RID: 21125
 		internal static int __PropertyOffset_R_StateMachineContext;
 
-		// Token: 0x04015111 RID: 86289
+		// Token: 0x04005286 RID: 21126
 		internal static int __PropertyOffset_ReferenceOwner;
 
-		// Token: 0x04015112 RID: 86290
+		// Token: 0x04005287 RID: 21127
 		internal static int __PropertyOffset_StateMachineClass;
 
-		// Token: 0x04015113 RID: 86291
+		// Token: 0x04005288 RID: 21128
 		internal static int __PropertyOffset_bAutoManageTime;
 
-		// Token: 0x04015114 RID: 86292
+		// Token: 0x04005289 RID: 21129
 		internal static byte __PropertyMask_bAutoManageTime;
 
-		// Token: 0x04015115 RID: 86293
+		// Token: 0x0400528A RID: 21130
 		internal static int __PropertyOffset_bStopOnEndState;
 
-		// Token: 0x04015116 RID: 86294
+		// Token: 0x0400528B RID: 21131
 		internal static byte __PropertyMask_bStopOnEndState;
 
-		// Token: 0x04015117 RID: 86295
+		// Token: 0x0400528C RID: 21132
 		internal static int __PropertyOffset_bCanEverTick;
 
-		// Token: 0x04015118 RID: 86296
+		// Token: 0x0400528D RID: 21133
 		internal static byte __PropertyMask_bCanEverTick;
 
-		// Token: 0x04015119 RID: 86297
+		// Token: 0x0400528E RID: 21134
 		internal static int __PropertyOffset_bCanTickWhenPaused;
 
-		// Token: 0x0401511A RID: 86298
+		// Token: 0x0400528F RID: 21135
 		internal static byte __PropertyMask_bCanTickWhenPaused;
 
-		// Token: 0x0401511B RID: 86299
+		// Token: 0x04005290 RID: 21136
 		internal static int __PropertyOffset_bTickRegistered;
 
-		// Token: 0x0401511C RID: 86300
+		// Token: 0x04005291 RID: 21137
 		internal static byte __PropertyMask_bTickRegistered;
 
-		// Token: 0x0401511D RID: 86301
+		// Token: 0x04005292 RID: 21138
 		internal static int __PropertyOffset_bTickBeforeInitialize;
 
-		// Token: 0x0401511E RID: 86302
+		// Token: 0x04005293 RID: 21139
 		internal static byte __PropertyMask_bTickBeforeInitialize;
 
-		// Token: 0x0401511F RID: 86303
+		// Token: 0x04005294 RID: 21140
 		internal static int __PropertyOffset_bTickBeforeBeginPlay;
 
-		// Token: 0x04015120 RID: 86304
+		// Token: 0x04005295 RID: 21141
 		internal static byte __PropertyMask_bTickBeforeBeginPlay;
 
-		// Token: 0x04015121 RID: 86305
+		// Token: 0x04005296 RID: 21142
 		internal static int __PropertyOffset_TickInterval;
 
-		// Token: 0x04015122 RID: 86306
-		internal static int __PropertyOffset_StateHistory;
-
-		// Token: 0x04015123 RID: 86307
-		[Nullable(new byte[]
-		{
-			2,
-			1
-		})]
-		private TArray<FSMStateHistory> _StateHistory;
-
-		// Token: 0x04015124 RID: 86308
+		// Token: 0x04005297 RID: 21143
 		internal static int __PropertyOffset_StateHistoryMaxCount;
 
-		// Token: 0x04015125 RID: 86309
+		// Token: 0x04005298 RID: 21144
 		internal static int __PropertyOffset_bEnableLogging;
 
-		// Token: 0x04015126 RID: 86310
+		// Token: 0x04005299 RID: 21145
 		internal static byte __PropertyMask_bEnableLogging;
 
-		// Token: 0x04015127 RID: 86311
+		// Token: 0x0400529A RID: 21146
 		internal static int __PropertyOffset_bLogStateChange;
 
-		// Token: 0x04015128 RID: 86312
+		// Token: 0x0400529B RID: 21147
 		internal static byte __PropertyMask_bLogStateChange;
 
-		// Token: 0x04015129 RID: 86313
+		// Token: 0x0400529C RID: 21148
 		internal static int __PropertyOffset_bLogTransitionTaken;
 
-		// Token: 0x0401512A RID: 86314
+		// Token: 0x0400529D RID: 21149
 		internal static byte __PropertyMask_bLogTransitionTaken;
 
-		// Token: 0x0401512B RID: 86315
+		// Token: 0x0400529E RID: 21150
 		internal static int __PropertyOffset_bCanReplicateAsReference;
 
-		// Token: 0x0401512C RID: 86316
+		// Token: 0x0400529F RID: 21151
 		internal static byte __PropertyMask_bCanReplicateAsReference;
 
-		// Token: 0x0401512D RID: 86317
+		// Token: 0x040052A0 RID: 21152
 		internal static int __PropertyOffset_PathGuidRedirectMap;
 
-		// Token: 0x0401512E RID: 86318
+		// Token: 0x040052A1 RID: 21153
 		[Nullable(2)]
 		private TMap<FGuid, FGuid> _PathGuidRedirectMap;
 
-		// Token: 0x0401512F RID: 86319
+		// Token: 0x040052A2 RID: 21154
 		internal static int __PropertyOffset_ReferenceTemplates;
 
-		// Token: 0x04015130 RID: 86320
+		// Token: 0x040052A3 RID: 21155
 		[Nullable(new byte[]
 		{
 			2,
@@ -2304,462 +1737,382 @@ namespace UnrealEngine
 		})]
 		private TArray<UObject> _ReferenceTemplates;
 
-		// Token: 0x04015131 RID: 86321
+		// Token: 0x040052A4 RID: 21156
 		private static IntPtr __Update_NativeFunctionPtr;
 
-		// Token: 0x04015132 RID: 86322
-		private static IntPtr __TryGetTransitionInfo_NativeFunctionPtr;
-
-		// Token: 0x04015133 RID: 86323
-		private static IntPtr __TryGetStateInfo_NativeFunctionPtr;
-
-		// Token: 0x04015134 RID: 86324
-		private static IntPtr __TryGetNestedActiveState_NativeFunctionPtr;
-
-		// Token: 0x04015135 RID: 86325
+		// Token: 0x040052A5 RID: 21157
 		private static IntPtr __Tick_NativeFunctionPtr;
 
-		// Token: 0x04015136 RID: 86326
+		// Token: 0x040052A6 RID: 21158
 		private static IntPtr __TakeTransitionChain_NativeFunctionPtr;
 
-		// Token: 0x04015137 RID: 86327
+		// Token: 0x040052A7 RID: 21159
 		private static IntPtr __SwitchActiveStateByQualifiedName_NativeFunctionPtr;
 
-		// Token: 0x04015138 RID: 86328
+		// Token: 0x040052A8 RID: 21160
 		private static IntPtr __SwitchActiveState_NativeFunctionPtr;
 
-		// Token: 0x04015139 RID: 86329
+		// Token: 0x040052A9 RID: 21161
 		private static IntPtr __Stop_NativeFunctionPtr;
 
-		// Token: 0x0401513A RID: 86330
+		// Token: 0x040052AA RID: 21162
 		private static IntPtr __StartWithNewContext_NativeFunctionPtr;
 
-		// Token: 0x0401513B RID: 86331
+		// Token: 0x040052AB RID: 21163
 		private static IntPtr __Start_NativeFunctionPtr;
 
-		// Token: 0x0401513C RID: 86332
+		// Token: 0x040052AC RID: 21164
 		private static IntPtr __Shutdown_NativeFunctionPtr;
 
-		// Token: 0x0401513D RID: 86333
+		// Token: 0x040052AD RID: 21165
 		private static IntPtr __SetTickOnManualUpdate_NativeFunctionPtr;
 
-		// Token: 0x0401513E RID: 86334
+		// Token: 0x040052AE RID: 21166
 		private static IntPtr __SetTickInterval_NativeFunctionPtr;
 
-		// Token: 0x0401513F RID: 86335
+		// Token: 0x040052AF RID: 21167
 		private static IntPtr __SetTickBeforeBeginPlay_NativeFunctionPtr;
 
-		// Token: 0x04015140 RID: 86336
+		// Token: 0x040052B0 RID: 21168
 		private static IntPtr __SetStopOnEndState_NativeFunctionPtr;
 
-		// Token: 0x04015141 RID: 86337
+		// Token: 0x040052B1 RID: 21169
 		private static IntPtr __SetStateMachineClass_NativeFunctionPtr;
 
-		// Token: 0x04015142 RID: 86338
+		// Token: 0x040052B2 RID: 21170
 		private static IntPtr __SetStateHistoryMaxCount_NativeFunctionPtr;
 
-		// Token: 0x04015143 RID: 86339
+		// Token: 0x040052B3 RID: 21171
 		private static IntPtr __SetGuidRedirectMap_NativeFunctionPtr;
 
-		// Token: 0x04015144 RID: 86340
+		// Token: 0x040052B4 RID: 21172
 		private static IntPtr __SetContext_NativeFunctionPtr;
 
-		// Token: 0x04015145 RID: 86341
+		// Token: 0x040052B5 RID: 21173
 		private static IntPtr __SetCanTickWhenPaused_NativeFunctionPtr;
 
-		// Token: 0x04015146 RID: 86342
+		// Token: 0x040052B6 RID: 21174
 		private static IntPtr __SetCanEverTick_NativeFunctionPtr;
 
-		// Token: 0x04015147 RID: 86343
+		// Token: 0x040052B7 RID: 21175
 		private static IntPtr __SetAutoManageTime_NativeFunctionPtr;
 
-		// Token: 0x04015148 RID: 86344
+		// Token: 0x040052B8 RID: 21176
 		private static IntPtr __RunUpdateAsReference_NativeFunctionPtr;
 
-		// Token: 0x04015149 RID: 86345
+		// Token: 0x040052B9 RID: 21177
 		private static IntPtr __Restart_NativeFunctionPtr;
 
-		// Token: 0x0401514A RID: 86346
+		// Token: 0x040052BA RID: 21178
 		private static IntPtr __ReplicatedStop_NativeFunctionPtr;
 
-		// Token: 0x0401514B RID: 86347
+		// Token: 0x040052BB RID: 21179
 		private static IntPtr __ReplicatedStart_NativeFunctionPtr;
 
-		// Token: 0x0401514C RID: 86348
+		// Token: 0x040052BC RID: 21180
 		private static IntPtr __ReplicatedRestart_NativeFunctionPtr;
 
-		// Token: 0x0401514D RID: 86349
+		// Token: 0x040052BD RID: 21181
 		private static IntPtr __REP_OnReplicatedReferencesLoaded_NativeFunctionPtr;
 
-		// Token: 0x0401514E RID: 86350
+		// Token: 0x040052BE RID: 21182
 		private static IntPtr __PreloadAllNodeInstances_NativeFunctionPtr;
 
-		// Token: 0x0401514F RID: 86351
+		// Token: 0x040052BF RID: 21183
 		private static IntPtr __OnStateMachineUpdate_NativeFunctionPtr;
 
-		// Token: 0x04015150 RID: 86352
-		private static IntPtr __OnStateMachineTransitionTaken_NativeFunctionPtr;
-
-		// Token: 0x04015151 RID: 86353
+		// Token: 0x040052C0 RID: 21184
 		private static IntPtr __OnStateMachineStop_NativeFunctionPtr;
 
-		// Token: 0x04015152 RID: 86354
-		private static IntPtr __OnStateMachineStateStarted_NativeFunctionPtr;
-
-		// Token: 0x04015153 RID: 86355
-		private static IntPtr __OnStateMachineStateChanged_NativeFunctionPtr;
-
-		// Token: 0x04015154 RID: 86356
+		// Token: 0x040052C1 RID: 21185
 		private static IntPtr __OnStateMachineStart_NativeFunctionPtr;
 
-		// Token: 0x04015155 RID: 86357
+		// Token: 0x040052C2 RID: 21186
 		private static IntPtr __OnStateMachineInitialStateLoaded_NativeFunctionPtr;
 
-		// Token: 0x04015156 RID: 86358
+		// Token: 0x040052C3 RID: 21187
 		private static IntPtr __OnStateMachineInitialized_NativeFunctionPtr;
 
-		// Token: 0x04015157 RID: 86359
+		// Token: 0x040052C4 RID: 21188
 		private static IntPtr __OnPreStateMachineInitialized_NativeFunctionPtr;
 
-		// Token: 0x04015158 RID: 86360
+		// Token: 0x040052C5 RID: 21189
 		private static IntPtr __OnPostCompile_NativeFunctionPtr;
 
-		// Token: 0x04015159 RID: 86361
+		// Token: 0x040052C6 RID: 21190
 		private static IntPtr __LoadFromState_NativeFunctionPtr;
 
-		// Token: 0x0401515A RID: 86362
+		// Token: 0x040052C7 RID: 21191
 		private static IntPtr __LoadFromMultipleStates_NativeFunctionPtr;
 
-		// Token: 0x0401515B RID: 86363
-		private static IntPtr __K2_TryGetNetworkInterface_NativeFunctionPtr;
-
-		// Token: 0x0401515C RID: 86364
+		// Token: 0x040052C8 RID: 21192
 		private static IntPtr __IsTickableWhenPaused_NativeFunctionPtr;
 
-		// Token: 0x0401515D RID: 86365
+		// Token: 0x040052C9 RID: 21193
 		private static IntPtr __IsTickable_NativeFunctionPtr;
 
-		// Token: 0x0401515E RID: 86366
+		// Token: 0x040052CA RID: 21194
 		private static IntPtr __IsInitialized_NativeFunctionPtr;
 
-		// Token: 0x0401515F RID: 86367
+		// Token: 0x040052CB RID: 21195
 		private static IntPtr __IsInEndState_NativeFunctionPtr;
 
-		// Token: 0x04015160 RID: 86368
+		// Token: 0x040052CC RID: 21196
 		private static IntPtr __IsActive_NativeFunctionPtr;
 
-		// Token: 0x04015161 RID: 86369
+		// Token: 0x040052CD RID: 21197
 		private static IntPtr __Internal_Update_NativeFunctionPtr;
 
-		// Token: 0x04015162 RID: 86370
+		// Token: 0x040052CE RID: 21198
 		private static IntPtr __Internal_EventUpdate_NativeFunctionPtr;
 
-		// Token: 0x04015163 RID: 86371
+		// Token: 0x040052CF RID: 21199
 		private static IntPtr __Internal_EventCleanup_NativeFunctionPtr;
 
-		// Token: 0x04015164 RID: 86372
+		// Token: 0x040052D0 RID: 21200
 		private static IntPtr __Internal_EvaluateAndTakeTransitionChainByGuid_NativeFunctionPtr;
 
-		// Token: 0x04015165 RID: 86373
+		// Token: 0x040052D1 RID: 21201
 		private static IntPtr __Initialize_NativeFunctionPtr;
 
-		// Token: 0x04015166 RID: 86374
+		// Token: 0x040052D2 RID: 21202
 		private static IntPtr __HasStarted_NativeFunctionPtr;
 
-		// Token: 0x04015167 RID: 86375
+		// Token: 0x040052D3 RID: 21203
 		private static IntPtr __GetTransitionInstanceByGuid_NativeFunctionPtr;
 
-		// Token: 0x04015168 RID: 86376
+		// Token: 0x040052D4 RID: 21204
 		private static IntPtr __GetTickInterval_NativeFunctionPtr;
 
-		// Token: 0x04015169 RID: 86377
+		// Token: 0x040052D5 RID: 21205
 		private static IntPtr __GetStopOnEndState_NativeFunctionPtr;
 
-		// Token: 0x0401516A RID: 86378
+		// Token: 0x040052D6 RID: 21206
 		private static IntPtr __GetStateMachineClass_NativeFunctionPtr;
 
-		// Token: 0x0401516B RID: 86379
+		// Token: 0x040052D7 RID: 21207
 		private static IntPtr __GetStateInstanceByQualifiedName_NativeFunctionPtr;
 
-		// Token: 0x0401516C RID: 86380
+		// Token: 0x040052D8 RID: 21208
 		private static IntPtr __GetStateInstanceByGuid_NativeFunctionPtr;
 
-		// Token: 0x0401516D RID: 86381
+		// Token: 0x040052D9 RID: 21209
 		private static IntPtr __GetStateHistoryMaxCount_NativeFunctionPtr;
 
-		// Token: 0x0401516E RID: 86382
-		private static IntPtr __GetStateHistory_NativeFunctionPtr;
-
-		// Token: 0x0401516F RID: 86383
+		// Token: 0x040052DA RID: 21210
 		private static IntPtr __GetSingleActiveStateInstance_NativeFunctionPtr;
 
-		// Token: 0x04015170 RID: 86384
+		// Token: 0x040052DB RID: 21211
 		private static IntPtr __GetSingleActiveStateGuid_NativeFunctionPtr;
 
-		// Token: 0x04015171 RID: 86385
+		// Token: 0x040052DC RID: 21212
 		private static IntPtr __GetRootStateMachineNodeInstance_NativeFunctionPtr;
 
-		// Token: 0x04015172 RID: 86386
+		// Token: 0x040052DD RID: 21213
 		private static IntPtr __GetRootStateMachineInstance_NativeFunctionPtr;
 
-		// Token: 0x04015173 RID: 86387
+		// Token: 0x040052DE RID: 21214
 		private static IntPtr __GetReferenceOwner_NativeFunctionPtr;
 
-		// Token: 0x04015174 RID: 86388
+		// Token: 0x040052DF RID: 21215
 		private static IntPtr __GetReferencedInstanceByGuid_NativeFunctionPtr;
 
-		// Token: 0x04015175 RID: 86389
+		// Token: 0x040052E0 RID: 21216
 		private static IntPtr __GetPrimaryReferenceOwner_NativeFunctionPtr;
 
-		// Token: 0x04015176 RID: 86390
+		// Token: 0x040052E1 RID: 21217
 		private static IntPtr __GetNodeInstanceByGuid_NativeFunctionPtr;
 
-		// Token: 0x04015177 RID: 86391
-		private static IntPtr __GetNetworkInterface_NativeFunctionPtr;
-
-		// Token: 0x04015178 RID: 86392
+		// Token: 0x040052E2 RID: 21218
 		private static IntPtr __GetNestedActiveStateName_NativeFunctionPtr;
 
-		// Token: 0x04015179 RID: 86393
+		// Token: 0x040052E3 RID: 21219
 		private static IntPtr __GetNestedActiveStateGuid_NativeFunctionPtr;
 
-		// Token: 0x0401517A RID: 86394
+		// Token: 0x040052E4 RID: 21220
 		private static IntPtr __GetMasterReferenceOwner_NativeFunctionPtr;
 
-		// Token: 0x0401517B RID: 86395
+		// Token: 0x040052E5 RID: 21221
 		private static IntPtr __GetGuidRedirectMap_NativeFunctionPtr;
 
-		// Token: 0x0401517C RID: 86396
+		// Token: 0x040052E6 RID: 21222
 		private static IntPtr __GetContext_NativeFunctionPtr;
 
-		// Token: 0x0401517D RID: 86397
-		private static IntPtr __GetComponentOwner_NativeFunctionPtr;
-
-		// Token: 0x0401517E RID: 86398
+		// Token: 0x040052E7 RID: 21223
 		private static IntPtr __GetAllTransitionInstances_NativeFunctionPtr;
 
-		// Token: 0x0401517F RID: 86399
+		// Token: 0x040052E8 RID: 21224
 		private static IntPtr __GetAllStateInstances_NativeFunctionPtr;
 
-		// Token: 0x04015180 RID: 86400
+		// Token: 0x040052E9 RID: 21225
 		private static IntPtr __GetAllRootNodeInstance_NativeFunctionPtr;
 
-		// Token: 0x04015181 RID: 86401
+		// Token: 0x040052EA RID: 21226
 		private static IntPtr __GetAllReferencedInstances_NativeFunctionPtr;
 
-		// Token: 0x04015182 RID: 86402
+		// Token: 0x040052EB RID: 21227
 		private static IntPtr __GetAllCurrentStateGuids_NativeFunctionPtr;
 
-		// Token: 0x04015183 RID: 86403
+		// Token: 0x040052EC RID: 21228
 		private static IntPtr __GetAllActiveStateInstances_NativeFunctionPtr;
 
-		// Token: 0x04015184 RID: 86404
+		// Token: 0x040052ED RID: 21229
 		private static IntPtr __GetAllActiveStateGuids_NativeFunctionPtr;
 
-		// Token: 0x04015185 RID: 86405
+		// Token: 0x040052EE RID: 21230
 		private static IntPtr __GetActiveStateName_NativeFunctionPtr;
 
-		// Token: 0x04015186 RID: 86406
+		// Token: 0x040052EF RID: 21231
 		private static IntPtr __GetActiveStateInstance_NativeFunctionPtr;
 
-		// Token: 0x04015187 RID: 86407
+		// Token: 0x040052F0 RID: 21232
 		private static IntPtr __GetActiveStateGuid_NativeFunctionPtr;
 
-		// Token: 0x04015188 RID: 86408
+		// Token: 0x040052F1 RID: 21233
 		private static IntPtr __EvaluateTransitions_NativeFunctionPtr;
 
-		// Token: 0x04015189 RID: 86409
+		// Token: 0x040052F2 RID: 21234
 		private static IntPtr __EvaluateAndTakeTransitionChain_NativeFunctionPtr;
 
-		// Token: 0x0401518A RID: 86410
+		// Token: 0x040052F3 RID: 21235
 		private static IntPtr __EvaluateAndFindTransitionChain_NativeFunctionPtr;
 
-		// Token: 0x0401518B RID: 86411
+		// Token: 0x040052F4 RID: 21236
 		private static IntPtr __ClearStateHistory_NativeFunctionPtr;
 
-		// Token: 0x0401518C RID: 86412
+		// Token: 0x040052F5 RID: 21237
 		private static IntPtr __ClearLoadedStates_NativeFunctionPtr;
 
-		// Token: 0x0401518D RID: 86413
+		// Token: 0x040052F6 RID: 21238
 		private static IntPtr __CanTickOnManualUpdate_NativeFunctionPtr;
 
-		// Token: 0x0401518E RID: 86414
+		// Token: 0x040052F7 RID: 21239
 		private static IntPtr __CanEverTick_NativeFunctionPtr;
 
-		// Token: 0x0401518F RID: 86415
+		// Token: 0x040052F8 RID: 21240
 		private static IntPtr __CanAutoManageTime_NativeFunctionPtr;
 
-		// Token: 0x04015190 RID: 86416
+		// Token: 0x040052F9 RID: 21241
 		private static IntPtr __AreInitialStatesSetFromLoad_NativeFunctionPtr;
 
-		// Token: 0x02003A82 RID: 14978
+		// Token: 0x02001348 RID: 4936
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __Update_FunctionParams
 		{
-			// Token: 0x04017BEF RID: 97263
+			// Token: 0x04006788 RID: 26504
 			[FieldOffset(0)]
 			public float DeltaSeconds;
 		}
 
-		// Token: 0x02003A83 RID: 14979
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 176)]
-		protected ref struct __TryGetTransitionInfo_FunctionParams
-		{
-			// Token: 0x04017BF0 RID: 97264
-			[FieldOffset(0)]
-			public FGuid Guid;
-
-			// Token: 0x04017BF1 RID: 97265
-			[FieldOffset(16)]
-			public byte TransitionInfo;
-
-			// Token: 0x04017BF2 RID: 97266
-			[FieldOffset(168)]
-			public bool bSuccess;
-		}
-
-		// Token: 0x02003A84 RID: 14980
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 152)]
-		protected ref struct __TryGetStateInfo_FunctionParams
-		{
-			// Token: 0x04017BF3 RID: 97267
-			[FieldOffset(0)]
-			public FGuid Guid;
-
-			// Token: 0x04017BF4 RID: 97268
-			[FieldOffset(16)]
-			public byte StateInfo;
-
-			// Token: 0x04017BF5 RID: 97269
-			[FieldOffset(144)]
-			public bool bSuccess;
-		}
-
-		// Token: 0x02003A85 RID: 14981
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 136)]
-		protected ref struct __TryGetNestedActiveState_FunctionParams
-		{
-			// Token: 0x04017BF6 RID: 97270
-			[FieldOffset(0)]
-			public byte FoundState;
-
-			// Token: 0x04017BF7 RID: 97271
-			[FieldOffset(128)]
-			public bool bSuccess;
-		}
-
-		// Token: 0x02003A86 RID: 14982
+		// Token: 0x02001349 RID: 4937
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __Tick_FunctionParams
 		{
-			// Token: 0x04017BF8 RID: 97272
+			// Token: 0x04006789 RID: 26505
 			[FieldOffset(0)]
 			public float DeltaTime;
 		}
 
-		// Token: 0x02003A87 RID: 14983
+		// Token: 0x0200134A RID: 4938
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __TakeTransitionChain_FunctionParams
 		{
-			// Token: 0x04017BF9 RID: 97273
+			// Token: 0x0400678A RID: 26506
 			[FieldOffset(0)]
 			public byte InTransitionChain;
 
-			// Token: 0x04017BFA RID: 97274
+			// Token: 0x0400678B RID: 26507
 			[FieldOffset(16)]
 			public bool __Result;
 		}
 
-		// Token: 0x02003A88 RID: 14984
+		// Token: 0x0200134B RID: 4939
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __SwitchActiveStateByQualifiedName_FunctionParams
 		{
-			// Token: 0x04017BFB RID: 97275
+			// Token: 0x0400678C RID: 26508
 			[FieldOffset(0)]
 			public FString InFullPath;
 
-			// Token: 0x04017BFC RID: 97276
+			// Token: 0x0400678D RID: 26509
 			[FieldOffset(16)]
 			public bool bDeactivateOtherStates;
 		}
 
-		// Token: 0x02003A89 RID: 14985
+		// Token: 0x0200134C RID: 4940
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __SwitchActiveState_FunctionParams
 		{
-			// Token: 0x04017BFD RID: 97277
+			// Token: 0x0400678E RID: 26510
 			[FieldOffset(0)]
 			public IntPtr NewStateInstance;
 
-			// Token: 0x04017BFE RID: 97278
+			// Token: 0x0400678F RID: 26511
 			[FieldOffset(8)]
 			public bool bDeactivateOtherStates;
 		}
 
-		// Token: 0x02003A8A RID: 14986
+		// Token: 0x0200134D RID: 4941
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __StartWithNewContext_FunctionParams
 		{
-			// Token: 0x04017BFF RID: 97279
+			// Token: 0x04006790 RID: 26512
 			[FieldOffset(0)]
 			public IntPtr Context;
 		}
 
-		// Token: 0x02003A8B RID: 14987
+		// Token: 0x0200134E RID: 4942
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __SetTickOnManualUpdate_FunctionParams
 		{
-			// Token: 0x04017C00 RID: 97280
+			// Token: 0x04006791 RID: 26513
 			[FieldOffset(0)]
 			public bool Value;
 		}
 
-		// Token: 0x02003A8C RID: 14988
+		// Token: 0x0200134F RID: 4943
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __SetTickInterval_FunctionParams
 		{
-			// Token: 0x04017C01 RID: 97281
+			// Token: 0x04006792 RID: 26514
 			[FieldOffset(0)]
 			public float Value;
 		}
 
-		// Token: 0x02003A8D RID: 14989
+		// Token: 0x02001350 RID: 4944
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __SetTickBeforeBeginPlay_FunctionParams
 		{
-			// Token: 0x04017C02 RID: 97282
+			// Token: 0x04006793 RID: 26515
 			[FieldOffset(0)]
 			public bool Value;
 		}
 
-		// Token: 0x02003A8E RID: 14990
+		// Token: 0x02001351 RID: 4945
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __SetStopOnEndState_FunctionParams
 		{
-			// Token: 0x04017C03 RID: 97283
+			// Token: 0x04006794 RID: 26516
 			[FieldOffset(0)]
 			public bool Value;
 		}
 
-		// Token: 0x02003A8F RID: 14991
+		// Token: 0x02001352 RID: 4946
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __SetStateMachineClass_FunctionParams
 		{
-			// Token: 0x04017C04 RID: 97284
+			// Token: 0x04006795 RID: 26517
 			[Nullable(new byte[]
 			{
 				0,
@@ -2769,320 +2122,272 @@ namespace UnrealEngine
 			public TSubclassOf<USMStateMachineInstance> NewStateMachineClass;
 		}
 
-		// Token: 0x02003A90 RID: 14992
+		// Token: 0x02001353 RID: 4947
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __SetStateHistoryMaxCount_FunctionParams
 		{
-			// Token: 0x04017C05 RID: 97285
+			// Token: 0x04006796 RID: 26518
 			[FieldOffset(0)]
 			public int NewSize;
 		}
 
-		// Token: 0x02003A91 RID: 14993
+		// Token: 0x02001354 RID: 4948
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __SetGuidRedirectMap_FunctionParams
 		{
-			// Token: 0x04017C06 RID: 97286
+			// Token: 0x04006797 RID: 26519
 			[FieldOffset(0)]
 			public byte InGuidMap;
 		}
 
-		// Token: 0x02003A92 RID: 14994
+		// Token: 0x02001355 RID: 4949
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __SetContext_FunctionParams
 		{
-			// Token: 0x04017C07 RID: 97287
+			// Token: 0x04006798 RID: 26520
 			[FieldOffset(0)]
 			public IntPtr Context;
 		}
 
-		// Token: 0x02003A93 RID: 14995
+		// Token: 0x02001356 RID: 4950
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __SetCanTickWhenPaused_FunctionParams
 		{
-			// Token: 0x04017C08 RID: 97288
+			// Token: 0x04006799 RID: 26521
 			[FieldOffset(0)]
 			public bool Value;
 		}
 
-		// Token: 0x02003A94 RID: 14996
+		// Token: 0x02001357 RID: 4951
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __SetCanEverTick_FunctionParams
 		{
-			// Token: 0x04017C09 RID: 97289
+			// Token: 0x0400679A RID: 26522
 			[FieldOffset(0)]
 			public bool Value;
 		}
 
-		// Token: 0x02003A95 RID: 14997
+		// Token: 0x02001358 RID: 4952
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __SetAutoManageTime_FunctionParams
 		{
-			// Token: 0x04017C0A RID: 97290
+			// Token: 0x0400679B RID: 26523
 			[FieldOffset(0)]
 			public bool Value;
 		}
 
-		// Token: 0x02003A96 RID: 14998
+		// Token: 0x02001359 RID: 4953
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __RunUpdateAsReference_FunctionParams
 		{
-			// Token: 0x04017C0B RID: 97291
+			// Token: 0x0400679C RID: 26524
 			[FieldOffset(0)]
 			public float DeltaSeconds;
 		}
 
-		// Token: 0x02003A97 RID: 14999
+		// Token: 0x0200135A RID: 4954
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __OnStateMachineUpdate_FunctionParams
 		{
-			// Token: 0x04017C0C RID: 97292
+			// Token: 0x0400679D RID: 26525
 			[FieldOffset(0)]
 			public float DeltaSeconds;
 		}
 
-		// Token: 0x02003A98 RID: 15000
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 152)]
-		protected ref struct __OnStateMachineTransitionTaken_FunctionParams
-		{
-			// Token: 0x04017C0D RID: 97293
-			[FieldOffset(0)]
-			public byte Transition;
-		}
-
-		// Token: 0x02003A99 RID: 15001
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 128)]
-		protected ref struct __OnStateMachineStateStarted_FunctionParams
-		{
-			// Token: 0x04017C0E RID: 97294
-			[FieldOffset(0)]
-			public byte State;
-		}
-
-		// Token: 0x02003A9A RID: 15002
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 256)]
-		protected ref struct __OnStateMachineStateChanged_FunctionParams
-		{
-			// Token: 0x04017C0F RID: 97295
-			[FieldOffset(0)]
-			public byte ToState;
-
-			// Token: 0x04017C10 RID: 97296
-			[FieldOffset(128)]
-			public byte FromState;
-		}
-
-		// Token: 0x02003A9B RID: 15003
+		// Token: 0x0200135B RID: 4955
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __OnStateMachineInitialStateLoaded_FunctionParams
 		{
-			// Token: 0x04017C11 RID: 97297
+			// Token: 0x0400679E RID: 26526
 			[FieldOffset(0)]
 			public FGuid StateGuid;
 		}
 
-		// Token: 0x02003A9C RID: 15004
+		// Token: 0x0200135C RID: 4956
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 20)]
 		protected ref struct __LoadFromState_FunctionParams
 		{
-			// Token: 0x04017C12 RID: 97298
+			// Token: 0x0400679F RID: 26527
 			[FieldOffset(0)]
 			public FGuid FromGuid;
 
-			// Token: 0x04017C13 RID: 97299
+			// Token: 0x040067A0 RID: 26528
 			[FieldOffset(16)]
 			public bool bAllParents;
 
-			// Token: 0x04017C14 RID: 97300
+			// Token: 0x040067A1 RID: 26529
 			[FieldOffset(17)]
 			public bool bNotify;
 		}
 
-		// Token: 0x02003A9D RID: 15005
+		// Token: 0x0200135D RID: 4957
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __LoadFromMultipleStates_FunctionParams
 		{
-			// Token: 0x04017C15 RID: 97301
+			// Token: 0x040067A2 RID: 26530
 			[FieldOffset(0)]
 			public byte FromGuids;
 
-			// Token: 0x04017C16 RID: 97302
+			// Token: 0x040067A3 RID: 26531
 			[FieldOffset(16)]
 			public bool bNotify;
 		}
 
-		// Token: 0x02003A9E RID: 15006
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 24)]
-		protected ref struct __K2_TryGetNetworkInterface_FunctionParams
-		{
-			// Token: 0x04017C17 RID: 97303
-			[FieldOffset(0)]
-			public FScriptInterface Interface;
-
-			// Token: 0x04017C18 RID: 97304
-			[FieldOffset(16)]
-			public bool bIsValid;
-		}
-
-		// Token: 0x02003A9F RID: 15007
+		// Token: 0x0200135E RID: 4958
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __IsTickableWhenPaused_FunctionParams
 		{
-			// Token: 0x04017C19 RID: 97305
+			// Token: 0x040067A4 RID: 26532
 			[FieldOffset(0)]
 			public bool __Result;
 		}
 
-		// Token: 0x02003AA0 RID: 15008
+		// Token: 0x0200135F RID: 4959
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __IsTickable_FunctionParams
 		{
-			// Token: 0x04017C1A RID: 97306
+			// Token: 0x040067A5 RID: 26533
 			[FieldOffset(0)]
 			public bool __Result;
 		}
 
-		// Token: 0x02003AA1 RID: 15009
+		// Token: 0x02001360 RID: 4960
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __IsInitialized_FunctionParams
 		{
-			// Token: 0x04017C1B RID: 97307
+			// Token: 0x040067A6 RID: 26534
 			[FieldOffset(0)]
 			public bool __Result;
 		}
 
-		// Token: 0x02003AA2 RID: 15010
+		// Token: 0x02001361 RID: 4961
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __IsInEndState_FunctionParams
 		{
-			// Token: 0x04017C1C RID: 97308
+			// Token: 0x040067A7 RID: 26535
 			[FieldOffset(0)]
 			public bool __Result;
 		}
 
-		// Token: 0x02003AA3 RID: 15011
+		// Token: 0x02001362 RID: 4962
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __IsActive_FunctionParams
 		{
-			// Token: 0x04017C1D RID: 97309
+			// Token: 0x040067A8 RID: 26536
 			[FieldOffset(0)]
 			public bool __Result;
 		}
 
-		// Token: 0x02003AA4 RID: 15012
+		// Token: 0x02001363 RID: 4963
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __Internal_Update_FunctionParams
 		{
-			// Token: 0x04017C1E RID: 97310
+			// Token: 0x040067A9 RID: 26537
 			[FieldOffset(0)]
 			public float DeltaSeconds;
 		}
 
-		// Token: 0x02003AA5 RID: 15013
+		// Token: 0x02001364 RID: 4964
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __Internal_EventCleanup_FunctionParams
 		{
-			// Token: 0x04017C1F RID: 97311
+			// Token: 0x040067AA RID: 26538
 			[FieldOffset(0)]
 			public FGuid PathGuid;
 		}
 
-		// Token: 0x02003AA6 RID: 15014
+		// Token: 0x02001365 RID: 4965
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 20)]
 		protected ref struct __Internal_EvaluateAndTakeTransitionChainByGuid_FunctionParams
 		{
-			// Token: 0x04017C20 RID: 97312
+			// Token: 0x040067AB RID: 26539
 			[FieldOffset(0)]
 			public FGuid PathGuid;
 
-			// Token: 0x04017C21 RID: 97313
+			// Token: 0x040067AC RID: 26540
 			[FieldOffset(16)]
 			public bool __Result;
 		}
 
-		// Token: 0x02003AA7 RID: 15015
+		// Token: 0x02001366 RID: 4966
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __Initialize_FunctionParams
 		{
-			// Token: 0x04017C22 RID: 97314
+			// Token: 0x040067AD RID: 26541
 			[FieldOffset(0)]
 			public IntPtr Context;
 		}
 
-		// Token: 0x02003AA8 RID: 15016
+		// Token: 0x02001367 RID: 4967
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __HasStarted_FunctionParams
 		{
-			// Token: 0x04017C23 RID: 97315
+			// Token: 0x040067AE RID: 26542
 			[FieldOffset(0)]
 			public bool __Result;
 		}
 
-		// Token: 0x02003AA9 RID: 15017
+		// Token: 0x02001368 RID: 4968
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __GetTransitionInstanceByGuid_FunctionParams
 		{
-			// Token: 0x04017C24 RID: 97316
+			// Token: 0x040067AF RID: 26543
 			[FieldOffset(0)]
 			public FGuid Guid;
 
-			// Token: 0x04017C25 RID: 97317
+			// Token: 0x040067B0 RID: 26544
 			[FieldOffset(16)]
 			public IntPtr __Result;
 		}
 
-		// Token: 0x02003AAA RID: 15018
+		// Token: 0x02001369 RID: 4969
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __GetTickInterval_FunctionParams
 		{
-			// Token: 0x04017C26 RID: 97318
+			// Token: 0x040067B1 RID: 26545
 			[FieldOffset(0)]
 			public float __Result;
 		}
 
-		// Token: 0x02003AAB RID: 15019
+		// Token: 0x0200136A RID: 4970
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __GetStopOnEndState_FunctionParams
 		{
-			// Token: 0x04017C27 RID: 97319
+			// Token: 0x040067B2 RID: 26546
 			[FieldOffset(0)]
 			public bool __Result;
 		}
 
-		// Token: 0x02003AAC RID: 15020
+		// Token: 0x0200136B RID: 4971
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __GetStateMachineClass_FunctionParams
 		{
-			// Token: 0x04017C28 RID: 97320
+			// Token: 0x040067B3 RID: 26547
 			[Nullable(new byte[]
 			{
 				0,
@@ -3092,404 +2397,374 @@ namespace UnrealEngine
 			public TSubclassOf<USMStateMachineInstance> __Result;
 		}
 
-		// Token: 0x02003AAD RID: 15021
+		// Token: 0x0200136C RID: 4972
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __GetStateInstanceByQualifiedName_FunctionParams
 		{
-			// Token: 0x04017C29 RID: 97321
+			// Token: 0x040067B4 RID: 26548
 			[FieldOffset(0)]
 			public FString InFullPath;
 
-			// Token: 0x04017C2A RID: 97322
+			// Token: 0x040067B5 RID: 26549
 			[FieldOffset(16)]
 			public IntPtr __Result;
 		}
 
-		// Token: 0x02003AAE RID: 15022
+		// Token: 0x0200136D RID: 4973
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __GetStateInstanceByGuid_FunctionParams
 		{
-			// Token: 0x04017C2B RID: 97323
+			// Token: 0x040067B6 RID: 26550
 			[FieldOffset(0)]
 			public FGuid Guid;
 
-			// Token: 0x04017C2C RID: 97324
+			// Token: 0x040067B7 RID: 26551
 			[FieldOffset(16)]
 			public IntPtr __Result;
 		}
 
-		// Token: 0x02003AAF RID: 15023
+		// Token: 0x0200136E RID: 4974
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __GetStateHistoryMaxCount_FunctionParams
 		{
-			// Token: 0x04017C2D RID: 97325
+			// Token: 0x040067B8 RID: 26552
 			[FieldOffset(0)]
 			public int __Result;
 		}
 
-		// Token: 0x02003AB0 RID: 15024
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 16)]
-		protected ref struct __GetStateHistory_FunctionParams
-		{
-			// Token: 0x04017C2E RID: 97326
-			[FieldOffset(0)]
-			public byte __Result;
-		}
-
-		// Token: 0x02003AB1 RID: 15025
+		// Token: 0x0200136F RID: 4975
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetSingleActiveStateInstance_FunctionParams
 		{
-			// Token: 0x04017C2F RID: 97327
+			// Token: 0x040067B9 RID: 26553
 			[FieldOffset(0)]
 			public bool bCheckNested;
 
-			// Token: 0x04017C30 RID: 97328
+			// Token: 0x040067BA RID: 26554
 			[FieldOffset(8)]
 			public IntPtr __Result;
 		}
 
-		// Token: 0x02003AB2 RID: 15026
+		// Token: 0x02001370 RID: 4976
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 20)]
 		protected ref struct __GetSingleActiveStateGuid_FunctionParams
 		{
-			// Token: 0x04017C31 RID: 97329
+			// Token: 0x040067BB RID: 26555
 			[FieldOffset(0)]
 			public bool bCheckNested;
 
-			// Token: 0x04017C32 RID: 97330
+			// Token: 0x040067BC RID: 26556
 			[FieldOffset(4)]
 			public FGuid __Result;
 		}
 
-		// Token: 0x02003AB3 RID: 15027
+		// Token: 0x02001371 RID: 4977
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __GetRootStateMachineNodeInstance_FunctionParams
 		{
-			// Token: 0x04017C33 RID: 97331
+			// Token: 0x040067BD RID: 26557
 			[FieldOffset(0)]
 			public IntPtr __Result;
 		}
 
-		// Token: 0x02003AB4 RID: 15028
+		// Token: 0x02001372 RID: 4978
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __GetRootStateMachineInstance_FunctionParams
 		{
-			// Token: 0x04017C34 RID: 97332
+			// Token: 0x040067BE RID: 26558
 			[FieldOffset(0)]
 			public IntPtr __Result;
 		}
 
-		// Token: 0x02003AB5 RID: 15029
+		// Token: 0x02001373 RID: 4979
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __GetReferenceOwner_FunctionParams
 		{
-			// Token: 0x04017C35 RID: 97333
+			// Token: 0x040067BF RID: 26559
 			[FieldOffset(0)]
 			public IntPtr __Result;
 		}
 
-		// Token: 0x02003AB6 RID: 15030
+		// Token: 0x02001374 RID: 4980
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __GetReferencedInstanceByGuid_FunctionParams
 		{
-			// Token: 0x04017C36 RID: 97334
+			// Token: 0x040067C0 RID: 26560
 			[FieldOffset(0)]
 			public FGuid Guid;
 
-			// Token: 0x04017C37 RID: 97335
+			// Token: 0x040067C1 RID: 26561
 			[FieldOffset(16)]
 			public IntPtr __Result;
 		}
 
-		// Token: 0x02003AB7 RID: 15031
+		// Token: 0x02001375 RID: 4981
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __GetPrimaryReferenceOwner_FunctionParams
 		{
-			// Token: 0x04017C38 RID: 97336
+			// Token: 0x040067C2 RID: 26562
 			[FieldOffset(0)]
 			public IntPtr __Result;
 		}
 
-		// Token: 0x02003AB8 RID: 15032
+		// Token: 0x02001376 RID: 4982
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __GetNodeInstanceByGuid_FunctionParams
 		{
-			// Token: 0x04017C39 RID: 97337
+			// Token: 0x040067C3 RID: 26563
 			[FieldOffset(0)]
 			public FGuid Guid;
 
-			// Token: 0x04017C3A RID: 97338
+			// Token: 0x040067C4 RID: 26564
 			[FieldOffset(16)]
 			public IntPtr __Result;
 		}
 
-		// Token: 0x02003AB9 RID: 15033
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 16)]
-		protected ref struct __GetNetworkInterface_FunctionParams
-		{
-			// Token: 0x04017C3B RID: 97339
-			[FieldOffset(0)]
-			public FScriptInterface __Result;
-		}
-
-		// Token: 0x02003ABA RID: 15034
+		// Token: 0x02001377 RID: 4983
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetNestedActiveStateName_FunctionParams
 		{
-			// Token: 0x04017C3C RID: 97340
+			// Token: 0x040067C5 RID: 26565
 			[FieldOffset(0)]
 			public FString __Result;
 		}
 
-		// Token: 0x02003ABB RID: 15035
+		// Token: 0x02001378 RID: 4984
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetNestedActiveStateGuid_FunctionParams
 		{
-			// Token: 0x04017C3D RID: 97341
+			// Token: 0x040067C6 RID: 26566
 			[FieldOffset(0)]
 			public FGuid __Result;
 		}
 
-		// Token: 0x02003ABC RID: 15036
+		// Token: 0x02001379 RID: 4985
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __GetMasterReferenceOwner_FunctionParams
 		{
-			// Token: 0x04017C3E RID: 97342
+			// Token: 0x040067C7 RID: 26567
 			[FieldOffset(0)]
 			public IntPtr __Result;
 		}
 
-		// Token: 0x02003ABD RID: 15037
+		// Token: 0x0200137A RID: 4986
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __GetGuidRedirectMap_FunctionParams
 		{
-			// Token: 0x04017C3F RID: 97343
+			// Token: 0x040067C8 RID: 26568
 			[FieldOffset(0)]
 			public byte __Result;
 		}
 
-		// Token: 0x02003ABE RID: 15038
+		// Token: 0x0200137B RID: 4987
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __GetContext_FunctionParams
 		{
-			// Token: 0x04017C40 RID: 97344
+			// Token: 0x040067C9 RID: 26569
 			[FieldOffset(0)]
 			public IntPtr __Result;
 		}
 
-		// Token: 0x02003ABF RID: 15039
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 8)]
-		protected ref struct __GetComponentOwner_FunctionParams
-		{
-			// Token: 0x04017C41 RID: 97345
-			[FieldOffset(0)]
-			public IntPtr __Result;
-		}
-
-		// Token: 0x02003AC0 RID: 15040
+		// Token: 0x0200137C RID: 4988
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetAllTransitionInstances_FunctionParams
 		{
-			// Token: 0x04017C42 RID: 97346
+			// Token: 0x040067CA RID: 26570
 			[FieldOffset(0)]
 			public byte TransitionInstances;
 		}
 
-		// Token: 0x02003AC1 RID: 15041
+		// Token: 0x0200137D RID: 4989
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetAllStateInstances_FunctionParams
 		{
-			// Token: 0x04017C43 RID: 97347
+			// Token: 0x040067CB RID: 26571
 			[FieldOffset(0)]
 			public byte StateInstances;
 		}
 
-		// Token: 0x02003AC2 RID: 15042
+		// Token: 0x0200137E RID: 4990
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetAllRootNodeInstance_FunctionParams
 		{
-			// Token: 0x04017C44 RID: 97348
+			// Token: 0x040067CC RID: 26572
 			[FieldOffset(0)]
 			public byte Nodes;
 		}
 
-		// Token: 0x02003AC3 RID: 15043
+		// Token: 0x0200137F RID: 4991
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __GetAllReferencedInstances_FunctionParams
 		{
-			// Token: 0x04017C45 RID: 97349
+			// Token: 0x040067CD RID: 26573
 			[FieldOffset(0)]
 			public bool bIncludeChildren;
 
-			// Token: 0x04017C46 RID: 97350
+			// Token: 0x040067CE RID: 26574
 			[FieldOffset(8)]
 			public byte __Result;
 		}
 
-		// Token: 0x02003AC4 RID: 15044
+		// Token: 0x02001380 RID: 4992
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetAllCurrentStateGuids_FunctionParams
 		{
-			// Token: 0x04017C47 RID: 97351
+			// Token: 0x040067CF RID: 26575
 			[FieldOffset(0)]
 			public byte __Result;
 		}
 
-		// Token: 0x02003AC5 RID: 15045
+		// Token: 0x02001381 RID: 4993
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetAllActiveStateInstances_FunctionParams
 		{
-			// Token: 0x04017C48 RID: 97352
+			// Token: 0x040067D0 RID: 26576
 			[FieldOffset(0)]
 			public byte ActiveStateInstances;
 		}
 
-		// Token: 0x02003AC6 RID: 15046
+		// Token: 0x02001382 RID: 4994
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetAllActiveStateGuids_FunctionParams
 		{
-			// Token: 0x04017C49 RID: 97353
+			// Token: 0x040067D1 RID: 26577
 			[FieldOffset(0)]
 			public byte ActiveGuids;
 		}
 
-		// Token: 0x02003AC7 RID: 15047
+		// Token: 0x02001383 RID: 4995
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetActiveStateName_FunctionParams
 		{
-			// Token: 0x04017C4A RID: 97354
+			// Token: 0x040067D2 RID: 26578
 			[FieldOffset(0)]
 			public FString __Result;
 		}
 
-		// Token: 0x02003AC8 RID: 15048
+		// Token: 0x02001384 RID: 4996
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetActiveStateInstance_FunctionParams
 		{
-			// Token: 0x04017C4B RID: 97355
+			// Token: 0x040067D3 RID: 26579
 			[FieldOffset(0)]
 			public bool bCheckNested;
 
-			// Token: 0x04017C4C RID: 97356
+			// Token: 0x040067D4 RID: 26580
 			[FieldOffset(8)]
 			public IntPtr __Result;
 		}
 
-		// Token: 0x02003AC9 RID: 15049
+		// Token: 0x02001385 RID: 4997
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetActiveStateGuid_FunctionParams
 		{
-			// Token: 0x04017C4D RID: 97357
+			// Token: 0x040067D5 RID: 26581
 			[FieldOffset(0)]
 			public FGuid __Result;
 		}
 
-		// Token: 0x02003ACA RID: 15050
+		// Token: 0x02001386 RID: 4998
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __EvaluateAndTakeTransitionChain_FunctionParams
 		{
-			// Token: 0x04017C4E RID: 97358
+			// Token: 0x040067D6 RID: 26582
 			[FieldOffset(0)]
 			public IntPtr InFirstTransitionInstance;
 
-			// Token: 0x04017C4F RID: 97359
+			// Token: 0x040067D7 RID: 26583
 			[FieldOffset(8)]
 			public bool __Result;
 		}
 
-		// Token: 0x02003ACB RID: 15051
+		// Token: 0x02001387 RID: 4999
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 40)]
 		protected ref struct __EvaluateAndFindTransitionChain_FunctionParams
 		{
-			// Token: 0x04017C50 RID: 97360
+			// Token: 0x040067D8 RID: 26584
 			[FieldOffset(0)]
 			public IntPtr InFirstTransitionInstance;
 
-			// Token: 0x04017C51 RID: 97361
+			// Token: 0x040067D9 RID: 26585
 			[FieldOffset(8)]
 			public byte OutTransitionChain;
 
-			// Token: 0x04017C52 RID: 97362
+			// Token: 0x040067DA RID: 26586
 			[FieldOffset(24)]
 			public IntPtr OutDestinationState;
 
-			// Token: 0x04017C53 RID: 97363
+			// Token: 0x040067DB RID: 26587
 			[FieldOffset(32)]
 			public bool bRequirePreviousStateActive;
 
-			// Token: 0x04017C54 RID: 97364
+			// Token: 0x040067DC RID: 26588
 			[FieldOffset(33)]
 			public bool __Result;
 		}
 
-		// Token: 0x02003ACC RID: 15052
+		// Token: 0x02001388 RID: 5000
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __CanTickOnManualUpdate_FunctionParams
 		{
-			// Token: 0x04017C55 RID: 97365
+			// Token: 0x040067DD RID: 26589
 			[FieldOffset(0)]
 			public bool __Result;
 		}
 
-		// Token: 0x02003ACD RID: 15053
+		// Token: 0x02001389 RID: 5001
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __CanEverTick_FunctionParams
 		{
-			// Token: 0x04017C56 RID: 97366
+			// Token: 0x040067DE RID: 26590
 			[FieldOffset(0)]
 			public bool __Result;
 		}
 
-		// Token: 0x02003ACE RID: 15054
+		// Token: 0x0200138A RID: 5002
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __CanAutoManageTime_FunctionParams
 		{
-			// Token: 0x04017C57 RID: 97367
+			// Token: 0x040067DF RID: 26591
 			[FieldOffset(0)]
 			public bool __Result;
 		}
 
-		// Token: 0x02003ACF RID: 15055
+		// Token: 0x0200138B RID: 5003
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __AreInitialStatesSetFromLoad_FunctionParams
 		{
-			// Token: 0x04017C58 RID: 97368
+			// Token: 0x040067E0 RID: 26592
 			[FieldOffset(0)]
 			public bool __Result;
 		}

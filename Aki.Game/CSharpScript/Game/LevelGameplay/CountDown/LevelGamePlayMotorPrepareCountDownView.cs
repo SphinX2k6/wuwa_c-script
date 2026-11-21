@@ -8,16 +8,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.CountDown
 {
-	// Token: 0x02006F15 RID: 28437
+	// Token: 0x02006096 RID: 24726
 	public class LevelGamePlayMotorPrepareCountDownView : UiViewBase, IUiViewResource
 	{
-		// Token: 0x06045364 RID: 283492 RVA: 0x01120161 File Offset: 0x0111E361
+		// Token: 0x0603B512 RID: 242962 RVA: 0x010CA101 File Offset: 0x010C8301
 		[NullableContext(1)]
 		public LevelGamePlayMotorPrepareCountDownView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06045365 RID: 283493 RVA: 0x0112016C File Offset: 0x0111E36C
+		// Token: 0x0603B513 RID: 242963 RVA: 0x010CA10C File Offset: 0x010C830C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -29,7 +29,7 @@ namespace CSharpScript.Game.LevelGamePlay.CountDown
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06045366 RID: 283494 RVA: 0x011201B4 File Offset: 0x0111E3B4
+		// Token: 0x0603B514 RID: 242964 RVA: 0x010CA154 File Offset: 0x010C8354
 		[NullableContext(1)]
 		public string GetExtraResourceId([Nullable(2)] object param)
 		{
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.LevelGamePlay.CountDown
 			return "";
 		}
 
-		// Token: 0x06045367 RID: 283495 RVA: 0x0112020C File Offset: 0x0111E40C
+		// Token: 0x0603B515 RID: 242965 RVA: 0x010CA1AC File Offset: 0x010C83AC
 		protected override void OnStart()
 		{
 			ILevelGamePlayPrepareCountDownViewParams levelGamePlayPrepareCountDownViewParams = this.OpenParam as ILevelGamePlayPrepareCountDownViewParams;
@@ -62,17 +62,17 @@ namespace CSharpScript.Game.LevelGamePlay.CountDown
 			}
 		}
 
-		// Token: 0x06045368 RID: 283496 RVA: 0x01120254 File Offset: 0x0111E454
+		// Token: 0x0603B516 RID: 242966 RVA: 0x010CA1F4 File Offset: 0x010C83F4
 		protected override void OnAfterPlayStartSequence()
 		{
 			EventSystem.Instance.Emit(EEventName.LevelGamePlayPrepareCountDownEnd);
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0200CD71 RID: 52593
+		// Token: 0x0200B963 RID: 47459
 		private class EViewComponent
 		{
-			// Token: 0x0403DEA0 RID: 253600
+			// Token: 0x040392CF RID: 234191
 			public const int TextTip = 0;
 		}
 	}

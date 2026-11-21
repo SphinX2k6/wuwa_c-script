@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003D8B RID: 15755
+	// Token: 0x020041A2 RID: 16802
 	public struct IChildQuestConfig : IFlatbufferObject
 	{
-		// Token: 0x17006C53 RID: 27731
-		// (get) Token: 0x06015DF2 RID: 89586 RVA: 0x00328BF3 File Offset: 0x00326DF3
+		// Token: 0x1700720D RID: 29197
+		// (get) Token: 0x0601732A RID: 95018 RVA: 0x0034FF1F File Offset: 0x0034E11F
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015DF3 RID: 89587 RVA: 0x00328C00 File Offset: 0x00326E00
+		// Token: 0x0601732B RID: 95019 RVA: 0x0034FF2C File Offset: 0x0034E12C
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06015DF4 RID: 89588 RVA: 0x00328C08 File Offset: 0x00326E08
+		// Token: 0x0601732C RID: 95020 RVA: 0x0034FF34 File Offset: 0x0034E134
 		public static IChildQuestConfig GetRootAsIChildQuestConfig(ByteBuffer _bb)
 		{
 			return IChildQuestConfig.GetRootAsIChildQuestConfig(_bb, default(IChildQuestConfig));
 		}
 
-		// Token: 0x06015DF5 RID: 89589 RVA: 0x00328C24 File Offset: 0x00326E24
+		// Token: 0x0601732D RID: 95021 RVA: 0x0034FF50 File Offset: 0x0034E150
 		public static IChildQuestConfig GetRootAsIChildQuestConfig(ByteBuffer _bb, IChildQuestConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06015DF6 RID: 89590 RVA: 0x00328C41 File Offset: 0x00326E41
+		// Token: 0x0601732E RID: 95022 RVA: 0x0034FF6D File Offset: 0x0034E16D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06015DF7 RID: 89591 RVA: 0x00328C50 File Offset: 0x00326E50
+		// Token: 0x0601732F RID: 95023 RVA: 0x0034FF7C File Offset: 0x0034E17C
 		public IChildQuestConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006C54 RID: 27732
-		// (get) Token: 0x06015DF8 RID: 89592 RVA: 0x00328C60 File Offset: 0x00326E60
+		// Token: 0x1700720E RID: 29198
+		// (get) Token: 0x06017330 RID: 95024 RVA: 0x0034FF8C File Offset: 0x0034E18C
 		public EOnlineParticipateRule OnlineParticipateRule
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006C55 RID: 27733
-		// (get) Token: 0x06015DF9 RID: 89593 RVA: 0x00328C9C File Offset: 0x00326E9C
+		// Token: 0x1700720F RID: 29199
+		// (get) Token: 0x06017331 RID: 95025 RVA: 0x0034FFC8 File Offset: 0x0034E1C8
 		public byte NullMask
 		{
 			get
@@ -78,7 +78,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06015DFA RID: 89594 RVA: 0x00328CD8 File Offset: 0x00326ED8
+		// Token: 0x06017332 RID: 95026 RVA: 0x00350004 File Offset: 0x0034E204
 		public static Offset<IChildQuestConfig> CreateIChildQuestConfig(FlatBufferBuilder builder, EOnlineParticipateRule OnlineParticipateRule = EOnlineParticipateRule.AnyPlayer, byte NullMask = 0)
 		{
 			builder.StartTable(2);
@@ -87,31 +87,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IChildQuestConfig.EndIChildQuestConfig(builder);
 		}
 
-		// Token: 0x06015DFB RID: 89595 RVA: 0x00328CF5 File Offset: 0x00326EF5
+		// Token: 0x06017333 RID: 95027 RVA: 0x00350021 File Offset: 0x0034E221
 		public static void StartIChildQuestConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06015DFC RID: 89596 RVA: 0x00328CFE File Offset: 0x00326EFE
+		// Token: 0x06017334 RID: 95028 RVA: 0x0035002A File Offset: 0x0034E22A
 		public static void AddOnlineParticipateRule(FlatBufferBuilder builder, EOnlineParticipateRule onlineParticipateRule)
 		{
 			builder.AddByte(0, (byte)onlineParticipateRule, 0);
 		}
 
-		// Token: 0x06015DFD RID: 89597 RVA: 0x00328D09 File Offset: 0x00326F09
+		// Token: 0x06017335 RID: 95029 RVA: 0x00350035 File Offset: 0x0034E235
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(1, nullMask, 0);
 		}
 
-		// Token: 0x06015DFE RID: 89598 RVA: 0x00328D14 File Offset: 0x00326F14
+		// Token: 0x06017336 RID: 95030 RVA: 0x00350040 File Offset: 0x0034E240
 		public static Offset<IChildQuestConfig> EndIChildQuestConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IChildQuestConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06015DFF RID: 89599 RVA: 0x00328D24 File Offset: 0x00326F24
+		// Token: 0x06017337 RID: 95031 RVA: 0x00350050 File Offset: 0x0034E250
 		public IChildQuestConfigT UnPack()
 		{
 			IChildQuestConfigT childQuestConfigT = new IChildQuestConfigT();
@@ -119,14 +119,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return childQuestConfigT;
 		}
 
-		// Token: 0x06015E00 RID: 89600 RVA: 0x00328D3F File Offset: 0x00326F3F
+		// Token: 0x06017338 RID: 95032 RVA: 0x0035006B File Offset: 0x0034E26B
 		public void UnPackTo(IChildQuestConfigT _o)
 		{
 			_o.OnlineParticipateRule = this.OnlineParticipateRule;
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06015E01 RID: 89601 RVA: 0x00328D5C File Offset: 0x00326F5C
+		// Token: 0x06017339 RID: 95033 RVA: 0x00350088 File Offset: 0x0034E288
 		public static Offset<IChildQuestConfig> Pack(FlatBufferBuilder builder, IChildQuestConfigT _o)
 		{
 			if (_o == null)
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IChildQuestConfig.CreateIChildQuestConfig(builder, _o.OnlineParticipateRule, _o.NullMask);
 		}
 
-		// Token: 0x0400B692 RID: 46738
+		// Token: 0x0400C03F RID: 49215
 		private Table __p;
 	}
 }

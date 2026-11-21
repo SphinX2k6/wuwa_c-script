@@ -5,13 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013FD RID: 5117
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02001554 RID: 5460
 	public class IFinishFlipperCondition : IQuestCondition
 	{
-		// Token: 0x06007467 RID: 29799 RVA: 0x00116798 File Offset: 0x00114998
-		[NullableContext(1)]
+		// Token: 0x06007B28 RID: 31528 RVA: 0x0012517C File Offset: 0x0012337C
 		public static IFinishFlipperCondition Create(IFinishFlipperCondition? instance)
 		{
 			if (instance == null)
@@ -24,8 +21,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002640 RID: 9792
-		// (get) Token: 0x06007468 RID: 29800 RVA: 0x001167B7 File Offset: 0x001149B7
+		// Token: 0x17002822 RID: 10274
+		// (get) Token: 0x06007B29 RID: 31529 RVA: 0x0012519B File Offset: 0x0012339B
 		public override EChildQuest Type
 		{
 			get
@@ -34,10 +31,12 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002641 RID: 9793
-		// (get) Token: 0x06007469 RID: 29801 RVA: 0x001167C4 File Offset: 0x001149C4
+		// Token: 0x17002823 RID: 10275
+		// (get) Token: 0x06007B2A RID: 31530 RVA: 0x001251A8 File Offset: 0x001233A8
+		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this._PreConditionsInited)
@@ -50,12 +49,10 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002642 RID: 9794
-		// (get) Token: 0x0600746A RID: 29802 RVA: 0x001167F8 File Offset: 0x001149F8
-		[Nullable(1)]
+		// Token: 0x17002824 RID: 10276
+		// (get) Token: 0x06007B2B RID: 31531 RVA: 0x001251DC File Offset: 0x001233DC
 		public virtual IFlipperConditionStepFight Step
 		{
-			[NullableContext(1)]
 			get
 			{
 				if (this._StepInited)
@@ -68,19 +65,21 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400435B RID: 17243
+		// Token: 0x040046EC RID: 18156
 		private IFinishFlipperCondition Instance;
 
-		// Token: 0x0400435C RID: 17244
+		// Token: 0x040046ED RID: 18157
+		[Nullable(2)]
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x0400435D RID: 17245
+		// Token: 0x040046EE RID: 18158
 		private bool _PreConditionsInited;
 
-		// Token: 0x0400435E RID: 17246
+		// Token: 0x040046EF RID: 18159
+		[Nullable(2)]
 		private IFlipperConditionStepFight _StepCache;
 
-		// Token: 0x0400435F RID: 17247
+		// Token: 0x040046F0 RID: 18160
 		private bool _StepInited;
 	}
 }

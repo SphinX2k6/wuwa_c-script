@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000332 RID: 818
+	// Token: 0x0200033A RID: 826
 	[NetMessage(EMessageId.DangoBrawlActivityLimitCoinUpdateNotify)]
 	public sealed class DangoBrawlActivityLimitCoinUpdateNotify : IMessage<DangoBrawlActivityLimitCoinUpdateNotify>, IMessage, IEquatable<DangoBrawlActivityLimitCoinUpdateNotify>, IDeepCloneable<DangoBrawlActivityLimitCoinUpdateNotify>, IBufferMessage
 	{
-		// Token: 0x06005240 RID: 21056 RVA: 0x000C8F03 File Offset: 0x000C7103
+		// Token: 0x0600532D RID: 21293 RVA: 0x000CB587 File Offset: 0x000C9787
 		[NullableContext(1)]
 		public static DangoBrawlActivityLimitCoinUpdateNotify Create()
 		{
 			return new DangoBrawlActivityLimitCoinUpdateNotify();
 		}
 
-		// Token: 0x17000EE7 RID: 3815
-		// (get) Token: 0x06005241 RID: 21057 RVA: 0x000C8F0A File Offset: 0x000C710A
+		// Token: 0x17000F18 RID: 3864
+		// (get) Token: 0x0600532E RID: 21294 RVA: 0x000CB58E File Offset: 0x000C978E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000EE8 RID: 3816
-		// (get) Token: 0x06005242 RID: 21058 RVA: 0x000C8F0D File Offset: 0x000C710D
+		// Token: 0x17000F19 RID: 3865
+		// (get) Token: 0x0600532F RID: 21295 RVA: 0x000CB591 File Offset: 0x000C9791
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06005243 RID: 21059 RVA: 0x000C8F14 File Offset: 0x000C7114
+		// Token: 0x06005330 RID: 21296 RVA: 0x000CB598 File Offset: 0x000C9798
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DangoBrawlActivityLimitCoinUpdateNotify()
 		{
 		}
 
-		// Token: 0x06005244 RID: 21060 RVA: 0x000C8F1C File Offset: 0x000C711C
+		// Token: 0x06005331 RID: 21297 RVA: 0x000CB5A0 File Offset: 0x000C97A0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DangoBrawlActivityLimitCoinUpdateNotify(DangoBrawlActivityLimitCoinUpdateNotify other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06005245 RID: 21061 RVA: 0x000C8F4D File Offset: 0x000C714D
+		// Token: 0x06005332 RID: 21298 RVA: 0x000CB5D1 File Offset: 0x000C97D1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DangoBrawlActivityLimitCoinUpdateNotify Clone()
@@ -67,9 +67,9 @@ namespace Aki.Protocol
 			return new DangoBrawlActivityLimitCoinUpdateNotify(this);
 		}
 
-		// Token: 0x17000EE9 RID: 3817
-		// (get) Token: 0x06005246 RID: 21062 RVA: 0x000C8F55 File Offset: 0x000C7155
-		// (set) Token: 0x06005247 RID: 21063 RVA: 0x000C8F5D File Offset: 0x000C715D
+		// Token: 0x17000F1A RID: 3866
+		// (get) Token: 0x06005333 RID: 21299 RVA: 0x000CB5D9 File Offset: 0x000C97D9
+		// (set) Token: 0x06005334 RID: 21300 RVA: 0x000CB5E1 File Offset: 0x000C97E1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ActivityId
@@ -84,9 +84,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17000EEA RID: 3818
-		// (get) Token: 0x06005248 RID: 21064 RVA: 0x000C8F66 File Offset: 0x000C7166
-		// (set) Token: 0x06005249 RID: 21065 RVA: 0x000C8F6E File Offset: 0x000C716E
+		// Token: 0x17000F1B RID: 3867
+		// (get) Token: 0x06005335 RID: 21301 RVA: 0x000CB5EA File Offset: 0x000C97EA
+		// (set) Token: 0x06005336 RID: 21302 RVA: 0x000CB5F2 File Offset: 0x000C97F2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int LimitCoinCost
@@ -101,7 +101,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600524A RID: 21066 RVA: 0x000C8F77 File Offset: 0x000C7177
+		// Token: 0x06005337 RID: 21303 RVA: 0x000CB5FB File Offset: 0x000C97FB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return this.Equals(other as DangoBrawlActivityLimitCoinUpdateNotify);
 		}
 
-		// Token: 0x0600524B RID: 21067 RVA: 0x000C8F85 File Offset: 0x000C7185
+		// Token: 0x06005338 RID: 21304 RVA: 0x000CB609 File Offset: 0x000C9809
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(DangoBrawlActivityLimitCoinUpdateNotify other)
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ActivityId == other.ActivityId && this.LimitCoinCost == other.LimitCoinCost && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600524C RID: 21068 RVA: 0x000C8FC4 File Offset: 0x000C71C4
+		// Token: 0x06005339 RID: 21305 RVA: 0x000CB648 File Offset: 0x000C9848
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600524D RID: 21069 RVA: 0x000C901C File Offset: 0x000C721C
+		// Token: 0x0600533A RID: 21306 RVA: 0x000CB6A0 File Offset: 0x000C98A0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600524E RID: 21070 RVA: 0x000C9029 File Offset: 0x000C7229
+		// Token: 0x0600533B RID: 21307 RVA: 0x000CB6AD File Offset: 0x000C98AD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -154,19 +154,19 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600524F RID: 21071 RVA: 0x000C9034 File Offset: 0x000C7234
+		// Token: 0x0600533C RID: 21308 RVA: 0x000CB6B8 File Offset: 0x000C98B8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			if (this.LimitCoinCost != 0)
 			{
-				output.WriteRawTag(40);
+				output.WriteRawTag(88);
 				output.WriteInt32(this.LimitCoinCost);
 			}
 			if (this.ActivityId != 0)
 			{
-				output.WriteRawTag(96);
+				output.WriteRawTag(112);
 				output.WriteInt32(this.ActivityId);
 			}
 			if (this._unknownFields != null)
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06005250 RID: 21072 RVA: 0x000C9090 File Offset: 0x000C7290
+		// Token: 0x0600533D RID: 21309 RVA: 0x000CB714 File Offset: 0x000C9914
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -196,7 +196,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06005251 RID: 21073 RVA: 0x000C90E8 File Offset: 0x000C72E8
+		// Token: 0x0600533E RID: 21310 RVA: 0x000CB76C File Offset: 0x000C996C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(DangoBrawlActivityLimitCoinUpdateNotify other)
@@ -216,7 +216,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06005252 RID: 21074 RVA: 0x000C9138 File Offset: 0x000C7338
+		// Token: 0x0600533F RID: 21311 RVA: 0x000CB7BC File Offset: 0x000C99BC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -224,7 +224,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06005253 RID: 21075 RVA: 0x000C9144 File Offset: 0x000C7344
+		// Token: 0x06005340 RID: 21312 RVA: 0x000CB7C8 File Offset: 0x000C99C8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -236,9 +236,9 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 40U)
+				if (num != 88U)
 				{
-					if (num != 96U)
+					if (num != 112U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
@@ -254,19 +254,19 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04003327 RID: 13095
+		// Token: 0x040033C3 RID: 13251
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04003328 RID: 13096
-		public const int ActivityIdFieldNumber = 12;
+		// Token: 0x040033C4 RID: 13252
+		public const int ActivityIdFieldNumber = 14;
 
-		// Token: 0x04003329 RID: 13097
+		// Token: 0x040033C5 RID: 13253
 		private int activityId_;
 
-		// Token: 0x0400332A RID: 13098
-		public const int LimitCoinCostFieldNumber = 5;
+		// Token: 0x040033C6 RID: 13254
+		public const int LimitCoinCostFieldNumber = 11;
 
-		// Token: 0x0400332B RID: 13099
+		// Token: 0x040033C7 RID: 13255
 		private int limitCoinCost_;
 	}
 }

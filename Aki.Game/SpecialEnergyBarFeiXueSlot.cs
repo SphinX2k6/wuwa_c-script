@@ -2,10 +2,10 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.BattleUi.Views;
 
-// Token: 0x020016FB RID: 5883
+// Token: 0x02000BB3 RID: 2995
 public class SpecialEnergyBarFeiXueSlot : SpecialEnergyBarSlot
 {
-	// Token: 0x0600A8BE RID: 43198 RVA: 0x0025F860 File Offset: 0x0025DA60
+	// Token: 0x06007C9E RID: 31902 RVA: 0x00269C7C File Offset: 0x00267E7C
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -16,14 +16,14 @@ public class SpecialEnergyBarFeiXueSlot : SpecialEnergyBarSlot
 		}
 	}
 
-	// Token: 0x0600A8BF RID: 43199 RVA: 0x0025F8C8 File Offset: 0x0025DAC8
+	// Token: 0x06007C9F RID: 31903 RVA: 0x00269CE4 File Offset: 0x00267EE4
 	protected override void RefreshBarPercent(bool isStart = false)
 	{
 		base.RefreshBarPercent(isStart);
 		this.RefreshFullState(this.GetKeyEnable(), false);
 	}
 
-	// Token: 0x0600A8C0 RID: 43200 RVA: 0x0025F8DE File Offset: 0x0025DADE
+	// Token: 0x06007CA0 RID: 31904 RVA: 0x00269CFA File Offset: 0x00267EFA
 	private void RefreshFullState(bool isFull, bool isStart = false)
 	{
 		if (this.IsFull == isFull && !isStart)
@@ -37,10 +37,10 @@ public class SpecialEnergyBarFeiXueSlot : SpecialEnergyBarSlot
 		}
 	}
 
-	// Token: 0x04004D05 RID: 19717
+	// Token: 0x04004DAC RID: 19884
 	private bool IsFull;
 
-	// Token: 0x04004D06 RID: 19718
+	// Token: 0x04004DAD RID: 19885
 	[Nullable(2)]
 	public Action<bool> FullStateChangedCallback;
 }

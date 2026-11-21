@@ -2,96 +2,96 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000EC3 RID: 3779
+// Token: 0x02000378 RID: 888
 [NullableContext(2)]
 public interface ISurvivorsRogueCombatInfo
 {
-	// Token: 0x17000715 RID: 1813
-	// (get) Token: 0x06005DA4 RID: 23972
-	// (set) Token: 0x06005DA5 RID: 23973
+	// Token: 0x17000739 RID: 1849
+	// (get) Token: 0x0600313B RID: 12603
+	// (set) Token: 0x0600313C RID: 12604
 	ESurvivorsRogueEntityType EntityType { get; set; }
 
-	// Token: 0x17000716 RID: 1814
-	// (get) Token: 0x06005DA6 RID: 23974
-	// (set) Token: 0x06005DA7 RID: 23975
+	// Token: 0x1700073A RID: 1850
+	// (get) Token: 0x0600313D RID: 12605
+	// (set) Token: 0x0600313E RID: 12606
 	int Uid { get; set; }
 
-	// Token: 0x17000717 RID: 1815
-	// (get) Token: 0x06005DA8 RID: 23976
-	// (set) Token: 0x06005DA9 RID: 23977
+	// Token: 0x1700073B RID: 1851
+	// (get) Token: 0x0600313F RID: 12607
+	// (set) Token: 0x06003140 RID: 12608
 	int OwnerId { get; set; }
 
-	// Token: 0x17000718 RID: 1816
-	// (get) Token: 0x06005DAA RID: 23978
-	// (set) Token: 0x06005DAB RID: 23979
+	// Token: 0x1700073C RID: 1852
+	// (get) Token: 0x06003141 RID: 12609
+	// (set) Token: 0x06003142 RID: 12610
 	int TemplateId { get; set; }
 
-	// Token: 0x17000719 RID: 1817
-	// (get) Token: 0x06005DAC RID: 23980
-	// (set) Token: 0x06005DAD RID: 23981
+	// Token: 0x1700073D RID: 1853
+	// (get) Token: 0x06003143 RID: 12611
+	// (set) Token: 0x06003144 RID: 12612
 	int CombatId { get; set; }
 
-	// Token: 0x1700071A RID: 1818
-	// (get) Token: 0x06005DAE RID: 23982
-	// (set) Token: 0x06005DAF RID: 23983
+	// Token: 0x1700073E RID: 1854
+	// (get) Token: 0x06003145 RID: 12613
+	// (set) Token: 0x06003146 RID: 12614
 	int SubTypeId { get; set; }
 
-	// Token: 0x1700071B RID: 1819
-	// (get) Token: 0x06005DB0 RID: 23984
-	// (set) Token: 0x06005DB1 RID: 23985
+	// Token: 0x1700073F RID: 1855
+	// (get) Token: 0x06003147 RID: 12615
+	// (set) Token: 0x06003148 RID: 12616
 	string PrefabPath { get; set; }
 
-	// Token: 0x1700071C RID: 1820
-	// (get) Token: 0x06005DB2 RID: 23986
-	// (set) Token: 0x06005DB3 RID: 23987
+	// Token: 0x17000740 RID: 1856
+	// (get) Token: 0x06003149 RID: 12617
+	// (set) Token: 0x0600314A RID: 12618
 	string AssetPath { get; set; }
 
-	// Token: 0x1700071D RID: 1821
-	// (get) Token: 0x06005DB4 RID: 23988
-	// (set) Token: 0x06005DB5 RID: 23989
+	// Token: 0x17000741 RID: 1857
+	// (get) Token: 0x0600314B RID: 12619
+	// (set) Token: 0x0600314C RID: 12620
 	int PropertyId { get; set; }
 
-	// Token: 0x1700071E RID: 1822
-	// (get) Token: 0x06005DB6 RID: 23990
-	// (set) Token: 0x06005DB7 RID: 23991
+	// Token: 0x17000742 RID: 1858
+	// (get) Token: 0x0600314D RID: 12621
+	// (set) Token: 0x0600314E RID: 12622
 	int? SplineId { get; set; }
 
-	// Token: 0x1700071F RID: 1823
-	// (get) Token: 0x06005DB8 RID: 23992
-	// (set) Token: 0x06005DB9 RID: 23993
+	// Token: 0x17000743 RID: 1859
+	// (get) Token: 0x0600314F RID: 12623
+	// (set) Token: 0x06003150 RID: 12624
 	Dictionary<int, int> BuffIdLayers { get; set; }
 
-	// Token: 0x17000720 RID: 1824
-	// (get) Token: 0x06005DBA RID: 23994
-	// (set) Token: 0x06005DBB RID: 23995
+	// Token: 0x17000744 RID: 1860
+	// (get) Token: 0x06003151 RID: 12625
+	// (set) Token: 0x06003152 RID: 12626
 	Dictionary<int, int> AttributeMap { get; set; }
 
-	// Token: 0x17000721 RID: 1825
-	// (get) Token: 0x06005DBC RID: 23996
-	// (set) Token: 0x06005DBD RID: 23997
+	// Token: 0x17000745 RID: 1861
+	// (get) Token: 0x06003153 RID: 12627
+	// (set) Token: 0x06003154 RID: 12628
 	[Nullable(1)]
 	Vector Position { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-	// Token: 0x17000722 RID: 1826
-	// (get) Token: 0x06005DBE RID: 23998
-	// (set) Token: 0x06005DBF RID: 23999
+	// Token: 0x17000746 RID: 1862
+	// (get) Token: 0x06003155 RID: 12629
+	// (set) Token: 0x06003156 RID: 12630
 	[Nullable(1)]
 	Rotator Rotation { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-	// Token: 0x06005DC0 RID: 24000
+	// Token: 0x06003157 RID: 12631
 	[NullableContext(1)]
 	void Update(ISurvivorsRogueCombatInfo other);
 
-	// Token: 0x06005DC1 RID: 24001
+	// Token: 0x06003158 RID: 12632
 	bool IsValid();
 
-	// Token: 0x06005DC2 RID: 24002
+	// Token: 0x06003159 RID: 12633
 	void Reset();
 
-	// Token: 0x06005DC3 RID: 24003
+	// Token: 0x0600315A RID: 12634
 	void Release();
 
-	// Token: 0x06005DC4 RID: 24004
+	// Token: 0x0600315B RID: 12635
 	[NullableContext(1)]
 	ISurvivorsRogueCombatInfo Clone();
 }

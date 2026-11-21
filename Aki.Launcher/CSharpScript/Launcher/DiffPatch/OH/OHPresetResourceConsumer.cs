@@ -10,31 +10,31 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.DiffPatch.OH
 {
-	// Token: 0x0200021C RID: 540
+	// Token: 0x02000221 RID: 545
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class OHPresetResourceConsumer
 	{
-		// Token: 0x06000DF7 RID: 3575 RVA: 0x000541C8 File Offset: 0x000523C8
+		// Token: 0x06000E38 RID: 3640 RVA: 0x00056CBC File Offset: 0x00054EBC
 		public OHPresetResourceConsumer()
 		{
 			this.OhSystemManagedDownloadDir = "/data/storage/el2/base/haps/entry/cache/asset_acceleration/";
 			this.OhNearbyDir = "/data/storage/el2/base/files/com.huawei.hms.gameservice.nearby.transfer/receive/UE4Game/Client/Client/Saved/Resources/";
 		}
 
-		// Token: 0x06000DF8 RID: 3576 RVA: 0x000541E6 File Offset: 0x000523E6
+		// Token: 0x06000E39 RID: 3641 RVA: 0x00056CDA File Offset: 0x00054EDA
 		public bool IsSysMgEnabled()
 		{
 			return this.OhSystemManagedDownloadDir.Length > 0 && UBlueprintPathsLibrary.DirectoryExists(this.OhSystemManagedDownloadDir);
 		}
 
-		// Token: 0x06000DF9 RID: 3577 RVA: 0x00054203 File Offset: 0x00052403
+		// Token: 0x06000E3A RID: 3642 RVA: 0x00056CF7 File Offset: 0x00054EF7
 		public bool IsNearbyEnabled()
 		{
 			return this.OhNearbyDir.Length > 0 && UBlueprintPathsLibrary.DirectoryExists(this.OhNearbyDir);
 		}
 
-		// Token: 0x06000DFA RID: 3578 RVA: 0x00054220 File Offset: 0x00052420
+		// Token: 0x06000E3B RID: 3643 RVA: 0x00056D14 File Offset: 0x00054F14
 		public UniTask ConsumeAfterManifest(DiffUpdate update, [Nullable(2)] HotFixManager viewMgr, bool bIsLauncher = false)
 		{
 			OHPresetResourceConsumer.<ConsumeAfterManifest>d__5 <ConsumeAfterManifest>d__;
@@ -48,7 +48,7 @@ namespace CSharpScript.Launcher.DiffPatch.OH
 			return <ConsumeAfterManifest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000DFB RID: 3579 RVA: 0x0005427B File Offset: 0x0005247B
+		// Token: 0x06000E3C RID: 3644 RVA: 0x00056D6F File Offset: 0x00054F6F
 		private void DeletePresetFile(string path)
 		{
 			if (UBlueprintPathsLibrary.FileExists(path))
@@ -57,7 +57,7 @@ namespace CSharpScript.Launcher.DiffPatch.OH
 			}
 		}
 
-		// Token: 0x06000DFC RID: 3580 RVA: 0x0005428C File Offset: 0x0005248C
+		// Token: 0x06000E3D RID: 3645 RVA: 0x00056D80 File Offset: 0x00054F80
 		public void Cleanup()
 		{
 			LauncherLog.Instance.Info("OH clean up preset resources.", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -65,7 +65,7 @@ namespace CSharpScript.Launcher.DiffPatch.OH
 			UKuroLauncherLibrary.DeleteDirectory(this.OhNearbyDir);
 		}
 
-		// Token: 0x06000DFD RID: 3581 RVA: 0x000542CC File Offset: 0x000524CC
+		// Token: 0x06000E3E RID: 3646 RVA: 0x00056DC0 File Offset: 0x00054FC0
 		private unsafe void Report(int moved, int missed, long totalMoved)
 		{
 			HotPatchLog hotPatchLog = new HotPatchLog();
@@ -81,7 +81,7 @@ namespace CSharpScript.Launcher.DiffPatch.OH
 					totalMoved = totalMoved
 				}
 			};
-			hotPatchLog.s_step_result = LauncherJson.Stringify<HotPatchLogResult>(value, null);
+			hotPatchLog.s_step_result = LauncherJson.Stringify(value, null);
 			HotPatchLogReport.Instance.Report(hotPatchLog);
 			LauncherLog instance = LauncherLog.Instance;
 			string message = "OH preset consume done";
@@ -92,7 +92,7 @@ namespace CSharpScript.Launcher.DiffPatch.OH
 			instance.Info(message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 		}
 
-		// Token: 0x06000DFE RID: 3582 RVA: 0x000543B4 File Offset: 0x000525B4
+		// Token: 0x06000E3F RID: 3647 RVA: 0x00056EA8 File Offset: 0x000550A8
 		private void DirIterator(string dir, Dictionary<string, HashSet<string>> result)
 		{
 			TArray<string> filesRecursive = UKuroStaticLibrary.GetFilesRecursive(dir, "*", true, false);
@@ -116,7 +116,7 @@ namespace CSharpScript.Launcher.DiffPatch.OH
 			}
 		}
 
-		// Token: 0x06000DFF RID: 3583 RVA: 0x00054474 File Offset: 0x00052674
+		// Token: 0x06000E40 RID: 3648 RVA: 0x00056F68 File Offset: 0x00055168
 		private Dictionary<string, HashSet<string>> EnumeratePresetFiles()
 		{
 			Dictionary<string, HashSet<string>> result = new Dictionary<string, HashSet<string>>();
@@ -125,7 +125,7 @@ namespace CSharpScript.Launcher.DiffPatch.OH
 			return result;
 		}
 
-		// Token: 0x06000E00 RID: 3584 RVA: 0x000544A4 File Offset: 0x000526A4
+		// Token: 0x06000E41 RID: 3649 RVA: 0x00056F98 File Offset: 0x00055198
 		private Dictionary<string, IWantedTarget> BuildWantedFromVideos()
 		{
 			Dictionary<string, IWantedTarget> dictionary = new Dictionary<string, IWantedTarget>();
@@ -147,10 +147,10 @@ namespace CSharpScript.Launcher.DiffPatch.OH
 			return dictionary;
 		}
 
-		// Token: 0x040008BB RID: 2235
+		// Token: 0x040008FC RID: 2300
 		private readonly string OhSystemManagedDownloadDir;
 
-		// Token: 0x040008BC RID: 2236
+		// Token: 0x040008FD RID: 2301
 		private readonly string OhNearbyDir;
 	}
 }

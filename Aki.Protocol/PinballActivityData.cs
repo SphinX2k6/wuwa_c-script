@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000D3F RID: 3391
+	// Token: 0x02000D2F RID: 3375
 	public sealed class PinballActivityData : IMessage<PinballActivityData>, IMessage, IEquatable<PinballActivityData>, IDeepCloneable<PinballActivityData>, IBufferMessage
 	{
-		// Token: 0x060124C3 RID: 74947 RVA: 0x002AB8D1 File Offset: 0x002A9AD1
+		// Token: 0x060123C7 RID: 74695 RVA: 0x002A9CAD File Offset: 0x002A7EAD
 		[NullableContext(1)]
 		public static PinballActivityData Create()
 		{
 			return new PinballActivityData();
 		}
 
-		// Token: 0x17003C9E RID: 15518
-		// (get) Token: 0x060124C4 RID: 74948 RVA: 0x002AB8D8 File Offset: 0x002A9AD8
+		// Token: 0x17003C69 RID: 15465
+		// (get) Token: 0x060123C8 RID: 74696 RVA: 0x002A9CB4 File Offset: 0x002A7EB4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003C9F RID: 15519
-		// (get) Token: 0x060124C5 RID: 74949 RVA: 0x002AB8DB File Offset: 0x002A9ADB
+		// Token: 0x17003C6A RID: 15466
+		// (get) Token: 0x060123C9 RID: 74697 RVA: 0x002A9CB7 File Offset: 0x002A7EB7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060124C6 RID: 74950 RVA: 0x002AB8E2 File Offset: 0x002A9AE2
+		// Token: 0x060123CA RID: 74698 RVA: 0x002A9CBE File Offset: 0x002A7EBE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PinballActivityData()
 		{
 		}
 
-		// Token: 0x060124C7 RID: 74951 RVA: 0x002AB918 File Offset: 0x002A9B18
+		// Token: 0x060123CB RID: 74699 RVA: 0x002A9CF4 File Offset: 0x002A7EF4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PinballActivityData(PinballActivityData other) : this()
@@ -63,7 +63,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060124C8 RID: 74952 RVA: 0x002AB9B8 File Offset: 0x002A9BB8
+		// Token: 0x060123CC RID: 74700 RVA: 0x002A9D94 File Offset: 0x002A7F94
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PinballActivityData Clone()
@@ -71,8 +71,8 @@ namespace Aki.Protocol
 			return new PinballActivityData(this);
 		}
 
-		// Token: 0x17003CA0 RID: 15520
-		// (get) Token: 0x060124C9 RID: 74953 RVA: 0x002AB9C0 File Offset: 0x002A9BC0
+		// Token: 0x17003C6B RID: 15467
+		// (get) Token: 0x060123CD RID: 74701 RVA: 0x002A9D9C File Offset: 0x002A7F9C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<PinballChapterData> Chapters
@@ -83,8 +83,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003CA1 RID: 15521
-		// (get) Token: 0x060124CA RID: 74954 RVA: 0x002AB9C8 File Offset: 0x002A9BC8
+		// Token: 0x17003C6C RID: 15468
+		// (get) Token: 0x060123CE RID: 74702 RVA: 0x002A9DA4 File Offset: 0x002A7FA4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<PinballLevelData> Levels
@@ -95,9 +95,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003CA2 RID: 15522
-		// (get) Token: 0x060124CB RID: 74955 RVA: 0x002AB9D0 File Offset: 0x002A9BD0
-		// (set) Token: 0x060124CC RID: 74956 RVA: 0x002AB9D8 File Offset: 0x002A9BD8
+		// Token: 0x17003C6D RID: 15469
+		// (get) Token: 0x060123CF RID: 74703 RVA: 0x002A9DAC File Offset: 0x002A7FAC
+		// (set) Token: 0x060123D0 RID: 74704 RVA: 0x002A9DB4 File Offset: 0x002A7FB4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PinballWeapons Weapons
@@ -112,9 +112,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003CA3 RID: 15523
-		// (get) Token: 0x060124CD RID: 74957 RVA: 0x002AB9E1 File Offset: 0x002A9BE1
-		// (set) Token: 0x060124CE RID: 74958 RVA: 0x002AB9E9 File Offset: 0x002A9BE9
+		// Token: 0x17003C6E RID: 15470
+		// (get) Token: 0x060123D1 RID: 74705 RVA: 0x002A9DBD File Offset: 0x002A7FBD
+		// (set) Token: 0x060123D2 RID: 74706 RVA: 0x002A9DC5 File Offset: 0x002A7FC5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PinballRoles Roles
@@ -129,8 +129,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003CA4 RID: 15524
-		// (get) Token: 0x060124CF RID: 74959 RVA: 0x002AB9F2 File Offset: 0x002A9BF2
+		// Token: 0x17003C6F RID: 15471
+		// (get) Token: 0x060123D3 RID: 74707 RVA: 0x002A9DCE File Offset: 0x002A7FCE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<ConditionTask> ConditionTasks
@@ -141,8 +141,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003CA5 RID: 15525
-		// (get) Token: 0x060124D0 RID: 74960 RVA: 0x002AB9FA File Offset: 0x002A9BFA
+		// Token: 0x17003C70 RID: 15472
+		// (get) Token: 0x060123D4 RID: 74708 RVA: 0x002A9DD6 File Offset: 0x002A7FD6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<GroupFormation> GroupFormations
@@ -153,7 +153,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060124D1 RID: 74961 RVA: 0x002ABA02 File Offset: 0x002A9C02
+		// Token: 0x060123D5 RID: 74709 RVA: 0x002A9DDE File Offset: 0x002A7FDE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -161,7 +161,7 @@ namespace Aki.Protocol
 			return this.Equals(other as PinballActivityData);
 		}
 
-		// Token: 0x060124D2 RID: 74962 RVA: 0x002ABA10 File Offset: 0x002A9C10
+		// Token: 0x060123D6 RID: 74710 RVA: 0x002A9DEC File Offset: 0x002A7FEC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(PinballActivityData other)
@@ -169,7 +169,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.chapters_.Equals(other.chapters_) && this.levels_.Equals(other.levels_) && object.Equals(this.Weapons, other.Weapons) && object.Equals(this.Roles, other.Roles) && this.conditionTasks_.Equals(other.conditionTasks_) && this.groupFormations_.Equals(other.groupFormations_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060124D3 RID: 74963 RVA: 0x002ABAB8 File Offset: 0x002A9CB8
+		// Token: 0x060123D7 RID: 74711 RVA: 0x002A9E94 File Offset: 0x002A8094
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -194,7 +194,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060124D4 RID: 74964 RVA: 0x002ABB42 File Offset: 0x002A9D42
+		// Token: 0x060123D8 RID: 74712 RVA: 0x002A9F1E File Offset: 0x002A811E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -202,7 +202,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060124D5 RID: 74965 RVA: 0x002ABB4F File Offset: 0x002A9D4F
+		// Token: 0x060123D9 RID: 74713 RVA: 0x002A9F2B File Offset: 0x002A812B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -210,7 +210,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060124D6 RID: 74966 RVA: 0x002ABB58 File Offset: 0x002A9D58
+		// Token: 0x060123DA RID: 74714 RVA: 0x002A9F34 File Offset: 0x002A8134
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -235,7 +235,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060124D7 RID: 74967 RVA: 0x002ABBF8 File Offset: 0x002A9DF8
+		// Token: 0x060123DB RID: 74715 RVA: 0x002A9FD4 File Offset: 0x002A81D4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -260,7 +260,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060124D8 RID: 74968 RVA: 0x002ABC9C File Offset: 0x002A9E9C
+		// Token: 0x060123DC RID: 74716 RVA: 0x002AA078 File Offset: 0x002A8278
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(PinballActivityData other)
@@ -292,7 +292,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060124D9 RID: 74969 RVA: 0x002ABD60 File Offset: 0x002A9F60
+		// Token: 0x060123DD RID: 74717 RVA: 0x002AA13C File Offset: 0x002A833C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -300,7 +300,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060124DA RID: 74970 RVA: 0x002ABD6C File Offset: 0x002A9F6C
+		// Token: 0x060123DE RID: 74718 RVA: 0x002AA148 File Offset: 0x002A8348
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -360,55 +360,55 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400720E RID: 29198
+		// Token: 0x04007226 RID: 29222
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400720F RID: 29199
+		// Token: 0x04007227 RID: 29223
 		public const int ChaptersFieldNumber = 1;
 
-		// Token: 0x04007210 RID: 29200
+		// Token: 0x04007228 RID: 29224
 		private static readonly FieldCodec<PinballChapterData> _repeated_chapters_codec = FieldCodec.ForMessage<PinballChapterData>(10U, PinballChapterData.Parser);
 
-		// Token: 0x04007211 RID: 29201
+		// Token: 0x04007229 RID: 29225
 		private readonly RepeatedField<PinballChapterData> chapters_ = new RepeatedField<PinballChapterData>();
 
-		// Token: 0x04007212 RID: 29202
+		// Token: 0x0400722A RID: 29226
 		public const int LevelsFieldNumber = 2;
 
-		// Token: 0x04007213 RID: 29203
+		// Token: 0x0400722B RID: 29227
 		private static readonly FieldCodec<PinballLevelData> _repeated_levels_codec = FieldCodec.ForMessage<PinballLevelData>(18U, PinballLevelData.Parser);
 
-		// Token: 0x04007214 RID: 29204
+		// Token: 0x0400722C RID: 29228
 		private readonly RepeatedField<PinballLevelData> levels_ = new RepeatedField<PinballLevelData>();
 
-		// Token: 0x04007215 RID: 29205
+		// Token: 0x0400722D RID: 29229
 		public const int WeaponsFieldNumber = 3;
 
-		// Token: 0x04007216 RID: 29206
+		// Token: 0x0400722E RID: 29230
 		private PinballWeapons weapons_;
 
-		// Token: 0x04007217 RID: 29207
+		// Token: 0x0400722F RID: 29231
 		public const int RolesFieldNumber = 4;
 
-		// Token: 0x04007218 RID: 29208
+		// Token: 0x04007230 RID: 29232
 		private PinballRoles roles_;
 
-		// Token: 0x04007219 RID: 29209
+		// Token: 0x04007231 RID: 29233
 		public const int ConditionTasksFieldNumber = 5;
 
-		// Token: 0x0400721A RID: 29210
+		// Token: 0x04007232 RID: 29234
 		private static readonly FieldCodec<ConditionTask> _repeated_conditionTasks_codec = FieldCodec.ForMessage<ConditionTask>(42U, ConditionTask.Parser);
 
-		// Token: 0x0400721B RID: 29211
+		// Token: 0x04007233 RID: 29235
 		private readonly RepeatedField<ConditionTask> conditionTasks_ = new RepeatedField<ConditionTask>();
 
-		// Token: 0x0400721C RID: 29212
+		// Token: 0x04007234 RID: 29236
 		public const int GroupFormationsFieldNumber = 6;
 
-		// Token: 0x0400721D RID: 29213
+		// Token: 0x04007235 RID: 29237
 		private static readonly FieldCodec<GroupFormation> _repeated_groupFormations_codec = FieldCodec.ForMessage<GroupFormation>(50U, GroupFormation.Parser);
 
-		// Token: 0x0400721E RID: 29214
+		// Token: 0x04007236 RID: 29238
 		private readonly RepeatedField<GroupFormation> groupFormations_ = new RepeatedField<GroupFormation>();
 	}
 }

@@ -4,22 +4,22 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.Character.Manager
 {
-	// Token: 0x02003E28 RID: 15912
+	// Token: 0x0200313C RID: 12604
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/Character/Manager/ECharacterDitherType.ECharacterDitherType")]
 	public enum ECharacterDitherType : byte
 	{
-		// Token: 0x040143B1 RID: 82865
+		// Token: 0x0401083B RID: 67643
 		UnDefined,
-		// Token: 0x040143B2 RID: 82866
+		// Token: 0x0401083C RID: 67644
 		Fight,
-		// Token: 0x040143B3 RID: 82867
+		// Token: 0x0401083D RID: 67645
 		Sequence,
-		// Token: 0x040143B4 RID: 82868
+		// Token: 0x0401083E RID: 67646
 		Temporary,
-		// Token: 0x040143B5 RID: 82869
+		// Token: 0x0401083F RID: 67647
 		CanBePassedThrough,
-		// Token: 0x040143B6 RID: 82870
+		// Token: 0x04010840 RID: 67648
 		ECharacterDitherType_MAX
 	}
 }

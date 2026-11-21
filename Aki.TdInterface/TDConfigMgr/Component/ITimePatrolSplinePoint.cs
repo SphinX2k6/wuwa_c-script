@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200077D RID: 1917
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200081E RID: 2078
 	public class ITimePatrolSplinePoint : IBaseSplinePointType
 	{
-		// Token: 0x0600298C RID: 10636 RVA: 0x0006D914 File Offset: 0x0006BB14
+		// Token: 0x06002CB0 RID: 11440 RVA: 0x00074ABC File Offset: 0x00072CBC
 		private ITimePatrolSplinePoint_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600298D RID: 10637 RVA: 0x0006D94C File Offset: 0x0006BB4C
+		// Token: 0x06002CB1 RID: 11441 RVA: 0x00074AF4 File Offset: 0x00072CF4
 		public static ITimePatrolSplinePoint Create([Nullable(2)] ITimePatrolSplinePoint instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600298E RID: 10638 RVA: 0x0006D95F File Offset: 0x0006BB5F
+		// Token: 0x06002CB2 RID: 11442 RVA: 0x00074B07 File Offset: 0x00072D07
 		public static ITimePatrolSplinePoint CreateFromSetValue([Nullable(2)] ITimePatrolSplinePoint_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600298F RID: 10639 RVA: 0x0006D974 File Offset: 0x0006BB74
+		// Token: 0x06002CB3 RID: 11443 RVA: 0x00074B1C File Offset: 0x00072D1C
 		public new ITimePatrolSplinePoint_SetValue ToSetValue()
 		{
 			return new ITimePatrolSplinePoint_SetValue
@@ -67,9 +65,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000AEC RID: 2796
-		// (get) Token: 0x06002990 RID: 10640 RVA: 0x0006D9E8 File Offset: 0x0006BBE8
-		// (set) Token: 0x06002991 RID: 10641 RVA: 0x0006DA49 File Offset: 0x0006BC49
+		// Token: 0x17000BAC RID: 2988
+		// (get) Token: 0x06002CB4 RID: 11444 RVA: 0x00074B90 File Offset: 0x00072D90
+		// (set) Token: 0x06002CB5 RID: 11445 RVA: 0x00074BF1 File Offset: 0x00072DF1
 		public override VectorInfo Position
 		{
 			get
@@ -97,9 +95,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AED RID: 2797
-		// (get) Token: 0x06002992 RID: 10642 RVA: 0x0006DA60 File Offset: 0x0006BC60
-		// (set) Token: 0x06002993 RID: 10643 RVA: 0x0006DAC1 File Offset: 0x0006BCC1
+		// Token: 0x17000BAD RID: 2989
+		// (get) Token: 0x06002CB6 RID: 11446 RVA: 0x00074C08 File Offset: 0x00072E08
+		// (set) Token: 0x06002CB7 RID: 11447 RVA: 0x00074C69 File Offset: 0x00072E69
 		public override VectorInfo ArriveTangent
 		{
 			get
@@ -127,9 +125,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AEE RID: 2798
-		// (get) Token: 0x06002994 RID: 10644 RVA: 0x0006DAD8 File Offset: 0x0006BCD8
-		// (set) Token: 0x06002995 RID: 10645 RVA: 0x0006DB39 File Offset: 0x0006BD39
+		// Token: 0x17000BAE RID: 2990
+		// (get) Token: 0x06002CB8 RID: 11448 RVA: 0x00074C80 File Offset: 0x00072E80
+		// (set) Token: 0x06002CB9 RID: 11449 RVA: 0x00074CE1 File Offset: 0x00072EE1
 		public override VectorInfo LeaveTangent
 		{
 			get
@@ -157,9 +155,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AEF RID: 2799
-		// (get) Token: 0x06002996 RID: 10646 RVA: 0x0006DB4E File Offset: 0x0006BD4E
-		// (set) Token: 0x06002997 RID: 10647 RVA: 0x0006DB79 File Offset: 0x0006BD79
+		// Token: 0x17000BAF RID: 2991
+		// (get) Token: 0x06002CBA RID: 11450 RVA: 0x00074CF6 File Offset: 0x00072EF6
+		// (set) Token: 0x06002CBB RID: 11451 RVA: 0x00074D21 File Offset: 0x00072F21
 		public override ESplineLine LineType
 		{
 			get
@@ -180,9 +178,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AF0 RID: 2800
-		// (get) Token: 0x06002998 RID: 10648 RVA: 0x0006DB88 File Offset: 0x0006BD88
-		// (set) Token: 0x06002999 RID: 10649 RVA: 0x0006DBE9 File Offset: 0x0006BDE9
+		// Token: 0x17000BB0 RID: 2992
+		// (get) Token: 0x06002CBC RID: 11452 RVA: 0x00074D30 File Offset: 0x00072F30
+		// (set) Token: 0x06002CBD RID: 11453 RVA: 0x00074D91 File Offset: 0x00072F91
 		[Nullable(2)]
 		public override VectorInfo Rotation
 		{
@@ -213,9 +211,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AF1 RID: 2801
-		// (get) Token: 0x0600299A RID: 10650 RVA: 0x0006DBFE File Offset: 0x0006BDFE
-		// (set) Token: 0x0600299B RID: 10651 RVA: 0x0006DC29 File Offset: 0x0006BE29
+		// Token: 0x17000BB1 RID: 2993
+		// (get) Token: 0x06002CBE RID: 11454 RVA: 0x00074DA6 File Offset: 0x00072FA6
+		// (set) Token: 0x06002CBF RID: 11455 RVA: 0x00074DD1 File Offset: 0x00072FD1
 		public virtual int Hours
 		{
 			get
@@ -236,9 +234,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AF2 RID: 2802
-		// (get) Token: 0x0600299C RID: 10652 RVA: 0x0006DC37 File Offset: 0x0006BE37
-		// (set) Token: 0x0600299D RID: 10653 RVA: 0x0006DC62 File Offset: 0x0006BE62
+		// Token: 0x17000BB2 RID: 2994
+		// (get) Token: 0x06002CC0 RID: 11456 RVA: 0x00074DDF File Offset: 0x00072FDF
+		// (set) Token: 0x06002CC1 RID: 11457 RVA: 0x00074E0A File Offset: 0x0007300A
 		public virtual int Minutes
 		{
 			get
@@ -259,9 +257,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000AF3 RID: 2803
-		// (get) Token: 0x0600299E RID: 10654 RVA: 0x0006DC70 File Offset: 0x0006BE70
-		// (set) Token: 0x0600299F RID: 10655 RVA: 0x0006DCAA File Offset: 0x0006BEAA
+		// Token: 0x17000BB3 RID: 2995
+		// (get) Token: 0x06002CC2 RID: 11458 RVA: 0x00074E18 File Offset: 0x00073018
+		// (set) Token: 0x06002CC3 RID: 11459 RVA: 0x00074E52 File Offset: 0x00073052
 		public virtual int? Second
 		{
 			get
@@ -283,36 +281,36 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001BD9 RID: 7129
+		// Token: 0x04001DDE RID: 7646
 		[Nullable(2)]
 		protected new ITimePatrolSplinePoint FbInstance;
 
-		// Token: 0x04001BDA RID: 7130
+		// Token: 0x04001DDF RID: 7647
 		[Nullable(2)]
 		protected new ITimePatrolSplinePoint_SetValue PocoInterface;
 
-		// Token: 0x04001BDB RID: 7131
+		// Token: 0x04001DE0 RID: 7648
 		private VectorInfo _PositionCache;
 
-		// Token: 0x04001BDC RID: 7132
+		// Token: 0x04001DE1 RID: 7649
 		private bool _PositionInited;
 
-		// Token: 0x04001BDD RID: 7133
+		// Token: 0x04001DE2 RID: 7650
 		private VectorInfo _ArriveTangentCache;
 
-		// Token: 0x04001BDE RID: 7134
+		// Token: 0x04001DE3 RID: 7651
 		private bool _ArriveTangentInited;
 
-		// Token: 0x04001BDF RID: 7135
+		// Token: 0x04001DE4 RID: 7652
 		private VectorInfo _LeaveTangentCache;
 
-		// Token: 0x04001BE0 RID: 7136
+		// Token: 0x04001DE5 RID: 7653
 		private bool _LeaveTangentInited;
 
-		// Token: 0x04001BE1 RID: 7137
+		// Token: 0x04001DE6 RID: 7654
 		private VectorInfo _RotationCache;
 
-		// Token: 0x04001BE2 RID: 7138
+		// Token: 0x04001DE7 RID: 7655
 		private bool _RotationInited;
 	}
 }

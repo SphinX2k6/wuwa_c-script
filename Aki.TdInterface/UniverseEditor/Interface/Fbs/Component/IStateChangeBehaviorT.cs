@@ -4,40 +4,40 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x0200599F RID: 22943
+	// Token: 0x02005FAC RID: 24492
 	public class IStateChangeBehaviorT
 	{
-		// Token: 0x1700AC2F RID: 44079
-		// (get) Token: 0x06026DD2 RID: 159186 RVA: 0x00559493 File Offset: 0x00557693
-		// (set) Token: 0x06026DD3 RID: 159187 RVA: 0x0055949B File Offset: 0x0055769B
+		// Token: 0x1700B563 RID: 46435
+		// (get) Token: 0x0602933C RID: 168764 RVA: 0x005A00FF File Offset: 0x0059E2FF
+		// (set) Token: 0x0602933D RID: 168765 RVA: 0x005A0107 File Offset: 0x0059E307
 		public string State { get; set; }
 
-		// Token: 0x1700AC30 RID: 44080
-		// (get) Token: 0x06026DD4 RID: 159188 RVA: 0x005594A4 File Offset: 0x005576A4
-		// (set) Token: 0x06026DD5 RID: 159189 RVA: 0x005594AC File Offset: 0x005576AC
+		// Token: 0x1700B564 RID: 46436
+		// (get) Token: 0x0602933E RID: 168766 RVA: 0x005A0110 File Offset: 0x0059E310
+		// (set) Token: 0x0602933F RID: 168767 RVA: 0x005A0118 File Offset: 0x0059E318
 		public List<IActionInfoT> Action { get; set; }
 
-		// Token: 0x1700AC31 RID: 44081
-		// (get) Token: 0x06026DD6 RID: 159190 RVA: 0x005594B5 File Offset: 0x005576B5
-		// (set) Token: 0x06026DD7 RID: 159191 RVA: 0x005594BD File Offset: 0x005576BD
+		// Token: 0x1700B565 RID: 46437
+		// (get) Token: 0x06029340 RID: 168768 RVA: 0x005A0121 File Offset: 0x0059E321
+		// (set) Token: 0x06029341 RID: 168769 RVA: 0x005A0129 File Offset: 0x0059E329
 		public IDelayChangeStateT DelayChangeState { get; set; }
 
-		// Token: 0x1700AC32 RID: 44082
-		// (get) Token: 0x06026DD8 RID: 159192 RVA: 0x005594C6 File Offset: 0x005576C6
-		// (set) Token: 0x06026DD9 RID: 159193 RVA: 0x005594CE File Offset: 0x005576CE
+		// Token: 0x1700B566 RID: 46438
+		// (get) Token: 0x06029342 RID: 168770 RVA: 0x005A0132 File Offset: 0x0059E332
+		// (set) Token: 0x06029343 RID: 168771 RVA: 0x005A013A File Offset: 0x0059E33A
 		public bool PendingConditionAvailable { get; set; }
 
-		// Token: 0x1700AC33 RID: 44083
-		// (get) Token: 0x06026DDA RID: 159194 RVA: 0x005594D7 File Offset: 0x005576D7
-		// (set) Token: 0x06026DDB RID: 159195 RVA: 0x005594DF File Offset: 0x005576DF
+		// Token: 0x1700B567 RID: 46439
+		// (get) Token: 0x06029344 RID: 168772 RVA: 0x005A0143 File Offset: 0x0059E343
+		// (set) Token: 0x06029345 RID: 168773 RVA: 0x005A014B File Offset: 0x0059E34B
 		public List<IConditionActionT> ConditionAction { get; set; }
 
-		// Token: 0x1700AC34 RID: 44084
-		// (get) Token: 0x06026DDC RID: 159196 RVA: 0x005594E8 File Offset: 0x005576E8
-		// (set) Token: 0x06026DDD RID: 159197 RVA: 0x005594F0 File Offset: 0x005576F0
+		// Token: 0x1700B568 RID: 46440
+		// (get) Token: 0x06029346 RID: 168774 RVA: 0x005A0154 File Offset: 0x0059E354
+		// (set) Token: 0x06029347 RID: 168775 RVA: 0x005A015C File Offset: 0x0059E35C
 		public byte NullMask { get; set; }
 
-		// Token: 0x06026DDE RID: 159198 RVA: 0x005594F9 File Offset: 0x005576F9
+		// Token: 0x06029348 RID: 168776 RVA: 0x005A0165 File Offset: 0x0059E365
 		public IStateChangeBehaviorT()
 		{
 			this.State = null;

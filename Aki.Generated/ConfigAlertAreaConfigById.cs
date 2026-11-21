@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000095 RID: 149
+	// Token: 0x0200009D RID: 157
 	public class ConfigAlertAreaConfigById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600037E RID: 894 RVA: 0x0006D560 File Offset: 0x0006B760
+		// Token: 0x060003AE RID: 942 RVA: 0x00071E14 File Offset: 0x00070014
 		static ConfigAlertAreaConfigById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAlertAreaConfigById.CreateStaticDefaultValue), new Action(ConfigAlertAreaConfigById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600037F RID: 895 RVA: 0x0006D580 File Offset: 0x0006B780
+		// Token: 0x060003AF RID: 943 RVA: 0x00071E34 File Offset: 0x00070034
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAlertAreaConfigById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000380 RID: 896 RVA: 0x0006D5FF File Offset: 0x0006B7FF
+		// Token: 0x060003B0 RID: 944 RVA: 0x00071EB3 File Offset: 0x000700B3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAlertAreaConfigById.LogPair = null;
 			ConfigAlertAreaConfigById.HandleId = 0;
 		}
 
-		// Token: 0x06000381 RID: 897 RVA: 0x0006D60D File Offset: 0x0006B80D
+		// Token: 0x060003B1 RID: 945 RVA: 0x00071EC1 File Offset: 0x000700C1
 		public static void Init()
 		{
 			ConfigAlertAreaConfigById.HandleId = ConfigCommon.InitDataStatement(ConfigAlertAreaConfigById.HandleId, "db_alertareaconfig.db", "select BinData from `AlertAreaConfig` where Id=?");
 		}
 
-		// Token: 0x06000382 RID: 898 RVA: 0x0006D628 File Offset: 0x0006B828
+		// Token: 0x060003B2 RID: 946 RVA: 0x00071EDC File Offset: 0x000700DC
 		public static AlertAreaConfig? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigAlertAreaConfigById.HandleId, ConfigAlertAreaConfigById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new AlertAreaConfig?(rootAsAlertAreaConfig);
 		}
 
-		// Token: 0x040003F7 RID: 1015
+		// Token: 0x0400042F RID: 1071
 		private const string DB = "db_alertareaconfig.db";
 
-		// Token: 0x040003F8 RID: 1016
+		// Token: 0x04000430 RID: 1072
 		private const string FILE = "k.可视化编辑/c.Csv/j.警戒区域配置/*.csv*";
 
-		// Token: 0x040003F9 RID: 1017
+		// Token: 0x04000431 RID: 1073
 		private const string TABLE = "AlertAreaConfig";
 
-		// Token: 0x040003FA RID: 1018
+		// Token: 0x04000432 RID: 1074
 		private const string COMMAND = "select BinData from `AlertAreaConfig` where Id=?";
 
-		// Token: 0x040003FB RID: 1019
+		// Token: 0x04000433 RID: 1075
 		private const string KEY_PREFIX = "AlertAreaConfigById";
 
-		// Token: 0x040003FC RID: 1020
+		// Token: 0x04000434 RID: 1076
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040003FD RID: 1021
+		// Token: 0x04000435 RID: 1077
 		private static int HandleId;
 	}
 }

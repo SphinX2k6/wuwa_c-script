@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072D9 RID: 29401
+	// Token: 0x0200645B RID: 25691
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneFixInputData
 	{
-		// Token: 0x06048257 RID: 295511 RVA: 0x01282D64 File Offset: 0x01280F64
+		// Token: 0x0603E66B RID: 255595 RVA: 0x0122554C File Offset: 0x0122374C
 		public SceneFixInputData Set(float pitchLimitMin, float pitchLimitMax, float yawLimitMin, float yawLimitMax, float pitchInputSpeed, float yawInputSpeed)
 		{
 			this.PitchLimitMin = pitchLimitMin;
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Camera
 			return this;
 		}
 
-		// Token: 0x06048258 RID: 295512 RVA: 0x01282D94 File Offset: 0x01280F94
+		// Token: 0x0603E66C RID: 255596 RVA: 0x0122557C File Offset: 0x0122377C
 		public void DeepCopy(SceneFixInputData source)
 		{
 			this.PitchLimitMin = source.PitchLimitMin;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Camera
 			this.YawInputSpeed = source.YawInputSpeed;
 		}
 
-		// Token: 0x06048259 RID: 295513 RVA: 0x01282DEC File Offset: 0x01280FEC
+		// Token: 0x0603E66D RID: 255597 RVA: 0x012255D4 File Offset: 0x012237D4
 		public void Reset()
 		{
 			this.PitchLimitMin = 0f;
@@ -42,22 +42,22 @@ namespace CSharpScript.Game.Camera
 			this.YawInputSpeed = 0f;
 		}
 
-		// Token: 0x04026138 RID: 155960
+		// Token: 0x0402141B RID: 136219
 		public float PitchLimitMin;
 
-		// Token: 0x04026139 RID: 155961
+		// Token: 0x0402141C RID: 136220
 		public float PitchLimitMax;
 
-		// Token: 0x0402613A RID: 155962
+		// Token: 0x0402141D RID: 136221
 		public float YawLimitMin;
 
-		// Token: 0x0402613B RID: 155963
+		// Token: 0x0402141E RID: 136222
 		public float YawLimitMax;
 
-		// Token: 0x0402613C RID: 155964
+		// Token: 0x0402141F RID: 136223
 		public float PitchInputSpeed;
 
-		// Token: 0x0402613D RID: 155965
+		// Token: 0x04021420 RID: 136224
 		public float YawInputSpeed;
 	}
 }

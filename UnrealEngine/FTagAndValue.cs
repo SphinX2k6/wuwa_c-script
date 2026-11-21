@@ -5,22 +5,22 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000361 RID: 865
+	// Token: 0x020000E1 RID: 225
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/AssetRegistry.TagAndValue")]
 	[UnrealStructLayout(32, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 32)]
 	public class FTagAndValue : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06003009 RID: 12297 RVA: 0x0004A7BE File Offset: 0x000489BE
+		// Token: 0x06000FC4 RID: 4036 RVA: 0x00019502 File Offset: 0x00017702
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FTagAndValue._ScriptStructPtr != 0) ? FTagAndValue._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/AssetRegistry.TagAndValue", ref FTagAndValue._ScriptStructPtr);
 		}
 
-		// Token: 0x17000BE1 RID: 3041
-		// (get) Token: 0x0600300A RID: 12298 RVA: 0x0004A7E2 File Offset: 0x000489E2
-		// (set) Token: 0x0600300B RID: 12299 RVA: 0x0004A7F6 File Offset: 0x000489F6
+		// Token: 0x17000164 RID: 356
+		// (get) Token: 0x06000FC5 RID: 4037 RVA: 0x00019526 File Offset: 0x00017726
+		// (set) Token: 0x06000FC6 RID: 4038 RVA: 0x0001953A File Offset: 0x0001773A
 		public unsafe FName Tag
 		{
 			get
@@ -33,9 +33,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17000BE2 RID: 3042
-		// (get) Token: 0x0600300C RID: 12300 RVA: 0x0004A80B File Offset: 0x00048A0B
-		// (set) Token: 0x0600300D RID: 12301 RVA: 0x0004A81F File Offset: 0x00048A1F
+		// Token: 0x17000165 RID: 357
+		// (get) Token: 0x06000FC7 RID: 4039 RVA: 0x0001954F File Offset: 0x0001774F
+		// (set) Token: 0x06000FC8 RID: 4040 RVA: 0x00019563 File Offset: 0x00017763
 		public unsafe string Value
 		{
 			get
@@ -48,57 +48,50 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600300E RID: 12302 RVA: 0x0004A834 File Offset: 0x00048A34
+		// Token: 0x06000FC9 RID: 4041 RVA: 0x00019578 File Offset: 0x00017778
 		public FTagAndValue()
 		{
 		}
 
-		// Token: 0x0600300F RID: 12303 RVA: 0x0004A83C File Offset: 0x00048A3C
-		public FTagAndValue(FName Tag, string Value)
-		{
-			this.Tag = Tag;
-			this.Value = Value;
-		}
-
-		// Token: 0x06003010 RID: 12304 RVA: 0x0004A852 File Offset: 0x00048A52
+		// Token: 0x06000FCA RID: 4042 RVA: 0x00019580 File Offset: 0x00017780
 		protected override IntPtr GetUStructPtr()
 		{
 			return FTagAndValue.StaticStruct();
 		}
 
-		// Token: 0x06003011 RID: 12305 RVA: 0x0004A85E File Offset: 0x00048A5E
+		// Token: 0x06000FCB RID: 4043 RVA: 0x0001958C File Offset: 0x0001778C
 		[NullableContext(2)]
 		public FTagAndValue(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06003012 RID: 12306 RVA: 0x0004A868 File Offset: 0x00048A68
+		// Token: 0x06000FCC RID: 4044 RVA: 0x00019596 File Offset: 0x00017796
 		public FTagAndValue(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06003013 RID: 12307 RVA: 0x0004A873 File Offset: 0x00048A73
+		// Token: 0x06000FCD RID: 4045 RVA: 0x000195A1 File Offset: 0x000177A1
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FTagAndValue(Pointer, false, true);
 		}
 
-		// Token: 0x06003014 RID: 12308 RVA: 0x0004A87D File Offset: 0x00048A7D
+		// Token: 0x06000FCE RID: 4046 RVA: 0x000195AB File Offset: 0x000177AB
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FTagAndValue(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x040014DA RID: 5338
+		// Token: 0x04000394 RID: 916
 		public const string __ObjectPath = "/Script/AssetRegistry.TagAndValue";
 
-		// Token: 0x040014DB RID: 5339
+		// Token: 0x04000395 RID: 917
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040014DC RID: 5340
+		// Token: 0x04000396 RID: 918
 		internal static int __PropertyOffset_Tag;
 
-		// Token: 0x040014DD RID: 5341
+		// Token: 0x04000397 RID: 919
 		internal static int __PropertyOffset_Value;
 	}
 }

@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001D1F RID: 7455
+// Token: 0x020011E1 RID: 4577
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsRoguePopUpWaveTipsPanel : UiPanelBase
 {
-	// Token: 0x0600E192 RID: 57746 RVA: 0x0034F878 File Offset: 0x0034DA78
+	// Token: 0x0600B5AF RID: 46511 RVA: 0x0035B2A8 File Offset: 0x003594A8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,7 +23,7 @@ public class SurvivorsRoguePopUpWaveTipsPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600E193 RID: 57747 RVA: 0x0034F8D4 File Offset: 0x0034DAD4
+	// Token: 0x0600B5B0 RID: 46512 RVA: 0x0035B304 File Offset: 0x00359504
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SurvivorsRoguePopUpWaveTipsPanel.<OnBeforeStartAsync>d__12 <OnBeforeStartAsync>d__;
@@ -34,7 +34,7 @@ public class SurvivorsRoguePopUpWaveTipsPanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600E194 RID: 57748 RVA: 0x0034F917 File Offset: 0x0034DB17
+	// Token: 0x0600B5B1 RID: 46513 RVA: 0x0035B347 File Offset: 0x00359547
 	protected override void OnStart()
 	{
 		base.OnStart();
@@ -55,21 +55,21 @@ public class SurvivorsRoguePopUpWaveTipsPanel : UiPanelBase
 		}, false);
 	}
 
-	// Token: 0x0600E195 RID: 57749 RVA: 0x0034F955 File Offset: 0x0034DB55
+	// Token: 0x0600B5B2 RID: 46514 RVA: 0x0035B385 File Offset: 0x00359585
 	protected override void OnBeforeShow()
 	{
 		this.OnAddEventListener();
 		this.TickEnabled = true;
 	}
 
-	// Token: 0x0600E196 RID: 57750 RVA: 0x0034F964 File Offset: 0x0034DB64
+	// Token: 0x0600B5B3 RID: 46515 RVA: 0x0035B394 File Offset: 0x00359594
 	protected override void OnBeforeHide()
 	{
 		this.OnRemoveEventListener();
 		this.TickEnabled = false;
 	}
 
-	// Token: 0x0600E197 RID: 57751 RVA: 0x0034F974 File Offset: 0x0034DB74
+	// Token: 0x0600B5B4 RID: 46516 RVA: 0x0035B3A4 File Offset: 0x003595A4
 	protected void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
@@ -77,7 +77,7 @@ public class SurvivorsRoguePopUpWaveTipsPanel : UiPanelBase
 		EventSystem.Instance.Add<EUiViewName, int>(EEventName.CloseView, new Action<EUiViewName, int>(this.OnCloseView));
 	}
 
-	// Token: 0x0600E198 RID: 57752 RVA: 0x0034F9D0 File Offset: 0x0034DBD0
+	// Token: 0x0600B5B5 RID: 46517 RVA: 0x0035B400 File Offset: 0x00359600
 	protected void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
@@ -85,7 +85,7 @@ public class SurvivorsRoguePopUpWaveTipsPanel : UiPanelBase
 		EventSystem.Instance.Remove(EEventName.CloseView, new Action<EUiViewName, int>(this.OnCloseView));
 	}
 
-	// Token: 0x0600E199 RID: 57753 RVA: 0x0034FA2C File Offset: 0x0034DC2C
+	// Token: 0x0600B5B6 RID: 46518 RVA: 0x0035B45C File Offset: 0x0035965C
 	public void ShowWaveTips()
 	{
 		base.Show(null);
@@ -94,7 +94,7 @@ public class SurvivorsRoguePopUpWaveTipsPanel : UiPanelBase
 		this.SequencePlayer.PlayOrReplaySequenceByName("Start", false, null);
 	}
 
-	// Token: 0x0600E19A RID: 57754 RVA: 0x0034FA80 File Offset: 0x0034DC80
+	// Token: 0x0600B5B7 RID: 46519 RVA: 0x0035B4B0 File Offset: 0x003596B0
 	private void OnActivitySequenceEmitEvent(string param)
 	{
 		if (param == "TipsShow")
@@ -116,7 +116,7 @@ public class SurvivorsRoguePopUpWaveTipsPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600E19B RID: 57755 RVA: 0x0034FAF3 File Offset: 0x0034DCF3
+	// Token: 0x0600B5B8 RID: 46520 RVA: 0x0035B523 File Offset: 0x00359723
 	private void OnOpenView(EUiViewName viewName, int viewId)
 	{
 		if (viewName == EUiViewName.SurvivorsRogueExitView)
@@ -125,7 +125,7 @@ public class SurvivorsRoguePopUpWaveTipsPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600E19C RID: 57756 RVA: 0x0034FB0D File Offset: 0x0034DD0D
+	// Token: 0x0600B5B9 RID: 46521 RVA: 0x0035B53D File Offset: 0x0035973D
 	private void OnCloseView(EUiViewName viewName, int viewId)
 	{
 		if (viewName == EUiViewName.SurvivorsRogueExitView)
@@ -134,7 +134,7 @@ public class SurvivorsRoguePopUpWaveTipsPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600E19D RID: 57757 RVA: 0x0034FB28 File Offset: 0x0034DD28
+	// Token: 0x0600B5BA RID: 46522 RVA: 0x0035B558 File Offset: 0x00359758
 	public void InitWavePointItem()
 	{
 		int num = SurvivorsRogueModel.Instance.CurWaveNum - 1;
@@ -164,7 +164,7 @@ public class SurvivorsRoguePopUpWaveTipsPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600E19E RID: 57758 RVA: 0x0034FBC8 File Offset: 0x0034DDC8
+	// Token: 0x0600B5BB RID: 46523 RVA: 0x0035B5F8 File Offset: 0x003597F8
 	public void OnTick(float delta)
 	{
 		if (!this.TickEnabled || !this.NeedTick)
@@ -189,47 +189,47 @@ public class SurvivorsRoguePopUpWaveTipsPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0400684E RID: 26702
+	// Token: 0x0400692D RID: 26925
 	private const int WAVE_POINT_COUNT = 12;
 
-	// Token: 0x0400684F RID: 26703
+	// Token: 0x0400692E RID: 26926
 	private const int WAVE_POINT_START_INDEX = 6;
 
-	// Token: 0x04006850 RID: 26704
+	// Token: 0x0400692F RID: 26927
 	private const float WAVE_POINT_MOVE_SPEED = 0.25f;
 
-	// Token: 0x04006851 RID: 26705
+	// Token: 0x04006930 RID: 26928
 	private UUIText WaveNumText;
 
-	// Token: 0x04006852 RID: 26706
+	// Token: 0x04006931 RID: 26929
 	private LevelSequencePlayer SequencePlayer;
 
-	// Token: 0x04006853 RID: 26707
+	// Token: 0x04006932 RID: 26930
 	private readonly SurvivorsRogueWavePointItem[] WavePointItems = new SurvivorsRogueWavePointItem[12];
 
-	// Token: 0x04006854 RID: 26708
+	// Token: 0x04006933 RID: 26931
 	private bool NeedTick;
 
-	// Token: 0x04006855 RID: 26709
+	// Token: 0x04006934 RID: 26932
 	private float MoveLengthRecord;
 
-	// Token: 0x04006856 RID: 26710
+	// Token: 0x04006935 RID: 26933
 	private float WavePointWidth;
 
-	// Token: 0x04006857 RID: 26711
+	// Token: 0x04006936 RID: 26934
 	private bool TickEnabled;
 
-	// Token: 0x02008317 RID: 33559
+	// Token: 0x020074A0 RID: 29856
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x0402AC17 RID: 175127
+		// Token: 0x04025F3F RID: 155455
 		public const int WavePointRoot = 0;
 
-		// Token: 0x0402AC18 RID: 175128
+		// Token: 0x04025F40 RID: 155456
 		public const int WavePointTemplate = 1;
 
-		// Token: 0x0402AC19 RID: 175129
+		// Token: 0x04025F41 RID: 155457
 		public const int WaveNum = 2;
 	}
 }

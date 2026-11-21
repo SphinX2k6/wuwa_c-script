@@ -3,49 +3,49 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MowingRisk
 {
-	// Token: 0x020063D4 RID: 25556
+	// Token: 0x02005352 RID: 21330
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MowingRiskNewBasicBuffTipsData : IMowingRiskNewBasicBuffTipsData
 	{
-		// Token: 0x17009401 RID: 37889
-		// (get) Token: 0x0604046B RID: 263275 RVA: 0x00F8BA2B File Offset: 0x00F89C2B
-		// (set) Token: 0x0604046C RID: 263276 RVA: 0x00F8BA33 File Offset: 0x00F89C33
+		// Token: 0x17006763 RID: 26467
+		// (get) Token: 0x0603512C RID: 217388 RVA: 0x00ED29C3 File Offset: 0x00ED0BC3
+		// (set) Token: 0x0603512D RID: 217389 RVA: 0x00ED29CB File Offset: 0x00ED0BCB
 		public bool IsGolden { get; set; }
 
-		// Token: 0x17009402 RID: 37890
-		// (get) Token: 0x0604046D RID: 263277 RVA: 0x00F8BA3C File Offset: 0x00F89C3C
-		// (set) Token: 0x0604046E RID: 263278 RVA: 0x00F8BA44 File Offset: 0x00F89C44
+		// Token: 0x17006764 RID: 26468
+		// (get) Token: 0x0603512E RID: 217390 RVA: 0x00ED29D4 File Offset: 0x00ED0BD4
+		// (set) Token: 0x0603512F RID: 217391 RVA: 0x00ED29DC File Offset: 0x00ED0BDC
 		public string NameTextId { get; set; }
 
-		// Token: 0x17009403 RID: 37891
-		// (get) Token: 0x0604046F RID: 263279 RVA: 0x00F8BA4D File Offset: 0x00F89C4D
-		// (set) Token: 0x06040470 RID: 263280 RVA: 0x00F8BA55 File Offset: 0x00F89C55
+		// Token: 0x17006765 RID: 26469
+		// (get) Token: 0x06035130 RID: 217392 RVA: 0x00ED29E5 File Offset: 0x00ED0BE5
+		// (set) Token: 0x06035131 RID: 217393 RVA: 0x00ED29ED File Offset: 0x00ED0BED
 		public string NameHexColor { get; set; }
 
-		// Token: 0x17009404 RID: 37892
-		// (get) Token: 0x06040471 RID: 263281 RVA: 0x00F8BA5E File Offset: 0x00F89C5E
-		// (set) Token: 0x06040472 RID: 263282 RVA: 0x00F8BA66 File Offset: 0x00F89C66
+		// Token: 0x17006766 RID: 26470
+		// (get) Token: 0x06035132 RID: 217394 RVA: 0x00ED29F6 File Offset: 0x00ED0BF6
+		// (set) Token: 0x06035133 RID: 217395 RVA: 0x00ED29FE File Offset: 0x00ED0BFE
 		public string IconPath { get; set; }
 
-		// Token: 0x17009405 RID: 37893
-		// (get) Token: 0x06040473 RID: 263283 RVA: 0x00F8BA6F File Offset: 0x00F89C6F
-		// (set) Token: 0x06040474 RID: 263284 RVA: 0x00F8BA77 File Offset: 0x00F89C77
+		// Token: 0x17006767 RID: 26471
+		// (get) Token: 0x06035134 RID: 217396 RVA: 0x00ED2A07 File Offset: 0x00ED0C07
+		// (set) Token: 0x06035135 RID: 217397 RVA: 0x00ED2A0F File Offset: 0x00ED0C0F
 		public string DescriptionTextId { get; set; }
 
-		// Token: 0x17009406 RID: 37894
-		// (get) Token: 0x06040475 RID: 263285 RVA: 0x00F8BA80 File Offset: 0x00F89C80
-		// (set) Token: 0x06040476 RID: 263286 RVA: 0x00F8BA88 File Offset: 0x00F89C88
+		// Token: 0x17006768 RID: 26472
+		// (get) Token: 0x06035136 RID: 217398 RVA: 0x00ED2A18 File Offset: 0x00ED0C18
+		// (set) Token: 0x06035137 RID: 217399 RVA: 0x00ED2A20 File Offset: 0x00ED0C20
 		public string[] DescriptionArgs { get; set; }
 
-		// Token: 0x17009407 RID: 37895
-		// (get) Token: 0x06040477 RID: 263287 RVA: 0x00F8BA91 File Offset: 0x00F89C91
-		// (set) Token: 0x06040478 RID: 263288 RVA: 0x00F8BA99 File Offset: 0x00F89C99
+		// Token: 0x17006769 RID: 26473
+		// (get) Token: 0x06035138 RID: 217400 RVA: 0x00ED2A29 File Offset: 0x00ED0C29
+		// (set) Token: 0x06035139 RID: 217401 RVA: 0x00ED2A31 File Offset: 0x00ED0C31
 		public string QualityTexPath { get; set; }
 
-		// Token: 0x17009408 RID: 37896
-		// (get) Token: 0x06040479 RID: 263289 RVA: 0x00F8BAA2 File Offset: 0x00F89CA2
-		// (set) Token: 0x0604047A RID: 263290 RVA: 0x00F8BAAA File Offset: 0x00F89CAA
+		// Token: 0x1700676A RID: 26474
+		// (get) Token: 0x0603513A RID: 217402 RVA: 0x00ED2A3A File Offset: 0x00ED0C3A
+		// (set) Token: 0x0603513B RID: 217403 RVA: 0x00ED2A42 File Offset: 0x00ED0C42
 		public string QualityFlowPath { get; set; }
 	}
 }

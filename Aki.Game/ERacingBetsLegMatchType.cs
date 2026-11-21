@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020026EB RID: 9963
+// Token: 0x02001BD6 RID: 7126
 public enum ERacingBetsLegMatchType
 {
-	// Token: 0x040099AD RID: 39341
+	// Token: 0x04009B05 RID: 39685
 	FirstHalf = 1,
-	// Token: 0x040099AE RID: 39342
+	// Token: 0x04009B06 RID: 39686
 	SecondHalf
 }

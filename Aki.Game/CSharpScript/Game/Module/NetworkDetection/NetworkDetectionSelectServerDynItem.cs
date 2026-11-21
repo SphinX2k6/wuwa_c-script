@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.NetworkDetection
 {
-	// Token: 0x02005362 RID: 21346
+	// Token: 0x02004345 RID: 17221
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class NetworkDetectionSelectServerDynItem : UiPanelBase, IDynamicScrollBaseItem<ILoginServersData>
 	{
-		// Token: 0x06036884 RID: 223364 RVA: 0x00CE96B4 File Offset: 0x00CE78B4
+		// Token: 0x0602B7CA RID: 178122 RVA: 0x00C3853C File Offset: 0x00C3673C
 		public UniTask Init(UUIItem actor)
 		{
 			NetworkDetectionSelectServerDynItem.<Init>d__1 <Init>d__;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.NetworkDetection
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036885 RID: 223365 RVA: 0x00CE9700 File Offset: 0x00CE7900
+		// Token: 0x0602B7CB RID: 178123 RVA: 0x00C38588 File Offset: 0x00C36788
 		public FVector2D GetItemSize(ILoginServersData data)
 		{
 			if (this.ItemSizeVector == null)
@@ -38,18 +38,18 @@ namespace CSharpScript.Game.Module.NetworkDetection
 			return this.ItemSizeVector.ToUeVector2D(false);
 		}
 
-		// Token: 0x06036886 RID: 223366 RVA: 0x00CE974C File Offset: 0x00CE794C
+		// Token: 0x0602B7CC RID: 178124 RVA: 0x00C385D4 File Offset: 0x00C367D4
 		public AUIBaseActor GetUsingItem()
 		{
 			return base.GetRootItem().GetOwner() as AUIBaseActor;
 		}
 
-		// Token: 0x06036887 RID: 223367 RVA: 0x00CE975E File Offset: 0x00CE795E
+		// Token: 0x0602B7CD RID: 178125 RVA: 0x00C385E6 File Offset: 0x00C367E6
 		public void ClearItem()
 		{
 		}
 
-		// Token: 0x0401CD5D RID: 118109
+		// Token: 0x040177F1 RID: 96241
 		[Nullable(2)]
 		private Vector2D ItemSizeVector;
 	}

@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020077A7 RID: 30631
+	// Token: 0x02007FDF RID: 32735
 	public enum TStateOption : byte
 	{
-		// Token: 0x0401297F RID: 76159
+		// Token: 0x04013A37 RID: 80439
 		NONE,
-		// Token: 0x04012980 RID: 76160
+		// Token: 0x04013A38 RID: 80440
 		INotifyMonsterPerception,
-		// Token: 0x04012981 RID: 76161
+		// Token: 0x04013A39 RID: 80441
 		INotifyMonsterPlayStandbyTags,
-		// Token: 0x04012982 RID: 76162
+		// Token: 0x04013A3A RID: 80442
 		ISetBattleTag
 	}
 }

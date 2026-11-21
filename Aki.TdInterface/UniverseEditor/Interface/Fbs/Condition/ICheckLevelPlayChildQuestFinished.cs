@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004ABD RID: 19133
+	// Token: 0x02004F8C RID: 20364
 	public struct ICheckLevelPlayChildQuestFinished : IFlatbufferObject
 	{
-		// Token: 0x17008AAE RID: 35502
-		// (get) Token: 0x0601E08A RID: 123018 RVA: 0x0043707C File Offset: 0x0043527C
+		// Token: 0x1700919B RID: 37275
+		// (get) Token: 0x0601FB73 RID: 129907 RVA: 0x0046889C File Offset: 0x00466A9C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E08B RID: 123019 RVA: 0x00437089 File Offset: 0x00435289
+		// Token: 0x0601FB74 RID: 129908 RVA: 0x004688A9 File Offset: 0x00466AA9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601E08C RID: 123020 RVA: 0x00437090 File Offset: 0x00435290
+		// Token: 0x0601FB75 RID: 129909 RVA: 0x004688B0 File Offset: 0x00466AB0
 		public static ICheckLevelPlayChildQuestFinished GetRootAsICheckLevelPlayChildQuestFinished(ByteBuffer _bb)
 		{
 			return ICheckLevelPlayChildQuestFinished.GetRootAsICheckLevelPlayChildQuestFinished(_bb, default(ICheckLevelPlayChildQuestFinished));
 		}
 
-		// Token: 0x0601E08D RID: 123021 RVA: 0x004370AC File Offset: 0x004352AC
+		// Token: 0x0601FB76 RID: 129910 RVA: 0x004688CC File Offset: 0x00466ACC
 		public static ICheckLevelPlayChildQuestFinished GetRootAsICheckLevelPlayChildQuestFinished(ByteBuffer _bb, ICheckLevelPlayChildQuestFinished obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601E08E RID: 123022 RVA: 0x004370C9 File Offset: 0x004352C9
+		// Token: 0x0601FB77 RID: 129911 RVA: 0x004688E9 File Offset: 0x00466AE9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601E08F RID: 123023 RVA: 0x004370D8 File Offset: 0x004352D8
+		// Token: 0x0601FB78 RID: 129912 RVA: 0x004688F8 File Offset: 0x00466AF8
 		public ICheckLevelPlayChildQuestFinished __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008AAF RID: 35503
-		// (get) Token: 0x0601E090 RID: 123024 RVA: 0x004370E8 File Offset: 0x004352E8
+		// Token: 0x1700919C RID: 37276
+		// (get) Token: 0x0601FB79 RID: 129913 RVA: 0x00468908 File Offset: 0x00466B08
 		public ECondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008AB0 RID: 35504
-		// (get) Token: 0x0601E091 RID: 123025 RVA: 0x00437124 File Offset: 0x00435324
+		// Token: 0x1700919D RID: 37277
+		// (get) Token: 0x0601FB7A RID: 129914 RVA: 0x00468944 File Offset: 0x00466B44
 		public int ChildQuestId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008AB1 RID: 35505
-		// (get) Token: 0x0601E092 RID: 123026 RVA: 0x00437160 File Offset: 0x00435360
+		// Token: 0x1700919E RID: 37278
+		// (get) Token: 0x0601FB7B RID: 129915 RVA: 0x00468980 File Offset: 0x00466B80
 		public ECompare Compare
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E093 RID: 123027 RVA: 0x0043719C File Offset: 0x0043539C
+		// Token: 0x0601FB7C RID: 129916 RVA: 0x004689BC File Offset: 0x00466BBC
 		public static Offset<ICheckLevelPlayChildQuestFinished> CreateICheckLevelPlayChildQuestFinished(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, int ChildQuestId = 0, ECompare Compare = ECompare.Eq)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckLevelPlayChildQuestFinished.EndICheckLevelPlayChildQuestFinished(builder);
 		}
 
-		// Token: 0x0601E094 RID: 123028 RVA: 0x004371C0 File Offset: 0x004353C0
+		// Token: 0x0601FB7D RID: 129917 RVA: 0x004689E0 File Offset: 0x00466BE0
 		public static void StartICheckLevelPlayChildQuestFinished(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601E095 RID: 123029 RVA: 0x004371C9 File Offset: 0x004353C9
+		// Token: 0x0601FB7E RID: 129918 RVA: 0x004689E9 File Offset: 0x00466BE9
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601E096 RID: 123030 RVA: 0x004371D4 File Offset: 0x004353D4
+		// Token: 0x0601FB7F RID: 129919 RVA: 0x004689F4 File Offset: 0x00466BF4
 		public static void AddChildQuestId(FlatBufferBuilder builder, int childQuestId)
 		{
 			builder.AddInt(1, childQuestId, 0);
 		}
 
-		// Token: 0x0601E097 RID: 123031 RVA: 0x004371DF File Offset: 0x004353DF
+		// Token: 0x0601FB80 RID: 129920 RVA: 0x004689FF File Offset: 0x00466BFF
 		public static void AddCompare(FlatBufferBuilder builder, ECompare compare)
 		{
 			builder.AddByte(2, (byte)compare, 0);
 		}
 
-		// Token: 0x0601E098 RID: 123032 RVA: 0x004371EA File Offset: 0x004353EA
+		// Token: 0x0601FB81 RID: 129921 RVA: 0x00468A0A File Offset: 0x00466C0A
 		public static Offset<ICheckLevelPlayChildQuestFinished> EndICheckLevelPlayChildQuestFinished(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckLevelPlayChildQuestFinished>(builder.EndTable());
 		}
 
-		// Token: 0x0601E099 RID: 123033 RVA: 0x004371F8 File Offset: 0x004353F8
+		// Token: 0x0601FB82 RID: 129922 RVA: 0x00468A18 File Offset: 0x00466C18
 		public ICheckLevelPlayChildQuestFinishedT UnPack()
 		{
 			ICheckLevelPlayChildQuestFinishedT checkLevelPlayChildQuestFinishedT = new ICheckLevelPlayChildQuestFinishedT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkLevelPlayChildQuestFinishedT;
 		}
 
-		// Token: 0x0601E09A RID: 123034 RVA: 0x00437213 File Offset: 0x00435413
+		// Token: 0x0601FB83 RID: 129923 RVA: 0x00468A33 File Offset: 0x00466C33
 		public void UnPackTo(ICheckLevelPlayChildQuestFinishedT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.Compare = this.Compare;
 		}
 
-		// Token: 0x0601E09B RID: 123035 RVA: 0x0043723C File Offset: 0x0043543C
+		// Token: 0x0601FB84 RID: 129924 RVA: 0x00468A5C File Offset: 0x00466C5C
 		public static Offset<ICheckLevelPlayChildQuestFinished> Pack(FlatBufferBuilder builder, ICheckLevelPlayChildQuestFinishedT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckLevelPlayChildQuestFinished.CreateICheckLevelPlayChildQuestFinished(builder, _o.Type, _o.ChildQuestId, _o.Compare);
 		}
 
-		// Token: 0x0400D33F RID: 54079
+		// Token: 0x0400DE24 RID: 56868
 		private Table __p;
 	}
 }

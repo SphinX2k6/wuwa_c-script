@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.FishingQte
 {
-	// Token: 0x02006E3D RID: 28221
+	// Token: 0x02005FBE RID: 24510
 	public class GridItem : GridProxyAbstract<int>
 	{
-		// Token: 0x06044CD6 RID: 281814 RVA: 0x010FA4FC File Offset: 0x010F86FC
+		// Token: 0x0603AE63 RID: 241251 RVA: 0x010A4A7C File Offset: 0x010A2C7C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06044CD7 RID: 281815 RVA: 0x010FA568 File Offset: 0x010F8768
+		// Token: 0x0603AE64 RID: 241252 RVA: 0x010A4AE8 File Offset: 0x010A2CE8
 		public override void Refresh(int dataId, bool isSelected, int gridIndex)
 		{
 			bool flag = dataId == -1;
@@ -37,13 +37,13 @@ namespace CSharpScript.Game.LevelGamePlay.FishingQte
 			uuiitem.SetChangeColor(bUseChangeColor, fcolor);
 		}
 
-		// Token: 0x0200CCEF RID: 52463
+		// Token: 0x0200B8DF RID: 47327
 		private class EItemComponents
 		{
-			// Token: 0x0403DCD0 RID: 253136
+			// Token: 0x040390F2 RID: 233714
 			public const int SpriteBg = 0;
 
-			// Token: 0x0403DCD1 RID: 253137
+			// Token: 0x040390F3 RID: 233715
 			public const int SpriteBan = 1;
 		}
 	}

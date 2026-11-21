@@ -7,18 +7,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Cook.View
 {
-	// Token: 0x02005B13 RID: 23315
+	// Token: 0x02004AF4 RID: 19188
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ConfirmButtonCompose : UiPanelBase
 	{
-		// Token: 0x0603B067 RID: 241767 RVA: 0x00E1244F File Offset: 0x00E1064F
+		// Token: 0x0602FFD9 RID: 196569 RVA: 0x00D63167 File Offset: 0x00D61367
 		public ConfirmButtonCompose(UUIItem uiItem)
 		{
 			base.CreateThenShowByActor(uiItem.GetOwner(), null);
 		}
 
-		// Token: 0x0603B068 RID: 241768 RVA: 0x00E12464 File Offset: 0x00E10664
+		// Token: 0x0602FFDA RID: 196570 RVA: 0x00D6317C File Offset: 0x00D6137C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -39,25 +39,25 @@ namespace CSharpScript.Game.Module.Cook.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603B069 RID: 241769 RVA: 0x00E1250A File Offset: 0x00E1070A
+		// Token: 0x0602FFDB RID: 196571 RVA: 0x00D63222 File Offset: 0x00D61422
 		public void UpdateText(string text)
 		{
 			base.GetText(1).SetText(text, true);
 		}
 
-		// Token: 0x0603B06A RID: 241770 RVA: 0x00E1251A File Offset: 0x00E1071A
+		// Token: 0x0602FFDC RID: 196572 RVA: 0x00D63232 File Offset: 0x00D61432
 		public void RefreshButton(bool isEnable)
 		{
 			((base.GetButton(0).GetOwner() as AUIBaseActor).GetComponentByClass(UUIInteractionGroup.StaticClass()) as UUIInteractionGroup).SetInteractable(isEnable);
 		}
 
-		// Token: 0x0603B06B RID: 241771 RVA: 0x00E12547 File Offset: 0x00E10747
+		// Token: 0x0602FFDD RID: 196573 RVA: 0x00D6325F File Offset: 0x00D6145F
 		public void BindClickFunction(Action onClickFunction)
 		{
 			this.OnClickFunction = onClickFunction;
 		}
 
-		// Token: 0x0603B06C RID: 241772 RVA: 0x00E12550 File Offset: 0x00E10750
+		// Token: 0x0602FFDE RID: 196574 RVA: 0x00D63268 File Offset: 0x00D61468
 		private void OnClick()
 		{
 			Action onClickFunction = this.OnClickFunction;
@@ -68,17 +68,17 @@ namespace CSharpScript.Game.Module.Cook.View
 			onClickFunction();
 		}
 
-		// Token: 0x0401ECAF RID: 126127
+		// Token: 0x0401976B RID: 104299
 		[Nullable(2)]
 		private Action OnClickFunction;
 
-		// Token: 0x0200BD4E RID: 48462
+		// Token: 0x0200A757 RID: 42839
 		[NullableContext(0)]
 		private enum EConfirmDefine
 		{
-			// Token: 0x04039187 RID: 233863
+			// Token: 0x04033B53 RID: 211795
 			ConfirmButton,
-			// Token: 0x04039188 RID: 233864
+			// Token: 0x04033B54 RID: 211796
 			ConfirmText
 		}
 	}

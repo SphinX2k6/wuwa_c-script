@@ -3,84 +3,84 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x020017C2 RID: 6082
+// Token: 0x02000C7B RID: 3195
 [NullableContext(1)]
 public interface IComboTeachingInfo
 {
-	// Token: 0x17000EBF RID: 3775
-	// (get) Token: 0x0600B1A3 RID: 45475
-	// (set) Token: 0x0600B1A4 RID: 45476
+	// Token: 0x17000EE2 RID: 3810
+	// (get) Token: 0x0600858B RID: 34187
+	// (set) Token: 0x0600858C RID: 34188
 	int Index { get; set; }
 
-	// Token: 0x17000EC0 RID: 3776
-	// (get) Token: 0x0600B1A5 RID: 45477
-	// (set) Token: 0x0600B1A6 RID: 45478
+	// Token: 0x17000EE3 RID: 3811
+	// (get) Token: 0x0600858D RID: 34189
+	// (set) Token: 0x0600858E RID: 34190
 	ComboTeaching Config { get; set; }
 
-	// Token: 0x17000EC1 RID: 3777
-	// (get) Token: 0x0600B1A7 RID: 45479
-	// (set) Token: 0x0600B1A8 RID: 45480
+	// Token: 0x17000EE4 RID: 3812
+	// (get) Token: 0x0600858F RID: 34191
+	// (set) Token: 0x06008590 RID: 34192
 	float HoldTotalTime { get; set; }
 
-	// Token: 0x17000EC2 RID: 3778
-	// (get) Token: 0x0600B1A9 RID: 45481
-	// (set) Token: 0x0600B1AA RID: 45482
+	// Token: 0x17000EE5 RID: 3813
+	// (get) Token: 0x06008591 RID: 34193
+	// (set) Token: 0x06008592 RID: 34194
 	float SuccessDelay { get; set; }
 
-	// Token: 0x17000EC3 RID: 3779
-	// (get) Token: 0x0600B1AB RID: 45483
-	// (set) Token: 0x0600B1AC RID: 45484
+	// Token: 0x17000EE6 RID: 3814
+	// (get) Token: 0x06008593 RID: 34195
+	// (set) Token: 0x06008594 RID: 34196
 	[Nullable(2)]
 	TimerHandle SuccessHandle { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-	// Token: 0x17000EC4 RID: 3780
-	// (get) Token: 0x0600B1AD RID: 45485
-	// (set) Token: 0x0600B1AE RID: 45486
+	// Token: 0x17000EE7 RID: 3815
+	// (get) Token: 0x06008595 RID: 34197
+	// (set) Token: 0x06008596 RID: 34198
 	BaseCheckCondition SuccessCondition { get; set; }
 
-	// Token: 0x17000EC5 RID: 3781
-	// (get) Token: 0x0600B1AF RID: 45487
-	// (set) Token: 0x0600B1B0 RID: 45488
+	// Token: 0x17000EE8 RID: 3816
+	// (get) Token: 0x06008597 RID: 34199
+	// (set) Token: 0x06008598 RID: 34200
 	List<BaseCheckCondition> FailUpdateCondition { get; set; }
 
-	// Token: 0x17000EC6 RID: 3782
-	// (get) Token: 0x0600B1B1 RID: 45489
-	// (set) Token: 0x0600B1B2 RID: 45490
+	// Token: 0x17000EE9 RID: 3817
+	// (get) Token: 0x06008599 RID: 34201
+	// (set) Token: 0x0600859A RID: 34202
 	float FailDelay { get; set; }
 
-	// Token: 0x17000EC7 RID: 3783
-	// (get) Token: 0x0600B1B3 RID: 45491
-	// (set) Token: 0x0600B1B4 RID: 45492
+	// Token: 0x17000EEA RID: 3818
+	// (get) Token: 0x0600859B RID: 34203
+	// (set) Token: 0x0600859C RID: 34204
 	[Nullable(2)]
 	TimerHandle FailHandle { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-	// Token: 0x17000EC8 RID: 3784
-	// (get) Token: 0x0600B1B5 RID: 45493
-	// (set) Token: 0x0600B1B6 RID: 45494
+	// Token: 0x17000EEB RID: 3819
+	// (get) Token: 0x0600859D RID: 34205
+	// (set) Token: 0x0600859E RID: 34206
 	List<BaseCheckCondition> FailEventCondition { get; set; }
 
-	// Token: 0x17000EC9 RID: 3785
-	// (get) Token: 0x0600B1B7 RID: 45495
-	// (set) Token: 0x0600B1B8 RID: 45496
+	// Token: 0x17000EEC RID: 3820
+	// (get) Token: 0x0600859F RID: 34207
+	// (set) Token: 0x060085A0 RID: 34208
 	bool IsEmit { get; set; }
 
-	// Token: 0x17000ECA RID: 3786
-	// (get) Token: 0x0600B1B9 RID: 45497
-	// (set) Token: 0x0600B1BA RID: 45498
+	// Token: 0x17000EED RID: 3821
+	// (get) Token: 0x060085A1 RID: 34209
+	// (set) Token: 0x060085A2 RID: 34210
 	bool IsHoldAction { get; set; }
 
-	// Token: 0x17000ECB RID: 3787
-	// (get) Token: 0x0600B1BB RID: 45499
-	// (set) Token: 0x0600B1BC RID: 45500
+	// Token: 0x17000EEE RID: 3822
+	// (get) Token: 0x060085A3 RID: 34211
+	// (set) Token: 0x060085A4 RID: 34212
 	bool IsShowTag { get; set; }
 
-	// Token: 0x17000ECC RID: 3788
-	// (get) Token: 0x0600B1BD RID: 45501
-	// (set) Token: 0x0600B1BE RID: 45502
+	// Token: 0x17000EEF RID: 3823
+	// (get) Token: 0x060085A5 RID: 34213
+	// (set) Token: 0x060085A6 RID: 34214
 	string ActionInfo { get; set; }
 
-	// Token: 0x17000ECD RID: 3789
-	// (get) Token: 0x0600B1BF RID: 45503
-	// (set) Token: 0x0600B1C0 RID: 45504
+	// Token: 0x17000EF0 RID: 3824
+	// (get) Token: 0x060085A7 RID: 34215
+	// (set) Token: 0x060085A8 RID: 34216
 	bool NeedTickSummon { get; set; }
 }

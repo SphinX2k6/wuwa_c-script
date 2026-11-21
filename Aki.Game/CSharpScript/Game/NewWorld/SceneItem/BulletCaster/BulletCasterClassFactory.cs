@@ -5,19 +5,19 @@ using Aki.TDConfigMgr.Component;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.BulletCaster
 {
-	// Token: 0x0200722E RID: 29230
+	// Token: 0x020062E3 RID: 25315
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BulletCasterClassFactory : Singleton
 	{
-		// Token: 0x06047A4C RID: 293452 RVA: 0x01254B9C File Offset: 0x01252D9C
+		// Token: 0x0603D3AD RID: 250797 RVA: 0x011AD734 File Offset: 0x011AB934
 		public BulletCasterClassFactory()
 		{
 			this.BulletCasterClassRegistry.TryAdd(EBatchBulletMovementType.Stationary, typeof(BulletCasterStationary));
 			this.BulletCasterClassRegistry.TryAdd(EBatchBulletMovementType.Sprint, typeof(BulletCasterSprint));
 		}
 
-		// Token: 0x06047A4D RID: 293453 RVA: 0x01254BE8 File Offset: 0x01252DE8
+		// Token: 0x0603D3AE RID: 250798 RVA: 0x011AD780 File Offset: 0x011AB980
 		[return: Nullable(2)]
 		public IBulletCaster GetInstance(EBatchBulletMovementType type, BulletCasterInitParam initParam)
 		{
@@ -32,8 +32,8 @@ namespace CSharpScript.Game.NewWorld.SceneItem.BulletCaster
 			return null;
 		}
 
-		// Token: 0x17009E3D RID: 40509
-		// (get) Token: 0x06047A4E RID: 293454 RVA: 0x01254C1C File Offset: 0x01252E1C
+		// Token: 0x170073F4 RID: 29684
+		// (get) Token: 0x0603D3AF RID: 250799 RVA: 0x011AD7B4 File Offset: 0x011AB9B4
 		public static BulletCasterClassFactory Instance
 		{
 			get
@@ -47,12 +47,12 @@ namespace CSharpScript.Game.NewWorld.SceneItem.BulletCaster
 			}
 		}
 
-		// Token: 0x06047A4F RID: 293455 RVA: 0x01254C3F File Offset: 0x01252E3F
+		// Token: 0x0603D3B0 RID: 250800 RVA: 0x011AD7D7 File Offset: 0x011AB9D7
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06047A50 RID: 293456 RVA: 0x01254C41 File Offset: 0x01252E41
+		// Token: 0x0603D3B1 RID: 250801 RVA: 0x011AD7D9 File Offset: 0x011AB9D9
 		public static void ResetStaticDefaultValue()
 		{
 			BulletCasterClassFactory instance = BulletCasterClassFactory._instance;
@@ -63,16 +63,16 @@ namespace CSharpScript.Game.NewWorld.SceneItem.BulletCaster
 			BulletCasterClassFactory._instance = null;
 		}
 
-		// Token: 0x06047A51 RID: 293457 RVA: 0x01254C5A File Offset: 0x01252E5A
+		// Token: 0x0603D3B2 RID: 250802 RVA: 0x011AD7F2 File Offset: 0x011AB9F2
 		static BulletCasterClassFactory()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(BulletCasterClassFactory.CreateStaticDefaultValue), new Action(BulletCasterClassFactory.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04025B1B RID: 154395
+		// Token: 0x0402078A RID: 133002
 		private readonly Dictionary<EBatchBulletMovementType, Type> BulletCasterClassRegistry = new Dictionary<EBatchBulletMovementType, Type>();
 
-		// Token: 0x04025B1C RID: 154396
+		// Token: 0x0402078B RID: 133003
 		[Nullable(2)]
 		private static BulletCasterClassFactory _instance;
 	}

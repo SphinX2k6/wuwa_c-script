@@ -5,10 +5,10 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020028DE RID: 10462
+// Token: 0x02001E59 RID: 7769
 public class SkillButtonCompose : UiPanelBase
 {
-	// Token: 0x0601597F RID: 88447 RVA: 0x00573150 File Offset: 0x00571350
+	// Token: 0x06013383 RID: 78723 RVA: 0x0059E018 File Offset: 0x0059C218
 	[NullableContext(1)]
 	public SkillButtonCompose(UUIItem uiItem, Action onFunction)
 	{
@@ -16,7 +16,7 @@ public class SkillButtonCompose : UiPanelBase
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x06015980 RID: 88448 RVA: 0x0057316C File Offset: 0x0057136C
+	// Token: 0x06013384 RID: 78724 RVA: 0x0059E034 File Offset: 0x0059C234
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,7 +30,7 @@ public class SkillButtonCompose : UiPanelBase
 		};
 	}
 
-	// Token: 0x06015981 RID: 88449 RVA: 0x005731D3 File Offset: 0x005713D3
+	// Token: 0x06013385 RID: 78725 RVA: 0x0059E09B File Offset: 0x0059C29B
 	public void Update(int id)
 	{
 		this.Id = id;
@@ -43,7 +43,7 @@ public class SkillButtonCompose : UiPanelBase
 		this.RefreshTexture();
 	}
 
-	// Token: 0x06015982 RID: 88450 RVA: 0x0057320C File Offset: 0x0057140C
+	// Token: 0x06013386 RID: 78726 RVA: 0x0059E0D4 File Offset: 0x0059C2D4
 	public void RefreshTexture()
 	{
 		PhantomBattleData phantomItemDataByUniqueId = PhantomBattleController.Instance.GetPhantomItemDataByUniqueId(this.Id);
@@ -64,7 +64,7 @@ public class SkillButtonCompose : UiPanelBase
 		base.SetTextureByPath(phantomSkillInfoByLevel.Value.BattleViewIcon, base.GetTexture(0), null, null);
 	}
 
-	// Token: 0x06015983 RID: 88451 RVA: 0x0057327C File Offset: 0x0057147C
+	// Token: 0x06013387 RID: 78727 RVA: 0x0059E144 File Offset: 0x0059C344
 	private void OnClick()
 	{
 		if (this.ClickFunction != null)
@@ -73,19 +73,19 @@ public class SkillButtonCompose : UiPanelBase
 		}
 	}
 
-	// Token: 0x0400A0B7 RID: 41143
+	// Token: 0x0400A4A1 RID: 42145
 	private int Id;
 
-	// Token: 0x0400A0B8 RID: 41144
+	// Token: 0x0400A4A2 RID: 42146
 	[Nullable(1)]
 	private readonly Action ClickFunction;
 
-	// Token: 0x02008EEC RID: 36588
+	// Token: 0x02008134 RID: 33076
 	private enum ESkillDefine
 	{
-		// Token: 0x0402E585 RID: 189829
+		// Token: 0x04029C80 RID: 171136
 		EquipSkillIconTexture,
-		// Token: 0x0402E586 RID: 189830
+		// Token: 0x04029C81 RID: 171137
 		EquipSkillButton
 	}
 }

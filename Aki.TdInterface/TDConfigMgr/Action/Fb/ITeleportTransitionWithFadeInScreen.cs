@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002692 RID: 9874
+	// Token: 0x02002955 RID: 10581
 	public class ITeleportTransitionWithFadeInScreen : ITeleportTransitionType
 	{
-		// Token: 0x0600DD11 RID: 56593 RVA: 0x0020DBAB File Offset: 0x0020BDAB
-		[NullableContext(1)]
+		// Token: 0x0600EAE8 RID: 60136 RVA: 0x0022A34B File Offset: 0x0022854B
 		public static ITeleportTransitionWithFadeInScreen Create(ITeleportTransitionWithFadeInScreen? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170041AF RID: 16815
-		// (get) Token: 0x0600DD12 RID: 56594 RVA: 0x0020DBCA File Offset: 0x0020BDCA
+		// Token: 0x170044EC RID: 17644
+		// (get) Token: 0x0600EAE9 RID: 60137 RVA: 0x0022A36A File Offset: 0x0022856A
 		public override ETeleportTransitionType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170041B0 RID: 16816
-		// (get) Token: 0x0600DD13 RID: 56595 RVA: 0x0020DBD8 File Offset: 0x0020BDD8
+		// Token: 0x170044ED RID: 17645
+		// (get) Token: 0x0600EAEA RID: 60138 RVA: 0x0022A378 File Offset: 0x00228578
 		public virtual EFadeInScreenShowType? ScreenType
 		{
 			get
@@ -45,7 +43,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007ACC RID: 31436
+		// Token: 0x04008169 RID: 33129
 		private ITeleportTransitionWithFadeInScreen Instance;
 	}
 }

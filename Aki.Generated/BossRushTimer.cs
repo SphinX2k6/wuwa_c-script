@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000B4A RID: 2890
+	// Token: 0x02000C2A RID: 3114
 	public struct BossRushTimer : IFlatbufferObject
 	{
-		// Token: 0x170005E7 RID: 1511
-		// (get) Token: 0x06004F63 RID: 20323 RVA: 0x001E81E8 File Offset: 0x001E63E8
+		// Token: 0x17000627 RID: 1575
+		// (get) Token: 0x06005525 RID: 21797 RVA: 0x00208368 File Offset: 0x00206568
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004F64 RID: 20324 RVA: 0x001E81F5 File Offset: 0x001E63F5
+		// Token: 0x06005526 RID: 21798 RVA: 0x00208375 File Offset: 0x00206575
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06004F65 RID: 20325 RVA: 0x001E81FC File Offset: 0x001E63FC
+		// Token: 0x06005527 RID: 21799 RVA: 0x0020837C File Offset: 0x0020657C
 		public static BossRushTimer GetRootAsBossRushTimer(ByteBuffer _bb)
 		{
 			return BossRushTimer.GetRootAsBossRushTimer(_bb, default(BossRushTimer));
 		}
 
-		// Token: 0x06004F66 RID: 20326 RVA: 0x001E8218 File Offset: 0x001E6418
+		// Token: 0x06005528 RID: 21800 RVA: 0x00208398 File Offset: 0x00206598
 		public static BossRushTimer GetRootAsBossRushTimer(ByteBuffer _bb, BossRushTimer obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06004F67 RID: 20327 RVA: 0x001E8235 File Offset: 0x001E6435
+		// Token: 0x06005529 RID: 21801 RVA: 0x002083B5 File Offset: 0x002065B5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06004F68 RID: 20328 RVA: 0x001E8244 File Offset: 0x001E6444
+		// Token: 0x0600552A RID: 21802 RVA: 0x002083C4 File Offset: 0x002065C4
 		public BossRushTimer __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170005E8 RID: 1512
-		// (get) Token: 0x06004F69 RID: 20329 RVA: 0x001E8254 File Offset: 0x001E6454
+		// Token: 0x17000628 RID: 1576
+		// (get) Token: 0x0600552B RID: 21803 RVA: 0x002083D4 File Offset: 0x002065D4
 		public int Id
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004B45 RID: 19269
+		// Token: 0x04005125 RID: 20773
 		private Table __p;
 	}
 }

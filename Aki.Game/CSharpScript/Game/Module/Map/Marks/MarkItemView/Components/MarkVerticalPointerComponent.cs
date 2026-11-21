@@ -4,16 +4,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Components
 {
-	// Token: 0x0200554D RID: 21837
+	// Token: 0x0200451F RID: 17695
 	public class MarkVerticalPointerComponent : MarkPanelBase
 	{
-		// Token: 0x06037B84 RID: 228228 RVA: 0x00D387CD File Offset: 0x00D369CD
+		// Token: 0x0602CA54 RID: 182868 RVA: 0x00C862A1 File Offset: 0x00C844A1
 		protected override void OnBeforeShow()
 		{
 			this.UpdatePointerType();
 		}
 
-		// Token: 0x06037B85 RID: 228229 RVA: 0x00D387D5 File Offset: 0x00D369D5
+		// Token: 0x0602CA55 RID: 182869 RVA: 0x00C862A9 File Offset: 0x00C844A9
 		public void SetPointerType(EVerticalPointerType type)
 		{
 			this.PointerType = type;
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Components
 			}
 		}
 
-		// Token: 0x06037B86 RID: 228230 RVA: 0x00D387EC File Offset: 0x00D369EC
+		// Token: 0x0602CA56 RID: 182870 RVA: 0x00C862C0 File Offset: 0x00C844C0
 		private void UpdatePointerType()
 		{
 			switch (this.PointerType)
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Components
 			}
 		}
 
-		// Token: 0x06037B87 RID: 228231 RVA: 0x00D38828 File Offset: 0x00D36A28
+		// Token: 0x0602CA57 RID: 182871 RVA: 0x00C862FC File Offset: 0x00C844FC
 		public void ShowUp()
 		{
 			UUIItem rootItem = this.RootItem;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Components
 			rootItem2.SetUIRelativeRotation(frotator);
 		}
 
-		// Token: 0x06037B88 RID: 228232 RVA: 0x00D38870 File Offset: 0x00D36A70
+		// Token: 0x0602CA58 RID: 182872 RVA: 0x00C86344 File Offset: 0x00C84544
 		public void ShowDown()
 		{
 			UUIItem rootItem = this.RootItem;
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Components
 			rootItem2.SetUIRelativeRotation(frotator);
 		}
 
-		// Token: 0x06037B89 RID: 228233 RVA: 0x00D388B6 File Offset: 0x00D36AB6
+		// Token: 0x0602CA59 RID: 182873 RVA: 0x00C8638A File Offset: 0x00C8458A
 		public void HideSelf()
 		{
 			UUIItem rootItem = this.RootItem;
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Components
 			rootItem.SetUIActive(false);
 		}
 
-		// Token: 0x0401D450 RID: 119888
+		// Token: 0x04017ED9 RID: 98009
 		private EVerticalPointerType PointerType;
 	}
 }

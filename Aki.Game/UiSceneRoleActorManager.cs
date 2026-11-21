@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002C61 RID: 11361
+// Token: 0x020021BA RID: 8634
 [NullableContext(1)]
 [Nullable(0)]
 public class UiSceneRoleActorManager : Singleton
 {
-	// Token: 0x06017BEC RID: 97260 RVA: 0x006097D8 File Offset: 0x006079D8
+	// Token: 0x06015460 RID: 87136 RVA: 0x0062F2A4 File Offset: 0x0062D4A4
 	public TsUiSceneRoleActor CreateUiSceneRoleActor(EUiModelUseWay useWay)
 	{
 		this.CreateIndex++;
@@ -18,7 +18,7 @@ public class UiSceneRoleActorManager : Singleton
 		return tsUiSceneRoleActor;
 	}
 
-	// Token: 0x06017BED RID: 97261 RVA: 0x0060982C File Offset: 0x00607A2C
+	// Token: 0x06015461 RID: 87137 RVA: 0x0062F2F8 File Offset: 0x0062D4F8
 	public bool DestroyUiSceneRoleActor(int index)
 	{
 		TsUiSceneRoleActor tsUiSceneRoleActor;
@@ -30,7 +30,7 @@ public class UiSceneRoleActorManager : Singleton
 		return true;
 	}
 
-	// Token: 0x06017BEE RID: 97262 RVA: 0x00609860 File Offset: 0x00607A60
+	// Token: 0x06015462 RID: 87138 RVA: 0x0062F32C File Offset: 0x0062D52C
 	public void ClearAllUiSceneRoleActor()
 	{
 		foreach (TsUiSceneRoleActor tsUiSceneRoleActor in this.UiSceneRoleActorMap.Values)
@@ -40,8 +40,8 @@ public class UiSceneRoleActorManager : Singleton
 		this.UiSceneRoleActorMap.Clear();
 	}
 
-	// Token: 0x17001FDA RID: 8154
-	// (get) Token: 0x06017BEF RID: 97263 RVA: 0x006098C0 File Offset: 0x00607AC0
+	// Token: 0x1700202B RID: 8235
+	// (get) Token: 0x06015463 RID: 87139 RVA: 0x0062F38C File Offset: 0x0062D58C
 	public static UiSceneRoleActorManager Instance
 	{
 		get
@@ -55,12 +55,12 @@ public class UiSceneRoleActorManager : Singleton
 		}
 	}
 
-	// Token: 0x06017BF0 RID: 97264 RVA: 0x006098E3 File Offset: 0x00607AE3
+	// Token: 0x06015464 RID: 87140 RVA: 0x0062F3AF File Offset: 0x0062D5AF
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06017BF1 RID: 97265 RVA: 0x006098E5 File Offset: 0x00607AE5
+	// Token: 0x06015465 RID: 87141 RVA: 0x0062F3B1 File Offset: 0x0062D5B1
 	public static void ResetStaticDefaultValue()
 	{
 		UiSceneRoleActorManager instance = UiSceneRoleActorManager._instance;
@@ -71,19 +71,19 @@ public class UiSceneRoleActorManager : Singleton
 		UiSceneRoleActorManager._instance = null;
 	}
 
-	// Token: 0x06017BF2 RID: 97266 RVA: 0x006098FE File Offset: 0x00607AFE
+	// Token: 0x06015466 RID: 87142 RVA: 0x0062F3CA File Offset: 0x0062D5CA
 	static UiSceneRoleActorManager()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(UiSceneRoleActorManager.CreateStaticDefaultValue), new Action(UiSceneRoleActorManager.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400B0D0 RID: 45264
+	// Token: 0x0400B43C RID: 46140
 	private int CreateIndex;
 
-	// Token: 0x0400B0D1 RID: 45265
+	// Token: 0x0400B43D RID: 46141
 	private readonly Dictionary<int, TsUiSceneRoleActor> UiSceneRoleActorMap = new Dictionary<int, TsUiSceneRoleActor>();
 
-	// Token: 0x0400B0D2 RID: 45266
+	// Token: 0x0400B43E RID: 46142
 	[Nullable(2)]
 	private static UiSceneRoleActorManager _instance;
 }

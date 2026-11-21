@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002624 RID: 9764
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020028E4 RID: 10468
 	public class IBubbleIndex : IFlowIndex
 	{
-		// Token: 0x0600DB2F RID: 56111 RVA: 0x0020A3B0 File Offset: 0x002085B0
+		// Token: 0x0600E8FD RID: 59645 RVA: 0x00226B7C File Offset: 0x00224D7C
 		public static IBubbleIndex Create(IBubbleIndex? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170040A9 RID: 16553
-		// (get) Token: 0x0600DB30 RID: 56112 RVA: 0x0020A3CF File Offset: 0x002085CF
+		// Token: 0x170043E3 RID: 17379
+		// (get) Token: 0x0600E8FE RID: 59646 RVA: 0x00226B9B File Offset: 0x00224D9B
 		public override string FlowListName
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170040AA RID: 16554
-		// (get) Token: 0x0600DB31 RID: 56113 RVA: 0x0020A3DC File Offset: 0x002085DC
+		// Token: 0x170043E4 RID: 17380
+		// (get) Token: 0x0600E8FF RID: 59647 RVA: 0x00226BA8 File Offset: 0x00224DA8
 		public override int FlowId
 		{
 			get
@@ -42,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170040AB RID: 16555
-		// (get) Token: 0x0600DB32 RID: 56114 RVA: 0x0020A3EC File Offset: 0x002085EC
+		// Token: 0x170043E5 RID: 17381
+		// (get) Token: 0x0600E900 RID: 59648 RVA: 0x00226BB8 File Offset: 0x00224DB8
 		public virtual int? StateId
 		{
 			get
@@ -56,7 +53,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040079C4 RID: 31172
+		// Token: 0x04008060 RID: 32864
 		private IBubbleIndex Instance;
 	}
 }

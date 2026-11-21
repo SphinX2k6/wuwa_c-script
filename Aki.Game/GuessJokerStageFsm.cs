@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001040 RID: 4160
+// Token: 0x020004F4 RID: 1268
 [Nullable(new byte[]
 {
 	0,
@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 })]
 public class GuessJokerStageFsm : GuessJokerFsmBase<EGuessJokerCardStateType, GuessJokerStageBase>
 {
-	// Token: 0x06006AC8 RID: 27336 RVA: 0x00157C2C File Offset: 0x00155E2C
+	// Token: 0x06003E5D RID: 15965 RVA: 0x00160554 File Offset: 0x0015E754
 	protected override void InitStateInstance()
 	{
 		this.CurrentStateType = EGuessJokerCardStateType.None;
@@ -21,7 +21,7 @@ public class GuessJokerStageFsm : GuessJokerFsmBase<EGuessJokerCardStateType, Gu
 		base.RegisterState(EGuessJokerCardStateType.GameExit, new GuessJokerGameExitStage(this));
 	}
 
-	// Token: 0x06006AC9 RID: 27337 RVA: 0x00157C90 File Offset: 0x00155E90
+	// Token: 0x06003E5E RID: 15966 RVA: 0x001605B8 File Offset: 0x0015E7B8
 	protected unsafe override bool CheckCanChangeState(EGuessJokerCardStateType curStateType, EGuessJokerCardStateType nextStateType)
 	{
 		EGuessJokerCardStateType[] array;

@@ -3,29 +3,29 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.RoleDev
 {
-	// Token: 0x02004CB8 RID: 19640
+	// Token: 0x02003C69 RID: 15465
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RoleDevRootTabData : IRoleDevRootTabData
 	{
-		// Token: 0x17007D19 RID: 32025
-		// (get) Token: 0x06032B74 RID: 207732 RVA: 0x00BD50A5 File Offset: 0x00BD32A5
-		// (set) Token: 0x06032B75 RID: 207733 RVA: 0x00BD50AD File Offset: 0x00BD32AD
+		// Token: 0x170050C3 RID: 20675
+		// (get) Token: 0x06027928 RID: 162088 RVA: 0x00B19E3D File Offset: 0x00B1803D
+		// (set) Token: 0x06027929 RID: 162089 RVA: 0x00B19E45 File Offset: 0x00B18045
 		public ERoleDevTabType TabIndex { get; set; }
 
-		// Token: 0x17007D1A RID: 32026
-		// (get) Token: 0x06032B76 RID: 207734 RVA: 0x00BD50B6 File Offset: 0x00BD32B6
-		// (set) Token: 0x06032B77 RID: 207735 RVA: 0x00BD50BE File Offset: 0x00BD32BE
+		// Token: 0x170050C4 RID: 20676
+		// (get) Token: 0x0602792A RID: 162090 RVA: 0x00B19E4E File Offset: 0x00B1804E
+		// (set) Token: 0x0602792B RID: 162091 RVA: 0x00B19E56 File Offset: 0x00B18056
 		public string TabName { get; set; }
 
-		// Token: 0x17007D1B RID: 32027
-		// (get) Token: 0x06032B78 RID: 207736 RVA: 0x00BD50C7 File Offset: 0x00BD32C7
-		// (set) Token: 0x06032B79 RID: 207737 RVA: 0x00BD50CF File Offset: 0x00BD32CF
+		// Token: 0x170050C5 RID: 20677
+		// (get) Token: 0x0602792C RID: 162092 RVA: 0x00B19E5F File Offset: 0x00B1805F
+		// (set) Token: 0x0602792D RID: 162093 RVA: 0x00B19E67 File Offset: 0x00B18067
 		public bool TabIsUpgrade { get; set; }
 
-		// Token: 0x17007D1C RID: 32028
-		// (get) Token: 0x06032B7A RID: 207738 RVA: 0x00BD50D8 File Offset: 0x00BD32D8
-		// (set) Token: 0x06032B7B RID: 207739 RVA: 0x00BD50E0 File Offset: 0x00BD32E0
+		// Token: 0x170050C6 RID: 20678
+		// (get) Token: 0x0602792E RID: 162094 RVA: 0x00B19E70 File Offset: 0x00B18070
+		// (set) Token: 0x0602792F RID: 162095 RVA: 0x00B19E78 File Offset: 0x00B18078
 		public bool TabIsFinish { get; set; }
 	}
 }

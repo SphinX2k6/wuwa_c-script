@@ -5,10 +5,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020041EF RID: 16879
+	// Token: 0x02004648 RID: 17992
 	public static class ITrackCustomBoardVerify
 	{
-		// Token: 0x06018E63 RID: 101987 RVA: 0x0039528C File Offset: 0x0039348C
+		// Token: 0x0601A5BD RID: 107965 RVA: 0x003C07C4 File Offset: 0x003BE9C4
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			if (verifier.VerifyTableStart(tablePos))
@@ -69,7 +69,16 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 										}
 										if (verifier.VerifyTable(tablePos, offsetId7, verifyAction7, false))
 										{
-											return verifier.VerifyTableEnd(tablePos);
+											short offsetId8 = 18;
+											VerifyTableAction verifyAction8;
+											if ((verifyAction8 = ITrackCustomBoardVerify.<>O.<7>__Verify) == null)
+											{
+												verifyAction8 = (ITrackCustomBoardVerify.<>O.<7>__Verify = new VerifyTableAction(ITrackHandBookBoardConfigVerify.Verify));
+											}
+											if (verifier.VerifyTable(tablePos, offsetId8, verifyAction8, false))
+											{
+												return verifier.VerifyTableEnd(tablePos);
+											}
 										}
 									}
 								}
@@ -81,30 +90,33 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return false;
 		}
 
-		// Token: 0x0200796E RID: 31086
+		// Token: 0x020081B7 RID: 33207
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040132D3 RID: 78547
+			// Token: 0x04014339 RID: 82745
 			public static VerifyTableAction <0>__Verify;
 
-			// Token: 0x040132D4 RID: 78548
+			// Token: 0x0401433A RID: 82746
 			public static VerifyTableAction <1>__Verify;
 
-			// Token: 0x040132D5 RID: 78549
+			// Token: 0x0401433B RID: 82747
 			public static VerifyTableAction <2>__Verify;
 
-			// Token: 0x040132D6 RID: 78550
+			// Token: 0x0401433C RID: 82748
 			public static VerifyTableAction <3>__Verify;
 
-			// Token: 0x040132D7 RID: 78551
+			// Token: 0x0401433D RID: 82749
 			public static VerifyTableAction <4>__Verify;
 
-			// Token: 0x040132D8 RID: 78552
+			// Token: 0x0401433E RID: 82750
 			public static VerifyTableAction <5>__Verify;
 
-			// Token: 0x040132D9 RID: 78553
+			// Token: 0x0401433F RID: 82751
 			public static VerifyTableAction <6>__Verify;
+
+			// Token: 0x04014340 RID: 82752
+			public static VerifyTableAction <7>__Verify;
 		}
 	}
 }

@@ -1,24 +1,24 @@
 ﻿using System;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x0200343C RID: 13372
+// Token: 0x020029B0 RID: 10672
 public class RedDotTowerRewardByDifficulties : RedDotBase
 {
-	// Token: 0x0601CE0D RID: 118285 RVA: 0x0080DA8C File Offset: 0x0080BC8C
+	// Token: 0x0601AB0D RID: 109325 RVA: 0x00834174 File Offset: 0x00832374
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.OnTowerRewardReceived, new Action(base.EventCheck));
 		EventSystem.Instance.Add<int>(EEventName.RedDotTowerRewardByDifficulties, new Action<int>(base.EventCheckWithUid));
 	}
 
-	// Token: 0x0601CE0E RID: 118286 RVA: 0x0080DAC6 File Offset: 0x0080BCC6
+	// Token: 0x0601AB0E RID: 109326 RVA: 0x008341AE File Offset: 0x008323AE
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.OnTowerRewardReceived, new Action(base.EventCheck));
 		EventSystem.Instance.Remove<int>(EEventName.RedDotTowerRewardByDifficulties, new Action<int>(base.EventCheckWithUid));
 	}
 
-	// Token: 0x0601CE0F RID: 118287 RVA: 0x0080DB00 File Offset: 0x0080BD00
+	// Token: 0x0601AB0F RID: 109327 RVA: 0x008341E8 File Offset: 0x008323E8
 	protected override bool OnCheck(int uId = 0)
 	{
 		switch (uId)

@@ -15,18 +15,18 @@ using CSharpScript.Game.Ui;
 using UnrealEngine;
 using UnrealEngine.Extension;
 
-// Token: 0x02001C22 RID: 7202
+// Token: 0x020010E1 RID: 4321
 [NullableContext(2)]
 [Nullable(0)]
 public class MemoryFragmentMainView : UiTickViewBase
 {
-	// Token: 0x0600D85D RID: 55389 RVA: 0x003214F9 File Offset: 0x0031F6F9
+	// Token: 0x0600AC73 RID: 44147 RVA: 0x0032C8D1 File Offset: 0x0032AAD1
 	[NullableContext(1)]
 	public MemoryFragmentMainView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600D85E RID: 55390 RVA: 0x00321504 File Offset: 0x0031F704
+	// Token: 0x0600AC74 RID: 44148 RVA: 0x0032C8DC File Offset: 0x0032AADC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 18;
@@ -89,7 +89,7 @@ public class MemoryFragmentMainView : UiTickViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D85F RID: 55391 RVA: 0x0032187C File Offset: 0x0031FA7C
+	// Token: 0x0600AC75 RID: 44149 RVA: 0x0032CC54 File Offset: 0x0032AE54
 	protected override void OnStart()
 	{
 		this.RewardLayout = new GenericLayout<GridItem, GridItemData>(base.GetScrollViewWithScrollbar(8).GetContent().GetComponentByClass(UUILayoutBase.StaticClass()) as UUILayoutBase, new Func<GridItem>(this.OnRewardLayoutUpdate), null, false, true);
@@ -135,7 +135,7 @@ public class MemoryFragmentMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600D860 RID: 55392 RVA: 0x003219F0 File Offset: 0x0031FBF0
+	// Token: 0x0600AC76 RID: 44150 RVA: 0x0032CDC8 File Offset: 0x0032AFC8
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnFragmentMemoryCollectUpdate, new Action(this.OnFragmentMemoryCollectUpdate));
@@ -143,7 +143,7 @@ public class MemoryFragmentMainView : UiTickViewBase
 		EventSystem.Instance.Add<EUiViewName, int>(EEventName.CloseView, new Action<EUiViewName, int>(this.OnCloseView));
 	}
 
-	// Token: 0x0600D861 RID: 55393 RVA: 0x00321A50 File Offset: 0x0031FC50
+	// Token: 0x0600AC77 RID: 44151 RVA: 0x0032CE28 File Offset: 0x0032B028
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnFragmentMemoryCollectUpdate, new Action(this.OnFragmentMemoryCollectUpdate));
@@ -151,7 +151,7 @@ public class MemoryFragmentMainView : UiTickViewBase
 		EventSystem.Instance.Remove(EEventName.CloseView, new Action<EUiViewName, int>(this.OnCloseView));
 	}
 
-	// Token: 0x0600D862 RID: 55394 RVA: 0x00321AB0 File Offset: 0x0031FCB0
+	// Token: 0x0600AC78 RID: 44152 RVA: 0x0032CE88 File Offset: 0x0032B088
 	private void OnBtnUpClick()
 	{
 		if (this.ScrollView == null || this.CurrentSelectFragmentTopic == null)
@@ -182,7 +182,7 @@ public class MemoryFragmentMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600D863 RID: 55395 RVA: 0x00321B3C File Offset: 0x0031FD3C
+	// Token: 0x0600AC79 RID: 44153 RVA: 0x0032CF14 File Offset: 0x0032B114
 	private void OnBtnGoClick()
 	{
 		FragmentMemoryCollectData selectCollectData = this.GetSelectCollectData();
@@ -254,7 +254,7 @@ public class MemoryFragmentMainView : UiTickViewBase
 		FragmentMemoryModel.Instance.CurrentTrackFragmentId = selectCollectData.GetId();
 	}
 
-	// Token: 0x0600D864 RID: 55396 RVA: 0x00321D24 File Offset: 0x0031FF24
+	// Token: 0x0600AC7A RID: 44154 RVA: 0x0032D0FC File Offset: 0x0032B2FC
 	private void OnBtnDownClick()
 	{
 		if (this.ScrollView == null || this.CurrentSelectFragmentTopic == null)
@@ -287,13 +287,13 @@ public class MemoryFragmentMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600D865 RID: 55397 RVA: 0x00321DBE File Offset: 0x0031FFBE
+	// Token: 0x0600AC7B RID: 44155 RVA: 0x0032D196 File Offset: 0x0032B396
 	private void OnCloseView(EUiViewName viewName, int viewId)
 	{
 		this.RefreshBlur();
 	}
 
-	// Token: 0x0600D866 RID: 55398 RVA: 0x00321DC6 File Offset: 0x0031FFC6
+	// Token: 0x0600AC7C RID: 44156 RVA: 0x0032D19E File Offset: 0x0032B39E
 	private void OnFragmentMemoryDataUpdate()
 	{
 		if (this.CurrentSelectFragmentTopic == null)
@@ -304,7 +304,7 @@ public class MemoryFragmentMainView : UiTickViewBase
 		this.RefreshView(false);
 	}
 
-	// Token: 0x0600D867 RID: 55399 RVA: 0x00321DF3 File Offset: 0x0031FFF3
+	// Token: 0x0600AC7D RID: 44157 RVA: 0x0032D1CB File Offset: 0x0032B3CB
 	protected override void OnAfterHide()
 	{
 		BP_MainGameInstance_C gameInstance = GlobalData.GameInstance;
@@ -312,7 +312,7 @@ public class MemoryFragmentMainView : UiTickViewBase
 		EventSystem.Instance.Emit<bool>(EEventName.ChangeActivityViewNeedBlurState, true);
 	}
 
-	// Token: 0x0600D868 RID: 55400 RVA: 0x00321E1C File Offset: 0x0032001C
+	// Token: 0x0600AC7E RID: 44158 RVA: 0x0032D1F4 File Offset: 0x0032B3F4
 	private void OnFragmentMemoryCollectUpdate()
 	{
 		if (this.CurrentSelectFragmentTopic == null)
@@ -323,7 +323,7 @@ public class MemoryFragmentMainView : UiTickViewBase
 		this.RefreshView(false);
 	}
 
-	// Token: 0x0600D869 RID: 55401 RVA: 0x00321E4C File Offset: 0x0032004C
+	// Token: 0x0600AC7F RID: 44159 RVA: 0x0032D224 File Offset: 0x0032B424
 	private void OnRewardButtonClick()
 	{
 		FragmentMemoryCollectData selectCollectData = this.GetSelectCollectData();
@@ -337,7 +337,7 @@ public class MemoryFragmentMainView : UiTickViewBase
 		});
 	}
 
-	// Token: 0x0600D86A RID: 55402 RVA: 0x00321E80 File Offset: 0x00320080
+	// Token: 0x0600AC80 RID: 44160 RVA: 0x0032D258 File Offset: 0x0032B458
 	private void OnShareBtnClick()
 	{
 		FragmentMemoryCollectData selectCollectData = this.GetSelectCollectData();
@@ -354,7 +354,7 @@ public class MemoryFragmentMainView : UiTickViewBase
 		});
 	}
 
-	// Token: 0x0600D86B RID: 55403 RVA: 0x00321EDC File Offset: 0x003200DC
+	// Token: 0x0600AC81 RID: 44161 RVA: 0x0032D2B4 File Offset: 0x0032B4B4
 	private void OnTipsBtnClick()
 	{
 		FragmentMemoryCollectData selectCollectData = this.GetSelectCollectData();
@@ -365,14 +365,14 @@ public class MemoryFragmentMainView : UiTickViewBase
 		UiManager.Instance.OpenView(EUiViewName.FragmentedCluesView, selectCollectData, null);
 	}
 
-	// Token: 0x0600D86C RID: 55404 RVA: 0x00321F05 File Offset: 0x00320105
+	// Token: 0x0600AC82 RID: 44162 RVA: 0x0032D2DD File Offset: 0x0032B4DD
 	[NullableContext(1)]
 	private GridItem OnRewardLayoutUpdate()
 	{
 		return new GridItem();
 	}
 
-	// Token: 0x0600D86D RID: 55405 RVA: 0x00321F0C File Offset: 0x0032010C
+	// Token: 0x0600AC83 RID: 44163 RVA: 0x0032D2E4 File Offset: 0x0032B4E4
 	private FragmentMemoryCollectData GetSelectCollectData()
 	{
 		if (this.CurrentSelectFragmentTopic == null)
@@ -387,20 +387,20 @@ public class MemoryFragmentMainView : UiTickViewBase
 		return null;
 	}
 
-	// Token: 0x0600D86E RID: 55406 RVA: 0x00321F54 File Offset: 0x00320154
+	// Token: 0x0600AC84 RID: 44164 RVA: 0x0032D32C File Offset: 0x0032B52C
 	[NullableContext(1)]
 	private MemoryFragmentTabItem CreateTabItem()
 	{
 		return new MemoryFragmentTabItem();
 	}
 
-	// Token: 0x0600D86F RID: 55407 RVA: 0x00321F5B File Offset: 0x0032015B
+	// Token: 0x0600AC85 RID: 44165 RVA: 0x0032D333 File Offset: 0x0032B533
 	private void OnBtnCloseClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0600D870 RID: 55408 RVA: 0x00321F64 File Offset: 0x00320164
+	// Token: 0x0600AC86 RID: 44166 RVA: 0x0032D33C File Offset: 0x0032B53C
 	protected override void OnBeforeShow()
 	{
 		if (this.CurrentSelectFragmentTopic != null)
@@ -426,7 +426,7 @@ public class MemoryFragmentMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600D871 RID: 55409 RVA: 0x00321FD8 File Offset: 0x003201D8
+	// Token: 0x0600AC87 RID: 44167 RVA: 0x0032D3B0 File Offset: 0x0032B5B0
 	private void TryShowAnimation()
 	{
 		if (!StringUtils.IsEmpty(FragmentMemoryModel.Instance.MemoryFragmentMainViewTryPlayAnimation))
@@ -440,13 +440,13 @@ public class MemoryFragmentMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600D872 RID: 55410 RVA: 0x0032202D File Offset: 0x0032022D
+	// Token: 0x0600AC88 RID: 44168 RVA: 0x0032D405 File Offset: 0x0032B605
 	protected override void OnAfterShow()
 	{
 		this.RefreshBlur();
 	}
 
-	// Token: 0x0600D873 RID: 55411 RVA: 0x00322038 File Offset: 0x00320238
+	// Token: 0x0600AC89 RID: 44169 RVA: 0x0032D410 File Offset: 0x0032B610
 	private void RefreshView(bool needAnimation = false)
 	{
 		this.RefreshScrollView(needAnimation);
@@ -464,7 +464,7 @@ public class MemoryFragmentMainView : UiTickViewBase
 		this.RefreshBlur();
 	}
 
-	// Token: 0x0600D874 RID: 55412 RVA: 0x00322094 File Offset: 0x00320294
+	// Token: 0x0600AC8A RID: 44170 RVA: 0x0032D46C File Offset: 0x0032B66C
 	private void RefreshBlur()
 	{
 		FragmentMemoryCollectData selectCollectData = this.GetSelectCollectData();
@@ -476,7 +476,7 @@ public class MemoryFragmentMainView : UiTickViewBase
 		UiBlurLogic.Instance.SetNormalUiRenderAfterBlur(this);
 	}
 
-	// Token: 0x0600D875 RID: 55413 RVA: 0x003220C8 File Offset: 0x003202C8
+	// Token: 0x0600AC8B RID: 44171 RVA: 0x0032D4A0 File Offset: 0x0032B6A0
 	private void RefreshProgress()
 	{
 		if (this.CurrentSelectFragmentTopic == null)
@@ -490,7 +490,7 @@ public class MemoryFragmentMainView : UiTickViewBase
 		}));
 	}
 
-	// Token: 0x0600D876 RID: 55414 RVA: 0x0032212C File Offset: 0x0032032C
+	// Token: 0x0600AC8C RID: 44172 RVA: 0x0032D504 File Offset: 0x0032B704
 	private void RefreshScrollView(bool needAnimation = false)
 	{
 		if (this.CurrentSelectFragmentTopic == null)
@@ -522,7 +522,7 @@ public class MemoryFragmentMainView : UiTickViewBase
 		}, false);
 	}
 
-	// Token: 0x0600D877 RID: 55415 RVA: 0x00322200 File Offset: 0x00320400
+	// Token: 0x0600AC8D RID: 44173 RVA: 0x0032D5D8 File Offset: 0x0032B7D8
 	private void RefreshRewardLayout()
 	{
 		FragmentMemoryCollectData selectCollectData = this.GetSelectCollectData();
@@ -548,13 +548,13 @@ public class MemoryFragmentMainView : UiTickViewBase
 		rewardLayout.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x0600D878 RID: 55416 RVA: 0x0032229C File Offset: 0x0032049C
+	// Token: 0x0600AC8E RID: 44174 RVA: 0x0032D674 File Offset: 0x0032B874
 	private int GetCurSelectTabIndex()
 	{
 		return this.CurrentSelectIndex;
 	}
 
-	// Token: 0x0600D879 RID: 55417 RVA: 0x003222A4 File Offset: 0x003204A4
+	// Token: 0x0600AC8F RID: 44175 RVA: 0x0032D67C File Offset: 0x0032B87C
 	private void TabCallBack(int index)
 	{
 		bool flag = index != this.CurrentSelectIndex;
@@ -566,7 +566,7 @@ public class MemoryFragmentMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600D87A RID: 55418 RVA: 0x003222C8 File Offset: 0x003204C8
+	// Token: 0x0600AC90 RID: 44176 RVA: 0x0032D6A0 File Offset: 0x0032B8A0
 	private void PlaySwitchAnimation()
 	{
 		LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -592,7 +592,7 @@ public class MemoryFragmentMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600D87B RID: 55419 RVA: 0x0032232C File Offset: 0x0032052C
+	// Token: 0x0600AC91 RID: 44177 RVA: 0x0032D704 File Offset: 0x0032B904
 	private void RefreshTitle()
 	{
 		FragmentMemoryCollectData selectCollectData = this.GetSelectCollectData();
@@ -604,7 +604,7 @@ public class MemoryFragmentMainView : UiTickViewBase
 		LguiUtil.Instance.SetLocalTextNew(text, selectCollectData.GetTitle(), Array.Empty<object>());
 	}
 
-	// Token: 0x0600D87C RID: 55420 RVA: 0x00322364 File Offset: 0x00320564
+	// Token: 0x0600AC92 RID: 44178 RVA: 0x0032D73C File Offset: 0x0032B93C
 	private void RefreshDesc()
 	{
 		FragmentMemoryCollectData selectCollectData = this.GetSelectCollectData();
@@ -625,7 +625,7 @@ public class MemoryFragmentMainView : UiTickViewBase
 		LguiUtil.Instance.SetLocalTextNew(text, selectCollectData.GetDesc(), Array.Empty<object>());
 	}
 
-	// Token: 0x0600D87D RID: 55421 RVA: 0x003223C4 File Offset: 0x003205C4
+	// Token: 0x0600AC93 RID: 44179 RVA: 0x0032D79C File Offset: 0x0032B99C
 	private void RefreshTexture()
 	{
 		FragmentMemoryCollectData selectCollectData = this.GetSelectCollectData();
@@ -644,7 +644,7 @@ public class MemoryFragmentMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600D87E RID: 55422 RVA: 0x0032241C File Offset: 0x0032061C
+	// Token: 0x0600AC94 RID: 44180 RVA: 0x0032D7F4 File Offset: 0x0032B9F4
 	private void RefreshRewardButton()
 	{
 		FragmentMemoryCollectData selectCollectData = this.GetSelectCollectData();
@@ -665,7 +665,7 @@ public class MemoryFragmentMainView : UiTickViewBase
 		uuiitem.SetUIActive(!selectCollectData.GetIfGetReward() && selectCollectData.GetIfUnlock());
 	}
 
-	// Token: 0x0600D87F RID: 55423 RVA: 0x0032246C File Offset: 0x0032066C
+	// Token: 0x0600AC95 RID: 44181 RVA: 0x0032D844 File Offset: 0x0032BA44
 	private void RefreshFinishItem()
 	{
 		FragmentMemoryCollectData selectCollectData = this.GetSelectCollectData();
@@ -681,7 +681,7 @@ public class MemoryFragmentMainView : UiTickViewBase
 		item.SetUIActive(selectCollectData.GetIfGetReward());
 	}
 
-	// Token: 0x0600D880 RID: 55424 RVA: 0x0032249C File Offset: 0x0032069C
+	// Token: 0x0600AC96 RID: 44182 RVA: 0x0032D874 File Offset: 0x0032BA74
 	private void RefreshUnFinishItem()
 	{
 		FragmentMemoryCollectData selectCollectData = this.GetSelectCollectData();
@@ -722,7 +722,7 @@ public class MemoryFragmentMainView : UiTickViewBase
 		uuiitem.SetUIActive(flag && flag4);
 	}
 
-	// Token: 0x0600D881 RID: 55425 RVA: 0x00322538 File Offset: 0x00320738
+	// Token: 0x0600AC97 RID: 44183 RVA: 0x0032D910 File Offset: 0x0032BB10
 	private void RefreshEmptyItem()
 	{
 		FragmentMemoryCollectData selectCollectData = this.GetSelectCollectData();
@@ -738,7 +738,7 @@ public class MemoryFragmentMainView : UiTickViewBase
 		item.SetUIActive(!selectCollectData.GetIfUnlock());
 	}
 
-	// Token: 0x0600D882 RID: 55426 RVA: 0x0032256C File Offset: 0x0032076C
+	// Token: 0x0600AC98 RID: 44184 RVA: 0x0032D944 File Offset: 0x0032BB44
 	private void RefreshShareBtn()
 	{
 		FragmentMemoryCollectData selectCollectData = this.GetSelectCollectData();
@@ -759,7 +759,7 @@ public class MemoryFragmentMainView : UiTickViewBase
 		uuiitem.SetUIActive(selectCollectData.GetIfUnlock());
 	}
 
-	// Token: 0x0600D883 RID: 55427 RVA: 0x003225B0 File Offset: 0x003207B0
+	// Token: 0x0600AC99 RID: 44185 RVA: 0x0032D988 File Offset: 0x0032BB88
 	protected override void OnTick(float delta)
 	{
 		if (this.CurrentSelectFragmentTopic == null || this.ScrollView == null)
@@ -816,7 +816,7 @@ public class MemoryFragmentMainView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x0600D884 RID: 55428 RVA: 0x003226C4 File Offset: 0x003208C4
+	// Token: 0x0600AC9A RID: 44186 RVA: 0x0032DA9C File Offset: 0x0032BC9C
 	private void RefreshTipsButton()
 	{
 		FragmentMemoryCollectData selectCollectData = this.GetSelectCollectData();
@@ -837,7 +837,7 @@ public class MemoryFragmentMainView : UiTickViewBase
 		uuiitem.SetUIActive(!selectCollectData.GetIfUnlock() && selectCollectData.GetClueId() > 0);
 	}
 
-	// Token: 0x0600D885 RID: 55429 RVA: 0x00322714 File Offset: 0x00320914
+	// Token: 0x0600AC9B RID: 44187 RVA: 0x0032DAEC File Offset: 0x0032BCEC
 	private void RefreshCollectTimeText()
 	{
 		FragmentMemoryCollectData selectCollectData = this.GetSelectCollectData();
@@ -854,19 +854,19 @@ public class MemoryFragmentMainView : UiTickViewBase
 		text.SetText("", true);
 	}
 
-	// Token: 0x0600D886 RID: 55430 RVA: 0x00322764 File Offset: 0x00320964
+	// Token: 0x0600AC9C RID: 44188 RVA: 0x0032DB3C File Offset: 0x0032BD3C
 	protected override void OnBeforeHide()
 	{
 		FragmentMemoryModel.Instance.ActivitySubViewTryPlayAnimation = "ShowView01";
 	}
 
-	// Token: 0x040062A3 RID: 25251
+	// Token: 0x04006375 RID: 25461
 	private FragmentMemoryTopicData CurrentSelectFragmentTopic;
 
-	// Token: 0x040062A4 RID: 25252
+	// Token: 0x04006376 RID: 25462
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x040062A5 RID: 25253
+	// Token: 0x04006377 RID: 25463
 	[Nullable(new byte[]
 	{
 		2,
@@ -875,10 +875,10 @@ public class MemoryFragmentMainView : UiTickViewBase
 	})]
 	private LoopScrollView<MemoryFragmentTabItem, TabItemData> ScrollView;
 
-	// Token: 0x040062A6 RID: 25254
+	// Token: 0x04006378 RID: 25464
 	private int CurrentSelectIndex;
 
-	// Token: 0x040062A7 RID: 25255
+	// Token: 0x04006379 RID: 25465
 	[Nullable(new byte[]
 	{
 		2,
@@ -887,74 +887,74 @@ public class MemoryFragmentMainView : UiTickViewBase
 	})]
 	private GenericLayout<GridItem, GridItemData> RewardLayout;
 
-	// Token: 0x040062A8 RID: 25256
+	// Token: 0x0400637A RID: 25466
 	private bool CurrentUpRedDotShowState;
 
-	// Token: 0x040062A9 RID: 25257
+	// Token: 0x0400637B RID: 25467
 	private bool CurrentDownRedDotShowState;
 
-	// Token: 0x040062AA RID: 25258
+	// Token: 0x0400637C RID: 25468
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x040062AB RID: 25259
+	// Token: 0x0400637D RID: 25469
 	private int MapMarkId;
 
-	// Token: 0x020081DC RID: 33244
+	// Token: 0x02007365 RID: 29541
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x0402A61E RID: 173598
+		// Token: 0x04025945 RID: 153925
 		public const int CaptionItem = 0;
 
-		// Token: 0x0402A61F RID: 173599
+		// Token: 0x04025946 RID: 153926
 		public const int TextureBg = 1;
 
-		// Token: 0x0402A620 RID: 173600
+		// Token: 0x04025947 RID: 153927
 		public const int TabScrollView = 2;
 
-		// Token: 0x0402A621 RID: 173601
+		// Token: 0x04025948 RID: 153928
 		public const int TabItem = 3;
 
-		// Token: 0x0402A622 RID: 173602
+		// Token: 0x04025949 RID: 153929
 		public const int ProgressText = 4;
 
-		// Token: 0x0402A623 RID: 173603
+		// Token: 0x0402594A RID: 153930
 		public const int FragmentNameText = 5;
 
-		// Token: 0x0402A624 RID: 173604
+		// Token: 0x0402594B RID: 153931
 		public const int CollectTimeText = 6;
 
-		// Token: 0x0402A625 RID: 173605
+		// Token: 0x0402594C RID: 153932
 		public const int DescText = 7;
 
-		// Token: 0x0402A626 RID: 173606
+		// Token: 0x0402594D RID: 153933
 		public const int RewardScrollView = 8;
 
-		// Token: 0x0402A627 RID: 173607
+		// Token: 0x0402594E RID: 153934
 		public const int RewardButton = 9;
 
-		// Token: 0x0402A628 RID: 173608
+		// Token: 0x0402594F RID: 153935
 		public const int FinishItem = 10;
 
-		// Token: 0x0402A629 RID: 173609
+		// Token: 0x04025950 RID: 153936
 		public const int TextUnFinish = 11;
 
-		// Token: 0x0402A62A RID: 173610
+		// Token: 0x04025951 RID: 153937
 		public const int EmptyItem = 12;
 
-		// Token: 0x0402A62B RID: 173611
+		// Token: 0x04025952 RID: 153938
 		public const int ShareBtn = 13;
 
-		// Token: 0x0402A62C RID: 173612
+		// Token: 0x04025953 RID: 153939
 		public const int TipsBtn = 14;
 
-		// Token: 0x0402A62D RID: 173613
+		// Token: 0x04025954 RID: 153940
 		public const int ButtonUp = 15;
 
-		// Token: 0x0402A62E RID: 173614
+		// Token: 0x04025955 RID: 153941
 		public const int ButtonDown = 16;
 
-		// Token: 0x0402A62F RID: 173615
+		// Token: 0x04025956 RID: 153942
 		public const int ButtonGo = 17;
 	}
 }

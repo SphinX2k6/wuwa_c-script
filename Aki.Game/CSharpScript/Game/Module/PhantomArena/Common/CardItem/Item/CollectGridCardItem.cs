@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 {
-	// Token: 0x020051D3 RID: 20947
+	// Token: 0x020041A3 RID: 16803
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 	})]
 	public class CollectGridCardItem : GridProxyAbstract<CollectGridCardData>
 	{
-		// Token: 0x060359D4 RID: 219604 RVA: 0x00CB3DB2 File Offset: 0x00CB1FB2
+		// Token: 0x0602A8CF RID: 174287 RVA: 0x00C013EE File Offset: 0x00BFF5EE
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 			};
 		}
 
-		// Token: 0x060359D5 RID: 219605 RVA: 0x00CB3DEC File Offset: 0x00CB1FEC
+		// Token: 0x0602A8D0 RID: 174288 RVA: 0x00C01428 File Offset: 0x00BFF628
 		public override void Refresh(CollectGridCardData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -42,39 +42,39 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Item
 			this.CardItem.Refresh(data);
 		}
 
-		// Token: 0x060359D6 RID: 219606 RVA: 0x00CB3E7E File Offset: 0x00CB207E
+		// Token: 0x0602A8D1 RID: 174289 RVA: 0x00C014BA File Offset: 0x00BFF6BA
 		public override void OnSelected(bool fireEvent)
 		{
 		}
 
-		// Token: 0x060359D7 RID: 219607 RVA: 0x00CB3E80 File Offset: 0x00CB2080
+		// Token: 0x0602A8D2 RID: 174290 RVA: 0x00C014BC File Offset: 0x00BFF6BC
 		public override void OnDeselected(bool fireEvent)
 		{
 		}
 
-		// Token: 0x060359D8 RID: 219608 RVA: 0x00CB3E82 File Offset: 0x00CB2082
+		// Token: 0x0602A8D3 RID: 174291 RVA: 0x00C014BE File Offset: 0x00BFF6BE
 		public override object GetKey(CollectGridCardData data, int displayIndex)
 		{
 			return data.CardId;
 		}
 
-		// Token: 0x0401C74A RID: 116554
+		// Token: 0x0401717F RID: 94591
 		protected CollectGridCardData Data;
 
-		// Token: 0x0401C74B RID: 116555
+		// Token: 0x04017180 RID: 94592
 		private CollectCardItem CardItem;
 
-		// Token: 0x0401C74C RID: 116556
+		// Token: 0x04017181 RID: 94593
 		public Action<int> CallbackOnClick;
 
-		// Token: 0x0200B363 RID: 45923
+		// Token: 0x02009D9B RID: 40347
 		[NullableContext(0)]
 		private static class EGirdComponent
 		{
-			// Token: 0x040365F1 RID: 222705
+			// Token: 0x04031044 RID: 200772
 			public const int PanelBg = 0;
 
-			// Token: 0x040365F2 RID: 222706
+			// Token: 0x04031045 RID: 200773
 			public const int ItemCard = 1;
 		}
 	}

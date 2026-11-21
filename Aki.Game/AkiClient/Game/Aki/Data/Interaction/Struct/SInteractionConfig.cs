@@ -1,91 +1,72 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
-using AkiClient.Game.Aki.Data.Interaction.Enum;
 using UnrealEngine;
 using UnrealEngine.Interface;
 using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Data.Interaction.Struct
 {
-	// Token: 0x02003F1A RID: 16154
+	// Token: 0x020031D0 RID: 12752
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Data/Interaction/Struct/SInteractionConfig.SInteractionConfig")]
 	[UnrealStructLayout(208, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 202)]
 	public class SInteractionConfig : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602903F RID: 167999 RVA: 0x009B9ACC File Offset: 0x009B7CCC
+		// Token: 0x0601F9B4 RID: 129460 RVA: 0x0093160B File Offset: 0x0092F80B
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SInteractionConfig._ScriptStructPtr != 0) ? SInteractionConfig._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Data/Interaction/Struct/SInteractionConfig.SInteractionConfig", ref SInteractionConfig._ScriptStructPtr);
 		}
 
-		// Token: 0x170060F9 RID: 24825
-		// (get) Token: 0x06029040 RID: 168000 RVA: 0x009B9AF0 File Offset: 0x009B7CF0
-		// (set) Token: 0x06029041 RID: 168001 RVA: 0x009B9B04 File Offset: 0x009B7D04
+		// Token: 0x17003A5E RID: 14942
+		// (get) Token: 0x0601F9B5 RID: 129461 RVA: 0x0093162F File Offset: 0x0092F82F
+		// (set) Token: 0x0601F9B6 RID: 129462 RVA: 0x00931643 File Offset: 0x0092F843
 		public unsafe FName ID
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_ID);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_ID) = value;
 			}
 		}
 
-		// Token: 0x170060FA RID: 24826
-		// (get) Token: 0x06029042 RID: 168002 RVA: 0x009B9B19 File Offset: 0x009B7D19
-		// (set) Token: 0x06029043 RID: 168003 RVA: 0x009B9B2D File Offset: 0x009B7D2D
+		// Token: 0x17003A5F RID: 14943
+		// (get) Token: 0x0601F9B7 RID: 129463 RVA: 0x00931658 File Offset: 0x0092F858
+		// (set) Token: 0x0601F9B8 RID: 129464 RVA: 0x0093166C File Offset: 0x0092F86C
 		public unsafe FName 组ID
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_组ID);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_组ID) = value;
 			}
 		}
 
-		// Token: 0x170060FB RID: 24827
-		// (get) Token: 0x06029044 RID: 168004 RVA: 0x009B9B42 File Offset: 0x009B7D42
-		// (set) Token: 0x06029045 RID: 168005 RVA: 0x009B9B52 File Offset: 0x009B7D52
+		// Token: 0x17003A60 RID: 14944
+		// (get) Token: 0x0601F9B9 RID: 129465 RVA: 0x00931681 File Offset: 0x0092F881
+		// (set) Token: 0x0601F9BA RID: 129466 RVA: 0x00931691 File Offset: 0x0092F891
 		public unsafe bool 是否自动触发
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_2) != 0;
+				return *(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_是否自动触发) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_2) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_是否自动触发) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170060FC RID: 24828
-		// (get) Token: 0x06029046 RID: 168006 RVA: 0x009B9B63 File Offset: 0x009B7D63
-		// (set) Token: 0x06029047 RID: 168007 RVA: 0x009B9B77 File Offset: 0x009B7D77
-		[Nullable(0)]
-		public unsafe TEnumAsByte<EInteractionType> 交互类型
-		{
-			[NullableContext(0)]
-			get
-			{
-				return *(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_3);
-			}
-			[NullableContext(0)]
-			set
-			{
-				*(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_3) = value;
-			}
-		}
-
-		// Token: 0x170060FD RID: 24829
-		// (get) Token: 0x06029048 RID: 168008 RVA: 0x009B9B8C File Offset: 0x009B7D8C
-		// (set) Token: 0x06029049 RID: 168009 RVA: 0x009B9BCF File Offset: 0x009B7DCF
+		// Token: 0x17003A61 RID: 14945
+		// (get) Token: 0x0601F9BB RID: 129467 RVA: 0x009316A4 File Offset: 0x0092F8A4
+		// (set) Token: 0x0601F9BC RID: 129468 RVA: 0x009316E7 File Offset: 0x0092F8E7
 		public TArray<SInteractionOption> 交互选项组
 		{
 			get
@@ -94,7 +75,7 @@ namespace AkiClient.Game.Aki.Data.Interaction.Struct
 				TArray<SInteractionOption> result;
 				if ((result = this._交互选项组) == null)
 				{
-					result = (this._交互选项组 = new TArray<SInteractionOption>(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_4, base.MemoryOwner ?? this));
+					result = (this._交互选项组 = new TArray<SInteractionOption>(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_交互选项组, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -104,69 +85,69 @@ namespace AkiClient.Game.Aki.Data.Interaction.Struct
 			}
 		}
 
-		// Token: 0x170060FE RID: 24830
-		// (get) Token: 0x0602904A RID: 168010 RVA: 0x009B9BDD File Offset: 0x009B7DDD
-		// (set) Token: 0x0602904B RID: 168011 RVA: 0x009B9BF1 File Offset: 0x009B7DF1
+		// Token: 0x17003A62 RID: 14946
+		// (get) Token: 0x0601F9BD RID: 129469 RVA: 0x009316F5 File Offset: 0x0092F8F5
+		// (set) Token: 0x0601F9BE RID: 129470 RVA: 0x00931709 File Offset: 0x0092F909
 		public unsafe FName 交互SequenceNetwrokID
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_5);
+				return *(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_交互SequenceNetwrokID);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_5) = value;
+				*(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_交互SequenceNetwrokID) = value;
 			}
 		}
 
-		// Token: 0x170060FF RID: 24831
-		// (get) Token: 0x0602904C RID: 168012 RVA: 0x009B9C06 File Offset: 0x009B7E06
-		// (set) Token: 0x0602904D RID: 168013 RVA: 0x009B9C25 File Offset: 0x009B7E25
+		// Token: 0x17003A63 RID: 14947
+		// (get) Token: 0x0601F9BF RID: 129471 RVA: 0x0093171E File Offset: 0x0092F91E
+		// (set) Token: 0x0601F9C0 RID: 129472 RVA: 0x0093173D File Offset: 0x0092F93D
 		public TSoftObjectPtr<UDataTable> 交互SequenceNetwrok
 		{
 			get
 			{
-				return new TSoftObjectPtr<UDataTable>(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_6, base.MemoryOwner ?? this);
+				return new TSoftObjectPtr<UDataTable>(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_交互SequenceNetwrok, base.MemoryOwner ?? this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_6, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_交互SequenceNetwrok, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x17006100 RID: 24832
-		// (get) Token: 0x0602904E RID: 168014 RVA: 0x009B9C4A File Offset: 0x009B7E4A
-		// (set) Token: 0x0602904F RID: 168015 RVA: 0x009B9C5E File Offset: 0x009B7E5E
+		// Token: 0x17003A64 RID: 14948
+		// (get) Token: 0x0601F9C1 RID: 129473 RVA: 0x00931762 File Offset: 0x0092F962
+		// (set) Token: 0x0601F9C2 RID: 129474 RVA: 0x00931776 File Offset: 0x0092F976
 		public unsafe FName 交互条件组ID
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_7);
+				return *(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_交互条件组ID);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_7) = value;
+				*(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_交互条件组ID) = value;
 			}
 		}
 
-		// Token: 0x17006101 RID: 24833
-		// (get) Token: 0x06029050 RID: 168016 RVA: 0x009B9C73 File Offset: 0x009B7E73
-		// (set) Token: 0x06029051 RID: 168017 RVA: 0x009B9C83 File Offset: 0x009B7E83
+		// Token: 0x17003A65 RID: 14949
+		// (get) Token: 0x0601F9C3 RID: 129475 RVA: 0x0093178B File Offset: 0x0092F98B
+		// (set) Token: 0x0601F9C4 RID: 129476 RVA: 0x0093179B File Offset: 0x0092F99B
 		public unsafe float 交互范围
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_8);
+				return *(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_交互范围);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_8) = value;
+				*(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_交互范围) = value;
 			}
 		}
 
-		// Token: 0x17006102 RID: 24834
-		// (get) Token: 0x06029052 RID: 168018 RVA: 0x009B9C94 File Offset: 0x009B7E94
-		// (set) Token: 0x06029053 RID: 168019 RVA: 0x009B9CD7 File Offset: 0x009B7ED7
+		// Token: 0x17003A66 RID: 14950
+		// (get) Token: 0x0601F9C5 RID: 129477 RVA: 0x009317AC File Offset: 0x0092F9AC
+		// (set) Token: 0x0601F9C6 RID: 129478 RVA: 0x009317EF File Offset: 0x0092F9EF
 		public unsafe FText 描述
 		{
 			get
@@ -175,138 +156,99 @@ namespace AkiClient.Game.Aki.Data.Interaction.Struct
 				FText result;
 				if ((result = this._描述) == null)
 				{
-					result = (this._描述 = new FText(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_9, base.MemoryOwner ?? this));
+					result = (this._描述 = new FText(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_描述, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
 			set
 			{
-				FText.NativeCopy((void*)(base.NativePtr + (byte*)((IntPtr)SInteractionConfig.__PropertyOffset_9)), value.NativePtr, 1);
+				FText.NativeCopy((void*)(base.NativePtr + (byte*)((IntPtr)SInteractionConfig.__PropertyOffset_描述)), value.NativePtr, 1);
 			}
 		}
 
-		// Token: 0x17006103 RID: 24835
-		// (get) Token: 0x06029054 RID: 168020 RVA: 0x009B9CF2 File Offset: 0x009B7EF2
-		// (set) Token: 0x06029055 RID: 168021 RVA: 0x009B9D11 File Offset: 0x009B7F11
+		// Token: 0x17003A67 RID: 14951
+		// (get) Token: 0x0601F9C7 RID: 129479 RVA: 0x0093180A File Offset: 0x0092FA0A
+		// (set) Token: 0x0601F9C8 RID: 129480 RVA: 0x00931829 File Offset: 0x0092FA29
 		public TSoftObjectPtr<UTexture2D> 图标路径
 		{
 			get
 			{
-				return new TSoftObjectPtr<UTexture2D>(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_10, base.MemoryOwner ?? this);
+				return new TSoftObjectPtr<UTexture2D>(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_图标路径, base.MemoryOwner ?? this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_10, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_图标路径, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x17006104 RID: 24836
-		// (get) Token: 0x06029056 RID: 168022 RVA: 0x009B9D36 File Offset: 0x009B7F36
-		// (set) Token: 0x06029057 RID: 168023 RVA: 0x009B9D4A File Offset: 0x009B7F4A
-		[Nullable(0)]
-		public unsafe TEnumAsByte<EInteractionIconType> 图标类型
-		{
-			[NullableContext(0)]
-			get
-			{
-				return *(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_11);
-			}
-			[NullableContext(0)]
-			set
-			{
-				*(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_11) = value;
-			}
-		}
-
-		// Token: 0x17006105 RID: 24837
-		// (get) Token: 0x06029058 RID: 168024 RVA: 0x009B9D5F File Offset: 0x009B7F5F
-		// (set) Token: 0x06029059 RID: 168025 RVA: 0x009B9D6F File Offset: 0x009B7F6F
+		// Token: 0x17003A68 RID: 14952
+		// (get) Token: 0x0601F9C9 RID: 129481 RVA: 0x0093184E File Offset: 0x0092FA4E
+		// (set) Token: 0x0601F9CA RID: 129482 RVA: 0x0093185E File Offset: 0x0092FA5E
 		public unsafe bool 是否添加离开选项
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_12) != 0;
+				return *(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_是否添加离开选项) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_12) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SInteractionConfig.__PropertyOffset_是否添加离开选项) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x0602905A RID: 168026 RVA: 0x009B9D80 File Offset: 0x009B7F80
+		// Token: 0x0601F9CB RID: 129483 RVA: 0x0093186F File Offset: 0x0092FA6F
 		public SInteractionConfig()
 		{
 		}
 
-		// Token: 0x0602905B RID: 168027 RVA: 0x009B9D88 File Offset: 0x009B7F88
-		public SInteractionConfig(FName ID, FName 组ID, bool 是否自动触发, [Nullable(0)] TEnumAsByte<EInteractionType> 交互类型, TArray<SInteractionOption> 交互选项组, FName 交互SequenceNetwrokID, TSoftObjectPtr<UDataTable> 交互SequenceNetwrok, FName 交互条件组ID, float 交互范围, FText 描述, TSoftObjectPtr<UTexture2D> 图标路径, [Nullable(0)] TEnumAsByte<EInteractionIconType> 图标类型, bool 是否添加离开选项)
-		{
-			this.ID = ID;
-			this.组ID = 组ID;
-			this.是否自动触发 = 是否自动触发;
-			this.交互类型 = 交互类型;
-			this.交互选项组 = 交互选项组;
-			this.交互SequenceNetwrokID = 交互SequenceNetwrokID;
-			this.交互SequenceNetwrok = 交互SequenceNetwrok;
-			this.交互条件组ID = 交互条件组ID;
-			this.交互范围 = 交互范围;
-			this.描述 = 描述;
-			this.图标路径 = 图标路径;
-			this.图标类型 = 图标类型;
-			this.是否添加离开选项 = 是否添加离开选项;
-		}
-
-		// Token: 0x0602905C RID: 168028 RVA: 0x009B9E00 File Offset: 0x009B8000
+		// Token: 0x0601F9CC RID: 129484 RVA: 0x00931877 File Offset: 0x0092FA77
 		protected override IntPtr GetUStructPtr()
 		{
 			return SInteractionConfig.StaticStruct();
 		}
 
-		// Token: 0x0602905D RID: 168029 RVA: 0x009B9E0C File Offset: 0x009B800C
+		// Token: 0x0601F9CD RID: 129485 RVA: 0x00931883 File Offset: 0x0092FA83
 		[NullableContext(2)]
 		public SInteractionConfig(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602905E RID: 168030 RVA: 0x009B9E16 File Offset: 0x009B8016
+		// Token: 0x0601F9CE RID: 129486 RVA: 0x0093188D File Offset: 0x0092FA8D
 		public SInteractionConfig(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602905F RID: 168031 RVA: 0x009B9E21 File Offset: 0x009B8021
+		// Token: 0x0601F9CF RID: 129487 RVA: 0x00931898 File Offset: 0x0092FA98
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SInteractionConfig(Pointer, false, true);
 		}
 
-		// Token: 0x06029060 RID: 168032 RVA: 0x009B9E2B File Offset: 0x009B802B
+		// Token: 0x0601F9D0 RID: 129488 RVA: 0x009318A2 File Offset: 0x0092FAA2
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SInteractionConfig(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04014FCF RID: 85967
+		// Token: 0x04010F45 RID: 69445
 		public const string __ObjectPath = "/Game/Aki/Data/Interaction/Struct/SInteractionConfig.SInteractionConfig";
 
-		// Token: 0x04014FD0 RID: 85968
+		// Token: 0x04010F46 RID: 69446
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04014FD1 RID: 85969
-		internal static int __PropertyOffset_0;
+		// Token: 0x04010F47 RID: 69447
+		internal static int __PropertyOffset_ID;
 
-		// Token: 0x04014FD2 RID: 85970
-		internal static int __PropertyOffset_1;
+		// Token: 0x04010F48 RID: 69448
+		internal static int __PropertyOffset_组ID;
 
-		// Token: 0x04014FD3 RID: 85971
-		internal static int __PropertyOffset_2;
+		// Token: 0x04010F49 RID: 69449
+		internal static int __PropertyOffset_是否自动触发;
 
-		// Token: 0x04014FD4 RID: 85972
-		internal static int __PropertyOffset_3;
+		// Token: 0x04010F4A RID: 69450
+		internal static int __PropertyOffset_交互选项组;
 
-		// Token: 0x04014FD5 RID: 85973
-		internal static int __PropertyOffset_4;
-
-		// Token: 0x04014FD6 RID: 85974
+		// Token: 0x04010F4B RID: 69451
 		[Nullable(new byte[]
 		{
 			2,
@@ -314,32 +256,29 @@ namespace AkiClient.Game.Aki.Data.Interaction.Struct
 		})]
 		private TArray<SInteractionOption> _交互选项组;
 
-		// Token: 0x04014FD7 RID: 85975
-		internal static int __PropertyOffset_5;
+		// Token: 0x04010F4C RID: 69452
+		internal static int __PropertyOffset_交互SequenceNetwrokID;
 
-		// Token: 0x04014FD8 RID: 85976
-		internal static int __PropertyOffset_6;
+		// Token: 0x04010F4D RID: 69453
+		internal static int __PropertyOffset_交互SequenceNetwrok;
 
-		// Token: 0x04014FD9 RID: 85977
-		internal static int __PropertyOffset_7;
+		// Token: 0x04010F4E RID: 69454
+		internal static int __PropertyOffset_交互条件组ID;
 
-		// Token: 0x04014FDA RID: 85978
-		internal static int __PropertyOffset_8;
+		// Token: 0x04010F4F RID: 69455
+		internal static int __PropertyOffset_交互范围;
 
-		// Token: 0x04014FDB RID: 85979
-		internal static int __PropertyOffset_9;
+		// Token: 0x04010F50 RID: 69456
+		internal static int __PropertyOffset_描述;
 
-		// Token: 0x04014FDC RID: 85980
+		// Token: 0x04010F51 RID: 69457
 		[Nullable(2)]
 		private FText _描述;
 
-		// Token: 0x04014FDD RID: 85981
-		internal static int __PropertyOffset_10;
+		// Token: 0x04010F52 RID: 69458
+		internal static int __PropertyOffset_图标路径;
 
-		// Token: 0x04014FDE RID: 85982
-		internal static int __PropertyOffset_11;
-
-		// Token: 0x04014FDF RID: 85983
-		internal static int __PropertyOffset_12;
+		// Token: 0x04010F53 RID: 69459
+		internal static int __PropertyOffset_是否添加离开选项;
 	}
 }

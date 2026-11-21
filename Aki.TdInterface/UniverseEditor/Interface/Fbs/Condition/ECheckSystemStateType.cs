@@ -2,42 +2,44 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x0200492C RID: 18732
+	// Token: 0x02004DE0 RID: 19936
 	public enum ECheckSystemStateType : byte
 	{
-		// Token: 0x0400CFDD RID: 53213
+		// Token: 0x0400DA8E RID: 55950
 		TrackMoonBuilding,
-		// Token: 0x0400CFDE RID: 53214
+		// Token: 0x0400DA8F RID: 55951
 		CollectionShopFull,
-		// Token: 0x0400CFDF RID: 53215
+		// Token: 0x0400DA90 RID: 55952
 		TrackMoonPopularity,
-		// Token: 0x0400CFE0 RID: 53216
+		// Token: 0x0400DA91 RID: 55953
 		InfrastructureStage,
-		// Token: 0x0400CFE1 RID: 53217
+		// Token: 0x0400DA92 RID: 55954
 		RoadBuildState,
-		// Token: 0x0400CFE2 RID: 53218
+		// Token: 0x0400DA93 RID: 55955
 		InfrActivityExp,
-		// Token: 0x0400CFE3 RID: 53219
+		// Token: 0x0400DA94 RID: 55956
 		EncircleLevelComplete,
-		// Token: 0x0400CFE4 RID: 53220
+		// Token: 0x0400DA95 RID: 55957
 		CoopRoleCoopLevel,
-		// Token: 0x0400CFE5 RID: 53221
+		// Token: 0x0400DA96 RID: 55958
 		SpringFestivalAtmosphereLevel,
-		// Token: 0x0400CFE6 RID: 53222
+		// Token: 0x0400DA97 RID: 55959
 		SpringFestivalGuessJokerFirstComplete,
-		// Token: 0x0400CFE7 RID: 53223
+		// Token: 0x0400DA98 RID: 55960
 		SunSpiritDeliveryLevel,
-		// Token: 0x0400CFE8 RID: 53224
+		// Token: 0x0400DA99 RID: 55961
 		RhythmSpaceshipReachLevelRank,
-		// Token: 0x0400CFE9 RID: 53225
+		// Token: 0x0400DA9A RID: 55962
 		DropCatchGameplayCompleteLevel,
-		// Token: 0x0400CFEA RID: 53226
+		// Token: 0x0400DA9B RID: 55963
 		CheckRogueState,
-		// Token: 0x0400CFEB RID: 53227
+		// Token: 0x0400DA9C RID: 55964
 		VillageInfrTreeState,
-		// Token: 0x0400CFEC RID: 53228
+		// Token: 0x0400DA9D RID: 55965
 		VillageInfrLevel,
-		// Token: 0x0400CFED RID: 53229
-		DangoBrawlChallengeComplete
+		// Token: 0x0400DA9E RID: 55966
+		DangoBrawlChallengeComplete,
+		// Token: 0x0400DA9F RID: 55967
+		HandBookPageComplete
 	}
 }

@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200159B RID: 5531
+	// Token: 0x020016FA RID: 5882
 	[EnumExtensions]
 	public enum EBpActorFuncType
 	{
-		// Token: 0x0400499C RID: 18844
+		// Token: 0x04004D4E RID: 19790
 		CarPaintChange,
-		// Token: 0x0400499D RID: 18845
+		// Token: 0x04004D4F RID: 19791
 		BrokenBridgeEffectInMobile
 	}
 }

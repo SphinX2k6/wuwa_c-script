@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x02001455 RID: 5205
+// Token: 0x02000909 RID: 2313
 public enum EActivityMainSubViewNewType
 {
-	// Token: 0x04004132 RID: 16690
+	// Token: 0x040041CA RID: 16842
 	BattlePass,
-	// Token: 0x04004133 RID: 16691
+	// Token: 0x040041CB RID: 16843
 	Recommend,
-	// Token: 0x04004134 RID: 16692
+	// Token: 0x040041CC RID: 16844
 	DoubleDrop,
-	// Token: 0x04004135 RID: 16693
+	// Token: 0x040041CD RID: 16845
 	Adventure,
-	// Token: 0x04004136 RID: 16694
+	// Token: 0x040041CE RID: 16846
 	RoleGachaPool,
-	// Token: 0x04004137 RID: 16695
+	// Token: 0x040041CF RID: 16847
 	MainLine,
-	// Token: 0x04004138 RID: 16696
+	// Token: 0x040041D0 RID: 16848
 	Sign
 }

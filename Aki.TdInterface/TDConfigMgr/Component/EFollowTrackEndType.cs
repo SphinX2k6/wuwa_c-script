@@ -2,14 +2,14 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020000AD RID: 173
+	// Token: 0x020000B4 RID: 180
 	public enum EFollowTrackEndType
 	{
-		// Token: 0x040003F9 RID: 1017
+		// Token: 0x04000418 RID: 1048
 		ToStart,
-		// Token: 0x040003FA RID: 1018
+		// Token: 0x04000419 RID: 1049
 		ToFoundation,
-		// Token: 0x040003FB RID: 1019
+		// Token: 0x0400041A RID: 1050
 		ToSplineDestination
 	}
 }

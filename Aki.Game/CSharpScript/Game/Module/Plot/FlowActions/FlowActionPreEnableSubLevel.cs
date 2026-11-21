@@ -6,10 +6,10 @@ using CSharpScript.Game.LevelGamePlay;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050CB RID: 20683
+	// Token: 0x0200409B RID: 16539
 	public class FlowActionPreEnableSubLevel : FlowActionBase
 	{
-		// Token: 0x06034F19 RID: 216857 RVA: 0x00C8A438 File Offset: 0x00C88638
+		// Token: 0x06029E12 RID: 171538 RVA: 0x00BD7720 File Offset: 0x00BD5920
 		protected unsafe override void OnExecute()
 		{
 			long flowIncId = this.Context.FlowIncId;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			base.FinishExecute(true, true);
 		}
 
-		// Token: 0x06034F1A RID: 216858 RVA: 0x00C8A4B2 File Offset: 0x00C886B2
+		// Token: 0x06029E13 RID: 171539 RVA: 0x00BD779A File Offset: 0x00BD599A
 		protected override void OnBackgroundExecute()
 		{
 			this.OnExecute();

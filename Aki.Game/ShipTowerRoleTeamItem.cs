@@ -7,7 +7,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020029CD RID: 10701
+// Token: 0x02001F48 RID: 8008
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class ShipTowerRoleTeamItem : GridProxyAbstract<FormationData>
 {
-	// Token: 0x060162DA RID: 90842 RVA: 0x0059BFA0 File Offset: 0x0059A1A0
+	// Token: 0x06013CE0 RID: 81120 RVA: 0x005C6F58 File Offset: 0x005C5158
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +34,7 @@ public class ShipTowerRoleTeamItem : GridProxyAbstract<FormationData>
 		};
 	}
 
-	// Token: 0x060162DB RID: 90843 RVA: 0x0059C060 File Offset: 0x0059A260
+	// Token: 0x06013CE1 RID: 81121 RVA: 0x005C7018 File Offset: 0x005C5218
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ShipTowerRoleTeamItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -45,14 +45,14 @@ public class ShipTowerRoleTeamItem : GridProxyAbstract<FormationData>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060162DC RID: 90844 RVA: 0x0059C0A3 File Offset: 0x0059A2A3
+	// Token: 0x06013CE2 RID: 81122 RVA: 0x005C705B File Offset: 0x005C525B
 	[NullableContext(2)]
 	private UUIExtendToggle GetItemToggle()
 	{
 		return base.GetExtendToggle(0);
 	}
 
-	// Token: 0x060162DD RID: 90845 RVA: 0x0059C0AC File Offset: 0x0059A2AC
+	// Token: 0x06013CE3 RID: 81123 RVA: 0x005C7064 File Offset: 0x005C5264
 	private void OnClickToggleRoot(EToggleState state)
 	{
 		UUIExtendToggle itemToggle = this.GetItemToggle();
@@ -68,7 +68,7 @@ public class ShipTowerRoleTeamItem : GridProxyAbstract<FormationData>
 		scrollViewDelegate.SelectGridProxy(base.GridIndex, base.DisplayIndex, false);
 	}
 
-	// Token: 0x060162DE RID: 90846 RVA: 0x0059C0E0 File Offset: 0x0059A2E0
+	// Token: 0x06013CE4 RID: 81124 RVA: 0x005C7098 File Offset: 0x005C5298
 	public override void Refresh(FormationData data, bool isSelected, int gridIndex)
 	{
 		this.ItemData = data;
@@ -145,7 +145,7 @@ public class ShipTowerRoleTeamItem : GridProxyAbstract<FormationData>
 		sprite.SetUIActive(flag);
 	}
 
-	// Token: 0x060162DF RID: 90847 RVA: 0x0059C2FF File Offset: 0x0059A4FF
+	// Token: 0x06013CE5 RID: 81125 RVA: 0x005C72B7 File Offset: 0x005C54B7
 	public override void OnSelected(bool fireEvent)
 	{
 		UUIExtendToggle itemToggle = this.GetItemToggle();
@@ -161,7 +161,7 @@ public class ShipTowerRoleTeamItem : GridProxyAbstract<FormationData>
 		onClickCallback(this.ItemData);
 	}
 
-	// Token: 0x060162E0 RID: 90848 RVA: 0x0059C32C File Offset: 0x0059A52C
+	// Token: 0x06013CE6 RID: 81126 RVA: 0x005C72E4 File Offset: 0x005C54E4
 	public override void OnDeselected(bool fireEvent)
 	{
 		UUIExtendToggle itemToggle = this.GetItemToggle();
@@ -172,13 +172,13 @@ public class ShipTowerRoleTeamItem : GridProxyAbstract<FormationData>
 		itemToggle.SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x0400A525 RID: 42277
+	// Token: 0x0400A90F RID: 43279
 	private readonly List<MediumItemGrid> RoleList = new List<MediumItemGrid>();
 
-	// Token: 0x0400A526 RID: 42278
+	// Token: 0x0400A910 RID: 43280
 	private FormationData ItemData;
 
-	// Token: 0x0400A527 RID: 42279
+	// Token: 0x0400A911 RID: 43281
 	[Nullable(new byte[]
 	{
 		2,
@@ -186,29 +186,29 @@ public class ShipTowerRoleTeamItem : GridProxyAbstract<FormationData>
 	})]
 	public Action<FormationData> OnClickCallback;
 
-	// Token: 0x0400A528 RID: 42280
+	// Token: 0x0400A912 RID: 43282
 	public ShipTowerStageData StageData;
 
-	// Token: 0x02008FF1 RID: 36849
+	// Token: 0x02008238 RID: 33336
 	[NullableContext(0)]
 	private static class EChildType
 	{
-		// Token: 0x0402E9C6 RID: 190918
+		// Token: 0x0402A0BE RID: 172222
 		public const int ToggleRoot = 0;
 
-		// Token: 0x0402E9C7 RID: 190919
+		// Token: 0x0402A0BF RID: 172223
 		public const int TxtTeamIndex = 1;
 
-		// Token: 0x0402E9C8 RID: 190920
+		// Token: 0x0402A0C0 RID: 172224
 		public const int ItemRole1 = 2;
 
-		// Token: 0x0402E9C9 RID: 190921
+		// Token: 0x0402A0C1 RID: 172225
 		public const int ItemRole2 = 3;
 
-		// Token: 0x0402E9CA RID: 190922
+		// Token: 0x0402A0C2 RID: 172226
 		public const int ItemRole3 = 4;
 
-		// Token: 0x0402E9CB RID: 190923
+		// Token: 0x0402A0C3 RID: 172227
 		public const int SpriteApplyAll = 5;
 	}
 }

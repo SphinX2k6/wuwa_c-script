@@ -9,17 +9,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001279 RID: 4729
+// Token: 0x0200072D RID: 1837
 [NullableContext(1)]
 [Nullable(0)]
 public class FightPhotoEventTipView : UiTickViewBase
 {
-	// Token: 0x060080FC RID: 33020 RVA: 0x001B53F6 File Offset: 0x001B35F6
+	// Token: 0x06005493 RID: 21651 RVA: 0x001BE0C6 File Offset: 0x001BC2C6
 	public FightPhotoEventTipView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060080FD RID: 33021 RVA: 0x001B5418 File Offset: 0x001B3618
+	// Token: 0x06005494 RID: 21652 RVA: 0x001BE0E8 File Offset: 0x001BC2E8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,7 +30,7 @@ public class FightPhotoEventTipView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x060080FE RID: 33022 RVA: 0x001B5474 File Offset: 0x001B3674
+	// Token: 0x06005495 RID: 21653 RVA: 0x001BE144 File Offset: 0x001BC344
 	protected override UniTask OnBeforeStartAsync()
 	{
 		FightPhotoEventTipView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -41,7 +41,7 @@ public class FightPhotoEventTipView : UiTickViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060080FF RID: 33023 RVA: 0x001B54B8 File Offset: 0x001B36B8
+	// Token: 0x06005496 RID: 21654 RVA: 0x001BE188 File Offset: 0x001BC388
 	protected override void OnStart()
 	{
 		IPromptParamHub promptParamHub = (IPromptParamHub)this.OpenParam;
@@ -69,26 +69,26 @@ public class FightPhotoEventTipView : UiTickViewBase
 		this.Duration = (float)(num * TimeUtil.Instance.InverseMillisecond);
 	}
 
-	// Token: 0x06008100 RID: 33024 RVA: 0x001B55A7 File Offset: 0x001B37A7
+	// Token: 0x06005497 RID: 21655 RVA: 0x001BE277 File Offset: 0x001BC477
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.OnPreparePhotoScreenShot, new Action<bool>(this.OnPreparePhotoScreenShot));
 	}
 
-	// Token: 0x06008101 RID: 33025 RVA: 0x001B55C5 File Offset: 0x001B37C5
+	// Token: 0x06005498 RID: 21656 RVA: 0x001BE295 File Offset: 0x001BC495
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnPreparePhotoScreenShot, new Action<bool>(this.OnPreparePhotoScreenShot));
 	}
 
-	// Token: 0x06008102 RID: 33026 RVA: 0x001B55E3 File Offset: 0x001B37E3
+	// Token: 0x06005499 RID: 21657 RVA: 0x001BE2B3 File Offset: 0x001BC4B3
 	protected override void OnBeforeDestroy()
 	{
 		this.PatternTextureMap.Clear();
 		this.NumberTextureMap.Clear();
 	}
 
-	// Token: 0x06008103 RID: 33027 RVA: 0x001B55FB File Offset: 0x001B37FB
+	// Token: 0x0600549A RID: 21658 RVA: 0x001BE2CB File Offset: 0x001BC4CB
 	protected override void OnTick(float delta)
 	{
 		if (this.IsOverTime)
@@ -103,7 +103,7 @@ public class FightPhotoEventTipView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06008104 RID: 33028 RVA: 0x001B5630 File Offset: 0x001B3830
+	// Token: 0x0600549B RID: 21659 RVA: 0x001BE300 File Offset: 0x001BC500
 	private void SetTipType(int tipType)
 	{
 		UTexture2D texture;
@@ -156,7 +156,7 @@ public class FightPhotoEventTipView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06008105 RID: 33029 RVA: 0x001B56D0 File Offset: 0x001B38D0
+	// Token: 0x0600549C RID: 21660 RVA: 0x001BE3A0 File Offset: 0x001BC5A0
 	private UniTask LoadTexture(string path, Dictionary<int, UTexture2D> container, int key)
 	{
 		FightPhotoEventTipView.<LoadTexture>d__18 <LoadTexture>d__;
@@ -170,7 +170,7 @@ public class FightPhotoEventTipView : UiTickViewBase
 		return <LoadTexture>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008106 RID: 33030 RVA: 0x001B572B File Offset: 0x001B392B
+	// Token: 0x0600549D RID: 21661 RVA: 0x001BE3FB File Offset: 0x001BC5FB
 	public void OnPreparePhotoScreenShot(bool bShow)
 	{
 		if (base.IsShowOrShowing)
@@ -184,7 +184,7 @@ public class FightPhotoEventTipView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x04003A7E RID: 14974
+	// Token: 0x04003B16 RID: 15126
 	[StaticVariableRuleIgnore]
 	private static readonly string[] PatternTextureList = new string[]
 	{
@@ -193,7 +193,7 @@ public class FightPhotoEventTipView : UiTickViewBase
 		"/Game/Aki/UI/UIResources/Common/Image/Com/Photo/T_BattlePhotoPatternNum03.T_BattlePhotoPatternNum03"
 	};
 
-	// Token: 0x04003A7F RID: 14975
+	// Token: 0x04003B17 RID: 15127
 	[StaticVariableRuleIgnore]
 	private static readonly string[] NumberTextureList = new string[]
 	{
@@ -202,33 +202,33 @@ public class FightPhotoEventTipView : UiTickViewBase
 		"/Game/Aki/UI/UIResources/Common/Image/Com/Photo/T_BattlePhotoNum03.T_BattlePhotoNum03"
 	};
 
-	// Token: 0x04003A80 RID: 14976
+	// Token: 0x04003B18 RID: 15128
 	private const int DEFAULT_TIP_DURATION = 3;
 
-	// Token: 0x04003A81 RID: 14977
+	// Token: 0x04003B19 RID: 15129
 	private readonly Dictionary<int, UTexture2D> PatternTextureMap = new Dictionary<int, UTexture2D>();
 
-	// Token: 0x04003A82 RID: 14978
+	// Token: 0x04003B1A RID: 15130
 	private readonly Dictionary<int, UTexture2D> NumberTextureMap = new Dictionary<int, UTexture2D>();
 
-	// Token: 0x04003A83 RID: 14979
+	// Token: 0x04003B1B RID: 15131
 	private float Duration;
 
-	// Token: 0x04003A84 RID: 14980
+	// Token: 0x04003B1C RID: 15132
 	private float TickTime;
 
-	// Token: 0x04003A85 RID: 14981
+	// Token: 0x04003B1D RID: 15133
 	private bool IsOverTime;
 
-	// Token: 0x0200788B RID: 30859
+	// Token: 0x02006A16 RID: 27158
 	[NullableContext(0)]
 	private enum EComponentType
 	{
-		// Token: 0x04027B6E RID: 162670
+		// Token: 0x04022E9F RID: 143007
 		PatternTexture,
-		// Token: 0x04027B6F RID: 162671
+		// Token: 0x04022EA0 RID: 143008
 		NumberTexture,
-		// Token: 0x04027B70 RID: 162672
+		// Token: 0x04022EA1 RID: 143009
 		TipText
 	}
 }

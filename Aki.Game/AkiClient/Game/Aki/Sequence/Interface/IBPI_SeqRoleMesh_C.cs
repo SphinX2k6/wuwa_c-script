@@ -8,14 +8,13 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Sequence.Interface
 {
-	// Token: 0x02003A3B RID: 14907
+	// Token: 0x0200307B RID: 12411
 	[UnrealObjectPath("/Game/Aki/Sequence/Interface/BPI_SeqRoleMesh.BPI_SeqRoleMesh_C")]
 	public interface IBPI_SeqRoleMesh_C : IUnrealBlueprintInterface, IUnrealInterface, IUnrealObject
 	{
-		// Token: 0x0601F645 RID: 128581 RVA: 0x008B7388 File Offset: 0x008B5588
+		// Token: 0x0601D963 RID: 121187 RVA: 0x008FC280 File Offset: 0x008FA480
 		[NullableContext(1)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		unsafe void GetSeqMeshRef(ref TSoftObjectPtr<USkeletalMesh> MeshRef)
 		{
 			IBPI_SeqRoleMesh_C.__GetSeqMeshRef_FunctionParams* ptr = stackalloc IBPI_SeqRoleMesh_C.__GetSeqMeshRef_FunctionParams[(UIntPtr)63] + 15L / (long)sizeof(IBPI_SeqRoleMesh_C.__GetSeqMeshRef_FunctionParams) & -16L;
@@ -32,16 +31,16 @@ namespace AkiClient.Game.Aki.Sequence.Interface
 			UnrealReflectionUtils.DestroyStruct(IBPI_SeqRoleMesh_C_ReflectionImplementationFields.__GetSeqMeshRef_NativeFunctionPtr, (void*)ptr, 1);
 		}
 
-		// Token: 0x0400F130 RID: 61744
+		// Token: 0x0400F976 RID: 63862
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/Sequence/Interface/BPI_SeqRoleMesh.BPI_SeqRoleMesh_C";
 
-		// Token: 0x02009AD5 RID: 39637
+		// Token: 0x02008D64 RID: 36196
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 48)]
 		protected ref struct __GetSeqMeshRef_FunctionParams
 		{
-			// Token: 0x0403107D RID: 200829
+			// Token: 0x0402C8F0 RID: 182512
 			[FieldOffset(0)]
 			public byte MeshRef;
 		}

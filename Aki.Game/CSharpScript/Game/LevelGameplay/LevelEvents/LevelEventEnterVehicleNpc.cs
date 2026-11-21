@@ -4,17 +4,17 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B20 RID: 27424
+	// Token: 0x02005C98 RID: 23704
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventEnterVehicleNpc : LevelEventBase
 	{
-		// Token: 0x060440C1 RID: 278721 RVA: 0x010BA56B File Offset: 0x010B876B
+		// Token: 0x0603A213 RID: 238099 RVA: 0x01063DF7 File Offset: 0x01061FF7
 		public LevelEventEnterVehicleNpc(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060440C2 RID: 278722 RVA: 0x010BA574 File Offset: 0x010B8774
+		// Token: 0x0603A214 RID: 238100 RVA: 0x01063E00 File Offset: 0x01062000
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			this.Params = (inParams as EnterNpcVehicle);
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.CreateWaitEntityTask(this.Params.Target);
 		}
 
-		// Token: 0x060440C3 RID: 278723 RVA: 0x010BA5C4 File Offset: 0x010B87C4
+		// Token: 0x0603A215 RID: 238101 RVA: 0x01063E50 File Offset: 0x01062050
 		protected override void ExecuteWhenEntitiesReady()
 		{
 			EnterNpcVehicle @params = this.Params;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			this.ExecuteEnterVehicle(@params, context);
 		}
 
-		// Token: 0x060440C4 RID: 278724 RVA: 0x010BA5F8 File Offset: 0x010B87F8
+		// Token: 0x0603A216 RID: 238102 RVA: 0x01063E84 File Offset: 0x01062084
 		private void ExecuteEnterVehicle(EnterNpcVehicle config, GeneralContext context)
 		{
 			TsBaseCharacter baseCharacter = Global.BaseCharacter;
@@ -80,11 +80,11 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x040238ED RID: 145645
+		// Token: 0x0401EB8F RID: 125839
 		[Nullable(2)]
 		private EnterNpcVehicle Params;
 
-		// Token: 0x040238EE RID: 145646
+		// Token: 0x0401EB90 RID: 125840
 		[Nullable(2)]
 		private GeneralContext Context;
 	}

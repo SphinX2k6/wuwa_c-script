@@ -3,11 +3,11 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x0200461F RID: 17951
+	// Token: 0x02003548 RID: 13640
 	[NullableContext(1)]
 	public interface IUiViewResource
 	{
-		// Token: 0x0602E41C RID: 189468
+		// Token: 0x06022B11 RID: 142097
 		string GetExtraResourceId([Nullable(2)] object param = null);
 	}
 }

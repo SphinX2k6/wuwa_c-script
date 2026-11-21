@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004269 RID: 17001
+	// Token: 0x020046C5 RID: 18117
 	public class IUseWeatherSwitchConditionBase_UnionUnion
 	{
-		// Token: 0x170078B2 RID: 30898
-		// (get) Token: 0x0601928F RID: 103055 RVA: 0x0039DC11 File Offset: 0x0039BE11
-		// (set) Token: 0x06019290 RID: 103056 RVA: 0x0039DC19 File Offset: 0x0039BE19
+		// Token: 0x17007EE3 RID: 32483
+		// (get) Token: 0x0601A9FB RID: 109051 RVA: 0x003C92E9 File Offset: 0x003C74E9
+		// (set) Token: 0x0601A9FC RID: 109052 RVA: 0x003C92F1 File Offset: 0x003C74F1
 		public IUseWeatherSwitchConditionBase_Union Type { get; set; }
 
-		// Token: 0x170078B3 RID: 30899
-		// (get) Token: 0x06019291 RID: 103057 RVA: 0x0039DC22 File Offset: 0x0039BE22
-		// (set) Token: 0x06019292 RID: 103058 RVA: 0x0039DC2A File Offset: 0x0039BE2A
+		// Token: 0x17007EE4 RID: 32484
+		// (get) Token: 0x0601A9FD RID: 109053 RVA: 0x003C92FA File Offset: 0x003C74FA
+		// (set) Token: 0x0601A9FE RID: 109054 RVA: 0x003C9302 File Offset: 0x003C7502
 		public object Value { get; set; }
 
-		// Token: 0x06019293 RID: 103059 RVA: 0x0039DC33 File Offset: 0x0039BE33
+		// Token: 0x0601A9FF RID: 109055 RVA: 0x003C930B File Offset: 0x003C750B
 		public IUseWeatherSwitchConditionBase_UnionUnion()
 		{
 			this.Type = IUseWeatherSwitchConditionBase_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06019294 RID: 103060 RVA: 0x0039DC49 File Offset: 0x0039BE49
+		// Token: 0x0601AA00 RID: 109056 RVA: 0x003C9321 File Offset: 0x003C7521
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06019295 RID: 103061 RVA: 0x0039DC5B File Offset: 0x0039BE5B
+		// Token: 0x0601AA01 RID: 109057 RVA: 0x003C9333 File Offset: 0x003C7533
 		public IUseWeatherSwitchConditionBaseT AsIUseWeatherSwitchConditionBase()
 		{
 			return this.As<IUseWeatherSwitchConditionBaseT>();
 		}
 
-		// Token: 0x06019296 RID: 103062 RVA: 0x0039DC63 File Offset: 0x0039BE63
+		// Token: 0x0601AA02 RID: 109058 RVA: 0x003C933B File Offset: 0x003C753B
 		public static IUseWeatherSwitchConditionBase_UnionUnion FromIUseWeatherSwitchConditionBase(IUseWeatherSwitchConditionBaseT _iuseweatherswitchconditionbase)
 		{
 			return new IUseWeatherSwitchConditionBase_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06019297 RID: 103063 RVA: 0x0039DC78 File Offset: 0x0039BE78
+		// Token: 0x0601AA03 RID: 109059 RVA: 0x003C9350 File Offset: 0x003C7550
 		public IUseWeatherSwitchConditionSpecifiedWeatherT AsIUseWeatherSwitchConditionSpecifiedWeather()
 		{
 			return this.As<IUseWeatherSwitchConditionSpecifiedWeatherT>();
 		}
 
-		// Token: 0x06019298 RID: 103064 RVA: 0x0039DC80 File Offset: 0x0039BE80
+		// Token: 0x0601AA04 RID: 109060 RVA: 0x003C9358 File Offset: 0x003C7558
 		public static IUseWeatherSwitchConditionBase_UnionUnion FromIUseWeatherSwitchConditionSpecifiedWeather(IUseWeatherSwitchConditionSpecifiedWeatherT _iuseweatherswitchconditionspecifiedweather)
 		{
 			return new IUseWeatherSwitchConditionBase_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06019299 RID: 103065 RVA: 0x0039DC95 File Offset: 0x0039BE95
+		// Token: 0x0601AA05 RID: 109061 RVA: 0x003C936D File Offset: 0x003C756D
 		public IUseWeatherSwitchConditionAnyWeatherT AsIUseWeatherSwitchConditionAnyWeather()
 		{
 			return this.As<IUseWeatherSwitchConditionAnyWeatherT>();
 		}
 
-		// Token: 0x0601929A RID: 103066 RVA: 0x0039DC9D File Offset: 0x0039BE9D
+		// Token: 0x0601AA06 RID: 109062 RVA: 0x003C9375 File Offset: 0x003C7575
 		public static IUseWeatherSwitchConditionBase_UnionUnion FromIUseWeatherSwitchConditionAnyWeather(IUseWeatherSwitchConditionAnyWeatherT _iuseweatherswitchconditionanyweather)
 		{
 			return new IUseWeatherSwitchConditionBase_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x0601929B RID: 103067 RVA: 0x0039DCB4 File Offset: 0x0039BEB4
+		// Token: 0x0601AA07 RID: 109063 RVA: 0x003C938C File Offset: 0x003C758C
 		public static int Pack(FlatBufferBuilder builder, IUseWeatherSwitchConditionBase_UnionUnion _o)
 		{
 			switch (_o.Type)

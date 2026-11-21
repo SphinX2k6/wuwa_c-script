@@ -4,10 +4,10 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004643 RID: 17987
+	// Token: 0x02003574 RID: 13684
 	public class MotorcycleRootViewInfoDynamicData : ViewInfoDynamicData, IViewInfoDynamicSceneData
 	{
-		// Token: 0x0602E699 RID: 190105 RVA: 0x00AB987C File Offset: 0x00AB7A7C
+		// Token: 0x06022DE3 RID: 142819 RVA: 0x009E6EAC File Offset: 0x009E50AC
 		[NullableContext(2)]
 		public string GetSceneId()
 		{

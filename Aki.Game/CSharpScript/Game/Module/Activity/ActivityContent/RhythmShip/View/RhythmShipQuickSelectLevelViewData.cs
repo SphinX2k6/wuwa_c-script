@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip.View
 {
-	// Token: 0x0200623A RID: 25146
+	// Token: 0x020051B8 RID: 20920
 	public class RhythmShipQuickSelectLevelViewData : IRhythmShipQuickSelectLevelViewData
 	{
-		// Token: 0x1700924D RID: 37453
-		// (get) Token: 0x0603F613 RID: 259603 RVA: 0x00F5267F File Offset: 0x00F5087F
-		// (set) Token: 0x0603F614 RID: 259604 RVA: 0x00F52687 File Offset: 0x00F50887
+		// Token: 0x170065AF RID: 26031
+		// (get) Token: 0x060342D4 RID: 213716 RVA: 0x00E995DB File Offset: 0x00E977DB
+		// (set) Token: 0x060342D5 RID: 213717 RVA: 0x00E995E3 File Offset: 0x00E977E3
 		public ERhythmShipPlanetType OpenShowType { get; set; }
 	}
 }

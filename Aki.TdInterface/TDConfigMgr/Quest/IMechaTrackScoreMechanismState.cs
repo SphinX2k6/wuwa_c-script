@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001009 RID: 4105
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001135 RID: 4405
 	public class IMechaTrackScoreMechanismState : IMechaTrackScoreDetectionType
 	{
-		// Token: 0x06005B9E RID: 23454 RVA: 0x000DE520 File Offset: 0x000DC720
+		// Token: 0x0600617E RID: 24958 RVA: 0x000EB160 File Offset: 0x000E9360
 		private IMechaTrackScoreMechanismState_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005B9F RID: 23455 RVA: 0x000DE558 File Offset: 0x000DC758
+		// Token: 0x0600617F RID: 24959 RVA: 0x000EB198 File Offset: 0x000E9398
 		public static IMechaTrackScoreMechanismState Create([Nullable(2)] IMechaTrackScoreMechanismState instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005BA0 RID: 23456 RVA: 0x000DE56B File Offset: 0x000DC76B
+		// Token: 0x06006180 RID: 24960 RVA: 0x000EB1AB File Offset: 0x000E93AB
 		public static IMechaTrackScoreMechanismState CreateFromSetValue([Nullable(2)] IMechaTrackScoreMechanismState_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005BA1 RID: 23457 RVA: 0x000DE57E File Offset: 0x000DC77E
+		// Token: 0x06006181 RID: 24961 RVA: 0x000EB1BE File Offset: 0x000E93BE
 		public new IMechaTrackScoreMechanismState_SetValue ToSetValue()
 		{
 			return new IMechaTrackScoreMechanismState_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001E43 RID: 7747
-		// (get) Token: 0x06005BA2 RID: 23458 RVA: 0x000DE59D File Offset: 0x000DC79D
-		// (set) Token: 0x06005BA3 RID: 23459 RVA: 0x000DE5C8 File Offset: 0x000DC7C8
+		// Token: 0x17001FEC RID: 8172
+		// (get) Token: 0x06006182 RID: 24962 RVA: 0x000EB1DD File Offset: 0x000E93DD
+		// (set) Token: 0x06006183 RID: 24963 RVA: 0x000EB208 File Offset: 0x000E9408
 		public override EMechaTrackScoreDetectionType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001E44 RID: 7748
-		// (get) Token: 0x06005BA4 RID: 23460 RVA: 0x000DE5D8 File Offset: 0x000DC7D8
-		// (set) Token: 0x06005BA5 RID: 23461 RVA: 0x000DE66B File Offset: 0x000DC86B
+		// Token: 0x17001FED RID: 8173
+		// (get) Token: 0x06006184 RID: 24964 RVA: 0x000EB218 File Offset: 0x000E9418
+		// (set) Token: 0x06006185 RID: 24965 RVA: 0x000EB2AB File Offset: 0x000E94AB
 		public virtual List<IMechaTrackScoreMechanismStateType> MechanismStateTypes
 		{
 			get
@@ -122,18 +120,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003730 RID: 14128
+		// Token: 0x04003A68 RID: 14952
 		[Nullable(2)]
 		protected new IMechaTrackScoreMechanismState FbInstance;
 
-		// Token: 0x04003731 RID: 14129
+		// Token: 0x04003A69 RID: 14953
 		[Nullable(2)]
 		protected new IMechaTrackScoreMechanismState_SetValue PocoInterface;
 
-		// Token: 0x04003732 RID: 14130
+		// Token: 0x04003A6A RID: 14954
 		private List<IMechaTrackScoreMechanismStateType> _MechanismStateTypesCache;
 
-		// Token: 0x04003733 RID: 14131
+		// Token: 0x04003A6B RID: 14955
 		private bool _MechanismStateTypesInited;
 	}
 }

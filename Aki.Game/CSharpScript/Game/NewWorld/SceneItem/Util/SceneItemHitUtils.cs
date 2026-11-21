@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Component;
 using CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow;
@@ -7,12 +6,12 @@ using CSharpScript.Game.NewWorld.Vehicle.Motorcycle;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Util
 {
-	// Token: 0x0200719E RID: 29086
+	// Token: 0x02006253 RID: 25171
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneItemHitUtils
 	{
-		// Token: 0x060472AD RID: 291501 RVA: 0x01215358 File Offset: 0x01213558
+		// Token: 0x0603CBA3 RID: 248739 RVA: 0x0116F374 File Offset: 0x0116D574
 		public static bool CheckHitDataMatchBulletType(IHitBulletType matchedBullet, HitInformation hitData, Entity victim)
 		{
 			switch (matchedBullet.Type)
@@ -30,10 +29,10 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Util
 			}
 		}
 
-		// Token: 0x060472AE RID: 291502 RVA: 0x012153A8 File Offset: 0x012135A8
+		// Token: 0x0603CBA4 RID: 248740 RVA: 0x0116F3C4 File Offset: 0x0116D5C4
 		public static bool CheckHitDataMatchOnlyDropAttack(HitInformation hitData, Entity victim)
 		{
-			if (!hitData.ReBulletData.Logic.PresentTagIds.Contains(GameplayTagDefine.EGameplayTagId["子弹.机关触发.下落攻击触发"]))
+			if (Array.IndexOf<int>(hitData.ReBulletData.Logic.PresentTagIds, GameplayTagDefine.EGameplayTagId["子弹.机关触发.下落攻击触发"]) < 0)
 			{
 				return false;
 			}
@@ -43,13 +42,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Util
 			return characterActorComponent != null && component != null && Vector.DistSquared2D(component.ActorLocationProxy, characterActorComponent.ActorLocationProxy) <= 28900.0;
 		}
 
-		// Token: 0x060472AF RID: 291503 RVA: 0x0121541D File Offset: 0x0121361D
+		// Token: 0x0603CBA5 RID: 248741 RVA: 0x0116F43A File Offset: 0x0116D63A
 		public static bool CheckHitDataMatchCrystalAttack(HitInformation hitData)
 		{
-			return hitData.ReBulletData.Logic.PresentTagIds.Contains(GameplayTagDefine.EGameplayTagId["子弹.机关触发.鸣晶爆炸触发"]);
+			return Array.IndexOf<int>(hitData.ReBulletData.Logic.PresentTagIds, GameplayTagDefine.EGameplayTagId["子弹.机关触发.鸣晶爆炸触发"]) >= 0;
 		}
 
-		// Token: 0x060472B0 RID: 291504 RVA: 0x01215448 File Offset: 0x01213648
+		// Token: 0x0603CBA6 RID: 248742 RVA: 0x0116F468 File Offset: 0x0116D668
 		public static bool CheckHitDataMatchGundamBossOrPlayerAttack(HitInformation hitData)
 		{
 			Entity attacker = hitData.Attacker;
@@ -61,7 +60,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Util
 			return component != null && (component.GetTemplateId() == 672000001 || SceneItemHitUtils.CheckHitDataMatchPlayerAttack(hitData));
 		}
 
-		// Token: 0x060472B1 RID: 291505 RVA: 0x01215490 File Offset: 0x01213690
+		// Token: 0x0603CBA7 RID: 248743 RVA: 0x0116F4B0 File Offset: 0x0116D6B0
 		public static bool CheckHitDataMatchPlayerAttack(HitInformation hitData)
 		{
 			if (hitData.Attacker == null || !hitData.Attacker.Valid)
@@ -114,16 +113,16 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Util
 			return component4 != null && component4.Valid;
 		}
 
-		// Token: 0x060472B2 RID: 291506 RVA: 0x0121558C File Offset: 0x0121378C
+		// Token: 0x0603CBA8 RID: 248744 RVA: 0x0116F5AC File Offset: 0x0116D7AC
 		public static bool CheckHitDataMatchFixedBulletId(IHitBulletTypeFixedBulletId matchedBullet, HitInformation hitData)
 		{
 			return hitData.Attacker != null && hitData.Attacker.Valid && (matchedBullet.BulletId == null || matchedBullet.BulletId.Count == 0 || matchedBullet.BulletId.Contains(hitData.BulletId) || (matchedBullet.PlayerAttack.GetValueOrDefault() && SceneItemHitUtils.CheckHitDataMatchPlayerAttack(hitData)));
 		}
 
-		// Token: 0x040256CC RID: 153292
+		// Token: 0x0402033B RID: 131899
 		private const int DROP_ATTACK_VALID_RANGE = 28900;
 
-		// Token: 0x040256CD RID: 153293
+		// Token: 0x0402033C RID: 131900
 		private const int GUNDAM_BOSS_TEMPLATE_ID = 672000001;
 	}
 }

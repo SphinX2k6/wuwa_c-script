@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AD1 RID: 2769
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B9B RID: 2971
 	public class IStateChangeBehavior
 	{
-		// Token: 0x06003FCA RID: 16330 RVA: 0x000A314D File Offset: 0x000A134D
+		// Token: 0x060043F4 RID: 17396 RVA: 0x000AC741 File Offset: 0x000AA941
 		public static IStateChangeBehavior Create(IStateChangeBehavior? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000FE5 RID: 4069
-		// (get) Token: 0x06003FCB RID: 16331 RVA: 0x000A316C File Offset: 0x000A136C
+		// Token: 0x170010B9 RID: 4281
+		// (get) Token: 0x060043F5 RID: 17397 RVA: 0x000AC760 File Offset: 0x000AA960
 		public virtual string State
 		{
 			get
@@ -34,19 +32,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FE6 RID: 4070
-		// (get) Token: 0x06003FCC RID: 16332 RVA: 0x000A317C File Offset: 0x000A137C
+		// Token: 0x170010BA RID: 4282
+		// (get) Token: 0x060043F6 RID: 17398 RVA: 0x000AC770 File Offset: 0x000AA970
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> Action
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -69,8 +67,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FE7 RID: 4071
-		// (get) Token: 0x06003FCD RID: 16333 RVA: 0x000A31F6 File Offset: 0x000A13F6
+		// Token: 0x170010BB RID: 4283
+		// (get) Token: 0x060043F7 RID: 17399 RVA: 0x000AC7EA File Offset: 0x000AA9EA
 		[Nullable(2)]
 		public virtual IDelayChangeState DelayChangeState
 		{
@@ -87,8 +85,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FE8 RID: 4072
-		// (get) Token: 0x06003FCE RID: 16334 RVA: 0x000A322C File Offset: 0x000A142C
+		// Token: 0x170010BC RID: 4284
+		// (get) Token: 0x060043F8 RID: 17400 RVA: 0x000AC820 File Offset: 0x000AAA20
 		public virtual bool? PendingConditionAvailable
 		{
 			get
@@ -101,19 +99,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000FE9 RID: 4073
-		// (get) Token: 0x06003FCF RID: 16335 RVA: 0x000A3264 File Offset: 0x000A1464
+		// Token: 0x170010BD RID: 4285
+		// (get) Token: 0x060043F9 RID: 17401 RVA: 0x000AC858 File Offset: 0x000AAA58
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IConditionAction> ConditionAction
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -136,36 +134,36 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002382 RID: 9090
+		// Token: 0x0400259E RID: 9630
 		private IStateChangeBehavior Instance;
 
-		// Token: 0x04002383 RID: 9091
+		// Token: 0x0400259F RID: 9631
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _ActionCache;
 
-		// Token: 0x04002384 RID: 9092
+		// Token: 0x040025A0 RID: 9632
 		private bool _ActionInited;
 
-		// Token: 0x04002385 RID: 9093
+		// Token: 0x040025A1 RID: 9633
 		[Nullable(2)]
 		private IDelayChangeState _DelayChangeStateCache;
 
-		// Token: 0x04002386 RID: 9094
+		// Token: 0x040025A2 RID: 9634
 		private bool _DelayChangeStateInited;
 
-		// Token: 0x04002387 RID: 9095
+		// Token: 0x040025A3 RID: 9635
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IConditionAction> _ConditionActionCache;
 
-		// Token: 0x04002388 RID: 9096
+		// Token: 0x040025A4 RID: 9636
 		private bool _ConditionActionInited;
 	}
 }

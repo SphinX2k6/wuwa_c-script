@@ -8,7 +8,7 @@ using CSharpScript.Game.Module.RacingBets.Data;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02002734 RID: 10036
+// Token: 0x02001C1F RID: 7199
 [Nullable(new byte[]
 {
 	0,
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class RacingBetsHistoryItem : GridProxyAbstract<RacingBetsLegMatchData>
 {
-	// Token: 0x06014946 RID: 84294 RVA: 0x00533E80 File Offset: 0x00532080
+	// Token: 0x06011E28 RID: 73256 RVA: 0x00542B90 File Offset: 0x00540D90
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -35,7 +35,7 @@ public class RacingBetsHistoryItem : GridProxyAbstract<RacingBetsLegMatchData>
 		};
 	}
 
-	// Token: 0x06014947 RID: 84295 RVA: 0x00533F55 File Offset: 0x00532155
+	// Token: 0x06011E29 RID: 73257 RVA: 0x00542C65 File Offset: 0x00540E65
 	[NullableContext(1)]
 	public override void Refresh(RacingBetsLegMatchData data, bool isSelected, int gridIndex)
 	{
@@ -43,7 +43,7 @@ public class RacingBetsHistoryItem : GridProxyAbstract<RacingBetsLegMatchData>
 		this.UpdateItem();
 	}
 
-	// Token: 0x06014948 RID: 84296 RVA: 0x00533F64 File Offset: 0x00532164
+	// Token: 0x06011E2A RID: 73258 RVA: 0x00542C74 File Offset: 0x00540E74
 	private void UpdateItem()
 	{
 		if (this.LegMatchData == null)
@@ -96,7 +96,7 @@ public class RacingBetsHistoryItem : GridProxyAbstract<RacingBetsLegMatchData>
 		base.GetButton(6).RootUIComp.Get().SetUIActive(flag);
 	}
 
-	// Token: 0x06014949 RID: 84297 RVA: 0x00534144 File Offset: 0x00532344
+	// Token: 0x06011E2B RID: 73259 RVA: 0x00542E54 File Offset: 0x00541054
 	private void OnClickReplayBtn()
 	{
 		if (this.LegMatchData == null)
@@ -112,32 +112,32 @@ public class RacingBetsHistoryItem : GridProxyAbstract<RacingBetsLegMatchData>
 		RacingBetsController.Instance.RacingBetMatchActionRequest(racingBetsSeasonData.Id, this.LegMatchData.Id);
 	}
 
-	// Token: 0x04009AA7 RID: 39591
+	// Token: 0x04009BFF RID: 39935
 	[Nullable(2)]
 	private RacingBetsLegMatchData LegMatchData;
 
-	// Token: 0x02008D9C RID: 36252
+	// Token: 0x02007F24 RID: 32548
 	private class EItemComponents
 	{
-		// Token: 0x0402DF6A RID: 188266
+		// Token: 0x04029280 RID: 168576
 		public const int DateText = 0;
 
-		// Token: 0x0402DF6B RID: 188267
+		// Token: 0x04029281 RID: 168577
 		public const int LegNameText = 1;
 
-		// Token: 0x0402DF6C RID: 188268
+		// Token: 0x04029282 RID: 168578
 		public const int DangoTexture = 2;
 
-		// Token: 0x0402DF6D RID: 188269
+		// Token: 0x04029283 RID: 168579
 		public const int DangoName = 3;
 
-		// Token: 0x0402DF6E RID: 188270
+		// Token: 0x04029284 RID: 168580
 		public const int RankText = 4;
 
-		// Token: 0x0402DF6F RID: 188271
+		// Token: 0x04029285 RID: 168581
 		public const int EarnText = 5;
 
-		// Token: 0x0402DF70 RID: 188272
+		// Token: 0x04029286 RID: 168582
 		public const int ReplayButton = 6;
 	}
 }

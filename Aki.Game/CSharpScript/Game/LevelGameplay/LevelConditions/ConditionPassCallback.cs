@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006D76 RID: 28022
+	// Token: 0x02005EF5 RID: 24309
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ConditionPassCallback
 	{
-		// Token: 0x06044795 RID: 280469 RVA: 0x010E30A5 File Offset: 0x010E12A5
+		// Token: 0x0603A8F9 RID: 239865 RVA: 0x0108D289 File Offset: 0x0108B489
 		public ConditionPassCallback(TConditionPassCallback callback, [Nullable(new byte[]
 		{
 			2,
@@ -19,10 +19,10 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			this.Params = parameters;
 		}
 
-		// Token: 0x040239DD RID: 145885
+		// Token: 0x0401EC7F RID: 126079
 		public TConditionPassCallback Callback;
 
-		// Token: 0x040239DE RID: 145886
+		// Token: 0x0401EC80 RID: 126080
 		[Nullable(new byte[]
 		{
 			2,

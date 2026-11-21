@@ -7,36 +7,36 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Data.QuickTimeAction
 {
-	// Token: 0x02003EB3 RID: 16051
+	// Token: 0x02003180 RID: 12672
 	[HasGetTypeHash]
 	[UnrealObjectPath("/Game/Aki/Data/QuickTimeAction/SQtaPrompt.SQtaPrompt")]
 	[UnrealStructLayout(264, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 264)]
 	public class SQtaPrompt : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06028982 RID: 166274 RVA: 0x009B008A File Offset: 0x009AE28A
+		// Token: 0x0601F423 RID: 128035 RVA: 0x00929C58 File Offset: 0x00927E58
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SQtaPrompt._ScriptStructPtr != 0) ? SQtaPrompt._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Data/QuickTimeAction/SQtaPrompt.SQtaPrompt", ref SQtaPrompt._ScriptStructPtr);
 		}
 
-		// Token: 0x17005EA8 RID: 24232
-		// (get) Token: 0x06028983 RID: 166275 RVA: 0x009B00AE File Offset: 0x009AE2AE
-		// (set) Token: 0x06028984 RID: 166276 RVA: 0x009B00C2 File Offset: 0x009AE2C2
+		// Token: 0x17003858 RID: 14424
+		// (get) Token: 0x0601F424 RID: 128036 RVA: 0x00929C7C File Offset: 0x00927E7C
+		// (set) Token: 0x0601F425 RID: 128037 RVA: 0x00929C90 File Offset: 0x00927E90
 		public unsafe TEnumAsByte<EQtaPromptType> PromptType
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SQtaPrompt.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)SQtaPrompt.__PropertyOffset_PromptType);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SQtaPrompt.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)SQtaPrompt.__PropertyOffset_PromptType) = value;
 			}
 		}
 
-		// Token: 0x17005EA9 RID: 24233
-		// (get) Token: 0x06028985 RID: 166277 RVA: 0x009B00D8 File Offset: 0x009AE2D8
-		// (set) Token: 0x06028986 RID: 166278 RVA: 0x009B011B File Offset: 0x009AE31B
+		// Token: 0x17003859 RID: 14425
+		// (get) Token: 0x0601F426 RID: 128038 RVA: 0x00929CA8 File Offset: 0x00927EA8
+		// (set) Token: 0x0601F427 RID: 128039 RVA: 0x00929CEB File Offset: 0x00927EEB
 		[Nullable(1)]
 		public SQtaPrompt_Content PromptContent
 		{
@@ -47,74 +47,67 @@ namespace AkiClient.Game.Aki.Data.QuickTimeAction
 				SQtaPrompt_Content result;
 				if ((result = this._PromptContent) == null)
 				{
-					result = (this._PromptContent = new SQtaPrompt_Content(base.NativePtr + (IntPtr)SQtaPrompt.__PropertyOffset_1, base.MemoryOwner ?? this));
+					result = (this._PromptContent = new SQtaPrompt_Content(base.NativePtr + (IntPtr)SQtaPrompt.__PropertyOffset_PromptContent, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
 			[NullableContext(1)]
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(SQtaPrompt_Content.StaticStruct(), base.NativePtr + (IntPtr)SQtaPrompt.__PropertyOffset_1, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(SQtaPrompt_Content.StaticStruct(), base.NativePtr + (IntPtr)SQtaPrompt.__PropertyOffset_PromptContent, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x06028987 RID: 166279 RVA: 0x009B013C File Offset: 0x009AE33C
+		// Token: 0x0601F428 RID: 128040 RVA: 0x00929D0C File Offset: 0x00927F0C
 		public SQtaPrompt()
 		{
 		}
 
-		// Token: 0x06028988 RID: 166280 RVA: 0x009B0144 File Offset: 0x009AE344
-		public SQtaPrompt(TEnumAsByte<EQtaPromptType> PromptType, [Nullable(1)] SQtaPrompt_Content PromptContent)
-		{
-			this.PromptType = PromptType;
-			this.PromptContent = PromptContent;
-		}
-
-		// Token: 0x06028989 RID: 166281 RVA: 0x009B015A File Offset: 0x009AE35A
+		// Token: 0x0601F429 RID: 128041 RVA: 0x00929D14 File Offset: 0x00927F14
 		protected override IntPtr GetUStructPtr()
 		{
 			return SQtaPrompt.StaticStruct();
 		}
 
-		// Token: 0x0602898A RID: 166282 RVA: 0x009B0166 File Offset: 0x009AE366
+		// Token: 0x0601F42A RID: 128042 RVA: 0x00929D20 File Offset: 0x00927F20
 		[NullableContext(2)]
 		public SQtaPrompt(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602898B RID: 166283 RVA: 0x009B0170 File Offset: 0x009AE370
+		// Token: 0x0601F42B RID: 128043 RVA: 0x00929D2A File Offset: 0x00927F2A
 		public SQtaPrompt(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602898C RID: 166284 RVA: 0x009B017B File Offset: 0x009AE37B
+		// Token: 0x0601F42C RID: 128044 RVA: 0x00929D35 File Offset: 0x00927F35
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SQtaPrompt(Pointer, false, true);
 		}
 
-		// Token: 0x0602898D RID: 166285 RVA: 0x009B0185 File Offset: 0x009AE385
+		// Token: 0x0601F42D RID: 128045 RVA: 0x00929D3F File Offset: 0x00927F3F
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SQtaPrompt(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04014B7D RID: 84861
+		// Token: 0x04010BA5 RID: 68517
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/Data/QuickTimeAction/SQtaPrompt.SQtaPrompt";
 
-		// Token: 0x04014B7E RID: 84862
+		// Token: 0x04010BA6 RID: 68518
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04014B7F RID: 84863
-		internal static int __PropertyOffset_0;
+		// Token: 0x04010BA7 RID: 68519
+		internal static int __PropertyOffset_PromptType;
 
-		// Token: 0x04014B80 RID: 84864
-		internal static int __PropertyOffset_1;
+		// Token: 0x04010BA8 RID: 68520
+		internal static int __PropertyOffset_PromptContent;
 
-		// Token: 0x04014B81 RID: 84865
+		// Token: 0x04010BA9 RID: 68521
 		[Nullable(2)]
 		private SQtaPrompt_Content _PromptContent;
 	}

@@ -6,13 +6,13 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlement
 {
-	// Token: 0x020062F2 RID: 25330
+	// Token: 0x02005270 RID: 21104
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballSettleResultBonusStrategy : PinballSettleResultStrategyBase
 	{
-		// Token: 0x170092AD RID: 37549
-		// (get) Token: 0x0603FBCB RID: 261067 RVA: 0x00F6C088 File Offset: 0x00F6A288
+		// Token: 0x1700660F RID: 26127
+		// (get) Token: 0x0603488C RID: 215180 RVA: 0x00EB2FE4 File Offset: 0x00EB11E4
 		public override bool HasCustomRefreshTitle
 		{
 			get
@@ -21,19 +21,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			}
 		}
 
-		// Token: 0x0603FBCC RID: 261068 RVA: 0x00F6C08B File Offset: 0x00F6A28B
+		// Token: 0x0603488D RID: 215181 RVA: 0x00EB2FE7 File Offset: 0x00EB11E7
 		public override bool GetIsNeedProgressRewardView()
 		{
 			return true;
 		}
 
-		// Token: 0x0603FBCD RID: 261069 RVA: 0x00F6C08E File Offset: 0x00F6A28E
+		// Token: 0x0603488E RID: 215182 RVA: 0x00EB2FEA File Offset: 0x00EB11EA
 		public override void RefreshTitle()
 		{
 			base.Context.ShowSuccessTips("Pinball_BattleSettlement_Fail");
 		}
 
-		// Token: 0x0603FBCE RID: 261070 RVA: 0x00F6C0A0 File Offset: 0x00F6A2A0
+		// Token: 0x0603488F RID: 215183 RVA: 0x00EB2FFC File Offset: 0x00EB11FC
 		public override void RefreshProgressRewards()
 		{
 			PinballLevelConfig? pinballLevelConfigById = PinballConfig.Instance.GetPinballLevelConfigById(base.Context.GetOpenParam().LevelId);
@@ -61,14 +61,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			base.Context.ShowProgressRewardList(base.Context.GetOpenParam().Score, list.ToArray(), list2.ToArray());
 		}
 
-		// Token: 0x0603FBCF RID: 261071 RVA: 0x00F6C1AB File Offset: 0x00F6A3AB
+		// Token: 0x06034890 RID: 215184 RVA: 0x00EB3107 File Offset: 0x00EB1307
 		public override void RefreshButtons()
 		{
 			base.Context.BindRestartButton();
 			base.Context.BindBackButton();
 		}
 
-		// Token: 0x0603FBD0 RID: 261072 RVA: 0x00F6C1C3 File Offset: 0x00F6A3C3
+		// Token: 0x06034891 RID: 215185 RVA: 0x00EB311F File Offset: 0x00EB131F
 		public override void OnClickBtnRestart(Action callback)
 		{
 			if (base.Context.GetNeedAdjustFormation())
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Settlem
 			callback();
 		}
 
-		// Token: 0x0603FBD1 RID: 261073 RVA: 0x00F6C1E8 File Offset: 0x00F6A3E8
+		// Token: 0x06034892 RID: 215186 RVA: 0x00EB3144 File Offset: 0x00EB1344
 		public override void OnClickBtnBack(Action callback)
 		{
 			if (base.Context.GetOpenParam().Score >= PinballModel.Instance.ActivityData.GetLevelMaxScore(base.Context.GetOpenParam().LevelId))

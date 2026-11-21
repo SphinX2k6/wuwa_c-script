@@ -4,35 +4,35 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003D2C RID: 15660
+	// Token: 0x02004143 RID: 16707
 	public class IBehaviorTreeT
 	{
-		// Token: 0x17006B6E RID: 27502
-		// (get) Token: 0x06015A03 RID: 88579 RVA: 0x0031F45E File Offset: 0x0031D65E
-		// (set) Token: 0x06015A04 RID: 88580 RVA: 0x0031F466 File Offset: 0x0031D666
+		// Token: 0x17007128 RID: 28968
+		// (get) Token: 0x06016F3B RID: 94011 RVA: 0x003466D6 File Offset: 0x003448D6
+		// (set) Token: 0x06016F3C RID: 94012 RVA: 0x003466DE File Offset: 0x003448DE
 		public List<IVarDefineT> Vars { get; set; }
 
-		// Token: 0x17006B6F RID: 27503
-		// (get) Token: 0x06015A05 RID: 88581 RVA: 0x0031F46F File Offset: 0x0031D66F
-		// (set) Token: 0x06015A06 RID: 88582 RVA: 0x0031F477 File Offset: 0x0031D677
+		// Token: 0x17007129 RID: 28969
+		// (get) Token: 0x06016F3D RID: 94013 RVA: 0x003466E7 File Offset: 0x003448E7
+		// (set) Token: 0x06016F3E RID: 94014 RVA: 0x003466EF File Offset: 0x003448EF
 		public IStartBtNodeT Root { get; set; }
 
-		// Token: 0x17006B70 RID: 27504
-		// (get) Token: 0x06015A07 RID: 88583 RVA: 0x0031F480 File Offset: 0x0031D680
-		// (set) Token: 0x06015A08 RID: 88584 RVA: 0x0031F488 File Offset: 0x0031D688
+		// Token: 0x1700712A RID: 28970
+		// (get) Token: 0x06016F3F RID: 94015 RVA: 0x003466F8 File Offset: 0x003448F8
+		// (set) Token: 0x06016F40 RID: 94016 RVA: 0x00346700 File Offset: 0x00344900
 		public List<int> _SelectedNodeIds { get; set; }
 
-		// Token: 0x17006B71 RID: 27505
-		// (get) Token: 0x06015A09 RID: 88585 RVA: 0x0031F491 File Offset: 0x0031D691
-		// (set) Token: 0x06015A0A RID: 88586 RVA: 0x0031F499 File Offset: 0x0031D699
+		// Token: 0x1700712B RID: 28971
+		// (get) Token: 0x06016F41 RID: 94017 RVA: 0x00346709 File Offset: 0x00344909
+		// (set) Token: 0x06016F42 RID: 94018 RVA: 0x00346711 File Offset: 0x00344911
 		public List<IFavoriteBtNodeInfoT> _FavoriteNodes { get; set; }
 
-		// Token: 0x17006B72 RID: 27506
-		// (get) Token: 0x06015A0B RID: 88587 RVA: 0x0031F4A2 File Offset: 0x0031D6A2
-		// (set) Token: 0x06015A0C RID: 88588 RVA: 0x0031F4AA File Offset: 0x0031D6AA
+		// Token: 0x1700712C RID: 28972
+		// (get) Token: 0x06016F43 RID: 94019 RVA: 0x0034671A File Offset: 0x0034491A
+		// (set) Token: 0x06016F44 RID: 94020 RVA: 0x00346722 File Offset: 0x00344922
 		public byte NullMask { get; set; }
 
-		// Token: 0x06015A0D RID: 88589 RVA: 0x0031F4B3 File Offset: 0x0031D6B3
+		// Token: 0x06016F45 RID: 94021 RVA: 0x0034672B File Offset: 0x0034492B
 		public IBehaviorTreeT()
 		{
 			this.Vars = null;

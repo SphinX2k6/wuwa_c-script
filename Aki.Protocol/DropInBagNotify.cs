@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000410 RID: 1040
+	// Token: 0x020003F9 RID: 1017
 	[NetMessage(EMessageId.DropInBagNotify)]
 	public sealed class DropInBagNotify : IMessage<DropInBagNotify>, IMessage, IEquatable<DropInBagNotify>, IDeepCloneable<DropInBagNotify>, IBufferMessage
 	{
-		// Token: 0x0600642C RID: 25644 RVA: 0x000F0AF8 File Offset: 0x000EECF8
+		// Token: 0x0600629C RID: 25244 RVA: 0x000ED980 File Offset: 0x000EBB80
 		[NullableContext(1)]
 		public static DropInBagNotify Create()
 		{
 			return new DropInBagNotify();
 		}
 
-		// Token: 0x170012B5 RID: 4789
-		// (get) Token: 0x0600642D RID: 25645 RVA: 0x000F0AFF File Offset: 0x000EECFF
+		// Token: 0x17001260 RID: 4704
+		// (get) Token: 0x0600629D RID: 25245 RVA: 0x000ED987 File Offset: 0x000EBB87
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170012B6 RID: 4790
-		// (get) Token: 0x0600642E RID: 25646 RVA: 0x000F0B02 File Offset: 0x000EED02
+		// Token: 0x17001261 RID: 4705
+		// (get) Token: 0x0600629E RID: 25246 RVA: 0x000ED98A File Offset: 0x000EBB8A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600642F RID: 25647 RVA: 0x000F0B09 File Offset: 0x000EED09
+		// Token: 0x0600629F RID: 25247 RVA: 0x000ED991 File Offset: 0x000EBB91
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DropInBagNotify()
 		{
 		}
 
-		// Token: 0x06006430 RID: 25648 RVA: 0x000F0B1C File Offset: 0x000EED1C
+		// Token: 0x060062A0 RID: 25248 RVA: 0x000ED9A4 File Offset: 0x000EBBA4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DropInBagNotify(DropInBagNotify other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06006431 RID: 25649 RVA: 0x000F0B52 File Offset: 0x000EED52
+		// Token: 0x060062A1 RID: 25249 RVA: 0x000ED9DA File Offset: 0x000EBBDA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DropInBagNotify Clone()
@@ -68,9 +68,9 @@ namespace Aki.Protocol
 			return new DropInBagNotify(this);
 		}
 
-		// Token: 0x170012B7 RID: 4791
-		// (get) Token: 0x06006432 RID: 25650 RVA: 0x000F0B5A File Offset: 0x000EED5A
-		// (set) Token: 0x06006433 RID: 25651 RVA: 0x000F0B62 File Offset: 0x000EED62
+		// Token: 0x17001262 RID: 4706
+		// (get) Token: 0x060062A2 RID: 25250 RVA: 0x000ED9E2 File Offset: 0x000EBBE2
+		// (set) Token: 0x060062A3 RID: 25251 RVA: 0x000ED9EA File Offset: 0x000EBBEA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int DropId
@@ -85,8 +85,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170012B8 RID: 4792
-		// (get) Token: 0x06006434 RID: 25652 RVA: 0x000F0B6B File Offset: 0x000EED6B
+		// Token: 0x17001263 RID: 4707
+		// (get) Token: 0x060062A4 RID: 25252 RVA: 0x000ED9F3 File Offset: 0x000EBBF3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<DropBagItemInfo> DropItemInfos
@@ -97,7 +97,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06006435 RID: 25653 RVA: 0x000F0B73 File Offset: 0x000EED73
+		// Token: 0x060062A5 RID: 25253 RVA: 0x000ED9FB File Offset: 0x000EBBFB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -105,7 +105,7 @@ namespace Aki.Protocol
 			return this.Equals(other as DropInBagNotify);
 		}
 
-		// Token: 0x06006436 RID: 25654 RVA: 0x000F0B84 File Offset: 0x000EED84
+		// Token: 0x060062A6 RID: 25254 RVA: 0x000EDA0C File Offset: 0x000EBC0C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(DropInBagNotify other)
@@ -113,7 +113,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.DropId == other.DropId && this.dropItemInfos_.Equals(other.dropItemInfos_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06006437 RID: 25655 RVA: 0x000F0BD4 File Offset: 0x000EEDD4
+		// Token: 0x060062A7 RID: 25255 RVA: 0x000EDA5C File Offset: 0x000EBC5C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06006438 RID: 25656 RVA: 0x000F0C21 File Offset: 0x000EEE21
+		// Token: 0x060062A8 RID: 25256 RVA: 0x000EDAA9 File Offset: 0x000EBCA9
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -139,7 +139,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06006439 RID: 25657 RVA: 0x000F0C2E File Offset: 0x000EEE2E
+		// Token: 0x060062A9 RID: 25257 RVA: 0x000EDAB6 File Offset: 0x000EBCB6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -147,7 +147,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600643A RID: 25658 RVA: 0x000F0C38 File Offset: 0x000EEE38
+		// Token: 0x060062AA RID: 25258 RVA: 0x000EDAC0 File Offset: 0x000EBCC0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -155,7 +155,7 @@ namespace Aki.Protocol
 			this.dropItemInfos_.WriteTo(ref output, DropInBagNotify._repeated_dropItemInfos_codec);
 			if (this.DropId != 0)
 			{
-				output.WriteRawTag(72);
+				output.WriteRawTag(96);
 				output.WriteInt32(this.DropId);
 			}
 			if (this._unknownFields != null)
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600643B RID: 25659 RVA: 0x000F0C88 File Offset: 0x000EEE88
+		// Token: 0x060062AB RID: 25259 RVA: 0x000EDB10 File Offset: 0x000EBD10
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -182,7 +182,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600643C RID: 25660 RVA: 0x000F0CDC File Offset: 0x000EEEDC
+		// Token: 0x060062AC RID: 25260 RVA: 0x000EDB64 File Offset: 0x000EBD64
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(DropInBagNotify other)
@@ -199,7 +199,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600643D RID: 25661 RVA: 0x000F0D29 File Offset: 0x000EEF29
+		// Token: 0x060062AD RID: 25261 RVA: 0x000EDBB1 File Offset: 0x000EBDB1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -207,7 +207,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600643E RID: 25662 RVA: 0x000F0D34 File Offset: 0x000EEF34
+		// Token: 0x060062AE RID: 25262 RVA: 0x000EDBBC File Offset: 0x000EBDBC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -219,9 +219,9 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 18U)
+				if (num != 10U)
 				{
-					if (num != 72U)
+					if (num != 96U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
@@ -237,22 +237,22 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04003857 RID: 14423
+		// Token: 0x04003844 RID: 14404
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04003858 RID: 14424
-		public const int DropIdFieldNumber = 9;
+		// Token: 0x04003845 RID: 14405
+		public const int DropIdFieldNumber = 12;
 
-		// Token: 0x04003859 RID: 14425
+		// Token: 0x04003846 RID: 14406
 		private int dropId_;
 
-		// Token: 0x0400385A RID: 14426
-		public const int DropItemInfosFieldNumber = 2;
+		// Token: 0x04003847 RID: 14407
+		public const int DropItemInfosFieldNumber = 1;
 
-		// Token: 0x0400385B RID: 14427
-		private static readonly FieldCodec<DropBagItemInfo> _repeated_dropItemInfos_codec = FieldCodec.ForMessage<DropBagItemInfo>(18U, DropBagItemInfo.Parser);
+		// Token: 0x04003848 RID: 14408
+		private static readonly FieldCodec<DropBagItemInfo> _repeated_dropItemInfos_codec = FieldCodec.ForMessage<DropBagItemInfo>(10U, DropBagItemInfo.Parser);
 
-		// Token: 0x0400385C RID: 14428
+		// Token: 0x04003849 RID: 14409
 		private readonly RepeatedField<DropBagItemInfo> dropItemInfos_ = new RepeatedField<DropBagItemInfo>();
 	}
 }

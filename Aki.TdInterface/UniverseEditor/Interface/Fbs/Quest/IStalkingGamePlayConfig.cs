@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004142 RID: 16706
+	// Token: 0x02004586 RID: 17798
 	public struct IStalkingGamePlayConfig : IFlatbufferObject
 	{
-		// Token: 0x1700764B RID: 30283
-		// (get) Token: 0x06018800 RID: 100352 RVA: 0x0038800A File Offset: 0x0038620A
+		// Token: 0x17007C5A RID: 31834
+		// (get) Token: 0x06019EC8 RID: 106184 RVA: 0x003B25C8 File Offset: 0x003B07C8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018801 RID: 100353 RVA: 0x00388017 File Offset: 0x00386217
+		// Token: 0x06019EC9 RID: 106185 RVA: 0x003B25D5 File Offset: 0x003B07D5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06018802 RID: 100354 RVA: 0x00388020 File Offset: 0x00386220
+		// Token: 0x06019ECA RID: 106186 RVA: 0x003B25DC File Offset: 0x003B07DC
 		public static IStalkingGamePlayConfig GetRootAsIStalkingGamePlayConfig(ByteBuffer _bb)
 		{
 			return IStalkingGamePlayConfig.GetRootAsIStalkingGamePlayConfig(_bb, default(IStalkingGamePlayConfig));
 		}
 
-		// Token: 0x06018803 RID: 100355 RVA: 0x0038803C File Offset: 0x0038623C
+		// Token: 0x06019ECB RID: 106187 RVA: 0x003B25F8 File Offset: 0x003B07F8
 		public static IStalkingGamePlayConfig GetRootAsIStalkingGamePlayConfig(ByteBuffer _bb, IStalkingGamePlayConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06018804 RID: 100356 RVA: 0x00388059 File Offset: 0x00386259
+		// Token: 0x06019ECC RID: 106188 RVA: 0x003B2615 File Offset: 0x003B0815
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06018805 RID: 100357 RVA: 0x00388068 File Offset: 0x00386268
+		// Token: 0x06019ECD RID: 106189 RVA: 0x003B2624 File Offset: 0x003B0824
 		public IStalkingGamePlayConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700764C RID: 30284
-		// (get) Token: 0x06018806 RID: 100358 RVA: 0x00388078 File Offset: 0x00386278
+		// Token: 0x17007C5B RID: 31835
+		// (get) Token: 0x06019ECE RID: 106190 RVA: 0x003B2634 File Offset: 0x003B0834
 		public ESpecialGamePlayConfigType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018807 RID: 100359 RVA: 0x003880B4 File Offset: 0x003862B4
+		// Token: 0x06019ECF RID: 106191 RVA: 0x003B2670 File Offset: 0x003B0870
 		public static Offset<IStalkingGamePlayConfig> CreateIStalkingGamePlayConfig(FlatBufferBuilder builder, ESpecialGamePlayConfigType Type = ESpecialGamePlayConfigType.Stalking)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IStalkingGamePlayConfig.EndIStalkingGamePlayConfig(builder);
 		}
 
-		// Token: 0x06018808 RID: 100360 RVA: 0x003880CA File Offset: 0x003862CA
+		// Token: 0x06019ED0 RID: 106192 RVA: 0x003B2686 File Offset: 0x003B0886
 		public static void StartIStalkingGamePlayConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06018809 RID: 100361 RVA: 0x003880D3 File Offset: 0x003862D3
+		// Token: 0x06019ED1 RID: 106193 RVA: 0x003B268F File Offset: 0x003B088F
 		public static void AddType(FlatBufferBuilder builder, ESpecialGamePlayConfigType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601880A RID: 100362 RVA: 0x003880DE File Offset: 0x003862DE
+		// Token: 0x06019ED2 RID: 106194 RVA: 0x003B269A File Offset: 0x003B089A
 		public static Offset<IStalkingGamePlayConfig> EndIStalkingGamePlayConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IStalkingGamePlayConfig>(builder.EndTable());
 		}
 
-		// Token: 0x0601880B RID: 100363 RVA: 0x003880EC File Offset: 0x003862EC
+		// Token: 0x06019ED3 RID: 106195 RVA: 0x003B26A8 File Offset: 0x003B08A8
 		public IStalkingGamePlayConfigT UnPack()
 		{
 			IStalkingGamePlayConfigT stalkingGamePlayConfigT = new IStalkingGamePlayConfigT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return stalkingGamePlayConfigT;
 		}
 
-		// Token: 0x0601880C RID: 100364 RVA: 0x00388107 File Offset: 0x00386307
+		// Token: 0x06019ED4 RID: 106196 RVA: 0x003B26C3 File Offset: 0x003B08C3
 		public void UnPackTo(IStalkingGamePlayConfigT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0601880D RID: 100365 RVA: 0x00388118 File Offset: 0x00386318
+		// Token: 0x06019ED5 RID: 106197 RVA: 0x003B26D4 File Offset: 0x003B08D4
 		public static Offset<IStalkingGamePlayConfig> Pack(FlatBufferBuilder builder, IStalkingGamePlayConfigT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IStalkingGamePlayConfig.CreateIStalkingGamePlayConfig(builder, _o.Type);
 		}
 
-		// Token: 0x0400BD4C RID: 48460
+		// Token: 0x0400C73A RID: 51002
 		private Table __p;
 	}
 }

@@ -8,17 +8,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 {
-	// Token: 0x02005521 RID: 21793
+	// Token: 0x020044F4 RID: 17652
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SheriffAnomalyMarkItemView : ConfigMarkItemView
 	{
-		// Token: 0x06037A60 RID: 227936 RVA: 0x00D358DB File Offset: 0x00D33ADB
+		// Token: 0x0602C92F RID: 182575 RVA: 0x00C836CB File Offset: 0x00C818CB
 		public SheriffAnomalyMarkItemView(SheriffAnomalyMarkItem markItem) : base(markItem)
 		{
 		}
 
-		// Token: 0x06037A61 RID: 227937 RVA: 0x00D358E4 File Offset: 0x00D33AE4
+		// Token: 0x0602C930 RID: 182576 RVA: 0x00C836D4 File Offset: 0x00C818D4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SheriffAnomalyMarkItemView.<OnBeforeStartAsync>d__2 <OnBeforeStartAsync>d__;
@@ -29,7 +29,18 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06037A62 RID: 227938 RVA: 0x00D35928 File Offset: 0x00D33B28
+		// Token: 0x0602C931 RID: 182577 RVA: 0x00C83717 File Offset: 0x00C81917
+		protected override void OnBeforeDestroy()
+		{
+			SheriffAnomalyMarkUi sheriffAnomalyMarkUi = this.SheriffAnomalyMarkUi;
+			if (sheriffAnomalyMarkUi != null)
+			{
+				sheriffAnomalyMarkUi.Destroy(null);
+			}
+			base.OnBeforeDestroy();
+		}
+
+		// Token: 0x0602C932 RID: 182578 RVA: 0x00C83734 File Offset: 0x00C81934
 		protected override void OnViewRefresh()
 		{
 			if (this.Holder.NeedPlayStartSequence)
@@ -50,7 +61,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			}
 		}
 
-		// Token: 0x06037A63 RID: 227939 RVA: 0x00D35990 File Offset: 0x00D33B90
+		// Token: 0x0602C933 RID: 182579 RVA: 0x00C8379C File Offset: 0x00C8199C
 		protected override void OnSafeUpdate(Vector playerLocation, bool bDragging = false, bool bIsScale = false)
 		{
 			MapModel instance = MapModel.Instance;
@@ -91,7 +102,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			}
 		}
 
-		// Token: 0x06037A64 RID: 227940 RVA: 0x00D35A2C File Offset: 0x00D33C2C
+		// Token: 0x0602C934 RID: 182580 RVA: 0x00C83838 File Offset: 0x00C81A38
 		[NullableContext(2)]
 		public override UUIItem GetIconItem()
 		{
@@ -108,7 +119,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView
 			return sheriffAnomalyMarkUi.GetRootItem();
 		}
 
-		// Token: 0x0401D428 RID: 119848
+		// Token: 0x04017EAB RID: 97963
 		[Nullable(2)]
 		private SheriffAnomalyMarkUi SheriffAnomalyMarkUi;
 	}

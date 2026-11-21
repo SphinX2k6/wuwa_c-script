@@ -4,68 +4,68 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardItem.Component
 {
-	// Token: 0x020051F6 RID: 20982
+	// Token: 0x020041C6 RID: 16838
 	[NullableContext(1)]
 	public interface ICommonBaseCardComponentData
 	{
-		// Token: 0x170081DA RID: 33242
-		// (get) Token: 0x06035AA8 RID: 219816
-		// (set) Token: 0x06035AA9 RID: 219817
+		// Token: 0x1700559A RID: 21914
+		// (get) Token: 0x0602A9A3 RID: 174499
+		// (set) Token: 0x0602A9A4 RID: 174500
 		int CardId { get; set; }
 
-		// Token: 0x170081DB RID: 33243
-		// (get) Token: 0x06035AAA RID: 219818
-		// (set) Token: 0x06035AAB RID: 219819
+		// Token: 0x1700559B RID: 21915
+		// (get) Token: 0x0602A9A5 RID: 174501
+		// (set) Token: 0x0602A9A6 RID: 174502
 		int Cost { get; set; }
 
-		// Token: 0x170081DC RID: 33244
-		// (get) Token: 0x06035AAC RID: 219820
-		// (set) Token: 0x06035AAD RID: 219821
+		// Token: 0x1700559C RID: 21916
+		// (get) Token: 0x0602A9A7 RID: 174503
+		// (set) Token: 0x0602A9A8 RID: 174504
 		int Attack { get; set; }
 
-		// Token: 0x170081DD RID: 33245
-		// (get) Token: 0x06035AAE RID: 219822
-		// (set) Token: 0x06035AAF RID: 219823
+		// Token: 0x1700559D RID: 21917
+		// (get) Token: 0x0602A9A9 RID: 174505
+		// (set) Token: 0x0602A9AA RID: 174506
 		int Life { get; set; }
 
-		// Token: 0x170081DE RID: 33246
-		// (get) Token: 0x06035AB0 RID: 219824
-		// (set) Token: 0x06035AB1 RID: 219825
+		// Token: 0x1700559E RID: 21918
+		// (get) Token: 0x0602A9AB RID: 174507
+		// (set) Token: 0x0602A9AC RID: 174508
 		int Element { get; set; }
 
-		// Token: 0x170081DF RID: 33247
-		// (get) Token: 0x06035AB2 RID: 219826
-		// (set) Token: 0x06035AB3 RID: 219827
+		// Token: 0x1700559F RID: 21919
+		// (get) Token: 0x0602A9AD RID: 174509
+		// (set) Token: 0x0602A9AE RID: 174510
 		bool ShowCardFaceTexture { get; set; }
 
-		// Token: 0x170081E0 RID: 33248
-		// (get) Token: 0x06035AB4 RID: 219828
-		// (set) Token: 0x06035AB5 RID: 219829
+		// Token: 0x170055A0 RID: 21920
+		// (get) Token: 0x0602A9AF RID: 174511
+		// (set) Token: 0x0602A9B0 RID: 174512
 		bool OutlookUnlocked { get; set; }
 
-		// Token: 0x170081E1 RID: 33249
-		// (get) Token: 0x06035AB6 RID: 219830
-		// (set) Token: 0x06035AB7 RID: 219831
+		// Token: 0x170055A1 RID: 21921
+		// (get) Token: 0x0602A9B1 RID: 174513
+		// (set) Token: 0x0602A9B2 RID: 174514
 		string CardFaceTexturePath { get; set; }
 
-		// Token: 0x170081E2 RID: 33250
-		// (get) Token: 0x06035AB8 RID: 219832
-		// (set) Token: 0x06035AB9 RID: 219833
+		// Token: 0x170055A2 RID: 21922
+		// (get) Token: 0x0602A9B3 RID: 174515
+		// (set) Token: 0x0602A9B4 RID: 174516
 		EToggleState? ToggleState { get; set; }
 
-		// Token: 0x170081E3 RID: 33251
-		// (get) Token: 0x06035ABA RID: 219834
-		// (set) Token: 0x06035ABB RID: 219835
+		// Token: 0x170055A3 RID: 21923
+		// (get) Token: 0x0602A9B5 RID: 174517
+		// (set) Token: 0x0602A9B6 RID: 174518
 		Action OnPointerUp { get; set; }
 
-		// Token: 0x170081E4 RID: 33252
-		// (get) Token: 0x06035ABC RID: 219836
-		// (set) Token: 0x06035ABD RID: 219837
+		// Token: 0x170055A4 RID: 21924
+		// (get) Token: 0x0602A9B7 RID: 174519
+		// (set) Token: 0x0602A9B8 RID: 174520
 		Action<EToggleState> OnToggleStateChanged { get; set; }
 
-		// Token: 0x170081E5 RID: 33253
-		// (get) Token: 0x06035ABE RID: 219838
-		// (set) Token: 0x06035ABF RID: 219839
+		// Token: 0x170055A5 RID: 21925
+		// (get) Token: 0x0602A9B9 RID: 174521
+		// (set) Token: 0x0602A9BA RID: 174522
 		Func<bool> CanToggleExecuteChange { get; set; }
 	}
 }

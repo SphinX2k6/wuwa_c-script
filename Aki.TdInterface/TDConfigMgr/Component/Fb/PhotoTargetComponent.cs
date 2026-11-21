@@ -7,12 +7,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C9D RID: 3229
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D7F RID: 3455
 	public class PhotoTargetComponent : IComponentBase
 	{
-		// Token: 0x060049D5 RID: 18901 RVA: 0x000B909E File Offset: 0x000B729E
+		// Token: 0x06004E83 RID: 20099 RVA: 0x000C3AAE File Offset: 0x000C1CAE
 		public static PhotoTargetComponent Create(IPhotoTargetComponent? instance)
 		{
 			if (instance == null)
@@ -25,8 +23,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001658 RID: 5720
-		// (get) Token: 0x060049D6 RID: 18902 RVA: 0x000B90C0 File Offset: 0x000B72C0
+		// Token: 0x17001780 RID: 6016
+		// (get) Token: 0x06004E84 RID: 20100 RVA: 0x000C3AD0 File Offset: 0x000C1CD0
 		public override bool? Disabled
 		{
 			get
@@ -39,8 +37,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001659 RID: 5721
-		// (get) Token: 0x060049D7 RID: 18903 RVA: 0x000B90F8 File Offset: 0x000B72F8
+		// Token: 0x17001781 RID: 6017
+		// (get) Token: 0x06004E85 RID: 20101 RVA: 0x000C3B08 File Offset: 0x000C1D08
 		public override bool? EdIsLocked
 		{
 			get
@@ -49,8 +47,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700165A RID: 5722
-		// (get) Token: 0x060049D8 RID: 18904 RVA: 0x000B9110 File Offset: 0x000B7310
+		// Token: 0x17001782 RID: 6018
+		// (get) Token: 0x06004E86 RID: 20102 RVA: 0x000C3B20 File Offset: 0x000C1D20
 		public virtual List<VectorInfo> RequiredPoints
 		{
 			get
@@ -70,8 +68,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700165B RID: 5723
-		// (get) Token: 0x060049D9 RID: 18905 RVA: 0x000B9179 File Offset: 0x000B7379
+		// Token: 0x17001783 RID: 6019
+		// (get) Token: 0x06004E87 RID: 20103 RVA: 0x000C3B89 File Offset: 0x000C1D89
 		public virtual IPhotoTargetCaptureUiBase TargetCapturePromptUi
 		{
 			get
@@ -86,8 +84,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700165C RID: 5724
-		// (get) Token: 0x060049DA RID: 18906 RVA: 0x000B91A8 File Offset: 0x000B73A8
+		// Token: 0x17001784 RID: 6020
+		// (get) Token: 0x06004E88 RID: 20104 RVA: 0x000C3BB8 File Offset: 0x000C1DB8
 		[Nullable(2)]
 		public virtual List<int> RayCastIgnoreEntities
 		{
@@ -113,26 +111,26 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002A2A RID: 10794
+		// Token: 0x04002CA4 RID: 11428
 		private IPhotoTargetComponent Instance;
 
-		// Token: 0x04002A2B RID: 10795
+		// Token: 0x04002CA5 RID: 11429
 		private List<VectorInfo> _RequiredPointsCache;
 
-		// Token: 0x04002A2C RID: 10796
+		// Token: 0x04002CA6 RID: 11430
 		private bool _RequiredPointsInited;
 
-		// Token: 0x04002A2D RID: 10797
+		// Token: 0x04002CA7 RID: 11431
 		private IPhotoTargetCaptureUiBase _TargetCapturePromptUiCache;
 
-		// Token: 0x04002A2E RID: 10798
+		// Token: 0x04002CA8 RID: 11432
 		private bool _TargetCapturePromptUiInited;
 
-		// Token: 0x04002A2F RID: 10799
+		// Token: 0x04002CA9 RID: 11433
 		[Nullable(2)]
 		private List<int> _RayCastIgnoreEntitiesCache;
 
-		// Token: 0x04002A30 RID: 10800
+		// Token: 0x04002CAA RID: 11434
 		private bool _RayCastIgnoreEntitiesInited;
 	}
 }

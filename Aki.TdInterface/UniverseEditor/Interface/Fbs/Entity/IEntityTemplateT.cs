@@ -5,75 +5,75 @@ using Aki.UniverseEditor.Interface.Fbs.Editor;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Entity
 {
-	// Token: 0x020047D6 RID: 18390
+	// Token: 0x02004C3E RID: 19518
 	public class IEntityTemplateT
 	{
-		// Token: 0x1700842A RID: 33834
-		// (get) Token: 0x0601C6D7 RID: 116439 RVA: 0x00405DD4 File Offset: 0x00403FD4
-		// (set) Token: 0x0601C6D8 RID: 116440 RVA: 0x00405DDC File Offset: 0x00403FDC
+		// Token: 0x17008A75 RID: 35445
+		// (get) Token: 0x0601DED4 RID: 122580 RVA: 0x00432724 File Offset: 0x00430924
+		// (set) Token: 0x0601DED5 RID: 122581 RVA: 0x0043272C File Offset: 0x0043092C
 		public string ObjType { get; set; }
 
-		// Token: 0x1700842B RID: 33835
-		// (get) Token: 0x0601C6D9 RID: 116441 RVA: 0x00405DE5 File Offset: 0x00403FE5
-		// (set) Token: 0x0601C6DA RID: 116442 RVA: 0x00405DED File Offset: 0x00403FED
+		// Token: 0x17008A76 RID: 35446
+		// (get) Token: 0x0601DED6 RID: 122582 RVA: 0x00432735 File Offset: 0x00430935
+		// (set) Token: 0x0601DED7 RID: 122583 RVA: 0x0043273D File Offset: 0x0043093D
 		public List<string> Children { get; set; }
 
-		// Token: 0x1700842C RID: 33836
-		// (get) Token: 0x0601C6DB RID: 116443 RVA: 0x00405DF6 File Offset: 0x00403FF6
-		// (set) Token: 0x0601C6DC RID: 116444 RVA: 0x00405DFE File Offset: 0x00403FFE
+		// Token: 0x17008A77 RID: 35447
+		// (get) Token: 0x0601DED8 RID: 122584 RVA: 0x00432746 File Offset: 0x00430946
+		// (set) Token: 0x0601DED9 RID: 122585 RVA: 0x0043274E File Offset: 0x0043094E
 		public List<string> Reference { get; set; }
 
-		// Token: 0x1700842D RID: 33837
-		// (get) Token: 0x0601C6DD RID: 116445 RVA: 0x00405E07 File Offset: 0x00404007
-		// (set) Token: 0x0601C6DE RID: 116446 RVA: 0x00405E0F File Offset: 0x0040400F
+		// Token: 0x17008A78 RID: 35448
+		// (get) Token: 0x0601DEDA RID: 122586 RVA: 0x00432757 File Offset: 0x00430957
+		// (set) Token: 0x0601DEDB RID: 122587 RVA: 0x0043275F File Offset: 0x0043095F
 		public List<string> WeakReference { get; set; }
 
-		// Token: 0x1700842E RID: 33838
-		// (get) Token: 0x0601C6DF RID: 116447 RVA: 0x00405E18 File Offset: 0x00404018
-		// (set) Token: 0x0601C6E0 RID: 116448 RVA: 0x00405E20 File Offset: 0x00404020
+		// Token: 0x17008A79 RID: 35449
+		// (get) Token: 0x0601DEDC RID: 122588 RVA: 0x00432768 File Offset: 0x00430968
+		// (set) Token: 0x0601DEDD RID: 122589 RVA: 0x00432770 File Offset: 0x00430970
 		public string Name { get; set; }
 
-		// Token: 0x1700842F RID: 33839
-		// (get) Token: 0x0601C6E1 RID: 116449 RVA: 0x00405E29 File Offset: 0x00404029
-		// (set) Token: 0x0601C6E2 RID: 116450 RVA: 0x00405E31 File Offset: 0x00404031
+		// Token: 0x17008A7A RID: 35450
+		// (get) Token: 0x0601DEDE RID: 122590 RVA: 0x00432779 File Offset: 0x00430979
+		// (set) Token: 0x0601DEDF RID: 122591 RVA: 0x00432781 File Offset: 0x00430981
 		public string BlueprintType { get; set; }
 
-		// Token: 0x17008430 RID: 33840
-		// (get) Token: 0x0601C6E3 RID: 116451 RVA: 0x00405E3A File Offset: 0x0040403A
-		// (set) Token: 0x0601C6E4 RID: 116452 RVA: 0x00405E42 File Offset: 0x00404042
+		// Token: 0x17008A7B RID: 35451
+		// (get) Token: 0x0601DEE0 RID: 122592 RVA: 0x0043278A File Offset: 0x0043098A
+		// (set) Token: 0x0601DEE1 RID: 122593 RVA: 0x00432792 File Offset: 0x00430992
 		public TComponentsDataT ComponentsData { get; set; }
 
-		// Token: 0x17008431 RID: 33841
-		// (get) Token: 0x0601C6E5 RID: 116453 RVA: 0x00405E4B File Offset: 0x0040404B
-		// (set) Token: 0x0601C6E6 RID: 116454 RVA: 0x00405E53 File Offset: 0x00404053
+		// Token: 0x17008A7C RID: 35452
+		// (get) Token: 0x0601DEE2 RID: 122594 RVA: 0x0043279B File Offset: 0x0043099B
+		// (set) Token: 0x0601DEE3 RID: 122595 RVA: 0x004327A3 File Offset: 0x004309A3
 		public int Id { get; set; }
 
-		// Token: 0x17008432 RID: 33842
-		// (get) Token: 0x0601C6E7 RID: 116455 RVA: 0x00405E5C File Offset: 0x0040405C
-		// (set) Token: 0x0601C6E8 RID: 116456 RVA: 0x00405E64 File Offset: 0x00404064
+		// Token: 0x17008A7D RID: 35453
+		// (get) Token: 0x0601DEE4 RID: 122596 RVA: 0x004327AC File Offset: 0x004309AC
+		// (set) Token: 0x0601DEE5 RID: 122597 RVA: 0x004327B4 File Offset: 0x004309B4
 		public string BpPath { get; set; }
 
-		// Token: 0x17008433 RID: 33843
-		// (get) Token: 0x0601C6E9 RID: 116457 RVA: 0x00405E6D File Offset: 0x0040406D
-		// (set) Token: 0x0601C6EA RID: 116458 RVA: 0x00405E75 File Offset: 0x00404075
+		// Token: 0x17008A7E RID: 35454
+		// (get) Token: 0x0601DEE6 RID: 122598 RVA: 0x004327BD File Offset: 0x004309BD
+		// (set) Token: 0x0601DEE7 RID: 122599 RVA: 0x004327C5 File Offset: 0x004309C5
 		public EEntity EntityType { get; set; }
 
-		// Token: 0x17008434 RID: 33844
-		// (get) Token: 0x0601C6EB RID: 116459 RVA: 0x00405E7E File Offset: 0x0040407E
-		// (set) Token: 0x0601C6EC RID: 116460 RVA: 0x00405E86 File Offset: 0x00404086
+		// Token: 0x17008A7F RID: 35455
+		// (get) Token: 0x0601DEE8 RID: 122600 RVA: 0x004327CE File Offset: 0x004309CE
+		// (set) Token: 0x0601DEE9 RID: 122601 RVA: 0x004327D6 File Offset: 0x004309D6
 		public IWorldEditorTemplateConfigT WorldEditorTemplateConfig { get; set; }
 
-		// Token: 0x17008435 RID: 33845
-		// (get) Token: 0x0601C6ED RID: 116461 RVA: 0x00405E8F File Offset: 0x0040408F
-		// (set) Token: 0x0601C6EE RID: 116462 RVA: 0x00405E97 File Offset: 0x00404097
+		// Token: 0x17008A80 RID: 35456
+		// (get) Token: 0x0601DEEA RID: 122602 RVA: 0x004327DF File Offset: 0x004309DF
+		// (set) Token: 0x0601DEEB RID: 122603 RVA: 0x004327E7 File Offset: 0x004309E7
 		public EDevelopmentStatus DevelopmentStatus { get; set; }
 
-		// Token: 0x17008436 RID: 33846
-		// (get) Token: 0x0601C6EF RID: 116463 RVA: 0x00405EA0 File Offset: 0x004040A0
-		// (set) Token: 0x0601C6F0 RID: 116464 RVA: 0x00405EA8 File Offset: 0x004040A8
+		// Token: 0x17008A81 RID: 35457
+		// (get) Token: 0x0601DEEC RID: 122604 RVA: 0x004327F0 File Offset: 0x004309F0
+		// (set) Token: 0x0601DEED RID: 122605 RVA: 0x004327F8 File Offset: 0x004309F8
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601C6F1 RID: 116465 RVA: 0x00405EB4 File Offset: 0x004040B4
+		// Token: 0x0601DEEE RID: 122606 RVA: 0x00432804 File Offset: 0x00430A04
 		public IEntityTemplateT()
 		{
 			this.ObjType = null;

@@ -9,17 +9,17 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200149D RID: 5277
+// Token: 0x02000951 RID: 2385
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityRegressStartupView : UiViewBase
 {
-	// Token: 0x0600958A RID: 38282 RVA: 0x002043EA File Offset: 0x002025EA
+	// Token: 0x0600691F RID: 26911 RVA: 0x0020D352 File Offset: 0x0020B552
 	public ActivityRegressStartupView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x0600958B RID: 38283 RVA: 0x002043F4 File Offset: 0x002025F4
+	// Token: 0x06006920 RID: 26912 RVA: 0x0020D35C File Offset: 0x0020B55C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -44,19 +44,19 @@ public class ActivityRegressStartupView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600958C RID: 38284 RVA: 0x002044DC File Offset: 0x002026DC
+	// Token: 0x06006921 RID: 26913 RVA: 0x0020D444 File Offset: 0x0020B644
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add(EEventName.RecallActivityInfoUpdate, new Action(this.RefreshReward));
 	}
 
-	// Token: 0x0600958D RID: 38285 RVA: 0x002044FA File Offset: 0x002026FA
+	// Token: 0x06006922 RID: 26914 RVA: 0x0020D462 File Offset: 0x0020B662
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.RecallActivityInfoUpdate, new Action(this.RefreshReward));
 	}
 
-	// Token: 0x0600958E RID: 38286 RVA: 0x00204518 File Offset: 0x00202718
+	// Token: 0x06006923 RID: 26915 RVA: 0x0020D480 File Offset: 0x0020B680
 	protected override void OnStart()
 	{
 		this.FormActityView = (this.OpenParam as bool?).GetValueOrDefault();
@@ -74,7 +74,7 @@ public class ActivityRegressStartupView : UiViewBase
 		base.GetItem(3).SetUIActive(grade == ERegressGrade.Hyper);
 	}
 
-	// Token: 0x0600958F RID: 38287 RVA: 0x002045B9 File Offset: 0x002027B9
+	// Token: 0x06006924 RID: 26916 RVA: 0x0020D521 File Offset: 0x0020B721
 	protected override void OnBeforeShow()
 	{
 		ActivityRegressModel.Instance.AlreadyStartView = true;
@@ -83,13 +83,13 @@ public class ActivityRegressStartupView : UiViewBase
 		this.StateMachine.Start();
 	}
 
-	// Token: 0x06009590 RID: 38288 RVA: 0x002045E6 File Offset: 0x002027E6
+	// Token: 0x06006925 RID: 26917 RVA: 0x0020D54E File Offset: 0x0020B74E
 	protected override void OnBeforeDestroy()
 	{
 		this.StateMachine.ShutDown();
 	}
 
-	// Token: 0x06009591 RID: 38289 RVA: 0x002045F3 File Offset: 0x002027F3
+	// Token: 0x06006926 RID: 26918 RVA: 0x0020D55B File Offset: 0x0020B75B
 	private CommonItemSmallItemGrid InitGridItem()
 	{
 		CommonItemSmallItemGrid commonItemSmallItemGrid = new CommonItemSmallItemGrid();
@@ -97,7 +97,7 @@ public class ActivityRegressStartupView : UiViewBase
 		return commonItemSmallItemGrid;
 	}
 
-	// Token: 0x06009592 RID: 38290 RVA: 0x00204620 File Offset: 0x00202820
+	// Token: 0x06006927 RID: 26919 RVA: 0x0020D588 File Offset: 0x0020B788
 	public List<TItem> GetRewardList(ERegressGrade grade)
 	{
 		RegressDisposableReward? regressDisposableReward = ActivityRegressConfig.Instance.GetRegressDisposableReward(ActivityRegressModel.Instance.ActivityId);
@@ -109,7 +109,7 @@ public class ActivityRegressStartupView : UiViewBase
 		return CSharpScript.Game.Module.Reward.RewardConfig.Instance.GetDropPackagePreviewItemList(id);
 	}
 
-	// Token: 0x06009593 RID: 38291 RVA: 0x00204684 File Offset: 0x00202884
+	// Token: 0x06006928 RID: 26920 RVA: 0x0020D5EC File Offset: 0x0020B7EC
 	public void GotoActivityViewAndCloseSelf()
 	{
 		ActivityRegressModel.Instance.SetFirstShowChecked();
@@ -123,7 +123,7 @@ public class ActivityRegressStartupView : UiViewBase
 		}
 	}
 
-	// Token: 0x06009594 RID: 38292 RVA: 0x002046E8 File Offset: 0x002028E8
+	// Token: 0x06006929 RID: 26921 RVA: 0x0020D650 File Offset: 0x0020B850
 	private void RefreshReward()
 	{
 		foreach (CommonItemSmallItemGrid commonItemSmallItemGrid in this.RewardLayout.GetLayoutItemList())
@@ -132,20 +132,20 @@ public class ActivityRegressStartupView : UiViewBase
 		}
 	}
 
-	// Token: 0x06009595 RID: 38293 RVA: 0x00204748 File Offset: 0x00202948
+	// Token: 0x0600692A RID: 26922 RVA: 0x0020D6B0 File Offset: 0x0020B8B0
 	private void OnContinueBtnClick()
 	{
 		this.StateMachine.PlayNextState();
 	}
 
-	// Token: 0x0400421F RID: 16927
+	// Token: 0x040042B7 RID: 17079
 	private bool FormActityView;
 
-	// Token: 0x04004220 RID: 16928
+	// Token: 0x040042B8 RID: 17080
 	[Nullable(2)]
 	private RegressTransitionStateMachine StateMachine;
 
-	// Token: 0x04004221 RID: 16929
+	// Token: 0x040042B9 RID: 17081
 	[Nullable(new byte[]
 	{
 		2,
@@ -153,20 +153,20 @@ public class ActivityRegressStartupView : UiViewBase
 	})]
 	private GenericLayout<CommonItemSmallItemGrid, TItem> RewardLayout;
 
-	// Token: 0x02007AD3 RID: 31443
+	// Token: 0x02006C57 RID: 27735
 	[NullableContext(0)]
 	private static class EComponents
 	{
-		// Token: 0x04028685 RID: 165509
+		// Token: 0x0402399F RID: 145823
 		public const int PnlHor = 0;
 
-		// Token: 0x04028686 RID: 165510
+		// Token: 0x040239A0 RID: 145824
 		public const int BtnContinue = 1;
 
-		// Token: 0x04028687 RID: 165511
+		// Token: 0x040239A1 RID: 145825
 		public const int NormalCoreCtrl = 2;
 
-		// Token: 0x04028688 RID: 165512
+		// Token: 0x040239A2 RID: 145826
 		public const int HyperCoreCtrl = 3;
 	}
 }

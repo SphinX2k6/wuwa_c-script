@@ -2,7 +2,7 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020030E6 RID: 12518
+// Token: 0x0200263E RID: 9790
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -11,14 +11,14 @@ using UnrealEngine;
 })]
 public class SkeletalMeshComponentPool : SceneComponentPool<USkeletalMeshComponent>
 {
-	// Token: 0x0601ACEA RID: 109802 RVA: 0x0073BBCF File Offset: 0x00739DCF
+	// Token: 0x06018706 RID: 100102 RVA: 0x0076160B File Offset: 0x0075F80B
 	protected override void ActiveComponent(USkeletalMeshComponent component)
 	{
 		component.SetHiddenInGame(false, false);
 		component.SetComponentTickEnabled(true);
 	}
 
-	// Token: 0x0601ACEB RID: 109803 RVA: 0x0073BBE0 File Offset: 0x00739DE0
+	// Token: 0x06018707 RID: 100103 RVA: 0x0076161C File Offset: 0x0075F81C
 	protected override void CleanComponent(USkeletalMeshComponent component)
 	{
 		component.SetSkeletalMesh(null, true);
@@ -27,7 +27,7 @@ public class SkeletalMeshComponentPool : SceneComponentPool<USkeletalMeshCompone
 		component.SetComponentTickEnabled(false);
 	}
 
-	// Token: 0x0601ACEC RID: 109804 RVA: 0x0073BC14 File Offset: 0x00739E14
+	// Token: 0x06018708 RID: 100104 RVA: 0x00761650 File Offset: 0x0075F850
 	[NullableContext(2)]
 	protected override USkeletalMeshComponent CreateComponent()
 	{

@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006026 RID: 24614
+	// Token: 0x02006685 RID: 26245
 	public enum ETalkOptionConditionSystem : byte
 	{
-		// Token: 0x04010117 RID: 65815
+		// Token: 0x04010F03 RID: 69379
 		SolarSchool
 	}
 }

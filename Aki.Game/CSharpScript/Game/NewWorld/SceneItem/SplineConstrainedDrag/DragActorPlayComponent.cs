@@ -10,25 +10,15 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 {
-	// Token: 0x020071A5 RID: 29093
+	// Token: 0x0200625A RID: 25178
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DragActorPlayComponent : EntityComponent
 	{
-		// Token: 0x17009DA4 RID: 40356
-		// (get) Token: 0x0604730C RID: 291596 RVA: 0x01217202 File Offset: 0x01215402
-		[Nullable(new byte[]
+		// Token: 0x170072F1 RID: 29425
+		// (get) Token: 0x0603CC04 RID: 248836 RVA: 0x01171166 File Offset: 0x0116F366
+		public override Type[] Dependencies
 		{
-			2,
-			1
-		})]
-		public new static Type[] Dependencies
-		{
-			[return: Nullable(new byte[]
-			{
-				2,
-				1
-			})]
 			get
 			{
 				return new Type[]
@@ -39,7 +29,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			}
 		}
 
-		// Token: 0x0604730D RID: 291597 RVA: 0x01217224 File Offset: 0x01215424
+		// Token: 0x0603CC05 RID: 248837 RVA: 0x01171188 File Offset: 0x0116F388
 		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
@@ -78,7 +68,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			return true;
 		}
 
-		// Token: 0x0604730E RID: 291598 RVA: 0x01217398 File Offset: 0x01215598
+		// Token: 0x0603CC06 RID: 248838 RVA: 0x011712FC File Offset: 0x0116F4FC
 		protected override bool OnInit()
 		{
 			this.RefComp = base.Entity.GetComponent<SceneItemReferenceComponent>();
@@ -93,7 +83,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			return true;
 		}
 
-		// Token: 0x0604730F RID: 291599 RVA: 0x01217418 File Offset: 0x01215618
+		// Token: 0x0603CC07 RID: 248839 RVA: 0x0117137C File Offset: 0x0116F57C
 		protected override bool OnStart()
 		{
 			UKuroActorSubsystem ukuroActorSubsystem = UKuroRenderingRuntimeBPPluginBPLibrary.GetSubsystem(GlobalData.World, UKuroActorSubsystem.StaticClass()) as UKuroActorSubsystem;
@@ -118,7 +108,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			return true;
 		}
 
-		// Token: 0x06047310 RID: 291600 RVA: 0x01217514 File Offset: 0x01215714
+		// Token: 0x0603CC08 RID: 248840 RVA: 0x01171478 File Offset: 0x0116F678
 		protected override bool OnClear()
 		{
 			if (this.RefComp != null)
@@ -152,7 +142,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			return true;
 		}
 
-		// Token: 0x06047311 RID: 291601 RVA: 0x01217630 File Offset: 0x01215830
+		// Token: 0x0603CC09 RID: 248841 RVA: 0x01171594 File Offset: 0x0116F794
 		private void InstallEffectVisibilityProviders()
 		{
 			if (this.CompConfig == null)
@@ -191,7 +181,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			}
 		}
 
-		// Token: 0x06047312 RID: 291602 RVA: 0x0121778C File Offset: 0x0121598C
+		// Token: 0x0603CC0A RID: 248842 RVA: 0x011716F0 File Offset: 0x0116F8F0
 		private void UninstallEffectVisibilityProviders()
 		{
 			foreach (KeyValuePair<int, IEffectVisibilityRecord> keyValuePair in this.EffectVisibilityRecords)
@@ -215,7 +205,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			this.EffectVisibilityRecords.Clear();
 		}
 
-		// Token: 0x06047313 RID: 291603 RVA: 0x0121783C File Offset: 0x01215A3C
+		// Token: 0x0603CC0B RID: 248843 RVA: 0x011717A0 File Offset: 0x0116F9A0
 		[NullableContext(2)]
 		private GeneralContext GetEntityContext()
 		{
@@ -226,7 +216,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			return this.CachedEntityContext;
 		}
 
-		// Token: 0x06047314 RID: 291604 RVA: 0x01217878 File Offset: 0x01215A78
+		// Token: 0x0603CC0C RID: 248844 RVA: 0x011717DC File Offset: 0x0116F9DC
 		[return: Nullable(2)]
 		private ISequenceProgressController GetOrCreateSeqController(string actorKey, IDragActorPlayConfig config)
 		{
@@ -248,7 +238,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			return sequenceProgressController2;
 		}
 
-		// Token: 0x06047315 RID: 291605 RVA: 0x012178CC File Offset: 0x01215ACC
+		// Token: 0x0603CC0D RID: 248845 RVA: 0x01171830 File Offset: 0x0116FA30
 		private unsafe void OnRefActorReady(string actorKey, AActor actor)
 		{
 			IDragActorPlayConfig dragActorPlayConfig = null;
@@ -272,7 +262,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			this.RegisterKuroSplineConstrainedDrag(actorKey, actor, dragActorPlayConfig);
 		}
 
-		// Token: 0x06047316 RID: 291606 RVA: 0x01217958 File Offset: 0x01215B58
+		// Token: 0x0603CC0E RID: 248846 RVA: 0x011718BC File Offset: 0x0116FABC
 		private void RegisterKuroSplineConstrainedDrag(string actorKey, AActor actor, IDragActorPlayConfig config)
 		{
 			int pbDataId = this.CreatureDataComp.GetPbDataId();
@@ -304,7 +294,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			SplineConstrainedDragController.Instance.OnDraggableRegistered(tsKuroSplineConstrainedDragImpl);
 		}
 
-		// Token: 0x06047317 RID: 291607 RVA: 0x01217A8C File Offset: 0x01215C8C
+		// Token: 0x0603CC0F RID: 248847 RVA: 0x011719F0 File Offset: 0x0116FBF0
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -312,85 +302,100 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 				return false;
 			}
 			DragActorPlayComponent dragActorPlayComponent = (DragActorPlayComponent)componentTemplate;
-			if (base.CanResetComponentProperty("CreatureDataComp"))
+			if (dragActorPlayComponent.CreatureDataComp == null)
 			{
-				if (dragActorPlayComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
+				this.CreatureDataComp = null;
 			}
-			if (base.CanResetComponentProperty("CompConfig"))
-			{
-				if (dragActorPlayComponent.CompConfig == null)
-				{
-					this.CompConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<DragActorPlayComponent>(this.CompConfig), "CompConfig"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ActorKeyToConfig"))
-			{
-				if (dragActorPlayComponent.ActorKeyToConfig == null)
-				{
-					this.ActorKeyToConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, IDragActorPlayConfig>>(this.ActorKeyToConfig), "ActorKeyToConfig"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("RefComp"))
-			{
-				if (dragActorPlayComponent.RefComp == null)
-				{
-					this.RefComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<SceneItemReferenceComponent>(this.RefComp), "RefComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("SeqControllers") && dragActorPlayComponent.SeqControllers != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, ISequenceProgressController>>(this.SeqControllers), "SeqControllers"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("RegisteredDrags") && dragActorPlayComponent.RegisteredDrags != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, IKuroSplineConstrainedDrag>>(this.RegisteredDrags), "RegisteredDrags"))
+			if (dragActorPlayComponent.CompConfig == null)
+			{
+				this.CompConfig = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CompConfig), "CompConfig"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("EffectVisibilityRecords") && dragActorPlayComponent.EffectVisibilityRecords != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, IEffectVisibilityRecord>>(this.EffectVisibilityRecords), "EffectVisibilityRecords"))
+			if (dragActorPlayComponent.ActorKeyToConfig == null)
+			{
+				this.ActorKeyToConfig = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorKeyToConfig), "ActorKeyToConfig"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("CachedEntityContext"))
+			if (dragActorPlayComponent.RefComp == null)
 			{
-				if (dragActorPlayComponent.CachedEntityContext == null)
-				{
-					this.CachedEntityContext = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<GeneralContext>(this.CachedEntityContext), "CachedEntityContext"))
-				{
-					return false;
-				}
+				this.RefComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.RefComp), "RefComp"))
+			{
+				return false;
+			}
+			if (dragActorPlayComponent.SeqControllers != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.SeqControllers), "SeqControllers"))
+			{
+				return false;
+			}
+			if (dragActorPlayComponent.RegisteredDrags != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.RegisteredDrags), "RegisteredDrags"))
+			{
+				return false;
+			}
+			if (dragActorPlayComponent.EffectVisibilityRecords != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.EffectVisibilityRecords), "EffectVisibilityRecords"))
+			{
+				return false;
+			}
+			if (dragActorPlayComponent.CachedEntityContext == null)
+			{
+				this.CachedEntityContext = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CachedEntityContext), "CachedEntityContext"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x040256E6 RID: 153318
+		// Token: 0x170072F2 RID: 29426
+		// (get) Token: 0x0603CC10 RID: 248848 RVA: 0x01171B4D File Offset: 0x0116FD4D
+		public override bool NeedInitInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170072F3 RID: 29427
+		// (get) Token: 0x0603CC11 RID: 248849 RVA: 0x01171B50 File Offset: 0x0116FD50
+		public override bool NeedClearInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x170072F4 RID: 29428
+		// (get) Token: 0x0603CC12 RID: 248850 RVA: 0x01171B53 File Offset: 0x0116FD53
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020355 RID: 131925
 		[Nullable(2)]
 		private CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x040256E7 RID: 153319
+		// Token: 0x04020356 RID: 131926
 		[Nullable(2)]
 		private DragActorPlayComponent CompConfig;
 
-		// Token: 0x040256E8 RID: 153320
+		// Token: 0x04020357 RID: 131927
 		[Nullable(new byte[]
 		{
 			2,
@@ -399,20 +404,20 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 		})]
 		private Dictionary<string, IDragActorPlayConfig> ActorKeyToConfig;
 
-		// Token: 0x040256E9 RID: 153321
+		// Token: 0x04020358 RID: 131928
 		[Nullable(2)]
 		private SceneItemReferenceComponent RefComp;
 
-		// Token: 0x040256EA RID: 153322
+		// Token: 0x04020359 RID: 131929
 		private readonly Dictionary<string, ISequenceProgressController> SeqControllers = new Dictionary<string, ISequenceProgressController>();
 
-		// Token: 0x040256EB RID: 153323
+		// Token: 0x0402035A RID: 131930
 		private readonly Dictionary<string, IKuroSplineConstrainedDrag> RegisteredDrags = new Dictionary<string, IKuroSplineConstrainedDrag>();
 
-		// Token: 0x040256EC RID: 153324
+		// Token: 0x0402035B RID: 131931
 		private readonly Dictionary<int, IEffectVisibilityRecord> EffectVisibilityRecords = new Dictionary<int, IEffectVisibilityRecord>();
 
-		// Token: 0x040256ED RID: 153325
+		// Token: 0x0402035C RID: 131932
 		[Nullable(2)]
 		private GeneralContext CachedEntityContext;
 	}

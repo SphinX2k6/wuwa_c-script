@@ -4,10 +4,10 @@ using Aki.Protocol;
 using AkiClient.Game.Aki.Character.BaseCharacter;
 using CSharpScript.Game.NewWorld.Character.Common.Component.Abilities;
 
-// Token: 0x02002F21 RID: 12065
+// Token: 0x02002474 RID: 9332
 public class RequirementPayload : Partial_RequirementPayload
 {
-	// Token: 0x06019B70 RID: 105328 RVA: 0x006B1BF4 File Offset: 0x006AFDF4
+	// Token: 0x0601747B RID: 95355 RVA: 0x006D7F0C File Offset: 0x006D610C
 	public RequirementPayload()
 	{
 		this.SkillId = new int?(-1);
@@ -28,7 +28,7 @@ public class RequirementPayload : Partial_RequirementPayload
 		this.SourceType = new DamageSourceType?(DamageSourceType.FromBullet);
 	}
 
-	// Token: 0x06019B71 RID: 105329 RVA: 0x006B1CC4 File Offset: 0x006AFEC4
+	// Token: 0x0601747C RID: 95356 RVA: 0x006D7FDC File Offset: 0x006D61DC
 	[NullableContext(1)]
 	public RequirementPayload PartialAssign(Partial_RequirementPayload payload)
 	{

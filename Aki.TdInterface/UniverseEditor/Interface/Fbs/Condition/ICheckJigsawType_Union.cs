@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004ABA RID: 19130
+	// Token: 0x02004F89 RID: 20361
 	public enum ICheckJigsawType_Union : byte
 	{
-		// Token: 0x0400D339 RID: 54073
+		// Token: 0x0400DE1E RID: 56862
 		NONE,
-		// Token: 0x0400D33A RID: 54074
+		// Token: 0x0400DE1F RID: 56863
 		ICheckJigsawType,
-		// Token: 0x0400D33B RID: 54075
+		// Token: 0x0400DE20 RID: 56864
 		ICheckJigsawItemPlaceIndex,
-		// Token: 0x0400D33C RID: 54076
+		// Token: 0x0400DE21 RID: 56865
 		ICheckJigsawItemMove
 	}
 }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B3E RID: 2878
+	// Token: 0x02000C0C RID: 3084
 	public class IOnThrowTriggerTimeCondition : IBulletCreateCondition
 	{
-		// Token: 0x06004262 RID: 16994 RVA: 0x000A9DC8 File Offset: 0x000A7FC8
-		[NullableContext(1)]
+		// Token: 0x060046BB RID: 18107 RVA: 0x000B3E8C File Offset: 0x000B208C
 		public static IOnThrowTriggerTimeCondition Create(IOnThrowTriggerTimeCondition? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170011A3 RID: 4515
-		// (get) Token: 0x06004263 RID: 16995 RVA: 0x000A9DE7 File Offset: 0x000A7FE7
+		// Token: 0x1700129E RID: 4766
+		// (get) Token: 0x060046BC RID: 18108 RVA: 0x000B3EAB File Offset: 0x000B20AB
 		public override EBulletCreateCondition Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170011A4 RID: 4516
-		// (get) Token: 0x06004264 RID: 16996 RVA: 0x000A9DF4 File Offset: 0x000A7FF4
+		// Token: 0x1700129F RID: 4767
+		// (get) Token: 0x060046BD RID: 18109 RVA: 0x000B3EB8 File Offset: 0x000B20B8
 		public override long BulletId
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170011A5 RID: 4517
-		// (get) Token: 0x06004265 RID: 16997 RVA: 0x000A9E01 File Offset: 0x000A8001
+		// Token: 0x170012A0 RID: 4768
+		// (get) Token: 0x060046BE RID: 18110 RVA: 0x000B3EC5 File Offset: 0x000B20C5
 		public virtual float TriggerTime
 		{
 			get
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002569 RID: 9577
+		// Token: 0x040027B1 RID: 10161
 		private IOnThrowTriggerTimeCondition Instance;
 	}
 }

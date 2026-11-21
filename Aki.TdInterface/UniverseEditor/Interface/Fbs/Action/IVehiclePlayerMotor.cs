@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007529 RID: 29993
+	// Token: 0x02007D1F RID: 32031
 	public struct IVehiclePlayerMotor : IFlatbufferObject
 	{
-		// Token: 0x1700E39A RID: 58266
-		// (get) Token: 0x0603690B RID: 223499 RVA: 0x00769F64 File Offset: 0x00768164
+		// Token: 0x1700EFC4 RID: 61380
+		// (get) Token: 0x06039D21 RID: 236833 RVA: 0x007CD20C File Offset: 0x007CB40C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0603690C RID: 223500 RVA: 0x00769F71 File Offset: 0x00768171
+		// Token: 0x06039D22 RID: 236834 RVA: 0x007CD219 File Offset: 0x007CB419
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0603690D RID: 223501 RVA: 0x00769F78 File Offset: 0x00768178
+		// Token: 0x06039D23 RID: 236835 RVA: 0x007CD220 File Offset: 0x007CB420
 		public static IVehiclePlayerMotor GetRootAsIVehiclePlayerMotor(ByteBuffer _bb)
 		{
 			return IVehiclePlayerMotor.GetRootAsIVehiclePlayerMotor(_bb, default(IVehiclePlayerMotor));
 		}
 
-		// Token: 0x0603690E RID: 223502 RVA: 0x00769F94 File Offset: 0x00768194
+		// Token: 0x06039D24 RID: 236836 RVA: 0x007CD23C File Offset: 0x007CB43C
 		public static IVehiclePlayerMotor GetRootAsIVehiclePlayerMotor(ByteBuffer _bb, IVehiclePlayerMotor obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0603690F RID: 223503 RVA: 0x00769FB1 File Offset: 0x007681B1
+		// Token: 0x06039D25 RID: 236837 RVA: 0x007CD259 File Offset: 0x007CB459
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06036910 RID: 223504 RVA: 0x00769FC0 File Offset: 0x007681C0
+		// Token: 0x06039D26 RID: 236838 RVA: 0x007CD268 File Offset: 0x007CB468
 		public IVehiclePlayerMotor __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E39B RID: 58267
-		// (get) Token: 0x06036911 RID: 223505 RVA: 0x00769FD0 File Offset: 0x007681D0
+		// Token: 0x1700EFC5 RID: 61381
+		// (get) Token: 0x06039D27 RID: 236839 RVA: 0x007CD278 File Offset: 0x007CB478
 		public ETargetVehicle Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E39C RID: 58268
-		// (get) Token: 0x06036912 RID: 223506 RVA: 0x0076A00C File Offset: 0x0076820C
+		// Token: 0x1700EFC6 RID: 61382
+		// (get) Token: 0x06039D28 RID: 236840 RVA: 0x007CD2B4 File Offset: 0x007CB4B4
 		public int SummonPositionEntityId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E39D RID: 58269
-		// (get) Token: 0x06036913 RID: 223507 RVA: 0x0076A048 File Offset: 0x00768248
+		// Token: 0x1700EFC7 RID: 61383
+		// (get) Token: 0x06039D29 RID: 236841 RVA: 0x007CD2F0 File Offset: 0x007CB4F0
 		public byte NullMask
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06036914 RID: 223508 RVA: 0x0076A084 File Offset: 0x00768284
+		// Token: 0x06039D2A RID: 236842 RVA: 0x007CD32C File Offset: 0x007CB52C
 		public static Offset<IVehiclePlayerMotor> CreateIVehiclePlayerMotor(FlatBufferBuilder builder, ETargetVehicle Type = ETargetVehicle.Current, int SummonPositionEntityId = 0, byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IVehiclePlayerMotor.EndIVehiclePlayerMotor(builder);
 		}
 
-		// Token: 0x06036915 RID: 223509 RVA: 0x0076A0A8 File Offset: 0x007682A8
+		// Token: 0x06039D2B RID: 236843 RVA: 0x007CD350 File Offset: 0x007CB550
 		public static void StartIVehiclePlayerMotor(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06036916 RID: 223510 RVA: 0x0076A0B1 File Offset: 0x007682B1
+		// Token: 0x06039D2C RID: 236844 RVA: 0x007CD359 File Offset: 0x007CB559
 		public static void AddType(FlatBufferBuilder builder, ETargetVehicle type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06036917 RID: 223511 RVA: 0x0076A0BC File Offset: 0x007682BC
+		// Token: 0x06039D2D RID: 236845 RVA: 0x007CD364 File Offset: 0x007CB564
 		public static void AddSummonPositionEntityId(FlatBufferBuilder builder, int summonPositionEntityId)
 		{
 			builder.AddInt(1, summonPositionEntityId, 0);
 		}
 
-		// Token: 0x06036918 RID: 223512 RVA: 0x0076A0C7 File Offset: 0x007682C7
+		// Token: 0x06039D2E RID: 236846 RVA: 0x007CD36F File Offset: 0x007CB56F
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x06036919 RID: 223513 RVA: 0x0076A0D2 File Offset: 0x007682D2
+		// Token: 0x06039D2F RID: 236847 RVA: 0x007CD37A File Offset: 0x007CB57A
 		public static Offset<IVehiclePlayerMotor> EndIVehiclePlayerMotor(FlatBufferBuilder builder)
 		{
 			return new Offset<IVehiclePlayerMotor>(builder.EndTable());
 		}
 
-		// Token: 0x0603691A RID: 223514 RVA: 0x0076A0E0 File Offset: 0x007682E0
+		// Token: 0x06039D30 RID: 236848 RVA: 0x007CD388 File Offset: 0x007CB588
 		public IVehiclePlayerMotorT UnPack()
 		{
 			IVehiclePlayerMotorT vehiclePlayerMotorT = new IVehiclePlayerMotorT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return vehiclePlayerMotorT;
 		}
 
-		// Token: 0x0603691B RID: 223515 RVA: 0x0076A0FB File Offset: 0x007682FB
+		// Token: 0x06039D31 RID: 236849 RVA: 0x007CD3A3 File Offset: 0x007CB5A3
 		public void UnPackTo(IVehiclePlayerMotorT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0603691C RID: 223516 RVA: 0x0076A124 File Offset: 0x00768324
+		// Token: 0x06039D32 RID: 236850 RVA: 0x007CD3CC File Offset: 0x007CB5CC
 		public static Offset<IVehiclePlayerMotor> Pack(FlatBufferBuilder builder, IVehiclePlayerMotorT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IVehiclePlayerMotor.CreateIVehiclePlayerMotor(builder, _o.Type, _o.SummonPositionEntityId, _o.NullMask);
 		}
 
-		// Token: 0x0401241B RID: 74779
+		// Token: 0x0401344C RID: 78924
 		private Table __p;
 	}
 }

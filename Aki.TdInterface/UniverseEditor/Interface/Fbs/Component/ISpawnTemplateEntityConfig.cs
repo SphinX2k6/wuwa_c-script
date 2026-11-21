@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005968 RID: 22888
+	// Token: 0x02005F75 RID: 24437
 	public struct ISpawnTemplateEntityConfig : IFlatbufferObject
 	{
-		// Token: 0x1700ABC4 RID: 43972
-		// (get) Token: 0x06026BD7 RID: 158679 RVA: 0x005556E8 File Offset: 0x005538E8
+		// Token: 0x1700B4F8 RID: 46328
+		// (get) Token: 0x06029141 RID: 168257 RVA: 0x0059C354 File Offset: 0x0059A554
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026BD8 RID: 158680 RVA: 0x005556F5 File Offset: 0x005538F5
+		// Token: 0x06029142 RID: 168258 RVA: 0x0059C361 File Offset: 0x0059A561
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06026BD9 RID: 158681 RVA: 0x005556FC File Offset: 0x005538FC
+		// Token: 0x06029143 RID: 168259 RVA: 0x0059C368 File Offset: 0x0059A568
 		public static ISpawnTemplateEntityConfig GetRootAsISpawnTemplateEntityConfig(ByteBuffer _bb)
 		{
 			return ISpawnTemplateEntityConfig.GetRootAsISpawnTemplateEntityConfig(_bb, default(ISpawnTemplateEntityConfig));
 		}
 
-		// Token: 0x06026BDA RID: 158682 RVA: 0x00555718 File Offset: 0x00553918
+		// Token: 0x06029144 RID: 168260 RVA: 0x0059C384 File Offset: 0x0059A584
 		public static ISpawnTemplateEntityConfig GetRootAsISpawnTemplateEntityConfig(ByteBuffer _bb, ISpawnTemplateEntityConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06026BDB RID: 158683 RVA: 0x00555735 File Offset: 0x00553935
+		// Token: 0x06029145 RID: 168261 RVA: 0x0059C3A1 File Offset: 0x0059A5A1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06026BDC RID: 158684 RVA: 0x00555744 File Offset: 0x00553944
+		// Token: 0x06029146 RID: 168262 RVA: 0x0059C3B0 File Offset: 0x0059A5B0
 		public ISpawnTemplateEntityConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700ABC5 RID: 43973
-		// (get) Token: 0x06026BDD RID: 158685 RVA: 0x00555754 File Offset: 0x00553954
+		// Token: 0x1700B4F9 RID: 46329
+		// (get) Token: 0x06029147 RID: 168263 RVA: 0x0059C3C0 File Offset: 0x0059A5C0
 		public string TemplateBpType
 		{
 			get
@@ -64,20 +64,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026BDE RID: 158686 RVA: 0x0055578B File Offset: 0x0055398B
+		// Token: 0x06029148 RID: 168264 RVA: 0x0059C3F7 File Offset: 0x0059A5F7
 		public Span<byte> GetTemplateBpTypeBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x06026BDF RID: 158687 RVA: 0x0055579A File Offset: 0x0055399A
+		// Token: 0x06029149 RID: 168265 RVA: 0x0059C406 File Offset: 0x0059A606
 		public byte[] GetTemplateBpTypeArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x1700ABC6 RID: 43974
-		// (get) Token: 0x06026BE0 RID: 158688 RVA: 0x005557A8 File Offset: 0x005539A8
+		// Token: 0x1700B4FA RID: 46330
+		// (get) Token: 0x0602914A RID: 168266 RVA: 0x0059C414 File Offset: 0x0059A614
 		public IVectorInfo? PosOffset
 		{
 			get
@@ -91,8 +91,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700ABC7 RID: 43975
-		// (get) Token: 0x06026BE1 RID: 158689 RVA: 0x00555808 File Offset: 0x00553A08
+		// Token: 0x1700B4FB RID: 46331
+		// (get) Token: 0x0602914B RID: 168267 RVA: 0x0059C474 File Offset: 0x0059A674
 		public IVectorInfo? RotOffset
 		{
 			get
@@ -106,7 +106,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026BE2 RID: 158690 RVA: 0x00555868 File Offset: 0x00553A68
+		// Token: 0x0602914C RID: 168268 RVA: 0x0059C4D4 File Offset: 0x0059A6D4
 		public ETemplateEntityGroupType GroupTypes(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -117,8 +117,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return (ETemplateEntityGroupType)this.__p.bb.Get(this.__p.__vector(num) + j);
 		}
 
-		// Token: 0x1700ABC8 RID: 43976
-		// (get) Token: 0x06026BE3 RID: 158691 RVA: 0x005558A8 File Offset: 0x00553AA8
+		// Token: 0x1700B4FC RID: 46332
+		// (get) Token: 0x0602914D RID: 168269 RVA: 0x0059C514 File Offset: 0x0059A714
 		public int GroupTypesLength
 		{
 			get
@@ -132,13 +132,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026BE4 RID: 158692 RVA: 0x005558D4 File Offset: 0x00553AD4
+		// Token: 0x0602914E RID: 168270 RVA: 0x0059C540 File Offset: 0x0059A740
 		public Span<ETemplateEntityGroupType> GetGroupTypesBytes()
 		{
 			return this.__p.__vector_as_span<ETemplateEntityGroupType>(10, 1);
 		}
 
-		// Token: 0x06026BE5 RID: 158693 RVA: 0x005558E4 File Offset: 0x00553AE4
+		// Token: 0x0602914F RID: 168271 RVA: 0x0059C550 File Offset: 0x0059A750
 		public ETemplateEntityGroupType[] GetGroupTypesArray()
 		{
 			int num = this.__p.__offset(10);
@@ -156,8 +156,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return array;
 		}
 
-		// Token: 0x1700ABC9 RID: 43977
-		// (get) Token: 0x06026BE6 RID: 158694 RVA: 0x00555950 File Offset: 0x00553B50
+		// Token: 0x1700B4FD RID: 46333
+		// (get) Token: 0x06029150 RID: 168272 RVA: 0x0059C5BC File Offset: 0x0059A7BC
 		public byte NullMask
 		{
 			get
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026BE7 RID: 158695 RVA: 0x0055598D File Offset: 0x00553B8D
+		// Token: 0x06029151 RID: 168273 RVA: 0x0059C5F9 File Offset: 0x0059A7F9
 		public static Offset<ISpawnTemplateEntityConfig> CreateISpawnTemplateEntityConfig(FlatBufferBuilder builder, StringOffset TemplateBpTypeOffset = default(StringOffset), Offset<IVectorInfo> PosOffsetOffset = default(Offset<IVectorInfo>), Offset<IVectorInfo> RotOffsetOffset = default(Offset<IVectorInfo>), VectorOffset GroupTypesOffset = default(VectorOffset), byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -183,37 +183,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISpawnTemplateEntityConfig.EndISpawnTemplateEntityConfig(builder);
 		}
 
-		// Token: 0x06026BE8 RID: 158696 RVA: 0x005559C1 File Offset: 0x00553BC1
+		// Token: 0x06029152 RID: 168274 RVA: 0x0059C62D File Offset: 0x0059A82D
 		public static void StartISpawnTemplateEntityConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x06026BE9 RID: 158697 RVA: 0x005559CA File Offset: 0x00553BCA
+		// Token: 0x06029153 RID: 168275 RVA: 0x0059C636 File Offset: 0x0059A836
 		public static void AddTemplateBpType(FlatBufferBuilder builder, StringOffset templateBpTypeOffset)
 		{
 			builder.AddOffset(0, templateBpTypeOffset.Value, 0);
 		}
 
-		// Token: 0x06026BEA RID: 158698 RVA: 0x005559DA File Offset: 0x00553BDA
+		// Token: 0x06029154 RID: 168276 RVA: 0x0059C646 File Offset: 0x0059A846
 		public static void AddPosOffset(FlatBufferBuilder builder, Offset<IVectorInfo> posOffsetOffset)
 		{
 			builder.AddOffset(1, posOffsetOffset.Value, 0);
 		}
 
-		// Token: 0x06026BEB RID: 158699 RVA: 0x005559EA File Offset: 0x00553BEA
+		// Token: 0x06029155 RID: 168277 RVA: 0x0059C656 File Offset: 0x0059A856
 		public static void AddRotOffset(FlatBufferBuilder builder, Offset<IVectorInfo> rotOffsetOffset)
 		{
 			builder.AddOffset(2, rotOffsetOffset.Value, 0);
 		}
 
-		// Token: 0x06026BEC RID: 158700 RVA: 0x005559FA File Offset: 0x00553BFA
+		// Token: 0x06029156 RID: 168278 RVA: 0x0059C666 File Offset: 0x0059A866
 		public static void AddGroupTypes(FlatBufferBuilder builder, VectorOffset groupTypesOffset)
 		{
 			builder.AddOffset(3, groupTypesOffset.Value, 0);
 		}
 
-		// Token: 0x06026BED RID: 158701 RVA: 0x00555A0C File Offset: 0x00553C0C
+		// Token: 0x06029157 RID: 168279 RVA: 0x0059C678 File Offset: 0x0059A878
 		public static VectorOffset CreateGroupTypesVector(FlatBufferBuilder builder, ETemplateEntityGroupType[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -224,7 +224,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06026BEE RID: 158702 RVA: 0x00555A43 File Offset: 0x00553C43
+		// Token: 0x06029158 RID: 168280 RVA: 0x0059C6AF File Offset: 0x0059A8AF
 		public static VectorOffset CreateGroupTypesVectorBlock(FlatBufferBuilder builder, ETemplateEntityGroupType[] data)
 		{
 			builder.StartVector(1, data.Length, 1);
@@ -232,7 +232,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06026BEF RID: 158703 RVA: 0x00555A5D File Offset: 0x00553C5D
+		// Token: 0x06029159 RID: 168281 RVA: 0x0059C6C9 File Offset: 0x0059A8C9
 		public static VectorOffset CreateGroupTypesVectorBlock(FlatBufferBuilder builder, ArraySegment<ETemplateEntityGroupType> data)
 		{
 			builder.StartVector(1, data.Count, 1);
@@ -240,7 +240,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06026BF0 RID: 158704 RVA: 0x00555A7B File Offset: 0x00553C7B
+		// Token: 0x0602915A RID: 168282 RVA: 0x0059C6E7 File Offset: 0x0059A8E7
 		public static VectorOffset CreateGroupTypesVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -248,25 +248,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06026BF1 RID: 158705 RVA: 0x00555A94 File Offset: 0x00553C94
+		// Token: 0x0602915B RID: 168283 RVA: 0x0059C700 File Offset: 0x0059A900
 		public static void StartGroupTypesVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(1, numElems, 1);
 		}
 
-		// Token: 0x06026BF2 RID: 158706 RVA: 0x00555A9F File Offset: 0x00553C9F
+		// Token: 0x0602915C RID: 168284 RVA: 0x0059C70B File Offset: 0x0059A90B
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x06026BF3 RID: 158707 RVA: 0x00555AAA File Offset: 0x00553CAA
+		// Token: 0x0602915D RID: 168285 RVA: 0x0059C716 File Offset: 0x0059A916
 		public static Offset<ISpawnTemplateEntityConfig> EndISpawnTemplateEntityConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<ISpawnTemplateEntityConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06026BF4 RID: 158708 RVA: 0x00555AB8 File Offset: 0x00553CB8
+		// Token: 0x0602915E RID: 168286 RVA: 0x0059C724 File Offset: 0x0059A924
 		public ISpawnTemplateEntityConfigT UnPack()
 		{
 			ISpawnTemplateEntityConfigT spawnTemplateEntityConfigT = new ISpawnTemplateEntityConfigT();
@@ -274,7 +274,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return spawnTemplateEntityConfigT;
 		}
 
-		// Token: 0x06026BF5 RID: 158709 RVA: 0x00555AD4 File Offset: 0x00553CD4
+		// Token: 0x0602915F RID: 168287 RVA: 0x0059C740 File Offset: 0x0059A940
 		public void UnPackTo(ISpawnTemplateEntityConfigT _o)
 		{
 			_o.TemplateBpType = this.TemplateBpType;
@@ -288,7 +288,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06026BF6 RID: 158710 RVA: 0x00555B88 File Offset: 0x00553D88
+		// Token: 0x06029160 RID: 168288 RVA: 0x0059C7F4 File Offset: 0x0059A9F4
 		public static Offset<ISpawnTemplateEntityConfig> Pack(FlatBufferBuilder builder, ISpawnTemplateEntityConfigT _o)
 		{
 			if (_o == null)
@@ -307,7 +307,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ISpawnTemplateEntityConfig.CreateISpawnTemplateEntityConfig(builder, templateBpTypeOffset, posOffsetOffset, rotOffsetOffset, groupTypesOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400EF4F RID: 61263
+		// Token: 0x0400FC44 RID: 64580
 		private Table __p;
 	}
 }

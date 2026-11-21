@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200243D RID: 9277
+	// Token: 0x020026DE RID: 9950
 	public static class ESummonEntityTypeExtensions
 	{
-		// Token: 0x0600C991 RID: 51601 RVA: 0x001D8348 File Offset: 0x001D6548
+		// Token: 0x0600D641 RID: 54849 RVA: 0x001F2210 File Offset: 0x001F0410
 		public static string ToEnumString(this ESummonEntityType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C992 RID: 51602 RVA: 0x001D8370 File Offset: 0x001D6570
+		// Token: 0x0600D642 RID: 54850 RVA: 0x001F2238 File Offset: 0x001F0438
 		public static ESummonEntityType FromString(string name)
 		{
 			ESummonEntityType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C993 RID: 51603 RVA: 0x001D8399 File Offset: 0x001D6599
+		// Token: 0x0600D643 RID: 54851 RVA: 0x001F2261 File Offset: 0x001F0461
 		public static bool TryFromString(string name, out ESummonEntityType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C994 RID: 51604 RVA: 0x001D83BE File Offset: 0x001D65BE
+		// Token: 0x0600D644 RID: 54852 RVA: 0x001F2286 File Offset: 0x001F0486
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C995 RID: 51605 RVA: 0x001D83CE File Offset: 0x001D65CE
+		// Token: 0x0600D645 RID: 54853 RVA: 0x001F2296 File Offset: 0x001F0496
 		public static ESummonEntityType[] GetValues()
 		{
 			return new ESummonEntityType[1];
 		}
 
-		// Token: 0x0600C996 RID: 51606 RVA: 0x001D83D6 File Offset: 0x001D65D6
+		// Token: 0x0600D646 RID: 54854 RVA: 0x001F229E File Offset: 0x001F049E
 		public static string[] GetNames()
 		{
 			return new string[]

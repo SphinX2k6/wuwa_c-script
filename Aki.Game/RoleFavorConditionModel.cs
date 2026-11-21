@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using Google.Protobuf.Collections;
 
-// Token: 0x0200283D RID: 10301
+// Token: 0x02001DB8 RID: 7608
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class RoleFavorConditionModel : ModelBase
 {
-	// Token: 0x060153ED RID: 87021 RVA: 0x0055EB2C File Offset: 0x0055CD2C
+	// Token: 0x06012DEB RID: 77291 RVA: 0x00589888 File Offset: 0x00587A88
 	public void UpdateRoleFavorCondition(int roleId, ConditionInfo conditionInfo)
 	{
 		Dictionary<EFavorContentType, Dictionary<int, List<int>>> dictionary;
@@ -49,7 +49,7 @@ public class RoleFavorConditionModel : ModelBase
 		this.RoleFavorConditionMap[roleId] = dictionary;
 	}
 
-	// Token: 0x060153EE RID: 87022 RVA: 0x0055EC64 File Offset: 0x0055CE64
+	// Token: 0x06012DEC RID: 77292 RVA: 0x005899C0 File Offset: 0x00587BC0
 	public bool IsConditionFinish(int roleId, EFavorContentType type, int id, int conditionId)
 	{
 		Dictionary<EFavorContentType, Dictionary<int, List<int>>> dictionary;
@@ -78,8 +78,8 @@ public class RoleFavorConditionModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x17001C48 RID: 7240
-	// (get) Token: 0x060153EF RID: 87023 RVA: 0x0055ECC3 File Offset: 0x0055CEC3
+	// Token: 0x17001CA0 RID: 7328
+	// (get) Token: 0x06012DED RID: 77293 RVA: 0x00589A1F File Offset: 0x00587C1F
 	public static RoleFavorConditionModel Instance
 	{
 		get
@@ -88,7 +88,7 @@ public class RoleFavorConditionModel : ModelBase
 		}
 	}
 
-	// Token: 0x060153F0 RID: 87024 RVA: 0x0055ECCA File Offset: 0x0055CECA
+	// Token: 0x06012DEE RID: 77294 RVA: 0x00589A26 File Offset: 0x00587C26
 	public static RoleFavorConditionModel GetOrCreateInstance()
 	{
 		if (RoleFavorConditionModel._Instance == null)
@@ -98,7 +98,7 @@ public class RoleFavorConditionModel : ModelBase
 		return RoleFavorConditionModel._Instance;
 	}
 
-	// Token: 0x060153F1 RID: 87025 RVA: 0x0055ECDE File Offset: 0x0055CEDE
+	// Token: 0x06012DEF RID: 77295 RVA: 0x00589A3A File Offset: 0x00587C3A
 	public static bool CreateInstance()
 	{
 		if (RoleFavorConditionModel._Instance != null)
@@ -109,27 +109,27 @@ public class RoleFavorConditionModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x060153F2 RID: 87026 RVA: 0x0055ECF4 File Offset: 0x0055CEF4
+	// Token: 0x06012DF0 RID: 77296 RVA: 0x00589A50 File Offset: 0x00587C50
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060153F3 RID: 87027 RVA: 0x0055ECF6 File Offset: 0x0055CEF6
+	// Token: 0x06012DF1 RID: 77297 RVA: 0x00589A52 File Offset: 0x00587C52
 	public static void ResetStaticDefaultValue()
 	{
 		RoleFavorConditionModel._Instance = null;
 	}
 
-	// Token: 0x060153F4 RID: 87028 RVA: 0x0055ECFE File Offset: 0x0055CEFE
+	// Token: 0x06012DF2 RID: 77298 RVA: 0x00589A5A File Offset: 0x00587C5A
 	static RoleFavorConditionModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(RoleFavorConditionModel.CreateStaticDefaultValue), new Action(RoleFavorConditionModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04009EBB RID: 40635
+	// Token: 0x0400A2A4 RID: 41636
 	private readonly Dictionary<int, Dictionary<EFavorContentType, Dictionary<int, List<int>>>> RoleFavorConditionMap = new Dictionary<int, Dictionary<EFavorContentType, Dictionary<int, List<int>>>>();
 
-	// Token: 0x04009EBC RID: 40636
+	// Token: 0x0400A2A5 RID: 41637
 	[Nullable(2)]
 	private static RoleFavorConditionModel _Instance;
 }

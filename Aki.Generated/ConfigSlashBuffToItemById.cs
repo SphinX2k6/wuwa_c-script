@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000955 RID: 2389
+	// Token: 0x020009A0 RID: 2464
 	public class ConfigSlashBuffToItemById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003811 RID: 14353 RVA: 0x001967DB File Offset: 0x001949DB
+		// Token: 0x060039D3 RID: 14803 RVA: 0x001A39FB File Offset: 0x001A1BFB
 		static ConfigSlashBuffToItemById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSlashBuffToItemById.CreateStaticDefaultValue), new Action(ConfigSlashBuffToItemById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003812 RID: 14354 RVA: 0x001967FC File Offset: 0x001949FC
+		// Token: 0x060039D4 RID: 14804 RVA: 0x001A3A1C File Offset: 0x001A1C1C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSlashBuffToItemById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003813 RID: 14355 RVA: 0x0019687B File Offset: 0x00194A7B
+		// Token: 0x060039D5 RID: 14805 RVA: 0x001A3A9B File Offset: 0x001A1C9B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSlashBuffToItemById.LogPair = null;
 			ConfigSlashBuffToItemById.HandleId = 0;
 		}
 
-		// Token: 0x06003814 RID: 14356 RVA: 0x00196889 File Offset: 0x00194A89
+		// Token: 0x060039D6 RID: 14806 RVA: 0x001A3AA9 File Offset: 0x001A1CA9
 		public static void Init()
 		{
 			ConfigSlashBuffToItemById.HandleId = ConfigCommon.InitDataStatement(ConfigSlashBuffToItemById.HandleId, "db_shiptower.db", "select BinData from `SlashBuffToItem` where Id=?");
 		}
 
-		// Token: 0x06003815 RID: 14357 RVA: 0x001968A4 File Offset: 0x00194AA4
+		// Token: 0x060039D7 RID: 14807 RVA: 0x001A3AC4 File Offset: 0x001A1CC4
 		public static SlashBuffToItem? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigSlashBuffToItemById.HandleId, ConfigSlashBuffToItemById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new SlashBuffToItem?(rootAsSlashBuffToItem);
 		}
 
-		// Token: 0x04004139 RID: 16697
+		// Token: 0x04004346 RID: 17222
 		private const string DB = "db_shiptower.db";
 
-		// Token: 0x0400413A RID: 16698
+		// Token: 0x04004347 RID: 17223
 		private const string FILE = "g.割草爬塔常驻.xlsx";
 
-		// Token: 0x0400413B RID: 16699
+		// Token: 0x04004348 RID: 17224
 		private const string TABLE = "SlashBuffToItem";
 
-		// Token: 0x0400413C RID: 16700
+		// Token: 0x04004349 RID: 17225
 		private const string COMMAND = "select BinData from `SlashBuffToItem` where Id=?";
 
-		// Token: 0x0400413D RID: 16701
+		// Token: 0x0400434A RID: 17226
 		private const string KEY_PREFIX = "SlashBuffToItemById";
 
-		// Token: 0x0400413E RID: 16702
+		// Token: 0x0400434B RID: 17227
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400413F RID: 16703
+		// Token: 0x0400434C RID: 17228
 		private static int HandleId;
 	}
 }

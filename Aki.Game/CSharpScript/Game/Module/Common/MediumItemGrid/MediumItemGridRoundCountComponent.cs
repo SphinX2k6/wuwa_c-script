@@ -6,17 +6,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Common.MediumItemGrid
 {
-	// Token: 0x02005B52 RID: 23378
+	// Token: 0x02004B31 RID: 19249
 	public class MediumItemGridRoundCountComponent : MediumItemGridComponent
 	{
-		// Token: 0x0603B372 RID: 242546 RVA: 0x00E1EBE4 File Offset: 0x00E1CDE4
+		// Token: 0x060302BE RID: 197310 RVA: 0x00D6F150 File Offset: 0x00D6D350
 		[NullableContext(1)]
 		protected override string GetResourceId()
 		{
 			return "UiItem_ItemGridRound";
 		}
 
-		// Token: 0x0603B373 RID: 242547 RVA: 0x00E1EBEC File Offset: 0x00E1CDEC
+		// Token: 0x060302BF RID: 197311 RVA: 0x00D6F158 File Offset: 0x00D6D358
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603B374 RID: 242548 RVA: 0x00E1EC58 File Offset: 0x00E1CE58
+		// Token: 0x060302C0 RID: 197312 RVA: 0x00D6F1C4 File Offset: 0x00D6D3C4
 		[NullableContext(2)]
 		protected override void OnRefresh(object data)
 		{
@@ -49,18 +49,18 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			this.SetActive(false);
 		}
 
-		// Token: 0x0603B375 RID: 242549 RVA: 0x00E1ECAC File Offset: 0x00E1CEAC
+		// Token: 0x060302C1 RID: 197313 RVA: 0x00D6F218 File Offset: 0x00D6D418
 		public void SetRound(int round)
 		{
 			base.GetText(1).SetText(round.ToString(), true);
 		}
 
-		// Token: 0x0200BD7C RID: 48508
+		// Token: 0x0200A786 RID: 42886
 		private enum EComponents
 		{
-			// Token: 0x0403928D RID: 234125
+			// Token: 0x04033C5B RID: 212059
 			SpriteBg,
-			// Token: 0x0403928E RID: 234126
+			// Token: 0x04033C5C RID: 212060
 			TxtRound
 		}
 	}

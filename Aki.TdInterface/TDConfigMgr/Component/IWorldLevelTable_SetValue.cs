@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007F4 RID: 2036
+	// Token: 0x02000897 RID: 2199
 	public class IWorldLevelTable_SetValue
 	{
-		// Token: 0x04001D52 RID: 7506
+		// Token: 0x04001F5E RID: 8030
 		public EWorldLevelBonus Type;
 
-		// Token: 0x04001D53 RID: 7507
+		// Token: 0x04001F5F RID: 8031
 		public int? WorldLevelBonusId;
 	}
 }

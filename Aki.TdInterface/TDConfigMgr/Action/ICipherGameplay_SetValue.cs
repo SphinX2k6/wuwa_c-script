@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200189B RID: 6299
+	// Token: 0x02001A26 RID: 6694
 	public class ICipherGameplay_SetValue
 	{
-		// Token: 0x0400552A RID: 21802
+		// Token: 0x04005977 RID: 22903
 		public ESimpleGameplayType Type;
 
-		// Token: 0x0400552B RID: 21803
-		[Nullable(1)]
+		// Token: 0x04005978 RID: 22904
 		public string CipherId;
 	}
 }

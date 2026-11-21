@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -14,17 +13,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200278C RID: 10124
+// Token: 0x02001C77 RID: 7287
 [NullableContext(1)]
 [Nullable(0)]
 public class MultiTeamRoleSelectView : UiViewBase
 {
-	// Token: 0x06014C3A RID: 85050 RVA: 0x0054106A File Offset: 0x0053F26A
+	// Token: 0x06012124 RID: 74020 RVA: 0x00550064 File Offset: 0x0054E264
 	public MultiTeamRoleSelectView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x06014C3B RID: 85051 RVA: 0x00541094 File Offset: 0x0053F294
+	// Token: 0x06012125 RID: 74021 RVA: 0x00550090 File Offset: 0x0054E290
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -66,7 +65,7 @@ public class MultiTeamRoleSelectView : UiViewBase
 		};
 	}
 
-	// Token: 0x06014C3C RID: 85052 RVA: 0x00541380 File Offset: 0x0053F580
+	// Token: 0x06012126 RID: 74022 RVA: 0x0055037C File Offset: 0x0054E57C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		MultiTeamRoleSelectView.<OnBeforeStartAsync>d__21 <OnBeforeStartAsync>d__;
@@ -77,7 +76,7 @@ public class MultiTeamRoleSelectView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06014C3D RID: 85053 RVA: 0x005413C4 File Offset: 0x0053F5C4
+	// Token: 0x06012127 RID: 74023 RVA: 0x005503C0 File Offset: 0x0054E5C0
 	protected override void OnStart()
 	{
 		this.DisplaySkillTypes = ConfigCommonParamById.GetIntArrayConfig("DisplaySkillTypes");
@@ -86,20 +85,30 @@ public class MultiTeamRoleSelectView : UiViewBase
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(25), this.Data.Tips, Array.Empty<object>());
 		}
-		MultiTeamRoleSelectData data2 = this.Data;
-		if (((data2 != null) ? data2.ConfirmBtnText : null) != null && !string.IsNullOrEmpty(this.Data.ConfirmBtnText))
+		UUIButtonComponent button = base.GetButton(24);
+		if (button != null)
+		{
+			UUIItem uuiitem = button.RootUIComp.Get();
+			if (uuiitem != null)
+			{
+				MultiTeamRoleSelectData data2 = this.Data;
+				uuiitem.SetUIActive(data2 == null || data2.ShowUnRecommendBtn);
+			}
+		}
+		MultiTeamRoleSelectData data3 = this.Data;
+		if (((data3 != null) ? data3.ConfirmBtnText : null) != null && !string.IsNullOrEmpty(this.Data.ConfirmBtnText))
 		{
 			this.ConfirmBtn.SetLocalTextNew(this.Data.ConfirmBtnText, Array.Empty<object>());
 		}
 	}
 
-	// Token: 0x06014C3E RID: 85054 RVA: 0x0054146A File Offset: 0x0053F66A
+	// Token: 0x06012128 RID: 74024 RVA: 0x0055049E File Offset: 0x0054E69E
 	private MultiTeamRoleGrid InitRoleGrid()
 	{
 		return new MultiTeamRoleGrid();
 	}
 
-	// Token: 0x06014C3F RID: 85055 RVA: 0x00541471 File Offset: 0x0053F671
+	// Token: 0x06012129 RID: 74025 RVA: 0x005504A5 File Offset: 0x0054E6A5
 	private TeamRoleSkillItem InitSkillItem()
 	{
 		TeamRoleSkillItem teamRoleSkillItem = new TeamRoleSkillItem();
@@ -107,7 +116,7 @@ public class MultiTeamRoleSelectView : UiViewBase
 		return teamRoleSkillItem;
 	}
 
-	// Token: 0x06014C40 RID: 85056 RVA: 0x0054148C File Offset: 0x0053F68C
+	// Token: 0x0601212A RID: 74026 RVA: 0x005504C0 File Offset: 0x0054E6C0
 	private void OnSkillModeToggleClick(EToggleState toggleState)
 	{
 		if (this.SkillDescType == ERoleSkillDescType.MultiDesc)
@@ -130,7 +139,7 @@ public class MultiTeamRoleSelectView : UiViewBase
 		this.RefreshSkillInfo(this.SkillDataList[selectedGridIndex]);
 	}
 
-	// Token: 0x06014C41 RID: 85057 RVA: 0x00541504 File Offset: 0x0053F704
+	// Token: 0x0601212B RID: 74027 RVA: 0x00550538 File Offset: 0x0054E738
 	private void OnClickUnRecommendRoleBtn()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.BabelTowerTeamTipsConfirm);
@@ -141,7 +150,7 @@ public class MultiTeamRoleSelectView : UiViewBase
 		ConfirmBoxController.Instance.ShowNetWorkConfirmBoxView(confirmBoxDataNew, null);
 	}
 
-	// Token: 0x06014C42 RID: 85058 RVA: 0x00541554 File Offset: 0x0053F754
+	// Token: 0x0601212C RID: 74028 RVA: 0x00550588 File Offset: 0x0054E788
 	private void RefreshSkillModeToggle()
 	{
 		this.SkillDescType = RoleModel.Instance.GetRoleSkillDescType();
@@ -162,7 +171,7 @@ public class MultiTeamRoleSelectView : UiViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(19), "SkillBriefDescription_text", Array.Empty<object>());
 	}
 
-	// Token: 0x06014C43 RID: 85059 RVA: 0x005415F8 File Offset: 0x0053F7F8
+	// Token: 0x0601212D RID: 74029 RVA: 0x0055062C File Offset: 0x0054E82C
 	private void ConfirmClick(int data)
 	{
 		MultiTeamRoleSelectData data2 = this.Data;
@@ -200,7 +209,7 @@ public class MultiTeamRoleSelectView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06014C44 RID: 85060 RVA: 0x005416D8 File Offset: 0x0053F8D8
+	// Token: 0x0601212E RID: 74030 RVA: 0x0055070C File Offset: 0x0054E90C
 	protected void BackClick()
 	{
 		MultiTeamRoleSelectData data = this.Data;
@@ -215,7 +224,7 @@ public class MultiTeamRoleSelectView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06014C45 RID: 85061 RVA: 0x00541700 File Offset: 0x0053F900
+	// Token: 0x0601212F RID: 74031 RVA: 0x00550734 File Offset: 0x0054E934
 	private void OnSkillItemStateChanged(EToggleState state, TeamRoleSkillData data)
 	{
 		if (state != EToggleState.ETT_Checked)
@@ -231,14 +240,14 @@ public class MultiTeamRoleSelectView : UiViewBase
 		this.RefreshSkillInfo(data);
 	}
 
-	// Token: 0x06014C46 RID: 85062 RVA: 0x00541744 File Offset: 0x0053F944
+	// Token: 0x06012130 RID: 74032 RVA: 0x00550778 File Offset: 0x0054E978
 	private unsafe void OnDetailClick()
 	{
 		int clickSelectRoleId = this.ClickSelectRoleId;
 		List<int> list;
 		if (clickSelectRoleId < 100000)
 		{
-			list = RoleModel.Instance.GetRoleIdList();
+			list = RoleModel.Instance.GetRoleIdList(null);
 		}
 		else
 		{
@@ -270,7 +279,7 @@ public class MultiTeamRoleSelectView : UiViewBase
 		});
 	}
 
-	// Token: 0x06014C47 RID: 85063 RVA: 0x005417F0 File Offset: 0x0053F9F0
+	// Token: 0x06012131 RID: 74033 RVA: 0x00550824 File Offset: 0x0054EA24
 	private void OnCloseView(EUiViewName viewName, int i)
 	{
 		if (viewName == EUiViewName.RoleRootView)
@@ -283,13 +292,13 @@ public class MultiTeamRoleSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x06014C48 RID: 85064 RVA: 0x0054186D File Offset: 0x0053FA6D
+	// Token: 0x06012132 RID: 74034 RVA: 0x005508A1 File Offset: 0x0054EAA1
 	private void OnRoleChangeEnd()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06014C49 RID: 85065 RVA: 0x00541878 File Offset: 0x0053FA78
+	// Token: 0x06012133 RID: 74035 RVA: 0x005508AC File Offset: 0x0054EAAC
 	private void OnRoleSwitchTagChange(int roleId)
 	{
 		if (this.CurrentSelectTagMap.GetValueOrNull(roleId) != null)
@@ -298,7 +307,7 @@ public class MultiTeamRoleSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x06014C4A RID: 85066 RVA: 0x005418B4 File Offset: 0x0053FAB4
+	// Token: 0x06012134 RID: 74036 RVA: 0x005508E8 File Offset: 0x0054EAE8
 	private void UpdateRoleList(List<RoleDataBase> list, bool isOutSideChange, EFilterSortType type)
 	{
 		if (this.Data == null)
@@ -317,7 +326,7 @@ public class MultiTeamRoleSelectView : UiViewBase
 		this.RefreshRoleLayout();
 	}
 
-	// Token: 0x06014C4B RID: 85067 RVA: 0x00541938 File Offset: 0x0053FB38
+	// Token: 0x06012135 RID: 74037 RVA: 0x0055096C File Offset: 0x0054EB6C
 	private void RefreshRoleLayout()
 	{
 		if (this.Data == null || this.RoleLayout == null)
@@ -337,7 +346,8 @@ public class MultiTeamRoleSelectView : UiViewBase
 					CurrentSelectTagMap = this.CurrentSelectTagMap,
 					OnToggleCallBack = new Action<MediumItemGridExtendCallback>(this.OnRoleGridToggle),
 					CanExecuteChangeCallBack = new Func<object, bool, EToggleState, bool>(this.CanExecuteChangeCallBack),
-					ShowGridAnimation = this.NeedGridAnimation
+					ShowGridAnimation = this.NeedGridAnimation,
+					IsSingleSelect = this.IsSingleSelectMode()
 				});
 			}
 		}
@@ -345,7 +355,7 @@ public class MultiTeamRoleSelectView : UiViewBase
 		this.NeedGridAnimation = false;
 	}
 
-	// Token: 0x06014C4C RID: 85068 RVA: 0x00541A24 File Offset: 0x0053FC24
+	// Token: 0x06012136 RID: 74038 RVA: 0x00550A6C File Offset: 0x0054EC6C
 	private void OnRoleGridToggle(MediumItemGridExtendCallback data)
 	{
 		MultiTeamRoleGridData multiTeamRoleGridData = data.Data as MultiTeamRoleGridData;
@@ -368,6 +378,11 @@ public class MultiTeamRoleSelectView : UiViewBase
 				this.CurrentSelectRoleId = 0;
 			}
 		}
+		else if (this.IsSingleSelectMode())
+		{
+			this.CurrentSelectRoleList[0] = dataId;
+			this.CurrentSelectRoleId = dataId;
+		}
 		else
 		{
 			for (int i = 0; i < this.CurrentSelectRoleList.Count; i++)
@@ -384,7 +399,13 @@ public class MultiTeamRoleSelectView : UiViewBase
 		this.RefreshRoleLayout();
 	}
 
-	// Token: 0x06014C4D RID: 85069 RVA: 0x00541AF0 File Offset: 0x0053FCF0
+	// Token: 0x06012137 RID: 74039 RVA: 0x00550B53 File Offset: 0x0054ED53
+	private bool IsSingleSelectMode()
+	{
+		return this.Data != null && this.Data.IsSingleSelect && this.Data.TeamLength == 1;
+	}
+
+	// Token: 0x06012138 RID: 74040 RVA: 0x00550B7C File Offset: 0x0054ED7C
 	private bool CanExecuteChangeCallBack(object data, bool isForceSelected, EToggleState state)
 	{
 		if (this.Data == null)
@@ -402,11 +423,22 @@ public class MultiTeamRoleSelectView : UiViewBase
 		{
 			return false;
 		}
-		if (this.CurrentSelectRoleList.Contains(dataId))
+		if (this.CurrentSelectRoleList.Contains(dataId) || this.IsSingleSelectMode())
 		{
 			return true;
 		}
-		if (this.CurrentSelectRoleList.Count((int value) => value != 0) >= this.Data.TeamLength)
+		int num = 0;
+		using (List<int>.Enumerator enumerator = this.CurrentSelectRoleList.GetEnumerator())
+		{
+			while (enumerator.MoveNext())
+			{
+				if (enumerator.Current != 0)
+				{
+					num++;
+				}
+			}
+		}
+		if (num >= this.Data.TeamLength)
 		{
 			ScrollingTipsController.Instance.ShowTipsByTextId("BossRushMaxLength", Array.Empty<object>());
 			return false;
@@ -414,7 +446,7 @@ public class MultiTeamRoleSelectView : UiViewBase
 		return true;
 	}
 
-	// Token: 0x06014C4E RID: 85070 RVA: 0x00541BAC File Offset: 0x0053FDAC
+	// Token: 0x06012139 RID: 74041 RVA: 0x00550C5C File Offset: 0x0054EE5C
 	protected override void OnBeforeShow()
 	{
 		if (this.Data == null || this.FilterSortEntrance == null)
@@ -425,7 +457,7 @@ public class MultiTeamRoleSelectView : UiViewBase
 		this.FilterSortEntrance.UpdateData(this.Data.UseWay.Value, this.Data.GetSourceRoleList(), Array.Empty<object>());
 	}
 
-	// Token: 0x06014C4F RID: 85071 RVA: 0x00541BFC File Offset: 0x0053FDFC
+	// Token: 0x0601213A RID: 74042 RVA: 0x00550CAC File Offset: 0x0054EEAC
 	private void RefreshCurrentRoleInfo()
 	{
 		int roleId = 0;
@@ -443,56 +475,66 @@ public class MultiTeamRoleSelectView : UiViewBase
 		this.RefreshTagSwitchItem(roleId);
 	}
 
-	// Token: 0x06014C50 RID: 85072 RVA: 0x00541C58 File Offset: 0x0053FE58
+	// Token: 0x0601213B RID: 74043 RVA: 0x00550D08 File Offset: 0x0054EF08
 	private void RefreshTopItem(int roleId)
 	{
 		bool uiactive = roleId != 0;
 		base.GetItem(3).SetUIActive(uiactive);
 	}
 
-	// Token: 0x06014C51 RID: 85073 RVA: 0x00541C78 File Offset: 0x0053FE78
+	// Token: 0x0601213C RID: 74044 RVA: 0x00550D28 File Offset: 0x0054EF28
 	private void RefreshDetailButton(int roleId)
 	{
-		bool uiactive = roleId != 0;
+		bool flag;
+		if (roleId != 0)
+		{
+			MultiTeamRoleSelectData data = this.Data;
+			flag = (data == null || data.ShowDetailButton);
+		}
+		else
+		{
+			flag = false;
+		}
+		bool uiactive = flag;
 		base.GetButton(15).RootUIComp.Get().SetUIActive(uiactive);
 	}
 
-	// Token: 0x06014C52 RID: 85074 RVA: 0x00541CA8 File Offset: 0x0053FEA8
+	// Token: 0x0601213D RID: 74045 RVA: 0x00550D6C File Offset: 0x0054EF6C
 	private void RefreshRoleInfoContent(int roleId)
 	{
 		bool uiactive = roleId != 0;
 		base.GetItem(9).SetUIActive(uiactive);
 	}
 
-	// Token: 0x06014C53 RID: 85075 RVA: 0x00541CC8 File Offset: 0x0053FEC8
+	// Token: 0x0601213E RID: 74046 RVA: 0x00550D8C File Offset: 0x0054EF8C
 	private void RefreshNoneRoleTips()
 	{
 		bool uiactive = this.CurrentFilterRoleList.Count == 0;
 		base.GetItem(17).SetUIActive(uiactive);
 	}
 
-	// Token: 0x06014C54 RID: 85076 RVA: 0x00541CF4 File Offset: 0x0053FEF4
+	// Token: 0x0601213F RID: 74047 RVA: 0x00550DB8 File Offset: 0x0054EFB8
 	private void RefreshScrollViewItem()
 	{
 		bool uiactive = this.CurrentFilterRoleList.Count > 0;
 		base.GetItem(20).SetUIActive(uiactive);
 	}
 
-	// Token: 0x06014C55 RID: 85077 RVA: 0x00541D20 File Offset: 0x0053FF20
+	// Token: 0x06012140 RID: 74048 RVA: 0x00550DE4 File Offset: 0x0054EFE4
 	private void RefreshEmptySelectItem(int roleId)
 	{
 		bool uiactive = this.CurrentFilterRoleList.Count > 0 && roleId == 0;
 		base.GetItem(21).SetUIActive(uiactive);
 	}
 
-	// Token: 0x06014C56 RID: 85078 RVA: 0x00541D54 File Offset: 0x0053FF54
+	// Token: 0x06012141 RID: 74049 RVA: 0x00550E18 File Offset: 0x0054F018
 	private void RefreshTabItem(int roleId)
 	{
 		bool uiactive = roleId != 0;
 		base.GetItem(22).SetUIActive(uiactive);
 	}
 
-	// Token: 0x06014C57 RID: 85079 RVA: 0x00541D74 File Offset: 0x0053FF74
+	// Token: 0x06012142 RID: 74050 RVA: 0x00550E38 File Offset: 0x0054F038
 	private void RefreshRoleInfo(int roleId)
 	{
 		LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -514,7 +556,7 @@ public class MultiTeamRoleSelectView : UiViewBase
 		this.RefreshRoleUnRecommendLayout(roleId);
 	}
 
-	// Token: 0x06014C58 RID: 85080 RVA: 0x00541DF0 File Offset: 0x0053FFF0
+	// Token: 0x06012143 RID: 74051 RVA: 0x00550EB4 File Offset: 0x0054F0B4
 	private void RefreshRoleName(int roleId)
 	{
 		if (roleId == 0)
@@ -528,7 +570,7 @@ public class MultiTeamRoleSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x06014C59 RID: 85081 RVA: 0x00541E2C File Offset: 0x0054002C
+	// Token: 0x06012144 RID: 74052 RVA: 0x00550EF0 File Offset: 0x0054F0F0
 	private void RefreshRoleSkillInfo(int roleId)
 	{
 		if (roleId == 0)
@@ -586,25 +628,25 @@ public class MultiTeamRoleSelectView : UiViewBase
 					teamRoleSkillData.SkillTagList = skill.SkillTagList();
 					if (teamRoleSkillData.SkillTagList != null)
 					{
-						teamRoleSkillData.SkillTagList = teamRoleSkillData.SkillTagList.ToArray<int>();
+						teamRoleSkillData.SkillTagList = (int[])teamRoleSkillData.SkillTagList.Clone();
 					}
 					teamRoleSkillData.SkillDesc = skill.SkillDescribe;
 					string[] array = skill.SkillDetailNum();
 					if (array != null)
 					{
-						teamRoleSkillData.SkillDescNum = array.ToArray<string>();
+						teamRoleSkillData.SkillDescNum = (string[])array.Clone();
 					}
 					teamRoleSkillData.MultiSkillDesc = skill.MultiSkillDescribe;
 					string[] array2 = skill.MultiSkillDetailNum();
 					if (array2 != null)
 					{
-						teamRoleSkillData.MultiSkillDescNum = array2.ToArray<string>();
+						teamRoleSkillData.MultiSkillDescNum = (string[])array2.Clone();
 					}
 					teamRoleSkillData.SkillResume = skill.SkillResume;
 					string[] array3 = skill.SkillResumeNum();
 					if (array3 != null)
 					{
-						teamRoleSkillData.SkillResumeNum = array3.ToArray<string>();
+						teamRoleSkillData.SkillResumeNum = (string[])array3.Clone();
 					}
 					skillDataList.Add(teamRoleSkillData);
 					break;
@@ -628,7 +670,7 @@ public class MultiTeamRoleSelectView : UiViewBase
 		}, false);
 	}
 
-	// Token: 0x06014C5A RID: 85082 RVA: 0x00542104 File Offset: 0x00540304
+	// Token: 0x06012145 RID: 74053 RVA: 0x005511DC File Offset: 0x0054F3DC
 	private void RefreshRoleTagLayout(int roleId)
 	{
 		if (roleId == 0 || this.RoleTagLayout == null)
@@ -645,11 +687,11 @@ public class MultiTeamRoleSelectView : UiViewBase
 		base.GetMultiTemplateLayout(5).RootUIComp.Get().SetUIActive(flag);
 		if (flag && roleTagByRoleInfo != null)
 		{
-			this.RoleTagLayout.RefreshByData(roleTagByRoleInfo.ToList<int>(), null, false);
+			this.RoleTagLayout.RefreshByData(roleTagByRoleInfo, null, false);
 		}
 	}
 
-	// Token: 0x06014C5B RID: 85083 RVA: 0x00542184 File Offset: 0x00540384
+	// Token: 0x06012146 RID: 74054 RVA: 0x00551257 File Offset: 0x0054F457
 	private void RefreshRoleUnRecommendLayout(int roleId)
 	{
 		if (roleId == 0 || this.Data == null)
@@ -659,7 +701,7 @@ public class MultiTeamRoleSelectView : UiViewBase
 		base.GetItem(23).SetUIActive(this.Data.UnRecommendRole.Contains(roleId));
 	}
 
-	// Token: 0x06014C5C RID: 85084 RVA: 0x005421B0 File Offset: 0x005403B0
+	// Token: 0x06012147 RID: 74055 RVA: 0x00551284 File Offset: 0x0054F484
 	private void CheckCurRoleIsDead(int roleId)
 	{
 		UUIText text = base.GetText(16);
@@ -688,7 +730,7 @@ public class MultiTeamRoleSelectView : UiViewBase
 		text.SetUIActive(false);
 	}
 
-	// Token: 0x06014C5D RID: 85085 RVA: 0x00542234 File Offset: 0x00540434
+	// Token: 0x06012148 RID: 74056 RVA: 0x00551308 File Offset: 0x0054F508
 	private void RefreshSkillInfo(TeamRoleSkillData data)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(10), data.SkillName, Array.Empty<object>());
@@ -753,7 +795,7 @@ public class MultiTeamRoleSelectView : UiViewBase
 		}
 	}
 
-	// Token: 0x06014C5E RID: 85086 RVA: 0x00542414 File Offset: 0x00540614
+	// Token: 0x06012149 RID: 74057 RVA: 0x005514E8 File Offset: 0x0054F6E8
 	private void RefreshTagSwitchItem(int roleId)
 	{
 		if (roleId == 0 || !this.Data.NeedShowTag)
@@ -798,7 +840,7 @@ public class MultiTeamRoleSelectView : UiViewBase
 		});
 	}
 
-	// Token: 0x06014C5F RID: 85087 RVA: 0x0054250C File Offset: 0x0054070C
+	// Token: 0x0601214A RID: 74058 RVA: 0x005515E0 File Offset: 0x0054F7E0
 	private void SwitchSkillBranchHandler(int skillBranch)
 	{
 		int roleBranchIdByIndex = RoleModel.Instance.GetRoleBranchIdByIndex(this.ClickSelectRoleId, skillBranch);
@@ -812,30 +854,30 @@ public class MultiTeamRoleSelectView : UiViewBase
 		RoleController.Instance.RequestRoleSkillBranchModify(this.ClickSelectRoleId, roleBranchIdByIndex);
 	}
 
-	// Token: 0x04009C38 RID: 39992
+	// Token: 0x04009D9C RID: 40348
 	private IReadOnlyList<int> DisplaySkillTypes;
 
-	// Token: 0x04009C39 RID: 39993
+	// Token: 0x04009D9D RID: 40349
 	private Dictionary<int, int> CurrentSelectTagMap = new Dictionary<int, int>();
 
-	// Token: 0x04009C3A RID: 39994
+	// Token: 0x04009D9E RID: 40350
 	protected int CurrentSelectRoleId;
 
-	// Token: 0x04009C3B RID: 39995
+	// Token: 0x04009D9F RID: 40351
 	private int ClickSelectRoleId;
 
-	// Token: 0x04009C3C RID: 39996
+	// Token: 0x04009DA0 RID: 40352
 	private readonly List<int> CurrentSelectRoleList = new List<int>();
 
-	// Token: 0x04009C3D RID: 39997
+	// Token: 0x04009DA1 RID: 40353
 	[Nullable(2)]
 	private MultiTeamRoleSelectData Data;
 
-	// Token: 0x04009C3E RID: 39998
+	// Token: 0x04009DA2 RID: 40354
 	[Nullable(2)]
 	protected PopupCaptionItem CaptionItem;
 
-	// Token: 0x04009C3F RID: 39999
+	// Token: 0x04009DA3 RID: 40355
 	[Nullable(new byte[]
 	{
 		2,
@@ -843,7 +885,7 @@ public class MultiTeamRoleSelectView : UiViewBase
 	})]
 	private GenericLayout<RoleTagMediumIconItem, int> RoleTagLayout;
 
-	// Token: 0x04009C40 RID: 40000
+	// Token: 0x04009DA4 RID: 40356
 	[Nullable(new byte[]
 	{
 		2,
@@ -852,7 +894,7 @@ public class MultiTeamRoleSelectView : UiViewBase
 	})]
 	private GenericLayout<TeamRoleSkillItem, TeamRoleSkillData> SkillLayout;
 
-	// Token: 0x04009C41 RID: 40001
+	// Token: 0x04009DA5 RID: 40357
 	[Nullable(new byte[]
 	{
 		2,
@@ -861,7 +903,7 @@ public class MultiTeamRoleSelectView : UiViewBase
 	})]
 	private GenericLayout<MultiTeamRoleGrid, MultiTeamRoleGridContentData> RoleLayout;
 
-	// Token: 0x04009C42 RID: 40002
+	// Token: 0x04009DA6 RID: 40358
 	[Nullable(new byte[]
 	{
 		2,
@@ -869,11 +911,11 @@ public class MultiTeamRoleSelectView : UiViewBase
 	})]
 	private FilterSortEntrance<RoleDataBase> FilterSortEntrance;
 
-	// Token: 0x04009C43 RID: 40003
+	// Token: 0x04009DA7 RID: 40359
 	[Nullable(2)]
 	private TeamRoleSelectSkillBranchItem SkillBranchSwitchItem;
 
-	// Token: 0x04009C44 RID: 40004
+	// Token: 0x04009DA8 RID: 40360
 	[Nullable(new byte[]
 	{
 		2,
@@ -881,84 +923,84 @@ public class MultiTeamRoleSelectView : UiViewBase
 	})]
 	private List<TeamRoleSkillData> SkillDataList;
 
-	// Token: 0x04009C45 RID: 40005
+	// Token: 0x04009DA9 RID: 40361
 	private ERoleSkillDescType SkillDescType;
 
-	// Token: 0x04009C46 RID: 40006
+	// Token: 0x04009DAA RID: 40362
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x04009C47 RID: 40007
+	// Token: 0x04009DAB RID: 40363
 	private List<RoleDataBase> CurrentFilterRoleList = new List<RoleDataBase>();
 
-	// Token: 0x04009C48 RID: 40008
+	// Token: 0x04009DAC RID: 40364
 	private bool NeedGridAnimation;
 
-	// Token: 0x04009C49 RID: 40009
+	// Token: 0x04009DAD RID: 40365
 	[Nullable(2)]
 	private ButtonItem ConfirmBtn;
 
-	// Token: 0x02008DF0 RID: 36336
+	// Token: 0x02007F77 RID: 32631
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x0402E0C2 RID: 188610
+		// Token: 0x040293D6 RID: 168918
 		CaptionItem,
-		// Token: 0x0402E0C3 RID: 188611
+		// Token: 0x040293D7 RID: 168919
 		SelectRoleVerticalLayout,
-		// Token: 0x0402E0C4 RID: 188612
+		// Token: 0x040293D8 RID: 168920
 		LayoutItem,
-		// Token: 0x0402E0C5 RID: 188613
+		// Token: 0x040293D9 RID: 168921
 		TopItem,
-		// Token: 0x0402E0C6 RID: 188614
+		// Token: 0x040293DA RID: 168922
 		RoleNameText,
-		// Token: 0x0402E0C7 RID: 188615
+		// Token: 0x040293DB RID: 168923
 		RoleTagContent,
-		// Token: 0x0402E0C8 RID: 188616
+		// Token: 0x040293DC RID: 168924
 		SkillTagItem,
-		// Token: 0x0402E0C9 RID: 188617
+		// Token: 0x040293DD RID: 168925
 		SkillContent,
-		// Token: 0x0402E0CA RID: 188618
+		// Token: 0x040293DE RID: 168926
 		SkillItem,
-		// Token: 0x0402E0CB RID: 188619
+		// Token: 0x040293DF RID: 168927
 		RoleInfoContent,
-		// Token: 0x0402E0CC RID: 188620
+		// Token: 0x040293E0 RID: 168928
 		SkillNameText,
-		// Token: 0x0402E0CD RID: 188621
+		// Token: 0x040293E1 RID: 168929
 		SkillTypeNameText,
-		// Token: 0x0402E0CE RID: 188622
+		// Token: 0x040293E2 RID: 168930
 		SkillInfoText,
-		// Token: 0x0402E0CF RID: 188623
+		// Token: 0x040293E3 RID: 168931
 		FilterSortEntrance,
-		// Token: 0x0402E0D0 RID: 188624
+		// Token: 0x040293E4 RID: 168932
 		ConfirmButton,
-		// Token: 0x0402E0D1 RID: 188625
+		// Token: 0x040293E5 RID: 168933
 		DetailButton,
-		// Token: 0x0402E0D2 RID: 188626
+		// Token: 0x040293E6 RID: 168934
 		TipsText,
-		// Token: 0x0402E0D3 RID: 188627
+		// Token: 0x040293E7 RID: 168935
 		NoneRoleTips,
-		// Token: 0x0402E0D4 RID: 188628
+		// Token: 0x040293E8 RID: 168936
 		SkillModeToggle,
-		// Token: 0x0402E0D5 RID: 188629
+		// Token: 0x040293E9 RID: 168937
 		SkillModeText,
-		// Token: 0x0402E0D6 RID: 188630
+		// Token: 0x040293EA RID: 168938
 		ScrollViewItem,
-		// Token: 0x0402E0D7 RID: 188631
+		// Token: 0x040293EB RID: 168939
 		EmptySelectItem,
-		// Token: 0x0402E0D8 RID: 188632
+		// Token: 0x040293EC RID: 168940
 		TabItem,
-		// Token: 0x0402E0D9 RID: 188633
+		// Token: 0x040293ED RID: 168941
 		UnRecommendRoleItem,
-		// Token: 0x0402E0DA RID: 188634
+		// Token: 0x040293EE RID: 168942
 		UnRecommendRoleBtn,
-		// Token: 0x0402E0DB RID: 188635
+		// Token: 0x040293EF RID: 168943
 		UnRecommendRoleText,
-		// Token: 0x0402E0DC RID: 188636
+		// Token: 0x040293F0 RID: 168944
 		TrailRoleItem,
-		// Token: 0x0402E0DD RID: 188637
+		// Token: 0x040293F1 RID: 168945
 		PanelTagSwitchItem,
-		// Token: 0x0402E0DE RID: 188638
+		// Token: 0x040293F2 RID: 168946
 		TagSwitchItem
 	}
 }

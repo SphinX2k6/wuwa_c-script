@@ -10,7 +10,7 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002383 RID: 9091
+// Token: 0x02001868 RID: 6248
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -19,7 +19,7 @@ using UnrealEngine;
 })]
 public class PayShopGiftItem : GridProxyAbstract<PayShopGoods>
 {
-	// Token: 0x0601229E RID: 74398 RVA: 0x004779B0 File Offset: 0x00475BB0
+	// Token: 0x0600F74E RID: 63310 RVA: 0x00484B30 File Offset: 0x00482D30
 	public PayShopGiftItem(EQualityPathType qualityPathType, UUIItem uiItem = null)
 	{
 		this.QualityPathType = qualityPathType;
@@ -29,7 +29,7 @@ public class PayShopGiftItem : GridProxyAbstract<PayShopGoods>
 		}
 	}
 
-	// Token: 0x0601229F RID: 74399 RVA: 0x004779E0 File Offset: 0x00475BE0
+	// Token: 0x0600F74F RID: 63311 RVA: 0x00484B60 File Offset: 0x00482D60
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 14;
@@ -76,26 +76,26 @@ public class PayShopGiftItem : GridProxyAbstract<PayShopGoods>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060122A0 RID: 74400 RVA: 0x00477C3C File Offset: 0x00475E3C
+	// Token: 0x0600F750 RID: 63312 RVA: 0x00484DBC File Offset: 0x00482FBC
 	private void ToggleClick(EToggleState toggleState)
 	{
 		base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		this.ToggleFunction(this.Data.GetGoodsId());
 	}
 
-	// Token: 0x060122A1 RID: 74401 RVA: 0x00477C65 File Offset: 0x00475E65
+	// Token: 0x0600F751 RID: 63313 RVA: 0x00484DE5 File Offset: 0x00482FE5
 	private void TipsClick()
 	{
 		HelpController.Instance.OpenHelpById(this.HelpId);
 	}
 
-	// Token: 0x060122A2 RID: 74402 RVA: 0x00477C78 File Offset: 0x00475E78
+	// Token: 0x0600F752 RID: 63314 RVA: 0x00484DF8 File Offset: 0x00482FF8
 	protected override void OnStart()
 	{
 		base.GetButton(13).RootUIComp.Get().SetUIActive(false);
 	}
 
-	// Token: 0x060122A3 RID: 74403 RVA: 0x00477CA0 File Offset: 0x00475EA0
+	// Token: 0x0600F753 RID: 63315 RVA: 0x00484E20 File Offset: 0x00483020
 	protected void AddEventListener()
 	{
 		if (this.IsAddEvent)
@@ -106,7 +106,7 @@ public class PayShopGiftItem : GridProxyAbstract<PayShopGoods>
 		EventSystem.Instance.Add<int>(EEventName.OnPlayerCurrencyChange, new Action<int>(this.RefreshPrice));
 	}
 
-	// Token: 0x060122A4 RID: 74404 RVA: 0x00477CCE File Offset: 0x00475ECE
+	// Token: 0x0600F754 RID: 63316 RVA: 0x00484E4E File Offset: 0x0048304E
 	protected void RemoveEventListener()
 	{
 		if (!this.IsAddEvent)
@@ -117,7 +117,7 @@ public class PayShopGiftItem : GridProxyAbstract<PayShopGoods>
 		EventSystem.Instance.Remove(EEventName.OnPlayerCurrencyChange, new Action<int>(this.RefreshPrice));
 	}
 
-	// Token: 0x060122A5 RID: 74405 RVA: 0x00477CFC File Offset: 0x00475EFC
+	// Token: 0x0600F755 RID: 63317 RVA: 0x00484E7C File Offset: 0x0048307C
 	private void RefreshPrice(int itemId)
 	{
 		PayShopGoodsData goodsData = this.Data.GetGoodsData();
@@ -132,13 +132,13 @@ public class PayShopGiftItem : GridProxyAbstract<PayShopGoods>
 		this.SetPrice();
 	}
 
-	// Token: 0x060122A6 RID: 74406 RVA: 0x00477D33 File Offset: 0x00475F33
+	// Token: 0x0600F756 RID: 63318 RVA: 0x00484EB3 File Offset: 0x004830B3
 	public void SetBelongViewName(EUiViewName viewName)
 	{
 		this.BelongViewName = new EUiViewName?(viewName);
 	}
 
-	// Token: 0x060122A7 RID: 74407 RVA: 0x00477D41 File Offset: 0x00475F41
+	// Token: 0x0600F757 RID: 63319 RVA: 0x00484EC1 File Offset: 0x004830C1
 	[NullableContext(1)]
 	public void Refresh(PayShopGoods data)
 	{
@@ -146,7 +146,7 @@ public class PayShopGiftItem : GridProxyAbstract<PayShopGoods>
 		this.RefreshGiftItem(data);
 	}
 
-	// Token: 0x060122A8 RID: 74408 RVA: 0x00477D50 File Offset: 0x00475F50
+	// Token: 0x0600F758 RID: 63320 RVA: 0x00484ED0 File Offset: 0x004830D0
 	[NullableContext(1)]
 	public void RefreshGiftItem(PayShopGoods data)
 	{
@@ -154,7 +154,7 @@ public class PayShopGiftItem : GridProxyAbstract<PayShopGoods>
 		this.RefreshState();
 	}
 
-	// Token: 0x060122A9 RID: 74409 RVA: 0x00477D5F File Offset: 0x00475F5F
+	// Token: 0x0600F759 RID: 63321 RVA: 0x00484EDF File Offset: 0x004830DF
 	public override void Clear()
 	{
 		this.RemoveEventListener();
@@ -162,7 +162,7 @@ public class PayShopGiftItem : GridProxyAbstract<PayShopGoods>
 		this.RemoveDiscountTimer();
 	}
 
-	// Token: 0x060122AA RID: 74410 RVA: 0x00477D73 File Offset: 0x00475F73
+	// Token: 0x0600F75A RID: 63322 RVA: 0x00484EF3 File Offset: 0x004830F3
 	protected override void OnBeforeDestroy()
 	{
 		this.RemoveEventListener();
@@ -171,7 +171,7 @@ public class PayShopGiftItem : GridProxyAbstract<PayShopGoods>
 		LguiResourceManager.Instance.CancelLoadPrefab(this.DebugTextLoadId);
 	}
 
-	// Token: 0x060122AB RID: 74411 RVA: 0x00477D98 File Offset: 0x00475F98
+	// Token: 0x0600F75B RID: 63323 RVA: 0x00484F18 File Offset: 0x00483118
 	protected void RefreshState()
 	{
 		CSharpScript.Game.Module.PayShop.IItemData itemData = this.Data.GetItemData();
@@ -185,7 +185,7 @@ public class PayShopGiftItem : GridProxyAbstract<PayShopGoods>
 		this.ShowDebugText();
 	}
 
-	// Token: 0x060122AC RID: 74412 RVA: 0x00477DF0 File Offset: 0x00475FF0
+	// Token: 0x0600F75C RID: 63324 RVA: 0x00484F70 File Offset: 0x00483170
 	protected void SetQuality(int quality)
 	{
 		QualityInfo value = ItemConfig.Instance.GetQualityConfig(quality).Value;
@@ -197,14 +197,14 @@ public class PayShopGiftItem : GridProxyAbstract<PayShopGoods>
 		base.SetTextureByPath(path, base.GetTexture(2), null, null);
 	}
 
-	// Token: 0x060122AD RID: 74413 RVA: 0x00477E44 File Offset: 0x00476044
+	// Token: 0x0600F75D RID: 63325 RVA: 0x00484FC4 File Offset: 0x004831C4
 	protected void SetIcon()
 	{
 		UUITexture texture = base.GetTexture(1);
 		base.SetItemIcon(texture, this.Data.GetItemData().ItemId, this.BelongViewName, null);
 	}
 
-	// Token: 0x060122AE RID: 74414 RVA: 0x00477E78 File Offset: 0x00476078
+	// Token: 0x0600F75E RID: 63326 RVA: 0x00484FF8 File Offset: 0x004831F8
 	protected void SetTips()
 	{
 		this.RootItem.SetAlpha(1f);
@@ -233,7 +233,7 @@ public class PayShopGiftItem : GridProxyAbstract<PayShopGoods>
 		LguiUtil.Instance.SetLocalText(text, remainingData.TextId, new <>z__ReadOnlySingleElementList<object>(remainingData.Count));
 	}
 
-	// Token: 0x060122AF RID: 74415 RVA: 0x00477F5C File Offset: 0x0047615C
+	// Token: 0x0600F75F RID: 63327 RVA: 0x004850DC File Offset: 0x004832DC
 	protected void SetPrice()
 	{
 		UUIText text = base.GetText(7);
@@ -266,7 +266,7 @@ public class PayShopGiftItem : GridProxyAbstract<PayShopGoods>
 		base.SetItemIcon(texture, priceData.CurrencyId, null, null);
 	}
 
-	// Token: 0x060122B0 RID: 74416 RVA: 0x00478068 File Offset: 0x00476268
+	// Token: 0x0600F760 RID: 63328 RVA: 0x004851E8 File Offset: 0x004833E8
 	protected void SetDiscountTime()
 	{
 		this.RemoveDiscountTimer();
@@ -289,7 +289,7 @@ public class PayShopGiftItem : GridProxyAbstract<PayShopGoods>
 		}
 	}
 
-	// Token: 0x060122B1 RID: 74417 RVA: 0x00478133 File Offset: 0x00476333
+	// Token: 0x0600F761 RID: 63329 RVA: 0x004852B3 File Offset: 0x004834B3
 	private void RefreshDiscountTime(float _)
 	{
 		this.DiscountTimerId = null;
@@ -301,7 +301,7 @@ public class PayShopGiftItem : GridProxyAbstract<PayShopGoods>
 		}
 	}
 
-	// Token: 0x060122B2 RID: 74418 RVA: 0x00478170 File Offset: 0x00476370
+	// Token: 0x0600F762 RID: 63330 RVA: 0x004852F0 File Offset: 0x004834F0
 	protected void SetSellTime()
 	{
 		this.RemoveSellTimer();
@@ -336,7 +336,7 @@ public class PayShopGiftItem : GridProxyAbstract<PayShopGoods>
 		}
 	}
 
-	// Token: 0x060122B3 RID: 74419 RVA: 0x00478244 File Offset: 0x00476444
+	// Token: 0x0600F763 RID: 63331 RVA: 0x004853C4 File Offset: 0x004835C4
 	[NullableContext(1)]
 	protected void SetName(string name)
 	{
@@ -355,7 +355,7 @@ public class PayShopGiftItem : GridProxyAbstract<PayShopGoods>
 		text.ShowTextNew(name);
 	}
 
-	// Token: 0x060122B4 RID: 74420 RVA: 0x004782B0 File Offset: 0x004764B0
+	// Token: 0x0600F764 RID: 63332 RVA: 0x00485430 File Offset: 0x00483630
 	protected void ShowDebugText()
 	{
 		if (!GlobalData.IsPlayInEditor)
@@ -386,7 +386,7 @@ public class PayShopGiftItem : GridProxyAbstract<PayShopGoods>
 		debugText.SetText(this.Data.GetGoodsId().ToString(), true);
 	}
 
-	// Token: 0x060122B5 RID: 74421 RVA: 0x0047832E File Offset: 0x0047652E
+	// Token: 0x0600F765 RID: 63333 RVA: 0x004854AE File Offset: 0x004836AE
 	protected void RemoveSellTimer()
 	{
 		if (this.SellTimerId != null)
@@ -396,7 +396,7 @@ public class PayShopGiftItem : GridProxyAbstract<PayShopGoods>
 		}
 	}
 
-	// Token: 0x060122B6 RID: 74422 RVA: 0x00478350 File Offset: 0x00476550
+	// Token: 0x0600F766 RID: 63334 RVA: 0x004854D0 File Offset: 0x004836D0
 	protected void RemoveDiscountTimer()
 	{
 		if (this.DiscountTimerId != null)
@@ -406,97 +406,97 @@ public class PayShopGiftItem : GridProxyAbstract<PayShopGoods>
 		}
 	}
 
-	// Token: 0x060122B7 RID: 74423 RVA: 0x00478372 File Offset: 0x00476572
+	// Token: 0x0600F767 RID: 63335 RVA: 0x004854F2 File Offset: 0x004836F2
 	[NullableContext(1)]
 	public void SetToggleFunction(Action<int> callBack)
 	{
 		this.ToggleFunction = callBack;
 	}
 
-	// Token: 0x060122B8 RID: 74424 RVA: 0x0047837C File Offset: 0x0047657C
+	// Token: 0x0600F768 RID: 63336 RVA: 0x004854FC File Offset: 0x004836FC
 	public void SetTipsIdAndShowTipsButton(int helpId)
 	{
 		base.GetButton(13).RootUIComp.Get().SetUIActive(true);
 		this.HelpId = helpId;
 	}
 
-	// Token: 0x04008941 RID: 35137
+	// Token: 0x04008A86 RID: 35462
 	private const float SOLDOUT_ALPHA = 0.6f;
 
-	// Token: 0x04008942 RID: 35138
+	// Token: 0x04008A87 RID: 35463
 	protected PayShopGoods Data;
 
-	// Token: 0x04008943 RID: 35139
+	// Token: 0x04008A88 RID: 35464
 	protected TimerHandle SellTimerId;
 
-	// Token: 0x04008944 RID: 35140
+	// Token: 0x04008A89 RID: 35465
 	protected TimerHandle DiscountTimerId;
 
-	// Token: 0x04008945 RID: 35141
+	// Token: 0x04008A8A RID: 35466
 	protected Action<int> ToggleFunction;
 
-	// Token: 0x04008946 RID: 35142
+	// Token: 0x04008A8B RID: 35467
 	private UUIText DebugText;
 
-	// Token: 0x04008947 RID: 35143
+	// Token: 0x04008A8C RID: 35468
 	private bool IsAddEvent;
 
-	// Token: 0x04008948 RID: 35144
+	// Token: 0x04008A8D RID: 35469
 	private int HelpId;
 
-	// Token: 0x04008949 RID: 35145
+	// Token: 0x04008A8E RID: 35470
 	private readonly EQualityPathType QualityPathType;
 
-	// Token: 0x0400894A RID: 35146
+	// Token: 0x04008A8F RID: 35471
 	private EUiViewName? BelongViewName;
 
-	// Token: 0x0400894B RID: 35147
+	// Token: 0x04008A90 RID: 35472
 	private int DebugTextLoadId = LguiResourceManager.Instance.InvalidId;
 
-	// Token: 0x02008924 RID: 35108
+	// Token: 0x02007AAE RID: 31406
 	[NullableContext(0)]
 	private class EPayShopGiftItemDefine
 	{
-		// Token: 0x0402C939 RID: 182585
+		// Token: 0x04027C51 RID: 162897
 		public const int Toggle = 0;
 
-		// Token: 0x0402C93A RID: 182586
+		// Token: 0x04027C52 RID: 162898
 		public const int GiftIcon = 1;
 
-		// Token: 0x0402C93B RID: 182587
+		// Token: 0x04027C53 RID: 162899
 		public const int GiftQuality = 2;
 
-		// Token: 0x0402C93C RID: 182588
+		// Token: 0x04027C54 RID: 162900
 		public const int GiftName = 3;
 
-		// Token: 0x0402C93D RID: 182589
+		// Token: 0x04027C55 RID: 162901
 		public const int TipsText = 4;
 
-		// Token: 0x0402C93E RID: 182590
+		// Token: 0x04027C56 RID: 162902
 		public const int CurrencyIcon = 5;
 
-		// Token: 0x0402C93F RID: 182591
+		// Token: 0x04027C57 RID: 162903
 		public const int CurrencyNowPrice = 6;
 
-		// Token: 0x0402C940 RID: 182592
+		// Token: 0x04027C58 RID: 162904
 		public const int CurrencyOriginalPrice = 7;
 
-		// Token: 0x0402C941 RID: 182593
+		// Token: 0x04027C59 RID: 162905
 		public const int DiscountTimeItem = 8;
 
-		// Token: 0x0402C942 RID: 182594
+		// Token: 0x04027C5A RID: 162906
 		public const int DiscountTimeIconItem = 9;
 
-		// Token: 0x0402C943 RID: 182595
+		// Token: 0x04027C5B RID: 162907
 		public const int DiscountTimeText = 10;
 
-		// Token: 0x0402C944 RID: 182596
+		// Token: 0x04027C5C RID: 162908
 		public const int SellTimeText = 11;
 
-		// Token: 0x0402C945 RID: 182597
+		// Token: 0x04027C5D RID: 162909
 		public const int SellTimeItem = 12;
 
-		// Token: 0x0402C946 RID: 182598
+		// Token: 0x04027C5E RID: 162910
 		public const int TipsButton = 13;
 	}
 }

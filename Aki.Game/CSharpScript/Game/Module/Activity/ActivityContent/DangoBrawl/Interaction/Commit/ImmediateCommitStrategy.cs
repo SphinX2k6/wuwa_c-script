@@ -5,18 +5,18 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interaction.Commit
 {
-	// Token: 0x02006888 RID: 26760
+	// Token: 0x020057D8 RID: 22488
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ImmediateCommitStrategy : ICommitStrategy
 	{
-		// Token: 0x06042CE5 RID: 273637 RVA: 0x0104307C File Offset: 0x0104127C
+		// Token: 0x0603783D RID: 227389 RVA: 0x00F845FC File Offset: 0x00F827FC
 		public ImmediateCommitStrategy(ActivityDangoBrawlData data)
 		{
 			this.Data = data;
 		}
 
-		// Token: 0x06042CE6 RID: 273638 RVA: 0x0104308C File Offset: 0x0104128C
+		// Token: 0x0603783E RID: 227390 RVA: 0x00F8460C File Offset: 0x00F8280C
 		[return: Nullable(0)]
 		public UniTask<EPlaceResult> Commit(IDragSourceAdapter adapter, IDragVisual visual, [Nullable(2)] DragTarget target, [Nullable(2)] ItemSucAnchor anchor)
 		{
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			return result;
 		}
 
-		// Token: 0x06042CE7 RID: 273639 RVA: 0x010430F0 File Offset: 0x010412F0
+		// Token: 0x0603783F RID: 227391 RVA: 0x00F84670 File Offset: 0x00F82870
 		[return: Nullable(0)]
 		private UniTask<EPlaceResult> CommitToShop(IDragSourceAdapter adapter, IDragVisual visual, DragTarget target, [Nullable(2)] ItemSucAnchor anchor)
 		{
@@ -59,14 +59,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			return <CommitToShop>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042CE8 RID: 273640 RVA: 0x01043154 File Offset: 0x01041354
+		// Token: 0x06037840 RID: 227392 RVA: 0x00F846D4 File Offset: 0x00F828D4
 		[return: Nullable(0)]
 		private UniTask<EPlaceResult> CommitToBench(IDragSourceAdapter adapter, IDragVisual visual, DragTarget target, [Nullable(2)] ItemSucAnchor anchor)
 		{
 			return this.RunAdapterCommit(adapter, visual, target, anchor);
 		}
 
-		// Token: 0x06042CE9 RID: 273641 RVA: 0x01043164 File Offset: 0x01041364
+		// Token: 0x06037841 RID: 227393 RVA: 0x00F846E4 File Offset: 0x00F828E4
 		[return: Nullable(0)]
 		private UniTask<EPlaceResult> CommitToBag(IDragSourceAdapter adapter, IDragVisual visual, DragTarget target, [Nullable(2)] ItemSucAnchor anchor)
 		{
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			return <CommitToBag>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042CEA RID: 273642 RVA: 0x010431C8 File Offset: 0x010413C8
+		// Token: 0x06037842 RID: 227394 RVA: 0x00F84748 File Offset: 0x00F82948
 		[return: Nullable(0)]
 		private UniTask<EPlaceResult> RunAdapterCommit(IDragSourceAdapter adapter, IDragVisual visual, DragTarget target, [Nullable(2)] ItemSucAnchor anchor)
 		{
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Interacti
 			return <RunAdapterCommit>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x04022C41 RID: 142401
+		// Token: 0x0401D49D RID: 119965
 		private readonly ActivityDangoBrawlData Data;
 	}
 }

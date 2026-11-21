@@ -7,7 +7,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020012DF RID: 4831
+// Token: 0x02000793 RID: 1939
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,13 +16,13 @@ using UnrealEngine;
 })]
 public class TaskItemBase<[Nullable(2)] TData> : GridProxyAbstract<TData>
 {
-	// Token: 0x0600853A RID: 34106 RVA: 0x001C54D3 File Offset: 0x001C36D3
+	// Token: 0x060058D5 RID: 22741 RVA: 0x001CE32F File Offset: 0x001CC52F
 	public TaskItemBase(ActivityMapTravelData activityBaseData)
 	{
 		this.ActivityBaseData = activityBaseData;
 	}
 
-	// Token: 0x0600853B RID: 34107 RVA: 0x001C54E4 File Offset: 0x001C36E4
+	// Token: 0x060058D6 RID: 22742 RVA: 0x001CE340 File Offset: 0x001CC540
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -48,7 +48,7 @@ public class TaskItemBase<[Nullable(2)] TData> : GridProxyAbstract<TData>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600853C RID: 34108 RVA: 0x001C5614 File Offset: 0x001C3814
+	// Token: 0x060058D7 RID: 22743 RVA: 0x001CE470 File Offset: 0x001CC670
 	protected override UniTask OnBeforeStartAsync()
 	{
 		TaskItemBase<TData>.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -59,7 +59,7 @@ public class TaskItemBase<[Nullable(2)] TData> : GridProxyAbstract<TData>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600853D RID: 34109 RVA: 0x001C5658 File Offset: 0x001C3858
+	// Token: 0x060058D8 RID: 22744 RVA: 0x001CE4B4 File Offset: 0x001CC6B4
 	protected override void OnStart()
 	{
 		this.RewardScrollView = new GenericLayout<ActivitySmallItemGrid, IItemGridData>(base.GetHorizontalLayout(2), new Func<ActivitySmallItemGrid>(this.InitItem), null, false, true);
@@ -67,40 +67,40 @@ public class TaskItemBase<[Nullable(2)] TData> : GridProxyAbstract<TData>
 		this.RewardButtonItem.SetLocalTextNew("MapTravelGetReward_Text", Array.Empty<object>());
 	}
 
-	// Token: 0x0600853E RID: 34110 RVA: 0x001C56B0 File Offset: 0x001C38B0
+	// Token: 0x060058D9 RID: 22745 RVA: 0x001CE50C File Offset: 0x001CC70C
 	private ActivitySmallItemGrid InitItem()
 	{
 		return new ActivitySmallItemGrid();
 	}
 
-	// Token: 0x0600853F RID: 34111 RVA: 0x001C56B7 File Offset: 0x001C38B7
+	// Token: 0x060058DA RID: 22746 RVA: 0x001CE513 File Offset: 0x001CC713
 	public override void Refresh(TData taskData, bool isSelected, int gridIndex)
 	{
 		this.TaskData = taskData;
 	}
 
-	// Token: 0x06008540 RID: 34112 RVA: 0x001C56C0 File Offset: 0x001C38C0
+	// Token: 0x060058DB RID: 22747 RVA: 0x001CE51C File Offset: 0x001CC71C
 	protected virtual void OnClickedButton()
 	{
 	}
 
-	// Token: 0x06008541 RID: 34113 RVA: 0x001C56C2 File Offset: 0x001C38C2
+	// Token: 0x060058DC RID: 22748 RVA: 0x001CE51E File Offset: 0x001CC71E
 	protected virtual void OnClickedRewardButton()
 	{
 	}
 
-	// Token: 0x04003BC2 RID: 15298
+	// Token: 0x04003C5A RID: 15450
 	protected GenericLayout<ActivitySmallItemGrid, IItemGridData> RewardScrollView;
 
-	// Token: 0x04003BC3 RID: 15299
+	// Token: 0x04003C5B RID: 15451
 	protected ActivityButtonItem ButtonItem;
 
-	// Token: 0x04003BC4 RID: 15300
+	// Token: 0x04003C5C RID: 15452
 	protected ActivityButtonItem RewardButtonItem;
 
-	// Token: 0x04003BC5 RID: 15301
+	// Token: 0x04003C5D RID: 15453
 	protected TData TaskData;
 
-	// Token: 0x04003BC6 RID: 15302
+	// Token: 0x04003C5E RID: 15454
 	protected ActivityMapTravelData ActivityBaseData;
 }

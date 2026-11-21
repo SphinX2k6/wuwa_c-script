@@ -2,13 +2,13 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x02006594 RID: 26004
+	// Token: 0x02005512 RID: 21778
 	public interface IDockyardConfirmProvider
 	{
-		// Token: 0x06041337 RID: 267063
+		// Token: 0x06035FFC RID: 221180
 		bool IsConfirmInteractive();
 
-		// Token: 0x06041338 RID: 267064
+		// Token: 0x06035FFD RID: 221181
 		bool IsConfirmNiagaraActive();
 	}
 }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002712 RID: 10002
+	// Token: 0x020029D9 RID: 10713
 	public class IUnLockDangoCollectSystemItem : IUnlockSystemItemType
 	{
-		// Token: 0x0600DF21 RID: 57121 RVA: 0x002111D6 File Offset: 0x0020F3D6
-		[NullableContext(1)]
+		// Token: 0x0600ED0D RID: 60685 RVA: 0x0022DB7E File Offset: 0x0022BD7E
 		public static IUnLockDangoCollectSystemItem Create(IUnLockDangoCollectSystemItem? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170042BF RID: 17087
-		// (get) Token: 0x0600DF22 RID: 57122 RVA: 0x002111F5 File Offset: 0x0020F3F5
+		// Token: 0x17004609 RID: 17929
+		// (get) Token: 0x0600ED0E RID: 60686 RVA: 0x0022DB9D File Offset: 0x0022BD9D
 		public override EUnlockSystemItemType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170042C0 RID: 17088
-		// (get) Token: 0x0600DF23 RID: 57123 RVA: 0x00211202 File Offset: 0x0020F402
+		// Token: 0x1700460A RID: 17930
+		// (get) Token: 0x0600ED0F RID: 60687 RVA: 0x0022DBAA File Offset: 0x0022BDAA
 		public virtual int Id
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007BD2 RID: 31698
+		// Token: 0x04008277 RID: 33399
 		private IUnLockDangoCollectSystemItem Instance;
 	}
 }

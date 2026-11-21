@@ -5,12 +5,12 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.SkillButtonUi.Custom
 {
-	// Token: 0x02004C29 RID: 19497
+	// Token: 0x02003BDA RID: 15322
 	[NullableContext(2)]
 	[Nullable(0)]
 	public static class SkillButtonCustomHandleFactory
 	{
-		// Token: 0x06032732 RID: 206642 RVA: 0x00BC1A38 File Offset: 0x00BBFC38
+		// Token: 0x060274E5 RID: 160997 RVA: 0x00B06650 File Offset: 0x00B04850
 		public static SkillButtonCustomHandleBase GetSkillButtonCustomHandleById(int customHandleId)
 		{
 			if (customHandleId == 0)
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi.Custom
 			return skillButtonCustomHandleByType;
 		}
 
-		// Token: 0x06032733 RID: 206643 RVA: 0x00BC1AE0 File Offset: 0x00BBFCE0
+		// Token: 0x060274E6 RID: 160998 RVA: 0x00B066F8 File Offset: 0x00B048F8
 		public static SkillButtonCustomHandleBase GetSkillButtonCustomHandleByType(ESkillButtonCustomHandle customHandleType)
 		{
 			Type type;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi.Custom
 			return null;
 		}
 
-		// Token: 0x06032734 RID: 206644 RVA: 0x00BC1B1C File Offset: 0x00BBFD1C
+		// Token: 0x060274E7 RID: 160999 RVA: 0x00B06734 File Offset: 0x00B04934
 		// Note: this type is marked as 'beforefieldinit'.
 		static SkillButtonCustomHandleFactory()
 		{
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.SkillButtonUi.Custom
 			SkillButtonCustomHandleFactory.Map = dictionary;
 		}
 
-		// Token: 0x0401ADB9 RID: 110009
+		// Token: 0x04015716 RID: 87830
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		public static Dictionary<ESkillButtonCustomHandle, Type> Map;

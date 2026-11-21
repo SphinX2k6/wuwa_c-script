@@ -3,22 +3,21 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FB7 RID: 8119
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x020021FA RID: 8698
 	public class ITeleportTransitionWithPlayFlow_SetValue
 	{
-		// Token: 0x04006BD9 RID: 27609
+		// Token: 0x040071D4 RID: 29140
 		public ETeleportTransitionType Type;
 
-		// Token: 0x04006BDA RID: 27610
-		[Nullable(1)]
+		// Token: 0x040071D5 RID: 29141
 		public PlayFlow Flow;
 
-		// Token: 0x04006BDB RID: 27611
+		// Token: 0x040071D6 RID: 29142
+		[Nullable(2)]
 		public IFadeBackgroundFadeInEffect FadeInEffect;
 
-		// Token: 0x04006BDC RID: 27612
+		// Token: 0x040071D7 RID: 29143
+		[Nullable(2)]
 		public IFadeBackgroundFadeOutEffect FadeOutEffect;
 	}
 }

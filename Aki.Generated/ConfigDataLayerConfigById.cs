@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020001F7 RID: 503
+	// Token: 0x02000209 RID: 521
 	public class ConfigDataLayerConfigById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000BCD RID: 3021 RVA: 0x0009C654 File Offset: 0x0009A854
+		// Token: 0x06000C39 RID: 3129 RVA: 0x000A258C File Offset: 0x000A078C
 		static ConfigDataLayerConfigById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigDataLayerConfigById.CreateStaticDefaultValue), new Action(ConfigDataLayerConfigById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000BCE RID: 3022 RVA: 0x0009C674 File Offset: 0x0009A874
+		// Token: 0x06000C3A RID: 3130 RVA: 0x000A25AC File Offset: 0x000A07AC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigDataLayerConfigById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000BCF RID: 3023 RVA: 0x0009C6F3 File Offset: 0x0009A8F3
+		// Token: 0x06000C3B RID: 3131 RVA: 0x000A262B File Offset: 0x000A082B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigDataLayerConfigById.LogPair = null;
 			ConfigDataLayerConfigById.HandleId = 0;
 		}
 
-		// Token: 0x06000BD0 RID: 3024 RVA: 0x0009C701 File Offset: 0x0009A901
+		// Token: 0x06000C3C RID: 3132 RVA: 0x000A2639 File Offset: 0x000A0839
 		public static void Init()
 		{
 			ConfigDataLayerConfigById.HandleId = ConfigCommon.InitDataStatement(ConfigDataLayerConfigById.HandleId, "db_datalayer.db", "select BinData from `DataLayerConfig` where Id=?");
 		}
 
-		// Token: 0x06000BD1 RID: 3025 RVA: 0x0009C71C File Offset: 0x0009A91C
+		// Token: 0x06000C3D RID: 3133 RVA: 0x000A2654 File Offset: 0x000A0854
 		public static DataLayerConfig? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigDataLayerConfigById.HandleId, ConfigDataLayerConfigById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new DataLayerConfig?(rootAsDataLayerConfig);
 		}
 
-		// Token: 0x04000DA5 RID: 3493
+		// Token: 0x04000E23 RID: 3619
 		private const string DB = "db_datalayer.db";
 
-		// Token: 0x04000DA6 RID: 3494
+		// Token: 0x04000E24 RID: 3620
 		private const string FILE = "k.可视化编辑/c.Csv/d.DataLayer/*.csv*";
 
-		// Token: 0x04000DA7 RID: 3495
+		// Token: 0x04000E25 RID: 3621
 		private const string TABLE = "DataLayerConfig";
 
-		// Token: 0x04000DA8 RID: 3496
+		// Token: 0x04000E26 RID: 3622
 		private const string COMMAND = "select BinData from `DataLayerConfig` where Id=?";
 
-		// Token: 0x04000DA9 RID: 3497
+		// Token: 0x04000E27 RID: 3623
 		private const string KEY_PREFIX = "DataLayerConfigById";
 
-		// Token: 0x04000DAA RID: 3498
+		// Token: 0x04000E28 RID: 3624
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000DAB RID: 3499
+		// Token: 0x04000E29 RID: 3625
 		private static int HandleId;
 	}
 }

@@ -5,7 +5,7 @@ using CSharpScript.Game.Module.Manufacture.Common;
 
 namespace CSharpScript.Game.Module.Manufacture.Compose.View
 {
-	// Token: 0x0200566F RID: 22127
+	// Token: 0x02004645 RID: 17989
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -14,7 +14,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 	})]
 	public class ComposeExchangeItem : LoopScrollMediumItemGrid<ISingleItemInfo>
 	{
-		// Token: 0x060384C0 RID: 230592 RVA: 0x00D5A1A8 File Offset: 0x00D583A8
+		// Token: 0x0602D3BD RID: 185277 RVA: 0x00CA82A8 File Offset: 0x00CA64A8
 		protected override void OnRefresh(ISingleItemInfo data, bool isSelected, int gridIndex)
 		{
 			int itemCountByConfigId = InventoryModel.Instance.GetItemCountByConfigId(data.Proto_ItemId, 0);
@@ -50,13 +50,13 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.View
 			this.SetSelected(false, false);
 		}
 
-		// Token: 0x060384C1 RID: 230593 RVA: 0x00D5A27F File Offset: 0x00D5847F
+		// Token: 0x0602D3BE RID: 185278 RVA: 0x00CA837F File Offset: 0x00CA657F
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetSelected(true, false);
 		}
 
-		// Token: 0x060384C2 RID: 230594 RVA: 0x00D5A289 File Offset: 0x00D58489
+		// Token: 0x0602D3BF RID: 185279 RVA: 0x00CA8389 File Offset: 0x00CA6589
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetSelected(false, false);

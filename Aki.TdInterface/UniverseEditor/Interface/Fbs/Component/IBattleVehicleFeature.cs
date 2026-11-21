@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004EFE RID: 20222
+	// Token: 0x02005430 RID: 21552
 	public struct IBattleVehicleFeature : IFlatbufferObject
 	{
-		// Token: 0x17009182 RID: 37250
-		// (get) Token: 0x0601FF20 RID: 130848 RVA: 0x00472370 File Offset: 0x00470570
+		// Token: 0x17009904 RID: 39172
+		// (get) Token: 0x06021C90 RID: 138384 RVA: 0x004A8704 File Offset: 0x004A6904
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601FF21 RID: 130849 RVA: 0x0047237D File Offset: 0x0047057D
+		// Token: 0x06021C91 RID: 138385 RVA: 0x004A8711 File Offset: 0x004A6911
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601FF22 RID: 130850 RVA: 0x00472384 File Offset: 0x00470584
+		// Token: 0x06021C92 RID: 138386 RVA: 0x004A8718 File Offset: 0x004A6918
 		public static IBattleVehicleFeature GetRootAsIBattleVehicleFeature(ByteBuffer _bb)
 		{
 			return IBattleVehicleFeature.GetRootAsIBattleVehicleFeature(_bb, default(IBattleVehicleFeature));
 		}
 
-		// Token: 0x0601FF23 RID: 130851 RVA: 0x004723A0 File Offset: 0x004705A0
+		// Token: 0x06021C93 RID: 138387 RVA: 0x004A8734 File Offset: 0x004A6934
 		public static IBattleVehicleFeature GetRootAsIBattleVehicleFeature(ByteBuffer _bb, IBattleVehicleFeature obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601FF24 RID: 130852 RVA: 0x004723BD File Offset: 0x004705BD
+		// Token: 0x06021C94 RID: 138388 RVA: 0x004A8751 File Offset: 0x004A6951
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601FF25 RID: 130853 RVA: 0x004723CC File Offset: 0x004705CC
+		// Token: 0x06021C95 RID: 138389 RVA: 0x004A8760 File Offset: 0x004A6960
 		public IBattleVehicleFeature __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009183 RID: 37251
-		// (get) Token: 0x0601FF26 RID: 130854 RVA: 0x004723DC File Offset: 0x004705DC
+		// Token: 0x17009905 RID: 39173
+		// (get) Token: 0x06021C96 RID: 138390 RVA: 0x004A8770 File Offset: 0x004A6970
 		public EVehicleFeatureFlag Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0601FF27 RID: 130855 RVA: 0x00472418 File Offset: 0x00470618
+		// Token: 0x06021C97 RID: 138391 RVA: 0x004A87AC File Offset: 0x004A69AC
 		public static Offset<IBattleVehicleFeature> CreateIBattleVehicleFeature(FlatBufferBuilder builder, EVehicleFeatureFlag Type = EVehicleFeatureFlag.None)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IBattleVehicleFeature.EndIBattleVehicleFeature(builder);
 		}
 
-		// Token: 0x0601FF28 RID: 130856 RVA: 0x0047242E File Offset: 0x0047062E
+		// Token: 0x06021C98 RID: 138392 RVA: 0x004A87C2 File Offset: 0x004A69C2
 		public static void StartIBattleVehicleFeature(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0601FF29 RID: 130857 RVA: 0x00472437 File Offset: 0x00470637
+		// Token: 0x06021C99 RID: 138393 RVA: 0x004A87CB File Offset: 0x004A69CB
 		public static void AddType(FlatBufferBuilder builder, EVehicleFeatureFlag type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601FF2A RID: 130858 RVA: 0x00472442 File Offset: 0x00470642
+		// Token: 0x06021C9A RID: 138394 RVA: 0x004A87D6 File Offset: 0x004A69D6
 		public static Offset<IBattleVehicleFeature> EndIBattleVehicleFeature(FlatBufferBuilder builder)
 		{
 			return new Offset<IBattleVehicleFeature>(builder.EndTable());
 		}
 
-		// Token: 0x0601FF2B RID: 130859 RVA: 0x00472450 File Offset: 0x00470650
+		// Token: 0x06021C9B RID: 138395 RVA: 0x004A87E4 File Offset: 0x004A69E4
 		public IBattleVehicleFeatureT UnPack()
 		{
 			IBattleVehicleFeatureT battleVehicleFeatureT = new IBattleVehicleFeatureT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return battleVehicleFeatureT;
 		}
 
-		// Token: 0x0601FF2C RID: 130860 RVA: 0x0047246B File Offset: 0x0047066B
+		// Token: 0x06021C9C RID: 138396 RVA: 0x004A87FF File Offset: 0x004A69FF
 		public void UnPackTo(IBattleVehicleFeatureT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0601FF2D RID: 130861 RVA: 0x0047247C File Offset: 0x0047067C
+		// Token: 0x06021C9D RID: 138397 RVA: 0x004A8810 File Offset: 0x004A6A10
 		public static Offset<IBattleVehicleFeature> Pack(FlatBufferBuilder builder, IBattleVehicleFeatureT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IBattleVehicleFeature.CreateIBattleVehicleFeature(builder, _o.Type);
 		}
 
-		// Token: 0x0400DD37 RID: 56631
+		// Token: 0x0400E8E6 RID: 59622
 		private Table __p;
 	}
 }

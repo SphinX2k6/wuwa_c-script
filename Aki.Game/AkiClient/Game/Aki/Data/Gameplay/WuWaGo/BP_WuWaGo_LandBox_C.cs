@@ -7,14 +7,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Data.Gameplay.WuWaGo
 {
-	// Token: 0x02003F2A RID: 16170
+	// Token: 0x020031D6 RID: 12758
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Data/Gameplay/WuWaGo/BP_WuWaGo_LandBox.BP_WuWaGo_LandBox_C")]
 	[UnrealStructLayout(1080, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1080)]
 	public class BP_WuWaGo_LandBox_C : AActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06029186 RID: 168326 RVA: 0x009BBB17 File Offset: 0x009B9D17
+		// Token: 0x0601FA99 RID: 129689 RVA: 0x00932C9B File Offset: 0x00930E9B
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_WuWaGo_LandBox_C._ClassPtr == IntPtr.Zero)
@@ -24,103 +24,101 @@ namespace AkiClient.Game.Aki.Data.Gameplay.WuWaGo
 			return BP_WuWaGo_LandBox_C._ClassPtr;
 		}
 
-		// Token: 0x06029187 RID: 168327 RVA: 0x009BBB3C File Offset: 0x009B9D3C
+		// Token: 0x0601FA9A RID: 129690 RVA: 0x00932CC0 File Offset: 0x00930EC0
 		public BP_WuWaGo_LandBox_C() : this(BuiltinUtils.AllocNativeUObject(BP_WuWaGo_LandBox_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06029188 RID: 168328 RVA: 0x009BBB64 File Offset: 0x009B9D64
+		// Token: 0x0601FA9B RID: 129691 RVA: 0x00932CE8 File Offset: 0x00930EE8
 		[NullableContext(1)]
 		public BP_WuWaGo_LandBox_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_WuWaGo_LandBox_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17006170 RID: 24944
-		// (get) Token: 0x06029189 RID: 168329 RVA: 0x009BBB97 File Offset: 0x009B9D97
-		// (set) Token: 0x0602918A RID: 168330 RVA: 0x009BBBAB File Offset: 0x009B9DAB
+		// Token: 0x17003ABC RID: 15036
+		// (get) Token: 0x0601FA9C RID: 129692 RVA: 0x00932D1B File Offset: 0x00930F1B
+		// (set) Token: 0x0601FA9D RID: 129693 RVA: 0x00932D2F File Offset: 0x00930F2F
 		public unsafe UStaticMeshComponent 模型
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UStaticMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_WuWaGo_LandBox_C.__PropertyOffset_1);
+				return BuiltinUtils.ObjectPropertyGetter<UStaticMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_WuWaGo_LandBox_C.__PropertyOffset_模型);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_WuWaGo_LandBox_C.__PropertyOffset_1, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_WuWaGo_LandBox_C.__PropertyOffset_模型, value);
 			}
 		}
 
-		// Token: 0x17006171 RID: 24945
-		// (get) Token: 0x0602918B RID: 168331 RVA: 0x009BBBC0 File Offset: 0x009B9DC0
-		// (set) Token: 0x0602918C RID: 168332 RVA: 0x009BBBD4 File Offset: 0x009B9DD4
+		// Token: 0x17003ABD RID: 15037
+		// (get) Token: 0x0601FA9E RID: 129694 RVA: 0x00932D44 File Offset: 0x00930F44
+		// (set) Token: 0x0601FA9F RID: 129695 RVA: 0x00932D58 File Offset: 0x00930F58
 		public unsafe UStaticMeshComponent Plane
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UStaticMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_WuWaGo_LandBox_C.__PropertyOffset_2);
+				return BuiltinUtils.ObjectPropertyGetter<UStaticMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_WuWaGo_LandBox_C.__PropertyOffset_Plane);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_WuWaGo_LandBox_C.__PropertyOffset_2, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_WuWaGo_LandBox_C.__PropertyOffset_Plane, value);
 			}
 		}
 
-		// Token: 0x17006172 RID: 24946
-		// (get) Token: 0x0602918D RID: 168333 RVA: 0x009BBBE9 File Offset: 0x009B9DE9
-		// (set) Token: 0x0602918E RID: 168334 RVA: 0x009BBBFD File Offset: 0x009B9DFD
+		// Token: 0x17003ABE RID: 15038
+		// (get) Token: 0x0601FAA0 RID: 129696 RVA: 0x00932D6D File Offset: 0x00930F6D
+		// (set) Token: 0x0601FAA1 RID: 129697 RVA: 0x00932D81 File Offset: 0x00930F81
 		public unsafe USceneComponent DefaultSceneRoot
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_WuWaGo_LandBox_C.__PropertyOffset_3);
+				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_WuWaGo_LandBox_C.__PropertyOffset_DefaultSceneRoot);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_WuWaGo_LandBox_C.__PropertyOffset_3, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_WuWaGo_LandBox_C.__PropertyOffset_DefaultSceneRoot, value);
 			}
 		}
 
-		// Token: 0x0602918F RID: 168335 RVA: 0x009BBC12 File Offset: 0x009B9E12
+		// Token: 0x0601FAA2 RID: 129698 RVA: 0x00932D96 File Offset: 0x00930F96
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void ReceiveBeginPlay()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_WuWaGo_LandBox_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06029190 RID: 168336 RVA: 0x009BBC26 File Offset: 0x009B9E26
+		// Token: 0x0601FAA3 RID: 129699 RVA: 0x00932DAA File Offset: 0x00930FAA
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void ReceiveBeginPlay_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_WuWaGo_LandBox_C.__ReceiveBeginPlay_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_WuWaGo_LandBox_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06029191 RID: 168337 RVA: 0x009BBC3B File Offset: 0x009B9E3B
+		// Token: 0x0601FAA4 RID: 129700 RVA: 0x00932DBE File Offset: 0x00930FBE
 		protected BP_WuWaGo_LandBox_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0401508D RID: 86157
+		// Token: 0x04010FBD RID: 69565
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Data/Gameplay/WuWaGo/BP_WuWaGo_LandBox.BP_WuWaGo_LandBox_C";
 
-		// Token: 0x0401508E RID: 86158
+		// Token: 0x04010FBE RID: 69566
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401508F RID: 86159
+		// Token: 0x04010FBF RID: 69567
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04015090 RID: 86160
-		internal static int __PropertyOffset_1;
+		// Token: 0x04010FC0 RID: 69568
+		internal static int __PropertyOffset_模型;
 
-		// Token: 0x04015091 RID: 86161
-		internal static int __PropertyOffset_2;
+		// Token: 0x04010FC1 RID: 69569
+		internal static int __PropertyOffset_Plane;
 
-		// Token: 0x04015092 RID: 86162
-		internal static int __PropertyOffset_3;
+		// Token: 0x04010FC2 RID: 69570
+		internal static int __PropertyOffset_DefaultSceneRoot;
 
-		// Token: 0x04015093 RID: 86163
+		// Token: 0x04010FC3 RID: 69571
 		private static IntPtr __ReceiveBeginPlay_NativeFunctionPtr;
 	}
 }

@@ -6,27 +6,27 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 
-// Token: 0x02002458 RID: 9304
+// Token: 0x0200193D RID: 6461
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class PhantomInteractController : UiControllerBase
 {
-	// Token: 0x06012AA0 RID: 76448 RVA: 0x0049C293 File Offset: 0x0049A493
+	// Token: 0x0600FF58 RID: 65368 RVA: 0x004A99FF File Offset: 0x004A7BFF
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.PhantomInteractionUnlockNotify, new Action<IMessage, Net.CallbackStatus>(this.OnPhantomInteractionUnlockNotify));
 		Net.Instance.Register(ENotifyMessageId.PhantomInteractionInfoUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnPhantomInteractionInfoUpdateNotify));
 	}
 
-	// Token: 0x06012AA1 RID: 76449 RVA: 0x0049C2CD File Offset: 0x0049A4CD
+	// Token: 0x0600FF59 RID: 65369 RVA: 0x004A9A39 File Offset: 0x004A7C39
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.PhantomInteractionUnlockNotify);
 		Net.Instance.UnRegister(ENotifyMessageId.PhantomInteractionInfoUpdateNotify);
 	}
 
-	// Token: 0x06012AA2 RID: 76450 RVA: 0x0049C2F0 File Offset: 0x0049A4F0
+	// Token: 0x0600FF5A RID: 65370 RVA: 0x004A9A5C File Offset: 0x004A7C5C
 	[NullableContext(2)]
 	private void OnPhantomInteractionUnlockNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -34,7 +34,7 @@ public class PhantomInteractController : UiControllerBase
 		PhantomInteractModel.Instance.InteractInfoData.LoadFromProto(proto);
 	}
 
-	// Token: 0x06012AA3 RID: 76451 RVA: 0x0049C314 File Offset: 0x0049A514
+	// Token: 0x0600FF5B RID: 65371 RVA: 0x004A9A80 File Offset: 0x004A7C80
 	[NullableContext(2)]
 	private void OnPhantomInteractionInfoUpdateNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -47,7 +47,7 @@ public class PhantomInteractController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06012AA4 RID: 76452 RVA: 0x0049C360 File Offset: 0x0049A560
+	// Token: 0x0600FF5C RID: 65372 RVA: 0x004A9ACC File Offset: 0x004A7CCC
 	public void OpenPhantomVisionSummonView(int entityId, int skillId)
 	{
 		PhantomInteractModel instance = PhantomInteractModel.Instance;
@@ -56,7 +56,7 @@ public class PhantomInteractController : UiControllerBase
 		UiManager.Instance.OpenView(EUiViewName.PhantomInteractSummonView, instance.InteractInfoData, null);
 	}
 
-	// Token: 0x06012AA5 RID: 76453 RVA: 0x0049C398 File Offset: 0x0049A598
+	// Token: 0x0600FF5D RID: 65373 RVA: 0x004A9B04 File Offset: 0x004A7D04
 	public void OpenPhantomVisionEditView(int index = 0, bool fromSummonView = false)
 	{
 		PhantomInteractModel instance = PhantomInteractModel.Instance;
@@ -68,7 +68,7 @@ public class PhantomInteractController : UiControllerBase
 		UiManager.Instance.OpenView(EUiViewName.PhantomInteractEditView, phantomInteractEditViewParam, null);
 	}
 
-	// Token: 0x06012AA6 RID: 76454 RVA: 0x0049C3E4 File Offset: 0x0049A5E4
+	// Token: 0x0600FF5E RID: 65374 RVA: 0x004A9B50 File Offset: 0x004A7D50
 	public void BeginVisionSkill(int monsterId)
 	{
 		PhantomInteractModel instance = PhantomInteractModel.Instance;
@@ -89,7 +89,7 @@ public class PhantomInteractController : UiControllerBase
 		component.BeginSkillAsync(210008, skillParam);
 	}
 
-	// Token: 0x06012AA7 RID: 76455 RVA: 0x0049C448 File Offset: 0x0049A648
+	// Token: 0x0600FF5F RID: 65375 RVA: 0x004A9BB4 File Offset: 0x004A7DB4
 	public UniTask UpdateEquippedPhantom()
 	{
 		PhantomInteractController.<UpdateEquippedPhantom>d__7 <UpdateEquippedPhantom>d__;
@@ -99,7 +99,7 @@ public class PhantomInteractController : UiControllerBase
 		return <UpdateEquippedPhantom>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012AA8 RID: 76456 RVA: 0x0049C484 File Offset: 0x0049A684
+	// Token: 0x0600FF60 RID: 65376 RVA: 0x004A9BF0 File Offset: 0x004A7DF0
 	public UniTask UpdateEquippedPhantomSkin(int monsterId, int skinId)
 	{
 		PhantomInteractController.<UpdateEquippedPhantomSkin>d__8 <UpdateEquippedPhantomSkin>d__;
@@ -111,8 +111,8 @@ public class PhantomInteractController : UiControllerBase
 		return <UpdateEquippedPhantomSkin>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x17001834 RID: 6196
-	// (get) Token: 0x06012AA9 RID: 76457 RVA: 0x0049C4CF File Offset: 0x0049A6CF
+	// Token: 0x1700186E RID: 6254
+	// (get) Token: 0x0600FF61 RID: 65377 RVA: 0x004A9C3B File Offset: 0x004A7E3B
 	public static PhantomInteractController Instance
 	{
 		get
@@ -121,7 +121,7 @@ public class PhantomInteractController : UiControllerBase
 		}
 	}
 
-	// Token: 0x06012AAA RID: 76458 RVA: 0x0049C4D6 File Offset: 0x0049A6D6
+	// Token: 0x0600FF62 RID: 65378 RVA: 0x004A9C42 File Offset: 0x004A7E42
 	public static PhantomInteractController GetOrCreateInstance()
 	{
 		if (PhantomInteractController._Instance == null)
@@ -131,7 +131,7 @@ public class PhantomInteractController : UiControllerBase
 		return PhantomInteractController._Instance;
 	}
 
-	// Token: 0x06012AAB RID: 76459 RVA: 0x0049C4EA File Offset: 0x0049A6EA
+	// Token: 0x0600FF63 RID: 65379 RVA: 0x004A9C56 File Offset: 0x004A7E56
 	public static bool CreateInstance()
 	{
 		if (PhantomInteractController._Instance != null)
@@ -142,24 +142,24 @@ public class PhantomInteractController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x06012AAC RID: 76460 RVA: 0x0049C500 File Offset: 0x0049A700
+	// Token: 0x0600FF64 RID: 65380 RVA: 0x004A9C6C File Offset: 0x004A7E6C
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06012AAD RID: 76461 RVA: 0x0049C502 File Offset: 0x0049A702
+	// Token: 0x0600FF65 RID: 65381 RVA: 0x004A9C6E File Offset: 0x004A7E6E
 	public static void ResetStaticDefaultValue()
 	{
 		PhantomInteractController._Instance = null;
 	}
 
-	// Token: 0x06012AAE RID: 76462 RVA: 0x0049C50A File Offset: 0x0049A70A
+	// Token: 0x0600FF66 RID: 65382 RVA: 0x004A9C76 File Offset: 0x004A7E76
 	static PhantomInteractController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PhantomInteractController.CreateStaticDefaultValue), new Action(PhantomInteractController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04008CA0 RID: 36000
+	// Token: 0x04008DE7 RID: 36327
 	[Nullable(2)]
 	private static PhantomInteractController _Instance;
 }

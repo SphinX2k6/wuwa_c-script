@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000414 RID: 1044
+	// Token: 0x0200042A RID: 1066
 	public class ConfigHotKeyViewById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600187F RID: 6271 RVA: 0x000E455C File Offset: 0x000E275C
+		// Token: 0x06001903 RID: 6403 RVA: 0x000EACB0 File Offset: 0x000E8EB0
 		static ConfigHotKeyViewById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigHotKeyViewById.CreateStaticDefaultValue), new Action(ConfigHotKeyViewById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001880 RID: 6272 RVA: 0x000E457C File Offset: 0x000E277C
+		// Token: 0x06001904 RID: 6404 RVA: 0x000EACD0 File Offset: 0x000E8ED0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigHotKeyViewById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001881 RID: 6273 RVA: 0x000E45FB File Offset: 0x000E27FB
+		// Token: 0x06001905 RID: 6405 RVA: 0x000EAD4F File Offset: 0x000E8F4F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigHotKeyViewById.LogPair = null;
 			ConfigHotKeyViewById.HandleId = 0;
 		}
 
-		// Token: 0x06001882 RID: 6274 RVA: 0x000E4609 File Offset: 0x000E2809
+		// Token: 0x06001906 RID: 6406 RVA: 0x000EAD5D File Offset: 0x000E8F5D
 		public static void Init()
 		{
 			ConfigHotKeyViewById.HandleId = ConfigCommon.InitDataStatement(ConfigHotKeyViewById.HandleId, "db_uihotkot.db", "select BinData from `HotKeyView` where Id=?");
 		}
 
-		// Token: 0x06001883 RID: 6275 RVA: 0x000E4624 File Offset: 0x000E2824
+		// Token: 0x06001907 RID: 6407 RVA: 0x000EAD78 File Offset: 0x000E8F78
 		public static HotKeyView? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigHotKeyViewById.HandleId, ConfigHotKeyViewById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new HotKeyView?(rootAsHotKeyView);
 		}
 
-		// Token: 0x04001C70 RID: 7280
+		// Token: 0x04001D0A RID: 7434
 		private const string DB = "db_uihotkot.db";
 
-		// Token: 0x04001C71 RID: 7281
+		// Token: 0x04001D0B RID: 7435
 		private const string FILE = "j.界面快捷键.xlsx";
 
-		// Token: 0x04001C72 RID: 7282
+		// Token: 0x04001D0C RID: 7436
 		private const string TABLE = "HotKeyView";
 
-		// Token: 0x04001C73 RID: 7283
+		// Token: 0x04001D0D RID: 7437
 		private const string COMMAND = "select BinData from `HotKeyView` where Id=?";
 
-		// Token: 0x04001C74 RID: 7284
+		// Token: 0x04001D0E RID: 7438
 		private const string KEY_PREFIX = "HotKeyViewById";
 
-		// Token: 0x04001C75 RID: 7285
+		// Token: 0x04001D0F RID: 7439
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001C76 RID: 7286
+		// Token: 0x04001D10 RID: 7440
 		private static int HandleId;
 	}
 }

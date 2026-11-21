@@ -5,25 +5,25 @@ using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020018BE RID: 6334
+// Token: 0x02000D77 RID: 3447
 [NullableContext(2)]
 [Nullable(0)]
 public class ItemGridVariantOne : ItemGridAbstract, IItemGrid, IItemGridVariantOne
 {
-	// Token: 0x0600B9B4 RID: 47540 RVA: 0x002A1CF4 File Offset: 0x0029FEF4
+	// Token: 0x06008D9D RID: 36253 RVA: 0x002AC44C File Offset: 0x002AA64C
 	public ItemGridVariantOne(AActor commonItemActor = null, ItemGridAbstract source = null, EUiViewName? belongView = null) : base(commonItemActor, source, belongView)
 	{
 	}
 
-	// Token: 0x17000F5E RID: 3934
-	// (get) Token: 0x0600B9B5 RID: 47541 RVA: 0x002A1D0D File Offset: 0x0029FF0D
+	// Token: 0x17000F81 RID: 3969
+	// (get) Token: 0x06008D9E RID: 36254 RVA: 0x002AC465 File Offset: 0x002AA665
 	public bool IsItemGridVariantOne { get; } = 1;
 
-	// Token: 0x17000F5F RID: 3935
-	// (get) Token: 0x0600B9B6 RID: 47542 RVA: 0x002A1D15 File Offset: 0x0029FF15
+	// Token: 0x17000F82 RID: 3970
+	// (get) Token: 0x06008D9F RID: 36255 RVA: 0x002AC46D File Offset: 0x002AA66D
 	public bool IsItemGrid { get; } = 1;
 
-	// Token: 0x0600B9B7 RID: 47543 RVA: 0x002A1D20 File Offset: 0x0029FF20
+	// Token: 0x06008DA0 RID: 36256 RVA: 0x002AC478 File Offset: 0x002AA678
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -38,7 +38,7 @@ public class ItemGridVariantOne : ItemGridAbstract, IItemGrid, IItemGridVariantO
 		};
 	}
 
-	// Token: 0x0600B9B8 RID: 47544 RVA: 0x002A1DD4 File Offset: 0x0029FFD4
+	// Token: 0x06008DA1 RID: 36257 RVA: 0x002AC52C File Offset: 0x002AA72C
 	protected override void OnStart()
 	{
 		this.StarLayoutItem = new StarLayoutItem(base.GetItem(1));
@@ -49,115 +49,115 @@ public class ItemGridVariantOne : ItemGridAbstract, IItemGrid, IItemGridVariantO
 		this.RefreshUpgradePanel(false, null);
 	}
 
-	// Token: 0x0600B9B9 RID: 47545 RVA: 0x002A1E31 File Offset: 0x002A0031
+	// Token: 0x06008DA2 RID: 36258 RVA: 0x002AC589 File Offset: 0x002AA789
 	public void RefreshQualitySprite()
 	{
 		this.ItemGrid.RefreshQualitySprite();
 	}
 
-	// Token: 0x0600B9BA RID: 47546 RVA: 0x002A1E3E File Offset: 0x002A003E
+	// Token: 0x06008DA3 RID: 36259 RVA: 0x002AC596 File Offset: 0x002AA796
 	[NullableContext(1)]
 	public void RefreshTextureByPath(string path)
 	{
 		this.ItemGrid.RefreshTextureByPath(path);
 	}
 
-	// Token: 0x0600B9BB RID: 47547 RVA: 0x002A1E4C File Offset: 0x002A004C
+	// Token: 0x06008DA4 RID: 36260 RVA: 0x002AC5A4 File Offset: 0x002AA7A4
 	public void RefreshTextureIcon()
 	{
 		this.ItemGrid.RefreshTextureIcon();
 	}
 
-	// Token: 0x0600B9BC RID: 47548 RVA: 0x002A1E59 File Offset: 0x002A0059
+	// Token: 0x06008DA5 RID: 36261 RVA: 0x002AC5B1 File Offset: 0x002AA7B1
 	[NullableContext(1)]
 	public void RefreshTextDown(bool showState, string text)
 	{
 		this.ItemGrid.RefreshTextDown(showState, text);
 	}
 
-	// Token: 0x0600B9BD RID: 47549 RVA: 0x002A1E68 File Offset: 0x002A0068
+	// Token: 0x06008DA6 RID: 36262 RVA: 0x002AC5C0 File Offset: 0x002AA7C0
 	[NullableContext(1)]
 	public void RefreshTextDownByTextId(bool showState, string textId, params object[] args)
 	{
 		this.ItemGrid.RefreshTextDownByTextId(showState, textId, args);
 	}
 
-	// Token: 0x0600B9BE RID: 47550 RVA: 0x002A1E78 File Offset: 0x002A0078
+	// Token: 0x06008DA7 RID: 36263 RVA: 0x002AC5D0 File Offset: 0x002AA7D0
 	[NullableContext(1)]
 	public void SetToggleClickEvent(Action<int, ItemConfig> call)
 	{
 		this.ItemGrid.SetToggleClickEvent(call);
 	}
 
-	// Token: 0x0600B9BF RID: 47551 RVA: 0x002A1E86 File Offset: 0x002A0086
+	// Token: 0x06008DA8 RID: 36264 RVA: 0x002AC5DE File Offset: 0x002AA7DE
 	[NullableContext(1)]
 	public void SetToggleClickStateEvent(Action<EToggleState> call)
 	{
 		this.ItemGrid.SetToggleClickStateEvent(call);
 	}
 
-	// Token: 0x0600B9C0 RID: 47552 RVA: 0x002A1E94 File Offset: 0x002A0094
+	// Token: 0x06008DA9 RID: 36265 RVA: 0x002AC5EC File Offset: 0x002AA7EC
 	public void BindRedPointWithKeyAndId(ERedDotName name, int uid)
 	{
 		this.ItemGrid.BindRedPointWithKeyAndId(name, uid);
 	}
 
-	// Token: 0x0600B9C1 RID: 47553 RVA: 0x002A1EA3 File Offset: 0x002A00A3
+	// Token: 0x06008DAA RID: 36266 RVA: 0x002AC5FB File Offset: 0x002AA7FB
 	[NullableContext(1)]
 	public void RefreshCdPanel(bool showState, float cdFillAmount, string cdText)
 	{
 		this.ItemGrid.RefreshCdPanel(showState, cdFillAmount, cdText);
 	}
 
-	// Token: 0x0600B9C2 RID: 47554 RVA: 0x002A1EB3 File Offset: 0x002A00B3
+	// Token: 0x06008DAB RID: 36267 RVA: 0x002AC60B File Offset: 0x002AA80B
 	public void RefreshDarkSprite(bool showState)
 	{
 		this.ItemGrid.RefreshDarkSprite(showState);
 	}
 
-	// Token: 0x0600B9C3 RID: 47555 RVA: 0x002A1EC1 File Offset: 0x002A00C1
+	// Token: 0x06008DAC RID: 36268 RVA: 0x002AC619 File Offset: 0x002AA819
 	public void RefreshLockSprite(bool showState)
 	{
 		this.ItemGrid.RefreshLockSprite(showState);
 	}
 
-	// Token: 0x0600B9C4 RID: 47556 RVA: 0x002A1ECF File Offset: 0x002A00CF
+	// Token: 0x06008DAD RID: 36269 RVA: 0x002AC627 File Offset: 0x002AA827
 	public UUIExtendToggle GetClickToggle()
 	{
 		return this.ItemGrid.GetClickToggle();
 	}
 
-	// Token: 0x0600B9C5 RID: 47557 RVA: 0x002A1EDC File Offset: 0x002A00DC
+	// Token: 0x06008DAE RID: 36270 RVA: 0x002AC634 File Offset: 0x002AA834
 	public UUIText GetDownText()
 	{
 		return this.ItemGrid.GetDownText();
 	}
 
-	// Token: 0x0600B9C6 RID: 47558 RVA: 0x002A1EE9 File Offset: 0x002A00E9
+	// Token: 0x06008DAF RID: 36271 RVA: 0x002AC641 File Offset: 0x002AA841
 	public void RefreshNewItem(bool state)
 	{
 		this.ItemGrid.RefreshNewItem(state);
 	}
 
-	// Token: 0x0600B9C7 RID: 47559 RVA: 0x002A1EF7 File Offset: 0x002A00F7
+	// Token: 0x06008DB0 RID: 36272 RVA: 0x002AC64F File Offset: 0x002AA84F
 	public void RefreshStar(int[] starNum)
 	{
 		this.StarLayoutItem.RefreshStar(starNum);
 	}
 
-	// Token: 0x0600B9C8 RID: 47560 RVA: 0x002A1F05 File Offset: 0x002A0105
+	// Token: 0x06008DB1 RID: 36273 RVA: 0x002AC65D File Offset: 0x002AA85D
 	public void RefreshRecoverSprite(bool showState)
 	{
 		base.GetSprite(3).SetUIActive(showState);
 	}
 
-	// Token: 0x0600B9C9 RID: 47561 RVA: 0x002A1F14 File Offset: 0x002A0114
+	// Token: 0x06008DB2 RID: 36274 RVA: 0x002AC66C File Offset: 0x002AA86C
 	public void RefreshRightDownLockSprite(bool showState)
 	{
 		base.GetSprite(4).SetUIActive(showState);
 	}
 
-	// Token: 0x0600B9CA RID: 47562 RVA: 0x002A1F23 File Offset: 0x002A0123
+	// Token: 0x06008DB3 RID: 36275 RVA: 0x002AC67B File Offset: 0x002AA87B
 	public void RefreshUpgradePanel(bool showState, string showText)
 	{
 		base.GetItem(5).SetUIActive(showState);
@@ -167,12 +167,12 @@ public class ItemGridVariantOne : ItemGridAbstract, IItemGrid, IItemGridVariantO
 		}
 	}
 
-	// Token: 0x0600B9CB RID: 47563 RVA: 0x002A1F43 File Offset: 0x002A0143
+	// Token: 0x06008DB4 RID: 36276 RVA: 0x002AC69B File Offset: 0x002AA89B
 	public override void Refresh(TItem data, bool isSelected, int gridIndex)
 	{
 	}
 
-	// Token: 0x0600B9CC RID: 47564 RVA: 0x002A1F45 File Offset: 0x002A0145
+	// Token: 0x06008DB5 RID: 36277 RVA: 0x002AC69D File Offset: 0x002AA89D
 	protected override void OnBeforeDestroy()
 	{
 		StarLayoutItem starLayoutItem = this.StarLayoutItem;
@@ -183,29 +183,29 @@ public class ItemGridVariantOne : ItemGridAbstract, IItemGrid, IItemGridVariantO
 		this.ItemGrid.Destroy(null);
 	}
 
-	// Token: 0x04005436 RID: 21558
+	// Token: 0x040054E1 RID: 21729
 	protected ItemGrid ItemGrid;
 
-	// Token: 0x04005437 RID: 21559
+	// Token: 0x040054E2 RID: 21730
 	private StarLayoutItem StarLayoutItem;
 
-	// Token: 0x02007E4B RID: 32331
+	// Token: 0x02006FD2 RID: 28626
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x04029548 RID: 169288
+		// Token: 0x04024875 RID: 149621
 		ItemGrid,
-		// Token: 0x04029549 RID: 169289
+		// Token: 0x04024876 RID: 149622
 		StarItem,
-		// Token: 0x0402954A RID: 169290
+		// Token: 0x04024877 RID: 149623
 		RightDownVertical,
-		// Token: 0x0402954B RID: 169291
+		// Token: 0x04024878 RID: 149624
 		RecoverSprite,
-		// Token: 0x0402954C RID: 169292
+		// Token: 0x04024879 RID: 149625
 		LockSprite,
-		// Token: 0x0402954D RID: 169293
+		// Token: 0x0402487A RID: 149626
 		UpgradePanel,
-		// Token: 0x0402954E RID: 169294
+		// Token: 0x0402487B RID: 149627
 		UpgradeText
 	}
 }

@@ -6,10 +6,10 @@ using Aki.Config;
 using Aki.Protocol;
 using UnrealEngine;
 
-// Token: 0x020014FD RID: 5373
+// Token: 0x020009B5 RID: 2485
 public class ImportantRewardItem : SignRewardItemBase
 {
-	// Token: 0x06009939 RID: 39225 RVA: 0x002124B0 File Offset: 0x002106B0
+	// Token: 0x06006D13 RID: 27923 RVA: 0x0021C1C8 File Offset: 0x0021A3C8
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -46,20 +46,20 @@ public class ImportantRewardItem : SignRewardItemBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600993A RID: 39226 RVA: 0x00212660 File Offset: 0x00210860
+	// Token: 0x06006D14 RID: 27924 RVA: 0x0021C378 File Offset: 0x0021A578
 	public void SetDayText(int day)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(3), "DayNum", new <>z__ReadOnlySingleElementList<object>(day));
 	}
 
-	// Token: 0x0600993B RID: 39227 RVA: 0x00212683 File Offset: 0x00210883
+	// Token: 0x06006D15 RID: 27925 RVA: 0x0021C39B File Offset: 0x0021A59B
 	[NullableContext(1)]
 	public void SetStateText(string textId)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(4), textId, Array.Empty<object>());
 	}
 
-	// Token: 0x0600993C RID: 39228 RVA: 0x0021269C File Offset: 0x0021089C
+	// Token: 0x06006D16 RID: 27926 RVA: 0x0021C3B4 File Offset: 0x0021A5B4
 	public override void RefreshByData(OneItemConfig data, SignState state, int index)
 	{
 		this.Index = index;
@@ -89,41 +89,41 @@ public class ImportantRewardItem : SignRewardItemBase
 		}
 	}
 
-	// Token: 0x04004364 RID: 17252
+	// Token: 0x04004409 RID: 17417
 	[Nullable(1)]
 	public string BigIconPath = "";
 
-	// Token: 0x02007B34 RID: 31540
+	// Token: 0x02006CBF RID: 27839
 	private class EImportantRewardItemComponents
 	{
-		// Token: 0x04028844 RID: 165956
+		// Token: 0x04023B80 RID: 146304
 		public const int SprBg = 0;
 
-		// Token: 0x04028845 RID: 165957
+		// Token: 0x04023B81 RID: 146305
 		public const int SprBgDesc = 1;
 
-		// Token: 0x04028846 RID: 165958
+		// Token: 0x04023B82 RID: 146306
 		public const int TexPix = 2;
 
-		// Token: 0x04028847 RID: 165959
+		// Token: 0x04023B83 RID: 146307
 		public const int TxtDay = 3;
 
-		// Token: 0x04028848 RID: 165960
+		// Token: 0x04023B84 RID: 146308
 		public const int TxtReward = 4;
 
-		// Token: 0x04028849 RID: 165961
+		// Token: 0x04023B85 RID: 146309
 		public const int Toggle = 5;
 
-		// Token: 0x0402884A RID: 165962
+		// Token: 0x04023B86 RID: 146310
 		public const int PnlReward = 6;
 
-		// Token: 0x0402884B RID: 165963
+		// Token: 0x04023B87 RID: 146311
 		public const int SprFrame = 7;
 
-		// Token: 0x0402884C RID: 165964
+		// Token: 0x04023B88 RID: 146312
 		public const int RewardEffect = 8;
 
-		// Token: 0x0402884D RID: 165965
+		// Token: 0x04023B89 RID: 146313
 		public const int LockItem = 9;
 	}
 }

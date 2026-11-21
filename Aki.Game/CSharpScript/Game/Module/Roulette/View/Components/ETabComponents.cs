@@ -2,16 +2,16 @@
 
 namespace CSharpScript.Game.Module.Roulette.View.Components
 {
-	// Token: 0x02004CA5 RID: 19621
+	// Token: 0x02003C56 RID: 15446
 	public class ETabComponents
 	{
-		// Token: 0x0401AFE7 RID: 110567
+		// Token: 0x04015948 RID: 88392
 		public const int ToggleSelf = 0;
 
-		// Token: 0x0401AFE8 RID: 110568
+		// Token: 0x04015949 RID: 88393
 		public const int TexIcon = 1;
 
-		// Token: 0x0401AFE9 RID: 110569
+		// Token: 0x0401594A RID: 88394
 		public const int TxtName = 2;
 	}
 }

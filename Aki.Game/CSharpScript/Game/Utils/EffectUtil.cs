@@ -8,18 +8,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Utils
 {
-	// Token: 0x0200454C RID: 17740
+	// Token: 0x02003474 RID: 13428
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class EffectUtil
 	{
-		// Token: 0x0602DD7D RID: 187773 RVA: 0x00A8A2A4 File Offset: 0x00A884A4
+		// Token: 0x0602245F RID: 140383 RVA: 0x009B59C0 File Offset: 0x009B3BC0
 		public static string GetEffectPath(string effectId)
 		{
 			return ConfigEffectConfigById.GetConfig(effectId, true).Value.Path;
 		}
 
-		// Token: 0x0602DD7E RID: 187774 RVA: 0x00A8A2C8 File Offset: 0x00A884C8
+		// Token: 0x06022460 RID: 140384 RVA: 0x009B59E4 File Offset: 0x009B3BE4
 		public static int? SpawnUiEffect(string effectId, string reason, FTransformDouble? transform = null, [Nullable(2)] EffectContext context = null)
 		{
 			FTransformDouble valueOrDefault = transform.GetValueOrDefault();
@@ -32,13 +32,13 @@ namespace CSharpScript.Game.Utils
 			return new int?(EffectSystem.Instance.SpawnEffect(GlobalData.World, transform, effectPath, reason, null, EEffectType.UiScene3D, null, null, null, false, false));
 		}
 
-		// Token: 0x0602DD7F RID: 187775 RVA: 0x00A8A31B File Offset: 0x00A8851B
+		// Token: 0x06022461 RID: 140385 RVA: 0x009B5A37 File Offset: 0x009B3C37
 		public static string GetPreviewReplaceEffectPath(string oldPath)
 		{
 			return oldPath;
 		}
 
-		// Token: 0x0602DD80 RID: 187776 RVA: 0x00A8A320 File Offset: 0x00A88520
+		// Token: 0x06022462 RID: 140386 RVA: 0x009B5A3C File Offset: 0x009B3C3C
 		public static void RefreshAdditionTimeScale(int effect, PawnTimeScaleComponent timeScaleComp)
 		{
 			if (timeScaleComp == null || !timeScaleComp.Valid)
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Utils
 			EffectSystem.Instance.SetAdditionTimeScale(topForeverTimeScaleConfig.SourceType, effect, topForeverTimeScaleConfig.TimeDilation);
 		}
 
-		// Token: 0x0602DD81 RID: 187777 RVA: 0x00A8A368 File Offset: 0x00A88568
+		// Token: 0x06022463 RID: 140387 RVA: 0x009B5A84 File Offset: 0x009B3C84
 		public static void SetEffectTimeScale(int effect, PawnTimeScaleComponent timeScaleComp, float entityTimeDilation, ETimeScaleType timeScaleType = ETimeScaleType.FollowEntity)
 		{
 			float freezeTimeScale = timeScaleComp.FreezeTimeScale;
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Utils
 			EffectSystem.Instance.SetAdditionTimeScale(ETimeScaleSourceType.SelfCentered, effect, timeScale);
 		}
 
-		// Token: 0x0602DD82 RID: 187778 RVA: 0x00A8A3BC File Offset: 0x00A885BC
+		// Token: 0x06022464 RID: 140388 RVA: 0x009B5AD8 File Offset: 0x009B3CD8
 		public static void SetAdditionalEffectTimeScaleByEntity(EntityHandle entityHandle, int effectId)
 		{
 			if (entityHandle == null || !entityHandle.Valid)
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Utils
 			EffectUtil.SetEffectTimeScale(effectId, component, entityHandle.Entity.TimeDilation, ETimeScaleType.FollowEntity);
 		}
 
-		// Token: 0x0602DD83 RID: 187779 RVA: 0x00A8A40C File Offset: 0x00A8860C
+		// Token: 0x06022465 RID: 140389 RVA: 0x009B5B28 File Offset: 0x009B3D28
 		public static void ListenForeverTimeScale(int effect, PawnTimeScaleComponent timeScaleComp)
 		{
 			EffectUtil.<>c__DisplayClass6_0 CS$<>8__locals1 = new EffectUtil.<>c__DisplayClass6_0();

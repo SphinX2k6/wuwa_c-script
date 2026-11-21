@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D8B RID: 3467
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E87 RID: 3719
 	public class IChildEntityStateControl
 	{
-		// Token: 0x06004ED6 RID: 20182 RVA: 0x000C3741 File Offset: 0x000C1941
+		// Token: 0x060053FB RID: 21499 RVA: 0x000CEF91 File Offset: 0x000CD191
 		public static IChildEntityStateControl Create(IChildEntityStateControl? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700197D RID: 6525
-		// (get) Token: 0x06004ED7 RID: 20183 RVA: 0x000C3760 File Offset: 0x000C1960
+		// Token: 0x17001AE8 RID: 6888
+		// (get) Token: 0x060053FC RID: 21500 RVA: 0x000CEFB0 File Offset: 0x000CD1B0
 		public virtual ETemplateEntityGroupType GroupType
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700197E RID: 6526
-		// (get) Token: 0x06004ED8 RID: 20184 RVA: 0x000C376D File Offset: 0x000C196D
+		// Token: 0x17001AE9 RID: 6889
+		// (get) Token: 0x060053FD RID: 21501 RVA: 0x000CEFBD File Offset: 0x000CD1BD
 		public virtual string InitState
 		{
 			get
@@ -43,19 +41,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700197F RID: 6527
-		// (get) Token: 0x06004ED9 RID: 20185 RVA: 0x000C377C File Offset: 0x000C197C
+		// Token: 0x17001AEA RID: 6890
+		// (get) Token: 0x060053FE RID: 21502 RVA: 0x000CEFCC File Offset: 0x000CD1CC
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IChildStateChangedConfig> OnChildStateChangedConfigs
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -78,18 +76,18 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002D44 RID: 11588
+		// Token: 0x0400300A RID: 12298
 		private IChildEntityStateControl Instance;
 
-		// Token: 0x04002D45 RID: 11589
+		// Token: 0x0400300B RID: 12299
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IChildStateChangedConfig> _OnChildStateChangedConfigsCache;
 
-		// Token: 0x04002D46 RID: 11590
+		// Token: 0x0400300C RID: 12300
 		private bool _OnChildStateChangedConfigsInited;
 	}
 }

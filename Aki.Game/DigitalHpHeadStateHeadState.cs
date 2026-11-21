@@ -7,19 +7,19 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001CD8 RID: 7384
+// Token: 0x0200119A RID: 4506
 [NullableContext(2)]
 [Nullable(0)]
 public class DigitalHpHeadStateHeadState : UiPanelBase, IPanelTickInterface
 {
-	// Token: 0x0600DFA8 RID: 57256 RVA: 0x00346222 File Offset: 0x00344422
+	// Token: 0x0600B3C5 RID: 46021 RVA: 0x00351C4A File Offset: 0x0034FE4A
 	[NullableContext(1)]
 	protected virtual string GetResourceId()
 	{
 		return "UiItem_BattleHpMonster";
 	}
 
-	// Token: 0x0600DFA9 RID: 57257 RVA: 0x0034622C File Offset: 0x0034442C
+	// Token: 0x0600B3C6 RID: 46022 RVA: 0x00351C54 File Offset: 0x0034FE54
 	[NullableContext(1)]
 	public void CreateHeadStateView(USceneComponent parentComponent, FKSC_HeadHpContext headInfo)
 	{
@@ -33,7 +33,7 @@ public class DigitalHpHeadStateHeadState : UiPanelBase, IPanelTickInterface
 		base.CreateThenShowByPathAsync(resourcePath, (UUIItem)parentComponent, false).Forget();
 	}
 
-	// Token: 0x0600DFAA RID: 57258 RVA: 0x003462A4 File Offset: 0x003444A4
+	// Token: 0x0600B3C7 RID: 46023 RVA: 0x00351CCC File Offset: 0x0034FECC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -47,14 +47,14 @@ public class DigitalHpHeadStateHeadState : UiPanelBase, IPanelTickInterface
 		};
 	}
 
-	// Token: 0x0600DFAB RID: 57259 RVA: 0x00346340 File Offset: 0x00344540
+	// Token: 0x0600B3C8 RID: 46024 RVA: 0x00351D68 File Offset: 0x0034FF68
 	protected override void OnStart()
 	{
 		this.SequencePlayer = new LevelSequencePlayer(this.RootItem);
 		this.RootItem.SetUIItemScale(new FVector(2.5f, 2.5f, 2.5f));
 	}
 
-	// Token: 0x0600DFAC RID: 57260 RVA: 0x00346374 File Offset: 0x00344574
+	// Token: 0x0600B3C9 RID: 46025 RVA: 0x00351D9C File Offset: 0x0034FF9C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		DigitalHpHeadStateHeadState.<OnBeforeStartAsync>d__19 <OnBeforeStartAsync>d__;
@@ -65,13 +65,13 @@ public class DigitalHpHeadStateHeadState : UiPanelBase, IPanelTickInterface
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DFAD RID: 57261 RVA: 0x003463B8 File Offset: 0x003445B8
+	// Token: 0x0600B3CA RID: 46026 RVA: 0x00351DE0 File Offset: 0x0034FFE0
 	protected override void OnBeforeShow()
 	{
 		this.SequencePlayer.PlaySequencePurely("Start", false, false, null, null, false);
 	}
 
-	// Token: 0x0600DFAE RID: 57262 RVA: 0x003463E4 File Offset: 0x003445E4
+	// Token: 0x0600B3CB RID: 46027 RVA: 0x00351E0C File Offset: 0x0035000C
 	protected override UniTask OnBeforeHideAsync()
 	{
 		DigitalHpHeadStateHeadState.<OnBeforeHideAsync>d__21 <OnBeforeHideAsync>d__;
@@ -82,13 +82,13 @@ public class DigitalHpHeadStateHeadState : UiPanelBase, IPanelTickInterface
 		return <OnBeforeHideAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600DFAF RID: 57263 RVA: 0x00346427 File Offset: 0x00344627
+	// Token: 0x0600B3CC RID: 46028 RVA: 0x00351E4F File Offset: 0x0035004F
 	protected override void OnAfterHide()
 	{
 		UiManager.Instance.RemoveTickView(this);
 	}
 
-	// Token: 0x0600DFB0 RID: 57264 RVA: 0x00346434 File Offset: 0x00344634
+	// Token: 0x0600B3CD RID: 46029 RVA: 0x00351E5C File Offset: 0x0035005C
 	protected void InitShieldBarDivider()
 	{
 		if (this.ShieldBarDivider == null || this.DividerCount <= 1)
@@ -106,7 +106,7 @@ public class DigitalHpHeadStateHeadState : UiPanelBase, IPanelTickInterface
 		}
 	}
 
-	// Token: 0x0600DFB1 RID: 57265 RVA: 0x003464B0 File Offset: 0x003446B0
+	// Token: 0x0600B3CE RID: 46030 RVA: 0x00351ED8 File Offset: 0x003500D8
 	[NullableContext(1)]
 	public void UpdateByHeadInfo(FKSC_HeadHpContext headInfo)
 	{
@@ -115,7 +115,7 @@ public class DigitalHpHeadStateHeadState : UiPanelBase, IPanelTickInterface
 		this.UpdateShieldBar((float)headInfo.Shield);
 	}
 
-	// Token: 0x0600DFB2 RID: 57266 RVA: 0x003464D8 File Offset: 0x003446D8
+	// Token: 0x0600B3CF RID: 46031 RVA: 0x00351F00 File Offset: 0x00350100
 	protected void UpdateHpText(float newHp)
 	{
 		float num = this.DigitScroll.SetTarget(newHp);
@@ -129,7 +129,7 @@ public class DigitalHpHeadStateHeadState : UiPanelBase, IPanelTickInterface
 		}
 	}
 
-	// Token: 0x0600DFB3 RID: 57267 RVA: 0x00346528 File Offset: 0x00344728
+	// Token: 0x0600B3D0 RID: 46032 RVA: 0x00351F50 File Offset: 0x00350150
 	protected void UpdateShieldBar(float newShield)
 	{
 		if (this.DamageAbsorption != (int)newShield)
@@ -147,7 +147,7 @@ public class DigitalHpHeadStateHeadState : UiPanelBase, IPanelTickInterface
 		}
 	}
 
-	// Token: 0x0600DFB4 RID: 57268 RVA: 0x00346580 File Offset: 0x00344780
+	// Token: 0x0600B3D1 RID: 46033 RVA: 0x00351FA8 File Offset: 0x003501A8
 	private void UpdateHeadStateLocation(FVectorDouble location)
 	{
 		Vector commonTempVector = MathUtils.Instance.CommonTempVector;
@@ -160,7 +160,7 @@ public class DigitalHpHeadStateHeadState : UiPanelBase, IPanelTickInterface
 		rootItem.SetUIRelativeLocation(commonTempVector.ToUeVectorOld());
 	}
 
-	// Token: 0x0600DFB5 RID: 57269 RVA: 0x003465B8 File Offset: 0x003447B8
+	// Token: 0x0600B3D2 RID: 46034 RVA: 0x00351FE0 File Offset: 0x003501E0
 	protected void RefreshHeadStateRotation()
 	{
 		Rotator cameraRotator = CameraController.Instance.MainModel.CameraRotator;
@@ -173,7 +173,7 @@ public class DigitalHpHeadStateHeadState : UiPanelBase, IPanelTickInterface
 		rootItem.SetUIRelativeRotation(frotator);
 	}
 
-	// Token: 0x0600DFB6 RID: 57270 RVA: 0x00346624 File Offset: 0x00344824
+	// Token: 0x0600B3D3 RID: 46035 RVA: 0x0035204C File Offset: 0x0035024C
 	public void Tick(float delta)
 	{
 		if (this.DigitScroll.IsFinished())
@@ -190,74 +190,74 @@ public class DigitalHpHeadStateHeadState : UiPanelBase, IPanelTickInterface
 		hpText.SetText(MotorcycleUtil.CompactNumberFormat((float)Math.Floor((double)num)));
 	}
 
-	// Token: 0x0600DFB7 RID: 57271 RVA: 0x00346674 File Offset: 0x00344874
+	// Token: 0x0600B3D4 RID: 46036 RVA: 0x0035209C File Offset: 0x0035029C
 	public void AfterTick(float delta)
 	{
 	}
 
-	// Token: 0x040066EC RID: 26348
+	// Token: 0x040067CB RID: 26571
 	private const int DAMAGEABSORPTION_PERCELL = 5;
 
-	// Token: 0x040066ED RID: 26349
+	// Token: 0x040067CC RID: 26572
 	private const int MIN_CELL_COUNT = 1;
 
-	// Token: 0x040066EE RID: 26350
+	// Token: 0x040067CD RID: 26573
 	private const int SCROLL_DURATION = 500;
 
-	// Token: 0x040066EF RID: 26351
+	// Token: 0x040067CE RID: 26574
 	private const float DEFAULT_SCALE = 2.5f;
 
-	// Token: 0x040066F0 RID: 26352
+	// Token: 0x040067CF RID: 26575
 	private int Hp = -1;
 
-	// Token: 0x040066F1 RID: 26353
+	// Token: 0x040067D0 RID: 26576
 	private int DamageAbsorption = -1;
 
-	// Token: 0x040066F2 RID: 26354
+	// Token: 0x040067D1 RID: 26577
 	protected UUIArtText HpText;
 
-	// Token: 0x040066F3 RID: 26355
+	// Token: 0x040067D2 RID: 26578
 	protected UUIItem ShieldBarLine;
 
-	// Token: 0x040066F4 RID: 26356
+	// Token: 0x040067D3 RID: 26579
 	protected UUISprite ShieldBar;
 
-	// Token: 0x040066F5 RID: 26357
+	// Token: 0x040067D4 RID: 26580
 	protected UUISprite ShieldBarDivider;
 
-	// Token: 0x040066F6 RID: 26358
+	// Token: 0x040067D5 RID: 26581
 	protected int DividerCount;
 
-	// Token: 0x040066F7 RID: 26359
+	// Token: 0x040067D6 RID: 26582
 	protected int MaxDamageAbsorptionCount;
 
-	// Token: 0x040066F8 RID: 26360
+	// Token: 0x040067D7 RID: 26583
 	protected LevelSequencePlayer SequencePlayer;
 
-	// Token: 0x040066F9 RID: 26361
+	// Token: 0x040067D8 RID: 26584
 	[Nullable(1)]
 	private readonly DigitScroll DigitScroll = new DigitScroll();
 
-	// Token: 0x020082DA RID: 33498
+	// Token: 0x02007463 RID: 29795
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x0402AB0C RID: 174860
+		// Token: 0x04025E34 RID: 155188
 		public const int Self = 0;
 
-		// Token: 0x0402AB0D RID: 174861
+		// Token: 0x04025E35 RID: 155189
 		public const int SpriteShieldBar = 1;
 
-		// Token: 0x0402AB0E RID: 174862
+		// Token: 0x04025E36 RID: 155190
 		public const int ArtTextHpNum = 2;
 
-		// Token: 0x0402AB0F RID: 174863
+		// Token: 0x04025E37 RID: 155191
 		public const int ShieldBarLine = 3;
 
-		// Token: 0x0402AB10 RID: 174864
+		// Token: 0x04025E38 RID: 155192
 		public const int ShieldBarDivider = 4;
 
-		// Token: 0x0402AB11 RID: 174865
+		// Token: 0x04025E39 RID: 155193
 		public const int ShieldRootItem = 5;
 	}
 }

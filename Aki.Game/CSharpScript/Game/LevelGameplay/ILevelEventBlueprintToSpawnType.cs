@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x02006978 RID: 27000
+	// Token: 0x02005AD4 RID: 23252
 	public abstract class ILevelEventBlueprintToSpawnType
 	{
-		// Token: 0x04023024 RID: 143396
+		// Token: 0x0401E20E RID: 123406
 		public ELevelEventBlueprintToSpawnType Type;
 	}
 }

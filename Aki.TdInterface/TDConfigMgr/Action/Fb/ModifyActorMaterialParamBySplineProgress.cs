@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002903 RID: 10499
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002BDB RID: 11227
 	public class ModifyActorMaterialParamBySplineProgress : ActionParams
 	{
-		// Token: 0x0600E91C RID: 59676 RVA: 0x00222FEE File Offset: 0x002211EE
+		// Token: 0x0600F759 RID: 63321 RVA: 0x002400ED File Offset: 0x0023E2ED
 		public static ModifyActorMaterialParamBySplineProgress Create(IModifyActorMaterialParamBySplineProgress? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170048D8 RID: 18648
-		// (get) Token: 0x0600E91D RID: 59677 RVA: 0x0022300D File Offset: 0x0022120D
+		// Token: 0x17004C51 RID: 19537
+		// (get) Token: 0x0600F75A RID: 63322 RVA: 0x0024010C File Offset: 0x0023E30C
 		public virtual IModifyActorMaterialParamBySplineProgressConfig Config
 		{
 			get
@@ -38,13 +35,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040080AF RID: 32943
+		// Token: 0x0400876F RID: 34671
 		private IModifyActorMaterialParamBySplineProgress Instance;
 
-		// Token: 0x040080B0 RID: 32944
+		// Token: 0x04008770 RID: 34672
 		private IModifyActorMaterialParamBySplineProgressConfig _ConfigCache;
 
-		// Token: 0x040080B1 RID: 32945
+		// Token: 0x04008771 RID: 34673
 		private bool _ConfigInited;
 	}
 }

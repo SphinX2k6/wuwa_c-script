@@ -4,19 +4,19 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.QuestMultiLine.QuestMultiLineData
 {
-	// Token: 0x02004FCF RID: 20431
+	// Token: 0x02003F98 RID: 16280
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class QuestMultiLineComponentData
 	{
-		// Token: 0x06034458 RID: 214104 RVA: 0x00C46828 File Offset: 0x00C44A28
+		// Token: 0x060292C6 RID: 168646 RVA: 0x00B8FFE0 File Offset: 0x00B8E1E0
 		public QuestMultiLineComponentData(int configId)
 		{
 			this.Config = QuestMultiLineConfig.GetComponentConfigById(configId);
 		}
 
-		// Token: 0x17007F8E RID: 32654
-		// (get) Token: 0x06034459 RID: 214105 RVA: 0x00C4683C File Offset: 0x00C44A3C
+		// Token: 0x1700533E RID: 21310
+		// (get) Token: 0x060292C7 RID: 168647 RVA: 0x00B8FFF4 File Offset: 0x00B8E1F4
 		public int Id
 		{
 			get
@@ -25,8 +25,8 @@ namespace CSharpScript.Game.Module.QuestMultiLine.QuestMultiLineData
 			}
 		}
 
-		// Token: 0x17007F8F RID: 32655
-		// (get) Token: 0x0603445A RID: 214106 RVA: 0x00C4685C File Offset: 0x00C44A5C
+		// Token: 0x1700533F RID: 21311
+		// (get) Token: 0x060292C8 RID: 168648 RVA: 0x00B90014 File Offset: 0x00B8E214
 		public IntVector2D? Location
 		{
 			get
@@ -35,8 +35,8 @@ namespace CSharpScript.Game.Module.QuestMultiLine.QuestMultiLineData
 			}
 		}
 
-		// Token: 0x17007F90 RID: 32656
-		// (get) Token: 0x0603445B RID: 214107 RVA: 0x00C4687C File Offset: 0x00C44A7C
+		// Token: 0x17005340 RID: 21312
+		// (get) Token: 0x060292C9 RID: 168649 RVA: 0x00B90034 File Offset: 0x00B8E234
 		public string TipsTitle
 		{
 			get
@@ -45,8 +45,8 @@ namespace CSharpScript.Game.Module.QuestMultiLine.QuestMultiLineData
 			}
 		}
 
-		// Token: 0x17007F91 RID: 32657
-		// (get) Token: 0x0603445C RID: 214108 RVA: 0x00C4689C File Offset: 0x00C44A9C
+		// Token: 0x17005341 RID: 21313
+		// (get) Token: 0x060292CA RID: 168650 RVA: 0x00B90054 File Offset: 0x00B8E254
 		public string TipsDesc
 		{
 			get
@@ -55,8 +55,8 @@ namespace CSharpScript.Game.Module.QuestMultiLine.QuestMultiLineData
 			}
 		}
 
-		// Token: 0x17007F92 RID: 32658
-		// (get) Token: 0x0603445D RID: 214109 RVA: 0x00C468BC File Offset: 0x00C44ABC
+		// Token: 0x17005342 RID: 21314
+		// (get) Token: 0x060292CB RID: 168651 RVA: 0x00B90074 File Offset: 0x00B8E274
 		public int Type
 		{
 			get
@@ -65,8 +65,8 @@ namespace CSharpScript.Game.Module.QuestMultiLine.QuestMultiLineData
 			}
 		}
 
-		// Token: 0x17007F93 RID: 32659
-		// (get) Token: 0x0603445E RID: 214110 RVA: 0x00C468DC File Offset: 0x00C44ADC
+		// Token: 0x17005343 RID: 21315
+		// (get) Token: 0x060292CC RID: 168652 RVA: 0x00B90094 File Offset: 0x00B8E294
 		public int FightingArea
 		{
 			get
@@ -75,8 +75,8 @@ namespace CSharpScript.Game.Module.QuestMultiLine.QuestMultiLineData
 			}
 		}
 
-		// Token: 0x17007F94 RID: 32660
-		// (get) Token: 0x0603445F RID: 214111 RVA: 0x00C4690C File Offset: 0x00C44B0C
+		// Token: 0x17005344 RID: 21316
+		// (get) Token: 0x060292CD RID: 168653 RVA: 0x00B900C4 File Offset: 0x00B8E2C4
 		public int StatusType
 		{
 			get
@@ -85,8 +85,8 @@ namespace CSharpScript.Game.Module.QuestMultiLine.QuestMultiLineData
 			}
 		}
 
-		// Token: 0x17007F95 RID: 32661
-		// (get) Token: 0x06034460 RID: 214112 RVA: 0x00C4692C File Offset: 0x00C44B2C
+		// Token: 0x17005345 RID: 21317
+		// (get) Token: 0x060292CE RID: 168654 RVA: 0x00B900E4 File Offset: 0x00B8E2E4
 		public string[] ComponentIcon
 		{
 			get
@@ -95,8 +95,8 @@ namespace CSharpScript.Game.Module.QuestMultiLine.QuestMultiLineData
 			}
 		}
 
-		// Token: 0x17007F96 RID: 32662
-		// (get) Token: 0x06034461 RID: 214113 RVA: 0x00C4694C File Offset: 0x00C44B4C
+		// Token: 0x17005346 RID: 21318
+		// (get) Token: 0x060292CF RID: 168655 RVA: 0x00B90104 File Offset: 0x00B8E304
 		public string[] MultiPersonAvatar
 		{
 			get
@@ -105,8 +105,8 @@ namespace CSharpScript.Game.Module.QuestMultiLine.QuestMultiLineData
 			}
 		}
 
-		// Token: 0x17007F97 RID: 32663
-		// (get) Token: 0x06034462 RID: 214114 RVA: 0x00C4696C File Offset: 0x00C44B6C
+		// Token: 0x17005347 RID: 21319
+		// (get) Token: 0x060292D0 RID: 168656 RVA: 0x00B90124 File Offset: 0x00B8E324
 		public string TipsArea
 		{
 			get
@@ -115,8 +115,8 @@ namespace CSharpScript.Game.Module.QuestMultiLine.QuestMultiLineData
 			}
 		}
 
-		// Token: 0x17007F98 RID: 32664
-		// (get) Token: 0x06034463 RID: 214115 RVA: 0x00C4698C File Offset: 0x00C44B8C
+		// Token: 0x17005348 RID: 21320
+		// (get) Token: 0x060292D1 RID: 168657 RVA: 0x00B90144 File Offset: 0x00B8E344
 		public string TipsStatusDesc
 		{
 			get
@@ -125,8 +125,8 @@ namespace CSharpScript.Game.Module.QuestMultiLine.QuestMultiLineData
 			}
 		}
 
-		// Token: 0x17007F99 RID: 32665
-		// (get) Token: 0x06034464 RID: 214116 RVA: 0x00C469AC File Offset: 0x00C44BAC
+		// Token: 0x17005349 RID: 21321
+		// (get) Token: 0x060292D2 RID: 168658 RVA: 0x00B90164 File Offset: 0x00B8E364
 		public int[] BranchFinishQuestNode
 		{
 			get
@@ -135,8 +135,8 @@ namespace CSharpScript.Game.Module.QuestMultiLine.QuestMultiLineData
 			}
 		}
 
-		// Token: 0x17007F9A RID: 32666
-		// (get) Token: 0x06034465 RID: 214117 RVA: 0x00C469CC File Offset: 0x00C44BCC
+		// Token: 0x1700534A RID: 21322
+		// (get) Token: 0x060292D3 RID: 168659 RVA: 0x00B90184 File Offset: 0x00B8E384
 		public string OnGoingDesc
 		{
 			get
@@ -145,8 +145,8 @@ namespace CSharpScript.Game.Module.QuestMultiLine.QuestMultiLineData
 			}
 		}
 
-		// Token: 0x17007F9B RID: 32667
-		// (get) Token: 0x06034466 RID: 214118 RVA: 0x00C469EC File Offset: 0x00C44BEC
+		// Token: 0x1700534B RID: 21323
+		// (get) Token: 0x060292D4 RID: 168660 RVA: 0x00B901A4 File Offset: 0x00B8E3A4
 		public string ComponentQualityFrame
 		{
 			get
@@ -155,8 +155,8 @@ namespace CSharpScript.Game.Module.QuestMultiLine.QuestMultiLineData
 			}
 		}
 
-		// Token: 0x17007F9C RID: 32668
-		// (get) Token: 0x06034467 RID: 214119 RVA: 0x00C46A0C File Offset: 0x00C44C0C
+		// Token: 0x1700534C RID: 21324
+		// (get) Token: 0x060292D5 RID: 168661 RVA: 0x00B901C4 File Offset: 0x00B8E3C4
 		public string ComponentQualityFrameHold
 		{
 			get
@@ -165,8 +165,8 @@ namespace CSharpScript.Game.Module.QuestMultiLine.QuestMultiLineData
 			}
 		}
 
-		// Token: 0x17007F9D RID: 32669
-		// (get) Token: 0x06034468 RID: 214120 RVA: 0x00C46A2C File Offset: 0x00C44C2C
+		// Token: 0x1700534D RID: 21325
+		// (get) Token: 0x060292D6 RID: 168662 RVA: 0x00B901E4 File Offset: 0x00B8E3E4
 		public string HeadIconBgInTip
 		{
 			get
@@ -175,8 +175,8 @@ namespace CSharpScript.Game.Module.QuestMultiLine.QuestMultiLineData
 			}
 		}
 
-		// Token: 0x17007F9E RID: 32670
-		// (get) Token: 0x06034469 RID: 214121 RVA: 0x00C46A4C File Offset: 0x00C44C4C
+		// Token: 0x1700534E RID: 21326
+		// (get) Token: 0x060292D7 RID: 168663 RVA: 0x00B90204 File Offset: 0x00B8E404
 		public string TipsQualityBg
 		{
 			get
@@ -185,8 +185,8 @@ namespace CSharpScript.Game.Module.QuestMultiLine.QuestMultiLineData
 			}
 		}
 
-		// Token: 0x17007F9F RID: 32671
-		// (get) Token: 0x0603446A RID: 214122 RVA: 0x00C46A6C File Offset: 0x00C44C6C
+		// Token: 0x1700534F RID: 21327
+		// (get) Token: 0x060292D8 RID: 168664 RVA: 0x00B90224 File Offset: 0x00B8E424
 		public IntVector2D[] AnimMovePoint
 		{
 			get
@@ -195,8 +195,8 @@ namespace CSharpScript.Game.Module.QuestMultiLine.QuestMultiLineData
 			}
 		}
 
-		// Token: 0x17007FA0 RID: 32672
-		// (get) Token: 0x0603446B RID: 214123 RVA: 0x00C46A8C File Offset: 0x00C44C8C
+		// Token: 0x17005350 RID: 21328
+		// (get) Token: 0x060292D9 RID: 168665 RVA: 0x00B90244 File Offset: 0x00B8E444
 		public int MoveSpeed
 		{
 			get
@@ -205,8 +205,8 @@ namespace CSharpScript.Game.Module.QuestMultiLine.QuestMultiLineData
 			}
 		}
 
-		// Token: 0x17007FA1 RID: 32673
-		// (get) Token: 0x0603446C RID: 214124 RVA: 0x00C46AAC File Offset: 0x00C44CAC
+		// Token: 0x17005351 RID: 21329
+		// (get) Token: 0x060292DA RID: 168666 RVA: 0x00B90264 File Offset: 0x00B8E464
 		public int PathSpeed
 		{
 			get
@@ -215,8 +215,8 @@ namespace CSharpScript.Game.Module.QuestMultiLine.QuestMultiLineData
 			}
 		}
 
-		// Token: 0x17007FA2 RID: 32674
-		// (get) Token: 0x0603446D RID: 214125 RVA: 0x00C46ACC File Offset: 0x00C44CCC
+		// Token: 0x17005352 RID: 21330
+		// (get) Token: 0x060292DB RID: 168667 RVA: 0x00B90284 File Offset: 0x00B8E484
 		public string HeadLoopEffect
 		{
 			get
@@ -225,7 +225,7 @@ namespace CSharpScript.Game.Module.QuestMultiLine.QuestMultiLineData
 			}
 		}
 
-		// Token: 0x0401BCE8 RID: 113896
+		// Token: 0x040166BD RID: 91837
 		private readonly QuestTimeComponentConfig? Config;
 	}
 }

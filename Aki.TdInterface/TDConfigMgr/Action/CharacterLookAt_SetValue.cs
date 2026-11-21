@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014EF RID: 5359
+	// Token: 0x02001648 RID: 5704
 	public class CharacterLookAt_SetValue
 	{
-		// Token: 0x040046AD RID: 18093
+		// Token: 0x04004A48 RID: 19016
 		public int CharEntityId;
 
-		// Token: 0x040046AE RID: 18094
-		[Nullable(1)]
+		// Token: 0x04004A49 RID: 19017
 		public ICharacterLookAtData Target;
 	}
 }

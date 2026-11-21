@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Manufacture.Compose;
 
-// Token: 0x0200187F RID: 6271
+// Token: 0x02000D38 RID: 3384
 [NullableContext(1)]
 [Nullable(0)]
 public class ComposeSort : CommonSort<EComposeSortWayType>
 {
-	// Token: 0x0600B7D9 RID: 47065 RVA: 0x00299C1C File Offset: 0x00297E1C
+	// Token: 0x06008BC2 RID: 35778 RVA: 0x002A4334 File Offset: 0x002A2534
 	private int SortMenu(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -31,7 +31,7 @@ public class ComposeSort : CommonSort<EComposeSortWayType>
 		return 0;
 	}
 
-	// Token: 0x0600B7DA RID: 47066 RVA: 0x00299C68 File Offset: 0x00297E68
+	// Token: 0x06008BC3 RID: 35779 RVA: 0x002A4380 File Offset: 0x002A2580
 	private int SortMake(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -69,7 +69,7 @@ public class ComposeSort : CommonSort<EComposeSortWayType>
 		}
 	}
 
-	// Token: 0x0600B7DB RID: 47067 RVA: 0x00299CF4 File Offset: 0x00297EF4
+	// Token: 0x06008BC4 RID: 35780 RVA: 0x002A440C File Offset: 0x002A260C
 	private int SortQuality(object a, object b, bool isAscending, [Nullable(new byte[]
 	{
 		2,
@@ -105,7 +105,7 @@ public class ComposeSort : CommonSort<EComposeSortWayType>
 		}
 	}
 
-	// Token: 0x0600B7DC RID: 47068 RVA: 0x00299D70 File Offset: 0x00297F70
+	// Token: 0x06008BC5 RID: 35781 RVA: 0x002A4488 File Offset: 0x002A2688
 	protected override void OnInitSortMap()
 	{
 		this.SortMap.Add(EComposeSortWayType.Menu, new TSortResult(this.SortMenu));

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200006F RID: 111
+	// Token: 0x02000077 RID: 119
 	public class ConfigAdvertisingTabRegionById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600029A RID: 666 RVA: 0x000683FB File Offset: 0x000665FB
+		// Token: 0x060002CA RID: 714 RVA: 0x0006CCAF File Offset: 0x0006AEAF
 		static ConfigAdvertisingTabRegionById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAdvertisingTabRegionById.CreateStaticDefaultValue), new Action(ConfigAdvertisingTabRegionById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600029B RID: 667 RVA: 0x0006841C File Offset: 0x0006661C
+		// Token: 0x060002CB RID: 715 RVA: 0x0006CCD0 File Offset: 0x0006AED0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAdvertisingTabRegionById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600029C RID: 668 RVA: 0x0006849B File Offset: 0x0006669B
+		// Token: 0x060002CC RID: 716 RVA: 0x0006CD4F File Offset: 0x0006AF4F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAdvertisingTabRegionById.LogPair = null;
 			ConfigAdvertisingTabRegionById.HandleId = 0;
 		}
 
-		// Token: 0x0600029D RID: 669 RVA: 0x000684A9 File Offset: 0x000666A9
+		// Token: 0x060002CD RID: 717 RVA: 0x0006CD5D File Offset: 0x0006AF5D
 		public static void Init()
 		{
 			ConfigAdvertisingTabRegionById.HandleId = ConfigCommon.InitDataStatement(ConfigAdvertisingTabRegionById.HandleId, "db_advertisingpage.db", "select BinData from `AdvertisingTabRegion` where Id=?");
 		}
 
-		// Token: 0x0600029E RID: 670 RVA: 0x000684C4 File Offset: 0x000666C4
+		// Token: 0x060002CE RID: 718 RVA: 0x0006CD78 File Offset: 0x0006AF78
 		public static AdvertisingTabRegion? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigAdvertisingTabRegionById.HandleId, ConfigAdvertisingTabRegionById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new AdvertisingTabRegion?(rootAsAdvertisingTabRegion);
 		}
 
-		// Token: 0x040002ED RID: 749
+		// Token: 0x04000325 RID: 805
 		private const string DB = "db_advertisingpage.db";
 
-		// Token: 0x040002EE RID: 750
+		// Token: 0x04000326 RID: 806
 		private const string FILE = "x.下一版本核心内容展示.xlsx";
 
-		// Token: 0x040002EF RID: 751
+		// Token: 0x04000327 RID: 807
 		private const string TABLE = "AdvertisingTabRegion";
 
-		// Token: 0x040002F0 RID: 752
+		// Token: 0x04000328 RID: 808
 		private const string COMMAND = "select BinData from `AdvertisingTabRegion` where Id=?";
 
-		// Token: 0x040002F1 RID: 753
+		// Token: 0x04000329 RID: 809
 		private const string KEY_PREFIX = "AdvertisingTabRegionById";
 
-		// Token: 0x040002F2 RID: 754
+		// Token: 0x0400032A RID: 810
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040002F3 RID: 755
+		// Token: 0x0400032B RID: 811
 		private static int HandleId;
 	}
 }

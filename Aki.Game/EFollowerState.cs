@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02000E8B RID: 3723
+// Token: 0x02000340 RID: 832
 public enum EFollowerState
 {
-	// Token: 0x040029A9 RID: 10665
+	// Token: 0x04002A44 RID: 10820
 	None,
-	// Token: 0x040029AA RID: 10666
+	// Token: 0x04002A45 RID: 10821
 	InCD,
-	// Token: 0x040029AB RID: 10667
+	// Token: 0x04002A46 RID: 10822
 	CDReady
 }

@@ -9,10 +9,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002047 RID: 8263
+// Token: 0x0200151A RID: 5402
 internal class KingShipPlotItem : UiPanelBase
 {
-	// Token: 0x060103B7 RID: 66487 RVA: 0x003F5D6C File Offset: 0x003F3F6C
+	// Token: 0x0600D81F RID: 55327 RVA: 0x00402364 File Offset: 0x00400564
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -33,7 +33,7 @@ internal class KingShipPlotItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x060103B8 RID: 66488 RVA: 0x003F5EA8 File Offset: 0x003F40A8
+	// Token: 0x0600D820 RID: 55328 RVA: 0x004024A0 File Offset: 0x004006A0
 	protected override UniTask OnBeforeStartAsync()
 	{
 		KingShipPlotItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -44,7 +44,7 @@ internal class KingShipPlotItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060103B9 RID: 66489 RVA: 0x003F5EEC File Offset: 0x003F40EC
+	// Token: 0x0600D821 RID: 55329 RVA: 0x004024E4 File Offset: 0x004006E4
 	[NullableContext(1)]
 	public void RefreshPlot(List<string> flowId)
 	{
@@ -67,7 +67,7 @@ internal class KingShipPlotItem : UiPanelBase
 		this.ShowPlot();
 	}
 
-	// Token: 0x060103BA RID: 66490 RVA: 0x003F5FD8 File Offset: 0x003F41D8
+	// Token: 0x0600D822 RID: 55330 RVA: 0x004025D0 File Offset: 0x004007D0
 	public void ShowPlot()
 	{
 		int count = this.PlotDataList.Count;
@@ -90,7 +90,7 @@ internal class KingShipPlotItem : UiPanelBase
 		commonLogic.UpdatePlotSubtitle(inPlotSubtitleInfo);
 	}
 
-	// Token: 0x060103BB RID: 66491 RVA: 0x003F6040 File Offset: 0x003F4240
+	// Token: 0x0600D823 RID: 55331 RVA: 0x00402638 File Offset: 0x00400838
 	private void OnMaskBtnClick()
 	{
 		this.CurrentShowPlotIndex++;
@@ -98,7 +98,7 @@ internal class KingShipPlotItem : UiPanelBase
 		AudioSystem.Instance.PostEvent("play_ui_ia_com_confirm");
 	}
 
-	// Token: 0x060103BC RID: 66492 RVA: 0x003F6066 File Offset: 0x003F4266
+	// Token: 0x0600D824 RID: 55332 RVA: 0x0040265E File Offset: 0x0040085E
 	protected override void OnBeforeDestroy()
 	{
 		DynamicMaskButton maskButton = this.MaskButton;
@@ -114,7 +114,7 @@ internal class KingShipPlotItem : UiPanelBase
 		commonLogic.Clear();
 	}
 
-	// Token: 0x060103BD RID: 66493 RVA: 0x003F608C File Offset: 0x003F428C
+	// Token: 0x0600D825 RID: 55333 RVA: 0x00402684 File Offset: 0x00400884
 	public UniTask DestroyPortraitItem()
 	{
 		KingShipPlotItem.<DestroyPortraitItem>d__11 <DestroyPortraitItem>d__;
@@ -125,61 +125,61 @@ internal class KingShipPlotItem : UiPanelBase
 		return <DestroyPortraitItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x04007819 RID: 30745
+	// Token: 0x04007902 RID: 30978
 	[Nullable(1)]
 	private List<ITalkItem> PlotDataList = new List<ITalkItem>();
 
-	// Token: 0x0400781A RID: 30746
+	// Token: 0x04007903 RID: 30979
 	private int CurrentShowPlotIndex;
 
-	// Token: 0x0400781B RID: 30747
+	// Token: 0x04007904 RID: 30980
 	[Nullable(2)]
 	private DynamicMaskButton MaskButton;
 
-	// Token: 0x0400781C RID: 30748
+	// Token: 0x04007905 RID: 30981
 	[Nullable(2)]
 	private PlotTextCommonLogic CommonLogic;
 
-	// Token: 0x02008640 RID: 34368
+	// Token: 0x020077C7 RID: 30663
 	private class EKingShipPlotItemDefine
 	{
-		// Token: 0x0402BB10 RID: 178960
+		// Token: 0x04026E1F RID: 159263
 		public const int NpcName = 0;
 
-		// Token: 0x0402BB11 RID: 178961
+		// Token: 0x04026E20 RID: 159264
 		public const int NpcTitle = 1;
 
-		// Token: 0x0402BB12 RID: 178962
+		// Token: 0x04026E21 RID: 159265
 		public const int Content = 2;
 
-		// Token: 0x0402BB13 RID: 178963
+		// Token: 0x04026E22 RID: 159266
 		public const int LineItem = 3;
 
-		// Token: 0x0402BB14 RID: 178964
+		// Token: 0x04026E23 RID: 159267
 		public const int PlotItem = 4;
 
-		// Token: 0x0402BB15 RID: 178965
+		// Token: 0x04026E24 RID: 159268
 		public const int LeftPoint = 5;
 
-		// Token: 0x0402BB16 RID: 178966
+		// Token: 0x04026E25 RID: 159269
 		public const int RightPoint = 6;
 
-		// Token: 0x0402BB17 RID: 178967
+		// Token: 0x04026E26 RID: 159270
 		public const int CenterPoint = 7;
 
-		// Token: 0x0402BB18 RID: 178968
+		// Token: 0x04026E27 RID: 159271
 		public const int TextScrollView = 8;
 
-		// Token: 0x0402BB19 RID: 178969
+		// Token: 0x04026E28 RID: 159272
 		public const int OptionPanel = 9;
 
-		// Token: 0x0402BB1A RID: 178970
+		// Token: 0x04026E29 RID: 159273
 		public const int OptionLayout = 10;
 
-		// Token: 0x0402BB1B RID: 178971
+		// Token: 0x04026E2A RID: 159274
 		public const int OptionItem = 11;
 
-		// Token: 0x0402BB1C RID: 178972
+		// Token: 0x04026E2B RID: 159275
 		public const int OptionLimitBar = 12;
 	}
 }

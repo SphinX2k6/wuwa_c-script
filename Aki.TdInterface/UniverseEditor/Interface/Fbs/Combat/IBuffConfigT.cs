@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Combat
 {
-	// Token: 0x02005EE5 RID: 24293
+	// Token: 0x02006528 RID: 25896
 	public class IBuffConfigT
 	{
-		// Token: 0x1700B5A7 RID: 46503
-		// (get) Token: 0x06029B84 RID: 170884 RVA: 0x005B9CB7 File Offset: 0x005B7EB7
-		// (set) Token: 0x06029B85 RID: 170885 RVA: 0x005B9CBF File Offset: 0x005B7EBF
+		// Token: 0x1700BF12 RID: 48914
+		// (get) Token: 0x0602C238 RID: 180792 RVA: 0x0060319B File Offset: 0x0060139B
+		// (set) Token: 0x0602C239 RID: 180793 RVA: 0x006031A3 File Offset: 0x006013A3
 		public int Id { get; set; }
 
-		// Token: 0x1700B5A8 RID: 46504
-		// (get) Token: 0x06029B86 RID: 170886 RVA: 0x005B9CC8 File Offset: 0x005B7EC8
-		// (set) Token: 0x06029B87 RID: 170887 RVA: 0x005B9CD0 File Offset: 0x005B7ED0
+		// Token: 0x1700BF13 RID: 48915
+		// (get) Token: 0x0602C23A RID: 180794 RVA: 0x006031AC File Offset: 0x006013AC
+		// (set) Token: 0x0602C23B RID: 180795 RVA: 0x006031B4 File Offset: 0x006013B4
 		public string Name { get; set; }
 
-		// Token: 0x06029B88 RID: 170888 RVA: 0x005B9CD9 File Offset: 0x005B7ED9
+		// Token: 0x0602C23C RID: 180796 RVA: 0x006031BD File Offset: 0x006013BD
 		public IBuffConfigT()
 		{
 			this.Id = 0;

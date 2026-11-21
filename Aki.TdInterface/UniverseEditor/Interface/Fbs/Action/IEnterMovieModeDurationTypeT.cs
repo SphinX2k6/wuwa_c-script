@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020066B8 RID: 26296
+	// Token: 0x02006D32 RID: 27954
 	public class IEnterMovieModeDurationTypeT
 	{
-		// Token: 0x1700C364 RID: 50020
-		// (get) Token: 0x0602DB66 RID: 187238 RVA: 0x006411CE File Offset: 0x0063F3CE
-		// (set) Token: 0x0602DB67 RID: 187239 RVA: 0x006411D6 File Offset: 0x0063F3D6
+		// Token: 0x1700CD15 RID: 52501
+		// (get) Token: 0x06030383 RID: 197507 RVA: 0x0068E482 File Offset: 0x0068C682
+		// (set) Token: 0x06030384 RID: 197508 RVA: 0x0068E48A File Offset: 0x0068C68A
 		public EEnterMovieModeDurationType Type { get; set; }
 
-		// Token: 0x0602DB68 RID: 187240 RVA: 0x006411DF File Offset: 0x0063F3DF
+		// Token: 0x06030385 RID: 197509 RVA: 0x0068E493 File Offset: 0x0068C693
 		public IEnterMovieModeDurationTypeT()
 		{
 			this.Type = EEnterMovieModeDurationType.BorderAnimFinished;

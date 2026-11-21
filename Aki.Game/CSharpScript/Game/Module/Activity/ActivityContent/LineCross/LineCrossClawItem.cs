@@ -6,10 +6,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 {
-	// Token: 0x0200655C RID: 25948
+	// Token: 0x020054DA RID: 21722
 	internal class LineCrossClawItem : UiPanelBase
 	{
-		// Token: 0x0604106C RID: 266348 RVA: 0x00FC2928 File Offset: 0x00FC0B28
+		// Token: 0x06035D31 RID: 220465 RVA: 0x00F09910 File Offset: 0x00F07B10
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0604106D RID: 266349 RVA: 0x00FC2A18 File Offset: 0x00FC0C18
+		// Token: 0x06035D32 RID: 220466 RVA: 0x00F09A00 File Offset: 0x00F07C00
 		public void Refresh(bool ifHidden, ELineCrossGroupState state)
 		{
 			string resourceId;
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			base.SetTextureByPath(resourcePath2, base.GetTexture(3), null, null);
 		}
 
-		// Token: 0x0604106E RID: 266350 RVA: 0x00FC2AEC File Offset: 0x00FC0CEC
+		// Token: 0x06035D33 RID: 220467 RVA: 0x00F09AD4 File Offset: 0x00F07CD4
 		private void RefreshNormal()
 		{
 			base.GetTexture(0).SetColor(FColor.FromHex("764372"));
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			base.GetSprite(5).SetUIActive(true);
 		}
 
-		// Token: 0x0604106F RID: 266351 RVA: 0x00FC2B98 File Offset: 0x00FC0D98
+		// Token: 0x06035D34 RID: 220468 RVA: 0x00F09B80 File Offset: 0x00F07D80
 		private void RefreshClear()
 		{
 			base.GetTexture(0).SetColor(FColor.FromHex("764372"));
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			base.GetSprite(5).SetUIActive(true);
 		}
 
-		// Token: 0x06041070 RID: 266352 RVA: 0x00FC2C44 File Offset: 0x00FC0E44
+		// Token: 0x06035D35 RID: 220469 RVA: 0x00F09C2C File Offset: 0x00F07E2C
 		private void RefreshLock()
 		{
 			base.GetTexture(0).SetColor(FColor.FromHex("4e4e4e"));
@@ -107,25 +107,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.LineCross
 			base.GetSprite(5).SetUIActive(false);
 		}
 
-		// Token: 0x0200C755 RID: 51029
+		// Token: 0x0200B13A RID: 45370
 		private class EComponent
 		{
-			// Token: 0x0403C38D RID: 246669
+			// Token: 0x04036CDF RID: 224479
 			public const int TextureDesc1 = 0;
 
-			// Token: 0x0403C38E RID: 246670
+			// Token: 0x04036CE0 RID: 224480
 			public const int TextureDesc2 = 1;
 
-			// Token: 0x0403C38F RID: 246671
+			// Token: 0x04036CE1 RID: 224481
 			public const int ClawTexture1 = 2;
 
-			// Token: 0x0403C390 RID: 246672
+			// Token: 0x04036CE2 RID: 224482
 			public const int ClawTexture2 = 3;
 
-			// Token: 0x0403C391 RID: 246673
+			// Token: 0x04036CE3 RID: 224483
 			public const int SpriteDesc3 = 4;
 
-			// Token: 0x0403C392 RID: 246674
+			// Token: 0x04036CE4 RID: 224484
 			public const int SpriteDesc4 = 5;
 		}
 	}

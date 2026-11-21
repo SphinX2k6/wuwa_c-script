@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001180 RID: 4480
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020012BA RID: 4794
 	public class ITakePhoto2TargetPlayMontageCondition
 	{
-		// Token: 0x060065C6 RID: 26054 RVA: 0x000F428C File Offset: 0x000F248C
+		// Token: 0x06006BFD RID: 27645 RVA: 0x00101A58 File Offset: 0x000FFC58
 		private ITakePhoto2TargetPlayMontageCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060065C7 RID: 26055 RVA: 0x000F42C4 File Offset: 0x000F24C4
+		// Token: 0x06006BFE RID: 27646 RVA: 0x00101A90 File Offset: 0x000FFC90
 		public static ITakePhoto2TargetPlayMontageCondition Create([Nullable(2)] ITakePhoto2TargetPlayMontageCondition instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060065C8 RID: 26056 RVA: 0x000F42D7 File Offset: 0x000F24D7
+		// Token: 0x06006BFF RID: 27647 RVA: 0x00101AA3 File Offset: 0x000FFCA3
 		public static ITakePhoto2TargetPlayMontageCondition CreateFromSetValue([Nullable(2)] ITakePhoto2TargetPlayMontageCondition_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060065C9 RID: 26057 RVA: 0x000F42EA File Offset: 0x000F24EA
+		// Token: 0x06006C00 RID: 27648 RVA: 0x00101AB6 File Offset: 0x000FFCB6
 		public ITakePhoto2TargetPlayMontageCondition_SetValue ToSetValue()
 		{
 			return new ITakePhoto2TargetPlayMontageCondition_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17002128 RID: 8488
-		// (get) Token: 0x060065CA RID: 26058 RVA: 0x000F42FD File Offset: 0x000F24FD
-		// (set) Token: 0x060065CB RID: 26059 RVA: 0x000F4328 File Offset: 0x000F2528
+		// Token: 0x170022E7 RID: 8935
+		// (get) Token: 0x06006C01 RID: 27649 RVA: 0x00101AC9 File Offset: 0x000FFCC9
+		// (set) Token: 0x06006C02 RID: 27650 RVA: 0x00101AF4 File Offset: 0x000FFCF4
 		public virtual string MontagePath
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003D17 RID: 15639
+		// Token: 0x0400407F RID: 16511
 		[Nullable(2)]
 		protected ITakePhoto2TargetPlayMontageCondition FbInstance;
 
-		// Token: 0x04003D18 RID: 15640
+		// Token: 0x04004080 RID: 16512
 		[Nullable(2)]
 		protected ITakePhoto2TargetPlayMontageCondition_SetValue PocoInterface;
 	}

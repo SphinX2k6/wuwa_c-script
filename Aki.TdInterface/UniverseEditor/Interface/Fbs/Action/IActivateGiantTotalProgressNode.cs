@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200608F RID: 24719
+	// Token: 0x020066F1 RID: 26353
 	public struct IActivateGiantTotalProgressNode : IFlatbufferObject
 	{
-		// Token: 0x1700B62D RID: 46637
-		// (get) Token: 0x0602A319 RID: 172825 RVA: 0x005D172D File Offset: 0x005CF92D
+		// Token: 0x1700BF98 RID: 49048
+		// (get) Token: 0x0602C9FA RID: 182778 RVA: 0x0061B6D8 File Offset: 0x006198D8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,50 +16,50 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602A31A RID: 172826 RVA: 0x005D173A File Offset: 0x005CF93A
+		// Token: 0x0602C9FB RID: 182779 RVA: 0x0061B6E5 File Offset: 0x006198E5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602A31B RID: 172827 RVA: 0x005D1744 File Offset: 0x005CF944
+		// Token: 0x0602C9FC RID: 182780 RVA: 0x0061B6EC File Offset: 0x006198EC
 		public static IActivateGiantTotalProgressNode GetRootAsIActivateGiantTotalProgressNode(ByteBuffer _bb)
 		{
 			return IActivateGiantTotalProgressNode.GetRootAsIActivateGiantTotalProgressNode(_bb, default(IActivateGiantTotalProgressNode));
 		}
 
-		// Token: 0x0602A31C RID: 172828 RVA: 0x005D1760 File Offset: 0x005CF960
+		// Token: 0x0602C9FD RID: 182781 RVA: 0x0061B708 File Offset: 0x00619908
 		public static IActivateGiantTotalProgressNode GetRootAsIActivateGiantTotalProgressNode(ByteBuffer _bb, IActivateGiantTotalProgressNode obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602A31D RID: 172829 RVA: 0x005D177D File Offset: 0x005CF97D
+		// Token: 0x0602C9FE RID: 182782 RVA: 0x0061B725 File Offset: 0x00619925
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602A31E RID: 172830 RVA: 0x005D178C File Offset: 0x005CF98C
+		// Token: 0x0602C9FF RID: 182783 RVA: 0x0061B734 File Offset: 0x00619934
 		public IActivateGiantTotalProgressNode __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x0602A31F RID: 172831 RVA: 0x005D179C File Offset: 0x005CF99C
+		// Token: 0x0602CA00 RID: 182784 RVA: 0x0061B744 File Offset: 0x00619944
 		public static void StartIActivateGiantTotalProgressNode(FlatBufferBuilder builder)
 		{
 			builder.StartTable(0);
 		}
 
-		// Token: 0x0602A320 RID: 172832 RVA: 0x005D17A5 File Offset: 0x005CF9A5
+		// Token: 0x0602CA01 RID: 182785 RVA: 0x0061B74D File Offset: 0x0061994D
 		public static Offset<IActivateGiantTotalProgressNode> EndIActivateGiantTotalProgressNode(FlatBufferBuilder builder)
 		{
 			return new Offset<IActivateGiantTotalProgressNode>(builder.EndTable());
 		}
 
-		// Token: 0x0602A321 RID: 172833 RVA: 0x005D17B4 File Offset: 0x005CF9B4
+		// Token: 0x0602CA02 RID: 182786 RVA: 0x0061B75C File Offset: 0x0061995C
 		public IActivateGiantTotalProgressNodeT UnPack()
 		{
 			IActivateGiantTotalProgressNodeT activateGiantTotalProgressNodeT = new IActivateGiantTotalProgressNodeT();
@@ -67,12 +67,12 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return activateGiantTotalProgressNodeT;
 		}
 
-		// Token: 0x0602A322 RID: 172834 RVA: 0x005D17CF File Offset: 0x005CF9CF
+		// Token: 0x0602CA03 RID: 182787 RVA: 0x0061B777 File Offset: 0x00619977
 		public void UnPackTo(IActivateGiantTotalProgressNodeT _o)
 		{
 		}
 
-		// Token: 0x0602A323 RID: 172835 RVA: 0x005D17D4 File Offset: 0x005CF9D4
+		// Token: 0x0602CA04 RID: 182788 RVA: 0x0061B77C File Offset: 0x0061997C
 		public static Offset<IActivateGiantTotalProgressNode> Pack(FlatBufferBuilder builder, IActivateGiantTotalProgressNodeT _o)
 		{
 			if (_o == null)
@@ -83,7 +83,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IActivateGiantTotalProgressNode.EndIActivateGiantTotalProgressNode(builder);
 		}
 
-		// Token: 0x04010428 RID: 66600
+		// Token: 0x0401122C RID: 70188
 		private Table __p;
 	}
 }

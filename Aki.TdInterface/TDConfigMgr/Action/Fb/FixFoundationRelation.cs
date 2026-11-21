@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020024DF RID: 9439
+	// Token: 0x02002784 RID: 10116
 	public class FixFoundationRelation : ActionParams
 	{
-		// Token: 0x0600D2B9 RID: 53945 RVA: 0x001F419E File Offset: 0x001F239E
-		[NullableContext(1)]
+		// Token: 0x0600E00E RID: 57358 RVA: 0x0020F9FA File Offset: 0x0020DBFA
 		public static FixFoundationRelation Create(IFixFoundationRelation? instance)
 		{
 			if (instance == null)
@@ -21,7 +19,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x04007395 RID: 29589
+		// Token: 0x040079E2 RID: 31202
 		private IFixFoundationRelation Instance;
 	}
 }

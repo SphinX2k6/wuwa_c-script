@@ -6,7 +6,7 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Handles
 {
-	// Token: 0x0200553E RID: 21822
+	// Token: 0x02004510 RID: 17680
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,12 +15,12 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Handles
 	})]
 	public class TaskMarkItemRangeHandle : MarkItemRangeHandle<MarkRangeImageComponent>
 	{
-		// Token: 0x06037B2F RID: 228143 RVA: 0x00D37B67 File Offset: 0x00D35D67
+		// Token: 0x0602C9FF RID: 182783 RVA: 0x00C85692 File Offset: 0x00C83892
 		public TaskMarkItemRangeHandle(IMarkItemComponentContext context) : base(context)
 		{
 		}
 
-		// Token: 0x06037B30 RID: 228144 RVA: 0x00D37B70 File Offset: 0x00D35D70
+		// Token: 0x0602CA00 RID: 182784 RVA: 0x00C8569C File Offset: 0x00C8389C
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Map.Marks.MarkItemView.Handles
 			return <LoadComponentAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06037B31 RID: 228145 RVA: 0x00D37BB4 File Offset: 0x00D35DB4
+		// Token: 0x0602CA01 RID: 182785 RVA: 0x00C856E0 File Offset: 0x00C838E0
 		protected override void OnResetRangeComponent(MarkRangeImageComponent rangeComponent)
 		{
 			base.OnResetRangeComponent(rangeComponent);

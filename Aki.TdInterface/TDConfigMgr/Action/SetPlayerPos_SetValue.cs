@@ -3,25 +3,27 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021CF RID: 8655
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x0200243A RID: 9274
 	public class SetPlayerPos_SetValue
 	{
-		// Token: 0x04007168 RID: 29032
-		[Nullable(1)]
+		// Token: 0x040077B0 RID: 30640
 		public ITeleportConfig TelePortConfig;
 
-		// Token: 0x04007169 RID: 29033
+		// Token: 0x040077B1 RID: 30641
+		[Nullable(2)]
 		public ITelePortAfterTimeOut TeammateTeleportConfig;
 
-		// Token: 0x0400716A RID: 29034
+		// Token: 0x040077B2 RID: 30642
+		[Nullable(2)]
 		public ITeleportTransitionType TransitionOption;
 
-		// Token: 0x0400716B RID: 29035
+		// Token: 0x040077B3 RID: 30643
 		public bool? DisableAutoFadeInScreen;
 
-		// Token: 0x0400716C RID: 29036
+		// Token: 0x040077B4 RID: 30644
 		public bool? OnlinePreciseTransport;
+
+		// Token: 0x040077B5 RID: 30645
+		public bool? IsBanMapSound;
 	}
 }

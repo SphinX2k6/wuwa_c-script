@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000504 RID: 1284
+	// Token: 0x0200051A RID: 1306
 	public class ConfigMainLineById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001E23 RID: 7715 RVA: 0x0010389B File Offset: 0x00101A9B
+		// Token: 0x06001EA7 RID: 7847 RVA: 0x00109FEF File Offset: 0x001081EF
 		static ConfigMainLineById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMainLineById.CreateStaticDefaultValue), new Action(ConfigMainLineById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001E24 RID: 7716 RVA: 0x001038BC File Offset: 0x00101ABC
+		// Token: 0x06001EA8 RID: 7848 RVA: 0x0010A010 File Offset: 0x00108210
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMainLineById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001E25 RID: 7717 RVA: 0x0010393B File Offset: 0x00101B3B
+		// Token: 0x06001EA9 RID: 7849 RVA: 0x0010A08F File Offset: 0x0010828F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMainLineById.LogPair = null;
 			ConfigMainLineById.HandleId = 0;
 		}
 
-		// Token: 0x06001E26 RID: 7718 RVA: 0x00103949 File Offset: 0x00101B49
+		// Token: 0x06001EAA RID: 7850 RVA: 0x0010A09D File Offset: 0x0010829D
 		public static void Init()
 		{
 			ConfigMainLineById.HandleId = ConfigCommon.InitDataStatement(ConfigMainLineById.HandleId, "db_moonchasing.db", "select BinData from `MainLine` where Id=?");
 		}
 
-		// Token: 0x06001E27 RID: 7719 RVA: 0x00103964 File Offset: 0x00101B64
+		// Token: 0x06001EAB RID: 7851 RVA: 0x0010A0B8 File Offset: 0x001082B8
 		public static MainLine? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigMainLineById.HandleId, ConfigMainLineById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new MainLine?(rootAsMainLine);
 		}
 
-		// Token: 0x04002300 RID: 8960
+		// Token: 0x0400239A RID: 9114
 		private const string DB = "db_moonchasing.db";
 
-		// Token: 0x04002301 RID: 8961
+		// Token: 0x0400239B RID: 9115
 		private const string FILE = "z.追月节.xlsx";
 
-		// Token: 0x04002302 RID: 8962
+		// Token: 0x0400239C RID: 9116
 		private const string TABLE = "MainLine";
 
-		// Token: 0x04002303 RID: 8963
+		// Token: 0x0400239D RID: 9117
 		private const string COMMAND = "select BinData from `MainLine` where Id=?";
 
-		// Token: 0x04002304 RID: 8964
+		// Token: 0x0400239E RID: 9118
 		private const string KEY_PREFIX = "MainLineById";
 
-		// Token: 0x04002305 RID: 8965
+		// Token: 0x0400239F RID: 9119
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002306 RID: 8966
+		// Token: 0x040023A0 RID: 9120
 		private static int HandleId;
 	}
 }

@@ -5,16 +5,16 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.AutoPilot
 {
-	// Token: 0x02005E75 RID: 24181
+	// Token: 0x02004E5A RID: 20058
 	public class AutoPilotSkillHighLightLogic
 	{
-		// Token: 0x0603D801 RID: 251905 RVA: 0x00ED776E File Offset: 0x00ED596E
+		// Token: 0x06032791 RID: 206737 RVA: 0x00E28CFA File Offset: 0x00E26EFA
 		private void StartTimer()
 		{
 			this.TimerHandle = TimerSystem.Instance.Delay(new TTimerAction(this.OnHighlightTimeUp), (float)(AutoPilotModel.Instance.GetSkillHighLightTime() * TimeUtil.Instance.InverseMillisecond), null, null, true, 1f);
 		}
 
-		// Token: 0x0603D802 RID: 251906 RVA: 0x00ED77AA File Offset: 0x00ED59AA
+		// Token: 0x06032792 RID: 206738 RVA: 0x00E28D36 File Offset: 0x00E26F36
 		private void ClearTimer()
 		{
 			if (this.TimerHandle != null && TimerSystem.Instance.Has(this.TimerHandle))
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 		}
 
-		// Token: 0x0603D803 RID: 251907 RVA: 0x00ED77DE File Offset: 0x00ED59DE
+		// Token: 0x06032793 RID: 206739 RVA: 0x00E28D6A File Offset: 0x00E26F6A
 		public void Dispose()
 		{
 			if (this.Highlighting)
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			this.ClearTimer();
 		}
 
-		// Token: 0x0603D804 RID: 251908 RVA: 0x00ED77F4 File Offset: 0x00ED59F4
+		// Token: 0x06032794 RID: 206740 RVA: 0x00E28D80 File Offset: 0x00E26F80
 		public void ShowHighlightExploreSkill()
 		{
 			if (this.Highlighting)
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			this.OnShowHighlightExploreSkill();
 		}
 
-		// Token: 0x0603D805 RID: 251909 RVA: 0x00ED7860 File Offset: 0x00ED5A60
+		// Token: 0x06032795 RID: 206741 RVA: 0x00E28DEC File Offset: 0x00E26FEC
 		public void HideHighlightExploreSkill()
 		{
 			if (!this.Highlighting)
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			this.OnHideHighlightExploreSkill();
 		}
 
-		// Token: 0x0603D806 RID: 251910 RVA: 0x00ED789C File Offset: 0x00ED5A9C
+		// Token: 0x06032796 RID: 206742 RVA: 0x00E28E28 File Offset: 0x00E27028
 		private void TryAddTag()
 		{
 			Entity vehicleEntity = AutoPilotModel.Instance.VehicleEntity;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 		}
 
-		// Token: 0x0603D807 RID: 251911 RVA: 0x00ED78E4 File Offset: 0x00ED5AE4
+		// Token: 0x06032797 RID: 206743 RVA: 0x00E28E70 File Offset: 0x00E27070
 		private void TryRemoveTag()
 		{
 			Entity vehicleEntity = AutoPilotModel.Instance.VehicleEntity;
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 		}
 
-		// Token: 0x0603D808 RID: 251912 RVA: 0x00ED792C File Offset: 0x00ED5B2C
+		// Token: 0x06032798 RID: 206744 RVA: 0x00E28EB8 File Offset: 0x00E270B8
 		private void OnShowHighlightExploreSkill()
 		{
 			this.Highlighting = true;
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			this.StartTimer();
 		}
 
-		// Token: 0x0603D809 RID: 251913 RVA: 0x00ED7994 File Offset: 0x00ED5B94
+		// Token: 0x06032799 RID: 206745 RVA: 0x00E28F20 File Offset: 0x00E27120
 		private void OnHideHighlightExploreSkill()
 		{
 			this.Highlighting = false;
@@ -102,14 +102,14 @@ namespace CSharpScript.Game.Module.AutoPilot
 			this.ClearTimer();
 		}
 
-		// Token: 0x0603D80A RID: 251914 RVA: 0x00ED79FC File Offset: 0x00ED5BFC
+		// Token: 0x0603279A RID: 206746 RVA: 0x00E28F88 File Offset: 0x00E27188
 		private void OnHighlightTimeUp(float delta)
 		{
 			Log.Instance.Info(ELogModule.AutoPilot, ELogAuthor.CB, "高亮时间结束，玩家探索技能取消高亮", default(ReadOnlySpan<ValueTuple<string, object>>));
 			this.OnHideHighlightExploreSkill();
 		}
 
-		// Token: 0x0603D80B RID: 251915 RVA: 0x00ED7A30 File Offset: 0x00ED5C30
+		// Token: 0x0603279B RID: 206747 RVA: 0x00E28FBC File Offset: 0x00E271BC
 		private void OnChangeExploreSkill()
 		{
 			if (RouletteModel.Instance.CurrentExploreSkillId == (int)this.ExploreToolId)
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.Module.AutoPilot
 			this.TryRemoveTag();
 		}
 
-		// Token: 0x0603D80C RID: 251916 RVA: 0x00ED7A9C File Offset: 0x00ED5C9C
+		// Token: 0x0603279C RID: 206748 RVA: 0x00E29028 File Offset: 0x00E27228
 		private void OnUseExploreSkill(int charId, int skillId, bool isAutonomousProxy)
 		{
 			SVisionData visionData = PhantomUtil.GetVisionData((int)this.ExploreToolId);
@@ -143,19 +143,19 @@ namespace CSharpScript.Game.Module.AutoPilot
 			}
 		}
 
-		// Token: 0x0402018B RID: 131467
+		// Token: 0x0401AC52 RID: 109650
 		private readonly ERouletteExploreId ExploreToolId = ERouletteExploreId.摩托自动巡航;
 
-		// Token: 0x0402018C RID: 131468
+		// Token: 0x0401AC53 RID: 109651
 		private ERouletteExploreId LastExploreToolId = ERouletteExploreId.摩托自动巡航;
 
-		// Token: 0x0402018D RID: 131469
+		// Token: 0x0401AC54 RID: 109652
 		private readonly int HighlightTagId = GameplayTagDefine.EGameplayTagId["系统.自动巡航.探索技能高亮"];
 
-		// Token: 0x0402018E RID: 131470
+		// Token: 0x0401AC55 RID: 109653
 		private bool Highlighting;
 
-		// Token: 0x0402018F RID: 131471
+		// Token: 0x0401AC56 RID: 109654
 		[Nullable(2)]
 		private TimerHandle TimerHandle;
 	}

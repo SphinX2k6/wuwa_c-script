@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Core.Net;
 
-// Token: 0x020000B3 RID: 179
+// Token: 0x020000B5 RID: 181
 [NullableContext(1)]
 [Nullable(0)]
 public class NetInfo : Singleton
 {
-	// Token: 0x170000BD RID: 189
-	// (get) Token: 0x060005A0 RID: 1440 RVA: 0x0001E8F4 File Offset: 0x0001CAF4
+	// Token: 0x170000CF RID: 207
+	// (get) Token: 0x060005E1 RID: 1505 RVA: 0x0001EF98 File Offset: 0x0001D198
 	public float RttMs
 	{
 		get
@@ -18,7 +18,7 @@ public class NetInfo : Singleton
 		}
 	}
 
-	// Token: 0x060005A1 RID: 1441 RVA: 0x0001E8FC File Offset: 0x0001CAFC
+	// Token: 0x060005E2 RID: 1506 RVA: 0x0001EFA0 File Offset: 0x0001D1A0
 	public void SetRttMs(int rttMs)
 	{
 		if ((float)rttMs < this.RttMsInternal)
@@ -35,24 +35,24 @@ public class NetInfo : Singleton
 		}
 	}
 
-	// Token: 0x170000BE RID: 190
-	// (get) Token: 0x060005A2 RID: 1442 RVA: 0x0001E951 File Offset: 0x0001CB51
-	// (set) Token: 0x060005A3 RID: 1443 RVA: 0x0001E959 File Offset: 0x0001CB59
+	// Token: 0x170000D0 RID: 208
+	// (get) Token: 0x060005E3 RID: 1507 RVA: 0x0001EFF5 File Offset: 0x0001D1F5
+	// (set) Token: 0x060005E4 RID: 1508 RVA: 0x0001EFFD File Offset: 0x0001D1FD
 	public string LoginTraceId { get; set; }
 
-	// Token: 0x170000BF RID: 191
-	// (get) Token: 0x060005A4 RID: 1444 RVA: 0x0001E962 File Offset: 0x0001CB62
-	// (set) Token: 0x060005A5 RID: 1445 RVA: 0x0001E96A File Offset: 0x0001CB6A
+	// Token: 0x170000D1 RID: 209
+	// (get) Token: 0x060005E5 RID: 1509 RVA: 0x0001F006 File Offset: 0x0001D206
+	// (set) Token: 0x060005E6 RID: 1510 RVA: 0x0001F00E File Offset: 0x0001D20E
 	public string Token { get; set; }
 
-	// Token: 0x170000C0 RID: 192
-	// (get) Token: 0x060005A6 RID: 1446 RVA: 0x0001E973 File Offset: 0x0001CB73
-	// (set) Token: 0x060005A7 RID: 1447 RVA: 0x0001E97B File Offset: 0x0001CB7B
+	// Token: 0x170000D2 RID: 210
+	// (get) Token: 0x060005E7 RID: 1511 RVA: 0x0001F017 File Offset: 0x0001D217
+	// (set) Token: 0x060005E8 RID: 1512 RVA: 0x0001F01F File Offset: 0x0001D21F
 	public string DeviceId { get; set; }
 
-	// Token: 0x170000C1 RID: 193
-	// (get) Token: 0x060005A8 RID: 1448 RVA: 0x0001E984 File Offset: 0x0001CB84
-	// (set) Token: 0x060005A9 RID: 1449 RVA: 0x0001E98C File Offset: 0x0001CB8C
+	// Token: 0x170000D3 RID: 211
+	// (get) Token: 0x060005E9 RID: 1513 RVA: 0x0001F028 File Offset: 0x0001D228
+	// (set) Token: 0x060005EA RID: 1514 RVA: 0x0001F030 File Offset: 0x0001D230
 	[Nullable(new byte[]
 	{
 		2,
@@ -68,9 +68,9 @@ public class NetInfo : Singleton
 		1
 	})] set; }
 
-	// Token: 0x170000C2 RID: 194
-	// (get) Token: 0x060005AA RID: 1450 RVA: 0x0001E995 File Offset: 0x0001CB95
-	// (set) Token: 0x060005AB RID: 1451 RVA: 0x0001E99D File Offset: 0x0001CB9D
+	// Token: 0x170000D4 RID: 212
+	// (get) Token: 0x060005EB RID: 1515 RVA: 0x0001F039 File Offset: 0x0001D239
+	// (set) Token: 0x060005EC RID: 1516 RVA: 0x0001F041 File Offset: 0x0001D241
 	[Nullable(new byte[]
 	{
 		2,
@@ -86,23 +86,23 @@ public class NetInfo : Singleton
 		1
 	})] set; }
 
-	// Token: 0x170000C3 RID: 195
-	// (get) Token: 0x060005AC RID: 1452 RVA: 0x0001E9A6 File Offset: 0x0001CBA6
-	// (set) Token: 0x060005AD RID: 1453 RVA: 0x0001E9AE File Offset: 0x0001CBAE
+	// Token: 0x170000D5 RID: 213
+	// (get) Token: 0x060005ED RID: 1517 RVA: 0x0001F04A File Offset: 0x0001D24A
+	// (set) Token: 0x060005EE RID: 1518 RVA: 0x0001F052 File Offset: 0x0001D252
 	public int TcpRatio { get; set; }
 
-	// Token: 0x170000C4 RID: 196
-	// (get) Token: 0x060005AE RID: 1454 RVA: 0x0001E9B7 File Offset: 0x0001CBB7
-	// (set) Token: 0x060005AF RID: 1455 RVA: 0x0001E9BF File Offset: 0x0001CBBF
+	// Token: 0x170000D6 RID: 214
+	// (get) Token: 0x060005EF RID: 1519 RVA: 0x0001F05B File Offset: 0x0001D25B
+	// (set) Token: 0x060005F0 RID: 1520 RVA: 0x0001F063 File Offset: 0x0001D263
 	public int TcpRetry { get; set; }
 
-	// Token: 0x170000C5 RID: 197
-	// (get) Token: 0x060005B0 RID: 1456 RVA: 0x0001E9C8 File Offset: 0x0001CBC8
-	// (set) Token: 0x060005B1 RID: 1457 RVA: 0x0001E9D0 File Offset: 0x0001CBD0
+	// Token: 0x170000D7 RID: 215
+	// (get) Token: 0x060005F1 RID: 1521 RVA: 0x0001F06C File Offset: 0x0001D26C
+	// (set) Token: 0x060005F2 RID: 1522 RVA: 0x0001F074 File Offset: 0x0001D274
 	public bool DisableCrc { get; set; }
 
-	// Token: 0x170000C6 RID: 198
-	// (get) Token: 0x060005B2 RID: 1458 RVA: 0x0001E9D9 File Offset: 0x0001CBD9
+	// Token: 0x170000D8 RID: 216
+	// (get) Token: 0x060005F3 RID: 1523 RVA: 0x0001F07D File Offset: 0x0001D27D
 	public static NetInfo Instance
 	{
 		get
@@ -116,12 +116,12 @@ public class NetInfo : Singleton
 		}
 	}
 
-	// Token: 0x060005B3 RID: 1459 RVA: 0x0001E9FC File Offset: 0x0001CBFC
+	// Token: 0x060005F4 RID: 1524 RVA: 0x0001F0A0 File Offset: 0x0001D2A0
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060005B4 RID: 1460 RVA: 0x0001E9FE File Offset: 0x0001CBFE
+	// Token: 0x060005F5 RID: 1525 RVA: 0x0001F0A2 File Offset: 0x0001D2A2
 	public static void ResetStaticDefaultValue()
 	{
 		NetInfo instance = NetInfo._instance;
@@ -132,19 +132,19 @@ public class NetInfo : Singleton
 		NetInfo._instance = null;
 	}
 
-	// Token: 0x060005B5 RID: 1461 RVA: 0x0001EA17 File Offset: 0x0001CC17
+	// Token: 0x060005F6 RID: 1526 RVA: 0x0001F0BB File Offset: 0x0001D2BB
 	static NetInfo()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(NetInfo.CreateStaticDefaultValue), new Action(NetInfo.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04000492 RID: 1170
+	// Token: 0x040004A0 RID: 1184
 	private float RttMsInternal;
 
-	// Token: 0x0400049A RID: 1178
+	// Token: 0x040004A8 RID: 1192
 	public readonly int TcpMaxRetry = 1;
 
-	// Token: 0x0400049C RID: 1180
+	// Token: 0x040004AA RID: 1194
 	[Nullable(2)]
 	private static NetInfo _instance;
 }

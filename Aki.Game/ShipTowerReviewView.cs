@@ -7,11 +7,11 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020029C7 RID: 10695
+// Token: 0x02001F42 RID: 8002
 public class ShipTowerReviewView : UiViewBase
 {
-	// Token: 0x17001DA3 RID: 7587
-	// (get) Token: 0x060162A4 RID: 90788 RVA: 0x0059B1E2 File Offset: 0x005993E2
+	// Token: 0x17001DFC RID: 7676
+	// (get) Token: 0x06013CAA RID: 81066 RVA: 0x005C619A File Offset: 0x005C439A
 	[Nullable(2)]
 	public new ShipTowerReviewViewParams OpenParam
 	{
@@ -22,13 +22,13 @@ public class ShipTowerReviewView : UiViewBase
 		}
 	}
 
-	// Token: 0x060162A5 RID: 90789 RVA: 0x0059B1EF File Offset: 0x005993EF
+	// Token: 0x06013CAB RID: 81067 RVA: 0x005C61A7 File Offset: 0x005C43A7
 	[NullableContext(1)]
 	public ShipTowerReviewView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x060162A6 RID: 90790 RVA: 0x0059B1F8 File Offset: 0x005993F8
+	// Token: 0x06013CAC RID: 81068 RVA: 0x005C61B0 File Offset: 0x005C43B0
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -45,12 +45,12 @@ public class ShipTowerReviewView : UiViewBase
 		};
 	}
 
-	// Token: 0x060162A7 RID: 90791 RVA: 0x0059B2A2 File Offset: 0x005994A2
+	// Token: 0x06013CAD RID: 81069 RVA: 0x005C625A File Offset: 0x005C445A
 	private void InitDataParam()
 	{
 	}
 
-	// Token: 0x060162A8 RID: 90792 RVA: 0x0059B2A4 File Offset: 0x005994A4
+	// Token: 0x06013CAE RID: 81070 RVA: 0x005C625C File Offset: 0x005C445C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ShipTowerReviewView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -61,13 +61,13 @@ public class ShipTowerReviewView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060162A9 RID: 90793 RVA: 0x0059B2E7 File Offset: 0x005994E7
+	// Token: 0x06013CAF RID: 81071 RVA: 0x005C629F File Offset: 0x005C449F
 	protected override void OnBeforeShow()
 	{
 		this.UpdateData();
 	}
 
-	// Token: 0x060162AA RID: 90794 RVA: 0x0059B2EF File Offset: 0x005994EF
+	// Token: 0x06013CB0 RID: 81072 RVA: 0x005C62A7 File Offset: 0x005C44A7
 	protected override void OnBeforeDestroy()
 	{
 		ShipTowerReviewViewParams openParam = this.OpenParam;
@@ -83,14 +83,14 @@ public class ShipTowerReviewView : UiViewBase
 		promise.SetResult(true);
 	}
 
-	// Token: 0x060162AB RID: 90795 RVA: 0x0059B30C File Offset: 0x0059950C
+	// Token: 0x06013CB1 RID: 81073 RVA: 0x005C62C4 File Offset: 0x005C44C4
 	[NullableContext(1)]
 	private ShipTowerReviewItem CreateReviewItem()
 	{
 		return new ShipTowerReviewItem();
 	}
 
-	// Token: 0x060162AC RID: 90796 RVA: 0x0059B314 File Offset: 0x00599514
+	// Token: 0x06013CB2 RID: 81074 RVA: 0x005C62CC File Offset: 0x005C44CC
 	public void UpdateData()
 	{
 		List<ShipTowerReviewItemData> reviewList = ShipTowerModel.Instance.ReviewList;
@@ -129,7 +129,7 @@ public class ShipTowerReviewView : UiViewBase
 		}
 	}
 
-	// Token: 0x0400A515 RID: 42261
+	// Token: 0x0400A8FF RID: 43263
 	[Nullable(new byte[]
 	{
 		2,
@@ -138,22 +138,22 @@ public class ShipTowerReviewView : UiViewBase
 	})]
 	private LoopScrollView<ShipTowerReviewItem, ShipTowerReviewItemData> ReviewLoopView;
 
-	// Token: 0x02008FE7 RID: 36839
+	// Token: 0x0200822E RID: 33326
 	private static class EChildType
 	{
-		// Token: 0x0402E99B RID: 190875
+		// Token: 0x0402A093 RID: 172179
 		public const int LoopScrollRoot = 0;
 
-		// Token: 0x0402E99C RID: 190876
+		// Token: 0x0402A094 RID: 172180
 		public const int BtnSure = 1;
 
-		// Token: 0x0402E99D RID: 190877
+		// Token: 0x0402A095 RID: 172181
 		public const int ItemReview = 2;
 
-		// Token: 0x0402E99E RID: 190878
+		// Token: 0x0402A096 RID: 172182
 		public const int TextLastReviewProgress = 3;
 
-		// Token: 0x0402E99F RID: 190879
+		// Token: 0x0402A097 RID: 172183
 		public const int CanQuickPassTipText = 4;
 	}
 }

@@ -7,7 +7,7 @@ using CSharpScript.Game.KuroSimpleCombat.PB;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001CF6 RID: 7414
+// Token: 0x020011B8 RID: 4536
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class PinballBattleBuffItem : GridProxyAbstract<IBuffView>
 {
-	// Token: 0x0600E09D RID: 57501 RVA: 0x0034AD60 File Offset: 0x00348F60
+	// Token: 0x0600B4BA RID: 46266 RVA: 0x00356790 File Offset: 0x00354990
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -30,7 +30,7 @@ public class PinballBattleBuffItem : GridProxyAbstract<IBuffView>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600E09E RID: 57502 RVA: 0x0034ADCC File Offset: 0x00348FCC
+	// Token: 0x0600B4BB RID: 46267 RVA: 0x003567FC File Offset: 0x003549FC
 	public override void Refresh(IBuffView buffView, bool isSelected, int gridIndex)
 	{
 		UUIText text = base.GetText(1);

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006822 RID: 26658
+	// Token: 0x02006EA8 RID: 28328
 	public struct IFlowTemplateBlurTransitionEffect : IFlatbufferObject
 	{
-		// Token: 0x1700C604 RID: 50692
-		// (get) Token: 0x0602E782 RID: 190338 RVA: 0x006578D2 File Offset: 0x00655AD2
+		// Token: 0x1700CFC8 RID: 53192
+		// (get) Token: 0x0603100A RID: 200714 RVA: 0x006A5811 File Offset: 0x006A3A11
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E783 RID: 190339 RVA: 0x006578DF File Offset: 0x00655ADF
+		// Token: 0x0603100B RID: 200715 RVA: 0x006A581E File Offset: 0x006A3A1E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602E784 RID: 190340 RVA: 0x006578E8 File Offset: 0x00655AE8
+		// Token: 0x0603100C RID: 200716 RVA: 0x006A5828 File Offset: 0x006A3A28
 		public static IFlowTemplateBlurTransitionEffect GetRootAsIFlowTemplateBlurTransitionEffect(ByteBuffer _bb)
 		{
 			return IFlowTemplateBlurTransitionEffect.GetRootAsIFlowTemplateBlurTransitionEffect(_bb, default(IFlowTemplateBlurTransitionEffect));
 		}
 
-		// Token: 0x0602E785 RID: 190341 RVA: 0x00657904 File Offset: 0x00655B04
+		// Token: 0x0603100D RID: 200717 RVA: 0x006A5844 File Offset: 0x006A3A44
 		public static IFlowTemplateBlurTransitionEffect GetRootAsIFlowTemplateBlurTransitionEffect(ByteBuffer _bb, IFlowTemplateBlurTransitionEffect obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602E786 RID: 190342 RVA: 0x00657921 File Offset: 0x00655B21
+		// Token: 0x0603100E RID: 200718 RVA: 0x006A5861 File Offset: 0x006A3A61
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602E787 RID: 190343 RVA: 0x00657930 File Offset: 0x00655B30
+		// Token: 0x0603100F RID: 200719 RVA: 0x006A5870 File Offset: 0x006A3A70
 		public IFlowTemplateBlurTransitionEffect __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C605 RID: 50693
-		// (get) Token: 0x0602E788 RID: 190344 RVA: 0x00657940 File Offset: 0x00655B40
+		// Token: 0x1700CFC9 RID: 53193
+		// (get) Token: 0x06031010 RID: 200720 RVA: 0x006A5880 File Offset: 0x006A3A80
 		public EFlowTemplateTransitionEffectType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C606 RID: 50694
-		// (get) Token: 0x0602E789 RID: 190345 RVA: 0x0065797C File Offset: 0x00655B7C
+		// Token: 0x1700CFCA RID: 53194
+		// (get) Token: 0x06031011 RID: 200721 RVA: 0x006A58BC File Offset: 0x006A3ABC
 		public float Aperture
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C607 RID: 50695
-		// (get) Token: 0x0602E78A RID: 190346 RVA: 0x006579BC File Offset: 0x00655BBC
+		// Token: 0x1700CFCB RID: 53195
+		// (get) Token: 0x06031012 RID: 200722 RVA: 0x006A58FC File Offset: 0x006A3AFC
 		public float FadeInTime
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C608 RID: 50696
-		// (get) Token: 0x0602E78B RID: 190347 RVA: 0x006579FC File Offset: 0x00655BFC
+		// Token: 0x1700CFCC RID: 53196
+		// (get) Token: 0x06031013 RID: 200723 RVA: 0x006A593C File Offset: 0x006A3B3C
 		public float FadeOutTime
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E78C RID: 190348 RVA: 0x00657A3D File Offset: 0x00655C3D
+		// Token: 0x06031014 RID: 200724 RVA: 0x006A597D File Offset: 0x006A3B7D
 		public static Offset<IFlowTemplateBlurTransitionEffect> CreateIFlowTemplateBlurTransitionEffect(FlatBufferBuilder builder, EFlowTemplateTransitionEffectType Type = EFlowTemplateTransitionEffectType.Blur, float Aperture = 0f, float FadeInTime = 0f, float FadeOutTime = 0f)
 		{
 			builder.StartTable(4);
@@ -118,43 +118,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFlowTemplateBlurTransitionEffect.EndIFlowTemplateBlurTransitionEffect(builder);
 		}
 
-		// Token: 0x0602E78D RID: 190349 RVA: 0x00657A69 File Offset: 0x00655C69
+		// Token: 0x06031015 RID: 200725 RVA: 0x006A59A9 File Offset: 0x006A3BA9
 		public static void StartIFlowTemplateBlurTransitionEffect(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0602E78E RID: 190350 RVA: 0x00657A72 File Offset: 0x00655C72
+		// Token: 0x06031016 RID: 200726 RVA: 0x006A59B2 File Offset: 0x006A3BB2
 		public static void AddType(FlatBufferBuilder builder, EFlowTemplateTransitionEffectType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602E78F RID: 190351 RVA: 0x00657A7D File Offset: 0x00655C7D
+		// Token: 0x06031017 RID: 200727 RVA: 0x006A59BD File Offset: 0x006A3BBD
 		public static void AddAperture(FlatBufferBuilder builder, float aperture)
 		{
 			builder.AddFloat(1, aperture, 0.0);
 		}
 
-		// Token: 0x0602E790 RID: 190352 RVA: 0x00657A90 File Offset: 0x00655C90
+		// Token: 0x06031018 RID: 200728 RVA: 0x006A59D0 File Offset: 0x006A3BD0
 		public static void AddFadeInTime(FlatBufferBuilder builder, float fadeInTime)
 		{
 			builder.AddFloat(2, fadeInTime, 0.0);
 		}
 
-		// Token: 0x0602E791 RID: 190353 RVA: 0x00657AA3 File Offset: 0x00655CA3
+		// Token: 0x06031019 RID: 200729 RVA: 0x006A59E3 File Offset: 0x006A3BE3
 		public static void AddFadeOutTime(FlatBufferBuilder builder, float fadeOutTime)
 		{
 			builder.AddFloat(3, fadeOutTime, 0.0);
 		}
 
-		// Token: 0x0602E792 RID: 190354 RVA: 0x00657AB6 File Offset: 0x00655CB6
+		// Token: 0x0603101A RID: 200730 RVA: 0x006A59F6 File Offset: 0x006A3BF6
 		public static Offset<IFlowTemplateBlurTransitionEffect> EndIFlowTemplateBlurTransitionEffect(FlatBufferBuilder builder)
 		{
 			return new Offset<IFlowTemplateBlurTransitionEffect>(builder.EndTable());
 		}
 
-		// Token: 0x0602E793 RID: 190355 RVA: 0x00657AC4 File Offset: 0x00655CC4
+		// Token: 0x0603101B RID: 200731 RVA: 0x006A5A04 File Offset: 0x006A3C04
 		public IFlowTemplateBlurTransitionEffectT UnPack()
 		{
 			IFlowTemplateBlurTransitionEffectT flowTemplateBlurTransitionEffectT = new IFlowTemplateBlurTransitionEffectT();
@@ -162,7 +162,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return flowTemplateBlurTransitionEffectT;
 		}
 
-		// Token: 0x0602E794 RID: 190356 RVA: 0x00657ADF File Offset: 0x00655CDF
+		// Token: 0x0603101C RID: 200732 RVA: 0x006A5A1F File Offset: 0x006A3C1F
 		public void UnPackTo(IFlowTemplateBlurTransitionEffectT _o)
 		{
 			_o.Type = this.Type;
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.FadeOutTime = this.FadeOutTime;
 		}
 
-		// Token: 0x0602E795 RID: 190357 RVA: 0x00657B14 File Offset: 0x00655D14
+		// Token: 0x0603101D RID: 200733 RVA: 0x006A5A54 File Offset: 0x006A3C54
 		public static Offset<IFlowTemplateBlurTransitionEffect> Pack(FlatBufferBuilder builder, IFlowTemplateBlurTransitionEffectT _o)
 		{
 			if (_o == null)
@@ -181,7 +181,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFlowTemplateBlurTransitionEffect.CreateIFlowTemplateBlurTransitionEffect(builder, _o.Type, _o.Aperture, _o.FadeInTime, _o.FadeOutTime);
 		}
 
-		// Token: 0x04010F60 RID: 69472
+		// Token: 0x04011D9A RID: 73114
 		private Table __p;
 	}
 }

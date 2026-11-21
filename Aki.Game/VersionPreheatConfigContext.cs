@@ -4,54 +4,54 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.Inventory;
 
-// Token: 0x02001557 RID: 5463
+// Token: 0x02000A0F RID: 2575
 [NullableContext(1)]
 [Nullable(0)]
 public class VersionPreheatConfigContext
 {
-	// Token: 0x06009C90 RID: 40080 RVA: 0x0021DD0C File Offset: 0x0021BF0C
+	// Token: 0x0600706E RID: 28782 RVA: 0x00227ABC File Offset: 0x00225CBC
 	public string GetQuestTitleTextIdById(int id)
 	{
 		PreheatQuestText? config = ConfigPreheatQuestTextById.GetConfig(id, true);
 		return ((config != null) ? config.GetValueOrDefault().MainTexPath : null) ?? "";
 	}
 
-	// Token: 0x06009C91 RID: 40081 RVA: 0x0021DD48 File Offset: 0x0021BF48
+	// Token: 0x0600706F RID: 28783 RVA: 0x00227AF8 File Offset: 0x00225CF8
 	public string GetQuestContentTextIdById(int id)
 	{
 		PreheatQuestText? config = ConfigPreheatQuestTextById.GetConfig(id, true);
 		return ((config != null) ? config.GetValueOrDefault().QuestContent : null) ?? "";
 	}
 
-	// Token: 0x06009C92 RID: 40082 RVA: 0x0021DD84 File Offset: 0x0021BF84
+	// Token: 0x06007070 RID: 28784 RVA: 0x00227B34 File Offset: 0x00225D34
 	public string GetQuestBeforeThemeTextIdById(int id)
 	{
 		PreheatQuestText? config = ConfigPreheatQuestTextById.GetConfig(id, true);
 		return ((config != null) ? config.GetValueOrDefault().ThemeBefore : null) ?? "";
 	}
 
-	// Token: 0x06009C93 RID: 40083 RVA: 0x0021DDC0 File Offset: 0x0021BFC0
+	// Token: 0x06007071 RID: 28785 RVA: 0x00227B70 File Offset: 0x00225D70
 	public string GetQuestAfterThemeTextIdById(int id)
 	{
 		PreheatQuestText? config = ConfigPreheatQuestTextById.GetConfig(id, true);
 		return ((config != null) ? config.GetValueOrDefault().ThemeAfter : null) ?? "";
 	}
 
-	// Token: 0x06009C94 RID: 40084 RVA: 0x0021DDFC File Offset: 0x0021BFFC
+	// Token: 0x06007072 RID: 28786 RVA: 0x00227BAC File Offset: 0x00225DAC
 	public string GetQuestPhotoPathById(int id)
 	{
 		PreheatQuestText? config = ConfigPreheatQuestTextById.GetConfig(id, true);
 		return ((config != null) ? config.GetValueOrDefault().DisplayTex : null) ?? "";
 	}
 
-	// Token: 0x06009C95 RID: 40085 RVA: 0x0021DE38 File Offset: 0x0021C038
+	// Token: 0x06007073 RID: 28787 RVA: 0x00227BE8 File Offset: 0x00225DE8
 	public string GetQuestSharePhotoPathById(int id)
 	{
 		PreheatQuestText? config = ConfigPreheatQuestTextById.GetConfig(id, true);
 		return ((config != null) ? config.GetValueOrDefault().ShareTex : null) ?? "";
 	}
 
-	// Token: 0x06009C96 RID: 40086 RVA: 0x0021DE74 File Offset: 0x0021C074
+	// Token: 0x06007074 RID: 28788 RVA: 0x00227C24 File Offset: 0x00225E24
 	public int GetQuestCrestIndexById(int id)
 	{
 		PreheatQuestText? config = ConfigPreheatQuestTextById.GetConfig(id, true);
@@ -62,7 +62,7 @@ public class VersionPreheatConfigContext
 		return config.GetValueOrDefault().CrestIndex;
 	}
 
-	// Token: 0x06009C97 RID: 40087 RVA: 0x0021DEA4 File Offset: 0x0021C0A4
+	// Token: 0x06007075 RID: 28789 RVA: 0x00227C54 File Offset: 0x00225E54
 	public int GetQuestIdById(int id)
 	{
 		PreheatSignRe? config = ConfigPreheatSignReById.GetConfig(id, true);
@@ -73,7 +73,7 @@ public class VersionPreheatConfigContext
 		return config.GetValueOrDefault().QuestId;
 	}
 
-	// Token: 0x06009C98 RID: 40088 RVA: 0x0021DED4 File Offset: 0x0021C0D4
+	// Token: 0x06007076 RID: 28790 RVA: 0x00227C84 File Offset: 0x00225E84
 	public int GetPreIdById(int id)
 	{
 		PreheatSignRe? config = ConfigPreheatSignReById.GetConfig(id, true);
@@ -84,7 +84,7 @@ public class VersionPreheatConfigContext
 		return config.GetValueOrDefault().PreSignId;
 	}
 
-	// Token: 0x06009C99 RID: 40089 RVA: 0x0021DF04 File Offset: 0x0021C104
+	// Token: 0x06007077 RID: 28791 RVA: 0x00227CB4 File Offset: 0x00225EB4
 	public List<TItem> GetQuestRewardItemListById(int id)
 	{
 		List<TItem> list = new List<TItem>();
@@ -108,71 +108,71 @@ public class VersionPreheatConfigContext
 		return list;
 	}
 
-	// Token: 0x06009C9A RID: 40090 RVA: 0x0021DFB8 File Offset: 0x0021C1B8
+	// Token: 0x06007078 RID: 28792 RVA: 0x00227D68 File Offset: 0x00225F68
 	public string GetVoteTitleTextIdById(int id)
 	{
 		PreheatVote? config = ConfigPreheatVoteById.GetConfig(id, true);
 		return ((config != null) ? config.GetValueOrDefault().Title : null) ?? "";
 	}
 
-	// Token: 0x06009C9B RID: 40091 RVA: 0x0021DFF4 File Offset: 0x0021C1F4
+	// Token: 0x06007079 RID: 28793 RVA: 0x00227DA4 File Offset: 0x00225FA4
 	public string GetVoteContentTextIdById(int id)
 	{
 		PreheatVote? config = ConfigPreheatVoteById.GetConfig(id, true);
 		return ((config != null) ? config.GetValueOrDefault().Content : null) ?? "";
 	}
 
-	// Token: 0x06009C9C RID: 40092 RVA: 0x0021E030 File Offset: 0x0021C230
+	// Token: 0x0600707A RID: 28794 RVA: 0x00227DE0 File Offset: 0x00225FE0
 	public string GetVoteLeftThemeTextIdById(int id)
 	{
 		PreheatVote? config = ConfigPreheatVoteById.GetConfig(id, true);
 		return ((config != null) ? config.GetValueOrDefault().OptionTheme1 : null) ?? "";
 	}
 
-	// Token: 0x06009C9D RID: 40093 RVA: 0x0021E06C File Offset: 0x0021C26C
+	// Token: 0x0600707B RID: 28795 RVA: 0x00227E1C File Offset: 0x0022601C
 	public string GetVoteRightThemeTextIdById(int id)
 	{
 		PreheatVote? config = ConfigPreheatVoteById.GetConfig(id, true);
 		return ((config != null) ? config.GetValueOrDefault().OptionTheme2 : null) ?? "";
 	}
 
-	// Token: 0x06009C9E RID: 40094 RVA: 0x0021E0A8 File Offset: 0x0021C2A8
+	// Token: 0x0600707C RID: 28796 RVA: 0x00227E58 File Offset: 0x00226058
 	public string GetVoteLeftTipsTextIdById(int id)
 	{
 		PreheatVote? config = ConfigPreheatVoteById.GetConfig(id, true);
 		return ((config != null) ? config.GetValueOrDefault().Option1 : null) ?? "";
 	}
 
-	// Token: 0x06009C9F RID: 40095 RVA: 0x0021E0E4 File Offset: 0x0021C2E4
+	// Token: 0x0600707D RID: 28797 RVA: 0x00227E94 File Offset: 0x00226094
 	public string GetVoteRightTipsTextIdById(int id)
 	{
 		PreheatVote? config = ConfigPreheatVoteById.GetConfig(id, true);
 		return ((config != null) ? config.GetValueOrDefault().Option2 : null) ?? "";
 	}
 
-	// Token: 0x06009CA0 RID: 40096 RVA: 0x0021E120 File Offset: 0x0021C320
+	// Token: 0x0600707E RID: 28798 RVA: 0x00227ED0 File Offset: 0x002260D0
 	public string GetNpcContentTextIdById(int id)
 	{
 		PreheatVote? config = ConfigPreheatVoteById.GetConfig(id, true);
 		return ((config != null) ? config.GetValueOrDefault().NpcContent : null) ?? "";
 	}
 
-	// Token: 0x06009CA1 RID: 40097 RVA: 0x0021E15C File Offset: 0x0021C35C
+	// Token: 0x0600707F RID: 28799 RVA: 0x00227F0C File Offset: 0x0022610C
 	public string GetNpcIconPathById(int id)
 	{
 		PreheatVote? config = ConfigPreheatVoteById.GetConfig(id, true);
 		return ((config != null) ? config.GetValueOrDefault().NpcIconPath : null) ?? "";
 	}
 
-	// Token: 0x06009CA2 RID: 40098 RVA: 0x0021E198 File Offset: 0x0021C398
+	// Token: 0x06007080 RID: 28800 RVA: 0x00227F48 File Offset: 0x00226148
 	public string GetSelfChatContentTextIdById(int id)
 	{
 		PreheatVote? config = ConfigPreheatVoteById.GetConfig(id, true);
 		return ((config != null) ? config.GetValueOrDefault().OptionContent1 : null) ?? "";
 	}
 
-	// Token: 0x17000D6A RID: 3434
-	// (get) Token: 0x06009CA3 RID: 40099 RVA: 0x0021E1D4 File Offset: 0x0021C3D4
+	// Token: 0x17000D8B RID: 3467
+	// (get) Token: 0x06007081 RID: 28801 RVA: 0x00227F84 File Offset: 0x00226184
 	public string BonusPhotoPath
 	{
 		get
@@ -182,8 +182,8 @@ public class VersionPreheatConfigContext
 		}
 	}
 
-	// Token: 0x17000D6B RID: 3435
-	// (get) Token: 0x06009CA4 RID: 40100 RVA: 0x0021E210 File Offset: 0x0021C410
+	// Token: 0x17000D8C RID: 3468
+	// (get) Token: 0x06007082 RID: 28802 RVA: 0x00227FC0 File Offset: 0x002261C0
 	public string BonusSharePhotoPath
 	{
 		get
@@ -193,8 +193,8 @@ public class VersionPreheatConfigContext
 		}
 	}
 
-	// Token: 0x17000D6C RID: 3436
-	// (get) Token: 0x06009CA5 RID: 40101 RVA: 0x0021E24C File Offset: 0x0021C44C
+	// Token: 0x17000D8D RID: 3469
+	// (get) Token: 0x06007083 RID: 28803 RVA: 0x00227FFC File Offset: 0x002261FC
 	public string BonusQuestTitleTextId
 	{
 		get
@@ -204,8 +204,8 @@ public class VersionPreheatConfigContext
 		}
 	}
 
-	// Token: 0x17000D6D RID: 3437
-	// (get) Token: 0x06009CA6 RID: 40102 RVA: 0x0021E288 File Offset: 0x0021C488
+	// Token: 0x17000D8E RID: 3470
+	// (get) Token: 0x06007084 RID: 28804 RVA: 0x00228038 File Offset: 0x00226238
 	public string BonusQuestContentTextId
 	{
 		get
@@ -215,8 +215,8 @@ public class VersionPreheatConfigContext
 		}
 	}
 
-	// Token: 0x17000D6E RID: 3438
-	// (get) Token: 0x06009CA7 RID: 40103 RVA: 0x0021E2C4 File Offset: 0x0021C4C4
+	// Token: 0x17000D8F RID: 3471
+	// (get) Token: 0x06007085 RID: 28805 RVA: 0x00228074 File Offset: 0x00226274
 	public string BonusNpcIconPath
 	{
 		get
@@ -226,8 +226,8 @@ public class VersionPreheatConfigContext
 		}
 	}
 
-	// Token: 0x17000D6F RID: 3439
-	// (get) Token: 0x06009CA8 RID: 40104 RVA: 0x0021E300 File Offset: 0x0021C500
+	// Token: 0x17000D90 RID: 3472
+	// (get) Token: 0x06007086 RID: 28806 RVA: 0x002280B0 File Offset: 0x002262B0
 	public string BonusNpcContentTextId
 	{
 		get
@@ -237,8 +237,8 @@ public class VersionPreheatConfigContext
 		}
 	}
 
-	// Token: 0x17000D70 RID: 3440
-	// (get) Token: 0x06009CA9 RID: 40105 RVA: 0x0021E33C File Offset: 0x0021C53C
+	// Token: 0x17000D91 RID: 3473
+	// (get) Token: 0x06007087 RID: 28807 RVA: 0x002280EC File Offset: 0x002262EC
 	public string BonusTextId
 	{
 		get
@@ -248,8 +248,8 @@ public class VersionPreheatConfigContext
 		}
 	}
 
-	// Token: 0x17000D71 RID: 3441
-	// (get) Token: 0x06009CAA RID: 40106 RVA: 0x0021E378 File Offset: 0x0021C578
+	// Token: 0x17000D92 RID: 3474
+	// (get) Token: 0x06007088 RID: 28808 RVA: 0x00228128 File Offset: 0x00226328
 	public int BonusCrestIndex
 	{
 		get
@@ -263,8 +263,8 @@ public class VersionPreheatConfigContext
 		}
 	}
 
-	// Token: 0x17000D72 RID: 3442
-	// (get) Token: 0x06009CAB RID: 40107 RVA: 0x0021E3A7 File Offset: 0x0021C5A7
+	// Token: 0x17000D93 RID: 3475
+	// (get) Token: 0x06007089 RID: 28809 RVA: 0x00228157 File Offset: 0x00226357
 	public IReadOnlyList<PreheatSignRe> AllQuestCfg
 	{
 		get

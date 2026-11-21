@@ -2,7 +2,7 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Skin;
 
-// Token: 0x02002A63 RID: 10851
+// Token: 0x02001FDE RID: 8158
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -11,7 +11,7 @@ using CSharpScript.Game.Module.Skin;
 })]
 public class WeaponSkinPreviewGridItem : LoopScrollSmallItemGrid<WeaponSkinData>
 {
-	// Token: 0x060169EA RID: 92650 RVA: 0x005BBC02 File Offset: 0x005B9E02
+	// Token: 0x0601440B RID: 82955 RVA: 0x005E7D8A File Offset: 0x005E5F8A
 	public override void OnSelected(bool fireEvent)
 	{
 		if (fireEvent)
@@ -20,13 +20,13 @@ public class WeaponSkinPreviewGridItem : LoopScrollSmallItemGrid<WeaponSkinData>
 		}
 	}
 
-	// Token: 0x060169EB RID: 92651 RVA: 0x005BBC0F File Offset: 0x005B9E0F
+	// Token: 0x0601440C RID: 82956 RVA: 0x005E7D97 File Offset: 0x005E5F97
 	public override void OnDeselected(bool fireEvent)
 	{
 		this.SetSelected(false, true);
 	}
 
-	// Token: 0x060169EC RID: 92652 RVA: 0x005BBC1C File Offset: 0x005B9E1C
+	// Token: 0x0601440D RID: 82957 RVA: 0x005E7DA4 File Offset: 0x005E5FA4
 	protected override void OnRefresh(WeaponSkinData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;

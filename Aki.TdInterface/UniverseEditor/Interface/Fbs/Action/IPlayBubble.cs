@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006CD5 RID: 27861
+	// Token: 0x02007448 RID: 29768
 	public struct IPlayBubble : IFlatbufferObject
 	{
-		// Token: 0x1700CF6A RID: 53098
-		// (get) Token: 0x060311A9 RID: 201129 RVA: 0x006A9B59 File Offset: 0x006A7D59
+		// Token: 0x1700DAA4 RID: 55972
+		// (get) Token: 0x0603416E RID: 213358 RVA: 0x00704C16 File Offset: 0x00702E16
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060311AA RID: 201130 RVA: 0x006A9B66 File Offset: 0x006A7D66
+		// Token: 0x0603416F RID: 213359 RVA: 0x00704C23 File Offset: 0x00702E23
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060311AB RID: 201131 RVA: 0x006A9B70 File Offset: 0x006A7D70
+		// Token: 0x06034170 RID: 213360 RVA: 0x00704C2C File Offset: 0x00702E2C
 		public static IPlayBubble GetRootAsIPlayBubble(ByteBuffer _bb)
 		{
 			return IPlayBubble.GetRootAsIPlayBubble(_bb, default(IPlayBubble));
 		}
 
-		// Token: 0x060311AC RID: 201132 RVA: 0x006A9B8C File Offset: 0x006A7D8C
+		// Token: 0x06034171 RID: 213361 RVA: 0x00704C48 File Offset: 0x00702E48
 		public static IPlayBubble GetRootAsIPlayBubble(ByteBuffer _bb, IPlayBubble obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060311AD RID: 201133 RVA: 0x006A9BA9 File Offset: 0x006A7DA9
+		// Token: 0x06034172 RID: 213362 RVA: 0x00704C65 File Offset: 0x00702E65
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060311AE RID: 201134 RVA: 0x006A9BB8 File Offset: 0x006A7DB8
+		// Token: 0x06034173 RID: 213363 RVA: 0x00704C74 File Offset: 0x00702E74
 		public IPlayBubble __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CF6B RID: 53099
-		// (get) Token: 0x060311AF RID: 201135 RVA: 0x006A9BC8 File Offset: 0x006A7DC8
+		// Token: 0x1700DAA5 RID: 55973
+		// (get) Token: 0x06034174 RID: 213364 RVA: 0x00704C84 File Offset: 0x00702E84
 		public int EntityId
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CF6C RID: 53100
-		// (get) Token: 0x060311B0 RID: 201136 RVA: 0x006A9C04 File Offset: 0x006A7E04
+		// Token: 0x1700DAA6 RID: 55974
+		// (get) Token: 0x06034175 RID: 213365 RVA: 0x00704CC0 File Offset: 0x00702EC0
 		public IBubbleIndex? Flow
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CF6D RID: 53101
-		// (get) Token: 0x060311B1 RID: 201137 RVA: 0x006A9C64 File Offset: 0x006A7E64
+		// Token: 0x1700DAA7 RID: 55975
+		// (get) Token: 0x06034176 RID: 213366 RVA: 0x00704D20 File Offset: 0x00702F20
 		public bool IsRangeFollowEntity
 		{
 			get
@@ -88,8 +88,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CF6E RID: 53102
-		// (get) Token: 0x060311B2 RID: 201138 RVA: 0x006A9CA4 File Offset: 0x006A7EA4
+		// Token: 0x1700DAA8 RID: 55976
+		// (get) Token: 0x06034177 RID: 213367 RVA: 0x00704D60 File Offset: 0x00702F60
 		public bool IsAudioOccludedByScene
 		{
 			get
@@ -99,8 +99,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CF6F RID: 53103
-		// (get) Token: 0x060311B3 RID: 201139 RVA: 0x006A9CE4 File Offset: 0x006A7EE4
+		// Token: 0x1700DAA9 RID: 55977
+		// (get) Token: 0x06034178 RID: 213368 RVA: 0x00704DA0 File Offset: 0x00702FA0
 		public IBubbleRangeCylinderConfig? TriggerCylinderConfig
 		{
 			get
@@ -114,8 +114,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CF70 RID: 53104
-		// (get) Token: 0x060311B4 RID: 201140 RVA: 0x006A9D44 File Offset: 0x006A7F44
+		// Token: 0x1700DAAA RID: 55978
+		// (get) Token: 0x06034179 RID: 213369 RVA: 0x00704E00 File Offset: 0x00703000
 		public bool IsPlayMouthAnim
 		{
 			get
@@ -125,8 +125,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CF71 RID: 53105
-		// (get) Token: 0x060311B5 RID: 201141 RVA: 0x006A9D84 File Offset: 0x006A7F84
+		// Token: 0x1700DAAB RID: 55979
+		// (get) Token: 0x0603417A RID: 213370 RVA: 0x00704E40 File Offset: 0x00703040
 		public byte NullMask
 		{
 			get
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060311B6 RID: 201142 RVA: 0x006A9DC4 File Offset: 0x006A7FC4
+		// Token: 0x0603417B RID: 213371 RVA: 0x00704E80 File Offset: 0x00703080
 		public static Offset<IPlayBubble> CreateIPlayBubble(FlatBufferBuilder builder, int EntityId = 0, Offset<IBubbleIndex> FlowOffset = default(Offset<IBubbleIndex>), bool IsRangeFollowEntity = false, bool IsAudioOccludedByScene = false, Offset<IBubbleRangeCylinderConfig> TriggerCylinderConfigOffset = default(Offset<IBubbleRangeCylinderConfig>), bool IsPlayMouthAnim = false, byte NullMask = 0)
 		{
 			builder.StartTable(7);
@@ -154,61 +154,61 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPlayBubble.EndIPlayBubble(builder);
 		}
 
-		// Token: 0x060311B7 RID: 201143 RVA: 0x006A9E13 File Offset: 0x006A8013
+		// Token: 0x0603417C RID: 213372 RVA: 0x00704ECF File Offset: 0x007030CF
 		public static void StartIPlayBubble(FlatBufferBuilder builder)
 		{
 			builder.StartTable(7);
 		}
 
-		// Token: 0x060311B8 RID: 201144 RVA: 0x006A9E1C File Offset: 0x006A801C
+		// Token: 0x0603417D RID: 213373 RVA: 0x00704ED8 File Offset: 0x007030D8
 		public static void AddEntityId(FlatBufferBuilder builder, int entityId)
 		{
 			builder.AddInt(0, entityId, 0);
 		}
 
-		// Token: 0x060311B9 RID: 201145 RVA: 0x006A9E27 File Offset: 0x006A8027
+		// Token: 0x0603417E RID: 213374 RVA: 0x00704EE3 File Offset: 0x007030E3
 		public static void AddFlow(FlatBufferBuilder builder, Offset<IBubbleIndex> flowOffset)
 		{
 			builder.AddOffset(1, flowOffset.Value, 0);
 		}
 
-		// Token: 0x060311BA RID: 201146 RVA: 0x006A9E37 File Offset: 0x006A8037
+		// Token: 0x0603417F RID: 213375 RVA: 0x00704EF3 File Offset: 0x007030F3
 		public static void AddIsRangeFollowEntity(FlatBufferBuilder builder, bool isRangeFollowEntity)
 		{
 			builder.AddBool(2, isRangeFollowEntity, false);
 		}
 
-		// Token: 0x060311BB RID: 201147 RVA: 0x006A9E42 File Offset: 0x006A8042
+		// Token: 0x06034180 RID: 213376 RVA: 0x00704EFE File Offset: 0x007030FE
 		public static void AddIsAudioOccludedByScene(FlatBufferBuilder builder, bool isAudioOccludedByScene)
 		{
 			builder.AddBool(3, isAudioOccludedByScene, false);
 		}
 
-		// Token: 0x060311BC RID: 201148 RVA: 0x006A9E4D File Offset: 0x006A804D
+		// Token: 0x06034181 RID: 213377 RVA: 0x00704F09 File Offset: 0x00703109
 		public static void AddTriggerCylinderConfig(FlatBufferBuilder builder, Offset<IBubbleRangeCylinderConfig> triggerCylinderConfigOffset)
 		{
 			builder.AddOffset(4, triggerCylinderConfigOffset.Value, 0);
 		}
 
-		// Token: 0x060311BD RID: 201149 RVA: 0x006A9E5D File Offset: 0x006A805D
+		// Token: 0x06034182 RID: 213378 RVA: 0x00704F19 File Offset: 0x00703119
 		public static void AddIsPlayMouthAnim(FlatBufferBuilder builder, bool isPlayMouthAnim)
 		{
 			builder.AddBool(5, isPlayMouthAnim, false);
 		}
 
-		// Token: 0x060311BE RID: 201150 RVA: 0x006A9E68 File Offset: 0x006A8068
+		// Token: 0x06034183 RID: 213379 RVA: 0x00704F24 File Offset: 0x00703124
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(6, nullMask, 0);
 		}
 
-		// Token: 0x060311BF RID: 201151 RVA: 0x006A9E73 File Offset: 0x006A8073
+		// Token: 0x06034184 RID: 213380 RVA: 0x00704F2F File Offset: 0x0070312F
 		public static Offset<IPlayBubble> EndIPlayBubble(FlatBufferBuilder builder)
 		{
 			return new Offset<IPlayBubble>(builder.EndTable());
 		}
 
-		// Token: 0x060311C0 RID: 201152 RVA: 0x006A9E80 File Offset: 0x006A8080
+		// Token: 0x06034185 RID: 213381 RVA: 0x00704F3C File Offset: 0x0070313C
 		public IPlayBubbleT UnPack()
 		{
 			IPlayBubbleT playBubbleT = new IPlayBubbleT();
@@ -216,7 +216,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return playBubbleT;
 		}
 
-		// Token: 0x060311C1 RID: 201153 RVA: 0x006A9E9C File Offset: 0x006A809C
+		// Token: 0x06034186 RID: 213382 RVA: 0x00704F58 File Offset: 0x00703158
 		public void UnPackTo(IPlayBubbleT _o)
 		{
 			_o.EntityId = this.EntityId;
@@ -228,7 +228,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x060311C2 RID: 201154 RVA: 0x006A9F44 File Offset: 0x006A8144
+		// Token: 0x06034187 RID: 213383 RVA: 0x00705000 File Offset: 0x00703200
 		public static Offset<IPlayBubble> Pack(FlatBufferBuilder builder, IPlayBubbleT _o)
 		{
 			if (_o == null)
@@ -240,7 +240,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IPlayBubble.CreateIPlayBubble(builder, _o.EntityId, flowOffset, _o.IsRangeFollowEntity, _o.IsAudioOccludedByScene, triggerCylinderConfigOffset, _o.IsPlayMouthAnim, _o.NullMask);
 		}
 
-		// Token: 0x0401163B RID: 71227
+		// Token: 0x040125A9 RID: 75177
 		private Table __p;
 	}
 }

@@ -8,7 +8,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002537 RID: 9527
+// Token: 0x02001A20 RID: 6688
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -17,7 +17,7 @@ using UnrealEngine;
 })]
 public class BirthdayChatItem : SyncGridProxyAbstract<PhoneMsgChatData>
 {
-	// Token: 0x06013260 RID: 78432 RVA: 0x004C0D34 File Offset: 0x004BEF34
+	// Token: 0x06010733 RID: 67379 RVA: 0x004CF2F8 File Offset: 0x004CD4F8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,7 +37,7 @@ public class BirthdayChatItem : SyncGridProxyAbstract<PhoneMsgChatData>
 		};
 	}
 
-	// Token: 0x06013261 RID: 78433 RVA: 0x004C0E20 File Offset: 0x004BF020
+	// Token: 0x06010734 RID: 67380 RVA: 0x004CF3E4 File Offset: 0x004CD5E4
 	protected override void OnStart()
 	{
 		base.GetSprite(4).SetUIActive(false);
@@ -45,7 +45,7 @@ public class BirthdayChatItem : SyncGridProxyAbstract<PhoneMsgChatData>
 		base.GetButton(3).RootUIComp.Get().SetUIActive(true);
 	}
 
-	// Token: 0x06013262 RID: 78434 RVA: 0x004C0E68 File Offset: 0x004BF068
+	// Token: 0x06010735 RID: 67381 RVA: 0x004CF42C File Offset: 0x004CD62C
 	public override void Refresh(PhoneMsgChatData data)
 	{
 		this.PhoneMsgChatData = data;
@@ -57,7 +57,7 @@ public class BirthdayChatItem : SyncGridProxyAbstract<PhoneMsgChatData>
 		base.RunAsyncTask(task);
 	}
 
-	// Token: 0x06013263 RID: 78435 RVA: 0x004C0ED4 File Offset: 0x004BF0D4
+	// Token: 0x06010736 RID: 67382 RVA: 0x004CF498 File Offset: 0x004CD698
 	private UniTask UpdateBirthdayItemAsync(PhoneMsgChatData data)
 	{
 		BirthdayChatItem.<UpdateBirthdayItemAsync>d__7 <UpdateBirthdayItemAsync>d__;
@@ -69,7 +69,7 @@ public class BirthdayChatItem : SyncGridProxyAbstract<PhoneMsgChatData>
 		return <UpdateBirthdayItemAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013264 RID: 78436 RVA: 0x004C0F20 File Offset: 0x004BF120
+	// Token: 0x06010737 RID: 67383 RVA: 0x004CF4E4 File Offset: 0x004CD6E4
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -86,7 +86,7 @@ public class BirthdayChatItem : SyncGridProxyAbstract<PhoneMsgChatData>
 		return <LoadTextureAsyncWithCancel>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013265 RID: 78437 RVA: 0x004C0F6C File Offset: 0x004BF16C
+	// Token: 0x06010738 RID: 67384 RVA: 0x004CF530 File Offset: 0x004CD730
 	private void OnGoToClick()
 	{
 		if (this.PhoneMsgChatData == null)
@@ -119,7 +119,7 @@ public class BirthdayChatItem : SyncGridProxyAbstract<PhoneMsgChatData>
 		LogReportController.Instance.LogReport(onJumpInShortMessageLogEvent);
 	}
 
-	// Token: 0x06013266 RID: 78438 RVA: 0x004C1044 File Offset: 0x004BF244
+	// Token: 0x06010739 RID: 67385 RVA: 0x004CF608 File Offset: 0x004CD808
 	public UniTask PlayBirthdayAnimationAsync()
 	{
 		BirthdayChatItem.<PlayBirthdayAnimationAsync>d__10 <PlayBirthdayAnimationAsync>d__;
@@ -130,13 +130,13 @@ public class BirthdayChatItem : SyncGridProxyAbstract<PhoneMsgChatData>
 		return <PlayBirthdayAnimationAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06013267 RID: 78439 RVA: 0x004C1087 File Offset: 0x004BF287
+	// Token: 0x0601073A RID: 67386 RVA: 0x004CF64B File Offset: 0x004CD84B
 	public void StopBirthdayAnimation()
 	{
 		this.LevelSequencePlayer.StopSequenceByKey("In", false, true);
 	}
 
-	// Token: 0x06013268 RID: 78440 RVA: 0x004C109C File Offset: 0x004BF29C
+	// Token: 0x0601073B RID: 67387 RVA: 0x004CF660 File Offset: 0x004CD860
 	protected override void OnBeforeDestroy()
 	{
 		foreach (KeyValuePair<string, int> keyValuePair in this.TextureLoadResourceIds)
@@ -149,36 +149,36 @@ public class BirthdayChatItem : SyncGridProxyAbstract<PhoneMsgChatData>
 		this.TextureLoadResourceIds.Clear();
 	}
 
-	// Token: 0x04009096 RID: 37014
+	// Token: 0x040091F0 RID: 37360
 	[Nullable(2)]
 	private PhoneMsgChatData PhoneMsgChatData;
 
-	// Token: 0x04009097 RID: 37015
+	// Token: 0x040091F1 RID: 37361
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x04009098 RID: 37016
+	// Token: 0x040091F2 RID: 37362
 	private readonly Dictionary<string, int> TextureLoadResourceIds = new Dictionary<string, int>();
 
-	// Token: 0x02008ABE RID: 35518
+	// Token: 0x02007C47 RID: 31815
 	[NullableContext(0)]
 	private enum EItemBirthdayComponent
 	{
-		// Token: 0x0402D0E4 RID: 184548
+		// Token: 0x04028404 RID: 164868
 		TexCake,
-		// Token: 0x0402D0E5 RID: 184549
+		// Token: 0x04028405 RID: 164869
 		TxtDesc,
-		// Token: 0x0402D0E6 RID: 184550
+		// Token: 0x04028406 RID: 164870
 		TxtTitle,
-		// Token: 0x0402D0E7 RID: 184551
+		// Token: 0x04028407 RID: 164871
 		BtnGoTo,
-		// Token: 0x0402D0E8 RID: 184552
+		// Token: 0x04028408 RID: 164872
 		SpriteFinish,
-		// Token: 0x0402D0E9 RID: 184553
+		// Token: 0x04028409 RID: 164873
 		TexBg,
-		// Token: 0x0402D0EA RID: 184554
+		// Token: 0x0402840A RID: 164874
 		TexTransitionBg,
-		// Token: 0x0402D0EB RID: 184555
+		// Token: 0x0402840B RID: 164875
 		TexTransitionIcon
 	}
 }

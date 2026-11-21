@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020010BB RID: 4283
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020011E9 RID: 4585
 	public class IQuestStaticTimer : IQuestStatisticsType
 	{
-		// Token: 0x060060A6 RID: 24742 RVA: 0x000E99C4 File Offset: 0x000E7BC4
+		// Token: 0x0600669F RID: 26271 RVA: 0x000F6AE4 File Offset: 0x000F4CE4
 		private IQuestStaticTimer_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060060A7 RID: 24743 RVA: 0x000E99FC File Offset: 0x000E7BFC
+		// Token: 0x060066A0 RID: 26272 RVA: 0x000F6B1C File Offset: 0x000F4D1C
 		public static IQuestStaticTimer Create([Nullable(2)] IQuestStaticTimer instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060060A8 RID: 24744 RVA: 0x000E9A0F File Offset: 0x000E7C0F
+		// Token: 0x060066A1 RID: 26273 RVA: 0x000F6B2F File Offset: 0x000F4D2F
 		public static IQuestStaticTimer CreateFromSetValue([Nullable(2)] IQuestStaticTimer_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060060A9 RID: 24745 RVA: 0x000E9A22 File Offset: 0x000E7C22
+		// Token: 0x060066A2 RID: 26274 RVA: 0x000F6B42 File Offset: 0x000F4D42
 		public new IQuestStaticTimer_SetValue ToSetValue()
 		{
 			return new IQuestStaticTimer_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001FBE RID: 8126
-		// (get) Token: 0x060060AA RID: 24746 RVA: 0x000E9A4D File Offset: 0x000E7C4D
-		// (set) Token: 0x060060AB RID: 24747 RVA: 0x000E9A78 File Offset: 0x000E7C78
+		// Token: 0x17002170 RID: 8560
+		// (get) Token: 0x060066A3 RID: 26275 RVA: 0x000F6B6D File Offset: 0x000F4D6D
+		// (set) Token: 0x060066A4 RID: 26276 RVA: 0x000F6B98 File Offset: 0x000F4D98
 		public override EStatisticsEventType Type
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001FBF RID: 8127
-		// (get) Token: 0x060060AC RID: 24748 RVA: 0x000E9A86 File Offset: 0x000E7C86
-		// (set) Token: 0x060060AD RID: 24749 RVA: 0x000E9AAD File Offset: 0x000E7CAD
+		// Token: 0x17002171 RID: 8561
+		// (get) Token: 0x060066A5 RID: 26277 RVA: 0x000F6BA6 File Offset: 0x000F4DA6
+		// (set) Token: 0x060066A6 RID: 26278 RVA: 0x000F6BCD File Offset: 0x000F4DCD
 		public override VarRef Var
 		{
 			get
@@ -110,9 +108,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001FC0 RID: 8128
-		// (get) Token: 0x060060AE RID: 24750 RVA: 0x000E9ABB File Offset: 0x000E7CBB
-		// (set) Token: 0x060060AF RID: 24751 RVA: 0x000E9AE6 File Offset: 0x000E7CE6
+		// Token: 0x17002172 RID: 8562
+		// (get) Token: 0x060066A7 RID: 26279 RVA: 0x000F6BDB File Offset: 0x000F4DDB
+		// (set) Token: 0x060066A8 RID: 26280 RVA: 0x000F6C06 File Offset: 0x000F4E06
 		public virtual ETimerType TimerType
 		{
 			get
@@ -133,11 +131,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003A3B RID: 14907
+		// Token: 0x04003D88 RID: 15752
 		[Nullable(2)]
 		protected new IQuestStaticTimer FbInstance;
 
-		// Token: 0x04003A3C RID: 14908
+		// Token: 0x04003D89 RID: 15753
 		[Nullable(2)]
 		protected new IQuestStaticTimer_SetValue PocoInterface;
 	}

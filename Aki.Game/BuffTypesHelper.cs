@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002E91 RID: 11921
+// Token: 0x020023E3 RID: 9187
 public static class BuffTypesHelper
 {
-	// Token: 0x0400BDE5 RID: 48613
+	// Token: 0x0400C17C RID: 49532
 	[Nullable(1)]
 	[StaticVariableRuleIgnore]
 	public static readonly HashSet<EBuffActionType> actionTagRemove = new HashSet<EBuffActionType>

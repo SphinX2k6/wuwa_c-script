@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200066F RID: 1647
+	// Token: 0x0200070C RID: 1804
 	public class IRefreshOnDeath_SetValue
 	{
-		// Token: 0x04001861 RID: 6241
+		// Token: 0x04001A53 RID: 6739
 		public ERewardDropType Type;
 	}
 }

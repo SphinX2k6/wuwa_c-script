@@ -4,50 +4,50 @@ using Aki.UniverseEditor.Interface.Fbs.Actor;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020059CF RID: 22991
+	// Token: 0x02005FDC RID: 24540
 	public class IStreamingRenderConfigT
 	{
-		// Token: 0x1700ACBC RID: 44220
-		// (get) Token: 0x06027006 RID: 159750 RVA: 0x0055E154 File Offset: 0x0055C354
-		// (set) Token: 0x06027007 RID: 159751 RVA: 0x0055E15C File Offset: 0x0055C35C
+		// Token: 0x1700B5F4 RID: 46580
+		// (get) Token: 0x0602957E RID: 169342 RVA: 0x005A5118 File Offset: 0x005A3318
+		// (set) Token: 0x0602957F RID: 169343 RVA: 0x005A5120 File Offset: 0x005A3320
 		public TPortalViewDistanceConfigUnion ViewDistance { get; set; }
 
-		// Token: 0x1700ACBD RID: 44221
-		// (get) Token: 0x06027008 RID: 159752 RVA: 0x0055E165 File Offset: 0x0055C365
-		// (set) Token: 0x06027009 RID: 159753 RVA: 0x0055E16D File Offset: 0x0055C36D
+		// Token: 0x1700B5F5 RID: 46581
+		// (get) Token: 0x06029580 RID: 169344 RVA: 0x005A5129 File Offset: 0x005A3329
+		// (set) Token: 0x06029581 RID: 169345 RVA: 0x005A5131 File Offset: 0x005A3331
 		public List<IActorRefT> ForceRenderActors { get; set; }
 
-		// Token: 0x1700ACBE RID: 44222
-		// (get) Token: 0x0602700A RID: 159754 RVA: 0x0055E176 File Offset: 0x0055C376
-		// (set) Token: 0x0602700B RID: 159755 RVA: 0x0055E17E File Offset: 0x0055C37E
+		// Token: 0x1700B5F6 RID: 46582
+		// (get) Token: 0x06029582 RID: 169346 RVA: 0x005A513A File Offset: 0x005A333A
+		// (set) Token: 0x06029583 RID: 169347 RVA: 0x005A5142 File Offset: 0x005A3342
 		public List<IRenderFlagT> SetRenderFlags { get; set; }
 
-		// Token: 0x1700ACBF RID: 44223
-		// (get) Token: 0x0602700C RID: 159756 RVA: 0x0055E187 File Offset: 0x0055C387
-		// (set) Token: 0x0602700D RID: 159757 RVA: 0x0055E18F File Offset: 0x0055C38F
+		// Token: 0x1700B5F7 RID: 46583
+		// (get) Token: 0x06029584 RID: 169348 RVA: 0x005A514B File Offset: 0x005A334B
+		// (set) Token: 0x06029585 RID: 169349 RVA: 0x005A5153 File Offset: 0x005A3353
 		public IStreamingRtEffectRefT RtEffectRef { get; set; }
 
-		// Token: 0x1700ACC0 RID: 44224
-		// (get) Token: 0x0602700E RID: 159758 RVA: 0x0055E198 File Offset: 0x0055C398
-		// (set) Token: 0x0602700F RID: 159759 RVA: 0x0055E1A0 File Offset: 0x0055C3A0
+		// Token: 0x1700B5F8 RID: 46584
+		// (get) Token: 0x06029586 RID: 169350 RVA: 0x005A515C File Offset: 0x005A335C
+		// (set) Token: 0x06029587 RID: 169351 RVA: 0x005A5164 File Offset: 0x005A3364
 		public IRtSizeT RtData { get; set; }
 
-		// Token: 0x1700ACC1 RID: 44225
-		// (get) Token: 0x06027010 RID: 159760 RVA: 0x0055E1A9 File Offset: 0x0055C3A9
-		// (set) Token: 0x06027011 RID: 159761 RVA: 0x0055E1B1 File Offset: 0x0055C3B1
+		// Token: 0x1700B5F9 RID: 46585
+		// (get) Token: 0x06029588 RID: 169352 RVA: 0x005A516D File Offset: 0x005A336D
+		// (set) Token: 0x06029589 RID: 169353 RVA: 0x005A5175 File Offset: 0x005A3375
 		public string FallbackCubeMapTexturePath { get; set; }
 
-		// Token: 0x1700ACC2 RID: 44226
-		// (get) Token: 0x06027012 RID: 159762 RVA: 0x0055E1BA File Offset: 0x0055C3BA
-		// (set) Token: 0x06027013 RID: 159763 RVA: 0x0055E1C2 File Offset: 0x0055C3C2
+		// Token: 0x1700B5FA RID: 46586
+		// (get) Token: 0x0602958A RID: 169354 RVA: 0x005A517E File Offset: 0x005A337E
+		// (set) Token: 0x0602958B RID: 169355 RVA: 0x005A5186 File Offset: 0x005A3386
 		public string FallbackCubeMapKey { get; set; }
 
-		// Token: 0x1700ACC3 RID: 44227
-		// (get) Token: 0x06027014 RID: 159764 RVA: 0x0055E1CB File Offset: 0x0055C3CB
-		// (set) Token: 0x06027015 RID: 159765 RVA: 0x0055E1D3 File Offset: 0x0055C3D3
+		// Token: 0x1700B5FB RID: 46587
+		// (get) Token: 0x0602958C RID: 169356 RVA: 0x005A518F File Offset: 0x005A338F
+		// (set) Token: 0x0602958D RID: 169357 RVA: 0x005A5197 File Offset: 0x005A3397
 		public byte NullMask { get; set; }
 
-		// Token: 0x06027016 RID: 159766 RVA: 0x0055E1DC File Offset: 0x0055C3DC
+		// Token: 0x0602958E RID: 169358 RVA: 0x005A51A0 File Offset: 0x005A33A0
 		public IStreamingRenderConfigT()
 		{
 			this.ViewDistance = null;

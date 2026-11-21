@@ -4,7 +4,7 @@ using UnrealEngine.Interface;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200005E RID: 94
+	// Token: 0x02000043 RID: 67
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -13,14 +13,14 @@ namespace UnrealEngine
 	})]
 	public sealed class UnrealDelegateProxyArrayProcessor<[Nullable(0)] T> : NativeArrayProcessorBase<T> where T : FScriptDelegate, IUnrealDelegateProxy, new()
 	{
-		// Token: 0x06000912 RID: 2322 RVA: 0x000111E1 File Offset: 0x0000F3E1
+		// Token: 0x06000897 RID: 2199 RVA: 0x0000DA4D File Offset: 0x0000BC4D
 		public UnrealDelegateProxyArrayProcessor(int InElementSize, int InMinAlignment)
 		{
 			this.Size = InElementSize;
 			this.MinAlignment = InMinAlignment;
 		}
 
-		// Token: 0x06000913 RID: 2323 RVA: 0x000111F8 File Offset: 0x0000F3F8
+		// Token: 0x06000898 RID: 2200 RVA: 0x0000DA64 File Offset: 0x0000BC64
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public override T Get(IntPtr Data, int Index)
 		{
@@ -33,14 +33,14 @@ namespace UnrealEngine
 			}) as T;
 		}
 
-		// Token: 0x06000914 RID: 2324 RVA: 0x0001124B File Offset: 0x0000F44B
+		// Token: 0x06000899 RID: 2201 RVA: 0x0000DAB7 File Offset: 0x0000BCB7
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public override T GetRef_Unsafe(IntPtr Data, int Index, UnrealObject Caller)
 		{
 			throw new NotImplementedException();
 		}
 
-		// Token: 0x06000915 RID: 2325 RVA: 0x00011252 File Offset: 0x0000F452
+		// Token: 0x0600089A RID: 2202 RVA: 0x0000DABE File Offset: 0x0000BCBE
 		[NullableContext(2)]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public override void Set(IntPtr Data, int Index, T Value)
@@ -48,7 +48,7 @@ namespace UnrealEngine
 			throw new NotImplementedException();
 		}
 
-		// Token: 0x06000916 RID: 2326 RVA: 0x00011259 File Offset: 0x0000F459
+		// Token: 0x0600089B RID: 2203 RVA: 0x0000DAC5 File Offset: 0x0000BCC5
 		[NullableContext(2)]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public override int FindIndex(IntPtr Data, int Num, T Value)
@@ -56,27 +56,27 @@ namespace UnrealEngine
 			throw new NotImplementedException();
 		}
 
-		// Token: 0x06000917 RID: 2327 RVA: 0x00011260 File Offset: 0x0000F460
+		// Token: 0x0600089C RID: 2204 RVA: 0x0000DACC File Offset: 0x0000BCCC
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public override void ConstructValues(IntPtr Data, int Index, int Count)
 		{
 			throw new NotImplementedException();
 		}
 
-		// Token: 0x06000918 RID: 2328 RVA: 0x00011267 File Offset: 0x0000F467
+		// Token: 0x0600089D RID: 2205 RVA: 0x0000DAD3 File Offset: 0x0000BCD3
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public override void DestructValues(IntPtr Data, int Index, int Count)
 		{
 			throw new NotImplementedException();
 		}
 
-		// Token: 0x06000919 RID: 2329 RVA: 0x0001126E File Offset: 0x0000F46E
+		// Token: 0x0600089E RID: 2206 RVA: 0x0000DADA File Offset: 0x0000BCDA
 		public override void CopyTo(IntPtr Data, IntPtr Dest, int Num)
 		{
 			throw new NotImplementedException();
 		}
 
-		// Token: 0x0600091A RID: 2330 RVA: 0x00011275 File Offset: 0x0000F475
+		// Token: 0x0600089F RID: 2207 RVA: 0x0000DAE1 File Offset: 0x0000BCE1
 		[NullableContext(0)]
 		public unsafe override void* GetElementPtr([Nullable(1)] ref T Value, ref bool bRequireToDelete)
 		{

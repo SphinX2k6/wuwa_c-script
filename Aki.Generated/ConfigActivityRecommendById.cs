@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200004C RID: 76
+	// Token: 0x02000054 RID: 84
 	public class ConfigActivityRecommendById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060001C8 RID: 456 RVA: 0x00063CA3 File Offset: 0x00061EA3
+		// Token: 0x060001F8 RID: 504 RVA: 0x00068557 File Offset: 0x00066757
 		static ConfigActivityRecommendById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigActivityRecommendById.CreateStaticDefaultValue), new Action(ConfigActivityRecommendById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060001C9 RID: 457 RVA: 0x00063CC4 File Offset: 0x00061EC4
+		// Token: 0x060001F9 RID: 505 RVA: 0x00068578 File Offset: 0x00066778
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigActivityRecommendById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060001CA RID: 458 RVA: 0x00063D43 File Offset: 0x00061F43
+		// Token: 0x060001FA RID: 506 RVA: 0x000685F7 File Offset: 0x000667F7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigActivityRecommendById.LogPair = null;
 			ConfigActivityRecommendById.HandleId = 0;
 		}
 
-		// Token: 0x060001CB RID: 459 RVA: 0x00063D51 File Offset: 0x00061F51
+		// Token: 0x060001FB RID: 507 RVA: 0x00068605 File Offset: 0x00066805
 		public static void Init()
 		{
 			ConfigActivityRecommendById.HandleId = ConfigCommon.InitDataStatement(ConfigActivityRecommendById.HandleId, "db_activityrecommend.db", "select BinData from `ActivityRecommend` where Id=?");
 		}
 
-		// Token: 0x060001CC RID: 460 RVA: 0x00063D6C File Offset: 0x00061F6C
+		// Token: 0x060001FC RID: 508 RVA: 0x00068620 File Offset: 0x00066820
 		public static ActivityRecommend? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigActivityRecommendById.HandleId, ConfigActivityRecommendById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new ActivityRecommend?(rootAsActivityRecommend);
 		}
 
-		// Token: 0x040001F8 RID: 504
+		// Token: 0x04000230 RID: 560
 		private const string DB = "db_activityrecommend.db";
 
-		// Token: 0x040001F9 RID: 505
+		// Token: 0x04000231 RID: 561
 		private const string FILE = "h.活动推荐内容.xlsx";
 
-		// Token: 0x040001FA RID: 506
+		// Token: 0x04000232 RID: 562
 		private const string TABLE = "ActivityRecommend";
 
-		// Token: 0x040001FB RID: 507
+		// Token: 0x04000233 RID: 563
 		private const string COMMAND = "select BinData from `ActivityRecommend` where Id=?";
 
-		// Token: 0x040001FC RID: 508
+		// Token: 0x04000234 RID: 564
 		private const string KEY_PREFIX = "ActivityRecommendById";
 
-		// Token: 0x040001FD RID: 509
+		// Token: 0x04000235 RID: 565
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040001FE RID: 510
+		// Token: 0x04000236 RID: 566
 		private static int HandleId;
 	}
 }

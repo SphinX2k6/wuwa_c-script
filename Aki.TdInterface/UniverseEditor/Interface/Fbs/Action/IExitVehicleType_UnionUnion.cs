@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200673C RID: 26428
+	// Token: 0x02006DBC RID: 28092
 	public class IExitVehicleType_UnionUnion
 	{
-		// Token: 0x1700C43C RID: 50236
-		// (get) Token: 0x0602DF7D RID: 188285 RVA: 0x006487D5 File Offset: 0x006469D5
-		// (set) Token: 0x0602DF7E RID: 188286 RVA: 0x006487DD File Offset: 0x006469DD
+		// Token: 0x1700CDF2 RID: 52722
+		// (get) Token: 0x060307C3 RID: 198595 RVA: 0x00695F19 File Offset: 0x00694119
+		// (set) Token: 0x060307C4 RID: 198596 RVA: 0x00695F21 File Offset: 0x00694121
 		public IExitVehicleType_Union Type { get; set; }
 
-		// Token: 0x1700C43D RID: 50237
-		// (get) Token: 0x0602DF7F RID: 188287 RVA: 0x006487E6 File Offset: 0x006469E6
-		// (set) Token: 0x0602DF80 RID: 188288 RVA: 0x006487EE File Offset: 0x006469EE
+		// Token: 0x1700CDF3 RID: 52723
+		// (get) Token: 0x060307C5 RID: 198597 RVA: 0x00695F2A File Offset: 0x0069412A
+		// (set) Token: 0x060307C6 RID: 198598 RVA: 0x00695F32 File Offset: 0x00694132
 		public object Value { get; set; }
 
-		// Token: 0x0602DF81 RID: 188289 RVA: 0x006487F7 File Offset: 0x006469F7
+		// Token: 0x060307C7 RID: 198599 RVA: 0x00695F3B File Offset: 0x0069413B
 		public IExitVehicleType_UnionUnion()
 		{
 			this.Type = IExitVehicleType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0602DF82 RID: 188290 RVA: 0x0064880D File Offset: 0x00646A0D
+		// Token: 0x060307C8 RID: 198600 RVA: 0x00695F51 File Offset: 0x00694151
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0602DF83 RID: 188291 RVA: 0x0064881F File Offset: 0x00646A1F
+		// Token: 0x060307C9 RID: 198601 RVA: 0x00695F63 File Offset: 0x00694163
 		public IExitVehicleTypeT AsIExitVehicleType()
 		{
 			return this.As<IExitVehicleTypeT>();
 		}
 
-		// Token: 0x0602DF84 RID: 188292 RVA: 0x00648827 File Offset: 0x00646A27
+		// Token: 0x060307CA RID: 198602 RVA: 0x00695F6B File Offset: 0x0069416B
 		public static IExitVehicleType_UnionUnion FromIExitVehicleType(IExitVehicleTypeT _iexitvehicletype)
 		{
 			return new IExitVehicleType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602DF85 RID: 188293 RVA: 0x0064883C File Offset: 0x00646A3C
+		// Token: 0x060307CB RID: 198603 RVA: 0x00695F80 File Offset: 0x00694180
 		public IExitVehicleLaunchT AsIExitVehicleLaunch()
 		{
 			return this.As<IExitVehicleLaunchT>();
 		}
 
-		// Token: 0x0602DF86 RID: 188294 RVA: 0x00648844 File Offset: 0x00646A44
+		// Token: 0x060307CC RID: 198604 RVA: 0x00695F88 File Offset: 0x00694188
 		public static IExitVehicleType_UnionUnion FromIExitVehicleLaunch(IExitVehicleLaunchT _iexitvehiclelaunch)
 		{
 			return new IExitVehicleType_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602DF87 RID: 188295 RVA: 0x00648859 File Offset: 0x00646A59
+		// Token: 0x060307CD RID: 198605 RVA: 0x00695F9D File Offset: 0x0069419D
 		public IExitVehicleStandUpT AsIExitVehicleStandUp()
 		{
 			return this.As<IExitVehicleStandUpT>();
 		}
 
-		// Token: 0x0602DF88 RID: 188296 RVA: 0x00648861 File Offset: 0x00646A61
+		// Token: 0x060307CE RID: 198606 RVA: 0x00695FA5 File Offset: 0x006941A5
 		public static IExitVehicleType_UnionUnion FromIExitVehicleStandUp(IExitVehicleStandUpT _iexitvehiclestandup)
 		{
 			return new IExitVehicleType_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602DF89 RID: 188297 RVA: 0x00648876 File Offset: 0x00646A76
+		// Token: 0x060307CF RID: 198607 RVA: 0x00695FBA File Offset: 0x006941BA
 		public IExitVehicleTeleportT AsIExitVehicleTeleport()
 		{
 			return this.As<IExitVehicleTeleportT>();
 		}
 
-		// Token: 0x0602DF8A RID: 188298 RVA: 0x0064887E File Offset: 0x00646A7E
+		// Token: 0x060307D0 RID: 198608 RVA: 0x00695FC2 File Offset: 0x006941C2
 		public static IExitVehicleType_UnionUnion FromIExitVehicleTeleport(IExitVehicleTeleportT _iexitvehicleteleport)
 		{
 			return new IExitVehicleType_UnionUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602DF8B RID: 188299 RVA: 0x00648893 File Offset: 0x00646A93
+		// Token: 0x060307D1 RID: 198609 RVA: 0x00695FD7 File Offset: 0x006941D7
 		public IExitVehicleSeatStandUpT AsIExitVehicleSeatStandUp()
 		{
 			return this.As<IExitVehicleSeatStandUpT>();
 		}
 
-		// Token: 0x0602DF8C RID: 188300 RVA: 0x0064889B File Offset: 0x00646A9B
+		// Token: 0x060307D2 RID: 198610 RVA: 0x00695FDF File Offset: 0x006941DF
 		public static IExitVehicleType_UnionUnion FromIExitVehicleSeatStandUp(IExitVehicleSeatStandUpT _iexitvehicleseatstandup)
 		{
 			return new IExitVehicleType_UnionUnion
@@ -109,7 +109,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0602DF8D RID: 188301 RVA: 0x006488B0 File Offset: 0x00646AB0
+		// Token: 0x060307D3 RID: 198611 RVA: 0x00695FF4 File Offset: 0x006941F4
 		public static int Pack(FlatBufferBuilder builder, IExitVehicleType_UnionUnion _o)
 		{
 			switch (_o.Type)

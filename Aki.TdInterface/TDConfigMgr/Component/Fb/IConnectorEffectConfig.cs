@@ -4,13 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D16 RID: 3350
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x02000E10 RID: 3600
 	public class IConnectorEffectConfig
 	{
-		// Token: 0x06004C73 RID: 19571 RVA: 0x000BE7C6 File Offset: 0x000BC9C6
-		[NullableContext(1)]
+		// Token: 0x0600518D RID: 20877 RVA: 0x000C9E9A File Offset: 0x000C809A
 		public static IConnectorEffectConfig Create(IConnectorEffectConfig? instance)
 		{
 			if (instance == null)
@@ -23,39 +20,41 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001804 RID: 6148
-		// (get) Token: 0x06004C74 RID: 19572 RVA: 0x000BE7E5 File Offset: 0x000BC9E5
-		[Nullable(1)]
+		// Token: 0x17001968 RID: 6504
+		// (get) Token: 0x0600518E RID: 20878 RVA: 0x000C9EB9 File Offset: 0x000C80B9
 		public virtual string EffectPath
 		{
-			[NullableContext(1)]
 			get
 			{
 				return this.Instance.EffectPath;
 			}
 		}
 
-		// Token: 0x17001805 RID: 6149
-		// (get) Token: 0x06004C75 RID: 19573 RVA: 0x000BE7F2 File Offset: 0x000BC9F2
+		// Token: 0x17001969 RID: 6505
+		// (get) Token: 0x0600518F RID: 20879 RVA: 0x000C9EC6 File Offset: 0x000C80C6
+		[Nullable(2)]
 		public virtual string StartPoint
 		{
+			[NullableContext(2)]
 			get
 			{
 				return this.Instance.StartPoint;
 			}
 		}
 
-		// Token: 0x17001806 RID: 6150
-		// (get) Token: 0x06004C76 RID: 19574 RVA: 0x000BE7FF File Offset: 0x000BC9FF
+		// Token: 0x1700196A RID: 6506
+		// (get) Token: 0x06005190 RID: 20880 RVA: 0x000C9ED3 File Offset: 0x000C80D3
+		[Nullable(2)]
 		public virtual string EndPoint
 		{
+			[NullableContext(2)]
 			get
 			{
 				return this.Instance.EndPoint;
 			}
 		}
 
-		// Token: 0x04002BC3 RID: 11203
+		// Token: 0x04002E83 RID: 11907
 		private IConnectorEffectConfig Instance;
 	}
 }

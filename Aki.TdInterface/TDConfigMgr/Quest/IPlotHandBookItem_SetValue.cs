@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001056 RID: 4182
+	// Token: 0x02001184 RID: 4484
 	public class IPlotHandBookItem_SetValue
 	{
-		// Token: 0x04003869 RID: 14441
+		// Token: 0x04003BB1 RID: 15281
 		public int Id;
 
-		// Token: 0x0400386A RID: 14442
-		[Nullable(1)]
+		// Token: 0x04003BB2 RID: 15282
 		public List<IPlotHandBookNode> Nodes;
 	}
 }

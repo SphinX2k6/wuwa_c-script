@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007790 RID: 30608
+	// Token: 0x02007FC8 RID: 32712
 	public class TSkiConfigUnion
 	{
-		// Token: 0x1700E6A3 RID: 59043
-		// (get) Token: 0x06037902 RID: 227586 RVA: 0x007848D2 File Offset: 0x00782AD2
-		// (set) Token: 0x06037903 RID: 227587 RVA: 0x007848DA File Offset: 0x00782ADA
+		// Token: 0x1700F2FD RID: 62205
+		// (get) Token: 0x0603AE7D RID: 241277 RVA: 0x007E9DD2 File Offset: 0x007E7FD2
+		// (set) Token: 0x0603AE7E RID: 241278 RVA: 0x007E9DDA File Offset: 0x007E7FDA
 		public TSkiConfig Type { get; set; }
 
-		// Token: 0x1700E6A4 RID: 59044
-		// (get) Token: 0x06037904 RID: 227588 RVA: 0x007848E3 File Offset: 0x00782AE3
-		// (set) Token: 0x06037905 RID: 227589 RVA: 0x007848EB File Offset: 0x00782AEB
+		// Token: 0x1700F2FE RID: 62206
+		// (get) Token: 0x0603AE7F RID: 241279 RVA: 0x007E9DE3 File Offset: 0x007E7FE3
+		// (set) Token: 0x0603AE80 RID: 241280 RVA: 0x007E9DEB File Offset: 0x007E7FEB
 		public object Value { get; set; }
 
-		// Token: 0x06037906 RID: 227590 RVA: 0x007848F4 File Offset: 0x00782AF4
+		// Token: 0x0603AE81 RID: 241281 RVA: 0x007E9DF4 File Offset: 0x007E7FF4
 		public TSkiConfigUnion()
 		{
 			this.Type = TSkiConfig.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06037907 RID: 227591 RVA: 0x0078490A File Offset: 0x00782B0A
+		// Token: 0x0603AE82 RID: 241282 RVA: 0x007E9E0A File Offset: 0x007E800A
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06037908 RID: 227592 RVA: 0x0078491C File Offset: 0x00782B1C
+		// Token: 0x0603AE83 RID: 241283 RVA: 0x007E9E1C File Offset: 0x007E801C
 		public IAccelerateSkiConfigT AsIAccelerateSkiConfig()
 		{
 			return this.As<IAccelerateSkiConfigT>();
 		}
 
-		// Token: 0x06037909 RID: 227593 RVA: 0x00784924 File Offset: 0x00782B24
+		// Token: 0x0603AE84 RID: 241284 RVA: 0x007E9E24 File Offset: 0x007E8024
 		public static TSkiConfigUnion FromIAccelerateSkiConfig(IAccelerateSkiConfigT _iaccelerateskiconfig)
 		{
 			return new TSkiConfigUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0603790A RID: 227594 RVA: 0x00784939 File Offset: 0x00782B39
+		// Token: 0x0603AE85 RID: 241285 RVA: 0x007E9E39 File Offset: 0x007E8039
 		public ICloseSkiConfigT AsICloseSkiConfig()
 		{
 			return this.As<ICloseSkiConfigT>();
 		}
 
-		// Token: 0x0603790B RID: 227595 RVA: 0x00784941 File Offset: 0x00782B41
+		// Token: 0x0603AE86 RID: 241286 RVA: 0x007E9E41 File Offset: 0x007E8041
 		public static TSkiConfigUnion FromICloseSkiConfig(ICloseSkiConfigT _icloseskiconfig)
 		{
 			return new TSkiConfigUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0603790C RID: 227596 RVA: 0x00784956 File Offset: 0x00782B56
+		// Token: 0x0603AE87 RID: 241287 RVA: 0x007E9E56 File Offset: 0x007E8056
 		public IOpenSkiConfigT AsIOpenSkiConfig()
 		{
 			return this.As<IOpenSkiConfigT>();
 		}
 
-		// Token: 0x0603790D RID: 227597 RVA: 0x0078495E File Offset: 0x00782B5E
+		// Token: 0x0603AE88 RID: 241288 RVA: 0x007E9E5E File Offset: 0x007E805E
 		public static TSkiConfigUnion FromIOpenSkiConfig(IOpenSkiConfigT _iopenskiconfig)
 		{
 			return new TSkiConfigUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x0603790E RID: 227598 RVA: 0x00784974 File Offset: 0x00782B74
+		// Token: 0x0603AE89 RID: 241289 RVA: 0x007E9E74 File Offset: 0x007E8074
 		public static int Pack(FlatBufferBuilder builder, TSkiConfigUnion _o)
 		{
 			switch (_o.Type)

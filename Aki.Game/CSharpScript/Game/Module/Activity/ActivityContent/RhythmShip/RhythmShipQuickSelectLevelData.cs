@@ -3,14 +3,14 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RhythmShip
 {
-	// Token: 0x0200620A RID: 25098
+	// Token: 0x02005188 RID: 20872
 	public class RhythmShipQuickSelectLevelData
 	{
-		// Token: 0x0402106F RID: 135279
+		// Token: 0x0401B99E RID: 113054
 		[Nullable(1)]
 		public string TitleText = "";
 
-		// Token: 0x04021070 RID: 135280
+		// Token: 0x0401B99F RID: 113055
 		public int LevelConfig;
 	}
 }

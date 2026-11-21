@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004C38 RID: 19512
+	// Token: 0x0200512B RID: 20779
 	public class IHasUpgradableVisionT
 	{
-		// Token: 0x17008DC0 RID: 36288
-		// (get) Token: 0x0601EECD RID: 126669 RVA: 0x00453AE0 File Offset: 0x00451CE0
-		// (set) Token: 0x0601EECE RID: 126670 RVA: 0x00453AE8 File Offset: 0x00451CE8
+		// Token: 0x170094E9 RID: 38121
+		// (get) Token: 0x06020AD1 RID: 133841 RVA: 0x004873BC File Offset: 0x004855BC
+		// (set) Token: 0x06020AD2 RID: 133842 RVA: 0x004873C4 File Offset: 0x004855C4
 		public EFormationRoleInfoType Type { get; set; }
 
-		// Token: 0x17008DC1 RID: 36289
-		// (get) Token: 0x0601EECF RID: 126671 RVA: 0x00453AF1 File Offset: 0x00451CF1
-		// (set) Token: 0x0601EED0 RID: 126672 RVA: 0x00453AF9 File Offset: 0x00451CF9
+		// Token: 0x170094EA RID: 38122
+		// (get) Token: 0x06020AD3 RID: 133843 RVA: 0x004873CD File Offset: 0x004855CD
+		// (set) Token: 0x06020AD4 RID: 133844 RVA: 0x004873D5 File Offset: 0x004855D5
 		public EHasUpgradableVisionType Option { get; set; }
 
-		// Token: 0x0601EED1 RID: 126673 RVA: 0x00453B02 File Offset: 0x00451D02
+		// Token: 0x06020AD5 RID: 133845 RVA: 0x004873DE File Offset: 0x004855DE
 		public IHasUpgradableVisionT()
 		{
 			this.Type = EFormationRoleInfoType.RoleLevel;

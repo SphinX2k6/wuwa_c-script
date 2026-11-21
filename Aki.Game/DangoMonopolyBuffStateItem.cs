@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001228 RID: 4648
+// Token: 0x020006DC RID: 1756
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -13,7 +13,7 @@ using UnrealEngine;
 })]
 public class DangoMonopolyBuffStateItem : GridProxyAbstract<IDangoMonopolyRoundBuffData>
 {
-	// Token: 0x06007DCF RID: 32207 RVA: 0x001AABD4 File Offset: 0x001A8DD4
+	// Token: 0x06005166 RID: 20838 RVA: 0x001B3894 File Offset: 0x001B1A94
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ public class DangoMonopolyBuffStateItem : GridProxyAbstract<IDangoMonopolyRoundB
 		};
 	}
 
-	// Token: 0x06007DD0 RID: 32208 RVA: 0x001AAC70 File Offset: 0x001A8E70
+	// Token: 0x06005167 RID: 20839 RVA: 0x001B3930 File Offset: 0x001B1B30
 	public override void Refresh(IDangoMonopolyRoundBuffData data, bool isSelected, int gridIndex)
 	{
 		this.ItemData = data;
@@ -59,10 +59,10 @@ public class DangoMonopolyBuffStateItem : GridProxyAbstract<IDangoMonopolyRoundB
 		base.SetTextureByPath(this.ItemData.DangoIcon, base.GetTexture(5), null, null);
 	}
 
-	// Token: 0x04003930 RID: 14640
+	// Token: 0x040039C8 RID: 14792
 	private IDangoMonopolyRoundBuffData ItemData;
 
-	// Token: 0x04003931 RID: 14641
+	// Token: 0x040039C9 RID: 14793
 	[Nullable(new byte[]
 	{
 		2,
@@ -70,21 +70,21 @@ public class DangoMonopolyBuffStateItem : GridProxyAbstract<IDangoMonopolyRoundB
 	})]
 	public Action<IDangoMonopolyRoundBuffData> ClickCallBack;
 
-	// Token: 0x0200781E RID: 30750
+	// Token: 0x020069A9 RID: 27049
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x04027964 RID: 162148
+		// Token: 0x04022C95 RID: 142485
 		ItemFinish,
-		// Token: 0x04027965 RID: 162149
+		// Token: 0x04022C96 RID: 142486
 		ItemUnFinish,
-		// Token: 0x04027966 RID: 162150
+		// Token: 0x04022C97 RID: 142487
 		SpriteActive,
-		// Token: 0x04027967 RID: 162151
+		// Token: 0x04022C98 RID: 142488
 		TxtNameActive,
-		// Token: 0x04027968 RID: 162152
+		// Token: 0x04022C99 RID: 142489
 		TxtNameUnActive,
-		// Token: 0x04027969 RID: 162153
+		// Token: 0x04022C9A RID: 142490
 		TextureIcon
 	}
 }

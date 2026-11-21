@@ -4,14 +4,14 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Map.MapDefine
 {
-	// Token: 0x0200556E RID: 21870
+	// Token: 0x02004541 RID: 17729
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WorldMapNavigateCountryImpl : IWorldMapNavigateCountry
 	{
-		// Token: 0x17008619 RID: 34329
-		// (get) Token: 0x06037C2A RID: 228394 RVA: 0x00D38FD2 File Offset: 0x00D371D2
-		// (set) Token: 0x06037C2B RID: 228395 RVA: 0x00D38FDA File Offset: 0x00D371DA
+		// Token: 0x170059C2 RID: 22978
+		// (get) Token: 0x0602CB04 RID: 183044 RVA: 0x00C86AA6 File Offset: 0x00C84CA6
+		// (set) Token: 0x0602CB05 RID: 183045 RVA: 0x00C86AAE File Offset: 0x00C84CAE
 		[Nullable(new byte[]
 		{
 			2,
@@ -27,9 +27,9 @@ namespace CSharpScript.Game.Module.Map.MapDefine
 			1
 		})] set; }
 
-		// Token: 0x1700861A RID: 34330
-		// (get) Token: 0x06037C2C RID: 228396 RVA: 0x00D38FE3 File Offset: 0x00D371E3
-		// (set) Token: 0x06037C2D RID: 228397 RVA: 0x00D38FEB File Offset: 0x00D371EB
+		// Token: 0x170059C3 RID: 22979
+		// (get) Token: 0x0602CB06 RID: 183046 RVA: 0x00C86AB7 File Offset: 0x00C84CB7
+		// (set) Token: 0x0602CB07 RID: 183047 RVA: 0x00C86ABF File Offset: 0x00C84CBF
 		public List<IWorldMapNavigate> AreaNavigateList { get; set; } = new List<IWorldMapNavigate>();
 	}
 }

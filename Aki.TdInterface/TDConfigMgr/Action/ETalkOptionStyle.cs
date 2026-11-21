@@ -2,12 +2,12 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020016CB RID: 5835
+	// Token: 0x02001845 RID: 6213
 	public enum ETalkOptionStyle
 	{
-		// Token: 0x04004ED9 RID: 20185
+		// Token: 0x040052FF RID: 21247
 		Default,
-		// Token: 0x04004EDA RID: 20186
+		// Token: 0x04005300 RID: 21248
 		Monologue
 	}
 }

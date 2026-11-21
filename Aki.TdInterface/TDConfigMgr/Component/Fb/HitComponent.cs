@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D2D RID: 3373
+	// Token: 0x02000E27 RID: 3623
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class HitComponent : IHitComponentBase
 	{
-		// Token: 0x06004CF6 RID: 19702 RVA: 0x000BF848 File Offset: 0x000BDA48
-		[NullableContext(1)]
+		// Token: 0x06005212 RID: 21010 RVA: 0x000CAF8C File Offset: 0x000C918C
+		[NullableContext(0)]
 		public static HitComponent Create(IHitComponent? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001859 RID: 6233
-		// (get) Token: 0x06004CF7 RID: 19703 RVA: 0x000BF868 File Offset: 0x000BDA68
+		// Token: 0x170019BF RID: 6591
+		// (get) Token: 0x06005213 RID: 21011 RVA: 0x000CAFAC File Offset: 0x000C91AC
 		public override bool? Disabled
 		{
 			get
@@ -38,12 +38,12 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700185A RID: 6234
-		// (get) Token: 0x06004CF8 RID: 19704 RVA: 0x000BF89E File Offset: 0x000BDA9E
-		[Nullable(1)]
+		// Token: 0x170019C0 RID: 6592
+		// (get) Token: 0x06005214 RID: 21012 RVA: 0x000CAFE2 File Offset: 0x000C91E2
+		[Nullable(0)]
 		public override IHitBulletType HitBullet
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._HitBulletInited)
@@ -56,8 +56,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700185B RID: 6235
-		// (get) Token: 0x06004CF9 RID: 19705 RVA: 0x000BF8CD File Offset: 0x000BDACD
+		// Token: 0x170019C1 RID: 6593
+		// (get) Token: 0x06005215 RID: 21013 RVA: 0x000CB011 File Offset: 0x000C9211
 		public override IHitTimeScaleRatio AttackerHitTimeScaleRatio
 		{
 			get
@@ -72,8 +72,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700185C RID: 6236
-		// (get) Token: 0x06004CFA RID: 19706 RVA: 0x000BF901 File Offset: 0x000BDB01
+		// Token: 0x170019C2 RID: 6594
+		// (get) Token: 0x06005216 RID: 21014 RVA: 0x000CB045 File Offset: 0x000C9245
 		public override IHitTimeScaleRatio VictimHitTimeScaleRatio
 		{
 			get
@@ -88,19 +88,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700185D RID: 6237
-		// (get) Token: 0x06004CFB RID: 19707 RVA: 0x000BF938 File Offset: 0x000BDB38
+		// Token: 0x170019C3 RID: 6595
+		// (get) Token: 0x06005217 RID: 21015 RVA: 0x000CB07C File Offset: 0x000C927C
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public override List<IAimPart> AimParts
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -123,8 +123,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700185E RID: 6238
-		// (get) Token: 0x06004CFC RID: 19708 RVA: 0x000BF9B4 File Offset: 0x000BDBB4
+		// Token: 0x170019C4 RID: 6596
+		// (get) Token: 0x06005218 RID: 21016 RVA: 0x000CB0F8 File Offset: 0x000C92F8
 		public override bool? EdIsLocked
 		{
 			get
@@ -133,19 +133,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700185F RID: 6239
-		// (get) Token: 0x06004CFD RID: 19709 RVA: 0x000BF9CC File Offset: 0x000BDBCC
+		// Token: 0x170019C5 RID: 6597
+		// (get) Token: 0x06005219 RID: 21017 RVA: 0x000CB110 File Offset: 0x000C9310
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IBulletHitConfig> BulletHitConfigs
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -168,48 +168,48 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002C14 RID: 11284
+		// Token: 0x04002ED4 RID: 11988
 		private IHitComponent Instance;
 
-		// Token: 0x04002C15 RID: 11285
-		[Nullable(1)]
+		// Token: 0x04002ED5 RID: 11989
+		[Nullable(0)]
 		private IHitBulletType _HitBulletCache;
 
-		// Token: 0x04002C16 RID: 11286
+		// Token: 0x04002ED6 RID: 11990
 		private bool _HitBulletInited;
 
-		// Token: 0x04002C17 RID: 11287
+		// Token: 0x04002ED7 RID: 11991
 		private IHitTimeScaleRatio _AttackerHitTimeScaleRatioCache;
 
-		// Token: 0x04002C18 RID: 11288
+		// Token: 0x04002ED8 RID: 11992
 		private bool _AttackerHitTimeScaleRatioInited;
 
-		// Token: 0x04002C19 RID: 11289
+		// Token: 0x04002ED9 RID: 11993
 		private IHitTimeScaleRatio _VictimHitTimeScaleRatioCache;
 
-		// Token: 0x04002C1A RID: 11290
+		// Token: 0x04002EDA RID: 11994
 		private bool _VictimHitTimeScaleRatioInited;
 
-		// Token: 0x04002C1B RID: 11291
+		// Token: 0x04002EDB RID: 11995
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IAimPart> _AimPartsCache;
 
-		// Token: 0x04002C1C RID: 11292
+		// Token: 0x04002EDC RID: 11996
 		private bool _AimPartsInited;
 
-		// Token: 0x04002C1D RID: 11293
+		// Token: 0x04002EDD RID: 11997
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IBulletHitConfig> _BulletHitConfigsCache;
 
-		// Token: 0x04002C1E RID: 11294
+		// Token: 0x04002EDE RID: 11998
 		private bool _BulletHitConfigsInited;
 	}
 }

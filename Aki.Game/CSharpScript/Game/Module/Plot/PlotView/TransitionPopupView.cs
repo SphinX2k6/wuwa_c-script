@@ -10,16 +10,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.PlotView
 {
-	// Token: 0x02005072 RID: 20594
+	// Token: 0x02004042 RID: 16450
 	public class TransitionPopupView : UiViewBase
 	{
-		// Token: 0x06034C2A RID: 216106 RVA: 0x00C7BE47 File Offset: 0x00C7A047
+		// Token: 0x06029B1F RID: 170783 RVA: 0x00BC921F File Offset: 0x00BC741F
 		[NullableContext(1)]
 		public TransitionPopupView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06034C2B RID: 216107 RVA: 0x00C7BE50 File Offset: 0x00C7A050
+		// Token: 0x06029B20 RID: 170784 RVA: 0x00BC9228 File Offset: 0x00BC7428
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06034C2C RID: 216108 RVA: 0x00C7BEBC File Offset: 0x00C7A0BC
+		// Token: 0x06029B21 RID: 170785 RVA: 0x00BC9294 File Offset: 0x00BC7494
 		protected override void OnStart()
 		{
 			TransitionPopupViewParams transitionPopupViewParams = this.OpenParam as TransitionPopupViewParams;
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.Duration = (((transitionPopupViewParams != null) ? transitionPopupViewParams.Duration : null) ?? PlotModel.Instance.PlotGlobalConfig.TransitionPopupTime);
 		}
 
-		// Token: 0x06034C2D RID: 216109 RVA: 0x00C7C018 File Offset: 0x00C7A218
+		// Token: 0x06029B22 RID: 170786 RVA: 0x00BC93F0 File Offset: 0x00BC75F0
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -107,7 +107,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return result;
 		}
 
-		// Token: 0x06034C2E RID: 216110 RVA: 0x00C7C06C File Offset: 0x00C7A26C
+		// Token: 0x06029B23 RID: 170787 RVA: 0x00BC9444 File Offset: 0x00BC7644
 		[NullableContext(2)]
 		private void ShowText(UUIText textWidget, string tid)
 		{
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x06034C2F RID: 216111 RVA: 0x00C7C08B File Offset: 0x00C7A28B
+		// Token: 0x06029B24 RID: 170788 RVA: 0x00BC9463 File Offset: 0x00BC7663
 		protected override void OnAfterShow()
 		{
 			TimerSystem.Instance.Delay(delegate(float _)
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}, this.Duration * 1000f, null, null, true, 1f);
 		}
 
-		// Token: 0x06034C30 RID: 216112 RVA: 0x00C7C0B8 File Offset: 0x00C7A2B8
+		// Token: 0x06029B25 RID: 170789 RVA: 0x00BC9490 File Offset: 0x00BC7690
 		protected override void OnBeforeDestroy()
 		{
 			if (this.IsHideBattleView)
@@ -145,22 +145,22 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.IsHideBattleView = false;
 		}
 
-		// Token: 0x0401C1D9 RID: 115161
+		// Token: 0x04016C04 RID: 93188
 		private bool IsHideBattleView;
 
-		// Token: 0x0401C1DA RID: 115162
+		// Token: 0x04016C05 RID: 93189
 		public bool IsLimitOperation;
 
-		// Token: 0x0401C1DB RID: 115163
+		// Token: 0x04016C06 RID: 93190
 		private float Duration;
 
-		// Token: 0x0200B20F RID: 45583
+		// Token: 0x02009C48 RID: 40008
 		private static class EChildComp
 		{
-			// Token: 0x04035FCF RID: 221135
+			// Token: 0x04030A23 RID: 199203
 			public const int TitleText = 0;
 
-			// Token: 0x04035FD0 RID: 221136
+			// Token: 0x04030A24 RID: 199204
 			public const int ContentText = 1;
 		}
 	}

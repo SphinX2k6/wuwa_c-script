@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A72 RID: 6770
+	// Token: 0x02001C07 RID: 7175
 	public class IFixedTime_SetValue
 	{
-		// Token: 0x04005979 RID: 22905
+		// Token: 0x04005DDE RID: 24030
 		public int Hour;
 
-		// Token: 0x0400597A RID: 22906
+		// Token: 0x04005DDF RID: 24031
 		public int Minutes;
 	}
 }

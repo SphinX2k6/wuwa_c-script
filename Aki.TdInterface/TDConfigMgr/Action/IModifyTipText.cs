@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001BF0 RID: 7152
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001DDF RID: 7647
 	public class IModifyTipText : IInteractEffect
 	{
-		// Token: 0x0600992B RID: 39211 RVA: 0x001609C0 File Offset: 0x0015EBC0
+		// Token: 0x0600A259 RID: 41561 RVA: 0x001738B8 File Offset: 0x00171AB8
 		private IModifyTipText_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600992C RID: 39212 RVA: 0x001609F8 File Offset: 0x0015EBF8
+		// Token: 0x0600A25A RID: 41562 RVA: 0x001738F0 File Offset: 0x00171AF0
 		public static IModifyTipText Create([Nullable(2)] IModifyTipText instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600992D RID: 39213 RVA: 0x00160A0B File Offset: 0x0015EC0B
+		// Token: 0x0600A25B RID: 41563 RVA: 0x00173903 File Offset: 0x00171B03
 		public static IModifyTipText CreateFromSetValue([Nullable(2)] IModifyTipText_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600992E RID: 39214 RVA: 0x00160A1E File Offset: 0x0015EC1E
+		// Token: 0x0600A25C RID: 41564 RVA: 0x00173916 File Offset: 0x00171B16
 		public new IModifyTipText_SetValue ToSetValue()
 		{
 			return new IModifyTipText_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003004 RID: 12292
-		// (get) Token: 0x0600992F RID: 39215 RVA: 0x00160A49 File Offset: 0x0015EC49
-		// (set) Token: 0x06009930 RID: 39216 RVA: 0x00160A74 File Offset: 0x0015EC74
+		// Token: 0x1700326C RID: 12908
+		// (get) Token: 0x0600A25D RID: 41565 RVA: 0x00173941 File Offset: 0x00171B41
+		// (set) Token: 0x0600A25E RID: 41566 RVA: 0x0017396C File Offset: 0x00171B6C
 		public override EInteractEffectType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003005 RID: 12293
-		// (get) Token: 0x06009931 RID: 39217 RVA: 0x00160A84 File Offset: 0x0015EC84
-		// (set) Token: 0x06009932 RID: 39218 RVA: 0x00160ABE File Offset: 0x0015ECBE
+		// Token: 0x1700326D RID: 12909
+		// (get) Token: 0x0600A25F RID: 41567 RVA: 0x0017397C File Offset: 0x00171B7C
+		// (set) Token: 0x0600A260 RID: 41568 RVA: 0x001739B6 File Offset: 0x00171BB6
 		public override float? DelayTime
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003006 RID: 12294
-		// (get) Token: 0x06009933 RID: 39219 RVA: 0x00160ACC File Offset: 0x0015ECCC
-		// (set) Token: 0x06009934 RID: 39220 RVA: 0x00160AF7 File Offset: 0x0015ECF7
+		// Token: 0x1700326E RID: 12910
+		// (get) Token: 0x0600A261 RID: 41569 RVA: 0x001739C4 File Offset: 0x00171BC4
+		// (set) Token: 0x0600A262 RID: 41570 RVA: 0x001739EF File Offset: 0x00171BEF
 		public virtual string TipText
 		{
 			get
@@ -131,11 +129,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005D4B RID: 23883
+		// Token: 0x04006271 RID: 25201
 		[Nullable(2)]
 		protected new IModifyTipText FbInstance;
 
-		// Token: 0x04005D4C RID: 23884
+		// Token: 0x04006272 RID: 25202
 		[Nullable(2)]
 		protected new IModifyTipText_SetValue PocoInterface;
 	}

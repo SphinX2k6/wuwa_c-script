@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004E20 RID: 20000
+	// Token: 0x0200532F RID: 21295
 	public enum EStateRepPerfType : byte
 	{
-		// Token: 0x0400DB5A RID: 56154
+		// Token: 0x0400E6CC RID: 59084
 		SkillId,
-		// Token: 0x0400DB5B RID: 56155
+		// Token: 0x0400E6CD RID: 59085
 		MontagePath,
-		// Token: 0x0400DB5C RID: 56156
+		// Token: 0x0400E6CE RID: 59086
 		Effects
 	}
 }

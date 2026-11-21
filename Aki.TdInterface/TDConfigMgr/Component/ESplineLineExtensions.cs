@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000A1C RID: 2588
+	// Token: 0x02000AE1 RID: 2785
 	public static class ESplineLineExtensions
 	{
-		// Token: 0x0600392F RID: 14639 RVA: 0x000939B0 File Offset: 0x00091BB0
+		// Token: 0x06003D07 RID: 15623 RVA: 0x0009C2E4 File Offset: 0x0009A4E4
 		public static string ToEnumString(this ESplineLine value)
 		{
 			string result;
@@ -30,7 +30,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003930 RID: 14640 RVA: 0x00093A04 File Offset: 0x00091C04
+		// Token: 0x06003D08 RID: 15624 RVA: 0x0009C338 File Offset: 0x0009A538
 		public static ESplineLine FromString(string name)
 		{
 			ESplineLine result;
@@ -41,7 +41,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003931 RID: 14641 RVA: 0x00093A30 File Offset: 0x00091C30
+		// Token: 0x06003D09 RID: 15625 RVA: 0x0009C364 File Offset: 0x0009A564
 		public static bool TryFromString(string name, out ESplineLine value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -73,7 +73,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x06003932 RID: 14642 RVA: 0x00093A98 File Offset: 0x00091C98
+		// Token: 0x06003D0A RID: 15626 RVA: 0x0009C3CC File Offset: 0x0009A5CC
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -85,7 +85,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003933 RID: 14643 RVA: 0x00093AC0 File Offset: 0x00091CC0
+		// Token: 0x06003D0B RID: 15627 RVA: 0x0009C3F4 File Offset: 0x0009A5F4
 		public static ESplineLine[] GetValues()
 		{
 			return new ESplineLine[]
@@ -97,7 +97,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003934 RID: 14644 RVA: 0x00093AD3 File Offset: 0x00091CD3
+		// Token: 0x06003D0C RID: 15628 RVA: 0x0009C407 File Offset: 0x0009A607
 		public static string[] GetNames()
 		{
 			return new string[]

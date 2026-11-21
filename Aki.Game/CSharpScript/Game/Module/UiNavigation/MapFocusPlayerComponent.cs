@@ -7,21 +7,21 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x0200498D RID: 18829
+	// Token: 0x02003907 RID: 14599
 	public class MapFocusPlayerComponent : MapInteractComponentBase
 	{
-		// Token: 0x06031112 RID: 200978 RVA: 0x00B63505 File Offset: 0x00B61705
+		// Token: 0x06025C48 RID: 154696 RVA: 0x00A9E455 File Offset: 0x00A9C655
 		public MapFocusPlayerComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x06031113 RID: 200979 RVA: 0x00B6350E File Offset: 0x00B6170E
+		// Token: 0x06025C49 RID: 154697 RVA: 0x00A9E45E File Offset: 0x00A9C65E
 		protected override void OnPress(HotKeyMap config)
 		{
 			EventSystem.Instance.Emit(EEventName.WorldMapShowTrackList);
 		}
 
-		// Token: 0x06031114 RID: 200980 RVA: 0x00B63520 File Offset: 0x00B61720
+		// Token: 0x06025C4A RID: 154698 RVA: 0x00A9E470 File Offset: 0x00A9C670
 		[NullableContext(1)]
 		protected override void OnRefreshSelfHotKeyState(UiNavigationViewHandle viewHandle)
 		{

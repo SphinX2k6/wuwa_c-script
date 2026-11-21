@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02002B9B RID: 11163
+// Token: 0x02002117 RID: 8471
 public class SurvivorsHandbookWeaponData : SurvivorsHandbookItemDataBase, ISurvivorsHandbookWeaponData, ISurvivorsHandbookItemDataBase
 {
-	// Token: 0x17001F28 RID: 7976
-	// (get) Token: 0x06017205 RID: 94725 RVA: 0x005DCBE8 File Offset: 0x005DADE8
-	// (set) Token: 0x06017206 RID: 94726 RVA: 0x005DCBF0 File Offset: 0x005DADF0
+	// Token: 0x17001F80 RID: 8064
+	// (get) Token: 0x06014C36 RID: 85046 RVA: 0x006097C8 File Offset: 0x006079C8
+	// (set) Token: 0x06014C37 RID: 85047 RVA: 0x006097D0 File Offset: 0x006079D0
 	public int SortId { get; set; }
 }

@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F93 RID: 24467
+	// Token: 0x020065DA RID: 26074
 	public enum EJigsawShape : byte
 	{
-		// Token: 0x0400FE26 RID: 65062
+		// Token: 0x04010BB0 RID: 68528
 		Circle,
-		// Token: 0x0400FE27 RID: 65063
+		// Token: 0x04010BB1 RID: 68529
 		Rectangle
 	}
 }

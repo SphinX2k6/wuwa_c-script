@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Interaction
 {
-	// Token: 0x02005844 RID: 22596
+	// Token: 0x0200481C RID: 18460
 	public enum EInteractionType
 	{
-		// Token: 0x0401E09E RID: 123038
+		// Token: 0x04018B3A RID: 101178
 		Instant,
-		// Token: 0x0401E09F RID: 123039
+		// Token: 0x04018B3B RID: 101179
 		LongPress
 	}
 }

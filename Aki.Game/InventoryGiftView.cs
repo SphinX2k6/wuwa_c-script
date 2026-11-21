@@ -8,17 +8,17 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001FC9 RID: 8137
+// Token: 0x0200149C RID: 5276
 [NullableContext(1)]
 [Nullable(0)]
 public class InventoryGiftView : UiViewBase
 {
-	// Token: 0x0600FE85 RID: 65157 RVA: 0x003DCAE9 File Offset: 0x003DACE9
+	// Token: 0x0600D2ED RID: 53997 RVA: 0x003E90C5 File Offset: 0x003E72C5
 	public InventoryGiftView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600FE86 RID: 65158 RVA: 0x003DCB08 File Offset: 0x003DAD08
+	// Token: 0x0600D2EE RID: 53998 RVA: 0x003E90E4 File Offset: 0x003E72E4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -55,13 +55,13 @@ public class InventoryGiftView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600FE87 RID: 65159 RVA: 0x003DCCBA File Offset: 0x003DAEBA
+	// Token: 0x0600D2EF RID: 53999 RVA: 0x003E9296 File Offset: 0x003E7496
 	protected void ClickClose()
 	{
 		UiManager.Instance.CloseView(EUiViewName.InventoryGiftView, null);
 	}
 
-	// Token: 0x0600FE88 RID: 65160 RVA: 0x003DCCCC File Offset: 0x003DAECC
+	// Token: 0x0600D2F0 RID: 54000 RVA: 0x003E92A8 File Offset: 0x003E74A8
 	protected void OnClickConfirm()
 	{
 		List<int> list = new List<int>();
@@ -76,7 +76,7 @@ public class InventoryGiftView : UiViewBase
 		instance.SendItemGiftUseRequest(configId, (numberSelect != null) ? numberSelect.GetSelectNumber() : 1, list.ToArray());
 	}
 
-	// Token: 0x0600FE89 RID: 65161 RVA: 0x003DCD3C File Offset: 0x003DAF3C
+	// Token: 0x0600D2F1 RID: 54001 RVA: 0x003E9318 File Offset: 0x003E7518
 	protected void OnClickErrorConfirm()
 	{
 		int availableNum = this.InventoryGiftData.GiftPackage.AvailableNum;
@@ -86,7 +86,7 @@ public class InventoryGiftView : UiViewBase
 		});
 	}
 
-	// Token: 0x0600FE8A RID: 65162 RVA: 0x003DCD78 File Offset: 0x003DAF78
+	// Token: 0x0600D2F2 RID: 54002 RVA: 0x003E9354 File Offset: 0x003E7554
 	protected override void OnStart()
 	{
 		this.InventoryGiftData = (this.OpenParam as InventoryGiftData);
@@ -136,7 +136,7 @@ public class InventoryGiftView : UiViewBase
 		this.RefreshSelectCountInfo();
 	}
 
-	// Token: 0x0600FE8B RID: 65163 RVA: 0x003DCFC8 File Offset: 0x003DB1C8
+	// Token: 0x0600D2F3 RID: 54003 RVA: 0x003E95A4 File Offset: 0x003E77A4
 	private bool CheckIfGiftItem()
 	{
 		int configId = this.InventoryGiftData.ConfigId;
@@ -148,13 +148,13 @@ public class InventoryGiftView : UiViewBase
 		return itemType.GetValueOrDefault() == InventoryDefine.EItemType.Gift;
 	}
 
-	// Token: 0x0600FE8C RID: 65164 RVA: 0x003DD002 File Offset: 0x003DB202
+	// Token: 0x0600D2F4 RID: 54004 RVA: 0x003E95DE File Offset: 0x003E77DE
 	private TableTextArgNew GetExchangeTableText(int selectValue)
 	{
 		return new TableTextArgNew(TextConfig.Instance.GetTextContentIdById("ItemUseCount"), new <>z__ReadOnlySingleElementList<object>(selectValue));
 	}
 
-	// Token: 0x0600FE8D RID: 65165 RVA: 0x003DD024 File Offset: 0x003DB224
+	// Token: 0x0600D2F5 RID: 54005 RVA: 0x003E9600 File Offset: 0x003E7800
 	protected override void OnAfterShow()
 	{
 		if (this.InventoryGiftData == null)
@@ -167,13 +167,13 @@ public class InventoryGiftView : UiViewBase
 		this.SetConfirmButtonState(confirmButtonState);
 	}
 
-	// Token: 0x0600FE8E RID: 65166 RVA: 0x003DD068 File Offset: 0x003DB268
+	// Token: 0x0600D2F6 RID: 54006 RVA: 0x003E9644 File Offset: 0x003E7844
 	protected override void OnAfterHide()
 	{
 		UiBlurLogic.Instance.ResumeTopUiRenderAfterBlur();
 	}
 
-	// Token: 0x0600FE8F RID: 65167 RVA: 0x003DD074 File Offset: 0x003DB274
+	// Token: 0x0600D2F7 RID: 54007 RVA: 0x003E9650 File Offset: 0x003E7850
 	protected override void OnBeforeDestroy()
 	{
 		this.LoopScrollView = null;
@@ -193,7 +193,7 @@ public class InventoryGiftView : UiViewBase
 		this.NumberSelect = null;
 	}
 
-	// Token: 0x0600FE90 RID: 65168 RVA: 0x003DD0E4 File Offset: 0x003DB2E4
+	// Token: 0x0600D2F8 RID: 54008 RVA: 0x003E96C0 File Offset: 0x003E78C0
 	private InventoryGiftItem InitItem()
 	{
 		InventoryGiftItem inventoryGiftItem = new InventoryGiftItem();
@@ -204,13 +204,13 @@ public class InventoryGiftView : UiViewBase
 		return inventoryGiftItem;
 	}
 
-	// Token: 0x0600FE91 RID: 65169 RVA: 0x003DD133 File Offset: 0x003DB333
+	// Token: 0x0600D2F9 RID: 54009 RVA: 0x003E970F File Offset: 0x003E790F
 	private GiftItemData GetScrollViewData(int gridIndex)
 	{
 		return this.ItemList[gridIndex];
 	}
 
-	// Token: 0x0600FE92 RID: 65170 RVA: 0x003DD140 File Offset: 0x003DB340
+	// Token: 0x0600D2FA RID: 54010 RVA: 0x003E971C File Offset: 0x003E791C
 	protected void OnToggleStateChangeFunction(UUIExtendToggle toggle, UUIButtonComponent reduceButton, bool isSelected, GiftItemData itemData)
 	{
 		int availableNum = this.InventoryGiftData.GiftPackage.AvailableNum;
@@ -240,7 +240,7 @@ public class InventoryGiftView : UiViewBase
 		this.RefreshSelectCountInfo();
 	}
 
-	// Token: 0x0600FE93 RID: 65171 RVA: 0x003DD1E0 File Offset: 0x003DB3E0
+	// Token: 0x0600D2FB RID: 54011 RVA: 0x003E97BC File Offset: 0x003E79BC
 	protected void OnReduceFunction(GiftItemData itemData)
 	{
 		int num = this.SelectedItemList.IndexOf(itemData);
@@ -252,13 +252,13 @@ public class InventoryGiftView : UiViewBase
 		this.RefreshSelectCountInfo();
 	}
 
-	// Token: 0x0600FE94 RID: 65172 RVA: 0x003DD211 File Offset: 0x003DB411
+	// Token: 0x0600D2FC RID: 54012 RVA: 0x003E97ED File Offset: 0x003E79ED
 	protected bool OnIsSelectOnFunction(GiftItemData itemData)
 	{
 		return this.SelectedItemList.Contains(itemData);
 	}
 
-	// Token: 0x0600FE95 RID: 65173 RVA: 0x003DD220 File Offset: 0x003DB420
+	// Token: 0x0600D2FD RID: 54013 RVA: 0x003E97FC File Offset: 0x003E79FC
 	protected void RefreshSelectCountInfo()
 	{
 		int availableNum = this.InventoryGiftData.GiftPackage.AvailableNum;
@@ -273,14 +273,14 @@ public class InventoryGiftView : UiViewBase
 		this.SetConfirmButtonState(confirmButtonState);
 	}
 
-	// Token: 0x0600FE96 RID: 65174 RVA: 0x003DD294 File Offset: 0x003DB494
+	// Token: 0x0600D2FE RID: 54014 RVA: 0x003E9870 File Offset: 0x003E7A70
 	private void SetConfirmButtonState(bool isShow)
 	{
 		this.ConfirmButtonInteractionGroup.SetInteractable(isShow);
 		this.ConfirmErrorButton.RootUIComp.Get().SetUIActive(!isShow);
 	}
 
-	// Token: 0x040075C6 RID: 30150
+	// Token: 0x040076AF RID: 30383
 	[Nullable(new byte[]
 	{
 		2,
@@ -289,59 +289,59 @@ public class InventoryGiftView : UiViewBase
 	})]
 	private LoopScrollView<InventoryGiftItem, GiftItemData> LoopScrollView;
 
-	// Token: 0x040075C7 RID: 30151
+	// Token: 0x040076B0 RID: 30384
 	private GiftItemData[] ItemList = Array.Empty<GiftItemData>();
 
-	// Token: 0x040075C8 RID: 30152
+	// Token: 0x040076B1 RID: 30385
 	private List<GiftItemData> SelectedItemList = new List<GiftItemData>();
 
-	// Token: 0x040075C9 RID: 30153
+	// Token: 0x040076B2 RID: 30386
 	[Nullable(2)]
 	private InventoryGiftData InventoryGiftData;
 
-	// Token: 0x040075CA RID: 30154
+	// Token: 0x040076B3 RID: 30387
 	[Nullable(2)]
 	private UUIInteractionGroup ConfirmButtonInteractionGroup;
 
-	// Token: 0x040075CB RID: 30155
+	// Token: 0x040076B4 RID: 30388
 	[Nullable(2)]
 	private UUIButtonComponent ConfirmButton;
 
-	// Token: 0x040075CC RID: 30156
+	// Token: 0x040076B5 RID: 30389
 	[Nullable(2)]
 	private UUIButtonComponent ConfirmErrorButton;
 
-	// Token: 0x040075CD RID: 30157
+	// Token: 0x040076B6 RID: 30390
 	[Nullable(2)]
 	private UUIText DescText;
 
-	// Token: 0x040075CE RID: 30158
+	// Token: 0x040076B7 RID: 30391
 	[Nullable(2)]
 	private UUIText TitleText;
 
-	// Token: 0x040075CF RID: 30159
+	// Token: 0x040076B8 RID: 30392
 	[Nullable(2)]
 	private NumberSelectComponent NumberSelect;
 
-	// Token: 0x020085DA RID: 34266
+	// Token: 0x02007761 RID: 30561
 	[NullableContext(0)]
 	private enum EInventoryGiftViewDefine
 	{
-		// Token: 0x0402B923 RID: 178467
+		// Token: 0x04026C32 RID: 158770
 		TitleText,
-		// Token: 0x0402B924 RID: 178468
+		// Token: 0x04026C33 RID: 158771
 		ConfirmButton,
-		// Token: 0x0402B925 RID: 178469
+		// Token: 0x04026C34 RID: 158772
 		ConfirmErrorButton,
-		// Token: 0x0402B926 RID: 178470
+		// Token: 0x04026C35 RID: 158773
 		LoopScrollView,
-		// Token: 0x0402B927 RID: 178471
+		// Token: 0x04026C36 RID: 158774
 		LoopScrollItem,
-		// Token: 0x0402B928 RID: 178472
+		// Token: 0x04026C37 RID: 158775
 		DescText,
-		// Token: 0x0402B929 RID: 178473
+		// Token: 0x04026C38 RID: 158776
 		CancelButton,
-		// Token: 0x0402B92A RID: 178474
+		// Token: 0x04026C39 RID: 158777
 		NumberSelect
 	}
 }

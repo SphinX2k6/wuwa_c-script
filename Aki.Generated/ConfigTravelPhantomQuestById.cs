@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A49 RID: 2633
+	// Token: 0x02000B1E RID: 2846
 	public class ConfigTravelPhantomQuestById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003DCA RID: 15818 RVA: 0x001B73FF File Offset: 0x001B55FF
+		// Token: 0x060042C8 RID: 17096 RVA: 0x001D6793 File Offset: 0x001D4993
 		static ConfigTravelPhantomQuestById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigTravelPhantomQuestById.CreateStaticDefaultValue), new Action(ConfigTravelPhantomQuestById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003DCB RID: 15819 RVA: 0x001B7420 File Offset: 0x001B5620
+		// Token: 0x060042C9 RID: 17097 RVA: 0x001D67B4 File Offset: 0x001D49B4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigTravelPhantomQuestById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003DCC RID: 15820 RVA: 0x001B749F File Offset: 0x001B569F
+		// Token: 0x060042CA RID: 17098 RVA: 0x001D6833 File Offset: 0x001D4A33
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigTravelPhantomQuestById.LogPair = null;
 			ConfigTravelPhantomQuestById.HandleId = 0;
 		}
 
-		// Token: 0x06003DCD RID: 15821 RVA: 0x001B74AD File Offset: 0x001B56AD
+		// Token: 0x060042CB RID: 17099 RVA: 0x001D6841 File Offset: 0x001D4A41
 		public static void Init()
 		{
 			ConfigTravelPhantomQuestById.HandleId = ConfigCommon.InitDataStatement(ConfigTravelPhantomQuestById.HandleId, "db_activitymaptravel.db", "select BinData from `TravelPhantomQuest` where Id=?");
 		}
 
-		// Token: 0x06003DCE RID: 15822 RVA: 0x001B74C8 File Offset: 0x001B56C8
+		// Token: 0x060042CC RID: 17100 RVA: 0x001D685C File Offset: 0x001D4A5C
 		public static TravelPhantomQuest? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigTravelPhantomQuestById.HandleId, ConfigTravelPhantomQuestById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new TravelPhantomQuest?(rootAsTravelPhantomQuest);
 		}
 
-		// Token: 0x040047E5 RID: 18405
+		// Token: 0x04004DB8 RID: 19896
 		private const string DB = "db_activitymaptravel.db";
 
-		// Token: 0x040047E6 RID: 18406
+		// Token: 0x04004DB9 RID: 19897
 		private const string FILE = "d.地图主题活动.xlsx";
 
-		// Token: 0x040047E7 RID: 18407
+		// Token: 0x04004DBA RID: 19898
 		private const string TABLE = "TravelPhantomQuest";
 
-		// Token: 0x040047E8 RID: 18408
+		// Token: 0x04004DBB RID: 19899
 		private const string COMMAND = "select BinData from `TravelPhantomQuest` where Id=?";
 
-		// Token: 0x040047E9 RID: 18409
+		// Token: 0x04004DBC RID: 19900
 		private const string KEY_PREFIX = "TravelPhantomQuestById";
 
-		// Token: 0x040047EA RID: 18410
+		// Token: 0x04004DBD RID: 19901
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040047EB RID: 18411
+		// Token: 0x04004DBE RID: 19902
 		private static int HandleId;
 	}
 }

@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020005D0 RID: 1488
+	// Token: 0x020005BB RID: 1467
 	[NetMessage(EMessageId.FloroRanchPlayShopBuyResponse)]
 	public sealed class FloroRanchPlayShopBuyResponse : IMessage<FloroRanchPlayShopBuyResponse>, IMessage, IEquatable<FloroRanchPlayShopBuyResponse>, IDeepCloneable<FloroRanchPlayShopBuyResponse>, IBufferMessage
 	{
-		// Token: 0x0600898A RID: 35210 RVA: 0x0014BAC8 File Offset: 0x00149CC8
+		// Token: 0x06008822 RID: 34850 RVA: 0x00148EB0 File Offset: 0x001470B0
 		[NullableContext(1)]
 		public static FloroRanchPlayShopBuyResponse Create()
 		{
 			return new FloroRanchPlayShopBuyResponse();
 		}
 
-		// Token: 0x17001B07 RID: 6919
-		// (get) Token: 0x0600898B RID: 35211 RVA: 0x0014BACF File Offset: 0x00149CCF
+		// Token: 0x17001ABA RID: 6842
+		// (get) Token: 0x06008823 RID: 34851 RVA: 0x00148EB7 File Offset: 0x001470B7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001B08 RID: 6920
-		// (get) Token: 0x0600898C RID: 35212 RVA: 0x0014BAD2 File Offset: 0x00149CD2
+		// Token: 0x17001ABB RID: 6843
+		// (get) Token: 0x06008824 RID: 34852 RVA: 0x00148EBA File Offset: 0x001470BA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600898D RID: 35213 RVA: 0x0014BAD9 File Offset: 0x00149CD9
+		// Token: 0x06008825 RID: 34853 RVA: 0x00148EC1 File Offset: 0x001470C1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FloroRanchPlayShopBuyResponse()
 		{
 		}
 
-		// Token: 0x0600898E RID: 35214 RVA: 0x0014BAE4 File Offset: 0x00149CE4
+		// Token: 0x06008826 RID: 34854 RVA: 0x00148ECC File Offset: 0x001470CC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FloroRanchPlayShopBuyResponse(FloroRanchPlayShopBuyResponse other) : this()
@@ -62,16 +62,16 @@ namespace Aki.Protocol
 			FloroRanchPlayShopBuyResponse.DataOneofCase dataCase = other.DataCase;
 			if (dataCase != FloroRanchPlayShopBuyResponse.DataOneofCase.Card)
 			{
-				if (dataCase != FloroRanchPlayShopBuyResponse.DataOneofCase.Toy)
+				if (dataCase != FloroRanchPlayShopBuyResponse.DataOneofCase.CardGroup)
 				{
-					if (dataCase == FloroRanchPlayShopBuyResponse.DataOneofCase.CardGroup)
+					if (dataCase == FloroRanchPlayShopBuyResponse.DataOneofCase.Toy)
 					{
-						this.CardGroup = other.CardGroup.Clone();
+						this.Toy = other.Toy.Clone();
 					}
 				}
 				else
 				{
-					this.Toy = other.Toy.Clone();
+					this.CardGroup = other.CardGroup.Clone();
 				}
 			}
 			else
@@ -81,7 +81,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600898F RID: 35215 RVA: 0x0014BBA1 File Offset: 0x00149DA1
+		// Token: 0x06008827 RID: 34855 RVA: 0x00148F89 File Offset: 0x00147189
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FloroRanchPlayShopBuyResponse Clone()
@@ -89,9 +89,9 @@ namespace Aki.Protocol
 			return new FloroRanchPlayShopBuyResponse(this);
 		}
 
-		// Token: 0x17001B09 RID: 6921
-		// (get) Token: 0x06008990 RID: 35216 RVA: 0x0014BBA9 File Offset: 0x00149DA9
-		// (set) Token: 0x06008991 RID: 35217 RVA: 0x0014BBB1 File Offset: 0x00149DB1
+		// Token: 0x17001ABC RID: 6844
+		// (get) Token: 0x06008828 RID: 34856 RVA: 0x00148F91 File Offset: 0x00147191
+		// (set) Token: 0x06008829 RID: 34857 RVA: 0x00148F99 File Offset: 0x00147199
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ErrorCode ErrorCode
@@ -106,9 +106,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001B0A RID: 6922
-		// (get) Token: 0x06008992 RID: 35218 RVA: 0x0014BBBA File Offset: 0x00149DBA
-		// (set) Token: 0x06008993 RID: 35219 RVA: 0x0014BBC2 File Offset: 0x00149DC2
+		// Token: 0x17001ABD RID: 6845
+		// (get) Token: 0x0600882A RID: 34858 RVA: 0x00148FA2 File Offset: 0x001471A2
+		// (set) Token: 0x0600882B RID: 34859 RVA: 0x00148FAA File Offset: 0x001471AA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FloroRanchPlayShopBuyType Type
@@ -123,9 +123,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001B0B RID: 6923
-		// (get) Token: 0x06008994 RID: 35220 RVA: 0x0014BBCB File Offset: 0x00149DCB
-		// (set) Token: 0x06008995 RID: 35221 RVA: 0x0014BBD3 File Offset: 0x00149DD3
+		// Token: 0x17001ABE RID: 6846
+		// (get) Token: 0x0600882C RID: 34860 RVA: 0x00148FB3 File Offset: 0x001471B3
+		// (set) Token: 0x0600882D RID: 34861 RVA: 0x00148FBB File Offset: 0x001471BB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long CurCoin
@@ -140,9 +140,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001B0C RID: 6924
-		// (get) Token: 0x06008996 RID: 35222 RVA: 0x0014BBDC File Offset: 0x00149DDC
-		// (set) Token: 0x06008997 RID: 35223 RVA: 0x0014BBE4 File Offset: 0x00149DE4
+		// Token: 0x17001ABF RID: 6847
+		// (get) Token: 0x0600882E RID: 34862 RVA: 0x00148FC4 File Offset: 0x001471C4
+		// (set) Token: 0x0600882F RID: 34863 RVA: 0x00148FCC File Offset: 0x001471CC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public long CurDiamond
@@ -157,9 +157,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001B0D RID: 6925
-		// (get) Token: 0x06008998 RID: 35224 RVA: 0x0014BBED File Offset: 0x00149DED
-		// (set) Token: 0x06008999 RID: 35225 RVA: 0x0014BBF5 File Offset: 0x00149DF5
+		// Token: 0x17001AC0 RID: 6848
+		// (get) Token: 0x06008830 RID: 34864 RVA: 0x00148FD5 File Offset: 0x001471D5
+		// (set) Token: 0x06008831 RID: 34865 RVA: 0x00148FDD File Offset: 0x001471DD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FloroRanchShop Shop
@@ -174,9 +174,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001B0E RID: 6926
-		// (get) Token: 0x0600899A RID: 35226 RVA: 0x0014BBFE File Offset: 0x00149DFE
-		// (set) Token: 0x0600899B RID: 35227 RVA: 0x0014BC16 File Offset: 0x00149E16
+		// Token: 0x17001AC1 RID: 6849
+		// (get) Token: 0x06008832 RID: 34866 RVA: 0x00148FE6 File Offset: 0x001471E6
+		// (set) Token: 0x06008833 RID: 34867 RVA: 0x00148FFE File Offset: 0x001471FE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FloroRanchPlayShopBuyCard Card
@@ -196,9 +196,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001B0F RID: 6927
-		// (get) Token: 0x0600899C RID: 35228 RVA: 0x0014BC2C File Offset: 0x00149E2C
-		// (set) Token: 0x0600899D RID: 35229 RVA: 0x0014BC45 File Offset: 0x00149E45
+		// Token: 0x17001AC2 RID: 6850
+		// (get) Token: 0x06008834 RID: 34868 RVA: 0x00149014 File Offset: 0x00147214
+		// (set) Token: 0x06008835 RID: 34869 RVA: 0x0014902C File Offset: 0x0014722C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FloroRanchPlayShopBuyCardGroup CardGroup
@@ -218,9 +218,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001B10 RID: 6928
-		// (get) Token: 0x0600899E RID: 35230 RVA: 0x0014BC5C File Offset: 0x00149E5C
-		// (set) Token: 0x0600899F RID: 35231 RVA: 0x0014BC74 File Offset: 0x00149E74
+		// Token: 0x17001AC3 RID: 6851
+		// (get) Token: 0x06008836 RID: 34870 RVA: 0x00149042 File Offset: 0x00147242
+		// (set) Token: 0x06008837 RID: 34871 RVA: 0x0014905B File Offset: 0x0014725B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FloroRanchPlayShopBuyToy Toy
@@ -240,8 +240,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001B11 RID: 6929
-		// (get) Token: 0x060089A0 RID: 35232 RVA: 0x0014BC8A File Offset: 0x00149E8A
+		// Token: 0x17001AC4 RID: 6852
+		// (get) Token: 0x06008838 RID: 34872 RVA: 0x00149072 File Offset: 0x00147272
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public FloroRanchPlayShopBuyResponse.DataOneofCase DataCase
@@ -252,7 +252,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060089A1 RID: 35233 RVA: 0x0014BC92 File Offset: 0x00149E92
+		// Token: 0x06008839 RID: 34873 RVA: 0x0014907A File Offset: 0x0014727A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void ClearData()
@@ -261,7 +261,7 @@ namespace Aki.Protocol
 			this.data_ = null;
 		}
 
-		// Token: 0x060089A2 RID: 35234 RVA: 0x0014BCA2 File Offset: 0x00149EA2
+		// Token: 0x0600883A RID: 34874 RVA: 0x0014908A File Offset: 0x0014728A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -269,7 +269,7 @@ namespace Aki.Protocol
 			return this.Equals(other as FloroRanchPlayShopBuyResponse);
 		}
 
-		// Token: 0x060089A3 RID: 35235 RVA: 0x0014BCB0 File Offset: 0x00149EB0
+		// Token: 0x0600883B RID: 34875 RVA: 0x00149098 File Offset: 0x00147298
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(FloroRanchPlayShopBuyResponse other)
@@ -277,7 +277,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ErrorCode == other.ErrorCode && this.Type == other.Type && this.CurCoin == other.CurCoin && this.CurDiamond == other.CurDiamond && object.Equals(this.Shop, other.Shop) && object.Equals(this.Card, other.Card) && object.Equals(this.CardGroup, other.CardGroup) && object.Equals(this.Toy, other.Toy) && this.DataCase == other.DataCase && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060089A4 RID: 35236 RVA: 0x0014BD80 File Offset: 0x00149F80
+		// Token: 0x0600883C RID: 34876 RVA: 0x00149168 File Offset: 0x00147368
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -323,7 +323,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060089A5 RID: 35237 RVA: 0x0014BE7B File Offset: 0x0014A07B
+		// Token: 0x0600883D RID: 34877 RVA: 0x00149263 File Offset: 0x00147463
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -331,7 +331,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060089A6 RID: 35238 RVA: 0x0014BE88 File Offset: 0x0014A088
+		// Token: 0x0600883E RID: 34878 RVA: 0x00149270 File Offset: 0x00147470
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -339,50 +339,50 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060089A7 RID: 35239 RVA: 0x0014BE94 File Offset: 0x0014A094
+		// Token: 0x0600883F RID: 34879 RVA: 0x0014927C File Offset: 0x0014747C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
+			if (this.Type != FloroRanchPlayShopBuyType.BuyCard)
+			{
+				output.WriteRawTag(16);
+				output.WriteEnum((int)this.Type);
+			}
 			if (this.dataCase_ == FloroRanchPlayShopBuyResponse.DataOneofCase.Card)
 			{
-				output.WriteRawTag(58);
+				output.WriteRawTag(26);
 				output.WriteMessage(this.Card);
-			}
-			if (this.dataCase_ == FloroRanchPlayShopBuyResponse.DataOneofCase.Toy)
-			{
-				output.WriteRawTag(66);
-				output.WriteMessage(this.Toy);
-			}
-			if (this.ErrorCode != ErrorCode.Success)
-			{
-				output.WriteRawTag(72);
-				output.WriteEnum((int)this.ErrorCode);
 			}
 			if (this.shop_ != null)
 			{
-				output.WriteRawTag(90);
+				output.WriteRawTag(34);
 				output.WriteMessage(this.Shop);
-			}
-			if (this.CurDiamond != 0L)
-			{
-				output.WriteRawTag(96);
-				output.WriteInt64(this.CurDiamond);
 			}
 			if (this.dataCase_ == FloroRanchPlayShopBuyResponse.DataOneofCase.CardGroup)
 			{
-				output.WriteRawTag(106);
+				output.WriteRawTag(42);
 				output.WriteMessage(this.CardGroup);
 			}
 			if (this.CurCoin != 0L)
 			{
-				output.WriteRawTag(112);
+				output.WriteRawTag(48);
 				output.WriteInt64(this.CurCoin);
 			}
-			if (this.Type != FloroRanchPlayShopBuyType.BuyCard)
+			if (this.CurDiamond != 0L)
 			{
-				output.WriteRawTag(120);
-				output.WriteEnum((int)this.Type);
+				output.WriteRawTag(72);
+				output.WriteInt64(this.CurDiamond);
+			}
+			if (this.dataCase_ == FloroRanchPlayShopBuyResponse.DataOneofCase.Toy)
+			{
+				output.WriteRawTag(82);
+				output.WriteMessage(this.Toy);
+			}
+			if (this.ErrorCode != ErrorCode.Success)
+			{
+				output.WriteRawTag(104);
+				output.WriteEnum((int)this.ErrorCode);
 			}
 			if (this._unknownFields != null)
 			{
@@ -390,7 +390,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060089A8 RID: 35240 RVA: 0x0014BF9C File Offset: 0x0014A19C
+		// Token: 0x06008840 RID: 34880 RVA: 0x00149384 File Offset: 0x00147584
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -435,7 +435,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060089A9 RID: 35241 RVA: 0x0014C088 File Offset: 0x0014A288
+		// Token: 0x06008841 RID: 34881 RVA: 0x00149470 File Offset: 0x00147670
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(FloroRanchPlayShopBuyResponse other)
@@ -471,24 +471,24 @@ namespace Aki.Protocol
 			FloroRanchPlayShopBuyResponse.DataOneofCase dataCase = other.DataCase;
 			if (dataCase != FloroRanchPlayShopBuyResponse.DataOneofCase.Card)
 			{
-				if (dataCase != FloroRanchPlayShopBuyResponse.DataOneofCase.Toy)
+				if (dataCase != FloroRanchPlayShopBuyResponse.DataOneofCase.CardGroup)
 				{
-					if (dataCase == FloroRanchPlayShopBuyResponse.DataOneofCase.CardGroup)
+					if (dataCase == FloroRanchPlayShopBuyResponse.DataOneofCase.Toy)
 					{
-						if (this.CardGroup == null)
+						if (this.Toy == null)
 						{
-							this.CardGroup = new FloroRanchPlayShopBuyCardGroup();
+							this.Toy = new FloroRanchPlayShopBuyToy();
 						}
-						this.CardGroup.MergeFrom(other.CardGroup);
+						this.Toy.MergeFrom(other.Toy);
 					}
 				}
 				else
 				{
-					if (this.Toy == null)
+					if (this.CardGroup == null)
 					{
-						this.Toy = new FloroRanchPlayShopBuyToy();
+						this.CardGroup = new FloroRanchPlayShopBuyCardGroup();
 					}
-					this.Toy.MergeFrom(other.Toy);
+					this.CardGroup.MergeFrom(other.CardGroup);
 				}
 			}
 			else
@@ -502,7 +502,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060089AA RID: 35242 RVA: 0x0014C1B2 File Offset: 0x0014A3B2
+		// Token: 0x06008842 RID: 34882 RVA: 0x0014959A File Offset: 0x0014779A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -510,7 +510,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060089AB RID: 35243 RVA: 0x0014C1BC File Offset: 0x0014A3BC
+		// Token: 0x06008843 RID: 34883 RVA: 0x001495A4 File Offset: 0x001477A4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -522,11 +522,16 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 90U)
+				if (num <= 42U)
 				{
-					if (num <= 66U)
+					if (num <= 26U)
 					{
-						if (num == 58U)
+						if (num == 16U)
+						{
+							this.Type = (FloroRanchPlayShopBuyType)input.ReadEnum();
+							continue;
+						}
+						if (num == 26U)
 						{
 							FloroRanchPlayShopBuyCard floroRanchPlayShopBuyCard = new FloroRanchPlayShopBuyCard();
 							if (this.dataCase_ == FloroRanchPlayShopBuyResponse.DataOneofCase.Card)
@@ -537,26 +542,10 @@ namespace Aki.Protocol
 							this.Card = floroRanchPlayShopBuyCard;
 							continue;
 						}
-						if (num == 66U)
-						{
-							FloroRanchPlayShopBuyToy floroRanchPlayShopBuyToy = new FloroRanchPlayShopBuyToy();
-							if (this.dataCase_ == FloroRanchPlayShopBuyResponse.DataOneofCase.Toy)
-							{
-								floroRanchPlayShopBuyToy.MergeFrom(this.Toy);
-							}
-							input.ReadMessage(floroRanchPlayShopBuyToy);
-							this.Toy = floroRanchPlayShopBuyToy;
-							continue;
-						}
 					}
 					else
 					{
-						if (num == 72U)
-						{
-							this.ErrorCode = (ErrorCode)input.ReadEnum();
-							continue;
-						}
-						if (num == 90U)
+						if (num == 34U)
 						{
 							if (this.shop_ == null)
 							{
@@ -565,37 +554,48 @@ namespace Aki.Protocol
 							input.ReadMessage(this.Shop);
 							continue;
 						}
+						if (num == 42U)
+						{
+							FloroRanchPlayShopBuyCardGroup floroRanchPlayShopBuyCardGroup = new FloroRanchPlayShopBuyCardGroup();
+							if (this.dataCase_ == FloroRanchPlayShopBuyResponse.DataOneofCase.CardGroup)
+							{
+								floroRanchPlayShopBuyCardGroup.MergeFrom(this.CardGroup);
+							}
+							input.ReadMessage(floroRanchPlayShopBuyCardGroup);
+							this.CardGroup = floroRanchPlayShopBuyCardGroup;
+							continue;
+						}
 					}
 				}
-				else if (num <= 106U)
+				else if (num <= 72U)
 				{
-					if (num == 96U)
+					if (num == 48U)
 					{
-						this.CurDiamond = input.ReadInt64();
+						this.CurCoin = input.ReadInt64();
 						continue;
 					}
-					if (num == 106U)
+					if (num == 72U)
 					{
-						FloroRanchPlayShopBuyCardGroup floroRanchPlayShopBuyCardGroup = new FloroRanchPlayShopBuyCardGroup();
-						if (this.dataCase_ == FloroRanchPlayShopBuyResponse.DataOneofCase.CardGroup)
-						{
-							floroRanchPlayShopBuyCardGroup.MergeFrom(this.CardGroup);
-						}
-						input.ReadMessage(floroRanchPlayShopBuyCardGroup);
-						this.CardGroup = floroRanchPlayShopBuyCardGroup;
+						this.CurDiamond = input.ReadInt64();
 						continue;
 					}
 				}
 				else
 				{
-					if (num == 112U)
+					if (num == 82U)
 					{
-						this.CurCoin = input.ReadInt64();
+						FloroRanchPlayShopBuyToy floroRanchPlayShopBuyToy = new FloroRanchPlayShopBuyToy();
+						if (this.dataCase_ == FloroRanchPlayShopBuyResponse.DataOneofCase.Toy)
+						{
+							floroRanchPlayShopBuyToy.MergeFrom(this.Toy);
+						}
+						input.ReadMessage(floroRanchPlayShopBuyToy);
+						this.Toy = floroRanchPlayShopBuyToy;
 						continue;
 					}
-					if (num == 120U)
+					if (num == 104U)
 					{
-						this.Type = (FloroRanchPlayShopBuyType)input.ReadEnum();
+						this.ErrorCode = (ErrorCode)input.ReadEnum();
 						continue;
 					}
 				}
@@ -603,65 +603,65 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0400439E RID: 17310
+		// Token: 0x04004394 RID: 17300
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400439F RID: 17311
-		public const int ErrorCodeFieldNumber = 9;
+		// Token: 0x04004395 RID: 17301
+		public const int ErrorCodeFieldNumber = 13;
 
-		// Token: 0x040043A0 RID: 17312
+		// Token: 0x04004396 RID: 17302
 		private ErrorCode errorCode_;
 
-		// Token: 0x040043A1 RID: 17313
-		public const int TypeFieldNumber = 15;
+		// Token: 0x04004397 RID: 17303
+		public const int TypeFieldNumber = 2;
 
-		// Token: 0x040043A2 RID: 17314
+		// Token: 0x04004398 RID: 17304
 		private FloroRanchPlayShopBuyType type_;
 
-		// Token: 0x040043A3 RID: 17315
-		public const int CurCoinFieldNumber = 14;
+		// Token: 0x04004399 RID: 17305
+		public const int CurCoinFieldNumber = 6;
 
-		// Token: 0x040043A4 RID: 17316
+		// Token: 0x0400439A RID: 17306
 		private long curCoin_;
 
-		// Token: 0x040043A5 RID: 17317
-		public const int CurDiamondFieldNumber = 12;
+		// Token: 0x0400439B RID: 17307
+		public const int CurDiamondFieldNumber = 9;
 
-		// Token: 0x040043A6 RID: 17318
+		// Token: 0x0400439C RID: 17308
 		private long curDiamond_;
 
-		// Token: 0x040043A7 RID: 17319
-		public const int ShopFieldNumber = 11;
+		// Token: 0x0400439D RID: 17309
+		public const int ShopFieldNumber = 4;
 
-		// Token: 0x040043A8 RID: 17320
+		// Token: 0x0400439E RID: 17310
 		private FloroRanchShop shop_;
 
-		// Token: 0x040043A9 RID: 17321
-		public const int CardFieldNumber = 7;
+		// Token: 0x0400439F RID: 17311
+		public const int CardFieldNumber = 3;
 
-		// Token: 0x040043AA RID: 17322
-		public const int CardGroupFieldNumber = 13;
+		// Token: 0x040043A0 RID: 17312
+		public const int CardGroupFieldNumber = 5;
 
-		// Token: 0x040043AB RID: 17323
-		public const int ToyFieldNumber = 8;
+		// Token: 0x040043A1 RID: 17313
+		public const int ToyFieldNumber = 10;
 
-		// Token: 0x040043AC RID: 17324
+		// Token: 0x040043A2 RID: 17314
 		private object data_;
 
-		// Token: 0x040043AD RID: 17325
+		// Token: 0x040043A3 RID: 17315
 		private FloroRanchPlayShopBuyResponse.DataOneofCase dataCase_;
 
-		// Token: 0x020017A0 RID: 6048
+		// Token: 0x02001818 RID: 6168
 		public enum DataOneofCase
 		{
-			// Token: 0x0400C6C5 RID: 50885
+			// Token: 0x0400CBF0 RID: 52208
 			None,
-			// Token: 0x0400C6C6 RID: 50886
-			Card = 7,
-			// Token: 0x0400C6C7 RID: 50887
-			CardGroup = 13,
-			// Token: 0x0400C6C8 RID: 50888
-			Toy = 8
+			// Token: 0x0400CBF1 RID: 52209
+			Card = 3,
+			// Token: 0x0400CBF2 RID: 52210
+			CardGroup = 5,
+			// Token: 0x0400CBF3 RID: 52211
+			Toy = 10
 		}
 	}
 }

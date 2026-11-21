@@ -4,12 +4,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Effect
 {
-	// Token: 0x02007269 RID: 29289
+	// Token: 0x020063E8 RID: 25576
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class EffectHandleExtension
 	{
-		// Token: 0x06047BFD RID: 293885 RVA: 0x0125C3D6 File Offset: 0x0125A5D6
+		// Token: 0x0603DFB7 RID: 253879 RVA: 0x011FCCF6 File Offset: 0x011FAEF6
 		public static bool IsValid([Nullable(new byte[]
 		{
 			0,
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Effect
 			return self.IsT2 && self.AsT2.IsValid();
 		}
 
-		// Token: 0x06047BFE RID: 293886 RVA: 0x0125C405 File Offset: 0x0125A605
+		// Token: 0x0603DFB8 RID: 253880 RVA: 0x011FCD25 File Offset: 0x011FAF25
 		public static void SetActorHiddenInGame([Nullable(new byte[]
 		{
 			0,
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Effect
 			}
 		}
 
-		// Token: 0x06047BFF RID: 293887 RVA: 0x0125C434 File Offset: 0x0125A634
+		// Token: 0x0603DFB9 RID: 253881 RVA: 0x011FCD54 File Offset: 0x011FAF54
 		[NullableContext(2)]
 		public static void K2_AttachToActor([Nullable(new byte[]
 		{
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.Effect
 			}
 		}
 
-		// Token: 0x06047C00 RID: 293888 RVA: 0x0125C4BC File Offset: 0x0125A6BC
+		// Token: 0x0603DFBA RID: 253882 RVA: 0x011FCDDC File Offset: 0x011FAFDC
 		[NullableContext(2)]
 		public static void K2_AttachToComponent([Nullable(new byte[]
 		{
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Effect
 			}
 		}
 
-		// Token: 0x06047C01 RID: 293889 RVA: 0x0125C538 File Offset: 0x0125A738
+		// Token: 0x0603DFBB RID: 253883 RVA: 0x011FCE58 File Offset: 0x011FB058
 		public static FVectorDouble GetActorLocation([Nullable(new byte[]
 		{
 			0,
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Effect
 			return default(FVectorDouble);
 		}
 
-		// Token: 0x06047C02 RID: 293890 RVA: 0x0125C57C File Offset: 0x0125A77C
+		// Token: 0x0603DFBC RID: 253884 RVA: 0x011FCE9C File Offset: 0x011FB09C
 		public static FVectorDouble D_K2_GetActorLocation([Nullable(new byte[]
 		{
 			0,
@@ -121,7 +121,7 @@ namespace CSharpScript.Game.Effect
 			return default(FVectorDouble);
 		}
 
-		// Token: 0x06047C03 RID: 293891 RVA: 0x0125C5C0 File Offset: 0x0125A7C0
+		// Token: 0x0603DFBD RID: 253885 RVA: 0x011FCEE0 File Offset: 0x011FB0E0
 		public static FRotator K2_GetActorRotation([Nullable(new byte[]
 		{
 			0,
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Effect
 			return default(FRotator);
 		}
 
-		// Token: 0x06047C04 RID: 293892 RVA: 0x0125C604 File Offset: 0x0125A804
+		// Token: 0x0603DFBE RID: 253886 RVA: 0x011FCF24 File Offset: 0x011FB124
 		public static FVectorDouble D_GetActorScale3D([Nullable(new byte[]
 		{
 			0,
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Effect
 			return default(FVectorDouble);
 		}
 
-		// Token: 0x06047C05 RID: 293893 RVA: 0x0125C646 File Offset: 0x0125A846
+		// Token: 0x0603DFBF RID: 253887 RVA: 0x011FCF66 File Offset: 0x011FB166
 		public static bool D_K2_SetActorLocation([Nullable(new byte[]
 		{
 			0,
@@ -174,7 +174,7 @@ namespace CSharpScript.Game.Effect
 			return self.IsT2 && self.AsT2.D_K2_SetActorLocation(location, bSweep, ref sweepHitResult, bTeleport);
 		}
 
-		// Token: 0x06047C06 RID: 293894 RVA: 0x0125C684 File Offset: 0x0125A884
+		// Token: 0x0603DFC0 RID: 253888 RVA: 0x011FCFA4 File Offset: 0x011FB1A4
 		public static bool K2_SetActorRotation([Nullable(new byte[]
 		{
 			0,
@@ -189,7 +189,7 @@ namespace CSharpScript.Game.Effect
 			return self.IsT2 && self.AsT2.K2_SetActorRotation(rotation, bTeleportPhysics);
 		}
 
-		// Token: 0x06047C07 RID: 293895 RVA: 0x0125C6BC File Offset: 0x0125A8BC
+		// Token: 0x0603DFC1 RID: 253889 RVA: 0x011FCFDC File Offset: 0x011FB1DC
 		public static void D_SetActorScale3D([Nullable(new byte[]
 		{
 			0,
@@ -208,7 +208,7 @@ namespace CSharpScript.Game.Effect
 			}
 		}
 
-		// Token: 0x06047C08 RID: 293896 RVA: 0x0125C6F0 File Offset: 0x0125A8F0
+		// Token: 0x0603DFC2 RID: 253890 RVA: 0x011FD010 File Offset: 0x011FB210
 		public static bool D_K2_SetActorLocationAndRotation([Nullable(new byte[]
 		{
 			0,
@@ -223,7 +223,7 @@ namespace CSharpScript.Game.Effect
 			return self.IsT2 && self.AsT2.D_K2_SetActorLocationAndRotation(location, rotation, false, ref sweepHitResult, true);
 		}
 
-		// Token: 0x06047C09 RID: 293897 RVA: 0x0125C740 File Offset: 0x0125A940
+		// Token: 0x0603DFC3 RID: 253891 RVA: 0x011FD060 File Offset: 0x011FB260
 		public static void D_K2_AddActorWorldOffset([Nullable(new byte[]
 		{
 			0,
@@ -242,7 +242,7 @@ namespace CSharpScript.Game.Effect
 			}
 		}
 
-		// Token: 0x06047C0A RID: 293898 RVA: 0x0125C77C File Offset: 0x0125A97C
+		// Token: 0x0603DFC4 RID: 253892 RVA: 0x011FD09C File Offset: 0x011FB29C
 		public static bool D_K2_SetActorTransform([Nullable(new byte[]
 		{
 			0,
@@ -257,7 +257,7 @@ namespace CSharpScript.Game.Effect
 			return self.IsT2 && self.AsT2.D_K2_SetActorTransform(transform, bSweep, ref sweepHitResult, bTeleport);
 		}
 
-		// Token: 0x06047C0B RID: 293899 RVA: 0x0125C7B5 File Offset: 0x0125A9B5
+		// Token: 0x0603DFC5 RID: 253893 RVA: 0x011FD0D5 File Offset: 0x011FB2D5
 		public static void D_K2_SetActorRelativeLocation([Nullable(new byte[]
 		{
 			0,
@@ -276,7 +276,7 @@ namespace CSharpScript.Game.Effect
 			}
 		}
 
-		// Token: 0x06047C0C RID: 293900 RVA: 0x0125C7F1 File Offset: 0x0125A9F1
+		// Token: 0x0603DFC6 RID: 253894 RVA: 0x011FD111 File Offset: 0x011FB311
 		public static void K2_SetActorRelativeRotation([Nullable(new byte[]
 		{
 			0,
@@ -295,7 +295,7 @@ namespace CSharpScript.Game.Effect
 			}
 		}
 
-		// Token: 0x06047C0D RID: 293901 RVA: 0x0125C82D File Offset: 0x0125AA2D
+		// Token: 0x0603DFC7 RID: 253895 RVA: 0x011FD14D File Offset: 0x011FB34D
 		public static void D_K2_SetActorRelativeTransform([Nullable(new byte[]
 		{
 			0,
@@ -314,7 +314,7 @@ namespace CSharpScript.Game.Effect
 			}
 		}
 
-		// Token: 0x06047C0E RID: 293902 RVA: 0x0125C864 File Offset: 0x0125AA64
+		// Token: 0x0603DFC8 RID: 253896 RVA: 0x011FD184 File Offset: 0x011FB384
 		public static void K2_AddActorLocalTransform([Nullable(new byte[]
 		{
 			0,

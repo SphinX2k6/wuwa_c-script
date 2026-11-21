@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A62 RID: 6754
+	// Token: 0x02001BF7 RID: 7159
 	public class IFireBulletForwardFront_SetValue
 	{
-		// Token: 0x0400594B RID: 22859
+		// Token: 0x04005DB0 RID: 23984
 		public EFireBulletType Type;
 
-		// Token: 0x0400594C RID: 22860
+		// Token: 0x04005DB1 RID: 23985
 		public long BulletId;
 
-		// Token: 0x0400594D RID: 22861
-		[Nullable(1)]
+		// Token: 0x04005DB2 RID: 23986
 		public ITargetEntityType Launcher;
 	}
 }

@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020050B7 RID: 20663
+	// Token: 0x0200561C RID: 22044
 	public struct IDragActorPlayConfig : IFlatbufferObject
 	{
-		// Token: 0x17009632 RID: 38450
-		// (get) Token: 0x06021341 RID: 136001 RVA: 0x0049CE3B File Offset: 0x0049B03B
+		// Token: 0x17009E1F RID: 40479
+		// (get) Token: 0x06023295 RID: 144021 RVA: 0x004D6DC7 File Offset: 0x004D4FC7
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021342 RID: 136002 RVA: 0x0049CE48 File Offset: 0x0049B048
+		// Token: 0x06023296 RID: 144022 RVA: 0x004D6DD4 File Offset: 0x004D4FD4
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06021343 RID: 136003 RVA: 0x0049CE50 File Offset: 0x0049B050
+		// Token: 0x06023297 RID: 144023 RVA: 0x004D6DDC File Offset: 0x004D4FDC
 		public static IDragActorPlayConfig GetRootAsIDragActorPlayConfig(ByteBuffer _bb)
 		{
 			return IDragActorPlayConfig.GetRootAsIDragActorPlayConfig(_bb, default(IDragActorPlayConfig));
 		}
 
-		// Token: 0x06021344 RID: 136004 RVA: 0x0049CE6C File Offset: 0x0049B06C
+		// Token: 0x06023298 RID: 144024 RVA: 0x004D6DF8 File Offset: 0x004D4FF8
 		public static IDragActorPlayConfig GetRootAsIDragActorPlayConfig(ByteBuffer _bb, IDragActorPlayConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06021345 RID: 136005 RVA: 0x0049CE89 File Offset: 0x0049B089
+		// Token: 0x06023299 RID: 144025 RVA: 0x004D6E15 File Offset: 0x004D5015
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06021346 RID: 136006 RVA: 0x0049CE98 File Offset: 0x0049B098
+		// Token: 0x0602329A RID: 144026 RVA: 0x004D6E24 File Offset: 0x004D5024
 		public IDragActorPlayConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009633 RID: 38451
-		// (get) Token: 0x06021347 RID: 136007 RVA: 0x0049CEA8 File Offset: 0x0049B0A8
+		// Token: 0x17009E20 RID: 40480
+		// (get) Token: 0x0602329B RID: 144027 RVA: 0x004D6E34 File Offset: 0x004D5034
 		public IActorRef? DraggableActor
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009634 RID: 38452
-		// (get) Token: 0x06021348 RID: 136008 RVA: 0x0049CF08 File Offset: 0x0049B108
+		// Token: 0x17009E21 RID: 40481
+		// (get) Token: 0x0602329C RID: 144028 RVA: 0x004D6E94 File Offset: 0x004D5094
 		public string DragAkEvent
 		{
 			get
@@ -80,20 +80,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021349 RID: 136009 RVA: 0x0049CF3F File Offset: 0x0049B13F
+		// Token: 0x0602329D RID: 144029 RVA: 0x004D6ECB File Offset: 0x004D50CB
 		public Span<byte> GetDragAkEventBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0602134A RID: 136010 RVA: 0x0049CF4E File Offset: 0x0049B14E
+		// Token: 0x0602329E RID: 144030 RVA: 0x004D6EDA File Offset: 0x004D50DA
 		public byte[] GetDragAkEventArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x17009635 RID: 38453
-		// (get) Token: 0x0602134B RID: 136011 RVA: 0x0049CF5C File Offset: 0x0049B15C
+		// Token: 0x17009E22 RID: 40482
+		// (get) Token: 0x0602329F RID: 144031 RVA: 0x004D6EE8 File Offset: 0x004D50E8
 		public int EffectSplineEntityId
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009636 RID: 38454
-		// (get) Token: 0x0602134C RID: 136012 RVA: 0x0049CF98 File Offset: 0x0049B198
+		// Token: 0x17009E23 RID: 40483
+		// (get) Token: 0x060232A0 RID: 144032 RVA: 0x004D6F24 File Offset: 0x004D5124
 		public int SplineEntityId
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009637 RID: 38455
-		// (get) Token: 0x0602134D RID: 136013 RVA: 0x0049CFD8 File Offset: 0x0049B1D8
+		// Token: 0x17009E24 RID: 40484
+		// (get) Token: 0x060232A1 RID: 144033 RVA: 0x004D6F64 File Offset: 0x004D5164
 		public string Sequence
 		{
 			get
@@ -137,20 +137,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602134E RID: 136014 RVA: 0x0049D010 File Offset: 0x0049B210
+		// Token: 0x060232A2 RID: 144034 RVA: 0x004D6F9C File Offset: 0x004D519C
 		public Span<byte> GetSequenceBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x0602134F RID: 136015 RVA: 0x0049D020 File Offset: 0x0049B220
+		// Token: 0x060232A3 RID: 144035 RVA: 0x004D6FAC File Offset: 0x004D51AC
 		public byte[] GetSequenceArray()
 		{
 			return this.__p.__vector_as_array<byte>(12);
 		}
 
-		// Token: 0x17009638 RID: 38456
-		// (get) Token: 0x06021350 RID: 136016 RVA: 0x0049D030 File Offset: 0x0049B230
+		// Token: 0x17009E25 RID: 40485
+		// (get) Token: 0x060232A4 RID: 144036 RVA: 0x004D6FBC File Offset: 0x004D51BC
 		public float MaxPlaySpeed
 		{
 			get
@@ -164,8 +164,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009639 RID: 38457
-		// (get) Token: 0x06021351 RID: 136017 RVA: 0x0049D074 File Offset: 0x0049B274
+		// Token: 0x17009E26 RID: 40486
+		// (get) Token: 0x060232A5 RID: 144037 RVA: 0x004D7000 File Offset: 0x004D5200
 		public float Stiffness
 		{
 			get
@@ -179,8 +179,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700963A RID: 38458
-		// (get) Token: 0x06021352 RID: 136018 RVA: 0x0049D0B8 File Offset: 0x0049B2B8
+		// Token: 0x17009E27 RID: 40487
+		// (get) Token: 0x060232A6 RID: 144038 RVA: 0x004D7044 File Offset: 0x004D5244
 		public float Damping
 		{
 			get
@@ -194,7 +194,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021353 RID: 136019 RVA: 0x0049D0FC File Offset: 0x0049B2FC
+		// Token: 0x060232A7 RID: 144039 RVA: 0x004D7088 File Offset: 0x004D5288
 		public IDragActorPlayKeyPointConfig? KeyPoints(int j)
 		{
 			int num = this.__p.__offset(20);
@@ -205,8 +205,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IDragActorPlayKeyPointConfig?(default(IDragActorPlayKeyPointConfig).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700963B RID: 38459
-		// (get) Token: 0x06021354 RID: 136020 RVA: 0x0049D160 File Offset: 0x0049B360
+		// Token: 0x17009E28 RID: 40488
+		// (get) Token: 0x060232A8 RID: 144040 RVA: 0x004D70EC File Offset: 0x004D52EC
 		public int KeyPointsLength
 		{
 			get
@@ -220,8 +220,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700963C RID: 38460
-		// (get) Token: 0x06021355 RID: 136021 RVA: 0x0049D18C File Offset: 0x0049B38C
+		// Token: 0x17009E29 RID: 40489
+		// (get) Token: 0x060232A9 RID: 144041 RVA: 0x004D7118 File Offset: 0x004D5318
 		public string DraggableActorEffectDa
 		{
 			get
@@ -235,20 +235,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021356 RID: 136022 RVA: 0x0049D1C4 File Offset: 0x0049B3C4
+		// Token: 0x060232AA RID: 144042 RVA: 0x004D7150 File Offset: 0x004D5350
 		public Span<byte> GetDraggableActorEffectDaBytes()
 		{
 			return this.__p.__vector_as_span<byte>(22, 1);
 		}
 
-		// Token: 0x06021357 RID: 136023 RVA: 0x0049D1D4 File Offset: 0x0049B3D4
+		// Token: 0x060232AB RID: 144043 RVA: 0x004D7160 File Offset: 0x004D5360
 		public byte[] GetDraggableActorEffectDaArray()
 		{
 			return this.__p.__vector_as_array<byte>(22);
 		}
 
-		// Token: 0x1700963D RID: 38461
-		// (get) Token: 0x06021358 RID: 136024 RVA: 0x0049D1E4 File Offset: 0x0049B3E4
+		// Token: 0x17009E2A RID: 40490
+		// (get) Token: 0x060232AC RID: 144044 RVA: 0x004D7170 File Offset: 0x004D5370
 		public bool IgnoreRotation
 		{
 			get
@@ -258,8 +258,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700963E RID: 38462
-		// (get) Token: 0x06021359 RID: 136025 RVA: 0x0049D224 File Offset: 0x0049B424
+		// Token: 0x17009E2B RID: 40491
+		// (get) Token: 0x060232AD RID: 144045 RVA: 0x004D71B0 File Offset: 0x004D53B0
 		public IConditionGroup? Condition
 		{
 			get
@@ -273,8 +273,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700963F RID: 38463
-		// (get) Token: 0x0602135A RID: 136026 RVA: 0x0049D284 File Offset: 0x0049B484
+		// Token: 0x17009E2C RID: 40492
+		// (get) Token: 0x060232AE RID: 144046 RVA: 0x004D7210 File Offset: 0x004D5410
 		public EDragHintType DragHintType
 		{
 			get
@@ -288,8 +288,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009640 RID: 38464
-		// (get) Token: 0x0602135B RID: 136027 RVA: 0x0049D2C4 File Offset: 0x0049B4C4
+		// Token: 0x17009E2D RID: 40493
+		// (get) Token: 0x060232AF RID: 144047 RVA: 0x004D7250 File Offset: 0x004D5450
 		public byte NullMask
 		{
 			get
@@ -303,7 +303,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602135C RID: 136028 RVA: 0x0049D304 File Offset: 0x0049B504
+		// Token: 0x060232B0 RID: 144048 RVA: 0x004D7290 File Offset: 0x004D5490
 		public static Offset<IDragActorPlayConfig> CreateIDragActorPlayConfig(FlatBufferBuilder builder, Offset<IActorRef> DraggableActorOffset = default(Offset<IActorRef>), StringOffset DragAkEventOffset = default(StringOffset), int EffectSplineEntityId = 0, int SplineEntityId = 0, StringOffset SequenceOffset = default(StringOffset), float MaxPlaySpeed = 0f, float Stiffness = 0f, float Damping = 0f, VectorOffset KeyPointsOffset = default(VectorOffset), StringOffset DraggableActorEffectDaOffset = default(StringOffset), bool IgnoreRotation = false, Offset<IConditionGroup> ConditionOffset = default(Offset<IConditionGroup>), EDragHintType DragHintType = EDragHintType.Horizontal, byte NullMask = 0)
 		{
 			builder.StartTable(14);
@@ -324,67 +324,67 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IDragActorPlayConfig.EndIDragActorPlayConfig(builder);
 		}
 
-		// Token: 0x0602135D RID: 136029 RVA: 0x0049D38C File Offset: 0x0049B58C
+		// Token: 0x060232B1 RID: 144049 RVA: 0x004D7318 File Offset: 0x004D5518
 		public static void StartIDragActorPlayConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(14);
 		}
 
-		// Token: 0x0602135E RID: 136030 RVA: 0x0049D396 File Offset: 0x0049B596
+		// Token: 0x060232B2 RID: 144050 RVA: 0x004D7322 File Offset: 0x004D5522
 		public static void AddDraggableActor(FlatBufferBuilder builder, Offset<IActorRef> draggableActorOffset)
 		{
 			builder.AddOffset(0, draggableActorOffset.Value, 0);
 		}
 
-		// Token: 0x0602135F RID: 136031 RVA: 0x0049D3A6 File Offset: 0x0049B5A6
+		// Token: 0x060232B3 RID: 144051 RVA: 0x004D7332 File Offset: 0x004D5532
 		public static void AddDragAkEvent(FlatBufferBuilder builder, StringOffset dragAkEventOffset)
 		{
 			builder.AddOffset(1, dragAkEventOffset.Value, 0);
 		}
 
-		// Token: 0x06021360 RID: 136032 RVA: 0x0049D3B6 File Offset: 0x0049B5B6
+		// Token: 0x060232B4 RID: 144052 RVA: 0x004D7342 File Offset: 0x004D5542
 		public static void AddEffectSplineEntityId(FlatBufferBuilder builder, int effectSplineEntityId)
 		{
 			builder.AddInt(2, effectSplineEntityId, 0);
 		}
 
-		// Token: 0x06021361 RID: 136033 RVA: 0x0049D3C1 File Offset: 0x0049B5C1
+		// Token: 0x060232B5 RID: 144053 RVA: 0x004D734D File Offset: 0x004D554D
 		public static void AddSplineEntityId(FlatBufferBuilder builder, int splineEntityId)
 		{
 			builder.AddInt(3, splineEntityId, 0);
 		}
 
-		// Token: 0x06021362 RID: 136034 RVA: 0x0049D3CC File Offset: 0x0049B5CC
+		// Token: 0x060232B6 RID: 144054 RVA: 0x004D7358 File Offset: 0x004D5558
 		public static void AddSequence(FlatBufferBuilder builder, StringOffset sequenceOffset)
 		{
 			builder.AddOffset(4, sequenceOffset.Value, 0);
 		}
 
-		// Token: 0x06021363 RID: 136035 RVA: 0x0049D3DC File Offset: 0x0049B5DC
+		// Token: 0x060232B7 RID: 144055 RVA: 0x004D7368 File Offset: 0x004D5568
 		public static void AddMaxPlaySpeed(FlatBufferBuilder builder, float maxPlaySpeed)
 		{
 			builder.AddFloat(5, maxPlaySpeed, 0.0);
 		}
 
-		// Token: 0x06021364 RID: 136036 RVA: 0x0049D3EF File Offset: 0x0049B5EF
+		// Token: 0x060232B8 RID: 144056 RVA: 0x004D737B File Offset: 0x004D557B
 		public static void AddStiffness(FlatBufferBuilder builder, float stiffness)
 		{
 			builder.AddFloat(6, stiffness, 0.0);
 		}
 
-		// Token: 0x06021365 RID: 136037 RVA: 0x0049D402 File Offset: 0x0049B602
+		// Token: 0x060232B9 RID: 144057 RVA: 0x004D738E File Offset: 0x004D558E
 		public static void AddDamping(FlatBufferBuilder builder, float damping)
 		{
 			builder.AddFloat(7, damping, 0.0);
 		}
 
-		// Token: 0x06021366 RID: 136038 RVA: 0x0049D415 File Offset: 0x0049B615
+		// Token: 0x060232BA RID: 144058 RVA: 0x004D73A1 File Offset: 0x004D55A1
 		public static void AddKeyPoints(FlatBufferBuilder builder, VectorOffset keyPointsOffset)
 		{
 			builder.AddOffset(8, keyPointsOffset.Value, 0);
 		}
 
-		// Token: 0x06021367 RID: 136039 RVA: 0x0049D428 File Offset: 0x0049B628
+		// Token: 0x060232BB RID: 144059 RVA: 0x004D73B4 File Offset: 0x004D55B4
 		public static VectorOffset CreateKeyPointsVector(FlatBufferBuilder builder, Offset<IDragActorPlayKeyPointConfig>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -395,7 +395,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06021368 RID: 136040 RVA: 0x0049D468 File Offset: 0x0049B668
+		// Token: 0x060232BC RID: 144060 RVA: 0x004D73F4 File Offset: 0x004D55F4
 		public static VectorOffset CreateKeyPointsVectorBlock(FlatBufferBuilder builder, Offset<IDragActorPlayKeyPointConfig>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -403,7 +403,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06021369 RID: 136041 RVA: 0x0049D482 File Offset: 0x0049B682
+		// Token: 0x060232BD RID: 144061 RVA: 0x004D740E File Offset: 0x004D560E
 		public static VectorOffset CreateKeyPointsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IDragActorPlayKeyPointConfig>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -411,7 +411,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602136A RID: 136042 RVA: 0x0049D4A0 File Offset: 0x0049B6A0
+		// Token: 0x060232BE RID: 144062 RVA: 0x004D742C File Offset: 0x004D562C
 		public static VectorOffset CreateKeyPointsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -419,49 +419,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602136B RID: 136043 RVA: 0x0049D4B9 File Offset: 0x0049B6B9
+		// Token: 0x060232BF RID: 144063 RVA: 0x004D7445 File Offset: 0x004D5645
 		public static void StartKeyPointsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0602136C RID: 136044 RVA: 0x0049D4C4 File Offset: 0x0049B6C4
+		// Token: 0x060232C0 RID: 144064 RVA: 0x004D7450 File Offset: 0x004D5650
 		public static void AddDraggableActorEffectDa(FlatBufferBuilder builder, StringOffset draggableActorEffectDaOffset)
 		{
 			builder.AddOffset(9, draggableActorEffectDaOffset.Value, 0);
 		}
 
-		// Token: 0x0602136D RID: 136045 RVA: 0x0049D4D5 File Offset: 0x0049B6D5
+		// Token: 0x060232C1 RID: 144065 RVA: 0x004D7461 File Offset: 0x004D5661
 		public static void AddIgnoreRotation(FlatBufferBuilder builder, bool ignoreRotation)
 		{
 			builder.AddBool(10, ignoreRotation, false);
 		}
 
-		// Token: 0x0602136E RID: 136046 RVA: 0x0049D4E1 File Offset: 0x0049B6E1
+		// Token: 0x060232C2 RID: 144066 RVA: 0x004D746D File Offset: 0x004D566D
 		public static void AddCondition(FlatBufferBuilder builder, Offset<IConditionGroup> conditionOffset)
 		{
 			builder.AddOffset(11, conditionOffset.Value, 0);
 		}
 
-		// Token: 0x0602136F RID: 136047 RVA: 0x0049D4F2 File Offset: 0x0049B6F2
+		// Token: 0x060232C3 RID: 144067 RVA: 0x004D747E File Offset: 0x004D567E
 		public static void AddDragHintType(FlatBufferBuilder builder, EDragHintType dragHintType)
 		{
 			builder.AddByte(12, (byte)dragHintType, 0);
 		}
 
-		// Token: 0x06021370 RID: 136048 RVA: 0x0049D4FE File Offset: 0x0049B6FE
+		// Token: 0x060232C4 RID: 144068 RVA: 0x004D748A File Offset: 0x004D568A
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(13, nullMask, 0);
 		}
 
-		// Token: 0x06021371 RID: 136049 RVA: 0x0049D50A File Offset: 0x0049B70A
+		// Token: 0x060232C5 RID: 144069 RVA: 0x004D7496 File Offset: 0x004D5696
 		public static Offset<IDragActorPlayConfig> EndIDragActorPlayConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IDragActorPlayConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06021372 RID: 136050 RVA: 0x0049D518 File Offset: 0x0049B718
+		// Token: 0x060232C6 RID: 144070 RVA: 0x004D74A4 File Offset: 0x004D56A4
 		public IDragActorPlayConfigT UnPack()
 		{
 			IDragActorPlayConfigT dragActorPlayConfigT = new IDragActorPlayConfigT();
@@ -469,7 +469,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return dragActorPlayConfigT;
 		}
 
-		// Token: 0x06021373 RID: 136051 RVA: 0x0049D534 File Offset: 0x0049B734
+		// Token: 0x060232C7 RID: 144071 RVA: 0x004D74C0 File Offset: 0x004D56C0
 		public void UnPackTo(IDragActorPlayConfigT _o)
 		{
 			_o.DraggableActor = ((this.DraggableActor != null) ? this.DraggableActor.Value.UnPack() : null);
@@ -492,7 +492,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06021374 RID: 136052 RVA: 0x0049D67C File Offset: 0x0049B87C
+		// Token: 0x060232C8 RID: 144072 RVA: 0x004D7608 File Offset: 0x004D5808
 		public static Offset<IDragActorPlayConfig> Pack(FlatBufferBuilder builder, IDragActorPlayConfigT _o)
 		{
 			if (_o == null)
@@ -517,7 +517,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IDragActorPlayConfig.CreateIDragActorPlayConfig(builder, draggableActorOffset, dragAkEventOffset, _o.EffectSplineEntityId, _o.SplineEntityId, sequenceOffset, _o.MaxPlaySpeed, _o.Stiffness, _o.Damping, keyPointsOffset, draggableActorEffectDaOffset, _o.IgnoreRotation, conditionOffset, _o.DragHintType, _o.NullMask);
 		}
 
-		// Token: 0x0400E0E4 RID: 57572
+		// Token: 0x0400ECE1 RID: 60641
 		private Table __p;
 	}
 }

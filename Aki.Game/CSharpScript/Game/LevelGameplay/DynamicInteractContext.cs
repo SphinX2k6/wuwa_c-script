@@ -4,22 +4,22 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.LevelGamePlay
 {
-	// Token: 0x0200699A RID: 27034
+	// Token: 0x02005AF6 RID: 23286
 	public class DynamicInteractContext : GeneralContext
 	{
-		// Token: 0x0604343C RID: 275516 RVA: 0x01065D09 File Offset: 0x01063F09
+		// Token: 0x06039474 RID: 234612 RVA: 0x01009F71 File Offset: 0x01008171
 		public DynamicInteractContext()
 		{
 			this.Type = new EGeneralContextType?(EGeneralContextType.DynamicInteract);
 		}
 
-		// Token: 0x0604343D RID: 275517 RVA: 0x01065D2A File Offset: 0x01063F2A
+		// Token: 0x06039475 RID: 234613 RVA: 0x01009F92 File Offset: 0x01008192
 		public override void Reset()
 		{
 			this.EntityId = new int?(0);
 		}
 
-		// Token: 0x0604343E RID: 275518 RVA: 0x01065D38 File Offset: 0x01063F38
+		// Token: 0x06039476 RID: 234614 RVA: 0x01009FA0 File Offset: 0x010081A0
 		[NullableContext(1)]
 		public static DynamicInteractContext Create(int entityId = 0, [Nullable(2)] GeneralContext finalContexrpb = null, GameCtxType? subType = null)
 		{
@@ -29,10 +29,10 @@ namespace CSharpScript.Game.LevelGamePlay
 			return dynamicInteractContext;
 		}
 
-		// Token: 0x040230A5 RID: 143525
+		// Token: 0x0401E28F RID: 123535
 		public int? EntityId = new int?(0);
 
-		// Token: 0x040230A6 RID: 143526
+		// Token: 0x0401E290 RID: 123536
 		[Nullable(2)]
 		public GeneralContext FinalContext;
 	}

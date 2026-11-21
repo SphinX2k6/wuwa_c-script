@@ -3,14 +3,14 @@ using UnrealEngine;
 
 namespace CSharpScript.Core.Define
 {
-	// Token: 0x02000138 RID: 312
+	// Token: 0x0200013C RID: 316
 	public class CollisionProfile
 	{
-		// Token: 0x040006C6 RID: 1734
+		// Token: 0x040006D4 RID: 1748
 		[StaticVariableRuleIgnore]
 		public static readonly FName Custom = FNameUtil.GetDynamicFName("Custom").Value;
 
-		// Token: 0x040006C7 RID: 1735
+		// Token: 0x040006D5 RID: 1749
 		[StaticVariableRuleIgnore]
 		public static readonly FName NoCollision = FNameUtil.GetDynamicFName("NoCollision").Value;
 	}

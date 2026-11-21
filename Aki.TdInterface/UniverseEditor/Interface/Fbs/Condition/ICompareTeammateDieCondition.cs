@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004BC5 RID: 19397
+	// Token: 0x020050B2 RID: 20658
 	public struct ICompareTeammateDieCondition : IFlatbufferObject
 	{
-		// Token: 0x17008CDE RID: 36062
-		// (get) Token: 0x0601E9BD RID: 125373 RVA: 0x00447E48 File Offset: 0x00446048
+		// Token: 0x17009402 RID: 37890
+		// (get) Token: 0x0602058B RID: 132491 RVA: 0x0047AD54 File Offset: 0x00478F54
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E9BE RID: 125374 RVA: 0x00447E55 File Offset: 0x00446055
+		// Token: 0x0602058C RID: 132492 RVA: 0x0047AD61 File Offset: 0x00478F61
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601E9BF RID: 125375 RVA: 0x00447E5C File Offset: 0x0044605C
+		// Token: 0x0602058D RID: 132493 RVA: 0x0047AD68 File Offset: 0x00478F68
 		public static ICompareTeammateDieCondition GetRootAsICompareTeammateDieCondition(ByteBuffer _bb)
 		{
 			return ICompareTeammateDieCondition.GetRootAsICompareTeammateDieCondition(_bb, default(ICompareTeammateDieCondition));
 		}
 
-		// Token: 0x0601E9C0 RID: 125376 RVA: 0x00447E78 File Offset: 0x00446078
+		// Token: 0x0602058E RID: 132494 RVA: 0x0047AD84 File Offset: 0x00478F84
 		public static ICompareTeammateDieCondition GetRootAsICompareTeammateDieCondition(ByteBuffer _bb, ICompareTeammateDieCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601E9C1 RID: 125377 RVA: 0x00447E95 File Offset: 0x00446095
+		// Token: 0x0602058F RID: 132495 RVA: 0x0047ADA1 File Offset: 0x00478FA1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601E9C2 RID: 125378 RVA: 0x00447EA4 File Offset: 0x004460A4
+		// Token: 0x06020590 RID: 132496 RVA: 0x0047ADB0 File Offset: 0x00478FB0
 		public ICompareTeammateDieCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008CDF RID: 36063
-		// (get) Token: 0x0601E9C3 RID: 125379 RVA: 0x00447EB4 File Offset: 0x004460B4
+		// Token: 0x17009403 RID: 37891
+		// (get) Token: 0x06020591 RID: 132497 RVA: 0x0047ADC0 File Offset: 0x00478FC0
 		public ECondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008CE0 RID: 36064
-		// (get) Token: 0x0601E9C4 RID: 125380 RVA: 0x00447EF0 File Offset: 0x004460F0
+		// Token: 0x17009404 RID: 37892
+		// (get) Token: 0x06020592 RID: 132498 RVA: 0x0047ADFC File Offset: 0x00478FFC
 		public ECompare Compare
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008CE1 RID: 36065
-		// (get) Token: 0x0601E9C5 RID: 125381 RVA: 0x00447F2C File Offset: 0x0044612C
+		// Token: 0x17009405 RID: 37893
+		// (get) Token: 0x06020593 RID: 132499 RVA: 0x0047AE38 File Offset: 0x00479038
 		public int DieCount
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E9C6 RID: 125382 RVA: 0x00447F68 File Offset: 0x00446168
+		// Token: 0x06020594 RID: 132500 RVA: 0x0047AE74 File Offset: 0x00479074
 		public static Offset<ICompareTeammateDieCondition> CreateICompareTeammateDieCondition(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, ECompare Compare = ECompare.Eq, int DieCount = 0)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICompareTeammateDieCondition.EndICompareTeammateDieCondition(builder);
 		}
 
-		// Token: 0x0601E9C7 RID: 125383 RVA: 0x00447F8C File Offset: 0x0044618C
+		// Token: 0x06020595 RID: 132501 RVA: 0x0047AE98 File Offset: 0x00479098
 		public static void StartICompareTeammateDieCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601E9C8 RID: 125384 RVA: 0x00447F95 File Offset: 0x00446195
+		// Token: 0x06020596 RID: 132502 RVA: 0x0047AEA1 File Offset: 0x004790A1
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601E9C9 RID: 125385 RVA: 0x00447FA0 File Offset: 0x004461A0
+		// Token: 0x06020597 RID: 132503 RVA: 0x0047AEAC File Offset: 0x004790AC
 		public static void AddCompare(FlatBufferBuilder builder, ECompare compare)
 		{
 			builder.AddByte(1, (byte)compare, 0);
 		}
 
-		// Token: 0x0601E9CA RID: 125386 RVA: 0x00447FAB File Offset: 0x004461AB
+		// Token: 0x06020598 RID: 132504 RVA: 0x0047AEB7 File Offset: 0x004790B7
 		public static void AddDieCount(FlatBufferBuilder builder, int dieCount)
 		{
 			builder.AddInt(2, dieCount, 0);
 		}
 
-		// Token: 0x0601E9CB RID: 125387 RVA: 0x00447FB6 File Offset: 0x004461B6
+		// Token: 0x06020599 RID: 132505 RVA: 0x0047AEC2 File Offset: 0x004790C2
 		public static Offset<ICompareTeammateDieCondition> EndICompareTeammateDieCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<ICompareTeammateDieCondition>(builder.EndTable());
 		}
 
-		// Token: 0x0601E9CC RID: 125388 RVA: 0x00447FC4 File Offset: 0x004461C4
+		// Token: 0x0602059A RID: 132506 RVA: 0x0047AED0 File Offset: 0x004790D0
 		public ICompareTeammateDieConditionT UnPack()
 		{
 			ICompareTeammateDieConditionT compareTeammateDieConditionT = new ICompareTeammateDieConditionT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return compareTeammateDieConditionT;
 		}
 
-		// Token: 0x0601E9CD RID: 125389 RVA: 0x00447FDF File Offset: 0x004461DF
+		// Token: 0x0602059B RID: 132507 RVA: 0x0047AEEB File Offset: 0x004790EB
 		public void UnPackTo(ICompareTeammateDieConditionT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.DieCount = this.DieCount;
 		}
 
-		// Token: 0x0601E9CE RID: 125390 RVA: 0x00448008 File Offset: 0x00446208
+		// Token: 0x0602059C RID: 132508 RVA: 0x0047AF14 File Offset: 0x00479114
 		public static Offset<ICompareTeammateDieCondition> Pack(FlatBufferBuilder builder, ICompareTeammateDieConditionT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICompareTeammateDieCondition.CreateICompareTeammateDieCondition(builder, _o.Type, _o.Compare, _o.DieCount);
 		}
 
-		// Token: 0x0400D4B0 RID: 54448
+		// Token: 0x0400DFBB RID: 57275
 		private Table __p;
 	}
 }

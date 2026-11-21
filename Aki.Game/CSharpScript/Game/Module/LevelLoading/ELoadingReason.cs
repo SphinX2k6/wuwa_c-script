@@ -2,68 +2,68 @@
 
 namespace CSharpScript.Game.Module.LevelLoading
 {
-	// Token: 0x020056C4 RID: 22212
+	// Token: 0x0200469B RID: 18075
 	public enum ELoadingReason
 	{
-		// Token: 0x0401DAC9 RID: 121545
+		// Token: 0x0401855F RID: 99679
 		Common,
-		// Token: 0x0401DACA RID: 121546
+		// Token: 0x04018560 RID: 99680
 		Revive,
-		// Token: 0x0401DACB RID: 121547
+		// Token: 0x04018561 RID: 99681
 		BehaviorTreeRollback,
-		// Token: 0x0401DACC RID: 121548
+		// Token: 0x04018562 RID: 99682
 		JumpToNextSubtitleOrChildSeq,
-		// Token: 0x0401DACD RID: 121549
+		// Token: 0x04018563 RID: 99683
 		TurntableControlViewOnBtnResetClicked,
-		// Token: 0x0401DACE RID: 121550
+		// Token: 0x04018564 RID: 99684
 		SundialControlViewOnBtnResetClicked,
-		// Token: 0x0401DACF RID: 121551
+		// Token: 0x04018565 RID: 99685
 		Teleport,
-		// Token: 0x0401DAD0 RID: 121552
+		// Token: 0x04018566 RID: 99686
 		LoadingTeleport,
-		// Token: 0x0401DAD1 RID: 121553
+		// Token: 0x04018567 RID: 99687
 		SimpleLevelSequence,
-		// Token: 0x0401DAD2 RID: 121554
+		// Token: 0x04018568 RID: 99688
 		PlotTeleport,
-		// Token: 0x0401DAD3 RID: 121555
+		// Token: 0x04018569 RID: 99689
 		CenterText,
-		// Token: 0x0401DAD4 RID: 121556
+		// Token: 0x0401856A RID: 99690
 		Photograph,
-		// Token: 0x0401DAD5 RID: 121557
+		// Token: 0x0401856B RID: 99691
 		WaitFormation,
-		// Token: 0x0401DAD6 RID: 121558
+		// Token: 0x0401856C RID: 99692
 		Signal,
-		// Token: 0x0401DAD7 RID: 121559
+		// Token: 0x0401856D RID: 99693
 		SubLevelLoading,
-		// Token: 0x0401DAD8 RID: 121560
+		// Token: 0x0401856E RID: 99694
 		RogueSubLevelLoading,
-		// Token: 0x0401DAD9 RID: 121561
+		// Token: 0x0401856F RID: 99695
 		BrokenRock,
-		// Token: 0x0401DADA RID: 121562
+		// Token: 0x04018570 RID: 99696
 		AbyssSubLevelLoading,
-		// Token: 0x0401DADB RID: 121563
+		// Token: 0x04018571 RID: 99697
 		RoverSubLevelLoading,
-		// Token: 0x0401DADC RID: 121564
+		// Token: 0x04018572 RID: 99698
 		CG,
-		// Token: 0x0401DADD RID: 121565
+		// Token: 0x04018573 RID: 99699
 		QuestFocusMode,
-		// Token: 0x0401DADE RID: 121566
+		// Token: 0x04018574 RID: 99700
 		SpecialTransition,
-		// Token: 0x0401DADF RID: 121567
+		// Token: 0x04018575 RID: 99701
 		SpecialTransitionKeep,
-		// Token: 0x0401DAE0 RID: 121568
+		// Token: 0x04018576 RID: 99702
 		MotorRideSharing,
-		// Token: 0x0401DAE1 RID: 121569
+		// Token: 0x04018577 RID: 99703
 		FindSunSpirit,
-		// Token: 0x0401DAE2 RID: 121570
+		// Token: 0x04018578 RID: 99704
 		SlidingBlocks,
-		// Token: 0x0401DAE3 RID: 121571
+		// Token: 0x04018579 RID: 99705
 		MusicalInstrument,
-		// Token: 0x0401DAE4 RID: 121572
+		// Token: 0x0401857A RID: 99706
 		PlotFormationMemory,
-		// Token: 0x0401DAE5 RID: 121573
+		// Token: 0x0401857B RID: 99707
 		UiTransition,
-		// Token: 0x0401DAE6 RID: 121574
+		// Token: 0x0401857C RID: 99708
 		None
 	}
 }

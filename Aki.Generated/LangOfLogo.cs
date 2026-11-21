@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000DBD RID: 3517
+	// Token: 0x02000EA2 RID: 3746
 	public struct LangOfLogo : IFlatbufferObject
 	{
-		// Token: 0x17001C91 RID: 7313
-		// (get) Token: 0x06008CF8 RID: 36088 RVA: 0x00275678 File Offset: 0x00273878
+		// Token: 0x17001CF5 RID: 7413
+		// (get) Token: 0x06009314 RID: 37652 RVA: 0x00293D90 File Offset: 0x00291F90
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008CF9 RID: 36089 RVA: 0x00275685 File Offset: 0x00273885
+		// Token: 0x06009315 RID: 37653 RVA: 0x00293D9D File Offset: 0x00291F9D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06008CFA RID: 36090 RVA: 0x0027568C File Offset: 0x0027388C
+		// Token: 0x06009316 RID: 37654 RVA: 0x00293DA4 File Offset: 0x00291FA4
 		public static LangOfLogo GetRootAsLangOfLogo(ByteBuffer _bb)
 		{
 			return LangOfLogo.GetRootAsLangOfLogo(_bb, default(LangOfLogo));
 		}
 
-		// Token: 0x06008CFB RID: 36091 RVA: 0x002756A8 File Offset: 0x002738A8
+		// Token: 0x06009317 RID: 37655 RVA: 0x00293DC0 File Offset: 0x00291FC0
 		public static LangOfLogo GetRootAsLangOfLogo(ByteBuffer _bb, LangOfLogo obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06008CFC RID: 36092 RVA: 0x002756C5 File Offset: 0x002738C5
+		// Token: 0x06009318 RID: 37656 RVA: 0x00293DDD File Offset: 0x00291FDD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06008CFD RID: 36093 RVA: 0x002756D4 File Offset: 0x002738D4
+		// Token: 0x06009319 RID: 37657 RVA: 0x00293DEC File Offset: 0x00291FEC
 		public LangOfLogo __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001C92 RID: 7314
-		// (get) Token: 0x06008CFE RID: 36094 RVA: 0x002756E4 File Offset: 0x002738E4
+		// Token: 0x17001CF6 RID: 7414
+		// (get) Token: 0x0600931A RID: 37658 RVA: 0x00293DFC File Offset: 0x00291FFC
 		public string Name
 		{
 			get
@@ -62,20 +62,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008CFF RID: 36095 RVA: 0x0027571B File Offset: 0x0027391B
+		// Token: 0x0600931B RID: 37659 RVA: 0x00293E33 File Offset: 0x00292033
 		public Span<byte> GetNameBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x06008D00 RID: 36096 RVA: 0x0027572A File Offset: 0x0027392A
+		// Token: 0x0600931C RID: 37660 RVA: 0x00293E42 File Offset: 0x00292042
 		public byte[] GetNameArray()
 		{
 			return this.__p.__vector_as_array<byte>(4) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17001C93 RID: 7315
-		// (get) Token: 0x06008D01 RID: 36097 RVA: 0x00275744 File Offset: 0x00273944
+		// Token: 0x17001CF7 RID: 7415
+		// (get) Token: 0x0600931D RID: 37661 RVA: 0x00293E5C File Offset: 0x0029205C
 		public string ZhHansLogo
 		{
 			get
@@ -89,20 +89,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008D02 RID: 36098 RVA: 0x0027577B File Offset: 0x0027397B
+		// Token: 0x0600931E RID: 37662 RVA: 0x00293E93 File Offset: 0x00292093
 		public Span<byte> GetZhHansLogoBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06008D03 RID: 36099 RVA: 0x0027578A File Offset: 0x0027398A
+		// Token: 0x0600931F RID: 37663 RVA: 0x00293EA2 File Offset: 0x002920A2
 		public byte[] GetZhHansLogoArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17001C94 RID: 7316
-		// (get) Token: 0x06008D04 RID: 36100 RVA: 0x002757A4 File Offset: 0x002739A4
+		// Token: 0x17001CF8 RID: 7416
+		// (get) Token: 0x06009320 RID: 37664 RVA: 0x00293EBC File Offset: 0x002920BC
 		public string EnLogo
 		{
 			get
@@ -116,20 +116,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008D05 RID: 36101 RVA: 0x002757DB File Offset: 0x002739DB
+		// Token: 0x06009321 RID: 37665 RVA: 0x00293EF3 File Offset: 0x002920F3
 		public Span<byte> GetEnLogoBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x06008D06 RID: 36102 RVA: 0x002757EA File Offset: 0x002739EA
+		// Token: 0x06009322 RID: 37666 RVA: 0x00293F02 File Offset: 0x00292102
 		public byte[] GetEnLogoArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17001C95 RID: 7317
-		// (get) Token: 0x06008D07 RID: 36103 RVA: 0x00275804 File Offset: 0x00273A04
+		// Token: 0x17001CF9 RID: 7417
+		// (get) Token: 0x06009323 RID: 37667 RVA: 0x00293F1C File Offset: 0x0029211C
 		public string JpLogo
 		{
 			get
@@ -143,20 +143,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008D08 RID: 36104 RVA: 0x0027583C File Offset: 0x00273A3C
+		// Token: 0x06009324 RID: 37668 RVA: 0x00293F54 File Offset: 0x00292154
 		public Span<byte> GetJpLogoBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x06008D09 RID: 36105 RVA: 0x0027584C File Offset: 0x00273A4C
+		// Token: 0x06009325 RID: 37669 RVA: 0x00293F64 File Offset: 0x00292164
 		public byte[] GetJpLogoArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17001C96 RID: 7318
-		// (get) Token: 0x06008D0A RID: 36106 RVA: 0x00275864 File Offset: 0x00273A64
+		// Token: 0x17001CFA RID: 7418
+		// (get) Token: 0x06009326 RID: 37670 RVA: 0x00293F7C File Offset: 0x0029217C
 		public string ZhHantLogo
 		{
 			get
@@ -170,20 +170,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008D0B RID: 36107 RVA: 0x0027589C File Offset: 0x00273A9C
+		// Token: 0x06009327 RID: 37671 RVA: 0x00293FB4 File Offset: 0x002921B4
 		public Span<byte> GetZhHantLogoBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x06008D0C RID: 36108 RVA: 0x002758AC File Offset: 0x00273AAC
+		// Token: 0x06009328 RID: 37672 RVA: 0x00293FC4 File Offset: 0x002921C4
 		public byte[] GetZhHantLogoArray()
 		{
 			return this.__p.__vector_as_array<byte>(12) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17001C97 RID: 7319
-		// (get) Token: 0x06008D0D RID: 36109 RVA: 0x002758C4 File Offset: 0x00273AC4
+		// Token: 0x17001CFB RID: 7419
+		// (get) Token: 0x06009329 RID: 37673 RVA: 0x00293FDC File Offset: 0x002921DC
 		public string KrLogo
 		{
 			get
@@ -197,19 +197,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06008D0E RID: 36110 RVA: 0x002758FC File Offset: 0x00273AFC
+		// Token: 0x0600932A RID: 37674 RVA: 0x00294014 File Offset: 0x00292214
 		public Span<byte> GetKrLogoBytes()
 		{
 			return this.__p.__vector_as_span<byte>(14, 1);
 		}
 
-		// Token: 0x06008D0F RID: 36111 RVA: 0x0027590C File Offset: 0x00273B0C
+		// Token: 0x0600932B RID: 37675 RVA: 0x00294024 File Offset: 0x00292224
 		public byte[] GetKrLogoArray()
 		{
 			return this.__p.__vector_as_array<byte>(14) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04004E53 RID: 20051
+		// Token: 0x04005438 RID: 21560
 		private Table __p;
 	}
 }

@@ -8,7 +8,7 @@ namespace CSharpScript.Launcher
 	// Token: 0x0200005D RID: 93
 	public class SdkGameLoadComplete : SdkReportData
 	{
-		// Token: 0x06000293 RID: 659 RVA: 0x0000D39A File Offset: 0x0000B59A
+		// Token: 0x06000294 RID: 660 RVA: 0x0000D6BA File Offset: 0x0000B8BA
 		public SdkGameLoadComplete([Nullable(new byte[]
 		{
 			2,
@@ -18,7 +18,7 @@ namespace CSharpScript.Launcher
 		{
 		}
 
-		// Token: 0x06000294 RID: 660 RVA: 0x0000D3A3 File Offset: 0x0000B5A3
+		// Token: 0x06000295 RID: 661 RVA: 0x0000D6C3 File Offset: 0x0000B8C3
 		[NullableContext(1)]
 		public override string GetEventName()
 		{

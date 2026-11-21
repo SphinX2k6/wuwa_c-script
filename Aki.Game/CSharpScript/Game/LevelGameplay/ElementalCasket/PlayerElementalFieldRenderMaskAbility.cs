@@ -8,35 +8,35 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 {
-	// Token: 0x02006E76 RID: 28278
+	// Token: 0x02005FF7 RID: 24567
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PlayerElementalFieldRenderMaskAbility : LevelEntityAbilityBase
 	{
-		// Token: 0x06044EAB RID: 282283 RVA: 0x01105B00 File Offset: 0x01103D00
+		// Token: 0x0603B04B RID: 241739 RVA: 0x010B0123 File Offset: 0x010AE323
 		public PlayerElementalFieldRenderMaskAbility(ELevelEntityAbilityType Type, EAbilityTickPhase TickPhase, int TickOrder, bool NeedTickActivate) : base(Type, TickPhase, TickOrder, NeedTickActivate)
 		{
 		}
 
-		// Token: 0x06044EAC RID: 282284 RVA: 0x01105B0D File Offset: 0x01103D0D
+		// Token: 0x0603B04C RID: 241740 RVA: 0x010B0130 File Offset: 0x010AE330
 		public override bool OnAddAbility(Entity entity)
 		{
 			return entity.GetComponent<PlayerElementalCasketComponent>() != null;
 		}
 
-		// Token: 0x06044EAD RID: 282285 RVA: 0x01105B18 File Offset: 0x01103D18
+		// Token: 0x0603B04D RID: 241741 RVA: 0x010B013B File Offset: 0x010AE33B
 		public override bool ShouldActivate(Entity entity)
 		{
 			return entity.GetComponent<PlayerElementalCasketComponent>().FieldOpened;
 		}
 
-		// Token: 0x06044EAE RID: 282286 RVA: 0x01105B25 File Offset: 0x01103D25
+		// Token: 0x0603B04E RID: 241742 RVA: 0x010B0148 File Offset: 0x010AE348
 		public override bool ShouldDeactivate(Entity entity)
 		{
 			return !entity.GetComponent<PlayerElementalCasketComponent>().FieldOpened;
 		}
 
-		// Token: 0x06044EAF RID: 282287 RVA: 0x01105B38 File Offset: 0x01103D38
+		// Token: 0x0603B04F RID: 241743 RVA: 0x010B0158 File Offset: 0x010AE358
 		public override void OnActivated(Entity entity)
 		{
 			UMaterialParameterCollection sceneInteractionMaterialParameterCollection = RenderDataManager.Instance.GetSceneInteractionMaterialParameterCollection();
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.WriteElementKeys(sceneInteractionMaterialParameterCollection, component.FieldElementType, component.Config.FieldRadius);
 		}
 
-		// Token: 0x06044EB0 RID: 282288 RVA: 0x01105B84 File Offset: 0x01103D84
+		// Token: 0x0603B050 RID: 241744 RVA: 0x010B01A4 File Offset: 0x010AE3A4
 		public override void OnDeactivated(Entity entity)
 		{
 			UMaterialParameterCollection sceneInteractionMaterialParameterCollection = RenderDataManager.Instance.GetSceneInteractionMaterialParameterCollection();
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			this.WrittenElementType = null;
 		}
 
-		// Token: 0x06044EB1 RID: 282289 RVA: 0x01105BC8 File Offset: 0x01103DC8
+		// Token: 0x0603B051 RID: 241745 RVA: 0x010B01E8 File Offset: 0x010AE3E8
 		public override void OnTick(Entity entity, float deltaMilliseconds)
 		{
 			UMaterialParameterCollection sceneInteractionMaterialParameterCollection = RenderDataManager.Instance.GetSceneInteractionMaterialParameterCollection();
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x06044EB2 RID: 282290 RVA: 0x01105D14 File Offset: 0x01103F14
+		// Token: 0x0603B052 RID: 241746 RVA: 0x010B0334 File Offset: 0x010AE534
 		private void WriteElementKeys(UMaterialParameterCollection collection, EElementalType? activeType, float radius)
 		{
 			foreach (KeyValuePair<EElementalType, string> keyValuePair in PlayerElementalFieldRenderMaskAbility.elementOpenedKeyMap)
@@ -119,25 +119,35 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		}
 
-		// Token: 0x04023E22 RID: 146978
+		// Token: 0x17006F76 RID: 28534
+		// (get) Token: 0x0603B053 RID: 241747 RVA: 0x010B0424 File Offset: 0x010AE624
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401F0DA RID: 127194
 		private const string PLAYER_FIELD_RADIUS_KEY = "PlayerFieldRadius";
 
-		// Token: 0x04023E23 RID: 146979
+		// Token: 0x0401F0DB RID: 127195
 		private const string PLAYER_FIELD_LOCATION_KEY = "PlayerFieldLocation";
 
-		// Token: 0x04023E24 RID: 146980
+		// Token: 0x0401F0DC RID: 127196
 		private const string PLAYER_FIRE_OPENED_KEY = "PlayerFieldOpened";
 
-		// Token: 0x04023E25 RID: 146981
+		// Token: 0x0401F0DD RID: 127197
 		private const string PLAYER_WATER_OPENED_KEY = "PlayerFieldOpened_Water";
 
-		// Token: 0x04023E26 RID: 146982
+		// Token: 0x0401F0DE RID: 127198
 		private const string PLAYER_WOOD_OPENED_KEY = "PlayerFieldOpened_Wood";
 
-		// Token: 0x04023E27 RID: 146983
+		// Token: 0x0401F0DF RID: 127199
 		private const string FLOWER_BRIDGE_RADIUS_KEY = "FlowerBridge_Radius";
 
-		// Token: 0x04023E28 RID: 146984
+		// Token: 0x0401F0E0 RID: 127200
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<EElementalType, string> elementOpenedKeyMap = new Dictionary<EElementalType, string>
 		{
@@ -155,7 +165,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		};
 
-		// Token: 0x04023E29 RID: 146985
+		// Token: 0x0401F0E1 RID: 127201
 		[StaticVariableRuleIgnore]
 		private static readonly Dictionary<EElementalType, string> elementRadiusKeyMap = new Dictionary<EElementalType, string>
 		{
@@ -165,7 +175,7 @@ namespace CSharpScript.Game.LevelGamePlay.ElementalCasket
 			}
 		};
 
-		// Token: 0x04023E2A RID: 146986
+		// Token: 0x0401F0E2 RID: 127202
 		private EElementalType? WrittenElementType;
 	}
 }

@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B5A RID: 19290
+	// Token: 0x02003B02 RID: 15106
 	public class TowerDefensePhantomLockItem : UiPanelBase
 	{
-		// Token: 0x06031F2D RID: 204589 RVA: 0x00B97560 File Offset: 0x00B95760
+		// Token: 0x06026CBC RID: 158908 RVA: 0x00ADB79C File Offset: 0x00AD999C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06031F2E RID: 204590 RVA: 0x00B975EC File Offset: 0x00B957EC
+		// Token: 0x06026CBD RID: 158909 RVA: 0x00ADB828 File Offset: 0x00AD9A28
 		protected override void OnStart()
 		{
 			UUIButtonComponent button = base.GetButton(2);
@@ -42,23 +42,23 @@ namespace CSharpScript.Game.Module.TowerDefence
 			uuiitem.SetUIActive(false);
 		}
 
-		// Token: 0x06031F2F RID: 204591 RVA: 0x00B9761D File Offset: 0x00B9581D
+		// Token: 0x06026CBE RID: 158910 RVA: 0x00ADB859 File Offset: 0x00AD9A59
 		[NullableContext(1)]
 		public void SetText(string textId)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), textId, Array.Empty<object>());
 		}
 
-		// Token: 0x0200ACE3 RID: 44259
+		// Token: 0x02009702 RID: 38658
 		private class ELockItemComponent
 		{
-			// Token: 0x0403488C RID: 215180
+			// Token: 0x0402F235 RID: 193077
 			public const int LockSprite = 0;
 
-			// Token: 0x0403488D RID: 215181
+			// Token: 0x0402F236 RID: 193078
 			public const int ActiveText = 1;
 
-			// Token: 0x0403488E RID: 215182
+			// Token: 0x0402F237 RID: 193079
 			public const int FunctionButton = 2;
 		}
 	}

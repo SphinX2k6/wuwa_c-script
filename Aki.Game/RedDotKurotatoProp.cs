@@ -3,28 +3,28 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Kurotato;
 using CSharpScript.Game.Module.Kurotato.Data;
 
-// Token: 0x0200333A RID: 13114
+// Token: 0x020028AC RID: 10412
 public class RedDotKurotatoProp : RedDotBase
 {
-	// Token: 0x0601C95A RID: 117082 RVA: 0x008042E3 File Offset: 0x008024E3
+	// Token: 0x0601A652 RID: 108114 RVA: 0x0082A8A7 File Offset: 0x00828AA7
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.OnRefreshKurotatoWeaponAndPropRedDot, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601C95B RID: 117083 RVA: 0x00804301 File Offset: 0x00802501
+	// Token: 0x0601A653 RID: 108115 RVA: 0x0082A8C5 File Offset: 0x00828AC5
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.OnRefreshKurotatoWeaponAndPropRedDot, new Action(base.EventCheck));
 	}
 
-	// Token: 0x0601C95C RID: 117084 RVA: 0x0080431F File Offset: 0x0080251F
+	// Token: 0x0601A654 RID: 108116 RVA: 0x0082A8E3 File Offset: 0x00828AE3
 	protected override ERedDotName? OnGetParentName()
 	{
 		return new ERedDotName?(ERedDotName.RedDotKurotatoWeaponAndProp);
 	}
 
-	// Token: 0x0601C95D RID: 117085 RVA: 0x0080432C File Offset: 0x0080252C
+	// Token: 0x0601A655 RID: 108117 RVA: 0x0082A8F0 File Offset: 0x00828AF0
 	protected override bool OnCheck(int uId = 0)
 	{
 		KurotatoActivityData activityData = KurotatoActivityController.Instance.GetActivityData();

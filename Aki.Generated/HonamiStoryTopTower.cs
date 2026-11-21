@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000D51 RID: 3409
+	// Token: 0x02000E36 RID: 3638
 	public struct HonamiStoryTopTower : IFlatbufferObject
 	{
-		// Token: 0x17001857 RID: 6231
-		// (get) Token: 0x06008199 RID: 33177 RVA: 0x0025B114 File Offset: 0x00259314
+		// Token: 0x170018BA RID: 6330
+		// (get) Token: 0x060087B3 RID: 34739 RVA: 0x002798B4 File Offset: 0x00277AB4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600819A RID: 33178 RVA: 0x0025B121 File Offset: 0x00259321
+		// Token: 0x060087B4 RID: 34740 RVA: 0x002798C1 File Offset: 0x00277AC1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600819B RID: 33179 RVA: 0x0025B128 File Offset: 0x00259328
+		// Token: 0x060087B5 RID: 34741 RVA: 0x002798C8 File Offset: 0x00277AC8
 		public static HonamiStoryTopTower GetRootAsHonamiStoryTopTower(ByteBuffer _bb)
 		{
 			return HonamiStoryTopTower.GetRootAsHonamiStoryTopTower(_bb, default(HonamiStoryTopTower));
 		}
 
-		// Token: 0x0600819C RID: 33180 RVA: 0x0025B144 File Offset: 0x00259344
+		// Token: 0x060087B6 RID: 34742 RVA: 0x002798E4 File Offset: 0x00277AE4
 		public static HonamiStoryTopTower GetRootAsHonamiStoryTopTower(ByteBuffer _bb, HonamiStoryTopTower obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600819D RID: 33181 RVA: 0x0025B161 File Offset: 0x00259361
+		// Token: 0x060087B7 RID: 34743 RVA: 0x00279901 File Offset: 0x00277B01
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600819E RID: 33182 RVA: 0x0025B170 File Offset: 0x00259370
+		// Token: 0x060087B8 RID: 34744 RVA: 0x00279910 File Offset: 0x00277B10
 		public HonamiStoryTopTower __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001858 RID: 6232
-		// (get) Token: 0x0600819F RID: 33183 RVA: 0x0025B180 File Offset: 0x00259380
+		// Token: 0x170018BB RID: 6331
+		// (get) Token: 0x060087B9 RID: 34745 RVA: 0x00279920 File Offset: 0x00277B20
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001859 RID: 6233
-		// (get) Token: 0x060081A0 RID: 33184 RVA: 0x0025B1BC File Offset: 0x002593BC
+		// Token: 0x170018BC RID: 6332
+		// (get) Token: 0x060087BA RID: 34746 RVA: 0x0027995C File Offset: 0x00277B5C
 		public int ActivityId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700185A RID: 6234
-		// (get) Token: 0x060081A1 RID: 33185 RVA: 0x0025B1F8 File Offset: 0x002593F8
+		// Token: 0x170018BD RID: 6333
+		// (get) Token: 0x060087BB RID: 34747 RVA: 0x00279998 File Offset: 0x00277B98
 		public int Floor
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700185B RID: 6235
-		// (get) Token: 0x060081A2 RID: 33186 RVA: 0x0025B234 File Offset: 0x00259434
+		// Token: 0x170018BE RID: 6334
+		// (get) Token: 0x060087BC RID: 34748 RVA: 0x002799D4 File Offset: 0x00277BD4
 		public int DropId
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004DCF RID: 19919
+		// Token: 0x040053B4 RID: 21428
 		private Table __p;
 	}
 }

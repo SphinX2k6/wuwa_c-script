@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F96 RID: 24470
+	// Token: 0x020065DD RID: 26077
 	public enum ELevelSequenceTransition : byte
 	{
-		// Token: 0x0400FE63 RID: 65123
+		// Token: 0x04010BED RID: 68589
 		Camera,
-		// Token: 0x0400FE64 RID: 65124
+		// Token: 0x04010BEE RID: 68590
 		Mask
 	}
 }

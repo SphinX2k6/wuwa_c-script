@@ -2,14 +2,14 @@
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CC0 RID: 23744
+	// Token: 0x02004CA2 RID: 19618
 	public enum EMissionRuleId
 	{
-		// Token: 0x0401F514 RID: 128276
+		// Token: 0x04019FCD RID: 106445
 		Default,
-		// Token: 0x0401F515 RID: 128277
+		// Token: 0x04019FCE RID: 106446
 		HonamiStory,
-		// Token: 0x0401F516 RID: 128278
+		// Token: 0x04019FCF RID: 106447
 		SpringManor
 	}
 }

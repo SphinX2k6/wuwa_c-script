@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200216F RID: 8559
+	// Token: 0x020023D0 RID: 9168
 	public class ResumeSystemRewardPopup_SetValue
 	{
-		// Token: 0x04007075 RID: 28789
-		[Nullable(1)]
+		// Token: 0x040076AA RID: 30378
 		public IResumeGiantDeliveryRewardPopup SystemType;
 	}
 }

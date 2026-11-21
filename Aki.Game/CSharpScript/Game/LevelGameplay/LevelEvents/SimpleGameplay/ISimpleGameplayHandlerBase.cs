@@ -3,11 +3,11 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents.SimpleGameplay
 {
-	// Token: 0x02006BBB RID: 27579
+	// Token: 0x02005D34 RID: 23860
 	public interface ISimpleGameplayHandlerBase
 	{
-		// Token: 0x170099A2 RID: 39330
-		// (get) Token: 0x06044349 RID: 279369
+		// Token: 0x17006EA5 RID: 28325
+		// (get) Token: 0x0603A4A1 RID: 238753
 		ESimpleGameplayType Type { get; }
 	}
 }

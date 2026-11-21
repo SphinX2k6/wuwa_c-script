@@ -8,17 +8,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PermanentRogue
 {
-	// Token: 0x02005334 RID: 21300
+	// Token: 0x02004304 RID: 17156
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RogueResSkillOverView : UiViewBase
 	{
-		// Token: 0x0603671F RID: 223007 RVA: 0x00CE3E4E File Offset: 0x00CE204E
+		// Token: 0x0602B61B RID: 177691 RVA: 0x00C3181E File Offset: 0x00C2FA1E
 		public RogueResSkillOverView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06036720 RID: 223008 RVA: 0x00CE3E64 File Offset: 0x00CE2064
+		// Token: 0x0602B61C RID: 177692 RVA: 0x00C31834 File Offset: 0x00C2FA34
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			};
 		}
 
-		// Token: 0x06036721 RID: 223009 RVA: 0x00CE3EEC File Offset: 0x00CE20EC
+		// Token: 0x0602B61D RID: 177693 RVA: 0x00C318BC File Offset: 0x00C2FABC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RogueResSkillOverView.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -42,13 +42,13 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036722 RID: 223010 RVA: 0x00CE3F2F File Offset: 0x00CE212F
+		// Token: 0x0602B61E RID: 177694 RVA: 0x00C318FF File Offset: 0x00C2FAFF
 		protected override void OnBeforeDestroy()
 		{
 			this.SkillDescItemList.Clear();
 		}
 
-		// Token: 0x06036723 RID: 223011 RVA: 0x00CE3F3C File Offset: 0x00CE213C
+		// Token: 0x0602B61F RID: 177695 RVA: 0x00C3190C File Offset: 0x00C2FB0C
 		protected UniTask InitDescItem()
 		{
 			RogueResSkillOverView.<InitDescItem>d__7 <InitDescItem>d__;
@@ -59,14 +59,14 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return <InitDescItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401CCB1 RID: 117937
+		// Token: 0x040176E7 RID: 95975
 		[Nullable(2)]
 		public PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401CCB2 RID: 117938
+		// Token: 0x040176E8 RID: 95976
 		public List<RogueResSkillDesc> SkillDescItemList = new List<RogueResSkillDesc>();
 
-		// Token: 0x0401CCB3 RID: 117939
+		// Token: 0x040176E9 RID: 95977
 		private int SeasonId;
 	}
 }

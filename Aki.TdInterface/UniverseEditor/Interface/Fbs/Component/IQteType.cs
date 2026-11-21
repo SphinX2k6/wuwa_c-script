@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020057C0 RID: 22464
+	// Token: 0x02005DC7 RID: 24007
 	public struct IQteType : IFlatbufferObject
 	{
-		// Token: 0x1700A7AA RID: 42922
-		// (get) Token: 0x06025B40 RID: 154432 RVA: 0x0053332C File Offset: 0x0053152C
+		// Token: 0x1700B0CE RID: 45262
+		// (get) Token: 0x06028060 RID: 163936 RVA: 0x005794B8 File Offset: 0x005776B8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025B41 RID: 154433 RVA: 0x00533339 File Offset: 0x00531539
+		// Token: 0x06028061 RID: 163937 RVA: 0x005794C5 File Offset: 0x005776C5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06025B42 RID: 154434 RVA: 0x00533340 File Offset: 0x00531540
+		// Token: 0x06028062 RID: 163938 RVA: 0x005794CC File Offset: 0x005776CC
 		public static IQteType GetRootAsIQteType(ByteBuffer _bb)
 		{
 			return IQteType.GetRootAsIQteType(_bb, default(IQteType));
 		}
 
-		// Token: 0x06025B43 RID: 154435 RVA: 0x0053335C File Offset: 0x0053155C
+		// Token: 0x06028063 RID: 163939 RVA: 0x005794E8 File Offset: 0x005776E8
 		public static IQteType GetRootAsIQteType(ByteBuffer _bb, IQteType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06025B44 RID: 154436 RVA: 0x00533379 File Offset: 0x00531579
+		// Token: 0x06028064 RID: 163940 RVA: 0x00579505 File Offset: 0x00577705
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06025B45 RID: 154437 RVA: 0x00533388 File Offset: 0x00531588
+		// Token: 0x06028065 RID: 163941 RVA: 0x00579514 File Offset: 0x00577714
 		public IQteType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A7AB RID: 42923
-		// (get) Token: 0x06025B46 RID: 154438 RVA: 0x00533398 File Offset: 0x00531598
+		// Token: 0x1700B0CF RID: 45263
+		// (get) Token: 0x06028066 RID: 163942 RVA: 0x00579524 File Offset: 0x00577724
 		public EQteType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A7AC RID: 42924
-		// (get) Token: 0x06025B47 RID: 154439 RVA: 0x005333D4 File Offset: 0x005315D4
+		// Token: 0x1700B0D0 RID: 45264
+		// (get) Token: 0x06028067 RID: 163943 RVA: 0x00579560 File Offset: 0x00577760
 		public int QteId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06025B48 RID: 154440 RVA: 0x00533410 File Offset: 0x00531610
+		// Token: 0x06028068 RID: 163944 RVA: 0x0057959C File Offset: 0x0057779C
 		public static Offset<IQteType> CreateIQteType(FlatBufferBuilder builder, EQteType Type = EQteType.SingleBtn, int QteId = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IQteType.EndIQteType(builder);
 		}
 
-		// Token: 0x06025B49 RID: 154441 RVA: 0x0053342D File Offset: 0x0053162D
+		// Token: 0x06028069 RID: 163945 RVA: 0x005795B9 File Offset: 0x005777B9
 		public static void StartIQteType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06025B4A RID: 154442 RVA: 0x00533436 File Offset: 0x00531636
+		// Token: 0x0602806A RID: 163946 RVA: 0x005795C2 File Offset: 0x005777C2
 		public static void AddType(FlatBufferBuilder builder, EQteType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06025B4B RID: 154443 RVA: 0x00533441 File Offset: 0x00531641
+		// Token: 0x0602806B RID: 163947 RVA: 0x005795CD File Offset: 0x005777CD
 		public static void AddQteId(FlatBufferBuilder builder, int qteId)
 		{
 			builder.AddInt(1, qteId, 0);
 		}
 
-		// Token: 0x06025B4C RID: 154444 RVA: 0x0053344C File Offset: 0x0053164C
+		// Token: 0x0602806C RID: 163948 RVA: 0x005795D8 File Offset: 0x005777D8
 		public static Offset<IQteType> EndIQteType(FlatBufferBuilder builder)
 		{
 			return new Offset<IQteType>(builder.EndTable());
 		}
 
-		// Token: 0x06025B4D RID: 154445 RVA: 0x0053345C File Offset: 0x0053165C
+		// Token: 0x0602806D RID: 163949 RVA: 0x005795E8 File Offset: 0x005777E8
 		public IQteTypeT UnPack()
 		{
 			IQteTypeT qteTypeT = new IQteTypeT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return qteTypeT;
 		}
 
-		// Token: 0x06025B4E RID: 154446 RVA: 0x00533477 File Offset: 0x00531677
+		// Token: 0x0602806E RID: 163950 RVA: 0x00579603 File Offset: 0x00577803
 		public void UnPackTo(IQteTypeT _o)
 		{
 			_o.Type = this.Type;
 			_o.QteId = this.QteId;
 		}
 
-		// Token: 0x06025B4F RID: 154447 RVA: 0x00533494 File Offset: 0x00531694
+		// Token: 0x0602806F RID: 163951 RVA: 0x00579620 File Offset: 0x00577820
 		public static Offset<IQteType> Pack(FlatBufferBuilder builder, IQteTypeT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IQteType.CreateIQteType(builder, _o.Type, _o.QteId);
 		}
 
-		// Token: 0x0400EC99 RID: 60569
+		// Token: 0x0400F984 RID: 63876
 		private Table __p;
 	}
 }

@@ -5,11 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020012DC RID: 4828
+	// Token: 0x02001422 RID: 5154
 	public class IGradingSystemConfig : IEnableSystemConfig
 	{
-		// Token: 0x06006E55 RID: 28245 RVA: 0x0010AAD9 File Offset: 0x00108CD9
-		[NullableContext(1)]
+		// Token: 0x060074D5 RID: 29909 RVA: 0x00118DD9 File Offset: 0x00116FD9
 		public static IGradingSystemConfig Create(IGradingSystemConfig? instance)
 		{
 			if (instance == null)
@@ -22,8 +21,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002270 RID: 8816
-		// (get) Token: 0x06006E56 RID: 28246 RVA: 0x0010AAF8 File Offset: 0x00108CF8
+		// Token: 0x17002433 RID: 9267
+		// (get) Token: 0x060074D6 RID: 29910 RVA: 0x00118DF8 File Offset: 0x00116FF8
 		public override EEnableSystemType Type
 		{
 			get
@@ -32,8 +31,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002271 RID: 8817
-		// (get) Token: 0x06006E57 RID: 28247 RVA: 0x0010AB05 File Offset: 0x00108D05
+		// Token: 0x17002434 RID: 9268
+		// (get) Token: 0x060074D7 RID: 29911 RVA: 0x00118E05 File Offset: 0x00117005
 		public virtual int GradingSystemId
 		{
 			get
@@ -42,19 +41,19 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002272 RID: 8818
-		// (get) Token: 0x06006E58 RID: 28248 RVA: 0x0010AB14 File Offset: 0x00108D14
+		// Token: 0x17002435 RID: 9269
+		// (get) Token: 0x060074D8 RID: 29912 RVA: 0x00118E14 File Offset: 0x00117014
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IGradingSystemVar> Vars
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -77,18 +76,18 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x04003F34 RID: 16180
+		// Token: 0x040042A2 RID: 17058
 		private IGradingSystemConfig Instance;
 
-		// Token: 0x04003F35 RID: 16181
+		// Token: 0x040042A3 RID: 17059
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<IGradingSystemVar> _VarsCache;
 
-		// Token: 0x04003F36 RID: 16182
+		// Token: 0x040042A4 RID: 17060
 		private bool _VarsInited;
 	}
 }

@@ -4,16 +4,16 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200203B RID: 8251
+// Token: 0x0200150E RID: 5390
 public class KingShipFailView : UiViewBase
 {
-	// Token: 0x06010335 RID: 66357 RVA: 0x003F2D08 File Offset: 0x003F0F08
+	// Token: 0x0600D79D RID: 55197 RVA: 0x003FF300 File Offset: 0x003FD500
 	[NullableContext(1)]
 	public KingShipFailView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06010336 RID: 66358 RVA: 0x003F2D14 File Offset: 0x003F0F14
+	// Token: 0x0600D79E RID: 55198 RVA: 0x003FF30C File Offset: 0x003FD50C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -28,7 +28,7 @@ public class KingShipFailView : UiViewBase
 		};
 	}
 
-	// Token: 0x06010337 RID: 66359 RVA: 0x003F2D94 File Offset: 0x003F0F94
+	// Token: 0x0600D79F RID: 55199 RVA: 0x003FF38C File Offset: 0x003FD58C
 	protected override void OnStart()
 	{
 		int cardId = ((IKingShipFailViewData)this.OpenParam).CardId;
@@ -38,28 +38,28 @@ public class KingShipFailView : UiViewBase
 		base.GetText(0).SetText(configTextByKey2, true);
 	}
 
-	// Token: 0x06010338 RID: 66360 RVA: 0x003F2E10 File Offset: 0x003F1010
+	// Token: 0x0600D7A0 RID: 55200 RVA: 0x003FF408 File Offset: 0x003FD608
 	private void OnClickCloseBtn()
 	{
 		((IKingShipFailViewData)this.OpenParam).OnCloseCallBack();
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06010339 RID: 66361 RVA: 0x003F2E2E File Offset: 0x003F102E
+	// Token: 0x0600D7A1 RID: 55201 RVA: 0x003FF426 File Offset: 0x003FD626
 	protected override void OnBeforeDestroy()
 	{
 	}
 
-	// Token: 0x02008634 RID: 34356
+	// Token: 0x020077BB RID: 30651
 	private class EComponentDefine
 	{
-		// Token: 0x0402BACF RID: 178895
+		// Token: 0x04026DDE RID: 159198
 		public const int TitleText = 0;
 
-		// Token: 0x0402BAD0 RID: 178896
+		// Token: 0x04026DDF RID: 159199
 		public const int DesText = 1;
 
-		// Token: 0x0402BAD1 RID: 178897
+		// Token: 0x04026DE0 RID: 159200
 		public const int CloseBtn = 2;
 	}
 }

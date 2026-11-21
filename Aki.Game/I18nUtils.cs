@@ -5,12 +5,12 @@ using Aki.Config;
 using CSharpScript.Game.Module.Plot;
 using UnrealEngine;
 
-// Token: 0x020034C4 RID: 13508
+// Token: 0x02002A38 RID: 10808
 [NullableContext(1)]
 [Nullable(0)]
 public class I18nUtils
 {
-	// Token: 0x0601D6D3 RID: 120531 RVA: 0x00835FCC File Offset: 0x008341CC
+	// Token: 0x0601B3D2 RID: 111570 RVA: 0x0085D474 File Offset: 0x0085B674
 	[return: Nullable(2)]
 	public static string GetI18nPathAtCurrentLanguage(string key)
 	{
@@ -96,7 +96,7 @@ public class I18nUtils
 		return text;
 	}
 
-	// Token: 0x0601D6D4 RID: 120532 RVA: 0x00836254 File Offset: 0x00834454
+	// Token: 0x0601B3D3 RID: 111571 RVA: 0x0085D6FC File Offset: 0x0085B8FC
 	[return: Nullable(2)]
 	public static string GetI18nPlotAudioMediaName(string key)
 	{
@@ -113,7 +113,7 @@ public class I18nUtils
 		return PlotAudioModel.Instance.GetExternalSourcesMediaName(config2.Value);
 	}
 
-	// Token: 0x0601D6D5 RID: 120533 RVA: 0x008362A8 File Offset: 0x008344A8
+	// Token: 0x0601B3D4 RID: 111572 RVA: 0x0085D750 File Offset: 0x0085B950
 	private static string ParseGenderContent(string content, bool isMale)
 	{
 		if (StringUtils.IsEmpty(content))
@@ -132,7 +132,7 @@ public class I18nUtils
 		});
 	}
 
-	// Token: 0x0601D6D6 RID: 120534 RVA: 0x008362EC File Offset: 0x008344EC
+	// Token: 0x0601B3D5 RID: 111573 RVA: 0x0085D794 File Offset: 0x0085B994
 	private static string ParseGenderContentNew(string content, bool isMale)
 	{
 		if (StringUtils.IsEmpty(content))
@@ -143,7 +143,7 @@ public class I18nUtils
 		return (isMale ? match.Groups["maleText"].Value : match.Groups["femaleText"].Value) ?? "";
 	}
 
-	// Token: 0x0601D6D7 RID: 120535 RVA: 0x00836350 File Offset: 0x00834550
+	// Token: 0x0601B3D6 RID: 111574 RVA: 0x0085D7F8 File Offset: 0x0085B9F8
 	public static void SetRenderComponentTextByTextId(UTextRenderComponent textRenderComponent, string textId)
 	{
 		if (textRenderComponent != null && textRenderComponent.IsValid())
@@ -152,7 +152,7 @@ public class I18nUtils
 		}
 	}
 
-	// Token: 0x0601D6D8 RID: 120536 RVA: 0x00836374 File Offset: 0x00834574
+	// Token: 0x0601B3D7 RID: 111575 RVA: 0x0085D81C File Offset: 0x0085BA1C
 	public static void SetI18nBillboardComponentSpriteById(UBillboardComponent spriteComponent, string id)
 	{
 		string i18nPathAtCurrentLanguage = I18nUtils.GetI18nPathAtCurrentLanguage(id);

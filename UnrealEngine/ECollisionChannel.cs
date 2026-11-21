@@ -4,78 +4,78 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000A2C RID: 2604
+	// Token: 0x020001D5 RID: 469
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/Engine.ECollisionChannel")]
 	public enum ECollisionChannel
 	{
-		// Token: 0x04004598 RID: 17816
+		// Token: 0x04000B6A RID: 2922
 		ECC_WorldStatic,
-		// Token: 0x04004599 RID: 17817
+		// Token: 0x04000B6B RID: 2923
 		ECC_WorldDynamic,
-		// Token: 0x0400459A RID: 17818
+		// Token: 0x04000B6C RID: 2924
 		ECC_Pawn,
-		// Token: 0x0400459B RID: 17819
+		// Token: 0x04000B6D RID: 2925
 		ECC_Visibility,
-		// Token: 0x0400459C RID: 17820
+		// Token: 0x04000B6E RID: 2926
 		ECC_Camera,
-		// Token: 0x0400459D RID: 17821
+		// Token: 0x04000B6F RID: 2927
 		ECC_PhysicsBody,
-		// Token: 0x0400459E RID: 17822
+		// Token: 0x04000B70 RID: 2928
 		ECC_Vehicle,
-		// Token: 0x0400459F RID: 17823
+		// Token: 0x04000B71 RID: 2929
 		ECC_Destructible,
-		// Token: 0x040045A0 RID: 17824
+		// Token: 0x04000B72 RID: 2930
 		ECC_EngineTraceChannel1,
-		// Token: 0x040045A1 RID: 17825
+		// Token: 0x04000B73 RID: 2931
 		ECC_EngineTraceChannel2,
-		// Token: 0x040045A2 RID: 17826
+		// Token: 0x04000B74 RID: 2932
 		ECC_EngineTraceChannel3,
-		// Token: 0x040045A3 RID: 17827
+		// Token: 0x04000B75 RID: 2933
 		ECC_EngineTraceChannel4,
-		// Token: 0x040045A4 RID: 17828
+		// Token: 0x04000B76 RID: 2934
 		ECC_EngineTraceChannel5,
-		// Token: 0x040045A5 RID: 17829
+		// Token: 0x04000B77 RID: 2935
 		ECC_EngineTraceChannel6,
-		// Token: 0x040045A6 RID: 17830
+		// Token: 0x04000B78 RID: 2936
 		ECC_GameTraceChannel1,
-		// Token: 0x040045A7 RID: 17831
+		// Token: 0x04000B79 RID: 2937
 		ECC_GameTraceChannel2,
-		// Token: 0x040045A8 RID: 17832
+		// Token: 0x04000B7A RID: 2938
 		ECC_GameTraceChannel3,
-		// Token: 0x040045A9 RID: 17833
+		// Token: 0x04000B7B RID: 2939
 		ECC_GameTraceChannel4,
-		// Token: 0x040045AA RID: 17834
+		// Token: 0x04000B7C RID: 2940
 		ECC_GameTraceChannel5,
-		// Token: 0x040045AB RID: 17835
+		// Token: 0x04000B7D RID: 2941
 		ECC_GameTraceChannel6,
-		// Token: 0x040045AC RID: 17836
+		// Token: 0x04000B7E RID: 2942
 		ECC_GameTraceChannel7,
-		// Token: 0x040045AD RID: 17837
+		// Token: 0x04000B7F RID: 2943
 		ECC_GameTraceChannel8,
-		// Token: 0x040045AE RID: 17838
+		// Token: 0x04000B80 RID: 2944
 		ECC_GameTraceChannel9,
-		// Token: 0x040045AF RID: 17839
+		// Token: 0x04000B81 RID: 2945
 		ECC_GameTraceChannel10,
-		// Token: 0x040045B0 RID: 17840
+		// Token: 0x04000B82 RID: 2946
 		ECC_GameTraceChannel11,
-		// Token: 0x040045B1 RID: 17841
+		// Token: 0x04000B83 RID: 2947
 		ECC_GameTraceChannel12,
-		// Token: 0x040045B2 RID: 17842
+		// Token: 0x04000B84 RID: 2948
 		ECC_GameTraceChannel13,
-		// Token: 0x040045B3 RID: 17843
+		// Token: 0x04000B85 RID: 2949
 		ECC_GameTraceChannel14,
-		// Token: 0x040045B4 RID: 17844
+		// Token: 0x04000B86 RID: 2950
 		ECC_GameTraceChannel15,
-		// Token: 0x040045B5 RID: 17845
+		// Token: 0x04000B87 RID: 2951
 		ECC_GameTraceChannel16,
-		// Token: 0x040045B6 RID: 17846
+		// Token: 0x04000B88 RID: 2952
 		ECC_GameTraceChannel17,
-		// Token: 0x040045B7 RID: 17847
+		// Token: 0x04000B89 RID: 2953
 		ECC_GameTraceChannel18,
-		// Token: 0x040045B8 RID: 17848
+		// Token: 0x04000B8A RID: 2954
 		ECC_OverlapAll_Deprecated,
-		// Token: 0x040045B9 RID: 17849
+		// Token: 0x04000B8B RID: 2955
 		ECC_MAX
 	}
 }

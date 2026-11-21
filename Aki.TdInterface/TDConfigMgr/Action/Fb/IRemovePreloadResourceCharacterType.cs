@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029E5 RID: 10725
+	// Token: 0x02002CD2 RID: 11474
 	public class IRemovePreloadResourceCharacterType
 	{
-		// Token: 0x0600ECE1 RID: 60641 RVA: 0x002292AB File Offset: 0x002274AB
-		[NullableContext(1)]
+		// Token: 0x0600FB78 RID: 64376 RVA: 0x00246C2F File Offset: 0x00244E2F
 		public static IRemovePreloadResourceCharacterType Create(IRemovePreloadResourceCharacterType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004AD9 RID: 19161
-		// (get) Token: 0x0600ECE2 RID: 60642 RVA: 0x002292CA File Offset: 0x002274CA
+		// Token: 0x17004E82 RID: 20098
+		// (get) Token: 0x0600FB79 RID: 64377 RVA: 0x00246C4E File Offset: 0x00244E4E
 		public virtual ERemovePreloadResourceObjectType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008275 RID: 33397
+		// Token: 0x04008966 RID: 35174
 		private IRemovePreloadResourceCharacterType Instance;
 	}
 }

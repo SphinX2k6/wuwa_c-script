@@ -2,42 +2,42 @@
 
 namespace CSharpScript.Game.LevelFlow
 {
-	// Token: 0x02006F69 RID: 28521
+	// Token: 0x020060EA RID: 24810
 	public class LevelFlowTransitionToSplineParam
 	{
-		// Token: 0x17009B63 RID: 39779
-		// (get) Token: 0x0604560E RID: 284174 RVA: 0x0112CD48 File Offset: 0x0112AF48
-		// (set) Token: 0x0604560F RID: 284175 RVA: 0x0112CD50 File Offset: 0x0112AF50
+		// Token: 0x170070A2 RID: 28834
+		// (get) Token: 0x0603B7BC RID: 243644 RVA: 0x010D6B4C File Offset: 0x010D4D4C
+		// (set) Token: 0x0603B7BD RID: 243645 RVA: 0x010D6B54 File Offset: 0x010D4D54
 		public int EntityId { get; set; }
 
-		// Token: 0x17009B64 RID: 39780
-		// (get) Token: 0x06045610 RID: 284176 RVA: 0x0112CD59 File Offset: 0x0112AF59
-		// (set) Token: 0x06045611 RID: 284177 RVA: 0x0112CD61 File Offset: 0x0112AF61
+		// Token: 0x170070A3 RID: 28835
+		// (get) Token: 0x0603B7BE RID: 243646 RVA: 0x010D6B5D File Offset: 0x010D4D5D
+		// (set) Token: 0x0603B7BF RID: 243647 RVA: 0x010D6B65 File Offset: 0x010D4D65
 		public int SplineId { get; set; }
 
-		// Token: 0x17009B65 RID: 39781
-		// (get) Token: 0x06045612 RID: 284178 RVA: 0x0112CD6A File Offset: 0x0112AF6A
-		// (set) Token: 0x06045613 RID: 284179 RVA: 0x0112CD72 File Offset: 0x0112AF72
+		// Token: 0x170070A4 RID: 28836
+		// (get) Token: 0x0603B7C0 RID: 243648 RVA: 0x010D6B6E File Offset: 0x010D4D6E
+		// (set) Token: 0x0603B7C1 RID: 243649 RVA: 0x010D6B76 File Offset: 0x010D4D76
 		public bool SnapToWall { get; set; }
 
-		// Token: 0x17009B66 RID: 39782
-		// (get) Token: 0x06045614 RID: 284180 RVA: 0x0112CD7B File Offset: 0x0112AF7B
-		// (set) Token: 0x06045615 RID: 284181 RVA: 0x0112CD83 File Offset: 0x0112AF83
+		// Token: 0x170070A5 RID: 28837
+		// (get) Token: 0x0603B7C2 RID: 243650 RVA: 0x010D6B7F File Offset: 0x010D4D7F
+		// (set) Token: 0x0603B7C3 RID: 243651 RVA: 0x010D6B87 File Offset: 0x010D4D87
 		public bool NeedSync { get; set; }
 
-		// Token: 0x17009B67 RID: 39783
-		// (get) Token: 0x06045616 RID: 284182 RVA: 0x0112CD8C File Offset: 0x0112AF8C
-		// (set) Token: 0x06045617 RID: 284183 RVA: 0x0112CD94 File Offset: 0x0112AF94
+		// Token: 0x170070A6 RID: 28838
+		// (get) Token: 0x0603B7C4 RID: 243652 RVA: 0x010D6B90 File Offset: 0x010D4D90
+		// (set) Token: 0x0603B7C5 RID: 243653 RVA: 0x010D6B98 File Offset: 0x010D4D98
 		public bool SimulateRotation { get; set; }
 
-		// Token: 0x17009B68 RID: 39784
-		// (get) Token: 0x06045618 RID: 284184 RVA: 0x0112CD9D File Offset: 0x0112AF9D
-		// (set) Token: 0x06045619 RID: 284185 RVA: 0x0112CDA5 File Offset: 0x0112AFA5
+		// Token: 0x170070A7 RID: 28839
+		// (get) Token: 0x0603B7C6 RID: 243654 RVA: 0x010D6BA1 File Offset: 0x010D4DA1
+		// (set) Token: 0x0603B7C7 RID: 243655 RVA: 0x010D6BA9 File Offset: 0x010D4DA9
 		public bool KeepForward { get; set; }
 
-		// Token: 0x17009B69 RID: 39785
-		// (get) Token: 0x0604561A RID: 284186 RVA: 0x0112CDAE File Offset: 0x0112AFAE
-		// (set) Token: 0x0604561B RID: 284187 RVA: 0x0112CDB6 File Offset: 0x0112AFB6
+		// Token: 0x170070A8 RID: 28840
+		// (get) Token: 0x0603B7C8 RID: 243656 RVA: 0x010D6BB2 File Offset: 0x010D4DB2
+		// (set) Token: 0x0603B7C9 RID: 243657 RVA: 0x010D6BBA File Offset: 0x010D4DBA
 		public float Speed { get; set; }
 	}
 }

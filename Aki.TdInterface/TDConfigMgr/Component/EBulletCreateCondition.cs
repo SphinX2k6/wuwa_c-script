@@ -3,20 +3,20 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200007D RID: 125
+	// Token: 0x02000080 RID: 128
 	[EnumExtensions]
 	public enum EBulletCreateCondition
 	{
-		// Token: 0x04000274 RID: 628
+		// Token: 0x04000283 RID: 643
 		OnHit,
-		// Token: 0x04000275 RID: 629
+		// Token: 0x04000284 RID: 644
 		OnMatching,
-		// Token: 0x04000276 RID: 630
+		// Token: 0x04000285 RID: 645
 		OnCollision,
-		// Token: 0x04000277 RID: 631
+		// Token: 0x04000286 RID: 646
 		[EnumStringMember("OnThrowDelayTime")]
 		OnThrowTriggerTime,
-		// Token: 0x04000278 RID: 632
+		// Token: 0x04000287 RID: 647
 		OpenGravityCollision
 	}
 }

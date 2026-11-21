@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 {
-	// Token: 0x0200611B RID: 24859
+	// Token: 0x02005099 RID: 20633
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,13 +16,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 	})]
 	public class RoverlikeReinforcementCardItem : RoverlikeMultiUseGridProxyAbstract<IRoverlikeReinforcementItemData>
 	{
-		// Token: 0x0603EDB0 RID: 257456 RVA: 0x00F2E609 File Offset: 0x00F2C809
+		// Token: 0x06033A72 RID: 211570 RVA: 0x00E7541D File Offset: 0x00E7361D
 		public void BindOnItemSelect(Action<IRoverlikeReinforcementItemData> callback)
 		{
 			this.OnItemSelect = callback;
 		}
 
-		// Token: 0x0603EDB1 RID: 257457 RVA: 0x00F2E612 File Offset: 0x00F2C812
+		// Token: 0x06033A73 RID: 211571 RVA: 0x00E75426 File Offset: 0x00E73626
 		[NullableContext(2)]
 		public UUIItem GetGuideUiItem()
 		{
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			return extendToggle.GetRootComponent();
 		}
 
-		// Token: 0x0603EDB2 RID: 257458 RVA: 0x00F2E628 File Offset: 0x00F2C828
+		// Token: 0x06033A74 RID: 211572 RVA: 0x00E7543C File Offset: 0x00E7363C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603EDB3 RID: 257459 RVA: 0x00F2E7B8 File Offset: 0x00F2C9B8
+		// Token: 0x06033A75 RID: 211573 RVA: 0x00E755CC File Offset: 0x00E737CC
 		protected override void OnStart()
 		{
 			UUIScrollViewWithScrollbarComponent scrollViewWithScrollbar = base.GetScrollViewWithScrollbar(6);
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			TermExplanationController.Instance.RegisterTextHyperlinkByParam(param);
 		}
 
-		// Token: 0x0603EDB4 RID: 257460 RVA: 0x00F2E839 File Offset: 0x00F2CA39
+		// Token: 0x06033A76 RID: 211574 RVA: 0x00E7564D File Offset: 0x00E7384D
 		protected override void OnBeforeCreate()
 		{
 			UUIScrollViewWithScrollbarComponent scrollViewWithScrollbar = base.GetScrollViewWithScrollbar(6);
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			scrollViewWithScrollbar.OnScrollValueChange.Unbind();
 		}
 
-		// Token: 0x0603EDB5 RID: 257461 RVA: 0x00F2E854 File Offset: 0x00F2CA54
+		// Token: 0x06033A77 RID: 211575 RVA: 0x00E75668 File Offset: 0x00E73868
 		public override void Refresh(IRoverlikeReinforcementItemData data, bool isSelected, int gridIndex)
 		{
 			this.CurrentData = data;
@@ -130,19 +130,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			this.RefreshScrollArrow();
 		}
 
-		// Token: 0x0603EDB6 RID: 257462 RVA: 0x00F2E9B0 File Offset: 0x00F2CBB0
+		// Token: 0x06033A78 RID: 211576 RVA: 0x00E757C4 File Offset: 0x00E739C4
 		public override void OnSelected(bool fireEvent)
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_Checked, false, false, false);
 		}
 
-		// Token: 0x0603EDB7 RID: 257463 RVA: 0x00F2E9C3 File Offset: 0x00F2CBC3
+		// Token: 0x06033A79 RID: 211577 RVA: 0x00E757D7 File Offset: 0x00E739D7
 		public override void OnDeselected(bool fireEvent)
 		{
 			base.GetExtendToggle(0).SetToggleState(EToggleState.ETT_UnChecked, false, false, false);
 		}
 
-		// Token: 0x0603EDB8 RID: 257464 RVA: 0x00F2E9D6 File Offset: 0x00F2CBD6
+		// Token: 0x06033A7A RID: 211578 RVA: 0x00E757EA File Offset: 0x00E739EA
 		private void OnScrollLateUpdate(float _)
 		{
 			if (!this.HasScrollFirstLateUpdate)
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x0603EDB9 RID: 257465 RVA: 0x00F2E9F0 File Offset: 0x00F2CBF0
+		// Token: 0x06033A7B RID: 211579 RVA: 0x00E75804 File Offset: 0x00E73A04
 		private void RefreshScrollArrow()
 		{
 			UUIScrollViewWithScrollbarComponent scrollViewWithScrollbar = base.GetScrollViewWithScrollbar(6);
@@ -171,7 +171,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			base.GetItem(8).SetUIActive(eoutOfBoundsType3 == EOutOfBoundsType.OutOfEnd);
 		}
 
-		// Token: 0x0603EDBA RID: 257466 RVA: 0x00F2EA67 File Offset: 0x00F2CC67
+		// Token: 0x06033A7C RID: 211580 RVA: 0x00E7587B File Offset: 0x00E73A7B
 		private void OnTogItemStateChanged(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked && this.CurrentData != null)
@@ -185,11 +185,11 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 			}
 		}
 
-		// Token: 0x04020D27 RID: 134439
+		// Token: 0x0401B654 RID: 112212
 		[Nullable(2)]
 		private IRoverlikeReinforcementItemData CurrentData;
 
-		// Token: 0x04020D28 RID: 134440
+		// Token: 0x0401B655 RID: 112213
 		[Nullable(new byte[]
 		{
 			2,
@@ -197,38 +197,38 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Roverlike
 		})]
 		private Action<IRoverlikeReinforcementItemData> OnItemSelect;
 
-		// Token: 0x04020D29 RID: 134441
+		// Token: 0x0401B656 RID: 112214
 		private bool HasScrollFirstLateUpdate;
 
-		// Token: 0x0200C376 RID: 50038
+		// Token: 0x0200AD5E RID: 44382
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x0403AFCA RID: 241610
+			// Token: 0x0403592F RID: 219439
 			public const int TogItem = 0;
 
-			// Token: 0x0403AFCB RID: 241611
+			// Token: 0x04035930 RID: 219440
 			public const int TxtName = 1;
 
-			// Token: 0x0403AFCC RID: 241612
+			// Token: 0x04035931 RID: 219441
 			public const int TxtInfo = 2;
 
-			// Token: 0x0403AFCD RID: 241613
+			// Token: 0x04035932 RID: 219442
 			public const int SpriteIcon = 3;
 
-			// Token: 0x0403AFCE RID: 241614
+			// Token: 0x04035933 RID: 219443
 			public const int TxtTips = 4;
 
-			// Token: 0x0403AFCF RID: 241615
+			// Token: 0x04035934 RID: 219444
 			public const int PnlRecommend = 5;
 
-			// Token: 0x0403AFD0 RID: 241616
+			// Token: 0x04035935 RID: 219445
 			public const int SvInfo = 6;
 
-			// Token: 0x0403AFD1 RID: 241617
+			// Token: 0x04035936 RID: 219446
 			public const int SprArrowUp = 7;
 
-			// Token: 0x0403AFD2 RID: 241618
+			// Token: 0x04035937 RID: 219447
 			public const int SprArrowDown = 8;
 		}
 	}

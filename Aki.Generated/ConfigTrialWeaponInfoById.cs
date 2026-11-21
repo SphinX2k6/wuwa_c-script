@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A57 RID: 2647
+	// Token: 0x02000B2C RID: 2860
 	public class ConfigTrialWeaponInfoById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003E1E RID: 15902 RVA: 0x001B92FB File Offset: 0x001B74FB
+		// Token: 0x0600431C RID: 17180 RVA: 0x001D868F File Offset: 0x001D688F
 		static ConfigTrialWeaponInfoById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigTrialWeaponInfoById.CreateStaticDefaultValue), new Action(ConfigTrialWeaponInfoById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003E1F RID: 15903 RVA: 0x001B931C File Offset: 0x001B751C
+		// Token: 0x0600431D RID: 17181 RVA: 0x001D86B0 File Offset: 0x001D68B0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigTrialWeaponInfoById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003E20 RID: 15904 RVA: 0x001B939B File Offset: 0x001B759B
+		// Token: 0x0600431E RID: 17182 RVA: 0x001D872F File Offset: 0x001D692F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigTrialWeaponInfoById.LogPair = null;
 			ConfigTrialWeaponInfoById.HandleId = 0;
 		}
 
-		// Token: 0x06003E21 RID: 15905 RVA: 0x001B93A9 File Offset: 0x001B75A9
+		// Token: 0x0600431F RID: 17183 RVA: 0x001D873D File Offset: 0x001D693D
 		public static void Init()
 		{
 			ConfigTrialWeaponInfoById.HandleId = ConfigCommon.InitDataStatement(ConfigTrialWeaponInfoById.HandleId, "db_trial_role.db", "select BinData from `TrialWeaponInfo` where Id = ?");
 		}
 
-		// Token: 0x06003E22 RID: 15906 RVA: 0x001B93C4 File Offset: 0x001B75C4
+		// Token: 0x06004320 RID: 17184 RVA: 0x001D8758 File Offset: 0x001D6958
 		public static TrialWeaponInfo? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigTrialWeaponInfoById.HandleId, ConfigTrialWeaponInfoById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new TrialWeaponInfo?(rootAsTrialWeaponInfo);
 		}
 
-		// Token: 0x04004847 RID: 18503
+		// Token: 0x04004E1A RID: 19994
 		private const string DB = "db_trial_role.db";
 
-		// Token: 0x04004848 RID: 18504
+		// Token: 0x04004E1B RID: 19995
 		private const string FILE = "s.试用角色.xlsx";
 
-		// Token: 0x04004849 RID: 18505
+		// Token: 0x04004E1C RID: 19996
 		private const string TABLE = "TrialWeaponInfo";
 
-		// Token: 0x0400484A RID: 18506
+		// Token: 0x04004E1D RID: 19997
 		private const string COMMAND = "select BinData from `TrialWeaponInfo` where Id = ?";
 
-		// Token: 0x0400484B RID: 18507
+		// Token: 0x04004E1E RID: 19998
 		private const string KEY_PREFIX = "TrialWeaponInfoById";
 
-		// Token: 0x0400484C RID: 18508
+		// Token: 0x04004E1F RID: 19999
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400484D RID: 18509
+		// Token: 0x04004E20 RID: 20000
 		private static int HandleId;
 	}
 }

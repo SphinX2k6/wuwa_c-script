@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02002F9D RID: 12189
+// Token: 0x020024F1 RID: 9457
 [NullableContext(1)]
 [Nullable(0)]
 public class ModifyFuLuoLuoSpecialEnergy : PeriodExecution
 {
-	// Token: 0x06019DD4 RID: 105940 RVA: 0x006C207C File Offset: 0x006C027C
+	// Token: 0x060176E6 RID: 95974 RVA: 0x006E8944 File Offset: 0x006E6B44
 	public ModifyFuLuoLuoSpecialEnergy(RequireAndLimits requireAndLimits) : base(requireAndLimits)
 	{
 	}
 
-	// Token: 0x06019DD5 RID: 105941 RVA: 0x006C2090 File Offset: 0x006C0290
+	// Token: 0x060176E7 RID: 95975 RVA: 0x006E8958 File Offset: 0x006E6B58
 	protected override void InitParameters(ExtraEffectParameters parameters)
 	{
 		string[] extraEffectParameters_ = parameters.ExtraEffectParameters_;
@@ -27,7 +27,7 @@ public class ModifyFuLuoLuoSpecialEnergy : PeriodExecution
 		}
 	}
 
-	// Token: 0x06019DD6 RID: 105942 RVA: 0x006C20E0 File Offset: 0x006C02E0
+	// Token: 0x060176E8 RID: 95976 RVA: 0x006E89A8 File Offset: 0x006E6BA8
 	[return: Nullable(2)]
 	public unsafe override object OnExecute(params object[] args)
 	{
@@ -52,7 +52,7 @@ public class ModifyFuLuoLuoSpecialEnergy : PeriodExecution
 		return null;
 	}
 
-	// Token: 0x06019DD7 RID: 105943 RVA: 0x006C21A4 File Offset: 0x006C03A4
+	// Token: 0x060176E9 RID: 95977 RVA: 0x006E8A6C File Offset: 0x006E6C6C
 	public override string GetDebugEffectString()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(15, 2);
@@ -63,6 +63,6 @@ public class ModifyFuLuoLuoSpecialEnergy : PeriodExecution
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x0400C377 RID: 50039
+	// Token: 0x0400C720 RID: 50976
 	private int[] NumberParams = Array.Empty<int>();
 }

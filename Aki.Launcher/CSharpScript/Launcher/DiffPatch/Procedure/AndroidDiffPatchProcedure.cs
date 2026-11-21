@@ -9,17 +9,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.DiffPatch.Procedure
 {
-	// Token: 0x02000212 RID: 530
+	// Token: 0x02000217 RID: 535
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class AndroidDiffPatchProcedure : MobileDiffPatchProcedure
 	{
-		// Token: 0x06000DC3 RID: 3523 RVA: 0x00053417 File Offset: 0x00051617
+		// Token: 0x06000E04 RID: 3588 RVA: 0x00055F0B File Offset: 0x0005410B
 		public AndroidDiffPatchProcedure(AppPathMisc pathMisc, HotFixManager viewMgr) : base(pathMisc, viewMgr)
 		{
 		}
 
-		// Token: 0x06000DC4 RID: 3524 RVA: 0x00053424 File Offset: 0x00051624
+		// Token: 0x06000E05 RID: 3589 RVA: 0x00055F18 File Offset: 0x00054118
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -36,7 +36,7 @@ namespace CSharpScript.Launcher.DiffPatch.Procedure
 			return <RequestAndroidPermissions>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000DC5 RID: 3525 RVA: 0x00053468 File Offset: 0x00051668
+		// Token: 0x06000E06 RID: 3590 RVA: 0x00055F5C File Offset: 0x0005415C
 		public UniTask RequestPermission()
 		{
 			AndroidDiffPatchProcedure.<RequestPermission>d__2 <RequestPermission>d__;

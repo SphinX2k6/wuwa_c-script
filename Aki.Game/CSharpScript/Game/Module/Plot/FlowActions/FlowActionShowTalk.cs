@@ -5,10 +5,10 @@ using CSharpScript.Game.Module.Plot.Flow;
 
 namespace CSharpScript.Game.Module.Plot.FlowActions
 {
-	// Token: 0x020050D9 RID: 20697
+	// Token: 0x020040A9 RID: 16553
 	public class FlowActionShowTalk : FlowActionBase
 	{
-		// Token: 0x06034F5C RID: 216924 RVA: 0x00C8B9CC File Offset: 0x00C89BCC
+		// Token: 0x06029E55 RID: 171605 RVA: 0x00BD8CB4 File Offset: 0x00BD6EB4
 		protected override void OnExecute()
 		{
 			this.Context.CurShowTalk = (this.ActionInfo.Params as ShowTalk);
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			}
 		}
 
-		// Token: 0x06034F5D RID: 216925 RVA: 0x00C8BAD0 File Offset: 0x00C89CD0
+		// Token: 0x06029E56 RID: 171606 RVA: 0x00BD8DB8 File Offset: 0x00BD6FB8
 		private void OnExecuteNormalTalk()
 		{
 			ShowTalk inShowTalk = this.ActionInfo.Params as ShowTalk;
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			runner.FlowShowTalk.Start(inShowTalk, context);
 		}
 
-		// Token: 0x06034F5E RID: 216926 RVA: 0x00C8BB10 File Offset: 0x00C89D10
+		// Token: 0x06029E57 RID: 171607 RVA: 0x00BD8DF8 File Offset: 0x00BD6FF8
 		private void OnExecuteSequenceTalk()
 		{
 			ShowTalk showTalk = this.ActionInfo.Params as ShowTalk;
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.Module.Plot.FlowActions
 			runner.FlowSequence.Start(seamlessPlot);
 		}
 
-		// Token: 0x06034F5F RID: 216927 RVA: 0x00C8BB7B File Offset: 0x00C89D7B
+		// Token: 0x06029E58 RID: 171608 RVA: 0x00BD8E63 File Offset: 0x00BD7063
 		protected override void OnBackgroundExecute()
 		{
 			this.OnExecute();

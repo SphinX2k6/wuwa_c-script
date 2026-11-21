@@ -2,10 +2,10 @@
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004681 RID: 18049
+	// Token: 0x020035B2 RID: 13746
 	public class CreateCharacterInputDistribute : InputDistributeSetup
 	{
-		// Token: 0x0602E986 RID: 190854 RVA: 0x00AC9B0C File Offset: 0x00AC7D0C
+		// Token: 0x060230D0 RID: 143568 RVA: 0x009F7840 File Offset: 0x009F5A40
 		public override bool OnRefresh()
 		{
 			if (!UiManager.Instance.IsViewShow(EUiViewName.CreateCharacterView))

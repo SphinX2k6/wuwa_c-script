@@ -2,7 +2,7 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002DDC RID: 11740
+// Token: 0x02002337 RID: 9015
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -12,12 +12,12 @@ using UnrealEngine;
 })]
 public class BulletLogicSummonRandom : BulletLogicController<LogicDataSummonRandom, object>
 {
-	// Token: 0x06018A50 RID: 100944 RVA: 0x0064F42A File Offset: 0x0064D62A
+	// Token: 0x060162FD RID: 90877 RVA: 0x00675566 File Offset: 0x00673766
 	public BulletLogicSummonRandom(LogicDataSummonRandom logicController, Entity bullet) : base(logicController, bullet)
 	{
 	}
 
-	// Token: 0x06018A51 RID: 100945 RVA: 0x0064F434 File Offset: 0x0064D634
+	// Token: 0x060162FE RID: 90878 RVA: 0x00675570 File Offset: 0x00673770
 	[NullableContext(2)]
 	public override void BulletLogicAction(object param = null)
 	{
@@ -29,7 +29,7 @@ public class BulletLogicSummonRandom : BulletLogicController<LogicDataSummonRand
 		CreatureController.Instance.SummonRandomRequest(attacker.Id, this.LogicController.SummonIndex, transform, this.LogicController.SkillId, this.LogicController.IsVisible);
 	}
 
-	// Token: 0x06018A52 RID: 100946 RVA: 0x0064F4B0 File Offset: 0x0064D6B0
+	// Token: 0x060162FF RID: 90879 RVA: 0x006755EC File Offset: 0x006737EC
 	public override void OnBulletDestroy()
 	{
 		if (!this.LogicController.DestroySummonOnDestroy)

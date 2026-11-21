@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001AB0 RID: 6832
+	// Token: 0x02001C49 RID: 7241
 	public class IFocusOnMapMark_SetValue
 	{
-		// Token: 0x04005A37 RID: 23095
+		// Token: 0x04005EA7 RID: 24231
 		public EMapMarkType Type;
 	}
 }

@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 {
-	// Token: 0x02006F04 RID: 28420
+	// Token: 0x02006085 RID: 24709
 	public class DollGrabMachineEndSuccessfulItem : UiPanelBase
 	{
-		// Token: 0x060452EB RID: 283371 RVA: 0x0111D1BC File Offset: 0x0111B3BC
+		// Token: 0x0603B499 RID: 242841 RVA: 0x010C715C File Offset: 0x010C535C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060452EC RID: 283372 RVA: 0x0111D228 File Offset: 0x0111B428
+		// Token: 0x0603B49A RID: 242842 RVA: 0x010C71C8 File Offset: 0x010C53C8
 		protected override void OnBeforeShow()
 		{
 			this.SequencePlayer = new LevelSequencePlayer(this.RootItem);
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 			sequencePlayer.PlayLevelSequenceByName("Start", false, null, false);
 		}
 
-		// Token: 0x040240D9 RID: 147673
+		// Token: 0x0401F38E RID: 127886
 		[Nullable(2)]
 		private LevelSequencePlayer SequencePlayer;
 	}

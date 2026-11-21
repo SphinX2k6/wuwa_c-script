@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000F40 RID: 3904
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200106A RID: 4202
 	public class IDisableTrackAnim
 	{
-		// Token: 0x060056C2 RID: 22210 RVA: 0x000D479C File Offset: 0x000D299C
+		// Token: 0x06005C92 RID: 23698 RVA: 0x000E1160 File Offset: 0x000DF360
 		private IDisableTrackAnim_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060056C3 RID: 22211 RVA: 0x000D47D4 File Offset: 0x000D29D4
+		// Token: 0x06005C93 RID: 23699 RVA: 0x000E1198 File Offset: 0x000DF398
 		public static IDisableTrackAnim Create([Nullable(2)] IDisableTrackAnim instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060056C4 RID: 22212 RVA: 0x000D47E7 File Offset: 0x000D29E7
+		// Token: 0x06005C94 RID: 23700 RVA: 0x000E11AB File Offset: 0x000DF3AB
 		public static IDisableTrackAnim CreateFromSetValue([Nullable(2)] IDisableTrackAnim_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060056C5 RID: 22213 RVA: 0x000D47FA File Offset: 0x000D29FA
+		// Token: 0x06005C95 RID: 23701 RVA: 0x000E11BE File Offset: 0x000DF3BE
 		public IDisableTrackAnim_SetValue ToSetValue()
 		{
 			return new IDisableTrackAnim_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001D02 RID: 7426
-		// (get) Token: 0x060056C6 RID: 22214 RVA: 0x000D4810 File Offset: 0x000D2A10
-		// (set) Token: 0x060056C7 RID: 22215 RVA: 0x000D4871 File Offset: 0x000D2A71
+		// Token: 0x17001EA6 RID: 7846
+		// (get) Token: 0x06005C96 RID: 23702 RVA: 0x000E11D4 File Offset: 0x000DF3D4
+		// (set) Token: 0x06005C97 RID: 23703 RVA: 0x000E1235 File Offset: 0x000DF435
 		[Nullable(2)]
 		public virtual IConditionGroup Condition
 		{
@@ -93,18 +91,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003491 RID: 13457
+		// Token: 0x040037C0 RID: 14272
 		[Nullable(2)]
 		protected IDisableTrackAnim FbInstance;
 
-		// Token: 0x04003492 RID: 13458
+		// Token: 0x040037C1 RID: 14273
 		[Nullable(2)]
 		protected IDisableTrackAnim_SetValue PocoInterface;
 
-		// Token: 0x04003493 RID: 13459
+		// Token: 0x040037C2 RID: 14274
 		private IConditionGroup _ConditionCache;
 
-		// Token: 0x04003494 RID: 13460
+		// Token: 0x040037C3 RID: 14275
 		private bool _ConditionInited;
 	}
 }

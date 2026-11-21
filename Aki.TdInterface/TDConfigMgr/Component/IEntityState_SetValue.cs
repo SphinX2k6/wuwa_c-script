@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000336 RID: 822
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200037D RID: 893
 	public class IEntityState_SetValue
 	{
-		// Token: 0x04000DA4 RID: 3492
+		// Token: 0x04000E8F RID: 3727
 		public string Type;
 
-		// Token: 0x04000DA5 RID: 3493
+		// Token: 0x04000E90 RID: 3728
 		public string State;
 	}
 }

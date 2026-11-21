@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000298 RID: 664
+	// Token: 0x020002DD RID: 733
 	public class ICustomAoizRadius_SetValue
 	{
-		// Token: 0x04000BA7 RID: 2983
+		// Token: 0x04000C8C RID: 3212
 		public int? Up;
 
-		// Token: 0x04000BA8 RID: 2984
+		// Token: 0x04000C8D RID: 3213
 		public int? Down;
 	}
 }

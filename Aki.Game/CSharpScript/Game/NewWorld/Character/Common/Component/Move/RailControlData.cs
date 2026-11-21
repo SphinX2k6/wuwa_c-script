@@ -10,83 +10,83 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 {
-	// Token: 0x020070FA RID: 28922
+	// Token: 0x020063AA RID: 25514
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RailControlData : IRailControlData
 	{
-		// Token: 0x17009CF8 RID: 40184
-		// (get) Token: 0x060469B7 RID: 289207 RVA: 0x011C3993 File Offset: 0x011C1B93
-		// (set) Token: 0x060469B8 RID: 289208 RVA: 0x011C399B File Offset: 0x011C1B9B
+		// Token: 0x17007581 RID: 30081
+		// (get) Token: 0x0603DDB0 RID: 253360 RVA: 0x011F2B47 File Offset: 0x011F0D47
+		// (set) Token: 0x0603DDB1 RID: 253361 RVA: 0x011F2B4F File Offset: 0x011F0D4F
 		public float Damping { get; set; } = 8f;
 
-		// Token: 0x17009CF9 RID: 40185
-		// (get) Token: 0x060469B9 RID: 289209 RVA: 0x011C39A4 File Offset: 0x011C1BA4
-		// (set) Token: 0x060469BA RID: 289210 RVA: 0x011C39AC File Offset: 0x011C1BAC
+		// Token: 0x17007582 RID: 30082
+		// (get) Token: 0x0603DDB2 RID: 253362 RVA: 0x011F2B58 File Offset: 0x011F0D58
+		// (set) Token: 0x0603DDB3 RID: 253363 RVA: 0x011F2B60 File Offset: 0x011F0D60
 		public float MaxAngularVelocity { get; set; } = 3f;
 
-		// Token: 0x17009CFA RID: 40186
-		// (get) Token: 0x060469BB RID: 289211 RVA: 0x011C39B5 File Offset: 0x011C1BB5
-		// (set) Token: 0x060469BC RID: 289212 RVA: 0x011C39BD File Offset: 0x011C1BBD
+		// Token: 0x17007583 RID: 30083
+		// (get) Token: 0x0603DDB4 RID: 253364 RVA: 0x011F2B69 File Offset: 0x011F0D69
+		// (set) Token: 0x0603DDB5 RID: 253365 RVA: 0x011F2B71 File Offset: 0x011F0D71
 		public float MaxLinearVelocity { get; set; }
 
-		// Token: 0x17009CFB RID: 40187
-		// (get) Token: 0x060469BD RID: 289213 RVA: 0x011C39C6 File Offset: 0x011C1BC6
-		// (set) Token: 0x060469BE RID: 289214 RVA: 0x011C39CE File Offset: 0x011C1BCE
+		// Token: 0x17007584 RID: 30084
+		// (get) Token: 0x0603DDB6 RID: 253366 RVA: 0x011F2B7A File Offset: 0x011F0D7A
+		// (set) Token: 0x0603DDB7 RID: 253367 RVA: 0x011F2B82 File Offset: 0x011F0D82
 		public bool IgnoreMaxAngle { get; set; }
 
-		// Token: 0x17009CFC RID: 40188
-		// (get) Token: 0x060469BF RID: 289215 RVA: 0x011C39D7 File Offset: 0x011C1BD7
-		// (set) Token: 0x060469C0 RID: 289216 RVA: 0x011C39DF File Offset: 0x011C1BDF
+		// Token: 0x17007585 RID: 30085
+		// (get) Token: 0x0603DDB8 RID: 253368 RVA: 0x011F2B8B File Offset: 0x011F0D8B
+		// (set) Token: 0x0603DDB9 RID: 253369 RVA: 0x011F2B93 File Offset: 0x011F0D93
 		public float RegressionSpeed { get; set; } = 16f;
 
-		// Token: 0x17009CFD RID: 40189
-		// (get) Token: 0x060469C1 RID: 289217 RVA: 0x011C39E8 File Offset: 0x011C1BE8
-		// (set) Token: 0x060469C2 RID: 289218 RVA: 0x011C39F0 File Offset: 0x011C1BF0
+		// Token: 0x17007586 RID: 30086
+		// (get) Token: 0x0603DDBA RID: 253370 RVA: 0x011F2B9C File Offset: 0x011F0D9C
+		// (set) Token: 0x0603DDBB RID: 253371 RVA: 0x011F2BA4 File Offset: 0x011F0DA4
 		public float InputCoefficient { get; set; } = 20f;
 
-		// Token: 0x17009CFE RID: 40190
-		// (get) Token: 0x060469C3 RID: 289219 RVA: 0x011C39F9 File Offset: 0x011C1BF9
-		// (set) Token: 0x060469C4 RID: 289220 RVA: 0x011C3A01 File Offset: 0x011C1C01
+		// Token: 0x17007587 RID: 30087
+		// (get) Token: 0x0603DDBC RID: 253372 RVA: 0x011F2BAD File Offset: 0x011F0DAD
+		// (set) Token: 0x0603DDBD RID: 253373 RVA: 0x011F2BB5 File Offset: 0x011F0DB5
 		public float Radius { get; set; }
 
-		// Token: 0x17009CFF RID: 40191
-		// (get) Token: 0x060469C5 RID: 289221 RVA: 0x011C3A0A File Offset: 0x011C1C0A
-		// (set) Token: 0x060469C6 RID: 289222 RVA: 0x011C3A12 File Offset: 0x011C1C12
+		// Token: 0x17007588 RID: 30088
+		// (get) Token: 0x0603DDBE RID: 253374 RVA: 0x011F2BBE File Offset: 0x011F0DBE
+		// (set) Token: 0x0603DDBF RID: 253375 RVA: 0x011F2BC6 File Offset: 0x011F0DC6
 		public float MaxAngle { get; set; }
 
-		// Token: 0x17009D00 RID: 40192
-		// (get) Token: 0x060469C7 RID: 289223 RVA: 0x011C3A1B File Offset: 0x011C1C1B
-		// (set) Token: 0x060469C8 RID: 289224 RVA: 0x011C3A23 File Offset: 0x011C1C23
+		// Token: 0x17007589 RID: 30089
+		// (get) Token: 0x0603DDC0 RID: 253376 RVA: 0x011F2BCF File Offset: 0x011F0DCF
+		// (set) Token: 0x0603DDC1 RID: 253377 RVA: 0x011F2BD7 File Offset: 0x011F0DD7
 		public bool InnerArc { get; set; } = true;
 
-		// Token: 0x17009D01 RID: 40193
-		// (get) Token: 0x060469C9 RID: 289225 RVA: 0x011C3A2C File Offset: 0x011C1C2C
+		// Token: 0x1700758A RID: 30090
+		// (get) Token: 0x0603DDC2 RID: 253378 RVA: 0x011F2BE0 File Offset: 0x011F0DE0
 		public Vector DefaultLocation { get; } = Vector.Create();
 
-		// Token: 0x17009D02 RID: 40194
-		// (get) Token: 0x060469CA RID: 289226 RVA: 0x011C3A34 File Offset: 0x011C1C34
+		// Token: 0x1700758B RID: 30091
+		// (get) Token: 0x0603DDC3 RID: 253379 RVA: 0x011F2BE8 File Offset: 0x011F0DE8
 		public Vector SplineForwardVector { get; } = Vector.Create();
 
-		// Token: 0x17009D03 RID: 40195
-		// (get) Token: 0x060469CB RID: 289227 RVA: 0x011C3A3C File Offset: 0x011C1C3C
+		// Token: 0x1700758C RID: 30092
+		// (get) Token: 0x0603DDC4 RID: 253380 RVA: 0x011F2BF0 File Offset: 0x011F0DF0
 		public Vector ToCenterVector { get; } = Vector.Create();
 
-		// Token: 0x17009D04 RID: 40196
-		// (get) Token: 0x060469CC RID: 289228 RVA: 0x011C3A44 File Offset: 0x011C1C44
+		// Token: 0x1700758D RID: 30093
+		// (get) Token: 0x0603DDC5 RID: 253381 RVA: 0x011F2BF8 File Offset: 0x011F0DF8
 		public Vector CenterLocation { get; } = Vector.Create();
 
-		// Token: 0x17009D05 RID: 40197
-		// (get) Token: 0x060469CD RID: 289229 RVA: 0x011C3A4C File Offset: 0x011C1C4C
-		// (set) Token: 0x060469CE RID: 289230 RVA: 0x011C3A54 File Offset: 0x011C1C54
+		// Token: 0x1700758E RID: 30094
+		// (get) Token: 0x0603DDC6 RID: 253382 RVA: 0x011F2C00 File Offset: 0x011F0E00
+		// (set) Token: 0x0603DDC7 RID: 253383 RVA: 0x011F2C08 File Offset: 0x011F0E08
 		public float Rad { get; set; }
 
-		// Token: 0x17009D06 RID: 40198
-		// (get) Token: 0x060469CF RID: 289231 RVA: 0x011C3A5D File Offset: 0x011C1C5D
-		// (set) Token: 0x060469D0 RID: 289232 RVA: 0x011C3A65 File Offset: 0x011C1C65
+		// Token: 0x1700758F RID: 30095
+		// (get) Token: 0x0603DDC8 RID: 253384 RVA: 0x011F2C11 File Offset: 0x011F0E11
+		// (set) Token: 0x0603DDC9 RID: 253385 RVA: 0x011F2C19 File Offset: 0x011F0E19
 		public float AngularVelocity { get; set; }
 
-		// Token: 0x060469D1 RID: 289233 RVA: 0x011C3A70 File Offset: 0x011C1C70
+		// Token: 0x0603DDCA RID: 253386 RVA: 0x011F2C24 File Offset: 0x011F0E24
 		public RailControlData(BP_RailSlideConfig_C asset, int pbDataId = 0)
 		{
 			this.Damping = asset.横向控制参数.阻尼;
@@ -98,12 +98,12 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.PbDataId = pbDataId;
 		}
 
-		// Token: 0x17009D07 RID: 40199
-		// (get) Token: 0x060469D2 RID: 289234 RVA: 0x011C3B84 File Offset: 0x011C1D84
-		// (set) Token: 0x060469D3 RID: 289235 RVA: 0x011C3B8C File Offset: 0x011C1D8C
+		// Token: 0x17007590 RID: 30096
+		// (get) Token: 0x0603DDCB RID: 253387 RVA: 0x011F2D38 File Offset: 0x011F0F38
+		// (set) Token: 0x0603DDCC RID: 253388 RVA: 0x011F2D40 File Offset: 0x011F0F40
 		public float HalfHeight { get; set; }
 
-		// Token: 0x060469D4 RID: 289236 RVA: 0x011C3B98 File Offset: 0x011C1D98
+		// Token: 0x0603DDCD RID: 253389 RVA: 0x011F2D4C File Offset: 0x011F0F4C
 		public void InitSplinePoints(bool innerArc, List<ISwordRiderRailSplinePoint> points, float halfHeight)
 		{
 			this.LastIndex = 0;
@@ -126,13 +126,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			this.HalfHeight = halfHeight;
 		}
 
-		// Token: 0x060469D5 RID: 289237 RVA: 0x011C3CCC File Offset: 0x011C1ECC
+		// Token: 0x0603DDCE RID: 253390 RVA: 0x011F2E80 File Offset: 0x011F1080
 		public float GetLimitLinearVelocity()
 		{
 			return Math.Max(1f, Math.Min(this.MaxLinearVelocity, this.MaxAngularVelocity * this.Radius));
 		}
 
-		// Token: 0x060469D6 RID: 289238 RVA: 0x011C3CF0 File Offset: 0x011C1EF0
+		// Token: 0x0603DDCF RID: 253391 RVA: 0x011F2EA4 File Offset: 0x011F10A4
 		public void UpdateRadiusAndAngle(SplineCurve splineCurve, float currentDistance)
 		{
 			int splinePointsNum = splineCurve.GetSplinePointsNum();
@@ -203,7 +203,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060469D7 RID: 289239 RVA: 0x011C3F5C File Offset: 0x011C215C
+		// Token: 0x0603DDD0 RID: 253392 RVA: 0x011F3110 File Offset: 0x011F1310
 		public void UpdateSplineLocation(Transform transform, Quat gravity)
 		{
 			if (GlobalData.IsPlayInEditor)
@@ -236,7 +236,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060469D8 RID: 289240 RVA: 0x011C40C8 File Offset: 0x011C22C8
+		// Token: 0x0603DDD1 RID: 253393 RVA: 0x011F327C File Offset: 0x011F147C
 		public void CalculateRad(float delta, float input)
 		{
 			CharacterRailSlideController.Instance.StepDampedOscillator(this, input, delta);
@@ -246,7 +246,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060469D9 RID: 289241 RVA: 0x011C40E8 File Offset: 0x011C22E8
+		// Token: 0x0603DDD2 RID: 253394 RVA: 0x011F329C File Offset: 0x011F149C
 		public void CalculateLocation(float delta, float input, Vector outOffsetLocation, Rotator outRotator)
 		{
 			outOffsetLocation.Reset();
@@ -279,7 +279,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x060469DA RID: 289242 RVA: 0x011C423C File Offset: 0x011C243C
+		// Token: 0x0603DDD3 RID: 253395 RVA: 0x011F33F0 File Offset: 0x011F15F0
 		private void DebugCircle(Vector center, Vector xAxis, Vector zAxis, float radius, FLinearColor color)
 		{
 			if (GlobalData.IsPlayInEditor && this.Debug)
@@ -291,27 +291,27 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 			}
 		}
 
-		// Token: 0x040250C8 RID: 151752
+		// Token: 0x04020D5D RID: 134493
 		private readonly Quat DefaultQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-		// Token: 0x040250D0 RID: 151760
+		// Token: 0x04020D65 RID: 134501
 		private readonly int PbDataId;
 
-		// Token: 0x040250D1 RID: 151761
+		// Token: 0x04020D66 RID: 134502
 		public readonly bool Debug;
 
-		// Token: 0x040250D2 RID: 151762
+		// Token: 0x04020D67 RID: 134503
 		private readonly Vector TempVector = Vector.Create();
 
-		// Token: 0x040250D4 RID: 151764
+		// Token: 0x04020D69 RID: 134505
 		[Nullable(2)]
 		private List<float> PointsRadius;
 
-		// Token: 0x040250D5 RID: 151765
+		// Token: 0x04020D6A RID: 134506
 		[Nullable(2)]
 		private List<float> PointsMaxAngle;
 
-		// Token: 0x040250D6 RID: 151766
+		// Token: 0x04020D6B RID: 134507
 		[Nullable(new byte[]
 		{
 			2,
@@ -319,7 +319,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Move
 		})]
 		private List<Quat> PointsQuat;
 
-		// Token: 0x040250D7 RID: 151767
+		// Token: 0x04020D6C RID: 134508
 		private int LastIndex;
 	}
 }

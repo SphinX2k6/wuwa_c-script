@@ -8,17 +8,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006C9B RID: 27803
+	// Token: 0x02005E15 RID: 24085
 	public class LevelConditionCheckGameplayClosedSegment : LevelConditionBase
 	{
-		// Token: 0x060445C6 RID: 280006 RVA: 0x010DB7E2 File Offset: 0x010D99E2
+		// Token: 0x0603A720 RID: 239392 RVA: 0x0108578E File Offset: 0x0108398E
 		[NullableContext(1)]
 		public override bool Check(Condition inConditionInfo, [Nullable(2)] AActor inTrigger, params object[] eventArgs)
 		{
 			return this.IsInNormalDungeon(inConditionInfo) || this.FindRunningTimerTree() != null;
 		}
 
-		// Token: 0x060445C7 RID: 280007 RVA: 0x010DB7FC File Offset: 0x010D99FC
+		// Token: 0x0603A721 RID: 239393 RVA: 0x010857A8 File Offset: 0x010839A8
 		private bool IsInNormalDungeon(Condition inConditionInfo)
 		{
 			int instanceId = CreatureModel.Instance.GetInstanceId();
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			return instanceDungeon != null && instanceDungeon.Value.InstType == 2;
 		}
 
-		// Token: 0x060445C8 RID: 280008 RVA: 0x010DB850 File Offset: 0x010D9A50
+		// Token: 0x0603A722 RID: 239394 RVA: 0x010857FC File Offset: 0x010839FC
 		[NullableContext(2)]
 		private unsafe BaseBehaviorTree FindRunningTimerTree()
 		{

@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005839 RID: 22585
+	// Token: 0x02005E40 RID: 24128
 	public class IRefreshSingleT
 	{
-		// Token: 0x1700A8B1 RID: 43185
-		// (get) Token: 0x06025FCD RID: 155597 RVA: 0x0053CA5F File Offset: 0x0053AC5F
-		// (set) Token: 0x06025FCE RID: 155598 RVA: 0x0053CA67 File Offset: 0x0053AC67
+		// Token: 0x1700B1D5 RID: 45525
+		// (get) Token: 0x060284ED RID: 165101 RVA: 0x00582BEB File Offset: 0x00580DEB
+		// (set) Token: 0x060284EE RID: 165102 RVA: 0x00582BF3 File Offset: 0x00580DF3
 		public int RefreshInterval { get; set; }
 
-		// Token: 0x1700A8B2 RID: 43186
-		// (get) Token: 0x06025FCF RID: 155599 RVA: 0x0053CA70 File Offset: 0x0053AC70
-		// (set) Token: 0x06025FD0 RID: 155600 RVA: 0x0053CA78 File Offset: 0x0053AC78
+		// Token: 0x1700B1D6 RID: 45526
+		// (get) Token: 0x060284EF RID: 165103 RVA: 0x00582BFC File Offset: 0x00580DFC
+		// (set) Token: 0x060284F0 RID: 165104 RVA: 0x00582C04 File Offset: 0x00580E04
 		public int MaxRefreshTimes { get; set; }
 
-		// Token: 0x1700A8B3 RID: 43187
-		// (get) Token: 0x06025FD1 RID: 155601 RVA: 0x0053CA81 File Offset: 0x0053AC81
-		// (set) Token: 0x06025FD2 RID: 155602 RVA: 0x0053CA89 File Offset: 0x0053AC89
+		// Token: 0x1700B1D7 RID: 45527
+		// (get) Token: 0x060284F1 RID: 165105 RVA: 0x00582C0D File Offset: 0x00580E0D
+		// (set) Token: 0x060284F2 RID: 165106 RVA: 0x00582C15 File Offset: 0x00580E15
 		public bool DelayRefresh { get; set; }
 
-		// Token: 0x1700A8B4 RID: 43188
-		// (get) Token: 0x06025FD3 RID: 155603 RVA: 0x0053CA92 File Offset: 0x0053AC92
-		// (set) Token: 0x06025FD4 RID: 155604 RVA: 0x0053CA9A File Offset: 0x0053AC9A
+		// Token: 0x1700B1D8 RID: 45528
+		// (get) Token: 0x060284F3 RID: 165107 RVA: 0x00582C1E File Offset: 0x00580E1E
+		// (set) Token: 0x060284F4 RID: 165108 RVA: 0x00582C26 File Offset: 0x00580E26
 		public ITempleGuidT TemplateGuid { get; set; }
 
-		// Token: 0x06025FD5 RID: 155605 RVA: 0x0053CAA3 File Offset: 0x0053ACA3
+		// Token: 0x060284F5 RID: 165109 RVA: 0x00582C2F File Offset: 0x00580E2F
 		public IRefreshSingleT()
 		{
 			this.RefreshInterval = 0;

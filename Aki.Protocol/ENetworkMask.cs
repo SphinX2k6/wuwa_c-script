@@ -5,9 +5,9 @@ namespace Aki.Protocol
 	// Token: 0x0200000E RID: 14
 	public enum ENetworkMask
 	{
-		// Token: 0x04001EC3 RID: 7875
+		// Token: 0x04001F19 RID: 7961
 		False,
-		// Token: 0x04001EC4 RID: 7876
+		// Token: 0x04001F1A RID: 7962
 		True = 4
 	}
 }

@@ -3,15 +3,15 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004969 RID: 18793
+	// Token: 0x020038E1 RID: 14561
 	public class GamepadCheckComponent : GamepadInteractComponentBase
 	{
-		// Token: 0x0603104B RID: 200779 RVA: 0x00B61574 File Offset: 0x00B5F774
+		// Token: 0x06025B7B RID: 154491 RVA: 0x00A9C454 File Offset: 0x00A9A654
 		public GamepadCheckComponent(int hotKeyMapIndex) : base(hotKeyMapIndex)
 		{
 		}
 
-		// Token: 0x0603104C RID: 200780 RVA: 0x00B61580 File Offset: 0x00B5F780
+		// Token: 0x06025B7C RID: 154492 RVA: 0x00A9C460 File Offset: 0x00A9A660
 		protected override void OnPress(HotKeyMap config)
 		{
 			if (!UiNavigationNewController.Instance.IsNavigationMousePositionDragging() && this.IsUseDrag)
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			UiNavigationNewController.Instance.SimulationPointerTrigger(true);
 		}
 
-		// Token: 0x0603104D RID: 200781 RVA: 0x00B615E6 File Offset: 0x00B5F7E6
+		// Token: 0x06025B7D RID: 154493 RVA: 0x00A9C4C6 File Offset: 0x00A9A6C6
 		protected override void OnRelease(HotKeyMap config)
 		{
 			if (this.IsUseDrag)
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			UiNavigationNewController.Instance.NotifyNavigationMousePositionDragState(false);
 		}
 
-		// Token: 0x0603104E RID: 200782 RVA: 0x00B61607 File Offset: 0x00B5F807
+		// Token: 0x06025B7E RID: 154494 RVA: 0x00A9C4E7 File Offset: 0x00A9A6E7
 		protected override void OnRefreshByControllerChange()
 		{
 			if (this.IsUseDrag)
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x0401A490 RID: 107664
+		// Token: 0x04014D03 RID: 85251
 		private bool IsUseDrag;
 	}
 }

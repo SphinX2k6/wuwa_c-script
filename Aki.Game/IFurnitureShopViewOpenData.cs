@@ -1,35 +1,35 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000F8A RID: 3978
+// Token: 0x0200043F RID: 1087
 [NullableContext(1)]
 public interface IFurnitureShopViewOpenData
 {
-	// Token: 0x170007EA RID: 2026
-	// (get) Token: 0x06006607 RID: 26119
+	// Token: 0x1700080C RID: 2060
+	// (get) Token: 0x0600399F RID: 14751
 	int ShopId { get; }
 
-	// Token: 0x170007EB RID: 2027
-	// (get) Token: 0x06006608 RID: 26120
+	// Token: 0x1700080D RID: 2061
+	// (get) Token: 0x060039A0 RID: 14752
 	int NpcEntityId { get; }
 
-	// Token: 0x170007EC RID: 2028
-	// (get) Token: 0x06006609 RID: 26121
+	// Token: 0x1700080E RID: 2062
+	// (get) Token: 0x060039A1 RID: 14753
 	string NpcName { get; }
 
-	// Token: 0x170007ED RID: 2029
-	// (get) Token: 0x0600660A RID: 26122
+	// Token: 0x1700080F RID: 2063
+	// (get) Token: 0x060039A2 RID: 14754
 	string NpcDesc { get; }
 
-	// Token: 0x170007EE RID: 2030
-	// (get) Token: 0x0600660B RID: 26123
+	// Token: 0x17000810 RID: 2064
+	// (get) Token: 0x060039A3 RID: 14755
 	string NpcStartMontagePath { get; }
 
-	// Token: 0x170007EF RID: 2031
-	// (get) Token: 0x0600660C RID: 26124
+	// Token: 0x17000811 RID: 2065
+	// (get) Token: 0x060039A4 RID: 14756
 	int GoodsId { get; }
 
-	// Token: 0x170007F0 RID: 2032
-	// (get) Token: 0x0600660D RID: 26125
+	// Token: 0x17000812 RID: 2066
+	// (get) Token: 0x060039A5 RID: 14757
 	bool UseSpareShopNpc { get; }
 }

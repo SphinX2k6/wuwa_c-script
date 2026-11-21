@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001246 RID: 4678
+	// Token: 0x02001386 RID: 4998
 	public static class EGradingSystemVarTypeExtensions
 	{
-		// Token: 0x060069E2 RID: 27106 RVA: 0x000FDA04 File Offset: 0x000FBC04
+		// Token: 0x06007035 RID: 28725 RVA: 0x0010B630 File Offset: 0x00109830
 		public static string ToEnumString(this EGradingSystemVarType value)
 		{
 			string result;
@@ -30,7 +30,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060069E3 RID: 27107 RVA: 0x000FDA58 File Offset: 0x000FBC58
+		// Token: 0x06007036 RID: 28726 RVA: 0x0010B684 File Offset: 0x00109884
 		public static EGradingSystemVarType FromString(string name)
 		{
 			EGradingSystemVarType result;
@@ -41,7 +41,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x060069E4 RID: 27108 RVA: 0x000FDA84 File Offset: 0x000FBC84
+		// Token: 0x06007037 RID: 28727 RVA: 0x0010B6B0 File Offset: 0x001098B0
 		public static bool TryFromString(string name, out EGradingSystemVarType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -73,7 +73,7 @@ namespace Aki.TDConfigMgr.Quest
 			return true;
 		}
 
-		// Token: 0x060069E5 RID: 27109 RVA: 0x000FDAEC File Offset: 0x000FBCEC
+		// Token: 0x06007038 RID: 28728 RVA: 0x0010B718 File Offset: 0x00109918
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -85,7 +85,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060069E6 RID: 27110 RVA: 0x000FDB14 File Offset: 0x000FBD14
+		// Token: 0x06007039 RID: 28729 RVA: 0x0010B740 File Offset: 0x00109940
 		public static EGradingSystemVarType[] GetValues()
 		{
 			return new EGradingSystemVarType[]
@@ -97,7 +97,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x060069E7 RID: 27111 RVA: 0x000FDB27 File Offset: 0x000FBD27
+		// Token: 0x0600703A RID: 28730 RVA: 0x0010B753 File Offset: 0x00109953
 		public static string[] GetNames()
 		{
 			return new string[]

@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006DB3 RID: 28083
+	// Token: 0x0200752E RID: 29998
 	public enum IProgramSpecialConfigBase_Union : byte
 	{
-		// Token: 0x0401178A RID: 71562
+		// Token: 0x04012706 RID: 75526
 		NONE,
-		// Token: 0x0401178B RID: 71563
+		// Token: 0x04012707 RID: 75527
 		IProgramSpecialConfigBase,
-		// Token: 0x0401178C RID: 71564
+		// Token: 0x04012708 RID: 75528
 		IMp4UiReplaceMaterial
 	}
 }

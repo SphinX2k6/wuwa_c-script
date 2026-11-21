@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Common
 {
-	// Token: 0x02005DAC RID: 23980
+	// Token: 0x020063E9 RID: 25577
 	public struct IFollowShooterAbilityType : IFlatbufferObject
 	{
-		// Token: 0x1700B397 RID: 45975
-		// (get) Token: 0x060290B6 RID: 168118 RVA: 0x005A2D04 File Offset: 0x005A0F04
+		// Token: 0x1700BCFD RID: 48381
+		// (get) Token: 0x0602B740 RID: 177984 RVA: 0x005EBA34 File Offset: 0x005E9C34
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x060290B7 RID: 168119 RVA: 0x005A2D11 File Offset: 0x005A0F11
+		// Token: 0x0602B741 RID: 177985 RVA: 0x005EBA41 File Offset: 0x005E9C41
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060290B8 RID: 168120 RVA: 0x005A2D18 File Offset: 0x005A0F18
+		// Token: 0x0602B742 RID: 177986 RVA: 0x005EBA48 File Offset: 0x005E9C48
 		public static IFollowShooterAbilityType GetRootAsIFollowShooterAbilityType(ByteBuffer _bb)
 		{
 			return IFollowShooterAbilityType.GetRootAsIFollowShooterAbilityType(_bb, default(IFollowShooterAbilityType));
 		}
 
-		// Token: 0x060290B9 RID: 168121 RVA: 0x005A2D34 File Offset: 0x005A0F34
+		// Token: 0x0602B743 RID: 177987 RVA: 0x005EBA64 File Offset: 0x005E9C64
 		public static IFollowShooterAbilityType GetRootAsIFollowShooterAbilityType(ByteBuffer _bb, IFollowShooterAbilityType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060290BA RID: 168122 RVA: 0x005A2D51 File Offset: 0x005A0F51
+		// Token: 0x0602B744 RID: 177988 RVA: 0x005EBA81 File Offset: 0x005E9C81
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060290BB RID: 168123 RVA: 0x005A2D60 File Offset: 0x005A0F60
+		// Token: 0x0602B745 RID: 177989 RVA: 0x005EBA90 File Offset: 0x005E9C90
 		public IFollowShooterAbilityType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B398 RID: 45976
-		// (get) Token: 0x060290BC RID: 168124 RVA: 0x005A2D70 File Offset: 0x005A0F70
+		// Token: 0x1700BCFE RID: 48382
+		// (get) Token: 0x0602B746 RID: 177990 RVA: 0x005EBAA0 File Offset: 0x005E9CA0
 		public EFollowShooterType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			}
 		}
 
-		// Token: 0x060290BD RID: 168125 RVA: 0x005A2DAC File Offset: 0x005A0FAC
+		// Token: 0x0602B747 RID: 177991 RVA: 0x005EBADC File Offset: 0x005E9CDC
 		public static Offset<IFollowShooterAbilityType> CreateIFollowShooterAbilityType(FlatBufferBuilder builder, EFollowShooterType Type = EFollowShooterType.JellyFish)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IFollowShooterAbilityType.EndIFollowShooterAbilityType(builder);
 		}
 
-		// Token: 0x060290BE RID: 168126 RVA: 0x005A2DC2 File Offset: 0x005A0FC2
+		// Token: 0x0602B748 RID: 177992 RVA: 0x005EBAF2 File Offset: 0x005E9CF2
 		public static void StartIFollowShooterAbilityType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x060290BF RID: 168127 RVA: 0x005A2DCB File Offset: 0x005A0FCB
+		// Token: 0x0602B749 RID: 177993 RVA: 0x005EBAFB File Offset: 0x005E9CFB
 		public static void AddType(FlatBufferBuilder builder, EFollowShooterType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060290C0 RID: 168128 RVA: 0x005A2DD6 File Offset: 0x005A0FD6
+		// Token: 0x0602B74A RID: 177994 RVA: 0x005EBB06 File Offset: 0x005E9D06
 		public static Offset<IFollowShooterAbilityType> EndIFollowShooterAbilityType(FlatBufferBuilder builder)
 		{
 			return new Offset<IFollowShooterAbilityType>(builder.EndTable());
 		}
 
-		// Token: 0x060290C1 RID: 168129 RVA: 0x005A2DE4 File Offset: 0x005A0FE4
+		// Token: 0x0602B74B RID: 177995 RVA: 0x005EBB14 File Offset: 0x005E9D14
 		public IFollowShooterAbilityTypeT UnPack()
 		{
 			IFollowShooterAbilityTypeT followShooterAbilityTypeT = new IFollowShooterAbilityTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return followShooterAbilityTypeT;
 		}
 
-		// Token: 0x060290C2 RID: 168130 RVA: 0x005A2DFF File Offset: 0x005A0FFF
+		// Token: 0x0602B74C RID: 177996 RVA: 0x005EBB2F File Offset: 0x005E9D2F
 		public void UnPackTo(IFollowShooterAbilityTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x060290C3 RID: 168131 RVA: 0x005A2E10 File Offset: 0x005A1010
+		// Token: 0x0602B74D RID: 177997 RVA: 0x005EBB40 File Offset: 0x005E9D40
 		public static Offset<IFollowShooterAbilityType> Pack(FlatBufferBuilder builder, IFollowShooterAbilityTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Common
 			return IFollowShooterAbilityType.CreateIFollowShooterAbilityType(builder, _o.Type);
 		}
 
-		// Token: 0x0400F787 RID: 63367
+		// Token: 0x040104E2 RID: 66786
 		private Table __p;
 	}
 }

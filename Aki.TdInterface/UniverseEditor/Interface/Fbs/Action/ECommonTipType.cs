@@ -2,72 +2,82 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F43 RID: 24387
+	// Token: 0x02006587 RID: 25991
 	public enum ECommonTipType : byte
 	{
-		// Token: 0x0400FCAA RID: 64682
+		// Token: 0x04010A21 RID: 68129
 		ChallengeCondition,
-		// Token: 0x0400FCAB RID: 64683
+		// Token: 0x04010A22 RID: 68130
 		ChallengeSuccess = 3,
-		// Token: 0x0400FCAC RID: 64684
+		// Token: 0x04010A23 RID: 68131
 		ChallengeFail,
-		// Token: 0x0400FCAD RID: 64685
+		// Token: 0x04010A24 RID: 68132
 		ReachChallenge,
-		// Token: 0x0400FCAE RID: 64686
+		// Token: 0x04010A25 RID: 68133
 		TriggerDelegation,
-		// Token: 0x0400FCAF RID: 64687
+		// Token: 0x04010A26 RID: 68134
 		MissionComplete,
-		// Token: 0x0400FCB0 RID: 64688
+		// Token: 0x04010A27 RID: 68135
 		GeneralFloatingTip = 9,
-		// Token: 0x0400FCB1 RID: 64689
+		// Token: 0x04010A28 RID: 68136
 		TipId,
-		// Token: 0x0400FCB2 RID: 64690
+		// Token: 0x04010A29 RID: 68137
 		PrepareCountdown,
-		// Token: 0x0400FCB3 RID: 64691
+		// Token: 0x04010A2A RID: 68138
 		EnterInRange,
-		// Token: 0x0400FCB4 RID: 64692
+		// Token: 0x04010A2B RID: 68139
 		FirstComplete,
-		// Token: 0x0400FCB5 RID: 64693
+		// Token: 0x04010A2C RID: 68140
 		RemainStarWarning,
-		// Token: 0x0400FCB6 RID: 64694
+		// Token: 0x04010A2D RID: 68141
 		DreamlessWarning,
-		// Token: 0x0400FCB7 RID: 64695
+		// Token: 0x04010A2E RID: 68142
 		PunishReport,
-		// Token: 0x0400FCB8 RID: 64696
+		// Token: 0x04010A2F RID: 68143
 		BlackCatWarning,
-		// Token: 0x0400FCB9 RID: 64697
+		// Token: 0x04010A30 RID: 68144
 		WhiteCatWarning,
-		// Token: 0x0400FCBA RID: 64698
+		// Token: 0x04010A31 RID: 68145
 		SlashAndTowerTip,
-		// Token: 0x0400FCBB RID: 64699
+		// Token: 0x04010A32 RID: 68146
 		BadBuKingChallengeTip,
-		// Token: 0x0400FCBC RID: 64700
+		// Token: 0x04010A33 RID: 68147
 		MoraleAreaTip,
-		// Token: 0x0400FCBD RID: 64701
+		// Token: 0x04010A34 RID: 68148
 		NightmareLord,
-		// Token: 0x0400FCBE RID: 64702
+		// Token: 0x04010A35 RID: 68149
 		NightmareSpawnPoint,
-		// Token: 0x0400FCBF RID: 64703
+		// Token: 0x04010A36 RID: 68150
 		GreatSwordChallenge,
-		// Token: 0x0400FCC0 RID: 64704
+		// Token: 0x04010A37 RID: 68151
 		TrapDefenseTip,
-		// Token: 0x0400FCC1 RID: 64705
+		// Token: 0x04010A38 RID: 68152
 		PhotographicTip,
-		// Token: 0x0400FCC2 RID: 64706
+		// Token: 0x04010A39 RID: 68153
 		VisionSettlement,
-		// Token: 0x0400FCC3 RID: 64707
+		// Token: 0x04010A3A RID: 68154
 		VisionSettlementHard,
-		// Token: 0x0400FCC4 RID: 64708
+		// Token: 0x04010A3B RID: 68155
 		Flipper,
-		// Token: 0x0400FCC5 RID: 64709
+		// Token: 0x04010A3C RID: 68156
 		MissionCompleteNew,
-		// Token: 0x0400FCC6 RID: 64710
+		// Token: 0x04010A3D RID: 68157
 		SheriffStartTrack,
-		// Token: 0x0400FCC7 RID: 64711
+		// Token: 0x04010A3E RID: 68158
 		SheriffCriminalArrested,
-		// Token: 0x0400FCC8 RID: 64712
+		// Token: 0x04010A3F RID: 68159
 		SheriffCashSettlement,
-		// Token: 0x0400FCC9 RID: 64713
-		SwordIntentTip
+		// Token: 0x04010A40 RID: 68160
+		SwordIntentTip,
+		// Token: 0x04010A41 RID: 68161
+		RedNameMonster,
+		// Token: 0x04010A42 RID: 68162
+		RoleTowerStrongEnemyWarning,
+		// Token: 0x04010A43 RID: 68163
+		TeachAutoShowStart,
+		// Token: 0x04010A44 RID: 68164
+		TeachAutoShowEnd,
+		// Token: 0x04010A45 RID: 68165
+		FrequencyDetectionTip
 	}
 }

@@ -3,15 +3,15 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200158D RID: 5517
+	// Token: 0x020016EC RID: 5868
 	[EnumExtensions]
 	public enum EAvgPlayRoleActionType
 	{
-		// Token: 0x0400495E RID: 18782
+		// Token: 0x04004D10 RID: 19728
 		Enter,
-		// Token: 0x0400495F RID: 18783
+		// Token: 0x04004D11 RID: 19729
 		GroupDialog,
-		// Token: 0x04004960 RID: 18784
+		// Token: 0x04004D12 RID: 19730
 		Exit
 	}
 }

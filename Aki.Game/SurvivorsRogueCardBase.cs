@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002AD1 RID: 10961
+// Token: 0x0200204D RID: 8269
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsRogueCardBase : UiPanelBase
 {
-	// Token: 0x06016CCC RID: 93388 RVA: 0x005CA23C File Offset: 0x005C843C
+	// Token: 0x060146FD RID: 83709 RVA: 0x005F6D90 File Offset: 0x005F4F90
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,7 +39,7 @@ public class SurvivorsRogueCardBase : UiPanelBase
 		};
 	}
 
-	// Token: 0x06016CCD RID: 93389 RVA: 0x005CA3C8 File Offset: 0x005C85C8
+	// Token: 0x060146FE RID: 83710 RVA: 0x005F6F1C File Offset: 0x005F511C
 	protected override void OnStart()
 	{
 		base.GetText(10).SetUIActive(false);
@@ -53,13 +53,13 @@ public class SurvivorsRogueCardBase : UiPanelBase
 		this.AddEvents();
 	}
 
-	// Token: 0x06016CCE RID: 93390 RVA: 0x005CA417 File Offset: 0x005C8617
+	// Token: 0x060146FF RID: 83711 RVA: 0x005F6F6B File Offset: 0x005F516B
 	protected override void OnBeforeDestroy()
 	{
 		this.RemoveEvents();
 	}
 
-	// Token: 0x06016CCF RID: 93391 RVA: 0x005CA420 File Offset: 0x005C8620
+	// Token: 0x06014700 RID: 83712 RVA: 0x005F6F74 File Offset: 0x005F5174
 	public UniTask Apply(SurvivorsRogueItemCard data)
 	{
 		SurvivorsRogueCardBase.<Apply>d__12 <Apply>d__;
@@ -71,7 +71,7 @@ public class SurvivorsRogueCardBase : UiPanelBase
 		return <Apply>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016CD0 RID: 93392 RVA: 0x005CA46C File Offset: 0x005C866C
+	// Token: 0x06014701 RID: 83713 RVA: 0x005F6FC0 File Offset: 0x005F51C0
 	public UniTask Apply(SurvivorsRogueCharacterCard data)
 	{
 		SurvivorsRogueCardBase.<Apply>d__13 <Apply>d__;
@@ -83,7 +83,7 @@ public class SurvivorsRogueCardBase : UiPanelBase
 		return <Apply>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016CD1 RID: 93393 RVA: 0x005CA4B8 File Offset: 0x005C86B8
+	// Token: 0x06014702 RID: 83714 RVA: 0x005F700C File Offset: 0x005F520C
 	public UniTask Apply(SurvivorsRogueWeaponCard data)
 	{
 		SurvivorsRogueCardBase.<Apply>d__14 <Apply>d__;
@@ -95,7 +95,7 @@ public class SurvivorsRogueCardBase : UiPanelBase
 		return <Apply>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016CD2 RID: 93394 RVA: 0x005CA504 File Offset: 0x005C8704
+	// Token: 0x06014703 RID: 83715 RVA: 0x005F7058 File Offset: 0x005F5258
 	private UniTask ApplyInternal(SurvivorsRogueCardBaseData data)
 	{
 		SurvivorsRogueCardBase.<ApplyInternal>d__15 <ApplyInternal>d__;
@@ -107,7 +107,7 @@ public class SurvivorsRogueCardBase : UiPanelBase
 		return <ApplyInternal>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016CD3 RID: 93395 RVA: 0x005CA550 File Offset: 0x005C8750
+	// Token: 0x06014704 RID: 83716 RVA: 0x005F70A4 File Offset: 0x005F52A4
 	protected virtual UniTask ApplyCardTypeItem(ISurvivorsRogueItemCard data)
 	{
 		SurvivorsRogueCardBase.<ApplyCardTypeItem>d__16 <ApplyCardTypeItem>d__;
@@ -119,7 +119,7 @@ public class SurvivorsRogueCardBase : UiPanelBase
 		return <ApplyCardTypeItem>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016CD4 RID: 93396 RVA: 0x005CA59C File Offset: 0x005C879C
+	// Token: 0x06014705 RID: 83717 RVA: 0x005F70F0 File Offset: 0x005F52F0
 	protected virtual UniTask ApplyCardTypeCharacter(ISurvivorsRogueCharacterCard data)
 	{
 		SurvivorsRogueCardBase.<ApplyCardTypeCharacter>d__17 <ApplyCardTypeCharacter>d__;
@@ -131,7 +131,7 @@ public class SurvivorsRogueCardBase : UiPanelBase
 		return <ApplyCardTypeCharacter>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016CD5 RID: 93397 RVA: 0x005CA5E8 File Offset: 0x005C87E8
+	// Token: 0x06014706 RID: 83718 RVA: 0x005F713C File Offset: 0x005F533C
 	protected virtual UniTask ApplyCardTypeWeapon(ISurvivorsRogueWeaponCard data)
 	{
 		SurvivorsRogueCardBase.<ApplyCardTypeWeapon>d__18 <ApplyCardTypeWeapon>d__;
@@ -143,7 +143,7 @@ public class SurvivorsRogueCardBase : UiPanelBase
 		return <ApplyCardTypeWeapon>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016CD6 RID: 93398 RVA: 0x005CA634 File Offset: 0x005C8834
+	// Token: 0x06014707 RID: 83719 RVA: 0x005F7188 File Offset: 0x005F5388
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -166,7 +166,7 @@ public class SurvivorsRogueCardBase : UiPanelBase
 		return <RefreshComponent>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016CD7 RID: 93399 RVA: 0x005CA690 File Offset: 0x005C8890
+	// Token: 0x06014708 RID: 83720 RVA: 0x005F71E4 File Offset: 0x005F53E4
 	[return: Nullable(2)]
 	private SurvivorsRogueCardComponent GetCardComponent(Type ctor)
 	{
@@ -178,7 +178,7 @@ public class SurvivorsRogueCardBase : UiPanelBase
 		return result;
 	}
 
-	// Token: 0x06016CD8 RID: 93400 RVA: 0x005CA6B0 File Offset: 0x005C88B0
+	// Token: 0x06014709 RID: 83721 RVA: 0x005F7204 File Offset: 0x005F5404
 	[return: Nullable(new byte[]
 	{
 		0,
@@ -195,14 +195,14 @@ public class SurvivorsRogueCardBase : UiPanelBase
 		return <CreateCardComponent>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016CD9 RID: 93401 RVA: 0x005CA6FB File Offset: 0x005C88FB
+	// Token: 0x0601470A RID: 83722 RVA: 0x005F724F File Offset: 0x005F544F
 	private void ClearComponentList()
 	{
 		this.CenterComponentList.Clear();
 		this.BottomComponentList.Clear();
 	}
 
-	// Token: 0x06016CDA RID: 93402 RVA: 0x005CA714 File Offset: 0x005C8914
+	// Token: 0x0601470B RID: 83723 RVA: 0x005F7268 File Offset: 0x005F5468
 	private void AddToComponentList(SurvivorsRogueCardComponent component)
 	{
 		ECardMountPos layoutLevel = component.GetLayoutLevel();
@@ -218,7 +218,7 @@ public class SurvivorsRogueCardBase : UiPanelBase
 		this.BottomComponentList.Add(component);
 	}
 
-	// Token: 0x06016CDB RID: 93403 RVA: 0x005CA74C File Offset: 0x005C894C
+	// Token: 0x0601470C RID: 83724 RVA: 0x005F72A0 File Offset: 0x005F54A0
 	protected void RefreshComponentHierarchyIndex()
 	{
 		for (int i = 0; i < this.BottomComponentList.Count; i++)
@@ -247,7 +247,7 @@ public class SurvivorsRogueCardBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x06016CDC RID: 93404 RVA: 0x005CA7CB File Offset: 0x005C89CB
+	// Token: 0x0601470D RID: 83725 RVA: 0x005F731F File Offset: 0x005F551F
 	private void OnComponentVisibleChanged(SurvivorsRogueCardComponent component, bool bVisible)
 	{
 		if (bVisible)
@@ -258,13 +258,13 @@ public class SurvivorsRogueCardBase : UiPanelBase
 		this.VisibleComponents.Remove(component);
 	}
 
-	// Token: 0x06016CDD RID: 93405 RVA: 0x005CA7EB File Offset: 0x005C89EB
+	// Token: 0x0601470E RID: 83726 RVA: 0x005F733F File Offset: 0x005F553F
 	private void ClearVisibleComponent()
 	{
 		this.VisibleComponents.Clear();
 	}
 
-	// Token: 0x06016CDE RID: 93406 RVA: 0x005CA7F8 File Offset: 0x005C89F8
+	// Token: 0x0601470F RID: 83727 RVA: 0x005F734C File Offset: 0x005F554C
 	protected void RefreshComponentVisible()
 	{
 		foreach (SurvivorsRogueCardComponent survivorsRogueCardComponent in this.ComponentMap.Values)
@@ -276,7 +276,7 @@ public class SurvivorsRogueCardBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x06016CDF RID: 93407 RVA: 0x005CA860 File Offset: 0x005C8A60
+	// Token: 0x06014710 RID: 83728 RVA: 0x005F73B4 File Offset: 0x005F55B4
 	protected void ApplyBase(ISurvivorsRogueCardBase data)
 	{
 		this.RefreshBaseDesc(data);
@@ -286,7 +286,7 @@ public class SurvivorsRogueCardBase : UiPanelBase
 		this.RefreshBaseIcon(data);
 	}
 
-	// Token: 0x06016CE0 RID: 93408 RVA: 0x005CA888 File Offset: 0x005C8A88
+	// Token: 0x06014711 RID: 83729 RVA: 0x005F73DC File Offset: 0x005F55DC
 	private void RefreshBaseDesc(ISurvivorsRogueCardBase data)
 	{
 		UUIText text = base.GetText(7);
@@ -329,7 +329,7 @@ public class SurvivorsRogueCardBase : UiPanelBase
 		base.GetItem(4).SetUIActive(data.TagVisible.GetValueOrDefault(true));
 	}
 
-	// Token: 0x06016CE1 RID: 93409 RVA: 0x005CA994 File Offset: 0x005C8B94
+	// Token: 0x06014712 RID: 83730 RVA: 0x005F74E8 File Offset: 0x005F56E8
 	private void RefreshBaseQuality(ISurvivorsRogueCardBase data)
 	{
 		UUITexture texture = base.GetTexture(1);
@@ -343,7 +343,7 @@ public class SurvivorsRogueCardBase : UiPanelBase
 		base.GetItem(12).SetUIActive(data.IsLevelUp.GetValueOrDefault());
 	}
 
-	// Token: 0x06016CE2 RID: 93410 RVA: 0x005CAA58 File Offset: 0x005C8C58
+	// Token: 0x06014713 RID: 83731 RVA: 0x005F75AC File Offset: 0x005F57AC
 	private void RefreshBaseFunc(ISurvivorsRogueCardBase data)
 	{
 		base.GetItem(11).SetUIActive(data.IsLevelUp.GetValueOrDefault());
@@ -351,13 +351,13 @@ public class SurvivorsRogueCardBase : UiPanelBase
 		base.GetText(8).SetBubbleUpToParent(data.UseToggle.GetValueOrDefault());
 	}
 
-	// Token: 0x06016CE3 RID: 93411 RVA: 0x005CAAAE File Offset: 0x005C8CAE
+	// Token: 0x06014714 RID: 83732 RVA: 0x005F7602 File Offset: 0x005F5802
 	private void RefreshBaseIcon(ISurvivorsRogueCardBase data)
 	{
 		base.GetTexture(2).SetUIActive(false);
 	}
 
-	// Token: 0x06016CE4 RID: 93412 RVA: 0x005CAAC0 File Offset: 0x005C8CC0
+	// Token: 0x06014715 RID: 83733 RVA: 0x005F7614 File Offset: 0x005F5814
 	private void RefreshLock(ISurvivorsRogueCardBase data)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(6);
@@ -367,13 +367,13 @@ public class SurvivorsRogueCardBase : UiPanelBase
 		extendToggle.SetToggleStateForce(valueOrDefault2 ? EToggleState.ETT_UnChecked : EToggleState.ETT_Checked, false, false, false);
 	}
 
-	// Token: 0x06016CE5 RID: 93413 RVA: 0x005CAB15 File Offset: 0x005C8D15
+	// Token: 0x06014716 RID: 83734 RVA: 0x005F7669 File Offset: 0x005F5869
 	public void SetDebugText(string debugTxt)
 	{
 		base.GetText(10).SetUIActive(false);
 	}
 
-	// Token: 0x06016CE6 RID: 93414 RVA: 0x005CAB25 File Offset: 0x005C8D25
+	// Token: 0x06014717 RID: 83735 RVA: 0x005F7679 File Offset: 0x005F5879
 	private void OnClickLock(EToggleState toggleState)
 	{
 		if (this.Data != null && this.LockFunction != null)
@@ -382,19 +382,19 @@ public class SurvivorsRogueCardBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x06016CE7 RID: 93415 RVA: 0x005CAB4C File Offset: 0x005C8D4C
+	// Token: 0x06014718 RID: 83736 RVA: 0x005F76A0 File Offset: 0x005F58A0
 	public void SetLock(bool bLock)
 	{
 		base.GetExtendToggle(6).SetToggleStateForce(bLock ? EToggleState.ETT_UnChecked : EToggleState.ETT_Checked, false, false, false);
 	}
 
-	// Token: 0x06016CE8 RID: 93416 RVA: 0x005CAB64 File Offset: 0x005C8D64
+	// Token: 0x06014719 RID: 83737 RVA: 0x005F76B8 File Offset: 0x005F58B8
 	public void BindLockFunction(Action<ISurvivorsRogueCardBase, bool> lockFunction)
 	{
 		this.LockFunction = lockFunction;
 	}
 
-	// Token: 0x06016CE9 RID: 93417 RVA: 0x005CAB70 File Offset: 0x005C8D70
+	// Token: 0x0601471A RID: 83738 RVA: 0x005F76C4 File Offset: 0x005F58C4
 	private UniTask RefreshCharacterType(ISurvivorsRogueCharacterCard data)
 	{
 		return this.RefreshComponent(typeof(SurvivorsRogueCardComponentRoleItem), data.Id > 0, new object[]
@@ -404,7 +404,7 @@ public class SurvivorsRogueCardBase : UiPanelBase
 		}).AsUniTask();
 	}
 
-	// Token: 0x06016CEA RID: 93418 RVA: 0x005CABC0 File Offset: 0x005C8DC0
+	// Token: 0x0601471B RID: 83739 RVA: 0x005F7714 File Offset: 0x005F5914
 	private UniTask RefreshWeaponType(ISurvivorsRogueWeaponCard data)
 	{
 		return this.RefreshComponent(typeof(SurvivorsRogueCardComponentWeaponItem), data.Id > 0, new object[]
@@ -415,7 +415,7 @@ public class SurvivorsRogueCardBase : UiPanelBase
 		}).AsUniTask();
 	}
 
-	// Token: 0x06016CEB RID: 93419 RVA: 0x005CAC20 File Offset: 0x005C8E20
+	// Token: 0x0601471C RID: 83740 RVA: 0x005F7774 File Offset: 0x005F5974
 	private UniTask RefreshLvDesc(int? lv, ESurvivorsRogueItemType type)
 	{
 		return this.RefreshComponent(typeof(SurvivorsRogueCardComponentLvDesc), lv != null && lv.Value > 0, new object[]
@@ -425,7 +425,7 @@ public class SurvivorsRogueCardBase : UiPanelBase
 		}).AsUniTask();
 	}
 
-	// Token: 0x06016CEC RID: 93420 RVA: 0x005CAC74 File Offset: 0x005C8E74
+	// Token: 0x0601471D RID: 83741 RVA: 0x005F77C8 File Offset: 0x005F59C8
 	private UniTask RefreshEvolveBind(int weaponId, bool bShow)
 	{
 		return this.RefreshComponent(typeof(SurvivorsRogueCardComponentEvolveBond), bShow, new object[]
@@ -434,7 +434,7 @@ public class SurvivorsRogueCardBase : UiPanelBase
 		}).AsUniTask();
 	}
 
-	// Token: 0x06016CED RID: 93421 RVA: 0x005CACB0 File Offset: 0x005C8EB0
+	// Token: 0x0601471E RID: 83742 RVA: 0x005F7804 File Offset: 0x005F5A04
 	public UniTask RefreshCost(int? cost, bool bCreate, bool costCheckEnough)
 	{
 		return this.RefreshComponent(typeof(SurvivorsRogueCardCostItem), bCreate, new object[]
@@ -444,21 +444,21 @@ public class SurvivorsRogueCardBase : UiPanelBase
 		}).AsUniTask();
 	}
 
-	// Token: 0x06016CEE RID: 93422 RVA: 0x005CACEE File Offset: 0x005C8EEE
+	// Token: 0x0601471F RID: 83743 RVA: 0x005F7842 File Offset: 0x005F5A42
 	[NullableContext(2)]
 	public UUIItem GetTextureIconItem()
 	{
 		return base.GetTexture(2);
 	}
 
-	// Token: 0x06016CEF RID: 93423 RVA: 0x005CACF7 File Offset: 0x005C8EF7
+	// Token: 0x06014720 RID: 83744 RVA: 0x005F784B File Offset: 0x005F5A4B
 	[NullableContext(2)]
 	protected UUIExtendToggle GetCardToggle()
 	{
 		return base.GetExtendToggle(0);
 	}
 
-	// Token: 0x06016CF0 RID: 93424 RVA: 0x005CAD00 File Offset: 0x005C8F00
+	// Token: 0x06014721 RID: 83745 RVA: 0x005F7854 File Offset: 0x005F5A54
 	protected void AddEvents()
 	{
 		UUIExtendToggle cardToggle = this.GetCardToggle();
@@ -468,7 +468,7 @@ public class SurvivorsRogueCardBase : UiPanelBase
 		cardToggle.OnUnHover.Add(new Action(this.ExtendToggleOnUnHover));
 	}
 
-	// Token: 0x06016CF1 RID: 93425 RVA: 0x005CAD6E File Offset: 0x005C8F6E
+	// Token: 0x06014722 RID: 83746 RVA: 0x005F78C2 File Offset: 0x005F5AC2
 	protected void RemoveEvents()
 	{
 		UUIExtendToggle cardToggle = this.GetCardToggle();
@@ -478,7 +478,7 @@ public class SurvivorsRogueCardBase : UiPanelBase
 		cardToggle.OnUnHover.Clear();
 	}
 
-	// Token: 0x06016CF2 RID: 93426 RVA: 0x005CADAD File Offset: 0x005C8FAD
+	// Token: 0x06014723 RID: 83747 RVA: 0x005F7901 File Offset: 0x005F5B01
 	private void ExtendToggleStateChanged(EToggleState state)
 	{
 		this.OnExtendToggleStateChanged(state);
@@ -488,12 +488,12 @@ public class SurvivorsRogueCardBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x06016CF3 RID: 93427 RVA: 0x005CADD8 File Offset: 0x005C8FD8
+	// Token: 0x06014724 RID: 83748 RVA: 0x005F792C File Offset: 0x005F5B2C
 	protected virtual void OnExtendToggleStateChanged(EToggleState state)
 	{
 	}
 
-	// Token: 0x06016CF4 RID: 93428 RVA: 0x005CADDA File Offset: 0x005C8FDA
+	// Token: 0x06014725 RID: 83749 RVA: 0x005F792E File Offset: 0x005F5B2E
 	private bool CanExecuteChange()
 	{
 		if (this.OnCanExecuteChangeCallback != null && this.Data != null)
@@ -503,13 +503,13 @@ public class SurvivorsRogueCardBase : UiPanelBase
 		return this.OnCanExecuteChange();
 	}
 
-	// Token: 0x06016CF5 RID: 93429 RVA: 0x005CAE0F File Offset: 0x005C900F
+	// Token: 0x06014726 RID: 83750 RVA: 0x005F7963 File Offset: 0x005F5B63
 	protected virtual bool OnCanExecuteChange()
 	{
 		return true;
 	}
 
-	// Token: 0x06016CF6 RID: 93430 RVA: 0x005CAE12 File Offset: 0x005C9012
+	// Token: 0x06014727 RID: 83751 RVA: 0x005F7966 File Offset: 0x005F5B66
 	private void ExtendToggleOnHover()
 	{
 		if (this.OnHoverCallback != null && this.Data != null)
@@ -518,7 +518,7 @@ public class SurvivorsRogueCardBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x06016CF7 RID: 93431 RVA: 0x005CAE40 File Offset: 0x005C9040
+	// Token: 0x06014728 RID: 83752 RVA: 0x005F7994 File Offset: 0x005F5B94
 	private void ExtendToggleOnUnHover()
 	{
 		if (this.OnUnHoverCallback != null && this.Data != null)
@@ -527,37 +527,37 @@ public class SurvivorsRogueCardBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x06016CF8 RID: 93432 RVA: 0x005CAE6E File Offset: 0x005C906E
+	// Token: 0x06014729 RID: 83753 RVA: 0x005F79C2 File Offset: 0x005F5BC2
 	public void BindOnStateChangeCallback(Action<ISurvivorsRogueCardBase, EToggleState> onStateChangeCallback)
 	{
 		this.OnStateChangedCallback = onStateChangeCallback;
 	}
 
-	// Token: 0x06016CF9 RID: 93433 RVA: 0x005CAE77 File Offset: 0x005C9077
+	// Token: 0x0601472A RID: 83754 RVA: 0x005F79CB File Offset: 0x005F5BCB
 	public void UnBindOnStateChangeCallback()
 	{
 		this.OnStateChangedCallback = null;
 	}
 
-	// Token: 0x06016CFA RID: 93434 RVA: 0x005CAE80 File Offset: 0x005C9080
+	// Token: 0x0601472B RID: 83755 RVA: 0x005F79D4 File Offset: 0x005F5BD4
 	public void BindOnCanExecuteChangeCallback(Func<ISurvivorsRogueCardBase, EToggleState, bool> onCanExecuteChangeCallback)
 	{
 		this.OnCanExecuteChangeCallback = onCanExecuteChangeCallback;
 	}
 
-	// Token: 0x06016CFB RID: 93435 RVA: 0x005CAE89 File Offset: 0x005C9089
+	// Token: 0x0601472C RID: 83756 RVA: 0x005F79DD File Offset: 0x005F5BDD
 	public void BindOnHoverCallback(Action<ISurvivorsRogueCardBase, EToggleState> onHoverCallback)
 	{
 		this.OnHoverCallback = onHoverCallback;
 	}
 
-	// Token: 0x06016CFC RID: 93436 RVA: 0x005CAE92 File Offset: 0x005C9092
+	// Token: 0x0601472D RID: 83757 RVA: 0x005F79E6 File Offset: 0x005F5BE6
 	public void BindOnUnHoverCallback(Action<ISurvivorsRogueCardBase, EToggleState> onUnHoverCallback)
 	{
 		this.OnUnHoverCallback = onUnHoverCallback;
 	}
 
-	// Token: 0x06016CFD RID: 93437 RVA: 0x005CAE9C File Offset: 0x005C909C
+	// Token: 0x0601472E RID: 83758 RVA: 0x005F79F0 File Offset: 0x005F5BF0
 	public void SetSelected(bool bSelected, bool bFireEvent = false, bool bForce = false)
 	{
 		UUIExtendToggle cardToggle = this.GetCardToggle();
@@ -570,7 +570,7 @@ public class SurvivorsRogueCardBase : UiPanelBase
 		cardToggle.SetToggleState(state, bFireEvent, false, false);
 	}
 
-	// Token: 0x06016CFE RID: 93438 RVA: 0x005CAED1 File Offset: 0x005C90D1
+	// Token: 0x0601472F RID: 83759 RVA: 0x005F7A25 File Offset: 0x005F5C25
 	public void SetToggleInteractive(bool bInteractive)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -581,7 +581,7 @@ public class SurvivorsRogueCardBase : UiPanelBase
 		extendToggle.SetSelfInteractive(bInteractive);
 	}
 
-	// Token: 0x06016CFF RID: 93439 RVA: 0x005CAEE8 File Offset: 0x005C90E8
+	// Token: 0x06014730 RID: 83760 RVA: 0x005F7A3C File Offset: 0x005F5C3C
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -610,18 +610,18 @@ public class SurvivorsRogueCardBase : UiPanelBase
 		};
 	}
 
-	// Token: 0x06016D00 RID: 93440 RVA: 0x005CAF48 File Offset: 0x005C9148
+	// Token: 0x06014731 RID: 83761 RVA: 0x005F7A9C File Offset: 0x005F5C9C
 	public bool HasBondInfo()
 	{
 		ISurvivorsRogueWeaponCard survivorsRogueWeaponCard = this.Data as ISurvivorsRogueWeaponCard;
 		return ((survivorsRogueWeaponCard != null) ? survivorsRogueWeaponCard.WeaponBondInfo : null).GetValueOrDefault();
 	}
 
-	// Token: 0x0400A972 RID: 43378
+	// Token: 0x0400AD78 RID: 44408
 	[Nullable(2)]
 	protected ISurvivorsRogueCardBase Data;
 
-	// Token: 0x0400A973 RID: 43379
+	// Token: 0x0400AD79 RID: 44409
 	[Nullable(new byte[]
 	{
 		2,
@@ -629,7 +629,7 @@ public class SurvivorsRogueCardBase : UiPanelBase
 	})]
 	private Func<ISurvivorsRogueCardBase, EToggleState, bool> OnCanExecuteChangeCallback;
 
-	// Token: 0x0400A974 RID: 43380
+	// Token: 0x0400AD7A RID: 44410
 	[Nullable(new byte[]
 	{
 		2,
@@ -637,7 +637,7 @@ public class SurvivorsRogueCardBase : UiPanelBase
 	})]
 	private Action<ISurvivorsRogueCardBase, EToggleState> OnStateChangedCallback;
 
-	// Token: 0x0400A975 RID: 43381
+	// Token: 0x0400AD7B RID: 44411
 	[Nullable(new byte[]
 	{
 		2,
@@ -645,7 +645,7 @@ public class SurvivorsRogueCardBase : UiPanelBase
 	})]
 	private Action<ISurvivorsRogueCardBase, EToggleState> OnHoverCallback;
 
-	// Token: 0x0400A976 RID: 43382
+	// Token: 0x0400AD7C RID: 44412
 	[Nullable(new byte[]
 	{
 		2,
@@ -653,19 +653,19 @@ public class SurvivorsRogueCardBase : UiPanelBase
 	})]
 	private Action<ISurvivorsRogueCardBase, EToggleState> OnUnHoverCallback;
 
-	// Token: 0x0400A977 RID: 43383
+	// Token: 0x0400AD7D RID: 44413
 	private readonly HashSet<SurvivorsRogueCardComponent> VisibleComponents = new HashSet<SurvivorsRogueCardComponent>();
 
-	// Token: 0x0400A978 RID: 43384
+	// Token: 0x0400AD7E RID: 44414
 	private readonly Dictionary<Type, SurvivorsRogueCardComponent> ComponentMap = new Dictionary<Type, SurvivorsRogueCardComponent>();
 
-	// Token: 0x0400A979 RID: 43385
+	// Token: 0x0400AD7F RID: 44415
 	private readonly List<SurvivorsRogueCardComponent> CenterComponentList = new List<SurvivorsRogueCardComponent>();
 
-	// Token: 0x0400A97A RID: 43386
+	// Token: 0x0400AD80 RID: 44416
 	private readonly List<SurvivorsRogueCardComponent> BottomComponentList = new List<SurvivorsRogueCardComponent>();
 
-	// Token: 0x0400A97B RID: 43387
+	// Token: 0x0400AD81 RID: 44417
 	[Nullable(new byte[]
 	{
 		2,

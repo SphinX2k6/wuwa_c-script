@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001EF3 RID: 7923
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200212C RID: 8492
 	public class ISunSpiritDifficultyReduction
 	{
-		// Token: 0x0600A972 RID: 43378 RVA: 0x0017E0B8 File Offset: 0x0017C2B8
+		// Token: 0x0600B444 RID: 46148 RVA: 0x001940B0 File Offset: 0x001922B0
 		private ISunSpiritDifficultyReduction_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A973 RID: 43379 RVA: 0x0017E0F0 File Offset: 0x0017C2F0
+		// Token: 0x0600B445 RID: 46149 RVA: 0x001940E8 File Offset: 0x001922E8
 		public static ISunSpiritDifficultyReduction Create([Nullable(2)] ISunSpiritDifficultyReduction instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A974 RID: 43380 RVA: 0x0017E103 File Offset: 0x0017C303
+		// Token: 0x0600B446 RID: 46150 RVA: 0x001940FB File Offset: 0x001922FB
 		public static ISunSpiritDifficultyReduction CreateFromSetValue([Nullable(2)] ISunSpiritDifficultyReduction_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A975 RID: 43381 RVA: 0x0017E116 File Offset: 0x0017C316
+		// Token: 0x0600B447 RID: 46151 RVA: 0x0019410E File Offset: 0x0019230E
 		public ISunSpiritDifficultyReduction_SetValue ToSetValue()
 		{
 			return new ISunSpiritDifficultyReduction_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170033A4 RID: 13220
-		// (get) Token: 0x0600A976 RID: 43382 RVA: 0x0017E135 File Offset: 0x0017C335
-		// (set) Token: 0x0600A977 RID: 43383 RVA: 0x0017E160 File Offset: 0x0017C360
+		// Token: 0x1700366F RID: 13935
+		// (get) Token: 0x0600B448 RID: 46152 RVA: 0x0019412D File Offset: 0x0019232D
+		// (set) Token: 0x0600B449 RID: 46153 RVA: 0x00194158 File Offset: 0x00192358
 		public virtual int LoseTimes
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x170033A5 RID: 13221
-		// (get) Token: 0x0600A978 RID: 43384 RVA: 0x0017E16E File Offset: 0x0017C36E
-		// (set) Token: 0x0600A979 RID: 43385 RVA: 0x0017E199 File Offset: 0x0017C399
+		// Token: 0x17003670 RID: 13936
+		// (get) Token: 0x0600B44A RID: 46154 RVA: 0x00194166 File Offset: 0x00192366
+		// (set) Token: 0x0600B44B RID: 46155 RVA: 0x00194191 File Offset: 0x00192391
 		public virtual int SubstituteId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040064CD RID: 25805
+		// Token: 0x04006ABC RID: 27324
 		[Nullable(2)]
 		protected ISunSpiritDifficultyReduction FbInstance;
 
-		// Token: 0x040064CE RID: 25806
+		// Token: 0x04006ABD RID: 27325
 		[Nullable(2)]
 		protected ISunSpiritDifficultyReduction_SetValue PocoInterface;
 	}

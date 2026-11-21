@@ -9,19 +9,19 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200115A RID: 4442
+// Token: 0x0200060E RID: 1550
 [NullableContext(2)]
 [Nullable(0)]
 public class SvBuffGridItem : GridProxyAbstract<int>
 {
-	// Token: 0x060074FB RID: 29947 RVA: 0x00180AA8 File Offset: 0x0017ECA8
+	// Token: 0x06004892 RID: 18578 RVA: 0x001895D8 File Offset: 0x001877D8
 	[NullableContext(1)]
 	public void SetParentItem(MutexGroupItem parent)
 	{
 		this.ParentItem = parent;
 	}
 
-	// Token: 0x060074FC RID: 29948 RVA: 0x00180AB4 File Offset: 0x0017ECB4
+	// Token: 0x06004893 RID: 18579 RVA: 0x001895E4 File Offset: 0x001877E4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -39,7 +39,7 @@ public class SvBuffGridItem : GridProxyAbstract<int>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060074FD RID: 29949 RVA: 0x00180B60 File Offset: 0x0017ED60
+	// Token: 0x06004894 RID: 18580 RVA: 0x00189690 File Offset: 0x00187890
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SvBuffGridItem.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -50,7 +50,7 @@ public class SvBuffGridItem : GridProxyAbstract<int>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060074FE RID: 29950 RVA: 0x00180BA4 File Offset: 0x0017EDA4
+	// Token: 0x06004895 RID: 18581 RVA: 0x001896D4 File Offset: 0x001878D4
 	protected override void OnStart()
 	{
 		ComBuffSubComponent comBuffIns = this.ComBuffIns;
@@ -83,7 +83,7 @@ public class SvBuffGridItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x060074FF RID: 29951 RVA: 0x00180C20 File Offset: 0x0017EE20
+	// Token: 0x06004896 RID: 18582 RVA: 0x00189750 File Offset: 0x00187950
 	private void OnToggleStateChange(EToggleState state)
 	{
 		if (this.IsSuppressToggleCallback)
@@ -114,7 +114,7 @@ public class SvBuffGridItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x06007500 RID: 29952 RVA: 0x00180C78 File Offset: 0x0017EE78
+	// Token: 0x06004897 RID: 18583 RVA: 0x001897A8 File Offset: 0x001879A8
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		this.BuffId = data;
@@ -177,14 +177,14 @@ public class SvBuffGridItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x06007501 RID: 29953 RVA: 0x00180D6F File Offset: 0x0017EF6F
+	// Token: 0x06004898 RID: 18584 RVA: 0x0018989F File Offset: 0x00187A9F
 	[NullableContext(1)]
 	public void SetCanClickCallBack(Func<bool> callback)
 	{
 		this.CanClickCallBack = callback;
 	}
 
-	// Token: 0x06007502 RID: 29954 RVA: 0x00180D78 File Offset: 0x0017EF78
+	// Token: 0x06004899 RID: 18585 RVA: 0x001898A8 File Offset: 0x00187AA8
 	private void OnUndeterminedClicked()
 	{
 		BabelTowerItemInfoViewInfo param = new BabelTowerItemInfoViewInfo
@@ -196,7 +196,7 @@ public class SvBuffGridItem : GridProxyAbstract<int>
 		UiManager.Instance.OpenView(EUiViewName.BabelTowerItemInfoView, param, null);
 	}
 
-	// Token: 0x06007503 RID: 29955 RVA: 0x00180DB8 File Offset: 0x0017EFB8
+	// Token: 0x0600489A RID: 18586 RVA: 0x001898E8 File Offset: 0x00187AE8
 	public void SetToggleState(EToggleState state)
 	{
 		ComBuffSubComponent comBuffIns = this.ComBuffIns;
@@ -210,13 +210,13 @@ public class SvBuffGridItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x06007504 RID: 29956 RVA: 0x00180DFA File Offset: 0x0017EFFA
+	// Token: 0x0600489B RID: 18587 RVA: 0x0018992A File Offset: 0x00187B2A
 	public void SuppressToggleCallback(bool suppress)
 	{
 		this.IsSuppressToggleCallback = suppress;
 	}
 
-	// Token: 0x06007505 RID: 29957 RVA: 0x00180E03 File Offset: 0x0017F003
+	// Token: 0x0600489C RID: 18588 RVA: 0x00189933 File Offset: 0x00187B33
 	public void UseChangeColor(bool use)
 	{
 		ComBuffSubComponent comBuffIns = this.ComBuffIns;
@@ -227,7 +227,7 @@ public class SvBuffGridItem : GridProxyAbstract<int>
 		comBuffIns.UseChangeColor(use);
 	}
 
-	// Token: 0x06007506 RID: 29958 RVA: 0x00180E16 File Offset: 0x0017F016
+	// Token: 0x0600489D RID: 18589 RVA: 0x00189946 File Offset: 0x00187B46
 	public void FlashHighlight()
 	{
 		ComBuffSubComponent comBuffIns = this.ComBuffIns;
@@ -238,38 +238,38 @@ public class SvBuffGridItem : GridProxyAbstract<int>
 		comBuffIns.FlashHighlight();
 	}
 
-	// Token: 0x040035CA RID: 13770
+	// Token: 0x04003663 RID: 13923
 	public int BuffId;
 
-	// Token: 0x040035CB RID: 13771
+	// Token: 0x04003664 RID: 13924
 	public Action<int, UUIExtendToggle> OnClickCallBack;
 
-	// Token: 0x040035CC RID: 13772
+	// Token: 0x04003665 RID: 13925
 	private Func<bool> CanClickCallBack;
 
-	// Token: 0x040035CD RID: 13773
+	// Token: 0x04003666 RID: 13926
 	private MutexGroupItem ParentItem;
 
-	// Token: 0x040035CE RID: 13774
+	// Token: 0x04003667 RID: 13927
 	private ComBuffSubComponent ComBuffIns;
 
-	// Token: 0x040035CF RID: 13775
+	// Token: 0x04003668 RID: 13928
 	public bool IsSuppressToggleCallback;
 
-	// Token: 0x0200771E RID: 30494
+	// Token: 0x020068AC RID: 26796
 	[NullableContext(0)]
 	private class EItemGroupSubComponent
 	{
-		// Token: 0x040274AB RID: 160939
+		// Token: 0x040227EA RID: 141290
 		public const int ComBuff = 0;
 
-		// Token: 0x040274AC RID: 160940
+		// Token: 0x040227EB RID: 141291
 		public const int LineSprite = 1;
 
-		// Token: 0x040274AD RID: 160941
+		// Token: 0x040227EC RID: 141292
 		public const int Check = 2;
 
-		// Token: 0x040274AE RID: 160942
+		// Token: 0x040227ED RID: 141293
 		public const int Lock = 3;
 	}
 }

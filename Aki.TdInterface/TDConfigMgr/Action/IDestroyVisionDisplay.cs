@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001992 RID: 6546
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001B19 RID: 6937
 	public class IDestroyVisionDisplay : IDestroyDynamicEntitiesType
 	{
-		// Token: 0x06008C21 RID: 35873 RVA: 0x00148FE4 File Offset: 0x001471E4
+		// Token: 0x06009345 RID: 37701 RVA: 0x001587F4 File Offset: 0x001569F4
 		private IDestroyVisionDisplay_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008C22 RID: 35874 RVA: 0x0014901C File Offset: 0x0014721C
+		// Token: 0x06009346 RID: 37702 RVA: 0x0015882C File Offset: 0x00156A2C
 		public static IDestroyVisionDisplay Create([Nullable(2)] IDestroyVisionDisplay instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008C23 RID: 35875 RVA: 0x0014902F File Offset: 0x0014722F
+		// Token: 0x06009347 RID: 37703 RVA: 0x0015883F File Offset: 0x00156A3F
 		public static IDestroyVisionDisplay CreateFromSetValue([Nullable(2)] IDestroyVisionDisplay_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008C24 RID: 35876 RVA: 0x00149042 File Offset: 0x00147242
+		// Token: 0x06009348 RID: 37704 RVA: 0x00158852 File Offset: 0x00156A52
 		public new IDestroyVisionDisplay_SetValue ToSetValue()
 		{
 			return new IDestroyVisionDisplay_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002D0A RID: 11530
-		// (get) Token: 0x06008C25 RID: 35877 RVA: 0x00149055 File Offset: 0x00147255
-		// (set) Token: 0x06008C26 RID: 35878 RVA: 0x00149080 File Offset: 0x00147280
+		// Token: 0x17002F09 RID: 12041
+		// (get) Token: 0x06009349 RID: 37705 RVA: 0x00158865 File Offset: 0x00156A65
+		// (set) Token: 0x0600934A RID: 37706 RVA: 0x00158890 File Offset: 0x00156A90
 		public override EDynamicEntityType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005749 RID: 22345
+		// Token: 0x04005B92 RID: 23442
 		[Nullable(2)]
 		protected new IDestroyVisionDisplay FbInstance;
 
-		// Token: 0x0400574A RID: 22346
+		// Token: 0x04005B93 RID: 23443
 		[Nullable(2)]
 		protected new IDestroyVisionDisplay_SetValue PocoInterface;
 	}

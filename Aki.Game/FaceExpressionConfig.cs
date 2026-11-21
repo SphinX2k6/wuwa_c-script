@@ -1,23 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
-using Aki.Config;
 using Aki.TDConfigMgr.Action;
 using Aki.TDConfigMgr.Action.Fb;
-using Aki.TDConfigMgr.Wrapper.Out;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 using CSharpScript.Core.Common;
 using CSharpScript.Game.Common;
 using Google.FlatBuffers;
 using UnrealEngine;
 
-// Token: 0x020031F9 RID: 12793
+// Token: 0x02002768 RID: 10088
 [NullableContext(1)]
 [Nullable(0)]
 public class FaceExpressionConfig : ConfigBase
 {
-	// Token: 0x1700262D RID: 9773
-	// (get) Token: 0x0601B9A6 RID: 113062 RVA: 0x0079476C File Offset: 0x0079296C
+	// Token: 0x1700286E RID: 10350
+	// (get) Token: 0x0601952B RID: 103723 RVA: 0x007BCE98 File Offset: 0x007BB098
 	private CacheLru<int, Aki.TDConfigMgr.Action.IFaceExpressionConfigData> FaceExpressionFbLru
 	{
 		get
@@ -31,7 +29,7 @@ public class FaceExpressionConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x0601B9A7 RID: 113063 RVA: 0x007947A0 File Offset: 0x007929A0
+	// Token: 0x0601952C RID: 103724 RVA: 0x007BCECC File Offset: 0x007BB0CC
 	[NullableContext(2)]
 	private Aki.TDConfigMgr.Action.IFaceExpressionConfigData LoadFaceExpressionFromFb(int id)
 	{
@@ -47,63 +45,33 @@ public class FaceExpressionConfig : ConfigBase
 		return Aki.TDConfigMgr.Action.IFaceExpressionConfigData.Create(Aki.TDConfigMgr.Action.Fb.IFaceExpressionConfigData.Create(new Aki.UniverseEditor.Interface.Fbs.Action.IFaceExpressionConfigData?(Aki.UniverseEditor.Interface.Fbs.Action.IFaceExpressionConfigData.GetRootAsIFaceExpressionConfigData(byteBuffer))));
 	}
 
-	// Token: 0x0601B9A8 RID: 113064 RVA: 0x007947FE File Offset: 0x007929FE
+	// Token: 0x0601952D RID: 103725 RVA: 0x007BCF2A File Offset: 0x007BB12A
 	protected override bool OnInit()
 	{
 		this.CacheFaceExpressionMap = new Dictionary<int, Aki.TDConfigMgr.Action.IFaceExpressionConfigData>();
 		return true;
 	}
 
-	// Token: 0x0601B9A9 RID: 113065 RVA: 0x0079480C File Offset: 0x00792A0C
+	// Token: 0x0601952E RID: 103726 RVA: 0x007BCF38 File Offset: 0x007BB138
 	protected override bool OnClear()
 	{
 		this.CacheFaceExpressionMap = null;
 		return true;
 	}
 
-	// Token: 0x0601B9AA RID: 113066 RVA: 0x00794818 File Offset: 0x00792A18
+	// Token: 0x0601952F RID: 103727 RVA: 0x007BCF44 File Offset: 0x007BB144
 	[NullableContext(2)]
 	public Aki.TDConfigMgr.Action.IFaceExpressionConfigData GetFaceExpressionConfig(int id)
 	{
-		if (!PublicUtil.Instance.UseDbConfig())
+		Aki.TDConfigMgr.Action.IFaceExpressionConfigData faceExpressionConfigData = this.FaceExpressionFbLru.Get(id);
+		if (((faceExpressionConfigData != null) ? faceExpressionConfigData.FaceExpression : null) == null)
 		{
-			this.ParseConfigFromJsonFile();
-			Aki.TDConfigMgr.Action.IFaceExpressionConfigData result;
-			this.CacheFaceExpressionMap.TryGetValue(id, out result);
-			return result;
+			return null;
 		}
-		if (WrapperSetting.UseFb)
-		{
-			Aki.TDConfigMgr.Action.IFaceExpressionConfigData faceExpressionConfigData = this.FaceExpressionFbLru.Get(id);
-			if (((faceExpressionConfigData != null) ? faceExpressionConfigData.FaceExpression : null) == null)
-			{
-				return null;
-			}
-			return faceExpressionConfigData;
-		}
-		else
-		{
-			FaceExpressionData? config = ConfigFaceExpressionDataById.GetConfig(id, false);
-			if (config == null || string.IsNullOrEmpty(config.Value.FaceExpression))
-			{
-				return null;
-			}
-			Aki.TDConfigMgr.Action.IFaceExpressionConfig maleVariant = null;
-			if (!string.IsNullOrEmpty(config.Value.MaleVariant))
-			{
-				maleVariant = Json.Parse<Aki.TDConfigMgr.Action.IFaceExpressionConfig>(config.Value.MaleVariant, null);
-			}
-			return new Aki.TDConfigMgr.Action.IFaceExpressionConfigData
-			{
-				Id = config.Value.Id,
-				FaceExpression = Json.Parse<Aki.TDConfigMgr.Action.IFaceExpressionConfig>(config.Value.FaceExpression, null),
-				MaleVariant = maleVariant,
-				CloseAutoBlink = new bool?(config.Value.CloseAutoBlink)
-			};
-		}
+		return faceExpressionConfigData;
 	}
 
-	// Token: 0x0601B9AB RID: 113067 RVA: 0x00794924 File Offset: 0x00792B24
+	// Token: 0x06019530 RID: 103728 RVA: 0x007BCF70 File Offset: 0x007BB170
 	private void ParseConfigFromJsonFile()
 	{
 		if (this.InitFromJson)
@@ -137,8 +105,8 @@ public class FaceExpressionConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x1700262E RID: 9774
-	// (get) Token: 0x0601B9AC RID: 113068 RVA: 0x00794A1C File Offset: 0x00792C1C
+	// Token: 0x1700286F RID: 10351
+	// (get) Token: 0x06019531 RID: 103729 RVA: 0x007BD068 File Offset: 0x007BB268
 	public static FaceExpressionConfig Instance
 	{
 		get
@@ -147,7 +115,7 @@ public class FaceExpressionConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x0601B9AD RID: 113069 RVA: 0x00794A23 File Offset: 0x00792C23
+	// Token: 0x06019532 RID: 103730 RVA: 0x007BD06F File Offset: 0x007BB26F
 	public static FaceExpressionConfig GetOrCreateInstance()
 	{
 		if (FaceExpressionConfig._Instance == null)
@@ -157,7 +125,7 @@ public class FaceExpressionConfig : ConfigBase
 		return FaceExpressionConfig._Instance;
 	}
 
-	// Token: 0x0601B9AE RID: 113070 RVA: 0x00794A37 File Offset: 0x00792C37
+	// Token: 0x06019533 RID: 103731 RVA: 0x007BD083 File Offset: 0x007BB283
 	public static bool CreateInstance()
 	{
 		if (FaceExpressionConfig._Instance != null)
@@ -168,24 +136,24 @@ public class FaceExpressionConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0601B9AF RID: 113071 RVA: 0x00794A4D File Offset: 0x00792C4D
+	// Token: 0x06019534 RID: 103732 RVA: 0x007BD099 File Offset: 0x007BB299
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601B9B0 RID: 113072 RVA: 0x00794A4F File Offset: 0x00792C4F
+	// Token: 0x06019535 RID: 103733 RVA: 0x007BD09B File Offset: 0x007BB29B
 	public static void ResetStaticDefaultValue()
 	{
 		FaceExpressionConfig._Instance = null;
 	}
 
-	// Token: 0x0601B9B1 RID: 113073 RVA: 0x00794A57 File Offset: 0x00792C57
+	// Token: 0x06019536 RID: 103734 RVA: 0x007BD0A3 File Offset: 0x007BB2A3
 	static FaceExpressionConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(FaceExpressionConfig.CreateStaticDefaultValue), new Action(FaceExpressionConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400D907 RID: 55559
+	// Token: 0x0400DDA5 RID: 56741
 	[Nullable(new byte[]
 	{
 		2,
@@ -193,16 +161,16 @@ public class FaceExpressionConfig : ConfigBase
 	})]
 	private Dictionary<int, Aki.TDConfigMgr.Action.IFaceExpressionConfigData> CacheFaceExpressionMap;
 
-	// Token: 0x0400D908 RID: 55560
+	// Token: 0x0400DDA6 RID: 56742
 	private bool InitFromJson;
 
-	// Token: 0x0400D909 RID: 55561
+	// Token: 0x0400DDA7 RID: 56743
 	private string FaceExpressionFbPath = UBlueprintPathsLibrary.ProjectContentDir() + "Aki/Config/UniverseEditorConfig/FaceExpressions/";
 
-	// Token: 0x0400D90A RID: 55562
+	// Token: 0x0400DDA8 RID: 56744
 	private const int FACE_EXPRESSION_FB_LRU_CAPACITY = 50;
 
-	// Token: 0x0400D90B RID: 55563
+	// Token: 0x0400DDA9 RID: 56745
 	[Nullable(new byte[]
 	{
 		2,
@@ -210,7 +178,7 @@ public class FaceExpressionConfig : ConfigBase
 	})]
 	private CacheLru<int, Aki.TDConfigMgr.Action.IFaceExpressionConfigData> FaceExpressionFbLruInternal;
 
-	// Token: 0x0400D90C RID: 55564
+	// Token: 0x0400DDAA RID: 56746
 	[Nullable(2)]
 	private static FaceExpressionConfig _Instance;
 }

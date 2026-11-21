@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020005AB RID: 1451
+	// Token: 0x020005C2 RID: 1474
 	public class ConfigMotorLinkageQuestAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600220F RID: 8719 RVA: 0x0011A2C4 File Offset: 0x001184C4
+		// Token: 0x06002299 RID: 8857 RVA: 0x00120BAC File Offset: 0x0011EDAC
 		static ConfigMotorLinkageQuestAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMotorLinkageQuestAll.CreateStaticDefaultValue), new Action(ConfigMotorLinkageQuestAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002210 RID: 8720 RVA: 0x0011A2E4 File Offset: 0x001184E4
+		// Token: 0x0600229A RID: 8858 RVA: 0x00120BCC File Offset: 0x0011EDCC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMotorLinkageQuestAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002211 RID: 8721 RVA: 0x0011A363 File Offset: 0x00118563
+		// Token: 0x0600229B RID: 8859 RVA: 0x00120C4B File Offset: 0x0011EE4B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMotorLinkageQuestAll.LogPair = null;
 			ConfigMotorLinkageQuestAll.HandleId = 0;
 		}
 
-		// Token: 0x06002212 RID: 8722 RVA: 0x0011A371 File Offset: 0x00118571
+		// Token: 0x0600229C RID: 8860 RVA: 0x00120C59 File Offset: 0x0011EE59
 		public static void Init()
 		{
 			ConfigMotorLinkageQuestAll.HandleId = ConfigCommon.InitDataStatement(ConfigMotorLinkageQuestAll.HandleId, "db_motorlinkage.db", "select BinData from `MotorLinkageQuest`");
 		}
 
-		// Token: 0x06002213 RID: 8723 RVA: 0x0011A38C File Offset: 0x0011858C
+		// Token: 0x0600229D RID: 8861 RVA: 0x00120C74 File Offset: 0x0011EE74
 		[NullableContext(2)]
 		public static IReadOnlyList<MotorLinkageQuest> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04002791 RID: 10129
+		// Token: 0x04002832 RID: 10290
 		private const string DB = "db_motorlinkage.db";
 
-		// Token: 0x04002792 RID: 10130
+		// Token: 0x04002833 RID: 10291
 		private const string FILE = "m.摩托车IP联动活动.xlsx";
 
-		// Token: 0x04002793 RID: 10131
+		// Token: 0x04002834 RID: 10292
 		private const string TABLE = "MotorLinkageQuest";
 
-		// Token: 0x04002794 RID: 10132
+		// Token: 0x04002835 RID: 10293
 		private const string COMMAND = "select BinData from `MotorLinkageQuest`";
 
-		// Token: 0x04002795 RID: 10133
+		// Token: 0x04002836 RID: 10294
 		private const string KEY_PREFIX = "MotorLinkageQuestAll";
 
-		// Token: 0x04002796 RID: 10134
+		// Token: 0x04002837 RID: 10295
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002797 RID: 10135
+		// Token: 0x04002838 RID: 10296
 		private static int HandleId;
 	}
 }

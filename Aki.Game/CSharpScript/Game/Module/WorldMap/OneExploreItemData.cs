@@ -2,17 +2,17 @@
 
 namespace CSharpScript.Game.Module.WorldMap
 {
-	// Token: 0x020047A8 RID: 18344
+	// Token: 0x020036D9 RID: 14041
 	public class OneExploreItemData : IOneExploreItemData
 	{
-		// Token: 0x17007830 RID: 30768
-		// (get) Token: 0x0602FFB8 RID: 196536 RVA: 0x00B1B82F File Offset: 0x00B19A2F
-		// (set) Token: 0x0602FFB9 RID: 196537 RVA: 0x00B1B837 File Offset: 0x00B19A37
+		// Token: 0x17004AEC RID: 19180
+		// (get) Token: 0x06024785 RID: 149381 RVA: 0x00A4B7CB File Offset: 0x00A499CB
+		// (set) Token: 0x06024786 RID: 149382 RVA: 0x00A4B7D3 File Offset: 0x00A499D3
 		public int ExploreProgressId { get; set; }
 
-		// Token: 0x17007831 RID: 30769
-		// (get) Token: 0x0602FFBA RID: 196538 RVA: 0x00B1B840 File Offset: 0x00B19A40
-		// (set) Token: 0x0602FFBB RID: 196539 RVA: 0x00B1B848 File Offset: 0x00B19A48
+		// Token: 0x17004AED RID: 19181
+		// (get) Token: 0x06024787 RID: 149383 RVA: 0x00A4B7DC File Offset: 0x00A499DC
+		// (set) Token: 0x06024788 RID: 149384 RVA: 0x00A4B7E4 File Offset: 0x00A499E4
 		public float ExplorePercent { get; set; }
 	}
 }

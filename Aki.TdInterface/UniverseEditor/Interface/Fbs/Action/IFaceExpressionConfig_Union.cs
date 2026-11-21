@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200674D RID: 26445
+	// Token: 0x02006DCD RID: 28109
 	public enum IFaceExpressionConfig_Union : byte
 	{
-		// Token: 0x04010E3A RID: 69178
+		// Token: 0x04011C6C RID: 72812
 		NONE,
-		// Token: 0x04010E3B RID: 69179
+		// Token: 0x04011C6D RID: 72813
 		IFaceExpressionConfig,
-		// Token: 0x04010E3C RID: 69180
+		// Token: 0x04011C6E RID: 72814
 		IFaceExpressionMorphConfig,
-		// Token: 0x04010E3D RID: 69181
+		// Token: 0x04011C6F RID: 72815
 		IFaceExpressionTextureConfig,
-		// Token: 0x04010E3E RID: 69182
+		// Token: 0x04011C70 RID: 72816
 		IFaceExpressionAnimSequenceConfig,
-		// Token: 0x04010E3F RID: 69183
+		// Token: 0x04011C71 RID: 72817
 		IFaceExpressionTextureMultiSlotConfig
 	}
 }

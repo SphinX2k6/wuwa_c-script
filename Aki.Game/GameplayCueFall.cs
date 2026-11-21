@@ -2,18 +2,18 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002FBD RID: 12221
+// Token: 0x02002511 RID: 9489
 [NullableContext(2)]
 [Nullable(0)]
 public class GameplayCueFall : GameplayCueBase
 {
-	// Token: 0x06019E92 RID: 106130 RVA: 0x006C684A File Offset: 0x006C4A4A
+	// Token: 0x060177A4 RID: 96164 RVA: 0x006ED116 File Offset: 0x006EB316
 	protected override void OnCreate()
 	{
 		this.NeedRetry = !this.TryFall();
 	}
 
-	// Token: 0x06019E93 RID: 106131 RVA: 0x006C685B File Offset: 0x006C4A5B
+	// Token: 0x060177A5 RID: 96165 RVA: 0x006ED127 File Offset: 0x006EB327
 	protected override void OnTick(float delta)
 	{
 		if (!this.NeedRetry)
@@ -23,7 +23,7 @@ public class GameplayCueFall : GameplayCueBase
 		this.NeedRetry = !this.TryFall();
 	}
 
-	// Token: 0x06019E94 RID: 106132 RVA: 0x006C6878 File Offset: 0x006C4A78
+	// Token: 0x060177A6 RID: 96166 RVA: 0x006ED144 File Offset: 0x006EB344
 	protected override void OnDestroy()
 	{
 		this.NeedRetry = false;
@@ -39,7 +39,7 @@ public class GameplayCueFall : GameplayCueBase
 		this.IgnoredFloor = null;
 	}
 
-	// Token: 0x06019E95 RID: 106133 RVA: 0x006C68C4 File Offset: 0x006C4AC4
+	// Token: 0x060177A7 RID: 96167 RVA: 0x006ED190 File Offset: 0x006EB390
 	private bool TryFall()
 	{
 		TsBaseCharacter character = this.GetCharacter();
@@ -83,7 +83,7 @@ public class GameplayCueFall : GameplayCueBase
 		return true;
 	}
 
-	// Token: 0x06019E96 RID: 106134 RVA: 0x006C69C4 File Offset: 0x006C4BC4
+	// Token: 0x060177A8 RID: 96168 RVA: 0x006ED290 File Offset: 0x006EB490
 	private TsBaseCharacter GetCharacter()
 	{
 		TsBaseCharacter tsBaseCharacter = this.ActorInternal as TsBaseCharacter;
@@ -100,9 +100,9 @@ public class GameplayCueFall : GameplayCueBase
 		return tsBaseCharacter;
 	}
 
-	// Token: 0x0400C401 RID: 50177
+	// Token: 0x0400C7AA RID: 51114
 	private AActor IgnoredFloor;
 
-	// Token: 0x0400C402 RID: 50178
+	// Token: 0x0400C7AB RID: 51115
 	private bool NeedRetry;
 }

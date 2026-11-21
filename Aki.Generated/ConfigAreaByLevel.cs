@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020000A3 RID: 163
+	// Token: 0x020000AB RID: 171
 	public class ConfigAreaByLevel : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060003D3 RID: 979 RVA: 0x0006F480 File Offset: 0x0006D680
+		// Token: 0x06000403 RID: 1027 RVA: 0x00073D34 File Offset: 0x00071F34
 		static ConfigAreaByLevel()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigAreaByLevel.CreateStaticDefaultValue), new Action(ConfigAreaByLevel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060003D4 RID: 980 RVA: 0x0006F4A0 File Offset: 0x0006D6A0
+		// Token: 0x06000404 RID: 1028 RVA: 0x00073D54 File Offset: 0x00071F54
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigAreaByLevel.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060003D5 RID: 981 RVA: 0x0006F51F File Offset: 0x0006D71F
+		// Token: 0x06000405 RID: 1029 RVA: 0x00073DD3 File Offset: 0x00071FD3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigAreaByLevel.LogPair = null;
 			ConfigAreaByLevel.HandleId = 0;
 		}
 
-		// Token: 0x060003D6 RID: 982 RVA: 0x0006F52D File Offset: 0x0006D72D
+		// Token: 0x06000406 RID: 1030 RVA: 0x00073DE1 File Offset: 0x00071FE1
 		public static void Init()
 		{
 			ConfigAreaByLevel.HandleId = ConfigCommon.InitDataStatement(ConfigAreaByLevel.HandleId, "db_area.db", "select BinData from `Area` where Level=?");
 		}
 
-		// Token: 0x060003D7 RID: 983 RVA: 0x0006F548 File Offset: 0x0006D748
+		// Token: 0x06000407 RID: 1031 RVA: 0x00073DFC File Offset: 0x00071FFC
 		[NullableContext(2)]
 		public static IReadOnlyList<Area> GetConfigList(int p0Level, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04000459 RID: 1113
+		// Token: 0x04000491 RID: 1169
 		private const string DB = "db_area.db";
 
-		// Token: 0x0400045A RID: 1114
+		// Token: 0x04000492 RID: 1170
 		private const string FILE = "q.区域.xlsx";
 
-		// Token: 0x0400045B RID: 1115
+		// Token: 0x04000493 RID: 1171
 		private const string TABLE = "Area";
 
-		// Token: 0x0400045C RID: 1116
+		// Token: 0x04000494 RID: 1172
 		private const string COMMAND = "select BinData from `Area` where Level=?";
 
-		// Token: 0x0400045D RID: 1117
+		// Token: 0x04000495 RID: 1173
 		private const string KEY_PREFIX = "AreaByLevel";
 
-		// Token: 0x0400045E RID: 1118
+		// Token: 0x04000496 RID: 1174
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400045F RID: 1119
+		// Token: 0x04000497 RID: 1175
 		private static int HandleId;
 	}
 }

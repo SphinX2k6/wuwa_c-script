@@ -6,22 +6,22 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Data.Gameplay.WuWaGo
 {
-	// Token: 0x02003F2D RID: 16173
+	// Token: 0x020031D9 RID: 12761
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Data/Gameplay/WuWaGo/SWuWaGoRoleAnim.SWuWaGoRoleAnim")]
 	[UnrealStructLayout(128, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 128)]
 	public class SWuWaGoRoleAnim : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x060291A4 RID: 168356 RVA: 0x009BBDEB File Offset: 0x009B9FEB
+		// Token: 0x0601FAB7 RID: 129719 RVA: 0x00932F6D File Offset: 0x0093116D
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SWuWaGoRoleAnim._ScriptStructPtr != 0) ? SWuWaGoRoleAnim._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Data/Gameplay/WuWaGo/SWuWaGoRoleAnim.SWuWaGoRoleAnim", ref SWuWaGoRoleAnim._ScriptStructPtr);
 		}
 
-		// Token: 0x17006178 RID: 24952
-		// (get) Token: 0x060291A5 RID: 168357 RVA: 0x009BBE10 File Offset: 0x009BA010
-		// (set) Token: 0x060291A6 RID: 168358 RVA: 0x009BBE53 File Offset: 0x009BA053
+		// Token: 0x17003AC4 RID: 15044
+		// (get) Token: 0x0601FAB8 RID: 129720 RVA: 0x00932F94 File Offset: 0x00931194
+		// (set) Token: 0x0601FAB9 RID: 129721 RVA: 0x00932FD7 File Offset: 0x009311D7
 		public TArray<TSoftObjectPtr<UAnimMontage>> Attack
 		{
 			get
@@ -30,7 +30,7 @@ namespace AkiClient.Game.Aki.Data.Gameplay.WuWaGo
 				TArray<TSoftObjectPtr<UAnimMontage>> result;
 				if ((result = this._Attack) == null)
 				{
-					result = (this._Attack = new TArray<TSoftObjectPtr<UAnimMontage>>(base.NativePtr + (IntPtr)SWuWaGoRoleAnim.__PropertyOffset_0, base.MemoryOwner ?? this));
+					result = (this._Attack = new TArray<TSoftObjectPtr<UAnimMontage>>(base.NativePtr + (IntPtr)SWuWaGoRoleAnim.__PropertyOffset_Attack, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -40,9 +40,9 @@ namespace AkiClient.Game.Aki.Data.Gameplay.WuWaGo
 			}
 		}
 
-		// Token: 0x17006179 RID: 24953
-		// (get) Token: 0x060291A7 RID: 168359 RVA: 0x009BBE64 File Offset: 0x009BA064
-		// (set) Token: 0x060291A8 RID: 168360 RVA: 0x009BBEA7 File Offset: 0x009BA0A7
+		// Token: 0x17003AC5 RID: 15045
+		// (get) Token: 0x0601FABA RID: 129722 RVA: 0x00932FE8 File Offset: 0x009311E8
+		// (set) Token: 0x0601FABB RID: 129723 RVA: 0x0093302B File Offset: 0x0093122B
 		public TArray<TSoftObjectPtr<UAnimMontage>> Death
 		{
 			get
@@ -51,7 +51,7 @@ namespace AkiClient.Game.Aki.Data.Gameplay.WuWaGo
 				TArray<TSoftObjectPtr<UAnimMontage>> result;
 				if ((result = this._Death) == null)
 				{
-					result = (this._Death = new TArray<TSoftObjectPtr<UAnimMontage>>(base.NativePtr + (IntPtr)SWuWaGoRoleAnim.__PropertyOffset_1, base.MemoryOwner ?? this));
+					result = (this._Death = new TArray<TSoftObjectPtr<UAnimMontage>>(base.NativePtr + (IntPtr)SWuWaGoRoleAnim.__PropertyOffset_Death, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -61,9 +61,9 @@ namespace AkiClient.Game.Aki.Data.Gameplay.WuWaGo
 			}
 		}
 
-		// Token: 0x1700617A RID: 24954
-		// (get) Token: 0x060291A9 RID: 168361 RVA: 0x009BBEB8 File Offset: 0x009BA0B8
-		// (set) Token: 0x060291AA RID: 168362 RVA: 0x009BBEFB File Offset: 0x009BA0FB
+		// Token: 0x17003AC6 RID: 15046
+		// (get) Token: 0x0601FABC RID: 129724 RVA: 0x0093303C File Offset: 0x0093123C
+		// (set) Token: 0x0601FABD RID: 129725 RVA: 0x0093307F File Offset: 0x0093127F
 		public TArray<TSoftObjectPtr<UAnimMontage>> BeHit
 		{
 			get
@@ -72,7 +72,7 @@ namespace AkiClient.Game.Aki.Data.Gameplay.WuWaGo
 				TArray<TSoftObjectPtr<UAnimMontage>> result;
 				if ((result = this._BeHit) == null)
 				{
-					result = (this._BeHit = new TArray<TSoftObjectPtr<UAnimMontage>>(base.NativePtr + (IntPtr)SWuWaGoRoleAnim.__PropertyOffset_2, base.MemoryOwner ?? this));
+					result = (this._BeHit = new TArray<TSoftObjectPtr<UAnimMontage>>(base.NativePtr + (IntPtr)SWuWaGoRoleAnim.__PropertyOffset_BeHit, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -82,9 +82,9 @@ namespace AkiClient.Game.Aki.Data.Gameplay.WuWaGo
 			}
 		}
 
-		// Token: 0x1700617B RID: 24955
-		// (get) Token: 0x060291AB RID: 168363 RVA: 0x009BBF0C File Offset: 0x009BA10C
-		// (set) Token: 0x060291AC RID: 168364 RVA: 0x009BBF4F File Offset: 0x009BA14F
+		// Token: 0x17003AC7 RID: 15047
+		// (get) Token: 0x0601FABE RID: 129726 RVA: 0x00933090 File Offset: 0x00931290
+		// (set) Token: 0x0601FABF RID: 129727 RVA: 0x009330D3 File Offset: 0x009312D3
 		[Nullable(new byte[]
 		{
 			1,
@@ -107,7 +107,7 @@ namespace AkiClient.Game.Aki.Data.Gameplay.WuWaGo
 				TMap<TEnumAsByte<EWuWaGoClimbMontage>, TSoftObjectPtr<UAnimMontage>> result;
 				if ((result = this._Climb) == null)
 				{
-					result = (this._Climb = new TMap<TEnumAsByte<EWuWaGoClimbMontage>, TSoftObjectPtr<UAnimMontage>>(base.NativePtr + (IntPtr)SWuWaGoRoleAnim.__PropertyOffset_3, base.MemoryOwner ?? this));
+					result = (this._Climb = new TMap<TEnumAsByte<EWuWaGoClimbMontage>, TSoftObjectPtr<UAnimMontage>>(base.NativePtr + (IntPtr)SWuWaGoRoleAnim.__PropertyOffset_Climb, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -124,65 +124,50 @@ namespace AkiClient.Game.Aki.Data.Gameplay.WuWaGo
 			}
 		}
 
-		// Token: 0x060291AD RID: 168365 RVA: 0x009BBF5D File Offset: 0x009BA15D
+		// Token: 0x0601FAC0 RID: 129728 RVA: 0x009330E1 File Offset: 0x009312E1
 		public SWuWaGoRoleAnim()
 		{
 		}
 
-		// Token: 0x060291AE RID: 168366 RVA: 0x009BBF65 File Offset: 0x009BA165
-		public SWuWaGoRoleAnim(TArray<TSoftObjectPtr<UAnimMontage>> Attack, TArray<TSoftObjectPtr<UAnimMontage>> Death, TArray<TSoftObjectPtr<UAnimMontage>> BeHit, [Nullable(new byte[]
-		{
-			1,
-			0,
-			1,
-			1
-		})] TMap<TEnumAsByte<EWuWaGoClimbMontage>, TSoftObjectPtr<UAnimMontage>> Climb)
-		{
-			this.Attack = Attack;
-			this.Death = Death;
-			this.BeHit = BeHit;
-			this.Climb = Climb;
-		}
-
-		// Token: 0x060291AF RID: 168367 RVA: 0x009BBF8A File Offset: 0x009BA18A
+		// Token: 0x0601FAC1 RID: 129729 RVA: 0x009330E9 File Offset: 0x009312E9
 		protected override IntPtr GetUStructPtr()
 		{
 			return SWuWaGoRoleAnim.StaticStruct();
 		}
 
-		// Token: 0x060291B0 RID: 168368 RVA: 0x009BBF96 File Offset: 0x009BA196
+		// Token: 0x0601FAC2 RID: 129730 RVA: 0x009330F5 File Offset: 0x009312F5
 		[NullableContext(2)]
 		public SWuWaGoRoleAnim(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x060291B1 RID: 168369 RVA: 0x009BBFA0 File Offset: 0x009BA1A0
+		// Token: 0x0601FAC3 RID: 129731 RVA: 0x009330FF File Offset: 0x009312FF
 		public SWuWaGoRoleAnim(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x060291B2 RID: 168370 RVA: 0x009BBFAB File Offset: 0x009BA1AB
+		// Token: 0x0601FAC4 RID: 129732 RVA: 0x0093310A File Offset: 0x0093130A
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SWuWaGoRoleAnim(Pointer, false, true);
 		}
 
-		// Token: 0x060291B3 RID: 168371 RVA: 0x009BBFB5 File Offset: 0x009BA1B5
+		// Token: 0x0601FAC5 RID: 129733 RVA: 0x00933114 File Offset: 0x00931314
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SWuWaGoRoleAnim(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x040150A9 RID: 86185
+		// Token: 0x04010FD9 RID: 69593
 		public const string __ObjectPath = "/Game/Aki/Data/Gameplay/WuWaGo/SWuWaGoRoleAnim.SWuWaGoRoleAnim";
 
-		// Token: 0x040150AA RID: 86186
+		// Token: 0x04010FDA RID: 69594
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040150AB RID: 86187
-		internal static int __PropertyOffset_0;
+		// Token: 0x04010FDB RID: 69595
+		internal static int __PropertyOffset_Attack;
 
-		// Token: 0x040150AC RID: 86188
+		// Token: 0x04010FDC RID: 69596
 		[Nullable(new byte[]
 		{
 			2,
@@ -191,10 +176,10 @@ namespace AkiClient.Game.Aki.Data.Gameplay.WuWaGo
 		})]
 		private TArray<TSoftObjectPtr<UAnimMontage>> _Attack;
 
-		// Token: 0x040150AD RID: 86189
-		internal static int __PropertyOffset_1;
+		// Token: 0x04010FDD RID: 69597
+		internal static int __PropertyOffset_Death;
 
-		// Token: 0x040150AE RID: 86190
+		// Token: 0x04010FDE RID: 69598
 		[Nullable(new byte[]
 		{
 			2,
@@ -203,10 +188,10 @@ namespace AkiClient.Game.Aki.Data.Gameplay.WuWaGo
 		})]
 		private TArray<TSoftObjectPtr<UAnimMontage>> _Death;
 
-		// Token: 0x040150AF RID: 86191
-		internal static int __PropertyOffset_2;
+		// Token: 0x04010FDF RID: 69599
+		internal static int __PropertyOffset_BeHit;
 
-		// Token: 0x040150B0 RID: 86192
+		// Token: 0x04010FE0 RID: 69600
 		[Nullable(new byte[]
 		{
 			2,
@@ -215,10 +200,10 @@ namespace AkiClient.Game.Aki.Data.Gameplay.WuWaGo
 		})]
 		private TArray<TSoftObjectPtr<UAnimMontage>> _BeHit;
 
-		// Token: 0x040150B1 RID: 86193
-		internal static int __PropertyOffset_3;
+		// Token: 0x04010FE1 RID: 69601
+		internal static int __PropertyOffset_Climb;
 
-		// Token: 0x040150B2 RID: 86194
+		// Token: 0x04010FE2 RID: 69602
 		[Nullable(new byte[]
 		{
 			2,

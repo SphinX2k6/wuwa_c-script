@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C13 RID: 23571
+	// Token: 0x02006232 RID: 25138
 	public class TEntityMatchUnion
 	{
-		// Token: 0x1700B1EA RID: 45546
-		// (get) Token: 0x060286D5 RID: 165589 RVA: 0x0059076A File Offset: 0x0058E96A
-		// (set) Token: 0x060286D6 RID: 165590 RVA: 0x00590772 File Offset: 0x0058E972
+		// Token: 0x1700BB38 RID: 47928
+		// (get) Token: 0x0602ACC5 RID: 175301 RVA: 0x005D86B2 File Offset: 0x005D68B2
+		// (set) Token: 0x0602ACC6 RID: 175302 RVA: 0x005D86BA File Offset: 0x005D68BA
 		public TEntityMatch Type { get; set; }
 
-		// Token: 0x1700B1EB RID: 45547
-		// (get) Token: 0x060286D7 RID: 165591 RVA: 0x0059077B File Offset: 0x0058E97B
-		// (set) Token: 0x060286D8 RID: 165592 RVA: 0x00590783 File Offset: 0x0058E983
+		// Token: 0x1700BB39 RID: 47929
+		// (get) Token: 0x0602ACC7 RID: 175303 RVA: 0x005D86C3 File Offset: 0x005D68C3
+		// (set) Token: 0x0602ACC8 RID: 175304 RVA: 0x005D86CB File Offset: 0x005D68CB
 		public object Value { get; set; }
 
-		// Token: 0x060286D9 RID: 165593 RVA: 0x0059078C File Offset: 0x0058E98C
+		// Token: 0x0602ACC9 RID: 175305 RVA: 0x005D86D4 File Offset: 0x005D68D4
 		public TEntityMatchUnion()
 		{
 			this.Type = TEntityMatch.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060286DA RID: 165594 RVA: 0x005907A2 File Offset: 0x0058E9A2
+		// Token: 0x0602ACCA RID: 175306 RVA: 0x005D86EA File Offset: 0x005D68EA
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060286DB RID: 165595 RVA: 0x005907B4 File Offset: 0x0058E9B4
+		// Token: 0x0602ACCB RID: 175307 RVA: 0x005D86FC File Offset: 0x005D68FC
 		public IEntityMatchAllCharacterT AsIEntityMatchAllCharacter()
 		{
 			return this.As<IEntityMatchAllCharacterT>();
 		}
 
-		// Token: 0x060286DC RID: 165596 RVA: 0x005907BC File Offset: 0x0058E9BC
+		// Token: 0x0602ACCC RID: 175308 RVA: 0x005D8704 File Offset: 0x005D6904
 		public static TEntityMatchUnion FromIEntityMatchAllCharacter(IEntityMatchAllCharacterT _ientitymatchallcharacter)
 		{
 			return new TEntityMatchUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060286DD RID: 165597 RVA: 0x005907D1 File Offset: 0x0058E9D1
+		// Token: 0x0602ACCD RID: 175309 RVA: 0x005D8719 File Offset: 0x005D6919
 		public IEntityMatchDynamicT AsIEntityMatchDynamic()
 		{
 			return this.As<IEntityMatchDynamicT>();
 		}
 
-		// Token: 0x060286DE RID: 165598 RVA: 0x005907D9 File Offset: 0x0058E9D9
+		// Token: 0x0602ACCE RID: 175310 RVA: 0x005D8721 File Offset: 0x005D6921
 		public static TEntityMatchUnion FromIEntityMatchDynamic(IEntityMatchDynamicT _ientitymatchdynamic)
 		{
 			return new TEntityMatchUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060286DF RID: 165599 RVA: 0x005907EE File Offset: 0x0058E9EE
+		// Token: 0x0602ACCF RID: 175311 RVA: 0x005D8736 File Offset: 0x005D6936
 		public IEntityMatchPlayerT AsIEntityMatchPlayer()
 		{
 			return this.As<IEntityMatchPlayerT>();
 		}
 
-		// Token: 0x060286E0 RID: 165600 RVA: 0x005907F6 File Offset: 0x0058E9F6
+		// Token: 0x0602ACD0 RID: 175312 RVA: 0x005D873E File Offset: 0x005D693E
 		public static TEntityMatchUnion FromIEntityMatchPlayer(IEntityMatchPlayerT _ientitymatchplayer)
 		{
 			return new TEntityMatchUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060286E1 RID: 165601 RVA: 0x0059080B File Offset: 0x0058EA0B
+		// Token: 0x0602ACD1 RID: 175313 RVA: 0x005D8753 File Offset: 0x005D6953
 		public IEntityMatchSpecificBpT AsIEntityMatchSpecificBp()
 		{
 			return this.As<IEntityMatchSpecificBpT>();
 		}
 
-		// Token: 0x060286E2 RID: 165602 RVA: 0x00590813 File Offset: 0x0058EA13
+		// Token: 0x0602ACD2 RID: 175314 RVA: 0x005D875B File Offset: 0x005D695B
 		public static TEntityMatchUnion FromIEntityMatchSpecificBp(IEntityMatchSpecificBpT _ientitymatchspecificbp)
 		{
 			return new TEntityMatchUnion
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060286E3 RID: 165603 RVA: 0x00590828 File Offset: 0x0058EA28
+		// Token: 0x0602ACD3 RID: 175315 RVA: 0x005D8770 File Offset: 0x005D6970
 		public static int Pack(FlatBufferBuilder builder, TEntityMatchUnion _o)
 		{
 			switch (_o.Type)

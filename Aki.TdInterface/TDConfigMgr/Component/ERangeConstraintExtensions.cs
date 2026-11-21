@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009EA RID: 2538
+	// Token: 0x02000AAF RID: 2735
 	public static class ERangeConstraintExtensions
 	{
-		// Token: 0x0600384E RID: 14414 RVA: 0x00091E58 File Offset: 0x00090058
+		// Token: 0x06003C26 RID: 15398 RVA: 0x0009A718 File Offset: 0x00098918
 		public static string ToEnumString(this ERangeConstraint value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600384F RID: 14415 RVA: 0x00091E80 File Offset: 0x00090080
+		// Token: 0x06003C27 RID: 15399 RVA: 0x0009A740 File Offset: 0x00098940
 		public static ERangeConstraint FromString(string name)
 		{
 			ERangeConstraint result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003850 RID: 14416 RVA: 0x00091EA9 File Offset: 0x000900A9
+		// Token: 0x06003C28 RID: 15400 RVA: 0x0009A769 File Offset: 0x00098969
 		public static bool TryFromString(string name, out ERangeConstraint value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x06003851 RID: 14417 RVA: 0x00091ECE File Offset: 0x000900CE
+		// Token: 0x06003C29 RID: 15401 RVA: 0x0009A78E File Offset: 0x0009898E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003852 RID: 14418 RVA: 0x00091EDE File Offset: 0x000900DE
+		// Token: 0x06003C2A RID: 15402 RVA: 0x0009A79E File Offset: 0x0009899E
 		public static ERangeConstraint[] GetValues()
 		{
 			return new ERangeConstraint[1];
 		}
 
-		// Token: 0x06003853 RID: 14419 RVA: 0x00091EE6 File Offset: 0x000900E6
+		// Token: 0x06003C2B RID: 15403 RVA: 0x0009A7A6 File Offset: 0x000989A6
 		public static string[] GetNames()
 		{
 			return new string[]

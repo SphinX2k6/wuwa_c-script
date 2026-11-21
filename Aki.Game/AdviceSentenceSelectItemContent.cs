@@ -6,17 +6,17 @@ using CSharpScript.Game.Module.Advice;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020016DB RID: 5851
+// Token: 0x02000B93 RID: 2963
 public class AdviceSentenceSelectItemContent : UiPanelBase
 {
-	// Token: 0x0600A793 RID: 42899 RVA: 0x00259BB7 File Offset: 0x00257DB7
+	// Token: 0x06007B73 RID: 31603 RVA: 0x00263FBF File Offset: 0x002621BF
 	[NullableContext(1)]
 	public AdviceSentenceSelectItemContent(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x0600A794 RID: 42900 RVA: 0x00259BCC File Offset: 0x00257DCC
+	// Token: 0x06007B74 RID: 31604 RVA: 0x00263FD4 File Offset: 0x002621D4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,7 +31,7 @@ public class AdviceSentenceSelectItemContent : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600A795 RID: 42901 RVA: 0x00259C4C File Offset: 0x00257E4C
+	// Token: 0x06007B75 RID: 31605 RVA: 0x00264054 File Offset: 0x00262254
 	protected override void OnStart()
 	{
 		EventSystem.Instance.Add(EEventName.OnClickAdviceSortWord, new Action(this.OnClickAdviceSortWord));
@@ -43,20 +43,20 @@ public class AdviceSentenceSelectItemContent : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600A796 RID: 42902 RVA: 0x00259CA2 File Offset: 0x00257EA2
+	// Token: 0x06007B76 RID: 31606 RVA: 0x002640AA File Offset: 0x002622AA
 	private void OnClickAdviceSortWord()
 	{
 		this.RefreshView();
 		this.RefreshToggleView();
 	}
 
-	// Token: 0x0600A797 RID: 42903 RVA: 0x00259CB0 File Offset: 0x00257EB0
+	// Token: 0x06007B77 RID: 31607 RVA: 0x002640B8 File Offset: 0x002622B8
 	private bool CanExecuteChange()
 	{
 		return AdviceModel.Instance.PreSelectSortWordId != this.WordId;
 	}
 
-	// Token: 0x0600A798 RID: 42904 RVA: 0x00259CC7 File Offset: 0x00257EC7
+	// Token: 0x06007B78 RID: 31608 RVA: 0x002640CF File Offset: 0x002622CF
 	public void UpdateItem(int wordId)
 	{
 		this.WordId = wordId;
@@ -65,7 +65,7 @@ public class AdviceSentenceSelectItemContent : UiPanelBase
 		this.RefreshToggleView();
 	}
 
-	// Token: 0x0600A799 RID: 42905 RVA: 0x00259CE4 File Offset: 0x00257EE4
+	// Token: 0x06007B79 RID: 31609 RVA: 0x002640EC File Offset: 0x002622EC
 	private void RefreshView()
 	{
 		int num;
@@ -79,7 +79,7 @@ public class AdviceSentenceSelectItemContent : UiPanelBase
 		item.SetUIActive(uiactive);
 	}
 
-	// Token: 0x0600A79A RID: 42906 RVA: 0x00259D2C File Offset: 0x00257F2C
+	// Token: 0x06007B7A RID: 31610 RVA: 0x00264134 File Offset: 0x00262334
 	private void RefreshShowInfo()
 	{
 		string text = AdviceConfig.Instance.GetAdviceSentenceText(this.WordId);
@@ -92,7 +92,7 @@ public class AdviceSentenceSelectItemContent : UiPanelBase
 		text2.SetText(text, true);
 	}
 
-	// Token: 0x0600A79B RID: 42907 RVA: 0x00259D80 File Offset: 0x00257F80
+	// Token: 0x06007B7B RID: 31611 RVA: 0x00264188 File Offset: 0x00262388
 	private void ButtonClick(EToggleState state)
 	{
 		int num;
@@ -104,7 +104,7 @@ public class AdviceSentenceSelectItemContent : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600A79C RID: 42908 RVA: 0x00259DE4 File Offset: 0x00257FE4
+	// Token: 0x06007B7C RID: 31612 RVA: 0x002641EC File Offset: 0x002623EC
 	private void RefreshToggleView()
 	{
 		EToggleState toggleState = base.GetExtendToggle(0).ToggleState;
@@ -117,25 +117,25 @@ public class AdviceSentenceSelectItemContent : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600A79D RID: 42909 RVA: 0x00259E3A File Offset: 0x0025803A
+	// Token: 0x06007B7D RID: 31613 RVA: 0x00264242 File Offset: 0x00262442
 	protected override void OnBeforeDestroy()
 	{
 		EventSystem.Instance.Remove(EEventName.OnClickAdviceSortWord, new Action(this.OnClickAdviceSortWord));
 	}
 
-	// Token: 0x04004B90 RID: 19344
+	// Token: 0x04004C37 RID: 19511
 	private int WordId;
 
-	// Token: 0x02007CAF RID: 31919
+	// Token: 0x02006E34 RID: 28212
 	private static class EAdviceSentenceSelectItemContentComponents
 	{
-		// Token: 0x04028E60 RID: 167520
+		// Token: 0x04024189 RID: 147849
 		public const int Toggle = 0;
 
-		// Token: 0x04028E61 RID: 167521
+		// Token: 0x0402418A RID: 147850
 		public const int Text = 1;
 
-		// Token: 0x04028E62 RID: 167522
+		// Token: 0x0402418B RID: 147851
 		public const int SelectItem = 2;
 	}
 }

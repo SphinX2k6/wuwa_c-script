@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200176E RID: 5998
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020018EF RID: 6383
 	public class IActorFxEmoteStopAll : IActorFxEmoteStopSubType
 	{
-		// Token: 0x06007F05 RID: 32517 RVA: 0x0012FE94 File Offset: 0x0012E094
+		// Token: 0x060085F5 RID: 34293 RVA: 0x0013F0F4 File Offset: 0x0013D2F4
 		private IActorFxEmoteStopAll_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06007F06 RID: 32518 RVA: 0x0012FECC File Offset: 0x0012E0CC
+		// Token: 0x060085F6 RID: 34294 RVA: 0x0013F12C File Offset: 0x0013D32C
 		public static IActorFxEmoteStopAll Create([Nullable(2)] IActorFxEmoteStopAll instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007F07 RID: 32519 RVA: 0x0012FEDF File Offset: 0x0012E0DF
+		// Token: 0x060085F7 RID: 34295 RVA: 0x0013F13F File Offset: 0x0013D33F
 		public static IActorFxEmoteStopAll CreateFromSetValue([Nullable(2)] IActorFxEmoteStopAll_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06007F08 RID: 32520 RVA: 0x0012FEF2 File Offset: 0x0012E0F2
+		// Token: 0x060085F8 RID: 34296 RVA: 0x0013F152 File Offset: 0x0013D352
 		public new IActorFxEmoteStopAll_SetValue ToSetValue()
 		{
 			return new IActorFxEmoteStopAll_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170029B2 RID: 10674
-		// (get) Token: 0x06007F09 RID: 32521 RVA: 0x0012FF05 File Offset: 0x0012E105
-		// (set) Token: 0x06007F0A RID: 32522 RVA: 0x0012FF30 File Offset: 0x0012E130
+		// Token: 0x17002BA0 RID: 11168
+		// (get) Token: 0x060085F9 RID: 34297 RVA: 0x0013F165 File Offset: 0x0013D365
+		// (set) Token: 0x060085FA RID: 34298 RVA: 0x0013F190 File Offset: 0x0013D390
 		public override EActorFxEmoteStopSubType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040050D1 RID: 20689
+		// Token: 0x04005507 RID: 21767
 		[Nullable(2)]
 		protected new IActorFxEmoteStopAll FbInstance;
 
-		// Token: 0x040050D2 RID: 20690
+		// Token: 0x04005508 RID: 21768
 		[Nullable(2)]
 		protected new IActorFxEmoteStopAll_SetValue PocoInterface;
 	}

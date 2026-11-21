@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020045AF RID: 17839
+	// Token: 0x02004A17 RID: 18967
 	public class ISingleOnlineRefreshT
 	{
-		// Token: 0x17007ECB RID: 32459
-		// (get) Token: 0x0601AF8D RID: 110477 RVA: 0x003D8B8E File Offset: 0x003D6D8E
-		// (set) Token: 0x0601AF8E RID: 110478 RVA: 0x003D8B96 File Offset: 0x003D6D96
+		// Token: 0x1700850C RID: 34060
+		// (get) Token: 0x0601C762 RID: 116578 RVA: 0x00404E2A File Offset: 0x0040302A
+		// (set) Token: 0x0601C763 RID: 116579 RVA: 0x00404E32 File Offset: 0x00403032
 		public int CompletedRefreshTime { get; set; }
 
-		// Token: 0x17007ECC RID: 32460
-		// (get) Token: 0x0601AF8F RID: 110479 RVA: 0x003D8B9F File Offset: 0x003D6D9F
-		// (set) Token: 0x0601AF90 RID: 110480 RVA: 0x003D8BA7 File Offset: 0x003D6DA7
+		// Token: 0x1700850D RID: 34061
+		// (get) Token: 0x0601C764 RID: 116580 RVA: 0x00404E3B File Offset: 0x0040303B
+		// (set) Token: 0x0601C765 RID: 116581 RVA: 0x00404E43 File Offset: 0x00403043
 		public int AwardedRefreshTime { get; set; }
 
-		// Token: 0x17007ECD RID: 32461
-		// (get) Token: 0x0601AF91 RID: 110481 RVA: 0x003D8BB0 File Offset: 0x003D6DB0
-		// (set) Token: 0x0601AF92 RID: 110482 RVA: 0x003D8BB8 File Offset: 0x003D6DB8
+		// Token: 0x1700850E RID: 34062
+		// (get) Token: 0x0601C766 RID: 116582 RVA: 0x00404E4C File Offset: 0x0040304C
+		// (set) Token: 0x0601C767 RID: 116583 RVA: 0x00404E54 File Offset: 0x00403054
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601AF93 RID: 110483 RVA: 0x003D8BC1 File Offset: 0x003D6DC1
+		// Token: 0x0601C768 RID: 116584 RVA: 0x00404E5D File Offset: 0x0040305D
 		public ISingleOnlineRefreshT()
 		{
 			this.CompletedRefreshTime = 0;

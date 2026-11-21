@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001C24 RID: 7204
+// Token: 0x020010E3 RID: 4323
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,7 +14,7 @@ using UnrealEngine;
 })]
 internal class MemoryFragmentTabItem : GridProxyAbstract<TabItemData>
 {
-	// Token: 0x0600D888 RID: 55432 RVA: 0x003227D8 File Offset: 0x003209D8
+	// Token: 0x0600AC9E RID: 44190 RVA: 0x0032DBB0 File Offset: 0x0032BDB0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -47,7 +47,7 @@ internal class MemoryFragmentTabItem : GridProxyAbstract<TabItemData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600D889 RID: 55433 RVA: 0x00322944 File Offset: 0x00320B44
+	// Token: 0x0600AC9F RID: 44191 RVA: 0x0032DD1C File Offset: 0x0032BF1C
 	private void OnTabToggleClick(EToggleState toggleState)
 	{
 		if (this.Data == null)
@@ -57,7 +57,7 @@ internal class MemoryFragmentTabItem : GridProxyAbstract<TabItemData>
 		this.Data.TabCallBack(base.GridIndex);
 	}
 
-	// Token: 0x0600D88A RID: 55434 RVA: 0x00322965 File Offset: 0x00320B65
+	// Token: 0x0600ACA0 RID: 44192 RVA: 0x0032DD3D File Offset: 0x0032BF3D
 	private LevelSequencePlayer GetLevelSequencePlayer()
 	{
 		if (this.LevelSequencePlayer == null)
@@ -67,7 +67,7 @@ internal class MemoryFragmentTabItem : GridProxyAbstract<TabItemData>
 		return this.LevelSequencePlayer;
 	}
 
-	// Token: 0x0600D88B RID: 55435 RVA: 0x00322988 File Offset: 0x00320B88
+	// Token: 0x0600ACA1 RID: 44193 RVA: 0x0032DD60 File Offset: 0x0032BF60
 	public override void Refresh(TabItemData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
@@ -100,7 +100,7 @@ internal class MemoryFragmentTabItem : GridProxyAbstract<TabItemData>
 		this.SelectState = flag;
 	}
 
-	// Token: 0x0600D88C RID: 55436 RVA: 0x00322A68 File Offset: 0x00320C68
+	// Token: 0x0600ACA2 RID: 44194 RVA: 0x0032DE40 File Offset: 0x0032C040
 	private void RefreshToggleAnimation(EToggleState targetState)
 	{
 		string text = (targetState == EToggleState.ETT_Checked) ? "Select" : "Unselect";
@@ -137,7 +137,7 @@ internal class MemoryFragmentTabItem : GridProxyAbstract<TabItemData>
 		}
 	}
 
-	// Token: 0x0600D88D RID: 55437 RVA: 0x00322B10 File Offset: 0x00320D10
+	// Token: 0x0600ACA3 RID: 44195 RVA: 0x0032DEE8 File Offset: 0x0032C0E8
 	private void RefreshNumText()
 	{
 		TabItemData data = this.Data;
@@ -168,7 +168,7 @@ internal class MemoryFragmentTabItem : GridProxyAbstract<TabItemData>
 		}
 	}
 
-	// Token: 0x0600D88E RID: 55438 RVA: 0x00322B88 File Offset: 0x00320D88
+	// Token: 0x0600ACA4 RID: 44196 RVA: 0x0032DF60 File Offset: 0x0032C160
 	private void RefreshHaveItem()
 	{
 		TabItemData data = this.Data;
@@ -185,7 +185,7 @@ internal class MemoryFragmentTabItem : GridProxyAbstract<TabItemData>
 		item.SetUIActive(ifUnlock);
 	}
 
-	// Token: 0x0600D88F RID: 55439 RVA: 0x00322BD0 File Offset: 0x00320DD0
+	// Token: 0x0600ACA5 RID: 44197 RVA: 0x0032DFA8 File Offset: 0x0032C1A8
 	private void RefreshNoneItem()
 	{
 		TabItemData data = this.Data;
@@ -202,7 +202,7 @@ internal class MemoryFragmentTabItem : GridProxyAbstract<TabItemData>
 		item.SetUIActive(uiactive);
 	}
 
-	// Token: 0x0600D890 RID: 55440 RVA: 0x00322C18 File Offset: 0x00320E18
+	// Token: 0x0600ACA6 RID: 44198 RVA: 0x0032DFF0 File Offset: 0x0032C1F0
 	private void RefreshRedDot()
 	{
 		TabItemData data = this.Data;
@@ -214,43 +214,43 @@ internal class MemoryFragmentTabItem : GridProxyAbstract<TabItemData>
 		RedDotController.Instance.BindRedDot(ERedDotName.FragmentMemoryReward, base.GetItem(4), null, this.Data.FragmentCollectData.GetId());
 	}
 
-	// Token: 0x040062B0 RID: 25264
+	// Token: 0x04006382 RID: 25474
 	[Nullable(2)]
 	private TabItemData Data;
 
-	// Token: 0x040062B1 RID: 25265
+	// Token: 0x04006383 RID: 25475
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x040062B2 RID: 25266
+	// Token: 0x04006384 RID: 25476
 	private bool SelectState;
 
-	// Token: 0x020081DF RID: 33247
+	// Token: 0x02007368 RID: 29544
 	[NullableContext(0)]
 	private class ETabItem
 	{
-		// Token: 0x0402A634 RID: 173620
+		// Token: 0x0402595B RID: 153947
 		public const int TabToggle = 0;
 
-		// Token: 0x0402A635 RID: 173621
+		// Token: 0x0402595C RID: 153948
 		public const int NumText = 1;
 
-		// Token: 0x0402A636 RID: 173622
+		// Token: 0x0402595D RID: 153949
 		public const int NameText = 2;
 
-		// Token: 0x0402A637 RID: 173623
+		// Token: 0x0402595E RID: 153950
 		public const int DoneSprite = 3;
 
-		// Token: 0x0402A638 RID: 173624
+		// Token: 0x0402595F RID: 153951
 		public const int RedDot = 4;
 
-		// Token: 0x0402A639 RID: 173625
+		// Token: 0x04025960 RID: 153952
 		public const int HaveItem = 5;
 
-		// Token: 0x0402A63A RID: 173626
+		// Token: 0x04025961 RID: 153953
 		public const int NoneItem = 6;
 
-		// Token: 0x0402A63B RID: 173627
+		// Token: 0x04025962 RID: 153954
 		public const int TextNumNone = 7;
 	}
 }

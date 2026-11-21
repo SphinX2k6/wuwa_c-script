@@ -8,12 +8,12 @@ using CSharpScript.Game.Module.Reward;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 {
-	// Token: 0x020063A3 RID: 25507
+	// Token: 0x02005321 RID: 21281
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ActivityMowingData : ActivityBaseData
 	{
-		// Token: 0x0604028B RID: 262795 RVA: 0x00F88A98 File Offset: 0x00F86C98
+		// Token: 0x06034F4C RID: 216908 RVA: 0x00ECF9D0 File Offset: 0x00ECDBD0
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			return new ValueTuple<string, int>(item2, item);
 		}
 
-		// Token: 0x0604028C RID: 262796 RVA: 0x00F88B08 File Offset: 0x00F86D08
+		// Token: 0x06034F4D RID: 216909 RVA: 0x00ECFA40 File Offset: 0x00ECDC40
 		protected override void PhraseEx(ActivityData data)
 		{
 			if (data.HarvestActivity == null)
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			EventSystem.Instance.Emit<int>(EEventName.ActivityViewRefreshCurrent, base.Id);
 		}
 
-		// Token: 0x0604028D RID: 262797 RVA: 0x00F88CA0 File Offset: 0x00F86EA0
+		// Token: 0x06034F4E RID: 216910 RVA: 0x00ECFBD8 File Offset: 0x00ECDDD8
 		private IActivityRewardData CreateActivityRewardDataByPoint(HarvestPointReward pointReward, ScoreReward pointConf)
 		{
 			ActivityMowingController controller = (ActivityMowingController)ActivityManager.GetActivityController(base.Type);
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			};
 		}
 
-		// Token: 0x0604028E RID: 262798 RVA: 0x00F88D60 File Offset: 0x00F86F60
+		// Token: 0x06034F4F RID: 216911 RVA: 0x00ECFC98 File Offset: 0x00ECDE98
 		private IActivityRewardData CreateActivityRewardDataByLevel(HarvestLevelReward levelReward, KillMonstersScores levelConf)
 		{
 			ActivityMowingController controller = (ActivityMowingController)ActivityManager.GetActivityController(base.Type);
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			};
 		}
 
-		// Token: 0x0604028F RID: 262799 RVA: 0x00F88E30 File Offset: 0x00F87030
+		// Token: 0x06034F50 RID: 216912 RVA: 0x00ECFD68 File Offset: 0x00ECDF68
 		private void RefreshText(IActivityRewardData data, string descId)
 		{
 			string item = this.GetButtonTextByRewardTextAndSort((int)data.RewardState).Item1;
@@ -130,13 +130,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			data.RewardButtonText = item;
 		}
 
-		// Token: 0x06040290 RID: 262800 RVA: 0x00F88E63 File Offset: 0x00F87063
+		// Token: 0x06034F51 RID: 216913 RVA: 0x00ECFD9B File Offset: 0x00ECDF9B
 		public override bool GetExDataRedPointShowState()
 		{
 			return this.IsHaveRewardToGet() || this.IsNewInstanceOpen();
 		}
 
-		// Token: 0x06040291 RID: 262801 RVA: 0x00F88E78 File Offset: 0x00F87078
+		// Token: 0x06034F52 RID: 216914 RVA: 0x00ECFDB0 File Offset: 0x00ECDFB0
 		public bool IsHaveRewardToGet()
 		{
 			using (List<IActivityRewardData>.Enumerator enumerator = this.MowingPointRewards.GetEnumerator())
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			return false;
 		}
 
-		// Token: 0x06040292 RID: 262802 RVA: 0x00F88F18 File Offset: 0x00F87118
+		// Token: 0x06034F53 RID: 216915 RVA: 0x00ECFE50 File Offset: 0x00ECE050
 		public bool IsNewInstanceOpen()
 		{
 			if (!base.IsUnLock())
@@ -185,7 +185,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			return false;
 		}
 
-		// Token: 0x06040293 RID: 262803 RVA: 0x00F88FC0 File Offset: 0x00F871C0
+		// Token: 0x06034F54 RID: 216916 RVA: 0x00ECFEF8 File Offset: 0x00ECE0F8
 		public void ReadNewInstance()
 		{
 			foreach (KeyValuePair<int, HarvestLevelReward> keyValuePair in this.MowingLevelInfoDict)
@@ -199,19 +199,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 		}
 
-		// Token: 0x06040294 RID: 262804 RVA: 0x00F8905C File Offset: 0x00F8725C
+		// Token: 0x06034F55 RID: 216917 RVA: 0x00ECFF94 File Offset: 0x00ECE194
 		private List<TItem> GetRewardItems(int dropId)
 		{
 			return CSharpScript.Game.Module.Reward.RewardConfig.Instance.GetDropPackagePreviewItemList(dropId);
 		}
 
-		// Token: 0x06040295 RID: 262805 RVA: 0x00F8906C File Offset: 0x00F8726C
+		// Token: 0x06034F56 RID: 216918 RVA: 0x00ECFFA4 File Offset: 0x00ECE1A4
 		public string GetDesc()
 		{
 			return ConfigMultiTextLang.GetLocalTextNew(this.LocalConfig.Value.Desc, null);
 		}
 
-		// Token: 0x06040296 RID: 262806 RVA: 0x00F89094 File Offset: 0x00F87294
+		// Token: 0x06034F57 RID: 216919 RVA: 0x00ECFFCC File Offset: 0x00ECE1CC
 		public List<IActivityRewardData> GetPointRewards()
 		{
 			foreach (IActivityRewardData activityRewardData in this.MowingPointRewards)
@@ -226,7 +226,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			return this.MowingPointRewards;
 		}
 
-		// Token: 0x06040297 RID: 262807 RVA: 0x00F89134 File Offset: 0x00F87334
+		// Token: 0x06034F58 RID: 216920 RVA: 0x00ED006C File Offset: 0x00ECE26C
 		public List<IActivityRewardData> GetLevelRewards()
 		{
 			foreach (IActivityRewardData activityRewardData in this.MowingLevelRewards)
@@ -241,7 +241,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			return this.MowingLevelRewards;
 		}
 
-		// Token: 0x06040298 RID: 262808 RVA: 0x00F891D4 File Offset: 0x00F873D4
+		// Token: 0x06034F59 RID: 216921 RVA: 0x00ED010C File Offset: 0x00ECE30C
 		private int SortReward(IActivityRewardData a, IActivityRewardData b)
 		{
 			int item = this.GetButtonTextByRewardTextAndSort((int)a.RewardState).Item2;
@@ -253,7 +253,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			return item - item2;
 		}
 
-		// Token: 0x06040299 RID: 262809 RVA: 0x00F8922C File Offset: 0x00F8742C
+		// Token: 0x06034F5A RID: 216922 RVA: 0x00ED0164 File Offset: 0x00ECE364
 		public IActivityRewardViewData GetRewardViewData()
 		{
 			string tabTips = StringUtils.Format(ConfigMultiTextLang.GetLocalTextNew("MowingTotalPoint", null), new string[]
@@ -283,7 +283,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			};
 		}
 
-		// Token: 0x0604029A RID: 262810 RVA: 0x00F892E0 File Offset: 0x00F874E0
+		// Token: 0x06034F5B RID: 216923 RVA: 0x00ED0218 File Offset: 0x00ECE418
 		public void SetLevelRewardStateToGot(int instanceId)
 		{
 			IActivityRewardData activityRewardData;
@@ -296,7 +296,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			}
 		}
 
-		// Token: 0x0604029B RID: 262811 RVA: 0x00F89320 File Offset: 0x00F87520
+		// Token: 0x06034F5C RID: 216924 RVA: 0x00ED0258 File Offset: 0x00ECE458
 		public void SetPointRewardState(int id)
 		{
 			IActivityRewardData activityRewardData;
@@ -308,7 +308,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			}
 		}
 
-		// Token: 0x0604029C RID: 262812 RVA: 0x00F89358 File Offset: 0x00F87558
+		// Token: 0x06034F5D RID: 216925 RVA: 0x00ED0290 File Offset: 0x00ECE490
 		public int GetInstanceCurrentPoint(int instanceId)
 		{
 			HarvestLevelReward harvestLevelReward;
@@ -319,7 +319,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			return 0;
 		}
 
-		// Token: 0x0604029D RID: 262813 RVA: 0x00F89380 File Offset: 0x00F87580
+		// Token: 0x06034F5E RID: 216926 RVA: 0x00ED02B8 File Offset: 0x00ECE4B8
 		public void SetInstanceCurrentSelectedDiff(int instanceId, int diff)
 		{
 			HarvestLevelReward harvestLevelReward;
@@ -329,7 +329,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			}
 		}
 
-		// Token: 0x0604029E RID: 262814 RVA: 0x00F893A4 File Offset: 0x00F875A4
+		// Token: 0x06034F5F RID: 216927 RVA: 0x00ED02DC File Offset: 0x00ECE4DC
 		public void UpdatePointRewards(HarvestActivityPointNotify notify)
 		{
 			foreach (HarvestPointReward harvestPointReward in notify.HarvestPointReward)
@@ -348,7 +348,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			}
 		}
 
-		// Token: 0x0604029F RID: 262815 RVA: 0x00F89440 File Offset: 0x00F87640
+		// Token: 0x06034F60 RID: 216928 RVA: 0x00ED0378 File Offset: 0x00ECE578
 		public void UpdateLevelRewards(HarvestActivityLevelNotify notify)
 		{
 			foreach (HarvestLevelReward harvestLevelReward in notify.HarvestLevelRewards)
@@ -368,7 +368,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			}
 		}
 
-		// Token: 0x060402A0 RID: 262816 RVA: 0x00F89500 File Offset: 0x00F87700
+		// Token: 0x06034F61 RID: 216929 RVA: 0x00ED0438 File Offset: 0x00ECE638
 		public int GetLevelDiffIndex(int instanceId)
 		{
 			HarvestLevelReward harvestLevelReward;
@@ -385,7 +385,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			return num;
 		}
 
-		// Token: 0x060402A1 RID: 262817 RVA: 0x00F89574 File Offset: 0x00F87774
+		// Token: 0x06034F62 RID: 216930 RVA: 0x00ED04AC File Offset: 0x00ECE6AC
 		public int GetLevelDiffRecommendLevel(int instanceId)
 		{
 			HarvestLevelReward harvestLevelReward;
@@ -401,7 +401,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			return config.GetValueOrDefault().RecommendedLevel;
 		}
 
-		// Token: 0x060402A2 RID: 262818 RVA: 0x00F895BC File Offset: 0x00F877BC
+		// Token: 0x06034F63 RID: 216931 RVA: 0x00ED04F4 File Offset: 0x00ECE6F4
 		public int GetTotalPoint()
 		{
 			int num = 0;
@@ -412,7 +412,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			return num;
 		}
 
-		// Token: 0x060402A3 RID: 262819 RVA: 0x00F8961C File Offset: 0x00F8781C
+		// Token: 0x06034F64 RID: 216932 RVA: 0x00ED0554 File Offset: 0x00ECE754
 		public int GetLevelMaxPoint(int instanceId)
 		{
 			HarvestLevelReward harvestLevelReward;
@@ -423,14 +423,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			return harvestLevelReward.Point;
 		}
 
-		// Token: 0x060402A4 RID: 262820 RVA: 0x00F89644 File Offset: 0x00F87844
+		// Token: 0x06034F65 RID: 216933 RVA: 0x00ED057C File Offset: 0x00ECE77C
 		public bool GetActivityLevelUnlockState(int levelId)
 		{
 			HarvestLevelReward harvestLevelReward;
 			return this.MowingLevelInfoDict.TryGetValue(levelId, out harvestLevelReward) && (double)harvestLevelReward.StartTime <= TimeUtil.Instance.GetServerTime();
 		}
 
-		// Token: 0x060402A5 RID: 262821 RVA: 0x00F8967C File Offset: 0x00F8787C
+		// Token: 0x06034F66 RID: 216934 RVA: 0x00ED05B4 File Offset: 0x00ECE7B4
 		public string GetActivityLevelCountdownText(int levelId)
 		{
 			HarvestLevelReward harvestLevelReward;
@@ -446,7 +446,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			return this.GetRemainTime(num);
 		}
 
-		// Token: 0x060402A6 RID: 262822 RVA: 0x00F896CC File Offset: 0x00F878CC
+		// Token: 0x06034F67 RID: 216935 RVA: 0x00ED0604 File Offset: 0x00ECE804
 		private string GetRemainTime(double cdTime)
 		{
 			double num = Math.Max(cdTime, TimeUtil.Instance.Minute);
@@ -458,7 +458,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			});
 		}
 
-		// Token: 0x060402A7 RID: 262823 RVA: 0x00F8973C File Offset: 0x00F8793C
+		// Token: 0x06034F68 RID: 216936 RVA: 0x00ED0674 File Offset: 0x00ECE874
 		[NullableContext(0)]
 		private ValueTuple<CommonDefine.ETimeType, CommonDefine.ETimeType> GetQuestLockTimeTypeData(double remainTime)
 		{
@@ -473,7 +473,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 			return new ValueTuple<CommonDefine.ETimeType, CommonDefine.ETimeType>(CommonDefine.ETimeType.Minute, CommonDefine.ETimeType.Minute);
 		}
 
-		// Token: 0x040216C0 RID: 136896
+		// Token: 0x0401BFEF RID: 114671
 		[Nullable(new byte[]
 		{
 			2,
@@ -481,7 +481,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 		})]
 		private List<IActivityRewardData> MowingPointRewards;
 
-		// Token: 0x040216C1 RID: 136897
+		// Token: 0x0401BFF0 RID: 114672
 		[Nullable(new byte[]
 		{
 			2,
@@ -489,7 +489,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 		})]
 		private List<IActivityRewardData> MowingLevelRewards;
 
-		// Token: 0x040216C2 RID: 136898
+		// Token: 0x0401BFF1 RID: 114673
 		[Nullable(new byte[]
 		{
 			2,
@@ -497,7 +497,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 		})]
 		private Dictionary<int, IActivityRewardData> MowingPointRewardDict;
 
-		// Token: 0x040216C3 RID: 136899
+		// Token: 0x0401BFF2 RID: 114674
 		[Nullable(new byte[]
 		{
 			2,
@@ -505,7 +505,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Mowing
 		})]
 		private Dictionary<int, IActivityRewardData> MowingLevelRewardDict;
 
-		// Token: 0x040216C4 RID: 136900
+		// Token: 0x0401BFF3 RID: 114675
 		[Nullable(new byte[]
 		{
 			2,

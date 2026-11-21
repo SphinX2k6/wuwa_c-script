@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Camera
 {
-	// Token: 0x020072B4 RID: 29364
+	// Token: 0x02006436 RID: 25654
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CameraSpecificLocLocation : CameraSpecificLockTarget
 	{
-		// Token: 0x0604808E RID: 295054 RVA: 0x012775D4 File Offset: 0x012757D4
+		// Token: 0x0603E47F RID: 255103 RVA: 0x012198ED File Offset: 0x01217AED
 		public CameraSpecificLocLocation(Vector location, int priority, int id, ECameraSpecificLockGroup group = ECameraSpecificLockGroup.Normal) : base(ECameraSpecificLockType.Location, id, priority, group)
 		{
 		}
 
-		// Token: 0x17009F0C RID: 40716
-		// (get) Token: 0x0604808F RID: 295055 RVA: 0x012775E8 File Offset: 0x012757E8
+		// Token: 0x17007673 RID: 30323
+		// (get) Token: 0x0603E480 RID: 255104 RVA: 0x01219901 File Offset: 0x01217B01
 		public Vector Location { get; } = location;
 	}
 }

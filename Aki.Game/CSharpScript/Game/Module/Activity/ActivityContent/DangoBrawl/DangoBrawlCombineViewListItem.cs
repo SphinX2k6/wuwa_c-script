@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -12,7 +11,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067EE RID: 26606
+	// Token: 0x0200573E RID: 22334
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -21,7 +20,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 	})]
 	public class DangoBrawlCombineViewListItem : GridProxyAbstract<DangoBrawlCombineViewListItemData>
 	{
-		// Token: 0x060424AE RID: 271534 RVA: 0x0101825C File Offset: 0x0101645C
+		// Token: 0x06037003 RID: 225283 RVA: 0x00F59710 File Offset: 0x00F57910
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -41,7 +40,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060424AF RID: 271535 RVA: 0x01018328 File Offset: 0x01016528
+		// Token: 0x06037004 RID: 225284 RVA: 0x00F597DC File Offset: 0x00F579DC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			DangoBrawlCombineViewListItem.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -52,19 +51,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060424B0 RID: 271536 RVA: 0x0101836B File Offset: 0x0101656B
+		// Token: 0x06037005 RID: 225285 RVA: 0x00F5981F File Offset: 0x00F57A1F
 		protected override void OnStart()
 		{
 			this.InitSequencePlayer();
 		}
 
-		// Token: 0x060424B1 RID: 271537 RVA: 0x01018373 File Offset: 0x01016573
+		// Token: 0x06037006 RID: 225286 RVA: 0x00F59827 File Offset: 0x00F57A27
 		protected override void OnBeforeDestroy()
 		{
 			this.ClearSequencePlayer();
 		}
 
-		// Token: 0x060424B2 RID: 271538 RVA: 0x0101837C File Offset: 0x0101657C
+		// Token: 0x06037007 RID: 225287 RVA: 0x00F59830 File Offset: 0x00F57A30
 		private DangoBrawlCombineViewGrid CreateMaterialGrid()
 		{
 			DangoBrawlCombineViewGrid dangoBrawlCombineViewGrid = new DangoBrawlCombineViewGrid();
@@ -72,7 +71,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return dangoBrawlCombineViewGrid;
 		}
 
-		// Token: 0x060424B3 RID: 271539 RVA: 0x01018398 File Offset: 0x01016598
+		// Token: 0x06037008 RID: 225288 RVA: 0x00F5984C File Offset: 0x00F57A4C
 		private void InitSequencePlayer()
 		{
 			this.ClearSequencePlayer();
@@ -84,7 +83,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.SequencePlayer = new UiSequencePlayer(rootItem);
 		}
 
-		// Token: 0x060424B4 RID: 271540 RVA: 0x010183C2 File Offset: 0x010165C2
+		// Token: 0x06037009 RID: 225289 RVA: 0x00F59876 File Offset: 0x00F57A76
 		private void ClearSequencePlayer()
 		{
 			UiSequencePlayer sequencePlayer = this.SequencePlayer;
@@ -95,7 +94,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.SequencePlayer = null;
 		}
 
-		// Token: 0x060424B5 RID: 271541 RVA: 0x010183DC File Offset: 0x010165DC
+		// Token: 0x0603700A RID: 225290 RVA: 0x00F59890 File Offset: 0x00F57A90
 		private void BindGridCallbacks(DangoBrawlCombineViewGrid grid)
 		{
 			grid.OnGridClick = delegate(int itemId, UUIItem navItem)
@@ -114,21 +113,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			};
 		}
 
-		// Token: 0x060424B6 RID: 271542 RVA: 0x01018404 File Offset: 0x01016604
+		// Token: 0x0603700B RID: 225291 RVA: 0x00F598B8 File Offset: 0x00F57AB8
 		public override void Refresh(DangoBrawlCombineViewListItemData data, bool isSelected, int gridIndex)
 		{
 			this.CurrentData = data;
 			DangoBrawlCombineRowData rowData = data.RowData;
-			IEnumerable<DangoBrawlCombineViewGridData> source = this.BuildSourceGridDatas(rowData);
-			Func<DangoBrawlCombineViewGridData, int> keySelector;
-			if ((keySelector = DangoBrawlCombineViewListItem.<>O.<0>__GetSourceSortTier) == null)
+			List<DangoBrawlCombineViewGridData> list = this.BuildSourceGridDatas(rowData);
+			NoLinq.SortStable<DangoBrawlCombineViewGridData>(list, delegate(DangoBrawlCombineViewGridData left, DangoBrawlCombineViewGridData right)
 			{
-				keySelector = (DangoBrawlCombineViewListItem.<>O.<0>__GetSourceSortTier = new Func<DangoBrawlCombineViewGridData, int>(DangoBrawlCombineViewListItem.GetSourceSortTier));
-			}
-			List<DangoBrawlCombineViewGridData> list = source.OrderBy(keySelector).ThenBy((DangoBrawlCombineViewGridData x) => x.ItemId).ToList<DangoBrawlCombineViewGridData>();
+				int num = DangoBrawlCombineViewListItem.GetSourceSortTier(left).CompareTo(DangoBrawlCombineViewListItem.GetSourceSortTier(right));
+				if (num == 0)
+				{
+					return left.ItemId.CompareTo(right.ItemId);
+				}
+				return num;
+			});
+			List<DangoBrawlCombineViewGridData> list2 = list;
 			this.ResultGrid.RefreshByGridData(this.BuildResultGridData(rowData.ResultItemId));
-			this.ItemGridLayout.RefreshByData(list, null, false);
-			this.RefreshPlusItems(Math.Max(0, list.Count - 1));
+			this.ItemGridLayout.RefreshByData(list2, null, false);
+			this.RefreshPlusItems(Math.Max(0, list2.Count - 1));
 			this.RefreshCombineButton(data.AllowCombine && rowData.CanCombine, rowData.IsLock);
 			UiSequencePlayer sequencePlayer = this.SequencePlayer;
 			if (sequencePlayer == null)
@@ -138,7 +141,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			sequencePlayer.PlaySequencePurely("Start", false, false);
 		}
 
-		// Token: 0x060424B7 RID: 271543 RVA: 0x010184DD File Offset: 0x010166DD
+		// Token: 0x0603700C RID: 225292 RVA: 0x00F5996D File Offset: 0x00F57B6D
 		private void RefreshCombineButton(bool isShow, bool isLock)
 		{
 			if (this.BtnCombineItem == null)
@@ -152,7 +155,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x060424B8 RID: 271544 RVA: 0x01018504 File Offset: 0x01016704
+		// Token: 0x0603700D RID: 225293 RVA: 0x00F59994 File Offset: 0x00F57B94
 		public void RefreshGridSelection()
 		{
 			DangoBrawlCombineViewGrid resultGrid = this.ResultGrid;
@@ -173,7 +176,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x060424B9 RID: 271545 RVA: 0x010185AC File Offset: 0x010167AC
+		// Token: 0x0603700E RID: 225294 RVA: 0x00F59A3C File Offset: 0x00F57C3C
 		private void RefreshPlusItems(int visibleCount)
 		{
 			UUIItem item = base.GetItem(3);
@@ -198,7 +201,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			}
 		}
 
-		// Token: 0x060424BA RID: 271546 RVA: 0x01018668 File Offset: 0x01016868
+		// Token: 0x0603700F RID: 225295 RVA: 0x00F59AF8 File Offset: 0x00F57CF8
 		private List<DangoBrawlCombineViewGridData> BuildSourceGridDatas(DangoBrawlCombineRowData rowData)
 		{
 			List<DangoBrawlCombineViewGridData> list = new List<DangoBrawlCombineViewGridData>();
@@ -218,7 +221,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return list;
 		}
 
-		// Token: 0x060424BB RID: 271547 RVA: 0x01018728 File Offset: 0x01016928
+		// Token: 0x06037010 RID: 225296 RVA: 0x00F59BB8 File Offset: 0x00F57DB8
 		private DangoBrawlCombineViewGridData BuildMaterialGridData(int itemUid, int itemId, EDragSourceKind source)
 		{
 			bool flag = itemUid > 0;
@@ -239,7 +242,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			};
 		}
 
-		// Token: 0x060424BC RID: 271548 RVA: 0x01018792 File Offset: 0x01016992
+		// Token: 0x06037011 RID: 225297 RVA: 0x00F59C22 File Offset: 0x00F57E22
 		private DangoBrawlCombineViewGridData BuildResultGridData(int resultItemId)
 		{
 			return new DangoBrawlCombineViewGridData
@@ -251,7 +254,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			};
 		}
 
-		// Token: 0x060424BD RID: 271549 RVA: 0x010187BA File Offset: 0x010169BA
+		// Token: 0x06037012 RID: 225298 RVA: 0x00F59C4A File Offset: 0x00F57E4A
 		private static int GetSourceSortTier(DangoBrawlCombineViewGridData item)
 		{
 			if (item.IsExist)
@@ -265,7 +268,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			return 2;
 		}
 
-		// Token: 0x060424BE RID: 271550 RVA: 0x010187D8 File Offset: 0x010169D8
+		// Token: 0x06037013 RID: 225299 RVA: 0x00F59C68 File Offset: 0x00F57E68
 		private void OnClickCombine()
 		{
 			DangoBrawlCombineViewListItemData currentData = this.CurrentData;
@@ -290,23 +293,23 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			onCombineClick(currentData.RowData);
 		}
 
-		// Token: 0x04022960 RID: 141664
+		// Token: 0x0401D1BD RID: 119229
 		[Nullable(2)]
 		public Action<DangoBrawlCombineRowData> OnCombineClick;
 
-		// Token: 0x04022961 RID: 141665
+		// Token: 0x0401D1BE RID: 119230
 		[Nullable(2)]
 		public Action<int, UUIItem> OnGridClick;
 
-		// Token: 0x04022962 RID: 141666
+		// Token: 0x0401D1BF RID: 119231
 		[Nullable(2)]
 		public Func<int, bool> IsGridSelected;
 
-		// Token: 0x04022963 RID: 141667
+		// Token: 0x0401D1C0 RID: 119232
 		[Nullable(2)]
 		private DangoBrawlCombineViewGrid ResultGrid;
 
-		// Token: 0x04022964 RID: 141668
+		// Token: 0x0401D1C1 RID: 119233
 		[Nullable(new byte[]
 		{
 			2,
@@ -315,44 +318,35 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 		})]
 		private GenericLayout<DangoBrawlCombineViewGrid, DangoBrawlCombineViewGridData> ItemGridLayout;
 
-		// Token: 0x04022965 RID: 141669
+		// Token: 0x0401D1C2 RID: 119234
 		[Nullable(2)]
 		private DangoBrawlCombineViewBtnItem BtnCombineItem;
 
-		// Token: 0x04022966 RID: 141670
+		// Token: 0x0401D1C3 RID: 119235
 		private readonly List<UUIItem> PlusPool = new List<UUIItem>();
 
-		// Token: 0x04022967 RID: 141671
+		// Token: 0x0401D1C4 RID: 119236
 		[Nullable(2)]
 		private DangoBrawlCombineViewListItemData CurrentData;
 
-		// Token: 0x04022968 RID: 141672
+		// Token: 0x0401D1C5 RID: 119237
 		[Nullable(2)]
 		private UiSequencePlayer SequencePlayer;
 
-		// Token: 0x0200C92B RID: 51499
+		// Token: 0x0200B2F9 RID: 45817
 		[NullableContext(0)]
 		private enum EItemComponents
 		{
-			// Token: 0x0403CBC3 RID: 248771
+			// Token: 0x040374B4 RID: 226484
 			PrefabItem,
-			// Token: 0x0403CBC4 RID: 248772
+			// Token: 0x040374B5 RID: 226485
 			ItemLayout,
-			// Token: 0x0403CBC5 RID: 248773
+			// Token: 0x040374B6 RID: 226486
 			PlusLayout,
-			// Token: 0x0403CBC6 RID: 248774
+			// Token: 0x040374B7 RID: 226487
 			PlusItem,
-			// Token: 0x0403CBC7 RID: 248775
+			// Token: 0x040374B8 RID: 226488
 			BtnCombine
-		}
-
-		// Token: 0x0200C92C RID: 51500
-		[CompilerGenerated]
-		private static class <>O
-		{
-			// Token: 0x0403CBC8 RID: 248776
-			[Nullable(0)]
-			public static Func<DangoBrawlCombineViewGridData, int> <0>__GetSourceSortTier;
 		}
 	}
 }

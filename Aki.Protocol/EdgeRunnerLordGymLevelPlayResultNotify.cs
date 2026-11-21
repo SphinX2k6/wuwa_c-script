@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000424 RID: 1060
+	// Token: 0x0200040D RID: 1037
 	[NetMessage(EMessageId.EdgeRunnerLordGymLevelPlayResultNotify)]
 	public sealed class EdgeRunnerLordGymLevelPlayResultNotify : IMessage<EdgeRunnerLordGymLevelPlayResultNotify>, IMessage, IEquatable<EdgeRunnerLordGymLevelPlayResultNotify>, IDeepCloneable<EdgeRunnerLordGymLevelPlayResultNotify>, IBufferMessage
 	{
-		// Token: 0x060065DD RID: 26077 RVA: 0x000F5178 File Offset: 0x000F3378
+		// Token: 0x0600644D RID: 25677 RVA: 0x000F2004 File Offset: 0x000F0204
 		[NullableContext(1)]
 		public static EdgeRunnerLordGymLevelPlayResultNotify Create()
 		{
 			return new EdgeRunnerLordGymLevelPlayResultNotify();
 		}
 
-		// Token: 0x1700131D RID: 4893
-		// (get) Token: 0x060065DE RID: 26078 RVA: 0x000F517F File Offset: 0x000F337F
+		// Token: 0x170012C8 RID: 4808
+		// (get) Token: 0x0600644E RID: 25678 RVA: 0x000F200B File Offset: 0x000F020B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x1700131E RID: 4894
-		// (get) Token: 0x060065DF RID: 26079 RVA: 0x000F5182 File Offset: 0x000F3382
+		// Token: 0x170012C9 RID: 4809
+		// (get) Token: 0x0600644F RID: 25679 RVA: 0x000F200E File Offset: 0x000F020E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060065E0 RID: 26080 RVA: 0x000F5189 File Offset: 0x000F3389
+		// Token: 0x06006450 RID: 25680 RVA: 0x000F2015 File Offset: 0x000F0215
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EdgeRunnerLordGymLevelPlayResultNotify()
 		{
 		}
 
-		// Token: 0x060065E1 RID: 26081 RVA: 0x000F519C File Offset: 0x000F339C
+		// Token: 0x06006451 RID: 25681 RVA: 0x000F2028 File Offset: 0x000F0228
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EdgeRunnerLordGymLevelPlayResultNotify(EdgeRunnerLordGymLevelPlayResultNotify other) : this()
@@ -65,7 +65,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x060065E2 RID: 26082 RVA: 0x000F5229 File Offset: 0x000F3429
+		// Token: 0x06006452 RID: 25682 RVA: 0x000F20B5 File Offset: 0x000F02B5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EdgeRunnerLordGymLevelPlayResultNotify Clone()
@@ -73,9 +73,9 @@ namespace Aki.Protocol
 			return new EdgeRunnerLordGymLevelPlayResultNotify(this);
 		}
 
-		// Token: 0x1700131F RID: 4895
-		// (get) Token: 0x060065E3 RID: 26083 RVA: 0x000F5231 File Offset: 0x000F3431
-		// (set) Token: 0x060065E4 RID: 26084 RVA: 0x000F5239 File Offset: 0x000F3439
+		// Token: 0x170012CA RID: 4810
+		// (get) Token: 0x06006453 RID: 25683 RVA: 0x000F20BD File Offset: 0x000F02BD
+		// (set) Token: 0x06006454 RID: 25684 RVA: 0x000F20C5 File Offset: 0x000F02C5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool IsSuccess
@@ -90,9 +90,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001320 RID: 4896
-		// (get) Token: 0x060065E5 RID: 26085 RVA: 0x000F5242 File Offset: 0x000F3442
-		// (set) Token: 0x060065E6 RID: 26086 RVA: 0x000F524A File Offset: 0x000F344A
+		// Token: 0x170012CB RID: 4811
+		// (get) Token: 0x06006455 RID: 25685 RVA: 0x000F20CE File Offset: 0x000F02CE
+		// (set) Token: 0x06006456 RID: 25686 RVA: 0x000F20D6 File Offset: 0x000F02D6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool IsNewRecord
@@ -107,9 +107,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001321 RID: 4897
-		// (get) Token: 0x060065E7 RID: 26087 RVA: 0x000F5253 File Offset: 0x000F3453
-		// (set) Token: 0x060065E8 RID: 26088 RVA: 0x000F525B File Offset: 0x000F345B
+		// Token: 0x170012CC RID: 4812
+		// (get) Token: 0x06006457 RID: 25687 RVA: 0x000F20DF File Offset: 0x000F02DF
+		// (set) Token: 0x06006458 RID: 25688 RVA: 0x000F20E7 File Offset: 0x000F02E7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public EdgeRunnerLordGymPassRecord LordGymPassRecord
@@ -124,9 +124,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001322 RID: 4898
-		// (get) Token: 0x060065E9 RID: 26089 RVA: 0x000F5264 File Offset: 0x000F3464
-		// (set) Token: 0x060065EA RID: 26090 RVA: 0x000F526C File Offset: 0x000F346C
+		// Token: 0x170012CD RID: 4813
+		// (get) Token: 0x06006459 RID: 25689 RVA: 0x000F20F0 File Offset: 0x000F02F0
+		// (set) Token: 0x0600645A RID: 25690 RVA: 0x000F20F8 File Offset: 0x000F02F8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int FailLoadGymId
@@ -141,8 +141,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001323 RID: 4899
-		// (get) Token: 0x060065EB RID: 26091 RVA: 0x000F5275 File Offset: 0x000F3475
+		// Token: 0x170012CE RID: 4814
+		// (get) Token: 0x0600645B RID: 25691 RVA: 0x000F2101 File Offset: 0x000F0301
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<ItemData> ItemDatas
@@ -153,9 +153,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001324 RID: 4900
-		// (get) Token: 0x060065EC RID: 26092 RVA: 0x000F527D File Offset: 0x000F347D
-		// (set) Token: 0x060065ED RID: 26093 RVA: 0x000F5285 File Offset: 0x000F3485
+		// Token: 0x170012CF RID: 4815
+		// (get) Token: 0x0600645C RID: 25692 RVA: 0x000F2109 File Offset: 0x000F0309
+		// (set) Token: 0x0600645D RID: 25693 RVA: 0x000F2111 File Offset: 0x000F0311
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool IsPkgFull
@@ -170,9 +170,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17001325 RID: 4901
-		// (get) Token: 0x060065EE RID: 26094 RVA: 0x000F528E File Offset: 0x000F348E
-		// (set) Token: 0x060065EF RID: 26095 RVA: 0x000F5296 File Offset: 0x000F3496
+		// Token: 0x170012D0 RID: 4816
+		// (get) Token: 0x0600645E RID: 25694 RVA: 0x000F211A File Offset: 0x000F031A
+		// (set) Token: 0x0600645F RID: 25695 RVA: 0x000F2122 File Offset: 0x000F0322
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int PassTime
@@ -187,7 +187,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x060065F0 RID: 26096 RVA: 0x000F529F File Offset: 0x000F349F
+		// Token: 0x06006460 RID: 25696 RVA: 0x000F212B File Offset: 0x000F032B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -195,7 +195,7 @@ namespace Aki.Protocol
 			return this.Equals(other as EdgeRunnerLordGymLevelPlayResultNotify);
 		}
 
-		// Token: 0x060065F1 RID: 26097 RVA: 0x000F52B0 File Offset: 0x000F34B0
+		// Token: 0x06006461 RID: 25697 RVA: 0x000F213C File Offset: 0x000F033C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(EdgeRunnerLordGymLevelPlayResultNotify other)
@@ -203,7 +203,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.IsSuccess == other.IsSuccess && this.IsNewRecord == other.IsNewRecord && object.Equals(this.LordGymPassRecord, other.LordGymPassRecord) && this.FailLoadGymId == other.FailLoadGymId && this.itemDatas_.Equals(other.itemDatas_) && this.IsPkgFull == other.IsPkgFull && this.PassTime == other.PassTime && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x060065F2 RID: 26098 RVA: 0x000F5354 File Offset: 0x000F3554
+		// Token: 0x06006462 RID: 25698 RVA: 0x000F21E0 File Offset: 0x000F03E0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -241,7 +241,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060065F3 RID: 26099 RVA: 0x000F541B File Offset: 0x000F361B
+		// Token: 0x06006463 RID: 25699 RVA: 0x000F22A7 File Offset: 0x000F04A7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -249,7 +249,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x060065F4 RID: 26100 RVA: 0x000F5428 File Offset: 0x000F3628
+		// Token: 0x06006464 RID: 25700 RVA: 0x000F22B4 File Offset: 0x000F04B4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -257,49 +257,49 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x060065F5 RID: 26101 RVA: 0x000F5434 File Offset: 0x000F3634
+		// Token: 0x06006465 RID: 25701 RVA: 0x000F22C0 File Offset: 0x000F04C0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.IsPkgFull)
-			{
-				output.WriteRawTag(48);
-				output.WriteBool(this.IsPkgFull);
-			}
-			if (this.IsNewRecord)
-			{
-				output.WriteRawTag(64);
-				output.WriteBool(this.IsNewRecord);
-			}
-			if (this.IsSuccess)
-			{
-				output.WriteRawTag(72);
-				output.WriteBool(this.IsSuccess);
-			}
+			this.itemDatas_.WriteTo(ref output, EdgeRunnerLordGymLevelPlayResultNotify._repeated_itemDatas_codec);
 			if (this.lordGymPassRecord_ != null)
 			{
-				output.WriteRawTag(82);
+				output.WriteRawTag(26);
 				output.WriteMessage(this.LordGymPassRecord);
+			}
+			if (this.IsPkgFull)
+			{
+				output.WriteRawTag(32);
+				output.WriteBool(this.IsPkgFull);
 			}
 			if (this.PassTime != 0)
 			{
-				output.WriteRawTag(88);
+				output.WriteRawTag(64);
 				output.WriteInt32(this.PassTime);
+			}
+			if (this.IsSuccess)
+			{
+				output.WriteRawTag(96);
+				output.WriteBool(this.IsSuccess);
+			}
+			if (this.IsNewRecord)
+			{
+				output.WriteRawTag(104);
+				output.WriteBool(this.IsNewRecord);
 			}
 			if (this.FailLoadGymId != 0)
 			{
-				output.WriteRawTag(96);
+				output.WriteRawTag(112);
 				output.WriteInt32(this.FailLoadGymId);
 			}
-			this.itemDatas_.WriteTo(ref output, EdgeRunnerLordGymLevelPlayResultNotify._repeated_itemDatas_codec);
 			if (this._unknownFields != null)
 			{
 				this._unknownFields.WriteTo(ref output);
 			}
 		}
 
-		// Token: 0x060065F6 RID: 26102 RVA: 0x000F5510 File Offset: 0x000F3710
+		// Token: 0x06006466 RID: 25702 RVA: 0x000F239C File Offset: 0x000F059C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -337,7 +337,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x060065F7 RID: 26103 RVA: 0x000F55B8 File Offset: 0x000F37B8
+		// Token: 0x06006467 RID: 25703 RVA: 0x000F2444 File Offset: 0x000F0644
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(EdgeRunnerLordGymLevelPlayResultNotify other)
@@ -378,7 +378,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x060065F8 RID: 26104 RVA: 0x000F5681 File Offset: 0x000F3881
+		// Token: 0x06006468 RID: 25704 RVA: 0x000F250D File Offset: 0x000F070D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -386,7 +386,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x060065F9 RID: 26105 RVA: 0x000F568C File Offset: 0x000F388C
+		// Token: 0x06006469 RID: 25705 RVA: 0x000F2518 File Offset: 0x000F0718
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -398,27 +398,14 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 72U)
+				if (num <= 32U)
 				{
-					if (num == 48U)
+					if (num == 18U)
 					{
-						this.IsPkgFull = input.ReadBool();
+						this.itemDatas_.AddEntriesFrom(ref input, EdgeRunnerLordGymLevelPlayResultNotify._repeated_itemDatas_codec);
 						continue;
 					}
-					if (num == 64U)
-					{
-						this.IsNewRecord = input.ReadBool();
-						continue;
-					}
-					if (num == 72U)
-					{
-						this.IsSuccess = input.ReadBool();
-						continue;
-					}
-				}
-				else if (num <= 88U)
-				{
-					if (num == 82U)
+					if (num == 26U)
 					{
 						if (this.lordGymPassRecord_ == null)
 						{
@@ -427,22 +414,35 @@ namespace Aki.Protocol
 						input.ReadMessage(this.LordGymPassRecord);
 						continue;
 					}
-					if (num == 88U)
+					if (num == 32U)
+					{
+						this.IsPkgFull = input.ReadBool();
+						continue;
+					}
+				}
+				else if (num <= 96U)
+				{
+					if (num == 64U)
 					{
 						this.PassTime = input.ReadInt32();
+						continue;
+					}
+					if (num == 96U)
+					{
+						this.IsSuccess = input.ReadBool();
 						continue;
 					}
 				}
 				else
 				{
-					if (num == 96U)
+					if (num == 104U)
 					{
-						this.FailLoadGymId = input.ReadInt32();
+						this.IsNewRecord = input.ReadBool();
 						continue;
 					}
-					if (num == 106U)
+					if (num == 112U)
 					{
-						this.itemDatas_.AddEntriesFrom(ref input, EdgeRunnerLordGymLevelPlayResultNotify._repeated_itemDatas_codec);
+						this.FailLoadGymId = input.ReadInt32();
 						continue;
 					}
 				}
@@ -450,52 +450,52 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040038F9 RID: 14585
+		// Token: 0x040038E6 RID: 14566
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040038FA RID: 14586
-		public const int IsSuccessFieldNumber = 9;
+		// Token: 0x040038E7 RID: 14567
+		public const int IsSuccessFieldNumber = 12;
 
-		// Token: 0x040038FB RID: 14587
+		// Token: 0x040038E8 RID: 14568
 		private bool isSuccess_;
 
-		// Token: 0x040038FC RID: 14588
-		public const int IsNewRecordFieldNumber = 8;
+		// Token: 0x040038E9 RID: 14569
+		public const int IsNewRecordFieldNumber = 13;
 
-		// Token: 0x040038FD RID: 14589
+		// Token: 0x040038EA RID: 14570
 		private bool isNewRecord_;
 
-		// Token: 0x040038FE RID: 14590
-		public const int LordGymPassRecordFieldNumber = 10;
+		// Token: 0x040038EB RID: 14571
+		public const int LordGymPassRecordFieldNumber = 3;
 
-		// Token: 0x040038FF RID: 14591
+		// Token: 0x040038EC RID: 14572
 		private EdgeRunnerLordGymPassRecord lordGymPassRecord_;
 
-		// Token: 0x04003900 RID: 14592
-		public const int FailLoadGymIdFieldNumber = 12;
+		// Token: 0x040038ED RID: 14573
+		public const int FailLoadGymIdFieldNumber = 14;
 
-		// Token: 0x04003901 RID: 14593
+		// Token: 0x040038EE RID: 14574
 		private int failLoadGymId_;
 
-		// Token: 0x04003902 RID: 14594
-		public const int ItemDatasFieldNumber = 13;
+		// Token: 0x040038EF RID: 14575
+		public const int ItemDatasFieldNumber = 2;
 
-		// Token: 0x04003903 RID: 14595
-		private static readonly FieldCodec<ItemData> _repeated_itemDatas_codec = FieldCodec.ForMessage<ItemData>(106U, ItemData.Parser);
+		// Token: 0x040038F0 RID: 14576
+		private static readonly FieldCodec<ItemData> _repeated_itemDatas_codec = FieldCodec.ForMessage<ItemData>(18U, ItemData.Parser);
 
-		// Token: 0x04003904 RID: 14596
+		// Token: 0x040038F1 RID: 14577
 		private readonly RepeatedField<ItemData> itemDatas_ = new RepeatedField<ItemData>();
 
-		// Token: 0x04003905 RID: 14597
-		public const int IsPkgFullFieldNumber = 6;
+		// Token: 0x040038F2 RID: 14578
+		public const int IsPkgFullFieldNumber = 4;
 
-		// Token: 0x04003906 RID: 14598
+		// Token: 0x040038F3 RID: 14579
 		private bool isPkgFull_;
 
-		// Token: 0x04003907 RID: 14599
-		public const int PassTimeFieldNumber = 11;
+		// Token: 0x040038F4 RID: 14580
+		public const int PassTimeFieldNumber = 8;
 
-		// Token: 0x04003908 RID: 14600
+		// Token: 0x040038F5 RID: 14581
 		private int passTime_;
 	}
 }

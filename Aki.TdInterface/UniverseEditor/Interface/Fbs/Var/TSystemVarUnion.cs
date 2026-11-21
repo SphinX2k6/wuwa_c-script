@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003B57 RID: 15191
+	// Token: 0x02003F5F RID: 16223
 	public class TSystemVarUnion
 	{
-		// Token: 0x17006824 RID: 26660
-		// (get) Token: 0x06014C4D RID: 85069 RVA: 0x00304997 File Offset: 0x00302B97
-		// (set) Token: 0x06014C4E RID: 85070 RVA: 0x0030499F File Offset: 0x00302B9F
+		// Token: 0x17006DC3 RID: 28099
+		// (get) Token: 0x06016117 RID: 90391 RVA: 0x0032AF2F File Offset: 0x0032912F
+		// (set) Token: 0x06016118 RID: 90392 RVA: 0x0032AF37 File Offset: 0x00329137
 		public TSystemVar Type { get; set; }
 
-		// Token: 0x17006825 RID: 26661
-		// (get) Token: 0x06014C4F RID: 85071 RVA: 0x003049A8 File Offset: 0x00302BA8
-		// (set) Token: 0x06014C50 RID: 85072 RVA: 0x003049B0 File Offset: 0x00302BB0
+		// Token: 0x17006DC4 RID: 28100
+		// (get) Token: 0x06016119 RID: 90393 RVA: 0x0032AF40 File Offset: 0x00329140
+		// (set) Token: 0x0601611A RID: 90394 RVA: 0x0032AF48 File Offset: 0x00329148
 		public object Value { get; set; }
 
-		// Token: 0x06014C51 RID: 85073 RVA: 0x003049B9 File Offset: 0x00302BB9
+		// Token: 0x0601611B RID: 90395 RVA: 0x0032AF51 File Offset: 0x00329151
 		public TSystemVarUnion()
 		{
 			this.Type = TSystemVar.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06014C52 RID: 85074 RVA: 0x003049CF File Offset: 0x00302BCF
+		// Token: 0x0601611C RID: 90396 RVA: 0x0032AF67 File Offset: 0x00329167
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06014C53 RID: 85075 RVA: 0x003049E1 File Offset: 0x00302BE1
+		// Token: 0x0601611D RID: 90397 RVA: 0x0032AF79 File Offset: 0x00329179
 		public IBvbAdjustPosPreferenceT AsIBvbAdjustPosPreference()
 		{
 			return this.As<IBvbAdjustPosPreferenceT>();
 		}
 
-		// Token: 0x06014C54 RID: 85076 RVA: 0x003049E9 File Offset: 0x00302BE9
+		// Token: 0x0601611E RID: 90398 RVA: 0x0032AF81 File Offset: 0x00329181
 		public static TSystemVarUnion FromIBvbAdjustPosPreference(IBvbAdjustPosPreferenceT _ibvbadjustpospreference)
 		{
 			return new TSystemVarUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014C55 RID: 85077 RVA: 0x003049FE File Offset: 0x00302BFE
+		// Token: 0x0601611F RID: 90399 RVA: 0x0032AF96 File Offset: 0x00329196
 		public IBvbCurRoundT AsIBvbCurRound()
 		{
 			return this.As<IBvbCurRoundT>();
 		}
 
-		// Token: 0x06014C56 RID: 85078 RVA: 0x00304A06 File Offset: 0x00302C06
+		// Token: 0x06016120 RID: 90400 RVA: 0x0032AF9E File Offset: 0x0032919E
 		public static TSystemVarUnion FromIBvbCurRound(IBvbCurRoundT _ibvbcurround)
 		{
 			return new TSystemVarUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014C57 RID: 85079 RVA: 0x00304A1B File Offset: 0x00302C1B
+		// Token: 0x06016121 RID: 90401 RVA: 0x0032AFB3 File Offset: 0x003291B3
 		public IBvbDungeonStageT AsIBvbDungeonStage()
 		{
 			return this.As<IBvbDungeonStageT>();
 		}
 
-		// Token: 0x06014C58 RID: 85080 RVA: 0x00304A23 File Offset: 0x00302C23
+		// Token: 0x06016122 RID: 90402 RVA: 0x0032AFBB File Offset: 0x003291BB
 		public static TSystemVarUnion FromIBvbDungeonStage(IBvbDungeonStageT _ibvbdungeonstage)
 		{
 			return new TSystemVarUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014C59 RID: 85081 RVA: 0x00304A38 File Offset: 0x00302C38
+		// Token: 0x06016123 RID: 90403 RVA: 0x0032AFD0 File Offset: 0x003291D0
 		public IBvbFetchHandCardT AsIBvbFetchHandCard()
 		{
 			return this.As<IBvbFetchHandCardT>();
 		}
 
-		// Token: 0x06014C5A RID: 85082 RVA: 0x00304A40 File Offset: 0x00302C40
+		// Token: 0x06016124 RID: 90404 RVA: 0x0032AFD8 File Offset: 0x003291D8
 		public static TSystemVarUnion FromIBvbFetchHandCard(IBvbFetchHandCardT _ibvbfetchhandcard)
 		{
 			return new TSystemVarUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014C5B RID: 85083 RVA: 0x00304A55 File Offset: 0x00302C55
+		// Token: 0x06016125 RID: 90405 RVA: 0x0032AFED File Offset: 0x003291ED
 		public IBvbGetBoardCardT AsIBvbGetBoardCard()
 		{
 			return this.As<IBvbGetBoardCardT>();
 		}
 
-		// Token: 0x06014C5C RID: 85084 RVA: 0x00304A5D File Offset: 0x00302C5D
+		// Token: 0x06016126 RID: 90406 RVA: 0x0032AFF5 File Offset: 0x003291F5
 		public static TSystemVarUnion FromIBvbGetBoardCard(IBvbGetBoardCardT _ibvbgetboardcard)
 		{
 			return new TSystemVarUnion
@@ -109,13 +109,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014C5D RID: 85085 RVA: 0x00304A72 File Offset: 0x00302C72
+		// Token: 0x06016127 RID: 90407 RVA: 0x0032B00A File Offset: 0x0032920A
 		public IBvbGetCardChangeUseT AsIBvbGetCardChangeUse()
 		{
 			return this.As<IBvbGetCardChangeUseT>();
 		}
 
-		// Token: 0x06014C5E RID: 85086 RVA: 0x00304A7A File Offset: 0x00302C7A
+		// Token: 0x06016128 RID: 90408 RVA: 0x0032B012 File Offset: 0x00329212
 		public static TSystemVarUnion FromIBvbGetCardChangeUse(IBvbGetCardChangeUseT _ibvbgetcardchangeuse)
 		{
 			return new TSystemVarUnion
@@ -125,13 +125,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014C5F RID: 85087 RVA: 0x00304A8F File Offset: 0x00302C8F
+		// Token: 0x06016129 RID: 90409 RVA: 0x0032B027 File Offset: 0x00329227
 		public IBvbGetCardEvolvedUseT AsIBvbGetCardEvolvedUse()
 		{
 			return this.As<IBvbGetCardEvolvedUseT>();
 		}
 
-		// Token: 0x06014C60 RID: 85088 RVA: 0x00304A97 File Offset: 0x00302C97
+		// Token: 0x0601612A RID: 90410 RVA: 0x0032B02F File Offset: 0x0032922F
 		public static TSystemVarUnion FromIBvbGetCardEvolvedUse(IBvbGetCardEvolvedUseT _ibvbgetcardevolveduse)
 		{
 			return new TSystemVarUnion
@@ -141,13 +141,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014C61 RID: 85089 RVA: 0x00304AAC File Offset: 0x00302CAC
+		// Token: 0x0601612B RID: 90411 RVA: 0x0032B044 File Offset: 0x00329244
 		public IBvbGetCardPosT AsIBvbGetCardPos()
 		{
 			return this.As<IBvbGetCardPosT>();
 		}
 
-		// Token: 0x06014C62 RID: 85090 RVA: 0x00304AB4 File Offset: 0x00302CB4
+		// Token: 0x0601612C RID: 90412 RVA: 0x0032B04C File Offset: 0x0032924C
 		public static TSystemVarUnion FromIBvbGetCardPos(IBvbGetCardPosT _ibvbgetcardpos)
 		{
 			return new TSystemVarUnion
@@ -157,13 +157,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014C63 RID: 85091 RVA: 0x00304AC9 File Offset: 0x00302CC9
+		// Token: 0x0601612D RID: 90413 RVA: 0x0032B061 File Offset: 0x00329261
 		public IBvbMaxBoardCardCountT AsIBvbMaxBoardCardCount()
 		{
 			return this.As<IBvbMaxBoardCardCountT>();
 		}
 
-		// Token: 0x06014C64 RID: 85092 RVA: 0x00304AD1 File Offset: 0x00302CD1
+		// Token: 0x0601612E RID: 90414 RVA: 0x0032B069 File Offset: 0x00329269
 		public static TSystemVarUnion FromIBvbMaxBoardCardCount(IBvbMaxBoardCardCountT _ibvbmaxboardcardcount)
 		{
 			return new TSystemVarUnion
@@ -173,13 +173,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014C65 RID: 85093 RVA: 0x00304AE7 File Offset: 0x00302CE7
+		// Token: 0x0601612F RID: 90415 RVA: 0x0032B07F File Offset: 0x0032927F
 		public IBvbMaxRoundT AsIBvbMaxRound()
 		{
 			return this.As<IBvbMaxRoundT>();
 		}
 
-		// Token: 0x06014C66 RID: 85094 RVA: 0x00304AEF File Offset: 0x00302CEF
+		// Token: 0x06016130 RID: 90416 RVA: 0x0032B087 File Offset: 0x00329287
 		public static TSystemVarUnion FromIBvbMaxRound(IBvbMaxRoundT _ibvbmaxround)
 		{
 			return new TSystemVarUnion
@@ -189,13 +189,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014C67 RID: 85095 RVA: 0x00304B05 File Offset: 0x00302D05
+		// Token: 0x06016131 RID: 90417 RVA: 0x0032B09D File Offset: 0x0032929D
 		public IBvbNpcCardNumT AsIBvbNpcCardNum()
 		{
 			return this.As<IBvbNpcCardNumT>();
 		}
 
-		// Token: 0x06014C68 RID: 85096 RVA: 0x00304B0D File Offset: 0x00302D0D
+		// Token: 0x06016132 RID: 90418 RVA: 0x0032B0A5 File Offset: 0x003292A5
 		public static TSystemVarUnion FromIBvbNpcCardNum(IBvbNpcCardNumT _ibvbnpccardnum)
 		{
 			return new TSystemVarUnion
@@ -205,13 +205,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014C69 RID: 85097 RVA: 0x00304B23 File Offset: 0x00302D23
+		// Token: 0x06016133 RID: 90419 RVA: 0x0032B0BB File Offset: 0x003292BB
 		public IBvbNpcCurBoardCardCountT AsIBvbNpcCurBoardCardCount()
 		{
 			return this.As<IBvbNpcCurBoardCardCountT>();
 		}
 
-		// Token: 0x06014C6A RID: 85098 RVA: 0x00304B2B File Offset: 0x00302D2B
+		// Token: 0x06016134 RID: 90420 RVA: 0x0032B0C3 File Offset: 0x003292C3
 		public static TSystemVarUnion FromIBvbNpcCurBoardCardCount(IBvbNpcCurBoardCardCountT _ibvbnpccurboardcardcount)
 		{
 			return new TSystemVarUnion
@@ -221,13 +221,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014C6B RID: 85099 RVA: 0x00304B41 File Offset: 0x00302D41
+		// Token: 0x06016135 RID: 90421 RVA: 0x0032B0D9 File Offset: 0x003292D9
 		public IBvbNpcCurEnergyT AsIBvbNpcCurEnergy()
 		{
 			return this.As<IBvbNpcCurEnergyT>();
 		}
 
-		// Token: 0x06014C6C RID: 85100 RVA: 0x00304B49 File Offset: 0x00302D49
+		// Token: 0x06016136 RID: 90422 RVA: 0x0032B0E1 File Offset: 0x003292E1
 		public static TSystemVarUnion FromIBvbNpcCurEnergy(IBvbNpcCurEnergyT _ibvbnpccurenergy)
 		{
 			return new TSystemVarUnion
@@ -237,13 +237,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014C6D RID: 85101 RVA: 0x00304B5F File Offset: 0x00302D5F
+		// Token: 0x06016137 RID: 90423 RVA: 0x0032B0F7 File Offset: 0x003292F7
 		public IBvbNpcHpT AsIBvbNpcHp()
 		{
 			return this.As<IBvbNpcHpT>();
 		}
 
-		// Token: 0x06014C6E RID: 85102 RVA: 0x00304B67 File Offset: 0x00302D67
+		// Token: 0x06016138 RID: 90424 RVA: 0x0032B0FF File Offset: 0x003292FF
 		public static TSystemVarUnion FromIBvbNpcHp(IBvbNpcHpT _ibvbnpchp)
 		{
 			return new TSystemVarUnion
@@ -253,13 +253,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014C6F RID: 85103 RVA: 0x00304B7D File Offset: 0x00302D7D
+		// Token: 0x06016139 RID: 90425 RVA: 0x0032B115 File Offset: 0x00329315
 		public IBvbNpcHpValueT AsIBvbNpcHpValue()
 		{
 			return this.As<IBvbNpcHpValueT>();
 		}
 
-		// Token: 0x06014C70 RID: 85104 RVA: 0x00304B85 File Offset: 0x00302D85
+		// Token: 0x0601613A RID: 90426 RVA: 0x0032B11D File Offset: 0x0032931D
 		public static TSystemVarUnion FromIBvbNpcHpValue(IBvbNpcHpValueT _ibvbnpchpvalue)
 		{
 			return new TSystemVarUnion
@@ -269,13 +269,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014C71 RID: 85105 RVA: 0x00304B9B File Offset: 0x00302D9B
+		// Token: 0x0601613B RID: 90427 RVA: 0x0032B133 File Offset: 0x00329333
 		public IBvbNpcScoreT AsIBvbNpcScore()
 		{
 			return this.As<IBvbNpcScoreT>();
 		}
 
-		// Token: 0x06014C72 RID: 85106 RVA: 0x00304BA3 File Offset: 0x00302DA3
+		// Token: 0x0601613C RID: 90428 RVA: 0x0032B13B File Offset: 0x0032933B
 		public static TSystemVarUnion FromIBvbNpcScore(IBvbNpcScoreT _ibvbnpcscore)
 		{
 			return new TSystemVarUnion
@@ -285,13 +285,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014C73 RID: 85107 RVA: 0x00304BB9 File Offset: 0x00302DB9
+		// Token: 0x0601613D RID: 90429 RVA: 0x0032B151 File Offset: 0x00329351
 		public IBvbPlayerHpT AsIBvbPlayerHp()
 		{
 			return this.As<IBvbPlayerHpT>();
 		}
 
-		// Token: 0x06014C74 RID: 85108 RVA: 0x00304BC1 File Offset: 0x00302DC1
+		// Token: 0x0601613E RID: 90430 RVA: 0x0032B159 File Offset: 0x00329359
 		public static TSystemVarUnion FromIBvbPlayerHp(IBvbPlayerHpT _ibvbplayerhp)
 		{
 			return new TSystemVarUnion
@@ -301,13 +301,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014C75 RID: 85109 RVA: 0x00304BD7 File Offset: 0x00302DD7
+		// Token: 0x0601613F RID: 90431 RVA: 0x0032B16F File Offset: 0x0032936F
 		public IBvbPlayerHpValueT AsIBvbPlayerHpValue()
 		{
 			return this.As<IBvbPlayerHpValueT>();
 		}
 
-		// Token: 0x06014C76 RID: 85110 RVA: 0x00304BDF File Offset: 0x00302DDF
+		// Token: 0x06016140 RID: 90432 RVA: 0x0032B177 File Offset: 0x00329377
 		public static TSystemVarUnion FromIBvbPlayerHpValue(IBvbPlayerHpValueT _ibvbplayerhpvalue)
 		{
 			return new TSystemVarUnion
@@ -317,13 +317,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014C77 RID: 85111 RVA: 0x00304BF5 File Offset: 0x00302DF5
+		// Token: 0x06016141 RID: 90433 RVA: 0x0032B18D File Offset: 0x0032938D
 		public IBvbPlayerScoreT AsIBvbPlayerScore()
 		{
 			return this.As<IBvbPlayerScoreT>();
 		}
 
-		// Token: 0x06014C78 RID: 85112 RVA: 0x00304BFD File Offset: 0x00302DFD
+		// Token: 0x06016142 RID: 90434 RVA: 0x0032B195 File Offset: 0x00329395
 		public static TSystemVarUnion FromIBvbPlayerScore(IBvbPlayerScoreT _ibvbplayerscore)
 		{
 			return new TSystemVarUnion
@@ -333,13 +333,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014C79 RID: 85113 RVA: 0x00304C13 File Offset: 0x00302E13
+		// Token: 0x06016143 RID: 90435 RVA: 0x0032B1AB File Offset: 0x003293AB
 		public IBvbRemainEvolveTimeThisTurnT AsIBvbRemainEvolveTimeThisTurn()
 		{
 			return this.As<IBvbRemainEvolveTimeThisTurnT>();
 		}
 
-		// Token: 0x06014C7A RID: 85114 RVA: 0x00304C1B File Offset: 0x00302E1B
+		// Token: 0x06016144 RID: 90436 RVA: 0x0032B1B3 File Offset: 0x003293B3
 		public static TSystemVarUnion FromIBvbRemainEvolveTimeThisTurn(IBvbRemainEvolveTimeThisTurnT _ibvbremainevolvetimethisturn)
 		{
 			return new TSystemVarUnion
@@ -349,13 +349,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014C7B RID: 85115 RVA: 0x00304C31 File Offset: 0x00302E31
+		// Token: 0x06016145 RID: 90437 RVA: 0x0032B1C9 File Offset: 0x003293C9
 		public ICommonHostToTargetDistanceT AsICommonHostToTargetDistance()
 		{
 			return this.As<ICommonHostToTargetDistanceT>();
 		}
 
-		// Token: 0x06014C7C RID: 85116 RVA: 0x00304C39 File Offset: 0x00302E39
+		// Token: 0x06016146 RID: 90438 RVA: 0x0032B1D1 File Offset: 0x003293D1
 		public static TSystemVarUnion FromICommonHostToTargetDistance(ICommonHostToTargetDistanceT _icommonhosttotargetdistance)
 		{
 			return new TSystemVarUnion
@@ -365,13 +365,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014C7D RID: 85117 RVA: 0x00304C4F File Offset: 0x00302E4F
+		// Token: 0x06016147 RID: 90439 RVA: 0x0032B1E7 File Offset: 0x003293E7
 		public ICommonHotFixVarT AsICommonHotFixVar()
 		{
 			return this.As<ICommonHotFixVarT>();
 		}
 
-		// Token: 0x06014C7E RID: 85118 RVA: 0x00304C57 File Offset: 0x00302E57
+		// Token: 0x06016148 RID: 90440 RVA: 0x0032B1EF File Offset: 0x003293EF
 		public static TSystemVarUnion FromICommonHotFixVar(ICommonHotFixVarT _icommonhotfixvar)
 		{
 			return new TSystemVarUnion
@@ -381,13 +381,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014C7F RID: 85119 RVA: 0x00304C6D File Offset: 0x00302E6D
+		// Token: 0x06016149 RID: 90441 RVA: 0x0032B205 File Offset: 0x00329405
 		public IQuestBranchPageIdT AsIQuestBranchPageId()
 		{
 			return this.As<IQuestBranchPageIdT>();
 		}
 
-		// Token: 0x06014C80 RID: 85120 RVA: 0x00304C75 File Offset: 0x00302E75
+		// Token: 0x0601614A RID: 90442 RVA: 0x0032B20D File Offset: 0x0032940D
 		public static TSystemVarUnion FromIQuestBranchPageId(IQuestBranchPageIdT _iquestbranchpageid)
 		{
 			return new TSystemVarUnion
@@ -397,13 +397,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014C81 RID: 85121 RVA: 0x00304C8B File Offset: 0x00302E8B
+		// Token: 0x0601614B RID: 90443 RVA: 0x0032B223 File Offset: 0x00329423
 		public IBvbCustomSystemVarIntT AsIBvbCustomSystemVarInt()
 		{
 			return this.As<IBvbCustomSystemVarIntT>();
 		}
 
-		// Token: 0x06014C82 RID: 85122 RVA: 0x00304C93 File Offset: 0x00302E93
+		// Token: 0x0601614C RID: 90444 RVA: 0x0032B22B File Offset: 0x0032942B
 		public static TSystemVarUnion FromIBvbCustomSystemVarInt(IBvbCustomSystemVarIntT _ibvbcustomsystemvarint)
 		{
 			return new TSystemVarUnion
@@ -413,13 +413,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014C83 RID: 85123 RVA: 0x00304CA9 File Offset: 0x00302EA9
+		// Token: 0x0601614D RID: 90445 RVA: 0x0032B241 File Offset: 0x00329441
 		public IBvbCustomSystemVarFloatT AsIBvbCustomSystemVarFloat()
 		{
 			return this.As<IBvbCustomSystemVarFloatT>();
 		}
 
-		// Token: 0x06014C84 RID: 85124 RVA: 0x00304CB1 File Offset: 0x00302EB1
+		// Token: 0x0601614E RID: 90446 RVA: 0x0032B249 File Offset: 0x00329449
 		public static TSystemVarUnion FromIBvbCustomSystemVarFloat(IBvbCustomSystemVarFloatT _ibvbcustomsystemvarfloat)
 		{
 			return new TSystemVarUnion
@@ -429,7 +429,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			};
 		}
 
-		// Token: 0x06014C85 RID: 85125 RVA: 0x00304CC8 File Offset: 0x00302EC8
+		// Token: 0x0601614F RID: 90447 RVA: 0x0032B260 File Offset: 0x00329460
 		public static int Pack(FlatBufferBuilder builder, TSystemVarUnion _o)
 		{
 			switch (_o.Type)

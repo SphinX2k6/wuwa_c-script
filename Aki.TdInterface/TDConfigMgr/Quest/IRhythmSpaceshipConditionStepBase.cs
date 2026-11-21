@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020010F2 RID: 4338
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001220 RID: 4640
 	public class IRhythmSpaceshipConditionStepBase
 	{
-		// Token: 0x0600622A RID: 25130 RVA: 0x000ECA50 File Offset: 0x000EAC50
+		// Token: 0x06006825 RID: 26661 RVA: 0x000F9BC4 File Offset: 0x000F7DC4
 		private IRhythmSpaceshipConditionStepBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600622B RID: 25131 RVA: 0x000ECA88 File Offset: 0x000EAC88
+		// Token: 0x06006826 RID: 26662 RVA: 0x000F9BFC File Offset: 0x000F7DFC
 		public static IRhythmSpaceshipConditionStepBase Create([Nullable(2)] IRhythmSpaceshipConditionStepBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600622C RID: 25132 RVA: 0x000ECA9B File Offset: 0x000EAC9B
+		// Token: 0x06006827 RID: 26663 RVA: 0x000F9C0F File Offset: 0x000F7E0F
 		public static IRhythmSpaceshipConditionStepBase CreateFromSetValue([Nullable(2)] IRhythmSpaceshipConditionStepBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600622D RID: 25133 RVA: 0x000ECAAE File Offset: 0x000EACAE
+		// Token: 0x06006828 RID: 26664 RVA: 0x000F9C22 File Offset: 0x000F7E22
 		public IRhythmSpaceshipConditionStepBase_SetValue ToSetValue()
 		{
 			return new IRhythmSpaceshipConditionStepBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x1700202E RID: 8238
-		// (get) Token: 0x0600622E RID: 25134 RVA: 0x000ECAC1 File Offset: 0x000EACC1
-		// (set) Token: 0x0600622F RID: 25135 RVA: 0x000ECAEC File Offset: 0x000EACEC
+		// Token: 0x170021E1 RID: 8673
+		// (get) Token: 0x06006829 RID: 26665 RVA: 0x000F9C35 File Offset: 0x000F7E35
+		// (set) Token: 0x0600682A RID: 26666 RVA: 0x000F9C60 File Offset: 0x000F7E60
 		public virtual ERhythmSpaceshipConditionStep Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003B01 RID: 15105
+		// Token: 0x04003E4F RID: 15951
 		[Nullable(2)]
 		protected IRhythmSpaceshipConditionStepBase FbInstance;
 
-		// Token: 0x04003B02 RID: 15106
+		// Token: 0x04003E50 RID: 15952
 		[Nullable(2)]
 		protected IRhythmSpaceshipConditionStepBase_SetValue PocoInterface;
 	}

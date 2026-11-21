@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Reflection;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.ActivityGamePlay.ActivityGameplayEntity.Component;
 
 namespace CSharpScript.Game.Module.ActivityGamePlay.ActivityGameplayEntity
 {
-	// Token: 0x02006935 RID: 26933
+	// Token: 0x02005886 RID: 22662
 	public class ActivityGameplayEntity
 	{
-		// Token: 0x0604323B RID: 275003 RVA: 0x0105D98C File Offset: 0x0105BB8C
+		// Token: 0x06037D98 RID: 228760 RVA: 0x00F9F038 File Offset: 0x00F9D238
 		public void Init()
 		{
 			if (this.IsInit)
@@ -29,7 +28,7 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.ActivityGameplayEntity
 			}
 		}
 
-		// Token: 0x0604323C RID: 275004 RVA: 0x0105DA20 File Offset: 0x0105BC20
+		// Token: 0x06037D99 RID: 228761 RVA: 0x00F9F0CC File Offset: 0x00F9D2CC
 		public void Tick(float deltaTime)
 		{
 			if (!this.IsInit || this.IsEnd)
@@ -42,7 +41,7 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.ActivityGameplayEntity
 			}
 		}
 
-		// Token: 0x0604323D RID: 275005 RVA: 0x0105DA84 File Offset: 0x0105BC84
+		// Token: 0x06037D9A RID: 228762 RVA: 0x00F9F130 File Offset: 0x00F9D330
 		public void End()
 		{
 			if (this.IsEnd)
@@ -64,7 +63,7 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.ActivityGameplayEntity
 			this.ComponentMap.Clear();
 		}
 
-		// Token: 0x0604323E RID: 275006 RVA: 0x0105DB14 File Offset: 0x0105BD14
+		// Token: 0x06037D9B RID: 228763 RVA: 0x00F9F1C0 File Offset: 0x00F9D3C0
 		[NullableContext(1)]
 		public unsafe void AddComponent(Type ctor, [Nullable(2)] object args = null)
 		{
@@ -80,11 +79,10 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.ActivityGameplayEntity
 				instance.Error(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 				return;
 			}
-			PropertyInfo property = ctor.GetProperty("Dependencies", BindingFlags.Static | BindingFlags.Public | BindingFlags.FlattenHierarchy);
-			List<Type> list = ((property != null) ? property.GetValue(null) : null) as List<Type>;
-			if (list != null)
+			Type[] componentDependencies = ActivityGameplayComponentConstant.GetComponentDependencies(ctor);
+			if (componentDependencies != null)
 			{
-				foreach (Type type in list)
+				foreach (Type type in componentDependencies)
 				{
 					if (!this.ComponentMap.ContainsKey(type))
 					{
@@ -132,7 +130,7 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.ActivityGameplayEntity
 			}
 		}
 
-		// Token: 0x0604323F RID: 275007 RVA: 0x0105DE04 File Offset: 0x0105C004
+		// Token: 0x06037D9C RID: 228764 RVA: 0x00F9F474 File Offset: 0x00F9D674
 		[return: Nullable(2)]
 		public T GetComponent<T>() where T : ActivityGameplayComponentBase
 		{
@@ -144,7 +142,7 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.ActivityGameplayEntity
 			return (T)((object)activityGameplayComponentBase);
 		}
 
-		// Token: 0x06043240 RID: 275008 RVA: 0x0105DE3C File Offset: 0x0105C03C
+		// Token: 0x06037D9D RID: 228765 RVA: 0x00F9F4AC File Offset: 0x00F9D6AC
 		[return: Nullable(2)]
 		public unsafe T CheckGetComponent<T>() where T : ActivityGameplayComponentBase
 		{
@@ -163,8 +161,8 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.ActivityGameplayEntity
 			return component;
 		}
 
-		// Token: 0x170097F0 RID: 38896
-		// (get) Token: 0x06043241 RID: 275009 RVA: 0x0105DEC4 File Offset: 0x0105C0C4
+		// Token: 0x17006B30 RID: 27440
+		// (get) Token: 0x06037D9E RID: 228766 RVA: 0x00F9F534 File Offset: 0x00F9D734
 		public bool NeedTick
 		{
 			get
@@ -183,18 +181,18 @@ namespace CSharpScript.Game.Module.ActivityGamePlay.ActivityGameplayEntity
 			}
 		}
 
-		// Token: 0x04022F52 RID: 143186
+		// Token: 0x0401D7AF RID: 120751
 		[Nullable(1)]
 		private readonly List<ActivityGameplayComponentBase> Components = new List<ActivityGameplayComponentBase>();
 
-		// Token: 0x04022F53 RID: 143187
+		// Token: 0x0401D7B0 RID: 120752
 		[Nullable(1)]
 		private readonly Dictionary<Type, ActivityGameplayComponentBase> ComponentMap = new Dictionary<Type, ActivityGameplayComponentBase>();
 
-		// Token: 0x04022F54 RID: 143188
+		// Token: 0x0401D7B1 RID: 120753
 		private bool IsInit;
 
-		// Token: 0x04022F55 RID: 143189
+		// Token: 0x0401D7B2 RID: 120754
 		private bool IsEnd;
 	}
 }

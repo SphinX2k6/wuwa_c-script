@@ -2,40 +2,40 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003C1A RID: 15386
+	// Token: 0x02004026 RID: 16422
 	public class IHollowCylinderTipsActorT
 	{
-		// Token: 0x170069D9 RID: 27097
-		// (get) Token: 0x0601537F RID: 86911 RVA: 0x00312B34 File Offset: 0x00310D34
-		// (set) Token: 0x06015380 RID: 86912 RVA: 0x00312B3C File Offset: 0x00310D3C
+		// Token: 0x17006F81 RID: 28545
+		// (get) Token: 0x06016875 RID: 92277 RVA: 0x003396BC File Offset: 0x003378BC
+		// (set) Token: 0x06016876 RID: 92278 RVA: 0x003396C4 File Offset: 0x003378C4
 		public ETipsActorType Type { get; set; }
 
-		// Token: 0x170069DA RID: 27098
-		// (get) Token: 0x06015381 RID: 86913 RVA: 0x00312B45 File Offset: 0x00310D45
-		// (set) Token: 0x06015382 RID: 86914 RVA: 0x00312B4D File Offset: 0x00310D4D
+		// Token: 0x17006F82 RID: 28546
+		// (get) Token: 0x06016877 RID: 92279 RVA: 0x003396CD File Offset: 0x003378CD
+		// (set) Token: 0x06016878 RID: 92280 RVA: 0x003396D5 File Offset: 0x003378D5
 		public ETipsActorColorType ColorType { get; set; }
 
-		// Token: 0x170069DB RID: 27099
-		// (get) Token: 0x06015383 RID: 86915 RVA: 0x00312B56 File Offset: 0x00310D56
-		// (set) Token: 0x06015384 RID: 86916 RVA: 0x00312B5E File Offset: 0x00310D5E
+		// Token: 0x17006F83 RID: 28547
+		// (get) Token: 0x06016879 RID: 92281 RVA: 0x003396DE File Offset: 0x003378DE
+		// (set) Token: 0x0601687A RID: 92282 RVA: 0x003396E6 File Offset: 0x003378E6
 		public float Radius { get; set; }
 
-		// Token: 0x170069DC RID: 27100
-		// (get) Token: 0x06015385 RID: 86917 RVA: 0x00312B67 File Offset: 0x00310D67
-		// (set) Token: 0x06015386 RID: 86918 RVA: 0x00312B6F File Offset: 0x00310D6F
+		// Token: 0x17006F84 RID: 28548
+		// (get) Token: 0x0601687B RID: 92283 RVA: 0x003396EF File Offset: 0x003378EF
+		// (set) Token: 0x0601687C RID: 92284 RVA: 0x003396F7 File Offset: 0x003378F7
 		public float InnerRadius { get; set; }
 
-		// Token: 0x170069DD RID: 27101
-		// (get) Token: 0x06015387 RID: 86919 RVA: 0x00312B78 File Offset: 0x00310D78
-		// (set) Token: 0x06015388 RID: 86920 RVA: 0x00312B80 File Offset: 0x00310D80
+		// Token: 0x17006F85 RID: 28549
+		// (get) Token: 0x0601687D RID: 92285 RVA: 0x00339700 File Offset: 0x00337900
+		// (set) Token: 0x0601687E RID: 92286 RVA: 0x00339708 File Offset: 0x00337908
 		public float Height { get; set; }
 
-		// Token: 0x170069DE RID: 27102
-		// (get) Token: 0x06015389 RID: 86921 RVA: 0x00312B89 File Offset: 0x00310D89
-		// (set) Token: 0x0601538A RID: 86922 RVA: 0x00312B91 File Offset: 0x00310D91
+		// Token: 0x17006F86 RID: 28550
+		// (get) Token: 0x0601687F RID: 92287 RVA: 0x00339711 File Offset: 0x00337911
+		// (set) Token: 0x06016880 RID: 92288 RVA: 0x00339719 File Offset: 0x00337919
 		public byte NullMask { get; set; }
 
-		// Token: 0x0601538B RID: 86923 RVA: 0x00312B9A File Offset: 0x00310D9A
+		// Token: 0x06016881 RID: 92289 RVA: 0x00339722 File Offset: 0x00337922
 		public IHollowCylinderTipsActorT()
 		{
 			this.Type = ETipsActorType.Sphere;

@@ -8,14 +8,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Effect.BluePrint.BP_FX_Common
 {
-	// Token: 0x02003E7D RID: 15997
+	// Token: 0x02003409 RID: 13321
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Effect/BluePrint/BP_FX_Common/BP_Fx_Control_Obj.BP_Fx_Control_Obj_C")]
 	[UnrealStructLayout(1080, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1073)]
 	public class BP_Fx_Control_Obj_C : AActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06028595 RID: 165269 RVA: 0x009AA511 File Offset: 0x009A8711
+		// Token: 0x06021D9F RID: 138655 RVA: 0x0096D1C3 File Offset: 0x0096B3C3
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_Fx_Control_Obj_C._ClassPtr == IntPtr.Zero)
@@ -25,65 +25,64 @@ namespace AkiClient.Game.Aki.Effect.BluePrint.BP_FX_Common
 			return BP_Fx_Control_Obj_C._ClassPtr;
 		}
 
-		// Token: 0x06028596 RID: 165270 RVA: 0x009AA538 File Offset: 0x009A8738
+		// Token: 0x06021DA0 RID: 138656 RVA: 0x0096D1E8 File Offset: 0x0096B3E8
 		public BP_Fx_Control_Obj_C() : this(BuiltinUtils.AllocNativeUObject(BP_Fx_Control_Obj_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06028597 RID: 165271 RVA: 0x009AA560 File Offset: 0x009A8760
+		// Token: 0x06021DA1 RID: 138657 RVA: 0x0096D210 File Offset: 0x0096B410
 		[NullableContext(1)]
 		public BP_Fx_Control_Obj_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_Fx_Control_Obj_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005D4B RID: 23883
-		// (get) Token: 0x06028598 RID: 165272 RVA: 0x009AA593 File Offset: 0x009A8793
-		// (set) Token: 0x06028599 RID: 165273 RVA: 0x009AA5A7 File Offset: 0x009A87A7
+		// Token: 0x1700465A RID: 18010
+		// (get) Token: 0x06021DA2 RID: 138658 RVA: 0x0096D243 File Offset: 0x0096B443
+		// (set) Token: 0x06021DA3 RID: 138659 RVA: 0x0096D257 File Offset: 0x0096B457
 		public unsafe UNiagaraComponent NS_Fx_Control_Obj_Beam
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UNiagaraComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Fx_Control_Obj_C.__PropertyOffset_1);
+				return BuiltinUtils.ObjectPropertyGetter<UNiagaraComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Fx_Control_Obj_C.__PropertyOffset_NS_Fx_Control_Obj_Beam);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Fx_Control_Obj_C.__PropertyOffset_1, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Fx_Control_Obj_C.__PropertyOffset_NS_Fx_Control_Obj_Beam, value);
 			}
 		}
 
-		// Token: 0x17005D4C RID: 23884
-		// (get) Token: 0x0602859A RID: 165274 RVA: 0x009AA5BC File Offset: 0x009A87BC
-		// (set) Token: 0x0602859B RID: 165275 RVA: 0x009AA5D0 File Offset: 0x009A87D0
+		// Token: 0x1700465B RID: 18011
+		// (get) Token: 0x06021DA4 RID: 138660 RVA: 0x0096D26C File Offset: 0x0096B46C
+		// (set) Token: 0x06021DA5 RID: 138661 RVA: 0x0096D280 File Offset: 0x0096B480
 		public unsafe AActor EndActor
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<AActor>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Fx_Control_Obj_C.__PropertyOffset_2);
+				return BuiltinUtils.ObjectPropertyGetter<AActor>(base.NativePtr / (IntPtr)sizeof(void*) + BP_Fx_Control_Obj_C.__PropertyOffset_EndActor);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Fx_Control_Obj_C.__PropertyOffset_2, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_Fx_Control_Obj_C.__PropertyOffset_EndActor, value);
 			}
 		}
 
-		// Token: 0x17005D4D RID: 23885
-		// (get) Token: 0x0602859C RID: 165276 RVA: 0x009AA5E5 File Offset: 0x009A87E5
-		// (set) Token: 0x0602859D RID: 165277 RVA: 0x009AA5F5 File Offset: 0x009A87F5
+		// Token: 0x1700465C RID: 18012
+		// (get) Token: 0x06021DA6 RID: 138662 RVA: 0x0096D295 File Offset: 0x0096B495
+		// (set) Token: 0x06021DA7 RID: 138663 RVA: 0x0096D2A5 File Offset: 0x0096B4A5
 		public unsafe bool CanShow
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_Fx_Control_Obj_C.__PropertyOffset_3) != 0;
+				return *(base.NativePtr + (IntPtr)BP_Fx_Control_Obj_C.__PropertyOffset_CanShow) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_Fx_Control_Obj_C.__PropertyOffset_3) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_Fx_Control_Obj_C.__PropertyOffset_CanShow) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x0602859E RID: 165278 RVA: 0x009AA608 File Offset: 0x009A8808
+		// Token: 0x06021DA8 RID: 138664 RVA: 0x0096D2B8 File Offset: 0x0096B4B8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void ReceiveTick(float DeltaSeconds)
 		{
 			BP_Fx_Control_Obj_C.__ReceiveTick_FunctionParams* ptr = stackalloc BP_Fx_Control_Obj_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_Fx_Control_Obj_C.__ReceiveTick_FunctionParams) & -16L;
@@ -92,51 +91,50 @@ namespace AkiClient.Game.Aki.Effect.BluePrint.BP_FX_Common
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_Fx_Control_Obj_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x0602859F RID: 165279 RVA: 0x009AA650 File Offset: 0x009A8850
+		// Token: 0x06021DA9 RID: 138665 RVA: 0x0096D300 File Offset: 0x0096B500
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void ReceiveTick_Implementation(float DeltaSeconds)
 		{
 			BP_Fx_Control_Obj_C.__ReceiveTick_FunctionParams* ptr = stackalloc BP_Fx_Control_Obj_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_Fx_Control_Obj_C.__ReceiveTick_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(BP_Fx_Control_Obj_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->DeltaSeconds = DeltaSeconds;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_Fx_Control_Obj_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_Fx_Control_Obj_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060285A0 RID: 165280 RVA: 0x009AA697 File Offset: 0x009A8897
+		// Token: 0x06021DAA RID: 138666 RVA: 0x0096D346 File Offset: 0x0096B546
 		protected BP_Fx_Control_Obj_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04014900 RID: 84224
+		// Token: 0x04012ACC RID: 76492
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Effect/BluePrint/BP_FX_Common/BP_Fx_Control_Obj.BP_Fx_Control_Obj_C";
 
-		// Token: 0x04014901 RID: 84225
+		// Token: 0x04012ACD RID: 76493
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04014902 RID: 84226
+		// Token: 0x04012ACE RID: 76494
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04014903 RID: 84227
-		internal static int __PropertyOffset_1;
+		// Token: 0x04012ACF RID: 76495
+		internal static int __PropertyOffset_NS_Fx_Control_Obj_Beam;
 
-		// Token: 0x04014904 RID: 84228
-		internal static int __PropertyOffset_2;
+		// Token: 0x04012AD0 RID: 76496
+		internal static int __PropertyOffset_EndActor;
 
-		// Token: 0x04014905 RID: 84229
-		internal static int __PropertyOffset_3;
+		// Token: 0x04012AD1 RID: 76497
+		internal static int __PropertyOffset_CanShow;
 
-		// Token: 0x04014906 RID: 84230
+		// Token: 0x04012AD2 RID: 76498
 		private static IntPtr __ReceiveTick_NativeFunctionPtr;
 
-		// Token: 0x0200A2D1 RID: 41681
+		// Token: 0x020090FB RID: 37115
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected new ref struct __ReceiveTick_FunctionParams
 		{
-			// Token: 0x04032013 RID: 204819
+			// Token: 0x0402CFD9 RID: 184281
 			[FieldOffset(0)]
 			public float DeltaSeconds;
 		}

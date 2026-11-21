@@ -3,39 +3,39 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 {
-	// Token: 0x020068E7 RID: 26855
+	// Token: 0x02005837 RID: 22583
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CoopUpGrateViewParams
 	{
-		// Token: 0x170097DF RID: 38879
-		// (get) Token: 0x06042FE5 RID: 274405 RVA: 0x01051938 File Offset: 0x0104FB38
-		// (set) Token: 0x06042FE6 RID: 274406 RVA: 0x01051940 File Offset: 0x0104FB40
+		// Token: 0x17006B1F RID: 27423
+		// (get) Token: 0x06037B3D RID: 228157 RVA: 0x00F92F60 File Offset: 0x00F91160
+		// (set) Token: 0x06037B3E RID: 228158 RVA: 0x00F92F68 File Offset: 0x00F91168
 		public CoopActivityData ActivityData { get; set; }
 
-		// Token: 0x170097E0 RID: 38880
-		// (get) Token: 0x06042FE7 RID: 274407 RVA: 0x01051949 File Offset: 0x0104FB49
-		// (set) Token: 0x06042FE8 RID: 274408 RVA: 0x01051951 File Offset: 0x0104FB51
+		// Token: 0x17006B20 RID: 27424
+		// (get) Token: 0x06037B3F RID: 228159 RVA: 0x00F92F71 File Offset: 0x00F91171
+		// (set) Token: 0x06037B40 RID: 228160 RVA: 0x00F92F79 File Offset: 0x00F91179
 		public int RoleId { get; set; }
 
-		// Token: 0x170097E1 RID: 38881
-		// (get) Token: 0x06042FE9 RID: 274409 RVA: 0x0105195A File Offset: 0x0104FB5A
-		// (set) Token: 0x06042FEA RID: 274410 RVA: 0x01051962 File Offset: 0x0104FB62
+		// Token: 0x17006B21 RID: 27425
+		// (get) Token: 0x06037B41 RID: 228161 RVA: 0x00F92F82 File Offset: 0x00F91182
+		// (set) Token: 0x06037B42 RID: 228162 RVA: 0x00F92F8A File Offset: 0x00F9118A
 		public int PreLevel { get; set; }
 
-		// Token: 0x170097E2 RID: 38882
-		// (get) Token: 0x06042FEB RID: 274411 RVA: 0x0105196B File Offset: 0x0104FB6B
-		// (set) Token: 0x06042FEC RID: 274412 RVA: 0x01051973 File Offset: 0x0104FB73
+		// Token: 0x17006B22 RID: 27426
+		// (get) Token: 0x06037B43 RID: 228163 RVA: 0x00F92F93 File Offset: 0x00F91193
+		// (set) Token: 0x06037B44 RID: 228164 RVA: 0x00F92F9B File Offset: 0x00F9119B
 		public int NextLevel { get; set; }
 
-		// Token: 0x170097E3 RID: 38883
-		// (get) Token: 0x06042FED RID: 274413 RVA: 0x0105197C File Offset: 0x0104FB7C
-		// (set) Token: 0x06042FEE RID: 274414 RVA: 0x01051984 File Offset: 0x0104FB84
+		// Token: 0x17006B23 RID: 27427
+		// (get) Token: 0x06037B45 RID: 228165 RVA: 0x00F92FA4 File Offset: 0x00F911A4
+		// (set) Token: 0x06037B46 RID: 228166 RVA: 0x00F92FAC File Offset: 0x00F911AC
 		public bool IsMaxLevel { get; set; }
 
-		// Token: 0x170097E4 RID: 38884
-		// (get) Token: 0x06042FEF RID: 274415 RVA: 0x0105198D File Offset: 0x0104FB8D
-		// (set) Token: 0x06042FF0 RID: 274416 RVA: 0x01051995 File Offset: 0x0104FB95
+		// Token: 0x17006B24 RID: 27428
+		// (get) Token: 0x06037B47 RID: 228167 RVA: 0x00F92FB5 File Offset: 0x00F911B5
+		// (set) Token: 0x06037B48 RID: 228168 RVA: 0x00F92FBD File Offset: 0x00F911BD
 		public bool IsNew { get; set; }
 	}
 }

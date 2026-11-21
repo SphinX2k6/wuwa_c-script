@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200699F RID: 27039
+	// Token: 0x02007052 RID: 28754
 	public enum IInteractPointConfig_Union : byte
 	{
-		// Token: 0x04011143 RID: 69955
+		// Token: 0x04011FB0 RID: 73648
 		NONE,
-		// Token: 0x04011144 RID: 69956
+		// Token: 0x04011FB1 RID: 73649
 		IInteractPointConfig,
-		// Token: 0x04011145 RID: 69957
+		// Token: 0x04011FB2 RID: 73650
 		ISequenceUnlockPoints
 	}
 }

@@ -4,25 +4,25 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelGamePlay.Common.GameplayAction
 {
-	// Token: 0x02006F26 RID: 28454
+	// Token: 0x020060A7 RID: 24743
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GameplayActionManager
 	{
-		// Token: 0x060453C8 RID: 283592 RVA: 0x01121EC7 File Offset: 0x011200C7
+		// Token: 0x0603B576 RID: 243062 RVA: 0x010CBE73 File Offset: 0x010CA073
 		public void Init(GameplayActionTicker actionTicker)
 		{
 			this.ActionTicker = actionTicker;
 		}
 
-		// Token: 0x060453C9 RID: 283593 RVA: 0x01121ED0 File Offset: 0x011200D0
+		// Token: 0x0603B577 RID: 243063 RVA: 0x010CBE7C File Offset: 0x010CA07C
 		public virtual void Clear()
 		{
 			this.Interrupt();
 			this.ActionTicker = null;
 		}
 
-		// Token: 0x060453CA RID: 283594 RVA: 0x01121EE0 File Offset: 0x011200E0
+		// Token: 0x0603B578 RID: 243064 RVA: 0x010CBE8C File Offset: 0x010CA08C
 		public void Interrupt()
 		{
 			GameplayActionTicker actionTicker = this.ActionTicker;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.LevelGamePlay.Common.GameplayAction
 			this.ActionGroupQueueMap.Clear();
 		}
 
-		// Token: 0x060453CB RID: 283595 RVA: 0x01121F6C File Offset: 0x0112016C
+		// Token: 0x0603B579 RID: 243065 RVA: 0x010CBF18 File Offset: 0x010CA118
 		protected void ExecuteActionGroups(List<GameplayActionGroup> actionGroups, [Nullable(2)] Action onAllFinish = null)
 		{
 			if (actionGroups.Count <= 0)
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.LevelGamePlay.Common.GameplayAction
 			actionGroupQueue.Queue.Front.ExecuteActionGroup(this.ActionTicker, new Action<int>(this.OnActionGroupFinish));
 		}
 
-		// Token: 0x060453CC RID: 283596 RVA: 0x0112202C File Offset: 0x0112022C
+		// Token: 0x0603B57A RID: 243066 RVA: 0x010CBFD8 File Offset: 0x010CA1D8
 		private void OnActionGroupFinish(int ownerId)
 		{
 			ActionGroupQueue actionGroupQueue;
@@ -93,13 +93,13 @@ namespace CSharpScript.Game.LevelGamePlay.Common.GameplayAction
 			this.ActionGroupQueueMap.Remove(ownerId);
 		}
 
-		// Token: 0x04024196 RID: 147862
+		// Token: 0x0401F44B RID: 128075
 		private int QueueId;
 
-		// Token: 0x04024197 RID: 147863
+		// Token: 0x0401F44C RID: 128076
 		private readonly Dictionary<int, ActionGroupQueue> ActionGroupQueueMap = new Dictionary<int, ActionGroupQueue>();
 
-		// Token: 0x04024198 RID: 147864
+		// Token: 0x0401F44D RID: 128077
 		[Nullable(2)]
 		private GameplayActionTicker ActionTicker;
 	}

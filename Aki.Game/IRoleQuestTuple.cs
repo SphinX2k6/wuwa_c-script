@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x02002657 RID: 9815
+// Token: 0x02001B42 RID: 6978
 public interface IRoleQuestTuple
 {
-	// Token: 0x17001996 RID: 6550
-	// (get) Token: 0x06014154 RID: 82260
-	// (set) Token: 0x06014155 RID: 82261
+	// Token: 0x170019CE RID: 6606
+	// (get) Token: 0x06011636 RID: 71222
+	// (set) Token: 0x06011637 RID: 71223
 	int RoleId { get; set; }
 
-	// Token: 0x17001997 RID: 6551
-	// (get) Token: 0x06014156 RID: 82262
-	// (set) Token: 0x06014157 RID: 82263
+	// Token: 0x170019CF RID: 6607
+	// (get) Token: 0x06011638 RID: 71224
+	// (set) Token: 0x06011639 RID: 71225
 	int QuestId { get; set; }
 
-	// Token: 0x17001998 RID: 6552
-	// (get) Token: 0x06014158 RID: 82264
-	// (set) Token: 0x06014159 RID: 82265
+	// Token: 0x170019D0 RID: 6608
+	// (get) Token: 0x0601163A RID: 71226
+	// (set) Token: 0x0601163B RID: 71227
 	int Id { get; set; }
 }

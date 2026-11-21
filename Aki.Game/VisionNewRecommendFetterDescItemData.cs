@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020024DE RID: 9438
+// Token: 0x020019C5 RID: 6597
 public class VisionNewRecommendFetterDescItemData
 {
-	// Token: 0x04008EE1 RID: 36577
+	// Token: 0x0400902B RID: 36907
 	[Nullable(1)]
 	public IVisionFetterCount FetterData;
 
-	// Token: 0x04008EE2 RID: 36578
+	// Token: 0x0400902C RID: 36908
 	public bool IsNeedLine;
 }

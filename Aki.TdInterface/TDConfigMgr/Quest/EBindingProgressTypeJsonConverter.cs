@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001229 RID: 4649
+	// Token: 0x02001365 RID: 4965
 	public class EBindingProgressTypeJsonConverter : JsonConverter<EBindingProgressType>
 	{
-		// Token: 0x06006961 RID: 26977 RVA: 0x000FB0D0 File Offset: 0x000F92D0
+		// Token: 0x06006FA2 RID: 28578 RVA: 0x001089DC File Offset: 0x00106BDC
 		public override EBindingProgressType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Quest
 			return EBindingProgressTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x06006962 RID: 26978 RVA: 0x000FB0F4 File Offset: 0x000F92F4
+		// Token: 0x06006FA3 RID: 28579 RVA: 0x00108A00 File Offset: 0x00106C00
 		public override void Write(Utf8JsonWriter writer, EBindingProgressType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

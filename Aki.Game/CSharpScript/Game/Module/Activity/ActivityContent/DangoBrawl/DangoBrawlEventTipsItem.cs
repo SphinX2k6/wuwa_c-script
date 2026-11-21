@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006816 RID: 26646
+	// Token: 0x02005766 RID: 22374
 	public class DangoBrawlEventTipsItem : UiPanelBase
 	{
-		// Token: 0x060427A8 RID: 272296 RVA: 0x01026634 File Offset: 0x01024834
+		// Token: 0x060372FD RID: 226045 RVA: 0x00F67B78 File Offset: 0x00F65D78
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060427A9 RID: 272297 RVA: 0x010266C0 File Offset: 0x010248C0
+		// Token: 0x060372FE RID: 226046 RVA: 0x00F67C04 File Offset: 0x00F65E04
 		public void Refresh(int eventId)
 		{
 			DangoBrawlShopEvt value = DangoBrawlConfig.Instance.GetShopEvtConfigById(eventId).Value;
@@ -35,14 +35,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(2), value.Desc, Array.Empty<object>());
 		}
 
-		// Token: 0x0200C9A5 RID: 51621
+		// Token: 0x0200B372 RID: 45938
 		private enum EComponents
 		{
-			// Token: 0x0403CE77 RID: 249463
+			// Token: 0x04037764 RID: 227172
 			TexIcon,
-			// Token: 0x0403CE78 RID: 249464
+			// Token: 0x04037765 RID: 227173
 			TxtTitle,
-			// Token: 0x0403CE79 RID: 249465
+			// Token: 0x04037766 RID: 227174
 			TxtDesc
 		}
 	}

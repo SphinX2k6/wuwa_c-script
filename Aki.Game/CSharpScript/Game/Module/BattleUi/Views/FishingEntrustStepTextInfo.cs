@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D77 RID: 23927
+	// Token: 0x02004D59 RID: 19801
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FishingEntrustStepTextInfo : MissionViewStepTextInfoBase
 	{
-		// Token: 0x0603CBB1 RID: 248753 RVA: 0x00E9547C File Offset: 0x00E9367C
+		// Token: 0x06031B0D RID: 203533 RVA: 0x00DE5CC4 File Offset: 0x00DE3EC4
 		public FishingEntrustStepTextInfo(string tidTitle, int progressTargetId) : base(tidTitle, null, null)
 		{
 		}
 
-		// Token: 0x17008E21 RID: 36385
-		// (get) Token: 0x0603CBB2 RID: 248754 RVA: 0x00E9548E File Offset: 0x00E9368E
+		// Token: 0x170061F3 RID: 25075
+		// (get) Token: 0x06031B0E RID: 203534 RVA: 0x00DE5CD6 File Offset: 0x00DE3ED6
 		public override EMissionItemViewDataSource ShowSource
 		{
 			get
@@ -23,12 +23,12 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x17008E22 RID: 36386
-		// (get) Token: 0x0603CBB3 RID: 248755 RVA: 0x00E95491 File Offset: 0x00E93691
+		// Token: 0x170061F4 RID: 25076
+		// (get) Token: 0x06031B0F RID: 203535 RVA: 0x00DE5CD9 File Offset: 0x00DE3ED9
 		public int ProgressTargetId { get; } = progressTargetId;
 
-		// Token: 0x17008E23 RID: 36387
-		// (get) Token: 0x0603CBB4 RID: 248756 RVA: 0x00E95499 File Offset: 0x00E93699
+		// Token: 0x170061F5 RID: 25077
+		// (get) Token: 0x06031B10 RID: 203536 RVA: 0x00DE5CE1 File Offset: 0x00DE3EE1
 		public override string TidTitle
 		{
 			get
@@ -37,8 +37,8 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x17008E24 RID: 36388
-		// (get) Token: 0x0603CBB5 RID: 248757 RVA: 0x00E954A1 File Offset: 0x00E936A1
+		// Token: 0x170061F6 RID: 25078
+		// (get) Token: 0x06031B11 RID: 203537 RVA: 0x00DE5CE9 File Offset: 0x00DE3EE9
 		public string QuestScheduleType
 		{
 			get

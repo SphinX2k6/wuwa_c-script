@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000801 RID: 2049
+	// Token: 0x0200081D RID: 2077
 	public class ConfigRiskHarvestArtifactAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003018 RID: 12312 RVA: 0x001692C0 File Offset: 0x001674C0
+		// Token: 0x060030C0 RID: 12480 RVA: 0x001705A8 File Offset: 0x0016E7A8
 		static ConfigRiskHarvestArtifactAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRiskHarvestArtifactAll.CreateStaticDefaultValue), new Action(ConfigRiskHarvestArtifactAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003019 RID: 12313 RVA: 0x001692E0 File Offset: 0x001674E0
+		// Token: 0x060030C1 RID: 12481 RVA: 0x001705C8 File Offset: 0x0016E7C8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRiskHarvestArtifactAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600301A RID: 12314 RVA: 0x0016935F File Offset: 0x0016755F
+		// Token: 0x060030C2 RID: 12482 RVA: 0x00170647 File Offset: 0x0016E847
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRiskHarvestArtifactAll.LogPair = null;
 			ConfigRiskHarvestArtifactAll.HandleId = 0;
 		}
 
-		// Token: 0x0600301B RID: 12315 RVA: 0x0016936D File Offset: 0x0016756D
+		// Token: 0x060030C3 RID: 12483 RVA: 0x00170655 File Offset: 0x0016E855
 		public static void Init()
 		{
 			ConfigRiskHarvestArtifactAll.HandleId = ConfigCommon.InitDataStatement(ConfigRiskHarvestArtifactAll.HandleId, "db_riskharvest.db", "select BinData from `RiskHarvestArtifact`");
 		}
 
-		// Token: 0x0600301C RID: 12316 RVA: 0x00169388 File Offset: 0x00167588
+		// Token: 0x060030C4 RID: 12484 RVA: 0x00170670 File Offset: 0x0016E870
 		[NullableContext(2)]
 		public static IReadOnlyList<RiskHarvestArtifact> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x040037ED RID: 14317
+		// Token: 0x040038B1 RID: 14513
 		private const string DB = "db_riskharvest.db";
 
-		// Token: 0x040037EE RID: 14318
+		// Token: 0x040038B2 RID: 14514
 		private const string FILE = "g.割草冒险活动.xlsx";
 
-		// Token: 0x040037EF RID: 14319
+		// Token: 0x040038B3 RID: 14515
 		private const string TABLE = "RiskHarvestArtifact";
 
-		// Token: 0x040037F0 RID: 14320
+		// Token: 0x040038B4 RID: 14516
 		private const string COMMAND = "select BinData from `RiskHarvestArtifact`";
 
-		// Token: 0x040037F1 RID: 14321
+		// Token: 0x040038B5 RID: 14517
 		private const string KEY_PREFIX = "RiskHarvestArtifactAll";
 
-		// Token: 0x040037F2 RID: 14322
+		// Token: 0x040038B6 RID: 14518
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040037F3 RID: 14323
+		// Token: 0x040038B7 RID: 14519
 		private static int HandleId;
 	}
 }

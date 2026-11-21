@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200187A RID: 6266
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001A05 RID: 6661
 	public class IChangeTimerType
 	{
-		// Token: 0x060086A7 RID: 34471 RVA: 0x0013FBE8 File Offset: 0x0013DDE8
+		// Token: 0x06008DCF RID: 36303 RVA: 0x0014F41C File Offset: 0x0014D61C
 		private IChangeTimerType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060086A8 RID: 34472 RVA: 0x0013FC20 File Offset: 0x0013DE20
+		// Token: 0x06008DD0 RID: 36304 RVA: 0x0014F454 File Offset: 0x0014D654
 		public static IChangeTimerType Create([Nullable(2)] IChangeTimerType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060086A9 RID: 34473 RVA: 0x0013FC33 File Offset: 0x0013DE33
+		// Token: 0x06008DD1 RID: 36305 RVA: 0x0014F467 File Offset: 0x0014D667
 		public static IChangeTimerType CreateFromSetValue([Nullable(2)] IChangeTimerType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060086AA RID: 34474 RVA: 0x0013FC46 File Offset: 0x0013DE46
+		// Token: 0x06008DD2 RID: 36306 RVA: 0x0014F47A File Offset: 0x0014D67A
 		public IChangeTimerType_SetValue ToSetValue()
 		{
 			return new IChangeTimerType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002BF1 RID: 11249
-		// (get) Token: 0x060086AB RID: 34475 RVA: 0x0013FC59 File Offset: 0x0013DE59
-		// (set) Token: 0x060086AC RID: 34476 RVA: 0x0013FC84 File Offset: 0x0013DE84
+		// Token: 0x17002DEC RID: 11756
+		// (get) Token: 0x06008DD3 RID: 36307 RVA: 0x0014F48D File Offset: 0x0014D68D
+		// (set) Token: 0x06008DD4 RID: 36308 RVA: 0x0014F4B8 File Offset: 0x0014D6B8
 		public virtual EChangeTimerType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040054E4 RID: 21732
+		// Token: 0x04005931 RID: 22833
 		[Nullable(2)]
 		protected IChangeTimerType FbInstance;
 
-		// Token: 0x040054E5 RID: 21733
+		// Token: 0x04005932 RID: 22834
 		[Nullable(2)]
 		protected IChangeTimerType_SetValue PocoInterface;
 	}

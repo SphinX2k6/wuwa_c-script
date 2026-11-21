@@ -3,17 +3,17 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Giant
 {
-	// Token: 0x02005968 RID: 22888
+	// Token: 0x02004941 RID: 18753
 	public interface IGiantSystemQuestOpenParam
 	{
-		// Token: 0x17008B2E RID: 35630
-		// (get) Token: 0x0603A124 RID: 237860
-		// (set) Token: 0x0603A125 RID: 237861
+		// Token: 0x17005EFB RID: 24315
+		// (get) Token: 0x0602F048 RID: 192584
+		// (set) Token: 0x0602F049 RID: 192585
 		GiantEcoNetType EcoType { get; set; }
 
-		// Token: 0x17008B2F RID: 35631
-		// (get) Token: 0x0603A126 RID: 237862
-		// (set) Token: 0x0603A127 RID: 237863
+		// Token: 0x17005EFC RID: 24316
+		// (get) Token: 0x0602F04A RID: 192586
+		// (set) Token: 0x0602F04B RID: 192587
 		bool? GuideOnly { get; set; }
 	}
 }

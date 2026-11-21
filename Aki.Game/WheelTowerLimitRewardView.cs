@@ -11,17 +11,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001617 RID: 5655
+// Token: 0x02000ACF RID: 2767
 [NullableContext(1)]
 [Nullable(0)]
 public class WheelTowerLimitRewardView : UiTickViewBase
 {
-	// Token: 0x06009F18 RID: 40728 RVA: 0x0022D3DA File Offset: 0x0022B5DA
+	// Token: 0x060072F6 RID: 29430 RVA: 0x0023720A File Offset: 0x0023540A
 	public WheelTowerLimitRewardView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06009F19 RID: 40729 RVA: 0x0022D3E4 File Offset: 0x0022B5E4
+	// Token: 0x060072F7 RID: 29431 RVA: 0x00237214 File Offset: 0x00235414
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 7;
@@ -45,7 +45,7 @@ public class WheelTowerLimitRewardView : UiTickViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009F1A RID: 40730 RVA: 0x0022D4F4 File Offset: 0x0022B6F4
+	// Token: 0x060072F8 RID: 29432 RVA: 0x00237324 File Offset: 0x00235524
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WheelTowerLimitRewardView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -56,7 +56,7 @@ public class WheelTowerLimitRewardView : UiTickViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009F1B RID: 40731 RVA: 0x0022D538 File Offset: 0x0022B738
+	// Token: 0x060072F9 RID: 29433 RVA: 0x00237368 File Offset: 0x00235568
 	protected override void OnStart()
 	{
 		WheelTowerLimitRewardTabItem normalTabItem = this.NormalTabItem;
@@ -85,7 +85,7 @@ public class WheelTowerLimitRewardView : UiTickViewBase
 		});
 	}
 
-	// Token: 0x06009F1C RID: 40732 RVA: 0x0022D5AC File Offset: 0x0022B7AC
+	// Token: 0x060072FA RID: 29434 RVA: 0x002373DC File Offset: 0x002355DC
 	protected override void OnTick(float delta)
 	{
 		ValueTuple<bool, string, long> timeVisibleAndRemainTime = ActivityModel.Instance.GetTimeVisibleAndRemainTime(WheelTowerModel.Instance.ActivityData, ConfigMultiTextLang.GetLocalTextNew("WheelTower_LimitReward_RemainTime", null));
@@ -102,7 +102,7 @@ public class WheelTowerLimitRewardView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06009F1D RID: 40733 RVA: 0x0022D608 File Offset: 0x0022B808
+	// Token: 0x060072FB RID: 29435 RVA: 0x00237438 File Offset: 0x00235638
 	private void RefreshRewardScroll()
 	{
 		WheelTowerData data = WheelTowerModel.Instance.ActivityData;
@@ -136,7 +136,7 @@ public class WheelTowerLimitRewardView : UiTickViewBase
 		rewardScroll.RefreshByData(list2, null, true);
 	}
 
-	// Token: 0x06009F1E RID: 40734 RVA: 0x0022D6CC File Offset: 0x0022B8CC
+	// Token: 0x060072FC RID: 29436 RVA: 0x002374FC File Offset: 0x002356FC
 	private void ToggleCallBack(int diff, UUIExtendToggle toggle)
 	{
 		if (this.CurrentTabToggle != null)
@@ -149,7 +149,7 @@ public class WheelTowerLimitRewardView : UiTickViewBase
 		this.RefreshRewardScroll();
 	}
 
-	// Token: 0x06009F1F RID: 40735 RVA: 0x0022D70B File Offset: 0x0022B90B
+	// Token: 0x060072FD RID: 29437 RVA: 0x0023753B File Offset: 0x0023573B
 	private WheelTowerLimitRewardItem CreateRewardItem()
 	{
 		WheelTowerLimitRewardItem wheelTowerLimitRewardItem = new WheelTowerLimitRewardItem();
@@ -157,7 +157,7 @@ public class WheelTowerLimitRewardView : UiTickViewBase
 		return wheelTowerLimitRewardItem;
 	}
 
-	// Token: 0x06009F20 RID: 40736 RVA: 0x0022D724 File Offset: 0x0022B924
+	// Token: 0x060072FE RID: 29438 RVA: 0x00237554 File Offset: 0x00235754
 	private void ReceiveCallback()
 	{
 		WheelTowerController.Instance.RequestTaskReceive(this.IsEndless).ContinueWith(delegate()
@@ -176,7 +176,7 @@ public class WheelTowerLimitRewardView : UiTickViewBase
 		});
 	}
 
-	// Token: 0x06009F21 RID: 40737 RVA: 0x0022D748 File Offset: 0x0022B948
+	// Token: 0x060072FF RID: 29439 RVA: 0x00237578 File Offset: 0x00235778
 	// Note: this type is marked as 'beforefieldinit'.
 	unsafe static WheelTowerLimitRewardView()
 	{
@@ -191,23 +191,23 @@ public class WheelTowerLimitRewardView : UiTickViewBase
 		WheelTowerLimitRewardView.WheelTowerDiffList = list;
 	}
 
-	// Token: 0x0400478B RID: 18315
+	// Token: 0x04004831 RID: 18481
 	[StaticVariableRuleIgnore]
 	private static readonly List<int> WheelTowerDiffList;
 
-	// Token: 0x0400478C RID: 18316
+	// Token: 0x04004832 RID: 18482
 	[Nullable(2)]
 	private PopupCaptionItem Caption;
 
-	// Token: 0x0400478D RID: 18317
+	// Token: 0x04004833 RID: 18483
 	[Nullable(2)]
 	private WheelTowerLimitRewardTabItem NormalTabItem;
 
-	// Token: 0x0400478E RID: 18318
+	// Token: 0x04004834 RID: 18484
 	[Nullable(2)]
 	private WheelTowerLimitRewardTabItem EndlessTabItem;
 
-	// Token: 0x0400478F RID: 18319
+	// Token: 0x04004835 RID: 18485
 	[Nullable(new byte[]
 	{
 		2,
@@ -215,10 +215,10 @@ public class WheelTowerLimitRewardView : UiTickViewBase
 	})]
 	private GenericScrollViewNew<WheelTowerLimitRewardItem, int> RewardScroll;
 
-	// Token: 0x04004790 RID: 18320
+	// Token: 0x04004836 RID: 18486
 	[Nullable(2)]
 	private UUIExtendToggle CurrentTabToggle;
 
-	// Token: 0x04004791 RID: 18321
+	// Token: 0x04004837 RID: 18487
 	private bool IsEndless;
 }

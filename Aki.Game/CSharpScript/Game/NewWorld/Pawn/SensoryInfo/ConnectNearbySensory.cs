@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.NewWorld.Pawn.SensoryInfo
 {
-	// Token: 0x02007060 RID: 28768
+	// Token: 0x020061E1 RID: 25057
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ConnectNearbySensory : BaseSensoryInfo
 	{
-		// Token: 0x17009BF9 RID: 39929
-		// (get) Token: 0x06046043 RID: 286787 RVA: 0x01173EDE File Offset: 0x011720DE
+		// Token: 0x1700717D RID: 29053
+		// (get) Token: 0x0603C23C RID: 246332 RVA: 0x0111DADD File Offset: 0x0111BCDD
 		public override ERangePerceptionType RangePerceptionType
 		{
 			get
@@ -19,13 +19,13 @@ namespace CSharpScript.Game.NewWorld.Pawn.SensoryInfo
 			}
 		}
 
-		// Token: 0x06046044 RID: 286788 RVA: 0x01173EE1 File Offset: 0x011720E1
+		// Token: 0x0603C23D RID: 246333 RVA: 0x0111DAE0 File Offset: 0x0111BCE0
 		protected override void OnInit(params object[] @params)
 		{
 			this.SensoryRange = Convert.ToDouble(@params[0]);
 		}
 
-		// Token: 0x06046045 RID: 286789 RVA: 0x01173EF1 File Offset: 0x011720F1
+		// Token: 0x0603C23E RID: 246334 RVA: 0x0111DAF0 File Offset: 0x0111BCF0
 		protected override void OnClear()
 		{
 			this.LastFindEntities.Clear();
@@ -34,18 +34,18 @@ namespace CSharpScript.Game.NewWorld.Pawn.SensoryInfo
 			this.OnExitSensoryRange = null;
 		}
 
-		// Token: 0x06046046 RID: 286790 RVA: 0x01173F17 File Offset: 0x01172117
+		// Token: 0x0603C23F RID: 246335 RVA: 0x0111DB16 File Offset: 0x0111BD16
 		protected override void OnTick(float delta)
 		{
 		}
 
-		// Token: 0x06046047 RID: 286791 RVA: 0x01173F19 File Offset: 0x01172119
+		// Token: 0x0603C240 RID: 246336 RVA: 0x0111DB18 File Offset: 0x0111BD18
 		public override bool CheckEntity(Entity entity)
 		{
 			return true;
 		}
 
-		// Token: 0x06046048 RID: 286792 RVA: 0x01173F1C File Offset: 0x0117211C
+		// Token: 0x0603C241 RID: 246337 RVA: 0x0111DB1C File Offset: 0x0111BD1C
 		public override void EnterRange(Entity entity)
 		{
 			this.InRange = true;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.SensoryInfo
 			this.LastFindEntities.Remove(entity.Id);
 		}
 
-		// Token: 0x06046049 RID: 286793 RVA: 0x01173F80 File Offset: 0x01172180
+		// Token: 0x0603C242 RID: 246338 RVA: 0x0111DB80 File Offset: 0x0111BD80
 		public override void ExitRange()
 		{
 			this.InRange = (this.CacheEntityList.Count != 0);
@@ -77,20 +77,20 @@ namespace CSharpScript.Game.NewWorld.Pawn.SensoryInfo
 			}
 		}
 
-		// Token: 0x0604604A RID: 286794 RVA: 0x01174054 File Offset: 0x01172254
+		// Token: 0x0603C243 RID: 246339 RVA: 0x0111DC54 File Offset: 0x0111BE54
 		public void OnEntityExitConnectRange(int entityId)
 		{
 			this.LastFindEntities.Remove(entityId);
 			this.CacheEntityList.Remove(entityId);
 		}
 
-		// Token: 0x04024A7D RID: 150141
+		// Token: 0x0401FD33 RID: 130355
 		protected readonly HashSet<int> CacheEntityList = new HashSet<int>();
 
-		// Token: 0x04024A7E RID: 150142
+		// Token: 0x0401FD34 RID: 130356
 		protected readonly HashSet<int> LastFindEntities = new HashSet<int>();
 
-		// Token: 0x04024A7F RID: 150143
+		// Token: 0x0401FD35 RID: 130357
 		[Nullable(new byte[]
 		{
 			2,
@@ -98,7 +98,7 @@ namespace CSharpScript.Game.NewWorld.Pawn.SensoryInfo
 		})]
 		public Func<Entity, bool> OnEnterSensoryRange;
 
-		// Token: 0x04024A80 RID: 150144
+		// Token: 0x0401FD36 RID: 130358
 		[Nullable(2)]
 		public Action<int> OnExitSensoryRange;
 	}

@@ -12,10 +12,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 {
-	// Token: 0x02004D41 RID: 19777
+	// Token: 0x02003D0A RID: 15626
 	public class RoleDevelopProjectPhantomItem : UiPanelBase
 	{
-		// Token: 0x0603318A RID: 209290 RVA: 0x00BE8184 File Offset: 0x00BE6384
+		// Token: 0x06027FE2 RID: 163810 RVA: 0x00B30EEC File Offset: 0x00B2F0EC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -52,24 +52,26 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603318B RID: 209291 RVA: 0x00BE8334 File Offset: 0x00BE6534
+		// Token: 0x06027FE3 RID: 163811 RVA: 0x00B3109C File Offset: 0x00B2F29C
 		protected override UniTask OnBeforeStartAsync()
 		{
-			RoleDevelopProjectPhantomItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
+			RoleDevelopProjectPhantomItem.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
 			<OnBeforeStartAsync>d__.<>t__builder = AsyncUniTaskMethodBuilder.Create();
 			<OnBeforeStartAsync>d__.<>4__this = this;
 			<OnBeforeStartAsync>d__.<>1__state = -1;
-			<OnBeforeStartAsync>d__.<>t__builder.Start<RoleDevelopProjectPhantomItem.<OnBeforeStartAsync>d__6>(ref <OnBeforeStartAsync>d__);
+			<OnBeforeStartAsync>d__.<>t__builder.Start<RoleDevelopProjectPhantomItem.<OnBeforeStartAsync>d__7>(ref <OnBeforeStartAsync>d__);
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603318C RID: 209292 RVA: 0x00BE8378 File Offset: 0x00BE6578
+		// Token: 0x06027FE4 RID: 163812 RVA: 0x00B310E0 File Offset: 0x00B2F2E0
 		[NullableContext(1)]
-		public void Refresh(RoleDevelopData developData, int phantomIncId, int index)
+		public void Refresh(RoleDevelopData developData, int phantomIncId, int index, bool clickEnabled = true)
 		{
 			this.DevelopData = developData;
 			this.PhantomIncId = phantomIncId;
 			this.Index = index;
+			this.ClickEnabled = clickEnabled;
+			base.GetButton(0).SetSelfInteractive(clickEnabled);
 			PhantomBattleData phantomBattleData = PhantomBattleModel.Instance.GetPhantomBattleData(this.PhantomIncId);
 			if (phantomBattleData == null)
 			{
@@ -88,10 +90,10 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			base.GetText(7).SetText("+" + phantomBattleData.GetPhantomLevel().ToString(), true);
 		}
 
-		// Token: 0x0603318D RID: 209293 RVA: 0x00BE8498 File Offset: 0x00BE6698
+		// Token: 0x06027FE5 RID: 163813 RVA: 0x00B31214 File Offset: 0x00B2F414
 		private void OnClickHeadItem()
 		{
-			if (this.DevelopData == null)
+			if (this.DevelopData == null || !this.ClickEnabled)
 			{
 				return;
 			}
@@ -102,52 +104,46 @@ namespace CSharpScript.Game.Module.RoleUi.RoleDevelop.View
 			PhantomUtil.OpenVisionEquipmentView(id, this.Index, null);
 		}
 
-		// Token: 0x0401B29C RID: 111260
+		// Token: 0x04015C6B RID: 89195
 		[Nullable(2)]
 		private RoleDevelopData DevelopData;
 
-		// Token: 0x0401B29D RID: 111261
+		// Token: 0x04015C6C RID: 89196
 		private int PhantomIncId;
 
-		// Token: 0x0401B29E RID: 111262
+		// Token: 0x04015C6D RID: 89197
 		[Nullable(1)]
 		private VisionFetterSuitItem VisionFetterSuitItem;
 
-		// Token: 0x0401B29F RID: 111263
+		// Token: 0x04015C6E RID: 89198
 		private int Index;
 
-		// Token: 0x0200AEA2 RID: 44706
-		public static class EComponentType
+		// Token: 0x04015C6F RID: 89199
+		private bool ClickEnabled = true;
+
+		// Token: 0x020098D5 RID: 39125
+		private enum EComponentType
 		{
-			// Token: 0x04035073 RID: 217203
-			public const int ButtonHeadItem = 0;
-
-			// Token: 0x04035074 RID: 217204
-			public const int CircleItemTexture = 1;
-
-			// Token: 0x04035075 RID: 217205
-			public const int QualitySprite = 2;
-
-			// Token: 0x04035076 RID: 217206
-			public const int CostItem = 3;
-
-			// Token: 0x04035077 RID: 217207
-			public const int CostNumText = 4;
-
-			// Token: 0x04035078 RID: 217208
-			public const int SuitElementItem = 5;
-
-			// Token: 0x04035079 RID: 217209
-			public const int LevelItem = 6;
-
-			// Token: 0x0403507A RID: 217210
-			public const int LevelText = 7;
-
-			// Token: 0x0403507B RID: 217211
-			public const int PanelNor = 8;
-
-			// Token: 0x0403507C RID: 217212
-			public const int PanelEmpty = 9;
+			// Token: 0x0402FA8F RID: 195215
+			ButtonHeadItem,
+			// Token: 0x0402FA90 RID: 195216
+			CircleItemTexture,
+			// Token: 0x0402FA91 RID: 195217
+			QualitySprite,
+			// Token: 0x0402FA92 RID: 195218
+			CostItem,
+			// Token: 0x0402FA93 RID: 195219
+			CostNumText,
+			// Token: 0x0402FA94 RID: 195220
+			SuitElementItem,
+			// Token: 0x0402FA95 RID: 195221
+			LevelItem,
+			// Token: 0x0402FA96 RID: 195222
+			LevelText,
+			// Token: 0x0402FA97 RID: 195223
+			PanelNor,
+			// Token: 0x0402FA98 RID: 195224
+			PanelEmpty
 		}
 	}
 }

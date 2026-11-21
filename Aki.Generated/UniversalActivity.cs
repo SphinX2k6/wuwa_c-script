@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200118A RID: 4490
+	// Token: 0x020012C0 RID: 4800
 	public struct UniversalActivity : IFlatbufferObject
 	{
-		// Token: 0x17003D7B RID: 15739
-		// (get) Token: 0x0600E6E2 RID: 59106 RVA: 0x003401B9 File Offset: 0x0033E3B9
+		// Token: 0x170040DF RID: 16607
+		// (get) Token: 0x0600F450 RID: 62544 RVA: 0x0036AF92 File Offset: 0x00369192
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E6E3 RID: 59107 RVA: 0x003401C6 File Offset: 0x0033E3C6
+		// Token: 0x0600F451 RID: 62545 RVA: 0x0036AF9F File Offset: 0x0036919F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600E6E4 RID: 59108 RVA: 0x003401D0 File Offset: 0x0033E3D0
+		// Token: 0x0600F452 RID: 62546 RVA: 0x0036AFA8 File Offset: 0x003691A8
 		public static UniversalActivity GetRootAsUniversalActivity(ByteBuffer _bb)
 		{
 			return UniversalActivity.GetRootAsUniversalActivity(_bb, default(UniversalActivity));
 		}
 
-		// Token: 0x0600E6E5 RID: 59109 RVA: 0x003401EC File Offset: 0x0033E3EC
+		// Token: 0x0600F453 RID: 62547 RVA: 0x0036AFC4 File Offset: 0x003691C4
 		public static UniversalActivity GetRootAsUniversalActivity(ByteBuffer _bb, UniversalActivity obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600E6E6 RID: 59110 RVA: 0x00340209 File Offset: 0x0033E409
+		// Token: 0x0600F454 RID: 62548 RVA: 0x0036AFE1 File Offset: 0x003691E1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600E6E7 RID: 59111 RVA: 0x00340218 File Offset: 0x0033E418
+		// Token: 0x0600F455 RID: 62549 RVA: 0x0036AFF0 File Offset: 0x003691F0
 		public UniversalActivity __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003D7C RID: 15740
-		// (get) Token: 0x0600E6E8 RID: 59112 RVA: 0x00340228 File Offset: 0x0033E428
+		// Token: 0x170040E0 RID: 16608
+		// (get) Token: 0x0600F456 RID: 62550 RVA: 0x0036B000 File Offset: 0x00369200
 		public int Id
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003D7D RID: 15741
-		// (get) Token: 0x0600E6E9 RID: 59113 RVA: 0x00340264 File Offset: 0x0033E464
+		// Token: 0x170040E1 RID: 16609
+		// (get) Token: 0x0600F457 RID: 62551 RVA: 0x0036B03C File Offset: 0x0036923C
 		public string UiResource
 		{
 			get
@@ -80,20 +80,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E6EA RID: 59114 RVA: 0x0034029B File Offset: 0x0033E49B
+		// Token: 0x0600F458 RID: 62552 RVA: 0x0036B073 File Offset: 0x00369273
 		public Span<byte> GetUiResourceBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0600E6EB RID: 59115 RVA: 0x003402AA File Offset: 0x0033E4AA
+		// Token: 0x0600F459 RID: 62553 RVA: 0x0036B082 File Offset: 0x00369282
 		public byte[] GetUiResourceArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x17003D7E RID: 15742
-		// (get) Token: 0x0600E6EC RID: 59116 RVA: 0x003402C4 File Offset: 0x0033E4C4
+		// Token: 0x170040E2 RID: 16610
+		// (get) Token: 0x0600F45A RID: 62554 RVA: 0x0036B09C File Offset: 0x0036929C
 		public int FunctionType
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E6ED RID: 59117 RVA: 0x00340300 File Offset: 0x0033E500
+		// Token: 0x0600F45B RID: 62555 RVA: 0x0036B0D8 File Offset: 0x003692D8
 		public string FunctionParams(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -118,8 +118,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17003D7F RID: 15743
-		// (get) Token: 0x0600E6EE RID: 59118 RVA: 0x0034033C File Offset: 0x0033E53C
+		// Token: 0x170040E3 RID: 16611
+		// (get) Token: 0x0600F45C RID: 62556 RVA: 0x0036B114 File Offset: 0x00369314
 		public int FunctionParamsLength
 		{
 			get
@@ -133,24 +133,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E6EF RID: 59119 RVA: 0x00340368 File Offset: 0x0033E568
+		// Token: 0x0600F45D RID: 62557 RVA: 0x0036B140 File Offset: 0x00369340
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用FunctionParamsIter()或GetFunctionParamsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] FunctionParams()
+		public string[] FunctionParams()
 		{
 			return this.FunctionParamsIter().ToArray<string>();
 		}
 
-		// Token: 0x0600E6F0 RID: 59120 RVA: 0x00340375 File Offset: 0x0033E575
+		// Token: 0x0600F45E RID: 62558 RVA: 0x0036B14D File Offset: 0x0036934D
 		[NullableContext(1)]
-		public readonly IEnumerable<string> FunctionParamsIter()
+		public IEnumerable<string> FunctionParamsIter()
 		{
 			UniversalActivity.<FunctionParamsIter>d__20 <FunctionParamsIter>d__ = new UniversalActivity.<FunctionParamsIter>d__20(-2);
 			<FunctionParamsIter>d__.<>3__<>4__this = this;
 			return <FunctionParamsIter>d__;
 		}
 
-		// Token: 0x040052D3 RID: 21203
+		// Token: 0x04005916 RID: 22806
 		private Table __p;
 	}
 }

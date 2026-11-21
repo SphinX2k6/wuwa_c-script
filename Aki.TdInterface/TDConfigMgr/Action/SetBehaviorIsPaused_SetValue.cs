@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021A2 RID: 8610
+	// Token: 0x0200240D RID: 9229
 	public class SetBehaviorIsPaused_SetValue
 	{
-		// Token: 0x040070D7 RID: 28887
+		// Token: 0x0400771F RID: 30495
 		public bool IsPaused;
 	}
 }

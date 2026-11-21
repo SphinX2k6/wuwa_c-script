@@ -10,12 +10,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 {
-	// Token: 0x020060CE RID: 24782
+	// Token: 0x0200504C RID: 20556
 	[NullableContext(1)]
 	[Nullable(0)]
 	internal class SolarSpeedRewardPanel : UiPanelBase
 	{
-		// Token: 0x0603EA7C RID: 256636 RVA: 0x00F21D90 File Offset: 0x00F1FF90
+		// Token: 0x06033740 RID: 210752 RVA: 0x00E68B60 File Offset: 0x00E66D60
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603EA7D RID: 256637 RVA: 0x00F21E3C File Offset: 0x00F2003C
+		// Token: 0x06033741 RID: 210753 RVA: 0x00E68C0C File Offset: 0x00E66E0C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SolarSpeedRewardPanel.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -44,13 +44,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603EA7E RID: 256638 RVA: 0x00F21E7F File Offset: 0x00F2007F
+		// Token: 0x06033742 RID: 210754 RVA: 0x00E68C4F File Offset: 0x00E66E4F
 		protected override void OnStart()
 		{
 			this.RefreshByOpenParam();
 		}
 
-		// Token: 0x0603EA7F RID: 256639 RVA: 0x00F21E88 File Offset: 0x00F20088
+		// Token: 0x06033743 RID: 210755 RVA: 0x00E68C58 File Offset: 0x00E66E58
 		public void RefreshByOpenParam()
 		{
 			ISolarSpeedRewardPanelData solarSpeedRewardPanelData = this.OpenParam as ISolarSpeedRewardPanelData;
@@ -58,44 +58,44 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SolarisSpeed
 			this.RewardLayout.RefreshByData(solarSpeedRewardPanelData.RewardDataList, null, false);
 		}
 
-		// Token: 0x0603EA80 RID: 256640 RVA: 0x00F21EC7 File Offset: 0x00F200C7
+		// Token: 0x06033744 RID: 210756 RVA: 0x00E68C97 File Offset: 0x00E66E97
 		public void PlayStart(string animName)
 		{
 			(base.GetVerticalLayout(2).GetOwner().GetComponentByClass(UUIInturnAnimController.StaticClass()) as UUIInturnAnimController).Play(animName, -1, false);
 		}
 
-		// Token: 0x0603EA81 RID: 256641 RVA: 0x00F21EF1 File Offset: 0x00F200F1
+		// Token: 0x06033745 RID: 210757 RVA: 0x00E68CC1 File Offset: 0x00E66EC1
 		private SolarSpeedTabCellPanel BuildSolarSpeedTabCellPanel()
 		{
 			return new SolarSpeedTabCellPanel();
 		}
 
-		// Token: 0x0603EA82 RID: 256642 RVA: 0x00F21EF8 File Offset: 0x00F200F8
+		// Token: 0x06033746 RID: 210758 RVA: 0x00E68CC8 File Offset: 0x00E66EC8
 		private SolarSpeedRewardCellPanel BuildSolarSpeedRewardCellPanel()
 		{
 			return new SolarSpeedRewardCellPanel();
 		}
 
-		// Token: 0x04020C16 RID: 134166
+		// Token: 0x0401B543 RID: 111939
 		private GenericLayout<SolarSpeedTabCellPanel, ISolarSpeedTabCellPanelData> TabLayout;
 
-		// Token: 0x04020C17 RID: 134167
+		// Token: 0x0401B544 RID: 111940
 		private GenericLayout<SolarSpeedRewardCellPanel, ISolarSpeedRewardCellPanelData> RewardLayout;
 
-		// Token: 0x0200C320 RID: 49952
+		// Token: 0x0200AD0B RID: 44299
 		[NullableContext(0)]
 		private class ERewardComponent
 		{
-			// Token: 0x0403AEAF RID: 241327
+			// Token: 0x04035817 RID: 219159
 			public const int TabContentLayout = 0;
 
-			// Token: 0x0403AEB0 RID: 241328
+			// Token: 0x04035818 RID: 219160
 			public const int TabCellItem = 1;
 
-			// Token: 0x0403AEB1 RID: 241329
+			// Token: 0x04035819 RID: 219161
 			public const int RewardContentLayout = 2;
 
-			// Token: 0x0403AEB2 RID: 241330
+			// Token: 0x0403581A RID: 219162
 			public const int RewardCellItem = 3;
 		}
 	}

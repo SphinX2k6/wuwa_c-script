@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000E02 RID: 3586
+// Token: 0x020002B5 RID: 693
 [NullableContext(1)]
 [Nullable(0)]
 public class QueryProductInfoParamWindows
 {
-	// Token: 0x04002784 RID: 10116
+	// Token: 0x04002815 RID: 10261
 	public string goodsIds = "";
 
-	// Token: 0x04002785 RID: 10117
+	// Token: 0x04002816 RID: 10262
 	public string payChannel = "";
 }

@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 {
-	// Token: 0x020068E6 RID: 26854
+	// Token: 0x02005836 RID: 22582
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 	})]
 	public class CoopSpRewardItem : GridProxyAbstract<CoopSpRewardData>
 	{
-		// Token: 0x06042FDF RID: 274399 RVA: 0x01051678 File Offset: 0x0104F878
+		// Token: 0x06037B37 RID: 228151 RVA: 0x00F92CA0 File Offset: 0x00F90EA0
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,14 +34,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			};
 		}
 
-		// Token: 0x06042FE0 RID: 274400 RVA: 0x01051737 File Offset: 0x0104F937
+		// Token: 0x06037B38 RID: 228152 RVA: 0x00F92D5F File Offset: 0x00F90F5F
 		protected override void OnStart()
 		{
 			this.RewardItem = new CommonItemSmallItemGrid();
 			this.RewardItem.Initialize(base.GetItem(2).GetOwner());
 		}
 
-		// Token: 0x06042FE1 RID: 274401 RVA: 0x0105175C File Offset: 0x0104F95C
+		// Token: 0x06037B39 RID: 228153 RVA: 0x00F92D84 File Offset: 0x00F90F84
 		public override void Refresh(CoopSpRewardData data, bool isSelected, int gridIndex)
 		{
 			this.CurrentData = data;
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			this.RefreshRewardState(data.State);
 		}
 
-		// Token: 0x06042FE2 RID: 274402 RVA: 0x010518A8 File Offset: 0x0104FAA8
+		// Token: 0x06037B3A RID: 228154 RVA: 0x00F92ED0 File Offset: 0x00F910D0
 		private void RefreshRewardState(ECoopSpRewardState state)
 		{
 			bool uiactive = state == ECoopSpRewardState.Reward;
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			base.GetItem(5).SetUIActive(state == ECoopSpRewardState.Lock);
 		}
 
-		// Token: 0x06042FE3 RID: 274403 RVA: 0x010518F6 File Offset: 0x0104FAF6
+		// Token: 0x06037B3B RID: 228155 RVA: 0x00F92F1E File Offset: 0x00F9111E
 		private void OnClickRewardBtn()
 		{
 			if (this.CurrentData != null)
@@ -79,16 +79,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Coop
 			}
 		}
 
-		// Token: 0x04022DFD RID: 142845
+		// Token: 0x0401D659 RID: 120409
 		[Nullable(2)]
 		private CoopSpRewardData CurrentData;
 
-		// Token: 0x04022DFE RID: 142846
+		// Token: 0x0401D65A RID: 120410
 		public Action OnRewardBtnClick = delegate()
 		{
 		};
 
-		// Token: 0x04022DFF RID: 142847
+		// Token: 0x0401D65B RID: 120411
 		[Nullable(2)]
 		private CommonItemSmallItemGrid RewardItem;
 	}

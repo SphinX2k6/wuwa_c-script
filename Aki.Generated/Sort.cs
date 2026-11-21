@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020010D6 RID: 4310
+	// Token: 0x0200120C RID: 4620
 	public struct Sort : IFlatbufferObject
 	{
-		// Token: 0x1700378C RID: 14220
-		// (get) Token: 0x0600D730 RID: 55088 RVA: 0x0031C780 File Offset: 0x0031A980
+		// Token: 0x17003AE2 RID: 15074
+		// (get) Token: 0x0600E47B RID: 58491 RVA: 0x00347E90 File Offset: 0x00346090
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D731 RID: 55089 RVA: 0x0031C78D File Offset: 0x0031A98D
+		// Token: 0x0600E47C RID: 58492 RVA: 0x00347E9D File Offset: 0x0034609D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600D732 RID: 55090 RVA: 0x0031C794 File Offset: 0x0031A994
+		// Token: 0x0600E47D RID: 58493 RVA: 0x00347EA4 File Offset: 0x003460A4
 		public static Sort GetRootAsSort(ByteBuffer _bb)
 		{
 			return Sort.GetRootAsSort(_bb, default(Sort));
 		}
 
-		// Token: 0x0600D733 RID: 55091 RVA: 0x0031C7B0 File Offset: 0x0031A9B0
+		// Token: 0x0600E47E RID: 58494 RVA: 0x00347EC0 File Offset: 0x003460C0
 		public static Sort GetRootAsSort(ByteBuffer _bb, Sort obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600D734 RID: 55092 RVA: 0x0031C7CD File Offset: 0x0031A9CD
+		// Token: 0x0600E47F RID: 58495 RVA: 0x00347EDD File Offset: 0x003460DD
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600D735 RID: 55093 RVA: 0x0031C7DC File Offset: 0x0031A9DC
+		// Token: 0x0600E480 RID: 58496 RVA: 0x00347EEC File Offset: 0x003460EC
 		public Sort __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700378D RID: 14221
-		// (get) Token: 0x0600D736 RID: 55094 RVA: 0x0031C7EC File Offset: 0x0031A9EC
+		// Token: 0x17003AE3 RID: 15075
+		// (get) Token: 0x0600E481 RID: 58497 RVA: 0x00347EFC File Offset: 0x003460FC
 		public int Id
 		{
 			get
@@ -64,7 +64,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D737 RID: 55095 RVA: 0x0031C828 File Offset: 0x0031AA28
+		// Token: 0x0600E482 RID: 58498 RVA: 0x00347F38 File Offset: 0x00346138
 		public int FrontSortList(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -75,8 +75,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700378E RID: 14222
-		// (get) Token: 0x0600D738 RID: 55096 RVA: 0x0031C868 File Offset: 0x0031AA68
+		// Token: 0x17003AE4 RID: 15076
+		// (get) Token: 0x0600E483 RID: 58499 RVA: 0x00347F78 File Offset: 0x00346178
 		public int FrontSortListLength
 		{
 			get
@@ -90,19 +90,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D739 RID: 55097 RVA: 0x0031C893 File Offset: 0x0031AA93
+		// Token: 0x0600E484 RID: 58500 RVA: 0x00347FA3 File Offset: 0x003461A3
 		public Span<int> GetFrontSortListBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x0600D73A RID: 55098 RVA: 0x0031C8A2 File Offset: 0x0031AAA2
+		// Token: 0x0600E485 RID: 58501 RVA: 0x00347FB2 File Offset: 0x003461B2
 		public int[] GetFrontSortListArray()
 		{
 			return this.__p.__vector_as_array<int>(6) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600D73B RID: 55099 RVA: 0x0031C8BC File Offset: 0x0031AABC
+		// Token: 0x0600E486 RID: 58502 RVA: 0x00347FCC File Offset: 0x003461CC
 		public int BaseSortList(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -113,8 +113,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700378F RID: 14223
-		// (get) Token: 0x0600D73C RID: 55100 RVA: 0x0031C8FC File Offset: 0x0031AAFC
+		// Token: 0x17003AE5 RID: 15077
+		// (get) Token: 0x0600E487 RID: 58503 RVA: 0x0034800C File Offset: 0x0034620C
 		public int BaseSortListLength
 		{
 			get
@@ -128,19 +128,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D73D RID: 55101 RVA: 0x0031C927 File Offset: 0x0031AB27
+		// Token: 0x0600E488 RID: 58504 RVA: 0x00348037 File Offset: 0x00346237
 		public Span<int> GetBaseSortListBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x0600D73E RID: 55102 RVA: 0x0031C936 File Offset: 0x0031AB36
+		// Token: 0x0600E489 RID: 58505 RVA: 0x00348046 File Offset: 0x00346246
 		public int[] GetBaseSortListArray()
 		{
 			return this.__p.__vector_as_array<int>(8) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600D73F RID: 55103 RVA: 0x0031C950 File Offset: 0x0031AB50
+		// Token: 0x0600E48A RID: 58506 RVA: 0x00348060 File Offset: 0x00346260
 		public int AttributeSortList(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -151,8 +151,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17003790 RID: 14224
-		// (get) Token: 0x0600D740 RID: 55104 RVA: 0x0031C990 File Offset: 0x0031AB90
+		// Token: 0x17003AE6 RID: 15078
+		// (get) Token: 0x0600E48B RID: 58507 RVA: 0x003480A0 File Offset: 0x003462A0
 		public int AttributeSortListLength
 		{
 			get
@@ -166,19 +166,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D741 RID: 55105 RVA: 0x0031C9BC File Offset: 0x0031ABBC
+		// Token: 0x0600E48C RID: 58508 RVA: 0x003480CC File Offset: 0x003462CC
 		public Span<int> GetAttributeSortListBytes()
 		{
 			return this.__p.__vector_as_span<int>(10, 4);
 		}
 
-		// Token: 0x0600D742 RID: 55106 RVA: 0x0031C9CC File Offset: 0x0031ABCC
+		// Token: 0x0600E48D RID: 58509 RVA: 0x003480DC File Offset: 0x003462DC
 		public int[] GetAttributeSortListArray()
 		{
 			return this.__p.__vector_as_array<int>(10) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600D743 RID: 55107 RVA: 0x0031C9E4 File Offset: 0x0031ABE4
+		// Token: 0x0600E48E RID: 58510 RVA: 0x003480F4 File Offset: 0x003462F4
 		public int LastSortList(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -189,8 +189,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17003791 RID: 14225
-		// (get) Token: 0x0600D744 RID: 55108 RVA: 0x0031CA24 File Offset: 0x0031AC24
+		// Token: 0x17003AE7 RID: 15079
+		// (get) Token: 0x0600E48F RID: 58511 RVA: 0x00348134 File Offset: 0x00346334
 		public int LastSortListLength
 		{
 			get
@@ -204,20 +204,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D745 RID: 55109 RVA: 0x0031CA50 File Offset: 0x0031AC50
+		// Token: 0x0600E490 RID: 58512 RVA: 0x00348160 File Offset: 0x00346360
 		public Span<int> GetLastSortListBytes()
 		{
 			return this.__p.__vector_as_span<int>(12, 4);
 		}
 
-		// Token: 0x0600D746 RID: 55110 RVA: 0x0031CA60 File Offset: 0x0031AC60
+		// Token: 0x0600E491 RID: 58513 RVA: 0x00348170 File Offset: 0x00346370
 		public int[] GetLastSortListArray()
 		{
 			return this.__p.__vector_as_array<int>(12) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17003792 RID: 14226
-		// (get) Token: 0x0600D747 RID: 55111 RVA: 0x0031CA78 File Offset: 0x0031AC78
+		// Token: 0x17003AE8 RID: 15080
+		// (get) Token: 0x0600E492 RID: 58514 RVA: 0x00348188 File Offset: 0x00346388
 		public int LimitNum
 		{
 			get
@@ -231,8 +231,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003793 RID: 14227
-		// (get) Token: 0x0600D748 RID: 55112 RVA: 0x0031CAB8 File Offset: 0x0031ACB8
+		// Token: 0x17003AE9 RID: 15081
+		// (get) Token: 0x0600E493 RID: 58515 RVA: 0x003481C8 File Offset: 0x003463C8
 		public int DataId
 		{
 			get
@@ -246,79 +246,71 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D749 RID: 55113 RVA: 0x0031CAF8 File Offset: 0x0031ACF8
+		// Token: 0x0600E494 RID: 58516 RVA: 0x00348205 File Offset: 0x00346405
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用AttributeSortListIter()或GetAttributeSortListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] AttributeSortList()
+		public int[] AttributeSortList()
 		{
-			Sort sort = this;
-			return sort.GetAttributeSortListArray() ?? Array.Empty<int>();
+			return this.GetAttributeSortListArray();
 		}
 
-		// Token: 0x0600D74A RID: 55114 RVA: 0x0031CB1C File Offset: 0x0031AD1C
+		// Token: 0x0600E495 RID: 58517 RVA: 0x0034820D File Offset: 0x0034640D
 		[NullableContext(1)]
-		public readonly IEnumerable<int> AttributeSortListIter()
+		public IEnumerable<int> AttributeSortListIter()
 		{
 			Sort.<AttributeSortListIter>d__35 <AttributeSortListIter>d__ = new Sort.<AttributeSortListIter>d__35(-2);
 			<AttributeSortListIter>d__.<>3__<>4__this = this;
 			return <AttributeSortListIter>d__;
 		}
 
-		// Token: 0x0600D74B RID: 55115 RVA: 0x0031CB34 File Offset: 0x0031AD34
+		// Token: 0x0600E496 RID: 58518 RVA: 0x00348222 File Offset: 0x00346422
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用BaseSortListIter()或GetBaseSortListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] BaseSortList()
+		public int[] BaseSortList()
 		{
-			Sort sort = this;
-			return sort.GetBaseSortListArray() ?? Array.Empty<int>();
+			return this.GetBaseSortListArray();
 		}
 
-		// Token: 0x0600D74C RID: 55116 RVA: 0x0031CB58 File Offset: 0x0031AD58
+		// Token: 0x0600E497 RID: 58519 RVA: 0x0034822A File Offset: 0x0034642A
 		[NullableContext(1)]
-		public readonly IEnumerable<int> BaseSortListIter()
+		public IEnumerable<int> BaseSortListIter()
 		{
 			Sort.<BaseSortListIter>d__37 <BaseSortListIter>d__ = new Sort.<BaseSortListIter>d__37(-2);
 			<BaseSortListIter>d__.<>3__<>4__this = this;
 			return <BaseSortListIter>d__;
 		}
 
-		// Token: 0x0600D74D RID: 55117 RVA: 0x0031CB70 File Offset: 0x0031AD70
+		// Token: 0x0600E498 RID: 58520 RVA: 0x0034823F File Offset: 0x0034643F
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用FrontSortListIter()或GetFrontSortListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] FrontSortList()
+		public int[] FrontSortList()
 		{
-			Sort sort = this;
-			return sort.GetFrontSortListArray() ?? Array.Empty<int>();
+			return this.GetFrontSortListArray();
 		}
 
-		// Token: 0x0600D74E RID: 55118 RVA: 0x0031CB94 File Offset: 0x0031AD94
+		// Token: 0x0600E499 RID: 58521 RVA: 0x00348247 File Offset: 0x00346447
 		[NullableContext(1)]
-		public readonly IEnumerable<int> FrontSortListIter()
+		public IEnumerable<int> FrontSortListIter()
 		{
 			Sort.<FrontSortListIter>d__39 <FrontSortListIter>d__ = new Sort.<FrontSortListIter>d__39(-2);
 			<FrontSortListIter>d__.<>3__<>4__this = this;
 			return <FrontSortListIter>d__;
 		}
 
-		// Token: 0x0600D74F RID: 55119 RVA: 0x0031CBAC File Offset: 0x0031ADAC
+		// Token: 0x0600E49A RID: 58522 RVA: 0x0034825C File Offset: 0x0034645C
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用LastSortListIter()或GetLastSortListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] LastSortList()
+		public int[] LastSortList()
 		{
-			Sort sort = this;
-			return sort.GetLastSortListArray() ?? Array.Empty<int>();
+			return this.GetLastSortListArray();
 		}
 
-		// Token: 0x0600D750 RID: 55120 RVA: 0x0031CBD0 File Offset: 0x0031ADD0
+		// Token: 0x0600E49B RID: 58523 RVA: 0x00348264 File Offset: 0x00346464
 		[NullableContext(1)]
-		public readonly IEnumerable<int> LastSortListIter()
+		public IEnumerable<int> LastSortListIter()
 		{
 			Sort.<LastSortListIter>d__41 <LastSortListIter>d__ = new Sort.<LastSortListIter>d__41(-2);
 			<LastSortListIter>d__.<>3__<>4__this = this;
 			return <LastSortListIter>d__;
 		}
 
-		// Token: 0x04005209 RID: 21001
+		// Token: 0x0400584C RID: 22604
 		private Table __p;
 	}
 }

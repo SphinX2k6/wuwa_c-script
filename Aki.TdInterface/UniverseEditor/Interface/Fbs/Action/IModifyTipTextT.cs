@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006AD7 RID: 27351
+	// Token: 0x0200720E RID: 29198
 	public class IModifyTipTextT
 	{
-		// Token: 0x1700CAEC RID: 51948
-		// (get) Token: 0x0602FF14 RID: 196372 RVA: 0x0068527B File Offset: 0x0068347B
-		// (set) Token: 0x0602FF15 RID: 196373 RVA: 0x00685283 File Offset: 0x00683483
+		// Token: 0x1700D5B7 RID: 54711
+		// (get) Token: 0x06032CE0 RID: 208096 RVA: 0x006DC817 File Offset: 0x006DAA17
+		// (set) Token: 0x06032CE1 RID: 208097 RVA: 0x006DC81F File Offset: 0x006DAA1F
 		public EInteractEffectType Type { get; set; }
 
-		// Token: 0x1700CAED RID: 51949
-		// (get) Token: 0x0602FF16 RID: 196374 RVA: 0x0068528C File Offset: 0x0068348C
-		// (set) Token: 0x0602FF17 RID: 196375 RVA: 0x00685294 File Offset: 0x00683494
+		// Token: 0x1700D5B8 RID: 54712
+		// (get) Token: 0x06032CE2 RID: 208098 RVA: 0x006DC828 File Offset: 0x006DAA28
+		// (set) Token: 0x06032CE3 RID: 208099 RVA: 0x006DC830 File Offset: 0x006DAA30
 		public float DelayTime { get; set; }
 
-		// Token: 0x1700CAEE RID: 51950
-		// (get) Token: 0x0602FF18 RID: 196376 RVA: 0x0068529D File Offset: 0x0068349D
-		// (set) Token: 0x0602FF19 RID: 196377 RVA: 0x006852A5 File Offset: 0x006834A5
+		// Token: 0x1700D5B9 RID: 54713
+		// (get) Token: 0x06032CE4 RID: 208100 RVA: 0x006DC839 File Offset: 0x006DAA39
+		// (set) Token: 0x06032CE5 RID: 208101 RVA: 0x006DC841 File Offset: 0x006DAA41
 		public string TipText { get; set; }
 
-		// Token: 0x1700CAEF RID: 51951
-		// (get) Token: 0x0602FF1A RID: 196378 RVA: 0x006852AE File Offset: 0x006834AE
-		// (set) Token: 0x0602FF1B RID: 196379 RVA: 0x006852B6 File Offset: 0x006834B6
+		// Token: 0x1700D5BA RID: 54714
+		// (get) Token: 0x06032CE6 RID: 208102 RVA: 0x006DC84A File Offset: 0x006DAA4A
+		// (set) Token: 0x06032CE7 RID: 208103 RVA: 0x006DC852 File Offset: 0x006DAA52
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602FF1C RID: 196380 RVA: 0x006852BF File Offset: 0x006834BF
+		// Token: 0x06032CE8 RID: 208104 RVA: 0x006DC85B File Offset: 0x006DAA5B
 		public IModifyTipTextT()
 		{
 			this.Type = EInteractEffectType.ModifyTipText;

@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004FA9 RID: 20393
+	// Token: 0x02005505 RID: 21765
 	public struct IClientHookActionConfig : IFlatbufferObject
 	{
-		// Token: 0x170093AA RID: 37802
-		// (get) Token: 0x06020725 RID: 132901 RVA: 0x00483947 File Offset: 0x00481B47
+		// Token: 0x17009B82 RID: 39810
+		// (get) Token: 0x06022619 RID: 140825 RVA: 0x004BCE2B File Offset: 0x004BB02B
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,38 +18,38 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06020726 RID: 132902 RVA: 0x00483954 File Offset: 0x00481B54
+		// Token: 0x0602261A RID: 140826 RVA: 0x004BCE38 File Offset: 0x004BB038
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06020727 RID: 132903 RVA: 0x0048395C File Offset: 0x00481B5C
+		// Token: 0x0602261B RID: 140827 RVA: 0x004BCE40 File Offset: 0x004BB040
 		public static IClientHookActionConfig GetRootAsIClientHookActionConfig(ByteBuffer _bb)
 		{
 			return IClientHookActionConfig.GetRootAsIClientHookActionConfig(_bb, default(IClientHookActionConfig));
 		}
 
-		// Token: 0x06020728 RID: 132904 RVA: 0x00483978 File Offset: 0x00481B78
+		// Token: 0x0602261C RID: 140828 RVA: 0x004BCE5C File Offset: 0x004BB05C
 		public static IClientHookActionConfig GetRootAsIClientHookActionConfig(ByteBuffer _bb, IClientHookActionConfig obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06020729 RID: 132905 RVA: 0x00483995 File Offset: 0x00481B95
+		// Token: 0x0602261D RID: 140829 RVA: 0x004BCE79 File Offset: 0x004BB079
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602072A RID: 132906 RVA: 0x004839A4 File Offset: 0x00481BA4
+		// Token: 0x0602261E RID: 140830 RVA: 0x004BCE88 File Offset: 0x004BB088
 		public IClientHookActionConfig __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x0602072B RID: 132907 RVA: 0x004839B4 File Offset: 0x00481BB4
+		// Token: 0x0602261F RID: 140831 RVA: 0x004BCE98 File Offset: 0x004BB098
 		public IActionInfo? HookActions(int j)
 		{
 			int num = this.__p.__offset(4);
@@ -60,8 +60,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IActionInfo?(default(IActionInfo).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x170093AB RID: 37803
-		// (get) Token: 0x0602072C RID: 132908 RVA: 0x00483A14 File Offset: 0x00481C14
+		// Token: 0x17009B83 RID: 39811
+		// (get) Token: 0x06022620 RID: 140832 RVA: 0x004BCEF8 File Offset: 0x004BB0F8
 		public int HookActionsLength
 		{
 			get
@@ -75,7 +75,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602072D RID: 132909 RVA: 0x00483A40 File Offset: 0x00481C40
+		// Token: 0x06022621 RID: 140833 RVA: 0x004BCF24 File Offset: 0x004BB124
 		public IActionInfo? ExitHookActions(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -86,8 +86,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IActionInfo?(default(IActionInfo).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x170093AC RID: 37804
-		// (get) Token: 0x0602072E RID: 132910 RVA: 0x00483AA0 File Offset: 0x00481CA0
+		// Token: 0x17009B84 RID: 39812
+		// (get) Token: 0x06022622 RID: 140834 RVA: 0x004BCF84 File Offset: 0x004BB184
 		public int ExitHookActionsLength
 		{
 			get
@@ -101,7 +101,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602072F RID: 132911 RVA: 0x00483ACC File Offset: 0x00481CCC
+		// Token: 0x06022623 RID: 140835 RVA: 0x004BCFB0 File Offset: 0x004BB1B0
 		public IActionInfo? FinishActions(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -112,8 +112,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IActionInfo?(default(IActionInfo).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x170093AD RID: 37805
-		// (get) Token: 0x06020730 RID: 132912 RVA: 0x00483B2C File Offset: 0x00481D2C
+		// Token: 0x17009B85 RID: 39813
+		// (get) Token: 0x06022624 RID: 140836 RVA: 0x004BD010 File Offset: 0x004BB210
 		public int FinishActionsLength
 		{
 			get
@@ -127,8 +127,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x170093AE RID: 37806
-		// (get) Token: 0x06020731 RID: 132913 RVA: 0x00483B58 File Offset: 0x00481D58
+		// Token: 0x17009B86 RID: 39814
+		// (get) Token: 0x06022625 RID: 140837 RVA: 0x004BD03C File Offset: 0x004BB23C
 		public byte NullMask
 		{
 			get
@@ -142,7 +142,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06020732 RID: 132914 RVA: 0x00483B95 File Offset: 0x00481D95
+		// Token: 0x06022626 RID: 140838 RVA: 0x004BD079 File Offset: 0x004BB279
 		public static Offset<IClientHookActionConfig> CreateIClientHookActionConfig(FlatBufferBuilder builder, VectorOffset HookActionsOffset = default(VectorOffset), VectorOffset ExitHookActionsOffset = default(VectorOffset), VectorOffset FinishActionsOffset = default(VectorOffset), byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -153,19 +153,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IClientHookActionConfig.EndIClientHookActionConfig(builder);
 		}
 
-		// Token: 0x06020733 RID: 132915 RVA: 0x00483BC1 File Offset: 0x00481DC1
+		// Token: 0x06022627 RID: 140839 RVA: 0x004BD0A5 File Offset: 0x004BB2A5
 		public static void StartIClientHookActionConfig(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06020734 RID: 132916 RVA: 0x00483BCA File Offset: 0x00481DCA
+		// Token: 0x06022628 RID: 140840 RVA: 0x004BD0AE File Offset: 0x004BB2AE
 		public static void AddHookActions(FlatBufferBuilder builder, VectorOffset hookActionsOffset)
 		{
 			builder.AddOffset(0, hookActionsOffset.Value, 0);
 		}
 
-		// Token: 0x06020735 RID: 132917 RVA: 0x00483BDC File Offset: 0x00481DDC
+		// Token: 0x06022629 RID: 140841 RVA: 0x004BD0C0 File Offset: 0x004BB2C0
 		public static VectorOffset CreateHookActionsVector(FlatBufferBuilder builder, Offset<IActionInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -176,7 +176,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06020736 RID: 132918 RVA: 0x00483C1C File Offset: 0x00481E1C
+		// Token: 0x0602262A RID: 140842 RVA: 0x004BD100 File Offset: 0x004BB300
 		public static VectorOffset CreateHookActionsVectorBlock(FlatBufferBuilder builder, Offset<IActionInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -184,7 +184,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06020737 RID: 132919 RVA: 0x00483C36 File Offset: 0x00481E36
+		// Token: 0x0602262B RID: 140843 RVA: 0x004BD11A File Offset: 0x004BB31A
 		public static VectorOffset CreateHookActionsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IActionInfo>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -192,7 +192,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06020738 RID: 132920 RVA: 0x00483C54 File Offset: 0x00481E54
+		// Token: 0x0602262C RID: 140844 RVA: 0x004BD138 File Offset: 0x004BB338
 		public static VectorOffset CreateHookActionsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -200,19 +200,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06020739 RID: 132921 RVA: 0x00483C6D File Offset: 0x00481E6D
+		// Token: 0x0602262D RID: 140845 RVA: 0x004BD151 File Offset: 0x004BB351
 		public static void StartHookActionsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0602073A RID: 132922 RVA: 0x00483C78 File Offset: 0x00481E78
+		// Token: 0x0602262E RID: 140846 RVA: 0x004BD15C File Offset: 0x004BB35C
 		public static void AddExitHookActions(FlatBufferBuilder builder, VectorOffset exitHookActionsOffset)
 		{
 			builder.AddOffset(1, exitHookActionsOffset.Value, 0);
 		}
 
-		// Token: 0x0602073B RID: 132923 RVA: 0x00483C88 File Offset: 0x00481E88
+		// Token: 0x0602262F RID: 140847 RVA: 0x004BD16C File Offset: 0x004BB36C
 		public static VectorOffset CreateExitHookActionsVector(FlatBufferBuilder builder, Offset<IActionInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -223,7 +223,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602073C RID: 132924 RVA: 0x00483CC8 File Offset: 0x00481EC8
+		// Token: 0x06022630 RID: 140848 RVA: 0x004BD1AC File Offset: 0x004BB3AC
 		public static VectorOffset CreateExitHookActionsVectorBlock(FlatBufferBuilder builder, Offset<IActionInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -231,7 +231,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602073D RID: 132925 RVA: 0x00483CE2 File Offset: 0x00481EE2
+		// Token: 0x06022631 RID: 140849 RVA: 0x004BD1C6 File Offset: 0x004BB3C6
 		public static VectorOffset CreateExitHookActionsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IActionInfo>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -239,7 +239,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602073E RID: 132926 RVA: 0x00483D00 File Offset: 0x00481F00
+		// Token: 0x06022632 RID: 140850 RVA: 0x004BD1E4 File Offset: 0x004BB3E4
 		public static VectorOffset CreateExitHookActionsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -247,19 +247,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602073F RID: 132927 RVA: 0x00483D19 File Offset: 0x00481F19
+		// Token: 0x06022633 RID: 140851 RVA: 0x004BD1FD File Offset: 0x004BB3FD
 		public static void StartExitHookActionsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06020740 RID: 132928 RVA: 0x00483D24 File Offset: 0x00481F24
+		// Token: 0x06022634 RID: 140852 RVA: 0x004BD208 File Offset: 0x004BB408
 		public static void AddFinishActions(FlatBufferBuilder builder, VectorOffset finishActionsOffset)
 		{
 			builder.AddOffset(2, finishActionsOffset.Value, 0);
 		}
 
-		// Token: 0x06020741 RID: 132929 RVA: 0x00483D34 File Offset: 0x00481F34
+		// Token: 0x06022635 RID: 140853 RVA: 0x004BD218 File Offset: 0x004BB418
 		public static VectorOffset CreateFinishActionsVector(FlatBufferBuilder builder, Offset<IActionInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -270,7 +270,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06020742 RID: 132930 RVA: 0x00483D74 File Offset: 0x00481F74
+		// Token: 0x06022636 RID: 140854 RVA: 0x004BD258 File Offset: 0x004BB458
 		public static VectorOffset CreateFinishActionsVectorBlock(FlatBufferBuilder builder, Offset<IActionInfo>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -278,7 +278,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06020743 RID: 132931 RVA: 0x00483D8E File Offset: 0x00481F8E
+		// Token: 0x06022637 RID: 140855 RVA: 0x004BD272 File Offset: 0x004BB472
 		public static VectorOffset CreateFinishActionsVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IActionInfo>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -286,7 +286,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06020744 RID: 132932 RVA: 0x00483DAC File Offset: 0x00481FAC
+		// Token: 0x06022638 RID: 140856 RVA: 0x004BD290 File Offset: 0x004BB490
 		public static VectorOffset CreateFinishActionsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -294,25 +294,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06020745 RID: 132933 RVA: 0x00483DC5 File Offset: 0x00481FC5
+		// Token: 0x06022639 RID: 140857 RVA: 0x004BD2A9 File Offset: 0x004BB4A9
 		public static void StartFinishActionsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06020746 RID: 132934 RVA: 0x00483DD0 File Offset: 0x00481FD0
+		// Token: 0x0602263A RID: 140858 RVA: 0x004BD2B4 File Offset: 0x004BB4B4
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x06020747 RID: 132935 RVA: 0x00483DDB File Offset: 0x00481FDB
+		// Token: 0x0602263B RID: 140859 RVA: 0x004BD2BF File Offset: 0x004BB4BF
 		public static Offset<IClientHookActionConfig> EndIClientHookActionConfig(FlatBufferBuilder builder)
 		{
 			return new Offset<IClientHookActionConfig>(builder.EndTable());
 		}
 
-		// Token: 0x06020748 RID: 132936 RVA: 0x00483DE8 File Offset: 0x00481FE8
+		// Token: 0x0602263C RID: 140860 RVA: 0x004BD2CC File Offset: 0x004BB4CC
 		public IClientHookActionConfigT UnPack()
 		{
 			IClientHookActionConfigT clientHookActionConfigT = new IClientHookActionConfigT();
@@ -320,7 +320,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return clientHookActionConfigT;
 		}
 
-		// Token: 0x06020749 RID: 132937 RVA: 0x00483E04 File Offset: 0x00482004
+		// Token: 0x0602263D RID: 140861 RVA: 0x004BD2E8 File Offset: 0x004BB4E8
 		public void UnPackTo(IClientHookActionConfigT _o)
 		{
 			_o.HookActions = new List<IActionInfoT>();
@@ -341,7 +341,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602074A RID: 132938 RVA: 0x00483F1C File Offset: 0x0048211C
+		// Token: 0x0602263E RID: 140862 RVA: 0x004BD400 File Offset: 0x004BB600
 		public static Offset<IClientHookActionConfig> Pack(FlatBufferBuilder builder, IClientHookActionConfigT _o)
 		{
 			if (_o == null)
@@ -381,7 +381,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IClientHookActionConfig.CreateIClientHookActionConfig(builder, hookActionsOffset, exitHookActionsOffset, finishActionsOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400DE7D RID: 56957
+		// Token: 0x0400EA6B RID: 60011
 		private Table __p;
 	}
 }

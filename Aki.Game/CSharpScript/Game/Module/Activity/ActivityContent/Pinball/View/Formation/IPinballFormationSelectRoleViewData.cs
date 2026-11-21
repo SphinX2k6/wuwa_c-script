@@ -4,28 +4,28 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Formation
 {
-	// Token: 0x02006362 RID: 25442
+	// Token: 0x020052E0 RID: 21216
 	[NullableContext(1)]
 	public interface IPinballFormationSelectRoleViewData
 	{
-		// Token: 0x1700932E RID: 37678
-		// (get) Token: 0x06040025 RID: 262181
-		// (set) Token: 0x06040026 RID: 262182
+		// Token: 0x17006690 RID: 26256
+		// (get) Token: 0x06034CE6 RID: 216294
+		// (set) Token: 0x06034CE7 RID: 216295
 		List<int> RoleList { get; set; }
 
-		// Token: 0x1700932F RID: 37679
-		// (get) Token: 0x06040027 RID: 262183
-		// (set) Token: 0x06040028 RID: 262184
+		// Token: 0x17006691 RID: 26257
+		// (get) Token: 0x06034CE8 RID: 216296
+		// (set) Token: 0x06034CE9 RID: 216297
 		List<int> RecommendRoleList { get; set; }
 
-		// Token: 0x17009330 RID: 37680
-		// (get) Token: 0x06040029 RID: 262185
-		// (set) Token: 0x0604002A RID: 262186
+		// Token: 0x17006692 RID: 26258
+		// (get) Token: 0x06034CEA RID: 216298
+		// (set) Token: 0x06034CEB RID: 216299
 		Action<List<int>> OnConfirm { get; set; }
 
-		// Token: 0x17009331 RID: 37681
-		// (get) Token: 0x0604002B RID: 262187
-		// (set) Token: 0x0604002C RID: 262188
+		// Token: 0x17006693 RID: 26259
+		// (get) Token: 0x06034CEC RID: 216300
+		// (set) Token: 0x06034CED RID: 216301
 		int? OpenRole { get; set; }
 	}
 }

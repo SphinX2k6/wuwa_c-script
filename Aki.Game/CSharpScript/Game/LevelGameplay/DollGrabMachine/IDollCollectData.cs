@@ -2,27 +2,27 @@
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine
 {
-	// Token: 0x02006EC6 RID: 28358
+	// Token: 0x02006046 RID: 24646
 	public interface IDollCollectData
 	{
-		// Token: 0x17009AB8 RID: 39608
-		// (get) Token: 0x060450D3 RID: 282835
-		// (set) Token: 0x060450D4 RID: 282836
+		// Token: 0x17006FEF RID: 28655
+		// (get) Token: 0x0603B274 RID: 242292
+		// (set) Token: 0x0603B275 RID: 242293
 		int CurrentCollectCount { get; set; }
 
-		// Token: 0x17009AB9 RID: 39609
-		// (get) Token: 0x060450D5 RID: 282837
-		// (set) Token: 0x060450D6 RID: 282838
+		// Token: 0x17006FF0 RID: 28656
+		// (get) Token: 0x0603B276 RID: 242294
+		// (set) Token: 0x0603B277 RID: 242295
 		int TotalCollectCount { get; set; }
 
-		// Token: 0x17009ABA RID: 39610
-		// (get) Token: 0x060450D7 RID: 282839
-		// (set) Token: 0x060450D8 RID: 282840
+		// Token: 0x17006FF1 RID: 28657
+		// (get) Token: 0x0603B278 RID: 242296
+		// (set) Token: 0x0603B279 RID: 242297
 		int CurrentCollectItemCount { get; set; }
 
-		// Token: 0x17009ABB RID: 39611
-		// (get) Token: 0x060450D9 RID: 282841
-		// (set) Token: 0x060450DA RID: 282842
+		// Token: 0x17006FF2 RID: 28658
+		// (get) Token: 0x0603B27A RID: 242298
+		// (set) Token: 0x0603B27B RID: 242299
 		int TotalCollectItemCount { get; set; }
 	}
 }

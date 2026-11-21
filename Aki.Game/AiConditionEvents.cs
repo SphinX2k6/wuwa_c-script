@@ -10,13 +10,13 @@ using UnrealEngine;
 [Nullable(0)]
 public class AiConditionEvents
 {
-	// Token: 0x06000CF3 RID: 3315 RVA: 0x00045784 File Offset: 0x00043984
+	// Token: 0x06000CF9 RID: 3321 RVA: 0x00046320 File Offset: 0x00044520
 	public AiConditionEvents(AiController aiController)
 	{
 		this.AiController = aiController;
 	}
 
-	// Token: 0x06000CF4 RID: 3316 RVA: 0x000457AC File Offset: 0x000439AC
+	// Token: 0x06000CFA RID: 3322 RVA: 0x00046348 File Offset: 0x00044548
 	private void OnSceneItemDestroy(Entity entity)
 	{
 		BaseActorComponent component = entity.GetComponent<BaseActorComponent>();
@@ -36,7 +36,7 @@ public class AiConditionEvents
 		}
 	}
 
-	// Token: 0x06000CF5 RID: 3317 RVA: 0x00045858 File Offset: 0x00043A58
+	// Token: 0x06000CFB RID: 3323 RVA: 0x000463F4 File Offset: 0x000445F4
 	public void AddConditionEvent(SAiConditions conditions, UKuroBooleanEventBinder eventBinder)
 	{
 		ConditionEventPair conditionEventPair = new ConditionEventPair();
@@ -44,7 +44,7 @@ public class AiConditionEvents
 		this.ConditionEventPairs.Add(conditionEventPair);
 	}
 
-	// Token: 0x06000CF6 RID: 3318 RVA: 0x0004588C File Offset: 0x00043A8C
+	// Token: 0x06000CFC RID: 3324 RVA: 0x00046428 File Offset: 0x00044628
 	public bool RemoveConditionEvent(UKuroBooleanEventBinder eventBinder)
 	{
 		int num = 0;
@@ -65,7 +65,7 @@ public class AiConditionEvents
 		return false;
 	}
 
-	// Token: 0x06000CF7 RID: 3319 RVA: 0x0004591C File Offset: 0x00043B1C
+	// Token: 0x06000CFD RID: 3325 RVA: 0x000464B8 File Offset: 0x000446B8
 	public void AddSceneItemDestroyEvent(double distance, UKuroActorEventBinder eventBinder)
 	{
 		if (this.DestroyEvents.Count == 0)
@@ -75,7 +75,7 @@ public class AiConditionEvents
 		this.DestroyEvents[eventBinder] = distance * distance;
 	}
 
-	// Token: 0x06000CF8 RID: 3320 RVA: 0x00045956 File Offset: 0x00043B56
+	// Token: 0x06000CFE RID: 3326 RVA: 0x000464F2 File Offset: 0x000446F2
 	public void RemoveSceneItemDestroyEvent(UKuroActorEventBinder eventBinder)
 	{
 		if (this.DestroyEvents.Remove(eventBinder) && this.DestroyEvents.Count == 0)
@@ -84,7 +84,7 @@ public class AiConditionEvents
 		}
 	}
 
-	// Token: 0x06000CF9 RID: 3321 RVA: 0x00045990 File Offset: 0x00043B90
+	// Token: 0x06000CFF RID: 3327 RVA: 0x0004652C File Offset: 0x0004472C
 	public void Clear()
 	{
 		foreach (ConditionEventPair conditionEventPair in this.ConditionEventPairs)
@@ -99,7 +99,7 @@ public class AiConditionEvents
 		this.DestroyEvents.Clear();
 	}
 
-	// Token: 0x06000CFA RID: 3322 RVA: 0x00045A20 File Offset: 0x00043C20
+	// Token: 0x06000D00 RID: 3328 RVA: 0x000465BC File Offset: 0x000447BC
 	public void ResetAllConditionEvent()
 	{
 		foreach (ConditionEventPair conditionEventPair in this.ConditionEventPairs)
@@ -108,12 +108,12 @@ public class AiConditionEvents
 		}
 	}
 
-	// Token: 0x04000A55 RID: 2645
+	// Token: 0x04000A5D RID: 2653
 	private readonly List<ConditionEventPair> ConditionEventPairs = new List<ConditionEventPair>();
 
-	// Token: 0x04000A56 RID: 2646
+	// Token: 0x04000A5E RID: 2654
 	private readonly Dictionary<UKuroActorEventBinder, double> DestroyEvents = new Dictionary<UKuroActorEventBinder, double>();
 
-	// Token: 0x04000A57 RID: 2647
+	// Token: 0x04000A5F RID: 2655
 	private readonly AiController AiController;
 }

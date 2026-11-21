@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007563 RID: 30051
+	// Token: 0x02007D59 RID: 32089
 	public class IVisualNovelBackgroundLoadT
 	{
-		// Token: 0x1700E3F1 RID: 58353
-		// (get) Token: 0x06036ABC RID: 223932 RVA: 0x0076CBE0 File Offset: 0x0076ADE0
-		// (set) Token: 0x06036ABD RID: 223933 RVA: 0x0076CBE8 File Offset: 0x0076ADE8
+		// Token: 0x1700F01B RID: 61467
+		// (get) Token: 0x06039ED2 RID: 237266 RVA: 0x007CFE88 File Offset: 0x007CE088
+		// (set) Token: 0x06039ED3 RID: 237267 RVA: 0x007CFE90 File Offset: 0x007CE090
 		public EVisualNovelBackgroundType Type { get; set; }
 
-		// Token: 0x1700E3F2 RID: 58354
-		// (get) Token: 0x06036ABE RID: 223934 RVA: 0x0076CBF1 File Offset: 0x0076ADF1
-		// (set) Token: 0x06036ABF RID: 223935 RVA: 0x0076CBF9 File Offset: 0x0076ADF9
+		// Token: 0x1700F01C RID: 61468
+		// (get) Token: 0x06039ED4 RID: 237268 RVA: 0x007CFE99 File Offset: 0x007CE099
+		// (set) Token: 0x06039ED5 RID: 237269 RVA: 0x007CFEA1 File Offset: 0x007CE0A1
 		public int BackgroundId { get; set; }
 
-		// Token: 0x06036AC0 RID: 223936 RVA: 0x0076CC02 File Offset: 0x0076AE02
+		// Token: 0x06039ED6 RID: 237270 RVA: 0x007CFEAA File Offset: 0x007CE0AA
 		public IVisualNovelBackgroundLoadT()
 		{
 			this.Type = EVisualNovelBackgroundType.Load;

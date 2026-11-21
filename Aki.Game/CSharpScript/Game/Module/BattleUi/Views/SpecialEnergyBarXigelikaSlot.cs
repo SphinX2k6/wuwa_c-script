@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E0A RID: 24074
+	// Token: 0x02004DEF RID: 19951
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SpecialEnergyBarXigelikaSlot : SpecialEnergyBarSlot
 	{
-		// Token: 0x0603D372 RID: 250738 RVA: 0x00EBF408 File Offset: 0x00EBD608
+		// Token: 0x06032301 RID: 205569 RVA: 0x00E10968 File Offset: 0x00E0EB68
 		public void SwitchKeyItem(SpecialEnergyBarInfo cfg)
 		{
 			if (cfg != null)
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D373 RID: 250739 RVA: 0x00EBF470 File Offset: 0x00EBD670
+		// Token: 0x06032302 RID: 205570 RVA: 0x00E109D0 File Offset: 0x00E0EBD0
 		public void SetSegmentVisible(int i, bool visible)
 		{
 			if (0 <= i && i < this.SegmentVisibles.Length && this.SegmentVisibles[i] != visible)
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401FEAA RID: 130730
+		// Token: 0x0401A971 RID: 108913
 		private readonly bool[] SegmentVisibles = new bool[]
 		{
 			true,

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200082B RID: 2091
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020008CE RID: 2254
 	public class LevitateMagnetComponent : IComponentBase
 	{
-		// Token: 0x06002D87 RID: 11655 RVA: 0x00075F24 File Offset: 0x00074124
+		// Token: 0x060030B7 RID: 12471 RVA: 0x0007D288 File Offset: 0x0007B488
 		private LevitateMagnetComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002D88 RID: 11656 RVA: 0x00075F5C File Offset: 0x0007415C
+		// Token: 0x060030B8 RID: 12472 RVA: 0x0007D2C0 File Offset: 0x0007B4C0
 		public static LevitateMagnetComponent Create([Nullable(2)] LevitateMagnetComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002D89 RID: 11657 RVA: 0x00075F6F File Offset: 0x0007416F
+		// Token: 0x060030B9 RID: 12473 RVA: 0x0007D2D3 File Offset: 0x0007B4D3
 		public static LevitateMagnetComponent CreateFromSetValue([Nullable(2)] LevitateMagnetComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002D8A RID: 11658 RVA: 0x00075F82 File Offset: 0x00074182
+		// Token: 0x060030BA RID: 12474 RVA: 0x0007D2E6 File Offset: 0x0007B4E6
 		public new LevitateMagnetComponent_SetValue ToSetValue()
 		{
 			return new LevitateMagnetComponent_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000BE6 RID: 3046
-		// (get) Token: 0x06002D8B RID: 11659 RVA: 0x00075FBC File Offset: 0x000741BC
-		// (set) Token: 0x06002D8C RID: 11660 RVA: 0x00075FF6 File Offset: 0x000741F6
+		// Token: 0x17000CA9 RID: 3241
+		// (get) Token: 0x060030BB RID: 12475 RVA: 0x0007D320 File Offset: 0x0007B520
+		// (set) Token: 0x060030BC RID: 12476 RVA: 0x0007D35A File Offset: 0x0007B55A
 		public override bool? Disabled
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000BE7 RID: 3047
-		// (get) Token: 0x06002D8D RID: 11661 RVA: 0x00076004 File Offset: 0x00074204
-		// (set) Token: 0x06002D8E RID: 11662 RVA: 0x0007602E File Offset: 0x0007422E
+		// Token: 0x17000CAA RID: 3242
+		// (get) Token: 0x060030BD RID: 12477 RVA: 0x0007D368 File Offset: 0x0007B568
+		// (set) Token: 0x060030BE RID: 12478 RVA: 0x0007D392 File Offset: 0x0007B592
 		public override bool? EdIsLocked
 		{
 			get
@@ -105,9 +103,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000BE8 RID: 3048
-		// (get) Token: 0x06002D8F RID: 11663 RVA: 0x0007603C File Offset: 0x0007423C
-		// (set) Token: 0x06002D90 RID: 11664 RVA: 0x00076067 File Offset: 0x00074267
+		// Token: 0x17000CAB RID: 3243
+		// (get) Token: 0x060030BF RID: 12479 RVA: 0x0007D3A0 File Offset: 0x0007B5A0
+		// (set) Token: 0x060030C0 RID: 12480 RVA: 0x0007D3CB File Offset: 0x0007B5CB
 		public virtual int MoveSpeed
 		{
 			get
@@ -128,9 +126,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000BE9 RID: 3049
-		// (get) Token: 0x06002D91 RID: 11665 RVA: 0x00076078 File Offset: 0x00074278
-		// (set) Token: 0x06002D92 RID: 11666 RVA: 0x000760B2 File Offset: 0x000742B2
+		// Token: 0x17000CAC RID: 3244
+		// (get) Token: 0x060030C1 RID: 12481 RVA: 0x0007D3DC File Offset: 0x0007B5DC
+		// (set) Token: 0x060030C2 RID: 12482 RVA: 0x0007D416 File Offset: 0x0007B616
 		public virtual int? Test
 		{
 			get
@@ -152,11 +150,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001E22 RID: 7714
+		// Token: 0x0400202E RID: 8238
 		[Nullable(2)]
 		protected new LevitateMagnetComponent FbInstance;
 
-		// Token: 0x04001E23 RID: 7715
+		// Token: 0x0400202F RID: 8239
 		[Nullable(2)]
 		protected new LevitateMagnetComponent_SetValue PocoInterface;
 	}

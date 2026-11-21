@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021DE RID: 8670
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002449 RID: 9289
 	public class SetSubScreenMode : ActionParams
 	{
-		// Token: 0x0600BE7F RID: 48767 RVA: 0x001B68DC File Offset: 0x001B4ADC
+		// Token: 0x0600CA3B RID: 51771 RVA: 0x001CDF68 File Offset: 0x001CC168
 		private SetSubScreenMode_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BE80 RID: 48768 RVA: 0x001B6914 File Offset: 0x001B4B14
+		// Token: 0x0600CA3C RID: 51772 RVA: 0x001CDFA0 File Offset: 0x001CC1A0
 		public static SetSubScreenMode Create([Nullable(2)] SetSubScreenMode instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BE81 RID: 48769 RVA: 0x001B6927 File Offset: 0x001B4B27
+		// Token: 0x0600CA3D RID: 51773 RVA: 0x001CDFB3 File Offset: 0x001CC1B3
 		public static SetSubScreenMode CreateFromSetValue([Nullable(2)] SetSubScreenMode_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BE82 RID: 48770 RVA: 0x001B693A File Offset: 0x001B4B3A
+		// Token: 0x0600CA3E RID: 51774 RVA: 0x001CDFC6 File Offset: 0x001CC1C6
 		public SetSubScreenMode_SetValue ToSetValue()
 		{
 			return new SetSubScreenMode_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170039D4 RID: 14804
-		// (get) Token: 0x0600BE83 RID: 48771 RVA: 0x001B694D File Offset: 0x001B4B4D
-		// (set) Token: 0x0600BE84 RID: 48772 RVA: 0x001B6974 File Offset: 0x001B4B74
+		// Token: 0x17003CC9 RID: 15561
+		// (get) Token: 0x0600CA3F RID: 51775 RVA: 0x001CDFD9 File Offset: 0x001CC1D9
+		// (set) Token: 0x0600CA40 RID: 51776 RVA: 0x001CE000 File Offset: 0x001CC200
 		public virtual ISubScreenModeConfig Config
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040071AE RID: 29102
+		// Token: 0x040077F7 RID: 30711
 		[Nullable(2)]
 		protected new SetSubScreenMode FbInstance;
 
-		// Token: 0x040071AF RID: 29103
+		// Token: 0x040077F8 RID: 30712
 		[Nullable(2)]
 		protected SetSubScreenMode_SetValue PocoInterface;
 	}

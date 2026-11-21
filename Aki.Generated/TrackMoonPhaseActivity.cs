@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200114B RID: 4427
+	// Token: 0x02001281 RID: 4737
 	public struct TrackMoonPhaseActivity : IFlatbufferObject
 	{
-		// Token: 0x17003B3D RID: 15165
-		// (get) Token: 0x0600E100 RID: 57600 RVA: 0x00332D09 File Offset: 0x00330F09
+		// Token: 0x17003EA1 RID: 16033
+		// (get) Token: 0x0600EE6E RID: 61038 RVA: 0x0035E0F5 File Offset: 0x0035C2F5
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600E101 RID: 57601 RVA: 0x00332D16 File Offset: 0x00330F16
+		// Token: 0x0600EE6F RID: 61039 RVA: 0x0035E102 File Offset: 0x0035C302
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600E102 RID: 57602 RVA: 0x00332D20 File Offset: 0x00330F20
+		// Token: 0x0600EE70 RID: 61040 RVA: 0x0035E10C File Offset: 0x0035C30C
 		public static TrackMoonPhaseActivity GetRootAsTrackMoonPhaseActivity(ByteBuffer _bb)
 		{
 			return TrackMoonPhaseActivity.GetRootAsTrackMoonPhaseActivity(_bb, default(TrackMoonPhaseActivity));
 		}
 
-		// Token: 0x0600E103 RID: 57603 RVA: 0x00332D3C File Offset: 0x00330F3C
+		// Token: 0x0600EE71 RID: 61041 RVA: 0x0035E128 File Offset: 0x0035C328
 		public static TrackMoonPhaseActivity GetRootAsTrackMoonPhaseActivity(ByteBuffer _bb, TrackMoonPhaseActivity obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600E104 RID: 57604 RVA: 0x00332D59 File Offset: 0x00330F59
+		// Token: 0x0600EE72 RID: 61042 RVA: 0x0035E145 File Offset: 0x0035C345
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600E105 RID: 57605 RVA: 0x00332D68 File Offset: 0x00330F68
+		// Token: 0x0600EE73 RID: 61043 RVA: 0x0035E154 File Offset: 0x0035C354
 		public TrackMoonPhaseActivity __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003B3E RID: 15166
-		// (get) Token: 0x0600E106 RID: 57606 RVA: 0x00332D78 File Offset: 0x00330F78
+		// Token: 0x17003EA2 RID: 16034
+		// (get) Token: 0x0600EE74 RID: 61044 RVA: 0x0035E164 File Offset: 0x0035C364
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003B3F RID: 15167
-		// (get) Token: 0x0600E107 RID: 57607 RVA: 0x00332DB4 File Offset: 0x00330FB4
+		// Token: 0x17003EA3 RID: 16035
+		// (get) Token: 0x0600EE75 RID: 61045 RVA: 0x0035E1A0 File Offset: 0x0035C3A0
 		public int RoleTrialId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003B40 RID: 15168
-		// (get) Token: 0x0600E108 RID: 57608 RVA: 0x00332DF0 File Offset: 0x00330FF0
+		// Token: 0x17003EA4 RID: 16036
+		// (get) Token: 0x0600EE76 RID: 61046 RVA: 0x0035E1DC File Offset: 0x0035C3DC
 		public int DropId
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003B41 RID: 15169
-		// (get) Token: 0x0600E109 RID: 57609 RVA: 0x00332E2C File Offset: 0x0033102C
+		// Token: 0x17003EA5 RID: 16037
+		// (get) Token: 0x0600EE77 RID: 61047 RVA: 0x0035E218 File Offset: 0x0035C418
 		public int PopularityNeed
 		{
 			get
@@ -107,7 +107,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04005290 RID: 21136
+		// Token: 0x040058D3 RID: 22739
 		private Table __p;
 	}
 }

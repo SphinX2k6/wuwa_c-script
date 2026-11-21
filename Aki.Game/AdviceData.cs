@@ -5,12 +5,12 @@ using System.Text;
 using Aki.Protocol;
 using CSharpScript.Game.Module.Advice;
 
-// Token: 0x020016BE RID: 5822
+// Token: 0x02000B76 RID: 2934
 [NullableContext(1)]
 [Nullable(0)]
 public class AdviceData
 {
-	// Token: 0x0600A656 RID: 42582 RVA: 0x00253860 File Offset: 0x00251A60
+	// Token: 0x06007A36 RID: 31286 RVA: 0x0025DC70 File Offset: 0x0025BE70
 	public void Phrase(PbAdvice data)
 	{
 		this.AdviceId = new long?(MathUtils.Instance.LongToBigInt(data.Id));
@@ -26,7 +26,7 @@ public class AdviceData
 		this.PhraseContentInfo(this.AdviceContentData);
 	}
 
-	// Token: 0x0600A657 RID: 42583 RVA: 0x0025390C File Offset: 0x00251B0C
+	// Token: 0x06007A37 RID: 31287 RVA: 0x0025DD1C File Offset: 0x0025BF1C
 	public void PhraseData(object adviceContent)
 	{
 		this.AdviceContentData = new List<AdviceContentData>();
@@ -59,13 +59,13 @@ public class AdviceData
 		this.PhraseContentInfo(this.AdviceContentData);
 	}
 
-	// Token: 0x0600A658 RID: 42584 RVA: 0x002539F0 File Offset: 0x00251BF0
+	// Token: 0x06007A38 RID: 31288 RVA: 0x0025DE00 File Offset: 0x0025C000
 	public void PhraseUpDownData(long up)
 	{
 		this.UpVote = up;
 	}
 
-	// Token: 0x0600A659 RID: 42585 RVA: 0x002539FC File Offset: 0x00251BFC
+	// Token: 0x06007A39 RID: 31289 RVA: 0x0025DE0C File Offset: 0x0025C00C
 	public void PhraseContentInfo(List<AdviceContentData> adviceContent)
 	{
 		this.CurrentPackageLanguage = LanguageSystem.Instance.PackageLanguage;
@@ -111,7 +111,7 @@ public class AdviceData
 		this.ShowText = stringBuilder.ToString();
 	}
 
-	// Token: 0x0600A65A RID: 42586 RVA: 0x00253B48 File Offset: 0x00251D48
+	// Token: 0x06007A3A RID: 31290 RVA: 0x0025DF58 File Offset: 0x0025C158
 	public void PhraseShowText(List<AdviceContentData> adviceContent, long lineIndex = 0L)
 	{
 		this.CurrentPackageLanguage = LanguageSystem.Instance.PackageLanguage;
@@ -174,7 +174,7 @@ public class AdviceData
 		this.ShowText = stringBuilder.ToString();
 	}
 
-	// Token: 0x0600A65B RID: 42587 RVA: 0x00253CDD File Offset: 0x00251EDD
+	// Token: 0x06007A3B RID: 31291 RVA: 0x0025E0ED File Offset: 0x0025C2ED
 	public string GetAdviceShowText()
 	{
 		if (this.CurrentPackageLanguage != LanguageSystem.Instance.PackageLanguage)
@@ -184,25 +184,25 @@ public class AdviceData
 		return this.ShowText;
 	}
 
-	// Token: 0x0600A65C RID: 42588 RVA: 0x00253D08 File Offset: 0x00251F08
+	// Token: 0x06007A3C RID: 31292 RVA: 0x0025E118 File Offset: 0x0025C318
 	public long GetAdviceId()
 	{
 		return MathUtils.Instance.BigIntToLong(this.AdviceId.Value);
 	}
 
-	// Token: 0x0600A65D RID: 42589 RVA: 0x00253D1F File Offset: 0x00251F1F
+	// Token: 0x06007A3D RID: 31293 RVA: 0x0025E12F File Offset: 0x0025C32F
 	public long? GetAdviceBigId()
 	{
 		return this.AdviceId;
 	}
 
-	// Token: 0x0600A65E RID: 42590 RVA: 0x00253D27 File Offset: 0x00251F27
+	// Token: 0x06007A3E RID: 31294 RVA: 0x0025E137 File Offset: 0x0025C337
 	public int GetAreaId()
 	{
 		return this.AreaId;
 	}
 
-	// Token: 0x0600A65F RID: 42591 RVA: 0x00253D30 File Offset: 0x00251F30
+	// Token: 0x06007A3F RID: 31295 RVA: 0x0025E140 File Offset: 0x0025C340
 	public long GetVote()
 	{
 		long num = this.UpVote;
@@ -221,45 +221,45 @@ public class AdviceData
 		return num;
 	}
 
-	// Token: 0x0600A660 RID: 42592 RVA: 0x00253D62 File Offset: 0x00251F62
+	// Token: 0x06007A40 RID: 31296 RVA: 0x0025E172 File Offset: 0x0025C372
 	public List<AdviceContentData> GetAdviceContentData()
 	{
 		return this.AdviceContentData;
 	}
 
-	// Token: 0x0600A661 RID: 42593 RVA: 0x00253D6A File Offset: 0x00251F6A
+	// Token: 0x06007A41 RID: 31297 RVA: 0x0025E17A File Offset: 0x0025C37A
 	public int GetAdviceExpressionId()
 	{
 		return this.ExpressionId;
 	}
 
-	// Token: 0x0600A662 RID: 42594 RVA: 0x00253D72 File Offset: 0x00251F72
+	// Token: 0x06007A42 RID: 31298 RVA: 0x0025E182 File Offset: 0x0025C382
 	public long GetAdviceMotionId()
 	{
 		return this.MotionId;
 	}
 
-	// Token: 0x04004B0F RID: 19215
+	// Token: 0x04004BB6 RID: 19382
 	private long? AdviceId;
 
-	// Token: 0x04004B10 RID: 19216
+	// Token: 0x04004BB7 RID: 19383
 	private int AreaId;
 
-	// Token: 0x04004B11 RID: 19217
+	// Token: 0x04004BB8 RID: 19384
 	private long UpVote;
 
-	// Token: 0x04004B12 RID: 19218
+	// Token: 0x04004BB9 RID: 19385
 	private List<AdviceContentData> AdviceContentData = new List<AdviceContentData>();
 
-	// Token: 0x04004B13 RID: 19219
+	// Token: 0x04004BBA RID: 19386
 	private int ExpressionId;
 
-	// Token: 0x04004B14 RID: 19220
+	// Token: 0x04004BBB RID: 19387
 	private long MotionId;
 
-	// Token: 0x04004B15 RID: 19221
+	// Token: 0x04004BBC RID: 19388
 	private string ShowText = "";
 
-	// Token: 0x04004B16 RID: 19222
+	// Token: 0x04004BBD RID: 19389
 	private string CurrentPackageLanguage = "";
 }

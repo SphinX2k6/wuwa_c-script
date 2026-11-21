@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A60 RID: 2656
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B29 RID: 2857
 	public class RefreshSingleComponent : IComponentBase
 	{
-		// Token: 0x06003D2A RID: 15658 RVA: 0x0009D338 File Offset: 0x0009B538
+		// Token: 0x0600414A RID: 16714 RVA: 0x000A67B0 File Offset: 0x000A49B0
 		public static RefreshSingleComponent Create(IRefreshSingleComponent? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000E27 RID: 3623
-		// (get) Token: 0x06003D2B RID: 15659 RVA: 0x0009D358 File Offset: 0x0009B558
+		// Token: 0x17000EF3 RID: 3827
+		// (get) Token: 0x0600414B RID: 16715 RVA: 0x000A67D0 File Offset: 0x000A49D0
 		public override bool? Disabled
 		{
 			get
@@ -36,8 +33,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E28 RID: 3624
-		// (get) Token: 0x06003D2C RID: 15660 RVA: 0x0009D390 File Offset: 0x0009B590
+		// Token: 0x17000EF4 RID: 3828
+		// (get) Token: 0x0600414C RID: 16716 RVA: 0x000A6808 File Offset: 0x000A4A08
 		public override bool? EdIsLocked
 		{
 			get
@@ -46,8 +43,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E29 RID: 3625
-		// (get) Token: 0x06003D2D RID: 15661 RVA: 0x0009D3A6 File Offset: 0x0009B5A6
+		// Token: 0x17000EF5 RID: 3829
+		// (get) Token: 0x0600414D RID: 16717 RVA: 0x000A681E File Offset: 0x000A4A1E
 		public virtual int RefreshInterval
 		{
 			get
@@ -56,8 +53,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E2A RID: 3626
-		// (get) Token: 0x06003D2E RID: 15662 RVA: 0x0009D3B3 File Offset: 0x0009B5B3
+		// Token: 0x17000EF6 RID: 3830
+		// (get) Token: 0x0600414E RID: 16718 RVA: 0x000A682B File Offset: 0x000A4A2B
 		public virtual bool DelayRefresh
 		{
 			get
@@ -66,8 +63,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E2B RID: 3627
-		// (get) Token: 0x06003D2F RID: 15663 RVA: 0x0009D3C0 File Offset: 0x0009B5C0
+		// Token: 0x17000EF7 RID: 3831
+		// (get) Token: 0x0600414F RID: 16719 RVA: 0x000A6838 File Offset: 0x000A4A38
 		public virtual string TemplateGuid
 		{
 			get
@@ -76,7 +73,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002213 RID: 8723
+		// Token: 0x0400242A RID: 9258
 		private IRefreshSingleComponent Instance;
 	}
 }

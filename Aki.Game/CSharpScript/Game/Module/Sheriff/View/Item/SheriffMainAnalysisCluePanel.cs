@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.TDConfigMgr.Action;
@@ -12,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Sheriff.View.Item
 {
-	// Token: 0x02004C68 RID: 19560
+	// Token: 0x02003C19 RID: 15385
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SheriffMainAnalysisCluePanel : UiTabViewBase
 	{
-		// Token: 0x06032909 RID: 207113 RVA: 0x00BC8798 File Offset: 0x00BC6998
+		// Token: 0x060276BC RID: 161468 RVA: 0x00B0D404 File Offset: 0x00B0B604
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -35,7 +34,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603290A RID: 207114 RVA: 0x00BC8844 File Offset: 0x00BC6A44
+		// Token: 0x060276BD RID: 161469 RVA: 0x00B0D4B0 File Offset: 0x00B0B6B0
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SheriffMainAnalysisCluePanel.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -46,7 +45,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603290B RID: 207115 RVA: 0x00BC8888 File Offset: 0x00BC6A88
+		// Token: 0x060276BE RID: 161470 RVA: 0x00B0D4F4 File Offset: 0x00B0B6F4
 		protected override void OnBeforeShow()
 		{
 			UiBehaviorLevelSequence uiViewSequence = this.UiViewSequence;
@@ -70,7 +69,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			this.LogReport();
 		}
 
-		// Token: 0x0603290C RID: 207116 RVA: 0x00BC8948 File Offset: 0x00BC6B48
+		// Token: 0x060276BF RID: 161471 RVA: 0x00B0D5B4 File Offset: 0x00B0B7B4
 		protected void LogReport()
 		{
 			SheriffReasoningCompleteEvent sheriffReasoningCompleteEvent = new SheriffReasoningCompleteEvent();
@@ -83,7 +82,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			LogReportController.Instance.LogReport(sheriffReasoningCompleteEvent);
 		}
 
-		// Token: 0x0603290D RID: 207117 RVA: 0x00BC89C0 File Offset: 0x00BC6BC0
+		// Token: 0x060276C0 RID: 161472 RVA: 0x00B0D62C File Offset: 0x00B0B82C
 		protected void RefreshClueState()
 		{
 			this.QuestionAnalysisConfig = null;
@@ -127,12 +126,12 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			{
 				this.ClueState = EClueState.Fail;
 				this.Proxy.SetFailureCount();
-				this.GetTalkList(SheriffConfig.Instance.GetQuestionById(questionIdByIndex).Value.FailResultDesc().ToList<string>());
+				this.GetTalkList(SheriffConfig.Instance.GetQuestionById(questionIdByIndex).Value.FailResultDesc());
 			}
 		}
 
-		// Token: 0x0603290E RID: 207118 RVA: 0x00BC8B50 File Offset: 0x00BC6D50
-		private void GetTalkList(List<string> stateIds)
+		// Token: 0x060276C1 RID: 161473 RVA: 0x00B0D7B4 File Offset: 0x00B0B9B4
+		private void GetTalkList(IReadOnlyList<string> stateIds)
 		{
 			this.CurTalkIndex = 0;
 			this.TalkList.Clear();
@@ -148,7 +147,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			}
 		}
 
-		// Token: 0x0603290F RID: 207119 RVA: 0x00BC8C3C File Offset: 0x00BC6E3C
+		// Token: 0x060276C2 RID: 161474 RVA: 0x00B0D8A0 File Offset: 0x00B0BAA0
 		protected void RefreshDialogPanel()
 		{
 			if (this.ClueState != EClueState.Success)
@@ -165,7 +164,7 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			this.DialogPanel.RefreshDialogPanel(this.ClueState);
 		}
 
-		// Token: 0x06032910 RID: 207120 RVA: 0x00BC8CB8 File Offset: 0x00BC6EB8
+		// Token: 0x060276C3 RID: 161475 RVA: 0x00B0D91C File Offset: 0x00B0BB1C
 		private void RefreshDialog()
 		{
 			if (this.CurTalkIndex < this.TalkList.Count)
@@ -198,44 +197,44 @@ namespace CSharpScript.Game.Module.Sheriff.View.Item
 			EClueState clueState = this.ClueState;
 		}
 
-		// Token: 0x0401AE84 RID: 110212
+		// Token: 0x040157E1 RID: 88033
 		protected EClueState ClueState;
 
-		// Token: 0x0401AE85 RID: 110213
+		// Token: 0x040157E2 RID: 88034
 		[Nullable(2)]
 		protected SheriffMainProxy Proxy;
 
-		// Token: 0x0401AE86 RID: 110214
+		// Token: 0x040157E3 RID: 88035
 		protected List<SheriffMainAnalysisClueItem> ClueItemList = new List<SheriffMainAnalysisClueItem>();
 
-		// Token: 0x0401AE87 RID: 110215
+		// Token: 0x040157E4 RID: 88036
 		[Nullable(2)]
 		protected ISheriffQuestionResultJsonConfig QuestionAnalysisConfig;
 
-		// Token: 0x0401AE88 RID: 110216
+		// Token: 0x040157E5 RID: 88037
 		[Nullable(2)]
 		protected SheriffMainAnalysisClueDialogPanel DialogPanel;
 
-		// Token: 0x0401AE89 RID: 110217
+		// Token: 0x040157E6 RID: 88038
 		protected List<string> TalkList = new List<string>();
 
-		// Token: 0x0401AE8A RID: 110218
+		// Token: 0x040157E7 RID: 88039
 		protected int CurTalkIndex;
 
-		// Token: 0x0200AE1A RID: 44570
+		// Token: 0x02009838 RID: 38968
 		[NullableContext(0)]
 		private static class EDefine
 		{
-			// Token: 0x04034E02 RID: 216578
+			// Token: 0x0402F7A7 RID: 194471
 			public const int TogSkyEyeClue1 = 0;
 
-			// Token: 0x04034E03 RID: 216579
+			// Token: 0x0402F7A8 RID: 194472
 			public const int TogSkyEyeClue2 = 1;
 
-			// Token: 0x04034E04 RID: 216580
+			// Token: 0x0402F7A9 RID: 194473
 			public const int TogSkyEyeClue3 = 2;
 
-			// Token: 0x04034E05 RID: 216581
+			// Token: 0x0402F7AA RID: 194474
 			public const int DialogItem = 3;
 		}
 	}

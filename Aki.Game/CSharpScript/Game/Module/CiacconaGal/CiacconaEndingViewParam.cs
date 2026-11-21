@@ -3,19 +3,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.CiacconaGal
 {
-	// Token: 0x02005BF1 RID: 23537
+	// Token: 0x02004BD1 RID: 19409
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CiacconaEndingViewParam : ICiacconaEndingViewParam
 	{
-		// Token: 0x17008D6C RID: 36204
-		// (get) Token: 0x0603B7C4 RID: 243652 RVA: 0x00E2FD6B File Offset: 0x00E2DF6B
-		// (set) Token: 0x0603B7C5 RID: 243653 RVA: 0x00E2FD73 File Offset: 0x00E2DF73
+		// Token: 0x1700613E RID: 24894
+		// (get) Token: 0x0603070F RID: 198415 RVA: 0x00D8007B File Offset: 0x00D7E27B
+		// (set) Token: 0x06030710 RID: 198416 RVA: 0x00D80083 File Offset: 0x00D7E283
 		public CiacconaGalEndingData EndingData { get; set; }
 
-		// Token: 0x17008D6D RID: 36205
-		// (get) Token: 0x0603B7C6 RID: 243654 RVA: 0x00E2FD7C File Offset: 0x00E2DF7C
-		// (set) Token: 0x0603B7C7 RID: 243655 RVA: 0x00E2FD84 File Offset: 0x00E2DF84
+		// Token: 0x1700613F RID: 24895
+		// (get) Token: 0x06030711 RID: 198417 RVA: 0x00D8008C File Offset: 0x00D7E28C
+		// (set) Token: 0x06030712 RID: 198418 RVA: 0x00D80094 File Offset: 0x00D7E294
 		[Nullable(2)]
 		public string LabelTextId { [NullableContext(2)] get; [NullableContext(2)] set; }
 	}

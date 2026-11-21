@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.NewWorld.Character.Npc.Controller
 {
-	// Token: 0x02007097 RID: 28823
+	// Token: 0x020062FC RID: 25340
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PatrolSavedData
 	{
-		// Token: 0x060463C6 RID: 287686 RVA: 0x01192E5C File Offset: 0x0119105C
+		// Token: 0x0603D4B1 RID: 251057 RVA: 0x011B5F68 File Offset: 0x011B4168
 		public bool IsValid()
 		{
 			return this.SplineId != 0 && this.PointId != -1 && this.PatrolState != "";
 		}
 
-		// Token: 0x060463C7 RID: 287687 RVA: 0x01192E84 File Offset: 0x01191084
+		// Token: 0x0603D4B2 RID: 251058 RVA: 0x011B5F90 File Offset: 0x011B4190
 		public PatrolSavedData DeepCopy()
 		{
 			return new PatrolSavedData
@@ -29,25 +29,25 @@ namespace CSharpScript.Game.NewWorld.Character.Npc.Controller
 			};
 		}
 
-		// Token: 0x04024CD9 RID: 150745
+		// Token: 0x0402082B RID: 133163
 		public int SplineId;
 
-		// Token: 0x04024CDA RID: 150746
+		// Token: 0x0402082C RID: 133164
 		public int PointId = -1;
 
-		// Token: 0x04024CDB RID: 150747
+		// Token: 0x0402082D RID: 133165
 		public bool Direction;
 
-		// Token: 0x04024CDC RID: 150748
+		// Token: 0x0402082E RID: 133166
 		public EPatrolState State;
 
-		// Token: 0x04024CDD RID: 150749
+		// Token: 0x0402082F RID: 133167
 		public string PatrolState = "";
 
-		// Token: 0x04024CDE RID: 150750
+		// Token: 0x04020830 RID: 133168
 		public int ActionIndex;
 
-		// Token: 0x04024CDF RID: 150751
+		// Token: 0x04020831 RID: 133169
 		public int ActionType;
 	}
 }

@@ -4,10 +4,10 @@ using CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006F8A RID: 28554
+	// Token: 0x0200610B RID: 24843
 	public class LevelFlowFloaterUseSkillAction : LevelFlowActionBase
 	{
-		// Token: 0x0604570F RID: 284431 RVA: 0x0113833A File Offset: 0x0113653A
+		// Token: 0x0603B8BD RID: 243901 RVA: 0x010E213E File Offset: 0x010E033E
 		[NullableContext(1)]
 		public LevelFlowFloaterUseSkillAction Init(int skillId)
 		{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			return this;
 		}
 
-		// Token: 0x06045710 RID: 284432 RVA: 0x01138344 File Offset: 0x01136544
+		// Token: 0x0603B8BE RID: 243902 RVA: 0x010E2148 File Offset: 0x010E0348
 		protected override void OnExecute()
 		{
 			Entity entity = Global.BaseCharacter.CharacterActorComponent.Entity;
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			base.FinishExecute(true);
 		}
 
-		// Token: 0x06045711 RID: 284433 RVA: 0x011384D4 File Offset: 0x011366D4
+		// Token: 0x0603B8BF RID: 243903 RVA: 0x010E22D8 File Offset: 0x010E04D8
 		protected unsafe override void LogExecuteInfo()
 		{
 			Log instance = Log.Instance;
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 		}
 
-		// Token: 0x040243BC RID: 148412
+		// Token: 0x0401F671 RID: 128625
 		private int SkillId;
 	}
 }

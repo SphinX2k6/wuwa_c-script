@@ -8,13 +8,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002271 RID: 8817
+// Token: 0x02001755 RID: 5973
 [NullableContext(2)]
 [Nullable(0)]
 public class MotorcycleTechTreeInfoPanel : UiPanelBase
 {
-	// Token: 0x170015F1 RID: 5617
-	// (get) Token: 0x06011373 RID: 70515 RVA: 0x00432900 File Offset: 0x00430B00
+	// Token: 0x17001628 RID: 5672
+	// (get) Token: 0x0600E809 RID: 59401 RVA: 0x0043F50C File Offset: 0x0043D70C
 	private bool IsLockByPlayerStatus
 	{
 		get
@@ -23,7 +23,7 @@ public class MotorcycleTechTreeInfoPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x06011374 RID: 70516 RVA: 0x0043290C File Offset: 0x00430B0C
+	// Token: 0x0600E80A RID: 59402 RVA: 0x0043F518 File Offset: 0x0043D718
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -50,7 +50,7 @@ public class MotorcycleTechTreeInfoPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x06011375 RID: 70517 RVA: 0x00432A98 File Offset: 0x00430C98
+	// Token: 0x0600E80B RID: 59403 RVA: 0x0043F6A4 File Offset: 0x0043D8A4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		MotorcycleTechTreeInfoPanel.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -61,7 +61,7 @@ public class MotorcycleTechTreeInfoPanel : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011376 RID: 70518 RVA: 0x00432ADB File Offset: 0x00430CDB
+	// Token: 0x0600E80C RID: 59404 RVA: 0x0043F6E7 File Offset: 0x0043D8E7
 	protected override void OnBeforeDestroy()
 	{
 		MediaPlayer mediaPlayer = this.MediaPlayer;
@@ -73,7 +73,7 @@ public class MotorcycleTechTreeInfoPanel : UiPanelBase
 		this.CancelLoad();
 	}
 
-	// Token: 0x06011377 RID: 70519 RVA: 0x00432AFC File Offset: 0x00430CFC
+	// Token: 0x0600E80D RID: 59405 RVA: 0x0043F708 File Offset: 0x0043D908
 	[NullableContext(1)]
 	public UniTask RefreshAsync(MotorTechTreeNode treeNode)
 	{
@@ -86,14 +86,14 @@ public class MotorcycleTechTreeInfoPanel : UiPanelBase
 		return <RefreshAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06011378 RID: 70520 RVA: 0x00432B48 File Offset: 0x00430D48
+	// Token: 0x0600E80E RID: 59406 RVA: 0x0043F754 File Offset: 0x0043D954
 	public void PlayChangeTween()
 	{
 		this.SeqPlayer.StopSequenceByKey("Change", false, false);
 		this.SeqPlayer.PlayLevelSequenceByName("Change", false, null, false);
 	}
 
-	// Token: 0x06011379 RID: 70521 RVA: 0x00432B84 File Offset: 0x00430D84
+	// Token: 0x0600E80F RID: 59407 RVA: 0x0043F790 File Offset: 0x0043D990
 	private UniTask LoadMaterial()
 	{
 		MotorcycleTechTreeInfoPanel.<LoadMaterial>d__15 <LoadMaterial>d__;
@@ -104,7 +104,7 @@ public class MotorcycleTechTreeInfoPanel : UiPanelBase
 		return <LoadMaterial>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601137A RID: 70522 RVA: 0x00432BC7 File Offset: 0x00430DC7
+	// Token: 0x0600E810 RID: 59408 RVA: 0x0043F7D3 File Offset: 0x0043D9D3
 	private void CancelLoad()
 	{
 		if (this.HandleId != -1)
@@ -114,7 +114,7 @@ public class MotorcycleTechTreeInfoPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x0601137B RID: 70523 RVA: 0x00432BEC File Offset: 0x00430DEC
+	// Token: 0x0600E811 RID: 59409 RVA: 0x0043F7F8 File Offset: 0x0043D9F8
 	private void OnTogEachLevelClick(EToggleState toggleState)
 	{
 		if (this.Node == null)
@@ -141,7 +141,7 @@ public class MotorcycleTechTreeInfoPanel : UiPanelBase
 		UiManager.Instance.OpenView(EUiViewName.MotorcycleTechTreeLevelDetailView, list, null);
 	}
 
-	// Token: 0x0601137C RID: 70524 RVA: 0x00432CCC File Offset: 0x00430ECC
+	// Token: 0x0600E812 RID: 59410 RVA: 0x0043F8D8 File Offset: 0x0043DAD8
 	private void OnConfirmBtnClick(int _)
 	{
 		if (this.Node == null)
@@ -160,80 +160,80 @@ public class MotorcycleTechTreeInfoPanel : UiPanelBase
 		MotorcycleDevelopController.Instance.RequestMotorTechLevelUp(this.Node.NodeId);
 	}
 
-	// Token: 0x0601137D RID: 70525 RVA: 0x00432D28 File Offset: 0x00430F28
+	// Token: 0x0600E813 RID: 59411 RVA: 0x0043F934 File Offset: 0x0043DB34
 	private void OnHelpBtnClick()
 	{
 		HelpController.Instance.OpenHelpById(470);
 	}
 
-	// Token: 0x04008300 RID: 33536
+	// Token: 0x0400843E RID: 33854
 	private const float TAG_BG_ALPHA = 0.3f;
 
-	// Token: 0x04008301 RID: 33537
+	// Token: 0x0400843F RID: 33855
 	private MotorTechTreeNode Node;
 
-	// Token: 0x04008302 RID: 33538
+	// Token: 0x04008440 RID: 33856
 	private ButtonItem ConfirmBtnItem;
 
-	// Token: 0x04008303 RID: 33539
+	// Token: 0x04008441 RID: 33857
 	private FunctionalPanelConditionLock LockTipsItem;
 
-	// Token: 0x04008304 RID: 33540
+	// Token: 0x04008442 RID: 33858
 	private MediaPlayer MediaPlayer;
 
-	// Token: 0x04008305 RID: 33541
+	// Token: 0x04008443 RID: 33859
 	private int HandleId = -1;
 
-	// Token: 0x04008306 RID: 33542
+	// Token: 0x04008444 RID: 33860
 	private LevelSequencePlayer SeqPlayer;
 
-	// Token: 0x020087A6 RID: 34726
+	// Token: 0x0200792F RID: 31023
 	[NullableContext(0)]
 	private class EMotorTechTreeInfoComponent
 	{
-		// Token: 0x0402C154 RID: 180564
+		// Token: 0x0402746C RID: 160876
 		public const int TexSkillIcon = 0;
 
-		// Token: 0x0402C155 RID: 180565
+		// Token: 0x0402746D RID: 160877
 		public const int TxtName = 1;
 
-		// Token: 0x0402C156 RID: 180566
+		// Token: 0x0402746E RID: 160878
 		public const int SprTagIcon = 2;
 
-		// Token: 0x0402C157 RID: 180567
+		// Token: 0x0402746F RID: 160879
 		public const int SprTagBg = 3;
 
-		// Token: 0x0402C158 RID: 180568
+		// Token: 0x04027470 RID: 160880
 		public const int TxtTagName = 4;
 
-		// Token: 0x0402C159 RID: 180569
+		// Token: 0x04027471 RID: 160881
 		public const int TxtDesc = 5;
 
-		// Token: 0x0402C15A RID: 180570
+		// Token: 0x04027472 RID: 160882
 		public const int BtnConfirm = 6;
 
-		// Token: 0x0402C15B RID: 180571
+		// Token: 0x04027473 RID: 160883
 		public const int TxtCostNum = 7;
 
-		// Token: 0x0402C15C RID: 180572
+		// Token: 0x04027474 RID: 160884
 		public const int TexCostItemIcon = 8;
 
-		// Token: 0x0402C15D RID: 180573
+		// Token: 0x04027475 RID: 160885
 		public const int PnlVideo = 9;
 
-		// Token: 0x0402C15E RID: 180574
+		// Token: 0x04027476 RID: 160886
 		public const int TexVideo = 10;
 
-		// Token: 0x0402C15F RID: 180575
+		// Token: 0x04027477 RID: 160887
 		public const int PnlHint = 11;
 
-		// Token: 0x0402C160 RID: 180576
+		// Token: 0x04027478 RID: 160888
 		public const int PnlLockTips = 12;
 
-		// Token: 0x0402C161 RID: 180577
+		// Token: 0x04027479 RID: 160889
 		public const int PnlMaxTips = 13;
 
-		// Token: 0x0402C162 RID: 180578
+		// Token: 0x0402747A RID: 160890
 		public const int TogEachLevel = 14;
 	}
 }

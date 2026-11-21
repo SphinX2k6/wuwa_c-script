@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200021D RID: 541
+	// Token: 0x02000222 RID: 546
 	[NetMessage(EMessageId.CalabashExpAddNotify)]
 	public sealed class CalabashExpAddNotify : IMessage<CalabashExpAddNotify>, IMessage, IEquatable<CalabashExpAddNotify>, IDeepCloneable<CalabashExpAddNotify>, IBufferMessage
 	{
-		// Token: 0x06003B32 RID: 15154 RVA: 0x000935FA File Offset: 0x000917FA
+		// Token: 0x06003BD7 RID: 15319 RVA: 0x00095212 File Offset: 0x00093412
 		[NullableContext(1)]
 		public static CalabashExpAddNotify Create()
 		{
 			return new CalabashExpAddNotify();
 		}
 
-		// Token: 0x170009CB RID: 2507
-		// (get) Token: 0x06003B33 RID: 15155 RVA: 0x00093601 File Offset: 0x00091801
+		// Token: 0x170009EA RID: 2538
+		// (get) Token: 0x06003BD8 RID: 15320 RVA: 0x00095219 File Offset: 0x00093419
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170009CC RID: 2508
-		// (get) Token: 0x06003B34 RID: 15156 RVA: 0x00093604 File Offset: 0x00091804
+		// Token: 0x170009EB RID: 2539
+		// (get) Token: 0x06003BD9 RID: 15321 RVA: 0x0009521C File Offset: 0x0009341C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06003B35 RID: 15157 RVA: 0x0009360B File Offset: 0x0009180B
+		// Token: 0x06003BDA RID: 15322 RVA: 0x00095223 File Offset: 0x00093423
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CalabashExpAddNotify()
 		{
 		}
 
-		// Token: 0x06003B36 RID: 15158 RVA: 0x00093614 File Offset: 0x00091814
+		// Token: 0x06003BDB RID: 15323 RVA: 0x0009522C File Offset: 0x0009342C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CalabashExpAddNotify(CalabashExpAddNotify other) : this()
@@ -61,7 +61,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06003B37 RID: 15159 RVA: 0x00093678 File Offset: 0x00091878
+		// Token: 0x06003BDC RID: 15324 RVA: 0x00095290 File Offset: 0x00093490
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CalabashExpAddNotify Clone()
@@ -69,9 +69,9 @@ namespace Aki.Protocol
 			return new CalabashExpAddNotify(this);
 		}
 
-		// Token: 0x170009CD RID: 2509
-		// (get) Token: 0x06003B38 RID: 15160 RVA: 0x00093680 File Offset: 0x00091880
-		// (set) Token: 0x06003B39 RID: 15161 RVA: 0x00093688 File Offset: 0x00091888
+		// Token: 0x170009EC RID: 2540
+		// (get) Token: 0x06003BDD RID: 15325 RVA: 0x00095298 File Offset: 0x00093498
+		// (set) Token: 0x06003BDE RID: 15326 RVA: 0x000952A0 File Offset: 0x000934A0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CurExp
@@ -86,9 +86,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170009CE RID: 2510
-		// (get) Token: 0x06003B3A RID: 15162 RVA: 0x00093691 File Offset: 0x00091891
-		// (set) Token: 0x06003B3B RID: 15163 RVA: 0x00093699 File Offset: 0x00091899
+		// Token: 0x170009ED RID: 2541
+		// (get) Token: 0x06003BDF RID: 15327 RVA: 0x000952A9 File Offset: 0x000934A9
+		// (set) Token: 0x06003BE0 RID: 15328 RVA: 0x000952B1 File Offset: 0x000934B1
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int AddExp
@@ -103,9 +103,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170009CF RID: 2511
-		// (get) Token: 0x06003B3C RID: 15164 RVA: 0x000936A2 File Offset: 0x000918A2
-		// (set) Token: 0x06003B3D RID: 15165 RVA: 0x000936AA File Offset: 0x000918AA
+		// Token: 0x170009EE RID: 2542
+		// (get) Token: 0x06003BE1 RID: 15329 RVA: 0x000952BA File Offset: 0x000934BA
+		// (set) Token: 0x06003BE2 RID: 15330 RVA: 0x000952C2 File Offset: 0x000934C2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CurLevel
@@ -120,9 +120,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170009D0 RID: 2512
-		// (get) Token: 0x06003B3E RID: 15166 RVA: 0x000936B3 File Offset: 0x000918B3
-		// (set) Token: 0x06003B3F RID: 15167 RVA: 0x000936BB File Offset: 0x000918BB
+		// Token: 0x170009EF RID: 2543
+		// (get) Token: 0x06003BE3 RID: 15331 RVA: 0x000952CB File Offset: 0x000934CB
+		// (set) Token: 0x06003BE4 RID: 15332 RVA: 0x000952D3 File Offset: 0x000934D3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public CalabashCfg CalabashCfg
@@ -137,7 +137,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06003B40 RID: 15168 RVA: 0x000936C4 File Offset: 0x000918C4
+		// Token: 0x06003BE5 RID: 15333 RVA: 0x000952DC File Offset: 0x000934DC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -145,7 +145,7 @@ namespace Aki.Protocol
 			return this.Equals(other as CalabashExpAddNotify);
 		}
 
-		// Token: 0x06003B41 RID: 15169 RVA: 0x000936D4 File Offset: 0x000918D4
+		// Token: 0x06003BE6 RID: 15334 RVA: 0x000952EC File Offset: 0x000934EC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(CalabashExpAddNotify other)
@@ -153,7 +153,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.CurExp == other.CurExp && this.AddExp == other.AddExp && this.CurLevel == other.CurLevel && object.Equals(this.CalabashCfg, other.CalabashCfg) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06003B42 RID: 15170 RVA: 0x00093744 File Offset: 0x00091944
+		// Token: 0x06003BE7 RID: 15335 RVA: 0x0009535C File Offset: 0x0009355C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -182,7 +182,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06003B43 RID: 15171 RVA: 0x000937CB File Offset: 0x000919CB
+		// Token: 0x06003BE8 RID: 15336 RVA: 0x000953E3 File Offset: 0x000935E3
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -190,7 +190,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06003B44 RID: 15172 RVA: 0x000937D8 File Offset: 0x000919D8
+		// Token: 0x06003BE9 RID: 15337 RVA: 0x000953F0 File Offset: 0x000935F0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -198,30 +198,30 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06003B45 RID: 15173 RVA: 0x000937E4 File Offset: 0x000919E4
+		// Token: 0x06003BEA RID: 15338 RVA: 0x000953FC File Offset: 0x000935FC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			if (this.AddExp != 0)
+			if (this.calabashCfg_ != null)
 			{
-				output.WriteRawTag(24);
-				output.WriteInt32(this.AddExp);
+				output.WriteRawTag(42);
+				output.WriteMessage(this.CalabashCfg);
 			}
 			if (this.CurLevel != 0)
 			{
 				output.WriteRawTag(48);
 				output.WriteInt32(this.CurLevel);
 			}
+			if (this.AddExp != 0)
+			{
+				output.WriteRawTag(104);
+				output.WriteInt32(this.AddExp);
+			}
 			if (this.CurExp != 0)
 			{
-				output.WriteRawTag(56);
+				output.WriteRawTag(112);
 				output.WriteInt32(this.CurExp);
-			}
-			if (this.calabashCfg_ != null)
-			{
-				output.WriteRawTag(90);
-				output.WriteMessage(this.CalabashCfg);
 			}
 			if (this._unknownFields != null)
 			{
@@ -229,7 +229,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06003B46 RID: 15174 RVA: 0x00093878 File Offset: 0x00091A78
+		// Token: 0x06003BEB RID: 15339 RVA: 0x00095490 File Offset: 0x00093690
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -258,7 +258,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06003B47 RID: 15175 RVA: 0x00093900 File Offset: 0x00091B00
+		// Token: 0x06003BEC RID: 15340 RVA: 0x00095518 File Offset: 0x00093718
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CalabashExpAddNotify other)
@@ -290,7 +290,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06003B48 RID: 15176 RVA: 0x00093990 File Offset: 0x00091B90
+		// Token: 0x06003BED RID: 15341 RVA: 0x000955A8 File Offset: 0x000937A8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -298,7 +298,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06003B49 RID: 15177 RVA: 0x0009399C File Offset: 0x00091B9C
+		// Token: 0x06003BEE RID: 15342 RVA: 0x000955B4 File Offset: 0x000937B4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -312,9 +312,13 @@ namespace Aki.Protocol
 				}
 				if (num <= 48U)
 				{
-					if (num == 24U)
+					if (num == 42U)
 					{
-						this.AddExp = input.ReadInt32();
+						if (this.calabashCfg_ == null)
+						{
+							this.CalabashCfg = new CalabashCfg();
+						}
+						input.ReadMessage(this.CalabashCfg);
 						continue;
 					}
 					if (num == 48U)
@@ -325,18 +329,14 @@ namespace Aki.Protocol
 				}
 				else
 				{
-					if (num == 56U)
+					if (num == 104U)
 					{
-						this.CurExp = input.ReadInt32();
+						this.AddExp = input.ReadInt32();
 						continue;
 					}
-					if (num == 90U)
+					if (num == 112U)
 					{
-						if (this.calabashCfg_ == null)
-						{
-							this.CalabashCfg = new CalabashCfg();
-						}
-						input.ReadMessage(this.CalabashCfg);
+						this.CurExp = input.ReadInt32();
 						continue;
 					}
 				}
@@ -344,31 +344,31 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04002C16 RID: 11286
+		// Token: 0x04002C98 RID: 11416
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04002C17 RID: 11287
-		public const int CurExpFieldNumber = 7;
+		// Token: 0x04002C99 RID: 11417
+		public const int CurExpFieldNumber = 14;
 
-		// Token: 0x04002C18 RID: 11288
+		// Token: 0x04002C9A RID: 11418
 		private int curExp_;
 
-		// Token: 0x04002C19 RID: 11289
-		public const int AddExpFieldNumber = 3;
+		// Token: 0x04002C9B RID: 11419
+		public const int AddExpFieldNumber = 13;
 
-		// Token: 0x04002C1A RID: 11290
+		// Token: 0x04002C9C RID: 11420
 		private int addExp_;
 
-		// Token: 0x04002C1B RID: 11291
+		// Token: 0x04002C9D RID: 11421
 		public const int CurLevelFieldNumber = 6;
 
-		// Token: 0x04002C1C RID: 11292
+		// Token: 0x04002C9E RID: 11422
 		private int curLevel_;
 
-		// Token: 0x04002C1D RID: 11293
-		public const int CalabashCfgFieldNumber = 11;
+		// Token: 0x04002C9F RID: 11423
+		public const int CalabashCfgFieldNumber = 5;
 
-		// Token: 0x04002C1E RID: 11294
+		// Token: 0x04002CA0 RID: 11424
 		private CalabashCfg calabashCfg_;
 	}
 }

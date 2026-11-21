@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045A4 RID: 17828
+	// Token: 0x020034CC RID: 13516
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class CharMaterialContainerV2 : CharRenderBase
 	{
-		// Token: 0x0602DF78 RID: 188280 RVA: 0x00A92E08 File Offset: 0x00A91008
+		// Token: 0x06022662 RID: 140898 RVA: 0x009BF028 File Offset: 0x009BD228
 		public override void Start()
 		{
 			AActor cachedOwner = base.GetRenderingComponent().GetCachedOwner();
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Render
 			base.OnInitSuccess();
 		}
 
-		// Token: 0x0602DF79 RID: 188281 RVA: 0x00A92FC8 File Offset: 0x00A911C8
+		// Token: 0x06022663 RID: 140899 RVA: 0x009BF1E8 File Offset: 0x009BD3E8
 		public override void Update()
 		{
 			LogicalTimeDilationOut logicalTimeDilationOut = new LogicalTimeDilationOut
@@ -94,14 +94,14 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DF7A RID: 188282 RVA: 0x00A930B8 File Offset: 0x00A912B8
+		// Token: 0x06022664 RID: 140900 RVA: 0x009BF2D8 File Offset: 0x009BD4D8
 		public void UpdateEffectsOnly()
 		{
 			this.ControllerComponent.MarkForceUpdateAllOnce();
 			this.ControllerComponent.UpdateEffects();
 		}
 
-		// Token: 0x0602DF7B RID: 188283 RVA: 0x00A930D0 File Offset: 0x00A912D0
+		// Token: 0x06022665 RID: 140901 RVA: 0x009BF2F0 File Offset: 0x009BD4F0
 		public void ForceUpdateOnce()
 		{
 			UKuroMaterialControllerComponent controllerComponent = this.ControllerComponent;
@@ -117,56 +117,56 @@ namespace CSharpScript.Game.Render
 			controllerComponent2.SetUpdateForce(true);
 		}
 
-		// Token: 0x0602DF7C RID: 188284 RVA: 0x00A930F4 File Offset: 0x00A912F4
+		// Token: 0x06022666 RID: 140902 RVA: 0x009BF314 File Offset: 0x009BD514
 		public void AddSkeletalComponent(USkeletalMeshComponent skeletalComp, string skelName, bool useEmptyMaterial = false)
 		{
 			this.ControllerComponent.AddSkeletalMeshComponent(skeletalComp, new FName(skelName), useEmptyMaterial);
 		}
 
-		// Token: 0x0602DF7D RID: 188285 RVA: 0x00A93109 File Offset: 0x00A91309
+		// Token: 0x06022667 RID: 140903 RVA: 0x009BF329 File Offset: 0x009BD529
 		[return: Nullable(2)]
 		public USkeletalMeshComponent GetSkeletalComponent(string skelName)
 		{
 			return this.ControllerComponent.GetRegisteredSkeletalMeshComponent(new FName(skelName));
 		}
 
-		// Token: 0x0602DF7E RID: 188286 RVA: 0x00A9311C File Offset: 0x00A9131C
+		// Token: 0x06022668 RID: 140904 RVA: 0x009BF33C File Offset: 0x009BD53C
 		public FName GetSkeletalMeshComponentBodyName(USkeletalMeshComponent skeletalComp)
 		{
 			return this.ControllerComponent.GetSkeletalMeshComponentBodyName(skeletalComp);
 		}
 
-		// Token: 0x0602DF7F RID: 188287 RVA: 0x00A9312A File Offset: 0x00A9132A
+		// Token: 0x06022669 RID: 140905 RVA: 0x009BF34A File Offset: 0x009BD54A
 		public void RemoveSkeletalComponent(string bodyName)
 		{
 			this.ControllerComponent.RemoveSkeletalMeshComponent(new FName(bodyName));
 		}
 
-		// Token: 0x0602DF80 RID: 188288 RVA: 0x00A9313D File Offset: 0x00A9133D
+		// Token: 0x0602266A RID: 140906 RVA: 0x009BF35D File Offset: 0x009BD55D
 		public int AddEffect(UKuroMaterialControllerDataAsset dataAsset, bool needLoop, bool paused, [Nullable(2)] USkeletalMeshComponent animObject = null, bool hiddenAfterEffect = false)
 		{
 			return this.ControllerComponent.AddEffect_Ex(dataAsset, needLoop, paused, animObject, hiddenAfterEffect, -1);
 		}
 
-		// Token: 0x0602DF81 RID: 188289 RVA: 0x00A93152 File Offset: 0x00A91352
+		// Token: 0x0602266B RID: 140907 RVA: 0x009BF372 File Offset: 0x009BD572
 		public void SetEffectLoop(int handle, bool needLoop)
 		{
 			this.ControllerComponent.SetHandleLoop(handle, needLoop, true, -1);
 		}
 
-		// Token: 0x0602DF82 RID: 188290 RVA: 0x00A93163 File Offset: 0x00A91363
+		// Token: 0x0602266C RID: 140908 RVA: 0x009BF383 File Offset: 0x009BD583
 		public void SetEffectPause(int handle, bool paused)
 		{
 			this.ControllerComponent.SetHandlePause(handle, paused);
 		}
 
-		// Token: 0x0602DF83 RID: 188291 RVA: 0x00A93172 File Offset: 0x00A91372
+		// Token: 0x0602266D RID: 140909 RVA: 0x009BF392 File Offset: 0x009BD592
 		public void SetEffectProgress(int handle, float progress)
 		{
 			this.ControllerComponent.SeekHandleFactor(handle, progress);
 		}
 
-		// Token: 0x0602DF84 RID: 188292 RVA: 0x00A93184 File Offset: 0x00A91384
+		// Token: 0x0602266E RID: 140910 RVA: 0x009BF3A4 File Offset: 0x009BD5A4
 		public void RemoveEffect(int handle)
 		{
 			this.ControllerComponent.RemoveEffect(handle, -1);
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DF85 RID: 188293 RVA: 0x00A931EC File Offset: 0x00A913EC
+		// Token: 0x0602266F RID: 140911 RVA: 0x009BF40C File Offset: 0x009BD60C
 		public void RemoveAllUnloopedEffects()
 		{
 			TArray<int> tarray = this.ControllerComponent.RemoveAllUnloopedEffects();
@@ -195,134 +195,134 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DF86 RID: 188294 RVA: 0x00A93268 File Offset: 0x00A91468
+		// Token: 0x06022670 RID: 140912 RVA: 0x009BF488 File Offset: 0x009BD688
 		public override void OnResetRenderState()
 		{
 			this.ControllerComponent.RemoveAllEffects(-1);
 			this.ControllerComponent.UpdateEffects();
 		}
 
-		// Token: 0x0602DF87 RID: 188295 RVA: 0x00A93281 File Offset: 0x00A91481
+		// Token: 0x06022671 RID: 140913 RVA: 0x009BF4A1 File Offset: 0x009BD6A1
 		public void SetFloatUpdateParamPermanent(FName name, float value, EKuroCharBodySpecifiedType bodyType, EKuroCharSlotSpecifiedType slotType, EKuroCharMeshPart? meshPart = null)
 		{
 			this.ControllerComponent.AddFloatUpdateParamPermanent(name, value, bodyType, slotType, meshPart.GetValueOrDefault(EKuroCharMeshPart.ECharacterMeshPart_Max));
 		}
 
-		// Token: 0x0602DF88 RID: 188296 RVA: 0x00A9329C File Offset: 0x00A9149C
+		// Token: 0x06022672 RID: 140914 RVA: 0x009BF4BC File Offset: 0x009BD6BC
 		public void AddFloatUpdateParamPermanentByIndex(FName name, float value, FName bodyName, int materialIndex)
 		{
 			this.ControllerComponent.AddFloatUpdateParamPermanentByIndex(name, value, bodyName, materialIndex);
 		}
 
-		// Token: 0x0602DF89 RID: 188297 RVA: 0x00A932AE File Offset: 0x00A914AE
+		// Token: 0x06022673 RID: 140915 RVA: 0x009BF4CE File Offset: 0x009BD6CE
 		public void SetColorUpdateParamPermanent(FName name, FLinearColor value, EKuroCharBodySpecifiedType bodyType, EKuroCharSlotSpecifiedType slotType, EKuroCharMeshPart? meshPart = null)
 		{
 			this.ControllerComponent.AddColorUpdateParamPermanent(name, value, bodyType, slotType, meshPart.GetValueOrDefault(EKuroCharMeshPart.ECharacterMeshPart_Max));
 		}
 
-		// Token: 0x0602DF8A RID: 188298 RVA: 0x00A932C9 File Offset: 0x00A914C9
+		// Token: 0x06022674 RID: 140916 RVA: 0x009BF4E9 File Offset: 0x009BD6E9
 		public void SetTextureUpdateParamPermanent(FName name, UTexture value, EKuroCharBodySpecifiedType bodyType, EKuroCharSlotSpecifiedType slotType, EKuroCharMeshPart? meshPart = null)
 		{
 			this.ControllerComponent.AddTextureUpdateParamPermanent(name, value, bodyType, slotType, meshPart.GetValueOrDefault(EKuroCharMeshPart.ECharacterMeshPart_Max));
 		}
 
-		// Token: 0x0602DF8B RID: 188299 RVA: 0x00A932E4 File Offset: 0x00A914E4
+		// Token: 0x06022675 RID: 140917 RVA: 0x009BF504 File Offset: 0x009BD704
 		public void RemoveFloatUpdateParamPermanent(FName name, EKuroCharBodySpecifiedType bodyType, EKuroCharSlotSpecifiedType slotType, EKuroCharMeshPart? meshPart = null)
 		{
 			this.ControllerComponent.RemoveFloatUpdateParamPermanent(name, bodyType, slotType, meshPart.GetValueOrDefault(EKuroCharMeshPart.ECharacterMeshPart_Max));
 		}
 
-		// Token: 0x0602DF8C RID: 188300 RVA: 0x00A932FD File Offset: 0x00A914FD
+		// Token: 0x06022676 RID: 140918 RVA: 0x009BF51D File Offset: 0x009BD71D
 		public void RemoveColorUpdateParamPermanent(FName name, EKuroCharBodySpecifiedType bodyType, EKuroCharSlotSpecifiedType slotType, EKuroCharMeshPart? meshPart = null)
 		{
 			this.ControllerComponent.RemoveColorUpdateParamPermanent(name, bodyType, slotType, meshPart.GetValueOrDefault(EKuroCharMeshPart.ECharacterMeshPart_Max));
 		}
 
-		// Token: 0x0602DF8D RID: 188301 RVA: 0x00A93316 File Offset: 0x00A91516
+		// Token: 0x06022677 RID: 140919 RVA: 0x009BF536 File Offset: 0x009BD736
 		public void RemoveTextureUpdateParamPermanent(FName name, EKuroCharBodySpecifiedType bodyType, EKuroCharSlotSpecifiedType slotType, EKuroCharMeshPart? meshPart = null)
 		{
 			this.ControllerComponent.RemoveTextureUpdateParamPermanent(name, bodyType, slotType, meshPart.GetValueOrDefault(EKuroCharMeshPart.ECharacterMeshPart_Max));
 		}
 
-		// Token: 0x0602DF8E RID: 188302 RVA: 0x00A9332F File Offset: 0x00A9152F
+		// Token: 0x06022678 RID: 140920 RVA: 0x009BF54F File Offset: 0x009BD74F
 		public void SetExternalMaterialReplace(UMaterialInterface material, EKuroCharBodySpecifiedType bodyType, EKuroCharSlotSpecifiedType slotType, EKuroCharMeshPart? meshPart = null)
 		{
 			this.ControllerComponent.SetExternalMaterialReplace(material, bodyType, slotType, meshPart.GetValueOrDefault(EKuroCharMeshPart.ECharacterMeshPart_Max));
 		}
 
-		// Token: 0x0602DF8F RID: 188303 RVA: 0x00A93348 File Offset: 0x00A91548
+		// Token: 0x06022679 RID: 140921 RVA: 0x009BF568 File Offset: 0x009BD768
 		public void SetExternalMaterialReplaceByIndex(UMaterialInterface material, FName bodyName, int materialIndex)
 		{
 			this.ControllerComponent.SetExternalMaterialReplaceByIndex(material, bodyName, materialIndex);
 		}
 
-		// Token: 0x0602DF90 RID: 188304 RVA: 0x00A93358 File Offset: 0x00A91558
+		// Token: 0x0602267A RID: 140922 RVA: 0x009BF578 File Offset: 0x009BD778
 		public void RemoveExternalMaterialReplace(EKuroCharBodySpecifiedType bodyType, EKuroCharSlotSpecifiedType slotType, EKuroCharMeshPart? meshPart = null)
 		{
 			this.ControllerComponent.RemoveExternalMaterialReplace(bodyType, slotType, meshPart.GetValueOrDefault(EKuroCharMeshPart.ECharacterMeshPart_Max));
 		}
 
-		// Token: 0x0602DF91 RID: 188305 RVA: 0x00A93370 File Offset: 0x00A91570
+		// Token: 0x0602267B RID: 140923 RVA: 0x009BF590 File Offset: 0x009BD790
 		public void RemoveExternalMaterialReplaceByIndex(FName bodyName, int materialIndex)
 		{
 			this.ControllerComponent.RemoveExternalMaterialReplaceByIndex(bodyName, materialIndex);
 		}
 
-		// Token: 0x0602DF92 RID: 188306 RVA: 0x00A9337F File Offset: 0x00A9157F
+		// Token: 0x0602267C RID: 140924 RVA: 0x009BF59F File Offset: 0x009BD79F
 		public void AddAlphaTestCount(EKuroCharBodySpecifiedType bodyType)
 		{
 			this.ControllerComponent.AddExternalAlphaTestRefCount(bodyType);
 		}
 
-		// Token: 0x0602DF93 RID: 188307 RVA: 0x00A9338D File Offset: 0x00A9158D
+		// Token: 0x0602267D RID: 140925 RVA: 0x009BF5AD File Offset: 0x009BD7AD
 		public void AddOutlineStencilTestCount(EKuroCharBodySpecifiedType bodyType)
 		{
 			this.ControllerComponent.AddExternalOutlineStencilTestRefCount(bodyType);
 		}
 
-		// Token: 0x0602DF94 RID: 188308 RVA: 0x00A9339B File Offset: 0x00A9159B
+		// Token: 0x0602267E RID: 140926 RVA: 0x009BF5BB File Offset: 0x009BD7BB
 		public void AddBattleCount(EKuroCharBodySpecifiedType bodyType)
 		{
 			this.ControllerComponent.AddExternalBattleRefCount(bodyType);
 		}
 
-		// Token: 0x0602DF95 RID: 188309 RVA: 0x00A933A9 File Offset: 0x00A915A9
+		// Token: 0x0602267F RID: 140927 RVA: 0x009BF5C9 File Offset: 0x009BD7C9
 		public void AddBattleMaskCount(EKuroCharBodySpecifiedType bodyType)
 		{
 			this.ControllerComponent.AddExternalBattleMaskRefCount(bodyType);
 		}
 
-		// Token: 0x0602DF96 RID: 188310 RVA: 0x00A933B7 File Offset: 0x00A915B7
+		// Token: 0x06022680 RID: 140928 RVA: 0x009BF5D7 File Offset: 0x009BD7D7
 		public void RemoveAlphaTestCount(EKuroCharBodySpecifiedType bodyType)
 		{
 			this.ControllerComponent.RemoveExternalAlphaTestRefCount(bodyType);
 		}
 
-		// Token: 0x0602DF97 RID: 188311 RVA: 0x00A933C5 File Offset: 0x00A915C5
+		// Token: 0x06022681 RID: 140929 RVA: 0x009BF5E5 File Offset: 0x009BD7E5
 		public void RemoveOutlineStencilTestCount(EKuroCharBodySpecifiedType bodyType)
 		{
 			this.ControllerComponent.RemoveExternalOutlineStencilTestRefCount(bodyType);
 		}
 
-		// Token: 0x0602DF98 RID: 188312 RVA: 0x00A933D3 File Offset: 0x00A915D3
+		// Token: 0x06022682 RID: 140930 RVA: 0x009BF5F3 File Offset: 0x009BD7F3
 		public void RemoveBattleCount(EKuroCharBodySpecifiedType bodyType)
 		{
 			this.ControllerComponent.RemoveExternalBattleRefCount(bodyType);
 		}
 
-		// Token: 0x0602DF99 RID: 188313 RVA: 0x00A933E1 File Offset: 0x00A915E1
+		// Token: 0x06022683 RID: 140931 RVA: 0x009BF601 File Offset: 0x009BD801
 		public void RemoveBattleMaskCount(EKuroCharBodySpecifiedType bodyType)
 		{
 			this.ControllerComponent.RemoveExternalBattleMaskRefCount(bodyType);
 		}
 
-		// Token: 0x0602DF9A RID: 188314 RVA: 0x00A933EF File Offset: 0x00A915EF
+		// Token: 0x06022684 RID: 140932 RVA: 0x009BF60F File Offset: 0x009BD80F
 		public void SetNoWater(bool value)
 		{
 			this.ControllerComponent.SetAllBodyNoWater(value);
 		}
 
-		// Token: 0x0602DF9B RID: 188315 RVA: 0x00A933FD File Offset: 0x00A915FD
+		// Token: 0x06022685 RID: 140933 RVA: 0x009BF61D File Offset: 0x009BD81D
 		public void AddEffectFinishCallback(Action<int> callback)
 		{
 			if (this.OnEffectFinishCallbackSet == null)
@@ -336,7 +336,7 @@ namespace CSharpScript.Game.Render
 			this.OnEffectFinishCallbackSet.Add(callback);
 		}
 
-		// Token: 0x0602DF9C RID: 188316 RVA: 0x00A9342E File Offset: 0x00A9162E
+		// Token: 0x06022686 RID: 140934 RVA: 0x009BF64E File Offset: 0x009BD84E
 		public void RemoveEffectFinishCallback(Action<int> callback)
 		{
 			if (this.OnEffectFinishCallbackSet == null)
@@ -346,13 +346,13 @@ namespace CSharpScript.Game.Render
 			this.OnEffectFinishCallbackSet.Remove(callback);
 		}
 
-		// Token: 0x0602DF9D RID: 188317 RVA: 0x00A93446 File Offset: 0x00A91646
+		// Token: 0x06022687 RID: 140935 RVA: 0x009BF666 File Offset: 0x009BD866
 		public bool GetAnyUnloopEffect()
 		{
 			return this.ControllerComponent.GetAnyUnloopEffect();
 		}
 
-		// Token: 0x0602DF9E RID: 188318 RVA: 0x00A93454 File Offset: 0x00A91654
+		// Token: 0x06022688 RID: 140936 RVA: 0x009BF674 File Offset: 0x009BD874
 		public void EnableTickGetHeadPosInAllMeshes(bool enable)
 		{
 			TArray<FName> allRegisteredBodyNames = this.ControllerComponent.GetAllRegisteredBodyNames();
@@ -422,43 +422,43 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DF9F RID: 188319 RVA: 0x00A9360E File Offset: 0x00A9180E
+		// Token: 0x06022689 RID: 140937 RVA: 0x009BF82E File Offset: 0x009BDA2E
 		public override void Destroy()
 		{
 		}
 
-		// Token: 0x0602DFA0 RID: 188320 RVA: 0x00A93610 File Offset: 0x00A91810
+		// Token: 0x0602268A RID: 140938 RVA: 0x009BF830 File Offset: 0x009BDA30
 		public override string GetStatName()
 		{
 			return "CharMaterialContainerV2";
 		}
 
-		// Token: 0x0602DFA1 RID: 188321 RVA: 0x00A93617 File Offset: 0x00A91817
+		// Token: 0x0602268B RID: 140939 RVA: 0x009BF837 File Offset: 0x009BDA37
 		public override int GetComponentId()
 		{
 			return 13;
 		}
 
-		// Token: 0x040188AC RID: 100524
+		// Token: 0x04012EE7 RID: 77543
 		[Nullable(2)]
 		private UKuroMaterialControllerComponent ControllerComponent;
 
-		// Token: 0x040188AD RID: 100525
+		// Token: 0x04012EE8 RID: 77544
 		[Nullable(2)]
 		private Stat StatTick;
 
-		// Token: 0x040188AE RID: 100526
+		// Token: 0x04012EE9 RID: 77545
 		[Nullable(2)]
 		private Stat StatUpdateEffectOnly;
 
-		// Token: 0x040188AF RID: 100527
+		// Token: 0x04012EEA RID: 77546
 		public string IdentifyName = string.Empty;
 
-		// Token: 0x040188B0 RID: 100528
+		// Token: 0x04012EEB RID: 77547
 		[Nullable(2)]
 		private CharBodyEffect BodyEffect;
 
-		// Token: 0x040188B1 RID: 100529
+		// Token: 0x04012EEC RID: 77548
 		public string[] MeshPartHeadNamesArray = new string[]
 		{
 			"Bangs",
@@ -468,7 +468,7 @@ namespace CSharpScript.Game.Render
 			"Eye"
 		};
 
-		// Token: 0x040188B2 RID: 100530
+		// Token: 0x04012EED RID: 77549
 		[Nullable(new byte[]
 		{
 			2,

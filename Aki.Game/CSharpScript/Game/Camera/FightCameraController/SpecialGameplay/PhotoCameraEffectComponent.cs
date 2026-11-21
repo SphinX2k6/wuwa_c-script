@@ -9,13 +9,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 {
-	// Token: 0x020072FD RID: 29437
+	// Token: 0x02006480 RID: 25728
 	[NullableContext(1)]
 	[Nullable(0)]
 	[RegisterPhotoCameraComponent(EPhotoCameraComponent.Effect)]
 	public class PhotoCameraEffectComponent : PhotoCameraComponentBase
 	{
-		// Token: 0x060483B9 RID: 295865 RVA: 0x0128E408 File Offset: 0x0128C608
+		// Token: 0x0603E805 RID: 256005 RVA: 0x01230DBC File Offset: 0x0122EFBC
 		protected override void OnInit()
 		{
 			this.EnterTimeControl();
@@ -28,7 +28,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			Log.Instance.Info(ELogModule.PhotoCamera, ELogAuthor.CXJ, "拍照效果组件:BP_CameraEffect 创建完成", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x060483BA RID: 295866 RVA: 0x0128E480 File Offset: 0x0128C680
+		// Token: 0x0603E806 RID: 256006 RVA: 0x01230E34 File Offset: 0x0122F034
 		protected override void OnDestroy()
 		{
 			this.ExitTimeControl();
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			Log.Instance.Info(ELogModule.PhotoCamera, ELogAuthor.CXJ, "拍照效果组件:已销毁 BP_CameraEffect", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x060483BB RID: 295867 RVA: 0x0128E528 File Offset: 0x0128C728
+		// Token: 0x0603E807 RID: 256007 RVA: 0x01230EDC File Offset: 0x0122F0DC
 		public unsafe int SelectWind(int windId, int direction, int defaultStrength, bool isDefault)
 		{
 			this.CurrentWindId = windId;
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			return (int)num;
 		}
 
-		// Token: 0x060483BC RID: 295868 RVA: 0x0128E624 File Offset: 0x0128C824
+		// Token: 0x0603E808 RID: 256008 RVA: 0x01230FD8 File Offset: 0x0122F1D8
 		public void SetWindStrength(float strength)
 		{
 			this.WindStrengthMap[this.CurrentWindId] = strength;
@@ -93,13 +93,13 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.SetWind(null, strength2);
 		}
 
-		// Token: 0x060483BD RID: 295869 RVA: 0x0128E661 File Offset: 0x0128C861
+		// Token: 0x0603E809 RID: 256009 RVA: 0x01231015 File Offset: 0x0122F215
 		private void ApplyWind(int direction, float strength)
 		{
 			this.SetWind(new float?((float)direction), new float?(strength / 100f));
 		}
 
-		// Token: 0x060483BE RID: 295870 RVA: 0x0128E67C File Offset: 0x0128C87C
+		// Token: 0x0603E80A RID: 256010 RVA: 0x01231030 File Offset: 0x0122F230
 		private void SetWind(float? direction = null, float? strength01 = null)
 		{
 			if (this.EffectActor == null || !this.EffectActor.IsValid())
@@ -118,7 +118,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.EffectActor.UpdateWindFieldDirectoin();
 		}
 
-		// Token: 0x060483BF RID: 295871 RVA: 0x0128E700 File Offset: 0x0128C900
+		// Token: 0x0603E80B RID: 256011 RVA: 0x012310B4 File Offset: 0x0122F2B4
 		public unsafe int SelectAtmosphere(int atmosphereId, EPhotoClusterEffectType effectType, int defaultStrength, bool isDefault)
 		{
 			this.CurrentAtmosphereId = atmosphereId;
@@ -155,14 +155,14 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			return (int)num;
 		}
 
-		// Token: 0x060483C0 RID: 295872 RVA: 0x0128E844 File Offset: 0x0128CA44
+		// Token: 0x0603E80C RID: 256012 RVA: 0x012311F8 File Offset: 0x0122F3F8
 		public void SetAtmosphereStrength(float strength)
 		{
 			this.AtmosphereStrengthMap[this.CurrentAtmosphereId] = strength;
 			this.SetClusterEffectDensity(strength / 100f);
 		}
 
-		// Token: 0x060483C1 RID: 295873 RVA: 0x0128E868 File Offset: 0x0128CA68
+		// Token: 0x0603E80D RID: 256013 RVA: 0x0123121C File Offset: 0x0122F41C
 		private unsafe void OpenClusterEffect(EPhotoClusterEffectType effectType)
 		{
 			if (this.EffectActor == null || !this.EffectActor.IsValid())
@@ -210,7 +210,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			instance4.Info(module4, author4, message4, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 2));
 		}
 
-		// Token: 0x060483C2 RID: 295874 RVA: 0x0128EA10 File Offset: 0x0128CC10
+		// Token: 0x0603E80E RID: 256014 RVA: 0x012313C4 File Offset: 0x0122F5C4
 		private void CloseClusterEffect()
 		{
 			if (this.CurrentClusterEffectType == EPhotoClusterEffectType.None)
@@ -238,7 +238,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			instance2.Info(module2, author2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple2));
 		}
 
-		// Token: 0x060483C3 RID: 295875 RVA: 0x0128EAC4 File Offset: 0x0128CCC4
+		// Token: 0x0603E80F RID: 256015 RVA: 0x01231478 File Offset: 0x0122F678
 		private void SetClusterEffectDensity(float density)
 		{
 			if (this.EffectActor == null || !this.EffectActor.IsValid())
@@ -249,7 +249,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.EffectActor.集群特效密度 = density;
 		}
 
-		// Token: 0x060483C4 RID: 295876 RVA: 0x0128EB14 File Offset: 0x0128CD14
+		// Token: 0x0603E810 RID: 256016 RVA: 0x012314C8 File Offset: 0x0122F6C8
 		public unsafe void SelectWeather(int weatherId, bool isDefault)
 		{
 			this.CurrentWeatherId = (isDefault ? 0 : weatherId);
@@ -312,13 +312,13 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}, ResourceSystem.EResourceLoadPriority.Default, "Ui.WeatherUi");
 		}
 
-		// Token: 0x060483C5 RID: 295877 RVA: 0x0128EC6D File Offset: 0x0128CE6D
+		// Token: 0x0603E811 RID: 256017 RVA: 0x01231621 File Offset: 0x0122F821
 		public int GetCurrentWeatherId()
 		{
 			return this.CurrentWeatherId;
 		}
 
-		// Token: 0x060483C6 RID: 295878 RVA: 0x0128EC78 File Offset: 0x0128CE78
+		// Token: 0x0603E812 RID: 256018 RVA: 0x0123162C File Offset: 0x0122F82C
 		[NullableContext(2)]
 		private void ApplyWeatherDA(UKuroWeatherDataAsset dataAsset)
 		{
@@ -349,7 +349,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}
 		}
 
-		// Token: 0x060483C7 RID: 295879 RVA: 0x0128ED3C File Offset: 0x0128CF3C
+		// Token: 0x0603E813 RID: 256019 RVA: 0x012316F0 File Offset: 0x0122F8F0
 		private void CancelWeatherLoadTask()
 		{
 			if (this.WeatherLoadTask != 0)
@@ -359,7 +359,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			}
 		}
 
-		// Token: 0x060483C8 RID: 295880 RVA: 0x0128ED60 File Offset: 0x0128CF60
+		// Token: 0x0603E814 RID: 256020 RVA: 0x01231714 File Offset: 0x0122F914
 		private void ResetWeather()
 		{
 			this.CancelWeatherLoadTask();
@@ -369,7 +369,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			Log.Instance.Info(ELogModule.PhotoCamera, ELogAuthor.CXJ, "拍照效果组件:天气已复位,PPV天气DA已清空", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x060483C9 RID: 295881 RVA: 0x0128EDA8 File Offset: 0x0128CFA8
+		// Token: 0x0603E815 RID: 256021 RVA: 0x0123175C File Offset: 0x0122F95C
 		private void EnterTimeControl()
 		{
 			if (this.IsTimeControlEntered)
@@ -394,7 +394,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x060483CA RID: 295882 RVA: 0x0128EE54 File Offset: 0x0128D054
+		// Token: 0x0603E816 RID: 256022 RVA: 0x01231808 File Offset: 0x0122FA08
 		public void SetPhotoTime(float hour)
 		{
 			BP_GlobalGI_C globalGIActor = this.GetGlobalGIActor();
@@ -412,7 +412,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			globalGIActor.UpdateTimeOnce(hour);
 		}
 
-		// Token: 0x060483CB RID: 295883 RVA: 0x0128EEA9 File Offset: 0x0128D0A9
+		// Token: 0x0603E817 RID: 256023 RVA: 0x0123185D File Offset: 0x0122FA5D
 		public float GetPhotoTime()
 		{
 			if (this.PhotoTimeHour < 0f)
@@ -422,7 +422,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			return this.PhotoTimeHour;
 		}
 
-		// Token: 0x060483CC RID: 295884 RVA: 0x0128EED4 File Offset: 0x0128D0D4
+		// Token: 0x0603E818 RID: 256024 RVA: 0x01231888 File Offset: 0x0122FA88
 		private void ExitTimeControl()
 		{
 			if (!this.IsTimeControlEntered)
@@ -441,7 +441,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			Log.Instance.Info(ELogModule.PhotoCamera, ELogAuthor.CXJ, "拍照效果组件:已交回时间控制权,恢复GI时间Tick", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x060483CD RID: 295885 RVA: 0x0128EF4C File Offset: 0x0128D14C
+		// Token: 0x0603E819 RID: 256025 RVA: 0x01231900 File Offset: 0x0122FB00
 		[NullableContext(2)]
 		private BP_GlobalGI_C GetGlobalGIActor()
 		{
@@ -449,14 +449,14 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			return ((kuroGISystem != null) ? kuroGISystem.GetKuroGlobalGIActor() : null) as BP_GlobalGI_C;
 		}
 
-		// Token: 0x060483CE RID: 295886 RVA: 0x0128EF69 File Offset: 0x0128D169
+		// Token: 0x0603E81A RID: 256026 RVA: 0x0123191D File Offset: 0x0122FB1D
 		public int SelectLight(PhotoLight data)
 		{
 			this.UserSelectedLightId = data.Id;
 			return this.ApplyLight(data);
 		}
 
-		// Token: 0x060483CF RID: 295887 RVA: 0x0128EF80 File Offset: 0x0128D180
+		// Token: 0x0603E81B RID: 256027 RVA: 0x01231934 File Offset: 0x0122FB34
 		public unsafe int ApplyLight(PhotoLight data)
 		{
 			this.CurrentLightId = data.Id;
@@ -481,19 +481,19 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			return (int)direction;
 		}
 
-		// Token: 0x060483D0 RID: 295888 RVA: 0x0128F08C File Offset: 0x0128D28C
+		// Token: 0x0603E81C RID: 256028 RVA: 0x01231A40 File Offset: 0x0122FC40
 		public int GetUserSelectedLightId()
 		{
 			return this.UserSelectedLightId;
 		}
 
-		// Token: 0x060483D1 RID: 295889 RVA: 0x0128F094 File Offset: 0x0128D294
+		// Token: 0x0603E81D RID: 256029 RVA: 0x01231A48 File Offset: 0x0122FC48
 		public int GetCurrentLightId()
 		{
 			return this.CurrentLightId;
 		}
 
-		// Token: 0x060483D2 RID: 295890 RVA: 0x0128F09C File Offset: 0x0128D29C
+		// Token: 0x0603E81E RID: 256030 RVA: 0x01231A50 File Offset: 0x0122FC50
 		public float GetCurrentLightDirection()
 		{
 			float result;
@@ -504,7 +504,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			return result;
 		}
 
-		// Token: 0x060483D3 RID: 295891 RVA: 0x0128F0C8 File Offset: 0x0128D2C8
+		// Token: 0x0603E81F RID: 256031 RVA: 0x01231A7C File Offset: 0x0122FC7C
 		public void SetLightDirection(float direction)
 		{
 			this.LightDirectionMap[this.CurrentLightId] = direction;
@@ -521,7 +521,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.ApplyCharacterLight(this.CurrentLight.Value, direction);
 		}
 
-		// Token: 0x060483D4 RID: 295892 RVA: 0x0128F138 File Offset: 0x0128D338
+		// Token: 0x0603E820 RID: 256032 RVA: 0x01231AEC File Offset: 0x0122FCEC
 		private void ApplyCharacterLight(PhotoLight data, float direction)
 		{
 			if (this.EffectActor == null || !this.EffectActor.IsValid())
@@ -547,7 +547,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			this.EffectActor.UpdateCharacterLight();
 		}
 
-		// Token: 0x060483D5 RID: 295893 RVA: 0x0128F24C File Offset: 0x0128D44C
+		// Token: 0x0603E821 RID: 256033 RVA: 0x01231C00 File Offset: 0x0122FE00
 		public unsafe void ApplyFrame(PhotoFrame config, float frameXRatio, float frameYRatio, bool usePreviewBlur)
 		{
 			if (this.EffectActor == null || !this.EffectActor.IsValid())
@@ -629,7 +629,7 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			instance3.Info(module3, author3, message3, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 3));
 		}
 
-		// Token: 0x060483D6 RID: 295894 RVA: 0x0128F5F8 File Offset: 0x0128D7F8
+		// Token: 0x0603E822 RID: 256034 RVA: 0x01231FAC File Offset: 0x012301AC
 		public void ResetFrame()
 		{
 			if (this.EffectActor == null || !this.EffectActor.IsValid())
@@ -641,65 +641,65 @@ namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 			Log.Instance.Info(ELogModule.PhotoCamera, ELogAuthor.CXJ, "拍照效果组件:画幅已复位", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x060483D7 RID: 295895 RVA: 0x0128F650 File Offset: 0x0128D850
+		// Token: 0x0603E823 RID: 256035 RVA: 0x01232004 File Offset: 0x01230204
 		public int GetCurrentWindId()
 		{
 			return this.CurrentWindId;
 		}
 
-		// Token: 0x060483D8 RID: 295896 RVA: 0x0128F658 File Offset: 0x0128D858
+		// Token: 0x0603E824 RID: 256036 RVA: 0x0123200C File Offset: 0x0123020C
 		public int GetCurrentAtmosphereId()
 		{
 			return this.CurrentAtmosphereId;
 		}
 
-		// Token: 0x0402629B RID: 156315
+		// Token: 0x04021586 RID: 136582
 		[Nullable(2)]
 		private BP_CameraEffect_C EffectActor;
 
-		// Token: 0x0402629C RID: 156316
+		// Token: 0x04021587 RID: 136583
 		private readonly Dictionary<int, float> WindStrengthMap = new Dictionary<int, float>();
 
-		// Token: 0x0402629D RID: 156317
+		// Token: 0x04021588 RID: 136584
 		private readonly Dictionary<int, float> AtmosphereStrengthMap = new Dictionary<int, float>();
 
-		// Token: 0x0402629E RID: 156318
+		// Token: 0x04021589 RID: 136585
 		private readonly Dictionary<int, float> LightDirectionMap = new Dictionary<int, float>();
 
-		// Token: 0x0402629F RID: 156319
+		// Token: 0x0402158A RID: 136586
 		private int CurrentWindId;
 
-		// Token: 0x040262A0 RID: 156320
+		// Token: 0x0402158B RID: 136587
 		private int CurrentAtmosphereId;
 
-		// Token: 0x040262A1 RID: 156321
+		// Token: 0x0402158C RID: 136588
 		private int CurrentLightId;
 
-		// Token: 0x040262A2 RID: 156322
+		// Token: 0x0402158D RID: 136589
 		private int UserSelectedLightId;
 
-		// Token: 0x040262A3 RID: 156323
+		// Token: 0x0402158E RID: 136590
 		private PhotoLight? CurrentLight;
 
-		// Token: 0x040262A4 RID: 156324
+		// Token: 0x0402158F RID: 136591
 		private EPhotoClusterEffectType CurrentClusterEffectType;
 
-		// Token: 0x040262A5 RID: 156325
+		// Token: 0x04021590 RID: 136592
 		private const float PPV_WEATHER_PRIORITY = 9999999f;
 
-		// Token: 0x040262A6 RID: 156326
+		// Token: 0x04021591 RID: 136593
 		private int CurrentWeatherId;
 
-		// Token: 0x040262A7 RID: 156327
+		// Token: 0x04021592 RID: 136594
 		private bool IsPPVPriorityApplied;
 
-		// Token: 0x040262A8 RID: 156328
+		// Token: 0x04021593 RID: 136595
 		private int WeatherLoadTask;
 
-		// Token: 0x040262A9 RID: 156329
+		// Token: 0x04021594 RID: 136596
 		private float PhotoTimeHour = -1f;
 
-		// Token: 0x040262AA RID: 156330
+		// Token: 0x04021595 RID: 136597
 		private bool IsTimeControlEntered;
 	}
 }

@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020008D4 RID: 2260
+	// Token: 0x0200091F RID: 2335
 	public class ConfigRoleTrialUiConfigById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600350B RID: 13579 RVA: 0x00185334 File Offset: 0x00183534
+		// Token: 0x060036CD RID: 14029 RVA: 0x00192554 File Offset: 0x00190754
 		static ConfigRoleTrialUiConfigById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRoleTrialUiConfigById.CreateStaticDefaultValue), new Action(ConfigRoleTrialUiConfigById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600350C RID: 13580 RVA: 0x00185354 File Offset: 0x00183554
+		// Token: 0x060036CE RID: 14030 RVA: 0x00192574 File Offset: 0x00190774
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRoleTrialUiConfigById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600350D RID: 13581 RVA: 0x001853D3 File Offset: 0x001835D3
+		// Token: 0x060036CF RID: 14031 RVA: 0x001925F3 File Offset: 0x001907F3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRoleTrialUiConfigById.LogPair = null;
 			ConfigRoleTrialUiConfigById.HandleId = 0;
 		}
 
-		// Token: 0x0600350E RID: 13582 RVA: 0x001853E1 File Offset: 0x001835E1
+		// Token: 0x060036D0 RID: 14032 RVA: 0x00192601 File Offset: 0x00190801
 		public static void Init()
 		{
 			ConfigRoleTrialUiConfigById.HandleId = ConfigCommon.InitDataStatement(ConfigRoleTrialUiConfigById.HandleId, "db_roletrial.db", "select BinData from `RoleTrialUiConfig` where Id=?");
 		}
 
-		// Token: 0x0600350F RID: 13583 RVA: 0x001853FC File Offset: 0x001835FC
+		// Token: 0x060036D1 RID: 14033 RVA: 0x0019261C File Offset: 0x0019081C
 		public static RoleTrialUiConfig? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRoleTrialUiConfigById.HandleId, ConfigRoleTrialUiConfigById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RoleTrialUiConfig?(rootAsRoleTrialUiConfig);
 		}
 
-		// Token: 0x04003DB2 RID: 15794
+		// Token: 0x04003FBF RID: 16319
 		private const string DB = "db_roletrial.db";
 
-		// Token: 0x04003DB3 RID: 15795
+		// Token: 0x04003FC0 RID: 16320
 		private const string FILE = "j.角色试用活动.xlsx";
 
-		// Token: 0x04003DB4 RID: 15796
+		// Token: 0x04003FC1 RID: 16321
 		private const string TABLE = "RoleTrialUiConfig";
 
-		// Token: 0x04003DB5 RID: 15797
+		// Token: 0x04003FC2 RID: 16322
 		private const string COMMAND = "select BinData from `RoleTrialUiConfig` where Id=?";
 
-		// Token: 0x04003DB6 RID: 15798
+		// Token: 0x04003FC3 RID: 16323
 		private const string KEY_PREFIX = "RoleTrialUiConfigById";
 
-		// Token: 0x04003DB7 RID: 15799
+		// Token: 0x04003FC4 RID: 16324
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003DB8 RID: 15800
+		// Token: 0x04003FC5 RID: 16325
 		private static int HandleId;
 	}
 }

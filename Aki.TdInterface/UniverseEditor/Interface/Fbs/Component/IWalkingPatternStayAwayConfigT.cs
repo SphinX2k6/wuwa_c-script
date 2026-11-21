@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005B4B RID: 23371
+	// Token: 0x02006161 RID: 24929
 	public class IWalkingPatternStayAwayConfigT
 	{
-		// Token: 0x1700B078 RID: 45176
-		// (get) Token: 0x06027F6B RID: 163691 RVA: 0x0057E9D6 File Offset: 0x0057CBD6
-		// (set) Token: 0x06027F6C RID: 163692 RVA: 0x0057E9DE File Offset: 0x0057CBDE
+		// Token: 0x1700B9C0 RID: 47552
+		// (get) Token: 0x0602A52F RID: 173359 RVA: 0x005C6466 File Offset: 0x005C4666
+		// (set) Token: 0x0602A530 RID: 173360 RVA: 0x005C646E File Offset: 0x005C466E
 		public int SplineDistance { get; set; }
 
-		// Token: 0x1700B079 RID: 45177
-		// (get) Token: 0x06027F6D RID: 163693 RVA: 0x0057E9E7 File Offset: 0x0057CBE7
-		// (set) Token: 0x06027F6E RID: 163694 RVA: 0x0057E9EF File Offset: 0x0057CBEF
+		// Token: 0x1700B9C1 RID: 47553
+		// (get) Token: 0x0602A531 RID: 173361 RVA: 0x005C6477 File Offset: 0x005C4677
+		// (set) Token: 0x0602A532 RID: 173362 RVA: 0x005C647F File Offset: 0x005C467F
 		public int StayAwayTime { get; set; }
 
-		// Token: 0x1700B07A RID: 45178
-		// (get) Token: 0x06027F6F RID: 163695 RVA: 0x0057E9F8 File Offset: 0x0057CBF8
-		// (set) Token: 0x06027F70 RID: 163696 RVA: 0x0057EA00 File Offset: 0x0057CC00
+		// Token: 0x1700B9C2 RID: 47554
+		// (get) Token: 0x0602A533 RID: 173363 RVA: 0x005C6488 File Offset: 0x005C4688
+		// (set) Token: 0x0602A534 RID: 173364 RVA: 0x005C6490 File Offset: 0x005C4690
 		public byte NullMask { get; set; }
 
-		// Token: 0x06027F71 RID: 163697 RVA: 0x0057EA09 File Offset: 0x0057CC09
+		// Token: 0x0602A535 RID: 173365 RVA: 0x005C6499 File Offset: 0x005C4699
 		public IWalkingPatternStayAwayConfigT()
 		{
 			this.SplineDistance = 0;

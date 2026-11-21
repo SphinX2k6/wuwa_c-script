@@ -4,21 +4,20 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200081C RID: 2076
+	// Token: 0x020008BF RID: 2239
 	public class IWuWaGoStartGrid_SetValue
 	{
-		// Token: 0x04001DD6 RID: 7638
+		// Token: 0x04001FE2 RID: 8162
 		public EWuWaGoEntityType Type;
 
-		// Token: 0x04001DD7 RID: 7639
-		[Nullable(1)]
+		// Token: 0x04001FE3 RID: 8163
 		public IWuWaGoGridLinkData LinkData;
 
-		// Token: 0x04001DD8 RID: 7640
+		// Token: 0x04001FE4 RID: 8164
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<IWuWaGoHintStepBase> HintSteps;
 	}

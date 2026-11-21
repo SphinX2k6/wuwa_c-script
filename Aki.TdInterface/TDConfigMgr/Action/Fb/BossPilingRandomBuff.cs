@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002AF7 RID: 10999
+	// Token: 0x02002DEB RID: 11755
 	public class BossPilingRandomBuff : ActionParams
 	{
-		// Token: 0x0600F0F7 RID: 61687 RVA: 0x0022F6D8 File Offset: 0x0022D8D8
-		[NullableContext(1)]
+		// Token: 0x0600FFAD RID: 65453 RVA: 0x0024D3E4 File Offset: 0x0024B5E4
 		public static BossPilingRandomBuff Create(IBossPilingRandomBuff? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004CCB RID: 19659
-		// (get) Token: 0x0600F0F8 RID: 61688 RVA: 0x0022F6F7 File Offset: 0x0022D8F7
+		// Token: 0x17005085 RID: 20613
+		// (get) Token: 0x0600FFAE RID: 65454 RVA: 0x0024D403 File Offset: 0x0024B603
 		public virtual int BuffPoolId
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x0400848B RID: 33931
+		// Token: 0x04008B8F RID: 35727
 		private IBossPilingRandomBuff Instance;
 	}
 }

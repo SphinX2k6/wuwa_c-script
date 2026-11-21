@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 
-// Token: 0x020013DC RID: 5084
+// Token: 0x02000890 RID: 2192
 [NullableContext(1)]
 [Nullable(0)]
 public class ActivityPhantomCollectData : ActivityBaseData
 {
-	// Token: 0x06008F90 RID: 36752 RVA: 0x001F048D File Offset: 0x001EE68D
+	// Token: 0x06006325 RID: 25381 RVA: 0x001F8FC5 File Offset: 0x001F71C5
 	protected override void PhraseEx(ActivityData data)
 	{
 		if (data.PhantomCollectActivity == null)
@@ -19,13 +19,21 @@ public class ActivityPhantomCollectData : ActivityBaseData
 		this.PhantomCollectRewardList = data.PhantomCollectActivity.PhantomCollectRewards.ToArray<PhantomCollectReward>();
 	}
 
-	// Token: 0x06008F91 RID: 36753 RVA: 0x001F04AE File Offset: 0x001EE6AE
+	// Token: 0x06006326 RID: 25382 RVA: 0x001F8FE8 File Offset: 0x001F71E8
 	protected override bool GetExDataFinishShowState()
 	{
-		return !this.PhantomCollectRewardList.Any((PhantomCollectReward reward) => reward.State != SignState.IsReceive);
+		PhantomCollectReward[] phantomCollectRewardList = this.PhantomCollectRewardList;
+		for (int i = 0; i < phantomCollectRewardList.Length; i++)
+		{
+			if (phantomCollectRewardList[i].State != SignState.IsReceive)
+			{
+				return false;
+			}
+		}
+		return true;
 	}
 
-	// Token: 0x06008F92 RID: 36754 RVA: 0x001F04DD File Offset: 0x001EE6DD
+	// Token: 0x06006327 RID: 25383 RVA: 0x001F9018 File Offset: 0x001F7218
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -36,19 +44,25 @@ public class ActivityPhantomCollectData : ActivityBaseData
 		return this.PhantomCollectRewardList ?? new PhantomCollectReward[0];
 	}
 
-	// Token: 0x06008F93 RID: 36755 RVA: 0x001F04F0 File Offset: 0x001EE6F0
+	// Token: 0x06006328 RID: 25384 RVA: 0x001F902C File Offset: 0x001F722C
 	[NullableContext(2)]
 	public PhantomCollectReward GetPhantomCollectRewardById(int id)
 	{
-		PhantomCollectReward[] phantomCollectRewardList = this.PhantomCollectRewardList;
-		if (phantomCollectRewardList == null)
+		if (this.PhantomCollectRewardList == null)
 		{
 			return null;
 		}
-		return phantomCollectRewardList.FirstOrDefault((PhantomCollectReward reward) => reward.Type == (PhantomCollectRewardType)id);
+		foreach (PhantomCollectReward phantomCollectReward in this.PhantomCollectRewardList)
+		{
+			if (phantomCollectReward.Type == (PhantomCollectRewardType)id)
+			{
+				return phantomCollectReward;
+			}
+		}
+		return null;
 	}
 
-	// Token: 0x06008F94 RID: 36756 RVA: 0x001F0528 File Offset: 0x001EE728
+	// Token: 0x06006329 RID: 25385 RVA: 0x001F9068 File Offset: 0x001F7268
 	public int[] GetCollectPhantomList()
 	{
 		ActivityPhantomCollectConfig instance = ActivityPhantomCollectConfig.Instance;
@@ -60,7 +74,7 @@ public class ActivityPhantomCollectData : ActivityBaseData
 		return phantomCollectActivity.Value.Phantoms();
 	}
 
-	// Token: 0x06008F95 RID: 36757 RVA: 0x001F0578 File Offset: 0x001EE778
+	// Token: 0x0600632A RID: 25386 RVA: 0x001F90B8 File Offset: 0x001F72B8
 	public override bool GetExDataRedPointShowState()
 	{
 		bool result = false;
@@ -78,7 +92,7 @@ public class ActivityPhantomCollectData : ActivityBaseData
 		return result;
 	}
 
-	// Token: 0x06008F96 RID: 36758 RVA: 0x001F05B4 File Offset: 0x001EE7B4
+	// Token: 0x0600632B RID: 25387 RVA: 0x001F90F4 File Offset: 0x001F72F4
 	public int GetCollectPhantomCount()
 	{
 		int[] collectPhantomList = this.GetCollectPhantomList();
@@ -93,14 +107,14 @@ public class ActivityPhantomCollectData : ActivityBaseData
 		return num;
 	}
 
-	// Token: 0x06008F97 RID: 36759 RVA: 0x001F05F0 File Offset: 0x001EE7F0
+	// Token: 0x0600632C RID: 25388 RVA: 0x001F9130 File Offset: 0x001F7330
 	public void UpadatePhantomCollectReward(PhantomCollectReward reward)
 	{
 		if (this.PhantomCollectRewardList == null)
 		{
 			return;
 		}
-		int num = this.PhantomCollectRewardList.ToList<PhantomCollectReward>().FindIndex((PhantomCollectReward item) => item.Type == reward.Type);
+		int num = Array.FindIndex<PhantomCollectReward>(this.PhantomCollectRewardList, (PhantomCollectReward item) => item.Type == reward.Type);
 		if (num == -1)
 		{
 			return;
@@ -108,7 +122,7 @@ public class ActivityPhantomCollectData : ActivityBaseData
 		this.PhantomCollectRewardList[num] = reward;
 	}
 
-	// Token: 0x04003F76 RID: 16246
+	// Token: 0x0400400E RID: 16398
 	[Nullable(new byte[]
 	{
 		2,

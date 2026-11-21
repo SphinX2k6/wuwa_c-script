@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001BF6 RID: 7158
+// Token: 0x020010B5 RID: 4277
 public class FormationViewSwitchCache
 {
-	// Token: 0x040061B4 RID: 25012
+	// Token: 0x04006286 RID: 25222
 	public int EditFormationId;
 
-	// Token: 0x040061B5 RID: 25013
+	// Token: 0x04006287 RID: 25223
 	public int GoBattleFormationId;
 
-	// Token: 0x040061B6 RID: 25014
+	// Token: 0x04006288 RID: 25224
 	[Nullable(1)]
 	public Dictionary<int, int[]> EditingSnapshot = new Dictionary<int, int[]>();
 
-	// Token: 0x040061B7 RID: 25015
+	// Token: 0x04006289 RID: 25225
 	public long SwitchStartTimeMs;
 }

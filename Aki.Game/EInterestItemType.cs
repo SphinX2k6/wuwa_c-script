@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02003206 RID: 12806
+// Token: 0x02002775 RID: 10101
 public enum EInterestItemType
 {
-	// Token: 0x0400D950 RID: 55632
+	// Token: 0x0400DDEF RID: 56815
 	Entity,
-	// Token: 0x0400D951 RID: 55633
+	// Token: 0x0400DDF0 RID: 56816
 	Position
 }

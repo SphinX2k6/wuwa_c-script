@@ -3,20 +3,20 @@ using Aki.UniverseEditor.Interface.Fbs.Common;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007539 RID: 30009
+	// Token: 0x02007D2F RID: 32047
 	public class IVehicleWaterfallClimbGravityConfigT
 	{
-		// Token: 0x1700E3B8 RID: 58296
-		// (get) Token: 0x060369A2 RID: 223650 RVA: 0x0076B208 File Offset: 0x00769408
-		// (set) Token: 0x060369A3 RID: 223651 RVA: 0x0076B210 File Offset: 0x00769410
+		// Token: 0x1700EFE2 RID: 61410
+		// (get) Token: 0x06039DB8 RID: 236984 RVA: 0x007CE4B0 File Offset: 0x007CC6B0
+		// (set) Token: 0x06039DB9 RID: 236985 RVA: 0x007CE4B8 File Offset: 0x007CC6B8
 		public int SafePositionEntityId { get; set; }
 
-		// Token: 0x1700E3B9 RID: 58297
-		// (get) Token: 0x060369A4 RID: 223652 RVA: 0x0076B219 File Offset: 0x00769419
-		// (set) Token: 0x060369A5 RID: 223653 RVA: 0x0076B221 File Offset: 0x00769421
+		// Token: 0x1700EFE3 RID: 61411
+		// (get) Token: 0x06039DBA RID: 236986 RVA: 0x007CE4C1 File Offset: 0x007CC6C1
+		// (set) Token: 0x06039DBB RID: 236987 RVA: 0x007CE4C9 File Offset: 0x007CC6C9
 		public EWorldAxisType GravityDirection { get; set; }
 
-		// Token: 0x060369A6 RID: 223654 RVA: 0x0076B22A File Offset: 0x0076942A
+		// Token: 0x06039DBC RID: 236988 RVA: 0x007CE4D2 File Offset: 0x007CC6D2
 		public IVehicleWaterfallClimbGravityConfigT()
 		{
 			this.SafePositionEntityId = 0;

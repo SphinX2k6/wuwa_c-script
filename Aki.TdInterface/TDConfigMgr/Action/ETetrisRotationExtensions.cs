@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002469 RID: 9321
+	// Token: 0x0200270A RID: 9994
 	public static class ETetrisRotationExtensions
 	{
-		// Token: 0x0600CA57 RID: 51799 RVA: 0x001DC870 File Offset: 0x001DAA70
+		// Token: 0x0600D707 RID: 55047 RVA: 0x001F6924 File Offset: 0x001F4B24
 		public static string ToEnumString(this ETetrisRotation value)
 		{
 			string result;
@@ -30,7 +30,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CA58 RID: 51800 RVA: 0x001DC8C4 File Offset: 0x001DAAC4
+		// Token: 0x0600D708 RID: 55048 RVA: 0x001F6978 File Offset: 0x001F4B78
 		public static ETetrisRotation FromString(string name)
 		{
 			ETetrisRotation result;
@@ -41,7 +41,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CA59 RID: 51801 RVA: 0x001DC8F0 File Offset: 0x001DAAF0
+		// Token: 0x0600D709 RID: 55049 RVA: 0x001F69A4 File Offset: 0x001F4BA4
 		public static bool TryFromString(string name, out ETetrisRotation value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -73,7 +73,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600CA5A RID: 51802 RVA: 0x001DC958 File Offset: 0x001DAB58
+		// Token: 0x0600D70A RID: 55050 RVA: 0x001F6A0C File Offset: 0x001F4C0C
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -85,7 +85,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CA5B RID: 51803 RVA: 0x001DC980 File Offset: 0x001DAB80
+		// Token: 0x0600D70B RID: 55051 RVA: 0x001F6A34 File Offset: 0x001F4C34
 		public static ETetrisRotation[] GetValues()
 		{
 			return new ETetrisRotation[]
@@ -97,7 +97,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CA5C RID: 51804 RVA: 0x001DC993 File Offset: 0x001DAB93
+		// Token: 0x0600D70C RID: 55052 RVA: 0x001F6A47 File Offset: 0x001F4C47
 		public static string[] GetNames()
 		{
 			return new string[]

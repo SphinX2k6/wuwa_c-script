@@ -2,13 +2,13 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x020017FF RID: 6143
+// Token: 0x02000CB8 RID: 3256
 [NullableContext(1)]
 [Nullable(0)]
 [Config(0)]
 public class ComponentConfig : ConfigBase
 {
-	// Token: 0x0600B409 RID: 46089 RVA: 0x0028A7DC File Offset: 0x002889DC
+	// Token: 0x060087F4 RID: 34804 RVA: 0x00294EFC File Offset: 0x002930FC
 	[return: Nullable(2)]
 	public string GetItemConfigParam(string tag)
 	{
@@ -26,7 +26,7 @@ public class ComponentConfig : ConfigBase
 		return config.Value.ConfigParam;
 	}
 
-	// Token: 0x0600B40A RID: 46090 RVA: 0x0028A838 File Offset: 0x00288A38
+	// Token: 0x060087F5 RID: 34805 RVA: 0x00294F58 File Offset: 0x00293158
 	[return: Nullable(2)]
 	public string GetQualityConfigParam(string tag)
 	{
@@ -44,7 +44,7 @@ public class ComponentConfig : ConfigBase
 		return config.Value.ConfigParam;
 	}
 
-	// Token: 0x0600B40B RID: 46091 RVA: 0x0028A894 File Offset: 0x00288A94
+	// Token: 0x060087F6 RID: 34806 RVA: 0x00294FB4 File Offset: 0x002931B4
 	[return: Nullable(2)]
 	public string GetRoleConfigParam(string tag)
 	{
@@ -62,7 +62,7 @@ public class ComponentConfig : ConfigBase
 		return config.Value.ConfigParam;
 	}
 
-	// Token: 0x0600B40C RID: 46092 RVA: 0x0028A8F0 File Offset: 0x00288AF0
+	// Token: 0x060087F7 RID: 34807 RVA: 0x00295010 File Offset: 0x00293210
 	[return: Nullable(2)]
 	public string GetRoleSkinConfigParam(string tag)
 	{
@@ -80,7 +80,7 @@ public class ComponentConfig : ConfigBase
 		return config.Value.ConfigParam;
 	}
 
-	// Token: 0x0600B40D RID: 46093 RVA: 0x0028A94C File Offset: 0x00288B4C
+	// Token: 0x060087F8 RID: 34808 RVA: 0x0029506C File Offset: 0x0029326C
 	[return: Nullable(2)]
 	public string GetElementConfigParam(string tag)
 	{
@@ -98,7 +98,7 @@ public class ComponentConfig : ConfigBase
 		return config.Value.ConfigParam;
 	}
 
-	// Token: 0x0600B40E RID: 46094 RVA: 0x0028A9A8 File Offset: 0x00288BA8
+	// Token: 0x060087F9 RID: 34809 RVA: 0x002950C8 File Offset: 0x002932C8
 	[return: Nullable(2)]
 	public string GetMonsterConfigParam(string tag)
 	{
@@ -116,7 +116,7 @@ public class ComponentConfig : ConfigBase
 		return config.Value.ConfigParam;
 	}
 
-	// Token: 0x0600B40F RID: 46095 RVA: 0x0028AA04 File Offset: 0x00288C04
+	// Token: 0x060087FA RID: 34810 RVA: 0x00295124 File Offset: 0x00293324
 	[return: Nullable(2)]
 	public string GetDungeonEntranceConfigParam(string tag)
 	{
@@ -134,8 +134,8 @@ public class ComponentConfig : ConfigBase
 		return config.Value.ConfigParam;
 	}
 
-	// Token: 0x17000F1F RID: 3871
-	// (get) Token: 0x0600B410 RID: 46096 RVA: 0x0028AA5D File Offset: 0x00288C5D
+	// Token: 0x17000F42 RID: 3906
+	// (get) Token: 0x060087FB RID: 34811 RVA: 0x0029517D File Offset: 0x0029337D
 	public static ComponentConfig Instance
 	{
 		get
@@ -144,7 +144,7 @@ public class ComponentConfig : ConfigBase
 		}
 	}
 
-	// Token: 0x0600B411 RID: 46097 RVA: 0x0028AA64 File Offset: 0x00288C64
+	// Token: 0x060087FC RID: 34812 RVA: 0x00295184 File Offset: 0x00293384
 	public static ComponentConfig GetOrCreateInstance()
 	{
 		if (ComponentConfig._Instance == null)
@@ -154,7 +154,7 @@ public class ComponentConfig : ConfigBase
 		return ComponentConfig._Instance;
 	}
 
-	// Token: 0x0600B412 RID: 46098 RVA: 0x0028AA78 File Offset: 0x00288C78
+	// Token: 0x060087FD RID: 34813 RVA: 0x00295198 File Offset: 0x00293398
 	public static bool CreateInstance()
 	{
 		if (ComponentConfig._Instance != null)
@@ -165,24 +165,24 @@ public class ComponentConfig : ConfigBase
 		return true;
 	}
 
-	// Token: 0x0600B413 RID: 46099 RVA: 0x0028AA8E File Offset: 0x00288C8E
+	// Token: 0x060087FE RID: 34814 RVA: 0x002951AE File Offset: 0x002933AE
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600B414 RID: 46100 RVA: 0x0028AA90 File Offset: 0x00288C90
+	// Token: 0x060087FF RID: 34815 RVA: 0x002951B0 File Offset: 0x002933B0
 	public static void ResetStaticDefaultValue()
 	{
 		ComponentConfig._Instance = null;
 	}
 
-	// Token: 0x0600B415 RID: 46101 RVA: 0x0028AA98 File Offset: 0x00288C98
+	// Token: 0x06008800 RID: 34816 RVA: 0x002951B8 File Offset: 0x002933B8
 	static ComponentConfig()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ComponentConfig.CreateStaticDefaultValue), new Action(ComponentConfig.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04005166 RID: 20838
+	// Token: 0x04005211 RID: 21009
 	[Nullable(2)]
 	private static ComponentConfig _Instance;
 }

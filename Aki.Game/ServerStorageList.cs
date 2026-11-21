@@ -5,7 +5,7 @@ using Aki.Protocol;
 using CSharpScript.Game.ServerStorage;
 using CSharpScript.Game.ServerStorage.Container;
 
-// Token: 0x0200349B RID: 13467
+// Token: 0x02002A0F RID: 10767
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,18 +14,18 @@ using CSharpScript.Game.ServerStorage.Container;
 })]
 public class ServerStorageList : ServerStorageContainerEntry<List<int>>
 {
-	// Token: 0x0601D4FA RID: 120058 RVA: 0x0082BCCC File Offset: 0x00829ECC
+	// Token: 0x0601B1F6 RID: 111094 RVA: 0x00852F30 File Offset: 0x00851130
 	public ServerStorageList(EClientStorageSystemIdType key) : base(key)
 	{
 	}
 
-	// Token: 0x0601D4FB RID: 120059 RVA: 0x0082BCD5 File Offset: 0x00829ED5
+	// Token: 0x0601B1F7 RID: 111095 RVA: 0x00852F39 File Offset: 0x00851139
 	protected override List<int> CreateContainer()
 	{
 		return new List<int>();
 	}
 
-	// Token: 0x0601D4FC RID: 120060 RVA: 0x0082BCDC File Offset: 0x00829EDC
+	// Token: 0x0601B1F8 RID: 111096 RVA: 0x00852F40 File Offset: 0x00851140
 	public unsafe override void Serialize(ClientStorageInfo info)
 	{
 		if (info.ListData == null)
@@ -45,7 +45,7 @@ public class ServerStorageList : ServerStorageContainerEntry<List<int>>
 		container.AddRange(info.ListData.Data);
 	}
 
-	// Token: 0x0601D4FD RID: 120061 RVA: 0x0082BD70 File Offset: 0x00829F70
+	// Token: 0x0601B1F9 RID: 111097 RVA: 0x00852FD4 File Offset: 0x008511D4
 	[NullableContext(2)]
 	public override ClientStorageInfo Deserialize()
 	{
@@ -61,7 +61,7 @@ public class ServerStorageList : ServerStorageContainerEntry<List<int>>
 		return clientStorageInfo;
 	}
 
-	// Token: 0x0601D4FE RID: 120062 RVA: 0x0082BDA6 File Offset: 0x00829FA6
+	// Token: 0x0601B1FA RID: 111098 RVA: 0x0085300A File Offset: 0x0085120A
 	public void Add(int value)
 	{
 		if (this.Has(value))
@@ -72,7 +72,7 @@ public class ServerStorageList : ServerStorageContainerEntry<List<int>>
 		base.MarkDirty();
 	}
 
-	// Token: 0x0601D4FF RID: 120063 RVA: 0x0082BDC4 File Offset: 0x00829FC4
+	// Token: 0x0601B1FB RID: 111099 RVA: 0x00853028 File Offset: 0x00851228
 	public void Remove(int value)
 	{
 		List<int> container = base.GetContainer();
@@ -85,13 +85,13 @@ public class ServerStorageList : ServerStorageContainerEntry<List<int>>
 		base.MarkDirty();
 	}
 
-	// Token: 0x0601D500 RID: 120064 RVA: 0x0082BDF2 File Offset: 0x00829FF2
+	// Token: 0x0601B1FC RID: 111100 RVA: 0x00853056 File Offset: 0x00851256
 	public bool Has(int value)
 	{
 		return base.GetContainer().Contains(value);
 	}
 
-	// Token: 0x0601D501 RID: 120065 RVA: 0x0082BE00 File Offset: 0x0082A000
+	// Token: 0x0601B1FD RID: 111101 RVA: 0x00853064 File Offset: 0x00851264
 	public int Size()
 	{
 		return base.GetContainer().Count;

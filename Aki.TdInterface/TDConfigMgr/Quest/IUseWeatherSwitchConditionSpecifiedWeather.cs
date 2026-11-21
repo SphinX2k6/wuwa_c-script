@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020011F8 RID: 4600
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001334 RID: 4916
 	public class IUseWeatherSwitchConditionSpecifiedWeather : IUseWeatherSwitchConditionBase
 	{
-		// Token: 0x0600686C RID: 26732 RVA: 0x000F95F4 File Offset: 0x000F77F4
+		// Token: 0x06006EAD RID: 28333 RVA: 0x00106F00 File Offset: 0x00105100
 		private IUseWeatherSwitchConditionSpecifiedWeather_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x0600686D RID: 26733 RVA: 0x000F962C File Offset: 0x000F782C
+		// Token: 0x06006EAE RID: 28334 RVA: 0x00106F38 File Offset: 0x00105138
 		public static IUseWeatherSwitchConditionSpecifiedWeather Create([Nullable(2)] IUseWeatherSwitchConditionSpecifiedWeather instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600686E RID: 26734 RVA: 0x000F963F File Offset: 0x000F783F
+		// Token: 0x06006EAF RID: 28335 RVA: 0x00106F4B File Offset: 0x0010514B
 		public static IUseWeatherSwitchConditionSpecifiedWeather CreateFromSetValue([Nullable(2)] IUseWeatherSwitchConditionSpecifiedWeather_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x0600686F RID: 26735 RVA: 0x000F9652 File Offset: 0x000F7852
+		// Token: 0x06006EB0 RID: 28336 RVA: 0x00106F5E File Offset: 0x0010515E
 		public new IUseWeatherSwitchConditionSpecifiedWeather_SetValue ToSetValue()
 		{
 			return new IUseWeatherSwitchConditionSpecifiedWeather_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x170021C7 RID: 8647
-		// (get) Token: 0x06006870 RID: 26736 RVA: 0x000F9671 File Offset: 0x000F7871
-		// (set) Token: 0x06006871 RID: 26737 RVA: 0x000F969C File Offset: 0x000F789C
+		// Token: 0x17002388 RID: 9096
+		// (get) Token: 0x06006EB1 RID: 28337 RVA: 0x00106F7D File Offset: 0x0010517D
+		// (set) Token: 0x06006EB2 RID: 28338 RVA: 0x00106FA8 File Offset: 0x001051A8
 		public override EUseWeatherSwitchCheckType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x170021C8 RID: 8648
-		// (get) Token: 0x06006872 RID: 26738 RVA: 0x000F96AA File Offset: 0x000F78AA
-		// (set) Token: 0x06006873 RID: 26739 RVA: 0x000F96D5 File Offset: 0x000F78D5
+		// Token: 0x17002389 RID: 9097
+		// (get) Token: 0x06006EB3 RID: 28339 RVA: 0x00106FB6 File Offset: 0x001051B6
+		// (set) Token: 0x06006EB4 RID: 28340 RVA: 0x00106FE1 File Offset: 0x001051E1
 		public virtual int WeatherSwitchId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003E88 RID: 16008
+		// Token: 0x040041F6 RID: 16886
 		[Nullable(2)]
 		protected new IUseWeatherSwitchConditionSpecifiedWeather FbInstance;
 
-		// Token: 0x04003E89 RID: 16009
+		// Token: 0x040041F7 RID: 16887
 		[Nullable(2)]
 		protected new IUseWeatherSwitchConditionSpecifiedWeather_SetValue PocoInterface;
 	}

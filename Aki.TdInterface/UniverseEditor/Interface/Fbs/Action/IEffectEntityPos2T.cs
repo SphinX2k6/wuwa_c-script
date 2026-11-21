@@ -3,30 +3,30 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200662B RID: 26155
+	// Token: 0x02006C9C RID: 27804
 	public class IEffectEntityPos2T
 	{
-		// Token: 0x1700C251 RID: 49745
-		// (get) Token: 0x0602D6B9 RID: 186041 RVA: 0x00638F8B File Offset: 0x0063718B
-		// (set) Token: 0x0602D6BA RID: 186042 RVA: 0x00638F93 File Offset: 0x00637193
+		// Token: 0x1700CBEF RID: 52207
+		// (get) Token: 0x0602FE8A RID: 196234 RVA: 0x00685AF3 File Offset: 0x00683CF3
+		// (set) Token: 0x0602FE8B RID: 196235 RVA: 0x00685AFB File Offset: 0x00683CFB
 		public EPos2 Type { get; set; }
 
-		// Token: 0x1700C252 RID: 49746
-		// (get) Token: 0x0602D6BB RID: 186043 RVA: 0x00638F9C File Offset: 0x0063719C
-		// (set) Token: 0x0602D6BC RID: 186044 RVA: 0x00638FA4 File Offset: 0x006371A4
+		// Token: 0x1700CBF0 RID: 52208
+		// (get) Token: 0x0602FE8C RID: 196236 RVA: 0x00685B04 File Offset: 0x00683D04
+		// (set) Token: 0x0602FE8D RID: 196237 RVA: 0x00685B0C File Offset: 0x00683D0C
 		public int EntityId { get; set; }
 
-		// Token: 0x1700C253 RID: 49747
-		// (get) Token: 0x0602D6BD RID: 186045 RVA: 0x00638FAD File Offset: 0x006371AD
-		// (set) Token: 0x0602D6BE RID: 186046 RVA: 0x00638FB5 File Offset: 0x006371B5
+		// Token: 0x1700CBF1 RID: 52209
+		// (get) Token: 0x0602FE8E RID: 196238 RVA: 0x00685B15 File Offset: 0x00683D15
+		// (set) Token: 0x0602FE8F RID: 196239 RVA: 0x00685B1D File Offset: 0x00683D1D
 		public IVectorInfoT Offset { get; set; }
 
-		// Token: 0x1700C254 RID: 49748
-		// (get) Token: 0x0602D6BF RID: 186047 RVA: 0x00638FBE File Offset: 0x006371BE
-		// (set) Token: 0x0602D6C0 RID: 186048 RVA: 0x00638FC6 File Offset: 0x006371C6
+		// Token: 0x1700CBF2 RID: 52210
+		// (get) Token: 0x0602FE90 RID: 196240 RVA: 0x00685B26 File Offset: 0x00683D26
+		// (set) Token: 0x0602FE91 RID: 196241 RVA: 0x00685B2E File Offset: 0x00683D2E
 		public string AttachSocket { get; set; }
 
-		// Token: 0x0602D6C1 RID: 186049 RVA: 0x00638FCF File Offset: 0x006371CF
+		// Token: 0x0602FE92 RID: 196242 RVA: 0x00685B37 File Offset: 0x00683D37
 		public IEffectEntityPos2T()
 		{
 			this.Type = EPos2.Player;

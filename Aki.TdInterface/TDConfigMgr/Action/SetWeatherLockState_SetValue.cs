@@ -4,13 +4,13 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021F2 RID: 8690
+	// Token: 0x0200245D RID: 9309
 	public class SetWeatherLockState_SetValue
 	{
-		// Token: 0x040071D5 RID: 29141
+		// Token: 0x0400781E RID: 30750
 		public ELockState LockState;
 
-		// Token: 0x040071D6 RID: 29142
+		// Token: 0x0400781F RID: 30751
 		[Nullable(2)]
 		public List<int> AreaIds;
 	}

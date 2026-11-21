@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020021C5 RID: 8645
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002430 RID: 9264
 	public class SetMoveSpeed : ActionParams
 	{
-		// Token: 0x0600BDDA RID: 48602 RVA: 0x001B5340 File Offset: 0x001B3540
+		// Token: 0x0600C994 RID: 51604 RVA: 0x001CC978 File Offset: 0x001CAB78
 		private SetMoveSpeed_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600BDDB RID: 48603 RVA: 0x001B5378 File Offset: 0x001B3578
+		// Token: 0x0600C995 RID: 51605 RVA: 0x001CC9B0 File Offset: 0x001CABB0
 		public static SetMoveSpeed Create([Nullable(2)] SetMoveSpeed instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BDDC RID: 48604 RVA: 0x001B538B File Offset: 0x001B358B
+		// Token: 0x0600C996 RID: 51606 RVA: 0x001CC9C3 File Offset: 0x001CABC3
 		public static SetMoveSpeed CreateFromSetValue([Nullable(2)] SetMoveSpeed_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600BDDD RID: 48605 RVA: 0x001B539E File Offset: 0x001B359E
+		// Token: 0x0600C997 RID: 51607 RVA: 0x001CC9D6 File Offset: 0x001CABD6
 		public SetMoveSpeed_SetValue ToSetValue()
 		{
 			return new SetMoveSpeed_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170039A6 RID: 14758
-		// (get) Token: 0x0600BDDE RID: 48606 RVA: 0x001B53B1 File Offset: 0x001B35B1
-		// (set) Token: 0x0600BDDF RID: 48607 RVA: 0x001B53E0 File Offset: 0x001B35E0
+		// Token: 0x17003C9A RID: 15514
+		// (get) Token: 0x0600C998 RID: 51608 RVA: 0x001CC9E9 File Offset: 0x001CABE9
+		// (set) Token: 0x0600C999 RID: 51609 RVA: 0x001CCA18 File Offset: 0x001CAC18
 		public virtual float Speed
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04007151 RID: 29009
+		// Token: 0x04007799 RID: 30617
 		[Nullable(2)]
 		protected new SetMoveSpeed FbInstance;
 
-		// Token: 0x04007152 RID: 29010
+		// Token: 0x0400779A RID: 30618
 		[Nullable(2)]
 		protected SetMoveSpeed_SetValue PocoInterface;
 	}

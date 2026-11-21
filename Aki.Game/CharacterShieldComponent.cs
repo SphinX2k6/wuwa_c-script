@@ -5,13 +5,13 @@ using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 using Google.Protobuf.Collections;
 
-// Token: 0x02003086 RID: 12422
+// Token: 0x020025DD RID: 9693
 [NullableContext(2)]
 [Nullable(0)]
 public class CharacterShieldComponent : EntityComponent
 {
-	// Token: 0x17002488 RID: 9352
-	// (get) Token: 0x0601A88B RID: 108683 RVA: 0x0071A905 File Offset: 0x00718B05
+	// Token: 0x170025DF RID: 9695
+	// (get) Token: 0x0601826E RID: 98926 RVA: 0x00740D99 File Offset: 0x0073EF99
 	public float ShieldTotal
 	{
 		get
@@ -20,7 +20,7 @@ public class CharacterShieldComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A88C RID: 108684 RVA: 0x0071A90D File Offset: 0x00718B0D
+	// Token: 0x0601826F RID: 98927 RVA: 0x00740DA1 File Offset: 0x0073EFA1
 	protected override bool OnStart()
 	{
 		this.BuffComponent = base.Entity.CheckGetComponent<CharacterBuffComponent>();
@@ -28,7 +28,7 @@ public class CharacterShieldComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601A88D RID: 108685 RVA: 0x0071A934 File Offset: 0x00718B34
+	// Token: 0x06018270 RID: 98928 RVA: 0x00740DC8 File Offset: 0x0073EFC8
 	protected override void OnActivate()
 	{
 		this.ShieldMap.Clear();
@@ -55,7 +55,7 @@ public class CharacterShieldComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A88E RID: 108686 RVA: 0x0071A9DC File Offset: 0x00718BDC
+	// Token: 0x06018271 RID: 98929 RVA: 0x00740E70 File Offset: 0x0073F070
 	private void AddShieldTotal(float value)
 	{
 		if (this.ShieldTotalInternal == 0f && value > 0f)
@@ -70,7 +70,7 @@ public class CharacterShieldComponent : EntityComponent
 		EventSystem.Instance.EmitWithTarget<float>(base.Entity, EEventName.CharShieldChange, this.ShieldTotalInternal);
 	}
 
-	// Token: 0x0601A88F RID: 108687 RVA: 0x0071AA84 File Offset: 0x00718C84
+	// Token: 0x06018272 RID: 98930 RVA: 0x00740F18 File Offset: 0x0073F118
 	public void Add(int handleId, int templateId, float value, global::EShieldUpdateType updateType = global::EShieldUpdateType.Add)
 	{
 		if (this.ShieldMap.ContainsKey(handleId))
@@ -87,7 +87,7 @@ public class CharacterShieldComponent : EntityComponent
 		this.BuffComponent.TriggerEvents(EBuffTriggerType.ForWhenAppendShield, this.BuffComponent, new Partial_RequirementPayload());
 	}
 
-	// Token: 0x0601A890 RID: 108688 RVA: 0x0071AAF4 File Offset: 0x00718CF4
+	// Token: 0x06018273 RID: 98931 RVA: 0x00740F88 File Offset: 0x0073F188
 	public void Remove(int handleId, int templateId, global::EShieldUpdateType updateType = global::EShieldUpdateType.Remove)
 	{
 		CharacterShield characterShield;
@@ -99,7 +99,7 @@ public class CharacterShieldComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A891 RID: 108689 RVA: 0x0071AB38 File Offset: 0x00718D38
+	// Token: 0x06018274 RID: 98932 RVA: 0x00740FCC File Offset: 0x0073F1CC
 	public void ChangeValue(int handleId, int templateId, float value, global::EShieldUpdateType updateType = global::EShieldUpdateType.Modify)
 	{
 		CharacterShield characterShield;
@@ -114,7 +114,7 @@ public class CharacterShieldComponent : EntityComponent
 		this.Add(handleId, templateId, value, global::EShieldUpdateType.Add);
 	}
 
-	// Token: 0x0601A892 RID: 108690 RVA: 0x0071AB84 File Offset: 0x00718D84
+	// Token: 0x06018275 RID: 98933 RVA: 0x00741018 File Offset: 0x0073F218
 	[CombatListen(ENotifyMessageId.ShieldUpdateNotify, false, false)]
 	public static void OnShieldUpdateNotify(Entity entity, [Nullable(1)] ShieldUpdateNotify data, CombatCommon combatCommon = null)
 	{
@@ -150,7 +150,7 @@ public class CharacterShieldComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601A893 RID: 108691 RVA: 0x0071AC84 File Offset: 0x00718E84
+	// Token: 0x06018276 RID: 98934 RVA: 0x00741118 File Offset: 0x0073F318
 	public float GetShieldValue(int shieldCid)
 	{
 		if (shieldCid == 0)
@@ -168,19 +168,19 @@ public class CharacterShieldComponent : EntityComponent
 		return num;
 	}
 
-	// Token: 0x0601A894 RID: 108692 RVA: 0x0071ACF8 File Offset: 0x00718EF8
+	// Token: 0x06018277 RID: 98935 RVA: 0x0074118C File Offset: 0x0073F38C
 	private void OnShieldInvalid()
 	{
 		this.BuffComponent.TriggerEvents(EBuffTriggerType.ForWhenRemoveShield, this.BuffComponent, new Partial_RequirementPayload());
 	}
 
-	// Token: 0x0601A895 RID: 108693 RVA: 0x0071AD14 File Offset: 0x00718F14
+	// Token: 0x06018278 RID: 98936 RVA: 0x007411A8 File Offset: 0x0073F3A8
 	private void TriggerAbilityEvent(float oldShieldValue, float newShieldValue, global::EShieldUpdateType updateType, int shieldId)
 	{
 		SceneTeamController.Instance.EmitAbilityEvent<Entity, float, float, int, int>(base.Entity, EAbilityEventName.ShieldChange, 0L, base.Entity, oldShieldValue, newShieldValue, (int)updateType, shieldId);
 	}
 
-	// Token: 0x0601A896 RID: 108694 RVA: 0x0071AD3F File Offset: 0x00718F3F
+	// Token: 0x06018279 RID: 98937 RVA: 0x007411D3 File Offset: 0x0073F3D3
 	[return: Nullable(new byte[]
 	{
 		1,
@@ -192,7 +192,7 @@ public class CharacterShieldComponent : EntityComponent
 		return this.ShieldMap;
 	}
 
-	// Token: 0x0601A897 RID: 108695 RVA: 0x0071AD48 File Offset: 0x00718F48
+	// Token: 0x0601827A RID: 98938 RVA: 0x007411DC File Offset: 0x0073F3DC
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -201,49 +201,60 @@ public class CharacterShieldComponent : EntityComponent
 			return false;
 		}
 		CharacterShieldComponent characterShieldComponent = (CharacterShieldComponent)componentTemplate;
-		if (base.CanResetComponentProperty("BuffComponent"))
+		if (characterShieldComponent.BuffComponent == null)
 		{
-			if (characterShieldComponent.BuffComponent == null)
-			{
-				this.BuffComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterBuffComponent>(this.BuffComponent), "BuffComponent"))
-			{
-				return false;
-			}
+			this.BuffComponent = null;
 		}
-		if (base.CanResetComponentProperty("TagComponent"))
-		{
-			if (characterShieldComponent.TagComponent == null)
-			{
-				this.TagComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComponent), "TagComponent"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("ShieldMap") && characterShieldComponent.ShieldMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, CharacterShield>>(this.ShieldMap), "ShieldMap"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.BuffComponent), "BuffComponent"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("ShieldTotalInternal"))
+		if (characterShieldComponent.TagComponent == null)
 		{
-			this.ShieldTotalInternal = characterShieldComponent.ShieldTotalInternal;
+			this.TagComponent = null;
 		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComponent), "TagComponent"))
+		{
+			return false;
+		}
+		if (characterShieldComponent.ShieldMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ShieldMap), "ShieldMap"))
+		{
+			return false;
+		}
+		this.ShieldTotalInternal = characterShieldComponent.ShieldTotalInternal;
 		return true;
 	}
 
-	// Token: 0x0400CBD4 RID: 52180
+	// Token: 0x170025E0 RID: 9696
+	// (get) Token: 0x0601827B RID: 98939 RVA: 0x00741280 File Offset: 0x0073F480
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170025E1 RID: 9697
+	// (get) Token: 0x0601827C RID: 98940 RVA: 0x00741283 File Offset: 0x0073F483
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400CFB7 RID: 53175
 	private CharacterBuffComponent BuffComponent;
 
-	// Token: 0x0400CBD5 RID: 52181
+	// Token: 0x0400CFB8 RID: 53176
 	private BaseTagComponent TagComponent;
 
-	// Token: 0x0400CBD6 RID: 52182
+	// Token: 0x0400CFB9 RID: 53177
 	[Nullable(1)]
 	private readonly Dictionary<int, CharacterShield> ShieldMap = new Dictionary<int, CharacterShield>();
 
-	// Token: 0x0400CBD7 RID: 52183
+	// Token: 0x0400CFBA RID: 53178
 	private float ShieldTotalInternal;
 }

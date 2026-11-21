@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020052B9 RID: 21177
+	// Token: 0x02005824 RID: 22564
 	public class IFollowTrackToStartT
 	{
-		// Token: 0x17009B49 RID: 39753
-		// (get) Token: 0x06022877 RID: 141431 RVA: 0x004C9216 File Offset: 0x004C7416
-		// (set) Token: 0x06022878 RID: 141432 RVA: 0x004C921E File Offset: 0x004C741E
+		// Token: 0x1700A352 RID: 41810
+		// (get) Token: 0x0602483B RID: 149563 RVA: 0x00504312 File Offset: 0x00502512
+		// (set) Token: 0x0602483C RID: 149564 RVA: 0x0050431A File Offset: 0x0050251A
 		public EFollowTrackEndType Type { get; set; }
 
-		// Token: 0x06022879 RID: 141433 RVA: 0x004C9227 File Offset: 0x004C7427
+		// Token: 0x0602483D RID: 149565 RVA: 0x00504323 File Offset: 0x00502523
 		public IFollowTrackToStartT()
 		{
 			this.Type = EFollowTrackEndType.ToStart;

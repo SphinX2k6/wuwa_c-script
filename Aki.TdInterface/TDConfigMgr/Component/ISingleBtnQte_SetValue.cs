@@ -1,23 +1,20 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006CF RID: 1743
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000770 RID: 1904
 	public class ISingleBtnQte_SetValue
 	{
-		// Token: 0x04001992 RID: 6546
+		// Token: 0x04001B91 RID: 7057
 		public EQteType Type;
 
-		// Token: 0x04001993 RID: 6547
+		// Token: 0x04001B92 RID: 7058
 		public int QteId;
 
-		// Token: 0x04001994 RID: 6548
+		// Token: 0x04001B93 RID: 7059
 		public IQteCallback SuccessCallback;
 
-		// Token: 0x04001995 RID: 6549
+		// Token: 0x04001B94 RID: 7060
 		public IQteCallback FailureCallback;
 	}
 }

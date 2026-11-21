@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 {
-	// Token: 0x020062C1 RID: 25281
+	// Token: 0x0200523F RID: 21055
 	public class EPreWarmTxtJsonConverter : JsonConverter<EPreWarmTxt>
 	{
-		// Token: 0x0603F954 RID: 260436 RVA: 0x00F617B4 File Offset: 0x00F5F9B4
+		// Token: 0x06034615 RID: 214549 RVA: 0x00EA8710 File Offset: 0x00EA6910
 		public override EPreWarmTxt Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.PreWarm
 			return EPreWarmTxtExtensions.FromString(@string);
 		}
 
-		// Token: 0x0603F955 RID: 260437 RVA: 0x00F617D8 File Offset: 0x00F5F9D8
+		// Token: 0x06034616 RID: 214550 RVA: 0x00EA8734 File Offset: 0x00EA6934
 		public override void Write(Utf8JsonWriter writer, EPreWarmTxt value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

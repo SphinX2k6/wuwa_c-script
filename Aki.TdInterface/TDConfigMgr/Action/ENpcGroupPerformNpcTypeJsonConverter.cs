@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023B0 RID: 9136
+	// Token: 0x0200263D RID: 9789
 	public class ENpcGroupPerformNpcTypeJsonConverter : JsonConverter<ENpcGroupPerformNpcType>
 	{
-		// Token: 0x0600C718 RID: 50968 RVA: 0x001D26B0 File Offset: 0x001D08B0
+		// Token: 0x0600D36E RID: 54126 RVA: 0x001EB92C File Offset: 0x001E9B2C
 		public override ENpcGroupPerformNpcType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return ENpcGroupPerformNpcTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C719 RID: 50969 RVA: 0x001D26D4 File Offset: 0x001D08D4
+		// Token: 0x0600D36F RID: 54127 RVA: 0x001EB950 File Offset: 0x001E9B50
 		public override void Write(Utf8JsonWriter writer, ENpcGroupPerformNpcType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

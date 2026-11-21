@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200268D RID: 9869
+	// Token: 0x02002950 RID: 10576
 	public class ITeleportTransitionType
 	{
-		// Token: 0x0600DCFA RID: 56570 RVA: 0x0020D971 File Offset: 0x0020BB71
-		[NullableContext(1)]
+		// Token: 0x0600EAD1 RID: 60113 RVA: 0x0022A111 File Offset: 0x00228311
 		public static ITeleportTransitionType Create(ITeleportTransitionType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170041A2 RID: 16802
-		// (get) Token: 0x0600DCFB RID: 56571 RVA: 0x0020D990 File Offset: 0x0020BB90
+		// Token: 0x170044DF RID: 17631
+		// (get) Token: 0x0600EAD2 RID: 60114 RVA: 0x0022A130 File Offset: 0x00228330
 		public virtual ETeleportTransitionType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007AC3 RID: 31427
+		// Token: 0x04008160 RID: 33120
 		private ITeleportTransitionType Instance;
 	}
 }

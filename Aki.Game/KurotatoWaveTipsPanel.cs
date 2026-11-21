@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001CC1 RID: 7361
+// Token: 0x02001183 RID: 4483
 [NullableContext(1)]
 [Nullable(0)]
 public class KurotatoWaveTipsPanel : UiPanelBase
 {
-	// Token: 0x0600DEB3 RID: 57011 RVA: 0x00341DC0 File Offset: 0x0033FFC0
+	// Token: 0x0600B2D0 RID: 45776 RVA: 0x0034D7E8 File Offset: 0x0034B9E8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -20,7 +20,7 @@ public class KurotatoWaveTipsPanel : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600DEB4 RID: 57012 RVA: 0x00341E1A File Offset: 0x0034001A
+	// Token: 0x0600B2D1 RID: 45777 RVA: 0x0034D842 File Offset: 0x0034BA42
 	protected override void OnStart()
 	{
 		this.TextTips = base.GetText(0);
@@ -28,13 +28,13 @@ public class KurotatoWaveTipsPanel : UiPanelBase
 		this.SeqPlayer.BindSequenceCloseEvent(new TSequenceEndEvent(this.OnSequenceClose), false);
 	}
 
-	// Token: 0x0600DEB5 RID: 57013 RVA: 0x00341E52 File Offset: 0x00340052
+	// Token: 0x0600B2D2 RID: 45778 RVA: 0x0034D87A File Offset: 0x0034BA7A
 	public void SetFinishCb(Action cb)
 	{
 		this.FinishCb = cb;
 	}
 
-	// Token: 0x0600DEB6 RID: 57014 RVA: 0x00341E5C File Offset: 0x0034005C
+	// Token: 0x0600B2D3 RID: 45779 RVA: 0x0034D884 File Offset: 0x0034BA84
 	public void PlaySuccess(string tipsTextKey)
 	{
 		base.SetUiActive(true);
@@ -42,7 +42,7 @@ public class KurotatoWaveTipsPanel : UiPanelBase
 		this.SeqPlayer.PlayOrReplaySequenceByName("StartSuccess", false, null);
 	}
 
-	// Token: 0x0600DEB7 RID: 57015 RVA: 0x00341EA0 File Offset: 0x003400A0
+	// Token: 0x0600B2D4 RID: 45780 RVA: 0x0034D8C8 File Offset: 0x0034BAC8
 	public void PlayFail(string tipsTextKey)
 	{
 		base.SetUiActive(true);
@@ -50,7 +50,7 @@ public class KurotatoWaveTipsPanel : UiPanelBase
 		this.SeqPlayer.PlayOrReplaySequenceByName("StartFail", false, null);
 	}
 
-	// Token: 0x0600DEB8 RID: 57016 RVA: 0x00341EE4 File Offset: 0x003400E4
+	// Token: 0x0600B2D5 RID: 45781 RVA: 0x0034D90C File Offset: 0x0034BB0C
 	private void OnSequenceClose(string sequenceName)
 	{
 		if (sequenceName == "StartSuccess" || sequenceName == "StartFail")
@@ -64,27 +64,27 @@ public class KurotatoWaveTipsPanel : UiPanelBase
 		}
 	}
 
-	// Token: 0x04006652 RID: 26194
+	// Token: 0x04006731 RID: 26417
 	private UUIText TextTips;
 
-	// Token: 0x04006653 RID: 26195
+	// Token: 0x04006732 RID: 26418
 	private LevelSequencePlayer SeqPlayer;
 
-	// Token: 0x04006654 RID: 26196
+	// Token: 0x04006733 RID: 26419
 	[Nullable(2)]
 	private Action FinishCb;
 
-	// Token: 0x020082B2 RID: 33458
+	// Token: 0x0200743B RID: 29755
 	[NullableContext(0)]
 	private static class EComponentDefine
 	{
-		// Token: 0x0402AA2E RID: 174638
+		// Token: 0x04025D56 RID: 154966
 		public const int TextTips = 0;
 
-		// Token: 0x0402AA2F RID: 174639
+		// Token: 0x04025D57 RID: 154967
 		public const int TextureWin = 1;
 
-		// Token: 0x0402AA30 RID: 174640
+		// Token: 0x04025D58 RID: 154968
 		public const int TextureFailure = 2;
 	}
 }

@@ -4,25 +4,25 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Launcher.SoPatch
 {
-	// Token: 0x02000102 RID: 258
+	// Token: 0x02000106 RID: 262
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class VersionInfo
 	{
-		// Token: 0x040004C8 RID: 1224
+		// Token: 0x04000503 RID: 1283
 		public int VerNum;
 
-		// Token: 0x040004C9 RID: 1225
+		// Token: 0x04000504 RID: 1284
 		public bool IsPublished;
 
-		// Token: 0x040004CA RID: 1226
+		// Token: 0x04000505 RID: 1285
 		[Nullable(1)]
 		public List<MobileFilter> Filters = new List<MobileFilter>();
 
-		// Token: 0x040004CB RID: 1227
+		// Token: 0x04000506 RID: 1286
 		public GrayInfo Gray;
 
-		// Token: 0x040004CC RID: 1228
+		// Token: 0x04000507 RID: 1287
 		public SoPatchFileInfo PatchInfo;
 	}
 }

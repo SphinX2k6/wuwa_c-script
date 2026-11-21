@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.NewWorld.Character.Npc.Logics;
 using UnrealEngine;
 
-// Token: 0x02002EB9 RID: 11961
+// Token: 0x0200240C RID: 9228
 [NullableContext(2)]
 [Nullable(0)]
 public class CustomPlayMontage : CustomActionBase
 {
-	// Token: 0x06019895 RID: 104597 RVA: 0x00699F30 File Offset: 0x00698130
+	// Token: 0x0601717B RID: 94587 RVA: 0x006C01F0 File Offset: 0x006BE3F0
 	public CustomPlayMontage(BasePerformComponent performComp, [Nullable(1)] CharacterAnimationComponent animComp, [Nullable(1)] string path, IAnimStateParam state = null, Action onPlayMontage = null, Action onStopMontage = null, Action callback = null)
 	{
 		this.PerformComp = performComp;
@@ -20,7 +20,7 @@ public class CustomPlayMontage : CustomActionBase
 		this.Callback = callback;
 	}
 
-	// Token: 0x06019896 RID: 104598 RVA: 0x00699F80 File Offset: 0x00698180
+	// Token: 0x0601717C RID: 94588 RVA: 0x006C0240 File Offset: 0x006BE440
 	protected override void OnRunAction()
 	{
 		CustomPlayMontage.<>c__DisplayClass8_0 CS$<>8__locals1 = new CustomPlayMontage.<>c__DisplayClass8_0();
@@ -98,7 +98,7 @@ public class CustomPlayMontage : CustomActionBase
 		}
 	}
 
-	// Token: 0x06019897 RID: 104599 RVA: 0x0069A0B4 File Offset: 0x006982B4
+	// Token: 0x0601717D RID: 94589 RVA: 0x006C0374 File Offset: 0x006BE574
 	protected override void OnAbort()
 	{
 		if (this.PlayMontageId < 0)
@@ -113,26 +113,26 @@ public class CustomPlayMontage : CustomActionBase
 		PlayMontageUtils.Instance.ClearAndStopMontage(this.PlayMontageId, this.AnimComp, 0f);
 	}
 
-	// Token: 0x0400BEC1 RID: 48833
+	// Token: 0x0400C25C RID: 49756
 	private readonly BasePerformComponent PerformComp;
 
-	// Token: 0x0400BEC2 RID: 48834
+	// Token: 0x0400C25D RID: 49757
 	[Nullable(1)]
 	private readonly CharacterAnimationComponent AnimComp;
 
-	// Token: 0x0400BEC3 RID: 48835
+	// Token: 0x0400C25E RID: 49758
 	[Nullable(1)]
 	private readonly string Path;
 
-	// Token: 0x0400BEC4 RID: 48836
+	// Token: 0x0400C25F RID: 49759
 	private readonly IAnimStateParam State;
 
-	// Token: 0x0400BEC5 RID: 48837
+	// Token: 0x0400C260 RID: 49760
 	private readonly Action OnPlayMontage;
 
-	// Token: 0x0400BEC6 RID: 48838
+	// Token: 0x0400C261 RID: 49761
 	private readonly Action OnStopMontage;
 
-	// Token: 0x0400BEC7 RID: 48839
+	// Token: 0x0400C262 RID: 49762
 	private int PlayMontageId = -1;
 }

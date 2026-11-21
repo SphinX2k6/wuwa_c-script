@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.RoleUnlock
 {
-	// Token: 0x020051C0 RID: 20928
+	// Token: 0x02004190 RID: 16784
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaRoleUnlockView : UiViewBase
 	{
-		// Token: 0x06035962 RID: 219490 RVA: 0x00CB25CB File Offset: 0x00CB07CB
+		// Token: 0x0602A85D RID: 174173 RVA: 0x00BFFC07 File Offset: 0x00BFDE07
 		public PhantomArenaRoleUnlockView(UiViewInfo uiViewInfo) : base(uiViewInfo)
 		{
 		}
 
-		// Token: 0x06035963 RID: 219491 RVA: 0x00CB25D4 File Offset: 0x00CB07D4
+		// Token: 0x0602A85E RID: 174174 RVA: 0x00BFFC10 File Offset: 0x00BFDE10
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.RoleUnlock
 			};
 		}
 
-		// Token: 0x06035964 RID: 219492 RVA: 0x00CB26C0 File Offset: 0x00CB08C0
+		// Token: 0x0602A85F RID: 174175 RVA: 0x00BFFCFC File Offset: 0x00BFDEFC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PhantomArenaRoleUnlockView.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -52,19 +52,19 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.RoleUnlock
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035965 RID: 219493 RVA: 0x00CB2703 File Offset: 0x00CB0903
+		// Token: 0x0602A860 RID: 174176 RVA: 0x00BFFD3F File Offset: 0x00BFDF3F
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnSeqEvent));
 		}
 
-		// Token: 0x06035966 RID: 219494 RVA: 0x00CB2721 File Offset: 0x00CB0921
+		// Token: 0x0602A861 RID: 174177 RVA: 0x00BFFD5D File Offset: 0x00BFDF5D
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnSeqEvent));
 		}
 
-		// Token: 0x06035967 RID: 219495 RVA: 0x00CB2740 File Offset: 0x00CB0940
+		// Token: 0x0602A862 RID: 174178 RVA: 0x00BFFD7C File Offset: 0x00BFDF7C
 		protected void RefreshViewByCardRoleId(int cardRoleId)
 		{
 			PhantomBattleCardRole phantomBattleCardRole = PhantomArenaConfig.Instance.GetPhantomBattleCardRole(cardRoleId);
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.RoleUnlock
 			base.GetTexture(2).SetTexture(this.RoleTexture);
 		}
 
-		// Token: 0x06035968 RID: 219496 RVA: 0x00CB27C4 File Offset: 0x00CB09C4
+		// Token: 0x0602A863 RID: 174179 RVA: 0x00BFFE00 File Offset: 0x00BFE000
 		public void ShowNext()
 		{
 			UiAsyncTask task = new UiAsyncTask("PhantomArenaRoleUnlockView", delegate()
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.RoleUnlock
 			base.RunAsyncTask(task).Forget();
 		}
 
-		// Token: 0x06035969 RID: 219497 RVA: 0x00CB27F8 File Offset: 0x00CB09F8
+		// Token: 0x0602A864 RID: 174180 RVA: 0x00BFFE34 File Offset: 0x00BFE034
 		public UniTask ShowNextAsync()
 		{
 			PhantomArenaRoleUnlockView.<ShowNextAsync>d__12 <ShowNextAsync>d__;
@@ -101,7 +101,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.RoleUnlock
 			return <ShowNextAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603596A RID: 219498 RVA: 0x00CB283B File Offset: 0x00CB0A3B
+		// Token: 0x0602A865 RID: 174181 RVA: 0x00BFFE77 File Offset: 0x00BFE077
 		private void OnCloseBtnClick()
 		{
 			if (PhantomArenaModel.Instance.RoleUnlockQueue.Count > 0)
@@ -120,13 +120,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.RoleUnlock
 			});
 		}
 
-		// Token: 0x0603596B RID: 219499 RVA: 0x00CB2868 File Offset: 0x00CB0A68
+		// Token: 0x0602A866 RID: 174182 RVA: 0x00BFFEA4 File Offset: 0x00BFE0A4
 		protected override void OnAfterDestroy()
 		{
 			PhantomArenaController.Instance.PostUnlockView();
 		}
 
-		// Token: 0x0603596C RID: 219500 RVA: 0x00CB2875 File Offset: 0x00CB0A75
+		// Token: 0x0602A867 RID: 174183 RVA: 0x00BFFEB1 File Offset: 0x00BFE0B1
 		private void OnSeqEvent(string param)
 		{
 			if (this.IsWaitingChange && param == "Change")
@@ -135,45 +135,45 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.RoleUnlock
 			}
 		}
 
-		// Token: 0x0401C71A RID: 116506
+		// Token: 0x0401714F RID: 94543
 		protected int CardRoleId;
 
-		// Token: 0x0401C71B RID: 116507
+		// Token: 0x04017150 RID: 94544
 		protected bool IsWaitingChange;
 
-		// Token: 0x0401C71C RID: 116508
+		// Token: 0x04017151 RID: 94545
 		protected UTexture RoleTexture;
 
-		// Token: 0x0401C71D RID: 116509
+		// Token: 0x04017152 RID: 94546
 		[Nullable(2)]
 		private Action CallbackOnClose;
 
-		// Token: 0x0200B34F RID: 45903
+		// Token: 0x02009D87 RID: 40327
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x0403659E RID: 222622
+			// Token: 0x04030FF1 RID: 200689
 			public const int CloseBtn = 0;
 
-			// Token: 0x0403659F RID: 222623
+			// Token: 0x04030FF2 RID: 200690
 			public const int RoleRootItem = 1;
 
-			// Token: 0x040365A0 RID: 222624
+			// Token: 0x04030FF3 RID: 200691
 			public const int RoleTexture = 2;
 
-			// Token: 0x040365A1 RID: 222625
+			// Token: 0x04030FF4 RID: 200692
 			public const int BadgeRootItem = 3;
 
-			// Token: 0x040365A2 RID: 222626
+			// Token: 0x04030FF5 RID: 200693
 			public const int BadgeSprite = 4;
 
-			// Token: 0x040365A3 RID: 222627
+			// Token: 0x04030FF6 RID: 200694
 			public const int TitleText = 5;
 
-			// Token: 0x040365A4 RID: 222628
+			// Token: 0x04030FF7 RID: 200695
 			public const int NameText = 6;
 
-			// Token: 0x040365A5 RID: 222629
+			// Token: 0x04030FF8 RID: 200696
 			public const int BgDescText = 7;
 		}
 	}

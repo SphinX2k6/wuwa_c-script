@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006C82 RID: 27778
+	// Token: 0x020073E9 RID: 29673
 	public class IPerformerAiMoveToT
 	{
-		// Token: 0x1700CEDF RID: 52959
-		// (get) Token: 0x06030F33 RID: 200499 RVA: 0x006A5831 File Offset: 0x006A3A31
-		// (set) Token: 0x06030F34 RID: 200500 RVA: 0x006A5839 File Offset: 0x006A3A39
+		// Token: 0x1700D9FA RID: 55802
+		// (get) Token: 0x06033E8E RID: 212622 RVA: 0x006FFD31 File Offset: 0x006FDF31
+		// (set) Token: 0x06033E8F RID: 212623 RVA: 0x006FFD39 File Offset: 0x006FDF39
 		public TPerformerAiMoveToConfigUnion Config { get; set; }
 
-		// Token: 0x1700CEE0 RID: 52960
-		// (get) Token: 0x06030F35 RID: 200501 RVA: 0x006A5842 File Offset: 0x006A3A42
-		// (set) Token: 0x06030F36 RID: 200502 RVA: 0x006A584A File Offset: 0x006A3A4A
+		// Token: 0x1700D9FB RID: 55803
+		// (get) Token: 0x06033E90 RID: 212624 RVA: 0x006FFD42 File Offset: 0x006FDF42
+		// (set) Token: 0x06033E91 RID: 212625 RVA: 0x006FFD4A File Offset: 0x006FDF4A
 		public float StopDistance { get; set; }
 
-		// Token: 0x1700CEE1 RID: 52961
-		// (get) Token: 0x06030F37 RID: 200503 RVA: 0x006A5853 File Offset: 0x006A3A53
-		// (set) Token: 0x06030F38 RID: 200504 RVA: 0x006A585B File Offset: 0x006A3A5B
+		// Token: 0x1700D9FC RID: 55804
+		// (get) Token: 0x06033E92 RID: 212626 RVA: 0x006FFD53 File Offset: 0x006FDF53
+		// (set) Token: 0x06033E93 RID: 212627 RVA: 0x006FFD5B File Offset: 0x006FDF5B
 		public byte NullMask { get; set; }
 
-		// Token: 0x06030F39 RID: 200505 RVA: 0x006A5864 File Offset: 0x006A3A64
+		// Token: 0x06033E94 RID: 212628 RVA: 0x006FFD64 File Offset: 0x006FDF64
 		public IPerformerAiMoveToT()
 		{
 			this.Config = null;

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007205 RID: 29189
+	// Token: 0x020079DA RID: 31194
 	public struct ISubScreenCustomInitData : IFlatbufferObject
 	{
-		// Token: 0x1700D8B8 RID: 55480
-		// (get) Token: 0x06033C5A RID: 212058 RVA: 0x006F7E4A File Offset: 0x006F604A
+		// Token: 0x1700E4B1 RID: 58545
+		// (get) Token: 0x06036F5C RID: 225116 RVA: 0x007591AA File Offset: 0x007573AA
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033C5B RID: 212059 RVA: 0x006F7E57 File Offset: 0x006F6057
+		// Token: 0x06036F5D RID: 225117 RVA: 0x007591B7 File Offset: 0x007573B7
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06033C5C RID: 212060 RVA: 0x006F7E60 File Offset: 0x006F6060
+		// Token: 0x06036F5E RID: 225118 RVA: 0x007591C0 File Offset: 0x007573C0
 		public static ISubScreenCustomInitData GetRootAsISubScreenCustomInitData(ByteBuffer _bb)
 		{
 			return ISubScreenCustomInitData.GetRootAsISubScreenCustomInitData(_bb, default(ISubScreenCustomInitData));
 		}
 
-		// Token: 0x06033C5D RID: 212061 RVA: 0x006F7E7C File Offset: 0x006F607C
+		// Token: 0x06036F5F RID: 225119 RVA: 0x007591DC File Offset: 0x007573DC
 		public static ISubScreenCustomInitData GetRootAsISubScreenCustomInitData(ByteBuffer _bb, ISubScreenCustomInitData obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06033C5E RID: 212062 RVA: 0x006F7E99 File Offset: 0x006F6099
+		// Token: 0x06036F60 RID: 225120 RVA: 0x007591F9 File Offset: 0x007573F9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06033C5F RID: 212063 RVA: 0x006F7EA8 File Offset: 0x006F60A8
+		// Token: 0x06036F61 RID: 225121 RVA: 0x00759208 File Offset: 0x00757408
 		public ISubScreenCustomInitData __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D8B9 RID: 55481
-		// (get) Token: 0x06033C60 RID: 212064 RVA: 0x006F7EB8 File Offset: 0x006F60B8
+		// Token: 0x1700E4B2 RID: 58546
+		// (get) Token: 0x06036F62 RID: 225122 RVA: 0x00759218 File Offset: 0x00757418
 		public ESubScreenInitDataType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700D8BA RID: 55482
-		// (get) Token: 0x06033C61 RID: 212065 RVA: 0x006F7EF4 File Offset: 0x006F60F4
+		// Token: 0x1700E4B3 RID: 58547
+		// (get) Token: 0x06036F63 RID: 225123 RVA: 0x00759254 File Offset: 0x00757454
 		public string SubScreenKey
 		{
 			get
@@ -77,20 +77,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033C62 RID: 212066 RVA: 0x006F7F2B File Offset: 0x006F612B
+		// Token: 0x06036F64 RID: 225124 RVA: 0x0075928B File Offset: 0x0075748B
 		public Span<byte> GetSubScreenKeyBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x06033C63 RID: 212067 RVA: 0x006F7F3A File Offset: 0x006F613A
+		// Token: 0x06036F65 RID: 225125 RVA: 0x0075929A File Offset: 0x0075749A
 		public byte[] GetSubScreenKeyArray()
 		{
 			return this.__p.__vector_as_array<byte>(6);
 		}
 
-		// Token: 0x1700D8BB RID: 55483
-		// (get) Token: 0x06033C64 RID: 212068 RVA: 0x006F7F48 File Offset: 0x006F6148
+		// Token: 0x1700E4B4 RID: 58548
+		// (get) Token: 0x06036F66 RID: 225126 RVA: 0x007592A8 File Offset: 0x007574A8
 		public ISubScreenConfig? InitConfig
 		{
 			get
@@ -104,7 +104,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06033C65 RID: 212069 RVA: 0x006F7FA5 File Offset: 0x006F61A5
+		// Token: 0x06036F67 RID: 225127 RVA: 0x00759305 File Offset: 0x00757505
 		public static Offset<ISubScreenCustomInitData> CreateISubScreenCustomInitData(FlatBufferBuilder builder, ESubScreenInitDataType Type = ESubScreenInitDataType.Preset, StringOffset SubScreenKeyOffset = default(StringOffset), Offset<ISubScreenConfig> InitConfigOffset = default(Offset<ISubScreenConfig>))
 		{
 			builder.StartTable(3);
@@ -114,37 +114,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISubScreenCustomInitData.EndISubScreenCustomInitData(builder);
 		}
 
-		// Token: 0x06033C66 RID: 212070 RVA: 0x006F7FC9 File Offset: 0x006F61C9
+		// Token: 0x06036F68 RID: 225128 RVA: 0x00759329 File Offset: 0x00757529
 		public static void StartISubScreenCustomInitData(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x06033C67 RID: 212071 RVA: 0x006F7FD2 File Offset: 0x006F61D2
+		// Token: 0x06036F69 RID: 225129 RVA: 0x00759332 File Offset: 0x00757532
 		public static void AddType(FlatBufferBuilder builder, ESubScreenInitDataType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06033C68 RID: 212072 RVA: 0x006F7FDD File Offset: 0x006F61DD
+		// Token: 0x06036F6A RID: 225130 RVA: 0x0075933D File Offset: 0x0075753D
 		public static void AddSubScreenKey(FlatBufferBuilder builder, StringOffset subScreenKeyOffset)
 		{
 			builder.AddOffset(1, subScreenKeyOffset.Value, 0);
 		}
 
-		// Token: 0x06033C69 RID: 212073 RVA: 0x006F7FED File Offset: 0x006F61ED
+		// Token: 0x06036F6B RID: 225131 RVA: 0x0075934D File Offset: 0x0075754D
 		public static void AddInitConfig(FlatBufferBuilder builder, Offset<ISubScreenConfig> initConfigOffset)
 		{
 			builder.AddOffset(2, initConfigOffset.Value, 0);
 		}
 
-		// Token: 0x06033C6A RID: 212074 RVA: 0x006F7FFD File Offset: 0x006F61FD
+		// Token: 0x06036F6C RID: 225132 RVA: 0x0075935D File Offset: 0x0075755D
 		public static Offset<ISubScreenCustomInitData> EndISubScreenCustomInitData(FlatBufferBuilder builder)
 		{
 			return new Offset<ISubScreenCustomInitData>(builder.EndTable());
 		}
 
-		// Token: 0x06033C6B RID: 212075 RVA: 0x006F800C File Offset: 0x006F620C
+		// Token: 0x06036F6D RID: 225133 RVA: 0x0075936C File Offset: 0x0075756C
 		public ISubScreenCustomInitDataT UnPack()
 		{
 			ISubScreenCustomInitDataT subScreenCustomInitDataT = new ISubScreenCustomInitDataT();
@@ -152,7 +152,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return subScreenCustomInitDataT;
 		}
 
-		// Token: 0x06033C6C RID: 212076 RVA: 0x006F8028 File Offset: 0x006F6228
+		// Token: 0x06036F6E RID: 225134 RVA: 0x00759388 File Offset: 0x00757588
 		public void UnPackTo(ISubScreenCustomInitDataT _o)
 		{
 			_o.Type = this.Type;
@@ -160,7 +160,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.InitConfig = ((this.InitConfig != null) ? this.InitConfig.Value.UnPack() : null);
 		}
 
-		// Token: 0x06033C6D RID: 212077 RVA: 0x006F807C File Offset: 0x006F627C
+		// Token: 0x06036F6F RID: 225135 RVA: 0x007593DC File Offset: 0x007575DC
 		public static Offset<ISubScreenCustomInitData> Pack(FlatBufferBuilder builder, ISubScreenCustomInitDataT _o)
 		{
 			if (_o == null)
@@ -172,7 +172,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ISubScreenCustomInitData.CreateISubScreenCustomInitData(builder, _o.Type, subScreenKeyOffset, initConfigOffset);
 		}
 
-		// Token: 0x04011CEB RID: 72939
+		// Token: 0x04012CED RID: 77037
 		private Table __p;
 	}
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.ItemReward;
@@ -10,18 +9,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020029AE RID: 10670
+// Token: 0x02001F29 RID: 7977
 [NullableContext(2)]
 [Nullable(0)]
 public class ShipTowerFightFinishView : UiViewBase
 {
-	// Token: 0x0601620B RID: 90635 RVA: 0x00598AD1 File Offset: 0x00596CD1
+	// Token: 0x06013C11 RID: 80913 RVA: 0x005C3A49 File Offset: 0x005C1C49
 	[NullableContext(1)]
 	public ShipTowerFightFinishView(UiViewInfo ViewInfo) : base(ViewInfo)
 	{
 	}
 
-	// Token: 0x0601620C RID: 90636 RVA: 0x00598ADC File Offset: 0x00596CDC
+	// Token: 0x06013C12 RID: 80914 RVA: 0x005C3A54 File Offset: 0x005C1C54
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -49,12 +48,12 @@ public class ShipTowerFightFinishView : UiViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0601620D RID: 90637 RVA: 0x00598C2D File Offset: 0x00596E2D
+	// Token: 0x06013C13 RID: 80915 RVA: 0x005C3BA5 File Offset: 0x005C1DA5
 	private void InitDataParam()
 	{
 	}
 
-	// Token: 0x0601620E RID: 90638 RVA: 0x00598C30 File Offset: 0x00596E30
+	// Token: 0x06013C14 RID: 80916 RVA: 0x005C3BA8 File Offset: 0x005C1DA8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ShipTowerFightFinishView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -65,20 +64,20 @@ public class ShipTowerFightFinishView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601620F RID: 90639 RVA: 0x00598C73 File Offset: 0x00596E73
+	// Token: 0x06013C15 RID: 80917 RVA: 0x005C3BEB File Offset: 0x005C1DEB
 	protected override void OnBeforeShow()
 	{
 		this.UpdateData();
 	}
 
-	// Token: 0x06016210 RID: 90640 RVA: 0x00598C7B File Offset: 0x00596E7B
+	// Token: 0x06013C16 RID: 80918 RVA: 0x005C3BF3 File Offset: 0x005C1DF3
 	[NullableContext(1)]
 	private ShipTowerFightFinishItem CreateItem()
 	{
 		return new ShipTowerFightFinishItem();
 	}
 
-	// Token: 0x06016211 RID: 90641 RVA: 0x00598C84 File Offset: 0x00596E84
+	// Token: 0x06013C17 RID: 80919 RVA: 0x005C3BFC File Offset: 0x005C1DFC
 	private void UpdateData()
 	{
 		ShipTowerFightFinishViewParams shipTowerFightFinishViewParams = this.OpenParam as ShipTowerFightFinishViewParams;
@@ -114,7 +113,7 @@ public class ShipTowerFightFinishView : UiViewBase
 		this.UpdateBtn();
 	}
 
-	// Token: 0x06016212 RID: 90642 RVA: 0x00598D88 File Offset: 0x00596F88
+	// Token: 0x06013C18 RID: 80920 RVA: 0x005C3D00 File Offset: 0x005C1F00
 	private int GetTotalScore()
 	{
 		ShipTowerFightFinishViewParams shipTowerFightFinishViewParams = this.OpenParam as ShipTowerFightFinishViewParams;
@@ -126,10 +125,15 @@ public class ShipTowerFightFinishView : UiViewBase
 		{
 			return shipTowerFightFinishViewParams.TotalScore;
 		}
-		return shipTowerFightFinishViewParams.AreaList.Sum((ShipTowerFightFinishItemData x) => x.ScoreA + x.ScoreB);
+		int num = 0;
+		for (int i = 0; i < shipTowerFightFinishViewParams.AreaList.Count; i++)
+		{
+			num += shipTowerFightFinishViewParams.AreaList[i].ScoreA + shipTowerFightFinishViewParams.AreaList[i].ScoreB;
+		}
+		return num;
 	}
 
-	// Token: 0x06016213 RID: 90643 RVA: 0x00598DE0 File Offset: 0x00596FE0
+	// Token: 0x06013C19 RID: 80921 RVA: 0x005C3D6C File Offset: 0x005C1F6C
 	private void OnBtnLeftClicked()
 	{
 		IRewardExploreConfirmButton btnLeftInfo = this.BtnLeftInfo;
@@ -143,7 +147,7 @@ public class ShipTowerFightFinishView : UiViewBase
 		}
 	}
 
-	// Token: 0x06016214 RID: 90644 RVA: 0x00598E30 File Offset: 0x00597030
+	// Token: 0x06013C1A RID: 80922 RVA: 0x005C3DBC File Offset: 0x005C1FBC
 	private void OnBtnRightClicked()
 	{
 		IRewardExploreConfirmButton btnRightInfo = this.BtnRightInfo;
@@ -157,7 +161,7 @@ public class ShipTowerFightFinishView : UiViewBase
 		}
 	}
 
-	// Token: 0x06016215 RID: 90645 RVA: 0x00598E80 File Offset: 0x00597080
+	// Token: 0x06013C1B RID: 80923 RVA: 0x005C3E0C File Offset: 0x005C200C
 	private UniTask OnShareBtnClickedAsync()
 	{
 		ShipTowerFightFinishView.<OnShareBtnClickedAsync>d__18 <OnShareBtnClickedAsync>d__;
@@ -168,7 +172,7 @@ public class ShipTowerFightFinishView : UiViewBase
 		return <OnShareBtnClickedAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06016216 RID: 90646 RVA: 0x00598EC4 File Offset: 0x005970C4
+	// Token: 0x06013C1C RID: 80924 RVA: 0x005C3E50 File Offset: 0x005C2050
 	private unsafe void UpdateBtn()
 	{
 		UUIText text = base.GetText(7);
@@ -224,7 +228,7 @@ public class ShipTowerFightFinishView : UiViewBase
 		this.BtnRightInfo = ((shipTowerFightFinishViewParams != null) ? shipTowerFightFinishViewParams.ButtonList.GetValueOrDefault(1) : null);
 	}
 
-	// Token: 0x0400A4E3 RID: 42211
+	// Token: 0x0400A8CD RID: 43213
 	[Nullable(new byte[]
 	{
 		2,
@@ -233,53 +237,53 @@ public class ShipTowerFightFinishView : UiViewBase
 	})]
 	private GenericLayout<ShipTowerFightFinishItem, ShipTowerFightFinishItemData> AreaLayout;
 
-	// Token: 0x0400A4E4 RID: 42212
+	// Token: 0x0400A8CE RID: 43214
 	private ButtonItem BtnLeft;
 
-	// Token: 0x0400A4E5 RID: 42213
+	// Token: 0x0400A8CF RID: 43215
 	private ButtonItem BtnRight;
 
-	// Token: 0x0400A4E6 RID: 42214
+	// Token: 0x0400A8D0 RID: 43216
 	private ShareBtnItem ShareBtnItem;
 
-	// Token: 0x0400A4E7 RID: 42215
+	// Token: 0x0400A8D1 RID: 43217
 	private IRewardExploreConfirmButton BtnLeftInfo;
 
-	// Token: 0x0400A4E8 RID: 42216
+	// Token: 0x0400A8D2 RID: 43218
 	private IRewardExploreConfirmButton BtnRightInfo;
 
-	// Token: 0x0400A4E9 RID: 42217
+	// Token: 0x0400A8D3 RID: 43219
 	private ShipTowerStageData StageData;
 
-	// Token: 0x02008FC0 RID: 36800
+	// Token: 0x02008209 RID: 33289
 	[NullableContext(0)]
 	private static class EChildType
 	{
-		// Token: 0x0402E8F6 RID: 190710
+		// Token: 0x04029FF5 RID: 172021
 		public const int VLayoutContainer = 0;
 
-		// Token: 0x0402E8F7 RID: 190711
+		// Token: 0x04029FF6 RID: 172022
 		public const int ItemArea = 1;
 
-		// Token: 0x0402E8F8 RID: 190712
+		// Token: 0x04029FF7 RID: 172023
 		public const int ItemNewRecord = 2;
 
-		// Token: 0x0402E8F9 RID: 190713
+		// Token: 0x04029FF8 RID: 172024
 		public const int TextScore = 3;
 
-		// Token: 0x0402E8FA RID: 190714
+		// Token: 0x04029FF9 RID: 172025
 		public const int TextureGrade = 4;
 
-		// Token: 0x0402E8FB RID: 190715
+		// Token: 0x04029FFA RID: 172026
 		public const int BtnRight = 5;
 
-		// Token: 0x0402E8FC RID: 190716
+		// Token: 0x04029FFB RID: 172027
 		public const int BtnLeft = 6;
 
-		// Token: 0x0402E8FD RID: 190717
+		// Token: 0x04029FFC RID: 172028
 		public const int TextRightBtnDesc = 7;
 
-		// Token: 0x0402E8FE RID: 190718
+		// Token: 0x04029FFD RID: 172029
 		public const int ShareItem = 8;
 	}
 }

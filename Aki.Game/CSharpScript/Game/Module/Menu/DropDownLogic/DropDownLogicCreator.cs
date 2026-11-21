@@ -4,16 +4,16 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Menu.DropDownLogic
 {
-	// Token: 0x0200546F RID: 21615
+	// Token: 0x02004452 RID: 17490
 	public class DropDownLogicCreator : IStaticVariableResetter
 	{
-		// Token: 0x060372BD RID: 225981 RVA: 0x00D15A77 File Offset: 0x00D13C77
+		// Token: 0x0602C206 RID: 180742 RVA: 0x00C64E8F File Offset: 0x00C6308F
 		static DropDownLogicCreator()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(DropDownLogicCreator.CreateStaticDefaultValue), new Action(DropDownLogicCreator.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060372BE RID: 225982 RVA: 0x00D15A96 File Offset: 0x00D13C96
+		// Token: 0x0602C207 RID: 180743 RVA: 0x00C64EAE File Offset: 0x00C630AE
 		public static void CreateStaticDefaultValue()
 		{
 			DropDownLogicCreator.LogicMap = new Dictionary<EFunction, DropDownLogicBase>
@@ -33,13 +33,13 @@ namespace CSharpScript.Game.Module.Menu.DropDownLogic
 			};
 		}
 
-		// Token: 0x060372BF RID: 225983 RVA: 0x00D15ACF File Offset: 0x00D13CCF
+		// Token: 0x0602C208 RID: 180744 RVA: 0x00C64EE7 File Offset: 0x00C630E7
 		public static void ResetStaticDefaultValue()
 		{
 			DropDownLogicCreator.LogicMap = null;
 		}
 
-		// Token: 0x060372C0 RID: 225984 RVA: 0x00D15AD8 File Offset: 0x00D13CD8
+		// Token: 0x0602C209 RID: 180745 RVA: 0x00C64EF0 File Offset: 0x00C630F0
 		[NullableContext(2)]
 		public static DropDownLogicBase GetDropDownLogic(EFunction type)
 		{
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Menu.DropDownLogic
 			return result;
 		}
 
-		// Token: 0x0401D1A4 RID: 119204
+		// Token: 0x04017C3D RID: 97341
 		[Nullable(new byte[]
 		{
 			2,

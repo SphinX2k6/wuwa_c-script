@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020008C2 RID: 2242
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000965 RID: 2405
 	public class TimelineTrackControlComponent : IComponentBase
 	{
-		// Token: 0x06003277 RID: 12919 RVA: 0x000816F8 File Offset: 0x0007F8F8
+		// Token: 0x060035B3 RID: 13747 RVA: 0x00088BE0 File Offset: 0x00086DE0
 		private TimelineTrackControlComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003278 RID: 12920 RVA: 0x00081730 File Offset: 0x0007F930
+		// Token: 0x060035B4 RID: 13748 RVA: 0x00088C18 File Offset: 0x00086E18
 		public static TimelineTrackControlComponent Create([Nullable(2)] TimelineTrackControlComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003279 RID: 12921 RVA: 0x00081743 File Offset: 0x0007F943
+		// Token: 0x060035B5 RID: 13749 RVA: 0x00088C2B File Offset: 0x00086E2B
 		public static TimelineTrackControlComponent CreateFromSetValue([Nullable(2)] TimelineTrackControlComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600327A RID: 12922 RVA: 0x00081756 File Offset: 0x0007F956
+		// Token: 0x060035B6 RID: 13750 RVA: 0x00088C3E File Offset: 0x00086E3E
 		public new TimelineTrackControlComponent_SetValue ToSetValue()
 		{
 			return new TimelineTrackControlComponent_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000D80 RID: 3456
-		// (get) Token: 0x0600327B RID: 12923 RVA: 0x00081784 File Offset: 0x0007F984
-		// (set) Token: 0x0600327C RID: 12924 RVA: 0x000817BE File Offset: 0x0007F9BE
+		// Token: 0x17000E49 RID: 3657
+		// (get) Token: 0x060035B7 RID: 13751 RVA: 0x00088C6C File Offset: 0x00086E6C
+		// (set) Token: 0x060035B8 RID: 13752 RVA: 0x00088CA6 File Offset: 0x00086EA6
 		public override bool? Disabled
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D81 RID: 3457
-		// (get) Token: 0x0600327D RID: 12925 RVA: 0x000817CC File Offset: 0x0007F9CC
-		// (set) Token: 0x0600327E RID: 12926 RVA: 0x000817F6 File Offset: 0x0007F9F6
+		// Token: 0x17000E4A RID: 3658
+		// (get) Token: 0x060035B9 RID: 13753 RVA: 0x00088CB4 File Offset: 0x00086EB4
+		// (set) Token: 0x060035BA RID: 13754 RVA: 0x00088CDE File Offset: 0x00086EDE
 		public override bool? EdIsLocked
 		{
 			get
@@ -105,9 +103,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D82 RID: 3458
-		// (get) Token: 0x0600327F RID: 12927 RVA: 0x00081804 File Offset: 0x0007FA04
-		// (set) Token: 0x06003280 RID: 12928 RVA: 0x00081897 File Offset: 0x0007FA97
+		// Token: 0x17000E4B RID: 3659
+		// (get) Token: 0x060035BB RID: 13755 RVA: 0x00088CEC File Offset: 0x00086EEC
+		// (set) Token: 0x060035BC RID: 13756 RVA: 0x00088D7F File Offset: 0x00086F7F
 		public virtual List<ITimelineControlGroup> ControlGroups
 		{
 			get
@@ -143,18 +141,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400211F RID: 8479
+		// Token: 0x04002331 RID: 9009
 		[Nullable(2)]
 		protected new TimelineTrackControlComponent FbInstance;
 
-		// Token: 0x04002120 RID: 8480
+		// Token: 0x04002332 RID: 9010
 		[Nullable(2)]
 		protected new TimelineTrackControlComponent_SetValue PocoInterface;
 
-		// Token: 0x04002121 RID: 8481
+		// Token: 0x04002333 RID: 9011
 		private List<ITimelineControlGroup> _ControlGroupsCache;
 
-		// Token: 0x04002122 RID: 8482
+		// Token: 0x04002334 RID: 9012
 		private bool _ControlGroupsInited;
 	}
 }

@@ -8,12 +8,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 {
-	// Token: 0x02005037 RID: 20535
+	// Token: 0x02004004 RID: 16388
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class QteManger
 	{
-		// Token: 0x0603490B RID: 215307 RVA: 0x00C69284 File Offset: 0x00C67484
+		// Token: 0x060297C9 RID: 169929 RVA: 0x00BB5714 File Offset: 0x00BB3914
 		public void HandlePlotQte(ITalkItem subtitle)
 		{
 			if (this.CurrentQte.Count > 0)
@@ -57,13 +57,13 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			this.CurrentQte[commonQteContextBase.HandleId] = subtitle.Id;
 		}
 
-		// Token: 0x0603490C RID: 215308 RVA: 0x00C69418 File Offset: 0x00C67618
+		// Token: 0x060297CA RID: 169930 RVA: 0x00BB58A8 File Offset: 0x00BB3AA8
 		public void HandlePlotQteEnd(int talkId)
 		{
 			FlowController.Instance.FlowSequence.OnQteEnd(talkId);
 		}
 
-		// Token: 0x0603490D RID: 215309 RVA: 0x00C6942C File Offset: 0x00C6762C
+		// Token: 0x060297CB RID: 169931 RVA: 0x00BB58BC File Offset: 0x00BB3ABC
 		public void StopQte()
 		{
 			foreach (int qteHandle in this.CurrentQte.Keys)
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			this.CurrentQte.Clear();
 		}
 
-		// Token: 0x0603490E RID: 215310 RVA: 0x00C69494 File Offset: 0x00C67694
+		// Token: 0x060297CC RID: 169932 RVA: 0x00BB5924 File Offset: 0x00BB3B24
 		[NullableContext(2)]
 		private void OnQteSuccess(CommonQteContextBase context)
 		{
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			this.OnQteFinish(context);
 		}
 
-		// Token: 0x0603490F RID: 215311 RVA: 0x00C694CE File Offset: 0x00C676CE
+		// Token: 0x060297CD RID: 169933 RVA: 0x00BB595E File Offset: 0x00BB3B5E
 		[NullableContext(2)]
 		private void OnQteFail(CommonQteContextBase context)
 		{
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			this.OnQteFinish(context);
 		}
 
-		// Token: 0x06034910 RID: 215312 RVA: 0x00C6950C File Offset: 0x00C6770C
+		// Token: 0x060297CE RID: 169934 RVA: 0x00BB599C File Offset: 0x00BB3B9C
 		private void OnQteFinish(CommonQteContextBase context)
 		{
 			ALevelSequenceActor curLevelSeqActor = SequenceModel.Instance.CurLevelSeqActor;
@@ -109,16 +109,16 @@ namespace CSharpScript.Game.Module.Plot.Sequence.Assistant
 			this.CurrentQte.Remove(context.HandleId);
 		}
 
-		// Token: 0x0401C021 RID: 114721
+		// Token: 0x04016A2C RID: 92716
 		private const string EnableInteractReason = "PlotQte";
 
-		// Token: 0x0401C022 RID: 114722
+		// Token: 0x04016A2D RID: 92717
 		private const string EVENT_SUCCESS = "plot_seq_qte_success";
 
-		// Token: 0x0401C023 RID: 114723
+		// Token: 0x04016A2E RID: 92718
 		private const string EVENT_FAIL = "plot_seq_qte_timeout";
 
-		// Token: 0x0401C024 RID: 114724
+		// Token: 0x04016A2F RID: 92719
 		private readonly Dictionary<int, int> CurrentQte = new Dictionary<int, int>();
 	}
 }

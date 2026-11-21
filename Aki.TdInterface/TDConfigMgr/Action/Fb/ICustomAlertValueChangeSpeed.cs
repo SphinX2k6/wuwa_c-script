@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020029F9 RID: 10745
+	// Token: 0x02002CE6 RID: 11494
 	public class ICustomAlertValueChangeSpeed : IAlertValueSpeedChangeType
 	{
-		// Token: 0x0600ED2B RID: 60715 RVA: 0x0022985B File Offset: 0x00227A5B
-		[NullableContext(1)]
+		// Token: 0x0600FBC2 RID: 64450 RVA: 0x002471DF File Offset: 0x002453DF
 		public static ICustomAlertValueChangeSpeed Create(ICustomAlertValueChangeSpeed? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004AFB RID: 19195
-		// (get) Token: 0x0600ED2C RID: 60716 RVA: 0x0022987A File Offset: 0x00227A7A
+		// Token: 0x17004EA4 RID: 20132
+		// (get) Token: 0x0600FBC3 RID: 64451 RVA: 0x002471FE File Offset: 0x002453FE
 		public override EValueChangeType Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004AFC RID: 19196
-		// (get) Token: 0x0600ED2D RID: 60717 RVA: 0x00229887 File Offset: 0x00227A87
+		// Token: 0x17004EA5 RID: 20133
+		// (get) Token: 0x0600FBC4 RID: 64452 RVA: 0x0024720B File Offset: 0x0024540B
 		public virtual float CustomValue
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008293 RID: 33427
+		// Token: 0x04008984 RID: 35204
 		private ICustomAlertValueChangeSpeed Instance;
 	}
 }

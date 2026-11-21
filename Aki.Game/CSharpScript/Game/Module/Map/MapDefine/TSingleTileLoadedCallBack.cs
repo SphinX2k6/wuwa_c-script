@@ -2,7 +2,7 @@
 
 namespace CSharpScript.Game.Module.Map.MapDefine
 {
-	// Token: 0x02005577 RID: 21879
-	// (Invoke) Token: 0x06037C64 RID: 228452
+	// Token: 0x0200454A RID: 17738
+	// (Invoke) Token: 0x0602CB3E RID: 183102
 	public delegate void TSingleTileLoadedCallBack();
 }

@@ -4,14 +4,14 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020004F9 RID: 1273
+	// Token: 0x0200055A RID: 1370
 	public class IMismatchCastConfig_SetValue
 	{
-		// Token: 0x040012EE RID: 4846
+		// Token: 0x0400144E RID: 5198
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<IMismatchSequence> MismatchSequence;
 	}

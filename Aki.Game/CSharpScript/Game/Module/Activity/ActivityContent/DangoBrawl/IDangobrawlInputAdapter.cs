@@ -5,37 +5,37 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x020067A1 RID: 26529
+	// Token: 0x020056F1 RID: 22257
 	[NullableContext(1)]
 	public interface IDangobrawlInputAdapter
 	{
-		// Token: 0x170096A5 RID: 38565
-		// (get) Token: 0x0604221E RID: 270878
+		// Token: 0x170069E6 RID: 27110
+		// (get) Token: 0x06036D74 RID: 224628
 		EInputPlatform Platform { get; }
 
-		// Token: 0x0604221F RID: 270879 RVA: 0x0100A4B7 File Offset: 0x010086B7
+		// Token: 0x06036D75 RID: 224629 RVA: 0x00F4B89B File Offset: 0x00F49A9B
 		void Start()
 		{
 		}
 
-		// Token: 0x06042220 RID: 270880 RVA: 0x0100A4B9 File Offset: 0x010086B9
+		// Token: 0x06036D76 RID: 224630 RVA: 0x00F4B89D File Offset: 0x00F49A9D
 		void Stop()
 		{
 		}
 
-		// Token: 0x06042221 RID: 270881
+		// Token: 0x06036D77 RID: 224631
 		void OnTick(float delta);
 
-		// Token: 0x06042222 RID: 270882
+		// Token: 0x06036D78 RID: 224632
 		UniTask OnPointerClick(EDragSourceKind source, IDangoBrawlDraggableView view, FVector pointerPos);
 
-		// Token: 0x06042223 RID: 270883
+		// Token: 0x06036D79 RID: 224633
 		UniTask OnPointerBeginDrag(EDragSourceKind source, IDangoBrawlDraggableView view, FVector pointerPos);
 
-		// Token: 0x06042224 RID: 270884
+		// Token: 0x06036D7A RID: 224634
 		void OnPointerDrag(FVector pointerPos);
 
-		// Token: 0x06042225 RID: 270885
+		// Token: 0x06036D7B RID: 224635
 		UniTask OnPointerEndDrag(FVector pointerPos);
 	}
 }

@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020074A6 RID: 29862
+	// Token: 0x02007C9C RID: 31900
 	public class IUiOperationTypeT
 	{
-		// Token: 0x1700E2B5 RID: 58037
-		// (get) Token: 0x060364BA RID: 222394 RVA: 0x0076149A File Offset: 0x0075F69A
-		// (set) Token: 0x060364BB RID: 222395 RVA: 0x007614A2 File Offset: 0x0075F6A2
+		// Token: 0x1700EED9 RID: 61145
+		// (get) Token: 0x060398C3 RID: 235715 RVA: 0x007C4526 File Offset: 0x007C2726
+		// (set) Token: 0x060398C4 RID: 235716 RVA: 0x007C452E File Offset: 0x007C272E
 		public EUiOperationType Type { get; set; }
 
-		// Token: 0x060364BC RID: 222396 RVA: 0x007614AB File Offset: 0x0075F6AB
+		// Token: 0x060398C5 RID: 235717 RVA: 0x007C4537 File Offset: 0x007C2737
 		public IUiOperationTypeT()
 		{
 			this.Type = EUiOperationType.Enable;

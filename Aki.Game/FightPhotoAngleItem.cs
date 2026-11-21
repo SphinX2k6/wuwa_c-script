@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.AutoAttach;
 using UnrealEngine;
 
-// Token: 0x020025B3 RID: 9651
+// Token: 0x02001A9E RID: 6814
 public class FightPhotoAngleItem : AutoAttachItem<int?>
 {
-	// Token: 0x06013912 RID: 80146 RVA: 0x004E43A4 File Offset: 0x004E25A4
+	// Token: 0x06010DF2 RID: 69106 RVA: 0x004F2FA4 File Offset: 0x004F11A4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -18,7 +18,7 @@ public class FightPhotoAngleItem : AutoAttachItem<int?>
 		};
 	}
 
-	// Token: 0x06013913 RID: 80147 RVA: 0x004E4400 File Offset: 0x004E2600
+	// Token: 0x06010DF3 RID: 69107 RVA: 0x004F3000 File Offset: 0x004F1200
 	protected override void OnRefreshItem(int? angle)
 	{
 		if (angle == null)
@@ -69,7 +69,7 @@ public class FightPhotoAngleItem : AutoAttachItem<int?>
 		}
 	}
 
-	// Token: 0x06013914 RID: 80148 RVA: 0x004E44E0 File Offset: 0x004E26E0
+	// Token: 0x06010DF4 RID: 69108 RVA: 0x004F30E0 File Offset: 0x004F12E0
 	public override void OnSelect()
 	{
 		if (this.AllData != null && this.CurrentShowItemIndex >= 0 && this.CurrentShowItemIndex < this.AllData.Length)
@@ -87,33 +87,33 @@ public class FightPhotoAngleItem : AutoAttachItem<int?>
 		}
 	}
 
-	// Token: 0x06013915 RID: 80149 RVA: 0x004E4540 File Offset: 0x004E2740
+	// Token: 0x06010DF5 RID: 69109 RVA: 0x004F3140 File Offset: 0x004F1340
 	protected override void OnUnSelect()
 	{
 	}
 
-	// Token: 0x06013916 RID: 80150 RVA: 0x004E4542 File Offset: 0x004E2742
+	// Token: 0x06010DF6 RID: 69110 RVA: 0x004F3142 File Offset: 0x004F1342
 	protected override void OnMoveItem()
 	{
 	}
 
-	// Token: 0x06013917 RID: 80151 RVA: 0x004E4544 File Offset: 0x004E2744
+	// Token: 0x06010DF7 RID: 69111 RVA: 0x004F3144 File Offset: 0x004F1344
 	public FightPhotoAngleItem() : base(null)
 	{
 	}
 
-	// Token: 0x040093BC RID: 37820
+	// Token: 0x04009512 RID: 38162
 	[Nullable(2)]
 	public Action<int> OnSelectCallback;
 
-	// Token: 0x02008BB7 RID: 35767
+	// Token: 0x02007D3F RID: 32063
 	private enum EComponents
 	{
-		// Token: 0x0402D59E RID: 185758
+		// Token: 0x040288B3 RID: 166067
 		SpriteMarkShort,
-		// Token: 0x0402D59F RID: 185759
+		// Token: 0x040288B4 RID: 166068
 		SpriteMarkLong,
-		// Token: 0x0402D5A0 RID: 185760
+		// Token: 0x040288B5 RID: 166069
 		ItemMarkOriginPoint
 	}
 }

@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020041FF RID: 16895
+	// Token: 0x02004658 RID: 18008
 	public struct ITrackEntityGroup : IFlatbufferObject
 	{
-		// Token: 0x170077EB RID: 30699
-		// (get) Token: 0x06018EEA RID: 102122 RVA: 0x00396609 File Offset: 0x00394809
+		// Token: 0x17007E19 RID: 32281
+		// (get) Token: 0x0601A644 RID: 108100 RVA: 0x003C1B69 File Offset: 0x003BFD69
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018EEB RID: 102123 RVA: 0x00396616 File Offset: 0x00394816
+		// Token: 0x0601A645 RID: 108101 RVA: 0x003C1B76 File Offset: 0x003BFD76
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06018EEC RID: 102124 RVA: 0x00396620 File Offset: 0x00394820
+		// Token: 0x0601A646 RID: 108102 RVA: 0x003C1B80 File Offset: 0x003BFD80
 		public static ITrackEntityGroup GetRootAsITrackEntityGroup(ByteBuffer _bb)
 		{
 			return ITrackEntityGroup.GetRootAsITrackEntityGroup(_bb, default(ITrackEntityGroup));
 		}
 
-		// Token: 0x06018EED RID: 102125 RVA: 0x0039663C File Offset: 0x0039483C
+		// Token: 0x0601A647 RID: 108103 RVA: 0x003C1B9C File Offset: 0x003BFD9C
 		public static ITrackEntityGroup GetRootAsITrackEntityGroup(ByteBuffer _bb, ITrackEntityGroup obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06018EEE RID: 102126 RVA: 0x00396659 File Offset: 0x00394859
+		// Token: 0x0601A648 RID: 108104 RVA: 0x003C1BB9 File Offset: 0x003BFDB9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06018EEF RID: 102127 RVA: 0x00396668 File Offset: 0x00394868
+		// Token: 0x0601A649 RID: 108105 RVA: 0x003C1BC8 File Offset: 0x003BFDC8
 		public ITrackEntityGroup __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170077EC RID: 30700
-		// (get) Token: 0x06018EF0 RID: 102128 RVA: 0x00396678 File Offset: 0x00394878
+		// Token: 0x17007E1A RID: 32282
+		// (get) Token: 0x0601A64A RID: 108106 RVA: 0x003C1BD8 File Offset: 0x003BFDD8
 		public ETrackType Type
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x170077ED RID: 30701
-		// (get) Token: 0x06018EF1 RID: 102129 RVA: 0x003966B4 File Offset: 0x003948B4
+		// Token: 0x17007E1B RID: 32283
+		// (get) Token: 0x0601A64B RID: 108107 RVA: 0x003C1C14 File Offset: 0x003BFE14
 		public TGravityDirection GravityDirectionType
 		{
 			get
@@ -79,7 +79,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018EF2 RID: 102130 RVA: 0x003966F0 File Offset: 0x003948F0
+		// Token: 0x0601A64C RID: 108108 RVA: 0x003C1C50 File Offset: 0x003BFE50
 		public TTable? GravityDirection<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -90,31 +90,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06018EF3 RID: 102131 RVA: 0x00396734 File Offset: 0x00394934
+		// Token: 0x0601A64D RID: 108109 RVA: 0x003C1C94 File Offset: 0x003BFE94
 		public IGravityDirectionByEntityGravity GravityDirectionAsIGravityDirectionByEntityGravity()
 		{
 			return this.GravityDirection<IGravityDirectionByEntityGravity>().Value;
 		}
 
-		// Token: 0x06018EF4 RID: 102132 RVA: 0x00396750 File Offset: 0x00394950
+		// Token: 0x0601A64E RID: 108110 RVA: 0x003C1CB0 File Offset: 0x003BFEB0
 		public IGravityDirectionSelfRotation GravityDirectionAsIGravityDirectionSelfRotation()
 		{
 			return this.GravityDirection<IGravityDirectionSelfRotation>().Value;
 		}
 
-		// Token: 0x06018EF5 RID: 102133 RVA: 0x0039676C File Offset: 0x0039496C
+		// Token: 0x0601A64F RID: 108111 RVA: 0x003C1CCC File Offset: 0x003BFECC
 		public IGravityDirectionVectorInfo GravityDirectionAsIGravityDirectionVectorInfo()
 		{
 			return this.GravityDirection<IGravityDirectionVectorInfo>().Value;
 		}
 
-		// Token: 0x06018EF6 RID: 102134 RVA: 0x00396788 File Offset: 0x00394988
+		// Token: 0x0601A650 RID: 108112 RVA: 0x003C1CE8 File Offset: 0x003BFEE8
 		public IGravityDirectionWorldAxis GravityDirectionAsIGravityDirectionWorldAxis()
 		{
 			return this.GravityDirection<IGravityDirectionWorldAxis>().Value;
 		}
 
-		// Token: 0x06018EF7 RID: 102135 RVA: 0x003967A4 File Offset: 0x003949A4
+		// Token: 0x0601A651 RID: 108113 RVA: 0x003C1D04 File Offset: 0x003BFF04
 		public int Entities(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -125,8 +125,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170077EE RID: 30702
-		// (get) Token: 0x06018EF8 RID: 102136 RVA: 0x003967E4 File Offset: 0x003949E4
+		// Token: 0x17007E1C RID: 32284
+		// (get) Token: 0x0601A652 RID: 108114 RVA: 0x003C1D44 File Offset: 0x003BFF44
 		public int EntitiesLength
 		{
 			get
@@ -140,20 +140,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018EF9 RID: 102137 RVA: 0x00396810 File Offset: 0x00394A10
+		// Token: 0x0601A653 RID: 108115 RVA: 0x003C1D70 File Offset: 0x003BFF70
 		public Span<int> GetEntitiesBytes()
 		{
 			return this.__p.__vector_as_span<int>(10, 4);
 		}
 
-		// Token: 0x06018EFA RID: 102138 RVA: 0x00396820 File Offset: 0x00394A20
+		// Token: 0x0601A654 RID: 108116 RVA: 0x003C1D80 File Offset: 0x003BFF80
 		public int[] GetEntitiesArray()
 		{
 			return this.__p.__vector_as_array<int>(10);
 		}
 
-		// Token: 0x170077EF RID: 30703
-		// (get) Token: 0x06018EFB RID: 102139 RVA: 0x00396830 File Offset: 0x00394A30
+		// Token: 0x17007E1D RID: 32285
+		// (get) Token: 0x0601A655 RID: 108117 RVA: 0x003C1D90 File Offset: 0x003BFF90
 		public TTrackRuleType TrackRuleTypeType
 		{
 			get
@@ -167,7 +167,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018EFC RID: 102140 RVA: 0x00396870 File Offset: 0x00394A70
+		// Token: 0x0601A656 RID: 108118 RVA: 0x003C1DD0 File Offset: 0x003BFFD0
 		public TTable? TrackRuleType<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(14);
@@ -178,19 +178,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06018EFD RID: 102141 RVA: 0x003968B8 File Offset: 0x00394AB8
+		// Token: 0x0601A657 RID: 108119 RVA: 0x003C1E18 File Offset: 0x003C0018
 		public ITrackRuleFindFirstNotMatchState TrackRuleTypeAsITrackRuleFindFirstNotMatchState()
 		{
 			return this.TrackRuleType<ITrackRuleFindFirstNotMatchState>().Value;
 		}
 
-		// Token: 0x06018EFE RID: 102142 RVA: 0x003968D4 File Offset: 0x00394AD4
+		// Token: 0x0601A658 RID: 108120 RVA: 0x003C1E34 File Offset: 0x003C0034
 		public ITrackRuleFindLastMatchState TrackRuleTypeAsITrackRuleFindLastMatchState()
 		{
 			return this.TrackRuleType<ITrackRuleFindLastMatchState>().Value;
 		}
 
-		// Token: 0x06018EFF RID: 102143 RVA: 0x003968EF File Offset: 0x00394AEF
+		// Token: 0x0601A659 RID: 108121 RVA: 0x003C1E4F File Offset: 0x003C004F
 		public static Offset<ITrackEntityGroup> CreateITrackEntityGroup(FlatBufferBuilder builder, ETrackType Type = ETrackType.Locations, TGravityDirection GravityDirection_type = TGravityDirection.NONE, int GravityDirectionOffset = 0, VectorOffset EntitiesOffset = default(VectorOffset), TTrackRuleType TrackRuleType_type = TTrackRuleType.NONE, int TrackRuleTypeOffset = 0)
 		{
 			builder.StartTable(6);
@@ -203,37 +203,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ITrackEntityGroup.EndITrackEntityGroup(builder);
 		}
 
-		// Token: 0x06018F00 RID: 102144 RVA: 0x0039692B File Offset: 0x00394B2B
+		// Token: 0x0601A65A RID: 108122 RVA: 0x003C1E8B File Offset: 0x003C008B
 		public static void StartITrackEntityGroup(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x06018F01 RID: 102145 RVA: 0x00396934 File Offset: 0x00394B34
+		// Token: 0x0601A65B RID: 108123 RVA: 0x003C1E94 File Offset: 0x003C0094
 		public static void AddType(FlatBufferBuilder builder, ETrackType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06018F02 RID: 102146 RVA: 0x0039693F File Offset: 0x00394B3F
+		// Token: 0x0601A65C RID: 108124 RVA: 0x003C1E9F File Offset: 0x003C009F
 		public static void AddGravityDirectionType(FlatBufferBuilder builder, TGravityDirection gravityDirectionType)
 		{
 			builder.AddByte(1, (byte)gravityDirectionType, 0);
 		}
 
-		// Token: 0x06018F03 RID: 102147 RVA: 0x0039694A File Offset: 0x00394B4A
+		// Token: 0x0601A65D RID: 108125 RVA: 0x003C1EAA File Offset: 0x003C00AA
 		public static void AddGravityDirection(FlatBufferBuilder builder, int gravityDirectionOffset)
 		{
 			builder.AddOffset(2, gravityDirectionOffset, 0);
 		}
 
-		// Token: 0x06018F04 RID: 102148 RVA: 0x00396955 File Offset: 0x00394B55
+		// Token: 0x0601A65E RID: 108126 RVA: 0x003C1EB5 File Offset: 0x003C00B5
 		public static void AddEntities(FlatBufferBuilder builder, VectorOffset entitiesOffset)
 		{
 			builder.AddOffset(3, entitiesOffset.Value, 0);
 		}
 
-		// Token: 0x06018F05 RID: 102149 RVA: 0x00396968 File Offset: 0x00394B68
+		// Token: 0x0601A65F RID: 108127 RVA: 0x003C1EC8 File Offset: 0x003C00C8
 		public static VectorOffset CreateEntitiesVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -244,7 +244,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06018F06 RID: 102150 RVA: 0x0039699F File Offset: 0x00394B9F
+		// Token: 0x0601A660 RID: 108128 RVA: 0x003C1EFF File Offset: 0x003C00FF
 		public static VectorOffset CreateEntitiesVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -252,7 +252,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06018F07 RID: 102151 RVA: 0x003969B9 File Offset: 0x00394BB9
+		// Token: 0x0601A661 RID: 108129 RVA: 0x003C1F19 File Offset: 0x003C0119
 		public static VectorOffset CreateEntitiesVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -260,7 +260,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06018F08 RID: 102152 RVA: 0x003969D7 File Offset: 0x00394BD7
+		// Token: 0x0601A662 RID: 108130 RVA: 0x003C1F37 File Offset: 0x003C0137
 		public static VectorOffset CreateEntitiesVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -268,31 +268,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06018F09 RID: 102153 RVA: 0x003969F0 File Offset: 0x00394BF0
+		// Token: 0x0601A663 RID: 108131 RVA: 0x003C1F50 File Offset: 0x003C0150
 		public static void StartEntitiesVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06018F0A RID: 102154 RVA: 0x003969FB File Offset: 0x00394BFB
+		// Token: 0x0601A664 RID: 108132 RVA: 0x003C1F5B File Offset: 0x003C015B
 		public static void AddTrackRuleTypeType(FlatBufferBuilder builder, TTrackRuleType trackRuleTypeType)
 		{
 			builder.AddByte(4, (byte)trackRuleTypeType, 0);
 		}
 
-		// Token: 0x06018F0B RID: 102155 RVA: 0x00396A06 File Offset: 0x00394C06
+		// Token: 0x0601A665 RID: 108133 RVA: 0x003C1F66 File Offset: 0x003C0166
 		public static void AddTrackRuleType(FlatBufferBuilder builder, int trackRuleTypeOffset)
 		{
 			builder.AddOffset(5, trackRuleTypeOffset, 0);
 		}
 
-		// Token: 0x06018F0C RID: 102156 RVA: 0x00396A11 File Offset: 0x00394C11
+		// Token: 0x0601A666 RID: 108134 RVA: 0x003C1F71 File Offset: 0x003C0171
 		public static Offset<ITrackEntityGroup> EndITrackEntityGroup(FlatBufferBuilder builder)
 		{
 			return new Offset<ITrackEntityGroup>(builder.EndTable());
 		}
 
-		// Token: 0x06018F0D RID: 102157 RVA: 0x00396A20 File Offset: 0x00394C20
+		// Token: 0x0601A667 RID: 108135 RVA: 0x003C1F80 File Offset: 0x003C0180
 		public ITrackEntityGroupT UnPack()
 		{
 			ITrackEntityGroupT trackEntityGroupT = new ITrackEntityGroupT();
@@ -300,7 +300,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return trackEntityGroupT;
 		}
 
-		// Token: 0x06018F0E RID: 102158 RVA: 0x00396A3C File Offset: 0x00394C3C
+		// Token: 0x0601A668 RID: 108136 RVA: 0x003C1F9C File Offset: 0x003C019C
 		public void UnPackTo(ITrackEntityGroupT _o)
 		{
 			_o.Type = this.Type;
@@ -341,7 +341,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.TrackRuleType.Value = ((this.TrackRuleType<ITrackRuleFindLastMatchState>() != null) ? this.TrackRuleType<ITrackRuleFindLastMatchState>().Value.UnPack() : null);
 		}
 
-		// Token: 0x06018F0F RID: 102159 RVA: 0x00396C48 File Offset: 0x00394E48
+		// Token: 0x0601A669 RID: 108137 RVA: 0x003C21A8 File Offset: 0x003C03A8
 		public static Offset<ITrackEntityGroup> Pack(FlatBufferBuilder builder, ITrackEntityGroupT _o)
 		{
 			if (_o == null)
@@ -361,7 +361,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ITrackEntityGroup.CreateITrackEntityGroup(builder, _o.Type, gravityDirection_type, gravityDirectionOffset, entitiesOffset, trackRuleType_type, trackRuleTypeOffset);
 		}
 
-		// Token: 0x0400BE62 RID: 48738
+		// Token: 0x0400C86D RID: 51309
 		private Table __p;
 	}
 }

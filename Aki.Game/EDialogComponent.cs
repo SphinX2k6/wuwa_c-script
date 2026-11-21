@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x0200251F RID: 9503
+// Token: 0x02001A06 RID: 6662
 public enum EDialogComponent
 {
-	// Token: 0x0400904A RID: 36938
+	// Token: 0x0400919F RID: 37279
 	TogItem,
-	// Token: 0x0400904B RID: 36939
+	// Token: 0x040091A0 RID: 37280
 	SpriteDialogBg,
-	// Token: 0x0400904C RID: 36940
+	// Token: 0x040091A1 RID: 37281
 	SpriteCheck,
-	// Token: 0x0400904D RID: 36941
+	// Token: 0x040091A2 RID: 37282
 	PanelLock,
-	// Token: 0x0400904E RID: 36942
+	// Token: 0x040091A3 RID: 37283
 	TextDialog,
-	// Token: 0x0400904F RID: 36943
+	// Token: 0x040091A4 RID: 37284
 	DynamicItemNode,
-	// Token: 0x04009050 RID: 36944
+	// Token: 0x040091A5 RID: 37285
 	RedDot
 }

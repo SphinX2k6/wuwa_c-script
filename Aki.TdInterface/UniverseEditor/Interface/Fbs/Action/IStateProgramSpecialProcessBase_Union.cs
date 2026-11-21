@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020071C3 RID: 29123
+	// Token: 0x02007998 RID: 31128
 	public enum IStateProgramSpecialProcessBase_Union : byte
 	{
-		// Token: 0x04011CA4 RID: 72868
+		// Token: 0x04012CA6 RID: 76966
 		NONE,
-		// Token: 0x04011CA5 RID: 72869
+		// Token: 0x04012CA7 RID: 76967
 		IStateProgramSpecialProcessBase,
-		// Token: 0x04011CA6 RID: 72870
+		// Token: 0x04012CA8 RID: 76968
 		IStateProgramSpecialProcessChangeTeamOptimization
 	}
 }

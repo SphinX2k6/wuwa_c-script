@@ -5,20 +5,20 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002111 RID: 8465
+	// Token: 0x020006E1 RID: 1761
 	[UnrealObjectPath("/Script/LGUI.TextTransitionInfoOfState")]
 	[UnrealStructLayout(40, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 40)]
 	public class FTextTransitionInfoOfState : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0601FD95 RID: 130453 RVA: 0x002F6121 File Offset: 0x002F4321
+		// Token: 0x0600958C RID: 38284 RVA: 0x000E1DA4 File Offset: 0x000DFFA4
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FTextTransitionInfoOfState._ScriptStructPtr != 0) ? FTextTransitionInfoOfState._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/LGUI.TextTransitionInfoOfState", ref FTextTransitionInfoOfState._ScriptStructPtr);
 		}
 
-		// Token: 0x17007D42 RID: 32066
-		// (get) Token: 0x0601FD96 RID: 130454 RVA: 0x002F6145 File Offset: 0x002F4345
-		// (set) Token: 0x0601FD97 RID: 130455 RVA: 0x002F6159 File Offset: 0x002F4359
+		// Token: 0x17001BBF RID: 7103
+		// (get) Token: 0x0600958D RID: 38285 RVA: 0x000E1DC8 File Offset: 0x000DFFC8
+		// (set) Token: 0x0600958E RID: 38286 RVA: 0x000E1DDC File Offset: 0x000DFFDC
 		public unsafe FColor FontColor
 		{
 			get
@@ -31,9 +31,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007D43 RID: 32067
-		// (get) Token: 0x0601FD98 RID: 130456 RVA: 0x002F616E File Offset: 0x002F436E
-		// (set) Token: 0x0601FD99 RID: 130457 RVA: 0x002F6182 File Offset: 0x002F4382
+		// Token: 0x17001BC0 RID: 7104
+		// (get) Token: 0x0600958F RID: 38287 RVA: 0x000E1DF1 File Offset: 0x000DFFF1
+		// (set) Token: 0x06009590 RID: 38288 RVA: 0x000E1E05 File Offset: 0x000E0005
 		public unsafe FColor OutlineColor
 		{
 			get
@@ -46,9 +46,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007D44 RID: 32068
-		// (get) Token: 0x0601FD9A RID: 130458 RVA: 0x002F6197 File Offset: 0x002F4397
-		// (set) Token: 0x0601FD9B RID: 130459 RVA: 0x002F61A7 File Offset: 0x002F43A7
+		// Token: 0x17001BC1 RID: 7105
+		// (get) Token: 0x06009591 RID: 38289 RVA: 0x000E1E1A File Offset: 0x000E001A
+		// (set) Token: 0x06009592 RID: 38290 RVA: 0x000E1E2A File Offset: 0x000E002A
 		public unsafe float Size
 		{
 			get
@@ -61,24 +61,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007D45 RID: 32069
-		// (get) Token: 0x0601FD9C RID: 130460 RVA: 0x002F61B8 File Offset: 0x002F43B8
-		// (set) Token: 0x0601FD9D RID: 130461 RVA: 0x002F61C8 File Offset: 0x002F43C8
-		public unsafe UITextFontStyle fontStyle
-		{
-			get
-			{
-				return (UITextFontStyle)(*(base.NativePtr + (IntPtr)FTextTransitionInfoOfState.__PropertyOffset_fontStyle));
-			}
-			set
-			{
-				*(base.NativePtr + (IntPtr)FTextTransitionInfoOfState.__PropertyOffset_fontStyle) = (byte)value;
-			}
-		}
-
-		// Token: 0x17007D46 RID: 32070
-		// (get) Token: 0x0601FD9E RID: 130462 RVA: 0x002F61D9 File Offset: 0x002F43D9
-		// (set) Token: 0x0601FD9F RID: 130463 RVA: 0x002F61F2 File Offset: 0x002F43F2
+		// Token: 0x17001BC2 RID: 7106
+		// (get) Token: 0x06009593 RID: 38291 RVA: 0x000E1E3B File Offset: 0x000E003B
+		// (set) Token: 0x06009594 RID: 38292 RVA: 0x000E1E54 File Offset: 0x000E0054
 		public unsafe bool bGradualChange
 		{
 			get
@@ -91,9 +76,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007D47 RID: 32071
-		// (get) Token: 0x0601FDA0 RID: 130464 RVA: 0x002F6222 File Offset: 0x002F4422
-		// (set) Token: 0x0601FDA1 RID: 130465 RVA: 0x002F6232 File Offset: 0x002F4432
+		// Token: 0x17001BC3 RID: 7107
+		// (get) Token: 0x06009595 RID: 38293 RVA: 0x000E1E84 File Offset: 0x000E0084
+		// (set) Token: 0x06009596 RID: 38294 RVA: 0x000E1E94 File Offset: 0x000E0094
 		public unsafe float GradualDuration
 		{
 			get
@@ -106,9 +91,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007D48 RID: 32072
-		// (get) Token: 0x0601FDA2 RID: 130466 RVA: 0x002F6243 File Offset: 0x002F4443
-		// (set) Token: 0x0601FDA3 RID: 130467 RVA: 0x002F6253 File Offset: 0x002F4453
+		// Token: 0x17001BC4 RID: 7108
+		// (get) Token: 0x06009597 RID: 38295 RVA: 0x000E1EA5 File Offset: 0x000E00A5
+		// (set) Token: 0x06009598 RID: 38296 RVA: 0x000E1EB5 File Offset: 0x000E00B5
 		public unsafe bool bSetFontColor
 		{
 			get
@@ -121,9 +106,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007D49 RID: 32073
-		// (get) Token: 0x0601FDA4 RID: 130468 RVA: 0x002F6264 File Offset: 0x002F4464
-		// (set) Token: 0x0601FDA5 RID: 130469 RVA: 0x002F6274 File Offset: 0x002F4474
+		// Token: 0x17001BC5 RID: 7109
+		// (get) Token: 0x06009599 RID: 38297 RVA: 0x000E1EC6 File Offset: 0x000E00C6
+		// (set) Token: 0x0600959A RID: 38298 RVA: 0x000E1ED6 File Offset: 0x000E00D6
 		public unsafe bool bSetOutlineColor
 		{
 			get
@@ -136,9 +121,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007D4A RID: 32074
-		// (get) Token: 0x0601FDA6 RID: 130470 RVA: 0x002F6285 File Offset: 0x002F4485
-		// (set) Token: 0x0601FDA7 RID: 130471 RVA: 0x002F6295 File Offset: 0x002F4495
+		// Token: 0x17001BC6 RID: 7110
+		// (get) Token: 0x0600959B RID: 38299 RVA: 0x000E1EE7 File Offset: 0x000E00E7
+		// (set) Token: 0x0600959C RID: 38300 RVA: 0x000E1EF7 File Offset: 0x000E00F7
 		public unsafe bool bSetFontSize
 		{
 			get
@@ -151,9 +136,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17007D4B RID: 32075
-		// (get) Token: 0x0601FDA8 RID: 130472 RVA: 0x002F62A6 File Offset: 0x002F44A6
-		// (set) Token: 0x0601FDA9 RID: 130473 RVA: 0x002F62B6 File Offset: 0x002F44B6
+		// Token: 0x17001BC7 RID: 7111
+		// (get) Token: 0x0600959D RID: 38301 RVA: 0x000E1F08 File Offset: 0x000E0108
+		// (set) Token: 0x0600959E RID: 38302 RVA: 0x000E1F18 File Offset: 0x000E0118
 		public unsafe bool bSetFontStyle
 		{
 			get
@@ -166,96 +151,77 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601FDAA RID: 130474 RVA: 0x002F62C7 File Offset: 0x002F44C7
+		// Token: 0x0600959F RID: 38303 RVA: 0x000E1F29 File Offset: 0x000E0129
 		public FTextTransitionInfoOfState()
 		{
 		}
 
-		// Token: 0x0601FDAB RID: 130475 RVA: 0x002F62D0 File Offset: 0x002F44D0
-		[NullableContext(1)]
-		public FTextTransitionInfoOfState(string PredefineColor, FColor FontColor, FColor OutlineColor, float Size, UITextFontStyle fontStyle, bool bGradualChange, float GradualDuration, bool bSetFontColor, bool bSetOutlineColor, bool bSetFontSize, bool bSetFontStyle)
-		{
-			this.FontColor = FontColor;
-			this.OutlineColor = OutlineColor;
-			this.Size = Size;
-			this.fontStyle = fontStyle;
-			this.bGradualChange = bGradualChange;
-			this.GradualDuration = GradualDuration;
-			this.bSetFontColor = bSetFontColor;
-			this.bSetOutlineColor = bSetOutlineColor;
-			this.bSetFontSize = bSetFontSize;
-			this.bSetFontStyle = bSetFontStyle;
-		}
-
-		// Token: 0x0601FDAC RID: 130476 RVA: 0x002F6331 File Offset: 0x002F4531
+		// Token: 0x060095A0 RID: 38304 RVA: 0x000E1F31 File Offset: 0x000E0131
 		protected override IntPtr GetUStructPtr()
 		{
 			return FTextTransitionInfoOfState.StaticStruct();
 		}
 
-		// Token: 0x0601FDAD RID: 130477 RVA: 0x002F633D File Offset: 0x002F453D
+		// Token: 0x060095A1 RID: 38305 RVA: 0x000E1F3D File Offset: 0x000E013D
 		[NullableContext(2)]
 		public FTextTransitionInfoOfState(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601FDAE RID: 130478 RVA: 0x002F6347 File Offset: 0x002F4547
+		// Token: 0x060095A2 RID: 38306 RVA: 0x000E1F47 File Offset: 0x000E0147
 		public FTextTransitionInfoOfState(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601FDAF RID: 130479 RVA: 0x002F6352 File Offset: 0x002F4552
+		// Token: 0x060095A3 RID: 38307 RVA: 0x000E1F52 File Offset: 0x000E0152
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FTextTransitionInfoOfState(Pointer, false, true);
 		}
 
-		// Token: 0x0601FDB0 RID: 130480 RVA: 0x002F635C File Offset: 0x002F455C
+		// Token: 0x060095A4 RID: 38308 RVA: 0x000E1F5C File Offset: 0x000E015C
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FTextTransitionInfoOfState(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0401129E RID: 70302
+		// Token: 0x04004113 RID: 16659
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/LGUI.TextTransitionInfoOfState";
 
-		// Token: 0x0401129F RID: 70303
+		// Token: 0x04004114 RID: 16660
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040112A0 RID: 70304
+		// Token: 0x04004115 RID: 16661
 		internal static int __PropertyOffset_FontColor;
 
-		// Token: 0x040112A1 RID: 70305
+		// Token: 0x04004116 RID: 16662
 		internal static int __PropertyOffset_OutlineColor;
 
-		// Token: 0x040112A2 RID: 70306
+		// Token: 0x04004117 RID: 16663
 		internal static int __PropertyOffset_Size;
 
-		// Token: 0x040112A3 RID: 70307
-		internal static int __PropertyOffset_fontStyle;
-
-		// Token: 0x040112A4 RID: 70308
+		// Token: 0x04004118 RID: 16664
 		internal static int __PropertyOffset_bGradualChange;
 
-		// Token: 0x040112A5 RID: 70309
+		// Token: 0x04004119 RID: 16665
 		internal static byte __PropertyMask_bGradualChange;
 
-		// Token: 0x040112A6 RID: 70310
+		// Token: 0x0400411A RID: 16666
 		internal static int __PropertyOffset_GradualDuration;
 
-		// Token: 0x040112A7 RID: 70311
+		// Token: 0x0400411B RID: 16667
 		internal static int __PropertyOffset_bSetFontColor;
 
-		// Token: 0x040112A8 RID: 70312
+		// Token: 0x0400411C RID: 16668
 		internal static int __PropertyOffset_bSetOutlineColor;
 
-		// Token: 0x040112A9 RID: 70313
+		// Token: 0x0400411D RID: 16669
 		internal static int __PropertyOffset_bSetFontSize;
 
-		// Token: 0x040112AA RID: 70314
+		// Token: 0x0400411E RID: 16670
 		internal static int __PropertyOffset_bSetFontStyle;
 	}
 }

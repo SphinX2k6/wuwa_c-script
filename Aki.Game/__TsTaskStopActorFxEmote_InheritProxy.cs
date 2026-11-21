@@ -3,21 +3,21 @@ using System.Runtime.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Utils;
 
-// Token: 0x020036C4 RID: 14020
+// Token: 0x02002C39 RID: 11321
 public class __TsTaskStopActorFxEmote_InheritProxy : TsTaskStopActorFxEmote
 {
-	// Token: 0x0601E39A RID: 123802 RVA: 0x00885544 File Offset: 0x00883744
+	// Token: 0x0601C0B3 RID: 114867 RVA: 0x008ACF1C File Offset: 0x008AB11C
 	[NullableContext(1)]
 	public __TsTaskStopActorFxEmote_InheritProxy(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskStopActorFxEmote.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601E39B RID: 123803 RVA: 0x00885577 File Offset: 0x00883777
+	// Token: 0x0601C0B4 RID: 114868 RVA: 0x008ACF4F File Offset: 0x008AB14F
 	protected __TsTaskStopActorFxEmote_InheritProxy(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0601E39C RID: 123804 RVA: 0x00885580 File Offset: 0x00883780
+	// Token: 0x0601C0B5 RID: 114869 RVA: 0x008ACF58 File Offset: 0x008AB158
 	protected unsafe override void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);

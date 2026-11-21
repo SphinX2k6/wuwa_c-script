@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006DA RID: 1754
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200077B RID: 1915
 	public class ISlidePerformType
 	{
-		// Token: 0x060025CC RID: 9676 RVA: 0x00065A50 File Offset: 0x00063C50
+		// Token: 0x060028EC RID: 10476 RVA: 0x0006CAC0 File Offset: 0x0006ACC0
 		private ISlidePerformType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060025CD RID: 9677 RVA: 0x00065A88 File Offset: 0x00063C88
+		// Token: 0x060028ED RID: 10477 RVA: 0x0006CAF8 File Offset: 0x0006ACF8
 		public static ISlidePerformType Create([Nullable(2)] ISlidePerformType instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060025CE RID: 9678 RVA: 0x00065A9B File Offset: 0x00063C9B
+		// Token: 0x060028EE RID: 10478 RVA: 0x0006CB0B File Offset: 0x0006AD0B
 		public static ISlidePerformType CreateFromSetValue([Nullable(2)] ISlidePerformType_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060025CF RID: 9679 RVA: 0x00065AAE File Offset: 0x00063CAE
+		// Token: 0x060028EF RID: 10479 RVA: 0x0006CB1E File Offset: 0x0006AD1E
 		public ISlidePerformType_SetValue ToSetValue()
 		{
 			return new ISlidePerformType_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170009FE RID: 2558
-		// (get) Token: 0x060025D0 RID: 9680 RVA: 0x00065AC1 File Offset: 0x00063CC1
-		// (set) Token: 0x060025D1 RID: 9681 RVA: 0x00065AEC File Offset: 0x00063CEC
+		// Token: 0x17000ABC RID: 2748
+		// (get) Token: 0x060028F0 RID: 10480 RVA: 0x0006CB31 File Offset: 0x0006AD31
+		// (set) Token: 0x060028F1 RID: 10481 RVA: 0x0006CB5C File Offset: 0x0006AD5C
 		public virtual ESlidePerformType Type
 		{
 			get
@@ -83,11 +81,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040019C4 RID: 6596
+		// Token: 0x04001BC3 RID: 7107
 		[Nullable(2)]
 		protected ISlidePerformType FbInstance;
 
-		// Token: 0x040019C5 RID: 6597
+		// Token: 0x04001BC4 RID: 7108
 		[Nullable(2)]
 		protected ISlidePerformType_SetValue PocoInterface;
 	}

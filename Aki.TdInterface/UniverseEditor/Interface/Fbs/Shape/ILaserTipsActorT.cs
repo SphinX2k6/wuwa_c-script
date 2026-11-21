@@ -2,35 +2,35 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003C29 RID: 15401
+	// Token: 0x02004035 RID: 16437
 	public class ILaserTipsActorT
 	{
-		// Token: 0x17006A09 RID: 27145
-		// (get) Token: 0x0601541B RID: 87067 RVA: 0x00313DCA File Offset: 0x00311FCA
-		// (set) Token: 0x0601541C RID: 87068 RVA: 0x00313DD2 File Offset: 0x00311FD2
+		// Token: 0x17006FB1 RID: 28593
+		// (get) Token: 0x06016911 RID: 92433 RVA: 0x0033A952 File Offset: 0x00338B52
+		// (set) Token: 0x06016912 RID: 92434 RVA: 0x0033A95A File Offset: 0x00338B5A
 		public ETipsActorType Type { get; set; }
 
-		// Token: 0x17006A0A RID: 27146
-		// (get) Token: 0x0601541D RID: 87069 RVA: 0x00313DDB File Offset: 0x00311FDB
-		// (set) Token: 0x0601541E RID: 87070 RVA: 0x00313DE3 File Offset: 0x00311FE3
+		// Token: 0x17006FB2 RID: 28594
+		// (get) Token: 0x06016913 RID: 92435 RVA: 0x0033A963 File Offset: 0x00338B63
+		// (set) Token: 0x06016914 RID: 92436 RVA: 0x0033A96B File Offset: 0x00338B6B
 		public ETipsActorColorType ColorType { get; set; }
 
-		// Token: 0x17006A0B RID: 27147
-		// (get) Token: 0x0601541F RID: 87071 RVA: 0x00313DEC File Offset: 0x00311FEC
-		// (set) Token: 0x06015420 RID: 87072 RVA: 0x00313DF4 File Offset: 0x00311FF4
+		// Token: 0x17006FB3 RID: 28595
+		// (get) Token: 0x06016915 RID: 92437 RVA: 0x0033A974 File Offset: 0x00338B74
+		// (set) Token: 0x06016916 RID: 92438 RVA: 0x0033A97C File Offset: 0x00338B7C
 		public float Radius { get; set; }
 
-		// Token: 0x17006A0C RID: 27148
-		// (get) Token: 0x06015421 RID: 87073 RVA: 0x00313DFD File Offset: 0x00311FFD
-		// (set) Token: 0x06015422 RID: 87074 RVA: 0x00313E05 File Offset: 0x00312005
+		// Token: 0x17006FB4 RID: 28596
+		// (get) Token: 0x06016917 RID: 92439 RVA: 0x0033A985 File Offset: 0x00338B85
+		// (set) Token: 0x06016918 RID: 92440 RVA: 0x0033A98D File Offset: 0x00338B8D
 		public float Height { get; set; }
 
-		// Token: 0x17006A0D RID: 27149
-		// (get) Token: 0x06015423 RID: 87075 RVA: 0x00313E0E File Offset: 0x0031200E
-		// (set) Token: 0x06015424 RID: 87076 RVA: 0x00313E16 File Offset: 0x00312016
+		// Token: 0x17006FB5 RID: 28597
+		// (get) Token: 0x06016919 RID: 92441 RVA: 0x0033A996 File Offset: 0x00338B96
+		// (set) Token: 0x0601691A RID: 92442 RVA: 0x0033A99E File Offset: 0x00338B9E
 		public byte NullMask { get; set; }
 
-		// Token: 0x06015425 RID: 87077 RVA: 0x00313E1F File Offset: 0x0031201F
+		// Token: 0x0601691B RID: 92443 RVA: 0x0033A9A7 File Offset: 0x00338BA7
 		public ILaserTipsActorT()
 		{
 			this.Type = ETipsActorType.Sphere;

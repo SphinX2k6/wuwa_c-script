@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003E87 RID: 16007
+	// Token: 0x020042C2 RID: 17090
 	public struct IHandInGroup : IFlatbufferObject
 	{
-		// Token: 0x17006F0A RID: 28426
-		// (get) Token: 0x06016910 RID: 92432 RVA: 0x00342BA7 File Offset: 0x00340DA7
+		// Token: 0x170074F2 RID: 29938
+		// (get) Token: 0x06017F47 RID: 98119 RVA: 0x0036B92B File Offset: 0x00369B2B
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016911 RID: 92433 RVA: 0x00342BB4 File Offset: 0x00340DB4
+		// Token: 0x06017F48 RID: 98120 RVA: 0x0036B938 File Offset: 0x00369B38
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06016912 RID: 92434 RVA: 0x00342BBC File Offset: 0x00340DBC
+		// Token: 0x06017F49 RID: 98121 RVA: 0x0036B940 File Offset: 0x00369B40
 		public static IHandInGroup GetRootAsIHandInGroup(ByteBuffer _bb)
 		{
 			return IHandInGroup.GetRootAsIHandInGroup(_bb, default(IHandInGroup));
 		}
 
-		// Token: 0x06016913 RID: 92435 RVA: 0x00342BD8 File Offset: 0x00340DD8
+		// Token: 0x06017F4A RID: 98122 RVA: 0x0036B95C File Offset: 0x00369B5C
 		public static IHandInGroup GetRootAsIHandInGroup(ByteBuffer _bb, IHandInGroup obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06016914 RID: 92436 RVA: 0x00342BF5 File Offset: 0x00340DF5
+		// Token: 0x06017F4B RID: 98123 RVA: 0x0036B979 File Offset: 0x00369B79
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06016915 RID: 92437 RVA: 0x00342C04 File Offset: 0x00340E04
+		// Token: 0x06017F4C RID: 98124 RVA: 0x0036B988 File Offset: 0x00369B88
 		public IHandInGroup __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006F0B RID: 28427
-		// (get) Token: 0x06016916 RID: 92438 RVA: 0x00342C14 File Offset: 0x00340E14
+		// Token: 0x170074F3 RID: 29939
+		// (get) Token: 0x06017F4D RID: 98125 RVA: 0x0036B998 File Offset: 0x00369B98
 		public EHandInItemType HandInType
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016917 RID: 92439 RVA: 0x00342C50 File Offset: 0x00340E50
+		// Token: 0x06017F4E RID: 98126 RVA: 0x0036B9D4 File Offset: 0x00369BD4
 		public int ItemIds(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17006F0C RID: 28428
-		// (get) Token: 0x06016918 RID: 92440 RVA: 0x00342C90 File Offset: 0x00340E90
+		// Token: 0x170074F4 RID: 29940
+		// (get) Token: 0x06017F4F RID: 98127 RVA: 0x0036BA14 File Offset: 0x00369C14
 		public int ItemIdsLength
 		{
 			get
@@ -89,20 +89,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06016919 RID: 92441 RVA: 0x00342CBB File Offset: 0x00340EBB
+		// Token: 0x06017F50 RID: 98128 RVA: 0x0036BA3F File Offset: 0x00369C3F
 		public Span<int> GetItemIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x0601691A RID: 92442 RVA: 0x00342CCA File Offset: 0x00340ECA
+		// Token: 0x06017F51 RID: 98129 RVA: 0x0036BA4E File Offset: 0x00369C4E
 		public int[] GetItemIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(6);
 		}
 
-		// Token: 0x17006F0D RID: 28429
-		// (get) Token: 0x0601691B RID: 92443 RVA: 0x00342CD8 File Offset: 0x00340ED8
+		// Token: 0x170074F5 RID: 29941
+		// (get) Token: 0x06017F52 RID: 98130 RVA: 0x0036BA5C File Offset: 0x00369C5C
 		public int Count
 		{
 			get
@@ -116,8 +116,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006F0E RID: 28430
-		// (get) Token: 0x0601691C RID: 92444 RVA: 0x00342D14 File Offset: 0x00340F14
+		// Token: 0x170074F6 RID: 29942
+		// (get) Token: 0x06017F53 RID: 98131 RVA: 0x0036BA98 File Offset: 0x00369C98
 		public int Slot
 		{
 			get
@@ -131,8 +131,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x17006F0F RID: 28431
-		// (get) Token: 0x0601691D RID: 92445 RVA: 0x00342D54 File Offset: 0x00340F54
+		// Token: 0x170074F7 RID: 29943
+		// (get) Token: 0x06017F54 RID: 98132 RVA: 0x0036BAD8 File Offset: 0x00369CD8
 		public IHandInItemRange? ChoiceRange
 		{
 			get
@@ -146,7 +146,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x0601691E RID: 92446 RVA: 0x00342DB2 File Offset: 0x00340FB2
+		// Token: 0x06017F55 RID: 98133 RVA: 0x0036BB36 File Offset: 0x00369D36
 		public static Offset<IHandInGroup> CreateIHandInGroup(FlatBufferBuilder builder, EHandInItemType HandInType = EHandInItemType.ItemIds, VectorOffset ItemIdsOffset = default(VectorOffset), int Count = 0, int Slot = 0, Offset<IHandInItemRange> ChoiceRangeOffset = default(Offset<IHandInItemRange>))
 		{
 			builder.StartTable(5);
@@ -158,25 +158,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IHandInGroup.EndIHandInGroup(builder);
 		}
 
-		// Token: 0x0601691F RID: 92447 RVA: 0x00342DE6 File Offset: 0x00340FE6
+		// Token: 0x06017F56 RID: 98134 RVA: 0x0036BB6A File Offset: 0x00369D6A
 		public static void StartIHandInGroup(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x06016920 RID: 92448 RVA: 0x00342DEF File Offset: 0x00340FEF
+		// Token: 0x06017F57 RID: 98135 RVA: 0x0036BB73 File Offset: 0x00369D73
 		public static void AddHandInType(FlatBufferBuilder builder, EHandInItemType handInType)
 		{
 			builder.AddByte(0, (byte)handInType, 0);
 		}
 
-		// Token: 0x06016921 RID: 92449 RVA: 0x00342DFA File Offset: 0x00340FFA
+		// Token: 0x06017F58 RID: 98136 RVA: 0x0036BB7E File Offset: 0x00369D7E
 		public static void AddItemIds(FlatBufferBuilder builder, VectorOffset itemIdsOffset)
 		{
 			builder.AddOffset(1, itemIdsOffset.Value, 0);
 		}
 
-		// Token: 0x06016922 RID: 92450 RVA: 0x00342E0C File Offset: 0x0034100C
+		// Token: 0x06017F59 RID: 98137 RVA: 0x0036BB90 File Offset: 0x00369D90
 		public static VectorOffset CreateItemIdsVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -187,7 +187,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06016923 RID: 92451 RVA: 0x00342E43 File Offset: 0x00341043
+		// Token: 0x06017F5A RID: 98138 RVA: 0x0036BBC7 File Offset: 0x00369DC7
 		public static VectorOffset CreateItemIdsVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -195,7 +195,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06016924 RID: 92452 RVA: 0x00342E5D File Offset: 0x0034105D
+		// Token: 0x06017F5B RID: 98139 RVA: 0x0036BBE1 File Offset: 0x00369DE1
 		public static VectorOffset CreateItemIdsVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -203,7 +203,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06016925 RID: 92453 RVA: 0x00342E7B File Offset: 0x0034107B
+		// Token: 0x06017F5C RID: 98140 RVA: 0x0036BBFF File Offset: 0x00369DFF
 		public static VectorOffset CreateItemIdsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -211,37 +211,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return builder.EndVector();
 		}
 
-		// Token: 0x06016926 RID: 92454 RVA: 0x00342E94 File Offset: 0x00341094
+		// Token: 0x06017F5D RID: 98141 RVA: 0x0036BC18 File Offset: 0x00369E18
 		public static void StartItemIdsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06016927 RID: 92455 RVA: 0x00342E9F File Offset: 0x0034109F
+		// Token: 0x06017F5E RID: 98142 RVA: 0x0036BC23 File Offset: 0x00369E23
 		public static void AddCount(FlatBufferBuilder builder, int count)
 		{
 			builder.AddInt(2, count, 0);
 		}
 
-		// Token: 0x06016928 RID: 92456 RVA: 0x00342EAA File Offset: 0x003410AA
+		// Token: 0x06017F5F RID: 98143 RVA: 0x0036BC2E File Offset: 0x00369E2E
 		public static void AddSlot(FlatBufferBuilder builder, int slot)
 		{
 			builder.AddInt(3, slot, 0);
 		}
 
-		// Token: 0x06016929 RID: 92457 RVA: 0x00342EB5 File Offset: 0x003410B5
+		// Token: 0x06017F60 RID: 98144 RVA: 0x0036BC39 File Offset: 0x00369E39
 		public static void AddChoiceRange(FlatBufferBuilder builder, Offset<IHandInItemRange> choiceRangeOffset)
 		{
 			builder.AddOffset(4, choiceRangeOffset.Value, 0);
 		}
 
-		// Token: 0x0601692A RID: 92458 RVA: 0x00342EC5 File Offset: 0x003410C5
+		// Token: 0x06017F61 RID: 98145 RVA: 0x0036BC49 File Offset: 0x00369E49
 		public static Offset<IHandInGroup> EndIHandInGroup(FlatBufferBuilder builder)
 		{
 			return new Offset<IHandInGroup>(builder.EndTable());
 		}
 
-		// Token: 0x0601692B RID: 92459 RVA: 0x00342ED4 File Offset: 0x003410D4
+		// Token: 0x06017F62 RID: 98146 RVA: 0x0036BC58 File Offset: 0x00369E58
 		public IHandInGroupT UnPack()
 		{
 			IHandInGroupT handInGroupT = new IHandInGroupT();
@@ -249,7 +249,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return handInGroupT;
 		}
 
-		// Token: 0x0601692C RID: 92460 RVA: 0x00342EF0 File Offset: 0x003410F0
+		// Token: 0x06017F63 RID: 98147 RVA: 0x0036BC74 File Offset: 0x00369E74
 		public void UnPackTo(IHandInGroupT _o)
 		{
 			_o.HandInType = this.HandInType;
@@ -263,7 +263,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			_o.ChoiceRange = ((this.ChoiceRange != null) ? this.ChoiceRange.Value.UnPack() : null);
 		}
 
-		// Token: 0x0601692D RID: 92461 RVA: 0x00342F80 File Offset: 0x00341180
+		// Token: 0x06017F64 RID: 98148 RVA: 0x0036BD04 File Offset: 0x00369F04
 		public static Offset<IHandInGroup> Pack(FlatBufferBuilder builder, IHandInGroupT _o)
 		{
 			if (_o == null)
@@ -280,7 +280,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return IHandInGroup.CreateIHandInGroup(builder, _o.HandInType, itemIdsOffset, _o.Count, _o.Slot, choiceRangeOffset);
 		}
 
-		// Token: 0x0400B843 RID: 47171
+		// Token: 0x0400C21C RID: 49692
 		private Table __p;
 	}
 }

@@ -4,10 +4,10 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004EFD RID: 20221
+	// Token: 0x02003EC6 RID: 16070
 	public class RogueBattleSelectMiracleView : UiViewBase
 	{
-		// Token: 0x06033DD4 RID: 212436 RVA: 0x00C267A0 File Offset: 0x00C249A0
+		// Token: 0x06028C3F RID: 166975 RVA: 0x00B6FD48 File Offset: 0x00B6DF48
 		[NullableContext(1)]
 		public RogueBattleSelectMiracleView(UiViewInfo viewInfo) : base(viewInfo)
 		{

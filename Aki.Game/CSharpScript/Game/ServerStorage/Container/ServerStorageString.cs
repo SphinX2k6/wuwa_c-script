@@ -4,7 +4,7 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.ServerStorage.Container
 {
-	// Token: 0x0200458E RID: 17806
+	// Token: 0x020034B6 RID: 13494
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -13,12 +13,12 @@ namespace CSharpScript.Game.ServerStorage.Container
 	})]
 	public class ServerStorageString : ServerStorageValueEntry<string>
 	{
-		// Token: 0x0602DEE0 RID: 188128 RVA: 0x00A8FBB8 File Offset: 0x00A8DDB8
+		// Token: 0x060225CA RID: 140746 RVA: 0x009BBDD8 File Offset: 0x009B9FD8
 		public ServerStorageString(EClientStorageSystemIdType key) : base(key)
 		{
 		}
 
-		// Token: 0x0602DEE1 RID: 188129 RVA: 0x00A8FBC4 File Offset: 0x00A8DDC4
+		// Token: 0x060225CB RID: 140747 RVA: 0x009BBDE4 File Offset: 0x009B9FE4
 		public unsafe override void Serialize(ClientStorageInfo info)
 		{
 			if (info.StringData == null)
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.ServerStorage.Container
 			this.Data = info.StringData.Data;
 		}
 
-		// Token: 0x0602DEE2 RID: 188130 RVA: 0x00A8FC4C File Offset: 0x00A8DE4C
+		// Token: 0x060225CC RID: 140748 RVA: 0x009BBE6C File Offset: 0x009BA06C
 		[NullableContext(2)]
 		public override ClientStorageInfo Deserialize()
 		{

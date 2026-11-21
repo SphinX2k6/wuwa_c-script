@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D22 RID: 3362
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E1C RID: 3612
 	public class ISceneTextGuideUiActionMappingIcon
 	{
-		// Token: 0x06004CBD RID: 19645 RVA: 0x000BF09A File Offset: 0x000BD29A
+		// Token: 0x060051D9 RID: 20953 RVA: 0x000CA7DE File Offset: 0x000C89DE
 		public static ISceneTextGuideUiActionMappingIcon Create(ISceneTextGuideUiActionMappingIcon? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001836 RID: 6198
-		// (get) Token: 0x06004CBE RID: 19646 RVA: 0x000BF0B9 File Offset: 0x000BD2B9
+		// Token: 0x1700199C RID: 6556
+		// (get) Token: 0x060051DA RID: 20954 RVA: 0x000CA7FD File Offset: 0x000C89FD
 		public virtual int Id
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001837 RID: 6199
-		// (get) Token: 0x06004CBF RID: 19647 RVA: 0x000BF0C6 File Offset: 0x000BD2C6
+		// Token: 0x1700199D RID: 6557
+		// (get) Token: 0x060051DB RID: 20955 RVA: 0x000CA80A File Offset: 0x000C8A0A
 		public virtual string ActionName
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002BE9 RID: 11241
+		// Token: 0x04002EA9 RID: 11945
 		private ISceneTextGuideUiActionMappingIcon Instance;
 	}
 }

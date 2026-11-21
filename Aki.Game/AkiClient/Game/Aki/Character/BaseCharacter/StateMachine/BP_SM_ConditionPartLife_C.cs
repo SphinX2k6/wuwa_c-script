@@ -7,14 +7,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter.StateMachine
 {
-	// Token: 0x02004388 RID: 17288
+	// Token: 0x020033A9 RID: 13225
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/StateMachine/BP_SM_ConditionPartLife.BP_SM_ConditionPartLife_C")]
 	[UnrealStructLayout(88, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 84)]
 	public class BP_SM_ConditionPartLife_C : UASMConditionBase, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602CC8E RID: 183438 RVA: 0x00A288B9 File Offset: 0x00A26AB9
+		// Token: 0x060218AC RID: 137388 RVA: 0x0096370D File Offset: 0x0096190D
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_SM_ConditionPartLife_C._ClassPtr == IntPtr.Zero)
@@ -24,100 +24,100 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter.StateMachine
 			return BP_SM_ConditionPartLife_C._ClassPtr;
 		}
 
-		// Token: 0x0602CC8F RID: 183439 RVA: 0x00A288E0 File Offset: 0x00A26AE0
+		// Token: 0x060218AD RID: 137389 RVA: 0x00963734 File Offset: 0x00961934
 		public BP_SM_ConditionPartLife_C() : this(BuiltinUtils.AllocNativeUObject(BP_SM_ConditionPartLife_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602CC90 RID: 183440 RVA: 0x00A28908 File Offset: 0x00A26B08
+		// Token: 0x060218AE RID: 137390 RVA: 0x0096375C File Offset: 0x0096195C
 		public BP_SM_ConditionPartLife_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_SM_ConditionPartLife_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170070CF RID: 28879
-		// (get) Token: 0x0602CC91 RID: 183441 RVA: 0x00A2893B File Offset: 0x00A26B3B
-		// (set) Token: 0x0602CC92 RID: 183442 RVA: 0x00A2894F File Offset: 0x00A26B4F
+		// Token: 0x170044D1 RID: 17617
+		// (get) Token: 0x060218AF RID: 137391 RVA: 0x0096378F File Offset: 0x0096198F
+		// (set) Token: 0x060218B0 RID: 137392 RVA: 0x009637A3 File Offset: 0x009619A3
 		public unsafe string 部位名
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)BP_SM_ConditionPartLife_C.__PropertyOffset_0)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)BP_SM_ConditionPartLife_C.__PropertyOffset_部位名)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)BP_SM_ConditionPartLife_C.__PropertyOffset_0)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)BP_SM_ConditionPartLife_C.__PropertyOffset_部位名)), value);
 			}
 		}
 
-		// Token: 0x170070D0 RID: 28880
-		// (get) Token: 0x0602CC93 RID: 183443 RVA: 0x00A28964 File Offset: 0x00A26B64
-		// (set) Token: 0x0602CC94 RID: 183444 RVA: 0x00A28974 File Offset: 0x00A26B74
+		// Token: 0x170044D2 RID: 17618
+		// (get) Token: 0x060218B1 RID: 137393 RVA: 0x009637B8 File Offset: 0x009619B8
+		// (set) Token: 0x060218B2 RID: 137394 RVA: 0x009637C8 File Offset: 0x009619C8
 		public unsafe bool 是否万分比
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SM_ConditionPartLife_C.__PropertyOffset_1) != 0;
+				return *(base.NativePtr + (IntPtr)BP_SM_ConditionPartLife_C.__PropertyOffset_是否万分比) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SM_ConditionPartLife_C.__PropertyOffset_1) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_SM_ConditionPartLife_C.__PropertyOffset_是否万分比) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170070D1 RID: 28881
-		// (get) Token: 0x0602CC95 RID: 183445 RVA: 0x00A28985 File Offset: 0x00A26B85
-		// (set) Token: 0x0602CC96 RID: 183446 RVA: 0x00A28995 File Offset: 0x00A26B95
+		// Token: 0x170044D3 RID: 17619
+		// (get) Token: 0x060218B3 RID: 137395 RVA: 0x009637D9 File Offset: 0x009619D9
+		// (set) Token: 0x060218B4 RID: 137396 RVA: 0x009637E9 File Offset: 0x009619E9
 		public unsafe int Min
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SM_ConditionPartLife_C.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)BP_SM_ConditionPartLife_C.__PropertyOffset_Min);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SM_ConditionPartLife_C.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)BP_SM_ConditionPartLife_C.__PropertyOffset_Min) = value;
 			}
 		}
 
-		// Token: 0x170070D2 RID: 28882
-		// (get) Token: 0x0602CC97 RID: 183447 RVA: 0x00A289A6 File Offset: 0x00A26BA6
-		// (set) Token: 0x0602CC98 RID: 183448 RVA: 0x00A289B6 File Offset: 0x00A26BB6
+		// Token: 0x170044D4 RID: 17620
+		// (get) Token: 0x060218B5 RID: 137397 RVA: 0x009637FA File Offset: 0x009619FA
+		// (set) Token: 0x060218B6 RID: 137398 RVA: 0x0096380A File Offset: 0x00961A0A
 		public unsafe int Max
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SM_ConditionPartLife_C.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)BP_SM_ConditionPartLife_C.__PropertyOffset_Max);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SM_ConditionPartLife_C.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)BP_SM_ConditionPartLife_C.__PropertyOffset_Max) = value;
 			}
 		}
 
-		// Token: 0x0602CC99 RID: 183449 RVA: 0x00A289C7 File Offset: 0x00A26BC7
+		// Token: 0x060218B7 RID: 137399 RVA: 0x0096381B File Offset: 0x00961A1B
 		protected BP_SM_ConditionPartLife_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040179FA RID: 96762
+		// Token: 0x0401257B RID: 75131
 		public new const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/StateMachine/BP_SM_ConditionPartLife.BP_SM_ConditionPartLife_C";
 
-		// Token: 0x040179FB RID: 96763
+		// Token: 0x0401257C RID: 75132
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040179FC RID: 96764
+		// Token: 0x0401257D RID: 75133
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040179FD RID: 96765
-		internal static int __PropertyOffset_0;
+		// Token: 0x0401257E RID: 75134
+		internal static int __PropertyOffset_部位名;
 
-		// Token: 0x040179FE RID: 96766
-		internal static int __PropertyOffset_1;
+		// Token: 0x0401257F RID: 75135
+		internal static int __PropertyOffset_是否万分比;
 
-		// Token: 0x040179FF RID: 96767
-		internal static int __PropertyOffset_2;
+		// Token: 0x04012580 RID: 75136
+		internal static int __PropertyOffset_Min;
 
-		// Token: 0x04017A00 RID: 96768
-		internal static int __PropertyOffset_3;
+		// Token: 0x04012581 RID: 75137
+		internal static int __PropertyOffset_Max;
 	}
 }

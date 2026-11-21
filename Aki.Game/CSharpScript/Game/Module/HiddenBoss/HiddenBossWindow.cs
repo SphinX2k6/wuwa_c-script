@@ -11,16 +11,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.HiddenBoss
 {
-	// Token: 0x02005956 RID: 22870
+	// Token: 0x0200492F RID: 18735
 	public class HiddenBossWindow : UiViewBase
 	{
-		// Token: 0x0603A069 RID: 237673 RVA: 0x00DCAD90 File Offset: 0x00DC8F90
+		// Token: 0x0602EF8C RID: 192396 RVA: 0x00D1A044 File Offset: 0x00D18244
 		[NullableContext(1)]
 		public HiddenBossWindow(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603A06A RID: 237674 RVA: 0x00DCAD9C File Offset: 0x00DC8F9C
+		// Token: 0x0602EF8D RID: 192397 RVA: 0x00D1A050 File Offset: 0x00D18250
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.HiddenBoss
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603A06B RID: 237675 RVA: 0x00DCAE64 File Offset: 0x00DC9064
+		// Token: 0x0602EF8E RID: 192398 RVA: 0x00D1A118 File Offset: 0x00D18318
 		protected override void OnStart()
 		{
 			IHiddenBossUiParams hiddenBossUiParams = this.OpenParam as IHiddenBossUiParams;
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.HiddenBoss
 			base.SetTextureByPath(value.IconRefPath, texture, null, null);
 		}
 
-		// Token: 0x0603A06C RID: 237676 RVA: 0x00DCAECC File Offset: 0x00DC90CC
+		// Token: 0x0602EF8F RID: 192399 RVA: 0x00D1A180 File Offset: 0x00D18380
 		private unsafe void OnPanelTipsBtnClick()
 		{
 			IHiddenBossUiParams hiddenBossUiParams = this.OpenParam as IHiddenBossUiParams;
@@ -90,14 +90,14 @@ namespace CSharpScript.Game.Module.HiddenBoss
 			WorldMapController.Instance.OpenView(EOpenMapType.Other, false, data, null);
 		}
 
-		// Token: 0x0603A06D RID: 237677 RVA: 0x00DCB018 File Offset: 0x00DC9218
+		// Token: 0x0602EF90 RID: 192400 RVA: 0x00D1A2CC File Offset: 0x00D184CC
 		[NullableContext(1)]
 		private void SetTexNameByTextId(string textId, params string[] args)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), textId, args);
 		}
 
-		// Token: 0x0603A06E RID: 237678 RVA: 0x00DCB02D File Offset: 0x00DC922D
+		// Token: 0x0602EF91 RID: 192401 RVA: 0x00D1A2E1 File Offset: 0x00D184E1
 		protected override void OnAfterShow()
 		{
 			TimerSystem.GameplayTimeInstance.Next(delegate(float _)
@@ -106,14 +106,14 @@ namespace CSharpScript.Game.Module.HiddenBoss
 			}, null, null);
 		}
 
-		// Token: 0x0200BBE4 RID: 48100
+		// Token: 0x0200A5F3 RID: 42483
 		private enum EComponents
 		{
-			// Token: 0x04038BB2 RID: 232370
+			// Token: 0x04033591 RID: 210321
 			PanelTips,
-			// Token: 0x04038BB3 RID: 232371
+			// Token: 0x04033592 RID: 210322
 			TxtName,
-			// Token: 0x04038BB4 RID: 232372
+			// Token: 0x04033593 RID: 210323
 			TexHeadIcon
 		}
 	}

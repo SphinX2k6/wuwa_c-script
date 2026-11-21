@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200061E RID: 1566
+	// Token: 0x02000636 RID: 1590
 	public class ConfigNpcSystemBackgroundByViewName : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060024C4 RID: 9412 RVA: 0x0012992C File Offset: 0x00127B2C
+		// Token: 0x06002554 RID: 9556 RVA: 0x001303A8 File Offset: 0x0012E5A8
 		static ConfigNpcSystemBackgroundByViewName()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigNpcSystemBackgroundByViewName.CreateStaticDefaultValue), new Action(ConfigNpcSystemBackgroundByViewName.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060024C5 RID: 9413 RVA: 0x0012994C File Offset: 0x00127B4C
+		// Token: 0x06002555 RID: 9557 RVA: 0x001303C8 File Offset: 0x0012E5C8
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigNpcSystemBackgroundByViewName.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060024C6 RID: 9414 RVA: 0x001299CB File Offset: 0x00127BCB
+		// Token: 0x06002556 RID: 9558 RVA: 0x00130447 File Offset: 0x0012E647
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigNpcSystemBackgroundByViewName.LogPair = null;
 			ConfigNpcSystemBackgroundByViewName.HandleId = 0;
 		}
 
-		// Token: 0x060024C7 RID: 9415 RVA: 0x001299D9 File Offset: 0x00127BD9
+		// Token: 0x06002557 RID: 9559 RVA: 0x00130455 File Offset: 0x0012E655
 		public static void Init()
 		{
 			ConfigNpcSystemBackgroundByViewName.HandleId = ConfigCommon.InitDataStatement(ConfigNpcSystemBackgroundByViewName.HandleId, "db_commonbackground.db", "select BinData from `NpcSystemBackground` where ViewName=?");
 		}
 
-		// Token: 0x060024C8 RID: 9416 RVA: 0x001299F4 File Offset: 0x00127BF4
+		// Token: 0x06002558 RID: 9560 RVA: 0x00130470 File Offset: 0x0012E670
 		public static NpcSystemBackground? GetConfig(string p0ViewName, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigNpcSystemBackgroundByViewName.HandleId, ConfigNpcSystemBackgroundByViewName.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new NpcSystemBackground?(rootAsNpcSystemBackground);
 		}
 
-		// Token: 0x04002AB8 RID: 10936
+		// Token: 0x04002B60 RID: 11104
 		private const string DB = "db_commonbackground.db";
 
-		// Token: 0x04002AB9 RID: 10937
+		// Token: 0x04002B61 RID: 11105
 		private const string FILE = "t.通用背景.xlsx";
 
-		// Token: 0x04002ABA RID: 10938
+		// Token: 0x04002B62 RID: 11106
 		private const string TABLE = "NpcSystemBackground";
 
-		// Token: 0x04002ABB RID: 10939
+		// Token: 0x04002B63 RID: 11107
 		private const string COMMAND = "select BinData from `NpcSystemBackground` where ViewName=?";
 
-		// Token: 0x04002ABC RID: 10940
+		// Token: 0x04002B64 RID: 11108
 		private const string KEY_PREFIX = "NpcSystemBackgroundByViewName";
 
-		// Token: 0x04002ABD RID: 10941
+		// Token: 0x04002B65 RID: 11109
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002ABE RID: 10942
+		// Token: 0x04002B66 RID: 11110
 		private static int HandleId;
 	}
 }

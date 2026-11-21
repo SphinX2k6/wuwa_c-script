@@ -7,18 +7,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike.View
 {
-	// Token: 0x02004E47 RID: 20039
+	// Token: 0x02003E10 RID: 15888
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CommonSelectResultView : RogueSelectResultBaseView
 	{
-		// Token: 0x06033A95 RID: 211605 RVA: 0x00C184A9 File Offset: 0x00C166A9
+		// Token: 0x06028900 RID: 166144 RVA: 0x00B619D1 File Offset: 0x00B5FBD1
 		[NullableContext(1)]
 		public CommonSelectResultView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06033A96 RID: 211606 RVA: 0x00C184B4 File Offset: 0x00C166B4
+		// Token: 0x06028901 RID: 166145 RVA: 0x00B619DC File Offset: 0x00B5FBDC
 		protected override void OnCloseBtnClick()
 		{
 			if (!this.CommonSelectItem.GetRootItem().IsUIActiveInHierarchy())
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.Roguelike.View
 			this.InitPhantomSelectItem();
 		}
 
-		// Token: 0x06033A97 RID: 211607 RVA: 0x00C18558 File Offset: 0x00C16758
+		// Token: 0x06028902 RID: 166146 RVA: 0x00B61A80 File Offset: 0x00B5FC80
 		protected override UniTask OnBeforeStartAsync()
 		{
 			CommonSelectResultView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.Roguelike.View
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033A98 RID: 211608 RVA: 0x00C1859C File Offset: 0x00C1679C
+		// Token: 0x06028903 RID: 166147 RVA: 0x00B61AC4 File Offset: 0x00B5FCC4
 		private void InitCommonSelectItem()
 		{
 			if (this.RogueSelectResult.SelectRogueGainEntry != null)
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.Roguelike.View
 			}
 		}
 
-		// Token: 0x06033A99 RID: 211609 RVA: 0x00C18608 File Offset: 0x00C16808
+		// Token: 0x06028904 RID: 166148 RVA: 0x00B61B30 File Offset: 0x00B5FD30
 		private void InitPhantomSelectItem()
 		{
 			PhantomSelectItemContextData data = new PhantomSelectItemContextData
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.Roguelike.View
 			this.PhantomSelectItem.SetToggleUnDetermined();
 		}
 
-		// Token: 0x06033A9A RID: 211610 RVA: 0x00C18654 File Offset: 0x00C16854
+		// Token: 0x06028905 RID: 166149 RVA: 0x00B61B7C File Offset: 0x00B5FD7C
 		protected override void OnBeforeDestroy()
 		{
 			CommonSelectItem commonSelectItem = this.CommonSelectItem;
@@ -134,13 +134,13 @@ namespace CSharpScript.Game.Module.Roguelike.View
 			}
 		}
 
-		// Token: 0x06033A9B RID: 211611 RVA: 0x00C186EE File Offset: 0x00C168EE
+		// Token: 0x06028906 RID: 166150 RVA: 0x00B61C16 File Offset: 0x00B5FE16
 		protected override void OnDescModelChange()
 		{
 			this.Refresh();
 		}
 
-		// Token: 0x06033A9C RID: 211612 RVA: 0x00C186F6 File Offset: 0x00C168F6
+		// Token: 0x06028907 RID: 166151 RVA: 0x00B61C1E File Offset: 0x00B5FE1E
 		protected override void Refresh()
 		{
 			this.CommonSelectItem.RefreshPanel();
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.Roguelike.View
 			this.RefreshTitleText();
 		}
 
-		// Token: 0x06033A9D RID: 211613 RVA: 0x00C18720 File Offset: 0x00C16920
+		// Token: 0x06028908 RID: 166152 RVA: 0x00B61C48 File Offset: 0x00B5FE48
 		protected void RefreshTitleText()
 		{
 			string key = null;
@@ -164,7 +164,7 @@ namespace CSharpScript.Game.Module.Roguelike.View
 			base.GetText(4).ShowTextNew(key);
 		}
 
-		// Token: 0x06033A9E RID: 211614 RVA: 0x00C1876C File Offset: 0x00C1696C
+		// Token: 0x06028909 RID: 166153 RVA: 0x00B61C94 File Offset: 0x00B5FE94
 		[NullableContext(1)]
 		[return: Nullable(new byte[]
 		{
@@ -199,25 +199,25 @@ namespace CSharpScript.Game.Module.Roguelike.View
 			return null;
 		}
 
-		// Token: 0x0401B641 RID: 112193
+		// Token: 0x04016014 RID: 90132
 		private RogueSelectResult RogueSelectResult;
 
-		// Token: 0x0401B642 RID: 112194
+		// Token: 0x04016015 RID: 90133
 		private readonly UiPoolActor CommonItemActor;
 
-		// Token: 0x0401B643 RID: 112195
+		// Token: 0x04016016 RID: 90134
 		private CommonSelectItem CommonSelectItem;
 
-		// Token: 0x0401B644 RID: 112196
+		// Token: 0x04016017 RID: 90135
 		private readonly UiPoolActor ExtraCommonItemActor;
 
-		// Token: 0x0401B645 RID: 112197
+		// Token: 0x04016018 RID: 90136
 		private CommonSelectItem ExtraCommonSelectItem;
 
-		// Token: 0x0401B646 RID: 112198
+		// Token: 0x04016019 RID: 90137
 		private readonly UiPoolActor PhantomItemActor;
 
-		// Token: 0x0401B647 RID: 112199
+		// Token: 0x0401601A RID: 90138
 		private PhantomSelectItem PhantomSelectItem;
 	}
 }

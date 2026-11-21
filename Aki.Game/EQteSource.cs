@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02002621 RID: 9761
+// Token: 0x02001B0C RID: 6924
 public enum EQteSource
 {
-	// Token: 0x04009668 RID: 38504
+	// Token: 0x040097BF RID: 38847
 	Battle,
-	// Token: 0x04009669 RID: 38505
+	// Token: 0x040097C0 RID: 38848
 	Level,
-	// Token: 0x0400966A RID: 38506
+	// Token: 0x040097C1 RID: 38849
 	Plot,
-	// Token: 0x0400966B RID: 38507
+	// Token: 0x040097C2 RID: 38850
 	CG
 }

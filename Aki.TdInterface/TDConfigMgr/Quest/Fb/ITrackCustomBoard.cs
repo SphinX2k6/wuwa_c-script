@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x0200141C RID: 5148
+	// Token: 0x02001574 RID: 5492
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ITrackCustomBoard
 	{
-		// Token: 0x060074F2 RID: 29938 RVA: 0x00117744 File Offset: 0x00115944
-		[NullableContext(1)]
+		// Token: 0x06007BB6 RID: 31670 RVA: 0x0012615C File Offset: 0x0012435C
+		[NullableContext(0)]
 		public static ITrackCustomBoard Create(ITrackCustomBoard? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x1700268D RID: 9869
-		// (get) Token: 0x060074F3 RID: 29939 RVA: 0x00117763 File Offset: 0x00115963
+		// Token: 0x17002870 RID: 10352
+		// (get) Token: 0x06007BB7 RID: 31671 RVA: 0x0012617B File Offset: 0x0012437B
 		public virtual IPhoneMessageBoardConfig TrackPhoneMessageBoard
 		{
 			get
@@ -40,8 +40,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700268E RID: 9870
-		// (get) Token: 0x060074F4 RID: 29940 RVA: 0x00117797 File Offset: 0x00115997
+		// Token: 0x17002871 RID: 10353
+		// (get) Token: 0x06007BB8 RID: 31672 RVA: 0x001261AF File Offset: 0x001243AF
 		public virtual ITrackQuestBranchBoardConfig TrackQuestBranchBoard
 		{
 			get
@@ -56,8 +56,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700268F RID: 9871
-		// (get) Token: 0x060074F5 RID: 29941 RVA: 0x001177CB File Offset: 0x001159CB
+		// Token: 0x17002872 RID: 10354
+		// (get) Token: 0x06007BB9 RID: 31673 RVA: 0x001261E3 File Offset: 0x001243E3
 		public virtual ISheriffAnomalyProgressBoardConfig SheriffAnomalyProgressBoard
 		{
 			get
@@ -72,8 +72,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002690 RID: 9872
-		// (get) Token: 0x060074F6 RID: 29942 RVA: 0x001177FF File Offset: 0x001159FF
+		// Token: 0x17002873 RID: 10355
+		// (get) Token: 0x06007BBA RID: 31674 RVA: 0x00126217 File Offset: 0x00124417
 		public virtual ISheriffReasoningBoardConfig SheriffReasoningBoard
 		{
 			get
@@ -88,8 +88,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002691 RID: 9873
-		// (get) Token: 0x060074F7 RID: 29943 RVA: 0x00117833 File Offset: 0x00115A33
+		// Token: 0x17002874 RID: 10356
+		// (get) Token: 0x06007BBB RID: 31675 RVA: 0x0012624B File Offset: 0x0012444B
 		public virtual ISheriffMainBoardConfig SheriffMainBoard
 		{
 			get
@@ -104,8 +104,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002692 RID: 9874
-		// (get) Token: 0x060074F8 RID: 29944 RVA: 0x00117867 File Offset: 0x00115A67
+		// Token: 0x17002875 RID: 10357
+		// (get) Token: 0x06007BBC RID: 31676 RVA: 0x0012627F File Offset: 0x0012447F
 		public virtual ISheriffClueDetailBoardConfig SheriffClueDetailBoard
 		{
 			get
@@ -120,8 +120,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x17002693 RID: 9875
-		// (get) Token: 0x060074F9 RID: 29945 RVA: 0x0011789B File Offset: 0x00115A9B
+		// Token: 0x17002876 RID: 10358
+		// (get) Token: 0x06007BBD RID: 31677 RVA: 0x001262B3 File Offset: 0x001244B3
 		public virtual ITrackReturnDungeon TrackReturnDungeon
 		{
 			get
@@ -136,49 +136,71 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040043B4 RID: 17332
+		// Token: 0x17002877 RID: 10359
+		// (get) Token: 0x06007BBE RID: 31678 RVA: 0x001262E7 File Offset: 0x001244E7
+		public virtual ITrackHandBookBoardConfig TrackHandBookBoard
+		{
+			get
+			{
+				if (this._TrackHandBookBoardInited)
+				{
+					return this._TrackHandBookBoardCache;
+				}
+				this._TrackHandBookBoardInited = true;
+				this._TrackHandBookBoardCache = ITrackHandBookBoardConfig.Create(this.Instance.TrackHandBookBoard);
+				return this._TrackHandBookBoardCache;
+			}
+		}
+
+		// Token: 0x04004746 RID: 18246
 		private ITrackCustomBoard Instance;
 
-		// Token: 0x040043B5 RID: 17333
+		// Token: 0x04004747 RID: 18247
 		private IPhoneMessageBoardConfig _TrackPhoneMessageBoardCache;
 
-		// Token: 0x040043B6 RID: 17334
+		// Token: 0x04004748 RID: 18248
 		private bool _TrackPhoneMessageBoardInited;
 
-		// Token: 0x040043B7 RID: 17335
+		// Token: 0x04004749 RID: 18249
 		private ITrackQuestBranchBoardConfig _TrackQuestBranchBoardCache;
 
-		// Token: 0x040043B8 RID: 17336
+		// Token: 0x0400474A RID: 18250
 		private bool _TrackQuestBranchBoardInited;
 
-		// Token: 0x040043B9 RID: 17337
+		// Token: 0x0400474B RID: 18251
 		private ISheriffAnomalyProgressBoardConfig _SheriffAnomalyProgressBoardCache;
 
-		// Token: 0x040043BA RID: 17338
+		// Token: 0x0400474C RID: 18252
 		private bool _SheriffAnomalyProgressBoardInited;
 
-		// Token: 0x040043BB RID: 17339
+		// Token: 0x0400474D RID: 18253
 		private ISheriffReasoningBoardConfig _SheriffReasoningBoardCache;
 
-		// Token: 0x040043BC RID: 17340
+		// Token: 0x0400474E RID: 18254
 		private bool _SheriffReasoningBoardInited;
 
-		// Token: 0x040043BD RID: 17341
+		// Token: 0x0400474F RID: 18255
 		private ISheriffMainBoardConfig _SheriffMainBoardCache;
 
-		// Token: 0x040043BE RID: 17342
+		// Token: 0x04004750 RID: 18256
 		private bool _SheriffMainBoardInited;
 
-		// Token: 0x040043BF RID: 17343
+		// Token: 0x04004751 RID: 18257
 		private ISheriffClueDetailBoardConfig _SheriffClueDetailBoardCache;
 
-		// Token: 0x040043C0 RID: 17344
+		// Token: 0x04004752 RID: 18258
 		private bool _SheriffClueDetailBoardInited;
 
-		// Token: 0x040043C1 RID: 17345
+		// Token: 0x04004753 RID: 18259
 		private ITrackReturnDungeon _TrackReturnDungeonCache;
 
-		// Token: 0x040043C2 RID: 17346
+		// Token: 0x04004754 RID: 18260
 		private bool _TrackReturnDungeonInited;
+
+		// Token: 0x04004755 RID: 18261
+		private ITrackHandBookBoardConfig _TrackHandBookBoardCache;
+
+		// Token: 0x04004756 RID: 18262
+		private bool _TrackHandBookBoardInited;
 	}
 }

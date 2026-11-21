@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000368 RID: 872
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020003B1 RID: 945
 	public class IFaceToTargetMotorInteractConstraint : IMotorInteractConstraintType
 	{
-		// Token: 0x0600114F RID: 4431 RVA: 0x0003ABCC File Offset: 0x00038DCC
+		// Token: 0x06001293 RID: 4755 RVA: 0x0003DEB0 File Offset: 0x0003C0B0
 		private IFaceToTargetMotorInteractConstraint_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001150 RID: 4432 RVA: 0x0003AC04 File Offset: 0x00038E04
+		// Token: 0x06001294 RID: 4756 RVA: 0x0003DEE8 File Offset: 0x0003C0E8
 		public static IFaceToTargetMotorInteractConstraint Create([Nullable(2)] IFaceToTargetMotorInteractConstraint instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001151 RID: 4433 RVA: 0x0003AC17 File Offset: 0x00038E17
+		// Token: 0x06001295 RID: 4757 RVA: 0x0003DEFB File Offset: 0x0003C0FB
 		public static IFaceToTargetMotorInteractConstraint CreateFromSetValue([Nullable(2)] IFaceToTargetMotorInteractConstraint_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001152 RID: 4434 RVA: 0x0003AC2A File Offset: 0x00038E2A
+		// Token: 0x06001296 RID: 4758 RVA: 0x0003DF0E File Offset: 0x0003C10E
 		public new IFaceToTargetMotorInteractConstraint_SetValue ToSetValue()
 		{
 			return new IFaceToTargetMotorInteractConstraint_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170004E9 RID: 1257
-		// (get) Token: 0x06001153 RID: 4435 RVA: 0x0003AC55 File Offset: 0x00038E55
-		// (set) Token: 0x06001154 RID: 4436 RVA: 0x0003AC80 File Offset: 0x00038E80
+		// Token: 0x1700053D RID: 1341
+		// (get) Token: 0x06001297 RID: 4759 RVA: 0x0003DF39 File Offset: 0x0003C139
+		// (set) Token: 0x06001298 RID: 4760 RVA: 0x0003DF64 File Offset: 0x0003C164
 		public override EMotorInteractConstraintType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004EA RID: 1258
-		// (get) Token: 0x06001155 RID: 4437 RVA: 0x0003AC8E File Offset: 0x00038E8E
-		// (set) Token: 0x06001156 RID: 4438 RVA: 0x0003ACB5 File Offset: 0x00038EB5
+		// Token: 0x1700053E RID: 1342
+		// (get) Token: 0x06001299 RID: 4761 RVA: 0x0003DF72 File Offset: 0x0003C172
+		// (set) Token: 0x0600129A RID: 4762 RVA: 0x0003DF99 File Offset: 0x0003C199
 		public virtual ITargetEntityType Target
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004EB RID: 1259
-		// (get) Token: 0x06001157 RID: 4439 RVA: 0x0003ACC3 File Offset: 0x00038EC3
-		// (set) Token: 0x06001158 RID: 4440 RVA: 0x0003ACF2 File Offset: 0x00038EF2
+		// Token: 0x1700053F RID: 1343
+		// (get) Token: 0x0600129B RID: 4763 RVA: 0x0003DFA7 File Offset: 0x0003C1A7
+		// (set) Token: 0x0600129C RID: 4764 RVA: 0x0003DFD6 File Offset: 0x0003C1D6
 		public virtual float Angle
 		{
 			get
@@ -132,11 +130,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000E48 RID: 3656
+		// Token: 0x04000F3F RID: 3903
 		[Nullable(2)]
 		protected new IFaceToTargetMotorInteractConstraint FbInstance;
 
-		// Token: 0x04000E49 RID: 3657
+		// Token: 0x04000F40 RID: 3904
 		[Nullable(2)]
 		protected new IFaceToTargetMotorInteractConstraint_SetValue PocoInterface;
 	}

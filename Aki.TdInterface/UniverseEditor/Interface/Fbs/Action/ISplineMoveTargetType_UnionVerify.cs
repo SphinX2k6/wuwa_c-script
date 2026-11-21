@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007195 RID: 29077
+	// Token: 0x0200796A RID: 31082
 	public static class ISplineMoveTargetType_UnionVerify
 	{
-		// Token: 0x060338D7 RID: 211159 RVA: 0x006F17CC File Offset: 0x006EF9CC
+		// Token: 0x06036BD3 RID: 224211 RVA: 0x00752A4C File Offset: 0x00750C4C
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;
@@ -20,6 +20,9 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 				break;
 			case 3:
 				result = IPlayerSplineMoveTargetVerify.Verify(verifier, tablePos);
+				break;
+			case 4:
+				result = IAssistCharacterSplineMoveTargetVerify.Verify(verifier, tablePos);
 				break;
 			default:
 				result = true;

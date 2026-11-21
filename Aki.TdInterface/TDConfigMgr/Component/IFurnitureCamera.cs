@@ -6,12 +6,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020003CA RID: 970
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000421 RID: 1057
 	public class IFurnitureCamera
 	{
-		// Token: 0x06001373 RID: 4979 RVA: 0x0003F320 File Offset: 0x0003D520
+		// Token: 0x06001501 RID: 5377 RVA: 0x00042EA0 File Offset: 0x000410A0
 		private IFurnitureCamera_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001374 RID: 4980 RVA: 0x0003F358 File Offset: 0x0003D558
+		// Token: 0x06001502 RID: 5378 RVA: 0x00042ED8 File Offset: 0x000410D8
 		public static IFurnitureCamera Create([Nullable(2)] IFurnitureCamera instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001375 RID: 4981 RVA: 0x0003F36B File Offset: 0x0003D56B
+		// Token: 0x06001503 RID: 5379 RVA: 0x00042EEB File Offset: 0x000410EB
 		public static IFurnitureCamera CreateFromSetValue([Nullable(2)] IFurnitureCamera_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001376 RID: 4982 RVA: 0x0003F380 File Offset: 0x0003D580
+		// Token: 0x06001504 RID: 5380 RVA: 0x00042F00 File Offset: 0x00041100
 		public IFurnitureCamera_SetValue ToSetValue()
 		{
 			return new IFurnitureCamera_SetValue
@@ -65,9 +63,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000568 RID: 1384
-		// (get) Token: 0x06001377 RID: 4983 RVA: 0x0003F3D0 File Offset: 0x0003D5D0
-		// (set) Token: 0x06001378 RID: 4984 RVA: 0x0003F431 File Offset: 0x0003D631
+		// Token: 0x170005CC RID: 1484
+		// (get) Token: 0x06001505 RID: 5381 RVA: 0x00042F50 File Offset: 0x00041150
+		// (set) Token: 0x06001506 RID: 5382 RVA: 0x00042FB1 File Offset: 0x000411B1
 		public virtual VectorInfo Pos
 		{
 			get
@@ -95,9 +93,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000569 RID: 1385
-		// (get) Token: 0x06001379 RID: 4985 RVA: 0x0003F448 File Offset: 0x0003D648
-		// (set) Token: 0x0600137A RID: 4986 RVA: 0x0003F4A9 File Offset: 0x0003D6A9
+		// Token: 0x170005CD RID: 1485
+		// (get) Token: 0x06001507 RID: 5383 RVA: 0x00042FC8 File Offset: 0x000411C8
+		// (set) Token: 0x06001508 RID: 5384 RVA: 0x00043029 File Offset: 0x00041229
 		public virtual VectorInfo Rot
 		{
 			get
@@ -125,9 +123,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700056A RID: 1386
-		// (get) Token: 0x0600137B RID: 4987 RVA: 0x0003F4C0 File Offset: 0x0003D6C0
-		// (set) Token: 0x0600137C RID: 4988 RVA: 0x0003F4FA File Offset: 0x0003D6FA
+		// Token: 0x170005CE RID: 1486
+		// (get) Token: 0x06001509 RID: 5385 RVA: 0x00043040 File Offset: 0x00041240
+		// (set) Token: 0x0600150A RID: 5386 RVA: 0x0004307A File Offset: 0x0004127A
 		public virtual int? Fov
 		{
 			get
@@ -149,9 +147,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700056B RID: 1387
-		// (get) Token: 0x0600137D RID: 4989 RVA: 0x0003F508 File Offset: 0x0003D708
-		// (set) Token: 0x0600137E RID: 4990 RVA: 0x0003F569 File Offset: 0x0003D769
+		// Token: 0x170005CF RID: 1487
+		// (get) Token: 0x0600150B RID: 5387 RVA: 0x00043088 File Offset: 0x00041288
+		// (set) Token: 0x0600150C RID: 5388 RVA: 0x000430E9 File Offset: 0x000412E9
 		[Nullable(2)]
 		public virtual IBlendFunction FadeInCurve
 		{
@@ -182,9 +180,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700056C RID: 1388
-		// (get) Token: 0x0600137F RID: 4991 RVA: 0x0003F580 File Offset: 0x0003D780
-		// (set) Token: 0x06001380 RID: 4992 RVA: 0x0003F5BA File Offset: 0x0003D7BA
+		// Token: 0x170005D0 RID: 1488
+		// (get) Token: 0x0600150D RID: 5389 RVA: 0x00043100 File Offset: 0x00041300
+		// (set) Token: 0x0600150E RID: 5390 RVA: 0x0004313A File Offset: 0x0004133A
 		public virtual float? FadeInTime
 		{
 			get
@@ -206,30 +204,30 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000F7F RID: 3967
+		// Token: 0x04001098 RID: 4248
 		[Nullable(2)]
 		protected IFurnitureCamera FbInstance;
 
-		// Token: 0x04000F80 RID: 3968
+		// Token: 0x04001099 RID: 4249
 		[Nullable(2)]
 		protected IFurnitureCamera_SetValue PocoInterface;
 
-		// Token: 0x04000F81 RID: 3969
+		// Token: 0x0400109A RID: 4250
 		private VectorInfo _PosCache;
 
-		// Token: 0x04000F82 RID: 3970
+		// Token: 0x0400109B RID: 4251
 		private bool _PosInited;
 
-		// Token: 0x04000F83 RID: 3971
+		// Token: 0x0400109C RID: 4252
 		private VectorInfo _RotCache;
 
-		// Token: 0x04000F84 RID: 3972
+		// Token: 0x0400109D RID: 4253
 		private bool _RotInited;
 
-		// Token: 0x04000F85 RID: 3973
+		// Token: 0x0400109E RID: 4254
 		private IBlendFunction _FadeInCurveCache;
 
-		// Token: 0x04000F86 RID: 3974
+		// Token: 0x0400109F RID: 4255
 		private bool _FadeInCurveInited;
 	}
 }

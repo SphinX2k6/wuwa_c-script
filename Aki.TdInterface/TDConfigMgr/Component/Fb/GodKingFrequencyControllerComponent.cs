@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DA1 RID: 3489
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E9D RID: 3741
 	public class GodKingFrequencyControllerComponent : IComponentBase
 	{
-		// Token: 0x06004F4D RID: 20301 RVA: 0x000C489A File Offset: 0x000C2A9A
+		// Token: 0x06005472 RID: 21618 RVA: 0x000D00EA File Offset: 0x000CE2EA
 		public static GodKingFrequencyControllerComponent Create(IGodKingFrequencyControllerComponent? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170019C8 RID: 6600
-		// (get) Token: 0x06004F4E RID: 20302 RVA: 0x000C48BC File Offset: 0x000C2ABC
+		// Token: 0x17001B33 RID: 6963
+		// (get) Token: 0x06005473 RID: 21619 RVA: 0x000D010C File Offset: 0x000CE30C
 		public override bool? Disabled
 		{
 			get
@@ -37,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170019C9 RID: 6601
-		// (get) Token: 0x06004F4F RID: 20303 RVA: 0x000C48F4 File Offset: 0x000C2AF4
+		// Token: 0x17001B34 RID: 6964
+		// (get) Token: 0x06005474 RID: 21620 RVA: 0x000D0144 File Offset: 0x000CE344
 		public override bool? EdIsLocked
 		{
 			get
@@ -47,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170019CA RID: 6602
-		// (get) Token: 0x06004F50 RID: 20304 RVA: 0x000C490C File Offset: 0x000C2B0C
+		// Token: 0x17001B35 RID: 6965
+		// (get) Token: 0x06005475 RID: 21621 RVA: 0x000D015C File Offset: 0x000CE35C
 		public virtual List<int> StatueEntityIdList
 		{
 			get
@@ -68,8 +65,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170019CB RID: 6603
-		// (get) Token: 0x06004F51 RID: 20305 RVA: 0x000C4970 File Offset: 0x000C2B70
+		// Token: 0x17001B36 RID: 6966
+		// (get) Token: 0x06005476 RID: 21622 RVA: 0x000D01C0 File Offset: 0x000CE3C0
 		public virtual int InitialAttachStatue
 		{
 			get
@@ -78,8 +75,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170019CC RID: 6604
-		// (get) Token: 0x06004F52 RID: 20306 RVA: 0x000C497D File Offset: 0x000C2B7D
+		// Token: 0x17001B37 RID: 6967
+		// (get) Token: 0x06005477 RID: 21623 RVA: 0x000D01CD File Offset: 0x000CE3CD
 		public virtual int GodKingFrequencyEntity
 		{
 			get
@@ -88,8 +85,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170019CD RID: 6605
-		// (get) Token: 0x06004F53 RID: 20307 RVA: 0x000C498A File Offset: 0x000C2B8A
+		// Token: 0x17001B38 RID: 6968
+		// (get) Token: 0x06005478 RID: 21624 RVA: 0x000D01DA File Offset: 0x000CE3DA
 		public virtual string AttachSocket
 		{
 			get
@@ -98,8 +95,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170019CE RID: 6606
-		// (get) Token: 0x06004F54 RID: 20308 RVA: 0x000C4997 File Offset: 0x000C2B97
+		// Token: 0x17001B39 RID: 6969
+		// (get) Token: 0x06005479 RID: 21625 RVA: 0x000D01E7 File Offset: 0x000CE3E7
 		public virtual float FlySpeed
 		{
 			get
@@ -108,8 +105,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170019CF RID: 6607
-		// (get) Token: 0x06004F55 RID: 20309 RVA: 0x000C49A4 File Offset: 0x000C2BA4
+		// Token: 0x17001B3A RID: 6970
+		// (get) Token: 0x0600547A RID: 21626 RVA: 0x000D01F4 File Offset: 0x000CE3F4
 		public virtual float MaxFlyTime
 		{
 			get
@@ -118,13 +115,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002D86 RID: 11654
+		// Token: 0x0400304C RID: 12364
 		private IGodKingFrequencyControllerComponent Instance;
 
-		// Token: 0x04002D87 RID: 11655
+		// Token: 0x0400304D RID: 12365
 		private List<int> _StatueEntityIdListCache;
 
-		// Token: 0x04002D88 RID: 11656
+		// Token: 0x0400304E RID: 12366
 		private bool _StatueEntityIdListInited;
 	}
 }

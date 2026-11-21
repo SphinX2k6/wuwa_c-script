@@ -10,10 +10,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.SlidingBlocks.View.Control
 {
-	// Token: 0x02004B9B RID: 19355
+	// Token: 0x02003B45 RID: 15173
 	public class ControlButton : UiPanelBase
 	{
-		// Token: 0x06032275 RID: 205429 RVA: 0x00BA74B0 File Offset: 0x00BA56B0
+		// Token: 0x06027005 RID: 159749 RVA: 0x00AEB5FC File Offset: 0x00AE97FC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View.Control
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06032276 RID: 205430 RVA: 0x00BA751C File Offset: 0x00BA571C
+		// Token: 0x06027006 RID: 159750 RVA: 0x00AEB668 File Offset: 0x00AE9868
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ControlButton.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View.Control
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06032277 RID: 205431 RVA: 0x00BA755F File Offset: 0x00BA575F
+		// Token: 0x06027007 RID: 159751 RVA: 0x00AEB6AB File Offset: 0x00AE98AB
 		public void PlayClickEffect()
 		{
 			BattleUiNiagaraItem clickEffect = this.ClickEffect;
@@ -49,20 +49,20 @@ namespace CSharpScript.Game.Module.SlidingBlocks.View.Control
 			clickEffect.Play();
 		}
 
-		// Token: 0x0401AB6E RID: 109422
+		// Token: 0x040154C2 RID: 87234
 		[Nullable(2)]
 		public UUIButtonComponent Button;
 
-		// Token: 0x0401AB6F RID: 109423
+		// Token: 0x040154C3 RID: 87235
 		[Nullable(2)]
 		protected BattleUiNiagaraItem ClickEffect;
 
-		// Token: 0x0200ADC0 RID: 44480
+		// Token: 0x020097DF RID: 38879
 		private enum EViewComponent
 		{
-			// Token: 0x04034C64 RID: 216164
+			// Token: 0x0402F60B RID: 194059
 			SkillButton = 5,
-			// Token: 0x04034C65 RID: 216165
+			// Token: 0x0402F60C RID: 194060
 			ClickEffectNiagara = 10
 		}
 	}

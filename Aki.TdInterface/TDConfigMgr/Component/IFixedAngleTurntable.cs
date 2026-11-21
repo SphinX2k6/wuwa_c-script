@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000390 RID: 912
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020003D9 RID: 985
 	public class IFixedAngleTurntable : ITurntableControlType
 	{
-		// Token: 0x06001215 RID: 4629 RVA: 0x0003C0D4 File Offset: 0x0003A2D4
+		// Token: 0x06001359 RID: 4953 RVA: 0x0003F3B8 File Offset: 0x0003D5B8
 		private IFixedAngleTurntable_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001216 RID: 4630 RVA: 0x0003C10C File Offset: 0x0003A30C
+		// Token: 0x0600135A RID: 4954 RVA: 0x0003F3F0 File Offset: 0x0003D5F0
 		public static IFixedAngleTurntable Create([Nullable(2)] IFixedAngleTurntable instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001217 RID: 4631 RVA: 0x0003C11F File Offset: 0x0003A31F
+		// Token: 0x0600135B RID: 4955 RVA: 0x0003F403 File Offset: 0x0003D603
 		public static IFixedAngleTurntable CreateFromSetValue([Nullable(2)] IFixedAngleTurntable_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001218 RID: 4632 RVA: 0x0003C132 File Offset: 0x0003A332
+		// Token: 0x0600135C RID: 4956 RVA: 0x0003F416 File Offset: 0x0003D616
 		public new IFixedAngleTurntable_SetValue ToSetValue()
 		{
 			return new IFixedAngleTurntable_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000510 RID: 1296
-		// (get) Token: 0x06001219 RID: 4633 RVA: 0x0003C15D File Offset: 0x0003A35D
-		// (set) Token: 0x0600121A RID: 4634 RVA: 0x0003C188 File Offset: 0x0003A388
+		// Token: 0x17000564 RID: 1380
+		// (get) Token: 0x0600135D RID: 4957 RVA: 0x0003F441 File Offset: 0x0003D641
+		// (set) Token: 0x0600135E RID: 4958 RVA: 0x0003F46C File Offset: 0x0003D66C
 		public override EControllerType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000511 RID: 1297
-		// (get) Token: 0x0600121B RID: 4635 RVA: 0x0003C196 File Offset: 0x0003A396
-		// (set) Token: 0x0600121C RID: 4636 RVA: 0x0003C1C1 File Offset: 0x0003A3C1
+		// Token: 0x17000565 RID: 1381
+		// (get) Token: 0x0600135F RID: 4959 RVA: 0x0003F47A File Offset: 0x0003D67A
+		// (set) Token: 0x06001360 RID: 4960 RVA: 0x0003F4A5 File Offset: 0x0003D6A5
 		public override int RotationSpeed
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000512 RID: 1298
-		// (get) Token: 0x0600121D RID: 4637 RVA: 0x0003C1D0 File Offset: 0x0003A3D0
-		// (set) Token: 0x0600121E RID: 4638 RVA: 0x0003C263 File Offset: 0x0003A463
+		// Token: 0x17000566 RID: 1382
+		// (get) Token: 0x06001361 RID: 4961 RVA: 0x0003F4B4 File Offset: 0x0003D6B4
+		// (set) Token: 0x06001362 RID: 4962 RVA: 0x0003F547 File Offset: 0x0003D747
 		public virtual List<IFixedAngleItem> ItemConfig
 		{
 			get
@@ -146,18 +144,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000EA1 RID: 3745
+		// Token: 0x04000F98 RID: 3992
 		[Nullable(2)]
 		protected new IFixedAngleTurntable FbInstance;
 
-		// Token: 0x04000EA2 RID: 3746
+		// Token: 0x04000F99 RID: 3993
 		[Nullable(2)]
 		protected new IFixedAngleTurntable_SetValue PocoInterface;
 
-		// Token: 0x04000EA3 RID: 3747
+		// Token: 0x04000F9A RID: 3994
 		private List<IFixedAngleItem> _ItemConfigCache;
 
-		// Token: 0x04000EA4 RID: 3748
+		// Token: 0x04000F9B RID: 3995
 		private bool _ItemConfigInited;
 	}
 }

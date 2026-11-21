@@ -4,45 +4,45 @@ using Aki.UniverseEditor.Interface.Fbs.Condition;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005A7A RID: 23162
+	// Token: 0x02006087 RID: 24711
 	public class ITimelineControlGroupT
 	{
-		// Token: 0x1700AE73 RID: 44659
-		// (get) Token: 0x0602772B RID: 161579 RVA: 0x0056DB43 File Offset: 0x0056BD43
-		// (set) Token: 0x0602772C RID: 161580 RVA: 0x0056DB4B File Offset: 0x0056BD4B
+		// Token: 0x1700B7AB RID: 47019
+		// (get) Token: 0x06029CA3 RID: 171171 RVA: 0x005B4B4F File Offset: 0x005B2D4F
+		// (set) Token: 0x06029CA4 RID: 171172 RVA: 0x005B4B57 File Offset: 0x005B2D57
 		public IConditionGroupT Condition { get; set; }
 
-		// Token: 0x1700AE74 RID: 44660
-		// (get) Token: 0x0602772D RID: 161581 RVA: 0x0056DB54 File Offset: 0x0056BD54
-		// (set) Token: 0x0602772E RID: 161582 RVA: 0x0056DB5C File Offset: 0x0056BD5C
+		// Token: 0x1700B7AC RID: 47020
+		// (get) Token: 0x06029CA5 RID: 171173 RVA: 0x005B4B60 File Offset: 0x005B2D60
+		// (set) Token: 0x06029CA6 RID: 171174 RVA: 0x005B4B68 File Offset: 0x005B2D68
 		public string TidContent { get; set; }
 
-		// Token: 0x1700AE75 RID: 44661
-		// (get) Token: 0x0602772F RID: 161583 RVA: 0x0056DB65 File Offset: 0x0056BD65
-		// (set) Token: 0x06027730 RID: 161584 RVA: 0x0056DB6D File Offset: 0x0056BD6D
+		// Token: 0x1700B7AD RID: 47021
+		// (get) Token: 0x06029CA7 RID: 171175 RVA: 0x005B4B71 File Offset: 0x005B2D71
+		// (set) Token: 0x06029CA8 RID: 171176 RVA: 0x005B4B79 File Offset: 0x005B2D79
 		public float SegmentTime { get; set; }
 
-		// Token: 0x1700AE76 RID: 44662
-		// (get) Token: 0x06027731 RID: 161585 RVA: 0x0056DB76 File Offset: 0x0056BD76
-		// (set) Token: 0x06027732 RID: 161586 RVA: 0x0056DB7E File Offset: 0x0056BD7E
+		// Token: 0x1700B7AE RID: 47022
+		// (get) Token: 0x06029CA9 RID: 171177 RVA: 0x005B4B82 File Offset: 0x005B2D82
+		// (set) Token: 0x06029CAA RID: 171178 RVA: 0x005B4B8A File Offset: 0x005B2D8A
 		public List<TTimelineTrackControlConfigUnion> ControlConfigs { get; set; }
 
-		// Token: 0x1700AE77 RID: 44663
-		// (get) Token: 0x06027733 RID: 161587 RVA: 0x0056DB87 File Offset: 0x0056BD87
-		// (set) Token: 0x06027734 RID: 161588 RVA: 0x0056DB8F File Offset: 0x0056BD8F
+		// Token: 0x1700B7AF RID: 47023
+		// (get) Token: 0x06029CAB RID: 171179 RVA: 0x005B4B93 File Offset: 0x005B2D93
+		// (set) Token: 0x06029CAC RID: 171180 RVA: 0x005B4B9B File Offset: 0x005B2D9B
 		public List<IControlPointEventConfigT> ControlPointEvents { get; set; }
 
-		// Token: 0x1700AE78 RID: 44664
-		// (get) Token: 0x06027735 RID: 161589 RVA: 0x0056DB98 File Offset: 0x0056BD98
-		// (set) Token: 0x06027736 RID: 161590 RVA: 0x0056DBA0 File Offset: 0x0056BDA0
+		// Token: 0x1700B7B0 RID: 47024
+		// (get) Token: 0x06029CAD RID: 171181 RVA: 0x005B4BA4 File Offset: 0x005B2DA4
+		// (set) Token: 0x06029CAE RID: 171182 RVA: 0x005B4BAC File Offset: 0x005B2DAC
 		public string Description { get; set; }
 
-		// Token: 0x1700AE79 RID: 44665
-		// (get) Token: 0x06027737 RID: 161591 RVA: 0x0056DBA9 File Offset: 0x0056BDA9
-		// (set) Token: 0x06027738 RID: 161592 RVA: 0x0056DBB1 File Offset: 0x0056BDB1
+		// Token: 0x1700B7B1 RID: 47025
+		// (get) Token: 0x06029CAF RID: 171183 RVA: 0x005B4BB5 File Offset: 0x005B2DB5
+		// (set) Token: 0x06029CB0 RID: 171184 RVA: 0x005B4BBD File Offset: 0x005B2DBD
 		public byte NullMask { get; set; }
 
-		// Token: 0x06027739 RID: 161593 RVA: 0x0056DBBA File Offset: 0x0056BDBA
+		// Token: 0x06029CB1 RID: 171185 RVA: 0x005B4BC6 File Offset: 0x005B2DC6
 		public ITimelineControlGroupT()
 		{
 			this.Condition = null;

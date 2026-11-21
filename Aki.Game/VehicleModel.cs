@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x020032F0 RID: 13040
+// Token: 0x02002862 RID: 10338
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class VehicleModel : ModelBase
 {
-	// Token: 0x0601C614 RID: 116244 RVA: 0x007F1EC4 File Offset: 0x007F00C4
+	// Token: 0x0601A2D9 RID: 107225 RVA: 0x008183F0 File Offset: 0x008165F0
 	protected override bool OnChangeMode()
 	{
 		foreach (ScenePlayerVehicleInfo scenePlayerVehicleInfo in this.PlayerVehicleInfo.Values)
@@ -28,14 +28,14 @@ public class VehicleModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601C615 RID: 116245 RVA: 0x007F1F74 File Offset: 0x007F0174
+	// Token: 0x0601A2DA RID: 107226 RVA: 0x008184A0 File Offset: 0x008166A0
 	protected override bool OnClear()
 	{
 		this.MaterialControllerHandles.Clear();
 		return true;
 	}
 
-	// Token: 0x0601C616 RID: 116246 RVA: 0x007F1F84 File Offset: 0x007F0184
+	// Token: 0x0601A2DB RID: 107227 RVA: 0x008184B0 File Offset: 0x008166B0
 	public unsafe void UpdateAllPlayerVehicleData(IReadOnlyList<ScenePlayerInformation> playerInfoList)
 	{
 		this.PlayerVehicleInfo.Clear();
@@ -97,7 +97,7 @@ public class VehicleModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601C617 RID: 116247 RVA: 0x007F21A4 File Offset: 0x007F03A4
+	// Token: 0x0601A2DC RID: 107228 RVA: 0x008186D0 File Offset: 0x008168D0
 	public void AddOtherPlayerVehicleData(int playerId)
 	{
 		ScenePlayerVehicleInfo scenePlayerVehicleInfo = new ScenePlayerVehicleInfo();
@@ -111,7 +111,7 @@ public class VehicleModel : ModelBase
 		instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 	}
 
-	// Token: 0x0601C618 RID: 116248 RVA: 0x007F21FC File Offset: 0x007F03FC
+	// Token: 0x0601A2DD RID: 107229 RVA: 0x00818728 File Offset: 0x00816928
 	public unsafe void RemoveOtherPlayerVehicleData(int playerId)
 	{
 		ScenePlayerVehicleInfo scenePlayerVehicleInfo = null;
@@ -138,7 +138,7 @@ public class VehicleModel : ModelBase
 		this.PlayerVehicleInfo.Remove(playerId);
 	}
 
-	// Token: 0x0601C619 RID: 116249 RVA: 0x007F2364 File Offset: 0x007F0564
+	// Token: 0x0601A2DE RID: 107230 RVA: 0x00818890 File Offset: 0x00816A90
 	public unsafe void UpdatePlayerVehicleData(ScenePlayerVehicleInfo context)
 	{
 		ScenePlayerVehicleInfo scenePlayerVehicleInfo = this.PlayerVehicleInfo.GetValueOrDefault(context.PlayerId);
@@ -184,7 +184,7 @@ public class VehicleModel : ModelBase
 		this.UpdateEntityVehicleData(context);
 	}
 
-	// Token: 0x0601C61A RID: 116250 RVA: 0x007F2528 File Offset: 0x007F0728
+	// Token: 0x0601A2DF RID: 107231 RVA: 0x00818A54 File Offset: 0x00816C54
 	private unsafe void UpdateVehiclePlayerInfo(ScenePlayerVehicleInfo context)
 	{
 		bool flag = context.Seat != -1;
@@ -219,7 +219,7 @@ public class VehicleModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601C61B RID: 116251 RVA: 0x007F2638 File Offset: 0x007F0838
+	// Token: 0x0601A2E0 RID: 107232 RVA: 0x00818B64 File Offset: 0x00816D64
 	private void UpdatePlayerVehicleInfo(ScenePlayerVehicleInfo context)
 	{
 		bool flag = context.Seat != -1;
@@ -237,7 +237,7 @@ public class VehicleModel : ModelBase
 		scenePlayerVehicleInfo.ExitType = context.ExitType;
 	}
 
-	// Token: 0x0601C61C RID: 116252 RVA: 0x007F26E0 File Offset: 0x007F08E0
+	// Token: 0x0601A2E1 RID: 107233 RVA: 0x00818C0C File Offset: 0x00816E0C
 	public void UpdateEntityVehicleData(EntityVehicleInfo context)
 	{
 		long entityCreatureId = context.EntityCreatureId;
@@ -264,7 +264,7 @@ public class VehicleModel : ModelBase
 		this.UpdateEntityVehicleInfo(context);
 	}
 
-	// Token: 0x0601C61D RID: 116253 RVA: 0x007F2744 File Offset: 0x007F0944
+	// Token: 0x0601A2E2 RID: 107234 RVA: 0x00818C70 File Offset: 0x00816E70
 	public void UpdateEntityVehicleInfo(EntityVehicleInfo context)
 	{
 		bool flag = context.Seat != -1;
@@ -288,7 +288,7 @@ public class VehicleModel : ModelBase
 		this.PassengerVehicleMap[context.EntityCreatureId] = context;
 	}
 
-	// Token: 0x0601C61E RID: 116254 RVA: 0x007F280C File Offset: 0x007F0A0C
+	// Token: 0x0601A2E3 RID: 107235 RVA: 0x00818D38 File Offset: 0x00816F38
 	public unsafe void UpdateVehicleEntityInfo(EntityVehicleInfo context)
 	{
 		bool flag = context.Seat != -1;
@@ -322,7 +322,7 @@ public class VehicleModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601C61F RID: 116255 RVA: 0x007F28F8 File Offset: 0x007F0AF8
+	// Token: 0x0601A2E4 RID: 107236 RVA: 0x00818E24 File Offset: 0x00817024
 	public void PostUpdateAllVehicleEntityData()
 	{
 		foreach (EntityVehicleInfo context in this.PassengerVehicleMap.Values)
@@ -331,7 +331,7 @@ public class VehicleModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601C620 RID: 116256 RVA: 0x007F2950 File Offset: 0x007F0B50
+	// Token: 0x0601A2E5 RID: 107237 RVA: 0x00818E7C File Offset: 0x0081707C
 	public void PostUpdateVehicleEntityData(EntityVehicleInfo context)
 	{
 		if (context.Seat != -1)
@@ -350,7 +350,7 @@ public class VehicleModel : ModelBase
 		this.PassengerVehicleMap.Remove(context.EntityCreatureId);
 	}
 
-	// Token: 0x0601C621 RID: 116257 RVA: 0x007F29C0 File Offset: 0x007F0BC0
+	// Token: 0x0601A2E6 RID: 107238 RVA: 0x00818EEC File Offset: 0x008170EC
 	public List<ScenePlayerVehicleInfo> GetVehiclePlayerData(long vehicleCreatureId)
 	{
 		List<ScenePlayerVehicleInfo> list = new List<ScenePlayerVehicleInfo>();
@@ -366,14 +366,14 @@ public class VehicleModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0601C622 RID: 116258 RVA: 0x007F2A34 File Offset: 0x007F0C34
+	// Token: 0x0601A2E7 RID: 107239 RVA: 0x00818F60 File Offset: 0x00817160
 	[NullableContext(2)]
 	public ScenePlayerVehicleInfo GetPlayerVehicleData(int playerId)
 	{
 		return this.PlayerVehicleInfo.GetValueOrDefault(playerId);
 	}
 
-	// Token: 0x0601C623 RID: 116259 RVA: 0x007F2A44 File Offset: 0x007F0C44
+	// Token: 0x0601A2E8 RID: 107240 RVA: 0x00818F70 File Offset: 0x00817170
 	public List<EntityVehicleInfo> GetVehicleEntityData(long creatureId)
 	{
 		List<EntityVehicleInfo> list = new List<EntityVehicleInfo>();
@@ -389,14 +389,14 @@ public class VehicleModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x0601C624 RID: 116260 RVA: 0x007F2AB4 File Offset: 0x007F0CB4
+	// Token: 0x0601A2E9 RID: 107241 RVA: 0x00818FE0 File Offset: 0x008171E0
 	[NullableContext(2)]
 	public EntityVehicleInfo GetEntityVehicleData(long creatureId)
 	{
 		return this.PassengerVehicleMap.GetValueOrDefault(creatureId);
 	}
 
-	// Token: 0x0601C625 RID: 116261 RVA: 0x007F2AC4 File Offset: 0x007F0CC4
+	// Token: 0x0601A2EA RID: 107242 RVA: 0x00818FF0 File Offset: 0x008171F0
 	public void UpdateKeepDrivingInfo(float delta, VehicleMoveComponent moveComp)
 	{
 		if (this.KeepDrivingInfoList == null)
@@ -412,7 +412,7 @@ public class VehicleModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601C626 RID: 116262 RVA: 0x007F2B6C File Offset: 0x007F0D6C
+	// Token: 0x0601A2EB RID: 107243 RVA: 0x00819098 File Offset: 0x00817298
 	public int AddKeepDrivingInfo(KeepDrivingInfo info)
 	{
 		if (this.KeepDrivingInfoList == null)
@@ -424,7 +424,7 @@ public class VehicleModel : ModelBase
 		return this.Uid;
 	}
 
-	// Token: 0x0601C627 RID: 116263 RVA: 0x007F2BA7 File Offset: 0x007F0DA7
+	// Token: 0x0601A2EC RID: 107244 RVA: 0x008190D3 File Offset: 0x008172D3
 	public void RemoveKeepDrivingInfo(int index)
 	{
 		Dictionary<int, KeepDrivingInfo> keepDrivingInfoList = this.KeepDrivingInfoList;
@@ -434,8 +434,8 @@ public class VehicleModel : ModelBase
 		}
 	}
 
-	// Token: 0x17002746 RID: 10054
-	// (get) Token: 0x0601C628 RID: 116264 RVA: 0x007F2BCB File Offset: 0x007F0DCB
+	// Token: 0x17002AB7 RID: 10935
+	// (get) Token: 0x0601A2ED RID: 107245 RVA: 0x008190F7 File Offset: 0x008172F7
 	public static VehicleModel Instance
 	{
 		get
@@ -444,7 +444,7 @@ public class VehicleModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601C629 RID: 116265 RVA: 0x007F2BD2 File Offset: 0x007F0DD2
+	// Token: 0x0601A2EE RID: 107246 RVA: 0x008190FE File Offset: 0x008172FE
 	public static VehicleModel GetOrCreateInstance()
 	{
 		if (VehicleModel._Instance == null)
@@ -454,7 +454,7 @@ public class VehicleModel : ModelBase
 		return VehicleModel._Instance;
 	}
 
-	// Token: 0x0601C62A RID: 116266 RVA: 0x007F2BE6 File Offset: 0x007F0DE6
+	// Token: 0x0601A2EF RID: 107247 RVA: 0x00819112 File Offset: 0x00817312
 	public static bool CreateInstance()
 	{
 		if (VehicleModel._Instance != null)
@@ -465,51 +465,51 @@ public class VehicleModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601C62B RID: 116267 RVA: 0x007F2BFC File Offset: 0x007F0DFC
+	// Token: 0x0601A2F0 RID: 107248 RVA: 0x00819128 File Offset: 0x00817328
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601C62C RID: 116268 RVA: 0x007F2BFE File Offset: 0x007F0DFE
+	// Token: 0x0601A2F1 RID: 107249 RVA: 0x0081912A File Offset: 0x0081732A
 	public static void ResetStaticDefaultValue()
 	{
 		VehicleModel._Instance = null;
 	}
 
-	// Token: 0x0601C62D RID: 116269 RVA: 0x007F2C06 File Offset: 0x007F0E06
+	// Token: 0x0601A2F2 RID: 107250 RVA: 0x00819132 File Offset: 0x00817332
 	static VehicleModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(VehicleModel.CreateStaticDefaultValue), new Action(VehicleModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400E11F RID: 57631
+	// Token: 0x0400E5CA RID: 58826
 	public Dictionary<int, ScenePlayerVehicleInfo> PlayerVehicleInfo = new Dictionary<int, ScenePlayerVehicleInfo>();
 
-	// Token: 0x0400E120 RID: 57632
+	// Token: 0x0400E5CB RID: 58827
 	public Dictionary<long, HashSet<int>> VehiclePlayerInfo = new Dictionary<long, HashSet<int>>();
 
-	// Token: 0x0400E121 RID: 57633
+	// Token: 0x0400E5CC RID: 58828
 	public Dictionary<long, EntityVehicleInfo> PassengerVehicleMap = new Dictionary<long, EntityVehicleInfo>();
 
-	// Token: 0x0400E122 RID: 57634
+	// Token: 0x0400E5CD RID: 58829
 	public Dictionary<long, Dictionary<long, EntityVehicleInfo>> VehiclePassengerMap = new Dictionary<long, Dictionary<long, EntityVehicleInfo>>();
 
-	// Token: 0x0400E123 RID: 57635
+	// Token: 0x0400E5CE RID: 58830
 	public bool IsReadyRiderSharing;
 
-	// Token: 0x0400E124 RID: 57636
+	// Token: 0x0400E5CF RID: 58831
 	public bool IsForbidRiderSharing;
 
-	// Token: 0x0400E125 RID: 57637
+	// Token: 0x0400E5D0 RID: 58832
 	public Dictionary<int, VehicleRideSharingInfo> RideSharingInfoMap = new Dictionary<int, VehicleRideSharingInfo>();
 
-	// Token: 0x0400E126 RID: 57638
+	// Token: 0x0400E5D1 RID: 58833
 	public HashSet<int> MaterialControllerHandles = new HashSet<int>();
 
-	// Token: 0x0400E127 RID: 57639
+	// Token: 0x0400E5D2 RID: 58834
 	private int Uid;
 
-	// Token: 0x0400E128 RID: 57640
+	// Token: 0x0400E5D3 RID: 58835
 	[Nullable(new byte[]
 	{
 		2,
@@ -517,7 +517,7 @@ public class VehicleModel : ModelBase
 	})]
 	private Dictionary<int, KeepDrivingInfo> KeepDrivingInfoList;
 
-	// Token: 0x0400E129 RID: 57641
+	// Token: 0x0400E5D4 RID: 58836
 	[Nullable(2)]
 	private static VehicleModel _Instance;
 }

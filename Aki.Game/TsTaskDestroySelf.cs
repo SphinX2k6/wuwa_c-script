@@ -13,9 +13,9 @@ using UnrealEngine.Utils;
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskDestroySelf.TsTaskDestroySelf_C")]
 public class TsTaskDestroySelf : TsTaskAbortImmediatelyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x17000133 RID: 307
-	// (get) Token: 0x06000793 RID: 1939 RVA: 0x00025DAB File Offset: 0x00023FAB
-	// (set) Token: 0x06000794 RID: 1940 RVA: 0x00025DBB File Offset: 0x00023FBB
+	// Token: 0x17000135 RID: 309
+	// (get) Token: 0x06000797 RID: 1943 RVA: 0x00026B1B File Offset: 0x00024D1B
+	// (set) Token: 0x06000798 RID: 1944 RVA: 0x00026B2B File Offset: 0x00024D2B
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool IsPause
 	{
@@ -29,7 +29,7 @@ public class TsTaskDestroySelf : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x06000795 RID: 1941 RVA: 0x00025DCC File Offset: 0x00023FCC
+	// Token: 0x06000799 RID: 1945 RVA: 0x00026B3C File Offset: 0x00024D3C
 	private void InitTsVariables()
 	{
 		if (!this.IsInitTsVariables || GlobalData.IsPlayInEditor)
@@ -39,30 +39,27 @@ public class TsTaskDestroySelf : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		}
 	}
 
-	// Token: 0x06000796 RID: 1942 RVA: 0x00025DF0 File Offset: 0x00023FF0
+	// Token: 0x0600079A RID: 1946 RVA: 0x00026B60 File Offset: 0x00024D60
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override void ReceiveExecuteAI(AAIController ownerController, APawn controlledPawn)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("ReceiveExecuteAI"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsTaskDestroySelf) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("ReceiveExecuteAI"), TsTaskDestroySelf.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams*)ptr + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
-			*(&ptr2->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+			this.ReceiveExecuteAI_Implementation(ownerController, controlledPawn);
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* ptr = stackalloc UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->OwnerController) = ((ownerController != null) ? ownerController.NativePtr : ((IntPtr)0));
+		*(&ptr->ControlledPawn) = ((controlledPawn != null) ? controlledPawn.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 	}
 
-	// Token: 0x06000797 RID: 1943 RVA: 0x00025E8C File Offset: 0x0002408C
+	// Token: 0x0600079B RID: 1947 RVA: 0x00026C10 File Offset: 0x00024E10
 	[NullableContext(2)]
 	protected virtual void ReceiveExecuteAI_Implementation(AAIController ownerController, APawn controlledPawn)
 	{
@@ -123,7 +120,7 @@ public class TsTaskDestroySelf : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		base.FinishExecute(true);
 	}
 
-	// Token: 0x06000798 RID: 1944 RVA: 0x00025F9D File Offset: 0x0002419D
+	// Token: 0x0600079C RID: 1948 RVA: 0x00026D21 File Offset: 0x00024F21
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsTaskDestroySelf._ClassPtr == IntPtr.Zero)
@@ -133,23 +130,23 @@ public class TsTaskDestroySelf : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		return TsTaskDestroySelf._ClassPtr;
 	}
 
-	// Token: 0x06000799 RID: 1945 RVA: 0x00025FC4 File Offset: 0x000241C4
+	// Token: 0x0600079D RID: 1949 RVA: 0x00026D48 File Offset: 0x00024F48
 	public TsTaskDestroySelf() : this(BuiltinUtils.AllocNativeUObject(TsTaskDestroySelf.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x0600079A RID: 1946 RVA: 0x00025FEC File Offset: 0x000241EC
+	// Token: 0x0600079E RID: 1950 RVA: 0x00026D70 File Offset: 0x00024F70
 	[NullableContext(1)]
 	public TsTaskDestroySelf(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskDestroySelf.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0600079B RID: 1947 RVA: 0x0002601F File Offset: 0x0002421F
+	// Token: 0x0600079F RID: 1951 RVA: 0x00026DA3 File Offset: 0x00024FA3
 	protected TsTaskDestroySelf(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0600079C RID: 1948 RVA: 0x00026028 File Offset: 0x00024228
+	// Token: 0x060007A0 RID: 1952 RVA: 0x00026DAC File Offset: 0x00024FAC
 	protected unsafe virtual void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);
@@ -157,22 +154,22 @@ public class TsTaskDestroySelf : TsTaskAbortImmediatelyBase, IUnrealUObject, IUn
 		this.ReceiveExecuteAI_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x0400058F RID: 1423
+	// Token: 0x04000593 RID: 1427
 	private bool IsInitTsVariables;
 
-	// Token: 0x04000590 RID: 1424
+	// Token: 0x04000594 RID: 1428
 	private bool TsIsPause;
 
-	// Token: 0x04000591 RID: 1425
+	// Token: 0x04000595 RID: 1429
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AI/BehaviorTree/Task/TsTaskDestroySelf.TsTaskDestroySelf_C";
 
-	// Token: 0x04000592 RID: 1426
+	// Token: 0x04000596 RID: 1430
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04000593 RID: 1427
+	// Token: 0x04000597 RID: 1431
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x04000594 RID: 1428
+	// Token: 0x04000598 RID: 1432
 	private static int __PropertyOffset_IsPause;
 }

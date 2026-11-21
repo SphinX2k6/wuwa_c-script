@@ -7,97 +7,97 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Data.Entity.Struct
 {
-	// Token: 0x02003F89 RID: 16265
+	// Token: 0x0200321E RID: 12830
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/Data/Entity/Struct/SDecorationConfig.SDecorationConfig")]
 	[UnrealStructLayout(512, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 512)]
 	public class SDecorationConfig : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602985B RID: 170075 RVA: 0x009C6218 File Offset: 0x009C4418
+		// Token: 0x0601FFF0 RID: 131056 RVA: 0x0093A9F6 File Offset: 0x00938BF6
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SDecorationConfig._ScriptStructPtr != 0) ? SDecorationConfig._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Data/Entity/Struct/SDecorationConfig.SDecorationConfig", ref SDecorationConfig._ScriptStructPtr);
 		}
 
-		// Token: 0x170063B4 RID: 25524
-		// (get) Token: 0x0602985C RID: 170076 RVA: 0x009C623C File Offset: 0x009C443C
-		// (set) Token: 0x0602985D RID: 170077 RVA: 0x009C6250 File Offset: 0x009C4450
+		// Token: 0x17003CA9 RID: 15529
+		// (get) Token: 0x0601FFF1 RID: 131057 RVA: 0x0093AA1A File Offset: 0x00938C1A
+		// (set) Token: 0x0601FFF2 RID: 131058 RVA: 0x0093AA2E File Offset: 0x00938C2E
 		public unsafe string Tips
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SDecorationConfig.__PropertyOffset_0)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SDecorationConfig.__PropertyOffset_Tips)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SDecorationConfig.__PropertyOffset_0)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SDecorationConfig.__PropertyOffset_Tips)), value);
 			}
 		}
 
-		// Token: 0x170063B5 RID: 25525
-		// (get) Token: 0x0602985E RID: 170078 RVA: 0x009C6265 File Offset: 0x009C4465
-		// (set) Token: 0x0602985F RID: 170079 RVA: 0x009C6284 File Offset: 0x009C4484
+		// Token: 0x17003CAA RID: 15530
+		// (get) Token: 0x0601FFF3 RID: 131059 RVA: 0x0093AA43 File Offset: 0x00938C43
+		// (set) Token: 0x0601FFF4 RID: 131060 RVA: 0x0093AA62 File Offset: 0x00938C62
 		public TSoftObjectPtr<USkeletalMesh> SkeletalMesh
 		{
 			get
 			{
-				return new TSoftObjectPtr<USkeletalMesh>(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_1, base.MemoryOwner ?? this);
+				return new TSoftObjectPtr<USkeletalMesh>(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_SkeletalMesh, base.MemoryOwner ?? this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_1, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_SkeletalMesh, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x170063B6 RID: 25526
-		// (get) Token: 0x06029860 RID: 170080 RVA: 0x009C62A9 File Offset: 0x009C44A9
-		// (set) Token: 0x06029861 RID: 170081 RVA: 0x009C62B9 File Offset: 0x009C44B9
+		// Token: 0x17003CAB RID: 15531
+		// (get) Token: 0x0601FFF5 RID: 131061 RVA: 0x0093AA87 File Offset: 0x00938C87
+		// (set) Token: 0x0601FFF6 RID: 131062 RVA: 0x0093AA97 File Offset: 0x00938C97
 		public unsafe bool SetMasterFollow
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_2) != 0;
+				return *(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_SetMasterFollow) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_2) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_SetMasterFollow) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170063B7 RID: 25527
-		// (get) Token: 0x06029862 RID: 170082 RVA: 0x009C62CA File Offset: 0x009C44CA
-		// (set) Token: 0x06029863 RID: 170083 RVA: 0x009C62DE File Offset: 0x009C44DE
+		// Token: 0x17003CAC RID: 15532
+		// (get) Token: 0x0601FFF7 RID: 131063 RVA: 0x0093AAA8 File Offset: 0x00938CA8
+		// (set) Token: 0x0601FFF8 RID: 131064 RVA: 0x0093AABC File Offset: 0x00938CBC
 		public unsafe string SubMeshName
 		{
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SDecorationConfig.__PropertyOffset_3)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SDecorationConfig.__PropertyOffset_SubMeshName)));
 			}
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SDecorationConfig.__PropertyOffset_3)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SDecorationConfig.__PropertyOffset_SubMeshName)), value);
 			}
 		}
 
-		// Token: 0x170063B8 RID: 25528
-		// (get) Token: 0x06029864 RID: 170084 RVA: 0x009C62F3 File Offset: 0x009C44F3
-		// (set) Token: 0x06029865 RID: 170085 RVA: 0x009C6312 File Offset: 0x009C4512
+		// Token: 0x17003CAD RID: 15533
+		// (get) Token: 0x0601FFF9 RID: 131065 RVA: 0x0093AAD1 File Offset: 0x00938CD1
+		// (set) Token: 0x0601FFFA RID: 131066 RVA: 0x0093AAF0 File Offset: 0x00938CF0
 		public TSoftClassPtr<UAnimInstance> AnimBlueprint
 		{
 			get
 			{
-				return new TSoftClassPtr<UAnimInstance>(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_4, base.MemoryOwner ?? this);
+				return new TSoftClassPtr<UAnimInstance>(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_AnimBlueprint, base.MemoryOwner ?? this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_4, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_AnimBlueprint, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x170063B9 RID: 25529
-		// (get) Token: 0x06029866 RID: 170086 RVA: 0x009C6338 File Offset: 0x009C4538
-		// (set) Token: 0x06029867 RID: 170087 RVA: 0x009C637B File Offset: 0x009C457B
+		// Token: 0x17003CAE RID: 15534
+		// (get) Token: 0x0601FFFB RID: 131067 RVA: 0x0093AB18 File Offset: 0x00938D18
+		// (set) Token: 0x0601FFFC RID: 131068 RVA: 0x0093AB5B File Offset: 0x00938D5B
 		public TArray<FName> AttachSocket
 		{
 			get
@@ -106,7 +106,7 @@ namespace AkiClient.Game.Aki.Data.Entity.Struct
 				TArray<FName> result;
 				if ((result = this._AttachSocket) == null)
 				{
-					result = (this._AttachSocket = new TArray<FName>(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_5, base.MemoryOwner ?? this));
+					result = (this._AttachSocket = new TArray<FName>(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_AttachSocket, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -116,9 +116,9 @@ namespace AkiClient.Game.Aki.Data.Entity.Struct
 			}
 		}
 
-		// Token: 0x170063BA RID: 25530
-		// (get) Token: 0x06029868 RID: 170088 RVA: 0x009C638C File Offset: 0x009C458C
-		// (set) Token: 0x06029869 RID: 170089 RVA: 0x009C63CF File Offset: 0x009C45CF
+		// Token: 0x17003CAF RID: 15535
+		// (get) Token: 0x0601FFFD RID: 131069 RVA: 0x0093AB6C File Offset: 0x00938D6C
+		// (set) Token: 0x0601FFFE RID: 131070 RVA: 0x0093ABAF File Offset: 0x00938DAF
 		public TArray<FTransform> AttachTrans
 		{
 			get
@@ -127,7 +127,7 @@ namespace AkiClient.Game.Aki.Data.Entity.Struct
 				TArray<FTransform> result;
 				if ((result = this._AttachTrans) == null)
 				{
-					result = (this._AttachTrans = new TArray<FTransform>(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_6, base.MemoryOwner ?? this));
+					result = (this._AttachTrans = new TArray<FTransform>(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_AttachTrans, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -137,9 +137,9 @@ namespace AkiClient.Game.Aki.Data.Entity.Struct
 			}
 		}
 
-		// Token: 0x170063BB RID: 25531
-		// (get) Token: 0x0602986A RID: 170090 RVA: 0x009C63E0 File Offset: 0x009C45E0
-		// (set) Token: 0x0602986B RID: 170091 RVA: 0x009C6423 File Offset: 0x009C4623
+		// Token: 0x17003CB0 RID: 15536
+		// (get) Token: 0x0601FFFF RID: 131071 RVA: 0x0093ABC0 File Offset: 0x00938DC0
+		// (set) Token: 0x06020000 RID: 131072 RVA: 0x0093AC03 File Offset: 0x00938E03
 		public TArray<SDecorationConfig_Effect> Effects
 		{
 			get
@@ -148,7 +148,7 @@ namespace AkiClient.Game.Aki.Data.Entity.Struct
 				TArray<SDecorationConfig_Effect> result;
 				if ((result = this._Effects) == null)
 				{
-					result = (this._Effects = new TArray<SDecorationConfig_Effect>(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_7, base.MemoryOwner ?? this));
+					result = (this._Effects = new TArray<SDecorationConfig_Effect>(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_Effects, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -158,9 +158,9 @@ namespace AkiClient.Game.Aki.Data.Entity.Struct
 			}
 		}
 
-		// Token: 0x170063BC RID: 25532
-		// (get) Token: 0x0602986C RID: 170092 RVA: 0x009C6434 File Offset: 0x009C4634
-		// (set) Token: 0x0602986D RID: 170093 RVA: 0x009C6477 File Offset: 0x009C4677
+		// Token: 0x17003CB1 RID: 15537
+		// (get) Token: 0x06020001 RID: 131073 RVA: 0x0093AC14 File Offset: 0x00938E14
+		// (set) Token: 0x06020002 RID: 131074 RVA: 0x0093AC57 File Offset: 0x00938E57
 		public FGameplayTagContainer DisplayTags
 		{
 			get
@@ -169,19 +169,19 @@ namespace AkiClient.Game.Aki.Data.Entity.Struct
 				FGameplayTagContainer result;
 				if ((result = this._DisplayTags) == null)
 				{
-					result = (this._DisplayTags = new FGameplayTagContainer(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_8, base.MemoryOwner ?? this));
+					result = (this._DisplayTags = new FGameplayTagContainer(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_DisplayTags, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_8, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_DisplayTags, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x170063BD RID: 25533
-		// (get) Token: 0x0602986E RID: 170094 RVA: 0x009C6498 File Offset: 0x009C4698
-		// (set) Token: 0x0602986F RID: 170095 RVA: 0x009C64DB File Offset: 0x009C46DB
+		// Token: 0x17003CB2 RID: 15538
+		// (get) Token: 0x06020003 RID: 131075 RVA: 0x0093AC78 File Offset: 0x00938E78
+		// (set) Token: 0x06020004 RID: 131076 RVA: 0x0093ACBB File Offset: 0x00938EBB
 		public FGameplayTagContainer HideTags
 		{
 			get
@@ -190,19 +190,19 @@ namespace AkiClient.Game.Aki.Data.Entity.Struct
 				FGameplayTagContainer result;
 				if ((result = this._HideTags) == null)
 				{
-					result = (this._HideTags = new FGameplayTagContainer(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_9, base.MemoryOwner ?? this));
+					result = (this._HideTags = new FGameplayTagContainer(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_HideTags, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_9, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_HideTags, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x170063BE RID: 25534
-		// (get) Token: 0x06029870 RID: 170096 RVA: 0x009C64FC File Offset: 0x009C46FC
-		// (set) Token: 0x06029871 RID: 170097 RVA: 0x009C653F File Offset: 0x009C473F
+		// Token: 0x17003CB3 RID: 15539
+		// (get) Token: 0x06020005 RID: 131077 RVA: 0x0093ACDC File Offset: 0x00938EDC
+		// (set) Token: 0x06020006 RID: 131078 RVA: 0x0093AD1F File Offset: 0x00938F1F
 		public FGameplayTagContainer UIDisplayTags
 		{
 			get
@@ -211,19 +211,19 @@ namespace AkiClient.Game.Aki.Data.Entity.Struct
 				FGameplayTagContainer result;
 				if ((result = this._UIDisplayTags) == null)
 				{
-					result = (this._UIDisplayTags = new FGameplayTagContainer(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_10, base.MemoryOwner ?? this));
+					result = (this._UIDisplayTags = new FGameplayTagContainer(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_UIDisplayTags, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_10, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_UIDisplayTags, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x170063BF RID: 25535
-		// (get) Token: 0x06029872 RID: 170098 RVA: 0x009C6560 File Offset: 0x009C4760
-		// (set) Token: 0x06029873 RID: 170099 RVA: 0x009C65A3 File Offset: 0x009C47A3
+		// Token: 0x17003CB4 RID: 15540
+		// (get) Token: 0x06020007 RID: 131079 RVA: 0x0093AD40 File Offset: 0x00938F40
+		// (set) Token: 0x06020008 RID: 131080 RVA: 0x0093AD83 File Offset: 0x00938F83
 		public FGameplayTagContainer UIHideTags
 		{
 			get
@@ -232,34 +232,34 @@ namespace AkiClient.Game.Aki.Data.Entity.Struct
 				FGameplayTagContainer result;
 				if ((result = this._UIHideTags) == null)
 				{
-					result = (this._UIHideTags = new FGameplayTagContainer(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_11, base.MemoryOwner ?? this));
+					result = (this._UIHideTags = new FGameplayTagContainer(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_UIHideTags, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_11, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(FGameplayTagContainer.StaticStruct(), base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_UIHideTags, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x170063C0 RID: 25536
-		// (get) Token: 0x06029874 RID: 170100 RVA: 0x009C65C4 File Offset: 0x009C47C4
-		// (set) Token: 0x06029875 RID: 170101 RVA: 0x009C65E3 File Offset: 0x009C47E3
+		// Token: 0x17003CB5 RID: 15541
+		// (get) Token: 0x06020009 RID: 131081 RVA: 0x0093ADA4 File Offset: 0x00938FA4
+		// (set) Token: 0x0602000A RID: 131082 RVA: 0x0093ADC3 File Offset: 0x00938FC3
 		public TSoftClassPtr<UAnimInstance> UIAnimBlueprint
 		{
 			get
 			{
-				return new TSoftClassPtr<UAnimInstance>(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_12, base.MemoryOwner ?? this);
+				return new TSoftClassPtr<UAnimInstance>(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_UIAnimBlueprint, base.MemoryOwner ?? this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_12, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_UIAnimBlueprint, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x170063C1 RID: 25537
-		// (get) Token: 0x06029876 RID: 170102 RVA: 0x009C6608 File Offset: 0x009C4808
-		// (set) Token: 0x06029877 RID: 170103 RVA: 0x009C664B File Offset: 0x009C484B
+		// Token: 0x17003CB6 RID: 15542
+		// (get) Token: 0x0602000B RID: 131083 RVA: 0x0093ADE8 File Offset: 0x00938FE8
+		// (set) Token: 0x0602000C RID: 131084 RVA: 0x0093AE2B File Offset: 0x0093902B
 		public TMap<int, int> SkinAttachTrans
 		{
 			get
@@ -268,7 +268,7 @@ namespace AkiClient.Game.Aki.Data.Entity.Struct
 				TMap<int, int> result;
 				if ((result = this._SkinAttachTrans) == null)
 				{
-					result = (this._SkinAttachTrans = new TMap<int, int>(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_13, base.MemoryOwner ?? this));
+					result = (this._SkinAttachTrans = new TMap<int, int>(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_SkinAttachTrans, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -278,39 +278,39 @@ namespace AkiClient.Game.Aki.Data.Entity.Struct
 			}
 		}
 
-		// Token: 0x170063C2 RID: 25538
-		// (get) Token: 0x06029878 RID: 170104 RVA: 0x009C6659 File Offset: 0x009C4859
-		// (set) Token: 0x06029879 RID: 170105 RVA: 0x009C6669 File Offset: 0x009C4869
+		// Token: 0x17003CB7 RID: 15543
+		// (get) Token: 0x0602000D RID: 131085 RVA: 0x0093AE39 File Offset: 0x00939039
+		// (set) Token: 0x0602000E RID: 131086 RVA: 0x0093AE49 File Offset: 0x00939049
 		public unsafe bool UseStaticMesh
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_14) != 0;
+				return *(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_UseStaticMesh) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_14) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_UseStaticMesh) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x170063C3 RID: 25539
-		// (get) Token: 0x0602987A RID: 170106 RVA: 0x009C667A File Offset: 0x009C487A
-		// (set) Token: 0x0602987B RID: 170107 RVA: 0x009C6699 File Offset: 0x009C4899
+		// Token: 0x17003CB8 RID: 15544
+		// (get) Token: 0x0602000F RID: 131087 RVA: 0x0093AE5A File Offset: 0x0093905A
+		// (set) Token: 0x06020010 RID: 131088 RVA: 0x0093AE79 File Offset: 0x00939079
 		public TSoftObjectPtr<UStaticMesh> StaticMesh
 		{
 			get
 			{
-				return new TSoftObjectPtr<UStaticMesh>(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_15, base.MemoryOwner ?? this);
+				return new TSoftObjectPtr<UStaticMesh>(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_StaticMesh, base.MemoryOwner ?? this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_15, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_StaticMesh, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x170063C4 RID: 25540
-		// (get) Token: 0x0602987C RID: 170108 RVA: 0x009C66C0 File Offset: 0x009C48C0
-		// (set) Token: 0x0602987D RID: 170109 RVA: 0x009C6703 File Offset: 0x009C4903
+		// Token: 0x17003CB9 RID: 15545
+		// (get) Token: 0x06020011 RID: 131089 RVA: 0x0093AEA0 File Offset: 0x009390A0
+		// (set) Token: 0x06020012 RID: 131090 RVA: 0x0093AEE3 File Offset: 0x009390E3
 		public TArray<SDecorationConfig_Effect> UIEffects
 		{
 			get
@@ -319,7 +319,7 @@ namespace AkiClient.Game.Aki.Data.Entity.Struct
 				TArray<SDecorationConfig_Effect> result;
 				if ((result = this._UIEffects) == null)
 				{
-					result = (this._UIEffects = new TArray<SDecorationConfig_Effect>(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_16, base.MemoryOwner ?? this));
+					result = (this._UIEffects = new TArray<SDecorationConfig_Effect>(base.NativePtr + (IntPtr)SDecorationConfig.__PropertyOffset_UIEffects, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -329,101 +329,79 @@ namespace AkiClient.Game.Aki.Data.Entity.Struct
 			}
 		}
 
-		// Token: 0x0602987E RID: 170110 RVA: 0x009C6711 File Offset: 0x009C4911
+		// Token: 0x06020013 RID: 131091 RVA: 0x0093AEF1 File Offset: 0x009390F1
 		public SDecorationConfig()
 		{
 		}
 
-		// Token: 0x0602987F RID: 170111 RVA: 0x009C671C File Offset: 0x009C491C
-		public SDecorationConfig(string Tips, TSoftObjectPtr<USkeletalMesh> SkeletalMesh, bool SetMasterFollow, string SubMeshName, TSoftClassPtr<UAnimInstance> AnimBlueprint, TArray<FName> AttachSocket, TArray<FTransform> AttachTrans, TArray<SDecorationConfig_Effect> Effects, FGameplayTagContainer DisplayTags, FGameplayTagContainer HideTags, FGameplayTagContainer UIDisplayTags, FGameplayTagContainer UIHideTags, TSoftClassPtr<UAnimInstance> UIAnimBlueprint, TMap<int, int> SkinAttachTrans, bool UseStaticMesh, TSoftObjectPtr<UStaticMesh> StaticMesh, TArray<SDecorationConfig_Effect> UIEffects)
-		{
-			this.Tips = Tips;
-			this.SkeletalMesh = SkeletalMesh;
-			this.SetMasterFollow = SetMasterFollow;
-			this.SubMeshName = SubMeshName;
-			this.AnimBlueprint = AnimBlueprint;
-			this.AttachSocket = AttachSocket;
-			this.AttachTrans = AttachTrans;
-			this.Effects = Effects;
-			this.DisplayTags = DisplayTags;
-			this.HideTags = HideTags;
-			this.UIDisplayTags = UIDisplayTags;
-			this.UIHideTags = UIHideTags;
-			this.UIAnimBlueprint = UIAnimBlueprint;
-			this.SkinAttachTrans = SkinAttachTrans;
-			this.UseStaticMesh = UseStaticMesh;
-			this.StaticMesh = StaticMesh;
-			this.UIEffects = UIEffects;
-		}
-
-		// Token: 0x06029880 RID: 170112 RVA: 0x009C67B4 File Offset: 0x009C49B4
+		// Token: 0x06020014 RID: 131092 RVA: 0x0093AEF9 File Offset: 0x009390F9
 		protected override IntPtr GetUStructPtr()
 		{
 			return SDecorationConfig.StaticStruct();
 		}
 
-		// Token: 0x06029881 RID: 170113 RVA: 0x009C67C0 File Offset: 0x009C49C0
+		// Token: 0x06020015 RID: 131093 RVA: 0x0093AF05 File Offset: 0x00939105
 		[NullableContext(2)]
 		public SDecorationConfig(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06029882 RID: 170114 RVA: 0x009C67CA File Offset: 0x009C49CA
+		// Token: 0x06020016 RID: 131094 RVA: 0x0093AF0F File Offset: 0x0093910F
 		public SDecorationConfig(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06029883 RID: 170115 RVA: 0x009C67D5 File Offset: 0x009C49D5
+		// Token: 0x06020017 RID: 131095 RVA: 0x0093AF1A File Offset: 0x0093911A
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SDecorationConfig(Pointer, false, true);
 		}
 
-		// Token: 0x06029884 RID: 170116 RVA: 0x009C67DF File Offset: 0x009C49DF
+		// Token: 0x06020018 RID: 131096 RVA: 0x0093AF24 File Offset: 0x00939124
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SDecorationConfig(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0401548B RID: 87179
+		// Token: 0x0401130A RID: 70410
 		public const string __ObjectPath = "/Game/Aki/Data/Entity/Struct/SDecorationConfig.SDecorationConfig";
 
-		// Token: 0x0401548C RID: 87180
+		// Token: 0x0401130B RID: 70411
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0401548D RID: 87181
-		internal static int __PropertyOffset_0;
+		// Token: 0x0401130C RID: 70412
+		internal static int __PropertyOffset_Tips;
 
-		// Token: 0x0401548E RID: 87182
-		internal static int __PropertyOffset_1;
+		// Token: 0x0401130D RID: 70413
+		internal static int __PropertyOffset_SkeletalMesh;
 
-		// Token: 0x0401548F RID: 87183
-		internal static int __PropertyOffset_2;
+		// Token: 0x0401130E RID: 70414
+		internal static int __PropertyOffset_SetMasterFollow;
 
-		// Token: 0x04015490 RID: 87184
-		internal static int __PropertyOffset_3;
+		// Token: 0x0401130F RID: 70415
+		internal static int __PropertyOffset_SubMeshName;
 
-		// Token: 0x04015491 RID: 87185
-		internal static int __PropertyOffset_4;
+		// Token: 0x04011310 RID: 70416
+		internal static int __PropertyOffset_AnimBlueprint;
 
-		// Token: 0x04015492 RID: 87186
-		internal static int __PropertyOffset_5;
+		// Token: 0x04011311 RID: 70417
+		internal static int __PropertyOffset_AttachSocket;
 
-		// Token: 0x04015493 RID: 87187
+		// Token: 0x04011312 RID: 70418
 		[Nullable(2)]
 		private TArray<FName> _AttachSocket;
 
-		// Token: 0x04015494 RID: 87188
-		internal static int __PropertyOffset_6;
+		// Token: 0x04011313 RID: 70419
+		internal static int __PropertyOffset_AttachTrans;
 
-		// Token: 0x04015495 RID: 87189
+		// Token: 0x04011314 RID: 70420
 		[Nullable(2)]
 		private TArray<FTransform> _AttachTrans;
 
-		// Token: 0x04015496 RID: 87190
-		internal static int __PropertyOffset_7;
+		// Token: 0x04011315 RID: 70421
+		internal static int __PropertyOffset_Effects;
 
-		// Token: 0x04015497 RID: 87191
+		// Token: 0x04011316 RID: 70422
 		[Nullable(new byte[]
 		{
 			2,
@@ -431,54 +409,54 @@ namespace AkiClient.Game.Aki.Data.Entity.Struct
 		})]
 		private TArray<SDecorationConfig_Effect> _Effects;
 
-		// Token: 0x04015498 RID: 87192
-		internal static int __PropertyOffset_8;
+		// Token: 0x04011317 RID: 70423
+		internal static int __PropertyOffset_DisplayTags;
 
-		// Token: 0x04015499 RID: 87193
+		// Token: 0x04011318 RID: 70424
 		[Nullable(2)]
 		private FGameplayTagContainer _DisplayTags;
 
-		// Token: 0x0401549A RID: 87194
-		internal static int __PropertyOffset_9;
+		// Token: 0x04011319 RID: 70425
+		internal static int __PropertyOffset_HideTags;
 
-		// Token: 0x0401549B RID: 87195
+		// Token: 0x0401131A RID: 70426
 		[Nullable(2)]
 		private FGameplayTagContainer _HideTags;
 
-		// Token: 0x0401549C RID: 87196
-		internal static int __PropertyOffset_10;
+		// Token: 0x0401131B RID: 70427
+		internal static int __PropertyOffset_UIDisplayTags;
 
-		// Token: 0x0401549D RID: 87197
+		// Token: 0x0401131C RID: 70428
 		[Nullable(2)]
 		private FGameplayTagContainer _UIDisplayTags;
 
-		// Token: 0x0401549E RID: 87198
-		internal static int __PropertyOffset_11;
+		// Token: 0x0401131D RID: 70429
+		internal static int __PropertyOffset_UIHideTags;
 
-		// Token: 0x0401549F RID: 87199
+		// Token: 0x0401131E RID: 70430
 		[Nullable(2)]
 		private FGameplayTagContainer _UIHideTags;
 
-		// Token: 0x040154A0 RID: 87200
-		internal static int __PropertyOffset_12;
+		// Token: 0x0401131F RID: 70431
+		internal static int __PropertyOffset_UIAnimBlueprint;
 
-		// Token: 0x040154A1 RID: 87201
-		internal static int __PropertyOffset_13;
+		// Token: 0x04011320 RID: 70432
+		internal static int __PropertyOffset_SkinAttachTrans;
 
-		// Token: 0x040154A2 RID: 87202
+		// Token: 0x04011321 RID: 70433
 		[Nullable(2)]
 		private TMap<int, int> _SkinAttachTrans;
 
-		// Token: 0x040154A3 RID: 87203
-		internal static int __PropertyOffset_14;
+		// Token: 0x04011322 RID: 70434
+		internal static int __PropertyOffset_UseStaticMesh;
 
-		// Token: 0x040154A4 RID: 87204
-		internal static int __PropertyOffset_15;
+		// Token: 0x04011323 RID: 70435
+		internal static int __PropertyOffset_StaticMesh;
 
-		// Token: 0x040154A5 RID: 87205
-		internal static int __PropertyOffset_16;
+		// Token: 0x04011324 RID: 70436
+		internal static int __PropertyOffset_UIEffects;
 
-		// Token: 0x040154A6 RID: 87206
+		// Token: 0x04011325 RID: 70437
 		[Nullable(new byte[]
 		{
 			2,

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001EB1 RID: 7857
+// Token: 0x02001373 RID: 4979
 public class HonamiStorySkillDescToggle : UiPanelBase
 {
-	// Token: 0x0600F1B3 RID: 61875 RVA: 0x003A2F20 File Offset: 0x003A1120
+	// Token: 0x0600C5D2 RID: 50642 RVA: 0x003AEA20 File Offset: 0x003ACC20
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -20,13 +20,13 @@ public class HonamiStorySkillDescToggle : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600F1B4 RID: 61876 RVA: 0x003A2F87 File Offset: 0x003A1187
+	// Token: 0x0600C5D3 RID: 50643 RVA: 0x003AEA87 File Offset: 0x003ACC87
 	protected override void OnStart()
 	{
 		this.RefreshState();
 	}
 
-	// Token: 0x0600F1B5 RID: 61877 RVA: 0x003A2F90 File Offset: 0x003A1190
+	// Token: 0x0600C5D4 RID: 50644 RVA: 0x003AEA90 File Offset: 0x003ACC90
 	public void RefreshState()
 	{
 		EToggleState state = HonamiStoryModel.Instance.GetSkillDescMode() ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
@@ -38,7 +38,7 @@ public class HonamiStorySkillDescToggle : UiPanelBase
 		extendToggle.SetToggleState(state, false, false, false);
 	}
 
-	// Token: 0x0600F1B6 RID: 61878 RVA: 0x003A2FC4 File Offset: 0x003A11C4
+	// Token: 0x0600C5D5 RID: 50645 RVA: 0x003AEAC4 File Offset: 0x003ACCC4
 	private void OnClickedToggle(EToggleState toggleState)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -46,12 +46,12 @@ public class HonamiStorySkillDescToggle : UiPanelBase
 		HonamiStoryModel.Instance.SetSkillDescMode(skillDescMode);
 	}
 
-	// Token: 0x0200848F RID: 33935
+	// Token: 0x02007614 RID: 30228
 	private enum EToggle
 	{
-		// Token: 0x0402B269 RID: 176745
+		// Token: 0x0402658D RID: 157069
 		Tog,
-		// Token: 0x0402B26A RID: 176746
+		// Token: 0x0402658E RID: 157070
 		Txt
 	}
 }

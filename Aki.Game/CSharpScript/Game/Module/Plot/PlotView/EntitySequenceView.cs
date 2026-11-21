@@ -16,12 +16,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.PlotView
 {
-	// Token: 0x02005043 RID: 20547
+	// Token: 0x02004012 RID: 16402
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class EntitySequenceView : UiPanelBase
 	{
-		// Token: 0x0603495A RID: 215386 RVA: 0x00C6B0E8 File Offset: 0x00C692E8
+		// Token: 0x06029836 RID: 170038 RVA: 0x00BB8188 File Offset: 0x00BB6388
 		protected override UniTask OnCreateAsync()
 		{
 			EntitySequenceView.<OnCreateAsync>d__12 <OnCreateAsync>d__;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return <OnCreateAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603495B RID: 215387 RVA: 0x00C6B12C File Offset: 0x00C6932C
+		// Token: 0x06029837 RID: 170039 RVA: 0x00BB81CC File Offset: 0x00BB63CC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			EntitySequenceView.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603495C RID: 215388 RVA: 0x00C6B16F File Offset: 0x00C6936F
+		// Token: 0x06029838 RID: 170040 RVA: 0x00BB820F File Offset: 0x00BB640F
 		protected override void OnBeforeShow()
 		{
 			this.SetEntitySequenceInteractState(true);
@@ -53,13 +53,13 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x0603495D RID: 215389 RVA: 0x00C6B18A File Offset: 0x00C6938A
+		// Token: 0x06029839 RID: 170041 RVA: 0x00BB822A File Offset: 0x00BB642A
 		protected override void OnAfterHide()
 		{
 			this.SetEntitySequenceInteractState(false);
 		}
 
-		// Token: 0x0603495E RID: 215390 RVA: 0x00C6B194 File Offset: 0x00C69394
+		// Token: 0x0602983A RID: 170042 RVA: 0x00BB8234 File Offset: 0x00BB6434
 		protected override void OnBeforeDestroy()
 		{
 			SequenceController.Instance.ClearAccelerateCallback();
@@ -80,7 +80,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			EventSystem.Instance.Remove(EEventName.PlotSequenceStarted, new Action(this.Enable));
 		}
 
-		// Token: 0x0603495F RID: 215391 RVA: 0x00C6B244 File Offset: 0x00C69444
+		// Token: 0x0602983B RID: 170043 RVA: 0x00BB82E4 File Offset: 0x00BB64E4
 		public UniTask OpenAsync(UUIItem parentItem)
 		{
 			EntitySequenceView.<OpenAsync>d__17 <OpenAsync>d__;
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return <OpenAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034960 RID: 215392 RVA: 0x00C6B290 File Offset: 0x00C69490
+		// Token: 0x0602983C RID: 170044 RVA: 0x00BB8330 File Offset: 0x00BB6530
 		public UniTask CloseAsync()
 		{
 			EntitySequenceView.<CloseAsync>d__18 <CloseAsync>d__;
@@ -103,13 +103,13 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return <CloseAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06034961 RID: 215393 RVA: 0x00C6B2D3 File Offset: 0x00C694D3
+		// Token: 0x0602983D RID: 170045 RVA: 0x00BB8373 File Offset: 0x00BB6573
 		public void SetParentUiItem(UUIItem parentItem)
 		{
 			base.GetRootItem().SetUIParent(parentItem, false);
 		}
 
-		// Token: 0x06034962 RID: 215394 RVA: 0x00C6B2E4 File Offset: 0x00C694E4
+		// Token: 0x0602983E RID: 170046 RVA: 0x00BB8384 File Offset: 0x00BB6584
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -134,13 +134,13 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x06034963 RID: 215395 RVA: 0x00C6B3B1 File Offset: 0x00C695B1
+		// Token: 0x0602983F RID: 170047 RVA: 0x00BB8451 File Offset: 0x00BB6651
 		private void OnSkipButtonClickFromButton()
 		{
 			this.OnSkipButtonClickCore();
 		}
 
-		// Token: 0x06034964 RID: 215396 RVA: 0x00C6B3B9 File Offset: 0x00C695B9
+		// Token: 0x06029840 RID: 170048 RVA: 0x00BB8459 File Offset: 0x00BB6659
 		private void OnSkipButtonInput(string actionName, InputDistributeDefine.EActionType value, InputIdentification inputIdentification)
 		{
 			if (value == InputDistributeDefine.EActionType.Release)
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.OnSkipButtonClickCore();
 		}
 
-		// Token: 0x06034965 RID: 215397 RVA: 0x00C6B3C8 File Offset: 0x00C695C8
+		// Token: 0x06029841 RID: 170049 RVA: 0x00BB8468 File Offset: 0x00BB6668
 		private void OnSkipButtonClickCore()
 		{
 			this.IsAccelerate = true;
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			AudioSystem.Instance.SetRtpcValue("global_seq_rate", PlotModel.Instance.PlotGlobalConfig.EntitySequenceAccelerateRate, null);
 		}
 
-		// Token: 0x06034966 RID: 215398 RVA: 0x00C6B4BC File Offset: 0x00C696BC
+		// Token: 0x06029842 RID: 170050 RVA: 0x00BB855C File Offset: 0x00BB675C
 		private void StopAccelerate()
 		{
 			if (!this.IsAccelerate)
@@ -199,7 +199,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			AudioSystem.Instance.SetRtpcValue("global_seq_rate", 1f, null);
 		}
 
-		// Token: 0x06034967 RID: 215399 RVA: 0x00C6B5BC File Offset: 0x00C697BC
+		// Token: 0x06029843 RID: 170051 RVA: 0x00BB865C File Offset: 0x00BB685C
 		public void Enable()
 		{
 			EntityControlRuntimeOptions entityControlOptions = PlotModel.Instance.PlotConfig.EntityControlOptions;
@@ -215,7 +215,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.HandleActionBinding(true);
 		}
 
-		// Token: 0x06034968 RID: 215400 RVA: 0x00C6B610 File Offset: 0x00C69810
+		// Token: 0x06029844 RID: 170052 RVA: 0x00BB86B0 File Offset: 0x00BB68B0
 		public void Disable()
 		{
 			UUIButtonComponent button = base.GetButton(1);
@@ -226,13 +226,13 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.HandleActionBinding(false);
 		}
 
-		// Token: 0x06034969 RID: 215401 RVA: 0x00C6B644 File Offset: 0x00C69844
+		// Token: 0x06029845 RID: 170053 RVA: 0x00BB86E4 File Offset: 0x00BB68E4
 		private bool OnCheckKey(string actionName, InputDistributeDefine.EActionType actionType)
 		{
 			return !(actionName == "地图") && !(actionName == "功能菜单");
 		}
 
-		// Token: 0x0603496A RID: 215402 RVA: 0x00C6B665 File Offset: 0x00C69865
+		// Token: 0x06029846 RID: 170054 RVA: 0x00BB8705 File Offset: 0x00BB6905
 		public void RefreshActionBinding()
 		{
 			if (this.HasBindActionGamepad || this.HasBindActionOther)
@@ -242,7 +242,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x0603496B RID: 215403 RVA: 0x00C6B688 File Offset: 0x00C69888
+		// Token: 0x06029847 RID: 170055 RVA: 0x00BB8728 File Offset: 0x00BB6928
 		private void SetEntitySequenceInteractState(bool active)
 		{
 			if (active && !PlotModel.Instance.EntitySequenceInteractTag)
@@ -267,7 +267,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x0603496C RID: 215404 RVA: 0x00C6B72C File Offset: 0x00C6992C
+		// Token: 0x06029848 RID: 170056 RVA: 0x00BB87CC File Offset: 0x00BB69CC
 		private void HandleActionBinding(bool bBind)
 		{
 			if (!bBind)
@@ -328,51 +328,51 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x0401C061 RID: 114785
+		// Token: 0x04016A84 RID: 92804
 		private const string ENTITY_SEQUENCE_ACCELERATE_RATE_RTPC = "global_seq_rate";
 
-		// Token: 0x0401C062 RID: 114786
+		// Token: 0x04016A85 RID: 92805
 		private const string BLOCK_KEY_REASON = "实机剧情禁用快捷键";
 
-		// Token: 0x0401C063 RID: 114787
+		// Token: 0x04016A86 RID: 92806
 		[Nullable(2)]
 		private EffectScreenPlayData_C ScreenEffectCache;
 
-		// Token: 0x0401C064 RID: 114788
+		// Token: 0x04016A87 RID: 92807
 		[Nullable(2)]
 		private EffectModelPostProcess PostProcessCache;
 
-		// Token: 0x0401C065 RID: 114789
+		// Token: 0x04016A88 RID: 92808
 		private bool HasBindActionGamepad;
 
-		// Token: 0x0401C066 RID: 114790
+		// Token: 0x04016A89 RID: 92809
 		private bool HasBindActionOther;
 
-		// Token: 0x0401C067 RID: 114791
+		// Token: 0x04016A8A RID: 92810
 		[Nullable(2)]
 		private InputMultiKeyItem KeyItem;
 
-		// Token: 0x0401C068 RID: 114792
+		// Token: 0x04016A8B RID: 92811
 		private int? ScreenEffectHandle;
 
-		// Token: 0x0401C069 RID: 114793
+		// Token: 0x04016A8C RID: 92812
 		private int? PostProcessHandle;
 
-		// Token: 0x0401C06A RID: 114794
+		// Token: 0x04016A8D RID: 92813
 		private int? AudioHandle;
 
-		// Token: 0x0401C06B RID: 114795
+		// Token: 0x04016A8E RID: 92814
 		private bool IsAccelerate;
 
-		// Token: 0x0200B195 RID: 45461
+		// Token: 0x02009BCF RID: 39887
 		[NullableContext(0)]
 		private enum EEntitySequenceView
 		{
-			// Token: 0x04035DC1 RID: 220609
+			// Token: 0x04030816 RID: 198678
 			HotKey,
-			// Token: 0x04035DC2 RID: 220610
+			// Token: 0x04030817 RID: 198679
 			SkipButton,
-			// Token: 0x04035DC3 RID: 220611
+			// Token: 0x04030818 RID: 198680
 			HotKeyCombine
 		}
 	}

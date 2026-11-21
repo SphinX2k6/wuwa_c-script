@@ -8,14 +8,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.GamePlay.Portal
 {
-	// Token: 0x02003E58 RID: 15960
+	// Token: 0x0200314B RID: 12619
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/GamePlay/Portal/BP_KuroPortalCapture.BP_KuroPortalCapture_C")]
 	[UnrealStructLayout(1128, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1128)]
 	public class BP_KuroPortalCapture_C : AActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060281E1 RID: 164321 RVA: 0x009A46CC File Offset: 0x009A28CC
+		// Token: 0x0601F080 RID: 127104 RVA: 0x00924912 File Offset: 0x00922B12
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_KuroPortalCapture_C._ClassPtr == IntPtr.Zero)
@@ -25,125 +25,125 @@ namespace AkiClient.Game.Aki.GamePlay.Portal
 			return BP_KuroPortalCapture_C._ClassPtr;
 		}
 
-		// Token: 0x060281E2 RID: 164322 RVA: 0x009A46F0 File Offset: 0x009A28F0
+		// Token: 0x0601F081 RID: 127105 RVA: 0x00924938 File Offset: 0x00922B38
 		public BP_KuroPortalCapture_C() : this(BuiltinUtils.AllocNativeUObject(BP_KuroPortalCapture_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060281E3 RID: 164323 RVA: 0x009A4718 File Offset: 0x009A2918
+		// Token: 0x0601F082 RID: 127106 RVA: 0x00924960 File Offset: 0x00922B60
 		[NullableContext(1)]
 		public BP_KuroPortalCapture_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_KuroPortalCapture_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005BD1 RID: 23505
-		// (get) Token: 0x060281E4 RID: 164324 RVA: 0x009A474B File Offset: 0x009A294B
-		// (set) Token: 0x060281E5 RID: 164325 RVA: 0x009A475F File Offset: 0x009A295F
+		// Token: 0x170036F7 RID: 14071
+		// (get) Token: 0x0601F083 RID: 127107 RVA: 0x00924993 File Offset: 0x00922B93
+		// (set) Token: 0x0601F084 RID: 127108 RVA: 0x009249A7 File Offset: 0x00922BA7
 		public unsafe UArrowComponent Arrow1
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UArrowComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroPortalCapture_C.__PropertyOffset_1);
+				return BuiltinUtils.ObjectPropertyGetter<UArrowComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroPortalCapture_C.__PropertyOffset_Arrow1);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroPortalCapture_C.__PropertyOffset_1, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroPortalCapture_C.__PropertyOffset_Arrow1, value);
 			}
 		}
 
-		// Token: 0x17005BD2 RID: 23506
-		// (get) Token: 0x060281E6 RID: 164326 RVA: 0x009A4774 File Offset: 0x009A2974
-		// (set) Token: 0x060281E7 RID: 164327 RVA: 0x009A4788 File Offset: 0x009A2988
+		// Token: 0x170036F8 RID: 14072
+		// (get) Token: 0x0601F085 RID: 127109 RVA: 0x009249BC File Offset: 0x00922BBC
+		// (set) Token: 0x0601F086 RID: 127110 RVA: 0x009249D0 File Offset: 0x00922BD0
 		public unsafe UArrowComponent Arrow
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UArrowComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroPortalCapture_C.__PropertyOffset_2);
+				return BuiltinUtils.ObjectPropertyGetter<UArrowComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroPortalCapture_C.__PropertyOffset_Arrow);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroPortalCapture_C.__PropertyOffset_2, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroPortalCapture_C.__PropertyOffset_Arrow, value);
 			}
 		}
 
-		// Token: 0x17005BD3 RID: 23507
-		// (get) Token: 0x060281E8 RID: 164328 RVA: 0x009A479D File Offset: 0x009A299D
-		// (set) Token: 0x060281E9 RID: 164329 RVA: 0x009A47B1 File Offset: 0x009A29B1
+		// Token: 0x170036F9 RID: 14073
+		// (get) Token: 0x0601F087 RID: 127111 RVA: 0x009249E5 File Offset: 0x00922BE5
+		// (set) Token: 0x0601F088 RID: 127112 RVA: 0x009249F9 File Offset: 0x00922BF9
 		public unsafe UStaticMeshComponent Plane
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UStaticMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroPortalCapture_C.__PropertyOffset_3);
+				return BuiltinUtils.ObjectPropertyGetter<UStaticMeshComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroPortalCapture_C.__PropertyOffset_Plane);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroPortalCapture_C.__PropertyOffset_3, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroPortalCapture_C.__PropertyOffset_Plane, value);
 			}
 		}
 
-		// Token: 0x17005BD4 RID: 23508
-		// (get) Token: 0x060281EA RID: 164330 RVA: 0x009A47C6 File Offset: 0x009A29C6
-		// (set) Token: 0x060281EB RID: 164331 RVA: 0x009A47DA File Offset: 0x009A29DA
+		// Token: 0x170036FA RID: 14074
+		// (get) Token: 0x0601F089 RID: 127113 RVA: 0x00924A0E File Offset: 0x00922C0E
+		// (set) Token: 0x0601F08A RID: 127114 RVA: 0x00924A22 File Offset: 0x00922C22
 		public unsafe USceneComponent Scene
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroPortalCapture_C.__PropertyOffset_4);
+				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroPortalCapture_C.__PropertyOffset_Scene);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroPortalCapture_C.__PropertyOffset_4, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroPortalCapture_C.__PropertyOffset_Scene, value);
 			}
 		}
 
-		// Token: 0x17005BD5 RID: 23509
-		// (get) Token: 0x060281EC RID: 164332 RVA: 0x009A47EF File Offset: 0x009A29EF
-		// (set) Token: 0x060281ED RID: 164333 RVA: 0x009A4803 File Offset: 0x009A2A03
+		// Token: 0x170036FB RID: 14075
+		// (get) Token: 0x0601F08B RID: 127115 RVA: 0x00924A37 File Offset: 0x00922C37
+		// (set) Token: 0x0601F08C RID: 127116 RVA: 0x00924A4B File Offset: 0x00922C4B
 		public unsafe AActor Target
 		{
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<AActor>(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroPortalCapture_C.__PropertyOffset_5);
+				return BuiltinUtils.ObjectPropertyGetter<AActor>(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroPortalCapture_C.__PropertyOffset_Target);
 			}
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroPortalCapture_C.__PropertyOffset_5, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroPortalCapture_C.__PropertyOffset_Target, value);
 			}
 		}
 
-		// Token: 0x17005BD6 RID: 23510
-		// (get) Token: 0x060281EE RID: 164334 RVA: 0x009A4818 File Offset: 0x009A2A18
-		// (set) Token: 0x060281EF RID: 164335 RVA: 0x009A4828 File Offset: 0x009A2A28
+		// Token: 0x170036FC RID: 14076
+		// (get) Token: 0x0601F08D RID: 127117 RVA: 0x00924A60 File Offset: 0x00922C60
+		// (set) Token: 0x0601F08E RID: 127118 RVA: 0x00924A70 File Offset: 0x00922C70
 		public unsafe float offset
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_KuroPortalCapture_C.__PropertyOffset_6);
+				return *(base.NativePtr + (IntPtr)BP_KuroPortalCapture_C.__PropertyOffset_offset);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_KuroPortalCapture_C.__PropertyOffset_6) = value;
+				*(base.NativePtr + (IntPtr)BP_KuroPortalCapture_C.__PropertyOffset_offset) = value;
 			}
 		}
 
-		// Token: 0x17005BD7 RID: 23511
-		// (get) Token: 0x060281F0 RID: 164336 RVA: 0x009A4839 File Offset: 0x009A2A39
-		// (set) Token: 0x060281F1 RID: 164337 RVA: 0x009A4849 File Offset: 0x009A2A49
+		// Token: 0x170036FD RID: 14077
+		// (get) Token: 0x0601F08F RID: 127119 RVA: 0x00924A81 File Offset: 0x00922C81
+		// (set) Token: 0x0601F090 RID: 127120 RVA: 0x00924A91 File Offset: 0x00922C91
 		public unsafe bool EnableCamera
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_KuroPortalCapture_C.__PropertyOffset_7) != 0;
+				return *(base.NativePtr + (IntPtr)BP_KuroPortalCapture_C.__PropertyOffset_EnableCamera) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_KuroPortalCapture_C.__PropertyOffset_7) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_KuroPortalCapture_C.__PropertyOffset_EnableCamera) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17005BD8 RID: 23512
-		// (get) Token: 0x060281F2 RID: 164338 RVA: 0x009A485C File Offset: 0x009A2A5C
-		// (set) Token: 0x060281F3 RID: 164339 RVA: 0x009A4895 File Offset: 0x009A2A95
+		// Token: 0x170036FE RID: 14078
+		// (get) Token: 0x0601F091 RID: 127121 RVA: 0x00924AA4 File Offset: 0x00922CA4
+		// (set) Token: 0x0601F092 RID: 127122 RVA: 0x00924ADD File Offset: 0x00922CDD
 		[Nullable(1)]
 		public RoleTeleport RoleTeleport
 		{
@@ -154,50 +154,49 @@ namespace AkiClient.Game.Aki.GamePlay.Portal
 				RoleTeleport result;
 				if ((result = this._RoleTeleport) == null)
 				{
-					result = (this._RoleTeleport = new RoleTeleport(base.NativePtr + (IntPtr)BP_KuroPortalCapture_C.__PropertyOffset_8, this));
+					result = (this._RoleTeleport = new RoleTeleport(base.NativePtr + (IntPtr)BP_KuroPortalCapture_C.__PropertyOffset_RoleTeleport, this));
 				}
 				return result;
 			}
 			[NullableContext(1)]
 			set
 			{
-				FMulticastScriptDelegate.NativeCopy(base.NativePtr + (IntPtr)BP_KuroPortalCapture_C.__PropertyOffset_8, (value != null) ? value.NativePtr : ((IntPtr)0));
+				FMulticastScriptDelegate.NativeCopy(base.NativePtr + (IntPtr)BP_KuroPortalCapture_C.__PropertyOffset_RoleTeleport, (value != null) ? value.NativePtr : ((IntPtr)0));
 			}
 		}
 
-		// Token: 0x17005BD9 RID: 23513
-		// (get) Token: 0x060281F4 RID: 164340 RVA: 0x009A48B6 File Offset: 0x009A2AB6
-		// (set) Token: 0x060281F5 RID: 164341 RVA: 0x009A48C6 File Offset: 0x009A2AC6
+		// Token: 0x170036FF RID: 14079
+		// (get) Token: 0x0601F093 RID: 127123 RVA: 0x00924AFE File Offset: 0x00922CFE
+		// (set) Token: 0x0601F094 RID: 127124 RVA: 0x00924B0E File Offset: 0x00922D0E
 		public unsafe int PbdataId
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_KuroPortalCapture_C.__PropertyOffset_9);
+				return *(base.NativePtr + (IntPtr)BP_KuroPortalCapture_C.__PropertyOffset_PbdataId);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_KuroPortalCapture_C.__PropertyOffset_9) = value;
+				*(base.NativePtr + (IntPtr)BP_KuroPortalCapture_C.__PropertyOffset_PbdataId) = value;
 			}
 		}
 
-		// Token: 0x17005BDA RID: 23514
-		// (get) Token: 0x060281F6 RID: 164342 RVA: 0x009A48D7 File Offset: 0x009A2AD7
-		// (set) Token: 0x060281F7 RID: 164343 RVA: 0x009A48E7 File Offset: 0x009A2AE7
+		// Token: 0x17003700 RID: 14080
+		// (get) Token: 0x0601F095 RID: 127125 RVA: 0x00924B1F File Offset: 0x00922D1F
+		// (set) Token: 0x0601F096 RID: 127126 RVA: 0x00924B2F File Offset: 0x00922D2F
 		public unsafe float Hight
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_KuroPortalCapture_C.__PropertyOffset_10);
+				return *(base.NativePtr + (IntPtr)BP_KuroPortalCapture_C.__PropertyOffset_Hight);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_KuroPortalCapture_C.__PropertyOffset_10) = value;
+				*(base.NativePtr + (IntPtr)BP_KuroPortalCapture_C.__PropertyOffset_Hight) = value;
 			}
 		}
 
-		// Token: 0x060281F8 RID: 164344 RVA: 0x009A48F8 File Offset: 0x009A2AF8
+		// Token: 0x0601F097 RID: 127127 RVA: 0x00924B40 File Offset: 0x00922D40
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void ToggleDebug(bool Enable)
 		{
 			BP_KuroPortalCapture_C.__ToggleDebug_FunctionParams* ptr = stackalloc BP_KuroPortalCapture_C.__ToggleDebug_FunctionParams[(UIntPtr)16] + 15L / (long)sizeof(BP_KuroPortalCapture_C.__ToggleDebug_FunctionParams) & -16L;
@@ -206,9 +205,8 @@ namespace AkiClient.Game.Aki.GamePlay.Portal
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KuroPortalCapture_C.__ToggleDebug_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060281F9 RID: 164345 RVA: 0x009A4940 File Offset: 0x009A2B40
+		// Token: 0x0601F098 RID: 127128 RVA: 0x00924B88 File Offset: 0x00922D88
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void GetPair(ref BP_KuroPortalCapture_C Target)
 		{
 			BP_KuroPortalCapture_C.__GetPair_FunctionParams* ptr = stackalloc BP_KuroPortalCapture_C.__GetPair_FunctionParams[(UIntPtr)39] + 15L / (long)sizeof(BP_KuroPortalCapture_C.__GetPair_FunctionParams) & -16L;
@@ -220,9 +218,8 @@ namespace AkiClient.Game.Aki.GamePlay.Portal
 			Target = BuiltinUtils.GetOrCreateUObjectByNativePointer<BP_KuroPortalCapture_C>(ptr->Target);
 		}
 
-		// Token: 0x060281FA RID: 164346 RVA: 0x009A49A4 File Offset: 0x009A2BA4
+		// Token: 0x0601F099 RID: 127129 RVA: 0x00924BEC File Offset: 0x00922DEC
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void GetPortalTrans(ref FTransformDouble NewParam)
 		{
 			BP_KuroPortalCapture_C.__GetPortalTrans_FunctionParams* ptr = stackalloc BP_KuroPortalCapture_C.__GetPortalTrans_FunctionParams[(UIntPtr)143] + 15L / (long)sizeof(BP_KuroPortalCapture_C.__GetPortalTrans_FunctionParams) & -16L;
@@ -232,9 +229,8 @@ namespace AkiClient.Game.Aki.GamePlay.Portal
 			NewParam = ptr->NewParam;
 		}
 
-		// Token: 0x060281FB RID: 164347 RVA: 0x009A4A00 File Offset: 0x009A2C00
+		// Token: 0x0601F09A RID: 127130 RVA: 0x00924C48 File Offset: 0x00922E48
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void SetPbDataId(int PbdataId)
 		{
 			BP_KuroPortalCapture_C.__SetPbDataId_FunctionParams* ptr = stackalloc BP_KuroPortalCapture_C.__SetPbDataId_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_KuroPortalCapture_C.__SetPbDataId_FunctionParams) & -16L;
@@ -243,9 +239,8 @@ namespace AkiClient.Game.Aki.GamePlay.Portal
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KuroPortalCapture_C.__SetPbDataId_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060281FC RID: 164348 RVA: 0x009A4A48 File Offset: 0x009A2C48
+		// Token: 0x0601F09B RID: 127131 RVA: 0x00924C90 File Offset: 0x00922E90
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void SetPair(AActor Pair)
 		{
 			BP_KuroPortalCapture_C.__SetPair_FunctionParams* ptr = stackalloc BP_KuroPortalCapture_C.__SetPair_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(BP_KuroPortalCapture_C.__SetPair_FunctionParams) & -16L;
@@ -254,9 +249,8 @@ namespace AkiClient.Game.Aki.GamePlay.Portal
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KuroPortalCapture_C.__SetPair_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060281FD RID: 164349 RVA: 0x009A4AA0 File Offset: 0x009A2CA0
+		// Token: 0x0601F09C RID: 127132 RVA: 0x00924CE8 File Offset: 0x00922EE8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void Teleport(FTransformDouble InTrans, AActor InActor, bool IsRole)
 		{
 			BP_KuroPortalCapture_C.__Teleport_FunctionParams* ptr = stackalloc BP_KuroPortalCapture_C.__Teleport_FunctionParams[(UIntPtr)3135] + 15L / (long)sizeof(BP_KuroPortalCapture_C.__Teleport_FunctionParams) & -16L;
@@ -267,25 +261,22 @@ namespace AkiClient.Game.Aki.GamePlay.Portal
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KuroPortalCapture_C.__Teleport_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x060281FE RID: 164350 RVA: 0x009A4B06 File Offset: 0x009A2D06
+		// Token: 0x0601F09D RID: 127133 RVA: 0x00924D4E File Offset: 0x00922F4E
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void ReceiveBeginPlay()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KuroPortalCapture_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x060281FF RID: 164351 RVA: 0x009A4B1A File Offset: 0x009A2D1A
+		// Token: 0x0601F09E RID: 127134 RVA: 0x00924D62 File Offset: 0x00922F62
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void ReceiveBeginPlay_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_KuroPortalCapture_C.__ReceiveBeginPlay_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_KuroPortalCapture_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06028200 RID: 164352 RVA: 0x009A4B30 File Offset: 0x009A2D30
+		// Token: 0x0601F09F RID: 127135 RVA: 0x00924D78 File Offset: 0x00922F78
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void ReceiveTick(float DeltaSeconds)
 		{
 			BP_KuroPortalCapture_C.__ReceiveTick_FunctionParams* ptr = stackalloc BP_KuroPortalCapture_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_KuroPortalCapture_C.__ReceiveTick_FunctionParams) & -16L;
@@ -294,173 +285,172 @@ namespace AkiClient.Game.Aki.GamePlay.Portal
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KuroPortalCapture_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06028201 RID: 164353 RVA: 0x009A4B78 File Offset: 0x009A2D78
+		// Token: 0x0601F0A0 RID: 127136 RVA: 0x00924DC0 File Offset: 0x00922FC0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void ReceiveTick_Implementation(float DeltaSeconds)
 		{
 			BP_KuroPortalCapture_C.__ReceiveTick_FunctionParams* ptr = stackalloc BP_KuroPortalCapture_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_KuroPortalCapture_C.__ReceiveTick_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(BP_KuroPortalCapture_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->DeltaSeconds = DeltaSeconds;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_KuroPortalCapture_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_KuroPortalCapture_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06028202 RID: 164354 RVA: 0x009A4BBF File Offset: 0x009A2DBF
+		// Token: 0x0601F0A1 RID: 127137 RVA: 0x00924E06 File Offset: 0x00923006
 		protected BP_KuroPortalCapture_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040146B1 RID: 83633
+		// Token: 0x0401093D RID: 67901
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/GamePlay/Portal/BP_KuroPortalCapture.BP_KuroPortalCapture_C";
 
-		// Token: 0x040146B2 RID: 83634
+		// Token: 0x0401093E RID: 67902
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040146B3 RID: 83635
+		// Token: 0x0401093F RID: 67903
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040146B4 RID: 83636
+		// Token: 0x04010940 RID: 67904
 		public static IntPtr __RoleTeleport__DelegateSignature_NativeFunctionPtr;
 
-		// Token: 0x040146B5 RID: 83637
-		internal static int __PropertyOffset_1;
+		// Token: 0x04010941 RID: 67905
+		internal static int __PropertyOffset_Arrow1;
 
-		// Token: 0x040146B6 RID: 83638
-		internal static int __PropertyOffset_2;
+		// Token: 0x04010942 RID: 67906
+		internal static int __PropertyOffset_Arrow;
 
-		// Token: 0x040146B7 RID: 83639
-		internal static int __PropertyOffset_3;
+		// Token: 0x04010943 RID: 67907
+		internal static int __PropertyOffset_Plane;
 
-		// Token: 0x040146B8 RID: 83640
-		internal static int __PropertyOffset_4;
+		// Token: 0x04010944 RID: 67908
+		internal static int __PropertyOffset_Scene;
 
-		// Token: 0x040146B9 RID: 83641
-		internal static int __PropertyOffset_5;
+		// Token: 0x04010945 RID: 67909
+		internal static int __PropertyOffset_Target;
 
-		// Token: 0x040146BA RID: 83642
-		internal static int __PropertyOffset_6;
+		// Token: 0x04010946 RID: 67910
+		internal static int __PropertyOffset_offset;
 
-		// Token: 0x040146BB RID: 83643
-		internal static int __PropertyOffset_7;
+		// Token: 0x04010947 RID: 67911
+		internal static int __PropertyOffset_EnableCamera;
 
-		// Token: 0x040146BC RID: 83644
-		internal static int __PropertyOffset_8;
+		// Token: 0x04010948 RID: 67912
+		internal static int __PropertyOffset_RoleTeleport;
 
-		// Token: 0x040146BD RID: 83645
+		// Token: 0x04010949 RID: 67913
 		private RoleTeleport _RoleTeleport;
 
-		// Token: 0x040146BE RID: 83646
-		internal static int __PropertyOffset_9;
+		// Token: 0x0401094A RID: 67914
+		internal static int __PropertyOffset_PbdataId;
 
-		// Token: 0x040146BF RID: 83647
-		internal static int __PropertyOffset_10;
+		// Token: 0x0401094B RID: 67915
+		internal static int __PropertyOffset_Hight;
 
-		// Token: 0x040146C0 RID: 83648
+		// Token: 0x0401094C RID: 67916
 		private static IntPtr __ToggleDebug_NativeFunctionPtr;
 
-		// Token: 0x040146C1 RID: 83649
+		// Token: 0x0401094D RID: 67917
 		private static IntPtr __GetPair_NativeFunctionPtr;
 
-		// Token: 0x040146C2 RID: 83650
+		// Token: 0x0401094E RID: 67918
 		private static IntPtr __GetPortalTrans_NativeFunctionPtr;
 
-		// Token: 0x040146C3 RID: 83651
+		// Token: 0x0401094F RID: 67919
 		private static IntPtr __SetPbDataId_NativeFunctionPtr;
 
-		// Token: 0x040146C4 RID: 83652
+		// Token: 0x04010950 RID: 67920
 		private static IntPtr __SetPair_NativeFunctionPtr;
 
-		// Token: 0x040146C5 RID: 83653
+		// Token: 0x04010951 RID: 67921
 		private static IntPtr __Teleport_NativeFunctionPtr;
 
-		// Token: 0x040146C6 RID: 83654
+		// Token: 0x04010952 RID: 67922
 		private static IntPtr __ReceiveBeginPlay_NativeFunctionPtr;
 
-		// Token: 0x040146C7 RID: 83655
+		// Token: 0x04010953 RID: 67923
 		private static IntPtr __ReceiveTick_NativeFunctionPtr;
 
-		// Token: 0x0200A2C3 RID: 41667
+		// Token: 0x02008F16 RID: 36630
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
 		protected ref struct __ToggleDebug_FunctionParams
 		{
-			// Token: 0x04032002 RID: 204802
+			// Token: 0x0402CC45 RID: 183365
 			[FieldOffset(0)]
 			public bool Enable;
 		}
 
-		// Token: 0x0200A2C4 RID: 41668
+		// Token: 0x02008F17 RID: 36631
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __GetPair_FunctionParams
 		{
-			// Token: 0x04032003 RID: 204803
+			// Token: 0x0402CC46 RID: 183366
 			[FieldOffset(0)]
 			public IntPtr Target;
 		}
 
-		// Token: 0x0200A2C5 RID: 41669
+		// Token: 0x02008F18 RID: 36632
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 128)]
 		protected ref struct __GetPortalTrans_FunctionParams
 		{
-			// Token: 0x04032004 RID: 204804
+			// Token: 0x0402CC47 RID: 183367
 			[FieldOffset(0)]
 			public FTransformDouble NewParam;
 		}
 
-		// Token: 0x0200A2C6 RID: 41670
+		// Token: 0x02008F19 RID: 36633
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected ref struct __SetPbDataId_FunctionParams
 		{
-			// Token: 0x04032005 RID: 204805
+			// Token: 0x0402CC48 RID: 183368
 			[FieldOffset(0)]
 			public int PbdataId;
 		}
 
-		// Token: 0x0200A2C7 RID: 41671
+		// Token: 0x02008F1A RID: 36634
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __SetPair_FunctionParams
 		{
-			// Token: 0x04032006 RID: 204806
+			// Token: 0x0402CC49 RID: 183369
 			[FieldOffset(0)]
 			public IntPtr Pair;
 		}
 
-		// Token: 0x0200A2C8 RID: 41672
+		// Token: 0x02008F1B RID: 36635
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 3120)]
 		protected ref struct __Teleport_FunctionParams
 		{
-			// Token: 0x04032007 RID: 204807
+			// Token: 0x0402CC4A RID: 183370
 			[FieldOffset(0)]
 			public FTransformDouble InTrans;
 
-			// Token: 0x04032008 RID: 204808
+			// Token: 0x0402CC4B RID: 183371
 			[FieldOffset(64)]
 			public IntPtr InActor;
 
-			// Token: 0x04032009 RID: 204809
+			// Token: 0x0402CC4C RID: 183372
 			[FieldOffset(72)]
 			public bool IsRole;
 		}
 
-		// Token: 0x0200A2C9 RID: 41673
+		// Token: 0x02008F1C RID: 36636
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected new ref struct __ReceiveTick_FunctionParams
 		{
-			// Token: 0x0403200A RID: 204810
+			// Token: 0x0402CC4D RID: 183373
 			[FieldOffset(0)]
 			public float DeltaSeconds;
 		}

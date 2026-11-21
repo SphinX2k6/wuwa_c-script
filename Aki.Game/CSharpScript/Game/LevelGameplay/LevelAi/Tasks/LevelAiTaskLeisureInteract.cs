@@ -4,10 +4,10 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 {
-	// Token: 0x02006DBC RID: 28092
+	// Token: 0x02005F3B RID: 24379
 	public class LevelAiTaskLeisureInteract : LevelAiTask
 	{
-		// Token: 0x060448B5 RID: 280757 RVA: 0x010E7410 File Offset: 0x010E5610
+		// Token: 0x0603AA19 RID: 240153 RVA: 0x01091638 File Offset: 0x0108F838
 		[NullableContext(1)]
 		public unsafe override void MakePlanExpansions(PlanningContext context, LevelAiWorldState worldState)
 		{
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 			this.CreatePlanSteps(context, worldState.MakeCopy());
 		}
 
-		// Token: 0x060448B6 RID: 280758 RVA: 0x010E7498 File Offset: 0x010E5698
+		// Token: 0x0603AA1A RID: 240154 RVA: 0x010916C0 File Offset: 0x0108F8C0
 		public void Init()
 		{
 			if (this.IsInit)
@@ -66,13 +66,13 @@ namespace CSharpScript.Game.LevelGamePlay.LevelAi.Tasks
 			this.IsInit = true;
 		}
 
-		// Token: 0x04023A50 RID: 146000
+		// Token: 0x0401ECF2 RID: 126194
 		public bool CanRecordPlanProgress;
 
-		// Token: 0x04023A51 RID: 146001
+		// Token: 0x0401ECF3 RID: 126195
 		public int Cost;
 
-		// Token: 0x04023A52 RID: 146002
+		// Token: 0x0401ECF4 RID: 126196
 		private bool IsInit;
 	}
 }

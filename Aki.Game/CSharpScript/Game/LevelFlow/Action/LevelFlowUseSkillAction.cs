@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006FA5 RID: 28581
+	// Token: 0x02006126 RID: 24870
 	public class LevelFlowUseSkillAction : LevelFlowActionBase
 	{
-		// Token: 0x0604578B RID: 284555 RVA: 0x0113BBAF File Offset: 0x01139DAF
+		// Token: 0x0603B939 RID: 244025 RVA: 0x010E59B3 File Offset: 0x010E3BB3
 		[NullableContext(1)]
 		public LevelFlowUseSkillAction Init(int entityId, int skillId)
 		{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			return this;
 		}
 
-		// Token: 0x0604578C RID: 284556 RVA: 0x0113BBC0 File Offset: 0x01139DC0
+		// Token: 0x0603B93A RID: 244026 RVA: 0x010E59C4 File Offset: 0x010E3BC4
 		protected override void OnExecute()
 		{
 			BaseSkillComponent component = EntitySystem.Instance.GetComponent<BaseSkillComponent>(this.EntityId);
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			base.FinishExecute(true);
 		}
 
-		// Token: 0x0604578D RID: 284557 RVA: 0x0113BC60 File Offset: 0x01139E60
+		// Token: 0x0603B93B RID: 244027 RVA: 0x010E5A64 File Offset: 0x010E3C64
 		protected unsafe override void LogExecuteInfo()
 		{
 			Log instance = Log.Instance;
@@ -54,10 +54,10 @@ namespace CSharpScript.Game.LevelFlow.Action
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 4));
 		}
 
-		// Token: 0x040243FE RID: 148478
+		// Token: 0x0401F6B3 RID: 128691
 		private int EntityId;
 
-		// Token: 0x040243FF RID: 148479
+		// Token: 0x0401F6B4 RID: 128692
 		private int SkillId;
 	}
 }

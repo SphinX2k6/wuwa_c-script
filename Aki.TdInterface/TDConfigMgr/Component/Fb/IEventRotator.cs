@@ -1,17 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action.Fb;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000A61 RID: 2657
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000B2A RID: 2858
 	public class IEventRotator
 	{
-		// Token: 0x06003D31 RID: 15665 RVA: 0x0009D3D5 File Offset: 0x0009B5D5
+		// Token: 0x06004151 RID: 16721 RVA: 0x000A684D File Offset: 0x000A4A4D
 		public static IEventRotator Create(IEventRotator? instance)
 		{
 			if (instance == null)
@@ -24,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17000E2C RID: 3628
-		// (get) Token: 0x06003D32 RID: 15666 RVA: 0x0009D3F4 File Offset: 0x0009B5F4
+		// Token: 0x17000EF8 RID: 3832
+		// (get) Token: 0x06004152 RID: 16722 RVA: 0x000A686C File Offset: 0x000A4A6C
 		public virtual List<ActionInfo> StartActions
 		{
 			get
@@ -45,8 +42,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17000E2D RID: 3629
-		// (get) Token: 0x06003D33 RID: 15667 RVA: 0x0009D460 File Offset: 0x0009B660
+		// Token: 0x17000EF9 RID: 3833
+		// (get) Token: 0x06004153 RID: 16723 RVA: 0x000A68D8 File Offset: 0x000A4AD8
 		public virtual List<ActionInfo> EndActions
 		{
 			get
@@ -66,19 +63,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002214 RID: 8724
+		// Token: 0x0400242B RID: 9259
 		private IEventRotator Instance;
 
-		// Token: 0x04002215 RID: 8725
+		// Token: 0x0400242C RID: 9260
 		private List<ActionInfo> _StartActionsCache;
 
-		// Token: 0x04002216 RID: 8726
+		// Token: 0x0400242D RID: 9261
 		private bool _StartActionsInited;
 
-		// Token: 0x04002217 RID: 8727
+		// Token: 0x0400242E RID: 9262
 		private List<ActionInfo> _EndActionsCache;
 
-		// Token: 0x04002218 RID: 8728
+		// Token: 0x0400242F RID: 9263
 		private bool _EndActionsInited;
 	}
 }

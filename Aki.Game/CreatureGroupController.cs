@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x020034DA RID: 13530
+// Token: 0x02002A4E RID: 10830
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class CreatureGroupController : ControllerBase
 {
-	// Token: 0x0601D9C2 RID: 121282 RVA: 0x00847EAD File Offset: 0x008460AD
+	// Token: 0x0601B6CC RID: 112332 RVA: 0x008701C2 File Offset: 0x0086E3C2
 	protected override bool OnClear()
 	{
 		this.BindEntityGroups.Clear();
@@ -18,7 +17,7 @@ public class CreatureGroupController : ControllerBase
 		return base.OnClear();
 	}
 
-	// Token: 0x0601D9C3 RID: 121283 RVA: 0x00847ECC File Offset: 0x008460CC
+	// Token: 0x0601B6CD RID: 112333 RVA: 0x008701E0 File Offset: 0x0086E3E0
 	public unsafe void AddBindEntity(long creatureDataIdA, long creatureDataIdB)
 	{
 		this.BindEntityGroups.Union(creatureDataIdA, creatureDataIdB);
@@ -32,20 +31,20 @@ public class CreatureGroupController : ControllerBase
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 	}
 
-	// Token: 0x0601D9C4 RID: 121284 RVA: 0x00847F43 File Offset: 0x00846143
+	// Token: 0x0601B6CE RID: 112334 RVA: 0x00870257 File Offset: 0x0086E457
 	public bool HasBindGroup(long creatureDataId)
 	{
 		return this.BindEntityGroups.Has(creatureDataId);
 	}
 
-	// Token: 0x0601D9C5 RID: 121285 RVA: 0x00847F51 File Offset: 0x00846151
+	// Token: 0x0601B6CF RID: 112335 RVA: 0x00870265 File Offset: 0x0086E465
 	[NullableContext(2)]
 	public IReadOnlyList<long> GetBindGroup(long creatureDataId)
 	{
 		return this.BindEntityGroups.GetSet(creatureDataId);
 	}
 
-	// Token: 0x0601D9C6 RID: 121286 RVA: 0x00847F60 File Offset: 0x00846160
+	// Token: 0x0601B6D0 RID: 112336 RVA: 0x00870274 File Offset: 0x0086E474
 	private EExecutedFlag? GetHighestExecutedFlag(long creatureDataId)
 	{
 		EntityHandle entity = CreatureModel.Instance.GetEntity(creatureDataId);
@@ -85,7 +84,7 @@ public class CreatureGroupController : ControllerBase
 		return new EExecutedFlag?(EExecutedFlag.None);
 	}
 
-	// Token: 0x0601D9C7 RID: 121287 RVA: 0x00848010 File Offset: 0x00846210
+	// Token: 0x0601B6D1 RID: 112337 RVA: 0x00870324 File Offset: 0x0086E524
 	private EExecutedFlag GetHighestExecutedFlagInBindGroup(IReadOnlyList<long> bindGroup)
 	{
 		EExecutedFlag eexecutedFlag = EExecutedFlag.Start;
@@ -100,7 +99,7 @@ public class CreatureGroupController : ControllerBase
 		return eexecutedFlag;
 	}
 
-	// Token: 0x0601D9C8 RID: 121288 RVA: 0x00848074 File Offset: 0x00846274
+	// Token: 0x0601B6D2 RID: 112338 RVA: 0x00870388 File Offset: 0x0086E588
 	private EExecutedFlag GetLowestExecutedFlagInBindGroup(IReadOnlyList<long> bindGroup)
 	{
 		EExecutedFlag eexecutedFlag = EExecutedFlag.PostActivate;
@@ -115,20 +114,27 @@ public class CreatureGroupController : ControllerBase
 		return eexecutedFlag;
 	}
 
-	// Token: 0x0601D9C9 RID: 121289 RVA: 0x008480D8 File Offset: 0x008462D8
+	// Token: 0x0601B6D3 RID: 112339 RVA: 0x008703EC File Offset: 0x0086E5EC
 	private void ReleaseRefreshBindGroupLock()
 	{
 		this.RefreshBindGroupLock = false;
 		if (this.RefreshBindGroupCache.Count > 0)
 		{
-			long num = this.RefreshBindGroupCache.Keys.First<long>();
+			long num = 0L;
+			using (Dictionary<long, string>.KeyCollection.Enumerator enumerator = this.RefreshBindGroupCache.Keys.GetEnumerator())
+			{
+				if (enumerator.MoveNext())
+				{
+					num = enumerator.Current;
+				}
+			}
 			string reason = this.RefreshBindGroupCache[num];
 			this.RefreshBindGroupCache.Remove(num);
 			this.RefreshBindGroup(num, reason);
 		}
 	}
 
-	// Token: 0x0601D9CA RID: 121290 RVA: 0x00848130 File Offset: 0x00846330
+	// Token: 0x0601B6D4 RID: 112340 RVA: 0x0087047C File Offset: 0x0086E67C
 	public unsafe void RefreshBindGroup(long creatureDataId, string reason)
 	{
 		IReadOnlyList<long> bindGroup = this.GetBindGroup(creatureDataId);
@@ -209,7 +215,7 @@ public class CreatureGroupController : ControllerBase
 		this.ReleaseRefreshBindGroupLock();
 	}
 
-	// Token: 0x0601D9CB RID: 121291 RVA: 0x00848424 File Offset: 0x00846624
+	// Token: 0x0601B6D5 RID: 112341 RVA: 0x00870770 File Offset: 0x0086E970
 	private unsafe void ForwardEntityLifeCycle(long creatureDataId)
 	{
 		EntityHandle entity = CreatureModel.Instance.GetEntity(creatureDataId);
@@ -256,7 +262,7 @@ public class CreatureGroupController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D9CC RID: 121292 RVA: 0x008485CC File Offset: 0x008467CC
+	// Token: 0x0601B6D6 RID: 112342 RVA: 0x00870918 File Offset: 0x0086EB18
 	public void RemoveFromBindGroup(long creatureDataId, string reason)
 	{
 		IReadOnlyList<long> bindGroup = this.GetBindGroup(creatureDataId);
@@ -286,8 +292,8 @@ public class CreatureGroupController : ControllerBase
 		}
 	}
 
-	// Token: 0x170028E3 RID: 10467
-	// (get) Token: 0x0601D9CD RID: 121293 RVA: 0x00848684 File Offset: 0x00846884
+	// Token: 0x17002C7B RID: 11387
+	// (get) Token: 0x0601B6D7 RID: 112343 RVA: 0x008709D0 File Offset: 0x0086EBD0
 	public static CreatureGroupController Instance
 	{
 		get
@@ -296,7 +302,7 @@ public class CreatureGroupController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601D9CE RID: 121294 RVA: 0x0084868B File Offset: 0x0084688B
+	// Token: 0x0601B6D8 RID: 112344 RVA: 0x008709D7 File Offset: 0x0086EBD7
 	public static CreatureGroupController GetOrCreateInstance()
 	{
 		if (CreatureGroupController._Instance == null)
@@ -306,7 +312,7 @@ public class CreatureGroupController : ControllerBase
 		return CreatureGroupController._Instance;
 	}
 
-	// Token: 0x0601D9CF RID: 121295 RVA: 0x0084869F File Offset: 0x0084689F
+	// Token: 0x0601B6D9 RID: 112345 RVA: 0x008709EB File Offset: 0x0086EBEB
 	public static bool CreateInstance()
 	{
 		if (CreatureGroupController._Instance != null)
@@ -317,36 +323,36 @@ public class CreatureGroupController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x0601D9D0 RID: 121296 RVA: 0x008486B5 File Offset: 0x008468B5
+	// Token: 0x0601B6DA RID: 112346 RVA: 0x00870A01 File Offset: 0x0086EC01
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601D9D1 RID: 121297 RVA: 0x008486B7 File Offset: 0x008468B7
+	// Token: 0x0601B6DB RID: 112347 RVA: 0x00870A03 File Offset: 0x0086EC03
 	public static void ResetStaticDefaultValue()
 	{
 		CreatureGroupController._Instance = null;
 	}
 
-	// Token: 0x0601D9D2 RID: 121298 RVA: 0x008486BF File Offset: 0x008468BF
+	// Token: 0x0601B6DC RID: 112348 RVA: 0x00870A0B File Offset: 0x0086EC0B
 	static CreatureGroupController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CreatureGroupController.CreateStaticDefaultValue), new Action(CreatureGroupController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400E86F RID: 59503
+	// Token: 0x0400ED26 RID: 60710
 	private readonly DisjointSet<long> BindEntityGroups = new DisjointSet<long>();
 
-	// Token: 0x0400E870 RID: 59504
+	// Token: 0x0400ED27 RID: 60711
 	private readonly BindGroupEntityWhiteFilter BindGroupEntityWhiteFilter = new BindGroupEntityWhiteFilter();
 
-	// Token: 0x0400E871 RID: 59505
+	// Token: 0x0400ED28 RID: 60712
 	private bool RefreshBindGroupLock;
 
-	// Token: 0x0400E872 RID: 59506
+	// Token: 0x0400ED29 RID: 60713
 	private readonly Dictionary<long, string> RefreshBindGroupCache = new Dictionary<long, string>();
 
-	// Token: 0x0400E873 RID: 59507
+	// Token: 0x0400ED2A RID: 60714
 	[Nullable(2)]
 	private static CreatureGroupController _Instance;
 }

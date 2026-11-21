@@ -5,7 +5,7 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200005A RID: 90
+	// Token: 0x0200003F RID: 63
 	[Nullable(new byte[]
 	{
 		0,
@@ -13,7 +13,7 @@ namespace UnrealEngine
 	})]
 	public sealed class StringArrayProcessor : NativeArrayProcessorBase<string>
 	{
-		// Token: 0x060008EF RID: 2287 RVA: 0x00010D54 File Offset: 0x0000EF54
+		// Token: 0x06000874 RID: 2164 RVA: 0x0000D5C0 File Offset: 0x0000B7C0
 		public StringArrayProcessor()
 		{
 			this.RequireConstructAndDestruct = true;
@@ -23,7 +23,7 @@ namespace UnrealEngine
 			this.MinAlignment = customAttribute.Pack;
 		}
 
-		// Token: 0x060008F0 RID: 2288 RVA: 0x00010D9D File Offset: 0x0000EF9D
+		// Token: 0x06000875 RID: 2165 RVA: 0x0000D609 File Offset: 0x0000B809
 		[NullableContext(1)]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public unsafe override string Get(IntPtr Data, int Index)
@@ -31,7 +31,7 @@ namespace UnrealEngine
 			return FString.ToString((void*)(Data + (byte*)((IntPtr)(Index * this.Size))));
 		}
 
-		// Token: 0x060008F1 RID: 2289 RVA: 0x00010DAF File Offset: 0x0000EFAF
+		// Token: 0x06000876 RID: 2166 RVA: 0x0000D61B File Offset: 0x0000B81B
 		[NullableContext(2)]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public unsafe override void Set(IntPtr Data, int Index, string Value)
@@ -39,7 +39,7 @@ namespace UnrealEngine
 			FString.CopyFrom((void*)(Data + (byte*)((IntPtr)(Index * this.Size))), Value);
 		}
 
-		// Token: 0x060008F2 RID: 2290 RVA: 0x00010DC4 File Offset: 0x0000EFC4
+		// Token: 0x06000877 RID: 2167 RVA: 0x0000D630 File Offset: 0x0000B830
 		[NullableContext(2)]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public unsafe override int FindIndex(IntPtr Data, int Num, string Value)
@@ -65,28 +65,28 @@ namespace UnrealEngine
 			return FString.FindIndex(Data, Num, fcsharpStringView);
 		}
 
-		// Token: 0x060008F3 RID: 2291 RVA: 0x00010E02 File Offset: 0x0000F002
+		// Token: 0x06000878 RID: 2168 RVA: 0x0000D66E File Offset: 0x0000B86E
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public override void ConstructValues(IntPtr Data, int Index, int Count)
 		{
 			FString.NativeConstruct(Data / (IntPtr)sizeof(FString) + Index * this.Size, Count);
 		}
 
-		// Token: 0x060008F4 RID: 2292 RVA: 0x00010E15 File Offset: 0x0000F015
+		// Token: 0x06000879 RID: 2169 RVA: 0x0000D681 File Offset: 0x0000B881
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public override void DestructValues(IntPtr Data, int Index, int Count)
 		{
 			FString.NativeDestruct(Data / (IntPtr)sizeof(FString) + Index * this.Size, Count);
 		}
 
-		// Token: 0x060008F5 RID: 2293 RVA: 0x00010E28 File Offset: 0x0000F028
+		// Token: 0x0600087A RID: 2170 RVA: 0x0000D694 File Offset: 0x0000B894
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public override void CopyTo(IntPtr Data, IntPtr Dest, int Num)
 		{
 			FString.NativeCopy(Dest, Data, Num);
 		}
 
-		// Token: 0x060008F6 RID: 2294 RVA: 0x00010E34 File Offset: 0x0000F034
+		// Token: 0x0600087B RID: 2171 RVA: 0x0000D6A0 File Offset: 0x0000B8A0
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public unsafe override void* GetElementPtr([Nullable(1)] ref string Value, ref bool bRequireToDelete)
 		{
@@ -114,7 +114,7 @@ namespace UnrealEngine
 			return (void*)FString.Alloc(fcsharpStringView);
 		}
 
-		// Token: 0x060008F7 RID: 2295 RVA: 0x00010E86 File Offset: 0x0000F086
+		// Token: 0x0600087C RID: 2172 RVA: 0x0000D6F2 File Offset: 0x0000B8F2
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public unsafe override void DeleteElementPtr(void* Data)
 		{

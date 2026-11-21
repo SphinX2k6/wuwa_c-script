@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200202D RID: 8237
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002276 RID: 8822
 	public class IVarContext
 	{
-		// Token: 0x0600B50E RID: 46350 RVA: 0x001A4A7C File Offset: 0x001A2C7C
+		// Token: 0x0600C034 RID: 49204 RVA: 0x001BB1E8 File Offset: 0x001B93E8
 		private IVarContext_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B50F RID: 46351 RVA: 0x001A4AB4 File Offset: 0x001A2CB4
+		// Token: 0x0600C035 RID: 49205 RVA: 0x001BB220 File Offset: 0x001B9420
 		public static IVarContext Create([Nullable(2)] IVarContext instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B510 RID: 46352 RVA: 0x001A4AC7 File Offset: 0x001A2CC7
+		// Token: 0x0600C036 RID: 49206 RVA: 0x001BB233 File Offset: 0x001B9433
 		public static IVarContext CreateFromSetValue([Nullable(2)] IVarContext_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B511 RID: 46353 RVA: 0x001A4ADA File Offset: 0x001A2CDA
+		// Token: 0x0600C037 RID: 49207 RVA: 0x001BB246 File Offset: 0x001B9446
 		public IVarContext_SetValue ToSetValue()
 		{
 			return new IVarContext_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700379C RID: 14236
-		// (get) Token: 0x0600B512 RID: 46354 RVA: 0x001A4AED File Offset: 0x001A2CED
-		// (set) Token: 0x0600B513 RID: 46355 RVA: 0x001A4B18 File Offset: 0x001A2D18
+		// Token: 0x17003A79 RID: 14969
+		// (get) Token: 0x0600C038 RID: 49208 RVA: 0x001BB259 File Offset: 0x001B9459
+		// (set) Token: 0x0600C039 RID: 49209 RVA: 0x001BB284 File Offset: 0x001B9484
 		public virtual EVarContext Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006D03 RID: 27907
+		// Token: 0x0400730C RID: 29452
 		[Nullable(2)]
 		protected IVarContext FbInstance;
 
-		// Token: 0x04006D04 RID: 27908
+		// Token: 0x0400730D RID: 29453
 		[Nullable(2)]
 		protected IVarContext_SetValue PocoInterface;
 	}

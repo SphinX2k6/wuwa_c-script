@@ -1,11 +1,11 @@
 ﻿using System;
 
-// Token: 0x02000F22 RID: 3874
+// Token: 0x020003D7 RID: 983
 public class AchievementGridItemData
 {
-	// Token: 0x04002C90 RID: 11408
+	// Token: 0x04002D29 RID: 11561
 	public TItem? Data;
 
-	// Token: 0x04002C91 RID: 11409
+	// Token: 0x04002D2A RID: 11562
 	public bool GetRewardState;
 }

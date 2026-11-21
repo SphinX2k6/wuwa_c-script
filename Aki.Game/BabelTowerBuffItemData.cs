@@ -1,45 +1,45 @@
 ﻿using System;
 
-// Token: 0x02001137 RID: 4407
+// Token: 0x020005EB RID: 1515
 public class BabelTowerBuffItemData : IBabelTowerBuffItemData
 {
-	// Token: 0x170009F1 RID: 2545
-	// (get) Token: 0x060073B8 RID: 29624 RVA: 0x0017BAE7 File Offset: 0x00179CE7
-	// (set) Token: 0x060073B9 RID: 29625 RVA: 0x0017BAEF File Offset: 0x00179CEF
+	// Token: 0x17000A11 RID: 2577
+	// (get) Token: 0x0600474F RID: 18255 RVA: 0x00184635 File Offset: 0x00182835
+	// (set) Token: 0x06004750 RID: 18256 RVA: 0x0018463D File Offset: 0x0018283D
 	public int Id { get; set; }
 
-	// Token: 0x170009F2 RID: 2546
-	// (get) Token: 0x060073BA RID: 29626 RVA: 0x0017BAF8 File Offset: 0x00179CF8
-	// (set) Token: 0x060073BB RID: 29627 RVA: 0x0017BB00 File Offset: 0x00179D00
+	// Token: 0x17000A12 RID: 2578
+	// (get) Token: 0x06004751 RID: 18257 RVA: 0x00184646 File Offset: 0x00182846
+	// (set) Token: 0x06004752 RID: 18258 RVA: 0x0018464E File Offset: 0x0018284E
 	public bool IsDeTerm { get; set; }
 
-	// Token: 0x170009F3 RID: 2547
-	// (get) Token: 0x060073BC RID: 29628 RVA: 0x0017BB09 File Offset: 0x00179D09
-	// (set) Token: 0x060073BD RID: 29629 RVA: 0x0017BB11 File Offset: 0x00179D11
+	// Token: 0x17000A13 RID: 2579
+	// (get) Token: 0x06004753 RID: 18259 RVA: 0x00184657 File Offset: 0x00182857
+	// (set) Token: 0x06004754 RID: 18260 RVA: 0x0018465F File Offset: 0x0018285F
 	public bool CanClick { get; set; }
 
-	// Token: 0x170009F4 RID: 2548
-	// (get) Token: 0x060073BE RID: 29630 RVA: 0x0017BB1A File Offset: 0x00179D1A
-	// (set) Token: 0x060073BF RID: 29631 RVA: 0x0017BB22 File Offset: 0x00179D22
+	// Token: 0x17000A14 RID: 2580
+	// (get) Token: 0x06004755 RID: 18261 RVA: 0x00184668 File Offset: 0x00182868
+	// (set) Token: 0x06004756 RID: 18262 RVA: 0x00184670 File Offset: 0x00182870
 	public bool? ShowStar { get; set; }
 
-	// Token: 0x170009F5 RID: 2549
-	// (get) Token: 0x060073C0 RID: 29632 RVA: 0x0017BB2B File Offset: 0x00179D2B
-	// (set) Token: 0x060073C1 RID: 29633 RVA: 0x0017BB33 File Offset: 0x00179D33
+	// Token: 0x17000A15 RID: 2581
+	// (get) Token: 0x06004757 RID: 18263 RVA: 0x00184679 File Offset: 0x00182879
+	// (set) Token: 0x06004758 RID: 18264 RVA: 0x00184681 File Offset: 0x00182881
 	public bool? IsNecessary { get; set; }
 
-	// Token: 0x170009F6 RID: 2550
-	// (get) Token: 0x060073C2 RID: 29634 RVA: 0x0017BB3C File Offset: 0x00179D3C
-	// (set) Token: 0x060073C3 RID: 29635 RVA: 0x0017BB44 File Offset: 0x00179D44
+	// Token: 0x17000A16 RID: 2582
+	// (get) Token: 0x06004759 RID: 18265 RVA: 0x0018468A File Offset: 0x0018288A
+	// (set) Token: 0x0600475A RID: 18266 RVA: 0x00184692 File Offset: 0x00182892
 	public bool? IsLock { get; set; }
 
-	// Token: 0x170009F7 RID: 2551
-	// (get) Token: 0x060073C4 RID: 29636 RVA: 0x0017BB4D File Offset: 0x00179D4D
-	// (set) Token: 0x060073C5 RID: 29637 RVA: 0x0017BB55 File Offset: 0x00179D55
+	// Token: 0x17000A17 RID: 2583
+	// (get) Token: 0x0600475B RID: 18267 RVA: 0x0018469B File Offset: 0x0018289B
+	// (set) Token: 0x0600475C RID: 18268 RVA: 0x001846A3 File Offset: 0x001828A3
 	public bool? IsSelect { get; set; }
 
-	// Token: 0x170009F8 RID: 2552
-	// (get) Token: 0x060073C6 RID: 29638 RVA: 0x0017BB5E File Offset: 0x00179D5E
-	// (set) Token: 0x060073C7 RID: 29639 RVA: 0x0017BB66 File Offset: 0x00179D66
+	// Token: 0x17000A18 RID: 2584
+	// (get) Token: 0x0600475D RID: 18269 RVA: 0x001846AC File Offset: 0x001828AC
+	// (set) Token: 0x0600475E RID: 18270 RVA: 0x001846B4 File Offset: 0x001828B4
 	public int? GroupId { get; set; }
 }

@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 {
-	// Token: 0x02005A0B RID: 23051
+	// Token: 0x020049E7 RID: 18919
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlBattleBackpackPanel : UiPanelBase
 	{
-		// Token: 0x0603A72E RID: 239406 RVA: 0x00DE7FE8 File Offset: 0x00DE61E8
+		// Token: 0x0602F677 RID: 194167 RVA: 0x00D38568 File Offset: 0x00D36768
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603A72F RID: 239407 RVA: 0x00DE80B4 File Offset: 0x00DE62B4
+		// Token: 0x0602F678 RID: 194168 RVA: 0x00D38634 File Offset: 0x00D36834
 		protected override void OnStart()
 		{
 			UUIItem item = base.GetItem(1);
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			item2.SetUIActive(false);
 		}
 
-		// Token: 0x0603A730 RID: 239408 RVA: 0x00DE80DC File Offset: 0x00DE62DC
+		// Token: 0x0602F679 RID: 194169 RVA: 0x00D3865C File Offset: 0x00D3685C
 		public UniTask RefreshOnShow([Nullable(new byte[]
 		{
 			2,
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			return <RefreshOnShow>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A731 RID: 239409 RVA: 0x00DE8128 File Offset: 0x00DE6328
+		// Token: 0x0602F67A RID: 194170 RVA: 0x00D386A8 File Offset: 0x00D368A8
 		[NullableContext(2)]
 		public UniTask RefreshOnShow(DangoBrawlBackPackServerData serverData)
 		{
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			return <RefreshOnShow>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A732 RID: 239410 RVA: 0x00DE8174 File Offset: 0x00DE6374
+		// Token: 0x0602F67B RID: 194171 RVA: 0x00D386F4 File Offset: 0x00D368F4
 		private void Init()
 		{
 			this.ClearItemSelected();
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			this.ItemConfigMap.Clear();
 		}
 
-		// Token: 0x0603A733 RID: 239411 RVA: 0x00DE8260 File Offset: 0x00DE6460
+		// Token: 0x0602F67C RID: 194172 RVA: 0x00D387E0 File Offset: 0x00D369E0
 		private UniTask RefreshBackpack(DangoBrawlNormalBagItemInfo info)
 		{
 			if (DangoBrawlUtil.GetTemplateType(DangoBrawlUtil.GetTemplateId(info.Inst.ConfigId)) == EDangoBrawlTemplateType.Bag)
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			return this.CreateBagItem(info);
 		}
 
-		// Token: 0x0603A734 RID: 239412 RVA: 0x00DE8288 File Offset: 0x00DE6488
+		// Token: 0x0602F67D RID: 194173 RVA: 0x00D38808 File Offset: 0x00D36A08
 		private UniTask CreateBag(DangoBrawlNormalBagItemInfo info)
 		{
 			DangoBrawlBattleBackpackPanel.<CreateBag>d__15 <CreateBag>d__;
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			return <CreateBag>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A735 RID: 239413 RVA: 0x00DE82D4 File Offset: 0x00DE64D4
+		// Token: 0x0602F67E RID: 194174 RVA: 0x00D38854 File Offset: 0x00D36A54
 		private UniTask CreateBag(DangoBrawlBackpackItemData itemData)
 		{
 			DangoBrawlBattleBackpackPanel.<CreateBag>d__16 <CreateBag>d__;
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			return <CreateBag>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A736 RID: 239414 RVA: 0x00DE8320 File Offset: 0x00DE6520
+		// Token: 0x0602F67F RID: 194175 RVA: 0x00D388A0 File Offset: 0x00D36AA0
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -150,7 +150,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			return <AcquireBag>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A737 RID: 239415 RVA: 0x00DE8364 File Offset: 0x00DE6564
+		// Token: 0x0602F680 RID: 194176 RVA: 0x00D388E4 File Offset: 0x00D36AE4
 		private UniTask CreateBagItem(DangoBrawlNormalBagItemInfo info)
 		{
 			DangoBrawlBattleBackpackPanel.<CreateBagItem>d__18 <CreateBagItem>d__;
@@ -162,7 +162,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			return <CreateBagItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A738 RID: 239416 RVA: 0x00DE83B0 File Offset: 0x00DE65B0
+		// Token: 0x0602F681 RID: 194177 RVA: 0x00D38930 File Offset: 0x00D36B30
 		private UniTask CreateBagItem(DangoBrawlBackpackItemData itemData)
 		{
 			DangoBrawlBattleBackpackPanel.<CreateBagItem>d__19 <CreateBagItem>d__;
@@ -174,7 +174,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			return <CreateBagItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A739 RID: 239417 RVA: 0x00DE83FC File Offset: 0x00DE65FC
+		// Token: 0x0602F682 RID: 194178 RVA: 0x00D3897C File Offset: 0x00D36B7C
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -190,7 +190,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			return <AcquireBagItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A73A RID: 239418 RVA: 0x00DE8440 File Offset: 0x00DE6640
+		// Token: 0x0602F683 RID: 194179 RVA: 0x00D389C0 File Offset: 0x00D36BC0
 		private void RegisterBagItem(int uid, int configId, DangoBrawlBattleBackpackItem bagItem)
 		{
 			this.BagItemMap[uid] = bagItem;
@@ -204,7 +204,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			bagItem.OnClickItem = new Action<DangoBrawlBattleBackpackItem>(this.OnClickBagItem);
 		}
 
-		// Token: 0x0603A73B RID: 239419 RVA: 0x00DE8498 File Offset: 0x00DE6698
+		// Token: 0x0602F684 RID: 194180 RVA: 0x00D38A18 File Offset: 0x00D36C18
 		public void ShowItemDamageText(int itemUid, int uiDamageConfigId, bool isSelf, int value, bool isCrit, bool isCure)
 		{
 			UUIItem uuiitem = null;
@@ -230,7 +230,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			battleManager.ShowUiDamageText(uiDamageConfigId, uuiitem, isSelf, value, isCrit, isCure, null);
 		}
 
-		// Token: 0x0603A73C RID: 239420 RVA: 0x00DE8504 File Offset: 0x00DE6704
+		// Token: 0x0602F685 RID: 194181 RVA: 0x00D38A84 File Offset: 0x00D36C84
 		public void RegisterTimerHandle()
 		{
 			foreach (KeyValuePair<int, DangoBrawlBattleBackpackItem> keyValuePair in this.BagItemMap)
@@ -239,7 +239,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			}
 		}
 
-		// Token: 0x0603A73D RID: 239421 RVA: 0x00DE855C File Offset: 0x00DE675C
+		// Token: 0x0602F686 RID: 194182 RVA: 0x00D38ADC File Offset: 0x00D36CDC
 		public void UnRegisterTimerHandle()
 		{
 			foreach (KeyValuePair<int, DangoBrawlBattleBackpackItem> keyValuePair in this.BagItemMap)
@@ -252,7 +252,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			}
 		}
 
-		// Token: 0x0603A73E RID: 239422 RVA: 0x00DE85F0 File Offset: 0x00DE67F0
+		// Token: 0x0602F687 RID: 194183 RVA: 0x00D38B70 File Offset: 0x00D36D70
 		public void CaptureCdSnapshots()
 		{
 			this.CdSnapshotCache.Clear();
@@ -266,7 +266,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			}
 		}
 
-		// Token: 0x0603A73F RID: 239423 RVA: 0x00DE866C File Offset: 0x00DE686C
+		// Token: 0x0602F688 RID: 194184 RVA: 0x00D38BEC File Offset: 0x00D36DEC
 		public void RestoreCdSnapshots()
 		{
 			if (this.CdSnapshotCache.Count == 0)
@@ -283,13 +283,13 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			}
 		}
 
-		// Token: 0x0603A740 RID: 239424 RVA: 0x00DE86EC File Offset: 0x00DE68EC
+		// Token: 0x0602F689 RID: 194185 RVA: 0x00D38C6C File Offset: 0x00D36E6C
 		public void ClearCdSnapshots()
 		{
 			this.CdSnapshotCache.Clear();
 		}
 
-		// Token: 0x0603A741 RID: 239425 RVA: 0x00DE86FC File Offset: 0x00DE68FC
+		// Token: 0x0602F68A RID: 194186 RVA: 0x00D38C7C File Offset: 0x00D36E7C
 		public bool OnItemCdUpdate(int itemUid, int nextReadyMs)
 		{
 			DangoBrawlBattleBackpackItem dangoBrawlBattleBackpackItem;
@@ -301,7 +301,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			return true;
 		}
 
-		// Token: 0x0603A742 RID: 239426 RVA: 0x00DE8724 File Offset: 0x00DE6924
+		// Token: 0x0602F68B RID: 194187 RVA: 0x00D38CA4 File Offset: 0x00D36EA4
 		public bool OnWeaponStop(int itemUid, int stopMs)
 		{
 			DangoBrawlBattleBackpackItem dangoBrawlBattleBackpackItem;
@@ -313,7 +313,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			return true;
 		}
 
-		// Token: 0x0603A743 RID: 239427 RVA: 0x00DE874C File Offset: 0x00DE694C
+		// Token: 0x0602F68C RID: 194188 RVA: 0x00D38CCC File Offset: 0x00D36ECC
 		public bool OnItemEffectShow(DangoBrawlItemUIEffectData data)
 		{
 			DangoBrawlBattleBackpackItem dangoBrawlBattleBackpackItem;
@@ -331,7 +331,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			return false;
 		}
 
-		// Token: 0x0603A744 RID: 239428 RVA: 0x00DE8796 File Offset: 0x00DE6996
+		// Token: 0x0602F68D RID: 194189 RVA: 0x00D38D16 File Offset: 0x00D36F16
 		public void ClearItemSelected()
 		{
 			DangoBrawlBattleBackpack curSelectBag = this.CurSelectBag;
@@ -348,7 +348,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			this.CurSelectBagItem = null;
 		}
 
-		// Token: 0x0603A745 RID: 239429 RVA: 0x00DE87CA File Offset: 0x00DE69CA
+		// Token: 0x0602F68E RID: 194190 RVA: 0x00D38D4A File Offset: 0x00D36F4A
 		private void SelectBag(DangoBrawlBattleBackpack bag)
 		{
 			if (this.CurSelectBag == bag)
@@ -360,7 +360,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			bag.SetSelected(true);
 		}
 
-		// Token: 0x0603A746 RID: 239430 RVA: 0x00DE87EA File Offset: 0x00DE69EA
+		// Token: 0x0602F68F RID: 194191 RVA: 0x00D38D6A File Offset: 0x00D36F6A
 		private void SelectBagItem(DangoBrawlBattleBackpackItem bagItem)
 		{
 			if (this.CurSelectBagItem == bagItem)
@@ -372,7 +372,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			bagItem.SetSelected(true);
 		}
 
-		// Token: 0x0603A747 RID: 239431 RVA: 0x00DE880C File Offset: 0x00DE6A0C
+		// Token: 0x0602F690 RID: 194192 RVA: 0x00D38D8C File Offset: 0x00D36F8C
 		private void OnClickBag(DangoBrawlBattleBackpack bag)
 		{
 			this.SelectBag(bag);
@@ -388,7 +388,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			}
 		}
 
-		// Token: 0x0603A748 RID: 239432 RVA: 0x00DE8844 File Offset: 0x00DE6A44
+		// Token: 0x0602F691 RID: 194193 RVA: 0x00D38DC4 File Offset: 0x00D36FC4
 		private void OnClickBagItem(DangoBrawlBattleBackpackItem bagItem)
 		{
 			this.SelectBagItem(bagItem);
@@ -404,22 +404,22 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			}
 		}
 
-		// Token: 0x0401E74C RID: 124748
+		// Token: 0x040191F3 RID: 102899
 		private readonly Dictionary<int, DangoBrawlBattleBackpack> BagMap = new Dictionary<int, DangoBrawlBattleBackpack>();
 
-		// Token: 0x0401E74D RID: 124749
+		// Token: 0x040191F4 RID: 102900
 		private readonly Dictionary<int, DangoBrawlBattleBackpackItem> BagItemMap = new Dictionary<int, DangoBrawlBattleBackpackItem>();
 
-		// Token: 0x0401E74E RID: 124750
+		// Token: 0x040191F5 RID: 102901
 		private readonly global::Stack<DangoBrawlBattleBackpack> BagPool = new global::Stack<DangoBrawlBattleBackpack>();
 
-		// Token: 0x0401E74F RID: 124751
+		// Token: 0x040191F6 RID: 102902
 		private readonly global::Stack<DangoBrawlBattleBackpackItem> BagItemPool = new global::Stack<DangoBrawlBattleBackpackItem>();
 
-		// Token: 0x0401E750 RID: 124752
+		// Token: 0x040191F7 RID: 102903
 		private readonly Dictionary<int, List<DangoBrawlBattleBackpackItem>> ItemConfigMap = new Dictionary<int, List<DangoBrawlBattleBackpackItem>>();
 
-		// Token: 0x0401E751 RID: 124753
+		// Token: 0x040191F8 RID: 102904
 		[Nullable(new byte[]
 		{
 			2,
@@ -428,30 +428,30 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 		})]
 		public Action<UUIItem, DangoBrawlBackpackItemData> OnItemClick;
 
-		// Token: 0x0401E752 RID: 124754
+		// Token: 0x040191F9 RID: 102905
 		[Nullable(2)]
 		private DangoBrawlBattleBackpack CurSelectBag;
 
-		// Token: 0x0401E753 RID: 124755
+		// Token: 0x040191FA RID: 102906
 		[Nullable(2)]
 		private DangoBrawlBattleBackpackItem CurSelectBagItem;
 
-		// Token: 0x0401E754 RID: 124756
+		// Token: 0x040191FB RID: 102907
 		private readonly Dictionary<int, DangoBrawlBattleBackpackItem.DangoBrawlCdSnapshot> CdSnapshotCache = new Dictionary<int, DangoBrawlBattleBackpackItem.DangoBrawlCdSnapshot>();
 
-		// Token: 0x0200BC69 RID: 48233
+		// Token: 0x0200A672 RID: 42610
 		[NullableContext(0)]
 		private enum EComp
 		{
-			// Token: 0x04038D8E RID: 232846
+			// Token: 0x0403375A RID: 210778
 			PnlOffsetL,
-			// Token: 0x04038D8F RID: 232847
+			// Token: 0x0403375B RID: 210779
 			BackpackItem,
-			// Token: 0x04038D90 RID: 232848
+			// Token: 0x0403375C RID: 210780
 			BackpackBagItem,
-			// Token: 0x04038D91 RID: 232849
+			// Token: 0x0403375D RID: 210781
 			PnlBagLayer,
-			// Token: 0x04038D92 RID: 232850
+			// Token: 0x0403375E RID: 210782
 			PnlItemLayer
 		}
 	}

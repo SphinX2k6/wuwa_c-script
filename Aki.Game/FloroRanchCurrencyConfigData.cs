@@ -2,48 +2,48 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02001AF2 RID: 6898
+// Token: 0x02000FB1 RID: 4017
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchCurrencyConfigData
 {
-	// Token: 0x0600CCC6 RID: 52422 RVA: 0x002EC2F3 File Offset: 0x002EA4F3
+	// Token: 0x0600A0D7 RID: 41175 RVA: 0x002F73DF File Offset: 0x002F55DF
 	public FloroRanchCurrencyConfigData(FloroRanchCurrency config)
 	{
 		this.Config = config;
 	}
 
-	// Token: 0x0600CCC7 RID: 52423 RVA: 0x002EC304 File Offset: 0x002EA504
+	// Token: 0x0600A0D8 RID: 41176 RVA: 0x002F73F0 File Offset: 0x002F55F0
 	public string GetName()
 	{
 		return this.Config.Name;
 	}
 
-	// Token: 0x0600CCC8 RID: 52424 RVA: 0x002EC320 File Offset: 0x002EA520
+	// Token: 0x0600A0D9 RID: 41177 RVA: 0x002F740C File Offset: 0x002F560C
 	public string GetDesc()
 	{
 		return this.Config.Desc;
 	}
 
-	// Token: 0x0600CCC9 RID: 52425 RVA: 0x002EC33C File Offset: 0x002EA53C
+	// Token: 0x0600A0DA RID: 41178 RVA: 0x002F7428 File Offset: 0x002F5628
 	public string GetIcon()
 	{
 		return this.Config.Icon;
 	}
 
-	// Token: 0x0600CCCA RID: 52426 RVA: 0x002EC358 File Offset: 0x002EA558
+	// Token: 0x0600A0DB RID: 41179 RVA: 0x002F7444 File Offset: 0x002F5644
 	public string GetSmallIcon()
 	{
 		return this.Config.SmallIcon;
 	}
 
-	// Token: 0x0600CCCB RID: 52427 RVA: 0x002EC374 File Offset: 0x002EA574
+	// Token: 0x0600A0DC RID: 41180 RVA: 0x002F7460 File Offset: 0x002F5660
 	public FloroRanchRarityData GetQualityData()
 	{
 		int rarityId = this.Config.RarityId;
 		return FloroRanchModel.Instance.GetFloroRanchRarity(rarityId);
 	}
 
-	// Token: 0x04005DFF RID: 24063
+	// Token: 0x04005ECE RID: 24270
 	private readonly FloroRanchCurrency Config;
 }

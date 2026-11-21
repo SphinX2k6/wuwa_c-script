@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002957 RID: 10583
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002C3C RID: 11324
 	public class IChangeSelfEntityPrefabPerformance : ChangeEntityPrefabPerformance
 	{
-		// Token: 0x0600EAAE RID: 60078 RVA: 0x00225D23 File Offset: 0x00223F23
+		// Token: 0x0600F924 RID: 63780 RVA: 0x002433DB File Offset: 0x002415DB
 		public static IChangeSelfEntityPrefabPerformance Create(IChangeSelfEntityPrefabPerformance? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170049C2 RID: 18882
-		// (get) Token: 0x0600EAAF RID: 60079 RVA: 0x00225D42 File Offset: 0x00223F42
+		// Token: 0x17004D5A RID: 19802
+		// (get) Token: 0x0600F925 RID: 63781 RVA: 0x002433FA File Offset: 0x002415FA
 		public override EChangeEntityPrefabPerformanceType Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170049C3 RID: 18883
-		// (get) Token: 0x0600EAB0 RID: 60080 RVA: 0x00225D4F File Offset: 0x00223F4F
+		// Token: 0x17004D5B RID: 19803
+		// (get) Token: 0x0600F926 RID: 63782 RVA: 0x00243407 File Offset: 0x00241607
 		public virtual string PerformanceTag
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008153 RID: 33107
+		// Token: 0x04008834 RID: 34868
 		private IChangeSelfEntityPrefabPerformance Instance;
 	}
 }

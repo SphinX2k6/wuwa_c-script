@@ -10,12 +10,12 @@ using CSharpScript.Game.Ui;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02002659 RID: 9817
+// Token: 0x02001B44 RID: 6980
 [NullableContext(1)]
 [Nullable(0)]
 public class QuestUtil : Singleton
 {
-	// Token: 0x06014161 RID: 82273 RVA: 0x00510000 File Offset: 0x0050E200
+	// Token: 0x06011643 RID: 71235 RVA: 0x0051ECB8 File Offset: 0x0051CEB8
 	public bool SetTrackDistanceText([Nullable(2)] UUIText uiText, global::Vector inLocation)
 	{
 		if (uiText == null || !ObjectUtils.IsValid(uiText))
@@ -51,7 +51,7 @@ public class QuestUtil : Singleton
 		return true;
 	}
 
-	// Token: 0x06014162 RID: 82274 RVA: 0x005100EC File Offset: 0x0050E2EC
+	// Token: 0x06011644 RID: 71236 RVA: 0x0051EDA4 File Offset: 0x0051CFA4
 	[NullableContext(2)]
 	public bool SetTrackDistanceText(UUIText uiText, FVector inLocation)
 	{
@@ -85,7 +85,7 @@ public class QuestUtil : Singleton
 		return true;
 	}
 
-	// Token: 0x06014163 RID: 82275 RVA: 0x005101DC File Offset: 0x0050E3DC
+	// Token: 0x06011645 RID: 71237 RVA: 0x0051EE94 File Offset: 0x0051D094
 	public int? GetQuestMarkId(int questType, int? questId = null)
 	{
 		if (questId != null && questId.GetValueOrDefault() != 0)
@@ -99,7 +99,7 @@ public class QuestUtil : Singleton
 		return QuestNewConfig.Instance.GetQuestTypeMarkId(questType);
 	}
 
-	// Token: 0x06014164 RID: 82276 RVA: 0x00510238 File Offset: 0x0050E438
+	// Token: 0x06011646 RID: 71238 RVA: 0x0051EEF0 File Offset: 0x0051D0F0
 	public string GetQuestMarkIconPathByQuestId(int questId)
 	{
 		IQuest questConfig = QuestNewModel.Instance.GetQuestConfig(questId);
@@ -112,7 +112,7 @@ public class QuestUtil : Singleton
 		return QuestNewConfig.Instance.GetQuestTypeMark(valueOrDefault);
 	}
 
-	// Token: 0x06014165 RID: 82277 RVA: 0x005102A8 File Offset: 0x0050E4A8
+	// Token: 0x06011647 RID: 71239 RVA: 0x0051EF60 File Offset: 0x0051D160
 	[NullableContext(2)]
 	public bool HandleTrackCustomBoard(ITrackCustomBoard trackCustomBoard, bool isFromHotKey = false)
 	{
@@ -194,7 +194,7 @@ public class QuestUtil : Singleton
 		}
 	}
 
-	// Token: 0x06014166 RID: 82278 RVA: 0x0051048C File Offset: 0x0050E68C
+	// Token: 0x06011648 RID: 71240 RVA: 0x0051F144 File Offset: 0x0051D344
 	private bool HandleAnomalyProgressBoard(ITrackCustomBoard trackCustomBoard)
 	{
 		ISheriffAnomalyProgressBoardConfig sheriffAnomalyProgressBoard = trackCustomBoard.SheriffAnomalyProgressBoard;
@@ -224,7 +224,7 @@ public class QuestUtil : Singleton
 		return true;
 	}
 
-	// Token: 0x06014167 RID: 82279 RVA: 0x00510548 File Offset: 0x0050E748
+	// Token: 0x06011649 RID: 71241 RVA: 0x0051F200 File Offset: 0x0051D400
 	private bool HandleSheriffReasoningBoard(ITrackCustomBoard trackCustomBoard)
 	{
 		ISheriffReasoningBoardConfig sheriffReasoningBoard = trackCustomBoard.SheriffReasoningBoard;
@@ -242,7 +242,7 @@ public class QuestUtil : Singleton
 		return true;
 	}
 
-	// Token: 0x06014168 RID: 82280 RVA: 0x005105A8 File Offset: 0x0050E7A8
+	// Token: 0x0601164A RID: 71242 RVA: 0x0051F260 File Offset: 0x0051D460
 	private bool HandleSheriffClueDetailBoard(ITrackCustomBoard trackCustomBoard)
 	{
 		if (trackCustomBoard.SheriffClueDetailBoard == null)
@@ -258,8 +258,8 @@ public class QuestUtil : Singleton
 		return true;
 	}
 
-	// Token: 0x1700199C RID: 6556
-	// (get) Token: 0x06014169 RID: 82281 RVA: 0x005105FC File Offset: 0x0050E7FC
+	// Token: 0x170019D4 RID: 6612
+	// (get) Token: 0x0601164B RID: 71243 RVA: 0x0051F2B4 File Offset: 0x0051D4B4
 	public static QuestUtil Instance
 	{
 		get
@@ -273,12 +273,12 @@ public class QuestUtil : Singleton
 		}
 	}
 
-	// Token: 0x0601416A RID: 82282 RVA: 0x0051061F File Offset: 0x0050E81F
+	// Token: 0x0601164C RID: 71244 RVA: 0x0051F2D7 File Offset: 0x0051D4D7
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601416B RID: 82283 RVA: 0x00510621 File Offset: 0x0050E821
+	// Token: 0x0601164D RID: 71245 RVA: 0x0051F2D9 File Offset: 0x0051D4D9
 	public static void ResetStaticDefaultValue()
 	{
 		QuestUtil instance = QuestUtil._instance;
@@ -289,13 +289,13 @@ public class QuestUtil : Singleton
 		QuestUtil._instance = null;
 	}
 
-	// Token: 0x0601416C RID: 82284 RVA: 0x0051063A File Offset: 0x0050E83A
+	// Token: 0x0601164E RID: 71246 RVA: 0x0051F2F2 File Offset: 0x0051D4F2
 	static QuestUtil()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(QuestUtil.CreateStaticDefaultValue), new Action(QuestUtil.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04009775 RID: 38773
+	// Token: 0x040098CD RID: 39117
 	[Nullable(2)]
 	private static QuestUtil _instance;
 }

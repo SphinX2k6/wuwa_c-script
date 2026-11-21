@@ -5,42 +5,42 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.Kurotato.Data
 {
-	// Token: 0x0200579E RID: 22430
+	// Token: 0x02004775 RID: 18293
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class KurotatoRewardItemData
 	{
-		// Token: 0x170088B0 RID: 34992
-		// (get) Token: 0x06038FE1 RID: 233441 RVA: 0x00D8BFFF File Offset: 0x00D8A1FF
-		// (set) Token: 0x06038FE2 RID: 233442 RVA: 0x00D8C007 File Offset: 0x00D8A207
+		// Token: 0x17005C78 RID: 23672
+		// (get) Token: 0x0602DEF1 RID: 188145 RVA: 0x00CDAD7B File Offset: 0x00CD8F7B
+		// (set) Token: 0x0602DEF2 RID: 188146 RVA: 0x00CDAD83 File Offset: 0x00CD8F83
 		public int Id { get; set; }
 
-		// Token: 0x170088B1 RID: 34993
-		// (get) Token: 0x06038FE3 RID: 233443 RVA: 0x00D8C010 File Offset: 0x00D8A210
-		// (set) Token: 0x06038FE4 RID: 233444 RVA: 0x00D8C018 File Offset: 0x00D8A218
+		// Token: 0x17005C79 RID: 23673
+		// (get) Token: 0x0602DEF3 RID: 188147 RVA: 0x00CDAD8C File Offset: 0x00CD8F8C
+		// (set) Token: 0x0602DEF4 RID: 188148 RVA: 0x00CDAD94 File Offset: 0x00CD8F94
 		public int Current { get; set; }
 
-		// Token: 0x170088B2 RID: 34994
-		// (get) Token: 0x06038FE5 RID: 233445 RVA: 0x00D8C021 File Offset: 0x00D8A221
-		// (set) Token: 0x06038FE6 RID: 233446 RVA: 0x00D8C029 File Offset: 0x00D8A229
+		// Token: 0x17005C7A RID: 23674
+		// (get) Token: 0x0602DEF5 RID: 188149 RVA: 0x00CDAD9D File Offset: 0x00CD8F9D
+		// (set) Token: 0x0602DEF6 RID: 188150 RVA: 0x00CDADA5 File Offset: 0x00CD8FA5
 		public int Target { get; set; }
 
-		// Token: 0x170088B3 RID: 34995
-		// (get) Token: 0x06038FE7 RID: 233447 RVA: 0x00D8C032 File Offset: 0x00D8A232
-		// (set) Token: 0x06038FE8 RID: 233448 RVA: 0x00D8C03A File Offset: 0x00D8A23A
+		// Token: 0x17005C7B RID: 23675
+		// (get) Token: 0x0602DEF7 RID: 188151 RVA: 0x00CDADAE File Offset: 0x00CD8FAE
+		// (set) Token: 0x0602DEF8 RID: 188152 RVA: 0x00CDADB6 File Offset: 0x00CD8FB6
 		public EKurotatoRewardStatus Status { get; set; }
 
-		// Token: 0x170088B4 RID: 34996
-		// (get) Token: 0x06038FE9 RID: 233449 RVA: 0x00D8C043 File Offset: 0x00D8A243
-		// (set) Token: 0x06038FEA RID: 233450 RVA: 0x00D8C04B File Offset: 0x00D8A24B
+		// Token: 0x17005C7C RID: 23676
+		// (get) Token: 0x0602DEF9 RID: 188153 RVA: 0x00CDADBF File Offset: 0x00CD8FBF
+		// (set) Token: 0x0602DEFA RID: 188154 RVA: 0x00CDADC7 File Offset: 0x00CD8FC7
 		public KurotatoResAward? NormalConfig { get; set; }
 
-		// Token: 0x170088B5 RID: 34997
-		// (get) Token: 0x06038FEB RID: 233451 RVA: 0x00D8C054 File Offset: 0x00D8A254
-		// (set) Token: 0x06038FEC RID: 233452 RVA: 0x00D8C05C File Offset: 0x00D8A25C
+		// Token: 0x17005C7D RID: 23677
+		// (get) Token: 0x0602DEFB RID: 188155 RVA: 0x00CDADD0 File Offset: 0x00CD8FD0
+		// (set) Token: 0x0602DEFC RID: 188156 RVA: 0x00CDADD8 File Offset: 0x00CD8FD8
 		public KurotatoLimitAward? LimitConfig { get; set; }
 
-		// Token: 0x06038FED RID: 233453 RVA: 0x00D8C065 File Offset: 0x00D8A265
+		// Token: 0x0602DEFD RID: 188157 RVA: 0x00CDADE1 File Offset: 0x00CD8FE1
 		public KurotatoRewardItemData(int id, int current, int target, int status)
 		{
 			this.Id = id;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			this.Status = (EKurotatoRewardStatus)status;
 		}
 
-		// Token: 0x06038FEE RID: 233454 RVA: 0x00D8C08A File Offset: 0x00D8A28A
+		// Token: 0x0602DEFE RID: 188158 RVA: 0x00CDAE06 File Offset: 0x00CD9006
 		public void Refresh(ConditionTask data)
 		{
 			this.Current = data.Current;
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			this.Status = (EKurotatoRewardStatus)data.Status;
 		}
 
-		// Token: 0x06038FEF RID: 233455 RVA: 0x00D8C0B0 File Offset: 0x00D8A2B0
+		// Token: 0x0602DEFF RID: 188159 RVA: 0x00CDAE2C File Offset: 0x00CD902C
 		public virtual string GetTitle()
 		{
 			if (this.NormalConfig != null)
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.Kurotato.Data
 			return this.LimitConfig.Value.Desc;
 		}
 
-		// Token: 0x06038FF0 RID: 233456 RVA: 0x00D8C0FC File Offset: 0x00D8A2FC
+		// Token: 0x0602DF00 RID: 188160 RVA: 0x00CDAE78 File Offset: 0x00CD9078
 		public virtual int GetDropId()
 		{
 			if (this.NormalConfig != null)

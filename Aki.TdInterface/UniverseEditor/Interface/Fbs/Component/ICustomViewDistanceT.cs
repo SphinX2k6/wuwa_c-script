@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005061 RID: 20577
+	// Token: 0x020055C3 RID: 21955
 	public class ICustomViewDistanceT
 	{
-		// Token: 0x1700954B RID: 38219
-		// (get) Token: 0x06020FAB RID: 135083 RVA: 0x00495488 File Offset: 0x00493688
-		// (set) Token: 0x06020FAC RID: 135084 RVA: 0x00495490 File Offset: 0x00493690
+		// Token: 0x17009D31 RID: 40241
+		// (get) Token: 0x06022EE5 RID: 143077 RVA: 0x004CF13C File Offset: 0x004CD33C
+		// (set) Token: 0x06022EE6 RID: 143078 RVA: 0x004CF144 File Offset: 0x004CD344
 		public EViewDistanceType Type { get; set; }
 
-		// Token: 0x1700954C RID: 38220
-		// (get) Token: 0x06020FAD RID: 135085 RVA: 0x00495499 File Offset: 0x00493699
-		// (set) Token: 0x06020FAE RID: 135086 RVA: 0x004954A1 File Offset: 0x004936A1
+		// Token: 0x17009D32 RID: 40242
+		// (get) Token: 0x06022EE7 RID: 143079 RVA: 0x004CF14D File Offset: 0x004CD34D
+		// (set) Token: 0x06022EE8 RID: 143080 RVA: 0x004CF155 File Offset: 0x004CD355
 		public int Distance { get; set; }
 
-		// Token: 0x06020FAF RID: 135087 RVA: 0x004954AA File Offset: 0x004936AA
+		// Token: 0x06022EE9 RID: 143081 RVA: 0x004CF15E File Offset: 0x004CD35E
 		public ICustomViewDistanceT()
 		{
 			this.Type = EViewDistanceType.Low;

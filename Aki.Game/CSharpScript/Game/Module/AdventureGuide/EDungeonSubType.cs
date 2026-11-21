@@ -2,120 +2,120 @@
 
 namespace CSharpScript.Game.Module.AdventureGuide
 {
-	// Token: 0x02005EB3 RID: 24243
+	// Token: 0x02004E98 RID: 20120
 	public enum EDungeonSubType
 	{
-		// Token: 0x040202CB RID: 131787
+		// Token: 0x0401AD92 RID: 109970
 		LordInInstance = 3,
-		// Token: 0x040202CC RID: 131788
+		// Token: 0x0401AD93 RID: 109971
 		Boss,
-		// Token: 0x040202CD RID: 131789
+		// Token: 0x0401AD94 RID: 109972
 		RoleTeach = 7,
-		// Token: 0x040202CE RID: 131790
+		// Token: 0x0401AD95 RID: 109973
 		SingleTower,
-		// Token: 0x040202CF RID: 131791
+		// Token: 0x0401AD96 RID: 109974
 		LoopTower,
-		// Token: 0x040202D0 RID: 131792
+		// Token: 0x0401AD97 RID: 109975
 		WeaponMat,
-		// Token: 0x040202D1 RID: 131793
+		// Token: 0x0401AD98 RID: 109976
 		SkillMat,
-		// Token: 0x040202D2 RID: 131794
+		// Token: 0x0401AD99 RID: 109977
 		WorldInstance,
-		// Token: 0x040202D3 RID: 131795
+		// Token: 0x0401AD9A RID: 109978
 		Roguelike = 15,
-		// Token: 0x040202D4 RID: 131796
+		// Token: 0x0401AD9B RID: 109979
 		NewSingleTower = 17,
-		// Token: 0x040202D5 RID: 131797
+		// Token: 0x0401AD9C RID: 109980
 		NewLoopTower,
-		// Token: 0x040202D6 RID: 131798
+		// Token: 0x0401AD9D RID: 109981
 		Mowing,
-		// Token: 0x040202D7 RID: 131799
+		// Token: 0x0401AD9E RID: 109982
 		BossRush,
-		// Token: 0x040202D8 RID: 131800
+		// Token: 0x0401AD9F RID: 109983
 		TowerDefense,
-		// Token: 0x040202D9 RID: 131801
+		// Token: 0x0401ADA0 RID: 109984
 		MowingRisk,
-		// Token: 0x040202DA RID: 131802
+		// Token: 0x0401ADA1 RID: 109985
 		BattleLink,
-		// Token: 0x040202DB RID: 131803
+		// Token: 0x0401ADA2 RID: 109986
 		MowingTower,
-		// Token: 0x040202DC RID: 131804
+		// Token: 0x0401ADA3 RID: 109987
 		FarmGold,
-		// Token: 0x040202DD RID: 131805
+		// Token: 0x0401ADA4 RID: 109988
 		RoleSkinTrial,
-		// Token: 0x040202DE RID: 131806
+		// Token: 0x0401ADA5 RID: 109989
 		ShipTower,
-		// Token: 0x040202DF RID: 131807
+		// Token: 0x0401ADA6 RID: 109990
 		WeeklyRogue = 29,
-		// Token: 0x040202E0 RID: 131808
+		// Token: 0x0401ADA7 RID: 109991
 		SolarSpeed = 28,
-		// Token: 0x040202E1 RID: 131809
+		// Token: 0x0401ADA8 RID: 109992
 		BabelTower = 30,
-		// Token: 0x040202E2 RID: 131810
+		// Token: 0x0401ADA9 RID: 109993
 		RacingBets,
-		// Token: 0x040202E3 RID: 131811
+		// Token: 0x0401ADAA RID: 109994
 		DangoAbyssSmallWorld,
-		// Token: 0x040202E4 RID: 131812
+		// Token: 0x0401ADAB RID: 109995
 		DangoAbyss,
-		// Token: 0x040202E5 RID: 131813
+		// Token: 0x0401ADAC RID: 109996
 		RogueRes,
-		// Token: 0x040202E6 RID: 131814
+		// Token: 0x0401ADAD RID: 109997
 		DangoMonopoly,
-		// Token: 0x040202E7 RID: 131815
+		// Token: 0x0401ADAE RID: 109998
 		PhantomArena,
-		// Token: 0x040202E8 RID: 131816
+		// Token: 0x0401ADAF RID: 109999
 		TowerDefenseEvent,
-		// Token: 0x040202E9 RID: 131817
+		// Token: 0x0401ADB0 RID: 110000
 		HonamiStory = 39,
-		// Token: 0x040202EA RID: 131818
+		// Token: 0x0401ADB1 RID: 110001
 		RoleTrial,
-		// Token: 0x040202EB RID: 131819
+		// Token: 0x0401ADB2 RID: 110002
 		Survivors,
-		// Token: 0x040202EC RID: 131820
+		// Token: 0x0401ADB3 RID: 110003
 		FightPhoto,
-		// Token: 0x040202ED RID: 131821
+		// Token: 0x0401ADB4 RID: 110004
 		NewTowerClimbing = 47,
-		// Token: 0x040202EE RID: 131822
+		// Token: 0x0401ADB5 RID: 110005
 		MotorParkour = 43,
-		// Token: 0x040202EF RID: 131823
+		// Token: 0x0401ADB6 RID: 110006
 		MotorcycleArrow,
-		// Token: 0x040202F0 RID: 131824
+		// Token: 0x0401ADB7 RID: 110007
 		PinballBattle,
-		// Token: 0x040202F1 RID: 131825
+		// Token: 0x0401ADB8 RID: 110008
 		LordGym = 48,
-		// Token: 0x040202F2 RID: 131826
+		// Token: 0x0401ADB9 RID: 110009
 		NoSoundAreaPreOpen,
-		// Token: 0x040202F3 RID: 131827
+		// Token: 0x0401ADBA RID: 110010
 		NightMarePreOpen,
-		// Token: 0x040202F4 RID: 131828
+		// Token: 0x0401ADBB RID: 110011
 		Kurotato,
-		// Token: 0x040202F5 RID: 131829
+		// Token: 0x0401ADBC RID: 110012
 		FlagChallenge,
-		// Token: 0x040202F6 RID: 131830
+		// Token: 0x0401ADBD RID: 110013
 		RhythmShip,
-		// Token: 0x040202F7 RID: 131831
+		// Token: 0x0401ADBE RID: 110014
 		TetrisGame,
-		// Token: 0x040202F8 RID: 131832
+		// Token: 0x0401ADBF RID: 110015
 		BossPiling,
-		// Token: 0x040202F9 RID: 131833
+		// Token: 0x0401ADC0 RID: 110016
 		AdamSmasher,
-		// Token: 0x040202FA RID: 131834
+		// Token: 0x0401ADC1 RID: 110017
 		MultiMotor,
-		// Token: 0x040202FB RID: 131835
+		// Token: 0x0401ADC2 RID: 110018
 		DangoBrawl,
-		// Token: 0x040202FC RID: 131836
+		// Token: 0x0401ADC3 RID: 110019
 		RoverRogue,
-		// Token: 0x040202FD RID: 131837
-		DarkTide,
-		// Token: 0x040202FE RID: 131838
-		PlayInstShare,
-		// Token: 0x040202FF RID: 131839
+		// Token: 0x0401ADC4 RID: 110020
+		PlayInstShare = 61,
+		// Token: 0x0401ADC5 RID: 110021
 		MonsterSettlementInstShare,
-		// Token: 0x04020300 RID: 131840
+		// Token: 0x0401ADC6 RID: 110022
 		NightmareLordInstShare,
-		// Token: 0x04020301 RID: 131841
+		// Token: 0x0401ADC7 RID: 110023
 		LordInstShare,
-		// Token: 0x04020302 RID: 131842
-		SilentAreaInstShare
+		// Token: 0x0401ADC8 RID: 110024
+		SilentAreaInstShare,
+		// Token: 0x0401ADC9 RID: 110025
+		RoleTower = 67
 	}
 }

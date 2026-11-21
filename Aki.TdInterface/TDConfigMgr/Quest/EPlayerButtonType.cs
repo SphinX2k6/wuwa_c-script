@@ -3,13 +3,13 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000E79 RID: 3705
+	// Token: 0x02000F8C RID: 3980
 	[EnumExtensions]
 	public enum EPlayerButtonType
 	{
-		// Token: 0x040030DA RID: 12506
+		// Token: 0x040033DC RID: 13276
 		ChallengeAgain,
-		// Token: 0x040030DB RID: 12507
+		// Token: 0x040033DD RID: 13277
 		ExitChallenge
 	}
 }

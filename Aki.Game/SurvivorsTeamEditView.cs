@@ -10,18 +10,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002B58 RID: 11096
+// Token: 0x020020D4 RID: 8404
 [NullableContext(2)]
 [Nullable(0)]
 public class SurvivorsTeamEditView : UiViewBase
 {
-	// Token: 0x06017022 RID: 94242 RVA: 0x005D7877 File Offset: 0x005D5A77
+	// Token: 0x06014A53 RID: 84563 RVA: 0x006043E3 File Offset: 0x006025E3
 	[NullableContext(1)]
 	public SurvivorsTeamEditView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06017023 RID: 94243 RVA: 0x005D788C File Offset: 0x005D5A8C
+	// Token: 0x06014A54 RID: 84564 RVA: 0x006043F8 File Offset: 0x006025F8
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -46,7 +46,7 @@ public class SurvivorsTeamEditView : UiViewBase
 		};
 	}
 
-	// Token: 0x06017024 RID: 94244 RVA: 0x005D79EC File Offset: 0x005D5BEC
+	// Token: 0x06014A55 RID: 84565 RVA: 0x00604558 File Offset: 0x00602758
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SurvivorsTeamEditView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -57,13 +57,13 @@ public class SurvivorsTeamEditView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06017025 RID: 94245 RVA: 0x005D7A2F File Offset: 0x005D5C2F
+	// Token: 0x06014A56 RID: 84566 RVA: 0x0060459B File Offset: 0x0060279B
 	protected override void OnBeforeShow()
 	{
 		SurvivorsActivityController.Instance.CheckIsActivityClose();
 	}
 
-	// Token: 0x06017026 RID: 94246 RVA: 0x005D7A3B File Offset: 0x005D5C3B
+	// Token: 0x06014A57 RID: 84567 RVA: 0x006045A7 File Offset: 0x006027A7
 	protected override void OnBeforeDestroy()
 	{
 		if (this.TsUiSceneRoleActor != null)
@@ -73,7 +73,7 @@ public class SurvivorsTeamEditView : UiViewBase
 		}
 	}
 
-	// Token: 0x06017027 RID: 94247 RVA: 0x005D7A60 File Offset: 0x005D5C60
+	// Token: 0x06014A58 RID: 84568 RVA: 0x006045CC File Offset: 0x006027CC
 	private UniTask InitItemScroll()
 	{
 		SurvivorsTeamEditView.<InitItemScroll>d__14 <InitItemScroll>d__;
@@ -84,7 +84,7 @@ public class SurvivorsTeamEditView : UiViewBase
 		return <InitItemScroll>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06017028 RID: 94248 RVA: 0x005D7AA4 File Offset: 0x005D5CA4
+	// Token: 0x06014A59 RID: 84569 RVA: 0x00604610 File Offset: 0x00602810
 	private void GetData()
 	{
 		this.SurvivorsLevelInfo = SurvivorsRogueModel.Instance.SelectLevelInfo;
@@ -136,7 +136,7 @@ public class SurvivorsTeamEditView : UiViewBase
 		});
 	}
 
-	// Token: 0x06017029 RID: 94249 RVA: 0x005D7BE0 File Offset: 0x005D5DE0
+	// Token: 0x06014A5A RID: 84570 RVA: 0x0060474C File Offset: 0x0060294C
 	private void RefreshView()
 	{
 		UUIItem item = base.GetItem(5);
@@ -167,7 +167,7 @@ public class SurvivorsTeamEditView : UiViewBase
 		RoleController.Instance.OnSelectedRoleChangeByConfig(roleDataById.GetRoleConfig().Id, roleDataById.GetRoleSkinId(), null);
 	}
 
-	// Token: 0x0601702A RID: 94250 RVA: 0x005D7CF8 File Offset: 0x005D5EF8
+	// Token: 0x06014A5B RID: 84571 RVA: 0x00604864 File Offset: 0x00602A64
 	protected override void OnHandleLoadScene()
 	{
 		if (this.TsUiSceneRoleActor == null)
@@ -184,7 +184,7 @@ public class SurvivorsTeamEditView : UiViewBase
 		this.RefreshView();
 	}
 
-	// Token: 0x0601702B RID: 94251 RVA: 0x005D7D59 File Offset: 0x005D5F59
+	// Token: 0x06014A5C RID: 84572 RVA: 0x006048C5 File Offset: 0x00602AC5
 	[NullableContext(1)]
 	private SurvivorsTeamEditRoleItemGird OnGridProxyCreate()
 	{
@@ -194,7 +194,7 @@ public class SurvivorsTeamEditView : UiViewBase
 		return survivorsTeamEditRoleItemGird;
 	}
 
-	// Token: 0x0601702C RID: 94252 RVA: 0x005D7D84 File Offset: 0x005D5F84
+	// Token: 0x06014A5D RID: 84573 RVA: 0x006048F0 File Offset: 0x00602AF0
 	[NullableContext(1)]
 	private void ToggleFunction(MediumItemGridExtendCallback callbackParameter)
 	{
@@ -210,21 +210,21 @@ public class SurvivorsTeamEditView : UiViewBase
 		}
 	}
 
-	// Token: 0x0601702D RID: 94253 RVA: 0x005D7DD9 File Offset: 0x005D5FD9
+	// Token: 0x06014A5E RID: 84574 RVA: 0x00604945 File Offset: 0x00602B45
 	[NullableContext(1)]
 	private bool CanExecuteChangeFunction(object data, bool isForceSelected, EToggleState state)
 	{
 		return true;
 	}
 
-	// Token: 0x0601702E RID: 94254 RVA: 0x005D7DDC File Offset: 0x005D5FDC
+	// Token: 0x06014A5F RID: 84575 RVA: 0x00604948 File Offset: 0x00602B48
 	private void OnConfirmBtnClick()
 	{
 		this.SurvivorsLevelInfo.RoleId = this.CurSelectRoleData.SurRoleId;
 		SurvivorsRogueController.Instance.OpenEnterInstConfirm();
 	}
 
-	// Token: 0x0601702F RID: 94255 RVA: 0x005D7E00 File Offset: 0x005D6000
+	// Token: 0x06014A60 RID: 84576 RVA: 0x0060496C File Offset: 0x00602B6C
 	private void OnHandBookBtnClick()
 	{
 		SurvivorsHandbookViewOpenParams survivorsHandbookViewOpenParams = new SurvivorsHandbookViewOpenParams();
@@ -235,19 +235,19 @@ public class SurvivorsTeamEditView : UiViewBase
 		UiManager.Instance.OpenView(EUiViewName.SurvivorsHandbookView, param, null);
 	}
 
-	// Token: 0x06017030 RID: 94256 RVA: 0x005D7E50 File Offset: 0x005D6050
+	// Token: 0x06014A61 RID: 84577 RVA: 0x006049BC File Offset: 0x00602BBC
 	private void OnBackBtnClick()
 	{
 		UiManager.Instance.CloseView(EUiViewName.SurvivorsTeamEditView, null);
 	}
 
-	// Token: 0x0400ABE2 RID: 44002
+	// Token: 0x0400AFE8 RID: 45032
 	private TsUiSceneRoleActor TsUiSceneRoleActor;
 
-	// Token: 0x0400ABE3 RID: 44003
+	// Token: 0x0400AFE9 RID: 45033
 	private SurvivorsActivityDefine.SurvivorsLevelInfo SurvivorsLevelInfo;
 
-	// Token: 0x0400ABE4 RID: 44004
+	// Token: 0x0400AFEA RID: 45034
 	[Nullable(new byte[]
 	{
 		2,
@@ -256,22 +256,22 @@ public class SurvivorsTeamEditView : UiViewBase
 	})]
 	private LoopScrollView<SurvivorsTeamEditRoleItemGird, SurvivorsRoleData> RoleScrollView;
 
-	// Token: 0x0400ABE5 RID: 44005
+	// Token: 0x0400AFEB RID: 45035
 	private SurvivorsRoleData CurSelectRoleData;
 
-	// Token: 0x0400ABE6 RID: 44006
+	// Token: 0x0400AFEC RID: 45036
 	[Nullable(1)]
 	private readonly List<SurvivorsRoleData> RoleDataList = new List<SurvivorsRoleData>();
 
-	// Token: 0x0400ABE7 RID: 44007
+	// Token: 0x0400AFED RID: 45037
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x0400ABE8 RID: 44008
+	// Token: 0x0400AFEE RID: 45038
 	private SurvivorsRogueCardBase CardItem;
 
-	// Token: 0x0400ABE9 RID: 44009
+	// Token: 0x0400AFEF RID: 45039
 	private SurvivorsRoleTabDetail RoleInfoPanel;
 
-	// Token: 0x0400ABEA RID: 44010
+	// Token: 0x0400AFF0 RID: 45040
 	private FunctionalPanelConditionLock PnlRedTips;
 }

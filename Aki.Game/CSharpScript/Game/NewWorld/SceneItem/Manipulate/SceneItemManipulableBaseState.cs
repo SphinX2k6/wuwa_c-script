@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 {
-	// Token: 0x020071DE RID: 29150
+	// Token: 0x02006293 RID: 25235
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SceneItemManipulableBaseState
 	{
-		// Token: 0x06047593 RID: 292243 RVA: 0x012242E0 File Offset: 0x012224E0
+		// Token: 0x0603CE95 RID: 249493 RVA: 0x0117E114 File Offset: 0x0117C314
 		[NullableContext(1)]
 		public SceneItemManipulableBaseState(SceneItemManipulatableComponent sceneItem)
 		{
@@ -31,13 +31,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			this.UeActorComp = ueActorComp;
 		}
 
-		// Token: 0x06047594 RID: 292244 RVA: 0x01224334 File Offset: 0x01222534
+		// Token: 0x0603CE96 RID: 249494 RVA: 0x0117E168 File Offset: 0x0117C368
 		public void ChangeMoveController(bool isAutonomous)
 		{
 			this.OnChangeMoveController(isAutonomous);
 		}
 
-		// Token: 0x06047595 RID: 292245 RVA: 0x01224340 File Offset: 0x01222540
+		// Token: 0x0603CE97 RID: 249495 RVA: 0x0117E174 File Offset: 0x0117C374
 		protected virtual void OnChangeMoveController(bool isAutonomous)
 		{
 			if (isAutonomous)
@@ -78,7 +78,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x06047596 RID: 292246 RVA: 0x012243CC File Offset: 0x012225CC
+		// Token: 0x0603CE98 RID: 249496 RVA: 0x0117E200 File Offset: 0x0117C400
 		public void Enter(bool isAutonomous)
 		{
 			if (isAutonomous)
@@ -89,17 +89,17 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			this.OnSimulateEnter();
 		}
 
-		// Token: 0x06047597 RID: 292247 RVA: 0x012243DE File Offset: 0x012225DE
+		// Token: 0x0603CE99 RID: 249497 RVA: 0x0117E212 File Offset: 0x0117C412
 		protected virtual void OnEnter()
 		{
 		}
 
-		// Token: 0x06047598 RID: 292248 RVA: 0x012243E0 File Offset: 0x012225E0
+		// Token: 0x0603CE9A RID: 249498 RVA: 0x0117E214 File Offset: 0x0117C414
 		protected virtual void OnSimulateEnter()
 		{
 		}
 
-		// Token: 0x06047599 RID: 292249 RVA: 0x012243E2 File Offset: 0x012225E2
+		// Token: 0x0603CE9B RID: 249499 RVA: 0x0117E216 File Offset: 0x0117C416
 		public void Tick(float delta, bool isAutonomous)
 		{
 			if (isAutonomous)
@@ -110,17 +110,17 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			this.OnSimulateTick(delta);
 		}
 
-		// Token: 0x0604759A RID: 292250 RVA: 0x012243F6 File Offset: 0x012225F6
+		// Token: 0x0603CE9C RID: 249500 RVA: 0x0117E22A File Offset: 0x0117C42A
 		protected virtual void OnTick(float delta)
 		{
 		}
 
-		// Token: 0x0604759B RID: 292251 RVA: 0x012243F8 File Offset: 0x012225F8
+		// Token: 0x0603CE9D RID: 249501 RVA: 0x0117E22C File Offset: 0x0117C42C
 		protected virtual void OnSimulateTick(float delta)
 		{
 		}
 
-		// Token: 0x0604759C RID: 292252 RVA: 0x012243FA File Offset: 0x012225FA
+		// Token: 0x0603CE9E RID: 249502 RVA: 0x0117E22E File Offset: 0x0117C42E
 		public void Exit(bool isAutonomous)
 		{
 			if (isAutonomous)
@@ -131,17 +131,17 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			this.OnSimulateExit();
 		}
 
-		// Token: 0x0604759D RID: 292253 RVA: 0x0122440C File Offset: 0x0122260C
+		// Token: 0x0603CE9F RID: 249503 RVA: 0x0117E240 File Offset: 0x0117C440
 		protected virtual void OnExit()
 		{
 		}
 
-		// Token: 0x0604759E RID: 292254 RVA: 0x0122440E File Offset: 0x0122260E
+		// Token: 0x0603CEA0 RID: 249504 RVA: 0x0117E242 File Offset: 0x0117C442
 		protected virtual void OnSimulateExit()
 		{
 		}
 
-		// Token: 0x0604759F RID: 292255 RVA: 0x01224410 File Offset: 0x01222610
+		// Token: 0x0603CEA1 RID: 249505 RVA: 0x0117E244 File Offset: 0x0117C444
 		protected void StartCameraShake([Nullable(new byte[]
 		{
 			0,
@@ -155,7 +155,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x060475A0 RID: 292256 RVA: 0x0122447C File Offset: 0x0122267C
+		// Token: 0x0603CEA2 RID: 249506 RVA: 0x0117E2B0 File Offset: 0x0117C4B0
 		protected void StopCameraShake()
 		{
 			APlayerCameraManager characterCameraManager = Global.CharacterCameraManager;
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x060475A1 RID: 292257 RVA: 0x012244BB File Offset: 0x012226BB
+		// Token: 0x0603CEA3 RID: 249507 RVA: 0x0117E2EF File Offset: 0x0117C4EF
 		protected void StartGamepadShake(UKuroForceFeedbackEffect gamepadShake)
 		{
 			if (gamepadShake == null || !gamepadShake.IsValid())
@@ -179,7 +179,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			GamepadController.Instance.TriggerGamepadShakeByManipulatable(gamepadShake);
 		}
 
-		// Token: 0x060475A2 RID: 292258 RVA: 0x012244DA File Offset: 0x012226DA
+		// Token: 0x0603CEA4 RID: 249508 RVA: 0x0117E30E File Offset: 0x0117C50E
 		protected void StopGamepadShake(UKuroForceFeedbackEffect gamepadShake)
 		{
 			if (gamepadShake == null || !gamepadShake.IsValid())
@@ -189,7 +189,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			GamepadController.Instance.StopManipulatableGamepadShake(gamepadShake);
 		}
 
-		// Token: 0x060475A3 RID: 292259 RVA: 0x012244F9 File Offset: 0x012226F9
+		// Token: 0x0603CEA5 RID: 249509 RVA: 0x0117E32D File Offset: 0x0117C52D
 		protected void OpenPhysicsSplit()
 		{
 			UActorComponent ueActorComp = this.UeActorComp;
@@ -199,7 +199,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x060475A4 RID: 292260 RVA: 0x0122451B File Offset: 0x0122271B
+		// Token: 0x0603CEA6 RID: 249510 RVA: 0x0117E34F File Offset: 0x0117C54F
 		protected void ClosePhysicsSplit()
 		{
 			UActorComponent ueActorComp = this.UeActorComp;
@@ -210,31 +210,31 @@ namespace CSharpScript.Game.NewWorld.SceneItem.Manipulate
 			}
 		}
 
-		// Token: 0x060475A5 RID: 292261 RVA: 0x01224549 File Offset: 0x01222749
+		// Token: 0x0603CEA7 RID: 249511 RVA: 0x0117E37D File Offset: 0x0117C57D
 		public virtual bool IsNoLockCasting()
 		{
 			return false;
 		}
 
-		// Token: 0x04025835 RID: 153653
+		// Token: 0x040204A4 RID: 132260
 		protected readonly SceneItemManipulatableComponent SceneItem;
 
-		// Token: 0x04025836 RID: 153654
+		// Token: 0x040204A5 RID: 132261
 		protected readonly SceneItemPropertyComponent PropComp;
 
-		// Token: 0x04025837 RID: 153655
+		// Token: 0x040204A6 RID: 132262
 		private UCameraShakeBase CurrentCameraShake;
 
-		// Token: 0x04025838 RID: 153656
+		// Token: 0x040204A7 RID: 132263
 		protected Action EnterCallback;
 
-		// Token: 0x04025839 RID: 153657
+		// Token: 0x040204A8 RID: 132264
 		protected readonly Action ExitCallback;
 
-		// Token: 0x0402583A RID: 153658
+		// Token: 0x040204A9 RID: 132265
 		protected float Timer;
 
-		// Token: 0x0402583B RID: 153659
+		// Token: 0x040204AA RID: 132266
 		protected UActorComponent UeActorComp;
 	}
 }

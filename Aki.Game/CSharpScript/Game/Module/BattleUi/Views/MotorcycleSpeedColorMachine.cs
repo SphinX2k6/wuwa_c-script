@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DA4 RID: 23972
+	// Token: 0x02004D86 RID: 19846
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorcycleSpeedColorMachine
 	{
-		// Token: 0x0603CDEB RID: 249323 RVA: 0x00E9F1BC File Offset: 0x00E9D3BC
+		// Token: 0x06031D48 RID: 204104 RVA: 0x00DEFA74 File Offset: 0x00DEDC74
 		public void Init(string color, int? duration = null)
 		{
 			this.TargetColor = color;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.UpdateColorByCurrentColor();
 		}
 
-		// Token: 0x0603CDEC RID: 249324 RVA: 0x00E9F23C File Offset: 0x00E9D43C
+		// Token: 0x06031D49 RID: 204105 RVA: 0x00DEFAF4 File Offset: 0x00DEDCF4
 		private void UpdateColorByCurrentColor()
 		{
 			this.Color.R = (float)(this.CurrentColorValues[0] / 255.0);
@@ -40,7 +40,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.Color.A = (float)(this.CurrentColorValues[3] / 255.0);
 		}
 
-		// Token: 0x0603CDED RID: 249325 RVA: 0x00E9F2C4 File Offset: 0x00E9D4C4
+		// Token: 0x06031D4A RID: 204106 RVA: 0x00DEFB7C File Offset: 0x00DEDD7C
 		private void ParseColorValues(string color, double[] outValues)
 		{
 			for (int i = 0; i < 4; i++)
@@ -57,7 +57,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CDEE RID: 249326 RVA: 0x00E9F310 File Offset: 0x00E9D510
+		// Token: 0x06031D4B RID: 204107 RVA: 0x00DEFBC8 File Offset: 0x00DEDDC8
 		public void SetTargetColor(string color)
 		{
 			if (color == this.TargetColor)
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.IsLerpFinish = false;
 		}
 
-		// Token: 0x0603CDEF RID: 249327 RVA: 0x00E9F374 File Offset: 0x00E9D574
+		// Token: 0x06031D4C RID: 204108 RVA: 0x00DEFC2C File Offset: 0x00DEDE2C
 		public bool Update(double delta)
 		{
 			if (this.IsLerpFinish)
@@ -116,37 +116,37 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return true;
 		}
 
-		// Token: 0x0603CDF0 RID: 249328 RVA: 0x00E9F45E File Offset: 0x00E9D65E
+		// Token: 0x06031D4D RID: 204109 RVA: 0x00DEFD16 File Offset: 0x00DEDF16
 		public FLinearColor GetColor()
 		{
 			return this.Color;
 		}
 
-		// Token: 0x0401FB4B RID: 129867
+		// Token: 0x0401A603 RID: 108035
 		private const int COLOR_NUM = 4;
 
-		// Token: 0x0401FB4C RID: 129868
+		// Token: 0x0401A604 RID: 108036
 		private const int DURATION = 350;
 
-		// Token: 0x0401FB4D RID: 129869
+		// Token: 0x0401A605 RID: 108037
 		private readonly double[] CurrentColorValues = new double[4];
 
-		// Token: 0x0401FB4E RID: 129870
+		// Token: 0x0401A606 RID: 108038
 		private readonly double[] TargetColorValues = new double[4];
 
-		// Token: 0x0401FB4F RID: 129871
+		// Token: 0x0401A607 RID: 108039
 		private readonly double[] Speed = new double[4];
 
-		// Token: 0x0401FB50 RID: 129872
+		// Token: 0x0401A608 RID: 108040
 		private string TargetColor = string.Empty;
 
-		// Token: 0x0401FB51 RID: 129873
+		// Token: 0x0401A609 RID: 108041
 		private FLinearColor Color;
 
-		// Token: 0x0401FB52 RID: 129874
+		// Token: 0x0401A60A RID: 108042
 		private bool IsLerpFinish;
 
-		// Token: 0x0401FB53 RID: 129875
+		// Token: 0x0401A60B RID: 108043
 		public int Duration = 350;
 	}
 }

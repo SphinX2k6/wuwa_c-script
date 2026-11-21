@@ -5,13 +5,13 @@ using Aki.Protocol;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D7A RID: 23930
+	// Token: 0x02004D5C RID: 19804
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class BehaviorTreeViewShowData : IMissionItemViewShowData
 	{
-		// Token: 0x17008E30 RID: 36400
-		// (get) Token: 0x0603CBC2 RID: 248770 RVA: 0x00E954C5 File Offset: 0x00E936C5
+		// Token: 0x17006202 RID: 25090
+		// (get) Token: 0x06031B1E RID: 203550 RVA: 0x00DE5D0D File Offset: 0x00DE3F0D
 		public EMissionItemViewDataSource DataSource
 		{
 			get
@@ -20,33 +20,33 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x17008E31 RID: 36401
-		// (get) Token: 0x0603CBC3 RID: 248771 RVA: 0x00E954C8 File Offset: 0x00E936C8
-		// (set) Token: 0x0603CBC4 RID: 248772 RVA: 0x00E954D0 File Offset: 0x00E936D0
+		// Token: 0x17006203 RID: 25091
+		// (get) Token: 0x06031B1F RID: 203551 RVA: 0x00DE5D10 File Offset: 0x00DE3F10
+		// (set) Token: 0x06031B20 RID: 203552 RVA: 0x00DE5D18 File Offset: 0x00DE3F18
 		public long Id { get; private set; }
 
-		// Token: 0x17008E32 RID: 36402
-		// (get) Token: 0x0603CBC5 RID: 248773 RVA: 0x00E954D9 File Offset: 0x00E936D9
-		// (set) Token: 0x0603CBC6 RID: 248774 RVA: 0x00E954E1 File Offset: 0x00E936E1
+		// Token: 0x17006204 RID: 25092
+		// (get) Token: 0x06031B21 RID: 203553 RVA: 0x00DE5D21 File Offset: 0x00DE3F21
+		// (set) Token: 0x06031B22 RID: 203554 RVA: 0x00DE5D29 File Offset: 0x00DE3F29
 		public int TrackIconConfigId { get; private set; }
 
-		// Token: 0x17008E33 RID: 36403
-		// (get) Token: 0x0603CBC7 RID: 248775 RVA: 0x00E954EA File Offset: 0x00E936EA
-		// (set) Token: 0x0603CBC8 RID: 248776 RVA: 0x00E954F2 File Offset: 0x00E936F2
+		// Token: 0x17006205 RID: 25093
+		// (get) Token: 0x06031B23 RID: 203555 RVA: 0x00DE5D32 File Offset: 0x00DE3F32
+		// (set) Token: 0x06031B24 RID: 203556 RVA: 0x00DE5D3A File Offset: 0x00DE3F3A
 		public int ShowPriority { get; private set; }
 
-		// Token: 0x17008E34 RID: 36404
-		// (get) Token: 0x0603CBC9 RID: 248777 RVA: 0x00E954FB File Offset: 0x00E936FB
-		// (set) Token: 0x0603CBCA RID: 248778 RVA: 0x00E95503 File Offset: 0x00E93703
+		// Token: 0x17006206 RID: 25094
+		// (get) Token: 0x06031B25 RID: 203557 RVA: 0x00DE5D43 File Offset: 0x00DE3F43
+		// (set) Token: 0x06031B26 RID: 203558 RVA: 0x00DE5D4B File Offset: 0x00DE3F4B
 		public string TitleTextKey { get; private set; }
 
-		// Token: 0x17008E35 RID: 36405
-		// (get) Token: 0x0603CBCB RID: 248779 RVA: 0x00E9550C File Offset: 0x00E9370C
-		// (set) Token: 0x0603CBCC RID: 248780 RVA: 0x00E95514 File Offset: 0x00E93714
+		// Token: 0x17006207 RID: 25095
+		// (get) Token: 0x06031B27 RID: 203559 RVA: 0x00DE5D54 File Offset: 0x00DE3F54
+		// (set) Token: 0x06031B28 RID: 203560 RVA: 0x00DE5D5C File Offset: 0x00DE3F5C
 		public long? ParentId { get; private set; }
 
-		// Token: 0x17008E36 RID: 36406
-		// (get) Token: 0x0603CBCD RID: 248781 RVA: 0x00E9551D File Offset: 0x00E9371D
+		// Token: 0x17006208 RID: 25096
+		// (get) Token: 0x06031B29 RID: 203561 RVA: 0x00DE5D65 File Offset: 0x00DE3F65
 		[Nullable(1)]
 		MissionViewStepTextInfoBase IMissionItemViewShowData.MainStepInfo
 		{
@@ -57,8 +57,8 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x17008E37 RID: 36407
-		// (get) Token: 0x0603CBCE RID: 248782 RVA: 0x00E95525 File Offset: 0x00E93725
+		// Token: 0x17006209 RID: 25097
+		// (get) Token: 0x06031B2A RID: 203562 RVA: 0x00DE5D6D File Offset: 0x00DE3F6D
 		[Nullable(1)]
 		IReadOnlyList<MissionViewStepTextInfoBase> IMissionItemViewShowData.SubStepInfos
 		{
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CBCF RID: 248783 RVA: 0x00E95530 File Offset: 0x00E93730
+		// Token: 0x06031B2B RID: 203563 RVA: 0x00DE5D78 File Offset: 0x00DE3F78
 		[return: Nullable(1)]
 		public static BehaviorTreeViewShowData Create(BtType btType, long treeIncId, int treeConfigId, bool bInChallenge, int trackIconConfigId, int showPriority, string titleTextKey, BehaviorTreeStepTextInfo mainStepText, [Nullable(new byte[]
 		{
@@ -92,19 +92,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			};
 		}
 
-		// Token: 0x0401FA41 RID: 129601
+		// Token: 0x0401A4F9 RID: 107769
 		public BtType BtType;
 
-		// Token: 0x0401FA43 RID: 129603
+		// Token: 0x0401A4FB RID: 107771
 		public int TreeConfigId;
 
-		// Token: 0x0401FA44 RID: 129604
+		// Token: 0x0401A4FC RID: 107772
 		public bool IsInChallenge;
 
-		// Token: 0x0401FA48 RID: 129608
+		// Token: 0x0401A500 RID: 107776
 		public BehaviorTreeStepTextInfo MainStepInfo;
 
-		// Token: 0x0401FA49 RID: 129609
+		// Token: 0x0401A501 RID: 107777
 		[Nullable(new byte[]
 		{
 			2,

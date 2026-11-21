@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020056F2 RID: 22258
+	// Token: 0x02005CE1 RID: 23777
 	public enum IPathDrivenActorMoveBase_Union : byte
 	{
-		// Token: 0x0400EB43 RID: 60227
+		// Token: 0x0400F810 RID: 63504
 		NONE,
-		// Token: 0x0400EB44 RID: 60228
+		// Token: 0x0400F811 RID: 63505
 		IPathDrivenActorMoveBase,
-		// Token: 0x0400EB45 RID: 60229
+		// Token: 0x0400F812 RID: 63506
 		IPathDrivenActorSplineMove
 	}
 }

@@ -2,24 +2,24 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006A91 RID: 27281
+	// Token: 0x020071B6 RID: 29110
 	public enum IMechStuntConfigType_Union : byte
 	{
-		// Token: 0x040112CB RID: 70347
+		// Token: 0x040121C6 RID: 74182
 		NONE,
-		// Token: 0x040112CC RID: 70348
+		// Token: 0x040121C7 RID: 74183
 		IMechStuntConfigType,
-		// Token: 0x040112CD RID: 70349
+		// Token: 0x040121C8 RID: 74184
 		IMechStuntDive,
-		// Token: 0x040112CE RID: 70350
+		// Token: 0x040121C9 RID: 74185
 		IMechStuntClimbFly,
-		// Token: 0x040112CF RID: 70351
+		// Token: 0x040121CA RID: 74186
 		IMechStuntLevelFly,
-		// Token: 0x040112D0 RID: 70352
+		// Token: 0x040121CB RID: 74187
 		IMechStuntHighSpeed,
-		// Token: 0x040112D1 RID: 70353
+		// Token: 0x040121CC RID: 74188
 		IMechStuntWater,
-		// Token: 0x040112D2 RID: 70354
+		// Token: 0x040121CD RID: 74189
 		IMechStuntBurrow
 	}
 }

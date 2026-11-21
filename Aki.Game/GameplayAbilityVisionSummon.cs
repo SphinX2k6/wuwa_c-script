@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Linq;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol.Summon;
 using AkiClient.Game.Aki.Character.BaseCharacter;
@@ -7,18 +7,18 @@ using AkiClient.Game.Aki.Character.Vision;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x020031AE RID: 12718
+// Token: 0x0200271D RID: 10013
 [NullableContext(2)]
 [Nullable(0)]
 public class GameplayAbilityVisionSummon : GameplayAbilityVisionBase
 {
-	// Token: 0x0601B6B0 RID: 112304 RVA: 0x0077FD75 File Offset: 0x0077DF75
+	// Token: 0x060191E3 RID: 102883 RVA: 0x007A80B9 File Offset: 0x007A62B9
 	[NullableContext(1)]
 	public GameplayAbilityVisionSummon(CharacterVisionComponent visionComponent) : base(visionComponent)
 	{
 	}
 
-	// Token: 0x0601B6B1 RID: 112305 RVA: 0x0077FD80 File Offset: 0x0077DF80
+	// Token: 0x060191E4 RID: 102884 RVA: 0x007A80C4 File Offset: 0x007A62C4
 	protected override void OnCreate()
 	{
 		EventSystem.Instance.AddWithTarget(base.Entity, EEventName.BulletDestroy, new Action<BulletInfo>(this.OnBulletDestroy));
@@ -26,7 +26,7 @@ public class GameplayAbilityVisionSummon : GameplayAbilityVisionBase
 		EventSystem.Instance.Add(EEventName.CharStopGroup1Skill, new Action<int, string>(this.OnStopSkills));
 	}
 
-	// Token: 0x0601B6B2 RID: 112306 RVA: 0x0077FDE4 File Offset: 0x0077DFE4
+	// Token: 0x060191E5 RID: 102885 RVA: 0x007A8128 File Offset: 0x007A6328
 	protected override void OnDestroy()
 	{
 		EventSystem.Instance.RemoveWithTarget(base.Entity, EEventName.BulletDestroy, new Action<BulletInfo>(this.OnBulletDestroy));
@@ -35,7 +35,7 @@ public class GameplayAbilityVisionSummon : GameplayAbilityVisionBase
 		this.EndAllTask();
 	}
 
-	// Token: 0x0601B6B3 RID: 112307 RVA: 0x0077FE4C File Offset: 0x0077E04C
+	// Token: 0x060191E6 RID: 102886 RVA: 0x007A8190 File Offset: 0x007A6390
 	protected override bool OnActivateAbility()
 	{
 		if (!this.PreSummon())
@@ -56,7 +56,19 @@ public class GameplayAbilityVisionSummon : GameplayAbilityVisionBase
 		{
 			foreach (Skill skill in component.GetAllActivatedSkill())
 			{
-				if (skill.SkillGenres.Contains(ESkillGenre.战斗幻象技9))
+				bool flag = false;
+				using (IEnumerator<ESkillGenre> enumerator2 = skill.SkillGenres.GetEnumerator())
+				{
+					while (enumerator2.MoveNext())
+					{
+						if (enumerator2.Current == ESkillGenre.战斗幻象技9)
+						{
+							flag = true;
+							break;
+						}
+					}
+				}
+				if (flag)
 				{
 					contextId = skill.CombatMessageId;
 					break;
@@ -76,7 +88,7 @@ public class GameplayAbilityVisionSummon : GameplayAbilityVisionBase
 		return true;
 	}
 
-	// Token: 0x0601B6B4 RID: 112308 RVA: 0x0077FF88 File Offset: 0x0077E188
+	// Token: 0x060191E7 RID: 102887 RVA: 0x007A8308 File Offset: 0x007A6508
 	private bool PreSummon()
 	{
 		this.VisionEntity = PhantomUtil.GetSummonedEntity(this.VisionComponent.Entity, ESummonType.ConcomitantVision, 1);
@@ -102,13 +114,13 @@ public class GameplayAbilityVisionSummon : GameplayAbilityVisionBase
 		return true;
 	}
 
-	// Token: 0x0601B6B5 RID: 112309 RVA: 0x00780092 File Offset: 0x0077E292
+	// Token: 0x060191E8 RID: 102888 RVA: 0x007A8412 File Offset: 0x007A6612
 	private bool IsAirSkill()
 	{
 		return this.VisionData.空中能否释放 && base.GameplayTagComponent.HasTag(GameplayTagDefine.EGameplayTagId["行为状态.位置状态.空中"]);
 	}
 
-	// Token: 0x0601B6B6 RID: 112310 RVA: 0x007800BD File Offset: 0x0077E2BD
+	// Token: 0x060191E9 RID: 102889 RVA: 0x007A843D File Offset: 0x007A663D
 	[NullableContext(1)]
 	private void OnBulletDestroy(BulletInfo bulletInfo)
 	{
@@ -118,7 +130,7 @@ public class GameplayAbilityVisionSummon : GameplayAbilityVisionBase
 		}
 	}
 
-	// Token: 0x0601B6B7 RID: 112311 RVA: 0x007800E4 File Offset: 0x0077E2E4
+	// Token: 0x060191EA RID: 102890 RVA: 0x007A8464 File Offset: 0x007A6664
 	private void SummonBegin(FVectorDouble location)
 	{
 		Vector commonTempVector = MathUtils.Instance.CommonTempVector;
@@ -162,14 +174,14 @@ public class GameplayAbilityVisionSummon : GameplayAbilityVisionBase
 		RoleAudioController.Instance.PlayRoleAudio(base.Entity, ERoleAudioType.VisionSummon, null);
 	}
 
-	// Token: 0x0601B6B8 RID: 112312 RVA: 0x00780273 File Offset: 0x0077E473
+	// Token: 0x060191EB RID: 102891 RVA: 0x007A85F3 File Offset: 0x007A67F3
 	private void SummonEnd()
 	{
 		this.EndAllTask();
 		this.PlayEndEffect();
 	}
 
-	// Token: 0x0601B6B9 RID: 112313 RVA: 0x00780281 File Offset: 0x0077E481
+	// Token: 0x060191EC RID: 102892 RVA: 0x007A8601 File Offset: 0x007A6801
 	private void EndAllTask()
 	{
 		if (this.WaitSummonTagRemoveTask != null)
@@ -179,7 +191,7 @@ public class GameplayAbilityVisionSummon : GameplayAbilityVisionBase
 		}
 	}
 
-	// Token: 0x0601B6BA RID: 112314 RVA: 0x007802A0 File Offset: 0x0077E4A0
+	// Token: 0x060191ED RID: 102893 RVA: 0x007A8620 File Offset: 0x007A6820
 	private void PlayEndEffect()
 	{
 		TimerHandle capturedVisionHiddenTimer = null;
@@ -213,7 +225,7 @@ public class GameplayAbilityVisionSummon : GameplayAbilityVisionBase
 		}, 1000f, null, null, true, 1f);
 	}
 
-	// Token: 0x0601B6BB RID: 112315 RVA: 0x00780370 File Offset: 0x0077E570
+	// Token: 0x060191EE RID: 102894 RVA: 0x007A86F0 File Offset: 0x007A68F0
 	private void VisionDisable()
 	{
 		EntityHandle visionEntity = this.VisionEntity;
@@ -231,7 +243,7 @@ public class GameplayAbilityVisionSummon : GameplayAbilityVisionBase
 		EventSystem.Instance.Emit<int>(EEventName.EndVisionSkill, this.VisionComponent.GetVisionId(null));
 	}
 
-	// Token: 0x0601B6BC RID: 112316 RVA: 0x0078040C File Offset: 0x0077E60C
+	// Token: 0x060191EF RID: 102895 RVA: 0x007A878C File Offset: 0x007A698C
 	[NullableContext(1)]
 	private void OnStopSkills(int entityId, string reason)
 	{
@@ -252,43 +264,43 @@ public class GameplayAbilityVisionSummon : GameplayAbilityVisionBase
 		}
 	}
 
-	// Token: 0x0601B6BD RID: 112317 RVA: 0x00780474 File Offset: 0x0077E674
+	// Token: 0x060191F0 RID: 102896 RVA: 0x007A87F4 File Offset: 0x007A69F4
 	protected void SetVisionEnable(bool enable)
 	{
 		CreatureController.Instance.SetEntityEnable(this.VisionEntity.Entity, enable, "GameplayAbilityVisionSummon.SetVisionEnable", true);
 		EventSystem.Instance.Emit<bool>(EEventName.OnPhantomEnableStateChange, enable);
 	}
 
-	// Token: 0x0400D6D0 RID: 54992
+	// Token: 0x0400DB57 RID: 56151
 	private EntityHandle VisionEntity;
 
-	// Token: 0x0400D6D1 RID: 54993
+	// Token: 0x0400DB58 RID: 56152
 	private SVisionData VisionData;
 
-	// Token: 0x0400D6D2 RID: 54994
+	// Token: 0x0400DB59 RID: 56153
 	private int SummonBulletId;
 
-	// Token: 0x0400D6D3 RID: 54995
+	// Token: 0x0400DB5A RID: 56154
 	private CharacterActorComponent VisionActorComponent;
 
-	// Token: 0x0400D6D4 RID: 54996
+	// Token: 0x0400DB5B RID: 56155
 	private CharacterSkillComponent VisionSkillComponent;
 
-	// Token: 0x0400D6D5 RID: 54997
+	// Token: 0x0400DB5C RID: 56156
 	private BaseTagComponent VisionGameplayTagComponent;
 
-	// Token: 0x0400D6D6 RID: 54998
+	// Token: 0x0400DB5D RID: 56157
 	private CharacterBuffComponent VisionBuffComponent;
 
-	// Token: 0x0400D6D7 RID: 54999
+	// Token: 0x0400DB5E RID: 56158
 	private CharacterGameplayCueComponent VisionCueComponent;
 
-	// Token: 0x0400D6D8 RID: 55000
+	// Token: 0x0400DB5F RID: 56159
 	private ITagTask WaitSummonTagRemoveTask;
 
-	// Token: 0x0400D6D9 RID: 55001
+	// Token: 0x0400DB60 RID: 56160
 	private int CueHandle;
 
-	// Token: 0x0400D6DA RID: 55002
+	// Token: 0x0400DB61 RID: 56161
 	private bool IsActivating;
 }

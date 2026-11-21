@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002875 RID: 10357
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B4B RID: 11083
 	public class ISceneInspectionPoint
 	{
-		// Token: 0x0600E578 RID: 58744 RVA: 0x0021BC2C File Offset: 0x00219E2C
+		// Token: 0x0600F3A9 RID: 62377 RVA: 0x00238B7E File Offset: 0x00236D7E
 		public static ISceneInspectionPoint Create(ISceneInspectionPoint? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004650 RID: 18000
-		// (get) Token: 0x0600E579 RID: 58745 RVA: 0x0021BC4B File Offset: 0x00219E4B
+		// Token: 0x170049C1 RID: 18881
+		// (get) Token: 0x0600F3AA RID: 62378 RVA: 0x00238B9D File Offset: 0x00236D9D
 		public virtual VectorInfo InteractPointPos
 		{
 			get
@@ -40,8 +38,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004651 RID: 18001
-		// (get) Token: 0x0600E57A RID: 58746 RVA: 0x0021BC80 File Offset: 0x00219E80
+		// Token: 0x170049C2 RID: 18882
+		// (get) Token: 0x0600F3AB RID: 62379 RVA: 0x00238BD4 File Offset: 0x00236DD4
 		public virtual List<ActionInfo> ActionList
 		{
 			get
@@ -61,20 +59,20 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007EDF RID: 32479
+		// Token: 0x0400859F RID: 34207
 		private ISceneInspectionPoint Instance;
 
-		// Token: 0x04007EE0 RID: 32480
+		// Token: 0x040085A0 RID: 34208
 		[Nullable(2)]
 		private VectorInfo _InteractPointPosCache;
 
-		// Token: 0x04007EE1 RID: 32481
+		// Token: 0x040085A1 RID: 34209
 		private bool _InteractPointPosInited;
 
-		// Token: 0x04007EE2 RID: 32482
+		// Token: 0x040085A2 RID: 34210
 		private List<ActionInfo> _ActionListCache;
 
-		// Token: 0x04007EE3 RID: 32483
+		// Token: 0x040085A3 RID: 34211
 		private bool _ActionListInited;
 	}
 }

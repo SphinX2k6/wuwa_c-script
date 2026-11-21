@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -10,33 +9,33 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 
-// Token: 0x02001720 RID: 5920
+// Token: 0x02000BD8 RID: 3032
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class CalabashController : UiControllerBase
 {
-	// Token: 0x0600AB04 RID: 43780 RVA: 0x00266E02 File Offset: 0x00265002
+	// Token: 0x06007EE6 RID: 32486 RVA: 0x002711DA File Offset: 0x0026F3DA
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.ActiveBattleView, this.OnShowUnlockItemView);
 		EventSystem.Instance.Add(EEventName.OnVisionRefineSubNeedAck, new Action(this.OnVisionRefineSubNeedAck));
 	}
 
-	// Token: 0x0600AB05 RID: 43781 RVA: 0x00266E36 File Offset: 0x00265036
+	// Token: 0x06007EE7 RID: 32487 RVA: 0x0027120E File Offset: 0x0026F40E
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.ActiveBattleView, this.OnShowUnlockItemView);
 		EventSystem.Instance.Remove(EEventName.OnVisionRefineSubNeedAck, new Action(this.OnVisionRefineSubNeedAck));
 	}
 
-	// Token: 0x0600AB06 RID: 43782 RVA: 0x00266E6A File Offset: 0x0026506A
+	// Token: 0x06007EE8 RID: 32488 RVA: 0x00271242 File Offset: 0x0026F442
 	public void OpenCalabashUpgradeSuccessView(ICalabashUpgradeSuccessViedData data)
 	{
 		UiManager.Instance.OpenView(EUiViewName.CalabashUpgradeSuccessView, data, null);
 	}
 
-	// Token: 0x0600AB07 RID: 43783 RVA: 0x00266E80 File Offset: 0x00265080
+	// Token: 0x06007EE9 RID: 32489 RVA: 0x00271258 File Offset: 0x0026F458
 	private void OnVisionRefineSubNeedAck()
 	{
 		CalabashController.<>c__DisplayClass4_0 CS$<>8__locals1 = new CalabashController.<>c__DisplayClass4_0();
@@ -90,7 +89,7 @@ public class CalabashController : UiControllerBase
 		UiManager.Instance.OpenView(EUiViewName.VisionRefineSubResultView, visionRefineBatchResultViewData, null);
 	}
 
-	// Token: 0x0600AB08 RID: 43784 RVA: 0x00266FCC File Offset: 0x002651CC
+	// Token: 0x06007EEA RID: 32490 RVA: 0x002713A4 File Offset: 0x0026F5A4
 	public VisionRefineAttributeItemData[] BuildRefineSubVerticalLeftDataByUid(int? uid, HashSet<int> lockSet, [Nullable(new byte[]
 	{
 		2,
@@ -131,7 +130,7 @@ public class CalabashController : UiControllerBase
 		return list.ToArray();
 	}
 
-	// Token: 0x0600AB09 RID: 43785 RVA: 0x002670EC File Offset: 0x002652EC
+	// Token: 0x06007EEB RID: 32491 RVA: 0x002714C4 File Offset: 0x0026F6C4
 	public VisionRefineAttributeItemData[] BuildRefineSubVerticalRightDataByUid(int? uid, List<Aki.Protocol.PhantomPropInfo> unAckInfo, HashSet<int> lockSet, [Nullable(new byte[]
 	{
 		2,
@@ -176,7 +175,7 @@ public class CalabashController : UiControllerBase
 		return list.ToArray();
 	}
 
-	// Token: 0x0600AB0A RID: 43786 RVA: 0x00267248 File Offset: 0x00265448
+	// Token: 0x06007EEC RID: 32492 RVA: 0x00271620 File Offset: 0x0026F820
 	private void DoShowUnlockItemView()
 	{
 		if (!UiManager.Instance.IsViewShow(EUiViewName.CalabashUnlockItemView) && UiManager.Instance.IsViewShow(EUiViewName.BattleView) && !SundryModel.Instance.IsBlockTips)
@@ -192,7 +191,7 @@ public class CalabashController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600AB0B RID: 43787 RVA: 0x002672BC File Offset: 0x002654BC
+	// Token: 0x06007EED RID: 32493 RVA: 0x00271694 File Offset: 0x0026F894
 	protected override void OnRegisterNetEvent()
 	{
 		Net instance = Net.Instance;
@@ -237,7 +236,7 @@ public class CalabashController : UiControllerBase
 		instance5.Register(id5, callback5);
 	}
 
-	// Token: 0x0600AB0C RID: 43788 RVA: 0x002673A0 File Offset: 0x002655A0
+	// Token: 0x06007EEE RID: 32494 RVA: 0x00271778 File Offset: 0x0026F978
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.CalabashMsgNotify);
@@ -247,7 +246,7 @@ public class CalabashController : UiControllerBase
 		Net.Instance.UnRegister(ENotifyMessageId.PhantomDirectRefiningWeeklyResetNotify);
 	}
 
-	// Token: 0x0600AB0D RID: 43789 RVA: 0x00267400 File Offset: 0x00265600
+	// Token: 0x06007EEF RID: 32495 RVA: 0x002717D8 File Offset: 0x0026F9D8
 	[NullableContext(2)]
 	private static void CalabashMsgNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -274,7 +273,7 @@ public class CalabashController : UiControllerBase
 		CalabashModel.Instance.UpdateCalabashDevelopRewardData();
 	}
 
-	// Token: 0x0600AB0E RID: 43790 RVA: 0x002674D4 File Offset: 0x002656D4
+	// Token: 0x06007EF0 RID: 32496 RVA: 0x002718AC File Offset: 0x0026FAAC
 	[NullableContext(2)]
 	private static void CalabashExpAddNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -303,7 +302,7 @@ public class CalabashController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600AB0F RID: 43791 RVA: 0x002675AC File Offset: 0x002657AC
+	// Token: 0x06007EF1 RID: 32497 RVA: 0x00271984 File Offset: 0x0026FB84
 	[NullableContext(2)]
 	private static void CalabashDevelopRewardUnlockNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -313,16 +312,16 @@ public class CalabashController : UiControllerBase
 		CalabashModel.Instance.UpdateCalabashDevelopRewardData();
 	}
 
-	// Token: 0x0600AB10 RID: 43792 RVA: 0x002675FC File Offset: 0x002657FC
+	// Token: 0x06007EF2 RID: 32498 RVA: 0x002719D4 File Offset: 0x0026FBD4
 	[NullableContext(2)]
 	private static void CalabashLevelsRewardNotify(IMessage msg, Net.CallbackStatus _)
 	{
 		CalabashLevelsRewardNotify calabashLevelsRewardNotify = (CalabashLevelsRewardNotify)msg;
 		Log.Instance.Info(ELogModule.Calabash, ELogAuthor.XXJ, "服务端更新的葫芦已获得奖励等级列表数据", default(ReadOnlySpan<ValueTuple<string, object>>));
-		CalabashModel.Instance.SetCalabashLevelsReward(calabashLevelsRewardNotify.RewardedLevels.ToList<int>());
+		CalabashModel.Instance.SetCalabashLevelsReward(new List<int>(calabashLevelsRewardNotify.RewardedLevels));
 	}
 
-	// Token: 0x0600AB11 RID: 43793 RVA: 0x00267644 File Offset: 0x00265844
+	// Token: 0x06007EF3 RID: 32499 RVA: 0x00271A1C File Offset: 0x0026FC1C
 	[NullableContext(2)]
 	public static void PhantomDirectRefiningWeeklyResetNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -340,7 +339,7 @@ public class CalabashController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600AB12 RID: 43794 RVA: 0x002676F4 File Offset: 0x002658F4
+	// Token: 0x06007EF4 RID: 32500 RVA: 0x00271ACC File Offset: 0x0026FCCC
 	public void RequestMultiCalabashLevelReward(int[] levels)
 	{
 		Log.Instance.Info(ELogModule.Calabash, ELogAuthor.XXJ, "请求领取幻象等级奖励", default(ReadOnlySpan<ValueTuple<string, object>>));
@@ -355,12 +354,12 @@ public class CalabashController : UiControllerBase
 			}
 			if (mulCalabashLevelRewardResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(mulCalabashLevelRewardResponse.ErrorCode, 17924, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(mulCalabashLevelRewardResponse.ErrorCode, 17527, null, true, true);
 			}
 		}, 0);
 	}
 
-	// Token: 0x0600AB13 RID: 43795 RVA: 0x00267764 File Offset: 0x00265964
+	// Token: 0x06007EF5 RID: 32501 RVA: 0x00271B3C File Offset: 0x0026FD3C
 	private List<PhantomStackConsumeEntry> BuildPhantomStackConsumeEntries(ISelectedData[] dataList)
 	{
 		List<PhantomStackConsumeEntry> list = new List<PhantomStackConsumeEntry>();
@@ -374,7 +373,7 @@ public class CalabashController : UiControllerBase
 		return list;
 	}
 
-	// Token: 0x0600AB14 RID: 43796 RVA: 0x002677B8 File Offset: 0x002659B8
+	// Token: 0x06007EF6 RID: 32502 RVA: 0x00271B90 File Offset: 0x0026FD90
 	public void RequestPhantomRefiningRequest(ISelectedData[] dataList)
 	{
 		PhantomRefiningRequest phantomRefiningRequest = PhantomRefiningRequest.Create();
@@ -388,14 +387,14 @@ public class CalabashController : UiControllerBase
 			}
 			if (phantomRefiningResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(phantomRefiningResponse.ErrorCode, 29840, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(phantomRefiningResponse.ErrorCode, 27651, null, true, true);
 				return;
 			}
 			EventSystem.Instance.Emit<OneOf<PhantomBatchDirectRefiningResponse, PhantomRefiningResponse>>(EEventName.OnVisionRecoveryResult, new OneOf<PhantomBatchDirectRefiningResponse, PhantomRefiningResponse>(phantomRefiningResponse));
 		}, 0);
 	}
 
-	// Token: 0x0600AB15 RID: 43797 RVA: 0x00267810 File Offset: 0x00265A10
+	// Token: 0x06007EF7 RID: 32503 RVA: 0x00271BE8 File Offset: 0x0026FDE8
 	public void PhantomBatchDirectRefiningRequest(ISelectedData[] dataList)
 	{
 		PhantomBatchDirectRefiningRequest phantomBatchDirectRefiningRequest = Aki.Protocol.PhantomBatchDirectRefiningRequest.Create();
@@ -410,7 +409,7 @@ public class CalabashController : UiControllerBase
 			}
 			if (phantomBatchDirectRefiningResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(phantomBatchDirectRefiningResponse.ErrorCode, 29320, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(phantomBatchDirectRefiningResponse.ErrorCode, 28755, null, true, true);
 				return;
 			}
 			CalabashModel.Instance.DirectionalFusionTime = phantomBatchDirectRefiningResponse.DirectRefineWeekTimes;
@@ -418,7 +417,7 @@ public class CalabashController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600AB16 RID: 43798 RVA: 0x00267878 File Offset: 0x00265A78
+	// Token: 0x06007EF8 RID: 32504 RVA: 0x00271C50 File Offset: 0x0026FE50
 	public void RequestBatchRefiningRequest(ISelectedData[] dataList)
 	{
 		PhantomBatchRefiningRequest phantomBatchRefiningRequest = PhantomBatchRefiningRequest.Create();
@@ -432,14 +431,14 @@ public class CalabashController : UiControllerBase
 			}
 			if (phantomBatchRefiningResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(phantomBatchRefiningResponse.ErrorCode, 22170, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(phantomBatchRefiningResponse.ErrorCode, 18643, null, true, true);
 				return;
 			}
 			EventSystem.Instance.Emit<OneOf<PhantomBatchDirectRefiningResponse, PhantomBatchRefiningResponse>>(EEventName.OnVisionRecoveryBatchResult, new OneOf<PhantomBatchDirectRefiningResponse, PhantomBatchRefiningResponse>(phantomBatchRefiningResponse));
 		}, 0);
 	}
 
-	// Token: 0x0600AB17 RID: 43799 RVA: 0x002678D0 File Offset: 0x00265AD0
+	// Token: 0x06007EF9 RID: 32505 RVA: 0x00271CA8 File Offset: 0x0026FEA8
 	public void JumpToCalabashCollectTabView(int monsterId)
 	{
 		CalabashCollectViewData param = new CalabashCollectViewData
@@ -449,7 +448,7 @@ public class CalabashController : UiControllerBase
 		CalabashController.Instance.JumpToCalabashRootView(EUiTabViewName.CalabashCollectTabView, param);
 	}
 
-	// Token: 0x0600AB18 RID: 43800 RVA: 0x002678FC File Offset: 0x00265AFC
+	// Token: 0x06007EFA RID: 32506 RVA: 0x00271CD4 File Offset: 0x0026FED4
 	public void JumpToCalabashCollectTabViewOnlyShow(int monsterId, bool onlyShow)
 	{
 		CalabashCollectViewData param = new CalabashCollectViewData
@@ -460,7 +459,7 @@ public class CalabashController : UiControllerBase
 		CalabashController.Instance.JumpToCalabashRootView(EUiTabViewName.CalabashCollectTabView, param);
 	}
 
-	// Token: 0x0600AB19 RID: 43801 RVA: 0x00267934 File Offset: 0x00265B34
+	// Token: 0x06007EFB RID: 32507 RVA: 0x00271D0C File Offset: 0x0026FF0C
 	[NullableContext(2)]
 	public void JumpToCalabashRootView(EUiTabViewName tabViewName, object param = null)
 	{
@@ -486,7 +485,7 @@ public class CalabashController : UiControllerBase
 		UiManager.Instance.OpenView(EUiViewName.CalabashRootView, param2, null);
 	}
 
-	// Token: 0x0600AB1A RID: 43802 RVA: 0x002679B8 File Offset: 0x00265BB8
+	// Token: 0x06007EFC RID: 32508 RVA: 0x00271D90 File Offset: 0x0026FF90
 	public unsafe void RequestPhantomPolishRequest(int incId, int propItemId)
 	{
 		PhantomPolishRequest phantomPolishRequest = PhantomPolishRequest.Create();
@@ -542,11 +541,11 @@ public class CalabashController : UiControllerBase
 				ErrorCodeController.Instance.OpenErrorCodeScrollingTipsView(phantomPolishResponse.ErrorCode, Array.Empty<string>());
 				return;
 			}
-			ErrorCodeController.Instance.OpenErrorCodeTipView(phantomPolishResponse.ErrorCode, 16484, null, true, true);
+			ErrorCodeController.Instance.OpenErrorCodeTipView(phantomPolishResponse.ErrorCode, 25461, null, true, true);
 		}, 0);
 	}
 
-	// Token: 0x0600AB1B RID: 43803 RVA: 0x00267A6C File Offset: 0x00265C6C
+	// Token: 0x06007EFD RID: 32509 RVA: 0x00271E44 File Offset: 0x00270044
 	public UniTask RequestPhantomBatchPolishRequest(ISelectedData[] dataList, int propItemId)
 	{
 		CalabashController.<RequestPhantomBatchPolishRequest>d__24 <RequestPhantomBatchPolishRequest>d__;
@@ -559,7 +558,7 @@ public class CalabashController : UiControllerBase
 		return <RequestPhantomBatchPolishRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600AB1C RID: 43804 RVA: 0x00267AC0 File Offset: 0x00265CC0
+	// Token: 0x06007EFE RID: 32510 RVA: 0x00271E98 File Offset: 0x00270098
 	public UniTask RequestPhantomVicePolishRequest(int incId, int[] propLockIndexList)
 	{
 		CalabashController.<RequestPhantomVicePolishRequest>d__25 <RequestPhantomVicePolishRequest>d__;
@@ -571,7 +570,7 @@ public class CalabashController : UiControllerBase
 		return <RequestPhantomVicePolishRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600AB1D RID: 43805 RVA: 0x00267B0C File Offset: 0x00265D0C
+	// Token: 0x06007EFF RID: 32511 RVA: 0x00271EE4 File Offset: 0x002700E4
 	public UniTask RequestPhantomVicePolishAckRequest(int incId, bool ack)
 	{
 		CalabashController.<RequestPhantomVicePolishAckRequest>d__26 <RequestPhantomVicePolishAckRequest>d__;
@@ -583,8 +582,8 @@ public class CalabashController : UiControllerBase
 		return <RequestPhantomVicePolishAckRequest>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x17000E0F RID: 3599
-	// (get) Token: 0x0600AB1E RID: 43806 RVA: 0x00267B57 File Offset: 0x00265D57
+	// Token: 0x17000E30 RID: 3632
+	// (get) Token: 0x06007F00 RID: 32512 RVA: 0x00271F2F File Offset: 0x0027012F
 	public static CalabashController Instance
 	{
 		get
@@ -593,7 +592,7 @@ public class CalabashController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600AB1F RID: 43807 RVA: 0x00267B5E File Offset: 0x00265D5E
+	// Token: 0x06007F01 RID: 32513 RVA: 0x00271F36 File Offset: 0x00270136
 	public static CalabashController GetOrCreateInstance()
 	{
 		if (CalabashController._Instance == null)
@@ -603,7 +602,7 @@ public class CalabashController : UiControllerBase
 		return CalabashController._Instance;
 	}
 
-	// Token: 0x0600AB20 RID: 43808 RVA: 0x00267B72 File Offset: 0x00265D72
+	// Token: 0x06007F02 RID: 32514 RVA: 0x00271F4A File Offset: 0x0027014A
 	public static bool CreateInstance()
 	{
 		if (CalabashController._Instance != null)
@@ -614,24 +613,24 @@ public class CalabashController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0600AB21 RID: 43809 RVA: 0x00267B88 File Offset: 0x00265D88
+	// Token: 0x06007F03 RID: 32515 RVA: 0x00271F60 File Offset: 0x00270160
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600AB22 RID: 43810 RVA: 0x00267B8A File Offset: 0x00265D8A
+	// Token: 0x06007F04 RID: 32516 RVA: 0x00271F62 File Offset: 0x00270162
 	public static void ResetStaticDefaultValue()
 	{
 		CalabashController._Instance = null;
 	}
 
-	// Token: 0x0600AB23 RID: 43811 RVA: 0x00267B92 File Offset: 0x00265D92
+	// Token: 0x06007F05 RID: 32517 RVA: 0x00271F6A File Offset: 0x0027016A
 	static CalabashController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(CalabashController.CreateStaticDefaultValue), new Action(CalabashController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04004D8F RID: 19855
+	// Token: 0x04004E36 RID: 20022
 	private readonly Action OnShowUnlockItemView = delegate()
 	{
 		if (CalabashModel.Instance.CalabashUnlockTipsList.Count == 0)
@@ -641,15 +640,15 @@ public class CalabashController : UiControllerBase
 		CalabashController.Instance.DoShowUnlockItemView();
 	};
 
-	// Token: 0x04004D90 RID: 19856
+	// Token: 0x04004E37 RID: 20023
 	[Nullable(2)]
 	private static CalabashController _Instance;
 
-	// Token: 0x02007D1E RID: 32030
+	// Token: 0x02006EA4 RID: 28324
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x04028F9A RID: 167834
+		// Token: 0x040242C4 RID: 148164
 		[Nullable(new byte[]
 		{
 			0,
@@ -658,7 +657,7 @@ public class CalabashController : UiControllerBase
 		})]
 		public static Action<IMessage, Net.CallbackStatus> <0>__CalabashMsgNotify;
 
-		// Token: 0x04028F9B RID: 167835
+		// Token: 0x040242C5 RID: 148165
 		[Nullable(new byte[]
 		{
 			0,
@@ -667,7 +666,7 @@ public class CalabashController : UiControllerBase
 		})]
 		public static Action<IMessage, Net.CallbackStatus> <1>__CalabashExpAddNotify;
 
-		// Token: 0x04028F9C RID: 167836
+		// Token: 0x040242C6 RID: 148166
 		[Nullable(new byte[]
 		{
 			0,
@@ -676,7 +675,7 @@ public class CalabashController : UiControllerBase
 		})]
 		public static Action<IMessage, Net.CallbackStatus> <2>__CalabashDevelopRewardUnlockNotify;
 
-		// Token: 0x04028F9D RID: 167837
+		// Token: 0x040242C7 RID: 148167
 		[Nullable(new byte[]
 		{
 			0,
@@ -685,7 +684,7 @@ public class CalabashController : UiControllerBase
 		})]
 		public static Action<IMessage, Net.CallbackStatus> <3>__CalabashLevelsRewardNotify;
 
-		// Token: 0x04028F9E RID: 167838
+		// Token: 0x040242C8 RID: 148168
 		[Nullable(new byte[]
 		{
 			0,

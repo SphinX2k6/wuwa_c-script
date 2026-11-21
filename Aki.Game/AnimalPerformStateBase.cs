@@ -2,7 +2,7 @@
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.NPC.Animal;
 
-// Token: 0x02002E2D RID: 11821
+// Token: 0x02002389 RID: 9097
 [NullableContext(2)]
 [Nullable(new byte[]
 {
@@ -11,7 +11,7 @@ using AkiClient.Game.Aki.Character.NPC.Animal;
 })]
 public class AnimalPerformStateBase : StateBase<Entity, EAnimalPerformState>
 {
-	// Token: 0x06018E5C RID: 101980 RVA: 0x0066AF7F File Offset: 0x0066917F
+	// Token: 0x06016729 RID: 91945 RVA: 0x00690E6F File Offset: 0x0068F06F
 	[NullableContext(1)]
 	public AnimalPerformStateBase(Entity owner, EAnimalPerformState state, [Nullable(new byte[]
 	{
@@ -21,9 +21,9 @@ public class AnimalPerformStateBase : StateBase<Entity, EAnimalPerformState>
 	{
 	}
 
-	// Token: 0x1700227F RID: 8831
-	// (get) Token: 0x06018E5D RID: 101981 RVA: 0x0066AF8A File Offset: 0x0066918A
-	// (set) Token: 0x06018E5E RID: 101982 RVA: 0x0066AF92 File Offset: 0x00669192
+	// Token: 0x170022F2 RID: 8946
+	// (get) Token: 0x0601672A RID: 91946 RVA: 0x00690E7A File Offset: 0x0068F07A
+	// (set) Token: 0x0601672B RID: 91947 RVA: 0x00690E82 File Offset: 0x0068F082
 	public IBPI_AnimalEcological_C AnimalEcologicalInterface
 	{
 		get
@@ -36,28 +36,28 @@ public class AnimalPerformStateBase : StateBase<Entity, EAnimalPerformState>
 		}
 	}
 
-	// Token: 0x06018E5F RID: 101983 RVA: 0x0066AF9B File Offset: 0x0066919B
+	// Token: 0x0601672C RID: 91948 RVA: 0x00690E8B File Offset: 0x0068F08B
 	protected override void OnCreate(IEntityArgs args = null)
 	{
 		this.EcologicalInterface = args.GetP1<IBPI_AnimalEcological_C>();
 	}
 
-	// Token: 0x06018E60 RID: 101984 RVA: 0x0066AFA9 File Offset: 0x006691A9
+	// Token: 0x0601672D RID: 91949 RVA: 0x00690E99 File Offset: 0x0068F099
 	protected override void OnDestroy()
 	{
 		this.AnimalEcologicalInterface = null;
 		this.StateMachine = null;
 	}
 
-	// Token: 0x06018E61 RID: 101985 RVA: 0x0066AFB9 File Offset: 0x006691B9
+	// Token: 0x0601672E RID: 91950 RVA: 0x00690EA9 File Offset: 0x0068F0A9
 	public float GetActionTime()
 	{
 		return this.ActionTime;
 	}
 
-	// Token: 0x0400BADF RID: 47839
+	// Token: 0x0400BE6D RID: 48749
 	protected IBPI_AnimalEcological_C EcologicalInterface;
 
-	// Token: 0x0400BAE0 RID: 47840
+	// Token: 0x0400BE6E RID: 48750
 	protected float ActionTime;
 }

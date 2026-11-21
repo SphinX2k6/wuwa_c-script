@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x020019DC RID: 6620
+	// Token: 0x02000469 RID: 1129
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/KuroMovement.EMoveHitType")]
 	public enum EMoveHitType : byte
 	{
-		// Token: 0x0400D483 RID: 54403
+		// Token: 0x04002DF4 RID: 11764
 		None,
-		// Token: 0x0400D484 RID: 54404
+		// Token: 0x04002DF5 RID: 11765
 		Wall,
-		// Token: 0x0400D485 RID: 54405
+		// Token: 0x04002DF6 RID: 11766
 		Floor,
-		// Token: 0x0400D486 RID: 54406
+		// Token: 0x04002DF7 RID: 11767
 		EMoveHitType_MAX
 	}
 }

@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020017EB RID: 6123
+// Token: 0x02000CA4 RID: 3236
 public class CommonDynamicBtnItem : UiPanelBase
 {
-	// Token: 0x0600B330 RID: 45872 RVA: 0x00287D8C File Offset: 0x00285F8C
+	// Token: 0x0600871A RID: 34586 RVA: 0x00292460 File Offset: 0x00290660
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -27,14 +27,14 @@ public class CommonDynamicBtnItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600B331 RID: 45873 RVA: 0x00287E11 File Offset: 0x00286011
+	// Token: 0x0600871B RID: 34587 RVA: 0x002924E5 File Offset: 0x002906E5
 	[NullableContext(1)]
 	public void SetFunction(Action callback)
 	{
 		this._callBack = callback;
 	}
 
-	// Token: 0x0600B332 RID: 45874 RVA: 0x00287E1A File Offset: 0x0028601A
+	// Token: 0x0600871C RID: 34588 RVA: 0x002924EE File Offset: 0x002906EE
 	private void OnButtonClick()
 	{
 		if (this._callBack != null)
@@ -43,14 +43,14 @@ public class CommonDynamicBtnItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0400511D RID: 20765
+	// Token: 0x040051C8 RID: 20936
 	[Nullable(2)]
 	private Action _callBack;
 
-	// Token: 0x02007DD9 RID: 32217
+	// Token: 0x02006F5F RID: 28511
 	private class EComponent
 	{
-		// Token: 0x04029317 RID: 168727
+		// Token: 0x04024642 RID: 149058
 		public const int Btn = 0;
 	}
 }

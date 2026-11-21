@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x0200351B RID: 13595
+// Token: 0x02002A90 RID: 10896
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class BlackboardModel : ModelBase
 {
-	// Token: 0x0601DCF0 RID: 122096 RVA: 0x0085A849 File Offset: 0x00858A49
+	// Token: 0x0601BA0A RID: 113162 RVA: 0x00882DF1 File Offset: 0x00880FF1
 	protected override bool OnClear()
 	{
 		this.GlobalBlackboard.Clear();
@@ -18,7 +18,7 @@ public class BlackboardModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601DCF1 RID: 122097 RVA: 0x0085A870 File Offset: 0x00858A70
+	// Token: 0x0601BA0B RID: 113163 RVA: 0x00882E18 File Offset: 0x00881018
 	[NullableContext(2)]
 	public CreatureDataComponent GetCreatureDataComponent(int entityId)
 	{
@@ -40,7 +40,7 @@ public class BlackboardModel : ModelBase
 		return component;
 	}
 
-	// Token: 0x0601DCF2 RID: 122098 RVA: 0x0085A8DF File Offset: 0x00858ADF
+	// Token: 0x0601BA0C RID: 113164 RVA: 0x00882E87 File Offset: 0x00881087
 	public void RemoveCreatureDataComponent(int entityId)
 	{
 		if (this.CreatureDataComponentMap.ContainsKey(entityId))
@@ -49,7 +49,7 @@ public class BlackboardModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601DCF3 RID: 122099 RVA: 0x0085A8FC File Offset: 0x00858AFC
+	// Token: 0x0601BA0D RID: 113165 RVA: 0x00882EA4 File Offset: 0x008810A4
 	public int? GetIntValueByGlobal(string key)
 	{
 		BlackboardMap.BlackboardParam value = this.GlobalBlackboard.GetValue(key);
@@ -60,7 +60,7 @@ public class BlackboardModel : ModelBase
 		return new int?(value.GetIntValue());
 	}
 
-	// Token: 0x0601DCF4 RID: 122100 RVA: 0x0085A930 File Offset: 0x00858B30
+	// Token: 0x0601BA0E RID: 113166 RVA: 0x00882ED8 File Offset: 0x008810D8
 	public void SetIntValueByGlobal(string key, int value)
 	{
 		BlackboardMap.BlackboardParam blackboardParam = this.GlobalBlackboard.GetValue(key);
@@ -74,7 +74,7 @@ public class BlackboardModel : ModelBase
 		this.GlobalBlackboard.SetValue(key, blackboardParam);
 	}
 
-	// Token: 0x0601DCF5 RID: 122101 RVA: 0x0085A970 File Offset: 0x00858B70
+	// Token: 0x0601BA0F RID: 113167 RVA: 0x00882F18 File Offset: 0x00881118
 	[return: Nullable(2)]
 	public IList<int> GetIntValuesByGlobal(string key)
 	{
@@ -86,7 +86,7 @@ public class BlackboardModel : ModelBase
 		return value.GetIntValues();
 	}
 
-	// Token: 0x0601DCF6 RID: 122102 RVA: 0x0085A98C File Offset: 0x00858B8C
+	// Token: 0x0601BA10 RID: 113168 RVA: 0x00882F34 File Offset: 0x00881134
 	public void SetIntValuesByGlobal(string key, int[] values)
 	{
 		BlackboardMap.BlackboardParam blackboardParam = this.GlobalBlackboard.GetValue(key);
@@ -100,7 +100,7 @@ public class BlackboardModel : ModelBase
 		this.GlobalBlackboard.SetValue(key, blackboardParam);
 	}
 
-	// Token: 0x0601DCF7 RID: 122103 RVA: 0x0085A9CC File Offset: 0x00858BCC
+	// Token: 0x0601BA11 RID: 113169 RVA: 0x00882F74 File Offset: 0x00881174
 	public long? GetLongValueByGlobal(string key)
 	{
 		BlackboardMap.BlackboardParam value = this.GlobalBlackboard.GetValue(key);
@@ -111,7 +111,7 @@ public class BlackboardModel : ModelBase
 		return value.GetLongValue();
 	}
 
-	// Token: 0x0601DCF8 RID: 122104 RVA: 0x0085A9F8 File Offset: 0x00858BF8
+	// Token: 0x0601BA12 RID: 113170 RVA: 0x00882FA0 File Offset: 0x008811A0
 	public void SetLongValueByGlobal(string key, long value)
 	{
 		BlackboardMap.BlackboardParam blackboardParam = this.GlobalBlackboard.GetValue(key);
@@ -125,7 +125,7 @@ public class BlackboardModel : ModelBase
 		this.GlobalBlackboard.SetValue(key, blackboardParam);
 	}
 
-	// Token: 0x0601DCF9 RID: 122105 RVA: 0x0085AA38 File Offset: 0x00858C38
+	// Token: 0x0601BA13 RID: 113171 RVA: 0x00882FE0 File Offset: 0x008811E0
 	[return: Nullable(2)]
 	public IList<long> GetLongValuesByGlobal(string key)
 	{
@@ -137,7 +137,7 @@ public class BlackboardModel : ModelBase
 		return value.GetLongValues();
 	}
 
-	// Token: 0x0601DCFA RID: 122106 RVA: 0x0085AA54 File Offset: 0x00858C54
+	// Token: 0x0601BA14 RID: 113172 RVA: 0x00882FFC File Offset: 0x008811FC
 	public void SetLongValuesByGlobal(string key, long[] values)
 	{
 		BlackboardMap.BlackboardParam blackboardParam = this.GlobalBlackboard.GetValue(key);
@@ -151,7 +151,7 @@ public class BlackboardModel : ModelBase
 		this.GlobalBlackboard.SetValue(key, blackboardParam);
 	}
 
-	// Token: 0x0601DCFB RID: 122107 RVA: 0x0085AA94 File Offset: 0x00858C94
+	// Token: 0x0601BA15 RID: 113173 RVA: 0x0088303C File Offset: 0x0088123C
 	public bool? GetBooleanValueByGlobal(string key)
 	{
 		BlackboardMap.BlackboardParam value = this.GlobalBlackboard.GetValue(key);
@@ -162,7 +162,7 @@ public class BlackboardModel : ModelBase
 		return new bool?(value.GetBooleanValue());
 	}
 
-	// Token: 0x0601DCFC RID: 122108 RVA: 0x0085AAC8 File Offset: 0x00858CC8
+	// Token: 0x0601BA16 RID: 113174 RVA: 0x00883070 File Offset: 0x00881270
 	public void SetBooleanValueByGlobal(string key, bool value)
 	{
 		BlackboardMap.BlackboardParam blackboardParam = this.GlobalBlackboard.GetValue(key);
@@ -176,7 +176,7 @@ public class BlackboardModel : ModelBase
 		this.GlobalBlackboard.SetValue(key, blackboardParam);
 	}
 
-	// Token: 0x0601DCFD RID: 122109 RVA: 0x0085AB08 File Offset: 0x00858D08
+	// Token: 0x0601BA17 RID: 113175 RVA: 0x008830B0 File Offset: 0x008812B0
 	public float? GetFloatValueByGlobal(string key)
 	{
 		BlackboardMap.BlackboardParam value = this.GlobalBlackboard.GetValue(key);
@@ -187,7 +187,7 @@ public class BlackboardModel : ModelBase
 		return new float?(value.GetFloatValue());
 	}
 
-	// Token: 0x0601DCFE RID: 122110 RVA: 0x0085AB3C File Offset: 0x00858D3C
+	// Token: 0x0601BA18 RID: 113176 RVA: 0x008830E4 File Offset: 0x008812E4
 	public void SetFloatValueByGlobal(string key, float value)
 	{
 		BlackboardMap.BlackboardParam blackboardParam = this.GlobalBlackboard.GetValue(key);
@@ -201,7 +201,7 @@ public class BlackboardModel : ModelBase
 		this.GlobalBlackboard.SetValue(key, blackboardParam);
 	}
 
-	// Token: 0x0601DCFF RID: 122111 RVA: 0x0085AB7C File Offset: 0x00858D7C
+	// Token: 0x0601BA19 RID: 113177 RVA: 0x00883124 File Offset: 0x00881324
 	[return: Nullable(2)]
 	public IList<float> GetFloatValuesByGlobal(string key)
 	{
@@ -213,7 +213,7 @@ public class BlackboardModel : ModelBase
 		return value.GetFloatValues();
 	}
 
-	// Token: 0x0601DD00 RID: 122112 RVA: 0x0085AB98 File Offset: 0x00858D98
+	// Token: 0x0601BA1A RID: 113178 RVA: 0x00883140 File Offset: 0x00881340
 	public void SetFloatValuesByGlobal(string key, float[] values)
 	{
 		BlackboardMap.BlackboardParam blackboardParam = this.GlobalBlackboard.GetValue(key);
@@ -227,7 +227,7 @@ public class BlackboardModel : ModelBase
 		this.GlobalBlackboard.SetValue(key, blackboardParam);
 	}
 
-	// Token: 0x0601DD01 RID: 122113 RVA: 0x0085ABD9 File Offset: 0x00858DD9
+	// Token: 0x0601BA1B RID: 113179 RVA: 0x00883181 File Offset: 0x00881381
 	[return: Nullable(2)]
 	public string GetStringValueByGlobal(string key)
 	{
@@ -239,7 +239,7 @@ public class BlackboardModel : ModelBase
 		return value.GetStringValue();
 	}
 
-	// Token: 0x0601DD02 RID: 122114 RVA: 0x0085ABF4 File Offset: 0x00858DF4
+	// Token: 0x0601BA1C RID: 113180 RVA: 0x0088319C File Offset: 0x0088139C
 	public void SetStringValueByGlobal(string key, string value)
 	{
 		BlackboardMap.BlackboardParam blackboardParam = this.GlobalBlackboard.GetValue(key);
@@ -253,7 +253,7 @@ public class BlackboardModel : ModelBase
 		this.GlobalBlackboard.SetValue(key, blackboardParam);
 	}
 
-	// Token: 0x0601DD03 RID: 122115 RVA: 0x0085AC34 File Offset: 0x00858E34
+	// Token: 0x0601BA1D RID: 113181 RVA: 0x008831DC File Offset: 0x008813DC
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -269,7 +269,7 @@ public class BlackboardModel : ModelBase
 		return value.GetStringValues();
 	}
 
-	// Token: 0x0601DD04 RID: 122116 RVA: 0x0085AC50 File Offset: 0x00858E50
+	// Token: 0x0601BA1E RID: 113182 RVA: 0x008831F8 File Offset: 0x008813F8
 	public void SetStringValuesByGlobal(string key, string[] values)
 	{
 		BlackboardMap.BlackboardParam blackboardParam = this.GlobalBlackboard.GetValue(key);
@@ -283,24 +283,24 @@ public class BlackboardModel : ModelBase
 		this.GlobalBlackboard.SetValue(key, blackboardParam);
 	}
 
-	// Token: 0x0601DD05 RID: 122117 RVA: 0x0085AC90 File Offset: 0x00858E90
+	// Token: 0x0601BA1F RID: 113183 RVA: 0x00883238 File Offset: 0x00881438
 	public void SetValueByGlobal(string key, BlackboardMap.BlackboardParam blackboard)
 	{
 		this.GlobalBlackboard.SetValue(key, blackboard);
 	}
 
-	// Token: 0x0601DD06 RID: 122118 RVA: 0x0085AC9F File Offset: 0x00858E9F
+	// Token: 0x0601BA20 RID: 113184 RVA: 0x00883247 File Offset: 0x00881447
 	public void RemoveValueByGlobal(string key)
 	{
 		this.GlobalBlackboard.RemoveValue(key);
 	}
 
-	// Token: 0x0601DD07 RID: 122119 RVA: 0x0085ACAE File Offset: 0x00858EAE
+	// Token: 0x0601BA21 RID: 113185 RVA: 0x00883256 File Offset: 0x00881456
 	public void SetWorldBlackboardByProtocol(IList<BlackboardParam> worldBlackboard)
 	{
 	}
 
-	// Token: 0x0601DD08 RID: 122120 RVA: 0x0085ACB0 File Offset: 0x00858EB0
+	// Token: 0x0601BA22 RID: 113186 RVA: 0x00883258 File Offset: 0x00881458
 	public int? GetIntValueByWorld(string key)
 	{
 		BlackboardMap.BlackboardParam value = this.WorldBlackboard.GetValue(key);
@@ -311,7 +311,7 @@ public class BlackboardModel : ModelBase
 		return new int?(value.GetIntValue());
 	}
 
-	// Token: 0x0601DD09 RID: 122121 RVA: 0x0085ACE4 File Offset: 0x00858EE4
+	// Token: 0x0601BA23 RID: 113187 RVA: 0x0088328C File Offset: 0x0088148C
 	public void SetIntValueByWorld(string key, int value)
 	{
 		BlackboardMap.BlackboardParam blackboardParam = this.WorldBlackboard.GetValue(key);
@@ -325,7 +325,7 @@ public class BlackboardModel : ModelBase
 		this.WorldBlackboard.SetValue(key, blackboardParam);
 	}
 
-	// Token: 0x0601DD0A RID: 122122 RVA: 0x0085AD24 File Offset: 0x00858F24
+	// Token: 0x0601BA24 RID: 113188 RVA: 0x008832CC File Offset: 0x008814CC
 	[return: Nullable(2)]
 	public IList<int> GetIntValuesByWorld(string key)
 	{
@@ -337,7 +337,7 @@ public class BlackboardModel : ModelBase
 		return value.GetIntValues();
 	}
 
-	// Token: 0x0601DD0B RID: 122123 RVA: 0x0085AD40 File Offset: 0x00858F40
+	// Token: 0x0601BA25 RID: 113189 RVA: 0x008832E8 File Offset: 0x008814E8
 	public void SetIntValuesByWorld(string key, int[] values)
 	{
 		BlackboardMap.BlackboardParam blackboardParam = this.WorldBlackboard.GetValue(key);
@@ -351,7 +351,7 @@ public class BlackboardModel : ModelBase
 		this.WorldBlackboard.SetValue(key, blackboardParam);
 	}
 
-	// Token: 0x0601DD0C RID: 122124 RVA: 0x0085AD80 File Offset: 0x00858F80
+	// Token: 0x0601BA26 RID: 113190 RVA: 0x00883328 File Offset: 0x00881528
 	public long? GetLongValueByWorld(string key)
 	{
 		BlackboardMap.BlackboardParam value = this.WorldBlackboard.GetValue(key);
@@ -362,7 +362,7 @@ public class BlackboardModel : ModelBase
 		return value.GetLongValue();
 	}
 
-	// Token: 0x0601DD0D RID: 122125 RVA: 0x0085ADAC File Offset: 0x00858FAC
+	// Token: 0x0601BA27 RID: 113191 RVA: 0x00883354 File Offset: 0x00881554
 	public void SetLongValueByWorld(string key, long value)
 	{
 		BlackboardMap.BlackboardParam blackboardParam = this.WorldBlackboard.GetValue(key);
@@ -376,7 +376,7 @@ public class BlackboardModel : ModelBase
 		this.WorldBlackboard.SetValue(key, blackboardParam);
 	}
 
-	// Token: 0x0601DD0E RID: 122126 RVA: 0x0085ADEC File Offset: 0x00858FEC
+	// Token: 0x0601BA28 RID: 113192 RVA: 0x00883394 File Offset: 0x00881594
 	[return: Nullable(2)]
 	public IList<long> GetLongValuesByWorld(string key)
 	{
@@ -388,7 +388,7 @@ public class BlackboardModel : ModelBase
 		return value.GetLongValues();
 	}
 
-	// Token: 0x0601DD0F RID: 122127 RVA: 0x0085AE08 File Offset: 0x00859008
+	// Token: 0x0601BA29 RID: 113193 RVA: 0x008833B0 File Offset: 0x008815B0
 	public void SetLongValuesByWorld(string key, long[] values)
 	{
 		BlackboardMap.BlackboardParam blackboardParam = this.WorldBlackboard.GetValue(key);
@@ -402,7 +402,7 @@ public class BlackboardModel : ModelBase
 		this.WorldBlackboard.SetValue(key, blackboardParam);
 	}
 
-	// Token: 0x0601DD10 RID: 122128 RVA: 0x0085AE48 File Offset: 0x00859048
+	// Token: 0x0601BA2A RID: 113194 RVA: 0x008833F0 File Offset: 0x008815F0
 	public bool? GetBooleanValueByWorld(string key)
 	{
 		BlackboardMap.BlackboardParam value = this.WorldBlackboard.GetValue(key);
@@ -413,7 +413,7 @@ public class BlackboardModel : ModelBase
 		return new bool?(value.GetBooleanValue());
 	}
 
-	// Token: 0x0601DD11 RID: 122129 RVA: 0x0085AE7C File Offset: 0x0085907C
+	// Token: 0x0601BA2B RID: 113195 RVA: 0x00883424 File Offset: 0x00881624
 	public void SetBooleanValueByWorld(string key, bool value)
 	{
 		BlackboardMap.BlackboardParam blackboardParam = this.WorldBlackboard.GetValue(key);
@@ -427,7 +427,7 @@ public class BlackboardModel : ModelBase
 		this.WorldBlackboard.SetValue(key, blackboardParam);
 	}
 
-	// Token: 0x0601DD12 RID: 122130 RVA: 0x0085AEBC File Offset: 0x008590BC
+	// Token: 0x0601BA2C RID: 113196 RVA: 0x00883464 File Offset: 0x00881664
 	public float? GetFloatValueByWorld(string key)
 	{
 		BlackboardMap.BlackboardParam value = this.WorldBlackboard.GetValue(key);
@@ -438,7 +438,7 @@ public class BlackboardModel : ModelBase
 		return new float?(value.GetFloatValue());
 	}
 
-	// Token: 0x0601DD13 RID: 122131 RVA: 0x0085AEF0 File Offset: 0x008590F0
+	// Token: 0x0601BA2D RID: 113197 RVA: 0x00883498 File Offset: 0x00881698
 	public void SetFloatValueByWorld(string key, float value)
 	{
 		BlackboardMap.BlackboardParam blackboardParam = this.WorldBlackboard.GetValue(key);
@@ -452,7 +452,7 @@ public class BlackboardModel : ModelBase
 		this.WorldBlackboard.SetValue(key, blackboardParam);
 	}
 
-	// Token: 0x0601DD14 RID: 122132 RVA: 0x0085AF30 File Offset: 0x00859130
+	// Token: 0x0601BA2E RID: 113198 RVA: 0x008834D8 File Offset: 0x008816D8
 	[return: Nullable(2)]
 	public IList<float> GetFloatValuesByWorld(string key)
 	{
@@ -464,7 +464,7 @@ public class BlackboardModel : ModelBase
 		return value.GetFloatValues();
 	}
 
-	// Token: 0x0601DD15 RID: 122133 RVA: 0x0085AF4C File Offset: 0x0085914C
+	// Token: 0x0601BA2F RID: 113199 RVA: 0x008834F4 File Offset: 0x008816F4
 	public void SetFloatValuesByWorld(string key, float[] values)
 	{
 		BlackboardMap.BlackboardParam blackboardParam = this.WorldBlackboard.GetValue(key);
@@ -478,7 +478,7 @@ public class BlackboardModel : ModelBase
 		this.WorldBlackboard.SetValue(key, blackboardParam);
 	}
 
-	// Token: 0x0601DD16 RID: 122134 RVA: 0x0085AF8D File Offset: 0x0085918D
+	// Token: 0x0601BA30 RID: 113200 RVA: 0x00883535 File Offset: 0x00881735
 	[return: Nullable(2)]
 	public string GetStringValueByWorld(string key)
 	{
@@ -490,7 +490,7 @@ public class BlackboardModel : ModelBase
 		return value.GetStringValue();
 	}
 
-	// Token: 0x0601DD17 RID: 122135 RVA: 0x0085AFA8 File Offset: 0x008591A8
+	// Token: 0x0601BA31 RID: 113201 RVA: 0x00883550 File Offset: 0x00881750
 	public void SetStringValueByWorld(string key, string value)
 	{
 		BlackboardMap.BlackboardParam blackboardParam = this.WorldBlackboard.GetValue(key);
@@ -504,7 +504,7 @@ public class BlackboardModel : ModelBase
 		this.WorldBlackboard.SetValue(key, blackboardParam);
 	}
 
-	// Token: 0x0601DD18 RID: 122136 RVA: 0x0085AFE8 File Offset: 0x008591E8
+	// Token: 0x0601BA32 RID: 113202 RVA: 0x00883590 File Offset: 0x00881790
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -520,7 +520,7 @@ public class BlackboardModel : ModelBase
 		return value.GetStringValues();
 	}
 
-	// Token: 0x0601DD19 RID: 122137 RVA: 0x0085B004 File Offset: 0x00859204
+	// Token: 0x0601BA33 RID: 113203 RVA: 0x008835AC File Offset: 0x008817AC
 	public void SetStringValuesByWorld(string key, string[] values)
 	{
 		BlackboardMap.BlackboardParam blackboardParam = this.WorldBlackboard.GetValue(key);
@@ -534,19 +534,19 @@ public class BlackboardModel : ModelBase
 		this.WorldBlackboard.SetValue(key, blackboardParam);
 	}
 
-	// Token: 0x0601DD1A RID: 122138 RVA: 0x0085B044 File Offset: 0x00859244
+	// Token: 0x0601BA34 RID: 113204 RVA: 0x008835EC File Offset: 0x008817EC
 	public void SetValueByWorld(string key, BlackboardMap.BlackboardParam blackboard)
 	{
 		this.WorldBlackboard.SetValue(key, blackboard);
 	}
 
-	// Token: 0x0601DD1B RID: 122139 RVA: 0x0085B053 File Offset: 0x00859253
+	// Token: 0x0601BA35 RID: 113205 RVA: 0x008835FB File Offset: 0x008817FB
 	public void RemoveValueByWorld(string key)
 	{
 		this.WorldBlackboard.RemoveValue(key);
 	}
 
-	// Token: 0x0601DD1C RID: 122140 RVA: 0x0085B064 File Offset: 0x00859264
+	// Token: 0x0601BA36 RID: 113206 RVA: 0x0088360C File Offset: 0x0088180C
 	public void SetVectorValueByWorld(string key, float x, float y, float z)
 	{
 		BlackboardMap.BlackboardParam blackboardParam = this.WorldBlackboard.GetValue(key);
@@ -560,7 +560,7 @@ public class BlackboardModel : ModelBase
 		this.WorldBlackboard.SetValue(key, blackboardParam);
 	}
 
-	// Token: 0x0601DD1D RID: 122141 RVA: 0x0085B0AB File Offset: 0x008592AB
+	// Token: 0x0601BA37 RID: 113207 RVA: 0x00883653 File Offset: 0x00881853
 	[return: Nullable(2)]
 	public Aki.Protocol.Vector GetVectorValueByWorld(string key)
 	{
@@ -572,7 +572,7 @@ public class BlackboardModel : ModelBase
 		return value.GetVectorValue();
 	}
 
-	// Token: 0x0601DD1E RID: 122142 RVA: 0x0085B0C4 File Offset: 0x008592C4
+	// Token: 0x0601BA38 RID: 113208 RVA: 0x0088366C File Offset: 0x0088186C
 	public int? GetIntValueByEntity(int entityId, string key)
 	{
 		CreatureDataComponent creatureDataComponent = this.GetCreatureDataComponent(entityId);
@@ -589,7 +589,7 @@ public class BlackboardModel : ModelBase
 		return new int?(blackboardParam.GetIntValue());
 	}
 
-	// Token: 0x0601DD1F RID: 122143 RVA: 0x0085B114 File Offset: 0x00859314
+	// Token: 0x0601BA39 RID: 113209 RVA: 0x008836BC File Offset: 0x008818BC
 	public void SetIntValueByEntity(int entityId, string key, int value)
 	{
 		CreatureDataComponent creatureDataComponent = this.GetCreatureDataComponent(entityId);
@@ -614,7 +614,7 @@ public class BlackboardModel : ModelBase
 		blackboard.SetValue(key, blackboardParam);
 	}
 
-	// Token: 0x0601DD20 RID: 122144 RVA: 0x0085B16C File Offset: 0x0085936C
+	// Token: 0x0601BA3A RID: 113210 RVA: 0x00883714 File Offset: 0x00881914
 	[return: Nullable(2)]
 	public IList<int> GetIntValuesByEntity(int entityId, string key)
 	{
@@ -632,7 +632,7 @@ public class BlackboardModel : ModelBase
 		return blackboardParam.GetIntValues();
 	}
 
-	// Token: 0x0601DD21 RID: 122145 RVA: 0x0085B1A4 File Offset: 0x008593A4
+	// Token: 0x0601BA3B RID: 113211 RVA: 0x0088374C File Offset: 0x0088194C
 	public void SetIntValuesByEntity(int entityId, string key, IList<int> values)
 	{
 		CreatureDataComponent creatureDataComponent = this.GetCreatureDataComponent(entityId);
@@ -657,7 +657,7 @@ public class BlackboardModel : ModelBase
 		blackboard.SetValue(key, blackboardParam);
 	}
 
-	// Token: 0x0601DD22 RID: 122146 RVA: 0x0085B1FC File Offset: 0x008593FC
+	// Token: 0x0601BA3C RID: 113212 RVA: 0x008837A4 File Offset: 0x008819A4
 	public long? GetLongValueByEntity(int entityId, string key)
 	{
 		CreatureDataComponent creatureDataComponent = this.GetCreatureDataComponent(entityId);
@@ -674,7 +674,7 @@ public class BlackboardModel : ModelBase
 		return blackboardParam.GetLongValue();
 	}
 
-	// Token: 0x0601DD23 RID: 122147 RVA: 0x0085B244 File Offset: 0x00859444
+	// Token: 0x0601BA3D RID: 113213 RVA: 0x008837EC File Offset: 0x008819EC
 	public void SetLongValueByEntity(int entityId, string key, long value)
 	{
 		CreatureDataComponent creatureDataComponent = this.GetCreatureDataComponent(entityId);
@@ -699,7 +699,7 @@ public class BlackboardModel : ModelBase
 		blackboard.SetValue(key, blackboardParam);
 	}
 
-	// Token: 0x0601DD24 RID: 122148 RVA: 0x0085B29C File Offset: 0x0085949C
+	// Token: 0x0601BA3E RID: 113214 RVA: 0x00883844 File Offset: 0x00881A44
 	[return: Nullable(2)]
 	public IList<long> GetLongValuesByEntity(int entityId, string key)
 	{
@@ -717,7 +717,7 @@ public class BlackboardModel : ModelBase
 		return blackboardParam.GetLongValues();
 	}
 
-	// Token: 0x0601DD25 RID: 122149 RVA: 0x0085B2D4 File Offset: 0x008594D4
+	// Token: 0x0601BA3F RID: 113215 RVA: 0x0088387C File Offset: 0x00881A7C
 	public void SetLongValuesByEntity(int entityId, string key, IList<long> values)
 	{
 		CreatureDataComponent creatureDataComponent = this.GetCreatureDataComponent(entityId);
@@ -742,7 +742,7 @@ public class BlackboardModel : ModelBase
 		blackboard.SetValue(key, blackboardParam);
 	}
 
-	// Token: 0x0601DD26 RID: 122150 RVA: 0x0085B32C File Offset: 0x0085952C
+	// Token: 0x0601BA40 RID: 113216 RVA: 0x008838D4 File Offset: 0x00881AD4
 	public bool? GetBooleanValueByEntity(int entityId, string key)
 	{
 		CreatureDataComponent creatureDataComponent = this.GetCreatureDataComponent(entityId);
@@ -759,7 +759,7 @@ public class BlackboardModel : ModelBase
 		return new bool?(blackboardParam.GetBooleanValue());
 	}
 
-	// Token: 0x0601DD27 RID: 122151 RVA: 0x0085B37C File Offset: 0x0085957C
+	// Token: 0x0601BA41 RID: 113217 RVA: 0x00883924 File Offset: 0x00881B24
 	public void SetBooleanValueByEntity(int entityId, string key, bool value)
 	{
 		CreatureDataComponent creatureDataComponent = this.GetCreatureDataComponent(entityId);
@@ -784,7 +784,7 @@ public class BlackboardModel : ModelBase
 		blackboard.SetValue(key, blackboardParam);
 	}
 
-	// Token: 0x0601DD28 RID: 122152 RVA: 0x0085B3D4 File Offset: 0x008595D4
+	// Token: 0x0601BA42 RID: 113218 RVA: 0x0088397C File Offset: 0x00881B7C
 	public float? GetFloatValueByEntity(int entityId, string key)
 	{
 		CreatureDataComponent creatureDataComponent = this.GetCreatureDataComponent(entityId);
@@ -801,7 +801,7 @@ public class BlackboardModel : ModelBase
 		return new float?(blackboardParam.GetFloatValue());
 	}
 
-	// Token: 0x0601DD29 RID: 122153 RVA: 0x0085B424 File Offset: 0x00859624
+	// Token: 0x0601BA43 RID: 113219 RVA: 0x008839CC File Offset: 0x00881BCC
 	public void SetFloatValueByEntity(int entityId, string key, float value)
 	{
 		CreatureDataComponent creatureDataComponent = this.GetCreatureDataComponent(entityId);
@@ -826,7 +826,7 @@ public class BlackboardModel : ModelBase
 		blackboard.SetValue(key, blackboardParam);
 	}
 
-	// Token: 0x0601DD2A RID: 122154 RVA: 0x0085B47C File Offset: 0x0085967C
+	// Token: 0x0601BA44 RID: 113220 RVA: 0x00883A24 File Offset: 0x00881C24
 	[return: Nullable(2)]
 	public IList<float> GetFloatValuesByEntity(int entityId, string key)
 	{
@@ -844,7 +844,7 @@ public class BlackboardModel : ModelBase
 		return blackboardParam.GetFloatValues();
 	}
 
-	// Token: 0x0601DD2B RID: 122155 RVA: 0x0085B4B4 File Offset: 0x008596B4
+	// Token: 0x0601BA45 RID: 113221 RVA: 0x00883A5C File Offset: 0x00881C5C
 	public void SetFloatValuesByEntity(int entityId, string key, IList<float> values)
 	{
 		CreatureDataComponent creatureDataComponent = this.GetCreatureDataComponent(entityId);
@@ -869,7 +869,7 @@ public class BlackboardModel : ModelBase
 		blackboard.SetValue(key, blackboardParam);
 	}
 
-	// Token: 0x0601DD2C RID: 122156 RVA: 0x0085B50C File Offset: 0x0085970C
+	// Token: 0x0601BA46 RID: 113222 RVA: 0x00883AB4 File Offset: 0x00881CB4
 	[return: Nullable(2)]
 	public string GetStringValueByEntity(int entityId, string key)
 	{
@@ -887,7 +887,7 @@ public class BlackboardModel : ModelBase
 		return blackboardParam.GetStringValue();
 	}
 
-	// Token: 0x0601DD2D RID: 122157 RVA: 0x0085B544 File Offset: 0x00859744
+	// Token: 0x0601BA47 RID: 113223 RVA: 0x00883AEC File Offset: 0x00881CEC
 	public void SetStringValueByEntity(int entityId, string key, string value)
 	{
 		CreatureDataComponent creatureDataComponent = this.GetCreatureDataComponent(entityId);
@@ -912,7 +912,7 @@ public class BlackboardModel : ModelBase
 		blackboard.SetValue(key, blackboardParam);
 	}
 
-	// Token: 0x0601DD2E RID: 122158 RVA: 0x0085B59C File Offset: 0x0085979C
+	// Token: 0x0601BA48 RID: 113224 RVA: 0x00883B44 File Offset: 0x00881D44
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -934,7 +934,7 @@ public class BlackboardModel : ModelBase
 		return blackboardParam.GetStringValues();
 	}
 
-	// Token: 0x0601DD2F RID: 122159 RVA: 0x0085B5D4 File Offset: 0x008597D4
+	// Token: 0x0601BA49 RID: 113225 RVA: 0x00883B7C File Offset: 0x00881D7C
 	public void SetStringValuesByEntity(int entityId, string key, IList<string> values)
 	{
 		CreatureDataComponent creatureDataComponent = this.GetCreatureDataComponent(entityId);
@@ -959,7 +959,7 @@ public class BlackboardModel : ModelBase
 		blackboard.SetValue(key, blackboardParam);
 	}
 
-	// Token: 0x0601DD30 RID: 122160 RVA: 0x0085B62C File Offset: 0x0085982C
+	// Token: 0x0601BA4A RID: 113226 RVA: 0x00883BD4 File Offset: 0x00881DD4
 	[return: Nullable(2)]
 	public Aki.Protocol.Vector GetVectorValueByEntity(int entityId, string key)
 	{
@@ -977,7 +977,7 @@ public class BlackboardModel : ModelBase
 		return blackboardParam.GetVectorValue();
 	}
 
-	// Token: 0x0601DD31 RID: 122161 RVA: 0x0085B664 File Offset: 0x00859864
+	// Token: 0x0601BA4B RID: 113227 RVA: 0x00883C0C File Offset: 0x00881E0C
 	public void SetVectorValueByEntity(int entityId, string key, float x, float y, float z)
 	{
 		CreatureDataComponent creatureDataComponent = this.GetCreatureDataComponent(entityId);
@@ -1002,7 +1002,7 @@ public class BlackboardModel : ModelBase
 		blackboard.SetValue(key, blackboardParam);
 	}
 
-	// Token: 0x0601DD32 RID: 122162 RVA: 0x0085B6C4 File Offset: 0x008598C4
+	// Token: 0x0601BA4C RID: 113228 RVA: 0x00883C6C File Offset: 0x00881E6C
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -1024,7 +1024,7 @@ public class BlackboardModel : ModelBase
 		return blackboardParam.GetVectorValues();
 	}
 
-	// Token: 0x0601DD33 RID: 122163 RVA: 0x0085B6FC File Offset: 0x008598FC
+	// Token: 0x0601BA4D RID: 113229 RVA: 0x00883CA4 File Offset: 0x00881EA4
 	public void SetVectorValuesByEntity(int entityId, string key, IList<Aki.Protocol.Vector> values)
 	{
 		CreatureDataComponent creatureDataComponent = this.GetCreatureDataComponent(entityId);
@@ -1049,7 +1049,7 @@ public class BlackboardModel : ModelBase
 		blackboard.SetValue(key, blackboardParam);
 	}
 
-	// Token: 0x0601DD34 RID: 122164 RVA: 0x0085B754 File Offset: 0x00859954
+	// Token: 0x0601BA4E RID: 113230 RVA: 0x00883CFC File Offset: 0x00881EFC
 	[return: Nullable(2)]
 	public Aki.Protocol.Rotator GetRotatorValueByEntity(int entityId, string key)
 	{
@@ -1067,7 +1067,7 @@ public class BlackboardModel : ModelBase
 		return blackboardParam.GetRotatorValue();
 	}
 
-	// Token: 0x0601DD35 RID: 122165 RVA: 0x0085B78C File Offset: 0x0085998C
+	// Token: 0x0601BA4F RID: 113231 RVA: 0x00883D34 File Offset: 0x00881F34
 	public void SetRotatorValueByEntity(int entityId, string key, float pitch, float roll, float yaw)
 	{
 		CreatureDataComponent creatureDataComponent = this.GetCreatureDataComponent(entityId);
@@ -1092,7 +1092,7 @@ public class BlackboardModel : ModelBase
 		blackboard.SetValue(key, blackboardParam);
 	}
 
-	// Token: 0x0601DD36 RID: 122166 RVA: 0x0085B7EC File Offset: 0x008599EC
+	// Token: 0x0601BA50 RID: 113232 RVA: 0x00883D94 File Offset: 0x00881F94
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -1114,7 +1114,7 @@ public class BlackboardModel : ModelBase
 		return blackboardParam.GetRotatorValues();
 	}
 
-	// Token: 0x0601DD37 RID: 122167 RVA: 0x0085B824 File Offset: 0x00859A24
+	// Token: 0x0601BA51 RID: 113233 RVA: 0x00883DCC File Offset: 0x00881FCC
 	public void SetRotatorValuesByEntity(int entityId, string key, IList<Aki.Protocol.Rotator> values)
 	{
 		CreatureDataComponent creatureDataComponent = this.GetCreatureDataComponent(entityId);
@@ -1139,7 +1139,7 @@ public class BlackboardModel : ModelBase
 		blackboard.SetValue(key, blackboardParam);
 	}
 
-	// Token: 0x0601DD38 RID: 122168 RVA: 0x0085B87C File Offset: 0x00859A7C
+	// Token: 0x0601BA52 RID: 113234 RVA: 0x00883E24 File Offset: 0x00882024
 	public long? GetEntityIdByEntity(int entityId, string key)
 	{
 		CreatureDataComponent creatureDataComponent = this.GetCreatureDataComponent(entityId);
@@ -1156,7 +1156,7 @@ public class BlackboardModel : ModelBase
 		return blackboardParam.GetLongValue();
 	}
 
-	// Token: 0x0601DD39 RID: 122169 RVA: 0x0085B8C4 File Offset: 0x00859AC4
+	// Token: 0x0601BA53 RID: 113235 RVA: 0x00883E6C File Offset: 0x0088206C
 	public void SetEntityIdByEntity(int entityId, string key, long value)
 	{
 		CreatureDataComponent creatureDataComponent = this.GetCreatureDataComponent(entityId);
@@ -1181,7 +1181,7 @@ public class BlackboardModel : ModelBase
 		blackboard.SetValue(key, blackboardParam);
 	}
 
-	// Token: 0x0601DD3A RID: 122170 RVA: 0x0085B91C File Offset: 0x00859B1C
+	// Token: 0x0601BA54 RID: 113236 RVA: 0x00883EC4 File Offset: 0x008820C4
 	[return: Nullable(2)]
 	public IList<int> GetEntityIdsByEntity(int entityId, string key)
 	{
@@ -1199,7 +1199,7 @@ public class BlackboardModel : ModelBase
 		return blackboardParam.GetIntValues();
 	}
 
-	// Token: 0x0601DD3B RID: 122171 RVA: 0x0085B954 File Offset: 0x00859B54
+	// Token: 0x0601BA55 RID: 113237 RVA: 0x00883EFC File Offset: 0x008820FC
 	public void SetEntityIdsByEntity(int entityId, string key, IList<int> values)
 	{
 		CreatureDataComponent creatureDataComponent = this.GetCreatureDataComponent(entityId);
@@ -1224,7 +1224,7 @@ public class BlackboardModel : ModelBase
 		blackboard.SetValue(key, blackboardParam);
 	}
 
-	// Token: 0x0601DD3C RID: 122172 RVA: 0x0085B9AC File Offset: 0x00859BAC
+	// Token: 0x0601BA56 RID: 113238 RVA: 0x00883F54 File Offset: 0x00882154
 	public void SetValueByEntity(int entityId, string key, BlackboardMap.BlackboardParam blackboard)
 	{
 		CreatureDataComponent creatureDataComponent = this.GetCreatureDataComponent(entityId);
@@ -1235,8 +1235,8 @@ public class BlackboardModel : ModelBase
 		creatureDataComponent.SetBlackboard(key, blackboard);
 	}
 
-	// Token: 0x17002913 RID: 10515
-	// (get) Token: 0x0601DD3D RID: 122173 RVA: 0x0085B9CD File Offset: 0x00859BCD
+	// Token: 0x17002CAC RID: 11436
+	// (get) Token: 0x0601BA57 RID: 113239 RVA: 0x00883F75 File Offset: 0x00882175
 	public static BlackboardModel Instance
 	{
 		get
@@ -1245,7 +1245,7 @@ public class BlackboardModel : ModelBase
 		}
 	}
 
-	// Token: 0x0601DD3E RID: 122174 RVA: 0x0085B9D4 File Offset: 0x00859BD4
+	// Token: 0x0601BA58 RID: 113240 RVA: 0x00883F7C File Offset: 0x0088217C
 	public static BlackboardModel GetOrCreateInstance()
 	{
 		if (BlackboardModel._Instance == null)
@@ -1255,7 +1255,7 @@ public class BlackboardModel : ModelBase
 		return BlackboardModel._Instance;
 	}
 
-	// Token: 0x0601DD3F RID: 122175 RVA: 0x0085B9E8 File Offset: 0x00859BE8
+	// Token: 0x0601BA59 RID: 113241 RVA: 0x00883F90 File Offset: 0x00882190
 	public static bool CreateInstance()
 	{
 		if (BlackboardModel._Instance != null)
@@ -1266,33 +1266,33 @@ public class BlackboardModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x0601DD40 RID: 122176 RVA: 0x0085B9FE File Offset: 0x00859BFE
+	// Token: 0x0601BA5A RID: 113242 RVA: 0x00883FA6 File Offset: 0x008821A6
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0601DD41 RID: 122177 RVA: 0x0085BA00 File Offset: 0x00859C00
+	// Token: 0x0601BA5B RID: 113243 RVA: 0x00883FA8 File Offset: 0x008821A8
 	public static void ResetStaticDefaultValue()
 	{
 		BlackboardModel._Instance = null;
 	}
 
-	// Token: 0x0601DD42 RID: 122178 RVA: 0x0085BA08 File Offset: 0x00859C08
+	// Token: 0x0601BA5C RID: 113244 RVA: 0x00883FB0 File Offset: 0x008821B0
 	static BlackboardModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BlackboardModel.CreateStaticDefaultValue), new Action(BlackboardModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400E9F4 RID: 59892
+	// Token: 0x0400EEAF RID: 61103
 	private readonly BlackboardMap GlobalBlackboard = new BlackboardMap();
 
-	// Token: 0x0400E9F5 RID: 59893
+	// Token: 0x0400EEB0 RID: 61104
 	private readonly BlackboardMap WorldBlackboard = new BlackboardMap();
 
-	// Token: 0x0400E9F6 RID: 59894
+	// Token: 0x0400EEB1 RID: 61105
 	private readonly Dictionary<int, CreatureDataComponent> CreatureDataComponentMap = new Dictionary<int, CreatureDataComponent>();
 
-	// Token: 0x0400E9F7 RID: 59895
+	// Token: 0x0400EEB2 RID: 61106
 	[Nullable(2)]
 	private static BlackboardModel _Instance;
 }

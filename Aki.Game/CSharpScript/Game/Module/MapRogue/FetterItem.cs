@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -10,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MapRogue
 {
-	// Token: 0x020055E3 RID: 21987
+	// Token: 0x020045B9 RID: 17849
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -19,7 +18,7 @@ namespace CSharpScript.Game.Module.MapRogue
 	})]
 	public class FetterItem : GridProxyAbstract<IRogueBattleRoleBondUpdateInfo>
 	{
-		// Token: 0x0603802B RID: 229419 RVA: 0x00D4414C File Offset: 0x00D4234C
+		// Token: 0x0602CF29 RID: 184105 RVA: 0x00C91E94 File Offset: 0x00C90094
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -38,13 +37,13 @@ namespace CSharpScript.Game.Module.MapRogue
 			};
 		}
 
-		// Token: 0x0603802C RID: 229420 RVA: 0x00D44221 File Offset: 0x00D42421
+		// Token: 0x0602CF2A RID: 184106 RVA: 0x00C91F69 File Offset: 0x00C90169
 		protected override void OnStart()
 		{
 			this.StarLvLayout = new GenericLayout<MapRogueFetterStarLvItem, IFetterStarLvData>(base.GetHorizontalLayout(4), new Func<MapRogueFetterStarLvItem>(this.OnCreateItem), null, false, true);
 		}
 
-		// Token: 0x0603802D RID: 229421 RVA: 0x00D44244 File Offset: 0x00D42444
+		// Token: 0x0602CF2B RID: 184107 RVA: 0x00C91F8C File Offset: 0x00C9018C
 		public override void Refresh(IRogueBattleRoleBondUpdateInfo data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -81,7 +80,7 @@ namespace CSharpScript.Game.Module.MapRogue
 			text.SetText(newRoleBondInfo.CurStar.ToString(), true);
 			text.SetUIActive(true);
 			List<IFetterStarLvData> list = new List<IFetterStarLvData>();
-			List<DicIntInt> list2 = rogueResBond.Value.StarMapIter().ToList<DicIntInt>();
+			List<DicIntInt> list2 = new List<DicIntInt>(rogueResBond.Value.StarMapIter());
 			list2.Sort((DicIntInt a, DicIntInt b) => a.Key - b.Key);
 			if (list2.Count > 0)
 			{
@@ -105,19 +104,19 @@ namespace CSharpScript.Game.Module.MapRogue
 			this.StarLvLayout.SetActive(false);
 		}
 
-		// Token: 0x0603802E RID: 229422 RVA: 0x00D4449C File Offset: 0x00D4269C
+		// Token: 0x0602CF2C RID: 184108 RVA: 0x00C921E4 File Offset: 0x00C903E4
 		private MapRogueFetterStarLvItem OnCreateItem()
 		{
 			return new MapRogueFetterStarLvItem();
 		}
 
-		// Token: 0x0603802F RID: 229423 RVA: 0x00D444A3 File Offset: 0x00D426A3
+		// Token: 0x0602CF2D RID: 184109 RVA: 0x00C921EB File Offset: 0x00C903EB
 		public void SetButtonActive(bool bActive)
 		{
 			base.GetButton(0).SetSelfInteractive(bActive);
 		}
 
-		// Token: 0x06038030 RID: 229424 RVA: 0x00D444B2 File Offset: 0x00D426B2
+		// Token: 0x0602CF2E RID: 184110 RVA: 0x00C921FA File Offset: 0x00C903FA
 		private void OnBtnFetterClick()
 		{
 			Action<IRogueBattleRoleBondUpdateInfo> openMenuFunc = this.OpenMenuFunc;
@@ -128,10 +127,10 @@ namespace CSharpScript.Game.Module.MapRogue
 			openMenuFunc(this.Data);
 		}
 
-		// Token: 0x0401D6D4 RID: 120532
+		// Token: 0x0401815F RID: 98655
 		protected IRogueBattleRoleBondUpdateInfo Data;
 
-		// Token: 0x0401D6D5 RID: 120533
+		// Token: 0x04018160 RID: 98656
 		[Nullable(new byte[]
 		{
 			2,
@@ -140,7 +139,7 @@ namespace CSharpScript.Game.Module.MapRogue
 		})]
 		protected GenericLayout<MapRogueFetterStarLvItem, IFetterStarLvData> StarLvLayout;
 
-		// Token: 0x0401D6D6 RID: 120534
+		// Token: 0x04018161 RID: 98657
 		[Nullable(new byte[]
 		{
 			2,

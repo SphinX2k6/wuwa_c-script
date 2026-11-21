@@ -4,10 +4,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DD7 RID: 24023
+	// Token: 0x02004DBB RID: 19899
 	public class SpecialEnergyBarFeibiSlot : SpecialEnergyBarSlot
 	{
-		// Token: 0x0603D0F1 RID: 250097 RVA: 0x00EB02BC File Offset: 0x00EAE4BC
+		// Token: 0x06032068 RID: 204904 RVA: 0x00E011B0 File Offset: 0x00DFF3B0
 		protected override void OnStart()
 		{
 			SpecialEnergyBarInfo config = this.Config;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.OnStart();
 		}
 
-		// Token: 0x0603D0F2 RID: 250098 RVA: 0x00EB0350 File Offset: 0x00EAE550
+		// Token: 0x06032069 RID: 204905 RVA: 0x00E01244 File Offset: 0x00DFF444
 		protected override void RefreshBarPercent(bool isStart = false)
 		{
 			float curPercent = this.PercentMachine.GetCurPercent();
@@ -52,19 +52,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			keyItem.RefreshKeyEnable(keyEnable, isStart);
 		}
 
-		// Token: 0x0401FD01 RID: 130305
+		// Token: 0x0401A7BE RID: 108478
 		private const float EFFECT_BASE_PERCENT = 0.46341464f;
 
-		// Token: 0x0401FD02 RID: 130306
+		// Token: 0x0401A7BF RID: 108479
 		private const int TOTAL_POINT_NUM = 19;
 
-		// Token: 0x0401FD03 RID: 130307
+		// Token: 0x0401A7C0 RID: 108480
 		private const float CHANGE_EFFECT_OFFSET_X = 184.5f;
 
-		// Token: 0x0401FD04 RID: 130308
+		// Token: 0x0401A7C1 RID: 108481
 		private const float CHANGE_EFFECT_WIDTH = 369f;
 
-		// Token: 0x0401FD05 RID: 130309
+		// Token: 0x0401A7C2 RID: 108482
 		[Nullable(1)]
 		private readonly float[] LastPercent = new float[2];
 	}

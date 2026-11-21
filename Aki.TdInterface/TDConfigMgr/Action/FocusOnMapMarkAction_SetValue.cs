@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001732 RID: 5938
+	// Token: 0x020018AF RID: 6319
 	public class FocusOnMapMarkAction_SetValue
 	{
-		// Token: 0x0400502C RID: 20524
-		[Nullable(1)]
+		// Token: 0x0400545B RID: 21595
 		public IFocusOnMapMark MapMarkType;
 	}
 }

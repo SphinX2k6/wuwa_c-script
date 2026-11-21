@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200148C RID: 5260
+	// Token: 0x020015E5 RID: 5605
 	public class AddBuffToFollowShooter_SetValue
 	{
-		// Token: 0x04004598 RID: 17816
-		[Nullable(1)]
+		// Token: 0x04004933 RID: 18739
 		public List<long> BuffIds;
 
-		// Token: 0x04004599 RID: 17817
+		// Token: 0x04004934 RID: 18740
 		public int? FollowShooterId;
 	}
 }

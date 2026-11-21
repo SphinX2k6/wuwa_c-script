@@ -4,10 +4,10 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001D04 RID: 7428
+// Token: 0x020011C6 RID: 4550
 internal class PinballBattleRoleHeadItem : GridProxyAbstract<int>
 {
-	// Token: 0x0600E0B1 RID: 57521 RVA: 0x0034B1D4 File Offset: 0x003493D4
+	// Token: 0x0600B4CE RID: 46286 RVA: 0x00356C04 File Offset: 0x00354E04
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -19,7 +19,7 @@ internal class PinballBattleRoleHeadItem : GridProxyAbstract<int>
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600E0B2 RID: 57522 RVA: 0x0034B21C File Offset: 0x0034941C
+	// Token: 0x0600B4CF RID: 46287 RVA: 0x00356C4C File Offset: 0x00354E4C
 	public override void Refresh(int data, bool isSelected, int gridIndex)
 	{
 		base.SetTextureShowUntilLoaded(PinballConfig.Instance.GetPinballRoleConfigById(data).Value.Icon, base.GetTexture(0), null);

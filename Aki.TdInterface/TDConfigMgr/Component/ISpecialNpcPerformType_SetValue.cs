@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006F7 RID: 1783
+	// Token: 0x02000798 RID: 1944
 	public class ISpecialNpcPerformType_SetValue
 	{
-		// Token: 0x04001A10 RID: 6672
+		// Token: 0x04001C0F RID: 7183
 		public ESpecialNpcType Type;
 	}
 }

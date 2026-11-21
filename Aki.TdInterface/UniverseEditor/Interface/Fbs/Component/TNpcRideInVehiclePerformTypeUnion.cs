@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005C73 RID: 23667
+	// Token: 0x0200629B RID: 25243
 	public class TNpcRideInVehiclePerformTypeUnion
 	{
-		// Token: 0x1700B22A RID: 45610
-		// (get) Token: 0x060288C9 RID: 166089 RVA: 0x00593686 File Offset: 0x00591886
-		// (set) Token: 0x060288CA RID: 166090 RVA: 0x0059368E File Offset: 0x0059188E
+		// Token: 0x1700BB7E RID: 47998
+		// (get) Token: 0x0602AEE9 RID: 175849 RVA: 0x005DBA78 File Offset: 0x005D9C78
+		// (set) Token: 0x0602AEEA RID: 175850 RVA: 0x005DBA80 File Offset: 0x005D9C80
 		public TNpcRideInVehiclePerformType Type { get; set; }
 
-		// Token: 0x1700B22B RID: 45611
-		// (get) Token: 0x060288CB RID: 166091 RVA: 0x00593697 File Offset: 0x00591897
-		// (set) Token: 0x060288CC RID: 166092 RVA: 0x0059369F File Offset: 0x0059189F
+		// Token: 0x1700BB7F RID: 47999
+		// (get) Token: 0x0602AEEB RID: 175851 RVA: 0x005DBA89 File Offset: 0x005D9C89
+		// (set) Token: 0x0602AEEC RID: 175852 RVA: 0x005DBA91 File Offset: 0x005D9C91
 		public object Value { get; set; }
 
-		// Token: 0x060288CD RID: 166093 RVA: 0x005936A8 File Offset: 0x005918A8
+		// Token: 0x0602AEED RID: 175853 RVA: 0x005DBA9A File Offset: 0x005D9C9A
 		public TNpcRideInVehiclePerformTypeUnion()
 		{
 			this.Type = TNpcRideInVehiclePerformType.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060288CE RID: 166094 RVA: 0x005936BE File Offset: 0x005918BE
+		// Token: 0x0602AEEE RID: 175854 RVA: 0x005DBAB0 File Offset: 0x005D9CB0
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060288CF RID: 166095 RVA: 0x005936D0 File Offset: 0x005918D0
+		// Token: 0x0602AEEF RID: 175855 RVA: 0x005DBAC2 File Offset: 0x005D9CC2
 		public ICyberpunkShareEmptyVehiclePerformT AsICyberpunkShareEmptyVehiclePerform()
 		{
 			return this.As<ICyberpunkShareEmptyVehiclePerformT>();
 		}
 
-		// Token: 0x060288D0 RID: 166096 RVA: 0x005936D8 File Offset: 0x005918D8
+		// Token: 0x0602AEF0 RID: 175856 RVA: 0x005DBACA File Offset: 0x005D9CCA
 		public static TNpcRideInVehiclePerformTypeUnion FromICyberpunkShareEmptyVehiclePerform(ICyberpunkShareEmptyVehiclePerformT _icyberpunkshareemptyvehicleperform)
 		{
 			return new TNpcRideInVehiclePerformTypeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060288D1 RID: 166097 RVA: 0x005936ED File Offset: 0x005918ED
+		// Token: 0x0602AEF1 RID: 175857 RVA: 0x005DBADF File Offset: 0x005D9CDF
 		public INpcRideInAutoGongduolaPerformT AsINpcRideInAutoGongduolaPerform()
 		{
 			return this.As<INpcRideInAutoGongduolaPerformT>();
 		}
 
-		// Token: 0x060288D2 RID: 166098 RVA: 0x005936F5 File Offset: 0x005918F5
+		// Token: 0x0602AEF2 RID: 175858 RVA: 0x005DBAE7 File Offset: 0x005D9CE7
 		public static TNpcRideInVehiclePerformTypeUnion FromINpcRideInAutoGongduolaPerform(INpcRideInAutoGongduolaPerformT _inpcrideinautogongduolaperform)
 		{
 			return new TNpcRideInVehiclePerformTypeUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060288D3 RID: 166099 RVA: 0x0059370A File Offset: 0x0059190A
+		// Token: 0x0602AEF3 RID: 175859 RVA: 0x005DBAFC File Offset: 0x005D9CFC
 		public INpcRideInGongduolaPerformT AsINpcRideInGongduolaPerform()
 		{
 			return this.As<INpcRideInGongduolaPerformT>();
 		}
 
-		// Token: 0x060288D4 RID: 166100 RVA: 0x00593712 File Offset: 0x00591912
+		// Token: 0x0602AEF4 RID: 175860 RVA: 0x005DBB04 File Offset: 0x005D9D04
 		public static TNpcRideInVehiclePerformTypeUnion FromINpcRideInGongduolaPerform(INpcRideInGongduolaPerformT _inpcrideingongduolaperform)
 		{
 			return new TNpcRideInVehiclePerformTypeUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060288D5 RID: 166101 RVA: 0x00593727 File Offset: 0x00591927
+		// Token: 0x0602AEF5 RID: 175861 RVA: 0x005DBB19 File Offset: 0x005D9D19
 		public IWoodenOxenAndFlowingHorsesPerformT AsIWoodenOxenAndFlowingHorsesPerform()
 		{
 			return this.As<IWoodenOxenAndFlowingHorsesPerformT>();
 		}
 
-		// Token: 0x060288D6 RID: 166102 RVA: 0x0059372F File Offset: 0x0059192F
+		// Token: 0x0602AEF6 RID: 175862 RVA: 0x005DBB21 File Offset: 0x005D9D21
 		public static TNpcRideInVehiclePerformTypeUnion FromIWoodenOxenAndFlowingHorsesPerform(IWoodenOxenAndFlowingHorsesPerformT _iwoodenoxenandflowinghorsesperform)
 		{
 			return new TNpcRideInVehiclePerformTypeUnion
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060288D7 RID: 166103 RVA: 0x00593744 File Offset: 0x00591944
+		// Token: 0x0602AEF7 RID: 175863 RVA: 0x005DBB38 File Offset: 0x005D9D38
 		public static int Pack(FlatBufferBuilder builder, TNpcRideInVehiclePerformTypeUnion _o)
 		{
 			switch (_o.Type)

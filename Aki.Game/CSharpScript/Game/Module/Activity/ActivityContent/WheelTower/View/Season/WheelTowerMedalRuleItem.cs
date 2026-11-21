@@ -8,7 +8,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Season
 {
-	// Token: 0x02005F5C RID: 24412
+	// Token: 0x02004F43 RID: 20291
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -17,7 +17,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Seas
 	})]
 	internal class WheelTowerMedalRuleItem : GridProxyAbstract<WheelTowerMedalRuleItemData>
 	{
-		// Token: 0x0603DFFD RID: 253949 RVA: 0x00EF6C94 File Offset: 0x00EF4E94
+		// Token: 0x06032F98 RID: 208792 RVA: 0x00E489C0 File Offset: 0x00E46BC0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Seas
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603DFFE RID: 253950 RVA: 0x00EF6D60 File Offset: 0x00EF4F60
+		// Token: 0x06032F99 RID: 208793 RVA: 0x00E48A8C File Offset: 0x00E46C8C
 		public override void Refresh(WheelTowerMedalRuleItemData data, bool isSelected, int gridIndex)
 		{
 			NewTowerMedal? medalConfigById = WheelTowerConfig.Instance.GetMedalConfigById(data.MedalId);

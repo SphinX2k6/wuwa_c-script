@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009EC RID: 2540
+	// Token: 0x02000AB1 RID: 2737
 	public static class EReboundOptionTypeExtensions
 	{
-		// Token: 0x06003857 RID: 14423 RVA: 0x00091F34 File Offset: 0x00090134
+		// Token: 0x06003C2F RID: 15407 RVA: 0x0009A7F4 File Offset: 0x000989F4
 		public static string ToEnumString(this EReboundOptionType value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003858 RID: 14424 RVA: 0x00091F5C File Offset: 0x0009015C
+		// Token: 0x06003C30 RID: 15408 RVA: 0x0009A81C File Offset: 0x00098A1C
 		public static EReboundOptionType FromString(string name)
 		{
 			EReboundOptionType result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003859 RID: 14425 RVA: 0x00091F85 File Offset: 0x00090185
+		// Token: 0x06003C31 RID: 15409 RVA: 0x0009A845 File Offset: 0x00098A45
 		public static bool TryFromString(string name, out EReboundOptionType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x0600385A RID: 14426 RVA: 0x00091FAA File Offset: 0x000901AA
+		// Token: 0x06003C32 RID: 15410 RVA: 0x0009A86A File Offset: 0x00098A6A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600385B RID: 14427 RVA: 0x00091FBA File Offset: 0x000901BA
+		// Token: 0x06003C33 RID: 15411 RVA: 0x0009A87A File Offset: 0x00098A7A
 		public static EReboundOptionType[] GetValues()
 		{
 			return new EReboundOptionType[1];
 		}
 
-		// Token: 0x0600385C RID: 14428 RVA: 0x00091FC2 File Offset: 0x000901C2
+		// Token: 0x06003C34 RID: 15412 RVA: 0x0009A882 File Offset: 0x00098A82
 		public static string[] GetNames()
 		{
 			return new string[]

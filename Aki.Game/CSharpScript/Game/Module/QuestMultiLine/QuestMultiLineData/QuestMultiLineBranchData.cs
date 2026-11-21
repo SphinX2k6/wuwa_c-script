@@ -5,12 +5,12 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.QuestMultiLine.QuestMultiLineData
 {
-	// Token: 0x02004FCD RID: 20429
+	// Token: 0x02003F96 RID: 16278
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class QuestMultiLineBranchData
 	{
-		// Token: 0x06034449 RID: 214089 RVA: 0x00C465F4 File Offset: 0x00C447F4
+		// Token: 0x060292B7 RID: 168631 RVA: 0x00B8FDAC File Offset: 0x00B8DFAC
 		public QuestMultiLineBranchData(int configId)
 		{
 			this.Config = QuestMultiLineConfig.GetQuestBranchConfig(configId);
@@ -22,8 +22,8 @@ namespace CSharpScript.Game.Module.QuestMultiLine.QuestMultiLineData
 			}
 		}
 
-		// Token: 0x17007F82 RID: 32642
-		// (get) Token: 0x0603444A RID: 214090 RVA: 0x00C46658 File Offset: 0x00C44858
+		// Token: 0x17005332 RID: 21298
+		// (get) Token: 0x060292B8 RID: 168632 RVA: 0x00B8FE10 File Offset: 0x00B8E010
 		public int BranchId
 		{
 			get
@@ -32,8 +32,8 @@ namespace CSharpScript.Game.Module.QuestMultiLine.QuestMultiLineData
 			}
 		}
 
-		// Token: 0x17007F83 RID: 32643
-		// (get) Token: 0x0603444B RID: 214091 RVA: 0x00C46678 File Offset: 0x00C44878
+		// Token: 0x17005333 RID: 21299
+		// (get) Token: 0x060292B9 RID: 168633 RVA: 0x00B8FE30 File Offset: 0x00B8E030
 		public string Name
 		{
 			get
@@ -42,8 +42,8 @@ namespace CSharpScript.Game.Module.QuestMultiLine.QuestMultiLineData
 			}
 		}
 
-		// Token: 0x17007F84 RID: 32644
-		// (get) Token: 0x0603444C RID: 214092 RVA: 0x00C46698 File Offset: 0x00C44898
+		// Token: 0x17005334 RID: 21300
+		// (get) Token: 0x060292BA RID: 168634 RVA: 0x00B8FE50 File Offset: 0x00B8E050
 		public string Icon
 		{
 			get
@@ -52,8 +52,8 @@ namespace CSharpScript.Game.Module.QuestMultiLine.QuestMultiLineData
 			}
 		}
 
-		// Token: 0x17007F85 RID: 32645
-		// (get) Token: 0x0603444D RID: 214093 RVA: 0x00C466B8 File Offset: 0x00C448B8
+		// Token: 0x17005335 RID: 21301
+		// (get) Token: 0x060292BB RID: 168635 RVA: 0x00B8FE70 File Offset: 0x00B8E070
 		public string[] Icons
 		{
 			get
@@ -62,8 +62,8 @@ namespace CSharpScript.Game.Module.QuestMultiLine.QuestMultiLineData
 			}
 		}
 
-		// Token: 0x17007F86 RID: 32646
-		// (get) Token: 0x0603444E RID: 214094 RVA: 0x00C466D8 File Offset: 0x00C448D8
+		// Token: 0x17005336 RID: 21302
+		// (get) Token: 0x060292BC RID: 168636 RVA: 0x00B8FE90 File Offset: 0x00B8E090
 		public string Desc
 		{
 			get
@@ -72,8 +72,8 @@ namespace CSharpScript.Game.Module.QuestMultiLine.QuestMultiLineData
 			}
 		}
 
-		// Token: 0x17007F87 RID: 32647
-		// (get) Token: 0x0603444F RID: 214095 RVA: 0x00C466F8 File Offset: 0x00C448F8
+		// Token: 0x17005337 RID: 21303
+		// (get) Token: 0x060292BD RID: 168637 RVA: 0x00B8FEB0 File Offset: 0x00B8E0B0
 		public int[] FightingAreas
 		{
 			get
@@ -82,8 +82,8 @@ namespace CSharpScript.Game.Module.QuestMultiLine.QuestMultiLineData
 			}
 		}
 
-		// Token: 0x17007F88 RID: 32648
-		// (get) Token: 0x06034450 RID: 214096 RVA: 0x00C46718 File Offset: 0x00C44918
+		// Token: 0x17005338 RID: 21304
+		// (get) Token: 0x060292BE RID: 168638 RVA: 0x00B8FED0 File Offset: 0x00B8E0D0
 		public List<QuestMultiLineComponentData> Components
 		{
 			get
@@ -92,9 +92,9 @@ namespace CSharpScript.Game.Module.QuestMultiLine.QuestMultiLineData
 			}
 		}
 
-		// Token: 0x17007F89 RID: 32649
-		// (get) Token: 0x06034451 RID: 214097 RVA: 0x00C46720 File Offset: 0x00C44920
-		// (set) Token: 0x06034452 RID: 214098 RVA: 0x00C46728 File Offset: 0x00C44928
+		// Token: 0x17005339 RID: 21305
+		// (get) Token: 0x060292BF RID: 168639 RVA: 0x00B8FED8 File Offset: 0x00B8E0D8
+		// (set) Token: 0x060292C0 RID: 168640 RVA: 0x00B8FEE0 File Offset: 0x00B8E0E0
 		public EBranchState State
 		{
 			get
@@ -107,13 +107,13 @@ namespace CSharpScript.Game.Module.QuestMultiLine.QuestMultiLineData
 			}
 		}
 
-		// Token: 0x0401BCE3 RID: 113891
+		// Token: 0x040166B8 RID: 91832
 		private EBranchState BranchState;
 
-		// Token: 0x0401BCE4 RID: 113892
+		// Token: 0x040166B9 RID: 91833
 		private readonly QuestBranchConfig? Config;
 
-		// Token: 0x0401BCE5 RID: 113893
+		// Token: 0x040166BA RID: 91834
 		private readonly List<QuestMultiLineComponentData> QuestMultiLineComponentDataList = new List<QuestMultiLineComponentData>();
 	}
 }

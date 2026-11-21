@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004C1F RID: 19487
+	// Token: 0x0200510C RID: 20748
 	public struct IExploreLevelCondtion : IFlatbufferObject
 	{
-		// Token: 0x17008D8E RID: 36238
-		// (get) Token: 0x0601EDEF RID: 126447 RVA: 0x004523C5 File Offset: 0x004505C5
+		// Token: 0x170094B2 RID: 38066
+		// (get) Token: 0x060209D5 RID: 133589 RVA: 0x00485A2D File Offset: 0x00483C2D
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601EDF0 RID: 126448 RVA: 0x004523D2 File Offset: 0x004505D2
+		// Token: 0x060209D6 RID: 133590 RVA: 0x00485A3A File Offset: 0x00483C3A
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601EDF1 RID: 126449 RVA: 0x004523DC File Offset: 0x004505DC
+		// Token: 0x060209D7 RID: 133591 RVA: 0x00485A44 File Offset: 0x00483C44
 		public static IExploreLevelCondtion GetRootAsIExploreLevelCondtion(ByteBuffer _bb)
 		{
 			return IExploreLevelCondtion.GetRootAsIExploreLevelCondtion(_bb, default(IExploreLevelCondtion));
 		}
 
-		// Token: 0x0601EDF2 RID: 126450 RVA: 0x004523F8 File Offset: 0x004505F8
+		// Token: 0x060209D8 RID: 133592 RVA: 0x00485A60 File Offset: 0x00483C60
 		public static IExploreLevelCondtion GetRootAsIExploreLevelCondtion(ByteBuffer _bb, IExploreLevelCondtion obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601EDF3 RID: 126451 RVA: 0x00452415 File Offset: 0x00450615
+		// Token: 0x060209D9 RID: 133593 RVA: 0x00485A7D File Offset: 0x00483C7D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601EDF4 RID: 126452 RVA: 0x00452424 File Offset: 0x00450624
+		// Token: 0x060209DA RID: 133594 RVA: 0x00485A8C File Offset: 0x00483C8C
 		public IExploreLevelCondtion __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008D8F RID: 36239
-		// (get) Token: 0x0601EDF5 RID: 126453 RVA: 0x00452434 File Offset: 0x00450634
+		// Token: 0x170094B3 RID: 38067
+		// (get) Token: 0x060209DB RID: 133595 RVA: 0x00485A9C File Offset: 0x00483C9C
 		public EAccessQuestCondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008D90 RID: 36240
-		// (get) Token: 0x0601EDF6 RID: 126454 RVA: 0x00452470 File Offset: 0x00450670
+		// Token: 0x170094B4 RID: 38068
+		// (get) Token: 0x060209DC RID: 133596 RVA: 0x00485AD8 File Offset: 0x00483CD8
 		public int ExploreLevel
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601EDF7 RID: 126455 RVA: 0x004524AC File Offset: 0x004506AC
+		// Token: 0x060209DD RID: 133597 RVA: 0x00485B14 File Offset: 0x00483D14
 		public static Offset<IExploreLevelCondtion> CreateIExploreLevelCondtion(FlatBufferBuilder builder, EAccessQuestCondition Type = EAccessQuestCondition.ExploreLevel, int ExploreLevel = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IExploreLevelCondtion.EndIExploreLevelCondtion(builder);
 		}
 
-		// Token: 0x0601EDF8 RID: 126456 RVA: 0x004524C9 File Offset: 0x004506C9
+		// Token: 0x060209DE RID: 133598 RVA: 0x00485B31 File Offset: 0x00483D31
 		public static void StartIExploreLevelCondtion(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601EDF9 RID: 126457 RVA: 0x004524D2 File Offset: 0x004506D2
+		// Token: 0x060209DF RID: 133599 RVA: 0x00485B3A File Offset: 0x00483D3A
 		public static void AddType(FlatBufferBuilder builder, EAccessQuestCondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601EDFA RID: 126458 RVA: 0x004524DD File Offset: 0x004506DD
+		// Token: 0x060209E0 RID: 133600 RVA: 0x00485B45 File Offset: 0x00483D45
 		public static void AddExploreLevel(FlatBufferBuilder builder, int exploreLevel)
 		{
 			builder.AddInt(1, exploreLevel, 0);
 		}
 
-		// Token: 0x0601EDFB RID: 126459 RVA: 0x004524E8 File Offset: 0x004506E8
+		// Token: 0x060209E1 RID: 133601 RVA: 0x00485B50 File Offset: 0x00483D50
 		public static Offset<IExploreLevelCondtion> EndIExploreLevelCondtion(FlatBufferBuilder builder)
 		{
 			return new Offset<IExploreLevelCondtion>(builder.EndTable());
 		}
 
-		// Token: 0x0601EDFC RID: 126460 RVA: 0x004524F8 File Offset: 0x004506F8
+		// Token: 0x060209E2 RID: 133602 RVA: 0x00485B60 File Offset: 0x00483D60
 		public IExploreLevelCondtionT UnPack()
 		{
 			IExploreLevelCondtionT exploreLevelCondtionT = new IExploreLevelCondtionT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return exploreLevelCondtionT;
 		}
 
-		// Token: 0x0601EDFD RID: 126461 RVA: 0x00452513 File Offset: 0x00450713
+		// Token: 0x060209E3 RID: 133603 RVA: 0x00485B7B File Offset: 0x00483D7B
 		public void UnPackTo(IExploreLevelCondtionT _o)
 		{
 			_o.Type = this.Type;
 			_o.ExploreLevel = this.ExploreLevel;
 		}
 
-		// Token: 0x0601EDFE RID: 126462 RVA: 0x00452530 File Offset: 0x00450730
+		// Token: 0x060209E4 RID: 133604 RVA: 0x00485B98 File Offset: 0x00483D98
 		public static Offset<IExploreLevelCondtion> Pack(FlatBufferBuilder builder, IExploreLevelCondtionT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return IExploreLevelCondtion.CreateIExploreLevelCondtion(builder, _o.Type, _o.ExploreLevel);
 		}
 
-		// Token: 0x0400D5B7 RID: 54711
+		// Token: 0x0400E0CE RID: 57550
 		private Table __p;
 	}
 }

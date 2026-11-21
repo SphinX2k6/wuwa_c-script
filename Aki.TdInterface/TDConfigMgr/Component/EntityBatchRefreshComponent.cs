@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020000F7 RID: 247
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000100 RID: 256
 	public class EntityBatchRefreshComponent : IComponentBase
 	{
-		// Token: 0x060003D6 RID: 982 RVA: 0x0001CB58 File Offset: 0x0001AD58
+		// Token: 0x060003DA RID: 986 RVA: 0x0001D4CC File Offset: 0x0001B6CC
 		private EntityBatchRefreshComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060003D7 RID: 983 RVA: 0x0001CB90 File Offset: 0x0001AD90
+		// Token: 0x060003DB RID: 987 RVA: 0x0001D504 File Offset: 0x0001B704
 		public static EntityBatchRefreshComponent Create([Nullable(2)] EntityBatchRefreshComponent instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060003D8 RID: 984 RVA: 0x0001CBA3 File Offset: 0x0001ADA3
+		// Token: 0x060003DC RID: 988 RVA: 0x0001D517 File Offset: 0x0001B717
 		public static EntityBatchRefreshComponent CreateFromSetValue([Nullable(2)] EntityBatchRefreshComponent_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060003D9 RID: 985 RVA: 0x0001CBB8 File Offset: 0x0001ADB8
+		// Token: 0x060003DD RID: 989 RVA: 0x0001D52C File Offset: 0x0001B72C
 		public new EntityBatchRefreshComponent_SetValue ToSetValue()
 		{
 			return new EntityBatchRefreshComponent_SetValue
@@ -64,9 +62,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000149 RID: 329
-		// (get) Token: 0x060003DA RID: 986 RVA: 0x0001CC08 File Offset: 0x0001AE08
-		// (set) Token: 0x060003DB RID: 987 RVA: 0x0001CC42 File Offset: 0x0001AE42
+		// Token: 0x1700014B RID: 331
+		// (get) Token: 0x060003DE RID: 990 RVA: 0x0001D57C File Offset: 0x0001B77C
+		// (set) Token: 0x060003DF RID: 991 RVA: 0x0001D5B6 File Offset: 0x0001B7B6
 		public override bool? Disabled
 		{
 			get
@@ -88,9 +86,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700014A RID: 330
-		// (get) Token: 0x060003DC RID: 988 RVA: 0x0001CC50 File Offset: 0x0001AE50
-		// (set) Token: 0x060003DD RID: 989 RVA: 0x0001CC7A File Offset: 0x0001AE7A
+		// Token: 0x1700014C RID: 332
+		// (get) Token: 0x060003E0 RID: 992 RVA: 0x0001D5C4 File Offset: 0x0001B7C4
+		// (set) Token: 0x060003E1 RID: 993 RVA: 0x0001D5EE File Offset: 0x0001B7EE
 		public override bool? EdIsLocked
 		{
 			get
@@ -107,9 +105,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700014B RID: 331
-		// (get) Token: 0x060003DE RID: 990 RVA: 0x0001CC88 File Offset: 0x0001AE88
-		// (set) Token: 0x060003DF RID: 991 RVA: 0x0001CCE9 File Offset: 0x0001AEE9
+		// Token: 0x1700014D RID: 333
+		// (get) Token: 0x060003E2 RID: 994 RVA: 0x0001D5FC File Offset: 0x0001B7FC
+		// (set) Token: 0x060003E3 RID: 995 RVA: 0x0001D65D File Offset: 0x0001B85D
 		[Nullable(2)]
 		public virtual IConditionGroup StartCondition
 		{
@@ -140,9 +138,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700014C RID: 332
-		// (get) Token: 0x060003E0 RID: 992 RVA: 0x0001CD00 File Offset: 0x0001AF00
-		// (set) Token: 0x060003E1 RID: 993 RVA: 0x0001CD61 File Offset: 0x0001AF61
+		// Token: 0x1700014E RID: 334
+		// (get) Token: 0x060003E4 RID: 996 RVA: 0x0001D674 File Offset: 0x0001B874
+		// (set) Token: 0x060003E5 RID: 997 RVA: 0x0001D6D5 File Offset: 0x0001B8D5
 		[Nullable(2)]
 		public virtual IConditionGroup EndCondition
 		{
@@ -173,9 +171,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x1700014D RID: 333
-		// (get) Token: 0x060003E2 RID: 994 RVA: 0x0001CD76 File Offset: 0x0001AF76
-		// (set) Token: 0x060003E3 RID: 995 RVA: 0x0001CD9D File Offset: 0x0001AF9D
+		// Token: 0x1700014F RID: 335
+		// (get) Token: 0x060003E6 RID: 998 RVA: 0x0001D6EA File Offset: 0x0001B8EA
+		// (set) Token: 0x060003E7 RID: 999 RVA: 0x0001D711 File Offset: 0x0001B911
 		public virtual IEntityBatchRefreshMode EntityBatchRefresh
 		{
 			get
@@ -197,24 +195,24 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400052D RID: 1325
+		// Token: 0x04000557 RID: 1367
 		[Nullable(2)]
 		protected new EntityBatchRefreshComponent FbInstance;
 
-		// Token: 0x0400052E RID: 1326
+		// Token: 0x04000558 RID: 1368
 		[Nullable(2)]
 		protected new EntityBatchRefreshComponent_SetValue PocoInterface;
 
-		// Token: 0x0400052F RID: 1327
+		// Token: 0x04000559 RID: 1369
 		private IConditionGroup _StartConditionCache;
 
-		// Token: 0x04000530 RID: 1328
+		// Token: 0x0400055A RID: 1370
 		private bool _StartConditionInited;
 
-		// Token: 0x04000531 RID: 1329
+		// Token: 0x0400055B RID: 1371
 		private IConditionGroup _EndConditionCache;
 
-		// Token: 0x04000532 RID: 1330
+		// Token: 0x0400055C RID: 1372
 		private bool _EndConditionInited;
 	}
 }

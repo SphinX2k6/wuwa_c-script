@@ -8,13 +8,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046CF RID: 18127
+	// Token: 0x020035FF RID: 13823
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class UiLayer : Singleton
 	{
-		// Token: 0x17007677 RID: 30327
-		// (get) Token: 0x0602EC0C RID: 191500 RVA: 0x00AD2597 File Offset: 0x00AD0797
+		// Token: 0x17004932 RID: 18738
+		// (get) Token: 0x06023348 RID: 144200 RVA: 0x00A008FB File Offset: 0x009FEAFB
 		public AActor UiRoot
 		{
 			get
@@ -23,8 +23,8 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x17007678 RID: 30328
-		// (get) Token: 0x0602EC0D RID: 191501 RVA: 0x00AD259F File Offset: 0x00AD079F
+		// Token: 0x17004933 RID: 18739
+		// (get) Token: 0x06023349 RID: 144201 RVA: 0x00A00903 File Offset: 0x009FEB03
 		public UUIItem UiRootItem
 		{
 			get
@@ -33,8 +33,8 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x17007679 RID: 30329
-		// (get) Token: 0x0602EC0E RID: 191502 RVA: 0x00AD25A7 File Offset: 0x00AD07A7
+		// Token: 0x17004934 RID: 18740
+		// (get) Token: 0x0602334A RID: 144202 RVA: 0x00A0090B File Offset: 0x009FEB0B
 		public AActor WorldSpaceUiRoot
 		{
 			get
@@ -43,8 +43,8 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x1700767A RID: 30330
-		// (get) Token: 0x0602EC0F RID: 191503 RVA: 0x00AD25AF File Offset: 0x00AD07AF
+		// Token: 0x17004935 RID: 18741
+		// (get) Token: 0x0602334B RID: 144203 RVA: 0x00A00913 File Offset: 0x009FEB13
 		public UUIItem WorldSpaceUiRootItem
 		{
 			get
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EC10 RID: 191504 RVA: 0x00AD25B8 File Offset: 0x00AD07B8
+		// Token: 0x0602334C RID: 144204 RVA: 0x00A0091C File Offset: 0x009FEB1C
 		private UniTask LoadLayerNode(ELayerType layer, int unitCount)
 		{
 			UiLayer.<LoadLayerNode>d__21 <LoadLayerNode>d__;
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Ui
 			return <LoadLayerNode>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602EC11 RID: 191505 RVA: 0x00AD260C File Offset: 0x00AD080C
+		// Token: 0x0602334D RID: 144205 RVA: 0x00A00970 File Offset: 0x009FEB70
 		[NullableContext(1)]
 		private UniTask LoadLayerUnit(int index, [Nullable(2)] UUIItem parent, List<UUIItem> unitList, int unitCount)
 		{
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Ui
 			return <LoadLayerUnit>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602EC12 RID: 191506 RVA: 0x00AD2670 File Offset: 0x00AD0870
+		// Token: 0x0602334E RID: 144206 RVA: 0x00A009D4 File Offset: 0x009FEBD4
 		public UUIItem GetFloatUnit(ELayerType layer, int index)
 		{
 			List<UUIItem> list;
@@ -100,7 +100,7 @@ namespace CSharpScript.Game.Ui
 			return list[index];
 		}
 
-		// Token: 0x0602EC13 RID: 191507 RVA: 0x00AD26E8 File Offset: 0x00AD08E8
+		// Token: 0x0602334F RID: 144207 RVA: 0x00A00A4C File Offset: 0x009FEC4C
 		private UniTask LoadPureModeUnit(ELayerType layerType)
 		{
 			UiLayer.<LoadPureModeUnit>d__24 <LoadPureModeUnit>d__;
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Ui
 			return <LoadPureModeUnit>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602EC14 RID: 191508 RVA: 0x00AD2734 File Offset: 0x00AD0934
+		// Token: 0x06023350 RID: 144208 RVA: 0x00A00A98 File Offset: 0x009FEC98
 		public UUIItem GetPureModeFloatUnit(ELayerType layer)
 		{
 			UUIItem result;
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Ui
 			return result;
 		}
 
-		// Token: 0x0602EC15 RID: 191509 RVA: 0x00AD2780 File Offset: 0x00AD0980
+		// Token: 0x06023351 RID: 144209 RVA: 0x00A00AE4 File Offset: 0x009FECE4
 		public UUIItem GetLayerRootUiItem(ELayerType layerType)
 		{
 			UUIItem result;
@@ -146,14 +146,14 @@ namespace CSharpScript.Game.Ui
 			return result;
 		}
 
-		// Token: 0x0602EC16 RID: 191510 RVA: 0x00AD27D3 File Offset: 0x00AD09D3
+		// Token: 0x06023352 RID: 144210 RVA: 0x00A00B37 File Offset: 0x009FED37
 		[NullableContext(1)]
 		public UUIItem GetBattleViewUnit(int index)
 		{
 			return this.BattleViewUnitList[index];
 		}
 
-		// Token: 0x0602EC17 RID: 191511 RVA: 0x00AD27E4 File Offset: 0x00AD09E4
+		// Token: 0x06023353 RID: 144211 RVA: 0x00A00B48 File Offset: 0x009FED48
 		public UUIItem GetLayerUnit(ELayerType layer, int index)
 		{
 			if (layer != ELayerType.HUD)
@@ -173,7 +173,7 @@ namespace CSharpScript.Game.Ui
 			return this.BattleViewUnitList[index];
 		}
 
-		// Token: 0x0602EC18 RID: 191512 RVA: 0x00AD2854 File Offset: 0x00AD0A54
+		// Token: 0x06023354 RID: 144212 RVA: 0x00A00BB8 File Offset: 0x009FEDB8
 		public unsafe void SetLayerActive(ELayerType type, bool show)
 		{
 			UUIItem layerRootUiItem = this.GetLayerRootUiItem(type);
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.Ui
 			instance2.Error(module2, author2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x0602EC19 RID: 191513 RVA: 0x00AD2904 File Offset: 0x00AD0B04
+		// Token: 0x06023355 RID: 144213 RVA: 0x00A00C68 File Offset: 0x009FEE68
 		[NullableContext(1)]
 		public unsafe void SetLayerRenderable(ELayerType type, bool show, string reason)
 		{
@@ -225,7 +225,7 @@ namespace CSharpScript.Game.Ui
 			instance2.Error(module2, author2, message2, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x0602EC1A RID: 191514 RVA: 0x00AD29D0 File Offset: 0x00AD0BD0
+		// Token: 0x06023356 RID: 144214 RVA: 0x00A00D34 File Offset: 0x009FEF34
 		public UniTask Initialize()
 		{
 			UiLayer.<Initialize>d__31 <Initialize>d__;
@@ -236,7 +236,7 @@ namespace CSharpScript.Game.Ui
 			return <Initialize>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602EC1B RID: 191515 RVA: 0x00AD2A14 File Offset: 0x00AD0C14
+		// Token: 0x06023357 RID: 144215 RVA: 0x00A00D78 File Offset: 0x009FEF78
 		private UniTask LoadUiRoot()
 		{
 			UiLayer.<LoadUiRoot>d__32 <LoadUiRoot>d__;
@@ -247,7 +247,7 @@ namespace CSharpScript.Game.Ui
 			return <LoadUiRoot>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602EC1C RID: 191516 RVA: 0x00AD2A58 File Offset: 0x00AD0C58
+		// Token: 0x06023358 RID: 144216 RVA: 0x00A00DBC File Offset: 0x009FEFBC
 		private UniTask LoadAllLayer()
 		{
 			UiLayer.<LoadAllLayer>d__33 <LoadAllLayer>d__;
@@ -258,7 +258,7 @@ namespace CSharpScript.Game.Ui
 			return <LoadAllLayer>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602EC1D RID: 191517 RVA: 0x00AD2A9C File Offset: 0x00AD0C9C
+		// Token: 0x06023359 RID: 144217 RVA: 0x00A00E00 File Offset: 0x009FF000
 		private UniTask LoadLayer(ELayerType layerType)
 		{
 			UiLayer.<LoadLayer>d__34 <LoadLayer>d__;
@@ -270,7 +270,7 @@ namespace CSharpScript.Game.Ui
 			return <LoadLayer>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602EC1E RID: 191518 RVA: 0x00AD2AE8 File Offset: 0x00AD0CE8
+		// Token: 0x0602335A RID: 144218 RVA: 0x00A00E4C File Offset: 0x009FF04C
 		private UniTask LoadBattleViewUnit()
 		{
 			UiLayer.<LoadBattleViewUnit>d__35 <LoadBattleViewUnit>d__;
@@ -281,7 +281,7 @@ namespace CSharpScript.Game.Ui
 			return <LoadBattleViewUnit>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602EC1F RID: 191519 RVA: 0x00AD2B2C File Offset: 0x00AD0D2C
+		// Token: 0x0602335B RID: 144219 RVA: 0x00A00E90 File Offset: 0x009FF090
 		private UniTask LoadWorldSpaceUiRoot()
 		{
 			UiLayer.<LoadWorldSpaceUiRoot>d__36 <LoadWorldSpaceUiRoot>d__;
@@ -292,7 +292,7 @@ namespace CSharpScript.Game.Ui
 			return <LoadWorldSpaceUiRoot>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602EC20 RID: 191520 RVA: 0x00AD2B70 File Offset: 0x00AD0D70
+		// Token: 0x0602335C RID: 144220 RVA: 0x00A00ED4 File Offset: 0x009FF0D4
 		public void SetUiRootActive(bool show)
 		{
 			if (this.IsForceHideUi())
@@ -308,14 +308,14 @@ namespace CSharpScript.Game.Ui
 			EventSystem.Instance.Emit<bool>(EEventName.OnUiScreenRootVisibleChange, show);
 		}
 
-		// Token: 0x0602EC21 RID: 191521 RVA: 0x00AD2BB4 File Offset: 0x00AD0DB4
+		// Token: 0x0602335D RID: 144221 RVA: 0x00A00F18 File Offset: 0x009FF118
 		public bool IsUiActive()
 		{
 			UUIItem uiRootItemInternal = this.UiRootItemInternal;
 			return uiRootItemInternal != null && uiRootItemInternal.IsValid() && uiRootItemInternal.IsUIActiveInHierarchy();
 		}
 
-		// Token: 0x0602EC22 RID: 191522 RVA: 0x00AD2BDB File Offset: 0x00AD0DDB
+		// Token: 0x0602335E RID: 144222 RVA: 0x00A00F3F File Offset: 0x009FF13F
 		public void ForceHideUi()
 		{
 			if (!SundryModel.Instance.GmBlueprintGmIsOpen)
@@ -327,7 +327,7 @@ namespace CSharpScript.Game.Ui
 			this.IsForceHideUiRoot = true;
 		}
 
-		// Token: 0x0602EC23 RID: 191523 RVA: 0x00AD2BFF File Offset: 0x00AD0DFF
+		// Token: 0x0602335F RID: 144223 RVA: 0x00A00F63 File Offset: 0x009FF163
 		public void ForceShowUi()
 		{
 			if (!this.IsForceHideUi())
@@ -339,19 +339,19 @@ namespace CSharpScript.Game.Ui
 			this.SetWorldUiActive(true);
 		}
 
-		// Token: 0x0602EC24 RID: 191524 RVA: 0x00AD2C1F File Offset: 0x00AD0E1F
+		// Token: 0x06023360 RID: 144224 RVA: 0x00A00F83 File Offset: 0x009FF183
 		public bool IsForceHideUi()
 		{
 			return this.IsForceHideUiRoot;
 		}
 
-		// Token: 0x0602EC25 RID: 191525 RVA: 0x00AD2C27 File Offset: 0x00AD0E27
+		// Token: 0x06023361 RID: 144225 RVA: 0x00A00F8B File Offset: 0x009FF18B
 		public void SetForceHideUiState(bool show)
 		{
 			this.IsForceHideUiRoot = !show;
 		}
 
-		// Token: 0x0602EC26 RID: 191526 RVA: 0x00AD2C34 File Offset: 0x00AD0E34
+		// Token: 0x06023362 RID: 144226 RVA: 0x00A00F98 File Offset: 0x009FF198
 		public void SetWorldUiActive(bool show)
 		{
 			if (this.IsForceHideUi())
@@ -365,7 +365,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EC27 RID: 191527 RVA: 0x00AD2C64 File Offset: 0x00AD0E64
+		// Token: 0x06023363 RID: 144227 RVA: 0x00A00FC8 File Offset: 0x009FF1C8
 		[NullableContext(1)]
 		public unsafe void SetShowMaskLayer(string tag, bool show)
 		{
@@ -397,7 +397,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EC28 RID: 191528 RVA: 0x00AD2D19 File Offset: 0x00AD0F19
+		// Token: 0x06023364 RID: 144228 RVA: 0x00A0107D File Offset: 0x009FF27D
 		public void GmClearMask()
 		{
 			this.MaskTagSet.Clear();
@@ -409,14 +409,14 @@ namespace CSharpScript.Game.Ui
 			layerRootUiItem.SetRaycastTarget(false);
 		}
 
-		// Token: 0x0602EC29 RID: 191529 RVA: 0x00AD2D3C File Offset: 0x00AD0F3C
+		// Token: 0x06023365 RID: 144229 RVA: 0x00A010A0 File Offset: 0x009FF2A0
 		public bool IsInMask()
 		{
 			UUIItem layerRootUiItem = this.GetLayerRootUiItem(ELayerType.Mask);
 			return layerRootUiItem != null && layerRootUiItem.IsRaycastTarget();
 		}
 
-		// Token: 0x0602EC2A RID: 191530 RVA: 0x00AD2D60 File Offset: 0x00AD0F60
+		// Token: 0x06023366 RID: 144230 RVA: 0x00A010C4 File Offset: 0x009FF2C4
 		[NullableContext(1)]
 		public void SetShowNormalMaskLayer(bool show, string lockId = "")
 		{
@@ -444,7 +444,7 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EC2B RID: 191531 RVA: 0x00AD2DDE File Offset: 0x00AD0FDE
+		// Token: 0x06023367 RID: 144231 RVA: 0x00A01142 File Offset: 0x009FF342
 		[NullableContext(1)]
 		public Vector2D GetViewportSize()
 		{
@@ -455,15 +455,15 @@ namespace CSharpScript.Game.Ui
 			return Vector2D.Create((double)this.UiRootItem.GetWidth(), (double)this.UiRootItem.GetHeight());
 		}
 
-		// Token: 0x0602EC2C RID: 191532 RVA: 0x00AD2E10 File Offset: 0x00AD1010
+		// Token: 0x06023368 RID: 144232 RVA: 0x00A01174 File Offset: 0x009FF374
 		private void OnViewPortSizeChanged(FIntPoint newViewportSize)
 		{
 			Log.Instance.Info(ELogModule.UiCore, ELogAuthor.CFT, "UIRootItem OnViewPortSizeChange", default(ReadOnlySpan<ValueTuple<string, object>>));
 			EventSystem.Instance.Emit(EEventName.UIViewPortSizeChanged);
 		}
 
-		// Token: 0x1700767B RID: 30331
-		// (get) Token: 0x0602EC2D RID: 191533 RVA: 0x00AD2E46 File Offset: 0x00AD1046
+		// Token: 0x17004936 RID: 18742
+		// (get) Token: 0x06023369 RID: 144233 RVA: 0x00A011AA File Offset: 0x009FF3AA
 		[Nullable(1)]
 		public static UiLayer Instance
 		{
@@ -479,12 +479,12 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EC2E RID: 191534 RVA: 0x00AD2E69 File Offset: 0x00AD1069
+		// Token: 0x0602336A RID: 144234 RVA: 0x00A011CD File Offset: 0x009FF3CD
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602EC2F RID: 191535 RVA: 0x00AD2E6B File Offset: 0x00AD106B
+		// Token: 0x0602336B RID: 144235 RVA: 0x00A011CF File Offset: 0x009FF3CF
 		public static void ResetStaticDefaultValue()
 		{
 			UiLayer instance = UiLayer._instance;
@@ -495,32 +495,32 @@ namespace CSharpScript.Game.Ui
 			UiLayer._instance = null;
 		}
 
-		// Token: 0x0602EC30 RID: 191536 RVA: 0x00AD2E84 File Offset: 0x00AD1084
+		// Token: 0x0602336C RID: 144236 RVA: 0x00A011E8 File Offset: 0x009FF3E8
 		static UiLayer()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(UiLayer.CreateStaticDefaultValue), new Action(UiLayer.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401971C RID: 104220
+		// Token: 0x04013DBA RID: 81338
 		private bool IsInitializing;
 
-		// Token: 0x0401971D RID: 104221
+		// Token: 0x04013DBB RID: 81339
 		[Nullable(1)]
 		private string NormalMaskLock = "";
 
-		// Token: 0x0401971E RID: 104222
+		// Token: 0x04013DBC RID: 81340
 		private AActor UiRootInternal;
 
-		// Token: 0x0401971F RID: 104223
+		// Token: 0x04013DBD RID: 81341
 		private UUIItem UiRootItemInternal;
 
-		// Token: 0x04019720 RID: 104224
+		// Token: 0x04013DBE RID: 81342
 		private AActor WorldSpaceUiRootInternal;
 
-		// Token: 0x04019721 RID: 104225
+		// Token: 0x04013DBF RID: 81343
 		private UUIItem WorldSpaceUiRootItemInternal;
 
-		// Token: 0x04019722 RID: 104226
+		// Token: 0x04013DC0 RID: 81344
 		[Nullable(new byte[]
 		{
 			2,
@@ -528,30 +528,30 @@ namespace CSharpScript.Game.Ui
 		})]
 		private List<UUIItem> BattleViewUnitList;
 
-		// Token: 0x04019723 RID: 104227
+		// Token: 0x04013DC1 RID: 81345
 		[Nullable(1)]
 		private readonly Dictionary<ELayerType, UUIItem> LayerMap = new Dictionary<ELayerType, UUIItem>();
 
-		// Token: 0x04019724 RID: 104228
+		// Token: 0x04013DC2 RID: 81346
 		private bool IsForceHideUiRoot;
 
-		// Token: 0x04019725 RID: 104229
+		// Token: 0x04013DC3 RID: 81347
 		[Nullable(1)]
 		private readonly HashSet<string> MaskTagSet = new HashSet<string>();
 
-		// Token: 0x04019726 RID: 104230
+		// Token: 0x04013DC4 RID: 81348
 		[Nullable(1)]
 		private readonly Dictionary<ELayerType, List<UUIItem>> FloatUnitMap = new Dictionary<ELayerType, List<UUIItem>>();
 
-		// Token: 0x04019727 RID: 104231
+		// Token: 0x04013DC5 RID: 81349
 		[Nullable(1)]
 		private readonly Dictionary<ELayerType, UUIItem> PureModeFloatUnitMap = new Dictionary<ELayerType, UUIItem>();
 
-		// Token: 0x04019728 RID: 104232
+		// Token: 0x04013DC6 RID: 81350
 		[Nullable(1)]
 		private readonly Array LayerTypeArray = Enum.GetValues(typeof(ELayerType));
 
-		// Token: 0x04019729 RID: 104233
+		// Token: 0x04013DC7 RID: 81351
 		private static UiLayer _instance;
 	}
 }

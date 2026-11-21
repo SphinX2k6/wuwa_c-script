@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002619 RID: 9753
+	// Token: 0x020028D9 RID: 10457
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ILongPressInteractConfig
 	{
-		// Token: 0x0600DAE9 RID: 56041 RVA: 0x002099C1 File Offset: 0x00207BC1
-		[NullableContext(1)]
+		// Token: 0x0600E8B6 RID: 59574 RVA: 0x00226115 File Offset: 0x00224315
+		[NullableContext(0)]
 		public static ILongPressInteractConfig Create(ILongPressInteractConfig? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004079 RID: 16505
-		// (get) Token: 0x0600DAEA RID: 56042 RVA: 0x002099E0 File Offset: 0x00207BE0
+		// Token: 0x170043B2 RID: 17330
+		// (get) Token: 0x0600E8B7 RID: 59575 RVA: 0x00226134 File Offset: 0x00224334
 		public virtual float PressDuration
 		{
 			get
@@ -34,8 +34,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700407A RID: 16506
-		// (get) Token: 0x0600DAEB RID: 56043 RVA: 0x002099ED File Offset: 0x00207BED
+		// Token: 0x170043B3 RID: 17331
+		// (get) Token: 0x0600E8B8 RID: 59576 RVA: 0x00226141 File Offset: 0x00224341
 		public virtual ILongPressEffectConfig PressEffect
 		{
 			get
@@ -50,12 +50,12 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700407B RID: 16507
-		// (get) Token: 0x0600DAEC RID: 56044 RVA: 0x00209A21 File Offset: 0x00207C21
-		[Nullable(1)]
+		// Token: 0x170043B4 RID: 17332
+		// (get) Token: 0x0600E8B9 RID: 59577 RVA: 0x00226175 File Offset: 0x00224375
+		[Nullable(0)]
 		public virtual ILongPressInteractStyleConfig Style
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				if (this._StyleInited)
@@ -68,8 +68,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700407C RID: 16508
-		// (get) Token: 0x0600DAED RID: 56045 RVA: 0x00209A50 File Offset: 0x00207C50
+		// Token: 0x170043B5 RID: 17333
+		// (get) Token: 0x0600E8BA RID: 59578 RVA: 0x002261A4 File Offset: 0x002243A4
 		public virtual bool? ResetFromCurrentProgress
 		{
 			get
@@ -82,8 +82,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700407D RID: 16509
-		// (get) Token: 0x0600DAEE RID: 56046 RVA: 0x00209A86 File Offset: 0x00207C86
+		// Token: 0x170043B6 RID: 17334
+		// (get) Token: 0x0600E8BB RID: 59579 RVA: 0x002261DA File Offset: 0x002243DA
 		public virtual ILongPressButtonActionMapping LongPressButtonActionMapping
 		{
 			get
@@ -98,19 +98,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700407E RID: 16510
-		// (get) Token: 0x0600DAEF RID: 56047 RVA: 0x00209ABC File Offset: 0x00207CBC
+		// Token: 0x170043B7 RID: 17335
+		// (get) Token: 0x0600E8BC RID: 59580 RVA: 0x00226210 File Offset: 0x00224410
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> LongPressStartActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -133,19 +133,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700407F RID: 16511
-		// (get) Token: 0x0600DAF0 RID: 56048 RVA: 0x00209B38 File Offset: 0x00207D38
+		// Token: 0x170043B8 RID: 17336
+		// (get) Token: 0x0600E8BD RID: 59581 RVA: 0x0022628C File Offset: 0x0022448C
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> LongPressInterruptedActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -168,19 +168,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004080 RID: 16512
-		// (get) Token: 0x0600DAF1 RID: 56049 RVA: 0x00209BB4 File Offset: 0x00207DB4
+		// Token: 0x170043B9 RID: 17337
+		// (get) Token: 0x0600E8BE RID: 59582 RVA: 0x00226308 File Offset: 0x00224508
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ActionInfo> LongPressSuccessActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -203,19 +203,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004081 RID: 16513
-		// (get) Token: 0x0600DAF2 RID: 56050 RVA: 0x00209C30 File Offset: 0x00207E30
+		// Token: 0x170043BA RID: 17338
+		// (get) Token: 0x0600E8BF RID: 59583 RVA: 0x00226384 File Offset: 0x00224584
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<ILongPressProgressAction> LongPressProgressActions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -238,70 +238,70 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007991 RID: 31121
+		// Token: 0x0400802B RID: 32811
 		private ILongPressInteractConfig Instance;
 
-		// Token: 0x04007992 RID: 31122
+		// Token: 0x0400802C RID: 32812
 		private ILongPressEffectConfig _PressEffectCache;
 
-		// Token: 0x04007993 RID: 31123
+		// Token: 0x0400802D RID: 32813
 		private bool _PressEffectInited;
 
-		// Token: 0x04007994 RID: 31124
-		[Nullable(1)]
+		// Token: 0x0400802E RID: 32814
+		[Nullable(0)]
 		private ILongPressInteractStyleConfig _StyleCache;
 
-		// Token: 0x04007995 RID: 31125
+		// Token: 0x0400802F RID: 32815
 		private bool _StyleInited;
 
-		// Token: 0x04007996 RID: 31126
+		// Token: 0x04008030 RID: 32816
 		private ILongPressButtonActionMapping _LongPressButtonActionMappingCache;
 
-		// Token: 0x04007997 RID: 31127
+		// Token: 0x04008031 RID: 32817
 		private bool _LongPressButtonActionMappingInited;
 
-		// Token: 0x04007998 RID: 31128
+		// Token: 0x04008032 RID: 32818
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _LongPressStartActionsCache;
 
-		// Token: 0x04007999 RID: 31129
+		// Token: 0x04008033 RID: 32819
 		private bool _LongPressStartActionsInited;
 
-		// Token: 0x0400799A RID: 31130
+		// Token: 0x04008034 RID: 32820
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _LongPressInterruptedActionsCache;
 
-		// Token: 0x0400799B RID: 31131
+		// Token: 0x04008035 RID: 32821
 		private bool _LongPressInterruptedActionsInited;
 
-		// Token: 0x0400799C RID: 31132
+		// Token: 0x04008036 RID: 32822
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ActionInfo> _LongPressSuccessActionsCache;
 
-		// Token: 0x0400799D RID: 31133
+		// Token: 0x04008037 RID: 32823
 		private bool _LongPressSuccessActionsInited;
 
-		// Token: 0x0400799E RID: 31134
+		// Token: 0x04008038 RID: 32824
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<ILongPressProgressAction> _LongPressProgressActionsCache;
 
-		// Token: 0x0400799F RID: 31135
+		// Token: 0x04008039 RID: 32825
 		private bool _LongPressProgressActionsInited;
 	}
 }

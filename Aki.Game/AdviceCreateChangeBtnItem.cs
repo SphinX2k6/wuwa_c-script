@@ -4,17 +4,17 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020016CC RID: 5836
+// Token: 0x02000B84 RID: 2948
 public class AdviceCreateChangeBtnItem : UiPanelBase
 {
-	// Token: 0x0600A6F3 RID: 42739 RVA: 0x00256D6D File Offset: 0x00254F6D
+	// Token: 0x06007AD3 RID: 31443 RVA: 0x00261179 File Offset: 0x0025F379
 	[NullableContext(1)]
 	public AdviceCreateChangeBtnItem(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x0600A6F4 RID: 42740 RVA: 0x00256D84 File Offset: 0x00254F84
+	// Token: 0x06007AD4 RID: 31444 RVA: 0x00261190 File Offset: 0x0025F390
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,14 +29,14 @@ public class AdviceCreateChangeBtnItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600A6F5 RID: 42741 RVA: 0x00256E01 File Offset: 0x00255001
+	// Token: 0x06007AD5 RID: 31445 RVA: 0x0026120D File Offset: 0x0025F40D
 	private void OnChangeBtn()
 	{
 		this.InitWordViewParam();
 		UiManager.Instance.OpenView(EUiViewName.AdviceWordView, null, null);
 	}
 
-	// Token: 0x0600A6F6 RID: 42742 RVA: 0x00256E1C File Offset: 0x0025501C
+	// Token: 0x06007AD6 RID: 31446 RVA: 0x00261228 File Offset: 0x0025F428
 	private void InitWordViewParam()
 	{
 		AdviceModel instance = AdviceModel.Instance;
@@ -47,19 +47,19 @@ public class AdviceCreateChangeBtnItem : UiPanelBase
 		instance.CurrentPreSelectSentenceIndex = this.Index;
 	}
 
-	// Token: 0x0600A6F7 RID: 42743 RVA: 0x00256E5B File Offset: 0x0025505B
+	// Token: 0x06007AD7 RID: 31447 RVA: 0x00261267 File Offset: 0x0025F467
 	public void SetIndex(int index)
 	{
 		this.Index = index;
 	}
 
-	// Token: 0x0600A6F8 RID: 42744 RVA: 0x00256E64 File Offset: 0x00255064
+	// Token: 0x06007AD8 RID: 31448 RVA: 0x00261270 File Offset: 0x0025F470
 	public void UpdateCurrentLineMode(ELineMode lineMode)
 	{
 		this.RefreshViewText(lineMode);
 	}
 
-	// Token: 0x0600A6F9 RID: 42745 RVA: 0x00256E70 File Offset: 0x00255070
+	// Token: 0x06007AD9 RID: 31449 RVA: 0x0026127C File Offset: 0x0025F47C
 	private void RefreshViewText(ELineMode lineMode)
 	{
 		if (lineMode == ELineMode.SingleLine)
@@ -75,19 +75,19 @@ public class AdviceCreateChangeBtnItem : UiPanelBase
 		LguiUtil.Instance.SetLocalText(base.GetText(1), "ChangeLastLineWord", Array.Empty<object>());
 	}
 
-	// Token: 0x04004B6B RID: 19307
+	// Token: 0x04004C12 RID: 19474
 	private int Index;
 
-	// Token: 0x02007CA1 RID: 31905
+	// Token: 0x02006E26 RID: 28198
 	private static class EComponents
 	{
-		// Token: 0x04028E1E RID: 167454
+		// Token: 0x04024147 RID: 147783
 		public const int ChangeBtn = 0;
 
-		// Token: 0x04028E1F RID: 167455
+		// Token: 0x04024148 RID: 147784
 		public const int ChangeText = 1;
 
-		// Token: 0x04028E20 RID: 167456
+		// Token: 0x04024149 RID: 147785
 		public const int ItemSelf = 2;
 	}
 }

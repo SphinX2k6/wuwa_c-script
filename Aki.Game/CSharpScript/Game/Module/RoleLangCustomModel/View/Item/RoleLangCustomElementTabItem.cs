@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RoleLangCustomModel.View.Item
 {
-	// Token: 0x02004D7E RID: 19838
+	// Token: 0x02003D47 RID: 15687
 	public class RoleLangCustomElementTabItem : GridProxyAbstract<int>
 	{
-		// Token: 0x06033492 RID: 210066 RVA: 0x00BF7880 File Offset: 0x00BF5A80
+		// Token: 0x060282FF RID: 164607 RVA: 0x00B40E7C File Offset: 0x00B3F07C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -30,13 +30,13 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View.Item
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06033493 RID: 210067 RVA: 0x00BF794C File Offset: 0x00BF5B4C
+		// Token: 0x06028300 RID: 164608 RVA: 0x00B40F48 File Offset: 0x00B3F148
 		protected override void OnStart()
 		{
 			base.GetExtendToggle(1).OnStateChange.Add(new Action<EToggleState>(this.OnToggleStateChanged));
 		}
 
-		// Token: 0x06033494 RID: 210068 RVA: 0x00BF796C File Offset: 0x00BF5B6C
+		// Token: 0x06028301 RID: 164609 RVA: 0x00B40F68 File Offset: 0x00B3F168
 		public override void Refresh(int data, bool isSelected, int gridIndex)
 		{
 			this.CurElementId = data;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View.Item
 			}
 		}
 
-		// Token: 0x06033495 RID: 210069 RVA: 0x00BF7A18 File Offset: 0x00BF5C18
+		// Token: 0x06028302 RID: 164610 RVA: 0x00B41014 File Offset: 0x00B3F214
 		protected void RefreshTransition(bool _)
 		{
 			UUIExtendToggleSpriteTransition uiExtendToggleSpriteTransition = base.GetUiExtendToggleSpriteTransition(3);
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View.Item
 			}
 		}
 
-		// Token: 0x06033496 RID: 210070 RVA: 0x00BF7A42 File Offset: 0x00BF5C42
+		// Token: 0x06028303 RID: 164611 RVA: 0x00B4103E File Offset: 0x00B3F23E
 		public void RefreshSelected()
 		{
 			if (this.OnToggleSelectedCheck != null)
@@ -75,13 +75,13 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View.Item
 			}
 		}
 
-		// Token: 0x06033497 RID: 210071 RVA: 0x00BF7A64 File Offset: 0x00BF5C64
+		// Token: 0x06028304 RID: 164612 RVA: 0x00B41060 File Offset: 0x00B3F260
 		public void SetSelected(bool isSelected, bool fireEvent = false)
 		{
 			base.GetExtendToggle(1).SetToggleState(isSelected ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, fireEvent, false, false);
 		}
 
-		// Token: 0x06033498 RID: 210072 RVA: 0x00BF7A7D File Offset: 0x00BF5C7D
+		// Token: 0x06028305 RID: 164613 RVA: 0x00B41079 File Offset: 0x00B3F279
 		private void OnToggleStateChanged(EToggleState state)
 		{
 			Action<int> onToggleStateChangedCallback = this.OnToggleStateChangedCallback;
@@ -92,32 +92,32 @@ namespace CSharpScript.Game.Module.RoleLangCustomModel.View.Item
 			onToggleStateChangedCallback(this.CurElementId);
 		}
 
-		// Token: 0x0401B379 RID: 111481
+		// Token: 0x04015D4C RID: 89420
 		private const int FILTER_ALL_ID = 0;
 
-		// Token: 0x0401B37A RID: 111482
+		// Token: 0x04015D4D RID: 89421
 		protected int CurElementId;
 
-		// Token: 0x0401B37B RID: 111483
+		// Token: 0x04015D4E RID: 89422
 		[Nullable(1)]
 		public Action<int> OnToggleStateChangedCallback;
 
-		// Token: 0x0401B37C RID: 111484
+		// Token: 0x04015D4F RID: 89423
 		[Nullable(1)]
 		public Func<int, bool> OnToggleSelectedCheck;
 
-		// Token: 0x0200AEF4 RID: 44788
+		// Token: 0x02009928 RID: 39208
 		private enum EDefine
 		{
-			// Token: 0x04035233 RID: 217651
+			// Token: 0x0402FC67 RID: 195687
 			SpriteIcon,
-			// Token: 0x04035234 RID: 217652
+			// Token: 0x0402FC68 RID: 195688
 			TogItem,
-			// Token: 0x04035235 RID: 217653
+			// Token: 0x0402FC69 RID: 195689
 			RedDot,
-			// Token: 0x04035236 RID: 217654
+			// Token: 0x0402FC6A RID: 195690
 			SpriteIcon2,
-			// Token: 0x04035237 RID: 217655
+			// Token: 0x0402FC6B RID: 195691
 			SpriteSubIcon
 		}
 	}

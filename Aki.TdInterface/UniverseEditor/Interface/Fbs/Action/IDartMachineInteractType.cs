@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006543 RID: 25923
+	// Token: 0x02006BB4 RID: 27572
 	public struct IDartMachineInteractType : IFlatbufferObject
 	{
-		// Token: 0x1700C0AC RID: 49324
-		// (get) Token: 0x0602CF84 RID: 184196 RVA: 0x0062C852 File Offset: 0x0062AA52
+		// Token: 0x1700CA43 RID: 51779
+		// (get) Token: 0x0602F738 RID: 194360 RVA: 0x00678EFE File Offset: 0x006770FE
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602CF85 RID: 184197 RVA: 0x0062C85F File Offset: 0x0062AA5F
+		// Token: 0x0602F739 RID: 194361 RVA: 0x00678F0B File Offset: 0x0067710B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602CF86 RID: 184198 RVA: 0x0062C868 File Offset: 0x0062AA68
+		// Token: 0x0602F73A RID: 194362 RVA: 0x00678F14 File Offset: 0x00677114
 		public static IDartMachineInteractType GetRootAsIDartMachineInteractType(ByteBuffer _bb)
 		{
 			return IDartMachineInteractType.GetRootAsIDartMachineInteractType(_bb, default(IDartMachineInteractType));
 		}
 
-		// Token: 0x0602CF87 RID: 184199 RVA: 0x0062C884 File Offset: 0x0062AA84
+		// Token: 0x0602F73B RID: 194363 RVA: 0x00678F30 File Offset: 0x00677130
 		public static IDartMachineInteractType GetRootAsIDartMachineInteractType(ByteBuffer _bb, IDartMachineInteractType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602CF88 RID: 184200 RVA: 0x0062C8A1 File Offset: 0x0062AAA1
+		// Token: 0x0602F73C RID: 194364 RVA: 0x00678F4D File Offset: 0x0067714D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602CF89 RID: 184201 RVA: 0x0062C8B0 File Offset: 0x0062AAB0
+		// Token: 0x0602F73D RID: 194365 RVA: 0x00678F5C File Offset: 0x0067715C
 		public IDartMachineInteractType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C0AD RID: 49325
-		// (get) Token: 0x0602CF8A RID: 184202 RVA: 0x0062C8C0 File Offset: 0x0062AAC0
+		// Token: 0x1700CA44 RID: 51780
+		// (get) Token: 0x0602F73E RID: 194366 RVA: 0x00678F6C File Offset: 0x0067716C
 		public EDartInteractType Type
 		{
 			get
@@ -63,7 +63,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602CF8B RID: 184203 RVA: 0x0062C8FC File Offset: 0x0062AAFC
+		// Token: 0x0602F73F RID: 194367 RVA: 0x00678FA8 File Offset: 0x006771A8
 		public int CanInviteCompetitorIds(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x1700C0AE RID: 49326
-		// (get) Token: 0x0602CF8C RID: 184204 RVA: 0x0062C93C File Offset: 0x0062AB3C
+		// Token: 0x1700CA45 RID: 51781
+		// (get) Token: 0x0602F740 RID: 194368 RVA: 0x00678FE8 File Offset: 0x006771E8
 		public int CanInviteCompetitorIdsLength
 		{
 			get
@@ -89,20 +89,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602CF8D RID: 184205 RVA: 0x0062C967 File Offset: 0x0062AB67
+		// Token: 0x0602F741 RID: 194369 RVA: 0x00679013 File Offset: 0x00677213
 		public Span<int> GetCanInviteCompetitorIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x0602CF8E RID: 184206 RVA: 0x0062C976 File Offset: 0x0062AB76
+		// Token: 0x0602F742 RID: 194370 RVA: 0x00679022 File Offset: 0x00677222
 		public int[] GetCanInviteCompetitorIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(6);
 		}
 
-		// Token: 0x1700C0AF RID: 49327
-		// (get) Token: 0x0602CF8F RID: 184207 RVA: 0x0062C984 File Offset: 0x0062AB84
+		// Token: 0x1700CA46 RID: 51782
+		// (get) Token: 0x0602F743 RID: 194371 RVA: 0x00679030 File Offset: 0x00677230
 		public int ChampionId
 		{
 			get
@@ -116,8 +116,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C0B0 RID: 49328
-		// (get) Token: 0x0602CF90 RID: 184208 RVA: 0x0062C9C0 File Offset: 0x0062ABC0
+		// Token: 0x1700CA47 RID: 51783
+		// (get) Token: 0x0602F744 RID: 194372 RVA: 0x0067906C File Offset: 0x0067726C
 		public byte NullMask
 		{
 			get
@@ -131,7 +131,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602CF91 RID: 184209 RVA: 0x0062C9FD File Offset: 0x0062ABFD
+		// Token: 0x0602F745 RID: 194373 RVA: 0x006790A9 File Offset: 0x006772A9
 		public static Offset<IDartMachineInteractType> CreateIDartMachineInteractType(FlatBufferBuilder builder, EDartInteractType Type = EDartInteractType.Machine, VectorOffset CanInviteCompetitorIdsOffset = default(VectorOffset), int ChampionId = 0, byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -142,25 +142,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IDartMachineInteractType.EndIDartMachineInteractType(builder);
 		}
 
-		// Token: 0x0602CF92 RID: 184210 RVA: 0x0062CA29 File Offset: 0x0062AC29
+		// Token: 0x0602F746 RID: 194374 RVA: 0x006790D5 File Offset: 0x006772D5
 		public static void StartIDartMachineInteractType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0602CF93 RID: 184211 RVA: 0x0062CA32 File Offset: 0x0062AC32
+		// Token: 0x0602F747 RID: 194375 RVA: 0x006790DE File Offset: 0x006772DE
 		public static void AddType(FlatBufferBuilder builder, EDartInteractType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602CF94 RID: 184212 RVA: 0x0062CA3D File Offset: 0x0062AC3D
+		// Token: 0x0602F748 RID: 194376 RVA: 0x006790E9 File Offset: 0x006772E9
 		public static void AddCanInviteCompetitorIds(FlatBufferBuilder builder, VectorOffset canInviteCompetitorIdsOffset)
 		{
 			builder.AddOffset(1, canInviteCompetitorIdsOffset.Value, 0);
 		}
 
-		// Token: 0x0602CF95 RID: 184213 RVA: 0x0062CA50 File Offset: 0x0062AC50
+		// Token: 0x0602F749 RID: 194377 RVA: 0x006790FC File Offset: 0x006772FC
 		public static VectorOffset CreateCanInviteCompetitorIdsVector(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -171,7 +171,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602CF96 RID: 184214 RVA: 0x0062CA87 File Offset: 0x0062AC87
+		// Token: 0x0602F74A RID: 194378 RVA: 0x00679133 File Offset: 0x00677333
 		public static VectorOffset CreateCanInviteCompetitorIdsVectorBlock(FlatBufferBuilder builder, int[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -179,7 +179,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602CF97 RID: 184215 RVA: 0x0062CAA1 File Offset: 0x0062ACA1
+		// Token: 0x0602F74B RID: 194379 RVA: 0x0067914D File Offset: 0x0067734D
 		public static VectorOffset CreateCanInviteCompetitorIdsVectorBlock(FlatBufferBuilder builder, ArraySegment<int> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -187,7 +187,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602CF98 RID: 184216 RVA: 0x0062CABF File Offset: 0x0062ACBF
+		// Token: 0x0602F74C RID: 194380 RVA: 0x0067916B File Offset: 0x0067736B
 		public static VectorOffset CreateCanInviteCompetitorIdsVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -195,31 +195,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return builder.EndVector();
 		}
 
-		// Token: 0x0602CF99 RID: 184217 RVA: 0x0062CAD8 File Offset: 0x0062ACD8
+		// Token: 0x0602F74D RID: 194381 RVA: 0x00679184 File Offset: 0x00677384
 		public static void StartCanInviteCompetitorIdsVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x0602CF9A RID: 184218 RVA: 0x0062CAE3 File Offset: 0x0062ACE3
+		// Token: 0x0602F74E RID: 194382 RVA: 0x0067918F File Offset: 0x0067738F
 		public static void AddChampionId(FlatBufferBuilder builder, int championId)
 		{
 			builder.AddInt(2, championId, 0);
 		}
 
-		// Token: 0x0602CF9B RID: 184219 RVA: 0x0062CAEE File Offset: 0x0062ACEE
+		// Token: 0x0602F74F RID: 194383 RVA: 0x0067919A File Offset: 0x0067739A
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x0602CF9C RID: 184220 RVA: 0x0062CAF9 File Offset: 0x0062ACF9
+		// Token: 0x0602F750 RID: 194384 RVA: 0x006791A5 File Offset: 0x006773A5
 		public static Offset<IDartMachineInteractType> EndIDartMachineInteractType(FlatBufferBuilder builder)
 		{
 			return new Offset<IDartMachineInteractType>(builder.EndTable());
 		}
 
-		// Token: 0x0602CF9D RID: 184221 RVA: 0x0062CB08 File Offset: 0x0062AD08
+		// Token: 0x0602F751 RID: 194385 RVA: 0x006791B4 File Offset: 0x006773B4
 		public IDartMachineInteractTypeT UnPack()
 		{
 			IDartMachineInteractTypeT dartMachineInteractTypeT = new IDartMachineInteractTypeT();
@@ -227,7 +227,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return dartMachineInteractTypeT;
 		}
 
-		// Token: 0x0602CF9E RID: 184222 RVA: 0x0062CB24 File Offset: 0x0062AD24
+		// Token: 0x0602F752 RID: 194386 RVA: 0x006791D0 File Offset: 0x006773D0
 		public void UnPackTo(IDartMachineInteractTypeT _o)
 		{
 			_o.Type = this.Type;
@@ -240,7 +240,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602CF9F RID: 184223 RVA: 0x0062CB84 File Offset: 0x0062AD84
+		// Token: 0x0602F753 RID: 194387 RVA: 0x00679230 File Offset: 0x00677430
 		public static Offset<IDartMachineInteractType> Pack(FlatBufferBuilder builder, IDartMachineInteractTypeT _o)
 		{
 			if (_o == null)
@@ -256,7 +256,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IDartMachineInteractType.CreateIDartMachineInteractType(builder, _o.Type, canInviteCompetitorIdsOffset, _o.ChampionId, _o.NullMask);
 		}
 
-		// Token: 0x04010B8F RID: 68495
+		// Token: 0x040119AB RID: 72107
 		private Table __p;
 	}
 }

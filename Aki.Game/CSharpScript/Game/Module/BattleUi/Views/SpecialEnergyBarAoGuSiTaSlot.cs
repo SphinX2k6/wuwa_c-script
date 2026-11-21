@@ -7,19 +7,19 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DCC RID: 24012
+	// Token: 0x02004DB0 RID: 19888
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SpecialEnergyBarAoGuSiTaSlot : SpecialEnergyBarSlot
 	{
-		// Token: 0x0603D06A RID: 249962 RVA: 0x00EACF4E File Offset: 0x00EAB14E
+		// Token: 0x06031FE1 RID: 204769 RVA: 0x00DFDE42 File Offset: 0x00DFC042
 		protected override void OnInitData()
 		{
 			this.ExtraConfigList.Add(BattleUiModel.Instance.SpecialEnergyBarData.GetSpecialEnergyBarInfo(130601));
 			this.ExtraConfigList.Add(BattleUiModel.Instance.SpecialEnergyBarData.GetSpecialEnergyBarInfo(130602));
 		}
 
-		// Token: 0x0603D06B RID: 249963 RVA: 0x00EACF90 File Offset: 0x00EAB190
+		// Token: 0x06031FE2 RID: 204770 RVA: 0x00DFDE84 File Offset: 0x00DFC084
 		protected override UniTask InitKeyItem(UUIItem keyItemContainer)
 		{
 			SpecialEnergyBarAoGuSiTaSlot.<InitKeyItem>d__4 <InitKeyItem>d__;
@@ -31,13 +31,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <InitKeyItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D06C RID: 249964 RVA: 0x00EACFDB File Offset: 0x00EAB1DB
+		// Token: 0x06031FE3 RID: 204771 RVA: 0x00DFDECF File Offset: 0x00DFC0CF
 		public void SetKeyItemEnable(int type, bool enable, bool isStart = false)
 		{
 			this.KeyItemList[type].RefreshKeyEnable(enable, isStart);
 		}
 
-		// Token: 0x0603D06D RID: 249965 RVA: 0x00EACFF0 File Offset: 0x00EAB1F0
+		// Token: 0x06031FE4 RID: 204772 RVA: 0x00DFDEE4 File Offset: 0x00DFC0E4
 		public void SetKeyItemType(int type)
 		{
 			if (this.KeyItemType == type)
@@ -51,13 +51,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401FCB4 RID: 130228
+		// Token: 0x0401A771 RID: 108401
 		private readonly List<SpecialEnergyBarInfo> ExtraConfigList = new List<SpecialEnergyBarInfo>();
 
-		// Token: 0x0401FCB5 RID: 130229
+		// Token: 0x0401A772 RID: 108402
 		private readonly List<SpecialEnergyBarKeyItem> KeyItemList = new List<SpecialEnergyBarKeyItem>();
 
-		// Token: 0x0401FCB6 RID: 130230
+		// Token: 0x0401A773 RID: 108403
 		private int KeyItemType = -1;
 	}
 }

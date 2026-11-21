@@ -6,10 +6,10 @@ using CSharpScript.Game.Module.Item;
 using CSharpScript.Game.Module.RoleUi;
 using CSharpScript.Game.Ui;
 
-// Token: 0x02001FC7 RID: 8135
+// Token: 0x0200149A RID: 5274
 public class InventoryGiftCellItem : SmallItemGrid
 {
-	// Token: 0x0600FE71 RID: 65137 RVA: 0x003DC42C File Offset: 0x003DA62C
+	// Token: 0x0600D2D9 RID: 53977 RVA: 0x003E8A08 File Offset: 0x003E6C08
 	[NullableContext(1)]
 	public void RefreshByConfigId(GiftItemData giftItemData)
 	{
@@ -51,13 +51,13 @@ public class InventoryGiftCellItem : SmallItemGrid
 		base.Apply<PropSmallItemGrid>(parameters3);
 	}
 
-	// Token: 0x0600FE72 RID: 65138 RVA: 0x003DC563 File Offset: 0x003DA763
+	// Token: 0x0600D2DA RID: 53978 RVA: 0x003E8B3F File Offset: 0x003E6D3F
 	protected override bool OnCanExecuteChange()
 	{
 		return false;
 	}
 
-	// Token: 0x0600FE73 RID: 65139 RVA: 0x003DC568 File Offset: 0x003DA768
+	// Token: 0x0600D2DB RID: 53979 RVA: 0x003E8B44 File Offset: 0x003E6D44
 	protected override void OnExtendToggleClicked()
 	{
 		bool canSkip = UiManager.Instance.IsViewShow(EUiViewName.InventoryView);
@@ -69,7 +69,7 @@ public class InventoryGiftCellItem : SmallItemGrid
 		ItemController.Instance.OpenItemTipsByItemUid(this.GiftItemData.IncId, this.GiftItemData.ItemId, canSkip, null);
 	}
 
-	// Token: 0x040075BA RID: 30138
+	// Token: 0x040076A3 RID: 30371
 	[Nullable(2)]
 	private GiftItemData GiftItemData;
 }

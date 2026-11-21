@@ -3,38 +3,38 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Launcher.DiffPatch.Update
 {
-	// Token: 0x0200020B RID: 523
+	// Token: 0x02000210 RID: 528
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class VideoResourceInfo
 	{
-		// Token: 0x06000D79 RID: 3449 RVA: 0x00051B64 File Offset: 0x0004FD64
+		// Token: 0x06000DBA RID: 3514 RVA: 0x00054658 File Offset: 0x00052858
 		public VideoResourceInfo(string RemoteRoute, string LocalPath, string PakFileName, long PakSize, string PakHash, string SigFileName, long SigSize, string SigHash)
 		{
 		}
 
-		// Token: 0x04000873 RID: 2163
+		// Token: 0x040008B4 RID: 2228
 		public readonly string RemoteRoute = RemoteRoute;
 
-		// Token: 0x04000874 RID: 2164
+		// Token: 0x040008B5 RID: 2229
 		public readonly string LocalPath = LocalPath;
 
-		// Token: 0x04000875 RID: 2165
+		// Token: 0x040008B6 RID: 2230
 		public readonly string PakFileName = PakFileName;
 
-		// Token: 0x04000876 RID: 2166
+		// Token: 0x040008B7 RID: 2231
 		public readonly long PakSize = PakSize;
 
-		// Token: 0x04000877 RID: 2167
+		// Token: 0x040008B8 RID: 2232
 		public readonly string PakHash = PakHash;
 
-		// Token: 0x04000878 RID: 2168
+		// Token: 0x040008B9 RID: 2233
 		public readonly string SigFileName = SigFileName;
 
-		// Token: 0x04000879 RID: 2169
+		// Token: 0x040008BA RID: 2234
 		public readonly long SigSize = SigSize;
 
-		// Token: 0x0400087A RID: 2170
+		// Token: 0x040008BB RID: 2235
 		public readonly string SigHash = SigHash;
 	}
 }

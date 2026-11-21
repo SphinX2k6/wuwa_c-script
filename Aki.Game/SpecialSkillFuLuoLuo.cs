@@ -5,18 +5,18 @@ using Aki.Protocol;
 using Aki.Protocol.Summon;
 using CSharpScript.Game.Common.Event;
 
-// Token: 0x02003191 RID: 12689
+// Token: 0x020026FE RID: 9982
 [NullableContext(2)]
 [Nullable(0)]
 public class SpecialSkillFuLuoLuo : SpecialSkillBase
 {
-	// Token: 0x0601B522 RID: 111906 RVA: 0x00775ADC File Offset: 0x00773CDC
+	// Token: 0x06019026 RID: 102438 RVA: 0x0079D454 File Offset: 0x0079B654
 	[NullableContext(1)]
 	public SpecialSkillFuLuoLuo(CharacterSpecialSkillComponent specialSkillComponent) : base(specialSkillComponent)
 	{
 	}
 
-	// Token: 0x0601B523 RID: 111907 RVA: 0x00775AFC File Offset: 0x00773CFC
+	// Token: 0x06019027 RID: 102439 RVA: 0x0079D474 File Offset: 0x0079B674
 	public override void OnStart()
 	{
 		this.EntityRef = this.SpecialSkillComponent.Entity;
@@ -56,7 +56,7 @@ public class SpecialSkillFuLuoLuo : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B524 RID: 111908 RVA: 0x00775C74 File Offset: 0x00773E74
+	// Token: 0x06019028 RID: 102440 RVA: 0x0079D5EC File Offset: 0x0079B7EC
 	public override void OnEnd()
 	{
 		if (this.IsAutonomous)
@@ -87,7 +87,7 @@ public class SpecialSkillFuLuoLuo : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B525 RID: 111909 RVA: 0x00775D70 File Offset: 0x00773F70
+	// Token: 0x06019029 RID: 102441 RVA: 0x0079D6E8 File Offset: 0x0079B8E8
 	private void InitSpecialEnergy()
 	{
 		this.SpecialEnergyTypeList.Clear();
@@ -104,7 +104,7 @@ public class SpecialSkillFuLuoLuo : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B526 RID: 111910 RVA: 0x00775DD4 File Offset: 0x00773FD4
+	// Token: 0x0601902A RID: 102442 RVA: 0x0079D74C File Offset: 0x0079B94C
 	public int GetSpecialEnergyType(int index)
 	{
 		if (index < 0 || index >= this.SpecialEnergyTypeList.Count)
@@ -114,7 +114,7 @@ public class SpecialSkillFuLuoLuo : SpecialSkillBase
 		return this.SpecialEnergyTypeList[index];
 	}
 
-	// Token: 0x0601B527 RID: 111911 RVA: 0x00775DF8 File Offset: 0x00773FF8
+	// Token: 0x0601902B RID: 102443 RVA: 0x0079D770 File Offset: 0x0079B970
 	public void AddSpecialEnergy(int type)
 	{
 		if (this.SpecialEnergyTypeList.Count < 6)
@@ -158,7 +158,7 @@ public class SpecialSkillFuLuoLuo : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B528 RID: 111912 RVA: 0x00775EE6 File Offset: 0x007740E6
+	// Token: 0x0601902C RID: 102444 RVA: 0x0079D85E File Offset: 0x0079BA5E
 	public void RemoveSpecialEnergy()
 	{
 		if (this.SpecialEnergyTypeList.Count <= 0)
@@ -169,7 +169,7 @@ public class SpecialSkillFuLuoLuo : SpecialSkillBase
 		this.SaveSpecialEnergy();
 	}
 
-	// Token: 0x0601B529 RID: 111913 RVA: 0x00775F0C File Offset: 0x0077410C
+	// Token: 0x0601902D RID: 102445 RVA: 0x0079D884 File Offset: 0x0079BA84
 	private void SaveSpecialEnergy()
 	{
 		int num = 0;
@@ -186,7 +186,7 @@ public class SpecialSkillFuLuoLuo : SpecialSkillBase
 		attributeComponent.SetBaseValue(EAttributeType.SpecialEnergy1, (float)num);
 	}
 
-	// Token: 0x0601B52A RID: 111914 RVA: 0x00775F78 File Offset: 0x00774178
+	// Token: 0x0601902E RID: 102446 RVA: 0x0079D8F0 File Offset: 0x0079BAF0
 	private void OnAttributeChanged(EAttributeType attributeId, float newValue, float oldValue)
 	{
 		if (newValue == 0f && this.SpecialEnergyTypeList.Count != 0)
@@ -195,7 +195,7 @@ public class SpecialSkillFuLuoLuo : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B52B RID: 111915 RVA: 0x00775F9C File Offset: 0x0077419C
+	// Token: 0x0601902F RID: 102447 RVA: 0x0079D914 File Offset: 0x0079BB14
 	public override void OnTick(float delta)
 	{
 		if (!this.InBurstState || this.SummonedEntity == null || this.EntityRef == null)
@@ -233,7 +233,7 @@ public class SpecialSkillFuLuoLuo : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B52C RID: 111916 RVA: 0x007760FC File Offset: 0x007742FC
+	// Token: 0x06019030 RID: 102448 RVA: 0x0079DA74 File Offset: 0x0079BC74
 	private void SetBurstSpecialMove(bool isOpen)
 	{
 		EntityHandle summonedEntity = PhantomUtil.GetSummonedEntity(this.EntityRef, ESummonType.ConcomitantCustom, 2);
@@ -252,13 +252,13 @@ public class SpecialSkillFuLuoLuo : SpecialSkillBase
 		this.InBurstState = isOpen;
 	}
 
-	// Token: 0x0601B52D RID: 111917 RVA: 0x00776151 File Offset: 0x00774351
+	// Token: 0x06019031 RID: 102449 RVA: 0x0079DAC9 File Offset: 0x0079BCC9
 	private void RefreshStarScarMaterialProperty(EAttributeType attribute, float newValue, float oldValue)
 	{
 		this.RefreshStarScarMaterial();
 	}
 
-	// Token: 0x0601B52E RID: 111918 RVA: 0x0077615C File Offset: 0x0077435C
+	// Token: 0x06019032 RID: 102450 RVA: 0x0079DAD4 File Offset: 0x0079BCD4
 	public void RefreshStarScarMaterial()
 	{
 		if (this.AttributeComponent == null)
@@ -285,7 +285,7 @@ public class SpecialSkillFuLuoLuo : SpecialSkillBase
 		charRenderingComponent.SetStarScarEnergy(currentValue / currentValue2);
 	}
 
-	// Token: 0x0601B52F RID: 111919 RVA: 0x007761B5 File Offset: 0x007743B5
+	// Token: 0x06019033 RID: 102451 RVA: 0x0079DB2D File Offset: 0x0079BD2D
 	private void OnCharSkillBegin(int charId, int skillId, bool isAutonomousProxy)
 	{
 		if (1608301L == (long)skillId)
@@ -294,7 +294,7 @@ public class SpecialSkillFuLuoLuo : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B530 RID: 111920 RVA: 0x007761C8 File Offset: 0x007743C8
+	// Token: 0x06019034 RID: 102452 RVA: 0x0079DB40 File Offset: 0x0079BD40
 	private void OnCharSkillEnd(int entityId, int skillId)
 	{
 		if (1608301L == (long)skillId)
@@ -303,7 +303,7 @@ public class SpecialSkillFuLuoLuo : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0601B531 RID: 111921 RVA: 0x007761DB File Offset: 0x007743DB
+	// Token: 0x06019035 RID: 102453 RVA: 0x0079DB53 File Offset: 0x0079BD53
 	[NullableContext(1)]
 	private void OnBeforeChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 	{
@@ -314,7 +314,7 @@ public class SpecialSkillFuLuoLuo : SpecialSkillBase
 		this.StopUltraSkillBeforeChangeRole(newEntity);
 	}
 
-	// Token: 0x0601B532 RID: 111922 RVA: 0x007761E9 File Offset: 0x007743E9
+	// Token: 0x06019036 RID: 102454 RVA: 0x0079DB61 File Offset: 0x0079BD61
 	private void OnBeforeUpdateSceneTeam(EntityHandle newEntity, EntityHandle oldEntity)
 	{
 		if (newEntity == oldEntity)
@@ -324,7 +324,7 @@ public class SpecialSkillFuLuoLuo : SpecialSkillBase
 		this.StopUltraSkillBeforeChangeRole(newEntity);
 	}
 
-	// Token: 0x0601B533 RID: 111923 RVA: 0x007761F7 File Offset: 0x007743F7
+	// Token: 0x06019037 RID: 102455 RVA: 0x0079DB6F File Offset: 0x0079BD6F
 	private void StopUltraSkillBeforeChangeRole(EntityHandle newEntity)
 	{
 		if (!this.InBurstState)
@@ -347,50 +347,50 @@ public class SpecialSkillFuLuoLuo : SpecialSkillBase
 		}
 	}
 
-	// Token: 0x0400D59A RID: 54682
+	// Token: 0x0400D9FD RID: 55805
 	private const int SPECIAL_ENERGY_COUNT = 6;
 
-	// Token: 0x0400D59B RID: 54683
+	// Token: 0x0400D9FE RID: 55806
 	private const long SPECIAL_SKILL_ID = 1608301L;
 
-	// Token: 0x0400D59C RID: 54684
+	// Token: 0x0400D9FF RID: 55807
 	private const double DISTANCE_XY = 3000.0;
 
-	// Token: 0x0400D59D RID: 54685
+	// Token: 0x0400DA00 RID: 55808
 	private const double DISTANCE_Z = 1500.0;
 
-	// Token: 0x0400D59E RID: 54686
+	// Token: 0x0400DA01 RID: 55809
 	private const double DISTANCE_Z_DELTA = 200.0;
 
-	// Token: 0x0400D59F RID: 54687
+	// Token: 0x0400DA02 RID: 55810
 	private const int RESET_SKILL = 1608942;
 
-	// Token: 0x0400D5A0 RID: 54688
+	// Token: 0x0400DA03 RID: 55811
 	private Entity EntityRef;
 
-	// Token: 0x0400D5A1 RID: 54689
+	// Token: 0x0400DA04 RID: 55812
 	private Entity SummonedEntity;
 
-	// Token: 0x0400D5A2 RID: 54690
+	// Token: 0x0400DA05 RID: 55813
 	private bool InBurstState;
 
-	// Token: 0x0400D5A3 RID: 54691
+	// Token: 0x0400DA06 RID: 55814
 	private BaseAttributeComponent AttributeComponent;
 
-	// Token: 0x0400D5A4 RID: 54692
+	// Token: 0x0400DA07 RID: 55815
 	private RoleTagComponent TagComponent;
 
-	// Token: 0x0400D5A5 RID: 54693
+	// Token: 0x0400DA08 RID: 55816
 	private CharacterActorComponent ActorComponent;
 
-	// Token: 0x0400D5A6 RID: 54694
+	// Token: 0x0400DA09 RID: 55817
 	[Nullable(1)]
 	private readonly List<int> SpecialEnergyTypeList = new List<int>();
 
-	// Token: 0x0400D5A7 RID: 54695
+	// Token: 0x0400DA0A RID: 55818
 	[Nullable(1)]
 	private readonly global::Vector TmpVector = global::Vector.Create();
 
-	// Token: 0x0400D5A8 RID: 54696
+	// Token: 0x0400DA0B RID: 55819
 	private bool IsAutonomous;
 }

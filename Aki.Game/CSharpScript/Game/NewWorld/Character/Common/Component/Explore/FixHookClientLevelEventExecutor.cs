@@ -8,10 +8,10 @@ using CSharpScript.Game.NewWorld.Character.Custom.Components;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 {
-	// Token: 0x0200711A RID: 28954
+	// Token: 0x02006348 RID: 25416
 	public class FixHookClientLevelEventExecutor
 	{
-		// Token: 0x06046B22 RID: 289570 RVA: 0x011CDB38 File Offset: 0x011CBD38
+		// Token: 0x0603D96D RID: 252269 RVA: 0x011D6788 File Offset: 0x011D4988
 		[NullableContext(2)]
 		[return: Nullable(new byte[]
 		{
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			}
 		}
 
-		// Token: 0x06046B23 RID: 289571 RVA: 0x011CDBA0 File Offset: 0x011CBDA0
+		// Token: 0x0603D96E RID: 252270 RVA: 0x011D67F0 File Offset: 0x011D49F0
 		[NullableContext(1)]
 		public static void ExecuteHookActions(FixHookClientLevelEventExecutor.EHookPointStage stage, GrapplingHookPointComponent grapplingHookPointComponent)
 		{
@@ -80,14 +80,14 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Explore
 			LevelGeneralController.Instance.ExecuteActionsNew(actions, EntityContext.Create(id, null), null);
 		}
 
-		// Token: 0x0200CE84 RID: 52868
+		// Token: 0x0200BB4C RID: 47948
 		public enum EHookPointStage
 		{
-			// Token: 0x0403E28F RID: 254607
+			// Token: 0x04039999 RID: 235929
 			ClientHook,
-			// Token: 0x0403E290 RID: 254608
+			// Token: 0x0403999A RID: 235930
 			ClientMidway,
-			// Token: 0x0403E291 RID: 254609
+			// Token: 0x0403999B RID: 235931
 			ClientEndpoint
 		}
 	}

@@ -6,18 +6,18 @@ using CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode;
 
 namespace CSharpScript.Game.Module
 {
-	// Token: 0x020046F4 RID: 18164
+	// Token: 0x02003624 RID: 13860
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class TimerNode : ChildQuestNodeBase
 	{
-		// Token: 0x0602F811 RID: 194577 RVA: 0x00B034E7 File Offset: 0x00B016E7
+		// Token: 0x06023FD7 RID: 147415 RVA: 0x00A331B7 File Offset: 0x00A313B7
 		public TimerNode(int nodeId) : base(nodeId)
 		{
 		}
 
-		// Token: 0x1700768B RID: 30347
-		// (get) Token: 0x0602F812 RID: 194578 RVA: 0x00B034F0 File Offset: 0x00B016F0
+		// Token: 0x17004947 RID: 18759
+		// (get) Token: 0x06023FD8 RID: 147416 RVA: 0x00A331C0 File Offset: 0x00A313C0
 		protected override List<int> CorrelativeEntities
 		{
 			get
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module
 			}
 		}
 
-		// Token: 0x0602F813 RID: 194579 RVA: 0x00B034F4 File Offset: 0x00B016F4
+		// Token: 0x06023FD9 RID: 147417 RVA: 0x00A331C4 File Offset: 0x00A313C4
 		[NullableContext(1)]
 		protected override bool OnCreate(IBtNode nodeConfig)
 		{
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module
 			return true;
 		}
 
-		// Token: 0x04019AA3 RID: 105123
+		// Token: 0x04014152 RID: 82258
 		public ITimerUiConfig TimerUiConfig;
 	}
 }

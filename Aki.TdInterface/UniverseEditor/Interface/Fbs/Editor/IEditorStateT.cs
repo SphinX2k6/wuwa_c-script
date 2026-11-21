@@ -3,70 +3,65 @@ using System.Collections.Generic;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x02004872 RID: 18546
+	// Token: 0x02004CD7 RID: 19671
 	public class IEditorStateT
 	{
-		// Token: 0x1700862B RID: 34347
-		// (get) Token: 0x0601CE00 RID: 118272 RVA: 0x00414EE2 File Offset: 0x004130E2
-		// (set) Token: 0x0601CE01 RID: 118273 RVA: 0x00414EEA File Offset: 0x004130EA
+		// Token: 0x17008C74 RID: 35956
+		// (get) Token: 0x0601E5EF RID: 124399 RVA: 0x004416BF File Offset: 0x0043F8BF
+		// (set) Token: 0x0601E5F0 RID: 124400 RVA: 0x004416C7 File Offset: 0x0043F8C7
 		public bool IsNewJsonNameMode { get; set; }
 
-		// Token: 0x1700862C RID: 34348
-		// (get) Token: 0x0601CE02 RID: 118274 RVA: 0x00414EF3 File Offset: 0x004130F3
-		// (set) Token: 0x0601CE03 RID: 118275 RVA: 0x00414EFB File Offset: 0x004130FB
+		// Token: 0x17008C75 RID: 35957
+		// (get) Token: 0x0601E5F1 RID: 124401 RVA: 0x004416D0 File Offset: 0x0043F8D0
+		// (set) Token: 0x0601E5F2 RID: 124402 RVA: 0x004416D8 File Offset: 0x0043F8D8
 		public long LastWorkSpaceCheckTimestamp { get; set; }
 
-		// Token: 0x1700862D RID: 34349
-		// (get) Token: 0x0601CE04 RID: 118276 RVA: 0x00414F04 File Offset: 0x00413104
-		// (set) Token: 0x0601CE05 RID: 118277 RVA: 0x00414F0C File Offset: 0x0041310C
+		// Token: 0x17008C76 RID: 35958
+		// (get) Token: 0x0601E5F3 RID: 124403 RVA: 0x004416E1 File Offset: 0x0043F8E1
+		// (set) Token: 0x0601E5F4 RID: 124404 RVA: 0x004416E9 File Offset: 0x0043F8E9
 		public bool IsLoadingArchive { get; set; }
 
-		// Token: 0x1700862E RID: 34350
-		// (get) Token: 0x0601CE06 RID: 118278 RVA: 0x00414F15 File Offset: 0x00413115
-		// (set) Token: 0x0601CE07 RID: 118279 RVA: 0x00414F1D File Offset: 0x0041311D
+		// Token: 0x17008C77 RID: 35959
+		// (get) Token: 0x0601E5F5 RID: 124405 RVA: 0x004416F2 File Offset: 0x0043F8F2
+		// (set) Token: 0x0601E5F6 RID: 124406 RVA: 0x004416FA File Offset: 0x0043F8FA
 		public bool IsEnableBreakPoint { get; set; }
 
-		// Token: 0x1700862F RID: 34351
-		// (get) Token: 0x0601CE08 RID: 118280 RVA: 0x00414F26 File Offset: 0x00413126
-		// (set) Token: 0x0601CE09 RID: 118281 RVA: 0x00414F2E File Offset: 0x0041312E
+		// Token: 0x17008C78 RID: 35960
+		// (get) Token: 0x0601E5F7 RID: 124407 RVA: 0x00441703 File Offset: 0x0043F903
+		// (set) Token: 0x0601E5F8 RID: 124408 RVA: 0x0044170B File Offset: 0x0043F90B
 		public string PlannedBranch { get; set; }
 
-		// Token: 0x17008630 RID: 34352
-		// (get) Token: 0x0601CE0A RID: 118282 RVA: 0x00414F37 File Offset: 0x00413137
-		// (set) Token: 0x0601CE0B RID: 118283 RVA: 0x00414F3F File Offset: 0x0041313F
+		// Token: 0x17008C79 RID: 35961
+		// (get) Token: 0x0601E5F9 RID: 124409 RVA: 0x00441714 File Offset: 0x0043F914
+		// (set) Token: 0x0601E5FA RID: 124410 RVA: 0x0044171C File Offset: 0x0043F91C
 		public List<string> AutoCaptureTree { get; set; }
 
-		// Token: 0x17008631 RID: 34353
-		// (get) Token: 0x0601CE0C RID: 118284 RVA: 0x00414F48 File Offset: 0x00413148
-		// (set) Token: 0x0601CE0D RID: 118285 RVA: 0x00414F50 File Offset: 0x00413150
-		public IEditorObjectCacheInfoT EditorObjectCacheInfo { get; set; }
-
-		// Token: 0x17008632 RID: 34354
-		// (get) Token: 0x0601CE0E RID: 118286 RVA: 0x00414F59 File Offset: 0x00413159
-		// (set) Token: 0x0601CE0F RID: 118287 RVA: 0x00414F61 File Offset: 0x00413161
+		// Token: 0x17008C7A RID: 35962
+		// (get) Token: 0x0601E5FB RID: 124411 RVA: 0x00441725 File Offset: 0x0043F925
+		// (set) Token: 0x0601E5FC RID: 124412 RVA: 0x0044172D File Offset: 0x0043F92D
 		public bool IsShowIndividualOwner { get; set; }
 
-		// Token: 0x17008633 RID: 34355
-		// (get) Token: 0x0601CE10 RID: 118288 RVA: 0x00414F6A File Offset: 0x0041316A
-		// (set) Token: 0x0601CE11 RID: 118289 RVA: 0x00414F72 File Offset: 0x00413172
+		// Token: 0x17008C7B RID: 35963
+		// (get) Token: 0x0601E5FD RID: 124413 RVA: 0x00441736 File Offset: 0x0043F936
+		// (set) Token: 0x0601E5FE RID: 124414 RVA: 0x0044173E File Offset: 0x0043F93E
 		public bool IsEnableFlowEditorTreeView { get; set; }
 
-		// Token: 0x17008634 RID: 34356
-		// (get) Token: 0x0601CE12 RID: 118290 RVA: 0x00414F7B File Offset: 0x0041317B
-		// (set) Token: 0x0601CE13 RID: 118291 RVA: 0x00414F83 File Offset: 0x00413183
+		// Token: 0x17008C7C RID: 35964
+		// (get) Token: 0x0601E5FF RID: 124415 RVA: 0x00441747 File Offset: 0x0043F947
+		// (set) Token: 0x0601E600 RID: 124416 RVA: 0x0044174F File Offset: 0x0043F94F
 		public bool HideMachineNotRegistedTip { get; set; }
 
-		// Token: 0x17008635 RID: 34357
-		// (get) Token: 0x0601CE14 RID: 118292 RVA: 0x00414F8C File Offset: 0x0041318C
-		// (set) Token: 0x0601CE15 RID: 118293 RVA: 0x00414F94 File Offset: 0x00413194
+		// Token: 0x17008C7D RID: 35965
+		// (get) Token: 0x0601E601 RID: 124417 RVA: 0x00441758 File Offset: 0x0043F958
+		// (set) Token: 0x0601E602 RID: 124418 RVA: 0x00441760 File Offset: 0x0043F960
 		public bool IsDefaultAddPlotConfig { get; set; }
 
-		// Token: 0x17008636 RID: 34358
-		// (get) Token: 0x0601CE16 RID: 118294 RVA: 0x00414F9D File Offset: 0x0041319D
-		// (set) Token: 0x0601CE17 RID: 118295 RVA: 0x00414FA5 File Offset: 0x004131A5
+		// Token: 0x17008C7E RID: 35966
+		// (get) Token: 0x0601E603 RID: 124419 RVA: 0x00441769 File Offset: 0x0043F969
+		// (set) Token: 0x0601E604 RID: 124420 RVA: 0x00441771 File Offset: 0x0043F971
 		public IEditorRestartInfoT EditorRestartInfo { get; set; }
 
-		// Token: 0x0601CE18 RID: 118296 RVA: 0x00414FB0 File Offset: 0x004131B0
+		// Token: 0x0601E605 RID: 124421 RVA: 0x0044177C File Offset: 0x0043F97C
 		public IEditorStateT()
 		{
 			this.IsNewJsonNameMode = false;
@@ -75,7 +70,6 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			this.IsEnableBreakPoint = false;
 			this.PlannedBranch = null;
 			this.AutoCaptureTree = null;
-			this.EditorObjectCacheInfo = null;
 			this.IsShowIndividualOwner = false;
 			this.IsEnableFlowEditorTreeView = false;
 			this.HideMachineNotRegistedTip = false;

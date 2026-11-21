@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F76 RID: 24438
+	// Token: 0x020065BC RID: 26044
 	public enum EFontSize : byte
 	{
-		// Token: 0x0400FD85 RID: 64901
+		// Token: 0x04010B0C RID: 68364
 		Small,
-		// Token: 0x0400FD86 RID: 64902
+		// Token: 0x04010B0D RID: 68365
 		Middle,
-		// Token: 0x0400FD87 RID: 64903
+		// Token: 0x04010B0E RID: 68366
 		Big
 	}
 }

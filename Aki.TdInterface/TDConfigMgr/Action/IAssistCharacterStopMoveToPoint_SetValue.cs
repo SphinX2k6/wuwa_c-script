@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020017E1 RID: 6113
+	// Token: 0x0200196A RID: 6506
 	public class IAssistCharacterStopMoveToPoint_SetValue
 	{
-		// Token: 0x04005351 RID: 21329
+		// Token: 0x04005799 RID: 22425
 		public EExecClientBattleActionType Type;
 
-		// Token: 0x04005352 RID: 21330
+		// Token: 0x0400579A RID: 22426
 		public int AssistCharacterId;
 	}
 }

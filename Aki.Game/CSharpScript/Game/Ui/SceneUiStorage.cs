@@ -4,19 +4,19 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x020046BD RID: 18109
+	// Token: 0x020035EE RID: 13806
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneUiStorage : Singleton
 	{
-		// Token: 0x0602EB53 RID: 191315 RVA: 0x00ACF50F File Offset: 0x00ACD70F
+		// Token: 0x0602329F RID: 144031 RVA: 0x009FDE37 File Offset: 0x009FC037
 		[return: Nullable(2)]
 		public SceneUiInfo Get(string viewName)
 		{
 			return this.SceneUiInfoMap.GetValueOrDefault(viewName);
 		}
 
-		// Token: 0x0602EB54 RID: 191316 RVA: 0x00ACF520 File Offset: 0x00ACD720
+		// Token: 0x060232A0 RID: 144032 RVA: 0x009FDE48 File Offset: 0x009FC048
 		public void Register([TupleElementNames(new string[]
 		{
 			"ViewName",
@@ -55,8 +55,8 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x17007667 RID: 30311
-		// (get) Token: 0x0602EB55 RID: 191317 RVA: 0x00ACF5B3 File Offset: 0x00ACD7B3
+		// Token: 0x17004923 RID: 18723
+		// (get) Token: 0x060232A1 RID: 144033 RVA: 0x009FDEDB File Offset: 0x009FC0DB
 		public static SceneUiStorage Instance
 		{
 			get
@@ -70,12 +70,12 @@ namespace CSharpScript.Game.Ui
 			}
 		}
 
-		// Token: 0x0602EB56 RID: 191318 RVA: 0x00ACF5D6 File Offset: 0x00ACD7D6
+		// Token: 0x060232A2 RID: 144034 RVA: 0x009FDEFE File Offset: 0x009FC0FE
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0602EB57 RID: 191319 RVA: 0x00ACF5D8 File Offset: 0x00ACD7D8
+		// Token: 0x060232A3 RID: 144035 RVA: 0x009FDF00 File Offset: 0x009FC100
 		public static void ResetStaticDefaultValue()
 		{
 			SceneUiStorage instance = SceneUiStorage._instance;
@@ -86,16 +86,16 @@ namespace CSharpScript.Game.Ui
 			SceneUiStorage._instance = null;
 		}
 
-		// Token: 0x0602EB58 RID: 191320 RVA: 0x00ACF5F1 File Offset: 0x00ACD7F1
+		// Token: 0x060232A4 RID: 144036 RVA: 0x009FDF19 File Offset: 0x009FC119
 		static SceneUiStorage()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SceneUiStorage.CreateStaticDefaultValue), new Action(SceneUiStorage.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040196D5 RID: 104149
+		// Token: 0x04013D7C RID: 81276
 		private readonly Dictionary<string, SceneUiInfo> SceneUiInfoMap = new Dictionary<string, SceneUiInfo>();
 
-		// Token: 0x040196D6 RID: 104150
+		// Token: 0x04013D7D RID: 81277
 		[Nullable(2)]
 		private static SceneUiStorage _instance;
 	}

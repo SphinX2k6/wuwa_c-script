@@ -2,14 +2,14 @@
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02003278 RID: 12920
+// Token: 0x020027E8 RID: 10216
 [NullableContext(1)]
 [Nullable(0)]
-public class UeActorTickManageComponent : EntityComponent, IComponentDependency
+public class UeActorTickManageComponent : EntityComponent
 {
-	// Token: 0x17002696 RID: 9878
-	// (get) Token: 0x0601BF5B RID: 114523 RVA: 0x007C3447 File Offset: 0x007C1647
-	public static Type[] Dependencies
+	// Token: 0x1700293A RID: 10554
+	// (get) Token: 0x06019B47 RID: 105287 RVA: 0x007EA82A File Offset: 0x007E8A2A
+	public override Type[] Dependencies
 	{
 		get
 		{
@@ -20,7 +20,7 @@ public class UeActorTickManageComponent : EntityComponent, IComponentDependency
 		}
 	}
 
-	// Token: 0x0601BF5C RID: 114524 RVA: 0x007C345C File Offset: 0x007C165C
+	// Token: 0x06019B48 RID: 105288 RVA: 0x007EA83F File Offset: 0x007E8A3F
 	[NullableContext(2)]
 	protected override bool OnInitData(IEntityArgs args = null)
 	{
@@ -28,13 +28,13 @@ public class UeActorTickManageComponent : EntityComponent, IComponentDependency
 		return true;
 	}
 
-	// Token: 0x0601BF5D RID: 114525 RVA: 0x007C3470 File Offset: 0x007C1670
+	// Token: 0x06019B49 RID: 105289 RVA: 0x007EA853 File Offset: 0x007E8A53
 	protected override void OnActivate()
 	{
 		this.ActorComp.Owner.SetKuroOnlyTickOutside(true);
 	}
 
-	// Token: 0x0601BF5E RID: 114526 RVA: 0x007C3484 File Offset: 0x007C1684
+	// Token: 0x06019B4A RID: 105290 RVA: 0x007EA868 File Offset: 0x007E8A68
 	protected override void OnTick(float delta)
 	{
 		if (PerformanceController.Instance.IsOpenCatchWorldEntity)
@@ -62,7 +62,7 @@ public class UeActorTickManageComponent : EntityComponent, IComponentDependency
 		this.ActorComp.Owner.KuroTickActorOutside(delta * 0.001f);
 	}
 
-	// Token: 0x0601BF5F RID: 114527 RVA: 0x007C3594 File Offset: 0x007C1794
+	// Token: 0x06019B4B RID: 105291 RVA: 0x007EA978 File Offset: 0x007E8B78
 	public unsafe int DisableTickWithLog(string reason)
 	{
 		int num = base.Disable(reason);
@@ -91,7 +91,7 @@ public class UeActorTickManageComponent : EntityComponent, IComponentDependency
 		return num;
 	}
 
-	// Token: 0x0601BF60 RID: 114528 RVA: 0x007C36E0 File Offset: 0x007C18E0
+	// Token: 0x06019B4C RID: 105292 RVA: 0x007EAAC4 File Offset: 0x007E8CC4
 	public unsafe bool EnableTickWithLog(int handle, string reason)
 	{
 		CreatureController instance = CreatureController.Instance;
@@ -119,35 +119,51 @@ public class UeActorTickManageComponent : EntityComponent, IComponentDependency
 		return base.Enable(new int?(handle), reason);
 	}
 
-	// Token: 0x0601BF61 RID: 114529 RVA: 0x007C382C File Offset: 0x007C1A2C
+	// Token: 0x06019B4D RID: 105293 RVA: 0x007EAC10 File Offset: 0x007E8E10
 	public string DumpDisableTickInfo()
 	{
 		return base.DumpDisableInfo();
 	}
 
-	// Token: 0x0601BF62 RID: 114530 RVA: 0x007C3834 File Offset: 0x007C1A34
+	// Token: 0x06019B4E RID: 105294 RVA: 0x007EAC18 File Offset: 0x007E8E18
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
 		{
 			return false;
 		}
-		UeActorTickManageComponent ueActorTickManageComponent = (UeActorTickManageComponent)componentTemplate;
-		if (base.CanResetComponentProperty("ActorComp"))
+		if (((UeActorTickManageComponent)componentTemplate).ActorComp == null)
 		{
-			if (ueActorTickManageComponent.ActorComp == null)
-			{
-				this.ActorComp = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.ActorComp), "ActorComp"))
-			{
-				return false;
-			}
+			this.ActorComp = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComp), "ActorComp"))
+		{
+			return false;
 		}
 		return true;
 	}
 
-	// Token: 0x0400DCDF RID: 56543
+	// Token: 0x1700293B RID: 10555
+	// (get) Token: 0x06019B4F RID: 105295 RVA: 0x007EAC56 File Offset: 0x007E8E56
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x1700293C RID: 10556
+	// (get) Token: 0x06019B50 RID: 105296 RVA: 0x007EAC59 File Offset: 0x007E8E59
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400E181 RID: 57729
 	[Nullable(2)]
 	private BaseActorComponent ActorComp;
 }

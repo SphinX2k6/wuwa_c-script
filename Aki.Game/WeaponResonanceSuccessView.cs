@@ -5,16 +5,16 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002CFE RID: 11518
+// Token: 0x02002258 RID: 8792
 public class WeaponResonanceSuccessView : UiViewBase
 {
-	// Token: 0x0601834B RID: 99147 RVA: 0x00628AE3 File Offset: 0x00626CE3
+	// Token: 0x06015BEC RID: 89068 RVA: 0x0064EAAB File Offset: 0x0064CCAB
 	[NullableContext(1)]
 	public WeaponResonanceSuccessView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0601834C RID: 99148 RVA: 0x00628AEC File Offset: 0x00626CEC
+	// Token: 0x06015BED RID: 89069 RVA: 0x0064EAB4 File Offset: 0x0064CCB4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -37,7 +37,7 @@ public class WeaponResonanceSuccessView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0601834D RID: 99149 RVA: 0x00628BB4 File Offset: 0x00626DB4
+	// Token: 0x06015BEE RID: 89070 RVA: 0x0064EB7C File Offset: 0x0064CD7C
 	protected override void OnBeforeShow()
 	{
 		IWeaponResonanceSuccessViewParam weaponResonanceSuccessViewParam = this.OpenParam as IWeaponResonanceSuccessViewParam;
@@ -48,20 +48,20 @@ public class WeaponResonanceSuccessView : UiViewBase
 		LguiUtil.Instance.SetLocalText(base.GetText(2), "WeaponResonanceLevelText", new <>z__ReadOnlySingleElementList<object>(resonanceLevel));
 	}
 
-	// Token: 0x0601834E RID: 99150 RVA: 0x00628C2C File Offset: 0x00626E2C
+	// Token: 0x06015BEF RID: 89071 RVA: 0x0064EBF4 File Offset: 0x0064CDF4
 	private void ConfirmClick()
 	{
 		UiManager.Instance.CloseView(EUiViewName.WeaponResonanceSuccessView, null);
 	}
 
-	// Token: 0x02009295 RID: 37525
+	// Token: 0x020084BD RID: 33981
 	private enum EComponent
 	{
-		// Token: 0x0402F647 RID: 194119
+		// Token: 0x0402ACD1 RID: 175313
 		ConfirmButton,
-		// Token: 0x0402F648 RID: 194120
+		// Token: 0x0402ACD2 RID: 175314
 		LastLevelText,
-		// Token: 0x0402F649 RID: 194121
+		// Token: 0x0402ACD3 RID: 175315
 		CurLevelText
 	}
 }

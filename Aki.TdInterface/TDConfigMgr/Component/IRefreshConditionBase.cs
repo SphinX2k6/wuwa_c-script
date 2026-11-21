@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000668 RID: 1640
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000705 RID: 1797
 	public class IRefreshConditionBase
 	{
-		// Token: 0x06002314 RID: 8980 RVA: 0x000601C8 File Offset: 0x0005E3C8
+		// Token: 0x0600261A RID: 9754 RVA: 0x00066EDC File Offset: 0x000650DC
 		private IRefreshConditionBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002315 RID: 8981 RVA: 0x00060200 File Offset: 0x0005E400
+		// Token: 0x0600261B RID: 9755 RVA: 0x00066F14 File Offset: 0x00065114
 		public static IRefreshConditionBase Create([Nullable(2)] IRefreshConditionBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002316 RID: 8982 RVA: 0x00060213 File Offset: 0x0005E413
+		// Token: 0x0600261C RID: 9756 RVA: 0x00066F27 File Offset: 0x00065127
 		public static IRefreshConditionBase CreateFromSetValue([Nullable(2)] IRefreshConditionBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002317 RID: 8983 RVA: 0x00060226 File Offset: 0x0005E426
+		// Token: 0x0600261D RID: 9757 RVA: 0x00066F3A File Offset: 0x0006513A
 		public IRefreshConditionBase_SetValue ToSetValue()
 		{
 			return new IRefreshConditionBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x1700094D RID: 2381
-		// (get) Token: 0x06002318 RID: 8984 RVA: 0x00060239 File Offset: 0x0005E439
-		// (set) Token: 0x06002319 RID: 8985 RVA: 0x00060264 File Offset: 0x0005E464
+		// Token: 0x17000A04 RID: 2564
+		// (get) Token: 0x0600261E RID: 9758 RVA: 0x00066F4D File Offset: 0x0006514D
+		// (set) Token: 0x0600261F RID: 9759 RVA: 0x00066F78 File Offset: 0x00065178
 		public virtual ERewardDropType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x0400184F RID: 6223
+		// Token: 0x04001A41 RID: 6721
 		[Nullable(2)]
 		protected IRefreshConditionBase FbInstance;
 
-		// Token: 0x04001850 RID: 6224
+		// Token: 0x04001A42 RID: 6722
 		[Nullable(2)]
 		protected IRefreshConditionBase_SetValue PocoInterface;
 	}

@@ -2,20 +2,20 @@
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x02002836 RID: 10294
+// Token: 0x02001DB1 RID: 7601
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleDevWeaponSubRecommendItemDataBase
 {
-	// Token: 0x0601538B RID: 86923 RVA: 0x0055CF82 File Offset: 0x0055B182
+	// Token: 0x06012D89 RID: 77193 RVA: 0x00587CDE File Offset: 0x00585EDE
 	public void InitByWeaponId(int weaponId, int roleId)
 	{
 		this.RoleIdInternal = roleId;
 		this.WeaponIdInternal = weaponId;
 	}
 
-	// Token: 0x17001C35 RID: 7221
-	// (get) Token: 0x0601538C RID: 86924 RVA: 0x0055CF92 File Offset: 0x0055B192
+	// Token: 0x17001C8D RID: 7309
+	// (get) Token: 0x06012D8A RID: 77194 RVA: 0x00587CEE File Offset: 0x00585EEE
 	public int RoleId
 	{
 		get
@@ -24,8 +24,8 @@ public class RoleDevWeaponSubRecommendItemDataBase
 		}
 	}
 
-	// Token: 0x17001C36 RID: 7222
-	// (get) Token: 0x0601538D RID: 86925 RVA: 0x0055CF9A File Offset: 0x0055B19A
+	// Token: 0x17001C8E RID: 7310
+	// (get) Token: 0x06012D8B RID: 77195 RVA: 0x00587CF6 File Offset: 0x00585EF6
 	public int WeaponId
 	{
 		get
@@ -34,8 +34,8 @@ public class RoleDevWeaponSubRecommendItemDataBase
 		}
 	}
 
-	// Token: 0x17001C37 RID: 7223
-	// (get) Token: 0x0601538E RID: 86926 RVA: 0x0055CFA2 File Offset: 0x0055B1A2
+	// Token: 0x17001C8F RID: 7311
+	// (get) Token: 0x06012D8C RID: 77196 RVA: 0x00587CFE File Offset: 0x00585EFE
 	public bool HasRole
 	{
 		get
@@ -44,8 +44,8 @@ public class RoleDevWeaponSubRecommendItemDataBase
 		}
 	}
 
-	// Token: 0x17001C38 RID: 7224
-	// (get) Token: 0x0601538F RID: 86927 RVA: 0x0055CFB8 File Offset: 0x0055B1B8
+	// Token: 0x17001C90 RID: 7312
+	// (get) Token: 0x06012D8D RID: 77197 RVA: 0x00587D14 File Offset: 0x00585F14
 	public string WeaponName
 	{
 		get
@@ -59,8 +59,8 @@ public class RoleDevWeaponSubRecommendItemDataBase
 		}
 	}
 
-	// Token: 0x17001C39 RID: 7225
-	// (get) Token: 0x06015390 RID: 86928 RVA: 0x0055CFF4 File Offset: 0x0055B1F4
+	// Token: 0x17001C91 RID: 7313
+	// (get) Token: 0x06012D8E RID: 77198 RVA: 0x00587D50 File Offset: 0x00585F50
 	public int WeaponQuality
 	{
 		get
@@ -74,8 +74,8 @@ public class RoleDevWeaponSubRecommendItemDataBase
 		}
 	}
 
-	// Token: 0x17001C3A RID: 7226
-	// (get) Token: 0x06015391 RID: 86929 RVA: 0x0055D02C File Offset: 0x0055B22C
+	// Token: 0x17001C92 RID: 7314
+	// (get) Token: 0x06012D8F RID: 77199 RVA: 0x00587D88 File Offset: 0x00585F88
 	public RoleDevWeaponJumpGroup? WeaponJumpGroupConfig
 	{
 		get
@@ -89,8 +89,8 @@ public class RoleDevWeaponSubRecommendItemDataBase
 		}
 	}
 
-	// Token: 0x17001C3B RID: 7227
-	// (get) Token: 0x06015392 RID: 86930 RVA: 0x0055D058 File Offset: 0x0055B258
+	// Token: 0x17001C93 RID: 7315
+	// (get) Token: 0x06012D90 RID: 77200 RVA: 0x00587DB4 File Offset: 0x00585FB4
 	public bool IsCall
 	{
 		get
@@ -105,8 +105,8 @@ public class RoleDevWeaponSubRecommendItemDataBase
 		}
 	}
 
-	// Token: 0x17001C3C RID: 7228
-	// (get) Token: 0x06015393 RID: 86931 RVA: 0x0055D0A0 File Offset: 0x0055B2A0
+	// Token: 0x17001C94 RID: 7316
+	// (get) Token: 0x06012D91 RID: 77201 RVA: 0x00587DFC File Offset: 0x00585FFC
 	public int GachaId
 	{
 		get
@@ -129,8 +129,8 @@ public class RoleDevWeaponSubRecommendItemDataBase
 		}
 	}
 
-	// Token: 0x17001C3D RID: 7229
-	// (get) Token: 0x06015394 RID: 86932 RVA: 0x0055D0EC File Offset: 0x0055B2EC
+	// Token: 0x17001C95 RID: 7317
+	// (get) Token: 0x06012D92 RID: 77202 RVA: 0x00587E48 File Offset: 0x00586048
 	public bool IsEquipped
 	{
 		get
@@ -144,8 +144,8 @@ public class RoleDevWeaponSubRecommendItemDataBase
 		}
 	}
 
-	// Token: 0x17001C3E RID: 7230
-	// (get) Token: 0x06015395 RID: 86933 RVA: 0x0055D12E File Offset: 0x0055B32E
+	// Token: 0x17001C96 RID: 7318
+	// (get) Token: 0x06012D93 RID: 77203 RVA: 0x00587E8A File Offset: 0x0058608A
 	public bool IsObtained
 	{
 		get
@@ -154,9 +154,9 @@ public class RoleDevWeaponSubRecommendItemDataBase
 		}
 	}
 
-	// Token: 0x04009EA0 RID: 40608
+	// Token: 0x0400A289 RID: 41609
 	protected int RoleIdInternal;
 
-	// Token: 0x04009EA1 RID: 40609
+	// Token: 0x0400A28A RID: 41610
 	protected int WeaponIdInternal;
 }

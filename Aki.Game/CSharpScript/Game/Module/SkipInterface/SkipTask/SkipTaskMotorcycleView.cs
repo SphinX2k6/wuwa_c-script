@@ -4,10 +4,10 @@ using CSharpScript.Game.Module.Functional;
 
 namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 {
-	// Token: 0x02004BB0 RID: 19376
+	// Token: 0x02003B5A RID: 15194
 	public class SkipTaskMotorcycleView : SkipTask
 	{
-		// Token: 0x060322EE RID: 205550 RVA: 0x00BA9253 File Offset: 0x00BA7453
+		// Token: 0x0602707F RID: 159871 RVA: 0x00AED4FF File Offset: 0x00AEB6FF
 		protected override void OnRun([Nullable(new byte[]
 		{
 			1,

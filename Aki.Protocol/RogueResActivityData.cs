@@ -8,18 +8,18 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000FCF RID: 4047
+	// Token: 0x02000FBF RID: 4031
 	public sealed class RogueResActivityData : IMessage<RogueResActivityData>, IMessage, IEquatable<RogueResActivityData>, IDeepCloneable<RogueResActivityData>, IBufferMessage
 	{
-		// Token: 0x06015A20 RID: 88608 RVA: 0x00323BDC File Offset: 0x00321DDC
+		// Token: 0x0601593B RID: 88379 RVA: 0x00322528 File Offset: 0x00320728
 		[NullableContext(1)]
 		public static RogueResActivityData Create()
 		{
 			return new RogueResActivityData();
 		}
 
-		// Token: 0x17004824 RID: 18468
-		// (get) Token: 0x06015A21 RID: 88609 RVA: 0x00323BE3 File Offset: 0x00321DE3
+		// Token: 0x170047FA RID: 18426
+		// (get) Token: 0x0601593C RID: 88380 RVA: 0x0032252F File Offset: 0x0032072F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004825 RID: 18469
-		// (get) Token: 0x06015A22 RID: 88610 RVA: 0x00323BE6 File Offset: 0x00321DE6
+		// Token: 0x170047FB RID: 18427
+		// (get) Token: 0x0601593D RID: 88381 RVA: 0x00322532 File Offset: 0x00320732
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06015A23 RID: 88611 RVA: 0x00323BED File Offset: 0x00321DED
+		// Token: 0x0601593E RID: 88382 RVA: 0x00322539 File Offset: 0x00320739
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueResActivityData()
 		{
 		}
 
-		// Token: 0x06015A24 RID: 88612 RVA: 0x00323C00 File Offset: 0x00321E00
+		// Token: 0x0601593F RID: 88383 RVA: 0x0032254C File Offset: 0x0032074C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueResActivityData(RogueResActivityData other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06015A25 RID: 88613 RVA: 0x00323C51 File Offset: 0x00321E51
+		// Token: 0x06015940 RID: 88384 RVA: 0x0032259D File Offset: 0x0032079D
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueResActivityData Clone()
@@ -67,8 +67,8 @@ namespace Aki.Protocol
 			return new RogueResActivityData(this);
 		}
 
-		// Token: 0x17004826 RID: 18470
-		// (get) Token: 0x06015A26 RID: 88614 RVA: 0x00323C59 File Offset: 0x00321E59
+		// Token: 0x170047FC RID: 18428
+		// (get) Token: 0x06015941 RID: 88385 RVA: 0x003225A5 File Offset: 0x003207A5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<RogueResSeasonData> RogueResSeasonData
@@ -79,9 +79,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17004827 RID: 18471
-		// (get) Token: 0x06015A27 RID: 88615 RVA: 0x00323C61 File Offset: 0x00321E61
-		// (set) Token: 0x06015A28 RID: 88616 RVA: 0x00323C69 File Offset: 0x00321E69
+		// Token: 0x170047FD RID: 18429
+		// (get) Token: 0x06015942 RID: 88386 RVA: 0x003225AD File Offset: 0x003207AD
+		// (set) Token: 0x06015943 RID: 88387 RVA: 0x003225B5 File Offset: 0x003207B5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RogueResGlobalInfo RogueResGlobalInfo
@@ -96,7 +96,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06015A29 RID: 88617 RVA: 0x00323C72 File Offset: 0x00321E72
+		// Token: 0x06015944 RID: 88388 RVA: 0x003225BE File Offset: 0x003207BE
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -104,7 +104,7 @@ namespace Aki.Protocol
 			return this.Equals(other as RogueResActivityData);
 		}
 
-		// Token: 0x06015A2A RID: 88618 RVA: 0x00323C80 File Offset: 0x00321E80
+		// Token: 0x06015945 RID: 88389 RVA: 0x003225CC File Offset: 0x003207CC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(RogueResActivityData other)
@@ -112,7 +112,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.rogueResSeasonData_.Equals(other.rogueResSeasonData_) && object.Equals(this.RogueResGlobalInfo, other.RogueResGlobalInfo) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06015A2B RID: 88619 RVA: 0x00323CD4 File Offset: 0x00321ED4
+		// Token: 0x06015946 RID: 88390 RVA: 0x00322620 File Offset: 0x00320820
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -130,7 +130,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06015A2C RID: 88620 RVA: 0x00323D1E File Offset: 0x00321F1E
+		// Token: 0x06015947 RID: 88391 RVA: 0x0032266A File Offset: 0x0032086A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06015A2D RID: 88621 RVA: 0x00323D2B File Offset: 0x00321F2B
+		// Token: 0x06015948 RID: 88392 RVA: 0x00322677 File Offset: 0x00320877
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06015A2E RID: 88622 RVA: 0x00323D34 File Offset: 0x00321F34
+		// Token: 0x06015949 RID: 88393 RVA: 0x00322680 File Offset: 0x00320880
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -163,7 +163,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06015A2F RID: 88623 RVA: 0x00323D84 File Offset: 0x00321F84
+		// Token: 0x0601594A RID: 88394 RVA: 0x003226D0 File Offset: 0x003208D0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -181,7 +181,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06015A30 RID: 88624 RVA: 0x00323DD8 File Offset: 0x00321FD8
+		// Token: 0x0601594B RID: 88395 RVA: 0x00322724 File Offset: 0x00320924
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(RogueResActivityData other)
@@ -202,7 +202,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06015A31 RID: 88625 RVA: 0x00323E3D File Offset: 0x0032203D
+		// Token: 0x0601594C RID: 88396 RVA: 0x00322789 File Offset: 0x00320989
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -210,7 +210,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06015A32 RID: 88626 RVA: 0x00323E48 File Offset: 0x00322048
+		// Token: 0x0601594D RID: 88397 RVA: 0x00322794 File Offset: 0x00320994
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -244,22 +244,22 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040081E4 RID: 33252
+		// Token: 0x0400820E RID: 33294
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040081E5 RID: 33253
+		// Token: 0x0400820F RID: 33295
 		public const int RogueResSeasonDataFieldNumber = 1;
 
-		// Token: 0x040081E6 RID: 33254
+		// Token: 0x04008210 RID: 33296
 		private static readonly FieldCodec<RogueResSeasonData> _repeated_rogueResSeasonData_codec = FieldCodec.ForMessage<RogueResSeasonData>(10U, Aki.Protocol.RogueResSeasonData.Parser);
 
-		// Token: 0x040081E7 RID: 33255
+		// Token: 0x04008211 RID: 33297
 		private readonly RepeatedField<RogueResSeasonData> rogueResSeasonData_ = new RepeatedField<RogueResSeasonData>();
 
-		// Token: 0x040081E8 RID: 33256
+		// Token: 0x04008212 RID: 33298
 		public const int RogueResGlobalInfoFieldNumber = 2;
 
-		// Token: 0x040081E9 RID: 33257
+		// Token: 0x04008213 RID: 33299
 		private RogueResGlobalInfo rogueResGlobalInfo_;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000897 RID: 2199
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200093A RID: 2362
 	public class SimpleCombatComponent : IComponentBase
 	{
-		// Token: 0x06003113 RID: 12563 RVA: 0x0007E2A0 File Offset: 0x0007C4A0
+		// Token: 0x0600344F RID: 13391 RVA: 0x00085788 File Offset: 0x00083988
 		private SimpleCombatComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003114 RID: 12564 RVA: 0x0007E2D8 File Offset: 0x0007C4D8
+		// Token: 0x06003450 RID: 13392 RVA: 0x000857C0 File Offset: 0x000839C0
 		public static SimpleCombatComponent Create([Nullable(2)] SimpleCombatComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003115 RID: 12565 RVA: 0x0007E2EB File Offset: 0x0007C4EB
+		// Token: 0x06003451 RID: 13393 RVA: 0x000857D3 File Offset: 0x000839D3
 		public static SimpleCombatComponent CreateFromSetValue([Nullable(2)] SimpleCombatComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003116 RID: 12566 RVA: 0x0007E2FE File Offset: 0x0007C4FE
+		// Token: 0x06003452 RID: 13394 RVA: 0x000857E6 File Offset: 0x000839E6
 		public new SimpleCombatComponent_SetValue ToSetValue()
 		{
 			return new SimpleCombatComponent_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000D0A RID: 3338
-		// (get) Token: 0x06003117 RID: 12567 RVA: 0x0007E32C File Offset: 0x0007C52C
-		// (set) Token: 0x06003118 RID: 12568 RVA: 0x0007E366 File Offset: 0x0007C566
+		// Token: 0x17000DD3 RID: 3539
+		// (get) Token: 0x06003453 RID: 13395 RVA: 0x00085814 File Offset: 0x00083A14
+		// (set) Token: 0x06003454 RID: 13396 RVA: 0x0008584E File Offset: 0x00083A4E
 		public override bool? Disabled
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D0B RID: 3339
-		// (get) Token: 0x06003119 RID: 12569 RVA: 0x0007E374 File Offset: 0x0007C574
-		// (set) Token: 0x0600311A RID: 12570 RVA: 0x0007E39E File Offset: 0x0007C59E
+		// Token: 0x17000DD4 RID: 3540
+		// (get) Token: 0x06003455 RID: 13397 RVA: 0x0008585C File Offset: 0x00083A5C
+		// (set) Token: 0x06003456 RID: 13398 RVA: 0x00085886 File Offset: 0x00083A86
 		public override bool? EdIsLocked
 		{
 			get
@@ -104,9 +102,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000D0C RID: 3340
-		// (get) Token: 0x0600311B RID: 12571 RVA: 0x0007E3AC File Offset: 0x0007C5AC
-		// (set) Token: 0x0600311C RID: 12572 RVA: 0x0007E3D7 File Offset: 0x0007C5D7
+		// Token: 0x17000DD5 RID: 3541
+		// (get) Token: 0x06003457 RID: 13399 RVA: 0x00085894 File Offset: 0x00083A94
+		// (set) Token: 0x06003458 RID: 13400 RVA: 0x000858BF File Offset: 0x00083ABF
 		public virtual int Id
 		{
 			get
@@ -127,11 +125,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04002046 RID: 8262
+		// Token: 0x04002258 RID: 8792
 		[Nullable(2)]
 		protected new SimpleCombatComponent FbInstance;
 
-		// Token: 0x04002047 RID: 8263
+		// Token: 0x04002259 RID: 8793
 		[Nullable(2)]
 		protected new SimpleCombatComponent_SetValue PocoInterface;
 	}

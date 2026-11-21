@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001EBC RID: 7868
+	// Token: 0x020020F5 RID: 8437
 	public class IStateProgramSpecialProcessChangeTeamOptimization_SetValue
 	{
-		// Token: 0x0400645E RID: 25694
+		// Token: 0x04006A4D RID: 27213
 		public ELogicProgramSpecialProcess Type;
 
-		// Token: 0x0400645F RID: 25695
+		// Token: 0x04006A4E RID: 27214
 		public bool? IsOpenBlackScreen;
 	}
 }

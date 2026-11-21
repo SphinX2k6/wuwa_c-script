@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200235D RID: 9053
+	// Token: 0x020025D2 RID: 9682
 	public static class EInfrastructureItemDeliveryTypeExtensions
 	{
-		// Token: 0x0600C5A1 RID: 50593 RVA: 0x001CD740 File Offset: 0x001CB940
+		// Token: 0x0600D18B RID: 53643 RVA: 0x001E5A20 File Offset: 0x001E3C20
 		public static string ToEnumString(this EInfrastructureItemDeliveryType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C5A2 RID: 50594 RVA: 0x001CD778 File Offset: 0x001CB978
+		// Token: 0x0600D18C RID: 53644 RVA: 0x001E5A58 File Offset: 0x001E3C58
 		public static EInfrastructureItemDeliveryType FromString(string name)
 		{
 			EInfrastructureItemDeliveryType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C5A3 RID: 50595 RVA: 0x001CD7A1 File Offset: 0x001CB9A1
+		// Token: 0x0600D18D RID: 53645 RVA: 0x001E5A81 File Offset: 0x001E3C81
 		public static bool TryFromString(string name, out EInfrastructureItemDeliveryType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C5A4 RID: 50596 RVA: 0x001CD7DA File Offset: 0x001CB9DA
+		// Token: 0x0600D18E RID: 53646 RVA: 0x001E5ABA File Offset: 0x001E3CBA
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C5A5 RID: 50597 RVA: 0x001CD7F2 File Offset: 0x001CB9F2
+		// Token: 0x0600D18F RID: 53647 RVA: 0x001E5AD2 File Offset: 0x001E3CD2
 		public static EInfrastructureItemDeliveryType[] GetValues()
 		{
 			return new EInfrastructureItemDeliveryType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C5A6 RID: 50598 RVA: 0x001CD7FE File Offset: 0x001CB9FE
+		// Token: 0x0600D190 RID: 53648 RVA: 0x001E5ADE File Offset: 0x001E3CDE
 		public static string[] GetNames()
 		{
 			return new string[]

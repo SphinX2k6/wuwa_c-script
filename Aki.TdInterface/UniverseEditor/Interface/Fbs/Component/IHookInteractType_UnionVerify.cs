@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020053C7 RID: 21447
+	// Token: 0x0200594D RID: 22861
 	public static class IHookInteractType_UnionVerify
 	{
-		// Token: 0x060232AF RID: 144047 RVA: 0x004DE354 File Offset: 0x004DC554
+		// Token: 0x06025363 RID: 152419 RVA: 0x0051B228 File Offset: 0x00519428
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;
@@ -28,7 +28,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 				result = IWaterBoxBigWeaponHookVerify.Verify(verifier, tablePos);
 				break;
 			case 6:
-				result = IMechHookVerify.Verify(verifier, tablePos);
+				result = IMechTransformHookVerify.Verify(verifier, tablePos);
 				break;
 			case 7:
 				result = IKiteHookVerify.Verify(verifier, tablePos);
@@ -70,13 +70,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 				result = IMotorPullInteractVerify.Verify(verifier, tablePos);
 				break;
 			case 20:
-				result = IMechPullInteractVerify.Verify(verifier, tablePos);
-				break;
-			case 21:
 				result = IHookSpaceStationEnergyCoreVerify.Verify(verifier, tablePos);
 				break;
-			case 22:
+			case 21:
 				result = IMotorEjectHookVerify.Verify(verifier, tablePos);
+				break;
+			case 22:
+				result = IChongLouHookVerify.Verify(verifier, tablePos);
 				break;
 			default:
 				result = true;

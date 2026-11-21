@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002509 RID: 9481
+// Token: 0x020019F0 RID: 6640
 public enum EPhoneMsgContentType
 {
-	// Token: 0x04008FA7 RID: 36775
+	// Token: 0x040090F2 RID: 37106
 	Other,
-	// Token: 0x04008FA8 RID: 36776
+	// Token: 0x040090F3 RID: 37107
 	Self,
-	// Token: 0x04008FA9 RID: 36777
+	// Token: 0x040090F4 RID: 37108
 	Tips
 }

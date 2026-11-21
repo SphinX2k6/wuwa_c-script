@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004A12 RID: 18962
+	// Token: 0x02004ED2 RID: 20178
 	public struct ICheckEntityPrefabPerformanceType : IFlatbufferObject
 	{
-		// Token: 0x17008942 RID: 35138
-		// (get) Token: 0x0601DAA1 RID: 121505 RVA: 0x0042C9B4 File Offset: 0x0042ABB4
+		// Token: 0x17009012 RID: 36882
+		// (get) Token: 0x0601F514 RID: 128276 RVA: 0x0045D620 File Offset: 0x0045B820
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DAA2 RID: 121506 RVA: 0x0042C9C1 File Offset: 0x0042ABC1
+		// Token: 0x0601F515 RID: 128277 RVA: 0x0045D62D File Offset: 0x0045B82D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601DAA3 RID: 121507 RVA: 0x0042C9C8 File Offset: 0x0042ABC8
+		// Token: 0x0601F516 RID: 128278 RVA: 0x0045D634 File Offset: 0x0045B834
 		public static ICheckEntityPrefabPerformanceType GetRootAsICheckEntityPrefabPerformanceType(ByteBuffer _bb)
 		{
 			return ICheckEntityPrefabPerformanceType.GetRootAsICheckEntityPrefabPerformanceType(_bb, default(ICheckEntityPrefabPerformanceType));
 		}
 
-		// Token: 0x0601DAA4 RID: 121508 RVA: 0x0042C9E4 File Offset: 0x0042ABE4
+		// Token: 0x0601F517 RID: 128279 RVA: 0x0045D650 File Offset: 0x0045B850
 		public static ICheckEntityPrefabPerformanceType GetRootAsICheckEntityPrefabPerformanceType(ByteBuffer _bb, ICheckEntityPrefabPerformanceType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601DAA5 RID: 121509 RVA: 0x0042CA01 File Offset: 0x0042AC01
+		// Token: 0x0601F518 RID: 128280 RVA: 0x0045D66D File Offset: 0x0045B86D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601DAA6 RID: 121510 RVA: 0x0042CA10 File Offset: 0x0042AC10
+		// Token: 0x0601F519 RID: 128281 RVA: 0x0045D67C File Offset: 0x0045B87C
 		public ICheckEntityPrefabPerformanceType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008943 RID: 35139
-		// (get) Token: 0x0601DAA7 RID: 121511 RVA: 0x0042CA20 File Offset: 0x0042AC20
+		// Token: 0x17009013 RID: 36883
+		// (get) Token: 0x0601F51A RID: 128282 RVA: 0x0045D68C File Offset: 0x0045B88C
 		public ECondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008944 RID: 35140
-		// (get) Token: 0x0601DAA8 RID: 121512 RVA: 0x0042CA5C File Offset: 0x0042AC5C
+		// Token: 0x17009014 RID: 36884
+		// (get) Token: 0x0601F51B RID: 128283 RVA: 0x0045D6C8 File Offset: 0x0045B8C8
 		public int EntityId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008945 RID: 35141
-		// (get) Token: 0x0601DAA9 RID: 121513 RVA: 0x0042CA98 File Offset: 0x0042AC98
+		// Token: 0x17009015 RID: 36885
+		// (get) Token: 0x0601F51C RID: 128284 RVA: 0x0045D704 File Offset: 0x0045B904
 		public string PerformanceTag
 		{
 			get
@@ -92,20 +92,20 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DAAA RID: 121514 RVA: 0x0042CACF File Offset: 0x0042ACCF
+		// Token: 0x0601F51D RID: 128285 RVA: 0x0045D73B File Offset: 0x0045B93B
 		public Span<byte> GetPerformanceTagBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x0601DAAB RID: 121515 RVA: 0x0042CADE File Offset: 0x0042ACDE
+		// Token: 0x0601F51E RID: 128286 RVA: 0x0045D74A File Offset: 0x0045B94A
 		public byte[] GetPerformanceTagArray()
 		{
 			return this.__p.__vector_as_array<byte>(8);
 		}
 
-		// Token: 0x17008946 RID: 35142
-		// (get) Token: 0x0601DAAC RID: 121516 RVA: 0x0042CAEC File Offset: 0x0042ACEC
+		// Token: 0x17009016 RID: 36886
+		// (get) Token: 0x0601F51F RID: 128287 RVA: 0x0045D758 File Offset: 0x0045B958
 		public ECompare Compare
 		{
 			get
@@ -119,7 +119,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DAAD RID: 121517 RVA: 0x0042CB29 File Offset: 0x0042AD29
+		// Token: 0x0601F520 RID: 128288 RVA: 0x0045D795 File Offset: 0x0045B995
 		public static Offset<ICheckEntityPrefabPerformanceType> CreateICheckEntityPrefabPerformanceType(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, int EntityId = 0, StringOffset PerformanceTagOffset = default(StringOffset), ECompare Compare = ECompare.Eq)
 		{
 			builder.StartTable(4);
@@ -130,43 +130,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckEntityPrefabPerformanceType.EndICheckEntityPrefabPerformanceType(builder);
 		}
 
-		// Token: 0x0601DAAE RID: 121518 RVA: 0x0042CB55 File Offset: 0x0042AD55
+		// Token: 0x0601F521 RID: 128289 RVA: 0x0045D7C1 File Offset: 0x0045B9C1
 		public static void StartICheckEntityPrefabPerformanceType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0601DAAF RID: 121519 RVA: 0x0042CB5E File Offset: 0x0042AD5E
+		// Token: 0x0601F522 RID: 128290 RVA: 0x0045D7CA File Offset: 0x0045B9CA
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601DAB0 RID: 121520 RVA: 0x0042CB69 File Offset: 0x0042AD69
+		// Token: 0x0601F523 RID: 128291 RVA: 0x0045D7D5 File Offset: 0x0045B9D5
 		public static void AddEntityId(FlatBufferBuilder builder, int entityId)
 		{
 			builder.AddInt(1, entityId, 0);
 		}
 
-		// Token: 0x0601DAB1 RID: 121521 RVA: 0x0042CB74 File Offset: 0x0042AD74
+		// Token: 0x0601F524 RID: 128292 RVA: 0x0045D7E0 File Offset: 0x0045B9E0
 		public static void AddPerformanceTag(FlatBufferBuilder builder, StringOffset performanceTagOffset)
 		{
 			builder.AddOffset(2, performanceTagOffset.Value, 0);
 		}
 
-		// Token: 0x0601DAB2 RID: 121522 RVA: 0x0042CB84 File Offset: 0x0042AD84
+		// Token: 0x0601F525 RID: 128293 RVA: 0x0045D7F0 File Offset: 0x0045B9F0
 		public static void AddCompare(FlatBufferBuilder builder, ECompare compare)
 		{
 			builder.AddByte(3, (byte)compare, 0);
 		}
 
-		// Token: 0x0601DAB3 RID: 121523 RVA: 0x0042CB8F File Offset: 0x0042AD8F
+		// Token: 0x0601F526 RID: 128294 RVA: 0x0045D7FB File Offset: 0x0045B9FB
 		public static Offset<ICheckEntityPrefabPerformanceType> EndICheckEntityPrefabPerformanceType(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckEntityPrefabPerformanceType>(builder.EndTable());
 		}
 
-		// Token: 0x0601DAB4 RID: 121524 RVA: 0x0042CB9C File Offset: 0x0042AD9C
+		// Token: 0x0601F527 RID: 128295 RVA: 0x0045D808 File Offset: 0x0045BA08
 		public ICheckEntityPrefabPerformanceTypeT UnPack()
 		{
 			ICheckEntityPrefabPerformanceTypeT checkEntityPrefabPerformanceTypeT = new ICheckEntityPrefabPerformanceTypeT();
@@ -174,7 +174,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkEntityPrefabPerformanceTypeT;
 		}
 
-		// Token: 0x0601DAB5 RID: 121525 RVA: 0x0042CBB7 File Offset: 0x0042ADB7
+		// Token: 0x0601F528 RID: 128296 RVA: 0x0045D823 File Offset: 0x0045BA23
 		public void UnPackTo(ICheckEntityPrefabPerformanceTypeT _o)
 		{
 			_o.Type = this.Type;
@@ -183,7 +183,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.Compare = this.Compare;
 		}
 
-		// Token: 0x0601DAB6 RID: 121526 RVA: 0x0042CBEC File Offset: 0x0042ADEC
+		// Token: 0x0601F529 RID: 128297 RVA: 0x0045D858 File Offset: 0x0045BA58
 		public static Offset<ICheckEntityPrefabPerformanceType> Pack(FlatBufferBuilder builder, ICheckEntityPrefabPerformanceTypeT _o)
 		{
 			if (_o == null)
@@ -194,7 +194,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckEntityPrefabPerformanceType.CreateICheckEntityPrefabPerformanceType(builder, _o.Type, _o.EntityId, performanceTagOffset, _o.Compare);
 		}
 
-		// Token: 0x0400D25C RID: 53852
+		// Token: 0x0400DD30 RID: 56624
 		private Table __p;
 	}
 }

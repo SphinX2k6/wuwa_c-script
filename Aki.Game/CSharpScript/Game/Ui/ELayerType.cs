@@ -2,43 +2,43 @@
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004668 RID: 18024
+	// Token: 0x02003599 RID: 13721
 	[Flags]
 	public enum ELayerType
 	{
-		// Token: 0x040194B9 RID: 103609
+		// Token: 0x04013B60 RID: 80736
 		HUD = 1,
-		// Token: 0x040194BA RID: 103610
+		// Token: 0x04013B61 RID: 80737
 		Normal = 2,
-		// Token: 0x040194BB RID: 103611
+		// Token: 0x04013B62 RID: 80738
 		Plot = 4,
-		// Token: 0x040194BC RID: 103612
+		// Token: 0x04013B63 RID: 80739
 		ScreenEffect = 8,
-		// Token: 0x040194BD RID: 103613
+		// Token: 0x04013B64 RID: 80740
 		NormalMask = 16,
-		// Token: 0x040194BE RID: 103614
+		// Token: 0x04013B65 RID: 80741
 		BattleFloat = 32,
-		// Token: 0x040194BF RID: 103615
+		// Token: 0x04013B66 RID: 80742
 		Pop = 64,
-		// Token: 0x040194C0 RID: 103616
+		// Token: 0x04013B67 RID: 80743
 		Float = 128,
-		// Token: 0x040194C1 RID: 103617
+		// Token: 0x04013B68 RID: 80744
 		Guide = 256,
-		// Token: 0x040194C2 RID: 103618
+		// Token: 0x04013B69 RID: 80745
 		Loading = 512,
-		// Token: 0x040194C3 RID: 103619
+		// Token: 0x04013B6A RID: 80746
 		MovieBlack = 1024,
-		// Token: 0x040194C4 RID: 103620
+		// Token: 0x04013B6B RID: 80747
 		NetWork = 2048,
-		// Token: 0x040194C5 RID: 103621
+		// Token: 0x04013B6C RID: 80748
 		CG = 4096,
-		// Token: 0x040194C6 RID: 103622
+		// Token: 0x04013B6D RID: 80749
 		Mask = 8192,
-		// Token: 0x040194C7 RID: 103623
+		// Token: 0x04013B6E RID: 80750
 		WaterMask = 16384,
-		// Token: 0x040194C8 RID: 103624
+		// Token: 0x04013B6F RID: 80751
 		Pool = 32768,
-		// Token: 0x040194C9 RID: 103625
+		// Token: 0x04013B70 RID: 80752
 		Debug = 65536
 	}
 }

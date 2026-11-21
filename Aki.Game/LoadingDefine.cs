@@ -5,12 +5,12 @@ using Aki.Config;
 using CSharpScript.Game.Module.AdventureGuide;
 using CSharpScript.Game.Ui;
 
-// Token: 0x0200207A RID: 8314
+// Token: 0x0200154D RID: 5453
 [NullableContext(1)]
 [Nullable(0)]
 public class LoadingDefine
 {
-	// Token: 0x060105D9 RID: 67033 RVA: 0x003FDD0C File Offset: 0x003FBF0C
+	// Token: 0x0600DA41 RID: 55873 RVA: 0x0040A154 File Offset: 0x00408354
 	private static bool IsThirdLordGymInstance(int instanceId)
 	{
 		IReadOnlyList<LordGymEntranceSet> configList = ConfigLordGymEntranceSetAll.GetConfigList(true);
@@ -28,7 +28,7 @@ public class LoadingDefine
 		return false;
 	}
 
-	// Token: 0x060105DB RID: 67035 RVA: 0x003FDD80 File Offset: 0x003FBF80
+	// Token: 0x0600DA43 RID: 55875 RVA: 0x0040A1C8 File Offset: 0x004083C8
 	// Note: this type is marked as 'beforefieldinit'.
 	static LoadingDefine()
 	{
@@ -78,7 +78,7 @@ public class LoadingDefine
 		LoadingDefine.dungeonToLoadingViewMap = dictionary;
 	}
 
-	// Token: 0x040078DB RID: 30939
+	// Token: 0x040079C4 RID: 31172
 	[StaticVariableRuleIgnore]
 	public static readonly EUiViewName[] loadingViewList = new EUiViewName[]
 	{
@@ -89,58 +89,58 @@ public class LoadingDefine
 		EUiViewName.PhantomArenaCardBattleLoadingView
 	};
 
-	// Token: 0x040078DC RID: 30940
+	// Token: 0x040079C5 RID: 31173
 	[StaticVariableRuleIgnore]
 	public static readonly Dictionary<EDungeonSubType, LoadingDefine.IDungeonLoadingData> dungeonToLoadingViewMap;
 
-	// Token: 0x02008662 RID: 34402
+	// Token: 0x020077E9 RID: 30697
 	[NullableContext(2)]
 	public interface IDungeonLoadingData
 	{
-		// Token: 0x1700A083 RID: 41091
-		// (get) Token: 0x0604A925 RID: 305445
-		// (set) Token: 0x0604A926 RID: 305446
+		// Token: 0x17007821 RID: 30753
+		// (get) Token: 0x06040D1F RID: 265503
+		// (set) Token: 0x06040D20 RID: 265504
 		EWorldDungeonSubType? WorldSubType { get; set; }
 
-		// Token: 0x1700A084 RID: 41092
-		// (get) Token: 0x0604A927 RID: 305447
-		// (set) Token: 0x0604A928 RID: 305448
+		// Token: 0x17007822 RID: 30754
+		// (get) Token: 0x06040D21 RID: 265505
+		// (set) Token: 0x06040D22 RID: 265506
 		EUiViewName View { get; set; }
 
-		// Token: 0x1700A085 RID: 41093
-		// (get) Token: 0x0604A929 RID: 305449
-		// (set) Token: 0x0604A92A RID: 305450
+		// Token: 0x17007823 RID: 30755
+		// (get) Token: 0x06040D23 RID: 265507
+		// (set) Token: 0x06040D24 RID: 265508
 		bool? IgnoreExitLoading { get; set; }
 
-		// Token: 0x1700A086 RID: 41094
-		// (get) Token: 0x0604A92B RID: 305451
-		// (set) Token: 0x0604A92C RID: 305452
+		// Token: 0x17007824 RID: 30756
+		// (get) Token: 0x06040D25 RID: 265509
+		// (set) Token: 0x06040D26 RID: 265510
 		Func<int, bool> Filter { get; set; }
 	}
 
-	// Token: 0x02008663 RID: 34403
+	// Token: 0x020077EA RID: 30698
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class DungeonLoadingData : LoadingDefine.IDungeonLoadingData
 	{
-		// Token: 0x1700A087 RID: 41095
-		// (get) Token: 0x0604A92D RID: 305453 RVA: 0x013767DE File Offset: 0x013749DE
-		// (set) Token: 0x0604A92E RID: 305454 RVA: 0x013767E6 File Offset: 0x013749E6
+		// Token: 0x17007825 RID: 30757
+		// (get) Token: 0x06040D27 RID: 265511 RVA: 0x01319C3E File Offset: 0x01317E3E
+		// (set) Token: 0x06040D28 RID: 265512 RVA: 0x01319C46 File Offset: 0x01317E46
 		public EWorldDungeonSubType? WorldSubType { get; set; }
 
-		// Token: 0x1700A088 RID: 41096
-		// (get) Token: 0x0604A92F RID: 305455 RVA: 0x013767EF File Offset: 0x013749EF
-		// (set) Token: 0x0604A930 RID: 305456 RVA: 0x013767F7 File Offset: 0x013749F7
+		// Token: 0x17007826 RID: 30758
+		// (get) Token: 0x06040D29 RID: 265513 RVA: 0x01319C4F File Offset: 0x01317E4F
+		// (set) Token: 0x06040D2A RID: 265514 RVA: 0x01319C57 File Offset: 0x01317E57
 		public EUiViewName View { get; set; }
 
-		// Token: 0x1700A089 RID: 41097
-		// (get) Token: 0x0604A931 RID: 305457 RVA: 0x01376800 File Offset: 0x01374A00
-		// (set) Token: 0x0604A932 RID: 305458 RVA: 0x01376808 File Offset: 0x01374A08
+		// Token: 0x17007827 RID: 30759
+		// (get) Token: 0x06040D2B RID: 265515 RVA: 0x01319C60 File Offset: 0x01317E60
+		// (set) Token: 0x06040D2C RID: 265516 RVA: 0x01319C68 File Offset: 0x01317E68
 		public bool? IgnoreExitLoading { get; set; }
 
-		// Token: 0x1700A08A RID: 41098
-		// (get) Token: 0x0604A933 RID: 305459 RVA: 0x01376811 File Offset: 0x01374A11
-		// (set) Token: 0x0604A934 RID: 305460 RVA: 0x01376819 File Offset: 0x01374A19
+		// Token: 0x17007828 RID: 30760
+		// (get) Token: 0x06040D2D RID: 265517 RVA: 0x01319C71 File Offset: 0x01317E71
+		// (set) Token: 0x06040D2E RID: 265518 RVA: 0x01319C79 File Offset: 0x01317E79
 		public Func<int, bool> Filter { get; set; }
 	}
 }

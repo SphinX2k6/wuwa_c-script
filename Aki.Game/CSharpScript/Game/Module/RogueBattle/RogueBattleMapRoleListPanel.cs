@@ -11,10 +11,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E7E RID: 20094
+	// Token: 0x02003E47 RID: 15943
 	public class RogueBattleMapRoleListPanel : UiPanelBase
 	{
-		// Token: 0x06033B3C RID: 211772 RVA: 0x00C1BED0 File Offset: 0x00C1A0D0
+		// Token: 0x060289A7 RID: 166311 RVA: 0x00B653F4 File Offset: 0x00B635F4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033B3D RID: 211773 RVA: 0x00C1BF2A File Offset: 0x00C1A12A
+		// Token: 0x060289A8 RID: 166312 RVA: 0x00B6544E File Offset: 0x00B6364E
 		protected override void OnStart()
 		{
 			this.ScrollView = new GenericScrollViewNew<RogueBattleMapRoleLayoutItem, List<int>>(base.GetScrollViewWithScrollbar(0), new Func<RogueBattleMapRoleLayoutItem>(this.CreateLoopItem), null, false, null);
@@ -37,19 +37,19 @@ namespace CSharpScript.Game.Module.RogueBattle
 			item.SetUIActive(false);
 		}
 
-		// Token: 0x06033B3E RID: 211774 RVA: 0x00C1BF5F File Offset: 0x00C1A15F
+		// Token: 0x060289A9 RID: 166313 RVA: 0x00B65483 File Offset: 0x00B63683
 		public void BindEvent()
 		{
 			EventSystem.Instance.Add(EEventName.RogueResMapSummaryTeamUpdate, new Action<int>(this.OnSelectedItem));
 		}
 
-		// Token: 0x06033B3F RID: 211775 RVA: 0x00C1BF7D File Offset: 0x00C1A17D
+		// Token: 0x060289AA RID: 166314 RVA: 0x00B654A1 File Offset: 0x00B636A1
 		public void UnbindEvent()
 		{
 			EventSystem.Instance.Remove(EEventName.RogueResMapSummaryTeamUpdate, new Action<int>(this.OnSelectedItem));
 		}
 
-		// Token: 0x06033B40 RID: 211776 RVA: 0x00C1BF9C File Offset: 0x00C1A19C
+		// Token: 0x060289AB RID: 166315 RVA: 0x00B654C0 File Offset: 0x00B636C0
 		protected override void OnBeforeShow()
 		{
 			IEnumerable<RogueResBondRole> allRogueResBondRole = RogueBattleConfig.Instance.GetAllRogueResBondRole();
@@ -106,26 +106,26 @@ namespace CSharpScript.Game.Module.RogueBattle
 			}, false);
 		}
 
-		// Token: 0x06033B41 RID: 211777 RVA: 0x00C1C144 File Offset: 0x00C1A344
+		// Token: 0x060289AC RID: 166316 RVA: 0x00B65668 File Offset: 0x00B63868
 		protected override void OnBeforeDestroy()
 		{
 			this.ScrollView = null;
 		}
 
-		// Token: 0x06033B42 RID: 211778 RVA: 0x00C1C14D File Offset: 0x00C1A34D
+		// Token: 0x060289AD RID: 166317 RVA: 0x00B65671 File Offset: 0x00B63871
 		[NullableContext(1)]
 		private RogueBattleMapRoleLayoutItem CreateLoopItem()
 		{
 			return new RogueBattleMapRoleLayoutItem();
 		}
 
-		// Token: 0x06033B43 RID: 211779 RVA: 0x00C1C154 File Offset: 0x00C1A354
+		// Token: 0x060289AE RID: 166318 RVA: 0x00B65678 File Offset: 0x00B63878
 		private void OnSelectedItem(int roleId)
 		{
 			this.CurrentSelectedId = roleId;
 		}
 
-		// Token: 0x0401B70B RID: 112395
+		// Token: 0x040160DE RID: 90334
 		[Nullable(new byte[]
 		{
 			2,
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 		})]
 		private GenericScrollViewNew<RogueBattleMapRoleLayoutItem, List<int>> ScrollView;
 
-		// Token: 0x0401B70C RID: 112396
+		// Token: 0x040160DF RID: 90335
 		private int CurrentSelectedId;
 	}
 }

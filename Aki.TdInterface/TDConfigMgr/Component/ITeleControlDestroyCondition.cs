@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000754 RID: 1876
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020007F5 RID: 2037
 	public class ITeleControlDestroyCondition
 	{
-		// Token: 0x06002881 RID: 10369 RVA: 0x0006B3EC File Offset: 0x000695EC
+		// Token: 0x06002BA5 RID: 11173 RVA: 0x00072594 File Offset: 0x00070794
 		private ITeleControlDestroyCondition_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002882 RID: 10370 RVA: 0x0006B424 File Offset: 0x00069624
+		// Token: 0x06002BA6 RID: 11174 RVA: 0x000725CC File Offset: 0x000707CC
 		public static ITeleControlDestroyCondition Create([Nullable(2)] ITeleControlDestroyCondition instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002883 RID: 10371 RVA: 0x0006B437 File Offset: 0x00069637
+		// Token: 0x06002BA7 RID: 11175 RVA: 0x000725DF File Offset: 0x000707DF
 		public static ITeleControlDestroyCondition CreateFromSetValue([Nullable(2)] ITeleControlDestroyCondition_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002884 RID: 10372 RVA: 0x0006B44A File Offset: 0x0006964A
+		// Token: 0x06002BA8 RID: 11176 RVA: 0x000725F2 File Offset: 0x000707F2
 		public ITeleControlDestroyCondition_SetValue ToSetValue()
 		{
 			return new ITeleControlDestroyCondition_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000AA3 RID: 2723
-		// (get) Token: 0x06002885 RID: 10373 RVA: 0x0006B45D File Offset: 0x0006965D
-		// (set) Token: 0x06002886 RID: 10374 RVA: 0x0006B488 File Offset: 0x00069688
+		// Token: 0x17000B63 RID: 2915
+		// (get) Token: 0x06002BA9 RID: 11177 RVA: 0x00072605 File Offset: 0x00070805
+		// (set) Token: 0x06002BAA RID: 11178 RVA: 0x00072630 File Offset: 0x00070830
 		public virtual ETeleControlDestroyCondition Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001B3C RID: 6972
+		// Token: 0x04001D41 RID: 7489
 		[Nullable(2)]
 		protected ITeleControlDestroyCondition FbInstance;
 
-		// Token: 0x04001B3D RID: 6973
+		// Token: 0x04001D42 RID: 7490
 		[Nullable(2)]
 		protected ITeleControlDestroyCondition_SetValue PocoInterface;
 	}

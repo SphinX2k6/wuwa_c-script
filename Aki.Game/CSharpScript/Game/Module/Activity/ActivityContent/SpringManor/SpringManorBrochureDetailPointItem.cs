@@ -5,10 +5,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x0200605F RID: 24671
+	// Token: 0x02004FDD RID: 20445
 	public class SpringManorBrochureDetailPointItem : GridProxyAbstract<int>
 	{
-		// Token: 0x0603E69B RID: 255643 RVA: 0x00F1373E File Offset: 0x00F1193E
+		// Token: 0x0603335F RID: 209759 RVA: 0x00E5A502 File Offset: 0x00E58702
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -18,13 +18,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			};
 		}
 
-		// Token: 0x0603E69C RID: 255644 RVA: 0x00F13777 File Offset: 0x00F11977
+		// Token: 0x06033360 RID: 209760 RVA: 0x00E5A53B File Offset: 0x00E5873B
 		public override void Refresh(int curIndex, bool isSelected, int gridIndex)
 		{
 			this.SetSelectedState(isSelected);
 		}
 
-		// Token: 0x0603E69D RID: 255645 RVA: 0x00F13780 File Offset: 0x00F11980
+		// Token: 0x06033361 RID: 209761 RVA: 0x00E5A544 File Offset: 0x00E58744
 		private void SetSelectedState(bool isSelected)
 		{
 			UUISprite sprite = base.GetSprite(1);
@@ -35,13 +35,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			sprite.SetUIActive(isSelected);
 		}
 
-		// Token: 0x0603E69E RID: 255646 RVA: 0x00F13794 File Offset: 0x00F11994
+		// Token: 0x06033362 RID: 209762 RVA: 0x00E5A558 File Offset: 0x00E58758
 		public override void OnSelected(bool fireEvent)
 		{
 			this.SetSelectedState(true);
 		}
 
-		// Token: 0x0603E69F RID: 255647 RVA: 0x00F1379D File Offset: 0x00F1199D
+		// Token: 0x06033363 RID: 209763 RVA: 0x00E5A561 File Offset: 0x00E58761
 		public override void OnDeselected(bool fireEvent)
 		{
 			this.SetSelectedState(false);

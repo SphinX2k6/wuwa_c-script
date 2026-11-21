@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007695 RID: 30357
+	// Token: 0x02007EA0 RID: 32416
 	public enum TControlTrackingType : byte
 	{
-		// Token: 0x040126BF RID: 75455
+		// Token: 0x04013708 RID: 79624
 		NONE,
-		// Token: 0x040126C0 RID: 75456
+		// Token: 0x04013709 RID: 79625
 		IControlTrackingOther,
-		// Token: 0x040126C1 RID: 75457
+		// Token: 0x0401370A RID: 79626
 		IControlTrackingSelf
 	}
 }

@@ -6,14 +6,14 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x020001A3 RID: 419
+// Token: 0x020001A7 RID: 423
 [UClass("/Game/Aki/TypeScript/Game/AnimNotify/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AnimNotify/TsAnimNotifyChangeRoleQte.TsAnimNotifyChangeRoleQte_C")]
 public class TsAnimNotifyChangeRoleQte : TsAnimNotifyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x17000452 RID: 1106
-	// (get) Token: 0x06001A99 RID: 6809 RVA: 0x0008A907 File Offset: 0x00088B07
-	// (set) Token: 0x06001A9A RID: 6810 RVA: 0x0008A917 File Offset: 0x00088B17
+	// Token: 0x17000474 RID: 1140
+	// (get) Token: 0x06001B36 RID: 6966 RVA: 0x00090FA7 File Offset: 0x0008F1A7
+	// (set) Token: 0x06001B37 RID: 6967 RVA: 0x00090FB7 File Offset: 0x0008F1B7
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int QteId
 	{
@@ -27,9 +27,9 @@ public class TsAnimNotifyChangeRoleQte : TsAnimNotifyBase, IUnrealUObject, IUnre
 		}
 	}
 
-	// Token: 0x17000453 RID: 1107
-	// (get) Token: 0x06001A9B RID: 6811 RVA: 0x0008A928 File Offset: 0x00088B28
-	// (set) Token: 0x06001A9C RID: 6812 RVA: 0x0008A938 File Offset: 0x00088B38
+	// Token: 0x17000475 RID: 1141
+	// (get) Token: 0x06001B38 RID: 6968 RVA: 0x00090FC8 File Offset: 0x0008F1C8
+	// (set) Token: 0x06001B39 RID: 6969 RVA: 0x00090FD8 File Offset: 0x0008F1D8
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float QteDistance
 	{
@@ -43,32 +43,28 @@ public class TsAnimNotifyChangeRoleQte : TsAnimNotifyBase, IUnrealUObject, IUnre
 		}
 	}
 
-	// Token: 0x06001A9D RID: 6813 RVA: 0x0008A94C File Offset: 0x00088B4C
+	// Token: 0x06001B3A RID: 6970 RVA: 0x00090FEC File Offset: 0x0008F1EC
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_Notify(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_Notify"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotify.__K2_Notify_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyChangeRoleQte) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_Notify"), TsAnimNotifyChangeRoleQte.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotify.__K2_Notify_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotify.__K2_Notify_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
-			*(&ptr2->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+			return this.K2_Notify_Implementation(meshComp, animation);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotify.__K2_Notify_FunctionParams* ptr = stackalloc UKuroAnimNotify.__K2_Notify_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotify.__K2_Notify_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
+		*(&ptr->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x06001A9E RID: 6814 RVA: 0x0008A9EC File Offset: 0x00088BEC
+	// Token: 0x06001B3B RID: 6971 RVA: 0x000910A4 File Offset: 0x0008F2A4
 	[NullableContext(2)]
 	protected virtual bool K2_Notify_Implementation(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
@@ -166,37 +162,33 @@ public class TsAnimNotifyChangeRoleQte : TsAnimNotifyBase, IUnrealUObject, IUnre
 		return true;
 	}
 
-	// Token: 0x06001A9F RID: 6815 RVA: 0x0008AC54 File Offset: 0x00088E54
+	// Token: 0x06001B3C RID: 6972 RVA: 0x0009130C File Offset: 0x0008F50C
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override string GetNotifyName()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetNotifyName"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UAnimNotify.__GetNotifyName_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyChangeRoleQte) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetNotifyName"), TsAnimNotifyChangeRoleQte.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UAnimNotify.__GetNotifyName_FunctionParams*)ptr + 15L / (long)sizeof(UAnimNotify.__GetNotifyName_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.GetNotifyName_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		string result = FString.ToString((void*)(&ptr2->__Result));
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UAnimNotify.__GetNotifyName_FunctionParams* ptr = stackalloc UAnimNotify.__GetNotifyName_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UAnimNotify.__GetNotifyName_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		string result = FString.ToString((void*)(&ptr->__Result));
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return result;
 	}
 
-	// Token: 0x06001AA0 RID: 6816 RVA: 0x0008ACCF File Offset: 0x00088ECF
+	// Token: 0x06001B3D RID: 6973 RVA: 0x0009139C File Offset: 0x0008F59C
 	[NullableContext(1)]
 	protected override string GetNotifyName_Implementation()
 	{
 		return "换人QTE";
 	}
 
-	// Token: 0x06001AA1 RID: 6817 RVA: 0x0008ACD6 File Offset: 0x00088ED6
+	// Token: 0x06001B3E RID: 6974 RVA: 0x000913A3 File Offset: 0x0008F5A3
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsAnimNotifyChangeRoleQte._ClassPtr == IntPtr.Zero)
@@ -206,23 +198,23 @@ public class TsAnimNotifyChangeRoleQte : TsAnimNotifyBase, IUnrealUObject, IUnre
 		return TsAnimNotifyChangeRoleQte._ClassPtr;
 	}
 
-	// Token: 0x06001AA2 RID: 6818 RVA: 0x0008ACFC File Offset: 0x00088EFC
+	// Token: 0x06001B3F RID: 6975 RVA: 0x000913C8 File Offset: 0x0008F5C8
 	public TsAnimNotifyChangeRoleQte() : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyChangeRoleQte.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06001AA3 RID: 6819 RVA: 0x0008AD24 File Offset: 0x00088F24
+	// Token: 0x06001B40 RID: 6976 RVA: 0x000913F0 File Offset: 0x0008F5F0
 	[NullableContext(1)]
 	public TsAnimNotifyChangeRoleQte(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyChangeRoleQte.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06001AA4 RID: 6820 RVA: 0x0008AD57 File Offset: 0x00088F57
+	// Token: 0x06001B41 RID: 6977 RVA: 0x00091423 File Offset: 0x0008F623
 	protected TsAnimNotifyChangeRoleQte(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06001AA5 RID: 6821 RVA: 0x0008AD60 File Offset: 0x00088F60
+	// Token: 0x06001B42 RID: 6978 RVA: 0x0009142C File Offset: 0x0008F62C
 	protected unsafe virtual void __CPPCALL_K2_Notify_Implementation(UKuroAnimNotify.__K2_Notify_FunctionParams* __Params)
 	{
 		USkeletalMeshComponent orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(__Params->MeshComp);
@@ -230,25 +222,25 @@ public class TsAnimNotifyChangeRoleQte : TsAnimNotifyBase, IUnrealUObject, IUnre
 		__Params->__Result = this.K2_Notify_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x06001AA6 RID: 6822 RVA: 0x0008AD93 File Offset: 0x00088F93
+	// Token: 0x06001B43 RID: 6979 RVA: 0x0009145F File Offset: 0x0008F65F
 	protected unsafe virtual void __CPPCALL_GetNotifyName_Implementation(UAnimNotify.__GetNotifyName_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), this.GetNotifyName_Implementation());
 	}
 
-	// Token: 0x0400113A RID: 4410
+	// Token: 0x0400117D RID: 4477
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AnimNotify/TsAnimNotifyChangeRoleQte.TsAnimNotifyChangeRoleQte_C";
 
-	// Token: 0x0400113B RID: 4411
+	// Token: 0x0400117E RID: 4478
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400113C RID: 4412
+	// Token: 0x0400117F RID: 4479
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400113D RID: 4413
+	// Token: 0x04001180 RID: 4480
 	private static int __PropertyOffset_QteId;
 
-	// Token: 0x0400113E RID: 4414
+	// Token: 0x04001181 RID: 4481
 	private static int __PropertyOffset_QteDistance;
 }

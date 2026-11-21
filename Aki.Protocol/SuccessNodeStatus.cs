@@ -3,16 +3,16 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02001560 RID: 5472
+	// Token: 0x020015D6 RID: 5590
 	public enum SuccessNodeStatus
 	{
-		// Token: 0x0400A62D RID: 42541
+		// Token: 0x0400AABA RID: 43706
 		[OriginalName("SNS_NotActive")]
 		SnsNotActive,
-		// Token: 0x0400A62E RID: 42542
+		// Token: 0x0400AABB RID: 43707
 		[OriginalName("SNS_Enter")]
 		SnsEnter,
-		// Token: 0x0400A62F RID: 42543
+		// Token: 0x0400AABC RID: 43708
 		[OriginalName("SNS_Action")]
 		SnsAction
 	}

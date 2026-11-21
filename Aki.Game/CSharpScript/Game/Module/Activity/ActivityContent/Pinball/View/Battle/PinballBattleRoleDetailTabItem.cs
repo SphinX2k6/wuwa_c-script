@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 {
-	// Token: 0x02006378 RID: 25464
+	// Token: 0x020052F6 RID: 21238
 	public class PinballBattleRoleDetailTabItem : GridProxyAbstract<EPinballBattleRoleDetailTabType>
 	{
-		// Token: 0x060400D1 RID: 262353 RVA: 0x00F7F86C File Offset: 0x00F7DA6C
+		// Token: 0x06034D92 RID: 216466 RVA: 0x00EC67D0 File Offset: 0x00EC49D0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x060400D2 RID: 262354 RVA: 0x00F7F914 File Offset: 0x00F7DB14
+		// Token: 0x06034D93 RID: 216467 RVA: 0x00EC6878 File Offset: 0x00EC4A78
 		public override void Refresh(EPinballBattleRoleDetailTabType data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 			LguiUtil.Instance.TrySetLocalTextNew(base.GetText(1), textStringId, Array.Empty<object>());
 		}
 
-		// Token: 0x060400D3 RID: 262355 RVA: 0x00F7F96B File Offset: 0x00F7DB6B
+		// Token: 0x06034D94 RID: 216468 RVA: 0x00EC68CF File Offset: 0x00EC4ACF
 		private void OnToggleStateChange(EToggleState state)
 		{
 			if (state == EToggleState.ETT_Checked)
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 			}
 		}
 
-		// Token: 0x060400D4 RID: 262356 RVA: 0x00F7F98E File Offset: 0x00F7DB8E
+		// Token: 0x06034D95 RID: 216469 RVA: 0x00EC68F2 File Offset: 0x00EC4AF2
 		public override void OnSelected(bool fireEvent)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -81,7 +81,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 			onSelectCallBack(this.Data);
 		}
 
-		// Token: 0x060400D5 RID: 262357 RVA: 0x00F7F9BD File Offset: 0x00F7DBBD
+		// Token: 0x06034D96 RID: 216470 RVA: 0x00EC6921 File Offset: 0x00EC4B21
 		public override void OnDeselected(bool fireEvent)
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -92,19 +92,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Battle
 			extendToggle.SetToggleState(EToggleState.ETT_UnChecked, fireEvent, false, false);
 		}
 
-		// Token: 0x04021613 RID: 136723
+		// Token: 0x0401BF42 RID: 114498
 		private EPinballBattleRoleDetailTabType Data;
 
-		// Token: 0x04021614 RID: 136724
+		// Token: 0x0401BF43 RID: 114499
 		[Nullable(2)]
 		public Action<EPinballBattleRoleDetailTabType> OnSelectCallBack;
 
-		// Token: 0x0200C593 RID: 50579
+		// Token: 0x0200AF7A RID: 44922
 		private enum EPinballBattleRoleDetailTabItemComp
 		{
-			// Token: 0x0403BA4B RID: 244299
+			// Token: 0x040363AD RID: 222125
 			Toggle,
-			// Token: 0x0403BA4C RID: 244300
+			// Token: 0x040363AE RID: 222126
 			Name
 		}
 	}

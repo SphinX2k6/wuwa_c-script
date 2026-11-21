@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023A0 RID: 9120
+	// Token: 0x0200262B RID: 9771
 	public class EMoveSceneItemTypeJsonConverter : JsonConverter<EMoveSceneItemType>
 	{
-		// Token: 0x0600C6D0 RID: 50896 RVA: 0x001D1D40 File Offset: 0x001CFF40
+		// Token: 0x0600D31D RID: 54045 RVA: 0x001EAEE0 File Offset: 0x001E90E0
 		public override EMoveSceneItemType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EMoveSceneItemTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C6D1 RID: 50897 RVA: 0x001D1D64 File Offset: 0x001CFF64
+		// Token: 0x0600D31E RID: 54046 RVA: 0x001EAF04 File Offset: 0x001E9104
 		public override void Write(Utf8JsonWriter writer, EMoveSceneItemType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

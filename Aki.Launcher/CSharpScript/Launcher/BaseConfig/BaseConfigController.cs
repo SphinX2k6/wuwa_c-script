@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Text.Json;
 using CSharpScript.Launcher.Download;
+using CSharpScript.Launcher.Platform;
 using CSharpScript.Launcher.Ui.HotFix;
 using CSharpScript.Launcher.Util;
 using CSharpScript.Typing;
@@ -12,25 +13,79 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.BaseConfig
 {
-	// Token: 0x02000256 RID: 598
+	// Token: 0x0200025B RID: 603
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BaseConfigController : Singleton
 	{
-		// Token: 0x06000EE3 RID: 3811 RVA: 0x00057070 File Offset: 0x00055270
+		// Token: 0x17000173 RID: 371
+		// (get) Token: 0x06000F24 RID: 3876 RVA: 0x00059BB4 File Offset: 0x00057DB4
+		// (set) Token: 0x06000F25 RID: 3877 RVA: 0x00059BBC File Offset: 0x00057DBC
+		public long GarUrlVersion { get; private set; }
+
+		// Token: 0x06000F26 RID: 3878 RVA: 0x00059BC8 File Offset: 0x00057DC8
 		[NullableContext(0)]
 		public UniTask<bool> RequestBaseData([Nullable(1)] HotFixManager view = null)
 		{
-			BaseConfigController.<RequestBaseData>d__4 <RequestBaseData>d__;
+			BaseConfigController.<RequestBaseData>d__9 <RequestBaseData>d__;
 			<RequestBaseData>d__.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
 			<RequestBaseData>d__.<>4__this = this;
 			<RequestBaseData>d__.view = view;
 			<RequestBaseData>d__.<>1__state = -1;
-			<RequestBaseData>d__.<>t__builder.Start<BaseConfigController.<RequestBaseData>d__4>(ref <RequestBaseData>d__);
+			<RequestBaseData>d__.<>t__builder.Start<BaseConfigController.<RequestBaseData>d__9>(ref <RequestBaseData>d__);
 			return <RequestBaseData>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000EE4 RID: 3812 RVA: 0x000570BC File Offset: 0x000552BC
+		// Token: 0x06000F27 RID: 3879 RVA: 0x00059C14 File Offset: 0x00057E14
+		private unsafe void ApplyVulkanSettingsFromCdn()
+		{
+			if (!Platform.Instance.IsAndroidPlatform() || Platform.Instance.IsCloudGame())
+			{
+				return;
+			}
+			string deviceProfileProfileName = UKuroRenderingRuntimeBPPluginBPLibrary.GetDeviceProfileProfileName();
+			EntryJson cdnReturnConfigInfo = this.GetCdnReturnConfigInfo();
+			Dictionary<string, VulkanSettingConfig> dictionary = (cdnReturnConfigInfo != null) ? cdnReturnConfigInfo.VulkanSettings : null;
+			VulkanSettingConfig vulkanSettingConfig;
+			bool flag = dictionary == null || !dictionary.TryGetValue(deviceProfileProfileName, out vulkanSettingConfig) || vulkanSettingConfig == null;
+			if (!flag)
+			{
+				int? defaultValue = vulkanSettingConfig.DefaultValue;
+				bool flag2;
+				if (defaultValue != null)
+				{
+					int valueOrDefault = defaultValue.GetValueOrDefault();
+					if (valueOrDefault <= 1)
+					{
+						flag2 = true;
+						goto IL_74;
+					}
+				}
+				flag2 = false;
+				IL_74:
+				flag = !flag2;
+			}
+			if (flag || !(vulkanSettingConfig.Revision > 0))
+			{
+				return;
+			}
+			int consoleVariableIntValue = UKismetSystemLibrary.GetConsoleVariableIntValue("r.Kuro.VulkanSettingRefreshRevision");
+			int valueOrDefault2 = LauncherStorageLib.Instance.GetGlobal<int?>(ELauncherStorageGlobalKey.VulkanRefreshRevision, null).GetValueOrDefault();
+			if (vulkanSettingConfig.Revision.Value <= consoleVariableIntValue || vulkanSettingConfig.Revision.Value <= valueOrDefault2)
+			{
+				return;
+			}
+			UKuroRenderingRuntimeBPPluginBPLibrary.SetVulkanPromotion(vulkanSettingConfig.DefaultValue.Value > 0);
+			LauncherLog instance = LauncherLog.Instance;
+			string message = "CDN Vulkan配置已请求写入，下次启动生效";
+			<>y__InlineArray3<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray3<ValueTuple<string, object>>);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("profileName", deviceProfileProfileName);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("revision", vulkanSettingConfig.Revision.Value);
+			*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 2) = new ValueTuple<string, object>("defaultValue", vulkanSettingConfig.DefaultValue.Value);
+			instance.Info(message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
+		}
+
+		// Token: 0x06000F28 RID: 3880 RVA: 0x00059DA0 File Offset: 0x00057FA0
 		private Dictionary<string, EntryJson> ParseEntryMap(string contentJson)
 		{
 			Dictionary<string, EntryJson> result;
@@ -41,7 +96,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			return result;
 		}
 
-		// Token: 0x06000EE5 RID: 3813 RVA: 0x00057104 File Offset: 0x00055304
+		// Token: 0x06000F29 RID: 3881 RVA: 0x00059DE8 File Offset: 0x00057FE8
 		private Dictionary<string, EntryJson> ParseEntryMap(JsonElement rootElement)
 		{
 			Dictionary<string, EntryJson> dictionary = new Dictionary<string, EntryJson>();
@@ -59,7 +114,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			return dictionary;
 		}
 
-		// Token: 0x06000EE6 RID: 3814 RVA: 0x00057190 File Offset: 0x00055390
+		// Token: 0x06000F2A RID: 3882 RVA: 0x00059E74 File Offset: 0x00058074
 		private unsafe void ParseGrayBox()
 		{
 			IGrayBoxConfig grayBox = this.GetCdnReturnConfigInfo().GrayBox;
@@ -82,7 +137,7 @@ namespace CSharpScript.Launcher.BaseConfig
 					string message = "Name参数无效";
 					<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
 					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("Name", grayBoxItemConfig.Name);
-					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("Content", LauncherJson.Stringify<IGrayBoxItemConfig>(grayBoxItemConfig, null));
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1) = new ValueTuple<string, object>("Content", LauncherJson.Stringify(grayBoxItemConfig, null));
 					instance.Error(message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 				}
 				else if (BaseConfigModel.Instance.GrayBoxConfigMap.ContainsKey(grayBoxItemConfig.Name))
@@ -91,7 +146,7 @@ namespace CSharpScript.Launcher.BaseConfig
 					string message2 = "存在相同的Name";
 					<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray2 = default(<>y__InlineArray2<ValueTuple<string, object>>);
 					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 0) = new ValueTuple<string, object>("Name", grayBoxItemConfig.Name);
-					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 1) = new ValueTuple<string, object>("Content", LauncherJson.Stringify<IGrayBoxItemConfig>(grayBoxItemConfig, null));
+					*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 1) = new ValueTuple<string, object>("Content", LauncherJson.Stringify(grayBoxItemConfig, null));
 					instance2.Error(message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 2));
 				}
 				else
@@ -181,7 +236,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			}
 		}
 
-		// Token: 0x06000EE7 RID: 3815 RVA: 0x000576F0 File Offset: 0x000558F0
+		// Token: 0x06000F2B RID: 3883 RVA: 0x0005A3D4 File Offset: 0x000585D4
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -194,18 +249,18 @@ namespace CSharpScript.Launcher.BaseConfig
 			1
 		})] Func<string, IResponse, bool> resolveFunc = null)
 		{
-			BaseConfigController.<DoRequest>d__8 <DoRequest>d__;
+			BaseConfigController.<DoRequest>d__14 <DoRequest>d__;
 			<DoRequest>d__.<>t__builder = AsyncUniTaskMethodBuilder<IResponse>.Create();
 			<DoRequest>d__.httpList = httpList;
 			<DoRequest>d__.getHttpFunction = getHttpFunction;
 			<DoRequest>d__.view = view;
 			<DoRequest>d__.resolveFunc = resolveFunc;
 			<DoRequest>d__.<>1__state = -1;
-			<DoRequest>d__.<>t__builder.Start<BaseConfigController.<DoRequest>d__8>(ref <DoRequest>d__);
+			<DoRequest>d__.<>t__builder.Start<BaseConfigController.<DoRequest>d__14>(ref <DoRequest>d__);
 			return <DoRequest>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000EE8 RID: 3816 RVA: 0x0005774C File Offset: 0x0005594C
+		// Token: 0x06000F2C RID: 3884 RVA: 0x0005A430 File Offset: 0x00058630
 		public unsafe bool CheckGrayBoxHit(string name, int playerId)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -262,7 +317,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			return false;
 		}
 
-		// Token: 0x06000EE9 RID: 3817 RVA: 0x00057918 File Offset: 0x00055B18
+		// Token: 0x06000F2D RID: 3885 RVA: 0x0005A5FC File Offset: 0x000587FC
 		public unsafe bool CheckGrayBoxHitByDeviceId(string name, string deviceId)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -355,14 +410,14 @@ namespace CSharpScript.Launcher.BaseConfig
 			return false;
 		}
 
-		// Token: 0x06000EEA RID: 3818 RVA: 0x00057D12 File Offset: 0x00055F12
+		// Token: 0x06000F2E RID: 3886 RVA: 0x0005A9F6 File Offset: 0x00058BF6
 		[NullableContext(2)]
 		public EntryJson GetCdnReturnConfigInfo()
 		{
 			return BaseConfigModel.Instance.EntryJson;
 		}
 
-		// Token: 0x06000EEB RID: 3819 RVA: 0x00057D1E File Offset: 0x00055F1E
+		// Token: 0x06000F2F RID: 3887 RVA: 0x0005AA02 File Offset: 0x00058C02
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -374,7 +429,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			return ((cdnReturnConfigInfo != null) ? cdnReturnConfigInfo.CdnUrl : null) ?? null;
 		}
 
-		// Token: 0x06000EEC RID: 3820 RVA: 0x00057D38 File Offset: 0x00055F38
+		// Token: 0x06000F30 RID: 3888 RVA: 0x0005AA1C File Offset: 0x00058C1C
 		public float? GetSpeedRatio()
 		{
 			EntryJson cdnReturnConfigInfo = this.GetCdnReturnConfigInfo();
@@ -385,7 +440,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			return cdnReturnConfigInfo.SpeedRatio;
 		}
 
-		// Token: 0x06000EED RID: 3821 RVA: 0x00057D60 File Offset: 0x00055F60
+		// Token: 0x06000F31 RID: 3889 RVA: 0x0005AA44 File Offset: 0x00058C44
 		public float? GetPriceRatio()
 		{
 			EntryJson cdnReturnConfigInfo = this.GetCdnReturnConfigInfo();
@@ -396,7 +451,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			return cdnReturnConfigInfo.PriceRatio;
 		}
 
-		// Token: 0x06000EEE RID: 3822 RVA: 0x00057D86 File Offset: 0x00055F86
+		// Token: 0x06000F32 RID: 3890 RVA: 0x0005AA6A File Offset: 0x00058C6A
 		[NullableContext(2)]
 		public IEvalConfig GetCdnEvalCfg()
 		{
@@ -408,7 +463,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			return cdnReturnConfigInfo.CdnEvalCfg;
 		}
 
-		// Token: 0x06000EEF RID: 3823 RVA: 0x00057D99 File Offset: 0x00055F99
+		// Token: 0x06000F33 RID: 3891 RVA: 0x0005AA7D File Offset: 0x00058C7D
 		[NullableContext(2)]
 		public ICdnScoreCfg GetCdnScoreCfg()
 		{
@@ -420,7 +475,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			return cdnReturnConfigInfo.CdnScoreCfg;
 		}
 
-		// Token: 0x06000EF0 RID: 3824 RVA: 0x00057DAC File Offset: 0x00055FAC
+		// Token: 0x06000F34 RID: 3892 RVA: 0x0005AA90 File Offset: 0x00058C90
 		[NullableContext(2)]
 		public string GetNoticeUrl()
 		{
@@ -432,54 +487,107 @@ namespace CSharpScript.Launcher.BaseConfig
 			return cdnReturnConfigInfo.NoticeUrl;
 		}
 
-		// Token: 0x06000EF1 RID: 3825 RVA: 0x00057DBF File Offset: 0x00055FBF
+		// Token: 0x06000F35 RID: 3893 RVA: 0x0005AAA4 File Offset: 0x00058CA4
 		[NullableContext(2)]
 		public string GetGARUrl()
 		{
-			EntryJson cdnReturnConfigInfo = this.GetCdnReturnConfigInfo();
-			if (cdnReturnConfigInfo == null)
+			string[] garurls = this.GetGARUrls();
+			if (garurls.Length == 0)
 			{
 				return null;
 			}
-			return cdnReturnConfigInfo.GARUrl;
+			this.GarUrlIndex %= garurls.Length;
+			return garurls[this.GarUrlIndex];
 		}
 
-		// Token: 0x06000EF2 RID: 3826 RVA: 0x00057DD4 File Offset: 0x00055FD4
+		// Token: 0x06000F36 RID: 3894 RVA: 0x0005AAD8 File Offset: 0x00058CD8
+		public void SetGARRequestResult(bool success, long requestVersion)
+		{
+			if (success || requestVersion != this.GarUrlVersion)
+			{
+				return;
+			}
+			string[] garurls = this.GetGARUrls();
+			if (garurls.Length <= 1)
+			{
+				return;
+			}
+			this.GarUrlIndex = (this.GarUrlIndex + 1) % garurls.Length;
+			long garUrlVersion = this.GarUrlVersion;
+			this.GarUrlVersion = garUrlVersion + 1L;
+			LauncherLog instance = LauncherLog.Instance;
+			string message = "切换GAR地址";
+			ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("GARUrl", garurls[this.GarUrlIndex]);
+			instance.Info(message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
+		}
+
+		// Token: 0x06000F37 RID: 3895 RVA: 0x0005AB50 File Offset: 0x00058D50
+		private string[] GetGARUrls()
+		{
+			EntryJson cdnReturnConfigInfo = this.GetCdnReturnConfigInfo();
+			string[] array = (cdnReturnConfigInfo != null) ? cdnReturnConfigInfo.GARUrls : null;
+			if (array != null && array.Length > 0)
+			{
+				List<string> list = new List<string>();
+				HashSet<string> hashSet = new HashSet<string>();
+				foreach (string text in array)
+				{
+					if (!string.IsNullOrEmpty(text) && hashSet.Add(text))
+					{
+						list.Add(text);
+					}
+				}
+				if (list.Count > 0)
+				{
+					return list.ToArray();
+				}
+			}
+			if (string.IsNullOrEmpty((cdnReturnConfigInfo != null) ? cdnReturnConfigInfo.GARUrl : null))
+			{
+				return Array.Empty<string>();
+			}
+			return new string[]
+			{
+				cdnReturnConfigInfo.GARUrl
+			};
+		}
+
+		// Token: 0x06000F38 RID: 3896 RVA: 0x0005ABF8 File Offset: 0x00058DF8
 		public bool GetGmIsOpen()
 		{
 			EntryJson cdnReturnConfigInfo = this.GetCdnReturnConfigInfo();
 			return cdnReturnConfigInfo != null && cdnReturnConfigInfo.GmOpen.GetValueOrDefault();
 		}
 
-		// Token: 0x06000EF3 RID: 3827 RVA: 0x00057DF8 File Offset: 0x00055FF8
+		// Token: 0x06000F39 RID: 3897 RVA: 0x0005AC1C File Offset: 0x00058E1C
 		public bool GetRptIsOpen()
 		{
 			EntryJson cdnReturnConfigInfo = this.GetCdnReturnConfigInfo();
 			return ((cdnReturnConfigInfo != null) ? cdnReturnConfigInfo.RptOpen : null).GetValueOrDefault(true);
 		}
 
-		// Token: 0x06000EF4 RID: 3828 RVA: 0x00057E28 File Offset: 0x00056028
+		// Token: 0x06000F3A RID: 3898 RVA: 0x0005AC4C File Offset: 0x00058E4C
 		public bool IsUseThreadCheck()
 		{
 			EntryJson cdnReturnConfigInfo = this.GetCdnReturnConfigInfo();
 			return cdnReturnConfigInfo != null && cdnReturnConfigInfo.AsyncCheck.GetValueOrDefault();
 		}
 
-		// Token: 0x06000EF5 RID: 3829 RVA: 0x00057E4C File Offset: 0x0005604C
+		// Token: 0x06000F3B RID: 3899 RVA: 0x0005AC70 File Offset: 0x00058E70
 		public bool IsUseNewHttpTimer()
 		{
 			EntryJson cdnReturnConfigInfo = this.GetCdnReturnConfigInfo();
 			return cdnReturnConfigInfo != null && cdnReturnConfigInfo.NewHttpTimer.GetValueOrDefault();
 		}
 
-		// Token: 0x06000EF6 RID: 3830 RVA: 0x00057E70 File Offset: 0x00056070
+		// Token: 0x06000F3C RID: 3900 RVA: 0x0005AC94 File Offset: 0x00058E94
 		public bool IsUseNewHttpApi()
 		{
 			EntryJson cdnReturnConfigInfo = this.GetCdnReturnConfigInfo();
 			return cdnReturnConfigInfo != null && cdnReturnConfigInfo.NewHttpApi.GetValueOrDefault();
 		}
 
-		// Token: 0x06000EF7 RID: 3831 RVA: 0x00057E94 File Offset: 0x00056094
+		// Token: 0x06000F3D RID: 3901 RVA: 0x0005ACB8 File Offset: 0x00058EB8
 		public bool GetIosAuditFirstDownloadTip()
 		{
 			string a = KuroApplication.IniPlatformName();
@@ -491,7 +599,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			return cdnReturnConfigInfo != null && cdnReturnConfigInfo.IosAuditFirstDownloadTip.GetValueOrDefault();
 		}
 
-		// Token: 0x06000EF8 RID: 3832 RVA: 0x00057EDC File Offset: 0x000560DC
+		// Token: 0x06000F3E RID: 3902 RVA: 0x0005AD00 File Offset: 0x00058F00
 		public bool GetIosAuditFirstDownloadTipWithSkip()
 		{
 			string a = KuroApplication.IniPlatformName();
@@ -504,7 +612,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			return !flag && this.GetIosAuditFirstDownloadTip();
 		}
 
-		// Token: 0x06000EF9 RID: 3833 RVA: 0x00057F25 File Offset: 0x00056125
+		// Token: 0x06000F3F RID: 3903 RVA: 0x0005AD49 File Offset: 0x00058F49
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -521,7 +629,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			return cdnReturnConfigInfo.SDKEnvironment;
 		}
 
-		// Token: 0x06000EFA RID: 3834 RVA: 0x00057F38 File Offset: 0x00056138
+		// Token: 0x06000F40 RID: 3904 RVA: 0x0005AD5C File Offset: 0x00058F5C
 		public string GetMixUri()
 		{
 			EntryJson cdnReturnConfigInfo = this.GetCdnReturnConfigInfo();
@@ -532,7 +640,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			return cdnReturnConfigInfo.MixUri ?? "";
 		}
 
-		// Token: 0x06000EFB RID: 3835 RVA: 0x00057F64 File Offset: 0x00056164
+		// Token: 0x06000F41 RID: 3905 RVA: 0x0005AD88 File Offset: 0x00058F88
 		public string GetResUri()
 		{
 			EntryJson cdnReturnConfigInfo = this.GetCdnReturnConfigInfo();
@@ -543,7 +651,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			return cdnReturnConfigInfo.ResUri ?? "";
 		}
 
-		// Token: 0x06000EFC RID: 3836 RVA: 0x00057F90 File Offset: 0x00056190
+		// Token: 0x06000F42 RID: 3906 RVA: 0x0005ADB4 File Offset: 0x00058FB4
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -559,7 +667,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			return cdnReturnConfigInfo.LoginServers;
 		}
 
-		// Token: 0x06000EFD RID: 3837 RVA: 0x00057FA4 File Offset: 0x000561A4
+		// Token: 0x06000F43 RID: 3907 RVA: 0x0005ADC8 File Offset: 0x00058FC8
 		[return: Nullable(2)]
 		public ILoginServersData GetLoginServerById(string serverId)
 		{
@@ -578,7 +686,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			return null;
 		}
 
-		// Token: 0x06000EFE RID: 3838 RVA: 0x00057FEB File Offset: 0x000561EB
+		// Token: 0x06000F44 RID: 3908 RVA: 0x0005AE0F File Offset: 0x0005900F
 		[NullableContext(2)]
 		public IGachaUrl GetGachaUrl()
 		{
@@ -590,14 +698,14 @@ namespace CSharpScript.Launcher.BaseConfig
 			return cdnReturnConfigInfo.GachaUrl;
 		}
 
-		// Token: 0x06000EFF RID: 3839 RVA: 0x00057FFE File Offset: 0x000561FE
+		// Token: 0x06000F45 RID: 3909 RVA: 0x0005AE22 File Offset: 0x00059022
 		[NullableContext(2)]
 		public IFeedBackData GetFeedBackUrl()
 		{
 			return null;
 		}
 
-		// Token: 0x06000F00 RID: 3840 RVA: 0x00058001 File Offset: 0x00056201
+		// Token: 0x06000F46 RID: 3910 RVA: 0x0005AE25 File Offset: 0x00059025
 		[NullableContext(2)]
 		public IPrivateServersData GetPrivateServers()
 		{
@@ -609,13 +717,13 @@ namespace CSharpScript.Launcher.BaseConfig
 			return cdnReturnConfigInfo.PrivateServers;
 		}
 
-		// Token: 0x06000F01 RID: 3841 RVA: 0x00058014 File Offset: 0x00056214
+		// Token: 0x06000F47 RID: 3911 RVA: 0x0005AE38 File Offset: 0x00059038
 		public string GetPublicValue(TPublicConfigKey key)
 		{
 			return this.GetPublicValue(key.ToEnumString());
 		}
 
-		// Token: 0x06000F02 RID: 3842 RVA: 0x00058024 File Offset: 0x00056224
+		// Token: 0x06000F48 RID: 3912 RVA: 0x0005AE48 File Offset: 0x00059048
 		public string GetPublicValue(string key)
 		{
 			if (!BaseConfigModel.Instance.PublicConfigLoaded)
@@ -641,7 +749,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			return text2;
 		}
 
-		// Token: 0x06000F03 RID: 3843 RVA: 0x000580C4 File Offset: 0x000562C4
+		// Token: 0x06000F49 RID: 3913 RVA: 0x0005AEE8 File Offset: 0x000590E8
 		private unsafe string BuildHttp(string http)
 		{
 			string packageConfigOrDefault = this.GetPackageConfigOrDefault(TBuildInfoKey.Stream, null);
@@ -669,19 +777,19 @@ namespace CSharpScript.Launcher.BaseConfig
 			return text;
 		}
 
-		// Token: 0x06000F04 RID: 3844 RVA: 0x00058219 File Offset: 0x00056419
+		// Token: 0x06000F4A RID: 3914 RVA: 0x0005B03D File Offset: 0x0005923D
 		private string GetBuildHttpGameVersion()
 		{
 			return UKuroLauncherLibrary.GetAppVersion();
 		}
 
-		// Token: 0x06000F05 RID: 3845 RVA: 0x00058220 File Offset: 0x00056420
+		// Token: 0x06000F4B RID: 3915 RVA: 0x0005B044 File Offset: 0x00059244
 		public string GetPackageConfigOrDefault(TBuildInfoKey key, string value = null)
 		{
 			return this.GetPackageConfigOrDefault(key.ToEnumString(), value);
 		}
 
-		// Token: 0x06000F06 RID: 3846 RVA: 0x00058230 File Offset: 0x00056430
+		// Token: 0x06000F4C RID: 3916 RVA: 0x0005B054 File Offset: 0x00059254
 		public string GetPackageConfigOrDefault(string key, string value = null)
 		{
 			if (!BaseConfigModel.Instance.ParamsConfigInited)
@@ -716,7 +824,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			return value ?? "";
 		}
 
-		// Token: 0x06000F07 RID: 3847 RVA: 0x000582D0 File Offset: 0x000564D0
+		// Token: 0x06000F4D RID: 3917 RVA: 0x0005B0F4 File Offset: 0x000592F4
 		public string GetPackageClientFightConfig()
 		{
 			string filename = UBlueprintPathsLibrary.ProjectContentDir() + "/Aki/Config/Json/CompareFightData/ClientFightDataInfo.json";
@@ -730,7 +838,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			return "";
 		}
 
-		// Token: 0x06000F08 RID: 3848 RVA: 0x00058314 File Offset: 0x00056514
+		// Token: 0x06000F4E RID: 3918 RVA: 0x0005B138 File Offset: 0x00059338
 		public void LoadPatchBuildInfo(bool isReload)
 		{
 			if (KuroApplication.IsWithEditor())
@@ -747,7 +855,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			LauncherLog.Instance.SetJsDebugId(packageConfigOrDefault);
 		}
 
-		// Token: 0x06000F09 RID: 3849 RVA: 0x00058370 File Offset: 0x00056570
+		// Token: 0x06000F4F RID: 3919 RVA: 0x0005B194 File Offset: 0x00059394
 		private bool LoadBuildInfoFromFile(string path)
 		{
 			TArray<string> tarray = UKuroStaticLibrary.LoadFileToStringArray(path);
@@ -770,14 +878,14 @@ namespace CSharpScript.Launcher.BaseConfig
 			return tarray.Num() > 0;
 		}
 
-		// Token: 0x06000F0A RID: 3850 RVA: 0x00058404 File Offset: 0x00056604
+		// Token: 0x06000F50 RID: 3920 RVA: 0x0005B228 File Offset: 0x00059428
 		public void LoadConfigVersion()
 		{
 			string path = UBlueprintPathsLibrary.ProjectContentDir() + "/Aki/ConfigDB/Misc/ConfigVersion.txt";
 			this.LoadConfigVersionFromFile(path);
 		}
 
-		// Token: 0x06000F0B RID: 3851 RVA: 0x0005842C File Offset: 0x0005662C
+		// Token: 0x06000F51 RID: 3921 RVA: 0x0005B250 File Offset: 0x00059450
 		private bool LoadConfigVersionFromFile(string path)
 		{
 			TArray<string> tarray = UKuroStaticLibrary.LoadFileToStringArray(path);
@@ -800,13 +908,13 @@ namespace CSharpScript.Launcher.BaseConfig
 			return tarray.Num() > 0;
 		}
 
-		// Token: 0x06000F0C RID: 3852 RVA: 0x000584BE File Offset: 0x000566BE
+		// Token: 0x06000F52 RID: 3922 RVA: 0x0005B2E2 File Offset: 0x000594E2
 		public string GetConfigVersion(TConfigVersionKey key)
 		{
 			return this.GetConfigVersion(key.ToEnumString());
 		}
 
-		// Token: 0x06000F0D RID: 3853 RVA: 0x000584CC File Offset: 0x000566CC
+		// Token: 0x06000F53 RID: 3923 RVA: 0x0005B2F0 File Offset: 0x000594F0
 		public string GetConfigVersion(string key)
 		{
 			string result;
@@ -817,7 +925,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			return result;
 		}
 
-		// Token: 0x06000F0E RID: 3854 RVA: 0x000584F4 File Offset: 0x000566F4
+		// Token: 0x06000F54 RID: 3924 RVA: 0x0005B318 File Offset: 0x00059518
 		public string GetP4Version()
 		{
 			string packageConfigOrDefault = this.GetPackageConfigOrDefault(TBuildInfoKey.Changelist, null);
@@ -845,7 +953,26 @@ namespace CSharpScript.Launcher.BaseConfig
 			return text2;
 		}
 
-		// Token: 0x06000F0F RID: 3855 RVA: 0x00058554 File Offset: 0x00056754
+		// Token: 0x06000F55 RID: 3925 RVA: 0x0005B378 File Offset: 0x00059578
+		public string GetPatchVersion()
+		{
+			string packageConfigOrDefault = this.GetPackageConfigOrDefault(TBuildInfoKey.PatchVersion, null);
+			string deviceSaved = LauncherStorageLib.Instance.GetDeviceSaved<string>(ELauncherStorageDeviceKey.PatchVersion, null);
+			RemoteVersionConfig newConfig = RemoteInfo.Instance.NewConfig;
+			VersionItem versionItem;
+			string text = (((newConfig != null) ? newConfig.ResVersions : null) != null && RemoteInfo.Instance.NewConfig.ResVersions.TryGetValue("resource", out versionItem)) ? ((versionItem != null) ? versionItem.Version : null) : null;
+			if (!string.IsNullOrEmpty(deviceSaved))
+			{
+				return deviceSaved;
+			}
+			if (string.IsNullOrEmpty(text))
+			{
+				return packageConfigOrDefault;
+			}
+			return text;
+		}
+
+		// Token: 0x06000F56 RID: 3926 RVA: 0x0005B3F8 File Offset: 0x000595F8
 		public string GetVersionString()
 		{
 			string value = "CN";
@@ -861,12 +988,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			string value2 = text;
 			string appReleaseType = KuroApplication.GetAppReleaseType();
 			string appChangeList = UKuroLauncherLibrary.GetAppChangeList();
-			string text2 = this.GetPackageConfigOrDefault(TBuildInfoKey.PatchVersion, null);
-			string deviceSaved = LauncherStorageLib.Instance.GetDeviceSaved<string>(ELauncherStorageDeviceKey.PatchVersion, null);
-			RemoteVersionConfig newConfig = RemoteInfo.Instance.NewConfig;
-			VersionItem versionItem;
-			string text3 = (((newConfig != null) ? newConfig.ResVersions : null) != null && RemoteInfo.Instance.NewConfig.ResVersions.TryGetValue("resource", out versionItem)) ? ((versionItem != null) ? versionItem.Version : null) : null;
-			text2 = ((!string.IsNullOrEmpty(deviceSaved)) ? deviceSaved : ((!string.IsNullOrEmpty(text3)) ? text3 : text2));
+			string patchVersion = this.GetPatchVersion();
 			string appVersion = UKuroLauncherLibrary.GetAppVersion();
 			string p4Version = this.GetP4Version();
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(6, 7);
@@ -880,14 +1002,14 @@ namespace CSharpScript.Launcher.BaseConfig
 			defaultInterpolatedStringHandler.AppendLiteral("_");
 			defaultInterpolatedStringHandler.AppendFormatted(appChangeList);
 			defaultInterpolatedStringHandler.AppendLiteral("_");
-			defaultInterpolatedStringHandler.AppendFormatted(text2);
+			defaultInterpolatedStringHandler.AppendFormatted(patchVersion);
 			defaultInterpolatedStringHandler.AppendLiteral("_");
 			defaultInterpolatedStringHandler.AppendFormatted(p4Version);
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x1700016D RID: 365
-		// (get) Token: 0x06000F10 RID: 3856 RVA: 0x000586D6 File Offset: 0x000568D6
+		// Token: 0x17000174 RID: 372
+		// (get) Token: 0x06000F57 RID: 3927 RVA: 0x0005B504 File Offset: 0x00059704
 		public static BaseConfigController Instance
 		{
 			get
@@ -901,12 +1023,12 @@ namespace CSharpScript.Launcher.BaseConfig
 			}
 		}
 
-		// Token: 0x06000F11 RID: 3857 RVA: 0x000586F9 File Offset: 0x000568F9
+		// Token: 0x06000F58 RID: 3928 RVA: 0x0005B527 File Offset: 0x00059727
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06000F12 RID: 3858 RVA: 0x000586FB File Offset: 0x000568FB
+		// Token: 0x06000F59 RID: 3929 RVA: 0x0005B529 File Offset: 0x00059729
 		public static void ResetStaticDefaultValue()
 		{
 			BaseConfigController instance = BaseConfigController._instance;
@@ -917,25 +1039,28 @@ namespace CSharpScript.Launcher.BaseConfig
 			BaseConfigController._instance = null;
 		}
 
-		// Token: 0x06000F13 RID: 3859 RVA: 0x00058714 File Offset: 0x00056914
+		// Token: 0x06000F5A RID: 3930 RVA: 0x0005B542 File Offset: 0x00059742
 		static BaseConfigController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(BaseConfigController.CreateStaticDefaultValue), new Action(BaseConfigController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040009A3 RID: 2467
+		// Token: 0x040009EB RID: 2539
 		private const string BUILD_INFO_BASE_PACKAGE = "/Package/ParamsConfig.ini";
 
-		// Token: 0x040009A4 RID: 2468
+		// Token: 0x040009EC RID: 2540
 		private const string BUILD_INFO_PATCH_OVERRIDE_OLD = "/Aki/ConfigDB/PackageParams.txt";
 
-		// Token: 0x040009A5 RID: 2469
+		// Token: 0x040009ED RID: 2541
 		private const string BUILD_INFO_PATCH_OVERRIDE = "/Aki/ConfigDB/Misc/BuildInfo.txt";
 
-		// Token: 0x040009A6 RID: 2470
+		// Token: 0x040009EE RID: 2542
 		private const string CONFIG_VERSION_PATCH_OVERRIDE = "/Aki/ConfigDB/Misc/ConfigVersion.txt";
 
-		// Token: 0x040009A7 RID: 2471
+		// Token: 0x040009EF RID: 2543
+		private int GarUrlIndex;
+
+		// Token: 0x040009F1 RID: 2545
 		[Nullable(2)]
 		private static BaseConfigController _instance;
 	}

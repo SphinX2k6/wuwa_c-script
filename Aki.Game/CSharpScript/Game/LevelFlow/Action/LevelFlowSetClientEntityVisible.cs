@@ -4,10 +4,10 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelFlow.Action
 {
-	// Token: 0x02006F9D RID: 28573
+	// Token: 0x0200611E RID: 24862
 	public class LevelFlowSetClientEntityVisible : LevelFlowActionBase
 	{
-		// Token: 0x0604576F RID: 284527 RVA: 0x0113ABFB File Offset: 0x01138DFB
+		// Token: 0x0603B91D RID: 243997 RVA: 0x010E49FF File Offset: 0x010E2BFF
 		[NullableContext(1)]
 		public LevelFlowSetClientEntityVisible Init(SetEntityClientVisible param)
 		{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			return this;
 		}
 
-		// Token: 0x06045770 RID: 284528 RVA: 0x0113AC08 File Offset: 0x01138E08
+		// Token: 0x0603B91E RID: 243998 RVA: 0x010E4A0C File Offset: 0x010E2C0C
 		protected override void OnExecute()
 		{
 			SetEntityClientVisible param = this.Param;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			base.FinishExecute(true);
 		}
 
-		// Token: 0x06045771 RID: 284529 RVA: 0x0113AD3C File Offset: 0x01138F3C
+		// Token: 0x0603B91F RID: 243999 RVA: 0x010E4B40 File Offset: 0x010E2D40
 		protected unsafe override void LogExecuteInfo()
 		{
 			global::Log instance = global::Log.Instance;
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.LevelFlow.Action
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 4));
 		}
 
-		// Token: 0x040243ED RID: 148461
+		// Token: 0x0401F6A2 RID: 128674
 		[Nullable(2)]
 		private SetEntityClientVisible Param;
 	}

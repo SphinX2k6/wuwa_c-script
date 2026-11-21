@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000394 RID: 916
+	// Token: 0x0200039C RID: 924
 	[NetMessage(EMessageId.DangoMonopolyTaskUpdateNotify)]
 	public sealed class DangoMonopolyTaskUpdateNotify : IMessage<DangoMonopolyTaskUpdateNotify>, IMessage, IEquatable<DangoMonopolyTaskUpdateNotify>, IDeepCloneable<DangoMonopolyTaskUpdateNotify>, IBufferMessage
 	{
-		// Token: 0x06005A69 RID: 23145 RVA: 0x000DBFB9 File Offset: 0x000DA1B9
+		// Token: 0x06005B56 RID: 23382 RVA: 0x000DE641 File Offset: 0x000DC841
 		[NullableContext(1)]
 		public static DangoMonopolyTaskUpdateNotify Create()
 		{
 			return new DangoMonopolyTaskUpdateNotify();
 		}
 
-		// Token: 0x170010B5 RID: 4277
-		// (get) Token: 0x06005A6A RID: 23146 RVA: 0x000DBFC0 File Offset: 0x000DA1C0
+		// Token: 0x170010E6 RID: 4326
+		// (get) Token: 0x06005B57 RID: 23383 RVA: 0x000DE648 File Offset: 0x000DC848
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170010B6 RID: 4278
-		// (get) Token: 0x06005A6B RID: 23147 RVA: 0x000DBFC3 File Offset: 0x000DA1C3
+		// Token: 0x170010E7 RID: 4327
+		// (get) Token: 0x06005B58 RID: 23384 RVA: 0x000DE64B File Offset: 0x000DC84B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06005A6C RID: 23148 RVA: 0x000DBFCA File Offset: 0x000DA1CA
+		// Token: 0x06005B59 RID: 23385 RVA: 0x000DE652 File Offset: 0x000DC852
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DangoMonopolyTaskUpdateNotify()
 		{
 		}
 
-		// Token: 0x06005A6D RID: 23149 RVA: 0x000DBFDD File Offset: 0x000DA1DD
+		// Token: 0x06005B5A RID: 23386 RVA: 0x000DE665 File Offset: 0x000DC865
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DangoMonopolyTaskUpdateNotify(DangoMonopolyTaskUpdateNotify other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06005A6E RID: 23150 RVA: 0x000DC013 File Offset: 0x000DA213
+		// Token: 0x06005B5B RID: 23387 RVA: 0x000DE69B File Offset: 0x000DC89B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public DangoMonopolyTaskUpdateNotify Clone()
@@ -68,9 +68,9 @@ namespace Aki.Protocol
 			return new DangoMonopolyTaskUpdateNotify(this);
 		}
 
-		// Token: 0x170010B7 RID: 4279
-		// (get) Token: 0x06005A6F RID: 23151 RVA: 0x000DC01B File Offset: 0x000DA21B
-		// (set) Token: 0x06005A70 RID: 23152 RVA: 0x000DC023 File Offset: 0x000DA223
+		// Token: 0x170010E8 RID: 4328
+		// (get) Token: 0x06005B5C RID: 23388 RVA: 0x000DE6A3 File Offset: 0x000DC8A3
+		// (set) Token: 0x06005B5D RID: 23389 RVA: 0x000DE6AB File Offset: 0x000DC8AB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int ActivityId
@@ -85,8 +85,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170010B8 RID: 4280
-		// (get) Token: 0x06005A71 RID: 23153 RVA: 0x000DC02C File Offset: 0x000DA22C
+		// Token: 0x170010E9 RID: 4329
+		// (get) Token: 0x06005B5E RID: 23390 RVA: 0x000DE6B4 File Offset: 0x000DC8B4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<DangoMonopolyTaskData> TaskDatas
@@ -97,7 +97,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06005A72 RID: 23154 RVA: 0x000DC034 File Offset: 0x000DA234
+		// Token: 0x06005B5F RID: 23391 RVA: 0x000DE6BC File Offset: 0x000DC8BC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -105,7 +105,7 @@ namespace Aki.Protocol
 			return this.Equals(other as DangoMonopolyTaskUpdateNotify);
 		}
 
-		// Token: 0x06005A73 RID: 23155 RVA: 0x000DC044 File Offset: 0x000DA244
+		// Token: 0x06005B60 RID: 23392 RVA: 0x000DE6CC File Offset: 0x000DC8CC
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(DangoMonopolyTaskUpdateNotify other)
@@ -113,7 +113,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ActivityId == other.ActivityId && this.taskDatas_.Equals(other.taskDatas_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06005A74 RID: 23156 RVA: 0x000DC094 File Offset: 0x000DA294
+		// Token: 0x06005B61 RID: 23393 RVA: 0x000DE71C File Offset: 0x000DC91C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06005A75 RID: 23157 RVA: 0x000DC0E1 File Offset: 0x000DA2E1
+		// Token: 0x06005B62 RID: 23394 RVA: 0x000DE769 File Offset: 0x000DC969
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -139,7 +139,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06005A76 RID: 23158 RVA: 0x000DC0EE File Offset: 0x000DA2EE
+		// Token: 0x06005B63 RID: 23395 RVA: 0x000DE776 File Offset: 0x000DC976
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -147,7 +147,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06005A77 RID: 23159 RVA: 0x000DC0F8 File Offset: 0x000DA2F8
+		// Token: 0x06005B64 RID: 23396 RVA: 0x000DE780 File Offset: 0x000DC980
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -155,7 +155,7 @@ namespace Aki.Protocol
 			this.taskDatas_.WriteTo(ref output, DangoMonopolyTaskUpdateNotify._repeated_taskDatas_codec);
 			if (this.ActivityId != 0)
 			{
-				output.WriteRawTag(56);
+				output.WriteRawTag(104);
 				output.WriteInt32(this.ActivityId);
 			}
 			if (this._unknownFields != null)
@@ -164,7 +164,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06005A78 RID: 23160 RVA: 0x000DC148 File Offset: 0x000DA348
+		// Token: 0x06005B65 RID: 23397 RVA: 0x000DE7D0 File Offset: 0x000DC9D0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -182,7 +182,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06005A79 RID: 23161 RVA: 0x000DC19C File Offset: 0x000DA39C
+		// Token: 0x06005B66 RID: 23398 RVA: 0x000DE824 File Offset: 0x000DCA24
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(DangoMonopolyTaskUpdateNotify other)
@@ -199,7 +199,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06005A7A RID: 23162 RVA: 0x000DC1E9 File Offset: 0x000DA3E9
+		// Token: 0x06005B67 RID: 23399 RVA: 0x000DE871 File Offset: 0x000DCA71
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -207,7 +207,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06005A7B RID: 23163 RVA: 0x000DC1F4 File Offset: 0x000DA3F4
+		// Token: 0x06005B68 RID: 23400 RVA: 0x000DE87C File Offset: 0x000DCA7C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -221,7 +221,7 @@ namespace Aki.Protocol
 				}
 				if (num != 34U)
 				{
-					if (num != 56U)
+					if (num != 104U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
@@ -237,22 +237,22 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040035B1 RID: 13745
+		// Token: 0x0400364D RID: 13901
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040035B2 RID: 13746
-		public const int ActivityIdFieldNumber = 7;
+		// Token: 0x0400364E RID: 13902
+		public const int ActivityIdFieldNumber = 13;
 
-		// Token: 0x040035B3 RID: 13747
+		// Token: 0x0400364F RID: 13903
 		private int activityId_;
 
-		// Token: 0x040035B4 RID: 13748
+		// Token: 0x04003650 RID: 13904
 		public const int TaskDatasFieldNumber = 4;
 
-		// Token: 0x040035B5 RID: 13749
+		// Token: 0x04003651 RID: 13905
 		private static readonly FieldCodec<DangoMonopolyTaskData> _repeated_taskDatas_codec = FieldCodec.ForMessage<DangoMonopolyTaskData>(34U, DangoMonopolyTaskData.Parser);
 
-		// Token: 0x040035B6 RID: 13750
+		// Token: 0x04003652 RID: 13906
 		private readonly RepeatedField<DangoMonopolyTaskData> taskDatas_ = new RepeatedField<DangoMonopolyTaskData>();
 	}
 }

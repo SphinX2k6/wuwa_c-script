@@ -2,11 +2,11 @@
 
 namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 {
-	// Token: 0x02006C40 RID: 27712
+	// Token: 0x02005DB9 RID: 23993
 	public class LevelConditionCheckGravityFlipEntityDirectionSameAsPlayerInfo : CodeCondition
 	{
-		// Token: 0x170099AE RID: 39342
-		// (get) Token: 0x060444DA RID: 279770 RVA: 0x010D3952 File Offset: 0x010D1B52
+		// Token: 0x17006EB1 RID: 28337
+		// (get) Token: 0x0603A632 RID: 239154 RVA: 0x0107D802 File Offset: 0x0107BA02
 		public override ECodeCondition CodeType
 		{
 			get
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelConditions
 			}
 		}
 
-		// Token: 0x0402399C RID: 145820
+		// Token: 0x0401EC3E RID: 126014
 		public int EntityId;
 	}
 }

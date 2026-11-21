@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B37 RID: 2871
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000C05 RID: 3077
 	public class ISearchTargetCfg
 	{
-		// Token: 0x06004244 RID: 16964 RVA: 0x000A9AD7 File Offset: 0x000A7CD7
+		// Token: 0x0600469D RID: 18077 RVA: 0x000B3B9B File Offset: 0x000B1D9B
 		public static ISearchTargetCfg Create(ISearchTargetCfg? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001193 RID: 4499
-		// (get) Token: 0x06004245 RID: 16965 RVA: 0x000A9AF8 File Offset: 0x000A7CF8
+		// Token: 0x1700128E RID: 4750
+		// (get) Token: 0x0600469E RID: 18078 RVA: 0x000B3BBC File Offset: 0x000B1DBC
 		public virtual List<IEntityAngleWeight> AngleWeight
 		{
 			get
@@ -44,8 +41,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001194 RID: 4500
-		// (get) Token: 0x06004246 RID: 16966 RVA: 0x000A9B64 File Offset: 0x000A7D64
+		// Token: 0x1700128F RID: 4751
+		// (get) Token: 0x0600469F RID: 18079 RVA: 0x000B3C28 File Offset: 0x000B1E28
 		public virtual List<IEntityCategoryWeight> LockConditions
 		{
 			get
@@ -65,8 +62,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001195 RID: 4501
-		// (get) Token: 0x06004247 RID: 16967 RVA: 0x000A9BD0 File Offset: 0x000A7DD0
+		// Token: 0x17001290 RID: 4752
+		// (get) Token: 0x060046A0 RID: 18080 RVA: 0x000B3C94 File Offset: 0x000B1E94
 		public virtual bool? IgnoreDistanceWeight
 		{
 			get
@@ -79,19 +76,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400255C RID: 9564
+		// Token: 0x040027A4 RID: 10148
 		private ISearchTargetCfg Instance;
 
-		// Token: 0x0400255D RID: 9565
+		// Token: 0x040027A5 RID: 10149
 		private List<IEntityAngleWeight> _AngleWeightCache;
 
-		// Token: 0x0400255E RID: 9566
+		// Token: 0x040027A6 RID: 10150
 		private bool _AngleWeightInited;
 
-		// Token: 0x0400255F RID: 9567
+		// Token: 0x040027A7 RID: 10151
 		private List<IEntityCategoryWeight> _LockConditionsCache;
 
-		// Token: 0x04002560 RID: 9568
+		// Token: 0x040027A8 RID: 10152
 		private bool _LockConditionsInited;
 	}
 }

@@ -1,22 +1,22 @@
 ﻿using System;
 
-// Token: 0x02001A9E RID: 6814
+// Token: 0x02000F5D RID: 3933
 public enum EExploreType
 {
-	// Token: 0x04005CE9 RID: 23785
+	// Token: 0x04005DB8 RID: 23992
 	None,
-	// Token: 0x04005CEA RID: 23786
+	// Token: 0x04005DB9 RID: 23993
 	MaterialBox,
-	// Token: 0x04005CEB RID: 23787
+	// Token: 0x04005DBA RID: 23994
 	DeliveryPoint,
-	// Token: 0x04005CEC RID: 23788
+	// Token: 0x04005DBB RID: 23995
 	SoundBox,
-	// Token: 0x04005CED RID: 23789
+	// Token: 0x04005DBC RID: 23996
 	SightSpot,
-	// Token: 0x04005CEE RID: 23790
+	// Token: 0x04005DBD RID: 23997
 	FlyingHunter,
-	// Token: 0x04005CEF RID: 23791
+	// Token: 0x04005DBE RID: 23998
 	AreaMission,
-	// Token: 0x04005CF0 RID: 23792
+	// Token: 0x04005DBF RID: 23999
 	Frostbite = 9
 }

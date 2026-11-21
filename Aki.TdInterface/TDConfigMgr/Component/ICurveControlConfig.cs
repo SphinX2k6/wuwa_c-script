@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000295 RID: 661
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020002DA RID: 730
 	public class ICurveControlConfig
 	{
-		// Token: 0x06000C57 RID: 3159 RVA: 0x00030048 File Offset: 0x0002E248
+		// Token: 0x06000D7B RID: 3451 RVA: 0x00032E38 File Offset: 0x00031038
 		private ICurveControlConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000C58 RID: 3160 RVA: 0x00030080 File Offset: 0x0002E280
+		// Token: 0x06000D7C RID: 3452 RVA: 0x00032E70 File Offset: 0x00031070
 		public static ICurveControlConfig Create([Nullable(2)] ICurveControlConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000C59 RID: 3161 RVA: 0x00030093 File Offset: 0x0002E293
+		// Token: 0x06000D7D RID: 3453 RVA: 0x00032E83 File Offset: 0x00031083
 		public static ICurveControlConfig CreateFromSetValue([Nullable(2)] ICurveControlConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000C5A RID: 3162 RVA: 0x000300A6 File Offset: 0x0002E2A6
+		// Token: 0x06000D7E RID: 3454 RVA: 0x00032E96 File Offset: 0x00031096
 		public ICurveControlConfig_SetValue ToSetValue()
 		{
 			return new ICurveControlConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170003A9 RID: 937
-		// (get) Token: 0x06000C5B RID: 3163 RVA: 0x000300B9 File Offset: 0x0002E2B9
-		// (set) Token: 0x06000C5C RID: 3164 RVA: 0x000300E4 File Offset: 0x0002E2E4
+		// Token: 0x170003F3 RID: 1011
+		// (get) Token: 0x06000D7F RID: 3455 RVA: 0x00032EA9 File Offset: 0x000310A9
+		// (set) Token: 0x06000D80 RID: 3456 RVA: 0x00032ED4 File Offset: 0x000310D4
 		public virtual ECurveControlType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000BA2 RID: 2978
+		// Token: 0x04000C87 RID: 3207
 		[Nullable(2)]
 		protected ICurveControlConfig FbInstance;
 
-		// Token: 0x04000BA3 RID: 2979
+		// Token: 0x04000C88 RID: 3208
 		[Nullable(2)]
 		protected ICurveControlConfig_SetValue PocoInterface;
 	}

@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000EE1 RID: 3809
+	// Token: 0x02000FF7 RID: 4087
 	public static class IBtNodeExtensions
 	{
-		// Token: 0x06005407 RID: 21511 RVA: 0x000CE6A4 File Offset: 0x000CC8A4
-		[NullableContext(1)]
+		// Token: 0x06005983 RID: 22915 RVA: 0x000DA84C File Offset: 0x000D8A4C
 		public static IReadOnlyList<ActionInfo> GetFinishActions(this IBtNode p)
 		{
 			IQuestSucceedBtNode questSucceedBtNode = p as IQuestSucceedBtNode;

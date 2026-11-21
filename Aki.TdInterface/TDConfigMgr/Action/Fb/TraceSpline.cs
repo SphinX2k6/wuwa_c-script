@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200273D RID: 10045
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002A09 RID: 10761
 	public class TraceSpline : ActionParams
 	{
-		// Token: 0x0600DFDF RID: 57311 RVA: 0x0021276E File Offset: 0x0021096E
+		// Token: 0x0600EDDF RID: 60895 RVA: 0x0022F2A6 File Offset: 0x0022D4A6
 		public static TraceSpline Create(ITraceSpline? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004327 RID: 17191
-		// (get) Token: 0x0600DFE0 RID: 57312 RVA: 0x0021278D File Offset: 0x0021098D
+		// Token: 0x1700467B RID: 18043
+		// (get) Token: 0x0600EDE0 RID: 60896 RVA: 0x0022F2C5 File Offset: 0x0022D4C5
 		public virtual string EffectPath
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004328 RID: 17192
-		// (get) Token: 0x0600DFE1 RID: 57313 RVA: 0x0021279A File Offset: 0x0021099A
+		// Token: 0x1700467C RID: 18044
+		// (get) Token: 0x0600EDE1 RID: 60897 RVA: 0x0022F2D2 File Offset: 0x0022D4D2
 		public virtual int Duration
 		{
 			get
@@ -42,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004329 RID: 17193
-		// (get) Token: 0x0600DFE2 RID: 57314 RVA: 0x002127A7 File Offset: 0x002109A7
+		// Token: 0x1700467D RID: 18045
+		// (get) Token: 0x0600EDE2 RID: 60898 RVA: 0x0022F2DF File Offset: 0x0022D4DF
 		public virtual int SplineEntityId
 		{
 			get
@@ -52,7 +49,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C37 RID: 31799
+		// Token: 0x040082E5 RID: 33509
 		private ITraceSpline Instance;
 	}
 }

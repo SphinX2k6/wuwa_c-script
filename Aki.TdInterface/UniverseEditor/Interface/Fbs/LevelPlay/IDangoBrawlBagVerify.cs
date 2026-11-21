@@ -4,10 +4,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x0200445A RID: 17498
+	// Token: 0x020048C2 RID: 18626
 	public static class IDangoBrawlBagVerify
 	{
-		// Token: 0x0601A0E7 RID: 106727 RVA: 0x003B91F0 File Offset: 0x003B73F0
+		// Token: 0x0601B8B8 RID: 112824 RVA: 0x003E53FC File Offset: 0x003E35FC
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			if (verifier.VerifyTableStart(tablePos) && verifier.VerifyField(tablePos, 4, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 6, 1UL, 1UL, false))
@@ -26,11 +26,11 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return false;
 		}
 
-		// Token: 0x0200799C RID: 31132
+		// Token: 0x020081E5 RID: 33253
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04013320 RID: 78624
+			// Token: 0x04014387 RID: 82823
 			public static VerifyTableAction <0>__Verify;
 		}
 	}

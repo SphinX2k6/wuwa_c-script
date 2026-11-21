@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006FC6 RID: 28614
+	// Token: 0x0200778F RID: 30607
 	public enum ISetBattleTagType_Union : byte
 	{
-		// Token: 0x040119CD RID: 72141
+		// Token: 0x040129B2 RID: 76210
 		NONE,
-		// Token: 0x040119CE RID: 72142
+		// Token: 0x040129B3 RID: 76211
 		ISetBattleTagType,
-		// Token: 0x040119CF RID: 72143
+		// Token: 0x040129B4 RID: 76212
 		IBattleStateMonsterLanding,
-		// Token: 0x040119D0 RID: 72144
+		// Token: 0x040129B5 RID: 76213
 		IBattleStateFinalMonsterLanding,
-		// Token: 0x040119D1 RID: 72145
+		// Token: 0x040129B6 RID: 76214
 		IBattleStateMonsterSleep
 	}
 }

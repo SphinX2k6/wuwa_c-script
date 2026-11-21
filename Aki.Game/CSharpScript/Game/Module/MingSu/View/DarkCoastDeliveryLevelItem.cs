@@ -7,18 +7,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MingSu.View
 {
-	// Token: 0x020053D8 RID: 21464
+	// Token: 0x020043BB RID: 17339
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DarkCoastDeliveryLevelItem : UiPanelBase
 	{
-		// Token: 0x06036DCB RID: 224715 RVA: 0x00CFE243 File Offset: 0x00CFC443
+		// Token: 0x0602BD12 RID: 179474 RVA: 0x00C4D313 File Offset: 0x00C4B513
 		public DarkCoastDeliveryLevelItem(DarkCoastDeliveryLevelData data)
 		{
 			this.LevelData = data;
 		}
 
-		// Token: 0x06036DCC RID: 224716 RVA: 0x00CFE25C File Offset: 0x00CFC45C
+		// Token: 0x0602BD13 RID: 179475 RVA: 0x00C4D32C File Offset: 0x00C4B52C
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.MingSu.View
 			};
 		}
 
-		// Token: 0x06036DCD RID: 224717 RVA: 0x00CFE31C File Offset: 0x00CFC51C
+		// Token: 0x0602BD14 RID: 179476 RVA: 0x00C4D3EC File Offset: 0x00C4B5EC
 		protected override void OnBeforeCreateImplement()
 		{
 			this.UiLevelSequence = new UiBehaviorLevelSequence(this);
@@ -45,13 +45,13 @@ namespace CSharpScript.Game.Module.MingSu.View
 			base.GetItem(5).SetUIActive(false);
 		}
 
-		// Token: 0x06036DCE RID: 224718 RVA: 0x00CFE36B File Offset: 0x00CFC56B
+		// Token: 0x0602BD15 RID: 179477 RVA: 0x00C4D43B File Offset: 0x00C4B63B
 		protected override void OnStart()
 		{
 			this.RefreshUi();
 		}
 
-		// Token: 0x06036DCF RID: 224719 RVA: 0x00CFE373 File Offset: 0x00CFC573
+		// Token: 0x0602BD16 RID: 179478 RVA: 0x00C4D443 File Offset: 0x00C4B643
 		protected override void OnBeforeShow()
 		{
 			if (this.IsFirstShow)
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.MingSu.View
 			}
 		}
 
-		// Token: 0x06036DD0 RID: 224720 RVA: 0x00CFE38C File Offset: 0x00CFC58C
+		// Token: 0x0602BD17 RID: 179479 RVA: 0x00C4D45C File Offset: 0x00C4B65C
 		public void RefreshUi()
 		{
 			DarkCoastDelivery config = this.LevelData.Config;
@@ -72,7 +72,7 @@ namespace CSharpScript.Game.Module.MingSu.View
 			base.GetItem(3).SetUIActive(darkCoastDeliveryGuardState == MingSuDefine.EDarkCoastDeliveryLevelDataState.Passed);
 		}
 
-		// Token: 0x06036DD1 RID: 224721 RVA: 0x00CFE414 File Offset: 0x00CFC614
+		// Token: 0x0602BD18 RID: 179480 RVA: 0x00C4D4E4 File Offset: 0x00C4B6E4
 		public void PlaySequence(bool skipToLastFrame)
 		{
 			switch (this.LevelData.GetDarkCoastDeliveryGuardState())
@@ -96,14 +96,14 @@ namespace CSharpScript.Game.Module.MingSu.View
 			}
 		}
 
-		// Token: 0x06036DD2 RID: 224722 RVA: 0x00CFE4C8 File Offset: 0x00CFC6C8
+		// Token: 0x0602BD19 RID: 179481 RVA: 0x00C4D598 File Offset: 0x00C4B798
 		public void SetSelect(bool state)
 		{
 			EToggleState state2 = state ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
 			base.GetExtendToggle(4).SetToggleStateForce(state2, false, false, false);
 		}
 
-		// Token: 0x06036DD3 RID: 224723 RVA: 0x00CFE4F0 File Offset: 0x00CFC6F0
+		// Token: 0x0602BD1A RID: 179482 RVA: 0x00C4D5C0 File Offset: 0x00C4B7C0
 		public void JumpUnCheckedToCheckedAnim()
 		{
 			UUIExtendToggle extendToggle = base.GetExtendToggle(4);
@@ -116,7 +116,7 @@ namespace CSharpScript.Game.Module.MingSu.View
 			(extendToggle.GetOwner() as AUIBaseActor).SequenceJumpToEnd(levelSequence);
 		}
 
-		// Token: 0x06036DD4 RID: 224724 RVA: 0x00CFE53A File Offset: 0x00CFC73A
+		// Token: 0x0602BD1B RID: 179483 RVA: 0x00C4D60A File Offset: 0x00C4B80A
 		private void OnClickToggleCallback(EToggleState state)
 		{
 			if (this.ClickToggleCallBack != null)
@@ -125,20 +125,20 @@ namespace CSharpScript.Game.Module.MingSu.View
 			}
 		}
 
-		// Token: 0x06036DD5 RID: 224725 RVA: 0x00CFE556 File Offset: 0x00CFC756
+		// Token: 0x0602BD1C RID: 179484 RVA: 0x00C4D626 File Offset: 0x00C4B826
 		public void SetClickToggleCallback(Action<DarkCoastDeliveryLevelData, DarkCoastDeliveryLevelItem> callback)
 		{
 			this.ClickToggleCallBack = callback;
 		}
 
-		// Token: 0x0401CF36 RID: 118582
+		// Token: 0x040179CE RID: 96718
 		public readonly DarkCoastDeliveryLevelData LevelData;
 
-		// Token: 0x0401CF37 RID: 118583
+		// Token: 0x040179CF RID: 96719
 		[Nullable(2)]
 		public UiBehaviorLevelSequence UiLevelSequence;
 
-		// Token: 0x0401CF38 RID: 118584
+		// Token: 0x040179D0 RID: 96720
 		[Nullable(new byte[]
 		{
 			2,
@@ -147,29 +147,29 @@ namespace CSharpScript.Game.Module.MingSu.View
 		})]
 		private Action<DarkCoastDeliveryLevelData, DarkCoastDeliveryLevelItem> ClickToggleCallBack;
 
-		// Token: 0x0401CF39 RID: 118585
+		// Token: 0x040179D1 RID: 96721
 		private bool IsFirstShow = true;
 
-		// Token: 0x0200B67C RID: 46716
+		// Token: 0x0200A0B4 RID: 41140
 		[NullableContext(0)]
 		private static class EComponent
 		{
-			// Token: 0x0403746F RID: 226415
+			// Token: 0x04031EC4 RID: 204484
 			public const int MonsterTexture = 0;
 
-			// Token: 0x04037470 RID: 226416
+			// Token: 0x04031EC5 RID: 204485
 			public const int LevelIcon = 1;
 
-			// Token: 0x04037471 RID: 226417
+			// Token: 0x04031EC6 RID: 204486
 			public const int LevelSelectIcon = 2;
 
-			// Token: 0x04037472 RID: 226418
+			// Token: 0x04031EC7 RID: 204487
 			public const int RedDotItem = 3;
 
-			// Token: 0x04037473 RID: 226419
+			// Token: 0x04031EC8 RID: 204488
 			public const int Toggle = 4;
 
-			// Token: 0x04037474 RID: 226420
+			// Token: 0x04031EC9 RID: 204489
 			public const int ArrowItem = 5;
 		}
 	}

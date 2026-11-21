@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200021F RID: 543
+	// Token: 0x020000C5 RID: 197
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/AkAudio.AkMarkerCallbackInfo")]
 	[UnrealStructLayout(88, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 88)]
 	public class UAkMarkerCallbackInfo : UAkEventCallbackInfo, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06002017 RID: 8215 RVA: 0x0002F901 File Offset: 0x0002DB01
+		// Token: 0x06000EC3 RID: 3779 RVA: 0x00016DD9 File Offset: 0x00014FD9
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UAkMarkerCallbackInfo._ClassPtr;
 		}
 
-		// Token: 0x06002018 RID: 8216 RVA: 0x0002F910 File Offset: 0x0002DB10
+		// Token: 0x06000EC4 RID: 3780 RVA: 0x00016DE8 File Offset: 0x00014FE8
 		public UAkMarkerCallbackInfo() : this(BuiltinUtils.AllocNativeUObject(UAkMarkerCallbackInfo.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06002019 RID: 8217 RVA: 0x0002F938 File Offset: 0x0002DB38
+		// Token: 0x06000EC5 RID: 3781 RVA: 0x00016E10 File Offset: 0x00015010
 		public UAkMarkerCallbackInfo(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UAkMarkerCallbackInfo.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x170007D6 RID: 2006
-		// (get) Token: 0x0600201A RID: 8218 RVA: 0x0002F96B File Offset: 0x0002DB6B
-		// (set) Token: 0x0600201B RID: 8219 RVA: 0x0002F97B File Offset: 0x0002DB7B
+		// Token: 0x17000139 RID: 313
+		// (get) Token: 0x06000EC6 RID: 3782 RVA: 0x00016E43 File Offset: 0x00015043
+		// (set) Token: 0x06000EC7 RID: 3783 RVA: 0x00016E53 File Offset: 0x00015053
 		public unsafe int Identifier
 		{
 			get
@@ -44,9 +44,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170007D7 RID: 2007
-		// (get) Token: 0x0600201C RID: 8220 RVA: 0x0002F98C File Offset: 0x0002DB8C
-		// (set) Token: 0x0600201D RID: 8221 RVA: 0x0002F99C File Offset: 0x0002DB9C
+		// Token: 0x1700013A RID: 314
+		// (get) Token: 0x06000EC8 RID: 3784 RVA: 0x00016E64 File Offset: 0x00015064
+		// (set) Token: 0x06000EC9 RID: 3785 RVA: 0x00016E74 File Offset: 0x00015074
 		public unsafe int Position
 		{
 			get
@@ -59,9 +59,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170007D8 RID: 2008
-		// (get) Token: 0x0600201E RID: 8222 RVA: 0x0002F9AD File Offset: 0x0002DBAD
-		// (set) Token: 0x0600201F RID: 8223 RVA: 0x0002F9C1 File Offset: 0x0002DBC1
+		// Token: 0x1700013B RID: 315
+		// (get) Token: 0x06000ECA RID: 3786 RVA: 0x00016E85 File Offset: 0x00015085
+		// (set) Token: 0x06000ECB RID: 3787 RVA: 0x00016E99 File Offset: 0x00015099
 		public unsafe string Label
 		{
 			get
@@ -74,33 +74,33 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06002020 RID: 8224 RVA: 0x0002F9D6 File Offset: 0x0002DBD6
+		// Token: 0x06000ECC RID: 3788 RVA: 0x00016EAE File Offset: 0x000150AE
 		static UAkMarkerCallbackInfo()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/AkAudio.AkMarkerCallbackInfo");
 		}
 
-		// Token: 0x06002021 RID: 8225 RVA: 0x0002F9E4 File Offset: 0x0002DBE4
+		// Token: 0x06000ECD RID: 3789 RVA: 0x00016EBC File Offset: 0x000150BC
 		protected UAkMarkerCallbackInfo(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04000AB9 RID: 2745
+		// Token: 0x040002DA RID: 730
 		public new const string __ObjectPath = "/Script/AkAudio.AkMarkerCallbackInfo";
 
-		// Token: 0x04000ABA RID: 2746
+		// Token: 0x040002DB RID: 731
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04000ABB RID: 2747
+		// Token: 0x040002DC RID: 732
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04000ABC RID: 2748
+		// Token: 0x040002DD RID: 733
 		internal static int __PropertyOffset_Identifier;
 
-		// Token: 0x04000ABD RID: 2749
+		// Token: 0x040002DE RID: 734
 		internal static int __PropertyOffset_Position;
 
-		// Token: 0x04000ABE RID: 2750
+		// Token: 0x040002DF RID: 735
 		internal static int __PropertyOffset_Label;
 	}
 }

@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x020017B4 RID: 6068
+// Token: 0x02000C6D RID: 3181
 public enum EItemOnSelectTime
 {
-	// Token: 0x04005053 RID: 20563
+	// Token: 0x040050FD RID: 20733
 	OnMoving,
-	// Token: 0x04005054 RID: 20564
+	// Token: 0x040050FE RID: 20734
 	EndMove
 }

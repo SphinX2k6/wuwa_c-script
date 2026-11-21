@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200084A RID: 2122
+	// Token: 0x02000866 RID: 2150
 	public class ConfigRogueResEventStepById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060031CE RID: 12750 RVA: 0x00173120 File Offset: 0x00171320
+		// Token: 0x06003276 RID: 12918 RVA: 0x0017A408 File Offset: 0x00178608
 		static ConfigRogueResEventStepById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRogueResEventStepById.CreateStaticDefaultValue), new Action(ConfigRogueResEventStepById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060031CF RID: 12751 RVA: 0x00173140 File Offset: 0x00171340
+		// Token: 0x06003277 RID: 12919 RVA: 0x0017A428 File Offset: 0x00178628
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRogueResEventStepById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060031D0 RID: 12752 RVA: 0x001731BF File Offset: 0x001713BF
+		// Token: 0x06003278 RID: 12920 RVA: 0x0017A4A7 File Offset: 0x001786A7
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRogueResEventStepById.LogPair = null;
 			ConfigRogueResEventStepById.HandleId = 0;
 		}
 
-		// Token: 0x060031D1 RID: 12753 RVA: 0x001731CD File Offset: 0x001713CD
+		// Token: 0x06003279 RID: 12921 RVA: 0x0017A4B5 File Offset: 0x001786B5
 		public static void Init()
 		{
 			ConfigRogueResEventStepById.HandleId = ConfigCommon.InitDataStatement(ConfigRogueResEventStepById.HandleId, "db_permanentrogue.db", "select BinData from `RogueResEventStep` where Id=?");
 		}
 
-		// Token: 0x060031D2 RID: 12754 RVA: 0x001731E8 File Offset: 0x001713E8
+		// Token: 0x0600327A RID: 12922 RVA: 0x0017A4D0 File Offset: 0x001786D0
 		public static RogueResEventStep? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRogueResEventStepById.HandleId, ConfigRogueResEventStepById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RogueResEventStep?(rootAsRogueResEventStep);
 		}
 
-		// Token: 0x040039EC RID: 14828
+		// Token: 0x04003AB0 RID: 15024
 		private const string DB = "db_permanentrogue.db";
 
-		// Token: 0x040039ED RID: 14829
+		// Token: 0x04003AB1 RID: 15025
 		private const string FILE = "c.常驻肉鸽.xlsx";
 
-		// Token: 0x040039EE RID: 14830
+		// Token: 0x04003AB2 RID: 15026
 		private const string TABLE = "RogueResEventStep";
 
-		// Token: 0x040039EF RID: 14831
+		// Token: 0x04003AB3 RID: 15027
 		private const string COMMAND = "select BinData from `RogueResEventStep` where Id=?";
 
-		// Token: 0x040039F0 RID: 14832
+		// Token: 0x04003AB4 RID: 15028
 		private const string KEY_PREFIX = "RogueResEventStepById";
 
-		// Token: 0x040039F1 RID: 14833
+		// Token: 0x04003AB5 RID: 15029
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040039F2 RID: 14834
+		// Token: 0x04003AB6 RID: 15030
 		private static int HandleId;
 	}
 }

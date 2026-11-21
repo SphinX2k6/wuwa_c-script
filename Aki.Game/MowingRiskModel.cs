@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -12,33 +11,33 @@ using CSharpScript.Module.InstanceDungeon;
 using Cysharp.Threading.Tasks;
 using Google.Protobuf.Collections;
 
-// Token: 0x02001372 RID: 4978
+// Token: 0x02000826 RID: 2086
 [NullableContext(1)]
 [Nullable(0)]
 [Model(0)]
 public class MowingRiskModel : ModelBase
 {
-	// Token: 0x17000BC5 RID: 3013
-	// (get) Token: 0x06008AE9 RID: 35561 RVA: 0x001DAAC8 File Offset: 0x001D8CC8
-	// (set) Token: 0x06008AEA RID: 35562 RVA: 0x001DAAD0 File Offset: 0x001D8CD0
+	// Token: 0x17000BE5 RID: 3045
+	// (get) Token: 0x06005E84 RID: 24196 RVA: 0x001E3924 File Offset: 0x001E1B24
+	// (set) Token: 0x06005E85 RID: 24197 RVA: 0x001E392C File Offset: 0x001E1B2C
 	private MowingRiskConfigContext ConfigContext { get; set; }
 
-	// Token: 0x17000BC6 RID: 3014
-	// (get) Token: 0x06008AEB RID: 35563 RVA: 0x001DAAD9 File Offset: 0x001D8CD9
-	// (set) Token: 0x06008AEC RID: 35564 RVA: 0x001DAAE1 File Offset: 0x001D8CE1
+	// Token: 0x17000BE6 RID: 3046
+	// (get) Token: 0x06005E86 RID: 24198 RVA: 0x001E3935 File Offset: 0x001E1B35
+	// (set) Token: 0x06005E87 RID: 24199 RVA: 0x001E393D File Offset: 0x001E1B3D
 	private MowingRiskProtocolContext ProtocolContext { get; set; }
 
-	// Token: 0x17000BC7 RID: 3015
-	// (get) Token: 0x06008AED RID: 35565 RVA: 0x001DAAEA File Offset: 0x001D8CEA
-	// (set) Token: 0x06008AEE RID: 35566 RVA: 0x001DAAF2 File Offset: 0x001D8CF2
+	// Token: 0x17000BE7 RID: 3047
+	// (get) Token: 0x06005E88 RID: 24200 RVA: 0x001E3946 File Offset: 0x001E1B46
+	// (set) Token: 0x06005E89 RID: 24201 RVA: 0x001E394E File Offset: 0x001E1B4E
 	private MowingRiskUiContext UiContext { get; set; }
 
-	// Token: 0x17000BC8 RID: 3016
-	// (get) Token: 0x06008AEF RID: 35567 RVA: 0x001DAAFB File Offset: 0x001D8CFB
-	// (set) Token: 0x06008AF0 RID: 35568 RVA: 0x001DAB03 File Offset: 0x001D8D03
+	// Token: 0x17000BE8 RID: 3048
+	// (get) Token: 0x06005E8A RID: 24202 RVA: 0x001E3957 File Offset: 0x001E1B57
+	// (set) Token: 0x06005E8B RID: 24203 RVA: 0x001E395F File Offset: 0x001E1B5F
 	private bool IsContextInit { get; set; }
 
-	// Token: 0x06008AF1 RID: 35569 RVA: 0x001DAB0C File Offset: 0x001D8D0C
+	// Token: 0x06005E8C RID: 24204 RVA: 0x001E3968 File Offset: 0x001E1B68
 	public void InitContext()
 	{
 		if (this.IsContextInit)
@@ -51,7 +50,7 @@ public class MowingRiskModel : ModelBase
 		this.UiContext = new MowingRiskUiContext(this);
 	}
 
-	// Token: 0x06008AF2 RID: 35570 RVA: 0x001DAB40 File Offset: 0x001D8D40
+	// Token: 0x06005E8D RID: 24205 RVA: 0x001E399C File Offset: 0x001E1B9C
 	protected override bool OnClear()
 	{
 		MowingRiskConfigContext configContext = this.ConfigContext;
@@ -72,7 +71,7 @@ public class MowingRiskModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06008AF3 RID: 35571 RVA: 0x001DAB76 File Offset: 0x001D8D76
+	// Token: 0x06005E8E RID: 24206 RVA: 0x001E39D2 File Offset: 0x001E1BD2
 	public void SyncProtocolRiskHarvestEndNotify(RiskHarvestEndNotify message)
 	{
 		MowingRiskProtocolContext protocolContext = this.ProtocolContext;
@@ -83,7 +82,7 @@ public class MowingRiskModel : ModelBase
 		protocolContext.ParseRiskHarvestEndNotify(message);
 	}
 
-	// Token: 0x06008AF4 RID: 35572 RVA: 0x001DAB89 File Offset: 0x001D8D89
+	// Token: 0x06005E8F RID: 24207 RVA: 0x001E39E5 File Offset: 0x001E1BE5
 	public void SyncProtocolRiskHarvestInstUpdateNotify(RiskHarvestInstUpdateNotify message)
 	{
 		MowingRiskProtocolContext protocolContext = this.ProtocolContext;
@@ -94,7 +93,7 @@ public class MowingRiskModel : ModelBase
 		protocolContext.ParseRiskHarvestInstUpdateNotify(message);
 	}
 
-	// Token: 0x06008AF5 RID: 35573 RVA: 0x001DAB9C File Offset: 0x001D8D9C
+	// Token: 0x06005E90 RID: 24208 RVA: 0x001E39F8 File Offset: 0x001E1BF8
 	public void SyncProtocolRiskHarvestArtifactNotify(RiskHarvestArtifactNotify message)
 	{
 		MowingRiskProtocolContext protocolContext = this.ProtocolContext;
@@ -105,7 +104,7 @@ public class MowingRiskModel : ModelBase
 		protocolContext.ParseRiskHarvestArtifactNotify(message);
 	}
 
-	// Token: 0x06008AF6 RID: 35574 RVA: 0x001DABAF File Offset: 0x001D8DAF
+	// Token: 0x06005E91 RID: 24209 RVA: 0x001E3A0B File Offset: 0x001E1C0B
 	public void SyncProtocolRiskHarvestBuffUpdateNotify(RiskHarvestBuffUpdateNotify message)
 	{
 		MowingRiskProtocolContext protocolContext = this.ProtocolContext;
@@ -118,10 +117,10 @@ public class MowingRiskModel : ModelBase
 		{
 			return;
 		}
-		uiContext.SyncNewBuff(message.AddBuffGroups.ToList<int>());
+		uiContext.SyncNewBuff(message.AddBuffGroups);
 	}
 
-	// Token: 0x06008AF7 RID: 35575 RVA: 0x001DABDE File Offset: 0x001D8DDE
+	// Token: 0x06005E92 RID: 24210 RVA: 0x001E3A35 File Offset: 0x001E1C35
 	public void SyncProtocolRiskHarvestBuffUnlockNotify(RiskHarvestBuffUnlockNotify message)
 	{
 		MowingRiskProtocolContext protocolContext = this.ProtocolContext;
@@ -132,7 +131,7 @@ public class MowingRiskModel : ModelBase
 		protocolContext.ParseRiskHarvestBuffUnlockNotify(message);
 	}
 
-	// Token: 0x06008AF8 RID: 35576 RVA: 0x001DABF1 File Offset: 0x001D8DF1
+	// Token: 0x06005E93 RID: 24211 RVA: 0x001E3A48 File Offset: 0x001E1C48
 	public void SyncProtocolRiskHarvestActivityUpdateNotify(RiskHarvestActivityUpdateNotify message)
 	{
 		MowingRiskProtocolContext protocolContext = this.ProtocolContext;
@@ -143,7 +142,7 @@ public class MowingRiskModel : ModelBase
 		protocolContext.ParseRiskHarvestActivityUpdateNotify(message);
 	}
 
-	// Token: 0x06008AF9 RID: 35577 RVA: 0x001DAC04 File Offset: 0x001D8E04
+	// Token: 0x06005E94 RID: 24212 RVA: 0x001E3A5C File Offset: 0x001E1C5C
 	public void ResetBuffViewCache()
 	{
 		this.CurrentBuffViewType = EMowingBuffTabViewType.Overview;
@@ -151,51 +150,51 @@ public class MowingRiskModel : ModelBase
 		this.CurrentChosenProgressIndex = null;
 	}
 
-	// Token: 0x06008AFA RID: 35578 RVA: 0x001DAC36 File Offset: 0x001D8E36
+	// Token: 0x06005E95 RID: 24213 RVA: 0x001E3A8E File Offset: 0x001E1C8E
 	public void ResetCacheInBattle()
 	{
 		this.ProtocolContext.ResetCacheInBattle();
 		this.UiContext.ResetCacheInBattle();
 	}
 
-	// Token: 0x06008AFB RID: 35579 RVA: 0x001DAC4E File Offset: 0x001D8E4E
+	// Token: 0x06005E96 RID: 24214 RVA: 0x001E3AA6 File Offset: 0x001E1CA6
 	public EMowingBuffType? GetBuffTypeByBuffId(int id)
 	{
 		return this.ConfigContext.GetBuffTypeById(id);
 	}
 
-	// Token: 0x06008AFC RID: 35580 RVA: 0x001DAC5C File Offset: 0x001D8E5C
+	// Token: 0x06005E97 RID: 24215 RVA: 0x001E3AB4 File Offset: 0x001E1CB4
 	public RiskHarvestInst GetRiskHarvestInstConfigByInstanceId(int instanceId)
 	{
 		return ConfigRiskHarvestInstById.GetConfig(this.ConfigContext.GetIdByInstanceId(instanceId).Value, true).Value;
 	}
 
-	// Token: 0x06008AFD RID: 35581 RVA: 0x001DAC8C File Offset: 0x001D8E8C
+	// Token: 0x06005E98 RID: 24216 RVA: 0x001E3AE4 File Offset: 0x001E1CE4
 	public RiskHarvestDifficulty GetDifficultyConfigByInstanceId(int instanceId)
 	{
 		return ConfigRiskHarvestDifficultyById.GetConfig(ConfigRiskHarvestInstById.GetConfig(this.ConfigContext.GetIdByInstanceId(instanceId).Value, true).Value.Difficulty, true).Value;
 	}
 
-	// Token: 0x06008AFE RID: 35582 RVA: 0x001DACD4 File Offset: 0x001D8ED4
+	// Token: 0x06005E99 RID: 24217 RVA: 0x001E3B2C File Offset: 0x001E1D2C
 	public int GetMonsterRatioByInstanceId(int instanceId)
 	{
 		return this.GetDifficultyConfigByInstanceId(instanceId).MonsterRatio;
 	}
 
-	// Token: 0x06008AFF RID: 35583 RVA: 0x001DACF0 File Offset: 0x001D8EF0
+	// Token: 0x06005E9A RID: 24218 RVA: 0x001E3B48 File Offset: 0x001E1D48
 	public int GetRecordScoreById(int id)
 	{
 		return this.ProtocolContext.GetScoreById(id);
 	}
 
-	// Token: 0x06008B00 RID: 35584 RVA: 0x001DAD00 File Offset: 0x001D8F00
+	// Token: 0x06005E9B RID: 24219 RVA: 0x001E3B58 File Offset: 0x001E1D58
 	public int GetMaxScoreByInstanceId(int instanceId)
 	{
 		int value = this.ConfigContext.GetIdByInstanceId(instanceId).Value;
 		return this.GetMaxScoreById(value);
 	}
 
-	// Token: 0x06008B01 RID: 35585 RVA: 0x001DAD2C File Offset: 0x001D8F2C
+	// Token: 0x06005E9C RID: 24220 RVA: 0x001E3B84 File Offset: 0x001E1D84
 	public int GetMaxScoreById(int id)
 	{
 		RiskHarvestInst? config = ConfigRiskHarvestInstById.GetConfig(id, true);
@@ -206,13 +205,13 @@ public class MowingRiskModel : ModelBase
 		return 0;
 	}
 
-	// Token: 0x06008B02 RID: 35586 RVA: 0x001DAD5B File Offset: 0x001D8F5B
+	// Token: 0x06005E9D RID: 24221 RVA: 0x001E3BB3 File Offset: 0x001E1DB3
 	public float GetProgressOverallPercentage(int artifactId, int count)
 	{
 		return this.ConfigContext.GetProgressOverallPercentage(artifactId, count);
 	}
 
-	// Token: 0x06008B03 RID: 35587 RVA: 0x001DAD6C File Offset: 0x001D8F6C
+	// Token: 0x06005E9E RID: 24222 RVA: 0x001E3BC4 File Offset: 0x001E1DC4
 	public IMowingBuffIntroduceData BuildBuffIntroduceDataInOverviewById(int id)
 	{
 		MowingRiskConfigContext configContext = this.ConfigContext;
@@ -241,7 +240,7 @@ public class MowingRiskModel : ModelBase
 		return mowingBuffIntroduceData;
 	}
 
-	// Token: 0x06008B04 RID: 35588 RVA: 0x001DAE74 File Offset: 0x001D9074
+	// Token: 0x06005E9F RID: 24223 RVA: 0x001E3CCC File Offset: 0x001E1ECC
 	public IMowingBuffIntroduceData BuildBuffIntroduceDataInProgressById(int id)
 	{
 		MowingRiskConfigContext configContext = this.ConfigContext;
@@ -259,7 +258,7 @@ public class MowingRiskModel : ModelBase
 		};
 	}
 
-	// Token: 0x06008B05 RID: 35589 RVA: 0x001DAF0C File Offset: 0x001D910C
+	// Token: 0x06005EA0 RID: 24224 RVA: 0x001E3D64 File Offset: 0x001E1F64
 	public IMowingBuffGridItemData BuildBuffItemDataById(int id)
 	{
 		MowingRiskConfigContext configContext = this.ConfigContext;
@@ -277,7 +276,7 @@ public class MowingRiskModel : ModelBase
 		return mowingBuffGridItemData;
 	}
 
-	// Token: 0x06008B06 RID: 35590 RVA: 0x001DAFAC File Offset: 0x001D91AC
+	// Token: 0x06005EA1 RID: 24225 RVA: 0x001E3E04 File Offset: 0x001E2004
 	public IMowingBuffUnitData[] BuildSuperBuffUnitDataListById(int id)
 	{
 		int artifactBasicBuffTotalCount = this.ProtocolContext.ArtifactBasicBuffTotalCount;
@@ -304,8 +303,8 @@ public class MowingRiskModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x06008B07 RID: 35591 RVA: 0x001DB084 File Offset: 0x001D9284
-	private IMowingBuffGridItemData[] BuildBuffItemListData(List<RiskHarvestBuffGroup> configList)
+	// Token: 0x06005EA2 RID: 24226 RVA: 0x001E3EDC File Offset: 0x001E20DC
+	private IMowingBuffGridItemData[] BuildBuffItemListData(IEnumerable<RiskHarvestBuffGroup> configList)
 	{
 		List<IMowingBuffGridItemData> list = new List<IMowingBuffGridItemData>();
 		foreach (RiskHarvestBuffGroup riskHarvestBuffGroup in configList)
@@ -315,7 +314,7 @@ public class MowingRiskModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x06008B08 RID: 35592 RVA: 0x001DB0EC File Offset: 0x001D92EC
+	// Token: 0x06005EA3 RID: 24227 RVA: 0x001E3F3C File Offset: 0x001E213C
 	public IMowingBuffOverviewData BuildOverviewViewData()
 	{
 		if (this.CurrentChosenOverviewBuffId == null)
@@ -330,7 +329,7 @@ public class MowingRiskModel : ModelBase
 			list.Add(new MowingBuffGridGroupData
 			{
 				GroupNameTextId = "riskharvest_superbuff",
-				BuffItemList = this.BuildBuffItemListData(superBuffConfigsAfterSort.ToList<RiskHarvestBuffGroup>()),
+				BuffItemList = this.BuildBuffItemListData(superBuffConfigsAfterSort),
 				ShowUnlockText = showUnlockText
 			});
 		}
@@ -340,7 +339,7 @@ public class MowingRiskModel : ModelBase
 			list.Add(new MowingBuffGridGroupData
 			{
 				GroupNameTextId = "riskharvest_normalbuff",
-				BuffItemList = this.BuildBuffItemListData(basicBuffConfigsAfterSort.ToList<RiskHarvestBuffGroup>()),
+				BuffItemList = this.BuildBuffItemListData(basicBuffConfigsAfterSort),
 				ShowUnlockText = showUnlockText
 			});
 		}
@@ -351,7 +350,7 @@ public class MowingRiskModel : ModelBase
 		};
 	}
 
-	// Token: 0x06008B09 RID: 35593 RVA: 0x001DB1BC File Offset: 0x001D93BC
+	// Token: 0x06005EA4 RID: 24228 RVA: 0x001E4004 File Offset: 0x001E2204
 	public IMowingBuffProgressData BuildProgressViewData()
 	{
 		MowingRiskProtocolContext protocolContext = this.ProtocolContext;
@@ -377,7 +376,7 @@ public class MowingRiskModel : ModelBase
 		};
 	}
 
-	// Token: 0x06008B0A RID: 35594 RVA: 0x001DB280 File Offset: 0x001D9480
+	// Token: 0x06005EA5 RID: 24229 RVA: 0x001E40C8 File Offset: 0x001E22C8
 	public IMowingBuffCaptionData BuildCaptionViewData()
 	{
 		InstanceDungeonEntranceConfig instance = InstanceDungeonEntranceConfig.Instance;
@@ -389,7 +388,7 @@ public class MowingRiskModel : ModelBase
 		};
 	}
 
-	// Token: 0x06008B0B RID: 35595 RVA: 0x001DB308 File Offset: 0x001D9508
+	// Token: 0x06005EA6 RID: 24230 RVA: 0x001E4150 File Offset: 0x001E2350
 	public IMowingRiskInstanceDetailData BuildInstanceDetailDataByInstanceId(int id)
 	{
 		InstanceDungeonConfig instance = InstanceDungeonConfig.Instance;
@@ -411,7 +410,7 @@ public class MowingRiskModel : ModelBase
 		return mowingRiskInstanceDetailData;
 	}
 
-	// Token: 0x06008B0C RID: 35596 RVA: 0x001DB404 File Offset: 0x001D9604
+	// Token: 0x06005EA7 RID: 24231 RVA: 0x001E424C File Offset: 0x001E244C
 	public IMowingRiskInstanceDetailLockItemData BuildInstanceDetailLockDataByInstanceId(int id)
 	{
 		int? idByInstanceId = this.ConfigContext.GetIdByInstanceId(id);
@@ -422,7 +421,7 @@ public class MowingRiskModel : ModelBase
 		return null;
 	}
 
-	// Token: 0x06008B0D RID: 35597 RVA: 0x001DB444 File Offset: 0x001D9644
+	// Token: 0x06005EA8 RID: 24232 RVA: 0x001E428C File Offset: 0x001E248C
 	public IMowingRiskInstanceDetailLockItemData BuildInstanceLockDataByInstanceId(int id)
 	{
 		int? idByInstanceId = this.ConfigContext.GetIdByInstanceId(id);
@@ -439,7 +438,7 @@ public class MowingRiskModel : ModelBase
 		return mowingRiskInstanceDetailLockItemData;
 	}
 
-	// Token: 0x06008B0E RID: 35598 RVA: 0x001DB4A0 File Offset: 0x001D96A0
+	// Token: 0x06005EA9 RID: 24233 RVA: 0x001E42E8 File Offset: 0x001E24E8
 	public IMowingRiskInstanceRecommendData BuildInstanceRecommendDataByInstanceId(int id)
 	{
 		InstanceDungeonConfig instance = InstanceDungeonConfig.Instance;
@@ -455,7 +454,7 @@ public class MowingRiskModel : ModelBase
 		};
 	}
 
-	// Token: 0x06008B0F RID: 35599 RVA: 0x001DB4FC File Offset: 0x001D96FC
+	// Token: 0x06005EAA RID: 24234 RVA: 0x001E4344 File Offset: 0x001E2544
 	public string BuildInstanceTotalScore()
 	{
 		DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(0, 1);
@@ -463,7 +462,7 @@ public class MowingRiskModel : ModelBase
 		return defaultInterpolatedStringHandler.ToStringAndClear();
 	}
 
-	// Token: 0x06008B10 RID: 35600 RVA: 0x001DB52C File Offset: 0x001D972C
+	// Token: 0x06005EAB RID: 24235 RVA: 0x001E4374 File Offset: 0x001E2574
 	public IMowingRiskInBattleBuffData BuildInBattleBuffDataById(int id)
 	{
 		MowingRiskConfigContext configContext = this.ConfigContext;
@@ -474,7 +473,7 @@ public class MowingRiskModel : ModelBase
 		};
 	}
 
-	// Token: 0x06008B11 RID: 35601 RVA: 0x001DB560 File Offset: 0x001D9760
+	// Token: 0x06005EAC RID: 24236 RVA: 0x001E43A8 File Offset: 0x001E25A8
 	public IMowingRiskInBattleRootData BuildInBattleRootData()
 	{
 		MowingRiskProtocolContext protocolContext = this.ProtocolContext;
@@ -488,7 +487,7 @@ public class MowingRiskModel : ModelBase
 		};
 	}
 
-	// Token: 0x06008B12 RID: 35602 RVA: 0x001DB5B0 File Offset: 0x001D97B0
+	// Token: 0x06005EAD RID: 24237 RVA: 0x001E43F8 File Offset: 0x001E25F8
 	public IActivityRewardViewData BuildActivityRewardViewData()
 	{
 		List<IActivityRewardDataPage> list = new List<IActivityRewardDataPage>();
@@ -509,12 +508,12 @@ public class MowingRiskModel : ModelBase
 		}
 		return new ActivityRewardViewData
 		{
-			DataPageList = list.ToList<IActivityRewardDataPage>(),
+			DataPageList = new List<IActivityRewardDataPage>(list),
 			Source = EActivityRewardSource.MowingRisk
 		};
 	}
 
-	// Token: 0x06008B13 RID: 35603 RVA: 0x001DB618 File Offset: 0x001D9818
+	// Token: 0x06005EAE RID: 24238 RVA: 0x001E4460 File Offset: 0x001E2660
 	public IMowingRiskNewBasicBuffTipsData BuildNewBuffTipsDataById(int id)
 	{
 		MowingRiskConfigContext configContext = this.ConfigContext;
@@ -531,7 +530,7 @@ public class MowingRiskModel : ModelBase
 		};
 	}
 
-	// Token: 0x06008B14 RID: 35604 RVA: 0x001DB69C File Offset: 0x001D989C
+	// Token: 0x06005EAF RID: 24239 RVA: 0x001E44E4 File Offset: 0x001E26E4
 	[NullableContext(2)]
 	public string BuildInstanceSubtitleTextIdByInstanceId(int id)
 	{
@@ -543,7 +542,7 @@ public class MowingRiskModel : ModelBase
 		return this.BuildInstanceSubtitleTextIdById(idByInstanceId.Value);
 	}
 
-	// Token: 0x06008B15 RID: 35605 RVA: 0x001DB6D0 File Offset: 0x001D98D0
+	// Token: 0x06005EB0 RID: 24240 RVA: 0x001E4518 File Offset: 0x001E2718
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -559,7 +558,7 @@ public class MowingRiskModel : ModelBase
 		return this.BuildInstanceSubtitleTextArgsById(idByInstanceId.Value);
 	}
 
-	// Token: 0x06008B16 RID: 35606 RVA: 0x001DB704 File Offset: 0x001D9904
+	// Token: 0x06005EB1 RID: 24241 RVA: 0x001E454C File Offset: 0x001E274C
 	public bool CheckInstanceFinishedByInstanceId(int instanceId)
 	{
 		int? idByInstanceId = this.ConfigContext.GetIdByInstanceId(instanceId);
@@ -576,13 +575,13 @@ public class MowingRiskModel : ModelBase
 		return false;
 	}
 
-	// Token: 0x06008B17 RID: 35607 RVA: 0x001DB765 File Offset: 0x001D9965
+	// Token: 0x06005EB2 RID: 24242 RVA: 0x001E45AD File Offset: 0x001E27AD
 	public bool IsSuperBuffById(int id)
 	{
 		return this.ConfigContext.IsSuperBuffByBuffId(id);
 	}
 
-	// Token: 0x06008B18 RID: 35608 RVA: 0x001DB774 File Offset: 0x001D9974
+	// Token: 0x06005EB3 RID: 24243 RVA: 0x001E45BC File Offset: 0x001E27BC
 	public bool IsBuffGottenInBattleById(int id)
 	{
 		MowingRiskProtocolContext protocolContext = this.ProtocolContext;
@@ -590,7 +589,7 @@ public class MowingRiskModel : ModelBase
 		return protocolContext.BasicBuffInfoInBattle.ContainsKey(id) || (configContext.IsSuperBuffByBuffId(id) && this.ConfigContext.IsSuperBuffAvailable(protocolContext.ArtifactId, id, protocolContext.ArtifactBasicBuffTotalCount));
 	}
 
-	// Token: 0x06008B19 RID: 35609 RVA: 0x001DB7C4 File Offset: 0x001D99C4
+	// Token: 0x06005EB4 RID: 24244 RVA: 0x001E460C File Offset: 0x001E280C
 	public List<RiskHarvestBuffGroup> GetBasicBuffConfigListInBattle()
 	{
 		MowingRiskProtocolContext protocolContext = this.ProtocolContext;
@@ -607,7 +606,7 @@ public class MowingRiskModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06008B1A RID: 35610 RVA: 0x001DB848 File Offset: 0x001D9A48
+	// Token: 0x06005EB5 RID: 24245 RVA: 0x001E4690 File Offset: 0x001E2890
 	public List<RiskHarvestBuffGroup> GetSuperBuffConfigListInBattle()
 	{
 		MowingRiskProtocolContext protocolContext = this.ProtocolContext;
@@ -631,13 +630,13 @@ public class MowingRiskModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06008B1B RID: 35611 RVA: 0x001DB8D1 File Offset: 0x001D9AD1
+	// Token: 0x06005EB6 RID: 24246 RVA: 0x001E4719 File Offset: 0x001E2919
 	public IReadOnlyList<RiskHarvestBuffGroup> GetBuffConfigList()
 	{
 		return this.ConfigContext.GetBuffConfigListByActivityId(this.ProtocolContext.Id);
 	}
 
-	// Token: 0x06008B1C RID: 35612 RVA: 0x001DB8EC File Offset: 0x001D9AEC
+	// Token: 0x06005EB7 RID: 24247 RVA: 0x001E4734 File Offset: 0x001E2934
 	public List<RiskHarvestBuffGroup> GetBasicBuffConfigListBeforeBattle()
 	{
 		IEnumerable<RiskHarvestBuffGroup> buffConfigList = this.GetBuffConfigList();
@@ -652,7 +651,7 @@ public class MowingRiskModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06008B1D RID: 35613 RVA: 0x001DB94C File Offset: 0x001D9B4C
+	// Token: 0x06005EB8 RID: 24248 RVA: 0x001E4794 File Offset: 0x001E2994
 	public List<RiskHarvestBuffGroup> GetSuperBuffConfigListBeforeBattle()
 	{
 		IEnumerable<RiskHarvestBuffGroup> buffConfigList = this.GetBuffConfigList();
@@ -667,27 +666,27 @@ public class MowingRiskModel : ModelBase
 		return list;
 	}
 
-	// Token: 0x06008B1E RID: 35614 RVA: 0x001DB9AC File Offset: 0x001D9BAC
+	// Token: 0x06005EB9 RID: 24249 RVA: 0x001E47F4 File Offset: 0x001E29F4
 	public bool IsBuffAvailableInActivity(RiskHarvestBuffGroup buffCfg)
 	{
 		return this.ProtocolContext.Id == buffCfg.ActivityId;
 	}
 
-	// Token: 0x06008B1F RID: 35615 RVA: 0x001DB9C4 File Offset: 0x001D9BC4
+	// Token: 0x06005EBA RID: 24250 RVA: 0x001E480C File Offset: 0x001E2A0C
 	public bool IsInstanceUnlockedByInstanceId(int instanceId)
 	{
 		int? idByInstanceId = this.ConfigContext.GetIdByInstanceId(instanceId);
 		return idByInstanceId != null && this.ProtocolContext.IsInstanceUnlockedById(idByInstanceId.Value);
 	}
 
-	// Token: 0x06008B20 RID: 35616 RVA: 0x001DB9FC File Offset: 0x001D9BFC
+	// Token: 0x06005EBB RID: 24251 RVA: 0x001E4844 File Offset: 0x001E2A44
 	public bool IsInstanceNewById(int id)
 	{
 		bool flag;
 		return this.ConfigContext.IsInstanceNewCache.TryGetValue(id, out flag) && flag;
 	}
 
-	// Token: 0x06008B21 RID: 35617 RVA: 0x001DBA20 File Offset: 0x001D9C20
+	// Token: 0x06005EBC RID: 24252 RVA: 0x001E4868 File Offset: 0x001E2A68
 	public void SetInstanceOldById(int id)
 	{
 		Dictionary<int, bool> isInstanceNewCache = this.ConfigContext.IsInstanceNewCache;
@@ -695,7 +694,7 @@ public class MowingRiskModel : ModelBase
 		this.ConfigContext.IsInstanceNewCache = isInstanceNewCache;
 	}
 
-	// Token: 0x06008B22 RID: 35618 RVA: 0x001DBA50 File Offset: 0x001D9C50
+	// Token: 0x06005EBD RID: 24253 RVA: 0x001E4898 File Offset: 0x001E2A98
 	public void SetCurrentInstancesOld()
 	{
 		Dictionary<int, RiskHarvestInstInfo> instanceInfo = this.ProtocolContext.InstanceInfo;
@@ -710,37 +709,37 @@ public class MowingRiskModel : ModelBase
 		this.ConfigContext.IsInstanceNewCache = isInstanceNewCache;
 	}
 
-	// Token: 0x06008B23 RID: 35619 RVA: 0x001DBAD4 File Offset: 0x001D9CD4
+	// Token: 0x06005EBE RID: 24254 RVA: 0x001E491C File Offset: 0x001E2B1C
 	public void RecordBuffId(int buffId)
 	{
 		this.ProtocolContext.RecordBuffId(buffId);
 	}
 
-	// Token: 0x06008B24 RID: 35620 RVA: 0x001DBAE2 File Offset: 0x001D9CE2
+	// Token: 0x06005EBF RID: 24255 RVA: 0x001E492A File Offset: 0x001E2B2A
 	public HashSet<int> GetRecordBuffIdSet()
 	{
 		return this.ProtocolContext.GetRecordBuffIdSet();
 	}
 
-	// Token: 0x06008B25 RID: 35621 RVA: 0x001DBAEF File Offset: 0x001D9CEF
+	// Token: 0x06005EC0 RID: 24256 RVA: 0x001E4937 File Offset: 0x001E2B37
 	public bool HasBuffIdRecord(int buffId)
 	{
 		return this.GetRecordBuffIdSet().Contains(buffId);
 	}
 
-	// Token: 0x06008B26 RID: 35622 RVA: 0x001DBAFD File Offset: 0x001D9CFD
+	// Token: 0x06005EC1 RID: 24257 RVA: 0x001E4945 File Offset: 0x001E2B45
 	public void RecordProgressPanelBasicBuffCount(int superBuffCount)
 	{
 		this.ProtocolContext.RecordProgressPanelBasicBuffCount(superBuffCount);
 	}
 
-	// Token: 0x06008B27 RID: 35623 RVA: 0x001DBB0B File Offset: 0x001D9D0B
+	// Token: 0x06005EC2 RID: 24258 RVA: 0x001E4953 File Offset: 0x001E2B53
 	public int GetProgressPanelBasicBuffCountRecord()
 	{
 		return this.ProtocolContext.GetProgressPanelBasicBuffCountRecord();
 	}
 
-	// Token: 0x06008B28 RID: 35624 RVA: 0x001DBB18 File Offset: 0x001D9D18
+	// Token: 0x06005EC3 RID: 24259 RVA: 0x001E4960 File Offset: 0x001E2B60
 	private IActivityRewardDataPage BuildRewardPageByType(EMowingRiskRewardType type)
 	{
 		IActivityRewardData[] array = this.BuildRewardDataListByType(type);
@@ -752,11 +751,11 @@ public class MowingRiskModel : ModelBase
 		{
 			TabName = this.GetRewardTabNameByType(type),
 			TabTips = ((type == EMowingRiskRewardType.ScoreRecord) ? this.GetRewardTabTipsByType() : null),
-			DataList = array.ToList<IActivityRewardData>()
+			DataList = new List<IActivityRewardData>(array)
 		};
 	}
 
-	// Token: 0x06008B29 RID: 35625 RVA: 0x001DBB67 File Offset: 0x001D9D67
+	// Token: 0x06005EC4 RID: 24260 RVA: 0x001E49AF File Offset: 0x001E2BAF
 	private IActivityRewardData[] BuildRewardDataListByType(EMowingRiskRewardType type)
 	{
 		switch (type)
@@ -772,7 +771,7 @@ public class MowingRiskModel : ModelBase
 		}
 	}
 
-	// Token: 0x06008B2A RID: 35626 RVA: 0x001DBB98 File Offset: 0x001D9D98
+	// Token: 0x06005EC5 RID: 24261 RVA: 0x001E49E0 File Offset: 0x001E2BE0
 	private IActivityRewardData[] BuildRewardDataListOfInstanceClear()
 	{
 		List<IActivityRewardData> list = new List<IActivityRewardData>();
@@ -801,7 +800,7 @@ public class MowingRiskModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x06008B2B RID: 35627 RVA: 0x001DBCA8 File Offset: 0x001D9EA8
+	// Token: 0x06005EC6 RID: 24262 RVA: 0x001E4AF0 File Offset: 0x001E2CF0
 	private IActivityRewardData[] BuildRewardDataListOfScoreRecord()
 	{
 		List<IActivityRewardData> list = new List<IActivityRewardData>();
@@ -830,7 +829,7 @@ public class MowingRiskModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x06008B2C RID: 35628 RVA: 0x001DBDB8 File Offset: 0x001D9FB8
+	// Token: 0x06005EC7 RID: 24263 RVA: 0x001E4C00 File Offset: 0x001E2E00
 	private IActivityRewardData[] BuildRewardDataListOfStar()
 	{
 		List<IActivityRewardData> list = new List<IActivityRewardData>();
@@ -883,7 +882,7 @@ public class MowingRiskModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x06008B2D RID: 35629 RVA: 0x001DBFC4 File Offset: 0x001DA1C4
+	// Token: 0x06005EC8 RID: 24264 RVA: 0x001E4E0C File Offset: 0x001E300C
 	[NullableContext(0)]
 	public ValueTuple<int, int> GetRewardCount()
 	{
@@ -917,7 +916,7 @@ public class MowingRiskModel : ModelBase
 		return new ValueTuple<int, int>(num, num2);
 	}
 
-	// Token: 0x06008B2E RID: 35630 RVA: 0x001DC0C8 File Offset: 0x001DA2C8
+	// Token: 0x06005EC9 RID: 24265 RVA: 0x001E4F10 File Offset: 0x001E3110
 	private EActivityRewardState GetRewardStateByRiskHarvestInst(RiskHarvestInst cfg)
 	{
 		RiskHarvestInstInfo riskHarvestInstInfo;
@@ -936,7 +935,7 @@ public class MowingRiskModel : ModelBase
 		return EActivityRewardState.Enable;
 	}
 
-	// Token: 0x06008B2F RID: 35631 RVA: 0x001DC118 File Offset: 0x001DA318
+	// Token: 0x06005ECA RID: 24266 RVA: 0x001E4F60 File Offset: 0x001E3160
 	private EActivityRewardState GetRewardStateByRiskHarvestStarReward(RiskHarvestInst cfg, int index)
 	{
 		RiskHarvestInstInfo riskHarvestInstInfo;
@@ -966,7 +965,7 @@ public class MowingRiskModel : ModelBase
 		return EActivityRewardState.Enable;
 	}
 
-	// Token: 0x06008B30 RID: 35632 RVA: 0x001DC18C File Offset: 0x001DA38C
+	// Token: 0x06005ECB RID: 24267 RVA: 0x001E4FD4 File Offset: 0x001E31D4
 	private EActivityRewardState GetRewardStateByRiskHarvestScoreReward(RiskHarvestScoreReward cfg)
 	{
 		MowingRiskProtocolContext protocolContext = this.ProtocolContext;
@@ -981,7 +980,7 @@ public class MowingRiskModel : ModelBase
 		return EActivityRewardState.Enable;
 	}
 
-	// Token: 0x06008B31 RID: 35633 RVA: 0x001DC1C4 File Offset: 0x001DA3C4
+	// Token: 0x06005ECC RID: 24268 RVA: 0x001E500C File Offset: 0x001E320C
 	private int GetStarRewardTargetScore(RiskHarvestInst cfg, int index)
 	{
 		RiskHarvestInstInfo riskHarvestInstInfo;
@@ -997,7 +996,7 @@ public class MowingRiskModel : ModelBase
 		return starRewardInfos[index].TargetScore;
 	}
 
-	// Token: 0x06008B32 RID: 35634 RVA: 0x001DC214 File Offset: 0x001DA414
+	// Token: 0x06005ECD RID: 24269 RVA: 0x001E505C File Offset: 0x001E325C
 	private string GetPreviewButtonTextByState(EActivityRewardState state)
 	{
 		switch (state)
@@ -1013,7 +1012,7 @@ public class MowingRiskModel : ModelBase
 		}
 	}
 
-	// Token: 0x06008B33 RID: 35635 RVA: 0x001DC27C File Offset: 0x001DA47C
+	// Token: 0x06005ECE RID: 24270 RVA: 0x001E50C4 File Offset: 0x001E32C4
 	private string GetRewardTabNameByType(EMowingRiskRewardType type)
 	{
 		switch (type)
@@ -1029,7 +1028,7 @@ public class MowingRiskModel : ModelBase
 		}
 	}
 
-	// Token: 0x06008B34 RID: 35636 RVA: 0x001DC2EC File Offset: 0x001DA4EC
+	// Token: 0x06005ECF RID: 24271 RVA: 0x001E5134 File Offset: 0x001E3334
 	private string GetRewardTabTipsByType()
 	{
 		return StringUtils.Format(ConfigMultiTextLang.GetLocalTextNew("RiskHarvest_InstanceToppoint", null), new string[]
@@ -1038,7 +1037,7 @@ public class MowingRiskModel : ModelBase
 		});
 	}
 
-	// Token: 0x06008B35 RID: 35637 RVA: 0x001DC328 File Offset: 0x001DA528
+	// Token: 0x06005ED0 RID: 24272 RVA: 0x001E5170 File Offset: 0x001E3370
 	private string GetBuffLevelContentById(int id)
 	{
 		int? buffCountInBattleById = this.ProtocolContext.GetBuffCountInBattleById(id);
@@ -1052,7 +1051,7 @@ public class MowingRiskModel : ModelBase
 		});
 	}
 
-	// Token: 0x06008B36 RID: 35638 RVA: 0x001DC379 File Offset: 0x001DA579
+	// Token: 0x06005ED1 RID: 24273 RVA: 0x001E51C1 File Offset: 0x001E33C1
 	private string BuildInstanceSubtitleTextIdById(int id)
 	{
 		if (this.ProtocolContext.IsInstanceUnlockedById(id))
@@ -1062,7 +1061,7 @@ public class MowingRiskModel : ModelBase
 		return this.GetInstanceLockTextIdById(id);
 	}
 
-	// Token: 0x06008B37 RID: 35639 RVA: 0x001DC398 File Offset: 0x001DA598
+	// Token: 0x06005ED2 RID: 24274 RVA: 0x001E51E0 File Offset: 0x001E33E0
 	public string GetInstanceUnlockTextIdById(int id)
 	{
 		if (!ConfigRiskHarvestInstById.GetConfig(id, true).Value.Accumulate)
@@ -1072,7 +1071,7 @@ public class MowingRiskModel : ModelBase
 		return "RiskHarvest_TotleScore";
 	}
 
-	// Token: 0x06008B38 RID: 35640 RVA: 0x001DC3CC File Offset: 0x001DA5CC
+	// Token: 0x06005ED3 RID: 24275 RVA: 0x001E5214 File Offset: 0x001E3414
 	public string GetInstanceLockTextIdByInstanceId(int instanceId)
 	{
 		int? idByInstanceId = this.ConfigContext.GetIdByInstanceId(instanceId);
@@ -1083,7 +1082,7 @@ public class MowingRiskModel : ModelBase
 		return this.GetInstanceLockTextIdById(idByInstanceId.Value);
 	}
 
-	// Token: 0x06008B39 RID: 35641 RVA: 0x001DC402 File Offset: 0x001DA602
+	// Token: 0x06005ED4 RID: 24276 RVA: 0x001E524A File Offset: 0x001E344A
 	public string GetInstanceLockTextIdById(int id)
 	{
 		if (!this.ProtocolContext.IsInstancePassUnlockTimeById(id))
@@ -1093,7 +1092,7 @@ public class MowingRiskModel : ModelBase
 		return "RiskHarvest_Unlock";
 	}
 
-	// Token: 0x06008B3A RID: 35642 RVA: 0x001DC420 File Offset: 0x001DA620
+	// Token: 0x06005ED5 RID: 24277 RVA: 0x001E5268 File Offset: 0x001E3468
 	private string[] BuildInstanceSubtitleTextArgsById(int id)
 	{
 		if (this.ProtocolContext.IsInstanceUnlockedById(id))
@@ -1106,7 +1105,7 @@ public class MowingRiskModel : ModelBase
 		return this.GetLockTextArgsById(id);
 	}
 
-	// Token: 0x06008B3B RID: 35643 RVA: 0x001DC460 File Offset: 0x001DA660
+	// Token: 0x06005ED6 RID: 24278 RVA: 0x001E52A8 File Offset: 0x001E34A8
 	public string[] GetLockTextArgsById(int id)
 	{
 		List<string> list = new List<string>();
@@ -1123,7 +1122,7 @@ public class MowingRiskModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x06008B3C RID: 35644 RVA: 0x001DC4EC File Offset: 0x001DA6EC
+	// Token: 0x06005ED7 RID: 24279 RVA: 0x001E5334 File Offset: 0x001E3534
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -1139,14 +1138,14 @@ public class MowingRiskModel : ModelBase
 		return this.GetLockTextArgsById(idByInstanceId.Value);
 	}
 
-	// Token: 0x06008B3D RID: 35645 RVA: 0x001DC51E File Offset: 0x001DA71E
+	// Token: 0x06005ED8 RID: 24280 RVA: 0x001E5366 File Offset: 0x001E3566
 	private void HandleRewardResponseFulfill()
 	{
 		EventSystem.Instance.Emit<IActivityRewardViewData>(EEventName.RefreshCommonActivityRewardPopUpView, this.BuildActivityRewardViewData());
 	}
 
-	// Token: 0x17000BC9 RID: 3017
-	// (get) Token: 0x06008B3E RID: 35646 RVA: 0x001DC536 File Offset: 0x001DA736
+	// Token: 0x17000BE9 RID: 3049
+	// (get) Token: 0x06005ED9 RID: 24281 RVA: 0x001E537E File Offset: 0x001E357E
 	public ActivityBaseData ActivityData
 	{
 		get
@@ -1155,9 +1154,9 @@ public class MowingRiskModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000BCA RID: 3018
-	// (get) Token: 0x06008B3F RID: 35647 RVA: 0x001DC53E File Offset: 0x001DA73E
-	// (set) Token: 0x06008B40 RID: 35648 RVA: 0x001DC54B File Offset: 0x001DA74B
+	// Token: 0x17000BEA RID: 3050
+	// (get) Token: 0x06005EDA RID: 24282 RVA: 0x001E5386 File Offset: 0x001E3586
+	// (set) Token: 0x06005EDB RID: 24283 RVA: 0x001E5393 File Offset: 0x001E3593
 	public EMowingBuffViewUsage CurrentBuffViewUsage
 	{
 		get
@@ -1170,9 +1169,9 @@ public class MowingRiskModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000BCB RID: 3019
-	// (get) Token: 0x06008B41 RID: 35649 RVA: 0x001DC559 File Offset: 0x001DA759
-	// (set) Token: 0x06008B42 RID: 35650 RVA: 0x001DC566 File Offset: 0x001DA766
+	// Token: 0x17000BEB RID: 3051
+	// (get) Token: 0x06005EDC RID: 24284 RVA: 0x001E53A1 File Offset: 0x001E35A1
+	// (set) Token: 0x06005EDD RID: 24285 RVA: 0x001E53AE File Offset: 0x001E35AE
 	public EMowingBuffTabViewType CurrentBuffViewType
 	{
 		get
@@ -1185,9 +1184,9 @@ public class MowingRiskModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000BCC RID: 3020
-	// (get) Token: 0x06008B43 RID: 35651 RVA: 0x001DC574 File Offset: 0x001DA774
-	// (set) Token: 0x06008B44 RID: 35652 RVA: 0x001DC5AA File Offset: 0x001DA7AA
+	// Token: 0x17000BEC RID: 3052
+	// (get) Token: 0x06005EDE RID: 24286 RVA: 0x001E53BC File Offset: 0x001E35BC
+	// (set) Token: 0x06005EDF RID: 24287 RVA: 0x001E53F2 File Offset: 0x001E35F2
 	public int? CurrentChosenOverviewBuffId
 	{
 		get
@@ -1206,7 +1205,7 @@ public class MowingRiskModel : ModelBase
 		}
 	}
 
-	// Token: 0x06008B45 RID: 35653 RVA: 0x001DC5B8 File Offset: 0x001DA7B8
+	// Token: 0x06005EE0 RID: 24288 RVA: 0x001E5400 File Offset: 0x001E3600
 	public int? GetDefaultChosenOverviewBuffId()
 	{
 		List<RiskHarvestBuffGroup> basicBuffConfigListBeforeBattle = this.GetBasicBuffConfigListBeforeBattle();
@@ -1215,10 +1214,10 @@ public class MowingRiskModel : ModelBase
 			return new int?(this.FindBuffConfigsFirstId(basicBuffConfigListBeforeBattle));
 		}
 		RiskHarvestBuffGroup[] superBuffConfigsAfterSort = this.GetSuperBuffConfigsAfterSort();
-		return new int?(this.FindBuffConfigsFirstId(superBuffConfigsAfterSort.ToList<RiskHarvestBuffGroup>()));
+		return new int?(this.FindBuffConfigsFirstId(superBuffConfigsAfterSort));
 	}
 
-	// Token: 0x06008B46 RID: 35654 RVA: 0x001DC5FD File Offset: 0x001DA7FD
+	// Token: 0x06005EE1 RID: 24289 RVA: 0x001E5440 File Offset: 0x001E3640
 	public RiskHarvestBuffGroup[] GetBasicBuffConfigsAfterSort()
 	{
 		List<RiskHarvestBuffGroup> list = (this.CurrentBuffViewUsage == EMowingBuffViewUsage.InBattle) ? this.GetBasicBuffConfigListInBattle() : this.GetBasicBuffConfigListBeforeBattle();
@@ -1226,7 +1225,7 @@ public class MowingRiskModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x06008B47 RID: 35655 RVA: 0x001DC62F File Offset: 0x001DA82F
+	// Token: 0x06005EE2 RID: 24290 RVA: 0x001E5472 File Offset: 0x001E3672
 	public RiskHarvestBuffGroup[] GetSuperBuffConfigsAfterSort()
 	{
 		List<RiskHarvestBuffGroup> list = (this.CurrentBuffViewUsage == EMowingBuffViewUsage.InBattle) ? this.GetSuperBuffConfigListInBattle() : this.GetSuperBuffConfigListBeforeBattle();
@@ -1234,7 +1233,7 @@ public class MowingRiskModel : ModelBase
 		return list.ToArray();
 	}
 
-	// Token: 0x06008B48 RID: 35656 RVA: 0x001DC661 File Offset: 0x001DA861
+	// Token: 0x06005EE3 RID: 24291 RVA: 0x001E54A4 File Offset: 0x001E36A4
 	private int HandleCompareBuff(RiskHarvestBuffGroup a, RiskHarvestBuffGroup b)
 	{
 		if (a.BuffType == b.BuffType)
@@ -1244,8 +1243,8 @@ public class MowingRiskModel : ModelBase
 		return b.BuffType - a.BuffType;
 	}
 
-	// Token: 0x06008B49 RID: 35657 RVA: 0x001DC694 File Offset: 0x001DA894
-	private int FindBuffConfigsFirstId(List<RiskHarvestBuffGroup> configList)
+	// Token: 0x06005EE4 RID: 24292 RVA: 0x001E54D8 File Offset: 0x001E36D8
+	private int FindBuffConfigsFirstId(IReadOnlyList<RiskHarvestBuffGroup> configList)
 	{
 		if (configList.Count == 0)
 		{
@@ -1266,9 +1265,9 @@ public class MowingRiskModel : ModelBase
 		return riskHarvestBuffGroup.Id;
 	}
 
-	// Token: 0x17000BCD RID: 3021
-	// (get) Token: 0x06008B4A RID: 35658 RVA: 0x001DC72C File Offset: 0x001DA92C
-	// (set) Token: 0x06008B4B RID: 35659 RVA: 0x001DC763 File Offset: 0x001DA963
+	// Token: 0x17000BED RID: 3053
+	// (get) Token: 0x06005EE5 RID: 24293 RVA: 0x001E5568 File Offset: 0x001E3768
+	// (set) Token: 0x06005EE6 RID: 24294 RVA: 0x001E559F File Offset: 0x001E379F
 	public int? CurrentChosenProgressIndex
 	{
 		get
@@ -1287,8 +1286,8 @@ public class MowingRiskModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000BCE RID: 3022
-	// (get) Token: 0x06008B4C RID: 35660 RVA: 0x001DC771 File Offset: 0x001DA971
+	// Token: 0x17000BEE RID: 3054
+	// (get) Token: 0x06005EE7 RID: 24295 RVA: 0x001E55AD File Offset: 0x001E37AD
 	public int CurrentHelpButtonId
 	{
 		get
@@ -1297,8 +1296,8 @@ public class MowingRiskModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000BCF RID: 3023
-	// (get) Token: 0x06008B4D RID: 35661 RVA: 0x001DC77E File Offset: 0x001DA97E
+	// Token: 0x17000BEF RID: 3055
+	// (get) Token: 0x06005EE8 RID: 24296 RVA: 0x001E55BA File Offset: 0x001E37BA
 	public int CurrentInstanceId
 	{
 		get
@@ -1312,8 +1311,8 @@ public class MowingRiskModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000BD0 RID: 3024
-	// (get) Token: 0x06008B4E RID: 35662 RVA: 0x001DC790 File Offset: 0x001DA990
+	// Token: 0x17000BF0 RID: 3056
+	// (get) Token: 0x06005EE9 RID: 24297 RVA: 0x001E55CC File Offset: 0x001E37CC
 	public bool IsNewInstanceOpen
 	{
 		get
@@ -1350,8 +1349,8 @@ public class MowingRiskModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000BD1 RID: 3025
-	// (get) Token: 0x06008B4F RID: 35663 RVA: 0x001DC890 File Offset: 0x001DAA90
+	// Token: 0x17000BF1 RID: 3057
+	// (get) Token: 0x06005EEA RID: 24298 RVA: 0x001E56CC File Offset: 0x001E38CC
 	public bool IsPreQuestFinished
 	{
 		get
@@ -1360,8 +1359,8 @@ public class MowingRiskModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000BD2 RID: 3026
-	// (get) Token: 0x06008B50 RID: 35664 RVA: 0x001DC89D File Offset: 0x001DAA9D
+	// Token: 0x17000BF2 RID: 3058
+	// (get) Token: 0x06005EEB RID: 24299 RVA: 0x001E56D9 File Offset: 0x001E38D9
 	public int UnFinishPreGuideQuestId
 	{
 		get
@@ -1370,8 +1369,8 @@ public class MowingRiskModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000BD3 RID: 3027
-	// (get) Token: 0x06008B51 RID: 35665 RVA: 0x001DC8AA File Offset: 0x001DAAAA
+	// Token: 0x17000BF3 RID: 3059
+	// (get) Token: 0x06005EEC RID: 24300 RVA: 0x001E56E6 File Offset: 0x001E38E6
 	public string InstanceSubViewResourceId
 	{
 		get
@@ -1380,8 +1379,8 @@ public class MowingRiskModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000BD4 RID: 3028
-	// (get) Token: 0x06008B52 RID: 35666 RVA: 0x001DC8B4 File Offset: 0x001DAAB4
+	// Token: 0x17000BF4 RID: 3060
+	// (get) Token: 0x06005EED RID: 24301 RVA: 0x001E56F0 File Offset: 0x001E38F0
 	public string ActivityTitleTextId
 	{
 		get
@@ -1391,8 +1390,8 @@ public class MowingRiskModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000BD5 RID: 3029
-	// (get) Token: 0x06008B53 RID: 35667 RVA: 0x001DC8F0 File Offset: 0x001DAAF0
+	// Token: 0x17000BF5 RID: 3061
+	// (get) Token: 0x06005EEE RID: 24302 RVA: 0x001E572C File Offset: 0x001E392C
 	public string ActivityDescriptionTextId
 	{
 		get
@@ -1402,8 +1401,8 @@ public class MowingRiskModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000BD6 RID: 3030
-	// (get) Token: 0x06008B54 RID: 35668 RVA: 0x001DC92A File Offset: 0x001DAB2A
+	// Token: 0x17000BF6 RID: 3062
+	// (get) Token: 0x06005EEF RID: 24303 RVA: 0x001E5766 File Offset: 0x001E3966
 	public bool HasAnyReward
 	{
 		get
@@ -1412,8 +1411,8 @@ public class MowingRiskModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000BD7 RID: 3031
-	// (get) Token: 0x06008B55 RID: 35669 RVA: 0x001DC944 File Offset: 0x001DAB44
+	// Token: 0x17000BF7 RID: 3063
+	// (get) Token: 0x06005EF0 RID: 24304 RVA: 0x001E5780 File Offset: 0x001E3980
 	public bool HasAnyInstanceReward
 	{
 		get
@@ -1429,8 +1428,8 @@ public class MowingRiskModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000BD8 RID: 3032
-	// (get) Token: 0x06008B56 RID: 35670 RVA: 0x001DC9AC File Offset: 0x001DABAC
+	// Token: 0x17000BF8 RID: 3064
+	// (get) Token: 0x06005EF1 RID: 24305 RVA: 0x001E57E8 File Offset: 0x001E39E8
 	public bool HasAnyScoreReward
 	{
 		get
@@ -1446,8 +1445,8 @@ public class MowingRiskModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000BD9 RID: 3033
-	// (get) Token: 0x06008B57 RID: 35671 RVA: 0x001DCA14 File Offset: 0x001DAC14
+	// Token: 0x17000BF9 RID: 3065
+	// (get) Token: 0x06005EF2 RID: 24306 RVA: 0x001E5850 File Offset: 0x001E3A50
 	public bool HasAnyStarReward
 	{
 		get
@@ -1467,8 +1466,8 @@ public class MowingRiskModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000BDA RID: 3034
-	// (get) Token: 0x06008B58 RID: 35672 RVA: 0x001DCA94 File Offset: 0x001DAC94
+	// Token: 0x17000BFA RID: 3066
+	// (get) Token: 0x06005EF3 RID: 24307 RVA: 0x001E58D0 File Offset: 0x001E3AD0
 	public int MapMarkId
 	{
 		get
@@ -1477,8 +1476,8 @@ public class MowingRiskModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000BDB RID: 3035
-	// (get) Token: 0x06008B59 RID: 35673 RVA: 0x001DCA9B File Offset: 0x001DAC9B
+	// Token: 0x17000BFB RID: 3067
+	// (get) Token: 0x06005EF4 RID: 24308 RVA: 0x001E58D7 File Offset: 0x001E3AD7
 	public int MapMarkType
 	{
 		get
@@ -1487,8 +1486,8 @@ public class MowingRiskModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000BDC RID: 3036
-	// (get) Token: 0x06008B5A RID: 35674 RVA: 0x001DCAA0 File Offset: 0x001DACA0
+	// Token: 0x17000BFC RID: 3068
+	// (get) Token: 0x06005EF5 RID: 24309 RVA: 0x001E58DC File Offset: 0x001E3ADC
 	public int? NextNewBuffId
 	{
 		get
@@ -1503,8 +1502,8 @@ public class MowingRiskModel : ModelBase
 		}
 	}
 
-	// Token: 0x17000BDD RID: 3037
-	// (get) Token: 0x06008B5B RID: 35675 RVA: 0x001DCAF1 File Offset: 0x001DACF1
+	// Token: 0x17000BFD RID: 3069
+	// (get) Token: 0x06005EF6 RID: 24310 RVA: 0x001E592D File Offset: 0x001E3B2D
 	public static MowingRiskModel Instance
 	{
 		get
@@ -1513,7 +1512,7 @@ public class MowingRiskModel : ModelBase
 		}
 	}
 
-	// Token: 0x06008B5C RID: 35676 RVA: 0x001DCAF8 File Offset: 0x001DACF8
+	// Token: 0x06005EF7 RID: 24311 RVA: 0x001E5934 File Offset: 0x001E3B34
 	public static MowingRiskModel GetOrCreateInstance()
 	{
 		if (MowingRiskModel._Instance == null)
@@ -1523,7 +1522,7 @@ public class MowingRiskModel : ModelBase
 		return MowingRiskModel._Instance;
 	}
 
-	// Token: 0x06008B5D RID: 35677 RVA: 0x001DCB0C File Offset: 0x001DAD0C
+	// Token: 0x06005EF8 RID: 24312 RVA: 0x001E5948 File Offset: 0x001E3B48
 	public static bool CreateInstance()
 	{
 		if (MowingRiskModel._Instance != null)
@@ -1534,24 +1533,24 @@ public class MowingRiskModel : ModelBase
 		return true;
 	}
 
-	// Token: 0x06008B5E RID: 35678 RVA: 0x001DCB22 File Offset: 0x001DAD22
+	// Token: 0x06005EF9 RID: 24313 RVA: 0x001E595E File Offset: 0x001E3B5E
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06008B5F RID: 35679 RVA: 0x001DCB24 File Offset: 0x001DAD24
+	// Token: 0x06005EFA RID: 24314 RVA: 0x001E5960 File Offset: 0x001E3B60
 	public static void ResetStaticDefaultValue()
 	{
 		MowingRiskModel._Instance = null;
 	}
 
-	// Token: 0x06008B60 RID: 35680 RVA: 0x001DCB2C File Offset: 0x001DAD2C
+	// Token: 0x06005EFB RID: 24315 RVA: 0x001E5968 File Offset: 0x001E3B68
 	static MowingRiskModel()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(MowingRiskModel.CreateStaticDefaultValue), new Action(MowingRiskModel.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04003DCC RID: 15820
+	// Token: 0x04003E64 RID: 15972
 	[Nullable(2)]
 	private static MowingRiskModel _Instance;
 }

@@ -8,10 +8,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001AB3 RID: 6835
+// Token: 0x02000F72 RID: 3954
 public class ExploreAreaDynamicItem : UiPanelBase, IDynamicScrollBaseItem<ExploreAreaViewData>
 {
-	// Token: 0x0600CA7C RID: 51836 RVA: 0x002E2318 File Offset: 0x002E0518
+	// Token: 0x06009E8D RID: 40589 RVA: 0x002ED468 File Offset: 0x002EB668
 	[NullableContext(1)]
 	public UniTask Init(UUIItem actor)
 	{
@@ -24,7 +24,7 @@ public class ExploreAreaDynamicItem : UiPanelBase, IDynamicScrollBaseItem<Explor
 		return <Init>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CA7D RID: 51837 RVA: 0x002E2364 File Offset: 0x002E0564
+	// Token: 0x06009E8E RID: 40590 RVA: 0x002ED4B4 File Offset: 0x002EB6B4
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -38,7 +38,7 @@ public class ExploreAreaDynamicItem : UiPanelBase, IDynamicScrollBaseItem<Explor
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600CA7E RID: 51838 RVA: 0x002E23D0 File Offset: 0x002E05D0
+	// Token: 0x06009E8F RID: 40591 RVA: 0x002ED520 File Offset: 0x002EB720
 	[NullableContext(1)]
 	public FVector2D GetItemSize(ExploreAreaViewData data)
 	{
@@ -51,17 +51,17 @@ public class ExploreAreaDynamicItem : UiPanelBase, IDynamicScrollBaseItem<Explor
 		return new FVector2D(item2.GetWidth(), item2.GetHeight());
 	}
 
-	// Token: 0x0600CA7F RID: 51839 RVA: 0x002E2418 File Offset: 0x002E0618
+	// Token: 0x06009E90 RID: 40592 RVA: 0x002ED568 File Offset: 0x002EB768
 	public void ClearItem()
 	{
 	}
 
-	// Token: 0x02008006 RID: 32774
+	// Token: 0x02007195 RID: 29077
 	private enum EChildType
 	{
-		// Token: 0x04029CBB RID: 171195
+		// Token: 0x04024FF5 RID: 151541
 		CountryItem,
-		// Token: 0x04029CBC RID: 171196
+		// Token: 0x04024FF6 RID: 151542
 		AreaItem
 	}
 }

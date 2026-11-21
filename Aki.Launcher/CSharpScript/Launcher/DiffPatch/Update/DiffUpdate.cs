@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Launcher.DiffPatch.Update
 {
-	// Token: 0x02000206 RID: 518
+	// Token: 0x0200020B RID: 523
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DiffUpdate
 	{
-		// Token: 0x06000D3F RID: 3391 RVA: 0x00050314 File Offset: 0x0004E514
+		// Token: 0x06000D80 RID: 3456 RVA: 0x00052E00 File Offset: 0x00051000
 		public DiffUpdate(List<ResPackageInfo> resPackageInfos, UrlPrefixDownload downloader, [Nullable(2)] IDiffUpdateUiEvent uiEvent, [Nullable(2)] IDiffUpdateReportEvent reportEvent, bool forceUpdate = false, EUpdateType updateType = EUpdateType.NormalUpdate)
 		{
 			this.ResPackageInfos = resPackageInfos;
@@ -28,8 +28,8 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			this.UpdateType = updateType;
 		}
 
-		// Token: 0x17000145 RID: 325
-		// (get) Token: 0x06000D40 RID: 3392 RVA: 0x0005037C File Offset: 0x0004E57C
+		// Token: 0x1700014B RID: 331
+		// (get) Token: 0x06000D81 RID: 3457 RVA: 0x00052E68 File Offset: 0x00051068
 		protected UKuroNetworkChange NetworkListener
 		{
 			get
@@ -42,7 +42,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			}
 		}
 
-		// Token: 0x06000D41 RID: 3393 RVA: 0x00050398 File Offset: 0x0004E598
+		// Token: 0x06000D82 RID: 3458 RVA: 0x00052E84 File Offset: 0x00051084
 		[return: Nullable(2)]
 		private RequestFileInfo CreateManifestRequestOrNot(string filePath, string hash, string remoteRoute)
 		{
@@ -72,7 +72,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			};
 		}
 
-		// Token: 0x06000D42 RID: 3394 RVA: 0x00050428 File Offset: 0x0004E628
+		// Token: 0x06000D83 RID: 3459 RVA: 0x00052F14 File Offset: 0x00051114
 		private List<ResPackageInfo> EnumeratePacksWithTierChildren()
 		{
 			HashSet<ResPackageInfo> hashSet = new HashSet<ResPackageInfo>(this.ResPackageInfos);
@@ -86,13 +86,13 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return new List<ResPackageInfo>(hashSet);
 		}
 
-		// Token: 0x06000D43 RID: 3395 RVA: 0x000504C8 File Offset: 0x0004E6C8
+		// Token: 0x06000D84 RID: 3460 RVA: 0x00052FB4 File Offset: 0x000511B4
 		private List<ResPackageInfo> EnumeratePacksWithActiveTierChild(ETier? tier = null)
 		{
 			return ResPackageInfo.EnumerateWithTierChild(this.ResPackageInfos, tier ?? RemoteInfo.Instance.ActiveTier);
 		}
 
-		// Token: 0x06000D44 RID: 3396 RVA: 0x00050500 File Offset: 0x0004E700
+		// Token: 0x06000D85 RID: 3461 RVA: 0x00052FEC File Offset: 0x000511EC
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -101,28 +101,28 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 		})]
 		public UniTask<List<RequestFileInfo>> HasContentOnRemote()
 		{
-			DiffUpdate.<HasContentOnRemote>d__26 <HasContentOnRemote>d__;
+			DiffUpdate.<HasContentOnRemote>d__27 <HasContentOnRemote>d__;
 			<HasContentOnRemote>d__.<>t__builder = AsyncUniTaskMethodBuilder<List<RequestFileInfo>>.Create();
 			<HasContentOnRemote>d__.<>4__this = this;
 			<HasContentOnRemote>d__.<>1__state = -1;
-			<HasContentOnRemote>d__.<>t__builder.Start<DiffUpdate.<HasContentOnRemote>d__26>(ref <HasContentOnRemote>d__);
+			<HasContentOnRemote>d__.<>t__builder.Start<DiffUpdate.<HasContentOnRemote>d__27>(ref <HasContentOnRemote>d__);
 			return <HasContentOnRemote>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000D45 RID: 3397 RVA: 0x00050544 File Offset: 0x0004E744
+		// Token: 0x06000D86 RID: 3462 RVA: 0x00053030 File Offset: 0x00051230
 		[NullableContext(0)]
 		public UniTask<bool> DownloadManifests([Nullable(1)] List<RequestFileInfo> requests)
 		{
-			DiffUpdate.<DownloadManifests>d__27 <DownloadManifests>d__;
+			DiffUpdate.<DownloadManifests>d__28 <DownloadManifests>d__;
 			<DownloadManifests>d__.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
 			<DownloadManifests>d__.<>4__this = this;
 			<DownloadManifests>d__.requests = requests;
 			<DownloadManifests>d__.<>1__state = -1;
-			<DownloadManifests>d__.<>t__builder.Start<DiffUpdate.<DownloadManifests>d__27>(ref <DownloadManifests>d__);
+			<DownloadManifests>d__.<>t__builder.Start<DiffUpdate.<DownloadManifests>d__28>(ref <DownloadManifests>d__);
 			return <DownloadManifests>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000D46 RID: 3398 RVA: 0x00050590 File Offset: 0x0004E790
+		// Token: 0x06000D87 RID: 3463 RVA: 0x0005307C File Offset: 0x0005127C
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -152,19 +152,19 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return new ValueTuple<bool, string>(true, item);
 		}
 
-		// Token: 0x06000D47 RID: 3399 RVA: 0x00050624 File Offset: 0x0004E824
+		// Token: 0x06000D88 RID: 3464 RVA: 0x00053110 File Offset: 0x00051310
 		[NullableContext(0)]
 		public UniTask<bool> ResolveManifests()
 		{
-			DiffUpdate.<ResolveManifests>d__29 <ResolveManifests>d__;
+			DiffUpdate.<ResolveManifests>d__30 <ResolveManifests>d__;
 			<ResolveManifests>d__.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
 			<ResolveManifests>d__.<>4__this = this;
 			<ResolveManifests>d__.<>1__state = -1;
-			<ResolveManifests>d__.<>t__builder.Start<DiffUpdate.<ResolveManifests>d__29>(ref <ResolveManifests>d__);
+			<ResolveManifests>d__.<>t__builder.Start<DiffUpdate.<ResolveManifests>d__30>(ref <ResolveManifests>d__);
 			return <ResolveManifests>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000D48 RID: 3400 RVA: 0x00050668 File Offset: 0x0004E868
+		// Token: 0x06000D89 RID: 3465 RVA: 0x00053154 File Offset: 0x00051354
 		public void ForEachExpectedTargetFile(Action<string, string, long, string> visitor)
 		{
 			foreach (ResPackageInfo resPackageInfo in this.ResPackageInfos)
@@ -176,7 +176,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			}
 		}
 
-		// Token: 0x06000D49 RID: 3401 RVA: 0x000506CC File Offset: 0x0004E8CC
+		// Token: 0x06000D8A RID: 3466 RVA: 0x000531B8 File Offset: 0x000513B8
 		public void ForEachExpectedExtraTargetFile(Action<string, string, long, string> visitor)
 		{
 			if (this.ExtraRequireFileInfo != null && this.ExtraRequireFileInfo.Count > 0)
@@ -191,7 +191,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			}
 		}
 
-		// Token: 0x06000D4A RID: 3402 RVA: 0x00050770 File Offset: 0x0004E970
+		// Token: 0x06000D8B RID: 3467 RVA: 0x0005325C File Offset: 0x0005145C
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -201,18 +201,18 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 		})]
 		public UniTask<ValueTuple<bool, List<RequireFileInfo>, long, EUpdateMode, long, long>> AnalyzeRequireFiles(EUpdateMode updateMode = EUpdateMode.All, bool firstTimeUpdate = false, bool bIsLauncher = false)
 		{
-			DiffUpdate.<AnalyzeRequireFiles>d__32 <AnalyzeRequireFiles>d__;
+			DiffUpdate.<AnalyzeRequireFiles>d__33 <AnalyzeRequireFiles>d__;
 			<AnalyzeRequireFiles>d__.<>t__builder = AsyncUniTaskMethodBuilder<ValueTuple<bool, List<RequireFileInfo>, long, EUpdateMode, long, long>>.Create();
 			<AnalyzeRequireFiles>d__.<>4__this = this;
 			<AnalyzeRequireFiles>d__.updateMode = updateMode;
 			<AnalyzeRequireFiles>d__.firstTimeUpdate = firstTimeUpdate;
 			<AnalyzeRequireFiles>d__.bIsLauncher = bIsLauncher;
 			<AnalyzeRequireFiles>d__.<>1__state = -1;
-			<AnalyzeRequireFiles>d__.<>t__builder.Start<DiffUpdate.<AnalyzeRequireFiles>d__32>(ref <AnalyzeRequireFiles>d__);
+			<AnalyzeRequireFiles>d__.<>t__builder.Start<DiffUpdate.<AnalyzeRequireFiles>d__33>(ref <AnalyzeRequireFiles>d__);
 			return <AnalyzeRequireFiles>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000D4B RID: 3403 RVA: 0x000507CC File Offset: 0x0004E9CC
+		// Token: 0x06000D8C RID: 3468 RVA: 0x000532B8 File Offset: 0x000514B8
 		[NullableContext(0)]
 		[return: TupleElementNames(new string[]
 		{
@@ -259,7 +259,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return new ValueTuple<long, long, long>(num9, num10, num8);
 		}
 
-		// Token: 0x06000D4C RID: 3404 RVA: 0x00050904 File Offset: 0x0004EB04
+		// Token: 0x06000D8D RID: 3469 RVA: 0x000533F0 File Offset: 0x000515F0
 		[NullableContext(0)]
 		[return: TupleElementNames(new string[]
 		{
@@ -293,22 +293,22 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return new ValueTuple<long, long, long>((num3 >= num) ? num3 : num, num4, num6);
 		}
 
-		// Token: 0x06000D4D RID: 3405 RVA: 0x000509E8 File Offset: 0x0004EBE8
+		// Token: 0x06000D8E RID: 3470 RVA: 0x000534D4 File Offset: 0x000516D4
 		[NullableContext(0)]
 		public UniTask<bool> DownloadFiles([Nullable(1)] List<RequireFileInfo> requireFiles, long needSpace, bool bUseBgDownload = false)
 		{
-			DiffUpdate.<DownloadFiles>d__35 <DownloadFiles>d__;
+			DiffUpdate.<DownloadFiles>d__36 <DownloadFiles>d__;
 			<DownloadFiles>d__.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
 			<DownloadFiles>d__.<>4__this = this;
 			<DownloadFiles>d__.requireFiles = requireFiles;
 			<DownloadFiles>d__.needSpace = needSpace;
 			<DownloadFiles>d__.bUseBgDownload = bUseBgDownload;
 			<DownloadFiles>d__.<>1__state = -1;
-			<DownloadFiles>d__.<>t__builder.Start<DiffUpdate.<DownloadFiles>d__35>(ref <DownloadFiles>d__);
+			<DownloadFiles>d__.<>t__builder.Start<DiffUpdate.<DownloadFiles>d__36>(ref <DownloadFiles>d__);
 			return <DownloadFiles>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000D4E RID: 3406 RVA: 0x00050A44 File Offset: 0x0004EC44
+		// Token: 0x06000D8F RID: 3471 RVA: 0x00053530 File Offset: 0x00051730
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -318,19 +318,19 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 		})]
 		public UniTask<ValueTuple<bool, List<RequireFileInfo>, long>> ExecutePatch()
 		{
-			DiffUpdate.<ExecutePatch>d__36 <ExecutePatch>d__;
+			DiffUpdate.<ExecutePatch>d__37 <ExecutePatch>d__;
 			<ExecutePatch>d__.<>t__builder = AsyncUniTaskMethodBuilder<ValueTuple<bool, List<RequireFileInfo>, long>>.Create();
 			<ExecutePatch>d__.<>4__this = this;
 			<ExecutePatch>d__.<>1__state = -1;
-			<ExecutePatch>d__.<>t__builder.Start<DiffUpdate.<ExecutePatch>d__36>(ref <ExecutePatch>d__);
+			<ExecutePatch>d__.<>t__builder.Start<DiffUpdate.<ExecutePatch>d__37>(ref <ExecutePatch>d__);
 			return <ExecutePatch>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000D4F RID: 3407 RVA: 0x00050A88 File Offset: 0x0004EC88
+		// Token: 0x06000D90 RID: 3472 RVA: 0x00053574 File Offset: 0x00051774
 		[NullableContext(0)]
 		public UniTask<bool> DownloadMissFiles([Nullable(1)] List<RequireFileInfo> requireFiles, long needSpace, bool bHasMiss, bool bUseBgDownload = false)
 		{
-			DiffUpdate.<DownloadMissFiles>d__37 <DownloadMissFiles>d__;
+			DiffUpdate.<DownloadMissFiles>d__38 <DownloadMissFiles>d__;
 			<DownloadMissFiles>d__.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
 			<DownloadMissFiles>d__.<>4__this = this;
 			<DownloadMissFiles>d__.requireFiles = requireFiles;
@@ -338,23 +338,23 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			<DownloadMissFiles>d__.bHasMiss = bHasMiss;
 			<DownloadMissFiles>d__.bUseBgDownload = bUseBgDownload;
 			<DownloadMissFiles>d__.<>1__state = -1;
-			<DownloadMissFiles>d__.<>t__builder.Start<DiffUpdate.<DownloadMissFiles>d__37>(ref <DownloadMissFiles>d__);
+			<DownloadMissFiles>d__.<>t__builder.Start<DiffUpdate.<DownloadMissFiles>d__38>(ref <DownloadMissFiles>d__);
 			return <DownloadMissFiles>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000D50 RID: 3408 RVA: 0x00050AEC File Offset: 0x0004ECEC
+		// Token: 0x06000D91 RID: 3473 RVA: 0x000535D8 File Offset: 0x000517D8
 		[NullableContext(0)]
 		public UniTask<bool> MoveSameFiles()
 		{
-			DiffUpdate.<MoveSameFiles>d__38 <MoveSameFiles>d__;
+			DiffUpdate.<MoveSameFiles>d__39 <MoveSameFiles>d__;
 			<MoveSameFiles>d__.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
 			<MoveSameFiles>d__.<>4__this = this;
 			<MoveSameFiles>d__.<>1__state = -1;
-			<MoveSameFiles>d__.<>t__builder.Start<DiffUpdate.<MoveSameFiles>d__38>(ref <MoveSameFiles>d__);
+			<MoveSameFiles>d__.<>t__builder.Start<DiffUpdate.<MoveSameFiles>d__39>(ref <MoveSameFiles>d__);
 			return <MoveSameFiles>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000D51 RID: 3409 RVA: 0x00050B30 File Offset: 0x0004ED30
+		// Token: 0x06000D92 RID: 3474 RVA: 0x0005361C File Offset: 0x0005181C
 		public unsafe bool ProcessRecord()
 		{
 			LauncherLog instance = LauncherLog.Instance;
@@ -390,7 +390,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return true;
 		}
 
-		// Token: 0x06000D52 RID: 3410 RVA: 0x00050C6C File Offset: 0x0004EE6C
+		// Token: 0x06000D93 RID: 3475 RVA: 0x00053758 File Offset: 0x00051958
 		public bool NeedReboot()
 		{
 			foreach (ResPackageInfo resPackageInfo in this.EnumeratePacksWithActiveTierChild(null))
@@ -403,7 +403,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return false;
 		}
 
-		// Token: 0x06000D53 RID: 3411 RVA: 0x00050CE0 File Offset: 0x0004EEE0
+		// Token: 0x06000D94 RID: 3476 RVA: 0x000537CC File Offset: 0x000519CC
 		public bool HasMountedRestartRequiredPak18(TArray<string> mountedPaks)
 		{
 			HashSet<string> hashSet = new HashSet<string>();
@@ -435,7 +435,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return false;
 		}
 
-		// Token: 0x06000D54 RID: 3412 RVA: 0x00050E04 File Offset: 0x0004F004
+		// Token: 0x06000D95 RID: 3477 RVA: 0x000538F8 File Offset: 0x00051AF8
 		public bool IsHotFixOrNot()
 		{
 			foreach (ResPackageInfo resPackageInfo in this.EnumeratePacksWithActiveTierChild(null))
@@ -448,7 +448,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return false;
 		}
 
-		// Token: 0x06000D55 RID: 3413 RVA: 0x00050E78 File Offset: 0x0004F078
+		// Token: 0x06000D96 RID: 3478 RVA: 0x0005396C File Offset: 0x00051B6C
 		public unsafe void MountFiles()
 		{
 			LauncherLog instance = LauncherLog.Instance;
@@ -491,7 +491,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			}
 		}
 
-		// Token: 0x06000D56 RID: 3414 RVA: 0x00051058 File Offset: 0x0004F258
+		// Token: 0x06000D97 RID: 3479 RVA: 0x00053B4C File Offset: 0x00051D4C
 		[NullableContext(0)]
 		public unsafe ValueTuple<long, long, long, long, long> CalcNeedSizeInfo(ETier tier = ETier.None)
 		{
@@ -532,7 +532,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return new ValueTuple<long, long, long, long, long>(num2, item4, item3, item2, num);
 		}
 
-		// Token: 0x06000D57 RID: 3415 RVA: 0x0005127C File Offset: 0x0004F47C
+		// Token: 0x06000D98 RID: 3480 RVA: 0x00053D70 File Offset: 0x00051F70
 		public void Stop()
 		{
 			this.IsStopped = true;
@@ -546,52 +546,52 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			}
 		}
 
-		// Token: 0x06000D58 RID: 3416 RVA: 0x000512AB File Offset: 0x0004F4AB
+		// Token: 0x06000D99 RID: 3481 RVA: 0x00053D9F File Offset: 0x00051F9F
 		public void Resume()
 		{
 			this.IsStopped = false;
 		}
 
-		// Token: 0x06000D59 RID: 3417 RVA: 0x000512B4 File Offset: 0x0004F4B4
+		// Token: 0x06000D9A RID: 3482 RVA: 0x00053DA8 File Offset: 0x00051FA8
 		[NullableContext(0)]
 		public UniTask<bool> PromptNetwork(long updateSize)
 		{
-			DiffUpdate.<PromptNetwork>d__47 <PromptNetwork>d__;
+			DiffUpdate.<PromptNetwork>d__48 <PromptNetwork>d__;
 			<PromptNetwork>d__.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
 			<PromptNetwork>d__.<>4__this = this;
 			<PromptNetwork>d__.updateSize = updateSize;
 			<PromptNetwork>d__.<>1__state = -1;
-			<PromptNetwork>d__.<>t__builder.Start<DiffUpdate.<PromptNetwork>d__47>(ref <PromptNetwork>d__);
+			<PromptNetwork>d__.<>t__builder.Start<DiffUpdate.<PromptNetwork>d__48>(ref <PromptNetwork>d__);
 			return <PromptNetwork>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000D5A RID: 3418 RVA: 0x00051300 File Offset: 0x0004F500
+		// Token: 0x06000D9B RID: 3483 RVA: 0x00053DF4 File Offset: 0x00051FF4
 		[NullableContext(0)]
 		private UniTask<bool> ForegroundDownload([Nullable(1)] List<RequireFileInfo> requireFiles)
 		{
-			DiffUpdate.<ForegroundDownload>d__48 <ForegroundDownload>d__;
+			DiffUpdate.<ForegroundDownload>d__49 <ForegroundDownload>d__;
 			<ForegroundDownload>d__.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
 			<ForegroundDownload>d__.<>4__this = this;
 			<ForegroundDownload>d__.requireFiles = requireFiles;
 			<ForegroundDownload>d__.<>1__state = -1;
-			<ForegroundDownload>d__.<>t__builder.Start<DiffUpdate.<ForegroundDownload>d__48>(ref <ForegroundDownload>d__);
+			<ForegroundDownload>d__.<>t__builder.Start<DiffUpdate.<ForegroundDownload>d__49>(ref <ForegroundDownload>d__);
 			return <ForegroundDownload>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000D5B RID: 3419 RVA: 0x0005134C File Offset: 0x0004F54C
+		// Token: 0x06000D9C RID: 3484 RVA: 0x00053E40 File Offset: 0x00052040
 		[NullableContext(0)]
 		private UniTask<bool> UseBgDownload([Nullable(1)] List<RequireFileInfo> requireFiles)
 		{
-			DiffUpdate.<UseBgDownload>d__49 <UseBgDownload>d__;
+			DiffUpdate.<UseBgDownload>d__50 <UseBgDownload>d__;
 			<UseBgDownload>d__.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
 			<UseBgDownload>d__.<>4__this = this;
 			<UseBgDownload>d__.requireFiles = requireFiles;
 			<UseBgDownload>d__.<>1__state = -1;
-			<UseBgDownload>d__.<>t__builder.Start<DiffUpdate.<UseBgDownload>d__49>(ref <UseBgDownload>d__);
+			<UseBgDownload>d__.<>t__builder.Start<DiffUpdate.<UseBgDownload>d__50>(ref <UseBgDownload>d__);
 			return <UseBgDownload>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000D5C RID: 3420 RVA: 0x00051398 File Offset: 0x0004F598
+		// Token: 0x06000D9D RID: 3485 RVA: 0x00053E8C File Offset: 0x0005208C
 		[NullableContext(0)]
 		private UniTask<bool> DownloadRestrictByNetwork([Nullable(new byte[]
 		{
@@ -605,21 +605,21 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			0
 		})] Func<string, UniTask<bool>> showFailedDialog)
 		{
-			DiffUpdate.<DownloadRestrictByNetwork>d__50 <DownloadRestrictByNetwork>d__;
+			DiffUpdate.<DownloadRestrictByNetwork>d__51 <DownloadRestrictByNetwork>d__;
 			<DownloadRestrictByNetwork>d__.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
 			<DownloadRestrictByNetwork>d__.<>4__this = this;
 			<DownloadRestrictByNetwork>d__.downloadFunc = downloadFunc;
 			<DownloadRestrictByNetwork>d__.showFailedDialog = showFailedDialog;
 			<DownloadRestrictByNetwork>d__.<>1__state = -1;
-			<DownloadRestrictByNetwork>d__.<>t__builder.Start<DiffUpdate.<DownloadRestrictByNetwork>d__50>(ref <DownloadRestrictByNetwork>d__);
+			<DownloadRestrictByNetwork>d__.<>t__builder.Start<DiffUpdate.<DownloadRestrictByNetwork>d__51>(ref <DownloadRestrictByNetwork>d__);
 			return <DownloadRestrictByNetwork>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000D5D RID: 3421 RVA: 0x000513EC File Offset: 0x0004F5EC
+		// Token: 0x06000D9E RID: 3486 RVA: 0x00053EE0 File Offset: 0x000520E0
 		[return: Nullable(0)]
 		private UniTask<ValueTuple<int, int>> BackgroundDownload(UKuroBgPrefixDownload bgDownloader, TArray<string> prefixList, TArray<FKuroRequestDownloadInfo> requestInfos, Action<int, long> cb, bool retry = false)
 		{
-			DiffUpdate.<BackgroundDownload>d__51 <BackgroundDownload>d__;
+			DiffUpdate.<BackgroundDownload>d__52 <BackgroundDownload>d__;
 			<BackgroundDownload>d__.<>t__builder = AsyncUniTaskMethodBuilder<ValueTuple<int, int>>.Create();
 			<BackgroundDownload>d__.<>4__this = this;
 			<BackgroundDownload>d__.bgDownloader = bgDownloader;
@@ -628,46 +628,46 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			<BackgroundDownload>d__.cb = cb;
 			<BackgroundDownload>d__.retry = retry;
 			<BackgroundDownload>d__.<>1__state = -1;
-			<BackgroundDownload>d__.<>t__builder.Start<DiffUpdate.<BackgroundDownload>d__51>(ref <BackgroundDownload>d__);
+			<BackgroundDownload>d__.<>t__builder.Start<DiffUpdate.<BackgroundDownload>d__52>(ref <BackgroundDownload>d__);
 			return <BackgroundDownload>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000D5E RID: 3422 RVA: 0x0005145C File Offset: 0x0004F65C
+		// Token: 0x06000D9F RID: 3487 RVA: 0x00053F50 File Offset: 0x00052150
 		[NullableContext(0)]
 		protected UniTask<bool> CheckUsedPatch(long needSize, long patchDownloadSize, long allDownloadSize)
 		{
-			DiffUpdate.<CheckUsedPatch>d__52 <CheckUsedPatch>d__;
+			DiffUpdate.<CheckUsedPatch>d__53 <CheckUsedPatch>d__;
 			<CheckUsedPatch>d__.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
 			<CheckUsedPatch>d__.<>4__this = this;
 			<CheckUsedPatch>d__.needSize = needSize;
 			<CheckUsedPatch>d__.patchDownloadSize = patchDownloadSize;
 			<CheckUsedPatch>d__.allDownloadSize = allDownloadSize;
 			<CheckUsedPatch>d__.<>1__state = -1;
-			<CheckUsedPatch>d__.<>t__builder.Start<DiffUpdate.<CheckUsedPatch>d__52>(ref <CheckUsedPatch>d__);
+			<CheckUsedPatch>d__.<>t__builder.Start<DiffUpdate.<CheckUsedPatch>d__53>(ref <CheckUsedPatch>d__);
 			return <CheckUsedPatch>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000D5F RID: 3423 RVA: 0x000514B8 File Offset: 0x0004F6B8
+		// Token: 0x06000DA0 RID: 3488 RVA: 0x00053FAC File Offset: 0x000521AC
 		[NullableContext(0)]
 		protected UniTask<bool> DoesSavedDirHaveEnoughSpace(long needSize)
 		{
-			DiffUpdate.<DoesSavedDirHaveEnoughSpace>d__53 <DoesSavedDirHaveEnoughSpace>d__;
+			DiffUpdate.<DoesSavedDirHaveEnoughSpace>d__54 <DoesSavedDirHaveEnoughSpace>d__;
 			<DoesSavedDirHaveEnoughSpace>d__.<>t__builder = AsyncUniTaskMethodBuilder<bool>.Create();
 			<DoesSavedDirHaveEnoughSpace>d__.<>4__this = this;
 			<DoesSavedDirHaveEnoughSpace>d__.needSize = needSize;
 			<DoesSavedDirHaveEnoughSpace>d__.<>1__state = -1;
-			<DoesSavedDirHaveEnoughSpace>d__.<>t__builder.Start<DiffUpdate.<DoesSavedDirHaveEnoughSpace>d__53>(ref <DoesSavedDirHaveEnoughSpace>d__);
+			<DoesSavedDirHaveEnoughSpace>d__.<>t__builder.Start<DiffUpdate.<DoesSavedDirHaveEnoughSpace>d__54>(ref <DoesSavedDirHaveEnoughSpace>d__);
 			return <DoesSavedDirHaveEnoughSpace>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06000D60 RID: 3424 RVA: 0x00051503 File Offset: 0x0004F703
+		// Token: 0x06000DA1 RID: 3489 RVA: 0x00053FF7 File Offset: 0x000521F7
 		public void RegisterExtraRequireFiles(List<LocalFileInfo> extraFileSpace, List<RequireFileInfo> extraRequireFileInfo)
 		{
 			this.ExtraFileSpace = extraFileSpace;
 			this.ExtraRequireFileInfo = extraRequireFileInfo;
 		}
 
-		// Token: 0x06000D61 RID: 3425 RVA: 0x00051514 File Offset: 0x0004F714
+		// Token: 0x06000DA2 RID: 3490 RVA: 0x00054008 File Offset: 0x00052208
 		public int RemoveExtraRequireFiles(Func<string, bool> shouldRemove)
 		{
 			int count = this.ExtraRequireFileInfo.Count;
@@ -676,7 +676,7 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			return count - this.ExtraRequireFileInfo.Count;
 		}
 
-		// Token: 0x06000D62 RID: 3426 RVA: 0x00051578 File Offset: 0x0004F778
+		// Token: 0x06000DA3 RID: 3491 RVA: 0x0005406C File Offset: 0x0005226C
 		public void AppendResPackageInfo(List<ResPackageInfo> resPackageInfos)
 		{
 			foreach (ResPackageInfo item in resPackageInfos)
@@ -688,13 +688,13 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			}
 		}
 
-		// Token: 0x06000D63 RID: 3427 RVA: 0x000515DC File Offset: 0x0004F7DC
+		// Token: 0x06000DA4 RID: 3492 RVA: 0x000540D0 File Offset: 0x000522D0
 		public void AddSpaceNotEnoughHandler(Action<long, long, bool> handler)
 		{
 			this.SpaceNotEnoughHandlers.Add(handler);
 		}
 
-		// Token: 0x06000D64 RID: 3428 RVA: 0x000515EC File Offset: 0x0004F7EC
+		// Token: 0x06000DA5 RID: 3493 RVA: 0x000540E0 File Offset: 0x000522E0
 		public void InvokeSpaceNotEnoughHandlers(long needSize, long freeSize, bool isRetry)
 		{
 			foreach (Action<long, long, bool> action in this.SpaceNotEnoughHandlers)
@@ -703,70 +703,73 @@ namespace CSharpScript.Launcher.DiffPatch.Update
 			}
 		}
 
-		// Token: 0x04000852 RID: 2130
+		// Token: 0x04000892 RID: 2194
 		private bool CanceledByNetworkChange;
 
-		// Token: 0x04000853 RID: 2131
+		// Token: 0x04000893 RID: 2195
 		private bool UserAnsweredDialog;
 
-		// Token: 0x04000854 RID: 2132
+		// Token: 0x04000894 RID: 2196
 		private ENetworkType LastNetworkType = ENetworkType.None;
 
-		// Token: 0x04000855 RID: 2133
+		// Token: 0x04000895 RID: 2197
 		private bool IsAllowCellDownload;
 
-		// Token: 0x04000856 RID: 2134
+		// Token: 0x04000896 RID: 2198
 		[Nullable(2)]
 		private UKuroBgPrefixDownload BgDownloader;
 
-		// Token: 0x04000857 RID: 2135
+		// Token: 0x04000897 RID: 2199
 		[Nullable(2)]
 		private UKuroNetworkChange NetworkListenerInternal;
 
-		// Token: 0x04000858 RID: 2136
+		// Token: 0x04000898 RID: 2200
 		[Nullable(2)]
 		private Action<bool> DialogCb;
 
-		// Token: 0x04000859 RID: 2137
+		// Token: 0x04000899 RID: 2201
 		private Action<byte> OnChangeNetworkType;
 
-		// Token: 0x0400085A RID: 2138
+		// Token: 0x0400089A RID: 2202
 		private bool IsStopped;
 
-		// Token: 0x0400085B RID: 2139
+		// Token: 0x0400089B RID: 2203
 		[Nullable(2)]
 		private object BgDownloadOwner;
 
-		// Token: 0x0400085C RID: 2140
+		// Token: 0x0400089C RID: 2204
 		private List<LocalFileInfo> ExtraFileSpace = new List<LocalFileInfo>();
 
-		// Token: 0x0400085D RID: 2141
+		// Token: 0x0400089D RID: 2205
 		private List<RequireFileInfo> ExtraRequireFileInfo = new List<RequireFileInfo>();
 
-		// Token: 0x0400085E RID: 2142
+		// Token: 0x0400089E RID: 2206
 		private List<Action<long, long, bool>> SpaceNotEnoughHandlers = new List<Action<long, long, bool>>();
 
-		// Token: 0x0400085F RID: 2143
+		// Token: 0x0400089F RID: 2207
 		private readonly List<ResPackageInfo> ResPackageInfos;
 
-		// Token: 0x04000860 RID: 2144
+		// Token: 0x040008A0 RID: 2208
 		private UrlPrefixDownload Downloader;
 
-		// Token: 0x04000861 RID: 2145
+		// Token: 0x040008A1 RID: 2209
 		[Nullable(2)]
 		private readonly IDiffUpdateUiEvent UiEvent;
 
-		// Token: 0x04000862 RID: 2146
+		// Token: 0x040008A2 RID: 2210
 		[Nullable(2)]
 		private readonly IDiffUpdateReportEvent ReportEvent;
 
-		// Token: 0x04000863 RID: 2147
+		// Token: 0x040008A3 RID: 2211
 		private readonly bool ForceUpdate;
 
-		// Token: 0x04000864 RID: 2148
+		// Token: 0x040008A4 RID: 2212
 		public bool HadDiskChange;
 
-		// Token: 0x04000865 RID: 2149
+		// Token: 0x040008A5 RID: 2213
+		private bool bReportNeedDownload;
+
+		// Token: 0x040008A6 RID: 2214
 		private readonly EUpdateType UpdateType;
 	}
 }

@@ -5,13 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020002AB RID: 683
-	[NullableContext(2)]
-	[Nullable(0)]
+	// Token: 0x020002F0 RID: 752
 	public class IDarkTideIndependentSystemReward : IIndependentSystemRewardType
 	{
-		// Token: 0x06000CC5 RID: 3269 RVA: 0x00030C38 File Offset: 0x0002EE38
-		[NullableContext(1)]
+		// Token: 0x06000DE9 RID: 3561 RVA: 0x00033A28 File Offset: 0x00031C28
 		private IDarkTideIndependentSystemReward_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,8 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06000CC6 RID: 3270 RVA: 0x00030C70 File Offset: 0x0002EE70
-		[NullableContext(1)]
+		// Token: 0x06000DEA RID: 3562 RVA: 0x00033A60 File Offset: 0x00031C60
 		public static IDarkTideIndependentSystemReward Create([Nullable(2)] IDarkTideIndependentSystemReward instance)
 		{
 			if (instance == null)
@@ -40,8 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000CC7 RID: 3271 RVA: 0x00030C83 File Offset: 0x0002EE83
-		[NullableContext(1)]
+		// Token: 0x06000DEB RID: 3563 RVA: 0x00033A73 File Offset: 0x00031C73
 		public static IDarkTideIndependentSystemReward CreateFromSetValue([Nullable(2)] IDarkTideIndependentSystemReward_SetValue value)
 		{
 			if (value == null)
@@ -54,8 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06000CC8 RID: 3272 RVA: 0x00030C96 File Offset: 0x0002EE96
-		[NullableContext(1)]
+		// Token: 0x06000DEC RID: 3564 RVA: 0x00033A86 File Offset: 0x00031C86
 		public new IDarkTideIndependentSystemReward_SetValue ToSetValue()
 		{
 			return new IDarkTideIndependentSystemReward_SetValue
@@ -66,9 +60,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170003BF RID: 959
-		// (get) Token: 0x06000CC9 RID: 3273 RVA: 0x00030CC1 File Offset: 0x0002EEC1
-		// (set) Token: 0x06000CCA RID: 3274 RVA: 0x00030CEC File Offset: 0x0002EEEC
+		// Token: 0x17000409 RID: 1033
+		// (get) Token: 0x06000DED RID: 3565 RVA: 0x00033AB1 File Offset: 0x00031CB1
+		// (set) Token: 0x06000DEE RID: 3566 RVA: 0x00033ADC File Offset: 0x00031CDC
 		public override EIndependentSystemRewardType Type
 		{
 			get
@@ -89,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170003C0 RID: 960
-		// (get) Token: 0x06000CCB RID: 3275 RVA: 0x00030CFA File Offset: 0x0002EEFA
-		// (set) Token: 0x06000CCC RID: 3276 RVA: 0x00030D25 File Offset: 0x0002EF25
+		// Token: 0x1700040A RID: 1034
+		// (get) Token: 0x06000DEF RID: 3567 RVA: 0x00033AEA File Offset: 0x00031CEA
+		// (set) Token: 0x06000DF0 RID: 3568 RVA: 0x00033B15 File Offset: 0x00031D15
 		public virtual int RewardId
 		{
 			get
@@ -112,11 +106,13 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170003C1 RID: 961
-		// (get) Token: 0x06000CCD RID: 3277 RVA: 0x00030D33 File Offset: 0x0002EF33
-		// (set) Token: 0x06000CCE RID: 3278 RVA: 0x00030D5A File Offset: 0x0002EF5A
+		// Token: 0x1700040B RID: 1035
+		// (get) Token: 0x06000DF1 RID: 3569 RVA: 0x00033B23 File Offset: 0x00031D23
+		// (set) Token: 0x06000DF2 RID: 3570 RVA: 0x00033B4A File Offset: 0x00031D4A
+		[Nullable(2)]
 		public virtual List<int> RewardIdList
 		{
+			[NullableContext(2)]
 			get
 			{
 				if (this.FbInstance != null)
@@ -130,16 +126,19 @@ namespace Aki.TDConfigMgr.Component
 				}
 				return pocoInterface.RewardIdList;
 			}
+			[NullableContext(2)]
 			set
 			{
 				this.GetOrCreatePoco().RewardIdList = value;
 			}
 		}
 
-		// Token: 0x04000BD2 RID: 3026
+		// Token: 0x04000CB7 RID: 3255
+		[Nullable(2)]
 		protected new IDarkTideIndependentSystemReward FbInstance;
 
-		// Token: 0x04000BD3 RID: 3027
+		// Token: 0x04000CB8 RID: 3256
+		[Nullable(2)]
 		protected new IDarkTideIndependentSystemReward_SetValue PocoInterface;
 	}
 }

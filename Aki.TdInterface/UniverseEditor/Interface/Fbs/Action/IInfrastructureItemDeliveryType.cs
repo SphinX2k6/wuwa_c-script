@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200695D RID: 26973
+	// Token: 0x02007010 RID: 28688
 	public struct IInfrastructureItemDeliveryType : IFlatbufferObject
 	{
-		// Token: 0x1700C810 RID: 51216
-		// (get) Token: 0x0602F182 RID: 192898 RVA: 0x0066AD9E File Offset: 0x00668F9E
+		// Token: 0x1700D213 RID: 53779
+		// (get) Token: 0x06031B52 RID: 203602 RVA: 0x006BB286 File Offset: 0x006B9486
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F183 RID: 192899 RVA: 0x0066ADAB File Offset: 0x00668FAB
+		// Token: 0x06031B53 RID: 203603 RVA: 0x006BB293 File Offset: 0x006B9493
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602F184 RID: 192900 RVA: 0x0066ADB4 File Offset: 0x00668FB4
+		// Token: 0x06031B54 RID: 203604 RVA: 0x006BB29C File Offset: 0x006B949C
 		public static IInfrastructureItemDeliveryType GetRootAsIInfrastructureItemDeliveryType(ByteBuffer _bb)
 		{
 			return IInfrastructureItemDeliveryType.GetRootAsIInfrastructureItemDeliveryType(_bb, default(IInfrastructureItemDeliveryType));
 		}
 
-		// Token: 0x0602F185 RID: 192901 RVA: 0x0066ADD0 File Offset: 0x00668FD0
+		// Token: 0x06031B55 RID: 203605 RVA: 0x006BB2B8 File Offset: 0x006B94B8
 		public static IInfrastructureItemDeliveryType GetRootAsIInfrastructureItemDeliveryType(ByteBuffer _bb, IInfrastructureItemDeliveryType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602F186 RID: 192902 RVA: 0x0066ADED File Offset: 0x00668FED
+		// Token: 0x06031B56 RID: 203606 RVA: 0x006BB2D5 File Offset: 0x006B94D5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602F187 RID: 192903 RVA: 0x0066ADFC File Offset: 0x00668FFC
+		// Token: 0x06031B57 RID: 203607 RVA: 0x006BB2E4 File Offset: 0x006B94E4
 		public IInfrastructureItemDeliveryType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C811 RID: 51217
-		// (get) Token: 0x0602F188 RID: 192904 RVA: 0x0066AE0C File Offset: 0x0066900C
+		// Token: 0x1700D214 RID: 53780
+		// (get) Token: 0x06031B58 RID: 203608 RVA: 0x006BB2F4 File Offset: 0x006B94F4
 		public EInfrastructureItemDeliveryType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F189 RID: 192905 RVA: 0x0066AE48 File Offset: 0x00669048
+		// Token: 0x06031B59 RID: 203609 RVA: 0x006BB330 File Offset: 0x006B9530
 		public static Offset<IInfrastructureItemDeliveryType> CreateIInfrastructureItemDeliveryType(FlatBufferBuilder builder, EInfrastructureItemDeliveryType Type = EInfrastructureItemDeliveryType.Observatory)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IInfrastructureItemDeliveryType.EndIInfrastructureItemDeliveryType(builder);
 		}
 
-		// Token: 0x0602F18A RID: 192906 RVA: 0x0066AE5E File Offset: 0x0066905E
+		// Token: 0x06031B5A RID: 203610 RVA: 0x006BB346 File Offset: 0x006B9546
 		public static void StartIInfrastructureItemDeliveryType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602F18B RID: 192907 RVA: 0x0066AE67 File Offset: 0x00669067
+		// Token: 0x06031B5B RID: 203611 RVA: 0x006BB34F File Offset: 0x006B954F
 		public static void AddType(FlatBufferBuilder builder, EInfrastructureItemDeliveryType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602F18C RID: 192908 RVA: 0x0066AE72 File Offset: 0x00669072
+		// Token: 0x06031B5C RID: 203612 RVA: 0x006BB35A File Offset: 0x006B955A
 		public static Offset<IInfrastructureItemDeliveryType> EndIInfrastructureItemDeliveryType(FlatBufferBuilder builder)
 		{
 			return new Offset<IInfrastructureItemDeliveryType>(builder.EndTable());
 		}
 
-		// Token: 0x0602F18D RID: 192909 RVA: 0x0066AE80 File Offset: 0x00669080
+		// Token: 0x06031B5D RID: 203613 RVA: 0x006BB368 File Offset: 0x006B9568
 		public IInfrastructureItemDeliveryTypeT UnPack()
 		{
 			IInfrastructureItemDeliveryTypeT infrastructureItemDeliveryTypeT = new IInfrastructureItemDeliveryTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return infrastructureItemDeliveryTypeT;
 		}
 
-		// Token: 0x0602F18E RID: 192910 RVA: 0x0066AE9B File Offset: 0x0066909B
+		// Token: 0x06031B5E RID: 203614 RVA: 0x006BB383 File Offset: 0x006B9583
 		public void UnPackTo(IInfrastructureItemDeliveryTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602F18F RID: 192911 RVA: 0x0066AEAC File Offset: 0x006690AC
+		// Token: 0x06031B5F RID: 203615 RVA: 0x006BB394 File Offset: 0x006B9594
 		public static Offset<IInfrastructureItemDeliveryType> Pack(FlatBufferBuilder builder, IInfrastructureItemDeliveryTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IInfrastructureItemDeliveryType.CreateIInfrastructureItemDeliveryType(builder, _o.Type);
 		}
 
-		// Token: 0x040110DD RID: 69853
+		// Token: 0x04011F49 RID: 73545
 		private Table __p;
 	}
 }

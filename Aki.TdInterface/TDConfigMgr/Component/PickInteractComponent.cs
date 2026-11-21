@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000855 RID: 2133
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020008F8 RID: 2296
 	public class PickInteractComponent : IComponentBase
 	{
-		// Token: 0x06002F13 RID: 12051 RVA: 0x00079994 File Offset: 0x00077B94
+		// Token: 0x0600324F RID: 12879 RVA: 0x00080E7C File Offset: 0x0007F07C
 		private PickInteractComponent_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002F14 RID: 12052 RVA: 0x000799CC File Offset: 0x00077BCC
+		// Token: 0x06003250 RID: 12880 RVA: 0x00080EB4 File Offset: 0x0007F0B4
 		public static PickInteractComponent Create([Nullable(2)] PickInteractComponent instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002F15 RID: 12053 RVA: 0x000799DF File Offset: 0x00077BDF
+		// Token: 0x06003251 RID: 12881 RVA: 0x00080EC7 File Offset: 0x0007F0C7
 		public static PickInteractComponent CreateFromSetValue([Nullable(2)] PickInteractComponent_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002F16 RID: 12054 RVA: 0x000799F2 File Offset: 0x00077BF2
+		// Token: 0x06003252 RID: 12882 RVA: 0x00080EDA File Offset: 0x0007F0DA
 		public new PickInteractComponent_SetValue ToSetValue()
 		{
 			return new PickInteractComponent_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000C6D RID: 3181
-		// (get) Token: 0x06002F17 RID: 12055 RVA: 0x00079A20 File Offset: 0x00077C20
-		// (set) Token: 0x06002F18 RID: 12056 RVA: 0x00079A5A File Offset: 0x00077C5A
+		// Token: 0x17000D36 RID: 3382
+		// (get) Token: 0x06003253 RID: 12883 RVA: 0x00080F08 File Offset: 0x0007F108
+		// (set) Token: 0x06003254 RID: 12884 RVA: 0x00080F42 File Offset: 0x0007F142
 		public override bool? Disabled
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C6E RID: 3182
-		// (get) Token: 0x06002F19 RID: 12057 RVA: 0x00079A68 File Offset: 0x00077C68
-		// (set) Token: 0x06002F1A RID: 12058 RVA: 0x00079A92 File Offset: 0x00077C92
+		// Token: 0x17000D37 RID: 3383
+		// (get) Token: 0x06003255 RID: 12885 RVA: 0x00080F50 File Offset: 0x0007F150
+		// (set) Token: 0x06003256 RID: 12886 RVA: 0x00080F7A File Offset: 0x0007F17A
 		public override bool? EdIsLocked
 		{
 			get
@@ -104,9 +102,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000C6F RID: 3183
-		// (get) Token: 0x06002F1B RID: 12059 RVA: 0x00079AA0 File Offset: 0x00077CA0
-		// (set) Token: 0x06002F1C RID: 12060 RVA: 0x00079B01 File Offset: 0x00077D01
+		// Token: 0x17000D38 RID: 3384
+		// (get) Token: 0x06003257 RID: 12887 RVA: 0x00080F88 File Offset: 0x0007F188
+		// (set) Token: 0x06003258 RID: 12888 RVA: 0x00080FE9 File Offset: 0x0007F1E9
 		public virtual IChessmanPickInteraction PickInteractType
 		{
 			get
@@ -134,18 +132,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001F17 RID: 7959
+		// Token: 0x04002129 RID: 8489
 		[Nullable(2)]
 		protected new PickInteractComponent FbInstance;
 
-		// Token: 0x04001F18 RID: 7960
+		// Token: 0x0400212A RID: 8490
 		[Nullable(2)]
 		protected new PickInteractComponent_SetValue PocoInterface;
 
-		// Token: 0x04001F19 RID: 7961
+		// Token: 0x0400212B RID: 8491
 		private IChessmanPickInteraction _PickInteractTypeCache;
 
-		// Token: 0x04001F1A RID: 7962
+		// Token: 0x0400212C RID: 8492
 		private bool _PickInteractTypeInited;
 	}
 }

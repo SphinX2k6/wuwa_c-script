@@ -7,7 +7,7 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200003D RID: 61
+	// Token: 0x02000022 RID: 34
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealBlittableStruct(UnrealReflectionPropertyTypeCode.UnrealBlittableStruct)]
@@ -16,19 +16,19 @@ namespace UnrealEngine
 	[StructLayout(LayoutKind.Explicit, Pack = 16, Size = 64)]
 	public struct FTransformDouble : IEquatable<FTransformDouble>, IEqualityOperators<FTransformDouble, FTransformDouble, bool>, ITransform, IUnrealScriptStruct
 	{
-		// Token: 0x0600053D RID: 1341 RVA: 0x0000C44A File Offset: 0x0000A64A
+		// Token: 0x060004C2 RID: 1218 RVA: 0x00008CB6 File Offset: 0x00006EB6
 		public static bool operator ==(FTransformDouble left, FTransformDouble right)
 		{
 			return left.Translation.Equals(right.Translation) && left.Rotation.Equals(right.Rotation) && left.Scale3D.Equals(right.Scale3D);
 		}
 
-		// Token: 0x0600053E RID: 1342 RVA: 0x0000C488 File Offset: 0x0000A688
+		// Token: 0x060004C3 RID: 1219 RVA: 0x00008CF4 File Offset: 0x00006EF4
 		public static bool operator !=(FTransformDouble left, FTransformDouble right)
 		{
 			return left.Translation != right.Translation || left.Rotation != right.Rotation || left.Scale3D != right.Scale3D;
 		}
 
-		// Token: 0x0600053F RID: 1343 RVA: 0x0000C4C4 File Offset: 0x0000A6C4
+		// Token: 0x060004C4 RID: 1220 RVA: 0x00008D30 File Offset: 0x00006F30
 		public override readonly string ToString()
 		{
 			FRotator frotator = new FRotator(this.Rotation);
@@ -53,13 +53,13 @@ namespace UnrealEngine
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x06000540 RID: 1344 RVA: 0x0000C5E2 File Offset: 0x0000A7E2
+		// Token: 0x060004C5 RID: 1221 RVA: 0x00008E4E File Offset: 0x0000704E
 		public readonly bool Equals(FTransformDouble other)
 		{
 			return this == other;
 		}
 
-		// Token: 0x06000541 RID: 1345 RVA: 0x0000C5F0 File Offset: 0x0000A7F0
+		// Token: 0x060004C6 RID: 1222 RVA: 0x00008E5C File Offset: 0x0000705C
 		[NullableContext(2)]
 		public override readonly bool Equals(object obj)
 		{
@@ -71,20 +71,20 @@ namespace UnrealEngine
 			return false;
 		}
 
-		// Token: 0x06000542 RID: 1346 RVA: 0x0000C61A File Offset: 0x0000A81A
+		// Token: 0x060004C7 RID: 1223 RVA: 0x00008E86 File Offset: 0x00007086
 		public override readonly int GetHashCode()
 		{
 			return HashCode.Combine<FQuat, FVectorDouble, FVector>(this.Rotation, this.Translation, this.Scale3D);
 		}
 
-		// Token: 0x06000543 RID: 1347 RVA: 0x0000C634 File Offset: 0x0000A834
+		// Token: 0x060004C8 RID: 1224 RVA: 0x00008EA0 File Offset: 0x000070A0
 		public void SetScale3D(in FVectorDouble Scale)
 		{
 			FVector fvector = Scale;
 			this.SetScale3D(fvector);
 		}
 
-		// Token: 0x06000544 RID: 1348 RVA: 0x0000C650 File Offset: 0x0000A850
+		// Token: 0x060004C9 RID: 1225 RVA: 0x00008EBC File Offset: 0x000070BC
 		public FTransformDouble()
 		{
 			this.Rotation = default(FQuat);
@@ -95,195 +95,195 @@ namespace UnrealEngine
 			this.Scale3D.Z = 1f;
 		}
 
-		// Token: 0x06000545 RID: 1349
+		// Token: 0x060004CA RID: 1226
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransformDouble Internal_Ctor_FVectorDouble(in FVectorDouble inTranslation);
 
-		// Token: 0x06000546 RID: 1350
+		// Token: 0x060004CB RID: 1227
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransformDouble Internal_Ctor_FQuat(in FQuat inRotation);
 
-		// Token: 0x06000547 RID: 1351
+		// Token: 0x060004CC RID: 1228
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransformDouble Internal_Ctor_FRotator(in FRotator inRotation);
 
-		// Token: 0x06000548 RID: 1352
+		// Token: 0x060004CD RID: 1229
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransformDouble Internal_Ctor_FTransform(in FTransform inTransform);
 
-		// Token: 0x06000549 RID: 1353
+		// Token: 0x060004CE RID: 1230
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransformDouble Internal_Ctor_FQuat_FVectorDouble(in FQuat inRotation, in FVectorDouble inTranslation);
 
-		// Token: 0x0600054A RID: 1354
+		// Token: 0x060004CF RID: 1231
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransformDouble Internal_Ctor_FQuat_FVectorDouble_FVector(in FQuat inRotation, in FVectorDouble inTranslation, in FVector inScale3D);
 
-		// Token: 0x0600054B RID: 1355
+		// Token: 0x060004D0 RID: 1232
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransformDouble Internal_Ctor_FRotator_FVectorDouble(in FRotator inRotation, in FVectorDouble inTranslation);
 
-		// Token: 0x0600054C RID: 1356
+		// Token: 0x060004D1 RID: 1233
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransformDouble Internal_Ctor_FRotator_FVectorDouble_FVector(in FRotator inRotation, in FVectorDouble inTranslation, in FVector inScale3D);
 
-		// Token: 0x0600054D RID: 1357
+		// Token: 0x060004D2 RID: 1234
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransformDouble Internal_Ctor_FTransform_FIntVector(in FTransform inTransform, in FIntVector offset);
 
-		// Token: 0x0600054E RID: 1358
+		// Token: 0x060004D3 RID: 1235
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void Internal_Multiply(out FTransformDouble result, in FTransformDouble a, in FTransformDouble b);
 
-		// Token: 0x0600054F RID: 1359
+		// Token: 0x060004D4 RID: 1236
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransformDouble Internal_Mul(in FTransformDouble a, in FTransformDouble b);
 
-		// Token: 0x06000550 RID: 1360
+		// Token: 0x060004D5 RID: 1237
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransformDouble Internal_MulFQuat(in FTransformDouble a, in FQuat q);
 
-		// Token: 0x06000551 RID: 1361
+		// Token: 0x060004D6 RID: 1238
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool Internal_Equals(in FTransformDouble a, in FTransformDouble b, float tolerance = 0.0001f);
 
-		// Token: 0x06000552 RID: 1362
+		// Token: 0x060004D7 RID: 1239
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool Internal_Identical(in FTransformDouble a, in FTransformDouble b, uint portFlags = 0U);
 
-		// Token: 0x06000553 RID: 1363
+		// Token: 0x060004D8 RID: 1240
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransformDouble Internal_GetRelativeTransform(in FTransformDouble a, in FTransformDouble b);
 
-		// Token: 0x06000554 RID: 1364
+		// Token: 0x060004D9 RID: 1241
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransformDouble Internal_GetRelativeTransformReverse(in FTransformDouble a, in FTransformDouble b);
 
-		// Token: 0x06000555 RID: 1365
+		// Token: 0x060004DA RID: 1242
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble Internal_TransformPosition(in FTransformDouble a, in FVectorDouble v);
 
-		// Token: 0x06000556 RID: 1366
+		// Token: 0x060004DB RID: 1243
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble Internal_TransformPositionNoScale(in FTransformDouble a, in FVectorDouble v);
 
-		// Token: 0x06000557 RID: 1367
+		// Token: 0x060004DC RID: 1244
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble Internal_InverseTransformPosition(in FTransformDouble a, in FVectorDouble v);
 
-		// Token: 0x06000558 RID: 1368
+		// Token: 0x060004DD RID: 1245
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble Internal_InverseTransformPositionNoScale(in FTransformDouble a, in FVectorDouble v);
 
-		// Token: 0x06000559 RID: 1369
+		// Token: 0x060004DE RID: 1246
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble Internal_TransformVector(in FTransformDouble a, in FVectorDouble v);
 
-		// Token: 0x0600055A RID: 1370
+		// Token: 0x060004DF RID: 1247
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble Internal_TransformVectorNoScale(in FTransformDouble a, in FVectorDouble v);
 
-		// Token: 0x0600055B RID: 1371
+		// Token: 0x060004E0 RID: 1248
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble Internal_InverseTransformVector(in FTransformDouble a, in FVectorDouble v);
 
-		// Token: 0x0600055C RID: 1372
+		// Token: 0x060004E1 RID: 1249
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble Internal_InverseTransformVectorNoScale(in FTransformDouble a, in FVectorDouble v);
 
-		// Token: 0x0600055D RID: 1373
+		// Token: 0x060004E2 RID: 1250
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FQuat Internal_TransformRotation(in FTransformDouble a, in FQuat q);
 
-		// Token: 0x0600055E RID: 1374
+		// Token: 0x060004E3 RID: 1251
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FQuat Internal_InverseTransformRotation(in FTransformDouble a, in FQuat q);
 
-		// Token: 0x0600055F RID: 1375
+		// Token: 0x060004E4 RID: 1252
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble Internal_GetLocation(in FTransformDouble a);
 
-		// Token: 0x06000560 RID: 1376
+		// Token: 0x060004E5 RID: 1253
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void Internal_SetLocation(ref FTransformDouble a, in FVectorDouble origin);
 
-		// Token: 0x06000561 RID: 1377
+		// Token: 0x060004E6 RID: 1254
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FRotator Internal_Rotator(in FTransformDouble a);
 
-		// Token: 0x06000562 RID: 1378
+		// Token: 0x060004E7 RID: 1255
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool Internal_ContainsNaN(in FTransformDouble a);
 
-		// Token: 0x06000563 RID: 1379
+		// Token: 0x060004E8 RID: 1256
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool Internal_IsValid(in FTransformDouble a);
 
-		// Token: 0x06000564 RID: 1380
+		// Token: 0x060004E9 RID: 1257
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void Internal_SetComponents(ref FTransformDouble a, in FQuat inRotation, in FVectorDouble inTranslation, in FVector inScale3D);
 
-		// Token: 0x06000565 RID: 1381
+		// Token: 0x060004EA RID: 1258
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void Internal_SetTranslation(ref FTransformDouble a, in FVectorDouble newTranslation);
 
-		// Token: 0x06000566 RID: 1382
+		// Token: 0x060004EB RID: 1259
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void Internal_ConcatenateRotation(ref FTransformDouble a, in FQuat deltaRotation);
 
-		// Token: 0x06000567 RID: 1383
+		// Token: 0x060004EC RID: 1260
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransform Internal_ToTransform(in FTransformDouble a);
 
-		// Token: 0x06000568 RID: 1384
+		// Token: 0x060004ED RID: 1261
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransform Internal_ToLocalTransform(in FTransformDouble a, in FIntVector worldOffset);
 
-		// Token: 0x06000569 RID: 1385
+		// Token: 0x060004EE RID: 1262
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void Internal_AddToTranslation(ref FTransformDouble a, in FVectorDouble deltaTranslation);
 
-		// Token: 0x0600056A RID: 1386
+		// Token: 0x060004EF RID: 1263
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void Internal_SetRotation(ref FTransformDouble a, in FQuat newRotation);
 
-		// Token: 0x0600056B RID: 1387
+		// Token: 0x060004F0 RID: 1264
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void Internal_SetScale3D(ref FTransformDouble a, in FVector newScale3D);
 
-		// Token: 0x0600056C RID: 1388
+		// Token: 0x060004F1 RID: 1265
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void Internal_NormalizeRotation(ref FTransformDouble a);
 
-		// Token: 0x0600056D RID: 1389
+		// Token: 0x060004F2 RID: 1266
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool Internal_IsRotationNormalized(in FTransformDouble a);
 
-		// Token: 0x0600056E RID: 1390
+		// Token: 0x060004F3 RID: 1267
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FQuat Internal_GetRotation(in FTransformDouble a);
 
-		// Token: 0x0600056F RID: 1391
+		// Token: 0x060004F4 RID: 1268
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVectorDouble Internal_GetTranslation(in FTransformDouble a);
 
-		// Token: 0x06000570 RID: 1392
+		// Token: 0x060004F5 RID: 1269
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FVector Internal_GetScale3D(in FTransformDouble a);
 
-		// Token: 0x06000571 RID: 1393
+		// Token: 0x060004F6 RID: 1270
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern FTransformDouble Internal_Inverse(in FTransformDouble a);
 
-		// Token: 0x06000572 RID: 1394
+		// Token: 0x060004F7 RID: 1271
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void Internal_Blend(ref FTransformDouble a, in FTransformDouble atom1, in FTransformDouble atom2, float alpha);
 
-		// Token: 0x06000573 RID: 1395
+		// Token: 0x060004F8 RID: 1272
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool Internal_InitFromString(ref FTransformDouble a, in FCSharpStringView inSourceString);
 
-		// Token: 0x06000574 RID: 1396 RVA: 0x0000C6B8 File Offset: 0x0000A8B8
+		// Token: 0x060004F9 RID: 1273 RVA: 0x00008F24 File Offset: 0x00007124
 		public unsafe FTransformDouble(in FVectorDouble inTranslation)
 		{
 			fixed (FVectorDouble* ptr = &inTranslation)
@@ -295,7 +295,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000575 RID: 1397 RVA: 0x0000C6E0 File Offset: 0x0000A8E0
+		// Token: 0x060004FA RID: 1274 RVA: 0x00008F4C File Offset: 0x0000714C
 		public unsafe FTransformDouble(in FQuat inRotation)
 		{
 			fixed (FQuat* ptr = &inRotation)
@@ -307,7 +307,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000576 RID: 1398 RVA: 0x0000C708 File Offset: 0x0000A908
+		// Token: 0x060004FB RID: 1275 RVA: 0x00008F74 File Offset: 0x00007174
 		public unsafe FTransformDouble(in FRotator inRotation)
 		{
 			fixed (FRotator* ptr = &inRotation)
@@ -319,7 +319,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000577 RID: 1399 RVA: 0x0000C730 File Offset: 0x0000A930
+		// Token: 0x060004FC RID: 1276 RVA: 0x00008F9C File Offset: 0x0000719C
 		public unsafe FTransformDouble(in FTransform inTransform)
 		{
 			fixed (FTransform* ptr = &inTransform)
@@ -331,7 +331,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000578 RID: 1400 RVA: 0x0000C758 File Offset: 0x0000A958
+		// Token: 0x060004FD RID: 1277 RVA: 0x00008FC4 File Offset: 0x000071C4
 		public unsafe FTransformDouble(in FQuat inRotation, in FVectorDouble inTranslation)
 		{
 			fixed (FQuat* ptr = &inRotation)
@@ -346,7 +346,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000579 RID: 1401 RVA: 0x0000C788 File Offset: 0x0000A988
+		// Token: 0x060004FE RID: 1278 RVA: 0x00008FF4 File Offset: 0x000071F4
 		public unsafe FTransformDouble(in FQuat inRotation, in FVectorDouble inTranslation, in FVector inScale3D)
 		{
 			fixed (FQuat* ptr = &inRotation)
@@ -364,7 +364,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600057A RID: 1402 RVA: 0x0000C7C0 File Offset: 0x0000A9C0
+		// Token: 0x060004FF RID: 1279 RVA: 0x0000902C File Offset: 0x0000722C
 		public unsafe FTransformDouble(in FRotator inRotation, in FVectorDouble inTranslation)
 		{
 			fixed (FRotator* ptr = &inRotation)
@@ -379,7 +379,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600057B RID: 1403 RVA: 0x0000C7F0 File Offset: 0x0000A9F0
+		// Token: 0x06000500 RID: 1280 RVA: 0x0000905C File Offset: 0x0000725C
 		public unsafe FTransformDouble(in FRotator inRotation, in FVectorDouble inTranslation, in FVector inScale3D)
 		{
 			fixed (FRotator* ptr = &inRotation)
@@ -397,7 +397,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600057C RID: 1404 RVA: 0x0000C828 File Offset: 0x0000AA28
+		// Token: 0x06000501 RID: 1281 RVA: 0x00009094 File Offset: 0x00007294
 		public unsafe FTransformDouble(in FTransform inTransform, in FIntVector inOffset)
 		{
 			fixed (FTransform* ptr = &inTransform)
@@ -412,7 +412,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600057D RID: 1405 RVA: 0x0000C858 File Offset: 0x0000AA58
+		// Token: 0x06000502 RID: 1282 RVA: 0x000090C4 File Offset: 0x000072C4
 		public unsafe static void Multiply(out FTransformDouble outTransform, in FTransformDouble a, in FTransformDouble b)
 		{
 			fixed (FTransformDouble* ptr = &outTransform)
@@ -427,7 +427,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600057E RID: 1406 RVA: 0x0000C884 File Offset: 0x0000AA84
+		// Token: 0x06000503 RID: 1283 RVA: 0x000090F0 File Offset: 0x000072F0
 		public unsafe static FTransformDouble operator *(in FTransformDouble a, in FTransformDouble b)
 		{
 			fixed (FTransformDouble* ptr = &a)
@@ -439,7 +439,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600057F RID: 1407 RVA: 0x0000C8A0 File Offset: 0x0000AAA0
+		// Token: 0x06000504 RID: 1284 RVA: 0x0000910C File Offset: 0x0000730C
 		public unsafe static FTransformDouble operator *(in FTransformDouble a, in FQuat q)
 		{
 			fixed (FTransformDouble* ptr = &a)
@@ -451,7 +451,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000580 RID: 1408 RVA: 0x0000C8BC File Offset: 0x0000AABC
+		// Token: 0x06000505 RID: 1285 RVA: 0x00009128 File Offset: 0x00007328
 		public unsafe readonly bool Equals(in FTransformDouble b, float tolerance = 0.0001f)
 		{
 			fixed (FTransformDouble* ptr = &this)
@@ -463,7 +463,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000581 RID: 1409 RVA: 0x0000C8DC File Offset: 0x0000AADC
+		// Token: 0x06000506 RID: 1286 RVA: 0x00009148 File Offset: 0x00007348
 		public unsafe readonly bool Identical(in FTransformDouble b, uint portFlags = 0U)
 		{
 			fixed (FTransformDouble* ptr = &this)
@@ -475,7 +475,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000582 RID: 1410 RVA: 0x0000C8FC File Offset: 0x0000AAFC
+		// Token: 0x06000507 RID: 1287 RVA: 0x00009168 File Offset: 0x00007368
 		public unsafe readonly FTransformDouble GetRelativeTransform(in FTransformDouble b)
 		{
 			fixed (FTransformDouble* ptr = &this)
@@ -487,7 +487,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000583 RID: 1411 RVA: 0x0000C918 File Offset: 0x0000AB18
+		// Token: 0x06000508 RID: 1288 RVA: 0x00009184 File Offset: 0x00007384
 		public unsafe readonly FTransformDouble GetRelativeTransformReverse(in FTransformDouble b)
 		{
 			fixed (FTransformDouble* ptr = &this)
@@ -499,7 +499,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000584 RID: 1412 RVA: 0x0000C934 File Offset: 0x0000AB34
+		// Token: 0x06000509 RID: 1289 RVA: 0x000091A0 File Offset: 0x000073A0
 		public unsafe readonly FVectorDouble TransformPosition(in FVectorDouble v)
 		{
 			fixed (FVectorDouble* ptr = &v)
@@ -511,7 +511,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000585 RID: 1413 RVA: 0x0000C950 File Offset: 0x0000AB50
+		// Token: 0x0600050A RID: 1290 RVA: 0x000091BC File Offset: 0x000073BC
 		public unsafe readonly FVectorDouble TransformPositionNoScale(in FVectorDouble v)
 		{
 			fixed (FVectorDouble* ptr = &v)
@@ -523,7 +523,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000586 RID: 1414 RVA: 0x0000C96C File Offset: 0x0000AB6C
+		// Token: 0x0600050B RID: 1291 RVA: 0x000091D8 File Offset: 0x000073D8
 		public unsafe readonly FVectorDouble InverseTransformPosition(in FVectorDouble v)
 		{
 			fixed (FVectorDouble* ptr = &v)
@@ -535,7 +535,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000587 RID: 1415 RVA: 0x0000C988 File Offset: 0x0000AB88
+		// Token: 0x0600050C RID: 1292 RVA: 0x000091F4 File Offset: 0x000073F4
 		public unsafe readonly FVectorDouble InverseTransformPositionNoScale(in FVectorDouble v)
 		{
 			fixed (FVectorDouble* ptr = &v)
@@ -547,7 +547,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000588 RID: 1416 RVA: 0x0000C9A4 File Offset: 0x0000ABA4
+		// Token: 0x0600050D RID: 1293 RVA: 0x00009210 File Offset: 0x00007410
 		public unsafe readonly FVectorDouble TransformVector(in FVectorDouble v)
 		{
 			fixed (FVectorDouble* ptr = &v)
@@ -559,7 +559,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000589 RID: 1417 RVA: 0x0000C9C0 File Offset: 0x0000ABC0
+		// Token: 0x0600050E RID: 1294 RVA: 0x0000922C File Offset: 0x0000742C
 		public unsafe readonly FVectorDouble TransformVectorNoScale(in FVectorDouble v)
 		{
 			fixed (FVectorDouble* ptr = &v)
@@ -571,7 +571,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600058A RID: 1418 RVA: 0x0000C9DC File Offset: 0x0000ABDC
+		// Token: 0x0600050F RID: 1295 RVA: 0x00009248 File Offset: 0x00007448
 		public unsafe readonly FVectorDouble InverseTransformVector(in FVectorDouble v)
 		{
 			fixed (FVectorDouble* ptr = &v)
@@ -583,7 +583,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600058B RID: 1419 RVA: 0x0000C9F8 File Offset: 0x0000ABF8
+		// Token: 0x06000510 RID: 1296 RVA: 0x00009264 File Offset: 0x00007464
 		public unsafe readonly FVectorDouble InverseTransformVectorNoScale(in FVectorDouble v)
 		{
 			fixed (FVectorDouble* ptr = &v)
@@ -595,7 +595,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600058C RID: 1420 RVA: 0x0000CA14 File Offset: 0x0000AC14
+		// Token: 0x06000511 RID: 1297 RVA: 0x00009280 File Offset: 0x00007480
 		public unsafe readonly FQuat TransformRotation(in FQuat q)
 		{
 			fixed (FQuat* ptr = &q)
@@ -607,7 +607,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600058D RID: 1421 RVA: 0x0000CA30 File Offset: 0x0000AC30
+		// Token: 0x06000512 RID: 1298 RVA: 0x0000929C File Offset: 0x0000749C
 		public unsafe readonly FQuat InverseTransformRotation(in FQuat q)
 		{
 			fixed (FQuat* ptr = &q)
@@ -619,7 +619,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600058E RID: 1422 RVA: 0x0000CA4C File Offset: 0x0000AC4C
+		// Token: 0x06000513 RID: 1299 RVA: 0x000092B8 File Offset: 0x000074B8
 		public unsafe readonly FVectorDouble GetLocation()
 		{
 			fixed (FTransformDouble* ptr = &this)
@@ -628,7 +628,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600058F RID: 1423 RVA: 0x0000CA64 File Offset: 0x0000AC64
+		// Token: 0x06000514 RID: 1300 RVA: 0x000092D0 File Offset: 0x000074D0
 		public unsafe void SetLocation(in FVectorDouble origin)
 		{
 			fixed (FVectorDouble* ptr = &origin)
@@ -640,7 +640,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000590 RID: 1424 RVA: 0x0000CA88 File Offset: 0x0000AC88
+		// Token: 0x06000515 RID: 1301 RVA: 0x000092F4 File Offset: 0x000074F4
 		public unsafe readonly FRotator Rotator()
 		{
 			fixed (FTransformDouble* ptr = &this)
@@ -649,7 +649,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000591 RID: 1425 RVA: 0x0000CAA0 File Offset: 0x0000ACA0
+		// Token: 0x06000516 RID: 1302 RVA: 0x0000930C File Offset: 0x0000750C
 		public unsafe readonly bool ContainsNaN()
 		{
 			fixed (FTransformDouble* ptr = &this)
@@ -658,7 +658,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000592 RID: 1426 RVA: 0x0000CAB8 File Offset: 0x0000ACB8
+		// Token: 0x06000517 RID: 1303 RVA: 0x00009324 File Offset: 0x00007524
 		public unsafe readonly bool IsValid()
 		{
 			fixed (FTransformDouble* ptr = &this)
@@ -667,7 +667,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000593 RID: 1427 RVA: 0x0000CAD0 File Offset: 0x0000ACD0
+		// Token: 0x06000518 RID: 1304 RVA: 0x0000933C File Offset: 0x0000753C
 		public unsafe void SetComponents(in FQuat inRotation, in FVectorDouble inTranslation, in FVector inScale3D)
 		{
 			fixed (FQuat* ptr = &inRotation)
@@ -685,7 +685,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000594 RID: 1428 RVA: 0x0000CB04 File Offset: 0x0000AD04
+		// Token: 0x06000519 RID: 1305 RVA: 0x00009370 File Offset: 0x00007570
 		public unsafe void SetTranslation(in FVectorDouble newTranslation)
 		{
 			fixed (FVectorDouble* ptr = &newTranslation)
@@ -697,7 +697,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000595 RID: 1429 RVA: 0x0000CB28 File Offset: 0x0000AD28
+		// Token: 0x0600051A RID: 1306 RVA: 0x00009394 File Offset: 0x00007594
 		public unsafe void ConcatenateRotation(in FQuat deltaRotation)
 		{
 			fixed (FQuat* ptr = &deltaRotation)
@@ -709,7 +709,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000596 RID: 1430 RVA: 0x0000CB4C File Offset: 0x0000AD4C
+		// Token: 0x0600051B RID: 1307 RVA: 0x000093B8 File Offset: 0x000075B8
 		public unsafe readonly FTransform ToTransform()
 		{
 			fixed (FTransformDouble* ptr = &this)
@@ -718,7 +718,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000597 RID: 1431 RVA: 0x0000CB64 File Offset: 0x0000AD64
+		// Token: 0x0600051C RID: 1308 RVA: 0x000093D0 File Offset: 0x000075D0
 		public unsafe readonly FTransform ToLocalTransform(in FIntVector worldOffset)
 		{
 			fixed (FIntVector* ptr = &worldOffset)
@@ -730,7 +730,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000598 RID: 1432 RVA: 0x0000CB80 File Offset: 0x0000AD80
+		// Token: 0x0600051D RID: 1309 RVA: 0x000093EC File Offset: 0x000075EC
 		public unsafe void AddToTranslation(in FVectorDouble deltaTranslation)
 		{
 			fixed (FVectorDouble* ptr = &deltaTranslation)
@@ -742,7 +742,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06000599 RID: 1433 RVA: 0x0000CBA4 File Offset: 0x0000ADA4
+		// Token: 0x0600051E RID: 1310 RVA: 0x00009410 File Offset: 0x00007610
 		public unsafe void SetRotation(in FQuat newRotation)
 		{
 			fixed (FQuat* ptr = &newRotation)
@@ -754,7 +754,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600059A RID: 1434 RVA: 0x0000CBC8 File Offset: 0x0000ADC8
+		// Token: 0x0600051F RID: 1311 RVA: 0x00009434 File Offset: 0x00007634
 		public unsafe void SetScale3D(in FVector newScale3D)
 		{
 			fixed (FVector* ptr = &newScale3D)
@@ -766,7 +766,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600059B RID: 1435 RVA: 0x0000CBEC File Offset: 0x0000ADEC
+		// Token: 0x06000520 RID: 1312 RVA: 0x00009458 File Offset: 0x00007658
 		public unsafe void NormalizeRotation()
 		{
 			fixed (FTransformDouble* ptr = &this)
@@ -775,7 +775,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600059C RID: 1436 RVA: 0x0000CC08 File Offset: 0x0000AE08
+		// Token: 0x06000521 RID: 1313 RVA: 0x00009474 File Offset: 0x00007674
 		public unsafe readonly bool IsRotationNormalized()
 		{
 			fixed (FTransformDouble* ptr = &this)
@@ -784,7 +784,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600059D RID: 1437 RVA: 0x0000CC20 File Offset: 0x0000AE20
+		// Token: 0x06000522 RID: 1314 RVA: 0x0000948C File Offset: 0x0000768C
 		public unsafe readonly FQuat GetRotation()
 		{
 			fixed (FTransformDouble* ptr = &this)
@@ -793,7 +793,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600059E RID: 1438 RVA: 0x0000CC38 File Offset: 0x0000AE38
+		// Token: 0x06000523 RID: 1315 RVA: 0x000094A4 File Offset: 0x000076A4
 		public unsafe readonly FVectorDouble GetTranslation()
 		{
 			fixed (FTransformDouble* ptr = &this)
@@ -802,7 +802,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600059F RID: 1439 RVA: 0x0000CC50 File Offset: 0x0000AE50
+		// Token: 0x06000524 RID: 1316 RVA: 0x000094BC File Offset: 0x000076BC
 		public unsafe readonly FVector GetScale3D()
 		{
 			fixed (FTransformDouble* ptr = &this)
@@ -811,7 +811,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060005A0 RID: 1440 RVA: 0x0000CC68 File Offset: 0x0000AE68
+		// Token: 0x06000525 RID: 1317 RVA: 0x000094D4 File Offset: 0x000076D4
 		public unsafe readonly FTransformDouble Inverse()
 		{
 			fixed (FTransformDouble* ptr = &this)
@@ -820,7 +820,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060005A1 RID: 1441 RVA: 0x0000CC80 File Offset: 0x0000AE80
+		// Token: 0x06000526 RID: 1318 RVA: 0x000094EC File Offset: 0x000076EC
 		public unsafe void Blend(in FTransformDouble atom1, in FTransformDouble atom2, float alpha)
 		{
 			fixed (FTransformDouble* ptr = &this)
@@ -835,7 +835,7 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060005A2 RID: 1442 RVA: 0x0000CCAC File Offset: 0x0000AEAC
+		// Token: 0x06000527 RID: 1319 RVA: 0x00009518 File Offset: 0x00007718
 		[NullableContext(2)]
 		public unsafe bool InitFromString(string inSourceString)
 		{
@@ -863,13 +863,13 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060005A3 RID: 1443 RVA: 0x0000CCF0 File Offset: 0x0000AEF0
+		// Token: 0x06000528 RID: 1320 RVA: 0x0000955C File Offset: 0x0000775C
 		IVector ITransform.GetLocation()
 		{
 			return this.Translation;
 		}
 
-		// Token: 0x060005A4 RID: 1444 RVA: 0x0000CCFD File Offset: 0x0000AEFD
+		// Token: 0x06000529 RID: 1321 RVA: 0x00009569 File Offset: 0x00007769
 		void ITransform.SetLocation(IVector value)
 		{
 			this.Translation.X = value.X;
@@ -877,13 +877,13 @@ namespace UnrealEngine
 			this.Translation.Z = value.Z;
 		}
 
-		// Token: 0x060005A5 RID: 1445 RVA: 0x0000CD32 File Offset: 0x0000AF32
+		// Token: 0x0600052A RID: 1322 RVA: 0x0000959E File Offset: 0x0000779E
 		IQuat ITransform.GetRotation()
 		{
 			return this.Rotation;
 		}
 
-		// Token: 0x060005A6 RID: 1446 RVA: 0x0000CD40 File Offset: 0x0000AF40
+		// Token: 0x0600052B RID: 1323 RVA: 0x000095AC File Offset: 0x000077AC
 		void ITransform.SetRotation(IQuat value)
 		{
 			this.Rotation.X = (float)value.X;
@@ -892,13 +892,13 @@ namespace UnrealEngine
 			this.Rotation.W = (float)value.W;
 		}
 
-		// Token: 0x060005A7 RID: 1447 RVA: 0x0000CD95 File Offset: 0x0000AF95
+		// Token: 0x0600052C RID: 1324 RVA: 0x00009601 File Offset: 0x00007801
 		IVector ITransform.GetScale3D()
 		{
 			return this.Scale3D;
 		}
 
-		// Token: 0x060005A8 RID: 1448 RVA: 0x0000CDA2 File Offset: 0x0000AFA2
+		// Token: 0x0600052D RID: 1325 RVA: 0x0000960E File Offset: 0x0000780E
 		void ITransform.SetScale3D(IVector value)
 		{
 			this.Scale3D.X = (float)value.X;
@@ -906,32 +906,32 @@ namespace UnrealEngine
 			this.Scale3D.Z = (float)value.Z;
 		}
 
-		// Token: 0x060005A9 RID: 1449 RVA: 0x0000CDDA File Offset: 0x0000AFDA
+		// Token: 0x0600052E RID: 1326 RVA: 0x00009646 File Offset: 0x00007846
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FTransformDouble._ScriptStructPtr != 0) ? FTransformDouble._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/CoreUObject.TransformDouble", ref FTransformDouble._ScriptStructPtr);
 		}
 
-		// Token: 0x040000FB RID: 251
+		// Token: 0x040000B4 RID: 180
 		public static readonly FTransformDouble Identity = new FTransformDouble();
 
-		// Token: 0x040000FC RID: 252
+		// Token: 0x040000B5 RID: 181
 		[FieldOffset(0)]
 		public FQuat Rotation;
 
-		// Token: 0x040000FD RID: 253
+		// Token: 0x040000B6 RID: 182
 		[FieldOffset(16)]
 		public FVectorDouble Translation;
 
-		// Token: 0x040000FE RID: 254
+		// Token: 0x040000B7 RID: 183
 		[FieldOffset(40)]
 		public FVector Scale3D;
 
-		// Token: 0x040000FF RID: 255
+		// Token: 0x040000B8 RID: 184
 		[Nullable(0)]
 		public const string __ObjectPath = "/Script/CoreUObject.TransformDouble";
 
-		// Token: 0x04000100 RID: 256
+		// Token: 0x040000B9 RID: 185
 		private static IntPtr _ScriptStructPtr;
 	}
 }

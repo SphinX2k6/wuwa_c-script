@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200327C RID: 12924
+// Token: 0x020027EC RID: 10220
 [NullableContext(1)]
 [Nullable(0)]
 public class VelocityCacheInfo
 {
-	// Token: 0x0601BF6A RID: 114538 RVA: 0x007C3B44 File Offset: 0x007C1D44
+	// Token: 0x06019B5A RID: 105306 RVA: 0x007EAF00 File Offset: 0x007E9100
 	public string Dump()
 	{
 		bool isPlayInEditor = GlobalData.IsPlayInEditor;
@@ -39,21 +39,21 @@ public class VelocityCacheInfo
 		return str5 + defaultInterpolatedStringHandler.ToStringAndClear() + "[Context, " + this.Context + "]" + "，";
 	}
 
-	// Token: 0x0400DCEC RID: 56556
+	// Token: 0x0400E18E RID: 57742
 	public long Frame;
 
-	// Token: 0x0400DCED RID: 56557
+	// Token: 0x0400E18F RID: 57743
 	public float? SpeedZ;
 
-	// Token: 0x0400DCEE RID: 56558
+	// Token: 0x0400E190 RID: 57744
 	public float? VelocityZ;
 
-	// Token: 0x0400DCEF RID: 56559
+	// Token: 0x0400E191 RID: 57745
 	public float? LastZ;
 
-	// Token: 0x0400DCF0 RID: 56560
+	// Token: 0x0400E192 RID: 57746
 	public EMovementMode? MoveMode;
 
-	// Token: 0x0400DCF1 RID: 56561
+	// Token: 0x0400E193 RID: 57747
 	public string Context = "";
 }

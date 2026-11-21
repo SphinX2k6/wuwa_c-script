@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.NewWorld.Pawn.Component;
 using UnrealEngine;
 
-// Token: 0x02002E74 RID: 11892
+// Token: 0x020023C6 RID: 9158
 [NullableContext(1)]
 [Nullable(0)]
 public class BaseDeathComponent : EntityComponent
 {
-	// Token: 0x060196AF RID: 104111 RVA: 0x0068F45D File Offset: 0x0068D65D
+	// Token: 0x06016F78 RID: 94072 RVA: 0x006B5815 File Offset: 0x006B3A15
 	protected override bool OnStart()
 	{
 		this.MontageComponent = base.Entity.GetComponent<BaseMontageComponent>();
@@ -18,13 +18,25 @@ public class BaseDeathComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x060196B0 RID: 104112 RVA: 0x0068F488 File Offset: 0x0068D688
+	// Token: 0x06016F79 RID: 94073 RVA: 0x006B5840 File Offset: 0x006B3A40
 	public bool IsDead()
 	{
 		return this.IsDeadInternal;
 	}
 
-	// Token: 0x060196B1 RID: 104113 RVA: 0x0068F490 File Offset: 0x0068D690
+	// Token: 0x06016F7A RID: 94074 RVA: 0x006B5848 File Offset: 0x006B3A48
+	public bool IsDying()
+	{
+		return this.IsDyingInternal;
+	}
+
+	// Token: 0x06016F7B RID: 94075 RVA: 0x006B5850 File Offset: 0x006B3A50
+	public bool IsDeadOrDying()
+	{
+		return this.IsDeadInternal || this.IsDyingInternal;
+	}
+
+	// Token: 0x06016F7C RID: 94076 RVA: 0x006B5864 File Offset: 0x006B3A64
 	public unsafe virtual bool ExecuteDeath(long? contextId)
 	{
 		if (this.IsDeadInternal)
@@ -49,6 +61,7 @@ public class BaseDeathComponent : EntityComponent
 		ptr = new ValueTuple<string, object>(item, (component != null) ? new int?(component.GetPbDataId()) : null);
 		instance2.Info(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		this.IsDeadInternal = true;
+		this.IsDyingInternal = false;
 		PawnTimeScaleComponent timeScaleComponent = this.TimeScaleComponent;
 		if (timeScaleComponent != null)
 		{
@@ -57,27 +70,60 @@ public class BaseDeathComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x060196B2 RID: 104114 RVA: 0x0068F57B File Offset: 0x0068D77B
+	// Token: 0x06016F7D RID: 94077 RVA: 0x006B5958 File Offset: 0x006B3B58
+	public unsafe virtual bool ExecuteDying(long? contextId)
+	{
+		if (this.IsDyingInternal)
+		{
+			Log instance = Log.Instance;
+			ELogModule module = ELogModule.Character;
+			ELogAuthor author = ELogAuthor.WWJ;
+			string message = "实体重复濒死";
+			ValueTuple<string, object> valueTuple = new ValueTuple<string, object>("entityId", base.Entity.Id);
+			instance.Error(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
+			return false;
+		}
+		Log instance2 = Log.Instance;
+		ELogModule module2 = ELogModule.Battle;
+		ELogAuthor author2 = ELogAuthor.WWJ;
+		string message2 = "[DeathComponent]执行角色濒死逻辑";
+		<>y__InlineArray2<ValueTuple<string, object>> <>y__InlineArray = default(<>y__InlineArray2<ValueTuple<string, object>>);
+		*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 0) = new ValueTuple<string, object>("Entity", base.Entity.ToString());
+		ref ValueTuple<string, object> ptr = ref <PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray, 1);
+		string item = "PbDataId";
+		CreatureDataComponent component = base.Entity.GetComponent<CreatureDataComponent>();
+		ptr = new ValueTuple<string, object>(item, (component != null) ? new int?(component.GetPbDataId()) : null);
+		instance2.Info(module2, author2, message2, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
+		this.IsDyingInternal = true;
+		PawnTimeScaleComponent timeScaleComponent = this.TimeScaleComponent;
+		if (timeScaleComponent != null)
+		{
+			timeScaleComponent.RemoveAllTimeScale();
+		}
+		return true;
+	}
+
+	// Token: 0x06016F7E RID: 94078 RVA: 0x006B5A43 File Offset: 0x006B3C43
 	protected bool HasDeathMontage(ECharacterDeathMontageType montageType)
 	{
 		return this.DeathMontageMap.ContainsKey(montageType) || this.ReplaceDeathMontageMap.ContainsKey(montageType);
 	}
 
-	// Token: 0x060196B3 RID: 104115 RVA: 0x0068F599 File Offset: 0x0068D799
+	// Token: 0x06016F7F RID: 94079 RVA: 0x006B5A61 File Offset: 0x006B3C61
 	[NullableContext(2)]
 	protected virtual UAnimMontage GetDeathMontage(ECharacterDeathMontageType montageType)
 	{
 		return this.DeathMontageMap.GetValueOrDefault(montageType);
 	}
 
-	// Token: 0x060196B4 RID: 104116 RVA: 0x0068F5A7 File Offset: 0x0068D7A7
+	// Token: 0x06016F80 RID: 94080 RVA: 0x006B5A6F File Offset: 0x006B3C6F
 	[NullableContext(2)]
 	protected string GetDeathMontageName(ECharacterDeathMontageType montageType)
 	{
 		return BaseDeathComponent.DeathMontagePathMap.GetValueOrDefault(montageType);
 	}
 
-	// Token: 0x060196B5 RID: 104117 RVA: 0x0068F5B4 File Offset: 0x0068D7B4
+	// Token: 0x06016F81 RID: 94081 RVA: 0x006B5A7C File Offset: 0x006B3C7C
 	[NullableContext(2)]
 	protected unsafe void PlayDeathMontageWithType(ECharacterDeathMontageType montageType, Action<bool> endCallback = null, long? contextId = null, bool? forceDisableAnimOptimization = null)
 	{
@@ -137,7 +183,7 @@ public class BaseDeathComponent : EntityComponent
 		montageComponent3.PlayMontageTaskWhenReady(num.Value, 0f, contextId, -1f);
 	}
 
-	// Token: 0x060196B6 RID: 104118 RVA: 0x0068F724 File Offset: 0x0068D924
+	// Token: 0x06016F82 RID: 94082 RVA: 0x006B5BEC File Offset: 0x006B3DEC
 	[NullableContext(2)]
 	protected bool TryPlayDeathMontageWithTag(Action<bool> endCallback = null, long? contextId = null, bool? forceDisableAnimOptimization = null)
 	{
@@ -175,7 +221,7 @@ public class BaseDeathComponent : EntityComponent
 		return false;
 	}
 
-	// Token: 0x060196B7 RID: 104119 RVA: 0x0068F824 File Offset: 0x0068DA24
+	// Token: 0x06016F83 RID: 94083 RVA: 0x006B5CEC File Offset: 0x006B3EEC
 	public int ReplaceDeathMontage(ECharacterDeathMontageType montageType, string montageName)
 	{
 		OrderedDictionary<int, string> orderedDictionary;
@@ -190,7 +236,7 @@ public class BaseDeathComponent : EntityComponent
 		return this.ReplaceHandleId;
 	}
 
-	// Token: 0x060196B8 RID: 104120 RVA: 0x0068F874 File Offset: 0x0068DA74
+	// Token: 0x06016F84 RID: 94084 RVA: 0x006B5D3C File Offset: 0x006B3F3C
 	public void ResetDeathMontage(int handle)
 	{
 		foreach (OrderedDictionary<int, string> orderedDictionary in this.ReplaceDeathMontageMap.Values)
@@ -199,7 +245,7 @@ public class BaseDeathComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x060196B9 RID: 104121 RVA: 0x0068F8CC File Offset: 0x0068DACC
+	// Token: 0x06016F85 RID: 94085 RVA: 0x006B5D94 File Offset: 0x006B3F94
 	public int RegisterTagDeathMontage(int tagId, string tagName, string montageName)
 	{
 		int num = this.TagReplaceHandleId + 1;
@@ -209,7 +255,7 @@ public class BaseDeathComponent : EntityComponent
 		return num2;
 	}
 
-	// Token: 0x060196BA RID: 104122 RVA: 0x0068F900 File Offset: 0x0068DB00
+	// Token: 0x06016F86 RID: 94086 RVA: 0x006B5DC8 File Offset: 0x006B3FC8
 	public unsafe void UnregisterTagDeathMontage(int tagId, string montageName)
 	{
 		int? num = null;
@@ -256,7 +302,7 @@ public class BaseDeathComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x060196BB RID: 104123 RVA: 0x0068FAFC File Offset: 0x0068DCFC
+	// Token: 0x06016F87 RID: 94087 RVA: 0x006B5FC4 File Offset: 0x006B41C4
 	private void LoadDeathMontage()
 	{
 		foreach (KeyValuePair<ECharacterDeathMontageType, string> keyValuePair in BaseDeathComponent.DeathMontagePathMap)
@@ -275,7 +321,7 @@ public class BaseDeathComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x060196BC RID: 104124 RVA: 0x0068FB84 File Offset: 0x0068DD84
+	// Token: 0x06016F88 RID: 94088 RVA: 0x006B604C File Offset: 0x006B424C
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -283,56 +329,52 @@ public class BaseDeathComponent : EntityComponent
 			return false;
 		}
 		BaseDeathComponent baseDeathComponent = (BaseDeathComponent)componentTemplate;
-		if (base.CanResetComponentProperty("IsDeadInternal"))
+		this.IsDeadInternal = baseDeathComponent.IsDeadInternal;
+		this.IsDyingInternal = baseDeathComponent.IsDyingInternal;
+		if (baseDeathComponent.MontageComponent == null)
 		{
-			this.IsDeadInternal = baseDeathComponent.IsDeadInternal;
+			this.MontageComponent = null;
 		}
-		if (base.CanResetComponentProperty("MontageComponent"))
-		{
-			if (baseDeathComponent.MontageComponent == null)
-			{
-				this.MontageComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseMontageComponent>(this.MontageComponent), "MontageComponent"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("TimeScaleComponent"))
-		{
-			if (baseDeathComponent.TimeScaleComponent == null)
-			{
-				this.TimeScaleComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PawnTimeScaleComponent>(this.TimeScaleComponent), "TimeScaleComponent"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("DeathMontageMap") && baseDeathComponent.DeathMontageMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<ECharacterDeathMontageType, UAnimMontage>>(this.DeathMontageMap), "DeathMontageMap"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.MontageComponent), "MontageComponent"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("ReplaceHandleId"))
+		if (baseDeathComponent.TimeScaleComponent == null)
 		{
-			this.ReplaceHandleId = baseDeathComponent.ReplaceHandleId;
+			this.TimeScaleComponent = null;
 		}
-		if (base.CanResetComponentProperty("ReplaceDeathMontageMap") && baseDeathComponent.ReplaceDeathMontageMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<ECharacterDeathMontageType, OrderedDictionary<int, string>>>(this.ReplaceDeathMontageMap), "ReplaceDeathMontageMap"))
-		{
-			return false;
-		}
-		if (base.CanResetComponentProperty("TagDeathMontageConfigMap") && baseDeathComponent.TagDeathMontageConfigMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<OrderedDictionary<int, ValueTuple<int, string, string>>>(this.TagDeathMontageConfigMap), "TagDeathMontageConfigMap"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TimeScaleComponent), "TimeScaleComponent"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("TagReplaceHandleId"))
+		if (baseDeathComponent.DeathMontageMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.DeathMontageMap), "DeathMontageMap"))
 		{
-			this.TagReplaceHandleId = baseDeathComponent.TagReplaceHandleId;
+			return false;
 		}
+		this.ReplaceHandleId = baseDeathComponent.ReplaceHandleId;
+		if (baseDeathComponent.ReplaceDeathMontageMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ReplaceDeathMontageMap), "ReplaceDeathMontageMap"))
+		{
+			return false;
+		}
+		if (baseDeathComponent.TagDeathMontageConfigMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagDeathMontageConfigMap), "TagDeathMontageConfigMap"))
+		{
+			return false;
+		}
+		this.TagReplaceHandleId = baseDeathComponent.TagReplaceHandleId;
 		return true;
 	}
 
-	// Token: 0x0400BCDB RID: 48347
+	// Token: 0x17002375 RID: 9077
+	// (get) Token: 0x06016F89 RID: 94089 RVA: 0x006B6158 File Offset: 0x006B4358
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400C070 RID: 49264
 	[StaticVariableRuleIgnore]
 	private static readonly Dictionary<ECharacterDeathMontageType, string> DeathMontagePathMap = new Dictionary<ECharacterDeathMontageType, string>
 	{
@@ -354,27 +396,30 @@ public class BaseDeathComponent : EntityComponent
 		}
 	};
 
-	// Token: 0x0400BCDC RID: 48348
+	// Token: 0x0400C071 RID: 49265
 	protected bool IsDeadInternal;
 
-	// Token: 0x0400BCDD RID: 48349
+	// Token: 0x0400C072 RID: 49266
+	protected bool IsDyingInternal;
+
+	// Token: 0x0400C073 RID: 49267
 	[Nullable(2)]
 	protected BaseMontageComponent MontageComponent;
 
-	// Token: 0x0400BCDE RID: 48350
+	// Token: 0x0400C074 RID: 49268
 	[Nullable(2)]
 	protected PawnTimeScaleComponent TimeScaleComponent;
 
-	// Token: 0x0400BCDF RID: 48351
+	// Token: 0x0400C075 RID: 49269
 	private readonly Dictionary<ECharacterDeathMontageType, UAnimMontage> DeathMontageMap = new Dictionary<ECharacterDeathMontageType, UAnimMontage>();
 
-	// Token: 0x0400BCE0 RID: 48352
+	// Token: 0x0400C076 RID: 49270
 	private int ReplaceHandleId;
 
-	// Token: 0x0400BCE1 RID: 48353
+	// Token: 0x0400C077 RID: 49271
 	private readonly Dictionary<ECharacterDeathMontageType, OrderedDictionary<int, string>> ReplaceDeathMontageMap = new Dictionary<ECharacterDeathMontageType, OrderedDictionary<int, string>>();
 
-	// Token: 0x0400BCE2 RID: 48354
+	// Token: 0x0400C078 RID: 49272
 	[TupleElementNames(new string[]
 	{
 		"TagId",
@@ -390,6 +435,6 @@ public class BaseDeathComponent : EntityComponent
 	})]
 	private readonly OrderedDictionary<int, ValueTuple<int, string, string>> TagDeathMontageConfigMap = new OrderedDictionary<int, ValueTuple<int, string, string>>();
 
-	// Token: 0x0400BCE3 RID: 48355
+	// Token: 0x0400C079 RID: 49273
 	private int TagReplaceHandleId;
 }

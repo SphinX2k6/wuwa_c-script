@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B40 RID: 19264
+	// Token: 0x02003AE8 RID: 15080
 	public class TowerDefensePhantomViewArgs : ITowerDefensePhantomViewArgs
 	{
-		// Token: 0x17007BC2 RID: 31682
-		// (get) Token: 0x06031E47 RID: 204359 RVA: 0x00B929FD File Offset: 0x00B90BFD
-		// (set) Token: 0x06031E48 RID: 204360 RVA: 0x00B92A05 File Offset: 0x00B90C05
+		// Token: 0x17004F6F RID: 20335
+		// (get) Token: 0x06026BD7 RID: 158679 RVA: 0x00AD6A61 File Offset: 0x00AD4C61
+		// (set) Token: 0x06026BD8 RID: 158680 RVA: 0x00AD6A69 File Offset: 0x00AD4C69
 		public int RoleCfgId { get; set; }
 	}
 }

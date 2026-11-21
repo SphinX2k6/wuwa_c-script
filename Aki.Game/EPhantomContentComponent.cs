@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x020024BB RID: 9403
+// Token: 0x020019A2 RID: 6562
 internal enum EPhantomContentComponent
 {
-	// Token: 0x04008E20 RID: 36384
+	// Token: 0x04008F6A RID: 36714
 	TogOption,
-	// Token: 0x04008E21 RID: 36385
+	// Token: 0x04008F6B RID: 36715
 	TextureIcon,
-	// Token: 0x04008E22 RID: 36386
+	// Token: 0x04008F6C RID: 36716
 	DescText,
-	// Token: 0x04008E23 RID: 36387
+	// Token: 0x04008F6D RID: 36717
 	NumText,
-	// Token: 0x04008E24 RID: 36388
+	// Token: 0x04008F6E RID: 36718
 	PanelElementIcon,
-	// Token: 0x04008E25 RID: 36389
+	// Token: 0x04008F6F RID: 36719
 	PanelNum,
-	// Token: 0x04008E26 RID: 36390
+	// Token: 0x04008F70 RID: 36720
 	PanelTextNum
 }

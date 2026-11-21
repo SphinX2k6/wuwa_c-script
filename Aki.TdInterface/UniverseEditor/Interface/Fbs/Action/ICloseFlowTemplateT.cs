@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200641C RID: 25628
+	// Token: 0x02006A96 RID: 27286
 	public class ICloseFlowTemplateT
 	{
-		// Token: 0x1700BED3 RID: 48851
-		// (get) Token: 0x0602C589 RID: 181641 RVA: 0x00615F0B File Offset: 0x0061410B
-		// (set) Token: 0x0602C58A RID: 181642 RVA: 0x00615F13 File Offset: 0x00614113
+		// Token: 0x1700C865 RID: 51301
+		// (get) Token: 0x0602ED37 RID: 191799 RVA: 0x00661A1F File Offset: 0x0065FC1F
+		// (set) Token: 0x0602ED38 RID: 191800 RVA: 0x00661A27 File Offset: 0x0065FC27
 		public bool IsResetPosition { get; set; }
 
-		// Token: 0x1700BED4 RID: 48852
-		// (get) Token: 0x0602C58B RID: 181643 RVA: 0x00615F1C File Offset: 0x0061411C
-		// (set) Token: 0x0602C58C RID: 181644 RVA: 0x00615F24 File Offset: 0x00614124
+		// Token: 0x1700C866 RID: 51302
+		// (get) Token: 0x0602ED39 RID: 191801 RVA: 0x00661A30 File Offset: 0x0065FC30
+		// (set) Token: 0x0602ED3A RID: 191802 RVA: 0x00661A38 File Offset: 0x0065FC38
 		public IEndStateT EndState { get; set; }
 
-		// Token: 0x1700BED5 RID: 48853
-		// (get) Token: 0x0602C58D RID: 181645 RVA: 0x00615F2D File Offset: 0x0061412D
-		// (set) Token: 0x0602C58E RID: 181646 RVA: 0x00615F35 File Offset: 0x00614135
+		// Token: 0x1700C867 RID: 51303
+		// (get) Token: 0x0602ED3B RID: 191803 RVA: 0x00661A41 File Offset: 0x0065FC41
+		// (set) Token: 0x0602ED3C RID: 191804 RVA: 0x00661A49 File Offset: 0x0065FC49
 		public bool ExitFilmAspectRatio { get; set; }
 
-		// Token: 0x1700BED6 RID: 48854
-		// (get) Token: 0x0602C58F RID: 181647 RVA: 0x00615F3E File Offset: 0x0061413E
-		// (set) Token: 0x0602C590 RID: 181648 RVA: 0x00615F46 File Offset: 0x00614146
+		// Token: 0x1700C868 RID: 51304
+		// (get) Token: 0x0602ED3D RID: 191805 RVA: 0x00661A52 File Offset: 0x0065FC52
+		// (set) Token: 0x0602ED3E RID: 191806 RVA: 0x00661A5A File Offset: 0x0065FC5A
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602C591 RID: 181649 RVA: 0x00615F4F File Offset: 0x0061414F
+		// Token: 0x0602ED3F RID: 191807 RVA: 0x00661A63 File Offset: 0x0065FC63
 		public ICloseFlowTemplateT()
 		{
 			this.IsResetPosition = false;

@@ -6,7 +6,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020029C8 RID: 10696
+// Token: 0x02001F43 RID: 8003
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +15,7 @@ using UnrealEngine;
 })]
 public class ShipTowerRewardItem : GridProxyAbstract<ShipTowerRewardItemData>
 {
-	// Token: 0x060162AE RID: 90798 RVA: 0x0059B3FC File Offset: 0x005995FC
+	// Token: 0x06013CB4 RID: 81076 RVA: 0x005C63B4 File Offset: 0x005C45B4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -30,7 +30,7 @@ public class ShipTowerRewardItem : GridProxyAbstract<ShipTowerRewardItemData>
 		};
 	}
 
-	// Token: 0x060162AF RID: 90799 RVA: 0x0059B4B0 File Offset: 0x005996B0
+	// Token: 0x06013CB5 RID: 81077 RVA: 0x005C6468 File Offset: 0x005C4668
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ShipTowerRewardItem.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -41,7 +41,7 @@ public class ShipTowerRewardItem : GridProxyAbstract<ShipTowerRewardItemData>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060162B0 RID: 90800 RVA: 0x0059B4F4 File Offset: 0x005996F4
+	// Token: 0x06013CB6 RID: 81078 RVA: 0x005C64AC File Offset: 0x005C46AC
 	public override void Refresh(ShipTowerRewardItemData data, bool isSelected, int gridIndex)
 	{
 		this.ItemData = data;
@@ -87,7 +87,7 @@ public class ShipTowerRewardItem : GridProxyAbstract<ShipTowerRewardItemData>
 		rewardLayout.RefreshByData(this.ItemData.RewardList, null, false);
 	}
 
-	// Token: 0x060162B1 RID: 90801 RVA: 0x0059B5E5 File Offset: 0x005997E5
+	// Token: 0x06013CB7 RID: 81079 RVA: 0x005C659D File Offset: 0x005C479D
 	private void OnClickBtnReceive()
 	{
 		Action<ShipTowerRewardItemData> clickCallBack = this.ClickCallBack;
@@ -98,10 +98,10 @@ public class ShipTowerRewardItem : GridProxyAbstract<ShipTowerRewardItemData>
 		clickCallBack(this.ItemData);
 	}
 
-	// Token: 0x0400A516 RID: 42262
+	// Token: 0x0400A900 RID: 43264
 	private ShipTowerRewardItemData ItemData;
 
-	// Token: 0x0400A517 RID: 42263
+	// Token: 0x0400A901 RID: 43265
 	[Nullable(new byte[]
 	{
 		2,
@@ -109,7 +109,7 @@ public class ShipTowerRewardItem : GridProxyAbstract<ShipTowerRewardItemData>
 	})]
 	private GenericLayout<CommonItemSmallItemGrid, TItem> RewardLayout;
 
-	// Token: 0x0400A518 RID: 42264
+	// Token: 0x0400A902 RID: 43266
 	[Nullable(new byte[]
 	{
 		2,
@@ -117,33 +117,33 @@ public class ShipTowerRewardItem : GridProxyAbstract<ShipTowerRewardItemData>
 	})]
 	public Action<ShipTowerRewardItemData> ClickCallBack;
 
-	// Token: 0x0400A519 RID: 42265
+	// Token: 0x0400A903 RID: 43267
 	[Nullable(2)]
 	public ButtonItem BtnReceive;
 
-	// Token: 0x02008FE9 RID: 36841
+	// Token: 0x02008230 RID: 33328
 	[NullableContext(0)]
 	private static class EChildType
 	{
-		// Token: 0x0402E9A4 RID: 190884
+		// Token: 0x0402A09C RID: 172188
 		public const int TextName = 0;
 
-		// Token: 0x0402E9A5 RID: 190885
+		// Token: 0x0402A09D RID: 172189
 		public const int BtnReceive = 1;
 
-		// Token: 0x0402E9A6 RID: 190886
+		// Token: 0x0402A09E RID: 172190
 		public const int TextProgress = 2;
 
-		// Token: 0x0402E9A7 RID: 190887
+		// Token: 0x0402A09F RID: 172191
 		public const int HLayoutReward = 3;
 
-		// Token: 0x0402E9A8 RID: 190888
+		// Token: 0x0402A0A0 RID: 172192
 		public const int ItemLock = 4;
 
-		// Token: 0x0402E9A9 RID: 190889
+		// Token: 0x0402A0A1 RID: 172193
 		public const int SpriteMask = 5;
 
-		// Token: 0x0402E9AA RID: 190890
+		// Token: 0x0402A0A2 RID: 172194
 		public const int SpriteCompleted = 6;
 	}
 }

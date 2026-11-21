@@ -6,18 +6,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020024E7 RID: 9447
+// Token: 0x020019CE RID: 6606
 [NullableContext(2)]
 [Nullable(0)]
 public class VisionNewRecommendView : UiViewBase
 {
-	// Token: 0x06012FF2 RID: 77810 RVA: 0x004B46C3 File Offset: 0x004B28C3
+	// Token: 0x060104B1 RID: 66737 RVA: 0x004C236F File Offset: 0x004C056F
 	[NullableContext(1)]
 	public VisionNewRecommendView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06012FF3 RID: 77811 RVA: 0x004B46CC File Offset: 0x004B28CC
+	// Token: 0x060104B2 RID: 66738 RVA: 0x004C2378 File Offset: 0x004C0578
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +34,7 @@ public class VisionNewRecommendView : UiViewBase
 		};
 	}
 
-	// Token: 0x06012FF4 RID: 77812 RVA: 0x004B4778 File Offset: 0x004B2978
+	// Token: 0x060104B3 RID: 66739 RVA: 0x004C2424 File Offset: 0x004C0624
 	protected override UniTask OnBeforeStartAsync()
 	{
 		VisionNewRecommendView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -45,14 +45,14 @@ public class VisionNewRecommendView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012FF5 RID: 77813 RVA: 0x004B47BB File Offset: 0x004B29BB
+	// Token: 0x060104B4 RID: 66740 RVA: 0x004C2467 File Offset: 0x004C0667
 	private void InitProxy()
 	{
 		this.Proxy = new VisionNewRecommendProxy();
 		this.Proxy.MainViewSequence = this.UiViewSequence;
 	}
 
-	// Token: 0x06012FF6 RID: 77814 RVA: 0x004B47DC File Offset: 0x004B29DC
+	// Token: 0x060104B5 RID: 66741 RVA: 0x004C2488 File Offset: 0x004C0688
 	private void InitButton()
 	{
 		this.Button = new ButtonItem(base.GetItem(4));
@@ -66,7 +66,7 @@ public class VisionNewRecommendView : UiViewBase
 		this.Button.SetFunction(new Action<int>(this.OnClickPreviewBtn));
 	}
 
-	// Token: 0x06012FF7 RID: 77815 RVA: 0x004B4868 File Offset: 0x004B2A68
+	// Token: 0x060104B6 RID: 66742 RVA: 0x004C2514 File Offset: 0x004C0714
 	private void OnClickChangeBtn(int _)
 	{
 		Action<int, int, int?> onChangeFetterGroupSuccessCallBack = this.OnChangeFetterGroupSuccessCallBack;
@@ -77,7 +77,7 @@ public class VisionNewRecommendView : UiViewBase
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06012FF8 RID: 77816 RVA: 0x004B48B8 File Offset: 0x004B2AB8
+	// Token: 0x060104B7 RID: 66743 RVA: 0x004C2564 File Offset: 0x004C0764
 	private void InitCaptionItem()
 	{
 		this.CaptionItem = new PopupCaptionItem(base.GetItem(0));
@@ -85,7 +85,7 @@ public class VisionNewRecommendView : UiViewBase
 		this.CaptionItem.SetTitleLocalText("PrefabTextItem_PhantomRecommend_Text");
 	}
 
-	// Token: 0x06012FF9 RID: 77817 RVA: 0x004B48F4 File Offset: 0x004B2AF4
+	// Token: 0x060104B8 RID: 66744 RVA: 0x004C25A0 File Offset: 0x004C07A0
 	private UniTask InitLeftPanelView()
 	{
 		VisionNewRecommendView.<InitLeftPanelView>d__14 <InitLeftPanelView>d__;
@@ -96,7 +96,7 @@ public class VisionNewRecommendView : UiViewBase
 		return <InitLeftPanelView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012FFA RID: 77818 RVA: 0x004B4938 File Offset: 0x004B2B38
+	// Token: 0x060104B9 RID: 66745 RVA: 0x004C25E4 File Offset: 0x004C07E4
 	private UniTask InitRightPanelView()
 	{
 		VisionNewRecommendView.<InitRightPanelView>d__15 <InitRightPanelView>d__;
@@ -107,19 +107,19 @@ public class VisionNewRecommendView : UiViewBase
 		return <InitRightPanelView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06012FFB RID: 77819 RVA: 0x004B497B File Offset: 0x004B2B7B
+	// Token: 0x060104BA RID: 66746 RVA: 0x004C2627 File Offset: 0x004C0827
 	private void CloseCallBack()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06012FFC RID: 77820 RVA: 0x004B4984 File Offset: 0x004B2B84
+	// Token: 0x060104BB RID: 66747 RVA: 0x004C2630 File Offset: 0x004C0830
 	protected override void OnHandleReleaseScene()
 	{
 		this.TryHideUiRoleModel();
 	}
 
-	// Token: 0x06012FFD RID: 77821 RVA: 0x004B498C File Offset: 0x004B2B8C
+	// Token: 0x060104BC RID: 66748 RVA: 0x004C2638 File Offset: 0x004C0838
 	private void TryHideUiRoleModel()
 	{
 		TsUiSceneRoleActor roleSystemRoleActor = UiSceneManager.Instance.GetRoleSystemRoleActor();
@@ -133,19 +133,19 @@ public class VisionNewRecommendView : UiViewBase
 		UiModelUtil.Instance.SetVisible(model, false);
 	}
 
-	// Token: 0x06012FFE RID: 77822 RVA: 0x004B49D7 File Offset: 0x004B2BD7
+	// Token: 0x060104BD RID: 66749 RVA: 0x004C2683 File Offset: 0x004C0883
 	protected override void OnBeforeShow()
 	{
 		this.TryHideUiRoleModel();
 	}
 
-	// Token: 0x06012FFF RID: 77823 RVA: 0x004B49DF File Offset: 0x004B2BDF
+	// Token: 0x060104BE RID: 66750 RVA: 0x004C268B File Offset: 0x004C088B
 	protected override void OnStart()
 	{
 		this.RefreshSimpleToggleState();
 	}
 
-	// Token: 0x06013000 RID: 77824 RVA: 0x004B49E8 File Offset: 0x004B2BE8
+	// Token: 0x060104BF RID: 66751 RVA: 0x004C2694 File Offset: 0x004C0894
 	private void RefreshSimpleToggleState()
 	{
 		EToggleState state = this.Proxy.IsSimpleMode ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked;
@@ -157,7 +157,7 @@ public class VisionNewRecommendView : UiViewBase
 		extendToggle.SetToggleState(state, false, false, true);
 	}
 
-	// Token: 0x06013001 RID: 77825 RVA: 0x004B4A20 File Offset: 0x004B2C20
+	// Token: 0x060104C0 RID: 66752 RVA: 0x004C26CC File Offset: 0x004C08CC
 	private void InitOpenParam()
 	{
 		IVisionRecommendViewOpenParam visionRecommendViewOpenParam = this.OpenParam as IVisionRecommendViewOpenParam;
@@ -167,20 +167,20 @@ public class VisionNewRecommendView : UiViewBase
 		this.Proxy.IsFromRoleDev = visionRecommendViewOpenParam.IsFromRoleDev;
 	}
 
-	// Token: 0x06013002 RID: 77826 RVA: 0x004B4A78 File Offset: 0x004B2C78
+	// Token: 0x060104C1 RID: 66753 RVA: 0x004C2724 File Offset: 0x004C0924
 	private void OnClickGuideBtn()
 	{
 		bool showFastFilter = RoleModel.Instance.IsRoleOwned(this.Proxy.CurrentSelectRoleId);
 		PhantomBattleController.Instance.OpenPhantomBattleFetterView(this.Proxy.CurrentSelectFetterRecommendInfo.GetRecommendFetterGroupId(), this.Proxy.CurrentSelectRoleId, showFastFilter, this.Proxy.CurrentSelectFetterRecommendInfo.BuildFetterList()).Forget();
 	}
 
-	// Token: 0x06013003 RID: 77827 RVA: 0x004B4AD6 File Offset: 0x004B2CD6
+	// Token: 0x060104C2 RID: 66754 RVA: 0x004C2782 File Offset: 0x004C0982
 	private void OnClickTrackBtn()
 	{
 		CalabashController.Instance.JumpToCalabashCollectTabView(this.Proxy.CurrentSelectFirstVisionMonsterId);
 	}
 
-	// Token: 0x06013004 RID: 77828 RVA: 0x004B4AF0 File Offset: 0x004B2CF0
+	// Token: 0x060104C3 RID: 66755 RVA: 0x004C279C File Offset: 0x004C099C
 	private void OnClickPreviewBtn(int _)
 	{
 		VisionNewRecommendPreviewViewOpenParam param = new VisionNewRecommendPreviewViewOpenParam
@@ -194,7 +194,7 @@ public class VisionNewRecommendView : UiViewBase
 		UiManager.Instance.OpenView(EUiViewName.VisionNewRecommendPreviewView, param, null);
 	}
 
-	// Token: 0x06013005 RID: 77829 RVA: 0x004B4B32 File Offset: 0x004B2D32
+	// Token: 0x060104C4 RID: 66756 RVA: 0x004C27DE File Offset: 0x004C09DE
 	private void OnClickSimpleToggle(EToggleState _)
 	{
 		VisionNewRecommendProxy proxy = this.Proxy;
@@ -208,37 +208,37 @@ public class VisionNewRecommendView : UiViewBase
 		rightPanelView.RefreshSimpleMode();
 	}
 
-	// Token: 0x04008EFB RID: 36603
+	// Token: 0x04009045 RID: 36933
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x04008EFC RID: 36604
+	// Token: 0x04009046 RID: 36934
 	private VisionNewRecommendProxy Proxy;
 
-	// Token: 0x04008EFD RID: 36605
+	// Token: 0x04009047 RID: 36935
 	private VisionNewRecommendLeftPanelView LeftPanelView;
 
-	// Token: 0x04008EFE RID: 36606
+	// Token: 0x04009048 RID: 36936
 	private VisionNewRecommendRightPanelView RightPanelView;
 
-	// Token: 0x04008EFF RID: 36607
+	// Token: 0x04009049 RID: 36937
 	private ButtonItem Button;
 
-	// Token: 0x04008F00 RID: 36608
+	// Token: 0x0400904A RID: 36938
 	private Action<int, int, int?> OnChangeFetterGroupSuccessCallBack;
 
-	// Token: 0x02008A78 RID: 35448
+	// Token: 0x02007C00 RID: 31744
 	[NullableContext(0)]
 	private enum EComp
 	{
-		// Token: 0x0402CF6F RID: 184175
+		// Token: 0x04028287 RID: 164487
 		CaptionItem,
-		// Token: 0x0402CF70 RID: 184176
+		// Token: 0x04028288 RID: 164488
 		SimpleToggle,
-		// Token: 0x0402CF71 RID: 184177
+		// Token: 0x04028289 RID: 164489
 		PnlLeft,
-		// Token: 0x0402CF72 RID: 184178
+		// Token: 0x0402828A RID: 164490
 		PnlRight,
-		// Token: 0x0402CF73 RID: 184179
+		// Token: 0x0402828B RID: 164491
 		Button
 	}
 }

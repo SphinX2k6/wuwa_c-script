@@ -14,12 +14,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D47 RID: 23879
+	// Token: 0x02004D29 RID: 19753
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class HeadStateData
 	{
-		// Token: 0x0603C970 RID: 248176 RVA: 0x00E8A348 File Offset: 0x00E88548
+		// Token: 0x060318C9 RID: 202953 RVA: 0x00DDAAF8 File Offset: 0x00DD8CF8
 		[NullableContext(1)]
 		public void Initialize(Entity entity)
 		{
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AddEntityEvents();
 		}
 
-		// Token: 0x0603C971 RID: 248177 RVA: 0x00E8A534 File Offset: 0x00E88734
+		// Token: 0x060318CA RID: 202954 RVA: 0x00DDACE4 File Offset: 0x00DD8EE4
 		private unsafe void RefreshHpColor()
 		{
 			string headStateHpColor = BattleUiModel.Instance.GetHeadStateHpColor(this.Camp);
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.HpColor = BattleUiModel.Instance.GetHeadStateHpColor(ECamp.Monster);
 		}
 
-		// Token: 0x0603C972 RID: 248178 RVA: 0x00E8A634 File Offset: 0x00E88834
+		// Token: 0x060318CB RID: 202955 RVA: 0x00DDADE4 File Offset: 0x00DD8FE4
 		public void Clear()
 		{
 			this.RemoveEntityEvents();
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.HasFallDownTag = false;
 		}
 
-		// Token: 0x0603C973 RID: 248179 RVA: 0x00E8A6A8 File Offset: 0x00E888A8
+		// Token: 0x060318CC RID: 202956 RVA: 0x00DDAE58 File Offset: 0x00DD9058
 		public virtual void UnBindAllCallback()
 		{
 			this.OnShieldChangedCallback = null;
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.OnCampChangedCallback = null;
 		}
 
-		// Token: 0x0603C974 RID: 248180 RVA: 0x00E8A718 File Offset: 0x00E88918
+		// Token: 0x060318CD RID: 202957 RVA: 0x00DDAEC8 File Offset: 0x00DD90C8
 		protected virtual void AddEntityEvents()
 		{
 			if (this.Entity == null)
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C975 RID: 248181 RVA: 0x00E8AA98 File Offset: 0x00E88C98
+		// Token: 0x060318CE RID: 202958 RVA: 0x00DDB248 File Offset: 0x00DD9448
 		protected virtual void RemoveEntityEvents()
 		{
 			if (this.Entity == null)
@@ -255,14 +255,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			sceneItemProgressControlComponent.RemoveProgressDataChangedCallback(new Action<SceneItemProgressControlComponent.TProgressData>(this.OnProgressDataChanged));
 		}
 
-		// Token: 0x0603C976 RID: 248182 RVA: 0x00E8AD29 File Offset: 0x00E88F29
+		// Token: 0x060318CF RID: 202959 RVA: 0x00DDB4D9 File Offset: 0x00DD96D9
 		[NullableContext(1)]
 		public void BindOnShieldChanged(Action<float> onShieldChanged)
 		{
 			this.OnShieldChangedCallback = onShieldChanged;
 		}
 
-		// Token: 0x0603C977 RID: 248183 RVA: 0x00E8AD32 File Offset: 0x00E88F32
+		// Token: 0x060318D0 RID: 202960 RVA: 0x00DDB4E2 File Offset: 0x00DD96E2
 		private void OnShieldChanged(float shield)
 		{
 			Action<float> onShieldChangedCallback = this.OnShieldChangedCallback;
@@ -273,14 +273,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			onShieldChangedCallback(shield);
 		}
 
-		// Token: 0x0603C978 RID: 248184 RVA: 0x00E8AD45 File Offset: 0x00E88F45
+		// Token: 0x060318D1 RID: 202961 RVA: 0x00DDB4F5 File Offset: 0x00DD96F5
 		[NullableContext(1)]
 		public void BindOnFallDownVisibleChange(Action onFallDownVisibleChange)
 		{
 			this.OnFallDownVisibleChangeCallback = onFallDownVisibleChange;
 		}
 
-		// Token: 0x0603C979 RID: 248185 RVA: 0x00E8AD4E File Offset: 0x00E88F4E
+		// Token: 0x060318D2 RID: 202962 RVA: 0x00DDB4FE File Offset: 0x00DD96FE
 		private void OnFallDownTagChanged(int tagId, bool bTagExists)
 		{
 			this.HasFallDownTag = bTagExists;
@@ -292,14 +292,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			onFallDownVisibleChangeCallback();
 		}
 
-		// Token: 0x0603C97A RID: 248186 RVA: 0x00E8AD67 File Offset: 0x00E88F67
+		// Token: 0x060318D3 RID: 202963 RVA: 0x00DDB517 File Offset: 0x00DD9717
 		[NullableContext(1)]
 		public void BindOnTimeScale(Action<float, ETimeScaleSourceType> onTimeScale)
 		{
 			this.OnTimeScaleCallback = onTimeScale;
 		}
 
-		// Token: 0x0603C97B RID: 248187 RVA: 0x00E8AD70 File Offset: 0x00E88F70
+		// Token: 0x060318D4 RID: 202964 RVA: 0x00DDB520 File Offset: 0x00DD9720
 		private void OnTimeScale(float timeScale, ETimeScaleSourceType sourceType)
 		{
 			Action<float, ETimeScaleSourceType> onTimeScaleCallback = this.OnTimeScaleCallback;
@@ -310,14 +310,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			onTimeScaleCallback(timeScale, sourceType);
 		}
 
-		// Token: 0x0603C97C RID: 248188 RVA: 0x00E8AD84 File Offset: 0x00E88F84
+		// Token: 0x060318D5 RID: 202965 RVA: 0x00DDB534 File Offset: 0x00DD9734
 		[NullableContext(1)]
 		public void BindOnSceneItemDurabilityChange(Action<int> onSceneItemDurabilityChange)
 		{
 			this.OnSceneItemDurabilityChangeCallback = onSceneItemDurabilityChange;
 		}
 
-		// Token: 0x0603C97D RID: 248189 RVA: 0x00E8AD8D File Offset: 0x00E88F8D
+		// Token: 0x060318D6 RID: 202966 RVA: 0x00DDB53D File Offset: 0x00DD973D
 		private void OnSceneItemDurabilityChange(int durability)
 		{
 			Action<int> onSceneItemDurabilityChangeCallback = this.OnSceneItemDurabilityChangeCallback;
@@ -328,14 +328,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			onSceneItemDurabilityChangeCallback(durability);
 		}
 
-		// Token: 0x0603C97E RID: 248190 RVA: 0x00E8ADA0 File Offset: 0x00E88FA0
+		// Token: 0x060318D7 RID: 202967 RVA: 0x00DDB550 File Offset: 0x00DD9750
 		[NullableContext(1)]
 		public void BindOnHardnessHideChanged(Action<bool> onHardnessHideChanged)
 		{
 			this.OnHardnessHideChangedCallback = onHardnessHideChanged;
 		}
 
-		// Token: 0x0603C97F RID: 248191 RVA: 0x00E8ADA9 File Offset: 0x00E88FA9
+		// Token: 0x060318D8 RID: 202968 RVA: 0x00DDB559 File Offset: 0x00DD9759
 		private void OnVulnerabilityActivated(int tagId, bool bTagExists)
 		{
 			Action<bool> onVulnerabilityActivatedCallback = this.OnVulnerabilityActivatedCallback;
@@ -346,14 +346,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			onVulnerabilityActivatedCallback(bTagExists);
 		}
 
-		// Token: 0x0603C980 RID: 248192 RVA: 0x00E8ADBC File Offset: 0x00E88FBC
+		// Token: 0x060318D9 RID: 202969 RVA: 0x00DDB56C File Offset: 0x00DD976C
 		[NullableContext(1)]
 		public void BindOnVulnerabilityActivated(Action<bool> onVulnerabilityActivated)
 		{
 			this.OnVulnerabilityActivatedCallback = onVulnerabilityActivated;
 		}
 
-		// Token: 0x0603C981 RID: 248193 RVA: 0x00E8ADC5 File Offset: 0x00E88FC5
+		// Token: 0x060318DA RID: 202970 RVA: 0x00DDB575 File Offset: 0x00DD9775
 		private void OnHardnessHideChanged(int tagId, bool bTagExists)
 		{
 			Action<bool> onHardnessHideChangedCallback = this.OnHardnessHideChangedCallback;
@@ -364,14 +364,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			onHardnessHideChangedCallback(bTagExists);
 		}
 
-		// Token: 0x0603C982 RID: 248194 RVA: 0x00E8ADD8 File Offset: 0x00E88FD8
+		// Token: 0x060318DB RID: 202971 RVA: 0x00DDB588 File Offset: 0x00DD9788
 		[NullableContext(1)]
 		public void BindOnHardnessActivated(Action<bool> onHardnessActivated)
 		{
 			this.OnHardnessActivatedCallback = onHardnessActivated;
 		}
 
-		// Token: 0x0603C983 RID: 248195 RVA: 0x00E8ADE1 File Offset: 0x00E88FE1
+		// Token: 0x060318DC RID: 202972 RVA: 0x00DDB591 File Offset: 0x00DD9791
 		private void OnHardnessActivated(int tagId, bool bTagExists)
 		{
 			Action<bool> onHardnessActivatedCallback = this.OnHardnessActivatedCallback;
@@ -382,14 +382,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			onHardnessActivatedCallback(bTagExists);
 		}
 
-		// Token: 0x0603C984 RID: 248196 RVA: 0x00E8ADF4 File Offset: 0x00E88FF4
+		// Token: 0x060318DD RID: 202973 RVA: 0x00DDB5A4 File Offset: 0x00DD97A4
 		[NullableContext(1)]
 		public void BindOnRageActivated(Action<bool> onRageActivated)
 		{
 			this.OnRageActivatedCallback = onRageActivated;
 		}
 
-		// Token: 0x0603C985 RID: 248197 RVA: 0x00E8ADFD File Offset: 0x00E88FFD
+		// Token: 0x060318DE RID: 202974 RVA: 0x00DDB5AD File Offset: 0x00DD97AD
 		private void OnRageActivated(int tagId, bool bTagExists)
 		{
 			Action<bool> onRageActivatedCallback = this.OnRageActivatedCallback;
@@ -400,32 +400,32 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			onRageActivatedCallback(bTagExists);
 		}
 
-		// Token: 0x0603C986 RID: 248198 RVA: 0x00E8AE10 File Offset: 0x00E89010
+		// Token: 0x060318DF RID: 202975 RVA: 0x00DDB5C0 File Offset: 0x00DD97C0
 		private void OnHideTagChanged(int tagId, bool bTagExists)
 		{
 			this.HasHideTag = bTagExists;
 		}
 
-		// Token: 0x0603C987 RID: 248199 RVA: 0x00E8AE19 File Offset: 0x00E89019
+		// Token: 0x060318E0 RID: 202976 RVA: 0x00DDB5C9 File Offset: 0x00DD97C9
 		private void OnDeadTagChanged(int tagId, bool bTagExists)
 		{
 			this.HasDeadTag = bTagExists;
 		}
 
-		// Token: 0x0603C988 RID: 248200 RVA: 0x00E8AE22 File Offset: 0x00E89022
+		// Token: 0x060318E1 RID: 202977 RVA: 0x00DDB5D2 File Offset: 0x00DD97D2
 		private void OnFightTagChanged(int tagId, bool bTagExists)
 		{
 			this.HasFightTag = bTagExists;
 		}
 
-		// Token: 0x0603C989 RID: 248201 RVA: 0x00E8AE2B File Offset: 0x00E8902B
+		// Token: 0x060318E2 RID: 202978 RVA: 0x00DDB5DB File Offset: 0x00DD97DB
 		[NullableContext(1)]
 		public void BindOnHardnessChanged(Action<EAttributeType, float, float> onHardnessChanged)
 		{
 			this.OnHardnessChangedCallback = onHardnessChanged;
 		}
 
-		// Token: 0x0603C98A RID: 248202 RVA: 0x00E8AE34 File Offset: 0x00E89034
+		// Token: 0x060318E3 RID: 202979 RVA: 0x00DDB5E4 File Offset: 0x00DD97E4
 		private void OnHardnessChanged(EAttributeType attributeId, float newValue, float oldValue)
 		{
 			Action<EAttributeType, float, float> onHardnessChangedCallback = this.OnHardnessChangedCallback;
@@ -436,28 +436,28 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			onHardnessChangedCallback(attributeId, newValue, oldValue);
 		}
 
-		// Token: 0x0603C98B RID: 248203 RVA: 0x00E8AE49 File Offset: 0x00E89049
+		// Token: 0x060318E4 RID: 202980 RVA: 0x00DDB5F9 File Offset: 0x00DD97F9
 		[NullableContext(1)]
 		public void BindOnLevelChanged(Action<EAttributeType, float, float> onLevelChanged)
 		{
 			this.OnLevelChangedCallback = onLevelChanged;
 		}
 
-		// Token: 0x0603C98C RID: 248204 RVA: 0x00E8AE52 File Offset: 0x00E89052
+		// Token: 0x060318E5 RID: 202981 RVA: 0x00DDB602 File Offset: 0x00DD9802
 		[NullableContext(1)]
 		public void BindOnLifeChanged(Action<EAttributeType, float, float> onLifeChanged)
 		{
 			this.OnLifeChangedCallback = onLifeChanged;
 		}
 
-		// Token: 0x0603C98D RID: 248205 RVA: 0x00E8AE5B File Offset: 0x00E8905B
+		// Token: 0x060318E6 RID: 202982 RVA: 0x00DDB60B File Offset: 0x00DD980B
 		[NullableContext(1)]
 		public void BindOnCampChanged(Action onCampChanged)
 		{
 			this.OnCampChangedCallback = onCampChanged;
 		}
 
-		// Token: 0x0603C98E RID: 248206 RVA: 0x00E8AE64 File Offset: 0x00E89064
+		// Token: 0x060318E7 RID: 202983 RVA: 0x00DDB614 File Offset: 0x00DD9814
 		private void OnLevelChanged(EAttributeType attributeId, float newValue, float oldValue)
 		{
 			Action<EAttributeType, float, float> onLevelChangedCallback = this.OnLevelChangedCallback;
@@ -468,7 +468,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			onLevelChangedCallback(attributeId, newValue, oldValue);
 		}
 
-		// Token: 0x0603C98F RID: 248207 RVA: 0x00E8AE79 File Offset: 0x00E89079
+		// Token: 0x060318E8 RID: 202984 RVA: 0x00DDB629 File Offset: 0x00DD9829
 		private void OnLifeChanged(EAttributeType attributeId, float newValue, float oldValue)
 		{
 			Action<EAttributeType, float, float> onLifeChangedCallback = this.OnLifeChangedCallback;
@@ -479,14 +479,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			onLifeChangedCallback(attributeId, newValue, oldValue);
 		}
 
-		// Token: 0x0603C990 RID: 248208 RVA: 0x00E8AE8E File Offset: 0x00E8908E
+		// Token: 0x060318E9 RID: 202985 RVA: 0x00DDB63E File Offset: 0x00DD983E
 		[NullableContext(1)]
 		public void BindOnSceneItemEntityHit(Action onSceneItemEntityHit)
 		{
 			this.OnSceneItemEntityHitCallback = onSceneItemEntityHit;
 		}
 
-		// Token: 0x0603C991 RID: 248209 RVA: 0x00E8AE97 File Offset: 0x00E89097
+		// Token: 0x060318EA RID: 202986 RVA: 0x00DDB647 File Offset: 0x00DD9847
 		private void OnSceneItemEntityHit()
 		{
 			Action onSceneItemEntityHitCallback = this.OnSceneItemEntityHitCallback;
@@ -497,14 +497,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			onSceneItemEntityHitCallback();
 		}
 
-		// Token: 0x0603C992 RID: 248210 RVA: 0x00E8AEA9 File Offset: 0x00E890A9
+		// Token: 0x060318EB RID: 202987 RVA: 0x00DDB659 File Offset: 0x00DD9859
 		[NullableContext(1)]
 		public void BindOnProgressControlDataChange(Action<SceneItemProgressControlComponent.TProgressData> onProgressControlDataChange)
 		{
 			this.OnProgressControlDataChangeCallback = onProgressControlDataChange;
 		}
 
-		// Token: 0x0603C993 RID: 248211 RVA: 0x00E8AEB2 File Offset: 0x00E890B2
+		// Token: 0x060318EC RID: 202988 RVA: 0x00DDB662 File Offset: 0x00DD9862
 		[NullableContext(1)]
 		private void OnProgressDataChanged(SceneItemProgressControlComponent.TProgressData progressData)
 		{
@@ -516,13 +516,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			onProgressControlDataChangeCallback(progressData);
 		}
 
-		// Token: 0x0603C994 RID: 248212 RVA: 0x00E8AEC5 File Offset: 0x00E890C5
+		// Token: 0x060318ED RID: 202989 RVA: 0x00DDB675 File Offset: 0x00DD9875
 		public bool ContainsTagById(int tagId)
 		{
 			return this.TagComponent != null && this.TagComponent.HasTag(tagId);
 		}
 
-		// Token: 0x0603C995 RID: 248213 RVA: 0x00E8AEDD File Offset: 0x00E890DD
+		// Token: 0x060318EE RID: 202990 RVA: 0x00DDB68D File Offset: 0x00DD988D
 		public float GetAttributeCurrentValueById(EAttributeType attributeId)
 		{
 			if (this.AttributeComponent == null)
@@ -532,25 +532,25 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return this.AttributeComponent.GetCurrentValue(attributeId);
 		}
 
-		// Token: 0x0603C996 RID: 248214 RVA: 0x00E8AEF9 File Offset: 0x00E890F9
+		// Token: 0x060318EF RID: 202991 RVA: 0x00DDB6A9 File Offset: 0x00DD98A9
 		public Entity GetEntity()
 		{
 			return this.Entity;
 		}
 
-		// Token: 0x0603C997 RID: 248215 RVA: 0x00E8AF01 File Offset: 0x00E89101
+		// Token: 0x060318F0 RID: 202992 RVA: 0x00DDB6B1 File Offset: 0x00DD98B1
 		public int GetEntityId()
 		{
 			return this.EntityId;
 		}
 
-		// Token: 0x0603C998 RID: 248216 RVA: 0x00E8AF09 File Offset: 0x00E89109
+		// Token: 0x060318F1 RID: 202993 RVA: 0x00DDB6B9 File Offset: 0x00DD98B9
 		public bool IsEntityActive()
 		{
 			return this.Entity.Active;
 		}
 
-		// Token: 0x0603C999 RID: 248217 RVA: 0x00E8AF16 File Offset: 0x00E89116
+		// Token: 0x060318F2 RID: 202994 RVA: 0x00DDB6C6 File Offset: 0x00DD98C6
 		public int GetLevel()
 		{
 			if (this.AttributeComponent == null)
@@ -560,7 +560,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return (int)this.AttributeComponent.GetCurrentValue(EAttributeType.Lv);
 		}
 
-		// Token: 0x0603C99A RID: 248218 RVA: 0x00E8AF2F File Offset: 0x00E8912F
+		// Token: 0x060318F3 RID: 202995 RVA: 0x00DDB6DF File Offset: 0x00DD98DF
 		public float GetMaxHp()
 		{
 			if (this.AttributeComponent == null)
@@ -570,7 +570,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return this.AttributeComponent.GetCurrentValue(EAttributeType.LifeMax);
 		}
 
-		// Token: 0x0603C99B RID: 248219 RVA: 0x00E8AF4B File Offset: 0x00E8914B
+		// Token: 0x060318F4 RID: 202996 RVA: 0x00DDB6FB File Offset: 0x00DD98FB
 		public float GetHp()
 		{
 			if (this.AttributeComponent == null)
@@ -580,7 +580,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return this.AttributeComponent.GetCurrentValue(EAttributeType.Life);
 		}
 
-		// Token: 0x0603C99C RID: 248220 RVA: 0x00E8AF67 File Offset: 0x00E89167
+		// Token: 0x060318F5 RID: 202997 RVA: 0x00DDB717 File Offset: 0x00DD9917
 		public float GetShield()
 		{
 			if (this.ShieldComponent == null)
@@ -590,7 +590,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return this.ShieldComponent.ShieldTotal;
 		}
 
-		// Token: 0x0603C99D RID: 248221 RVA: 0x00E8AF82 File Offset: 0x00E89182
+		// Token: 0x060318F6 RID: 202998 RVA: 0x00DDB732 File Offset: 0x00DD9932
 		[NullableContext(0)]
 		[return: TupleElementNames(new string[]
 		{
@@ -602,7 +602,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return new ValueTuple<float, float>(this.GetHp(), this.GetMaxHp());
 		}
 
-		// Token: 0x0603C99E RID: 248222 RVA: 0x00E8AF95 File Offset: 0x00E89195
+		// Token: 0x060318F7 RID: 202999 RVA: 0x00DDB745 File Offset: 0x00DD9945
 		public float GetMaxDurable()
 		{
 			if (this.SceneItemDamageComponent == null)
@@ -612,7 +612,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return this.SceneItemDamageComponent.GetMaxDurablePoint();
 		}
 
-		// Token: 0x0603C99F RID: 248223 RVA: 0x00E8AFB0 File Offset: 0x00E891B0
+		// Token: 0x060318F8 RID: 203000 RVA: 0x00DDB760 File Offset: 0x00DD9960
 		public float GetDurable()
 		{
 			if (this.CreatureDataComponent == null)
@@ -622,7 +622,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return (float)this.CreatureDataComponent.GetDurabilityValue();
 		}
 
-		// Token: 0x0603C9A0 RID: 248224 RVA: 0x00E8AFCC File Offset: 0x00E891CC
+		// Token: 0x060318F9 RID: 203001 RVA: 0x00DDB77C File Offset: 0x00DD997C
 		[NullableContext(0)]
 		[return: TupleElementNames(new string[]
 		{
@@ -644,7 +644,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return new ValueTuple<float, float>(item3, item4);
 		}
 
-		// Token: 0x0603C9A1 RID: 248225 RVA: 0x00E8B00C File Offset: 0x00E8920C
+		// Token: 0x060318FA RID: 203002 RVA: 0x00DDB7BC File Offset: 0x00DD99BC
 		[NullableContext(1)]
 		public global::Vector GetWorldLocation()
 		{
@@ -682,25 +682,25 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return this.ResultWorldLocation;
 		}
 
-		// Token: 0x0603C9A2 RID: 248226 RVA: 0x00E8B191 File Offset: 0x00E89391
+		// Token: 0x060318FB RID: 203003 RVA: 0x00DDB941 File Offset: 0x00DD9B41
 		public void RefreshDistance()
 		{
 			this.DistanceSquared = this.GetSquaredDistanceToMonster();
 		}
 
-		// Token: 0x0603C9A3 RID: 248227 RVA: 0x00E8B19F File Offset: 0x00E8939F
+		// Token: 0x060318FC RID: 203004 RVA: 0x00DDB94F File Offset: 0x00DD9B4F
 		public double GetSquaredDistanceToMonster()
 		{
 			return global::Vector.DistSquared(CameraController.Instance.MainModel.CameraLocation, this.ActorComponent.ActorLocationProxy);
 		}
 
-		// Token: 0x0603C9A4 RID: 248228 RVA: 0x00E8B1C0 File Offset: 0x00E893C0
+		// Token: 0x060318FD RID: 203005 RVA: 0x00DDB970 File Offset: 0x00DD9B70
 		public bool IsNormalMonsterBar()
 		{
 			return HeadStateData.CheckIsNormalMonsterBar(this.ActorComponent);
 		}
 
-		// Token: 0x0603C9A5 RID: 248229 RVA: 0x00E8B1D0 File Offset: 0x00E893D0
+		// Token: 0x060318FE RID: 203006 RVA: 0x00DDB980 File Offset: 0x00DD9B80
 		public static bool CheckIsNormalMonsterBar(BaseActorComponent actorComp)
 		{
 			if (actorComp == null || !actorComp.Valid)
@@ -720,14 +720,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return monsterComponent == null || monsterComponent.BossViewConfig == null || monsterComponent.BossViewConfig.BossStateViewType == EBossStateViewType.None;
 		}
 
-		// Token: 0x0603C9A6 RID: 248230 RVA: 0x00E8B23B File Offset: 0x00E8943B
+		// Token: 0x060318FF RID: 203007 RVA: 0x00DDB9EB File Offset: 0x00DD9BEB
 		public bool IsSceneItem()
 		{
 			BaseActorComponent actorComponent = this.ActorComponent;
 			return actorComponent != null && actorComponent.Valid && this.ActorComponent.CreatureData.GetEntityType() == EEntityType.SceneItem;
 		}
 
-		// Token: 0x0603C9A7 RID: 248231 RVA: 0x00E8B26C File Offset: 0x00E8946C
+		// Token: 0x06031900 RID: 203008 RVA: 0x00DDBA1C File Offset: 0x00DD9C1C
 		public EHeadStateViewType? GetHeadStateType()
 		{
 			CreatureDataComponent creatureDataComponent = this.CreatureDataComponent;
@@ -739,7 +739,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return new EHeadStateViewType?(((headStateViewConfig != null) ? new EHeadStateViewType?(headStateViewConfig.HeadStateViewType) : null).GetValueOrDefault());
 		}
 
-		// Token: 0x0603C9A8 RID: 248232 RVA: 0x00E8B2C6 File Offset: 0x00E894C6
+		// Token: 0x06031901 RID: 203009 RVA: 0x00DDBA76 File Offset: 0x00DD9C76
 		[return: Nullable(new byte[]
 		{
 			2,
@@ -755,7 +755,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return gameplayCueComponent.GetAllCurrentCueRef();
 		}
 
-		// Token: 0x0603C9A9 RID: 248233 RVA: 0x00E8B2DC File Offset: 0x00E894DC
+		// Token: 0x06031902 RID: 203010 RVA: 0x00DDBA8C File Offset: 0x00DD9C8C
 		public string GetHardnessColor()
 		{
 			if (this.CreatureDataComponent == null)
@@ -772,14 +772,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return BattleUiModel.Instance.GetPropertyColor(propertyType);
 		}
 
-		// Token: 0x0603C9AA RID: 248234 RVA: 0x00E8B322 File Offset: 0x00E89522
+		// Token: 0x06031903 RID: 203011 RVA: 0x00DDBAD2 File Offset: 0x00DD9CD2
 		[NullableContext(1)]
 		public string GetHpColor()
 		{
 			return this.HpColor;
 		}
 
-		// Token: 0x0603C9AB RID: 248235 RVA: 0x00E8B32A File Offset: 0x00E8952A
+		// Token: 0x06031904 RID: 203012 RVA: 0x00DDBADA File Offset: 0x00DD9CDA
 		public IActiveBuff GetBuff(int handleId)
 		{
 			CharacterBuffComponent buffComponent = this.BuffComponent;
@@ -790,7 +790,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return buffComponent.GetBuffByHandle(handleId);
 		}
 
-		// Token: 0x0603C9AC RID: 248236 RVA: 0x00E8B33E File Offset: 0x00E8953E
+		// Token: 0x06031905 RID: 203013 RVA: 0x00DDBAEE File Offset: 0x00DD9CEE
 		public SceneItemProgressControlComponent.TProgressData GetProgressControlData()
 		{
 			SceneItemProgressControlComponent progressControlComponent = this.ProgressControlComponent;
@@ -801,13 +801,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return progressControlComponent.GetProgressData();
 		}
 
-		// Token: 0x0603C9AD RID: 248237 RVA: 0x00E8B351 File Offset: 0x00E89551
+		// Token: 0x06031906 RID: 203014 RVA: 0x00DDBB01 File Offset: 0x00DD9D01
 		public void SetOriginalHp(float value)
 		{
 			this.OriginalHp = new float?(value);
 		}
 
-		// Token: 0x0603C9AE RID: 248238 RVA: 0x00E8B35F File Offset: 0x00E8955F
+		// Token: 0x06031907 RID: 203015 RVA: 0x00DDBB0F File Offset: 0x00DD9D0F
 		public void ModifyEntityCamp(ECamp camp)
 		{
 			if (this.Camp == camp)
@@ -824,146 +824,146 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			onCampChangedCallback();
 		}
 
-		// Token: 0x0603C9AF RID: 248239 RVA: 0x00E8B388 File Offset: 0x00E89588
+		// Token: 0x06031908 RID: 203016 RVA: 0x00DDBB38 File Offset: 0x00DD9D38
 		public bool HasTag(int tagId)
 		{
 			BaseTagComponent tagComponent = this.TagComponent;
 			return tagComponent != null && tagComponent.HasTag(tagId);
 		}
 
-		// Token: 0x0401F8E1 RID: 129249
+		// Token: 0x0401A39A RID: 107418
 		[StaticVariableRuleIgnore]
 		private static FName SOCKET_NAME = new FName("MarkCase");
 
-		// Token: 0x0401F8E2 RID: 129250
+		// Token: 0x0401A39B RID: 107419
 		private const float UPDATE_TOLERATION = 0.1f;
 
-		// Token: 0x0401F8E3 RID: 129251
+		// Token: 0x0401A39C RID: 107420
 		public HeadStateCommonParam CommonParam;
 
-		// Token: 0x0401F8E4 RID: 129252
+		// Token: 0x0401A39D RID: 107421
 		protected Entity Entity;
 
-		// Token: 0x0401F8E5 RID: 129253
+		// Token: 0x0401A39E RID: 107422
 		private int EntityId;
 
-		// Token: 0x0401F8E6 RID: 129254
+		// Token: 0x0401A39F RID: 107423
 		private AActor Actor;
 
-		// Token: 0x0401F8E7 RID: 129255
+		// Token: 0x0401A3A0 RID: 107424
 		private IHeadStateViewConfig HeadStateViewConfig;
 
-		// Token: 0x0401F8E8 RID: 129256
+		// Token: 0x0401A3A1 RID: 107425
 		public BaseActorComponent ActorComponent;
 
-		// Token: 0x0401F8E9 RID: 129257
+		// Token: 0x0401A3A2 RID: 107426
 		private BaseTagComponent TagComponent;
 
-		// Token: 0x0401F8EA RID: 129258
+		// Token: 0x0401A3A3 RID: 107427
 		private BaseAttributeComponent AttributeComponent;
 
-		// Token: 0x0401F8EB RID: 129259
+		// Token: 0x0401A3A4 RID: 107428
 		private CharacterShieldComponent ShieldComponent;
 
-		// Token: 0x0401F8EC RID: 129260
+		// Token: 0x0401A3A5 RID: 107429
 		private SceneItemDamageComponent SceneItemDamageComponent;
 
-		// Token: 0x0401F8ED RID: 129261
+		// Token: 0x0401A3A6 RID: 107430
 		public CreatureDataComponent CreatureDataComponent;
 
-		// Token: 0x0401F8EE RID: 129262
+		// Token: 0x0401A3A7 RID: 107431
 		private CharacterGameplayCueComponent GameplayCueComponent;
 
-		// Token: 0x0401F8EF RID: 129263
+		// Token: 0x0401A3A8 RID: 107432
 		private CharacterBuffComponent BuffComponent;
 
-		// Token: 0x0401F8F0 RID: 129264
+		// Token: 0x0401A3A9 RID: 107433
 		private SceneItemProgressControlComponent ProgressControlComponent;
 
-		// Token: 0x0401F8F1 RID: 129265
+		// Token: 0x0401A3AA RID: 107434
 		private bool IsSocketExist;
 
-		// Token: 0x0401F8F2 RID: 129266
+		// Token: 0x0401A3AB RID: 107435
 		private USkeletalMeshComponent SkeletalMesh;
 
-		// Token: 0x0401F8F3 RID: 129267
+		// Token: 0x0401A3AC RID: 107436
 		private FName? SocketName;
 
-		// Token: 0x0401F8F4 RID: 129268
+		// Token: 0x0401A3AD RID: 107437
 		private float HeightOffset;
 
-		// Token: 0x0401F8F5 RID: 129269
+		// Token: 0x0401A3AE RID: 107438
 		private float ForwardOffset;
 
-		// Token: 0x0401F8F6 RID: 129270
+		// Token: 0x0401A3AF RID: 107439
 		private ITagTask HardnessHideListenTask;
 
-		// Token: 0x0401F8F7 RID: 129271
+		// Token: 0x0401A3B0 RID: 107440
 		private ITagTask HardnessActivatedListenTask;
 
-		// Token: 0x0401F8F8 RID: 129272
+		// Token: 0x0401A3B1 RID: 107441
 		private ITagTask RageActivatedListenTask;
 
-		// Token: 0x0401F8F9 RID: 129273
+		// Token: 0x0401A3B2 RID: 107442
 		[Nullable(1)]
 		private readonly global::Vector TmpVector = new global::Vector();
 
-		// Token: 0x0401F8FA RID: 129274
+		// Token: 0x0401A3B3 RID: 107443
 		[Nullable(1)]
 		private readonly global::Vector ResultWorldLocation = new global::Vector();
 
-		// Token: 0x0401F8FB RID: 129275
+		// Token: 0x0401A3B4 RID: 107444
 		[Nullable(1)]
 		private readonly global::Vector CachedWorldLocation = new global::Vector();
 
-		// Token: 0x0401F8FC RID: 129276
+		// Token: 0x0401A3B5 RID: 107445
 		[Nullable(1)]
 		private readonly global::Vector TmpCachedWorldLocation = new global::Vector();
 
-		// Token: 0x0401F8FD RID: 129277
+		// Token: 0x0401A3B6 RID: 107446
 		[Nullable(1)]
 		private readonly global::Vector CameraToActorVector = new global::Vector();
 
-		// Token: 0x0401F8FE RID: 129278
+		// Token: 0x0401A3B7 RID: 107447
 		private Action<float> OnShieldChangedCallback;
 
-		// Token: 0x0401F8FF RID: 129279
+		// Token: 0x0401A3B8 RID: 107448
 		private Action OnFallDownVisibleChangeCallback;
 
-		// Token: 0x0401F900 RID: 129280
+		// Token: 0x0401A3B9 RID: 107449
 		private Action<float, ETimeScaleSourceType> OnTimeScaleCallback;
 
-		// Token: 0x0401F901 RID: 129281
+		// Token: 0x0401A3BA RID: 107450
 		private Action<int> OnSceneItemDurabilityChangeCallback;
 
-		// Token: 0x0401F902 RID: 129282
+		// Token: 0x0401A3BB RID: 107451
 		private Action<bool> OnVulnerabilityActivatedCallback;
 
-		// Token: 0x0401F903 RID: 129283
+		// Token: 0x0401A3BC RID: 107452
 		private Action<bool> OnHardnessHideChangedCallback;
 
-		// Token: 0x0401F904 RID: 129284
+		// Token: 0x0401A3BD RID: 107453
 		private Action<bool> OnHardnessActivatedCallback;
 
-		// Token: 0x0401F905 RID: 129285
+		// Token: 0x0401A3BE RID: 107454
 		private Action<bool> OnRageActivatedCallback;
 
-		// Token: 0x0401F906 RID: 129286
+		// Token: 0x0401A3BF RID: 107455
 		private Action<EAttributeType, float, float> OnHardnessChangedCallback;
 
-		// Token: 0x0401F907 RID: 129287
+		// Token: 0x0401A3C0 RID: 107456
 		private Action<EAttributeType, float, float> OnLevelChangedCallback;
 
-		// Token: 0x0401F908 RID: 129288
+		// Token: 0x0401A3C1 RID: 107457
 		private Action<EAttributeType, float, float> OnLifeChangedCallback;
 
-		// Token: 0x0401F909 RID: 129289
+		// Token: 0x0401A3C2 RID: 107458
 		private Action OnCampChangedCallback;
 
-		// Token: 0x0401F90A RID: 129290
+		// Token: 0x0401A3C3 RID: 107459
 		private Action OnSceneItemEntityHitCallback;
 
-		// Token: 0x0401F90B RID: 129291
+		// Token: 0x0401A3C4 RID: 107460
 		[Nullable(new byte[]
 		{
 			2,
@@ -971,41 +971,41 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 		})]
 		private Action<SceneItemProgressControlComponent.TProgressData> OnProgressControlDataChangeCallback;
 
-		// Token: 0x0401F90C RID: 129292
+		// Token: 0x0401A3C5 RID: 107461
 		private ITagTask DeadTagListenTask;
 
-		// Token: 0x0401F90D RID: 129293
+		// Token: 0x0401A3C6 RID: 107462
 		private ITagTask HideTagListenTask;
 
-		// Token: 0x0401F90E RID: 129294
+		// Token: 0x0401A3C7 RID: 107463
 		private ITagTask FightTagListenTask;
 
-		// Token: 0x0401F90F RID: 129295
+		// Token: 0x0401A3C8 RID: 107464
 		private ITagTask FallDownTagListenTask;
 
-		// Token: 0x0401F910 RID: 129296
+		// Token: 0x0401A3C9 RID: 107465
 		public bool HasHideTag;
 
-		// Token: 0x0401F911 RID: 129297
+		// Token: 0x0401A3CA RID: 107466
 		public bool HasDeadTag;
 
-		// Token: 0x0401F912 RID: 129298
+		// Token: 0x0401A3CB RID: 107467
 		public bool HasFightTag;
 
-		// Token: 0x0401F913 RID: 129299
+		// Token: 0x0401A3CC RID: 107468
 		public bool HasFallDownTag;
 
-		// Token: 0x0401F914 RID: 129300
+		// Token: 0x0401A3CD RID: 107469
 		public ECamp Camp = ECamp.Monster;
 
-		// Token: 0x0401F915 RID: 129301
+		// Token: 0x0401A3CE RID: 107470
 		[Nullable(1)]
 		private string HpColor = string.Empty;
 
-		// Token: 0x0401F916 RID: 129302
+		// Token: 0x0401A3CF RID: 107471
 		public double DistanceSquared;
 
-		// Token: 0x0401F917 RID: 129303
+		// Token: 0x0401A3D0 RID: 107472
 		public float? OriginalHp = new float?(0f);
 	}
 }

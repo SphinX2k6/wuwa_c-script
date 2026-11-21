@@ -3,18 +3,18 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B1D RID: 19229
+	// Token: 0x02003AC5 RID: 15045
 	[NullableContext(1)]
 	public interface ITowerDefenseRankPlayerName
 	{
-		// Token: 0x17007B50 RID: 31568
-		// (get) Token: 0x06031CF9 RID: 204025
-		// (set) Token: 0x06031CFA RID: 204026
+		// Token: 0x17004EFD RID: 20221
+		// (get) Token: 0x06026A89 RID: 158345
+		// (set) Token: 0x06026A8A RID: 158346
 		int PlayerId { get; set; }
 
-		// Token: 0x17007B51 RID: 31569
-		// (get) Token: 0x06031CFB RID: 204027
-		// (set) Token: 0x06031CFC RID: 204028
+		// Token: 0x17004EFE RID: 20222
+		// (get) Token: 0x06026A8B RID: 158347
+		// (set) Token: 0x06026A8C RID: 158348
 		string PlayerName { get; set; }
 	}
 }

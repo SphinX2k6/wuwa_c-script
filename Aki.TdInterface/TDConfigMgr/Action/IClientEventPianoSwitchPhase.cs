@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020018AC RID: 6316
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001A37 RID: 6711
 	public class IClientEventPianoSwitchPhase : IClientEventPianoEvent
 	{
-		// Token: 0x06008793 RID: 34707 RVA: 0x001414D4 File Offset: 0x0013F6D4
+		// Token: 0x06008EBB RID: 36539 RVA: 0x00150D08 File Offset: 0x0014EF08
 		private IClientEventPianoSwitchPhase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008794 RID: 34708 RVA: 0x0014150C File Offset: 0x0013F70C
+		// Token: 0x06008EBC RID: 36540 RVA: 0x00150D40 File Offset: 0x0014EF40
 		public static IClientEventPianoSwitchPhase Create([Nullable(2)] IClientEventPianoSwitchPhase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008795 RID: 34709 RVA: 0x0014151F File Offset: 0x0013F71F
+		// Token: 0x06008EBD RID: 36541 RVA: 0x00150D53 File Offset: 0x0014EF53
 		public static IClientEventPianoSwitchPhase CreateFromSetValue([Nullable(2)] IClientEventPianoSwitchPhase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008796 RID: 34710 RVA: 0x00141532 File Offset: 0x0013F732
+		// Token: 0x06008EBE RID: 36542 RVA: 0x00150D66 File Offset: 0x0014EF66
 		public new IClientEventPianoSwitchPhase_SetValue ToSetValue()
 		{
 			return new IClientEventPianoSwitchPhase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002C1C RID: 11292
-		// (get) Token: 0x06008797 RID: 34711 RVA: 0x00141545 File Offset: 0x0013F745
-		// (set) Token: 0x06008798 RID: 34712 RVA: 0x00141570 File Offset: 0x0013F770
+		// Token: 0x17002E17 RID: 11799
+		// (get) Token: 0x06008EBF RID: 36543 RVA: 0x00150D79 File Offset: 0x0014EF79
+		// (set) Token: 0x06008EC0 RID: 36544 RVA: 0x00150DA4 File Offset: 0x0014EFA4
 		public override EClientEventPianoEventType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400554D RID: 21837
+		// Token: 0x0400599A RID: 22938
 		[Nullable(2)]
 		protected new IClientEventPianoSwitchPhase FbInstance;
 
-		// Token: 0x0400554E RID: 21838
+		// Token: 0x0400599B RID: 22939
 		[Nullable(2)]
 		protected new IClientEventPianoSwitchPhase_SetValue PocoInterface;
 	}

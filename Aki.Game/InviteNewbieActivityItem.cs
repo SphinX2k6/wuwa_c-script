@@ -8,12 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200128E RID: 4750
+// Token: 0x02000742 RID: 1858
 [NullableContext(2)]
 [Nullable(0)]
 public class InviteNewbieActivityItem : UiPanelBase
 {
-	// Token: 0x060081E2 RID: 33250 RVA: 0x001B8A3C File Offset: 0x001B6C3C
+	// Token: 0x06005579 RID: 21881 RVA: 0x001C170C File Offset: 0x001BF90C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 4;
@@ -31,7 +31,7 @@ public class InviteNewbieActivityItem : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x060081E3 RID: 33251 RVA: 0x001B8AE8 File Offset: 0x001B6CE8
+	// Token: 0x0600557A RID: 21882 RVA: 0x001C17B8 File Offset: 0x001BF9B8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		InviteNewbieActivityItem.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -42,7 +42,7 @@ public class InviteNewbieActivityItem : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060081E4 RID: 33252 RVA: 0x001B8B2C File Offset: 0x001B6D2C
+	// Token: 0x0600557B RID: 21883 RVA: 0x001C17FC File Offset: 0x001BF9FC
 	protected override void OnStart()
 	{
 		Activity value = this.ActivityDataCache.LocalConfig.Value;
@@ -66,7 +66,7 @@ public class InviteNewbieActivityItem : UiPanelBase
 		this.FunctionalComponent.FunctionButton.SetLocalTextNew("Activity_104600001_GObutton", Array.Empty<object>());
 	}
 
-	// Token: 0x060081E5 RID: 33253 RVA: 0x001B8C73 File Offset: 0x001B6E73
+	// Token: 0x0600557C RID: 21884 RVA: 0x001C1943 File Offset: 0x001BFB43
 	private void OnClickEnter()
 	{
 		ActivityController.Instance.JumpAndLog(this.ActivityDataCache, delegate()
@@ -76,21 +76,21 @@ public class InviteNewbieActivityItem : UiPanelBase
 		});
 	}
 
-	// Token: 0x060081E6 RID: 33254 RVA: 0x001B8C91 File Offset: 0x001B6E91
+	// Token: 0x0600557D RID: 21885 RVA: 0x001C1961 File Offset: 0x001BFB61
 	protected override void OnBeforeShow()
 	{
 		base.OnBeforeShow();
 		this.FunctionalComponent.FunctionButton.BindRedDot(ERedDotName.InviteNewbie, 0);
 	}
 
-	// Token: 0x060081E7 RID: 33255 RVA: 0x001B8CAF File Offset: 0x001B6EAF
+	// Token: 0x0600557E RID: 21886 RVA: 0x001C197F File Offset: 0x001BFB7F
 	protected override void OnAfterHide()
 	{
 		base.OnAfterHide();
 		this.FunctionalComponent.FunctionButton.UnBindGivenUid(0);
 	}
 
-	// Token: 0x060081E8 RID: 33256 RVA: 0x001B8CC8 File Offset: 0x001B6EC8
+	// Token: 0x0600557F RID: 21887 RVA: 0x001C1998 File Offset: 0x001BFB98
 	[NullableContext(1)]
 	public void RefreshTimerTextByData(bool isShow, string timeText)
 	{
@@ -101,16 +101,16 @@ public class InviteNewbieActivityItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x04003AC8 RID: 15048
+	// Token: 0x04003B60 RID: 15200
 	private ActivityBaseData ActivityDataCache;
 
-	// Token: 0x04003AC9 RID: 15049
+	// Token: 0x04003B61 RID: 15201
 	private ActivityTitleTypeA TitleComponent;
 
-	// Token: 0x04003ACA RID: 15050
+	// Token: 0x04003B62 RID: 15202
 	private ActivityDescriptionTypeA DescriptionComponent;
 
-	// Token: 0x04003ACB RID: 15051
+	// Token: 0x04003B63 RID: 15203
 	[Nullable(new byte[]
 	{
 		2,
@@ -118,23 +118,23 @@ public class InviteNewbieActivityItem : UiPanelBase
 	})]
 	private ActivityRewardList<CommonItemSmallItemGrid, TItem> RewardListComponent;
 
-	// Token: 0x04003ACC RID: 15052
+	// Token: 0x04003B64 RID: 15204
 	private ActivityFunctionalTypeA FunctionalComponent;
 
-	// Token: 0x020078A4 RID: 30884
+	// Token: 0x02006A2F RID: 27183
 	[NullableContext(0)]
 	private class EComponent
 	{
-		// Token: 0x04027BF1 RID: 162801
+		// Token: 0x04022F22 RID: 143138
 		public const int TitleItem = 0;
 
-		// Token: 0x04027BF2 RID: 162802
+		// Token: 0x04022F23 RID: 143139
 		public const int DescriptionItem = 1;
 
-		// Token: 0x04027BF3 RID: 162803
+		// Token: 0x04022F24 RID: 143140
 		public const int RewardListItem = 2;
 
-		// Token: 0x04027BF4 RID: 162804
+		// Token: 0x04022F25 RID: 143141
 		public const int FunctionalItem = 3;
 	}
 }

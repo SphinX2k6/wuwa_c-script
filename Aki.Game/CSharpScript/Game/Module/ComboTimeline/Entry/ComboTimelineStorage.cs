@@ -6,22 +6,22 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.ComboTimeline.Entry
 {
-	// Token: 0x02005B9D RID: 23453
+	// Token: 0x02004B7D RID: 19325
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class ComboTimelineStorage
 	{
-		// Token: 0x0603B51E RID: 242974 RVA: 0x00E22D7F File Offset: 0x00E20F7F
+		// Token: 0x0603046B RID: 197739 RVA: 0x00D732CF File Offset: 0x00D714CF
 		private static string BuildPath(string fileId)
 		{
 			return UKismetSystemLibrary.ConvertToAbsolutePath(UKismetSystemLibrary.GetProjectDirectory() + "../Config/Raw/Tables/k.可视化编辑/y.演示序列") + "/" + fileId + ".json";
 		}
 
-		// Token: 0x0603B51F RID: 242975 RVA: 0x00E22DA8 File Offset: 0x00E20FA8
+		// Token: 0x0603046C RID: 197740 RVA: 0x00D732F8 File Offset: 0x00D714F8
 		public static bool WriteConfig(IShowTimelineConfig config)
 		{
 			string text = ComboTimelineStorage.BuildPath(config.Id);
-			string text2 = Json.Stringify<IShowTimelineConfig>(config, null);
+			string text2 = Json.Stringify(config, null);
 			bool flag = text2 != null && UKuroStaticLibrary.SaveStringToFile(text2, text, false);
 			if (flag)
 			{
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.ComboTimeline.Entry
 			return flag;
 		}
 
-		// Token: 0x0603B520 RID: 242976 RVA: 0x00E22E30 File Offset: 0x00E21030
+		// Token: 0x0603046D RID: 197741 RVA: 0x00D73380 File Offset: 0x00D71580
 		[return: Nullable(2)]
 		public static IShowTimelineConfig ReadConfig(string fileId)
 		{

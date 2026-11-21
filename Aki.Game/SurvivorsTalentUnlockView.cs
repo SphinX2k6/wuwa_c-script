@@ -7,17 +7,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002B56 RID: 11094
+// Token: 0x020020D2 RID: 8402
 [NullableContext(1)]
 [Nullable(0)]
 public class SurvivorsTalentUnlockView : UiViewBase
 {
-	// Token: 0x0601701D RID: 94237 RVA: 0x005D776C File Offset: 0x005D596C
+	// Token: 0x06014A4E RID: 84558 RVA: 0x006042D8 File Offset: 0x006024D8
 	public SurvivorsTalentUnlockView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0601701E RID: 94238 RVA: 0x005D7778 File Offset: 0x005D5978
+	// Token: 0x06014A4F RID: 84559 RVA: 0x006042E4 File Offset: 0x006024E4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -34,7 +34,7 @@ public class SurvivorsTalentUnlockView : UiViewBase
 		};
 	}
 
-	// Token: 0x0601701F RID: 94239 RVA: 0x005D7824 File Offset: 0x005D5A24
+	// Token: 0x06014A50 RID: 84560 RVA: 0x00604390 File Offset: 0x00602590
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SurvivorsTalentUnlockView.<OnBeforeStartAsync>d__3 <OnBeforeStartAsync>d__;
@@ -45,19 +45,19 @@ public class SurvivorsTalentUnlockView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06017020 RID: 94240 RVA: 0x005D7867 File Offset: 0x005D5A67
+	// Token: 0x06014A51 RID: 84561 RVA: 0x006043D3 File Offset: 0x006025D3
 	private SurvivorsTalentTreeMediumItemGrid InitItemGrid()
 	{
 		return new SurvivorsTalentTreeMediumItemGrid();
 	}
 
-	// Token: 0x06017021 RID: 94241 RVA: 0x005D786E File Offset: 0x005D5A6E
+	// Token: 0x06014A52 RID: 84562 RVA: 0x006043DA File Offset: 0x006025DA
 	private void OnClickCloseBtn()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0400ABD4 RID: 43988
+	// Token: 0x0400AFDA RID: 45018
 	[Nullable(new byte[]
 	{
 		2,

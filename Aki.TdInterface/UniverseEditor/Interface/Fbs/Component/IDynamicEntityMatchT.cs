@@ -4,45 +4,45 @@ using Aki.UniverseEditor.Interface.Fbs.Common;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020050D9 RID: 20697
+	// Token: 0x0200563E RID: 22078
 	public class IDynamicEntityMatchT
 	{
-		// Token: 0x170096A7 RID: 38567
-		// (get) Token: 0x060214F5 RID: 136437 RVA: 0x004A0588 File Offset: 0x0049E788
-		// (set) Token: 0x060214F6 RID: 136438 RVA: 0x004A0590 File Offset: 0x0049E790
+		// Token: 0x17009E94 RID: 40596
+		// (get) Token: 0x06023449 RID: 144457 RVA: 0x004DA514 File Offset: 0x004D8714
+		// (set) Token: 0x0602344A RID: 144458 RVA: 0x004DA51C File Offset: 0x004D871C
 		public IEntityCategoryT Category { get; set; }
 
-		// Token: 0x170096A8 RID: 38568
-		// (get) Token: 0x060214F7 RID: 136439 RVA: 0x004A0599 File Offset: 0x0049E799
-		// (set) Token: 0x060214F8 RID: 136440 RVA: 0x004A05A1 File Offset: 0x0049E7A1
+		// Token: 0x17009E95 RID: 40597
+		// (get) Token: 0x0602344B RID: 144459 RVA: 0x004DA525 File Offset: 0x004D8725
+		// (set) Token: 0x0602344C RID: 144460 RVA: 0x004DA52D File Offset: 0x004D872D
 		public EEntityCategory CategoryType { get; set; }
 
-		// Token: 0x170096A9 RID: 38569
-		// (get) Token: 0x060214F9 RID: 136441 RVA: 0x004A05AA File Offset: 0x0049E7AA
-		// (set) Token: 0x060214FA RID: 136442 RVA: 0x004A05B2 File Offset: 0x0049E7B2
+		// Token: 0x17009E96 RID: 40598
+		// (get) Token: 0x0602344D RID: 144461 RVA: 0x004DA536 File Offset: 0x004D8736
+		// (set) Token: 0x0602344E RID: 144462 RVA: 0x004DA53E File Offset: 0x004D873E
 		public List<int> EntityIds { get; set; }
 
-		// Token: 0x170096AA RID: 38570
-		// (get) Token: 0x060214FB RID: 136443 RVA: 0x004A05BB File Offset: 0x0049E7BB
-		// (set) Token: 0x060214FC RID: 136444 RVA: 0x004A05C3 File Offset: 0x0049E7C3
+		// Token: 0x17009E97 RID: 40599
+		// (get) Token: 0x0602344F RID: 144463 RVA: 0x004DA547 File Offset: 0x004D8747
+		// (set) Token: 0x06023450 RID: 144464 RVA: 0x004DA54F File Offset: 0x004D874F
 		public IEntityStateT State { get; set; }
 
-		// Token: 0x170096AB RID: 38571
-		// (get) Token: 0x060214FD RID: 136445 RVA: 0x004A05CC File Offset: 0x0049E7CC
-		// (set) Token: 0x060214FE RID: 136446 RVA: 0x004A05D4 File Offset: 0x0049E7D4
+		// Token: 0x17009E98 RID: 40600
+		// (get) Token: 0x06023451 RID: 144465 RVA: 0x004DA558 File Offset: 0x004D8758
+		// (set) Token: 0x06023452 RID: 144466 RVA: 0x004DA560 File Offset: 0x004D8760
 		public List<EEntityPropertyType> HasProperty { get; set; }
 
-		// Token: 0x170096AC RID: 38572
-		// (get) Token: 0x060214FF RID: 136447 RVA: 0x004A05DD File Offset: 0x0049E7DD
-		// (set) Token: 0x06021500 RID: 136448 RVA: 0x004A05E5 File Offset: 0x0049E7E5
+		// Token: 0x17009E99 RID: 40601
+		// (get) Token: 0x06023453 RID: 144467 RVA: 0x004DA569 File Offset: 0x004D8769
+		// (set) Token: 0x06023454 RID: 144468 RVA: 0x004DA571 File Offset: 0x004D8771
 		public List<EEntityPropertyType> NoProperty { get; set; }
 
-		// Token: 0x170096AD RID: 38573
-		// (get) Token: 0x06021501 RID: 136449 RVA: 0x004A05EE File Offset: 0x0049E7EE
-		// (set) Token: 0x06021502 RID: 136450 RVA: 0x004A05F6 File Offset: 0x0049E7F6
+		// Token: 0x17009E9A RID: 40602
+		// (get) Token: 0x06023455 RID: 144469 RVA: 0x004DA57A File Offset: 0x004D877A
+		// (set) Token: 0x06023456 RID: 144470 RVA: 0x004DA582 File Offset: 0x004D8782
 		public byte NullMask { get; set; }
 
-		// Token: 0x06021503 RID: 136451 RVA: 0x004A05FF File Offset: 0x0049E7FF
+		// Token: 0x06023457 RID: 144471 RVA: 0x004DA58B File Offset: 0x004D878B
 		public IDynamicEntityMatchT()
 		{
 			this.Category = null;

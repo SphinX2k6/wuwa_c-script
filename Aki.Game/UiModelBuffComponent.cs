@@ -5,12 +5,12 @@ using Aki.Config;
 using CSharpScript.Game.Effect;
 using UnrealEngine;
 
-// Token: 0x02002C84 RID: 11396
+// Token: 0x020021DD RID: 8669
 [NullableContext(1)]
 [Nullable(0)]
 public class UiModelBuffComponent : UiModelComponentBase
 {
-	// Token: 0x06017CD8 RID: 97496 RVA: 0x0060DBBA File Offset: 0x0060BDBA
+	// Token: 0x0601554B RID: 87371 RVA: 0x00633682 File Offset: 0x00631882
 	protected override void OnInit()
 	{
 		this.ActorComponent = base.Owner.CheckGetComponent<UiModelActorComponent>();
@@ -18,13 +18,13 @@ public class UiModelBuffComponent : UiModelComponentBase
 		this.RenderingMaterialComponent = base.Owner.CheckGetComponent<UiModelRenderingMaterialComponent>();
 	}
 
-	// Token: 0x06017CD9 RID: 97497 RVA: 0x0060DBEF File Offset: 0x0060BDEF
+	// Token: 0x0601554C RID: 87372 RVA: 0x006336B7 File Offset: 0x006318B7
 	protected override void OnEnd()
 	{
 		this.RemoveAllBuffId();
 	}
 
-	// Token: 0x06017CDA RID: 97498 RVA: 0x0060DBF8 File Offset: 0x0060BDF8
+	// Token: 0x0601554D RID: 87373 RVA: 0x006336C0 File Offset: 0x006318C0
 	public void AddBuffByBuffId(long buffId)
 	{
 		if (this.BuffToHandlesMap.ContainsKey(buffId))
@@ -54,7 +54,7 @@ public class UiModelBuffComponent : UiModelComponentBase
 		this.BuffToHandlesMap[buffId] = buffHandle;
 	}
 
-	// Token: 0x06017CDB RID: 97499 RVA: 0x0060DC90 File Offset: 0x0060BE90
+	// Token: 0x0601554E RID: 87374 RVA: 0x00633758 File Offset: 0x00631958
 	private void ApplyCueConfig(Buff buffConfig, GameplayCue cueConfig, BuffHandle buffHandle)
 	{
 		ECueType cueType = (ECueType)cueConfig.CueType;
@@ -81,7 +81,7 @@ public class UiModelBuffComponent : UiModelComponentBase
 		}
 	}
 
-	// Token: 0x06017CDC RID: 97500 RVA: 0x0060DCE4 File Offset: 0x0060BEE4
+	// Token: 0x0601554F RID: 87375 RVA: 0x006337AC File Offset: 0x006319AC
 	public int AddMaterialControllerByCueConfig(GameplayCue config)
 	{
 		string path = config.Path;
@@ -96,7 +96,7 @@ public class UiModelBuffComponent : UiModelComponentBase
 		return this.RenderingMaterialComponent.AddRenderingMaterialByPath(path);
 	}
 
-	// Token: 0x06017CDD RID: 97501 RVA: 0x0060DD1C File Offset: 0x0060BF1C
+	// Token: 0x06015550 RID: 87376 RVA: 0x006337E4 File Offset: 0x006319E4
 	public int PlayEffectByConfig(Buff buffConfig, GameplayCue cueConfig)
 	{
 		float buffDuration = 0f;
@@ -151,7 +151,7 @@ public class UiModelBuffComponent : UiModelComponentBase
 		return this.EffectComponent.PlayEffectByContext(uiModelEffectPlayContext);
 	}
 
-	// Token: 0x06017CDE RID: 97502 RVA: 0x0060DF34 File Offset: 0x0060C134
+	// Token: 0x06015551 RID: 87377 RVA: 0x006339FC File Offset: 0x00631BFC
 	public void StopEffectByCueEndRule(int effectHandle, ECueEndRule endRule)
 	{
 		bool bFastStop = false;
@@ -174,7 +174,7 @@ public class UiModelBuffComponent : UiModelComponentBase
 		}
 	}
 
-	// Token: 0x06017CDF RID: 97503 RVA: 0x0060DF88 File Offset: 0x0060C188
+	// Token: 0x06015552 RID: 87378 RVA: 0x00633A50 File Offset: 0x00631C50
 	public void RemoveBuffByBuffId(long buffId)
 	{
 		BuffHandle buffHandle;
@@ -199,7 +199,7 @@ public class UiModelBuffComponent : UiModelComponentBase
 		this.BuffToHandlesMap.Remove(buffId);
 	}
 
-	// Token: 0x06017CE0 RID: 97504 RVA: 0x0060E064 File Offset: 0x0060C264
+	// Token: 0x06015553 RID: 87379 RVA: 0x00633B2C File Offset: 0x00631D2C
 	public void RemoveAllBuffId()
 	{
 		if (this.BuffToHandlesMap.Count == 0)
@@ -213,30 +213,30 @@ public class UiModelBuffComponent : UiModelComponentBase
 		this.BuffToHandlesMap.Clear();
 	}
 
-	// Token: 0x0400B165 RID: 45413
+	// Token: 0x0400B4D0 RID: 46288
 	[Nullable(2)]
 	private UiModelActorComponent ActorComponent;
 
-	// Token: 0x0400B166 RID: 45414
+	// Token: 0x0400B4D1 RID: 46289
 	[Nullable(2)]
 	private UiModelEffectComponent EffectComponent;
 
-	// Token: 0x0400B167 RID: 45415
+	// Token: 0x0400B4D2 RID: 46290
 	[Nullable(2)]
 	private UiModelRenderingMaterialComponent RenderingMaterialComponent;
 
-	// Token: 0x0400B168 RID: 45416
+	// Token: 0x0400B4D3 RID: 46291
 	protected readonly Dictionary<long, BuffHandle> BuffToHandlesMap = new Dictionary<long, BuffHandle>();
 
-	// Token: 0x0400B169 RID: 45417
+	// Token: 0x0400B4D4 RID: 46292
 	protected readonly global::Vector CacheLocation = global::Vector.Create();
 
-	// Token: 0x0400B16A RID: 45418
+	// Token: 0x0400B4D5 RID: 46293
 	protected readonly Rotator CacheRotator = Rotator.Create();
 
-	// Token: 0x0400B16B RID: 45419
+	// Token: 0x0400B4D6 RID: 46294
 	protected readonly global::Vector CacheScale = global::Vector.Create();
 
-	// Token: 0x0400B16C RID: 45420
+	// Token: 0x0400B4D7 RID: 46295
 	protected readonly Transform CacheTransform = Transform.Create();
 }

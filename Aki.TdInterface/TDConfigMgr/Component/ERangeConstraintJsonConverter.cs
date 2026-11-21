@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009EB RID: 2539
+	// Token: 0x02000AB0 RID: 2736
 	public class ERangeConstraintJsonConverter : JsonConverter<ERangeConstraint>
 	{
-		// Token: 0x06003854 RID: 14420 RVA: 0x00091EF8 File Offset: 0x000900F8
+		// Token: 0x06003C2C RID: 15404 RVA: 0x0009A7B8 File Offset: 0x000989B8
 		public override ERangeConstraint Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return ERangeConstraintExtensions.FromString(@string);
 		}
 
-		// Token: 0x06003855 RID: 14421 RVA: 0x00091F1C File Offset: 0x0009011C
+		// Token: 0x06003C2D RID: 15405 RVA: 0x0009A7DC File Offset: 0x000989DC
 		public override void Write(Utf8JsonWriter writer, ERangeConstraint value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

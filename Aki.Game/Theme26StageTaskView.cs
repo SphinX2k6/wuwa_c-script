@@ -2,17 +2,17 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 
-// Token: 0x020012B4 RID: 4788
+// Token: 0x02000768 RID: 1896
 public class Theme26StageTaskView : SevenHillsStageTaskView, IUiViewResource
 {
-	// Token: 0x06008388 RID: 33672 RVA: 0x001C052C File Offset: 0x001BE72C
+	// Token: 0x0600571F RID: 22303 RVA: 0x001C92BC File Offset: 0x001C74BC
 	[NullableContext(1)]
 	public Theme26StageTaskView(UiViewInfo info) : base(info)
 	{
 	}
 
-	// Token: 0x17000B31 RID: 2865
-	// (get) Token: 0x06008389 RID: 33673 RVA: 0x001C0535 File Offset: 0x001BE735
+	// Token: 0x17000B51 RID: 2897
+	// (get) Token: 0x06005720 RID: 22304 RVA: 0x001C92C5 File Offset: 0x001C74C5
 	protected override bool IsRefreshNow
 	{
 		get
@@ -21,12 +21,12 @@ public class Theme26StageTaskView : SevenHillsStageTaskView, IUiViewResource
 		}
 	}
 
-	// Token: 0x0600838A RID: 33674 RVA: 0x001C0538 File Offset: 0x001BE738
+	// Token: 0x06005721 RID: 22305 RVA: 0x001C92C8 File Offset: 0x001C74C8
 	protected override void RefreshTitleIcon()
 	{
 	}
 
-	// Token: 0x0600838B RID: 33675 RVA: 0x001C053C File Offset: 0x001BE73C
+	// Token: 0x06005722 RID: 22306 RVA: 0x001C92CC File Offset: 0x001C74CC
 	[NullableContext(1)]
 	public string GetExtraResourceId([Nullable(2)] object param = null)
 	{

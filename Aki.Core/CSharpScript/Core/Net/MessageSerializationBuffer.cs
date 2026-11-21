@@ -7,11 +7,11 @@ using Google.Protobuf;
 
 namespace CSharpScript.Core.Net
 {
-	// Token: 0x0200012D RID: 301
+	// Token: 0x0200012E RID: 302
 	public readonly struct MessageSerializationBuffer : IDisposable
 	{
-		// Token: 0x17000102 RID: 258
-		// (get) Token: 0x06000AD9 RID: 2777 RVA: 0x00034AB3 File Offset: 0x00032CB3
+		// Token: 0x17000115 RID: 277
+		// (get) Token: 0x06000B30 RID: 2864 RVA: 0x00035527 File Offset: 0x00033727
 		public Span<byte> MessageSpan
 		{
 			get
@@ -20,8 +20,8 @@ namespace CSharpScript.Core.Net
 			}
 		}
 
-		// Token: 0x17000103 RID: 259
-		// (get) Token: 0x06000ADA RID: 2778 RVA: 0x00034AC7 File Offset: 0x00032CC7
+		// Token: 0x17000116 RID: 278
+		// (get) Token: 0x06000B31 RID: 2865 RVA: 0x0003553B File Offset: 0x0003373B
 		public int Length
 		{
 			get
@@ -30,7 +30,7 @@ namespace CSharpScript.Core.Net
 			}
 		}
 
-		// Token: 0x06000ADB RID: 2779 RVA: 0x00034ACF File Offset: 0x00032CCF
+		// Token: 0x06000B32 RID: 2866 RVA: 0x00035543 File Offset: 0x00033743
 		private MessageSerializationBuffer(int messageSize)
 		{
 			this.Buffer = Array.Empty<byte>();
@@ -39,7 +39,7 @@ namespace CSharpScript.Core.Net
 			this.MessageSize = messageSize;
 		}
 
-		// Token: 0x06000ADC RID: 2780 RVA: 0x00034AFB File Offset: 0x00032CFB
+		// Token: 0x06000B33 RID: 2867 RVA: 0x0003556F File Offset: 0x0003376F
 		public void Dispose()
 		{
 			if (this.Buffer != null)
@@ -48,7 +48,7 @@ namespace CSharpScript.Core.Net
 			}
 		}
 
-		// Token: 0x06000ADD RID: 2781 RVA: 0x00034B18 File Offset: 0x00032D18
+		// Token: 0x06000B34 RID: 2868 RVA: 0x0003558C File Offset: 0x0003378C
 		[NullableContext(1)]
 		public unsafe static MessageSerializationBuffer GetBuffer(EMessageId msgId, IMessage message)
 		{
@@ -80,11 +80,11 @@ namespace CSharpScript.Core.Net
 			return result;
 		}
 
-		// Token: 0x040006B2 RID: 1714
+		// Token: 0x040006C0 RID: 1728
 		[Nullable(1)]
 		private readonly byte[] Buffer;
 
-		// Token: 0x040006B3 RID: 1715
+		// Token: 0x040006C1 RID: 1729
 		private readonly int MessageSize;
 	}
 }

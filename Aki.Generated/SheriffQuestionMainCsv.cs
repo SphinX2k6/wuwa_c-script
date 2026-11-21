@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020010A5 RID: 4261
+	// Token: 0x020011A0 RID: 4512
 	public struct SheriffQuestionMainCsv : IFlatbufferObject
 	{
-		// Token: 0x170035A0 RID: 13728
-		// (get) Token: 0x0600D16D RID: 53613 RVA: 0x0030E079 File Offset: 0x0030C279
+		// Token: 0x170036AE RID: 13998
+		// (get) Token: 0x0600D943 RID: 55619 RVA: 0x0032D5A5 File Offset: 0x0032B7A5
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D16E RID: 53614 RVA: 0x0030E086 File Offset: 0x0030C286
+		// Token: 0x0600D944 RID: 55620 RVA: 0x0032D5B2 File Offset: 0x0032B7B2
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600D16F RID: 53615 RVA: 0x0030E090 File Offset: 0x0030C290
+		// Token: 0x0600D945 RID: 55621 RVA: 0x0032D5BC File Offset: 0x0032B7BC
 		public static SheriffQuestionMainCsv GetRootAsSheriffQuestionMainCsv(ByteBuffer _bb)
 		{
 			return SheriffQuestionMainCsv.GetRootAsSheriffQuestionMainCsv(_bb, default(SheriffQuestionMainCsv));
 		}
 
-		// Token: 0x0600D170 RID: 53616 RVA: 0x0030E0AC File Offset: 0x0030C2AC
+		// Token: 0x0600D946 RID: 55622 RVA: 0x0032D5D8 File Offset: 0x0032B7D8
 		public static SheriffQuestionMainCsv GetRootAsSheriffQuestionMainCsv(ByteBuffer _bb, SheriffQuestionMainCsv obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600D171 RID: 53617 RVA: 0x0030E0C9 File Offset: 0x0030C2C9
+		// Token: 0x0600D947 RID: 55623 RVA: 0x0032D5F5 File Offset: 0x0032B7F5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600D172 RID: 53618 RVA: 0x0030E0D8 File Offset: 0x0030C2D8
+		// Token: 0x0600D948 RID: 55624 RVA: 0x0032D604 File Offset: 0x0032B804
 		public SheriffQuestionMainCsv __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170035A1 RID: 13729
-		// (get) Token: 0x0600D173 RID: 53619 RVA: 0x0030E0E8 File Offset: 0x0030C2E8
+		// Token: 0x170036AF RID: 13999
+		// (get) Token: 0x0600D949 RID: 55625 RVA: 0x0032D614 File Offset: 0x0032B814
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170035A2 RID: 13730
-		// (get) Token: 0x0600D174 RID: 53620 RVA: 0x0030E124 File Offset: 0x0030C324
+		// Token: 0x170036B0 RID: 14000
+		// (get) Token: 0x0600D94A RID: 55626 RVA: 0x0032D650 File Offset: 0x0032B850
 		public string Remark
 		{
 			get
@@ -79,19 +79,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D175 RID: 53621 RVA: 0x0030E15B File Offset: 0x0030C35B
+		// Token: 0x0600D94B RID: 55627 RVA: 0x0032D687 File Offset: 0x0032B887
 		public Span<byte> GetRemarkBytes()
 		{
 			return this.__p.__vector_as_span<byte>(6, 1);
 		}
 
-		// Token: 0x0600D176 RID: 53622 RVA: 0x0030E16A File Offset: 0x0030C36A
+		// Token: 0x0600D94C RID: 55628 RVA: 0x0032D696 File Offset: 0x0032B896
 		public byte[] GetRemarkArray()
 		{
 			return this.__p.__vector_as_array<byte>(6) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0600D177 RID: 53623 RVA: 0x0030E184 File Offset: 0x0030C384
+		// Token: 0x0600D94D RID: 55629 RVA: 0x0032D6B0 File Offset: 0x0032B8B0
 		public int ClueIds(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -102,8 +102,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170035A3 RID: 13731
-		// (get) Token: 0x0600D178 RID: 53624 RVA: 0x0030E1C4 File Offset: 0x0030C3C4
+		// Token: 0x170036B1 RID: 14001
+		// (get) Token: 0x0600D94E RID: 55630 RVA: 0x0032D6F0 File Offset: 0x0032B8F0
 		public int ClueIdsLength
 		{
 			get
@@ -117,20 +117,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D179 RID: 53625 RVA: 0x0030E1EF File Offset: 0x0030C3EF
+		// Token: 0x0600D94F RID: 55631 RVA: 0x0032D71B File Offset: 0x0032B91B
 		public Span<int> GetClueIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x0600D17A RID: 53626 RVA: 0x0030E1FE File Offset: 0x0030C3FE
+		// Token: 0x0600D950 RID: 55632 RVA: 0x0032D72A File Offset: 0x0032B92A
 		public int[] GetClueIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(8) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x170035A4 RID: 13732
-		// (get) Token: 0x0600D17B RID: 53627 RVA: 0x0030E218 File Offset: 0x0030C418
+		// Token: 0x170036B2 RID: 14002
+		// (get) Token: 0x0600D951 RID: 55633 RVA: 0x0032D744 File Offset: 0x0032B944
 		public string QuestionConfigs
 		{
 			get
@@ -144,37 +144,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D17C RID: 53628 RVA: 0x0030E250 File Offset: 0x0030C450
+		// Token: 0x0600D952 RID: 55634 RVA: 0x0032D77C File Offset: 0x0032B97C
 		public Span<byte> GetQuestionConfigsBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0600D17D RID: 53629 RVA: 0x0030E260 File Offset: 0x0030C460
+		// Token: 0x0600D953 RID: 55635 RVA: 0x0032D78C File Offset: 0x0032B98C
 		public byte[] GetQuestionConfigsArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0600D17E RID: 53630 RVA: 0x0030E278 File Offset: 0x0030C478
+		// Token: 0x0600D954 RID: 55636 RVA: 0x0032D7A4 File Offset: 0x0032B9A4
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ClueIdsIter()或GetClueIdsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] ClueIds()
+		public int[] ClueIds()
 		{
-			SheriffQuestionMainCsv sheriffQuestionMainCsv = this;
-			return sheriffQuestionMainCsv.GetClueIdsArray() ?? Array.Empty<int>();
+			return this.GetClueIdsArray();
 		}
 
-		// Token: 0x0600D17F RID: 53631 RVA: 0x0030E29C File Offset: 0x0030C49C
+		// Token: 0x0600D955 RID: 55637 RVA: 0x0032D7AC File Offset: 0x0032B9AC
 		[NullableContext(1)]
-		public readonly IEnumerable<int> ClueIdsIter()
+		public IEnumerable<int> ClueIdsIter()
 		{
 			SheriffQuestionMainCsv.<ClueIdsIter>d__24 <ClueIdsIter>d__ = new SheriffQuestionMainCsv.<ClueIdsIter>d__24(-2);
 			<ClueIdsIter>d__.<>3__<>4__this = this;
 			return <ClueIdsIter>d__;
 		}
 
-		// Token: 0x040051B4 RID: 20916
+		// Token: 0x040057B3 RID: 22451
 		private Table __p;
 	}
 }

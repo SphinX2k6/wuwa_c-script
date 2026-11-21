@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x0200016D RID: 365
+	// Token: 0x02000170 RID: 368
 	[NetMessage(EMessageId.BattlePassPaidNotify)]
 	public sealed class BattlePassPaidNotify : IMessage<BattlePassPaidNotify>, IMessage, IEquatable<BattlePassPaidNotify>, IDeepCloneable<BattlePassPaidNotify>, IBufferMessage
 	{
-		// Token: 0x06002D18 RID: 11544 RVA: 0x00074ED9 File Offset: 0x000730D9
+		// Token: 0x06002D8F RID: 11663 RVA: 0x0007630D File Offset: 0x0007450D
 		[NullableContext(1)]
 		public static BattlePassPaidNotify Create()
 		{
 			return new BattlePassPaidNotify();
 		}
 
-		// Token: 0x170006D3 RID: 1747
-		// (get) Token: 0x06002D19 RID: 11545 RVA: 0x00074EE0 File Offset: 0x000730E0
+		// Token: 0x170006E7 RID: 1767
+		// (get) Token: 0x06002D90 RID: 11664 RVA: 0x00076314 File Offset: 0x00074514
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170006D4 RID: 1748
-		// (get) Token: 0x06002D1A RID: 11546 RVA: 0x00074EE3 File Offset: 0x000730E3
+		// Token: 0x170006E8 RID: 1768
+		// (get) Token: 0x06002D91 RID: 11665 RVA: 0x00076317 File Offset: 0x00074517
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06002D1B RID: 11547 RVA: 0x00074EEA File Offset: 0x000730EA
+		// Token: 0x06002D92 RID: 11666 RVA: 0x0007631E File Offset: 0x0007451E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BattlePassPaidNotify()
 		{
 		}
 
-		// Token: 0x06002D1C RID: 11548 RVA: 0x00074EF2 File Offset: 0x000730F2
+		// Token: 0x06002D93 RID: 11667 RVA: 0x00076326 File Offset: 0x00074526
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BattlePassPaidNotify(BattlePassPaidNotify other) : this()
@@ -58,7 +58,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06002D1D RID: 11549 RVA: 0x00074F17 File Offset: 0x00073117
+		// Token: 0x06002D94 RID: 11668 RVA: 0x0007634B File Offset: 0x0007454B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BattlePassPaidNotify Clone()
@@ -66,9 +66,9 @@ namespace Aki.Protocol
 			return new BattlePassPaidNotify(this);
 		}
 
-		// Token: 0x170006D5 RID: 1749
-		// (get) Token: 0x06002D1E RID: 11550 RVA: 0x00074F1F File Offset: 0x0007311F
-		// (set) Token: 0x06002D1F RID: 11551 RVA: 0x00074F27 File Offset: 0x00073127
+		// Token: 0x170006E9 RID: 1769
+		// (get) Token: 0x06002D95 RID: 11669 RVA: 0x00076353 File Offset: 0x00074553
+		// (set) Token: 0x06002D96 RID: 11670 RVA: 0x0007635B File Offset: 0x0007455B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public BattlePassPayStatus PayStatus
@@ -83,7 +83,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06002D20 RID: 11552 RVA: 0x00074F30 File Offset: 0x00073130
+		// Token: 0x06002D97 RID: 11671 RVA: 0x00076364 File Offset: 0x00074564
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -91,7 +91,7 @@ namespace Aki.Protocol
 			return this.Equals(other as BattlePassPaidNotify);
 		}
 
-		// Token: 0x06002D21 RID: 11553 RVA: 0x00074F3E File Offset: 0x0007313E
+		// Token: 0x06002D98 RID: 11672 RVA: 0x00076372 File Offset: 0x00074572
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(BattlePassPaidNotify other)
@@ -99,7 +99,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.PayStatus == other.PayStatus && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06002D22 RID: 11554 RVA: 0x00074F6C File Offset: 0x0007316C
+		// Token: 0x06002D99 RID: 11673 RVA: 0x000763A0 File Offset: 0x000745A0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -116,7 +116,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06002D23 RID: 11555 RVA: 0x00074FB1 File Offset: 0x000731B1
+		// Token: 0x06002D9A RID: 11674 RVA: 0x000763E5 File Offset: 0x000745E5
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -124,7 +124,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06002D24 RID: 11556 RVA: 0x00074FBE File Offset: 0x000731BE
+		// Token: 0x06002D9B RID: 11675 RVA: 0x000763F2 File Offset: 0x000745F2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -132,14 +132,14 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06002D25 RID: 11557 RVA: 0x00074FC7 File Offset: 0x000731C7
+		// Token: 0x06002D9C RID: 11676 RVA: 0x000763FB File Offset: 0x000745FB
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
 			if (this.PayStatus != BattlePassPayStatus.NoPaid)
 			{
-				output.WriteRawTag(104);
+				output.WriteRawTag(8);
 				output.WriteEnum((int)this.PayStatus);
 			}
 			if (this._unknownFields != null)
@@ -148,7 +148,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06002D26 RID: 11558 RVA: 0x00074FFC File Offset: 0x000731FC
+		// Token: 0x06002D9D RID: 11677 RVA: 0x0007642C File Offset: 0x0007462C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -165,7 +165,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06002D27 RID: 11559 RVA: 0x0007503A File Offset: 0x0007323A
+		// Token: 0x06002D9E RID: 11678 RVA: 0x0007646A File Offset: 0x0007466A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(BattlePassPaidNotify other)
@@ -181,7 +181,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06002D28 RID: 11560 RVA: 0x0007506B File Offset: 0x0007326B
+		// Token: 0x06002D9F RID: 11679 RVA: 0x0007649B File Offset: 0x0007469B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -189,7 +189,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x06002D29 RID: 11561 RVA: 0x00075074 File Offset: 0x00073274
+		// Token: 0x06002DA0 RID: 11680 RVA: 0x000764A4 File Offset: 0x000746A4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -201,7 +201,7 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 104U)
+				if (num != 8U)
 				{
 					this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 				}
@@ -212,13 +212,13 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x04002823 RID: 10275
+		// Token: 0x04002897 RID: 10391
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04002824 RID: 10276
-		public const int PayStatusFieldNumber = 13;
+		// Token: 0x04002898 RID: 10392
+		public const int PayStatusFieldNumber = 1;
 
-		// Token: 0x04002825 RID: 10277
+		// Token: 0x04002899 RID: 10393
 		private BattlePassPayStatus payStatus_;
 	}
 }

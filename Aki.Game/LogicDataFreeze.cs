@@ -7,16 +7,16 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02002DFA RID: 11770
+// Token: 0x02002355 RID: 9045
 [NullableContext(1)]
 [Nullable(0)]
 [UClass("/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/LogicDataFreeze.LogicDataFreeze_C")]
 public class LogicDataFreeze : LogicDataBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x170021F8 RID: 8696
-	// (get) Token: 0x06018BB1 RID: 101297 RVA: 0x00658950 File Offset: 0x00656B50
-	// (set) Token: 0x06018BB2 RID: 101298 RVA: 0x00658960 File Offset: 0x00656B60
+	// Token: 0x1700225C RID: 8796
+	// (get) Token: 0x06016466 RID: 91238 RVA: 0x0067E9D4 File Offset: 0x0067CBD4
+	// (set) Token: 0x06016467 RID: 91239 RVA: 0x0067E9E4 File Offset: 0x0067CBE4
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe EBulletObject Target
 	{
@@ -30,9 +30,9 @@ public class LogicDataFreeze : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x170021F9 RID: 8697
-	// (get) Token: 0x06018BB3 RID: 101299 RVA: 0x00658974 File Offset: 0x00656B74
-	// (set) Token: 0x06018BB4 RID: 101300 RVA: 0x006589AD File Offset: 0x00656BAD
+	// Token: 0x1700225D RID: 8797
+	// (get) Token: 0x06016468 RID: 91240 RVA: 0x0067E9F8 File Offset: 0x0067CBF8
+	// (set) Token: 0x06016469 RID: 91241 RVA: 0x0067EA31 File Offset: 0x0067CC31
 	[UProperty(EPropertyFlags.CPF_None)]
 	public FGameplayTagContainer Tags
 	{
@@ -52,9 +52,9 @@ public class LogicDataFreeze : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x170021FA RID: 8698
-	// (get) Token: 0x06018BB5 RID: 101301 RVA: 0x006589D5 File Offset: 0x00656BD5
-	// (set) Token: 0x06018BB6 RID: 101302 RVA: 0x006589E5 File Offset: 0x00656BE5
+	// Token: 0x1700225E RID: 8798
+	// (get) Token: 0x0601646A RID: 91242 RVA: 0x0067EA59 File Offset: 0x0067CC59
+	// (set) Token: 0x0601646B RID: 91243 RVA: 0x0067EA69 File Offset: 0x0067CC69
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe float FreezeTime
 	{
@@ -68,7 +68,7 @@ public class LogicDataFreeze : LogicDataBase, IUnrealUObject, IUnrealObject
 		}
 	}
 
-	// Token: 0x06018BB7 RID: 101303 RVA: 0x006589F6 File Offset: 0x00656BF6
+	// Token: 0x0601646C RID: 91244 RVA: 0x0067EA7A File Offset: 0x0067CC7A
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (LogicDataFreeze._ClassPtr == IntPtr.Zero)
@@ -78,40 +78,40 @@ public class LogicDataFreeze : LogicDataBase, IUnrealUObject, IUnrealObject
 		return LogicDataFreeze._ClassPtr;
 	}
 
-	// Token: 0x06018BB8 RID: 101304 RVA: 0x00658A1C File Offset: 0x00656C1C
+	// Token: 0x0601646D RID: 91245 RVA: 0x0067EAA0 File Offset: 0x0067CCA0
 	public LogicDataFreeze() : this(BuiltinUtils.AllocNativeUObject(LogicDataFreeze.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06018BB9 RID: 101305 RVA: 0x00658A44 File Offset: 0x00656C44
+	// Token: 0x0601646E RID: 91246 RVA: 0x0067EAC8 File Offset: 0x0067CCC8
 	public LogicDataFreeze(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(LogicDataFreeze.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06018BBA RID: 101306 RVA: 0x00658A77 File Offset: 0x00656C77
+	// Token: 0x0601646F RID: 91247 RVA: 0x0067EAFB File Offset: 0x0067CCFB
 	protected LogicDataFreeze(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0400B87F RID: 47231
+	// Token: 0x0400BC05 RID: 48133
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/NewWorld/Bullet/LogicDataClass/LogicDataFreeze.LogicDataFreeze_C";
 
-	// Token: 0x0400B880 RID: 47232
+	// Token: 0x0400BC06 RID: 48134
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400B881 RID: 47233
+	// Token: 0x0400BC07 RID: 48135
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x0400B882 RID: 47234
+	// Token: 0x0400BC08 RID: 48136
 	private static int __PropertyOffset_Target;
 
-	// Token: 0x0400B883 RID: 47235
+	// Token: 0x0400BC09 RID: 48137
 	private static int __PropertyOffset_Tags;
 
-	// Token: 0x0400B884 RID: 47236
+	// Token: 0x0400BC0A RID: 48138
 	[Nullable(2)]
 	private FGameplayTagContainer _Tags;
 
-	// Token: 0x0400B885 RID: 47237
+	// Token: 0x0400BC0B RID: 48139
 	private static int __PropertyOffset_FreezeTime;
 }

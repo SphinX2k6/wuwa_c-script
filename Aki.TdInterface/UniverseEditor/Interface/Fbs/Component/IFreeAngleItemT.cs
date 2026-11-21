@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020052D4 RID: 21204
+	// Token: 0x0200583F RID: 22591
 	public class IFreeAngleItemT
 	{
-		// Token: 0x17009B92 RID: 39826
-		// (get) Token: 0x06022995 RID: 141717 RVA: 0x004CBC24 File Offset: 0x004C9E24
-		// (set) Token: 0x06022996 RID: 141718 RVA: 0x004CBC2C File Offset: 0x004C9E2C
+		// Token: 0x1700A39B RID: 41883
+		// (get) Token: 0x06024959 RID: 149849 RVA: 0x00506D20 File Offset: 0x00504F20
+		// (set) Token: 0x0602495A RID: 149850 RVA: 0x00506D28 File Offset: 0x00504F28
 		public int InitAngle { get; set; }
 
-		// Token: 0x17009B93 RID: 39827
-		// (get) Token: 0x06022997 RID: 141719 RVA: 0x004CBC35 File Offset: 0x004C9E35
-		// (set) Token: 0x06022998 RID: 141720 RVA: 0x004CBC3D File Offset: 0x004C9E3D
+		// Token: 0x1700A39C RID: 41884
+		// (get) Token: 0x0602495B RID: 149851 RVA: 0x00506D31 File Offset: 0x00504F31
+		// (set) Token: 0x0602495C RID: 149852 RVA: 0x00506D39 File Offset: 0x00504F39
 		public int TargetAngle { get; set; }
 
-		// Token: 0x06022999 RID: 141721 RVA: 0x004CBC46 File Offset: 0x004C9E46
+		// Token: 0x0602495D RID: 149853 RVA: 0x00506D42 File Offset: 0x00504F42
 		public IFreeAngleItemT()
 		{
 			this.InitAngle = 0;

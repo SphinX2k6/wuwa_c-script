@@ -7,12 +7,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001102 RID: 4354
+// Token: 0x020005B6 RID: 1462
 [NullableContext(1)]
 [Nullable(0)]
 public class ArtemisQteProgressItem : UiPanelBase
 {
-	// Token: 0x0600716E RID: 29038 RVA: 0x001728F8 File Offset: 0x00170AF8
+	// Token: 0x06004504 RID: 17668 RVA: 0x0017B2B4 File Offset: 0x001794B4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,13 +29,13 @@ public class ArtemisQteProgressItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600716F RID: 29039 RVA: 0x001729D6 File Offset: 0x00170BD6
+	// Token: 0x06004505 RID: 17669 RVA: 0x0017B392 File Offset: 0x00179592
 	protected override void OnStart()
 	{
 		base.GetItem(3).SetUIActive(false);
 	}
 
-	// Token: 0x06007170 RID: 29040 RVA: 0x001729E5 File Offset: 0x00170BE5
+	// Token: 0x06004506 RID: 17670 RVA: 0x0017B3A1 File Offset: 0x001795A1
 	protected override void OnBeforeDestroy()
 	{
 		this.BgItemList.Clear();
@@ -44,7 +44,7 @@ public class ArtemisQteProgressItem : UiPanelBase
 		this.CachedTexture.Clear();
 	}
 
-	// Token: 0x06007171 RID: 29041 RVA: 0x00172A14 File Offset: 0x00170C14
+	// Token: 0x06004507 RID: 17671 RVA: 0x0017B3D0 File Offset: 0x001795D0
 	public void Init(int gamePlayId, ArtemisQteGameInfo gameInfo)
 	{
 		this.GameInfo = gameInfo;
@@ -61,7 +61,7 @@ public class ArtemisQteProgressItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06007172 RID: 29042 RVA: 0x00172A9C File Offset: 0x00170C9C
+	// Token: 0x06004508 RID: 17672 RVA: 0x0017B458 File Offset: 0x00179658
 	public void InitRing()
 	{
 		this.RingInfo.ClearValidAreas();
@@ -76,7 +76,7 @@ public class ArtemisQteProgressItem : UiPanelBase
 		this.RotateMode = ((cursorSpeed > 0f) ? EArtemisRotateMode.Arrow : EArtemisRotateMode.Ring);
 	}
 
-	// Token: 0x06007173 RID: 29043 RVA: 0x00172B00 File Offset: 0x00170D00
+	// Token: 0x06004509 RID: 17673 RVA: 0x0017B4BC File Offset: 0x001796BC
 	public void OnTick(float delta)
 	{
 		float currentProgress = this.GetCurrentProgress();
@@ -85,7 +85,7 @@ public class ArtemisQteProgressItem : UiPanelBase
 		this.RefreshArrow(delta);
 	}
 
-	// Token: 0x06007174 RID: 29044 RVA: 0x00172B2C File Offset: 0x00170D2C
+	// Token: 0x0600450A RID: 17674 RVA: 0x0017B4E8 File Offset: 0x001796E8
 	private void RefreshArrow(float delta)
 	{
 		if (this.GameInfo.IsGamePause())
@@ -159,7 +159,7 @@ public class ArtemisQteProgressItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06007175 RID: 29045 RVA: 0x00172E34 File Offset: 0x00171034
+	// Token: 0x0600450B RID: 17675 RVA: 0x0017B7F0 File Offset: 0x001799F0
 	private float GetAlphaInAlphaPeriod(float currentTime)
 	{
 		ArtemisQte value = ArtemisActivityConfig.Instance.GetArtemisQteConfigById(this.GamePlayId).Value;
@@ -186,13 +186,13 @@ public class ArtemisQteProgressItem : UiPanelBase
 		return 1f;
 	}
 
-	// Token: 0x06007176 RID: 29046 RVA: 0x00172EC8 File Offset: 0x001710C8
+	// Token: 0x0600450C RID: 17676 RVA: 0x0017B884 File Offset: 0x00179A84
 	private int GetCurrentArrowStayCellIndex()
 	{
 		return (int)(Math.Floor((double)(Math.Abs(this.CurrentRotator.Yaw) % 360f / 10f)) + 1.0);
 	}
 
-	// Token: 0x06007177 RID: 29047 RVA: 0x00172EF8 File Offset: 0x001710F8
+	// Token: 0x0600450D RID: 17677 RVA: 0x0017B8B4 File Offset: 0x00179AB4
 	private float GetRotatorYaw(int direction, float cursorSpeed, float deltaSecond)
 	{
 		float num = this.CurrentRotator.Yaw;
@@ -222,7 +222,7 @@ public class ArtemisQteProgressItem : UiPanelBase
 		return num % (float)ArtemisQteProgressItem.YAW_MAX_ANGLE;
 	}
 
-	// Token: 0x06007178 RID: 29048 RVA: 0x00172F90 File Offset: 0x00171190
+	// Token: 0x0600450E RID: 17678 RVA: 0x0017B94C File Offset: 0x00179B4C
 	[NullableContext(2)]
 	public void OnAreaClick(EArtemisAreaType areaType, ContinuousRingArea area)
 	{
@@ -259,7 +259,7 @@ public class ArtemisQteProgressItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06007179 RID: 29049 RVA: 0x00173050 File Offset: 0x00171250
+	// Token: 0x0600450F RID: 17679 RVA: 0x0017BA0C File Offset: 0x00179C0C
 	public void PlayAnim(string sequenceName)
 	{
 		foreach (ArtemisQteRingSingleItem artemisQteRingSingleItem in this.QteAreaTextures.Values)
@@ -278,7 +278,7 @@ public class ArtemisQteProgressItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600717A RID: 29050 RVA: 0x001730F8 File Offset: 0x001712F8
+	// Token: 0x06004510 RID: 17680 RVA: 0x0017BAB4 File Offset: 0x00179CB4
 	public void StopTargetPlayingSequence(string sequenceName)
 	{
 		foreach (ArtemisQteRingSingleItem artemisQteRingSingleItem in this.QteAreaTextures.Values)
@@ -297,7 +297,7 @@ public class ArtemisQteProgressItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600717B RID: 29051 RVA: 0x001731A0 File Offset: 0x001713A0
+	// Token: 0x06004511 RID: 17681 RVA: 0x0017BB5C File Offset: 0x00179D5C
 	public void AnyTargetPlayAnim(EArtemisAreaType areaType, string sequenceName, int continuousIndex, bool needStop)
 	{
 		if (areaType == EArtemisAreaType.PerfectArea)
@@ -336,7 +336,7 @@ public class ArtemisQteProgressItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600717C RID: 29052 RVA: 0x001732AC File Offset: 0x001714AC
+	// Token: 0x06004512 RID: 17682 RVA: 0x0017BC68 File Offset: 0x00179E68
 	private void RingSingleItemPlayAnim(ArtemisQteRingSingleItem item, string sequenceName, bool needStop)
 	{
 		if (item != null)
@@ -350,7 +350,7 @@ public class ArtemisQteProgressItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600717D RID: 29053 RVA: 0x001732C4 File Offset: 0x001714C4
+	// Token: 0x06004513 RID: 17683 RVA: 0x0017BC80 File Offset: 0x00179E80
 	private void PlayCacheAnim(EArtemisAreaType areaType, int continuousIndex)
 	{
 		ArtemisQteRingSingleItem artemisQteRingSingleItem2;
@@ -370,7 +370,7 @@ public class ArtemisQteProgressItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600717E RID: 29054 RVA: 0x00173334 File Offset: 0x00171534
+	// Token: 0x06004514 RID: 17684 RVA: 0x0017BCF0 File Offset: 0x00179EF0
 	private void RefreshProgress(float progress)
 	{
 		int value = (int)Math.Ceiling((double)(progress * 100f));
@@ -389,7 +389,7 @@ public class ArtemisQteProgressItem : UiPanelBase
 		item.SetUIRelativeRotation(frotator);
 	}
 
-	// Token: 0x0600717F RID: 29055 RVA: 0x001733C4 File Offset: 0x001715C4
+	// Token: 0x06004515 RID: 17685 RVA: 0x0017BD80 File Offset: 0x00179F80
 	private void RefreshAnimProgress(float currentProgress, float delta)
 	{
 		float alpha = currentProgress;
@@ -410,7 +410,7 @@ public class ArtemisQteProgressItem : UiPanelBase
 		this.AnimRotator.Yaw = MathUtils.Instance.Lerp(-53f, 0f, alpha);
 	}
 
-	// Token: 0x06007180 RID: 29056 RVA: 0x00173454 File Offset: 0x00171654
+	// Token: 0x06004516 RID: 17686 RVA: 0x0017BE10 File Offset: 0x0017A010
 	public void OnArrowStayAreaUpdate(int relativeValidAreaIndex)
 	{
 		List<RingArea> validAreas = this.GameInfo.GetRingInfo().GetValidAreas();
@@ -446,7 +446,7 @@ public class ArtemisQteProgressItem : UiPanelBase
 		item.SetUIRelativeRotation(frotator);
 	}
 
-	// Token: 0x06007181 RID: 29057 RVA: 0x00173528 File Offset: 0x00171728
+	// Token: 0x06004517 RID: 17687 RVA: 0x0017BEE4 File Offset: 0x0017A0E4
 	private float GetCurrentProgress()
 	{
 		int currentScore = this.GameInfo.CurrentScore;
@@ -454,7 +454,7 @@ public class ArtemisQteProgressItem : UiPanelBase
 		return MathUtils.Instance.Clamp((float)currentScore / (float)maxScore, 0f, 1f);
 	}
 
-	// Token: 0x06007182 RID: 29058 RVA: 0x0017357C File Offset: 0x0017177C
+	// Token: 0x06004518 RID: 17688 RVA: 0x0017BF38 File Offset: 0x0017A138
 	public void StartAnimProgress()
 	{
 		this.AnimStartProgress = this.GetCurrentProgress();
@@ -462,13 +462,13 @@ public class ArtemisQteProgressItem : UiPanelBase
 		this.InAnim = true;
 	}
 
-	// Token: 0x06007183 RID: 29059 RVA: 0x00173598 File Offset: 0x00171798
+	// Token: 0x06004519 RID: 17689 RVA: 0x0017BF54 File Offset: 0x0017A154
 	public void EnterNextRound()
 	{
 		this.AnimStartProgress = 0f;
 	}
 
-	// Token: 0x06007184 RID: 29060 RVA: 0x001735A8 File Offset: 0x001717A8
+	// Token: 0x0600451A RID: 17690 RVA: 0x0017BF64 File Offset: 0x0017A164
 	private int GetAreaRandomSize(int[] rangeConfig)
 	{
 		int result = 3;
@@ -479,13 +479,13 @@ public class ArtemisQteProgressItem : UiPanelBase
 		return result;
 	}
 
-	// Token: 0x06007185 RID: 29061 RVA: 0x001735CE File Offset: 0x001717CE
+	// Token: 0x0600451B RID: 17691 RVA: 0x0017BF8A File Offset: 0x0017A18A
 	private int RandomRangeInt(int start, int end)
 	{
 		return Math.Min(end, (int)Math.Floor(MathUtils.Instance.GetRandomRange((double)start, (double)(end + 1))));
 	}
 
-	// Token: 0x06007186 RID: 29062 RVA: 0x001735EC File Offset: 0x001717EC
+	// Token: 0x0600451C RID: 17692 RVA: 0x0017BFA8 File Offset: 0x0017A1A8
 	public void ResetArea(int continuousIndex, EArtemisAreaType areaType)
 	{
 		if (areaType != EArtemisAreaType.QteArea)
@@ -517,7 +517,7 @@ public class ArtemisQteProgressItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06007187 RID: 29063 RVA: 0x0017367B File Offset: 0x0017187B
+	// Token: 0x0600451D RID: 17693 RVA: 0x0017C037 File Offset: 0x0017A237
 	public void ResetAreaInLink(int continuousIndex, EArtemisAreaType areaType)
 	{
 		if (areaType != EArtemisAreaType.QteArea)
@@ -540,7 +540,7 @@ public class ArtemisQteProgressItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06007188 RID: 29064 RVA: 0x001736B8 File Offset: 0x001718B8
+	// Token: 0x0600451E RID: 17694 RVA: 0x0017C074 File Offset: 0x0017A274
 	public void ResetAllArea()
 	{
 		foreach (int continuousIndex in new List<int>(this.QteAreaTextures.Keys))
@@ -553,7 +553,7 @@ public class ArtemisQteProgressItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06007189 RID: 29065 RVA: 0x00173764 File Offset: 0x00171964
+	// Token: 0x0600451F RID: 17695 RVA: 0x0017C120 File Offset: 0x0017A320
 	private UniTask GenerateAreaWithTexture(int continuousIndex, EArtemisAreaType areaType, int startIndex, int areaSize)
 	{
 		ArtemisQteProgressItem.<GenerateAreaWithTexture>d__54 <GenerateAreaWithTexture>d__;
@@ -568,7 +568,7 @@ public class ArtemisQteProgressItem : UiPanelBase
 		return <GenerateAreaWithTexture>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600718A RID: 29066 RVA: 0x001737C8 File Offset: 0x001719C8
+	// Token: 0x06004520 RID: 17696 RVA: 0x0017C184 File Offset: 0x0017A384
 	private UniTask GenerateQteArea(int continuousIndex, int startIndex, int areaSize)
 	{
 		ArtemisQteProgressItem.<GenerateQteArea>d__55 <GenerateQteArea>d__;
@@ -582,7 +582,7 @@ public class ArtemisQteProgressItem : UiPanelBase
 		return <GenerateQteArea>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600718B RID: 29067 RVA: 0x00173824 File Offset: 0x00171A24
+	// Token: 0x06004521 RID: 17697 RVA: 0x0017C1E0 File Offset: 0x0017A3E0
 	public void SpawnAreaAtValidArea(int continuousIndex, RingArea validArea)
 	{
 		int startCellIndex = validArea.StartCellIndex;
@@ -607,7 +607,7 @@ public class ArtemisQteProgressItem : UiPanelBase
 		this.GenerateQteArea(continuousIndex, startIndex2, areaRandomSize).Forget();
 	}
 
-	// Token: 0x0600718C RID: 29068 RVA: 0x001738E4 File Offset: 0x00171AE4
+	// Token: 0x06004522 RID: 17698 RVA: 0x0017C2A0 File Offset: 0x0017A4A0
 	private void SpawnWholeRingAllArea()
 	{
 		ContinuousRingArea continuousRingArea;
@@ -638,7 +638,7 @@ public class ArtemisQteProgressItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600718D RID: 29069 RVA: 0x001739E8 File Offset: 0x00171BE8
+	// Token: 0x06004523 RID: 17699 RVA: 0x0017C3A4 File Offset: 0x0017A5A4
 	private void SpawnIncompleteRingAllArea()
 	{
 		this.ResetAllArea();
@@ -653,7 +653,7 @@ public class ArtemisQteProgressItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600718E RID: 29070 RVA: 0x00173A30 File Offset: 0x00171C30
+	// Token: 0x06004524 RID: 17700 RVA: 0x0017C3EC File Offset: 0x0017A5EC
 	public void InitAllQteAreas()
 	{
 		ArtemisQteRingInfo ringInfo = this.RingInfo;
@@ -665,7 +665,7 @@ public class ArtemisQteProgressItem : UiPanelBase
 		this.SpawnIncompleteRingAllArea();
 	}
 
-	// Token: 0x0600718F RID: 29071 RVA: 0x00173A54 File Offset: 0x00171C54
+	// Token: 0x06004525 RID: 17701 RVA: 0x0017C410 File Offset: 0x0017A610
 	public void SpawnContinuousArea(int continuousIndex, EArtemisAreaType type = EArtemisAreaType.QteArea)
 	{
 		ArtemisQteRingInfo ringInfo = this.RingInfo;
@@ -698,19 +698,19 @@ public class ArtemisQteProgressItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x06007190 RID: 29072 RVA: 0x00173AF3 File Offset: 0x00171CF3
+	// Token: 0x06004526 RID: 17702 RVA: 0x0017C4AF File Offset: 0x0017A6AF
 	public UUIItem GetQteAreaTexture(int continuousIndex)
 	{
 		return this.QteAreaTextures[continuousIndex].GetRootItem();
 	}
 
-	// Token: 0x06007191 RID: 29073 RVA: 0x00173B06 File Offset: 0x00171D06
+	// Token: 0x06004527 RID: 17703 RVA: 0x0017C4C2 File Offset: 0x0017A6C2
 	public UUIItem GetPerfectAreaTexture(int continuousIndex)
 	{
 		return this.PerfectAreaTextures[continuousIndex].GetRootItem();
 	}
 
-	// Token: 0x06007192 RID: 29074 RVA: 0x00173B1C File Offset: 0x00171D1C
+	// Token: 0x06004528 RID: 17704 RVA: 0x0017C4D8 File Offset: 0x0017A6D8
 	public UniTask SpawnBgArea()
 	{
 		ArtemisQteProgressItem.<SpawnBgArea>d__63 <SpawnBgArea>d__;
@@ -721,123 +721,123 @@ public class ArtemisQteProgressItem : UiPanelBase
 		return <SpawnBgArea>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007193 RID: 29075 RVA: 0x00173B5F File Offset: 0x00171D5F
+	// Token: 0x06004529 RID: 17705 RVA: 0x0017C51B File Offset: 0x0017A71B
 	[NullableContext(2)]
 	public void SetCurrentPlayingSequenceName(string sequenceName)
 	{
 		this.AllAreaPlayingSequenceName = sequenceName;
 	}
 
-	// Token: 0x040034A4 RID: 13476
+	// Token: 0x0400353D RID: 13629
 	private const int MIN_ANIM_TIME = 100;
 
-	// Token: 0x040034A5 RID: 13477
+	// Token: 0x0400353E RID: 13630
 	private const int PROGRESS_START_ANGLE = -53;
 
-	// Token: 0x040034A6 RID: 13478
+	// Token: 0x0400353F RID: 13631
 	private const int PROGRESS_END_ANGLE = 0;
 
-	// Token: 0x040034A7 RID: 13479
+	// Token: 0x04003540 RID: 13632
 	private const int PAUSE_TIME = 0;
 
-	// Token: 0x040034A8 RID: 13480
+	// Token: 0x04003541 RID: 13633
 	private static readonly int YAW_MAX_ANGLE = 720;
 
-	// Token: 0x040034A9 RID: 13481
+	// Token: 0x04003542 RID: 13634
 	protected int GamePlayId;
 
-	// Token: 0x040034AA RID: 13482
+	// Token: 0x04003543 RID: 13635
 	protected ArtemisQteGameInfo GameInfo;
 
-	// Token: 0x040034AB RID: 13483
+	// Token: 0x04003544 RID: 13636
 	[Nullable(2)]
 	protected ArtemisQteRingInfo RingInfo;
 
-	// Token: 0x040034AC RID: 13484
+	// Token: 0x04003545 RID: 13637
 	private readonly Rotator CurrentRotator = Rotator.Create();
 
-	// Token: 0x040034AD RID: 13485
+	// Token: 0x04003546 RID: 13638
 	private readonly Rotator CurrentFillAmountRotator = Rotator.Create();
 
-	// Token: 0x040034AE RID: 13486
+	// Token: 0x04003547 RID: 13639
 	private readonly Rotator AnimRotator = Rotator.Create();
 
-	// Token: 0x040034AF RID: 13487
+	// Token: 0x04003548 RID: 13640
 	private bool InAnim;
 
-	// Token: 0x040034B0 RID: 13488
+	// Token: 0x04003549 RID: 13641
 	private int CurrentAnimTime;
 
-	// Token: 0x040034B1 RID: 13489
+	// Token: 0x0400354A RID: 13642
 	private float AnimStartProgress;
 
-	// Token: 0x040034B2 RID: 13490
+	// Token: 0x0400354B RID: 13643
 	private int AnimTime;
 
-	// Token: 0x040034B3 RID: 13491
+	// Token: 0x0400354C RID: 13644
 	private float ArrowActiveStartYawAngle;
 
-	// Token: 0x040034B4 RID: 13492
+	// Token: 0x0400354D RID: 13645
 	private float ArrowActiveEndYawAngle;
 
-	// Token: 0x040034B5 RID: 13493
+	// Token: 0x0400354E RID: 13646
 	protected EArtemisRotateMode RotateMode;
 
-	// Token: 0x040034B6 RID: 13494
+	// Token: 0x0400354F RID: 13647
 	protected float PeriodAlphaTotalTime;
 
-	// Token: 0x040034B7 RID: 13495
+	// Token: 0x04003550 RID: 13648
 	protected float PeriodAlphaCurrentTime;
 
-	// Token: 0x040034B8 RID: 13496
+	// Token: 0x04003551 RID: 13649
 	private readonly Dictionary<int, ArtemisQteRingSingleItem> QteAreaTextures = new Dictionary<int, ArtemisQteRingSingleItem>();
 
-	// Token: 0x040034B9 RID: 13497
+	// Token: 0x04003552 RID: 13650
 	private readonly Dictionary<int, ArtemisQteRingSingleItem> PerfectAreaTextures = new Dictionary<int, ArtemisQteRingSingleItem>();
 
-	// Token: 0x040034BA RID: 13498
+	// Token: 0x04003553 RID: 13651
 	private readonly List<ArtemisQteRingSingleItem> CachedTexture = new List<ArtemisQteRingSingleItem>();
 
-	// Token: 0x040034BB RID: 13499
+	// Token: 0x04003554 RID: 13652
 	[Nullable(2)]
 	private string AllAreaPlayingSequenceName;
 
-	// Token: 0x040034BC RID: 13500
+	// Token: 0x04003555 RID: 13653
 	[Nullable(2)]
 	private string OncePlayingSequenceName;
 
-	// Token: 0x040034BD RID: 13501
+	// Token: 0x04003556 RID: 13654
 	private readonly List<ArtemisQteRingBgSingleItem> BgItemList = new List<ArtemisQteRingBgSingleItem>();
 
-	// Token: 0x020076BF RID: 30399
+	// Token: 0x02006853 RID: 26707
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x0402730D RID: 160525
+		// Token: 0x04022656 RID: 140886
 		public const int Setoff1Texture1 = 0;
 
-		// Token: 0x0402730E RID: 160526
+		// Token: 0x04022657 RID: 140887
 		public const int Setoff1Texture2 = 1;
 
-		// Token: 0x0402730F RID: 160527
+		// Token: 0x04022658 RID: 140888
 		public const int Setoff1Texture3 = 2;
 
-		// Token: 0x04027310 RID: 160528
+		// Token: 0x04022659 RID: 140889
 		public const int ClickPointPnl = 3;
 
-		// Token: 0x04027311 RID: 160529
+		// Token: 0x0402265A RID: 140890
 		public const int ControlBar = 4;
 
-		// Token: 0x04027312 RID: 160530
+		// Token: 0x0402265B RID: 140891
 		public const int ProgressPercebtText = 5;
 
-		// Token: 0x04027313 RID: 160531
+		// Token: 0x0402265C RID: 140892
 		public const int RotationBarPnl = 6;
 
-		// Token: 0x04027314 RID: 160532
+		// Token: 0x0402265D RID: 140893
 		public const int PointRotationPnl = 7;
 
-		// Token: 0x04027315 RID: 160533
+		// Token: 0x0402265E RID: 140894
 		public const int PnlClickPointLayout = 8;
 	}
 }

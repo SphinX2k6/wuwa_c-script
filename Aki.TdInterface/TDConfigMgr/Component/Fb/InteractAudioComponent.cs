@@ -5,13 +5,13 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C0E RID: 3086
+	// Token: 0x02000CDE RID: 3294
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class InteractAudioComponent : IComponentBase
 	{
-		// Token: 0x060046D3 RID: 18131 RVA: 0x000B2A73 File Offset: 0x000B0C73
-		[NullableContext(1)]
+		// Token: 0x06004B36 RID: 19254 RVA: 0x000BCC3F File Offset: 0x000BAE3F
+		[NullableContext(0)]
 		public static InteractAudioComponent Create(IInteractAudioComponent? instance)
 		{
 			if (instance == null)
@@ -24,8 +24,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001474 RID: 5236
-		// (get) Token: 0x060046D4 RID: 18132 RVA: 0x000B2A94 File Offset: 0x000B0C94
+		// Token: 0x17001575 RID: 5493
+		// (get) Token: 0x06004B37 RID: 19255 RVA: 0x000BCC60 File Offset: 0x000BAE60
 		public override bool? Disabled
 		{
 			get
@@ -38,8 +38,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001475 RID: 5237
-		// (get) Token: 0x060046D5 RID: 18133 RVA: 0x000B2ACC File Offset: 0x000B0CCC
+		// Token: 0x17001576 RID: 5494
+		// (get) Token: 0x06004B38 RID: 19256 RVA: 0x000BCC98 File Offset: 0x000BAE98
 		public override bool? EdIsLocked
 		{
 			get
@@ -48,8 +48,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001476 RID: 5238
-		// (get) Token: 0x060046D6 RID: 18134 RVA: 0x000B2AE4 File Offset: 0x000B0CE4
+		// Token: 0x17001577 RID: 5495
+		// (get) Token: 0x06004B39 RID: 19257 RVA: 0x000BCCB0 File Offset: 0x000BAEB0
 		public virtual EInteractAudioMaterial? CollisionMaterial
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001477 RID: 5239
-		// (get) Token: 0x060046D7 RID: 18135 RVA: 0x000B2B1A File Offset: 0x000B0D1A
+		// Token: 0x17001578 RID: 5496
+		// (get) Token: 0x06004B3A RID: 19258 RVA: 0x000BCCE6 File Offset: 0x000BAEE6
 		public virtual IAudioEventConfig InteractEventConfig
 		{
 			get
@@ -78,13 +78,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002841 RID: 10305
+		// Token: 0x04002A8D RID: 10893
 		private IInteractAudioComponent Instance;
 
-		// Token: 0x04002842 RID: 10306
+		// Token: 0x04002A8E RID: 10894
 		private IAudioEventConfig _InteractEventConfigCache;
 
-		// Token: 0x04002843 RID: 10307
+		// Token: 0x04002A8F RID: 10895
 		private bool _InteractEventConfigInited;
 	}
 }

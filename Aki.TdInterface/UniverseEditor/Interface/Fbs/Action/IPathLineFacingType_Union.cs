@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006C6C RID: 27756
+	// Token: 0x020073D3 RID: 29651
 	public enum IPathLineFacingType_Union : byte
 	{
-		// Token: 0x040115B1 RID: 71089
+		// Token: 0x04012509 RID: 75017
 		NONE,
-		// Token: 0x040115B2 RID: 71090
+		// Token: 0x0401250A RID: 75018
 		IPathLineFacingType,
-		// Token: 0x040115B3 RID: 71091
+		// Token: 0x0401250B RID: 75019
 		IPathLineFacingCurrentDirection,
-		// Token: 0x040115B4 RID: 71092
+		// Token: 0x0401250C RID: 75020
 		IPathLineFacingCustomDirection
 	}
 }

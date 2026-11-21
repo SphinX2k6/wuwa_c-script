@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006C5E RID: 27742
+	// Token: 0x020073C5 RID: 29637
 	public class IPainCoveringHeadT
 	{
-		// Token: 0x1700CE9B RID: 52891
-		// (get) Token: 0x06030E13 RID: 200211 RVA: 0x006A392E File Offset: 0x006A1B2E
-		// (set) Token: 0x06030E14 RID: 200212 RVA: 0x006A3936 File Offset: 0x006A1B36
+		// Token: 0x1700D9B6 RID: 55734
+		// (get) Token: 0x06033D6E RID: 212334 RVA: 0x006FDE2E File Offset: 0x006FC02E
+		// (set) Token: 0x06033D6F RID: 212335 RVA: 0x006FDE36 File Offset: 0x006FC036
 		public ELeisureInteract Type { get; set; }
 
-		// Token: 0x06030E15 RID: 200213 RVA: 0x006A393F File Offset: 0x006A1B3F
+		// Token: 0x06033D70 RID: 212336 RVA: 0x006FDE3F File Offset: 0x006FC03F
 		public IPainCoveringHeadT()
 		{
 			this.Type = ELeisureInteract.CustomSkill;

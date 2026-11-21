@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000B06 RID: 2822
+	// Token: 0x02000AF5 RID: 2805
 	[NetMessage(EMessageId.NewbieCarnivalTaskJumpUpdateNotify)]
 	public sealed class NewbieCarnivalTaskJumpUpdateNotify : IMessage<NewbieCarnivalTaskJumpUpdateNotify>, IMessage, IEquatable<NewbieCarnivalTaskJumpUpdateNotify>, IDeepCloneable<NewbieCarnivalTaskJumpUpdateNotify>, IBufferMessage
 	{
-		// Token: 0x0600F53D RID: 62781 RVA: 0x0023CA34 File Offset: 0x0023AC34
+		// Token: 0x0600F423 RID: 62499 RVA: 0x0023A828 File Offset: 0x00238A28
 		[NullableContext(1)]
 		public static NewbieCarnivalTaskJumpUpdateNotify Create()
 		{
 			return new NewbieCarnivalTaskJumpUpdateNotify();
 		}
 
-		// Token: 0x170031F4 RID: 12788
-		// (get) Token: 0x0600F53E RID: 62782 RVA: 0x0023CA3B File Offset: 0x0023AC3B
+		// Token: 0x170031B6 RID: 12726
+		// (get) Token: 0x0600F424 RID: 62500 RVA: 0x0023A82F File Offset: 0x00238A2F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170031F5 RID: 12789
-		// (get) Token: 0x0600F53F RID: 62783 RVA: 0x0023CA3E File Offset: 0x0023AC3E
+		// Token: 0x170031B7 RID: 12727
+		// (get) Token: 0x0600F425 RID: 62501 RVA: 0x0023A832 File Offset: 0x00238A32
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600F540 RID: 62784 RVA: 0x0023CA45 File Offset: 0x0023AC45
+		// Token: 0x0600F426 RID: 62502 RVA: 0x0023A839 File Offset: 0x00238A39
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NewbieCarnivalTaskJumpUpdateNotify()
 		{
 		}
 
-		// Token: 0x0600F541 RID: 62785 RVA: 0x0023CA63 File Offset: 0x0023AC63
+		// Token: 0x0600F427 RID: 62503 RVA: 0x0023A857 File Offset: 0x00238A57
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NewbieCarnivalTaskJumpUpdateNotify(NewbieCarnivalTaskJumpUpdateNotify other) : this()
@@ -60,7 +60,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0600F542 RID: 62786 RVA: 0x0023CA9E File Offset: 0x0023AC9E
+		// Token: 0x0600F428 RID: 62504 RVA: 0x0023A892 File Offset: 0x00238A92
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public NewbieCarnivalTaskJumpUpdateNotify Clone()
@@ -68,8 +68,8 @@ namespace Aki.Protocol
 			return new NewbieCarnivalTaskJumpUpdateNotify(this);
 		}
 
-		// Token: 0x170031F6 RID: 12790
-		// (get) Token: 0x0600F543 RID: 62787 RVA: 0x0023CAA6 File Offset: 0x0023ACA6
+		// Token: 0x170031B8 RID: 12728
+		// (get) Token: 0x0600F429 RID: 62505 RVA: 0x0023A89A File Offset: 0x00238A9A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> JumpTaskIds
@@ -80,8 +80,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x170031F7 RID: 12791
-		// (get) Token: 0x0600F544 RID: 62788 RVA: 0x0023CAAE File Offset: 0x0023ACAE
+		// Token: 0x170031B9 RID: 12729
+		// (get) Token: 0x0600F42A RID: 62506 RVA: 0x0023A8A2 File Offset: 0x00238AA2
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<JumpTaskCondInfo> JumpTaskCondInfos
@@ -92,7 +92,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600F545 RID: 62789 RVA: 0x0023CAB6 File Offset: 0x0023ACB6
+		// Token: 0x0600F42B RID: 62507 RVA: 0x0023A8AA File Offset: 0x00238AAA
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -100,7 +100,7 @@ namespace Aki.Protocol
 			return this.Equals(other as NewbieCarnivalTaskJumpUpdateNotify);
 		}
 
-		// Token: 0x0600F546 RID: 62790 RVA: 0x0023CAC4 File Offset: 0x0023ACC4
+		// Token: 0x0600F42C RID: 62508 RVA: 0x0023A8B8 File Offset: 0x00238AB8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(NewbieCarnivalTaskJumpUpdateNotify other)
@@ -108,7 +108,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.jumpTaskIds_.Equals(other.jumpTaskIds_) && this.jumpTaskCondInfos_.Equals(other.jumpTaskCondInfos_) && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0600F547 RID: 62791 RVA: 0x0023CB18 File Offset: 0x0023AD18
+		// Token: 0x0600F42D RID: 62509 RVA: 0x0023A90C File Offset: 0x00238B0C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -123,7 +123,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600F548 RID: 62792 RVA: 0x0023CB5A File Offset: 0x0023AD5A
+		// Token: 0x0600F42E RID: 62510 RVA: 0x0023A94E File Offset: 0x00238B4E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -131,7 +131,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0600F549 RID: 62793 RVA: 0x0023CB67 File Offset: 0x0023AD67
+		// Token: 0x0600F42F RID: 62511 RVA: 0x0023A95B File Offset: 0x00238B5B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -139,7 +139,7 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0600F54A RID: 62794 RVA: 0x0023CB70 File Offset: 0x0023AD70
+		// Token: 0x0600F430 RID: 62512 RVA: 0x0023A964 File Offset: 0x00238B64
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
@@ -152,7 +152,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0600F54B RID: 62795 RVA: 0x0023CBA8 File Offset: 0x0023ADA8
+		// Token: 0x0600F431 RID: 62513 RVA: 0x0023A99C File Offset: 0x00238B9C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -167,7 +167,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0600F54C RID: 62796 RVA: 0x0023CBF4 File Offset: 0x0023ADF4
+		// Token: 0x0600F432 RID: 62514 RVA: 0x0023A9E8 File Offset: 0x00238BE8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(NewbieCarnivalTaskJumpUpdateNotify other)
@@ -181,7 +181,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0600F54D RID: 62797 RVA: 0x0023CC33 File Offset: 0x0023AE33
+		// Token: 0x0600F433 RID: 62515 RVA: 0x0023AA27 File Offset: 0x00238C27
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -189,7 +189,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0600F54E RID: 62798 RVA: 0x0023CC3C File Offset: 0x0023AE3C
+		// Token: 0x0600F434 RID: 62516 RVA: 0x0023AA30 File Offset: 0x00238C30
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -201,9 +201,9 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 56U && num != 58U)
+				if (num != 24U && num != 26U)
 				{
-					if (num != 114U)
+					if (num != 82U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
@@ -219,25 +219,25 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x040062A5 RID: 25253
+		// Token: 0x040062AE RID: 25262
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x040062A6 RID: 25254
-		public const int JumpTaskIdsFieldNumber = 7;
+		// Token: 0x040062AF RID: 25263
+		public const int JumpTaskIdsFieldNumber = 3;
 
-		// Token: 0x040062A7 RID: 25255
-		private static readonly FieldCodec<int> _repeated_jumpTaskIds_codec = FieldCodec.ForInt32(58U);
+		// Token: 0x040062B0 RID: 25264
+		private static readonly FieldCodec<int> _repeated_jumpTaskIds_codec = FieldCodec.ForInt32(26U);
 
-		// Token: 0x040062A8 RID: 25256
+		// Token: 0x040062B1 RID: 25265
 		private readonly RepeatedField<int> jumpTaskIds_ = new RepeatedField<int>();
 
-		// Token: 0x040062A9 RID: 25257
-		public const int JumpTaskCondInfosFieldNumber = 14;
+		// Token: 0x040062B2 RID: 25266
+		public const int JumpTaskCondInfosFieldNumber = 10;
 
-		// Token: 0x040062AA RID: 25258
-		private static readonly FieldCodec<JumpTaskCondInfo> _repeated_jumpTaskCondInfos_codec = FieldCodec.ForMessage<JumpTaskCondInfo>(114U, JumpTaskCondInfo.Parser);
+		// Token: 0x040062B3 RID: 25267
+		private static readonly FieldCodec<JumpTaskCondInfo> _repeated_jumpTaskCondInfos_codec = FieldCodec.ForMessage<JumpTaskCondInfo>(82U, JumpTaskCondInfo.Parser);
 
-		// Token: 0x040062AB RID: 25259
+		// Token: 0x040062B4 RID: 25268
 		private readonly RepeatedField<JumpTaskCondInfo> jumpTaskCondInfos_ = new RepeatedField<JumpTaskCondInfo>();
 	}
 }

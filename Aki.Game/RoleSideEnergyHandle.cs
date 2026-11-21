@@ -7,19 +7,19 @@ using CSharpScript.Game.Module.BattleUi;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02001F39 RID: 7993
+// Token: 0x020013FB RID: 5115
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleSideEnergyHandle : HudUnitHandleBase
 {
-	// Token: 0x0600F6C6 RID: 63174 RVA: 0x003B9DC8 File Offset: 0x003B7FC8
+	// Token: 0x0600CAE5 RID: 51941 RVA: 0x003C58B4 File Offset: 0x003C3AB4
 	protected override void OnInitialize()
 	{
 		base.OnInitialize();
 		this.Refresh();
 	}
 
-	// Token: 0x0600F6C7 RID: 63175 RVA: 0x003B9DD8 File Offset: 0x003B7FD8
+	// Token: 0x0600CAE6 RID: 51942 RVA: 0x003C58C4 File Offset: 0x003C3AC4
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<int, GameplayCue, bool, int>(EEventName.CharOnBuffAddRoleSideEnergyBar, new Action<int, GameplayCue, bool, int>(this.OnAddRoleSideEnergy));
@@ -28,7 +28,7 @@ public class RoleSideEnergyHandle : HudUnitHandleBase
 		EventSystem.Instance.Add<Entity>(EEventName.BattleUiRemoveRoleData, new Action<Entity>(this.OnRemoveEntity));
 	}
 
-	// Token: 0x0600F6C8 RID: 63176 RVA: 0x003B9E58 File Offset: 0x003B8058
+	// Token: 0x0600CAE7 RID: 51943 RVA: 0x003C5944 File Offset: 0x003C3B44
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove<int, GameplayCue, bool, int>(EEventName.CharOnBuffAddRoleSideEnergyBar, new Action<int, GameplayCue, bool, int>(this.OnAddRoleSideEnergy));
@@ -37,7 +37,7 @@ public class RoleSideEnergyHandle : HudUnitHandleBase
 		EventSystem.Instance.Remove<Entity>(EEventName.BattleUiRemoveRoleData, new Action<Entity>(this.OnRemoveEntity));
 	}
 
-	// Token: 0x0600F6C9 RID: 63177 RVA: 0x003B9ED5 File Offset: 0x003B80D5
+	// Token: 0x0600CAE8 RID: 51944 RVA: 0x003C59C1 File Offset: 0x003C3BC1
 	private void OnAddRoleSideEnergy(int entityId, GameplayCue cue, bool isAdd, int handleId)
 	{
 		if (this.EntityId != entityId)
@@ -52,21 +52,21 @@ public class RoleSideEnergyHandle : HudUnitHandleBase
 		this.RemoveEnergyBar(handleId);
 	}
 
-	// Token: 0x0600F6CA RID: 63178 RVA: 0x003B9EF6 File Offset: 0x003B80F6
+	// Token: 0x0600CAE9 RID: 51945 RVA: 0x003C59E2 File Offset: 0x003C3BE2
 	private void OnChangeRole(int newEntityId, int oldEntityId)
 	{
 		this.Refresh();
 		this.RefreshAllUnitVisible();
 	}
 
-	// Token: 0x0600F6CB RID: 63179 RVA: 0x003B9F04 File Offset: 0x003B8104
+	// Token: 0x0600CAEA RID: 51946 RVA: 0x003C59F0 File Offset: 0x003C3BF0
 	private void RefreshShow()
 	{
 		this.Refresh();
 		this.RefreshAllUnitVisible();
 	}
 
-	// Token: 0x0600F6CC RID: 63180 RVA: 0x003B9F14 File Offset: 0x003B8114
+	// Token: 0x0600CAEB RID: 51947 RVA: 0x003C5A00 File Offset: 0x003C3C00
 	private void OnRemoveEntity(Entity entity)
 	{
 		foreach (KeyValuePair<int, RoleSideEnergyBarInfo> keyValuePair in this.BarInfoMap)
@@ -82,7 +82,7 @@ public class RoleSideEnergyHandle : HudUnitHandleBase
 		}
 	}
 
-	// Token: 0x0600F6CD RID: 63181 RVA: 0x003B9F80 File Offset: 0x003B8180
+	// Token: 0x0600CAEC RID: 51948 RVA: 0x003C5A6C File Offset: 0x003C3C6C
 	private void RefreshAllUnitVisible()
 	{
 		foreach (RoleSideEnergyBarInfo roleSideEnergyBarInfo in this.BarInfoMap.Values)
@@ -94,7 +94,7 @@ public class RoleSideEnergyHandle : HudUnitHandleBase
 		}
 	}
 
-	// Token: 0x0600F6CE RID: 63182 RVA: 0x003B9FF4 File Offset: 0x003B81F4
+	// Token: 0x0600CAED RID: 51949 RVA: 0x003C5AE0 File Offset: 0x003C3CE0
 	private void Refresh()
 	{
 		BattleUiRoleData curRoleData = BattleUiModel.Instance.GetCurRoleData();
@@ -119,7 +119,7 @@ public class RoleSideEnergyHandle : HudUnitHandleBase
 		this.RefreshEnergyBar();
 	}
 
-	// Token: 0x0600F6CF RID: 63183 RVA: 0x003BA07C File Offset: 0x003B827C
+	// Token: 0x0600CAEE RID: 51950 RVA: 0x003C5B68 File Offset: 0x003C3D68
 	private void RefreshEnergyBar()
 	{
 		if (this.RoleData == null)
@@ -136,7 +136,7 @@ public class RoleSideEnergyHandle : HudUnitHandleBase
 		}
 	}
 
-	// Token: 0x0600F6D0 RID: 63184 RVA: 0x003BA100 File Offset: 0x003B8300
+	// Token: 0x0600CAEF RID: 51951 RVA: 0x003C5BEC File Offset: 0x003C3DEC
 	private void AddEnergyBar(GameplayCue cueConfig, int handleId)
 	{
 		if (this.BarInfoMap.ContainsKey(handleId))
@@ -176,7 +176,7 @@ public class RoleSideEnergyHandle : HudUnitHandleBase
 		});
 	}
 
-	// Token: 0x0600F6D1 RID: 63185 RVA: 0x003BA1B8 File Offset: 0x003B83B8
+	// Token: 0x0600CAF0 RID: 51952 RVA: 0x003C5CA4 File Offset: 0x003C3EA4
 	private void RemoveEnergyBar(int handleId)
 	{
 		RoleSideEnergyBarInfo roleSideEnergyBarInfo;
@@ -193,7 +193,7 @@ public class RoleSideEnergyHandle : HudUnitHandleBase
 		}
 	}
 
-	// Token: 0x0600F6D2 RID: 63186 RVA: 0x003BA20C File Offset: 0x003B840C
+	// Token: 0x0600CAF1 RID: 51953 RVA: 0x003C5CF8 File Offset: 0x003C3EF8
 	protected override void OnTick(float delta)
 	{
 		this.IsCalcScreenPos = false;
@@ -214,7 +214,7 @@ public class RoleSideEnergyHandle : HudUnitHandleBase
 		}
 	}
 
-	// Token: 0x0600F6D3 RID: 63187 RVA: 0x003BA2AC File Offset: 0x003B84AC
+	// Token: 0x0600CAF2 RID: 51954 RVA: 0x003C5D98 File Offset: 0x003C3F98
 	private void CalcScreenPos()
 	{
 		this.InScreen = false;
@@ -251,7 +251,7 @@ public class RoleSideEnergyHandle : HudUnitHandleBase
 		this.InScreen = HudUnitUtils.PositionUtil.ProjectWorldToScreen(actorLocation, this.ScreenPos);
 	}
 
-	// Token: 0x04007246 RID: 29254
+	// Token: 0x04007327 RID: 29479
 	[StaticVariableRuleIgnore]
 	private static readonly Dictionary<string, Type> _roleSideEnergyUnitClassMap = new Dictionary<string, Type>
 	{
@@ -261,22 +261,22 @@ public class RoleSideEnergyHandle : HudUnitHandleBase
 		}
 	};
 
-	// Token: 0x04007247 RID: 29255
+	// Token: 0x04007328 RID: 29480
 	[Nullable(2)]
 	private BattleUiRoleData RoleData;
 
-	// Token: 0x04007248 RID: 29256
+	// Token: 0x04007329 RID: 29481
 	private int EntityId;
 
-	// Token: 0x04007249 RID: 29257
+	// Token: 0x0400732A RID: 29482
 	private readonly Dictionary<int, RoleSideEnergyBarInfo> BarInfoMap = new Dictionary<int, RoleSideEnergyBarInfo>();
 
-	// Token: 0x0400724A RID: 29258
+	// Token: 0x0400732B RID: 29483
 	private bool IsCalcScreenPos;
 
-	// Token: 0x0400724B RID: 29259
+	// Token: 0x0400732C RID: 29484
 	private readonly Vector2D ScreenPos = new Vector2D();
 
-	// Token: 0x0400724C RID: 29260
+	// Token: 0x0400732D RID: 29485
 	private bool InScreen;
 }

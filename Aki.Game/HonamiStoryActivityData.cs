@@ -1,18 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Common;
 using CSharpScript.Game.Module.HonamiStory;
 
-// Token: 0x02001E69 RID: 7785
+// Token: 0x0200132B RID: 4907
 [NullableContext(1)]
 [Nullable(0)]
 public class HonamiStoryActivityData : ActivityBaseData
 {
-	// Token: 0x0600ECAF RID: 60591 RVA: 0x00385DAC File Offset: 0x00383FAC
+	// Token: 0x0600C0CE RID: 49358 RVA: 0x00391A68 File Offset: 0x0038FC68
 	protected override void OnInit(ActivityData data)
 	{
 		HonamiStoryActivityInfo honamiStoryActivityInfo = data.HonamiStoryActivityInfo;
@@ -28,18 +27,18 @@ public class HonamiStoryActivityData : ActivityBaseData
 		this.InitHonamiStoryLimitTaskData();
 		this.InitHonamiStoryScoreRewardData();
 		this.InitItemCollectionData();
-		this.InitSubQuestTaskDataList(honamiStoryActivityInfo.AreaTask.ToList<ConditionTask>());
-		this.UpdateHonamiStoryAreaDataList(honamiStoryActivityInfo.HonamiStoryAreaInfos.ToList<HonamiStoryAreaInfo>());
-		this.UpdateHonamiStoryMascotDataList(honamiStoryActivityInfo.HonamiStoryMascotInfos.ToList<HonamiStoryMascotInfo>());
-		this.UpdatePermanentTaskDataList(honamiStoryActivityInfo.HonamiStoryResidentTask.ToList<ConditionTask>());
-		this.UpdateLimitTaskDataList(honamiStoryActivityInfo.HonamiStoryLimitTask.ToList<ConditionTask>());
-		this.UpdateScoreRewardDataList(honamiStoryActivityInfo.HonamiStoryScoreRewardInfos.ToList<HonamiStoryScoreRewardInfo>());
-		this.UpdateItemCollectionDataList(honamiStoryActivityInfo.HonamiStoryItemCollectionInfos.ToList<HonamiStoryItemCollectionInfo>());
-		this.RefreshTowerData(honamiStoryActivityInfo.HonamiStoryTopInfos.ToList<HonamiStoryTopInfo>());
+		this.InitSubQuestTaskDataList(honamiStoryActivityInfo.AreaTask);
+		this.UpdateHonamiStoryAreaDataList(honamiStoryActivityInfo.HonamiStoryAreaInfos);
+		this.UpdateHonamiStoryMascotDataList(honamiStoryActivityInfo.HonamiStoryMascotInfos);
+		this.UpdatePermanentTaskDataList(honamiStoryActivityInfo.HonamiStoryResidentTask);
+		this.UpdateLimitTaskDataList(honamiStoryActivityInfo.HonamiStoryLimitTask);
+		this.UpdateScoreRewardDataList(honamiStoryActivityInfo.HonamiStoryScoreRewardInfos);
+		this.UpdateItemCollectionDataList(honamiStoryActivityInfo.HonamiStoryItemCollectionInfos);
+		this.RefreshTowerData(honamiStoryActivityInfo.HonamiStoryTopInfos);
 		this.InitLevelSelectPanelData();
 	}
 
-	// Token: 0x0600ECB0 RID: 60592 RVA: 0x00385EA8 File Offset: 0x003840A8
+	// Token: 0x0600C0CF RID: 49359 RVA: 0x00391B3C File Offset: 0x0038FD3C
 	protected override void PhraseEx(ActivityData data)
 	{
 		HonamiStoryActivityInfo honamiStoryActivityInfo = data.HonamiStoryActivityInfo;
@@ -49,18 +48,18 @@ public class HonamiStoryActivityData : ActivityBaseData
 			return;
 		}
 		HonamiStoryModel.Instance.UpdateActivityInfo(base.Id, honamiStoryActivityInfo);
-		this.UpdateHonamiStoryAreaDataList(honamiStoryActivityInfo.HonamiStoryAreaInfos.ToList<HonamiStoryAreaInfo>());
-		this.UpdateHonamiStoryMascotDataList(honamiStoryActivityInfo.HonamiStoryMascotInfos.ToList<HonamiStoryMascotInfo>());
-		this.UpdatePermanentTaskDataList(honamiStoryActivityInfo.HonamiStoryResidentTask.ToList<ConditionTask>());
-		this.UpdateLimitTaskDataList(honamiStoryActivityInfo.HonamiStoryLimitTask.ToList<ConditionTask>());
-		this.UpdateScoreRewardDataList(honamiStoryActivityInfo.HonamiStoryScoreRewardInfos.ToList<HonamiStoryScoreRewardInfo>());
-		this.UpdateItemCollectionDataList(honamiStoryActivityInfo.HonamiStoryItemCollectionInfos.ToList<HonamiStoryItemCollectionInfo>());
-		this.UpdateSubQuestTaskDataList(honamiStoryActivityInfo.AreaTask.ToList<ConditionTask>());
-		this.RefreshTowerData(honamiStoryActivityInfo.HonamiStoryTopInfos.ToList<HonamiStoryTopInfo>());
+		this.UpdateHonamiStoryAreaDataList(honamiStoryActivityInfo.HonamiStoryAreaInfos);
+		this.UpdateHonamiStoryMascotDataList(honamiStoryActivityInfo.HonamiStoryMascotInfos);
+		this.UpdatePermanentTaskDataList(honamiStoryActivityInfo.HonamiStoryResidentTask);
+		this.UpdateLimitTaskDataList(honamiStoryActivityInfo.HonamiStoryLimitTask);
+		this.UpdateScoreRewardDataList(honamiStoryActivityInfo.HonamiStoryScoreRewardInfos);
+		this.UpdateItemCollectionDataList(honamiStoryActivityInfo.HonamiStoryItemCollectionInfos);
+		this.UpdateSubQuestTaskDataList(honamiStoryActivityInfo.AreaTask);
+		this.RefreshTowerData(honamiStoryActivityInfo.HonamiStoryTopInfos);
 		HonamiStoryModel.Instance.SetTotalRevenueInternal(honamiStoryActivityInfo.TotalRevenue);
 	}
 
-	// Token: 0x0600ECB1 RID: 60593 RVA: 0x00385F88 File Offset: 0x00384188
+	// Token: 0x0600C0D0 RID: 49360 RVA: 0x00391BF4 File Offset: 0x0038FDF4
 	protected override bool GetExDataFinishShowState()
 	{
 		using (Dictionary<int, HonamiStoryPermanentTaskData>.ValueCollection.Enumerator enumerator = this.PermanentTaskDataMap.Values.GetEnumerator())
@@ -106,13 +105,13 @@ public class HonamiStoryActivityData : ActivityBaseData
 		return true;
 	}
 
-	// Token: 0x0600ECB2 RID: 60594 RVA: 0x003860C8 File Offset: 0x003842C8
+	// Token: 0x0600C0D1 RID: 49361 RVA: 0x00391D34 File Offset: 0x0038FF34
 	public override bool GetExDataRedPointShowState()
 	{
 		return this.CheckAllFunctionRedDot();
 	}
 
-	// Token: 0x0600ECB3 RID: 60595 RVA: 0x003860D0 File Offset: 0x003842D0
+	// Token: 0x0600C0D2 RID: 49362 RVA: 0x00391D3C File Offset: 0x0038FF3C
 	public bool CheckAllFunctionRedDot()
 	{
 		if (!base.IsUnLock())
@@ -153,7 +152,7 @@ public class HonamiStoryActivityData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x0600ECB4 RID: 60596 RVA: 0x00386180 File Offset: 0x00384380
+	// Token: 0x0600C0D3 RID: 49363 RVA: 0x00391DEC File Offset: 0x0038FFEC
 	private void InitHonamiStoryAreaData()
 	{
 		foreach (HonamiStoryArea honamiStoryArea in HonamiStoryConfig.Instance.GetHonamiStoryAreaConfigList(base.Id))
@@ -164,8 +163,8 @@ public class HonamiStoryActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x0600ECB5 RID: 60597 RVA: 0x003861FC File Offset: 0x003843FC
-	public void UpdateHonamiStoryAreaDataList(List<HonamiStoryAreaInfo> areaInfoList)
+	// Token: 0x0600C0D4 RID: 49364 RVA: 0x00391E68 File Offset: 0x00390068
+	public void UpdateHonamiStoryAreaDataList(IEnumerable<HonamiStoryAreaInfo> areaInfoList)
 	{
 		foreach (HonamiStoryAreaInfo areaInfo in areaInfoList)
 		{
@@ -173,7 +172,7 @@ public class HonamiStoryActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x0600ECB6 RID: 60598 RVA: 0x0038624C File Offset: 0x0038444C
+	// Token: 0x0600C0D5 RID: 49365 RVA: 0x00391EB0 File Offset: 0x003900B0
 	public void UpdateHonamiStoryAreaData(HonamiStoryAreaInfo areaInfo)
 	{
 		HonamiStoryAreaData honamiStoryAreaData = this.GetHonamiStoryAreaData(areaInfo.HonamiStoryAreaId);
@@ -184,7 +183,7 @@ public class HonamiStoryActivityData : ActivityBaseData
 		honamiStoryAreaData.UpdateData(areaInfo);
 	}
 
-	// Token: 0x0600ECB7 RID: 60599 RVA: 0x00386274 File Offset: 0x00384474
+	// Token: 0x0600C0D6 RID: 49366 RVA: 0x00391ED8 File Offset: 0x003900D8
 	[NullableContext(2)]
 	public HonamiStoryAreaData GetHonamiStoryAreaData(int id)
 	{
@@ -202,7 +201,7 @@ public class HonamiStoryActivityData : ActivityBaseData
 		return null;
 	}
 
-	// Token: 0x0600ECB8 RID: 60600 RVA: 0x003862C4 File Offset: 0x003844C4
+	// Token: 0x0600C0D7 RID: 49367 RVA: 0x00391F28 File Offset: 0x00390128
 	public List<HonamiStoryAreaData> GetHonamiStoryAreaDataList()
 	{
 		if (this.AreaDataList.Count == 0)
@@ -212,7 +211,7 @@ public class HonamiStoryActivityData : ActivityBaseData
 		return this.AreaDataList;
 	}
 
-	// Token: 0x0600ECB9 RID: 60601 RVA: 0x00386304 File Offset: 0x00384504
+	// Token: 0x0600C0D8 RID: 49368 RVA: 0x00391F68 File Offset: 0x00390168
 	public List<HonamiStoryAreaData> GetHonamiStoryMascotAreaDataList()
 	{
 		List<HonamiStoryAreaData> list = new List<HonamiStoryAreaData>();
@@ -226,7 +225,7 @@ public class HonamiStoryActivityData : ActivityBaseData
 		return list;
 	}
 
-	// Token: 0x0600ECBA RID: 60602 RVA: 0x0038637C File Offset: 0x0038457C
+	// Token: 0x0600C0D9 RID: 49369 RVA: 0x00391FE0 File Offset: 0x003901E0
 	public int GetCurrentProgressAreaDataId()
 	{
 		List<HonamiStoryAreaData> honamiStoryAreaDataList = this.GetHonamiStoryAreaDataList();
@@ -244,7 +243,7 @@ public class HonamiStoryActivityData : ActivityBaseData
 		return honamiStoryAreaDataList[honamiStoryAreaDataList.Count - 1].Id;
 	}
 
-	// Token: 0x0600ECBB RID: 60603 RVA: 0x003863FC File Offset: 0x003845FC
+	// Token: 0x0600C0DA RID: 49370 RVA: 0x00392060 File Offset: 0x00390260
 	public bool IsAllAreaPass()
 	{
 		List<HonamiStoryAreaData> honamiStoryAreaDataList = this.GetHonamiStoryAreaDataList();
@@ -264,7 +263,7 @@ public class HonamiStoryActivityData : ActivityBaseData
 		return count > 0 && num == count;
 	}
 
-	// Token: 0x0600ECBC RID: 60604 RVA: 0x00386468 File Offset: 0x00384668
+	// Token: 0x0600C0DB RID: 49371 RVA: 0x003920CC File Offset: 0x003902CC
 	public bool CanAreaCollectGetReward()
 	{
 		foreach (HonamiStoryAreaData honamiStoryAreaData in this.AreaDataList)
@@ -277,8 +276,8 @@ public class HonamiStoryActivityData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x0600ECBD RID: 60605 RVA: 0x003864CC File Offset: 0x003846CC
-	public void RefreshTowerData(List<HonamiStoryTopInfo> towerInfoList)
+	// Token: 0x0600C0DC RID: 49372 RVA: 0x00392130 File Offset: 0x00390330
+	public void RefreshTowerData(IEnumerable<HonamiStoryTopInfo> towerInfoList)
 	{
 		foreach (HonamiStoryTopInfo honamiStoryTopInfo in towerInfoList)
 		{
@@ -286,7 +285,7 @@ public class HonamiStoryActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x0600ECBE RID: 60606 RVA: 0x0038652C File Offset: 0x0038472C
+	// Token: 0x0600C0DD RID: 49373 RVA: 0x00392188 File Offset: 0x00390388
 	public int GetMaxFloorByDangerLv(int lv)
 	{
 		int result;
@@ -297,7 +296,7 @@ public class HonamiStoryActivityData : ActivityBaseData
 		return 0;
 	}
 
-	// Token: 0x0600ECBF RID: 60607 RVA: 0x0038654C File Offset: 0x0038474C
+	// Token: 0x0600C0DE RID: 49374 RVA: 0x003921A8 File Offset: 0x003903A8
 	private void InitHonamiStoryMascotData()
 	{
 		foreach (HonamiStoryMascot honamiStoryMascot in HonamiStoryConfig.Instance.GetHonamiStoryMascotConfigList(base.Id))
@@ -308,8 +307,8 @@ public class HonamiStoryActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x0600ECC0 RID: 60608 RVA: 0x003865C8 File Offset: 0x003847C8
-	public void UpdateHonamiStoryMascotDataList(List<HonamiStoryMascotInfo> mascotInfoList)
+	// Token: 0x0600C0DF RID: 49375 RVA: 0x00392224 File Offset: 0x00390424
+	public void UpdateHonamiStoryMascotDataList(IEnumerable<HonamiStoryMascotInfo> mascotInfoList)
 	{
 		foreach (HonamiStoryMascotInfo mascotInfo in mascotInfoList)
 		{
@@ -317,7 +316,7 @@ public class HonamiStoryActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x0600ECC1 RID: 60609 RVA: 0x00386618 File Offset: 0x00384818
+	// Token: 0x0600C0E0 RID: 49376 RVA: 0x0039226C File Offset: 0x0039046C
 	public void UpdateHonamiStoryMascotData(HonamiStoryMascotInfo mascotInfo)
 	{
 		HonamiStoryMascotData honamiStoryMascotData = this.GetHonamiStoryMascotData(mascotInfo.HonamiStoryMascotId);
@@ -328,7 +327,7 @@ public class HonamiStoryActivityData : ActivityBaseData
 		honamiStoryMascotData.UpdateState((EHonamiStoryCollectState)mascotInfo.Status);
 	}
 
-	// Token: 0x0600ECC2 RID: 60610 RVA: 0x00386644 File Offset: 0x00384844
+	// Token: 0x0600C0E1 RID: 49377 RVA: 0x00392298 File Offset: 0x00390498
 	[NullableContext(2)]
 	public HonamiStoryMascotData GetHonamiStoryMascotData(int id)
 	{
@@ -346,7 +345,7 @@ public class HonamiStoryActivityData : ActivityBaseData
 		return null;
 	}
 
-	// Token: 0x0600ECC3 RID: 60611 RVA: 0x00386694 File Offset: 0x00384894
+	// Token: 0x0600C0E2 RID: 49378 RVA: 0x003922E8 File Offset: 0x003904E8
 	public List<HonamiStoryMascotData> GetHonamiStoryMascotDataListByAreaId(int areaId)
 	{
 		List<HonamiStoryMascotData> list = new List<HonamiStoryMascotData>();
@@ -360,7 +359,7 @@ public class HonamiStoryActivityData : ActivityBaseData
 		return list;
 	}
 
-	// Token: 0x0600ECC4 RID: 60612 RVA: 0x003866F8 File Offset: 0x003848F8
+	// Token: 0x0600C0E3 RID: 49379 RVA: 0x0039234C File Offset: 0x0039054C
 	public bool CanMascotCollectGetReward()
 	{
 		using (List<HonamiStoryMascotData>.Enumerator enumerator = this.MascotDataList.GetEnumerator())
@@ -376,7 +375,7 @@ public class HonamiStoryActivityData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x0600ECC5 RID: 60613 RVA: 0x00386754 File Offset: 0x00384954
+	// Token: 0x0600C0E4 RID: 49380 RVA: 0x003923A8 File Offset: 0x003905A8
 	public bool CheckMascotCollectFinished()
 	{
 		using (List<HonamiStoryMascotData>.Enumerator enumerator = this.MascotDataList.GetEnumerator())
@@ -392,7 +391,7 @@ public class HonamiStoryActivityData : ActivityBaseData
 		return true;
 	}
 
-	// Token: 0x0600ECC6 RID: 60614 RVA: 0x003867B0 File Offset: 0x003849B0
+	// Token: 0x0600C0E5 RID: 49381 RVA: 0x00392404 File Offset: 0x00390604
 	private void InitHonamiStoryPermanentTaskData()
 	{
 		foreach (HonamiStoryResidentTask honamiStoryResidentTask in HonamiStoryConfig.Instance.GetHonamiStoryPermanentTaskConfigList(base.Id))
@@ -402,8 +401,8 @@ public class HonamiStoryActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x0600ECC7 RID: 60615 RVA: 0x00386820 File Offset: 0x00384A20
-	public void UpdatePermanentTaskDataList(List<ConditionTask> taskInfoList)
+	// Token: 0x0600C0E6 RID: 49382 RVA: 0x00392474 File Offset: 0x00390674
+	public void UpdatePermanentTaskDataList(IEnumerable<ConditionTask> taskInfoList)
 	{
 		foreach (ConditionTask taskInfo in taskInfoList)
 		{
@@ -411,7 +410,7 @@ public class HonamiStoryActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x0600ECC8 RID: 60616 RVA: 0x00386870 File Offset: 0x00384A70
+	// Token: 0x0600C0E7 RID: 49383 RVA: 0x003924BC File Offset: 0x003906BC
 	public void UpdatePermanentTaskData(ConditionTask taskInfo)
 	{
 		HonamiStoryPermanentTaskData permanentTaskData = this.GetPermanentTaskData(taskInfo.Id);
@@ -422,7 +421,7 @@ public class HonamiStoryActivityData : ActivityBaseData
 		permanentTaskData.UpdateData(taskInfo);
 	}
 
-	// Token: 0x0600ECC9 RID: 60617 RVA: 0x00386898 File Offset: 0x00384A98
+	// Token: 0x0600C0E8 RID: 49384 RVA: 0x003924E4 File Offset: 0x003906E4
 	[NullableContext(2)]
 	public HonamiStoryPermanentTaskData GetPermanentTaskData(int id)
 	{
@@ -440,7 +439,7 @@ public class HonamiStoryActivityData : ActivityBaseData
 		return null;
 	}
 
-	// Token: 0x0600ECCA RID: 60618 RVA: 0x003868E8 File Offset: 0x00384AE8
+	// Token: 0x0600C0E9 RID: 49385 RVA: 0x00392534 File Offset: 0x00390734
 	public List<HonamiStoryPermanentTaskData> GetPermanentTaskDataList()
 	{
 		List<HonamiStoryPermanentTaskData> list = new List<HonamiStoryPermanentTaskData>();
@@ -459,7 +458,7 @@ public class HonamiStoryActivityData : ActivityBaseData
 		return list;
 	}
 
-	// Token: 0x0600ECCB RID: 60619 RVA: 0x00386970 File Offset: 0x00384B70
+	// Token: 0x0600C0EA RID: 49386 RVA: 0x003925BC File Offset: 0x003907BC
 	public List<int> GetPermanentTaskIdsByState(EActivityTaskState state)
 	{
 		List<int> list = new List<int>();
@@ -473,13 +472,13 @@ public class HonamiStoryActivityData : ActivityBaseData
 		return list;
 	}
 
-	// Token: 0x0600ECCC RID: 60620 RVA: 0x003869E0 File Offset: 0x00384BE0
+	// Token: 0x0600C0EB RID: 49387 RVA: 0x0039262C File Offset: 0x0039082C
 	public int GetPermanentTaskTotalNum()
 	{
 		return this.PermanentTaskDataMap.Count;
 	}
 
-	// Token: 0x0600ECCD RID: 60621 RVA: 0x003869F0 File Offset: 0x00384BF0
+	// Token: 0x0600C0EC RID: 49388 RVA: 0x0039263C File Offset: 0x0039083C
 	public bool IsPermanentTaskHasRedDot()
 	{
 		using (Dictionary<int, HonamiStoryPermanentTaskData>.ValueCollection.Enumerator enumerator = this.PermanentTaskDataMap.Values.GetEnumerator())
@@ -495,7 +494,7 @@ public class HonamiStoryActivityData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x0600ECCE RID: 60622 RVA: 0x00386A50 File Offset: 0x00384C50
+	// Token: 0x0600C0ED RID: 49389 RVA: 0x0039269C File Offset: 0x0039089C
 	private void InitHonamiStoryLimitTaskData()
 	{
 		foreach (HonamiStoryLimitTask honamiStoryLimitTask in HonamiStoryConfig.Instance.GetHonamiStoryLimitTaskConfigList(base.Id))
@@ -505,8 +504,8 @@ public class HonamiStoryActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x0600ECCF RID: 60623 RVA: 0x00386AC0 File Offset: 0x00384CC0
-	public void UpdateLimitTaskDataList(List<ConditionTask> limitTaskInfoList)
+	// Token: 0x0600C0EE RID: 49390 RVA: 0x0039270C File Offset: 0x0039090C
+	public void UpdateLimitTaskDataList(IEnumerable<ConditionTask> limitTaskInfoList)
 	{
 		foreach (ConditionTask limitTaskInfo in limitTaskInfoList)
 		{
@@ -514,7 +513,7 @@ public class HonamiStoryActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x0600ECD0 RID: 60624 RVA: 0x00386B10 File Offset: 0x00384D10
+	// Token: 0x0600C0EF RID: 49391 RVA: 0x00392754 File Offset: 0x00390954
 	public void UpdateLimitTaskData(ConditionTask limitTaskInfo)
 	{
 		HonamiStoryLimitTaskData limitTaskData = this.GetLimitTaskData(limitTaskInfo.Id);
@@ -525,7 +524,7 @@ public class HonamiStoryActivityData : ActivityBaseData
 		limitTaskData.UpdateData(limitTaskInfo);
 	}
 
-	// Token: 0x0600ECD1 RID: 60625 RVA: 0x00386B38 File Offset: 0x00384D38
+	// Token: 0x0600C0F0 RID: 49392 RVA: 0x0039277C File Offset: 0x0039097C
 	[NullableContext(2)]
 	public HonamiStoryLimitTaskData GetLimitTaskData(int id)
 	{
@@ -543,7 +542,7 @@ public class HonamiStoryActivityData : ActivityBaseData
 		return null;
 	}
 
-	// Token: 0x0600ECD2 RID: 60626 RVA: 0x00386B88 File Offset: 0x00384D88
+	// Token: 0x0600C0F1 RID: 49393 RVA: 0x003927CC File Offset: 0x003909CC
 	public List<HonamiStoryLimitTaskData> GetLimitTaskDataList()
 	{
 		List<HonamiStoryLimitTaskData> list = new List<HonamiStoryLimitTaskData>();
@@ -562,7 +561,7 @@ public class HonamiStoryActivityData : ActivityBaseData
 		return list;
 	}
 
-	// Token: 0x0600ECD3 RID: 60627 RVA: 0x00386C10 File Offset: 0x00384E10
+	// Token: 0x0600C0F2 RID: 49394 RVA: 0x00392854 File Offset: 0x00390A54
 	public List<int> GetFinishedLimitTaskIds()
 	{
 		List<int> list = new List<int>();
@@ -576,7 +575,7 @@ public class HonamiStoryActivityData : ActivityBaseData
 		return list;
 	}
 
-	// Token: 0x0600ECD4 RID: 60628 RVA: 0x00386C80 File Offset: 0x00384E80
+	// Token: 0x0600C0F3 RID: 49395 RVA: 0x003928C4 File Offset: 0x00390AC4
 	public bool IsLimitTaskHasRedDot()
 	{
 		using (Dictionary<int, HonamiStoryLimitTaskData>.ValueCollection.Enumerator enumerator = this.LimitTaskDataMap.Values.GetEnumerator())
@@ -602,7 +601,7 @@ public class HonamiStoryActivityData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x0600ECD5 RID: 60629 RVA: 0x00386D2C File Offset: 0x00384F2C
+	// Token: 0x0600C0F4 RID: 49396 RVA: 0x00392970 File Offset: 0x00390B70
 	private void InitHonamiStoryScoreRewardData()
 	{
 		foreach (HonamiStoryScoreReward honamiStoryScoreReward in HonamiStoryConfig.Instance.GetHonamiStoryScoreRewardConfigList(base.Id))
@@ -612,8 +611,8 @@ public class HonamiStoryActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x0600ECD6 RID: 60630 RVA: 0x00386D9C File Offset: 0x00384F9C
-	public void UpdateScoreRewardDataList(List<HonamiStoryScoreRewardInfo> infoList)
+	// Token: 0x0600C0F5 RID: 49397 RVA: 0x003929E0 File Offset: 0x00390BE0
+	public void UpdateScoreRewardDataList(IEnumerable<HonamiStoryScoreRewardInfo> infoList)
 	{
 		foreach (HonamiStoryScoreRewardInfo info in infoList)
 		{
@@ -621,7 +620,7 @@ public class HonamiStoryActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x0600ECD7 RID: 60631 RVA: 0x00386DEC File Offset: 0x00384FEC
+	// Token: 0x0600C0F6 RID: 49398 RVA: 0x00392A28 File Offset: 0x00390C28
 	public void UpdateScoreRewardData(HonamiStoryScoreRewardInfo info)
 	{
 		HonamiStoryScoreRewardData honamiStoryScoreRewardData;
@@ -631,7 +630,7 @@ public class HonamiStoryActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x0600ECD8 RID: 60632 RVA: 0x00386E1C File Offset: 0x0038501C
+	// Token: 0x0600C0F7 RID: 49399 RVA: 0x00392A58 File Offset: 0x00390C58
 	[NullableContext(2)]
 	public HonamiStoryScoreRewardData GetScoreRewardData(int scoreRewardId)
 	{
@@ -643,7 +642,7 @@ public class HonamiStoryActivityData : ActivityBaseData
 		return null;
 	}
 
-	// Token: 0x0600ECD9 RID: 60633 RVA: 0x00386E3C File Offset: 0x0038503C
+	// Token: 0x0600C0F8 RID: 49400 RVA: 0x00392A78 File Offset: 0x00390C78
 	public List<HonamiStoryScoreRewardData> GetScoreRewardDataList()
 	{
 		List<HonamiStoryScoreRewardData> list = new List<HonamiStoryScoreRewardData>();
@@ -654,7 +653,7 @@ public class HonamiStoryActivityData : ActivityBaseData
 		return list;
 	}
 
-	// Token: 0x0600ECDA RID: 60634 RVA: 0x00386E9C File Offset: 0x0038509C
+	// Token: 0x0600C0F9 RID: 49401 RVA: 0x00392AD8 File Offset: 0x00390CD8
 	public List<int> GetFinishedScoreRewardIds()
 	{
 		List<int> list = new List<int>();
@@ -668,13 +667,13 @@ public class HonamiStoryActivityData : ActivityBaseData
 		return list;
 	}
 
-	// Token: 0x0600ECDB RID: 60635 RVA: 0x00386F0C File Offset: 0x0038510C
+	// Token: 0x0600C0FA RID: 49402 RVA: 0x00392B48 File Offset: 0x00390D48
 	public int GetCurrentScore()
 	{
 		return InventoryModel.Instance.GetItemCountByConfigId(this.Config.Value.ScoreItemId, 0);
 	}
 
-	// Token: 0x0600ECDC RID: 60636 RVA: 0x00386F3C File Offset: 0x0038513C
+	// Token: 0x0600C0FB RID: 49403 RVA: 0x00392B78 File Offset: 0x00390D78
 	public int GetMaxScore()
 	{
 		int num = 0;
@@ -688,7 +687,7 @@ public class HonamiStoryActivityData : ActivityBaseData
 		return num;
 	}
 
-	// Token: 0x0600ECDD RID: 60637 RVA: 0x00386FA4 File Offset: 0x003851A4
+	// Token: 0x0600C0FC RID: 49404 RVA: 0x00392BE0 File Offset: 0x00390DE0
 	public void InitSubQuestTaskDataList(IReadOnlyList<ConditionTask> subQuestInfoList)
 	{
 		this.SubQuestDataMap.Clear();
@@ -702,8 +701,8 @@ public class HonamiStoryActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x0600ECDE RID: 60638 RVA: 0x0038702C File Offset: 0x0038522C
-	public void UpdateSubQuestTaskDataList(List<ConditionTask> subQuestInfoList)
+	// Token: 0x0600C0FD RID: 49405 RVA: 0x00392C68 File Offset: 0x00390E68
+	public void UpdateSubQuestTaskDataList(IEnumerable<ConditionTask> subQuestInfoList)
 	{
 		foreach (ConditionTask subQuestInfo in subQuestInfoList)
 		{
@@ -711,7 +710,7 @@ public class HonamiStoryActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x0600ECDF RID: 60639 RVA: 0x0038707C File Offset: 0x0038527C
+	// Token: 0x0600C0FE RID: 49406 RVA: 0x00392CB0 File Offset: 0x00390EB0
 	public void UpdateSubQuestTaskData(ConditionTask subQuestInfo)
 	{
 		HonamiStorySubQuestData subQuestTaskData = this.GetSubQuestTaskData(subQuestInfo.Id);
@@ -722,7 +721,7 @@ public class HonamiStoryActivityData : ActivityBaseData
 		subQuestTaskData.UpdateData(subQuestInfo);
 	}
 
-	// Token: 0x0600ECE0 RID: 60640 RVA: 0x003870A4 File Offset: 0x003852A4
+	// Token: 0x0600C0FF RID: 49407 RVA: 0x00392CD8 File Offset: 0x00390ED8
 	[NullableContext(2)]
 	public HonamiStorySubQuestData GetSubQuestTaskData(int id)
 	{
@@ -740,13 +739,13 @@ public class HonamiStoryActivityData : ActivityBaseData
 		return null;
 	}
 
-	// Token: 0x0600ECE1 RID: 60641 RVA: 0x003870F3 File Offset: 0x003852F3
+	// Token: 0x0600C100 RID: 49408 RVA: 0x00392D27 File Offset: 0x00390F27
 	public List<HonamiStorySubQuestData> GetSubQuestTaskDataList()
 	{
 		return this.SubTaskDataList;
 	}
 
-	// Token: 0x0600ECE2 RID: 60642 RVA: 0x003870FC File Offset: 0x003852FC
+	// Token: 0x0600C101 RID: 49409 RVA: 0x00392D30 File Offset: 0x00390F30
 	private void InitItemCollectionData()
 	{
 		foreach (HonamiStoryItemCollection config in HonamiStoryConfig.Instance.GetHonamiStoryItemCollectionConfigList(base.Id))
@@ -756,8 +755,8 @@ public class HonamiStoryActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x0600ECE3 RID: 60643 RVA: 0x00387168 File Offset: 0x00385368
-	public void UpdateItemCollectionDataList(List<HonamiStoryItemCollectionInfo> itemCollectionInfoList)
+	// Token: 0x0600C102 RID: 49410 RVA: 0x00392D9C File Offset: 0x00390F9C
+	public void UpdateItemCollectionDataList(IEnumerable<HonamiStoryItemCollectionInfo> itemCollectionInfoList)
 	{
 		foreach (HonamiStoryItemCollectionInfo honamiStoryItemCollectionInfo in itemCollectionInfoList)
 		{
@@ -769,7 +768,7 @@ public class HonamiStoryActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x0600ECE4 RID: 60644 RVA: 0x003871C8 File Offset: 0x003853C8
+	// Token: 0x0600C103 RID: 49411 RVA: 0x00392DF4 File Offset: 0x00390FF4
 	[NullableContext(2)]
 	public HonamiStoryItemCollectionData GetItemCollectionData(int id)
 	{
@@ -787,7 +786,7 @@ public class HonamiStoryActivityData : ActivityBaseData
 		return null;
 	}
 
-	// Token: 0x0600ECE5 RID: 60645 RVA: 0x00387218 File Offset: 0x00385418
+	// Token: 0x0600C104 RID: 49412 RVA: 0x00392E44 File Offset: 0x00391044
 	public List<HonamiStoryItemCollectionData> GetItemCollectionDataList()
 	{
 		List<HonamiStoryItemCollectionData> list = new List<HonamiStoryItemCollectionData>();
@@ -798,7 +797,7 @@ public class HonamiStoryActivityData : ActivityBaseData
 		return list;
 	}
 
-	// Token: 0x0600ECE6 RID: 60646 RVA: 0x00387278 File Offset: 0x00385478
+	// Token: 0x0600C105 RID: 49413 RVA: 0x00392EA4 File Offset: 0x003910A4
 	public bool IsItemCollectionHasRedDot()
 	{
 		using (Dictionary<int, HonamiStoryItemCollectionData>.ValueCollection.Enumerator enumerator = this.ItemCollectionDataMap.Values.GetEnumerator())
@@ -814,7 +813,7 @@ public class HonamiStoryActivityData : ActivityBaseData
 		return false;
 	}
 
-	// Token: 0x0600ECE7 RID: 60647 RVA: 0x003872D8 File Offset: 0x003854D8
+	// Token: 0x0600C106 RID: 49414 RVA: 0x00392F04 File Offset: 0x00391104
 	private void InitLevelSelectPanelData()
 	{
 		HonamiStoryActivity? config = this.Config;
@@ -823,7 +822,7 @@ public class HonamiStoryActivityData : ActivityBaseData
 		this.CurTowerLv = ((config != null) ? config.GetValueOrDefault().OriTopTowerDangerLevel : 0);
 	}
 
-	// Token: 0x0600ECE8 RID: 60648 RVA: 0x00387338 File Offset: 0x00385538
+	// Token: 0x0600C107 RID: 49415 RVA: 0x00392F64 File Offset: 0x00391164
 	public bool IsLevelSelectHasViewRedDot()
 	{
 		if (!FunctionModel.Instance.IsOpen(10121))
@@ -836,8 +835,8 @@ public class HonamiStoryActivityData : ActivityBaseData
 		return LocalStorage.GetPlayer<bool>(ELocalStoragePlayerKey.HonamiStorySelectLvTowerUnLockTogRedDot, false);
 	}
 
-	// Token: 0x1700128F RID: 4751
-	// (get) Token: 0x0600ECE9 RID: 60649 RVA: 0x0038738F File Offset: 0x0038558F
+	// Token: 0x170012B9 RID: 4793
+	// (get) Token: 0x0600C108 RID: 49416 RVA: 0x00392FBB File Offset: 0x003911BB
 	private HonamiStoryActivity? Config
 	{
 		get
@@ -846,8 +845,8 @@ public class HonamiStoryActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x17001290 RID: 4752
-	// (get) Token: 0x0600ECEA RID: 60650 RVA: 0x003873A4 File Offset: 0x003855A4
+	// Token: 0x170012BA RID: 4794
+	// (get) Token: 0x0600C109 RID: 49417 RVA: 0x00392FD0 File Offset: 0x003911D0
 	public int HelpId
 	{
 		get
@@ -856,8 +855,8 @@ public class HonamiStoryActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x17001291 RID: 4753
-	// (get) Token: 0x0600ECEB RID: 60651 RVA: 0x003873C8 File Offset: 0x003855C8
+	// Token: 0x170012BB RID: 4795
+	// (get) Token: 0x0600C10A RID: 49418 RVA: 0x00392FF4 File Offset: 0x003911F4
 	public int MarkId
 	{
 		get
@@ -866,8 +865,8 @@ public class HonamiStoryActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x17001292 RID: 4754
-	// (get) Token: 0x0600ECEC RID: 60652 RVA: 0x003873EC File Offset: 0x003855EC
+	// Token: 0x170012BC RID: 4796
+	// (get) Token: 0x0600C10B RID: 49419 RVA: 0x00393018 File Offset: 0x00391218
 	public int ShopId
 	{
 		get
@@ -876,8 +875,8 @@ public class HonamiStoryActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x17001293 RID: 4755
-	// (get) Token: 0x0600ECED RID: 60653 RVA: 0x00387410 File Offset: 0x00385610
+	// Token: 0x170012BD RID: 4797
+	// (get) Token: 0x0600C10C RID: 49420 RVA: 0x0039303C File Offset: 0x0039123C
 	public int GetActHelpId
 	{
 		get
@@ -886,8 +885,8 @@ public class HonamiStoryActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x17001294 RID: 4756
-	// (get) Token: 0x0600ECEE RID: 60654 RVA: 0x00387434 File Offset: 0x00385634
+	// Token: 0x170012BE RID: 4798
+	// (get) Token: 0x0600C10D RID: 49421 RVA: 0x00393060 File Offset: 0x00391260
 	public int ActivityQuestId
 	{
 		get
@@ -896,8 +895,8 @@ public class HonamiStoryActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x17001295 RID: 4757
-	// (get) Token: 0x0600ECEF RID: 60655 RVA: 0x00387458 File Offset: 0x00385658
+	// Token: 0x170012BF RID: 4799
+	// (get) Token: 0x0600C10E RID: 49422 RVA: 0x00393084 File Offset: 0x00391284
 	public int AreaInstId
 	{
 		get
@@ -906,8 +905,8 @@ public class HonamiStoryActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x17001296 RID: 4758
-	// (get) Token: 0x0600ECF0 RID: 60656 RVA: 0x0038747C File Offset: 0x0038567C
+	// Token: 0x170012C0 RID: 4800
+	// (get) Token: 0x0600C10F RID: 49423 RVA: 0x003930A8 File Offset: 0x003912A8
 	public int OutCoinItemId
 	{
 		get
@@ -916,8 +915,8 @@ public class HonamiStoryActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x17001297 RID: 4759
-	// (get) Token: 0x0600ECF1 RID: 60657 RVA: 0x003874A0 File Offset: 0x003856A0
+	// Token: 0x170012C1 RID: 4801
+	// (get) Token: 0x0600C110 RID: 49424 RVA: 0x003930CC File Offset: 0x003912CC
 	public string TowerName
 	{
 		get
@@ -926,45 +925,45 @@ public class HonamiStoryActivityData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x04006DFB RID: 28155
+	// Token: 0x04006EDC RID: 28380
 	private readonly Dictionary<int, HonamiStoryAreaData> AreaDataMap = new Dictionary<int, HonamiStoryAreaData>();
 
-	// Token: 0x04006DFC RID: 28156
+	// Token: 0x04006EDD RID: 28381
 	private readonly List<HonamiStoryAreaData> AreaDataList = new List<HonamiStoryAreaData>();
 
-	// Token: 0x04006DFD RID: 28157
+	// Token: 0x04006EDE RID: 28382
 	private readonly Dictionary<int, int> TowerDangerLv2MaxFloorMap = new Dictionary<int, int>();
 
-	// Token: 0x04006DFE RID: 28158
+	// Token: 0x04006EDF RID: 28383
 	private readonly Dictionary<int, HonamiStoryMascotData> MascotDataMap = new Dictionary<int, HonamiStoryMascotData>();
 
-	// Token: 0x04006DFF RID: 28159
+	// Token: 0x04006EE0 RID: 28384
 	private readonly List<HonamiStoryMascotData> MascotDataList = new List<HonamiStoryMascotData>();
 
-	// Token: 0x04006E00 RID: 28160
+	// Token: 0x04006EE1 RID: 28385
 	private readonly Dictionary<int, HonamiStoryPermanentTaskData> PermanentTaskDataMap = new Dictionary<int, HonamiStoryPermanentTaskData>();
 
-	// Token: 0x04006E01 RID: 28161
+	// Token: 0x04006EE2 RID: 28386
 	private readonly Dictionary<int, HonamiStoryLimitTaskData> LimitTaskDataMap = new Dictionary<int, HonamiStoryLimitTaskData>();
 
-	// Token: 0x04006E02 RID: 28162
+	// Token: 0x04006EE3 RID: 28387
 	private readonly Dictionary<int, HonamiStoryScoreRewardData> ScoreRewardDataMap = new Dictionary<int, HonamiStoryScoreRewardData>();
 
-	// Token: 0x04006E03 RID: 28163
+	// Token: 0x04006EE4 RID: 28388
 	private readonly Dictionary<int, HonamiStorySubQuestData> SubQuestDataMap = new Dictionary<int, HonamiStorySubQuestData>();
 
-	// Token: 0x04006E04 RID: 28164
+	// Token: 0x04006EE5 RID: 28389
 	private readonly List<HonamiStorySubQuestData> SubTaskDataList = new List<HonamiStorySubQuestData>();
 
-	// Token: 0x04006E05 RID: 28165
+	// Token: 0x04006EE6 RID: 28390
 	private readonly Dictionary<int, HonamiStoryItemCollectionData> ItemCollectionDataMap = new Dictionary<int, HonamiStoryItemCollectionData>();
 
-	// Token: 0x04006E06 RID: 28166
+	// Token: 0x04006EE7 RID: 28391
 	public int CurTarget;
 
-	// Token: 0x04006E07 RID: 28167
+	// Token: 0x04006EE8 RID: 28392
 	public int CurHonamiLv;
 
-	// Token: 0x04006E08 RID: 28168
+	// Token: 0x04006EE9 RID: 28393
 	public int CurTowerLv;
 }

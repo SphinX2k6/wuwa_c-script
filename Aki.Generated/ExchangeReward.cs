@@ -7,52 +7,60 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000C43 RID: 3139
+	// Token: 0x02000D26 RID: 3366
+	[NullableContext(1)]
+	[Nullable(0)]
 	public struct ExchangeReward : IFlatbufferObject
 	{
-		// Token: 0x17000F7E RID: 3966
-		// (get) Token: 0x06006A77 RID: 27255 RVA: 0x00225D46 File Offset: 0x00223F46
+		// Token: 0x17000FD7 RID: 4055
+		// (get) Token: 0x06007079 RID: 28793 RVA: 0x0024508E File Offset: 0x0024328E
+		[Nullable(0)]
 		public ByteBuffer ByteBuffer
 		{
+			[NullableContext(0)]
 			get
 			{
 				return this.__p.bb;
 			}
 		}
 
-		// Token: 0x06006A78 RID: 27256 RVA: 0x00225D53 File Offset: 0x00223F53
+		// Token: 0x0600707A RID: 28794 RVA: 0x0024509B File Offset: 0x0024329B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06006A79 RID: 27257 RVA: 0x00225D5C File Offset: 0x00223F5C
+		// Token: 0x0600707B RID: 28795 RVA: 0x002450A4 File Offset: 0x002432A4
+		[NullableContext(0)]
 		public static ExchangeReward GetRootAsExchangeReward(ByteBuffer _bb)
 		{
 			return ExchangeReward.GetRootAsExchangeReward(_bb, default(ExchangeReward));
 		}
 
-		// Token: 0x06006A7A RID: 27258 RVA: 0x00225D78 File Offset: 0x00223F78
+		// Token: 0x0600707C RID: 28796 RVA: 0x002450C0 File Offset: 0x002432C0
+		[NullableContext(0)]
 		public static ExchangeReward GetRootAsExchangeReward(ByteBuffer _bb, ExchangeReward obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06006A7B RID: 27259 RVA: 0x00225D95 File Offset: 0x00223F95
+		// Token: 0x0600707D RID: 28797 RVA: 0x002450DD File Offset: 0x002432DD
+		[NullableContext(0)]
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06006A7C RID: 27260 RVA: 0x00225DA4 File Offset: 0x00223FA4
+		// Token: 0x0600707E RID: 28798 RVA: 0x002450EC File Offset: 0x002432EC
+		[NullableContext(0)]
 		public ExchangeReward __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000F7F RID: 3967
-		// (get) Token: 0x06006A7D RID: 27261 RVA: 0x00225DB4 File Offset: 0x00223FB4
+		// Token: 0x17000FD8 RID: 4056
+		// (get) Token: 0x0600707F RID: 28799 RVA: 0x002450FC File Offset: 0x002432FC
 		public int Id
 		{
 			get
@@ -66,8 +74,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000F80 RID: 3968
-		// (get) Token: 0x06006A7E RID: 27262 RVA: 0x00225DF0 File Offset: 0x00223FF0
+		// Token: 0x17000FD9 RID: 4057
+		// (get) Token: 0x06007080 RID: 28800 RVA: 0x00245138 File Offset: 0x00243338
 		public int SharedId
 		{
 			get
@@ -81,8 +89,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000F81 RID: 3969
-		// (get) Token: 0x06006A7F RID: 27263 RVA: 0x00225E2C File Offset: 0x0022402C
+		// Token: 0x17000FDA RID: 4058
+		// (get) Token: 0x06007081 RID: 28801 RVA: 0x00245174 File Offset: 0x00243374
 		public int MaxCount
 		{
 			get
@@ -96,7 +104,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006A80 RID: 27264 RVA: 0x00225E68 File Offset: 0x00224068
+		// Token: 0x06007082 RID: 28802 RVA: 0x002451B0 File Offset: 0x002433B0
 		public DicIntInt? Cost(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -107,8 +115,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17000F82 RID: 3970
-		// (get) Token: 0x06006A81 RID: 27265 RVA: 0x00225ECC File Offset: 0x002240CC
+		// Token: 0x17000FDB RID: 4059
+		// (get) Token: 0x06007083 RID: 28803 RVA: 0x00245214 File Offset: 0x00243414
 		public int CostLength
 		{
 			get
@@ -122,7 +130,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006A82 RID: 27266 RVA: 0x00225EF8 File Offset: 0x002240F8
+		// Token: 0x06007084 RID: 28804 RVA: 0x00245240 File Offset: 0x00243440
 		public DicIntInt? RewardId(int j)
 		{
 			int num = this.__p.__offset(12);
@@ -133,8 +141,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17000F83 RID: 3971
-		// (get) Token: 0x06006A83 RID: 27267 RVA: 0x00225F5C File Offset: 0x0022415C
+		// Token: 0x17000FDC RID: 4060
+		// (get) Token: 0x06007085 RID: 28805 RVA: 0x002452A4 File Offset: 0x002434A4
 		public int RewardIdLength
 		{
 			get
@@ -148,7 +156,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006A84 RID: 27268 RVA: 0x00225F88 File Offset: 0x00224188
+		// Token: 0x06007086 RID: 28806 RVA: 0x002452D0 File Offset: 0x002434D0
 		public DicIntInt? RewardIdCalabash(int j)
 		{
 			int num = this.__p.__offset(14);
@@ -159,8 +167,8 @@ namespace Aki.Config
 			return new DicIntInt?(default(DicIntInt).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17000F84 RID: 3972
-		// (get) Token: 0x06006A85 RID: 27269 RVA: 0x00225FEC File Offset: 0x002241EC
+		// Token: 0x17000FDD RID: 4061
+		// (get) Token: 0x06007087 RID: 28807 RVA: 0x00245334 File Offset: 0x00243534
 		public int RewardIdCalabashLength
 		{
 			get
@@ -174,7 +182,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006A86 RID: 27270 RVA: 0x00226018 File Offset: 0x00224218
+		// Token: 0x06007088 RID: 28808 RVA: 0x00245360 File Offset: 0x00243560
 		public DicIntIntIntMap? PreviewReward(int j)
 		{
 			int num = this.__p.__offset(16);
@@ -185,8 +193,8 @@ namespace Aki.Config
 			return new DicIntIntIntMap?(default(DicIntIntIntMap).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17000F85 RID: 3973
-		// (get) Token: 0x06006A87 RID: 27271 RVA: 0x0022607C File Offset: 0x0022427C
+		// Token: 0x17000FDE RID: 4062
+		// (get) Token: 0x06007089 RID: 28809 RVA: 0x002453C4 File Offset: 0x002435C4
 		public int PreviewRewardLength
 		{
 			get
@@ -200,75 +208,63 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006A88 RID: 27272 RVA: 0x002260A8 File Offset: 0x002242A8
-		[NullableContext(1)]
-		[Obsolete("已废弃，请使用CostFrozenDict()缓存字典，遍历请使用CostIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> Cost()
+		// Token: 0x0600708A RID: 28810 RVA: 0x002453F0 File Offset: 0x002435F0
+		public Dictionary<int, int> Cost()
 		{
 			return this.CostIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x06006A89 RID: 27273 RVA: 0x002260FE File Offset: 0x002242FE
-		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> CostIter()
+		// Token: 0x0600708B RID: 28811 RVA: 0x00245446 File Offset: 0x00243646
+		public IEnumerable<DicIntInt> CostIter()
 		{
 			ExchangeReward.<CostIter>d__27 <CostIter>d__ = new ExchangeReward.<CostIter>d__27(-2);
 			<CostIter>d__.<>3__<>4__this = this;
 			return <CostIter>d__;
 		}
 
-		// Token: 0x06006A8A RID: 27274 RVA: 0x00226114 File Offset: 0x00224314
-		[NullableContext(1)]
-		[Obsolete("已废弃，请使用PreviewRewardFrozenDict()缓存字典，遍历请使用PreviewRewardIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, IntIntMap> PreviewReward()
+		// Token: 0x0600708C RID: 28812 RVA: 0x0024545C File Offset: 0x0024365C
+		public Dictionary<int, IntIntMap> PreviewReward()
 		{
 			return this.PreviewRewardIter().ToDictionary((DicIntIntIntMap element) => element.Key, (DicIntIntIntMap element) => element.Value.Value);
 		}
 
-		// Token: 0x06006A8B RID: 27275 RVA: 0x0022616A File Offset: 0x0022436A
-		[NullableContext(1)]
-		public readonly IEnumerable<DicIntIntIntMap> PreviewRewardIter()
+		// Token: 0x0600708D RID: 28813 RVA: 0x002454B2 File Offset: 0x002436B2
+		public IEnumerable<DicIntIntIntMap> PreviewRewardIter()
 		{
 			ExchangeReward.<PreviewRewardIter>d__29 <PreviewRewardIter>d__ = new ExchangeReward.<PreviewRewardIter>d__29(-2);
 			<PreviewRewardIter>d__.<>3__<>4__this = this;
 			return <PreviewRewardIter>d__;
 		}
 
-		// Token: 0x06006A8C RID: 27276 RVA: 0x00226180 File Offset: 0x00224380
-		[NullableContext(1)]
-		[Obsolete("已废弃，请使用RewardIdFrozenDict()缓存字典，遍历请使用RewardIdIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> RewardId()
+		// Token: 0x0600708E RID: 28814 RVA: 0x002454C8 File Offset: 0x002436C8
+		public Dictionary<int, int> RewardId()
 		{
 			return this.RewardIdIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x06006A8D RID: 27277 RVA: 0x002261D6 File Offset: 0x002243D6
-		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> RewardIdIter()
+		// Token: 0x0600708F RID: 28815 RVA: 0x0024551E File Offset: 0x0024371E
+		public IEnumerable<DicIntInt> RewardIdIter()
 		{
 			ExchangeReward.<RewardIdIter>d__31 <RewardIdIter>d__ = new ExchangeReward.<RewardIdIter>d__31(-2);
 			<RewardIdIter>d__.<>3__<>4__this = this;
 			return <RewardIdIter>d__;
 		}
 
-		// Token: 0x06006A8E RID: 27278 RVA: 0x002261EC File Offset: 0x002243EC
-		[NullableContext(1)]
-		[Obsolete("已废弃，请使用RewardIdCalabashFrozenDict()缓存字典，遍历请使用RewardIdCalabashIter()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly Dictionary<int, int> RewardIdCalabash()
+		// Token: 0x06007090 RID: 28816 RVA: 0x00245534 File Offset: 0x00243734
+		public Dictionary<int, int> RewardIdCalabash()
 		{
 			return this.RewardIdCalabashIter().ToDictionary((DicIntInt element) => element.Key, (DicIntInt element) => element.Value);
 		}
 
-		// Token: 0x06006A8F RID: 27279 RVA: 0x00226242 File Offset: 0x00224442
-		[NullableContext(1)]
-		public readonly IEnumerable<DicIntInt> RewardIdCalabashIter()
+		// Token: 0x06007091 RID: 28817 RVA: 0x0024558A File Offset: 0x0024378A
+		public IEnumerable<DicIntInt> RewardIdCalabashIter()
 		{
 			ExchangeReward.<RewardIdCalabashIter>d__33 <RewardIdCalabashIter>d__ = new ExchangeReward.<RewardIdCalabashIter>d__33(-2);
 			<RewardIdCalabashIter>d__.<>3__<>4__this = this;
 			return <RewardIdCalabashIter>d__;
 		}
 
-		// Token: 0x06006A90 RID: 27280 RVA: 0x00226258 File Offset: 0x00224458
+		// Token: 0x06007092 RID: 28818 RVA: 0x002455A0 File Offset: 0x002437A0
 		public int? GetCost(int key)
 		{
 			this.EnsureCostCacheIfNeeded();
@@ -280,7 +276,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x06006A91 RID: 27281 RVA: 0x0022628C File Offset: 0x0022448C
+		// Token: 0x06007093 RID: 28819 RVA: 0x002455D4 File Offset: 0x002437D4
 		public IntIntMap? GetPreviewReward(int key)
 		{
 			this.EnsurePreviewRewardCacheIfNeeded();
@@ -292,7 +288,7 @@ namespace Aki.Config
 			return new IntIntMap?(value);
 		}
 
-		// Token: 0x06006A92 RID: 27282 RVA: 0x002262C0 File Offset: 0x002244C0
+		// Token: 0x06007094 RID: 28820 RVA: 0x00245608 File Offset: 0x00243808
 		public int? GetRewardId(int key)
 		{
 			this.EnsureRewardIdCacheIfNeeded();
@@ -304,7 +300,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x06006A93 RID: 27283 RVA: 0x002262F4 File Offset: 0x002244F4
+		// Token: 0x06007095 RID: 28821 RVA: 0x0024563C File Offset: 0x0024383C
 		public int? GetRewardIdCalabash(int key)
 		{
 			this.EnsureRewardIdCalabashCacheIfNeeded();
@@ -316,7 +312,7 @@ namespace Aki.Config
 			return new int?(value);
 		}
 
-		// Token: 0x06006A94 RID: 27284 RVA: 0x00226328 File Offset: 0x00224528
+		// Token: 0x06007096 RID: 28822 RVA: 0x00245670 File Offset: 0x00243870
 		private void EnsureCostCacheIfNeeded()
 		{
 			if (this.CostCache != null)
@@ -326,7 +322,7 @@ namespace Aki.Config
 			this.CostCache = this.CostIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x06006A95 RID: 27285 RVA: 0x00226390 File Offset: 0x00224590
+		// Token: 0x06007097 RID: 28823 RVA: 0x002456D8 File Offset: 0x002438D8
 		private void EnsurePreviewRewardCacheIfNeeded()
 		{
 			if (this.PreviewRewardCache != null)
@@ -336,7 +332,7 @@ namespace Aki.Config
 			this.PreviewRewardCache = this.PreviewRewardIter().ToFrozenDictionary((DicIntIntIntMap kvp) => kvp.Key, (DicIntIntIntMap kvp) => kvp.Value.Value, null);
 		}
 
-		// Token: 0x06006A96 RID: 27286 RVA: 0x002263F8 File Offset: 0x002245F8
+		// Token: 0x06007098 RID: 28824 RVA: 0x00245740 File Offset: 0x00243940
 		private void EnsureRewardIdCacheIfNeeded()
 		{
 			if (this.RewardIdCache != null)
@@ -346,7 +342,7 @@ namespace Aki.Config
 			this.RewardIdCache = this.RewardIdIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x06006A97 RID: 27287 RVA: 0x00226460 File Offset: 0x00224660
+		// Token: 0x06007099 RID: 28825 RVA: 0x002457A8 File Offset: 0x002439A8
 		private void EnsureRewardIdCalabashCacheIfNeeded()
 		{
 			if (this.RewardIdCalabashCache != null)
@@ -356,54 +352,50 @@ namespace Aki.Config
 			this.RewardIdCalabashCache = this.RewardIdCalabashIter().ToFrozenDictionary((DicIntInt kvp) => kvp.Key, (DicIntInt kvp) => kvp.Value, null);
 		}
 
-		// Token: 0x06006A98 RID: 27288 RVA: 0x002264C6 File Offset: 0x002246C6
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetCostFrozenDict(int key)
+		// Token: 0x0600709A RID: 28826 RVA: 0x0024580E File Offset: 0x00243A0E
+		public FrozenDictionary<int, int> GetCostFrozenDict()
 		{
 			this.EnsureCostCacheIfNeeded();
 			return this.CostCache;
 		}
 
-		// Token: 0x06006A99 RID: 27289 RVA: 0x002264D4 File Offset: 0x002246D4
-		[NullableContext(2)]
-		public FrozenDictionary<int, IntIntMap> GetPreviewRewardFrozenDict(int key)
+		// Token: 0x0600709B RID: 28827 RVA: 0x0024581C File Offset: 0x00243A1C
+		public FrozenDictionary<int, IntIntMap> GetPreviewRewardFrozenDict()
 		{
 			this.EnsurePreviewRewardCacheIfNeeded();
 			return this.PreviewRewardCache;
 		}
 
-		// Token: 0x06006A9A RID: 27290 RVA: 0x002264E2 File Offset: 0x002246E2
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetRewardIdFrozenDict(int key)
+		// Token: 0x0600709C RID: 28828 RVA: 0x0024582A File Offset: 0x00243A2A
+		public FrozenDictionary<int, int> GetRewardIdFrozenDict()
 		{
 			this.EnsureRewardIdCacheIfNeeded();
 			return this.RewardIdCache;
 		}
 
-		// Token: 0x06006A9B RID: 27291 RVA: 0x002264F0 File Offset: 0x002246F0
-		[NullableContext(2)]
-		public FrozenDictionary<int, int> GetRewardIdCalabashFrozenDict(int key)
+		// Token: 0x0600709D RID: 28829 RVA: 0x00245838 File Offset: 0x00243A38
+		public FrozenDictionary<int, int> GetRewardIdCalabashFrozenDict()
 		{
 			this.EnsureRewardIdCalabashCacheIfNeeded();
 			return this.RewardIdCalabashCache;
 		}
 
-		// Token: 0x04004C83 RID: 19587
+		// Token: 0x04005266 RID: 21094
 		private Table __p;
 
-		// Token: 0x04004C84 RID: 19588
+		// Token: 0x04005267 RID: 21095
 		[Nullable(2)]
 		private FrozenDictionary<int, int> CostCache;
 
-		// Token: 0x04004C85 RID: 19589
+		// Token: 0x04005268 RID: 21096
 		[Nullable(2)]
 		private FrozenDictionary<int, IntIntMap> PreviewRewardCache;
 
-		// Token: 0x04004C86 RID: 19590
+		// Token: 0x04005269 RID: 21097
 		[Nullable(2)]
 		private FrozenDictionary<int, int> RewardIdCache;
 
-		// Token: 0x04004C87 RID: 19591
+		// Token: 0x0400526A RID: 21098
 		[Nullable(2)]
 		private FrozenDictionary<int, int> RewardIdCalabashCache;
 	}

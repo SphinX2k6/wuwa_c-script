@@ -5,20 +5,20 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000ED2 RID: 3794
+	// Token: 0x02000246 RID: 582
 	[UnrealObjectPath("/Script/Engine.NavAvoidanceMask")]
 	[UnrealStructLayout(4, 4, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 4)]
 	public class FNavAvoidanceMask : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0600CD56 RID: 52566 RVA: 0x0012B1AD File Offset: 0x001293AD
+		// Token: 0x06003225 RID: 12837 RVA: 0x00047581 File Offset: 0x00045781
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FNavAvoidanceMask._ScriptStructPtr != 0) ? FNavAvoidanceMask._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/Engine.NavAvoidanceMask", ref FNavAvoidanceMask._ScriptStructPtr);
 		}
 
-		// Token: 0x17003043 RID: 12355
-		// (get) Token: 0x0600CD57 RID: 52567 RVA: 0x0012B1D1 File Offset: 0x001293D1
-		// (set) Token: 0x0600CD58 RID: 52568 RVA: 0x0012B1EA File Offset: 0x001293EA
+		// Token: 0x170006F6 RID: 1782
+		// (get) Token: 0x06003226 RID: 12838 RVA: 0x000475A5 File Offset: 0x000457A5
+		// (set) Token: 0x06003227 RID: 12839 RVA: 0x000475BE File Offset: 0x000457BE
 		public unsafe bool bGroup0
 		{
 			get
@@ -31,9 +31,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003044 RID: 12356
-		// (get) Token: 0x0600CD59 RID: 52569 RVA: 0x0012B21A File Offset: 0x0012941A
-		// (set) Token: 0x0600CD5A RID: 52570 RVA: 0x0012B233 File Offset: 0x00129433
+		// Token: 0x170006F7 RID: 1783
+		// (get) Token: 0x06003228 RID: 12840 RVA: 0x000475EE File Offset: 0x000457EE
+		// (set) Token: 0x06003229 RID: 12841 RVA: 0x00047607 File Offset: 0x00045807
 		public unsafe bool bGroup1
 		{
 			get
@@ -46,9 +46,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003045 RID: 12357
-		// (get) Token: 0x0600CD5B RID: 52571 RVA: 0x0012B263 File Offset: 0x00129463
-		// (set) Token: 0x0600CD5C RID: 52572 RVA: 0x0012B27C File Offset: 0x0012947C
+		// Token: 0x170006F8 RID: 1784
+		// (get) Token: 0x0600322A RID: 12842 RVA: 0x00047637 File Offset: 0x00045837
+		// (set) Token: 0x0600322B RID: 12843 RVA: 0x00047650 File Offset: 0x00045850
 		public unsafe bool bGroup2
 		{
 			get
@@ -61,9 +61,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003046 RID: 12358
-		// (get) Token: 0x0600CD5D RID: 52573 RVA: 0x0012B2AC File Offset: 0x001294AC
-		// (set) Token: 0x0600CD5E RID: 52574 RVA: 0x0012B2C5 File Offset: 0x001294C5
+		// Token: 0x170006F9 RID: 1785
+		// (get) Token: 0x0600322C RID: 12844 RVA: 0x00047680 File Offset: 0x00045880
+		// (set) Token: 0x0600322D RID: 12845 RVA: 0x00047699 File Offset: 0x00045899
 		public unsafe bool bGroup3
 		{
 			get
@@ -76,9 +76,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003047 RID: 12359
-		// (get) Token: 0x0600CD5F RID: 52575 RVA: 0x0012B2F5 File Offset: 0x001294F5
-		// (set) Token: 0x0600CD60 RID: 52576 RVA: 0x0012B30E File Offset: 0x0012950E
+		// Token: 0x170006FA RID: 1786
+		// (get) Token: 0x0600322E RID: 12846 RVA: 0x000476C9 File Offset: 0x000458C9
+		// (set) Token: 0x0600322F RID: 12847 RVA: 0x000476E2 File Offset: 0x000458E2
 		public unsafe bool bGroup4
 		{
 			get
@@ -91,9 +91,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003048 RID: 12360
-		// (get) Token: 0x0600CD61 RID: 52577 RVA: 0x0012B33E File Offset: 0x0012953E
-		// (set) Token: 0x0600CD62 RID: 52578 RVA: 0x0012B357 File Offset: 0x00129557
+		// Token: 0x170006FB RID: 1787
+		// (get) Token: 0x06003230 RID: 12848 RVA: 0x00047712 File Offset: 0x00045912
+		// (set) Token: 0x06003231 RID: 12849 RVA: 0x0004772B File Offset: 0x0004592B
 		public unsafe bool bGroup5
 		{
 			get
@@ -106,9 +106,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003049 RID: 12361
-		// (get) Token: 0x0600CD63 RID: 52579 RVA: 0x0012B387 File Offset: 0x00129587
-		// (set) Token: 0x0600CD64 RID: 52580 RVA: 0x0012B3A0 File Offset: 0x001295A0
+		// Token: 0x170006FC RID: 1788
+		// (get) Token: 0x06003232 RID: 12850 RVA: 0x0004775B File Offset: 0x0004595B
+		// (set) Token: 0x06003233 RID: 12851 RVA: 0x00047774 File Offset: 0x00045974
 		public unsafe bool bGroup6
 		{
 			get
@@ -121,9 +121,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700304A RID: 12362
-		// (get) Token: 0x0600CD65 RID: 52581 RVA: 0x0012B3D0 File Offset: 0x001295D0
-		// (set) Token: 0x0600CD66 RID: 52582 RVA: 0x0012B3E9 File Offset: 0x001295E9
+		// Token: 0x170006FD RID: 1789
+		// (get) Token: 0x06003234 RID: 12852 RVA: 0x000477A4 File Offset: 0x000459A4
+		// (set) Token: 0x06003235 RID: 12853 RVA: 0x000477BD File Offset: 0x000459BD
 		public unsafe bool bGroup7
 		{
 			get
@@ -136,9 +136,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700304B RID: 12363
-		// (get) Token: 0x0600CD67 RID: 52583 RVA: 0x0012B419 File Offset: 0x00129619
-		// (set) Token: 0x0600CD68 RID: 52584 RVA: 0x0012B432 File Offset: 0x00129632
+		// Token: 0x170006FE RID: 1790
+		// (get) Token: 0x06003236 RID: 12854 RVA: 0x000477ED File Offset: 0x000459ED
+		// (set) Token: 0x06003237 RID: 12855 RVA: 0x00047806 File Offset: 0x00045A06
 		public unsafe bool bGroup8
 		{
 			get
@@ -151,9 +151,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700304C RID: 12364
-		// (get) Token: 0x0600CD69 RID: 52585 RVA: 0x0012B462 File Offset: 0x00129662
-		// (set) Token: 0x0600CD6A RID: 52586 RVA: 0x0012B47B File Offset: 0x0012967B
+		// Token: 0x170006FF RID: 1791
+		// (get) Token: 0x06003238 RID: 12856 RVA: 0x00047836 File Offset: 0x00045A36
+		// (set) Token: 0x06003239 RID: 12857 RVA: 0x0004784F File Offset: 0x00045A4F
 		public unsafe bool bGroup9
 		{
 			get
@@ -166,9 +166,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700304D RID: 12365
-		// (get) Token: 0x0600CD6B RID: 52587 RVA: 0x0012B4AB File Offset: 0x001296AB
-		// (set) Token: 0x0600CD6C RID: 52588 RVA: 0x0012B4C4 File Offset: 0x001296C4
+		// Token: 0x17000700 RID: 1792
+		// (get) Token: 0x0600323A RID: 12858 RVA: 0x0004787F File Offset: 0x00045A7F
+		// (set) Token: 0x0600323B RID: 12859 RVA: 0x00047898 File Offset: 0x00045A98
 		public unsafe bool bGroup10
 		{
 			get
@@ -181,9 +181,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700304E RID: 12366
-		// (get) Token: 0x0600CD6D RID: 52589 RVA: 0x0012B4F4 File Offset: 0x001296F4
-		// (set) Token: 0x0600CD6E RID: 52590 RVA: 0x0012B50D File Offset: 0x0012970D
+		// Token: 0x17000701 RID: 1793
+		// (get) Token: 0x0600323C RID: 12860 RVA: 0x000478C8 File Offset: 0x00045AC8
+		// (set) Token: 0x0600323D RID: 12861 RVA: 0x000478E1 File Offset: 0x00045AE1
 		public unsafe bool bGroup11
 		{
 			get
@@ -196,9 +196,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700304F RID: 12367
-		// (get) Token: 0x0600CD6F RID: 52591 RVA: 0x0012B53D File Offset: 0x0012973D
-		// (set) Token: 0x0600CD70 RID: 52592 RVA: 0x0012B556 File Offset: 0x00129756
+		// Token: 0x17000702 RID: 1794
+		// (get) Token: 0x0600323E RID: 12862 RVA: 0x00047911 File Offset: 0x00045B11
+		// (set) Token: 0x0600323F RID: 12863 RVA: 0x0004792A File Offset: 0x00045B2A
 		public unsafe bool bGroup12
 		{
 			get
@@ -211,9 +211,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003050 RID: 12368
-		// (get) Token: 0x0600CD71 RID: 52593 RVA: 0x0012B586 File Offset: 0x00129786
-		// (set) Token: 0x0600CD72 RID: 52594 RVA: 0x0012B59F File Offset: 0x0012979F
+		// Token: 0x17000703 RID: 1795
+		// (get) Token: 0x06003240 RID: 12864 RVA: 0x0004795A File Offset: 0x00045B5A
+		// (set) Token: 0x06003241 RID: 12865 RVA: 0x00047973 File Offset: 0x00045B73
 		public unsafe bool bGroup13
 		{
 			get
@@ -226,9 +226,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003051 RID: 12369
-		// (get) Token: 0x0600CD73 RID: 52595 RVA: 0x0012B5CF File Offset: 0x001297CF
-		// (set) Token: 0x0600CD74 RID: 52596 RVA: 0x0012B5E8 File Offset: 0x001297E8
+		// Token: 0x17000704 RID: 1796
+		// (get) Token: 0x06003242 RID: 12866 RVA: 0x000479A3 File Offset: 0x00045BA3
+		// (set) Token: 0x06003243 RID: 12867 RVA: 0x000479BC File Offset: 0x00045BBC
 		public unsafe bool bGroup14
 		{
 			get
@@ -241,9 +241,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003052 RID: 12370
-		// (get) Token: 0x0600CD75 RID: 52597 RVA: 0x0012B618 File Offset: 0x00129818
-		// (set) Token: 0x0600CD76 RID: 52598 RVA: 0x0012B631 File Offset: 0x00129831
+		// Token: 0x17000705 RID: 1797
+		// (get) Token: 0x06003244 RID: 12868 RVA: 0x000479EC File Offset: 0x00045BEC
+		// (set) Token: 0x06003245 RID: 12869 RVA: 0x00047A05 File Offset: 0x00045C05
 		public unsafe bool bGroup15
 		{
 			get
@@ -256,9 +256,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003053 RID: 12371
-		// (get) Token: 0x0600CD77 RID: 52599 RVA: 0x0012B661 File Offset: 0x00129861
-		// (set) Token: 0x0600CD78 RID: 52600 RVA: 0x0012B67A File Offset: 0x0012987A
+		// Token: 0x17000706 RID: 1798
+		// (get) Token: 0x06003246 RID: 12870 RVA: 0x00047A35 File Offset: 0x00045C35
+		// (set) Token: 0x06003247 RID: 12871 RVA: 0x00047A4E File Offset: 0x00045C4E
 		public unsafe bool bGroup16
 		{
 			get
@@ -271,9 +271,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003054 RID: 12372
-		// (get) Token: 0x0600CD79 RID: 52601 RVA: 0x0012B6AA File Offset: 0x001298AA
-		// (set) Token: 0x0600CD7A RID: 52602 RVA: 0x0012B6C3 File Offset: 0x001298C3
+		// Token: 0x17000707 RID: 1799
+		// (get) Token: 0x06003248 RID: 12872 RVA: 0x00047A7E File Offset: 0x00045C7E
+		// (set) Token: 0x06003249 RID: 12873 RVA: 0x00047A97 File Offset: 0x00045C97
 		public unsafe bool bGroup17
 		{
 			get
@@ -286,9 +286,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003055 RID: 12373
-		// (get) Token: 0x0600CD7B RID: 52603 RVA: 0x0012B6F3 File Offset: 0x001298F3
-		// (set) Token: 0x0600CD7C RID: 52604 RVA: 0x0012B70C File Offset: 0x0012990C
+		// Token: 0x17000708 RID: 1800
+		// (get) Token: 0x0600324A RID: 12874 RVA: 0x00047AC7 File Offset: 0x00045CC7
+		// (set) Token: 0x0600324B RID: 12875 RVA: 0x00047AE0 File Offset: 0x00045CE0
 		public unsafe bool bGroup18
 		{
 			get
@@ -301,9 +301,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003056 RID: 12374
-		// (get) Token: 0x0600CD7D RID: 52605 RVA: 0x0012B73C File Offset: 0x0012993C
-		// (set) Token: 0x0600CD7E RID: 52606 RVA: 0x0012B755 File Offset: 0x00129955
+		// Token: 0x17000709 RID: 1801
+		// (get) Token: 0x0600324C RID: 12876 RVA: 0x00047B10 File Offset: 0x00045D10
+		// (set) Token: 0x0600324D RID: 12877 RVA: 0x00047B29 File Offset: 0x00045D29
 		public unsafe bool bGroup19
 		{
 			get
@@ -316,9 +316,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003057 RID: 12375
-		// (get) Token: 0x0600CD7F RID: 52607 RVA: 0x0012B785 File Offset: 0x00129985
-		// (set) Token: 0x0600CD80 RID: 52608 RVA: 0x0012B79E File Offset: 0x0012999E
+		// Token: 0x1700070A RID: 1802
+		// (get) Token: 0x0600324E RID: 12878 RVA: 0x00047B59 File Offset: 0x00045D59
+		// (set) Token: 0x0600324F RID: 12879 RVA: 0x00047B72 File Offset: 0x00045D72
 		public unsafe bool bGroup20
 		{
 			get
@@ -331,9 +331,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003058 RID: 12376
-		// (get) Token: 0x0600CD81 RID: 52609 RVA: 0x0012B7CE File Offset: 0x001299CE
-		// (set) Token: 0x0600CD82 RID: 52610 RVA: 0x0012B7E7 File Offset: 0x001299E7
+		// Token: 0x1700070B RID: 1803
+		// (get) Token: 0x06003250 RID: 12880 RVA: 0x00047BA2 File Offset: 0x00045DA2
+		// (set) Token: 0x06003251 RID: 12881 RVA: 0x00047BBB File Offset: 0x00045DBB
 		public unsafe bool bGroup21
 		{
 			get
@@ -346,9 +346,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003059 RID: 12377
-		// (get) Token: 0x0600CD83 RID: 52611 RVA: 0x0012B817 File Offset: 0x00129A17
-		// (set) Token: 0x0600CD84 RID: 52612 RVA: 0x0012B830 File Offset: 0x00129A30
+		// Token: 0x1700070C RID: 1804
+		// (get) Token: 0x06003252 RID: 12882 RVA: 0x00047BEB File Offset: 0x00045DEB
+		// (set) Token: 0x06003253 RID: 12883 RVA: 0x00047C04 File Offset: 0x00045E04
 		public unsafe bool bGroup22
 		{
 			get
@@ -361,9 +361,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700305A RID: 12378
-		// (get) Token: 0x0600CD85 RID: 52613 RVA: 0x0012B860 File Offset: 0x00129A60
-		// (set) Token: 0x0600CD86 RID: 52614 RVA: 0x0012B879 File Offset: 0x00129A79
+		// Token: 0x1700070D RID: 1805
+		// (get) Token: 0x06003254 RID: 12884 RVA: 0x00047C34 File Offset: 0x00045E34
+		// (set) Token: 0x06003255 RID: 12885 RVA: 0x00047C4D File Offset: 0x00045E4D
 		public unsafe bool bGroup23
 		{
 			get
@@ -376,9 +376,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700305B RID: 12379
-		// (get) Token: 0x0600CD87 RID: 52615 RVA: 0x0012B8A9 File Offset: 0x00129AA9
-		// (set) Token: 0x0600CD88 RID: 52616 RVA: 0x0012B8C2 File Offset: 0x00129AC2
+		// Token: 0x1700070E RID: 1806
+		// (get) Token: 0x06003256 RID: 12886 RVA: 0x00047C7D File Offset: 0x00045E7D
+		// (set) Token: 0x06003257 RID: 12887 RVA: 0x00047C96 File Offset: 0x00045E96
 		public unsafe bool bGroup24
 		{
 			get
@@ -391,9 +391,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700305C RID: 12380
-		// (get) Token: 0x0600CD89 RID: 52617 RVA: 0x0012B8F2 File Offset: 0x00129AF2
-		// (set) Token: 0x0600CD8A RID: 52618 RVA: 0x0012B90B File Offset: 0x00129B0B
+		// Token: 0x1700070F RID: 1807
+		// (get) Token: 0x06003258 RID: 12888 RVA: 0x00047CC6 File Offset: 0x00045EC6
+		// (set) Token: 0x06003259 RID: 12889 RVA: 0x00047CDF File Offset: 0x00045EDF
 		public unsafe bool bGroup25
 		{
 			get
@@ -406,9 +406,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700305D RID: 12381
-		// (get) Token: 0x0600CD8B RID: 52619 RVA: 0x0012B93B File Offset: 0x00129B3B
-		// (set) Token: 0x0600CD8C RID: 52620 RVA: 0x0012B954 File Offset: 0x00129B54
+		// Token: 0x17000710 RID: 1808
+		// (get) Token: 0x0600325A RID: 12890 RVA: 0x00047D0F File Offset: 0x00045F0F
+		// (set) Token: 0x0600325B RID: 12891 RVA: 0x00047D28 File Offset: 0x00045F28
 		public unsafe bool bGroup26
 		{
 			get
@@ -421,9 +421,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700305E RID: 12382
-		// (get) Token: 0x0600CD8D RID: 52621 RVA: 0x0012B984 File Offset: 0x00129B84
-		// (set) Token: 0x0600CD8E RID: 52622 RVA: 0x0012B99D File Offset: 0x00129B9D
+		// Token: 0x17000711 RID: 1809
+		// (get) Token: 0x0600325C RID: 12892 RVA: 0x00047D58 File Offset: 0x00045F58
+		// (set) Token: 0x0600325D RID: 12893 RVA: 0x00047D71 File Offset: 0x00045F71
 		public unsafe bool bGroup27
 		{
 			get
@@ -436,9 +436,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700305F RID: 12383
-		// (get) Token: 0x0600CD8F RID: 52623 RVA: 0x0012B9CD File Offset: 0x00129BCD
-		// (set) Token: 0x0600CD90 RID: 52624 RVA: 0x0012B9E6 File Offset: 0x00129BE6
+		// Token: 0x17000712 RID: 1810
+		// (get) Token: 0x0600325E RID: 12894 RVA: 0x00047DA1 File Offset: 0x00045FA1
+		// (set) Token: 0x0600325F RID: 12895 RVA: 0x00047DBA File Offset: 0x00045FBA
 		public unsafe bool bGroup28
 		{
 			get
@@ -451,9 +451,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003060 RID: 12384
-		// (get) Token: 0x0600CD91 RID: 52625 RVA: 0x0012BA16 File Offset: 0x00129C16
-		// (set) Token: 0x0600CD92 RID: 52626 RVA: 0x0012BA2F File Offset: 0x00129C2F
+		// Token: 0x17000713 RID: 1811
+		// (get) Token: 0x06003260 RID: 12896 RVA: 0x00047DEA File Offset: 0x00045FEA
+		// (set) Token: 0x06003261 RID: 12897 RVA: 0x00047E03 File Offset: 0x00046003
 		public unsafe bool bGroup29
 		{
 			get
@@ -466,9 +466,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003061 RID: 12385
-		// (get) Token: 0x0600CD93 RID: 52627 RVA: 0x0012BA5F File Offset: 0x00129C5F
-		// (set) Token: 0x0600CD94 RID: 52628 RVA: 0x0012BA78 File Offset: 0x00129C78
+		// Token: 0x17000714 RID: 1812
+		// (get) Token: 0x06003262 RID: 12898 RVA: 0x00047E33 File Offset: 0x00046033
+		// (set) Token: 0x06003263 RID: 12899 RVA: 0x00047E4C File Offset: 0x0004604C
 		public unsafe bool bGroup30
 		{
 			get
@@ -481,9 +481,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17003062 RID: 12386
-		// (get) Token: 0x0600CD95 RID: 52629 RVA: 0x0012BAA8 File Offset: 0x00129CA8
-		// (set) Token: 0x0600CD96 RID: 52630 RVA: 0x0012BAC1 File Offset: 0x00129CC1
+		// Token: 0x17000715 RID: 1813
+		// (get) Token: 0x06003264 RID: 12900 RVA: 0x00047E7C File Offset: 0x0004607C
+		// (set) Token: 0x06003265 RID: 12901 RVA: 0x00047E95 File Offset: 0x00046095
 		public unsafe bool bGroup31
 		{
 			get
@@ -496,276 +496,239 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0600CD97 RID: 52631 RVA: 0x0012BAF1 File Offset: 0x00129CF1
+		// Token: 0x06003266 RID: 12902 RVA: 0x00047EC5 File Offset: 0x000460C5
 		public FNavAvoidanceMask()
 		{
 		}
 
-		// Token: 0x0600CD98 RID: 52632 RVA: 0x0012BAFC File Offset: 0x00129CFC
-		public FNavAvoidanceMask(bool bGroup0, bool bGroup1, bool bGroup2, bool bGroup3, bool bGroup4, bool bGroup5, bool bGroup6, bool bGroup7, bool bGroup8, bool bGroup9, bool bGroup10, bool bGroup11, bool bGroup12, bool bGroup13, bool bGroup14, bool bGroup15, bool bGroup16, bool bGroup17, bool bGroup18, bool bGroup19, bool bGroup20, bool bGroup21, bool bGroup22, bool bGroup23, bool bGroup24, bool bGroup25, bool bGroup26, bool bGroup27, bool bGroup28, bool bGroup29, bool bGroup30, bool bGroup31)
-		{
-			this.bGroup0 = bGroup0;
-			this.bGroup1 = bGroup1;
-			this.bGroup2 = bGroup2;
-			this.bGroup3 = bGroup3;
-			this.bGroup4 = bGroup4;
-			this.bGroup5 = bGroup5;
-			this.bGroup6 = bGroup6;
-			this.bGroup7 = bGroup7;
-			this.bGroup8 = bGroup8;
-			this.bGroup9 = bGroup9;
-			this.bGroup10 = bGroup10;
-			this.bGroup11 = bGroup11;
-			this.bGroup12 = bGroup12;
-			this.bGroup13 = bGroup13;
-			this.bGroup14 = bGroup14;
-			this.bGroup15 = bGroup15;
-			this.bGroup16 = bGroup16;
-			this.bGroup17 = bGroup17;
-			this.bGroup18 = bGroup18;
-			this.bGroup19 = bGroup19;
-			this.bGroup20 = bGroup20;
-			this.bGroup21 = bGroup21;
-			this.bGroup22 = bGroup22;
-			this.bGroup23 = bGroup23;
-			this.bGroup24 = bGroup24;
-			this.bGroup25 = bGroup25;
-			this.bGroup26 = bGroup26;
-			this.bGroup27 = bGroup27;
-			this.bGroup28 = bGroup28;
-			this.bGroup29 = bGroup29;
-			this.bGroup30 = bGroup30;
-			this.bGroup31 = bGroup31;
-		}
-
-		// Token: 0x0600CD99 RID: 52633 RVA: 0x0012BC0C File Offset: 0x00129E0C
+		// Token: 0x06003267 RID: 12903 RVA: 0x00047ECD File Offset: 0x000460CD
 		protected override IntPtr GetUStructPtr()
 		{
 			return FNavAvoidanceMask.StaticStruct();
 		}
 
-		// Token: 0x0600CD9A RID: 52634 RVA: 0x0012BC18 File Offset: 0x00129E18
+		// Token: 0x06003268 RID: 12904 RVA: 0x00047ED9 File Offset: 0x000460D9
 		[NullableContext(2)]
 		public FNavAvoidanceMask(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0600CD9B RID: 52635 RVA: 0x0012BC22 File Offset: 0x00129E22
+		// Token: 0x06003269 RID: 12905 RVA: 0x00047EE3 File Offset: 0x000460E3
 		public FNavAvoidanceMask(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0600CD9C RID: 52636 RVA: 0x0012BC2D File Offset: 0x00129E2D
+		// Token: 0x0600326A RID: 12906 RVA: 0x00047EEE File Offset: 0x000460EE
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FNavAvoidanceMask(Pointer, false, true);
 		}
 
-		// Token: 0x0600CD9D RID: 52637 RVA: 0x0012BC37 File Offset: 0x00129E37
+		// Token: 0x0600326B RID: 12907 RVA: 0x00047EF8 File Offset: 0x000460F8
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FNavAvoidanceMask(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04006E86 RID: 28294
+		// Token: 0x0400114D RID: 4429
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/Engine.NavAvoidanceMask";
 
-		// Token: 0x04006E87 RID: 28295
+		// Token: 0x0400114E RID: 4430
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04006E88 RID: 28296
+		// Token: 0x0400114F RID: 4431
 		internal static int __PropertyOffset_bGroup0;
 
-		// Token: 0x04006E89 RID: 28297
+		// Token: 0x04001150 RID: 4432
 		internal static byte __PropertyMask_bGroup0;
 
-		// Token: 0x04006E8A RID: 28298
+		// Token: 0x04001151 RID: 4433
 		internal static int __PropertyOffset_bGroup1;
 
-		// Token: 0x04006E8B RID: 28299
+		// Token: 0x04001152 RID: 4434
 		internal static byte __PropertyMask_bGroup1;
 
-		// Token: 0x04006E8C RID: 28300
+		// Token: 0x04001153 RID: 4435
 		internal static int __PropertyOffset_bGroup2;
 
-		// Token: 0x04006E8D RID: 28301
+		// Token: 0x04001154 RID: 4436
 		internal static byte __PropertyMask_bGroup2;
 
-		// Token: 0x04006E8E RID: 28302
+		// Token: 0x04001155 RID: 4437
 		internal static int __PropertyOffset_bGroup3;
 
-		// Token: 0x04006E8F RID: 28303
+		// Token: 0x04001156 RID: 4438
 		internal static byte __PropertyMask_bGroup3;
 
-		// Token: 0x04006E90 RID: 28304
+		// Token: 0x04001157 RID: 4439
 		internal static int __PropertyOffset_bGroup4;
 
-		// Token: 0x04006E91 RID: 28305
+		// Token: 0x04001158 RID: 4440
 		internal static byte __PropertyMask_bGroup4;
 
-		// Token: 0x04006E92 RID: 28306
+		// Token: 0x04001159 RID: 4441
 		internal static int __PropertyOffset_bGroup5;
 
-		// Token: 0x04006E93 RID: 28307
+		// Token: 0x0400115A RID: 4442
 		internal static byte __PropertyMask_bGroup5;
 
-		// Token: 0x04006E94 RID: 28308
+		// Token: 0x0400115B RID: 4443
 		internal static int __PropertyOffset_bGroup6;
 
-		// Token: 0x04006E95 RID: 28309
+		// Token: 0x0400115C RID: 4444
 		internal static byte __PropertyMask_bGroup6;
 
-		// Token: 0x04006E96 RID: 28310
+		// Token: 0x0400115D RID: 4445
 		internal static int __PropertyOffset_bGroup7;
 
-		// Token: 0x04006E97 RID: 28311
+		// Token: 0x0400115E RID: 4446
 		internal static byte __PropertyMask_bGroup7;
 
-		// Token: 0x04006E98 RID: 28312
+		// Token: 0x0400115F RID: 4447
 		internal static int __PropertyOffset_bGroup8;
 
-		// Token: 0x04006E99 RID: 28313
+		// Token: 0x04001160 RID: 4448
 		internal static byte __PropertyMask_bGroup8;
 
-		// Token: 0x04006E9A RID: 28314
+		// Token: 0x04001161 RID: 4449
 		internal static int __PropertyOffset_bGroup9;
 
-		// Token: 0x04006E9B RID: 28315
+		// Token: 0x04001162 RID: 4450
 		internal static byte __PropertyMask_bGroup9;
 
-		// Token: 0x04006E9C RID: 28316
+		// Token: 0x04001163 RID: 4451
 		internal static int __PropertyOffset_bGroup10;
 
-		// Token: 0x04006E9D RID: 28317
+		// Token: 0x04001164 RID: 4452
 		internal static byte __PropertyMask_bGroup10;
 
-		// Token: 0x04006E9E RID: 28318
+		// Token: 0x04001165 RID: 4453
 		internal static int __PropertyOffset_bGroup11;
 
-		// Token: 0x04006E9F RID: 28319
+		// Token: 0x04001166 RID: 4454
 		internal static byte __PropertyMask_bGroup11;
 
-		// Token: 0x04006EA0 RID: 28320
+		// Token: 0x04001167 RID: 4455
 		internal static int __PropertyOffset_bGroup12;
 
-		// Token: 0x04006EA1 RID: 28321
+		// Token: 0x04001168 RID: 4456
 		internal static byte __PropertyMask_bGroup12;
 
-		// Token: 0x04006EA2 RID: 28322
+		// Token: 0x04001169 RID: 4457
 		internal static int __PropertyOffset_bGroup13;
 
-		// Token: 0x04006EA3 RID: 28323
+		// Token: 0x0400116A RID: 4458
 		internal static byte __PropertyMask_bGroup13;
 
-		// Token: 0x04006EA4 RID: 28324
+		// Token: 0x0400116B RID: 4459
 		internal static int __PropertyOffset_bGroup14;
 
-		// Token: 0x04006EA5 RID: 28325
+		// Token: 0x0400116C RID: 4460
 		internal static byte __PropertyMask_bGroup14;
 
-		// Token: 0x04006EA6 RID: 28326
+		// Token: 0x0400116D RID: 4461
 		internal static int __PropertyOffset_bGroup15;
 
-		// Token: 0x04006EA7 RID: 28327
+		// Token: 0x0400116E RID: 4462
 		internal static byte __PropertyMask_bGroup15;
 
-		// Token: 0x04006EA8 RID: 28328
+		// Token: 0x0400116F RID: 4463
 		internal static int __PropertyOffset_bGroup16;
 
-		// Token: 0x04006EA9 RID: 28329
+		// Token: 0x04001170 RID: 4464
 		internal static byte __PropertyMask_bGroup16;
 
-		// Token: 0x04006EAA RID: 28330
+		// Token: 0x04001171 RID: 4465
 		internal static int __PropertyOffset_bGroup17;
 
-		// Token: 0x04006EAB RID: 28331
+		// Token: 0x04001172 RID: 4466
 		internal static byte __PropertyMask_bGroup17;
 
-		// Token: 0x04006EAC RID: 28332
+		// Token: 0x04001173 RID: 4467
 		internal static int __PropertyOffset_bGroup18;
 
-		// Token: 0x04006EAD RID: 28333
+		// Token: 0x04001174 RID: 4468
 		internal static byte __PropertyMask_bGroup18;
 
-		// Token: 0x04006EAE RID: 28334
+		// Token: 0x04001175 RID: 4469
 		internal static int __PropertyOffset_bGroup19;
 
-		// Token: 0x04006EAF RID: 28335
+		// Token: 0x04001176 RID: 4470
 		internal static byte __PropertyMask_bGroup19;
 
-		// Token: 0x04006EB0 RID: 28336
+		// Token: 0x04001177 RID: 4471
 		internal static int __PropertyOffset_bGroup20;
 
-		// Token: 0x04006EB1 RID: 28337
+		// Token: 0x04001178 RID: 4472
 		internal static byte __PropertyMask_bGroup20;
 
-		// Token: 0x04006EB2 RID: 28338
+		// Token: 0x04001179 RID: 4473
 		internal static int __PropertyOffset_bGroup21;
 
-		// Token: 0x04006EB3 RID: 28339
+		// Token: 0x0400117A RID: 4474
 		internal static byte __PropertyMask_bGroup21;
 
-		// Token: 0x04006EB4 RID: 28340
+		// Token: 0x0400117B RID: 4475
 		internal static int __PropertyOffset_bGroup22;
 
-		// Token: 0x04006EB5 RID: 28341
+		// Token: 0x0400117C RID: 4476
 		internal static byte __PropertyMask_bGroup22;
 
-		// Token: 0x04006EB6 RID: 28342
+		// Token: 0x0400117D RID: 4477
 		internal static int __PropertyOffset_bGroup23;
 
-		// Token: 0x04006EB7 RID: 28343
+		// Token: 0x0400117E RID: 4478
 		internal static byte __PropertyMask_bGroup23;
 
-		// Token: 0x04006EB8 RID: 28344
+		// Token: 0x0400117F RID: 4479
 		internal static int __PropertyOffset_bGroup24;
 
-		// Token: 0x04006EB9 RID: 28345
+		// Token: 0x04001180 RID: 4480
 		internal static byte __PropertyMask_bGroup24;
 
-		// Token: 0x04006EBA RID: 28346
+		// Token: 0x04001181 RID: 4481
 		internal static int __PropertyOffset_bGroup25;
 
-		// Token: 0x04006EBB RID: 28347
+		// Token: 0x04001182 RID: 4482
 		internal static byte __PropertyMask_bGroup25;
 
-		// Token: 0x04006EBC RID: 28348
+		// Token: 0x04001183 RID: 4483
 		internal static int __PropertyOffset_bGroup26;
 
-		// Token: 0x04006EBD RID: 28349
+		// Token: 0x04001184 RID: 4484
 		internal static byte __PropertyMask_bGroup26;
 
-		// Token: 0x04006EBE RID: 28350
+		// Token: 0x04001185 RID: 4485
 		internal static int __PropertyOffset_bGroup27;
 
-		// Token: 0x04006EBF RID: 28351
+		// Token: 0x04001186 RID: 4486
 		internal static byte __PropertyMask_bGroup27;
 
-		// Token: 0x04006EC0 RID: 28352
+		// Token: 0x04001187 RID: 4487
 		internal static int __PropertyOffset_bGroup28;
 
-		// Token: 0x04006EC1 RID: 28353
+		// Token: 0x04001188 RID: 4488
 		internal static byte __PropertyMask_bGroup28;
 
-		// Token: 0x04006EC2 RID: 28354
+		// Token: 0x04001189 RID: 4489
 		internal static int __PropertyOffset_bGroup29;
 
-		// Token: 0x04006EC3 RID: 28355
+		// Token: 0x0400118A RID: 4490
 		internal static byte __PropertyMask_bGroup29;
 
-		// Token: 0x04006EC4 RID: 28356
+		// Token: 0x0400118B RID: 4491
 		internal static int __PropertyOffset_bGroup30;
 
-		// Token: 0x04006EC5 RID: 28357
+		// Token: 0x0400118C RID: 4492
 		internal static byte __PropertyMask_bGroup30;
 
-		// Token: 0x04006EC6 RID: 28358
+		// Token: 0x0400118D RID: 4493
 		internal static int __PropertyOffset_bGroup31;
 
-		// Token: 0x04006EC7 RID: 28359
+		// Token: 0x0400118E RID: 4494
 		internal static byte __PropertyMask_bGroup31;
 	}
 }

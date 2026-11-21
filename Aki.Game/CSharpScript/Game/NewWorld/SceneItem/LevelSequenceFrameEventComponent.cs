@@ -8,12 +8,12 @@ using CSharpScript.Game.LevelGamePlay;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x02007168 RID: 29032
+	// Token: 0x0200621C RID: 25116
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelSequenceFrameEventComponent : EntityComponent
 	{
-		// Token: 0x06046DE2 RID: 290274 RVA: 0x011DF528 File Offset: 0x011DD728
+		// Token: 0x0603C62E RID: 247342 RVA: 0x0113AF88 File Offset: 0x01139188
 		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
@@ -63,7 +63,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046DE3 RID: 290275 RVA: 0x011DF730 File Offset: 0x011DD930
+		// Token: 0x0603C62F RID: 247343 RVA: 0x0113B190 File Offset: 0x01139390
 		protected override bool OnClear()
 		{
 			this.Config = null;
@@ -71,7 +71,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046DE4 RID: 290276 RVA: 0x011DF748 File Offset: 0x011DD948
+		// Token: 0x0603C630 RID: 247344 RVA: 0x0113B1A8 File Offset: 0x011393A8
 		public unsafe void ExecuteEvent(string key)
 		{
 			ILevelSequenceSectionInfo levelSequenceSectionInfo;
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046DE5 RID: 290277 RVA: 0x011DF8D4 File Offset: 0x011DDAD4
+		// Token: 0x0603C631 RID: 247345 RVA: 0x0113B334 File Offset: 0x01139534
 		public void OnSequencePlayToMark(string mark, int frame, bool isInit, string sequencePath)
 		{
 			this.CurrentSequencePath = sequencePath;
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			}
 		}
 
-		// Token: 0x06046DE6 RID: 290278 RVA: 0x011DFA0C File Offset: 0x011DDC0C
+		// Token: 0x0603C632 RID: 247346 RVA: 0x0113B46C File Offset: 0x0113966C
 		public unsafe void OnSequencePaused()
 		{
 			while (this.EventPendingList.Count > 0)
@@ -193,7 +193,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.EventPendingList = new List<ILevelSequenceSectionInfo>();
 		}
 
-		// Token: 0x06046DE7 RID: 290279 RVA: 0x011DFAEC File Offset: 0x011DDCEC
+		// Token: 0x0603C633 RID: 247347 RVA: 0x0113B54C File Offset: 0x0113974C
 		private void RequestAction(string key)
 		{
 			LevelSequenceFrameEventActionRequest levelSequenceFrameEventActionRequest = LevelSequenceFrameEventActionRequest.Create();
@@ -203,7 +203,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			Net.Instance.Call(ERequestMessageId.LevelSequenceFrameEventActionRequest, levelSequenceFrameEventActionRequest, null, 0);
 		}
 
-		// Token: 0x06046DE8 RID: 290280 RVA: 0x011DFB34 File Offset: 0x011DDD34
+		// Token: 0x0603C634 RID: 247348 RVA: 0x0113B594 File Offset: 0x01139794
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -211,86 +211,78 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			LevelSequenceFrameEventComponent levelSequenceFrameEventComponent = (LevelSequenceFrameEventComponent)componentTemplate;
-			if (base.CanResetComponentProperty("Config"))
+			if (levelSequenceFrameEventComponent.Config == null)
 			{
-				if (levelSequenceFrameEventComponent.Config == null)
-				{
-					this.Config = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<LevelSequenceFrameEventComponent>(this.Config), "Config"))
-				{
-					return false;
-				}
+				this.Config = null;
 			}
-			if (base.CanResetComponentProperty("CreatureDataId"))
-			{
-				this.CreatureDataId = levelSequenceFrameEventComponent.CreatureDataId;
-			}
-			if (base.CanResetComponentProperty("PbDataId"))
-			{
-				this.PbDataId = levelSequenceFrameEventComponent.PbDataId;
-			}
-			if (base.CanResetComponentProperty("FrameMap") && levelSequenceFrameEventComponent.FrameMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, ILevelSequenceSectionInfo>>(this.FrameMap), "FrameMap"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.Config), "Config"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("CurrentMark"))
-			{
-				this.CurrentMark = levelSequenceFrameEventComponent.CurrentMark;
-			}
-			if (base.CanResetComponentProperty("MarkIndexMapFront") && levelSequenceFrameEventComponent.MarkIndexMapFront != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, int>>(this.MarkIndexMapFront), "MarkIndexMapFront"))
+			this.CreatureDataId = levelSequenceFrameEventComponent.CreatureDataId;
+			this.PbDataId = levelSequenceFrameEventComponent.PbDataId;
+			if (levelSequenceFrameEventComponent.FrameMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.FrameMap), "FrameMap"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("MarkIndexMapBack") && levelSequenceFrameEventComponent.MarkIndexMapBack != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, int>>(this.MarkIndexMapBack), "MarkIndexMapBack"))
+			this.CurrentMark = levelSequenceFrameEventComponent.CurrentMark;
+			if (levelSequenceFrameEventComponent.MarkIndexMapFront != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.MarkIndexMapFront), "MarkIndexMapFront"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("EventPendingList"))
+			if (levelSequenceFrameEventComponent.MarkIndexMapBack != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.MarkIndexMapBack), "MarkIndexMapBack"))
 			{
-				if (levelSequenceFrameEventComponent.EventPendingList == null)
-				{
-					this.EventPendingList = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<ILevelSequenceSectionInfo>>(this.EventPendingList), "EventPendingList"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("CurrentSequencePath"))
+			if (levelSequenceFrameEventComponent.EventPendingList == null)
 			{
-				this.CurrentSequencePath = levelSequenceFrameEventComponent.CurrentSequencePath;
+				this.EventPendingList = null;
 			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.EventPendingList), "EventPendingList"))
+			{
+				return false;
+			}
+			this.CurrentSequencePath = levelSequenceFrameEventComponent.CurrentSequencePath;
 			return true;
 		}
 
-		// Token: 0x0402532B RID: 152363
+		// Token: 0x1700720A RID: 29194
+		// (get) Token: 0x0603C635 RID: 247349 RVA: 0x0113B6A0 File Offset: 0x011398A0
+		public override bool NeedClearInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0401FF92 RID: 130962
 		[Nullable(2)]
 		private LevelSequenceFrameEventComponent Config;
 
-		// Token: 0x0402532C RID: 152364
+		// Token: 0x0401FF93 RID: 130963
 		private long CreatureDataId;
 
-		// Token: 0x0402532D RID: 152365
+		// Token: 0x0401FF94 RID: 130964
 		private long PbDataId;
 
-		// Token: 0x0402532E RID: 152366
+		// Token: 0x0401FF95 RID: 130965
 		private readonly Dictionary<string, ILevelSequenceSectionInfo> FrameMap = new Dictionary<string, ILevelSequenceSectionInfo>();
 
-		// Token: 0x0402532F RID: 152367
+		// Token: 0x0401FF96 RID: 130966
 		[Nullable(2)]
 		private string CurrentMark;
 
-		// Token: 0x04025330 RID: 152368
+		// Token: 0x0401FF97 RID: 130967
 		private readonly Dictionary<string, int> MarkIndexMapFront = new Dictionary<string, int>();
 
-		// Token: 0x04025331 RID: 152369
+		// Token: 0x0401FF98 RID: 130968
 		private readonly Dictionary<string, int> MarkIndexMapBack = new Dictionary<string, int>();
 
-		// Token: 0x04025332 RID: 152370
+		// Token: 0x0401FF99 RID: 130969
 		private List<ILevelSequenceSectionInfo> EventPendingList = new List<ILevelSequenceSectionInfo>();
 
-		// Token: 0x04025333 RID: 152371
+		// Token: 0x0401FF9A RID: 130970
 		[Nullable(2)]
 		private string CurrentSequencePath;
 	}

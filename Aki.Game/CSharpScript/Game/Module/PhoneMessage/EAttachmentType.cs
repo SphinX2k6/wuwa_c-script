@@ -4,17 +4,17 @@ using CSharpScript.Core.Common;
 
 namespace CSharpScript.Game.Module.PhoneMessage
 {
-	// Token: 0x020050EC RID: 20716
+	// Token: 0x020040BC RID: 16572
 	[EnumExtensions]
 	public enum EAttachmentType
 	{
-		// Token: 0x0401C348 RID: 115528
+		// Token: 0x04016D7B RID: 93563
 		[EnumMember(Value = "Image")]
 		Image,
-		// Token: 0x0401C349 RID: 115529
+		// Token: 0x04016D7C RID: 93564
 		[EnumMember(Value = "Spine")]
 		Spine,
-		// Token: 0x0401C34A RID: 115530
+		// Token: 0x04016D7D RID: 93565
 		[EnumMember(Value = "Mp4")]
 		Mp4
 	}

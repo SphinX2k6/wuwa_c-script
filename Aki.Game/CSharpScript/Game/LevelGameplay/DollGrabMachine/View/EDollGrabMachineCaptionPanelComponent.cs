@@ -2,24 +2,24 @@
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.View
 {
-	// Token: 0x02006EE5 RID: 28389
+	// Token: 0x02006065 RID: 24677
 	internal enum EDollGrabMachineCaptionPanelComponent
 	{
-		// Token: 0x04024043 RID: 147523
+		// Token: 0x0401F2F6 RID: 127734
 		SprTitleIcon,
-		// Token: 0x04024044 RID: 147524
+		// Token: 0x0401F2F7 RID: 127735
 		TxtTitle,
-		// Token: 0x04024045 RID: 147525
+		// Token: 0x0401F2F8 RID: 127736
 		BtnHelpInfo,
-		// Token: 0x04024046 RID: 147526
+		// Token: 0x0401F2F9 RID: 127737
 		BtnBack,
-		// Token: 0x04024047 RID: 147527
+		// Token: 0x0401F2FA RID: 127738
 		PnlCost,
-		// Token: 0x04024048 RID: 147528
+		// Token: 0x0401F2FB RID: 127739
 		PnlTabInfo,
-		// Token: 0x04024049 RID: 147529
+		// Token: 0x0401F2FC RID: 127740
 		PnlHome,
-		// Token: 0x0402404A RID: 147530
+		// Token: 0x0401F2FD RID: 127741
 		PnlTabInfoNoInter
 	}
 }

@@ -4,17 +4,17 @@ using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.TrapDefense;
 
-// Token: 0x02001530 RID: 5424
+// Token: 0x020009E8 RID: 2536
 public class ActivityTrapDefenseData : ActivityBaseData
 {
-	// Token: 0x06009ACA RID: 39626 RVA: 0x00217AD4 File Offset: 0x00215CD4
+	// Token: 0x06006EA8 RID: 28328 RVA: 0x00221874 File Offset: 0x0021FA74
 	public override bool GetExDataRedPointShowState()
 	{
 		RedDotBase redDot = RedDotModel.Instance.GetRedDot(ERedDotName.TrapDefense);
 		return (redDot != null && redDot.IsRedDotActive()) || TrapDefenseModel.Instance.RougeModeData.IsShowRougeModeTipsToActivity();
 	}
 
-	// Token: 0x06009ACB RID: 39627 RVA: 0x00217B10 File Offset: 0x00215D10
+	// Token: 0x06006EA9 RID: 28329 RVA: 0x002218B0 File Offset: 0x0021FAB0
 	[NullableContext(1)]
 	protected override void PhraseEx(ActivityData data)
 	{
@@ -49,7 +49,7 @@ public class ActivityTrapDefenseData : ActivityBaseData
 		}
 	}
 
-	// Token: 0x06009ACC RID: 39628 RVA: 0x00217BF4 File Offset: 0x00215DF4
+	// Token: 0x06006EAA RID: 28330 RVA: 0x00221994 File Offset: 0x0021FB94
 	protected override bool GetExDataFinishShowState()
 	{
 		return TrapDefenseModel.Instance.RewardData.IsFixedRewardAllClaimed();

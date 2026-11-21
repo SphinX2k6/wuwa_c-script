@@ -5,20 +5,20 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02002638 RID: 9784
+	// Token: 0x020007B2 RID: 1970
 	[UnrealObjectPath("/Script/PhysicsCore.BodyInstanceCore")]
 	[UnrealStructLayout(24, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 24)]
 	public class FBodyInstanceCore : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602463F RID: 149055 RVA: 0x0035E063 File Offset: 0x0035C263
+		// Token: 0x0600AB31 RID: 43825 RVA: 0x000FC757 File Offset: 0x000FA957
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FBodyInstanceCore._ScriptStructPtr != 0) ? FBodyInstanceCore._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/PhysicsCore.BodyInstanceCore", ref FBodyInstanceCore._ScriptStructPtr);
 		}
 
-		// Token: 0x17008C29 RID: 35881
-		// (get) Token: 0x06024640 RID: 149056 RVA: 0x0035E087 File Offset: 0x0035C287
-		// (set) Token: 0x06024641 RID: 149057 RVA: 0x0035E0A0 File Offset: 0x0035C2A0
+		// Token: 0x17001FD7 RID: 8151
+		// (get) Token: 0x0600AB32 RID: 43826 RVA: 0x000FC77B File Offset: 0x000FA97B
+		// (set) Token: 0x0600AB33 RID: 43827 RVA: 0x000FC794 File Offset: 0x000FA994
 		public unsafe bool bSimulatePhysics
 		{
 			get
@@ -31,9 +31,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008C2A RID: 35882
-		// (get) Token: 0x06024642 RID: 149058 RVA: 0x0035E0D0 File Offset: 0x0035C2D0
-		// (set) Token: 0x06024643 RID: 149059 RVA: 0x0035E0E9 File Offset: 0x0035C2E9
+		// Token: 0x17001FD8 RID: 8152
+		// (get) Token: 0x0600AB34 RID: 43828 RVA: 0x000FC7C4 File Offset: 0x000FA9C4
+		// (set) Token: 0x0600AB35 RID: 43829 RVA: 0x000FC7DD File Offset: 0x000FA9DD
 		public unsafe bool bOverrideMass
 		{
 			get
@@ -46,9 +46,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008C2B RID: 35883
-		// (get) Token: 0x06024644 RID: 149060 RVA: 0x0035E119 File Offset: 0x0035C319
-		// (set) Token: 0x06024645 RID: 149061 RVA: 0x0035E132 File Offset: 0x0035C332
+		// Token: 0x17001FD9 RID: 8153
+		// (get) Token: 0x0600AB36 RID: 43830 RVA: 0x000FC80D File Offset: 0x000FAA0D
+		// (set) Token: 0x0600AB37 RID: 43831 RVA: 0x000FC826 File Offset: 0x000FAA26
 		public unsafe bool bEnableGravity
 		{
 			get
@@ -61,9 +61,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008C2C RID: 35884
-		// (get) Token: 0x06024646 RID: 149062 RVA: 0x0035E162 File Offset: 0x0035C362
-		// (set) Token: 0x06024647 RID: 149063 RVA: 0x0035E17B File Offset: 0x0035C37B
+		// Token: 0x17001FDA RID: 8154
+		// (get) Token: 0x0600AB38 RID: 43832 RVA: 0x000FC856 File Offset: 0x000FAA56
+		// (set) Token: 0x0600AB39 RID: 43833 RVA: 0x000FC86F File Offset: 0x000FAA6F
 		public unsafe bool bAutoWeld
 		{
 			get
@@ -76,9 +76,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008C2D RID: 35885
-		// (get) Token: 0x06024648 RID: 149064 RVA: 0x0035E1AB File Offset: 0x0035C3AB
-		// (set) Token: 0x06024649 RID: 149065 RVA: 0x0035E1C4 File Offset: 0x0035C3C4
+		// Token: 0x17001FDB RID: 8155
+		// (get) Token: 0x0600AB3A RID: 43834 RVA: 0x000FC89F File Offset: 0x000FAA9F
+		// (set) Token: 0x0600AB3B RID: 43835 RVA: 0x000FC8B8 File Offset: 0x000FAAB8
 		public unsafe bool bStartAwake
 		{
 			get
@@ -91,9 +91,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008C2E RID: 35886
-		// (get) Token: 0x0602464A RID: 149066 RVA: 0x0035E1F4 File Offset: 0x0035C3F4
-		// (set) Token: 0x0602464B RID: 149067 RVA: 0x0035E20D File Offset: 0x0035C40D
+		// Token: 0x17001FDC RID: 8156
+		// (get) Token: 0x0600AB3C RID: 43836 RVA: 0x000FC8E8 File Offset: 0x000FAAE8
+		// (set) Token: 0x0600AB3D RID: 43837 RVA: 0x000FC901 File Offset: 0x000FAB01
 		public unsafe bool bGenerateWakeEvents
 		{
 			get
@@ -106,9 +106,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17008C2F RID: 35887
-		// (get) Token: 0x0602464C RID: 149068 RVA: 0x0035E23D File Offset: 0x0035C43D
-		// (set) Token: 0x0602464D RID: 149069 RVA: 0x0035E256 File Offset: 0x0035C456
+		// Token: 0x17001FDD RID: 8157
+		// (get) Token: 0x0600AB3E RID: 43838 RVA: 0x000FC931 File Offset: 0x000FAB31
+		// (set) Token: 0x0600AB3F RID: 43839 RVA: 0x000FC94A File Offset: 0x000FAB4A
 		public unsafe bool bUpdateMassWhenScaleChanges
 		{
 			get
@@ -121,101 +121,89 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0602464E RID: 149070 RVA: 0x0035E286 File Offset: 0x0035C486
+		// Token: 0x0600AB40 RID: 43840 RVA: 0x000FC97A File Offset: 0x000FAB7A
 		public FBodyInstanceCore()
 		{
 		}
 
-		// Token: 0x0602464F RID: 149071 RVA: 0x0035E28E File Offset: 0x0035C48E
-		public FBodyInstanceCore(bool bSimulatePhysics, bool bOverrideMass, bool bEnableGravity, bool bAutoWeld, bool bStartAwake, bool bGenerateWakeEvents, bool bUpdateMassWhenScaleChanges)
-		{
-			this.bSimulatePhysics = bSimulatePhysics;
-			this.bOverrideMass = bOverrideMass;
-			this.bEnableGravity = bEnableGravity;
-			this.bAutoWeld = bAutoWeld;
-			this.bStartAwake = bStartAwake;
-			this.bGenerateWakeEvents = bGenerateWakeEvents;
-			this.bUpdateMassWhenScaleChanges = bUpdateMassWhenScaleChanges;
-		}
-
-		// Token: 0x06024650 RID: 149072 RVA: 0x0035E2CB File Offset: 0x0035C4CB
+		// Token: 0x0600AB41 RID: 43841 RVA: 0x000FC982 File Offset: 0x000FAB82
 		protected override IntPtr GetUStructPtr()
 		{
 			return FBodyInstanceCore.StaticStruct();
 		}
 
-		// Token: 0x06024651 RID: 149073 RVA: 0x0035E2D7 File Offset: 0x0035C4D7
+		// Token: 0x0600AB42 RID: 43842 RVA: 0x000FC98E File Offset: 0x000FAB8E
 		[NullableContext(2)]
 		public FBodyInstanceCore(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06024652 RID: 149074 RVA: 0x0035E2E1 File Offset: 0x0035C4E1
+		// Token: 0x0600AB43 RID: 43843 RVA: 0x000FC998 File Offset: 0x000FAB98
 		public FBodyInstanceCore(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06024653 RID: 149075 RVA: 0x0035E2EC File Offset: 0x0035C4EC
+		// Token: 0x0600AB44 RID: 43844 RVA: 0x000FC9A3 File Offset: 0x000FABA3
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FBodyInstanceCore(Pointer, false, true);
 		}
 
-		// Token: 0x06024654 RID: 149076 RVA: 0x0035E2F6 File Offset: 0x0035C4F6
+		// Token: 0x0600AB45 RID: 43845 RVA: 0x000FC9AD File Offset: 0x000FABAD
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FBodyInstanceCore(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0401384E RID: 79950
+		// Token: 0x04004933 RID: 18739
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/PhysicsCore.BodyInstanceCore";
 
-		// Token: 0x0401384F RID: 79951
+		// Token: 0x04004934 RID: 18740
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04013850 RID: 79952
+		// Token: 0x04004935 RID: 18741
 		internal static int __PropertyOffset_bSimulatePhysics;
 
-		// Token: 0x04013851 RID: 79953
+		// Token: 0x04004936 RID: 18742
 		internal static byte __PropertyMask_bSimulatePhysics;
 
-		// Token: 0x04013852 RID: 79954
+		// Token: 0x04004937 RID: 18743
 		internal static int __PropertyOffset_bOverrideMass;
 
-		// Token: 0x04013853 RID: 79955
+		// Token: 0x04004938 RID: 18744
 		internal static byte __PropertyMask_bOverrideMass;
 
-		// Token: 0x04013854 RID: 79956
+		// Token: 0x04004939 RID: 18745
 		internal static int __PropertyOffset_bEnableGravity;
 
-		// Token: 0x04013855 RID: 79957
+		// Token: 0x0400493A RID: 18746
 		internal static byte __PropertyMask_bEnableGravity;
 
-		// Token: 0x04013856 RID: 79958
+		// Token: 0x0400493B RID: 18747
 		internal static int __PropertyOffset_bAutoWeld;
 
-		// Token: 0x04013857 RID: 79959
+		// Token: 0x0400493C RID: 18748
 		internal static byte __PropertyMask_bAutoWeld;
 
-		// Token: 0x04013858 RID: 79960
+		// Token: 0x0400493D RID: 18749
 		internal static int __PropertyOffset_bStartAwake;
 
-		// Token: 0x04013859 RID: 79961
+		// Token: 0x0400493E RID: 18750
 		internal static byte __PropertyMask_bStartAwake;
 
-		// Token: 0x0401385A RID: 79962
+		// Token: 0x0400493F RID: 18751
 		internal static int __PropertyOffset_bGenerateWakeEvents;
 
-		// Token: 0x0401385B RID: 79963
+		// Token: 0x04004940 RID: 18752
 		internal static byte __PropertyMask_bGenerateWakeEvents;
 
-		// Token: 0x0401385C RID: 79964
+		// Token: 0x04004941 RID: 18753
 		internal static int __PropertyOffset_bUpdateMassWhenScaleChanges;
 
-		// Token: 0x0401385D RID: 79965
+		// Token: 0x04004942 RID: 18754
 		internal static byte __PropertyMask_bUpdateMassWhenScaleChanges;
 	}
 }

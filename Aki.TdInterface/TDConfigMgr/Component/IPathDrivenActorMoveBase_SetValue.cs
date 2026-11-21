@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020005DB RID: 1499
+	// Token: 0x0200066C RID: 1644
 	public class IPathDrivenActorMoveBase_SetValue
 	{
-		// Token: 0x0400165D RID: 5725
+		// Token: 0x04001834 RID: 6196
 		public EPathDrivenActorMoveType Type;
 	}
 }

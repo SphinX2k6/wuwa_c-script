@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.Parkour
 {
-	// Token: 0x02006ABA RID: 27322
+	// Token: 0x02005C32 RID: 23602
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ParkourController : ControllerBase
 	{
-		// Token: 0x06043E25 RID: 278053 RVA: 0x010A4311 File Offset: 0x010A2511
+		// Token: 0x06039F6C RID: 237420 RVA: 0x0104D8F6 File Offset: 0x0104BAF6
 		[NullableContext(2)]
 		public void StartParkour(int inConfigId, GeneralLogicTreeContext inContext = null, [Nullable(new byte[]
 		{
@@ -31,13 +31,13 @@ namespace CSharpScript.Game.LevelGamePlay.Parkour
 			this.GenerateParkPoints(inConfigId);
 		}
 
-		// Token: 0x06043E26 RID: 278054 RVA: 0x010A432A File Offset: 0x010A252A
+		// Token: 0x06039F6D RID: 237421 RVA: 0x0104D90F File Offset: 0x0104BB0F
 		public void EndParkour(int inConfigId)
 		{
 			ParkourModel.Instance.RemoveParkour(inConfigId);
 		}
 
-		// Token: 0x06043E27 RID: 278055 RVA: 0x010A4338 File Offset: 0x010A2538
+		// Token: 0x06039F6E RID: 237422 RVA: 0x0104D91C File Offset: 0x0104BB1C
 		public void HandleParkourPoint(int inConfigId, int inIndex, int indexInGroup)
 		{
 			ParkourConfig parkour = ParkourModel.Instance.GetParkour(inConfigId);
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.LevelGamePlay.Parkour
 			});
 		}
 
-		// Token: 0x06043E28 RID: 278056 RVA: 0x010A45C0 File Offset: 0x010A27C0
+		// Token: 0x06039F6F RID: 237423 RVA: 0x0104DBA4 File Offset: 0x0104BDA4
 		private void GenerateParkPoints(int inConfigId)
 		{
 			ParkourConfig parkour = ParkourModel.Instance.GetParkour(inConfigId);
@@ -181,7 +181,7 @@ namespace CSharpScript.Game.LevelGamePlay.Parkour
 			}
 		}
 
-		// Token: 0x06043E29 RID: 278057 RVA: 0x010A4820 File Offset: 0x010A2A20
+		// Token: 0x06039F70 RID: 237424 RVA: 0x0104DE04 File Offset: 0x0104C004
 		[return: Nullable(2)]
 		private TsParkourCheckPoint GenerateParkPointActor(FTransformDouble tf, int inConfigId, int index, int indexInGroup, IParkourSplinePoint pointInfo, IParkourSpline splineInfo)
 		{
@@ -218,7 +218,7 @@ namespace CSharpScript.Game.LevelGamePlay.Parkour
 			return tsParkourCheckPoint;
 		}
 
-		// Token: 0x06043E2A RID: 278058 RVA: 0x010A490C File Offset: 0x010A2B0C
+		// Token: 0x06039F71 RID: 237425 RVA: 0x0104DEF0 File Offset: 0x0104C0F0
 		public bool MatchParkourRoleConfig(int inConfigId)
 		{
 			ParkourConfig parkour = ParkourModel.Instance.GetParkour(inConfigId);
@@ -233,8 +233,8 @@ namespace CSharpScript.Game.LevelGamePlay.Parkour
 			return SceneTeamController.Instance.IsMatchRoleOption(parkour.MatchRoleOption);
 		}
 
-		// Token: 0x1700995B RID: 39259
-		// (get) Token: 0x06043E2B RID: 278059 RVA: 0x010A4960 File Offset: 0x010A2B60
+		// Token: 0x17006E5E RID: 28254
+		// (get) Token: 0x06039F72 RID: 237426 RVA: 0x0104DF44 File Offset: 0x0104C144
 		public static ParkourController Instance
 		{
 			get
@@ -243,7 +243,7 @@ namespace CSharpScript.Game.LevelGamePlay.Parkour
 			}
 		}
 
-		// Token: 0x06043E2C RID: 278060 RVA: 0x010A4967 File Offset: 0x010A2B67
+		// Token: 0x06039F73 RID: 237427 RVA: 0x0104DF4B File Offset: 0x0104C14B
 		public static ParkourController GetOrCreateInstance()
 		{
 			if (ParkourController._Instance == null)
@@ -253,7 +253,7 @@ namespace CSharpScript.Game.LevelGamePlay.Parkour
 			return ParkourController._Instance;
 		}
 
-		// Token: 0x06043E2D RID: 278061 RVA: 0x010A497B File Offset: 0x010A2B7B
+		// Token: 0x06039F74 RID: 237428 RVA: 0x0104DF5F File Offset: 0x0104C15F
 		public static bool CreateInstance()
 		{
 			if (ParkourController._Instance != null)
@@ -264,24 +264,24 @@ namespace CSharpScript.Game.LevelGamePlay.Parkour
 			return true;
 		}
 
-		// Token: 0x06043E2E RID: 278062 RVA: 0x010A4991 File Offset: 0x010A2B91
+		// Token: 0x06039F75 RID: 237429 RVA: 0x0104DF75 File Offset: 0x0104C175
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06043E2F RID: 278063 RVA: 0x010A4993 File Offset: 0x010A2B93
+		// Token: 0x06039F76 RID: 237430 RVA: 0x0104DF77 File Offset: 0x0104C177
 		public static void ResetStaticDefaultValue()
 		{
 			ParkourController._Instance = null;
 		}
 
-		// Token: 0x06043E30 RID: 278064 RVA: 0x010A499B File Offset: 0x010A2B9B
+		// Token: 0x06039F77 RID: 237431 RVA: 0x0104DF7F File Offset: 0x0104C17F
 		static ParkourController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ParkourController.CreateStaticDefaultValue), new Action(ParkourController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040237B7 RID: 145335
+		// Token: 0x0401EA54 RID: 125524
 		[Nullable(2)]
 		private static ParkourController _Instance;
 	}

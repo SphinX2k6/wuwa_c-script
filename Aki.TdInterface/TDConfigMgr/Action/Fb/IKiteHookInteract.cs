@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020027E6 RID: 10214
+	// Token: 0x02002AB9 RID: 10937
 	public class IKiteHookInteract : ILeisureInteractType
 	{
-		// Token: 0x0600E2F6 RID: 58102 RVA: 0x00217D66 File Offset: 0x00215F66
-		[NullableContext(1)]
+		// Token: 0x0600F11B RID: 61723 RVA: 0x00234BC9 File Offset: 0x00232DC9
 		public static IKiteHookInteract Create(IKiteHookInteract? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170044EC RID: 17644
-		// (get) Token: 0x0600E2F7 RID: 58103 RVA: 0x00217D85 File Offset: 0x00215F85
+		// Token: 0x17004857 RID: 18519
+		// (get) Token: 0x0600F11C RID: 61724 RVA: 0x00234BE8 File Offset: 0x00232DE8
 		public override ELeisureInteract Type
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170044ED RID: 17645
-		// (get) Token: 0x0600E2F8 RID: 58104 RVA: 0x00217D92 File Offset: 0x00215F92
+		// Token: 0x17004858 RID: 18520
+		// (get) Token: 0x0600F11D RID: 61725 RVA: 0x00234BF5 File Offset: 0x00232DF5
 		public virtual int EntityId
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007DC8 RID: 32200
+		// Token: 0x04008485 RID: 33925
 		private IKiteHookInteract Instance;
 	}
 }

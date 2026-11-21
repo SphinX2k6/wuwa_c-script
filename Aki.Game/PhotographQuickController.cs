@@ -6,14 +6,14 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002552 RID: 9554
+// Token: 0x02001A3D RID: 6717
 [NullableContext(1)]
 [Nullable(0)]
 [TickController(0)]
 public class PhotographQuickController : ControllerBase
 {
-	// Token: 0x170018DE RID: 6366
-	// (get) Token: 0x060133FD RID: 78845 RVA: 0x004C9D07 File Offset: 0x004C7F07
+	// Token: 0x17001917 RID: 6423
+	// (get) Token: 0x060108DD RID: 67805 RVA: 0x004D8887 File Offset: 0x004D6A87
 	public PhotographQuickModel Model
 	{
 		get
@@ -22,28 +22,28 @@ public class PhotographQuickController : ControllerBase
 		}
 	}
 
-	// Token: 0x060133FE RID: 78846 RVA: 0x004C9D0E File Offset: 0x004C7F0E
+	// Token: 0x060108DE RID: 67806 RVA: 0x004D888E File Offset: 0x004D6A8E
 	protected override bool OnInit()
 	{
 		this.OnAddEvents();
 		return true;
 	}
 
-	// Token: 0x060133FF RID: 78847 RVA: 0x004C9D17 File Offset: 0x004C7F17
+	// Token: 0x060108DF RID: 67807 RVA: 0x004D8897 File Offset: 0x004D6A97
 	protected override bool OnLeaveLevel()
 	{
 		this.Reset();
 		return true;
 	}
 
-	// Token: 0x06013400 RID: 78848 RVA: 0x004C9D20 File Offset: 0x004C7F20
+	// Token: 0x060108E0 RID: 67808 RVA: 0x004D88A0 File Offset: 0x004D6AA0
 	protected override bool OnClear()
 	{
 		this.OnRemoveEvents();
 		return true;
 	}
 
-	// Token: 0x06013401 RID: 78849 RVA: 0x004C9D2C File Offset: 0x004C7F2C
+	// Token: 0x060108E1 RID: 67809 RVA: 0x004D88AC File Offset: 0x004D6AAC
 	protected void OnAddEvents()
 	{
 		EventSystem.Instance.Add<EntityHandle, EntityHandle>(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.OnChangeRole));
@@ -53,7 +53,7 @@ public class PhotographQuickController : ControllerBase
 		InputDistributeController.Instance.BindAxis("UiTurn", new TInputHandle<float>(this.OnInputUiTurn));
 	}
 
-	// Token: 0x06013402 RID: 78850 RVA: 0x004C9DC4 File Offset: 0x004C7FC4
+	// Token: 0x060108E2 RID: 67810 RVA: 0x004D8944 File Offset: 0x004D6B44
 	protected void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OnChangeRole, new Action<EntityHandle, EntityHandle>(this.OnChangeRole));
@@ -63,7 +63,7 @@ public class PhotographQuickController : ControllerBase
 		InputDistributeController.Instance.UnBindAxis("UiTurn", new TInputHandle<float>(this.OnInputUiTurn));
 	}
 
-	// Token: 0x06013403 RID: 78851 RVA: 0x004C9E5C File Offset: 0x004C805C
+	// Token: 0x060108E3 RID: 67811 RVA: 0x004D89DC File Offset: 0x004D6BDC
 	private void OnInputUiLookUp(string axisName, float value, InputIdentification _)
 	{
 		if (value == 0f)
@@ -86,7 +86,7 @@ public class PhotographQuickController : ControllerBase
 		handler.AddPitchInput(-value);
 	}
 
-	// Token: 0x06013404 RID: 78852 RVA: 0x004C9EAC File Offset: 0x004C80AC
+	// Token: 0x060108E4 RID: 67812 RVA: 0x004D8A2C File Offset: 0x004D6C2C
 	private void OnInputUiTurn(string axisName, float value, InputIdentification _)
 	{
 		if (value == 0f)
@@ -109,7 +109,7 @@ public class PhotographQuickController : ControllerBase
 		handler.AddYawInput(value);
 	}
 
-	// Token: 0x06013405 RID: 78853 RVA: 0x004C9EF8 File Offset: 0x004C80F8
+	// Token: 0x060108E5 RID: 67813 RVA: 0x004D8A78 File Offset: 0x004D6C78
 	protected override void OnTick(float delta)
 	{
 		if (this.Model.GetHandler() == null)
@@ -119,31 +119,31 @@ public class PhotographQuickController : ControllerBase
 		this.Model.GetHandler().ApplyCameraDelta();
 	}
 
-	// Token: 0x06013406 RID: 78854 RVA: 0x004C9F18 File Offset: 0x004C8118
+	// Token: 0x060108E6 RID: 67814 RVA: 0x004D8A98 File Offset: 0x004D6C98
 	private void OnChangeRole(EntityHandle newEntityHandle, [Nullable(2)] EntityHandle oldEntityHandle)
 	{
 		this.Close(false);
 	}
 
-	// Token: 0x06013407 RID: 78855 RVA: 0x004C9F21 File Offset: 0x004C8121
+	// Token: 0x060108E7 RID: 67815 RVA: 0x004D8AA1 File Offset: 0x004D6CA1
 	private void OnRoleDead(int charId)
 	{
 		this.Close(false);
 	}
 
-	// Token: 0x06013408 RID: 78856 RVA: 0x004C9F2A File Offset: 0x004C812A
+	// Token: 0x060108E8 RID: 67816 RVA: 0x004D8AAA File Offset: 0x004D6CAA
 	public void Close(bool bCloseFromSavePhoto = false)
 	{
 		this.Model.ClearHandler();
 	}
 
-	// Token: 0x06013409 RID: 78857 RVA: 0x004C9F37 File Offset: 0x004C8137
+	// Token: 0x060108E9 RID: 67817 RVA: 0x004D8AB7 File Offset: 0x004D6CB7
 	public void Reset()
 	{
 		this.Model.ClearHandler();
 	}
 
-	// Token: 0x0601340A RID: 78858 RVA: 0x004C9F44 File Offset: 0x004C8144
+	// Token: 0x060108EA RID: 67818 RVA: 0x004D8AC4 File Offset: 0x004D6CC4
 	public void SetFov(float v)
 	{
 		PhotoCameraHandler handler = this.Model.GetHandler();
@@ -154,13 +154,13 @@ public class PhotographQuickController : ControllerBase
 		handler.SetFov(v);
 	}
 
-	// Token: 0x0601340B RID: 78859 RVA: 0x004C9F5C File Offset: 0x004C815C
+	// Token: 0x060108EB RID: 67819 RVA: 0x004D8ADC File Offset: 0x004D6CDC
 	public void InitHandlerForCaptureCollect()
 	{
 		this.Model.InitHandlerForCaptureCollect();
 	}
 
-	// Token: 0x0601340C RID: 78860 RVA: 0x004C9F6C File Offset: 0x004C816C
+	// Token: 0x060108EC RID: 67820 RVA: 0x004D8AEC File Offset: 0x004D6CEC
 	private void OnCheckClientEvent(FGameplayTag tag)
 	{
 		int num = tag.TagId();
@@ -178,8 +178,8 @@ public class PhotographQuickController : ControllerBase
 		}
 	}
 
-	// Token: 0x170018DF RID: 6367
-	// (get) Token: 0x0601340D RID: 78861 RVA: 0x004C9FE8 File Offset: 0x004C81E8
+	// Token: 0x17001918 RID: 6424
+	// (get) Token: 0x060108ED RID: 67821 RVA: 0x004D8B68 File Offset: 0x004D6D68
 	public static PhotographQuickController Instance
 	{
 		get
@@ -188,7 +188,7 @@ public class PhotographQuickController : ControllerBase
 		}
 	}
 
-	// Token: 0x0601340E RID: 78862 RVA: 0x004C9FEF File Offset: 0x004C81EF
+	// Token: 0x060108EE RID: 67822 RVA: 0x004D8B6F File Offset: 0x004D6D6F
 	public static PhotographQuickController GetOrCreateInstance()
 	{
 		if (PhotographQuickController._Instance == null)
@@ -198,7 +198,7 @@ public class PhotographQuickController : ControllerBase
 		return PhotographQuickController._Instance;
 	}
 
-	// Token: 0x0601340F RID: 78863 RVA: 0x004CA003 File Offset: 0x004C8203
+	// Token: 0x060108EF RID: 67823 RVA: 0x004D8B83 File Offset: 0x004D6D83
 	public static bool CreateInstance()
 	{
 		if (PhotographQuickController._Instance != null)
@@ -209,24 +209,24 @@ public class PhotographQuickController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06013410 RID: 78864 RVA: 0x004CA019 File Offset: 0x004C8219
+	// Token: 0x060108F0 RID: 67824 RVA: 0x004D8B99 File Offset: 0x004D6D99
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06013411 RID: 78865 RVA: 0x004CA01B File Offset: 0x004C821B
+	// Token: 0x060108F1 RID: 67825 RVA: 0x004D8B9B File Offset: 0x004D6D9B
 	public static void ResetStaticDefaultValue()
 	{
 		PhotographQuickController._Instance = null;
 	}
 
-	// Token: 0x06013412 RID: 78866 RVA: 0x004CA023 File Offset: 0x004C8223
+	// Token: 0x060108F2 RID: 67826 RVA: 0x004D8BA3 File Offset: 0x004D6DA3
 	static PhotographQuickController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PhotographQuickController.CreateStaticDefaultValue), new Action(PhotographQuickController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04009152 RID: 37202
+	// Token: 0x040092AB RID: 37547
 	[Nullable(2)]
 	private static PhotographQuickController _Instance;
 }

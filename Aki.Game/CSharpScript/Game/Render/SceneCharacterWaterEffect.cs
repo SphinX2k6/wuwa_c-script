@@ -11,12 +11,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045E4 RID: 17892
+	// Token: 0x0200350D RID: 13581
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneCharacterWaterEffect
 	{
-		// Token: 0x0602E20A RID: 188938 RVA: 0x00AA5D90 File Offset: 0x00AA3F90
+		// Token: 0x060228FE RID: 141566 RVA: 0x009D246C File Offset: 0x009D066C
 		public void Start(TsBaseCharacter owner)
 		{
 			if (this.Config == null || !this.Config.IsValid() || !owner.IsValid())
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Render
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x0602E20B RID: 188939 RVA: 0x00AA5F08 File Offset: 0x00AA4108
+		// Token: 0x060228FF RID: 141567 RVA: 0x009D25E4 File Offset: 0x009D07E4
 		public void Enable()
 		{
 			if (!this.IsReady)
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Render
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x0602E20C RID: 188940 RVA: 0x00AA6120 File Offset: 0x00AA4320
+		// Token: 0x06022900 RID: 141568 RVA: 0x009D27FC File Offset: 0x009D09FC
 		public void Disable()
 		{
 			if (!this.IsEnabled)
@@ -203,7 +203,7 @@ namespace CSharpScript.Game.Render
 			instance.Info(module, author, message, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple));
 		}
 
-		// Token: 0x0602E20D RID: 188941 RVA: 0x00AA62FC File Offset: 0x00AA44FC
+		// Token: 0x06022901 RID: 141569 RVA: 0x009D29D8 File Offset: 0x009D0BD8
 		public void Tick()
 		{
 			if (!this.IsEnabled)
@@ -300,7 +300,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E20E RID: 188942 RVA: 0x00AA65A0 File Offset: 0x00AA47A0
+		// Token: 0x06022902 RID: 141570 RVA: 0x009D2C7C File Offset: 0x009D0E7C
 		protected void UpdateWetStateTag()
 		{
 			if (this.WetController == null || !this.WetController.IsValid() || this.WetStateTagId == 0)
@@ -345,7 +345,7 @@ namespace CSharpScript.Game.Render
 			baseTagComponent2.RemoveTag(new int?(this.WetStateTagId));
 		}
 
-		// Token: 0x0602E20F RID: 188943 RVA: 0x00AA6640 File Offset: 0x00AA4840
+		// Token: 0x06022903 RID: 141571 RVA: 0x009D2D1C File Offset: 0x009D0F1C
 		protected void UpdateBlackRainMaterial()
 		{
 			if (this.CharWetMPC == null || this.BlackRainParamName == FName.NAME_None || this.BlackRainTagId == 0)
@@ -381,14 +381,14 @@ namespace CSharpScript.Game.Render
 			UKismetMaterialLibrary.SetScalarParameterValue(GlobalData.World, this.CharWetMPC, this.BlackRainParamName, flag ? 1f : 0f);
 		}
 
-		// Token: 0x0602E210 RID: 188944 RVA: 0x00AA66E4 File Offset: 0x00AA48E4
+		// Token: 0x06022904 RID: 141572 RVA: 0x009D2DC0 File Offset: 0x009D0FC0
 		public bool IsMaterialInUse(UPhysicalMaterial physicalMaterial)
 		{
 			WaterEffectSubConfig waterEffectSubConfig;
 			return this.OnMaterialSubConfig.TryGetValue(physicalMaterial, out waterEffectSubConfig) && (!waterEffectSubConfig.TriggerInGrass || RenderDataManager.Instance.GetPlayerInGrass());
 		}
 
-		// Token: 0x0602E211 RID: 188945 RVA: 0x00AA6718 File Offset: 0x00AA4918
+		// Token: 0x06022905 RID: 141573 RVA: 0x009D2DF4 File Offset: 0x009D0FF4
 		public void SetStateNone(Vector velocity)
 		{
 			if (!this.IsEnabled)
@@ -414,7 +414,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E212 RID: 188946 RVA: 0x00AA67BC File Offset: 0x00AA49BC
+		// Token: 0x06022906 RID: 141574 RVA: 0x009D2E98 File Offset: 0x009D1098
 		public void SetStateInWater(double waterDepth, Vector waterNormal, Vector velocity, Vector location, double waterHeight)
 		{
 			if (!this.IsEnabled)
@@ -491,7 +491,7 @@ namespace CSharpScript.Game.Render
 			this.State = EWaterEffectState.InWater;
 		}
 
-		// Token: 0x0602E213 RID: 188947 RVA: 0x00AA6990 File Offset: 0x00AA4B90
+		// Token: 0x06022907 RID: 141575 RVA: 0x009D306C File Offset: 0x009D126C
 		public void SetStateInWaterEnviData([Nullable(2)] FKuroEnviInteractionData enviData, Vector velocity, Vector location)
 		{
 			if (!this.IsEnabled || enviData == null)
@@ -589,10 +589,41 @@ namespace CSharpScript.Game.Render
 			this.State = EWaterEffectState.InWater;
 		}
 
-		// Token: 0x0602E214 RID: 188948 RVA: 0x00AA6C44 File Offset: 0x00AA4E44
+		// Token: 0x06022908 RID: 141576 RVA: 0x009D3320 File Offset: 0x009D1520
+		private bool ClampMaterialInteractionByDistance(double footToMaterialDistance)
+		{
+			if (footToMaterialDistance <= 100.0)
+			{
+				return false;
+			}
+			if (this.State != EWaterEffectState.None || this.Handle != 0 || this.AudioEffectHandle != 0)
+			{
+				this.StopEffect();
+			}
+			this.CurrentSubConfig = null;
+			this.State = EWaterEffectState.None;
+			if (this.VehicleEffect != null)
+			{
+				this.VehicleEffect.IsVehicleWaterState = false;
+			}
+			return true;
+		}
+
+		// Token: 0x06022909 RID: 141577 RVA: 0x009D337C File Offset: 0x009D157C
 		public void SetStateOnMaterialEnviData(UPhysicalMaterial material, Vector velocity, Vector location, [Nullable(2)] FKuroEnviInteractionData enviData)
 		{
+			if (!this.IsEnabled)
+			{
+				return;
+			}
 			this.EIData = enviData;
+			TsBaseCharacter owner = this.Owner;
+			UCapsuleComponent ucapsuleComponent = (owner != null) ? owner.CapsuleComponent : null;
+			double footToMaterialDistance = (enviData != null && ucapsuleComponent != null) ? ((double)(enviData.CapsuleToBlock - ucapsuleComponent.GetScaledCapsuleHalfHeight())) : double.PositiveInfinity;
+			if (this.ClampMaterialInteractionByDistance(footToMaterialDistance))
+			{
+				return;
+			}
 			WaterEffectSubConfig valueOrDefault = this.OnMaterialSubConfig.GetValueOrDefault(material);
 			if (valueOrDefault == null)
 			{
@@ -637,7 +668,7 @@ namespace CSharpScript.Game.Render
 			this.State = EWaterEffectState.OnMaterial;
 		}
 
-		// Token: 0x0602E215 RID: 188949 RVA: 0x00AA6E04 File Offset: 0x00AA5004
+		// Token: 0x0602290A RID: 141578 RVA: 0x009D3590 File Offset: 0x009D1790
 		public void SetWaterDataEnviDataCheckFly([Nullable(2)] FKuroEnviInteractionData enviData, Vector location, Vector velocity)
 		{
 			if (!this.IsEnabled || enviData == null || this.Owner == null)
@@ -707,10 +738,14 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E216 RID: 188950 RVA: 0x00AA70C0 File Offset: 0x00AA52C0
+		// Token: 0x0602290B RID: 141579 RVA: 0x009D384C File Offset: 0x009D1A4C
 		public void SetStateOnMaterial(UPhysicalMaterial material, double waterDepth, Vector waterNormal, Vector velocity, Vector location, double waterHeight)
 		{
 			if (!this.IsEnabled)
+			{
+				return;
+			}
+			if (this.ClampMaterialInteractionByDistance(-waterDepth))
 			{
 				return;
 			}
@@ -745,7 +780,7 @@ namespace CSharpScript.Game.Render
 			this.State = EWaterEffectState.OnMaterial;
 		}
 
-		// Token: 0x0602E217 RID: 188951 RVA: 0x00AA71C0 File Offset: 0x00AA53C0
+		// Token: 0x0602290C RID: 141580 RVA: 0x009D3958 File Offset: 0x009D1B58
 		protected unsafe void OnCharacterFallInWater(Vector speed, Vector location, Vector normal, WaterEffectSubConfig subConfig, double waterDepth)
 		{
 			if (!this.IsEnabled)
@@ -773,7 +808,7 @@ namespace CSharpScript.Game.Render
 			this.SpawnFallEffect(waterEffectItem.EffectDataPath, waterEffectItem.AudioEffectDataPath, location2, normal);
 		}
 
-		// Token: 0x0602E218 RID: 188952 RVA: 0x00AA730C File Offset: 0x00AA550C
+		// Token: 0x0602290D RID: 141581 RVA: 0x009D3AA4 File Offset: 0x009D1CA4
 		protected void OnCharacterJumpOutWater(Vector speed, Vector location, Vector normal, WaterEffectSubConfig subConfig, double waterDepth)
 		{
 			if (!this.IsEnabled)
@@ -799,7 +834,7 @@ namespace CSharpScript.Game.Render
 			this.SpawnFallEffect(waterEffectItem.EffectDataPath, waterEffectItem.AudioEffectDataPath, location2, normal);
 		}
 
-		// Token: 0x0602E219 RID: 188953 RVA: 0x00AA73D0 File Offset: 0x00AA55D0
+		// Token: 0x0602290E RID: 141582 RVA: 0x009D3B68 File Offset: 0x009D1D68
 		protected void StopEffect()
 		{
 			int effectHandle = this.Handle;
@@ -836,7 +871,7 @@ namespace CSharpScript.Game.Render
 			this.AudioEffectHandle = 0;
 		}
 
-		// Token: 0x0602E21A RID: 188954 RVA: 0x00AA74BC File Offset: 0x00AA56BC
+		// Token: 0x0602290F RID: 141583 RVA: 0x009D3C54 File Offset: 0x009D1E54
 		protected void SpawnEffect([Nullable(new byte[]
 		{
 			2,
@@ -883,7 +918,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E21B RID: 188955 RVA: 0x00AA7620 File Offset: 0x00AA5820
+		// Token: 0x06022910 RID: 141584 RVA: 0x009D3DB8 File Offset: 0x009D1FB8
 		protected int SpawnFallEffect([Nullable(new byte[]
 		{
 			2,
@@ -959,7 +994,7 @@ namespace CSharpScript.Game.Render
 			return result;
 		}
 
-		// Token: 0x0602E21C RID: 188956 RVA: 0x00AA77C0 File Offset: 0x00AA59C0
+		// Token: 0x06022911 RID: 141585 RVA: 0x009D3F58 File Offset: 0x009D2158
 		protected void OnCharacterFlyOnWater(Vector speed, WaterEffectSubConfig subConfig, EFlyWaterEffectState flyWaterType)
 		{
 			if (!this.IsEnabled || this.FindNoWaterPhysicalMaterial)
@@ -1098,7 +1133,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E21D RID: 188957 RVA: 0x00AA7D00 File Offset: 0x00AA5F00
+		// Token: 0x06022912 RID: 141586 RVA: 0x009D4498 File Offset: 0x009D2698
 		private void OnOwnerCharFootOnTheGround(bool isLeftFoot)
 		{
 			if (!this.IsEnabled || this.Owner == null || this.IsMotorState)
@@ -1180,7 +1215,7 @@ namespace CSharpScript.Game.Render
 			this.TrySpawnShallowMoveFootSplash(waterEffectItem, isLeftFoot);
 		}
 
-		// Token: 0x0602E21E RID: 188958 RVA: 0x00AA7E8C File Offset: 0x00AA608C
+		// Token: 0x06022913 RID: 141587 RVA: 0x009D4624 File Offset: 0x009D2824
 		private void TrySpawnShallowMoveFootSplash(WaterEffectItem item, bool isLeftFoot)
 		{
 			if (item.EffectDataPath == null || this.IsBlackWave || this.EIData == null || this.FindNoWaterPhysicalMaterial)
@@ -1262,7 +1297,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602E21F RID: 188959 RVA: 0x00AA8148 File Offset: 0x00AA6348
+		// Token: 0x06022914 RID: 141588 RVA: 0x009D48E0 File Offset: 0x009D2AE0
 		private bool ShouldUseShallowFootSplashes(WaterEffectSubConfig subConfig, double depth)
 		{
 			if (Info.Instance.IsMobilePlatform() || !subConfig.ShouldUseShallowFootSplashes(depth))
@@ -1297,7 +1332,7 @@ namespace CSharpScript.Game.Render
 			return obj2 == null || !obj2.HasAnyTagContainer(shallowFallbackTag);
 		}
 
-		// Token: 0x0602E220 RID: 188960 RVA: 0x00AA81C8 File Offset: 0x00AA63C8
+		// Token: 0x06022915 RID: 141589 RVA: 0x009D4960 File Offset: 0x009D2B60
 		private TraceHandle DetectShoreForFlyEffect(Vector shoreTraceLocation)
 		{
 			TsBaseCharacter owner = this.Owner;
@@ -1327,7 +1362,7 @@ namespace CSharpScript.Game.Render
 			return TraceElementCommon.Instance.AsyncSphereTrace(this.ShoreTraceElement, "WaterEffect_ShoreTrace", this.ShoreTraceDelegate);
 		}
 
-		// Token: 0x0602E221 RID: 188961 RVA: 0x00AA82F4 File Offset: 0x00AA64F4
+		// Token: 0x06022916 RID: 141590 RVA: 0x009D4A8C File Offset: 0x009D2C8C
 		[NullableContext(2)]
 		private void SetShoreTraceState(bool hitResult, UTraceBaseElement element, double frame, double index)
 		{
@@ -1355,68 +1390,71 @@ namespace CSharpScript.Game.Render
 			this.IsTracedShore = true;
 		}
 
-		// Token: 0x04018BDE RID: 101342
+		// Token: 0x0401321C RID: 78364
 		private const int ONE_SECOND = 1000;
 
-		// Token: 0x04018BDF RID: 101343
+		// Token: 0x0401321D RID: 78365
 		private const float FLYEFFECT_VELOCITY_XY_OFFSET_SCALE = 0.3f;
 
-		// Token: 0x04018BE0 RID: 101344
+		// Token: 0x0401321E RID: 78366
 		private const float FLYEFFECT_VELOCITY_XY_OFFSET_SCALE_MOTOR = 0.15f;
 
-		// Token: 0x04018BE1 RID: 101345
+		// Token: 0x0401321F RID: 78367
 		private const float FLYEFFECT_RIPPLEWATER_XY_OFFSET_SCALE = 1.1f;
 
-		// Token: 0x04018BE2 RID: 101346
+		// Token: 0x04013220 RID: 78368
 		private const float FLYEFFECT_SHORE_TRACE_START_OFFSET = 500f;
 
-		// Token: 0x04018BE3 RID: 101347
+		// Token: 0x04013221 RID: 78369
 		private const float FLYEFFECT_SHORE_TRACE_END_OFFSET = -3000f;
 
-		// Token: 0x04018BE4 RID: 101348
+		// Token: 0x04013222 RID: 78370
 		private const float WATER_NORMAL_DOT_CHECK = 0.2f;
 
-		// Token: 0x04018BE5 RID: 101349
+		// Token: 0x04013223 RID: 78371
 		private const float MOTOR_EFFECT_SPEED_CLAMP = 100f;
 
-		// Token: 0x04018BE6 RID: 101350
+		// Token: 0x04013224 RID: 78372
+		private const double MATERIAL_EFFECT_MAX_FOOT_DISTANCE = 100.0;
+
+		// Token: 0x04013225 RID: 78373
 		private const double SHALLOW_SPLASH_VELOCITY_LEAD_TIME = 0.05;
 
-		// Token: 0x04018BE7 RID: 101351
+		// Token: 0x04013226 RID: 78374
 		private const double SHALLOW_SPLASH_MAX_FORWARD_OFFSET = 50.0;
 
-		// Token: 0x04018BE8 RID: 101352
+		// Token: 0x04013227 RID: 78375
 		private const string FLYWATER_MOTOR_SOARING = "/Game/Aki/Effect/EffectGroup/Common/Water/DA_Fx_Group_SI3_FlyWater_Gliding.DA_Fx_Group_SI3_FlyWater_Gliding";
 
-		// Token: 0x04018BE9 RID: 101353
+		// Token: 0x04013228 RID: 78376
 		[Nullable(2)]
 		public PDA_WaterEffectConfigs_C Config;
 
-		// Token: 0x04018BEA RID: 101354
+		// Token: 0x04013229 RID: 78377
 		[Nullable(2)]
 		public TsBaseCharacter Owner;
 
-		// Token: 0x04018BEB RID: 101355
+		// Token: 0x0401322A RID: 78378
 		[Nullable(2)]
 		public CharacterUnifiedStateComponent OwnerStateComponent;
 
-		// Token: 0x04018BEC RID: 101356
+		// Token: 0x0401322B RID: 78379
 		protected float OwnerHeight;
 
-		// Token: 0x04018BED RID: 101357
+		// Token: 0x0401322C RID: 78380
 		public bool IsReady;
 
-		// Token: 0x04018BEE RID: 101358
+		// Token: 0x0401322D RID: 78381
 		protected EWaterEffectState State;
 
-		// Token: 0x04018BEF RID: 101359
+		// Token: 0x0401322E RID: 78382
 		[Nullable(2)]
 		protected WaterEffectSubConfig CurrentSubConfig;
 
-		// Token: 0x04018BF0 RID: 101360
+		// Token: 0x0401322F RID: 78383
 		protected WaterEffectSubConfig InWaterSubConfig = new WaterEffectSubConfig();
 
-		// Token: 0x04018BF1 RID: 101361
+		// Token: 0x04013230 RID: 78384
 		[Nullable(new byte[]
 		{
 			2,
@@ -1424,7 +1462,7 @@ namespace CSharpScript.Game.Render
 		})]
 		protected TSoftObjectPtr<UEffectModelBase> SwimIdleEffect;
 
-		// Token: 0x04018BF2 RID: 101362
+		// Token: 0x04013231 RID: 78385
 		[Nullable(new byte[]
 		{
 			2,
@@ -1432,7 +1470,7 @@ namespace CSharpScript.Game.Render
 		})]
 		protected TSoftObjectPtr<UEffectModelBase> SwimNormalEffect;
 
-		// Token: 0x04018BF3 RID: 101363
+		// Token: 0x04013232 RID: 78386
 		[Nullable(new byte[]
 		{
 			2,
@@ -1440,16 +1478,16 @@ namespace CSharpScript.Game.Render
 		})]
 		protected TSoftObjectPtr<UEffectModelBase> SwimFastEffect;
 
-		// Token: 0x04018BF4 RID: 101364
+		// Token: 0x04013233 RID: 78387
 		protected Dictionary<UPhysicalMaterial, WaterEffectSubConfig> OnMaterialSubConfig = new Dictionary<UPhysicalMaterial, WaterEffectSubConfig>();
 
-		// Token: 0x04018BF5 RID: 101365
+		// Token: 0x04013234 RID: 78388
 		protected int Handle;
 
-		// Token: 0x04018BF6 RID: 101366
+		// Token: 0x04013235 RID: 78389
 		protected int AudioEffectHandle;
 
-		// Token: 0x04018BF7 RID: 101367
+		// Token: 0x04013236 RID: 78390
 		[Nullable(new byte[]
 		{
 			2,
@@ -1457,117 +1495,117 @@ namespace CSharpScript.Game.Render
 		})]
 		protected TSoftObjectPtr<UEffectModelBase> HandlePath;
 
-		// Token: 0x04018BF8 RID: 101368
+		// Token: 0x04013237 RID: 78391
 		protected double CurrentSpeed;
 
-		// Token: 0x04018BF9 RID: 101369
+		// Token: 0x04013238 RID: 78392
 		protected Vector CurrentVelocity = Vector.Create();
 
-		// Token: 0x04018BFA RID: 101370
+		// Token: 0x04013239 RID: 78393
 		protected double WadeMoveSearchSpeed;
 
-		// Token: 0x04018BFB RID: 101371
+		// Token: 0x0401323A RID: 78394
 		protected Vector CurrentWaterLocation = Vector.Create();
 
-		// Token: 0x04018BFC RID: 101372
+		// Token: 0x0401323B RID: 78395
 		protected Vector CurrentWaterNormal = Vector.Create();
 
-		// Token: 0x04018BFD RID: 101373
+		// Token: 0x0401323C RID: 78396
 		protected double CurrentWaterDepth;
 
-		// Token: 0x04018BFE RID: 101374
+		// Token: 0x0401323D RID: 78397
 		protected VelocityHistoryCache VelocityHistory = new VelocityHistoryCache();
 
-		// Token: 0x04018BFF RID: 101375
+		// Token: 0x0401323E RID: 78398
 		protected float CurrentToWaterHeight;
 
-		// Token: 0x04018C00 RID: 101376
+		// Token: 0x0401323F RID: 78399
 		protected int FlyWaterHandle;
 
-		// Token: 0x04018C01 RID: 101377
+		// Token: 0x04013240 RID: 78400
 		protected string FlyWaterEffectPath = "";
 
-		// Token: 0x04018C02 RID: 101378
+		// Token: 0x04013241 RID: 78401
 		protected bool IsTraceWater;
 
-		// Token: 0x04018C03 RID: 101379
+		// Token: 0x04013242 RID: 78402
 		protected bool IsBlackWave;
 
-		// Token: 0x04018C04 RID: 101380
+		// Token: 0x04013243 RID: 78403
 		protected FTransformDouble EmptyUeTransform = new FTransformDouble();
 
-		// Token: 0x04018C05 RID: 101381
+		// Token: 0x04013244 RID: 78404
 		[Nullable(2)]
 		protected BP_RippleSwim_C RippleSwim;
 
-		// Token: 0x04018C06 RID: 101382
+		// Token: 0x04013245 RID: 78405
 		[Nullable(2)]
 		protected UTraceSphereElement ShoreTraceElement;
 
-		// Token: 0x04018C07 RID: 101383
+		// Token: 0x04013246 RID: 78406
 		[Nullable(2)]
 		protected TraceHandle ShoreTraceHandle;
 
-		// Token: 0x04018C08 RID: 101384
+		// Token: 0x04013247 RID: 78407
 		[Nullable(2)]
 		protected FAsyncTraceDelegate ShoreTraceDelegate;
 
-		// Token: 0x04018C09 RID: 101385
+		// Token: 0x04013248 RID: 78408
 		protected int ShoreTraceTicker;
 
-		// Token: 0x04018C0A RID: 101386
+		// Token: 0x04013249 RID: 78409
 		protected bool IsTracedShore;
 
-		// Token: 0x04018C0B RID: 101387
+		// Token: 0x0401324A RID: 78410
 		protected bool IsMotorState;
 
-		// Token: 0x04018C0C RID: 101388
+		// Token: 0x0401324B RID: 78411
 		protected bool FindNoWaterPhysicalMaterial;
 
-		// Token: 0x04018C0D RID: 101389
+		// Token: 0x0401324C RID: 78412
 		[Nullable(2)]
 		protected FKuroEnviInteractionData EIData;
 
-		// Token: 0x04018C0E RID: 101390
+		// Token: 0x0401324D RID: 78413
 		[Nullable(2)]
 		protected SceneCharacterVehicleEffect VehicleEffect;
 
-		// Token: 0x04018C0F RID: 101391
+		// Token: 0x0401324E RID: 78414
 		private const string WET_STATE_TAG_NAME = "TA.表现.角色.状态效果.湿身";
 
-		// Token: 0x04018C10 RID: 101392
+		// Token: 0x0401324F RID: 78415
 		private const string BLACK_RAIN_TAG_NAME = "TA.表现.角色.状态效果.下黑雨";
 
-		// Token: 0x04018C11 RID: 101393
+		// Token: 0x04013250 RID: 78416
 		private const string GLOBAL_SHADER_PARAMETERS_MPC_PATH = "/Game/Aki/Render/Data/MPC_GlobalShaderParameters.MPC_GlobalShaderParameters";
 
-		// Token: 0x04018C12 RID: 101394
+		// Token: 0x04013251 RID: 78417
 		private const string BLACK_RAIN_MPC_PARAM_NAME = "CharWetRenderBlackRainInt";
 
-		// Token: 0x04018C13 RID: 101395
+		// Token: 0x04013252 RID: 78418
 		[Nullable(2)]
 		protected UKuroCharWetControllerComponent WetController;
 
-		// Token: 0x04018C14 RID: 101396
+		// Token: 0x04013253 RID: 78419
 		protected int WetStateTagId;
 
-		// Token: 0x04018C15 RID: 101397
+		// Token: 0x04013254 RID: 78420
 		protected bool LastWetStateTagActive;
 
-		// Token: 0x04018C16 RID: 101398
+		// Token: 0x04013255 RID: 78421
 		protected int BlackRainTagId;
 
-		// Token: 0x04018C17 RID: 101399
+		// Token: 0x04013256 RID: 78422
 		protected bool LastBlackRainActive;
 
-		// Token: 0x04018C18 RID: 101400
+		// Token: 0x04013257 RID: 78423
 		[Nullable(2)]
 		protected UMaterialParameterCollection CharWetMPC;
 
-		// Token: 0x04018C19 RID: 101401
+		// Token: 0x04013258 RID: 78424
 		protected FName BlackRainParamName = FName.NAME_None;
 
-		// Token: 0x04018C1A RID: 101402
+		// Token: 0x04013259 RID: 78425
 		public bool IsEnabled;
 	}
 }

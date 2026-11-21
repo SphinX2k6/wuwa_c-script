@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.DreamLink
 {
-	// Token: 0x02005A94 RID: 23188
+	// Token: 0x02004A70 RID: 19056
 	public enum EDreamLinkStage
 	{
-		// Token: 0x0401EA7B RID: 125563
+		// Token: 0x04019522 RID: 103714
 		First,
-		// Token: 0x0401EA7C RID: 125564
+		// Token: 0x04019523 RID: 103715
 		Second
 	}
 }

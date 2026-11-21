@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002B13 RID: 11027
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002E31 RID: 11825
 	public class IInstrumentQteConfig_QteSequenceRow
 	{
-		// Token: 0x0600F162 RID: 61794 RVA: 0x0023008D File Offset: 0x0022E28D
+		// Token: 0x060100B6 RID: 65718 RVA: 0x0024EB25 File Offset: 0x0024CD25
 		public static IInstrumentQteConfig_QteSequenceRow Create(IInstrumentQteConfig_QteSequenceRow? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004CFE RID: 19710
-		// (get) Token: 0x0600F163 RID: 61795 RVA: 0x002300AC File Offset: 0x0022E2AC
+		// Token: 0x17005102 RID: 20738
+		// (get) Token: 0x060100B7 RID: 65719 RVA: 0x0024EB44 File Offset: 0x0024CD44
 		public virtual List<int> Items
 		{
 			get
@@ -44,13 +41,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040084C3 RID: 33987
+		// Token: 0x04008C0B RID: 35851
 		private IInstrumentQteConfig_QteSequenceRow Instance;
 
-		// Token: 0x040084C4 RID: 33988
+		// Token: 0x04008C0C RID: 35852
 		private List<int> _ItemsCache;
 
-		// Token: 0x040084C5 RID: 33989
+		// Token: 0x04008C0D RID: 35853
 		private bool _ItemsInited;
 	}
 }

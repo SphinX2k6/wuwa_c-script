@@ -6,18 +6,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045A3 RID: 17827
+	// Token: 0x020034CB RID: 13515
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class CharGrassInteraction : CharRenderBase
 	{
-		// Token: 0x0602DF6C RID: 188268 RVA: 0x00A92990 File Offset: 0x00A90B90
+		// Token: 0x06022656 RID: 140886 RVA: 0x009BEBB0 File Offset: 0x009BCDB0
 		private double GetRefBoneHeight()
 		{
 			return this.OwnerSkeletal.D_GetSocketTransform(new FName("Bip001Head"), ERelativeTransformSpace.RTS_Component).GetLocation().Z;
 		}
 
-		// Token: 0x0602DF6D RID: 188269 RVA: 0x00A929C0 File Offset: 0x00A90BC0
+		// Token: 0x06022657 RID: 140887 RVA: 0x009BEBE0 File Offset: 0x009BCDE0
 		public void SetEnabled(bool enabled)
 		{
 			this.Enabled = enabled;
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DF6E RID: 188270 RVA: 0x00A929E0 File Offset: 0x00A90BE0
+		// Token: 0x06022658 RID: 140888 RVA: 0x009BEC00 File Offset: 0x009BCE00
 		public void SetConfig(PDA_InteractionPlayerConfig_C config)
 		{
 			if (config == null)
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Render
 			this.UpdateInteraction(植被交互半径, 植被交互相对位置, 启用植被交互);
 		}
 
-		// Token: 0x0602DF6F RID: 188271 RVA: 0x00A92A18 File Offset: 0x00A90C18
+		// Token: 0x06022659 RID: 140889 RVA: 0x009BEC38 File Offset: 0x009BCE38
 		private void UpdateInteraction(float radius, FVector bias, bool enabled)
 		{
 			if (this.IsOnMobile)
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Render
 			this.UpdateForAimisi();
 		}
 
-		// Token: 0x0602DF70 RID: 188272 RVA: 0x00A92B98 File Offset: 0x00A90D98
+		// Token: 0x0602265A RID: 140890 RVA: 0x009BEDB8 File Offset: 0x009BCFB8
 		public override void Start()
 		{
 			this.IsOnMobile = (UKuroRenderingRuntimeBPPluginBPLibrary.GetWorldFeatureLevel(GlobalData.World) == KuroFeatureLevel.ES3_1);
@@ -129,7 +129,7 @@ namespace CSharpScript.Game.Render
 			base.OnInitSuccess();
 		}
 
-		// Token: 0x0602DF71 RID: 188273 RVA: 0x00A92C00 File Offset: 0x00A90E00
+		// Token: 0x0602265B RID: 140891 RVA: 0x009BEE20 File Offset: 0x009BD020
 		public override void Update()
 		{
 			if (this.IsOnMobile || this.GrassInteractionComponent == null)
@@ -152,13 +152,13 @@ namespace CSharpScript.Game.Render
 			this.GrassInteractionComponent.D_K2_SetRelativeLocation(newLocation, false, ref fhitResult, false);
 		}
 
-		// Token: 0x0602DF72 RID: 188274 RVA: 0x00A92CBD File Offset: 0x00A90EBD
+		// Token: 0x0602265C RID: 140892 RVA: 0x009BEEDD File Offset: 0x009BD0DD
 		public override void PostBodyInfoRuntimeInit(FName bodyName)
 		{
 			this.UpdateForAimisi();
 		}
 
-		// Token: 0x0602DF73 RID: 188275 RVA: 0x00A92CC8 File Offset: 0x00A90EC8
+		// Token: 0x0602265D RID: 140893 RVA: 0x009BEEE8 File Offset: 0x009BD0E8
 		public void UpdateForAimisi()
 		{
 			if (this.GrassInteractionComponent != null)
@@ -186,7 +186,7 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DF74 RID: 188276 RVA: 0x00A92DA3 File Offset: 0x00A90FA3
+		// Token: 0x0602265E RID: 140894 RVA: 0x009BEFC3 File Offset: 0x009BD1C3
 		public override void Destroy()
 		{
 			if (this.GrassInteractionComponent != null)
@@ -200,47 +200,47 @@ namespace CSharpScript.Game.Render
 			}
 		}
 
-		// Token: 0x0602DF75 RID: 188277 RVA: 0x00A92DC8 File Offset: 0x00A90FC8
+		// Token: 0x0602265F RID: 140895 RVA: 0x009BEFE8 File Offset: 0x009BD1E8
 		[NullableContext(1)]
 		public override string GetStatName()
 		{
 			return "CharGrassInteraction";
 		}
 
-		// Token: 0x0602DF76 RID: 188278 RVA: 0x00A92DCF File Offset: 0x00A90FCF
+		// Token: 0x06022660 RID: 140896 RVA: 0x009BEFEF File Offset: 0x009BD1EF
 		public override int GetComponentId()
 		{
 			return 11;
 		}
 
-		// Token: 0x040188A2 RID: 100514
+		// Token: 0x04012EDD RID: 77533
 		public UKuroGrassInteractionSphereComponent GrassInteractionComponent;
 
-		// Token: 0x040188A3 RID: 100515
+		// Token: 0x04012EDE RID: 77534
 		public bool Enabled = true;
 
-		// Token: 0x040188A4 RID: 100516
+		// Token: 0x04012EDF RID: 77535
 		public bool IsOnMobile;
 
-		// Token: 0x040188A5 RID: 100517
+		// Token: 0x04012EE0 RID: 77536
 		public UCapsuleComponent OwnerCapsule;
 
-		// Token: 0x040188A6 RID: 100518
+		// Token: 0x04012EE1 RID: 77537
 		public USkeletalMeshComponent OwnerSkeletal;
 
-		// Token: 0x040188A7 RID: 100519
+		// Token: 0x04012EE2 RID: 77538
 		public FVector? BaseBias;
 
-		// Token: 0x040188A8 RID: 100520
+		// Token: 0x04012EE3 RID: 77539
 		private float AverageBoneHeight;
 
-		// Token: 0x040188A9 RID: 100521
+		// Token: 0x04012EE4 RID: 77540
 		private bool NeedBoneMotion;
 
-		// Token: 0x040188AA RID: 100522
+		// Token: 0x04012EE5 RID: 77541
 		public readonly float InteractionDefaultRadius = 70f;
 
-		// Token: 0x040188AB RID: 100523
+		// Token: 0x04012EE6 RID: 77542
 		public readonly FVector InteractionDefaultBias = new FVector(0f, 0f, 70f);
 	}
 }

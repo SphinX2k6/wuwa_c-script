@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D5C RID: 3420
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E56 RID: 3670
 	public class GroupAiComponent : IComponentBase
 	{
-		// Token: 0x06004DED RID: 19949 RVA: 0x000C19FD File Offset: 0x000BFBFD
+		// Token: 0x06005309 RID: 21257 RVA: 0x000CD141 File Offset: 0x000CB341
 		public static GroupAiComponent Create(IGroupAiComponent? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170018F2 RID: 6386
-		// (get) Token: 0x06004DEE RID: 19950 RVA: 0x000C1A1C File Offset: 0x000BFC1C
+		// Token: 0x17001A58 RID: 6744
+		// (get) Token: 0x0600530A RID: 21258 RVA: 0x000CD160 File Offset: 0x000CB360
 		public override bool? Disabled
 		{
 			get
@@ -37,8 +35,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170018F3 RID: 6387
-		// (get) Token: 0x06004DEF RID: 19951 RVA: 0x000C1A54 File Offset: 0x000BFC54
+		// Token: 0x17001A59 RID: 6745
+		// (get) Token: 0x0600530B RID: 21259 RVA: 0x000CD198 File Offset: 0x000CB398
 		public override bool? EdIsLocked
 		{
 			get
@@ -47,8 +45,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170018F4 RID: 6388
-		// (get) Token: 0x06004DF0 RID: 19952 RVA: 0x000C1A6C File Offset: 0x000BFC6C
+		// Token: 0x17001A5A RID: 6746
+		// (get) Token: 0x0600530C RID: 21260 RVA: 0x000CD1B0 File Offset: 0x000CB3B0
 		public virtual List<int> Entities
 		{
 			get
@@ -68,8 +66,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170018F5 RID: 6389
-		// (get) Token: 0x06004DF1 RID: 19953 RVA: 0x000C1AD0 File Offset: 0x000BFCD0
+		// Token: 0x17001A5B RID: 6747
+		// (get) Token: 0x0600530D RID: 21261 RVA: 0x000CD214 File Offset: 0x000CB414
 		public virtual IGroupAiMode Option
 		{
 			get
@@ -84,19 +82,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170018F6 RID: 6390
-		// (get) Token: 0x06004DF2 RID: 19954 RVA: 0x000C1B00 File Offset: 0x000BFD00
+		// Token: 0x17001A5C RID: 6748
+		// (get) Token: 0x0600530E RID: 21262 RVA: 0x000CD244 File Offset: 0x000CB444
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<string> SyncTags
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -119,30 +117,30 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002CA9 RID: 11433
+		// Token: 0x04002F69 RID: 12137
 		private IGroupAiComponent Instance;
 
-		// Token: 0x04002CAA RID: 11434
+		// Token: 0x04002F6A RID: 12138
 		private List<int> _EntitiesCache;
 
-		// Token: 0x04002CAB RID: 11435
+		// Token: 0x04002F6B RID: 12139
 		private bool _EntitiesInited;
 
-		// Token: 0x04002CAC RID: 11436
+		// Token: 0x04002F6C RID: 12140
 		private IGroupAiMode _OptionCache;
 
-		// Token: 0x04002CAD RID: 11437
+		// Token: 0x04002F6D RID: 12141
 		private bool _OptionInited;
 
-		// Token: 0x04002CAE RID: 11438
+		// Token: 0x04002F6E RID: 12142
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<string> _SyncTagsCache;
 
-		// Token: 0x04002CAF RID: 11439
+		// Token: 0x04002F6F RID: 12143
 		private bool _SyncTagsInited;
 	}
 }

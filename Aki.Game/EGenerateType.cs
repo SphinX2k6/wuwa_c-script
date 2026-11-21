@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02000E94 RID: 3732
+// Token: 0x02000349 RID: 841
 public enum EGenerateType
 {
-	// Token: 0x040029C0 RID: 10688
+	// Token: 0x04002A5B RID: 10843
 	None,
-	// Token: 0x040029C1 RID: 10689
+	// Token: 0x04002A5C RID: 10844
 	Monster,
-	// Token: 0x040029C2 RID: 10690
+	// Token: 0x04002A5D RID: 10845
 	Boss,
-	// Token: 0x040029C3 RID: 10691
+	// Token: 0x04002A5E RID: 10846
 	Buff,
-	// Token: 0x040029C4 RID: 10692
+	// Token: 0x04002A5F RID: 10847
 	Elite
 }

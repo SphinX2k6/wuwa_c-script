@@ -6,7 +6,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Common.CardDetail
 {
-	// Token: 0x02005206 RID: 20998
+	// Token: 0x020041D6 RID: 16854
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardDetail
 	})]
 	public class CardDetailAttributeItem : GridProxyAbstract<CardDetailAttributeItemData>
 	{
-		// Token: 0x06035B81 RID: 220033 RVA: 0x00CB8134 File Offset: 0x00CB6334
+		// Token: 0x0602AA7C RID: 174716 RVA: 0x00C05770 File Offset: 0x00C03970
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardDetail
 			};
 		}
 
-		// Token: 0x06035B82 RID: 220034 RVA: 0x00CB8190 File Offset: 0x00CB6390
+		// Token: 0x0602AA7D RID: 174717 RVA: 0x00C057CC File Offset: 0x00C039CC
 		public override void Refresh(CardDetailAttributeItemData data, bool isSelected, int gridIndex)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), data.AttributeName, Array.Empty<object>());
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardDetail
 			this.RefreshHighLightState(data.IsHighLight);
 		}
 
-		// Token: 0x06035B83 RID: 220035 RVA: 0x00CB81E0 File Offset: 0x00CB63E0
+		// Token: 0x0602AA7E RID: 174718 RVA: 0x00C0581C File Offset: 0x00C03A1C
 		public void RefreshHighLightState(bool isHighLight)
 		{
 			if (this.IsHighLight == isHighLight)
@@ -62,26 +62,26 @@ namespace CSharpScript.Game.Module.PhantomArena.Common.CardDetail
 			uuiitem3.SetChangeColor(bUseChangeColor3, fcolor);
 		}
 
-		// Token: 0x0401C7AD RID: 116653
+		// Token: 0x040171E2 RID: 94690
 		private const string HIGH_LIGHT_BG_PATH = "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity24/SoundRemnantArena/Outside/SP_CardAttrBg1.SP_CardAttrBg1";
 
-		// Token: 0x0401C7AE RID: 116654
+		// Token: 0x040171E3 RID: 94691
 		private const string BG_PATH = "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity24/SoundRemnantArena/Outside/SP_CardAttrBg2.SP_CardAttrBg2";
 
-		// Token: 0x0401C7AF RID: 116655
+		// Token: 0x040171E4 RID: 94692
 		private bool IsHighLight = true;
 
-		// Token: 0x0200B3AC RID: 45996
+		// Token: 0x02009DE4 RID: 40420
 		[NullableContext(0)]
 		private static class EComponents
 		{
-			// Token: 0x0403674D RID: 223053
+			// Token: 0x040311A0 RID: 201120
 			public const int BgSprite = 0;
 
-			// Token: 0x0403674E RID: 223054
+			// Token: 0x040311A1 RID: 201121
 			public const int AttributeNameText = 1;
 
-			// Token: 0x0403674F RID: 223055
+			// Token: 0x040311A2 RID: 201122
 			public const int AttributeValueText = 2;
 		}
 	}

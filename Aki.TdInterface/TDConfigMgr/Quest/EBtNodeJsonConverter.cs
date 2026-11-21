@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200122B RID: 4651
+	// Token: 0x02001367 RID: 4967
 	public class EBtNodeJsonConverter : JsonConverter<EBtNode>
 	{
-		// Token: 0x0600696A RID: 26986 RVA: 0x000FB568 File Offset: 0x000F9768
+		// Token: 0x06006FAB RID: 28587 RVA: 0x00108E74 File Offset: 0x00107074
 		public override EBtNode Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Quest
 			return EBtNodeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600696B RID: 26987 RVA: 0x000FB58C File Offset: 0x000F978C
+		// Token: 0x06006FAC RID: 28588 RVA: 0x00108E98 File Offset: 0x00107098
 		public override void Write(Utf8JsonWriter writer, EBtNode value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

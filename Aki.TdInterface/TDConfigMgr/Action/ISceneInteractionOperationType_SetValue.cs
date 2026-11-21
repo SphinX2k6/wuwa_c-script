@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DE1 RID: 7649
+	// Token: 0x02001FFA RID: 8186
 	public class ISceneInteractionOperationType_SetValue
 	{
-		// Token: 0x04006227 RID: 25127
+		// Token: 0x040067B4 RID: 26548
 		public ESceneInteractionOperationType Type;
 	}
 }

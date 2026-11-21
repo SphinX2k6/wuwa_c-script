@@ -7,16 +7,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 {
-	// Token: 0x020071AD RID: 29101
+	// Token: 0x02006262 RID: 25186
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ProjectedDragModeStrategy : BaseDragModeStrategy
 	{
-		// Token: 0x17009DB1 RID: 40369
-		// (get) Token: 0x0604736A RID: 291690 RVA: 0x01219638 File Offset: 0x01217838
+		// Token: 0x17007301 RID: 29441
+		// (get) Token: 0x0603CC65 RID: 248933 RVA: 0x0117353C File Offset: 0x0117173C
 		public override EKuroSplineConstrainedDragMode Mode { get; } = 1;
 
-		// Token: 0x0604736B RID: 291691 RVA: 0x01219640 File Offset: 0x01217840
+		// Token: 0x0603CC66 RID: 248934 RVA: 0x01173544 File Offset: 0x01171744
 		public override void BeginDrag()
 		{
 			base.BeginDrag();
@@ -28,12 +28,12 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			host.SnapToSpline();
 		}
 
-		// Token: 0x0604736C RID: 291692 RVA: 0x01219665 File Offset: 0x01217865
+		// Token: 0x0603CC67 RID: 248935 RVA: 0x01173569 File Offset: 0x01171769
 		public override void SetCurrentScreenPosition(Vector screenPosition)
 		{
 		}
 
-		// Token: 0x0604736D RID: 291693 RVA: 0x01219668 File Offset: 0x01217868
+		// Token: 0x0603CC68 RID: 248936 RVA: 0x0117356C File Offset: 0x0117176C
 		public override void ApplyScreenDelta(Vector screenDelta)
 		{
 			IKuroSplineConstrainedDrag host = this.Host;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			}
 		}
 
-		// Token: 0x0604736E RID: 291694 RVA: 0x012196B4 File Offset: 0x012178B4
+		// Token: 0x0603CC69 RID: 248937 RVA: 0x011735B8 File Offset: 0x011717B8
 		private float ComputeDistanceDeltaByProjectedTangent(Vector screenDelta, float anchorDistance)
 		{
 			TsCharacterController characterController = Global.CharacterController;
@@ -112,25 +112,25 @@ namespace CSharpScript.Game.NewWorld.SceneItem.SplineConstrainedDrag
 			return num7 * num8 * this.ProjectionScreenSpaceDragScale;
 		}
 
-		// Token: 0x04025720 RID: 153376
+		// Token: 0x0402038F RID: 131983
 		private readonly float ProjectionScreenSpaceSampleDistance = 20f;
 
-		// Token: 0x04025721 RID: 153377
+		// Token: 0x04020390 RID: 131984
 		private readonly float ProjectionMinScreenTangentPixels = 0.1f;
 
-		// Token: 0x04025722 RID: 153378
+		// Token: 0x04020391 RID: 131985
 		private readonly float ProjectionScreenSpaceDragScale = 1f;
 
-		// Token: 0x04025723 RID: 153379
+		// Token: 0x04020392 RID: 131986
 		private readonly float ProjectionTangentAlignmentThreshold = 0.2f;
 
-		// Token: 0x04025724 RID: 153380
+		// Token: 0x04020393 RID: 131987
 		private FVector2D ProjectionStartScreenPos2D = new FVector2D();
 
-		// Token: 0x04025725 RID: 153381
+		// Token: 0x04020394 RID: 131988
 		private FVector2D ProjectionEndScreenPos2D = new FVector2D();
 
-		// Token: 0x04025726 RID: 153382
+		// Token: 0x04020395 RID: 131989
 		private FVector2D ProjectionScreenDelta2D = new FVector2D();
 	}
 }

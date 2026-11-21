@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D93 RID: 3475
+	// Token: 0x02000E8F RID: 3727
 	public class INextSlideRail
 	{
-		// Token: 0x06004F04 RID: 20228 RVA: 0x000C3ECA File Offset: 0x000C20CA
-		[NullableContext(1)]
+		// Token: 0x06005429 RID: 21545 RVA: 0x000CF71A File Offset: 0x000CD91A
 		public static INextSlideRail Create(INextSlideRail? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700199B RID: 6555
-		// (get) Token: 0x06004F05 RID: 20229 RVA: 0x000C3EE9 File Offset: 0x000C20E9
+		// Token: 0x17001B06 RID: 6918
+		// (get) Token: 0x0600542A RID: 21546 RVA: 0x000CF739 File Offset: 0x000CD939
 		public virtual ETriggerKey TriggerKey
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700199C RID: 6556
-		// (get) Token: 0x06004F06 RID: 20230 RVA: 0x000C3EF6 File Offset: 0x000C20F6
+		// Token: 0x17001B07 RID: 6919
+		// (get) Token: 0x0600542B RID: 21547 RVA: 0x000CF746 File Offset: 0x000CD946
 		public virtual int TargetRailEntityId
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700199D RID: 6557
-		// (get) Token: 0x06004F07 RID: 20231 RVA: 0x000C3F04 File Offset: 0x000C2104
+		// Token: 0x17001B08 RID: 6920
+		// (get) Token: 0x0600542C RID: 21548 RVA: 0x000CF754 File Offset: 0x000CD954
 		public virtual bool? IsFallbackRail
 		{
 			get
@@ -55,7 +53,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002D6C RID: 11628
+		// Token: 0x04003032 RID: 12338
 		private INextSlideRail Instance;
 	}
 }

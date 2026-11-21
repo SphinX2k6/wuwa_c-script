@@ -3,46 +3,45 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using Aki.Config;
-using CSharpScript.Core.Common;
 using CSharpScript.Game.KuroSimpleCombat;
 using UnrealEngine;
 
-// Token: 0x02000E8C RID: 3724
+// Token: 0x02000341 RID: 833
 [NullableContext(1)]
 [Nullable(0)]
 public class KscUtil : IStaticVariableResetter
 {
-	// Token: 0x06005B30 RID: 23344 RVA: 0x0010A6E7 File Offset: 0x001088E7
+	// Token: 0x06002EC7 RID: 11975 RVA: 0x0011237F File Offset: 0x0011057F
 	static KscUtil()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(KscUtil.CreateStaticDefaultValue), new Action(KscUtil.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06005B31 RID: 23345 RVA: 0x0010A706 File Offset: 0x00108906
+	// Token: 0x06002EC8 RID: 11976 RVA: 0x0011239E File Offset: 0x0011059E
 	public static void CreateStaticDefaultValue()
 	{
 		KscUtil.KscWorldHandle = 0;
 	}
 
-	// Token: 0x06005B32 RID: 23346 RVA: 0x0010A70E File Offset: 0x0010890E
+	// Token: 0x06002EC9 RID: 11977 RVA: 0x001123A6 File Offset: 0x001105A6
 	public static void ResetStaticDefaultValue()
 	{
 		KscUtil.KscWorldHandle = 0;
 	}
 
-	// Token: 0x06005B33 RID: 23347 RVA: 0x0010A716 File Offset: 0x00108916
+	// Token: 0x06002ECA RID: 11978 RVA: 0x001123AE File Offset: 0x001105AE
 	public static void SetKscWorldHandle(int value)
 	{
 		KscUtil.KscWorldHandle = value;
 	}
 
-	// Token: 0x06005B34 RID: 23348 RVA: 0x0010A71E File Offset: 0x0010891E
+	// Token: 0x06002ECB RID: 11979 RVA: 0x001123B6 File Offset: 0x001105B6
 	public static List<T> GetDtRows<[Nullable(0)] T>([Nullable(2)] UDataTable dt) where T : FKSCTableRowBase
 	{
 		return DataTableUtil.GetDataTableAllRowFromTable<T>(dt);
 	}
 
-	// Token: 0x06005B35 RID: 23349 RVA: 0x0010A728 File Offset: 0x00108928
+	// Token: 0x06002ECC RID: 11980 RVA: 0x001123C0 File Offset: 0x001105C0
 	public static void LoadDt<[Nullable(0)] T>([Nullable(2)] UObject context, string path, [Nullable(new byte[]
 	{
 		2,
@@ -71,7 +70,7 @@ public class KscUtil : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06005B36 RID: 23350 RVA: 0x0010A7A0 File Offset: 0x001089A0
+	// Token: 0x06002ECD RID: 11981 RVA: 0x00112438 File Offset: 0x00110638
 	[NullableContext(2)]
 	public static string AssetPath2Name(string assetPath)
 	{
@@ -87,7 +86,7 @@ public class KscUtil : IStaticVariableResetter
 		return array[array.Length - 1];
 	}
 
-	// Token: 0x06005B37 RID: 23351 RVA: 0x0010A7D0 File Offset: 0x001089D0
+	// Token: 0x06002ECE RID: 11982 RVA: 0x00112468 File Offset: 0x00110668
 	public static void AsyncLoadKscAsset<[Nullable(0)] TD>(LoadAssetParams<TD> params_) where TD : UDataAsset
 	{
 		ResourceSystem.Instance.LoadAsync<UObject>(params_.Path, delegate([Nullable(2)] UObject resultAsset, string resultPath)
@@ -131,7 +130,6 @@ public class KscUtil : IStaticVariableResetter
 			}
 			else
 			{
-				bool isBuildDevelopmentOrDebug = Info.Instance.IsBuildDevelopmentOrDebug;
 				TD td = (TD)((object)resultAsset);
 				TMap<TD, int> nativeContainer2 = params_.NativeContainer;
 				if (nativeContainer2 != null)
@@ -149,7 +147,7 @@ public class KscUtil : IStaticVariableResetter
 		}, 100, "js_undefined");
 	}
 
-	// Token: 0x06005B38 RID: 23352 RVA: 0x0010A814 File Offset: 0x00108A14
+	// Token: 0x06002ECF RID: 11983 RVA: 0x001124AC File Offset: 0x001106AC
 	public static void AsyncLoadKscAssetDt<[Nullable(0)] T, [Nullable(0)] TD>([Nullable(2)] UObject context, string path, [Nullable(new byte[]
 	{
 		2,
@@ -201,7 +199,7 @@ public class KscUtil : IStaticVariableResetter
 		}, ResourceSystem.EResourceLoadPriority.Default, "js_undefined");
 	}
 
-	// Token: 0x06005B39 RID: 23353 RVA: 0x0010A85C File Offset: 0x00108A5C
+	// Token: 0x06002ED0 RID: 11984 RVA: 0x001124F4 File Offset: 0x001106F4
 	public static Dictionary<int, int[]> GetFollowerSkillIdsByProxies(int[] proxyIds)
 	{
 		Dictionary<int, int[]> dictionary = new Dictionary<int, int[]>();
@@ -220,7 +218,7 @@ public class KscUtil : IStaticVariableResetter
 		return dictionary;
 	}
 
-	// Token: 0x06005B3A RID: 23354 RVA: 0x0010A8BC File Offset: 0x00108ABC
+	// Token: 0x06002ED1 RID: 11985 RVA: 0x00112554 File Offset: 0x00110754
 	public static int[] GetFollowerSkillIdsByProxy(int proxyId)
 	{
 		int[] result = new int[0];
@@ -233,7 +231,7 @@ public class KscUtil : IStaticVariableResetter
 		return result;
 	}
 
-	// Token: 0x06005B3B RID: 23355 RVA: 0x0010A8FC File Offset: 0x00108AFC
+	// Token: 0x06002ED2 RID: 11986 RVA: 0x00112594 File Offset: 0x00110794
 	public static int? GetFollowerCdSkillByProxy(int proxyId)
 	{
 		TrapDefenseAuxiliary? config = ConfigTrapDefenseAuxiliaryById.GetConfig(proxyId, true);
@@ -244,7 +242,7 @@ public class KscUtil : IStaticVariableResetter
 		return new int?(config.GetValueOrDefault().CDSkill);
 	}
 
-	// Token: 0x06005B3C RID: 23356 RVA: 0x0010A938 File Offset: 0x00108B38
+	// Token: 0x06002ED3 RID: 11987 RVA: 0x001125D0 File Offset: 0x001107D0
 	[NullableContext(2)]
 	public static int[] GetFollowerCueIds(int proxyId)
 	{
@@ -256,7 +254,7 @@ public class KscUtil : IStaticVariableResetter
 		return config.GetValueOrDefault().CueIds();
 	}
 
-	// Token: 0x06005B3D RID: 23357 RVA: 0x0010A968 File Offset: 0x00108B68
+	// Token: 0x06002ED4 RID: 11988 RVA: 0x00112600 File Offset: 0x00110800
 	[NullableContext(2)]
 	public static int[] GetFollowerCdCueIds(int proxyId, TDPlayerDefine.EFollowerState state)
 	{
@@ -276,7 +274,7 @@ public class KscUtil : IStaticVariableResetter
 		return null;
 	}
 
-	// Token: 0x06005B3E RID: 23358 RVA: 0x0010A9B4 File Offset: 0x00108BB4
+	// Token: 0x06002ED5 RID: 11989 RVA: 0x0011264C File Offset: 0x0011084C
 	public static int? GetFollowerPropertyIdByProxy(int proxyId)
 	{
 		TrapDefenseAuxiliary? config = ConfigTrapDefenseAuxiliaryById.GetConfig(proxyId, true);
@@ -287,7 +285,7 @@ public class KscUtil : IStaticVariableResetter
 		return new int?(config.GetValueOrDefault().InitProperty);
 	}
 
-	// Token: 0x06005B3F RID: 23359 RVA: 0x0010A9F0 File Offset: 0x00108BF0
+	// Token: 0x06002ED6 RID: 11990 RVA: 0x00112688 File Offset: 0x00110888
 	[NullableContext(2)]
 	public static Dictionary<EKSC_AttrType, float> GetFollowerAttrsByProxy(int proxyId)
 	{
@@ -322,7 +320,7 @@ public class KscUtil : IStaticVariableResetter
 		return KscUtil.GetAttrsDataByPropertyConfig(config.Value);
 	}
 
-	// Token: 0x06005B40 RID: 23360 RVA: 0x0010AAAC File Offset: 0x00108CAC
+	// Token: 0x06002ED7 RID: 11991 RVA: 0x00112744 File Offset: 0x00110944
 	public static Dictionary<string, object> GetAttrsDataMapByType<[Nullable(2)] T>(T config)
 	{
 		Dictionary<string, object> dictionary = new Dictionary<string, object>();
@@ -333,7 +331,7 @@ public class KscUtil : IStaticVariableResetter
 		return dictionary;
 	}
 
-	// Token: 0x06005B41 RID: 23361 RVA: 0x0010AB00 File Offset: 0x00108D00
+	// Token: 0x06002ED8 RID: 11992 RVA: 0x00112798 File Offset: 0x00110998
 	public static Dictionary<EKSC_AttrType, float> GetAttrsDataByPropertyConfig(KSCBaseProperty config)
 	{
 		return new Dictionary<EKSC_AttrType, float>
@@ -521,7 +519,7 @@ public class KscUtil : IStaticVariableResetter
 		};
 	}
 
-	// Token: 0x06005B42 RID: 23362 RVA: 0x0010ADE0 File Offset: 0x00108FE0
+	// Token: 0x06002ED9 RID: 11993 RVA: 0x00112A78 File Offset: 0x00110C78
 	public static Dictionary<int, int> ToBuffParam(int[] bornBuff, [Nullable(2)] HashSet<int> bornBuffSet = null)
 	{
 		Dictionary<int, int> dictionary = new Dictionary<int, int>();
@@ -539,6 +537,6 @@ public class KscUtil : IStaticVariableResetter
 		return dictionary;
 	}
 
-	// Token: 0x040029AC RID: 10668
+	// Token: 0x04002A47 RID: 10823
 	private static int KscWorldHandle;
 }

@@ -8,19 +8,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x02000C6E RID: 3182
+	// Token: 0x02000C5E RID: 3166
 	[NetMessage(EMessageId.PhantomBattleCheckCardSkillUnlockResponse)]
 	public sealed class PhantomBattleCheckCardSkillUnlockResponse : IMessage<PhantomBattleCheckCardSkillUnlockResponse>, IMessage, IEquatable<PhantomBattleCheckCardSkillUnlockResponse>, IDeepCloneable<PhantomBattleCheckCardSkillUnlockResponse>, IBufferMessage
 	{
-		// Token: 0x06011402 RID: 70658 RVA: 0x002869A1 File Offset: 0x00284BA1
+		// Token: 0x06011302 RID: 70402 RVA: 0x00284C31 File Offset: 0x00282E31
 		[NullableContext(1)]
 		public static PhantomBattleCheckCardSkillUnlockResponse Create()
 		{
 			return new PhantomBattleCheckCardSkillUnlockResponse();
 		}
 
-		// Token: 0x17003910 RID: 14608
-		// (get) Token: 0x06011403 RID: 70659 RVA: 0x002869A8 File Offset: 0x00284BA8
+		// Token: 0x170038D9 RID: 14553
+		// (get) Token: 0x06011303 RID: 70403 RVA: 0x00284C38 File Offset: 0x00282E38
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -31,8 +31,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003911 RID: 14609
-		// (get) Token: 0x06011404 RID: 70660 RVA: 0x002869AB File Offset: 0x00284BAB
+		// Token: 0x170038DA RID: 14554
+		// (get) Token: 0x06011304 RID: 70404 RVA: 0x00284C3B File Offset: 0x00282E3B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -43,14 +43,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06011405 RID: 70661 RVA: 0x002869B2 File Offset: 0x00284BB2
+		// Token: 0x06011305 RID: 70405 RVA: 0x00284C42 File Offset: 0x00282E42
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhantomBattleCheckCardSkillUnlockResponse()
 		{
 		}
 
-		// Token: 0x06011406 RID: 70662 RVA: 0x002869C8 File Offset: 0x00284BC8
+		// Token: 0x06011306 RID: 70406 RVA: 0x00284C58 File Offset: 0x00282E58
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhantomBattleCheckCardSkillUnlockResponse(PhantomBattleCheckCardSkillUnlockResponse other) : this()
@@ -63,7 +63,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x06011407 RID: 70663 RVA: 0x00286A2D File Offset: 0x00284C2D
+		// Token: 0x06011307 RID: 70407 RVA: 0x00284CBD File Offset: 0x00282EBD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public PhantomBattleCheckCardSkillUnlockResponse Clone()
@@ -71,9 +71,9 @@ namespace Aki.Protocol
 			return new PhantomBattleCheckCardSkillUnlockResponse(this);
 		}
 
-		// Token: 0x17003912 RID: 14610
-		// (get) Token: 0x06011408 RID: 70664 RVA: 0x00286A35 File Offset: 0x00284C35
-		// (set) Token: 0x06011409 RID: 70665 RVA: 0x00286A3D File Offset: 0x00284C3D
+		// Token: 0x170038DB RID: 14555
+		// (get) Token: 0x06011308 RID: 70408 RVA: 0x00284CC5 File Offset: 0x00282EC5
+		// (set) Token: 0x06011309 RID: 70409 RVA: 0x00284CCD File Offset: 0x00282ECD
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ErrorCode ErrorCode
@@ -88,8 +88,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003913 RID: 14611
-		// (get) Token: 0x0601140A RID: 70666 RVA: 0x00286A46 File Offset: 0x00284C46
+		// Token: 0x170038DC RID: 14556
+		// (get) Token: 0x0601130A RID: 70410 RVA: 0x00284CD6 File Offset: 0x00282ED6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public RepeatedField<int> CardConfig
@@ -100,9 +100,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003914 RID: 14612
-		// (get) Token: 0x0601140B RID: 70667 RVA: 0x00286A4E File Offset: 0x00284C4E
-		// (set) Token: 0x0601140C RID: 70668 RVA: 0x00286A56 File Offset: 0x00284C56
+		// Token: 0x170038DD RID: 14557
+		// (get) Token: 0x0601130B RID: 70411 RVA: 0x00284CDE File Offset: 0x00282EDE
+		// (set) Token: 0x0601130C RID: 70412 RVA: 0x00284CE6 File Offset: 0x00282EE6
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool IsUnlock
@@ -117,9 +117,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003915 RID: 14613
-		// (get) Token: 0x0601140D RID: 70669 RVA: 0x00286A5F File Offset: 0x00284C5F
-		// (set) Token: 0x0601140E RID: 70670 RVA: 0x00286A67 File Offset: 0x00284C67
+		// Token: 0x170038DE RID: 14558
+		// (get) Token: 0x0601130D RID: 70413 RVA: 0x00284CEF File Offset: 0x00282EEF
+		// (set) Token: 0x0601130E RID: 70414 RVA: 0x00284CF7 File Offset: 0x00282EF7
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CurNum
@@ -134,9 +134,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17003916 RID: 14614
-		// (get) Token: 0x0601140F RID: 70671 RVA: 0x00286A70 File Offset: 0x00284C70
-		// (set) Token: 0x06011410 RID: 70672 RVA: 0x00286A78 File Offset: 0x00284C78
+		// Token: 0x170038DF RID: 14559
+		// (get) Token: 0x0601130F RID: 70415 RVA: 0x00284D00 File Offset: 0x00282F00
+		// (set) Token: 0x06011310 RID: 70416 RVA: 0x00284D08 File Offset: 0x00282F08
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int TargetNum
@@ -151,7 +151,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06011411 RID: 70673 RVA: 0x00286A81 File Offset: 0x00284C81
+		// Token: 0x06011311 RID: 70417 RVA: 0x00284D11 File Offset: 0x00282F11
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -159,7 +159,7 @@ namespace Aki.Protocol
 			return this.Equals(other as PhantomBattleCheckCardSkillUnlockResponse);
 		}
 
-		// Token: 0x06011412 RID: 70674 RVA: 0x00286A90 File Offset: 0x00284C90
+		// Token: 0x06011312 RID: 70418 RVA: 0x00284D20 File Offset: 0x00282F20
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(PhantomBattleCheckCardSkillUnlockResponse other)
@@ -167,7 +167,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.ErrorCode == other.ErrorCode && this.cardConfig_.Equals(other.cardConfig_) && this.IsUnlock == other.IsUnlock && this.CurNum == other.CurNum && this.TargetNum == other.TargetNum && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x06011413 RID: 70675 RVA: 0x00286B10 File Offset: 0x00284D10
+		// Token: 0x06011313 RID: 70419 RVA: 0x00284DA0 File Offset: 0x00282FA0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -197,7 +197,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06011414 RID: 70676 RVA: 0x00286BAE File Offset: 0x00284DAE
+		// Token: 0x06011314 RID: 70420 RVA: 0x00284E3E File Offset: 0x0028303E
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -205,7 +205,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x06011415 RID: 70677 RVA: 0x00286BBB File Offset: 0x00284DBB
+		// Token: 0x06011315 RID: 70421 RVA: 0x00284E4B File Offset: 0x0028304B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -213,31 +213,31 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x06011416 RID: 70678 RVA: 0x00286BC4 File Offset: 0x00284DC4
+		// Token: 0x06011316 RID: 70422 RVA: 0x00284E54 File Offset: 0x00283054
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
-			this.cardConfig_.WriteTo(ref output, PhantomBattleCheckCardSkillUnlockResponse._repeated_cardConfig_codec);
+			if (this.TargetNum != 0)
+			{
+				output.WriteRawTag(16);
+				output.WriteInt32(this.TargetNum);
+			}
 			if (this.IsUnlock)
 			{
-				output.WriteRawTag(56);
+				output.WriteRawTag(48);
 				output.WriteBool(this.IsUnlock);
+			}
+			this.cardConfig_.WriteTo(ref output, PhantomBattleCheckCardSkillUnlockResponse._repeated_cardConfig_codec);
+			if (this.ErrorCode != ErrorCode.Success)
+			{
+				output.WriteRawTag(104);
+				output.WriteEnum((int)this.ErrorCode);
 			}
 			if (this.CurNum != 0)
 			{
-				output.WriteRawTag(64);
-				output.WriteInt32(this.CurNum);
-			}
-			if (this.TargetNum != 0)
-			{
-				output.WriteRawTag(96);
-				output.WriteInt32(this.TargetNum);
-			}
-			if (this.ErrorCode != ErrorCode.Success)
-			{
 				output.WriteRawTag(120);
-				output.WriteEnum((int)this.ErrorCode);
+				output.WriteInt32(this.CurNum);
 			}
 			if (this._unknownFields != null)
 			{
@@ -245,7 +245,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x06011417 RID: 70679 RVA: 0x00286C68 File Offset: 0x00284E68
+		// Token: 0x06011317 RID: 70423 RVA: 0x00284EF8 File Offset: 0x002830F8
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -275,7 +275,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x06011418 RID: 70680 RVA: 0x00286CF8 File Offset: 0x00284EF8
+		// Token: 0x06011318 RID: 70424 RVA: 0x00284F88 File Offset: 0x00283188
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(PhantomBattleCheckCardSkillUnlockResponse other)
@@ -304,7 +304,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x06011419 RID: 70681 RVA: 0x00286D81 File Offset: 0x00284F81
+		// Token: 0x06011319 RID: 70425 RVA: 0x00285011 File Offset: 0x00283211
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -312,7 +312,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601141A RID: 70682 RVA: 0x00286D8C File Offset: 0x00284F8C
+		// Token: 0x0601131A RID: 70426 RVA: 0x0028501C File Offset: 0x0028321C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -324,75 +324,81 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num <= 56U)
+				if (num <= 64U)
 				{
-					if (num == 24U || num == 26U)
-					{
-						this.cardConfig_.AddEntriesFrom(ref input, PhantomBattleCheckCardSkillUnlockResponse._repeated_cardConfig_codec);
-						continue;
-					}
-					if (num == 56U)
-					{
-						this.IsUnlock = input.ReadBool();
-						continue;
-					}
-				}
-				else
-				{
-					if (num == 64U)
-					{
-						this.CurNum = input.ReadInt32();
-						continue;
-					}
-					if (num == 96U)
+					if (num == 16U)
 					{
 						this.TargetNum = input.ReadInt32();
 						continue;
 					}
-					if (num == 120U)
+					if (num == 48U)
+					{
+						this.IsUnlock = input.ReadBool();
+						continue;
+					}
+					if (num == 64U)
+					{
+						goto IL_61;
+					}
+				}
+				else
+				{
+					if (num == 66U)
+					{
+						goto IL_61;
+					}
+					if (num == 104U)
 					{
 						this.ErrorCode = (ErrorCode)input.ReadEnum();
 						continue;
 					}
+					if (num == 120U)
+					{
+						this.CurNum = input.ReadInt32();
+						continue;
+					}
 				}
 				this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
+				continue;
+				IL_61:
+				this.cardConfig_.AddEntriesFrom(ref input, PhantomBattleCheckCardSkillUnlockResponse._repeated_cardConfig_codec);
 			}
 		}
 
-		// Token: 0x04006D1C RID: 27932
+		// Token: 0x04006D30 RID: 27952
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x04006D1D RID: 27933
-		public const int ErrorCodeFieldNumber = 15;
+		// Token: 0x04006D31 RID: 27953
+		public const int ErrorCodeFieldNumber = 13;
 
-		// Token: 0x04006D1E RID: 27934
+		// Token: 0x04006D32 RID: 27954
 		private ErrorCode errorCode_;
 
-		// Token: 0x04006D1F RID: 27935
-		public const int CardConfigFieldNumber = 3;
+		// Token: 0x04006D33 RID: 27955
+		public const int CardConfigFieldNumber = 8;
 
-		// Token: 0x04006D20 RID: 27936
-		private static readonly FieldCodec<int> _repeated_cardConfig_codec = FieldCodec.ForInt32(26U);
+		// Token: 0x04006D34 RID: 27956
+		private static readonly FieldCodec<int> _repeated_cardConfig_codec = FieldCodec.ForInt32(66U);
 
-		// Token: 0x04006D21 RID: 27937
+		// Token: 0x04006D35 RID: 27957
 		private readonly RepeatedField<int> cardConfig_ = new RepeatedField<int>();
 
-		// Token: 0x04006D22 RID: 27938
-		public const int IsUnlockFieldNumber = 7;
+		// Token: 0x04006D36 RID: 27958
+		public const int IsUnlockFieldNumber = 6;
 
-		// Token: 0x04006D23 RID: 27939
+		// Token: 0x04006D37 RID: 27959
 		private bool isUnlock_;
 
-		// Token: 0x04006D24 RID: 27940
-		public const int CurNumFieldNumber = 8;
+		// Token: 0x04006D38 RID: 27960
+		public const int CurNumFieldNumber = 15;
 
-		// Token: 0x04006D25 RID: 27941
+		// Token: 0x04006D39 RID: 27961
 		private int curNum_;
 
-		// Token: 0x04006D26 RID: 27942
-		public const int TargetNumFieldNumber = 12;
+		// Token: 0x04006D3A RID: 27962
+		public const int TargetNumFieldNumber = 2;
 
-		// Token: 0x04006D27 RID: 27943
+		// Token: 0x04006D3B RID: 27963
 		private int targetNum_;
 	}
 }

@@ -8,7 +8,7 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200111A RID: 4378
+// Token: 0x020005CE RID: 1486
 [Nullable(new byte[]
 {
 	0,
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class BabelTowerBuffSelectViewLevelItem : GridProxyAbstract<IBabelTowerBuffSelectViewLevelItemData>
 {
-	// Token: 0x06007291 RID: 29329 RVA: 0x00177A00 File Offset: 0x00175C00
+	// Token: 0x06004627 RID: 17959 RVA: 0x001803BC File Offset: 0x0017E5BC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 6;
@@ -47,7 +47,7 @@ public class BabelTowerBuffSelectViewLevelItem : GridProxyAbstract<IBabelTowerBu
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06007292 RID: 29330 RVA: 0x00177B50 File Offset: 0x00175D50
+	// Token: 0x06004628 RID: 17960 RVA: 0x0018050C File Offset: 0x0017E70C
 	[NullableContext(1)]
 	public override void Refresh(IBabelTowerBuffSelectViewLevelItemData data, bool isSelected, int gridIndex)
 	{
@@ -62,7 +62,7 @@ public class BabelTowerBuffSelectViewLevelItem : GridProxyAbstract<IBabelTowerBu
 		this.RefreshState(data.State);
 	}
 
-	// Token: 0x06007293 RID: 29331 RVA: 0x00177C20 File Offset: 0x00175E20
+	// Token: 0x06004629 RID: 17961 RVA: 0x001805DC File Offset: 0x0017E7DC
 	public void RefreshState(EBabelTowerBuffState state)
 	{
 		if (state == EBabelTowerBuffState.Use)
@@ -98,7 +98,7 @@ public class BabelTowerBuffSelectViewLevelItem : GridProxyAbstract<IBabelTowerBu
 		}
 	}
 
-	// Token: 0x06007294 RID: 29332 RVA: 0x00177D9C File Offset: 0x00175F9C
+	// Token: 0x0600462A RID: 17962 RVA: 0x00180758 File Offset: 0x0017E958
 	private void OnClickJumpToBtn()
 	{
 		if (!this.IsUnlock)
@@ -135,7 +135,7 @@ public class BabelTowerBuffSelectViewLevelItem : GridProxyAbstract<IBabelTowerBu
 		}
 	}
 
-	// Token: 0x06007295 RID: 29333 RVA: 0x00177E98 File Offset: 0x00176098
+	// Token: 0x0600462B RID: 17963 RVA: 0x00180854 File Offset: 0x0017EA54
 	private void OnClickOccupyBtn()
 	{
 		int buffIsUse = BabelTowerController.Instance.GetBabelTowerData().GetBuffIsUse(this.BuffId);
@@ -145,34 +145,34 @@ public class BabelTowerBuffSelectViewLevelItem : GridProxyAbstract<IBabelTowerBu
 		}
 	}
 
-	// Token: 0x04003507 RID: 13575
+	// Token: 0x040035A0 RID: 13728
 	private bool IsUnlock;
 
-	// Token: 0x04003508 RID: 13576
+	// Token: 0x040035A1 RID: 13729
 	private int TargetLevelId;
 
-	// Token: 0x04003509 RID: 13577
+	// Token: 0x040035A2 RID: 13730
 	private int BuffId;
 
-	// Token: 0x020076DE RID: 30430
+	// Token: 0x02006872 RID: 26738
 	private class EBabelTowerBuffSelectViewLevelItemDefine
 	{
-		// Token: 0x0402739A RID: 160666
+		// Token: 0x040226E3 RID: 141027
 		public const int InfoBgItem = 0;
 
-		// Token: 0x0402739B RID: 160667
+		// Token: 0x040226E4 RID: 141028
 		public const int InfoText = 1;
 
-		// Token: 0x0402739C RID: 160668
+		// Token: 0x040226E5 RID: 141029
 		public const int DoneItem = 2;
 
-		// Token: 0x0402739D RID: 160669
+		// Token: 0x040226E6 RID: 141030
 		public const int JumpToItem = 3;
 
-		// Token: 0x0402739E RID: 160670
+		// Token: 0x040226E7 RID: 141031
 		public const int OccupyBtn = 4;
 
-		// Token: 0x0402739F RID: 160671
+		// Token: 0x040226E8 RID: 141032
 		public const int JumpToBtn = 5;
 	}
 }

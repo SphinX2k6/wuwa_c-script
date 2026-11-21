@@ -4,10 +4,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.DollGrabMachineClawState
 {
-	// Token: 0x02006F10 RID: 28432
+	// Token: 0x02006091 RID: 24721
 	public class DgmClawResetState : DgmClawBaseMoveState
 	{
-		// Token: 0x0604533C RID: 283452 RVA: 0x0111EEBD File Offset: 0x0111D0BD
+		// Token: 0x0603B4EA RID: 242922 RVA: 0x010C8E5D File Offset: 0x010C705D
 		[NullableContext(1)]
 		public DgmClawResetState(SceneItemDollGrabMachineComponent owner, AActor clawActor, AActor clawRootActor, FTransformDouble ownerActorTransform) : base(owner, clawActor, clawRootActor, ownerActorTransform)
 		{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.DollGrabMachineClawSta
 			this.OriginalPosition = this.ClawRootActor.D_K2_GetActorLocation();
 		}
 
-		// Token: 0x0604533D RID: 283453 RVA: 0x0111EEF0 File Offset: 0x0111D0F0
+		// Token: 0x0603B4EB RID: 242923 RVA: 0x010C8E90 File Offset: 0x010C7090
 		public override void Enter()
 		{
 			FVectorDouble fvectorDouble = this.ClawRootActor.D_K2_GetActorLocation();
@@ -27,7 +27,7 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.DollGrabMachineClawSta
 			this.UpMoveSpeed = (float)num2 / this.ResetTime;
 		}
 
-		// Token: 0x0604533E RID: 283454 RVA: 0x0111EF68 File Offset: 0x0111D168
+		// Token: 0x0603B4EC RID: 242924 RVA: 0x010C8F08 File Offset: 0x010C7108
 		public override void Update(float deltaTime)
 		{
 			base.Update(deltaTime);
@@ -49,16 +49,16 @@ namespace CSharpScript.Game.LevelGamePlay.DollGrabMachine.DollGrabMachineClawSta
 			this.ClawRootActor.D_K2_SetActorLocation(MathUtils.Instance.CommonTempVector.ToUeVector(false), false, ref WorldGlobal.SweepHitResult, true);
 		}
 
-		// Token: 0x04024120 RID: 147744
+		// Token: 0x0401F3D5 RID: 127957
 		private float ResetTime;
 
-		// Token: 0x04024121 RID: 147745
+		// Token: 0x0401F3D6 RID: 127958
 		private readonly FVectorDouble OriginalPosition;
 
-		// Token: 0x04024122 RID: 147746
+		// Token: 0x0401F3D7 RID: 127959
 		private float RightMoveSpeed;
 
-		// Token: 0x04024123 RID: 147747
+		// Token: 0x0401F3D8 RID: 127960
 		private float UpMoveSpeed;
 	}
 }

@@ -10,18 +10,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 {
-	// Token: 0x02005A0E RID: 23054
+	// Token: 0x020049EA RID: 18922
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class DangoBrawlBattleBuffListItem : UiPanelBase
 	{
-		// Token: 0x0603A76A RID: 239466 RVA: 0x00DE90D5 File Offset: 0x00DE72D5
+		// Token: 0x0602F6B3 RID: 194227 RVA: 0x00D39655 File Offset: 0x00D37855
 		public DangoBrawlBattleBuffListItem(EDangoBrawlBuffType buffType)
 		{
 			this.TargetBuffType = buffType;
 		}
 
-		// Token: 0x0603A76B RID: 239467 RVA: 0x00DE9108 File Offset: 0x00DE7308
+		// Token: 0x0602F6B4 RID: 194228 RVA: 0x00D39688 File Offset: 0x00D37888
 		private List<DangoBrawlBattleBuffItemData> GetDefaultBuffItemDataList()
 		{
 			IEnumerable<DangoBrawlBuff> buffConfigList = DangoBrawlConfig.Instance.GetBuffConfigList();
@@ -51,7 +51,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			return list2;
 		}
 
-		// Token: 0x0603A76C RID: 239468 RVA: 0x00DE9208 File Offset: 0x00DE7408
+		// Token: 0x0602F6B5 RID: 194229 RVA: 0x00D39788 File Offset: 0x00D37988
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603A76D RID: 239469 RVA: 0x00DE92D0 File Offset: 0x00DE74D0
+		// Token: 0x0602F6B6 RID: 194230 RVA: 0x00D39850 File Offset: 0x00D37A50
 		protected override void OnStart()
 		{
 			this.LayoutBuffDataList = this.GetDefaultBuffItemDataList();
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			this.BuffLayout.RefreshByData(this.LayoutBuffDataList, null, false);
 		}
 
-		// Token: 0x0603A76E RID: 239470 RVA: 0x00DE931D File Offset: 0x00DE751D
+		// Token: 0x0602F6B7 RID: 194231 RVA: 0x00D3989D File Offset: 0x00D37A9D
 		private DangoBrawlBattleBuffItem CreateBuffItem()
 		{
 			return new DangoBrawlBattleBuffItem
@@ -91,13 +91,13 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			};
 		}
 
-		// Token: 0x0603A76F RID: 239471 RVA: 0x00DE9336 File Offset: 0x00DE7536
+		// Token: 0x0602F6B8 RID: 194232 RVA: 0x00D398B6 File Offset: 0x00D37AB6
 		private bool IsFixedShowBuffId(int configId)
 		{
 			return this.FixedShowIds.Contains(configId);
 		}
 
-		// Token: 0x0603A770 RID: 239472 RVA: 0x00DE9344 File Offset: 0x00DE7544
+		// Token: 0x0602F6B9 RID: 194233 RVA: 0x00D398C4 File Offset: 0x00D37AC4
 		public void RestoreFromSnapshot(List<BuffInfo> buffs)
 		{
 			this.CurExistBuffDataList.Clear();
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			buffLayout.RefreshByData(this.LayoutBuffDataList, null, false);
 		}
 
-		// Token: 0x0603A771 RID: 239473 RVA: 0x00DE9520 File Offset: 0x00DE7720
+		// Token: 0x0602F6BA RID: 194234 RVA: 0x00D39AA0 File Offset: 0x00D37CA0
 		private void UpdateCurExistBuffDataList(BuffVisualDelta visualDelta)
 		{
 			int buffConfigId = visualDelta.BuffConfigId;
@@ -185,7 +185,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			}
 		}
 
-		// Token: 0x0603A772 RID: 239474 RVA: 0x00DE95F4 File Offset: 0x00DE77F4
+		// Token: 0x0602F6BB RID: 194235 RVA: 0x00D39B74 File Offset: 0x00D37D74
 		private void RefreshFixedLayoutBuffItem(DangoBrawlBattleBuffItemData layoutData, BuffVisualDelta visualDelta)
 		{
 			layoutData.Operation = new EDangoBrawlBuffVisualOp?(visualDelta.Op);
@@ -211,7 +211,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			buffLayout.RefreshGridProxyByKey<int>(layoutData.ConfigId);
 		}
 
-		// Token: 0x0603A773 RID: 239475 RVA: 0x00DE9660 File Offset: 0x00DE7860
+		// Token: 0x0602F6BC RID: 194236 RVA: 0x00D39BE0 File Offset: 0x00D37DE0
 		public void Refresh(BuffVisualDelta visualDelta)
 		{
 			this.UpdateCurExistBuffDataList(visualDelta);
@@ -228,7 +228,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			this.RefreshFixedLayoutBuffItem(dangoBrawlBattleBuffItemData, visualDelta);
 		}
 
-		// Token: 0x0603A774 RID: 239476 RVA: 0x00DE96BC File Offset: 0x00DE78BC
+		// Token: 0x0602F6BD RID: 194237 RVA: 0x00D39C3C File Offset: 0x00D37E3C
 		public List<DangoBrawlBattleBuffDetailItemData> BuildBuffDetailDataList(int selectId = 0)
 		{
 			List<DangoBrawlBattleBuffDetailItemData> list = new List<DangoBrawlBattleBuffDetailItemData>();
@@ -243,7 +243,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			return list;
 		}
 
-		// Token: 0x0603A775 RID: 239477 RVA: 0x00DE9730 File Offset: 0x00DE7930
+		// Token: 0x0602F6BE RID: 194238 RVA: 0x00D39CB0 File Offset: 0x00D37EB0
 		private void OnClickBtnBuffDetail()
 		{
 			Action<EDangoBrawlBuffType, int> onOpenDetailView = this.OnOpenDetailView;
@@ -254,7 +254,7 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			onOpenDetailView(this.TargetBuffType, 0);
 		}
 
-		// Token: 0x0603A776 RID: 239478 RVA: 0x00DE9749 File Offset: 0x00DE7949
+		// Token: 0x0602F6BF RID: 194239 RVA: 0x00D39CC9 File Offset: 0x00D37EC9
 		private void OnClickOneBuff(int configId)
 		{
 			Action<EDangoBrawlBuffType, int> onOpenDetailView = this.OnOpenDetailView;
@@ -265,17 +265,17 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 			onOpenDetailView(this.TargetBuffType, configId);
 		}
 
-		// Token: 0x0401E75F RID: 124767
+		// Token: 0x04019206 RID: 102918
 		private readonly EDangoBrawlBuffType TargetBuffType;
 
-		// Token: 0x0401E760 RID: 124768
+		// Token: 0x04019207 RID: 102919
 		[Nullable(2)]
 		public Action<EDangoBrawlBuffType, int> OnOpenDetailView;
 
-		// Token: 0x0401E761 RID: 124769
+		// Token: 0x04019208 RID: 102920
 		private const int FIXED_SHOW_BUFF_NUM = 5;
 
-		// Token: 0x0401E762 RID: 124770
+		// Token: 0x04019209 RID: 102921
 		[Nullable(new byte[]
 		{
 			2,
@@ -284,24 +284,24 @@ namespace CSharpScript.Game.Module.GameMainView.DangoBrawl.Item
 		})]
 		private GenericLayout<DangoBrawlBattleBuffItem, DangoBrawlBattleBuffItemData> BuffLayout;
 
-		// Token: 0x0401E763 RID: 124771
+		// Token: 0x0401920A RID: 102922
 		private List<DangoBrawlBattleBuffItemData> LayoutBuffDataList = new List<DangoBrawlBattleBuffItemData>();
 
-		// Token: 0x0401E764 RID: 124772
+		// Token: 0x0401920B RID: 102923
 		private List<DangoBrawlBattleBuffItemData> CurExistBuffDataList = new List<DangoBrawlBattleBuffItemData>();
 
-		// Token: 0x0401E765 RID: 124773
+		// Token: 0x0401920C RID: 102924
 		private readonly List<int> FixedShowIds = new List<int>();
 
-		// Token: 0x0200BC78 RID: 48248
+		// Token: 0x0200A681 RID: 42625
 		[NullableContext(0)]
 		private enum EComp
 		{
-			// Token: 0x04038DDB RID: 232923
+			// Token: 0x040337A7 RID: 210855
 			BtnBuffDetail,
-			// Token: 0x04038DDC RID: 232924
+			// Token: 0x040337A8 RID: 210856
 			BuffLayout,
-			// Token: 0x04038DDD RID: 232925
+			// Token: 0x040337A9 RID: 210857
 			BuffItem
 		}
 	}

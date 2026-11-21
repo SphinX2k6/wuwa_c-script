@@ -7,12 +7,12 @@ using CSharpScript.Game.Module.Activity.ActivityContent.Fishing;
 
 namespace CSharpScript.Game.NewWorld.SceneItem
 {
-	// Token: 0x0200717C RID: 29052
+	// Token: 0x02006230 RID: 25136
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SceneItemFishingPointComponent : EntityComponent
 	{
-		// Token: 0x06046FCA RID: 290762 RVA: 0x011F8040 File Offset: 0x011F6240
+		// Token: 0x0603C856 RID: 247894 RVA: 0x01152A34 File Offset: 0x01150C34
 		protected override bool OnStart()
 		{
 			this.CreatureDataComp = base.Entity.GetComponent<CreatureDataComponent>();
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046FCB RID: 290763 RVA: 0x011F80F6 File Offset: 0x011F62F6
+		// Token: 0x0603C857 RID: 247895 RVA: 0x01152AEA File Offset: 0x01150CEA
 		protected override bool OnEnd()
 		{
 			if (EventSystem.Instance.Has<bool>(EEventName.DriveFishingShipStateChanged, new Action<bool>(this.RefreshHeadInfoEnable)))
@@ -58,13 +58,13 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			return true;
 		}
 
-		// Token: 0x06046FCC RID: 290764 RVA: 0x011F8132 File Offset: 0x011F6332
+		// Token: 0x0603C858 RID: 247896 RVA: 0x01152B26 File Offset: 0x01150D26
 		public void RefreshFishingPoint(FishingPointData data)
 		{
 			this.RefreshPointEnable(data.CurrentCount > 0);
 		}
 
-		// Token: 0x06046FCD RID: 290765 RVA: 0x011F8144 File Offset: 0x011F6344
+		// Token: 0x0603C859 RID: 247897 RVA: 0x01152B38 File Offset: 0x01150D38
 		private void RefreshPointEnable(bool enable)
 		{
 			if (enable)
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			this.RefreshHeadInfoEnable(false);
 		}
 
-		// Token: 0x06046FCE RID: 290766 RVA: 0x011F81FF File Offset: 0x011F63FF
+		// Token: 0x0603C85A RID: 247898 RVA: 0x01152BF3 File Offset: 0x01150DF3
 		private void RefreshHeadInfoEnable(bool enable)
 		{
 			PawnHeadInfoComponent pawnHeadInfoComp = this.PawnHeadInfoComp;
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 			pawnHeadInfoComp.EnableHeadInfo(enable);
 		}
 
-		// Token: 0x06046FCF RID: 290767 RVA: 0x011F8214 File Offset: 0x011F6414
+		// Token: 0x0603C85B RID: 247899 RVA: 0x01152C08 File Offset: 0x01150E08
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -105,36 +105,50 @@ namespace CSharpScript.Game.NewWorld.SceneItem
 				return false;
 			}
 			SceneItemFishingPointComponent sceneItemFishingPointComponent = (SceneItemFishingPointComponent)componentTemplate;
-			if (base.CanResetComponentProperty("CreatureDataComp"))
+			if (sceneItemFishingPointComponent.CreatureDataComp == null)
 			{
-				if (sceneItemFishingPointComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
+				this.CreatureDataComp = null;
 			}
-			if (base.CanResetComponentProperty("PawnHeadInfoComp"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 			{
-				if (sceneItemFishingPointComponent.PawnHeadInfoComp == null)
-				{
-					this.PawnHeadInfoComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<PawnHeadInfoComponent>(this.PawnHeadInfoComp), "PawnHeadInfoComp"))
-				{
-					return false;
-				}
+				return false;
+			}
+			if (sceneItemFishingPointComponent.PawnHeadInfoComp == null)
+			{
+				this.PawnHeadInfoComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.PawnHeadInfoComp), "PawnHeadInfoComp"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x040254CF RID: 152783
+		// Token: 0x17007264 RID: 29284
+		// (get) Token: 0x0603C85C RID: 247900 RVA: 0x01152C7E File Offset: 0x01150E7E
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007265 RID: 29285
+		// (get) Token: 0x0603C85D RID: 247901 RVA: 0x01152C81 File Offset: 0x01150E81
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x04020136 RID: 131382
 		[Nullable(2)]
 		private CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x040254D0 RID: 152784
+		// Token: 0x04020137 RID: 131383
 		[Nullable(2)]
 		private PawnHeadInfoComponent PawnHeadInfoComp;
 	}

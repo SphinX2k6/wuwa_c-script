@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002485 RID: 9349
+	// Token: 0x02002728 RID: 10024
 	public static class ETrapDefensePlayerOperationTypeExtensions
 	{
-		// Token: 0x0600CAD5 RID: 51925 RVA: 0x001DDAAC File Offset: 0x001DBCAC
+		// Token: 0x0600D78E RID: 55182 RVA: 0x001F7C74 File Offset: 0x001F5E74
 		public static string ToEnumString(this ETrapDefensePlayerOperationType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CAD6 RID: 51926 RVA: 0x001DDAF4 File Offset: 0x001DBCF4
+		// Token: 0x0600D78F RID: 55183 RVA: 0x001F7CBC File Offset: 0x001F5EBC
 		public static ETrapDefensePlayerOperationType FromString(string name)
 		{
 			ETrapDefensePlayerOperationType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600CAD7 RID: 51927 RVA: 0x001DDB20 File Offset: 0x001DBD20
+		// Token: 0x0600D790 RID: 55184 RVA: 0x001F7CE8 File Offset: 0x001F5EE8
 		public static bool TryFromString(string name, out ETrapDefensePlayerOperationType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600CAD8 RID: 51928 RVA: 0x001DDB76 File Offset: 0x001DBD76
+		// Token: 0x0600D791 RID: 55185 RVA: 0x001F7D3E File Offset: 0x001F5F3E
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CAD9 RID: 51929 RVA: 0x001DDB96 File Offset: 0x001DBD96
+		// Token: 0x0600D792 RID: 55186 RVA: 0x001F7D5E File Offset: 0x001F5F5E
 		public static ETrapDefensePlayerOperationType[] GetValues()
 		{
 			return new ETrapDefensePlayerOperationType[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600CADA RID: 51930 RVA: 0x001DDBA6 File Offset: 0x001DBDA6
+		// Token: 0x0600D793 RID: 55187 RVA: 0x001F7D6E File Offset: 0x001F5F6E
 		public static string[] GetNames()
 		{
 			return new string[]

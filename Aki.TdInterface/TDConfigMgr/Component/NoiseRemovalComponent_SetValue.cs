@@ -4,28 +4,26 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000846 RID: 2118
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020008E9 RID: 2281
 	public class NoiseRemovalComponent_SetValue
 	{
-		// Token: 0x04001EAB RID: 7851
+		// Token: 0x040020BA RID: 8378
 		public bool? Disabled;
 
-		// Token: 0x04001EAC RID: 7852
+		// Token: 0x040020BB RID: 8379
 		public bool? EdIsLocked;
 
-		// Token: 0x04001EAD RID: 7853
+		// Token: 0x040020BC RID: 8380
 		public List<INoiseRemovalNode> Nodes;
 
-		// Token: 0x04001EAE RID: 7854
+		// Token: 0x040020BD RID: 8381
 		public string CompleteState;
 
-		// Token: 0x04001EAF RID: 7855
+		// Token: 0x040020BE RID: 8382
 		[Nullable(2)]
 		public INoiseRemovalBoarderBase NoiseRemovalBoarder;
 
-		// Token: 0x04001EB0 RID: 7856
+		// Token: 0x040020BF RID: 8383
 		public int? RotationAngle;
 	}
 }

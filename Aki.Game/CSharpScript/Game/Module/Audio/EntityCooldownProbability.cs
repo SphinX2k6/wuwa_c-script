@@ -6,13 +6,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Audio
 {
-	// Token: 0x02005E87 RID: 24199
+	// Token: 0x02004E6C RID: 20076
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class EntityCooldownProbability
 	{
-		// Token: 0x17008E8C RID: 36492
-		// (get) Token: 0x0603D8F1 RID: 252145 RVA: 0x00EDB1FD File Offset: 0x00ED93FD
+		// Token: 0x1700625E RID: 25182
+		// (get) Token: 0x06032881 RID: 206977 RVA: 0x00E2C789 File Offset: 0x00E2A989
 		private Dictionary<int, EntityCooldownProbability.CooldownRecord> AudioEventCooldownTimeMapById
 		{
 			get
@@ -25,8 +25,8 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x17008E8D RID: 36493
-		// (get) Token: 0x0603D8F2 RID: 252146 RVA: 0x00EDB218 File Offset: 0x00ED9418
+		// Token: 0x1700625F RID: 25183
+		// (get) Token: 0x06032882 RID: 206978 RVA: 0x00E2C7A4 File Offset: 0x00E2A9A4
 		private Dictionary<string, EntityCooldownProbability.CooldownRecord> AudioEventCooldownTimeMapByName
 		{
 			get
@@ -39,14 +39,14 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D8F3 RID: 252147 RVA: 0x00EDB233 File Offset: 0x00ED9433
+		// Token: 0x06032883 RID: 206979 RVA: 0x00E2C7BF File Offset: 0x00E2A9BF
 		public void Init(int id, int modelId)
 		{
 			this.EntityId = id;
 			this.ModelId = modelId;
 		}
 
-		// Token: 0x0603D8F4 RID: 252148 RVA: 0x00EDB243 File Offset: 0x00ED9443
+		// Token: 0x06032884 RID: 206980 RVA: 0x00E2C7CF File Offset: 0x00E2A9CF
 		public void Clear()
 		{
 			this.TagComp = null;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.Audio
 			this.AudioEventCooldownTimeMapByNameInternal = null;
 		}
 
-		// Token: 0x0603D8F5 RID: 252149 RVA: 0x00EDB270 File Offset: 0x00ED9470
+		// Token: 0x06032885 RID: 206981 RVA: 0x00E2C7FC File Offset: 0x00E2A9FC
 		public bool CheckTimeOutCooldownRecords()
 		{
 			bool flag = this.CheckTimeOutCooldownRecordsImpl<int>(this.AudioEventCooldownTimeMapById);
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.Audio
 			return flag && flag2;
 		}
 
-		// Token: 0x0603D8F6 RID: 252150 RVA: 0x00EDB298 File Offset: 0x00ED9498
+		// Token: 0x06032886 RID: 206982 RVA: 0x00E2C824 File Offset: 0x00E2AA24
 		private bool CheckTimeOutCooldownRecordsImpl<T>(Dictionary<T, EntityCooldownProbability.CooldownRecord> dict)
 		{
 			List<T> list = new List<T>();
@@ -82,7 +82,7 @@ namespace CSharpScript.Game.Module.Audio
 			return dict.Count == 0;
 		}
 
-		// Token: 0x0603D8F7 RID: 252151 RVA: 0x00EDB370 File Offset: 0x00ED9570
+		// Token: 0x06032887 RID: 206983 RVA: 0x00E2C8FC File Offset: 0x00E2AAFC
 		public bool CheckPlayAudio([Nullable(new byte[]
 		{
 			0,
@@ -113,7 +113,7 @@ namespace CSharpScript.Game.Module.Audio
 			return flag3;
 		}
 
-		// Token: 0x0603D8F8 RID: 252152 RVA: 0x00EDB43C File Offset: 0x00ED963C
+		// Token: 0x06032888 RID: 206984 RVA: 0x00E2C9C8 File Offset: 0x00E2ABC8
 		public void UpdateCooldownRecord([Nullable(new byte[]
 		{
 			0,
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D8F9 RID: 252153 RVA: 0x00EDB48C File Offset: 0x00ED968C
+		// Token: 0x06032889 RID: 206985 RVA: 0x00E2CA18 File Offset: 0x00E2AC18
 		private void UpdateCooldownRecordImpl<T>(Dictionary<T, EntityCooldownProbability.CooldownRecord> dict, T eventObj, double probability, double cooldownTime, bool log = true)
 		{
 			EntityCooldownProbability.CooldownRecord cooldownRecord;
@@ -147,7 +147,7 @@ namespace CSharpScript.Game.Module.Audio
 			};
 		}
 
-		// Token: 0x0603D8FA RID: 252154 RVA: 0x00EDB4E0 File Offset: 0x00ED96E0
+		// Token: 0x0603288A RID: 206986 RVA: 0x00E2CA6C File Offset: 0x00E2AC6C
 		private bool CheckCooldownProbability([Nullable(new byte[]
 		{
 			0,
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.Module.Audio
 			return false;
 		}
 
-		// Token: 0x0603D8FB RID: 252155 RVA: 0x00EDB5A0 File Offset: 0x00ED97A0
+		// Token: 0x0603288B RID: 206987 RVA: 0x00E2CB2C File Offset: 0x00E2AD2C
 		private bool GetProbabilityResult<[Nullable(2)] T>(T eventObj, double probability, bool log = true)
 		{
 			if (Math.Abs(probability - 1.0) < 0.0001 || Math.Abs(probability) < 0.0001)
@@ -194,7 +194,7 @@ namespace CSharpScript.Game.Module.Audio
 			return num < probability;
 		}
 
-		// Token: 0x0603D8FC RID: 252156 RVA: 0x00EDB60C File Offset: 0x00ED980C
+		// Token: 0x0603288C RID: 206988 RVA: 0x00E2CB98 File Offset: 0x00E2AD98
 		public static bool GetProbability(Number probability)
 		{
 			if (probability == 1 || probability == 0)
@@ -204,17 +204,17 @@ namespace CSharpScript.Game.Module.Audio
 			return new Random().NextDouble() < probability;
 		}
 
-		// Token: 0x040201FF RID: 131583
+		// Token: 0x0401ACC6 RID: 109766
 		public int EntityId;
 
-		// Token: 0x04020200 RID: 131584
+		// Token: 0x0401ACC7 RID: 109767
 		public int ModelId;
 
-		// Token: 0x04020201 RID: 131585
+		// Token: 0x0401ACC8 RID: 109768
 		[Nullable(2)]
 		public BaseTagComponent TagComp;
 
-		// Token: 0x04020202 RID: 131586
+		// Token: 0x0401ACC9 RID: 109769
 		[Nullable(new byte[]
 		{
 			2,
@@ -222,7 +222,7 @@ namespace CSharpScript.Game.Module.Audio
 		})]
 		private Dictionary<int, EntityCooldownProbability.CooldownRecord> AudioEventCooldownTimeMapByIdInternal;
 
-		// Token: 0x04020203 RID: 131587
+		// Token: 0x0401ACCA RID: 109770
 		[Nullable(new byte[]
 		{
 			2,
@@ -231,18 +231,18 @@ namespace CSharpScript.Game.Module.Audio
 		})]
 		private Dictionary<string, EntityCooldownProbability.CooldownRecord> AudioEventCooldownTimeMapByNameInternal;
 
-		// Token: 0x0200C204 RID: 49668
+		// Token: 0x0200AC13 RID: 44051
 		[NullableContext(0)]
 		public class CooldownRecord
 		{
-			// Token: 0x1700A275 RID: 41589
-			// (get) Token: 0x06050556 RID: 329046 RVA: 0x0159ADCE File Offset: 0x01598FCE
-			// (set) Token: 0x06050557 RID: 329047 RVA: 0x0159ADD6 File Offset: 0x01598FD6
+			// Token: 0x17007A12 RID: 31250
+			// (get) Token: 0x06046AA3 RID: 289443 RVA: 0x015546E2 File Offset: 0x015528E2
+			// (set) Token: 0x06046AA4 RID: 289444 RVA: 0x015546EA File Offset: 0x015528EA
 			public double Time { get; set; }
 
-			// Token: 0x1700A276 RID: 41590
-			// (get) Token: 0x06050558 RID: 329048 RVA: 0x0159ADDF File Offset: 0x01598FDF
-			// (set) Token: 0x06050559 RID: 329049 RVA: 0x0159ADE7 File Offset: 0x01598FE7
+			// Token: 0x17007A13 RID: 31251
+			// (get) Token: 0x06046AA5 RID: 289445 RVA: 0x015546F3 File Offset: 0x015528F3
+			// (set) Token: 0x06046AA6 RID: 289446 RVA: 0x015546FB File Offset: 0x015528FB
 			public double Cooldown { get; set; }
 		}
 	}

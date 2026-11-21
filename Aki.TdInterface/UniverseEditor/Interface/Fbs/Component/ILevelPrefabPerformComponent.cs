@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020054E8 RID: 21736
+	// Token: 0x02005A6E RID: 23150
 	public struct ILevelPrefabPerformComponent : IFlatbufferObject
 	{
-		// Token: 0x1700A050 RID: 41040
-		// (get) Token: 0x06023DB1 RID: 146865 RVA: 0x004F5124 File Offset: 0x004F3324
+		// Token: 0x1700A88A RID: 43146
+		// (get) Token: 0x06025E6B RID: 155243 RVA: 0x00532248 File Offset: 0x00530448
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023DB2 RID: 146866 RVA: 0x004F5131 File Offset: 0x004F3331
+		// Token: 0x06025E6C RID: 155244 RVA: 0x00532255 File Offset: 0x00530455
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06023DB3 RID: 146867 RVA: 0x004F5138 File Offset: 0x004F3338
+		// Token: 0x06025E6D RID: 155245 RVA: 0x0053225C File Offset: 0x0053045C
 		public static ILevelPrefabPerformComponent GetRootAsILevelPrefabPerformComponent(ByteBuffer _bb)
 		{
 			return ILevelPrefabPerformComponent.GetRootAsILevelPrefabPerformComponent(_bb, default(ILevelPrefabPerformComponent));
 		}
 
-		// Token: 0x06023DB4 RID: 146868 RVA: 0x004F5154 File Offset: 0x004F3354
+		// Token: 0x06025E6E RID: 155246 RVA: 0x00532278 File Offset: 0x00530478
 		public static ILevelPrefabPerformComponent GetRootAsILevelPrefabPerformComponent(ByteBuffer _bb, ILevelPrefabPerformComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06023DB5 RID: 146869 RVA: 0x004F5171 File Offset: 0x004F3371
+		// Token: 0x06025E6F RID: 155247 RVA: 0x00532295 File Offset: 0x00530495
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06023DB6 RID: 146870 RVA: 0x004F5180 File Offset: 0x004F3380
+		// Token: 0x06025E70 RID: 155248 RVA: 0x005322A4 File Offset: 0x005304A4
 		public ILevelPrefabPerformComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A051 RID: 41041
-		// (get) Token: 0x06023DB7 RID: 146871 RVA: 0x004F5190 File Offset: 0x004F3390
+		// Token: 0x1700A88B RID: 43147
+		// (get) Token: 0x06025E71 RID: 155249 RVA: 0x005322B4 File Offset: 0x005304B4
 		public bool Disabled
 		{
 			get
@@ -59,7 +59,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023DB8 RID: 146872 RVA: 0x004F51D0 File Offset: 0x004F33D0
+		// Token: 0x06025E72 RID: 155250 RVA: 0x005322F4 File Offset: 0x005304F4
 		public ITowardEntityConfig? TowardEntity(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -70,8 +70,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new ITowardEntityConfig?(default(ITowardEntityConfig).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700A052 RID: 41042
-		// (get) Token: 0x06023DB9 RID: 146873 RVA: 0x004F5230 File Offset: 0x004F3430
+		// Token: 0x1700A88C RID: 43148
+		// (get) Token: 0x06025E73 RID: 155251 RVA: 0x00532354 File Offset: 0x00530554
 		public int TowardEntityLength
 		{
 			get
@@ -85,8 +85,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A053 RID: 41043
-		// (get) Token: 0x06023DBA RID: 146874 RVA: 0x004F525C File Offset: 0x004F345C
+		// Token: 0x1700A88D RID: 43149
+		// (get) Token: 0x06025E74 RID: 155252 RVA: 0x00532380 File Offset: 0x00530580
 		public ILevelPrefabParamsConfig? PrefabParams
 		{
 			get
@@ -100,7 +100,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023DBB RID: 146875 RVA: 0x004F52BC File Offset: 0x004F34BC
+		// Token: 0x06025E75 RID: 155253 RVA: 0x005323E0 File Offset: 0x005305E0
 		public IPrefabCompTransform? CompTransform(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -111,8 +111,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new IPrefabCompTransform?(default(IPrefabCompTransform).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x1700A054 RID: 41044
-		// (get) Token: 0x06023DBC RID: 146876 RVA: 0x004F5320 File Offset: 0x004F3520
+		// Token: 0x1700A88E RID: 43150
+		// (get) Token: 0x06025E76 RID: 155254 RVA: 0x00532444 File Offset: 0x00530644
 		public int CompTransformLength
 		{
 			get
@@ -126,8 +126,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A055 RID: 41045
-		// (get) Token: 0x06023DBD RID: 146877 RVA: 0x004F534C File Offset: 0x004F354C
+		// Token: 0x1700A88F RID: 43151
+		// (get) Token: 0x06025E77 RID: 155255 RVA: 0x00532470 File Offset: 0x00530670
 		public byte NullMask
 		{
 			get
@@ -141,7 +141,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023DBE RID: 146878 RVA: 0x004F5389 File Offset: 0x004F3589
+		// Token: 0x06025E78 RID: 155256 RVA: 0x005324AD File Offset: 0x005306AD
 		public static Offset<ILevelPrefabPerformComponent> CreateILevelPrefabPerformComponent(FlatBufferBuilder builder, bool Disabled = false, VectorOffset TowardEntityOffset = default(VectorOffset), Offset<ILevelPrefabParamsConfig> PrefabParamsOffset = default(Offset<ILevelPrefabParamsConfig>), VectorOffset CompTransformOffset = default(VectorOffset), byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -153,25 +153,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ILevelPrefabPerformComponent.EndILevelPrefabPerformComponent(builder);
 		}
 
-		// Token: 0x06023DBF RID: 146879 RVA: 0x004F53BD File Offset: 0x004F35BD
+		// Token: 0x06025E79 RID: 155257 RVA: 0x005324E1 File Offset: 0x005306E1
 		public static void StartILevelPrefabPerformComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x06023DC0 RID: 146880 RVA: 0x004F53C6 File Offset: 0x004F35C6
+		// Token: 0x06025E7A RID: 155258 RVA: 0x005324EA File Offset: 0x005306EA
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x06023DC1 RID: 146881 RVA: 0x004F53D1 File Offset: 0x004F35D1
+		// Token: 0x06025E7B RID: 155259 RVA: 0x005324F5 File Offset: 0x005306F5
 		public static void AddTowardEntity(FlatBufferBuilder builder, VectorOffset towardEntityOffset)
 		{
 			builder.AddOffset(1, towardEntityOffset.Value, 0);
 		}
 
-		// Token: 0x06023DC2 RID: 146882 RVA: 0x004F53E4 File Offset: 0x004F35E4
+		// Token: 0x06025E7C RID: 155260 RVA: 0x00532508 File Offset: 0x00530708
 		public static VectorOffset CreateTowardEntityVector(FlatBufferBuilder builder, Offset<ITowardEntityConfig>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -182,7 +182,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06023DC3 RID: 146883 RVA: 0x004F5424 File Offset: 0x004F3624
+		// Token: 0x06025E7D RID: 155261 RVA: 0x00532548 File Offset: 0x00530748
 		public static VectorOffset CreateTowardEntityVectorBlock(FlatBufferBuilder builder, Offset<ITowardEntityConfig>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -190,7 +190,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06023DC4 RID: 146884 RVA: 0x004F543E File Offset: 0x004F363E
+		// Token: 0x06025E7E RID: 155262 RVA: 0x00532562 File Offset: 0x00530762
 		public static VectorOffset CreateTowardEntityVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<ITowardEntityConfig>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -198,7 +198,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06023DC5 RID: 146885 RVA: 0x004F545C File Offset: 0x004F365C
+		// Token: 0x06025E7F RID: 155263 RVA: 0x00532580 File Offset: 0x00530780
 		public static VectorOffset CreateTowardEntityVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -206,25 +206,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06023DC6 RID: 146886 RVA: 0x004F5475 File Offset: 0x004F3675
+		// Token: 0x06025E80 RID: 155264 RVA: 0x00532599 File Offset: 0x00530799
 		public static void StartTowardEntityVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06023DC7 RID: 146887 RVA: 0x004F5480 File Offset: 0x004F3680
+		// Token: 0x06025E81 RID: 155265 RVA: 0x005325A4 File Offset: 0x005307A4
 		public static void AddPrefabParams(FlatBufferBuilder builder, Offset<ILevelPrefabParamsConfig> prefabParamsOffset)
 		{
 			builder.AddOffset(2, prefabParamsOffset.Value, 0);
 		}
 
-		// Token: 0x06023DC8 RID: 146888 RVA: 0x004F5490 File Offset: 0x004F3690
+		// Token: 0x06025E82 RID: 155266 RVA: 0x005325B4 File Offset: 0x005307B4
 		public static void AddCompTransform(FlatBufferBuilder builder, VectorOffset compTransformOffset)
 		{
 			builder.AddOffset(3, compTransformOffset.Value, 0);
 		}
 
-		// Token: 0x06023DC9 RID: 146889 RVA: 0x004F54A0 File Offset: 0x004F36A0
+		// Token: 0x06025E83 RID: 155267 RVA: 0x005325C4 File Offset: 0x005307C4
 		public static VectorOffset CreateCompTransformVector(FlatBufferBuilder builder, Offset<IPrefabCompTransform>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -235,7 +235,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06023DCA RID: 146890 RVA: 0x004F54E0 File Offset: 0x004F36E0
+		// Token: 0x06025E84 RID: 155268 RVA: 0x00532604 File Offset: 0x00530804
 		public static VectorOffset CreateCompTransformVectorBlock(FlatBufferBuilder builder, Offset<IPrefabCompTransform>[] data)
 		{
 			builder.StartVector(4, data.Length, 4);
@@ -243,7 +243,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06023DCB RID: 146891 RVA: 0x004F54FA File Offset: 0x004F36FA
+		// Token: 0x06025E85 RID: 155269 RVA: 0x0053261E File Offset: 0x0053081E
 		public static VectorOffset CreateCompTransformVectorBlock(FlatBufferBuilder builder, ArraySegment<Offset<IPrefabCompTransform>> data)
 		{
 			builder.StartVector(4, data.Count, 4);
@@ -251,7 +251,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06023DCC RID: 146892 RVA: 0x004F5518 File Offset: 0x004F3718
+		// Token: 0x06025E86 RID: 155270 RVA: 0x0053263C File Offset: 0x0053083C
 		public static VectorOffset CreateCompTransformVectorBlock(FlatBufferBuilder builder, IntPtr dataPtr, int sizeInBytes)
 		{
 			builder.StartVector(1, sizeInBytes, 1);
@@ -259,25 +259,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return builder.EndVector();
 		}
 
-		// Token: 0x06023DCD RID: 146893 RVA: 0x004F5531 File Offset: 0x004F3731
+		// Token: 0x06025E87 RID: 155271 RVA: 0x00532655 File Offset: 0x00530855
 		public static void StartCompTransformVector(FlatBufferBuilder builder, int numElems)
 		{
 			builder.StartVector(4, numElems, 4);
 		}
 
-		// Token: 0x06023DCE RID: 146894 RVA: 0x004F553C File Offset: 0x004F373C
+		// Token: 0x06025E88 RID: 155272 RVA: 0x00532660 File Offset: 0x00530860
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x06023DCF RID: 146895 RVA: 0x004F5547 File Offset: 0x004F3747
+		// Token: 0x06025E89 RID: 155273 RVA: 0x0053266B File Offset: 0x0053086B
 		public static Offset<ILevelPrefabPerformComponent> EndILevelPrefabPerformComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<ILevelPrefabPerformComponent>(builder.EndTable());
 		}
 
-		// Token: 0x06023DD0 RID: 146896 RVA: 0x004F5554 File Offset: 0x004F3754
+		// Token: 0x06025E8A RID: 155274 RVA: 0x00532678 File Offset: 0x00530878
 		public ILevelPrefabPerformComponentT UnPack()
 		{
 			ILevelPrefabPerformComponentT levelPrefabPerformComponentT = new ILevelPrefabPerformComponentT();
@@ -285,7 +285,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return levelPrefabPerformComponentT;
 		}
 
-		// Token: 0x06023DD1 RID: 146897 RVA: 0x004F5570 File Offset: 0x004F3770
+		// Token: 0x06025E8B RID: 155275 RVA: 0x00532694 File Offset: 0x00530894
 		public void UnPackTo(ILevelPrefabPerformComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -303,7 +303,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06023DD2 RID: 146898 RVA: 0x004F5674 File Offset: 0x004F3874
+		// Token: 0x06025E8C RID: 155276 RVA: 0x00532798 File Offset: 0x00530998
 		public static Offset<ILevelPrefabPerformComponent> Pack(FlatBufferBuilder builder, ILevelPrefabPerformComponentT _o)
 		{
 			if (_o == null)
@@ -334,7 +334,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ILevelPrefabPerformComponent.CreateILevelPrefabPerformComponent(builder, _o.Disabled, towardEntityOffset, prefabParamsOffset, compTransformOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400E7BF RID: 59327
+		// Token: 0x0400F3F0 RID: 62448
 		private Table __p;
 	}
 }

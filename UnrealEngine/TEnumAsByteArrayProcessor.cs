@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000058 RID: 88
+	// Token: 0x0200003D RID: 61
 	[Nullable(new byte[]
 	{
 		0,
@@ -12,7 +12,7 @@ namespace UnrealEngine
 	})]
 	public sealed class TEnumAsByteArrayProcessor<T> : PodBaseWithEqualityOperatorsArrayProcessor<TEnumAsByte<T>> where T : Enum
 	{
-		// Token: 0x060008EC RID: 2284 RVA: 0x00010CF1 File Offset: 0x0000EEF1
+		// Token: 0x06000871 RID: 2161 RVA: 0x0000D55D File Offset: 0x0000B75D
 		public TEnumAsByteArrayProcessor()
 		{
 			this.HasGetTypeHash = true;

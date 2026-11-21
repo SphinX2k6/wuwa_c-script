@@ -5,13 +5,13 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.SeekTrace
 {
-	// Token: 0x02006A60 RID: 27232
+	// Token: 0x02005BBD RID: 23485
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SeekTraceModel : ModelBase
 	{
-		// Token: 0x1700991B RID: 39195
-		// (get) Token: 0x06043B40 RID: 277312 RVA: 0x01091E61 File Offset: 0x01090061
+		// Token: 0x17006E00 RID: 28160
+		// (get) Token: 0x06039B8E RID: 236430 RVA: 0x01036695 File Offset: 0x01034895
 		[Nullable(1)]
 		public static SeekTraceModel Instance
 		{
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace
 			}
 		}
 
-		// Token: 0x06043B41 RID: 277313 RVA: 0x01091E68 File Offset: 0x01090068
+		// Token: 0x06039B8F RID: 236431 RVA: 0x0103669C File Offset: 0x0103489C
 		[NullableContext(1)]
 		public static SeekTraceModel GetOrCreateInstance()
 		{
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace
 			return SeekTraceModel._Instance;
 		}
 
-		// Token: 0x06043B42 RID: 277314 RVA: 0x01091E7C File Offset: 0x0109007C
+		// Token: 0x06039B90 RID: 236432 RVA: 0x010366B0 File Offset: 0x010348B0
 		public static bool CreateInstance()
 		{
 			if (SeekTraceModel._Instance != null)
@@ -44,60 +44,60 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace
 			return true;
 		}
 
-		// Token: 0x06043B43 RID: 277315 RVA: 0x01091E92 File Offset: 0x01090092
+		// Token: 0x06039B91 RID: 236433 RVA: 0x010366C6 File Offset: 0x010348C6
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06043B44 RID: 277316 RVA: 0x01091E94 File Offset: 0x01090094
+		// Token: 0x06039B92 RID: 236434 RVA: 0x010366C8 File Offset: 0x010348C8
 		public static void ResetStaticDefaultValue()
 		{
 			SeekTraceModel._Instance = null;
 		}
 
-		// Token: 0x06043B45 RID: 277317 RVA: 0x01091E9C File Offset: 0x0109009C
+		// Token: 0x06039B93 RID: 236435 RVA: 0x010366D0 File Offset: 0x010348D0
 		static SeekTraceModel()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SeekTraceModel.CreateStaticDefaultValue), new Action(SeekTraceModel.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040235D0 RID: 144848
+		// Token: 0x0401E7C2 RID: 124866
 		public bool IsGameFinish;
 
-		// Token: 0x040235D1 RID: 144849
+		// Token: 0x0401E7C3 RID: 124867
 		public bool GameFinishResult;
 
-		// Token: 0x040235D2 RID: 144850
+		// Token: 0x0401E7C4 RID: 124868
 		public ITraceTracing Config;
 
-		// Token: 0x040235D3 RID: 144851
+		// Token: 0x0401E7C5 RID: 124869
 		public int AddStep;
 
-		// Token: 0x040235D4 RID: 144852
+		// Token: 0x0401E7C6 RID: 124870
 		public int PanelWidth;
 
-		// Token: 0x040235D5 RID: 144853
+		// Token: 0x0401E7C7 RID: 124871
 		public int PanelHeight;
 
-		// Token: 0x040235D6 RID: 144854
+		// Token: 0x0401E7C8 RID: 124872
 		public int ResetTimes;
 
-		// Token: 0x040235D7 RID: 144855
+		// Token: 0x0401E7C9 RID: 124873
 		public bool RemainUiAfterCompletion;
 
-		// Token: 0x040235D8 RID: 144856
+		// Token: 0x0401E7CA RID: 124874
 		public int CurrentInteractEntityId = -1;
 
-		// Token: 0x040235D9 RID: 144857
+		// Token: 0x0401E7CB RID: 124875
 		public ETraceTracingImageType IconType = ETraceTracingImageType.Type1;
 
-		// Token: 0x040235DA RID: 144858
+		// Token: 0x0401E7CC RID: 124876
 		public Action<bool> OnSeekTraceFinish;
 
-		// Token: 0x040235DB RID: 144859
+		// Token: 0x0401E7CD RID: 124877
 		public int StepLimit;
 
-		// Token: 0x040235DC RID: 144860
+		// Token: 0x0401E7CE RID: 124878
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,19 +105,19 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace
 		})]
 		public List<SeekTraceItemData> ItemDataList;
 
-		// Token: 0x040235DD RID: 144861
+		// Token: 0x0401E7CF RID: 124879
 		public List<bool> EnableGridList;
 
-		// Token: 0x040235DE RID: 144862
+		// Token: 0x0401E7D0 RID: 124880
 		public SeekTraceItemData SelectedItem;
 
-		// Token: 0x040235DF RID: 144863
+		// Token: 0x0401E7D1 RID: 124881
 		public int[] SelectedStartPosition;
 
-		// Token: 0x040235E0 RID: 144864
+		// Token: 0x0401E7D2 RID: 124882
 		public HashSet<int> SelectedStartFilledIndexSet;
 
-		// Token: 0x040235E1 RID: 144865
+		// Token: 0x0401E7D3 RID: 124883
 		[Nullable(new byte[]
 		{
 			2,
@@ -125,7 +125,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace
 		})]
 		public Dictionary<int, SeekTraceItemData> IndexToItemMap;
 
-		// Token: 0x040235E2 RID: 144866
+		// Token: 0x0401E7D4 RID: 124884
 		[Nullable(new byte[]
 		{
 			2,
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace
 		})]
 		public Dictionary<int, HashSet<SeekTraceItemData>> PreSelectedIndexToItemsMap;
 
-		// Token: 0x040235E3 RID: 144867
+		// Token: 0x0401E7D5 RID: 124885
 		[Nullable(new byte[]
 		{
 			2,
@@ -143,7 +143,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace
 		})]
 		public Dictionary<SeekTraceItemData, HashSet<int>> ItemToPreSelectedIndexSetMap;
 
-		// Token: 0x040235E4 RID: 144868
+		// Token: 0x0401E7D6 RID: 124886
 		[Nullable(new byte[]
 		{
 			2,
@@ -151,7 +151,7 @@ namespace CSharpScript.Game.LevelGamePlay.SeekTrace
 		})]
 		public Dictionary<int, SeekTraceItemData> MainItemMap;
 
-		// Token: 0x040235E5 RID: 144869
+		// Token: 0x0401E7D7 RID: 124887
 		private static SeekTraceModel _Instance;
 	}
 }

@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C31 RID: 3121
+	// Token: 0x02000D04 RID: 3332
 	public class ITimelineTrackControlData
 	{
-		// Token: 0x06004779 RID: 18297 RVA: 0x000B403A File Offset: 0x000B223A
-		[NullableContext(1)]
+		// Token: 0x06004BE9 RID: 19433 RVA: 0x000BE3EA File Offset: 0x000BC5EA
 		public static ITimelineTrackControlData Create(ITimelineTrackControlData? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170014D4 RID: 5332
-		// (get) Token: 0x0600477A RID: 18298 RVA: 0x000B4059 File Offset: 0x000B2259
+		// Token: 0x170015DC RID: 5596
+		// (get) Token: 0x06004BEA RID: 19434 RVA: 0x000BE409 File Offset: 0x000BC609
 		public virtual ETrackControlMode Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400289A RID: 10394
+		// Token: 0x04002AEF RID: 10991
 		private ITimelineTrackControlData Instance;
 	}
 }

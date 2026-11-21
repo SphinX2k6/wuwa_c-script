@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02005F2E RID: 24366
+	// Token: 0x02006572 RID: 25970
 	public enum ECameraShakeType : byte
 	{
-		// Token: 0x0400FC68 RID: 64616
+		// Token: 0x040109DE RID: 68062
 		Constant,
-		// Token: 0x0400FC69 RID: 64617
+		// Token: 0x040109DF RID: 68063
 		LinearOverRange
 	}
 }

@@ -5,19 +5,19 @@ using System.Text.Json.Serialization;
 
 namespace CSharpScript.Game.Module.Sheriff
 {
-	// Token: 0x02004C33 RID: 19507
+	// Token: 0x02003BE4 RID: 15332
 	[NullableContext(1)]
 	[JsonConverter(typeof(SheriffQuestionJsonConfigConverter))]
 	public interface ISheriffQuestionJsonConfig
 	{
-		// Token: 0x17007C90 RID: 31888
-		// (get) Token: 0x06032786 RID: 206726
-		// (set) Token: 0x06032787 RID: 206727
+		// Token: 0x1700503A RID: 20538
+		// (get) Token: 0x06027539 RID: 161081
+		// (set) Token: 0x0602753A RID: 161082
 		int QuestionId { get; set; }
 
-		// Token: 0x17007C91 RID: 31889
-		// (get) Token: 0x06032788 RID: 206728
-		// (set) Token: 0x06032789 RID: 206729
+		// Token: 0x1700503B RID: 20539
+		// (get) Token: 0x0602753B RID: 161083
+		// (set) Token: 0x0602753C RID: 161084
 		List<ISheriffQuestionResultJsonConfig> ResultConfigs { get; set; }
 	}
 }

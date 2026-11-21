@@ -6,32 +6,32 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200268B RID: 9867
+	// Token: 0x020007C0 RID: 1984
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Renderer.KuroCaptureEventManager")]
 	[UnrealStructLayout(64, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 64)]
 	public class UKuroCaptureEventManager : UObject, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060249FC RID: 150012 RVA: 0x003638F2 File Offset: 0x00361AF2
+		// Token: 0x0600ABC7 RID: 43975 RVA: 0x000FD579 File Offset: 0x000FB779
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UKuroCaptureEventManager._ClassPtr;
 		}
 
-		// Token: 0x060249FD RID: 150013 RVA: 0x00363900 File Offset: 0x00361B00
+		// Token: 0x0600ABC8 RID: 43976 RVA: 0x000FD588 File Offset: 0x000FB788
 		public UKuroCaptureEventManager() : this(BuiltinUtils.AllocNativeUObject(UKuroCaptureEventManager.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060249FE RID: 150014 RVA: 0x00363928 File Offset: 0x00361B28
+		// Token: 0x0600ABC9 RID: 43977 RVA: 0x000FD5B0 File Offset: 0x000FB7B0
 		public UKuroCaptureEventManager(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UKuroCaptureEventManager.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17008D37 RID: 36151
-		// (get) Token: 0x060249FF RID: 150015 RVA: 0x0036395C File Offset: 0x00361B5C
-		// (set) Token: 0x06024A00 RID: 150016 RVA: 0x00363995 File Offset: 0x00361B95
+		// Token: 0x17001FFD RID: 8189
+		// (get) Token: 0x0600ABCA RID: 43978 RVA: 0x000FD5E4 File Offset: 0x000FB7E4
+		// (set) Token: 0x0600ABCB RID: 43979 RVA: 0x000FD61D File Offset: 0x000FB81D
 		public FOnSceneColorCapturedDelegate OnSceneColorCaptured
 		{
 			get
@@ -50,41 +50,41 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06024A01 RID: 150017 RVA: 0x003639B6 File Offset: 0x00361BB6
+		// Token: 0x0600ABCC RID: 43980 RVA: 0x000FD63E File Offset: 0x000FB83E
 		[NullableContext(2)]
 		public static UKuroCaptureEventManager Get()
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<UKuroCaptureEventManager>(UKuroCaptureEventManager.__Get_Internal());
 		}
 
-		// Token: 0x06024A02 RID: 150018
+		// Token: 0x0600ABCD RID: 43981
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __Get_Internal();
 
-		// Token: 0x06024A03 RID: 150019 RVA: 0x003639C2 File Offset: 0x00361BC2
+		// Token: 0x0600ABCE RID: 43982 RVA: 0x000FD64A File Offset: 0x000FB84A
 		static UKuroCaptureEventManager()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Renderer.KuroCaptureEventManager");
 		}
 
-		// Token: 0x06024A04 RID: 150020 RVA: 0x003639D0 File Offset: 0x00361BD0
+		// Token: 0x0600ABCF RID: 43983 RVA: 0x000FD658 File Offset: 0x000FB858
 		protected UKuroCaptureEventManager(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04013B12 RID: 80658
+		// Token: 0x040049DD RID: 18909
 		public new const string __ObjectPath = "/Script/Renderer.KuroCaptureEventManager";
 
-		// Token: 0x04013B13 RID: 80659
+		// Token: 0x040049DE RID: 18910
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04013B14 RID: 80660
+		// Token: 0x040049DF RID: 18911
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04013B15 RID: 80661
+		// Token: 0x040049E0 RID: 18912
 		internal static int __PropertyOffset_OnSceneColorCaptured;
 
-		// Token: 0x04013B16 RID: 80662
+		// Token: 0x040049E1 RID: 18913
 		[Nullable(2)]
 		private FOnSceneColorCapturedDelegate _OnSceneColorCaptured;
 	}

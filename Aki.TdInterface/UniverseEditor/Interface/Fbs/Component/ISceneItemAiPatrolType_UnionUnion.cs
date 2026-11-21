@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020058B3 RID: 22707
+	// Token: 0x02005EC0 RID: 24256
 	public class ISceneItemAiPatrolType_UnionUnion
 	{
-		// Token: 0x1700AA02 RID: 43522
-		// (get) Token: 0x060264F0 RID: 156912 RVA: 0x00547C35 File Offset: 0x00545E35
-		// (set) Token: 0x060264F1 RID: 156913 RVA: 0x00547C3D File Offset: 0x00545E3D
+		// Token: 0x1700B332 RID: 45874
+		// (get) Token: 0x06028A52 RID: 166482 RVA: 0x0058E781 File Offset: 0x0058C981
+		// (set) Token: 0x06028A53 RID: 166483 RVA: 0x0058E789 File Offset: 0x0058C989
 		public ISceneItemAiPatrolType_Union Type { get; set; }
 
-		// Token: 0x1700AA03 RID: 43523
-		// (get) Token: 0x060264F2 RID: 156914 RVA: 0x00547C46 File Offset: 0x00545E46
-		// (set) Token: 0x060264F3 RID: 156915 RVA: 0x00547C4E File Offset: 0x00545E4E
+		// Token: 0x1700B333 RID: 45875
+		// (get) Token: 0x06028A54 RID: 166484 RVA: 0x0058E792 File Offset: 0x0058C992
+		// (set) Token: 0x06028A55 RID: 166485 RVA: 0x0058E79A File Offset: 0x0058C99A
 		public object Value { get; set; }
 
-		// Token: 0x060264F4 RID: 156916 RVA: 0x00547C57 File Offset: 0x00545E57
+		// Token: 0x06028A56 RID: 166486 RVA: 0x0058E7A3 File Offset: 0x0058C9A3
 		public ISceneItemAiPatrolType_UnionUnion()
 		{
 			this.Type = ISceneItemAiPatrolType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060264F5 RID: 156917 RVA: 0x00547C6D File Offset: 0x00545E6D
+		// Token: 0x06028A57 RID: 166487 RVA: 0x0058E7B9 File Offset: 0x0058C9B9
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060264F6 RID: 156918 RVA: 0x00547C7F File Offset: 0x00545E7F
+		// Token: 0x06028A58 RID: 166488 RVA: 0x0058E7CB File Offset: 0x0058C9CB
 		public ISceneItemAiPatrolTypeT AsISceneItemAiPatrolType()
 		{
 			return this.As<ISceneItemAiPatrolTypeT>();
 		}
 
-		// Token: 0x060264F7 RID: 156919 RVA: 0x00547C87 File Offset: 0x00545E87
+		// Token: 0x06028A59 RID: 166489 RVA: 0x0058E7D3 File Offset: 0x0058C9D3
 		public static ISceneItemAiPatrolType_UnionUnion FromISceneItemAiPatrolType(ISceneItemAiPatrolTypeT _isceneitemaipatroltype)
 		{
 			return new ISceneItemAiPatrolType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060264F8 RID: 156920 RVA: 0x00547C9C File Offset: 0x00545E9C
+		// Token: 0x06028A5A RID: 166490 RVA: 0x0058E7E8 File Offset: 0x0058C9E8
 		public ISceneItemAiPatrolByGameTimeT AsISceneItemAiPatrolByGameTime()
 		{
 			return this.As<ISceneItemAiPatrolByGameTimeT>();
 		}
 
-		// Token: 0x060264F9 RID: 156921 RVA: 0x00547CA4 File Offset: 0x00545EA4
+		// Token: 0x06028A5B RID: 166491 RVA: 0x0058E7F0 File Offset: 0x0058C9F0
 		public static ISceneItemAiPatrolType_UnionUnion FromISceneItemAiPatrolByGameTime(ISceneItemAiPatrolByGameTimeT _isceneitemaipatrolbygametime)
 		{
 			return new ISceneItemAiPatrolType_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060264FA RID: 156922 RVA: 0x00547CBC File Offset: 0x00545EBC
+		// Token: 0x06028A5C RID: 166492 RVA: 0x0058E808 File Offset: 0x0058CA08
 		public static int Pack(FlatBufferBuilder builder, ISceneItemAiPatrolType_UnionUnion _o)
 		{
 			ISceneItemAiPatrolType_Union type = _o.Type;

@@ -12,7 +12,7 @@ using UnrealEngine;
 public sealed class GameplayTagRuntimeTable
 {
 	// Token: 0x1700000C RID: 12
-	// (get) Token: 0x0600001D RID: 29 RVA: 0x0005A64B File Offset: 0x0005884B
+	// (get) Token: 0x0600001D RID: 29 RVA: 0x0005DEC7 File Offset: 0x0005C0C7
 	public IReadOnlyDictionary<int, int> TagId2UglyTagIdMap
 	{
 		get
@@ -21,7 +21,7 @@ public sealed class GameplayTagRuntimeTable
 		}
 	}
 
-	// Token: 0x0600001E RID: 30 RVA: 0x0005A653 File Offset: 0x00058853
+	// Token: 0x0600001E RID: 30 RVA: 0x0005DECF File Offset: 0x0005C0CF
 	public GameplayTagRuntimeTable()
 	{
 		this.EUglyGameplayTagId = new GameplayTagIdLookup(this, false);
@@ -29,7 +29,7 @@ public sealed class GameplayTagRuntimeTable
 		this.ParentTagIdMap = new GameplayTagRuntimeTable.ParentTagIdView();
 	}
 
-	// Token: 0x0600001F RID: 31 RVA: 0x0005A68C File Offset: 0x0005888C
+	// Token: 0x0600001F RID: 31 RVA: 0x0005DF08 File Offset: 0x0005C108
 	public bool TryGetTagId(string tagName, bool allowOriginalNameRemap, out int tagId)
 	{
 		tagId = UGASBPLibrary.FnvHash(tagName);
@@ -56,11 +56,11 @@ public sealed class GameplayTagRuntimeTable
 	// Token: 0x0400000E RID: 14
 	public readonly IReadOnlyDictionary<int, int> ParentTagIdMap;
 
-	// Token: 0x020011EE RID: 4590
+	// Token: 0x02001327 RID: 4903
 	[NullableContext(0)]
 	private sealed class ParentTagIdView : IReadOnlyDictionary<int, int>, IEnumerable<KeyValuePair<int, int>>, IEnumerable, IReadOnlyCollection<KeyValuePair<int, int>>
 	{
-		// Token: 0x17003F57 RID: 16215
+		// Token: 0x170042C7 RID: 17095
 		public int this[int key]
 		{
 			get
@@ -80,31 +80,31 @@ public sealed class GameplayTagRuntimeTable
 			}
 		}
 
-		// Token: 0x0600EBE9 RID: 60393 RVA: 0x0034E887 File Offset: 0x0034CA87
+		// Token: 0x0600F974 RID: 63860 RVA: 0x00379BEB File Offset: 0x00377DEB
 		public bool TryGetValue(int key, out int value)
 		{
 			return GameplayTagDefine.TryGetParentTagId(key, out value);
 		}
 
-		// Token: 0x0600EBEA RID: 60394 RVA: 0x0034E890 File Offset: 0x0034CA90
+		// Token: 0x0600F975 RID: 63861 RVA: 0x00379BF4 File Offset: 0x00377DF4
 		public bool ContainsKey(int key)
 		{
 			int num;
 			return this.TryGetValue(key, out num);
 		}
 
-		// Token: 0x17003F58 RID: 16216
-		// (get) Token: 0x0600EBEB RID: 60395 RVA: 0x0034E8A6 File Offset: 0x0034CAA6
+		// Token: 0x170042C8 RID: 17096
+		// (get) Token: 0x0600F976 RID: 63862 RVA: 0x00379C0A File Offset: 0x00377E0A
 		public int Count
 		{
 			get
 			{
-				return 14442;
+				return 14893;
 			}
 		}
 
-		// Token: 0x17003F59 RID: 16217
-		// (get) Token: 0x0600EBEC RID: 60396 RVA: 0x0034E8B0 File Offset: 0x0034CAB0
+		// Token: 0x170042C9 RID: 17097
+		// (get) Token: 0x0600F977 RID: 63863 RVA: 0x00379C14 File Offset: 0x00377E14
 		[Nullable(1)]
 		public IEnumerable<int> Keys
 		{
@@ -116,8 +116,8 @@ public sealed class GameplayTagRuntimeTable
 			}
 		}
 
-		// Token: 0x17003F5A RID: 16218
-		// (get) Token: 0x0600EBED RID: 60397 RVA: 0x0034E8E0 File Offset: 0x0034CAE0
+		// Token: 0x170042CA RID: 17098
+		// (get) Token: 0x0600F978 RID: 63864 RVA: 0x00379C44 File Offset: 0x00377E44
 		[Nullable(1)]
 		public IEnumerable<int> Values
 		{
@@ -129,7 +129,7 @@ public sealed class GameplayTagRuntimeTable
 			}
 		}
 
-		// Token: 0x0600EBEE RID: 60398 RVA: 0x0034E910 File Offset: 0x0034CB10
+		// Token: 0x0600F979 RID: 63865 RVA: 0x00379C74 File Offset: 0x00377E74
 		[return: Nullable(new byte[]
 		{
 			1,
@@ -141,7 +141,7 @@ public sealed class GameplayTagRuntimeTable
 			return Enumerable.Empty<KeyValuePair<int, int>>().GetEnumerator();
 		}
 
-		// Token: 0x0600EBEF RID: 60399 RVA: 0x0034E943 File Offset: 0x0034CB43
+		// Token: 0x0600F97A RID: 63866 RVA: 0x00379CA7 File Offset: 0x00377EA7
 		[NullableContext(1)]
 		IEnumerator IEnumerable.GetEnumerator()
 		{

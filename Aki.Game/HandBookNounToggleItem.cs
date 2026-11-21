@@ -5,12 +5,12 @@ using Aki.Config;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001E3C RID: 7740
+// Token: 0x020012FE RID: 4862
 [NullableContext(2)]
 [Nullable(0)]
 internal class HandBookNounToggleItem : UiPanelBase
 {
-	// Token: 0x0600EB42 RID: 60226 RVA: 0x0037C494 File Offset: 0x0037A694
+	// Token: 0x0600BF61 RID: 48993 RVA: 0x00388134 File Offset: 0x00386334
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,14 +29,14 @@ internal class HandBookNounToggleItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600EB43 RID: 60227 RVA: 0x0037C569 File Offset: 0x0037A769
+	// Token: 0x0600BF62 RID: 48994 RVA: 0x00388209 File Offset: 0x00386409
 	protected override void OnStart()
 	{
 		this.ItemGrid = new SmallItemGrid();
 		this.ItemGrid.Initialize(base.GetItem(0).GetOwner());
 	}
 
-	// Token: 0x0600EB44 RID: 60228 RVA: 0x0037C590 File Offset: 0x0037A790
+	// Token: 0x0600BF63 RID: 48995 RVA: 0x00388230 File Offset: 0x00386430
 	[NullableContext(1)]
 	public void Refresh(HandBookCommonItemData data, bool isSelect)
 	{
@@ -61,7 +61,7 @@ internal class HandBookNounToggleItem : UiPanelBase
 		base.GetExtendToggle(5).SetToggleState(isSelect ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x0600EB45 RID: 60229 RVA: 0x0037C6BC File Offset: 0x0037A8BC
+	// Token: 0x0600BF64 RID: 48996 RVA: 0x0038835C File Offset: 0x0038655C
 	public bool CheckIsCanShowChildList(int type)
 	{
 		IReadOnlyList<NounHandBook> nounHandBookConfigList = HandBookConfig.Instance.GetNounHandBookConfigList(type);
@@ -79,7 +79,7 @@ internal class HandBookNounToggleItem : UiPanelBase
 		return result;
 	}
 
-	// Token: 0x0600EB46 RID: 60230 RVA: 0x0037C714 File Offset: 0x0037A914
+	// Token: 0x0600BF65 RID: 48997 RVA: 0x003883B4 File Offset: 0x003865B4
 	public bool CheckNewState(int type)
 	{
 		IReadOnlyList<NounHandBook> nounHandBookConfigList = HandBookConfig.Instance.GetNounHandBookConfigList(type);
@@ -98,7 +98,7 @@ internal class HandBookNounToggleItem : UiPanelBase
 		return result;
 	}
 
-	// Token: 0x0600EB47 RID: 60231 RVA: 0x0037C77C File Offset: 0x0037A97C
+	// Token: 0x0600BF66 RID: 48998 RVA: 0x0038841C File Offset: 0x0038661C
 	public void RefreshNewState()
 	{
 		if (this.HandBookCommonItemData == null)
@@ -109,7 +109,7 @@ internal class HandBookNounToggleItem : UiPanelBase
 		base.GetItem(3).SetUIActive(uiactive);
 	}
 
-	// Token: 0x0600EB48 RID: 60232 RVA: 0x0037C7C0 File Offset: 0x0037A9C0
+	// Token: 0x0600BF67 RID: 48999 RVA: 0x00388460 File Offset: 0x00386660
 	private void OnToggleClicked(EToggleState state)
 	{
 		bool flag = state == EToggleState.ETT_Checked;
@@ -128,19 +128,19 @@ internal class HandBookNounToggleItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600EB49 RID: 60233 RVA: 0x0037C83E File Offset: 0x0037AA3E
+	// Token: 0x0600BF68 RID: 49000 RVA: 0x003884DE File Offset: 0x003866DE
 	[NullableContext(1)]
 	public void BindToggleCallback(TNounToggleFunction toggleFunction)
 	{
 		this.OnToggleCallback = toggleFunction;
 	}
 
-	// Token: 0x04006D29 RID: 27945
+	// Token: 0x04006E0A RID: 28170
 	private TNounToggleFunction OnToggleCallback;
 
-	// Token: 0x04006D2A RID: 27946
+	// Token: 0x04006E0B RID: 28171
 	private SmallItemGrid ItemGrid;
 
-	// Token: 0x04006D2B RID: 27947
+	// Token: 0x04006E0C RID: 28172
 	private HandBookCommonItemData HandBookCommonItemData;
 }

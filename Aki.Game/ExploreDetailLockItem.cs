@@ -7,11 +7,11 @@ using CSharpScript.Game.Module.SkipInterface;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02001AB8 RID: 6840
+// Token: 0x02000F77 RID: 3959
 public class ExploreDetailLockItem : UiPanelBase
 {
-	// Token: 0x170010C4 RID: 4292
-	// (get) Token: 0x0600CAB8 RID: 51896 RVA: 0x002E2CA3 File Offset: 0x002E0EA3
+	// Token: 0x170010E9 RID: 4329
+	// (get) Token: 0x06009EC9 RID: 40649 RVA: 0x002EDDF3 File Offset: 0x002EBFF3
 	public int MarkId
 	{
 		get
@@ -20,7 +20,7 @@ public class ExploreDetailLockItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600CAB9 RID: 51897 RVA: 0x002E2CAC File Offset: 0x002E0EAC
+	// Token: 0x06009ECA RID: 40650 RVA: 0x002EDDFC File Offset: 0x002EBFFC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -43,7 +43,7 @@ public class ExploreDetailLockItem : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600CABA RID: 51898 RVA: 0x002E2D74 File Offset: 0x002E0F74
+	// Token: 0x06009ECB RID: 40651 RVA: 0x002EDEC4 File Offset: 0x002EC0C4
 	public void RefreshExternalByData(int markId)
 	{
 		this.MarkIdInner = markId;
@@ -65,14 +65,14 @@ public class ExploreDetailLockItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600CABB RID: 51899 RVA: 0x002E2DFE File Offset: 0x002E0FFE
+	// Token: 0x06009ECC RID: 40652 RVA: 0x002EDF4E File Offset: 0x002EC14E
 	public void Reset(int? markId = null)
 	{
 		this.MarkIdInner = markId.GetValueOrDefault();
 		this.RootItem.SetUIActive(false);
 	}
 
-	// Token: 0x0600CABC RID: 51900 RVA: 0x002E2E1C File Offset: 0x002E101C
+	// Token: 0x06009ECD RID: 40653 RVA: 0x002EDF6C File Offset: 0x002EC16C
 	private void OnClickFunctionButton()
 	{
 		MapMark? configMark = MapConfig.Instance.GetConfigMark(this.MarkIdInner);
@@ -82,17 +82,17 @@ public class ExploreDetailLockItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x04005D54 RID: 23892
+	// Token: 0x04005E23 RID: 24099
 	private int MarkIdInner;
 
-	// Token: 0x0200800C RID: 32780
+	// Token: 0x0200719B RID: 29083
 	private enum ELockComponent
 	{
-		// Token: 0x04029CD7 RID: 171223
+		// Token: 0x04025011 RID: 151569
 		LockSprite,
-		// Token: 0x04029CD8 RID: 171224
+		// Token: 0x04025012 RID: 151570
 		LockDescriptionText,
-		// Token: 0x04029CD9 RID: 171225
+		// Token: 0x04025013 RID: 151571
 		FunctionButton
 	}
 }

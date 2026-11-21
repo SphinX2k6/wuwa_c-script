@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000785 RID: 1925
+	// Token: 0x0200079F RID: 1951
 	public class ConfigQuestReviewTreeById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002D2F RID: 11567 RVA: 0x00158864 File Offset: 0x00156A64
+		// Token: 0x06002DCB RID: 11723 RVA: 0x0015F770 File Offset: 0x0015D970
 		static ConfigQuestReviewTreeById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigQuestReviewTreeById.CreateStaticDefaultValue), new Action(ConfigQuestReviewTreeById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002D30 RID: 11568 RVA: 0x00158884 File Offset: 0x00156A84
+		// Token: 0x06002DCC RID: 11724 RVA: 0x0015F790 File Offset: 0x0015D990
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigQuestReviewTreeById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002D31 RID: 11569 RVA: 0x00158903 File Offset: 0x00156B03
+		// Token: 0x06002DCD RID: 11725 RVA: 0x0015F80F File Offset: 0x0015DA0F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigQuestReviewTreeById.LogPair = null;
 			ConfigQuestReviewTreeById.HandleId = 0;
 		}
 
-		// Token: 0x06002D32 RID: 11570 RVA: 0x00158911 File Offset: 0x00156B11
+		// Token: 0x06002DCE RID: 11726 RVA: 0x0015F81D File Offset: 0x0015DA1D
 		public static void Init()
 		{
 			ConfigQuestReviewTreeById.HandleId = ConfigCommon.InitDataStatement(ConfigQuestReviewTreeById.HandleId, "db_questreview.db", "select BinData from `QuestReviewTree` where Id=?");
 		}
 
-		// Token: 0x06002D33 RID: 11571 RVA: 0x0015892C File Offset: 0x00156B2C
+		// Token: 0x06002DCF RID: 11727 RVA: 0x0015F838 File Offset: 0x0015DA38
 		public static QuestReviewTree? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigQuestReviewTreeById.HandleId, ConfigQuestReviewTreeById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new QuestReviewTree?(rootAsQuestReviewTree);
 		}
 
-		// Token: 0x04003489 RID: 13449
+		// Token: 0x0400353F RID: 13631
 		private const string DB = "db_questreview.db";
 
-		// Token: 0x0400348A RID: 13450
+		// Token: 0x04003540 RID: 13632
 		private const string FILE = "j.剧情历程.xlsx";
 
-		// Token: 0x0400348B RID: 13451
+		// Token: 0x04003541 RID: 13633
 		private const string TABLE = "QuestReviewTree";
 
-		// Token: 0x0400348C RID: 13452
+		// Token: 0x04003542 RID: 13634
 		private const string COMMAND = "select BinData from `QuestReviewTree` where Id=?";
 
-		// Token: 0x0400348D RID: 13453
+		// Token: 0x04003543 RID: 13635
 		private const string KEY_PREFIX = "QuestReviewTreeById";
 
-		// Token: 0x0400348E RID: 13454
+		// Token: 0x04003544 RID: 13636
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400348F RID: 13455
+		// Token: 0x04003545 RID: 13637
 		private static int HandleId;
 	}
 }

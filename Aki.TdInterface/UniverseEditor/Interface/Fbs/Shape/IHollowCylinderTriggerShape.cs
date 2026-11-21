@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Shape
 {
-	// Token: 0x02003C1C RID: 15388
+	// Token: 0x02004028 RID: 16424
 	public struct IHollowCylinderTriggerShape : IFlatbufferObject
 	{
-		// Token: 0x170069DF RID: 27103
-		// (get) Token: 0x0601538D RID: 86925 RVA: 0x00312C54 File Offset: 0x00310E54
+		// Token: 0x17006F87 RID: 28551
+		// (get) Token: 0x06016883 RID: 92291 RVA: 0x003397DC File Offset: 0x003379DC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x0601538E RID: 86926 RVA: 0x00312C61 File Offset: 0x00310E61
+		// Token: 0x06016884 RID: 92292 RVA: 0x003397E9 File Offset: 0x003379E9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601538F RID: 86927 RVA: 0x00312C68 File Offset: 0x00310E68
+		// Token: 0x06016885 RID: 92293 RVA: 0x003397F0 File Offset: 0x003379F0
 		public static IHollowCylinderTriggerShape GetRootAsIHollowCylinderTriggerShape(ByteBuffer _bb)
 		{
 			return IHollowCylinderTriggerShape.GetRootAsIHollowCylinderTriggerShape(_bb, default(IHollowCylinderTriggerShape));
 		}
 
-		// Token: 0x06015390 RID: 86928 RVA: 0x00312C84 File Offset: 0x00310E84
+		// Token: 0x06016886 RID: 92294 RVA: 0x0033980C File Offset: 0x00337A0C
 		public static IHollowCylinderTriggerShape GetRootAsIHollowCylinderTriggerShape(ByteBuffer _bb, IHollowCylinderTriggerShape obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06015391 RID: 86929 RVA: 0x00312CA1 File Offset: 0x00310EA1
+		// Token: 0x06016887 RID: 92295 RVA: 0x00339829 File Offset: 0x00337A29
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06015392 RID: 86930 RVA: 0x00312CB0 File Offset: 0x00310EB0
+		// Token: 0x06016888 RID: 92296 RVA: 0x00339838 File Offset: 0x00337A38
 		public IHollowCylinderTriggerShape __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170069E0 RID: 27104
-		// (get) Token: 0x06015393 RID: 86931 RVA: 0x00312CC0 File Offset: 0x00310EC0
+		// Token: 0x17006F88 RID: 28552
+		// (get) Token: 0x06016889 RID: 92297 RVA: 0x00339848 File Offset: 0x00337A48
 		public ETriggerShape Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x170069E1 RID: 27105
-		// (get) Token: 0x06015394 RID: 86932 RVA: 0x00312CFC File Offset: 0x00310EFC
+		// Token: 0x17006F89 RID: 28553
+		// (get) Token: 0x0601688A RID: 92298 RVA: 0x00339884 File Offset: 0x00337A84
 		public IVectorInfo? Center
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x170069E2 RID: 27106
-		// (get) Token: 0x06015395 RID: 86933 RVA: 0x00312D5C File Offset: 0x00310F5C
+		// Token: 0x17006F8A RID: 28554
+		// (get) Token: 0x0601688B RID: 92299 RVA: 0x003398E4 File Offset: 0x00337AE4
 		public int Radius
 		{
 			get
@@ -93,8 +93,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x170069E3 RID: 27107
-		// (get) Token: 0x06015396 RID: 86934 RVA: 0x00312D98 File Offset: 0x00310F98
+		// Token: 0x17006F8B RID: 28555
+		// (get) Token: 0x0601688C RID: 92300 RVA: 0x00339920 File Offset: 0x00337B20
 		public int Height
 		{
 			get
@@ -108,8 +108,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x170069E4 RID: 27108
-		// (get) Token: 0x06015397 RID: 86935 RVA: 0x00312DD8 File Offset: 0x00310FD8
+		// Token: 0x17006F8C RID: 28556
+		// (get) Token: 0x0601688D RID: 92301 RVA: 0x00339960 File Offset: 0x00337B60
 		public int InnerRadius
 		{
 			get
@@ -123,7 +123,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			}
 		}
 
-		// Token: 0x06015398 RID: 86936 RVA: 0x00312E15 File Offset: 0x00311015
+		// Token: 0x0601688E RID: 92302 RVA: 0x0033999D File Offset: 0x00337B9D
 		public static Offset<IHollowCylinderTriggerShape> CreateIHollowCylinderTriggerShape(FlatBufferBuilder builder, ETriggerShape Type = ETriggerShape.Box, Offset<IVectorInfo> CenterOffset = default(Offset<IVectorInfo>), int Radius = 0, int Height = 0, int InnerRadius = 0)
 		{
 			builder.StartTable(5);
@@ -135,49 +135,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return IHollowCylinderTriggerShape.EndIHollowCylinderTriggerShape(builder);
 		}
 
-		// Token: 0x06015399 RID: 86937 RVA: 0x00312E49 File Offset: 0x00311049
+		// Token: 0x0601688F RID: 92303 RVA: 0x003399D1 File Offset: 0x00337BD1
 		public static void StartIHollowCylinderTriggerShape(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x0601539A RID: 86938 RVA: 0x00312E52 File Offset: 0x00311052
+		// Token: 0x06016890 RID: 92304 RVA: 0x003399DA File Offset: 0x00337BDA
 		public static void AddType(FlatBufferBuilder builder, ETriggerShape type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601539B RID: 86939 RVA: 0x00312E5D File Offset: 0x0031105D
+		// Token: 0x06016891 RID: 92305 RVA: 0x003399E5 File Offset: 0x00337BE5
 		public static void AddCenter(FlatBufferBuilder builder, Offset<IVectorInfo> centerOffset)
 		{
 			builder.AddOffset(1, centerOffset.Value, 0);
 		}
 
-		// Token: 0x0601539C RID: 86940 RVA: 0x00312E6D File Offset: 0x0031106D
+		// Token: 0x06016892 RID: 92306 RVA: 0x003399F5 File Offset: 0x00337BF5
 		public static void AddRadius(FlatBufferBuilder builder, int radius)
 		{
 			builder.AddInt(2, radius, 0);
 		}
 
-		// Token: 0x0601539D RID: 86941 RVA: 0x00312E78 File Offset: 0x00311078
+		// Token: 0x06016893 RID: 92307 RVA: 0x00339A00 File Offset: 0x00337C00
 		public static void AddHeight(FlatBufferBuilder builder, int height)
 		{
 			builder.AddInt(3, height, 0);
 		}
 
-		// Token: 0x0601539E RID: 86942 RVA: 0x00312E83 File Offset: 0x00311083
+		// Token: 0x06016894 RID: 92308 RVA: 0x00339A0B File Offset: 0x00337C0B
 		public static void AddInnerRadius(FlatBufferBuilder builder, int innerRadius)
 		{
 			builder.AddInt(4, innerRadius, 0);
 		}
 
-		// Token: 0x0601539F RID: 86943 RVA: 0x00312E8E File Offset: 0x0031108E
+		// Token: 0x06016895 RID: 92309 RVA: 0x00339A16 File Offset: 0x00337C16
 		public static Offset<IHollowCylinderTriggerShape> EndIHollowCylinderTriggerShape(FlatBufferBuilder builder)
 		{
 			return new Offset<IHollowCylinderTriggerShape>(builder.EndTable());
 		}
 
-		// Token: 0x060153A0 RID: 86944 RVA: 0x00312E9C File Offset: 0x0031109C
+		// Token: 0x06016896 RID: 92310 RVA: 0x00339A24 File Offset: 0x00337C24
 		public IHollowCylinderTriggerShapeT UnPack()
 		{
 			IHollowCylinderTriggerShapeT hollowCylinderTriggerShapeT = new IHollowCylinderTriggerShapeT();
@@ -185,7 +185,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return hollowCylinderTriggerShapeT;
 		}
 
-		// Token: 0x060153A1 RID: 86945 RVA: 0x00312EB8 File Offset: 0x003110B8
+		// Token: 0x06016897 RID: 92311 RVA: 0x00339A40 File Offset: 0x00337C40
 		public void UnPackTo(IHollowCylinderTriggerShapeT _o)
 		{
 			_o.Type = this.Type;
@@ -195,7 +195,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			_o.InnerRadius = this.InnerRadius;
 		}
 
-		// Token: 0x060153A2 RID: 86946 RVA: 0x00312F24 File Offset: 0x00311124
+		// Token: 0x06016898 RID: 92312 RVA: 0x00339AAC File Offset: 0x00337CAC
 		public static Offset<IHollowCylinderTriggerShape> Pack(FlatBufferBuilder builder, IHollowCylinderTriggerShapeT _o)
 		{
 			if (_o == null)
@@ -206,7 +206,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Shape
 			return IHollowCylinderTriggerShape.CreateIHollowCylinderTriggerShape(builder, _o.Type, centerOffset, _o.Radius, _o.Height, _o.InnerRadius);
 		}
 
-		// Token: 0x0400B208 RID: 45576
+		// Token: 0x0400BB93 RID: 48019
 		private Table __p;
 	}
 }

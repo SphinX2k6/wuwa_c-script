@@ -4,10 +4,10 @@ using Aki.Config;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001F09 RID: 7945
+// Token: 0x020013CB RID: 5067
 public class HonamiStoryWeaponTagItem : GridProxyAbstract<int>
 {
-	// Token: 0x0600F4A9 RID: 62633 RVA: 0x003B08E8 File Offset: 0x003AEAE8
+	// Token: 0x0600C8C8 RID: 51400 RVA: 0x003BC3DC File Offset: 0x003BA5DC
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -17,7 +17,7 @@ public class HonamiStoryWeaponTagItem : GridProxyAbstract<int>
 		};
 	}
 
-	// Token: 0x0600F4AA RID: 62634 RVA: 0x003B0924 File Offset: 0x003AEB24
+	// Token: 0x0600C8C9 RID: 51401 RVA: 0x003BC418 File Offset: 0x003BA618
 	public override void Refresh(int pluginId, bool isSelected, int gridIndex)
 	{
 		HonamiStoryPluginTag? pluginTag = HonamiStoryConfig.Instance.GetPluginTag(pluginId);
@@ -29,12 +29,12 @@ public class HonamiStoryWeaponTagItem : GridProxyAbstract<int>
 		base.GetSprite(0).SetColor(FColor.FromHex(pluginTag.Value.Color));
 	}
 
-	// Token: 0x02008516 RID: 34070
+	// Token: 0x0200769B RID: 30363
 	private enum EHonamiStoryWeaponTagItemComponent
 	{
-		// Token: 0x0402B4FA RID: 177402
+		// Token: 0x0402681E RID: 157726
 		BgSprite,
-		// Token: 0x0402B4FB RID: 177403
+		// Token: 0x0402681F RID: 157727
 		DescText
 	}
 }

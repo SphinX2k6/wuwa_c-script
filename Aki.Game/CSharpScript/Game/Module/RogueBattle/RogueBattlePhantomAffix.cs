@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -13,7 +12,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E80 RID: 20096
+	// Token: 0x02003E49 RID: 15945
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -22,7 +21,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 	})]
 	public class RogueBattlePhantomAffix : GridProxyAbstract<PhantomAffixInfo>
 	{
-		// Token: 0x06033B46 RID: 211782 RVA: 0x00C1C188 File Offset: 0x00C1A388
+		// Token: 0x060289B1 RID: 166321 RVA: 0x00B656AC File Offset: 0x00B638AC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,7 +38,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033B47 RID: 211783 RVA: 0x00C1C268 File Offset: 0x00C1A468
+		// Token: 0x060289B2 RID: 166322 RVA: 0x00B6578C File Offset: 0x00B6398C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RogueBattlePhantomAffix.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -50,13 +49,13 @@ namespace CSharpScript.Game.Module.RogueBattle
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033B48 RID: 211784 RVA: 0x00C1C2AB File Offset: 0x00C1A4AB
+		// Token: 0x060289B3 RID: 166323 RVA: 0x00B657CF File Offset: 0x00B639CF
 		private RogueBattleTokenElementWithCount CreateElementItem()
 		{
 			return new RogueBattleTokenElementWithCount();
 		}
 
-		// Token: 0x06033B49 RID: 211785 RVA: 0x00C1C2B2 File Offset: 0x00C1A4B2
+		// Token: 0x060289B4 RID: 166324 RVA: 0x00B657D6 File Offset: 0x00B639D6
 		public override void Refresh(PhantomAffixInfo data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -66,7 +65,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			this.RefreshAttrText();
 		}
 
-		// Token: 0x06033B4A RID: 211786 RVA: 0x00C1C2D4 File Offset: 0x00C1A4D4
+		// Token: 0x060289B5 RID: 166325 RVA: 0x00B657F8 File Offset: 0x00B639F8
 		public void RefreshAttrText()
 		{
 			if (this.Data == null)
@@ -102,7 +101,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			LguiUtil.Instance.SetLocalTextNew(text2, rogueResAffix.Value.AffixDesc, rogueResAffix.Value.AffixDescParam());
 		}
 
-		// Token: 0x06033B4B RID: 211787 RVA: 0x00C1C3FE File Offset: 0x00C1A5FE
+		// Token: 0x060289B6 RID: 166326 RVA: 0x00B65922 File Offset: 0x00B63B22
 		public void RefreshUnlock()
 		{
 			if (this.Data == null)
@@ -113,7 +112,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			base.GetSprite(4).SetUIActive(!this.Data.Isunlock);
 		}
 
-		// Token: 0x06033B4C RID: 211788 RVA: 0x00C1C43C File Offset: 0x00C1A63C
+		// Token: 0x060289B7 RID: 166327 RVA: 0x00B65960 File Offset: 0x00B63B60
 		public void RefreshLayout()
 		{
 			UUIText text = base.GetText(0);
@@ -130,7 +129,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			item.SetUIActive(!flag);
 		}
 
-		// Token: 0x06033B4D RID: 211789 RVA: 0x00C1C4D8 File Offset: 0x00C1A6D8
+		// Token: 0x060289B8 RID: 166328 RVA: 0x00B659FC File Offset: 0x00B63BFC
 		public void RefreshElement()
 		{
 			RogueBattlePhantomAffix.<>c__DisplayClass12_0 CS$<>8__locals1 = new RogueBattlePhantomAffix.<>c__DisplayClass12_0();
@@ -139,7 +138,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			{
 				return;
 			}
-			CS$<>8__locals1.elementList = RogueBattleUtils.ConvertElementUnitsToElementInfo(this.Data.ElementUnits.ToArray<ElementUnit>());
+			CS$<>8__locals1.elementList = RogueBattleUtils.ConvertElementUnitsToElementInfo(this.Data.ElementUnits);
 			this.ElementLayout.RefreshByData(CS$<>8__locals1.elementList, null, false);
 			this.AdaptationElementLayout.RefreshByData(CS$<>8__locals1.elementList, null, false);
 			UiAsyncTask task = new UiAsyncTask("RogueBattlePhantomAffix.RefreshElement", delegate()
@@ -154,20 +153,20 @@ namespace CSharpScript.Game.Module.RogueBattle
 			base.RunAsyncTask(task);
 		}
 
-		// Token: 0x06033B4E RID: 211790 RVA: 0x00C1C55C File Offset: 0x00C1A75C
+		// Token: 0x060289B9 RID: 166329 RVA: 0x00B65A7C File Offset: 0x00B63C7C
 		public void PlayComplete()
 		{
 			this.LevelSequencePlayer.PlayLevelSequenceByName("Complete", false, null, false);
 		}
 
-		// Token: 0x0401B717 RID: 112407
+		// Token: 0x040160EA RID: 90346
 		private const string COMPLETE = "Complete";
 
-		// Token: 0x0401B718 RID: 112408
+		// Token: 0x040160EB RID: 90347
 		[Nullable(2)]
 		public PhantomAffixInfo Data;
 
-		// Token: 0x0401B719 RID: 112409
+		// Token: 0x040160EC RID: 90348
 		[Nullable(new byte[]
 		{
 			2,
@@ -176,7 +175,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 		})]
 		public GenericLayout<RogueBattleTokenElementWithCount, IRogueBattleElementInfo> ElementLayout;
 
-		// Token: 0x0401B71A RID: 112410
+		// Token: 0x040160ED RID: 90349
 		[Nullable(new byte[]
 		{
 			2,
@@ -185,7 +184,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 		})]
 		public GenericLayout<RogueBattleTokenElementWithCount, IRogueBattleElementInfo> AdaptationElementLayout;
 
-		// Token: 0x0401B71B RID: 112411
+		// Token: 0x040160EE RID: 90350
 		[Nullable(2)]
 		public LevelSequencePlayer LevelSequencePlayer;
 	}

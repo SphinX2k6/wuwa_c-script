@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200041D RID: 1053
+	// Token: 0x02000433 RID: 1075
 	public class ConfigInfluenceById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060018B7 RID: 6327 RVA: 0x000E56CF File Offset: 0x000E38CF
+		// Token: 0x0600193B RID: 6459 RVA: 0x000EBE23 File Offset: 0x000EA023
 		static ConfigInfluenceById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigInfluenceById.CreateStaticDefaultValue), new Action(ConfigInfluenceById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060018B8 RID: 6328 RVA: 0x000E56F0 File Offset: 0x000E38F0
+		// Token: 0x0600193C RID: 6460 RVA: 0x000EBE44 File Offset: 0x000EA044
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigInfluenceById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060018B9 RID: 6329 RVA: 0x000E576F File Offset: 0x000E396F
+		// Token: 0x0600193D RID: 6461 RVA: 0x000EBEC3 File Offset: 0x000EA0C3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigInfluenceById.LogPair = null;
 			ConfigInfluenceById.HandleId = 0;
 		}
 
-		// Token: 0x060018BA RID: 6330 RVA: 0x000E577D File Offset: 0x000E397D
+		// Token: 0x0600193E RID: 6462 RVA: 0x000EBED1 File Offset: 0x000EA0D1
 		public static void Init()
 		{
 			ConfigInfluenceById.HandleId = ConfigCommon.InitDataStatement(ConfigInfluenceById.HandleId, "db_influence.db", "select BinData from `Influence` where Id=?");
 		}
 
-		// Token: 0x060018BB RID: 6331 RVA: 0x000E5798 File Offset: 0x000E3998
+		// Token: 0x0600193F RID: 6463 RVA: 0x000EBEEC File Offset: 0x000EA0EC
 		public static Influence? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigInfluenceById.HandleId, ConfigInfluenceById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new Influence?(rootAsInfluence);
 		}
 
-		// Token: 0x04001CAF RID: 7343
+		// Token: 0x04001D49 RID: 7497
 		private const string DB = "db_influence.db";
 
-		// Token: 0x04001CB0 RID: 7344
+		// Token: 0x04001D4A RID: 7498
 		private const string FILE = "s.势力.xlsx";
 
-		// Token: 0x04001CB1 RID: 7345
+		// Token: 0x04001D4B RID: 7499
 		private const string TABLE = "Influence";
 
-		// Token: 0x04001CB2 RID: 7346
+		// Token: 0x04001D4C RID: 7500
 		private const string COMMAND = "select BinData from `Influence` where Id=?";
 
-		// Token: 0x04001CB3 RID: 7347
+		// Token: 0x04001D4D RID: 7501
 		private const string KEY_PREFIX = "InfluenceById";
 
-		// Token: 0x04001CB4 RID: 7348
+		// Token: 0x04001D4E RID: 7502
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001CB5 RID: 7349
+		// Token: 0x04001D4F RID: 7503
 		private static int HandleId;
 	}
 }

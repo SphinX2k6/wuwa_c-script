@@ -3,21 +3,21 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C4B RID: 7243
+	// Token: 0x02001E42 RID: 7746
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IMp4GamepadShake_SetValue
 	{
-		// Token: 0x04005E64 RID: 24164
+		// Token: 0x0400639B RID: 25499
 		public EGamepadShakeType Type;
 
-		// Token: 0x04005E65 RID: 24165
+		// Token: 0x0400639C RID: 25500
 		public IMp4GamepadShakeFadeInConfig FadeInConfig;
 
-		// Token: 0x04005E66 RID: 24166
+		// Token: 0x0400639D RID: 25501
 		public IMp4GamepadShakeFadeOutConfig FadeOutConfig;
 
-		// Token: 0x04005E67 RID: 24167
+		// Token: 0x0400639E RID: 25502
 		public float? ShakeScale;
 	}
 }

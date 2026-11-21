@@ -5,17 +5,17 @@ using CSharpScript.Game.Module.Advice;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020016D0 RID: 5840
+// Token: 0x02000B88 RID: 2952
 public class AdviceCreateWordItem : UiPanelBase
 {
-	// Token: 0x0600A703 RID: 42755 RVA: 0x00257125 File Offset: 0x00255325
+	// Token: 0x06007AE3 RID: 31459 RVA: 0x00261531 File Offset: 0x0025F731
 	[NullableContext(1)]
 	public AdviceCreateWordItem(UUIItem uiItem)
 	{
 		base.CreateThenShowByActor(uiItem.GetOwner(), null);
 	}
 
-	// Token: 0x0600A704 RID: 42756 RVA: 0x00257148 File Offset: 0x00255348
+	// Token: 0x06007AE4 RID: 31460 RVA: 0x00261554 File Offset: 0x0025F754
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -26,7 +26,7 @@ public class AdviceCreateWordItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x0600A705 RID: 42757 RVA: 0x002571A2 File Offset: 0x002553A2
+	// Token: 0x06007AE5 RID: 31461 RVA: 0x002615AE File Offset: 0x0025F7AE
 	protected override void OnStart()
 	{
 		this.CreateTextItems();
@@ -45,7 +45,7 @@ public class AdviceCreateWordItem : UiPanelBase
 		text.SetUIActive(false);
 	}
 
-	// Token: 0x0600A706 RID: 42758 RVA: 0x002571DC File Offset: 0x002553DC
+	// Token: 0x06007AE6 RID: 31462 RVA: 0x002615E8 File Offset: 0x0025F7E8
 	private void CreateTextItems()
 	{
 		for (int i = 0; i < 2; i++)
@@ -58,7 +58,7 @@ public class AdviceCreateWordItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600A707 RID: 42759 RVA: 0x00257224 File Offset: 0x00255424
+	// Token: 0x06007AE7 RID: 31463 RVA: 0x00261630 File Offset: 0x0025F830
 	private void CreateConjunctionItem()
 	{
 		UUIItem item = base.GetItem(1);
@@ -71,7 +71,7 @@ public class AdviceCreateWordItem : UiPanelBase
 		this.ConjunctionBtnItem.SetType(EActiveCreateWordType.Conjunction);
 	}
 
-	// Token: 0x0600A708 RID: 42760 RVA: 0x00257268 File Offset: 0x00255468
+	// Token: 0x06007AE8 RID: 31464 RVA: 0x00261674 File Offset: 0x0025F874
 	private void CreateMiddleItemItem()
 	{
 		UUIItem item = base.GetItem(1);
@@ -84,7 +84,7 @@ public class AdviceCreateWordItem : UiPanelBase
 		this.MiddleBtnItem.SetType(EActiveCreateWordType.NormalWord);
 	}
 
-	// Token: 0x0600A709 RID: 42761 RVA: 0x002572AB File Offset: 0x002554AB
+	// Token: 0x06007AE9 RID: 31465 RVA: 0x002616B7 File Offset: 0x0025F8B7
 	public void SetIndex(int index)
 	{
 		this.Index = index;
@@ -101,14 +101,14 @@ public class AdviceCreateWordItem : UiPanelBase
 		middleBtnItem.SetIndex(index);
 	}
 
-	// Token: 0x0600A70A RID: 42762 RVA: 0x002572D7 File Offset: 0x002554D7
+	// Token: 0x06007AEA RID: 31466 RVA: 0x002616E3 File Offset: 0x0025F8E3
 	public void RefreshView()
 	{
 		this.ResetView();
 		this.RefreshWord();
 	}
 
-	// Token: 0x0600A70B RID: 42763 RVA: 0x002572E8 File Offset: 0x002554E8
+	// Token: 0x06007AEB RID: 31467 RVA: 0x002616F4 File Offset: 0x0025F8F4
 	private void ResetView()
 	{
 		UUIItem item = base.GetItem(2);
@@ -129,7 +129,7 @@ public class AdviceCreateWordItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x0600A70C RID: 42764 RVA: 0x002573A0 File Offset: 0x002555A0
+	// Token: 0x06007AEC RID: 31468 RVA: 0x002617AC File Offset: 0x0025F9AC
 	private void RefreshWord()
 	{
 		int num;
@@ -167,31 +167,31 @@ public class AdviceCreateWordItem : UiPanelBase
 		}
 	}
 
-	// Token: 0x04004B74 RID: 19316
+	// Token: 0x04004C1B RID: 19483
 	private int Index;
 
-	// Token: 0x04004B75 RID: 19317
+	// Token: 0x04004C1C RID: 19484
 	[Nullable(1)]
 	private readonly List<UUIText> TextArray = new List<UUIText>();
 
-	// Token: 0x04004B76 RID: 19318
+	// Token: 0x04004C1D RID: 19485
 	[Nullable(2)]
 	private AdviceCreateWordBtnItem ConjunctionBtnItem;
 
-	// Token: 0x04004B77 RID: 19319
+	// Token: 0x04004C1E RID: 19486
 	[Nullable(2)]
 	private AdviceCreateWordBtnItem MiddleBtnItem;
 
-	// Token: 0x02007CA3 RID: 31907
+	// Token: 0x02006E28 RID: 28200
 	private static class EComponents
 	{
-		// Token: 0x04028E23 RID: 167459
+		// Token: 0x0402414C RID: 147788
 		public const int TextTemplate = 0;
 
-		// Token: 0x04028E24 RID: 167460
+		// Token: 0x0402414D RID: 147789
 		public const int WordItem = 1;
 
-		// Token: 0x04028E25 RID: 167461
+		// Token: 0x0402414E RID: 147790
 		public const int HideItem = 2;
 	}
 }

@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 {
-	// Token: 0x02006299 RID: 25241
+	// Token: 0x02005217 RID: 21015
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RealmBetweenVehicleTaskView : UiViewBase
 	{
-		// Token: 0x0603F7FC RID: 260092 RVA: 0x00F5A43D File Offset: 0x00F5863D
+		// Token: 0x060344BD RID: 214205 RVA: 0x00EA1399 File Offset: 0x00E9F599
 		public RealmBetweenVehicleTaskView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603F7FD RID: 260093 RVA: 0x00F5A450 File Offset: 0x00F58650
+		// Token: 0x060344BE RID: 214206 RVA: 0x00EA13AC File Offset: 0x00E9F5AC
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			};
 		}
 
-		// Token: 0x0603F7FE RID: 260094 RVA: 0x00F5A530 File Offset: 0x00F58730
+		// Token: 0x060344BF RID: 214207 RVA: 0x00EA148C File Offset: 0x00E9F68C
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RealmBetweenVehicleTaskView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603F7FF RID: 260095 RVA: 0x00F5A573 File Offset: 0x00F58773
+		// Token: 0x060344C0 RID: 214208 RVA: 0x00EA14CF File Offset: 0x00E9F6CF
 		protected override void OnStart()
 		{
 			this.RefreshTabList(delegate
@@ -63,19 +63,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			});
 		}
 
-		// Token: 0x0603F800 RID: 260096 RVA: 0x00F5A587 File Offset: 0x00F58787
+		// Token: 0x060344C1 RID: 214209 RVA: 0x00EA14E3 File Offset: 0x00E9F6E3
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.RealmBetweenMotorRefresh, new Action(this.OnMotorRefresh));
 		}
 
-		// Token: 0x0603F801 RID: 260097 RVA: 0x00F5A5A5 File Offset: 0x00F587A5
+		// Token: 0x060344C2 RID: 214210 RVA: 0x00EA1501 File Offset: 0x00E9F701
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.RealmBetweenMotorRefresh, new Action(this.OnMotorRefresh));
 		}
 
-		// Token: 0x0603F802 RID: 260098 RVA: 0x00F5A5C4 File Offset: 0x00F587C4
+		// Token: 0x060344C3 RID: 214211 RVA: 0x00EA1520 File Offset: 0x00E9F720
 		private void OnMotorRefresh()
 		{
 			List<MotorChallengePlayData> allMotorTabData = this.ActivityBaseData.GetAllMotorTabData();
@@ -87,7 +87,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			}
 		}
 
-		// Token: 0x0603F803 RID: 260099 RVA: 0x00F5A615 File Offset: 0x00F58815
+		// Token: 0x060344C4 RID: 214212 RVA: 0x00EA1571 File Offset: 0x00E9F771
 		private MenuTabToggleItem OnCreateMenuItem()
 		{
 			return new MenuTabToggleItem
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			};
 		}
 
-		// Token: 0x0603F804 RID: 260100 RVA: 0x00F5A62E File Offset: 0x00F5882E
+		// Token: 0x060344C5 RID: 214213 RVA: 0x00EA158A File Offset: 0x00E9F78A
 		private MissionToggleItem OnCreateTaskItem()
 		{
 			MissionToggleItem missionToggleItem = new MissionToggleItem();
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			return missionToggleItem;
 		}
 
-		// Token: 0x0603F805 RID: 260101 RVA: 0x00F5A648 File Offset: 0x00F58848
+		// Token: 0x060344C6 RID: 214214 RVA: 0x00EA15A4 File Offset: 0x00E9F7A4
 		private void OnClickRewardCb()
 		{
 			List<MotorChallengePlayData> allMotorTabData = this.ActivityBaseData.GetAllMotorTabData();
@@ -124,7 +124,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			ActivityRealmBetweenController.Instance.RequestMultiMotorChallengeReward(list.ToArray());
 		}
 
-		// Token: 0x0603F806 RID: 260102 RVA: 0x00F5A700 File Offset: 0x00F58900
+		// Token: 0x060344C7 RID: 214215 RVA: 0x00EA165C File Offset: 0x00E9F85C
 		private void OnClickChildToggle(MotorChallengePlayData tabData, MenuTabToggleItem tabItem)
 		{
 			if (this.SelectChildToggle != null)
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			this.RefreshContent(tabData);
 		}
 
-		// Token: 0x0603F807 RID: 260103 RVA: 0x00F5A77C File Offset: 0x00F5897C
+		// Token: 0x060344C8 RID: 214216 RVA: 0x00EA16D8 File Offset: 0x00E9F8D8
 		[NullableContext(2)]
 		private void RefreshTabList(Action onComplete = null)
 		{
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			this.MenuScroll.RefreshByData(list, onComplete, false);
 		}
 
-		// Token: 0x0603F808 RID: 260104 RVA: 0x00F5A7D0 File Offset: 0x00F589D0
+		// Token: 0x060344C9 RID: 214217 RVA: 0x00EA172C File Offset: 0x00E9F92C
 		private void RefreshContent(MotorChallengePlayData tabData)
 		{
 			bool isUnlock = tabData.IsUnlock;
@@ -191,7 +191,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			this.TaskScroll.RefreshByData(data, null, true);
 		}
 
-		// Token: 0x0603F809 RID: 260105 RVA: 0x00F5A860 File Offset: 0x00F58A60
+		// Token: 0x060344CA RID: 214218 RVA: 0x00EA17BC File Offset: 0x00E9F9BC
 		private void OnClickBtnJump()
 		{
 			foreach (MotorChallengePlayData motorChallengePlayData in this.ActivityBaseData.GetAllMotorTabData())
@@ -204,7 +204,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			}
 		}
 
-		// Token: 0x0603F80A RID: 260106 RVA: 0x00F5A8D0 File Offset: 0x00F58AD0
+		// Token: 0x060344CB RID: 214219 RVA: 0x00EA182C File Offset: 0x00E9FA2C
 		private void OnClickHelpBtn()
 		{
 			if (this.ActivityBaseData.LocalConfig != null)
@@ -213,27 +213,27 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.RealmBetween
 			}
 		}
 
-		// Token: 0x0402132C RID: 135980
+		// Token: 0x0401BC5B RID: 113755
 		[Nullable(2)]
 		private PopupCaptionItem CaptionComponent;
 
-		// Token: 0x0402132D RID: 135981
+		// Token: 0x0401BC5C RID: 113756
 		private ActivityRealmBetweenData ActivityBaseData;
 
-		// Token: 0x0402132E RID: 135982
+		// Token: 0x0401BC5D RID: 113757
 		private GenericScrollViewNew<MenuTabToggleItem, MotorChallengePlayData> MenuScroll;
 
-		// Token: 0x0402132F RID: 135983
+		// Token: 0x0401BC5E RID: 113758
 		private GenericScrollViewNew<MissionToggleItem, ActivityTaskData> TaskScroll;
 
-		// Token: 0x04021330 RID: 135984
+		// Token: 0x0401BC5F RID: 113759
 		private int SelectedTabIndex = -1;
 
-		// Token: 0x04021331 RID: 135985
+		// Token: 0x0401BC60 RID: 113760
 		[Nullable(2)]
 		private MenuTabToggleItem SelectChildToggle;
 
-		// Token: 0x04021332 RID: 135986
+		// Token: 0x0401BC61 RID: 113761
 		private ActivityButtonItem BtnJump;
 	}
 }

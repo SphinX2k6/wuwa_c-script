@@ -10,13 +10,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E3C RID: 24124
+	// Token: 0x02004E21 RID: 20001
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class SwordControlGroundAttackButton : UiPanelBase
 	{
-		// Token: 0x17008E71 RID: 36465
-		// (get) Token: 0x0603D56A RID: 251242 RVA: 0x00EC9571 File Offset: 0x00EC7771
+		// Token: 0x17006243 RID: 25155
+		// (get) Token: 0x060324FA RID: 206074 RVA: 0x00E1AADD File Offset: 0x00E18CDD
 		private static CSharpScript.Game.Input.EInputAction AttackAction
 		{
 			get
@@ -25,8 +25,8 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x17008E72 RID: 36466
-		// (get) Token: 0x0603D56B RID: 251243 RVA: 0x00EC9578 File Offset: 0x00EC7778
+		// Token: 0x17006244 RID: 25156
+		// (get) Token: 0x060324FB RID: 206075 RVA: 0x00E1AAE4 File Offset: 0x00E18CE4
 		[Nullable(1)]
 		private static string AttackActionName
 		{
@@ -37,13 +37,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D56C RID: 251244 RVA: 0x00EC9584 File Offset: 0x00EC7784
+		// Token: 0x060324FC RID: 206076 RVA: 0x00E1AAF0 File Offset: 0x00E18CF0
 		public SwordControlGroundAttackButton()
 		{
 			base.SkipDestroyActor = true;
 		}
 
-		// Token: 0x0603D56D RID: 251245 RVA: 0x00EC9594 File Offset: 0x00EC7794
+		// Token: 0x060324FD RID: 206077 RVA: 0x00E1AB00 File Offset: 0x00E18D00
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 13;
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603D56E RID: 251246 RVA: 0x00EC9770 File Offset: 0x00EC7970
+		// Token: 0x060324FE RID: 206078 RVA: 0x00E1ACDC File Offset: 0x00E18EDC
 		protected override void OnStart()
 		{
 			this.SkillButton = base.GetButton(5);
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetInteractive(this.IsInteractive, true);
 		}
 
-		// Token: 0x0603D56F RID: 251247 RVA: 0x00EC9813 File Offset: 0x00EC7A13
+		// Token: 0x060324FF RID: 206079 RVA: 0x00E1AD7F File Offset: 0x00E18F7F
 		protected override void OnBeforeDestroy()
 		{
 			this.ReleaseAttackInput();
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SkillNameText = null;
 		}
 
-		// Token: 0x0603D570 RID: 251248 RVA: 0x00EC984D File Offset: 0x00EC7A4D
+		// Token: 0x06032500 RID: 206080 RVA: 0x00E1ADB9 File Offset: 0x00E18FB9
 		public void SetInteractive(bool interactive, bool force = false)
 		{
 			if (this.IsInteractive == interactive && !force)
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D571 RID: 251249 RVA: 0x00EC9880 File Offset: 0x00EC7A80
+		// Token: 0x06032501 RID: 206081 RVA: 0x00E1ADEC File Offset: 0x00E18FEC
 		private void BindButtonEvent()
 		{
 			UUIButtonComponent skillButton = this.SkillButton;
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			skillButton3.OnPointCancelCallBack.Bind(new Action(this.OnReleaseButton));
 		}
 
-		// Token: 0x0603D572 RID: 251250 RVA: 0x00EC98F4 File Offset: 0x00EC7AF4
+		// Token: 0x06032502 RID: 206082 RVA: 0x00E1AE60 File Offset: 0x00E19060
 		private void UnBindButtonEvent()
 		{
 			UUIButtonComponent skillButton = this.SkillButton;
@@ -187,7 +187,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			skillButton3.OnPointCancelCallBack.Unbind();
 		}
 
-		// Token: 0x0603D573 RID: 251251 RVA: 0x00EC9942 File Offset: 0x00EC7B42
+		// Token: 0x06032503 RID: 206083 RVA: 0x00E1AEAE File Offset: 0x00E190AE
 		private void BindInputAction()
 		{
 			if (this.HasBindInputAction || Info.Instance.OperationType == EOperationType.Pad)
@@ -198,7 +198,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.HasBindInputAction = true;
 		}
 
-		// Token: 0x0603D574 RID: 251252 RVA: 0x00EC997C File Offset: 0x00EC7B7C
+		// Token: 0x06032504 RID: 206084 RVA: 0x00E1AEE8 File Offset: 0x00E190E8
 		private void UnBindInputAction()
 		{
 			if (!this.HasBindInputAction)
@@ -209,7 +209,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.HasBindInputAction = false;
 		}
 
-		// Token: 0x0603D575 RID: 251253 RVA: 0x00EC99A9 File Offset: 0x00EC7BA9
+		// Token: 0x06032505 RID: 206085 RVA: 0x00E1AF15 File Offset: 0x00E19115
 		[NullableContext(1)]
 		private void OnInputAction(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 		{
@@ -229,7 +229,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			clickEffect.Play();
 		}
 
-		// Token: 0x0603D576 RID: 251254 RVA: 0x00EC99E0 File Offset: 0x00EC7BE0
+		// Token: 0x06032506 RID: 206086 RVA: 0x00E1AF4C File Offset: 0x00E1914C
 		private void OnPressButton()
 		{
 			if (!this.CanPlayClickEffect() || this.HasPressedAttackInput)
@@ -248,13 +248,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D577 RID: 251255 RVA: 0x00EC9A45 File Offset: 0x00EC7C45
+		// Token: 0x06032507 RID: 206087 RVA: 0x00E1AFB1 File Offset: 0x00E191B1
 		private void OnReleaseButton()
 		{
 			this.ReleaseAttackInput();
 		}
 
-		// Token: 0x0603D578 RID: 251256 RVA: 0x00EC9A4D File Offset: 0x00EC7C4D
+		// Token: 0x06032508 RID: 206088 RVA: 0x00E1AFB9 File Offset: 0x00E191B9
 		private bool CanPlayClickEffect()
 		{
 			if (this.IsInteractive && base.IsUiActiveInHierarchy())
@@ -265,7 +265,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return false;
 		}
 
-		// Token: 0x0603D579 RID: 251257 RVA: 0x00EC9A78 File Offset: 0x00EC7C78
+		// Token: 0x06032509 RID: 206089 RVA: 0x00E1AFE4 File Offset: 0x00E191E4
 		private void ReleaseAttackInput()
 		{
 			if (!this.HasPressedAttackInput)
@@ -279,7 +279,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603D57A RID: 251258 RVA: 0x00EC9AC4 File Offset: 0x00EC7CC4
+		// Token: 0x0603250A RID: 206090 RVA: 0x00E1B030 File Offset: 0x00E19230
 		public void SetSkillNameText(string textStringId)
 		{
 			if (string.IsNullOrEmpty(textStringId))
@@ -305,53 +305,53 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401FFED RID: 131053
+		// Token: 0x0401AAB4 RID: 109236
 		private UUIButtonComponent SkillButton;
 
-		// Token: 0x0401FFEE RID: 131054
+		// Token: 0x0401AAB5 RID: 109237
 		private BattleUiNiagaraItem ClickEffect;
 
-		// Token: 0x0401FFEF RID: 131055
+		// Token: 0x0401AAB6 RID: 109238
 		private UUIText SkillNameText;
 
-		// Token: 0x0401FFF0 RID: 131056
+		// Token: 0x0401AAB7 RID: 109239
 		private bool IsInteractive;
 
-		// Token: 0x0401FFF1 RID: 131057
+		// Token: 0x0401AAB8 RID: 109240
 		private bool HasBindInputAction;
 
-		// Token: 0x0401FFF2 RID: 131058
+		// Token: 0x0401AAB9 RID: 109241
 		private bool HasPressedAttackInput;
 
-		// Token: 0x0200C1BB RID: 49595
+		// Token: 0x0200ABCA RID: 43978
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x0403A8AE RID: 239790
+			// Token: 0x040352A0 RID: 217760
 			CoolDownItem,
-			// Token: 0x0403A8AF RID: 239791
+			// Token: 0x040352A1 RID: 217761
 			CoolDownBarSprite,
-			// Token: 0x0403A8B0 RID: 239792
+			// Token: 0x040352A2 RID: 217762
 			CoolDownText,
-			// Token: 0x0403A8B1 RID: 239793
+			// Token: 0x040352A3 RID: 217763
 			SkillSprite,
-			// Token: 0x0403A8B2 RID: 239794
+			// Token: 0x040352A4 RID: 217764
 			SkillTexture,
-			// Token: 0x0403A8B3 RID: 239795
+			// Token: 0x040352A5 RID: 217765
 			SkillButton,
-			// Token: 0x0403A8B4 RID: 239796
+			// Token: 0x040352A6 RID: 217766
 			CdCompletedNiagara,
-			// Token: 0x0403A8B5 RID: 239797
+			// Token: 0x040352A7 RID: 217767
 			DynamicEffectNiagara,
-			// Token: 0x0403A8B6 RID: 239798
+			// Token: 0x040352A8 RID: 217768
 			ExtraContainer,
-			// Token: 0x0403A8B7 RID: 239799
+			// Token: 0x040352A9 RID: 217769
 			ExploreSkillEquip,
-			// Token: 0x0403A8B8 RID: 239800
+			// Token: 0x040352AA RID: 217770
 			ClickEffectNiagara,
-			// Token: 0x0403A8B9 RID: 239801
+			// Token: 0x040352AB RID: 217771
 			SkillNameText,
-			// Token: 0x0403A8BA RID: 239802
+			// Token: 0x040352AC RID: 217772
 			LinkExplosionNiagara
 		}
 	}

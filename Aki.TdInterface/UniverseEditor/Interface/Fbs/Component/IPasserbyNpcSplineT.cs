@@ -2,40 +2,40 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020056E1 RID: 22241
+	// Token: 0x02005CCD RID: 23757
 	public class IPasserbyNpcSplineT
 	{
-		// Token: 0x1700A591 RID: 42385
-		// (get) Token: 0x0602529C RID: 152220 RVA: 0x005213C3 File Offset: 0x0051F5C3
-		// (set) Token: 0x0602529D RID: 152221 RVA: 0x005213CB File Offset: 0x0051F5CB
+		// Token: 0x1700AE8F RID: 44687
+		// (get) Token: 0x060276ED RID: 161517 RVA: 0x00565B7F File Offset: 0x00563D7F
+		// (set) Token: 0x060276EE RID: 161518 RVA: 0x00565B87 File Offset: 0x00563D87
 		public int SplineEntityId { get; set; }
 
-		// Token: 0x1700A592 RID: 42386
-		// (get) Token: 0x0602529E RID: 152222 RVA: 0x005213D4 File Offset: 0x0051F5D4
-		// (set) Token: 0x0602529F RID: 152223 RVA: 0x005213DC File Offset: 0x0051F5DC
+		// Token: 0x1700AE90 RID: 44688
+		// (get) Token: 0x060276EF RID: 161519 RVA: 0x00565B90 File Offset: 0x00563D90
+		// (set) Token: 0x060276F0 RID: 161520 RVA: 0x00565B98 File Offset: 0x00563D98
 		public int SpawnWeight { get; set; }
 
-		// Token: 0x1700A593 RID: 42387
-		// (get) Token: 0x060252A0 RID: 152224 RVA: 0x005213E5 File Offset: 0x0051F5E5
-		// (set) Token: 0x060252A1 RID: 152225 RVA: 0x005213ED File Offset: 0x0051F5ED
+		// Token: 0x1700AE91 RID: 44689
+		// (get) Token: 0x060276F1 RID: 161521 RVA: 0x00565BA1 File Offset: 0x00563DA1
+		// (set) Token: 0x060276F2 RID: 161522 RVA: 0x00565BA9 File Offset: 0x00563DA9
 		public bool IsLoop { get; set; }
 
-		// Token: 0x1700A594 RID: 42388
-		// (get) Token: 0x060252A2 RID: 152226 RVA: 0x005213F6 File Offset: 0x0051F5F6
-		// (set) Token: 0x060252A3 RID: 152227 RVA: 0x005213FE File Offset: 0x0051F5FE
+		// Token: 0x1700AE92 RID: 44690
+		// (get) Token: 0x060276F3 RID: 161523 RVA: 0x00565BB2 File Offset: 0x00563DB2
+		// (set) Token: 0x060276F4 RID: 161524 RVA: 0x00565BBA File Offset: 0x00563DBA
 		public IPasserbyNpcMoveStateT MoveState { get; set; }
 
-		// Token: 0x1700A595 RID: 42389
-		// (get) Token: 0x060252A4 RID: 152228 RVA: 0x00521407 File Offset: 0x0051F607
-		// (set) Token: 0x060252A5 RID: 152229 RVA: 0x0052140F File Offset: 0x0051F60F
+		// Token: 0x1700AE93 RID: 44691
+		// (get) Token: 0x060276F5 RID: 161525 RVA: 0x00565BC3 File Offset: 0x00563DC3
+		// (set) Token: 0x060276F6 RID: 161526 RVA: 0x00565BCB File Offset: 0x00563DCB
 		public bool IsIkEnabled { get; set; }
 
-		// Token: 0x1700A596 RID: 42390
-		// (get) Token: 0x060252A6 RID: 152230 RVA: 0x00521418 File Offset: 0x0051F618
-		// (set) Token: 0x060252A7 RID: 152231 RVA: 0x00521420 File Offset: 0x0051F620
+		// Token: 0x1700AE94 RID: 44692
+		// (get) Token: 0x060276F7 RID: 161527 RVA: 0x00565BD4 File Offset: 0x00563DD4
+		// (set) Token: 0x060276F8 RID: 161528 RVA: 0x00565BDC File Offset: 0x00563DDC
 		public byte NullMask { get; set; }
 
-		// Token: 0x060252A8 RID: 152232 RVA: 0x00521429 File Offset: 0x0051F629
+		// Token: 0x060276F9 RID: 161529 RVA: 0x00565BE5 File Offset: 0x00563DE5
 		public IPasserbyNpcSplineT()
 		{
 			this.SplineEntityId = 0;

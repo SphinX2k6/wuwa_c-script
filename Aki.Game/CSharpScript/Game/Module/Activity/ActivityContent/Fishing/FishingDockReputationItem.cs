@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 {
-	// Token: 0x0200660B RID: 26123
+	// Token: 0x02005589 RID: 21897
 	public class FishingDockReputationItem : UiPanelBase
 	{
-		// Token: 0x06041774 RID: 268148 RVA: 0x00FDA924 File Offset: 0x00FD8B24
+		// Token: 0x06036439 RID: 222265 RVA: 0x00F219A4 File Offset: 0x00F1FBA4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -35,13 +35,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06041775 RID: 268149 RVA: 0x00FDAA0C File Offset: 0x00FD8C0C
+		// Token: 0x0603643A RID: 222266 RVA: 0x00F21A8C File Offset: 0x00F1FC8C
 		protected override void OnStart()
 		{
 			this.RefreshItem();
 		}
 
-		// Token: 0x06041776 RID: 268150 RVA: 0x00FDAA14 File Offset: 0x00FD8C14
+		// Token: 0x0603643B RID: 222267 RVA: 0x00F21A94 File Offset: 0x00F1FC94
 		public void RefreshItem()
 		{
 			int fishingReputationItemId = FishingModel.Instance.FishingReputationItemId;
@@ -67,25 +67,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Fishing
 			base.GetText(2).SetText(num.ToString() + "/" + num2.ToString(), true);
 		}
 
-		// Token: 0x06041777 RID: 268151 RVA: 0x00FDAB3C File Offset: 0x00FD8D3C
+		// Token: 0x0603643C RID: 222268 RVA: 0x00F21BBC File Offset: 0x00F1FDBC
 		private void OnClickHelpBtn()
 		{
 			HelpController.Instance.OpenHelpById(188);
 		}
 
-		// Token: 0x0200C816 RID: 51222
+		// Token: 0x0200B1F9 RID: 45561
 		private class EComponentDefine
 		{
-			// Token: 0x0403C6C5 RID: 247493
+			// Token: 0x0403700D RID: 225293
 			public const int BarTexture = 0;
 
-			// Token: 0x0403C6C6 RID: 247494
+			// Token: 0x0403700E RID: 225294
 			public const int LevelText = 1;
 
-			// Token: 0x0403C6C7 RID: 247495
+			// Token: 0x0403700F RID: 225295
 			public const int ItemNumberText = 2;
 
-			// Token: 0x0403C6C8 RID: 247496
+			// Token: 0x04037010 RID: 225296
 			public const int HelpBtn = 3;
 		}
 	}

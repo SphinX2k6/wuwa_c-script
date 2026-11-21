@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DD0 RID: 7632
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001FE9 RID: 8169
 	public class ISafePos : ITeleportConfig
 	{
-		// Token: 0x0600A36D RID: 41837 RVA: 0x00173174 File Offset: 0x00171374
+		// Token: 0x0600AD83 RID: 44419 RVA: 0x001879CC File Offset: 0x00185BCC
 		private ISafePos_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A36E RID: 41838 RVA: 0x001731AC File Offset: 0x001713AC
+		// Token: 0x0600AD84 RID: 44420 RVA: 0x00187A04 File Offset: 0x00185C04
 		public static ISafePos Create([Nullable(2)] ISafePos instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A36F RID: 41839 RVA: 0x001731BF File Offset: 0x001713BF
+		// Token: 0x0600AD85 RID: 44421 RVA: 0x00187A17 File Offset: 0x00185C17
 		public static ISafePos CreateFromSetValue([Nullable(2)] ISafePos_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A370 RID: 41840 RVA: 0x001731D2 File Offset: 0x001713D2
+		// Token: 0x0600AD86 RID: 44422 RVA: 0x00187A2A File Offset: 0x00185C2A
 		public new ISafePos_SetValue ToSetValue()
 		{
 			return new ISafePos_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003255 RID: 12885
-		// (get) Token: 0x0600A371 RID: 41841 RVA: 0x001731F1 File Offset: 0x001713F1
-		// (set) Token: 0x0600A372 RID: 41842 RVA: 0x0017321C File Offset: 0x0017141C
+		// Token: 0x170034F2 RID: 13554
+		// (get) Token: 0x0600AD87 RID: 44423 RVA: 0x00187A49 File Offset: 0x00185C49
+		// (set) Token: 0x0600AD88 RID: 44424 RVA: 0x00187A74 File Offset: 0x00185C74
 		public override ETeleportType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003256 RID: 12886
-		// (get) Token: 0x0600A373 RID: 41843 RVA: 0x0017322C File Offset: 0x0017142C
-		// (set) Token: 0x0600A374 RID: 41844 RVA: 0x00173266 File Offset: 0x00171466
+		// Token: 0x170034F3 RID: 13555
+		// (get) Token: 0x0600AD89 RID: 44425 RVA: 0x00187A84 File Offset: 0x00185C84
+		// (set) Token: 0x0600AD8A RID: 44426 RVA: 0x00187ABE File Offset: 0x00185CBE
 		public virtual int? FinalSafePosEntityId
 		{
 			get
@@ -107,11 +105,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040061FC RID: 25084
+		// Token: 0x04006789 RID: 26505
 		[Nullable(2)]
 		protected new ISafePos FbInstance;
 
-		// Token: 0x040061FD RID: 25085
+		// Token: 0x0400678A RID: 26506
 		[Nullable(2)]
 		protected new ISafePos_SetValue PocoInterface;
 	}

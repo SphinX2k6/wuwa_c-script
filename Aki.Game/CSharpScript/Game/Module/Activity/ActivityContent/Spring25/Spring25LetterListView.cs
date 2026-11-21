@@ -11,27 +11,27 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 {
-	// Token: 0x020060A2 RID: 24738
+	// Token: 0x02005020 RID: 20512
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class Spring25LetterListView : UiViewBase
 	{
-		// Token: 0x0603E886 RID: 256134 RVA: 0x00F1D313 File Offset: 0x00F1B513
+		// Token: 0x0603354A RID: 210250 RVA: 0x00E640D7 File Offset: 0x00E622D7
 		public Spring25LetterListView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x17009099 RID: 37017
-		// (get) Token: 0x0603E887 RID: 256135 RVA: 0x00F1D31C File Offset: 0x00F1B51C
-		// (set) Token: 0x0603E888 RID: 256136 RVA: 0x00F1D324 File Offset: 0x00F1B524
+		// Token: 0x170063FB RID: 25595
+		// (get) Token: 0x0603354B RID: 210251 RVA: 0x00E640E0 File Offset: 0x00E622E0
+		// (set) Token: 0x0603354C RID: 210252 RVA: 0x00E640E8 File Offset: 0x00E622E8
 		private UiSequencePlayer Player { get; set; }
 
-		// Token: 0x1700909A RID: 37018
-		// (get) Token: 0x0603E889 RID: 256137 RVA: 0x00F1D32D File Offset: 0x00F1B52D
-		// (set) Token: 0x0603E88A RID: 256138 RVA: 0x00F1D335 File Offset: 0x00F1B535
+		// Token: 0x170063FC RID: 25596
+		// (get) Token: 0x0603354D RID: 210253 RVA: 0x00E640F1 File Offset: 0x00E622F1
+		// (set) Token: 0x0603354E RID: 210254 RVA: 0x00E640F9 File Offset: 0x00E622F9
 		private GenericLayout<TabItem, Spring25LetterListTabData> TabList { get; set; }
 
-		// Token: 0x0603E88B RID: 256139 RVA: 0x00F1D340 File Offset: 0x00F1B540
+		// Token: 0x0603354F RID: 210255 RVA: 0x00E64104 File Offset: 0x00E62304
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 6;
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603E88C RID: 256140 RVA: 0x00F1D46C File Offset: 0x00F1B66C
+		// Token: 0x06033550 RID: 210256 RVA: 0x00E64230 File Offset: 0x00E62430
 		protected override UniTask OnBeforeStartAsync()
 		{
 			Spring25LetterListView.<OnBeforeStartAsync>d__11 <OnBeforeStartAsync>d__;
@@ -71,31 +71,31 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E88D RID: 256141 RVA: 0x00F1D4AF File Offset: 0x00F1B6AF
+		// Token: 0x06033551 RID: 210257 RVA: 0x00E64273 File Offset: 0x00E62473
 		protected override void OnStart()
 		{
 			this.RefreshByOpenParam();
 		}
 
-		// Token: 0x0603E88E RID: 256142 RVA: 0x00F1D4B7 File Offset: 0x00F1B6B7
+		// Token: 0x06033552 RID: 210258 RVA: 0x00E6427B File Offset: 0x00E6247B
 		protected override void OnBeforeDestroy()
 		{
 			EventSystem.Instance.Emit(EEventName.Spring25CloseLetterList);
 		}
 
-		// Token: 0x0603E88F RID: 256143 RVA: 0x00F1D4C9 File Offset: 0x00F1B6C9
+		// Token: 0x06033553 RID: 210259 RVA: 0x00E6428D File Offset: 0x00E6248D
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<int>(EEventName.Spring25SelectLetter, new Action<int>(this.HandleSpring25SelectLetter));
 		}
 
-		// Token: 0x0603E890 RID: 256144 RVA: 0x00F1D4E7 File Offset: 0x00F1B6E7
+		// Token: 0x06033554 RID: 210260 RVA: 0x00E642AB File Offset: 0x00E624AB
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.Spring25SelectLetter, new Action<int>(this.HandleSpring25SelectLetter));
 		}
 
-		// Token: 0x0603E891 RID: 256145 RVA: 0x00F1D508 File Offset: 0x00F1B708
+		// Token: 0x06033555 RID: 210261 RVA: 0x00E642CC File Offset: 0x00E624CC
 		private void RefreshByOpenParam()
 		{
 			Spring25LetterListViewData spring25LetterListViewData = this.OpenParam as Spring25LetterListViewData;
@@ -115,13 +115,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			}
 		}
 
-		// Token: 0x0603E892 RID: 256146 RVA: 0x00F1D5A8 File Offset: 0x00F1B7A8
+		// Token: 0x06033556 RID: 210262 RVA: 0x00E6436C File Offset: 0x00E6256C
 		private void HandleBackClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603E893 RID: 256147 RVA: 0x00F1D5B1 File Offset: 0x00F1B7B1
+		// Token: 0x06033557 RID: 210263 RVA: 0x00E64375 File Offset: 0x00E62575
 		private void HandleSpring25SelectLetter(int i)
 		{
 			this.OpenParam = Spring25Model.Instance.BuildLetterListViewData();
@@ -129,32 +129,32 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Spring25
 			this.Player.LiteReplayAsync("Switch", false, false);
 		}
 
-		// Token: 0x0603E894 RID: 256148 RVA: 0x00F1D5DC File Offset: 0x00F1B7DC
+		// Token: 0x06033558 RID: 210264 RVA: 0x00E643A0 File Offset: 0x00E625A0
 		private TabItem BuildItem()
 		{
 			return new TabItem();
 		}
 
-		// Token: 0x0200C2FF RID: 49919
+		// Token: 0x0200ACEA RID: 44266
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x0403AE18 RID: 241176
+			// Token: 0x04035780 RID: 219008
 			public const int BackButton = 0;
 
-			// Token: 0x0403AE19 RID: 241177
+			// Token: 0x04035781 RID: 219009
 			public const int InfoText = 1;
 
-			// Token: 0x0403AE1A RID: 241178
+			// Token: 0x04035782 RID: 219010
 			public const int ContentLayout = 2;
 
-			// Token: 0x0403AE1B RID: 241179
+			// Token: 0x04035783 RID: 219011
 			public const int ListTemplateItem = 3;
 
-			// Token: 0x0403AE1C RID: 241180
+			// Token: 0x04035784 RID: 219012
 			public const int TitleText = 4;
 
-			// Token: 0x0403AE1D RID: 241181
+			// Token: 0x04035785 RID: 219013
 			public const int LetterScroll = 5;
 		}
 	}

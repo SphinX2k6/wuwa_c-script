@@ -6,23 +6,23 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006BB8 RID: 27576
+	// Token: 0x02005D31 RID: 23857
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventWaitTime : LevelEventBase
 	{
-		// Token: 0x0604433C RID: 279356 RVA: 0x010CFE10 File Offset: 0x010CE010
+		// Token: 0x0603A494 RID: 238740 RVA: 0x01079D64 File Offset: 0x01077F64
 		public LevelEventWaitTime(int id) : base(id)
 		{
 		}
 
-		// Token: 0x0604433D RID: 279357 RVA: 0x010CFE19 File Offset: 0x010CE019
+		// Token: 0x0603A495 RID: 238741 RVA: 0x01079D6D File Offset: 0x01077F6D
 		protected override void ExecuteInGm(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x0604433E RID: 279358 RVA: 0x010CFE24 File Offset: 0x010CE024
+		// Token: 0x0603A496 RID: 238742 RVA: 0x01079D78 File Offset: 0x01077F78
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			Wait wait = inParams as Wait;
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x0604433F RID: 279359 RVA: 0x010CFEC8 File Offset: 0x010CE0C8
+		// Token: 0x0603A497 RID: 238743 RVA: 0x01079E1C File Offset: 0x0107801C
 		protected override void OnTick(float deltaTime)
 		{
 			float num = (this.BaseContext != null) ? (deltaTime * LevelGamePlayUtils.GetCustomTimeDilationByContext(this.BaseContext).GetValueOrDefault(1f)) : deltaTime;
@@ -63,17 +63,17 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x06044340 RID: 279360 RVA: 0x010CFF43 File Offset: 0x010CE143
+		// Token: 0x0603A498 RID: 238744 RVA: 0x01079E97 File Offset: 0x01078097
 		protected override void OnReset()
 		{
 			this.DisableInput = false;
 			this.TotalTime = 0f;
 		}
 
-		// Token: 0x04023982 RID: 145794
+		// Token: 0x0401EC24 RID: 125988
 		private float TotalTime;
 
-		// Token: 0x04023983 RID: 145795
+		// Token: 0x0401EC25 RID: 125989
 		private bool DisableInput;
 	}
 }

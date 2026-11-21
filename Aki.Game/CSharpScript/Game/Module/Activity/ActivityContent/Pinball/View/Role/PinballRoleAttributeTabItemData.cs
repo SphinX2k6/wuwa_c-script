@@ -3,24 +3,24 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Role
 {
-	// Token: 0x02006305 RID: 25349
+	// Token: 0x02005283 RID: 21123
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PinballRoleAttributeTabItemData : IPinballRoleAttributeTabItemData
 	{
-		// Token: 0x170092C7 RID: 37575
-		// (get) Token: 0x0603FC81 RID: 261249 RVA: 0x00F6E6A6 File Offset: 0x00F6C8A6
-		// (set) Token: 0x0603FC82 RID: 261250 RVA: 0x00F6E6AE File Offset: 0x00F6C8AE
+		// Token: 0x17006629 RID: 26153
+		// (get) Token: 0x06034942 RID: 215362 RVA: 0x00EB5602 File Offset: 0x00EB3802
+		// (set) Token: 0x06034943 RID: 215363 RVA: 0x00EB560A File Offset: 0x00EB380A
 		public EPinballRoleAttributeTabIndex TabIndex { get; set; }
 
-		// Token: 0x170092C8 RID: 37576
-		// (get) Token: 0x0603FC83 RID: 261251 RVA: 0x00F6E6B7 File Offset: 0x00F6C8B7
-		// (set) Token: 0x0603FC84 RID: 261252 RVA: 0x00F6E6BF File Offset: 0x00F6C8BF
+		// Token: 0x1700662A RID: 26154
+		// (get) Token: 0x06034944 RID: 215364 RVA: 0x00EB5613 File Offset: 0x00EB3813
+		// (set) Token: 0x06034945 RID: 215365 RVA: 0x00EB561B File Offset: 0x00EB381B
 		public bool IsSelected { get; set; }
 
-		// Token: 0x170092C9 RID: 37577
-		// (get) Token: 0x0603FC85 RID: 261253 RVA: 0x00F6E6C8 File Offset: 0x00F6C8C8
-		// (set) Token: 0x0603FC86 RID: 261254 RVA: 0x00F6E6D0 File Offset: 0x00F6C8D0
+		// Token: 0x1700662B RID: 26155
+		// (get) Token: 0x06034946 RID: 215366 RVA: 0x00EB5624 File Offset: 0x00EB3824
+		// (set) Token: 0x06034947 RID: 215367 RVA: 0x00EB562C File Offset: 0x00EB382C
 		public Action<EPinballRoleAttributeTabIndex> OnSelectedDelegate { get; set; }
 	}
 }

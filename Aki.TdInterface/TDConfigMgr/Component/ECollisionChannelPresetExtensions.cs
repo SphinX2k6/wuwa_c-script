@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200090A RID: 2314
+	// Token: 0x020009B7 RID: 2487
 	public static class ECollisionChannelPresetExtensions
 	{
-		// Token: 0x0600345E RID: 13406 RVA: 0x00085B38 File Offset: 0x00083D38
+		// Token: 0x060037CA RID: 14282 RVA: 0x0008D644 File Offset: 0x0008B844
 		public static string ToEnumString(this ECollisionChannelPreset value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600345F RID: 13407 RVA: 0x00085B60 File Offset: 0x00083D60
+		// Token: 0x060037CB RID: 14283 RVA: 0x0008D66C File Offset: 0x0008B86C
 		public static ECollisionChannelPreset FromString(string name)
 		{
 			ECollisionChannelPreset result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003460 RID: 13408 RVA: 0x00085B89 File Offset: 0x00083D89
+		// Token: 0x060037CC RID: 14284 RVA: 0x0008D695 File Offset: 0x0008B895
 		public static bool TryFromString(string name, out ECollisionChannelPreset value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			return false;
 		}
 
-		// Token: 0x06003461 RID: 13409 RVA: 0x00085BAE File Offset: 0x00083DAE
+		// Token: 0x060037CD RID: 14285 RVA: 0x0008D6BA File Offset: 0x0008B8BA
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003462 RID: 13410 RVA: 0x00085BBE File Offset: 0x00083DBE
+		// Token: 0x060037CE RID: 14286 RVA: 0x0008D6CA File Offset: 0x0008B8CA
 		public static ECollisionChannelPreset[] GetValues()
 		{
 			return new ECollisionChannelPreset[1];
 		}
 
-		// Token: 0x06003463 RID: 13411 RVA: 0x00085BC6 File Offset: 0x00083DC6
+		// Token: 0x060037CF RID: 14287 RVA: 0x0008D6D2 File Offset: 0x0008B8D2
 		public static string[] GetNames()
 		{
 			return new string[]

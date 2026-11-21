@@ -5,10 +5,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003E3B RID: 15931
+	// Token: 0x02004276 RID: 17014
 	public static class IFinishJellyfishReturnConditionVerify
 	{
-		// Token: 0x06016584 RID: 91524 RVA: 0x00339BB0 File Offset: 0x00337DB0
+		// Token: 0x06017BAB RID: 97195 RVA: 0x003626F0 File Offset: 0x003608F0
 		public static bool Verify(Verifier verifier, uint tablePos)
 		{
 			if (verifier.VerifyTableStart(tablePos) && verifier.VerifyField(tablePos, 4, 1UL, 1UL, false))
@@ -19,7 +19,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 				{
 					verifyAction = (IFinishJellyfishReturnConditionVerify.<>O.<0>__Verify = new VerifyTableAction(IConditionGroupVerify.Verify));
 				}
-				if (verifier.VerifyTable(tablePos, offsetId, verifyAction, false) && verifier.VerifyField(tablePos, 8, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 10, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 12, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 14, 4UL, 4UL, false) && verifier.VerifyString(tablePos, 16, false) && verifier.VerifyString(tablePos, 18, false))
+				if (verifier.VerifyTable(tablePos, offsetId, verifyAction, false) && verifier.VerifyField(tablePos, 8, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 10, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 12, 4UL, 4UL, false) && verifier.VerifyField(tablePos, 14, 4UL, 4UL, false) && verifier.VerifyString(tablePos, 16, false))
 				{
 					return verifier.VerifyTableEnd(tablePos);
 				}
@@ -27,11 +27,11 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return false;
 		}
 
-		// Token: 0x020078DF RID: 30943
+		// Token: 0x02008125 RID: 33061
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04013189 RID: 78217
+			// Token: 0x040141E7 RID: 82407
 			public static VerifyTableAction <0>__Verify;
 		}
 	}

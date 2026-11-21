@@ -5,15 +5,15 @@ using Aki.Protocol;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x020014FC RID: 5372
+// Token: 0x020009B4 RID: 2484
 public class SignRewardItemBase : UiPanelBase
 {
-	// Token: 0x06009933 RID: 39219 RVA: 0x0021243F File Offset: 0x0021063F
+	// Token: 0x06006D0D RID: 27917 RVA: 0x0021C158 File Offset: 0x0021A358
 	public virtual void RefreshByData(OneItemConfig data, SignState state, int index)
 	{
 	}
 
-	// Token: 0x06009934 RID: 39220 RVA: 0x00212441 File Offset: 0x00210641
+	// Token: 0x06006D0E RID: 27918 RVA: 0x0021C15A File Offset: 0x0021A35A
 	[NullableContext(1)]
 	protected string GetRewardStateTextId(SignState state)
 	{
@@ -30,7 +30,7 @@ public class SignRewardItemBase : UiPanelBase
 		}
 	}
 
-	// Token: 0x06009935 RID: 39221 RVA: 0x0021246E File Offset: 0x0021066E
+	// Token: 0x06006D0F RID: 27919 RVA: 0x0021C187 File Offset: 0x0021A387
 	protected void OnClickToggle(EToggleState toggleState)
 	{
 		Action<int> onClickToGet = this.OnClickToGet;
@@ -41,7 +41,7 @@ public class SignRewardItemBase : UiPanelBase
 		onClickToGet(this.Index);
 	}
 
-	// Token: 0x06009936 RID: 39222 RVA: 0x00212486 File Offset: 0x00210686
+	// Token: 0x06006D10 RID: 27920 RVA: 0x0021C19F File Offset: 0x0021A39F
 	protected void OnClickButton()
 	{
 		Action<int> onClickToGet = this.OnClickToGet;
@@ -52,19 +52,19 @@ public class SignRewardItemBase : UiPanelBase
 		onClickToGet(this.Index);
 	}
 
-	// Token: 0x06009937 RID: 39223 RVA: 0x0021249E File Offset: 0x0021069E
+	// Token: 0x06006D11 RID: 27921 RVA: 0x0021C1B7 File Offset: 0x0021A3B7
 	protected override void OnBeforeDestroyImplement()
 	{
 		this.OnClickToGet = null;
 	}
 
-	// Token: 0x04004361 RID: 17249
+	// Token: 0x04004406 RID: 17414
 	protected int Index;
 
-	// Token: 0x04004362 RID: 17250
+	// Token: 0x04004407 RID: 17415
 	protected bool CanGetReward;
 
-	// Token: 0x04004363 RID: 17251
+	// Token: 0x04004408 RID: 17416
 	[Nullable(2)]
 	public Action<int> OnClickToGet;
 }

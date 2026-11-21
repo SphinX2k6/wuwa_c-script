@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
@@ -16,13 +15,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02000ED2 RID: 3794
+// Token: 0x02000387 RID: 903
 [NullableContext(2)]
 [Nullable(0)]
 public class TowerDefensePlayerController : IStaticVariableResetter
 {
-	// Token: 0x1700073E RID: 1854
-	// (get) Token: 0x06005E58 RID: 24152 RVA: 0x00116D1D File Offset: 0x00114F1D
+	// Token: 0x17000762 RID: 1890
+	// (get) Token: 0x060031EF RID: 12783 RVA: 0x0011E9F9 File Offset: 0x0011CBF9
 	public static TowerDefensePlayerModel Model
 	{
 		get
@@ -31,20 +30,20 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06005E59 RID: 24153 RVA: 0x00116D24 File Offset: 0x00114F24
+	// Token: 0x060031F0 RID: 12784 RVA: 0x0011EA00 File Offset: 0x0011CC00
 	static TowerDefensePlayerController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(TowerDefensePlayerController.CreateStaticDefaultValue), new Action(TowerDefensePlayerController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06005E5A RID: 24154 RVA: 0x00116D43 File Offset: 0x00114F43
+	// Token: 0x060031F1 RID: 12785 RVA: 0x0011EA1F File Offset: 0x0011CC1F
 	public static void CreateStaticDefaultValue()
 	{
 		TowerDefensePlayerController.TDPlayerModel = new TowerDefensePlayerModel();
 		TowerDefensePlayerController.EKSC_REMOVE_REASON_FOLLOWER = new FName("Follower");
 	}
 
-	// Token: 0x06005E5B RID: 24155 RVA: 0x00116D5E File Offset: 0x00114F5E
+	// Token: 0x060031F2 RID: 12786 RVA: 0x0011EA3A File Offset: 0x0011CC3A
 	public static void ResetStaticDefaultValue()
 	{
 		TowerDefensePlayerController.TDPlayerModel = null;
@@ -53,13 +52,13 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		TowerDefensePlayerController.EKSC_REMOVE_REASON_FOLLOWER = null;
 	}
 
-	// Token: 0x06005E5C RID: 24156 RVA: 0x00116D7D File Offset: 0x00114F7D
+	// Token: 0x060031F3 RID: 12787 RVA: 0x0011EA59 File Offset: 0x0011CC59
 	public static bool OnInit()
 	{
 		return true;
 	}
 
-	// Token: 0x06005E5D RID: 24157 RVA: 0x00116D80 File Offset: 0x00114F80
+	// Token: 0x060031F4 RID: 12788 RVA: 0x0011EA5C File Offset: 0x0011CC5C
 	public static bool OnStart()
 	{
 		EventSystem instance = EventSystem.Instance;
@@ -132,7 +131,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x06005E5E RID: 24158 RVA: 0x00116EE9 File Offset: 0x001150E9
+	// Token: 0x060031F5 RID: 12789 RVA: 0x0011EBC5 File Offset: 0x0011CDC5
 	public static void SyncMainLocations(float delta)
 	{
 		KscEntityHandle possessedPlayerHandle = TowerDefensePlayerController.Model.PossessedPlayerHandle;
@@ -148,7 +147,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		possessedFollowerHandle.SyncEntityLocation();
 	}
 
-	// Token: 0x06005E5F RID: 24159 RVA: 0x00116F14 File Offset: 0x00115114
+	// Token: 0x060031F6 RID: 12790 RVA: 0x0011EBF0 File Offset: 0x0011CDF0
 	public static bool OnClear()
 	{
 		TowerDefensePlayerController.RemoveRouletteGameplayTag();
@@ -157,7 +156,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x06005E60 RID: 24160 RVA: 0x00116F28 File Offset: 0x00115128
+	// Token: 0x060031F7 RID: 12791 RVA: 0x0011EC04 File Offset: 0x0011CE04
 	public static bool OnStop()
 	{
 		TowerDefensePlayerController.RemoveRouletteGameplayTag();
@@ -224,14 +223,14 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		return true;
 	}
 
-	// Token: 0x06005E61 RID: 24161 RVA: 0x00117056 File Offset: 0x00115256
+	// Token: 0x060031F8 RID: 12792 RVA: 0x0011ED32 File Offset: 0x0011CF32
 	[NullableContext(1)]
 	public static bool CheckPlayerFollowerMatch(EntityHandle followerHandle)
 	{
 		return followerHandle.Entity.GetComponent<CreatureDataComponent>().TrapAuxiliaryConfigIds != null;
 	}
 
-	// Token: 0x06005E62 RID: 24162 RVA: 0x0011706C File Offset: 0x0011526C
+	// Token: 0x060031F9 RID: 12793 RVA: 0x0011ED48 File Offset: 0x0011CF48
 	public static EntityHandle GetPlayerEntityHandle()
 	{
 		int playerId = CreatureModel.Instance.GetPlayerId();
@@ -258,7 +257,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		return CreatureModel.Instance.GetEntity(num2.GetValueOrDefault());
 	}
 
-	// Token: 0x06005E63 RID: 24163 RVA: 0x001170E4 File Offset: 0x001152E4
+	// Token: 0x060031FA RID: 12794 RVA: 0x0011EDC0 File Offset: 0x0011CFC0
 	public static void TryInitKSCEnityt()
 	{
 		if (!TowerDefensePlayerController.Model.TowerDefenseWorldDone || TowerDefensePlayerController.Model.PendingFollowerCreatureId == null || TowerDefensePlayerController.Model.PendingFollowers == null)
@@ -288,7 +287,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		TowerDefensePlayerController.DoPlayerFollowerEnableChange(TowerDefensePlayerController.Model.CurrentFollowerEnable);
 	}
 
-	// Token: 0x06005E64 RID: 24164 RVA: 0x001171CC File Offset: 0x001153CC
+	// Token: 0x060031FB RID: 12795 RVA: 0x0011EEA8 File Offset: 0x0011D0A8
 	[NullableContext(1)]
 	private static void SetPendingFollowers(int[] proxyIds)
 	{
@@ -299,7 +298,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		TowerDefensePlayerController.Model.PendingFollowers = proxyIds;
 	}
 
-	// Token: 0x06005E65 RID: 24165 RVA: 0x001171F4 File Offset: 0x001153F4
+	// Token: 0x060031FC RID: 12796 RVA: 0x0011EED0 File Offset: 0x0011D0D0
 	public static void DoPossessRole(EntityHandle entityHandle)
 	{
 		if (KscEnv.Instance.KscWorld == null)
@@ -321,7 +320,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		TowerDefensePlayerController.DoPossessRole_Impl(entityHandle);
 	}
 
-	// Token: 0x06005E66 RID: 24166 RVA: 0x0011729C File Offset: 0x0011549C
+	// Token: 0x060031FD RID: 12797 RVA: 0x0011EF78 File Offset: 0x0011D178
 	[NullableContext(1)]
 	private unsafe static void DoPossessRole_Impl(EntityHandle entityHandle)
 	{
@@ -363,7 +362,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		KscLog.Warn(KscLog.EModule.Common, ELogAuthor.PZ, KscEnv.Instance.KscWorld, "塔防绑定玩家战斗实体失败", default(ReadOnlySpan<ValueTuple<string, object>>));
 	}
 
-	// Token: 0x06005E67 RID: 24167 RVA: 0x001173F4 File Offset: 0x001155F4
+	// Token: 0x060031FE RID: 12798 RVA: 0x0011F0D0 File Offset: 0x0011D2D0
 	public static KscEntityHandle GetPossessedPlayer()
 	{
 		TowerDefensePlayerModel model = TowerDefensePlayerController.Model;
@@ -374,7 +373,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		return model.PossessedPlayerHandle;
 	}
 
-	// Token: 0x06005E68 RID: 24168 RVA: 0x00117406 File Offset: 0x00115606
+	// Token: 0x060031FF RID: 12799 RVA: 0x0011F0E2 File Offset: 0x0011D2E2
 	public static EntityHandle GetPossessedPlayerEntity()
 	{
 		TowerDefensePlayerModel model = TowerDefensePlayerController.Model;
@@ -385,7 +384,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		return model.PendingRoleHandle;
 	}
 
-	// Token: 0x06005E69 RID: 24169 RVA: 0x00117418 File Offset: 0x00115618
+	// Token: 0x06003200 RID: 12800 RVA: 0x0011F0F4 File Offset: 0x0011D2F4
 	[NullableContext(1)]
 	private static void DoPossessFollowerProxy(int[] proxyIds)
 	{
@@ -405,7 +404,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06005E6A RID: 24170 RVA: 0x001174A0 File Offset: 0x001156A0
+	// Token: 0x06003201 RID: 12801 RVA: 0x0011F17C File Offset: 0x0011D37C
 	private static TowerDefenseFollowerProxy GetPossessedFollowerProxy(int proxyId)
 	{
 		Dictionary<int, TowerDefenseFollowerProxy> possessedFollowerProxies = TowerDefensePlayerController.Model.PossessedFollowerProxies;
@@ -417,7 +416,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		return result;
 	}
 
-	// Token: 0x06005E6B RID: 24171 RVA: 0x001174CC File Offset: 0x001156CC
+	// Token: 0x06003202 RID: 12802 RVA: 0x0011F1A8 File Offset: 0x0011D3A8
 	private static TowerDefenseFollowerProxy GetPrimaryPossessedFollowerProxy()
 	{
 		if (TowerDefensePlayerController.Model.PossessedFollowerProxies == null)
@@ -435,7 +434,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		return null;
 	}
 
-	// Token: 0x06005E6C RID: 24172 RVA: 0x0011753C File Offset: 0x0011573C
+	// Token: 0x06003203 RID: 12803 RVA: 0x0011F218 File Offset: 0x0011D418
 	private static void AddRouletteGameplayTag()
 	{
 		int playerId = CreatureModel.Instance.GetPlayerId();
@@ -452,7 +451,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		component.AddTag(new int?(GameplayTagDefine.EGameplayTagId["TowerDefence.轮盘"]));
 	}
 
-	// Token: 0x06005E6D RID: 24173 RVA: 0x00117588 File Offset: 0x00115788
+	// Token: 0x06003204 RID: 12804 RVA: 0x0011F264 File Offset: 0x0011D464
 	private static void RemoveRouletteGameplayTag()
 	{
 		int playerId = CreatureModel.Instance.GetPlayerId();
@@ -469,7 +468,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		component.RemoveTag(new int?(GameplayTagDefine.EGameplayTagId["TowerDefence.轮盘"]));
 	}
 
-	// Token: 0x06005E6E RID: 24174 RVA: 0x001175D4 File Offset: 0x001157D4
+	// Token: 0x06003205 RID: 12805 RVA: 0x0011F2B0 File Offset: 0x0011D4B0
 	private static void OnPlayerFollowerEnableChange(bool isEnable)
 	{
 		if (KscEnv.Instance.KscWorld == null)
@@ -479,26 +478,26 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		TowerDefensePlayerController.DoPlayerFollowerEnableChange(isEnable);
 	}
 
-	// Token: 0x06005E6F RID: 24175 RVA: 0x001175E9 File Offset: 0x001157E9
+	// Token: 0x06003206 RID: 12806 RVA: 0x0011F2C5 File Offset: 0x0011D4C5
 	[NullableContext(1)]
 	private static void OnPlayerFollowerPossessed(EntityHandle followerHandle)
 	{
 		TowerDefensePlayerController.DoPlayerFollowerCreate(followerHandle);
 	}
 
-	// Token: 0x06005E70 RID: 24176 RVA: 0x001175F1 File Offset: 0x001157F1
+	// Token: 0x06003207 RID: 12807 RVA: 0x0011F2CD File Offset: 0x0011D4CD
 	private static void OnPlayerFollowerUnPossessed()
 	{
 		TowerDefensePlayerController.DoPlayerFollowerDestroy();
 	}
 
-	// Token: 0x06005E71 RID: 24177 RVA: 0x001175F8 File Offset: 0x001157F8
+	// Token: 0x06003208 RID: 12808 RVA: 0x0011F2D4 File Offset: 0x0011D4D4
 	public static void TogglePlayerFollower()
 	{
 		TowerDefensePlayerController.EnablePlayerFollower(!TowerDefensePlayerController.IsPlayerFollowerEnabled());
 	}
 
-	// Token: 0x06005E72 RID: 24178 RVA: 0x00117607 File Offset: 0x00115807
+	// Token: 0x06003209 RID: 12809 RVA: 0x0011F2E3 File Offset: 0x0011D4E3
 	public static void EnablePlayerFollower(bool isEnable)
 	{
 		TowerDefensePlayerController.Model.CurrentFollowerEnable = isEnable;
@@ -510,7 +509,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06005E73 RID: 24179 RVA: 0x0011763C File Offset: 0x0011583C
+	// Token: 0x0600320A RID: 12810 RVA: 0x0011F318 File Offset: 0x0011D518
 	public unsafe static void DoPlayerFollowerEnableChange(bool isEnable)
 	{
 		if (isEnable)
@@ -549,41 +548,40 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 				if (!string.IsNullOrEmpty(item))
 				{
 					TowerDefensePlayerController.Model.IsInFollowerInit = true;
-					KuroSimpleCombatController instance = KuroSimpleCombatController.Instance;
-					KscEntityParam kscEntityParam = new KscEntityParam();
-					kscEntityParam.CreatureId = creatureDataId;
-					kscEntityParam.SimpleCombatId = TowerDefensePlayerModel.FollowerEntityKey;
-					kscEntityParam.AssetPath = item;
-					kscEntityParam.PropertyId = 0;
-					kscEntityParam.Transform = transform;
-					SimpleCombatComponentPb combatComponent3 = combatComponent;
-					kscEntityParam.Buffs = ((combatComponent3 != null) ? combatComponent3.BuffLayers.ToDictionary<int, int>() : null);
-					kscEntityParam.FinishCallback = delegate(AKSC_Entity kscEntity)
+					KuroSimpleCombatController.Instance.AsyncAddEntity(new KscEntityParam
 					{
-						KscLog.EModule flag4 = KscLog.EModule.Common;
-						ELogAuthor author4 = ELogAuthor.PZ;
-						UObject kscWorld4 = KscEnv.Instance.KscWorld;
-						string log4 = "塔防跟随物绑定";
-						<>y__InlineArray4<ValueTuple<string, object>> <>y__InlineArray2 = default(<>y__InlineArray4<ValueTuple<string, object>>);
-						*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 0) = new ValueTuple<string, object>("entity", entity);
-						ref ValueTuple<string, object> ptr2 = ref <PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 1);
-						string item3 = "buff";
-						SimpleCombatComponentPb combatComponent2 = combatComponent;
-						ptr2 = new ValueTuple<string, object>(item3, (combatComponent2 != null) ? combatComponent2.BuffLayers : null);
-						*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 2) = new ValueTuple<string, object>("kscHandle", TowerDefensePlayerController.Model.PossessedFollowerHandle);
-						*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 3) = new ValueTuple<string, object>("kscEntity", kscEntity);
-						KscLog.Info(flag4, author4, kscWorld4, log4, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 4));
-						KscEntityHandle possessedFollowerHandle3 = TowerDefensePlayerController.Model.PossessedFollowerHandle;
-						if (possessedFollowerHandle3 != null)
+						CreatureId = creatureDataId,
+						SimpleCombatId = TowerDefensePlayerModel.FollowerEntityKey,
+						AssetPath = item,
+						PropertyId = 0,
+						Transform = transform,
+						Buffs = ((combatComponent == null) ? null : new Dictionary<int, int>(combatComponent.BuffLayers)),
+						FinishCallback = delegate(AKSC_Entity kscEntity)
 						{
-							possessedFollowerHandle3.SetKscEntity(kscEntity);
+							KscLog.EModule flag4 = KscLog.EModule.Common;
+							ELogAuthor author4 = ELogAuthor.PZ;
+							UObject kscWorld4 = KscEnv.Instance.KscWorld;
+							string log4 = "塔防跟随物绑定";
+							<>y__InlineArray4<ValueTuple<string, object>> <>y__InlineArray2 = default(<>y__InlineArray4<ValueTuple<string, object>>);
+							*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 0) = new ValueTuple<string, object>("entity", entity);
+							ref ValueTuple<string, object> ptr2 = ref <PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 1);
+							string item3 = "buff";
+							SimpleCombatComponentPb combatComponent = combatComponent;
+							ptr2 = new ValueTuple<string, object>(item3, (combatComponent != null) ? combatComponent.BuffLayers : null);
+							*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 2) = new ValueTuple<string, object>("kscHandle", TowerDefensePlayerController.Model.PossessedFollowerHandle);
+							*<PrivateImplementationDetails>.InlineArrayElementRef<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(ref <>y__InlineArray2, 3) = new ValueTuple<string, object>("kscEntity", kscEntity);
+							KscLog.Info(flag4, author4, kscWorld4, log4, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray2, 4));
+							KscEntityHandle possessedFollowerHandle3 = TowerDefensePlayerController.Model.PossessedFollowerHandle;
+							if (possessedFollowerHandle3 != null)
+							{
+								possessedFollowerHandle3.SetKscEntity(kscEntity);
+							}
+							TowerDefensePlayerController.InitAllFollowerSkill();
+							TowerDefensePlayerController.RefreshFollowerData();
+							TowerDefensePlayerController.ListenFollowerCDAttribute();
+							TowerDefensePlayerController.Model.IsInFollowerInit = false;
 						}
-						TowerDefensePlayerController.InitAllFollowerSkill();
-						TowerDefensePlayerController.RefreshFollowerData();
-						TowerDefensePlayerController.ListenFollowerCDAttribute();
-						TowerDefensePlayerController.Model.IsInFollowerInit = false;
-					};
-					instance.AsyncAddEntity(kscEntityParam);
+					});
 					return;
 				}
 				return;
@@ -613,7 +611,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06005E74 RID: 24180 RVA: 0x00117904 File Offset: 0x00115B04
+	// Token: 0x0600320B RID: 12811 RVA: 0x0011F5E4 File Offset: 0x0011D7E4
 	private unsafe static void InitAllFollowerSkill()
 	{
 		Dictionary<string, int> followerSkillName2Index = TowerDefensePlayerController.GetFollowerSkillName2Index(TowerDefensePlayerController.Model.PossessedFollowerKscEntity);
@@ -694,7 +692,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06005E75 RID: 24181 RVA: 0x00117B90 File Offset: 0x00115D90
+	// Token: 0x0600320C RID: 12812 RVA: 0x0011F870 File Offset: 0x0011DA70
 	public unsafe static void SetFollowerProxy(int proxyId)
 	{
 		TowerDefensePlayerController.Model.CurrentFollowerProxyId = new int?(proxyId);
@@ -747,7 +745,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		KscLog.Info(flag5, author5, kscWorld5, log5, new ReadOnlySpan<ValueTuple<string, object>>(ref valueTuple4));
 	}
 
-	// Token: 0x06005E76 RID: 24182 RVA: 0x00117D0C File Offset: 0x00115F0C
+	// Token: 0x0600320D RID: 12813 RVA: 0x0011F9EC File Offset: 0x0011DBEC
 	public static int? GetFollowerProxyId()
 	{
 		TowerDefensePlayerModel model = TowerDefensePlayerController.Model;
@@ -758,7 +756,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		return model.CurrentFollowerProxyId;
 	}
 
-	// Token: 0x06005E77 RID: 24183 RVA: 0x00117D34 File Offset: 0x00115F34
+	// Token: 0x0600320E RID: 12814 RVA: 0x0011FA14 File Offset: 0x0011DC14
 	private static void RefreshFollowerData()
 	{
 		TowerDefensePlayerController.UnBindFollowerOperateSkills();
@@ -775,13 +773,13 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		TowerDefensePlayerController.Model.IsInCharge = false;
 	}
 
-	// Token: 0x06005E78 RID: 24184 RVA: 0x00117DAA File Offset: 0x00115FAA
+	// Token: 0x0600320F RID: 12815 RVA: 0x0011FA8A File Offset: 0x0011DC8A
 	public static bool IsPlayerFollowerEnabled()
 	{
 		return TowerDefensePlayerController.Model.PossessedFollowerEnabled;
 	}
 
-	// Token: 0x06005E79 RID: 24185 RVA: 0x00117DB8 File Offset: 0x00115FB8
+	// Token: 0x06003210 RID: 12816 RVA: 0x0011FA98 File Offset: 0x0011DC98
 	public unsafe static void DoPlayerFollowerCreate(EntityHandle followerHandle)
 	{
 		if (followerHandle == null)
@@ -816,7 +814,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		TowerDefensePlayerController.TryInitKSCEnityt();
 	}
 
-	// Token: 0x06005E7A RID: 24186 RVA: 0x00117EEC File Offset: 0x001160EC
+	// Token: 0x06003211 RID: 12817 RVA: 0x0011FBCC File Offset: 0x0011DDCC
 	public unsafe static void DoPlayerFollowerDestroy()
 	{
 		KscEntityHandle possessedFollowerHandle = TowerDefensePlayerController.Model.PossessedFollowerHandle;
@@ -840,7 +838,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		TowerDefensePlayerController.UnBindFollowerOperateSkills();
 	}
 
-	// Token: 0x06005E7B RID: 24187 RVA: 0x00117FBD File Offset: 0x001161BD
+	// Token: 0x06003212 RID: 12818 RVA: 0x0011FC9D File Offset: 0x0011DE9D
 	public static void D_Fire(FTransformDouble transform, int skillIndex)
 	{
 		AKSC_Entity_AssistMachine possessedFollowerKscEntity = TowerDefensePlayerController.Model.PossessedFollowerKscEntity;
@@ -851,7 +849,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		possessedFollowerKscEntity.D_Fire(transform, skillIndex);
 	}
 
-	// Token: 0x06005E7C RID: 24188 RVA: 0x00117FD6 File Offset: 0x001161D6
+	// Token: 0x06003213 RID: 12819 RVA: 0x0011FCB6 File Offset: 0x0011DEB6
 	[NullableContext(1)]
 	public static void BeginSkillFollower(TDPlayerDefine.ISkill skillData)
 	{
@@ -863,7 +861,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		TowerDefensePlayerController.BeginMontageSkillFollower(skillData);
 	}
 
-	// Token: 0x06005E7D RID: 24189 RVA: 0x00117FF0 File Offset: 0x001161F0
+	// Token: 0x06003214 RID: 12820 RVA: 0x0011FCD0 File Offset: 0x0011DED0
 	[NullableContext(1)]
 	public static void BeginKSCSkillFollower(TDPlayerDefine.ISkill skillData)
 	{
@@ -874,7 +872,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06005E7E RID: 24190 RVA: 0x0011801C File Offset: 0x0011621C
+	// Token: 0x06003215 RID: 12821 RVA: 0x0011FCFC File Offset: 0x0011DEFC
 	[NullableContext(1)]
 	private static void DispatchEnterCD(TDPlayerDefine.ISkill skillData, CharacterSkillCdComponent skillCDComp)
 	{
@@ -909,7 +907,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06005E7F RID: 24191 RVA: 0x001180C0 File Offset: 0x001162C0
+	// Token: 0x06003216 RID: 12822 RVA: 0x0011FDA0 File Offset: 0x0011DFA0
 	[NullableContext(1)]
 	public static void BeginMontageSkillFollower(TDPlayerDefine.ISkill skillData)
 	{
@@ -925,7 +923,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		TowerDefensePlayerController.BeginMontageSkillFollowerAsync(skillData, baseSkillComponent, characterSkillCdComponent).Forget();
 	}
 
-	// Token: 0x06005E80 RID: 24192 RVA: 0x00118128 File Offset: 0x00116328
+	// Token: 0x06003217 RID: 12823 RVA: 0x0011FE08 File Offset: 0x0011E008
 	[NullableContext(1)]
 	private static UniTask BeginMontageSkillFollowerAsync(TDPlayerDefine.ISkill skillData, BaseSkillComponent skillComp, CharacterSkillCdComponent skillCDComp)
 	{
@@ -939,7 +937,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		return <BeginMontageSkillFollowerAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06005E81 RID: 24193 RVA: 0x0011817C File Offset: 0x0011637C
+	// Token: 0x06003218 RID: 12824 RVA: 0x0011FE5C File Offset: 0x0011E05C
 	public static TDPlayerDefine.ISkill GetFollowerSkillByOperateType(EKSC_OperateType operateType, float time)
 	{
 		if (TowerDefensePlayerController.Model.BindFollowerSkills == null || TowerDefensePlayerController.Model.BindFollowerSkills.Count == 0)
@@ -961,7 +959,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		return null;
 	}
 
-	// Token: 0x06005E82 RID: 24194 RVA: 0x00118208 File Offset: 0x00116408
+	// Token: 0x06003219 RID: 12825 RVA: 0x0011FEE8 File Offset: 0x0011E0E8
 	private static void TryBeginMontageSkillFollower()
 	{
 		List<TDPlayerDefine.ISkill> list;
@@ -978,20 +976,20 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06005E83 RID: 24195 RVA: 0x00118284 File Offset: 0x00116484
+	// Token: 0x0600321A RID: 12826 RVA: 0x0011FF64 File Offset: 0x0011E164
 	[NullableContext(1)]
 	public static void OnCharSkillCountChanged(GroupSkillCdInfo cdInfo)
 	{
 		TowerDefensePlayerController.TryBeginMontageSkillFollower();
 	}
 
-	// Token: 0x06005E84 RID: 24196 RVA: 0x0011828B File Offset: 0x0011648B
+	// Token: 0x0600321B RID: 12827 RVA: 0x0011FF6B File Offset: 0x0011E16B
 	public static void OnFollowerMontageSkillEnd(int entityId, int skillId)
 	{
 		TowerDefensePlayerController.TryBeginMontageSkillFollower();
 	}
 
-	// Token: 0x06005E85 RID: 24197 RVA: 0x00118294 File Offset: 0x00116494
+	// Token: 0x0600321C RID: 12828 RVA: 0x0011FF74 File Offset: 0x0011E174
 	public static void SetFollowerSKillAutoCast(bool bEnable, bool bForce)
 	{
 		if (TowerDefensePlayerController.Model.IsInAutoCast == bEnable && !bForce)
@@ -1117,7 +1115,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06005E86 RID: 24198 RVA: 0x001184E8 File Offset: 0x001166E8
+	// Token: 0x0600321D RID: 12829 RVA: 0x001201C8 File Offset: 0x0011E3C8
 	public static void SetFollowerState(TDPlayerDefine.EFollowerState followerState)
 	{
 		TDPlayerDefine.EFollowerState followerState2 = TowerDefensePlayerController.Model.FollowerState;
@@ -1128,7 +1126,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06005E87 RID: 24199 RVA: 0x00118514 File Offset: 0x00116714
+	// Token: 0x0600321E RID: 12830 RVA: 0x001201F4 File Offset: 0x0011E3F4
 	public static void ClearFollowerCdCue()
 	{
 		if (TowerDefensePlayerController.Model.FollowerCdCueHandle != null)
@@ -1146,13 +1144,13 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06005E88 RID: 24200 RVA: 0x001185A4 File Offset: 0x001167A4
+	// Token: 0x0600321F RID: 12831 RVA: 0x00120284 File Offset: 0x0011E484
 	private static void OnSkillReady()
 	{
 		TowerDefensePlayerController.RefreshFolloerCdCue(null);
 	}
 
-	// Token: 0x06005E89 RID: 24201 RVA: 0x001185AC File Offset: 0x001167AC
+	// Token: 0x06003220 RID: 12832 RVA: 0x0012028C File Offset: 0x0011E48C
 	[NullableContext(1)]
 	public static void RefreshFolloerCdCue(GroupSkillCdInfo _ = null)
 	{
@@ -1194,7 +1192,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06005E8A RID: 24202 RVA: 0x0011868C File Offset: 0x0011688C
+	// Token: 0x06003221 RID: 12833 RVA: 0x0012036C File Offset: 0x0011E56C
 	public static void RemoveFollowerCue()
 	{
 		if (TowerDefensePlayerController.Model.FollowCueHandle != null)
@@ -1212,7 +1210,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06005E8B RID: 24203 RVA: 0x0011871C File Offset: 0x0011691C
+	// Token: 0x06003222 RID: 12834 RVA: 0x001203FC File Offset: 0x0011E5FC
 	public static void RefreshFollowerCue()
 	{
 		TowerDefensePlayerController.RemoveFollowerCue();
@@ -1246,7 +1244,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06005E8C RID: 24204 RVA: 0x001187D4 File Offset: 0x001169D4
+	// Token: 0x06003223 RID: 12835 RVA: 0x001204B4 File Offset: 0x0011E6B4
 	public static void SetPsFeedbackId(string PsFeedbackId)
 	{
 		string psFeedbackId = TowerDefensePlayerController.Model.PsFeedbackId;
@@ -1257,7 +1255,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06005E8D RID: 24205 RVA: 0x00118804 File Offset: 0x00116A04
+	// Token: 0x06003224 RID: 12836 RVA: 0x001204E4 File Offset: 0x0011E6E4
 	public static void RemoveChargeEffect()
 	{
 		if (TowerDefensePlayerController.Model.ChargeCueHandle > 0)
@@ -1276,7 +1274,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		TowerDefensePlayerController.Model.PsFeedbackId = null;
 	}
 
-	// Token: 0x06005E8E RID: 24206 RVA: 0x0011887C File Offset: 0x00116A7C
+	// Token: 0x06003225 RID: 12837 RVA: 0x0012055C File Offset: 0x0011E75C
 	public static void TryPlayCharageEffect(EKSC_OperateType operateType, float time)
 	{
 		if (operateType != EKSC_OperateType.OnHold)
@@ -1357,7 +1355,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		model.ChargeSkill = skill;
 	}
 
-	// Token: 0x06005E8F RID: 24207 RVA: 0x00118A54 File Offset: 0x00116C54
+	// Token: 0x06003226 RID: 12838 RVA: 0x00120734 File Offset: 0x0011E934
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -1414,7 +1412,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		return null;
 	}
 
-	// Token: 0x06005E90 RID: 24208 RVA: 0x00118B86 File Offset: 0x00116D86
+	// Token: 0x06003227 RID: 12839 RVA: 0x00120866 File Offset: 0x0011EA66
 	private static int[] GetFollowerProxySkillIds(int proxyId)
 	{
 		if (TowerDefensePlayerController.Model.PossessedFollowerProxies == null || TowerDefensePlayerController.Model.PossessedFollowerProxies.Count <= 0)
@@ -1429,7 +1427,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		return possessedFollowerProxy.SkillIds;
 	}
 
-	// Token: 0x06005E91 RID: 24209 RVA: 0x00118BBC File Offset: 0x00116DBC
+	// Token: 0x06003228 RID: 12840 RVA: 0x0012089C File Offset: 0x0011EA9C
 	public unsafe static void BindFollowerOperateSkills(AKSC_Entity_AssistMachine kscEntity, int? proxyId)
 	{
 		if (kscEntity == null)
@@ -1505,7 +1503,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06005E92 RID: 24210 RVA: 0x00118E38 File Offset: 0x00117038
+	// Token: 0x06003229 RID: 12841 RVA: 0x00120B18 File Offset: 0x0011ED18
 	public static void UnBindFollowerOperateSkills()
 	{
 		TowerDefensePlayerController.SetFollowerSKillAutoCast(false, true);
@@ -1522,7 +1520,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		skillId2SkillData.Clear();
 	}
 
-	// Token: 0x06005E93 RID: 24211 RVA: 0x00118E6C File Offset: 0x0011706C
+	// Token: 0x0600322A RID: 12842 RVA: 0x00120B4C File Offset: 0x0011ED4C
 	public static void ClearFollowerKSCData()
 	{
 		TowerDefensePlayerController.RemoveChargeEffect();
@@ -1589,7 +1587,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		DelegateUtils.ReleaseManualReleaseDelegate(callBack2);
 	}
 
-	// Token: 0x06005E94 RID: 24212 RVA: 0x00118F94 File Offset: 0x00117194
+	// Token: 0x0600322B RID: 12843 RVA: 0x00120C74 File Offset: 0x0011EE74
 	public static void ListenFollowerCDAttribute()
 	{
 		AKSC_Entity_AssistMachine possessedFollowerKscEntity = TowerDefensePlayerController.Model.PossessedFollowerKscEntity;
@@ -1625,19 +1623,19 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		uksc_AttrSet2.AssignAttrListen(EKSC_AttrType.SkillCoolDownChange, TowerDefensePlayerController.DelegateSkillCoolDownChange);
 	}
 
-	// Token: 0x06005E95 RID: 24213 RVA: 0x0011904C File Offset: 0x0011724C
+	// Token: 0x0600322C RID: 12844 RVA: 0x00120D2C File Offset: 0x0011EF2C
 	private static void OnFollowerCDAttr(EKSC_AttrType attrType, int value)
 	{
 		TowerDefensePlayerController.UpdateFollowMontageSkillCD();
 	}
 
-	// Token: 0x06005E96 RID: 24214 RVA: 0x00119053 File Offset: 0x00117253
+	// Token: 0x0600322D RID: 12845 RVA: 0x00120D33 File Offset: 0x0011EF33
 	private static void OnFollowerCDChangeAttr(EKSC_AttrType attrType, int value)
 	{
 		TowerDefensePlayerController.UpdateFollowMontageSkillCD();
 	}
 
-	// Token: 0x06005E97 RID: 24215 RVA: 0x0011905C File Offset: 0x0011725C
+	// Token: 0x0600322E RID: 12846 RVA: 0x00120D3C File Offset: 0x0011EF3C
 	private static void UpdateFollowMontageSkillCD()
 	{
 		AKSC_Entity_AssistMachine possessedFollowerKscEntity = TowerDefensePlayerController.Model.PossessedFollowerKscEntity;
@@ -1668,7 +1666,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06005E98 RID: 24216 RVA: 0x00119118 File Offset: 0x00117318
+	// Token: 0x0600322F RID: 12847 RVA: 0x00120DF8 File Offset: 0x0011EFF8
 	public static void OnFollowerEnterSkillCd(int skillIndex, float cd)
 	{
 		if (TowerDefensePlayerController.Model.CurrentFollowerProxyId == null)
@@ -1679,7 +1677,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		EventSystem.Instance.Emit<int, float>(EEventName.TrapFollowerSkillCd, TowerDefensePlayerController.Model.CurrentFollowerProxyId.Value, cd);
 	}
 
-	// Token: 0x06005E99 RID: 24217 RVA: 0x00119154 File Offset: 0x00117354
+	// Token: 0x06003230 RID: 12848 RVA: 0x00120E34 File Offset: 0x0011F034
 	public static TDPlayerDefine.ISkill GetFollowListenSkillData(int proxyId)
 	{
 		if (KscUtil.GetFollowerCdSkillByProxy(proxyId).GetValueOrDefault() != 1)
@@ -1700,7 +1698,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		return result;
 	}
 
-	// Token: 0x06005E9A RID: 24218 RVA: 0x001191A8 File Offset: 0x001173A8
+	// Token: 0x06003231 RID: 12849 RVA: 0x00120E88 File Offset: 0x0011F088
 	public static TDPlayerDefine.ISkill GetSkillDataByRowId(int CDSkillRowId)
 	{
 		Dictionary<int, TDPlayerDefine.ISkill> skillId2SkillData = TowerDefensePlayerController.Model.SkillId2SkillData;
@@ -1712,7 +1710,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		return result;
 	}
 
-	// Token: 0x06005E9B RID: 24219 RVA: 0x001191D4 File Offset: 0x001173D4
+	// Token: 0x06003232 RID: 12850 RVA: 0x00120EB4 File Offset: 0x0011F0B4
 	public static void SetListenSkillCD(AKSC_Entity_AssistMachine kscEntity, int? proxyId)
 	{
 		if (proxyId == null || kscEntity == null)
@@ -1811,19 +1809,19 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		onSkillReady2.Bind(callback2);
 	}
 
-	// Token: 0x06005E9C RID: 24220 RVA: 0x001193A3 File Offset: 0x001175A3
+	// Token: 0x06003233 RID: 12851 RVA: 0x00121083 File Offset: 0x0011F283
 	public static float GetFollowerSkillRemainCD(int proxyId)
 	{
 		return TowerDefensePlayerController.GetFollowerSkillCDInner(proxyId, true);
 	}
 
-	// Token: 0x06005E9D RID: 24221 RVA: 0x001193AC File Offset: 0x001175AC
+	// Token: 0x06003234 RID: 12852 RVA: 0x0012108C File Offset: 0x0011F28C
 	public static float GetFollowerSkillCD(int proxyId)
 	{
 		return TowerDefensePlayerController.GetFollowerSkillCDInner(proxyId, false);
 	}
 
-	// Token: 0x06005E9E RID: 24222 RVA: 0x001193B8 File Offset: 0x001175B8
+	// Token: 0x06003235 RID: 12853 RVA: 0x00121098 File Offset: 0x0011F298
 	private static float GetFollowerSkillCDInner(int proxyId, bool bRemainCd)
 	{
 		TDPlayerDefine.ISkill followListenSkillData = TowerDefensePlayerController.GetFollowListenSkillData(proxyId);
@@ -1900,7 +1898,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		return groupSkillCdInfo.CurRemainingCd;
 	}
 
-	// Token: 0x06005E9F RID: 24223 RVA: 0x00119588 File Offset: 0x00117788
+	// Token: 0x06003236 RID: 12854 RVA: 0x00121268 File Offset: 0x0011F468
 	private unsafe static void BindFollowerAttrs(AKSC_Entity_AssistMachine kscEntity, int? proxyId)
 	{
 		if (kscEntity == null)
@@ -1952,7 +1950,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		curSubController.SetAttrs(kscEntity, propertyId.Value, null);
 	}
 
-	// Token: 0x06005EA0 RID: 24224 RVA: 0x00119700 File Offset: 0x00117900
+	// Token: 0x06003237 RID: 12855 RVA: 0x001213E0 File Offset: 0x0011F5E0
 	private static void DoCommit(EKSC_OperateType operateType, float time)
 	{
 		if (TowerDefensePlayerController.IsPlayerFollowerEnabled())
@@ -1997,7 +1995,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06005EA1 RID: 24225 RVA: 0x001197E8 File Offset: 0x001179E8
+	// Token: 0x06003238 RID: 12856 RVA: 0x001214C8 File Offset: 0x0011F6C8
 	private static void DoUseItem()
 	{
 		if (!RouletteModel.Instance.IsExploreRouletteOpen(false))
@@ -2025,25 +2023,25 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06005EA2 RID: 24226 RVA: 0x00119890 File Offset: 0x00117A90
+	// Token: 0x06003239 RID: 12857 RVA: 0x00121570 File Offset: 0x0011F770
 	public static void HandleUseItem()
 	{
 		TowerDefensePlayerController.DoUseItem();
 	}
 
-	// Token: 0x06005EA3 RID: 24227 RVA: 0x00119897 File Offset: 0x00117A97
+	// Token: 0x0600323A RID: 12858 RVA: 0x00121577 File Offset: 0x0011F777
 	public static void HandleTowerDefenseCommitFast()
 	{
 		TowerDefensePlayerController.DoCommit(EKSC_OperateType.OnPress, 0f);
 	}
 
-	// Token: 0x06005EA4 RID: 24228 RVA: 0x001198A4 File Offset: 0x00117AA4
+	// Token: 0x0600323B RID: 12859 RVA: 0x00121584 File Offset: 0x0011F784
 	public static void HandleTowerDefenseCommit(EKSC_OperateType operateType, float time)
 	{
 		TowerDefensePlayerController.DoCommit(operateType, time);
 	}
 
-	// Token: 0x06005EA5 RID: 24229 RVA: 0x001198AD File Offset: 0x00117AAD
+	// Token: 0x0600323C RID: 12860 RVA: 0x0012158D File Offset: 0x0011F78D
 	public static void HandleTowerFollowerSelect(int proxyId)
 	{
 		TowerDefenseEventController.Instance.CancelCurrentPreviewTrap();
@@ -2051,7 +2049,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		TowerDefensePlayerController.EnablePlayerFollower(true);
 	}
 
-	// Token: 0x06005EA6 RID: 24230 RVA: 0x001198C8 File Offset: 0x00117AC8
+	// Token: 0x0600323D RID: 12861 RVA: 0x001215A8 File Offset: 0x0011F7A8
 	public static void PlayerDoSkill(int skillIndex)
 	{
 		TowerDefensePlayerModel model = TowerDefensePlayerController.Model;
@@ -2072,7 +2070,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06005EA7 RID: 24231 RVA: 0x00119900 File Offset: 0x00117B00
+	// Token: 0x0600323E RID: 12862 RVA: 0x001215E0 File Offset: 0x0011F7E0
 	[NullableContext(1)]
 	public static void DoSkill(Entity entity, int skillIndex)
 	{
@@ -2111,31 +2109,31 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x04002AE5 RID: 10981
+	// Token: 0x04002B80 RID: 11136
 	private static TowerDefensePlayerModel TDPlayerModel;
 
-	// Token: 0x04002AE6 RID: 10982
+	// Token: 0x04002B81 RID: 11137
 	public static FOnKSCAttrChange DelegateSkillCoolDown;
 
-	// Token: 0x04002AE7 RID: 10983
+	// Token: 0x04002B82 RID: 11138
 	public static FOnKSCAttrChange DelegateSkillCoolDownChange;
 
-	// Token: 0x04002AE8 RID: 10984
+	// Token: 0x04002B83 RID: 11139
 	private static FName EKSC_REMOVE_REASON_FOLLOWER;
 
-	// Token: 0x02007525 RID: 29989
+	// Token: 0x020066B9 RID: 26297
 	[CompilerGenerated]
 	private static class <>O
 	{
-		// Token: 0x04026C1C RID: 158748
+		// Token: 0x04021F67 RID: 139111
 		[Nullable(0)]
 		public static Action<bool> <0>__OnPlayerFollowerEnableChange;
 
-		// Token: 0x04026C1D RID: 158749
+		// Token: 0x04021F68 RID: 139112
 		[Nullable(0)]
 		public static Action <1>__OnPlayerFollowerUnPossessed;
 
-		// Token: 0x04026C1E RID: 158750
+		// Token: 0x04021F69 RID: 139113
 		[Nullable(new byte[]
 		{
 			0,
@@ -2143,7 +2141,7 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		})]
 		public static Action<EntityHandle> <2>__OnPlayerFollowerPossessed;
 
-		// Token: 0x04026C1F RID: 158751
+		// Token: 0x04021F6A RID: 139114
 		[Nullable(new byte[]
 		{
 			0,
@@ -2151,11 +2149,11 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		})]
 		public static Action<GroupSkillCdInfo> <3>__OnCharSkillCountChanged;
 
-		// Token: 0x04026C20 RID: 158752
+		// Token: 0x04021F6B RID: 139115
 		[Nullable(0)]
 		public static Action<int, int> <4>__OnFollowerMontageSkillEnd;
 
-		// Token: 0x04026C21 RID: 158753
+		// Token: 0x04021F6C RID: 139116
 		[Nullable(new byte[]
 		{
 			0,
@@ -2163,19 +2161,19 @@ public class TowerDefensePlayerController : IStaticVariableResetter
 		})]
 		public static Action<GroupSkillCdInfo> <5>__RefreshFolloerCdCue;
 
-		// Token: 0x04026C22 RID: 158754
+		// Token: 0x04021F6D RID: 139117
 		[Nullable(0)]
 		public static Action<EKSC_AttrType, int> <6>__OnFollowerCDAttr;
 
-		// Token: 0x04026C23 RID: 158755
+		// Token: 0x04021F6E RID: 139118
 		[Nullable(0)]
 		public static Action<EKSC_AttrType, int> <7>__OnFollowerCDChangeAttr;
 
-		// Token: 0x04026C24 RID: 158756
+		// Token: 0x04021F6F RID: 139119
 		[Nullable(0)]
 		public static Action<int, float> <8>__OnFollowerEnterSkillCd;
 
-		// Token: 0x04026C25 RID: 158757
+		// Token: 0x04021F70 RID: 139120
 		[Nullable(0)]
 		public static Action <9>__OnSkillReady;
 	}

@@ -4,19 +4,19 @@ using Aki.Protocol;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 
-// Token: 0x02001AE2 RID: 6882
+// Token: 0x02000FA1 RID: 4001
 [NullableContext(1)]
 [Nullable(0)]
 public class FloroRanchEntityActionData : FloroRanchAsyncActionBase
 {
-	// Token: 0x0600CC12 RID: 52242 RVA: 0x002E91F1 File Offset: 0x002E73F1
+	// Token: 0x0600A023 RID: 40995 RVA: 0x002F4385 File Offset: 0x002F2585
 	public FloroRanchEntityActionData(FRUnitOperate type, FloroRanchPlayUnit entityData)
 	{
 		this.OperateType = type;
 		this.EntityData = entityData;
 	}
 
-	// Token: 0x0600CC13 RID: 52243 RVA: 0x002E9208 File Offset: 0x002E7408
+	// Token: 0x0600A024 RID: 40996 RVA: 0x002F439C File Offset: 0x002F259C
 	public override UniTask OnExecute()
 	{
 		FloroRanchEntityActionData.<OnExecute>d__3 <OnExecute>d__;
@@ -27,7 +27,7 @@ public class FloroRanchEntityActionData : FloroRanchAsyncActionBase
 		return <OnExecute>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CC14 RID: 52244 RVA: 0x002E924C File Offset: 0x002E744C
+	// Token: 0x0600A025 RID: 40997 RVA: 0x002F43E0 File Offset: 0x002F25E0
 	public UniTask AddEntityAction()
 	{
 		FloroRanchEntityActionData.<AddEntityAction>d__4 <AddEntityAction>d__;
@@ -38,7 +38,7 @@ public class FloroRanchEntityActionData : FloroRanchAsyncActionBase
 		return <AddEntityAction>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CC15 RID: 52245 RVA: 0x002E9290 File Offset: 0x002E7490
+	// Token: 0x0600A026 RID: 40998 RVA: 0x002F4424 File Offset: 0x002F2624
 	public UniTask RemoveEntityAction()
 	{
 		FloroRanchEntityActionData.<RemoveEntityAction>d__5 <RemoveEntityAction>d__;
@@ -49,7 +49,7 @@ public class FloroRanchEntityActionData : FloroRanchAsyncActionBase
 		return <RemoveEntityAction>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CC16 RID: 52246 RVA: 0x002E92D4 File Offset: 0x002E74D4
+	// Token: 0x0600A027 RID: 40999 RVA: 0x002F4468 File Offset: 0x002F2668
 	public UniTask ChangeEntityAction()
 	{
 		FloroRanchEntityActionData.<ChangeEntityAction>d__6 <ChangeEntityAction>d__;
@@ -60,7 +60,7 @@ public class FloroRanchEntityActionData : FloroRanchAsyncActionBase
 		return <ChangeEntityAction>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CC17 RID: 52247 RVA: 0x002E9318 File Offset: 0x002E7518
+	// Token: 0x0600A028 RID: 41000 RVA: 0x002F44AC File Offset: 0x002F26AC
 	public UniTask ReplaceEntityAction()
 	{
 		FloroRanchEntityActionData.<ReplaceEntityAction>d__7 <ReplaceEntityAction>d__;
@@ -71,9 +71,9 @@ public class FloroRanchEntityActionData : FloroRanchAsyncActionBase
 		return <ReplaceEntityAction>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x04005DCF RID: 24015
+	// Token: 0x04005E9E RID: 24222
 	public readonly FloroRanchPlayUnit EntityData;
 
-	// Token: 0x04005DD0 RID: 24016
+	// Token: 0x04005E9F RID: 24223
 	public readonly FRUnitOperate OperateType;
 }

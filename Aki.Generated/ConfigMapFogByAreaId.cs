@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000511 RID: 1297
+	// Token: 0x02000527 RID: 1319
 	public class ConfigMapFogByAreaId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001E71 RID: 7793 RVA: 0x001053A9 File Offset: 0x001035A9
+		// Token: 0x06001EF5 RID: 7925 RVA: 0x0010BAFD File Offset: 0x00109CFD
 		static ConfigMapFogByAreaId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigMapFogByAreaId.CreateStaticDefaultValue), new Action(ConfigMapFogByAreaId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001E72 RID: 7794 RVA: 0x001053C8 File Offset: 0x001035C8
+		// Token: 0x06001EF6 RID: 7926 RVA: 0x0010BB1C File Offset: 0x00109D1C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigMapFogByAreaId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001E73 RID: 7795 RVA: 0x00105447 File Offset: 0x00103647
+		// Token: 0x06001EF7 RID: 7927 RVA: 0x0010BB9B File Offset: 0x00109D9B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigMapFogByAreaId.LogPair = null;
 			ConfigMapFogByAreaId.HandleId = 0;
 		}
 
-		// Token: 0x06001E74 RID: 7796 RVA: 0x00105455 File Offset: 0x00103655
+		// Token: 0x06001EF8 RID: 7928 RVA: 0x0010BBA9 File Offset: 0x00109DA9
 		public static void Init()
 		{
 			ConfigMapFogByAreaId.HandleId = ConfigCommon.InitDataStatement(ConfigMapFogByAreaId.HandleId, "db_mapfog.db", "select BinData from `MapFog` where AreaId=?");
 		}
 
-		// Token: 0x06001E75 RID: 7797 RVA: 0x00105470 File Offset: 0x00103670
+		// Token: 0x06001EF9 RID: 7929 RVA: 0x0010BBC4 File Offset: 0x00109DC4
 		[NullableContext(2)]
 		public static IReadOnlyList<MapFog> GetConfigList(int p0AreaId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x0400235B RID: 9051
+		// Token: 0x040023F5 RID: 9205
 		private const string DB = "db_mapfog.db";
 
-		// Token: 0x0400235C RID: 9052
+		// Token: 0x040023F6 RID: 9206
 		private const string FILE = "d.地图迷雾.xlsx";
 
-		// Token: 0x0400235D RID: 9053
+		// Token: 0x040023F7 RID: 9207
 		private const string TABLE = "MapFog";
 
-		// Token: 0x0400235E RID: 9054
+		// Token: 0x040023F8 RID: 9208
 		private const string COMMAND = "select BinData from `MapFog` where AreaId=?";
 
-		// Token: 0x0400235F RID: 9055
+		// Token: 0x040023F9 RID: 9209
 		private const string KEY_PREFIX = "MapFogByAreaId";
 
-		// Token: 0x04002360 RID: 9056
+		// Token: 0x040023FA RID: 9210
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04002361 RID: 9057
+		// Token: 0x040023FB RID: 9211
 		private static int HandleId;
 	}
 }

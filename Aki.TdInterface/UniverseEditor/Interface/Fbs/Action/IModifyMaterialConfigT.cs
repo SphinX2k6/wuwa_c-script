@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006ABF RID: 27327
+	// Token: 0x020071F3 RID: 29171
 	public class IModifyMaterialConfigT
 	{
-		// Token: 0x1700CAC6 RID: 51910
-		// (get) Token: 0x0602FE4E RID: 196174 RVA: 0x00683DBA File Offset: 0x00681FBA
-		// (set) Token: 0x0602FE4F RID: 196175 RVA: 0x00683DC2 File Offset: 0x00681FC2
+		// Token: 0x1700D58E RID: 54670
+		// (get) Token: 0x06032C04 RID: 207876 RVA: 0x006DB05E File Offset: 0x006D925E
+		// (set) Token: 0x06032C05 RID: 207877 RVA: 0x006DB066 File Offset: 0x006D9266
 		public EModifyActorMaterialType Type { get; set; }
 
-		// Token: 0x0602FE50 RID: 196176 RVA: 0x00683DCB File Offset: 0x00681FCB
+		// Token: 0x06032C06 RID: 207878 RVA: 0x006DB06F File Offset: 0x006D926F
 		public IModifyMaterialConfigT()
 		{
 			this.Type = EModifyActorMaterialType.ChangeMaterialData;

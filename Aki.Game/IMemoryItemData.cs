@@ -1,53 +1,53 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02001342 RID: 4930
+// Token: 0x020007F6 RID: 2038
 [NullableContext(2)]
 public interface IMemoryItemData
 {
-	// Token: 0x17000BA7 RID: 2983
-	// (get) Token: 0x06008927 RID: 35111
-	// (set) Token: 0x06008928 RID: 35112
+	// Token: 0x17000BC7 RID: 3015
+	// (get) Token: 0x06005CC2 RID: 23746
+	// (set) Token: 0x06005CC3 RID: 23747
 	EMemoryContentId Type { get; set; }
 
-	// Token: 0x17000BA8 RID: 2984
-	// (get) Token: 0x06008929 RID: 35113
-	// (set) Token: 0x0600892A RID: 35114
+	// Token: 0x17000BC8 RID: 3016
+	// (get) Token: 0x06005CC4 RID: 23748
+	// (set) Token: 0x06005CC5 RID: 23749
 	EMemoryClassify Classify { get; set; }
 
-	// Token: 0x17000BA9 RID: 2985
-	// (get) Token: 0x0600892B RID: 35115
-	// (set) Token: 0x0600892C RID: 35116
+	// Token: 0x17000BC9 RID: 3017
+	// (get) Token: 0x06005CC6 RID: 23750
+	// (set) Token: 0x06005CC7 RID: 23751
 	[Nullable(1)]
 	string Title { [NullableContext(1)] get; [NullableContext(1)] set; }
 
-	// Token: 0x17000BAA RID: 2986
-	// (get) Token: 0x0600892D RID: 35117
-	// (set) Token: 0x0600892E RID: 35118
+	// Token: 0x17000BCA RID: 3018
+	// (get) Token: 0x06005CC8 RID: 23752
+	// (set) Token: 0x06005CC9 RID: 23753
 	bool HasData { get; set; }
 
-	// Token: 0x17000BAB RID: 2987
-	// (get) Token: 0x0600892F RID: 35119
-	// (set) Token: 0x06008930 RID: 35120
+	// Token: 0x17000BCB RID: 3019
+	// (get) Token: 0x06005CCA RID: 23754
+	// (set) Token: 0x06005CCB RID: 23755
 	bool IsDelegate { get; set; }
 
-	// Token: 0x17000BAC RID: 2988
-	// (get) Token: 0x06008931 RID: 35121
-	// (set) Token: 0x06008932 RID: 35122
+	// Token: 0x17000BCC RID: 3020
+	// (get) Token: 0x06005CCC RID: 23756
+	// (set) Token: 0x06005CCD RID: 23757
 	int Sort { get; set; }
 
-	// Token: 0x17000BAD RID: 2989
-	// (get) Token: 0x06008933 RID: 35123
-	// (set) Token: 0x06008934 RID: 35124
+	// Token: 0x17000BCD RID: 3021
+	// (get) Token: 0x06005CCE RID: 23758
+	// (set) Token: 0x06005CCF RID: 23759
 	string Content { get; set; }
 
-	// Token: 0x17000BAE RID: 2990
-	// (get) Token: 0x06008935 RID: 35125
-	// (set) Token: 0x06008936 RID: 35126
+	// Token: 0x17000BCE RID: 3022
+	// (get) Token: 0x06005CD0 RID: 23760
+	// (set) Token: 0x06005CD1 RID: 23761
 	string SubContent { get; set; }
 
-	// Token: 0x17000BAF RID: 2991
-	// (get) Token: 0x06008937 RID: 35127
-	// (set) Token: 0x06008938 RID: 35128
+	// Token: 0x17000BCF RID: 3023
+	// (get) Token: 0x06005CD2 RID: 23762
+	// (set) Token: 0x06005CD3 RID: 23763
 	string IconPath { get; set; }
 }

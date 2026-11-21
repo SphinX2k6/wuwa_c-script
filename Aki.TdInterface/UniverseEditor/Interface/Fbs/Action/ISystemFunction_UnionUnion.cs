@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007281 RID: 29313
+	// Token: 0x02007A56 RID: 31318
 	public class ISystemFunction_UnionUnion
 	{
-		// Token: 0x1700D977 RID: 55671
-		// (get) Token: 0x06034019 RID: 213017 RVA: 0x006FE355 File Offset: 0x006FC555
-		// (set) Token: 0x0603401A RID: 213018 RVA: 0x006FE35D File Offset: 0x006FC55D
+		// Token: 0x1700E570 RID: 58736
+		// (get) Token: 0x0603731B RID: 226075 RVA: 0x0075F6B5 File Offset: 0x0075D8B5
+		// (set) Token: 0x0603731C RID: 226076 RVA: 0x0075F6BD File Offset: 0x0075D8BD
 		public ISystemFunction_Union Type { get; set; }
 
-		// Token: 0x1700D978 RID: 55672
-		// (get) Token: 0x0603401B RID: 213019 RVA: 0x006FE366 File Offset: 0x006FC566
-		// (set) Token: 0x0603401C RID: 213020 RVA: 0x006FE36E File Offset: 0x006FC56E
+		// Token: 0x1700E571 RID: 58737
+		// (get) Token: 0x0603731D RID: 226077 RVA: 0x0075F6C6 File Offset: 0x0075D8C6
+		// (set) Token: 0x0603731E RID: 226078 RVA: 0x0075F6CE File Offset: 0x0075D8CE
 		public object Value { get; set; }
 
-		// Token: 0x0603401D RID: 213021 RVA: 0x006FE377 File Offset: 0x006FC577
+		// Token: 0x0603731F RID: 226079 RVA: 0x0075F6D7 File Offset: 0x0075D8D7
 		public ISystemFunction_UnionUnion()
 		{
 			this.Type = ISystemFunction_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0603401E RID: 213022 RVA: 0x006FE38D File Offset: 0x006FC58D
+		// Token: 0x06037320 RID: 226080 RVA: 0x0075F6ED File Offset: 0x0075D8ED
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0603401F RID: 213023 RVA: 0x006FE39F File Offset: 0x006FC59F
+		// Token: 0x06037321 RID: 226081 RVA: 0x0075F6FF File Offset: 0x0075D8FF
 		public ISystemFunctionT AsISystemFunction()
 		{
 			return this.As<ISystemFunctionT>();
 		}
 
-		// Token: 0x06034020 RID: 213024 RVA: 0x006FE3A7 File Offset: 0x006FC5A7
+		// Token: 0x06037322 RID: 226082 RVA: 0x0075F707 File Offset: 0x0075D907
 		public static ISystemFunction_UnionUnion FromISystemFunction(ISystemFunctionT _isystemfunction)
 		{
 			return new ISystemFunction_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06034021 RID: 213025 RVA: 0x006FE3BC File Offset: 0x006FC5BC
+		// Token: 0x06037323 RID: 226083 RVA: 0x0075F71C File Offset: 0x0075D91C
 		public IBuyGoodsT AsIBuyGoods()
 		{
 			return this.As<IBuyGoodsT>();
 		}
 
-		// Token: 0x06034022 RID: 213026 RVA: 0x006FE3C4 File Offset: 0x006FC5C4
+		// Token: 0x06037324 RID: 226084 RVA: 0x0075F724 File Offset: 0x0075D924
 		public static ISystemFunction_UnionUnion FromIBuyGoods(IBuyGoodsT _ibuygoods)
 		{
 			return new ISystemFunction_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06034023 RID: 213027 RVA: 0x006FE3DC File Offset: 0x006FC5DC
+		// Token: 0x06037325 RID: 226085 RVA: 0x0075F73C File Offset: 0x0075D93C
 		public static int Pack(FlatBufferBuilder builder, ISystemFunction_UnionUnion _o)
 		{
 			ISystemFunction_Union type = _o.Type;

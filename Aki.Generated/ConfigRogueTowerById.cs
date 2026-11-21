@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200086D RID: 2157
+	// Token: 0x02000889 RID: 2185
 	public class ConfigRogueTowerById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060032A0 RID: 12960 RVA: 0x00177B38 File Offset: 0x00175D38
+		// Token: 0x06003348 RID: 13128 RVA: 0x0017EE20 File Offset: 0x0017D020
 		static ConfigRogueTowerById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRogueTowerById.CreateStaticDefaultValue), new Action(ConfigRogueTowerById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060032A1 RID: 12961 RVA: 0x00177B58 File Offset: 0x00175D58
+		// Token: 0x06003349 RID: 13129 RVA: 0x0017EE40 File Offset: 0x0017D040
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRogueTowerById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060032A2 RID: 12962 RVA: 0x00177BD7 File Offset: 0x00175DD7
+		// Token: 0x0600334A RID: 13130 RVA: 0x0017EEBF File Offset: 0x0017D0BF
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRogueTowerById.LogPair = null;
 			ConfigRogueTowerById.HandleId = 0;
 		}
 
-		// Token: 0x060032A3 RID: 12963 RVA: 0x00177BE5 File Offset: 0x00175DE5
+		// Token: 0x0600334B RID: 13131 RVA: 0x0017EECD File Offset: 0x0017D0CD
 		public static void Init()
 		{
 			ConfigRogueTowerById.HandleId = ConfigCommon.InitDataStatement(ConfigRogueTowerById.HandleId, "db_rogue.db", "select BinData from `RogueTower` where Id=?");
 		}
 
-		// Token: 0x060032A4 RID: 12964 RVA: 0x00177C00 File Offset: 0x00175E00
+		// Token: 0x0600334C RID: 13132 RVA: 0x0017EEE8 File Offset: 0x0017D0E8
 		public static RogueTower? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigRogueTowerById.HandleId, ConfigRogueTowerById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new RogueTower?(rootAsRogueTower);
 		}
 
-		// Token: 0x04003AE1 RID: 15073
+		// Token: 0x04003BA5 RID: 15269
 		private const string DB = "db_rogue.db";
 
-		// Token: 0x04003AE2 RID: 15074
+		// Token: 0x04003BA6 RID: 15270
 		private const string FILE = "r.肉鸽经典复开.xlsx";
 
-		// Token: 0x04003AE3 RID: 15075
+		// Token: 0x04003BA7 RID: 15271
 		private const string TABLE = "RogueTower";
 
-		// Token: 0x04003AE4 RID: 15076
+		// Token: 0x04003BA8 RID: 15272
 		private const string COMMAND = "select BinData from `RogueTower` where Id=?";
 
-		// Token: 0x04003AE5 RID: 15077
+		// Token: 0x04003BA9 RID: 15273
 		private const string KEY_PREFIX = "RogueTowerById";
 
-		// Token: 0x04003AE6 RID: 15078
+		// Token: 0x04003BAA RID: 15274
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04003AE7 RID: 15079
+		// Token: 0x04003BAB RID: 15275
 		private static int HandleId;
 	}
 }

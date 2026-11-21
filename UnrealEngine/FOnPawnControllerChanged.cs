@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000F1F RID: 3871
+	// Token: 0x02000259 RID: 601
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FOnPawnControllerChanged : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0600D117 RID: 53527 RVA: 0x00131CD1 File Offset: 0x0012FED1
+		// Token: 0x06003331 RID: 13105 RVA: 0x00049651 File Offset: 0x00047851
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnPawnControllerChanged.StaticFunctionPtr();
 		}
 
-		// Token: 0x0600D118 RID: 53528 RVA: 0x00131CDD File Offset: 0x0012FEDD
+		// Token: 0x06003332 RID: 13106 RVA: 0x0004965D File Offset: 0x0004785D
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnPawnControllerChanged._FunctionPtr == IntPtr.Zero)
@@ -27,31 +27,30 @@ namespace UnrealEngine
 			return FOnPawnControllerChanged._FunctionPtr;
 		}
 
-		// Token: 0x0600D119 RID: 53529 RVA: 0x00131D00 File Offset: 0x0012FF00
+		// Token: 0x06003333 RID: 13107 RVA: 0x00049680 File Offset: 0x00047880
 		public FOnPawnControllerChanged()
 		{
 		}
 
-		// Token: 0x0600D11A RID: 53530 RVA: 0x00131D08 File Offset: 0x0012FF08
+		// Token: 0x06003334 RID: 13108 RVA: 0x00049688 File Offset: 0x00047888
 		[NullableContext(2)]
 		public FOnPawnControllerChanged(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0600D11B RID: 53531 RVA: 0x00131D12 File Offset: 0x0012FF12
+		// Token: 0x06003335 RID: 13109 RVA: 0x00049692 File Offset: 0x00047892
 		public FOnPawnControllerChanged(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0600D11C RID: 53532 RVA: 0x00131D1D File Offset: 0x0012FF1D
+		// Token: 0x06003336 RID: 13110 RVA: 0x0004969D File Offset: 0x0004789D
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<APawn, AController>) ?? ((Action<APawn, AController>)Delegate.CreateDelegate(typeof(Action<APawn, AController>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0600D11D RID: 53533 RVA: 0x00131D4F File Offset: 0x0012FF4F
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x06003337 RID: 13111 RVA: 0x000496CF File Offset: 0x000478CF
 		public void Add([Nullable(new byte[]
 		{
 			1,
@@ -71,8 +70,7 @@ namespace UnrealEngine
 			base.Add(Callback, FOnPawnControllerChanged.RegisterId);
 		}
 
-		// Token: 0x0600D11E RID: 53534 RVA: 0x00131D89 File Offset: 0x0012FF89
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+		// Token: 0x06003338 RID: 13112 RVA: 0x00049709 File Offset: 0x00047909
 		public void Remove([Nullable(new byte[]
 		{
 			1,
@@ -83,10 +81,9 @@ namespace UnrealEngine
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0600D11F RID: 53535 RVA: 0x00131D94 File Offset: 0x0012FF94
+		// Token: 0x06003339 RID: 13113 RVA: 0x00049714 File Offset: 0x00047914
 		[NullableContext(2)]
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(APawn Pawn, AController Controller)
 		{
 			FOnPawnControllerChanged.__FOnPawnControllerChanged_DelegateParams* ptr = stackalloc FOnPawnControllerChanged.__FOnPawnControllerChanged_DelegateParams[(UIntPtr)31] + 15L / (long)sizeof(FOnPawnControllerChanged.__FOnPawnControllerChanged_DelegateParams) & -16L;
@@ -96,10 +93,9 @@ namespace UnrealEngine
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x0600D120 RID: 53536 RVA: 0x00131DF8 File Offset: 0x0012FFF8
+		// Token: 0x0600333A RID: 13114 RVA: 0x00049778 File Offset: 0x00047978
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<APawn, AController> action = target as Action<APawn, AController>;
@@ -112,35 +108,35 @@ namespace UnrealEngine
 			action(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 		}
 
-		// Token: 0x0400706B RID: 28779
+		// Token: 0x040011D7 RID: 4567
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400706C RID: 28780
+		// Token: 0x040011D8 RID: 4568
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/Engine.OnPawnControllerChanged__DelegateSignature";
 
-		// Token: 0x0400706D RID: 28781
+		// Token: 0x040011D9 RID: 4569
 		private static int RegisterId;
 
-		// Token: 0x02002D86 RID: 11654
+		// Token: 0x020009DD RID: 2525
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
-		protected ref struct __FOnPawnControllerChanged_DelegateParams
+		private ref struct __FOnPawnControllerChanged_DelegateParams
 		{
-			// Token: 0x040167A9 RID: 92073
+			// Token: 0x0400596E RID: 22894
 			[FieldOffset(0)]
 			public IntPtr Pawn;
 
-			// Token: 0x040167AA RID: 92074
+			// Token: 0x0400596F RID: 22895
 			[FieldOffset(8)]
 			public IntPtr Controller;
 		}
 
-		// Token: 0x02002D87 RID: 11655
+		// Token: 0x020009DE RID: 2526
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040167AB RID: 92075
+			// Token: 0x04005970 RID: 22896
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

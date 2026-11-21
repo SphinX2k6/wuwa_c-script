@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000068 RID: 104
+// Token: 0x0200006A RID: 106
 public class ClassDefine : IStaticVariableResetter
 {
-	// Token: 0x0600030A RID: 778 RVA: 0x00010F70 File Offset: 0x0000F170
+	// Token: 0x06000345 RID: 837 RVA: 0x00011D2C File Offset: 0x0000FF2C
 	static ClassDefine()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ClassDefine.CreateStaticDefaultValue), new Action(ClassDefine.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600030B RID: 779 RVA: 0x00012C98 File Offset: 0x00010E98
+	// Token: 0x06000346 RID: 838 RVA: 0x00013A80 File Offset: 0x00011C80
 	[NullableContext(1)]
 	private unsafe static void add(string key, ClassDefine.EType type, string path, ETypeLoadKind loadKind)
 	{
@@ -31,7 +31,7 @@ public class ClassDefine : IStaticVariableResetter
 		ClassDefine.typeDefined[key] = new ValueTuple<ClassDefine.EType, string, ETypeLoadKind>(type, path, loadKind);
 	}
 
-	// Token: 0x0600030C RID: 780 RVA: 0x00012D60 File Offset: 0x00010F60
+	// Token: 0x06000347 RID: 839 RVA: 0x00013B48 File Offset: 0x00011D48
 	public static void CreateStaticDefaultValue()
 	{
 		ClassDefine.typeDefined = new Dictionary<string, ValueTuple<ClassDefine.EType, string, ETypeLoadKind>>();
@@ -55,13 +55,13 @@ public class ClassDefine : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0600030D RID: 781 RVA: 0x00012E94 File Offset: 0x00011094
+	// Token: 0x06000348 RID: 840 RVA: 0x00013C7C File Offset: 0x00011E7C
 	public static void ResetStaticDefaultValue()
 	{
 		ClassDefine.typeDefined = null;
 	}
 
-	// Token: 0x04000249 RID: 585
+	// Token: 0x04000261 RID: 609
 	[Nullable(new byte[]
 	{
 		1,
@@ -1285,12 +1285,20 @@ public class ClassDefine : IStaticVariableResetter
 			new ValueTuple<string, ETypeLoadKind>("/Game/Aki/Character/Role/FemaleXL/Xinyuehu/R2T1XinMd10011/ABP_GhostTitan.ABP_GhostTitan_C", ETypeLoadKind.Async)
 		},
 		{
+			"BP_PianoGameplaySetting_C",
+			new ValueTuple<string, ETypeLoadKind>("/Game/Aki/Data/Gameplay/PianoGameplay/BP_PianoGameplaySetting.BP_PianoGameplaySetting_C", ETypeLoadKind.Async)
+		},
+		{
 			"BP_SplineScatter_C",
 			new ValueTuple<string, ETypeLoadKind>("/Game/Aki/Render/RuntimeBP/PCG/RoadSpline/BP_SplineScatter.BP_SplineScatter_C", ETypeLoadKind.Async)
+		},
+		{
+			"BP_SceneUiAnchor_C",
+			new ValueTuple<string, ETypeLoadKind>("/Game/Aki/Sequence/Seq_BP/BP_SceneUiAnchor.BP_SceneUiAnchor_C", ETypeLoadKind.Preload)
 		}
 	};
 
-	// Token: 0x0400024A RID: 586
+	// Token: 0x04000262 RID: 610
 	[Nullable(new byte[]
 	{
 		1,
@@ -1431,7 +1439,7 @@ public class ClassDefine : IStaticVariableResetter
 		}
 	};
 
-	// Token: 0x0400024B RID: 587
+	// Token: 0x04000263 RID: 611
 	[Nullable(new byte[]
 	{
 		1,
@@ -1442,7 +1450,7 @@ public class ClassDefine : IStaticVariableResetter
 	[StaticVariableRuleIgnore]
 	private static readonly Dictionary<string, ValueTuple<string, ETypeLoadKind>> enumDefined = new Dictionary<string, ValueTuple<string, ETypeLoadKind>>();
 
-	// Token: 0x0400024C RID: 588
+	// Token: 0x04000264 RID: 612
 	[Nullable(new byte[]
 	{
 		1,
@@ -1452,14 +1460,14 @@ public class ClassDefine : IStaticVariableResetter
 	})]
 	public static Dictionary<string, ValueTuple<ClassDefine.EType, string, ETypeLoadKind>> typeDefined;
 
-	// Token: 0x0200019C RID: 412
+	// Token: 0x020001A6 RID: 422
 	public enum EType
 	{
-		// Token: 0x040007CE RID: 1998
+		// Token: 0x040007EE RID: 2030
 		Class,
-		// Token: 0x040007CF RID: 1999
+		// Token: 0x040007EF RID: 2031
 		Struct,
-		// Token: 0x040007D0 RID: 2000
+		// Token: 0x040007F0 RID: 2032
 		Enum
 	}
 }

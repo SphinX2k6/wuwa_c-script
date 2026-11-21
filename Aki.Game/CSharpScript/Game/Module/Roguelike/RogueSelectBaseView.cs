@@ -6,17 +6,17 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E37 RID: 20023
+	// Token: 0x02003E00 RID: 15872
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class RogueSelectBaseView : UiViewBase
 	{
-		// Token: 0x060339ED RID: 211437 RVA: 0x00C14CBC File Offset: 0x00C12EBC
+		// Token: 0x06028858 RID: 165976 RVA: 0x00B5E1E4 File Offset: 0x00B5C3E4
 		public RogueSelectBaseView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x060339EE RID: 211438 RVA: 0x00C14CC8 File Offset: 0x00C12EC8
+		// Token: 0x06028859 RID: 165977 RVA: 0x00B5E1F0 File Offset: 0x00B5C3F0
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.RoguelikeDataUpdate, new Action(this.OnDescModelChange));
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			EventSystem.Instance.Add(EEventName.RoguelikeRefreshGain, new Action<int>(this.RoguelikeRefreshGain));
 		}
 
-		// Token: 0x060339EF RID: 211439 RVA: 0x00C14D48 File Offset: 0x00C12F48
+		// Token: 0x0602885A RID: 165978 RVA: 0x00B5E270 File Offset: 0x00B5C470
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.RoguelikeDataUpdate, new Action(this.OnDescModelChange));
@@ -34,28 +34,28 @@ namespace CSharpScript.Game.Module.Roguelike
 			EventSystem.Instance.Remove(EEventName.RoguelikeRefreshGain, new Action<int>(this.RoguelikeRefreshGain));
 		}
 
-		// Token: 0x060339F0 RID: 211440 RVA: 0x00C14DC8 File Offset: 0x00C12FC8
+		// Token: 0x0602885B RID: 165979 RVA: 0x00B5E2F0 File Offset: 0x00B5C4F0
 		protected virtual void OnDescModelChange()
 		{
 		}
 
-		// Token: 0x060339F1 RID: 211441 RVA: 0x00C14DCA File Offset: 0x00C12FCA
+		// Token: 0x0602885C RID: 165980 RVA: 0x00B5E2F2 File Offset: 0x00B5C4F2
 		protected void CloseMySelf()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x060339F2 RID: 211442 RVA: 0x00C14DD3 File Offset: 0x00C12FD3
+		// Token: 0x0602885D RID: 165981 RVA: 0x00B5E2FB File Offset: 0x00B5C4FB
 		protected virtual void RoguelikeChooseDataResult(RogueGainEntry newRogueGainEntry, RogueGainEntry oldRogueGainEntry, bool isSuccess, int bindId, RoguelikeChooseDataResultResponse response)
 		{
 		}
 
-		// Token: 0x060339F3 RID: 211443 RVA: 0x00C14DD5 File Offset: 0x00C12FD5
+		// Token: 0x0602885E RID: 165982 RVA: 0x00B5E2FD File Offset: 0x00B5C4FD
 		protected virtual void RoguelikeRefreshGain(int index)
 		{
 		}
 
-		// Token: 0x060339F4 RID: 211444 RVA: 0x00C14DD7 File Offset: 0x00C12FD7
+		// Token: 0x0602885F RID: 165983 RVA: 0x00B5E2FF File Offset: 0x00B5C4FF
 		protected void RecycleUiPoolActor()
 		{
 			if (this.UiPoolActorPrivate != null)
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x0401B610 RID: 112144
+		// Token: 0x04015FE3 RID: 90083
 		[Nullable(2)]
 		protected UiPoolActor UiPoolActorPrivate;
 	}

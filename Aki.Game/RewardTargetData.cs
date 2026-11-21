@@ -6,30 +6,30 @@ using Aki.Protocol;
 using CSharpScript.Game.Module.Inventory;
 using CSharpScript.Game.Module.Reward;
 
-// Token: 0x0200135A RID: 4954
+// Token: 0x0200080E RID: 2062
 [NullableContext(1)]
 [Nullable(0)]
 public class RewardTargetData
 {
-	// Token: 0x06008A0A RID: 35338 RVA: 0x001D7F82 File Offset: 0x001D6182
+	// Token: 0x06005DA5 RID: 23973 RVA: 0x001E0DDE File Offset: 0x001DEFDE
 	public RewardTargetData(int id)
 	{
 		this.Id = id;
 	}
 
-	// Token: 0x06008A0B RID: 35339 RVA: 0x001D7FA3 File Offset: 0x001D61A3
+	// Token: 0x06005DA6 RID: 23974 RVA: 0x001E0DFF File Offset: 0x001DEFFF
 	public bool IsFinished()
 	{
 		return this.Status == TrackMoonTargetState.TrackMoonTargetFinish;
 	}
 
-	// Token: 0x06008A0C RID: 35340 RVA: 0x001D7FAE File Offset: 0x001D61AE
+	// Token: 0x06005DA7 RID: 23975 RVA: 0x001E0E0A File Offset: 0x001DF00A
 	public bool IsTaken()
 	{
 		return this.Status == TrackMoonTargetState.TrackMoonTargetTaken;
 	}
 
-	// Token: 0x06008A0D RID: 35341 RVA: 0x001D7FBC File Offset: 0x001D61BC
+	// Token: 0x06005DA8 RID: 23976 RVA: 0x001E0E18 File Offset: 0x001DF018
 	public List<TItem> GetRewardList()
 	{
 		Aki.Config.TrackMoonTarget rewardTargetById = MoonChasingRewardConfig.Instance.GetRewardTargetById(this.Id);
@@ -48,7 +48,7 @@ public class RewardTargetData
 		return list;
 	}
 
-	// Token: 0x06008A0E RID: 35342 RVA: 0x001D8074 File Offset: 0x001D6274
+	// Token: 0x06005DA9 RID: 23977 RVA: 0x001E0ED0 File Offset: 0x001DF0D0
 	public TaskData ConvertToTaskData()
 	{
 		Aki.Config.TrackMoonTarget rewardTargetById = MoonChasingRewardConfig.Instance.GetRewardTargetById(this.Id);
@@ -65,18 +65,18 @@ public class RewardTargetData
 		return this.TaskData;
 	}
 
-	// Token: 0x04003D8C RID: 15756
+	// Token: 0x04003E24 RID: 15908
 	public TrackMoonTargetState Status;
 
-	// Token: 0x04003D8D RID: 15757
+	// Token: 0x04003E25 RID: 15909
 	private readonly TaskData TaskData = new TaskData();
 
-	// Token: 0x04003D8E RID: 15758
+	// Token: 0x04003E26 RID: 15910
 	public readonly int Id;
 
-	// Token: 0x04003D8F RID: 15759
+	// Token: 0x04003E27 RID: 15911
 	public int Current;
 
-	// Token: 0x04003D90 RID: 15760
+	// Token: 0x04003E28 RID: 15912
 	public int Target = 1;
 }

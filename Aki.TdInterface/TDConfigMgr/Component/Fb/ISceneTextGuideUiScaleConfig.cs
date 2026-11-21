@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D21 RID: 3361
+	// Token: 0x02000E1B RID: 3611
 	public class ISceneTextGuideUiScaleConfig
 	{
-		// Token: 0x06004CB6 RID: 19638 RVA: 0x000BF032 File Offset: 0x000BD232
-		[NullableContext(1)]
+		// Token: 0x060051D2 RID: 20946 RVA: 0x000CA776 File Offset: 0x000C8976
 		public static ISceneTextGuideUiScaleConfig Create(ISceneTextGuideUiScaleConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001831 RID: 6193
-		// (get) Token: 0x06004CB7 RID: 19639 RVA: 0x000BF051 File Offset: 0x000BD251
+		// Token: 0x17001997 RID: 6551
+		// (get) Token: 0x060051D3 RID: 20947 RVA: 0x000CA795 File Offset: 0x000C8995
 		public virtual int MinDist
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001832 RID: 6194
-		// (get) Token: 0x06004CB8 RID: 19640 RVA: 0x000BF05E File Offset: 0x000BD25E
+		// Token: 0x17001998 RID: 6552
+		// (get) Token: 0x060051D4 RID: 20948 RVA: 0x000CA7A2 File Offset: 0x000C89A2
 		public virtual int MaxDist
 		{
 			get
@@ -41,8 +39,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001833 RID: 6195
-		// (get) Token: 0x06004CB9 RID: 19641 RVA: 0x000BF06B File Offset: 0x000BD26B
+		// Token: 0x17001999 RID: 6553
+		// (get) Token: 0x060051D5 RID: 20949 RVA: 0x000CA7AF File Offset: 0x000C89AF
 		public virtual float MinScale
 		{
 			get
@@ -51,8 +49,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001834 RID: 6196
-		// (get) Token: 0x06004CBA RID: 19642 RVA: 0x000BF078 File Offset: 0x000BD278
+		// Token: 0x1700199A RID: 6554
+		// (get) Token: 0x060051D6 RID: 20950 RVA: 0x000CA7BC File Offset: 0x000C89BC
 		public virtual float MaxScale
 		{
 			get
@@ -61,8 +59,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001835 RID: 6197
-		// (get) Token: 0x06004CBB RID: 19643 RVA: 0x000BF085 File Offset: 0x000BD285
+		// Token: 0x1700199B RID: 6555
+		// (get) Token: 0x060051D7 RID: 20951 RVA: 0x000CA7C9 File Offset: 0x000C89C9
 		public virtual ESceneTextGuideUiScaleType ScaleType
 		{
 			get
@@ -71,7 +69,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002BE8 RID: 11240
+		// Token: 0x04002EA8 RID: 11944
 		private ISceneTextGuideUiScaleConfig Instance;
 	}
 }

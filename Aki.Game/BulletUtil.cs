@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using Aki.Protocol.Summon;
@@ -14,12 +13,12 @@ using CSharpScript.Game.NewWorld.Common.Component;
 using CSharpScript.Game.NewWorld.Pawn.Component;
 using UnrealEngine;
 
-// Token: 0x02002DEC RID: 11756
+// Token: 0x02002347 RID: 9031
 [NullableContext(1)]
 [Nullable(0)]
 public class BulletUtil
 {
-	// Token: 0x06018AD3 RID: 101075 RVA: 0x00654694 File Offset: 0x00652894
+	// Token: 0x06016380 RID: 91008 RVA: 0x0067A7CC File Offset: 0x006789CC
 	public static FVectorDouble? GetTargetLocation([Nullable(2)] BaseActorComponent target, FName boneName, BulletInfo bulletInfo)
 	{
 		if (bulletInfo.BulletDataMain.Move.TrackTarget == EBulletTarget.外部传入坐标)
@@ -37,14 +36,14 @@ public class BulletUtil
 		return null;
 	}
 
-	// Token: 0x06018AD4 RID: 101076 RVA: 0x00654718 File Offset: 0x00652918
+	// Token: 0x06016381 RID: 91009 RVA: 0x0067A850 File Offset: 0x00678A50
 	[NullableContext(2)]
 	public static bool VictimInValid(Entity victim)
 	{
 		return victim == null || !victim.Valid || BulletUtil.DoesEntityContainsTag(victim, GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.濒死"]) || BulletUtil.DoesEntityContainsTag(victim, GameplayTagDefine.EGameplayTagId["行为状态.逻辑状态.隐身.不被子弹命中"]);
 	}
 
-	// Token: 0x06018AD5 RID: 101077 RVA: 0x00654764 File Offset: 0x00652964
+	// Token: 0x06016382 RID: 91010 RVA: 0x0067A89C File Offset: 0x00678A9C
 	public static bool AttackedCondition(BulletInfo bulletInfo, BaseActorComponent victim)
 	{
 		if (BulletUtil.VictimInValid((victim != null) ? victim.Entity : null))
@@ -55,7 +54,7 @@ public class BulletUtil
 		return BulletUtil.AttackedCampCondition(bulletInfo, victim);
 	}
 
-	// Token: 0x06018AD6 RID: 101078 RVA: 0x00654790 File Offset: 0x00652990
+	// Token: 0x06016383 RID: 91011 RVA: 0x0067A8C8 File Offset: 0x00678AC8
 	public unsafe static bool AttackedCampCondition(BulletInfo bulletInfo, BaseActorComponent victim)
 	{
 		CreatureDataComponent component = victim.Entity.GetComponent<CreatureDataComponent>();
@@ -124,7 +123,7 @@ public class BulletUtil
 		}
 	}
 
-	// Token: 0x06018AD7 RID: 101079 RVA: 0x00654950 File Offset: 0x00652B50
+	// Token: 0x06016384 RID: 91012 RVA: 0x0067AA88 File Offset: 0x00678C88
 	[NullableContext(2)]
 	public static bool DoesEntityContainsTag(Entity entity, int gameplayTagId)
 	{
@@ -141,7 +140,7 @@ public class BulletUtil
 		return component2 != null && component2.HasTag(gameplayTagId);
 	}
 
-	// Token: 0x06018AD8 RID: 101080 RVA: 0x0065498C File Offset: 0x00652B8C
+	// Token: 0x06016385 RID: 91013 RVA: 0x0067AAC4 File Offset: 0x00678CC4
 	[return: Nullable(2)]
 	public static CharacterActorComponent GetCurrentRole(BulletInfo bulletInfo)
 	{
@@ -174,7 +173,7 @@ public class BulletUtil
 		}
 	}
 
-	// Token: 0x06018AD9 RID: 101081 RVA: 0x006549FC File Offset: 0x00652BFC
+	// Token: 0x06016386 RID: 91014 RVA: 0x0067AB34 File Offset: 0x00678D34
 	public static bool ShakeTest(BulletInfo bulletInfo, BaseActorComponent victim)
 	{
 		if (!CharacterUtils.CanCharacterMonsterOrSummonedDisplayEffect(bulletInfo.AttackerHandle))
@@ -199,7 +198,7 @@ public class BulletUtil
 		return flag;
 	}
 
-	// Token: 0x06018ADA RID: 101082 RVA: 0x00654AB8 File Offset: 0x00652CB8
+	// Token: 0x06016387 RID: 91015 RVA: 0x0067ABF0 File Offset: 0x00678DF0
 	public static bool IsPlayerOrSummons(BulletInfo bulletInfo)
 	{
 		if (bulletInfo.AttackerActorComp.IsRoleAndCtrlByMe)
@@ -231,7 +230,7 @@ public class BulletUtil
 		return false;
 	}
 
-	// Token: 0x06018ADB RID: 101083 RVA: 0x00654B38 File Offset: 0x00652D38
+	// Token: 0x06016388 RID: 91016 RVA: 0x0067AC70 File Offset: 0x00678E70
 	public static void SummonBullet(BulletInfo bulletInfo, global::EBulletChildrenType childrenType, Entity victim, bool isStayInCharacter, [Nullable(2)] global::Vector impactPoint = null, [Nullable(2)] global::Vector lastFramePosition = null, bool createOnAuthority = true)
 	{
 		if (bulletInfo.NeedDestroy)
@@ -254,7 +253,7 @@ public class BulletUtil
 		BulletController.Instance.GetActionRunner().AddAction(bulletInfo, bulletActionInfoSummonBullet);
 	}
 
-	// Token: 0x06018ADC RID: 101084 RVA: 0x00654BBC File Offset: 0x00652DBC
+	// Token: 0x06016389 RID: 91017 RVA: 0x0067ACF4 File Offset: 0x00678EF4
 	public static bool CheckSupport(BulletInfo bulletInfo, ECamp otherBulletCamp)
 	{
 		List<ECamp> supportCamp = bulletInfo.BulletDataMain.Execution.SupportCamp;
@@ -275,7 +274,7 @@ public class BulletUtil
 		return false;
 	}
 
-	// Token: 0x06018ADD RID: 101085 RVA: 0x00654C2C File Offset: 0x00652E2C
+	// Token: 0x0601638A RID: 91018 RVA: 0x0067AD64 File Offset: 0x00678F64
 	public static void ProcessHandOverEffectToSon(BulletInfo bulletInfo, [Nullable(2)] Entity sonBulletEntity)
 	{
 		if (sonBulletEntity != null && sonBulletEntity.Valid)
@@ -288,14 +287,14 @@ public class BulletUtil
 		}
 	}
 
-	// Token: 0x06018ADE RID: 101086 RVA: 0x00654C69 File Offset: 0x00652E69
+	// Token: 0x0601638B RID: 91019 RVA: 0x0067ADA1 File Offset: 0x00678FA1
 	public static void FrozenBulletTime(BulletInfo bulletInfo, float time)
 	{
 		bulletInfo.FrozenTime = new float?(time * (float)TimeUtil.Instance.InverseMillisecond);
 		BulletUtil.BulletFrozen(bulletInfo);
 	}
 
-	// Token: 0x06018ADF RID: 101087 RVA: 0x00654C8C File Offset: 0x00652E8C
+	// Token: 0x0601638C RID: 91020 RVA: 0x0067ADC4 File Offset: 0x00678FC4
 	public static void BulletFrozen(BulletInfo bulletInfo)
 	{
 		bulletInfo.IsFrozen = true;
@@ -307,7 +306,7 @@ public class BulletUtil
 		}
 	}
 
-	// Token: 0x06018AE0 RID: 101088 RVA: 0x00654CCC File Offset: 0x00652ECC
+	// Token: 0x0601638D RID: 91021 RVA: 0x0067AE04 File Offset: 0x00679004
 	public static void BulletUnfrozen(BulletInfo bulletInfo)
 	{
 		bulletInfo.IsFrozen = false;
@@ -328,7 +327,7 @@ public class BulletUtil
 		BulletStaticFunction.SetBulletEffectTimeScale(bulletInfo.EffectInfo, 1.0, false);
 	}
 
-	// Token: 0x06018AE1 RID: 101089 RVA: 0x00654D58 File Offset: 0x00652F58
+	// Token: 0x0601638E RID: 91022 RVA: 0x0067AE90 File Offset: 0x00679090
 	[NullableContext(2)]
 	public static void FrozenCharacterBullet(int entityId, string bulletRowName = null, float time = 0f)
 	{
@@ -347,7 +346,7 @@ public class BulletUtil
 		}
 	}
 
-	// Token: 0x06018AE2 RID: 101090 RVA: 0x00654DD0 File Offset: 0x00652FD0
+	// Token: 0x0601638F RID: 91023 RVA: 0x0067AF08 File Offset: 0x00679108
 	[NullableContext(2)]
 	public static void UnFrozenCharacterBullet(int entityId, string bulletRowName = null)
 	{
@@ -366,7 +365,7 @@ public class BulletUtil
 		}
 	}
 
-	// Token: 0x06018AE3 RID: 101091 RVA: 0x00654E48 File Offset: 0x00653048
+	// Token: 0x06016390 RID: 91024 RVA: 0x0067AF80 File Offset: 0x00679180
 	public static void SetCharacterBulletTimeScale(int entityId, float timeScale, Dictionary<int, int> handleMap, ETimeScaleSourceType sourceType = ETimeScaleSourceType.InnerPauseLock)
 	{
 		IReadOnlyCollection<BulletEntity> bulletSetByAttacker = BulletModel.Instance.GetBulletSetByAttacker(entityId);
@@ -403,7 +402,7 @@ public class BulletUtil
 		}
 	}
 
-	// Token: 0x06018AE4 RID: 101092 RVA: 0x00654FA0 File Offset: 0x006531A0
+	// Token: 0x06016391 RID: 91025 RVA: 0x0067B0D8 File Offset: 0x006792D8
 	public static void RemoveCharacterBulletTimeScale(int entityId, Dictionary<int, int> handleMap)
 	{
 		IReadOnlyCollection<BulletEntity> bulletSetByAttacker = BulletModel.Instance.GetBulletSetByAttacker(entityId);
@@ -423,7 +422,7 @@ public class BulletUtil
 		handleMap.Clear();
 	}
 
-	// Token: 0x06018AE5 RID: 101093 RVA: 0x00655020 File Offset: 0x00653220
+	// Token: 0x06016392 RID: 91026 RVA: 0x0067B158 File Offset: 0x00679358
 	public static int SetTimeScale(BulletInfo bulletInfo, int priority, float timeDilation, [Nullable(2)] UCurveFloat curve, float duration, ETimeScaleSourceType sourceType, double elapsedTime = 0.0, int timeScaleId = 0)
 	{
 		if (duration <= 0f || bulletInfo.BulletDataMain.TimeScale.TimeScaleWithAttacker)
@@ -448,7 +447,7 @@ public class BulletUtil
 		return num2;
 	}
 
-	// Token: 0x06018AE6 RID: 101094 RVA: 0x006550C4 File Offset: 0x006532C4
+	// Token: 0x06016393 RID: 91027 RVA: 0x0067B1FC File Offset: 0x006793FC
 	public static void RemoveTimeScale(BulletInfo bulletInfo, int id)
 	{
 		TimeScale timeScale;
@@ -458,7 +457,7 @@ public class BulletUtil
 		}
 	}
 
-	// Token: 0x06018AE7 RID: 101095 RVA: 0x006550E8 File Offset: 0x006532E8
+	// Token: 0x06016394 RID: 91028 RVA: 0x0067B220 File Offset: 0x00679420
 	public static void SetVictimTimeScale(int bulletEntityId, int victimEntityId, PawnTimeScaleComponent victimTimeScaleComp, int priority, float timeDilation, [Nullable(2)] UCurveFloat curve, float duration, ETimeScaleSourceType sourceType, bool removeHitTimeScaleOnDestroy, bool needAddSceneItemTag = false)
 	{
 		if (duration <= 0f)
@@ -477,7 +476,7 @@ public class BulletUtil
 		}
 	}
 
-	// Token: 0x06018AE8 RID: 101096 RVA: 0x00655148 File Offset: 0x00653348
+	// Token: 0x06016395 RID: 91029 RVA: 0x0067B280 File Offset: 0x00679480
 	public static bool GetHitRotator(BulletInfo bulletInfo, BaseActorComponent victimActorComp, global::Rotator outRotator)
 	{
 		outRotator.FromUeRotator(victimActorComp.ActorRotationProxy);
@@ -563,7 +562,7 @@ public class BulletUtil
 		return true;
 	}
 
-	// Token: 0x06018AE9 RID: 101097 RVA: 0x006553D8 File Offset: 0x006535D8
+	// Token: 0x06016396 RID: 91030 RVA: 0x0067B510 File Offset: 0x00679710
 	public static FRotator SetHitRotator(BulletInfo bulletInfo, BaseActorComponent victimActorComp, float yawOffset)
 	{
 		if (!BulletUtil.GetHitRotator(bulletInfo, victimActorComp, BulletUtil.TmpRotator))
@@ -589,7 +588,7 @@ public class BulletUtil
 		return BulletUtil.TmpRotator.ToUeRotator();
 	}
 
-	// Token: 0x06018AEA RID: 101098 RVA: 0x006554C0 File Offset: 0x006536C0
+	// Token: 0x06016397 RID: 91031 RVA: 0x0067B5F8 File Offset: 0x006797F8
 	public static EHitAnim? GetOverrideHitAnimByAngle(BaseActorComponent victimActorComp, EHitAnim? origHitAnim, float damageFromYaw)
 	{
 		EHitAnim? result = origHitAnim;
@@ -619,7 +618,7 @@ public class BulletUtil
 		return result;
 	}
 
-	// Token: 0x06018AEB RID: 101099 RVA: 0x00655594 File Offset: 0x00653794
+	// Token: 0x06016398 RID: 91032 RVA: 0x0067B6CC File Offset: 0x006798CC
 	public static bool CheckBulletAttackerExist(BulletInfo bulletInfo)
 	{
 		EntityHandle attackerHandle = bulletInfo.AttackerHandle;
@@ -643,7 +642,7 @@ public class BulletUtil
 		return ((attackerActorComp != null) ? attackerActorComp.Owner : null) != null;
 	}
 
-	// Token: 0x06018AEC RID: 101100 RVA: 0x00655640 File Offset: 0x00653840
+	// Token: 0x06016399 RID: 91033 RVA: 0x0067B778 File Offset: 0x00679978
 	public static FRotator FindLookAtRotDouble(global::Vector start, FVectorDouble end, bool keepUp, FVectorDouble upVector)
 	{
 		global::Vector vector = BulletPool.CreateVector(false);
@@ -677,7 +676,7 @@ public class BulletUtil
 		return result2;
 	}
 
-	// Token: 0x06018AED RID: 101101 RVA: 0x00655710 File Offset: 0x00653910
+	// Token: 0x0601639A RID: 91034 RVA: 0x0067B848 File Offset: 0x00679A48
 	public static FRotator FindLookAtRotDoubleStandard(global::Vector start, FVectorDouble end, bool keepUp)
 	{
 		FVectorDouble fvectorDouble;
@@ -698,7 +697,7 @@ public class BulletUtil
 		return UKismetMathLibrary.D_FindLookAtRotation(fvectorDouble, end);
 	}
 
-	// Token: 0x06018AEE RID: 101102 RVA: 0x00655778 File Offset: 0x00653978
+	// Token: 0x0601639B RID: 91035 RVA: 0x0067B8B0 File Offset: 0x00679AB0
 	public static void ClampBeginRotator(BulletInfo bulletInfo)
 	{
 		Dictionary<EBulletBeginVelocityLimit, float> beginVelocityLimitMap = bulletInfo.BulletDataMain.Move.BeginVelocityLimitMap;
@@ -726,7 +725,7 @@ public class BulletUtil
 		BulletUtil.TempClampVector.Rotation(bulletInfo.MoveInfo.BeginSpeedRotator);
 	}
 
-	// Token: 0x06018AEF RID: 101103 RVA: 0x006558C4 File Offset: 0x00653AC4
+	// Token: 0x0601639C RID: 91036 RVA: 0x0067B9FC File Offset: 0x00679BFC
 	private static void ClampBeginRotatorStandard(BulletInfo bulletInfo)
 	{
 		Dictionary<EBulletBeginVelocityLimit, float> beginVelocityLimitMap = bulletInfo.BulletDataMain.Move.BeginVelocityLimitMap;
@@ -767,7 +766,7 @@ public class BulletUtil
 		BulletPool.RecycleRotator(rotator2);
 	}
 
-	// Token: 0x06018AF0 RID: 101104 RVA: 0x00655A0C File Offset: 0x00653C0C
+	// Token: 0x0601639D RID: 91037 RVA: 0x0067BB44 File Offset: 0x00679D44
 	[NullableContext(2)]
 	public static long? GetSkillContextId(Entity owner, int skillId)
 	{
@@ -854,19 +853,19 @@ public class BulletUtil
 		return result;
 	}
 
-	// Token: 0x06018AF1 RID: 101105 RVA: 0x00655B7C File Offset: 0x00653D7C
+	// Token: 0x0601639E RID: 91038 RVA: 0x0067BCB4 File Offset: 0x00679EB4
 	public static int CreateBulletFromAN(Entity owner, string bulletRowName, FTransformDouble? initialTransform, int skillId, bool needSync, long? preContextId, FVectorDouble? targetLocation = null, FVector? locationOffset = null, FRotator? beginRotatorOffset = null)
 	{
 		return BulletUtil.CreateBulletFromANInternal(owner, bulletRowName, initialTransform, skillId, needSync, preContextId, targetLocation, locationOffset, beginRotatorOffset);
 	}
 
-	// Token: 0x06018AF2 RID: 101106 RVA: 0x00655B9C File Offset: 0x00653D9C
+	// Token: 0x0601639F RID: 91039 RVA: 0x0067BCD4 File Offset: 0x00679ED4
 	public static int CreateBulletFromAN(TsBaseCharacter owner, string bulletRowName, FTransformDouble? initialTransform, int skillId, bool needSync, long? preContextId, FVectorDouble? targetLocation = null, FVector? locationOffset = null, FRotator? beginRotatorOffset = null)
 	{
 		return BulletUtil.CreateBulletFromANInternal(owner.GetEntityNoBlueprint(), bulletRowName, initialTransform, skillId, needSync, preContextId, targetLocation, locationOffset, beginRotatorOffset);
 	}
 
-	// Token: 0x06018AF3 RID: 101107 RVA: 0x00655BC4 File Offset: 0x00653DC4
+	// Token: 0x060163A0 RID: 91040 RVA: 0x0067BCFC File Offset: 0x00679EFC
 	private static int CreateBulletFromANInternal(Entity owner, string bulletRowName, FTransformDouble? initialTransform, int skillId, bool needSync, long? preContextId, FVectorDouble? targetLocation = null, FVector? locationOffset = null, FRotator? beginRotatorOffset = null)
 	{
 		long? skillContextId = BulletUtil.GetSkillContextId(owner, skillId);
@@ -905,7 +904,7 @@ public class BulletUtil
 		return bulletEntity.Id;
 	}
 
-	// Token: 0x06018AF4 RID: 101108 RVA: 0x00655C68 File Offset: 0x00653E68
+	// Token: 0x060163A1 RID: 91041 RVA: 0x0067BDA0 File Offset: 0x00679FA0
 	public static int SpawnPatternFromAN(Entity ownerEntity, UKuroBulletPatternDataAsset patternData, int skillId, long? preContextId, string assetPath)
 	{
 		FWorldEntityBulletParam fworldEntityBulletParam = new FWorldEntityBulletParam();
@@ -941,13 +940,13 @@ public class BulletUtil
 		return BulletController.Instance.SpawnPattern(ownerEntity, patternData, fworldEntityBulletParam);
 	}
 
-	// Token: 0x06018AF5 RID: 101109 RVA: 0x00655D72 File Offset: 0x00653F72
+	// Token: 0x060163A2 RID: 91042 RVA: 0x0067BEAA File Offset: 0x0067A0AA
 	public static void DestroyPatternById(int patternId)
 	{
 		BulletController.Instance.DestroyPatternById(patternId);
 	}
 
-	// Token: 0x06018AF6 RID: 101110 RVA: 0x00655D80 File Offset: 0x00653F80
+	// Token: 0x060163A3 RID: 91043 RVA: 0x0067BEB8 File Offset: 0x0067A0B8
 	public unsafe static bool AttachParentEffectSkeleton(BulletInfo bulletInfo, AActor effectActor, int effectId)
 	{
 		BulletDataMove move = bulletInfo.BulletDataMain.Move;
@@ -980,7 +979,7 @@ public class BulletUtil
 		return true;
 	}
 
-	// Token: 0x06018AF7 RID: 101111 RVA: 0x00655E9C File Offset: 0x0065409C
+	// Token: 0x060163A4 RID: 91044 RVA: 0x0067BFD4 File Offset: 0x0067A1D4
 	public static void AroundBulletAxisAndBeginVector(global::Vector traceParam0, global::Vector traceParam1, global::Vector roundAxis, global::Vector beginVector, [Nullable(2)] BaseActorComponent actorComp = null, [Nullable(2)] global::Vector gravityUp = null)
 	{
 		if (actorComp != null)
@@ -1052,23 +1051,27 @@ public class BulletUtil
 		}
 	}
 
-	// Token: 0x06018AF8 RID: 101112 RVA: 0x006561DC File Offset: 0x006543DC
+	// Token: 0x060163A5 RID: 91045 RVA: 0x0067C314 File Offset: 0x0067A514
 	public static bool TagStackCountCondition(int stackCount, string stackCountConditionConf)
 	{
-		string[] array = (from v in stackCountConditionConf.Split('#', StringSplitOptions.None)
-		select v.Trim()).ToArray<string>();
-		if (array.Length != 2)
+		string[] array = stackCountConditionConf.Split('#', StringSplitOptions.None);
+		string[] array2 = new string[array.Length];
+		for (int i = 0; i < array.Length; i++)
+		{
+			array2[i] = array[i].Trim();
+		}
+		if (array2.Length != 2)
 		{
 			Log.Instance.Error(ELogModule.Battle, ELogAuthor.HCW, "子弹数组Tag条件 格式错误! 参数需要2个!", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
 		int num;
-		if (!int.TryParse(array[1], out num))
+		if (!int.TryParse(array2[1], out num))
 		{
 			Log.Instance.Error(ELogModule.Battle, ELogAuthor.HCW, "子弹数组Tag条件 格式错误! 参数需要是数字!", default(ReadOnlySpan<ValueTuple<string, object>>));
 			return false;
 		}
-		string a = array[0];
+		string a = array2[0];
 		if (a == ">")
 		{
 			return stackCount > num;
@@ -1097,7 +1100,7 @@ public class BulletUtil
 		return stackCount != num;
 	}
 
-	// Token: 0x06018AF9 RID: 101113 RVA: 0x00656302 File Offset: 0x00654502
+	// Token: 0x060163A6 RID: 91046 RVA: 0x0067C43C File Offset: 0x0067A63C
 	[return: Nullable(new byte[]
 	{
 		2,
@@ -1108,38 +1111,38 @@ public class BulletUtil
 		return null;
 	}
 
-	// Token: 0x0400B806 RID: 47110
+	// Token: 0x0400BB8C RID: 48012
 	private const float QUARTER_PI_DEGREE = 45f;
 
-	// Token: 0x0400B807 RID: 47111
+	// Token: 0x0400BB8D RID: 48013
 	[StaticVariableRuleIgnore]
 	protected static global::Rotator TmpRotator = global::Rotator.Create();
 
-	// Token: 0x0400B808 RID: 47112
+	// Token: 0x0400BB8E RID: 48014
 	[StaticVariableRuleIgnore]
 	protected static global::Rotator TmpRotator2 = global::Rotator.Create();
 
-	// Token: 0x0400B809 RID: 47113
+	// Token: 0x0400BB8F RID: 48015
 	[StaticVariableRuleIgnore]
 	protected static Quat TmpQuat = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400B80A RID: 47114
+	// Token: 0x0400BB90 RID: 48016
 	[StaticVariableRuleIgnore]
 	protected static Quat TmpQuat2 = Quat.Create(0.0, 0.0, 0.0, 1.0);
 
-	// Token: 0x0400B80B RID: 47115
+	// Token: 0x0400BB91 RID: 48017
 	[StaticVariableRuleIgnore]
 	protected static global::Vector TmpVector = global::Vector.Create();
 
-	// Token: 0x0400B80C RID: 47116
+	// Token: 0x0400BB92 RID: 48018
 	[StaticVariableRuleIgnore]
 	private static readonly global::Vector TempClampVector = global::Vector.Create();
 
-	// Token: 0x0400B80D RID: 47117
+	// Token: 0x0400BB93 RID: 48019
 	[StaticVariableRuleIgnore]
 	private static readonly global::Rotator TempClampRotator = global::Rotator.Create();
 
-	// Token: 0x0400B80E RID: 47118
+	// Token: 0x0400BB94 RID: 48020
 	[StaticVariableRuleIgnore]
 	private static readonly Dictionary<string, int> PatternIdMap = new Dictionary<string, int>();
 }

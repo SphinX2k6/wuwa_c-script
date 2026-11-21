@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006F4F RID: 28495
+	// Token: 0x02007709 RID: 30473
 	public class ISeamlessTeleportFinishConfigT
 	{
-		// Token: 0x1700D3BD RID: 54205
-		// (get) Token: 0x0603257B RID: 206203 RVA: 0x006CC3BA File Offset: 0x006CA5BA
-		// (set) Token: 0x0603257C RID: 206204 RVA: 0x006CC3C2 File Offset: 0x006CA5C2
+		// Token: 0x1700DF7C RID: 57212
+		// (get) Token: 0x0603577B RID: 219003 RVA: 0x0072B676 File Offset: 0x00729876
+		// (set) Token: 0x0603577C RID: 219004 RVA: 0x0072B67E File Offset: 0x0072987E
 		public bool IsNotStopScreenEffect { get; set; }
 
-		// Token: 0x1700D3BE RID: 54206
-		// (get) Token: 0x0603257D RID: 206205 RVA: 0x006CC3CB File Offset: 0x006CA5CB
-		// (set) Token: 0x0603257E RID: 206206 RVA: 0x006CC3D3 File Offset: 0x006CA5D3
+		// Token: 0x1700DF7D RID: 57213
+		// (get) Token: 0x0603577D RID: 219005 RVA: 0x0072B687 File Offset: 0x00729887
+		// (set) Token: 0x0603577E RID: 219006 RVA: 0x0072B68F File Offset: 0x0072988F
 		public int EffectExtraState { get; set; }
 
-		// Token: 0x1700D3BF RID: 54207
-		// (get) Token: 0x0603257F RID: 206207 RVA: 0x006CC3DC File Offset: 0x006CA5DC
-		// (set) Token: 0x06032580 RID: 206208 RVA: 0x006CC3E4 File Offset: 0x006CA5E4
+		// Token: 0x1700DF7E RID: 57214
+		// (get) Token: 0x0603577F RID: 219007 RVA: 0x0072B698 File Offset: 0x00729898
+		// (set) Token: 0x06035780 RID: 219008 RVA: 0x0072B6A0 File Offset: 0x007298A0
 		public byte NullMask { get; set; }
 
-		// Token: 0x06032581 RID: 206209 RVA: 0x006CC3ED File Offset: 0x006CA5ED
+		// Token: 0x06035781 RID: 219009 RVA: 0x0072B6A9 File Offset: 0x007298A9
 		public ISeamlessTeleportFinishConfigT()
 		{
 			this.IsNotStopScreenEffect = false;

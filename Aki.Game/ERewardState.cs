@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x0200120D RID: 4621
+// Token: 0x020006C1 RID: 1729
 public enum ERewardState
 {
-	// Token: 0x040038AD RID: 14509
+	// Token: 0x04003946 RID: 14662
 	FinishedAndUnClaimed,
-	// Token: 0x040038AE RID: 14510
+	// Token: 0x04003947 RID: 14663
 	Progress,
-	// Token: 0x040038AF RID: 14511
+	// Token: 0x04003948 RID: 14664
 	FinishedAndClaimed
 }

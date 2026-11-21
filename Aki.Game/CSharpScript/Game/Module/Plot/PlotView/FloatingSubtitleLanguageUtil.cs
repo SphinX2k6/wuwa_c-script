@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Plot.PlotView
 {
-	// Token: 0x02005045 RID: 20549
+	// Token: 0x02004014 RID: 16404
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FloatingSubtitleLanguageUtil : Singleton
 	{
-		// Token: 0x06034973 RID: 215411 RVA: 0x00C6BAE8 File Offset: 0x00C69CE8
+		// Token: 0x0602984F RID: 170063 RVA: 0x00BB8B88 File Offset: 0x00BB6D88
 		public float GetFontSize(FloatingSubtitle3D config)
 		{
 			float langFontSize = this.GetLangFontSize(config);
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return langFontSize;
 		}
 
-		// Token: 0x06034974 RID: 215412 RVA: 0x00C6BB10 File Offset: 0x00C69D10
+		// Token: 0x06029850 RID: 170064 RVA: 0x00BB8BB0 File Offset: 0x00BB6DB0
 		[NullableContext(2)]
 		public void EnableTextAdaptSize(UUIText text)
 		{
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			bp_3DTextAdaptSize_C.AdaptEnabled = true;
 		}
 
-		// Token: 0x06034975 RID: 215413 RVA: 0x00C6BB6A File Offset: 0x00C69D6A
+		// Token: 0x06029851 RID: 170065 RVA: 0x00BB8C0A File Offset: 0x00BB6E0A
 		public float GetLayoutScale(float fontSize)
 		{
 			if (fontSize <= 0f)
@@ -58,7 +58,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return fontSize / 110f;
 		}
 
-		// Token: 0x06034976 RID: 215414 RVA: 0x00C6BB81 File Offset: 0x00C69D81
+		// Token: 0x06029852 RID: 170066 RVA: 0x00BB8C21 File Offset: 0x00BB6E21
 		public int GetSpaceSize(float fontSize)
 		{
 			if (fontSize <= 0f)
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return Math.Max(1, (int)MathF.Round(fontSize * 0.465f));
 		}
 
-		// Token: 0x06034977 RID: 215415 RVA: 0x00C6BBA0 File Offset: 0x00C69DA0
+		// Token: 0x06029853 RID: 170067 RVA: 0x00BB8C40 File Offset: 0x00BB6E40
 		[NullableContext(2)]
 		public void ApplySpaceMark(UUIText text)
 		{
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			this.RefreshSpaceMark(text, text.GetText(), this.GetSpaceSize(text.GetSize()));
 		}
 
-		// Token: 0x06034978 RID: 215416 RVA: 0x00C6BBC0 File Offset: 0x00C69DC0
+		// Token: 0x06029854 RID: 170068 RVA: 0x00BB8C60 File Offset: 0x00BB6E60
 		public bool RefreshSpaceMark([Nullable(2)] UUIText text, string rawText, int spaceSize)
 		{
 			if (text == null || spaceSize <= 0 || FloatingSubtitleLanguageDiffPreprocessor.Instance.GetLayoutTag() != "VT")
@@ -96,7 +96,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return true;
 		}
 
-		// Token: 0x06034979 RID: 215417 RVA: 0x00C6BC0C File Offset: 0x00C69E0C
+		// Token: 0x06029855 RID: 170069 RVA: 0x00BB8CAC File Offset: 0x00BB6EAC
 		[return: Nullable(2)]
 		private string ReplaceSpaceMark(string text, int spaceSize)
 		{
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return stringBuilder.ToString();
 		}
 
-		// Token: 0x0603497A RID: 215418 RVA: 0x00C6BCF0 File Offset: 0x00C69EF0
+		// Token: 0x06029856 RID: 170070 RVA: 0x00BB8D90 File Offset: 0x00BB6F90
 		public Dictionary<string, float> GetScaleMap(string sequenceName)
 		{
 			Dictionary<string, float> dictionary = new Dictionary<string, float>();
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return dictionary;
 		}
 
-		// Token: 0x0603497B RID: 215419 RVA: 0x00C6BD7C File Offset: 0x00C69F7C
+		// Token: 0x06029857 RID: 170071 RVA: 0x00BB8E1C File Offset: 0x00BB701C
 		private float GetLangFontSize(FloatingSubtitle3D config)
 		{
 			ELanguageType? packageLanguageType = LanguageSystem.Instance.PackageLanguageType;
@@ -206,7 +206,7 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return 0f;
 		}
 
-		// Token: 0x0603497C RID: 215420 RVA: 0x00C6BE48 File Offset: 0x00C6A048
+		// Token: 0x06029858 RID: 170072 RVA: 0x00BB8EE8 File Offset: 0x00BB70E8
 		private float GetLangScale(FloatingSubtitle2D config)
 		{
 			ELanguageType? packageLanguageType = LanguageSystem.Instance.PackageLanguageType;
@@ -243,8 +243,8 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			return 0f;
 		}
 
-		// Token: 0x1700802B RID: 32811
-		// (get) Token: 0x0603497D RID: 215421 RVA: 0x00C6BF13 File Offset: 0x00C6A113
+		// Token: 0x170053E1 RID: 21473
+		// (get) Token: 0x06029859 RID: 170073 RVA: 0x00BB8FB3 File Offset: 0x00BB71B3
 		public static FloatingSubtitleLanguageUtil Instance
 		{
 			get
@@ -258,12 +258,12 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			}
 		}
 
-		// Token: 0x0603497E RID: 215422 RVA: 0x00C6BF36 File Offset: 0x00C6A136
+		// Token: 0x0602985A RID: 170074 RVA: 0x00BB8FD6 File Offset: 0x00BB71D6
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603497F RID: 215423 RVA: 0x00C6BF38 File Offset: 0x00C6A138
+		// Token: 0x0602985B RID: 170075 RVA: 0x00BB8FD8 File Offset: 0x00BB71D8
 		public static void ResetStaticDefaultValue()
 		{
 			FloatingSubtitleLanguageUtil instance = FloatingSubtitleLanguageUtil._instance;
@@ -274,25 +274,25 @@ namespace CSharpScript.Game.Module.Plot.PlotView
 			FloatingSubtitleLanguageUtil._instance = null;
 		}
 
-		// Token: 0x06034980 RID: 215424 RVA: 0x00C6BF51 File Offset: 0x00C6A151
+		// Token: 0x0602985C RID: 170076 RVA: 0x00BB8FF1 File Offset: 0x00BB71F1
 		static FloatingSubtitleLanguageUtil()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(FloatingSubtitleLanguageUtil.CreateStaticDefaultValue), new Action(FloatingSubtitleLanguageUtil.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0401C06E RID: 114798
+		// Token: 0x04016A91 RID: 92817
 		private const char SPACE_MARK = '#';
 
-		// Token: 0x0401C06F RID: 114799
+		// Token: 0x04016A92 RID: 92818
 		private const string SPACE_GLYPH = "\u3000";
 
-		// Token: 0x0401C070 RID: 114800
+		// Token: 0x04016A93 RID: 92819
 		private const float SPACE_SIZE_RATIO = 0.465f;
 
-		// Token: 0x0401C071 RID: 114801
+		// Token: 0x04016A94 RID: 92820
 		private const float LAYOUT_BASE_FONT_SIZE = 110f;
 
-		// Token: 0x0401C072 RID: 114802
+		// Token: 0x04016A95 RID: 92821
 		[Nullable(2)]
 		private static FloatingSubtitleLanguageUtil _instance;
 	}

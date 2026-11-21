@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.MovieMode
 {
-	// Token: 0x0200538E RID: 21390
+	// Token: 0x02004371 RID: 17265
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MovieModeUiView : UiPanelBase
 	{
-		// Token: 0x06036A44 RID: 223812 RVA: 0x00CEE9E8 File Offset: 0x00CECBE8
+		// Token: 0x0602B98A RID: 178570 RVA: 0x00C3D910 File Offset: 0x00C3BB10
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06036A45 RID: 223813 RVA: 0x00CEEAB4 File Offset: 0x00CECCB4
+		// Token: 0x0602B98B RID: 178571 RVA: 0x00C3D9DC File Offset: 0x00C3BBDC
 		protected override void OnStart()
 		{
 			this.AddEvents();
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			this.RefreshUiVisible();
 		}
 
-		// Token: 0x06036A46 RID: 223814 RVA: 0x00CEEAE8 File Offset: 0x00CECCE8
+		// Token: 0x0602B98C RID: 178572 RVA: 0x00C3DA10 File Offset: 0x00C3BC10
 		private void InitParameter()
 		{
 			IEnterMovieModeParams enterMovieModeParams = this.OpenParam as IEnterMovieModeParams;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			this.IsCanShowUi = (this.DelayShowUiDuration == 0f);
 		}
 
-		// Token: 0x06036A47 RID: 223815 RVA: 0x00CEEB48 File Offset: 0x00CECD48
+		// Token: 0x0602B98D RID: 178573 RVA: 0x00C3DA70 File Offset: 0x00C3BC70
 		private void InitMaskBtn()
 		{
 			this.MaskBtn = base.GetButton(0);
@@ -68,19 +68,19 @@ namespace CSharpScript.Game.Module.MovieMode
 			maskBtn.OnClickCallBack.Bind(new Action(this.OnClickMaskBtn));
 		}
 
-		// Token: 0x06036A48 RID: 223816 RVA: 0x00CEEB78 File Offset: 0x00CECD78
+		// Token: 0x0602B98E RID: 178574 RVA: 0x00C3DAA0 File Offset: 0x00C3BCA0
 		private void OnClickMaskBtn()
 		{
 			MovieModeController.Instance.ResetMovieModeHideUi(false);
 		}
 
-		// Token: 0x06036A49 RID: 223817 RVA: 0x00CEEB85 File Offset: 0x00CECD85
+		// Token: 0x0602B98F RID: 178575 RVA: 0x00C3DAAD File Offset: 0x00C3BCAD
 		private void OnMovieModeHideUiChange(bool isHide)
 		{
 			this.HandleMovieModeHideUiChange(isHide);
 		}
 
-		// Token: 0x06036A4A RID: 223818 RVA: 0x00CEEB8E File Offset: 0x00CECD8E
+		// Token: 0x0602B990 RID: 178576 RVA: 0x00C3DAB6 File Offset: 0x00C3BCB6
 		private void HandleMovieModeHideUiChange(bool isHide)
 		{
 			if (this.IsMovieModeHideUi == isHide)
@@ -91,7 +91,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			this.RefreshUiVisible();
 		}
 
-		// Token: 0x06036A4B RID: 223819 RVA: 0x00CEEBA7 File Offset: 0x00CECDA7
+		// Token: 0x0602B991 RID: 178577 RVA: 0x00C3DACF File Offset: 0x00C3BCCF
 		private void InitExitBtn()
 		{
 			this.ExitBtn = base.GetButton(1);
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			exitBtn.OnClickCallBack.Bind(new Action(this.OnClickExitBtn));
 		}
 
-		// Token: 0x06036A4C RID: 223820 RVA: 0x00CEEBD8 File Offset: 0x00CECDD8
+		// Token: 0x0602B992 RID: 178578 RVA: 0x00C3DB00 File Offset: 0x00C3BD00
 		private void OnClickExitBtn()
 		{
 			ExitMovieModeParams param = new ExitMovieModeParams
@@ -113,13 +113,13 @@ namespace CSharpScript.Game.Module.MovieMode
 			MovieModeController.Instance.ExitMovieMode(param, null);
 		}
 
-		// Token: 0x06036A4D RID: 223821 RVA: 0x00CEEC12 File Offset: 0x00CECE12
+		// Token: 0x0602B993 RID: 178579 RVA: 0x00C3DB3A File Offset: 0x00C3BD3A
 		private void InitRightDownButtons()
 		{
 			this.InitPhotoBtn();
 		}
 
-		// Token: 0x06036A4E RID: 223822 RVA: 0x00CEEC1A File Offset: 0x00CECE1A
+		// Token: 0x0602B994 RID: 178580 RVA: 0x00C3DB42 File Offset: 0x00C3BD42
 		private void InitPhotoBtn()
 		{
 			this.PhotoBtn = base.GetButton(2);
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			photoBtn.OnClickCallBack.Bind(new Action(this.OnClickPhotoBtn));
 		}
 
-		// Token: 0x06036A4F RID: 223823 RVA: 0x00CEEC4C File Offset: 0x00CECE4C
+		// Token: 0x0602B995 RID: 178581 RVA: 0x00C3DB74 File Offset: 0x00C3BD74
 		private void OnClickPhotoBtn()
 		{
 			PhotographController.Instance.ScreenShot(new PhotoSaveViewParam
@@ -147,13 +147,13 @@ namespace CSharpScript.Game.Module.MovieMode
 			});
 		}
 
-		// Token: 0x06036A50 RID: 223824 RVA: 0x00CEECA0 File Offset: 0x00CECEA0
+		// Token: 0x0602B996 RID: 178582 RVA: 0x00C3DBC8 File Offset: 0x00C3BDC8
 		public void OnTick(float deltaTime)
 		{
 			this.OnTickCanShowUi(deltaTime);
 		}
 
-		// Token: 0x06036A51 RID: 223825 RVA: 0x00CEECA9 File Offset: 0x00CECEA9
+		// Token: 0x0602B997 RID: 178583 RVA: 0x00C3DBD1 File Offset: 0x00C3BDD1
 		private void OnTickCanShowUi(float deltaTime)
 		{
 			if (this.IsCanShowUi)
@@ -168,20 +168,20 @@ namespace CSharpScript.Game.Module.MovieMode
 			}
 		}
 
-		// Token: 0x06036A52 RID: 223826 RVA: 0x00CEECE1 File Offset: 0x00CECEE1
+		// Token: 0x0602B998 RID: 178584 RVA: 0x00C3DC09 File Offset: 0x00C3BE09
 		private void AddTick()
 		{
 			this.TickHandle = MovieModeController.Instance.AddTick(new Action<float>(this.OnTick));
 		}
 
-		// Token: 0x06036A53 RID: 223827 RVA: 0x00CEECFF File Offset: 0x00CECEFF
+		// Token: 0x0602B999 RID: 178585 RVA: 0x00C3DC27 File Offset: 0x00C3BE27
 		private void RemoveTick()
 		{
 			MovieModeController.Instance.RemoveTick(this.TickHandle);
 			this.TickHandle = -1;
 		}
 
-		// Token: 0x06036A54 RID: 223828 RVA: 0x00CEED18 File Offset: 0x00CECF18
+		// Token: 0x0602B99A RID: 178586 RVA: 0x00C3DC40 File Offset: 0x00C3BE40
 		private void ApplyMovieAspectOffset()
 		{
 			IMovieModeAspectOffset aspectOffset = MovieModeController.Instance.GetAspectOffset();
@@ -224,7 +224,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			}
 		}
 
-		// Token: 0x06036A55 RID: 223829 RVA: 0x00CEEE1A File Offset: 0x00CED01A
+		// Token: 0x0602B99B RID: 178587 RVA: 0x00C3DD42 File Offset: 0x00C3BF42
 		private void RefreshUiVisible()
 		{
 			this.RefreshExitBtnVisible();
@@ -232,7 +232,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			this.RefreshMaskBtnVisible();
 		}
 
-		// Token: 0x06036A56 RID: 223830 RVA: 0x00CEEE30 File Offset: 0x00CED030
+		// Token: 0x0602B99C RID: 178588 RVA: 0x00C3DD58 File Offset: 0x00C3BF58
 		private void RefreshExitBtnVisible()
 		{
 			IEnterMovieModeParams enterMovieModeParams = this.OpenParam as IEnterMovieModeParams;
@@ -250,7 +250,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			uuiitem.SetUIActive(!this.IsMovieModeHideUi && valueOrDefault && this.IsCanShowUi);
 		}
 
-		// Token: 0x06036A57 RID: 223831 RVA: 0x00CEEEA0 File Offset: 0x00CED0A0
+		// Token: 0x0602B99D RID: 178589 RVA: 0x00C3DDC8 File Offset: 0x00C3BFC8
 		private void RefreshPhotoBtnVisible()
 		{
 			IEnterMovieModeParams enterMovieModeParams = this.OpenParam as IEnterMovieModeParams;
@@ -268,7 +268,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			uuiitem.SetUIActive(!this.IsMovieModeHideUi && valueOrDefault && this.IsCanShowUi);
 		}
 
-		// Token: 0x06036A58 RID: 223832 RVA: 0x00CEEF10 File Offset: 0x00CED110
+		// Token: 0x0602B99E RID: 178590 RVA: 0x00C3DE38 File Offset: 0x00C3C038
 		private void RefreshMaskBtnVisible()
 		{
 			UUIButtonComponent maskBtn = this.MaskBtn;
@@ -284,7 +284,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			uuiitem.SetUIActive(this.IsMovieModeHideUi);
 		}
 
-		// Token: 0x06036A59 RID: 223833 RVA: 0x00CEEF45 File Offset: 0x00CED145
+		// Token: 0x0602B99F RID: 178591 RVA: 0x00C3DE6D File Offset: 0x00C3C06D
 		private void TryActivateTimer()
 		{
 			this.TimerHandle = TimerSystem.GameplayTimeInstance.Delay(delegate(float _)
@@ -294,7 +294,7 @@ namespace CSharpScript.Game.Module.MovieMode
 			}, (float)MovieModeModel.Instance.MovieModeHideUiTimeThreshold, null, null, true, 1f);
 		}
 
-		// Token: 0x06036A5A RID: 223834 RVA: 0x00CEEF76 File Offset: 0x00CED176
+		// Token: 0x0602B9A0 RID: 178592 RVA: 0x00C3DE9E File Offset: 0x00C3C09E
 		private void DeactivateTimer()
 		{
 			if (this.TimerHandle != null && TimerSystem.GameplayTimeInstance.Has(this.TimerHandle))
@@ -304,14 +304,14 @@ namespace CSharpScript.Game.Module.MovieMode
 			}
 		}
 
-		// Token: 0x06036A5B RID: 223835 RVA: 0x00CEEFAA File Offset: 0x00CED1AA
+		// Token: 0x0602B9A1 RID: 178593 RVA: 0x00C3DED2 File Offset: 0x00C3C0D2
 		private void AddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.OnInputAnyKey, new Action<bool, FKey>(this.OnInputAnyKey));
 			EventSystem.Instance.Add(EEventName.MovieModeHideUiChange, new Action<bool>(this.OnMovieModeHideUiChange));
 		}
 
-		// Token: 0x06036A5C RID: 223836 RVA: 0x00CEEFE4 File Offset: 0x00CED1E4
+		// Token: 0x0602B9A2 RID: 178594 RVA: 0x00C3DF0C File Offset: 0x00C3C10C
 		[NullableContext(1)]
 		private void OnInputAnyKey(bool bPress, FKey key)
 		{
@@ -329,21 +329,21 @@ namespace CSharpScript.Game.Module.MovieMode
 			}
 		}
 
-		// Token: 0x06036A5D RID: 223837 RVA: 0x00CEF017 File Offset: 0x00CED217
+		// Token: 0x0602B9A3 RID: 178595 RVA: 0x00C3DF3F File Offset: 0x00C3C13F
 		public void ActivateTimer()
 		{
 			this.DeactivateTimer();
 			this.TryActivateTimer();
 		}
 
-		// Token: 0x06036A5E RID: 223838 RVA: 0x00CEF025 File Offset: 0x00CED225
+		// Token: 0x0602B9A4 RID: 178596 RVA: 0x00C3DF4D File Offset: 0x00C3C14D
 		private void RemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.OnInputAnyKey, new Action<bool, FKey>(this.OnInputAnyKey));
 			EventSystem.Instance.Remove(EEventName.MovieModeHideUiChange, new Action<bool>(this.OnMovieModeHideUiChange));
 		}
 
-		// Token: 0x06036A5F RID: 223839 RVA: 0x00CEF05F File Offset: 0x00CED25F
+		// Token: 0x0602B9A5 RID: 178597 RVA: 0x00C3DF87 File Offset: 0x00C3C187
 		protected override void OnBeforeDestroy()
 		{
 			this.RemoveTick();
@@ -351,46 +351,46 @@ namespace CSharpScript.Game.Module.MovieMode
 			this.DeactivateTimer();
 		}
 
-		// Token: 0x0401CDF8 RID: 118264
+		// Token: 0x04017890 RID: 96400
 		private UUIButtonComponent ExitBtn;
 
-		// Token: 0x0401CDF9 RID: 118265
+		// Token: 0x04017891 RID: 96401
 		private UUIButtonComponent PhotoBtn;
 
-		// Token: 0x0401CDFA RID: 118266
+		// Token: 0x04017892 RID: 96402
 		private UUIButtonComponent MaskBtn;
 
-		// Token: 0x0401CDFB RID: 118267
+		// Token: 0x04017893 RID: 96403
 		private int TickHandle = -1;
 
-		// Token: 0x0401CDFC RID: 118268
+		// Token: 0x04017894 RID: 96404
 		private float DelayShowUiDuration;
 
-		// Token: 0x0401CDFD RID: 118269
+		// Token: 0x04017895 RID: 96405
 		private bool IsCanShowUi;
 
-		// Token: 0x0401CDFE RID: 118270
+		// Token: 0x04017896 RID: 96406
 		private bool IsMovieModeHideUi;
 
-		// Token: 0x0401CDFF RID: 118271
+		// Token: 0x04017897 RID: 96407
 		private TimerHandle TimerHandle;
 
-		// Token: 0x0401CE00 RID: 118272
+		// Token: 0x04017898 RID: 96408
 		private bool IsAnyKeyPressed;
 
-		// Token: 0x0200B5FD RID: 46589
+		// Token: 0x0200A035 RID: 41013
 		[NullableContext(0)]
 		private enum EComponents
 		{
-			// Token: 0x040371F6 RID: 225782
+			// Token: 0x04031C4B RID: 203851
 			BtnMask,
-			// Token: 0x040371F7 RID: 225783
+			// Token: 0x04031C4C RID: 203852
 			BtnExit,
-			// Token: 0x040371F8 RID: 225784
+			// Token: 0x04031C4D RID: 203853
 			BtnPhoto,
-			// Token: 0x040371F9 RID: 225785
+			// Token: 0x04031C4E RID: 203854
 			SpriteBtnPhotoIcon,
-			// Token: 0x040371FA RID: 225786
+			// Token: 0x04031C4F RID: 203855
 			RightDownBtnRoot
 		}
 	}

@@ -4,17 +4,17 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnrealEngine;
 
-// Token: 0x02001985 RID: 6533
+// Token: 0x02000E42 RID: 3650
 public class SmallItemGridMultiPlayerComponent : SmallItemGridComponent
 {
-	// Token: 0x0600BF05 RID: 48901 RVA: 0x002B3153 File Offset: 0x002B1353
+	// Token: 0x0600930D RID: 37645 RVA: 0x002BE0D7 File Offset: 0x002BC2D7
 	[NullableContext(1)]
 	protected override string GetResourceId()
 	{
 		return "UiItem_PlayerIcon";
 	}
 
-	// Token: 0x0600BF06 RID: 48902 RVA: 0x002B315C File Offset: 0x002B135C
+	// Token: 0x0600930E RID: 37646 RVA: 0x002BE0E0 File Offset: 0x002BC2E0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 1;
@@ -26,7 +26,7 @@ public class SmallItemGridMultiPlayerComponent : SmallItemGridComponent
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x0600BF07 RID: 48903 RVA: 0x002B31A4 File Offset: 0x002B13A4
+	// Token: 0x0600930F RID: 37647 RVA: 0x002BE128 File Offset: 0x002BC328
 	[NullableContext(2)]
 	protected override void OnRefresh(object @params)
 	{
@@ -58,7 +58,7 @@ public class SmallItemGridMultiPlayerComponent : SmallItemGridComponent
 		this.SetActive(true);
 	}
 
-	// Token: 0x0600BF08 RID: 48904 RVA: 0x002B3294 File Offset: 0x002B1494
+	// Token: 0x06009310 RID: 37648 RVA: 0x002BE218 File Offset: 0x002BC418
 	private void EnsureIconCount(int count)
 	{
 		if (this.IconSprites.Count == 0)
@@ -74,14 +74,14 @@ public class SmallItemGridMultiPlayerComponent : SmallItemGridComponent
 		}
 	}
 
-	// Token: 0x040055D2 RID: 21970
+	// Token: 0x0400567F RID: 22143
 	[Nullable(1)]
 	private readonly List<UUISprite> IconSprites = new List<UUISprite>();
 
-	// Token: 0x02007EC8 RID: 32456
+	// Token: 0x02007057 RID: 28759
 	private static class EComponent
 	{
-		// Token: 0x04029709 RID: 169737
+		// Token: 0x04024A46 RID: 150086
 		public const int SpriteIcon = 0;
 	}
 }

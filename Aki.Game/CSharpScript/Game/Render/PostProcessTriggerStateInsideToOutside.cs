@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Render
 {
-	// Token: 0x020045D5 RID: 17877
+	// Token: 0x020034FE RID: 13566
 	public class PostProcessTriggerStateInsideToOutside : PostProcessTriggerStateBase
 	{
-		// Token: 0x0602E13E RID: 188734 RVA: 0x00A9F3D7 File Offset: 0x00A9D5D7
+		// Token: 0x06022832 RID: 141362 RVA: 0x009CBAA7 File Offset: 0x009C9CA7
 		[NullableContext(1)]
 		public PostProcessTriggerStateInsideToOutside(PostProcessTrigger owner, EPostProcessTriggerState state, [Nullable(new byte[]
 		{
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Render
 		{
 		}
 
-		// Token: 0x0602E13F RID: 188735 RVA: 0x00A9F3E4 File Offset: 0x00A9D5E4
+		// Token: 0x06022833 RID: 141363 RVA: 0x009CBAB4 File Offset: 0x009C9CB4
 		protected override void OnEnter(EPostProcessTriggerState? lastState)
 		{
 			this.Timer = 0.0;
@@ -24,7 +24,7 @@ namespace CSharpScript.Game.Render
 			this.Owner.GetPostProcessComponent().BlendWeight = (float)targetDefaultValue;
 		}
 
-		// Token: 0x0602E140 RID: 188736 RVA: 0x00A9F41C File Offset: 0x00A9D61C
+		// Token: 0x06022834 RID: 141364 RVA: 0x009CBAEC File Offset: 0x009C9CEC
 		protected override void OnUpdate(float delta)
 		{
 			if (this.Timer > this.Owner.TransitionTime)
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Render
 			this.Owner.GetPostProcessComponent().BlendWeight = (float)MathUtils.Instance.Clamp(1.0 - num, 0.0, targetDefaultValue);
 		}
 
-		// Token: 0x04018B11 RID: 101137
+		// Token: 0x0401314F RID: 78159
 		protected double Timer;
 	}
 }

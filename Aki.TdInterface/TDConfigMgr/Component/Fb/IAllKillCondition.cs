@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B7B RID: 2939
+	// Token: 0x02000C49 RID: 3145
 	public class IAllKillCondition : ISpawnMonsterCompleteCondition
 	{
-		// Token: 0x060043AE RID: 17326 RVA: 0x000AC5F4 File Offset: 0x000AA7F4
-		[NullableContext(1)]
+		// Token: 0x06004807 RID: 18439 RVA: 0x000B66B8 File Offset: 0x000B48B8
 		public static IAllKillCondition Create(IAllKillCondition? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001275 RID: 4725
-		// (get) Token: 0x060043AF RID: 17327 RVA: 0x000AC613 File Offset: 0x000AA813
+		// Token: 0x17001370 RID: 4976
+		// (get) Token: 0x06004808 RID: 18440 RVA: 0x000B66D7 File Offset: 0x000B48D7
 		public override ESpawnMonsterCompleteCondition Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400262C RID: 9772
+		// Token: 0x04002874 RID: 10356
 		private IAllKillCondition Instance;
 	}
 }

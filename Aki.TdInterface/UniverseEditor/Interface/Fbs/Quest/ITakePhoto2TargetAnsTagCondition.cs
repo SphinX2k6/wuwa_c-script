@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004190 RID: 16784
+	// Token: 0x020045E9 RID: 17897
 	public struct ITakePhoto2TargetAnsTagCondition : IFlatbufferObject
 	{
-		// Token: 0x17007706 RID: 30470
-		// (get) Token: 0x06018B0F RID: 101135 RVA: 0x0038E5C7 File Offset: 0x0038C7C7
+		// Token: 0x17007D32 RID: 32050
+		// (get) Token: 0x0601A265 RID: 107109 RVA: 0x003B9A1B File Offset: 0x003B7C1B
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018B10 RID: 101136 RVA: 0x0038E5D4 File Offset: 0x0038C7D4
+		// Token: 0x0601A266 RID: 107110 RVA: 0x003B9A28 File Offset: 0x003B7C28
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06018B11 RID: 101137 RVA: 0x0038E5DC File Offset: 0x0038C7DC
+		// Token: 0x0601A267 RID: 107111 RVA: 0x003B9A30 File Offset: 0x003B7C30
 		public static ITakePhoto2TargetAnsTagCondition GetRootAsITakePhoto2TargetAnsTagCondition(ByteBuffer _bb)
 		{
 			return ITakePhoto2TargetAnsTagCondition.GetRootAsITakePhoto2TargetAnsTagCondition(_bb, default(ITakePhoto2TargetAnsTagCondition));
 		}
 
-		// Token: 0x06018B12 RID: 101138 RVA: 0x0038E5F8 File Offset: 0x0038C7F8
+		// Token: 0x0601A268 RID: 107112 RVA: 0x003B9A4C File Offset: 0x003B7C4C
 		public static ITakePhoto2TargetAnsTagCondition GetRootAsITakePhoto2TargetAnsTagCondition(ByteBuffer _bb, ITakePhoto2TargetAnsTagCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06018B13 RID: 101139 RVA: 0x0038E615 File Offset: 0x0038C815
+		// Token: 0x0601A269 RID: 107113 RVA: 0x003B9A69 File Offset: 0x003B7C69
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06018B14 RID: 101140 RVA: 0x0038E624 File Offset: 0x0038C824
+		// Token: 0x0601A26A RID: 107114 RVA: 0x003B9A78 File Offset: 0x003B7C78
 		public ITakePhoto2TargetAnsTagCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007707 RID: 30471
-		// (get) Token: 0x06018B15 RID: 101141 RVA: 0x0038E634 File Offset: 0x0038C834
+		// Token: 0x17007D33 RID: 32051
+		// (get) Token: 0x0601A26B RID: 107115 RVA: 0x003B9A88 File Offset: 0x003B7C88
 		public string MontageTag
 		{
 			get
@@ -62,19 +62,19 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			}
 		}
 
-		// Token: 0x06018B16 RID: 101142 RVA: 0x0038E66B File Offset: 0x0038C86B
+		// Token: 0x0601A26C RID: 107116 RVA: 0x003B9ABF File Offset: 0x003B7CBF
 		public Span<byte> GetMontageTagBytes()
 		{
 			return this.__p.__vector_as_span<byte>(4, 1);
 		}
 
-		// Token: 0x06018B17 RID: 101143 RVA: 0x0038E67A File Offset: 0x0038C87A
+		// Token: 0x0601A26D RID: 107117 RVA: 0x003B9ACE File Offset: 0x003B7CCE
 		public byte[] GetMontageTagArray()
 		{
 			return this.__p.__vector_as_array<byte>(4);
 		}
 
-		// Token: 0x06018B18 RID: 101144 RVA: 0x0038E688 File Offset: 0x0038C888
+		// Token: 0x0601A26E RID: 107118 RVA: 0x003B9ADC File Offset: 0x003B7CDC
 		public static Offset<ITakePhoto2TargetAnsTagCondition> CreateITakePhoto2TargetAnsTagCondition(FlatBufferBuilder builder, StringOffset MontageTagOffset = default(StringOffset))
 		{
 			builder.StartTable(1);
@@ -82,25 +82,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ITakePhoto2TargetAnsTagCondition.EndITakePhoto2TargetAnsTagCondition(builder);
 		}
 
-		// Token: 0x06018B19 RID: 101145 RVA: 0x0038E69E File Offset: 0x0038C89E
+		// Token: 0x0601A26F RID: 107119 RVA: 0x003B9AF2 File Offset: 0x003B7CF2
 		public static void StartITakePhoto2TargetAnsTagCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06018B1A RID: 101146 RVA: 0x0038E6A7 File Offset: 0x0038C8A7
+		// Token: 0x0601A270 RID: 107120 RVA: 0x003B9AFB File Offset: 0x003B7CFB
 		public static void AddMontageTag(FlatBufferBuilder builder, StringOffset montageTagOffset)
 		{
 			builder.AddOffset(0, montageTagOffset.Value, 0);
 		}
 
-		// Token: 0x06018B1B RID: 101147 RVA: 0x0038E6B7 File Offset: 0x0038C8B7
+		// Token: 0x0601A271 RID: 107121 RVA: 0x003B9B0B File Offset: 0x003B7D0B
 		public static Offset<ITakePhoto2TargetAnsTagCondition> EndITakePhoto2TargetAnsTagCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<ITakePhoto2TargetAnsTagCondition>(builder.EndTable());
 		}
 
-		// Token: 0x06018B1C RID: 101148 RVA: 0x0038E6C4 File Offset: 0x0038C8C4
+		// Token: 0x0601A272 RID: 107122 RVA: 0x003B9B18 File Offset: 0x003B7D18
 		public ITakePhoto2TargetAnsTagConditionT UnPack()
 		{
 			ITakePhoto2TargetAnsTagConditionT takePhoto2TargetAnsTagConditionT = new ITakePhoto2TargetAnsTagConditionT();
@@ -108,13 +108,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return takePhoto2TargetAnsTagConditionT;
 		}
 
-		// Token: 0x06018B1D RID: 101149 RVA: 0x0038E6DF File Offset: 0x0038C8DF
+		// Token: 0x0601A273 RID: 107123 RVA: 0x003B9B33 File Offset: 0x003B7D33
 		public void UnPackTo(ITakePhoto2TargetAnsTagConditionT _o)
 		{
 			_o.MontageTag = this.MontageTag;
 		}
 
-		// Token: 0x06018B1E RID: 101150 RVA: 0x0038E6F0 File Offset: 0x0038C8F0
+		// Token: 0x0601A274 RID: 107124 RVA: 0x003B9B44 File Offset: 0x003B7D44
 		public static Offset<ITakePhoto2TargetAnsTagCondition> Pack(FlatBufferBuilder builder, ITakePhoto2TargetAnsTagConditionT _o)
 		{
 			if (_o == null)
@@ -125,7 +125,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			return ITakePhoto2TargetAnsTagCondition.CreateITakePhoto2TargetAnsTagCondition(builder, montageTagOffset);
 		}
 
-		// Token: 0x0400BDC5 RID: 48581
+		// Token: 0x0400C7CF RID: 51151
 		private Table __p;
 	}
 }

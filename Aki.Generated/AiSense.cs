@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000AEF RID: 2799
+	// Token: 0x02000BC9 RID: 3017
 	public struct AiSense : IFlatbufferObject
 	{
-		// Token: 0x17000283 RID: 643
-		// (get) Token: 0x060046CF RID: 18127 RVA: 0x001D3878 File Offset: 0x001D1A78
+		// Token: 0x1700029A RID: 666
+		// (get) Token: 0x06004C16 RID: 19478 RVA: 0x001F3258 File Offset: 0x001F1458
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x060046D0 RID: 18128 RVA: 0x001D3885 File Offset: 0x001D1A85
+		// Token: 0x06004C17 RID: 19479 RVA: 0x001F3265 File Offset: 0x001F1465
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060046D1 RID: 18129 RVA: 0x001D388C File Offset: 0x001D1A8C
+		// Token: 0x06004C18 RID: 19480 RVA: 0x001F326C File Offset: 0x001F146C
 		public static AiSense GetRootAsAiSense(ByteBuffer _bb)
 		{
 			return AiSense.GetRootAsAiSense(_bb, default(AiSense));
 		}
 
-		// Token: 0x060046D2 RID: 18130 RVA: 0x001D38A8 File Offset: 0x001D1AA8
+		// Token: 0x06004C19 RID: 19481 RVA: 0x001F3288 File Offset: 0x001F1488
 		public static AiSense GetRootAsAiSense(ByteBuffer _bb, AiSense obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060046D3 RID: 18131 RVA: 0x001D38C5 File Offset: 0x001D1AC5
+		// Token: 0x06004C1A RID: 19482 RVA: 0x001F32A5 File Offset: 0x001F14A5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060046D4 RID: 18132 RVA: 0x001D38D4 File Offset: 0x001D1AD4
+		// Token: 0x06004C1B RID: 19483 RVA: 0x001F32B4 File Offset: 0x001F14B4
 		public AiSense __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000284 RID: 644
-		// (get) Token: 0x060046D5 RID: 18133 RVA: 0x001D38E4 File Offset: 0x001D1AE4
+		// Token: 0x1700029B RID: 667
+		// (get) Token: 0x06004C1C RID: 19484 RVA: 0x001F32C4 File Offset: 0x001F14C4
 		public int Id
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000285 RID: 645
-		// (get) Token: 0x060046D6 RID: 18134 RVA: 0x001D3920 File Offset: 0x001D1B20
+		// Token: 0x1700029C RID: 668
+		// (get) Token: 0x06004C1D RID: 19485 RVA: 0x001F3300 File Offset: 0x001F1500
 		public int SenseType
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000286 RID: 646
-		// (get) Token: 0x060046D7 RID: 18135 RVA: 0x001D395C File Offset: 0x001D1B5C
+		// Token: 0x1700029D RID: 669
+		// (get) Token: 0x06004C1E RID: 19486 RVA: 0x001F333C File Offset: 0x001F153C
 		public bool DefaultEnabled
 		{
 			get
@@ -88,8 +88,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000287 RID: 647
-		// (get) Token: 0x060046D8 RID: 18136 RVA: 0x001D399C File Offset: 0x001D1B9C
+		// Token: 0x1700029E RID: 670
+		// (get) Token: 0x06004C1F RID: 19487 RVA: 0x001F337C File Offset: 0x001F157C
 		public FloatRange? SenseDistanceRange
 		{
 			get
@@ -103,8 +103,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000288 RID: 648
-		// (get) Token: 0x060046D9 RID: 18137 RVA: 0x001D39FC File Offset: 0x001D1BFC
+		// Token: 0x1700029F RID: 671
+		// (get) Token: 0x06004C20 RID: 19488 RVA: 0x001F33DC File Offset: 0x001F15DC
 		public FloatRange? HorizontalAngle
 		{
 			get
@@ -118,8 +118,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17000289 RID: 649
-		// (get) Token: 0x060046DA RID: 18138 RVA: 0x001D3A5C File Offset: 0x001D1C5C
+		// Token: 0x170002A0 RID: 672
+		// (get) Token: 0x06004C21 RID: 19489 RVA: 0x001F343C File Offset: 0x001F163C
 		public FloatRange? VerticalAngle
 		{
 			get
@@ -133,8 +133,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700028A RID: 650
-		// (get) Token: 0x060046DB RID: 18139 RVA: 0x001D3ABC File Offset: 0x001D1CBC
+		// Token: 0x170002A1 RID: 673
+		// (get) Token: 0x06004C22 RID: 19490 RVA: 0x001F349C File Offset: 0x001F169C
 		public bool CantBeBlock
 		{
 			get
@@ -144,8 +144,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700028B RID: 651
-		// (get) Token: 0x060046DC RID: 18140 RVA: 0x001D3AFC File Offset: 0x001D1CFC
+		// Token: 0x170002A2 RID: 674
+		// (get) Token: 0x06004C23 RID: 19491 RVA: 0x001F34DC File Offset: 0x001F16DC
 		public int BlockType
 		{
 			get
@@ -159,8 +159,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700028C RID: 652
-		// (get) Token: 0x060046DD RID: 18141 RVA: 0x001D3B3C File Offset: 0x001D1D3C
+		// Token: 0x170002A3 RID: 675
+		// (get) Token: 0x06004C24 RID: 19492 RVA: 0x001F351C File Offset: 0x001F171C
 		public float WalkSenseRate
 		{
 			get
@@ -174,8 +174,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700028D RID: 653
-		// (get) Token: 0x060046DE RID: 18142 RVA: 0x001D3B80 File Offset: 0x001D1D80
+		// Token: 0x170002A4 RID: 676
+		// (get) Token: 0x06004C25 RID: 19493 RVA: 0x001F3560 File Offset: 0x001F1760
 		public float AirSenseRate
 		{
 			get
@@ -189,8 +189,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x1700028E RID: 654
-		// (get) Token: 0x060046DF RID: 18143 RVA: 0x001D3BC4 File Offset: 0x001D1DC4
+		// Token: 0x170002A5 RID: 677
+		// (get) Token: 0x06004C26 RID: 19494 RVA: 0x001F35A4 File Offset: 0x001F17A4
 		public int SenseTarget
 		{
 			get
@@ -204,7 +204,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x04004AD0 RID: 19152
+		// Token: 0x040050AA RID: 20650
 		private Table __p;
 	}
 }

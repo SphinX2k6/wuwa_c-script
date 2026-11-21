@@ -6,12 +6,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004650 RID: 18000
+	// Token: 0x02003581 RID: 13697
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PopupCaptionToggleItem : UiPanelBase
 	{
-		// Token: 0x0602E77D RID: 190333 RVA: 0x00ABC3E0 File Offset: 0x00ABA5E0
+		// Token: 0x06022EC7 RID: 143047 RVA: 0x009E9A10 File Offset: 0x009E7C10
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -32,7 +32,7 @@ namespace CSharpScript.Game.Ui
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0602E77E RID: 190334 RVA: 0x00ABC486 File Offset: 0x00ABA686
+		// Token: 0x06022EC8 RID: 143048 RVA: 0x009E9AB6 File Offset: 0x009E7CB6
 		private void OnClickToggle(EToggleState state)
 		{
 			Action<EToggleState> onClickToggleCallback = this.OnClickToggleCallback;
@@ -43,41 +43,41 @@ namespace CSharpScript.Game.Ui
 			onClickToggleCallback(state);
 		}
 
-		// Token: 0x0602E77F RID: 190335 RVA: 0x00ABC499 File Offset: 0x00ABA699
+		// Token: 0x06022EC9 RID: 143049 RVA: 0x009E9AC9 File Offset: 0x009E7CC9
 		public void SetClickToggleCallback(Action<EToggleState> callback)
 		{
 			this.OnClickToggleCallback = callback;
 		}
 
-		// Token: 0x0602E780 RID: 190336 RVA: 0x00ABC4A2 File Offset: 0x00ABA6A2
+		// Token: 0x06022ECA RID: 143050 RVA: 0x009E9AD2 File Offset: 0x009E7CD2
 		public void SetNameText(string name)
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), name, Array.Empty<object>());
 		}
 
-		// Token: 0x0602E781 RID: 190337 RVA: 0x00ABC4BB File Offset: 0x00ABA6BB
+		// Token: 0x06022ECB RID: 143051 RVA: 0x009E9AEB File Offset: 0x009E7CEB
 		public EToggleState GetToggleState()
 		{
 			return base.GetExtendToggle(0).ToggleState;
 		}
 
-		// Token: 0x0602E782 RID: 190338 RVA: 0x00ABC4C9 File Offset: 0x00ABA6C9
+		// Token: 0x06022ECC RID: 143052 RVA: 0x009E9AF9 File Offset: 0x009E7CF9
 		public void InitToggleState(EToggleState toggleState)
 		{
 			base.GetExtendToggle(0).SetToggleState(toggleState, false, false, true);
 		}
 
-		// Token: 0x04018E2F RID: 101935
+		// Token: 0x04013488 RID: 78984
 		protected Action<EToggleState> OnClickToggleCallback;
 
-		// Token: 0x0200A8B5 RID: 43189
+		// Token: 0x02009271 RID: 37489
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x040335BA RID: 210362
+			// Token: 0x0402DD50 RID: 187728
 			public const int Toggle = 0;
 
-			// Token: 0x040335BB RID: 210363
+			// Token: 0x0402DD51 RID: 187729
 			public const int Name = 1;
 		}
 	}

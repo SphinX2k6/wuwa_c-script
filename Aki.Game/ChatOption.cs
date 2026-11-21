@@ -9,16 +9,16 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020017A5 RID: 6053
+// Token: 0x02000C5E RID: 3166
 public class ChatOption : UiViewBase
 {
-	// Token: 0x0600B064 RID: 45156 RVA: 0x0027DAC7 File Offset: 0x0027BCC7
+	// Token: 0x0600844C RID: 33868 RVA: 0x0028805F File Offset: 0x0028625F
 	[NullableContext(1)]
 	public ChatOption(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0600B065 RID: 45157 RVA: 0x0027DAD0 File Offset: 0x0027BCD0
+	// Token: 0x0600844D RID: 33869 RVA: 0x00288068 File Offset: 0x00286268
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -49,7 +49,7 @@ public class ChatOption : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600B066 RID: 45158 RVA: 0x0027DC20 File Offset: 0x0027BE20
+	// Token: 0x0600844E RID: 33870 RVA: 0x002881B8 File Offset: 0x002863B8
 	protected override void OnStart()
 	{
 		this.MutePlayerButton = new ChatOptionButton(base.GetItem(2));
@@ -65,21 +65,21 @@ public class ChatOption : UiViewBase
 		this.RefreshMuteText();
 	}
 
-	// Token: 0x0600B067 RID: 45159 RVA: 0x0027DCBE File Offset: 0x0027BEBE
+	// Token: 0x0600844F RID: 33871 RVA: 0x00288256 File Offset: 0x00286456
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.OnAddMutePlayer, new Action<int>(this.OnRefreshMutePlayer));
 		EventSystem.Instance.Add<int>(EEventName.OnRemoveMutePlayer, new Action<int>(this.OnRefreshMutePlayer));
 	}
 
-	// Token: 0x0600B068 RID: 45160 RVA: 0x0027DCF8 File Offset: 0x0027BEF8
+	// Token: 0x06008450 RID: 33872 RVA: 0x00288290 File Offset: 0x00286490
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.OnAddMutePlayer, new Action<int>(this.OnRefreshMutePlayer));
 		EventSystem.Instance.Remove(EEventName.OnRemoveMutePlayer, new Action<int>(this.OnRefreshMutePlayer));
 	}
 
-	// Token: 0x0600B069 RID: 45161 RVA: 0x0027DD34 File Offset: 0x0027BF34
+	// Token: 0x06008451 RID: 33873 RVA: 0x002882CC File Offset: 0x002864CC
 	private void OnRefreshMutePlayer(int playerId)
 	{
 		int? playerId2 = this.PlayerId;
@@ -90,14 +90,14 @@ public class ChatOption : UiViewBase
 		this.RefreshMuteText();
 	}
 
-	// Token: 0x0600B06A RID: 45162 RVA: 0x0027DD63 File Offset: 0x0027BF63
+	// Token: 0x06008452 RID: 33874 RVA: 0x002882FB File Offset: 0x002864FB
 	protected override void OnBeforeDestroy()
 	{
 		this.PlayerId = null;
 		this.FriendData = null;
 	}
 
-	// Token: 0x0600B06B RID: 45163 RVA: 0x0027DD78 File Offset: 0x0027BF78
+	// Token: 0x06008453 RID: 33875 RVA: 0x00288310 File Offset: 0x00286510
 	private void RefreshMuteText()
 	{
 		if (ChatModel.Instance.IsInMute(this.PlayerId.Value))
@@ -110,7 +110,7 @@ public class ChatOption : UiViewBase
 		this.MutePlayerButton.RefreshButtonText(localTextNew2);
 	}
 
-	// Token: 0x0600B06C RID: 45164 RVA: 0x0027DDE4 File Offset: 0x0027BFE4
+	// Token: 0x06008454 RID: 33876 RVA: 0x0028837C File Offset: 0x0028657C
 	private void OnClickMutePlayerButton()
 	{
 		if (ChatModel.Instance.IsInMute(this.PlayerId.Value))
@@ -124,7 +124,7 @@ public class ChatOption : UiViewBase
 		UiManager.Instance.CloseView(EUiViewName.ChatOption, null);
 	}
 
-	// Token: 0x0600B06D RID: 45165 RVA: 0x0027DE48 File Offset: 0x0027C048
+	// Token: 0x06008455 RID: 33877 RVA: 0x002883E0 File Offset: 0x002865E0
 	private void OnClickJoinBlackListButton()
 	{
 		ConfirmBoxDataNew confirmBoxDataNew = new ConfirmBoxDataNew(EConfirmBoxConfigId.BlockFriend);
@@ -140,7 +140,7 @@ public class ChatOption : UiViewBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x0600B06E RID: 45166 RVA: 0x0027DE9C File Offset: 0x0027C09C
+	// Token: 0x06008456 RID: 33878 RVA: 0x00288434 File Offset: 0x00286634
 	private void OnClickReportButton()
 	{
 		UiManager.Instance.CloseView(EUiViewName.ChatOption, null);
@@ -148,13 +148,13 @@ public class ChatOption : UiViewBase
 		ReportController.Instance.OpenReportView(friendById, EReportSourceType.PrivateRoom);
 	}
 
-	// Token: 0x0600B06F RID: 45167 RVA: 0x0027DEDB File Offset: 0x0027C0DB
+	// Token: 0x06008457 RID: 33879 RVA: 0x00288473 File Offset: 0x00286673
 	private void OnClickPlayerInformationButton()
 	{
 		this.CheckOpenPersonalRootView().Forget();
 	}
 
-	// Token: 0x0600B070 RID: 45168 RVA: 0x0027DEE8 File Offset: 0x0027C0E8
+	// Token: 0x06008458 RID: 33880 RVA: 0x00288480 File Offset: 0x00286680
 	private UniTask CheckOpenPersonalRootView()
 	{
 		ChatOption.<CheckOpenPersonalRootView>d__16 <CheckOpenPersonalRootView>d__;
@@ -165,33 +165,33 @@ public class ChatOption : UiViewBase
 		return <CheckOpenPersonalRootView>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x04005020 RID: 20512
+	// Token: 0x040050CA RID: 20682
 	private int? PlayerId;
 
-	// Token: 0x04005021 RID: 20513
+	// Token: 0x040050CB RID: 20683
 	[Nullable(2)]
 	private FriendData FriendData;
 
-	// Token: 0x04005022 RID: 20514
+	// Token: 0x040050CC RID: 20684
 	[Nullable(2)]
 	private ChatOptionButton MutePlayerButton;
 
-	// Token: 0x02007DB5 RID: 32181
+	// Token: 0x02006F3B RID: 28475
 	private class EChildType
 	{
-		// Token: 0x04029278 RID: 168568
+		// Token: 0x040245A3 RID: 148899
 		public const int TitleText = 0;
 
-		// Token: 0x04029279 RID: 168569
+		// Token: 0x040245A4 RID: 148900
 		public const int PlayerInformationButton = 1;
 
-		// Token: 0x0402927A RID: 168570
+		// Token: 0x040245A5 RID: 148901
 		public const int MutePlayerButton = 2;
 
-		// Token: 0x0402927B RID: 168571
+		// Token: 0x040245A6 RID: 148902
 		public const int JoinBlackListButton = 3;
 
-		// Token: 0x0402927C RID: 168572
+		// Token: 0x040245A7 RID: 148903
 		public const int ReportButton = 4;
 	}
 }

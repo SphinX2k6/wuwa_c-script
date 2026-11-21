@@ -8,18 +8,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02002B54 RID: 11092
+// Token: 0x020020D0 RID: 8400
 [NullableContext(2)]
 [Nullable(0)]
 public class SurvivorsTalentTreeView : UiViewBase
 {
-	// Token: 0x06017010 RID: 94224 RVA: 0x005D73E7 File Offset: 0x005D55E7
+	// Token: 0x06014A41 RID: 84545 RVA: 0x00603F53 File Offset: 0x00602153
 	[NullableContext(1)]
 	public SurvivorsTalentTreeView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06017011 RID: 94225 RVA: 0x005D73F0 File Offset: 0x005D55F0
+	// Token: 0x06014A42 RID: 84546 RVA: 0x00603F5C File Offset: 0x0060215C
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,7 +32,7 @@ public class SurvivorsTalentTreeView : UiViewBase
 		};
 	}
 
-	// Token: 0x06017012 RID: 94226 RVA: 0x005D7478 File Offset: 0x005D5678
+	// Token: 0x06014A43 RID: 84547 RVA: 0x00603FE4 File Offset: 0x006021E4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		SurvivorsTalentTreeView.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -43,19 +43,19 @@ public class SurvivorsTalentTreeView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06017013 RID: 94227 RVA: 0x005D74BB File Offset: 0x005D56BB
+	// Token: 0x06014A44 RID: 84548 RVA: 0x00604027 File Offset: 0x00602227
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.SurvivorsRogueTalentNodeUpdate, new Action<int>(this.OnTalentNodeUpdate));
 	}
 
-	// Token: 0x06017014 RID: 94228 RVA: 0x005D74D9 File Offset: 0x005D56D9
+	// Token: 0x06014A45 RID: 84549 RVA: 0x00604045 File Offset: 0x00602245
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.SurvivorsRogueTalentNodeUpdate, new Action<int>(this.OnTalentNodeUpdate));
 	}
 
-	// Token: 0x06017015 RID: 94229 RVA: 0x005D74F8 File Offset: 0x005D56F8
+	// Token: 0x06014A46 RID: 84550 RVA: 0x00604064 File Offset: 0x00602264
 	private void OnTalentNodeUpdate(int selectNodeId)
 	{
 		SurvivorsTalentTreeView.<>c__DisplayClass13_0 CS$<>8__locals1 = new SurvivorsTalentTreeView.<>c__DisplayClass13_0();
@@ -72,7 +72,7 @@ public class SurvivorsTalentTreeView : UiViewBase
 		}, null).Run();
 	}
 
-	// Token: 0x06017016 RID: 94230 RVA: 0x005D7538 File Offset: 0x005D5738
+	// Token: 0x06014A47 RID: 84551 RVA: 0x006040A4 File Offset: 0x006022A4
 	private UniTask OnNodeUpdateAsync(int selectNodeId)
 	{
 		SurvivorsTalentTreeView.<OnNodeUpdateAsync>d__14 <OnNodeUpdateAsync>d__;
@@ -84,13 +84,13 @@ public class SurvivorsTalentTreeView : UiViewBase
 		return <OnNodeUpdateAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06017017 RID: 94231 RVA: 0x005D7583 File Offset: 0x005D5783
+	// Token: 0x06014A48 RID: 84552 RVA: 0x006040EF File Offset: 0x006022EF
 	protected override void OnBeforeShow()
 	{
 		SurvivorsActivityController.Instance.CheckIsActivityClose();
 	}
 
-	// Token: 0x06017018 RID: 94232 RVA: 0x005D7590 File Offset: 0x005D5790
+	// Token: 0x06014A49 RID: 84553 RVA: 0x006040FC File Offset: 0x006022FC
 	private void OnAfterRefreshOneNode(SurvivorsTalentTreeSkillNodeItem nodeItem)
 	{
 		SurvivorsActivityData activityData = SurvivorsRogueModel.Instance.ActivityData;
@@ -121,7 +121,7 @@ public class SurvivorsTalentTreeView : UiViewBase
 		}
 	}
 
-	// Token: 0x06017019 RID: 94233 RVA: 0x005D765C File Offset: 0x005D585C
+	// Token: 0x06014A4A RID: 84554 RVA: 0x006041C8 File Offset: 0x006023C8
 	[NullableContext(1)]
 	private void OnClickNode(SurvivorsTalentNode node, UUIExtendToggle toggle)
 	{
@@ -148,7 +148,7 @@ public class SurvivorsTalentTreeView : UiViewBase
 		}, null).Run();
 	}
 
-	// Token: 0x0601701A RID: 94234 RVA: 0x005D7714 File Offset: 0x005D5914
+	// Token: 0x06014A4B RID: 84555 RVA: 0x00604280 File Offset: 0x00602480
 	[NullableContext(1)]
 	private SurvivorsTalentTreeAreaItem InitAreaItem()
 	{
@@ -158,42 +158,42 @@ public class SurvivorsTalentTreeView : UiViewBase
 		};
 	}
 
-	// Token: 0x0601701B RID: 94235 RVA: 0x005D7730 File Offset: 0x005D5930
+	// Token: 0x06014A4C RID: 84556 RVA: 0x0060429C File Offset: 0x0060249C
 	private void OnClickHelpBtn()
 	{
 		int helpId = SurvivorsRogueModel.Instance.GetRogueActivityConfig().Value.HelpId;
 		HelpController.Instance.OpenHelpById(helpId);
 	}
 
-	// Token: 0x0601701C RID: 94236 RVA: 0x005D7763 File Offset: 0x005D5963
+	// Token: 0x06014A4D RID: 84557 RVA: 0x006042CF File Offset: 0x006024CF
 	private void OnClickCloseBtn()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x0400ABC6 RID: 43974
+	// Token: 0x0400AFCC RID: 45004
 	private const int TALENT_TREE_COST_ITEM_ID = 80400003;
 
-	// Token: 0x0400ABC7 RID: 43975
+	// Token: 0x0400AFCD RID: 45005
 	private SurvivorsTalentTreeSkillNodeItem CurSelectNodeItem;
 
-	// Token: 0x0400ABC8 RID: 43976
+	// Token: 0x0400AFCE RID: 45006
 	private SurvivorsTalentTreeSkillNodeItem FirstNodeItem;
 
-	// Token: 0x0400ABC9 RID: 43977
+	// Token: 0x0400AFCF RID: 45007
 	[Nullable(1)]
 	private GenericScrollViewNew<SurvivorsTalentTreeAreaItem, SurvivorsTalentAreaData> AreaScroll;
 
-	// Token: 0x0400ABCA RID: 43978
+	// Token: 0x0400AFD0 RID: 45008
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x0400ABCB RID: 43979
+	// Token: 0x0400AFD1 RID: 45009
 	private SurvivorsTalentTreeSkillInfoPanel SkillInfoPanel;
 
-	// Token: 0x0400ABCC RID: 43980
+	// Token: 0x0400AFD2 RID: 45010
 	private UUIExtendToggle CurrentSelectToggle;
 
-	// Token: 0x0400ABCD RID: 43981
+	// Token: 0x0400AFD3 RID: 45011
 	[Nullable(1)]
 	private LevelSequencePlayer SeqPlayer;
 }

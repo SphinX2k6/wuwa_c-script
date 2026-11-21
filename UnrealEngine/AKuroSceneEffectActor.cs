@@ -6,32 +6,31 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001BA5 RID: 7077
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020004DE RID: 1246
 	[UnrealObjectPath("/Script/KuroRenderingRuntimeBPPlugin.KuroSceneEffectActor")]
 	[UnrealStructLayout(1104, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1104)]
 	public class AKuroSceneEffectActor : AKuroEffectActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0601B105 RID: 110853 RVA: 0x0027E05E File Offset: 0x0027C25E
+		// Token: 0x060075CB RID: 30155 RVA: 0x000AC319 File Offset: 0x000AA519
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return AKuroSceneEffectActor._ClassPtr;
 		}
 
-		// Token: 0x0601B106 RID: 110854 RVA: 0x0027E06C File Offset: 0x0027C26C
+		// Token: 0x060075CC RID: 30156 RVA: 0x000AC328 File Offset: 0x000AA528
 		public AKuroSceneEffectActor() : this(BuiltinUtils.AllocNativeUObject(AKuroSceneEffectActor.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601B107 RID: 110855 RVA: 0x0027E094 File Offset: 0x0027C294
+		// Token: 0x060075CD RID: 30157 RVA: 0x000AC350 File Offset: 0x000AA550
+		[NullableContext(1)]
 		public AKuroSceneEffectActor(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(AKuroSceneEffectActor.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17006C79 RID: 27769
-		// (get) Token: 0x0601B108 RID: 110856 RVA: 0x0027E0C7 File Offset: 0x0027C2C7
-		// (set) Token: 0x0601B109 RID: 110857 RVA: 0x0027E0D7 File Offset: 0x0027C2D7
+		// Token: 0x170016B8 RID: 5816
+		// (get) Token: 0x060075CE RID: 30158 RVA: 0x000AC383 File Offset: 0x000AA583
+		// (set) Token: 0x060075CF RID: 30159 RVA: 0x000AC393 File Offset: 0x000AA593
 		public unsafe bool bIsSceneEffectHidden
 		{
 			get
@@ -44,85 +43,58 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17006C7A RID: 27770
-		// (get) Token: 0x0601B10A RID: 110858 RVA: 0x0027E0E8 File Offset: 0x0027C2E8
-		// (set) Token: 0x0601B10B RID: 110859 RVA: 0x0027E121 File Offset: 0x0027C321
-		public FNiagaraDiKuroRenderingParameters NiagaraDiKuroRenderingParameters
-		{
-			get
-			{
-				base.FastCheckIsValid();
-				FNiagaraDiKuroRenderingParameters result;
-				if ((result = this._NiagaraDiKuroRenderingParameters) == null)
-				{
-					result = (this._NiagaraDiKuroRenderingParameters = new FNiagaraDiKuroRenderingParameters(base.NativePtr + (IntPtr)AKuroSceneEffectActor.__PropertyOffset_NiagaraDiKuroRenderingParameters, this));
-				}
-				return result;
-			}
-			set
-			{
-				UnrealReflectionUtils.CopyNativeStruct(FNiagaraDiKuroRenderingParameters.StaticStruct(), base.NativePtr + (IntPtr)AKuroSceneEffectActor.__PropertyOffset_NiagaraDiKuroRenderingParameters, value.NativePtr, 1, false);
-			}
-		}
-
-		// Token: 0x0601B10C RID: 110860 RVA: 0x0027E142 File Offset: 0x0027C342
+		// Token: 0x060075D0 RID: 30160 RVA: 0x000AC3A4 File Offset: 0x000AA5A4
 		public virtual void OnReceiveShowSceneEffectActor()
 		{
 			AKuroSceneEffectActor.__OnReceiveShowSceneEffectActor_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601B10D RID: 110861 RVA: 0x0027E14F File Offset: 0x0027C34F
+		// Token: 0x060075D1 RID: 30161 RVA: 0x000AC3B1 File Offset: 0x000AA5B1
 		public virtual void OnReceiveHideSceneEffectActor()
 		{
 			AKuroSceneEffectActor.__OnReceiveHideSceneEffectActor_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601B10E RID: 110862 RVA: 0x0027E15C File Offset: 0x0027C35C
+		// Token: 0x060075D2 RID: 30162 RVA: 0x000AC3BE File Offset: 0x000AA5BE
 		public bool GetIsWorldPartitionActor()
 		{
 			return AKuroSceneEffectActor.__GetIsWorldPartitionActor_Internal(base.NativePtr);
 		}
 
-		// Token: 0x0601B10F RID: 110863
+		// Token: 0x060075D3 RID: 30163
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnReceiveShowSceneEffectActor_Internal(IntPtr @this);
 
-		// Token: 0x0601B110 RID: 110864
+		// Token: 0x060075D4 RID: 30164
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __OnReceiveHideSceneEffectActor_Internal(IntPtr @this);
 
-		// Token: 0x0601B111 RID: 110865
+		// Token: 0x060075D5 RID: 30165
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __GetIsWorldPartitionActor_Internal(IntPtr @this);
 
-		// Token: 0x0601B112 RID: 110866 RVA: 0x0027E169 File Offset: 0x0027C369
+		// Token: 0x060075D6 RID: 30166 RVA: 0x000AC3CB File Offset: 0x000AA5CB
 		static AKuroSceneEffectActor()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroRenderingRuntimeBPPlugin.KuroSceneEffectActor");
 		}
 
-		// Token: 0x0601B113 RID: 110867 RVA: 0x0027E177 File Offset: 0x0027C377
+		// Token: 0x060075D7 RID: 30167 RVA: 0x000AC3D9 File Offset: 0x000AA5D9
 		protected AKuroSceneEffectActor(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400E926 RID: 59686
+		// Token: 0x040031B2 RID: 12722
+		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroRenderingRuntimeBPPlugin.KuroSceneEffectActor";
 
-		// Token: 0x0400E927 RID: 59687
+		// Token: 0x040031B3 RID: 12723
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400E928 RID: 59688
+		// Token: 0x040031B4 RID: 12724
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0400E929 RID: 59689
+		// Token: 0x040031B5 RID: 12725
 		internal static int __PropertyOffset_bIsSceneEffectHidden;
-
-		// Token: 0x0400E92A RID: 59690
-		internal static int __PropertyOffset_NiagaraDiKuroRenderingParameters;
-
-		// Token: 0x0400E92B RID: 59691
-		[Nullable(2)]
-		private FNiagaraDiKuroRenderingParameters _NiagaraDiKuroRenderingParameters;
 	}
 }

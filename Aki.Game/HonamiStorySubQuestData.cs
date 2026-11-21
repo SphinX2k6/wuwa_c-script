@@ -8,19 +8,19 @@ using CSharpScript.Game.Module.HonamiStory;
 using CSharpScript.Game.Module.Map.Controller;
 using CSharpScript.Game.Module.Map.MapDefine;
 
-// Token: 0x02001E76 RID: 7798
+// Token: 0x02001338 RID: 4920
 [NullableContext(1)]
 [Nullable(0)]
 public class HonamiStorySubQuestData : HonamiStoryQuestDataBase
 {
-	// Token: 0x0600EDAE RID: 60846 RVA: 0x00389AD5 File Offset: 0x00387CD5
+	// Token: 0x0600C1CD RID: 49613 RVA: 0x003956C5 File Offset: 0x003938C5
 	public HonamiStorySubQuestData(int areaTaskId)
 	{
 		this.AreaTaskId = areaTaskId;
 		this.TaskType = EHonamiStoryQuestType.Sub;
 	}
 
-	// Token: 0x0600EDAF RID: 60847 RVA: 0x00389AFC File Offset: 0x00387CFC
+	// Token: 0x0600C1CE RID: 49614 RVA: 0x003956EC File Offset: 0x003938EC
 	public unsafe void UpdateData(ConditionTask data)
 	{
 		this.StatusInternal = TaskStateResolver.TaskState[(ActivityTaskState)data.Status];
@@ -38,8 +38,8 @@ public class HonamiStorySubQuestData : HonamiStoryQuestDataBase
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray4<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 4));
 	}
 
-	// Token: 0x170012BF RID: 4799
-	// (get) Token: 0x0600EDB0 RID: 60848 RVA: 0x00389BE5 File Offset: 0x00387DE5
+	// Token: 0x170012E9 RID: 4841
+	// (get) Token: 0x0600C1CF RID: 49615 RVA: 0x003957D5 File Offset: 0x003939D5
 	public HonamiStoryAreaTask? Config
 	{
 		get
@@ -48,38 +48,38 @@ public class HonamiStorySubQuestData : HonamiStoryQuestDataBase
 		}
 	}
 
-	// Token: 0x0600EDB1 RID: 60849 RVA: 0x00389BF8 File Offset: 0x00387DF8
+	// Token: 0x0600C1D0 RID: 49616 RVA: 0x003957E8 File Offset: 0x003939E8
 	public override string GetNameKey()
 	{
 		return this.Config.Value.Name;
 	}
 
-	// Token: 0x0600EDB2 RID: 60850 RVA: 0x00389C1C File Offset: 0x00387E1C
+	// Token: 0x0600C1D1 RID: 49617 RVA: 0x0039580C File Offset: 0x00393A0C
 	public override string GetDesc()
 	{
 		string desc = this.Config.Value.Desc;
 		return ConfigMultiTextLang.GetLocalTextNew(desc, null) ?? desc;
 	}
 
-	// Token: 0x0600EDB3 RID: 60851 RVA: 0x00389C4C File Offset: 0x00387E4C
+	// Token: 0x0600C1D2 RID: 49618 RVA: 0x0039583C File Offset: 0x00393A3C
 	public override int GetRewardId()
 	{
 		return this.Config.Value.DropId;
 	}
 
-	// Token: 0x0600EDB4 RID: 60852 RVA: 0x00389C6F File Offset: 0x00387E6F
+	// Token: 0x0600C1D3 RID: 49619 RVA: 0x0039585F File Offset: 0x00393A5F
 	public override bool IsFinished()
 	{
 		return this.StatusInternal == EActivityTaskState.FinishedAndClaimed;
 	}
 
-	// Token: 0x0600EDB5 RID: 60853 RVA: 0x00389C7A File Offset: 0x00387E7A
+	// Token: 0x0600C1D4 RID: 49620 RVA: 0x0039586A File Offset: 0x00393A6A
 	public override bool CanMapTrack()
 	{
 		return base.IsInDungeon;
 	}
 
-	// Token: 0x0600EDB6 RID: 60854 RVA: 0x00389C84 File Offset: 0x00387E84
+	// Token: 0x0600C1D5 RID: 49621 RVA: 0x00395874 File Offset: 0x00393A74
 	[NullableContext(2)]
 	public override global::LevelPlayInfo GetLevelPlayInfo()
 	{
@@ -95,7 +95,7 @@ public class HonamiStorySubQuestData : HonamiStoryQuestDataBase
 		return LevelPlayModel.Instance.GetLevelPlayInfo(btid);
 	}
 
-	// Token: 0x0600EDB7 RID: 60855 RVA: 0x00389CC4 File Offset: 0x00387EC4
+	// Token: 0x0600C1D6 RID: 49622 RVA: 0x003958B4 File Offset: 0x00393AB4
 	public override bool MapTrack(bool isTrack)
 	{
 		if (!base.IsInDungeon)
@@ -140,7 +140,7 @@ public class HonamiStorySubQuestData : HonamiStoryQuestDataBase
 		return true;
 	}
 
-	// Token: 0x0600EDB8 RID: 60856 RVA: 0x00389D88 File Offset: 0x00387F88
+	// Token: 0x0600C1D7 RID: 49623 RVA: 0x00395978 File Offset: 0x00393B78
 	[NullableContext(2)]
 	public override BehaviorTreeViewShowData GetTreeShowData()
 	{
@@ -162,15 +162,15 @@ public class HonamiStorySubQuestData : HonamiStoryQuestDataBase
 		return blackBoard.CreateShowData(true);
 	}
 
-	// Token: 0x04006E44 RID: 28228
+	// Token: 0x04006F25 RID: 28453
 	private readonly int AreaTaskId;
 
-	// Token: 0x04006E45 RID: 28229
+	// Token: 0x04006F26 RID: 28454
 	private EActivityTaskState StatusInternal = EActivityTaskState.Active;
 
-	// Token: 0x04006E46 RID: 28230
+	// Token: 0x04006F27 RID: 28455
 	private int Current;
 
-	// Token: 0x04006E47 RID: 28231
+	// Token: 0x04006F28 RID: 28456
 	private int Target = 1;
 }

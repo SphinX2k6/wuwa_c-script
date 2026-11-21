@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020045B1 RID: 17841
+	// Token: 0x02004A19 RID: 18969
 	public struct ISingleScoreZone : IFlatbufferObject
 	{
-		// Token: 0x17007ECE RID: 32462
-		// (get) Token: 0x0601AF95 RID: 110485 RVA: 0x003D8C2C File Offset: 0x003D6E2C
+		// Token: 0x1700850F RID: 34063
+		// (get) Token: 0x0601C76A RID: 116586 RVA: 0x00404EC8 File Offset: 0x004030C8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601AF96 RID: 110486 RVA: 0x003D8C39 File Offset: 0x003D6E39
+		// Token: 0x0601C76B RID: 116587 RVA: 0x00404ED5 File Offset: 0x004030D5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601AF97 RID: 110487 RVA: 0x003D8C40 File Offset: 0x003D6E40
+		// Token: 0x0601C76C RID: 116588 RVA: 0x00404EDC File Offset: 0x004030DC
 		public static ISingleScoreZone GetRootAsISingleScoreZone(ByteBuffer _bb)
 		{
 			return ISingleScoreZone.GetRootAsISingleScoreZone(_bb, default(ISingleScoreZone));
 		}
 
-		// Token: 0x0601AF98 RID: 110488 RVA: 0x003D8C5C File Offset: 0x003D6E5C
+		// Token: 0x0601C76D RID: 116589 RVA: 0x00404EF8 File Offset: 0x004030F8
 		public static ISingleScoreZone GetRootAsISingleScoreZone(ByteBuffer _bb, ISingleScoreZone obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601AF99 RID: 110489 RVA: 0x003D8C79 File Offset: 0x003D6E79
+		// Token: 0x0601C76E RID: 116590 RVA: 0x00404F15 File Offset: 0x00403115
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601AF9A RID: 110490 RVA: 0x003D8C88 File Offset: 0x003D6E88
+		// Token: 0x0601C76F RID: 116591 RVA: 0x00404F24 File Offset: 0x00403124
 		public ISingleScoreZone __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17007ECF RID: 32463
-		// (get) Token: 0x0601AF9B RID: 110491 RVA: 0x003D8C98 File Offset: 0x003D6E98
+		// Token: 0x17008510 RID: 34064
+		// (get) Token: 0x0601C770 RID: 116592 RVA: 0x00404F34 File Offset: 0x00403134
 		public EDartboardZoneType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007ED0 RID: 32464
-		// (get) Token: 0x0601AF9C RID: 110492 RVA: 0x003D8CD4 File Offset: 0x003D6ED4
+		// Token: 0x17008511 RID: 34065
+		// (get) Token: 0x0601C771 RID: 116593 RVA: 0x00404F70 File Offset: 0x00403170
 		public int Score
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x17007ED1 RID: 32465
-		// (get) Token: 0x0601AF9D RID: 110493 RVA: 0x003D8D10 File Offset: 0x003D6F10
+		// Token: 0x17008512 RID: 34066
+		// (get) Token: 0x0601C772 RID: 116594 RVA: 0x00404FAC File Offset: 0x004031AC
 		public byte NullMask
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			}
 		}
 
-		// Token: 0x0601AF9E RID: 110494 RVA: 0x003D8D4C File Offset: 0x003D6F4C
+		// Token: 0x0601C773 RID: 116595 RVA: 0x00404FE8 File Offset: 0x004031E8
 		public static Offset<ISingleScoreZone> CreateISingleScoreZone(FlatBufferBuilder builder, EDartboardZoneType Type = EDartboardZoneType.CenterBull, int Score = 0, byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return ISingleScoreZone.EndISingleScoreZone(builder);
 		}
 
-		// Token: 0x0601AF9F RID: 110495 RVA: 0x003D8D70 File Offset: 0x003D6F70
+		// Token: 0x0601C774 RID: 116596 RVA: 0x0040500C File Offset: 0x0040320C
 		public static void StartISingleScoreZone(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601AFA0 RID: 110496 RVA: 0x003D8D79 File Offset: 0x003D6F79
+		// Token: 0x0601C775 RID: 116597 RVA: 0x00405015 File Offset: 0x00403215
 		public static void AddType(FlatBufferBuilder builder, EDartboardZoneType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601AFA1 RID: 110497 RVA: 0x003D8D84 File Offset: 0x003D6F84
+		// Token: 0x0601C776 RID: 116598 RVA: 0x00405020 File Offset: 0x00403220
 		public static void AddScore(FlatBufferBuilder builder, int score)
 		{
 			builder.AddInt(1, score, 0);
 		}
 
-		// Token: 0x0601AFA2 RID: 110498 RVA: 0x003D8D8F File Offset: 0x003D6F8F
+		// Token: 0x0601C777 RID: 116599 RVA: 0x0040502B File Offset: 0x0040322B
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x0601AFA3 RID: 110499 RVA: 0x003D8D9A File Offset: 0x003D6F9A
+		// Token: 0x0601C778 RID: 116600 RVA: 0x00405036 File Offset: 0x00403236
 		public static Offset<ISingleScoreZone> EndISingleScoreZone(FlatBufferBuilder builder)
 		{
 			return new Offset<ISingleScoreZone>(builder.EndTable());
 		}
 
-		// Token: 0x0601AFA4 RID: 110500 RVA: 0x003D8DA8 File Offset: 0x003D6FA8
+		// Token: 0x0601C779 RID: 116601 RVA: 0x00405044 File Offset: 0x00403244
 		public ISingleScoreZoneT UnPack()
 		{
 			ISingleScoreZoneT singleScoreZoneT = new ISingleScoreZoneT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return singleScoreZoneT;
 		}
 
-		// Token: 0x0601AFA5 RID: 110501 RVA: 0x003D8DC3 File Offset: 0x003D6FC3
+		// Token: 0x0601C77A RID: 116602 RVA: 0x0040505F File Offset: 0x0040325F
 		public void UnPackTo(ISingleScoreZoneT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0601AFA6 RID: 110502 RVA: 0x003D8DEC File Offset: 0x003D6FEC
+		// Token: 0x0601C77B RID: 116603 RVA: 0x00405088 File Offset: 0x00403288
 		public static Offset<ISingleScoreZone> Pack(FlatBufferBuilder builder, ISingleScoreZoneT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 			return ISingleScoreZone.CreateISingleScoreZone(builder, _o.Type, _o.Score, _o.NullMask);
 		}
 
-		// Token: 0x0400C67A RID: 50810
+		// Token: 0x0400D0A9 RID: 53417
 		private Table __p;
 	}
 }

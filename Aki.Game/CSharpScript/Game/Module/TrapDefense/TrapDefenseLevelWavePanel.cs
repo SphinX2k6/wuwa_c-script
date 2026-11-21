@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004AB6 RID: 19126
+	// Token: 0x02003A5E RID: 14942
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseLevelWavePanel : UiPanelBase
 	{
-		// Token: 0x060318E1 RID: 202977 RVA: 0x00B7DC24 File Offset: 0x00B7BE24
+		// Token: 0x06026671 RID: 157297 RVA: 0x00AC1BD8 File Offset: 0x00ABFDD8
 		public UniTask Init(UUIItem item)
 		{
 			TrapDefenseLevelWavePanel.<Init>d__2 <Init>d__;
@@ -26,7 +26,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <Init>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060318E2 RID: 202978 RVA: 0x00B7DC70 File Offset: 0x00B7BE70
+		// Token: 0x06026672 RID: 157298 RVA: 0x00AC1C24 File Offset: 0x00ABFE24
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -42,7 +42,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060318E3 RID: 202979 RVA: 0x00B7DCFC File Offset: 0x00B7BEFC
+		// Token: 0x06026673 RID: 157299 RVA: 0x00AC1CB0 File Offset: 0x00ABFEB0
 		public void UpdateData(TrapDefenseLevelData data)
 		{
 			this.SetActive(data.IsEndless);
@@ -73,20 +73,20 @@ namespace CSharpScript.Game.Module.TrapDefense
 			}
 		}
 
-		// Token: 0x0401A7B2 RID: 108466
+		// Token: 0x04015104 RID: 86276
 		public TrapDefenseLevelData LevelData;
 
-		// Token: 0x0200AC1C RID: 44060
+		// Token: 0x0200963C RID: 38460
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x040344C2 RID: 214210
+			// Token: 0x0402EE73 RID: 192115
 			public const int ItemEmpty = 0;
 
-			// Token: 0x040344C3 RID: 214211
+			// Token: 0x0402EE74 RID: 192116
 			public const int ItemWaveRoot = 1;
 
-			// Token: 0x040344C4 RID: 214212
+			// Token: 0x0402EE75 RID: 192117
 			public const int ArtTextWave = 2;
 		}
 	}

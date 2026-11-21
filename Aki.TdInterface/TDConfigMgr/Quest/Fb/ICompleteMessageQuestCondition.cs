@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001361 RID: 4961
+	// Token: 0x020014B1 RID: 5297
 	public class ICompleteMessageQuestCondition : IPhoneMessageProgressTypeBase
 	{
-		// Token: 0x0600718F RID: 29071 RVA: 0x00111A04 File Offset: 0x0010FC04
-		[NullableContext(1)]
+		// Token: 0x0600782F RID: 30767 RVA: 0x0011FF70 File Offset: 0x0011E170
 		public static ICompleteMessageQuestCondition Create(ICompleteMessageQuestCondition? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170024A0 RID: 9376
-		// (get) Token: 0x06007190 RID: 29072 RVA: 0x00111A23 File Offset: 0x0010FC23
+		// Token: 0x1700266F RID: 9839
+		// (get) Token: 0x06007830 RID: 30768 RVA: 0x0011FF8F File Offset: 0x0011E18F
 		public override EPhoneMessageProgressType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x0400419D RID: 16797
+		// Token: 0x04004519 RID: 17689
 		private ICompleteMessageQuestCondition Instance;
 	}
 }

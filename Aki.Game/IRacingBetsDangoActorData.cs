@@ -1,42 +1,42 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020026F7 RID: 9975
+// Token: 0x02001BE2 RID: 7138
 [NullableContext(1)]
 public interface IRacingBetsDangoActorData
 {
-	// Token: 0x17001AAC RID: 6828
-	// (get) Token: 0x06014731 RID: 83761
-	// (set) Token: 0x06014732 RID: 83762
+	// Token: 0x17001AE4 RID: 6884
+	// (get) Token: 0x06011C13 RID: 72723
+	// (set) Token: 0x06011C14 RID: 72724
 	EUiModelUseWay UiModelUseWay { get; set; }
 
-	// Token: 0x17001AAD RID: 6829
-	// (get) Token: 0x06014733 RID: 83763
-	// (set) Token: 0x06014734 RID: 83764
+	// Token: 0x17001AE5 RID: 6885
+	// (get) Token: 0x06011C15 RID: 72725
+	// (set) Token: 0x06011C16 RID: 72726
 	int DangoId { get; set; }
 
-	// Token: 0x17001AAE RID: 6830
-	// (get) Token: 0x06014735 RID: 83765
-	// (set) Token: 0x06014736 RID: 83766
+	// Token: 0x17001AE6 RID: 6886
+	// (get) Token: 0x06011C17 RID: 72727
+	// (set) Token: 0x06011C18 RID: 72728
 	int Odds { get; set; }
 
-	// Token: 0x17001AAF RID: 6831
-	// (get) Token: 0x06014737 RID: 83767
-	// (set) Token: 0x06014738 RID: 83768
+	// Token: 0x17001AE7 RID: 6887
+	// (get) Token: 0x06011C19 RID: 72729
+	// (set) Token: 0x06011C1A RID: 72730
 	string DangoPointCase { get; set; }
 
-	// Token: 0x17001AB0 RID: 6832
-	// (get) Token: 0x06014739 RID: 83769
-	// (set) Token: 0x0601473A RID: 83770
+	// Token: 0x17001AE8 RID: 6888
+	// (get) Token: 0x06011C1B RID: 72731
+	// (set) Token: 0x06011C1C RID: 72732
 	string DangoCamera { get; set; }
 
-	// Token: 0x17001AB1 RID: 6833
-	// (get) Token: 0x0601473B RID: 83771
-	// (set) Token: 0x0601473C RID: 83772
+	// Token: 0x17001AE9 RID: 6889
+	// (get) Token: 0x06011C1D RID: 72733
+	// (set) Token: 0x06011C1E RID: 72734
 	float DangoOffset { get; set; }
 
-	// Token: 0x17001AB2 RID: 6834
-	// (get) Token: 0x0601473D RID: 83773
-	// (set) Token: 0x0601473E RID: 83774
+	// Token: 0x17001AEA RID: 6890
+	// (get) Token: 0x06011C1F RID: 72735
+	// (set) Token: 0x06011C20 RID: 72736
 	bool IsAbuDango { get; set; }
 }

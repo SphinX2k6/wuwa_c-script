@@ -8,18 +8,18 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.GameMainView.CommonChildPanel
 {
-	// Token: 0x02005A16 RID: 23062
+	// Token: 0x020049F2 RID: 18930
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class JoystickPanel : BattleChildViewPanel
 	{
-		// Token: 0x0603A7AE RID: 239534 RVA: 0x00DEAC12 File Offset: 0x00DE8E12
+		// Token: 0x0602F6F7 RID: 194295 RVA: 0x00D3B1AA File Offset: 0x00D393AA
 		public override void InitializeTemp()
 		{
 			this.CurrentEntity = SceneTeamModel.Instance.GetCurrentEntity;
 		}
 
-		// Token: 0x0603A7AF RID: 239535 RVA: 0x00DEAC24 File Offset: 0x00DE8E24
+		// Token: 0x0602F6F8 RID: 194296 RVA: 0x00D3B1BC File Offset: 0x00D393BC
 		public override UniTask InitializeAsync()
 		{
 			JoystickPanel.<InitializeAsync>d__5 <InitializeAsync>d__;
@@ -30,7 +30,7 @@ namespace CSharpScript.Game.Module.GameMainView.CommonChildPanel
 			return <InitializeAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A7B0 RID: 239536 RVA: 0x00DEAC67 File Offset: 0x00DE8E67
+		// Token: 0x0602F6F9 RID: 194297 RVA: 0x00D3B1FF File Offset: 0x00D393FF
 		protected override void OnShowBattleChildViewPanel(bool isFirst)
 		{
 			Joystick joystick = this.Joystick;
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.GameMainView.CommonChildPanel
 			joystick.ShowBattleVisibleChildView();
 		}
 
-		// Token: 0x0603A7B1 RID: 239537 RVA: 0x00DEAC79 File Offset: 0x00DE8E79
+		// Token: 0x0602F6FA RID: 194298 RVA: 0x00D3B211 File Offset: 0x00D39411
 		protected override void OnHideBattleChildViewPanel()
 		{
 			Joystick joystick = this.Joystick;
@@ -52,7 +52,7 @@ namespace CSharpScript.Game.Module.GameMainView.CommonChildPanel
 			joystick.HideBattleVisibleChildView();
 		}
 
-		// Token: 0x0603A7B2 RID: 239538 RVA: 0x00DEAC8B File Offset: 0x00DE8E8B
+		// Token: 0x0602F6FB RID: 194299 RVA: 0x00D3B223 File Offset: 0x00D39423
 		public override void OnTickBattleChildViewPanel(float delta)
 		{
 			Joystick joystick = this.Joystick;
@@ -63,25 +63,25 @@ namespace CSharpScript.Game.Module.GameMainView.CommonChildPanel
 			joystick.Tick(delta);
 		}
 
-		// Token: 0x0603A7B3 RID: 239539 RVA: 0x00DEAC9E File Offset: 0x00DE8E9E
+		// Token: 0x0602F6FC RID: 194300 RVA: 0x00D3B236 File Offset: 0x00D39436
 		public override void Reset()
 		{
 			this.Joystick = null;
 		}
 
-		// Token: 0x0603A7B4 RID: 239540 RVA: 0x00DEACA7 File Offset: 0x00DE8EA7
+		// Token: 0x0602F6FD RID: 194301 RVA: 0x00D3B23F File Offset: 0x00D3943F
 		protected override void AddEvents()
 		{
 			EventSystem.Instance.Add<int, int>(EEventName.BattleUiCurRoleDataChanged, new Action<int, int>(this.OnChangeRoleCompleted));
 		}
 
-		// Token: 0x0603A7B5 RID: 239541 RVA: 0x00DEACC5 File Offset: 0x00DE8EC5
+		// Token: 0x0602F6FE RID: 194302 RVA: 0x00D3B25D File Offset: 0x00D3945D
 		protected override void RemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.BattleUiCurRoleDataChanged, new Action<int, int>(this.OnChangeRoleCompleted));
 		}
 
-		// Token: 0x0603A7B6 RID: 239542 RVA: 0x00DEACE4 File Offset: 0x00DE8EE4
+		// Token: 0x0602F6FF RID: 194303 RVA: 0x00D3B27C File Offset: 0x00D3947C
 		private UniTask NewJoystickItem()
 		{
 			JoystickPanel.<NewJoystickItem>d__12 <NewJoystickItem>d__;
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.GameMainView.CommonChildPanel
 			return <NewJoystickItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603A7B7 RID: 239543 RVA: 0x00DEAD28 File Offset: 0x00DE8F28
+		// Token: 0x0602F700 RID: 194304 RVA: 0x00D3B2C0 File Offset: 0x00D394C0
 		private void RefreshJoystick()
 		{
 			if (this.Joystick != null && this.CurrentEntity != null)
@@ -106,7 +106,7 @@ namespace CSharpScript.Game.Module.GameMainView.CommonChildPanel
 			}
 		}
 
-		// Token: 0x0603A7B8 RID: 239544 RVA: 0x00DEAD84 File Offset: 0x00DE8F84
+		// Token: 0x0602F701 RID: 194305 RVA: 0x00D3B31C File Offset: 0x00D3951C
 		private void OnChangeRoleCompleted(int newEntityId, int oldEntityId)
 		{
 			BattleUiRoleData curRoleData = BattleUiModel.Instance.GetCurRoleData();
@@ -114,17 +114,17 @@ namespace CSharpScript.Game.Module.GameMainView.CommonChildPanel
 			this.RefreshJoystick();
 		}
 
-		// Token: 0x0401E791 RID: 124817
+		// Token: 0x04019238 RID: 102968
 		[StaticVariableRuleIgnore]
 		private static readonly int ForbidMoveTagId = GameplayTagDefine.EGameplayTagId["战斗状态.输入限制.禁止移动"];
 
-		// Token: 0x0401E792 RID: 124818
+		// Token: 0x04019239 RID: 102969
 		private Joystick Joystick;
 
-		// Token: 0x0401E793 RID: 124819
+		// Token: 0x0401923A RID: 102970
 		private EntityHandle CurrentEntity;
 
-		// Token: 0x0401E794 RID: 124820
+		// Token: 0x0401923B RID: 102971
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly Stat JoystickPanelTickStats = Stat.Create("JoystickPanelTickStats", "", "");

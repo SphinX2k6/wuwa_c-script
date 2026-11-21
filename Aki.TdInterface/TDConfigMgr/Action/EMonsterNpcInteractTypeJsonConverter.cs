@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002388 RID: 9096
+	// Token: 0x02002611 RID: 9745
 	public class EMonsterNpcInteractTypeJsonConverter : JsonConverter<EMonsterNpcInteractType>
 	{
-		// Token: 0x0600C664 RID: 50788 RVA: 0x001D0F2C File Offset: 0x001CF12C
+		// Token: 0x0600D2A8 RID: 53928 RVA: 0x001E9F00 File Offset: 0x001E8100
 		public override EMonsterNpcInteractType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EMonsterNpcInteractTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C665 RID: 50789 RVA: 0x001D0F50 File Offset: 0x001CF150
+		// Token: 0x0600D2A9 RID: 53929 RVA: 0x001E9F24 File Offset: 0x001E8124
 		public override void Write(Utf8JsonWriter writer, EMonsterNpcInteractType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

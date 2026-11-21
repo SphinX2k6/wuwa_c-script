@@ -2,13 +2,13 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.NewWorld.Pawn.Component;
 
-// Token: 0x020025FF RID: 9727
+// Token: 0x02001AEA RID: 6890
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class BattleQteController : ControllerBase
 {
-	// Token: 0x06013CC4 RID: 81092 RVA: 0x004F7388 File Offset: 0x004F5588
+	// Token: 0x060111A6 RID: 70054 RVA: 0x00506164 File Offset: 0x00504364
 	[return: Nullable(2)]
 	public BattleQteContext StartBattleQte(int battleQteId, long messageId, EntityHandle entityHandle, EBattleQteSource source)
 	{
@@ -88,8 +88,8 @@ public class BattleQteController : ControllerBase
 		return null;
 	}
 
-	// Token: 0x1700195B RID: 6491
-	// (get) Token: 0x06013CC5 RID: 81093 RVA: 0x004F7506 File Offset: 0x004F5706
+	// Token: 0x17001993 RID: 6547
+	// (get) Token: 0x060111A7 RID: 70055 RVA: 0x005062E2 File Offset: 0x005044E2
 	public static BattleQteController Instance
 	{
 		get
@@ -98,7 +98,7 @@ public class BattleQteController : ControllerBase
 		}
 	}
 
-	// Token: 0x06013CC6 RID: 81094 RVA: 0x004F750D File Offset: 0x004F570D
+	// Token: 0x060111A8 RID: 70056 RVA: 0x005062E9 File Offset: 0x005044E9
 	public static BattleQteController GetOrCreateInstance()
 	{
 		if (BattleQteController._Instance == null)
@@ -108,7 +108,7 @@ public class BattleQteController : ControllerBase
 		return BattleQteController._Instance;
 	}
 
-	// Token: 0x06013CC7 RID: 81095 RVA: 0x004F7521 File Offset: 0x004F5721
+	// Token: 0x060111A9 RID: 70057 RVA: 0x005062FD File Offset: 0x005044FD
 	public static bool CreateInstance()
 	{
 		if (BattleQteController._Instance != null)
@@ -119,24 +119,24 @@ public class BattleQteController : ControllerBase
 		return true;
 	}
 
-	// Token: 0x06013CC8 RID: 81096 RVA: 0x004F7537 File Offset: 0x004F5737
+	// Token: 0x060111AA RID: 70058 RVA: 0x00506313 File Offset: 0x00504513
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06013CC9 RID: 81097 RVA: 0x004F7539 File Offset: 0x004F5739
+	// Token: 0x060111AB RID: 70059 RVA: 0x00506315 File Offset: 0x00504515
 	public static void ResetStaticDefaultValue()
 	{
 		BattleQteController._Instance = null;
 	}
 
-	// Token: 0x06013CCA RID: 81098 RVA: 0x004F7541 File Offset: 0x004F5741
+	// Token: 0x060111AC RID: 70060 RVA: 0x0050631D File Offset: 0x0050451D
 	static BattleQteController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BattleQteController.CreateStaticDefaultValue), new Action(BattleQteController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400952F RID: 38191
+	// Token: 0x04009686 RID: 38534
 	[Nullable(2)]
 	private static BattleQteController _Instance;
 }

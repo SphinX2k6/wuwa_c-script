@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.Activity.ActivityContent.Roverlike;
 
-// Token: 0x02003350 RID: 13136
+// Token: 0x020028C2 RID: 10434
 public class RedDotRoverlikeShopRewardBtn : RedDotBase
 {
-	// Token: 0x0601C9B4 RID: 117172 RVA: 0x00804B6C File Offset: 0x00802D6C
+	// Token: 0x0601A6AC RID: 108204 RVA: 0x0082B130 File Offset: 0x00829330
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add(EEventName.PayShopGoodsBuy, new Action(base.EventCheck));
@@ -16,7 +16,7 @@ public class RedDotRoverlikeShopRewardBtn : RedDotBase
 		EventSystem.Instance.Add<int>(EEventName.OnPlayerCurrencyChange, new Action<int>(this.OnPlayerCurrencyChange));
 	}
 
-	// Token: 0x0601C9B5 RID: 117173 RVA: 0x00804BEC File Offset: 0x00802DEC
+	// Token: 0x0601A6AD RID: 108205 RVA: 0x0082B1B0 File Offset: 0x008293B0
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove(EEventName.PayShopGoodsBuy, new Action(base.EventCheck));
@@ -25,32 +25,32 @@ public class RedDotRoverlikeShopRewardBtn : RedDotBase
 		EventSystem.Instance.Remove<int>(EEventName.OnPlayerCurrencyChange, new Action<int>(this.OnPlayerCurrencyChange));
 	}
 
-	// Token: 0x0601C9B6 RID: 117174 RVA: 0x00804C69 File Offset: 0x00802E69
+	// Token: 0x0601A6AE RID: 108206 RVA: 0x0082B22D File Offset: 0x0082942D
 	protected override bool IsAllEventParamAsUId()
 	{
 		return false;
 	}
 
-	// Token: 0x0601C9B7 RID: 117175 RVA: 0x00804C6C File Offset: 0x00802E6C
+	// Token: 0x0601A6AF RID: 108207 RVA: 0x0082B230 File Offset: 0x00829430
 	private void OnRefreshPayShop(int payShopId, bool ifItemRefresh)
 	{
 		base.EventCheck();
 	}
 
-	// Token: 0x0601C9B8 RID: 117176 RVA: 0x00804C74 File Offset: 0x00802E74
+	// Token: 0x0601A6B0 RID: 108208 RVA: 0x0082B238 File Offset: 0x00829438
 	[NullableContext(1)]
 	private void OnRefreshAllPayShop(IEnumerable<PayShopDefine.EPayShopTabType> idList)
 	{
 		base.EventCheck();
 	}
 
-	// Token: 0x0601C9B9 RID: 117177 RVA: 0x00804C7C File Offset: 0x00802E7C
+	// Token: 0x0601A6B1 RID: 108209 RVA: 0x0082B240 File Offset: 0x00829440
 	private void OnPlayerCurrencyChange(int itemId)
 	{
 		base.EventCheck();
 	}
 
-	// Token: 0x0601C9BA RID: 117178 RVA: 0x00804C84 File Offset: 0x00802E84
+	// Token: 0x0601A6B2 RID: 108210 RVA: 0x0082B248 File Offset: 0x00829448
 	protected override bool OnCheck(int uId = 0)
 	{
 		RoverlikeActivityController instance = RoverlikeActivityController.Instance;

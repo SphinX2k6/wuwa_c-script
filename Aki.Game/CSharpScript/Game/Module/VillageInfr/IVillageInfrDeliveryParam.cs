@@ -3,23 +3,23 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.VillageInfr
 {
-	// Token: 0x02004895 RID: 18581
+	// Token: 0x0200380C RID: 14348
 	[NullableContext(1)]
 	public interface IVillageInfrDeliveryParam
 	{
-		// Token: 0x1700793E RID: 31038
-		// (get) Token: 0x0603098F RID: 199055
-		// (set) Token: 0x06030990 RID: 199056
+		// Token: 0x17004CA6 RID: 19622
+		// (get) Token: 0x060254BB RID: 152763
+		// (set) Token: 0x060254BC RID: 152764
 		EVillageInfrSelectType SelectType { get; set; }
 
-		// Token: 0x1700793F RID: 31039
-		// (get) Token: 0x06030991 RID: 199057
-		// (set) Token: 0x06030992 RID: 199058
+		// Token: 0x17004CA7 RID: 19623
+		// (get) Token: 0x060254BD RID: 152765
+		// (set) Token: 0x060254BE RID: 152766
 		int SelectId { get; set; }
 
-		// Token: 0x17007940 RID: 31040
-		// (get) Token: 0x06030993 RID: 199059
-		// (set) Token: 0x06030994 RID: 199060
+		// Token: 0x17004CA8 RID: 19624
+		// (get) Token: 0x060254BF RID: 152767
+		// (set) Token: 0x060254C0 RID: 152768
 		string UiCameraName { get; set; }
 	}
 }

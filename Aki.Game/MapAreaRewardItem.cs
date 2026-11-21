@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001ABE RID: 6846
+// Token: 0x02000F7D RID: 3965
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -14,19 +14,19 @@ using UnrealEngine;
 })]
 public class MapAreaRewardItem : GridProxyAbstract<DailyActivityDefine.IActivityGoalData>
 {
-	// Token: 0x170010C8 RID: 4296
-	// (get) Token: 0x0600CAEE RID: 51950 RVA: 0x002E40B1 File Offset: 0x002E22B1
-	// (set) Token: 0x0600CAEF RID: 51951 RVA: 0x002E40B9 File Offset: 0x002E22B9
+	// Token: 0x170010ED RID: 4333
+	// (get) Token: 0x06009EFF RID: 40703 RVA: 0x002EF235 File Offset: 0x002ED435
+	// (set) Token: 0x06009F00 RID: 40704 RVA: 0x002EF23D File Offset: 0x002ED43D
 	public EDailyActiveState? DailyActiveState { get; set; }
 
-	// Token: 0x0600CAF0 RID: 51952 RVA: 0x002E40C2 File Offset: 0x002E22C2
+	// Token: 0x06009F01 RID: 40705 RVA: 0x002EF246 File Offset: 0x002ED446
 	public MapAreaRewardItem(Action getRewardCallback, Action<RewardPopupData> openRewardCallback)
 	{
 		this.GetRewardCallback = getRewardCallback;
 		this.OpenRewardCallback = openRewardCallback;
 	}
 
-	// Token: 0x0600CAF1 RID: 51953 RVA: 0x002E40D8 File Offset: 0x002E22D8
+	// Token: 0x06009F02 RID: 40706 RVA: 0x002EF25C File Offset: 0x002ED45C
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 9;
@@ -61,7 +61,7 @@ public class MapAreaRewardItem : GridProxyAbstract<DailyActivityDefine.IActivity
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600CAF2 RID: 51954 RVA: 0x002E4266 File Offset: 0x002E2466
+	// Token: 0x06009F03 RID: 40707 RVA: 0x002EF3EA File Offset: 0x002ED5EA
 	protected override void OnStart()
 	{
 		base.GetUiNiagara(6).SetAlpha(0f);
@@ -69,12 +69,12 @@ public class MapAreaRewardItem : GridProxyAbstract<DailyActivityDefine.IActivity
 		this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem);
 	}
 
-	// Token: 0x0600CAF3 RID: 51955 RVA: 0x002E4297 File Offset: 0x002E2497
+	// Token: 0x06009F04 RID: 40708 RVA: 0x002EF41B File Offset: 0x002ED61B
 	protected override void OnBeforeDestroy()
 	{
 	}
 
-	// Token: 0x0600CAF4 RID: 51956 RVA: 0x002E429C File Offset: 0x002E249C
+	// Token: 0x06009F05 RID: 40709 RVA: 0x002EF420 File Offset: 0x002ED620
 	public override void Refresh(DailyActivityDefine.IActivityGoalData data, bool isSelected, int gridIndex)
 	{
 		this.RewardData = data;
@@ -97,19 +97,19 @@ public class MapAreaRewardItem : GridProxyAbstract<DailyActivityDefine.IActivity
 		uuiitem.SetChangeColor(bUseChangeColor, fcolor);
 	}
 
-	// Token: 0x0600CAF5 RID: 51957 RVA: 0x002E4346 File Offset: 0x002E2546
+	// Token: 0x06009F06 RID: 40710 RVA: 0x002EF4CA File Offset: 0x002ED6CA
 	public void RefreshSelf()
 	{
 		this.Refresh(this.RewardData, false, 0);
 	}
 
-	// Token: 0x0600CAF6 RID: 51958 RVA: 0x002E4356 File Offset: 0x002E2556
+	// Token: 0x06009F07 RID: 40711 RVA: 0x002EF4DA File Offset: 0x002ED6DA
 	public void SetRewardGoalValue(int value)
 	{
 		base.GetText(0).SetText(value.ToString(), true);
 	}
 
-	// Token: 0x0600CAF7 RID: 51959 RVA: 0x002E436C File Offset: 0x002E256C
+	// Token: 0x06009F08 RID: 40712 RVA: 0x002EF4F0 File Offset: 0x002ED6F0
 	public void RefreshRewardState(EDailyActiveState state, bool isInit)
 	{
 		List<UUISprite> list = new List<UUISprite>
@@ -133,7 +133,7 @@ public class MapAreaRewardItem : GridProxyAbstract<DailyActivityDefine.IActivity
 		this.DailyActiveState = new EDailyActiveState?(state);
 	}
 
-	// Token: 0x0600CAF8 RID: 51960 RVA: 0x002E443C File Offset: 0x002E263C
+	// Token: 0x06009F09 RID: 40713 RVA: 0x002EF5C0 File Offset: 0x002ED7C0
 	private void ClickRewardButton()
 	{
 		EDailyActiveState? dailyActiveState = this.DailyActiveState;
@@ -163,7 +163,7 @@ public class MapAreaRewardItem : GridProxyAbstract<DailyActivityDefine.IActivity
 		}
 	}
 
-	// Token: 0x0600CAF9 RID: 51961 RVA: 0x002E4498 File Offset: 0x002E2698
+	// Token: 0x06009F0A RID: 40714 RVA: 0x002EF61C File Offset: 0x002ED81C
 	private void RefreshRewardPopup(bool isClaimed)
 	{
 		List<TItem> rewards = this.RewardData.Rewards;
@@ -192,40 +192,40 @@ public class MapAreaRewardItem : GridProxyAbstract<DailyActivityDefine.IActivity
 		openRewardCallback(obj);
 	}
 
-	// Token: 0x04005D66 RID: 23910
+	// Token: 0x04005E35 RID: 24117
 	private DailyActivityDefine.IActivityGoalData RewardData;
 
-	// Token: 0x04005D68 RID: 23912
+	// Token: 0x04005E37 RID: 24119
 	[Nullable(2)]
 	private LevelSequencePlayer LevelSequencePlayer;
 
-	// Token: 0x04005D69 RID: 23913
+	// Token: 0x04005E38 RID: 24120
 	private readonly Action GetRewardCallback;
 
-	// Token: 0x04005D6A RID: 23914
+	// Token: 0x04005E39 RID: 24121
 	private readonly Action<RewardPopupData> OpenRewardCallback;
 
-	// Token: 0x02008016 RID: 32790
+	// Token: 0x020071A5 RID: 29093
 	[NullableContext(0)]
 	private enum ERewardItemNode
 	{
-		// Token: 0x04029D0A RID: 171274
+		// Token: 0x04025043 RID: 151619
 		TxtValue,
-		// Token: 0x04029D0B RID: 171275
+		// Token: 0x04025044 RID: 151620
 		BtnReward,
-		// Token: 0x04029D0C RID: 171276
+		// Token: 0x04025045 RID: 151621
 		SpriteUnfinished,
-		// Token: 0x04029D0D RID: 171277
+		// Token: 0x04025046 RID: 151622
 		SpriteClaimed,
-		// Token: 0x04029D0E RID: 171278
+		// Token: 0x04025047 RID: 151623
 		SpriteFinished,
-		// Token: 0x04029D0F RID: 171279
+		// Token: 0x04025048 RID: 151624
 		SpriteBackground,
-		// Token: 0x04029D10 RID: 171280
+		// Token: 0x04025049 RID: 151625
 		NiagaraWait,
-		// Token: 0x04029D11 RID: 171281
+		// Token: 0x0402504A RID: 151626
 		NiagaraGet,
-		// Token: 0x04029D12 RID: 171282
+		// Token: 0x0402504B RID: 151627
 		RedDot
 	}
 }

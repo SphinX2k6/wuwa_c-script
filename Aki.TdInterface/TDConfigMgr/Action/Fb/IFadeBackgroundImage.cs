@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002773 RID: 10099
+	// Token: 0x02002A45 RID: 10821
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IFadeBackgroundImage : IFadeBackgroundType
 	{
-		// Token: 0x0600E0E0 RID: 57568 RVA: 0x00213A20 File Offset: 0x00211C20
-		[NullableContext(1)]
+		// Token: 0x0600EEFE RID: 61182 RVA: 0x002307B4 File Offset: 0x0022E9B4
+		[NullableContext(0)]
 		public static IFadeBackgroundImage Create(IFadeBackgroundImage? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170043BC RID: 17340
-		// (get) Token: 0x0600E0E1 RID: 57569 RVA: 0x00213A3F File Offset: 0x00211C3F
+		// Token: 0x17004722 RID: 18210
+		// (get) Token: 0x0600EEFF RID: 61183 RVA: 0x002307D3 File Offset: 0x0022E9D3
 		public override EFadeBackgroundType Type
 		{
 			get
@@ -33,20 +33,20 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043BD RID: 17341
-		// (get) Token: 0x0600E0E2 RID: 57570 RVA: 0x00213A4C File Offset: 0x00211C4C
-		[Nullable(1)]
+		// Token: 0x17004723 RID: 18211
+		// (get) Token: 0x0600EF00 RID: 61184 RVA: 0x002307E0 File Offset: 0x0022E9E0
+		[Nullable(0)]
 		public virtual string BackgroundImage
 		{
-			[NullableContext(1)]
+			[NullableContext(0)]
 			get
 			{
 				return this.Instance.BackgroundImage;
 			}
 		}
 
-		// Token: 0x170043BE RID: 17342
-		// (get) Token: 0x0600E0E3 RID: 57571 RVA: 0x00213A59 File Offset: 0x00211C59
+		// Token: 0x17004724 RID: 18212
+		// (get) Token: 0x0600EF01 RID: 61185 RVA: 0x002307ED File Offset: 0x0022E9ED
 		public virtual IFadeBackgroundFadeInEffect FadeInEffect
 		{
 			get
@@ -61,8 +61,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170043BF RID: 17343
-		// (get) Token: 0x0600E0E4 RID: 57572 RVA: 0x00213A8D File Offset: 0x00211C8D
+		// Token: 0x17004725 RID: 18213
+		// (get) Token: 0x0600EF02 RID: 61186 RVA: 0x00230821 File Offset: 0x0022EA21
 		public virtual IFadeBackgroundFadeOutEffect FadeOutEffect
 		{
 			get
@@ -77,19 +77,19 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007C85 RID: 31877
+		// Token: 0x0400833B RID: 33595
 		private IFadeBackgroundImage Instance;
 
-		// Token: 0x04007C86 RID: 31878
+		// Token: 0x0400833C RID: 33596
 		private IFadeBackgroundFadeInEffect _FadeInEffectCache;
 
-		// Token: 0x04007C87 RID: 31879
+		// Token: 0x0400833D RID: 33597
 		private bool _FadeInEffectInited;
 
-		// Token: 0x04007C88 RID: 31880
+		// Token: 0x0400833E RID: 33598
 		private IFadeBackgroundFadeOutEffect _FadeOutEffectCache;
 
-		// Token: 0x04007C89 RID: 31881
+		// Token: 0x0400833F RID: 33599
 		private bool _FadeOutEffectInited;
 	}
 }

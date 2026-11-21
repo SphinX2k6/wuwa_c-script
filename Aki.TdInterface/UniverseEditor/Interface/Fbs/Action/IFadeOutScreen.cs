@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006795 RID: 26517
+	// Token: 0x02006E15 RID: 28181
 	public struct IFadeOutScreen : IFlatbufferObject
 	{
-		// Token: 0x1700C4D7 RID: 50391
-		// (get) Token: 0x0602E23C RID: 188988 RVA: 0x0064D668 File Offset: 0x0064B868
+		// Token: 0x1700CE8D RID: 52877
+		// (get) Token: 0x06030A82 RID: 199298 RVA: 0x0069ADAC File Offset: 0x00698FAC
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E23D RID: 188989 RVA: 0x0064D675 File Offset: 0x0064B875
+		// Token: 0x06030A83 RID: 199299 RVA: 0x0069ADB9 File Offset: 0x00698FB9
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602E23E RID: 188990 RVA: 0x0064D67C File Offset: 0x0064B87C
+		// Token: 0x06030A84 RID: 199300 RVA: 0x0069ADC0 File Offset: 0x00698FC0
 		public static IFadeOutScreen GetRootAsIFadeOutScreen(ByteBuffer _bb)
 		{
 			return IFadeOutScreen.GetRootAsIFadeOutScreen(_bb, default(IFadeOutScreen));
 		}
 
-		// Token: 0x0602E23F RID: 188991 RVA: 0x0064D698 File Offset: 0x0064B898
+		// Token: 0x06030A85 RID: 199301 RVA: 0x0069ADDC File Offset: 0x00698FDC
 		public static IFadeOutScreen GetRootAsIFadeOutScreen(ByteBuffer _bb, IFadeOutScreen obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602E240 RID: 188992 RVA: 0x0064D6B5 File Offset: 0x0064B8B5
+		// Token: 0x06030A86 RID: 199302 RVA: 0x0069ADF9 File Offset: 0x00698FF9
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602E241 RID: 188993 RVA: 0x0064D6C4 File Offset: 0x0064B8C4
+		// Token: 0x06030A87 RID: 199303 RVA: 0x0069AE08 File Offset: 0x00699008
 		public IFadeOutScreen __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C4D8 RID: 50392
-		// (get) Token: 0x0602E242 RID: 188994 RVA: 0x0064D6D4 File Offset: 0x0064B8D4
+		// Token: 0x1700CE8E RID: 52878
+		// (get) Token: 0x06030A88 RID: 199304 RVA: 0x0069AE18 File Offset: 0x00699018
 		public IEaseData? Ease
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C4D9 RID: 50393
-		// (get) Token: 0x0602E243 RID: 188995 RVA: 0x0064D734 File Offset: 0x0064B934
+		// Token: 0x1700CE8F RID: 52879
+		// (get) Token: 0x06030A89 RID: 199305 RVA: 0x0069AE78 File Offset: 0x00699078
 		public bool OnlyLowMemoryDeviceExecute
 		{
 			get
@@ -73,8 +73,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C4DA RID: 50394
-		// (get) Token: 0x0602E244 RID: 188996 RVA: 0x0064D774 File Offset: 0x0064B974
+		// Token: 0x1700CE90 RID: 52880
+		// (get) Token: 0x06030A8A RID: 199306 RVA: 0x0069AEB8 File Offset: 0x006990B8
 		public byte NullMask
 		{
 			get
@@ -88,7 +88,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E245 RID: 188997 RVA: 0x0064D7B0 File Offset: 0x0064B9B0
+		// Token: 0x06030A8B RID: 199307 RVA: 0x0069AEF4 File Offset: 0x006990F4
 		public static Offset<IFadeOutScreen> CreateIFadeOutScreen(FlatBufferBuilder builder, Offset<IEaseData> EaseOffset = default(Offset<IEaseData>), bool OnlyLowMemoryDeviceExecute = false, byte NullMask = 0)
 		{
 			builder.StartTable(3);
@@ -98,37 +98,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFadeOutScreen.EndIFadeOutScreen(builder);
 		}
 
-		// Token: 0x0602E246 RID: 188998 RVA: 0x0064D7D4 File Offset: 0x0064B9D4
+		// Token: 0x06030A8C RID: 199308 RVA: 0x0069AF18 File Offset: 0x00699118
 		public static void StartIFadeOutScreen(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0602E247 RID: 188999 RVA: 0x0064D7DD File Offset: 0x0064B9DD
+		// Token: 0x06030A8D RID: 199309 RVA: 0x0069AF21 File Offset: 0x00699121
 		public static void AddEase(FlatBufferBuilder builder, Offset<IEaseData> easeOffset)
 		{
 			builder.AddOffset(0, easeOffset.Value, 0);
 		}
 
-		// Token: 0x0602E248 RID: 189000 RVA: 0x0064D7ED File Offset: 0x0064B9ED
+		// Token: 0x06030A8E RID: 199310 RVA: 0x0069AF31 File Offset: 0x00699131
 		public static void AddOnlyLowMemoryDeviceExecute(FlatBufferBuilder builder, bool onlyLowMemoryDeviceExecute)
 		{
 			builder.AddBool(1, onlyLowMemoryDeviceExecute, false);
 		}
 
-		// Token: 0x0602E249 RID: 189001 RVA: 0x0064D7F8 File Offset: 0x0064B9F8
+		// Token: 0x06030A8F RID: 199311 RVA: 0x0069AF3C File Offset: 0x0069913C
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(2, nullMask, 0);
 		}
 
-		// Token: 0x0602E24A RID: 189002 RVA: 0x0064D803 File Offset: 0x0064BA03
+		// Token: 0x06030A90 RID: 199312 RVA: 0x0069AF47 File Offset: 0x00699147
 		public static Offset<IFadeOutScreen> EndIFadeOutScreen(FlatBufferBuilder builder)
 		{
 			return new Offset<IFadeOutScreen>(builder.EndTable());
 		}
 
-		// Token: 0x0602E24B RID: 189003 RVA: 0x0064D810 File Offset: 0x0064BA10
+		// Token: 0x06030A91 RID: 199313 RVA: 0x0069AF54 File Offset: 0x00699154
 		public IFadeOutScreenT UnPack()
 		{
 			IFadeOutScreenT fadeOutScreenT = new IFadeOutScreenT();
@@ -136,7 +136,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return fadeOutScreenT;
 		}
 
-		// Token: 0x0602E24C RID: 189004 RVA: 0x0064D82C File Offset: 0x0064BA2C
+		// Token: 0x06030A92 RID: 199314 RVA: 0x0069AF70 File Offset: 0x00699170
 		public void UnPackTo(IFadeOutScreenT _o)
 		{
 			_o.Ease = ((this.Ease != null) ? this.Ease.Value.UnPack() : null);
@@ -144,7 +144,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602E24D RID: 189005 RVA: 0x0064D880 File Offset: 0x0064BA80
+		// Token: 0x06030A93 RID: 199315 RVA: 0x0069AFC4 File Offset: 0x006991C4
 		public static Offset<IFadeOutScreen> Pack(FlatBufferBuilder builder, IFadeOutScreenT _o)
 		{
 			if (_o == null)
@@ -155,7 +155,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFadeOutScreen.CreateIFadeOutScreen(builder, easeOffset, _o.OnlyLowMemoryDeviceExecute, _o.NullMask);
 		}
 
-		// Token: 0x04010EA3 RID: 69283
+		// Token: 0x04011CD5 RID: 72917
 		private Table __p;
 	}
 }

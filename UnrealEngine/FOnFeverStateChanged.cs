@@ -7,17 +7,17 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001C63 RID: 7267
+	// Token: 0x02000509 RID: 1289
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FOnFeverStateChanged : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601C308 RID: 115464 RVA: 0x00298C64 File Offset: 0x00296E64
+		// Token: 0x06007904 RID: 30980 RVA: 0x000B163C File Offset: 0x000AF83C
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnFeverStateChanged.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601C309 RID: 115465 RVA: 0x00298C70 File Offset: 0x00296E70
+		// Token: 0x06007905 RID: 30981 RVA: 0x000B1648 File Offset: 0x000AF848
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnFeverStateChanged._FunctionPtr == IntPtr.Zero)
@@ -27,32 +27,31 @@ namespace UnrealEngine
 			return FOnFeverStateChanged._FunctionPtr;
 		}
 
-		// Token: 0x0601C30A RID: 115466 RVA: 0x00298C93 File Offset: 0x00296E93
+		// Token: 0x06007906 RID: 30982 RVA: 0x000B166B File Offset: 0x000AF86B
 		public FOnFeverStateChanged()
 		{
 		}
 
-		// Token: 0x0601C30B RID: 115467 RVA: 0x00298C9B File Offset: 0x00296E9B
+		// Token: 0x06007907 RID: 30983 RVA: 0x000B1673 File Offset: 0x000AF873
 		[NullableContext(2)]
 		public FOnFeverStateChanged(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601C30C RID: 115468 RVA: 0x00298CA5 File Offset: 0x00296EA5
+		// Token: 0x06007908 RID: 30984 RVA: 0x000B167D File Offset: 0x000AF87D
 		public FOnFeverStateChanged(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601C30D RID: 115469 RVA: 0x00298CB0 File Offset: 0x00296EB0
+		// Token: 0x06007909 RID: 30985 RVA: 0x000B1688 File Offset: 0x000AF888
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action<bool>) ?? ((Action<bool>)Delegate.CreateDelegate(typeof(Action<bool>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601C30E RID: 115470 RVA: 0x00298CE2 File Offset: 0x00296EE2
+		// Token: 0x0600790A RID: 30986 RVA: 0x000B16BA File Offset: 0x000AF8BA
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action<bool> Callback)
 		{
 			if (FOnFeverStateChanged.RegisterId == 0)
@@ -67,17 +66,15 @@ namespace UnrealEngine
 			base.Add(Callback, FOnFeverStateChanged.RegisterId);
 		}
 
-		// Token: 0x0601C30F RID: 115471 RVA: 0x00298D1C File Offset: 0x00296F1C
+		// Token: 0x0600790B RID: 30987 RVA: 0x000B16F4 File Offset: 0x000AF8F4
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action<bool> Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601C310 RID: 115472 RVA: 0x00298D28 File Offset: 0x00296F28
+		// Token: 0x0600790C RID: 30988 RVA: 0x000B1700 File Offset: 0x000AF900
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Broadcast(bool bFeverActive)
 		{
 			FOnFeverStateChanged.__FOnFeverStateChanged_DelegateParams* ptr = stackalloc FOnFeverStateChanged.__FOnFeverStateChanged_DelegateParams[(UIntPtr)16] + 15L / (long)sizeof(FOnFeverStateChanged.__FOnFeverStateChanged_DelegateParams) & -16L;
@@ -86,10 +83,9 @@ namespace UnrealEngine
 			base.BroadcastInternal((void*)ptr);
 		}
 
-		// Token: 0x0601C311 RID: 115473 RVA: 0x00298D64 File Offset: 0x00296F64
+		// Token: 0x0600790D RID: 30989 RVA: 0x000B173C File Offset: 0x000AF93C
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<bool> action = target as Action<bool>;
@@ -100,31 +96,31 @@ namespace UnrealEngine
 			action(((FOnFeverStateChanged.__FOnFeverStateChanged_DelegateParams*)__Parameters)->bFeverActive);
 		}
 
-		// Token: 0x0400F2AD RID: 62125
+		// Token: 0x04003378 RID: 13176
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400F2AE RID: 62126
+		// Token: 0x04003379 RID: 13177
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroRhythmGame.OnFeverStateChanged__DelegateSignature";
 
-		// Token: 0x0400F2AF RID: 62127
+		// Token: 0x0400337A RID: 13178
 		private static int RegisterId;
 
-		// Token: 0x020031F6 RID: 12790
+		// Token: 0x02000C6B RID: 3179
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 1)]
-		protected ref struct __FOnFeverStateChanged_DelegateParams
+		private ref struct __FOnFeverStateChanged_DelegateParams
 		{
-			// Token: 0x04017051 RID: 94289
+			// Token: 0x04005EC5 RID: 24261
 			[FieldOffset(0)]
 			public bool bFeverActive;
 		}
 
-		// Token: 0x020031F7 RID: 12791
+		// Token: 0x02000C6C RID: 3180
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017052 RID: 94290
+			// Token: 0x04005EC6 RID: 24262
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

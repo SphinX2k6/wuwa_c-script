@@ -3,23 +3,23 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 
-// Token: 0x02002F72 RID: 12146
+// Token: 0x020024C6 RID: 9414
 [NullableContext(1)]
 [Nullable(0)]
 public abstract class SnapModifyBuffEffect : BuffEffect
 {
-	// Token: 0x06019D10 RID: 105744 RVA: 0x006BBFB0 File Offset: 0x006BA1B0
+	// Token: 0x06017622 RID: 95778 RVA: 0x006E289C File Offset: 0x006E0A9C
 	protected SnapModifyBuffEffect(int activeHandleId, int index, RequireAndLimits requireAndLimits, BaseBuffComponent ownerBuffComponent, [Nullable(2)] CharacterBuffComponent instigatorBuffComponent) : base(activeHandleId, index, requireAndLimits, ownerBuffComponent, instigatorBuffComponent)
 	{
 	}
 
-	// Token: 0x06019D11 RID: 105745 RVA: 0x006BBFBF File Offset: 0x006BA1BF
+	// Token: 0x06017623 RID: 95779 RVA: 0x006E28AB File Offset: 0x006E0AAB
 	protected override bool CheckAuthority()
 	{
 		return false;
 	}
 
-	// Token: 0x06019D12 RID: 105746 RVA: 0x006BBFC4 File Offset: 0x006BA1C4
+	// Token: 0x06017624 RID: 95780 RVA: 0x006E28B0 File Offset: 0x006E0AB0
 	public bool TryExecuteSnap(Partial_RequirementPayload context, IBuffComponent opponent, Dictionary<EAttributeType, float> resultMap, SnapshotPayload snapshots)
 	{
 		if (!base.Check(context, opponent))
@@ -35,7 +35,7 @@ public abstract class SnapModifyBuffEffect : BuffEffect
 		return true;
 	}
 
-	// Token: 0x06019D13 RID: 105747 RVA: 0x006BC012 File Offset: 0x006BA212
+	// Token: 0x06017625 RID: 95781 RVA: 0x006E28FE File Offset: 0x006E0AFE
 	protected virtual void OnExecuteSnap(Dictionary<EAttributeType, float> resultMap, SnapshotPayload snapshots)
 	{
 		this.OnExecute(new object[]
@@ -45,7 +45,7 @@ public abstract class SnapModifyBuffEffect : BuffEffect
 		});
 	}
 
-	// Token: 0x06019D14 RID: 105748 RVA: 0x006BC02C File Offset: 0x006BA22C
+	// Token: 0x06017626 RID: 95782 RVA: 0x006E2918 File Offset: 0x006E0B18
 	protected float GetAttrValue(SnapshotPayload snapshots, EAttributeType attrId, EAttributeRefType attributeType, ESnapAttributeSourceType targetType)
 	{
 		IAttributeSet attrSet = this.GetAttrSet(snapshots, targetType);
@@ -61,7 +61,7 @@ public abstract class SnapModifyBuffEffect : BuffEffect
 		return attrSet.GetCurrentValue(attrId);
 	}
 
-	// Token: 0x06019D15 RID: 105749 RVA: 0x006BC07C File Offset: 0x006BA27C
+	// Token: 0x06017627 RID: 95783 RVA: 0x006E2968 File Offset: 0x006E0B68
 	[return: Nullable(2)]
 	private IAttributeSet GetAttrSet(SnapshotPayload snapshots, ESnapAttributeSourceType targetType)
 	{
@@ -103,9 +103,9 @@ public abstract class SnapModifyBuffEffect : BuffEffect
 		return result;
 	}
 
-	// Token: 0x0400C2DC RID: 49884
+	// Token: 0x0400C685 RID: 50821
 	public ESnapTargetType? TargetType;
 
-	// Token: 0x0400C2DD RID: 49885
+	// Token: 0x0400C686 RID: 50822
 	public bool NeedCheckCritical;
 }

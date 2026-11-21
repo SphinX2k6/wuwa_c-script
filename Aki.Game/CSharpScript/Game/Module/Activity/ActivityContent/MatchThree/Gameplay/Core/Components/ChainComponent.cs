@@ -3,16 +3,16 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.Core.Components
 {
-	// Token: 0x0200652E RID: 25902
+	// Token: 0x020054AC RID: 21676
 	public sealed class ChainComponent : IPieceComponent
 	{
-		// Token: 0x06040F0F RID: 265999 RVA: 0x00FBCB21 File Offset: 0x00FBAD21
+		// Token: 0x06035BD4 RID: 220116 RVA: 0x00F03B65 File Offset: 0x00F01D65
 		public ChainComponent(int durability)
 		{
 		}
 
-		// Token: 0x1700952A RID: 38186
-		// (get) Token: 0x06040F10 RID: 266000 RVA: 0x00FBCB30 File Offset: 0x00FBAD30
+		// Token: 0x1700688C RID: 26764
+		// (get) Token: 0x06035BD5 RID: 220117 RVA: 0x00F03B74 File Offset: 0x00F01D74
 		public EPieceCaps Caps
 		{
 			get
@@ -21,13 +21,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 			}
 		}
 
-		// Token: 0x06040F11 RID: 266001 RVA: 0x00FBCB37 File Offset: 0x00FBAD37
+		// Token: 0x06035BD6 RID: 220118 RVA: 0x00F03B7B File Offset: 0x00F01D7B
 		public void OnAttach(ref PieceComponentState state)
 		{
 			state.Val1 = this.<durability>P;
 		}
 
-		// Token: 0x04021DFC RID: 138748
+		// Token: 0x0401C72D RID: 116525
 		[CompilerGenerated]
 		private int <durability>P = durability;
 	}

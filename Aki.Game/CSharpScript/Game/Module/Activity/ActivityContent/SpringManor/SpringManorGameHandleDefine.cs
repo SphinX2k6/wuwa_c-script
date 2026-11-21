@@ -4,16 +4,16 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x02006030 RID: 24624
+	// Token: 0x02004FAE RID: 20398
 	public class SpringManorGameHandleDefine : IStaticVariableResetter
 	{
-		// Token: 0x0603E50E RID: 255246 RVA: 0x00F0CC52 File Offset: 0x00F0AE52
+		// Token: 0x060331D2 RID: 209362 RVA: 0x00E53A18 File Offset: 0x00E51C18
 		static SpringManorGameHandleDefine()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(SpringManorGameHandleDefine.CreateStaticDefaultValue), new Action(SpringManorGameHandleDefine.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0603E50F RID: 255247 RVA: 0x00F0CC71 File Offset: 0x00F0AE71
+		// Token: 0x060331D3 RID: 209363 RVA: 0x00E53A37 File Offset: 0x00E51C37
 		public static void CreateStaticDefaultValue()
 		{
 			SpringManorGameHandleDefine.springManorGameHandleDefine = new Dictionary<ESpringFunctionType, SpringManorGameHandleBase>
@@ -37,13 +37,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			};
 		}
 
-		// Token: 0x0603E510 RID: 255248 RVA: 0x00F0CCAD File Offset: 0x00F0AEAD
+		// Token: 0x060331D4 RID: 209364 RVA: 0x00E53A73 File Offset: 0x00E51C73
 		public static void ResetStaticDefaultValue()
 		{
 			SpringManorGameHandleDefine.springManorGameHandleDefine = null;
 		}
 
-		// Token: 0x0402090A RID: 133386
+		// Token: 0x0401B237 RID: 111159
 		[Nullable(new byte[]
 		{
 			2,

@@ -2,64 +2,64 @@
 
 namespace CSharpScript.Game.Module.FlagChallenge
 {
-	// Token: 0x02005A45 RID: 23109
+	// Token: 0x02004A21 RID: 18977
 	internal enum <FlagChallengeAreaDetailView>FADF5F2ABA51CBEACC39EA39CD0819EDF0CCAECBE57C8BC6D066526CE8A89E82B__EComponentType
 	{
-		// Token: 0x0401E884 RID: 125060
+		// Token: 0x0401932B RID: 103211
 		CaptionItem,
-		// Token: 0x0401E885 RID: 125061
+		// Token: 0x0401932C RID: 103212
 		CG,
-		// Token: 0x0401E886 RID: 125062
+		// Token: 0x0401932D RID: 103213
 		DetailItem,
-		// Token: 0x0401E887 RID: 125063
+		// Token: 0x0401932E RID: 103214
 		StrongholdItem1,
-		// Token: 0x0401E888 RID: 125064
+		// Token: 0x0401932F RID: 103215
 		StrongholdItem2,
-		// Token: 0x0401E889 RID: 125065
+		// Token: 0x04019330 RID: 103216
 		StrongholdItem3,
-		// Token: 0x0401E88A RID: 125066
+		// Token: 0x04019331 RID: 103217
 		StrongholdItem4,
-		// Token: 0x0401E88B RID: 125067
+		// Token: 0x04019332 RID: 103218
 		StrongholdItem5,
-		// Token: 0x0401E88C RID: 125068
+		// Token: 0x04019333 RID: 103219
 		CenterBgTex,
-		// Token: 0x0401E88D RID: 125069
+		// Token: 0x04019334 RID: 103220
 		GridTex,
-		// Token: 0x0401E88E RID: 125070
+		// Token: 0x04019335 RID: 103221
 		RoleLevelItem,
-		// Token: 0x0401E88F RID: 125071
+		// Token: 0x04019336 RID: 103222
 		BuffBtn,
-		// Token: 0x0401E890 RID: 125072
+		// Token: 0x04019337 RID: 103223
 		TaskBtn,
-		// Token: 0x0401E891 RID: 125073
+		// Token: 0x04019338 RID: 103224
 		WarningItem,
-		// Token: 0x0401E892 RID: 125074
+		// Token: 0x04019339 RID: 103225
 		BgTex,
-		// Token: 0x0401E893 RID: 125075
+		// Token: 0x0401933A RID: 103226
 		FrameBgTex,
-		// Token: 0x0401E894 RID: 125076
+		// Token: 0x0401933B RID: 103227
 		PageItem,
-		// Token: 0x0401E895 RID: 125077
+		// Token: 0x0401933C RID: 103228
 		LeftPageBtn,
-		// Token: 0x0401E896 RID: 125078
+		// Token: 0x0401933D RID: 103229
 		RightPageBtn,
-		// Token: 0x0401E897 RID: 125079
+		// Token: 0x0401933E RID: 103230
 		DotRootItem,
-		// Token: 0x0401E898 RID: 125080
+		// Token: 0x0401933F RID: 103231
 		DotItem,
-		// Token: 0x0401E899 RID: 125081
+		// Token: 0x04019340 RID: 103232
 		PageAreaIndexSprite,
-		// Token: 0x0401E89A RID: 125082
+		// Token: 0x04019341 RID: 103233
 		EffectItem1,
-		// Token: 0x0401E89B RID: 125083
+		// Token: 0x04019342 RID: 103234
 		EffectItem2,
-		// Token: 0x0401E89C RID: 125084
+		// Token: 0x04019343 RID: 103235
 		EffectItem3,
-		// Token: 0x0401E89D RID: 125085
+		// Token: 0x04019344 RID: 103236
 		TaskProgressTxt,
-		// Token: 0x0401E89E RID: 125086
+		// Token: 0x04019345 RID: 103237
 		TaskRedDotItem,
-		// Token: 0x0401E89F RID: 125087
+		// Token: 0x04019346 RID: 103238
 		BuffRedDotItem
 	}
 }

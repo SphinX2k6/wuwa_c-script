@@ -4,18 +4,18 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001141 RID: 4417
+	// Token: 0x0200126F RID: 4719
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IShowUiSynthetic_SetValue
 	{
-		// Token: 0x04003C47 RID: 15431
+		// Token: 0x04003F95 RID: 16277
 		public EShowUiType Type;
 
-		// Token: 0x04003C48 RID: 15432
+		// Token: 0x04003F96 RID: 16278
 		public List<int> EntityIds;
 
-		// Token: 0x04003C49 RID: 15433
+		// Token: 0x04003F97 RID: 16279
 		public List<int> ProductIds;
 	}
 }

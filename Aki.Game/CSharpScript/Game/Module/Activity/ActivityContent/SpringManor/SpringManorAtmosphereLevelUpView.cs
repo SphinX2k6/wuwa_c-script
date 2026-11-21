@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 {
-	// Token: 0x02006095 RID: 24725
+	// Token: 0x02005013 RID: 20499
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SpringManorAtmosphereLevelUpView : UiViewBase
 	{
-		// Token: 0x0603E7EC RID: 255980 RVA: 0x00F1AF06 File Offset: 0x00F19106
+		// Token: 0x060334B0 RID: 210096 RVA: 0x00E61CCA File Offset: 0x00E5FECA
 		public SpringManorAtmosphereLevelUpView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603E7ED RID: 255981 RVA: 0x00F1AF1C File Offset: 0x00F1911C
+		// Token: 0x060334B1 RID: 210097 RVA: 0x00E61CE0 File Offset: 0x00E5FEE0
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603E7EE RID: 255982 RVA: 0x00F1AFA8 File Offset: 0x00F191A8
+		// Token: 0x060334B2 RID: 210098 RVA: 0x00E61D6C File Offset: 0x00E5FF6C
 		protected override void OnStart()
 		{
 			SpringManorAtmosphereLevelUpViewData springManorAtmosphereLevelUpViewData = this.OpenParam as SpringManorAtmosphereLevelUpViewData;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			(((text2 != null) ? text2.GetOwner() : null) as AUIBaseActor).OnSequencePlayEvent.Bind(new Action<string, string>(this.OnSequencePlayEvent));
 		}
 
-		// Token: 0x0603E7EF RID: 255983 RVA: 0x00F1B0EC File Offset: 0x00F192EC
+		// Token: 0x060334B3 RID: 210099 RVA: 0x00E61EB0 File Offset: 0x00E600B0
 		private void OnSequencePlayEvent(string seqName, string eventName)
 		{
 			if (!(eventName == "Max"))
@@ -91,19 +91,19 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			text2.ShowTextNew("Spring26_Atmosphere_Max");
 		}
 
-		// Token: 0x0603E7F0 RID: 255984 RVA: 0x00F1B147 File Offset: 0x00F19347
+		// Token: 0x060334B4 RID: 210100 RVA: 0x00E61F0B File Offset: 0x00E6010B
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<string>(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
 		}
 
-		// Token: 0x0603E7F1 RID: 255985 RVA: 0x00F1B165 File Offset: 0x00F19365
+		// Token: 0x060334B5 RID: 210101 RVA: 0x00E61F29 File Offset: 0x00E60129
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.OnActivitySequenceEmitEvent, new Action<string>(this.OnActivitySequenceEmitEvent));
 		}
 
-		// Token: 0x0603E7F2 RID: 255986 RVA: 0x00F1B183 File Offset: 0x00F19383
+		// Token: 0x060334B6 RID: 210102 RVA: 0x00E61F47 File Offset: 0x00E60147
 		private void OnActivitySequenceEmitEvent(string param)
 		{
 			if (param == "TipsChange")
@@ -112,7 +112,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E7F3 RID: 255987 RVA: 0x00F1B198 File Offset: 0x00F19398
+		// Token: 0x060334B7 RID: 210103 RVA: 0x00E61F5C File Offset: 0x00E6015C
 		protected override void OnBeforeShow()
 		{
 			this.TickHandle = TimerSystem.GameplayTimeInstance.Forever(new TTimerAction(this.Refresh), 20f, 1f, null, null, true);
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E7F4 RID: 255988 RVA: 0x00F1B244 File Offset: 0x00F19444
+		// Token: 0x060334B8 RID: 210104 RVA: 0x00E62008 File Offset: 0x00E60208
 		protected override void OnAfterShow()
 		{
 			ETipsType tipsType = this.TipsType;
@@ -152,13 +152,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E7F5 RID: 255989 RVA: 0x00F1B26E File Offset: 0x00F1946E
+		// Token: 0x060334B9 RID: 210105 RVA: 0x00E62032 File Offset: 0x00E60232
 		protected override void OnBeforeDestroy()
 		{
 			this.RemoveTick();
 		}
 
-		// Token: 0x0603E7F6 RID: 255990 RVA: 0x00F1B278 File Offset: 0x00F19478
+		// Token: 0x060334BA RID: 210106 RVA: 0x00E6203C File Offset: 0x00E6023C
 		private UniTask RunExpAdd()
 		{
 			SpringManorAtmosphereLevelUpView.<RunExpAdd>d__21 <RunExpAdd>d__;
@@ -169,7 +169,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return <RunExpAdd>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E7F7 RID: 255991 RVA: 0x00F1B2BC File Offset: 0x00F194BC
+		// Token: 0x060334BB RID: 210107 RVA: 0x00E62080 File Offset: 0x00E60280
 		private UniTask RunLevelUp()
 		{
 			SpringManorAtmosphereLevelUpView.<RunLevelUp>d__22 <RunLevelUp>d__;
@@ -180,7 +180,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return <RunLevelUp>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E7F8 RID: 255992 RVA: 0x00F1B300 File Offset: 0x00F19500
+		// Token: 0x060334BC RID: 210108 RVA: 0x00E620C4 File Offset: 0x00E602C4
 		protected void Refresh(float delta)
 		{
 			if (!this.RunBarAnim)
@@ -196,7 +196,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E7F9 RID: 255993 RVA: 0x00F1B36C File Offset: 0x00F1956C
+		// Token: 0x060334BD RID: 210109 RVA: 0x00E62130 File Offset: 0x00E60330
 		private UniTask StartBarAnim(int current, int target, int end)
 		{
 			SpringManorAtmosphereLevelUpView.<StartBarAnim>d__31 <StartBarAnim>d__;
@@ -210,14 +210,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			return <StartBarAnim>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603E7FA RID: 255994 RVA: 0x00F1B3C8 File Offset: 0x00F195C8
+		// Token: 0x060334BE RID: 210110 RVA: 0x00E6218C File Offset: 0x00E6038C
 		private void EndBarAnim()
 		{
 			this.RunBarAnim = false;
 			this.BarAnimPromise.SetResult(default(UniTaskVoid));
 		}
 
-		// Token: 0x0603E7FB RID: 255995 RVA: 0x00F1B3F0 File Offset: 0x00F195F0
+		// Token: 0x060334BF RID: 210111 RVA: 0x00E621B4 File Offset: 0x00E603B4
 		private void RemoveTick()
 		{
 			if (this.TickHandle != null)
@@ -227,20 +227,20 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			}
 		}
 
-		// Token: 0x0603E7FC RID: 255996 RVA: 0x00F1B414 File Offset: 0x00F19614
+		// Token: 0x060334C0 RID: 210112 RVA: 0x00E621D8 File Offset: 0x00E603D8
 		private void RefreshBar(float current, float target)
 		{
 			float fillAmount = MathUtils.Instance.Clamp(current / target, 0f, 1f);
 			base.GetSprite(1).SetFillAmount(fillAmount);
 		}
 
-		// Token: 0x0603E7FD RID: 255997 RVA: 0x00F1B446 File Offset: 0x00F19646
+		// Token: 0x060334C1 RID: 210113 RVA: 0x00E6220A File Offset: 0x00E6040A
 		private void SetExpTextVisible(bool bVisible)
 		{
 			base.GetText(2).SetUIActive(bVisible);
 		}
 
-		// Token: 0x0603E7FE RID: 255998 RVA: 0x00F1B458 File Offset: 0x00F19658
+		// Token: 0x060334C2 RID: 210114 RVA: 0x00E6221C File Offset: 0x00E6041C
 		private void SetExpText(int current, int currentMax)
 		{
 			UUIText text = base.GetText(2);
@@ -255,72 +255,72 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.SpringManor
 			text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x0603E7FF RID: 255999 RVA: 0x00F1B4A3 File Offset: 0x00F196A3
+		// Token: 0x060334C3 RID: 210115 RVA: 0x00E62267 File Offset: 0x00E60467
 		private void SetExpMaxText()
 		{
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(2), "MapTravelLevelCanUp_Text", Array.Empty<object>());
 			this.SetExpTextVisible(true);
 		}
 
-		// Token: 0x0603E800 RID: 256000 RVA: 0x00F1B4C7 File Offset: 0x00F196C7
+		// Token: 0x060334C4 RID: 210116 RVA: 0x00E6228B File Offset: 0x00E6048B
 		private void SetLevelText(int level)
 		{
 			base.GetText(0).SetText(level.ToString(), true);
 		}
 
-		// Token: 0x04020B48 RID: 133960
+		// Token: 0x0401B475 RID: 111733
 		private const int BAR_ANIM_TIME = 750;
 
-		// Token: 0x04020B49 RID: 133961
+		// Token: 0x0401B476 RID: 111734
 		private ETipsType TipsType;
 
-		// Token: 0x04020B4A RID: 133962
+		// Token: 0x0401B477 RID: 111735
 		private int PreLevel;
 
-		// Token: 0x04020B4B RID: 133963
+		// Token: 0x0401B478 RID: 111736
 		private int PreAtmosphere;
 
-		// Token: 0x04020B4C RID: 133964
+		// Token: 0x0401B479 RID: 111737
 		private int CurLevel;
 
-		// Token: 0x04020B4D RID: 133965
+		// Token: 0x0401B47A RID: 111738
 		private int CurAtmosphere;
 
-		// Token: 0x04020B4E RID: 133966
+		// Token: 0x0401B47B RID: 111739
 		private int CurMaxAtmosphere;
 
-		// Token: 0x04020B4F RID: 133967
+		// Token: 0x0401B47C RID: 111740
 		private int PreNeed;
 
-		// Token: 0x04020B50 RID: 133968
+		// Token: 0x0401B47D RID: 111741
 		private int PreNext;
 
-		// Token: 0x04020B51 RID: 133969
+		// Token: 0x0401B47E RID: 111742
 		private int CurNeed;
 
-		// Token: 0x04020B52 RID: 133970
+		// Token: 0x0401B47F RID: 111743
 		private int CurNext;
 
-		// Token: 0x04020B53 RID: 133971
+		// Token: 0x0401B480 RID: 111744
 		[Nullable(2)]
 		protected TimerHandle TickHandle;
 
-		// Token: 0x04020B54 RID: 133972
+		// Token: 0x0401B481 RID: 111745
 		protected bool RunBarAnim;
 
-		// Token: 0x04020B55 RID: 133973
+		// Token: 0x0401B482 RID: 111746
 		protected float RunBarAnimTime;
 
-		// Token: 0x04020B56 RID: 133974
+		// Token: 0x0401B483 RID: 111747
 		protected int StartValue;
 
-		// Token: 0x04020B57 RID: 133975
+		// Token: 0x0401B484 RID: 111748
 		protected int TargetValue;
 
-		// Token: 0x04020B58 RID: 133976
+		// Token: 0x0401B485 RID: 111749
 		protected int EndValue;
 
-		// Token: 0x04020B59 RID: 133977
+		// Token: 0x0401B486 RID: 111750
 		protected CustomPromise<UniTaskVoid> BarAnimPromise = new CustomPromise<UniTaskVoid>();
 	}
 }

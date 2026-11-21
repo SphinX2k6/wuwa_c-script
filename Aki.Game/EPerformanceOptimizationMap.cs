@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Component;
 
-// Token: 0x0200328E RID: 12942
+// Token: 0x020027FF RID: 10239
 public static class EPerformanceOptimizationMap
 {
-	// Token: 0x0601C04A RID: 114762 RVA: 0x007C9D6C File Offset: 0x007C7F6C
+	// Token: 0x06019C5E RID: 105566 RVA: 0x007F0FCA File Offset: 0x007EF1CA
 	// Note: this type is marked as 'beforefieldinit'.
 	static EPerformanceOptimizationMap()
 	{
@@ -16,7 +16,7 @@ public static class EPerformanceOptimizationMap
 		EPerformanceOptimizationMap.Map = dictionary;
 	}
 
-	// Token: 0x0400DD86 RID: 56710
+	// Token: 0x0400E22D RID: 57901
 	[Nullable(1)]
 	[StaticVariableRuleIgnore]
 	public static readonly Dictionary<EPerformanceOptimizationType, Type> Map;

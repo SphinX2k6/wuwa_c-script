@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FCC RID: 8140
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002211 RID: 8721
 	public class IToggleDragActorPlayDisable : IToggleDragActorPlayType
 	{
-		// Token: 0x0600B310 RID: 45840 RVA: 0x001A10A0 File Offset: 0x0019F2A0
+		// Token: 0x0600BE1E RID: 48670 RVA: 0x001B7550 File Offset: 0x001B5750
 		private IToggleDragActorPlayDisable_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600B311 RID: 45841 RVA: 0x001A10D8 File Offset: 0x0019F2D8
+		// Token: 0x0600BE1F RID: 48671 RVA: 0x001B7588 File Offset: 0x001B5788
 		public static IToggleDragActorPlayDisable Create([Nullable(2)] IToggleDragActorPlayDisable instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B312 RID: 45842 RVA: 0x001A10EB File Offset: 0x0019F2EB
+		// Token: 0x0600BE20 RID: 48672 RVA: 0x001B759B File Offset: 0x001B579B
 		public static IToggleDragActorPlayDisable CreateFromSetValue([Nullable(2)] IToggleDragActorPlayDisable_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600B313 RID: 45843 RVA: 0x001A10FE File Offset: 0x0019F2FE
+		// Token: 0x0600BE21 RID: 48673 RVA: 0x001B75AE File Offset: 0x001B57AE
 		public new IToggleDragActorPlayDisable_SetValue ToSetValue()
 		{
 			return new IToggleDragActorPlayDisable_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700372E RID: 14126
-		// (get) Token: 0x0600B314 RID: 45844 RVA: 0x001A1111 File Offset: 0x0019F311
-		// (set) Token: 0x0600B315 RID: 45845 RVA: 0x001A113C File Offset: 0x0019F33C
+		// Token: 0x17003A05 RID: 14853
+		// (get) Token: 0x0600BE22 RID: 48674 RVA: 0x001B75C1 File Offset: 0x001B57C1
+		// (set) Token: 0x0600BE23 RID: 48675 RVA: 0x001B75EC File Offset: 0x001B57EC
 		public override EToggleDragActorPlayType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006C11 RID: 27665
+		// Token: 0x04007210 RID: 29200
 		[Nullable(2)]
 		protected new IToggleDragActorPlayDisable FbInstance;
 
-		// Token: 0x04006C12 RID: 27666
+		// Token: 0x04007211 RID: 29201
 		[Nullable(2)]
 		protected new IToggleDragActorPlayDisable_SetValue PocoInterface;
 	}

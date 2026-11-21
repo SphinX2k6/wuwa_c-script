@@ -10,20 +10,20 @@ using Google.Protobuf;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay
 {
-	// Token: 0x020066EE RID: 26350
+	// Token: 0x0200563E RID: 22078
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class DropCatchGameplayController : UiControllerBase
 	{
-		// Token: 0x17009657 RID: 38487
-		// (get) Token: 0x06041D74 RID: 269684 RVA: 0x00FF7878 File Offset: 0x00FF5A78
-		// (set) Token: 0x06041D73 RID: 269683 RVA: 0x00FF786F File Offset: 0x00FF5A6F
+		// Token: 0x17006996 RID: 27030
+		// (get) Token: 0x060368C0 RID: 223424 RVA: 0x00F38C7C File Offset: 0x00F36E7C
+		// (set) Token: 0x060368BF RID: 223423 RVA: 0x00F38C73 File Offset: 0x00F36E73
 		public bool EnableDebug
 		{
 			get
 			{
-				return !Info.Instance.IsBuildShipping && this.EnableDebugInternal;
+				return false;
 			}
 			set
 			{
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay
 			}
 		}
 
-		// Token: 0x06041D75 RID: 269685 RVA: 0x00FF788E File Offset: 0x00FF5A8E
+		// Token: 0x060368C1 RID: 223425 RVA: 0x00F38C7F File Offset: 0x00F36E7F
 		public void StartGameplay(int gameplayId)
 		{
 			if (this.GameplayProxy == null)
@@ -41,7 +41,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay
 			this.GameplayProxy.StartGameplay(gameplayId);
 		}
 
-		// Token: 0x06041D76 RID: 269686 RVA: 0x00FF78B0 File Offset: 0x00FF5AB0
+		// Token: 0x060368C2 RID: 223426 RVA: 0x00F38CA4 File Offset: 0x00F36EA4
 		public int GetCurrentGameplayId()
 		{
 			DropCatchGameplayProxy gameplayProxy = this.GameplayProxy;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay
 			return num2.GetValueOrDefault();
 		}
 
-		// Token: 0x06041D77 RID: 269687 RVA: 0x00FF78F8 File Offset: 0x00FF5AF8
+		// Token: 0x060368C3 RID: 223427 RVA: 0x00F38CEC File Offset: 0x00F36EEC
 		public void SettleGameplay(IDropCatchSettleGameplay @params, Action successCallback)
 		{
 			DropCatchLevelFinishRequest dropCatchLevelFinishRequest = DropCatchLevelFinishRequest.Create();
@@ -74,13 +74,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay
 				}
 				if (dropCatchLevelFinishResponse.Error != ErrorCode.Success)
 				{
-					ErrorCodeController.Instance.OpenErrorCodeTipView(dropCatchLevelFinishResponse.Error, 21819, null, true, true);
+					ErrorCodeController.Instance.OpenErrorCodeTipView(dropCatchLevelFinishResponse.Error, 23994, null, true, true);
 				}
 				successCallback();
 			}, 0);
 		}
 
-		// Token: 0x06041D78 RID: 269688 RVA: 0x00FF7962 File Offset: 0x00FF5B62
+		// Token: 0x060368C4 RID: 223428 RVA: 0x00F38D56 File Offset: 0x00F36F56
 		public void EndGameplay()
 		{
 			DropCatchGameplayProxy gameplayProxy = this.GameplayProxy;
@@ -91,14 +91,14 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay
 			this.GameplayProxy = null;
 		}
 
-		// Token: 0x06041D79 RID: 269689 RVA: 0x00FF797C File Offset: 0x00FF5B7C
+		// Token: 0x060368C5 RID: 223429 RVA: 0x00F38D70 File Offset: 0x00F36F70
 		public override bool Clear()
 		{
 			this.EndGameplay();
 			return base.Clear();
 		}
 
-		// Token: 0x06041D7A RID: 269690 RVA: 0x00FF798C File Offset: 0x00FF5B8C
+		// Token: 0x060368C6 RID: 223430 RVA: 0x00F38D80 File Offset: 0x00F36F80
 		public void ExecuteCommand(string command)
 		{
 			CommandData commandData = Json.Parse<CommandData>(command, null);
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay
 			gameplayLogic.GetGameplayCommandMgr().ExecuteCommand(commandData.CommandName, commandData.Params);
 		}
 
-		// Token: 0x06041D7B RID: 269691 RVA: 0x00FF79D0 File Offset: 0x00FF5BD0
+		// Token: 0x060368C7 RID: 223431 RVA: 0x00F38DC4 File Offset: 0x00F36FC4
 		public UniTask RequestHistoryScore()
 		{
 			DropCatchGameplayController.<RequestHistoryScore>d__11 <RequestHistoryScore>d__;
@@ -129,8 +129,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay
 			return <RequestHistoryScore>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x17009658 RID: 38488
-		// (get) Token: 0x06041D7C RID: 269692 RVA: 0x00FF7A0B File Offset: 0x00FF5C0B
+		// Token: 0x17006997 RID: 27031
+		// (get) Token: 0x060368C8 RID: 223432 RVA: 0x00F38DFF File Offset: 0x00F36FFF
 		public static DropCatchGameplayController Instance
 		{
 			get
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay
 			}
 		}
 
-		// Token: 0x06041D7D RID: 269693 RVA: 0x00FF7A12 File Offset: 0x00FF5C12
+		// Token: 0x060368C9 RID: 223433 RVA: 0x00F38E06 File Offset: 0x00F37006
 		public static DropCatchGameplayController GetOrCreateInstance()
 		{
 			if (DropCatchGameplayController._Instance == null)
@@ -149,7 +149,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay
 			return DropCatchGameplayController._Instance;
 		}
 
-		// Token: 0x06041D7E RID: 269694 RVA: 0x00FF7A26 File Offset: 0x00FF5C26
+		// Token: 0x060368CA RID: 223434 RVA: 0x00F38E1A File Offset: 0x00F3701A
 		public static bool CreateInstance()
 		{
 			if (DropCatchGameplayController._Instance != null)
@@ -160,31 +160,31 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Gameplay
 			return true;
 		}
 
-		// Token: 0x06041D7F RID: 269695 RVA: 0x00FF7A3C File Offset: 0x00FF5C3C
+		// Token: 0x060368CB RID: 223435 RVA: 0x00F38E30 File Offset: 0x00F37030
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06041D80 RID: 269696 RVA: 0x00FF7A3E File Offset: 0x00FF5C3E
+		// Token: 0x060368CC RID: 223436 RVA: 0x00F38E32 File Offset: 0x00F37032
 		public static void ResetStaticDefaultValue()
 		{
 			DropCatchGameplayController._Instance = null;
 		}
 
-		// Token: 0x06041D81 RID: 269697 RVA: 0x00FF7A46 File Offset: 0x00FF5C46
+		// Token: 0x060368CD RID: 223437 RVA: 0x00F38E3A File Offset: 0x00F3703A
 		static DropCatchGameplayController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(DropCatchGameplayController.CreateStaticDefaultValue), new Action(DropCatchGameplayController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040224C2 RID: 140482
+		// Token: 0x0401CD1B RID: 118043
 		private bool EnableDebugInternal;
 
-		// Token: 0x040224C3 RID: 140483
+		// Token: 0x0401CD1C RID: 118044
 		[Nullable(2)]
 		private DropCatchGameplayProxy GameplayProxy;
 
-		// Token: 0x040224C4 RID: 140484
+		// Token: 0x0401CD1D RID: 118045
 		[Nullable(2)]
 		private static DropCatchGameplayController _Instance;
 	}

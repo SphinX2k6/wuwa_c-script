@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
@@ -17,7 +16,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 {
-	// Token: 0x02005677 RID: 22135
+	// Token: 0x0200464D RID: 17997
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -26,7 +25,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 	})]
 	public class ComposePopupGridItem : GridProxyAbstract<IComposePopupGridItemData>
 	{
-		// Token: 0x06038556 RID: 230742 RVA: 0x00D5E0C8 File Offset: 0x00D5C2C8
+		// Token: 0x0602D453 RID: 185427 RVA: 0x00CAC1C8 File Offset: 0x00CAA3C8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 15;
@@ -66,7 +65,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06038557 RID: 230743 RVA: 0x00D5E2E8 File Offset: 0x00D5C4E8
+		// Token: 0x0602D454 RID: 185428 RVA: 0x00CAC3E8 File Offset: 0x00CAA5E8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			ComposePopupGridItem.<OnBeforeStartAsync>d__10 <OnBeforeStartAsync>d__;
@@ -77,7 +76,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06038558 RID: 230744 RVA: 0x00D5E32C File Offset: 0x00D5C52C
+		// Token: 0x0602D455 RID: 185429 RVA: 0x00CAC42C File Offset: 0x00CAA62C
 		protected override void OnStart()
 		{
 			ComposePopupMediumItemGrid itemGrid = this.ItemGrid;
@@ -99,7 +98,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			normalConfirmButton.SetFunction(new Action<int>(this.OnClickConfirm));
 		}
 
-		// Token: 0x06038559 RID: 230745 RVA: 0x00D5E3B0 File Offset: 0x00D5C5B0
+		// Token: 0x0602D456 RID: 185430 RVA: 0x00CAC4B0 File Offset: 0x00CAA6B0
 		public override void Refresh(IComposePopupGridItemData data, bool isSelected, int gridIndex)
 		{
 			IComposePopupGridItemData cachedData = this.CachedData;
@@ -148,7 +147,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			}
 		}
 
-		// Token: 0x0603855A RID: 230746 RVA: 0x00D5E4D4 File Offset: 0x00D5C6D4
+		// Token: 0x0602D457 RID: 185431 RVA: 0x00CAC5D4 File Offset: 0x00CAA7D4
 		private void RefreshByState(EGridState state)
 		{
 			bool uiactive = state == EGridState.Enough;
@@ -156,10 +155,10 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			bool uiactive2 = state == EGridState.NotEnough;
 			bool flag2 = state == EGridState.Purification || state == EGridState.Exchange || state == EGridState.NotEnough;
 			bool flag3 = state == EGridState.Purification;
-			UUIItem item6 = base.GetItem(0);
-			if (item6 != null)
+			UUIItem item = base.GetItem(0);
+			if (item != null)
 			{
-				item6.SetUIActive(uiactive);
+				item.SetUIActive(uiactive);
 			}
 			UUIItem item2 = base.GetItem(11);
 			if (item2 != null)
@@ -201,19 +200,18 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 				}
 				else if (ComposeConfig.Instance.GetSynthesisFormulaByItemId(this.CachedData.Item.ItemId) != null && synthesisFormula.GetValueOrDefault().IsCollect)
 				{
-					List<ISelectedData> composeList = this.CachedData.ComposeList;
-					bool flag4;
-					if (composeList == null)
+					bool flag4 = false;
+					if (this.CachedData.ComposeList != null)
 					{
-						flag4 = false;
-					}
-					else
-					{
-						flag4 = composeList.Any(delegate(ISelectedData item)
+						foreach (ISelectedData selectedData in this.CachedData.ComposeList)
 						{
-							CSharpScript.Game.Module.Inventory.ItemConfig itemConfigData = InventoryConfig.Instance.GetItemConfigData(item.ItemId);
-							return itemConfigData != null && itemConfigData.ItemType.GetValueOrDefault() == InventoryDefine.EItemType.Gift;
-						});
+							CSharpScript.Game.Module.Inventory.ItemConfig itemConfigData = InventoryConfig.Instance.GetItemConfigData(selectedData.ItemId);
+							if (itemConfigData != null && itemConfigData.ItemType.GetValueOrDefault() == InventoryDefine.EItemType.Gift)
+							{
+								flag4 = true;
+								break;
+							}
+						}
 					}
 					showText = (flag4 ? "PrefabTextItem_4115765186_Text" : "GatherCraft_Btn");
 				}
@@ -294,7 +292,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			uuiitem.SetUIActive(uiactive3);
 		}
 
-		// Token: 0x0603855B RID: 230747 RVA: 0x00D5E7AC File Offset: 0x00D5C9AC
+		// Token: 0x0602D458 RID: 185432 RVA: 0x00CAC8FC File Offset: 0x00CAAAFC
 		private AccessPath? GetItemFirstAccessByItemId(int itemId)
 		{
 			CSharpScript.Game.Module.Inventory.ItemConfig itemConfigData = InventoryConfig.Instance.GetItemConfigData(itemId);
@@ -318,7 +316,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			return null;
 		}
 
-		// Token: 0x0603855C RID: 230748 RVA: 0x00D5E858 File Offset: 0x00D5CA58
+		// Token: 0x0602D459 RID: 185433 RVA: 0x00CAC9A8 File Offset: 0x00CAABA8
 		private void RefreshMainItem(ISelectedData selectedData)
 		{
 			ComposePopupMediumItemGrid itemGrid = this.ItemGrid;
@@ -337,7 +335,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			});
 		}
 
-		// Token: 0x0603855D RID: 230749 RVA: 0x00D5E8B0 File Offset: 0x00D5CAB0
+		// Token: 0x0602D45A RID: 185434 RVA: 0x00CACA00 File Offset: 0x00CAAC00
 		private void RefreshItemScroll(IList<ISelectedData> data)
 		{
 			int value = ConfigCommonParamById.GetIntConfig("CraftingMaterialGridNum").Value;
@@ -360,7 +358,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			consumeItemScroll.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x0603855E RID: 230750 RVA: 0x00D5E922 File Offset: 0x00D5CB22
+		// Token: 0x0602D45B RID: 185435 RVA: 0x00CACA72 File Offset: 0x00CAAC72
 		private ComposePopupScrollItemGrid CreateItemScrollGrid()
 		{
 			return new ComposePopupScrollItemGrid
@@ -369,16 +367,16 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			};
 		}
 
-		// Token: 0x0603855F RID: 230751 RVA: 0x00D5E93C File Offset: 0x00D5CB3C
+		// Token: 0x0602D45C RID: 185436 RVA: 0x00CACA8C File Offset: 0x00CAAC8C
 		private void OpenItemTipsBySelectedData(ISelectedData selectedData)
 		{
-			ItemController.Instance.OpenItemTipsByItemId(selectedData.ItemId, true, null);
+			ItemController.Instance.OpenItemTipsByItemId(selectedData.ItemId, true, null, false);
 			ComposeModel.Instance.ComposeSelectItem = selectedData;
 			ComposeModel.Instance.ComposeSkipSourceView = this.BelongView;
 			InventoryModel.Instance.SetItemNeedCount(new int?(selectedData.Count - selectedData.SelectedCount));
 		}
 
-		// Token: 0x06038560 RID: 230752 RVA: 0x00D5E994 File Offset: 0x00D5CB94
+		// Token: 0x0602D45D RID: 185437 RVA: 0x00CACAE4 File Offset: 0x00CAACE4
 		private void OnClickConfirm(int _)
 		{
 			if (this.CachedData == null)
@@ -441,7 +439,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			}
 		}
 
-		// Token: 0x06038561 RID: 230753 RVA: 0x00D5EBA4 File Offset: 0x00D5CDA4
+		// Token: 0x0602D45E RID: 185438 RVA: 0x00CACCF4 File Offset: 0x00CAAEF4
 		private void PlayNiagara()
 		{
 			UUINiagara uiNiagara = base.GetUiNiagara(14);
@@ -452,7 +450,7 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			uiNiagara.SetUIActive(true);
 		}
 
-		// Token: 0x06038562 RID: 230754 RVA: 0x00D5EBB9 File Offset: 0x00D5CDB9
+		// Token: 0x0602D45F RID: 185439 RVA: 0x00CACD09 File Offset: 0x00CAAF09
 		public void StopNiagara()
 		{
 			UUINiagara uiNiagara = base.GetUiNiagara(14);
@@ -463,14 +461,14 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 			uiNiagara.SetUIActive(false);
 		}
 
-		// Token: 0x0401D9B3 RID: 121267
+		// Token: 0x0401843E RID: 99390
 		public const int ITEM_INVALID_ID = -1;
 
-		// Token: 0x0401D9B4 RID: 121268
+		// Token: 0x0401843F RID: 99391
 		[Nullable(2)]
 		private ComposePopupMediumItemGrid ItemGrid;
 
-		// Token: 0x0401D9B5 RID: 121269
+		// Token: 0x04018440 RID: 99392
 		[Nullable(new byte[]
 		{
 			2,
@@ -479,57 +477,57 @@ namespace CSharpScript.Game.Module.Manufacture.Compose.QuicklyPopup
 		})]
 		private GenericScrollViewNew<ComposePopupScrollItemGrid, ISelectedData> ConsumeItemScroll;
 
-		// Token: 0x0401D9B6 RID: 121270
+		// Token: 0x04018441 RID: 99393
 		[Nullable(2)]
 		private ButtonItem PurificationButton;
 
-		// Token: 0x0401D9B7 RID: 121271
+		// Token: 0x04018442 RID: 99394
 		[Nullable(2)]
 		private ButtonItem NormalConfirmButton;
 
-		// Token: 0x0401D9B8 RID: 121272
+		// Token: 0x04018443 RID: 99395
 		[Nullable(2)]
 		private IComposePopupGridItemData CachedData;
 
-		// Token: 0x0401D9B9 RID: 121273
+		// Token: 0x04018444 RID: 99396
 		private int CachedGetWayId;
 
-		// Token: 0x0401D9BA RID: 121274
+		// Token: 0x04018445 RID: 99397
 		public EUiViewName? BelongView;
 
-		// Token: 0x0200B841 RID: 47169
+		// Token: 0x0200A269 RID: 41577
 		[NullableContext(0)]
 		private enum EComp
 		{
-			// Token: 0x04037C55 RID: 228437
+			// Token: 0x04032673 RID: 206451
 			BgEnough,
-			// Token: 0x04037C56 RID: 228438
+			// Token: 0x04032674 RID: 206452
 			TxtEnough,
-			// Token: 0x04037C57 RID: 228439
+			// Token: 0x04032675 RID: 206453
 			ItemScroll,
-			// Token: 0x04037C58 RID: 228440
+			// Token: 0x04032676 RID: 206454
 			Content,
-			// Token: 0x04037C59 RID: 228441
+			// Token: 0x04032677 RID: 206455
 			ItemGridL,
-			// Token: 0x04037C5A RID: 228442
+			// Token: 0x04032678 RID: 206456
 			TxtTips,
-			// Token: 0x04037C5B RID: 228443
+			// Token: 0x04032679 RID: 206457
 			Arrow,
-			// Token: 0x04037C5C RID: 228444
+			// Token: 0x0403267A RID: 206458
 			ItemGridR,
-			// Token: 0x04037C5D RID: 228445
+			// Token: 0x0403267B RID: 206459
 			PanelRight,
-			// Token: 0x04037C5E RID: 228446
+			// Token: 0x0403267C RID: 206460
 			BtnConfirmR,
-			// Token: 0x04037C5F RID: 228447
+			// Token: 0x0403267D RID: 206461
 			BtnSecConfirmR,
-			// Token: 0x04037C60 RID: 228448
+			// Token: 0x0403267E RID: 206462
 			Checked,
-			// Token: 0x04037C61 RID: 228449
+			// Token: 0x0403267F RID: 206463
 			Line,
-			// Token: 0x04037C62 RID: 228450
+			// Token: 0x04032680 RID: 206464
 			PnlNotEnough,
-			// Token: 0x04037C63 RID: 228451
+			// Token: 0x04032681 RID: 206465
 			Niagara
 		}
 	}

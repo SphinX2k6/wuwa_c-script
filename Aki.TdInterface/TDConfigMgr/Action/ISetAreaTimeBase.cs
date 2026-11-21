@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E0C RID: 7692
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200203F RID: 8255
 	public class ISetAreaTimeBase
 	{
-		// Token: 0x0600A491 RID: 42129 RVA: 0x001752EC File Offset: 0x001734EC
+		// Token: 0x0600AF39 RID: 44857 RVA: 0x0018ACF4 File Offset: 0x00188EF4
 		private ISetAreaTimeBase_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A492 RID: 42130 RVA: 0x00175324 File Offset: 0x00173524
+		// Token: 0x0600AF3A RID: 44858 RVA: 0x0018AD2C File Offset: 0x00188F2C
 		public static ISetAreaTimeBase Create([Nullable(2)] ISetAreaTimeBase instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A493 RID: 42131 RVA: 0x00175337 File Offset: 0x00173537
+		// Token: 0x0600AF3B RID: 44859 RVA: 0x0018AD3F File Offset: 0x00188F3F
 		public static ISetAreaTimeBase CreateFromSetValue([Nullable(2)] ISetAreaTimeBase_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A494 RID: 42132 RVA: 0x0017534A File Offset: 0x0017354A
+		// Token: 0x0600AF3C RID: 44860 RVA: 0x0018AD52 File Offset: 0x00188F52
 		public ISetAreaTimeBase_SetValue ToSetValue()
 		{
 			return new ISetAreaTimeBase_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x1700328D RID: 12941
-		// (get) Token: 0x0600A495 RID: 42133 RVA: 0x0017535D File Offset: 0x0017355D
-		// (set) Token: 0x0600A496 RID: 42134 RVA: 0x00175388 File Offset: 0x00173588
+		// Token: 0x1700354C RID: 13644
+		// (get) Token: 0x0600AF3D RID: 44861 RVA: 0x0018AD65 File Offset: 0x00188F65
+		// (set) Token: 0x0600AF3E RID: 44862 RVA: 0x0018AD90 File Offset: 0x00188F90
 		public virtual ESetAreaTime Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006286 RID: 25222
+		// Token: 0x0400685D RID: 26717
 		[Nullable(2)]
 		protected ISetAreaTimeBase FbInstance;
 
-		// Token: 0x04006287 RID: 25223
+		// Token: 0x0400685E RID: 26718
 		[Nullable(2)]
 		protected ISetAreaTimeBase_SetValue PocoInterface;
 	}

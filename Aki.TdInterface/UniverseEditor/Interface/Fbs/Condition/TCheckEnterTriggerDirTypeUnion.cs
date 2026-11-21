@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004D2E RID: 19758
+	// Token: 0x0200522A RID: 21034
 	public class TCheckEnterTriggerDirTypeUnion
 	{
-		// Token: 0x17008F39 RID: 36665
-		// (get) Token: 0x0601F5CC RID: 128460 RVA: 0x0045F3C4 File Offset: 0x0045D5C4
-		// (set) Token: 0x0601F5CD RID: 128461 RVA: 0x0045F3CC File Offset: 0x0045D5CC
+		// Token: 0x17009672 RID: 38514
+		// (get) Token: 0x06021213 RID: 135699 RVA: 0x00493354 File Offset: 0x00491554
+		// (set) Token: 0x06021214 RID: 135700 RVA: 0x0049335C File Offset: 0x0049155C
 		public TCheckEnterTriggerDirType Type { get; set; }
 
-		// Token: 0x17008F3A RID: 36666
-		// (get) Token: 0x0601F5CE RID: 128462 RVA: 0x0045F3D5 File Offset: 0x0045D5D5
-		// (set) Token: 0x0601F5CF RID: 128463 RVA: 0x0045F3DD File Offset: 0x0045D5DD
+		// Token: 0x17009673 RID: 38515
+		// (get) Token: 0x06021215 RID: 135701 RVA: 0x00493365 File Offset: 0x00491565
+		// (set) Token: 0x06021216 RID: 135702 RVA: 0x0049336D File Offset: 0x0049156D
 		public object Value { get; set; }
 
-		// Token: 0x0601F5D0 RID: 128464 RVA: 0x0045F3E6 File Offset: 0x0045D5E6
+		// Token: 0x06021217 RID: 135703 RVA: 0x00493376 File Offset: 0x00491576
 		public TCheckEnterTriggerDirTypeUnion()
 		{
 			this.Type = TCheckEnterTriggerDirType.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601F5D1 RID: 128465 RVA: 0x0045F3FC File Offset: 0x0045D5FC
+		// Token: 0x06021218 RID: 135704 RVA: 0x0049338C File Offset: 0x0049158C
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601F5D2 RID: 128466 RVA: 0x0045F40E File Offset: 0x0045D60E
+		// Token: 0x06021219 RID: 135705 RVA: 0x0049339E File Offset: 0x0049159E
 		public ICheckEnterTriggerDirTypeForwardAngleT AsICheckEnterTriggerDirTypeForwardAngle()
 		{
 			return this.As<ICheckEnterTriggerDirTypeForwardAngleT>();
 		}
 
-		// Token: 0x0601F5D3 RID: 128467 RVA: 0x0045F416 File Offset: 0x0045D616
+		// Token: 0x0602121A RID: 135706 RVA: 0x004933A6 File Offset: 0x004915A6
 		public static TCheckEnterTriggerDirTypeUnion FromICheckEnterTriggerDirTypeForwardAngle(ICheckEnterTriggerDirTypeForwardAngleT _icheckentertriggerdirtypeforwardangle)
 		{
 			return new TCheckEnterTriggerDirTypeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F5D4 RID: 128468 RVA: 0x0045F42B File Offset: 0x0045D62B
+		// Token: 0x0602121B RID: 135707 RVA: 0x004933BB File Offset: 0x004915BB
 		public ICheckEnterTriggerDirTypeVelocityDirAngleT AsICheckEnterTriggerDirTypeVelocityDirAngle()
 		{
 			return this.As<ICheckEnterTriggerDirTypeVelocityDirAngleT>();
 		}
 
-		// Token: 0x0601F5D5 RID: 128469 RVA: 0x0045F433 File Offset: 0x0045D633
+		// Token: 0x0602121C RID: 135708 RVA: 0x004933C3 File Offset: 0x004915C3
 		public static TCheckEnterTriggerDirTypeUnion FromICheckEnterTriggerDirTypeVelocityDirAngle(ICheckEnterTriggerDirTypeVelocityDirAngleT _icheckentertriggerdirtypevelocitydirangle)
 		{
 			return new TCheckEnterTriggerDirTypeUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F5D6 RID: 128470 RVA: 0x0045F448 File Offset: 0x0045D648
+		// Token: 0x0602121D RID: 135709 RVA: 0x004933D8 File Offset: 0x004915D8
 		public static int Pack(FlatBufferBuilder builder, TCheckEnterTriggerDirTypeUnion _o)
 		{
 			TCheckEnterTriggerDirType type = _o.Type;

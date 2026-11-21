@@ -2,18 +2,18 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020067C2 RID: 26562
+	// Token: 0x02006E42 RID: 28226
 	public enum IFireBulletType_Union : byte
 	{
-		// Token: 0x04010ED8 RID: 69336
+		// Token: 0x04011D0A RID: 72970
 		NONE,
-		// Token: 0x04010ED9 RID: 69337
+		// Token: 0x04011D0B RID: 72971
 		IFireBulletType,
-		// Token: 0x04010EDA RID: 69338
+		// Token: 0x04011D0C RID: 72972
 		IFireBulletTrackTarget,
-		// Token: 0x04010EDB RID: 69339
+		// Token: 0x04011D0D RID: 72973
 		IFireBulletForwardFront,
-		// Token: 0x04010EDC RID: 69340
+		// Token: 0x04011D0E RID: 72974
 		IFireBulletTrackPosition
 	}
 }

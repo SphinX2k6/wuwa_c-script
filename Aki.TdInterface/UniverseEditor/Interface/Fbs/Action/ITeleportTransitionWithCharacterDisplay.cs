@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020073AC RID: 29612
+	// Token: 0x02007B93 RID: 31635
 	public struct ITeleportTransitionWithCharacterDisplay : IFlatbufferObject
 	{
-		// Token: 0x1700E0C9 RID: 57545
-		// (get) Token: 0x06035C1B RID: 220187 RVA: 0x00751378 File Offset: 0x0074F578
+		// Token: 0x1700ECD9 RID: 60633
+		// (get) Token: 0x06038FB6 RID: 233398 RVA: 0x007B38B8 File Offset: 0x007B1AB8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06035C1C RID: 220188 RVA: 0x00751385 File Offset: 0x0074F585
+		// Token: 0x06038FB7 RID: 233399 RVA: 0x007B38C5 File Offset: 0x007B1AC5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06035C1D RID: 220189 RVA: 0x0075138C File Offset: 0x0074F58C
+		// Token: 0x06038FB8 RID: 233400 RVA: 0x007B38CC File Offset: 0x007B1ACC
 		public static ITeleportTransitionWithCharacterDisplay GetRootAsITeleportTransitionWithCharacterDisplay(ByteBuffer _bb)
 		{
 			return ITeleportTransitionWithCharacterDisplay.GetRootAsITeleportTransitionWithCharacterDisplay(_bb, default(ITeleportTransitionWithCharacterDisplay));
 		}
 
-		// Token: 0x06035C1E RID: 220190 RVA: 0x007513A8 File Offset: 0x0074F5A8
+		// Token: 0x06038FB9 RID: 233401 RVA: 0x007B38E8 File Offset: 0x007B1AE8
 		public static ITeleportTransitionWithCharacterDisplay GetRootAsITeleportTransitionWithCharacterDisplay(ByteBuffer _bb, ITeleportTransitionWithCharacterDisplay obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06035C1F RID: 220191 RVA: 0x007513C5 File Offset: 0x0074F5C5
+		// Token: 0x06038FBA RID: 233402 RVA: 0x007B3905 File Offset: 0x007B1B05
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06035C20 RID: 220192 RVA: 0x007513D4 File Offset: 0x0074F5D4
+		// Token: 0x06038FBB RID: 233403 RVA: 0x007B3914 File Offset: 0x007B1B14
 		public ITeleportTransitionWithCharacterDisplay __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700E0CA RID: 57546
-		// (get) Token: 0x06035C21 RID: 220193 RVA: 0x007513E4 File Offset: 0x0074F5E4
+		// Token: 0x1700ECDA RID: 60634
+		// (get) Token: 0x06038FBC RID: 233404 RVA: 0x007B3924 File Offset: 0x007B1B24
 		public ETeleportTransitionType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700E0CB RID: 57547
-		// (get) Token: 0x06035C22 RID: 220194 RVA: 0x00751420 File Offset: 0x0074F620
+		// Token: 0x1700ECDB RID: 60635
+		// (get) Token: 0x06038FBD RID: 233405 RVA: 0x007B3960 File Offset: 0x007B1B60
 		public int StyleId
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06035C23 RID: 220195 RVA: 0x0075145C File Offset: 0x0074F65C
+		// Token: 0x06038FBE RID: 233406 RVA: 0x007B399C File Offset: 0x007B1B9C
 		public static Offset<ITeleportTransitionWithCharacterDisplay> CreateITeleportTransitionWithCharacterDisplay(FlatBufferBuilder builder, ETeleportTransitionType Type = ETeleportTransitionType.PlayMp4, int StyleId = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITeleportTransitionWithCharacterDisplay.EndITeleportTransitionWithCharacterDisplay(builder);
 		}
 
-		// Token: 0x06035C24 RID: 220196 RVA: 0x00751479 File Offset: 0x0074F679
+		// Token: 0x06038FBF RID: 233407 RVA: 0x007B39B9 File Offset: 0x007B1BB9
 		public static void StartITeleportTransitionWithCharacterDisplay(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06035C25 RID: 220197 RVA: 0x00751482 File Offset: 0x0074F682
+		// Token: 0x06038FC0 RID: 233408 RVA: 0x007B39C2 File Offset: 0x007B1BC2
 		public static void AddType(FlatBufferBuilder builder, ETeleportTransitionType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06035C26 RID: 220198 RVA: 0x0075148D File Offset: 0x0074F68D
+		// Token: 0x06038FC1 RID: 233409 RVA: 0x007B39CD File Offset: 0x007B1BCD
 		public static void AddStyleId(FlatBufferBuilder builder, int styleId)
 		{
 			builder.AddInt(1, styleId, 0);
 		}
 
-		// Token: 0x06035C27 RID: 220199 RVA: 0x00751498 File Offset: 0x0074F698
+		// Token: 0x06038FC2 RID: 233410 RVA: 0x007B39D8 File Offset: 0x007B1BD8
 		public static Offset<ITeleportTransitionWithCharacterDisplay> EndITeleportTransitionWithCharacterDisplay(FlatBufferBuilder builder)
 		{
 			return new Offset<ITeleportTransitionWithCharacterDisplay>(builder.EndTable());
 		}
 
-		// Token: 0x06035C28 RID: 220200 RVA: 0x007514A8 File Offset: 0x0074F6A8
+		// Token: 0x06038FC3 RID: 233411 RVA: 0x007B39E8 File Offset: 0x007B1BE8
 		public ITeleportTransitionWithCharacterDisplayT UnPack()
 		{
 			ITeleportTransitionWithCharacterDisplayT teleportTransitionWithCharacterDisplayT = new ITeleportTransitionWithCharacterDisplayT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return teleportTransitionWithCharacterDisplayT;
 		}
 
-		// Token: 0x06035C29 RID: 220201 RVA: 0x007514C3 File Offset: 0x0074F6C3
+		// Token: 0x06038FC4 RID: 233412 RVA: 0x007B3A03 File Offset: 0x007B1C03
 		public void UnPackTo(ITeleportTransitionWithCharacterDisplayT _o)
 		{
 			_o.Type = this.Type;
 			_o.StyleId = this.StyleId;
 		}
 
-		// Token: 0x06035C2A RID: 220202 RVA: 0x007514E0 File Offset: 0x0074F6E0
+		// Token: 0x06038FC5 RID: 233413 RVA: 0x007B3A20 File Offset: 0x007B1C20
 		public static Offset<ITeleportTransitionWithCharacterDisplay> Pack(FlatBufferBuilder builder, ITeleportTransitionWithCharacterDisplayT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ITeleportTransitionWithCharacterDisplay.CreateITeleportTransitionWithCharacterDisplay(builder, _o.Type, _o.StyleId);
 		}
 
-		// Token: 0x040121E0 RID: 74208
+		// Token: 0x040131F9 RID: 78329
 		private Table __p;
 	}
 }

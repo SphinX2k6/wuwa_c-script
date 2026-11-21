@@ -1,17 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.TDConfigMgr.Action.Fb;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D41 RID: 3393
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000E3B RID: 3643
 	public class BatchBulletCasterComponent : IComponentBase
 	{
-		// Token: 0x06004D62 RID: 19810 RVA: 0x000C0831 File Offset: 0x000BEA31
+		// Token: 0x0600527E RID: 21118 RVA: 0x000CBF75 File Offset: 0x000CA175
 		public static BatchBulletCasterComponent Create(IBatchBulletCasterComponent? instance)
 		{
 			if (instance == null)
@@ -24,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700189D RID: 6301
-		// (get) Token: 0x06004D63 RID: 19811 RVA: 0x000C0850 File Offset: 0x000BEA50
+		// Token: 0x17001A03 RID: 6659
+		// (get) Token: 0x0600527F RID: 21119 RVA: 0x000CBF94 File Offset: 0x000CA194
 		public override bool? Disabled
 		{
 			get
@@ -38,8 +35,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700189E RID: 6302
-		// (get) Token: 0x06004D64 RID: 19812 RVA: 0x000C0888 File Offset: 0x000BEA88
+		// Token: 0x17001A04 RID: 6660
+		// (get) Token: 0x06005280 RID: 21120 RVA: 0x000CBFCC File Offset: 0x000CA1CC
 		public override bool? EdIsLocked
 		{
 			get
@@ -48,8 +45,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700189F RID: 6303
-		// (get) Token: 0x06004D65 RID: 19813 RVA: 0x000C089E File Offset: 0x000BEA9E
+		// Token: 0x17001A05 RID: 6661
+		// (get) Token: 0x06005281 RID: 21121 RVA: 0x000CBFE2 File Offset: 0x000CA1E2
 		public virtual string WarningEffect
 		{
 			get
@@ -58,8 +55,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170018A0 RID: 6304
-		// (get) Token: 0x06004D66 RID: 19814 RVA: 0x000C08AC File Offset: 0x000BEAAC
+		// Token: 0x17001A06 RID: 6662
+		// (get) Token: 0x06005282 RID: 21122 RVA: 0x000CBFF0 File Offset: 0x000CA1F0
 		public virtual EBatchBulletMovementType? MovementType
 		{
 			get
@@ -72,8 +69,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170018A1 RID: 6305
-		// (get) Token: 0x06004D67 RID: 19815 RVA: 0x000C08E4 File Offset: 0x000BEAE4
+		// Token: 0x17001A07 RID: 6663
+		// (get) Token: 0x06005283 RID: 21123 RVA: 0x000CC028 File Offset: 0x000CA228
 		public virtual List<IPosRot> BulletList
 		{
 			get
@@ -93,8 +90,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170018A2 RID: 6306
-		// (get) Token: 0x06004D68 RID: 19816 RVA: 0x000C0950 File Offset: 0x000BEB50
+		// Token: 0x17001A08 RID: 6664
+		// (get) Token: 0x06005284 RID: 21124 RVA: 0x000CC094 File Offset: 0x000CA294
 		public virtual List<IBatchBulletItem> BatchList
 		{
 			get
@@ -114,19 +111,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002C5E RID: 11358
+		// Token: 0x04002F1E RID: 12062
 		private IBatchBulletCasterComponent Instance;
 
-		// Token: 0x04002C5F RID: 11359
+		// Token: 0x04002F1F RID: 12063
 		private List<IPosRot> _BulletListCache;
 
-		// Token: 0x04002C60 RID: 11360
+		// Token: 0x04002F20 RID: 12064
 		private bool _BulletListInited;
 
-		// Token: 0x04002C61 RID: 11361
+		// Token: 0x04002F21 RID: 12065
 		private List<IBatchBulletItem> _BatchListCache;
 
-		// Token: 0x04002C62 RID: 11362
+		// Token: 0x04002F22 RID: 12066
 		private bool _BatchListInited;
 	}
 }

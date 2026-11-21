@@ -5,13 +5,11 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020019E8 RID: 6632
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001B77 RID: 7031
 	[JsonConverter(typeof(IEnableMoveOperationConverter))]
 	public class IEnableMoveOperation : IMoveOperationType
 	{
-		// Token: 0x06008E05 RID: 36357 RVA: 0x0014C628 File Offset: 0x0014A828
+		// Token: 0x06009551 RID: 38225 RVA: 0x0015C234 File Offset: 0x0015A434
 		private IEnableMoveOperation_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -26,7 +24,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008E06 RID: 36358 RVA: 0x0014C660 File Offset: 0x0014A860
+		// Token: 0x06009552 RID: 38226 RVA: 0x0015C26C File Offset: 0x0015A46C
 		public static IEnableMoveOperation Create([Nullable(2)] IEnableMoveOperation instance)
 		{
 			if (instance == null)
@@ -39,7 +37,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008E07 RID: 36359 RVA: 0x0014C673 File Offset: 0x0014A873
+		// Token: 0x06009553 RID: 38227 RVA: 0x0015C27F File Offset: 0x0015A47F
 		public static IEnableMoveOperation CreateFromSetValue([Nullable(2)] IEnableMoveOperation_SetValue value)
 		{
 			if (value == null)
@@ -52,7 +50,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008E08 RID: 36360 RVA: 0x0014C686 File Offset: 0x0014A886
+		// Token: 0x06009554 RID: 38228 RVA: 0x0015C292 File Offset: 0x0015A492
 		public new IEnableMoveOperation_SetValue ToSetValue()
 		{
 			return new IEnableMoveOperation_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002D7B RID: 11643
-		// (get) Token: 0x06008E09 RID: 36361 RVA: 0x0014C699 File Offset: 0x0014A899
-		// (set) Token: 0x06008E0A RID: 36362 RVA: 0x0014C6C4 File Offset: 0x0014A8C4
+		// Token: 0x17002F82 RID: 12162
+		// (get) Token: 0x06009555 RID: 38229 RVA: 0x0015C2A5 File Offset: 0x0015A4A5
+		// (set) Token: 0x06009556 RID: 38230 RVA: 0x0015C2D0 File Offset: 0x0015A4D0
 		public override EMoveOperationType Type
 		{
 			get
@@ -84,11 +82,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x0400581E RID: 22558
+		// Token: 0x04005C77 RID: 23671
 		[Nullable(2)]
 		protected new IEnableMoveOperation FbInstance;
 
-		// Token: 0x0400581F RID: 22559
+		// Token: 0x04005C78 RID: 23672
 		[Nullable(2)]
 		protected new IEnableMoveOperation_SetValue PocoInterface;
 	}

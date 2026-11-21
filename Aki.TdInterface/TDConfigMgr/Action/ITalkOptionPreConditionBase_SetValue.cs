@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001F77 RID: 8055
+	// Token: 0x020021B2 RID: 8626
 	public class ITalkOptionPreConditionBase_SetValue
 	{
-		// Token: 0x04006B38 RID: 27448
+		// Token: 0x04007120 RID: 28960
 		public ETalkOptionPreConditionType Type;
 	}
 }

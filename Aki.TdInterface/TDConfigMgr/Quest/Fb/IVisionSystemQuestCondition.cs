@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x020013C0 RID: 5056
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001516 RID: 5398
 	public class IVisionSystemQuestCondition : IQuestCondition
 	{
-		// Token: 0x06007375 RID: 29557 RVA: 0x0011514F File Offset: 0x0011334F
+		// Token: 0x06007A2F RID: 31279 RVA: 0x001239B7 File Offset: 0x00121BB7
 		public static IVisionSystemQuestCondition Create(IVisionSystemQuestCondition? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x170025C8 RID: 9672
-		// (get) Token: 0x06007376 RID: 29558 RVA: 0x0011516E File Offset: 0x0011336E
+		// Token: 0x170027A5 RID: 10149
+		// (get) Token: 0x06007A30 RID: 31280 RVA: 0x001239D6 File Offset: 0x00121BD6
 		public override EChildQuest Type
 		{
 			get
@@ -33,8 +31,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170025C9 RID: 9673
-		// (get) Token: 0x06007377 RID: 29559 RVA: 0x0011517B File Offset: 0x0011337B
+		// Token: 0x170027A6 RID: 10150
+		// (get) Token: 0x06007A31 RID: 31281 RVA: 0x001239E3 File Offset: 0x00121BE3
 		[Nullable(2)]
 		public override IConditionGroup PreConditions
 		{
@@ -51,8 +49,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x170025CA RID: 9674
-		// (get) Token: 0x06007378 RID: 29560 RVA: 0x001151AF File Offset: 0x001133AF
+		// Token: 0x170027A7 RID: 10151
+		// (get) Token: 0x06007A32 RID: 31282 RVA: 0x00123A17 File Offset: 0x00121C17
 		public virtual IVisionSystemQuestBase Quest
 		{
 			get
@@ -67,20 +65,20 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040042D0 RID: 17104
+		// Token: 0x0400465A RID: 18010
 		private IVisionSystemQuestCondition Instance;
 
-		// Token: 0x040042D1 RID: 17105
+		// Token: 0x0400465B RID: 18011
 		[Nullable(2)]
 		private IConditionGroup _PreConditionsCache;
 
-		// Token: 0x040042D2 RID: 17106
+		// Token: 0x0400465C RID: 18012
 		private bool _PreConditionsInited;
 
-		// Token: 0x040042D3 RID: 17107
+		// Token: 0x0400465D RID: 18013
 		private IVisionSystemQuestBase _QuestCache;
 
-		// Token: 0x040042D4 RID: 17108
+		// Token: 0x0400465E RID: 18014
 		private bool _QuestInited;
 	}
 }

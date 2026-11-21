@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using Aki.Config;
 using CSharpScript.Game.Module.Plot.Flow;
 
-// Token: 0x0200273C RID: 10044
+// Token: 0x02001C27 RID: 7207
 public class RandomPlotItem
 {
-	// Token: 0x060149C0 RID: 84416 RVA: 0x00537510 File Offset: 0x00535710
+	// Token: 0x06011EA2 RID: 73378 RVA: 0x0054621C File Offset: 0x0054441C
 	[NullableContext(1)]
 	public static RandomPlotItem Create(RandomPlot config)
 	{
@@ -36,7 +36,7 @@ public class RandomPlotItem
 		return randomPlotItem;
 	}
 
-	// Token: 0x060149C1 RID: 84417 RVA: 0x005375D4 File Offset: 0x005357D4
+	// Token: 0x06011EA3 RID: 73379 RVA: 0x005462E0 File Offset: 0x005444E0
 	public void PlayRandomPlot()
 	{
 		double playerTime = Time.Instance.PlayerTime;
@@ -62,30 +62,30 @@ public class RandomPlotItem
 		this.CooldownFinishStamp = playerTime + (double)this.Cooldown;
 	}
 
-	// Token: 0x04009AD6 RID: 39638
+	// Token: 0x04009C2E RID: 39982
 	private float Probability;
 
-	// Token: 0x04009AD7 RID: 39639
+	// Token: 0x04009C2F RID: 39983
 	private float Cooldown;
 
-	// Token: 0x04009AD8 RID: 39640
+	// Token: 0x04009C30 RID: 39984
 	[Nullable(1)]
 	private readonly List<RandomPlotItem.FlowConfig> FlowConfigs = new List<RandomPlotItem.FlowConfig>();
 
-	// Token: 0x04009AD9 RID: 39641
+	// Token: 0x04009C31 RID: 39985
 	private double CooldownFinishStamp;
 
-	// Token: 0x02008DB1 RID: 36273
+	// Token: 0x02007F39 RID: 32569
 	private class FlowConfig
 	{
-		// Token: 0x0402DFE8 RID: 188392
+		// Token: 0x040292FE RID: 168702
 		[Nullable(1)]
 		public string FlowListName = "";
 
-		// Token: 0x0402DFE9 RID: 188393
+		// Token: 0x040292FF RID: 168703
 		public int FlowId;
 
-		// Token: 0x0402DFEA RID: 188394
+		// Token: 0x04029300 RID: 168704
 		public int StateId;
 	}
 }

@@ -1,28 +1,28 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x02000E28 RID: 3624
+// Token: 0x020002DD RID: 733
 [NullableContext(1)]
 [Nullable(0)]
 public class XboxGetRegionData
 {
-	// Token: 0x17000640 RID: 1600
-	// (get) Token: 0x060056F7 RID: 22263 RVA: 0x000FA224 File Offset: 0x000F8424
-	// (set) Token: 0x060056F8 RID: 22264 RVA: 0x000FA22C File Offset: 0x000F842C
+	// Token: 0x17000664 RID: 1636
+	// (get) Token: 0x06002A87 RID: 10887 RVA: 0x00101A0C File Offset: 0x000FFC0C
+	// (set) Token: 0x06002A88 RID: 10888 RVA: 0x00101A14 File Offset: 0x000FFC14
 	public int LoginType { get; set; }
 
-	// Token: 0x17000641 RID: 1601
-	// (get) Token: 0x060056F9 RID: 22265 RVA: 0x000FA235 File Offset: 0x000F8435
-	// (set) Token: 0x060056FA RID: 22266 RVA: 0x000FA23D File Offset: 0x000F843D
+	// Token: 0x17000665 RID: 1637
+	// (get) Token: 0x06002A89 RID: 10889 RVA: 0x00101A1D File Offset: 0x000FFC1D
+	// (set) Token: 0x06002A8A RID: 10890 RVA: 0x00101A25 File Offset: 0x000FFC25
 	public string UserId { get; set; } = "";
 
-	// Token: 0x17000642 RID: 1602
-	// (get) Token: 0x060056FB RID: 22267 RVA: 0x000FA246 File Offset: 0x000F8446
-	// (set) Token: 0x060056FC RID: 22268 RVA: 0x000FA24E File Offset: 0x000F844E
+	// Token: 0x17000666 RID: 1638
+	// (get) Token: 0x06002A8B RID: 10891 RVA: 0x00101A2E File Offset: 0x000FFC2E
+	// (set) Token: 0x06002A8C RID: 10892 RVA: 0x00101A36 File Offset: 0x000FFC36
 	public string UserName { get; set; } = "";
 
-	// Token: 0x17000643 RID: 1603
-	// (get) Token: 0x060056FD RID: 22269 RVA: 0x000FA257 File Offset: 0x000F8457
-	// (set) Token: 0x060056FE RID: 22270 RVA: 0x000FA25F File Offset: 0x000F845F
+	// Token: 0x17000667 RID: 1639
+	// (get) Token: 0x06002A8D RID: 10893 RVA: 0x00101A3F File Offset: 0x000FFC3F
+	// (set) Token: 0x06002A8E RID: 10894 RVA: 0x00101A47 File Offset: 0x000FFC47
 	public string Token { get; set; } = "";
 }

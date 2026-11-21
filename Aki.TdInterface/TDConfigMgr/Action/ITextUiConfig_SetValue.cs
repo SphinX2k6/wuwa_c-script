@@ -4,38 +4,38 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001FBF RID: 8127
+	// Token: 0x02002202 RID: 8706
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class ITextUiConfig_SetValue
 	{
-		// Token: 0x04006BEE RID: 27630
+		// Token: 0x040071E9 RID: 29161
 		public ETextUiType Type;
 
-		// Token: 0x04006BEF RID: 27631
+		// Token: 0x040071EA RID: 29162
 		public string InitTipText;
 
-		// Token: 0x04006BF0 RID: 27632
+		// Token: 0x040071EB RID: 29163
 		public string ProgressTipText;
 
-		// Token: 0x04006BF1 RID: 27633
+		// Token: 0x040071EC RID: 29164
 		public string SkipText;
 
-		// Token: 0x04006BF2 RID: 27634
+		// Token: 0x040071ED RID: 29165
 		public string FinishText;
 
-		// Token: 0x04006BF3 RID: 27635
+		// Token: 0x040071EE RID: 29166
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<string> InitDialogues;
 
-		// Token: 0x04006BF4 RID: 27636
+		// Token: 0x040071EF RID: 29167
 		public int? SkipConfirmBoxId;
 
-		// Token: 0x04006BF5 RID: 27637
+		// Token: 0x040071F0 RID: 29168
 		public string LoopAudioEvent;
 	}
 }

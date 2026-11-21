@@ -6,27 +6,27 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.View
 {
-	// Token: 0x020064E4 RID: 25828
+	// Token: 0x02005462 RID: 21602
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MatchThreeSuccessPopParams : UiPopViewData
 	{
-		// Token: 0x04021C70 RID: 138352
+		// Token: 0x0401C5A1 RID: 116129
 		public bool IsEndless;
 
-		// Token: 0x04021C71 RID: 138353
+		// Token: 0x0401C5A2 RID: 116130
 		public int Score;
 
-		// Token: 0x04021C72 RID: 138354
+		// Token: 0x0401C5A3 RID: 116131
 		public bool IsNewRecord;
 
-		// Token: 0x04021C73 RID: 138355
+		// Token: 0x0401C5A4 RID: 116132
 		public IReadOnlyList<TItem> Rewards;
 
-		// Token: 0x04021C74 RID: 138356
+		// Token: 0x0401C5A5 RID: 116133
 		public Action OnExit;
 
-		// Token: 0x04021C75 RID: 138357
+		// Token: 0x0401C5A6 RID: 116134
 		[Nullable(new byte[]
 		{
 			2,
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MatchThree.Gameplay.
 		})]
 		public Func<UniTask<bool>> OnPrepareRetry;
 
-		// Token: 0x04021C76 RID: 138358
+		// Token: 0x0401C5A7 RID: 116135
 		public Action OnRetryAfterClose;
 	}
 }

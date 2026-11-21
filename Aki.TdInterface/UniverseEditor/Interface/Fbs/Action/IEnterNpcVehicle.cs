@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020066BD RID: 26301
+	// Token: 0x02006D37 RID: 27959
 	public struct IEnterNpcVehicle : IFlatbufferObject
 	{
-		// Token: 0x1700C367 RID: 50023
-		// (get) Token: 0x0602DB78 RID: 187256 RVA: 0x0064135C File Offset: 0x0063F55C
+		// Token: 0x1700CD18 RID: 52504
+		// (get) Token: 0x06030395 RID: 197525 RVA: 0x0068E610 File Offset: 0x0068C810
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DB79 RID: 187257 RVA: 0x00641369 File Offset: 0x0063F569
+		// Token: 0x06030396 RID: 197526 RVA: 0x0068E61D File Offset: 0x0068C81D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602DB7A RID: 187258 RVA: 0x00641370 File Offset: 0x0063F570
+		// Token: 0x06030397 RID: 197527 RVA: 0x0068E624 File Offset: 0x0068C824
 		public static IEnterNpcVehicle GetRootAsIEnterNpcVehicle(ByteBuffer _bb)
 		{
 			return IEnterNpcVehicle.GetRootAsIEnterNpcVehicle(_bb, default(IEnterNpcVehicle));
 		}
 
-		// Token: 0x0602DB7B RID: 187259 RVA: 0x0064138C File Offset: 0x0063F58C
+		// Token: 0x06030398 RID: 197528 RVA: 0x0068E640 File Offset: 0x0068C840
 		public static IEnterNpcVehicle GetRootAsIEnterNpcVehicle(ByteBuffer _bb, IEnterNpcVehicle obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602DB7C RID: 187260 RVA: 0x006413A9 File Offset: 0x0063F5A9
+		// Token: 0x06030399 RID: 197529 RVA: 0x0068E65D File Offset: 0x0068C85D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602DB7D RID: 187261 RVA: 0x006413B8 File Offset: 0x0063F5B8
+		// Token: 0x0603039A RID: 197530 RVA: 0x0068E66C File Offset: 0x0068C86C
 		public IEnterNpcVehicle __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C368 RID: 50024
-		// (get) Token: 0x0602DB7E RID: 187262 RVA: 0x006413C8 File Offset: 0x0063F5C8
+		// Token: 0x1700CD19 RID: 52505
+		// (get) Token: 0x0603039B RID: 197531 RVA: 0x0068E67C File Offset: 0x0068C87C
 		public int Target
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C369 RID: 50025
-		// (get) Token: 0x0602DB7F RID: 187263 RVA: 0x00641404 File Offset: 0x0063F604
+		// Token: 0x1700CD1A RID: 52506
+		// (get) Token: 0x0603039C RID: 197532 RVA: 0x0068E6B8 File Offset: 0x0068C8B8
 		public int Seat
 		{
 			get
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602DB80 RID: 187264 RVA: 0x00641440 File Offset: 0x0063F640
+		// Token: 0x0603039D RID: 197533 RVA: 0x0068E6F4 File Offset: 0x0068C8F4
 		public static Offset<IEnterNpcVehicle> CreateIEnterNpcVehicle(FlatBufferBuilder builder, int Target = 0, int Seat = 0)
 		{
 			builder.StartTable(2);
@@ -86,31 +86,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IEnterNpcVehicle.EndIEnterNpcVehicle(builder);
 		}
 
-		// Token: 0x0602DB81 RID: 187265 RVA: 0x0064145D File Offset: 0x0063F65D
+		// Token: 0x0603039E RID: 197534 RVA: 0x0068E711 File Offset: 0x0068C911
 		public static void StartIEnterNpcVehicle(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602DB82 RID: 187266 RVA: 0x00641466 File Offset: 0x0063F666
+		// Token: 0x0603039F RID: 197535 RVA: 0x0068E71A File Offset: 0x0068C91A
 		public static void AddTarget(FlatBufferBuilder builder, int target)
 		{
 			builder.AddInt(0, target, 0);
 		}
 
-		// Token: 0x0602DB83 RID: 187267 RVA: 0x00641471 File Offset: 0x0063F671
+		// Token: 0x060303A0 RID: 197536 RVA: 0x0068E725 File Offset: 0x0068C925
 		public static void AddSeat(FlatBufferBuilder builder, int seat)
 		{
 			builder.AddInt(1, seat, 0);
 		}
 
-		// Token: 0x0602DB84 RID: 187268 RVA: 0x0064147C File Offset: 0x0063F67C
+		// Token: 0x060303A1 RID: 197537 RVA: 0x0068E730 File Offset: 0x0068C930
 		public static Offset<IEnterNpcVehicle> EndIEnterNpcVehicle(FlatBufferBuilder builder)
 		{
 			return new Offset<IEnterNpcVehicle>(builder.EndTable());
 		}
 
-		// Token: 0x0602DB85 RID: 187269 RVA: 0x0064148C File Offset: 0x0063F68C
+		// Token: 0x060303A2 RID: 197538 RVA: 0x0068E740 File Offset: 0x0068C940
 		public IEnterNpcVehicleT UnPack()
 		{
 			IEnterNpcVehicleT enterNpcVehicleT = new IEnterNpcVehicleT();
@@ -118,14 +118,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return enterNpcVehicleT;
 		}
 
-		// Token: 0x0602DB86 RID: 187270 RVA: 0x006414A7 File Offset: 0x0063F6A7
+		// Token: 0x060303A3 RID: 197539 RVA: 0x0068E75B File Offset: 0x0068C95B
 		public void UnPackTo(IEnterNpcVehicleT _o)
 		{
 			_o.Target = this.Target;
 			_o.Seat = this.Seat;
 		}
 
-		// Token: 0x0602DB87 RID: 187271 RVA: 0x006414C4 File Offset: 0x0063F6C4
+		// Token: 0x060303A4 RID: 197540 RVA: 0x0068E778 File Offset: 0x0068C978
 		public static Offset<IEnterNpcVehicle> Pack(FlatBufferBuilder builder, IEnterNpcVehicleT _o)
 		{
 			if (_o == null)
@@ -135,7 +135,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IEnterNpcVehicle.CreateIEnterNpcVehicle(builder, _o.Target, _o.Seat);
 		}
 
-		// Token: 0x04010D81 RID: 68993
+		// Token: 0x04011BA7 RID: 72615
 		private Table __p;
 	}
 }

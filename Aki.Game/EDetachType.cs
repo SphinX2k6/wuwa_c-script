@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020034F2 RID: 13554
+// Token: 0x02002A66 RID: 10854
 public enum EDetachType
 {
-	// Token: 0x0400E937 RID: 59703
+	// Token: 0x0400EDEE RID: 60910
 	ManualDestroy,
-	// Token: 0x0400E938 RID: 59704
+	// Token: 0x0400EDEF RID: 60911
 	EntityDestroy,
-	// Token: 0x0400E939 RID: 59705
+	// Token: 0x0400EDF0 RID: 60912
 	DestroyExternal
 }

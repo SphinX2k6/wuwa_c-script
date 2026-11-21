@@ -2,16 +2,16 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200694B RID: 26955
+	// Token: 0x02006FFE RID: 28670
 	public enum IInfrActivityBuildStageOption_Union : byte
 	{
-		// Token: 0x040110C9 RID: 69833
+		// Token: 0x04011F35 RID: 73525
 		NONE,
-		// Token: 0x040110CA RID: 69834
+		// Token: 0x04011F36 RID: 73526
 		IInfrActivityBuildStageOption,
-		// Token: 0x040110CB RID: 69835
+		// Token: 0x04011F37 RID: 73527
 		IInfrActivityInfrastructureStage,
-		// Token: 0x040110CC RID: 69836
+		// Token: 0x04011F38 RID: 73528
 		IInfrActivityRoadProcess
 	}
 }

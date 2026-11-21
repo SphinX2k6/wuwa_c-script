@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005A52 RID: 23122
+	// Token: 0x0200605F RID: 24671
 	public struct ITemplateEntitySpawnerComponent : IFlatbufferObject
 	{
-		// Token: 0x1700ADEE RID: 44526
-		// (get) Token: 0x06027520 RID: 161056 RVA: 0x00568F7C File Offset: 0x0056717C
+		// Token: 0x1700B726 RID: 46886
+		// (get) Token: 0x06029A98 RID: 170648 RVA: 0x005AFF88 File Offset: 0x005AE188
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06027521 RID: 161057 RVA: 0x00568F89 File Offset: 0x00567189
+		// Token: 0x06029A99 RID: 170649 RVA: 0x005AFF95 File Offset: 0x005AE195
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06027522 RID: 161058 RVA: 0x00568F90 File Offset: 0x00567190
+		// Token: 0x06029A9A RID: 170650 RVA: 0x005AFF9C File Offset: 0x005AE19C
 		public static ITemplateEntitySpawnerComponent GetRootAsITemplateEntitySpawnerComponent(ByteBuffer _bb)
 		{
 			return ITemplateEntitySpawnerComponent.GetRootAsITemplateEntitySpawnerComponent(_bb, default(ITemplateEntitySpawnerComponent));
 		}
 
-		// Token: 0x06027523 RID: 161059 RVA: 0x00568FAC File Offset: 0x005671AC
+		// Token: 0x06029A9B RID: 170651 RVA: 0x005AFFB8 File Offset: 0x005AE1B8
 		public static ITemplateEntitySpawnerComponent GetRootAsITemplateEntitySpawnerComponent(ByteBuffer _bb, ITemplateEntitySpawnerComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06027524 RID: 161060 RVA: 0x00568FC9 File Offset: 0x005671C9
+		// Token: 0x06029A9C RID: 170652 RVA: 0x005AFFD5 File Offset: 0x005AE1D5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06027525 RID: 161061 RVA: 0x00568FD8 File Offset: 0x005671D8
+		// Token: 0x06029A9D RID: 170653 RVA: 0x005AFFE4 File Offset: 0x005AE1E4
 		public ITemplateEntitySpawnerComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700ADEF RID: 44527
-		// (get) Token: 0x06027526 RID: 161062 RVA: 0x00568FE8 File Offset: 0x005671E8
+		// Token: 0x1700B727 RID: 46887
+		// (get) Token: 0x06029A9E RID: 170654 RVA: 0x005AFFF4 File Offset: 0x005AE1F4
 		public bool Disabled
 		{
 			get
@@ -59,8 +59,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700ADF0 RID: 44528
-		// (get) Token: 0x06027527 RID: 161063 RVA: 0x00569028 File Offset: 0x00567228
+		// Token: 0x1700B728 RID: 46888
+		// (get) Token: 0x06029A9F RID: 170655 RVA: 0x005B0034 File Offset: 0x005AE234
 		public IConditionGroup? SpawnConditions
 		{
 			get
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700ADF1 RID: 44529
-		// (get) Token: 0x06027528 RID: 161064 RVA: 0x00569088 File Offset: 0x00567288
+		// Token: 0x1700B729 RID: 46889
+		// (get) Token: 0x06029AA0 RID: 170656 RVA: 0x005B0094 File Offset: 0x005AE294
 		public IConditionGroup? ClearConditions
 		{
 			get
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700ADF2 RID: 44530
-		// (get) Token: 0x06027529 RID: 161065 RVA: 0x005690E8 File Offset: 0x005672E8
+		// Token: 0x1700B72A RID: 46890
+		// (get) Token: 0x06029AA1 RID: 170657 RVA: 0x005B00F4 File Offset: 0x005AE2F4
 		public ITemplateMatrix? SpawnConfig
 		{
 			get
@@ -104,8 +104,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700ADF3 RID: 44531
-		// (get) Token: 0x0602752A RID: 161066 RVA: 0x00569148 File Offset: 0x00567348
+		// Token: 0x1700B72B RID: 46891
+		// (get) Token: 0x06029AA2 RID: 170658 RVA: 0x005B0154 File Offset: 0x005AE354
 		public byte NullMask
 		{
 			get
@@ -119,7 +119,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x0602752B RID: 161067 RVA: 0x00569185 File Offset: 0x00567385
+		// Token: 0x06029AA3 RID: 170659 RVA: 0x005B0191 File Offset: 0x005AE391
 		public static Offset<ITemplateEntitySpawnerComponent> CreateITemplateEntitySpawnerComponent(FlatBufferBuilder builder, bool Disabled = false, Offset<IConditionGroup> SpawnConditionsOffset = default(Offset<IConditionGroup>), Offset<IConditionGroup> ClearConditionsOffset = default(Offset<IConditionGroup>), Offset<ITemplateMatrix> SpawnConfigOffset = default(Offset<ITemplateMatrix>), byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -131,49 +131,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ITemplateEntitySpawnerComponent.EndITemplateEntitySpawnerComponent(builder);
 		}
 
-		// Token: 0x0602752C RID: 161068 RVA: 0x005691B9 File Offset: 0x005673B9
+		// Token: 0x06029AA4 RID: 170660 RVA: 0x005B01C5 File Offset: 0x005AE3C5
 		public static void StartITemplateEntitySpawnerComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x0602752D RID: 161069 RVA: 0x005691C2 File Offset: 0x005673C2
+		// Token: 0x06029AA5 RID: 170661 RVA: 0x005B01CE File Offset: 0x005AE3CE
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x0602752E RID: 161070 RVA: 0x005691CD File Offset: 0x005673CD
+		// Token: 0x06029AA6 RID: 170662 RVA: 0x005B01D9 File Offset: 0x005AE3D9
 		public static void AddSpawnConditions(FlatBufferBuilder builder, Offset<IConditionGroup> spawnConditionsOffset)
 		{
 			builder.AddOffset(1, spawnConditionsOffset.Value, 0);
 		}
 
-		// Token: 0x0602752F RID: 161071 RVA: 0x005691DD File Offset: 0x005673DD
+		// Token: 0x06029AA7 RID: 170663 RVA: 0x005B01E9 File Offset: 0x005AE3E9
 		public static void AddClearConditions(FlatBufferBuilder builder, Offset<IConditionGroup> clearConditionsOffset)
 		{
 			builder.AddOffset(2, clearConditionsOffset.Value, 0);
 		}
 
-		// Token: 0x06027530 RID: 161072 RVA: 0x005691ED File Offset: 0x005673ED
+		// Token: 0x06029AA8 RID: 170664 RVA: 0x005B01F9 File Offset: 0x005AE3F9
 		public static void AddSpawnConfig(FlatBufferBuilder builder, Offset<ITemplateMatrix> spawnConfigOffset)
 		{
 			builder.AddOffset(3, spawnConfigOffset.Value, 0);
 		}
 
-		// Token: 0x06027531 RID: 161073 RVA: 0x005691FD File Offset: 0x005673FD
+		// Token: 0x06029AA9 RID: 170665 RVA: 0x005B0209 File Offset: 0x005AE409
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x06027532 RID: 161074 RVA: 0x00569208 File Offset: 0x00567408
+		// Token: 0x06029AAA RID: 170666 RVA: 0x005B0214 File Offset: 0x005AE414
 		public static Offset<ITemplateEntitySpawnerComponent> EndITemplateEntitySpawnerComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<ITemplateEntitySpawnerComponent>(builder.EndTable());
 		}
 
-		// Token: 0x06027533 RID: 161075 RVA: 0x00569218 File Offset: 0x00567418
+		// Token: 0x06029AAB RID: 170667 RVA: 0x005B0224 File Offset: 0x005AE424
 		public ITemplateEntitySpawnerComponentT UnPack()
 		{
 			ITemplateEntitySpawnerComponentT templateEntitySpawnerComponentT = new ITemplateEntitySpawnerComponentT();
@@ -181,7 +181,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return templateEntitySpawnerComponentT;
 		}
 
-		// Token: 0x06027534 RID: 161076 RVA: 0x00569234 File Offset: 0x00567434
+		// Token: 0x06029AAC RID: 170668 RVA: 0x005B0240 File Offset: 0x005AE440
 		public void UnPackTo(ITemplateEntitySpawnerComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -191,7 +191,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06027535 RID: 161077 RVA: 0x005692E8 File Offset: 0x005674E8
+		// Token: 0x06029AAD RID: 170669 RVA: 0x005B02F4 File Offset: 0x005AE4F4
 		public static Offset<ITemplateEntitySpawnerComponent> Pack(FlatBufferBuilder builder, ITemplateEntitySpawnerComponentT _o)
 		{
 			if (_o == null)
@@ -204,7 +204,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ITemplateEntitySpawnerComponent.CreateITemplateEntitySpawnerComponent(builder, _o.Disabled, spawnConditionsOffset, clearConditionsOffset, spawnConfigOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400F0D8 RID: 61656
+		// Token: 0x0400FDCF RID: 64975
 		private Table __p;
 	}
 }

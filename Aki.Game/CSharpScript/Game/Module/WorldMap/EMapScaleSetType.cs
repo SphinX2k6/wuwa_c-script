@@ -2,24 +2,24 @@
 
 namespace CSharpScript.Game.Module.WorldMap
 {
-	// Token: 0x02004783 RID: 18307
+	// Token: 0x020036B4 RID: 14004
 	public enum EMapScaleSetType
 	{
-		// Token: 0x04019D20 RID: 105760
+		// Token: 0x040143D0 RID: 82896
 		Initialize,
-		// Token: 0x04019D21 RID: 105761
+		// Token: 0x040143D1 RID: 82897
 		ZoomButton,
-		// Token: 0x04019D22 RID: 105762
+		// Token: 0x040143D2 RID: 82898
 		Gamepad,
-		// Token: 0x04019D23 RID: 105763
+		// Token: 0x040143D3 RID: 82899
 		Slider,
-		// Token: 0x04019D24 RID: 105764
+		// Token: 0x040143D4 RID: 82900
 		FingerExpandClose,
-		// Token: 0x04019D25 RID: 105765
+		// Token: 0x040143D5 RID: 82901
 		WheelInput,
-		// Token: 0x04019D26 RID: 105766
+		// Token: 0x040143D6 RID: 82902
 		Navigate,
-		// Token: 0x04019D27 RID: 105767
+		// Token: 0x040143D7 RID: 82903
 		Other
 	}
 }

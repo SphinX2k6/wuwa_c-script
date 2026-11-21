@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x0200127C RID: 4732
+	// Token: 0x020013BC RID: 5052
 	public static class ERhythmSpaceshipConditionStepExtensions
 	{
-		// Token: 0x06006AD5 RID: 27349 RVA: 0x0010030C File Offset: 0x000FE50C
+		// Token: 0x06007128 RID: 28968 RVA: 0x0010DF38 File Offset: 0x0010C138
 		public static string ToEnumString(this ERhythmSpaceshipConditionStep value)
 		{
 			string result;
@@ -20,7 +20,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006AD6 RID: 27350 RVA: 0x00100334 File Offset: 0x000FE534
+		// Token: 0x06007129 RID: 28969 RVA: 0x0010DF60 File Offset: 0x0010C160
 		public static ERhythmSpaceshipConditionStep FromString(string name)
 		{
 			ERhythmSpaceshipConditionStep result;
@@ -31,7 +31,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006AD7 RID: 27351 RVA: 0x0010035D File Offset: 0x000FE55D
+		// Token: 0x0600712A RID: 28970 RVA: 0x0010DF89 File Offset: 0x0010C189
 		public static bool TryFromString(string name, out ERhythmSpaceshipConditionStep value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -48,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			return false;
 		}
 
-		// Token: 0x06006AD8 RID: 27352 RVA: 0x00100382 File Offset: 0x000FE582
+		// Token: 0x0600712B RID: 28971 RVA: 0x0010DFAE File Offset: 0x0010C1AE
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -57,13 +57,13 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006AD9 RID: 27353 RVA: 0x00100392 File Offset: 0x000FE592
+		// Token: 0x0600712C RID: 28972 RVA: 0x0010DFBE File Offset: 0x0010C1BE
 		public static ERhythmSpaceshipConditionStep[] GetValues()
 		{
 			return new ERhythmSpaceshipConditionStep[1];
 		}
 
-		// Token: 0x06006ADA RID: 27354 RVA: 0x0010039A File Offset: 0x000FE59A
+		// Token: 0x0600712D RID: 28973 RVA: 0x0010DFC6 File Offset: 0x0010C1C6
 		public static string[] GetNames()
 		{
 			return new string[]

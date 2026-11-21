@@ -2,12 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Match
 {
-	// Token: 0x020043EB RID: 17387
+	// Token: 0x02004850 RID: 18512
 	public enum EMatchRoleType : byte
 	{
-		// Token: 0x0400C2E7 RID: 49895
+		// Token: 0x0400CD0B RID: 52491
 		Player,
-		// Token: 0x0400C2E8 RID: 49896
-		Phantom
+		// Token: 0x0400CD0C RID: 52492
+		Phantom,
+		// Token: 0x0400CD0D RID: 52493
+		AssistCharacter
 	}
 }

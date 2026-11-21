@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000A9C RID: 2716
+	// Token: 0x02000B71 RID: 2929
 	public class ConfigWorldNewJourneyById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003FBD RID: 16317 RVA: 0x001C2C57 File Offset: 0x001C0E57
+		// Token: 0x060044BB RID: 17595 RVA: 0x001E1FEB File Offset: 0x001E01EB
 		static ConfigWorldNewJourneyById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigWorldNewJourneyById.CreateStaticDefaultValue), new Action(ConfigWorldNewJourneyById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003FBE RID: 16318 RVA: 0x001C2C78 File Offset: 0x001C0E78
+		// Token: 0x060044BC RID: 17596 RVA: 0x001E200C File Offset: 0x001E020C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigWorldNewJourneyById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06003FBF RID: 16319 RVA: 0x001C2CF7 File Offset: 0x001C0EF7
+		// Token: 0x060044BD RID: 17597 RVA: 0x001E208B File Offset: 0x001E028B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigWorldNewJourneyById.LogPair = null;
 			ConfigWorldNewJourneyById.HandleId = 0;
 		}
 
-		// Token: 0x06003FC0 RID: 16320 RVA: 0x001C2D05 File Offset: 0x001C0F05
+		// Token: 0x060044BE RID: 17598 RVA: 0x001E2099 File Offset: 0x001E0299
 		public static void Init()
 		{
 			ConfigWorldNewJourneyById.HandleId = ConfigCommon.InitDataStatement(ConfigWorldNewJourneyById.HandleId, "db_worldnewjourney.db", "select BinData from `WorldNewJourney` where Id=?");
 		}
 
-		// Token: 0x06003FC1 RID: 16321 RVA: 0x001C2D20 File Offset: 0x001C0F20
+		// Token: 0x060044BF RID: 17599 RVA: 0x001E20B4 File Offset: 0x001E02B4
 		public static WorldNewJourney? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigWorldNewJourneyById.HandleId, ConfigWorldNewJourneyById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new WorldNewJourney?(rootAsWorldNewJourney);
 		}
 
-		// Token: 0x04004A2A RID: 18986
+		// Token: 0x04004FFD RID: 20477
 		private const string DB = "db_worldnewjourney.db";
 
-		// Token: 0x04004A2B RID: 18987
+		// Token: 0x04004FFE RID: 20478
 		private const string FILE = "m.鸣域新程活动.xlsx";
 
-		// Token: 0x04004A2C RID: 18988
+		// Token: 0x04004FFF RID: 20479
 		private const string TABLE = "WorldNewJourney";
 
-		// Token: 0x04004A2D RID: 18989
+		// Token: 0x04005000 RID: 20480
 		private const string COMMAND = "select BinData from `WorldNewJourney` where Id=?";
 
-		// Token: 0x04004A2E RID: 18990
+		// Token: 0x04005001 RID: 20481
 		private const string KEY_PREFIX = "WorldNewJourneyById";
 
-		// Token: 0x04004A2F RID: 18991
+		// Token: 0x04005002 RID: 20482
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004A30 RID: 18992
+		// Token: 0x04005003 RID: 20483
 		private static int HandleId;
 	}
 }

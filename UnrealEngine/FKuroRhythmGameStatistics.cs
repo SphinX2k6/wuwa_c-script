@@ -5,20 +5,20 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001C5A RID: 7258
+	// Token: 0x02000504 RID: 1284
 	[UnrealObjectPath("/Script/KuroRhythmGame.KuroRhythmGameStatistics")]
 	[UnrealStructLayout(44, 4, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 44)]
 	public class FKuroRhythmGameStatistics : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0601C2A5 RID: 115365 RVA: 0x00298354 File Offset: 0x00296554
+		// Token: 0x060078BE RID: 30910 RVA: 0x000B0FF4 File Offset: 0x000AF1F4
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FKuroRhythmGameStatistics._ScriptStructPtr != 0) ? FKuroRhythmGameStatistics._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/KuroRhythmGame.KuroRhythmGameStatistics", ref FKuroRhythmGameStatistics._ScriptStructPtr);
 		}
 
-		// Token: 0x170071F1 RID: 29169
-		// (get) Token: 0x0601C2A6 RID: 115366 RVA: 0x00298378 File Offset: 0x00296578
-		// (set) Token: 0x0601C2A7 RID: 115367 RVA: 0x00298388 File Offset: 0x00296588
+		// Token: 0x17001775 RID: 6005
+		// (get) Token: 0x060078BF RID: 30911 RVA: 0x000B1018 File Offset: 0x000AF218
+		// (set) Token: 0x060078C0 RID: 30912 RVA: 0x000B1028 File Offset: 0x000AF228
 		public unsafe int PerfectCount
 		{
 			get
@@ -31,9 +31,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170071F2 RID: 29170
-		// (get) Token: 0x0601C2A8 RID: 115368 RVA: 0x00298399 File Offset: 0x00296599
-		// (set) Token: 0x0601C2A9 RID: 115369 RVA: 0x002983A9 File Offset: 0x002965A9
+		// Token: 0x17001776 RID: 6006
+		// (get) Token: 0x060078C1 RID: 30913 RVA: 0x000B1039 File Offset: 0x000AF239
+		// (set) Token: 0x060078C2 RID: 30914 RVA: 0x000B1049 File Offset: 0x000AF249
 		public unsafe int GreatCount
 		{
 			get
@@ -46,9 +46,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170071F3 RID: 29171
-		// (get) Token: 0x0601C2AA RID: 115370 RVA: 0x002983BA File Offset: 0x002965BA
-		// (set) Token: 0x0601C2AB RID: 115371 RVA: 0x002983CA File Offset: 0x002965CA
+		// Token: 0x17001777 RID: 6007
+		// (get) Token: 0x060078C3 RID: 30915 RVA: 0x000B105A File Offset: 0x000AF25A
+		// (set) Token: 0x060078C4 RID: 30916 RVA: 0x000B106A File Offset: 0x000AF26A
 		public unsafe int GoodCount
 		{
 			get
@@ -61,9 +61,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170071F4 RID: 29172
-		// (get) Token: 0x0601C2AC RID: 115372 RVA: 0x002983DB File Offset: 0x002965DB
-		// (set) Token: 0x0601C2AD RID: 115373 RVA: 0x002983EB File Offset: 0x002965EB
+		// Token: 0x17001778 RID: 6008
+		// (get) Token: 0x060078C5 RID: 30917 RVA: 0x000B107B File Offset: 0x000AF27B
+		// (set) Token: 0x060078C6 RID: 30918 RVA: 0x000B108B File Offset: 0x000AF28B
 		public unsafe int BadCount
 		{
 			get
@@ -76,9 +76,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170071F5 RID: 29173
-		// (get) Token: 0x0601C2AE RID: 115374 RVA: 0x002983FC File Offset: 0x002965FC
-		// (set) Token: 0x0601C2AF RID: 115375 RVA: 0x0029840C File Offset: 0x0029660C
+		// Token: 0x17001779 RID: 6009
+		// (get) Token: 0x060078C7 RID: 30919 RVA: 0x000B109C File Offset: 0x000AF29C
+		// (set) Token: 0x060078C8 RID: 30920 RVA: 0x000B10AC File Offset: 0x000AF2AC
 		public unsafe int MissCount
 		{
 			get
@@ -91,9 +91,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170071F6 RID: 29174
-		// (get) Token: 0x0601C2B0 RID: 115376 RVA: 0x0029841D File Offset: 0x0029661D
-		// (set) Token: 0x0601C2B1 RID: 115377 RVA: 0x0029842D File Offset: 0x0029662D
+		// Token: 0x1700177A RID: 6010
+		// (get) Token: 0x060078C9 RID: 30921 RVA: 0x000B10BD File Offset: 0x000AF2BD
+		// (set) Token: 0x060078CA RID: 30922 RVA: 0x000B10CD File Offset: 0x000AF2CD
 		public unsafe int TotalNotes
 		{
 			get
@@ -106,9 +106,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170071F7 RID: 29175
-		// (get) Token: 0x0601C2B2 RID: 115378 RVA: 0x0029843E File Offset: 0x0029663E
-		// (set) Token: 0x0601C2B3 RID: 115379 RVA: 0x0029844E File Offset: 0x0029664E
+		// Token: 0x1700177B RID: 6011
+		// (get) Token: 0x060078CB RID: 30923 RVA: 0x000B10DE File Offset: 0x000AF2DE
+		// (set) Token: 0x060078CC RID: 30924 RVA: 0x000B10EE File Offset: 0x000AF2EE
 		public unsafe int TotalScore
 		{
 			get
@@ -121,9 +121,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170071F8 RID: 29176
-		// (get) Token: 0x0601C2B4 RID: 115380 RVA: 0x0029845F File Offset: 0x0029665F
-		// (set) Token: 0x0601C2B5 RID: 115381 RVA: 0x0029846F File Offset: 0x0029666F
+		// Token: 0x1700177C RID: 6012
+		// (get) Token: 0x060078CD RID: 30925 RVA: 0x000B10FF File Offset: 0x000AF2FF
+		// (set) Token: 0x060078CE RID: 30926 RVA: 0x000B110F File Offset: 0x000AF30F
 		public unsafe float Accuracy
 		{
 			get
@@ -136,9 +136,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170071F9 RID: 29177
-		// (get) Token: 0x0601C2B6 RID: 115382 RVA: 0x00298480 File Offset: 0x00296680
-		// (set) Token: 0x0601C2B7 RID: 115383 RVA: 0x00298490 File Offset: 0x00296690
+		// Token: 0x1700177D RID: 6013
+		// (get) Token: 0x060078CF RID: 30927 RVA: 0x000B1120 File Offset: 0x000AF320
+		// (set) Token: 0x060078D0 RID: 30928 RVA: 0x000B1130 File Offset: 0x000AF330
 		public unsafe int Combo
 		{
 			get
@@ -151,9 +151,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170071FA RID: 29178
-		// (get) Token: 0x0601C2B8 RID: 115384 RVA: 0x002984A1 File Offset: 0x002966A1
-		// (set) Token: 0x0601C2B9 RID: 115385 RVA: 0x002984B1 File Offset: 0x002966B1
+		// Token: 0x1700177E RID: 6014
+		// (get) Token: 0x060078D1 RID: 30929 RVA: 0x000B1141 File Offset: 0x000AF341
+		// (set) Token: 0x060078D2 RID: 30930 RVA: 0x000B1151 File Offset: 0x000AF351
 		public unsafe int MaxCombo
 		{
 			get
@@ -166,9 +166,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x170071FB RID: 29179
-		// (get) Token: 0x0601C2BA RID: 115386 RVA: 0x002984C2 File Offset: 0x002966C2
-		// (set) Token: 0x0601C2BB RID: 115387 RVA: 0x002984D2 File Offset: 0x002966D2
+		// Token: 0x1700177F RID: 6015
+		// (get) Token: 0x060078D3 RID: 30931 RVA: 0x000B1162 File Offset: 0x000AF362
+		// (set) Token: 0x060078D4 RID: 30932 RVA: 0x000B1172 File Offset: 0x000AF372
 		public unsafe int CurrentHiddenScoreLevel
 		{
 			get
@@ -181,96 +181,80 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x0601C2BC RID: 115388 RVA: 0x002984E3 File Offset: 0x002966E3
+		// Token: 0x060078D5 RID: 30933 RVA: 0x000B1183 File Offset: 0x000AF383
 		public FKuroRhythmGameStatistics()
 		{
 		}
 
-		// Token: 0x0601C2BD RID: 115389 RVA: 0x002984EC File Offset: 0x002966EC
-		public FKuroRhythmGameStatistics(int PerfectCount, int GreatCount, int GoodCount, int BadCount, int MissCount, int TotalNotes, int TotalScore, float Accuracy, int Combo, int MaxCombo, int CurrentHiddenScoreLevel)
-		{
-			this.PerfectCount = PerfectCount;
-			this.GreatCount = GreatCount;
-			this.GoodCount = GoodCount;
-			this.BadCount = BadCount;
-			this.MissCount = MissCount;
-			this.TotalNotes = TotalNotes;
-			this.TotalScore = TotalScore;
-			this.Accuracy = Accuracy;
-			this.Combo = Combo;
-			this.MaxCombo = MaxCombo;
-			this.CurrentHiddenScoreLevel = CurrentHiddenScoreLevel;
-		}
-
-		// Token: 0x0601C2BE RID: 115390 RVA: 0x00298554 File Offset: 0x00296754
+		// Token: 0x060078D6 RID: 30934 RVA: 0x000B118B File Offset: 0x000AF38B
 		protected override IntPtr GetUStructPtr()
 		{
 			return FKuroRhythmGameStatistics.StaticStruct();
 		}
 
-		// Token: 0x0601C2BF RID: 115391 RVA: 0x00298560 File Offset: 0x00296760
+		// Token: 0x060078D7 RID: 30935 RVA: 0x000B1197 File Offset: 0x000AF397
 		[NullableContext(2)]
 		public FKuroRhythmGameStatistics(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601C2C0 RID: 115392 RVA: 0x0029856A File Offset: 0x0029676A
+		// Token: 0x060078D8 RID: 30936 RVA: 0x000B11A1 File Offset: 0x000AF3A1
 		public FKuroRhythmGameStatistics(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601C2C1 RID: 115393 RVA: 0x00298575 File Offset: 0x00296775
+		// Token: 0x060078D9 RID: 30937 RVA: 0x000B11AC File Offset: 0x000AF3AC
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FKuroRhythmGameStatistics(Pointer, false, true);
 		}
 
-		// Token: 0x0601C2C2 RID: 115394 RVA: 0x0029857F File Offset: 0x0029677F
+		// Token: 0x060078DA RID: 30938 RVA: 0x000B11B6 File Offset: 0x000AF3B6
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FKuroRhythmGameStatistics(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x0400F285 RID: 62085
+		// Token: 0x0400335D RID: 13149
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroRhythmGame.KuroRhythmGameStatistics";
 
-		// Token: 0x0400F286 RID: 62086
+		// Token: 0x0400335E RID: 13150
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x0400F287 RID: 62087
+		// Token: 0x0400335F RID: 13151
 		internal static int __PropertyOffset_PerfectCount;
 
-		// Token: 0x0400F288 RID: 62088
+		// Token: 0x04003360 RID: 13152
 		internal static int __PropertyOffset_GreatCount;
 
-		// Token: 0x0400F289 RID: 62089
+		// Token: 0x04003361 RID: 13153
 		internal static int __PropertyOffset_GoodCount;
 
-		// Token: 0x0400F28A RID: 62090
+		// Token: 0x04003362 RID: 13154
 		internal static int __PropertyOffset_BadCount;
 
-		// Token: 0x0400F28B RID: 62091
+		// Token: 0x04003363 RID: 13155
 		internal static int __PropertyOffset_MissCount;
 
-		// Token: 0x0400F28C RID: 62092
+		// Token: 0x04003364 RID: 13156
 		internal static int __PropertyOffset_TotalNotes;
 
-		// Token: 0x0400F28D RID: 62093
+		// Token: 0x04003365 RID: 13157
 		internal static int __PropertyOffset_TotalScore;
 
-		// Token: 0x0400F28E RID: 62094
+		// Token: 0x04003366 RID: 13158
 		internal static int __PropertyOffset_Accuracy;
 
-		// Token: 0x0400F28F RID: 62095
+		// Token: 0x04003367 RID: 13159
 		internal static int __PropertyOffset_Combo;
 
-		// Token: 0x0400F290 RID: 62096
+		// Token: 0x04003368 RID: 13160
 		internal static int __PropertyOffset_MaxCombo;
 
-		// Token: 0x0400F291 RID: 62097
+		// Token: 0x04003369 RID: 13161
 		internal static int __PropertyOffset_CurrentHiddenScoreLevel;
 	}
 }

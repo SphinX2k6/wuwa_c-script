@@ -7,17 +7,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DFC RID: 19964
+	// Token: 0x02003DC5 RID: 15813
 	public class RogueInfoViewTokenElement : MediumItemGridComponent
 	{
-		// Token: 0x06033844 RID: 211012 RVA: 0x00C09C35 File Offset: 0x00C07E35
+		// Token: 0x060286AF RID: 165551 RVA: 0x00B53145 File Offset: 0x00B51345
 		[NullableContext(1)]
 		protected override string GetResourceId()
 		{
 			return "UiItem_ItemRogueElement";
 		}
 
-		// Token: 0x06033845 RID: 211013 RVA: 0x00C09C3C File Offset: 0x00C07E3C
+		// Token: 0x060286B0 RID: 165552 RVA: 0x00B5314C File Offset: 0x00B5134C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 1;
@@ -29,20 +29,20 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06033846 RID: 211014 RVA: 0x00C09C84 File Offset: 0x00C07E84
+		// Token: 0x060286B1 RID: 165553 RVA: 0x00B53194 File Offset: 0x00B51394
 		protected override void OnActivate()
 		{
 			this.GenericLayout = new GenericLayout<CommonElementItem, int>(base.GetVerticalLayout(0), new Func<CommonElementItem>(this.CreateElement), null, false, true);
 		}
 
-		// Token: 0x06033847 RID: 211015 RVA: 0x00C09CA7 File Offset: 0x00C07EA7
+		// Token: 0x060286B2 RID: 165554 RVA: 0x00B531B7 File Offset: 0x00B513B7
 		[NullableContext(1)]
 		private CommonElementItem CreateElement()
 		{
 			return new CommonElementItem();
 		}
 
-		// Token: 0x06033848 RID: 211016 RVA: 0x00C09CB0 File Offset: 0x00C07EB0
+		// Token: 0x060286B3 RID: 165555 RVA: 0x00B531C0 File Offset: 0x00B513C0
 		[NullableContext(2)]
 		protected override void OnRefresh(object param = null)
 		{
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			genericLayout.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x0401B55A RID: 111962
+		// Token: 0x04015F2D RID: 89901
 		[Nullable(new byte[]
 		{
 			2,
@@ -78,10 +78,10 @@ namespace CSharpScript.Game.Module.Roguelike
 		})]
 		private GenericLayout<CommonElementItem, int> GenericLayout;
 
-		// Token: 0x0200AF89 RID: 44937
+		// Token: 0x020099BE RID: 39358
 		private class ERogueInfoViewTokenElement
 		{
-			// Token: 0x040354C5 RID: 218309
+			// Token: 0x0402FEF8 RID: 196344
 			public const int Layout = 0;
 		}
 	}

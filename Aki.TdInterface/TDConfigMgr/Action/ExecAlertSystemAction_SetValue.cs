@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001708 RID: 5896
+	// Token: 0x02001885 RID: 6277
 	public class ExecAlertSystemAction_SetValue
 	{
-		// Token: 0x04004FD8 RID: 20440
-		[Nullable(1)]
+		// Token: 0x04005407 RID: 21511
 		public IAlertSystemOption Option;
 	}
 }

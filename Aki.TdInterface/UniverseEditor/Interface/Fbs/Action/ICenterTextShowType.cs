@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020062BA RID: 25274
+	// Token: 0x0200692B RID: 26923
 	public struct ICenterTextShowType : IFlatbufferObject
 	{
-		// Token: 0x1700BCB1 RID: 48305
-		// (get) Token: 0x0602BADD RID: 178909 RVA: 0x00603189 File Offset: 0x00601389
+		// Token: 0x1700C63B RID: 50747
+		// (get) Token: 0x0602E246 RID: 188998 RVA: 0x0064E195 File Offset: 0x0064C395
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602BADE RID: 178910 RVA: 0x00603196 File Offset: 0x00601396
+		// Token: 0x0602E247 RID: 188999 RVA: 0x0064E1A2 File Offset: 0x0064C3A2
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602BADF RID: 178911 RVA: 0x006031A0 File Offset: 0x006013A0
+		// Token: 0x0602E248 RID: 189000 RVA: 0x0064E1AC File Offset: 0x0064C3AC
 		public static ICenterTextShowType GetRootAsICenterTextShowType(ByteBuffer _bb)
 		{
 			return ICenterTextShowType.GetRootAsICenterTextShowType(_bb, default(ICenterTextShowType));
 		}
 
-		// Token: 0x0602BAE0 RID: 178912 RVA: 0x006031BC File Offset: 0x006013BC
+		// Token: 0x0602E249 RID: 189001 RVA: 0x0064E1C8 File Offset: 0x0064C3C8
 		public static ICenterTextShowType GetRootAsICenterTextShowType(ByteBuffer _bb, ICenterTextShowType obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602BAE1 RID: 178913 RVA: 0x006031D9 File Offset: 0x006013D9
+		// Token: 0x0602E24A RID: 189002 RVA: 0x0064E1E5 File Offset: 0x0064C3E5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602BAE2 RID: 178914 RVA: 0x006031E8 File Offset: 0x006013E8
+		// Token: 0x0602E24B RID: 189003 RVA: 0x0064E1F4 File Offset: 0x0064C3F4
 		public ICenterTextShowType __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700BCB2 RID: 48306
-		// (get) Token: 0x0602BAE3 RID: 178915 RVA: 0x006031F8 File Offset: 0x006013F8
+		// Token: 0x1700C63C RID: 50748
+		// (get) Token: 0x0602E24C RID: 189004 RVA: 0x0064E204 File Offset: 0x0064C404
 		public ECenterTextShowAnim Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602BAE4 RID: 178916 RVA: 0x00603234 File Offset: 0x00601434
+		// Token: 0x0602E24D RID: 189005 RVA: 0x0064E240 File Offset: 0x0064C440
 		public static Offset<ICenterTextShowType> CreateICenterTextShowType(FlatBufferBuilder builder, ECenterTextShowAnim Type = ECenterTextShowAnim.ShowAll)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ICenterTextShowType.EndICenterTextShowType(builder);
 		}
 
-		// Token: 0x0602BAE5 RID: 178917 RVA: 0x0060324A File Offset: 0x0060144A
+		// Token: 0x0602E24E RID: 189006 RVA: 0x0064E256 File Offset: 0x0064C456
 		public static void StartICenterTextShowType(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602BAE6 RID: 178918 RVA: 0x00603253 File Offset: 0x00601453
+		// Token: 0x0602E24F RID: 189007 RVA: 0x0064E25F File Offset: 0x0064C45F
 		public static void AddType(FlatBufferBuilder builder, ECenterTextShowAnim type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602BAE7 RID: 178919 RVA: 0x0060325E File Offset: 0x0060145E
+		// Token: 0x0602E250 RID: 189008 RVA: 0x0064E26A File Offset: 0x0064C46A
 		public static Offset<ICenterTextShowType> EndICenterTextShowType(FlatBufferBuilder builder)
 		{
 			return new Offset<ICenterTextShowType>(builder.EndTable());
 		}
 
-		// Token: 0x0602BAE8 RID: 178920 RVA: 0x0060326C File Offset: 0x0060146C
+		// Token: 0x0602E251 RID: 189009 RVA: 0x0064E278 File Offset: 0x0064C478
 		public ICenterTextShowTypeT UnPack()
 		{
 			ICenterTextShowTypeT centerTextShowTypeT = new ICenterTextShowTypeT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return centerTextShowTypeT;
 		}
 
-		// Token: 0x0602BAE9 RID: 178921 RVA: 0x00603287 File Offset: 0x00601487
+		// Token: 0x0602E252 RID: 189010 RVA: 0x0064E293 File Offset: 0x0064C493
 		public void UnPackTo(ICenterTextShowTypeT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602BAEA RID: 178922 RVA: 0x00603298 File Offset: 0x00601498
+		// Token: 0x0602E253 RID: 189011 RVA: 0x0064E2A4 File Offset: 0x0064C4A4
 		public static Offset<ICenterTextShowType> Pack(FlatBufferBuilder builder, ICenterTextShowTypeT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return ICenterTextShowType.CreateICenterTextShowType(builder, _o.Type);
 		}
 
-		// Token: 0x0401085C RID: 67676
+		// Token: 0x04011672 RID: 71282
 		private Table __p;
 	}
 }

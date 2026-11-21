@@ -7,10 +7,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.RogueBattle
 {
-	// Token: 0x02004E4F RID: 20047
+	// Token: 0x02003E18 RID: 15896
 	public class RogueBattleElementTipPanel : UiPanelBase
 	{
-		// Token: 0x06033AB3 RID: 211635 RVA: 0x00C18EFC File Offset: 0x00C170FC
+		// Token: 0x0602891E RID: 166174 RVA: 0x00B62424 File Offset: 0x00B60624
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Module.RogueBattle
 			};
 		}
 
-		// Token: 0x06033AB4 RID: 211636 RVA: 0x00C18F58 File Offset: 0x00C17158
+		// Token: 0x0602891F RID: 166175 RVA: 0x00B62480 File Offset: 0x00B60680
 		protected override void OnBeforeShow()
 		{
 			int totalElementCount = RogueBattleModel.Instance.GetTotalElementCount();

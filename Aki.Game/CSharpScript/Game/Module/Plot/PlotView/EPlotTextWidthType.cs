@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Plot.PlotView
 {
-	// Token: 0x0200504F RID: 20559
+	// Token: 0x0200401E RID: 16414
 	public enum EPlotTextWidthType
 	{
-		// Token: 0x0401C0A8 RID: 114856
+		// Token: 0x04016ACB RID: 92875
 		Normal,
-		// Token: 0x0401C0A9 RID: 114857
+		// Token: 0x04016ACC RID: 92876
 		Short = 700
 	}
 }

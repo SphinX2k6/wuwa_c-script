@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025D7 RID: 9687
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002896 RID: 10390
 	public class PlayCustomSequence : ActionParams
 	{
-		// Token: 0x0600D9C5 RID: 55749 RVA: 0x002079E7 File Offset: 0x00205BE7
+		// Token: 0x0600E78D RID: 59277 RVA: 0x0022409B File Offset: 0x0022229B
 		public static PlayCustomSequence Create(IPlayCustomSequence? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17003FD9 RID: 16345
-		// (get) Token: 0x0600D9C6 RID: 55750 RVA: 0x00207A06 File Offset: 0x00205C06
+		// Token: 0x1700430F RID: 17167
+		// (get) Token: 0x0600E78E RID: 59278 RVA: 0x002240BA File Offset: 0x002222BA
 		public virtual int CustomSeqId
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003FDA RID: 16346
-		// (get) Token: 0x0600D9C7 RID: 55751 RVA: 0x00207A14 File Offset: 0x00205C14
+		// Token: 0x17004310 RID: 17168
+		// (get) Token: 0x0600E78F RID: 59279 RVA: 0x002240C8 File Offset: 0x002222C8
 		public virtual List<int> WhoIds
 		{
 			get
@@ -54,8 +51,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17003FDB RID: 16347
-		// (get) Token: 0x0600D9C8 RID: 55752 RVA: 0x00207A78 File Offset: 0x00205C78
+		// Token: 0x17004311 RID: 17169
+		// (get) Token: 0x0600E790 RID: 59280 RVA: 0x0022412C File Offset: 0x0022232C
 		public virtual bool? ResetCamera
 		{
 			get
@@ -68,13 +65,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040078F1 RID: 30961
+		// Token: 0x04007F88 RID: 32648
 		private IPlayCustomSequence Instance;
 
-		// Token: 0x040078F2 RID: 30962
+		// Token: 0x04007F89 RID: 32649
 		private List<int> _WhoIdsCache;
 
-		// Token: 0x040078F3 RID: 30963
+		// Token: 0x04007F8A RID: 32650
 		private bool _WhoIdsInited;
 	}
 }

@@ -5,23 +5,23 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.BattleUi
 {
-	// Token: 0x02005C86 RID: 23686
+	// Token: 0x02004C67 RID: 19559
 	public class BattleUiEnvironmentKeyData
 	{
-		// Token: 0x0603BD56 RID: 245078 RVA: 0x00E4A7AB File Offset: 0x00E489AB
+		// Token: 0x06030CA4 RID: 199844 RVA: 0x00D9AD27 File Offset: 0x00D98F27
 		public EEnvironmentKey GetCurEnvironmentalKey()
 		{
 			return this.EnvironmentKey;
 		}
 
-		// Token: 0x0603BD57 RID: 245079 RVA: 0x00E4A7B3 File Offset: 0x00E489B3
+		// Token: 0x06030CA5 RID: 199845 RVA: 0x00D9AD2F File Offset: 0x00D98F2F
 		[NullableContext(2)]
 		public string GetCurKeyText()
 		{
 			return BattleUiEnvironmentKeyData.KeyTexts[(int)this.EnvironmentKey];
 		}
 
-		// Token: 0x0603BD58 RID: 245080 RVA: 0x00E4A7C8 File Offset: 0x00E489C8
+		// Token: 0x06030CA6 RID: 199846 RVA: 0x00D9AD44 File Offset: 0x00D98F44
 		public void Init()
 		{
 			this.EnvironmentKey = EEnvironmentKey.None;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BD59 RID: 245081 RVA: 0x00E4A80C File Offset: 0x00E48A0C
+		// Token: 0x06030CA7 RID: 199847 RVA: 0x00D9AD88 File Offset: 0x00D98F88
 		public void SetEnvironmentKeyVisible(EEnvironmentKey key, bool visible)
 		{
 			if (this.KeyVisibleList[(int)key] == visible)
@@ -65,13 +65,13 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BD5A RID: 245082 RVA: 0x00E4A884 File Offset: 0x00E48A84
+		// Token: 0x06030CA8 RID: 199848 RVA: 0x00D9AE00 File Offset: 0x00D99000
 		private void DispatchKeyChangedEvent()
 		{
 			EventSystem.Instance.Emit(EEventName.BattleUiEnvironmentKeyChanged);
 		}
 
-		// Token: 0x0603BD5B RID: 245083 RVA: 0x00E4A898 File Offset: 0x00E48A98
+		// Token: 0x06030CA9 RID: 199849 RVA: 0x00D9AE14 File Offset: 0x00D99014
 		public void OnLeaveLevel()
 		{
 			this.EnvironmentKey = EEnvironmentKey.None;
@@ -81,15 +81,15 @@ namespace CSharpScript.Game.Module.BattleUi
 			}
 		}
 
-		// Token: 0x0603BD5C RID: 245084 RVA: 0x00E4A8C6 File Offset: 0x00E48AC6
+		// Token: 0x06030CAA RID: 199850 RVA: 0x00D9AE42 File Offset: 0x00D99042
 		public void Clear()
 		{
 		}
 
-		// Token: 0x0401F30E RID: 127758
+		// Token: 0x04019DC4 RID: 105924
 		private EEnvironmentKey EnvironmentKey;
 
-		// Token: 0x0401F30F RID: 127759
+		// Token: 0x04019DC5 RID: 105925
 		[Nullable(new byte[]
 		{
 			1,
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Module.BattleUi
 			"HotKeyText_MoraleAreaSum_Name"
 		});
 
-		// Token: 0x0401F310 RID: 127760
+		// Token: 0x04019DC6 RID: 105926
 		[Nullable(1)]
 		private readonly List<bool> KeyVisibleList = new List<bool>();
 	}

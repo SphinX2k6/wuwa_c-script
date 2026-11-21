@@ -8,7 +8,7 @@ using CSharpScript.Game.Module.Weather;
 using Cysharp.Threading.Tasks;
 using UnrealEngine;
 
-// Token: 0x02002D25 RID: 11557
+// Token: 0x0200227F RID: 8831
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -17,7 +17,7 @@ using UnrealEngine;
 })]
 public class WeatherToggleItem : GridProxyAbstract<IWeatherToggleData>
 {
-	// Token: 0x060184BC RID: 99516 RVA: 0x0062F374 File Offset: 0x0062D574
+	// Token: 0x06015D5E RID: 89438 RVA: 0x00655388 File Offset: 0x00653588
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -54,7 +54,7 @@ public class WeatherToggleItem : GridProxyAbstract<IWeatherToggleData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x060184BD RID: 99517 RVA: 0x0062F524 File Offset: 0x0062D724
+	// Token: 0x06015D5F RID: 89439 RVA: 0x00655538 File Offset: 0x00653738
 	protected override void OnStart()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -65,7 +65,7 @@ public class WeatherToggleItem : GridProxyAbstract<IWeatherToggleData>
 		extendToggle.CanExecuteChange.Bind(() => !this.IsEmptySlot && (this.CanExecuteChange == null || this.CanExecuteChange(base.GridIndex)));
 	}
 
-	// Token: 0x060184BE RID: 99518 RVA: 0x0062F548 File Offset: 0x0062D748
+	// Token: 0x06015D60 RID: 89440 RVA: 0x0065555C File Offset: 0x0065375C
 	private void OnClickToggle(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -79,19 +79,19 @@ public class WeatherToggleItem : GridProxyAbstract<IWeatherToggleData>
 		}
 	}
 
-	// Token: 0x060184BF RID: 99519 RVA: 0x0062F55E File Offset: 0x0062D75E
+	// Token: 0x06015D61 RID: 89441 RVA: 0x00655572 File Offset: 0x00653772
 	public void SetToggleClickCallback(Action callback)
 	{
 		this.ClickCallback = callback;
 	}
 
-	// Token: 0x060184C0 RID: 99520 RVA: 0x0062F567 File Offset: 0x0062D767
+	// Token: 0x06015D62 RID: 89442 RVA: 0x0065557B File Offset: 0x0065377B
 	public void SetCanExecuteChange(Func<int, bool> callback)
 	{
 		this.CanExecuteChange = callback;
 	}
 
-	// Token: 0x060184C1 RID: 99521 RVA: 0x0062F570 File Offset: 0x0062D770
+	// Token: 0x06015D63 RID: 89443 RVA: 0x00655584 File Offset: 0x00653784
 	public EToggleState GetToggleState()
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -102,13 +102,13 @@ public class WeatherToggleItem : GridProxyAbstract<IWeatherToggleData>
 		return extendToggle.GetToggleState();
 	}
 
-	// Token: 0x060184C2 RID: 99522 RVA: 0x0062F584 File Offset: 0x0062D784
+	// Token: 0x06015D64 RID: 89444 RVA: 0x00655598 File Offset: 0x00653798
 	public UUIItem GetToggleItem()
 	{
 		return base.GetExtendToggle(0).GetRootComponent();
 	}
 
-	// Token: 0x060184C3 RID: 99523 RVA: 0x0062F592 File Offset: 0x0062D792
+	// Token: 0x06015D65 RID: 89445 RVA: 0x006555A6 File Offset: 0x006537A6
 	public void SetToggleStateForce(bool @checked, bool fireEvent, bool skipAnim)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -119,7 +119,7 @@ public class WeatherToggleItem : GridProxyAbstract<IWeatherToggleData>
 		extendToggle.SetToggleStateForce(@checked ? EToggleState.ETT_Checked : EToggleState.ETT_UnChecked, fireEvent, skipAnim, skipAnim);
 	}
 
-	// Token: 0x060184C4 RID: 99524 RVA: 0x0062F5B0 File Offset: 0x0062D7B0
+	// Token: 0x06015D66 RID: 89446 RVA: 0x006555C4 File Offset: 0x006537C4
 	public override void Refresh(IWeatherToggleData data, bool isSelected, int gridIndex)
 	{
 		int configId = this.ConfigId;
@@ -140,7 +140,7 @@ public class WeatherToggleItem : GridProxyAbstract<IWeatherToggleData>
 		}
 	}
 
-	// Token: 0x060184C5 RID: 99525 RVA: 0x0062F638 File Offset: 0x0062D838
+	// Token: 0x06015D67 RID: 89447 RVA: 0x0065564C File Offset: 0x0065384C
 	private void RefreshToggleState()
 	{
 		<WeatherCentralMainView>FCA3A73D83E8B3686A0EE16465F16C3C9A1E40830743953A3B3DA53602DD45085__EToggleState <WeatherCentralMainView>FCA3A73D83E8B3686A0EE16465F16C3C9A1E40830743953A3B3DA53602DD45085__EToggleState = <WeatherCentralMainView>FCA3A73D83E8B3686A0EE16465F16C3C9A1E40830743953A3B3DA53602DD45085__EToggleState.None;
@@ -186,7 +186,7 @@ public class WeatherToggleItem : GridProxyAbstract<IWeatherToggleData>
 		item5.SetUIActive(false);
 	}
 
-	// Token: 0x060184C6 RID: 99526 RVA: 0x0062F6FC File Offset: 0x0062D8FC
+	// Token: 0x06015D68 RID: 89448 RVA: 0x00655710 File Offset: 0x00653910
 	public override void OnDeselected(bool fireEvent)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(0);
@@ -197,7 +197,7 @@ public class WeatherToggleItem : GridProxyAbstract<IWeatherToggleData>
 		extendToggle.SetToggleStateForce(EToggleState.ETT_UnChecked, false, false, false);
 	}
 
-	// Token: 0x060184C7 RID: 99527 RVA: 0x0062F714 File Offset: 0x0062D914
+	// Token: 0x06015D69 RID: 89449 RVA: 0x00655728 File Offset: 0x00653928
 	public void RefreshMainPerformance()
 	{
 		if (this.ConfigId == 0)
@@ -219,7 +219,7 @@ public class WeatherToggleItem : GridProxyAbstract<IWeatherToggleData>
 		text.ShowTextNew(weatherSwitchConfig.Value.Name);
 	}
 
-	// Token: 0x060184C8 RID: 99528 RVA: 0x0062F7AC File Offset: 0x0062D9AC
+	// Token: 0x06015D6A RID: 89450 RVA: 0x006557C0 File Offset: 0x006539C0
 	public void RefreshCurrentTimeState()
 	{
 		bool flag = WeatherModel.Instance.IsCurrentTimeInValidTime(this.ConfigId);
@@ -232,7 +232,7 @@ public class WeatherToggleItem : GridProxyAbstract<IWeatherToggleData>
 		item.SetUIActive(!flag && flag2);
 	}
 
-	// Token: 0x060184C9 RID: 99529 RVA: 0x0062F7F4 File Offset: 0x0062D9F4
+	// Token: 0x06015D6B RID: 89451 RVA: 0x00655808 File Offset: 0x00653A08
 	public void RefreshCurrentTips()
 	{
 		WeatherModel instance = WeatherModel.Instance;
@@ -248,7 +248,7 @@ public class WeatherToggleItem : GridProxyAbstract<IWeatherToggleData>
 		item.SetUIActive(flag2 && flag);
 	}
 
-	// Token: 0x060184CA RID: 99530 RVA: 0x0062F860 File Offset: 0x0062DA60
+	// Token: 0x06015D6C RID: 89452 RVA: 0x00655874 File Offset: 0x00653A74
 	public void RefreshRedDot()
 	{
 		bool flag = WeatherModel.Instance.IsWeatherSwitchConfigUnlocked(this.ConfigId);
@@ -261,17 +261,17 @@ public class WeatherToggleItem : GridProxyAbstract<IWeatherToggleData>
 		item.SetUIActive(flag && !flag2);
 	}
 
-	// Token: 0x0400B479 RID: 46201
+	// Token: 0x0400B7EE RID: 47086
 	public int ConfigId;
 
-	// Token: 0x0400B47A RID: 46202
+	// Token: 0x0400B7EF RID: 47087
 	[Nullable(2)]
 	private Action ClickCallback;
 
-	// Token: 0x0400B47B RID: 46203
+	// Token: 0x0400B7F0 RID: 47088
 	[Nullable(2)]
 	private Func<int, bool> CanExecuteChange;
 
-	// Token: 0x0400B47C RID: 46204
+	// Token: 0x0400B7F1 RID: 47089
 	private bool IsEmptySlot;
 }

@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002808 RID: 10248
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002ADB RID: 10971
 	public class IFoxReversePush : ILeisureInteractType
 	{
-		// Token: 0x0600E36A RID: 58218 RVA: 0x00218582 File Offset: 0x00216782
+		// Token: 0x0600F18F RID: 61839 RVA: 0x002353E6 File Offset: 0x002335E6
 		public static IFoxReversePush Create(IFoxReversePush? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700451C RID: 17692
-		// (get) Token: 0x0600E36B RID: 58219 RVA: 0x002185A1 File Offset: 0x002167A1
+		// Token: 0x17004887 RID: 18567
+		// (get) Token: 0x0600F190 RID: 61840 RVA: 0x00235405 File Offset: 0x00233605
 		public override ELeisureInteract Type
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700451D RID: 17693
-		// (get) Token: 0x0600E36C RID: 58220 RVA: 0x002185AE File Offset: 0x002167AE
+		// Token: 0x17004888 RID: 18568
+		// (get) Token: 0x0600F191 RID: 61841 RVA: 0x00235412 File Offset: 0x00233612
 		public virtual int SplineEntityId
 		{
 			get
@@ -42,8 +39,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700451E RID: 17694
-		// (get) Token: 0x0600E36D RID: 58221 RVA: 0x002185BB File Offset: 0x002167BB
+		// Token: 0x17004889 RID: 18569
+		// (get) Token: 0x0600F192 RID: 61842 RVA: 0x0023541F File Offset: 0x0023361F
 		public virtual int SeqEntityId
 		{
 			get
@@ -52,8 +49,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x1700451F RID: 17695
-		// (get) Token: 0x0600E36E RID: 58222 RVA: 0x002185C8 File Offset: 0x002167C8
+		// Token: 0x1700488A RID: 18570
+		// (get) Token: 0x0600F193 RID: 61843 RVA: 0x0023542C File Offset: 0x0023362C
 		public virtual string SliderTag
 		{
 			get
@@ -62,8 +59,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004520 RID: 17696
-		// (get) Token: 0x0600E36F RID: 58223 RVA: 0x002185D5 File Offset: 0x002167D5
+		// Token: 0x1700488B RID: 18571
+		// (get) Token: 0x0600F194 RID: 61844 RVA: 0x00235439 File Offset: 0x00233639
 		public virtual float Radius
 		{
 			get
@@ -72,7 +69,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007DEC RID: 32236
+		// Token: 0x040084A9 RID: 33961
 		private IFoxReversePush Instance;
 	}
 }

@@ -5,17 +5,17 @@ using AkiClient.Game.Aki.Character.BaseCharacter;
 using CSharpScript.Game.Module.CombatMessage;
 using UnrealEngine;
 
-// Token: 0x02002D8F RID: 11663
+// Token: 0x020022E9 RID: 8937
 [NullableContext(1)]
 [Nullable(0)]
 public class BulletActionInitBullet : BulletActionBase
 {
-	// Token: 0x060187FB RID: 100347 RVA: 0x0063C9CE File Offset: 0x0063ABCE
+	// Token: 0x0601609D RID: 90269 RVA: 0x00662706 File Offset: 0x00660906
 	public BulletActionInitBullet(EBulletAction type) : base(type)
 	{
 	}
 
-	// Token: 0x060187FC RID: 100348 RVA: 0x0063C9D8 File Offset: 0x0063ABD8
+	// Token: 0x0601609E RID: 90270 RVA: 0x00662710 File Offset: 0x00660910
 	protected override void OnExecute()
 	{
 		BulletInfo bulletInfo = this.BulletInfo;
@@ -174,7 +174,7 @@ public class BulletActionInitBullet : BulletActionBase
 		BulletController.Instance.AddSimpleAction(bulletInfo, EBulletAction.AfterInit);
 	}
 
-	// Token: 0x060187FD RID: 100349 RVA: 0x0063CEA0 File Offset: 0x0063B0A0
+	// Token: 0x0601609F RID: 90271 RVA: 0x00662BD8 File Offset: 0x00660DD8
 	private unsafe void CheckBulletTag(int tagId, string bulletConfigId, string msg)
 	{
 		string nameByTagId = GameplayTagUtils.GetNameByTagId(tagId);
@@ -190,6 +190,6 @@ public class BulletActionInitBullet : BulletActionBase
 		}
 	}
 
-	// Token: 0x0400B5BC RID: 46524
+	// Token: 0x0400B931 RID: 47409
 	private const string BULLET_TAG_PREFIX = "子弹.";
 }

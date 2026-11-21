@@ -8,12 +8,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000684 RID: 1668
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000725 RID: 1829
 	public class IRenjuConfig
 	{
-		// Token: 0x060023B4 RID: 9140 RVA: 0x000614A0 File Offset: 0x0005F6A0
+		// Token: 0x060026D0 RID: 9936 RVA: 0x00068468 File Offset: 0x00066668
 		private IRenjuConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -28,7 +26,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060023B5 RID: 9141 RVA: 0x000614D8 File Offset: 0x0005F6D8
+		// Token: 0x060026D1 RID: 9937 RVA: 0x000684A0 File Offset: 0x000666A0
 		public static IRenjuConfig Create([Nullable(2)] IRenjuConfig instance)
 		{
 			if (instance == null)
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060023B6 RID: 9142 RVA: 0x000614EB File Offset: 0x0005F6EB
+		// Token: 0x060026D2 RID: 9938 RVA: 0x000684B3 File Offset: 0x000666B3
 		public static IRenjuConfig CreateFromSetValue([Nullable(2)] IRenjuConfig_SetValue value)
 		{
 			if (value == null)
@@ -54,7 +52,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060023B7 RID: 9143 RVA: 0x00061500 File Offset: 0x0005F700
+		// Token: 0x060026D3 RID: 9939 RVA: 0x000684C8 File Offset: 0x000666C8
 		public IRenjuConfig_SetValue ToSetValue()
 		{
 			return new IRenjuConfig_SetValue
@@ -67,9 +65,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000973 RID: 2419
-		// (get) Token: 0x060023B8 RID: 9144 RVA: 0x0006154E File Offset: 0x0005F74E
-		// (set) Token: 0x060023B9 RID: 9145 RVA: 0x00061579 File Offset: 0x0005F779
+		// Token: 0x17000A2F RID: 2607
+		// (get) Token: 0x060026D4 RID: 9940 RVA: 0x00068516 File Offset: 0x00066716
+		// (set) Token: 0x060026D5 RID: 9941 RVA: 0x00068541 File Offset: 0x00066741
 		public virtual ERenjuController Controller
 		{
 			get
@@ -90,9 +88,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000974 RID: 2420
-		// (get) Token: 0x060023BA RID: 9146 RVA: 0x00061587 File Offset: 0x0005F787
-		// (set) Token: 0x060023BB RID: 9147 RVA: 0x000615B2 File Offset: 0x0005F7B2
+		// Token: 0x17000A30 RID: 2608
+		// (get) Token: 0x060026D6 RID: 9942 RVA: 0x0006854F File Offset: 0x0006674F
+		// (set) Token: 0x060026D7 RID: 9943 RVA: 0x0006857A File Offset: 0x0006677A
 		public virtual ERenjuOrder Order
 		{
 			get
@@ -113,9 +111,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000975 RID: 2421
-		// (get) Token: 0x060023BC RID: 9148 RVA: 0x000615C0 File Offset: 0x0005F7C0
-		// (set) Token: 0x060023BD RID: 9149 RVA: 0x000615EB File Offset: 0x0005F7EB
+		// Token: 0x17000A31 RID: 2609
+		// (get) Token: 0x060026D8 RID: 9944 RVA: 0x00068588 File Offset: 0x00066788
+		// (set) Token: 0x060026D9 RID: 9945 RVA: 0x000685B3 File Offset: 0x000667B3
 		public virtual int RenjuCount
 		{
 			get
@@ -136,9 +134,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000976 RID: 2422
-		// (get) Token: 0x060023BE RID: 9150 RVA: 0x000615F9 File Offset: 0x0005F7F9
-		// (set) Token: 0x060023BF RID: 9151 RVA: 0x00061620 File Offset: 0x0005F820
+		// Token: 0x17000A32 RID: 2610
+		// (get) Token: 0x060026DA RID: 9946 RVA: 0x000685C1 File Offset: 0x000667C1
+		// (set) Token: 0x060026DB RID: 9947 RVA: 0x000685E8 File Offset: 0x000667E8
 		public virtual List<int> EntityIds
 		{
 			get
@@ -160,20 +158,20 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000977 RID: 2423
-		// (get) Token: 0x060023C0 RID: 9152 RVA: 0x00061630 File Offset: 0x0005F830
-		// (set) Token: 0x060023C1 RID: 9153 RVA: 0x000616C3 File Offset: 0x0005F8C3
+		// Token: 0x17000A33 RID: 2611
+		// (get) Token: 0x060026DC RID: 9948 RVA: 0x000685F8 File Offset: 0x000667F8
+		// (set) Token: 0x060026DD RID: 9949 RVA: 0x0006868B File Offset: 0x0006688B
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<Aki.TDConfigMgr.Action.ActionInfo> Actions
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -204,7 +202,7 @@ namespace Aki.TDConfigMgr.Component
 			[param: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			set
 			{
@@ -213,23 +211,23 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x040018A1 RID: 6305
+		// Token: 0x04001A9E RID: 6814
 		[Nullable(2)]
 		protected IRenjuConfig FbInstance;
 
-		// Token: 0x040018A2 RID: 6306
+		// Token: 0x04001A9F RID: 6815
 		[Nullable(2)]
 		protected IRenjuConfig_SetValue PocoInterface;
 
-		// Token: 0x040018A3 RID: 6307
+		// Token: 0x04001AA0 RID: 6816
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		private List<Aki.TDConfigMgr.Action.ActionInfo> _ActionsCache;
 
-		// Token: 0x040018A4 RID: 6308
+		// Token: 0x04001AA1 RID: 6817
 		private bool _ActionsInited;
 	}
 }

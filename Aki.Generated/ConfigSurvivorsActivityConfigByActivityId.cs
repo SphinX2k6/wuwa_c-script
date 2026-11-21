@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000996 RID: 2454
+	// Token: 0x02000A6B RID: 2667
 	public class ConfigSurvivorsActivityConfigByActivityId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06003998 RID: 14744 RVA: 0x0019F3E8 File Offset: 0x0019D5E8
+		// Token: 0x06003E96 RID: 16022 RVA: 0x001BE77C File Offset: 0x001BC97C
 		static ConfigSurvivorsActivityConfigByActivityId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigSurvivorsActivityConfigByActivityId.CreateStaticDefaultValue), new Action(ConfigSurvivorsActivityConfigByActivityId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06003999 RID: 14745 RVA: 0x0019F408 File Offset: 0x0019D608
+		// Token: 0x06003E97 RID: 16023 RVA: 0x001BE79C File Offset: 0x001BC99C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigSurvivorsActivityConfigByActivityId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600399A RID: 14746 RVA: 0x0019F487 File Offset: 0x0019D687
+		// Token: 0x06003E98 RID: 16024 RVA: 0x001BE81B File Offset: 0x001BCA1B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigSurvivorsActivityConfigByActivityId.LogPair = null;
 			ConfigSurvivorsActivityConfigByActivityId.HandleId = 0;
 		}
 
-		// Token: 0x0600399B RID: 14747 RVA: 0x0019F495 File Offset: 0x0019D695
+		// Token: 0x06003E99 RID: 16025 RVA: 0x001BE829 File Offset: 0x001BCA29
 		public static void Init()
 		{
 			ConfigSurvivorsActivityConfigByActivityId.HandleId = ConfigCommon.InitDataStatement(ConfigSurvivorsActivityConfigByActivityId.HandleId, "db_survivors.db", "select BinData from `SurvivorsActivityConfig` where ActivityId=?");
 		}
 
-		// Token: 0x0600399C RID: 14748 RVA: 0x0019F4B0 File Offset: 0x0019D6B0
+		// Token: 0x06003E9A RID: 16026 RVA: 0x001BE844 File Offset: 0x001BCA44
 		public static SurvivorsActivityConfig? GetConfig(int p0ActivityId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigSurvivorsActivityConfigByActivityId.HandleId, ConfigSurvivorsActivityConfigByActivityId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new SurvivorsActivityConfig?(rootAsSurvivorsActivityConfig);
 		}
 
-		// Token: 0x04004300 RID: 17152
+		// Token: 0x040048D3 RID: 18643
 		private const string DB = "db_survivors.db";
 
-		// Token: 0x04004301 RID: 17153
+		// Token: 0x040048D4 RID: 18644
 		private const string FILE = "x.幸存者_活动.xlsx";
 
-		// Token: 0x04004302 RID: 17154
+		// Token: 0x040048D5 RID: 18645
 		private const string TABLE = "SurvivorsActivityConfig";
 
-		// Token: 0x04004303 RID: 17155
+		// Token: 0x040048D6 RID: 18646
 		private const string COMMAND = "select BinData from `SurvivorsActivityConfig` where ActivityId=?";
 
-		// Token: 0x04004304 RID: 17156
+		// Token: 0x040048D7 RID: 18647
 		private const string KEY_PREFIX = "SurvivorsActivityConfigByActivityId";
 
-		// Token: 0x04004305 RID: 17157
+		// Token: 0x040048D8 RID: 18648
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04004306 RID: 17158
+		// Token: 0x040048D9 RID: 18649
 		private static int HandleId;
 	}
 }

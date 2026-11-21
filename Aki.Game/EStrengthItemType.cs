@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x02001F23 RID: 7971
+// Token: 0x020013E5 RID: 5093
 public enum EStrengthItemType
 {
-	// Token: 0x04007194 RID: 29076
+	// Token: 0x04007275 RID: 29301
 	None,
-	// Token: 0x04007195 RID: 29077
+	// Token: 0x04007276 RID: 29302
 	Default,
-	// Token: 0x04007196 RID: 29078
+	// Token: 0x04007277 RID: 29303
 	Fly,
-	// Token: 0x04007197 RID: 29079
+	// Token: 0x04007278 RID: 29304
 	MotorcycleFly,
-	// Token: 0x04007198 RID: 29080
+	// Token: 0x04007279 RID: 29305
 	Motorcycle,
-	// Token: 0x04007199 RID: 29081
+	// Token: 0x0400727A RID: 29306
 	StrengthForAimisi,
-	// Token: 0x0400719A RID: 29082
+	// Token: 0x0400727B RID: 29307
 	QingXiaoFly
 }

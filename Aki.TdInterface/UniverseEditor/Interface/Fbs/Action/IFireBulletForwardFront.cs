@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020067B6 RID: 26550
+	// Token: 0x02006E36 RID: 28214
 	public struct IFireBulletForwardFront : IFlatbufferObject
 	{
-		// Token: 0x1700C510 RID: 50448
-		// (get) Token: 0x0602E343 RID: 189251 RVA: 0x0064F400 File Offset: 0x0064D600
+		// Token: 0x1700CEC6 RID: 52934
+		// (get) Token: 0x06030B89 RID: 199561 RVA: 0x0069CB44 File Offset: 0x0069AD44
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E344 RID: 189252 RVA: 0x0064F40D File Offset: 0x0064D60D
+		// Token: 0x06030B8A RID: 199562 RVA: 0x0069CB51 File Offset: 0x0069AD51
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602E345 RID: 189253 RVA: 0x0064F414 File Offset: 0x0064D614
+		// Token: 0x06030B8B RID: 199563 RVA: 0x0069CB58 File Offset: 0x0069AD58
 		public static IFireBulletForwardFront GetRootAsIFireBulletForwardFront(ByteBuffer _bb)
 		{
 			return IFireBulletForwardFront.GetRootAsIFireBulletForwardFront(_bb, default(IFireBulletForwardFront));
 		}
 
-		// Token: 0x0602E346 RID: 189254 RVA: 0x0064F430 File Offset: 0x0064D630
+		// Token: 0x06030B8C RID: 199564 RVA: 0x0069CB74 File Offset: 0x0069AD74
 		public static IFireBulletForwardFront GetRootAsIFireBulletForwardFront(ByteBuffer _bb, IFireBulletForwardFront obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602E347 RID: 189255 RVA: 0x0064F44D File Offset: 0x0064D64D
+		// Token: 0x06030B8D RID: 199565 RVA: 0x0069CB91 File Offset: 0x0069AD91
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602E348 RID: 189256 RVA: 0x0064F45C File Offset: 0x0064D65C
+		// Token: 0x06030B8E RID: 199566 RVA: 0x0069CBA0 File Offset: 0x0069ADA0
 		public IFireBulletForwardFront __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C511 RID: 50449
-		// (get) Token: 0x0602E349 RID: 189257 RVA: 0x0064F46C File Offset: 0x0064D66C
+		// Token: 0x1700CEC7 RID: 52935
+		// (get) Token: 0x06030B8F RID: 199567 RVA: 0x0069CBB0 File Offset: 0x0069ADB0
 		public EFireBulletType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C512 RID: 50450
-		// (get) Token: 0x0602E34A RID: 189258 RVA: 0x0064F4A8 File Offset: 0x0064D6A8
+		// Token: 0x1700CEC8 RID: 52936
+		// (get) Token: 0x06030B90 RID: 199568 RVA: 0x0069CBEC File Offset: 0x0069ADEC
 		public long BulletId
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700C513 RID: 50451
-		// (get) Token: 0x0602E34B RID: 189259 RVA: 0x0064F4E8 File Offset: 0x0064D6E8
+		// Token: 0x1700CEC9 RID: 52937
+		// (get) Token: 0x06030B91 RID: 199569 RVA: 0x0069CC2C File Offset: 0x0069AE2C
 		public TTargetEntity LauncherType
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E34C RID: 189260 RVA: 0x0064F524 File Offset: 0x0064D724
+		// Token: 0x06030B92 RID: 199570 RVA: 0x0069CC68 File Offset: 0x0069AE68
 		public TTable? Launcher<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(10);
@@ -103,37 +103,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0602E34D RID: 189261 RVA: 0x0064F56C File Offset: 0x0064D76C
+		// Token: 0x06030B93 RID: 199571 RVA: 0x0069CCB0 File Offset: 0x0069AEB0
 		public IPlayerEntity LauncherAsIPlayerEntity()
 		{
 			return this.Launcher<IPlayerEntity>().Value;
 		}
 
-		// Token: 0x0602E34E RID: 189262 RVA: 0x0064F588 File Offset: 0x0064D788
+		// Token: 0x06030B94 RID: 199572 RVA: 0x0069CCCC File Offset: 0x0069AECC
 		public ISelfEntity LauncherAsISelfEntity()
 		{
 			return this.Launcher<ISelfEntity>().Value;
 		}
 
-		// Token: 0x0602E34F RID: 189263 RVA: 0x0064F5A4 File Offset: 0x0064D7A4
+		// Token: 0x06030B95 RID: 199573 RVA: 0x0069CCE8 File Offset: 0x0069AEE8
 		public ITargetEntity LauncherAsITargetEntity()
 		{
 			return this.Launcher<ITargetEntity>().Value;
 		}
 
-		// Token: 0x0602E350 RID: 189264 RVA: 0x0064F5C0 File Offset: 0x0064D7C0
+		// Token: 0x06030B96 RID: 199574 RVA: 0x0069CD04 File Offset: 0x0069AF04
 		public ITriggeredEntity LauncherAsITriggeredEntity()
 		{
 			return this.Launcher<ITriggeredEntity>().Value;
 		}
 
-		// Token: 0x0602E351 RID: 189265 RVA: 0x0064F5DC File Offset: 0x0064D7DC
+		// Token: 0x06030B97 RID: 199575 RVA: 0x0069CD20 File Offset: 0x0069AF20
 		public IVehicleEntity LauncherAsIVehicleEntity()
 		{
 			return this.Launcher<IVehicleEntity>().Value;
 		}
 
-		// Token: 0x0602E352 RID: 189266 RVA: 0x0064F5F7 File Offset: 0x0064D7F7
+		// Token: 0x06030B98 RID: 199576 RVA: 0x0069CD3B File Offset: 0x0069AF3B
 		public static Offset<IFireBulletForwardFront> CreateIFireBulletForwardFront(FlatBufferBuilder builder, EFireBulletType Type = EFireBulletType.TrackTarget, long BulletId = 0L, TTargetEntity Launcher_type = TTargetEntity.NONE, int LauncherOffset = 0)
 		{
 			builder.StartTable(4);
@@ -144,43 +144,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFireBulletForwardFront.EndIFireBulletForwardFront(builder);
 		}
 
-		// Token: 0x0602E353 RID: 189267 RVA: 0x0064F623 File Offset: 0x0064D823
+		// Token: 0x06030B99 RID: 199577 RVA: 0x0069CD67 File Offset: 0x0069AF67
 		public static void StartIFireBulletForwardFront(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x0602E354 RID: 189268 RVA: 0x0064F62C File Offset: 0x0064D82C
+		// Token: 0x06030B9A RID: 199578 RVA: 0x0069CD70 File Offset: 0x0069AF70
 		public static void AddType(FlatBufferBuilder builder, EFireBulletType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602E355 RID: 189269 RVA: 0x0064F637 File Offset: 0x0064D837
+		// Token: 0x06030B9B RID: 199579 RVA: 0x0069CD7B File Offset: 0x0069AF7B
 		public static void AddBulletId(FlatBufferBuilder builder, long bulletId)
 		{
 			builder.AddLong(1, bulletId, 0L);
 		}
 
-		// Token: 0x0602E356 RID: 189270 RVA: 0x0064F643 File Offset: 0x0064D843
+		// Token: 0x06030B9C RID: 199580 RVA: 0x0069CD87 File Offset: 0x0069AF87
 		public static void AddLauncherType(FlatBufferBuilder builder, TTargetEntity launcherType)
 		{
 			builder.AddByte(2, (byte)launcherType, 0);
 		}
 
-		// Token: 0x0602E357 RID: 189271 RVA: 0x0064F64E File Offset: 0x0064D84E
+		// Token: 0x06030B9D RID: 199581 RVA: 0x0069CD92 File Offset: 0x0069AF92
 		public static void AddLauncher(FlatBufferBuilder builder, int launcherOffset)
 		{
 			builder.AddOffset(3, launcherOffset, 0);
 		}
 
-		// Token: 0x0602E358 RID: 189272 RVA: 0x0064F659 File Offset: 0x0064D859
+		// Token: 0x06030B9E RID: 199582 RVA: 0x0069CD9D File Offset: 0x0069AF9D
 		public static Offset<IFireBulletForwardFront> EndIFireBulletForwardFront(FlatBufferBuilder builder)
 		{
 			return new Offset<IFireBulletForwardFront>(builder.EndTable());
 		}
 
-		// Token: 0x0602E359 RID: 189273 RVA: 0x0064F668 File Offset: 0x0064D868
+		// Token: 0x06030B9F RID: 199583 RVA: 0x0069CDAC File Offset: 0x0069AFAC
 		public IFireBulletForwardFrontT UnPack()
 		{
 			IFireBulletForwardFrontT fireBulletForwardFrontT = new IFireBulletForwardFrontT();
@@ -188,7 +188,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return fireBulletForwardFrontT;
 		}
 
-		// Token: 0x0602E35A RID: 189274 RVA: 0x0064F684 File Offset: 0x0064D884
+		// Token: 0x06030BA0 RID: 199584 RVA: 0x0069CDC8 File Offset: 0x0069AFC8
 		public void UnPackTo(IFireBulletForwardFrontT _o)
 		{
 			_o.Type = this.Type;
@@ -217,7 +217,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602E35B RID: 189275 RVA: 0x0064F7FC File Offset: 0x0064D9FC
+		// Token: 0x06030BA1 RID: 199585 RVA: 0x0069CF40 File Offset: 0x0069B140
 		public static Offset<IFireBulletForwardFront> Pack(FlatBufferBuilder builder, IFireBulletForwardFrontT _o)
 		{
 			if (_o == null)
@@ -229,7 +229,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IFireBulletForwardFront.CreateIFireBulletForwardFront(builder, _o.Type, _o.BulletId, launcher_type, launcherOffset);
 		}
 
-		// Token: 0x04010EC5 RID: 69317
+		// Token: 0x04011CF7 RID: 72951
 		private Table __p;
 	}
 }

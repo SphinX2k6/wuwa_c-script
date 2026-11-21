@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005849 RID: 22601
+	// Token: 0x02005E53 RID: 24147
 	public struct IRenderQuantumFollowShooter : IFlatbufferObject
 	{
-		// Token: 0x1700A8E2 RID: 43234
-		// (get) Token: 0x06026080 RID: 155776 RVA: 0x0053E3EA File Offset: 0x0053C5EA
+		// Token: 0x1700B20D RID: 45581
+		// (get) Token: 0x060285C7 RID: 165319 RVA: 0x00584C4E File Offset: 0x00582E4E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026081 RID: 155777 RVA: 0x0053E3F7 File Offset: 0x0053C5F7
+		// Token: 0x060285C8 RID: 165320 RVA: 0x00584C5B File Offset: 0x00582E5B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06026082 RID: 155778 RVA: 0x0053E400 File Offset: 0x0053C600
+		// Token: 0x060285C9 RID: 165321 RVA: 0x00584C64 File Offset: 0x00582E64
 		public static IRenderQuantumFollowShooter GetRootAsIRenderQuantumFollowShooter(ByteBuffer _bb)
 		{
 			return IRenderQuantumFollowShooter.GetRootAsIRenderQuantumFollowShooter(_bb, default(IRenderQuantumFollowShooter));
 		}
 
-		// Token: 0x06026083 RID: 155779 RVA: 0x0053E41C File Offset: 0x0053C61C
+		// Token: 0x060285CA RID: 165322 RVA: 0x00584C80 File Offset: 0x00582E80
 		public static IRenderQuantumFollowShooter GetRootAsIRenderQuantumFollowShooter(ByteBuffer _bb, IRenderQuantumFollowShooter obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06026084 RID: 155780 RVA: 0x0053E439 File Offset: 0x0053C639
+		// Token: 0x060285CB RID: 165323 RVA: 0x00584C9D File Offset: 0x00582E9D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06026085 RID: 155781 RVA: 0x0053E448 File Offset: 0x0053C648
+		// Token: 0x060285CC RID: 165324 RVA: 0x00584CAC File Offset: 0x00582EAC
 		public IRenderQuantumFollowShooter __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A8E3 RID: 43235
-		// (get) Token: 0x06026086 RID: 155782 RVA: 0x0053E458 File Offset: 0x0053C658
+		// Token: 0x1700B20E RID: 45582
+		// (get) Token: 0x060285CD RID: 165325 RVA: 0x00584CBC File Offset: 0x00582EBC
 		public ERenderSpecifiedRangeType Type
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A8E4 RID: 43236
-		// (get) Token: 0x06026087 RID: 155783 RVA: 0x0053E494 File Offset: 0x0053C694
+		// Token: 0x1700B20F RID: 45583
+		// (get) Token: 0x060285CE RID: 165326 RVA: 0x00584CF8 File Offset: 0x00582EF8
 		public TTargetEntity CenterTargetType
 		{
 			get
@@ -79,7 +79,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026088 RID: 155784 RVA: 0x0053E4D0 File Offset: 0x0053C6D0
+		// Token: 0x060285CF RID: 165327 RVA: 0x00584D34 File Offset: 0x00582F34
 		public TTable? CenterTarget<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(8);
@@ -90,38 +90,38 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x06026089 RID: 155785 RVA: 0x0053E514 File Offset: 0x0053C714
+		// Token: 0x060285D0 RID: 165328 RVA: 0x00584D78 File Offset: 0x00582F78
 		public IPlayerEntity CenterTargetAsIPlayerEntity()
 		{
 			return this.CenterTarget<IPlayerEntity>().Value;
 		}
 
-		// Token: 0x0602608A RID: 155786 RVA: 0x0053E530 File Offset: 0x0053C730
+		// Token: 0x060285D1 RID: 165329 RVA: 0x00584D94 File Offset: 0x00582F94
 		public ISelfEntity CenterTargetAsISelfEntity()
 		{
 			return this.CenterTarget<ISelfEntity>().Value;
 		}
 
-		// Token: 0x0602608B RID: 155787 RVA: 0x0053E54C File Offset: 0x0053C74C
+		// Token: 0x060285D2 RID: 165330 RVA: 0x00584DB0 File Offset: 0x00582FB0
 		public ITargetEntity CenterTargetAsITargetEntity()
 		{
 			return this.CenterTarget<ITargetEntity>().Value;
 		}
 
-		// Token: 0x0602608C RID: 155788 RVA: 0x0053E568 File Offset: 0x0053C768
+		// Token: 0x060285D3 RID: 165331 RVA: 0x00584DCC File Offset: 0x00582FCC
 		public ITriggeredEntity CenterTargetAsITriggeredEntity()
 		{
 			return this.CenterTarget<ITriggeredEntity>().Value;
 		}
 
-		// Token: 0x0602608D RID: 155789 RVA: 0x0053E584 File Offset: 0x0053C784
+		// Token: 0x060285D4 RID: 165332 RVA: 0x00584DE8 File Offset: 0x00582FE8
 		public IVehicleEntity CenterTargetAsIVehicleEntity()
 		{
 			return this.CenterTarget<IVehicleEntity>().Value;
 		}
 
-		// Token: 0x1700A8E5 RID: 43237
-		// (get) Token: 0x0602608E RID: 155790 RVA: 0x0053E5A0 File Offset: 0x0053C7A0
+		// Token: 0x1700B210 RID: 45584
+		// (get) Token: 0x060285D5 RID: 165333 RVA: 0x00584E04 File Offset: 0x00583004
 		public IVectorInfo? Center
 		{
 			get
@@ -135,8 +135,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A8E6 RID: 43238
-		// (get) Token: 0x0602608F RID: 155791 RVA: 0x0053E600 File Offset: 0x0053C800
+		// Token: 0x1700B211 RID: 45585
+		// (get) Token: 0x060285D6 RID: 165334 RVA: 0x00584E64 File Offset: 0x00583064
 		public IVectorInfo? Size
 		{
 			get
@@ -150,8 +150,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A8E7 RID: 43239
-		// (get) Token: 0x06026090 RID: 155792 RVA: 0x0053E660 File Offset: 0x0053C860
+		// Token: 0x1700B212 RID: 45586
+		// (get) Token: 0x060285D7 RID: 165335 RVA: 0x00584EC4 File Offset: 0x005830C4
 		public IVectorInfo? Rotator
 		{
 			get
@@ -165,7 +165,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06026091 RID: 155793 RVA: 0x0053E6BE File Offset: 0x0053C8BE
+		// Token: 0x060285D8 RID: 165336 RVA: 0x00584F22 File Offset: 0x00583122
 		public static Offset<IRenderQuantumFollowShooter> CreateIRenderQuantumFollowShooter(FlatBufferBuilder builder, ERenderSpecifiedRangeType Type = ERenderSpecifiedRangeType.FlowerBridge, TTargetEntity CenterTarget_type = TTargetEntity.NONE, int CenterTargetOffset = 0, Offset<IVectorInfo> CenterOffset = default(Offset<IVectorInfo>), Offset<IVectorInfo> SizeOffset = default(Offset<IVectorInfo>), Offset<IVectorInfo> RotatorOffset = default(Offset<IVectorInfo>))
 		{
 			builder.StartTable(6);
@@ -178,55 +178,55 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IRenderQuantumFollowShooter.EndIRenderQuantumFollowShooter(builder);
 		}
 
-		// Token: 0x06026092 RID: 155794 RVA: 0x0053E6FA File Offset: 0x0053C8FA
+		// Token: 0x060285D9 RID: 165337 RVA: 0x00584F5E File Offset: 0x0058315E
 		public static void StartIRenderQuantumFollowShooter(FlatBufferBuilder builder)
 		{
 			builder.StartTable(6);
 		}
 
-		// Token: 0x06026093 RID: 155795 RVA: 0x0053E703 File Offset: 0x0053C903
+		// Token: 0x060285DA RID: 165338 RVA: 0x00584F67 File Offset: 0x00583167
 		public static void AddType(FlatBufferBuilder builder, ERenderSpecifiedRangeType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06026094 RID: 155796 RVA: 0x0053E70E File Offset: 0x0053C90E
+		// Token: 0x060285DB RID: 165339 RVA: 0x00584F72 File Offset: 0x00583172
 		public static void AddCenterTargetType(FlatBufferBuilder builder, TTargetEntity centerTargetType)
 		{
 			builder.AddByte(1, (byte)centerTargetType, 0);
 		}
 
-		// Token: 0x06026095 RID: 155797 RVA: 0x0053E719 File Offset: 0x0053C919
+		// Token: 0x060285DC RID: 165340 RVA: 0x00584F7D File Offset: 0x0058317D
 		public static void AddCenterTarget(FlatBufferBuilder builder, int centerTargetOffset)
 		{
 			builder.AddOffset(2, centerTargetOffset, 0);
 		}
 
-		// Token: 0x06026096 RID: 155798 RVA: 0x0053E724 File Offset: 0x0053C924
+		// Token: 0x060285DD RID: 165341 RVA: 0x00584F88 File Offset: 0x00583188
 		public static void AddCenter(FlatBufferBuilder builder, Offset<IVectorInfo> centerOffset)
 		{
 			builder.AddOffset(3, centerOffset.Value, 0);
 		}
 
-		// Token: 0x06026097 RID: 155799 RVA: 0x0053E734 File Offset: 0x0053C934
+		// Token: 0x060285DE RID: 165342 RVA: 0x00584F98 File Offset: 0x00583198
 		public static void AddSize(FlatBufferBuilder builder, Offset<IVectorInfo> sizeOffset)
 		{
 			builder.AddOffset(4, sizeOffset.Value, 0);
 		}
 
-		// Token: 0x06026098 RID: 155800 RVA: 0x0053E744 File Offset: 0x0053C944
+		// Token: 0x060285DF RID: 165343 RVA: 0x00584FA8 File Offset: 0x005831A8
 		public static void AddRotator(FlatBufferBuilder builder, Offset<IVectorInfo> rotatorOffset)
 		{
 			builder.AddOffset(5, rotatorOffset.Value, 0);
 		}
 
-		// Token: 0x06026099 RID: 155801 RVA: 0x0053E754 File Offset: 0x0053C954
+		// Token: 0x060285E0 RID: 165344 RVA: 0x00584FB8 File Offset: 0x005831B8
 		public static Offset<IRenderQuantumFollowShooter> EndIRenderQuantumFollowShooter(FlatBufferBuilder builder)
 		{
 			return new Offset<IRenderQuantumFollowShooter>(builder.EndTable());
 		}
 
-		// Token: 0x0602609A RID: 155802 RVA: 0x0053E764 File Offset: 0x0053C964
+		// Token: 0x060285E1 RID: 165345 RVA: 0x00584FC8 File Offset: 0x005831C8
 		public IRenderQuantumFollowShooterT UnPack()
 		{
 			IRenderQuantumFollowShooterT renderQuantumFollowShooterT = new IRenderQuantumFollowShooterT();
@@ -234,7 +234,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return renderQuantumFollowShooterT;
 		}
 
-		// Token: 0x0602609B RID: 155803 RVA: 0x0053E780 File Offset: 0x0053C980
+		// Token: 0x060285E2 RID: 165346 RVA: 0x00584FE4 File Offset: 0x005831E4
 		public void UnPackTo(IRenderQuantumFollowShooterT _o)
 		{
 			_o.Type = this.Type;
@@ -263,7 +263,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.Rotator = ((this.Rotator != null) ? this.Rotator.Value.UnPack() : null);
 		}
 
-		// Token: 0x0602609C RID: 155804 RVA: 0x0053E990 File Offset: 0x0053CB90
+		// Token: 0x060285E3 RID: 165347 RVA: 0x005851F4 File Offset: 0x005833F4
 		public static Offset<IRenderQuantumFollowShooter> Pack(FlatBufferBuilder builder, IRenderQuantumFollowShooterT _o)
 		{
 			if (_o == null)
@@ -278,7 +278,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IRenderQuantumFollowShooter.CreateIRenderQuantumFollowShooter(builder, _o.Type, centerTarget_type, centerTargetOffset, centerOffset, sizeOffset, rotatorOffset);
 		}
 
-		// Token: 0x0400ED6B RID: 60779
+		// Token: 0x0400FA5A RID: 64090
 		private Table __p;
 	}
 }

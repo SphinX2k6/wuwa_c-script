@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Character.BaseCharacter.Camera;
 using UnrealEngine;
 
-// Token: 0x020001F5 RID: 501
+// Token: 0x020001F9 RID: 505
 [NullableContext(1)]
 [Nullable(0)]
 public class CameraConfig
 {
-	// Token: 0x06001F87 RID: 8071 RVA: 0x000A00B0 File Offset: 0x0009E2B0
+	// Token: 0x06002036 RID: 8246 RVA: 0x000A747C File Offset: 0x000A567C
 	public CameraConfig(SCameraConfig config)
 	{
 		this.Type = config.Type;
@@ -61,7 +61,7 @@ public class CameraConfig
 		this.CameraArmLocationSocketOverrideType = config.主控角色骨骼覆盖方式;
 	}
 
-	// Token: 0x06001F88 RID: 8072 RVA: 0x000A03CC File Offset: 0x0009E5CC
+	// Token: 0x06002037 RID: 8247 RVA: 0x000A7798 File Offset: 0x000A5998
 	[NullableContext(0)]
 	[return: Nullable(2)]
 	private static Dictionary<int, float> LoadConfigMap<TEnum>([Nullable(new byte[]
@@ -89,7 +89,7 @@ public class CameraConfig
 		return dictionary;
 	}
 
-	// Token: 0x06001F89 RID: 8073 RVA: 0x000A0450 File Offset: 0x0009E650
+	// Token: 0x06002038 RID: 8248 RVA: 0x000A7820 File Offset: 0x000A5A20
 	[NullableContext(0)]
 	[return: Nullable(new byte[]
 	{
@@ -122,147 +122,147 @@ public class CameraConfig
 		return dictionary;
 	}
 
-	// Token: 0x0400134E RID: 4942
+	// Token: 0x04001391 RID: 5009
 	public EFightCameraType Type;
 
-	// Token: 0x0400134F RID: 4943
+	// Token: 0x04001392 RID: 5010
 	public FGameplayTag? Tag;
 
-	// Token: 0x04001350 RID: 4944
+	// Token: 0x04001393 RID: 5011
 	public bool PcValid;
 
-	// Token: 0x04001351 RID: 4945
+	// Token: 0x04001394 RID: 5012
 	public bool MobileValid;
 
-	// Token: 0x04001352 RID: 4946
+	// Token: 0x04001395 RID: 5013
 	public int Priority;
 
-	// Token: 0x04001353 RID: 4947
+	// Token: 0x04001396 RID: 5014
 	public bool EnableModifyCamera;
 
-	// Token: 0x04001354 RID: 4948
+	// Token: 0x04001397 RID: 5015
 	public bool EnableAdjustCamera;
 
-	// Token: 0x04001355 RID: 4949
+	// Token: 0x04001398 RID: 5016
 	public bool EnableAutoCamera;
 
-	// Token: 0x04001356 RID: 4950
+	// Token: 0x04001399 RID: 5017
 	public bool EnableFocusCamera;
 
-	// Token: 0x04001357 RID: 4951
+	// Token: 0x0400139A RID: 5018
 	public bool EnableSidestepCamera;
 
-	// Token: 0x04001358 RID: 4952
+	// Token: 0x0400139B RID: 5019
 	public bool EnableClimbCamera;
 
-	// Token: 0x04001359 RID: 4953
+	// Token: 0x0400139C RID: 5020
 	public float FadeInTime;
 
-	// Token: 0x0400135A RID: 4954
+	// Token: 0x0400139D RID: 5021
 	public CurveBase FadeInCurve;
 
-	// Token: 0x0400135B RID: 4955
+	// Token: 0x0400139E RID: 5022
 	public float FadeOutTime;
 
-	// Token: 0x0400135C RID: 4956
+	// Token: 0x0400139F RID: 5023
 	public CurveBase FadeOutCurve;
 
-	// Token: 0x0400135D RID: 4957
+	// Token: 0x040013A0 RID: 5024
 	public bool IsOpenMainLoop;
 
-	// Token: 0x0400135E RID: 4958
+	// Token: 0x040013A1 RID: 5025
 	public string[] LockOnParts;
 
-	// Token: 0x0400135F RID: 4959
+	// Token: 0x040013A2 RID: 5026
 	public Dictionary<EFightCameraDefault, float> DefaultConfig;
 
-	// Token: 0x04001360 RID: 4960
+	// Token: 0x040013A3 RID: 5027
 	public Dictionary<EFightCameraDefault, CurveBase> DefaultCurveConfig;
 
-	// Token: 0x04001361 RID: 4961
+	// Token: 0x040013A4 RID: 5028
 	public Dictionary<int, float> AdjustConfig;
 
-	// Token: 0x04001362 RID: 4962
+	// Token: 0x040013A5 RID: 5029
 	public Dictionary<int, CurveBase> CurveAdjustConfig;
 
-	// Token: 0x04001363 RID: 4963
+	// Token: 0x040013A6 RID: 5030
 	public Dictionary<int, float> AutoConfig;
 
-	// Token: 0x04001364 RID: 4964
+	// Token: 0x040013A7 RID: 5031
 	public Dictionary<int, CurveBase> CurveAutoConfig;
 
-	// Token: 0x04001365 RID: 4965
+	// Token: 0x040013A8 RID: 5032
 	public Dictionary<int, float> FocusConfig;
 
-	// Token: 0x04001366 RID: 4966
+	// Token: 0x040013A9 RID: 5033
 	public Dictionary<int, CurveBase> CurveFocusConfig;
 
-	// Token: 0x04001367 RID: 4967
+	// Token: 0x040013AA RID: 5034
 	public Dictionary<int, float> InputConfig;
 
-	// Token: 0x04001368 RID: 4968
+	// Token: 0x040013AB RID: 5035
 	public Dictionary<int, CurveBase> CurveInputConfig;
 
-	// Token: 0x04001369 RID: 4969
+	// Token: 0x040013AC RID: 5036
 	public Dictionary<int, float> ModifyConfig;
 
-	// Token: 0x0400136A RID: 4970
+	// Token: 0x040013AD RID: 5037
 	public Dictionary<int, CurveBase> CurveModifyConfig;
 
-	// Token: 0x0400136B RID: 4971
+	// Token: 0x040013AE RID: 5038
 	public Dictionary<int, float> GuideConfig;
 
-	// Token: 0x0400136C RID: 4972
+	// Token: 0x040013AF RID: 5039
 	public Dictionary<int, CurveBase> CurveGuideConfig;
 
-	// Token: 0x0400136D RID: 4973
+	// Token: 0x040013B0 RID: 5040
 	public Dictionary<int, float> ExploreConfig;
 
-	// Token: 0x0400136E RID: 4974
+	// Token: 0x040013B1 RID: 5041
 	public Dictionary<int, CurveBase> CurveExploreConfig;
 
-	// Token: 0x0400136F RID: 4975
+	// Token: 0x040013B2 RID: 5042
 	public Dictionary<int, float> DialogueConfig;
 
-	// Token: 0x04001370 RID: 4976
+	// Token: 0x040013B3 RID: 5043
 	public Dictionary<int, CurveBase> CurveDialogueConfig;
 
-	// Token: 0x04001371 RID: 4977
+	// Token: 0x040013B4 RID: 5044
 	public Dictionary<int, float> ClimbConfig;
 
-	// Token: 0x04001372 RID: 4978
+	// Token: 0x040013B5 RID: 5045
 	public Dictionary<int, CurveBase> CurveClimbConfig;
 
-	// Token: 0x04001373 RID: 4979
+	// Token: 0x040013B6 RID: 5046
 	public Dictionary<int, float> SidestepConfig;
 
-	// Token: 0x04001374 RID: 4980
+	// Token: 0x040013B7 RID: 5047
 	public Dictionary<int, CurveBase> CurveSidestepConfig;
 
-	// Token: 0x04001375 RID: 4981
+	// Token: 0x040013B8 RID: 5048
 	public Dictionary<EFightCameraVehicle, float> VehicleConfig;
 
-	// Token: 0x04001376 RID: 4982
+	// Token: 0x040013B9 RID: 5049
 	public Dictionary<EFightCameraVehicle, CurveBase> VehicleCurveConfig;
 
-	// Token: 0x04001377 RID: 4983
+	// Token: 0x040013BA RID: 5050
 	public Dictionary<int, float> GravityConfig;
 
-	// Token: 0x04001378 RID: 4984
+	// Token: 0x040013BB RID: 5051
 	public Dictionary<int, CurveBase> GravityCurveConfig = new Dictionary<int, CurveBase>();
 
-	// Token: 0x04001379 RID: 4985
+	// Token: 0x040013BC RID: 5052
 	public bool IsResetDefaultConfig;
 
-	// Token: 0x0400137A RID: 4986
+	// Token: 0x040013BD RID: 5053
 	public bool IsResetCameraLock;
 
-	// Token: 0x0400137B RID: 4987
+	// Token: 0x040013BE RID: 5054
 	public bool IsUniqueFade;
 
-	// Token: 0x0400137C RID: 4988
+	// Token: 0x040013BF RID: 5055
 	public FName CameraArmLocationSocketName = FNameUtil.EMPTY;
 
-	// Token: 0x0400137D RID: 4989
+	// Token: 0x040013C0 RID: 5056
 	public EFightCameraSocketOverrideType CameraArmLocationSocketOverrideType;
 }

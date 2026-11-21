@@ -1,26 +1,26 @@
 ﻿using System;
 
-// Token: 0x02000FD2 RID: 4050
+// Token: 0x02000487 RID: 1159
 internal enum <FurnitureGetWayItem>FB5C190FA9C26F3F919355C0067155CEB46949D7CAA6B9C2D5BF55B00F0EC9D3A__EComponent
 {
-	// Token: 0x04002F6F RID: 12143
+	// Token: 0x04003008 RID: 12296
 	FurnitureIconTexture,
-	// Token: 0x04002F70 RID: 12144
+	// Token: 0x04003009 RID: 12297
 	FurnitureQualityIconSprite,
-	// Token: 0x04002F71 RID: 12145
+	// Token: 0x0400300A RID: 12298
 	FurnitureNameText,
-	// Token: 0x04002F72 RID: 12146
+	// Token: 0x0400300B RID: 12299
 	FurnitureDescText,
-	// Token: 0x04002F73 RID: 12147
+	// Token: 0x0400300C RID: 12300
 	OccupiedItem,
-	// Token: 0x04002F74 RID: 12148
+	// Token: 0x0400300D RID: 12301
 	ShopItem,
-	// Token: 0x04002F75 RID: 12149
+	// Token: 0x0400300E RID: 12302
 	GiftItem,
-	// Token: 0x04002F76 RID: 12150
+	// Token: 0x0400300F RID: 12303
 	ConfirmButton,
-	// Token: 0x04002F77 RID: 12151
+	// Token: 0x04003010 RID: 12304
 	LockItem,
-	// Token: 0x04002F78 RID: 12152
+	// Token: 0x04003011 RID: 12305
 	LockReasonText
 }

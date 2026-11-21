@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004A8A RID: 19082
+	// Token: 0x02004F50 RID: 20304
 	public struct ICheckIsGlobalTimeScaleEnabled : IFlatbufferObject
 	{
-		// Token: 0x17008A3E RID: 35390
-		// (get) Token: 0x0601DECC RID: 122572 RVA: 0x00433EC0 File Offset: 0x004320C0
+		// Token: 0x1700911A RID: 37146
+		// (get) Token: 0x0601F96F RID: 129391 RVA: 0x0046504C File Offset: 0x0046324C
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DECD RID: 122573 RVA: 0x00433ECD File Offset: 0x004320CD
+		// Token: 0x0601F970 RID: 129392 RVA: 0x00465059 File Offset: 0x00463259
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601DECE RID: 122574 RVA: 0x00433ED4 File Offset: 0x004320D4
+		// Token: 0x0601F971 RID: 129393 RVA: 0x00465060 File Offset: 0x00463260
 		public static ICheckIsGlobalTimeScaleEnabled GetRootAsICheckIsGlobalTimeScaleEnabled(ByteBuffer _bb)
 		{
 			return ICheckIsGlobalTimeScaleEnabled.GetRootAsICheckIsGlobalTimeScaleEnabled(_bb, default(ICheckIsGlobalTimeScaleEnabled));
 		}
 
-		// Token: 0x0601DECF RID: 122575 RVA: 0x00433EF0 File Offset: 0x004320F0
+		// Token: 0x0601F972 RID: 129394 RVA: 0x0046507C File Offset: 0x0046327C
 		public static ICheckIsGlobalTimeScaleEnabled GetRootAsICheckIsGlobalTimeScaleEnabled(ByteBuffer _bb, ICheckIsGlobalTimeScaleEnabled obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601DED0 RID: 122576 RVA: 0x00433F0D File Offset: 0x0043210D
+		// Token: 0x0601F973 RID: 129395 RVA: 0x00465099 File Offset: 0x00463299
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601DED1 RID: 122577 RVA: 0x00433F1C File Offset: 0x0043211C
+		// Token: 0x0601F974 RID: 129396 RVA: 0x004650A8 File Offset: 0x004632A8
 		public ICheckIsGlobalTimeScaleEnabled __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008A3F RID: 35391
-		// (get) Token: 0x0601DED2 RID: 122578 RVA: 0x00433F2C File Offset: 0x0043212C
+		// Token: 0x1700911B RID: 37147
+		// (get) Token: 0x0601F975 RID: 129397 RVA: 0x004650B8 File Offset: 0x004632B8
 		public ECondition Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008A40 RID: 35392
-		// (get) Token: 0x0601DED3 RID: 122579 RVA: 0x00433F68 File Offset: 0x00432168
+		// Token: 0x1700911C RID: 37148
+		// (get) Token: 0x0601F976 RID: 129398 RVA: 0x004650F4 File Offset: 0x004632F4
 		public bool Enabled
 		{
 			get
@@ -73,7 +73,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601DED4 RID: 122580 RVA: 0x00433FA7 File Offset: 0x004321A7
+		// Token: 0x0601F977 RID: 129399 RVA: 0x00465133 File Offset: 0x00463333
 		public static Offset<ICheckIsGlobalTimeScaleEnabled> CreateICheckIsGlobalTimeScaleEnabled(FlatBufferBuilder builder, ECondition Type = ECondition.CompareVar, bool Enabled = false)
 		{
 			builder.StartTable(2);
@@ -82,31 +82,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckIsGlobalTimeScaleEnabled.EndICheckIsGlobalTimeScaleEnabled(builder);
 		}
 
-		// Token: 0x0601DED5 RID: 122581 RVA: 0x00433FC4 File Offset: 0x004321C4
+		// Token: 0x0601F978 RID: 129400 RVA: 0x00465150 File Offset: 0x00463350
 		public static void StartICheckIsGlobalTimeScaleEnabled(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0601DED6 RID: 122582 RVA: 0x00433FCD File Offset: 0x004321CD
+		// Token: 0x0601F979 RID: 129401 RVA: 0x00465159 File Offset: 0x00463359
 		public static void AddType(FlatBufferBuilder builder, ECondition type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601DED7 RID: 122583 RVA: 0x00433FD8 File Offset: 0x004321D8
+		// Token: 0x0601F97A RID: 129402 RVA: 0x00465164 File Offset: 0x00463364
 		public static void AddEnabled(FlatBufferBuilder builder, bool enabled)
 		{
 			builder.AddBool(1, enabled, false);
 		}
 
-		// Token: 0x0601DED8 RID: 122584 RVA: 0x00433FE3 File Offset: 0x004321E3
+		// Token: 0x0601F97B RID: 129403 RVA: 0x0046516F File Offset: 0x0046336F
 		public static Offset<ICheckIsGlobalTimeScaleEnabled> EndICheckIsGlobalTimeScaleEnabled(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckIsGlobalTimeScaleEnabled>(builder.EndTable());
 		}
 
-		// Token: 0x0601DED9 RID: 122585 RVA: 0x00433FF0 File Offset: 0x004321F0
+		// Token: 0x0601F97C RID: 129404 RVA: 0x0046517C File Offset: 0x0046337C
 		public ICheckIsGlobalTimeScaleEnabledT UnPack()
 		{
 			ICheckIsGlobalTimeScaleEnabledT checkIsGlobalTimeScaleEnabledT = new ICheckIsGlobalTimeScaleEnabledT();
@@ -114,14 +114,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkIsGlobalTimeScaleEnabledT;
 		}
 
-		// Token: 0x0601DEDA RID: 122586 RVA: 0x0043400B File Offset: 0x0043220B
+		// Token: 0x0601F97D RID: 129405 RVA: 0x00465197 File Offset: 0x00463397
 		public void UnPackTo(ICheckIsGlobalTimeScaleEnabledT _o)
 		{
 			_o.Type = this.Type;
 			_o.Enabled = this.Enabled;
 		}
 
-		// Token: 0x0601DEDB RID: 122587 RVA: 0x00434028 File Offset: 0x00432228
+		// Token: 0x0601F97E RID: 129406 RVA: 0x004651B4 File Offset: 0x004633B4
 		public static Offset<ICheckIsGlobalTimeScaleEnabled> Pack(FlatBufferBuilder builder, ICheckIsGlobalTimeScaleEnabledT _o)
 		{
 			if (_o == null)
@@ -131,7 +131,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckIsGlobalTimeScaleEnabled.CreateICheckIsGlobalTimeScaleEnabled(builder, _o.Type, _o.Enabled);
 		}
 
-		// Token: 0x0400D2F9 RID: 54009
+		// Token: 0x0400DDD4 RID: 56788
 		private Table __p;
 	}
 }

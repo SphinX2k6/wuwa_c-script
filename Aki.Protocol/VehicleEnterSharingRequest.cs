@@ -7,19 +7,19 @@ using Google.Protobuf.Reflection;
 
 namespace Aki.Protocol
 {
-	// Token: 0x020014CB RID: 5323
+	// Token: 0x02001541 RID: 5441
 	[NetMessage(EMessageId.VehicleEnterSharingRequest)]
 	public sealed class VehicleEnterSharingRequest : IMessage<VehicleEnterSharingRequest>, IMessage, IEquatable<VehicleEnterSharingRequest>, IDeepCloneable<VehicleEnterSharingRequest>, IBufferMessage
 	{
-		// Token: 0x0601C26D RID: 115309 RVA: 0x00411C55 File Offset: 0x0040FE55
+		// Token: 0x0601CD34 RID: 118068 RVA: 0x0042D711 File Offset: 0x0042B911
 		[NullableContext(1)]
 		public static VehicleEnterSharingRequest Create()
 		{
 			return new VehicleEnterSharingRequest();
 		}
 
-		// Token: 0x17005EE9 RID: 24297
-		// (get) Token: 0x0601C26E RID: 115310 RVA: 0x00411C5C File Offset: 0x0040FE5C
+		// Token: 0x1700618A RID: 24970
+		// (get) Token: 0x0601CD35 RID: 118069 RVA: 0x0042D718 File Offset: 0x0042B918
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public static MessageDescriptor Descriptor
@@ -30,8 +30,8 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005EEA RID: 24298
-		// (get) Token: 0x0601C26F RID: 115311 RVA: 0x00411C5F File Offset: 0x0040FE5F
+		// Token: 0x1700618B RID: 24971
+		// (get) Token: 0x0601CD36 RID: 118070 RVA: 0x0042D71B File Offset: 0x0042B91B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		MessageDescriptor IMessage.Descriptor
@@ -42,14 +42,14 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601C270 RID: 115312 RVA: 0x00411C66 File Offset: 0x0040FE66
+		// Token: 0x0601CD37 RID: 118071 RVA: 0x0042D722 File Offset: 0x0042B922
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public VehicleEnterSharingRequest()
 		{
 		}
 
-		// Token: 0x0601C271 RID: 115313 RVA: 0x00411C6E File Offset: 0x0040FE6E
+		// Token: 0x0601CD38 RID: 118072 RVA: 0x0042D72A File Offset: 0x0042B92A
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public VehicleEnterSharingRequest(VehicleEnterSharingRequest other) : this()
@@ -59,7 +59,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.Clone(other._unknownFields);
 		}
 
-		// Token: 0x0601C272 RID: 115314 RVA: 0x00411C9F File Offset: 0x0040FE9F
+		// Token: 0x0601CD39 RID: 118073 RVA: 0x0042D75B File Offset: 0x0042B95B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public VehicleEnterSharingRequest Clone()
@@ -67,9 +67,9 @@ namespace Aki.Protocol
 			return new VehicleEnterSharingRequest(this);
 		}
 
-		// Token: 0x17005EEB RID: 24299
-		// (get) Token: 0x0601C273 RID: 115315 RVA: 0x00411CA7 File Offset: 0x0040FEA7
-		// (set) Token: 0x0601C274 RID: 115316 RVA: 0x00411CAF File Offset: 0x0040FEAF
+		// Token: 0x1700618C RID: 24972
+		// (get) Token: 0x0601CD3A RID: 118074 RVA: 0x0042D763 File Offset: 0x0042B963
+		// (set) Token: 0x0601CD3B RID: 118075 RVA: 0x0042D76B File Offset: 0x0042B96B
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool IsEnter
@@ -84,9 +84,9 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x17005EEC RID: 24300
-		// (get) Token: 0x0601C275 RID: 115317 RVA: 0x00411CB8 File Offset: 0x0040FEB8
-		// (set) Token: 0x0601C276 RID: 115318 RVA: 0x00411CC0 File Offset: 0x0040FEC0
+		// Token: 0x1700618D RID: 24973
+		// (get) Token: 0x0601CD3C RID: 118076 RVA: 0x0042D774 File Offset: 0x0042B974
+		// (set) Token: 0x0601CD3D RID: 118077 RVA: 0x0042D77C File Offset: 0x0042B97C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public ShareRideMode RideMode
@@ -101,7 +101,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601C277 RID: 115319 RVA: 0x00411CC9 File Offset: 0x0040FEC9
+		// Token: 0x0601CD3E RID: 118078 RVA: 0x0042D785 File Offset: 0x0042B985
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override bool Equals(object other)
@@ -109,7 +109,7 @@ namespace Aki.Protocol
 			return this.Equals(other as VehicleEnterSharingRequest);
 		}
 
-		// Token: 0x0601C278 RID: 115320 RVA: 0x00411CD7 File Offset: 0x0040FED7
+		// Token: 0x0601CD3F RID: 118079 RVA: 0x0042D793 File Offset: 0x0042B993
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public bool Equals(VehicleEnterSharingRequest other)
@@ -117,7 +117,7 @@ namespace Aki.Protocol
 			return other != null && (other == this || (this.IsEnter == other.IsEnter && this.RideMode == other.RideMode && object.Equals(this._unknownFields, other._unknownFields)));
 		}
 
-		// Token: 0x0601C279 RID: 115321 RVA: 0x00411D18 File Offset: 0x0040FF18
+		// Token: 0x0601CD40 RID: 118080 RVA: 0x0042D7D4 File Offset: 0x0042B9D4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override int GetHashCode()
@@ -138,7 +138,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601C27A RID: 115322 RVA: 0x00411D76 File Offset: 0x0040FF76
+		// Token: 0x0601CD41 RID: 118081 RVA: 0x0042D832 File Offset: 0x0042BA32
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public override string ToString()
@@ -146,7 +146,7 @@ namespace Aki.Protocol
 			return base.GetType().Name;
 		}
 
-		// Token: 0x0601C27B RID: 115323 RVA: 0x00411D83 File Offset: 0x0040FF83
+		// Token: 0x0601CD42 RID: 118082 RVA: 0x0042D83F File Offset: 0x0042BA3F
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void WriteTo(CodedOutputStream output)
@@ -154,20 +154,20 @@ namespace Aki.Protocol
 			output.WriteRawMessage(this);
 		}
 
-		// Token: 0x0601C27C RID: 115324 RVA: 0x00411D8C File Offset: 0x0040FF8C
+		// Token: 0x0601CD43 RID: 118083 RVA: 0x0042D848 File Offset: 0x0042BA48
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalWriteTo(ref WriteContext output)
 		{
+			if (this.IsEnter)
+			{
+				output.WriteRawTag(32);
+				output.WriteBool(this.IsEnter);
+			}
 			if (this.RideMode != ShareRideMode.MovieMotor)
 			{
 				output.WriteRawTag(72);
 				output.WriteEnum((int)this.RideMode);
-			}
-			if (this.IsEnter)
-			{
-				output.WriteRawTag(120);
-				output.WriteBool(this.IsEnter);
 			}
 			if (this._unknownFields != null)
 			{
@@ -175,7 +175,7 @@ namespace Aki.Protocol
 			}
 		}
 
-		// Token: 0x0601C27D RID: 115325 RVA: 0x00411DE8 File Offset: 0x0040FFE8
+		// Token: 0x0601CD44 RID: 118084 RVA: 0x0042D8A4 File Offset: 0x0042BAA4
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public int CalculateSize()
@@ -196,7 +196,7 @@ namespace Aki.Protocol
 			return num;
 		}
 
-		// Token: 0x0601C27E RID: 115326 RVA: 0x00411E34 File Offset: 0x00410034
+		// Token: 0x0601CD45 RID: 118085 RVA: 0x0042D8F0 File Offset: 0x0042BAF0
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(VehicleEnterSharingRequest other)
@@ -216,7 +216,7 @@ namespace Aki.Protocol
 			this._unknownFields = UnknownFieldSet.MergeFrom(this._unknownFields, other._unknownFields);
 		}
 
-		// Token: 0x0601C27F RID: 115327 RVA: 0x00411E84 File Offset: 0x00410084
+		// Token: 0x0601CD46 RID: 118086 RVA: 0x0042D940 File Offset: 0x0042BB40
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		public void MergeFrom(CodedInputStream input)
@@ -224,7 +224,7 @@ namespace Aki.Protocol
 			input.ReadRawMessage(this);
 		}
 
-		// Token: 0x0601C280 RID: 115328 RVA: 0x00411E90 File Offset: 0x00410090
+		// Token: 0x0601CD47 RID: 118087 RVA: 0x0042D94C File Offset: 0x0042BB4C
 		[DebuggerNonUserCode]
 		[GeneratedCode("protoc", null)]
 		void IBufferMessage.InternalMergeFrom(ref ParseContext input)
@@ -236,37 +236,37 @@ namespace Aki.Protocol
 				{
 					return;
 				}
-				if (num != 72U)
+				if (num != 32U)
 				{
-					if (num != 120U)
+					if (num != 72U)
 					{
 						this._unknownFields = UnknownFieldSet.MergeFieldFrom(this._unknownFields, ref input);
 					}
 					else
 					{
-						this.IsEnter = input.ReadBool();
+						this.RideMode = (ShareRideMode)input.ReadEnum();
 					}
 				}
 				else
 				{
-					this.RideMode = (ShareRideMode)input.ReadEnum();
+					this.IsEnter = input.ReadBool();
 				}
 			}
 		}
 
-		// Token: 0x0400A186 RID: 41350
+		// Token: 0x0400A5DF RID: 42463
 		private UnknownFieldSet _unknownFields;
 
-		// Token: 0x0400A187 RID: 41351
-		public const int IsEnterFieldNumber = 15;
+		// Token: 0x0400A5E0 RID: 42464
+		public const int IsEnterFieldNumber = 4;
 
-		// Token: 0x0400A188 RID: 41352
+		// Token: 0x0400A5E1 RID: 42465
 		private bool isEnter_;
 
-		// Token: 0x0400A189 RID: 41353
+		// Token: 0x0400A5E2 RID: 42466
 		public const int RideModeFieldNumber = 9;
 
-		// Token: 0x0400A18A RID: 41354
+		// Token: 0x0400A5E3 RID: 42467
 		private ShareRideMode rideMode_;
 	}
 }

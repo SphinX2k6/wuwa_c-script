@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E12 RID: 7698
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002045 RID: 8261
 	public class ISetBattleTag : ISendBattleStateType
 	{
-		// Token: 0x0600A4AF RID: 42159 RVA: 0x00175624 File Offset: 0x00173824
+		// Token: 0x0600AF57 RID: 44887 RVA: 0x0018B02C File Offset: 0x0018922C
 		private ISetBattleTag_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A4B0 RID: 42160 RVA: 0x0017565C File Offset: 0x0017385C
+		// Token: 0x0600AF58 RID: 44888 RVA: 0x0018B064 File Offset: 0x00189264
 		public static ISetBattleTag Create([Nullable(2)] ISetBattleTag instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A4B1 RID: 42161 RVA: 0x0017566F File Offset: 0x0017386F
+		// Token: 0x0600AF59 RID: 44889 RVA: 0x0018B077 File Offset: 0x00189277
 		public static ISetBattleTag CreateFromSetValue([Nullable(2)] ISetBattleTag_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A4B2 RID: 42162 RVA: 0x00175682 File Offset: 0x00173882
+		// Token: 0x0600AF5A RID: 44890 RVA: 0x0018B08A File Offset: 0x0018928A
 		public new ISetBattleTag_SetValue ToSetValue()
 		{
 			return new ISetBattleTag_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003293 RID: 12947
-		// (get) Token: 0x0600A4B3 RID: 42163 RVA: 0x001756A1 File Offset: 0x001738A1
-		// (set) Token: 0x0600A4B4 RID: 42164 RVA: 0x001756CC File Offset: 0x001738CC
+		// Token: 0x17003552 RID: 13650
+		// (get) Token: 0x0600AF5B RID: 44891 RVA: 0x0018B0A9 File Offset: 0x001892A9
+		// (set) Token: 0x0600AF5C RID: 44892 RVA: 0x0018B0D4 File Offset: 0x001892D4
 		public override ESetBattleStateType Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003294 RID: 12948
-		// (get) Token: 0x0600A4B5 RID: 42165 RVA: 0x001756DC File Offset: 0x001738DC
-		// (set) Token: 0x0600A4B6 RID: 42166 RVA: 0x0017576F File Offset: 0x0017396F
+		// Token: 0x17003553 RID: 13651
+		// (get) Token: 0x0600AF5D RID: 44893 RVA: 0x0018B0E4 File Offset: 0x001892E4
+		// (set) Token: 0x0600AF5E RID: 44894 RVA: 0x0018B177 File Offset: 0x00189377
 		public virtual List<ISetEntityTag> SetTags
 		{
 			get
@@ -122,18 +120,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04006294 RID: 25236
+		// Token: 0x0400686B RID: 26731
 		[Nullable(2)]
 		protected new ISetBattleTag FbInstance;
 
-		// Token: 0x04006295 RID: 25237
+		// Token: 0x0400686C RID: 26732
 		[Nullable(2)]
 		protected new ISetBattleTag_SetValue PocoInterface;
 
-		// Token: 0x04006296 RID: 25238
+		// Token: 0x0400686D RID: 26733
 		private List<ISetEntityTag> _SetTagsCache;
 
-		// Token: 0x04006297 RID: 25239
+		// Token: 0x0400686E RID: 26734
 		private bool _SetTagsInited;
 	}
 }

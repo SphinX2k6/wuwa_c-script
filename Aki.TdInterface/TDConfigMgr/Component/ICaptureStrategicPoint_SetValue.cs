@@ -1,37 +1,35 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000214 RID: 532
+	// Token: 0x0200023B RID: 571
 	public class ICaptureStrategicPoint_SetValue
 	{
-		// Token: 0x04000976 RID: 2422
+		// Token: 0x04000A00 RID: 2560
 		public EProgressBarControlType Type;
 
-		// Token: 0x04000977 RID: 2423
+		// Token: 0x04000A01 RID: 2561
 		public int MaxValue;
 
-		// Token: 0x04000978 RID: 2424
+		// Token: 0x04000A02 RID: 2562
 		public int InitValue;
 
-		// Token: 0x04000979 RID: 2425
+		// Token: 0x04000A03 RID: 2563
 		public int? ProgressPerformanceAttribute;
 
-		// Token: 0x0400097A RID: 2426
+		// Token: 0x04000A04 RID: 2564
 		public int IncreaseSpeed;
 
-		// Token: 0x0400097B RID: 2427
+		// Token: 0x04000A05 RID: 2565
 		public int DecreaseSpeed;
 
-		// Token: 0x0400097C RID: 2428
+		// Token: 0x04000A06 RID: 2566
 		public int? UnoccupiedDecreaseSpeed;
 
-		// Token: 0x0400097D RID: 2429
-		[Nullable(1)]
+		// Token: 0x04000A07 RID: 2567
 		public IStaticEntitiyMatch EnemyEntitiyMatch;
 
-		// Token: 0x0400097E RID: 2430
+		// Token: 0x04000A08 RID: 2568
 		public ECaptureStateType? CaptureType;
 	}
 }

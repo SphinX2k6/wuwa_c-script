@@ -11,12 +11,12 @@ using CSharpScript.Game.Input;
 using CSharpScript.Game.Module.Teleport;
 using Google.Protobuf.Collections;
 
-// Token: 0x020031A5 RID: 12709
-[NullableContext(2)]
+// Token: 0x02002714 RID: 10004
+[NullableContext(1)]
 [Nullable(0)]
 public class CharacterVisionComponent : EntityComponent
 {
-	// Token: 0x0601B61B RID: 112155 RVA: 0x0077C5A8 File Offset: 0x0077A7A8
+	// Token: 0x06019144 RID: 102724 RVA: 0x007A47E4 File Offset: 0x007A29E4
 	protected override bool OnStart()
 	{
 		EntityComponentPb valueOrDefault = base.Entity.GetComponent<CreatureDataComponent>().ComponentDataMap.GetValueOrDefault("VisionSkillComponent");
@@ -56,7 +56,7 @@ public class CharacterVisionComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601B61C RID: 112156 RVA: 0x0077C6F8 File Offset: 0x0077A8F8
+	// Token: 0x06019145 RID: 102725 RVA: 0x007A4934 File Offset: 0x007A2B34
 	protected override bool OnEnd()
 	{
 		foreach (GameplayAbilityVisionBase gameplayAbilityVisionBase in this.GameplayAbilityVisionMap.Values)
@@ -74,7 +74,7 @@ public class CharacterVisionComponent : EntityComponent
 		return true;
 	}
 
-	// Token: 0x0601B61D RID: 112157 RVA: 0x0077C7C0 File Offset: 0x0077A9C0
+	// Token: 0x06019146 RID: 102726 RVA: 0x007A49FC File Offset: 0x007A2BFC
 	protected override void OnTick(float delta)
 	{
 		foreach (GameplayAbilityVisionBase gameplayAbilityVisionBase in this.GameplayAbilityVisionMap.Values)
@@ -83,8 +83,7 @@ public class CharacterVisionComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601B61E RID: 112158 RVA: 0x0077C818 File Offset: 0x0077AA18
-	[NullableContext(1)]
+	// Token: 0x06019147 RID: 102727 RVA: 0x007A4A54 File Offset: 0x007A2C54
 	public void SetVisionData(VisionSkillChangeNotify data)
 	{
 		this.VisionInformationList = new List<VisionSkillInformation>(data.VisionSkillInfos);
@@ -92,7 +91,7 @@ public class CharacterVisionComponent : EntityComponent
 		this.RefreshVisionIdList();
 	}
 
-	// Token: 0x0601B61F RID: 112159 RVA: 0x0077C840 File Offset: 0x0077AA40
+	// Token: 0x06019148 RID: 102728 RVA: 0x007A4A7C File Offset: 0x007A2C7C
 	public int GetVisionLevel()
 	{
 		int currentPosition = this.GetCurrentPosition();
@@ -103,7 +102,7 @@ public class CharacterVisionComponent : EntityComponent
 		return this.VisionInformationList[currentPosition].Quality;
 	}
 
-	// Token: 0x0601B620 RID: 112160 RVA: 0x0077C884 File Offset: 0x0077AA84
+	// Token: 0x06019149 RID: 102729 RVA: 0x007A4AC0 File Offset: 0x007A2CC0
 	public int GetVisionLevelByBuffId(long buffId)
 	{
 		if (this.VisionInformationList != null)
@@ -120,7 +119,7 @@ public class CharacterVisionComponent : EntityComponent
 		return -1;
 	}
 
-	// Token: 0x0601B621 RID: 112161 RVA: 0x0077C900 File Offset: 0x0077AB00
+	// Token: 0x0601914A RID: 102730 RVA: 0x007A4B3C File Offset: 0x007A2D3C
 	public int GetVisionLevelByDamageId(long damageId)
 	{
 		if (this.VisionInformationList != null)
@@ -137,7 +136,8 @@ public class CharacterVisionComponent : EntityComponent
 		return -1;
 	}
 
-	// Token: 0x0601B622 RID: 112162 RVA: 0x0077C97C File Offset: 0x0077AB7C
+	// Token: 0x0601914B RID: 102731 RVA: 0x007A4BB8 File Offset: 0x007A2DB8
+	[NullableContext(2)]
 	public SVisionData GetVisionData(int visionId)
 	{
 		if (Array.IndexOf<int>(this.VisionIdList, visionId) < 0)
@@ -147,10 +147,16 @@ public class CharacterVisionComponent : EntityComponent
 		return PhantomUtil.GetVisionData(visionId);
 	}
 
-	// Token: 0x0601B623 RID: 112163 RVA: 0x0077C998 File Offset: 0x0077AB98
+	// Token: 0x0601914C RID: 102732 RVA: 0x007A4BD4 File Offset: 0x007A2DD4
 	public bool ActivateAbilityVision(EVisionType visionType)
 	{
-		bool flag = this.GameplayAbilityVisionMap.ContainsKey(visionType) && this.GameplayAbilityVisionMap[visionType].ActivateAbility();
+		GameplayAbilityVisionBase valueOrDefault = this.GameplayAbilityVisionMap.GetValueOrDefault(visionType);
+		GameplayAbilityVisionMorph gameplayAbilityVisionMorph = valueOrDefault as GameplayAbilityVisionMorph;
+		if (gameplayAbilityVisionMorph != null)
+		{
+			this.TryInterruptConflictMorph(gameplayAbilityVisionMorph);
+		}
+		bool flag = valueOrDefault != null && valueOrDefault.ActivateAbility();
 		if (flag && (visionType == EVisionType.召唤 || visionType == EVisionType.变身 || visionType == EVisionType.驻场))
 		{
 			SceneTeamController.Instance.EmitEvent<int>(base.Entity, EEventName.ActivateAbilityVision, this.GetVisionId(new int?(0)));
@@ -159,13 +165,13 @@ public class CharacterVisionComponent : EntityComponent
 		return flag;
 	}
 
-	// Token: 0x0601B624 RID: 112164 RVA: 0x0077CA08 File Offset: 0x0077AC08
+	// Token: 0x0601914D RID: 102733 RVA: 0x007A4C4B File Offset: 0x007A2E4B
 	public bool EndAbilityVision(EVisionType visionType)
 	{
 		return this.GameplayAbilityVisionMap.ContainsKey(visionType) && this.GameplayAbilityVisionMap[visionType].EndAbility();
 	}
 
-	// Token: 0x0601B625 RID: 112165 RVA: 0x0077CA2C File Offset: 0x0077AC2C
+	// Token: 0x0601914E RID: 102734 RVA: 0x007A4C70 File Offset: 0x007A2E70
 	public int GetVisionId(int? pos = null)
 	{
 		int num = pos ?? this.GetCurrentPosition();
@@ -176,7 +182,7 @@ public class CharacterVisionComponent : EntityComponent
 		return this.VisionIdList[num];
 	}
 
-	// Token: 0x0601B626 RID: 112166 RVA: 0x0077CA6D File Offset: 0x0077AC6D
+	// Token: 0x0601914F RID: 102735 RVA: 0x007A4CB1 File Offset: 0x007A2EB1
 	public int GetVisionControlSkillId()
 	{
 		VisionSkillInformation visionControlSkillInfo = this.VisionControlSkillInfo;
@@ -187,7 +193,7 @@ public class CharacterVisionComponent : EntityComponent
 		return visionControlSkillInfo.SkillId;
 	}
 
-	// Token: 0x0601B627 RID: 112167 RVA: 0x0077CA80 File Offset: 0x0077AC80
+	// Token: 0x06019150 RID: 102736 RVA: 0x007A4CC4 File Offset: 0x007A2EC4
 	public bool HandlePress(AkiClient.Game.Aki.Character.Input.Enum.EInputAction action, float time)
 	{
 		using (Dictionary<EVisionType, GameplayAbilityVisionBase>.ValueCollection.Enumerator enumerator = this.GameplayAbilityVisionMap.Values.GetEnumerator())
@@ -203,7 +209,7 @@ public class CharacterVisionComponent : EntityComponent
 		return false;
 	}
 
-	// Token: 0x0601B628 RID: 112168 RVA: 0x0077CAE0 File Offset: 0x0077ACE0
+	// Token: 0x06019151 RID: 102737 RVA: 0x007A4D24 File Offset: 0x007A2F24
 	public void SetCurrentPosition(int pos)
 	{
 		if (this.Position != pos)
@@ -213,13 +219,13 @@ public class CharacterVisionComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601B629 RID: 112169 RVA: 0x0077CB09 File Offset: 0x0077AD09
+	// Token: 0x06019152 RID: 102738 RVA: 0x007A4D4D File Offset: 0x007A2F4D
 	public int GetCurrentPosition()
 	{
 		return this.Position;
 	}
 
-	// Token: 0x0601B62A RID: 112170 RVA: 0x0077CB14 File Offset: 0x0077AD14
+	// Token: 0x06019153 RID: 102739 RVA: 0x007A4D58 File Offset: 0x007A2F58
 	public long GetVisionCreatureDataId()
 	{
 		int currentPosition = this.GetCurrentPosition();
@@ -230,7 +236,7 @@ public class CharacterVisionComponent : EntityComponent
 		return MathUtils.Instance.LongToNumber(this.VisionInformationList[currentPosition].VisionEntityId);
 	}
 
-	// Token: 0x0601B62B RID: 112171 RVA: 0x0077CB60 File Offset: 0x0077AD60
+	// Token: 0x06019154 RID: 102740 RVA: 0x007A4DA4 File Offset: 0x007A2FA4
 	private void RefreshVisionIdList()
 	{
 		VisionSkillInformation visionSkillInformation = null;
@@ -271,7 +277,7 @@ public class CharacterVisionComponent : EntityComponent
 		component.ModifyCdInfo(PhantomUtil.GetSkillGroupId(visionSkillInformation.SkillId), (float)PhantomUtil.GetSkillCd(visionSkillInformation.SkillId));
 	}
 
-	// Token: 0x0601B62C RID: 112172 RVA: 0x0077CC44 File Offset: 0x0077AE44
+	// Token: 0x06019155 RID: 102741 RVA: 0x007A4E88 File Offset: 0x007A3088
 	private void OnTeleportStart(bool loading)
 	{
 		foreach (GameplayAbilityVisionBase gameplayAbilityVisionBase in this.GameplayAbilityVisionMap.Values)
@@ -292,7 +298,8 @@ public class CharacterVisionComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601B62D RID: 112173 RVA: 0x0077CD1C File Offset: 0x0077AF1C
+	// Token: 0x06019156 RID: 102742 RVA: 0x007A4F60 File Offset: 0x007A3160
+	[NullableContext(2)]
 	private void OnTeleportComplete(TeleportContext teleportContext)
 	{
 		if (this.VisionInformationList == null)
@@ -332,8 +339,7 @@ public class CharacterVisionComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601B62E RID: 112174 RVA: 0x0077CE3C File Offset: 0x0077B03C
-	[NullableContext(1)]
+	// Token: 0x06019157 RID: 102743 RVA: 0x007A5080 File Offset: 0x007A3280
 	private void OnSkillTargetChanged([Nullable(2)] EntityHandle skillTarget, string skillTargetSocket)
 	{
 		EntityHandle summonedEntity = PhantomUtil.GetSummonedEntity(base.Entity, ESummonType.ConcomitantVision, 1);
@@ -355,7 +361,7 @@ public class CharacterVisionComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601B62F RID: 112175 RVA: 0x0077CE88 File Offset: 0x0077B088
+	// Token: 0x06019158 RID: 102744 RVA: 0x007A50CC File Offset: 0x007A32CC
 	private void AddVisionInputLayer()
 	{
 		this.InputLayer = (InputController.Instance.CreateInputLayer(EInputLayer.Vision) as VisionInputLayer);
@@ -370,7 +376,7 @@ public class CharacterVisionComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601B630 RID: 112176 RVA: 0x0077CEEE File Offset: 0x0077B0EE
+	// Token: 0x06019159 RID: 102745 RVA: 0x007A5132 File Offset: 0x007A3332
 	private void RemoveVisionInputLayer()
 	{
 		if (this.InputLayer != null)
@@ -381,7 +387,48 @@ public class CharacterVisionComponent : EntityComponent
 		}
 	}
 
-	// Token: 0x0601B631 RID: 112177 RVA: 0x0077CF1C File Offset: 0x0077B11C
+	// Token: 0x0601915A RID: 102746 RVA: 0x007A5160 File Offset: 0x007A3360
+	public void InitAbilityVision(EVisionType visionType)
+	{
+		if (this.GameplayAbilityVisionMap.ContainsKey(visionType))
+		{
+			return;
+		}
+		Func<CharacterVisionComponent, GameplayAbilityVisionBase> func = null;
+		foreach (ValueTuple<EVisionType, Func<CharacterVisionComponent, GameplayAbilityVisionBase>> valueTuple in visionTypes.Value)
+		{
+			EVisionType item = valueTuple.Item1;
+			Func<CharacterVisionComponent, GameplayAbilityVisionBase> item2 = valueTuple.Item2;
+			if (item == visionType)
+			{
+				func = item2;
+				break;
+			}
+		}
+		if (func == null)
+		{
+			return;
+		}
+		this.GameplayAbilityVisionMap[visionType] = GameplayAbilityVisionBase.Spawn(func, this);
+	}
+
+	// Token: 0x0601915B RID: 102747 RVA: 0x007A51C8 File Offset: 0x007A33C8
+	private void TryInterruptConflictMorph(GameplayAbilityVisionMorph incoming)
+	{
+		foreach (GameplayAbilityVisionBase gameplayAbilityVisionBase in this.GameplayAbilityVisionMap.Values)
+		{
+			if (gameplayAbilityVisionBase != incoming && gameplayAbilityVisionBase is GameplayAbilityVisionMorph)
+			{
+				GameplayAbilityVisionMorph gameplayAbilityVisionMorph = gameplayAbilityVisionBase as GameplayAbilityVisionMorph;
+				if (gameplayAbilityVisionMorph.IsMorphActivating && (gameplayAbilityVisionMorph.CanInterruptMorph() || incoming.CanInterruptMorph()))
+				{
+					gameplayAbilityVisionMorph.InterruptMorph();
+				}
+			}
+		}
+	}
+
+	// Token: 0x0601915C RID: 102748 RVA: 0x007A524C File Offset: 0x007A344C
 	private void VisionTriggerPush(int visionId)
 	{
 		VisionTriggerPush visionTriggerPush = Aki.Protocol.VisionTriggerPush.Create();
@@ -389,7 +436,8 @@ public class CharacterVisionComponent : EntityComponent
 		CombatNet.Instance.Send(EPushMessageId.VisionTriggerPush, base.Entity, visionTriggerPush, null, null, null);
 	}
 
-	// Token: 0x0601B632 RID: 112178 RVA: 0x0077CF68 File Offset: 0x0077B168
+	// Token: 0x0601915D RID: 102749 RVA: 0x007A5298 File Offset: 0x007A3498
+	[NullableContext(2)]
 	[CombatListen(ENotifyMessageId.VisionTriggerNotify, true, false)]
 	public static void VisionTriggerNotify(Entity entity, [Nullable(1)] VisionTriggerNotify data, CombatCommon combatCommon = null)
 	{
@@ -401,8 +449,7 @@ public class CharacterVisionComponent : EntityComponent
 		SceneTeamController.Instance.EmitEvent<int>(entity, EEventName.ActivateAbilityVision, numberId);
 	}
 
-	// Token: 0x0601B633 RID: 112179 RVA: 0x0077CF94 File Offset: 0x0077B194
-	[NullableContext(1)]
+	// Token: 0x0601915E RID: 102750 RVA: 0x007A52C4 File Offset: 0x007A34C4
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
 		if (!base.ClearComponent(componentTemplate))
@@ -410,73 +457,85 @@ public class CharacterVisionComponent : EntityComponent
 			return false;
 		}
 		CharacterVisionComponent characterVisionComponent = (CharacterVisionComponent)componentTemplate;
-		if (base.CanResetComponentProperty("VisionInformationList"))
+		if (characterVisionComponent.VisionInformationList == null)
 		{
-			if (characterVisionComponent.VisionInformationList == null)
-			{
-				this.VisionInformationList = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<VisionSkillInformation>>(this.VisionInformationList), "VisionInformationList"))
-			{
-				return false;
-			}
+			this.VisionInformationList = null;
 		}
-		if (base.CanResetComponentProperty("VisionControlSkillInfo"))
-		{
-			if (characterVisionComponent.VisionControlSkillInfo == null)
-			{
-				this.VisionControlSkillInfo = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VisionSkillInformation>(this.VisionControlSkillInfo), "VisionControlSkillInfo"))
-			{
-				return false;
-			}
-		}
-		if (base.CanResetComponentProperty("GameplayAbilityVisionMap") && characterVisionComponent.GameplayAbilityVisionMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<EVisionType, GameplayAbilityVisionBase>>(this.GameplayAbilityVisionMap), "GameplayAbilityVisionMap"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.VisionInformationList), "VisionInformationList"))
 		{
 			return false;
 		}
-		if (base.CanResetComponentProperty("VisionIdList"))
+		if (characterVisionComponent.VisionControlSkillInfo == null)
 		{
-			if (characterVisionComponent.VisionIdList == null)
-			{
-				this.VisionIdList = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<int[]>(this.VisionIdList), "VisionIdList"))
-			{
-				return false;
-			}
+			this.VisionControlSkillInfo = null;
 		}
-		if (base.CanResetComponentProperty("InputLayer"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.VisionControlSkillInfo), "VisionControlSkillInfo"))
 		{
-			if (characterVisionComponent.InputLayer == null)
-			{
-				this.InputLayer = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<VisionInputLayer>(this.InputLayer), "InputLayer"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("VisionTriggerTask"))
+		if (characterVisionComponent.GameplayAbilityVisionMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.GameplayAbilityVisionMap), "GameplayAbilityVisionMap"))
 		{
-			if (characterVisionComponent.VisionTriggerTask == null)
-			{
-				this.VisionTriggerTask = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<ITagTask>(this.VisionTriggerTask), "VisionTriggerTask"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("Position"))
+		if (characterVisionComponent.VisionIdList == null)
 		{
-			this.Position = characterVisionComponent.Position;
+			this.VisionIdList = null;
 		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.VisionIdList), "VisionIdList"))
+		{
+			return false;
+		}
+		if (characterVisionComponent.InputLayer == null)
+		{
+			this.InputLayer = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.InputLayer), "InputLayer"))
+		{
+			return false;
+		}
+		if (characterVisionComponent.VisionTriggerTask == null)
+		{
+			this.VisionTriggerTask = null;
+		}
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.VisionTriggerTask), "VisionTriggerTask"))
+		{
+			return false;
+		}
+		this.Position = characterVisionComponent.Position;
 		return true;
 	}
 
-	// Token: 0x0400D683 RID: 54915
+	// Token: 0x170027D2 RID: 10194
+	// (get) Token: 0x0601915F RID: 102751 RVA: 0x007A53E9 File Offset: 0x007A35E9
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170027D3 RID: 10195
+	// (get) Token: 0x06019160 RID: 102752 RVA: 0x007A53EC File Offset: 0x007A35EC
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x170027D4 RID: 10196
+	// (get) Token: 0x06019161 RID: 102753 RVA: 0x007A53EF File Offset: 0x007A35EF
+	public override bool NeedTickInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400DB09 RID: 56073
 	[Nullable(new byte[]
 	{
 		2,
@@ -484,23 +543,24 @@ public class CharacterVisionComponent : EntityComponent
 	})]
 	private List<VisionSkillInformation> VisionInformationList;
 
-	// Token: 0x0400D684 RID: 54916
+	// Token: 0x0400DB0A RID: 56074
+	[Nullable(2)]
 	private VisionSkillInformation VisionControlSkillInfo;
 
-	// Token: 0x0400D685 RID: 54917
-	[Nullable(1)]
+	// Token: 0x0400DB0B RID: 56075
 	private readonly Dictionary<EVisionType, GameplayAbilityVisionBase> GameplayAbilityVisionMap = new Dictionary<EVisionType, GameplayAbilityVisionBase>();
 
-	// Token: 0x0400D686 RID: 54918
-	[Nullable(1)]
+	// Token: 0x0400DB0C RID: 56076
 	private int[] VisionIdList = new int[0];
 
-	// Token: 0x0400D687 RID: 54919
+	// Token: 0x0400DB0D RID: 56077
+	[Nullable(2)]
 	private VisionInputLayer InputLayer;
 
-	// Token: 0x0400D688 RID: 54920
+	// Token: 0x0400DB0E RID: 56078
+	[Nullable(2)]
 	private ITagTask VisionTriggerTask;
 
-	// Token: 0x0400D689 RID: 54921
+	// Token: 0x0400DB0F RID: 56079
 	private int Position = -1;
 }

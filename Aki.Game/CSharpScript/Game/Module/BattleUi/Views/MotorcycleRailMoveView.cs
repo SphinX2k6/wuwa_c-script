@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005D97 RID: 23959
+	// Token: 0x02004D79 RID: 19833
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class MotorcycleRailMoveView : UiTickViewBase
 	{
-		// Token: 0x0603CCD7 RID: 249047 RVA: 0x00E997DC File Offset: 0x00E979DC
+		// Token: 0x06031C34 RID: 203828 RVA: 0x00DEA094 File Offset: 0x00DE8294
 		public MotorcycleRailMoveView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603CCD8 RID: 249048 RVA: 0x00E997FC File Offset: 0x00E979FC
+		// Token: 0x06031C35 RID: 203829 RVA: 0x00DEA0B4 File Offset: 0x00DE82B4
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603CCD9 RID: 249049 RVA: 0x00E99868 File Offset: 0x00E97A68
+		// Token: 0x06031C36 RID: 203830 RVA: 0x00DEA120 File Offset: 0x00DE8320
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MotorcycleRailMoveView.<OnBeforeStartAsync>d__9 <OnBeforeStartAsync>d__;
@@ -46,14 +46,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CCDA RID: 249050 RVA: 0x00E998AB File Offset: 0x00E97AAB
+		// Token: 0x06031C37 RID: 203831 RVA: 0x00DEA163 File Offset: 0x00DE8363
 		protected override void OnStart()
 		{
 			base.OnStart();
 			this.RefreshRoleData();
 		}
 
-		// Token: 0x0603CCDB RID: 249051 RVA: 0x00E998B9 File Offset: 0x00E97AB9
+		// Token: 0x06031C38 RID: 203832 RVA: 0x00DEA171 File Offset: 0x00DE8371
 		protected override void OnBeforeShow()
 		{
 			BattleUiModel.Instance.ChildViewData.SetChildrenVisible(EBattleUiVisibleReason.RoleSpecialState, new <>z__ReadOnlyArray<EBattleUiChild>(new EBattleUiChild[]
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}), false, true, 0);
 		}
 
-		// Token: 0x0603CCDC RID: 249052 RVA: 0x00E998E5 File Offset: 0x00E97AE5
+		// Token: 0x06031C39 RID: 203833 RVA: 0x00DEA19D File Offset: 0x00DE839D
 		protected override void OnAfterHide()
 		{
 			BattleUiModel.Instance.ChildViewData.SetChildrenVisible(EBattleUiVisibleReason.RoleSpecialState, new <>z__ReadOnlyArray<EBattleUiChild>(new EBattleUiChild[]
@@ -79,7 +79,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}), true, true, 0);
 		}
 
-		// Token: 0x0603CCDD RID: 249053 RVA: 0x00E99914 File Offset: 0x00E97B14
+		// Token: 0x06031C3A RID: 203834 RVA: 0x00DEA1CC File Offset: 0x00DE83CC
 		public UniTask NewAllSkillItems()
 		{
 			MotorcycleRailMoveView.<NewAllSkillItems>d__13 <NewAllSkillItems>d__;
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <NewAllSkillItems>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CCDE RID: 249054 RVA: 0x00E99958 File Offset: 0x00E97B58
+		// Token: 0x06031C3B RID: 203835 RVA: 0x00DEA210 File Offset: 0x00DE8410
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <NewSkillItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603CCDF RID: 249055 RVA: 0x00E999AC File Offset: 0x00E97BAC
+		// Token: 0x06031C3C RID: 203836 RVA: 0x00DEA264 File Offset: 0x00DE8464
 		private void RefreshAllSkillItems()
 		{
 			this.SkillItemList[0].RefreshByMoveType(EInputAxis.MoveRight, -1f, false);
@@ -119,7 +119,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SkillItemList[1].SetCustomSkillItemEnable(false);
 		}
 
-		// Token: 0x0603CCE0 RID: 249056 RVA: 0x00E99A45 File Offset: 0x00E97C45
+		// Token: 0x06031C3D RID: 203837 RVA: 0x00DEA2FD File Offset: 0x00DE84FD
 		protected override void OnAddEventListener()
 		{
 			if (!Info.Instance.IsInTouch())
@@ -128,7 +128,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CCE1 RID: 249057 RVA: 0x00E99A6E File Offset: 0x00E97C6E
+		// Token: 0x06031C3E RID: 203838 RVA: 0x00DEA326 File Offset: 0x00DE8526
 		protected override void OnRemoveEventListener()
 		{
 			if (!Info.Instance.IsInTouch())
@@ -137,7 +137,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CCE2 RID: 249058 RVA: 0x00E99A98 File Offset: 0x00E97C98
+		// Token: 0x06031C3F RID: 203839 RVA: 0x00DEA350 File Offset: 0x00DE8550
 		protected override void OnBeforeDestroy()
 		{
 			foreach (MoveSkillItem moveSkillItem in this.SkillItemList)
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RemoveEntityEvents();
 		}
 
-		// Token: 0x0603CCE3 RID: 249059 RVA: 0x00E99AFC File Offset: 0x00E97CFC
+		// Token: 0x06031C40 RID: 203840 RVA: 0x00DEA3B4 File Offset: 0x00DE85B4
 		private void OnInputAction(string actionName, InputDistributeDefine.EActionType actionType, InputIdentification inputIdentification)
 		{
 			if (actionType != InputDistributeDefine.EActionType.Press)
@@ -165,7 +165,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CCE4 RID: 249060 RVA: 0x00E99B44 File Offset: 0x00E97D44
+		// Token: 0x06031C41 RID: 203841 RVA: 0x00DEA3FC File Offset: 0x00DE85FC
 		private void RefreshRoleData()
 		{
 			int playerId = CreatureModel.Instance.GetPlayerId();
@@ -177,7 +177,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.AddEntityEvents();
 		}
 
-		// Token: 0x0603CCE5 RID: 249061 RVA: 0x00E99B78 File Offset: 0x00E97D78
+		// Token: 0x06031C42 RID: 203842 RVA: 0x00DEA430 File Offset: 0x00DE8630
 		private void AddEntityEvents()
 		{
 			int playerId = CreatureModel.Instance.GetPlayerId();
@@ -195,7 +195,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ListenForTagAddOrRemove(playerTagComponent, MotorcycleRailMoveView.SwitchRightTag, new BaseTagComponent.TTagSwitchedCallback(this.OnSwitchRightTagChanged), true);
 		}
 
-		// Token: 0x0603CCE6 RID: 249062 RVA: 0x00E99BEC File Offset: 0x00E97DEC
+		// Token: 0x06031C43 RID: 203843 RVA: 0x00DEA4A4 File Offset: 0x00DE86A4
 		private void RemoveEntityEvents()
 		{
 			foreach (ITagTask tagTask in this.TagTaskList)
@@ -205,7 +205,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TagTaskList.Clear();
 		}
 
-		// Token: 0x0603CCE7 RID: 249063 RVA: 0x00E99C48 File Offset: 0x00E97E48
+		// Token: 0x06031C44 RID: 203844 RVA: 0x00DEA500 File Offset: 0x00DE8700
 		private void ListenForTagAddOrRemove(BaseTagComponent tagComponent, int tagId, BaseTagComponent.TTagSwitchedCallback callback, bool checkExistImmediately = false)
 		{
 			if (checkExistImmediately && tagComponent.HasTag(tagId))
@@ -219,21 +219,21 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CCE8 RID: 249064 RVA: 0x00E99C88 File Offset: 0x00E97E88
+		// Token: 0x06031C45 RID: 203845 RVA: 0x00DEA540 File Offset: 0x00DE8740
 		private void OnSwitchLeftTagChanged(int tagId, bool tagExist)
 		{
 			this.SkillItemList[0].SetCustomSkillItemEnable(tagExist);
 			this.SkillItemList[0].SetCustomDynamicEffectId(tagExist ? 1003 : 0);
 		}
 
-		// Token: 0x0603CCE9 RID: 249065 RVA: 0x00E99CB8 File Offset: 0x00E97EB8
+		// Token: 0x06031C46 RID: 203846 RVA: 0x00DEA570 File Offset: 0x00DE8770
 		private void OnSwitchRightTagChanged(int tagId, bool tagExist)
 		{
 			this.SkillItemList[1].SetCustomSkillItemEnable(tagExist);
 			this.SkillItemList[1].SetCustomDynamicEffectId(tagExist ? 1003 : 0);
 		}
 
-		// Token: 0x0603CCEA RID: 249066 RVA: 0x00E99CE8 File Offset: 0x00E97EE8
+		// Token: 0x06031C47 RID: 203847 RVA: 0x00DEA5A0 File Offset: 0x00DE87A0
 		protected override void OnTick(float delta)
 		{
 			foreach (MoveSkillItem moveSkillItem in this.SkillItemList)
@@ -242,7 +242,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401FAC3 RID: 129731
+		// Token: 0x0401A57B RID: 107899
 		[StaticVariableRuleIgnore]
 		private static readonly string[] ActionNameList = new string[]
 		{
@@ -250,30 +250,30 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			"向右移动"
 		};
 
-		// Token: 0x0401FAC4 RID: 129732
+		// Token: 0x0401A57C RID: 107900
 		[StaticVariableRuleIgnore]
 		private static readonly int SwitchLeftTag = GameplayTagDefine.EGameplayTagId["角色.Common.载具驾驶.摩托.滑轨.能够左跳"];
 
-		// Token: 0x0401FAC5 RID: 129733
+		// Token: 0x0401A57D RID: 107901
 		[StaticVariableRuleIgnore]
 		private static readonly int SwitchRightTag = GameplayTagDefine.EGameplayTagId["角色.Common.载具驾驶.摩托.滑轨.能够右跳"];
 
-		// Token: 0x0401FAC6 RID: 129734
+		// Token: 0x0401A57E RID: 107902
 		private const int EFFECT_ID = 1003;
 
-		// Token: 0x0401FAC7 RID: 129735
+		// Token: 0x0401A57F RID: 107903
 		private readonly List<MoveSkillItem> SkillItemList = new List<MoveSkillItem>();
 
-		// Token: 0x0401FAC8 RID: 129736
+		// Token: 0x0401A580 RID: 107904
 		private readonly List<ITagTask> TagTaskList = new List<ITagTask>();
 
-		// Token: 0x0200C057 RID: 49239
+		// Token: 0x0200AA5D RID: 43613
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x0403A0A9 RID: 237737
+			// Token: 0x04034A6C RID: 215660
 			SwitchLeftBtn,
-			// Token: 0x0403A0AA RID: 237738
+			// Token: 0x04034A6D RID: 215661
 			SwitchRightBtn
 		}
 	}

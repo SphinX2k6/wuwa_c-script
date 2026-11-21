@@ -11,13 +11,13 @@ using CSharpScript.Game.Module.Map;
 using CSharpScript.Game.Module.Map.MapDefine;
 using CSharpScript.Game.Module.RecallQuest.Model;
 
-// Token: 0x0200263F RID: 9791
+// Token: 0x02001B2A RID: 6954
 [NullableContext(1)]
 [Nullable(0)]
 public class Quest : LogicTreeContainer, TQuest
 {
-	// Token: 0x17001982 RID: 6530
-	// (get) Token: 0x060140F7 RID: 82167 RVA: 0x0050E8BB File Offset: 0x0050CABB
+	// Token: 0x170019BA RID: 6586
+	// (get) Token: 0x060115D9 RID: 71129 RVA: 0x0051D67B File Offset: 0x0051B87B
 	public override int Id
 	{
 		get
@@ -26,8 +26,8 @@ public class Quest : LogicTreeContainer, TQuest
 		}
 	}
 
-	// Token: 0x17001983 RID: 6531
-	// (get) Token: 0x060140F8 RID: 82168 RVA: 0x0050E8C8 File Offset: 0x0050CAC8
+	// Token: 0x170019BB RID: 6587
+	// (get) Token: 0x060115DA RID: 71130 RVA: 0x0051D688 File Offset: 0x0051B888
 	public EQuest Type
 	{
 		get
@@ -36,8 +36,8 @@ public class Quest : LogicTreeContainer, TQuest
 		}
 	}
 
-	// Token: 0x17001984 RID: 6532
-	// (get) Token: 0x060140F9 RID: 82169 RVA: 0x0050E8D7 File Offset: 0x0050CAD7
+	// Token: 0x170019BC RID: 6588
+	// (get) Token: 0x060115DB RID: 71131 RVA: 0x0051D697 File Offset: 0x0051B897
 	public int MainTypeId
 	{
 		get
@@ -46,8 +46,8 @@ public class Quest : LogicTreeContainer, TQuest
 		}
 	}
 
-	// Token: 0x17001985 RID: 6533
-	// (get) Token: 0x060140FA RID: 82170 RVA: 0x0050E8DF File Offset: 0x0050CADF
+	// Token: 0x170019BD RID: 6589
+	// (get) Token: 0x060115DC RID: 71132 RVA: 0x0051D69F File Offset: 0x0051B89F
 	public int? ChapterId
 	{
 		get
@@ -56,8 +56,8 @@ public class Quest : LogicTreeContainer, TQuest
 		}
 	}
 
-	// Token: 0x17001986 RID: 6534
-	// (get) Token: 0x060140FB RID: 82171 RVA: 0x0050E8EC File Offset: 0x0050CAEC
+	// Token: 0x170019BE RID: 6590
+	// (get) Token: 0x060115DD RID: 71133 RVA: 0x0051D6AC File Offset: 0x0051B8AC
 	public bool? HideAcceptQuestMark
 	{
 		get
@@ -66,8 +66,8 @@ public class Quest : LogicTreeContainer, TQuest
 		}
 	}
 
-	// Token: 0x17001987 RID: 6535
-	// (get) Token: 0x060140FC RID: 82172 RVA: 0x0050E92B File Offset: 0x0050CB2B
+	// Token: 0x170019BF RID: 6591
+	// (get) Token: 0x060115DE RID: 71134 RVA: 0x0051D6EB File Offset: 0x0051B8EB
 	public QuestState? Status
 	{
 		get
@@ -76,8 +76,8 @@ public class Quest : LogicTreeContainer, TQuest
 		}
 	}
 
-	// Token: 0x17001988 RID: 6536
-	// (get) Token: 0x060140FD RID: 82173 RVA: 0x0050E934 File Offset: 0x0050CB34
+	// Token: 0x170019C0 RID: 6592
+	// (get) Token: 0x060115DF RID: 71135 RVA: 0x0051D6F4 File Offset: 0x0051B8F4
 	public bool IsProgressing
 	{
 		get
@@ -86,8 +86,8 @@ public class Quest : LogicTreeContainer, TQuest
 		}
 	}
 
-	// Token: 0x17001989 RID: 6537
-	// (get) Token: 0x060140FE RID: 82174 RVA: 0x0050E952 File Offset: 0x0050CB52
+	// Token: 0x170019C1 RID: 6593
+	// (get) Token: 0x060115E0 RID: 71136 RVA: 0x0051D712 File Offset: 0x0051B912
 	public override bool IsInteractValid
 	{
 		get
@@ -96,8 +96,8 @@ public class Quest : LogicTreeContainer, TQuest
 		}
 	}
 
-	// Token: 0x1700198A RID: 6538
-	// (get) Token: 0x060140FF RID: 82175 RVA: 0x0050E96B File Offset: 0x0050CB6B
+	// Token: 0x170019C2 RID: 6594
+	// (get) Token: 0x060115E1 RID: 71137 RVA: 0x0051D72B File Offset: 0x0051B92B
 	public EQuestSubType? SubType
 	{
 		get
@@ -106,8 +106,8 @@ public class Quest : LogicTreeContainer, TQuest
 		}
 	}
 
-	// Token: 0x1700198B RID: 6539
-	// (get) Token: 0x06014100 RID: 82176 RVA: 0x0050E973 File Offset: 0x0050CB73
+	// Token: 0x170019C3 RID: 6595
+	// (get) Token: 0x060115E2 RID: 71138 RVA: 0x0051D733 File Offset: 0x0051B933
 	public int? RewardId
 	{
 		get
@@ -120,8 +120,8 @@ public class Quest : LogicTreeContainer, TQuest
 		}
 	}
 
-	// Token: 0x1700198C RID: 6540
-	// (get) Token: 0x06014101 RID: 82177 RVA: 0x0050E990 File Offset: 0x0050CB90
+	// Token: 0x170019C4 RID: 6596
+	// (get) Token: 0x060115E3 RID: 71139 RVA: 0x0051D750 File Offset: 0x0051B950
 	public string NameKey
 	{
 		get
@@ -135,8 +135,8 @@ public class Quest : LogicTreeContainer, TQuest
 		}
 	}
 
-	// Token: 0x1700198D RID: 6541
-	// (get) Token: 0x06014102 RID: 82178 RVA: 0x0050E9B4 File Offset: 0x0050CBB4
+	// Token: 0x170019C5 RID: 6597
+	// (get) Token: 0x060115E4 RID: 71140 RVA: 0x0051D774 File Offset: 0x0051B974
 	public override string Name
 	{
 		get
@@ -145,8 +145,8 @@ public class Quest : LogicTreeContainer, TQuest
 		}
 	}
 
-	// Token: 0x1700198E RID: 6542
-	// (get) Token: 0x06014103 RID: 82179 RVA: 0x0050E9C8 File Offset: 0x0050CBC8
+	// Token: 0x170019C6 RID: 6598
+	// (get) Token: 0x060115E5 RID: 71141 RVA: 0x0051D788 File Offset: 0x0051B988
 	public string QuestDescribe
 	{
 		get
@@ -160,8 +160,8 @@ public class Quest : LogicTreeContainer, TQuest
 		}
 	}
 
-	// Token: 0x1700198F RID: 6543
-	// (get) Token: 0x06014104 RID: 82180 RVA: 0x0050E9F6 File Offset: 0x0050CBF6
+	// Token: 0x170019C7 RID: 6599
+	// (get) Token: 0x060115E6 RID: 71142 RVA: 0x0051D7B6 File Offset: 0x0051B9B6
 	public string QuestShowConditionDescribe
 	{
 		get
@@ -172,8 +172,8 @@ public class Quest : LogicTreeContainer, TQuest
 		}
 	}
 
-	// Token: 0x17001990 RID: 6544
-	// (get) Token: 0x06014105 RID: 82181 RVA: 0x0050EA22 File Offset: 0x0050CC22
+	// Token: 0x170019C8 RID: 6600
+	// (get) Token: 0x060115E7 RID: 71143 RVA: 0x0051D7E2 File Offset: 0x0051B9E2
 	[Nullable(new byte[]
 	{
 		2,
@@ -202,8 +202,8 @@ public class Quest : LogicTreeContainer, TQuest
 		}
 	}
 
-	// Token: 0x17001991 RID: 6545
-	// (get) Token: 0x06014106 RID: 82182 RVA: 0x0050EA45 File Offset: 0x0050CC45
+	// Token: 0x170019C9 RID: 6601
+	// (get) Token: 0x060115E8 RID: 71144 RVA: 0x0051D805 File Offset: 0x0051BA05
 	[Nullable(new byte[]
 	{
 		2,
@@ -227,8 +227,8 @@ public class Quest : LogicTreeContainer, TQuest
 		}
 	}
 
-	// Token: 0x17001992 RID: 6546
-	// (get) Token: 0x06014107 RID: 82183 RVA: 0x0050EA60 File Offset: 0x0050CC60
+	// Token: 0x170019CA RID: 6602
+	// (get) Token: 0x060115E9 RID: 71145 RVA: 0x0051D820 File Offset: 0x0051BA20
 	public int QuestMarkId
 	{
 		get
@@ -237,8 +237,8 @@ public class Quest : LogicTreeContainer, TQuest
 		}
 	}
 
-	// Token: 0x17001993 RID: 6547
-	// (get) Token: 0x06014108 RID: 82184 RVA: 0x0050EA90 File Offset: 0x0050CC90
+	// Token: 0x170019CB RID: 6603
+	// (get) Token: 0x060115EA RID: 71146 RVA: 0x0051D850 File Offset: 0x0051BA50
 	[Nullable(2)]
 	public IFocusModeSetting FocusSetting
 	{
@@ -249,7 +249,7 @@ public class Quest : LogicTreeContainer, TQuest
 		}
 	}
 
-	// Token: 0x06014109 RID: 82185 RVA: 0x0050EA98 File Offset: 0x0050CC98
+	// Token: 0x060115EB RID: 71147 RVA: 0x0051D858 File Offset: 0x0051BA58
 	public unsafe Quest(EQuest questType, IQuest questConfig)
 	{
 		if (questConfig == null)
@@ -302,7 +302,7 @@ public class Quest : LogicTreeContainer, TQuest
 		this.TerminateActions = questConfig.TerminateActions;
 	}
 
-	// Token: 0x0601410A RID: 82186 RVA: 0x0050ECFD File Offset: 0x0050CEFD
+	// Token: 0x060115EC RID: 71148 RVA: 0x0051DABD File Offset: 0x0051BCBD
 	public override void Destroy()
 	{
 		this.Config = null;
@@ -314,7 +314,7 @@ public class Quest : LogicTreeContainer, TQuest
 		base.Destroy();
 	}
 
-	// Token: 0x0601410B RID: 82187 RVA: 0x0050ED38 File Offset: 0x0050CF38
+	// Token: 0x060115ED RID: 71149 RVA: 0x0051DAF8 File Offset: 0x0051BCF8
 	public void UpdateState(QuestState status, EQuestStatusUpdateReason reason)
 	{
 		QuestState? innerStatus = this.InnerStatus;
@@ -344,7 +344,7 @@ public class Quest : LogicTreeContainer, TQuest
 		EventSystem.Instance.Emit<int, QuestState, EQuestStatusUpdateReason>(EEventName.OnQuestStateChange, this.Id, this.Status.Value, reason);
 	}
 
-	// Token: 0x0601410C RID: 82188 RVA: 0x0050EDF0 File Offset: 0x0050CFF0
+	// Token: 0x060115EE RID: 71150 RVA: 0x0051DBB0 File Offset: 0x0051BDB0
 	protected virtual void OnQuestStateToReady()
 	{
 		EDistrubuteType? distributeType = this.DistributeType;
@@ -361,7 +361,7 @@ public class Quest : LogicTreeContainer, TQuest
 		}
 	}
 
-	// Token: 0x0601410D RID: 82189 RVA: 0x0050EE38 File Offset: 0x0050D038
+	// Token: 0x060115EF RID: 71151 RVA: 0x0051DBF8 File Offset: 0x0051BDF8
 	public void AddAcceptQuestMark()
 	{
 		if (this.HideAcceptQuestMark.GetValueOrDefault())
@@ -382,7 +382,7 @@ public class Quest : LogicTreeContainer, TQuest
 		this.AddMapMark(acceptQuestOptionConfig.EntityId, new int?(this.DungeonId));
 	}
 
-	// Token: 0x0601410E RID: 82190 RVA: 0x0050EEA9 File Offset: 0x0050D0A9
+	// Token: 0x060115F0 RID: 71152 RVA: 0x0051DC69 File Offset: 0x0051BE69
 	protected virtual void OnQuestToProgress()
 	{
 		QuestNewModel.Instance.RemoveCanAcceptQuest(this.Id);
@@ -393,7 +393,7 @@ public class Quest : LogicTreeContainer, TQuest
 		}
 	}
 
-	// Token: 0x0601410F RID: 82191 RVA: 0x0050EEE8 File Offset: 0x0050D0E8
+	// Token: 0x060115F1 RID: 71153 RVA: 0x0051DCA8 File Offset: 0x0051BEA8
 	protected virtual void OnQuestToFinish()
 	{
 		this.Finished = true;
@@ -406,7 +406,7 @@ public class Quest : LogicTreeContainer, TQuest
 		}
 	}
 
-	// Token: 0x06014110 RID: 82192 RVA: 0x0050EF40 File Offset: 0x0050D140
+	// Token: 0x060115F2 RID: 71154 RVA: 0x0051DD00 File Offset: 0x0051BF00
 	protected virtual void OnQuestToDelete()
 	{
 		global::Quest curTrackedQuest = QuestNewModel.Instance.GetCurTrackedQuest();
@@ -425,7 +425,7 @@ public class Quest : LogicTreeContainer, TQuest
 		}
 	}
 
-	// Token: 0x06014111 RID: 82193 RVA: 0x0050EFE0 File Offset: 0x0050D1E0
+	// Token: 0x060115F3 RID: 71155 RVA: 0x0051DDA0 File Offset: 0x0051BFA0
 	private unsafe void AddMapMark(int pbDataId, int? mapId = null)
 	{
 		if (CreatureModel.Instance.GetEntityData(new int?(pbDataId), mapId) == null)
@@ -472,13 +472,13 @@ public class Quest : LogicTreeContainer, TQuest
 		this.CanAcceptMapMarkId = MapModel.Instance.CreateMapMark(info);
 	}
 
-	// Token: 0x06014112 RID: 82194 RVA: 0x0050F11F File Offset: 0x0050D31F
+	// Token: 0x060115F4 RID: 71156 RVA: 0x0051DEDF File Offset: 0x0051C0DF
 	protected virtual bool CanShowInRecall()
 	{
 		return false;
 	}
 
-	// Token: 0x06014113 RID: 82195 RVA: 0x0050F124 File Offset: 0x0050D324
+	// Token: 0x060115F5 RID: 71157 RVA: 0x0051DEE4 File Offset: 0x0051C0E4
 	public override bool CanShowInUiPanel()
 	{
 		if (RecallQuestModel.Instance.IsInRecallInstance() && !this.CanShowInRecall())
@@ -511,45 +511,45 @@ public class Quest : LogicTreeContainer, TQuest
 		return base.CanShowInUiPanel();
 	}
 
-	// Token: 0x06014114 RID: 82196 RVA: 0x0050F222 File Offset: 0x0050D422
+	// Token: 0x060115F6 RID: 71158 RVA: 0x0051DFE2 File Offset: 0x0051C1E2
 	public bool IsQuestCanPreShow()
 	{
 		return QuestNewModel.Instance.IsPreShowQuest(this.Id);
 	}
 
-	// Token: 0x06014115 RID: 82197 RVA: 0x0050F234 File Offset: 0x0050D434
+	// Token: 0x060115F7 RID: 71159 RVA: 0x0051DFF4 File Offset: 0x0051C1F4
 	public bool IsQuestHasRecommendPreQuest()
 	{
 		return this.RecommendPreQuest != null;
 	}
 
-	// Token: 0x06014116 RID: 82198 RVA: 0x0050F23F File Offset: 0x0050D43F
+	// Token: 0x060115F8 RID: 71160 RVA: 0x0051DFFF File Offset: 0x0051C1FF
 	[NullableContext(2)]
 	public List<int> GetRecommendPreQuest()
 	{
 		return this.RecommendPreQuest;
 	}
 
-	// Token: 0x06014117 RID: 82199 RVA: 0x0050F247 File Offset: 0x0050D447
+	// Token: 0x060115F9 RID: 71161 RVA: 0x0051E007 File Offset: 0x0051C207
 	public void SetQuestStageName(string name)
 	{
 		this.StageNameTid = name;
 		EventSystem.Instance.Emit<int>(EEventName.OnQuestStageNameChange, this.Id);
 	}
 
-	// Token: 0x06014118 RID: 82200 RVA: 0x0050F266 File Offset: 0x0050D466
+	// Token: 0x060115FA RID: 71162 RVA: 0x0051E026 File Offset: 0x0051C226
 	public void SetQuestStageDesc(string desc)
 	{
 		this.StageDescTid = desc;
 	}
 
-	// Token: 0x06014119 RID: 82201 RVA: 0x0050F26F File Offset: 0x0050D46F
+	// Token: 0x060115FB RID: 71163 RVA: 0x0051E02F File Offset: 0x0051C22F
 	public void SetQuestStageReward(int rewardId)
 	{
 		this.StageRewardId = rewardId;
 	}
 
-	// Token: 0x0601411A RID: 82202 RVA: 0x0050F278 File Offset: 0x0050D478
+	// Token: 0x060115FC RID: 71164 RVA: 0x0051E038 File Offset: 0x0051C238
 	public override void SetTrack(bool value, ESetTrackReason reason = ESetTrackReason.None)
 	{
 		base.SetTrack(value, reason);
@@ -559,91 +559,91 @@ public class Quest : LogicTreeContainer, TQuest
 		}
 	}
 
-	// Token: 0x0601411B RID: 82203 RVA: 0x0050F296 File Offset: 0x0050D496
+	// Token: 0x060115FD RID: 71165 RVA: 0x0051E056 File Offset: 0x0051C256
 	public int GetCanAcceptMapMarkId()
 	{
 		return this.CanAcceptMapMarkId;
 	}
 
-	// Token: 0x04009729 RID: 38697
+	// Token: 0x04009881 RID: 39041
 	protected readonly int? InnerId;
 
-	// Token: 0x0400972A RID: 38698
+	// Token: 0x04009882 RID: 39042
 	protected readonly EQuest? InnerType;
 
-	// Token: 0x0400972B RID: 38699
+	// Token: 0x04009883 RID: 39043
 	protected readonly EQuestSubType? InnerSubType;
 
-	// Token: 0x0400972C RID: 38700
+	// Token: 0x04009884 RID: 39044
 	protected readonly int InnerMainType;
 
-	// Token: 0x0400972D RID: 38701
+	// Token: 0x04009885 RID: 39045
 	protected QuestState? InnerStatus;
 
-	// Token: 0x0400972E RID: 38702
+	// Token: 0x04009886 RID: 39046
 	protected bool Finished;
 
-	// Token: 0x0400972F RID: 38703
+	// Token: 0x04009887 RID: 39047
 	public bool IsNewQuest;
 
-	// Token: 0x04009730 RID: 38704
+	// Token: 0x04009888 RID: 39048
 	[Nullable(2)]
 	private IQuest Config;
 
-	// Token: 0x04009731 RID: 38705
+	// Token: 0x04009889 RID: 39049
 	private readonly string QuestNameTid = string.Empty;
 
-	// Token: 0x04009732 RID: 38706
+	// Token: 0x0400988A RID: 39050
 	private readonly string QuestDescTid = string.Empty;
 
-	// Token: 0x04009733 RID: 38707
+	// Token: 0x0400988B RID: 39051
 	private string StageNameTid = string.Empty;
 
-	// Token: 0x04009734 RID: 38708
+	// Token: 0x0400988C RID: 39052
 	private string StageDescTid = string.Empty;
 
-	// Token: 0x04009735 RID: 38709
+	// Token: 0x0400988D RID: 39053
 	private readonly int? ConfigRewardId = new int?(0);
 
-	// Token: 0x04009736 RID: 38710
+	// Token: 0x0400988E RID: 39054
 	public int StageRewardId;
 
-	// Token: 0x04009737 RID: 38711
+	// Token: 0x0400988F RID: 39055
 	[Nullable(2)]
 	private readonly List<int> RecommendPreQuest;
 
-	// Token: 0x04009738 RID: 38712
+	// Token: 0x04009890 RID: 39056
 	[Nullable(2)]
 	private readonly IFocusModeSetting FocusModeSetting;
 
-	// Token: 0x04009739 RID: 38713
+	// Token: 0x04009891 RID: 39057
 	public readonly EQuestOnlineType OnlineType;
 
-	// Token: 0x0400973A RID: 38714
+	// Token: 0x04009892 RID: 39058
 	public readonly bool AutoTrack;
 
-	// Token: 0x0400973B RID: 38715
+	// Token: 0x04009893 RID: 39059
 	public readonly bool AutoCoverCurTrack;
 
-	// Token: 0x0400973C RID: 38716
+	// Token: 0x04009894 RID: 39060
 	public readonly bool AutoHideTrackMark = true;
 
-	// Token: 0x0400973D RID: 38717
+	// Token: 0x04009895 RID: 39061
 	public readonly bool IsHideInTaskList;
 
-	// Token: 0x0400973E RID: 38718
+	// Token: 0x04009896 RID: 39062
 	public readonly int DungeonId;
 
-	// Token: 0x0400973F RID: 38719
+	// Token: 0x04009897 RID: 39063
 	public readonly int? FunctionId = new int?(0);
 
-	// Token: 0x04009740 RID: 38720
+	// Token: 0x04009898 RID: 39064
 	public readonly int TagId;
 
-	// Token: 0x04009741 RID: 38721
+	// Token: 0x04009899 RID: 39065
 	public readonly EDistrubuteType? DistributeType;
 
-	// Token: 0x04009742 RID: 38722
+	// Token: 0x0400989A RID: 39066
 	[Nullable(new byte[]
 	{
 		2,
@@ -651,7 +651,7 @@ public class Quest : LogicTreeContainer, TQuest
 	})]
 	public readonly List<ActionInfo> ActiveActions;
 
-	// Token: 0x04009743 RID: 38723
+	// Token: 0x0400989B RID: 39067
 	[Nullable(new byte[]
 	{
 		2,
@@ -659,7 +659,7 @@ public class Quest : LogicTreeContainer, TQuest
 	})]
 	public readonly List<ActionInfo> AcceptActions;
 
-	// Token: 0x04009744 RID: 38724
+	// Token: 0x0400989C RID: 39068
 	[Nullable(new byte[]
 	{
 		2,
@@ -667,7 +667,7 @@ public class Quest : LogicTreeContainer, TQuest
 	})]
 	public readonly List<ActionInfo> FinishActions;
 
-	// Token: 0x04009745 RID: 38725
+	// Token: 0x0400989D RID: 39069
 	[Nullable(new byte[]
 	{
 		2,
@@ -675,19 +675,19 @@ public class Quest : LogicTreeContainer, TQuest
 	})]
 	public readonly List<ActionInfo> TerminateActions;
 
-	// Token: 0x04009746 RID: 38726
+	// Token: 0x0400989E RID: 39070
 	[Nullable(2)]
 	public readonly IAddInteractOption AcceptQuestOptionConfig;
 
-	// Token: 0x04009747 RID: 38727
+	// Token: 0x0400989F RID: 39071
 	private int CanAcceptMapMarkId;
 
-	// Token: 0x04009748 RID: 38728
+	// Token: 0x040098A0 RID: 39072
 	public bool LockByLackResource;
 
-	// Token: 0x04009749 RID: 38729
+	// Token: 0x040098A1 RID: 39073
 	public bool LockByFocusMode;
 
-	// Token: 0x0400974A RID: 38730
+	// Token: 0x040098A2 RID: 39074
 	public bool SuspendByOnline;
 }

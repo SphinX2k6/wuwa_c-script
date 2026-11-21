@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BD7 RID: 3031
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000CA6 RID: 3238
 	public class ILiftMoveCurve
 	{
-		// Token: 0x060045AC RID: 17836 RVA: 0x000B05C5 File Offset: 0x000AE7C5
+		// Token: 0x06004A0A RID: 18954 RVA: 0x000BA741 File Offset: 0x000B8941
 		public static ILiftMoveCurve Create(ILiftMoveCurve? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170013BB RID: 5051
-		// (get) Token: 0x060045AD RID: 17837 RVA: 0x000B05E4 File Offset: 0x000AE7E4
+		// Token: 0x170014B9 RID: 5305
+		// (get) Token: 0x06004A0B RID: 18955 RVA: 0x000BA760 File Offset: 0x000B8960
 		public virtual string Curve
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013BC RID: 5052
-		// (get) Token: 0x060045AE RID: 17838 RVA: 0x000B05F1 File Offset: 0x000AE7F1
+		// Token: 0x170014BA RID: 5306
+		// (get) Token: 0x06004A0C RID: 18956 RVA: 0x000BA76D File Offset: 0x000B896D
 		public virtual float Time
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040027B0 RID: 10160
+		// Token: 0x040029FB RID: 10747
 		private ILiftMoveCurve Instance;
 	}
 }

@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000F95 RID: 3989
+	// Token: 0x0200107C RID: 4220
 	public struct RandomPlot : IFlatbufferObject
 	{
-		// Token: 0x17002CF8 RID: 11512
-		// (get) Token: 0x0600B901 RID: 47361 RVA: 0x002D7531 File Offset: 0x002D5731
+		// Token: 0x17002D70 RID: 11632
+		// (get) Token: 0x0600BF3E RID: 48958 RVA: 0x002F3D65 File Offset: 0x002F1F65
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B902 RID: 47362 RVA: 0x002D753E File Offset: 0x002D573E
+		// Token: 0x0600BF3F RID: 48959 RVA: 0x002F3D72 File Offset: 0x002F1F72
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600B903 RID: 47363 RVA: 0x002D7548 File Offset: 0x002D5748
+		// Token: 0x0600BF40 RID: 48960 RVA: 0x002F3D7C File Offset: 0x002F1F7C
 		public static RandomPlot GetRootAsRandomPlot(ByteBuffer _bb)
 		{
 			return RandomPlot.GetRootAsRandomPlot(_bb, default(RandomPlot));
 		}
 
-		// Token: 0x0600B904 RID: 47364 RVA: 0x002D7564 File Offset: 0x002D5764
+		// Token: 0x0600BF41 RID: 48961 RVA: 0x002F3D98 File Offset: 0x002F1F98
 		public static RandomPlot GetRootAsRandomPlot(ByteBuffer _bb, RandomPlot obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600B905 RID: 47365 RVA: 0x002D7581 File Offset: 0x002D5781
+		// Token: 0x0600BF42 RID: 48962 RVA: 0x002F3DB5 File Offset: 0x002F1FB5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600B906 RID: 47366 RVA: 0x002D7590 File Offset: 0x002D5790
+		// Token: 0x0600BF43 RID: 48963 RVA: 0x002F3DC4 File Offset: 0x002F1FC4
 		public RandomPlot __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17002CF9 RID: 11513
-		// (get) Token: 0x0600B907 RID: 47367 RVA: 0x002D75A0 File Offset: 0x002D57A0
+		// Token: 0x17002D71 RID: 11633
+		// (get) Token: 0x0600BF44 RID: 48964 RVA: 0x002F3DD4 File Offset: 0x002F1FD4
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002CFA RID: 11514
-		// (get) Token: 0x0600B908 RID: 47368 RVA: 0x002D75DC File Offset: 0x002D57DC
+		// Token: 0x17002D72 RID: 11634
+		// (get) Token: 0x0600BF45 RID: 48965 RVA: 0x002F3E10 File Offset: 0x002F2010
 		public int Probability
 		{
 			get
@@ -79,8 +79,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17002CFB RID: 11515
-		// (get) Token: 0x0600B909 RID: 47369 RVA: 0x002D761C File Offset: 0x002D581C
+		// Token: 0x17002D73 RID: 11635
+		// (get) Token: 0x0600BF46 RID: 48966 RVA: 0x002F3E50 File Offset: 0x002F2050
 		public int Cooldown
 		{
 			get
@@ -94,7 +94,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B90A RID: 47370 RVA: 0x002D7658 File Offset: 0x002D5858
+		// Token: 0x0600BF47 RID: 48967 RVA: 0x002F3E8C File Offset: 0x002F208C
 		public int ClientPlotReferenceList(int j)
 		{
 			int num = this.__p.__offset(10);
@@ -105,8 +105,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17002CFC RID: 11516
-		// (get) Token: 0x0600B90B RID: 47371 RVA: 0x002D7698 File Offset: 0x002D5898
+		// Token: 0x17002D74 RID: 11636
+		// (get) Token: 0x0600BF48 RID: 48968 RVA: 0x002F3ECC File Offset: 0x002F20CC
 		public int ClientPlotReferenceListLength
 		{
 			get
@@ -120,37 +120,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600B90C RID: 47372 RVA: 0x002D76C4 File Offset: 0x002D58C4
+		// Token: 0x0600BF49 RID: 48969 RVA: 0x002F3EF8 File Offset: 0x002F20F8
 		public Span<int> GetClientPlotReferenceListBytes()
 		{
 			return this.__p.__vector_as_span<int>(10, 4);
 		}
 
-		// Token: 0x0600B90D RID: 47373 RVA: 0x002D76D4 File Offset: 0x002D58D4
+		// Token: 0x0600BF4A RID: 48970 RVA: 0x002F3F08 File Offset: 0x002F2108
 		public int[] GetClientPlotReferenceListArray()
 		{
 			return this.__p.__vector_as_array<int>(10) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x0600B90E RID: 47374 RVA: 0x002D76EC File Offset: 0x002D58EC
+		// Token: 0x0600BF4B RID: 48971 RVA: 0x002F3F20 File Offset: 0x002F2120
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ClientPlotReferenceListIter()或GetClientPlotReferenceListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] ClientPlotReferenceList()
+		public int[] ClientPlotReferenceList()
 		{
-			RandomPlot randomPlot = this;
-			return randomPlot.GetClientPlotReferenceListArray() ?? Array.Empty<int>();
+			return this.GetClientPlotReferenceListArray();
 		}
 
-		// Token: 0x0600B90F RID: 47375 RVA: 0x002D7710 File Offset: 0x002D5910
+		// Token: 0x0600BF4C RID: 48972 RVA: 0x002F3F28 File Offset: 0x002F2128
 		[NullableContext(1)]
-		public readonly IEnumerable<int> ClientPlotReferenceListIter()
+		public IEnumerable<int> ClientPlotReferenceListIter()
 		{
 			RandomPlot.<ClientPlotReferenceListIter>d__20 <ClientPlotReferenceListIter>d__ = new RandomPlot.<ClientPlotReferenceListIter>d__20(-2);
 			<ClientPlotReferenceListIter>d__.<>3__<>4__this = this;
 			return <ClientPlotReferenceListIter>d__;
 		}
 
-		// Token: 0x04005065 RID: 20581
+		// Token: 0x0400564C RID: 22092
 		private Table __p;
 	}
 }

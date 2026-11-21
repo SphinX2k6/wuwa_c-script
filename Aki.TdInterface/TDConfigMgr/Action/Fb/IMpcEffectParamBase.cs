@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020025ED RID: 9709
+	// Token: 0x020028AD RID: 10413
 	public class IMpcEffectParamBase
 	{
-		// Token: 0x0600DA32 RID: 55858 RVA: 0x0020856F File Offset: 0x0020676F
-		[NullableContext(1)]
+		// Token: 0x0600E7FF RID: 59391 RVA: 0x00224CC3 File Offset: 0x00222EC3
 		public static IMpcEffectParamBase Create(IMpcEffectParamBase? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x1700401A RID: 16410
-		// (get) Token: 0x0600DA33 RID: 55859 RVA: 0x0020858E File Offset: 0x0020678E
+		// Token: 0x17004353 RID: 17235
+		// (get) Token: 0x0600E800 RID: 59392 RVA: 0x00224CE2 File Offset: 0x00222EE2
 		public virtual EMpcEffectParamType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007927 RID: 31015
+		// Token: 0x04007FC1 RID: 32705
 		private IMpcEffectParamBase Instance;
 	}
 }

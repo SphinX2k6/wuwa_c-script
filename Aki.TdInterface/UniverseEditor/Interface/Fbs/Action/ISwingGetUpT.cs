@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200724B RID: 29259
+	// Token: 0x02007A20 RID: 31264
 	public class ISwingGetUpT
 	{
-		// Token: 0x1700D91A RID: 55578
-		// (get) Token: 0x06033E5A RID: 212570 RVA: 0x006FB262 File Offset: 0x006F9462
-		// (set) Token: 0x06033E5B RID: 212571 RVA: 0x006FB26A File Offset: 0x006F946A
+		// Token: 0x1700E513 RID: 58643
+		// (get) Token: 0x0603715C RID: 225628 RVA: 0x0075C5C2 File Offset: 0x0075A7C2
+		// (set) Token: 0x0603715D RID: 225629 RVA: 0x0075C5CA File Offset: 0x0075A7CA
 		public ELeisureInteract Type { get; set; }
 
-		// Token: 0x06033E5C RID: 212572 RVA: 0x006FB273 File Offset: 0x006F9473
+		// Token: 0x0603715E RID: 225630 RVA: 0x0075C5D3 File Offset: 0x0075A7D3
 		public ISwingGetUpT()
 		{
 			this.Type = ELeisureInteract.CustomSkill;

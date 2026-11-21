@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002143 RID: 8515
+	// Token: 0x020023A4 RID: 9124
 	public class ReignsTriggerGuide_SetValue
 	{
-		// Token: 0x04007019 RID: 28697
+		// Token: 0x0400764E RID: 30286
 		public int GuideId;
 	}
 }

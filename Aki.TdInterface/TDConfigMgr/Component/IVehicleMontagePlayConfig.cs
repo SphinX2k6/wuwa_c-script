@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020007BD RID: 1981
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000860 RID: 2144
 	public class IVehicleMontagePlayConfig
 	{
-		// Token: 0x06002AF5 RID: 10997 RVA: 0x00070550 File Offset: 0x0006E750
+		// Token: 0x06002E25 RID: 11813 RVA: 0x000778B4 File Offset: 0x00075AB4
 		private IVehicleMontagePlayConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002AF6 RID: 10998 RVA: 0x00070588 File Offset: 0x0006E788
+		// Token: 0x06002E26 RID: 11814 RVA: 0x000778EC File Offset: 0x00075AEC
 		public static IVehicleMontagePlayConfig Create([Nullable(2)] IVehicleMontagePlayConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002AF7 RID: 10999 RVA: 0x0007059B File Offset: 0x0006E79B
+		// Token: 0x06002E27 RID: 11815 RVA: 0x000778FF File Offset: 0x00075AFF
 		public static IVehicleMontagePlayConfig CreateFromSetValue([Nullable(2)] IVehicleMontagePlayConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06002AF8 RID: 11000 RVA: 0x000705B0 File Offset: 0x0006E7B0
+		// Token: 0x06002E28 RID: 11816 RVA: 0x00077914 File Offset: 0x00075B14
 		public IVehicleMontagePlayConfig_SetValue ToSetValue()
 		{
 			return new IVehicleMontagePlayConfig_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000B42 RID: 2882
-		// (get) Token: 0x06002AF9 RID: 11001 RVA: 0x000705FE File Offset: 0x0006E7FE
-		// (set) Token: 0x06002AFA RID: 11002 RVA: 0x0007062D File Offset: 0x0006E82D
+		// Token: 0x17000C05 RID: 3077
+		// (get) Token: 0x06002E29 RID: 11817 RVA: 0x00077962 File Offset: 0x00075B62
+		// (set) Token: 0x06002E2A RID: 11818 RVA: 0x00077991 File Offset: 0x00075B91
 		public virtual float MinMontageSpeedFactor
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B43 RID: 2883
-		// (get) Token: 0x06002AFB RID: 11003 RVA: 0x0007063B File Offset: 0x0006E83B
-		// (set) Token: 0x06002AFC RID: 11004 RVA: 0x0007066A File Offset: 0x0006E86A
+		// Token: 0x17000C06 RID: 3078
+		// (get) Token: 0x06002E2B RID: 11819 RVA: 0x0007799F File Offset: 0x00075B9F
+		// (set) Token: 0x06002E2C RID: 11820 RVA: 0x000779CE File Offset: 0x00075BCE
 		public virtual float MaxMontageSpeedFactor
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B44 RID: 2884
-		// (get) Token: 0x06002AFD RID: 11005 RVA: 0x00070678 File Offset: 0x0006E878
-		// (set) Token: 0x06002AFE RID: 11006 RVA: 0x000706A7 File Offset: 0x0006E8A7
+		// Token: 0x17000C07 RID: 3079
+		// (get) Token: 0x06002E2D RID: 11821 RVA: 0x000779DC File Offset: 0x00075BDC
+		// (set) Token: 0x06002E2E RID: 11822 RVA: 0x00077A0B File Offset: 0x00075C0B
 		public virtual float MinVehicleSpeed
 		{
 			get
@@ -132,9 +130,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B45 RID: 2885
-		// (get) Token: 0x06002AFF RID: 11007 RVA: 0x000706B5 File Offset: 0x0006E8B5
-		// (set) Token: 0x06002B00 RID: 11008 RVA: 0x000706E4 File Offset: 0x0006E8E4
+		// Token: 0x17000C08 RID: 3080
+		// (get) Token: 0x06002E2F RID: 11823 RVA: 0x00077A19 File Offset: 0x00075C19
+		// (set) Token: 0x06002E30 RID: 11824 RVA: 0x00077A48 File Offset: 0x00075C48
 		public virtual float MaxVehicleSpeed
 		{
 			get
@@ -155,9 +153,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000B46 RID: 2886
-		// (get) Token: 0x06002B01 RID: 11009 RVA: 0x000706F2 File Offset: 0x0006E8F2
-		// (set) Token: 0x06002B02 RID: 11010 RVA: 0x0007071D File Offset: 0x0006E91D
+		// Token: 0x17000C09 RID: 3081
+		// (get) Token: 0x06002E31 RID: 11825 RVA: 0x00077A56 File Offset: 0x00075C56
+		// (set) Token: 0x06002E32 RID: 11826 RVA: 0x00077A81 File Offset: 0x00075C81
 		public virtual string TargetState
 		{
 			get
@@ -178,11 +176,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001C96 RID: 7318
+		// Token: 0x04001EA2 RID: 7842
 		[Nullable(2)]
 		protected IVehicleMontagePlayConfig FbInstance;
 
-		// Token: 0x04001C97 RID: 7319
+		// Token: 0x04001EA3 RID: 7843
 		[Nullable(2)]
 		protected IVehicleMontagePlayConfig_SetValue PocoInterface;
 	}

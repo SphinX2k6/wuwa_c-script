@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DC8 RID: 3528
+	// Token: 0x02000EC4 RID: 3780
 	public class IRoadNetworkNavigationType
 	{
-		// Token: 0x0600500D RID: 20493 RVA: 0x000C5E71 File Offset: 0x000C4071
-		[NullableContext(1)]
+		// Token: 0x06005532 RID: 21810 RVA: 0x000D16C1 File Offset: 0x000CF8C1
 		public static IRoadNetworkNavigationType Create(IRoadNetworkNavigationType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001A3A RID: 6714
-		// (get) Token: 0x0600500E RID: 20494 RVA: 0x000C5E90 File Offset: 0x000C4090
+		// Token: 0x17001BA5 RID: 7077
+		// (get) Token: 0x06005533 RID: 21811 RVA: 0x000D16E0 File Offset: 0x000CF8E0
 		public virtual ERoadNetworkNavigationType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002DE5 RID: 11749
+		// Token: 0x040030AB RID: 12459
 		private IRoadNetworkNavigationType Instance;
 	}
 }

@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006B2 RID: 1714
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000753 RID: 1875
 	public class ISceneTextGuideUiScaleConfig
 	{
-		// Token: 0x060024C2 RID: 9410 RVA: 0x0006365C File Offset: 0x0006185C
+		// Token: 0x060027DE RID: 10206 RVA: 0x0006A624 File Offset: 0x00068824
 		private ISceneTextGuideUiScaleConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060024C3 RID: 9411 RVA: 0x00063694 File Offset: 0x00061894
+		// Token: 0x060027DF RID: 10207 RVA: 0x0006A65C File Offset: 0x0006885C
 		public static ISceneTextGuideUiScaleConfig Create([Nullable(2)] ISceneTextGuideUiScaleConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060024C4 RID: 9412 RVA: 0x000636A7 File Offset: 0x000618A7
+		// Token: 0x060027E0 RID: 10208 RVA: 0x0006A66F File Offset: 0x0006886F
 		public static ISceneTextGuideUiScaleConfig CreateFromSetValue([Nullable(2)] ISceneTextGuideUiScaleConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060024C5 RID: 9413 RVA: 0x000636BC File Offset: 0x000618BC
+		// Token: 0x060027E1 RID: 10209 RVA: 0x0006A684 File Offset: 0x00068884
 		public ISceneTextGuideUiScaleConfig_SetValue ToSetValue()
 		{
 			return new ISceneTextGuideUiScaleConfig_SetValue
@@ -63,9 +61,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170009B5 RID: 2485
-		// (get) Token: 0x060024C6 RID: 9414 RVA: 0x0006370A File Offset: 0x0006190A
-		// (set) Token: 0x060024C7 RID: 9415 RVA: 0x00063735 File Offset: 0x00061935
+		// Token: 0x17000A71 RID: 2673
+		// (get) Token: 0x060027E2 RID: 10210 RVA: 0x0006A6D2 File Offset: 0x000688D2
+		// (set) Token: 0x060027E3 RID: 10211 RVA: 0x0006A6FD File Offset: 0x000688FD
 		public virtual int MinDist
 		{
 			get
@@ -86,9 +84,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009B6 RID: 2486
-		// (get) Token: 0x060024C8 RID: 9416 RVA: 0x00063743 File Offset: 0x00061943
-		// (set) Token: 0x060024C9 RID: 9417 RVA: 0x0006376E File Offset: 0x0006196E
+		// Token: 0x17000A72 RID: 2674
+		// (get) Token: 0x060027E4 RID: 10212 RVA: 0x0006A70B File Offset: 0x0006890B
+		// (set) Token: 0x060027E5 RID: 10213 RVA: 0x0006A736 File Offset: 0x00068936
 		public virtual int MaxDist
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009B7 RID: 2487
-		// (get) Token: 0x060024CA RID: 9418 RVA: 0x0006377C File Offset: 0x0006197C
-		// (set) Token: 0x060024CB RID: 9419 RVA: 0x000637AB File Offset: 0x000619AB
+		// Token: 0x17000A73 RID: 2675
+		// (get) Token: 0x060027E6 RID: 10214 RVA: 0x0006A744 File Offset: 0x00068944
+		// (set) Token: 0x060027E7 RID: 10215 RVA: 0x0006A773 File Offset: 0x00068973
 		public virtual float MinScale
 		{
 			get
@@ -132,9 +130,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009B8 RID: 2488
-		// (get) Token: 0x060024CC RID: 9420 RVA: 0x000637B9 File Offset: 0x000619B9
-		// (set) Token: 0x060024CD RID: 9421 RVA: 0x000637E8 File Offset: 0x000619E8
+		// Token: 0x17000A74 RID: 2676
+		// (get) Token: 0x060027E8 RID: 10216 RVA: 0x0006A781 File Offset: 0x00068981
+		// (set) Token: 0x060027E9 RID: 10217 RVA: 0x0006A7B0 File Offset: 0x000689B0
 		public virtual float MaxScale
 		{
 			get
@@ -155,9 +153,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009B9 RID: 2489
-		// (get) Token: 0x060024CE RID: 9422 RVA: 0x000637F6 File Offset: 0x000619F6
-		// (set) Token: 0x060024CF RID: 9423 RVA: 0x00063821 File Offset: 0x00061A21
+		// Token: 0x17000A75 RID: 2677
+		// (get) Token: 0x060027EA RID: 10218 RVA: 0x0006A7BE File Offset: 0x000689BE
+		// (set) Token: 0x060027EB RID: 10219 RVA: 0x0006A7E9 File Offset: 0x000689E9
 		public virtual ESceneTextGuideUiScaleType ScaleType
 		{
 			get
@@ -178,11 +176,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001933 RID: 6451
+		// Token: 0x04001B30 RID: 6960
 		[Nullable(2)]
 		protected ISceneTextGuideUiScaleConfig FbInstance;
 
-		// Token: 0x04001934 RID: 6452
+		// Token: 0x04001B31 RID: 6961
 		[Nullable(2)]
 		protected ISceneTextGuideUiScaleConfig_SetValue PocoInterface;
 	}

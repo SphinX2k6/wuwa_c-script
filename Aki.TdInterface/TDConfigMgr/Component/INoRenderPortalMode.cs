@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000554 RID: 1364
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020005BB RID: 1467
 	public class INoRenderPortalMode
 	{
-		// Token: 0x06001BEA RID: 7146 RVA: 0x00050508 File Offset: 0x0004E708
+		// Token: 0x06001DE6 RID: 7654 RVA: 0x000552C4 File Offset: 0x000534C4
 		private INoRenderPortalMode_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001BEB RID: 7147 RVA: 0x00050540 File Offset: 0x0004E740
+		// Token: 0x06001DE7 RID: 7655 RVA: 0x000552FC File Offset: 0x000534FC
 		public static INoRenderPortalMode Create([Nullable(2)] INoRenderPortalMode instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001BEC RID: 7148 RVA: 0x00050553 File Offset: 0x0004E753
+		// Token: 0x06001DE8 RID: 7656 RVA: 0x0005530F File Offset: 0x0005350F
 		public static INoRenderPortalMode CreateFromSetValue([Nullable(2)] INoRenderPortalMode_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001BED RID: 7149 RVA: 0x00050566 File Offset: 0x0004E766
+		// Token: 0x06001DE9 RID: 7657 RVA: 0x00055322 File Offset: 0x00053522
 		public INoRenderPortalMode_SetValue ToSetValue()
 		{
 			return new INoRenderPortalMode_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000756 RID: 1878
-		// (get) Token: 0x06001BEE RID: 7150 RVA: 0x00050585 File Offset: 0x0004E785
-		// (set) Token: 0x06001BEF RID: 7151 RVA: 0x000505B0 File Offset: 0x0004E7B0
+		// Token: 0x170007D9 RID: 2009
+		// (get) Token: 0x06001DEA RID: 7658 RVA: 0x00055341 File Offset: 0x00053541
+		// (set) Token: 0x06001DEB RID: 7659 RVA: 0x0005536C File Offset: 0x0005356C
 		public virtual ENoRenderPortalType Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x17000757 RID: 1879
-		// (get) Token: 0x06001BF0 RID: 7152 RVA: 0x000505BE File Offset: 0x0004E7BE
-		// (set) Token: 0x06001BF1 RID: 7153 RVA: 0x000505E9 File Offset: 0x0004E7E9
+		// Token: 0x170007DA RID: 2010
+		// (get) Token: 0x06001DEC RID: 7660 RVA: 0x0005537A File Offset: 0x0005357A
+		// (set) Token: 0x06001DED RID: 7661 RVA: 0x000553A5 File Offset: 0x000535A5
 		public virtual EPortalModel PortalModel
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001404 RID: 5124
+		// Token: 0x0400156E RID: 5486
 		[Nullable(2)]
 		protected INoRenderPortalMode FbInstance;
 
-		// Token: 0x04001405 RID: 5125
+		// Token: 0x0400156F RID: 5487
 		[Nullable(2)]
 		protected INoRenderPortalMode_SetValue PocoInterface;
 	}

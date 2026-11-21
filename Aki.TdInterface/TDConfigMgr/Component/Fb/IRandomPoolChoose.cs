@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000DAF RID: 3503
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000EAB RID: 3755
 	public class IRandomPoolChoose : IMonsterChooseType
 	{
-		// Token: 0x06004F90 RID: 20368 RVA: 0x000C4FC7 File Offset: 0x000C31C7
+		// Token: 0x060054B5 RID: 21685 RVA: 0x000D0817 File Offset: 0x000CEA17
 		public static IRandomPoolChoose Create(IRandomPoolChoose? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170019EF RID: 6639
-		// (get) Token: 0x06004F91 RID: 20369 RVA: 0x000C4FE6 File Offset: 0x000C31E6
+		// Token: 0x17001B5A RID: 7002
+		// (get) Token: 0x060054B6 RID: 21686 RVA: 0x000D0836 File Offset: 0x000CEA36
 		public override EMonsterChooseType Type
 		{
 			get
@@ -33,8 +30,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170019F0 RID: 6640
-		// (get) Token: 0x06004F92 RID: 20370 RVA: 0x000C4FF4 File Offset: 0x000C31F4
+		// Token: 0x17001B5B RID: 7003
+		// (get) Token: 0x060054B7 RID: 21687 RVA: 0x000D0844 File Offset: 0x000CEA44
 		public virtual List<IRandomPoolConfig> RandomPoolConfigs
 		{
 			get
@@ -54,13 +51,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002DA4 RID: 11684
+		// Token: 0x0400306A RID: 12394
 		private IRandomPoolChoose Instance;
 
-		// Token: 0x04002DA5 RID: 11685
+		// Token: 0x0400306B RID: 12395
 		private List<IRandomPoolConfig> _RandomPoolConfigsCache;
 
-		// Token: 0x04002DA6 RID: 11686
+		// Token: 0x0400306C RID: 12396
 		private bool _RandomPoolConfigsInited;
 	}
 }

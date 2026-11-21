@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Utils
 {
-	// Token: 0x02004518 RID: 17688
+	// Token: 0x0200343A RID: 13370
 	public class BaseContext
 	{
-		// Token: 0x0401855E RID: 99678
+		// Token: 0x04012B86 RID: 76678
 		[Nullable(new byte[]
 		{
 			2,

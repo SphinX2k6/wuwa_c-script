@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001288 RID: 4744
+	// Token: 0x020013C8 RID: 5064
 	public static class ERollBlockLaunchMethodExtensions
 	{
-		// Token: 0x06006B0B RID: 27403 RVA: 0x00100CD4 File Offset: 0x000FEED4
+		// Token: 0x0600715E RID: 29022 RVA: 0x0010E9D0 File Offset: 0x0010CBD0
 		public static string ToEnumString(this ERollBlockLaunchMethod value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006B0C RID: 27404 RVA: 0x00100D0C File Offset: 0x000FEF0C
+		// Token: 0x0600715F RID: 29023 RVA: 0x0010EA08 File Offset: 0x0010CC08
 		public static ERollBlockLaunchMethod FromString(string name)
 		{
 			ERollBlockLaunchMethod result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006B0D RID: 27405 RVA: 0x00100D35 File Offset: 0x000FEF35
+		// Token: 0x06007160 RID: 29024 RVA: 0x0010EA31 File Offset: 0x0010CC31
 		public static bool TryFromString(string name, out ERollBlockLaunchMethod value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Quest
 			return true;
 		}
 
-		// Token: 0x06006B0E RID: 27406 RVA: 0x00100D6E File Offset: 0x000FEF6E
+		// Token: 0x06007161 RID: 29025 RVA: 0x0010EA6A File Offset: 0x0010CC6A
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006B0F RID: 27407 RVA: 0x00100D86 File Offset: 0x000FEF86
+		// Token: 0x06007162 RID: 29026 RVA: 0x0010EA82 File Offset: 0x0010CC82
 		public static ERollBlockLaunchMethod[] GetValues()
 		{
 			return new ERollBlockLaunchMethod[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006B10 RID: 27408 RVA: 0x00100D92 File Offset: 0x000FEF92
+		// Token: 0x06007163 RID: 29027 RVA: 0x0010EA8E File Offset: 0x0010CC8E
 		public static string[] GetNames()
 		{
 			return new string[]

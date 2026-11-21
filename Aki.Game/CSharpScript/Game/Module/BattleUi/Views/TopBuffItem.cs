@@ -4,10 +4,10 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E42 RID: 24130
+	// Token: 0x02004E27 RID: 20007
 	public class TopBuffItem : UiPanelBase
 	{
-		// Token: 0x0603D5B5 RID: 251317 RVA: 0x00ECABD8 File Offset: 0x00EC8DD8
+		// Token: 0x06032545 RID: 206149 RVA: 0x00E1C144 File Offset: 0x00E1A344
 		public override void SetActive(bool visibility)
 		{
 			if (this.GetVisible() != visibility)
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.SetActive(visibility);
 		}
 
-		// Token: 0x0603D5B6 RID: 251318 RVA: 0x00ECAC14 File Offset: 0x00EC8E14
+		// Token: 0x06032546 RID: 206150 RVA: 0x00E1C180 File Offset: 0x00E1A380
 		public void SetVisible(int visibleReason, bool bVisible)
 		{
 			bool visible = this.GetVisible();
@@ -31,19 +31,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SetActive(visible2);
 		}
 
-		// Token: 0x0603D5B7 RID: 251319 RVA: 0x00ECAC41 File Offset: 0x00EC8E41
+		// Token: 0x06032547 RID: 206151 RVA: 0x00E1C1AD File Offset: 0x00E1A3AD
 		private void SetVisibleInner(int visibleReason, bool bVisible)
 		{
 			this.InnerVisibleState = VisibleStateUtil.SetVisible(this.InnerVisibleState, bVisible, visibleReason);
 		}
 
-		// Token: 0x0603D5B8 RID: 251320 RVA: 0x00ECAC56 File Offset: 0x00EC8E56
+		// Token: 0x06032548 RID: 206152 RVA: 0x00E1C1C2 File Offset: 0x00E1A3C2
 		public bool GetVisible()
 		{
 			return this.InnerVisibleState == 0;
 		}
 
-		// Token: 0x0603D5B9 RID: 251321 RVA: 0x00ECAC61 File Offset: 0x00EC8E61
+		// Token: 0x06032549 RID: 206153 RVA: 0x00E1C1CD File Offset: 0x00E1A3CD
 		protected void InitTweenAnim(int componentType)
 		{
 			if (this.TweenAnimPlayer == null)
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.TweenAnimPlayer.InitTweenAnim(componentType, base.GetItem(componentType), false);
 		}
 
-		// Token: 0x0603D5BA RID: 251322 RVA: 0x00ECAC8A File Offset: 0x00EC8E8A
+		// Token: 0x0603254A RID: 206154 RVA: 0x00E1C1F6 File Offset: 0x00E1A3F6
 		protected void PlayTweenAnim(int componentType)
 		{
 			BattleUiTweenAnimPlayer tweenAnimPlayer = this.TweenAnimPlayer;
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			tweenAnimPlayer.PlayTweenAnim(componentType);
 		}
 
-		// Token: 0x0603D5BB RID: 251323 RVA: 0x00ECAC9D File Offset: 0x00EC8E9D
+		// Token: 0x0603254B RID: 206155 RVA: 0x00E1C209 File Offset: 0x00E1A409
 		protected void StopTweenAnim(int componentType)
 		{
 			BattleUiTweenAnimPlayer tweenAnimPlayer = this.TweenAnimPlayer;
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			tweenAnimPlayer.StopTweenAnim(componentType);
 		}
 
-		// Token: 0x0603D5BC RID: 251324 RVA: 0x00ECACB0 File Offset: 0x00EC8EB0
+		// Token: 0x0603254C RID: 206156 RVA: 0x00E1C21C File Offset: 0x00E1A41C
 		protected void ClearAllTweenAnim()
 		{
 			BattleUiTweenAnimPlayer tweenAnimPlayer = this.TweenAnimPlayer;
@@ -86,7 +86,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			tweenAnimPlayer.Clear(false);
 		}
 
-		// Token: 0x0603D5BD RID: 251325 RVA: 0x00ECACC3 File Offset: 0x00EC8EC3
+		// Token: 0x0603254D RID: 206157 RVA: 0x00E1C22F File Offset: 0x00E1A42F
 		protected void SetTweenTimeScale(int componentType, float timeScale)
 		{
 			BattleUiTweenAnimPlayer tweenAnimPlayer = this.TweenAnimPlayer;
@@ -97,10 +97,10 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			tweenAnimPlayer.SetTweenTimeScale(componentType, timeScale);
 		}
 
-		// Token: 0x0402000D RID: 131085
+		// Token: 0x0401AAD4 RID: 109268
 		protected int InnerVisibleState = 1;
 
-		// Token: 0x0402000E RID: 131086
+		// Token: 0x0401AAD5 RID: 109269
 		[Nullable(2)]
 		protected BattleUiTweenAnimPlayer TweenAnimPlayer;
 	}

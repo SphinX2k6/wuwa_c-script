@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200013E RID: 318
+	// Token: 0x0200014D RID: 333
 	public class ConfigCatchSignalGameplayById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06000775 RID: 1909 RVA: 0x00083D30 File Offset: 0x00081F30
+		// Token: 0x060007CF RID: 1999 RVA: 0x00089694 File Offset: 0x00087894
 		static ConfigCatchSignalGameplayById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigCatchSignalGameplayById.CreateStaticDefaultValue), new Action(ConfigCatchSignalGameplayById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06000776 RID: 1910 RVA: 0x00083D50 File Offset: 0x00081F50
+		// Token: 0x060007D0 RID: 2000 RVA: 0x000896B4 File Offset: 0x000878B4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigCatchSignalGameplayById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06000777 RID: 1911 RVA: 0x00083DCF File Offset: 0x00081FCF
+		// Token: 0x060007D1 RID: 2001 RVA: 0x00089733 File Offset: 0x00087933
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigCatchSignalGameplayById.LogPair = null;
 			ConfigCatchSignalGameplayById.HandleId = 0;
 		}
 
-		// Token: 0x06000778 RID: 1912 RVA: 0x00083DDD File Offset: 0x00081FDD
+		// Token: 0x060007D2 RID: 2002 RVA: 0x00089741 File Offset: 0x00087941
 		public static void Init()
 		{
 			ConfigCatchSignalGameplayById.HandleId = ConfigCommon.InitDataStatement(ConfigCatchSignalGameplayById.HandleId, "db_catchsignalgameplay.db", "select BinData from `CatchSignalGameplay` where Id=?");
 		}
 
-		// Token: 0x06000779 RID: 1913 RVA: 0x00083DF8 File Offset: 0x00081FF8
+		// Token: 0x060007D3 RID: 2003 RVA: 0x0008975C File Offset: 0x0008795C
 		public static CatchSignalGameplay? GetConfig(string p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigCatchSignalGameplayById.HandleId, ConfigCatchSignalGameplayById.LogPair))
@@ -80,22 +80,22 @@ namespace Aki.Config
 			return new CatchSignalGameplay?(rootAsCatchSignalGameplay);
 		}
 
-		// Token: 0x04000896 RID: 2198
+		// Token: 0x040008FF RID: 2303
 		private const string DB = "db_catchsignalgameplay.db";
 
-		// Token: 0x04000897 RID: 2199
+		// Token: 0x04000900 RID: 2304
 		private const string FILE = "k.可视化编辑/c.Csv/m.捕获信号玩法配置/*.csv*";
 
-		// Token: 0x04000898 RID: 2200
+		// Token: 0x04000901 RID: 2305
 		private const string TABLE = "CatchSignalGameplay";
 
-		// Token: 0x04000899 RID: 2201
+		// Token: 0x04000902 RID: 2306
 		private const string COMMAND = "select BinData from `CatchSignalGameplay` where Id=?";
 
-		// Token: 0x0400089A RID: 2202
+		// Token: 0x04000903 RID: 2307
 		private const string KEY_PREFIX = "CatchSignalGameplayById";
 
-		// Token: 0x0400089B RID: 2203
+		// Token: 0x04000904 RID: 2308
 		[Nullable(new byte[]
 		{
 			2,
@@ -105,7 +105,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400089C RID: 2204
+		// Token: 0x04000905 RID: 2309
 		private static int HandleId;
 	}
 }

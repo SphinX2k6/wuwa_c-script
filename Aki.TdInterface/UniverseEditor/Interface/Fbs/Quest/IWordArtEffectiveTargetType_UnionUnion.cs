@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x020042A8 RID: 17064
+	// Token: 0x02004704 RID: 18180
 	public class IWordArtEffectiveTargetType_UnionUnion
 	{
-		// Token: 0x1700791F RID: 31007
-		// (get) Token: 0x06019489 RID: 103561 RVA: 0x003A16B5 File Offset: 0x0039F8B5
-		// (set) Token: 0x0601948A RID: 103562 RVA: 0x003A16BD File Offset: 0x0039F8BD
+		// Token: 0x17007F50 RID: 32592
+		// (get) Token: 0x0601ABF5 RID: 109557 RVA: 0x003CCD8D File Offset: 0x003CAF8D
+		// (set) Token: 0x0601ABF6 RID: 109558 RVA: 0x003CCD95 File Offset: 0x003CAF95
 		public IWordArtEffectiveTargetType_Union Type { get; set; }
 
-		// Token: 0x17007920 RID: 31008
-		// (get) Token: 0x0601948B RID: 103563 RVA: 0x003A16C6 File Offset: 0x0039F8C6
-		// (set) Token: 0x0601948C RID: 103564 RVA: 0x003A16CE File Offset: 0x0039F8CE
+		// Token: 0x17007F51 RID: 32593
+		// (get) Token: 0x0601ABF7 RID: 109559 RVA: 0x003CCD9E File Offset: 0x003CAF9E
+		// (set) Token: 0x0601ABF8 RID: 109560 RVA: 0x003CCDA6 File Offset: 0x003CAFA6
 		public object Value { get; set; }
 
-		// Token: 0x0601948D RID: 103565 RVA: 0x003A16D7 File Offset: 0x0039F8D7
+		// Token: 0x0601ABF9 RID: 109561 RVA: 0x003CCDAF File Offset: 0x003CAFAF
 		public IWordArtEffectiveTargetType_UnionUnion()
 		{
 			this.Type = IWordArtEffectiveTargetType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601948E RID: 103566 RVA: 0x003A16ED File Offset: 0x0039F8ED
+		// Token: 0x0601ABFA RID: 109562 RVA: 0x003CCDC5 File Offset: 0x003CAFC5
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601948F RID: 103567 RVA: 0x003A16FF File Offset: 0x0039F8FF
+		// Token: 0x0601ABFB RID: 109563 RVA: 0x003CCDD7 File Offset: 0x003CAFD7
 		public IWordArtEffectiveTargetTypeT AsIWordArtEffectiveTargetType()
 		{
 			return this.As<IWordArtEffectiveTargetTypeT>();
 		}
 
-		// Token: 0x06019490 RID: 103568 RVA: 0x003A1707 File Offset: 0x0039F907
+		// Token: 0x0601ABFC RID: 109564 RVA: 0x003CCDDF File Offset: 0x003CAFDF
 		public static IWordArtEffectiveTargetType_UnionUnion FromIWordArtEffectiveTargetType(IWordArtEffectiveTargetTypeT _iwordarteffectivetargettype)
 		{
 			return new IWordArtEffectiveTargetType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06019491 RID: 103569 RVA: 0x003A171C File Offset: 0x0039F91C
+		// Token: 0x0601ABFD RID: 109565 RVA: 0x003CCDF4 File Offset: 0x003CAFF4
 		public INumberWordArtEffectiveTargetTypeT AsINumberWordArtEffectiveTargetType()
 		{
 			return this.As<INumberWordArtEffectiveTargetTypeT>();
 		}
 
-		// Token: 0x06019492 RID: 103570 RVA: 0x003A1724 File Offset: 0x0039F924
+		// Token: 0x0601ABFE RID: 109566 RVA: 0x003CCDFC File Offset: 0x003CAFFC
 		public static IWordArtEffectiveTargetType_UnionUnion FromINumberWordArtEffectiveTargetType(INumberWordArtEffectiveTargetTypeT _inumberwordarteffectivetargettype)
 		{
 			return new IWordArtEffectiveTargetType_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Quest
 			};
 		}
 
-		// Token: 0x06019493 RID: 103571 RVA: 0x003A173C File Offset: 0x0039F93C
+		// Token: 0x0601ABFF RID: 109567 RVA: 0x003CCE14 File Offset: 0x003CB014
 		public static int Pack(FlatBufferBuilder builder, IWordArtEffectiveTargetType_UnionUnion _o)
 		{
 			IWordArtEffectiveTargetType_Union type = _o.Type;

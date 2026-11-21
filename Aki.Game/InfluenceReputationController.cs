@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
@@ -9,56 +8,56 @@ using CSharpScript.Game.Ui;
 using Google.Protobuf;
 using Google.Protobuf.Collections;
 
-// Token: 0x02001F76 RID: 8054
+// Token: 0x02001438 RID: 5176
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class InfluenceReputationController : UiControllerBase
 {
-	// Token: 0x0600F9E7 RID: 63975 RVA: 0x003C8F88 File Offset: 0x003C7188
+	// Token: 0x0600CE06 RID: 52742 RVA: 0x003D4AAC File Offset: 0x003D2CAC
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.OnLoadingNetDataDone, new Action(this.RequestInfluenceInfo));
 	}
 
-	// Token: 0x0600F9E8 RID: 63976 RVA: 0x003C8FA6 File Offset: 0x003C71A6
+	// Token: 0x0600CE07 RID: 52743 RVA: 0x003D4ACA File Offset: 0x003D2CCA
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.OnLoadingNetDataDone, new Action(this.RequestInfluenceInfo));
 	}
 
-	// Token: 0x0600F9E9 RID: 63977 RVA: 0x003C8FC4 File Offset: 0x003C71C4
+	// Token: 0x0600CE08 RID: 52744 RVA: 0x003D4AE8 File Offset: 0x003D2CE8
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.InfluenceInfoUpdateNotify, new Action<IMessage, Net.CallbackStatus>(this.NotifyInfluenceInfoUpdate));
 	}
 
-	// Token: 0x0600F9EA RID: 63978 RVA: 0x003C8FE2 File Offset: 0x003C71E2
+	// Token: 0x0600CE09 RID: 52745 RVA: 0x003D4B06 File Offset: 0x003D2D06
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.InfluenceInfoUpdateNotify);
 	}
 
-	// Token: 0x0600F9EB RID: 63979 RVA: 0x003C8FF4 File Offset: 0x003C71F4
+	// Token: 0x0600CE0A RID: 52746 RVA: 0x003D4B18 File Offset: 0x003D2D18
 	[NullableContext(2)]
 	private void NotifyInfluenceInfoUpdate(IMessage msg, Net.CallbackStatus status)
 	{
 		RepeatedField<OneInfluenceInfo> influenceInfos = ((InfluenceInfoUpdateNotify)msg).InfluenceInfos;
-		InfluenceReputationModel.Instance.SetInfluenceInfoList(influenceInfos.ToArray<OneInfluenceInfo>());
+		InfluenceReputationModel.Instance.SetInfluenceInfoList(influenceInfos);
 	}
 
-	// Token: 0x0600F9EC RID: 63980 RVA: 0x003C9020 File Offset: 0x003C7220
+	// Token: 0x0600CE0B RID: 52747 RVA: 0x003D4B3C File Offset: 0x003D2D3C
 	public void RequestInfluenceInfo()
 	{
 		InfluenceInfoRequest message = InfluenceInfoRequest.Create();
 		Net.Instance.Call(ERequestMessageId.InfluenceInfoRequest, message, delegate(IMessage msg, Net.CallbackStatus _)
 		{
 			RepeatedField<OneInfluenceInfo> influenceInfos = ((InfluenceInfoResponse)msg).InfluenceInfos;
-			InfluenceReputationModel.Instance.SetInfluenceInfoList(influenceInfos.ToArray<OneInfluenceInfo>());
+			InfluenceReputationModel.Instance.SetInfluenceInfoList(influenceInfos);
 		}, 0);
 	}
 
-	// Token: 0x0600F9ED RID: 63981 RVA: 0x003C9064 File Offset: 0x003C7264
+	// Token: 0x0600CE0C RID: 52748 RVA: 0x003D4B80 File Offset: 0x003D2D80
 	public void RequestInfluenceReward(int influenceId)
 	{
 		InfluenceRewardRequest influenceRewardRequest = InfluenceRewardRequest.Create();
@@ -68,7 +67,7 @@ public class InfluenceReputationController : UiControllerBase
 			InfluenceRewardResponse influenceRewardResponse = (InfluenceRewardResponse)msg;
 			if (influenceRewardResponse.Code != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(influenceRewardResponse.Code, 26210, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(influenceRewardResponse.Code, 21130, null, true, true);
 				return;
 			}
 			if (InfluenceReputationModel.Instance.UpdateInfluenceRewardIndex(influenceRewardResponse.InfluenceId, influenceRewardResponse.RewardIndex))
@@ -79,7 +78,7 @@ public class InfluenceReputationController : UiControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600F9EE RID: 63982 RVA: 0x003C909C File Offset: 0x003C729C
+	// Token: 0x0600CE0D RID: 52749 RVA: 0x003D4BB8 File Offset: 0x003D2DB8
 	private void ShowReward(IDictionary<int, int> itemList)
 	{
 		List<RewardItemData> list = new List<RewardItemData>();
@@ -93,26 +92,26 @@ public class InfluenceReputationController : UiControllerBase
 		ItemRewardController.Instance.OpenCommonRewardView(1009, list, null);
 	}
 
-	// Token: 0x0600F9EF RID: 63983 RVA: 0x003C9120 File Offset: 0x003C7320
+	// Token: 0x0600CE0E RID: 52750 RVA: 0x003D4C3C File Offset: 0x003D2E3C
 	protected override void OnAddOpenViewCheckFunction()
 	{
 		UiManager.Instance.AddOpenViewCheckFunction(EUiViewName.InfluenceReputationView, new Func<EUiViewName, object, bool>(this.CanOpenView), "InfluenceReputationController.CanOpenView");
 	}
 
-	// Token: 0x0600F9F0 RID: 63984 RVA: 0x003C9142 File Offset: 0x003C7342
+	// Token: 0x0600CE0F RID: 52751 RVA: 0x003D4C5E File Offset: 0x003D2E5E
 	protected override void OnRemoveOpenViewCheckFunction()
 	{
 		UiManager.Instance.RemoveOpenViewCheckFunction(EUiViewName.InfluenceReputationView, new Func<EUiViewName, object, bool>(this.CanOpenView));
 	}
 
-	// Token: 0x0600F9F1 RID: 63985 RVA: 0x003C915F File Offset: 0x003C735F
+	// Token: 0x0600CE10 RID: 52752 RVA: 0x003D4C7B File Offset: 0x003D2E7B
 	private bool CanOpenView(EUiViewName viewName, object param)
 	{
 		return FunctionModel.Instance.IsOpen(10029);
 	}
 
-	// Token: 0x1700133C RID: 4924
-	// (get) Token: 0x0600F9F2 RID: 63986 RVA: 0x003C9170 File Offset: 0x003C7370
+	// Token: 0x17001366 RID: 4966
+	// (get) Token: 0x0600CE11 RID: 52753 RVA: 0x003D4C8C File Offset: 0x003D2E8C
 	public static InfluenceReputationController Instance
 	{
 		get
@@ -121,7 +120,7 @@ public class InfluenceReputationController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600F9F3 RID: 63987 RVA: 0x003C9177 File Offset: 0x003C7377
+	// Token: 0x0600CE12 RID: 52754 RVA: 0x003D4C93 File Offset: 0x003D2E93
 	public static InfluenceReputationController GetOrCreateInstance()
 	{
 		if (InfluenceReputationController._Instance == null)
@@ -131,7 +130,7 @@ public class InfluenceReputationController : UiControllerBase
 		return InfluenceReputationController._Instance;
 	}
 
-	// Token: 0x0600F9F4 RID: 63988 RVA: 0x003C918B File Offset: 0x003C738B
+	// Token: 0x0600CE13 RID: 52755 RVA: 0x003D4CA7 File Offset: 0x003D2EA7
 	public static bool CreateInstance()
 	{
 		if (InfluenceReputationController._Instance != null)
@@ -142,24 +141,24 @@ public class InfluenceReputationController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0600F9F5 RID: 63989 RVA: 0x003C91A1 File Offset: 0x003C73A1
+	// Token: 0x0600CE14 RID: 52756 RVA: 0x003D4CBD File Offset: 0x003D2EBD
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600F9F6 RID: 63990 RVA: 0x003C91A3 File Offset: 0x003C73A3
+	// Token: 0x0600CE15 RID: 52757 RVA: 0x003D4CBF File Offset: 0x003D2EBF
 	public static void ResetStaticDefaultValue()
 	{
 		InfluenceReputationController._Instance = null;
 	}
 
-	// Token: 0x0600F9F7 RID: 63991 RVA: 0x003C91AB File Offset: 0x003C73AB
+	// Token: 0x0600CE16 RID: 52758 RVA: 0x003D4CC7 File Offset: 0x003D2EC7
 	static InfluenceReputationController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(InfluenceReputationController.CreateStaticDefaultValue), new Action(InfluenceReputationController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04007478 RID: 29816
+	// Token: 0x04007559 RID: 30041
 	[Nullable(2)]
 	private static InfluenceReputationController _Instance;
 }

@@ -2,42 +2,42 @@
 
 namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 {
-	// Token: 0x020072F1 RID: 29425
+	// Token: 0x02006474 RID: 25716
 	public class PhotoInputSnapshot : IPhotoInputSnapshot
 	{
-		// Token: 0x17009F53 RID: 40787
-		// (get) Token: 0x0604835B RID: 295771 RVA: 0x0128C8E5 File Offset: 0x0128AAE5
-		// (set) Token: 0x0604835C RID: 295772 RVA: 0x0128C8ED File Offset: 0x0128AAED
+		// Token: 0x170076F1 RID: 30449
+		// (get) Token: 0x0603E7A7 RID: 255911 RVA: 0x0122F299 File Offset: 0x0122D499
+		// (set) Token: 0x0603E7A8 RID: 255912 RVA: 0x0122F2A1 File Offset: 0x0122D4A1
 		public float MoveForward { get; set; }
 
-		// Token: 0x17009F54 RID: 40788
-		// (get) Token: 0x0604835D RID: 295773 RVA: 0x0128C8F6 File Offset: 0x0128AAF6
-		// (set) Token: 0x0604835E RID: 295774 RVA: 0x0128C8FE File Offset: 0x0128AAFE
+		// Token: 0x170076F2 RID: 30450
+		// (get) Token: 0x0603E7A9 RID: 255913 RVA: 0x0122F2AA File Offset: 0x0122D4AA
+		// (set) Token: 0x0603E7AA RID: 255914 RVA: 0x0122F2B2 File Offset: 0x0122D4B2
 		public float MoveRight { get; set; }
 
-		// Token: 0x17009F55 RID: 40789
-		// (get) Token: 0x0604835F RID: 295775 RVA: 0x0128C907 File Offset: 0x0128AB07
-		// (set) Token: 0x06048360 RID: 295776 RVA: 0x0128C90F File Offset: 0x0128AB0F
+		// Token: 0x170076F3 RID: 30451
+		// (get) Token: 0x0603E7AB RID: 255915 RVA: 0x0122F2BB File Offset: 0x0122D4BB
+		// (set) Token: 0x0603E7AC RID: 255916 RVA: 0x0122F2C3 File Offset: 0x0122D4C3
 		public float MoveUp { get; set; }
 
-		// Token: 0x17009F56 RID: 40790
-		// (get) Token: 0x06048361 RID: 295777 RVA: 0x0128C918 File Offset: 0x0128AB18
-		// (set) Token: 0x06048362 RID: 295778 RVA: 0x0128C920 File Offset: 0x0128AB20
+		// Token: 0x170076F4 RID: 30452
+		// (get) Token: 0x0603E7AD RID: 255917 RVA: 0x0122F2CC File Offset: 0x0122D4CC
+		// (set) Token: 0x0603E7AE RID: 255918 RVA: 0x0122F2D4 File Offset: 0x0122D4D4
 		public float Pitch { get; set; }
 
-		// Token: 0x17009F57 RID: 40791
-		// (get) Token: 0x06048363 RID: 295779 RVA: 0x0128C929 File Offset: 0x0128AB29
-		// (set) Token: 0x06048364 RID: 295780 RVA: 0x0128C931 File Offset: 0x0128AB31
+		// Token: 0x170076F5 RID: 30453
+		// (get) Token: 0x0603E7AF RID: 255919 RVA: 0x0122F2DD File Offset: 0x0122D4DD
+		// (set) Token: 0x0603E7B0 RID: 255920 RVA: 0x0122F2E5 File Offset: 0x0122D4E5
 		public float Yaw { get; set; }
 
-		// Token: 0x17009F58 RID: 40792
-		// (get) Token: 0x06048365 RID: 295781 RVA: 0x0128C93A File Offset: 0x0128AB3A
-		// (set) Token: 0x06048366 RID: 295782 RVA: 0x0128C942 File Offset: 0x0128AB42
+		// Token: 0x170076F6 RID: 30454
+		// (get) Token: 0x0603E7B1 RID: 255921 RVA: 0x0122F2EE File Offset: 0x0122D4EE
+		// (set) Token: 0x0603E7B2 RID: 255922 RVA: 0x0122F2F6 File Offset: 0x0122D4F6
 		public float Roll { get; set; }
 
-		// Token: 0x17009F59 RID: 40793
-		// (get) Token: 0x06048367 RID: 295783 RVA: 0x0128C94B File Offset: 0x0128AB4B
-		// (set) Token: 0x06048368 RID: 295784 RVA: 0x0128C953 File Offset: 0x0128AB53
+		// Token: 0x170076F7 RID: 30455
+		// (get) Token: 0x0603E7B3 RID: 255923 RVA: 0x0122F2FF File Offset: 0x0122D4FF
+		// (set) Token: 0x0603E7B4 RID: 255924 RVA: 0x0122F307 File Offset: 0x0122D507
 		public float Fov { get; set; }
 	}
 }

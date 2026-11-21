@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Camera.FightCameraController.SpecialGameplay;
 
-// Token: 0x020025AC RID: 9644
+// Token: 0x02001A97 RID: 6807
 public class PhotoTemplatePart : IPhotoSnapshotPart
 {
-	// Token: 0x1700191A RID: 6426
-	// (get) Token: 0x06013865 RID: 79973 RVA: 0x004E0B4A File Offset: 0x004DED4A
+	// Token: 0x17001954 RID: 6484
+	// (get) Token: 0x06010D47 RID: 68935 RVA: 0x004EF67E File Offset: 0x004ED87E
 	public bool HasDefaultState
 	{
 		get
@@ -16,7 +16,7 @@ public class PhotoTemplatePart : IPhotoSnapshotPart
 		}
 	}
 
-	// Token: 0x06013866 RID: 79974 RVA: 0x004E0B58 File Offset: 0x004DED58
+	// Token: 0x06010D48 RID: 68936 RVA: 0x004EF68C File Offset: 0x004ED88C
 	public void CaptureDefaultState()
 	{
 		PhotoCameraLogicComponent photoCameraComponent = PhotographController.Instance.GetPhotoCameraComponent<PhotoCameraLogicComponent>(EPhotoCameraComponent.Logic);
@@ -28,35 +28,35 @@ public class PhotoTemplatePart : IPhotoSnapshotPart
 		PhotographController.Instance.CaptureDepthOfField(this.DefaultDofMap);
 	}
 
-	// Token: 0x06013867 RID: 79975 RVA: 0x004E0B91 File Offset: 0x004DED91
+	// Token: 0x06010D49 RID: 68937 RVA: 0x004EF6C5 File Offset: 0x004ED8C5
 	public void ClearDefaultState()
 	{
 		this.DefaultLens = null;
 		this.DefaultDofMap.Clear();
 	}
 
-	// Token: 0x06013868 RID: 79976 RVA: 0x004E0BA5 File Offset: 0x004DEDA5
+	// Token: 0x06010D4A RID: 68938 RVA: 0x004EF6D9 File Offset: 0x004ED8D9
 	public void Capture()
 	{
 	}
 
-	// Token: 0x06013869 RID: 79977 RVA: 0x004E0BA7 File Offset: 0x004DEDA7
+	// Token: 0x06010D4B RID: 68939 RVA: 0x004EF6DB File Offset: 0x004ED8DB
 	public void Apply()
 	{
 	}
 
-	// Token: 0x04009369 RID: 37737
+	// Token: 0x040094C1 RID: 38081
 	public int TemplateId;
 
-	// Token: 0x0400936A RID: 37738
+	// Token: 0x040094C2 RID: 38082
 	[Nullable(1)]
 	public string TemplateDaPath = "";
 
-	// Token: 0x0400936B RID: 37739
+	// Token: 0x040094C3 RID: 38083
 	[Nullable(2)]
 	public PhotoCameraLensState DefaultLens;
 
-	// Token: 0x0400936C RID: 37740
+	// Token: 0x040094C4 RID: 38084
 	[Nullable(1)]
 	public readonly Dictionary<EPhotoSetupValueType, float> DefaultDofMap = new Dictionary<EPhotoSetupValueType, float>();
 }

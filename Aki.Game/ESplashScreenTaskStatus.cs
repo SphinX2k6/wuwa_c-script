@@ -1,16 +1,16 @@
 ﻿using System;
 
-// Token: 0x02002A8E RID: 10894
+// Token: 0x0200200A RID: 8202
 public enum ESplashScreenTaskStatus
 {
-	// Token: 0x0400A84A RID: 43082
+	// Token: 0x0400AC4F RID: 44111
 	Pending,
-	// Token: 0x0400A84B RID: 43083
+	// Token: 0x0400AC50 RID: 44112
 	Running,
-	// Token: 0x0400A84C RID: 43084
+	// Token: 0x0400AC51 RID: 44113
 	Completed,
-	// Token: 0x0400A84D RID: 43085
+	// Token: 0x0400AC52 RID: 44114
 	Canceled,
-	// Token: 0x0400A84E RID: 43086
+	// Token: 0x0400AC53 RID: 44115
 	Failed
 }

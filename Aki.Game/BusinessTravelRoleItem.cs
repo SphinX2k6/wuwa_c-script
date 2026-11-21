@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001332 RID: 4914
+// Token: 0x020007E6 RID: 2022
 [NullableContext(1)]
 [Nullable(0)]
 public class BusinessTravelRoleItem : GridProxyAbstract<int>
 {
-	// Token: 0x060088D2 RID: 35026 RVA: 0x001D3CCC File Offset: 0x001D1ECC
+	// Token: 0x06005C6D RID: 23661 RVA: 0x001DCB38 File Offset: 0x001DAD38
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -32,7 +32,7 @@ public class BusinessTravelRoleItem : GridProxyAbstract<int>
 		};
 	}
 
-	// Token: 0x060088D3 RID: 35027 RVA: 0x001D3DC4 File Offset: 0x001D1FC4
+	// Token: 0x06005C6E RID: 23662 RVA: 0x001DCC30 File Offset: 0x001DAE30
 	protected override void OnStart()
 	{
 		this.SequencePlayer = new LevelSequencePlayer(this.RootItem);
@@ -70,13 +70,13 @@ public class BusinessTravelRoleItem : GridProxyAbstract<int>
 		item6.SetUIActive(false);
 	}
 
-	// Token: 0x060088D4 RID: 35028 RVA: 0x001D3E6C File Offset: 0x001D206C
+	// Token: 0x06005C6F RID: 23663 RVA: 0x001DCCD8 File Offset: 0x001DAED8
 	protected override void OnBeforeDestroy()
 	{
 		this.SequencePlayer.Clear();
 	}
 
-	// Token: 0x060088D5 RID: 35029 RVA: 0x001D3E79 File Offset: 0x001D2079
+	// Token: 0x06005C70 RID: 23664 RVA: 0x001DCCE5 File Offset: 0x001DAEE5
 	private void FinishEvent(string name)
 	{
 		if (name == "Action03")
@@ -90,7 +90,7 @@ public class BusinessTravelRoleItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x060088D6 RID: 35030 RVA: 0x001D3EB0 File Offset: 0x001D20B0
+	// Token: 0x06005C71 RID: 23665 RVA: 0x001DCD1C File Offset: 0x001DAF1C
 	private void SwitchRoleSpineAnim(ESpineAnimation animName, float mixDuration)
 	{
 		UTrackEntry utrackEntry = base.GetSpine(0).SetAnimation(0, animName.ToString(), true);
@@ -101,7 +101,7 @@ public class BusinessTravelRoleItem : GridProxyAbstract<int>
 		utrackEntry.SetMixDuration(mixDuration);
 	}
 
-	// Token: 0x060088D7 RID: 35031 RVA: 0x001D3ED8 File Offset: 0x001D20D8
+	// Token: 0x06005C72 RID: 23666 RVA: 0x001DCD44 File Offset: 0x001DAF44
 	private void ShowDialog(string textId)
 	{
 		UUIItem item = base.GetItem(1);
@@ -112,7 +112,7 @@ public class BusinessTravelRoleItem : GridProxyAbstract<int>
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(2), textId, Array.Empty<object>());
 	}
 
-	// Token: 0x060088D8 RID: 35032 RVA: 0x001D3F04 File Offset: 0x001D2104
+	// Token: 0x06005C73 RID: 23667 RVA: 0x001DCD70 File Offset: 0x001DAF70
 	private void HideDialog()
 	{
 		UUIItem item = base.GetItem(1);
@@ -123,7 +123,7 @@ public class BusinessTravelRoleItem : GridProxyAbstract<int>
 		item.SetUIActive(false);
 	}
 
-	// Token: 0x060088D9 RID: 35033 RVA: 0x001D3F18 File Offset: 0x001D2118
+	// Token: 0x06005C74 RID: 23668 RVA: 0x001DCD84 File Offset: 0x001DAF84
 	private void SetSuccessItemActive(bool value)
 	{
 		UUIItem item = base.GetItem(3);
@@ -134,7 +134,7 @@ public class BusinessTravelRoleItem : GridProxyAbstract<int>
 		item.SetUIActive(value);
 	}
 
-	// Token: 0x060088DA RID: 35034 RVA: 0x001D3F2C File Offset: 0x001D212C
+	// Token: 0x06005C75 RID: 23669 RVA: 0x001DCD98 File Offset: 0x001DAF98
 	private void SetFailItemActive(bool value)
 	{
 		UUIItem item = base.GetItem(4);
@@ -145,7 +145,7 @@ public class BusinessTravelRoleItem : GridProxyAbstract<int>
 		item.SetUIActive(value);
 	}
 
-	// Token: 0x060088DB RID: 35035 RVA: 0x001D3F40 File Offset: 0x001D2140
+	// Token: 0x06005C76 RID: 23670 RVA: 0x001DCDAC File Offset: 0x001DAFAC
 	private void SetNormalItemActive(bool value)
 	{
 		UUIItem item = base.GetItem(5);
@@ -156,7 +156,7 @@ public class BusinessTravelRoleItem : GridProxyAbstract<int>
 		item.SetUIActive(value);
 	}
 
-	// Token: 0x060088DC RID: 35036 RVA: 0x001D3F54 File Offset: 0x001D2154
+	// Token: 0x06005C77 RID: 23671 RVA: 0x001DCDC0 File Offset: 0x001DAFC0
 	private void ShowFavorItem(int lastLevel)
 	{
 		EditTeamData editTeamDataById = MoonChasingBusinessModel.Instance.GetEditTeamDataById(this.RoleId);
@@ -181,7 +181,7 @@ public class BusinessTravelRoleItem : GridProxyAbstract<int>
 		}
 	}
 
-	// Token: 0x060088DD RID: 35037 RVA: 0x001D3FCA File Offset: 0x001D21CA
+	// Token: 0x06005C78 RID: 23672 RVA: 0x001DCE36 File Offset: 0x001DB036
 	private void HideFavorItem()
 	{
 		UUIItem item = base.GetItem(6);
@@ -192,7 +192,7 @@ public class BusinessTravelRoleItem : GridProxyAbstract<int>
 		item.SetUIActive(false);
 	}
 
-	// Token: 0x060088DE RID: 35038 RVA: 0x001D3FDE File Offset: 0x001D21DE
+	// Token: 0x06005C79 RID: 23673 RVA: 0x001DCE4A File Offset: 0x001DB04A
 	private void SetLightItemActive(bool value)
 	{
 		UUIItem item = base.GetItem(9);
@@ -203,13 +203,13 @@ public class BusinessTravelRoleItem : GridProxyAbstract<int>
 		item.SetUIActive(value);
 	}
 
-	// Token: 0x060088DF RID: 35039 RVA: 0x001D3FF3 File Offset: 0x001D21F3
+	// Token: 0x06005C7A RID: 23674 RVA: 0x001DCE5F File Offset: 0x001DB05F
 	public override void Refresh(int roleId, bool isSelected, int gridIndex)
 	{
 		this.RoleId = roleId;
 	}
 
-	// Token: 0x060088E0 RID: 35040 RVA: 0x001D3FFC File Offset: 0x001D21FC
+	// Token: 0x06005C7B RID: 23675 RVA: 0x001DCE68 File Offset: 0x001DB068
 	public UniTask RefreshAsync()
 	{
 		BusinessTravelRoleItem.<RefreshAsync>d__17 <RefreshAsync>d__;
@@ -220,7 +220,7 @@ public class BusinessTravelRoleItem : GridProxyAbstract<int>
 		return <RefreshAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x060088E1 RID: 35041 RVA: 0x001D4040 File Offset: 0x001D2240
+	// Token: 0x06005C7C RID: 23676 RVA: 0x001DCEAC File Offset: 0x001DB0AC
 	public void PlayStartAction()
 	{
 		AudioSystem.Instance.PostEvent("play_ui_zuiyuejie_loading");
@@ -229,7 +229,7 @@ public class BusinessTravelRoleItem : GridProxyAbstract<int>
 		this.SetLightItemActive(true);
 	}
 
-	// Token: 0x060088E2 RID: 35042 RVA: 0x001D4090 File Offset: 0x001D2290
+	// Token: 0x06005C7D RID: 23677 RVA: 0x001DCEFC File Offset: 0x001DB0FC
 	public void PlayRunFinishAction(RoleSettleResult result, int lastLevel)
 	{
 		AudioSystem.Instance.ExecuteAction("play_ui_zuiyuejie_loading", EAudioActionType.Stop, null);
@@ -258,62 +258,62 @@ public class BusinessTravelRoleItem : GridProxyAbstract<int>
 		this.ShowFavorItem(lastLevel);
 	}
 
-	// Token: 0x060088E3 RID: 35043 RVA: 0x001D4184 File Offset: 0x001D2384
+	// Token: 0x06005C7E RID: 23678 RVA: 0x001DCFF0 File Offset: 0x001DB1F0
 	public void PlayEndAction()
 	{
 		this.SequencePlayer.PlayLevelSequenceByName("Action03", false, null, false);
 	}
 
-	// Token: 0x060088E4 RID: 35044 RVA: 0x001D41AC File Offset: 0x001D23AC
+	// Token: 0x06005C7F RID: 23679 RVA: 0x001DD018 File Offset: 0x001DB218
 	public void StopRunToLastFrame()
 	{
 		this.SequencePlayer.StopSequenceByKey("Action02", true, true);
 	}
 
-	// Token: 0x060088E5 RID: 35045 RVA: 0x001D41C0 File Offset: 0x001D23C0
+	// Token: 0x06005C80 RID: 23680 RVA: 0x001DD02C File Offset: 0x001DB22C
 	public int GetRoleId()
 	{
 		return this.RoleId;
 	}
 
-	// Token: 0x04003CFF RID: 15615
+	// Token: 0x04003D97 RID: 15767
 	protected int RoleId;
 
-	// Token: 0x04003D00 RID: 15616
+	// Token: 0x04003D98 RID: 15768
 	protected LevelSequencePlayer SequencePlayer;
 
-	// Token: 0x0200799F RID: 31135
+	// Token: 0x02006B29 RID: 27433
 	[NullableContext(0)]
 	private static class ERoleItem
 	{
-		// Token: 0x040280BC RID: 164028
+		// Token: 0x040233E9 RID: 144361
 		public const int RoleSpine = 0;
 
-		// Token: 0x040280BD RID: 164029
+		// Token: 0x040233EA RID: 144362
 		public const int DialogItem = 1;
 
-		// Token: 0x040280BE RID: 164030
+		// Token: 0x040233EB RID: 144363
 		public const int Dialog = 2;
 
-		// Token: 0x040280BF RID: 164031
+		// Token: 0x040233EC RID: 144364
 		public const int SuccessItem = 3;
 
-		// Token: 0x040280C0 RID: 164032
+		// Token: 0x040233ED RID: 144365
 		public const int FailItem = 4;
 
-		// Token: 0x040280C1 RID: 164033
+		// Token: 0x040233EE RID: 144366
 		public const int NormalItem = 5;
 
-		// Token: 0x040280C2 RID: 164034
+		// Token: 0x040233EF RID: 144367
 		public const int MultiLevelItem = 6;
 
-		// Token: 0x040280C3 RID: 164035
+		// Token: 0x040233F0 RID: 144368
 		public const int MultiLevelBefore = 7;
 
-		// Token: 0x040280C4 RID: 164036
+		// Token: 0x040233F1 RID: 144369
 		public const int MultiLevelAfter = 8;
 
-		// Token: 0x040280C5 RID: 164037
+		// Token: 0x040233F2 RID: 144370
 		public const int LightItem = 9;
 	}
 }

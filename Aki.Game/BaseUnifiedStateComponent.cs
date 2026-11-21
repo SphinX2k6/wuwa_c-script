@@ -4,33 +4,33 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Common.Event;
 using UnrealEngine;
 
-// Token: 0x02003277 RID: 12919
+// Token: 0x020027E6 RID: 10214
 [NullableContext(2)]
 [Nullable(0)]
 public class BaseUnifiedStateComponent : EntityComponent, IStaticVariableResetter
 {
-	// Token: 0x0601BF38 RID: 114488 RVA: 0x007C2711 File Offset: 0x007C0911
+	// Token: 0x06019B1E RID: 105246 RVA: 0x007E9B3E File Offset: 0x007E7D3E
 	static BaseUnifiedStateComponent()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BaseUnifiedStateComponent.CreateStaticDefaultValue), new Action(BaseUnifiedStateComponent.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x1700268F RID: 9871
-	// (get) Token: 0x0601BF39 RID: 114489 RVA: 0x007C2730 File Offset: 0x007C0930
-	// (set) Token: 0x0601BF3A RID: 114490 RVA: 0x007C2738 File Offset: 0x007C0938
+	// Token: 0x1700292D RID: 10541
+	// (get) Token: 0x06019B1F RID: 105247 RVA: 0x007E9B5D File Offset: 0x007E7D5D
+	// (set) Token: 0x06019B20 RID: 105248 RVA: 0x007E9B65 File Offset: 0x007E7D65
 	protected virtual ECharPositionState CachedPositionState { get; set; }
 
-	// Token: 0x17002690 RID: 9872
-	// (get) Token: 0x0601BF3B RID: 114491 RVA: 0x007C2741 File Offset: 0x007C0941
-	// (set) Token: 0x0601BF3C RID: 114492 RVA: 0x007C2749 File Offset: 0x007C0949
+	// Token: 0x1700292E RID: 10542
+	// (get) Token: 0x06019B21 RID: 105249 RVA: 0x007E9B6E File Offset: 0x007E7D6E
+	// (set) Token: 0x06019B22 RID: 105250 RVA: 0x007E9B76 File Offset: 0x007E7D76
 	protected virtual ECharMoveState CachedMoveState { get; set; } = ECharMoveState.Stand;
 
-	// Token: 0x17002691 RID: 9873
-	// (get) Token: 0x0601BF3D RID: 114493 RVA: 0x007C2752 File Offset: 0x007C0952
-	// (set) Token: 0x0601BF3E RID: 114494 RVA: 0x007C275A File Offset: 0x007C095A
+	// Token: 0x1700292F RID: 10543
+	// (get) Token: 0x06019B23 RID: 105251 RVA: 0x007E9B7F File Offset: 0x007E7D7F
+	// (set) Token: 0x06019B24 RID: 105252 RVA: 0x007E9B87 File Offset: 0x007E7D87
 	protected virtual ECharDirectionState CachedDirectionState { get; set; } = ECharDirectionState.FaceDirection;
 
-	// Token: 0x0601BF3F RID: 114495 RVA: 0x007C2764 File Offset: 0x007C0964
+	// Token: 0x06019B25 RID: 105253 RVA: 0x007E9B90 File Offset: 0x007E7D90
 	protected override bool OnStart()
 	{
 		this.ActorComponent = base.Entity.GetComponent<BaseActorComponent>();
@@ -41,7 +41,7 @@ public class BaseUnifiedStateComponent : EntityComponent, IStaticVariableResette
 		return true;
 	}
 
-	// Token: 0x0601BF40 RID: 114496 RVA: 0x007C27C8 File Offset: 0x007C09C8
+	// Token: 0x06019B26 RID: 105254 RVA: 0x007E9BF4 File Offset: 0x007E7DF4
 	private void OnMovementModeChanged(int charId, EMovementMode prevMovementMode, EMovementMode newMovementMode, byte prevCustomMode, byte newCustomMode)
 	{
 		switch (newMovementMode)
@@ -106,41 +106,41 @@ public class BaseUnifiedStateComponent : EntityComponent, IStaticVariableResette
 		}
 	}
 
-	// Token: 0x0601BF41 RID: 114497 RVA: 0x007C28DD File Offset: 0x007C0ADD
+	// Token: 0x06019B27 RID: 105255 RVA: 0x007E9D09 File Offset: 0x007E7F09
 	protected override void OnActivate()
 	{
 		this.SetIsInGame(base.Entity.Active);
 	}
 
-	// Token: 0x0601BF42 RID: 114498 RVA: 0x007C28F0 File Offset: 0x007C0AF0
+	// Token: 0x06019B28 RID: 105256 RVA: 0x007E9D1C File Offset: 0x007E7F1C
 	protected override bool OnInit()
 	{
 		BaseUnifiedStateComponent.Load();
 		return true;
 	}
 
-	// Token: 0x0601BF43 RID: 114499 RVA: 0x007C28F8 File Offset: 0x007C0AF8
+	// Token: 0x06019B29 RID: 105257 RVA: 0x007E9D24 File Offset: 0x007E7F24
 	protected override void OnEnable()
 	{
 		this.SetIsInGame(true);
 	}
 
-	// Token: 0x0601BF44 RID: 114500 RVA: 0x007C2901 File Offset: 0x007C0B01
+	// Token: 0x06019B2A RID: 105258 RVA: 0x007E9D2D File Offset: 0x007E7F2D
 	[NullableContext(1)]
 	protected override void OnDisable(string reason)
 	{
 		this.SetIsInGame(false);
 	}
 
-	// Token: 0x0601BF45 RID: 114501 RVA: 0x007C290A File Offset: 0x007C0B0A
+	// Token: 0x06019B2B RID: 105259 RVA: 0x007E9D36 File Offset: 0x007E7F36
 	protected override bool OnEnd()
 	{
 		EventSystem.Instance.RemoveWithTarget<int, EMovementMode, EMovementMode, byte, byte>(base.Entity, EEventName.CharMovementModeChanged, new Action<int, EMovementMode, EMovementMode, byte, byte>(this.OnMovementModeChanged));
 		return true;
 	}
 
-	// Token: 0x17002692 RID: 9874
-	// (get) Token: 0x0601BF46 RID: 114502 RVA: 0x007C292F File Offset: 0x007C0B2F
+	// Token: 0x17002930 RID: 10544
+	// (get) Token: 0x06019B2C RID: 105260 RVA: 0x007E9D5B File Offset: 0x007E7F5B
 	public bool? IsInGame
 	{
 		get
@@ -149,13 +149,13 @@ public class BaseUnifiedStateComponent : EntityComponent, IStaticVariableResette
 		}
 	}
 
-	// Token: 0x0601BF47 RID: 114503 RVA: 0x007C2937 File Offset: 0x007C0B37
+	// Token: 0x06019B2D RID: 105261 RVA: 0x007E9D63 File Offset: 0x007E7F63
 	public void SetIsInGame(bool isInGame)
 	{
 		this.IsInGameInternal = new bool?(isInGame);
 	}
 
-	// Token: 0x0601BF48 RID: 114504 RVA: 0x007C2948 File Offset: 0x007C0B48
+	// Token: 0x06019B2E RID: 105262 RVA: 0x007E9D74 File Offset: 0x007E7F74
 	public unsafe static void Load()
 	{
 		if (BaseUnifiedStateComponent.BaseNeedLoad)
@@ -255,7 +255,7 @@ public class BaseUnifiedStateComponent : EntityComponent, IStaticVariableResette
 		}
 	}
 
-	// Token: 0x0601BF49 RID: 114505 RVA: 0x007C2EBC File Offset: 0x007C10BC
+	// Token: 0x06019B2F RID: 105263 RVA: 0x007EA2E8 File Offset: 0x007E84E8
 	public virtual void InitCharState()
 	{
 		BaseTagComponent tagComponent = this.TagComponent;
@@ -276,14 +276,14 @@ public class BaseUnifiedStateComponent : EntityComponent, IStaticVariableResette
 		tagComponent3.AddTag(new int?(BaseUnifiedStateComponent.DirectionEnumToTagId[ECharDirectionState.FaceDirection]));
 	}
 
-	// Token: 0x0601BF4A RID: 114506 RVA: 0x007C2F2B File Offset: 0x007C112B
+	// Token: 0x06019B30 RID: 105264 RVA: 0x007EA357 File Offset: 0x007E8557
 	public virtual void ResetCharState()
 	{
 		this.SetMoveState(ECharMoveState.Stand);
 		this.SetDirectionState(ECharDirectionState.FaceDirection);
 	}
 
-	// Token: 0x0601BF4B RID: 114507 RVA: 0x007C2F3C File Offset: 0x007C113C
+	// Token: 0x06019B31 RID: 105265 RVA: 0x007EA368 File Offset: 0x007E8568
 	public virtual void SetPositionState(ECharPositionState newPositionState)
 	{
 		ECharPositionState echarPositionState = this.PositionState;
@@ -330,8 +330,8 @@ public class BaseUnifiedStateComponent : EntityComponent, IStaticVariableResette
 		this.OnPositionStateChange(echarPositionState, newPositionState);
 	}
 
-	// Token: 0x17002693 RID: 9875
-	// (get) Token: 0x0601BF4C RID: 114508 RVA: 0x007C3020 File Offset: 0x007C1220
+	// Token: 0x17002931 RID: 10545
+	// (get) Token: 0x06019B32 RID: 105266 RVA: 0x007EA44C File Offset: 0x007E864C
 	public virtual ECharPositionState PositionState
 	{
 		get
@@ -351,7 +351,7 @@ public class BaseUnifiedStateComponent : EntityComponent, IStaticVariableResette
 		}
 	}
 
-	// Token: 0x0601BF4D RID: 114509 RVA: 0x007C3079 File Offset: 0x007C1279
+	// Token: 0x06019B33 RID: 105267 RVA: 0x007EA4A5 File Offset: 0x007E86A5
 	protected virtual void OnPositionStateChange(ECharPositionState oldState, ECharPositionState newState)
 	{
 		if (newState == ECharPositionState.Ground)
@@ -365,13 +365,13 @@ public class BaseUnifiedStateComponent : EntityComponent, IStaticVariableResette
 		EventSystem.Instance.EmitWithTarget<ECharPositionState, ECharPositionState>(base.Entity, EEventName.CharOnPositionStateChanged, oldState, newState);
 	}
 
-	// Token: 0x0601BF4E RID: 114510 RVA: 0x007C30AE File Offset: 0x007C12AE
+	// Token: 0x06019B34 RID: 105268 RVA: 0x007EA4DA File Offset: 0x007E86DA
 	protected virtual void OnLand()
 	{
 		this.SetMoveState(ECharMoveState.Other);
 	}
 
-	// Token: 0x0601BF4F RID: 114511 RVA: 0x007C30B8 File Offset: 0x007C12B8
+	// Token: 0x06019B35 RID: 105269 RVA: 0x007EA4E4 File Offset: 0x007E86E4
 	public virtual void SetMoveState(ECharMoveState newMoveState)
 	{
 		if (!this.ActorComponent.IsAutonomousProxy)
@@ -401,8 +401,8 @@ public class BaseUnifiedStateComponent : EntityComponent, IStaticVariableResette
 		EventSystem.Instance.EmitWithTarget<ECharMoveState, ECharMoveState>(base.Entity, EEventName.CharOnUnifiedMoveStateChanged, moveState, newMoveState);
 	}
 
-	// Token: 0x17002694 RID: 9876
-	// (get) Token: 0x0601BF50 RID: 114512 RVA: 0x007C314C File Offset: 0x007C134C
+	// Token: 0x17002932 RID: 10546
+	// (get) Token: 0x06019B36 RID: 105270 RVA: 0x007EA578 File Offset: 0x007E8778
 	public virtual ECharMoveState MoveState
 	{
 		get
@@ -422,7 +422,7 @@ public class BaseUnifiedStateComponent : EntityComponent, IStaticVariableResette
 		}
 	}
 
-	// Token: 0x0601BF51 RID: 114513 RVA: 0x007C31A8 File Offset: 0x007C13A8
+	// Token: 0x06019B37 RID: 105271 RVA: 0x007EA5D4 File Offset: 0x007E87D4
 	public virtual void SetDirectionState(ECharDirectionState newDirectionState)
 	{
 		if (!this.ActorComponent.IsAutonomousProxy)
@@ -437,7 +437,7 @@ public class BaseUnifiedStateComponent : EntityComponent, IStaticVariableResette
 		EventSystem.Instance.EmitWithTarget<ECharDirectionState, ECharDirectionState>(base.Entity, EEventName.CharOnDirectionStateChanged, directionState, newDirectionState);
 	}
 
-	// Token: 0x0601BF52 RID: 114514 RVA: 0x007C31EC File Offset: 0x007C13EC
+	// Token: 0x06019B38 RID: 105272 RVA: 0x007EA618 File Offset: 0x007E8818
 	protected bool SetDirectionStateInternal(ECharDirectionState newDirectionState)
 	{
 		ECharDirectionState directionState = this.DirectionState;
@@ -449,8 +449,8 @@ public class BaseUnifiedStateComponent : EntityComponent, IStaticVariableResette
 		return true;
 	}
 
-	// Token: 0x17002695 RID: 9877
-	// (get) Token: 0x0601BF53 RID: 114515 RVA: 0x007C3210 File Offset: 0x007C1410
+	// Token: 0x17002933 RID: 10547
+	// (get) Token: 0x06019B39 RID: 105273 RVA: 0x007EA63C File Offset: 0x007E883C
 	public virtual ECharDirectionState DirectionState
 	{
 		get
@@ -470,7 +470,7 @@ public class BaseUnifiedStateComponent : EntityComponent, IStaticVariableResette
 		}
 	}
 
-	// Token: 0x0601BF54 RID: 114516 RVA: 0x007C3269 File Offset: 0x007C1469
+	// Token: 0x06019B3A RID: 105274 RVA: 0x007EA695 File Offset: 0x007E8895
 	protected virtual void UpdateDirectionTag(ECharDirectionState oldDirectionState, ECharDirectionState newDirectionState)
 	{
 		this.CachedDirectionState = newDirectionState;
@@ -478,7 +478,7 @@ public class BaseUnifiedStateComponent : EntityComponent, IStaticVariableResette
 		this.AddDirectionTag(newDirectionState);
 	}
 
-	// Token: 0x0601BF55 RID: 114517 RVA: 0x007C3280 File Offset: 0x007C1480
+	// Token: 0x06019B3B RID: 105275 RVA: 0x007EA6AC File Offset: 0x007E88AC
 	protected virtual void ClearDirectionTag(ECharDirectionState oldDirectionState)
 	{
 		BaseTagComponent tagComponent = this.TagComponent;
@@ -489,7 +489,7 @@ public class BaseUnifiedStateComponent : EntityComponent, IStaticVariableResette
 		tagComponent.RemoveTag(new int?(GameplayTagDefine.EGameplayTagId["行为状态.方向状态"]));
 	}
 
-	// Token: 0x0601BF56 RID: 114518 RVA: 0x007C32A7 File Offset: 0x007C14A7
+	// Token: 0x06019B3C RID: 105276 RVA: 0x007EA6D3 File Offset: 0x007E88D3
 	protected virtual void AddDirectionTag(ECharDirectionState charDirectionState)
 	{
 		BaseTagComponent tagComponent = this.TagComponent;
@@ -500,13 +500,13 @@ public class BaseUnifiedStateComponent : EntityComponent, IStaticVariableResette
 		tagComponent.AddTag(new int?(BaseUnifiedStateComponent.DirectionEnumToTagId[charDirectionState]));
 	}
 
-	// Token: 0x0601BF57 RID: 114519 RVA: 0x007C32C9 File Offset: 0x007C14C9
+	// Token: 0x06019B3D RID: 105277 RVA: 0x007EA6F5 File Offset: 0x007E88F5
 	public static void CreateStaticDefaultValue()
 	{
 		BaseUnifiedStateComponent.BaseNeedLoad = true;
 	}
 
-	// Token: 0x0601BF58 RID: 114520 RVA: 0x007C32D4 File Offset: 0x007C14D4
+	// Token: 0x06019B3E RID: 105278 RVA: 0x007EA700 File Offset: 0x007E8900
 	public static void ResetStaticDefaultValue()
 	{
 		BaseUnifiedStateComponent.BaseNeedLoad = false;
@@ -522,7 +522,7 @@ public class BaseUnifiedStateComponent : EntityComponent, IStaticVariableResette
 		BaseUnifiedStateComponent.DirectionEnumToTagIdInverse = null;
 	}
 
-	// Token: 0x0601BF59 RID: 114521 RVA: 0x007C3324 File Offset: 0x007C1524
+	// Token: 0x06019B3F RID: 105279 RVA: 0x007EA750 File Offset: 0x007E8950
 	[NullableContext(1)]
 	public override bool ClearComponent(EntityComponent componentTemplate)
 	{
@@ -531,93 +531,132 @@ public class BaseUnifiedStateComponent : EntityComponent, IStaticVariableResette
 			return false;
 		}
 		BaseUnifiedStateComponent baseUnifiedStateComponent = (BaseUnifiedStateComponent)componentTemplate;
-		if (base.CanResetComponentProperty("TagComponent"))
+		if (baseUnifiedStateComponent.TagComponent == null)
 		{
-			if (baseUnifiedStateComponent.TagComponent == null)
-			{
-				this.TagComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComponent), "TagComponent"))
-			{
-				return false;
-			}
+			this.TagComponent = null;
 		}
-		if (base.CanResetComponentProperty("ActorComponent"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComponent), "TagComponent"))
 		{
-			if (baseUnifiedStateComponent.ActorComponent == null)
-			{
-				this.ActorComponent = null;
-			}
-			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseActorComponent>(this.ActorComponent), "ActorComponent"))
-			{
-				return false;
-			}
+			return false;
 		}
-		if (base.CanResetComponentProperty("<CachedPositionState>k__BackingField"))
+		if (baseUnifiedStateComponent.ActorComponent == null)
 		{
-			this.CachedPositionState = baseUnifiedStateComponent.CachedPositionState;
+			this.ActorComponent = null;
 		}
-		if (base.CanResetComponentProperty("<CachedMoveState>k__BackingField"))
+		else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComponent), "ActorComponent"))
 		{
-			this.CachedMoveState = baseUnifiedStateComponent.CachedMoveState;
+			return false;
 		}
-		if (base.CanResetComponentProperty("<CachedDirectionState>k__BackingField"))
-		{
-			this.CachedDirectionState = baseUnifiedStateComponent.CachedDirectionState;
-		}
-		if (base.CanResetComponentProperty("IsInFighting"))
-		{
-			this.IsInFighting = baseUnifiedStateComponent.IsInFighting;
-		}
-		if (base.CanResetComponentProperty("IsInGameInternal"))
-		{
-			this.IsInGameInternal = baseUnifiedStateComponent.IsInGameInternal;
-		}
+		this.CachedPositionState = baseUnifiedStateComponent.CachedPositionState;
+		this.CachedMoveState = baseUnifiedStateComponent.CachedMoveState;
+		this.CachedDirectionState = baseUnifiedStateComponent.CachedDirectionState;
+		this.IsInFighting = baseUnifiedStateComponent.IsInFighting;
+		this.IsInGameInternal = baseUnifiedStateComponent.IsInGameInternal;
 		return true;
 	}
 
-	// Token: 0x0400DCCD RID: 56525
+	// Token: 0x17002934 RID: 10548
+	// (get) Token: 0x06019B40 RID: 105280 RVA: 0x007EA802 File Offset: 0x007E8A02
+	public override bool NeedInitInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002935 RID: 10549
+	// (get) Token: 0x06019B41 RID: 105281 RVA: 0x007EA805 File Offset: 0x007E8A05
+	public override bool NeedStartInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002936 RID: 10550
+	// (get) Token: 0x06019B42 RID: 105282 RVA: 0x007EA808 File Offset: 0x007E8A08
+	public override bool NeedActivateInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002937 RID: 10551
+	// (get) Token: 0x06019B43 RID: 105283 RVA: 0x007EA80B File Offset: 0x007E8A0B
+	public override bool NeedEndInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002938 RID: 10552
+	// (get) Token: 0x06019B44 RID: 105284 RVA: 0x007EA80E File Offset: 0x007E8A0E
+	public override bool NeedEnableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x17002939 RID: 10553
+	// (get) Token: 0x06019B45 RID: 105285 RVA: 0x007EA811 File Offset: 0x007E8A11
+	public override bool NeedDisableInternal
+	{
+		get
+		{
+			return true;
+		}
+	}
+
+	// Token: 0x0400E16C RID: 57708
 	protected static int[] PositionTagIdList;
 
-	// Token: 0x0400DCCE RID: 56526
+	// Token: 0x0400E16D RID: 57709
 	protected static int[] MoveTagIdList;
 
-	// Token: 0x0400DCCF RID: 56527
+	// Token: 0x0400E16E RID: 57710
 	protected static int[] SubStateTagIdList;
 
-	// Token: 0x0400DCD0 RID: 56528
+	// Token: 0x0400E16F RID: 57711
 	protected static int[] DirectionTagIdList;
 
-	// Token: 0x0400DCD1 RID: 56529
+	// Token: 0x0400E170 RID: 57712
 	protected static Dictionary<ECharMoveState, int> MoveEnumToTagId;
 
-	// Token: 0x0400DCD2 RID: 56530
+	// Token: 0x0400E171 RID: 57713
 	protected static Dictionary<int, ECharMoveState> MoveEnumToTagIdInverse;
 
-	// Token: 0x0400DCD3 RID: 56531
+	// Token: 0x0400E172 RID: 57714
 	protected static Dictionary<ECharPositionState, int> PositionEnumToTagId;
 
-	// Token: 0x0400DCD4 RID: 56532
+	// Token: 0x0400E173 RID: 57715
 	protected static Dictionary<int, ECharPositionState> PositionEnumToTagIdInverse;
 
-	// Token: 0x0400DCD5 RID: 56533
+	// Token: 0x0400E174 RID: 57716
 	protected static Dictionary<ECharDirectionState, int> DirectionEnumToTagId;
 
-	// Token: 0x0400DCD6 RID: 56534
+	// Token: 0x0400E175 RID: 57717
 	protected static Dictionary<int, ECharDirectionState> DirectionEnumToTagIdInverse;
 
-	// Token: 0x0400DCD7 RID: 56535
+	// Token: 0x0400E176 RID: 57718
 	protected BaseTagComponent TagComponent;
 
-	// Token: 0x0400DCD8 RID: 56536
+	// Token: 0x0400E177 RID: 57719
 	protected BaseActorComponent ActorComponent;
 
-	// Token: 0x0400DCDC RID: 56540
+	// Token: 0x0400E17B RID: 57723
 	public bool IsInFighting;
 
-	// Token: 0x0400DCDD RID: 56541
+	// Token: 0x0400E17C RID: 57724
 	protected bool? IsInGameInternal;
 
-	// Token: 0x0400DCDE RID: 56542
+	// Token: 0x0400E17D RID: 57725
 	protected static bool BaseNeedLoad;
 }

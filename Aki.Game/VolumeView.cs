@@ -5,17 +5,17 @@ using CSharpScript.Game;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002CF2 RID: 11506
+// Token: 0x0200224C RID: 8780
 [NullableContext(1)]
 [Nullable(0)]
 public class VolumeView : UiViewBase
 {
-	// Token: 0x06018286 RID: 98950 RVA: 0x00624EDF File Offset: 0x006230DF
+	// Token: 0x06015B27 RID: 88871 RVA: 0x0064AEA3 File Offset: 0x006490A3
 	public VolumeView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06018287 RID: 98951 RVA: 0x00624EF0 File Offset: 0x006230F0
+	// Token: 0x06015B28 RID: 88872 RVA: 0x0064AEB4 File Offset: 0x006490B4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -44,13 +44,13 @@ public class VolumeView : UiViewBase
 		};
 	}
 
-	// Token: 0x06018288 RID: 98952 RVA: 0x006250B1 File Offset: 0x006232B1
+	// Token: 0x06015B29 RID: 88873 RVA: 0x0064B075 File Offset: 0x00649275
 	protected override void OnStart()
 	{
 		this.InitVolumceSlider();
 	}
 
-	// Token: 0x06018289 RID: 98953 RVA: 0x006250B9 File Offset: 0x006232B9
+	// Token: 0x06015B2A RID: 88874 RVA: 0x0064B07D File Offset: 0x0064927D
 	private void SetChildVolume(float value)
 	{
 		this.SetMusicVolume(value);
@@ -58,7 +58,7 @@ public class VolumeView : UiViewBase
 		this.SetSfxVolume(value);
 	}
 
-	// Token: 0x0601828A RID: 98954 RVA: 0x006250D0 File Offset: 0x006232D0
+	// Token: 0x06015B2B RID: 88875 RVA: 0x0064B094 File Offset: 0x00649294
 	private void InitVolumceSlider()
 	{
 		base.GetSlider(0).SetValue((float)this.MaxVolume, true);
@@ -67,14 +67,14 @@ public class VolumeView : UiViewBase
 		base.GetSlider(3).SetValue((float)this.MaxVolume, true);
 	}
 
-	// Token: 0x0601828B RID: 98955 RVA: 0x0062512D File Offset: 0x0062332D
+	// Token: 0x06015B2C RID: 88876 RVA: 0x0064B0F1 File Offset: 0x006492F1
 	private void SetMasterVolume(float value)
 	{
 		this.MasterVolume = (int)value;
 		this.SetChildVolume(value);
 	}
 
-	// Token: 0x0601828C RID: 98956 RVA: 0x0062513E File Offset: 0x0062333E
+	// Token: 0x06015B2D RID: 88877 RVA: 0x0064B102 File Offset: 0x00649302
 	private void SetVoiceVolume(float value)
 	{
 		this.VoiceVolume = (int)value;
@@ -85,7 +85,7 @@ public class VolumeView : UiViewBase
 		UAkGameplayStatics.SetRTPCValue(null, (float)this.VoiceVolume, 0, null, VolumeView.Vocal_Audio_Bus_Volume);
 	}
 
-	// Token: 0x0601828D RID: 98957 RVA: 0x00625176 File Offset: 0x00623376
+	// Token: 0x06015B2E RID: 88878 RVA: 0x0064B13A File Offset: 0x0064933A
 	private void SetMusicVolume(float value)
 	{
 		this.MusicVolume = (int)value;
@@ -96,7 +96,7 @@ public class VolumeView : UiViewBase
 		UAkGameplayStatics.SetRTPCValue(null, (float)this.MusicVolume, 0, null, VolumeView.Music_Audio_Bus_Volume);
 	}
 
-	// Token: 0x0601828E RID: 98958 RVA: 0x006251AE File Offset: 0x006233AE
+	// Token: 0x06015B2F RID: 88879 RVA: 0x0064B172 File Offset: 0x00649372
 	private void SetSfxVolume(float value)
 	{
 		this.SfxVolume = (int)value;
@@ -107,31 +107,31 @@ public class VolumeView : UiViewBase
 		UAkGameplayStatics.SetRTPCValue(null, (float)this.SfxVolume, 0, null, VolumeView.SFX_Audio_Bus_Volume);
 	}
 
-	// Token: 0x0601828F RID: 98959 RVA: 0x006251E6 File Offset: 0x006233E6
+	// Token: 0x06015B30 RID: 88880 RVA: 0x0064B1AA File Offset: 0x006493AA
 	private void OnCloseView()
 	{
 		UiManager.Instance.CloseView(EUiViewName.VolumeView, null);
 	}
 
-	// Token: 0x06018290 RID: 98960 RVA: 0x006251F8 File Offset: 0x006233F8
+	// Token: 0x06015B31 RID: 88881 RVA: 0x0064B1BC File Offset: 0x006493BC
 	private void OnPlayMusic()
 	{
 		this.PlayAudio("/Game/Aki/WwiseAudio/Events/Default_Work_Unit/Music_Event/Music_Play_Event/Test_Music.Test_Music");
 	}
 
-	// Token: 0x06018291 RID: 98961 RVA: 0x00625205 File Offset: 0x00623405
+	// Token: 0x06015B32 RID: 88882 RVA: 0x0064B1C9 File Offset: 0x006493C9
 	private void OnPlayVoice()
 	{
 		this.PlayAudio("/Game/Aki/WwiseAudio/Events/Default_Work_Unit/Vocal_Event/Play_Role_Atk_Vo_Test.Play_Role_Atk_Vo_Test");
 	}
 
-	// Token: 0x06018292 RID: 98962 RVA: 0x00625212 File Offset: 0x00623412
+	// Token: 0x06015B33 RID: 88883 RVA: 0x0064B1D6 File Offset: 0x006493D6
 	private void OnPlaySfx()
 	{
 		this.PlayAudio("/Game/Aki/WwiseAudio/Events/Default_Work_Unit/SFX_Event/SFX_Play_Event/Play_Swim_Stand.Play_Swim_Stand");
 	}
 
-	// Token: 0x06018293 RID: 98963 RVA: 0x00625220 File Offset: 0x00623420
+	// Token: 0x06015B34 RID: 88884 RVA: 0x0064B1E4 File Offset: 0x006493E4
 	private void OnPlayAllEvent()
 	{
 		this.FileDisplay("/Game/Aki/WwiseAudio/Events");
@@ -141,7 +141,7 @@ public class VolumeView : UiViewBase
 		this.DoPlayAudio();
 	}
 
-	// Token: 0x06018294 RID: 98964 RVA: 0x00625268 File Offset: 0x00623468
+	// Token: 0x06015B35 RID: 88885 RVA: 0x0064B22C File Offset: 0x0064942C
 	private unsafe void DoPlayAudio()
 	{
 		if (this.FileList != null && this.PlayNum < this.FileList.Num())
@@ -163,7 +163,7 @@ public class VolumeView : UiViewBase
 		instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray3<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 3));
 	}
 
-	// Token: 0x06018295 RID: 98965 RVA: 0x00625354 File Offset: 0x00623554
+	// Token: 0x06015B36 RID: 88886 RVA: 0x0064B318 File Offset: 0x00649518
 	[NullableContext(2)]
 	private void PlayAudio(string audioEventPath)
 	{
@@ -217,13 +217,13 @@ public class VolumeView : UiViewBase
 		}, null);
 	}
 
-	// Token: 0x06018296 RID: 98966 RVA: 0x00625458 File Offset: 0x00623658
+	// Token: 0x06015B37 RID: 88887 RVA: 0x0064B41C File Offset: 0x0064961C
 	protected override void OnBeforeDestroy()
 	{
 		AudioController.Instance.StopAudio(base.GetRootActor());
 	}
 
-	// Token: 0x06018297 RID: 98967 RVA: 0x0062546C File Offset: 0x0062366C
+	// Token: 0x06015B38 RID: 88888 RVA: 0x0064B430 File Offset: 0x00649630
 	private void FileDisplay(string filePath)
 	{
 		this.FileList = UKuroStaticLibrary.FindFilesSorted(filePath, "*");
@@ -242,7 +242,7 @@ public class VolumeView : UiViewBase
 		}
 	}
 
-	// Token: 0x06018298 RID: 98968 RVA: 0x00625514 File Offset: 0x00623714
+	// Token: 0x06015B39 RID: 88889 RVA: 0x0064B4D8 File Offset: 0x006496D8
 	[return: Nullable(2)]
 	private string DoTruePath(string path)
 	{
@@ -267,37 +267,37 @@ public class VolumeView : UiViewBase
 		return text.Replace(oldValue, "/Game");
 	}
 
-	// Token: 0x0400B3B5 RID: 46005
+	// Token: 0x0400B72A RID: 46890
 	private static readonly FName Vocal_Audio_Bus_Volume = new FName("volume_voice");
 
-	// Token: 0x0400B3B6 RID: 46006
+	// Token: 0x0400B72B RID: 46891
 	private static readonly FName Music_Audio_Bus_Volume = new FName("volume_music");
 
-	// Token: 0x0400B3B7 RID: 46007
+	// Token: 0x0400B72C RID: 46892
 	private static readonly FName SFX_Audio_Bus_Volume = new FName("volume_sfx");
 
-	// Token: 0x0400B3B8 RID: 46008
+	// Token: 0x0400B72D RID: 46893
 	private readonly int MaxVolume = 100;
 
-	// Token: 0x0400B3B9 RID: 46009
+	// Token: 0x0400B72E RID: 46894
 	private int MasterVolume;
 
-	// Token: 0x0400B3BA RID: 46010
+	// Token: 0x0400B72F RID: 46895
 	private int VoiceVolume;
 
-	// Token: 0x0400B3BB RID: 46011
+	// Token: 0x0400B730 RID: 46896
 	private int MusicVolume;
 
-	// Token: 0x0400B3BC RID: 46012
+	// Token: 0x0400B731 RID: 46897
 	private int SfxVolume;
 
-	// Token: 0x0400B3BD RID: 46013
+	// Token: 0x0400B732 RID: 46898
 	private int PlayNum;
 
-	// Token: 0x0400B3BE RID: 46014
+	// Token: 0x0400B733 RID: 46899
 	private int FailNum;
 
-	// Token: 0x0400B3BF RID: 46015
+	// Token: 0x0400B734 RID: 46900
 	[Nullable(new byte[]
 	{
 		2,
@@ -305,35 +305,35 @@ public class VolumeView : UiViewBase
 	})]
 	private TArray<string> FileList;
 
-	// Token: 0x02009284 RID: 37508
+	// Token: 0x020084AC RID: 33964
 	[NullableContext(0)]
 	private class EVolumeViewComponent
 	{
-		// Token: 0x0402F5FD RID: 194045
+		// Token: 0x0402AC87 RID: 175239
 		public const int MasterVolumeSlider = 0;
 
-		// Token: 0x0402F5FE RID: 194046
+		// Token: 0x0402AC88 RID: 175240
 		public const int MusicVolumeSlider = 1;
 
-		// Token: 0x0402F5FF RID: 194047
+		// Token: 0x0402AC89 RID: 175241
 		public const int VoiceVolumeSlider = 2;
 
-		// Token: 0x0402F600 RID: 194048
+		// Token: 0x0402AC8A RID: 175242
 		public const int SfxVolumeSlider = 3;
 
-		// Token: 0x0402F601 RID: 194049
+		// Token: 0x0402AC8B RID: 175243
 		public const int CloseButton = 4;
 
-		// Token: 0x0402F602 RID: 194050
+		// Token: 0x0402AC8C RID: 175244
 		public const int MusicButton = 5;
 
-		// Token: 0x0402F603 RID: 194051
+		// Token: 0x0402AC8D RID: 175245
 		public const int VoiceButton = 6;
 
-		// Token: 0x0402F604 RID: 194052
+		// Token: 0x0402AC8E RID: 175246
 		public const int SFXButton = 7;
 
-		// Token: 0x0402F605 RID: 194053
+		// Token: 0x0402AC8F RID: 175247
 		public const int PlayAllEventButton = 8;
 	}
 }

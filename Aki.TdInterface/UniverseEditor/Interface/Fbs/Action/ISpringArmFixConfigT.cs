@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020071A3 RID: 29091
+	// Token: 0x02007978 RID: 31096
 	public class ISpringArmFixConfigT
 	{
-		// Token: 0x1700D80B RID: 55307
-		// (get) Token: 0x06033942 RID: 211266 RVA: 0x006F2364 File Offset: 0x006F0564
-		// (set) Token: 0x06033943 RID: 211267 RVA: 0x006F236C File Offset: 0x006F056C
+		// Token: 0x1700E402 RID: 58370
+		// (get) Token: 0x06036C40 RID: 224320 RVA: 0x00753630 File Offset: 0x00751830
+		// (set) Token: 0x06036C41 RID: 224321 RVA: 0x00753638 File Offset: 0x00751838
 		public bool LeftRightFix { get; set; }
 
-		// Token: 0x1700D80C RID: 55308
-		// (get) Token: 0x06033944 RID: 211268 RVA: 0x006F2375 File Offset: 0x006F0575
-		// (set) Token: 0x06033945 RID: 211269 RVA: 0x006F237D File Offset: 0x006F057D
+		// Token: 0x1700E403 RID: 58371
+		// (get) Token: 0x06036C42 RID: 224322 RVA: 0x00753641 File Offset: 0x00751841
+		// (set) Token: 0x06036C43 RID: 224323 RVA: 0x00753649 File Offset: 0x00751849
 		public bool ForwardBackFix { get; set; }
 
-		// Token: 0x1700D80D RID: 55309
-		// (get) Token: 0x06033946 RID: 211270 RVA: 0x006F2386 File Offset: 0x006F0586
-		// (set) Token: 0x06033947 RID: 211271 RVA: 0x006F238E File Offset: 0x006F058E
+		// Token: 0x1700E404 RID: 58372
+		// (get) Token: 0x06036C44 RID: 224324 RVA: 0x00753652 File Offset: 0x00751852
+		// (set) Token: 0x06036C45 RID: 224325 RVA: 0x0075365A File Offset: 0x0075185A
 		public bool UpDownFix { get; set; }
 
-		// Token: 0x1700D80E RID: 55310
-		// (get) Token: 0x06033948 RID: 211272 RVA: 0x006F2397 File Offset: 0x006F0597
-		// (set) Token: 0x06033949 RID: 211273 RVA: 0x006F239F File Offset: 0x006F059F
+		// Token: 0x1700E405 RID: 58373
+		// (get) Token: 0x06036C46 RID: 224326 RVA: 0x00753663 File Offset: 0x00751863
+		// (set) Token: 0x06036C47 RID: 224327 RVA: 0x0075366B File Offset: 0x0075186B
 		public byte NullMask { get; set; }
 
-		// Token: 0x0603394A RID: 211274 RVA: 0x006F23A8 File Offset: 0x006F05A8
+		// Token: 0x06036C48 RID: 224328 RVA: 0x00753674 File Offset: 0x00751874
 		public ISpringArmFixConfigT()
 		{
 			this.LeftRightFix = false;

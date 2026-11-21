@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002273 RID: 8819
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020024E0 RID: 9440
 	public class VehicleMoveWithPathLine : ActionParams
 	{
-		// Token: 0x0600C17A RID: 49530 RVA: 0x001BBFA8 File Offset: 0x001BA1A8
+		// Token: 0x0600CD40 RID: 52544 RVA: 0x001D372C File Offset: 0x001D192C
 		private VehicleMoveWithPathLine_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C17B RID: 49531 RVA: 0x001BBFE0 File Offset: 0x001BA1E0
+		// Token: 0x0600CD41 RID: 52545 RVA: 0x001D3764 File Offset: 0x001D1964
 		public static VehicleMoveWithPathLine Create([Nullable(2)] VehicleMoveWithPathLine instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C17C RID: 49532 RVA: 0x001BBFF3 File Offset: 0x001BA1F3
+		// Token: 0x0600CD42 RID: 52546 RVA: 0x001D3777 File Offset: 0x001D1977
 		public static VehicleMoveWithPathLine CreateFromSetValue([Nullable(2)] VehicleMoveWithPathLine_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C17D RID: 49533 RVA: 0x001BC006 File Offset: 0x001BA206
+		// Token: 0x0600CD43 RID: 52547 RVA: 0x001D378A File Offset: 0x001D198A
 		public VehicleMoveWithPathLine_SetValue ToSetValue()
 		{
 			return new VehicleMoveWithPathLine_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003A7E RID: 14974
-		// (get) Token: 0x0600C17E RID: 49534 RVA: 0x001BC031 File Offset: 0x001BA231
-		// (set) Token: 0x0600C17F RID: 49535 RVA: 0x001BC058 File Offset: 0x001BA258
+		// Token: 0x17003D75 RID: 15733
+		// (get) Token: 0x0600CD44 RID: 52548 RVA: 0x001D37B5 File Offset: 0x001D19B5
+		// (set) Token: 0x0600CD45 RID: 52549 RVA: 0x001D37DC File Offset: 0x001D19DC
 		public virtual ITargetVehicle TargetVehicle
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A7F RID: 14975
-		// (get) Token: 0x0600C180 RID: 49536 RVA: 0x001BC066 File Offset: 0x001BA266
-		// (set) Token: 0x0600C181 RID: 49537 RVA: 0x001BC091 File Offset: 0x001BA291
+		// Token: 0x17003D76 RID: 15734
+		// (get) Token: 0x0600CD46 RID: 52550 RVA: 0x001D37EA File Offset: 0x001D19EA
+		// (set) Token: 0x0600CD47 RID: 52551 RVA: 0x001D3815 File Offset: 0x001D1A15
 		public virtual int SplineEntityId
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003A80 RID: 14976
-		// (get) Token: 0x0600C182 RID: 49538 RVA: 0x001BC09F File Offset: 0x001BA29F
-		// (set) Token: 0x0600C183 RID: 49539 RVA: 0x001BC0C6 File Offset: 0x001BA2C6
+		// Token: 0x17003D77 RID: 15735
+		// (get) Token: 0x0600CD48 RID: 52552 RVA: 0x001D3823 File Offset: 0x001D1A23
+		// (set) Token: 0x0600CD49 RID: 52553 RVA: 0x001D384A File Offset: 0x001D1A4A
 		public virtual IVehicleControlType ControlType
 		{
 			get
@@ -132,11 +130,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04007343 RID: 29507
+		// Token: 0x04007990 RID: 31120
 		[Nullable(2)]
 		protected new VehicleMoveWithPathLine FbInstance;
 
-		// Token: 0x04007344 RID: 29508
+		// Token: 0x04007991 RID: 31121
 		[Nullable(2)]
 		protected VehicleMoveWithPathLine_SetValue PocoInterface;
 	}

@@ -6,22 +6,22 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000C4E RID: 3150
+	// Token: 0x0200021D RID: 541
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.InputActionKeyMapping")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 48)]
 	public class FInputActionKeyMapping : UnrealScriptStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x06009FAE RID: 40878 RVA: 0x000E2ECA File Offset: 0x000E10CA
+		// Token: 0x060024AB RID: 9387 RVA: 0x00034CC9 File Offset: 0x00032EC9
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (FInputActionKeyMapping._ScriptStructPtr != 0) ? FInputActionKeyMapping._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Script/Engine.InputActionKeyMapping", ref FInputActionKeyMapping._ScriptStructPtr);
 		}
 
-		// Token: 0x1700260D RID: 9741
-		// (get) Token: 0x06009FAF RID: 40879 RVA: 0x000E2EEE File Offset: 0x000E10EE
-		// (set) Token: 0x06009FB0 RID: 40880 RVA: 0x000E2F02 File Offset: 0x000E1102
+		// Token: 0x1700051A RID: 1306
+		// (get) Token: 0x060024AC RID: 9388 RVA: 0x00034CED File Offset: 0x00032EED
+		// (set) Token: 0x060024AD RID: 9389 RVA: 0x00034D01 File Offset: 0x00032F01
 		public unsafe FName ActionName
 		{
 			get
@@ -34,9 +34,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700260E RID: 9742
-		// (get) Token: 0x06009FB1 RID: 40881 RVA: 0x000E2F17 File Offset: 0x000E1117
-		// (set) Token: 0x06009FB2 RID: 40882 RVA: 0x000E2F30 File Offset: 0x000E1130
+		// Token: 0x1700051B RID: 1307
+		// (get) Token: 0x060024AE RID: 9390 RVA: 0x00034D16 File Offset: 0x00032F16
+		// (set) Token: 0x060024AF RID: 9391 RVA: 0x00034D2F File Offset: 0x00032F2F
 		public unsafe bool bShift
 		{
 			get
@@ -49,9 +49,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700260F RID: 9743
-		// (get) Token: 0x06009FB3 RID: 40883 RVA: 0x000E2F60 File Offset: 0x000E1160
-		// (set) Token: 0x06009FB4 RID: 40884 RVA: 0x000E2F79 File Offset: 0x000E1179
+		// Token: 0x1700051C RID: 1308
+		// (get) Token: 0x060024B0 RID: 9392 RVA: 0x00034D5F File Offset: 0x00032F5F
+		// (set) Token: 0x060024B1 RID: 9393 RVA: 0x00034D78 File Offset: 0x00032F78
 		public unsafe bool bCtrl
 		{
 			get
@@ -64,9 +64,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002610 RID: 9744
-		// (get) Token: 0x06009FB5 RID: 40885 RVA: 0x000E2FA9 File Offset: 0x000E11A9
-		// (set) Token: 0x06009FB6 RID: 40886 RVA: 0x000E2FC2 File Offset: 0x000E11C2
+		// Token: 0x1700051D RID: 1309
+		// (get) Token: 0x060024B2 RID: 9394 RVA: 0x00034DA8 File Offset: 0x00032FA8
+		// (set) Token: 0x060024B3 RID: 9395 RVA: 0x00034DC1 File Offset: 0x00032FC1
 		public unsafe bool bAlt
 		{
 			get
@@ -79,9 +79,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002611 RID: 9745
-		// (get) Token: 0x06009FB7 RID: 40887 RVA: 0x000E2FF2 File Offset: 0x000E11F2
-		// (set) Token: 0x06009FB8 RID: 40888 RVA: 0x000E300B File Offset: 0x000E120B
+		// Token: 0x1700051E RID: 1310
+		// (get) Token: 0x060024B4 RID: 9396 RVA: 0x00034DF1 File Offset: 0x00032FF1
+		// (set) Token: 0x060024B5 RID: 9397 RVA: 0x00034E0A File Offset: 0x0003300A
 		public unsafe bool bCmd
 		{
 			get
@@ -94,9 +94,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002612 RID: 9746
-		// (get) Token: 0x06009FB9 RID: 40889 RVA: 0x000E303C File Offset: 0x000E123C
-		// (set) Token: 0x06009FBA RID: 40890 RVA: 0x000E307F File Offset: 0x000E127F
+		// Token: 0x1700051F RID: 1311
+		// (get) Token: 0x060024B6 RID: 9398 RVA: 0x00034E3C File Offset: 0x0003303C
+		// (set) Token: 0x060024B7 RID: 9399 RVA: 0x00034E7F File Offset: 0x0003307F
 		public FKey Key
 		{
 			get
@@ -115,88 +115,77 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x06009FBB RID: 40891 RVA: 0x000E30A0 File Offset: 0x000E12A0
+		// Token: 0x060024B8 RID: 9400 RVA: 0x00034EA0 File Offset: 0x000330A0
 		public FInputActionKeyMapping()
 		{
 		}
 
-		// Token: 0x06009FBC RID: 40892 RVA: 0x000E30A8 File Offset: 0x000E12A8
-		public FInputActionKeyMapping(FName ActionName, bool bShift, bool bCtrl, bool bAlt, bool bCmd, FKey Key)
-		{
-			this.ActionName = ActionName;
-			this.bShift = bShift;
-			this.bCtrl = bCtrl;
-			this.bAlt = bAlt;
-			this.bCmd = bCmd;
-			this.Key = Key;
-		}
-
-		// Token: 0x06009FBD RID: 40893 RVA: 0x000E30DD File Offset: 0x000E12DD
+		// Token: 0x060024B9 RID: 9401 RVA: 0x00034EA8 File Offset: 0x000330A8
 		protected override IntPtr GetUStructPtr()
 		{
 			return FInputActionKeyMapping.StaticStruct();
 		}
 
-		// Token: 0x06009FBE RID: 40894 RVA: 0x000E30E9 File Offset: 0x000E12E9
+		// Token: 0x060024BA RID: 9402 RVA: 0x00034EB4 File Offset: 0x000330B4
 		[NullableContext(2)]
 		public FInputActionKeyMapping(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x06009FBF RID: 40895 RVA: 0x000E30F3 File Offset: 0x000E12F3
+		// Token: 0x060024BB RID: 9403 RVA: 0x00034EBE File Offset: 0x000330BE
 		public FInputActionKeyMapping(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x06009FC0 RID: 40896 RVA: 0x000E30FE File Offset: 0x000E12FE
+		// Token: 0x060024BC RID: 9404 RVA: 0x00034EC9 File Offset: 0x000330C9
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new FInputActionKeyMapping(Pointer, false, true);
 		}
 
-		// Token: 0x06009FC1 RID: 40897 RVA: 0x000E3108 File Offset: 0x000E1308
+		// Token: 0x060024BD RID: 9405 RVA: 0x00034ED3 File Offset: 0x000330D3
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new FInputActionKeyMapping(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x040057E1 RID: 22497
+		// Token: 0x04000DC7 RID: 3527
 		public const string __ObjectPath = "/Script/Engine.InputActionKeyMapping";
 
-		// Token: 0x040057E2 RID: 22498
+		// Token: 0x04000DC8 RID: 3528
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040057E3 RID: 22499
+		// Token: 0x04000DC9 RID: 3529
 		internal static int __PropertyOffset_ActionName;
 
-		// Token: 0x040057E4 RID: 22500
+		// Token: 0x04000DCA RID: 3530
 		internal static int __PropertyOffset_bShift;
 
-		// Token: 0x040057E5 RID: 22501
+		// Token: 0x04000DCB RID: 3531
 		internal static byte __PropertyMask_bShift;
 
-		// Token: 0x040057E6 RID: 22502
+		// Token: 0x04000DCC RID: 3532
 		internal static int __PropertyOffset_bCtrl;
 
-		// Token: 0x040057E7 RID: 22503
+		// Token: 0x04000DCD RID: 3533
 		internal static byte __PropertyMask_bCtrl;
 
-		// Token: 0x040057E8 RID: 22504
+		// Token: 0x04000DCE RID: 3534
 		internal static int __PropertyOffset_bAlt;
 
-		// Token: 0x040057E9 RID: 22505
+		// Token: 0x04000DCF RID: 3535
 		internal static byte __PropertyMask_bAlt;
 
-		// Token: 0x040057EA RID: 22506
+		// Token: 0x04000DD0 RID: 3536
 		internal static int __PropertyOffset_bCmd;
 
-		// Token: 0x040057EB RID: 22507
+		// Token: 0x04000DD1 RID: 3537
 		internal static byte __PropertyMask_bCmd;
 
-		// Token: 0x040057EC RID: 22508
+		// Token: 0x04000DD2 RID: 3538
 		internal static int __PropertyOffset_Key;
 
-		// Token: 0x040057ED RID: 22509
+		// Token: 0x04000DD3 RID: 3539
 		[Nullable(2)]
 		private FKey _Key;
 	}

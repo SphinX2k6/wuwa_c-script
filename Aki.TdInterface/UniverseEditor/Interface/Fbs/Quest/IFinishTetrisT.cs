@@ -5,70 +5,70 @@ using Aki.UniverseEditor.Interface.Fbs.Var;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02003E4F RID: 15951
+	// Token: 0x0200428A RID: 17034
 	public class IFinishTetrisT
 	{
-		// Token: 0x17006E8F RID: 28303
-		// (get) Token: 0x06016701 RID: 91905 RVA: 0x0033E721 File Offset: 0x0033C921
-		// (set) Token: 0x06016702 RID: 91906 RVA: 0x0033E729 File Offset: 0x0033C929
+		// Token: 0x17007473 RID: 29811
+		// (get) Token: 0x06017D28 RID: 97576 RVA: 0x00367251 File Offset: 0x00365451
+		// (set) Token: 0x06017D29 RID: 97577 RVA: 0x00367259 File Offset: 0x00365459
 		public EChildQuest Type { get; set; }
 
-		// Token: 0x17006E90 RID: 28304
-		// (get) Token: 0x06016703 RID: 91907 RVA: 0x0033E732 File Offset: 0x0033C932
-		// (set) Token: 0x06016704 RID: 91908 RVA: 0x0033E73A File Offset: 0x0033C93A
+		// Token: 0x17007474 RID: 29812
+		// (get) Token: 0x06017D2A RID: 97578 RVA: 0x00367262 File Offset: 0x00365462
+		// (set) Token: 0x06017D2B RID: 97579 RVA: 0x0036726A File Offset: 0x0036546A
 		public IConditionGroupT PreConditions { get; set; }
 
-		// Token: 0x17006E91 RID: 28305
-		// (get) Token: 0x06016705 RID: 91909 RVA: 0x0033E743 File Offset: 0x0033C943
-		// (set) Token: 0x06016706 RID: 91910 RVA: 0x0033E74B File Offset: 0x0033C94B
+		// Token: 0x17007475 RID: 29813
+		// (get) Token: 0x06017D2C RID: 97580 RVA: 0x00367273 File Offset: 0x00365473
+		// (set) Token: 0x06017D2D RID: 97581 RVA: 0x0036727B File Offset: 0x0036547B
 		public int OriginPosEntityId { get; set; }
 
-		// Token: 0x17006E92 RID: 28306
-		// (get) Token: 0x06016707 RID: 91911 RVA: 0x0033E754 File Offset: 0x0033C954
-		// (set) Token: 0x06016708 RID: 91912 RVA: 0x0033E75C File Offset: 0x0033C95C
+		// Token: 0x17007476 RID: 29814
+		// (get) Token: 0x06017D2E RID: 97582 RVA: 0x00367284 File Offset: 0x00365484
+		// (set) Token: 0x06017D2F RID: 97583 RVA: 0x0036728C File Offset: 0x0036548C
 		public TTetrisPlayModeUnion PlayMode { get; set; }
 
-		// Token: 0x17006E93 RID: 28307
-		// (get) Token: 0x06016709 RID: 91913 RVA: 0x0033E765 File Offset: 0x0033C965
-		// (set) Token: 0x0601670A RID: 91914 RVA: 0x0033E76D File Offset: 0x0033C96D
+		// Token: 0x17007477 RID: 29815
+		// (get) Token: 0x06017D30 RID: 97584 RVA: 0x00367295 File Offset: 0x00365495
+		// (set) Token: 0x06017D31 RID: 97585 RVA: 0x0036729D File Offset: 0x0036549D
 		public ETetrisDirection Direction { get; set; }
 
-		// Token: 0x17006E94 RID: 28308
-		// (get) Token: 0x0601670B RID: 91915 RVA: 0x0033E776 File Offset: 0x0033C976
-		// (set) Token: 0x0601670C RID: 91916 RVA: 0x0033E77E File Offset: 0x0033C97E
+		// Token: 0x17007478 RID: 29816
+		// (get) Token: 0x06017D32 RID: 97586 RVA: 0x003672A6 File Offset: 0x003654A6
+		// (set) Token: 0x06017D33 RID: 97587 RVA: 0x003672AE File Offset: 0x003654AE
 		public float PrepareTime { get; set; }
 
-		// Token: 0x17006E95 RID: 28309
-		// (get) Token: 0x0601670D RID: 91917 RVA: 0x0033E787 File Offset: 0x0033C987
-		// (set) Token: 0x0601670E RID: 91918 RVA: 0x0033E78F File Offset: 0x0033C98F
+		// Token: 0x17007479 RID: 29817
+		// (get) Token: 0x06017D34 RID: 97588 RVA: 0x003672B7 File Offset: 0x003654B7
+		// (set) Token: 0x06017D35 RID: 97589 RVA: 0x003672BF File Offset: 0x003654BF
 		public float FallSpeed { get; set; }
 
-		// Token: 0x17006E96 RID: 28310
-		// (get) Token: 0x0601670F RID: 91919 RVA: 0x0033E798 File Offset: 0x0033C998
-		// (set) Token: 0x06016710 RID: 91920 RVA: 0x0033E7A0 File Offset: 0x0033C9A0
+		// Token: 0x1700747A RID: 29818
+		// (get) Token: 0x06017D36 RID: 97590 RVA: 0x003672C8 File Offset: 0x003654C8
+		// (set) Token: 0x06017D37 RID: 97591 RVA: 0x003672D0 File Offset: 0x003654D0
 		public ITetrisIndexedBoardT PresetBlocks { get; set; }
 
-		// Token: 0x17006E97 RID: 28311
-		// (get) Token: 0x06016711 RID: 91921 RVA: 0x0033E7A9 File Offset: 0x0033C9A9
-		// (set) Token: 0x06016712 RID: 91922 RVA: 0x0033E7B1 File Offset: 0x0033C9B1
+		// Token: 0x1700747B RID: 29819
+		// (get) Token: 0x06017D38 RID: 97592 RVA: 0x003672D9 File Offset: 0x003654D9
+		// (set) Token: 0x06017D39 RID: 97593 RVA: 0x003672E1 File Offset: 0x003654E1
 		public List<string> AvailableCombineBlocks { get; set; }
 
-		// Token: 0x17006E98 RID: 28312
-		// (get) Token: 0x06016713 RID: 91923 RVA: 0x0033E7BA File Offset: 0x0033C9BA
-		// (set) Token: 0x06016714 RID: 91924 RVA: 0x0033E7C2 File Offset: 0x0033C9C2
+		// Token: 0x1700747C RID: 29820
+		// (get) Token: 0x06017D3A RID: 97594 RVA: 0x003672EA File Offset: 0x003654EA
+		// (set) Token: 0x06017D3B RID: 97595 RVA: 0x003672F2 File Offset: 0x003654F2
 		public TVarRefUnion IsSuccessVar { get; set; }
 
-		// Token: 0x17006E99 RID: 28313
-		// (get) Token: 0x06016715 RID: 91925 RVA: 0x0033E7CB File Offset: 0x0033C9CB
-		// (set) Token: 0x06016716 RID: 91926 RVA: 0x0033E7D3 File Offset: 0x0033C9D3
+		// Token: 0x1700747D RID: 29821
+		// (get) Token: 0x06017D3C RID: 97596 RVA: 0x003672FB File Offset: 0x003654FB
+		// (set) Token: 0x06017D3D RID: 97597 RVA: 0x00367303 File Offset: 0x00365503
 		public TVarRefUnion IsInitializedVar { get; set; }
 
-		// Token: 0x17006E9A RID: 28314
-		// (get) Token: 0x06016717 RID: 91927 RVA: 0x0033E7DC File Offset: 0x0033C9DC
-		// (set) Token: 0x06016718 RID: 91928 RVA: 0x0033E7E4 File Offset: 0x0033C9E4
+		// Token: 0x1700747E RID: 29822
+		// (get) Token: 0x06017D3E RID: 97598 RVA: 0x0036730C File Offset: 0x0036550C
+		// (set) Token: 0x06017D3F RID: 97599 RVA: 0x00367314 File Offset: 0x00365514
 		public byte NullMask { get; set; }
 
-		// Token: 0x06016719 RID: 91929 RVA: 0x0033E7F0 File Offset: 0x0033C9F0
+		// Token: 0x06017D40 RID: 97600 RVA: 0x00367320 File Offset: 0x00365520
 		public IFinishTetrisT()
 		{
 			this.Type = EChildQuest.DoInteract;

@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Quest
 {
-	// Token: 0x02004065 RID: 16485
+	// Token: 0x020044A6 RID: 17574
 	public class IQuestUnlockDelayTimeT
 	{
-		// Token: 0x17007427 RID: 29735
-		// (get) Token: 0x06017ECB RID: 97995 RVA: 0x00373E9E File Offset: 0x0037209E
-		// (set) Token: 0x06017ECC RID: 97996 RVA: 0x00373EA6 File Offset: 0x003720A6
+		// Token: 0x17007A29 RID: 31273
+		// (get) Token: 0x06019564 RID: 103780 RVA: 0x0039DC92 File Offset: 0x0039BE92
+		// (set) Token: 0x06019565 RID: 103781 RVA: 0x0039DC9A File Offset: 0x0039BE9A
 		public int Day { get; set; }
 
-		// Token: 0x17007428 RID: 29736
-		// (get) Token: 0x06017ECD RID: 97997 RVA: 0x00373EAF File Offset: 0x003720AF
-		// (set) Token: 0x06017ECE RID: 97998 RVA: 0x00373EB7 File Offset: 0x003720B7
+		// Token: 0x17007A2A RID: 31274
+		// (get) Token: 0x06019566 RID: 103782 RVA: 0x0039DCA3 File Offset: 0x0039BEA3
+		// (set) Token: 0x06019567 RID: 103783 RVA: 0x0039DCAB File Offset: 0x0039BEAB
 		public int Hour { get; set; }
 
-		// Token: 0x17007429 RID: 29737
-		// (get) Token: 0x06017ECF RID: 97999 RVA: 0x00373EC0 File Offset: 0x003720C0
-		// (set) Token: 0x06017ED0 RID: 98000 RVA: 0x00373EC8 File Offset: 0x003720C8
+		// Token: 0x17007A2B RID: 31275
+		// (get) Token: 0x06019568 RID: 103784 RVA: 0x0039DCB4 File Offset: 0x0039BEB4
+		// (set) Token: 0x06019569 RID: 103785 RVA: 0x0039DCBC File Offset: 0x0039BEBC
 		public int Minute { get; set; }
 
-		// Token: 0x06017ED1 RID: 98001 RVA: 0x00373ED1 File Offset: 0x003720D1
+		// Token: 0x0601956A RID: 103786 RVA: 0x0039DCC5 File Offset: 0x0039BEC5
 		public IQuestUnlockDelayTimeT()
 		{
 			this.Day = 0;

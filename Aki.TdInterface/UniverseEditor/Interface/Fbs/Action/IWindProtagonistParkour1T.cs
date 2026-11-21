@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02007608 RID: 30216
+	// Token: 0x02007E16 RID: 32278
 	public class IWindProtagonistParkour1T
 	{
-		// Token: 0x1700E586 RID: 58758
-		// (get) Token: 0x060370B0 RID: 225456 RVA: 0x00777986 File Offset: 0x00775B86
-		// (set) Token: 0x060370B1 RID: 225457 RVA: 0x0077798E File Offset: 0x00775B8E
+		// Token: 0x1700F1C4 RID: 61892
+		// (get) Token: 0x0603A555 RID: 238933 RVA: 0x007DBA82 File Offset: 0x007D9C82
+		// (set) Token: 0x0603A556 RID: 238934 RVA: 0x007DBA8A File Offset: 0x007D9C8A
 		public ELeisureInteract Type { get; set; }
 
-		// Token: 0x060370B2 RID: 225458 RVA: 0x00777997 File Offset: 0x00775B97
+		// Token: 0x0603A557 RID: 238935 RVA: 0x007DBA93 File Offset: 0x007D9C93
 		public IWindProtagonistParkour1T()
 		{
 			this.Type = ELeisureInteract.CustomSkill;

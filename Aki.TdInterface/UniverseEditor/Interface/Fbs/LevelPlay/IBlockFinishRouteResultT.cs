@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x0200443E RID: 17470
+	// Token: 0x020048A6 RID: 18598
 	public class IBlockFinishRouteResultT
 	{
-		// Token: 0x17007B18 RID: 31512
-		// (get) Token: 0x06019FDC RID: 106460 RVA: 0x003B7354 File Offset: 0x003B5554
-		// (set) Token: 0x06019FDD RID: 106461 RVA: 0x003B735C File Offset: 0x003B555C
+		// Token: 0x17008157 RID: 33111
+		// (get) Token: 0x0601B7AD RID: 112557 RVA: 0x003E3560 File Offset: 0x003E1760
+		// (set) Token: 0x0601B7AE RID: 112558 RVA: 0x003E3568 File Offset: 0x003E1768
 		public EDartSkillResultType Type { get; set; }
 
-		// Token: 0x17007B19 RID: 31513
-		// (get) Token: 0x06019FDE RID: 106462 RVA: 0x003B7365 File Offset: 0x003B5565
-		// (set) Token: 0x06019FDF RID: 106463 RVA: 0x003B736D File Offset: 0x003B556D
+		// Token: 0x17008158 RID: 33112
+		// (get) Token: 0x0601B7AF RID: 112559 RVA: 0x003E3571 File Offset: 0x003E1771
+		// (set) Token: 0x0601B7B0 RID: 112560 RVA: 0x003E3579 File Offset: 0x003E1779
 		public int ZoneCount { get; set; }
 
-		// Token: 0x06019FE0 RID: 106464 RVA: 0x003B7376 File Offset: 0x003B5576
+		// Token: 0x0601B7B1 RID: 112561 RVA: 0x003E3582 File Offset: 0x003E1782
 		public IBlockFinishRouteResultT()
 		{
 			this.Type = EDartSkillResultType.NoBust;

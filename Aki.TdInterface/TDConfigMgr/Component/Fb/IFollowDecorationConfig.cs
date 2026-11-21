@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000D10 RID: 3344
+	// Token: 0x02000E09 RID: 3593
 	public class IFollowDecorationConfig
 	{
-		// Token: 0x06004C58 RID: 19544 RVA: 0x000BE4A2 File Offset: 0x000BC6A2
-		[NullableContext(1)]
+		// Token: 0x0600516B RID: 20843 RVA: 0x000C9A4A File Offset: 0x000C7C4A
 		public static IFollowDecorationConfig Create(IFollowDecorationConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170017F5 RID: 6133
-		// (get) Token: 0x06004C59 RID: 19545 RVA: 0x000BE4C1 File Offset: 0x000BC6C1
+		// Token: 0x17001954 RID: 6484
+		// (get) Token: 0x0600516C RID: 20844 RVA: 0x000C9A69 File Offset: 0x000C7C69
 		public virtual EFollowDecorationType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002BB5 RID: 11189
+		// Token: 0x04002E72 RID: 11890
 		private IFollowDecorationConfig Instance;
 	}
 }

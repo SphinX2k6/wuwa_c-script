@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200109F RID: 4255
+	// Token: 0x0200119A RID: 4506
 	public struct SheriffEnding : IFlatbufferObject
 	{
-		// Token: 0x17003565 RID: 13669
-		// (get) Token: 0x0600D0D1 RID: 53457 RVA: 0x0030CA71 File Offset: 0x0030AC71
+		// Token: 0x17003673 RID: 13939
+		// (get) Token: 0x0600D8A7 RID: 55463 RVA: 0x0032C011 File Offset: 0x0032A211
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D0D2 RID: 53458 RVA: 0x0030CA7E File Offset: 0x0030AC7E
+		// Token: 0x0600D8A8 RID: 55464 RVA: 0x0032C01E File Offset: 0x0032A21E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600D0D3 RID: 53459 RVA: 0x0030CA88 File Offset: 0x0030AC88
+		// Token: 0x0600D8A9 RID: 55465 RVA: 0x0032C028 File Offset: 0x0032A228
 		public static SheriffEnding GetRootAsSheriffEnding(ByteBuffer _bb)
 		{
 			return SheriffEnding.GetRootAsSheriffEnding(_bb, default(SheriffEnding));
 		}
 
-		// Token: 0x0600D0D4 RID: 53460 RVA: 0x0030CAA4 File Offset: 0x0030ACA4
+		// Token: 0x0600D8AA RID: 55466 RVA: 0x0032C044 File Offset: 0x0032A244
 		public static SheriffEnding GetRootAsSheriffEnding(ByteBuffer _bb, SheriffEnding obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600D0D5 RID: 53461 RVA: 0x0030CAC1 File Offset: 0x0030ACC1
+		// Token: 0x0600D8AB RID: 55467 RVA: 0x0032C061 File Offset: 0x0032A261
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600D0D6 RID: 53462 RVA: 0x0030CAD0 File Offset: 0x0030ACD0
+		// Token: 0x0600D8AC RID: 55468 RVA: 0x0032C070 File Offset: 0x0032A270
 		public SheriffEnding __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003566 RID: 13670
-		// (get) Token: 0x0600D0D7 RID: 53463 RVA: 0x0030CAE0 File Offset: 0x0030ACE0
+		// Token: 0x17003674 RID: 13940
+		// (get) Token: 0x0600D8AD RID: 55469 RVA: 0x0032C080 File Offset: 0x0032A280
 		public int Id
 		{
 			get
@@ -64,8 +64,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003567 RID: 13671
-		// (get) Token: 0x0600D0D8 RID: 53464 RVA: 0x0030CB1C File Offset: 0x0030AD1C
+		// Token: 0x17003675 RID: 13941
+		// (get) Token: 0x0600D8AE RID: 55470 RVA: 0x0032C0BC File Offset: 0x0032A2BC
 		public int SheriffAnomalyId
 		{
 			get
@@ -79,7 +79,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D0D9 RID: 53465 RVA: 0x0030CB58 File Offset: 0x0030AD58
+		// Token: 0x0600D8AF RID: 55471 RVA: 0x0032C0F8 File Offset: 0x0032A2F8
 		public int SheriffClueId(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -90,8 +90,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17003568 RID: 13672
-		// (get) Token: 0x0600D0DA RID: 53466 RVA: 0x0030CB98 File Offset: 0x0030AD98
+		// Token: 0x17003676 RID: 13942
+		// (get) Token: 0x0600D8B0 RID: 55472 RVA: 0x0032C138 File Offset: 0x0032A338
 		public int SheriffClueIdLength
 		{
 			get
@@ -105,20 +105,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D0DB RID: 53467 RVA: 0x0030CBC3 File Offset: 0x0030ADC3
+		// Token: 0x0600D8B1 RID: 55473 RVA: 0x0032C163 File Offset: 0x0032A363
 		public Span<int> GetSheriffClueIdBytes()
 		{
 			return this.__p.__vector_as_span<int>(8, 4);
 		}
 
-		// Token: 0x0600D0DC RID: 53468 RVA: 0x0030CBD2 File Offset: 0x0030ADD2
+		// Token: 0x0600D8B2 RID: 55474 RVA: 0x0032C172 File Offset: 0x0032A372
 		public int[] GetSheriffClueIdArray()
 		{
 			return this.__p.__vector_as_array<int>(8) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17003569 RID: 13673
-		// (get) Token: 0x0600D0DD RID: 53469 RVA: 0x0030CBEC File Offset: 0x0030ADEC
+		// Token: 0x17003677 RID: 13943
+		// (get) Token: 0x0600D8B3 RID: 55475 RVA: 0x0032C18C File Offset: 0x0032A38C
 		public string Context
 		{
 			get
@@ -132,20 +132,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D0DE RID: 53470 RVA: 0x0030CC24 File Offset: 0x0030AE24
+		// Token: 0x0600D8B4 RID: 55476 RVA: 0x0032C1C4 File Offset: 0x0032A3C4
 		public Span<byte> GetContextBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x0600D0DF RID: 53471 RVA: 0x0030CC34 File Offset: 0x0030AE34
+		// Token: 0x0600D8B5 RID: 55477 RVA: 0x0032C1D4 File Offset: 0x0032A3D4
 		public byte[] GetContextArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x1700356A RID: 13674
-		// (get) Token: 0x0600D0E0 RID: 53472 RVA: 0x0030CC4C File Offset: 0x0030AE4C
+		// Token: 0x17003678 RID: 13944
+		// (get) Token: 0x0600D8B6 RID: 55478 RVA: 0x0032C1EC File Offset: 0x0032A3EC
 		public string Icon
 		{
 			get
@@ -159,37 +159,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600D0E1 RID: 53473 RVA: 0x0030CC84 File Offset: 0x0030AE84
+		// Token: 0x0600D8B7 RID: 55479 RVA: 0x0032C224 File Offset: 0x0032A424
 		public Span<byte> GetIconBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x0600D0E2 RID: 53474 RVA: 0x0030CC94 File Offset: 0x0030AE94
+		// Token: 0x0600D8B8 RID: 55480 RVA: 0x0032C234 File Offset: 0x0032A434
 		public byte[] GetIconArray()
 		{
 			return this.__p.__vector_as_array<byte>(12) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x0600D0E3 RID: 53475 RVA: 0x0030CCAC File Offset: 0x0030AEAC
+		// Token: 0x0600D8B9 RID: 55481 RVA: 0x0032C24C File Offset: 0x0032A44C
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用SheriffClueIdIter()或GetSheriffClueIdBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] SheriffClueId()
+		public int[] SheriffClueId()
 		{
-			SheriffEnding sheriffEnding = this;
-			return sheriffEnding.GetSheriffClueIdArray() ?? Array.Empty<int>();
+			return this.GetSheriffClueIdArray();
 		}
 
-		// Token: 0x0600D0E4 RID: 53476 RVA: 0x0030CCD0 File Offset: 0x0030AED0
+		// Token: 0x0600D8BA RID: 55482 RVA: 0x0032C254 File Offset: 0x0032A454
 		[NullableContext(1)]
-		public readonly IEnumerable<int> SheriffClueIdIter()
+		public IEnumerable<int> SheriffClueIdIter()
 		{
 			SheriffEnding.<SheriffClueIdIter>d__26 <SheriffClueIdIter>d__ = new SheriffEnding.<SheriffClueIdIter>d__26(-2);
 			<SheriffClueIdIter>d__.<>3__<>4__this = this;
 			return <SheriffClueIdIter>d__;
 		}
 
-		// Token: 0x040051AD RID: 20909
+		// Token: 0x040057AC RID: 22444
 		private Table __p;
 	}
 }

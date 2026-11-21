@@ -4,51 +4,51 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x0200679D RID: 26525
+	// Token: 0x020056ED RID: 22253
 	[NullableContext(1)]
 	public interface IDragVisual
 	{
-		// Token: 0x17009695 RID: 38549
-		// (get) Token: 0x060421F1 RID: 270833
+		// Token: 0x170069D6 RID: 27094
+		// (get) Token: 0x06036D47 RID: 224583
 		int SourceUid { get; }
 
-		// Token: 0x17009696 RID: 38550
-		// (get) Token: 0x060421F2 RID: 270834
+		// Token: 0x170069D7 RID: 27095
+		// (get) Token: 0x06036D48 RID: 224584
 		int ConfigId { get; }
 
-		// Token: 0x17009697 RID: 38551
-		// (get) Token: 0x060421F3 RID: 270835
+		// Token: 0x170069D8 RID: 27096
+		// (get) Token: 0x06036D49 RID: 224585
 		EDragSourceKind Source { get; }
 
-		// Token: 0x17009698 RID: 38552
-		// (get) Token: 0x060421F4 RID: 270836
+		// Token: 0x170069D9 RID: 27097
+		// (get) Token: 0x06036D4A RID: 224586
 		EDangoBrawlTemplateType TemplateType { get; }
 
-		// Token: 0x17009699 RID: 38553
-		// (get) Token: 0x060421F5 RID: 270837
-		// (set) Token: 0x060421F6 RID: 270838
+		// Token: 0x170069DA RID: 27098
+		// (get) Token: 0x06036D4B RID: 224587
+		// (set) Token: 0x06036D4C RID: 224588
 		EDangoBrawlRotate Rotate { get; set; }
 
-		// Token: 0x1700969A RID: 38554
-		// (get) Token: 0x060421F7 RID: 270839
+		// Token: 0x170069DB RID: 27099
+		// (get) Token: 0x06036D4D RID: 224589
 		IDangoBrawlDraggableView DraggableItem { get; }
 
-		// Token: 0x1700969B RID: 38555
-		// (get) Token: 0x060421F8 RID: 270840
+		// Token: 0x170069DC RID: 27100
+		// (get) Token: 0x06036D4E RID: 224590
 		DragPayloadFollower[] Followers { get; }
 
-		// Token: 0x1700969C RID: 38556
-		// (get) Token: 0x060421F9 RID: 270841
-		// (set) Token: 0x060421FA RID: 270842
+		// Token: 0x170069DD RID: 27101
+		// (get) Token: 0x06036D4F RID: 224591
+		// (set) Token: 0x06036D50 RID: 224592
 		FVector2D DragAnchorOffset { get; set; }
 
-		// Token: 0x060421FB RID: 270843
+		// Token: 0x06036D51 RID: 224593
 		FVector2D GetLguiTopLeft();
 
-		// Token: 0x060421FC RID: 270844
+		// Token: 0x06036D52 RID: 224594
 		void MoveTo(FVector2D lguiPos);
 
-		// Token: 0x060421FD RID: 270845
+		// Token: 0x06036D53 RID: 224595
 		void Destroy();
 	}
 }

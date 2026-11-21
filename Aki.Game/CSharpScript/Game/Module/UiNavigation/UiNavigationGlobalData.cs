@@ -6,22 +6,22 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.UiNavigation
 {
-	// Token: 0x02004944 RID: 18756
+	// Token: 0x020038BB RID: 14523
 	public class UiNavigationGlobalData : IStaticVariableResetter
 	{
-		// Token: 0x06030F08 RID: 200456 RVA: 0x00B5C5E1 File Offset: 0x00B5A7E1
+		// Token: 0x06025A35 RID: 154165 RVA: 0x00A97451 File Offset: 0x00A95651
 		static UiNavigationGlobalData()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(UiNavigationGlobalData.CreateStaticDefaultValue), new Action(UiNavigationGlobalData.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06030F09 RID: 200457 RVA: 0x00B5C600 File Offset: 0x00B5A800
+		// Token: 0x06025A36 RID: 154166 RVA: 0x00A97470 File Offset: 0x00A95670
 		public static int GetListenerInstanceId()
 		{
 			return ++UiNavigationGlobalData.ListenerInstanceId;
 		}
 
-		// Token: 0x06030F0A RID: 200458 RVA: 0x00B5C610 File Offset: 0x00B5A810
+		// Token: 0x06025A37 RID: 154167 RVA: 0x00A97480 File Offset: 0x00A95680
 		[NullableContext(1)]
 		public static void AddBlockListenerFocusTag(string tag)
 		{
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 			UiNavigationGlobalData.BlockListenerFocusTagList.Add(tag);
 		}
 
-		// Token: 0x06030F0B RID: 200459 RVA: 0x00B5C654 File Offset: 0x00B5A854
+		// Token: 0x06025A38 RID: 154168 RVA: 0x00A974C4 File Offset: 0x00A956C4
 		[NullableContext(1)]
 		public static void DeleteBlockListenerFocusTag(string tag)
 		{
@@ -47,8 +47,8 @@ namespace CSharpScript.Game.Module.UiNavigation
 			UiNavigationGlobalData.BlockListenerFocusTagList.Remove(tag);
 		}
 
-		// Token: 0x170079D2 RID: 31186
-		// (get) Token: 0x06030F0C RID: 200460 RVA: 0x00B5C697 File Offset: 0x00B5A897
+		// Token: 0x17004D3A RID: 19770
+		// (get) Token: 0x06025A39 RID: 154169 RVA: 0x00A97507 File Offset: 0x00A95707
 		public static bool IsBlockNavigation
 		{
 			get
@@ -57,19 +57,19 @@ namespace CSharpScript.Game.Module.UiNavigation
 			}
 		}
 
-		// Token: 0x06030F0D RID: 200461 RVA: 0x00B5C6BE File Offset: 0x00B5A8BE
+		// Token: 0x06025A3A RID: 154170 RVA: 0x00A9752E File Offset: 0x00A9572E
 		public static void ClearBlockListener()
 		{
 			UiNavigationGlobalData.BlockListenerFocusTagList.Clear();
 		}
 
-		// Token: 0x06030F0E RID: 200462 RVA: 0x00B5C6CA File Offset: 0x00B5A8CA
+		// Token: 0x06025A3B RID: 154171 RVA: 0x00A9753A File Offset: 0x00A9573A
 		public static void CreateStaticDefaultValue()
 		{
 			UiNavigationGlobalData.BlockListenerFocusTagList = new HashSet<string>();
 		}
 
-		// Token: 0x06030F0F RID: 200463 RVA: 0x00B5C6D6 File Offset: 0x00B5A8D6
+		// Token: 0x06025A3C RID: 154172 RVA: 0x00A97546 File Offset: 0x00A95746
 		public static void ResetStaticDefaultValue()
 		{
 			UiNavigationGlobalData.NeedCalculateCurrentPanel = false;
@@ -81,22 +81,22 @@ namespace CSharpScript.Game.Module.UiNavigation
 			UiNavigationGlobalData.BlockListenerFocusTagList = null;
 		}
 
-		// Token: 0x0401A44C RID: 107596
+		// Token: 0x04014CBF RID: 85183
 		public static bool NeedCalculateCurrentPanel;
 
-		// Token: 0x0401A44D RID: 107597
+		// Token: 0x04014CC0 RID: 85184
 		public static int NeedRefreshPanelId;
 
-		// Token: 0x0401A44E RID: 107598
+		// Token: 0x04014CC1 RID: 85185
 		public static bool IsAllowCrossNavigationGroup;
 
-		// Token: 0x0401A44F RID: 107599
+		// Token: 0x04014CC2 RID: 85186
 		public static bool IsAllowLoopScrollInteractHighlight;
 
-		// Token: 0x0401A450 RID: 107600
+		// Token: 0x04014CC3 RID: 85187
 		public static bool VisionReplaceViewFindDefault;
 
-		// Token: 0x0401A451 RID: 107601
+		// Token: 0x04014CC4 RID: 85188
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace CSharpScript.Game.Module.UiNavigation
 		})]
 		private static HashSet<string> BlockListenerFocusTagList;
 
-		// Token: 0x0401A452 RID: 107602
+		// Token: 0x04014CC5 RID: 85189
 		private static int ListenerInstanceId;
 	}
 }

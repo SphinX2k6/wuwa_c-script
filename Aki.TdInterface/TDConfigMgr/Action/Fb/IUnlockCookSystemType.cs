@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x0200270C RID: 9996
+	// Token: 0x020029D3 RID: 10707
 	public class IUnlockCookSystemType
 	{
-		// Token: 0x0600DF0A RID: 57098 RVA: 0x00211014 File Offset: 0x0020F214
-		[NullableContext(1)]
+		// Token: 0x0600ECF6 RID: 60662 RVA: 0x0022D9BC File Offset: 0x0022BBBC
 		public static IUnlockCookSystemType Create(IUnlockCookSystemType? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170042B4 RID: 17076
-		// (get) Token: 0x0600DF0B RID: 57099 RVA: 0x00211033 File Offset: 0x0020F233
+		// Token: 0x170045FE RID: 17918
+		// (get) Token: 0x0600ECF7 RID: 60663 RVA: 0x0022D9DB File Offset: 0x0022BBDB
 		public virtual EUnlockCookSystemType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007BC8 RID: 31688
+		// Token: 0x0400826D RID: 33389
 		private IUnlockCookSystemType Instance;
 	}
 }

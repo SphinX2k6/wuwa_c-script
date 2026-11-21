@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000B28 RID: 2856
+	// Token: 0x02000C08 RID: 3080
 	public struct BattleLinkCharacter : IFlatbufferObject
 	{
-		// Token: 0x170004CE RID: 1230
-		// (get) Token: 0x06004C40 RID: 19520 RVA: 0x001E1118 File Offset: 0x001DF318
+		// Token: 0x1700050E RID: 1294
+		// (get) Token: 0x06005202 RID: 20994 RVA: 0x00201530 File Offset: 0x001FF730
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004C41 RID: 19521 RVA: 0x001E1125 File Offset: 0x001DF325
+		// Token: 0x06005203 RID: 20995 RVA: 0x0020153D File Offset: 0x001FF73D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06004C42 RID: 19522 RVA: 0x001E112C File Offset: 0x001DF32C
+		// Token: 0x06005204 RID: 20996 RVA: 0x00201544 File Offset: 0x001FF744
 		public static BattleLinkCharacter GetRootAsBattleLinkCharacter(ByteBuffer _bb)
 		{
 			return BattleLinkCharacter.GetRootAsBattleLinkCharacter(_bb, default(BattleLinkCharacter));
 		}
 
-		// Token: 0x06004C43 RID: 19523 RVA: 0x001E1148 File Offset: 0x001DF348
+		// Token: 0x06005205 RID: 20997 RVA: 0x00201560 File Offset: 0x001FF760
 		public static BattleLinkCharacter GetRootAsBattleLinkCharacter(ByteBuffer _bb, BattleLinkCharacter obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06004C44 RID: 19524 RVA: 0x001E1165 File Offset: 0x001DF365
+		// Token: 0x06005206 RID: 20998 RVA: 0x0020157D File Offset: 0x001FF77D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06004C45 RID: 19525 RVA: 0x001E1174 File Offset: 0x001DF374
+		// Token: 0x06005207 RID: 20999 RVA: 0x0020158C File Offset: 0x001FF78C
 		public BattleLinkCharacter __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170004CF RID: 1231
-		// (get) Token: 0x06004C46 RID: 19526 RVA: 0x001E1184 File Offset: 0x001DF384
+		// Token: 0x1700050F RID: 1295
+		// (get) Token: 0x06005208 RID: 21000 RVA: 0x0020159C File Offset: 0x001FF79C
 		public int Id
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170004D0 RID: 1232
-		// (get) Token: 0x06004C47 RID: 19527 RVA: 0x001E11C0 File Offset: 0x001DF3C0
+		// Token: 0x17000510 RID: 1296
+		// (get) Token: 0x06005209 RID: 21001 RVA: 0x002015D8 File Offset: 0x001FF7D8
 		public int NeedLoadMesh
 		{
 			get
@@ -80,8 +80,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170004D1 RID: 1233
-		// (get) Token: 0x06004C48 RID: 19528 RVA: 0x001E11FC File Offset: 0x001DF3FC
+		// Token: 0x17000511 RID: 1297
+		// (get) Token: 0x0600520A RID: 21002 RVA: 0x00201614 File Offset: 0x001FF814
 		public string CharacterDataAsset
 		{
 			get
@@ -95,20 +95,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004C49 RID: 19529 RVA: 0x001E1233 File Offset: 0x001DF433
+		// Token: 0x0600520B RID: 21003 RVA: 0x0020164B File Offset: 0x001FF84B
 		public Span<byte> GetCharacterDataAssetBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x06004C4A RID: 19530 RVA: 0x001E1242 File Offset: 0x001DF442
+		// Token: 0x0600520C RID: 21004 RVA: 0x0020165A File Offset: 0x001FF85A
 		public byte[] GetCharacterDataAssetArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170004D2 RID: 1234
-		// (get) Token: 0x06004C4B RID: 19531 RVA: 0x001E125C File Offset: 0x001DF45C
+		// Token: 0x17000512 RID: 1298
+		// (get) Token: 0x0600520D RID: 21005 RVA: 0x00201674 File Offset: 0x001FF874
 		public string Seq
 		{
 			get
@@ -122,20 +122,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004C4C RID: 19532 RVA: 0x001E1294 File Offset: 0x001DF494
+		// Token: 0x0600520E RID: 21006 RVA: 0x002016AC File Offset: 0x001FF8AC
 		public Span<byte> GetSeqBytes()
 		{
 			return this.__p.__vector_as_span<byte>(10, 1);
 		}
 
-		// Token: 0x06004C4D RID: 19533 RVA: 0x001E12A4 File Offset: 0x001DF4A4
+		// Token: 0x0600520F RID: 21007 RVA: 0x002016BC File Offset: 0x001FF8BC
 		public byte[] GetSeqArray()
 		{
 			return this.__p.__vector_as_array<byte>(10) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170004D3 RID: 1235
-		// (get) Token: 0x06004C4E RID: 19534 RVA: 0x001E12BC File Offset: 0x001DF4BC
+		// Token: 0x17000513 RID: 1299
+		// (get) Token: 0x06005210 RID: 21008 RVA: 0x002016D4 File Offset: 0x001FF8D4
 		public string Pose
 		{
 			get
@@ -149,20 +149,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004C4F RID: 19535 RVA: 0x001E12F4 File Offset: 0x001DF4F4
+		// Token: 0x06005211 RID: 21009 RVA: 0x0020170C File Offset: 0x001FF90C
 		public Span<byte> GetPoseBytes()
 		{
 			return this.__p.__vector_as_span<byte>(12, 1);
 		}
 
-		// Token: 0x06004C50 RID: 19536 RVA: 0x001E1304 File Offset: 0x001DF504
+		// Token: 0x06005212 RID: 21010 RVA: 0x0020171C File Offset: 0x001FF91C
 		public byte[] GetPoseArray()
 		{
 			return this.__p.__vector_as_array<byte>(12) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170004D4 RID: 1236
-		// (get) Token: 0x06004C51 RID: 19537 RVA: 0x001E131C File Offset: 0x001DF51C
+		// Token: 0x17000514 RID: 1300
+		// (get) Token: 0x06005213 RID: 21011 RVA: 0x00201734 File Offset: 0x001FF934
 		public string RogueSkillIcon
 		{
 			get
@@ -176,20 +176,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004C52 RID: 19538 RVA: 0x001E1354 File Offset: 0x001DF554
+		// Token: 0x06005214 RID: 21012 RVA: 0x0020176C File Offset: 0x001FF96C
 		public Span<byte> GetRogueSkillIconBytes()
 		{
 			return this.__p.__vector_as_span<byte>(14, 1);
 		}
 
-		// Token: 0x06004C53 RID: 19539 RVA: 0x001E1364 File Offset: 0x001DF564
+		// Token: 0x06005215 RID: 21013 RVA: 0x0020177C File Offset: 0x001FF97C
 		public byte[] GetRogueSkillIconArray()
 		{
 			return this.__p.__vector_as_array<byte>(14) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170004D5 RID: 1237
-		// (get) Token: 0x06004C54 RID: 19540 RVA: 0x001E137C File Offset: 0x001DF57C
+		// Token: 0x17000515 RID: 1301
+		// (get) Token: 0x06005216 RID: 21014 RVA: 0x00201794 File Offset: 0x001FF994
 		public string RogueSkillDesc
 		{
 			get
@@ -203,19 +203,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004C55 RID: 19541 RVA: 0x001E13B4 File Offset: 0x001DF5B4
+		// Token: 0x06005217 RID: 21015 RVA: 0x002017CC File Offset: 0x001FF9CC
 		public Span<byte> GetRogueSkillDescBytes()
 		{
 			return this.__p.__vector_as_span<byte>(16, 1);
 		}
 
-		// Token: 0x06004C56 RID: 19542 RVA: 0x001E13C4 File Offset: 0x001DF5C4
+		// Token: 0x06005218 RID: 21016 RVA: 0x002017DC File Offset: 0x001FF9DC
 		public byte[] GetRogueSkillDescArray()
 		{
 			return this.__p.__vector_as_array<byte>(16) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x06004C57 RID: 19543 RVA: 0x001E13DC File Offset: 0x001DF5DC
+		// Token: 0x06005219 RID: 21017 RVA: 0x002017F4 File Offset: 0x001FF9F4
 		public string RogueSkillDescParam(int j)
 		{
 			int num = this.__p.__offset(18);
@@ -226,8 +226,8 @@ namespace Aki.Config
 			return this.__p.__string(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170004D6 RID: 1238
-		// (get) Token: 0x06004C58 RID: 19544 RVA: 0x001E1418 File Offset: 0x001DF618
+		// Token: 0x17000516 RID: 1302
+		// (get) Token: 0x0600521A RID: 21018 RVA: 0x00201830 File Offset: 0x001FFA30
 		public int RogueSkillDescParamLength
 		{
 			get
@@ -241,8 +241,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x170004D7 RID: 1239
-		// (get) Token: 0x06004C59 RID: 19545 RVA: 0x001E1444 File Offset: 0x001DF644
+		// Token: 0x17000517 RID: 1303
+		// (get) Token: 0x0600521B RID: 21019 RVA: 0x0020185C File Offset: 0x001FFA5C
 		public string RogueSkillTitle
 		{
 			get
@@ -256,20 +256,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004C5A RID: 19546 RVA: 0x001E147C File Offset: 0x001DF67C
+		// Token: 0x0600521C RID: 21020 RVA: 0x00201894 File Offset: 0x001FFA94
 		public Span<byte> GetRogueSkillTitleBytes()
 		{
 			return this.__p.__vector_as_span<byte>(20, 1);
 		}
 
-		// Token: 0x06004C5B RID: 19547 RVA: 0x001E148C File Offset: 0x001DF68C
+		// Token: 0x0600521D RID: 21021 RVA: 0x002018A4 File Offset: 0x001FFAA4
 		public byte[] GetRogueSkillTitleArray()
 		{
 			return this.__p.__vector_as_array<byte>(20) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x170004D8 RID: 1240
-		// (get) Token: 0x06004C5C RID: 19548 RVA: 0x001E14A4 File Offset: 0x001DF6A4
+		// Token: 0x17000518 RID: 1304
+		// (get) Token: 0x0600521E RID: 21022 RVA: 0x002018BC File Offset: 0x001FFABC
 		public string RoleLinkAudio
 		{
 			get
@@ -283,19 +283,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004C5D RID: 19549 RVA: 0x001E14DC File Offset: 0x001DF6DC
+		// Token: 0x0600521F RID: 21023 RVA: 0x002018F4 File Offset: 0x001FFAF4
 		public Span<byte> GetRoleLinkAudioBytes()
 		{
 			return this.__p.__vector_as_span<byte>(22, 1);
 		}
 
-		// Token: 0x06004C5E RID: 19550 RVA: 0x001E14EC File Offset: 0x001DF6EC
+		// Token: 0x06005220 RID: 21024 RVA: 0x00201904 File Offset: 0x001FFB04
 		public byte[] GetRoleLinkAudioArray()
 		{
 			return this.__p.__vector_as_array<byte>(22) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x06004C5F RID: 19551 RVA: 0x001E1504 File Offset: 0x001DF704
+		// Token: 0x06005221 RID: 21025 RVA: 0x0020191C File Offset: 0x001FFB1C
 		public int FormationSkillList(int j)
 		{
 			int num = this.__p.__offset(24);
@@ -306,8 +306,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x170004D9 RID: 1241
-		// (get) Token: 0x06004C60 RID: 19552 RVA: 0x001E1544 File Offset: 0x001DF744
+		// Token: 0x17000519 RID: 1305
+		// (get) Token: 0x06005222 RID: 21026 RVA: 0x0020195C File Offset: 0x001FFB5C
 		public int FormationSkillListLength
 		{
 			get
@@ -321,20 +321,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004C61 RID: 19553 RVA: 0x001E1570 File Offset: 0x001DF770
+		// Token: 0x06005223 RID: 21027 RVA: 0x00201988 File Offset: 0x001FFB88
 		public Span<int> GetFormationSkillListBytes()
 		{
 			return this.__p.__vector_as_span<int>(24, 4);
 		}
 
-		// Token: 0x06004C62 RID: 19554 RVA: 0x001E1580 File Offset: 0x001DF780
+		// Token: 0x06005224 RID: 21028 RVA: 0x00201998 File Offset: 0x001FFB98
 		public int[] GetFormationSkillListArray()
 		{
 			return this.__p.__vector_as_array<int>(24) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x170004DA RID: 1242
-		// (get) Token: 0x06004C63 RID: 19555 RVA: 0x001E1598 File Offset: 0x001DF798
+		// Token: 0x1700051A RID: 1306
+		// (get) Token: 0x06005225 RID: 21029 RVA: 0x002019B0 File Offset: 0x001FFBB0
 		public bool IsShowInTeamView
 		{
 			get
@@ -344,42 +344,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06004C64 RID: 19556 RVA: 0x001E15D8 File Offset: 0x001DF7D8
+		// Token: 0x06005226 RID: 21030 RVA: 0x002019F0 File Offset: 0x001FFBF0
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用FormationSkillListIter()或GetFormationSkillListBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] FormationSkillList()
+		public int[] FormationSkillList()
 		{
-			BattleLinkCharacter battleLinkCharacter = this;
-			return battleLinkCharacter.GetFormationSkillListArray() ?? Array.Empty<int>();
+			return this.GetFormationSkillListArray();
 		}
 
-		// Token: 0x06004C65 RID: 19557 RVA: 0x001E15FC File Offset: 0x001DF7FC
+		// Token: 0x06005227 RID: 21031 RVA: 0x002019F8 File Offset: 0x001FFBF8
 		[NullableContext(1)]
-		public readonly IEnumerable<int> FormationSkillListIter()
+		public IEnumerable<int> FormationSkillListIter()
 		{
 			BattleLinkCharacter.<FormationSkillListIter>d__51 <FormationSkillListIter>d__ = new BattleLinkCharacter.<FormationSkillListIter>d__51(-2);
 			<FormationSkillListIter>d__.<>3__<>4__this = this;
 			return <FormationSkillListIter>d__;
 		}
 
-		// Token: 0x06004C66 RID: 19558 RVA: 0x001E1611 File Offset: 0x001DF811
+		// Token: 0x06005228 RID: 21032 RVA: 0x00201A0D File Offset: 0x001FFC0D
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用RogueSkillDescParamIter()或GetRogueSkillDescParamBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly string[] RogueSkillDescParam()
+		public string[] RogueSkillDescParam()
 		{
 			return this.RogueSkillDescParamIter().ToArray<string>();
 		}
 
-		// Token: 0x06004C67 RID: 19559 RVA: 0x001E161E File Offset: 0x001DF81E
+		// Token: 0x06005229 RID: 21033 RVA: 0x00201A1A File Offset: 0x001FFC1A
 		[NullableContext(1)]
-		public readonly IEnumerable<string> RogueSkillDescParamIter()
+		public IEnumerable<string> RogueSkillDescParamIter()
 		{
 			BattleLinkCharacter.<RogueSkillDescParamIter>d__53 <RogueSkillDescParamIter>d__ = new BattleLinkCharacter.<RogueSkillDescParamIter>d__53(-2);
 			<RogueSkillDescParamIter>d__.<>3__<>4__this = this;
 			return <RogueSkillDescParamIter>d__;
 		}
 
-		// Token: 0x04004B1A RID: 19226
+		// Token: 0x040050FA RID: 20730
 		private Table __p;
 	}
 }

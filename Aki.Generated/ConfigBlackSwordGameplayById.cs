@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020000FE RID: 254
+	// Token: 0x0200010D RID: 269
 	public class ConfigBlackSwordGameplayById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x060005F5 RID: 1525 RVA: 0x0007B5EF File Offset: 0x000797EF
+		// Token: 0x0600064F RID: 1615 RVA: 0x00080F53 File Offset: 0x0007F153
 		static ConfigBlackSwordGameplayById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigBlackSwordGameplayById.CreateStaticDefaultValue), new Action(ConfigBlackSwordGameplayById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060005F6 RID: 1526 RVA: 0x0007B610 File Offset: 0x00079810
+		// Token: 0x06000650 RID: 1616 RVA: 0x00080F74 File Offset: 0x0007F174
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigBlackSwordGameplayById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x060005F7 RID: 1527 RVA: 0x0007B68F File Offset: 0x0007988F
+		// Token: 0x06000651 RID: 1617 RVA: 0x00080FF3 File Offset: 0x0007F1F3
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigBlackSwordGameplayById.LogPair = null;
 			ConfigBlackSwordGameplayById.HandleId = 0;
 		}
 
-		// Token: 0x060005F8 RID: 1528 RVA: 0x0007B69D File Offset: 0x0007989D
+		// Token: 0x06000652 RID: 1618 RVA: 0x00081001 File Offset: 0x0007F201
 		public static void Init()
 		{
 			ConfigBlackSwordGameplayById.HandleId = ConfigCommon.InitDataStatement(ConfigBlackSwordGameplayById.HandleId, "db_blackswordchallenge.db", "select BinData from `BlackSwordGameplay` where Id=?");
 		}
 
-		// Token: 0x060005F9 RID: 1529 RVA: 0x0007B6B8 File Offset: 0x000798B8
+		// Token: 0x06000653 RID: 1619 RVA: 0x0008101C File Offset: 0x0007F21C
 		public static BlackSwordGameplay? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigBlackSwordGameplayById.HandleId, ConfigBlackSwordGameplayById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new BlackSwordGameplay?(rootAsBlackSwordGameplay);
 		}
 
-		// Token: 0x040006D6 RID: 1750
+		// Token: 0x0400073F RID: 1855
 		private const string DB = "db_blackswordchallenge.db";
 
-		// Token: 0x040006D7 RID: 1751
+		// Token: 0x04000740 RID: 1856
 		private const string FILE = "h.黑剑挑战.xlsx";
 
-		// Token: 0x040006D8 RID: 1752
+		// Token: 0x04000741 RID: 1857
 		private const string TABLE = "BlackSwordGameplay";
 
-		// Token: 0x040006D9 RID: 1753
+		// Token: 0x04000742 RID: 1858
 		private const string COMMAND = "select BinData from `BlackSwordGameplay` where Id=?";
 
-		// Token: 0x040006DA RID: 1754
+		// Token: 0x04000743 RID: 1859
 		private const string KEY_PREFIX = "BlackSwordGameplayById";
 
-		// Token: 0x040006DB RID: 1755
+		// Token: 0x04000744 RID: 1860
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x040006DC RID: 1756
+		// Token: 0x04000745 RID: 1861
 		private static int HandleId;
 	}
 }

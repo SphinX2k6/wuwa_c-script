@@ -3,17 +3,17 @@ using Aki.Config;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MotorFight
 {
-	// Token: 0x0200640D RID: 25613
+	// Token: 0x0200538B RID: 21387
 	public class MotorFightDetailAttrDetailData : IMotorFightDetailAttrDetailData
 	{
-		// Token: 0x17009472 RID: 38002
-		// (get) Token: 0x060406D6 RID: 263894 RVA: 0x00F95C1B File Offset: 0x00F93E1B
-		// (set) Token: 0x060406D7 RID: 263895 RVA: 0x00F95C23 File Offset: 0x00F93E23
+		// Token: 0x170067D4 RID: 26580
+		// (get) Token: 0x06035397 RID: 218007 RVA: 0x00EDCBBB File Offset: 0x00EDADBB
+		// (set) Token: 0x06035398 RID: 218008 RVA: 0x00EDCBC3 File Offset: 0x00EDADC3
 		public MotorFightAttrShow Config { get; set; }
 
-		// Token: 0x17009473 RID: 38003
-		// (get) Token: 0x060406D8 RID: 263896 RVA: 0x00F95C2C File Offset: 0x00F93E2C
-		// (set) Token: 0x060406D9 RID: 263897 RVA: 0x00F95C34 File Offset: 0x00F93E34
+		// Token: 0x170067D5 RID: 26581
+		// (get) Token: 0x06035399 RID: 218009 RVA: 0x00EDCBCC File Offset: 0x00EDADCC
+		// (set) Token: 0x0603539A RID: 218010 RVA: 0x00EDCBD4 File Offset: 0x00EDADD4
 		public EMotorFightAttrShowType Type { get; set; }
 	}
 }

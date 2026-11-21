@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020003BD RID: 957
+	// Token: 0x020003D3 RID: 979
 	public class ConfigGuideFocusNewByGuideId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06001675 RID: 5749 RVA: 0x000D87B8 File Offset: 0x000D69B8
+		// Token: 0x060016F9 RID: 5881 RVA: 0x000DEF0C File Offset: 0x000DD10C
 		static ConfigGuideFocusNewByGuideId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigGuideFocusNewByGuideId.CreateStaticDefaultValue), new Action(ConfigGuideFocusNewByGuideId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06001676 RID: 5750 RVA: 0x000D87D8 File Offset: 0x000D69D8
+		// Token: 0x060016FA RID: 5882 RVA: 0x000DEF2C File Offset: 0x000DD12C
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigGuideFocusNewByGuideId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06001677 RID: 5751 RVA: 0x000D8857 File Offset: 0x000D6A57
+		// Token: 0x060016FB RID: 5883 RVA: 0x000DEFAB File Offset: 0x000DD1AB
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigGuideFocusNewByGuideId.LogPair = null;
 			ConfigGuideFocusNewByGuideId.HandleId = 0;
 		}
 
-		// Token: 0x06001678 RID: 5752 RVA: 0x000D8865 File Offset: 0x000D6A65
+		// Token: 0x060016FC RID: 5884 RVA: 0x000DEFB9 File Offset: 0x000DD1B9
 		public static void Init()
 		{
 			ConfigGuideFocusNewByGuideId.HandleId = ConfigCommon.InitDataStatement(ConfigGuideFocusNewByGuideId.HandleId, "db_guide_new.db", "select BinData from `GuideFocusNew` where GuideId=?");
 		}
 
-		// Token: 0x06001679 RID: 5753 RVA: 0x000D8880 File Offset: 0x000D6A80
+		// Token: 0x060016FD RID: 5885 RVA: 0x000DEFD4 File Offset: 0x000DD1D4
 		public static GuideFocusNew? GetConfig(int p0GuideId, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigGuideFocusNewByGuideId.HandleId, ConfigGuideFocusNewByGuideId.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new GuideFocusNew?(rootAsGuideFocusNew);
 		}
 
-		// Token: 0x04001A0F RID: 6671
+		// Token: 0x04001AA9 RID: 6825
 		private const string DB = "db_guide_new.db";
 
-		// Token: 0x04001A10 RID: 6672
+		// Token: 0x04001AAA RID: 6826
 		private const string FILE = "y.引导(新).xlsx";
 
-		// Token: 0x04001A11 RID: 6673
+		// Token: 0x04001AAB RID: 6827
 		private const string TABLE = "GuideFocusNew";
 
-		// Token: 0x04001A12 RID: 6674
+		// Token: 0x04001AAC RID: 6828
 		private const string COMMAND = "select BinData from `GuideFocusNew` where GuideId=?";
 
-		// Token: 0x04001A13 RID: 6675
+		// Token: 0x04001AAD RID: 6829
 		private const string KEY_PREFIX = "GuideFocusNewByGuideId";
 
-		// Token: 0x04001A14 RID: 6676
+		// Token: 0x04001AAE RID: 6830
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04001A15 RID: 6677
+		// Token: 0x04001AAF RID: 6831
 		private static int HandleId;
 	}
 }

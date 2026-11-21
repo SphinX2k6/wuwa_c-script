@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C30 RID: 7216
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001E27 RID: 7719
 	public class IMoveJigsawItem : ISetJigsawItemType
 	{
-		// Token: 0x06009AD1 RID: 39633 RVA: 0x00163E3C File Offset: 0x0016203C
+		// Token: 0x0600A429 RID: 42025 RVA: 0x0017717C File Offset: 0x0017537C
 		private IMoveJigsawItem_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009AD2 RID: 39634 RVA: 0x00163E74 File Offset: 0x00162074
+		// Token: 0x0600A42A RID: 42026 RVA: 0x001771B4 File Offset: 0x001753B4
 		public static IMoveJigsawItem Create([Nullable(2)] IMoveJigsawItem instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009AD3 RID: 39635 RVA: 0x00163E87 File Offset: 0x00162087
+		// Token: 0x0600A42B RID: 42027 RVA: 0x001771C7 File Offset: 0x001753C7
 		public static IMoveJigsawItem CreateFromSetValue([Nullable(2)] IMoveJigsawItem_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009AD4 RID: 39636 RVA: 0x00163E9A File Offset: 0x0016209A
+		// Token: 0x0600A42C RID: 42028 RVA: 0x001771DA File Offset: 0x001753DA
 		public new IMoveJigsawItem_SetValue ToSetValue()
 		{
 			return new IMoveJigsawItem_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003077 RID: 12407
-		// (get) Token: 0x06009AD5 RID: 39637 RVA: 0x00163ED1 File Offset: 0x001620D1
-		// (set) Token: 0x06009AD6 RID: 39638 RVA: 0x00163EFC File Offset: 0x001620FC
+		// Token: 0x170032E8 RID: 13032
+		// (get) Token: 0x0600A42D RID: 42029 RVA: 0x00177211 File Offset: 0x00175411
+		// (set) Token: 0x0600A42E RID: 42030 RVA: 0x0017723C File Offset: 0x0017543C
 		public override ESetJigsawItemType Type
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003078 RID: 12408
-		// (get) Token: 0x06009AD7 RID: 39639 RVA: 0x00163F0A File Offset: 0x0016210A
-		// (set) Token: 0x06009AD8 RID: 39640 RVA: 0x00163F35 File Offset: 0x00162135
+		// Token: 0x170032E9 RID: 13033
+		// (get) Token: 0x0600A42F RID: 42031 RVA: 0x0017724A File Offset: 0x0017544A
+		// (set) Token: 0x0600A430 RID: 42032 RVA: 0x00177275 File Offset: 0x00175475
 		public virtual int ItemEntityId
 		{
 			get
@@ -108,9 +106,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17003079 RID: 12409
-		// (get) Token: 0x06009AD9 RID: 39641 RVA: 0x00163F43 File Offset: 0x00162143
-		// (set) Token: 0x06009ADA RID: 39642 RVA: 0x00163F6E File Offset: 0x0016216E
+		// Token: 0x170032EA RID: 13034
+		// (get) Token: 0x0600A431 RID: 42033 RVA: 0x00177283 File Offset: 0x00175483
+		// (set) Token: 0x0600A432 RID: 42034 RVA: 0x001772AE File Offset: 0x001754AE
 		public virtual int FoundationEntityId
 		{
 			get
@@ -131,9 +129,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x1700307A RID: 12410
-		// (get) Token: 0x06009ADB RID: 39643 RVA: 0x00163F7C File Offset: 0x0016217C
-		// (set) Token: 0x06009ADC RID: 39644 RVA: 0x00163FDD File Offset: 0x001621DD
+		// Token: 0x170032EB RID: 13035
+		// (get) Token: 0x0600A433 RID: 42035 RVA: 0x001772BC File Offset: 0x001754BC
+		// (set) Token: 0x0600A434 RID: 42036 RVA: 0x0017731D File Offset: 0x0017551D
 		public virtual IPieceIndex Destination
 		{
 			get
@@ -161,18 +159,18 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005E1C RID: 24092
+		// Token: 0x04006353 RID: 25427
 		[Nullable(2)]
 		protected new IMoveJigsawItem FbInstance;
 
-		// Token: 0x04005E1D RID: 24093
+		// Token: 0x04006354 RID: 25428
 		[Nullable(2)]
 		protected new IMoveJigsawItem_SetValue PocoInterface;
 
-		// Token: 0x04005E1E RID: 24094
+		// Token: 0x04006355 RID: 25429
 		private IPieceIndex _DestinationCache;
 
-		// Token: 0x04005E1F RID: 24095
+		// Token: 0x04006356 RID: 25430
 		private bool _DestinationInited;
 	}
 }

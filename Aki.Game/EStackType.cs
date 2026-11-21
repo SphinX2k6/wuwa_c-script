@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x02002F6F RID: 12143
+// Token: 0x020024C3 RID: 9411
 public enum EStackType
 {
-	// Token: 0x0400C2D3 RID: 49875
+	// Token: 0x0400C67C RID: 50812
 	Nothing,
-	// Token: 0x0400C2D4 RID: 49876
+	// Token: 0x0400C67D RID: 50813
 	Multiply,
-	// Token: 0x0400C2D5 RID: 49877
+	// Token: 0x0400C67E RID: 50814
 	MultiplyTargetBuffStack
 }

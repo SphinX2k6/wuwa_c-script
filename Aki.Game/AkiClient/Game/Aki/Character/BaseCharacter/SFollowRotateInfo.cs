@@ -6,83 +6,83 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter
 {
-	// Token: 0x02004316 RID: 17174
+	// Token: 0x0200334F RID: 13135
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/SFollowRotateInfo.SFollowRotateInfo")]
 	[UnrealStructLayout(48, 8, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 48)]
 	public class SFollowRotateInfo : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602C6EB RID: 181995 RVA: 0x00A1FA58 File Offset: 0x00A1DC58
+		// Token: 0x060213D7 RID: 136151 RVA: 0x0095C50D File Offset: 0x0095A70D
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SFollowRotateInfo._ScriptStructPtr != 0) ? SFollowRotateInfo._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Character/BaseCharacter/SFollowRotateInfo.SFollowRotateInfo", ref SFollowRotateInfo._ScriptStructPtr);
 		}
 
-		// Token: 0x17006F38 RID: 28472
-		// (get) Token: 0x0602C6EC RID: 181996 RVA: 0x00A1FA7C File Offset: 0x00A1DC7C
-		// (set) Token: 0x0602C6ED RID: 181997 RVA: 0x00A1FA8C File Offset: 0x00A1DC8C
+		// Token: 0x1700434F RID: 17231
+		// (get) Token: 0x060213D8 RID: 136152 RVA: 0x0095C531 File Offset: 0x0095A731
+		// (set) Token: 0x060213D9 RID: 136153 RVA: 0x0095C541 File Offset: 0x0095A741
 		public unsafe int RotateSpeed
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SFollowRotateInfo.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)SFollowRotateInfo.__PropertyOffset_RotateSpeed);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SFollowRotateInfo.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)SFollowRotateInfo.__PropertyOffset_RotateSpeed) = value;
 			}
 		}
 
-		// Token: 0x17006F39 RID: 28473
-		// (get) Token: 0x0602C6EE RID: 181998 RVA: 0x00A1FA9D File Offset: 0x00A1DC9D
-		// (set) Token: 0x0602C6EF RID: 181999 RVA: 0x00A1FAB1 File Offset: 0x00A1DCB1
+		// Token: 0x17004350 RID: 17232
+		// (get) Token: 0x060213DA RID: 136154 RVA: 0x0095C552 File Offset: 0x0095A752
+		// (set) Token: 0x060213DB RID: 136155 RVA: 0x0095C566 File Offset: 0x0095A766
 		public unsafe TEnumAsByte<EFollowRotateType> RotateType
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SFollowRotateInfo.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)SFollowRotateInfo.__PropertyOffset_RotateType);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SFollowRotateInfo.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)SFollowRotateInfo.__PropertyOffset_RotateType) = value;
 			}
 		}
 
-		// Token: 0x17006F3A RID: 28474
-		// (get) Token: 0x0602C6F0 RID: 182000 RVA: 0x00A1FAC6 File Offset: 0x00A1DCC6
-		// (set) Token: 0x0602C6F1 RID: 182001 RVA: 0x00A1FAD6 File Offset: 0x00A1DCD6
+		// Token: 0x17004351 RID: 17233
+		// (get) Token: 0x060213DC RID: 136156 RVA: 0x0095C57B File Offset: 0x0095A77B
+		// (set) Token: 0x060213DD RID: 136157 RVA: 0x0095C58B File Offset: 0x0095A78B
 		public unsafe int CameraDistance
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SFollowRotateInfo.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)SFollowRotateInfo.__PropertyOffset_CameraDistance);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SFollowRotateInfo.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)SFollowRotateInfo.__PropertyOffset_CameraDistance) = value;
 			}
 		}
 
-		// Token: 0x17006F3B RID: 28475
-		// (get) Token: 0x0602C6F2 RID: 182002 RVA: 0x00A1FAE7 File Offset: 0x00A1DCE7
-		// (set) Token: 0x0602C6F3 RID: 182003 RVA: 0x00A1FAFB File Offset: 0x00A1DCFB
+		// Token: 0x17004352 RID: 17234
+		// (get) Token: 0x060213DE RID: 136158 RVA: 0x0095C59C File Offset: 0x0095A79C
+		// (set) Token: 0x060213DF RID: 136159 RVA: 0x0095C5B0 File Offset: 0x0095A7B0
 		[Nullable(1)]
 		public unsafe string EntityIdBlackboardKey
 		{
 			[NullableContext(1)]
 			get
 			{
-				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SFollowRotateInfo.__PropertyOffset_3)));
+				return FString.ToString((void*)(base.NativePtr + (byte*)((IntPtr)SFollowRotateInfo.__PropertyOffset_EntityIdBlackboardKey)));
 			}
 			[NullableContext(1)]
 			set
 			{
-				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SFollowRotateInfo.__PropertyOffset_3)), value);
+				FString.CopyFrom((void*)(base.NativePtr + (byte*)((IntPtr)SFollowRotateInfo.__PropertyOffset_EntityIdBlackboardKey)), value);
 			}
 		}
 
-		// Token: 0x17006F3C RID: 28476
-		// (get) Token: 0x0602C6F4 RID: 182004 RVA: 0x00A1FB10 File Offset: 0x00A1DD10
-		// (set) Token: 0x0602C6F5 RID: 182005 RVA: 0x00A1FB53 File Offset: 0x00A1DD53
+		// Token: 0x17004353 RID: 17235
+		// (get) Token: 0x060213E0 RID: 136160 RVA: 0x0095C5C8 File Offset: 0x0095A7C8
+		// (set) Token: 0x060213E1 RID: 136161 RVA: 0x0095C60B File Offset: 0x0095A80B
 		[Nullable(new byte[]
 		{
 			1,
@@ -101,7 +101,7 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 				TArray<TEnumAsByte<ECommonAxis>> result;
 				if ((result = this._NotSyncAxisList) == null)
 				{
-					result = (this._NotSyncAxisList = new TArray<TEnumAsByte<ECommonAxis>>(base.NativePtr + (IntPtr)SFollowRotateInfo.__PropertyOffset_4, base.MemoryOwner ?? this));
+					result = (this._NotSyncAxisList = new TArray<TEnumAsByte<ECommonAxis>>(base.NativePtr + (IntPtr)SFollowRotateInfo.__PropertyOffset_NotSyncAxisList, base.MemoryOwner ?? this));
 				}
 				return result;
 			}
@@ -116,79 +116,65 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter
 			}
 		}
 
-		// Token: 0x0602C6F6 RID: 182006 RVA: 0x00A1FB61 File Offset: 0x00A1DD61
+		// Token: 0x060213E2 RID: 136162 RVA: 0x0095C619 File Offset: 0x0095A819
 		public SFollowRotateInfo()
 		{
 		}
 
-		// Token: 0x0602C6F7 RID: 182007 RVA: 0x00A1FB69 File Offset: 0x00A1DD69
-		public SFollowRotateInfo(int RotateSpeed, TEnumAsByte<EFollowRotateType> RotateType, int CameraDistance, [Nullable(1)] string EntityIdBlackboardKey, [Nullable(new byte[]
-		{
-			1,
-			0
-		})] TArray<TEnumAsByte<ECommonAxis>> NotSyncAxisList)
-		{
-			this.RotateSpeed = RotateSpeed;
-			this.RotateType = RotateType;
-			this.CameraDistance = CameraDistance;
-			this.EntityIdBlackboardKey = EntityIdBlackboardKey;
-			this.NotSyncAxisList = NotSyncAxisList;
-		}
-
-		// Token: 0x0602C6F8 RID: 182008 RVA: 0x00A1FB96 File Offset: 0x00A1DD96
+		// Token: 0x060213E3 RID: 136163 RVA: 0x0095C621 File Offset: 0x0095A821
 		protected override IntPtr GetUStructPtr()
 		{
 			return SFollowRotateInfo.StaticStruct();
 		}
 
-		// Token: 0x0602C6F9 RID: 182009 RVA: 0x00A1FBA2 File Offset: 0x00A1DDA2
+		// Token: 0x060213E4 RID: 136164 RVA: 0x0095C62D File Offset: 0x0095A82D
 		[NullableContext(2)]
 		public SFollowRotateInfo(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602C6FA RID: 182010 RVA: 0x00A1FBAC File Offset: 0x00A1DDAC
+		// Token: 0x060213E5 RID: 136165 RVA: 0x0095C637 File Offset: 0x0095A837
 		public SFollowRotateInfo(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602C6FB RID: 182011 RVA: 0x00A1FBB7 File Offset: 0x00A1DDB7
+		// Token: 0x060213E6 RID: 136166 RVA: 0x0095C642 File Offset: 0x0095A842
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SFollowRotateInfo(Pointer, false, true);
 		}
 
-		// Token: 0x0602C6FC RID: 182012 RVA: 0x00A1FBC1 File Offset: 0x00A1DDC1
+		// Token: 0x060213E7 RID: 136167 RVA: 0x0095C64C File Offset: 0x0095A84C
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SFollowRotateInfo(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x040176CD RID: 95949
+		// Token: 0x040122BF RID: 74431
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/SFollowRotateInfo.SFollowRotateInfo";
 
-		// Token: 0x040176CE RID: 95950
+		// Token: 0x040122C0 RID: 74432
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x040176CF RID: 95951
-		internal static int __PropertyOffset_0;
+		// Token: 0x040122C1 RID: 74433
+		internal static int __PropertyOffset_RotateSpeed;
 
-		// Token: 0x040176D0 RID: 95952
-		internal static int __PropertyOffset_1;
+		// Token: 0x040122C2 RID: 74434
+		internal static int __PropertyOffset_RotateType;
 
-		// Token: 0x040176D1 RID: 95953
-		internal static int __PropertyOffset_2;
+		// Token: 0x040122C3 RID: 74435
+		internal static int __PropertyOffset_CameraDistance;
 
-		// Token: 0x040176D2 RID: 95954
-		internal static int __PropertyOffset_3;
+		// Token: 0x040122C4 RID: 74436
+		internal static int __PropertyOffset_EntityIdBlackboardKey;
 
-		// Token: 0x040176D3 RID: 95955
-		internal static int __PropertyOffset_4;
+		// Token: 0x040122C5 RID: 74437
+		internal static int __PropertyOffset_NotSyncAxisList;
 
-		// Token: 0x040176D4 RID: 95956
+		// Token: 0x040122C6 RID: 74438
 		[Nullable(new byte[]
 		{
 			2,

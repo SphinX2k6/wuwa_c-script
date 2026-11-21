@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001B23 RID: 6947
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001CD2 RID: 7378
 	public class IICenterTextShowAll : ICenterTextShowType
 	{
-		// Token: 0x060094BC RID: 38076 RVA: 0x001583A4 File Offset: 0x001565A4
+		// Token: 0x06009CA6 RID: 40102 RVA: 0x00169080 File Offset: 0x00167280
 		private IICenterTextShowAll_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060094BD RID: 38077 RVA: 0x001583DC File Offset: 0x001565DC
+		// Token: 0x06009CA7 RID: 40103 RVA: 0x001690B8 File Offset: 0x001672B8
 		public static IICenterTextShowAll Create([Nullable(2)] IICenterTextShowAll instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060094BE RID: 38078 RVA: 0x001583EF File Offset: 0x001565EF
+		// Token: 0x06009CA8 RID: 40104 RVA: 0x001690CB File Offset: 0x001672CB
 		public static IICenterTextShowAll CreateFromSetValue([Nullable(2)] IICenterTextShowAll_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060094BF RID: 38079 RVA: 0x00158402 File Offset: 0x00156602
+		// Token: 0x06009CA9 RID: 40105 RVA: 0x001690DE File Offset: 0x001672DE
 		public new IICenterTextShowAll_SetValue ToSetValue()
 		{
 			return new IICenterTextShowAll_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002EFF RID: 12031
-		// (get) Token: 0x060094C0 RID: 38080 RVA: 0x00158415 File Offset: 0x00156615
-		// (set) Token: 0x060094C1 RID: 38081 RVA: 0x00158440 File Offset: 0x00156640
+		// Token: 0x17003125 RID: 12581
+		// (get) Token: 0x06009CAA RID: 40106 RVA: 0x001690F1 File Offset: 0x001672F1
+		// (set) Token: 0x06009CAB RID: 40107 RVA: 0x0016911C File Offset: 0x0016731C
 		public override ECenterTextShowAnim Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005B20 RID: 23328
+		// Token: 0x04005FBE RID: 24510
 		[Nullable(2)]
 		protected new IICenterTextShowAll FbInstance;
 
-		// Token: 0x04005B21 RID: 23329
+		// Token: 0x04005FBF RID: 24511
 		[Nullable(2)]
 		protected new IICenterTextShowAll_SetValue PocoInterface;
 	}

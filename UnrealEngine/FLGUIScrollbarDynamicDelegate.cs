@@ -6,16 +6,16 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020020BC RID: 8380
+	// Token: 0x020006B7 RID: 1719
 	public sealed class FLGUIScrollbarDynamicDelegate : FScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601F915 RID: 129301 RVA: 0x002EECEB File Offset: 0x002ECEEB
+		// Token: 0x06009395 RID: 37781 RVA: 0x000DE36F File Offset: 0x000DC56F
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FLGUIScrollbarDynamicDelegate.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601F916 RID: 129302 RVA: 0x002EECF7 File Offset: 0x002ECEF7
+		// Token: 0x06009396 RID: 37782 RVA: 0x000DE37B File Offset: 0x000DC57B
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FLGUIScrollbarDynamicDelegate._FunctionPtr == IntPtr.Zero)
@@ -25,32 +25,31 @@ namespace UnrealEngine
 			return FLGUIScrollbarDynamicDelegate._FunctionPtr;
 		}
 
-		// Token: 0x0601F917 RID: 129303 RVA: 0x002EED1A File Offset: 0x002ECF1A
+		// Token: 0x06009397 RID: 37783 RVA: 0x000DE39E File Offset: 0x000DC59E
 		public FLGUIScrollbarDynamicDelegate()
 		{
 		}
 
-		// Token: 0x0601F918 RID: 129304 RVA: 0x002EED22 File Offset: 0x002ECF22
+		// Token: 0x06009398 RID: 37784 RVA: 0x000DE3A6 File Offset: 0x000DC5A6
 		[NullableContext(2)]
 		public FLGUIScrollbarDynamicDelegate(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601F919 RID: 129305 RVA: 0x002EED2C File Offset: 0x002ECF2C
+		// Token: 0x06009399 RID: 37785 RVA: 0x000DE3B0 File Offset: 0x000DC5B0
 		public FLGUIScrollbarDynamicDelegate(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601F91A RID: 129306 RVA: 0x002EED37 File Offset: 0x002ECF37
+		// Token: 0x0600939A RID: 37786 RVA: 0x000DE3BB File Offset: 0x000DC5BB
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Bind((Callback as Action<float>) ?? ((Action<float>)Delegate.CreateDelegate(typeof(Action<float>), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601F91B RID: 129307 RVA: 0x002EED69 File Offset: 0x002ECF69
+		// Token: 0x0600939B RID: 37787 RVA: 0x000DE3ED File Offset: 0x000DC5ED
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Bind(Action<float> Callback)
 		{
 			if (FLGUIScrollbarDynamicDelegate.RegisterId == 0)
@@ -65,9 +64,8 @@ namespace UnrealEngine
 			base.Bind(Callback, FLGUIScrollbarDynamicDelegate.RegisterId);
 		}
 
-		// Token: 0x0601F91C RID: 129308 RVA: 0x002EEDA4 File Offset: 0x002ECFA4
+		// Token: 0x0600939C RID: 37788 RVA: 0x000DE428 File Offset: 0x000DC628
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe void Execute(float InFloat)
 		{
 			FLGUIScrollbarDynamicDelegate.__FLGUIScrollbarDynamicDelegate_DelegateParams* ptr = stackalloc FLGUIScrollbarDynamicDelegate.__FLGUIScrollbarDynamicDelegate_DelegateParams[(UIntPtr)19] + 15L / (long)sizeof(FLGUIScrollbarDynamicDelegate.__FLGUIScrollbarDynamicDelegate_DelegateParams) & -16L;
@@ -76,10 +74,9 @@ namespace UnrealEngine
 			base.ExecuteInternal((void*)ptr);
 		}
 
-		// Token: 0x0601F91D RID: 129309 RVA: 0x002EEDE4 File Offset: 0x002ECFE4
+		// Token: 0x0600939D RID: 37789 RVA: 0x000DE468 File Offset: 0x000DC668
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action<float> action = target as Action<float>;
@@ -90,31 +87,31 @@ namespace UnrealEngine
 			action(((FLGUIScrollbarDynamicDelegate.__FLGUIScrollbarDynamicDelegate_DelegateParams*)__Parameters)->InFloat);
 		}
 
-		// Token: 0x040110A7 RID: 69799
+		// Token: 0x0400405A RID: 16474
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x040110A8 RID: 69800
+		// Token: 0x0400405B RID: 16475
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/LGUI.LGUIScrollbarDynamicDelegate__DelegateSignature";
 
-		// Token: 0x040110A9 RID: 69801
+		// Token: 0x0400405C RID: 16476
 		private static int RegisterId;
 
-		// Token: 0x020034B0 RID: 13488
+		// Token: 0x02000EDE RID: 3806
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
-		protected ref struct __FLGUIScrollbarDynamicDelegate_DelegateParams
+		private ref struct __FLGUIScrollbarDynamicDelegate_DelegateParams
 		{
-			// Token: 0x040174B8 RID: 95416
+			// Token: 0x0400629F RID: 25247
 			[FieldOffset(0)]
 			public float InFloat;
 		}
 
-		// Token: 0x020034B1 RID: 13489
+		// Token: 0x02000EDF RID: 3807
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x040174B9 RID: 95417
+			// Token: 0x040062A0 RID: 25248
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

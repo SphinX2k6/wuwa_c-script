@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002856 RID: 10326
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002B29 RID: 11049
 	public class IItemInspectFinishEffect
 	{
-		// Token: 0x0600E4E8 RID: 58600 RVA: 0x0021ADEF File Offset: 0x00218FEF
+		// Token: 0x0600F30D RID: 62221 RVA: 0x00237C53 File Offset: 0x00235E53
 		public static IItemInspectFinishEffect Create(IItemInspectFinishEffect? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x170045FE RID: 17918
-		// (get) Token: 0x0600E4E9 RID: 58601 RVA: 0x0021AE0E File Offset: 0x0021900E
+		// Token: 0x17004969 RID: 18793
+		// (get) Token: 0x0600F30E RID: 62222 RVA: 0x00237C72 File Offset: 0x00235E72
 		public virtual List<IInteractEffect> EffectList
 		{
 			get
@@ -39,8 +36,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x170045FF RID: 17919
-		// (get) Token: 0x0600E4EA RID: 58602 RVA: 0x0021AE40 File Offset: 0x00219040
+		// Token: 0x1700496A RID: 18794
+		// (get) Token: 0x0600F30F RID: 62223 RVA: 0x00237CA4 File Offset: 0x00235EA4
 		public virtual float? ProtectTime
 		{
 			get
@@ -53,13 +50,13 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007EA0 RID: 32416
+		// Token: 0x0400855D RID: 34141
 		private IItemInspectFinishEffect Instance;
 
-		// Token: 0x04007EA1 RID: 32417
+		// Token: 0x0400855E RID: 34142
 		private List<IInteractEffect> _EffectListCache;
 
-		// Token: 0x04007EA2 RID: 32418
+		// Token: 0x0400855F RID: 34143
 		private bool _EffectListInited;
 	}
 }

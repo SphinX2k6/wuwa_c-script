@@ -1,10 +1,10 @@
 ﻿using System;
 
-// Token: 0x02001D96 RID: 7574
+// Token: 0x02001258 RID: 4696
 public enum EProcessType
 {
-	// Token: 0x04006A6B RID: 27243
+	// Token: 0x04006B4C RID: 27468
 	StartShow,
-	// Token: 0x04006A6C RID: 27244
+	// Token: 0x04006B4D RID: 27469
 	EndShow
 }

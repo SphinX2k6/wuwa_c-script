@@ -6,11 +6,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02001047 RID: 4167
+	// Token: 0x0200112F RID: 4399
 	public struct RoleDevProsRoleItem : IFlatbufferObject
 	{
-		// Token: 0x1700324F RID: 12879
-		// (get) Token: 0x0600C847 RID: 51271 RVA: 0x002F9CBB File Offset: 0x002F7EBB
+		// Token: 0x170032CA RID: 13002
+		// (get) Token: 0x0600CE91 RID: 52881 RVA: 0x003159A1 File Offset: 0x00313BA1
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -19,39 +19,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C848 RID: 51272 RVA: 0x002F9CC8 File Offset: 0x002F7EC8
+		// Token: 0x0600CE92 RID: 52882 RVA: 0x003159AE File Offset: 0x00313BAE
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600C849 RID: 51273 RVA: 0x002F9CD0 File Offset: 0x002F7ED0
+		// Token: 0x0600CE93 RID: 52883 RVA: 0x003159B8 File Offset: 0x00313BB8
 		public static RoleDevProsRoleItem GetRootAsRoleDevProsRoleItem(ByteBuffer _bb)
 		{
 			return RoleDevProsRoleItem.GetRootAsRoleDevProsRoleItem(_bb, default(RoleDevProsRoleItem));
 		}
 
-		// Token: 0x0600C84A RID: 51274 RVA: 0x002F9CEC File Offset: 0x002F7EEC
+		// Token: 0x0600CE94 RID: 52884 RVA: 0x003159D4 File Offset: 0x00313BD4
 		public static RoleDevProsRoleItem GetRootAsRoleDevProsRoleItem(ByteBuffer _bb, RoleDevProsRoleItem obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600C84B RID: 51275 RVA: 0x002F9D09 File Offset: 0x002F7F09
+		// Token: 0x0600CE95 RID: 52885 RVA: 0x003159F1 File Offset: 0x00313BF1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600C84C RID: 51276 RVA: 0x002F9D18 File Offset: 0x002F7F18
+		// Token: 0x0600CE96 RID: 52886 RVA: 0x00315A00 File Offset: 0x00313C00
 		public RoleDevProsRoleItem __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17003250 RID: 12880
-		// (get) Token: 0x0600C84D RID: 51277 RVA: 0x002F9D28 File Offset: 0x002F7F28
+		// Token: 0x170032CB RID: 13003
+		// (get) Token: 0x0600CE97 RID: 52887 RVA: 0x00315A10 File Offset: 0x00313C10
 		public int ItemGroupId
 		{
 			get
@@ -65,8 +65,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17003251 RID: 12881
-		// (get) Token: 0x0600C84E RID: 51278 RVA: 0x002F9D64 File Offset: 0x002F7F64
+		// Token: 0x170032CC RID: 13004
+		// (get) Token: 0x0600CE98 RID: 52888 RVA: 0x00315A4C File Offset: 0x00313C4C
 		public int ItemTypeId
 		{
 			get
@@ -80,7 +80,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C84F RID: 51279 RVA: 0x002F9DA0 File Offset: 0x002F7FA0
+		// Token: 0x0600CE99 RID: 52889 RVA: 0x00315A88 File Offset: 0x00313C88
 		public IntPair? ItemGroup(int j)
 		{
 			int num = this.__p.__offset(8);
@@ -91,8 +91,8 @@ namespace Aki.Config
 			return new IntPair?(default(IntPair).__assign(this.__p.__indirect(this.__p.__vector(num) + j * 4), this.__p.bb));
 		}
 
-		// Token: 0x17003252 RID: 12882
-		// (get) Token: 0x0600C850 RID: 51280 RVA: 0x002F9E00 File Offset: 0x002F8000
+		// Token: 0x170032CD RID: 13005
+		// (get) Token: 0x0600CE9A RID: 52890 RVA: 0x00315AE8 File Offset: 0x00313CE8
 		public int ItemGroupLength
 		{
 			get
@@ -106,24 +106,23 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600C851 RID: 51281 RVA: 0x002F9E2B File Offset: 0x002F802B
+		// Token: 0x0600CE9B RID: 52891 RVA: 0x00315B13 File Offset: 0x00313D13
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用ItemGroupIter()或GetItemGroupBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly IntPair[] ItemGroup()
+		public IntPair[] ItemGroup()
 		{
 			return this.ItemGroupIter().ToArray<IntPair>();
 		}
 
-		// Token: 0x0600C852 RID: 51282 RVA: 0x002F9E38 File Offset: 0x002F8038
+		// Token: 0x0600CE9C RID: 52892 RVA: 0x00315B20 File Offset: 0x00313D20
 		[NullableContext(1)]
-		public readonly IEnumerable<IntPair> ItemGroupIter()
+		public IEnumerable<IntPair> ItemGroupIter()
 		{
 			RoleDevProsRoleItem.<ItemGroupIter>d__16 <ItemGroupIter>d__ = new RoleDevProsRoleItem.<ItemGroupIter>d__16(-2);
 			<ItemGroupIter>d__.<>3__<>4__this = this;
 			return <ItemGroupIter>d__;
 		}
 
-		// Token: 0x04005145 RID: 20805
+		// Token: 0x0400572D RID: 22317
 		private Table __p;
 	}
 }

@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005BEF RID: 23535
+	// Token: 0x02006208 RID: 25096
 	public class TAudioControlTypeUnion
 	{
-		// Token: 0x1700B1C9 RID: 45513
-		// (get) Token: 0x0602853D RID: 165181 RVA: 0x0058A552 File Offset: 0x00588752
-		// (set) Token: 0x0602853E RID: 165182 RVA: 0x0058A55A File Offset: 0x0058875A
+		// Token: 0x1700BB13 RID: 47891
+		// (get) Token: 0x0602AB0F RID: 174863 RVA: 0x005D2130 File Offset: 0x005D0330
+		// (set) Token: 0x0602AB10 RID: 174864 RVA: 0x005D2138 File Offset: 0x005D0338
 		public TAudioControlType Type { get; set; }
 
-		// Token: 0x1700B1CA RID: 45514
-		// (get) Token: 0x0602853F RID: 165183 RVA: 0x0058A563 File Offset: 0x00588763
-		// (set) Token: 0x06028540 RID: 165184 RVA: 0x0058A56B File Offset: 0x0058876B
+		// Token: 0x1700BB14 RID: 47892
+		// (get) Token: 0x0602AB11 RID: 174865 RVA: 0x005D2141 File Offset: 0x005D0341
+		// (set) Token: 0x0602AB12 RID: 174866 RVA: 0x005D2149 File Offset: 0x005D0349
 		public object Value { get; set; }
 
-		// Token: 0x06028541 RID: 165185 RVA: 0x0058A574 File Offset: 0x00588774
+		// Token: 0x0602AB13 RID: 174867 RVA: 0x005D2152 File Offset: 0x005D0352
 		public TAudioControlTypeUnion()
 		{
 			this.Type = TAudioControlType.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06028542 RID: 165186 RVA: 0x0058A58A File Offset: 0x0058878A
+		// Token: 0x0602AB14 RID: 174868 RVA: 0x005D2168 File Offset: 0x005D0368
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06028543 RID: 165187 RVA: 0x0058A59C File Offset: 0x0058879C
+		// Token: 0x0602AB15 RID: 174869 RVA: 0x005D217A File Offset: 0x005D037A
 		public IGramophoneAudioControlT AsIGramophoneAudioControl()
 		{
 			return this.As<IGramophoneAudioControlT>();
 		}
 
-		// Token: 0x06028544 RID: 165188 RVA: 0x0058A5A4 File Offset: 0x005887A4
+		// Token: 0x0602AB16 RID: 174870 RVA: 0x005D2182 File Offset: 0x005D0382
 		public static TAudioControlTypeUnion FromIGramophoneAudioControl(IGramophoneAudioControlT _igramophoneaudiocontrol)
 		{
 			return new TAudioControlTypeUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028545 RID: 165189 RVA: 0x0058A5B9 File Offset: 0x005887B9
+		// Token: 0x0602AB17 RID: 174871 RVA: 0x005D2197 File Offset: 0x005D0397
 		public ITrafficAudioControlT AsITrafficAudioControl()
 		{
 			return this.As<ITrafficAudioControlT>();
 		}
 
-		// Token: 0x06028546 RID: 165190 RVA: 0x0058A5C1 File Offset: 0x005887C1
+		// Token: 0x0602AB18 RID: 174872 RVA: 0x005D219F File Offset: 0x005D039F
 		public static TAudioControlTypeUnion FromITrafficAudioControl(ITrafficAudioControlT _itrafficaudiocontrol)
 		{
 			return new TAudioControlTypeUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06028547 RID: 165191 RVA: 0x0058A5D8 File Offset: 0x005887D8
+		// Token: 0x0602AB19 RID: 174873 RVA: 0x005D21B4 File Offset: 0x005D03B4
 		public static int Pack(FlatBufferBuilder builder, TAudioControlTypeUnion _o)
 		{
 			TAudioControlType type = _o.Type;

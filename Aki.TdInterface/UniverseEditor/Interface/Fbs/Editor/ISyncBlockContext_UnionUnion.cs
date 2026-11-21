@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x020048AE RID: 18606
+	// Token: 0x02004D13 RID: 19731
 	public class ISyncBlockContext_UnionUnion
 	{
-		// Token: 0x170086E7 RID: 34535
-		// (get) Token: 0x0601D0B2 RID: 118962 RVA: 0x0041A018 File Offset: 0x00418218
-		// (set) Token: 0x0601D0B3 RID: 118963 RVA: 0x0041A020 File Offset: 0x00418220
+		// Token: 0x17008D2F RID: 36143
+		// (get) Token: 0x0601E89F RID: 125087 RVA: 0x004467B4 File Offset: 0x004449B4
+		// (set) Token: 0x0601E8A0 RID: 125088 RVA: 0x004467BC File Offset: 0x004449BC
 		public ISyncBlockContext_Union Type { get; set; }
 
-		// Token: 0x170086E8 RID: 34536
-		// (get) Token: 0x0601D0B4 RID: 118964 RVA: 0x0041A029 File Offset: 0x00418229
-		// (set) Token: 0x0601D0B5 RID: 118965 RVA: 0x0041A031 File Offset: 0x00418231
+		// Token: 0x17008D30 RID: 36144
+		// (get) Token: 0x0601E8A1 RID: 125089 RVA: 0x004467C5 File Offset: 0x004449C5
+		// (set) Token: 0x0601E8A2 RID: 125090 RVA: 0x004467CD File Offset: 0x004449CD
 		public object Value { get; set; }
 
-		// Token: 0x0601D0B6 RID: 118966 RVA: 0x0041A03A File Offset: 0x0041823A
+		// Token: 0x0601E8A3 RID: 125091 RVA: 0x004467D6 File Offset: 0x004449D6
 		public ISyncBlockContext_UnionUnion()
 		{
 			this.Type = ISyncBlockContext_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601D0B7 RID: 118967 RVA: 0x0041A050 File Offset: 0x00418250
+		// Token: 0x0601E8A4 RID: 125092 RVA: 0x004467EC File Offset: 0x004449EC
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601D0B8 RID: 118968 RVA: 0x0041A062 File Offset: 0x00418262
+		// Token: 0x0601E8A5 RID: 125093 RVA: 0x004467FE File Offset: 0x004449FE
 		public ISyncBlockContextT AsISyncBlockContext()
 		{
 			return this.As<ISyncBlockContextT>();
 		}
 
-		// Token: 0x0601D0B9 RID: 118969 RVA: 0x0041A06A File Offset: 0x0041826A
+		// Token: 0x0601E8A6 RID: 125094 RVA: 0x00446806 File Offset: 0x00444A06
 		public static ISyncBlockContext_UnionUnion FromISyncBlockContext(ISyncBlockContextT _isyncblockcontext)
 		{
 			return new ISyncBlockContext_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			};
 		}
 
-		// Token: 0x0601D0BA RID: 118970 RVA: 0x0041A07F File Offset: 0x0041827F
+		// Token: 0x0601E8A7 RID: 125095 RVA: 0x0044681B File Offset: 0x00444A1B
 		public ILevelPlaySyncBlockContextT AsILevelPlaySyncBlockContext()
 		{
 			return this.As<ILevelPlaySyncBlockContextT>();
 		}
 
-		// Token: 0x0601D0BB RID: 118971 RVA: 0x0041A087 File Offset: 0x00418287
+		// Token: 0x0601E8A8 RID: 125096 RVA: 0x00446823 File Offset: 0x00444A23
 		public static ISyncBlockContext_UnionUnion FromILevelPlaySyncBlockContext(ILevelPlaySyncBlockContextT _ilevelplaysyncblockcontext)
 		{
 			return new ISyncBlockContext_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			};
 		}
 
-		// Token: 0x0601D0BC RID: 118972 RVA: 0x0041A09C File Offset: 0x0041829C
+		// Token: 0x0601E8A9 RID: 125097 RVA: 0x00446838 File Offset: 0x00444A38
 		public IQuestSyncBlockContextT AsIQuestSyncBlockContext()
 		{
 			return this.As<IQuestSyncBlockContextT>();
 		}
 
-		// Token: 0x0601D0BD RID: 118973 RVA: 0x0041A0A4 File Offset: 0x004182A4
+		// Token: 0x0601E8AA RID: 125098 RVA: 0x00446840 File Offset: 0x00444A40
 		public static ISyncBlockContext_UnionUnion FromIQuestSyncBlockContext(IQuestSyncBlockContextT _iquestsyncblockcontext)
 		{
 			return new ISyncBlockContext_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Editor
 			};
 		}
 
-		// Token: 0x0601D0BE RID: 118974 RVA: 0x0041A0BC File Offset: 0x004182BC
+		// Token: 0x0601E8AB RID: 125099 RVA: 0x00446858 File Offset: 0x00444A58
 		public static int Pack(FlatBufferBuilder builder, ISyncBlockContext_UnionUnion _o)
 		{
 			switch (_o.Type)

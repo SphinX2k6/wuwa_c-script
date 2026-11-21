@@ -5,16 +5,16 @@ using CSharpScript.Game.Common;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002A9F RID: 10911
+// Token: 0x0200201B RID: 8219
 public class SubPackageDownLoadClearTipsView : UiViewBase
 {
-	// Token: 0x06016B95 RID: 93077 RVA: 0x005C31DC File Offset: 0x005C13DC
+	// Token: 0x060145C4 RID: 83396 RVA: 0x005EFC58 File Offset: 0x005EDE58
 	[NullableContext(1)]
 	public SubPackageDownLoadClearTipsView(UiViewInfo uiViewInfo) : base(uiViewInfo)
 	{
 	}
 
-	// Token: 0x06016B96 RID: 93078 RVA: 0x005C31E8 File Offset: 0x005C13E8
+	// Token: 0x060145C5 RID: 83397 RVA: 0x005EFC64 File Offset: 0x005EDE64
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -37,7 +37,7 @@ public class SubPackageDownLoadClearTipsView : UiViewBase
 		};
 	}
 
-	// Token: 0x06016B97 RID: 93079 RVA: 0x005C331C File Offset: 0x005C151C
+	// Token: 0x060145C6 RID: 83398 RVA: 0x005EFD98 File Offset: 0x005EDF98
 	protected override void OnStart()
 	{
 		bool player = LocalStorage.GetPlayer<bool>(ELocalStoragePlayerKey.SubDownLoadClearOnLogin, false);
@@ -54,20 +54,20 @@ public class SubPackageDownLoadClearTipsView : UiViewBase
 		base.GetText(8).SetUIActive(true);
 	}
 
-	// Token: 0x06016B98 RID: 93080 RVA: 0x005C33BC File Offset: 0x005C15BC
+	// Token: 0x060145C7 RID: 83399 RVA: 0x005EFE38 File Offset: 0x005EE038
 	private void OnClickCancelBtn()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06016B99 RID: 93081 RVA: 0x005C33C5 File Offset: 0x005C15C5
+	// Token: 0x060145C8 RID: 83400 RVA: 0x005EFE41 File Offset: 0x005EE041
 	private void OnClickConfirmBtn()
 	{
 		SubPackageController.Instance.DeleteUnneededResource(false);
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06016B9A RID: 93082 RVA: 0x005C33DC File Offset: 0x005C15DC
+	// Token: 0x060145C9 RID: 83401 RVA: 0x005EFE58 File Offset: 0x005EE058
 	private void OnClickToggle(EToggleState state)
 	{
 		if (state == EToggleState.ETT_Checked)
@@ -88,34 +88,34 @@ public class SubPackageDownLoadClearTipsView : UiViewBase
 		LocalStorage.SetPlayer<bool>(ELocalStoragePlayerKey.SubDownLoadClearOnLogin, false);
 	}
 
-	// Token: 0x020090D2 RID: 37074
+	// Token: 0x02008316 RID: 33558
 	private class EComponentDefine
 	{
-		// Token: 0x0402EEBD RID: 192189
+		// Token: 0x0402A5C2 RID: 173506
 		public const int TitleText = 0;
 
-		// Token: 0x0402EEBE RID: 192190
+		// Token: 0x0402A5C3 RID: 173507
 		public const int DesText = 1;
 
-		// Token: 0x0402EEBF RID: 192191
+		// Token: 0x0402A5C4 RID: 173508
 		public const int SubDesText = 2;
 
-		// Token: 0x0402EEC0 RID: 192192
+		// Token: 0x0402A5C5 RID: 173509
 		public const int BtnItem = 3;
 
-		// Token: 0x0402EEC1 RID: 192193
+		// Token: 0x0402A5C6 RID: 173510
 		public const int CancelBtn = 4;
 
-		// Token: 0x0402EEC2 RID: 192194
+		// Token: 0x0402A5C7 RID: 173511
 		public const int ConfirmBtn = 5;
 
-		// Token: 0x0402EEC3 RID: 192195
+		// Token: 0x0402A5C8 RID: 173512
 		public const int Toggle = 6;
 
-		// Token: 0x0402EEC4 RID: 192196
+		// Token: 0x0402A5C9 RID: 173513
 		public const int ToggleText = 7;
 
-		// Token: 0x0402EEC5 RID: 192197
+		// Token: 0x0402A5CA RID: 173514
 		public const int TipsText = 8;
 	}
 }

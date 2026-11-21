@@ -2,45 +2,45 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x020045BB RID: 17851
+	// Token: 0x02004A23 RID: 18979
 	public class ITrapDefenseSpawnMonsterT
 	{
-		// Token: 0x17007EE5 RID: 32485
-		// (get) Token: 0x0601AFFD RID: 110589 RVA: 0x003D984B File Offset: 0x003D7A4B
-		// (set) Token: 0x0601AFFE RID: 110590 RVA: 0x003D9853 File Offset: 0x003D7A53
+		// Token: 0x17008526 RID: 34086
+		// (get) Token: 0x0601C7D2 RID: 116690 RVA: 0x00405AE7 File Offset: 0x00403CE7
+		// (set) Token: 0x0601C7D3 RID: 116691 RVA: 0x00405AEF File Offset: 0x00403CEF
 		public int Id { get; set; }
 
-		// Token: 0x17007EE6 RID: 32486
-		// (get) Token: 0x0601AFFF RID: 110591 RVA: 0x003D985C File Offset: 0x003D7A5C
-		// (set) Token: 0x0601B000 RID: 110592 RVA: 0x003D9864 File Offset: 0x003D7A64
+		// Token: 0x17008527 RID: 34087
+		// (get) Token: 0x0601C7D4 RID: 116692 RVA: 0x00405AF8 File Offset: 0x00403CF8
+		// (set) Token: 0x0601C7D5 RID: 116693 RVA: 0x00405B00 File Offset: 0x00403D00
 		public ITrapDefenseSpawnMonsterGroupT MonsterGroup { get; set; }
 
-		// Token: 0x17007EE7 RID: 32487
-		// (get) Token: 0x0601B001 RID: 110593 RVA: 0x003D986D File Offset: 0x003D7A6D
-		// (set) Token: 0x0601B002 RID: 110594 RVA: 0x003D9875 File Offset: 0x003D7A75
+		// Token: 0x17008528 RID: 34088
+		// (get) Token: 0x0601C7D6 RID: 116694 RVA: 0x00405B09 File Offset: 0x00403D09
+		// (set) Token: 0x0601C7D7 RID: 116695 RVA: 0x00405B11 File Offset: 0x00403D11
 		public ITrapDefenseSpawnMonsterConditionGroupT Condition { get; set; }
 
-		// Token: 0x17007EE8 RID: 32488
-		// (get) Token: 0x0601B003 RID: 110595 RVA: 0x003D987E File Offset: 0x003D7A7E
-		// (set) Token: 0x0601B004 RID: 110596 RVA: 0x003D9886 File Offset: 0x003D7A86
+		// Token: 0x17008529 RID: 34089
+		// (get) Token: 0x0601C7D8 RID: 116696 RVA: 0x00405B1A File Offset: 0x00403D1A
+		// (set) Token: 0x0601C7D9 RID: 116697 RVA: 0x00405B22 File Offset: 0x00403D22
 		public string SplineEntityId { get; set; }
 
-		// Token: 0x17007EE9 RID: 32489
-		// (get) Token: 0x0601B005 RID: 110597 RVA: 0x003D988F File Offset: 0x003D7A8F
-		// (set) Token: 0x0601B006 RID: 110598 RVA: 0x003D9897 File Offset: 0x003D7A97
+		// Token: 0x1700852A RID: 34090
+		// (get) Token: 0x0601C7DA RID: 116698 RVA: 0x00405B2B File Offset: 0x00403D2B
+		// (set) Token: 0x0601C7DB RID: 116699 RVA: 0x00405B33 File Offset: 0x00403D33
 		public float DelayTime { get; set; }
 
-		// Token: 0x17007EEA RID: 32490
-		// (get) Token: 0x0601B007 RID: 110599 RVA: 0x003D98A0 File Offset: 0x003D7AA0
-		// (set) Token: 0x0601B008 RID: 110600 RVA: 0x003D98A8 File Offset: 0x003D7AA8
+		// Token: 0x1700852B RID: 34091
+		// (get) Token: 0x0601C7DC RID: 116700 RVA: 0x00405B3C File Offset: 0x00403D3C
+		// (set) Token: 0x0601C7DD RID: 116701 RVA: 0x00405B44 File Offset: 0x00403D44
 		public int EndingCountdown { get; set; }
 
-		// Token: 0x17007EEB RID: 32491
-		// (get) Token: 0x0601B009 RID: 110601 RVA: 0x003D98B1 File Offset: 0x003D7AB1
-		// (set) Token: 0x0601B00A RID: 110602 RVA: 0x003D98B9 File Offset: 0x003D7AB9
+		// Token: 0x1700852C RID: 34092
+		// (get) Token: 0x0601C7DE RID: 116702 RVA: 0x00405B4D File Offset: 0x00403D4D
+		// (set) Token: 0x0601C7DF RID: 116703 RVA: 0x00405B55 File Offset: 0x00403D55
 		public string Desc { get; set; }
 
-		// Token: 0x0601B00B RID: 110603 RVA: 0x003D98C2 File Offset: 0x003D7AC2
+		// Token: 0x0601C7E0 RID: 116704 RVA: 0x00405B5E File Offset: 0x00403D5E
 		public ITrapDefenseSpawnMonsterT()
 		{
 			this.Id = 0;

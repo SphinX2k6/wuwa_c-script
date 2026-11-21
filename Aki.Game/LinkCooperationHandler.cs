@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Battle;
 
-// Token: 0x020016FF RID: 5887
+// Token: 0x02000BB7 RID: 2999
 public class LinkCooperationHandler : ICooperationHandler
 {
-	// Token: 0x0600A8D7 RID: 43223 RVA: 0x0025FFF0 File Offset: 0x0025E1F0
+	// Token: 0x06007CB7 RID: 31927 RVA: 0x0026A40C File Offset: 0x0026860C
 	[NullableContext(1)]
 	public bool Trigger(SceneTeamItem goDownRole, SceneTeamItem goBattleRole)
 	{
@@ -33,13 +33,13 @@ public class LinkCooperationHandler : ICooperationHandler
 		return true;
 	}
 
-	// Token: 0x0600A8D8 RID: 43224 RVA: 0x00260089 File Offset: 0x0025E289
+	// Token: 0x06007CB8 RID: 31928 RVA: 0x0026A4A5 File Offset: 0x002686A5
 	public void Clear()
 	{
 		this.TriggerCd.Clear();
 	}
 
-	// Token: 0x04004D0A RID: 19722
+	// Token: 0x04004DB1 RID: 19889
 	[Nullable(1)]
 	private readonly Dictionary<int, long> TriggerCd = new Dictionary<int, long>();
 }

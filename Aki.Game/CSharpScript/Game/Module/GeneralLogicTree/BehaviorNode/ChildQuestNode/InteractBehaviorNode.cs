@@ -11,18 +11,18 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 {
-	// Token: 0x020059D5 RID: 22997
+	// Token: 0x020049AE RID: 18862
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class InteractBehaviorNode : ChildQuestNodeBase
 	{
-		// Token: 0x0603A4B3 RID: 238771 RVA: 0x00DDCBEE File Offset: 0x00DDADEE
+		// Token: 0x0602F3DA RID: 193498 RVA: 0x00D2C3CE File Offset: 0x00D2A5CE
 		public InteractBehaviorNode(int nodeId) : base(nodeId)
 		{
 		}
 
-		// Token: 0x17008B9B RID: 35739
-		// (get) Token: 0x0603A4B4 RID: 238772 RVA: 0x00DDCC0D File Offset: 0x00DDAE0D
+		// Token: 0x17005F68 RID: 24424
+		// (get) Token: 0x0602F3DB RID: 193499 RVA: 0x00D2C3ED File Offset: 0x00D2A5ED
 		public bool AlwaysFalseChildNode
 		{
 			get
@@ -31,8 +31,8 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x17008B9C RID: 35740
-		// (get) Token: 0x0603A4B5 RID: 238773 RVA: 0x00DDCC18 File Offset: 0x00DDAE18
+		// Token: 0x17005F69 RID: 24425
+		// (get) Token: 0x0602F3DC RID: 193500 RVA: 0x00D2C3F8 File Offset: 0x00D2A5F8
 		[Nullable(2)]
 		public string OccupationInfo
 		{
@@ -57,8 +57,8 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x17008B9D RID: 35741
-		// (get) Token: 0x0603A4B6 RID: 238774 RVA: 0x00DDCC6D File Offset: 0x00DDAE6D
+		// Token: 0x17005F6A RID: 24426
+		// (get) Token: 0x0602F3DD RID: 193501 RVA: 0x00D2C44D File Offset: 0x00D2A64D
 		protected override List<int> CorrelativeEntities
 		{
 			get
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x0603A4B7 RID: 238775 RVA: 0x00DDCC78 File Offset: 0x00DDAE78
+		// Token: 0x0602F3DE RID: 193502 RVA: 0x00D2C458 File Offset: 0x00D2A658
 		protected override bool OnCreate(IBtNode nodeConfig)
 		{
 			IChildQuestBtNode childQuestBtNode = nodeConfig as IChildQuestBtNode;
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return false;
 		}
 
-		// Token: 0x0603A4B8 RID: 238776 RVA: 0x00DDCDDC File Offset: 0x00DDAFDC
+		// Token: 0x0602F3DF RID: 193503 RVA: 0x00D2C5BC File Offset: 0x00D2A7BC
 		protected override void OnStart(ENodeStatusUpdateReason reason)
 		{
 			if (this.IsAlwaysFalseChildNode && this.OccupationIds.Count > 0)
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x0603A4B9 RID: 238777 RVA: 0x00DDCE54 File Offset: 0x00DDB054
+		// Token: 0x0602F3E0 RID: 193504 RVA: 0x00D2C634 File Offset: 0x00D2A834
 		protected override void OnEnd(bool bFinished)
 		{
 			if (this.IsAlwaysFalseChildNode)
@@ -140,7 +140,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x0603A4BA RID: 238778 RVA: 0x00DDCEBC File Offset: 0x00DDB0BC
+		// Token: 0x0602F3E1 RID: 193505 RVA: 0x00D2C69C File Offset: 0x00D2A89C
 		protected override bool OnUpdateProgress(ChildQuestNodeProgress progress)
 		{
 			if (progress.Interact == null)
@@ -152,30 +152,30 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return true;
 		}
 
-		// Token: 0x0603A4BB RID: 238779 RVA: 0x00DDCEF8 File Offset: 0x00DDB0F8
+		// Token: 0x0602F3E2 RID: 193506 RVA: 0x00D2C6D8 File Offset: 0x00D2A8D8
 		public override string GetProgress()
 		{
 			RepeatedField<int> progress = this.Progress;
 			return ((progress != null) ? progress.Count.ToString() : null) ?? "0";
 		}
 
-		// Token: 0x0603A4BC RID: 238780 RVA: 0x00DDCF28 File Offset: 0x00DDB128
+		// Token: 0x0602F3E3 RID: 193507 RVA: 0x00D2C708 File Offset: 0x00D2A908
 		public override string GetProgressMax()
 		{
 			return this.InnerCorrelativeEntities.Count.ToString();
 		}
 
-		// Token: 0x0401E63E RID: 124478
+		// Token: 0x040190DD RID: 102621
 		private readonly List<string> OccupationIds = new List<string>();
 
-		// Token: 0x0401E63F RID: 124479
+		// Token: 0x040190DE RID: 102622
 		[Nullable(2)]
 		private RepeatedField<int> Progress;
 
-		// Token: 0x0401E640 RID: 124480
+		// Token: 0x040190DF RID: 102623
 		private readonly List<int> InnerCorrelativeEntities = new List<int>();
 
-		// Token: 0x0401E641 RID: 124481
+		// Token: 0x040190E0 RID: 102624
 		private bool IsAlwaysFalseChildNode;
 	}
 }

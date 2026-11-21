@@ -2,45 +2,45 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005B6C RID: 23404
+	// Token: 0x02006182 RID: 24962
 	public class IWeaponDamageT
 	{
-		// Token: 0x1700B0D6 RID: 45270
-		// (get) Token: 0x060280D7 RID: 164055 RVA: 0x00581A5E File Offset: 0x0057FC5E
-		// (set) Token: 0x060280D8 RID: 164056 RVA: 0x00581A66 File Offset: 0x0057FC66
+		// Token: 0x1700BA1E RID: 47646
+		// (get) Token: 0x0602A69B RID: 173723 RVA: 0x005C94EE File Offset: 0x005C76EE
+		// (set) Token: 0x0602A69C RID: 173724 RVA: 0x005C94F6 File Offset: 0x005C76F6
 		public int DefaultValue { get; set; }
 
-		// Token: 0x1700B0D7 RID: 45271
-		// (get) Token: 0x060280D9 RID: 164057 RVA: 0x00581A6F File Offset: 0x0057FC6F
-		// (set) Token: 0x060280DA RID: 164058 RVA: 0x00581A77 File Offset: 0x0057FC77
+		// Token: 0x1700BA1F RID: 47647
+		// (get) Token: 0x0602A69D RID: 173725 RVA: 0x005C94FF File Offset: 0x005C76FF
+		// (set) Token: 0x0602A69E RID: 173726 RVA: 0x005C9507 File Offset: 0x005C7707
 		public int GreatSword { get; set; }
 
-		// Token: 0x1700B0D8 RID: 45272
-		// (get) Token: 0x060280DB RID: 164059 RVA: 0x00581A80 File Offset: 0x0057FC80
-		// (set) Token: 0x060280DC RID: 164060 RVA: 0x00581A88 File Offset: 0x0057FC88
+		// Token: 0x1700BA20 RID: 47648
+		// (get) Token: 0x0602A69F RID: 173727 RVA: 0x005C9510 File Offset: 0x005C7710
+		// (set) Token: 0x0602A6A0 RID: 173728 RVA: 0x005C9518 File Offset: 0x005C7718
 		public int Dagger { get; set; }
 
-		// Token: 0x1700B0D9 RID: 45273
-		// (get) Token: 0x060280DD RID: 164061 RVA: 0x00581A91 File Offset: 0x0057FC91
-		// (set) Token: 0x060280DE RID: 164062 RVA: 0x00581A99 File Offset: 0x0057FC99
+		// Token: 0x1700BA21 RID: 47649
+		// (get) Token: 0x0602A6A1 RID: 173729 RVA: 0x005C9521 File Offset: 0x005C7721
+		// (set) Token: 0x0602A6A2 RID: 173730 RVA: 0x005C9529 File Offset: 0x005C7729
 		public int Pistol { get; set; }
 
-		// Token: 0x1700B0DA RID: 45274
-		// (get) Token: 0x060280DF RID: 164063 RVA: 0x00581AA2 File Offset: 0x0057FCA2
-		// (set) Token: 0x060280E0 RID: 164064 RVA: 0x00581AAA File Offset: 0x0057FCAA
+		// Token: 0x1700BA22 RID: 47650
+		// (get) Token: 0x0602A6A3 RID: 173731 RVA: 0x005C9532 File Offset: 0x005C7732
+		// (set) Token: 0x0602A6A4 RID: 173732 RVA: 0x005C953A File Offset: 0x005C773A
 		public int Pugilism { get; set; }
 
-		// Token: 0x1700B0DB RID: 45275
-		// (get) Token: 0x060280E1 RID: 164065 RVA: 0x00581AB3 File Offset: 0x0057FCB3
-		// (set) Token: 0x060280E2 RID: 164066 RVA: 0x00581ABB File Offset: 0x0057FCBB
+		// Token: 0x1700BA23 RID: 47651
+		// (get) Token: 0x0602A6A5 RID: 173733 RVA: 0x005C9543 File Offset: 0x005C7743
+		// (set) Token: 0x0602A6A6 RID: 173734 RVA: 0x005C954B File Offset: 0x005C774B
 		public int Ring { get; set; }
 
-		// Token: 0x1700B0DC RID: 45276
-		// (get) Token: 0x060280E3 RID: 164067 RVA: 0x00581AC4 File Offset: 0x0057FCC4
-		// (set) Token: 0x060280E4 RID: 164068 RVA: 0x00581ACC File Offset: 0x0057FCCC
+		// Token: 0x1700BA24 RID: 47652
+		// (get) Token: 0x0602A6A7 RID: 173735 RVA: 0x005C9554 File Offset: 0x005C7754
+		// (set) Token: 0x0602A6A8 RID: 173736 RVA: 0x005C955C File Offset: 0x005C775C
 		public byte NullMask { get; set; }
 
-		// Token: 0x060280E5 RID: 164069 RVA: 0x00581AD5 File Offset: 0x0057FCD5
+		// Token: 0x0602A6A9 RID: 173737 RVA: 0x005C9565 File Offset: 0x005C7765
 		public IWeaponDamageT()
 		{
 			this.DefaultValue = 0;

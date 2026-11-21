@@ -4,12 +4,10 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002A46 RID: 10822
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002D33 RID: 11571
 	public class IClientEventFlyingFlowerUpdateSubtitle : IClientEventFlyingFlowerEvent
 	{
-		// Token: 0x0600EE3C RID: 60988 RVA: 0x0022B13D File Offset: 0x0022933D
+		// Token: 0x0600FCD4 RID: 64724 RVA: 0x00248AF1 File Offset: 0x00246CF1
 		public static IClientEventFlyingFlowerUpdateSubtitle Create(IClientEventFlyingFlowerUpdateSubtitle? instance)
 		{
 			if (instance == null)
@@ -22,8 +20,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004B72 RID: 19314
-		// (get) Token: 0x0600EE3D RID: 60989 RVA: 0x0022B15C File Offset: 0x0022935C
+		// Token: 0x17004F1C RID: 20252
+		// (get) Token: 0x0600FCD5 RID: 64725 RVA: 0x00248B10 File Offset: 0x00246D10
 		public override EClientEventFlyingFlowerEventType Type
 		{
 			get
@@ -32,8 +30,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004B73 RID: 19315
-		// (get) Token: 0x0600EE3E RID: 60990 RVA: 0x0022B169 File Offset: 0x00229369
+		// Token: 0x17004F1D RID: 20253
+		// (get) Token: 0x0600FCD6 RID: 64726 RVA: 0x00248B1D File Offset: 0x00246D1D
 		public virtual PlayFlow Flow
 		{
 			get
@@ -48,14 +46,14 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04008318 RID: 33560
+		// Token: 0x04008A0B RID: 35339
 		private IClientEventFlyingFlowerUpdateSubtitle Instance;
 
-		// Token: 0x04008319 RID: 33561
+		// Token: 0x04008A0C RID: 35340
 		[Nullable(2)]
 		private PlayFlow _FlowCache;
 
-		// Token: 0x0400831A RID: 33562
+		// Token: 0x04008A0D RID: 35341
 		private bool _FlowInited;
 	}
 }

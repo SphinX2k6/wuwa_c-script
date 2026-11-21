@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000A4E RID: 2638
+	// Token: 0x02000B17 RID: 2839
 	public static class EWuWaGoRoleTypeExtensions
 	{
-		// Token: 0x06003A10 RID: 14864 RVA: 0x00095D5C File Offset: 0x00093F5C
+		// Token: 0x06003DFA RID: 15866 RVA: 0x0009E92C File Offset: 0x0009CB2C
 		public static string ToEnumString(this EWuWaGoRoleType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003A11 RID: 14865 RVA: 0x00095DA4 File Offset: 0x00093FA4
+		// Token: 0x06003DFB RID: 15867 RVA: 0x0009E974 File Offset: 0x0009CB74
 		public static EWuWaGoRoleType FromString(string name)
 		{
 			EWuWaGoRoleType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06003A12 RID: 14866 RVA: 0x00095DD0 File Offset: 0x00093FD0
+		// Token: 0x06003DFC RID: 15868 RVA: 0x0009E9A0 File Offset: 0x0009CBA0
 		public static bool TryFromString(string name, out EWuWaGoRoleType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x06003A13 RID: 14867 RVA: 0x00095E26 File Offset: 0x00094026
+		// Token: 0x06003DFD RID: 15869 RVA: 0x0009E9F6 File Offset: 0x0009CBF6
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003A14 RID: 14868 RVA: 0x00095E46 File Offset: 0x00094046
+		// Token: 0x06003DFE RID: 15870 RVA: 0x0009EA16 File Offset: 0x0009CC16
 		public static EWuWaGoRoleType[] GetValues()
 		{
 			return new EWuWaGoRoleType[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06003A15 RID: 14869 RVA: 0x00095E56 File Offset: 0x00094056
+		// Token: 0x06003DFF RID: 15871 RVA: 0x0009EA26 File Offset: 0x0009CC26
 		public static string[] GetNames()
 		{
 			return new string[]

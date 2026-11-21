@@ -17,13 +17,13 @@ using CSharpScript.Game.World.Model;
 using CSharpScript.Typing;
 using UnrealEngine;
 
-// Token: 0x02002E1C RID: 11804
+// Token: 0x02002378 RID: 9080
 [NullableContext(1)]
 [Nullable(0)]
 public class BulletCollisionSystem : BulletSystemBase
 {
-	// Token: 0x1700227E RID: 8830
-	// (get) Token: 0x06018D88 RID: 101768 RVA: 0x0065F69A File Offset: 0x0065D89A
+	// Token: 0x170022E6 RID: 8934
+	// (get) Token: 0x0601664A RID: 91722 RVA: 0x0068570E File Offset: 0x0068390E
 	[Nullable(2)]
 	private BulletActionLogicComponent BulletActionLogicComponent
 	{
@@ -39,7 +39,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		}
 	}
 
-	// Token: 0x06018D89 RID: 101769 RVA: 0x0065F6B0 File Offset: 0x0065D8B0
+	// Token: 0x0601664B RID: 91723 RVA: 0x00685724 File Offset: 0x00683924
 	private long GetCurrentEffectDamageId()
 	{
 		BulletCollisionInfo collisionInfo = this.BulletInfo.CollisionInfo;
@@ -60,7 +60,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		return ExpressionTreeController.Instance.GetEffectDamageId(collisionInfo.DamageId, this.BulletInfo.Attacker);
 	}
 
-	// Token: 0x06018D8A RID: 101770 RVA: 0x0065F73C File Offset: 0x0065D93C
+	// Token: 0x0601664C RID: 91724 RVA: 0x006857B0 File Offset: 0x006839B0
 	public override void OnTick(float delta)
 	{
 		double num = 0.0;
@@ -91,7 +91,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		this.HitActorType = EBulletHitActorType.Ignore;
 	}
 
-	// Token: 0x06018D8B RID: 101771 RVA: 0x0065F81C File Offset: 0x0065DA1C
+	// Token: 0x0601664D RID: 91725 RVA: 0x00685890 File Offset: 0x00683A90
 	private void OnTickBullet(float delta, BulletInfo bulletInfo)
 	{
 		this.BulletInfo = bulletInfo;
@@ -122,7 +122,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		}
 	}
 
-	// Token: 0x06018D8C RID: 101772 RVA: 0x0065F8EC File Offset: 0x0065DAEC
+	// Token: 0x0601664E RID: 91726 RVA: 0x00685960 File Offset: 0x00683B60
 	private void OnTickRayTrace(float delta)
 	{
 		BulletInfo bulletInfo = this.BulletInfo;
@@ -189,7 +189,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		}
 	}
 
-	// Token: 0x06018D8D RID: 101773 RVA: 0x0065FCBC File Offset: 0x0065DEBC
+	// Token: 0x0601664F RID: 91727 RVA: 0x00685D30 File Offset: 0x00683F30
 	private void UpdateInterval()
 	{
 		float num = this.BulletInfo.LiveTimeAddDelta - this.CollisionInfo.ActiveDelayMs;
@@ -202,7 +202,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		}
 	}
 
-	// Token: 0x06018D8E RID: 101774 RVA: 0x0065FD38 File Offset: 0x0065DF38
+	// Token: 0x06016650 RID: 91728 RVA: 0x00685DAC File Offset: 0x00683FAC
 	private void UpdateTensile()
 	{
 		if (!this.BulletInfo.IsTensile)
@@ -267,7 +267,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		BulletPool.RecycleVector(vector3);
 	}
 
-	// Token: 0x06018D8F RID: 101775 RVA: 0x0065FF44 File Offset: 0x0065E144
+	// Token: 0x06016651 RID: 91729 RVA: 0x00685FB8 File Offset: 0x006841B8
 	private void UpdateTensileStandard()
 	{
 		if (!this.BulletInfo.IsTensile)
@@ -324,7 +324,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		BulletPool.RecycleVector(vector3);
 	}
 
-	// Token: 0x06018D90 RID: 101776 RVA: 0x00660118 File Offset: 0x0065E318
+	// Token: 0x06016652 RID: 91730 RVA: 0x0068618C File Offset: 0x0068438C
 	private unsafe void UpdateBulletScale()
 	{
 		if (this.CollisionInfo.FinalScale.Equals(global::Vector.OneVectorProxy, 9.999999747378752E-05))
@@ -372,7 +372,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		}
 	}
 
-	// Token: 0x06018D91 RID: 101777 RVA: 0x00660394 File Offset: 0x0065E594
+	// Token: 0x06016653 RID: 91731 RVA: 0x00686408 File Offset: 0x00684608
 	private void UpdateFrozenProcess(float delta)
 	{
 		if (this.BulletInfo.FrozenTime != null && this.BulletInfo.FrozenTime.Value > 0f)
@@ -389,7 +389,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		}
 	}
 
-	// Token: 0x06018D92 RID: 101778 RVA: 0x00660458 File Offset: 0x0065E658
+	// Token: 0x06016654 RID: 91732 RVA: 0x006864CC File Offset: 0x006846CC
 	public override void OnAfterTick(float delta)
 	{
 		this.DeltaTime = delta / (float)TimeUtil.Instance.InverseMillisecond;
@@ -434,7 +434,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		this.RayInfo = null;
 	}
 
-	// Token: 0x06018D93 RID: 101779 RVA: 0x00660564 File Offset: 0x0065E764
+	// Token: 0x06016655 RID: 91733 RVA: 0x006865D8 File Offset: 0x006847D8
 	private void OnAfterTickBullet(float delta, BulletInfo bulletInfo)
 	{
 		this.BulletInfo = bulletInfo;
@@ -700,7 +700,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		this.CollisionInfo.UpdateLastHitActorData();
 	}
 
-	// Token: 0x06018D94 RID: 101780 RVA: 0x00660E40 File Offset: 0x0065F040
+	// Token: 0x06016656 RID: 91734 RVA: 0x00686EB4 File Offset: 0x006850B4
 	private void SortBulletHitActorData(bool isCharacterRandom = false)
 	{
 		List<BulletHitActorData> arrayHitActorData = this.CollisionInfo.ArrayHitActorData;
@@ -733,7 +733,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		}
 	}
 
-	// Token: 0x06018D95 RID: 101781 RVA: 0x00660F34 File Offset: 0x0065F134
+	// Token: 0x06016657 RID: 91735 RVA: 0x00686FA8 File Offset: 0x006851A8
 	private bool SingleCheckAndProcessHit(BulletHitActorData hitActorData, int validProcessIndex)
 	{
 		if (this.CheckConditions(hitActorData))
@@ -753,7 +753,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		return false;
 	}
 
-	// Token: 0x06018D96 RID: 101782 RVA: 0x00660FB8 File Offset: 0x0065F1B8
+	// Token: 0x06016658 RID: 91736 RVA: 0x0068702C File Offset: 0x0068522C
 	private bool MultiCheckAndProcessHit(BulletHitActorData hitActorData, int validProcessIndex, bool isFirstHitCurFrame)
 	{
 		if (this.CheckConditions(hitActorData))
@@ -795,7 +795,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		return false;
 	}
 
-	// Token: 0x06018D97 RID: 101783 RVA: 0x006610C0 File Offset: 0x0065F2C0
+	// Token: 0x06016659 RID: 91737 RVA: 0x00687134 File Offset: 0x00685334
 	private bool CheckBulletNeedCollision()
 	{
 		BulletInfo bulletInfo = this.BulletInfo;
@@ -816,7 +816,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		return !flag && !bulletInfo.IsTensile;
 	}
 
-	// Token: 0x06018D98 RID: 101784 RVA: 0x00661124 File Offset: 0x0065F324
+	// Token: 0x0601665A RID: 91738 RVA: 0x00687198 File Offset: 0x00685398
 	private bool CheckBulletNeedHitCurFrame()
 	{
 		BulletInfo bulletInfo = this.BulletInfo;
@@ -845,7 +845,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		return true;
 	}
 
-	// Token: 0x06018D99 RID: 101785 RVA: 0x006611E4 File Offset: 0x0065F3E4
+	// Token: 0x0601665B RID: 91739 RVA: 0x00687258 File Offset: 0x00685458
 	private bool IsHighSpeed(BulletInfo bulletInfo)
 	{
 		if (bulletInfo.ActorComponent.NeedDetach && !bulletInfo.ActorComponent.NeedDetachForBaseMovement)
@@ -857,7 +857,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		return num != 0f && (double)(num * this.DeltaTime) >= bulletInfo.Size.X;
 	}
 
-	// Token: 0x06018D9A RID: 101786 RVA: 0x0066124C File Offset: 0x0065F44C
+	// Token: 0x0601665C RID: 91740 RVA: 0x006872C0 File Offset: 0x006854C0
 	private unsafe bool TraceForHighSpeed()
 	{
 		if (this.Shape.GetValueOrDefault() == global::EBulletShape.Ray || this.CollisionInfo.RegionComponent != null)
@@ -1060,7 +1060,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		return true;
 	}
 
-	// Token: 0x06018D9B RID: 101787 RVA: 0x00661ACC File Offset: 0x0065FCCC
+	// Token: 0x0601665D RID: 91741 RVA: 0x00687B40 File Offset: 0x00685D40
 	private void CheckPosition()
 	{
 		BulletInfo bulletInfo = this.BulletInfo;
@@ -1106,7 +1106,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		BulletTraceElementPool.RecycleTraceLineElement(traceLineElement);
 	}
 
-	// Token: 0x06018D9C RID: 101788 RVA: 0x00661C68 File Offset: 0x0065FE68
+	// Token: 0x0601665E RID: 91742 RVA: 0x00687CDC File Offset: 0x00685EDC
 	private void SearchHitActorByBigSphere()
 	{
 		this.CollisionInfo.HasSearchedHitActorsCurFrame = true;
@@ -1137,7 +1137,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		}
 	}
 
-	// Token: 0x06018D9D RID: 101789 RVA: 0x00661DA0 File Offset: 0x0065FFA0
+	// Token: 0x0601665F RID: 91743 RVA: 0x00687E14 File Offset: 0x00686014
 	[NullableContext(2)]
 	private void CheckEntityInBigSphere(EntityHandle entityHandle, bool hitSceneItem)
 	{
@@ -1154,7 +1154,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		this.PreprocessHitEntityByHitActorType(entityHandle, component, hitActorTypeByEntityType);
 	}
 
-	// Token: 0x06018D9E RID: 101790 RVA: 0x00661DE0 File Offset: 0x0065FFE0
+	// Token: 0x06016660 RID: 91744 RVA: 0x00687E54 File Offset: 0x00686054
 	[NullableContext(2)]
 	private EBulletHitActorType GetHitActorTypeByEntityType(EntityHandle entityHandle, bool hitSceneItem)
 	{
@@ -1184,7 +1184,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		return EBulletHitActorType.Ignore;
 	}
 
-	// Token: 0x06018D9F RID: 101791 RVA: 0x00661E4C File Offset: 0x0066004C
+	// Token: 0x06016661 RID: 91745 RVA: 0x00687EC0 File Offset: 0x006860C0
 	private void SearchHitActorByRegion()
 	{
 		UKuroRegionDetectComponent regionDetectComponent = this.CollisionInfo.RegionDetectComponent;
@@ -1223,7 +1223,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		}
 	}
 
-	// Token: 0x06018DA0 RID: 101792 RVA: 0x00661FEC File Offset: 0x006601EC
+	// Token: 0x06016662 RID: 91746 RVA: 0x00688060 File Offset: 0x00686260
 	private void CheckEntityInRegion([Nullable(2)] EntityHandle entityHandle, UKuroRegionDetectComponent regionDetectComponent, bool hitSceneItem, int searchType)
 	{
 		EBulletHitActorType hitActorTypeByEntityType = this.GetHitActorTypeByEntityType(entityHandle, hitSceneItem);
@@ -1270,7 +1270,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		}
 	}
 
-	// Token: 0x06018DA1 RID: 101793 RVA: 0x00662124 File Offset: 0x00660324
+	// Token: 0x06016663 RID: 91747 RVA: 0x00688198 File Offset: 0x00686398
 	private void OnTickObstaclesTrace(BulletInfo bulletInfo, global::Vector collisionLocation)
 	{
 		BulletMoveInfo moveInfo = bulletInfo.MoveInfo;
@@ -1319,7 +1319,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		}
 	}
 
-	// Token: 0x06018DA2 RID: 101794 RVA: 0x006622FC File Offset: 0x006604FC
+	// Token: 0x06016664 RID: 91748 RVA: 0x00688370 File Offset: 0x00686570
 	private bool PreCheckConditions(AActor otherActor)
 	{
 		BulletConditionResult bulletConditionResult;
@@ -1341,7 +1341,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		return bulletConditionResult.ConstResult;
 	}
 
-	// Token: 0x06018DA3 RID: 101795 RVA: 0x00662374 File Offset: 0x00660574
+	// Token: 0x06016665 RID: 91749 RVA: 0x006883E8 File Offset: 0x006865E8
 	private bool PreCheckHitActorData(BulletHitActorData hitActorData)
 	{
 		BulletConditionResult conditionResult = hitActorData.ConditionResult;
@@ -1363,13 +1363,13 @@ public class BulletCollisionSystem : BulletSystemBase
 		return true;
 	}
 
-	// Token: 0x06018DA4 RID: 101796 RVA: 0x006623CD File Offset: 0x006605CD
+	// Token: 0x06016666 RID: 91750 RVA: 0x00688441 File Offset: 0x00686641
 	private bool CheckRayBlockByCharacter(BulletHitActorData hitActorData)
 	{
 		return this.BulletInfo.BulletDataMain.Base.Shape != global::EBulletShape.Ray || hitActorData.Type != EBulletHitActorType.Character || this.RayInfo.BlockByCharacter;
 	}
 
-	// Token: 0x06018DA5 RID: 101797 RVA: 0x00662400 File Offset: 0x00660600
+	// Token: 0x06016667 RID: 91751 RVA: 0x00688474 File Offset: 0x00686674
 	private bool CheckConditions(BulletHitActorData hitActorData)
 	{
 		AActor actor = hitActorData.Actor;
@@ -1402,7 +1402,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		return this.CheckNeedUpdateConditions(hitActorData) && this.TriggerBeforeBulletHit(hitActorData);
 	}
 
-	// Token: 0x06018DA6 RID: 101798 RVA: 0x006624EC File Offset: 0x006606EC
+	// Token: 0x06016668 RID: 91752 RVA: 0x00688560 File Offset: 0x00686760
 	private bool PreCheckNoChangeConditions(AActor otherActor)
 	{
 		if (otherActor == null)
@@ -1413,7 +1413,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		return otherActor != this.BulletInfo.Actor && (bulletDataMain.Base.HitConditionTagId != 0 || (this.BulletInfo.BulletCamp & 1) != 0 || otherActor != this.BulletInfo.AttackerActorComp.Owner);
 	}
 
-	// Token: 0x06018DA7 RID: 101799 RVA: 0x00662550 File Offset: 0x00660750
+	// Token: 0x06016669 RID: 91753 RVA: 0x006885C4 File Offset: 0x006867C4
 	private bool CheckKeepDisableConditions(BulletHitActorData hitActorData)
 	{
 		if (hitActorData.Type == EBulletHitActorType.Ignore)
@@ -1448,7 +1448,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		return true;
 	}
 
-	// Token: 0x06018DA8 RID: 101800 RVA: 0x00662640 File Offset: 0x00660840
+	// Token: 0x0601666A RID: 91754 RVA: 0x006886B4 File Offset: 0x006868B4
 	private bool TriggerBeforeBulletHit(BulletHitActorData hitActorData)
 	{
 		if (hitActorData.Type != EBulletHitActorType.Character)
@@ -1482,13 +1482,13 @@ public class BulletCollisionSystem : BulletSystemBase
 		return this.AttackedCondition(hitActorData);
 	}
 
-	// Token: 0x06018DA9 RID: 101801 RVA: 0x00662724 File Offset: 0x00660924
+	// Token: 0x0601666B RID: 91755 RVA: 0x00688798 File Offset: 0x00686998
 	private bool CheckNeedUpdateConditions(BulletHitActorData hitActorData)
 	{
 		return this.TagCondition(hitActorData) && this.ShapeCondition(hitActorData) && this.AttackedCondition(hitActorData);
 	}
 
-	// Token: 0x06018DAA RID: 101802 RVA: 0x00662748 File Offset: 0x00660948
+	// Token: 0x0601666C RID: 91756 RVA: 0x006887BC File Offset: 0x006869BC
 	private bool TagCondition(BulletHitActorData hitActorData)
 	{
 		BulletDataMain bulletDataMain = this.BulletInfo.BulletDataMain;
@@ -1507,7 +1507,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		return true;
 	}
 
-	// Token: 0x06018DAB RID: 101803 RVA: 0x006627B8 File Offset: 0x006609B8
+	// Token: 0x0601666D RID: 91757 RVA: 0x0068882C File Offset: 0x00686A2C
 	private bool ShapeCondition(BulletHitActorData hitActorData)
 	{
 		if (this.BulletInfo.CloseCollision)
@@ -1568,7 +1568,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		return result;
 	}
 
-	// Token: 0x06018DAC RID: 101804 RVA: 0x00662980 File Offset: 0x00660B80
+	// Token: 0x0601666E RID: 91758 RVA: 0x006889F4 File Offset: 0x00686BF4
 	private bool AttackedCondition(BulletHitActorData hitActorData)
 	{
 		EBulletHitActorType type = hitActorData.Type;
@@ -1580,7 +1580,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		return BulletUtil.AttackedCondition(this.BulletInfo, component);
 	}
 
-	// Token: 0x06018DAD RID: 101805 RVA: 0x006629B8 File Offset: 0x00660BB8
+	// Token: 0x0601666F RID: 91759 RVA: 0x00688A2C File Offset: 0x00686C2C
 	[NullableContext(2)]
 	private unsafe void PreprocessHit(AActor otherActor, [Nullable(1)] UPrimitiveComponent otherComp, int hitItem, BulletHitTempResult hitTempResult = null, UKuroHitResult kuroHitResult = null, int? index = null)
 	{
@@ -1673,7 +1673,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		}
 	}
 
-	// Token: 0x06018DAE RID: 101806 RVA: 0x00662C14 File Offset: 0x00660E14
+	// Token: 0x06016670 RID: 91760 RVA: 0x00688C88 File Offset: 0x00686E88
 	private unsafe void PreprocessHitObstacle(AActor otherActor, UPrimitiveComponent otherComp, [Nullable(2)] UKuroHitResult kuroHitResult = null, int? index = null)
 	{
 		if (!this.CollisionInfo.HasObstaclesCollision || this.BulletInfo.NeedDestroy || this.BulletInfo.BulletDataMain.Move.FollowType == EBulletFollowType.攻击者锁定拉伸)
@@ -1749,7 +1749,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		}
 	}
 
-	// Token: 0x06018DAF RID: 101807 RVA: 0x00662DAC File Offset: 0x00660FAC
+	// Token: 0x06016671 RID: 91761 RVA: 0x00688E20 File Offset: 0x00687020
 	private unsafe void PreprocessHitEntityByHitActorType(EntityHandle entityHandle, BaseActorComponent actorComp, EBulletHitActorType hitActorType)
 	{
 		AActor owner = actorComp.Owner;
@@ -1868,7 +1868,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		}
 	}
 
-	// Token: 0x06018DB0 RID: 101808 RVA: 0x006630C4 File Offset: 0x006612C4
+	// Token: 0x06016672 RID: 91762 RVA: 0x00689138 File Offset: 0x00687338
 	private bool CheckCompValid(BulletHitActorData hitActorData, UPrimitiveComponent otherComp)
 	{
 		if (hitActorData.Type == EBulletHitActorType.Character)
@@ -1883,7 +1883,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		return true;
 	}
 
-	// Token: 0x06018DB1 RID: 101809 RVA: 0x00663114 File Offset: 0x00661314
+	// Token: 0x06016673 RID: 91763 RVA: 0x00689188 File Offset: 0x00687388
 	[return: Nullable(2)]
 	private BulletHitActorData CreateHitActorData(AActor otherActor, UPrimitiveComponent otherComp, int hitItem)
 	{
@@ -1970,7 +1970,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		return bulletHitActorData;
 	}
 
-	// Token: 0x06018DB2 RID: 101810 RVA: 0x006632F5 File Offset: 0x006614F5
+	// Token: 0x06016674 RID: 91764 RVA: 0x00689369 File Offset: 0x00687569
 	private EBulletHitActorType CheckHitActorType(EBulletHitActorType hitActorType)
 	{
 		if (this.HitActorType == EBulletHitActorType.Ignore || hitActorType == this.HitActorType)
@@ -1980,7 +1980,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		return EBulletHitActorType.Ignore;
 	}
 
-	// Token: 0x06018DB3 RID: 101811 RVA: 0x0066330B File Offset: 0x0066150B
+	// Token: 0x06016675 RID: 91765 RVA: 0x0068937F File Offset: 0x0068757F
 	private BulletHitActorData CreateHitObstaclesData(AActor otherActor)
 	{
 		BulletHitActorData bulletHitActorData = BulletPool.CreateBulletHitActorData();
@@ -1990,7 +1990,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		return bulletHitActorData;
 	}
 
-	// Token: 0x06018DB4 RID: 101812 RVA: 0x00663328 File Offset: 0x00661528
+	// Token: 0x06016676 RID: 91766 RVA: 0x0068939C File Offset: 0x0068759C
 	private unsafe void ProcessHit(BulletHitActorData hitActorData)
 	{
 		BulletInfo bulletInfo = this.BulletInfo;
@@ -2059,28 +2059,14 @@ public class BulletCollisionSystem : BulletSystemBase
 		}
 	}
 
-	// Token: 0x06018DB5 RID: 101813 RVA: 0x006634EC File Offset: 0x006616EC
+	// Token: 0x06016677 RID: 91767 RVA: 0x00689560 File Offset: 0x00687760
 	[return: Nullable(2)]
 	private Stat GetProcessHitStat(BulletHitActorData hitActorData)
 	{
-		if (!Stat.Enable)
-		{
-			return null;
-		}
-		if (hitActorData.Entity == null)
-		{
-			return null;
-		}
-		int id = hitActorData.Entity.Id;
-		CreatureDataComponent component = hitActorData.Entity.GetComponent<CreatureDataComponent>();
-		if (component != null)
-		{
-			component.GetPbDataId();
-		}
 		return null;
 	}
 
-	// Token: 0x06018DB6 RID: 101814 RVA: 0x00663528 File Offset: 0x00661728
+	// Token: 0x06016678 RID: 91768 RVA: 0x00689564 File Offset: 0x00687764
 	private void ProcessHitCharacter(BulletHitActorData hitActorData)
 	{
 		EntityHandle entityHandle = hitActorData.EntityHandle;
@@ -2097,7 +2083,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		this.ProcessHitCharacterBySinglePart(hitActorData);
 	}
 
-	// Token: 0x06018DB7 RID: 101815 RVA: 0x0066357C File Offset: 0x0066177C
+	// Token: 0x06016679 RID: 91769 RVA: 0x006895B8 File Offset: 0x006877B8
 	private void ProcessHitCharacterByMultiplePart(BulletHitActorData hitActorData)
 	{
 		CharacterActorComponent component = hitActorData.Entity.GetComponent<CharacterActorComponent>();
@@ -2252,7 +2238,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		BulletPool.RecycleVector(vector3);
 	}
 
-	// Token: 0x06018DB8 RID: 101816 RVA: 0x00663A58 File Offset: 0x00661C58
+	// Token: 0x0601667A RID: 91770 RVA: 0x00689A94 File Offset: 0x00687C94
 	public bool CheckWeakness(CharacterPart part, BulletInfo bulletInfo, global::Vector hitPosition, global::Vector victimForward, [Nullable(2)] UPrimitiveComponent hitComponent = null)
 	{
 		if (part != null && part.IsWeakness && (part.WeaknessTypeSet == null || part.WeaknessTypeSet.Count == 0 || part.WeaknessTypeSet.Contains(bulletInfo.BulletDataMain.Logic.Type)))
@@ -2276,7 +2262,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		return false;
 	}
 
-	// Token: 0x06018DB9 RID: 101817 RVA: 0x00663AF0 File Offset: 0x00661CF0
+	// Token: 0x0601667B RID: 91771 RVA: 0x00689B2C File Offset: 0x00687D2C
 	public global::Vector GetPreciseForward(CharacterPart part, UPrimitiveComponent hitComponent)
 	{
 		Entity baseEntity = part.BaseEntity;
@@ -2329,7 +2315,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		return preciseForward;
 	}
 
-	// Token: 0x06018DBA RID: 101818 RVA: 0x00663C14 File Offset: 0x00661E14
+	// Token: 0x0601667C RID: 91772 RVA: 0x00689C50 File Offset: 0x00687E50
 	private unsafe static void DrawWeaknessHitDebug(CharacterPart part, BulletInfo bulletInfo, global::Vector hitPosition, double checkAngle, global::Vector effectiveForward, [Nullable(2)] UPrimitiveComponent hitComponent, bool isHit)
 	{
 		BulletEntity entity = bulletInfo.Entity;
@@ -2374,7 +2360,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		UKismetSystemLibrary.D_DrawDebugArrow(GlobalData.World, lineStart, new FVectorDouble(hitPosition.X + num4 * num3, hitPosition.Y + num5 * num3, hitPosition.Z + num6 * num3), 20f, new FLinearColor(0f, 0f, 0f, 0.9f), duration, 2f);
 	}
 
-	// Token: 0x06018DBB RID: 101819 RVA: 0x00663F24 File Offset: 0x00662124
+	// Token: 0x0601667D RID: 91773 RVA: 0x00689F60 File Offset: 0x00688160
 	public bool CheckAngle(double checkAngle, BulletInfo bulletInfo, global::Vector hitPosition, global::Vector victimForward)
 	{
 		if (checkAngle == 0.0)
@@ -2406,7 +2392,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		return global::Vector.DotProduct(this.CheckAngleDirection, this.CheckAngleDirection2) >= Math.Cos(checkAngle);
 	}
 
-	// Token: 0x06018DBC RID: 101820 RVA: 0x00664024 File Offset: 0x00662224
+	// Token: 0x0601667E RID: 91774 RVA: 0x0068A060 File Offset: 0x00688260
 	private void CharacterEnterBullet(Entity entity)
 	{
 		if (entity.GetComponent<BaseAbilityComponent>() == null)
@@ -2489,7 +2475,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		this.CollisionInfo.CharacterEntityMap[entity] = 0;
 	}
 
-	// Token: 0x06018DBD RID: 101821 RVA: 0x00664286 File Offset: 0x00662486
+	// Token: 0x0601667F RID: 91775 RVA: 0x0068A2C2 File Offset: 0x006884C2
 	private void DestroyBulletOnHitCharacter(bool isDestroyOnHitCharacter, int bulletEntityId, string info)
 	{
 		if (isDestroyOnHitCharacter)
@@ -2499,7 +2485,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		}
 	}
 
-	// Token: 0x06018DBE RID: 101822 RVA: 0x006642A4 File Offset: 0x006624A4
+	// Token: 0x06016680 RID: 91776 RVA: 0x0068A2E0 File Offset: 0x006884E0
 	private void SendDodgeInfoPush(Entity dodgeEntity, BulletInfo bulletInfo, long? preMessageId = null)
 	{
 		Entity attacker = bulletInfo.Attacker;
@@ -2525,7 +2511,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		instance.SendDodgeInfoPush(dodgeEntity, value, bulletId, (num3 != null) ? num3 : bulletInfo.ContextId);
 	}
 
-	// Token: 0x06018DBF RID: 101823 RVA: 0x00664334 File Offset: 0x00662534
+	// Token: 0x06016681 RID: 91777 RVA: 0x0068A370 File Offset: 0x00688570
 	private void ProcessHitCharacterBySinglePart(BulletHitActorData hitActorData)
 	{
 		Entity entity = hitActorData.Entity;
@@ -2600,13 +2586,13 @@ public class BulletCollisionSystem : BulletSystemBase
 		BulletPool.RecycleVector(vector);
 	}
 
-	// Token: 0x06018DC0 RID: 101824 RVA: 0x006645E4 File Offset: 0x006627E4
+	// Token: 0x06016682 RID: 91778 RVA: 0x0068A620 File Offset: 0x00688820
 	private bool InDodge(Entity victimEntity)
 	{
 		return this.BulletInfo.BulletDataMain.Logic.CanDodge && BulletUtil.DoesEntityContainsTag(victimEntity, GameplayTagDefine.EGameplayTagId["功能.逻辑状态标识.无敌.角色闪避"]) && !BulletUtil.DoesEntityContainsTag(victimEntity, GameplayTagDefine.EGameplayTagId["角色.Common.技能通用标识.极限闪避"]);
 	}
 
-	// Token: 0x06018DC1 RID: 101825 RVA: 0x00664640 File Offset: 0x00662840
+	// Token: 0x06016683 RID: 91779 RVA: 0x0068A67C File Offset: 0x0068887C
 	private void TriggerBuffEffect(BaseBuffComponent victimBuffComp, BaseBuffComponent attackerBuffComp, BaseActorComponent attackerActorComp, long damageId, Damage? damageConfig, BulletInfo bulletInfo, EBuffTriggerType triggerType)
 	{
 		if (victimBuffComp.HasBuffTrigger(triggerType))
@@ -2634,7 +2620,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		}
 	}
 
-	// Token: 0x06018DC2 RID: 101826 RVA: 0x006647D8 File Offset: 0x006629D8
+	// Token: 0x06016684 RID: 91780 RVA: 0x0068A814 File Offset: 0x00688A14
 	private bool RoleHit(BulletHitActorData hitActorData, BulletDataMain data, global::Vector impactPoint, bool haveGuaranteedHit, [Nullable(2)] string boneName = null, [Nullable(2)] FName[] boneNameList = null, [Nullable(new byte[]
 	{
 		2,
@@ -2797,7 +2783,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		return true;
 	}
 
-	// Token: 0x06018DC3 RID: 101827 RVA: 0x00664DFC File Offset: 0x00662FFC
+	// Token: 0x06016685 RID: 91781 RVA: 0x0068AE38 File Offset: 0x00689038
 	private void CountIntervalOnHit(bool intervalAfterHit, BulletInfo bulletInfo, int victimId)
 	{
 		if (!intervalAfterHit)
@@ -2823,7 +2809,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		bool openCollisionLog = BulletConstant.Instance.OpenCollisionLog;
 	}
 
-	// Token: 0x06018DC4 RID: 101828 RVA: 0x00664EA0 File Offset: 0x006630A0
+	// Token: 0x06016686 RID: 91782 RVA: 0x0068AEDC File Offset: 0x006890DC
 	private bool CheckBulletHit(CharacterActorComponent victim)
 	{
 		BaseActorComponent attackerActorComp = this.BulletInfo.AttackerActorComp;
@@ -2852,7 +2838,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		return victim.IsAutonomousProxy;
 	}
 
-	// Token: 0x06018DC5 RID: 101829 RVA: 0x00664F5C File Offset: 0x0066315C
+	// Token: 0x06016687 RID: 91783 RVA: 0x0068AF98 File Offset: 0x00689198
 	[NullableContext(2)]
 	private string GetSceneItemPartNameByActor(Entity hitEntity, AActor hitActor)
 	{
@@ -2885,7 +2871,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		return null;
 	}
 
-	// Token: 0x06018DC6 RID: 101830 RVA: 0x00664FEC File Offset: 0x006631EC
+	// Token: 0x06016688 RID: 91784 RVA: 0x0068B030 File Offset: 0x00689230
 	private void ProcessHitBullet(BulletHitActorData hitActorData)
 	{
 		if (hitActorData.IsContinueHit || this.BulletInfo == null)
@@ -2990,7 +2976,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		}
 	}
 
-	// Token: 0x06018DC7 RID: 101831 RVA: 0x00665344 File Offset: 0x00663544
+	// Token: 0x06016689 RID: 91785 RVA: 0x0068B388 File Offset: 0x00689588
 	private void BulletEnterBullet(Entity otherBullet)
 	{
 		BulletInfo bulletInfo = ((BulletEntity)otherBullet).GetBulletInfo();
@@ -3006,14 +2992,14 @@ public class BulletCollisionSystem : BulletSystemBase
 		this.CollisionInfo.BulletEntityMap[otherBullet] = value;
 	}
 
-	// Token: 0x06018DC8 RID: 101832 RVA: 0x00665414 File Offset: 0x00663614
+	// Token: 0x0601668A RID: 91786 RVA: 0x0068B458 File Offset: 0x00689658
 	private bool HitBulletInValid(Entity victimEntity)
 	{
 		BaseActorComponent component = victimEntity.GetComponent<BaseActorComponent>();
 		return !BulletUtil.AttackedCondition(this.BulletInfo, component) || !BulletHitCountUtil.HitCountCondition(this.BulletInfo, victimEntity);
 	}
 
-	// Token: 0x06018DC9 RID: 101833 RVA: 0x00665448 File Offset: 0x00663648
+	// Token: 0x0601668B RID: 91787 RVA: 0x0068B48C File Offset: 0x0068968C
 	private unsafe void ProcessHitSceneItem(BulletHitActorData hitActorData)
 	{
 		BulletInfo bulletInfo = this.BulletInfo;
@@ -3162,7 +3148,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		this.CountIntervalOnHit(bulletDataMain.Base.IntervalAfterHit, bulletInfo, id);
 	}
 
-	// Token: 0x06018DCA RID: 101834 RVA: 0x00665970 File Offset: 0x00663B70
+	// Token: 0x0601668C RID: 91788 RVA: 0x0068B9B4 File Offset: 0x00689BB4
 	private void ProcessHitVehicle(BulletHitActorData hitActorData)
 	{
 		EntityHandle entityHandle = hitActorData.EntityHandle;
@@ -3245,7 +3231,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		this.DestroyBulletOnHitCharacter(bulletDataMain.Logic.DestroyOnHitCharacter, bulletInfo.BulletEntityId, "结算时");
 	}
 
-	// Token: 0x06018DCB RID: 101835 RVA: 0x00665C5C File Offset: 0x00663E5C
+	// Token: 0x0601668D RID: 91789 RVA: 0x0068BCA0 File Offset: 0x00689EA0
 	private void ProcessHitObstacles(BulletHitActorData hitActorData)
 	{
 		if (hitActorData.IsContinueHit)
@@ -3280,7 +3266,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		}
 	}
 
-	// Token: 0x06018DCC RID: 101836 RVA: 0x00665D68 File Offset: 0x00663F68
+	// Token: 0x0601668E RID: 91790 RVA: 0x0068BDAC File Offset: 0x00689FAC
 	private bool PhysicsCondition(BulletHitActorData hitActorData, [Nullable(2)] string sceneItemPartName = null)
 	{
 		if (!string.IsNullOrEmpty(sceneItemPartName))
@@ -3303,7 +3289,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		return !this.CollisionInfo.ObjectsHitCurrent.ContainsKey(hitActorData.Entity.Id);
 	}
 
-	// Token: 0x06018DCD RID: 101837 RVA: 0x00665DF0 File Offset: 0x00663FF0
+	// Token: 0x0601668F RID: 91791 RVA: 0x0068BE34 File Offset: 0x0068A034
 	private static float GetShapeDistance(global::EBulletShape shape, global::Vector size)
 	{
 		float result = 0f;
@@ -3323,7 +3309,7 @@ public class BulletCollisionSystem : BulletSystemBase
 		return result;
 	}
 
-	// Token: 0x06018DCE RID: 101838 RVA: 0x00665E54 File Offset: 0x00664054
+	// Token: 0x06016690 RID: 91792 RVA: 0x0068BE98 File Offset: 0x0068A098
 	public static bool CheckHitGround(BulletInfo bulletInfo, bool checkInAfterTick = true)
 	{
 		global::Vector vector = BulletPool.CreateVector(false);
@@ -3343,91 +3329,91 @@ public class BulletCollisionSystem : BulletSystemBase
 		return bulletInfo.CenterLocation.Z <= fvectorDouble3.Z;
 	}
 
-	// Token: 0x0400BA6B RID: 47723
+	// Token: 0x0400BDF9 RID: 48633
 	private const string PROFILE_UPDATETRACE_BOX = "BulletMoveUpdateTraceBox";
 
-	// Token: 0x0400BA6C RID: 47724
+	// Token: 0x0400BDFA RID: 48634
 	private const string PROFILE_UPDATETRACE_SPHERE = "BulletMoveUpdateTraceSphere";
 
-	// Token: 0x0400BA6D RID: 47725
+	// Token: 0x0400BDFB RID: 48635
 	private const string PROFILE_UPDATE_TRACE_DEFAULT = "BulletMoveUpdateTraceDefault";
 
-	// Token: 0x0400BA6E RID: 47726
+	// Token: 0x0400BDFC RID: 48636
 	private const string PROFILE_OBSTACLES = "BulletMoveObstacles";
 
-	// Token: 0x0400BA6F RID: 47727
+	// Token: 0x0400BDFD RID: 48637
 	private const string PROFILE_TICKTRACE = "BulletOnTickTrace";
 
-	// Token: 0x0400BA70 RID: 47728
+	// Token: 0x0400BDFE RID: 48638
 	private const float MIN_DELTA_TIME = 16.7f;
 
-	// Token: 0x0400BA71 RID: 47729
+	// Token: 0x0400BDFF RID: 48639
 	private const float BIG_BULLET_SEARCH_SCENE_ITME_MIN_TIME = 100f;
 
-	// Token: 0x0400BA72 RID: 47730
+	// Token: 0x0400BE00 RID: 48640
 	[StaticVariableRuleIgnore]
 	private static readonly Stat TickStat = Stat.Create("BulletCollisionTick", "", "");
 
-	// Token: 0x0400BA73 RID: 47731
+	// Token: 0x0400BE01 RID: 48641
 	[StaticVariableRuleIgnore]
 	private static readonly Stat RegionSearchEntityStat = Stat.Create("BulletCollisionRegionSearchEntity", "", "");
 
-	// Token: 0x0400BA74 RID: 47732
+	// Token: 0x0400BE02 RID: 48642
 	[StaticVariableRuleIgnore]
 	private static readonly Stat AfterTickStat = Stat.Create("BulletCollisionAfterTick", "", "");
 
-	// Token: 0x0400BA75 RID: 47733
+	// Token: 0x0400BE03 RID: 48643
 	[StaticVariableRuleIgnore]
 	private static readonly global::Transform ObstaclesTransform = global::Transform.Create();
 
-	// Token: 0x0400BA76 RID: 47734
+	// Token: 0x0400BE04 RID: 48644
 	private readonly global::Transform TensileTransform = global::Transform.Create();
 
-	// Token: 0x0400BA77 RID: 47735
+	// Token: 0x0400BE05 RID: 48645
 	private readonly global::Vector TensileVector = global::Vector.Create();
 
-	// Token: 0x0400BA78 RID: 47736
+	// Token: 0x0400BE06 RID: 48646
 	private readonly global::Vector NewScale = global::Vector.Create();
 
-	// Token: 0x0400BA79 RID: 47737
+	// Token: 0x0400BE07 RID: 48647
 	[Nullable(2)]
 	private BulletInfo BulletInfo;
 
-	// Token: 0x0400BA7A RID: 47738
+	// Token: 0x0400BE08 RID: 48648
 	[Nullable(2)]
 	private BulletCollisionInfo CollisionInfo;
 
-	// Token: 0x0400BA7B RID: 47739
+	// Token: 0x0400BE09 RID: 48649
 	private global::EBulletShape? Shape;
 
-	// Token: 0x0400BA7C RID: 47740
+	// Token: 0x0400BE0A RID: 48650
 	[Nullable(2)]
 	private BulletRayInfo RayInfo;
 
-	// Token: 0x0400BA7D RID: 47741
+	// Token: 0x0400BE0B RID: 48651
 	private float DeltaTime;
 
-	// Token: 0x0400BA7E RID: 47742
+	// Token: 0x0400BE0C RID: 48652
 	private EBulletHitActorType HitActorType;
 
-	// Token: 0x0400BA7F RID: 47743
+	// Token: 0x0400BE0D RID: 48653
 	[StaticVariableRuleIgnore]
 	private static readonly Stat ProcessHitStat = Stat.Create("BulletProcessHit", "", "");
 
-	// Token: 0x0400BA80 RID: 47744
+	// Token: 0x0400BE0E RID: 48654
 	private readonly global::Vector CheckAngleDirection = global::Vector.Create();
 
-	// Token: 0x0400BA81 RID: 47745
+	// Token: 0x0400BE0F RID: 48655
 	private readonly global::Vector CheckAngleDirection2 = global::Vector.Create();
 
-	// Token: 0x0400BA82 RID: 47746
+	// Token: 0x0400BE10 RID: 48656
 	private readonly global::Vector PreciseForward = global::Vector.Create();
 
-	// Token: 0x0400BA83 RID: 47747
+	// Token: 0x0400BE11 RID: 48657
 	[StaticVariableRuleIgnore]
 	public static bool WeaknessAngleDebugEnabled = false;
 
-	// Token: 0x0400BA84 RID: 47748
+	// Token: 0x0400BE12 RID: 48658
 	[StaticVariableRuleIgnore]
 	private static readonly Stat CheckHitGroundStat = Stat.Create("CheckHitGround", "", "");
 }

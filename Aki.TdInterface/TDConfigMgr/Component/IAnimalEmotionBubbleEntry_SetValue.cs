@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020001C6 RID: 454
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020001E9 RID: 489
 	public class IAnimalEmotionBubbleEntry_SetValue
 	{
-		// Token: 0x04000889 RID: 2185
+		// Token: 0x040008FD RID: 2301
 		public string MontagePath;
 
-		// Token: 0x0400088A RID: 2186
+		// Token: 0x040008FE RID: 2302
 		public string EmotionName;
 	}
 }

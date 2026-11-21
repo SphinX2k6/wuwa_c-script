@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002346 RID: 9030
+	// Token: 0x020025B9 RID: 9657
 	public class EGamepadShakeAttenuationShapeJsonConverter : JsonConverter<EGamepadShakeAttenuationShape>
 	{
-		// Token: 0x0600C53B RID: 50491 RVA: 0x001CC998 File Offset: 0x001CAB98
+		// Token: 0x0600D11C RID: 53532 RVA: 0x001E4B64 File Offset: 0x001E2D64
 		public override EGamepadShakeAttenuationShape Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EGamepadShakeAttenuationShapeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C53C RID: 50492 RVA: 0x001CC9BC File Offset: 0x001CABBC
+		// Token: 0x0600D11D RID: 53533 RVA: 0x001E4B88 File Offset: 0x001E2D88
 		public override void Write(Utf8JsonWriter writer, EGamepadShakeAttenuationShape value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Aki.Config;
+using Aki.Game.Module.Activity.ActivityContent.Encircle;
+using Aki.Game.Module.Activity.ActivityContent.Tetris.View;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
-using CSharpScript.Game.Module.Activity.ActivityContent.Encircle;
-using CSharpScript.Game.Module.Activity.ActivityContent.Tetris;
 using CSharpScript.Game.Module.Common;
 using CSharpScript.Game.Module.ExploreLevel;
 using CSharpScript.Game.Module.Inventory;
@@ -18,32 +17,32 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.Module.ItemReward
 {
-	// Token: 0x020057AE RID: 22446
+	// Token: 0x02004785 RID: 18309
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class ItemRewardController : UiControllerBase
 	{
-		// Token: 0x0603907E RID: 233598 RVA: 0x00D8DE20 File Offset: 0x00D8C020
+		// Token: 0x0602DF8E RID: 188302 RVA: 0x00CDCBDC File Offset: 0x00CDADDC
 		protected override bool OnInit()
 		{
 			this.SoarStrengthItemId = ConfigCommonParamById.GetIntConfig("FlyStrengthItemId").Value;
 			return true;
 		}
 
-		// Token: 0x0603907F RID: 233599 RVA: 0x00D8DE46 File Offset: 0x00D8C046
+		// Token: 0x0602DF8F RID: 188303 RVA: 0x00CDCC02 File Offset: 0x00CDAE02
 		protected override void OnRegisterNetEvent()
 		{
 			Net.Instance.Register(ENotifyMessageId.ItemObtainNotify, new Action<IMessage, Net.CallbackStatus>(this.OnMsgItemObtainNotify));
 		}
 
-		// Token: 0x06039080 RID: 233600 RVA: 0x00D8DE64 File Offset: 0x00D8C064
+		// Token: 0x0602DF90 RID: 188304 RVA: 0x00CDCC20 File Offset: 0x00CDAE20
 		protected override void OnUnRegisterNetEvent()
 		{
 			Net.Instance.UnRegister(ENotifyMessageId.ItemObtainNotify);
 		}
 
-		// Token: 0x06039081 RID: 233601 RVA: 0x00D8DE78 File Offset: 0x00D8C078
+		// Token: 0x0602DF91 RID: 188305 RVA: 0x00CDCC34 File Offset: 0x00CDAE34
 		protected override void OnAddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.OnItemRewardNotify, new Action<ItemRewardNotify>(this.OnItemRewardNotify));
@@ -51,7 +50,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			EventSystem.Instance.Add(EEventName.WorldDone, new Action(this.OnWorldDone));
 		}
 
-		// Token: 0x06039082 RID: 233602 RVA: 0x00D8DEDC File Offset: 0x00D8C0DC
+		// Token: 0x0602DF92 RID: 188306 RVA: 0x00CDCC98 File Offset: 0x00CDAE98
 		protected override void OnRemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.OnItemRewardNotify, new Action<ItemRewardNotify>(this.OnItemRewardNotify));
@@ -59,7 +58,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			EventSystem.Instance.Remove(EEventName.WorldDone, new Action(this.OnWorldDone));
 		}
 
-		// Token: 0x06039083 RID: 233603 RVA: 0x00D8DF40 File Offset: 0x00D8C140
+		// Token: 0x0602DF93 RID: 188307 RVA: 0x00CDCCFC File Offset: 0x00CDAEFC
 		private void OnWorldDone()
 		{
 			List<RewardData<ICommonRewardInfo>> cacheCommonRewardDataList = ItemRewardModel.Instance.CacheCommonRewardDataList;
@@ -69,7 +68,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x06039084 RID: 233604 RVA: 0x00D8DF70 File Offset: 0x00D8C170
+		// Token: 0x0602DF94 RID: 188308 RVA: 0x00CDCD2C File Offset: 0x00CDAF2C
 		public int[] GetRewardViewReasonArray()
 		{
 			if (this.RewardViewReasonArray != null)
@@ -87,7 +86,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return this.RewardViewReasonArray;
 		}
 
-		// Token: 0x06039085 RID: 233605 RVA: 0x00D8DFFC File Offset: 0x00D8C1FC
+		// Token: 0x0602DF95 RID: 188309 RVA: 0x00CDCDB8 File Offset: 0x00CDAFB8
 		private void ApplyDailyActivityLivenessUnionExpSplitForDisplay(int reasonId, [Nullable(2)] ItemRewardNotify notify, List<RewardItemData> rewardItemDataList)
 		{
 			if (reasonId != 19600)
@@ -110,7 +109,19 @@ namespace CSharpScript.Game.Module.ItemReward
 						RepeatedField<RewardItemInfo> repeatedField = (value != null) ? value.ItemList : null;
 						if (repeatedField != null && repeatedField.Count != 0)
 						{
-							if (repeatedField.Any((RewardItemInfo info) => info.ItemId == 1))
+							bool flag = false;
+							using (IEnumerator<RewardItemInfo> enumerator2 = repeatedField.GetEnumerator())
+							{
+								while (enumerator2.MoveNext())
+								{
+									if (enumerator2.Current.ItemId == 1)
+									{
+										flag = true;
+										break;
+									}
+								}
+							}
+							if (flag)
 							{
 								return;
 							}
@@ -118,15 +129,24 @@ namespace CSharpScript.Game.Module.ItemReward
 					}
 				}
 			}
-			if (rewardItemDataList.Any((RewardItemData d) => d.ConfigId == 1 && d.GetDropItemType() == EDropItemType.Activity))
+			bool flag2 = false;
+			foreach (RewardItemData rewardItemData in rewardItemDataList)
+			{
+				if (rewardItemData.ConfigId == 1 && rewardItemData.GetDropItemType() == EDropItemType.Activity)
+				{
+					flag2 = true;
+					break;
+				}
+			}
+			if (flag2)
 			{
 				return;
 			}
 			int num = -1;
 			for (int i = 0; i < rewardItemDataList.Count; i++)
 			{
-				RewardItemData rewardItemData = rewardItemDataList[i];
-				if (rewardItemData.ConfigId == 1 && rewardItemData.GetDropItemType() == EDropItemType.Normal)
+				RewardItemData rewardItemData2 = rewardItemDataList[i];
+				if (rewardItemData2.ConfigId == 1 && rewardItemData2.GetDropItemType() == EDropItemType.Normal)
 				{
 					if (num >= 0)
 					{
@@ -139,19 +159,19 @@ namespace CSharpScript.Game.Module.ItemReward
 			{
 				return;
 			}
-			RewardItemData rewardItemData2 = rewardItemDataList[num];
-			int count = rewardItemData2.Count;
+			RewardItemData rewardItemData3 = rewardItemDataList[num];
+			int count = rewardItemData3.Count;
 			int num2 = count / 2;
 			int num3 = count - num2;
 			if (num3 <= 0 || num2 <= 0)
 			{
 				return;
 			}
-			rewardItemData2.Count = num2;
-			rewardItemDataList.Add(new RewardItemData(1, num3, new int?(rewardItemData2.UniqueId), EDropItemType.Activity));
+			rewardItemData3.Count = num2;
+			rewardItemDataList.Add(new RewardItemData(1, num3, new int?(rewardItemData3.UniqueId), EDropItemType.Activity));
 		}
 
-		// Token: 0x06039086 RID: 233606 RVA: 0x00D8E170 File Offset: 0x00D8C370
+		// Token: 0x0602DF96 RID: 188310 RVA: 0x00CDCF80 File Offset: 0x00CDB180
 		private unsafe void OnItemRewardNotify(ItemRewardNotify notify)
 		{
 			MapField<int, RewardItemInfoList> rewardItems = notify.RewardItems;
@@ -161,7 +181,7 @@ namespace CSharpScript.Game.Module.ItemReward
 				return;
 			}
 			int reason = notify.Reason;
-			RewardViewFromSource? rewardViewFromSource = this.GetRewardViewReasonArray().Contains(reason) ? ItemRewardConfig.Instance.GetRewardViewFromSourceConfig(reason) : null;
+			RewardViewFromSource? rewardViewFromSource = (Array.IndexOf<int>(this.GetRewardViewReasonArray(), reason) >= 0) ? ItemRewardConfig.Instance.GetRewardViewFromSourceConfig(reason) : null;
 			if (rewardViewFromSource != null && rewardViewFromSource.Value.RewardNotifyNotTrick)
 			{
 				Log instance = Log.Instance;
@@ -214,7 +234,7 @@ namespace CSharpScript.Game.Module.ItemReward
 				}
 			}
 			this.ApplyDailyActivityLivenessUnionExpSplitForDisplay(reason, notify, list);
-			if (ItemRewardDefine.FillRoleDevelopStateTagReasonIdList.Contains(reason))
+			if (Array.IndexOf<int>(ItemRewardDefine.FillRoleDevelopStateTagReasonIdList, reason) >= 0)
 			{
 				ItemRewardRoleDevelopStateTagUtil.FillRewardRoleDevelopStateTagType(list);
 			}
@@ -232,7 +252,7 @@ namespace CSharpScript.Game.Module.ItemReward
 				instance2.ClearCurrentRewardData();
 			}
 			instance2.CurrentReasonId = new int?(reason);
-			if (ItemRewardDefine.BlockReasonIdList.Contains(reason))
+			if (Array.IndexOf<int>(ItemRewardDefine.BlockReasonIdList, reason) >= 0)
 			{
 				return;
 			}
@@ -348,7 +368,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.OpenCommonRewardView(rewardViewId, list, null);
 		}
 
-		// Token: 0x06039087 RID: 233607 RVA: 0x00D8E6F8 File Offset: 0x00D8C8F8
+		// Token: 0x0602DF97 RID: 188311 RVA: 0x00CDD508 File Offset: 0x00CDB708
 		[NullableContext(2)]
 		private void OnMsgItemObtainNotify(IMessage msg, Net.CallbackStatus _)
 		{
@@ -356,7 +376,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.OnItemObtainNotify(notify, null);
 		}
 
-		// Token: 0x06039088 RID: 233608 RVA: 0x00D8E714 File Offset: 0x00D8C914
+		// Token: 0x0602DF98 RID: 188312 RVA: 0x00CDD524 File Offset: 0x00CDB724
 		public void OnItemObtainNotify(ItemObtainNotify notify, [Nullable(2)] Action<bool?> callback)
 		{
 			RepeatedField<RewardItemPackage> rewardItemPackages = notify.RewardItemPackages;
@@ -435,14 +455,26 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.DispatchPackagedReward(reason, list, list6, list2, list3, list4, list5, num, callback, notify);
 		}
 
-		// Token: 0x06039089 RID: 233609 RVA: 0x00D8EA40 File Offset: 0x00D8CC40
+		// Token: 0x0602DF99 RID: 188313 RVA: 0x00CDD850 File Offset: 0x00CDBA50
 		public void DispatchPackagedReward(int reasonId, List<RewardItemData> rewardItemDataList, List<RewardItemPackage> characterItemList, List<RewardItemData> obtainSkinItemDataList, List<RewardItemData> obtainFlySkinItemDataList, List<RewardItemData> obtainMotorItemDataList, List<RewardItemData> obtainOrnamentItemDataList, int soarStrengthItemCount, [Nullable(2)] Action<bool?> callback = null, [Nullable(2)] ItemObtainNotify originNotify = null)
 		{
-			if (ItemRewardDefine.BlockObtainReasonIdList.Contains(reasonId))
+			if (Array.IndexOf<int>(ItemRewardDefine.BlockObtainReasonIdList, reasonId) >= 0)
 			{
 				return;
 			}
-			if (rewardItemDataList.Any((RewardItemData item) => item.ConfigId == 50021))
+			bool flag = false;
+			using (List<RewardItemData>.Enumerator enumerator = rewardItemDataList.GetEnumerator())
+			{
+				while (enumerator.MoveNext())
+				{
+					if (enumerator.Current.ConfigId == 50021)
+					{
+						flag = true;
+						break;
+					}
+				}
+			}
+			if (flag)
 			{
 				return;
 			}
@@ -453,7 +485,7 @@ namespace CSharpScript.Game.Module.ItemReward
 				instance.ClearCurrentRewardData();
 			}
 			instance.CurrentReasonId = new int?(reasonId);
-			RewardViewFromSource? rewardViewFromSource = this.GetRewardViewReasonArray().Contains(reasonId) ? ItemRewardConfig.Instance.GetRewardViewFromSourceConfig(reasonId) : null;
+			RewardViewFromSource? rewardViewFromSource = (Array.IndexOf<int>(this.GetRewardViewReasonArray(), reasonId) >= 0) ? ItemRewardConfig.Instance.GetRewardViewFromSourceConfig(reasonId) : null;
 			if (rewardViewFromSource != null)
 			{
 				int rewardViewId = rewardViewFromSource.Value.RewardViewId;
@@ -530,11 +562,11 @@ namespace CSharpScript.Game.Module.ItemReward
 				}
 				if (rewardItemDataList.Count == 0 && characterItemList.Count > 0)
 				{
-					using (List<RewardItemPackage>.Enumerator enumerator = characterItemList.GetEnumerator())
+					using (List<RewardItemPackage>.Enumerator enumerator2 = characterItemList.GetEnumerator())
 					{
-						while (enumerator.MoveNext())
+						while (enumerator2.MoveNext())
 						{
-							RewardItemPackage itemPackage = enumerator.Current;
+							RewardItemPackage itemPackage = enumerator2.Current;
 							GachaController.Instance.CommonShowRoleResult(itemPackage, true, false);
 						}
 						return;
@@ -610,7 +642,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x0603908A RID: 233610 RVA: 0x00D8EDEC File Offset: 0x00D8CFEC
+		// Token: 0x0602DF9A RID: 188314 RVA: 0x00CDDC24 File Offset: 0x00CDBE24
 		[NullableContext(2)]
 		private void OpenObtainItemNormalRewardView(int reasonId, int configId, [Nullable(new byte[]
 		{
@@ -626,7 +658,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.OpenCommonRewardView(configId, rewardItemDataList, onCloseCallback);
 		}
 
-		// Token: 0x0603908B RID: 233611 RVA: 0x00D8EE0C File Offset: 0x00D8D00C
+		// Token: 0x0602DF9B RID: 188315 RVA: 0x00CDDC44 File Offset: 0x00CDBE44
 		[NullableContext(2)]
 		public void OpenCommonRewardView(int configId, [Nullable(new byte[]
 		{
@@ -642,7 +674,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.Open<ICommonRewardInfo>(rewardData, null);
 		}
 
-		// Token: 0x0603908C RID: 233612 RVA: 0x00D8EE40 File Offset: 0x00D8D040
+		// Token: 0x0602DF9C RID: 188316 RVA: 0x00CDDC78 File Offset: 0x00CDBE78
 		[NullableContext(2)]
 		public void OpenPayRewardView(int configId, [Nullable(new byte[]
 		{
@@ -662,7 +694,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x0603908D RID: 233613 RVA: 0x00D8EE90 File Offset: 0x00D8D090
+		// Token: 0x0602DF9D RID: 188317 RVA: 0x00CDDCC8 File Offset: 0x00CDBEC8
 		[NullableContext(2)]
 		public void OpenQuestRewardView(int configId, [Nullable(new byte[]
 		{
@@ -678,7 +710,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.Open<ICommonRewardInfo>(rewardData, null);
 		}
 
-		// Token: 0x0603908E RID: 233614 RVA: 0x00D8EEC4 File Offset: 0x00D8D0C4
+		// Token: 0x0602DF9E RID: 188318 RVA: 0x00CDDCFC File Offset: 0x00CDBEFC
 		private bool TryShowConsoleExtraPayGiftPreview(int reasonId, Action onConfirm)
 		{
 			ItemRewardController.<>c__DisplayClass19_0 CS$<>8__locals1 = new ItemRewardController.<>c__DisplayClass19_0();
@@ -710,7 +742,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return true;
 		}
 
-		// Token: 0x0603908F RID: 233615 RVA: 0x00D8EF7C File Offset: 0x00D8D17C
+		// Token: 0x0602DF9F RID: 188319 RVA: 0x00CDDDB4 File Offset: 0x00CDBFB4
 		public void OpenExploreLevelRewardView([Nullable(new byte[]
 		{
 			2,
@@ -730,14 +762,14 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x06039090 RID: 233616 RVA: 0x00D8EFCE File Offset: 0x00D8D1CE
+		// Token: 0x0602DFA0 RID: 188320 RVA: 0x00CDDE06 File Offset: 0x00CDC006
 		private void OnExploreLevelRewardViewShowEnd()
 		{
 			this.ExploreRewardQueue.Pop();
 			this.OpenExploreLevelRewardViewFromQueue();
 		}
 
-		// Token: 0x06039091 RID: 233617 RVA: 0x00D8EFE4 File Offset: 0x00D8D1E4
+		// Token: 0x0602DFA1 RID: 188321 RVA: 0x00CDDE1C File Offset: 0x00CDC01C
 		private void OpenExploreLevelRewardViewFromQueue()
 		{
 			if (this.ExploreRewardQueue.Empty)
@@ -747,11 +779,11 @@ namespace CSharpScript.Game.Module.ItemReward
 			ValueTuple<RewardItemData[], int> front = this.ExploreRewardQueue.Front;
 			RewardItemData[] item = front.Item1;
 			int item2 = front.Item2;
-			RewardData<IExploreLevelRewardInfo> exploreLevelRewardData = ItemRewardModel.Instance.GetExploreLevelRewardData(EUiViewName.ExploreLevelRewardView, item2, item2 + 1, item.ToList<RewardItemData>());
+			RewardData<IExploreLevelRewardInfo> exploreLevelRewardData = ItemRewardModel.Instance.GetExploreLevelRewardData(EUiViewName.ExploreLevelRewardView, item2, item2 + 1, new List<RewardItemData>(item));
 			this.Open<IExploreLevelRewardInfo>(exploreLevelRewardData, null);
 		}
 
-		// Token: 0x06039092 RID: 233618 RVA: 0x00D8F03C File Offset: 0x00D8D23C
+		// Token: 0x0602DFA2 RID: 188322 RVA: 0x00CDDE74 File Offset: 0x00CDC074
 		public void OpenCompositeRewardView(int configId, bool isSuccess = true, [Nullable(new byte[]
 		{
 			2,
@@ -770,7 +802,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			this.Open<ICompositeRewardInfo>(rewardData, null);
 		}
 
-		// Token: 0x06039093 RID: 233619 RVA: 0x00D8F068 File Offset: 0x00D8D268
+		// Token: 0x0602DFA3 RID: 188323 RVA: 0x00CDDEA0 File Offset: 0x00CDC0A0
 		[NullableContext(2)]
 		public bool OpenExploreRewardView(int configId, bool isSuccess = true, [Nullable(new byte[]
 		{
@@ -803,7 +835,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return true;
 		}
 
-		// Token: 0x06039094 RID: 233620 RVA: 0x00D8F0AC File Offset: 0x00D8D2AC
+		// Token: 0x0602DFA4 RID: 188324 RVA: 0x00CDDEE4 File Offset: 0x00CDC0E4
 		public bool OpenExploreRewardViewNew(IExploreRewardViewData data)
 		{
 			RewardData<IExploreRewardInfo> rewardData = ItemRewardModel.Instance.RefreshExploreRewardDataFromConfigNew(data);
@@ -815,7 +847,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return true;
 		}
 
-		// Token: 0x06039095 RID: 233621 RVA: 0x00D8F0D8 File Offset: 0x00D8D2D8
+		// Token: 0x0602DFA5 RID: 188325 RVA: 0x00CDDF10 File Offset: 0x00CDC110
 		public bool OpenBattlePassExtraRewardView(List<RewardItemData> rewardItemDataList)
 		{
 			RewardData<IBattlePassExtraRewardInfo> rewardData = BattlePassController.Instance.BuildExtraRewardData(rewardItemDataList);
@@ -823,7 +855,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return true;
 		}
 
-		// Token: 0x06039096 RID: 233622 RVA: 0x00D8F104 File Offset: 0x00D8D304
+		// Token: 0x0602DFA6 RID: 188326 RVA: 0x00CDDF3C File Offset: 0x00CDC13C
 		public bool OpenRegressBpRewardView(List<RewardItemData> rewardItemDataList)
 		{
 			RewardData<IBattlePassExtraRewardInfo> rewardData = ActivityRegressController.Instance.BuildExtraRewardData(rewardItemDataList);
@@ -831,7 +863,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return true;
 		}
 
-		// Token: 0x06039097 RID: 233623 RVA: 0x00D8F130 File Offset: 0x00D8D330
+		// Token: 0x0602DFA7 RID: 188327 RVA: 0x00CDDF68 File Offset: 0x00CDC168
 		public bool OpenEncircleRewardView(List<RewardItemData> rewardItemDataList)
 		{
 			RewardData<IEncircleRewardInfo> rewardData = ActivityEncircleController.Instance.BuildRewardData(rewardItemDataList);
@@ -839,7 +871,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return true;
 		}
 
-		// Token: 0x06039098 RID: 233624 RVA: 0x00D8F154 File Offset: 0x00D8D354
+		// Token: 0x0602DFA8 RID: 188328 RVA: 0x00CDDF8C File Offset: 0x00CDC18C
 		public bool OpenMotorItemRewardView(int configId, List<RewardItemData> rewardItemDataList, List<RewardItemData> obtainMotorItemDataList)
 		{
 			bool flag = FunctionModel.Instance.IsOpen(EFunctionType.MotorDevelop);
@@ -869,7 +901,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 			Action rightAction = flag3 ? delegate()
 			{
-				MotorcycleDiyController.Instance.OpenTargetViewByReward(obtainMotorItemDataList.ToList<RewardItemData>(), jumpDiyType);
+				MotorcycleDiyController.Instance.OpenTargetViewByReward(new List<RewardItemData>(obtainMotorItemDataList), jumpDiyType);
 			} : null;
 			RewardData<ICommonRewardInfo> rewardData = ItemRewardModel.Instance.RefreshCommonRewardDataFromConfig(configId, EUiViewName.CommonRewardView, rewardItemDataList, null, leftBtnTextId, rightBtnTextId, new Action(ItemRewardController.<OpenMotorItemRewardView>g__quitCallback|29_0), rightAction, false, false);
 			if (rewardData == null)
@@ -880,7 +912,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return true;
 		}
 
-		// Token: 0x06039099 RID: 233625 RVA: 0x00D8F27C File Offset: 0x00D8D47C
+		// Token: 0x0602DFA9 RID: 188329 RVA: 0x00CDE0B4 File Offset: 0x00CDC2B4
 		public bool OpenOrnamentItemRewardView(int configId, List<RewardItemData> rewardItemDataList, List<RewardItemData> obtainOrnamentItemDataList, [Nullable(2)] Action onCloseCallback = null)
 		{
 			ItemRewardController.<>c__DisplayClass30_0 CS$<>8__locals1 = new ItemRewardController.<>c__DisplayClass30_0();
@@ -895,7 +927,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return true;
 		}
 
-		// Token: 0x0603909A RID: 233626 RVA: 0x00D8F2E4 File Offset: 0x00D8D4E4
+		// Token: 0x0602DFAA RID: 188330 RVA: 0x00CDE11C File Offset: 0x00CDC31C
 		public void Open<[Nullable(0)] T>(RewardData<T> rewardData, [Nullable(2)] Action<bool> finishCallback = null) where T : IRewardInfo
 		{
 			if (UiManager.Instance.IsViewOpen(EUiViewName.DrawMainView))
@@ -929,7 +961,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			});
 		}
 
-		// Token: 0x0603909B RID: 233627 RVA: 0x00D8F368 File Offset: 0x00D8D568
+		// Token: 0x0602DFAB RID: 188331 RVA: 0x00CDE1A0 File Offset: 0x00CDC3A0
 		public void Close([Nullable(new byte[]
 		{
 			2,
@@ -959,49 +991,49 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x0603909C RID: 233628 RVA: 0x00D8F401 File Offset: 0x00D8D601
+		// Token: 0x0602DFAC RID: 188332 RVA: 0x00CDE239 File Offset: 0x00CDC439
 		public void SetItemList(List<RewardItemData> rewardItemList)
 		{
 			ItemRewardModel.Instance.SetItemList(rewardItemList);
 		}
 
-		// Token: 0x0603909D RID: 233629 RVA: 0x00D8F40E File Offset: 0x00D8D60E
+		// Token: 0x0602DFAD RID: 188333 RVA: 0x00CDE246 File Offset: 0x00CDC446
 		public void AddItemList(List<RewardItemData> rewardItemList)
 		{
 			ItemRewardModel.Instance.AddItemList(rewardItemList);
 		}
 
-		// Token: 0x0603909E RID: 233630 RVA: 0x00D8F41B File Offset: 0x00D8D61B
+		// Token: 0x0602DFAE RID: 188334 RVA: 0x00CDE253 File Offset: 0x00CDC453
 		public void SetProgressQueue(List<IRewardProgress> progressQueue)
 		{
 			ItemRewardModel.Instance.SetProgressQueue(progressQueue);
 		}
 
-		// Token: 0x0603909F RID: 233631 RVA: 0x00D8F428 File Offset: 0x00D8D628
+		// Token: 0x0602DFAF RID: 188335 RVA: 0x00CDE260 File Offset: 0x00CDC460
 		public void SetExploreBarDataList(List<IRewardExploreBar> exploreBarDataList)
 		{
 			ItemRewardModel.Instance.SetExploreBarDataList(exploreBarDataList);
 		}
 
-		// Token: 0x060390A0 RID: 233632 RVA: 0x00D8F435 File Offset: 0x00D8D635
+		// Token: 0x0602DFB0 RID: 188336 RVA: 0x00CDE26D File Offset: 0x00CDC46D
 		public void SetExploreRecordInfo(IRewardExploreRecord exploreRecordInfo)
 		{
 			ItemRewardModel.Instance.SetExploreRecordInfo(exploreRecordInfo);
 		}
 
-		// Token: 0x060390A1 RID: 233633 RVA: 0x00D8F442 File Offset: 0x00D8D642
+		// Token: 0x0602DFB1 RID: 188337 RVA: 0x00CDE27A File Offset: 0x00CDC47A
 		public void SetButtonList(List<IRewardExploreConfirmButton> exploreButtonInfo)
 		{
 			ItemRewardModel.Instance.SetButtonList(exploreButtonInfo);
 		}
 
-		// Token: 0x060390A2 RID: 233634 RVA: 0x00D8F44F File Offset: 0x00D8D64F
+		// Token: 0x0602DFB2 RID: 188338 RVA: 0x00CDE287 File Offset: 0x00CDC487
 		public void SetExploreFriendDataList(List<IRewardExploreFriendData> exploreFriendDataList)
 		{
 			ItemRewardModel.Instance.SetExploreFriendDataList(exploreFriendDataList);
 		}
 
-		// Token: 0x060390A3 RID: 233635 RVA: 0x00D8F45C File Offset: 0x00D8D65C
+		// Token: 0x0602DFB3 RID: 188339 RVA: 0x00CDE294 File Offset: 0x00CDC494
 		public List<IRewardExploreFriendData> BuildExploreFriendDataList()
 		{
 			List<IRewardExploreFriendData> list = new List<IRewardExploreFriendData>();
@@ -1034,7 +1066,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return list;
 		}
 
-		// Token: 0x060390A4 RID: 233636 RVA: 0x00D8F5CC File Offset: 0x00D8D7CC
+		// Token: 0x0602DFB4 RID: 188340 RVA: 0x00CDE404 File Offset: 0x00CDC604
 		private string BuildTeamIndexIcon(int onlineIndex)
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(20, 1);
@@ -1045,7 +1077,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return UiResourceConfig.Instance.GetResourcePath(resourceId);
 		}
 
-		// Token: 0x060390A5 RID: 233637 RVA: 0x00D8F618 File Offset: 0x00D8D818
+		// Token: 0x0602DFB5 RID: 188341 RVA: 0x00CDE450 File Offset: 0x00CDC650
 		public List<int> BuildExploreFriendIdList()
 		{
 			List<int> list = new List<int>();
@@ -1059,7 +1091,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return list;
 		}
 
-		// Token: 0x060390A6 RID: 233638 RVA: 0x00D8F684 File Offset: 0x00D8D884
+		// Token: 0x0602DFB6 RID: 188342 RVA: 0x00CDE4BC File Offset: 0x00CDC6BC
 		[NullableContext(2)]
 		public void PlayAudio(string audioId, PlayResult result = null)
 		{
@@ -1075,7 +1107,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			AudioController.Instance.PostEventByUi(audioPath.Value.Path, result, null, null);
 		}
 
-		// Token: 0x060390A7 RID: 233639 RVA: 0x00D8F6D4 File Offset: 0x00D8D8D4
+		// Token: 0x0602DFB7 RID: 188343 RVA: 0x00CDE50C File Offset: 0x00CDC70C
 		public unsafe void OpenSoarStrengthUpView(int strengthItemCount)
 		{
 			int? intConfig = ConfigCommonParamById.GetIntConfig("FlyStrengthItemId");
@@ -1144,8 +1176,8 @@ namespace CSharpScript.Game.Module.ItemReward
 			RoleLevelUpSuccessController.Instance.OpenSuccessAttributeView(data, null);
 		}
 
-		// Token: 0x170088D9 RID: 35033
-		// (get) Token: 0x060390A8 RID: 233640 RVA: 0x00D8F90E File Offset: 0x00D8DB0E
+		// Token: 0x17005CA1 RID: 23713
+		// (get) Token: 0x0602DFB8 RID: 188344 RVA: 0x00CDE746 File Offset: 0x00CDC946
 		public static ItemRewardController Instance
 		{
 			get
@@ -1154,7 +1186,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x060390A9 RID: 233641 RVA: 0x00D8F915 File Offset: 0x00D8DB15
+		// Token: 0x0602DFB9 RID: 188345 RVA: 0x00CDE74D File Offset: 0x00CDC94D
 		public static ItemRewardController GetOrCreateInstance()
 		{
 			if (ItemRewardController._Instance == null)
@@ -1164,7 +1196,7 @@ namespace CSharpScript.Game.Module.ItemReward
 			return ItemRewardController._Instance;
 		}
 
-		// Token: 0x060390AA RID: 233642 RVA: 0x00D8F929 File Offset: 0x00D8DB29
+		// Token: 0x0602DFBA RID: 188346 RVA: 0x00CDE761 File Offset: 0x00CDC961
 		public static bool CreateInstance()
 		{
 			if (ItemRewardController._Instance != null)
@@ -1175,24 +1207,24 @@ namespace CSharpScript.Game.Module.ItemReward
 			return true;
 		}
 
-		// Token: 0x060390AB RID: 233643 RVA: 0x00D8F93F File Offset: 0x00D8DB3F
+		// Token: 0x0602DFBB RID: 188347 RVA: 0x00CDE777 File Offset: 0x00CDC977
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x060390AC RID: 233644 RVA: 0x00D8F941 File Offset: 0x00D8DB41
+		// Token: 0x0602DFBC RID: 188348 RVA: 0x00CDE779 File Offset: 0x00CDC979
 		public static void ResetStaticDefaultValue()
 		{
 			ItemRewardController._Instance = null;
 		}
 
-		// Token: 0x060390AD RID: 233645 RVA: 0x00D8F949 File Offset: 0x00D8DB49
+		// Token: 0x0602DFBD RID: 188349 RVA: 0x00CDE781 File Offset: 0x00CDC981
 		static ItemRewardController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(ItemRewardController.CreateStaticDefaultValue), new Action(ItemRewardController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x060390AF RID: 233647 RVA: 0x00D8F97C File Offset: 0x00D8DB7C
+		// Token: 0x0602DFBF RID: 188351 RVA: 0x00CDE7B4 File Offset: 0x00CDC9B4
 		[CompilerGenerated]
 		internal static void <OpenMotorItemRewardView>g__quitCallback|29_0()
 		{
@@ -1202,14 +1234,14 @@ namespace CSharpScript.Game.Module.ItemReward
 			}
 		}
 
-		// Token: 0x0401DDFC RID: 122364
+		// Token: 0x04018892 RID: 100498
 		[Nullable(2)]
 		protected int[] RewardViewReasonArray;
 
-		// Token: 0x0401DDFD RID: 122365
+		// Token: 0x04018893 RID: 100499
 		private int SoarStrengthItemId;
 
-		// Token: 0x0401DDFE RID: 122366
+		// Token: 0x04018894 RID: 100500
 		[Nullable(new byte[]
 		{
 			1,
@@ -1219,7 +1251,7 @@ namespace CSharpScript.Game.Module.ItemReward
 		})]
 		private readonly Queue<ValueTuple<RewardItemData[], int>> ExploreRewardQueue = new Queue<ValueTuple<RewardItemData[], int>>(4);
 
-		// Token: 0x0401DDFF RID: 122367
+		// Token: 0x04018895 RID: 100501
 		[Nullable(2)]
 		private static ItemRewardController _Instance;
 	}

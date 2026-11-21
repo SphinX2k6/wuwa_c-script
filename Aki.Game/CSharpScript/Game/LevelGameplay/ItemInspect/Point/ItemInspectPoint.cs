@@ -5,25 +5,25 @@ using Aki.TDConfigMgr.Action;
 
 namespace CSharpScript.Game.LevelGamePlay.ItemInspect.Point
 {
-	// Token: 0x02006DEE RID: 28142
+	// Token: 0x02005F6D RID: 24429
 	public class ItemInspectPoint
 	{
-		// Token: 0x04023B8E RID: 146318
+		// Token: 0x0401EE30 RID: 126512
 		public bool IsActive;
 
-		// Token: 0x04023B8F RID: 146319
+		// Token: 0x0401EE31 RID: 126513
 		public bool IsValid;
 
-		// Token: 0x04023B90 RID: 146320
+		// Token: 0x0401EE32 RID: 126514
 		public bool IsChecked;
 
-		// Token: 0x04023B91 RID: 146321
+		// Token: 0x0401EE33 RID: 126515
 		public int TagId;
 
-		// Token: 0x04023B92 RID: 146322
+		// Token: 0x0401EE34 RID: 126516
 		public bool CancelTrace;
 
-		// Token: 0x04023B93 RID: 146323
+		// Token: 0x0401EE35 RID: 126517
 		[Nullable(new byte[]
 		{
 			2,
@@ -31,10 +31,10 @@ namespace CSharpScript.Game.LevelGamePlay.ItemInspect.Point
 		})]
 		public List<IInteractEffect> EffectConfigs;
 
-		// Token: 0x04023B94 RID: 146324
+		// Token: 0x0401EE36 RID: 126518
 		public float ProtectTime;
 
-		// Token: 0x04023B95 RID: 146325
+		// Token: 0x0401EE37 RID: 126519
 		[Nullable(2)]
 		public IInteractPointInteraction InteractionConfig;
 	}

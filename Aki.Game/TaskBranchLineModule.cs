@@ -10,10 +10,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001368 RID: 4968
+// Token: 0x0200081C RID: 2076
 public class TaskBranchLineModule : UiPanelBase
 {
-	// Token: 0x06008A7F RID: 35455 RVA: 0x001D98E4 File Offset: 0x001D7AE4
+	// Token: 0x06005E1A RID: 24090 RVA: 0x001E2740 File Offset: 0x001E0940
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -23,7 +23,7 @@ public class TaskBranchLineModule : UiPanelBase
 		};
 	}
 
-	// Token: 0x06008A80 RID: 35456 RVA: 0x001D9920 File Offset: 0x001D7B20
+	// Token: 0x06005E1B RID: 24091 RVA: 0x001E277C File Offset: 0x001E097C
 	protected override UniTask OnBeforeStartAsync()
 	{
 		TaskBranchLineModule.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -34,7 +34,7 @@ public class TaskBranchLineModule : UiPanelBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008A81 RID: 35457 RVA: 0x001D9963 File Offset: 0x001D7B63
+	// Token: 0x06005E1C RID: 24092 RVA: 0x001E27BF File Offset: 0x001E09BF
 	protected override void OnBeforeShow()
 	{
 		this.Scroll.BindLateUpdate(delegate(float delta)
@@ -54,20 +54,20 @@ public class TaskBranchLineModule : UiPanelBase
 		});
 	}
 
-	// Token: 0x06008A82 RID: 35458 RVA: 0x001D997C File Offset: 0x001D7B7C
+	// Token: 0x06005E1D RID: 24093 RVA: 0x001E27D8 File Offset: 0x001E09D8
 	[NullableContext(1)]
 	private TaskBranchLineModule.BranchLineItem InitBranchLineItem()
 	{
 		return new TaskBranchLineModule.BranchLineItem();
 	}
 
-	// Token: 0x06008A83 RID: 35459 RVA: 0x001D9983 File Offset: 0x001D7B83
+	// Token: 0x06005E1E RID: 24094 RVA: 0x001E27DF File Offset: 0x001E09DF
 	public void SetSelectTaskId(int id)
 	{
 		this.SelectTaskId = id;
 	}
 
-	// Token: 0x06008A84 RID: 35460 RVA: 0x001D998C File Offset: 0x001D7B8C
+	// Token: 0x06005E1F RID: 24095 RVA: 0x001E27E8 File Offset: 0x001E09E8
 	[NullableContext(1)]
 	public override UUIItem[] GetGuideUiItemAndUiItemForShowEx(string[] configParams)
 	{
@@ -111,24 +111,24 @@ public class TaskBranchLineModule : UiPanelBase
 		};
 	}
 
-	// Token: 0x04003DB4 RID: 15796
+	// Token: 0x04003E4C RID: 15948
 	[Nullable(1)]
 	private GenericScrollViewNew<TaskBranchLineModule.BranchLineItem, BranchLine> Scroll;
 
-	// Token: 0x04003DB5 RID: 15797
+	// Token: 0x04003E4D RID: 15949
 	private int SelectTaskId;
 
-	// Token: 0x04003DB6 RID: 15798
+	// Token: 0x04003E4E RID: 15950
 	[Nullable(1)]
 	private List<BranchLine> SortList = new List<BranchLine>();
 
-	// Token: 0x04003DB7 RID: 15799
+	// Token: 0x04003E4F RID: 15951
 	private bool NeedDelay = true;
 
-	// Token: 0x020079D4 RID: 31188
+	// Token: 0x02006B5E RID: 27486
 	private class BranchLineItem : GridProxyAbstract<BranchLine>
 	{
-		// Token: 0x060493C9 RID: 299977 RVA: 0x012EC7F8 File Offset: 0x012EA9F8
+		// Token: 0x0603F7FD RID: 260093 RVA: 0x0128F9F4 File Offset: 0x0128DBF4
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -146,13 +146,13 @@ public class TaskBranchLineModule : UiPanelBase
 			};
 		}
 
-		// Token: 0x060493CA RID: 299978 RVA: 0x012EC8B7 File Offset: 0x012EAAB7
+		// Token: 0x0603F7FE RID: 260094 RVA: 0x0128FAB3 File Offset: 0x0128DCB3
 		protected override void OnBeforeShow()
 		{
 			this.RefreshRedDot();
 		}
 
-		// Token: 0x060493CB RID: 299979 RVA: 0x012EC8C0 File Offset: 0x012EAAC0
+		// Token: 0x0603F7FF RID: 260095 RVA: 0x0128FABC File Offset: 0x0128DCBC
 		private void OnInvite()
 		{
 			if (this.Data == null)
@@ -178,7 +178,7 @@ public class TaskBranchLineModule : UiPanelBase
 			}
 		}
 
-		// Token: 0x060493CC RID: 299980 RVA: 0x012EC98C File Offset: 0x012EAB8C
+		// Token: 0x0603F800 RID: 260096 RVA: 0x0128FB88 File Offset: 0x0128DD88
 		private void JumpToBuilding(int buildingId)
 		{
 			if (this.Data == null)
@@ -209,7 +209,7 @@ public class TaskBranchLineModule : UiPanelBase
 			ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew2);
 		}
 
-		// Token: 0x060493CD RID: 299981 RVA: 0x012ECA6C File Offset: 0x012EAC6C
+		// Token: 0x0603F801 RID: 260097 RVA: 0x0128FC68 File Offset: 0x0128DE68
 		private void RefreshName()
 		{
 			if (this.Data == null)
@@ -220,7 +220,7 @@ public class TaskBranchLineModule : UiPanelBase
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), questConfig.TidName, Array.Empty<object>());
 		}
 
-		// Token: 0x060493CE RID: 299982 RVA: 0x012ECAC4 File Offset: 0x012EACC4
+		// Token: 0x0603F802 RID: 260098 RVA: 0x0128FCC0 File Offset: 0x0128DEC0
 		private void RefreshState()
 		{
 			if (this.Data == null)
@@ -240,7 +240,7 @@ public class TaskBranchLineModule : UiPanelBase
 			base.GetItem(1).SetUIActive(questState == EQuestState.Finish);
 		}
 
-		// Token: 0x060493CF RID: 299983 RVA: 0x012ECB50 File Offset: 0x012EAD50
+		// Token: 0x0603F803 RID: 260099 RVA: 0x0128FD4C File Offset: 0x0128DF4C
 		private void RefreshTexture()
 		{
 			if (this.Data == null)
@@ -250,7 +250,7 @@ public class TaskBranchLineModule : UiPanelBase
 			base.SetTextureByPath(BusinessConfig.Instance.GetEntrustRoleById(this.Data.Value.AssociateRole).HeadIcon, base.GetTexture(5), null, null);
 		}
 
-		// Token: 0x060493D0 RID: 299984 RVA: 0x012ECBA8 File Offset: 0x012EADA8
+		// Token: 0x0603F804 RID: 260100 RVA: 0x0128FDA4 File Offset: 0x0128DFA4
 		private void RefreshRedDot()
 		{
 			if (this.Data == null)
@@ -261,7 +261,7 @@ public class TaskBranchLineModule : UiPanelBase
 			base.GetItem(4).SetUIActive(uiactive);
 		}
 
-		// Token: 0x060493D1 RID: 299985 RVA: 0x012ECBEE File Offset: 0x012EADEE
+		// Token: 0x0603F805 RID: 260101 RVA: 0x0128FDEA File Offset: 0x0128DFEA
 		public override void Refresh(BranchLine data, bool isSelected, int gridIndex)
 		{
 			this.Data = new BranchLine?(data);
@@ -271,46 +271,46 @@ public class TaskBranchLineModule : UiPanelBase
 			this.RefreshRedDot();
 		}
 
-		// Token: 0x060493D2 RID: 299986 RVA: 0x012ECC14 File Offset: 0x012EAE14
+		// Token: 0x0603F806 RID: 260102 RVA: 0x0128FE10 File Offset: 0x0128E010
 		[NullableContext(1)]
 		public override object GetKey(BranchLine data, int gridIndex)
 		{
 			return data.Id;
 		}
 
-		// Token: 0x040281A3 RID: 164259
+		// Token: 0x040234D0 RID: 144592
 		private BranchLine? Data;
 	}
 
-	// Token: 0x020079D5 RID: 31189
+	// Token: 0x02006B5F RID: 27487
 	private class EBranchLineItem
 	{
-		// Token: 0x040281A4 RID: 164260
+		// Token: 0x040234D1 RID: 144593
 		public const int Name = 0;
 
-		// Token: 0x040281A5 RID: 164261
+		// Token: 0x040234D2 RID: 144594
 		public const int DoneItem = 1;
 
-		// Token: 0x040281A6 RID: 164262
+		// Token: 0x040234D3 RID: 144595
 		public const int LockItem = 2;
 
-		// Token: 0x040281A7 RID: 164263
+		// Token: 0x040234D4 RID: 144596
 		public const int InviteBtn = 3;
 
-		// Token: 0x040281A8 RID: 164264
+		// Token: 0x040234D5 RID: 144597
 		public const int RedDotItem = 4;
 
-		// Token: 0x040281A9 RID: 164265
+		// Token: 0x040234D6 RID: 144598
 		public const int Texture = 5;
 	}
 
-	// Token: 0x020079D6 RID: 31190
+	// Token: 0x02006B60 RID: 27488
 	private class EComponentDefine
 	{
-		// Token: 0x040281AA RID: 164266
+		// Token: 0x040234D7 RID: 144599
 		public const int ScrollView = 0;
 
-		// Token: 0x040281AB RID: 164267
+		// Token: 0x040234D8 RID: 144600
 		public const int ScrollItem = 1;
 	}
 }

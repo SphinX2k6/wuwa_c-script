@@ -3,21 +3,21 @@ using CSharpScript.Core.Common;
 
 namespace CSharpScript.Launcher.BaseConfig
 {
-	// Token: 0x02000254 RID: 596
+	// Token: 0x02000259 RID: 601
 	[EnumExtensions]
 	public enum TBuildInfoKey
 	{
-		// Token: 0x0400098E RID: 2446
+		// Token: 0x040009D6 RID: 2518
 		BuildId,
-		// Token: 0x0400098F RID: 2447
+		// Token: 0x040009D7 RID: 2519
 		Changelist,
-		// Token: 0x04000990 RID: 2448
+		// Token: 0x040009D8 RID: 2520
 		JSDebugId,
-		// Token: 0x04000991 RID: 2449
+		// Token: 0x040009D9 RID: 2521
 		PatchVersion,
-		// Token: 0x04000992 RID: 2450
+		// Token: 0x040009DA RID: 2522
 		Stream,
-		// Token: 0x04000993 RID: 2451
+		// Token: 0x040009DB RID: 2523
 		WaterMask
 	}
 }

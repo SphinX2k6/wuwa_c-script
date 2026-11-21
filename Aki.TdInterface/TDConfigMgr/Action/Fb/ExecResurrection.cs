@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002999 RID: 10649
+	// Token: 0x02002C85 RID: 11397
 	public class ExecResurrection : ActionParams
 	{
-		// Token: 0x0600EBB6 RID: 60342 RVA: 0x00227680 File Offset: 0x00225880
-		[NullableContext(1)]
+		// Token: 0x0600FA45 RID: 64069 RVA: 0x00244F4C File Offset: 0x0024314C
 		public static ExecResurrection Create(IExecResurrection? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004A46 RID: 19014
-		// (get) Token: 0x0600EBB7 RID: 60343 RVA: 0x0022769F File Offset: 0x0022589F
+		// Token: 0x17004DE9 RID: 19945
+		// (get) Token: 0x0600FA46 RID: 64070 RVA: 0x00244F6B File Offset: 0x0024316B
 		public virtual int ReviveId
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040081CD RID: 33229
+		// Token: 0x040088B9 RID: 35001
 		private IExecResurrection Instance;
 	}
 }

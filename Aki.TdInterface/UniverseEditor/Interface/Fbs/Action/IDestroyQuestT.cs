@@ -2,25 +2,25 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006598 RID: 26008
+	// Token: 0x02006C00 RID: 27648
 	public class IDestroyQuestT
 	{
-		// Token: 0x1700C125 RID: 49445
-		// (get) Token: 0x0602D1DB RID: 184795 RVA: 0x0063037A File Offset: 0x0062E57A
-		// (set) Token: 0x0602D1DC RID: 184796 RVA: 0x00630382 File Offset: 0x0062E582
+		// Token: 0x1700CAB4 RID: 51892
+		// (get) Token: 0x0602F95F RID: 194911 RVA: 0x0067C53E File Offset: 0x0067A73E
+		// (set) Token: 0x0602F960 RID: 194912 RVA: 0x0067C546 File Offset: 0x0067A746
 		public int QuestId { get; set; }
 
-		// Token: 0x1700C126 RID: 49446
-		// (get) Token: 0x0602D1DD RID: 184797 RVA: 0x0063038B File Offset: 0x0062E58B
-		// (set) Token: 0x0602D1DE RID: 184798 RVA: 0x00630393 File Offset: 0x0062E593
+		// Token: 0x1700CAB5 RID: 51893
+		// (get) Token: 0x0602F961 RID: 194913 RVA: 0x0067C54F File Offset: 0x0067A74F
+		// (set) Token: 0x0602F962 RID: 194914 RVA: 0x0067C557 File Offset: 0x0067A757
 		public bool IsDestroy { get; set; }
 
-		// Token: 0x1700C127 RID: 49447
-		// (get) Token: 0x0602D1DF RID: 184799 RVA: 0x0063039C File Offset: 0x0062E59C
-		// (set) Token: 0x0602D1E0 RID: 184800 RVA: 0x006303A4 File Offset: 0x0062E5A4
+		// Token: 0x1700CAB6 RID: 51894
+		// (get) Token: 0x0602F963 RID: 194915 RVA: 0x0067C560 File Offset: 0x0067A760
+		// (set) Token: 0x0602F964 RID: 194916 RVA: 0x0067C568 File Offset: 0x0067A768
 		public byte NullMask { get; set; }
 
-		// Token: 0x0602D1E1 RID: 184801 RVA: 0x006303AD File Offset: 0x0062E5AD
+		// Token: 0x0602F965 RID: 194917 RVA: 0x0067C571 File Offset: 0x0067A771
 		public IDestroyQuestT()
 		{
 			this.QuestId = 0;

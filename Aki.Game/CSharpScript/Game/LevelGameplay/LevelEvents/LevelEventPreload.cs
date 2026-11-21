@@ -10,23 +10,23 @@ using Cysharp.Threading.Tasks;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B5A RID: 27482
+	// Token: 0x02005CD2 RID: 23762
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class LevelEventPreload : LevelEventBase
 	{
-		// Token: 0x060441DA RID: 279002 RVA: 0x010C3C6D File Offset: 0x010C1E6D
+		// Token: 0x0603A32C RID: 238380 RVA: 0x0106D821 File Offset: 0x0106BA21
 		public LevelEventPreload(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060441DB RID: 279003 RVA: 0x010C3C76 File Offset: 0x010C1E76
+		// Token: 0x0603A32D RID: 238381 RVA: 0x0106D82A File Offset: 0x0106BA2A
 		protected override void ExecuteInGm(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x060441DC RID: 279004 RVA: 0x010C3C84 File Offset: 0x010C1E84
+		// Token: 0x0603A32E RID: 238382 RVA: 0x0106D838 File Offset: 0x0106BA38
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
 			PreloadAction preloadAction = inParams as PreloadAction;
@@ -68,7 +68,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			base.FinishExecute(true, false, true);
 		}
 
-		// Token: 0x060441DD RID: 279005 RVA: 0x010C3DBC File Offset: 0x010C1FBC
+		// Token: 0x0603A32F RID: 238383 RVA: 0x0106D970 File Offset: 0x0106BB70
 		private unsafe void PreloadRole(PreloadAction @params)
 		{
 			IPreloadCharacterType preloadObjectType = @params.PreloadObjectType;
@@ -138,7 +138,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}, 60000, true, false);
 		}
 
-		// Token: 0x060441DE RID: 279006 RVA: 0x010C3F78 File Offset: 0x010C2178
+		// Token: 0x0603A330 RID: 238384 RVA: 0x0106DB2C File Offset: 0x0106BD2C
 		private void PreloadLinkRes(PreloadAction @params)
 		{
 			IPreloadLinkResource config = @params.PreloadObjectType as IPreloadLinkResource;
@@ -166,7 +166,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			});
 		}
 
-		// Token: 0x0402393C RID: 145724
+		// Token: 0x0401EBDE RID: 125918
 		public const int WAITE_ENTITY_PRELOAD_TIME = 60000;
 	}
 }

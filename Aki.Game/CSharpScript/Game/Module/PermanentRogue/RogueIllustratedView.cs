@@ -9,18 +9,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PermanentRogue
 {
-	// Token: 0x0200531C RID: 21276
+	// Token: 0x020042EC RID: 17132
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RogueIllustratedView : UiViewBase
 	{
-		// Token: 0x06036695 RID: 222869 RVA: 0x00CE0BF5 File Offset: 0x00CDEDF5
+		// Token: 0x0602B591 RID: 177553 RVA: 0x00C2E5C5 File Offset: 0x00C2C7C5
 		[NullableContext(1)]
 		public RogueIllustratedView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06036696 RID: 222870 RVA: 0x00CE0C00 File Offset: 0x00CDEE00
+		// Token: 0x0602B592 RID: 177554 RVA: 0x00C2E5D0 File Offset: 0x00C2C7D0
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -39,7 +39,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			};
 		}
 
-		// Token: 0x06036697 RID: 222871 RVA: 0x00CE0CD8 File Offset: 0x00CDEED8
+		// Token: 0x0602B593 RID: 177555 RVA: 0x00C2E6A8 File Offset: 0x00C2C8A8
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RogueIllustratedView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -50,27 +50,27 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06036698 RID: 222872 RVA: 0x00CE0D1C File Offset: 0x00CDEF1C
+		// Token: 0x0602B594 RID: 177556 RVA: 0x00C2E6EC File Offset: 0x00C2C8EC
 		protected override void OnStart()
 		{
 			base.GetButton(4).RootUIComp.Get().SetUIActive(false);
 			base.GetButton(5).RootUIComp.Get().SetUIActive(false);
 		}
 
-		// Token: 0x06036699 RID: 222873 RVA: 0x00CE0D5D File Offset: 0x00CDEF5D
+		// Token: 0x0602B595 RID: 177557 RVA: 0x00C2E72D File Offset: 0x00C2C92D
 		protected override void OnBeforeShow()
 		{
 			this.RefreshBtn();
 			this.BindRedDot();
 		}
 
-		// Token: 0x0603669A RID: 222874 RVA: 0x00CE0D6B File Offset: 0x00CDEF6B
+		// Token: 0x0602B596 RID: 177558 RVA: 0x00C2E73B File Offset: 0x00C2C93B
 		protected override void OnBeforeHide()
 		{
 			this.UnbindRedDot();
 		}
 
-		// Token: 0x0603669B RID: 222875 RVA: 0x00CE0D73 File Offset: 0x00CDEF73
+		// Token: 0x0602B597 RID: 177559 RVA: 0x00C2E743 File Offset: 0x00C2C943
 		protected override void OnBeforeDestroy()
 		{
 			this.CaptionItem = null;
@@ -79,53 +79,53 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			this.BtnMap = null;
 		}
 
-		// Token: 0x0603669C RID: 222876 RVA: 0x00CE0D91 File Offset: 0x00CDEF91
+		// Token: 0x0602B598 RID: 177560 RVA: 0x00C2E761 File Offset: 0x00C2C961
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.PermanentRogueRewardUpdate, new Action(this.OnRefreshAward));
 		}
 
-		// Token: 0x0603669D RID: 222877 RVA: 0x00CE0DAF File Offset: 0x00CDEFAF
+		// Token: 0x0602B599 RID: 177561 RVA: 0x00C2E77F File Offset: 0x00C2C97F
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.PermanentRogueRewardUpdate, new Action(this.OnRefreshAward));
 		}
 
-		// Token: 0x0603669E RID: 222878 RVA: 0x00CE0DCD File Offset: 0x00CDEFCD
+		// Token: 0x0602B59A RID: 177562 RVA: 0x00C2E79D File Offset: 0x00C2C99D
 		private void OnClickBack()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x0603669F RID: 222879 RVA: 0x00CE0DD6 File Offset: 0x00CDEFD6
+		// Token: 0x0602B59B RID: 177563 RVA: 0x00C2E7A6 File Offset: 0x00C2C9A6
 		private void OnClickToken()
 		{
 			UiManager.Instance.OpenView(EUiViewName.RogueTokenIllustratedView, null, null);
 		}
 
-		// Token: 0x060366A0 RID: 222880 RVA: 0x00CE0DE9 File Offset: 0x00CDEFE9
+		// Token: 0x0602B59C RID: 177564 RVA: 0x00C2E7B9 File Offset: 0x00C2C9B9
 		private void OnClickNormal()
 		{
 			UiManager.Instance.OpenView(EUiViewName.RogueEventIllustratedView, true, null);
 		}
 
-		// Token: 0x060366A1 RID: 222881 RVA: 0x00CE0E01 File Offset: 0x00CDF001
+		// Token: 0x0602B59D RID: 177565 RVA: 0x00C2E7D1 File Offset: 0x00C2C9D1
 		private void OnClickMap()
 		{
 			UiManager.Instance.OpenView(EUiViewName.RogueEventIllustratedView, false, null);
 		}
 
-		// Token: 0x060366A2 RID: 222882 RVA: 0x00CE0E19 File Offset: 0x00CDF019
+		// Token: 0x0602B59E RID: 177566 RVA: 0x00C2E7E9 File Offset: 0x00C2C9E9
 		private void OnClickPrev()
 		{
 		}
 
-		// Token: 0x060366A3 RID: 222883 RVA: 0x00CE0E1B File Offset: 0x00CDF01B
+		// Token: 0x0602B59F RID: 177567 RVA: 0x00C2E7EB File Offset: 0x00C2C9EB
 		private void OnClickNext()
 		{
 		}
 
-		// Token: 0x060366A4 RID: 222884 RVA: 0x00CE0E1D File Offset: 0x00CDF01D
+		// Token: 0x0602B5A0 RID: 177568 RVA: 0x00C2E7ED File Offset: 0x00C2C9ED
 		private void OnRefreshAward()
 		{
 			this.UnbindRedDot();
@@ -133,7 +133,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			this.RefreshBtn();
 		}
 
-		// Token: 0x060366A5 RID: 222885 RVA: 0x00CE0E34 File Offset: 0x00CDF034
+		// Token: 0x0602B5A1 RID: 177569 RVA: 0x00C2E804 File Offset: 0x00C2CA04
 		public void RefreshBtn()
 		{
 			Dictionary<int, int[]> typeIllustratedCountInfo = ActivityPermanentRogueModel.Instance.GetTypeIllustratedCountInfo();
@@ -192,7 +192,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			btnMap2.SetButtonDone(array3 == null || array3[0] == array3[1]);
 		}
 
-		// Token: 0x060366A6 RID: 222886 RVA: 0x00CE0FFC File Offset: 0x00CDF1FC
+		// Token: 0x0602B5A2 RID: 177570 RVA: 0x00C2E9CC File Offset: 0x00C2CBCC
 		public void BindRedDot()
 		{
 			RogueButtonItemCollection btnToken = this.BtnToken;
@@ -213,7 +213,7 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			btnMap.BindRedDot(ERedDotName.RogueResIllustratedMapTab, new int?(0));
 		}
 
-		// Token: 0x060366A7 RID: 222887 RVA: 0x00CE1056 File Offset: 0x00CDF256
+		// Token: 0x0602B5A3 RID: 177571 RVA: 0x00C2EA26 File Offset: 0x00C2CC26
 		public void UnbindRedDot()
 		{
 			this.BtnToken.UnBindRedDot();
@@ -221,16 +221,16 @@ namespace CSharpScript.Game.Module.PermanentRogue
 			this.BtnMap.UnBindRedDot();
 		}
 
-		// Token: 0x0401CC28 RID: 117800
+		// Token: 0x0401765E RID: 95838
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401CC29 RID: 117801
+		// Token: 0x0401765F RID: 95839
 		private RogueButtonItemCollection BtnToken;
 
-		// Token: 0x0401CC2A RID: 117802
+		// Token: 0x04017660 RID: 95840
 		private RogueButtonItemCollection BtnNormal;
 
-		// Token: 0x0401CC2B RID: 117803
+		// Token: 0x04017661 RID: 95841
 		private RogueButtonItemCollection BtnMap;
 	}
 }

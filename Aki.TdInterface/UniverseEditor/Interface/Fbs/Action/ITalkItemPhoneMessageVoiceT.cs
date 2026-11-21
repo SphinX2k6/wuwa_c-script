@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020072F9 RID: 29433
+	// Token: 0x02007ACE RID: 31438
 	public class ITalkItemPhoneMessageVoiceT
 	{
-		// Token: 0x1700DD72 RID: 56690
-		// (get) Token: 0x06034ED1 RID: 216785 RVA: 0x0072AFE4 File Offset: 0x007291E4
-		// (set) Token: 0x06034ED2 RID: 216786 RVA: 0x0072AFEC File Offset: 0x007291EC
+		// Token: 0x1700E96B RID: 59755
+		// (get) Token: 0x060381D7 RID: 229847 RVA: 0x0078C448 File Offset: 0x0078A648
+		// (set) Token: 0x060381D8 RID: 229848 RVA: 0x0078C450 File Offset: 0x0078A650
 		public EPhoneMessageType Type { get; set; }
 
-		// Token: 0x1700DD73 RID: 56691
-		// (get) Token: 0x06034ED3 RID: 216787 RVA: 0x0072AFF5 File Offset: 0x007291F5
-		// (set) Token: 0x06034ED4 RID: 216788 RVA: 0x0072AFFD File Offset: 0x007291FD
+		// Token: 0x1700E96C RID: 59756
+		// (get) Token: 0x060381D9 RID: 229849 RVA: 0x0078C459 File Offset: 0x0078A659
+		// (set) Token: 0x060381DA RID: 229850 RVA: 0x0078C461 File Offset: 0x0078A661
 		public EPhoneMessageVoicePushCondition PushCondition { get; set; }
 
-		// Token: 0x1700DD74 RID: 56692
-		// (get) Token: 0x06034ED5 RID: 216789 RVA: 0x0072B006 File Offset: 0x00729206
-		// (set) Token: 0x06034ED6 RID: 216790 RVA: 0x0072B00E File Offset: 0x0072920E
+		// Token: 0x1700E96D RID: 59757
+		// (get) Token: 0x060381DB RID: 229851 RVA: 0x0078C46A File Offset: 0x0078A66A
+		// (set) Token: 0x060381DC RID: 229852 RVA: 0x0078C472 File Offset: 0x0078A672
 		public bool AutoPlay { get; set; }
 
-		// Token: 0x1700DD75 RID: 56693
-		// (get) Token: 0x06034ED7 RID: 216791 RVA: 0x0072B017 File Offset: 0x00729217
-		// (set) Token: 0x06034ED8 RID: 216792 RVA: 0x0072B01F File Offset: 0x0072921F
+		// Token: 0x1700E96E RID: 59758
+		// (get) Token: 0x060381DD RID: 229853 RVA: 0x0078C47B File Offset: 0x0078A67B
+		// (set) Token: 0x060381DE RID: 229854 RVA: 0x0078C483 File Offset: 0x0078A683
 		public byte NullMask { get; set; }
 
-		// Token: 0x06034ED9 RID: 216793 RVA: 0x0072B028 File Offset: 0x00729228
+		// Token: 0x060381DF RID: 229855 RVA: 0x0078C48C File Offset: 0x0078A68C
 		public ITalkItemPhoneMessageVoiceT()
 		{
 			this.Type = EPhoneMessageType.Voice;

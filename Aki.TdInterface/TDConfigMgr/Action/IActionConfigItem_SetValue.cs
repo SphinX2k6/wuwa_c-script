@@ -1,25 +1,23 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001755 RID: 5973
+	// Token: 0x020018D6 RID: 6358
 	public class IActionConfigItem_SetValue
 	{
-		// Token: 0x04005088 RID: 20616
+		// Token: 0x040054BE RID: 21694
 		public EOnlineParticipateRule? OnlineParticipateRule;
 
-		// Token: 0x04005089 RID: 20617
+		// Token: 0x040054BF RID: 21695
 		public bool? IsDetectScreenOccupation;
 
-		// Token: 0x0400508A RID: 20618
+		// Token: 0x040054C0 RID: 21696
 		public bool? IsWithResultOnly;
 
-		// Token: 0x0400508B RID: 20619
+		// Token: 0x040054C1 RID: 21697
 		public bool? IsOperatePlayer;
 
-		// Token: 0x0400508C RID: 20620
-		[Nullable(1)]
+		// Token: 0x040054C2 RID: 21698
 		public string CnName;
 	}
 }

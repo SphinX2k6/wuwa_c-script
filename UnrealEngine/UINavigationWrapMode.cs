@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace UnrealEngine
 {
-	// Token: 0x0200218E RID: 8590
+	// Token: 0x02000718 RID: 1816
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Script/LGUI.UINavigationWrapMode")]
 	public enum UINavigationWrapMode : byte
 	{
-		// Token: 0x040116F3 RID: 71411
+		// Token: 0x04004350 RID: 17232
 		None,
-		// Token: 0x040116F4 RID: 71412
+		// Token: 0x04004351 RID: 17233
 		Wrap,
-		// Token: 0x040116F5 RID: 71413
+		// Token: 0x04004352 RID: 17234
 		Next,
-		// Token: 0x040116F6 RID: 71414
+		// Token: 0x04004353 RID: 17235
 		UINavigationWrapMode_MAX
 	}
 }

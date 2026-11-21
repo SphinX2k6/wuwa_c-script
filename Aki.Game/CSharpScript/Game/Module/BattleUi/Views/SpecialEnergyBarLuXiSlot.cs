@@ -3,10 +3,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DF5 RID: 24053
+	// Token: 0x02004DDA RID: 19930
 	public class SpecialEnergyBarLuXiSlot : SpecialEnergyBarSlot
 	{
-		// Token: 0x0603D255 RID: 250453 RVA: 0x00EB9611 File Offset: 0x00EB7811
+		// Token: 0x060321E4 RID: 205284 RVA: 0x00E0AB59 File Offset: 0x00E08D59
 		protected override void OnStart()
 		{
 			if (this.ColorState >= 0)
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.OnStart();
 		}
 
-		// Token: 0x0603D256 RID: 250454 RVA: 0x00EB962C File Offset: 0x00EB782C
+		// Token: 0x060321E5 RID: 205285 RVA: 0x00E0AB74 File Offset: 0x00E08D74
 		protected override void RefreshBarPercent(bool isStart = false)
 		{
 			if (!this.ForbidFullEffect)
@@ -38,7 +38,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			keyItem.RefreshKeyEnable(keyEnable, isStart);
 		}
 
-		// Token: 0x0603D257 RID: 250455 RVA: 0x00EB96A4 File Offset: 0x00EB78A4
+		// Token: 0x060321E6 RID: 205286 RVA: 0x00E0ABEC File Offset: 0x00E08DEC
 		public void SetColorState(int state)
 		{
 			if (this.ColorState == state)
@@ -65,10 +65,10 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0401FE05 RID: 130565
+		// Token: 0x0401A8CC RID: 108748
 		private int ColorState = -1;
 
-		// Token: 0x0401FE06 RID: 130566
+		// Token: 0x0401A8CD RID: 108749
 		public bool ForbidFullEffect;
 	}
 }

@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02001B80 RID: 7040
+// Token: 0x0200103F RID: 4159
 public enum EFloroRanchCommonTipType
 {
-	// Token: 0x04006027 RID: 24615
+	// Token: 0x040060F6 RID: 24822
 	Entity,
-	// Token: 0x04006028 RID: 24616
+	// Token: 0x040060F7 RID: 24823
 	Currency,
-	// Token: 0x04006029 RID: 24617
+	// Token: 0x040060F8 RID: 24824
 	Toy,
-	// Token: 0x0400602A RID: 24618
+	// Token: 0x040060F9 RID: 24825
 	Card
 }

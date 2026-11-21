@@ -21,25 +21,15 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 {
-	// Token: 0x02007130 RID: 28976
+	// Token: 0x0200635E RID: 25438
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class FollowShooterComponent : EntityComponent, IFollower
 	{
-		// Token: 0x17009D38 RID: 40248
-		// (get) Token: 0x06046BEF RID: 289775 RVA: 0x011D2C39 File Offset: 0x011D0E39
-		[Nullable(new byte[]
+		// Token: 0x17007507 RID: 29959
+		// (get) Token: 0x0603DA3D RID: 252477 RVA: 0x011DB7A5 File Offset: 0x011D99A5
+		public override Type[] Dependencies
 		{
-			2,
-			1
-		})]
-		public new static Type[] Dependencies
-		{
-			[return: Nullable(new byte[]
-			{
-				2,
-				1
-			})]
 			get
 			{
 				return new Type[]
@@ -52,7 +42,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x06046BF0 RID: 289776 RVA: 0x011D2C78 File Offset: 0x011D0E78
+		// Token: 0x0603DA3E RID: 252478 RVA: 0x011DB7E4 File Offset: 0x011D99E4
 		[NullableContext(2)]
 		protected override bool OnInitData(IEntityArgs args = null)
 		{
@@ -97,7 +87,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return true;
 		}
 
-		// Token: 0x06046BF1 RID: 289777 RVA: 0x011D2DA0 File Offset: 0x011D0FA0
+		// Token: 0x0603DA3F RID: 252479 RVA: 0x011DB90C File Offset: 0x011D9B0C
 		protected override bool OnStart()
 		{
 			base.OnStart();
@@ -127,7 +117,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return true;
 		}
 
-		// Token: 0x06046BF2 RID: 289778 RVA: 0x011D2EA4 File Offset: 0x011D10A4
+		// Token: 0x0603DA40 RID: 252480 RVA: 0x011DBA10 File Offset: 0x011D9C10
 		protected override bool OnEnd()
 		{
 			this.UnPossessed();
@@ -194,7 +184,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return base.OnEnd();
 		}
 
-		// Token: 0x06046BF3 RID: 289779 RVA: 0x011D3088 File Offset: 0x011D1288
+		// Token: 0x0603DA41 RID: 252481 RVA: 0x011DBBF4 File Offset: 0x011D9DF4
 		protected override void OnTick(float delta)
 		{
 			CharacterSelfCenterComponent characterSelfCenterComp = this.CharacterSelfCenterComp;
@@ -203,13 +193,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.UpdateTransform(num * delta);
 		}
 
-		// Token: 0x06046BF4 RID: 289780 RVA: 0x011D30BE File Offset: 0x011D12BE
+		// Token: 0x0603DA42 RID: 252482 RVA: 0x011DBC2A File Offset: 0x011D9E2A
 		public bool GetEnable()
 		{
 			return this.IsEnable;
 		}
 
-		// Token: 0x06046BF5 RID: 289781 RVA: 0x011D30C8 File Offset: 0x011D12C8
+		// Token: 0x0603DA43 RID: 252483 RVA: 0x011DBC34 File Offset: 0x011D9E34
 		private bool SetEnableInternal(bool enable)
 		{
 			if (this.FollowShooterConfig == null || !this.IsAutonomousProxy || this.GetEnable() == enable)
@@ -297,7 +287,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return false;
 		}
 
-		// Token: 0x06046BF6 RID: 289782 RVA: 0x011D3326 File Offset: 0x011D1526
+		// Token: 0x0603DA44 RID: 252484 RVA: 0x011DBE92 File Offset: 0x011DA092
 		public bool SetEnable(bool enable, BPEEnableFollowShooter enableType, string reason = "")
 		{
 			if (!this.IsAutonomousProxy)
@@ -313,7 +303,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return enablePriorityManager2 != null && enablePriorityManager2.TryExit(enableType, reason);
 		}
 
-		// Token: 0x06046BF7 RID: 289783 RVA: 0x011D335C File Offset: 0x011D155C
+		// Token: 0x0603DA45 RID: 252485 RVA: 0x011DBEC8 File Offset: 0x011DA0C8
 		private bool CanEnable()
 		{
 			if (SceneTeamModel.Instance.CurrentGroupType.GetValueOrDefault() != ETeamGroupType.Battle)
@@ -342,7 +332,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return true;
 		}
 
-		// Token: 0x06046BF8 RID: 289784 RVA: 0x011D33F8 File Offset: 0x011D15F8
+		// Token: 0x0603DA46 RID: 252486 RVA: 0x011DBF64 File Offset: 0x011DA164
 		public void Possessed()
 		{
 			if (this.FollowShooterConfig == null || !this.IsAutonomousProxy || this.IsPossessed)
@@ -377,7 +367,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x06046BF9 RID: 289785 RVA: 0x011D3580 File Offset: 0x011D1780
+		// Token: 0x0603DA47 RID: 252487 RVA: 0x011DC0EC File Offset: 0x011DA2EC
 		public void UnPossessed()
 		{
 			if (this.FollowShooterConfig == null || !this.IsAutonomousProxy || !this.IsPossessed)
@@ -405,7 +395,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			EventSystem.Instance.Emit(EEventName.OnPlayerFollowerUnPossessed);
 		}
 
-		// Token: 0x06046BFA RID: 289786 RVA: 0x011D36D0 File Offset: 0x011D18D0
+		// Token: 0x0603DA48 RID: 252488 RVA: 0x011DC23C File Offset: 0x011DA43C
 		[NullableContext(2)]
 		private void FollowShooterConfigChanged(BP_FollowShooterConfig_C config)
 		{
@@ -417,7 +407,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x06046BFB RID: 289787 RVA: 0x011D3710 File Offset: 0x011D1910
+		// Token: 0x0603DA49 RID: 252489 RVA: 0x011DC27C File Offset: 0x011DA47C
 		public void ReloadConfig(string configPath)
 		{
 			BP_FollowShooterConfig_C bp_FollowShooterConfig_C = ResourceSystem.Instance.Load<BP_FollowShooterConfig_C>(configPath, "js_undefined");
@@ -428,7 +418,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.FollowShooterConfigChanged(bp_FollowShooterConfig_C);
 		}
 
-		// Token: 0x06046BFC RID: 289788 RVA: 0x011D3748 File Offset: 0x011D1948
+		// Token: 0x0603DA4A RID: 252490 RVA: 0x011DC2B4 File Offset: 0x011DA4B4
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -445,7 +435,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			return <AsyncReloadConfig>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06046BFD RID: 289789 RVA: 0x011D3794 File Offset: 0x011D1994
+		// Token: 0x0603DA4B RID: 252491 RVA: 0x011DC300 File Offset: 0x011DA500
 		[NullableContext(2)]
 		public void ResetConfig(BP_FollowShooterConfig_C config)
 		{
@@ -533,7 +523,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.RefreshTagListener();
 		}
 
-		// Token: 0x06046BFE RID: 289790 RVA: 0x011D3930 File Offset: 0x011D1B30
+		// Token: 0x0603DA4C RID: 252492 RVA: 0x011DC49C File Offset: 0x011DA69C
 		private void UpdateBornLocation()
 		{
 			if (this.ActorComponent == null)
@@ -578,7 +568,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.ActorComponent.SetActorLocation(vector.ToUeVector(false), "UpdateBornPosition", false);
 		}
 
-		// Token: 0x06046BFF RID: 289791 RVA: 0x011D3A1C File Offset: 0x011D1C1C
+		// Token: 0x0603DA4D RID: 252493 RVA: 0x011DC588 File Offset: 0x011DA788
 		private void UpdateBornRotation()
 		{
 			if (this.FollowShooterConfig == null)
@@ -671,7 +661,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.ActorComponent.SetActorRotation(rotator.ToUeRotator(), "UpdateBornRotation", false);
 		}
 
-		// Token: 0x06046C00 RID: 289792 RVA: 0x011D3CFE File Offset: 0x011D1EFE
+		// Token: 0x0603DA4E RID: 252494 RVA: 0x011DC86A File Offset: 0x011DAA6A
 		private void OnChangeRole(EntityHandle newEntity, [Nullable(2)] EntityHandle oldEntity)
 		{
 			this.RefreshCurrentRoleTagsListener();
@@ -680,13 +670,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.OnEnableConditionChange();
 		}
 
-		// Token: 0x06046C01 RID: 289793 RVA: 0x011D3D18 File Offset: 0x011D1F18
+		// Token: 0x0603DA4F RID: 252495 RVA: 0x011DC884 File Offset: 0x011DAA84
 		private void OnEnableConditionChange(int tagId, bool tagExist)
 		{
 			this.OnEnableConditionChange();
 		}
 
-		// Token: 0x06046C02 RID: 289794 RVA: 0x011D3D20 File Offset: 0x011D1F20
+		// Token: 0x0603DA50 RID: 252496 RVA: 0x011DC88C File Offset: 0x011DAA8C
 		private void OnEnableConditionChange()
 		{
 			if (this.CanEnable())
@@ -711,19 +701,19 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			enablePriorityManager2.TryExit(BPEEnableFollowShooter.GameAbility, "");
 		}
 
-		// Token: 0x06046C03 RID: 289795 RVA: 0x011D3D78 File Offset: 0x011D1F78
+		// Token: 0x0603DA51 RID: 252497 RVA: 0x011DC8E4 File Offset: 0x011DAAE4
 		private void OnEnterVehicle(VehiclePassengerInfo info, bool byChangeRole)
 		{
 			this.RefreshInputLayer();
 		}
 
-		// Token: 0x06046C04 RID: 289796 RVA: 0x011D3D80 File Offset: 0x011D1F80
+		// Token: 0x0603DA52 RID: 252498 RVA: 0x011DC8EC File Offset: 0x011DAAEC
 		private void OnLeaveVehicle(VehiclePassengerInfo info, bool byChangeRole)
 		{
 			this.RefreshInputLayer();
 		}
 
-		// Token: 0x06046C05 RID: 289797 RVA: 0x011D3D88 File Offset: 0x011D1F88
+		// Token: 0x0603DA53 RID: 252499 RVA: 0x011DC8F4 File Offset: 0x011DAAF4
 		private void OnPreBulletCreateFromAnimNotify()
 		{
 			BP_FollowShooterConfig_C followShooterConfig = this.FollowShooterConfig;
@@ -748,7 +738,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			BulletModel.Instance.SetEntityIdByCustomKey(base.Entity.Id, text, entityId);
 		}
 
-		// Token: 0x06046C06 RID: 289798 RVA: 0x011D3E10 File Offset: 0x011D2010
+		// Token: 0x0603DA54 RID: 252500 RVA: 0x011DC97C File Offset: 0x011DAB7C
 		private void OnListenedHasAnyTagChange(int tagId, bool tagExist)
 		{
 			if (this.TagComponent == null)
@@ -790,7 +780,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x06046C07 RID: 289799 RVA: 0x011D3EE0 File Offset: 0x011D20E0
+		// Token: 0x0603DA55 RID: 252501 RVA: 0x011DCA4C File Offset: 0x011DAC4C
 		private void RefreshSelfTags()
 		{
 			if (this.TagComponent == null)
@@ -828,7 +818,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x06046C08 RID: 289800 RVA: 0x011D3F98 File Offset: 0x011D2198
+		// Token: 0x0603DA56 RID: 252502 RVA: 0x011DCB04 File Offset: 0x011DAD04
 		private void OnAttachToFollowingTagAddOrRemove(int tagId, bool tagExist)
 		{
 			FName targetName;
@@ -903,7 +893,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x06046C09 RID: 289801 RVA: 0x011D4128 File Offset: 0x011D2328
+		// Token: 0x0603DA57 RID: 252503 RVA: 0x011DCC94 File Offset: 0x011DAE94
 		private void OnHideTagAddOrRemove(int tagId, bool tagExist)
 		{
 			FName fname2;
@@ -922,7 +912,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x06046C0A RID: 289802 RVA: 0x011D41A6 File Offset: 0x011D23A6
+		// Token: 0x0603DA58 RID: 252504 RVA: 0x011DCD12 File Offset: 0x011DAF12
 		private void OnDisableInputTagAddOrRemove(int tagId, bool tagExist)
 		{
 			if (tagExist)
@@ -933,7 +923,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.RefreshInputLayer();
 		}
 
-		// Token: 0x06046C0B RID: 289803 RVA: 0x011D41B8 File Offset: 0x011D23B8
+		// Token: 0x0603DA59 RID: 252505 RVA: 0x011DCD24 File Offset: 0x011DAF24
 		private void ListenForTag(FGameplayTag gameplayTag, BaseTagComponent.TTagSwitchedCallback tagListener, FName cacheName = default(FName))
 		{
 			int num = gameplayTag.TagId();
@@ -953,7 +943,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x06046C0C RID: 289804 RVA: 0x011D4220 File Offset: 0x011D2420
+		// Token: 0x0603DA5A RID: 252506 RVA: 0x011DCD8C File Offset: 0x011DAF8C
 		private void RefreshTagListener()
 		{
 			if (this.TagComponent != null && this.ActorComponent != null)
@@ -1001,7 +991,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x06046C0D RID: 289805 RVA: 0x011D43FC File Offset: 0x011D25FC
+		// Token: 0x0603DA5B RID: 252507 RVA: 0x011DCF68 File Offset: 0x011DB168
 		private void ClearTagListeners()
 		{
 			foreach (ITagTask tagTask in this.TagIdToTagTask.Values)
@@ -1012,7 +1002,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.ListenTagToCompTag.Clear();
 		}
 
-		// Token: 0x06046C0E RID: 289806 RVA: 0x011D4468 File Offset: 0x011D2668
+		// Token: 0x0603DA5C RID: 252508 RVA: 0x011DCFD4 File Offset: 0x011DB1D4
 		private void RefreshCurrentRoleTagsListener()
 		{
 			if (this.FollowShooterConfig == null)
@@ -1068,7 +1058,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x06046C0F RID: 289807 RVA: 0x011D45AC File Offset: 0x011D27AC
+		// Token: 0x0603DA5D RID: 252509 RVA: 0x011DD118 File Offset: 0x011DB318
 		private void RemoveCurrentRoleTagsListener()
 		{
 			foreach (ITagTask tagTask in this.CurrentRoleTagListeners)
@@ -1078,7 +1068,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.CurrentRoleTagListeners.Clear();
 		}
 
-		// Token: 0x06046C10 RID: 289808 RVA: 0x011D4608 File Offset: 0x011D2808
+		// Token: 0x0603DA5E RID: 252510 RVA: 0x011DD174 File Offset: 0x011DB374
 		private void RefreshInputLayer()
 		{
 			if (this.GetEnable() && this.InputLayer != null)
@@ -1114,7 +1104,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x06046C11 RID: 289809 RVA: 0x011D46E3 File Offset: 0x011D28E3
+		// Token: 0x0603DA5F RID: 252511 RVA: 0x011DD24F File Offset: 0x011DB44F
 		private void UnRegisterInput()
 		{
 			if (this.InputLayer != null && this.IsRegisterInput)
@@ -1124,7 +1114,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x06046C12 RID: 289810 RVA: 0x011D470C File Offset: 0x011D290C
+		// Token: 0x0603DA60 RID: 252512 RVA: 0x011DD278 File Offset: 0x011DB478
 		[NullableContext(2)]
 		public void ExecuteCommand(SInputCommand command)
 		{
@@ -1143,7 +1133,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x06046C13 RID: 289811 RVA: 0x011D4798 File Offset: 0x011D2998
+		// Token: 0x0603DA61 RID: 252513 RVA: 0x011DD304 File Offset: 0x011DB504
 		private void UploadData()
 		{
 			BP_FollowShooterConfig_C followShooterConfig = this.FollowShooterConfig;
@@ -1190,7 +1180,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			LogReportController.Instance.UnitLogReport(followShooterUseLogData);
 		}
 
-		// Token: 0x06046C14 RID: 289812 RVA: 0x011D488C File Offset: 0x011D2A8C
+		// Token: 0x0603DA62 RID: 252514 RVA: 0x011DD3F8 File Offset: 0x011DB5F8
 		private void RefreshLockOnTarget(float delta)
 		{
 			if (this.GetEnable())
@@ -1217,7 +1207,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x06046C15 RID: 289813 RVA: 0x011D4908 File Offset: 0x011D2B08
+		// Token: 0x0603DA63 RID: 252515 RVA: 0x011DD474 File Offset: 0x011DB674
 		private void UpdateTransform(float delta)
 		{
 			if (!this.GetEnable())
@@ -1242,7 +1232,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			FollowShooterDrone.UpdateTransformToAimAtLockOnTarget(base.Entity, aactor, this.LastAutoShootTime, this.FollowShooterConfig, delta);
 		}
 
-		// Token: 0x06046C16 RID: 289814 RVA: 0x011D49C4 File Offset: 0x011D2BC4
+		// Token: 0x0603DA64 RID: 252516 RVA: 0x011DD530 File Offset: 0x011DB730
 		private unsafe void OnAddMaterialController(PD_CharacterControllerData_C data, [Nullable(2)] UObject userData, int handle)
 		{
 			if (SundryModel.Instance.GetModuleDebugLevel("FollowShooterComponent") >= 0)
@@ -1264,7 +1254,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x06046C17 RID: 289815 RVA: 0x011D4A88 File Offset: 0x011D2C88
+		// Token: 0x0603DA65 RID: 252517 RVA: 0x011DD5F4 File Offset: 0x011DB7F4
 		private unsafe void OnRemoveMaterialController(int handle)
 		{
 			if (SundryModel.Instance.GetModuleDebugLevel("FollowShooterComponent") >= 0)
@@ -1285,13 +1275,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x06046C18 RID: 289816 RVA: 0x011D4B45 File Offset: 0x011D2D45
+		// Token: 0x0603DA66 RID: 252518 RVA: 0x011DD6B1 File Offset: 0x011DB8B1
 		public int[] GetApplyTriggerRoles()
 		{
 			return this.ApplyTriggerRoles;
 		}
 
-		// Token: 0x06046C19 RID: 289817 RVA: 0x011D4B50 File Offset: 0x011D2D50
+		// Token: 0x0603DA67 RID: 252519 RVA: 0x011DD6BC File Offset: 0x011DB8BC
 		private void LoadSummonConfig()
 		{
 			CreatureDataComponent creatureDataComp = this.CreatureDataComp;
@@ -1317,7 +1307,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.ApplyTriggerRoles = config.Value.GetApplyTriggerRolesArray();
 		}
 
-		// Token: 0x06046C1A RID: 289818 RVA: 0x011D4BB2 File Offset: 0x011D2DB2
+		// Token: 0x0603DA68 RID: 252520 RVA: 0x011DD71E File Offset: 0x011DB91E
 		private void RegisterBuffTriggerListener()
 		{
 			if (!this.IsAutonomousProxy || this.ApplyTriggerRoles == null || this.ApplyTriggerRoles.Length == 0)
@@ -1327,7 +1317,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			EventSystem.Instance.AddWithTarget<EBuffTriggerType, BaseBuffComponent, Partial_RequirementPayload>(base.Entity, EEventName.OnBuffTriggerEvent, new Action<EBuffTriggerType, BaseBuffComponent, Partial_RequirementPayload>(this.OnBuffTriggerEvent));
 		}
 
-		// Token: 0x06046C1B RID: 289819 RVA: 0x011D4BF0 File Offset: 0x011D2DF0
+		// Token: 0x0603DA69 RID: 252521 RVA: 0x011DD75C File Offset: 0x011DB95C
 		private void UnregisterBuffTriggerListener()
 		{
 			if (EventSystem.Instance.HasWithTarget<EBuffTriggerType, BaseBuffComponent, Partial_RequirementPayload>(base.Entity, EEventName.OnBuffTriggerEvent, new Action<EBuffTriggerType, BaseBuffComponent, Partial_RequirementPayload>(this.OnBuffTriggerEvent)))
@@ -1336,7 +1326,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x06046C1C RID: 289820 RVA: 0x011D4C3C File Offset: 0x011D2E3C
+		// Token: 0x0603DA6A RID: 252522 RVA: 0x011DD7A8 File Offset: 0x011DB9A8
 		private void OnBuffTriggerEvent(EBuffTriggerType passiveEffectType, [Nullable(2)] BaseBuffComponent opponentBuffComp, Partial_RequirementPayload payload)
 		{
 			Entity entity = FollowUtils.ShouldForwardToFrontChar(base.Entity);
@@ -1354,7 +1344,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			}
 		}
 
-		// Token: 0x06046C1D RID: 289821 RVA: 0x011D4C7C File Offset: 0x011D2E7C
+		// Token: 0x0603DA6B RID: 252523 RVA: 0x011DD7E8 File Offset: 0x011DB9E8
 		private void RegisterEventForwardListeners()
 		{
 			if (!this.IsAutonomousProxy || this.ApplyTriggerRoles == null || this.ApplyTriggerRoles.Length == 0)
@@ -1373,7 +1363,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			EventSystem.Instance.AddWithTarget<Entity, Entity, RequirementPayload, DamageResult, FVectorDouble>(base.Entity, EEventName.CharDamage, new Action<Entity, Entity, RequirementPayload, DamageResult, FVectorDouble>(this.<RegisterEventForwardListeners>g__CharDamageForwardListener|80_4));
 		}
 
-		// Token: 0x06046C1E RID: 289822 RVA: 0x011D4DBC File Offset: 0x011D2FBC
+		// Token: 0x0603DA6C RID: 252524 RVA: 0x011DD928 File Offset: 0x011DBB28
 		private void UnregisterEventForwardListeners()
 		{
 			foreach (KeyValuePair<EEventName, object> keyValuePair in this.EventForwardListeners)
@@ -1391,7 +1381,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			this.EventForwardListeners.Clear();
 		}
 
-		// Token: 0x06046C1F RID: 289823 RVA: 0x011D4E58 File Offset: 0x011D3058
+		// Token: 0x0603DA6D RID: 252525 RVA: 0x011DD9C4 File Offset: 0x011DBBC4
 		private void ForwardEventToFrontChar(EEventName originalEventName, [Nullable(new byte[]
 		{
 			1,
@@ -1406,7 +1396,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			SceneTeamController.Instance.EmitEvent<EEventName, object[]>(entity, EEventName.FollowShooterForwardEvent, originalEventName, args);
 		}
 
-		// Token: 0x06046C20 RID: 289824 RVA: 0x011D4E84 File Offset: 0x011D3084
+		// Token: 0x0603DA6E RID: 252526 RVA: 0x011DD9F0 File Offset: 0x011DBBF0
 		public override bool ClearComponent(EntityComponent componentTemplate)
 		{
 			if (!base.ClearComponent(componentTemplate))
@@ -1414,231 +1404,192 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 				return false;
 			}
 			FollowShooterComponent followShooterComponent = (FollowShooterComponent)componentTemplate;
-			if (base.CanResetComponentProperty("CreatureDataComp"))
+			if (followShooterComponent.CreatureDataComp == null)
 			{
-				if (followShooterComponent.CreatureDataComp == null)
-				{
-					this.CreatureDataComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CreatureDataComponent>(this.CreatureDataComp), "CreatureDataComp"))
-				{
-					return false;
-				}
+				this.CreatureDataComp = null;
 			}
-			if (base.CanResetComponentProperty("SkillComponent"))
-			{
-				if (followShooterComponent.SkillComponent == null)
-				{
-					this.SkillComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterSkillComponent>(this.SkillComponent), "SkillComponent"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TagComponent"))
-			{
-				if (followShooterComponent.TagComponent == null)
-				{
-					this.TagComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BaseTagComponent>(this.TagComponent), "TagComponent"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("ActorComponent"))
-			{
-				if (followShooterComponent.ActorComponent == null)
-				{
-					this.ActorComponent = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterActorComponent>(this.ActorComponent), "ActorComponent"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("CharacterSelfCenterComp"))
-			{
-				if (followShooterComponent.CharacterSelfCenterComp == null)
-				{
-					this.CharacterSelfCenterComp = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CharacterSelfCenterComponent>(this.CharacterSelfCenterComp), "CharacterSelfCenterComp"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("InputLayer"))
-			{
-				if (followShooterComponent.InputLayer == null)
-				{
-					this.InputLayer = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<FollowShooterInputLayer>(this.InputLayer), "InputLayer"))
-				{
-					return false;
-				}
-			}
-			if (base.CanResetComponentProperty("TagModifierList") && followShooterComponent.TagModifierList != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<TagModifier>>(this.TagModifierList), "TagModifierList"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CreatureDataComp), "CreatureDataComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("ListenTagToCheckIndexMap") && followShooterComponent.ListenTagToCheckIndexMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, HashSet<int>>>(this.ListenTagToCheckIndexMap), "ListenTagToCheckIndexMap"))
+			if (followShooterComponent.SkillComponent == null)
+			{
+				this.SkillComponent = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.SkillComponent), "SkillComponent"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("CurrentRoleTagListeners") && followShooterComponent.CurrentRoleTagListeners != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<List<ITagTask>>(this.CurrentRoleTagListeners), "CurrentRoleTagListeners"))
+			if (followShooterComponent.TagComponent == null)
+			{
+				this.TagComponent = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagComponent), "TagComponent"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("TagIdToTagTask") && followShooterComponent.TagIdToTagTask != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, ITagTask>>(this.TagIdToTagTask), "TagIdToTagTask"))
+			if (followShooterComponent.ActorComponent == null)
+			{
+				this.ActorComponent = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ActorComponent), "ActorComponent"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("ListenTagToCompTag") && followShooterComponent.ListenTagToCompTag != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<int, FName>>(this.ListenTagToCompTag), "ListenTagToCompTag"))
+			if (followShooterComponent.CharacterSelfCenterComp == null)
+			{
+				this.CharacterSelfCenterComp = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.CharacterSelfCenterComp), "CharacterSelfCenterComp"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("EventForwardListeners") && followShooterComponent.EventForwardListeners != null && !base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<EEventName, object>>(this.EventForwardListeners), "EventForwardListeners"))
+			if (followShooterComponent.InputLayer == null)
+			{
+				this.InputLayer = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.InputLayer), "InputLayer"))
 			{
 				return false;
 			}
-			if (base.CanResetComponentProperty("UsedSkill"))
+			if (followShooterComponent.TagModifierList != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagModifierList), "TagModifierList"))
 			{
-				this.UsedSkill = followShooterComponent.UsedSkill;
+				return false;
 			}
-			if (base.CanResetComponentProperty("DelayDisappearTimer"))
+			if (followShooterComponent.ListenTagToCheckIndexMap != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ListenTagToCheckIndexMap), "ListenTagToCheckIndexMap"))
 			{
-				if (followShooterComponent.DelayDisappearTimer == null)
-				{
-					this.DelayDisappearTimer = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<TimerHandle>(this.DelayDisappearTimer), "DelayDisappearTimer"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("LastAutoShootTime"))
+			if (followShooterComponent.CurrentRoleTagListeners != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.CurrentRoleTagListeners), "CurrentRoleTagListeners"))
 			{
-				if (followShooterComponent.LastAutoShootTime == null)
-				{
-					this.LastAutoShootTime = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<Dictionary<string, double>>(this.LastAutoShootTime), "LastAutoShootTime"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("FollowShooterConfig"))
+			if (followShooterComponent.TagIdToTagTask != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.TagIdToTagTask), "TagIdToTagTask"))
 			{
-				if (followShooterComponent.FollowShooterConfig == null)
-				{
-					this.FollowShooterConfig = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<BP_FollowShooterConfig_C>(this.FollowShooterConfig), "FollowShooterConfig"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("LockableCategories"))
+			if (followShooterComponent.ListenTagToCompTag != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.ListenTagToCompTag), "ListenTagToCompTag"))
 			{
-				if (followShooterComponent.LockableCategories == null)
-				{
-					this.LockableCategories = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<List<IEntityCategory>>(this.LockableCategories), "LockableCategories"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("LockOnTarget"))
+			if (followShooterComponent.EventForwardListeners != null && !base.CheckClearObject(EntityComponentSystem.ClearObject(this.EventForwardListeners), "EventForwardListeners"))
 			{
-				if (followShooterComponent.LockOnTarget == null)
-				{
-					this.LockOnTarget = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<WeakReference<AActor>>(this.LockOnTarget), "LockOnTarget"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("IsAddLockOnTargetTag"))
+			this.UsedSkill = followShooterComponent.UsedSkill;
+			if (followShooterComponent.DelayDisappearTimer == null)
 			{
-				this.IsAddLockOnTargetTag = followShooterComponent.IsAddLockOnTargetTag;
+				this.DelayDisappearTimer = null;
 			}
-			if (base.CanResetComponentProperty("PlayerId"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.DelayDisappearTimer), "DelayDisappearTimer"))
 			{
-				this.PlayerId = followShooterComponent.PlayerId;
+				return false;
 			}
-			if (base.CanResetComponentProperty("IsPossessed"))
+			if (followShooterComponent.LastAutoShootTime == null)
 			{
-				this.IsPossessed = followShooterComponent.IsPossessed;
+				this.LastAutoShootTime = null;
 			}
-			if (base.CanResetComponentProperty("IsAutonomousProxy"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LastAutoShootTime), "LastAutoShootTime"))
 			{
-				this.IsAutonomousProxy = followShooterComponent.IsAutonomousProxy;
+				return false;
 			}
-			if (base.CanResetComponentProperty("LoadPromise"))
+			if (followShooterComponent.FollowShooterConfig == null)
 			{
-				if (followShooterComponent.LoadPromise == null)
-				{
-					this.LoadPromise = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CustomPromise>(this.LoadPromise), "LoadPromise"))
-				{
-					return false;
-				}
+				this.FollowShooterConfig = null;
 			}
-			if (base.CanResetComponentProperty("MaterialControllerHandles"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.FollowShooterConfig), "FollowShooterConfig"))
 			{
-				if (followShooterComponent.MaterialControllerHandles == null)
-				{
-					this.MaterialControllerHandles = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.MaterialControllerHandles), "MaterialControllerHandles"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("IsWaitingForMaterialController"))
+			if (followShooterComponent.LockableCategories == null)
 			{
-				this.IsWaitingForMaterialController = followShooterComponent.IsWaitingForMaterialController;
+				this.LockableCategories = null;
 			}
-			if (base.CanResetComponentProperty("IsEnable"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LockableCategories), "LockableCategories"))
 			{
-				this.IsEnable = followShooterComponent.IsEnable;
+				return false;
 			}
-			if (base.CanResetComponentProperty("IsRegisterInput"))
+			if (followShooterComponent.LockOnTarget == null)
 			{
-				this.IsRegisterInput = followShooterComponent.IsRegisterInput;
+				this.LockOnTarget = null;
 			}
-			if (base.CanResetComponentProperty("EnablePriorityManager"))
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LockOnTarget), "LockOnTarget"))
 			{
-				if (followShooterComponent.EnablePriorityManager == null)
-				{
-					this.EnablePriorityManager = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<CustomPriorityManager<BPEEnableFollowShooter>>(this.EnablePriorityManager), "EnablePriorityManager"))
-				{
-					return false;
-				}
+				return false;
 			}
-			if (base.CanResetComponentProperty("ApplyTriggerRoles"))
+			this.IsAddLockOnTargetTag = followShooterComponent.IsAddLockOnTargetTag;
+			this.PlayerId = followShooterComponent.PlayerId;
+			this.IsPossessed = followShooterComponent.IsPossessed;
+			this.IsAutonomousProxy = followShooterComponent.IsAutonomousProxy;
+			if (followShooterComponent.LoadPromise == null)
 			{
-				if (followShooterComponent.ApplyTriggerRoles == null)
-				{
-					this.ApplyTriggerRoles = null;
-				}
-				else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<int[]>(this.ApplyTriggerRoles), "ApplyTriggerRoles"))
-				{
-					return false;
-				}
+				this.LoadPromise = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.LoadPromise), "LoadPromise"))
+			{
+				return false;
+			}
+			if (followShooterComponent.MaterialControllerHandles == null)
+			{
+				this.MaterialControllerHandles = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject<int>(this.MaterialControllerHandles), "MaterialControllerHandles"))
+			{
+				return false;
+			}
+			this.IsWaitingForMaterialController = followShooterComponent.IsWaitingForMaterialController;
+			this.IsEnable = followShooterComponent.IsEnable;
+			this.IsRegisterInput = followShooterComponent.IsRegisterInput;
+			if (followShooterComponent.EnablePriorityManager == null)
+			{
+				this.EnablePriorityManager = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.EnablePriorityManager), "EnablePriorityManager"))
+			{
+				return false;
+			}
+			if (followShooterComponent.ApplyTriggerRoles == null)
+			{
+				this.ApplyTriggerRoles = null;
+			}
+			else if (!base.CheckClearObject(EntityComponentSystem.ClearObject(this.ApplyTriggerRoles), "ApplyTriggerRoles"))
+			{
+				return false;
 			}
 			return true;
 		}
 
-		// Token: 0x06046C25 RID: 289829 RVA: 0x011D54A1 File Offset: 0x011D36A1
+		// Token: 0x17007508 RID: 29960
+		// (get) Token: 0x0603DA6F RID: 252527 RVA: 0x011DDDC1 File Offset: 0x011DBFC1
+		public override bool NeedStartInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x17007509 RID: 29961
+		// (get) Token: 0x0603DA70 RID: 252528 RVA: 0x011DDDC4 File Offset: 0x011DBFC4
+		public override bool NeedEndInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x1700750A RID: 29962
+		// (get) Token: 0x0603DA71 RID: 252529 RVA: 0x011DDDC7 File Offset: 0x011DBFC7
+		public override bool NeedTickInternal
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x0603DA76 RID: 252534 RVA: 0x011DDE9D File Offset: 0x011DC09D
 		[CompilerGenerated]
 		private void <RegisterEventForwardListeners>g__CharUseSkillForwardListener|80_0(int entityId, int skillId, bool isAutonomousProxy)
 		{
@@ -1650,7 +1601,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			});
 		}
 
-		// Token: 0x06046C26 RID: 289830 RVA: 0x011D54CC File Offset: 0x011D36CC
+		// Token: 0x0603DA77 RID: 252535 RVA: 0x011DDEC8 File Offset: 0x011DC0C8
 		[CompilerGenerated]
 		private void <RegisterEventForwardListeners>g__CharUseSkillRemoteForwardListener|80_1(int entityId, int skillId)
 		{
@@ -1661,7 +1612,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			});
 		}
 
-		// Token: 0x06046C27 RID: 289831 RVA: 0x011D54EE File Offset: 0x011D36EE
+		// Token: 0x0603DA78 RID: 252536 RVA: 0x011DDEEA File Offset: 0x011DC0EA
 		[CompilerGenerated]
 		private void <RegisterEventForwardListeners>g__CharHitLocalForwardListener|80_2(HitInformation hitData, HitContext hitContext)
 		{
@@ -1672,7 +1623,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			});
 		}
 
-		// Token: 0x06046C28 RID: 289832 RVA: 0x011D5506 File Offset: 0x011D3706
+		// Token: 0x0603DA79 RID: 252537 RVA: 0x011DDF02 File Offset: 0x011DC102
 		[CompilerGenerated]
 		private void <RegisterEventForwardListeners>g__CharHitRemoteForwardListener|80_3(HitContext hitContext)
 		{
@@ -1682,12 +1633,13 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			});
 		}
 
-		// Token: 0x06046C29 RID: 289833 RVA: 0x011D551A File Offset: 0x011D371A
+		// Token: 0x0603DA7A RID: 252538 RVA: 0x011DDF16 File Offset: 0x011DC116
 		[CompilerGenerated]
 		private void <RegisterEventForwardListeners>g__CharDamageForwardListener|80_4(Entity attacker, Entity victim, RequirementPayload requirements, DamageResult damageResult, FVectorDouble damagePosition)
 		{
 			this.ForwardEventToFrontChar(EEventName.CharDamage, new object[]
 			{
+				attacker,
 				victim,
 				requirements,
 				damageResult,
@@ -1695,16 +1647,16 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			});
 		}
 
-		// Token: 0x0402524E RID: 152142
+		// Token: 0x04020B2E RID: 133934
 		private const int DELAY_DISAPPEAR_MAX_TIME = 5000;
 
-		// Token: 0x0402524F RID: 152143
+		// Token: 0x04020B2F RID: 133935
 		private static readonly int lockOnTargetTag = GameplayTagDefine.EGameplayTagId["辅助机.自动瞄准.锁定目标"];
 
-		// Token: 0x04025250 RID: 152144
+		// Token: 0x04020B30 RID: 133936
 		private const string FOLLOW_SHOOTER_DEBUG_KEY = "FollowShooterComponent";
 
-		// Token: 0x04025251 RID: 152145
+		// Token: 0x04020B31 RID: 133937
 		[StaticVariableRuleIgnore]
 		private static readonly EBuffTriggerType[] buffTriggerTypesToForward = new EBuffTriggerType[]
 		{
@@ -1712,56 +1664,56 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 			EBuffTriggerType.ForSkillStart
 		};
 
-		// Token: 0x04025252 RID: 152146
+		// Token: 0x04020B32 RID: 133938
 		[Nullable(2)]
 		private CreatureDataComponent CreatureDataComp;
 
-		// Token: 0x04025253 RID: 152147
+		// Token: 0x04020B33 RID: 133939
 		[Nullable(2)]
 		private CharacterSkillComponent SkillComponent;
 
-		// Token: 0x04025254 RID: 152148
+		// Token: 0x04020B34 RID: 133940
 		[Nullable(2)]
 		private BaseTagComponent TagComponent;
 
-		// Token: 0x04025255 RID: 152149
+		// Token: 0x04020B35 RID: 133941
 		[Nullable(2)]
 		private CharacterActorComponent ActorComponent;
 
-		// Token: 0x04025256 RID: 152150
+		// Token: 0x04020B36 RID: 133942
 		[Nullable(2)]
 		private CharacterSelfCenterComponent CharacterSelfCenterComp;
 
-		// Token: 0x04025257 RID: 152151
+		// Token: 0x04020B37 RID: 133943
 		[Nullable(2)]
 		private FollowShooterInputLayer InputLayer;
 
-		// Token: 0x04025258 RID: 152152
+		// Token: 0x04020B38 RID: 133944
 		private readonly List<TagModifier> TagModifierList = new List<TagModifier>();
 
-		// Token: 0x04025259 RID: 152153
+		// Token: 0x04020B39 RID: 133945
 		private readonly Dictionary<int, HashSet<int>> ListenTagToCheckIndexMap = new Dictionary<int, HashSet<int>>();
 
-		// Token: 0x0402525A RID: 152154
+		// Token: 0x04020B3A RID: 133946
 		private readonly List<ITagTask> CurrentRoleTagListeners = new List<ITagTask>();
 
-		// Token: 0x0402525B RID: 152155
+		// Token: 0x04020B3B RID: 133947
 		private readonly Dictionary<int, ITagTask> TagIdToTagTask = new Dictionary<int, ITagTask>();
 
-		// Token: 0x0402525C RID: 152156
+		// Token: 0x04020B3C RID: 133948
 		private readonly Dictionary<int, FName> ListenTagToCompTag = new Dictionary<int, FName>();
 
-		// Token: 0x0402525D RID: 152157
+		// Token: 0x04020B3D RID: 133949
 		private readonly Dictionary<EEventName, object> EventForwardListeners = new Dictionary<EEventName, object>();
 
-		// Token: 0x0402525E RID: 152158
+		// Token: 0x04020B3E RID: 133950
 		private bool UsedSkill;
 
-		// Token: 0x0402525F RID: 152159
+		// Token: 0x04020B3F RID: 133951
 		[Nullable(2)]
 		private TimerHandle DelayDisappearTimer;
 
-		// Token: 0x04025260 RID: 152160
+		// Token: 0x04020B40 RID: 133952
 		[Nullable(new byte[]
 		{
 			2,
@@ -1769,11 +1721,11 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 		})]
 		private Dictionary<string, double> LastAutoShootTime;
 
-		// Token: 0x04025261 RID: 152161
+		// Token: 0x04020B41 RID: 133953
 		[Nullable(2)]
 		public BP_FollowShooterConfig_C FollowShooterConfig;
 
-		// Token: 0x04025262 RID: 152162
+		// Token: 0x04020B42 RID: 133954
 		[Nullable(new byte[]
 		{
 			2,
@@ -1781,7 +1733,7 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 		})]
 		public List<IEntityCategory> LockableCategories;
 
-		// Token: 0x04025263 RID: 152163
+		// Token: 0x04020B43 RID: 133955
 		[Nullable(new byte[]
 		{
 			2,
@@ -1789,39 +1741,39 @@ namespace CSharpScript.Game.NewWorld.Character.Common.Component.Abilities.Follow
 		})]
 		public WeakReference<AActor> LockOnTarget;
 
-		// Token: 0x04025264 RID: 152164
+		// Token: 0x04020B44 RID: 133956
 		private bool IsAddLockOnTargetTag;
 
-		// Token: 0x04025265 RID: 152165
+		// Token: 0x04020B45 RID: 133957
 		public int PlayerId;
 
-		// Token: 0x04025266 RID: 152166
+		// Token: 0x04020B46 RID: 133958
 		public bool IsPossessed;
 
-		// Token: 0x04025267 RID: 152167
+		// Token: 0x04020B47 RID: 133959
 		public bool IsAutonomousProxy;
 
-		// Token: 0x04025268 RID: 152168
+		// Token: 0x04020B48 RID: 133960
 		[Nullable(2)]
 		public CustomPromise LoadPromise;
 
-		// Token: 0x04025269 RID: 152169
+		// Token: 0x04020B49 RID: 133961
 		protected HashSet<int> MaterialControllerHandles = new HashSet<int>();
 
-		// Token: 0x0402526A RID: 152170
+		// Token: 0x04020B4A RID: 133962
 		protected bool IsWaitingForMaterialController;
 
-		// Token: 0x0402526B RID: 152171
+		// Token: 0x04020B4B RID: 133963
 		protected bool IsEnable;
 
-		// Token: 0x0402526C RID: 152172
+		// Token: 0x04020B4C RID: 133964
 		private bool IsRegisterInput;
 
-		// Token: 0x0402526D RID: 152173
+		// Token: 0x04020B4D RID: 133965
 		[Nullable(2)]
 		private CustomPriorityManager<BPEEnableFollowShooter> EnablePriorityManager;
 
-		// Token: 0x0402526E RID: 152174
+		// Token: 0x04020B4E RID: 133966
 		private int[] ApplyTriggerRoles = Array.Empty<int>();
 	}
 }

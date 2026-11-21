@@ -7,12 +7,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter.StateMachine
 {
-	// Token: 0x02004367 RID: 17255
+	// Token: 0x02003388 RID: 13192
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/StateMachine/BP_SM_BindStateAiSenseEnable.BP_SM_BindStateAiSenseEnable_C")]
 	[UnrealStructLayout(56, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 52)]
 	public class BP_SM_BindStateAiSenseEnable_C : UASMBindState, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x0602CB8E RID: 183182 RVA: 0x00A26D7D File Offset: 0x00A24F7D
+		// Token: 0x060217AC RID: 137132 RVA: 0x00961BD1 File Offset: 0x0095FDD1
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_SM_BindStateAiSenseEnable_C._ClassPtr == IntPtr.Zero)
@@ -22,48 +22,48 @@ namespace AkiClient.Game.Aki.Character.BaseCharacter.StateMachine
 			return BP_SM_BindStateAiSenseEnable_C._ClassPtr;
 		}
 
-		// Token: 0x0602CB8F RID: 183183 RVA: 0x00A26DA4 File Offset: 0x00A24FA4
+		// Token: 0x060217AD RID: 137133 RVA: 0x00961BF8 File Offset: 0x0095FDF8
 		public BP_SM_BindStateAiSenseEnable_C() : this(BuiltinUtils.AllocNativeUObject(BP_SM_BindStateAiSenseEnable_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0602CB90 RID: 183184 RVA: 0x00A26DCC File Offset: 0x00A24FCC
+		// Token: 0x060217AE RID: 137134 RVA: 0x00961C20 File Offset: 0x0095FE20
 		[NullableContext(1)]
 		public BP_SM_BindStateAiSenseEnable_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_SM_BindStateAiSenseEnable_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17007091 RID: 28817
-		// (get) Token: 0x0602CB91 RID: 183185 RVA: 0x00A26DFF File Offset: 0x00A24FFF
-		// (set) Token: 0x0602CB92 RID: 183186 RVA: 0x00A26E0F File Offset: 0x00A2500F
+		// Token: 0x17004493 RID: 17555
+		// (get) Token: 0x060217AF RID: 137135 RVA: 0x00961C53 File Offset: 0x0095FE53
+		// (set) Token: 0x060217B0 RID: 137136 RVA: 0x00961C63 File Offset: 0x0095FE63
 		public unsafe int ConfigId
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_SM_BindStateAiSenseEnable_C.__PropertyOffset_0);
+				return *(base.NativePtr + (IntPtr)BP_SM_BindStateAiSenseEnable_C.__PropertyOffset_ConfigId);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_SM_BindStateAiSenseEnable_C.__PropertyOffset_0) = value;
+				*(base.NativePtr + (IntPtr)BP_SM_BindStateAiSenseEnable_C.__PropertyOffset_ConfigId) = value;
 			}
 		}
 
-		// Token: 0x0602CB93 RID: 183187 RVA: 0x00A26E20 File Offset: 0x00A25020
+		// Token: 0x060217B1 RID: 137137 RVA: 0x00961C74 File Offset: 0x0095FE74
 		protected BP_SM_BindStateAiSenseEnable_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04017954 RID: 96596
+		// Token: 0x040124D5 RID: 74965
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/StateMachine/BP_SM_BindStateAiSenseEnable.BP_SM_BindStateAiSenseEnable_C";
 
-		// Token: 0x04017955 RID: 96597
+		// Token: 0x040124D6 RID: 74966
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04017956 RID: 96598
+		// Token: 0x040124D7 RID: 74967
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04017957 RID: 96599
-		internal static int __PropertyOffset_0;
+		// Token: 0x040124D8 RID: 74968
+		internal static int __PropertyOffset_ConfigId;
 	}
 }

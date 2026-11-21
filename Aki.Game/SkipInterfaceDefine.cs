@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.SkipInterface.SkipTask;
 
-// Token: 0x02002A78 RID: 10872
+// Token: 0x02001FF3 RID: 8179
 public class SkipInterfaceDefine : IStaticVariableResetter
 {
-	// Token: 0x06016A2A RID: 92714 RVA: 0x005BC307 File Offset: 0x005BA507
+	// Token: 0x0601444B RID: 83019 RVA: 0x005E848F File Offset: 0x005E668F
 	static SkipInterfaceDefine()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(SkipInterfaceDefine.CreateStaticDefaultValue), new Action(SkipInterfaceDefine.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x06016A2B RID: 92715 RVA: 0x005BC328 File Offset: 0x005BA528
+	// Token: 0x0601444C RID: 83020 RVA: 0x005E84B0 File Offset: 0x005E66B0
 	public static void CreateStaticDefaultValue()
 	{
 		SkipInterfaceDefine.SkipClassMap = new Dictionary<ESkipName, Type>
@@ -236,20 +236,20 @@ public class SkipInterfaceDefine : IStaticVariableResetter
 		};
 	}
 
-	// Token: 0x06016A2C RID: 92716 RVA: 0x005BC702 File Offset: 0x005BA902
+	// Token: 0x0601444D RID: 83021 RVA: 0x005E888A File Offset: 0x005E6A8A
 	public static void ResetStaticDefaultValue()
 	{
 		SkipInterfaceDefine.SkipClassMap = null;
 	}
 
-	// Token: 0x06016A2D RID: 92717 RVA: 0x005BC70A File Offset: 0x005BA90A
+	// Token: 0x0601444E RID: 83022 RVA: 0x005E8892 File Offset: 0x005E6A92
 	[NullableContext(1)]
 	public static Dictionary<ESkipName, Type> GetSkipClassMap()
 	{
 		return SkipInterfaceDefine.SkipClassMap;
 	}
 
-	// Token: 0x0400A813 RID: 43027
+	// Token: 0x0400AC17 RID: 44055
 	[Nullable(new byte[]
 	{
 		2,

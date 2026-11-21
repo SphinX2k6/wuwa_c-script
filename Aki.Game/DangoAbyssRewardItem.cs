@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001A56 RID: 6742
+// Token: 0x02000F15 RID: 3861
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -15,7 +14,7 @@ using UnrealEngine;
 })]
 public class DangoAbyssRewardItem : GridProxyAbstract<IActivityRewardData>
 {
-	// Token: 0x0600C670 RID: 50800 RVA: 0x002D2224 File Offset: 0x002D0424
+	// Token: 0x06009A80 RID: 39552 RVA: 0x002DD338 File Offset: 0x002DB538
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -52,19 +51,19 @@ public class DangoAbyssRewardItem : GridProxyAbstract<IActivityRewardData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600C671 RID: 50801 RVA: 0x002D23D4 File Offset: 0x002D05D4
+	// Token: 0x06009A81 RID: 39553 RVA: 0x002DD4E8 File Offset: 0x002DB6E8
 	protected override void OnStart()
 	{
 		this.ItemLayout = new GenericScrollViewNew<CommonItemSmallItemGrid, TItem>(base.GetScrollViewWithScrollbar(7), new Func<CommonItemSmallItemGrid>(this.InitGridItem), null, false, null);
 	}
 
-	// Token: 0x0600C672 RID: 50802 RVA: 0x002D23F7 File Offset: 0x002D05F7
+	// Token: 0x06009A82 RID: 39554 RVA: 0x002DD50B File Offset: 0x002DB70B
 	private CommonItemSmallItemGrid InitGridItem()
 	{
 		return new CommonItemSmallItemGrid();
 	}
 
-	// Token: 0x0600C673 RID: 50803 RVA: 0x002D23FE File Offset: 0x002D05FE
+	// Token: 0x06009A83 RID: 39555 RVA: 0x002DD512 File Offset: 0x002DB712
 	private void OnClickButton()
 	{
 		IActivityRewardData rewardData = this.RewardData;
@@ -80,7 +79,7 @@ public class DangoAbyssRewardItem : GridProxyAbstract<IActivityRewardData>
 		clickFunction();
 	}
 
-	// Token: 0x0600C674 RID: 50804 RVA: 0x002D241C File Offset: 0x002D061C
+	// Token: 0x06009A84 RID: 39556 RVA: 0x002DD530 File Offset: 0x002DB730
 	public override void Refresh(IActivityRewardData data, bool isSelected, int gridIndex)
 	{
 		this.RewardData = data;
@@ -108,7 +107,7 @@ public class DangoAbyssRewardItem : GridProxyAbstract<IActivityRewardData>
 		GenericScrollViewNew<CommonItemSmallItemGrid, TItem> itemLayout = this.ItemLayout;
 		if (itemLayout != null)
 		{
-			itemLayout.RefreshByData(data.RewardList.ToList<TItem>(), null, false);
+			itemLayout.RefreshByData(data.RewardList, null, false);
 		}
 		string resourceId = (data.RewardState != EActivityRewardState.Claimed) ? "SP_ItemBgNor" : "SP_ItemBgFinish";
 		string path = UiResourceConfig.Instance.GetResourceConfig(resourceId).Value.Path;
@@ -121,11 +120,11 @@ public class DangoAbyssRewardItem : GridProxyAbstract<IActivityRewardData>
 		item4.SetUIActive(data.RewardState == EActivityRewardState.Claimed);
 	}
 
-	// Token: 0x04005B74 RID: 23412
+	// Token: 0x04005C43 RID: 23619
 	[Nullable(2)]
 	private IActivityRewardData RewardData;
 
-	// Token: 0x04005B75 RID: 23413
+	// Token: 0x04005C44 RID: 23620
 	[Nullable(new byte[]
 	{
 		2,
@@ -133,38 +132,38 @@ public class DangoAbyssRewardItem : GridProxyAbstract<IActivityRewardData>
 	})]
 	private GenericScrollViewNew<CommonItemSmallItemGrid, TItem> ItemLayout;
 
-	// Token: 0x02007FA0 RID: 32672
+	// Token: 0x0200712F RID: 28975
 	[NullableContext(0)]
 	private class EComponent
 	{
-		// Token: 0x04029ABC RID: 170684
+		// Token: 0x04024DF9 RID: 151033
 		public const int BgSprite = 0;
 
-		// Token: 0x04029ABD RID: 170685
+		// Token: 0x04024DFA RID: 151034
 		public const int ReDotItem = 1;
 
-		// Token: 0x04029ABE RID: 170686
+		// Token: 0x04024DFB RID: 151035
 		public const int Button = 2;
 
-		// Token: 0x04029ABF RID: 170687
+		// Token: 0x04024DFC RID: 151036
 		public const int DoingItem = 3;
 
-		// Token: 0x04029AC0 RID: 170688
+		// Token: 0x04024DFD RID: 151037
 		public const int ClaimedItem = 4;
 
-		// Token: 0x04029AC1 RID: 170689
+		// Token: 0x04024DFE RID: 151038
 		public const int NameText = 5;
 
-		// Token: 0x04029AC2 RID: 170690
+		// Token: 0x04024DFF RID: 151039
 		public const int ProgressText = 6;
 
-		// Token: 0x04029AC3 RID: 170691
+		// Token: 0x04024E00 RID: 151040
 		public const int RewardLayout = 7;
 
-		// Token: 0x04029AC4 RID: 170692
+		// Token: 0x04024E01 RID: 151041
 		public const int RewardItem = 8;
 
-		// Token: 0x04029AC5 RID: 170693
+		// Token: 0x04024E02 RID: 151042
 		public const int MaskItem = 9;
 	}
 }

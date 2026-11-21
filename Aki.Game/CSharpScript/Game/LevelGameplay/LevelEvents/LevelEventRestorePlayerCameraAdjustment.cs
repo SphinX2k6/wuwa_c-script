@@ -8,15 +8,15 @@ using CSharpScript.Game.Utils;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B65 RID: 27493
+	// Token: 0x02005CDD RID: 23773
 	public class LevelEventRestorePlayerCameraAdjustment : LevelEventBase
 	{
-		// Token: 0x060441FB RID: 279035 RVA: 0x010C5058 File Offset: 0x010C3258
+		// Token: 0x0603A34D RID: 238413 RVA: 0x0106EC28 File Offset: 0x0106CE28
 		public LevelEventRestorePlayerCameraAdjustment(int id) : base(id)
 		{
 		}
 
-		// Token: 0x060441FC RID: 279036 RVA: 0x010C5064 File Offset: 0x010C3264
+		// Token: 0x0603A34E RID: 238414 RVA: 0x0106EC34 File Offset: 0x0106CE34
 		[NullableContext(1)]
 		public unsafe override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			logicComponent.RestoreCameraFromAdjust(fadeInTime2, null, true);
 		}
 
-		// Token: 0x060441FD RID: 279037 RVA: 0x010C51D8 File Offset: 0x010C33D8
+		// Token: 0x0603A34F RID: 238415 RVA: 0x0106EDA8 File Offset: 0x0106CFA8
 		protected override void OnUpdateGuarantee()
 		{
 			RestorePlayerCameraAdjustment restorePlayerCameraAdjustment = new RestorePlayerCameraAdjustment();
@@ -85,7 +85,7 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			EventSystem.Instance.Emit<string, GeneralContext, GuaranteeActionInfo, bool?>(EEventName.RemGuaranteeAction, this.Type, this.BaseContext, p, new bool?(true));
 		}
 
-		// Token: 0x04023941 RID: 145729
+		// Token: 0x0401EBE3 RID: 125923
 		[Nullable(2)]
 		private RestorePlayerCameraAdjustment Params;
 	}

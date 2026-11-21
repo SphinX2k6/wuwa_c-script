@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200237D RID: 9085
+	// Token: 0x02002606 RID: 9734
 	public static class EMapMarkStateExtensions
 	{
-		// Token: 0x0600C631 RID: 50737 RVA: 0x001D084C File Offset: 0x001CEA4C
+		// Token: 0x0600D275 RID: 53877 RVA: 0x001E9820 File Offset: 0x001E7A20
 		public static string ToEnumString(this EMapMarkState value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C632 RID: 50738 RVA: 0x001D0894 File Offset: 0x001CEA94
+		// Token: 0x0600D276 RID: 53878 RVA: 0x001E9868 File Offset: 0x001E7A68
 		public static EMapMarkState FromString(string name)
 		{
 			EMapMarkState result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C633 RID: 50739 RVA: 0x001D08C0 File Offset: 0x001CEAC0
+		// Token: 0x0600D277 RID: 53879 RVA: 0x001E9894 File Offset: 0x001E7A94
 		public static bool TryFromString(string name, out EMapMarkState value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -65,7 +65,7 @@ namespace Aki.TDConfigMgr.Action
 			return true;
 		}
 
-		// Token: 0x0600C634 RID: 50740 RVA: 0x001D0916 File Offset: 0x001CEB16
+		// Token: 0x0600D278 RID: 53880 RVA: 0x001E98EA File Offset: 0x001E7AEA
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -76,7 +76,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C635 RID: 50741 RVA: 0x001D0936 File Offset: 0x001CEB36
+		// Token: 0x0600D279 RID: 53881 RVA: 0x001E990A File Offset: 0x001E7B0A
 		public static EMapMarkState[] GetValues()
 		{
 			return new EMapMarkState[]
@@ -87,7 +87,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600C636 RID: 50742 RVA: 0x001D0946 File Offset: 0x001CEB46
+		// Token: 0x0600D27A RID: 53882 RVA: 0x001E991A File Offset: 0x001E7B1A
 		public static string[] GetNames()
 		{
 			return new string[]

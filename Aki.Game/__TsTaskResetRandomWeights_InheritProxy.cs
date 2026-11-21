@@ -3,21 +3,21 @@ using System.Runtime.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Utils;
 
-// Token: 0x020036AE RID: 13998
+// Token: 0x02002C23 RID: 11299
 public class __TsTaskResetRandomWeights_InheritProxy : TsTaskResetRandomWeights
 {
-	// Token: 0x0601E362 RID: 123746 RVA: 0x00884DCC File Offset: 0x00882FCC
+	// Token: 0x0601C07B RID: 114811 RVA: 0x008AC7A4 File Offset: 0x008AA9A4
 	[NullableContext(1)]
 	public __TsTaskResetRandomWeights_InheritProxy(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsTaskResetRandomWeights.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601E363 RID: 123747 RVA: 0x00884DFF File Offset: 0x00882FFF
+	// Token: 0x0601C07C RID: 114812 RVA: 0x008AC7D7 File Offset: 0x008AA9D7
 	protected __TsTaskResetRandomWeights_InheritProxy(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x0601E364 RID: 123748 RVA: 0x00884E08 File Offset: 0x00883008
+	// Token: 0x0601C07D RID: 114813 RVA: 0x008AC7E0 File Offset: 0x008AA9E0
 	protected unsafe override void __CPPCALL_ReceiveExecuteAI_Implementation(UBTTask_BlueprintBase.__ReceiveExecuteAI_FunctionParams* __Params)
 	{
 		AAIController orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<AAIController>(__Params->OwnerController);

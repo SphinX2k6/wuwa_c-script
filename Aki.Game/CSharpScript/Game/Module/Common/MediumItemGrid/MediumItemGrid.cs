@@ -12,12 +12,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Common.MediumItemGrid
 {
-	// Token: 0x02005B51 RID: 23377
+	// Token: 0x02004B30 RID: 19248
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class MediumItemGrid : ItemGridBase
 	{
-		// Token: 0x0603B2FE RID: 242430 RVA: 0x00E1C584 File Offset: 0x00E1A784
+		// Token: 0x06030247 RID: 197191 RVA: 0x00D6C9CC File Offset: 0x00D6ABCC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 12;
@@ -51,25 +51,25 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603B2FF RID: 242431 RVA: 0x00E1C73B File Offset: 0x00E1A93B
+		// Token: 0x06030248 RID: 197192 RVA: 0x00D6CB83 File Offset: 0x00D6AD83
 		protected override UUIItem OnSetUnderTextAdditionItem()
 		{
 			return base.GetItem(7);
 		}
 
-		// Token: 0x0603B300 RID: 242432 RVA: 0x00E1C744 File Offset: 0x00E1A944
+		// Token: 0x06030249 RID: 197193 RVA: 0x00D6CB8C File Offset: 0x00D6AD8C
 		protected override UUIItem OnSetBottomAdditionItem()
 		{
 			return base.GetItem(5);
 		}
 
-		// Token: 0x0603B301 RID: 242433 RVA: 0x00E1C74D File Offset: 0x00E1A94D
+		// Token: 0x0603024A RID: 197194 RVA: 0x00D6CB95 File Offset: 0x00D6AD95
 		protected override UUIItem OnSetTopAdditionItem()
 		{
 			return base.GetItem(4);
 		}
 
-		// Token: 0x0603B302 RID: 242434 RVA: 0x00E1C756 File Offset: 0x00E1A956
+		// Token: 0x0603024B RID: 197195 RVA: 0x00D6CB9E File Offset: 0x00D6AD9E
 		protected override void UnBindComponentEvents()
 		{
 			this.UnBindReduceButtonCallback();
@@ -77,7 +77,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			this.UnBindReduceLongPress();
 		}
 
-		// Token: 0x0603B303 RID: 242435 RVA: 0x00E1C76C File Offset: 0x00E1A96C
+		// Token: 0x0603024C RID: 197196 RVA: 0x00D6CBB4 File Offset: 0x00D6ADB4
 		[NullableContext(1)]
 		public void Apply<[Nullable(0)] T>(T parameters) where T : IMediumItemGridBase
 		{
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			base.RefreshComponentHierarchyIndex();
 		}
 
-		// Token: 0x0603B304 RID: 242436 RVA: 0x00E1C88C File Offset: 0x00E1AA8C
+		// Token: 0x0603024D RID: 197197 RVA: 0x00D6CCD4 File Offset: 0x00D6AED4
 		[NullableContext(1)]
 		private void ApplyEmptyMediumItemGrid(EmptyItemGrid parameters)
 		{
@@ -131,7 +131,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			this.ApplyEmptyDisplay(parameters);
 		}
 
-		// Token: 0x0603B305 RID: 242437 RVA: 0x00E1C8E8 File Offset: 0x00E1AAE8
+		// Token: 0x0603024E RID: 197198 RVA: 0x00D6CD30 File Offset: 0x00D6AF30
 		[NullableContext(1)]
 		private void ApplyOnlyEmptyMediumItemGrid(OnlyEmptyItemGrid parameters)
 		{
@@ -145,7 +145,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			this.SetOnlyEmptyVisible(true, parameters);
 		}
 
-		// Token: 0x0603B306 RID: 242438 RVA: 0x00E1C944 File Offset: 0x00E1AB44
+		// Token: 0x0603024F RID: 197199 RVA: 0x00D6CD8C File Offset: 0x00D6AF8C
 		[NullableContext(1)]
 		private void ApplyPropMediumItemGrid(PropMediumItemGrid parameters)
 		{
@@ -228,7 +228,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			this.SetPhantomStackDisplay(parameters.StackDisplayInfo);
 		}
 
-		// Token: 0x0603B307 RID: 242439 RVA: 0x00E1CBF8 File Offset: 0x00E1ADF8
+		// Token: 0x06030250 RID: 197200 RVA: 0x00D6D040 File Offset: 0x00D6B240
 		[NullableContext(1)]
 		private void ApplyPhantomMediumItemGrid(PhantomMediumItemGrid parameters)
 		{
@@ -254,6 +254,8 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			this.SetIsMainVision(isMainVisionVisible);
 			this.SetRoleHead(roleHeadInfo);
 			this.SetLevelAndLock(level, isLockVisible, isLevelTextUseChangeColor, new bool?(true), isDeprecate, null);
+			this.SetRoleTowerEnemyLevel(parameters.RoleTowerEnemyLevel);
+			this.SetRoleTowerElement(parameters.RoleTowerElementId);
 			this.SetIsPhantomLock(isPhantomLock);
 			this.SetDevelopRewardInfo(developRewardInfo);
 			this.SetNewVisible(new bool?(isNewVisible.GetValueOrDefault()));
@@ -267,7 +269,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			this.SetPhantomStackDisplay(parameters.StackDisplayInfo);
 		}
 
-		// Token: 0x0603B308 RID: 242440 RVA: 0x00E1CD2C File Offset: 0x00E1AF2C
+		// Token: 0x06030251 RID: 197201 RVA: 0x00D6D18C File Offset: 0x00D6B38C
 		[NullableContext(1)]
 		private void ApplyCharacterMediumItemGrid(CharacterMediumItemGrid parameters)
 		{
@@ -288,19 +290,41 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 				};
 			}
 			this.SetRoleRightBottomTagVisible(roleRightBottomTagVisible);
-			MediumTrialRoleRightBottomTag trialRoleRightBottomTagVisible = null;
-			if (parameters.IsTrialRoleVisible.GetValueOrDefault())
+			if (parameters.UseRoleItemAddtion)
 			{
-				trialRoleRightBottomTagVisible = new MediumTrialRoleRightBottomTag
+				RoleItemAddtionData roleItemAddtion;
+				if (!parameters.IsTrialRoleVisible.GetValueOrDefault() && parameters.ShowCostData == null)
 				{
-					IsTrialRole = parameters.IsTrialRoleVisible.GetValueOrDefault(),
-					TrialRoleId = parameters.ItemConfigId.GetValueOrDefault()
-				};
+					roleItemAddtion = null;
+				}
+				else
+				{
+					RoleItemAddtionData roleItemAddtionData = new RoleItemAddtionData();
+					roleItemAddtionData.IsTrial = parameters.IsTrialRoleVisible.GetValueOrDefault();
+					roleItemAddtion = roleItemAddtionData;
+					roleItemAddtionData.CostData = parameters.ShowCostData;
+				}
+				this.SetRoleItemAddtion(roleItemAddtion);
 			}
-			this.SetTrialRoleRightBottomTagVisible(trialRoleRightBottomTagVisible);
+			else
+			{
+				MediumTrialRoleRightBottomTag trialRoleRightBottomTagVisible = null;
+				if (parameters.IsTrialRoleVisible.GetValueOrDefault())
+				{
+					trialRoleRightBottomTagVisible = new MediumTrialRoleRightBottomTag
+					{
+						IsTrialRole = parameters.IsTrialRoleVisible.GetValueOrDefault(),
+						TrialRoleId = parameters.ItemConfigId.GetValueOrDefault()
+					};
+				}
+				this.SetTrialRoleRightBottomTagVisible(trialRoleRightBottomTagVisible);
+			}
 			this.SetLevelAndLock(parameters.Level, parameters.IsShowLock, parameters.IsLevelTextUseChangeColor, null, null, null);
 			this.SetNewVisible(new bool?(parameters.IsNewVisible.GetValueOrDefault()));
-			this.SetRoleCost(parameters.ShowCostData);
+			if (!parameters.UseRoleItemAddtion)
+			{
+				this.SetRoleCost(parameters.ShowCostData);
+			}
 			this.SetHalfAreaInfo(parameters.HalfAreaInfo);
 			this.SetWeeklyRogueTag(parameters.IsShowWeeklyRogueTag);
 			this.SetLevelAndStar(parameters.LvAndStar);
@@ -313,14 +337,14 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			this.ApplyCharacterBaseDisplay(parameters);
 		}
 
-		// Token: 0x0603B309 RID: 242441 RVA: 0x00E1CEF5 File Offset: 0x00E1B0F5
+		// Token: 0x06030252 RID: 197202 RVA: 0x00D6D3AF File Offset: 0x00D6B5AF
 		[NullableContext(1)]
 		private void ApplyForecastCharacterMediumItemGrid(ForecastCharacterMediumItemGrid parameters)
 		{
 			this.ApplyForecastCharacterBaseDisplay(parameters);
 		}
 
-		// Token: 0x0603B30A RID: 242442 RVA: 0x00E1CF00 File Offset: 0x00E1B100
+		// Token: 0x06030253 RID: 197203 RVA: 0x00D6D3B8 File Offset: 0x00D6B5B8
 		[NullableContext(1)]
 		private void ApplyKurotatoWeaponMediumItemGrid(KurotatoMediumItemGrid param)
 		{
@@ -355,7 +379,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			base.SetExtendToggleEnable(true, false);
 		}
 
-		// Token: 0x0603B30B RID: 242443 RVA: 0x00E1D070 File Offset: 0x00E1B270
+		// Token: 0x06030254 RID: 197204 RVA: 0x00D6D528 File Offset: 0x00D6B728
 		[NullableContext(1)]
 		private void SetKurotatoItemQuality(KurotatoMediumItemGrid param)
 		{
@@ -371,31 +395,31 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			this.QualityItemConfigId = id;
 		}
 
-		// Token: 0x0603B30C RID: 242444 RVA: 0x00E1D0E3 File Offset: 0x00E1B2E3
+		// Token: 0x06030255 RID: 197205 RVA: 0x00D6D59B File Offset: 0x00D6B79B
 		public void SetWeeklyRogueTag(bool? isShowWeeklyRogueTag)
 		{
 			base.RefreshComponent(typeof(MediumItemGridWeeklyRogueTagComponent), new bool?(isShowWeeklyRogueTag.GetValueOrDefault()), isShowWeeklyRogueTag);
 		}
 
-		// Token: 0x0603B30D RID: 242445 RVA: 0x00E1D108 File Offset: 0x00E1B308
+		// Token: 0x06030256 RID: 197206 RVA: 0x00D6D5C0 File Offset: 0x00D6B7C0
 		public void SetRogueFinish(bool? isRogueFinish)
 		{
 			base.RefreshComponent(typeof(MediumItemGridRogueFinishComponent), new bool?(isRogueFinish.GetValueOrDefault()), isRogueFinish);
 		}
 
-		// Token: 0x0603B30E RID: 242446 RVA: 0x00E1D12D File Offset: 0x00E1B32D
+		// Token: 0x06030257 RID: 197207 RVA: 0x00D6D5E5 File Offset: 0x00D6B7E5
 		public void SetGreenSelected(bool? isShowSelect)
 		{
 			base.RefreshComponent(typeof(MediumItemGridVisionGreenSelectComponent), new bool?(isShowSelect.GetValueOrDefault()), isShowSelect);
 		}
 
-		// Token: 0x0603B30F RID: 242447 RVA: 0x00E1D152 File Offset: 0x00E1B352
+		// Token: 0x06030258 RID: 197208 RVA: 0x00D6D60A File Offset: 0x00D6B80A
 		public void SetWarningIcon(bool? isShowSelect)
 		{
 			base.RefreshComponent(typeof(MediumItemGridVisionWarningComponent), isShowSelect, isShowSelect);
 		}
 
-		// Token: 0x0603B310 RID: 242448 RVA: 0x00E1D16C File Offset: 0x00E1B36C
+		// Token: 0x06030259 RID: 197209 RVA: 0x00D6D624 File Offset: 0x00D6B824
 		public void SetDangoRoleHead(DangoRoleHeadInfo roleHeadInfo)
 		{
 			Type typeFromHandle = typeof(MediumItemGridDangoRoleHeadComponent);
@@ -430,13 +454,13 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			base.SetComponentVisible(component, bVisible);
 		}
 
-		// Token: 0x0603B311 RID: 242449 RVA: 0x00E1D1DD File Offset: 0x00E1B3DD
+		// Token: 0x0603025A RID: 197210 RVA: 0x00D6D695 File Offset: 0x00D6B895
 		public void SetDangoPluginIcon(IDangoPluginIconInfo dangoPluginIconInfo)
 		{
 			base.RefreshComponent(typeof(MediumItemGridDangoPluginIconComponent), new bool?(true), dangoPluginIconInfo);
 		}
 
-		// Token: 0x0603B312 RID: 242450 RVA: 0x00E1D1F8 File Offset: 0x00E1B3F8
+		// Token: 0x0603025B RID: 197211 RVA: 0x00D6D6B0 File Offset: 0x00D6B8B0
 		public void SetBuffSprite(EMediumItemGridBuffType? buffIconType)
 		{
 			Type typeFromHandle = typeof(MediumItemGridBuffIconComponent);
@@ -454,13 +478,13 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			base.RefreshComponent(typeFromHandle, new bool?(value), buffIconType);
 		}
 
-		// Token: 0x0603B313 RID: 242451 RVA: 0x00E1D246 File Offset: 0x00E1B446
+		// Token: 0x0603025C RID: 197212 RVA: 0x00D6D6FE File Offset: 0x00D6B8FE
 		public void SetIsPhantomLock(bool? isPhantomLock)
 		{
 			base.RefreshComponent(typeof(MediumItemGridPhantomLockComponent), new bool?(isPhantomLock.GetValueOrDefault()), isPhantomLock);
 		}
 
-		// Token: 0x0603B314 RID: 242452 RVA: 0x00E1D26C File Offset: 0x00E1B46C
+		// Token: 0x0603025D RID: 197213 RVA: 0x00D6D724 File Offset: 0x00D6B924
 		public void SetLevelAndLock(int? level, bool? isLockVisible, bool? isLevelUseChangeColor = null, bool? isUseVision = null, bool? isDeprecate = null, bool? isLevelInfinite = null)
 		{
 			MediumLevelAndLock @params = new MediumLevelAndLock
@@ -475,42 +499,42 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			base.RefreshComponent(typeof(MediumItemGridLevelAndLockComponent), new bool?(level != null || isLockVisible.GetValueOrDefault() || isLevelInfinite.GetValueOrDefault()), @params);
 		}
 
-		// Token: 0x0603B315 RID: 242453 RVA: 0x00E1D2E0 File Offset: 0x00E1B4E0
+		// Token: 0x0603025E RID: 197214 RVA: 0x00D6D798 File Offset: 0x00D6B998
 		public void SetLevelAndStar(IMediumLevelAndStar data)
 		{
 			base.RefreshComponent(typeof(MediumItemGridLvAndStarComponent), new bool?((data != null && data.Level != null) || (data != null && data.Star != null)), data);
 		}
 
-		// Token: 0x0603B316 RID: 242454 RVA: 0x00E1D32E File Offset: 0x00E1B52E
+		// Token: 0x0603025F RID: 197215 RVA: 0x00D6D7E6 File Offset: 0x00D6B9E6
 		public void SetItemPrice(IMediumItemPrice data)
 		{
 			base.RefreshComponent(typeof(MediumItemGridItemPriceComponent), new bool?(data != null), data);
 		}
 
-		// Token: 0x0603B317 RID: 242455 RVA: 0x00E1D34B File Offset: 0x00E1B54B
+		// Token: 0x06030260 RID: 197216 RVA: 0x00D6D803 File Offset: 0x00D6BA03
 		public void SetFrameEffectVisible(bool? bVisible)
 		{
 			base.RefreshComponent(typeof(MediumItemGridFrameEffectComponent), new bool?(bVisible.GetValueOrDefault()), bVisible);
 		}
 
-		// Token: 0x0603B318 RID: 242456 RVA: 0x00E1D370 File Offset: 0x00E1B570
+		// Token: 0x06030261 RID: 197217 RVA: 0x00D6D828 File Offset: 0x00D6BA28
 		public void SetRedDotVisible(bool? isRedDotVisible)
 		{
 			base.RefreshComponent(typeof(MediumItemGridRedDotComponent), new bool?(isRedDotVisible.GetValueOrDefault()), isRedDotVisible);
 		}
 
-		// Token: 0x0603B319 RID: 242457 RVA: 0x00E1D395 File Offset: 0x00E1B595
+		// Token: 0x06030262 RID: 197218 RVA: 0x00D6D84D File Offset: 0x00D6BA4D
 		public void SetNewVisible(bool? isNewVisible)
 		{
 			base.RefreshComponent(typeof(MediumItemGridNewFlagComponent), new bool?(isNewVisible.GetValueOrDefault()), isNewVisible);
 		}
 
-		// Token: 0x0603B31A RID: 242458 RVA: 0x00E1D3BA File Offset: 0x00E1B5BA
+		// Token: 0x06030263 RID: 197219 RVA: 0x00D6D872 File Offset: 0x00D6BA72
 		public void SetStartLevel(int? startLevel)
 		{
 		}
 
-		// Token: 0x0603B31B RID: 242459 RVA: 0x00E1D3BC File Offset: 0x00E1B5BC
+		// Token: 0x06030264 RID: 197220 RVA: 0x00D6D874 File Offset: 0x00D6BA74
 		public void SetRoleHead(RoleHeadInfo roleHeadInfo)
 		{
 			Type typeFromHandle = typeof(MediumItemGridRoleHeadComponent);
@@ -528,25 +552,27 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			base.RefreshComponent(typeFromHandle, new bool?(value), roleHeadInfo);
 		}
 
-		// Token: 0x0603B31C RID: 242460 RVA: 0x00E1D404 File Offset: 0x00E1B604
+		// Token: 0x06030265 RID: 197221 RVA: 0x00D6D8BC File Offset: 0x00D6BABC
 		public void SetVisionRoleHead(VisionRoleHeadInfo roleHeadInfo)
 		{
-			Type typeFromHandle = typeof(MediumItemGridVisionRoleHeadComponent);
-			bool value;
+			bool flag;
 			if (roleHeadInfo != null)
 			{
 				int? roleConfigId = roleHeadInfo.RoleConfigId;
 				int num = 0;
-				value = (roleConfigId.GetValueOrDefault() > num & roleConfigId != null);
+				flag = (roleConfigId.GetValueOrDefault() > num & roleConfigId != null);
 			}
 			else
 			{
-				value = false;
+				flag = false;
 			}
-			base.RefreshComponent(typeFromHandle, new bool?(value), roleHeadInfo);
+			bool flag2 = flag;
+			bool flag3 = flag2 && RoleModel.Instance.IsMainRole(roleHeadInfo.RoleConfigId.Value);
+			base.RefreshComponent(typeof(MediumItemGridVisionRoleHeadComponent), new bool?(flag2 && !flag3), flag3 ? null : roleHeadInfo);
+			base.RefreshComponent(typeof(MediumItemGridVisionMainRoleHeadComponent), new bool?(flag2 && flag3), flag3 ? roleHeadInfo : null);
 		}
 
-		// Token: 0x0603B31D RID: 242461 RVA: 0x00E1D44C File Offset: 0x00E1B64C
+		// Token: 0x06030266 RID: 197222 RVA: 0x00D6D950 File Offset: 0x00D6BB50
 		public void SetPhantomIsSpecialSkill(EMediumItemGridPhantomSpecialSkill? specialSkill)
 		{
 			bool flag;
@@ -564,7 +590,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			base.RefreshComponent(typeof(MediumItemGridPhantomSpecialSkillComponent), new bool?(value), specialSkill);
 		}
 
-		// Token: 0x0603B31E RID: 242462 RVA: 0x00E1D49C File Offset: 0x00E1B69C
+		// Token: 0x06030267 RID: 197223 RVA: 0x00D6D9A0 File Offset: 0x00D6BBA0
 		public void SetPhantomSortNum(int? sortNum)
 		{
 			bool flag;
@@ -582,7 +608,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			base.RefreshComponent(typeof(MediumItemGridPhantomSortNumComponent), new bool?(value), sortNum);
 		}
 
-		// Token: 0x0603B31F RID: 242463 RVA: 0x00E1D4EC File Offset: 0x00E1B6EC
+		// Token: 0x06030268 RID: 197224 RVA: 0x00D6D9F0 File Offset: 0x00D6BBF0
 		public void SetPhantomStackDisplay(PhantomStackDisplay stackDisplay)
 		{
 			if (stackDisplay == null)
@@ -602,7 +628,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			}
 		}
 
-		// Token: 0x0603B320 RID: 242464 RVA: 0x00E1D56C File Offset: 0x00E1B76C
+		// Token: 0x06030269 RID: 197225 RVA: 0x00D6DA70 File Offset: 0x00D6BC70
 		[NullableContext(1)]
 		private void SetBgByResourceId(string resourceId)
 		{
@@ -624,7 +650,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			this.CurrentBgResourceId = resourceId;
 		}
 
-		// Token: 0x0603B321 RID: 242465 RVA: 0x00E1D5C3 File Offset: 0x00E1B7C3
+		// Token: 0x0603026A RID: 197226 RVA: 0x00D6DAC7 File Offset: 0x00D6BCC7
 		private void SetStackFlagVisible(bool bVisible)
 		{
 			UUIItem item = base.GetItem(11);
@@ -635,37 +661,37 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			item.SetUIActive(bVisible);
 		}
 
-		// Token: 0x0603B322 RID: 242466 RVA: 0x00E1D5D8 File Offset: 0x00E1B7D8
+		// Token: 0x0603026B RID: 197227 RVA: 0x00D6DADC File Offset: 0x00D6BCDC
 		public void SetComposeIcon(MediumItemGridComposeTag composeTag)
 		{
 			base.RefreshComponent(typeof(MediumItemGridComposeTag), new bool?(composeTag != null), composeTag);
 		}
 
-		// Token: 0x0603B323 RID: 242467 RVA: 0x00E1D5F5 File Offset: 0x00E1B7F5
+		// Token: 0x0603026C RID: 197228 RVA: 0x00D6DAF9 File Offset: 0x00D6BCF9
 		public void SetComposeChangeAble(bool? isChangeAble)
 		{
 			base.RefreshComponent(typeof(MediumItemGridChangeAbleComponent), new bool?(isChangeAble.GetValueOrDefault()), isChangeAble);
 		}
 
-		// Token: 0x0603B324 RID: 242468 RVA: 0x00E1D61A File Offset: 0x00E1B81A
+		// Token: 0x0603026D RID: 197229 RVA: 0x00D6DB1E File Offset: 0x00D6BD1E
 		public void SetVisionSlotState(EMediumItemGridVisionSlotState[] visionSlotStateList)
 		{
 			base.RefreshComponent(typeof(MediumItemGridVisionSlotComponent), new bool?(visionSlotStateList != null && visionSlotStateList.Length != 0), visionSlotStateList);
 		}
 
-		// Token: 0x0603B325 RID: 242469 RVA: 0x00E1D63E File Offset: 0x00E1B83E
+		// Token: 0x0603026E RID: 197230 RVA: 0x00D6DB42 File Offset: 0x00D6BD42
 		public void SetDevelopRewardInfo(DevelopRewardInfo developRewardInfo)
 		{
 			base.RefreshComponent(typeof(MediumItemGridDevelopRewardComponent), new bool?(developRewardInfo != null), developRewardInfo);
 		}
 
-		// Token: 0x0603B326 RID: 242470 RVA: 0x00E1D65B File Offset: 0x00E1B85B
+		// Token: 0x0603026F RID: 197231 RVA: 0x00D6DB5F File Offset: 0x00D6BD5F
 		public void SetIsMainVision(bool? isMainVisionVisible)
 		{
 			base.RefreshComponent(typeof(MediumItemGridMainVisionComponent), new bool?(isMainVisionVisible.GetValueOrDefault()), isMainVisionVisible);
 		}
 
-		// Token: 0x0603B327 RID: 242471 RVA: 0x00E1D680 File Offset: 0x00E1B880
+		// Token: 0x06030270 RID: 197232 RVA: 0x00D6DB84 File Offset: 0x00D6BD84
 		public void SetCoolDown(float? coolDown, float? totalCdTime)
 		{
 			MediumItemGridCoolDownComponentParams @params = new MediumItemGridCoolDownComponentParams
@@ -688,13 +714,13 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			base.RefreshComponent(typeFromHandle, new bool?(value), @params);
 		}
 
-		// Token: 0x0603B328 RID: 242472 RVA: 0x00E1D6DE File Offset: 0x00E1B8DE
+		// Token: 0x06030271 RID: 197233 RVA: 0x00D6DBE2 File Offset: 0x00D6BDE2
 		public void SetIsProhibit(bool? isProhibit)
 		{
 			base.RefreshComponent(typeof(MediumItemGridProhibitComponent), new bool?(isProhibit.GetValueOrDefault()), isProhibit);
 		}
 
-		// Token: 0x0603B329 RID: 242473 RVA: 0x00E1D704 File Offset: 0x00E1B904
+		// Token: 0x06030272 RID: 197234 RVA: 0x00D6DC08 File Offset: 0x00D6BE08
 		public void SetReduceButton(LongPressButton reduceButtonInfo)
 		{
 			bool? flag = (reduceButtonInfo != null) ? reduceButtonInfo.IsVisible : null;
@@ -713,19 +739,19 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			mediumItemGridReduceButtonComponent.UnBindLongPressCallback();
 		}
 
-		// Token: 0x0603B32A RID: 242474 RVA: 0x00E1D787 File Offset: 0x00E1B987
+		// Token: 0x06030273 RID: 197235 RVA: 0x00D6DC8B File Offset: 0x00D6BE8B
 		public void SetRoundCount(int? round)
 		{
 			base.RefreshComponent(typeof(MediumItemGridRoundCountComponent), new bool?(round != null), round);
 		}
 
-		// Token: 0x0603B32B RID: 242475 RVA: 0x00E1D7AC File Offset: 0x00E1B9AC
+		// Token: 0x06030274 RID: 197236 RVA: 0x00D6DCB0 File Offset: 0x00D6BEB0
 		public void SetWarningPanelInfo(MediumWarningPanelInfo info = null)
 		{
 			base.RefreshComponent(typeof(MediumItemGridWarningPanelComponent), new bool?(info != null), info);
 		}
 
-		// Token: 0x0603B32C RID: 242476 RVA: 0x00E1D7CC File Offset: 0x00E1B9CC
+		// Token: 0x06030275 RID: 197237 RVA: 0x00D6DCD0 File Offset: 0x00D6BED0
 		public void SetSortIndex(int? sortIndex, bool highlight = false)
 		{
 			if (highlight)
@@ -736,26 +762,26 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			base.RefreshComponent(typeof(MediumItemGridSortIndexComponent), new bool?(sortIndex != null), sortIndex);
 		}
 
-		// Token: 0x0603B32D RID: 242477 RVA: 0x00E1D823 File Offset: 0x00E1BA23
+		// Token: 0x06030276 RID: 197238 RVA: 0x00D6DD27 File Offset: 0x00D6BF27
 		public void SetTeamIcon(bool? isInTeam)
 		{
 			base.RefreshComponent(typeof(MediumItemGridTeamIconComponent), new bool?(isInTeam != null), isInTeam);
 		}
 
-		// Token: 0x0603B32E RID: 242478 RVA: 0x00E1D848 File Offset: 0x00E1BA48
+		// Token: 0x06030277 RID: 197239 RVA: 0x00D6DD4C File Offset: 0x00D6BF4C
 		[NullableContext(1)]
 		public void BindReduceLongPress(Action<bool, MediumItemGrid, object> callback)
 		{
 			this.OnReduceButtonLongActiveCallback = callback;
 		}
 
-		// Token: 0x0603B32F RID: 242479 RVA: 0x00E1D851 File Offset: 0x00E1BA51
+		// Token: 0x06030278 RID: 197240 RVA: 0x00D6DD55 File Offset: 0x00D6BF55
 		public void UnBindReduceLongPress()
 		{
 			this.OnReduceButtonLongActiveCallback = null;
 		}
 
-		// Token: 0x0603B330 RID: 242480 RVA: 0x00E1D85A File Offset: 0x00E1BA5A
+		// Token: 0x06030279 RID: 197241 RVA: 0x00D6DD5E File Offset: 0x00D6BF5E
 		private void OnReduceButtonLongPressActive(bool isShortPress)
 		{
 			if (this.OnReduceButtonLongActiveCallback != null)
@@ -764,7 +790,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			}
 		}
 
-		// Token: 0x0603B331 RID: 242481 RVA: 0x00E1D878 File Offset: 0x00E1BA78
+		// Token: 0x0603027A RID: 197242 RVA: 0x00D6DD7C File Offset: 0x00D6BF7C
 		private void OnClickedReduceButton()
 		{
 			if (this.OnClickedReduceButtonCallback != null)
@@ -778,7 +804,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			}
 		}
 
-		// Token: 0x0603B332 RID: 242482 RVA: 0x00E1D8B4 File Offset: 0x00E1BAB4
+		// Token: 0x0603027B RID: 197243 RVA: 0x00D6DDB8 File Offset: 0x00D6BFB8
 		public void SetCheckTickVisible(bool? isCheckTick)
 		{
 			MediumItemGridCheckTickComponentParams @params = new MediumItemGridCheckTickComponentParams
@@ -788,7 +814,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			base.RefreshComponent(typeof(MediumItemGridCheckTickComponent), new bool?(isCheckTick.GetValueOrDefault()), @params);
 		}
 
-		// Token: 0x0603B333 RID: 242483 RVA: 0x00E1D8EC File Offset: 0x00E1BAEC
+		// Token: 0x0603027C RID: 197244 RVA: 0x00D6DDF0 File Offset: 0x00D6BFF0
 		public void SetCheckTickPerformance(bool? isCheckTick, string hexColor, float? alpha, string tickHexColor)
 		{
 			MediumItemGridCheckTickComponentParams @params = new MediumItemGridCheckTickComponentParams
@@ -801,19 +827,19 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			base.RefreshComponent(typeof(MediumItemGridCheckTickComponent), new bool?(isCheckTick.GetValueOrDefault()), @params);
 		}
 
-		// Token: 0x0603B334 RID: 242484 RVA: 0x00E1D93A File Offset: 0x00E1BB3A
+		// Token: 0x0603027D RID: 197245 RVA: 0x00D6DE3E File Offset: 0x00D6C03E
 		public void SetTimeFlagVisible(bool? isTimeFlagVisible)
 		{
 			base.RefreshComponent(typeof(MediumItemGridTimeFlagComponent), new bool?(isTimeFlagVisible.GetValueOrDefault()), isTimeFlagVisible);
 		}
 
-		// Token: 0x0603B335 RID: 242485 RVA: 0x00E1D95F File Offset: 0x00E1BB5F
+		// Token: 0x0603027E RID: 197246 RVA: 0x00D6DE63 File Offset: 0x00D6C063
 		public void SetReceivedFlagVisible(bool? isReceivedFlagVisible)
 		{
 			base.RefreshComponent(typeof(MediumItemGridReceivedComponent), new bool?(isReceivedFlagVisible.GetValueOrDefault()), isReceivedFlagVisible);
 		}
 
-		// Token: 0x0603B336 RID: 242486 RVA: 0x00E1D984 File Offset: 0x00E1BB84
+		// Token: 0x0603027F RID: 197247 RVA: 0x00D6DE88 File Offset: 0x00D6C088
 		public void SetEmptySlotVisible(bool isVisible)
 		{
 			MediumItemGridEmptySlotComponent mediumItemGridEmptySlotComponent = base.RefreshComponent(typeof(MediumItemGridEmptySlotComponent), new bool?(isVisible), isVisible) as MediumItemGridEmptySlotComponent;
@@ -829,7 +855,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			mediumItemGridEmptySlotComponent.UnBindEmptySlotButtonCallback();
 		}
 
-		// Token: 0x0603B337 RID: 242487 RVA: 0x00E1D9D4 File Offset: 0x00E1BBD4
+		// Token: 0x06030280 RID: 197248 RVA: 0x00D6DED8 File Offset: 0x00D6C0D8
 		public void SetOnlyEmptyVisible(bool isVisible, OnlyEmptyItemGrid parameters)
 		{
 			MediumItemGridEmptyComponent mediumItemGridEmptyComponent = base.RefreshComponent(typeof(MediumItemGridEmptyComponent), new bool?(isVisible), isVisible) as MediumItemGridEmptyComponent;
@@ -841,7 +867,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			mediumItemGridEmptyComponent.SetClickable(parameters != null && parameters.IsClickable.GetValueOrDefault());
 		}
 
-		// Token: 0x0603B338 RID: 242488 RVA: 0x00E1DA30 File Offset: 0x00E1BC30
+		// Token: 0x06030281 RID: 197249 RVA: 0x00D6DF34 File Offset: 0x00D6C134
 		private void SetBgVisible(bool bVisible)
 		{
 			UUISprite sprite = base.GetSprite(3);
@@ -852,7 +878,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			sprite.SetUIActive(bVisible);
 		}
 
-		// Token: 0x0603B339 RID: 242489 RVA: 0x00E1DA44 File Offset: 0x00E1BC44
+		// Token: 0x06030282 RID: 197250 RVA: 0x00D6DF48 File Offset: 0x00D6C148
 		private void OnClickedEmptySlotButton()
 		{
 			if (this.OnClickedEmptySlotButtonCallback != null)
@@ -866,31 +892,31 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			}
 		}
 
-		// Token: 0x0603B33A RID: 242490 RVA: 0x00E1DA7E File Offset: 0x00E1BC7E
+		// Token: 0x06030283 RID: 197251 RVA: 0x00D6DF82 File Offset: 0x00D6C182
 		public void SetElement(int? elementId)
 		{
 			base.RefreshComponent(typeof(MediumItemGridElementComponent), new bool?(elementId != null), elementId);
 		}
 
-		// Token: 0x0603B33B RID: 242491 RVA: 0x00E1DAA3 File Offset: 0x00E1BCA3
+		// Token: 0x06030284 RID: 197252 RVA: 0x00D6DFA7 File Offset: 0x00D6C1A7
 		public void SetRecommendVisible(bool? isRecommendVisible)
 		{
 			base.RefreshComponent(typeof(MediumItemGridRecommendComponent), new bool?(isRecommendVisible.GetValueOrDefault()), isRecommendVisible);
 		}
 
-		// Token: 0x0603B33C RID: 242492 RVA: 0x00E1DAC8 File Offset: 0x00E1BCC8
+		// Token: 0x06030285 RID: 197253 RVA: 0x00D6DFCC File Offset: 0x00D6C1CC
 		public void SetUnRecommendVisible(bool? isUnRecommendVisible)
 		{
 			base.RefreshComponent(typeof(MediumItemGridUnRecommendComponent), new bool?(isUnRecommendVisible.GetValueOrDefault()), isUnRecommendVisible);
 		}
 
-		// Token: 0x0603B33D RID: 242493 RVA: 0x00E1DAED File Offset: 0x00E1BCED
+		// Token: 0x06030286 RID: 197254 RVA: 0x00D6DFF1 File Offset: 0x00D6C1F1
 		public void SetIsDisable(bool? isRoleDisable)
 		{
 			base.RefreshComponent(typeof(MediumItemGridDisableComponent), new bool?(isRoleDisable.GetValueOrDefault()), isRoleDisable);
 		}
 
-		// Token: 0x0603B33E RID: 242494 RVA: 0x00E1DB14 File Offset: 0x00E1BD14
+		// Token: 0x06030287 RID: 197255 RVA: 0x00D6E018 File Offset: 0x00D6C218
 		public void SetVisionFetterGroup(int? fetterGroupId)
 		{
 			Type typeFromHandle = typeof(MediumItemGridVisionFetterComponent);
@@ -908,32 +934,32 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			base.RefreshComponent(typeFromHandle, new bool?(value), fetterGroupId);
 		}
 
-		// Token: 0x0603B33F RID: 242495 RVA: 0x00E1DB60 File Offset: 0x00E1BD60
+		// Token: 0x06030288 RID: 197256 RVA: 0x00D6E064 File Offset: 0x00D6C264
 		public bool IsDisable()
 		{
 			ItemGridComponent itemGridComponent = base.GetItemGridComponent(typeof(MediumItemGridDisableComponent));
 			return itemGridComponent != null && itemGridComponent.GetActive();
 		}
 
-		// Token: 0x0603B340 RID: 242496 RVA: 0x00E1DB89 File Offset: 0x00E1BD89
+		// Token: 0x06030289 RID: 197257 RVA: 0x00D6E08D File Offset: 0x00D6C28D
 		public void SetTrialRoleVisible(bool? isTrialRoleVisible)
 		{
 			base.RefreshComponent(typeof(MediumItemGridTimeFlagComponent), new bool?(isTrialRoleVisible.GetValueOrDefault()), isTrialRoleVisible);
 		}
 
-		// Token: 0x0603B341 RID: 242497 RVA: 0x00E1DBAE File Offset: 0x00E1BDAE
+		// Token: 0x0603028A RID: 197258 RVA: 0x00D6E0B2 File Offset: 0x00D6C2B2
 		public void SetRoleRightBottomTagVisible(MediumRoleRightBottomTag roleRightBottomTag)
 		{
 			base.RefreshComponent(typeof(MediumItemGridRoleRightBottomTag), new bool?(roleRightBottomTag != null), roleRightBottomTag);
 		}
 
-		// Token: 0x0603B342 RID: 242498 RVA: 0x00E1DBCB File Offset: 0x00E1BDCB
+		// Token: 0x0603028B RID: 197259 RVA: 0x00D6E0CF File Offset: 0x00D6C2CF
 		public void SetTrialRoleRightBottomTagVisible(MediumTrialRoleRightBottomTag trialRoleRightBottomTag)
 		{
 			base.RefreshComponent(typeof(MediumItemGridTrialRoleRightBottomTag), new bool?(trialRoleRightBottomTag != null), trialRoleRightBottomTag);
 		}
 
-		// Token: 0x0603B343 RID: 242499 RVA: 0x00E1DBE8 File Offset: 0x00E1BDE8
+		// Token: 0x0603028C RID: 197260 RVA: 0x00D6E0EC File Offset: 0x00D6C2EC
 		public void SetIconSprite(string iconSpritePath)
 		{
 			UUISprite sprite = base.GetSprite(10);
@@ -952,7 +978,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			}
 		}
 
-		// Token: 0x0603B344 RID: 242500 RVA: 0x00E1DC2E File Offset: 0x00E1BE2E
+		// Token: 0x0603028D RID: 197261 RVA: 0x00D6E132 File Offset: 0x00D6C332
 		public void SetSkinIcon(int? itemConfigId)
 		{
 			if (itemConfigId == null)
@@ -962,7 +988,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			base.RefreshComponent(typeof(MediumItemGridSkinComponent), new bool?(true), itemConfigId);
 		}
 
-		// Token: 0x0603B345 RID: 242501 RVA: 0x00E1DC58 File Offset: 0x00E1BE58
+		// Token: 0x0603028E RID: 197262 RVA: 0x00D6E15C File Offset: 0x00D6C35C
 		private void SetIconTexture(string iconPath)
 		{
 			UUITexture texture = base.GetTexture(1);
@@ -979,7 +1005,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			base.SetTextureByPath(iconPath, texture, null, null);
 		}
 
-		// Token: 0x0603B346 RID: 242502 RVA: 0x00E1DC9C File Offset: 0x00E1BE9C
+		// Token: 0x0603028F RID: 197263 RVA: 0x00D6E1A0 File Offset: 0x00D6C3A0
 		[NullableContext(1)]
 		public void ApplyEmptyDisplay(EmptyItemGrid parameters)
 		{
@@ -995,7 +1021,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			}
 		}
 
-		// Token: 0x0603B347 RID: 242503 RVA: 0x00E1DCEC File Offset: 0x00E1BEEC
+		// Token: 0x06030290 RID: 197264 RVA: 0x00D6E1F0 File Offset: 0x00D6C3F0
 		[NullableContext(1)]
 		public void ApplyPropBaseDisplay(PropMediumItemGrid parameters)
 		{
@@ -1052,7 +1078,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			this.SetBgVisible(true);
 		}
 
-		// Token: 0x0603B348 RID: 242504 RVA: 0x00E1DE4C File Offset: 0x00E1C04C
+		// Token: 0x06030291 RID: 197265 RVA: 0x00D6E350 File Offset: 0x00D6C550
 		[NullableContext(1)]
 		public void ApplyPhantomBaseDisplay(PhantomMediumItemGrid parameters)
 		{
@@ -1082,7 +1108,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			this.SetBgVisible(true);
 		}
 
-		// Token: 0x0603B349 RID: 242505 RVA: 0x00E1DF08 File Offset: 0x00E1C108
+		// Token: 0x06030292 RID: 197266 RVA: 0x00D6E40C File Offset: 0x00D6C60C
 		[NullableContext(1)]
 		public void ApplyCharacterBaseDisplay(CharacterMediumItemGrid parameters)
 		{
@@ -1117,7 +1143,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			this.SetBgVisible(true);
 		}
 
-		// Token: 0x0603B34A RID: 242506 RVA: 0x00E1E03C File Offset: 0x00E1C23C
+		// Token: 0x06030293 RID: 197267 RVA: 0x00D6E540 File Offset: 0x00D6C740
 		[NullableContext(1)]
 		public void ApplyForecastCharacterBaseDisplay(ForecastCharacterMediumItemGrid parameters)
 		{
@@ -1138,7 +1164,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			this.SetBgVisible(true);
 		}
 
-		// Token: 0x0603B34B RID: 242507 RVA: 0x00E1E0FC File Offset: 0x00E1C2FC
+		// Token: 0x06030294 RID: 197268 RVA: 0x00D6E600 File Offset: 0x00D6C800
 		private void SetTexture(int? itemConfigId)
 		{
 			UUITexture texture = base.GetTexture(1);
@@ -1172,7 +1198,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			texture.SetUIActive(true);
 		}
 
-		// Token: 0x0603B34C RID: 242508 RVA: 0x00E1E1D0 File Offset: 0x00E1C3D0
+		// Token: 0x06030295 RID: 197269 RVA: 0x00D6E6D4 File Offset: 0x00D6C8D4
 		private void SetDangoItemTexture(int? itemId)
 		{
 			DangoPluginIconInfo dangoPluginIcon = new DangoPluginIconInfo
@@ -1188,7 +1214,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			texture.SetUIActive(false);
 		}
 
-		// Token: 0x0603B34D RID: 242509 RVA: 0x00E1E20C File Offset: 0x00E1C40C
+		// Token: 0x06030296 RID: 197270 RVA: 0x00D6E710 File Offset: 0x00D6C910
 		private void SetMonsterTexture(int? monsterId)
 		{
 			UUITexture texture = base.GetTexture(1);
@@ -1208,7 +1234,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			}
 		}
 
-		// Token: 0x0603B34E RID: 242510 RVA: 0x00E1E264 File Offset: 0x00E1C464
+		// Token: 0x06030297 RID: 197271 RVA: 0x00D6E768 File Offset: 0x00D6C968
 		private void SetQuality(int? itemConfigId)
 		{
 			UUISprite sprite = base.GetSprite(0);
@@ -1238,7 +1264,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			this.QualityItemConfigId = itemConfigId.Value;
 		}
 
-		// Token: 0x0603B34F RID: 242511 RVA: 0x00E1E2E4 File Offset: 0x00E1C4E4
+		// Token: 0x06030298 RID: 197272 RVA: 0x00D6E7E8 File Offset: 0x00D6C9E8
 		private void SetDangoAbyssItemQuality(int? itemConfigId)
 		{
 			UUISprite sprite = base.GetSprite(0);
@@ -1268,7 +1294,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			this.QualityItemConfigId = itemConfigId.Value;
 		}
 
-		// Token: 0x0603B350 RID: 242512 RVA: 0x00E1E380 File Offset: 0x00E1C580
+		// Token: 0x06030299 RID: 197273 RVA: 0x00D6E884 File Offset: 0x00D6CA84
 		private void SetQualityByResourceId(string resourceId)
 		{
 			UUISprite sprite = base.GetSprite(0);
@@ -1296,7 +1322,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			}
 		}
 
-		// Token: 0x0603B351 RID: 242513 RVA: 0x00E1E3E4 File Offset: 0x00E1C5E4
+		// Token: 0x0603029A RID: 197274 RVA: 0x00D6E8E8 File Offset: 0x00D6CAE8
 		private void SetQualityByPath(string path)
 		{
 			UUISprite sprite = base.GetSprite(0);
@@ -1311,7 +1337,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			}
 		}
 
-		// Token: 0x0603B352 RID: 242514 RVA: 0x00E1E424 File Offset: 0x00E1C624
+		// Token: 0x0603029B RID: 197275 RVA: 0x00D6E928 File Offset: 0x00D6CB28
 		public void SetSkinQuality(int? itemConfigId)
 		{
 			UUISprite sprite = base.GetSprite(8);
@@ -1347,7 +1373,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			}
 		}
 
-		// Token: 0x0603B353 RID: 242515 RVA: 0x00E1E4E4 File Offset: 0x00E1C6E4
+		// Token: 0x0603029C RID: 197276 RVA: 0x00D6E9E8 File Offset: 0x00D6CBE8
 		[NullableContext(1)]
 		private void SetPinballItemQuality(MediumItemGridBase parameters)
 		{
@@ -1380,7 +1406,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			}
 		}
 
-		// Token: 0x0603B354 RID: 242516 RVA: 0x00E1E594 File Offset: 0x00E1C794
+		// Token: 0x0603029D RID: 197277 RVA: 0x00D6EA98 File Offset: 0x00D6CC98
 		[NullableContext(1)]
 		private void SetItemQuality(MediumItemGridBase parameters)
 		{
@@ -1444,7 +1470,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			this.SetQuality(itemConfigId);
 		}
 
-		// Token: 0x0603B355 RID: 242517 RVA: 0x00E1E6F0 File Offset: 0x00E1C8F0
+		// Token: 0x0603029E RID: 197278 RVA: 0x00D6EBF4 File Offset: 0x00D6CDF4
 		private void SetNormalItemQualityInternal(bool? isQualityHidden, int? qualityId, int? itemConfigId, string qualityIcon, CommonDefine.EQualityIconType? qualityType)
 		{
 			UUISprite sprite = base.GetSprite(0);
@@ -1480,7 +1506,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			this.SetQuality(itemConfigId);
 		}
 
-		// Token: 0x0603B356 RID: 242518 RVA: 0x00E1E7A0 File Offset: 0x00E1C9A0
+		// Token: 0x0603029F RID: 197279 RVA: 0x00D6ECA4 File Offset: 0x00D6CEA4
 		private void SetMotorStickerTexture(int itemId)
 		{
 			UUITexture texture = base.GetTexture(1);
@@ -1502,13 +1528,13 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			}
 		}
 
-		// Token: 0x0603B357 RID: 242519 RVA: 0x00E1E814 File Offset: 0x00E1CA14
+		// Token: 0x060302A0 RID: 197280 RVA: 0x00D6ED18 File Offset: 0x00D6CF18
 		public void SetCurTagIcon(bool? isShow)
 		{
 			base.RefreshComponent(typeof(MediumItemGridCurTagComponent), isShow, isShow);
 		}
 
-		// Token: 0x0603B358 RID: 242520 RVA: 0x00E1E830 File Offset: 0x00E1CA30
+		// Token: 0x060302A1 RID: 197281 RVA: 0x00D6ED34 File Offset: 0x00D6CF34
 		public void SetBottomTextVisible(bool bVisible)
 		{
 			UUIText text = base.GetText(2);
@@ -1522,7 +1548,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			}
 		}
 
-		// Token: 0x0603B359 RID: 242521 RVA: 0x00E1E85C File Offset: 0x00E1CA5C
+		// Token: 0x060302A2 RID: 197282 RVA: 0x00D6ED60 File Offset: 0x00D6CF60
 		public void SetBottomTextId(string textId, [Nullable(new byte[]
 		{
 			2,
@@ -1542,7 +1568,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			LguiUtil.Instance.SetLocalTextNew(text, textId, Array.Empty<object>());
 		}
 
-		// Token: 0x0603B35A RID: 242522 RVA: 0x00E1E89C File Offset: 0x00E1CA9C
+		// Token: 0x060302A3 RID: 197283 RVA: 0x00D6EDA0 File Offset: 0x00D6CFA0
 		public void SetBottomText(string text)
 		{
 			UUIText text2 = base.GetText(2);
@@ -1556,45 +1582,63 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			}
 		}
 
-		// Token: 0x0603B35B RID: 242523 RVA: 0x00E1E8C5 File Offset: 0x00E1CAC5
+		// Token: 0x060302A4 RID: 197284 RVA: 0x00D6EDC9 File Offset: 0x00D6CFC9
 		[NullableContext(1)]
 		public void BindReduceButtonCallback(Action<MediumItemGridButtonCallback> onClickedReduceButton, [Nullable(2)] object data = null)
 		{
 			this.OnClickedReduceButtonCallback = onClickedReduceButton;
 		}
 
-		// Token: 0x0603B35C RID: 242524 RVA: 0x00E1E8CE File Offset: 0x00E1CACE
+		// Token: 0x060302A5 RID: 197285 RVA: 0x00D6EDD2 File Offset: 0x00D6CFD2
 		public void UnBindReduceButtonCallback()
 		{
 			this.OnClickedReduceButtonCallback = null;
 		}
 
-		// Token: 0x0603B35D RID: 242525 RVA: 0x00E1E8D7 File Offset: 0x00E1CAD7
+		// Token: 0x060302A6 RID: 197286 RVA: 0x00D6EDDB File Offset: 0x00D6CFDB
 		[NullableContext(1)]
 		public void BindEmptySlotButtonCallback(Action<MediumItemGridButtonCallback> onClickedEmptySlotButton)
 		{
 			this.OnClickedEmptySlotButtonCallback = onClickedEmptySlotButton;
 		}
 
-		// Token: 0x0603B35E RID: 242526 RVA: 0x00E1E8E0 File Offset: 0x00E1CAE0
+		// Token: 0x060302A7 RID: 197287 RVA: 0x00D6EDE4 File Offset: 0x00D6CFE4
 		public void UnBindEmptySlotButtonCallback()
 		{
 			this.OnClickedEmptySlotButtonCallback = null;
 		}
 
-		// Token: 0x0603B35F RID: 242527 RVA: 0x00E1E8E9 File Offset: 0x00E1CAE9
+		// Token: 0x060302A8 RID: 197288 RVA: 0x00D6EDED File Offset: 0x00D6CFED
 		public override UUIExtendToggle GetItemGridExtendToggle()
 		{
 			return base.GetExtendToggle(6);
 		}
 
-		// Token: 0x0603B360 RID: 242528 RVA: 0x00E1E8F2 File Offset: 0x00E1CAF2
+		// Token: 0x060302A9 RID: 197289 RVA: 0x00D6EDF6 File Offset: 0x00D6CFF6
 		private void SetRoleCost(MediumItemGridCostComponentData costData)
 		{
 			base.RefreshComponent(typeof(MediumItemGridCostComponent), new bool?(costData != null), costData);
 		}
 
-		// Token: 0x0603B361 RID: 242529 RVA: 0x00E1E90F File Offset: 0x00E1CB0F
+		// Token: 0x060302AA RID: 197290 RVA: 0x00D6EE13 File Offset: 0x00D6D013
+		private void SetRoleItemAddtion(RoleItemAddtionData data)
+		{
+			base.RefreshComponent(typeof(MediumItemGridRoleItemAddtionComponent), new bool?(data != null), data);
+		}
+
+		// Token: 0x060302AB RID: 197291 RVA: 0x00D6EE30 File Offset: 0x00D6D030
+		private void SetRoleTowerEnemyLevel(int? level)
+		{
+			base.RefreshComponent(typeof(MediumItemGridRoleTowerEnemyLevelComponent), new bool?(level != null), level);
+		}
+
+		// Token: 0x060302AC RID: 197292 RVA: 0x00D6EE55 File Offset: 0x00D6D055
+		private void SetRoleTowerElement(int? elementId)
+		{
+			base.RefreshComponent(typeof(MediumItemGridRoleTowerElementComponent), new bool?(elementId != null), elementId);
+		}
+
+		// Token: 0x060302AD RID: 197293 RVA: 0x00D6EE7A File Offset: 0x00D6D07A
 		[NullableContext(1)]
 		public void SetBottomTextColor(string hexColor)
 		{
@@ -1606,20 +1650,20 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			text.SetColor(FColor.FromHex(hexColor));
 		}
 
-		// Token: 0x0603B362 RID: 242530 RVA: 0x00E1E928 File Offset: 0x00E1CB28
+		// Token: 0x060302AE RID: 197294 RVA: 0x00D6EE94 File Offset: 0x00D6D094
 		public void SetHalfAreaInfo(HaveAreaInfo info)
 		{
 			bool value = info != null;
 			base.RefreshComponent(typeof(MediumItemGridHalfAreaComponent), new bool?(value), info);
 		}
 
-		// Token: 0x0603B363 RID: 242531 RVA: 0x00E1E952 File Offset: 0x00E1CB52
+		// Token: 0x060302AF RID: 197295 RVA: 0x00D6EEBE File Offset: 0x00D6D0BE
 		public void SetUpGradeVisible(bool? visible)
 		{
 			base.RefreshComponent(typeof(MediumItemGridUpgradeComponent), new bool?(visible.GetValueOrDefault()), visible);
 		}
 
-		// Token: 0x0603B364 RID: 242532 RVA: 0x00E1E978 File Offset: 0x00E1CB78
+		// Token: 0x060302B0 RID: 197296 RVA: 0x00D6EEE4 File Offset: 0x00D6D0E4
 		public void SetTagsInfo([Nullable(new byte[]
 		{
 			2,
@@ -1630,38 +1674,38 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			base.RefreshComponent(typeof(MediumItemGridTagsComponent), new bool?(value), tags);
 		}
 
-		// Token: 0x0603B365 RID: 242533 RVA: 0x00E1E9AC File Offset: 0x00E1CBAC
+		// Token: 0x060302B1 RID: 197297 RVA: 0x00D6EF18 File Offset: 0x00D6D118
 		public void SetRightTopValueInfo(string value)
 		{
 			bool value2 = !string.IsNullOrEmpty(value);
 			base.RefreshComponent(typeof(MediumItemGridRightTopValueComponent), new bool?(value2), value);
 		}
 
-		// Token: 0x0603B366 RID: 242534 RVA: 0x00E1E9DB File Offset: 0x00E1CBDB
+		// Token: 0x060302B2 RID: 197298 RVA: 0x00D6EF47 File Offset: 0x00D6D147
 		public void SetIsBranchUpgrade(bool? isShow)
 		{
 			base.RefreshComponent(typeof(MediumItemGridBranchUpgradeComponent), new bool?(isShow.GetValueOrDefault()), isShow);
 		}
 
-		// Token: 0x0603B367 RID: 242535 RVA: 0x00E1EA00 File Offset: 0x00E1CC00
+		// Token: 0x060302B3 RID: 197299 RVA: 0x00D6EF6C File Offset: 0x00D6D16C
 		public void SetSubIconPath(string path)
 		{
 			base.RefreshComponent(typeof(MediumItemGridSubIconComponent), new bool?(!string.IsNullOrEmpty(path)), path);
 		}
 
-		// Token: 0x0603B368 RID: 242536 RVA: 0x00E1EA22 File Offset: 0x00E1CC22
+		// Token: 0x060302B4 RID: 197300 RVA: 0x00D6EF8E File Offset: 0x00D6D18E
 		public void SetRoleDevTag(ERoleDevelopHotRoleTag? tagType)
 		{
 			base.RefreshComponent(typeof(MediumItemGridRoleDevTagComponent), new bool?(tagType != null), tagType);
 		}
 
-		// Token: 0x0603B369 RID: 242537 RVA: 0x00E1EA47 File Offset: 0x00E1CC47
+		// Token: 0x060302B5 RID: 197301 RVA: 0x00D6EFB3 File Offset: 0x00D6D1B3
 		public void SetRoleDevelopTagMark(bool? isRoleDevelopTagMarkVisible)
 		{
 			base.RefreshComponent(typeof(MediumItemGridRoleDevelopTagMarkComponent), new bool?(isRoleDevelopTagMarkVisible.GetValueOrDefault()), isRoleDevelopTagMarkVisible);
 		}
 
-		// Token: 0x0603B36A RID: 242538 RVA: 0x00E1EA6C File Offset: 0x00E1CC6C
+		// Token: 0x060302B6 RID: 197302 RVA: 0x00D6EFD8 File Offset: 0x00D6D1D8
 		public void SetRoleSkillBranch(int? index, int? itemConfigId = null, bool? isTrialRoleVisible = null)
 		{
 			int? num = index;
@@ -1680,19 +1724,19 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			base.RefreshComponent(typeof(MediumItemGridRoleSkillBranchComponent), new bool?(num != null), num);
 		}
 
-		// Token: 0x0603B36B RID: 242539 RVA: 0x00E1EAFA File Offset: 0x00E1CCFA
+		// Token: 0x060302B7 RID: 197303 RVA: 0x00D6F066 File Offset: 0x00D6D266
 		public void SetAddLevel(int? addLevel)
 		{
 			base.RefreshComponent(typeof(MediumItemGridAddLevelComponent), new bool?(addLevel != null), addLevel);
 		}
 
-		// Token: 0x0603B36C RID: 242540 RVA: 0x00E1EB1F File Offset: 0x00E1CD1F
+		// Token: 0x060302B8 RID: 197304 RVA: 0x00D6F08B File Offset: 0x00D6D28B
 		public void SetArchiveIcon(bool? isShow)
 		{
 			base.RefreshComponent(typeof(MediumItemGridArchiveComponent), new bool?(isShow.GetValueOrDefault()), isShow);
 		}
 
-		// Token: 0x0603B36D RID: 242541 RVA: 0x00E1EB44 File Offset: 0x00E1CD44
+		// Token: 0x060302B9 RID: 197305 RVA: 0x00D6F0B0 File Offset: 0x00D6D2B0
 		public void SetLeftUpperIcon(string iconPath)
 		{
 			if (iconPath == null)
@@ -1702,38 +1746,38 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			base.RefreshComponent(typeof(MediumItemGridLeftUpperIconComponent), new bool?(true), iconPath);
 		}
 
-		// Token: 0x0603B36E RID: 242542 RVA: 0x00E1EB62 File Offset: 0x00E1CD62
+		// Token: 0x060302BA RID: 197306 RVA: 0x00D6F0CE File Offset: 0x00D6D2CE
 		public void SetWarningTips(bool? isShow)
 		{
 			base.RefreshComponent(typeof(MediumItemGridWarningTipsComponent), new bool?(isShow.GetValueOrDefault()), isShow);
 		}
 
-		// Token: 0x0603B36F RID: 242543 RVA: 0x00E1EB87 File Offset: 0x00E1CD87
+		// Token: 0x060302BB RID: 197307 RVA: 0x00D6F0F3 File Offset: 0x00D6D2F3
 		public void SetUpgradeArrow(bool? isShow)
 		{
 			base.RefreshComponent(typeof(MediumItemGridUpgradeArrowComponent), new bool?(isShow.GetValueOrDefault()), isShow);
 		}
 
-		// Token: 0x0603B370 RID: 242544 RVA: 0x00E1EBAC File Offset: 0x00E1CDAC
+		// Token: 0x060302BC RID: 197308 RVA: 0x00D6F118 File Offset: 0x00D6D318
 		public void SetTemplateIcon(bool? isShow)
 		{
 			base.RefreshComponent(typeof(MediumItemGridTemplateIconComponent), new bool?(isShow.GetValueOrDefault()), isShow);
 		}
 
-		// Token: 0x0401ED7B RID: 126331
+		// Token: 0x04019827 RID: 104487
 		private const int TRIAL_ROLE_ID = 10000;
 
-		// Token: 0x0401ED7C RID: 126332
+		// Token: 0x04019828 RID: 104488
 		private int TextureItemConfigId;
 
-		// Token: 0x0401ED7D RID: 126333
+		// Token: 0x04019829 RID: 104489
 		private int QualityItemConfigId;
 
-		// Token: 0x0401ED7E RID: 126334
+		// Token: 0x0401982A RID: 104490
 		[Nullable(1)]
 		private string CurrentBgResourceId = "";
 
-		// Token: 0x0401ED7F RID: 126335
+		// Token: 0x0401982B RID: 104491
 		[Nullable(new byte[]
 		{
 			2,
@@ -1741,7 +1785,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 		})]
 		private Action<MediumItemGridButtonCallback> OnClickedReduceButtonCallback;
 
-		// Token: 0x0401ED80 RID: 126336
+		// Token: 0x0401982C RID: 104492
 		[Nullable(new byte[]
 		{
 			2,
@@ -1749,7 +1793,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 		})]
 		private Action<MediumItemGridButtonCallback> OnClickedEmptySlotButtonCallback;
 
-		// Token: 0x0401ED81 RID: 126337
+		// Token: 0x0401982D RID: 104493
 		[Nullable(new byte[]
 		{
 			2,
@@ -1758,44 +1802,44 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 		})]
 		private Action<bool, MediumItemGrid, object> OnReduceButtonLongActiveCallback;
 
-		// Token: 0x0200BD7B RID: 48507
+		// Token: 0x0200A785 RID: 42885
 		[NullableContext(0)]
 		private class EChildType
 		{
-			// Token: 0x04039280 RID: 234112
+			// Token: 0x04033C4E RID: 212046
 			public const int QualitySprite = 0;
 
-			// Token: 0x04039281 RID: 234113
+			// Token: 0x04033C4F RID: 212047
 			public const int ItemTexture = 1;
 
-			// Token: 0x04039282 RID: 234114
+			// Token: 0x04033C50 RID: 212048
 			public const int BottomText = 2;
 
-			// Token: 0x04039283 RID: 234115
+			// Token: 0x04033C51 RID: 212049
 			public const int BgSprite = 3;
 
-			// Token: 0x04039284 RID: 234116
+			// Token: 0x04033C52 RID: 212050
 			public const int TopAdditionItem = 4;
 
-			// Token: 0x04039285 RID: 234117
+			// Token: 0x04033C53 RID: 212051
 			public const int BottomAdditionItem = 5;
 
-			// Token: 0x04039286 RID: 234118
+			// Token: 0x04033C54 RID: 212052
 			public const int ExtendToggle = 6;
 
-			// Token: 0x04039287 RID: 234119
+			// Token: 0x04033C55 RID: 212053
 			public const int UnderTextAdditionItem = 7;
 
-			// Token: 0x04039288 RID: 234120
+			// Token: 0x04033C56 RID: 212054
 			public const int SkinQualitySprite = 8;
 
-			// Token: 0x04039289 RID: 234121
+			// Token: 0x04033C57 RID: 212055
 			public const int AniLoop = 9;
 
-			// Token: 0x0403928A RID: 234122
+			// Token: 0x04033C58 RID: 212056
 			public const int ItemSprite = 10;
 
-			// Token: 0x0403928B RID: 234123
+			// Token: 0x04033C59 RID: 212057
 			public const int PhantomStackFlag = 11;
 		}
 	}

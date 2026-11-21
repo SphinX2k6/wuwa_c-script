@@ -2,34 +2,34 @@
 using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Module.PhantomArena;
 
-// Token: 0x020033F5 RID: 13301
+// Token: 0x02002967 RID: 10599
 public class RedDotPhantomArenaRole : RedDotBase
 {
-	// Token: 0x0601CCAD RID: 117933 RVA: 0x0080A768 File Offset: 0x00808968
+	// Token: 0x0601A9A5 RID: 108965 RVA: 0x00830D2C File Offset: 0x0082EF2C
 	protected override ERedDotName? OnGetParentName()
 	{
 		return new ERedDotName?(ERedDotName.RedDotPhantomArenaActivity);
 	}
 
-	// Token: 0x0601CCAE RID: 117934 RVA: 0x0080A774 File Offset: 0x00808974
+	// Token: 0x0601A9A6 RID: 108966 RVA: 0x00830D38 File Offset: 0x0082EF38
 	protected override void AddCheckEvent()
 	{
 		EventSystem.Instance.Add<int>(EEventName.OnPhantomArenaRoleRewardUpdate, new Action<int>(base.EventCheckWithUid));
 	}
 
-	// Token: 0x0601CCAF RID: 117935 RVA: 0x0080A792 File Offset: 0x00808992
+	// Token: 0x0601A9A7 RID: 108967 RVA: 0x00830D56 File Offset: 0x0082EF56
 	protected override void RemoveCheckEvent()
 	{
 		EventSystem.Instance.Remove<int>(EEventName.OnPhantomArenaRoleRewardUpdate, new Action<int>(base.EventCheckWithUid));
 	}
 
-	// Token: 0x0601CCB0 RID: 117936 RVA: 0x0080A7B0 File Offset: 0x008089B0
+	// Token: 0x0601A9A8 RID: 108968 RVA: 0x00830D74 File Offset: 0x0082EF74
 	protected override bool IsMultiple()
 	{
 		return true;
 	}
 
-	// Token: 0x0601CCB1 RID: 117937 RVA: 0x0080A7B3 File Offset: 0x008089B3
+	// Token: 0x0601A9A9 RID: 108969 RVA: 0x00830D77 File Offset: 0x0082EF77
 	protected override bool OnCheck(int uId = 0)
 	{
 		return uId != 0 && PhantomArenaModel.Instance.GetRoleRewardRedDot(uId);

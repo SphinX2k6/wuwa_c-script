@@ -3,11 +3,11 @@ using CSharpScript.Game.Module.RoleUi.RoleDevelop;
 
 namespace CSharpScript.Game.Module.Common.MediumItemGrid
 {
-	// Token: 0x02005B5F RID: 23391
+	// Token: 0x02004B3E RID: 19262
 	public class ForecastCharacterMediumItemGrid : MediumItemGridBase
 	{
-		// Token: 0x17008CB1 RID: 36017
-		// (get) Token: 0x0603B386 RID: 242566 RVA: 0x00E1ED19 File Offset: 0x00E1CF19
+		// Token: 0x17006083 RID: 24707
+		// (get) Token: 0x060302D2 RID: 197330 RVA: 0x00D6F285 File Offset: 0x00D6D485
 		public override EMediumItemGridType Type
 		{
 			get
@@ -16,7 +16,7 @@ namespace CSharpScript.Game.Module.Common.MediumItemGrid
 			}
 		}
 
-		// Token: 0x0401EE03 RID: 126467
+		// Token: 0x040198B2 RID: 104626
 		public ERoleDevelopHotRoleTag? RoleDevTag;
 	}
 }

@@ -2,48 +2,48 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Capability;
 
-// Token: 0x02000232 RID: 562
+// Token: 0x02000236 RID: 566
 [NullableContext(1)]
 public interface ICapabilityDebugRecord
 {
-	// Token: 0x1700051B RID: 1307
-	// (get) Token: 0x060022B1 RID: 8881
-	// (set) Token: 0x060022B2 RID: 8882
+	// Token: 0x17000542 RID: 1346
+	// (get) Token: 0x06002369 RID: 9065
+	// (set) Token: 0x0600236A RID: 9066
 	int Seq { get; set; }
 
-	// Token: 0x1700051C RID: 1308
-	// (get) Token: 0x060022B3 RID: 8883
-	// (set) Token: 0x060022B4 RID: 8884
+	// Token: 0x17000543 RID: 1347
+	// (get) Token: 0x0600236B RID: 9067
+	// (set) Token: 0x0600236C RID: 9068
 	double Time { get; set; }
 
-	// Token: 0x1700051D RID: 1309
-	// (get) Token: 0x060022B5 RID: 8885
-	// (set) Token: 0x060022B6 RID: 8886
+	// Token: 0x17000544 RID: 1348
+	// (get) Token: 0x0600236D RID: 9069
+	// (set) Token: 0x0600236E RID: 9070
 	CapabilityCommonDefine.ECapabilityDebugEvent Event { get; set; }
 
-	// Token: 0x1700051E RID: 1310
-	// (get) Token: 0x060022B7 RID: 8887
-	// (set) Token: 0x060022B8 RID: 8888
+	// Token: 0x17000545 RID: 1349
+	// (get) Token: 0x0600236F RID: 9071
+	// (set) Token: 0x06002370 RID: 9072
 	string CapabilityId { get; set; }
 
-	// Token: 0x1700051F RID: 1311
-	// (get) Token: 0x060022B9 RID: 8889
-	// (set) Token: 0x060022BA RID: 8890
+	// Token: 0x17000546 RID: 1350
+	// (get) Token: 0x06002371 RID: 9073
+	// (set) Token: 0x06002372 RID: 9074
 	string GameObjectId { get; set; }
 
-	// Token: 0x17000520 RID: 1312
-	// (get) Token: 0x060022BB RID: 8891
-	// (set) Token: 0x060022BC RID: 8892
+	// Token: 0x17000547 RID: 1351
+	// (get) Token: 0x06002373 RID: 9075
+	// (set) Token: 0x06002374 RID: 9076
 	string ClassName { get; set; }
 
-	// Token: 0x17000521 RID: 1313
-	// (get) Token: 0x060022BD RID: 8893
-	// (set) Token: 0x060022BE RID: 8894
+	// Token: 0x17000548 RID: 1352
+	// (get) Token: 0x06002375 RID: 9077
+	// (set) Token: 0x06002376 RID: 9078
 	[Nullable(2)]
 	string Detail { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-	// Token: 0x17000522 RID: 1314
-	// (get) Token: 0x060022BF RID: 8895
-	// (set) Token: 0x060022C0 RID: 8896
+	// Token: 0x17000549 RID: 1353
+	// (get) Token: 0x06002377 RID: 9079
+	// (set) Token: 0x06002378 RID: 9080
 	double? DurationMs { get; set; }
 }

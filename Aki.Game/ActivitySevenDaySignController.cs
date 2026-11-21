@@ -5,30 +5,30 @@ using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
 using Google.Protobuf;
 
-// Token: 0x020014F7 RID: 5367
+// Token: 0x020009AF RID: 2479
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class ActivitySevenDaySignController : ActivityControllerBase
 {
-	// Token: 0x06009912 RID: 39186 RVA: 0x00211C1E File Offset: 0x0020FE1E
+	// Token: 0x06006CEC RID: 27884 RVA: 0x0021B90E File Offset: 0x00219B0E
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.SignActivitySignStateNotify, new Action<IMessage, Net.CallbackStatus>(this.OnSignActivitySignStateNotify));
 	}
 
-	// Token: 0x06009913 RID: 39187 RVA: 0x00211C3C File Offset: 0x0020FE3C
+	// Token: 0x06006CED RID: 27885 RVA: 0x0021B92C File Offset: 0x00219B2C
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.SignActivitySignStateNotify);
 	}
 
-	// Token: 0x06009914 RID: 39188 RVA: 0x00211C4E File Offset: 0x0020FE4E
+	// Token: 0x06006CEE RID: 27886 RVA: 0x0021B93E File Offset: 0x00219B3E
 	protected override void OnOpenView(ActivityBaseData data)
 	{
 	}
 
-	// Token: 0x06009915 RID: 39189 RVA: 0x00211C50 File Offset: 0x0020FE50
+	// Token: 0x06006CEF RID: 27887 RVA: 0x0021B940 File Offset: 0x00219B40
 	protected override string OnGetActivityResource(ActivityBaseData data)
 	{
 		ActivitySign? activitySignById = ActivitySevenDaySignConfig.Instance.GetActivitySignById(data.Id);
@@ -57,7 +57,7 @@ public class ActivitySevenDaySignController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06009916 RID: 39190 RVA: 0x00211D04 File Offset: 0x0020FF04
+	// Token: 0x06006CF0 RID: 27888 RVA: 0x0021B9F4 File Offset: 0x00219BF4
 	protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 	{
 		ActivitySign? activitySignById = ActivitySevenDaySignConfig.Instance.GetActivitySignById(data.Id);
@@ -92,19 +92,19 @@ public class ActivitySevenDaySignController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x06009917 RID: 39191 RVA: 0x00211DE1 File Offset: 0x0020FFE1
+	// Token: 0x06006CF1 RID: 27889 RVA: 0x0021BAD1 File Offset: 0x00219CD1
 	protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 	{
 		return new ActivitySevenDaySignData();
 	}
 
-	// Token: 0x06009918 RID: 39192 RVA: 0x00211DE8 File Offset: 0x0020FFE8
+	// Token: 0x06006CF2 RID: 27890 RVA: 0x0021BAD8 File Offset: 0x00219CD8
 	protected override bool OnGetIsOpeningActivityRelativeView()
 	{
 		return false;
 	}
 
-	// Token: 0x06009919 RID: 39193 RVA: 0x00211DEC File Offset: 0x0020FFEC
+	// Token: 0x06006CF3 RID: 27891 RVA: 0x0021BADC File Offset: 0x00219CDC
 	[NullableContext(2)]
 	private unsafe void OnSignActivitySignStateNotify(IMessage msg, Net.CallbackStatus status)
 	{
@@ -127,7 +127,7 @@ public class ActivitySevenDaySignController : ActivityControllerBase
 		EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, signActivitySignStateNotify.ActivityId);
 	}
 
-	// Token: 0x0600991A RID: 39194 RVA: 0x00211EDC File Offset: 0x002100DC
+	// Token: 0x06006CF4 RID: 27892 RVA: 0x0021BBCC File Offset: 0x00219DCC
 	public void GetRewardByDay(int activityId, int day)
 	{
 		SignActivityRequest signActivityRequest = SignActivityRequest.Create();
@@ -138,7 +138,7 @@ public class ActivitySevenDaySignController : ActivityControllerBase
 			SignActivityResponse signActivityResponse = (SignActivityResponse)msg;
 			if (signActivityResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(signActivityResponse.ErrorCode, 18069, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(signActivityResponse.ErrorCode, 18799, null, true, true);
 				return;
 			}
 			(ActivityModel.Instance.GetActivityById(activityId) as ActivitySevenDaySignData).SetRewardToGotState(day);
@@ -146,7 +146,7 @@ public class ActivitySevenDaySignController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x0600991B RID: 39195 RVA: 0x00211F38 File Offset: 0x00210138
+	// Token: 0x06006CF5 RID: 27893 RVA: 0x0021BC28 File Offset: 0x00219E28
 	public void GetActivityFreeDrop(int activityId)
 	{
 		SignActivityFreeDropRequest signActivityFreeDropRequest = SignActivityFreeDropRequest.Create();
@@ -157,8 +157,8 @@ public class ActivitySevenDaySignController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x17000D2C RID: 3372
-	// (get) Token: 0x0600991C RID: 39196 RVA: 0x00211F81 File Offset: 0x00210181
+	// Token: 0x17000D4D RID: 3405
+	// (get) Token: 0x06006CF6 RID: 27894 RVA: 0x0021BC71 File Offset: 0x00219E71
 	public static ActivitySevenDaySignController Instance
 	{
 		get
@@ -167,7 +167,7 @@ public class ActivitySevenDaySignController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x0600991D RID: 39197 RVA: 0x00211F88 File Offset: 0x00210188
+	// Token: 0x06006CF7 RID: 27895 RVA: 0x0021BC78 File Offset: 0x00219E78
 	public static ActivitySevenDaySignController GetOrCreateInstance()
 	{
 		if (ActivitySevenDaySignController._Instance == null)
@@ -177,7 +177,7 @@ public class ActivitySevenDaySignController : ActivityControllerBase
 		return ActivitySevenDaySignController._Instance;
 	}
 
-	// Token: 0x0600991E RID: 39198 RVA: 0x00211F9C File Offset: 0x0021019C
+	// Token: 0x06006CF8 RID: 27896 RVA: 0x0021BC8C File Offset: 0x00219E8C
 	public static bool CreateInstance()
 	{
 		if (ActivitySevenDaySignController._Instance != null)
@@ -188,24 +188,24 @@ public class ActivitySevenDaySignController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x0600991F RID: 39199 RVA: 0x00211FB2 File Offset: 0x002101B2
+	// Token: 0x06006CF9 RID: 27897 RVA: 0x0021BCA2 File Offset: 0x00219EA2
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x06009920 RID: 39200 RVA: 0x00211FB4 File Offset: 0x002101B4
+	// Token: 0x06006CFA RID: 27898 RVA: 0x0021BCA4 File Offset: 0x00219EA4
 	public static void ResetStaticDefaultValue()
 	{
 		ActivitySevenDaySignController._Instance = null;
 	}
 
-	// Token: 0x06009921 RID: 39201 RVA: 0x00211FBC File Offset: 0x002101BC
+	// Token: 0x06006CFB RID: 27899 RVA: 0x0021BCAC File Offset: 0x00219EAC
 	static ActivitySevenDaySignController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActivitySevenDaySignController.CreateStaticDefaultValue), new Action(ActivitySevenDaySignController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04004356 RID: 17238
+	// Token: 0x040043FB RID: 17403
 	[Nullable(2)]
 	private static ActivitySevenDaySignController _Instance;
 }

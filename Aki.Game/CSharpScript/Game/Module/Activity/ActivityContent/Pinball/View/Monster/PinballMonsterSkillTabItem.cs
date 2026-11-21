@@ -7,7 +7,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Monster
 {
-	// Token: 0x0200632C RID: 25388
+	// Token: 0x020052AA RID: 21162
 	[Nullable(new byte[]
 	{
 		0,
@@ -15,7 +15,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Monster
 	})]
 	public class PinballMonsterSkillTabItem : GridProxyAbstract<IPinballMonsterSkillTabItemData>
 	{
-		// Token: 0x0603FDF7 RID: 261623 RVA: 0x00F742A4 File Offset: 0x00F724A4
+		// Token: 0x06034AB8 RID: 215736 RVA: 0x00EBB200 File Offset: 0x00EB9400
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -36,7 +36,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Monster
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603FDF8 RID: 261624 RVA: 0x00F7434A File Offset: 0x00F7254A
+		// Token: 0x06034AB9 RID: 215737 RVA: 0x00EBB2A6 File Offset: 0x00EB94A6
 		[NullableContext(1)]
 		public override void Refresh(IPinballMonsterSkillTabItemData data, bool isSelected, int gridIndex)
 		{
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Monster
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(1), data.Name, Array.Empty<object>());
 		}
 
-		// Token: 0x0603FDF9 RID: 261625 RVA: 0x00F74378 File Offset: 0x00F72578
+		// Token: 0x06034ABA RID: 215738 RVA: 0x00EBB2D4 File Offset: 0x00EB94D4
 		public void RefreshToggle(bool bJumpToEnd)
 		{
 			if (this.Data == null)
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Monster
 			extendToggle.SetToggleState(state, false, false, bJumpToEnd);
 		}
 
-		// Token: 0x0603FDFA RID: 261626 RVA: 0x00F743B6 File Offset: 0x00F725B6
+		// Token: 0x06034ABB RID: 215739 RVA: 0x00EBB312 File Offset: 0x00EB9512
 		private void OnItemToggleStateChange(EToggleState state)
 		{
 			if (this.Data == null)
@@ -71,16 +71,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.Pinball.View.Monster
 			this.Data.OnSelected(base.GridIndex);
 		}
 
-		// Token: 0x04021525 RID: 136485
+		// Token: 0x0401BE54 RID: 114260
 		[Nullable(2)]
 		private IPinballMonsterSkillTabItemData Data;
 
-		// Token: 0x0200C529 RID: 50473
+		// Token: 0x0200AF10 RID: 44816
 		private enum EComponents
 		{
-			// Token: 0x0403B81E RID: 243742
+			// Token: 0x04036180 RID: 221568
 			ItemToggle,
-			// Token: 0x0403B81F RID: 243743
+			// Token: 0x04036181 RID: 221569
 			NameText
 		}
 	}

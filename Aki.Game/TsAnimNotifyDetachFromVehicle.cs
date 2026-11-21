@@ -6,37 +6,33 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x020001AE RID: 430
+// Token: 0x020001B2 RID: 434
 [UClass("/Game/Aki/TypeScript/Game/AnimNotify/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AnimNotify/TsAnimNotifyDetachFromVehicle.TsAnimNotifyDetachFromVehicle_C")]
 public class TsAnimNotifyDetachFromVehicle : TsAnimNotifyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x06001B2F RID: 6959 RVA: 0x0008C838 File Offset: 0x0008AA38
+	// Token: 0x06001BCC RID: 7116 RVA: 0x00093090 File Offset: 0x00091290
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_Notify(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_Notify"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotify.__K2_Notify_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyDetachFromVehicle) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_Notify"), TsAnimNotifyDetachFromVehicle.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotify.__K2_Notify_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotify.__K2_Notify_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
-			*(&ptr2->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+			return this.K2_Notify_Implementation(meshComp, animation);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotify.__K2_Notify_FunctionParams* ptr = stackalloc UKuroAnimNotify.__K2_Notify_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotify.__K2_Notify_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
+		*(&ptr->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x06001B30 RID: 6960 RVA: 0x0008C8D8 File Offset: 0x0008AAD8
+	// Token: 0x06001BCD RID: 7117 RVA: 0x00093148 File Offset: 0x00091348
 	[NullableContext(2)]
 	protected virtual bool K2_Notify_Implementation(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
@@ -76,37 +72,33 @@ public class TsAnimNotifyDetachFromVehicle : TsAnimNotifyBase, IUnrealUObject, I
 		return true;
 	}
 
-	// Token: 0x06001B31 RID: 6961 RVA: 0x0008C9FC File Offset: 0x0008ABFC
+	// Token: 0x06001BCE RID: 7118 RVA: 0x0009326C File Offset: 0x0009146C
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override string GetNotifyName()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetNotifyName"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UAnimNotify.__GetNotifyName_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyDetachFromVehicle) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetNotifyName"), TsAnimNotifyDetachFromVehicle.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UAnimNotify.__GetNotifyName_FunctionParams*)ptr + 15L / (long)sizeof(UAnimNotify.__GetNotifyName_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.GetNotifyName_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		string result = FString.ToString((void*)(&ptr2->__Result));
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UAnimNotify.__GetNotifyName_FunctionParams* ptr = stackalloc UAnimNotify.__GetNotifyName_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UAnimNotify.__GetNotifyName_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		string result = FString.ToString((void*)(&ptr->__Result));
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return result;
 	}
 
-	// Token: 0x06001B32 RID: 6962 RVA: 0x0008CA77 File Offset: 0x0008AC77
+	// Token: 0x06001BCF RID: 7119 RVA: 0x000932FC File Offset: 0x000914FC
 	[NullableContext(1)]
 	protected override string GetNotifyName_Implementation()
 	{
 		return "下载具时从载具解绑";
 	}
 
-	// Token: 0x06001B33 RID: 6963 RVA: 0x0008CA7E File Offset: 0x0008AC7E
+	// Token: 0x06001BD0 RID: 7120 RVA: 0x00093303 File Offset: 0x00091503
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsAnimNotifyDetachFromVehicle._ClassPtr == IntPtr.Zero)
@@ -116,23 +108,23 @@ public class TsAnimNotifyDetachFromVehicle : TsAnimNotifyBase, IUnrealUObject, I
 		return TsAnimNotifyDetachFromVehicle._ClassPtr;
 	}
 
-	// Token: 0x06001B34 RID: 6964 RVA: 0x0008CAA4 File Offset: 0x0008ACA4
+	// Token: 0x06001BD1 RID: 7121 RVA: 0x00093328 File Offset: 0x00091528
 	public TsAnimNotifyDetachFromVehicle() : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyDetachFromVehicle.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06001B35 RID: 6965 RVA: 0x0008CACC File Offset: 0x0008ACCC
+	// Token: 0x06001BD2 RID: 7122 RVA: 0x00093350 File Offset: 0x00091550
 	[NullableContext(1)]
 	public TsAnimNotifyDetachFromVehicle(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyDetachFromVehicle.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06001B36 RID: 6966 RVA: 0x0008CAFF File Offset: 0x0008ACFF
+	// Token: 0x06001BD3 RID: 7123 RVA: 0x00093383 File Offset: 0x00091583
 	protected TsAnimNotifyDetachFromVehicle(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06001B37 RID: 6967 RVA: 0x0008CB08 File Offset: 0x0008AD08
+	// Token: 0x06001BD4 RID: 7124 RVA: 0x0009338C File Offset: 0x0009158C
 	protected unsafe virtual void __CPPCALL_K2_Notify_Implementation(UKuroAnimNotify.__K2_Notify_FunctionParams* __Params)
 	{
 		USkeletalMeshComponent orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(__Params->MeshComp);
@@ -140,19 +132,19 @@ public class TsAnimNotifyDetachFromVehicle : TsAnimNotifyBase, IUnrealUObject, I
 		__Params->__Result = this.K2_Notify_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x06001B38 RID: 6968 RVA: 0x0008CB3B File Offset: 0x0008AD3B
+	// Token: 0x06001BD5 RID: 7125 RVA: 0x000933BF File Offset: 0x000915BF
 	protected unsafe virtual void __CPPCALL_GetNotifyName_Implementation(UAnimNotify.__GetNotifyName_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), this.GetNotifyName_Implementation());
 	}
 
-	// Token: 0x04001171 RID: 4465
+	// Token: 0x040011B4 RID: 4532
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AnimNotify/TsAnimNotifyDetachFromVehicle.TsAnimNotifyDetachFromVehicle_C";
 
-	// Token: 0x04001172 RID: 4466
+	// Token: 0x040011B5 RID: 4533
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x04001173 RID: 4467
+	// Token: 0x040011B6 RID: 4534
 	private static IntPtr _ClassDefaultObjectPtr;
 }

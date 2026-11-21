@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000AD9 RID: 2777
+	// Token: 0x02000BA3 RID: 2979
 	public class IAkEventTypeConfig
 	{
-		// Token: 0x06003FFA RID: 16378 RVA: 0x000A3866 File Offset: 0x000A1A66
-		[NullableContext(1)]
+		// Token: 0x06004424 RID: 17444 RVA: 0x000ACE5A File Offset: 0x000AB05A
 		public static IAkEventTypeConfig Create(IAkEventTypeConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001005 RID: 4101
-		// (get) Token: 0x06003FFB RID: 16379 RVA: 0x000A3885 File Offset: 0x000A1A85
+		// Token: 0x170010D9 RID: 4313
+		// (get) Token: 0x06004425 RID: 17445 RVA: 0x000ACE79 File Offset: 0x000AB079
 		public virtual EAkEventType Type
 		{
 			get
@@ -31,7 +29,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x0400239E RID: 9118
+		// Token: 0x040025BA RID: 9658
 		private IAkEventTypeConfig Instance;
 	}
 }

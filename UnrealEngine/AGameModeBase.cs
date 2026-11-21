@@ -7,33 +7,33 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x02000BFD RID: 3069
+	// Token: 0x02000215 RID: 533
 	[NullableContext(2)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Script/Engine.GameModeBase")]
 	[UnrealStructLayout(1208, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1208)]
 	public class AGameModeBase : AInfo, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060097A6 RID: 38822 RVA: 0x000D80DC File Offset: 0x000D62DC
+		// Token: 0x06002227 RID: 8743 RVA: 0x00031F59 File Offset: 0x00030159
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return AGameModeBase._ClassPtr;
 		}
 
-		// Token: 0x060097A7 RID: 38823 RVA: 0x000D80E8 File Offset: 0x000D62E8
+		// Token: 0x06002228 RID: 8744 RVA: 0x00031F68 File Offset: 0x00030168
 		public AGameModeBase() : this(BuiltinUtils.AllocNativeUObject(AGameModeBase.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060097A8 RID: 38824 RVA: 0x000D8110 File Offset: 0x000D6310
+		// Token: 0x06002229 RID: 8745 RVA: 0x00031F90 File Offset: 0x00030190
 		[NullableContext(1)]
 		public AGameModeBase(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(AGameModeBase.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17002455 RID: 9301
-		// (get) Token: 0x060097A9 RID: 38825 RVA: 0x000D8143 File Offset: 0x000D6343
-		// (set) Token: 0x060097AA RID: 38826 RVA: 0x000D8157 File Offset: 0x000D6357
+		// Token: 0x170004D1 RID: 1233
+		// (get) Token: 0x0600222A RID: 8746 RVA: 0x00031FC3 File Offset: 0x000301C3
+		// (set) Token: 0x0600222B RID: 8747 RVA: 0x00031FD7 File Offset: 0x000301D7
 		[Nullable(1)]
 		public unsafe string OptionsString
 		{
@@ -49,69 +49,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002456 RID: 9302
-		// (get) Token: 0x060097AB RID: 38827 RVA: 0x000D816C File Offset: 0x000D636C
-		// (set) Token: 0x060097AC RID: 38828 RVA: 0x000D8180 File Offset: 0x000D6380
-		[Nullable(new byte[]
-		{
-			0,
-			1
-		})]
-		public unsafe TSubclassOf<AGameSession> GameSessionClass
-		{
-			[return: Nullable(new byte[]
-			{
-				0,
-				1
-			})]
-			get
-			{
-				return *(base.NativePtr + (IntPtr)AGameModeBase.__PropertyOffset_GameSessionClass);
-			}
-			[param: Nullable(new byte[]
-			{
-				0,
-				1
-			})]
-			set
-			{
-				*(base.NativePtr + (IntPtr)AGameModeBase.__PropertyOffset_GameSessionClass) = value;
-			}
-		}
-
-		// Token: 0x17002457 RID: 9303
-		// (get) Token: 0x060097AD RID: 38829 RVA: 0x000D8195 File Offset: 0x000D6395
-		// (set) Token: 0x060097AE RID: 38830 RVA: 0x000D81A9 File Offset: 0x000D63A9
-		[Nullable(new byte[]
-		{
-			0,
-			1
-		})]
-		public unsafe TSubclassOf<AGameStateBase> GameStateClass
-		{
-			[return: Nullable(new byte[]
-			{
-				0,
-				1
-			})]
-			get
-			{
-				return *(base.NativePtr + (IntPtr)AGameModeBase.__PropertyOffset_GameStateClass);
-			}
-			[param: Nullable(new byte[]
-			{
-				0,
-				1
-			})]
-			set
-			{
-				*(base.NativePtr + (IntPtr)AGameModeBase.__PropertyOffset_GameStateClass) = value;
-			}
-		}
-
-		// Token: 0x17002458 RID: 9304
-		// (get) Token: 0x060097AF RID: 38831 RVA: 0x000D81BE File Offset: 0x000D63BE
-		// (set) Token: 0x060097B0 RID: 38832 RVA: 0x000D81D2 File Offset: 0x000D63D2
+		// Token: 0x170004D2 RID: 1234
+		// (get) Token: 0x0600222C RID: 8748 RVA: 0x00031FEC File Offset: 0x000301EC
+		// (set) Token: 0x0600222D RID: 8749 RVA: 0x00032000 File Offset: 0x00030200
 		[Nullable(new byte[]
 		{
 			0,
@@ -139,69 +79,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002459 RID: 9305
-		// (get) Token: 0x060097B1 RID: 38833 RVA: 0x000D81E7 File Offset: 0x000D63E7
-		// (set) Token: 0x060097B2 RID: 38834 RVA: 0x000D81FB File Offset: 0x000D63FB
-		[Nullable(new byte[]
-		{
-			0,
-			1
-		})]
-		public unsafe TSubclassOf<APlayerState> PlayerStateClass
-		{
-			[return: Nullable(new byte[]
-			{
-				0,
-				1
-			})]
-			get
-			{
-				return *(base.NativePtr + (IntPtr)AGameModeBase.__PropertyOffset_PlayerStateClass);
-			}
-			[param: Nullable(new byte[]
-			{
-				0,
-				1
-			})]
-			set
-			{
-				*(base.NativePtr + (IntPtr)AGameModeBase.__PropertyOffset_PlayerStateClass) = value;
-			}
-		}
-
-		// Token: 0x1700245A RID: 9306
-		// (get) Token: 0x060097B3 RID: 38835 RVA: 0x000D8210 File Offset: 0x000D6410
-		// (set) Token: 0x060097B4 RID: 38836 RVA: 0x000D8224 File Offset: 0x000D6424
-		[Nullable(new byte[]
-		{
-			0,
-			1
-		})]
-		public unsafe TSubclassOf<AHUD> HUDClass
-		{
-			[return: Nullable(new byte[]
-			{
-				0,
-				1
-			})]
-			get
-			{
-				return *(base.NativePtr + (IntPtr)AGameModeBase.__PropertyOffset_HUDClass);
-			}
-			[param: Nullable(new byte[]
-			{
-				0,
-				1
-			})]
-			set
-			{
-				*(base.NativePtr + (IntPtr)AGameModeBase.__PropertyOffset_HUDClass) = value;
-			}
-		}
-
-		// Token: 0x1700245B RID: 9307
-		// (get) Token: 0x060097B5 RID: 38837 RVA: 0x000D8239 File Offset: 0x000D6439
-		// (set) Token: 0x060097B6 RID: 38838 RVA: 0x000D824D File Offset: 0x000D644D
+		// Token: 0x170004D3 RID: 1235
+		// (get) Token: 0x0600222E RID: 8750 RVA: 0x00032015 File Offset: 0x00030215
+		// (set) Token: 0x0600222F RID: 8751 RVA: 0x00032029 File Offset: 0x00030229
 		[Nullable(new byte[]
 		{
 			0,
@@ -229,39 +109,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700245C RID: 9308
-		// (get) Token: 0x060097B7 RID: 38839 RVA: 0x000D8262 File Offset: 0x000D6462
-		// (set) Token: 0x060097B8 RID: 38840 RVA: 0x000D8276 File Offset: 0x000D6476
-		[Nullable(new byte[]
-		{
-			0,
-			1
-		})]
-		public unsafe TSubclassOf<ASpectatorPawn> SpectatorClass
-		{
-			[return: Nullable(new byte[]
-			{
-				0,
-				1
-			})]
-			get
-			{
-				return *(base.NativePtr + (IntPtr)AGameModeBase.__PropertyOffset_SpectatorClass);
-			}
-			[param: Nullable(new byte[]
-			{
-				0,
-				1
-			})]
-			set
-			{
-				*(base.NativePtr + (IntPtr)AGameModeBase.__PropertyOffset_SpectatorClass) = value;
-			}
-		}
-
-		// Token: 0x1700245D RID: 9309
-		// (get) Token: 0x060097B9 RID: 38841 RVA: 0x000D828B File Offset: 0x000D648B
-		// (set) Token: 0x060097BA RID: 38842 RVA: 0x000D829F File Offset: 0x000D649F
+		// Token: 0x170004D4 RID: 1236
+		// (get) Token: 0x06002230 RID: 8752 RVA: 0x0003203E File Offset: 0x0003023E
+		// (set) Token: 0x06002231 RID: 8753 RVA: 0x00032052 File Offset: 0x00030252
 		[Nullable(new byte[]
 		{
 			0,
@@ -289,84 +139,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x1700245E RID: 9310
-		// (get) Token: 0x060097BB RID: 38843 RVA: 0x000D82B4 File Offset: 0x000D64B4
-		// (set) Token: 0x060097BC RID: 38844 RVA: 0x000D82C8 File Offset: 0x000D64C8
-		[Nullable(new byte[]
-		{
-			0,
-			1
-		})]
-		public unsafe TSubclassOf<AServerStatReplicator> ServerStatReplicatorClass
-		{
-			[return: Nullable(new byte[]
-			{
-				0,
-				1
-			})]
-			get
-			{
-				return *(base.NativePtr + (IntPtr)AGameModeBase.__PropertyOffset_ServerStatReplicatorClass);
-			}
-			[param: Nullable(new byte[]
-			{
-				0,
-				1
-			})]
-			set
-			{
-				*(base.NativePtr + (IntPtr)AGameModeBase.__PropertyOffset_ServerStatReplicatorClass) = value;
-			}
-		}
-
-		// Token: 0x1700245F RID: 9311
-		// (get) Token: 0x060097BD RID: 38845 RVA: 0x000D82DD File Offset: 0x000D64DD
-		// (set) Token: 0x060097BE RID: 38846 RVA: 0x000D82F1 File Offset: 0x000D64F1
-		public unsafe AGameSession GameSession
-		{
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<AGameSession>(base.NativePtr / (IntPtr)sizeof(void*) + AGameModeBase.__PropertyOffset_GameSession);
-			}
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + AGameModeBase.__PropertyOffset_GameSession, value);
-			}
-		}
-
-		// Token: 0x17002460 RID: 9312
-		// (get) Token: 0x060097BF RID: 38847 RVA: 0x000D8306 File Offset: 0x000D6506
-		// (set) Token: 0x060097C0 RID: 38848 RVA: 0x000D831A File Offset: 0x000D651A
-		public unsafe AGameStateBase GameState
-		{
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<AGameStateBase>(base.NativePtr / (IntPtr)sizeof(void*) + AGameModeBase.__PropertyOffset_GameState);
-			}
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + AGameModeBase.__PropertyOffset_GameState, value);
-			}
-		}
-
-		// Token: 0x17002461 RID: 9313
-		// (get) Token: 0x060097C1 RID: 38849 RVA: 0x000D832F File Offset: 0x000D652F
-		// (set) Token: 0x060097C2 RID: 38850 RVA: 0x000D8343 File Offset: 0x000D6543
-		public unsafe AServerStatReplicator ServerStatReplicator
-		{
-			get
-			{
-				return BuiltinUtils.ObjectPropertyGetter<AServerStatReplicator>(base.NativePtr / (IntPtr)sizeof(void*) + AGameModeBase.__PropertyOffset_ServerStatReplicator);
-			}
-			set
-			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + AGameModeBase.__PropertyOffset_ServerStatReplicator, value);
-			}
-		}
-
-		// Token: 0x17002462 RID: 9314
-		// (get) Token: 0x060097C3 RID: 38851 RVA: 0x000D8358 File Offset: 0x000D6558
-		// (set) Token: 0x060097C4 RID: 38852 RVA: 0x000D8391 File Offset: 0x000D6591
+		// Token: 0x170004D5 RID: 1237
+		// (get) Token: 0x06002232 RID: 8754 RVA: 0x00032068 File Offset: 0x00030268
+		// (set) Token: 0x06002233 RID: 8755 RVA: 0x000320A1 File Offset: 0x000302A1
 		[Nullable(1)]
 		public unsafe FText DefaultPlayerName
 		{
@@ -388,9 +163,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002463 RID: 9315
-		// (get) Token: 0x060097C5 RID: 38853 RVA: 0x000D83AC File Offset: 0x000D65AC
-		// (set) Token: 0x060097C6 RID: 38854 RVA: 0x000D83C5 File Offset: 0x000D65C5
+		// Token: 0x170004D6 RID: 1238
+		// (get) Token: 0x06002234 RID: 8756 RVA: 0x000320BC File Offset: 0x000302BC
+		// (set) Token: 0x06002235 RID: 8757 RVA: 0x000320D5 File Offset: 0x000302D5
 		public unsafe bool bUseSeamlessTravel
 		{
 			get
@@ -403,9 +178,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002464 RID: 9316
-		// (get) Token: 0x060097C7 RID: 38855 RVA: 0x000D83F5 File Offset: 0x000D65F5
-		// (set) Token: 0x060097C8 RID: 38856 RVA: 0x000D840E File Offset: 0x000D660E
+		// Token: 0x170004D7 RID: 1239
+		// (get) Token: 0x06002236 RID: 8758 RVA: 0x00032105 File Offset: 0x00030305
+		// (set) Token: 0x06002237 RID: 8759 RVA: 0x0003211E File Offset: 0x0003031E
 		public unsafe bool bStartPlayersAsSpectators
 		{
 			get
@@ -418,9 +193,9 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x17002465 RID: 9317
-		// (get) Token: 0x060097C9 RID: 38857 RVA: 0x000D843E File Offset: 0x000D663E
-		// (set) Token: 0x060097CA RID: 38858 RVA: 0x000D8457 File Offset: 0x000D6657
+		// Token: 0x170004D8 RID: 1240
+		// (get) Token: 0x06002238 RID: 8760 RVA: 0x0003214E File Offset: 0x0003034E
+		// (set) Token: 0x06002239 RID: 8761 RVA: 0x00032167 File Offset: 0x00030367
 		public unsafe bool bPauseable
 		{
 			get
@@ -433,25 +208,25 @@ namespace UnrealEngine
 			}
 		}
 
-		// Token: 0x060097CB RID: 38859 RVA: 0x000D8487 File Offset: 0x000D6687
+		// Token: 0x0600223A RID: 8762 RVA: 0x00032197 File Offset: 0x00030397
 		public void StartPlay()
 		{
 			AGameModeBase.__StartPlay_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060097CC RID: 38860 RVA: 0x000D8494 File Offset: 0x000D6694
+		// Token: 0x0600223B RID: 8763 RVA: 0x000321A4 File Offset: 0x000303A4
 		public virtual APawn SpawnDefaultPawnFor(AController NewPlayer, AActor StartSpot)
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<APawn>(AGameModeBase.__SpawnDefaultPawnFor_Internal(base.NativePtr, (NewPlayer != null) ? NewPlayer.NativePtr : IntPtr.Zero, (StartSpot != null) ? StartSpot.NativePtr : IntPtr.Zero));
 		}
 
-		// Token: 0x060097CD RID: 38861 RVA: 0x000D84C6 File Offset: 0x000D66C6
+		// Token: 0x0600223C RID: 8764 RVA: 0x000321D6 File Offset: 0x000303D6
 		protected virtual APawn SpawnDefaultPawnFor_Implementation(AController NewPlayer, AActor StartSpot)
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<APawn>(AGameModeBase.__SpawnDefaultPawnFor_Implementation_Internal(base.NativePtr, (NewPlayer != null) ? NewPlayer.NativePtr : IntPtr.Zero, (StartSpot != null) ? StartSpot.NativePtr : IntPtr.Zero));
 		}
 
-		// Token: 0x060097CE RID: 38862 RVA: 0x000D84F8 File Offset: 0x000D66F8
+		// Token: 0x0600223D RID: 8765 RVA: 0x00032208 File Offset: 0x00030408
 		public unsafe virtual APawn SpawnDefaultPawnAtTransform(AController NewPlayer, in FTransform SpawnTransform)
 		{
 			ref FTransform ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)63] + 15UL & 18446744073709551600UL);
@@ -459,7 +234,7 @@ namespace UnrealEngine
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<APawn>(AGameModeBase.__SpawnDefaultPawnAtTransform_Internal(base.NativePtr, (NewPlayer != null) ? NewPlayer.NativePtr : IntPtr.Zero, ptr));
 		}
 
-		// Token: 0x060097CF RID: 38863 RVA: 0x000D8544 File Offset: 0x000D6744
+		// Token: 0x0600223E RID: 8766 RVA: 0x00032254 File Offset: 0x00030454
 		protected unsafe virtual APawn SpawnDefaultPawnAtTransform_Implementation(AController NewPlayer, in FTransform SpawnTransform)
 		{
 			ref FTransform ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)63] + 15UL & 18446744073709551600UL);
@@ -467,25 +242,25 @@ namespace UnrealEngine
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<APawn>(AGameModeBase.__SpawnDefaultPawnAtTransform_Implementation_Internal(base.NativePtr, (NewPlayer != null) ? NewPlayer.NativePtr : IntPtr.Zero, ptr));
 		}
 
-		// Token: 0x060097D0 RID: 38864 RVA: 0x000D858E File Offset: 0x000D678E
+		// Token: 0x0600223F RID: 8767 RVA: 0x0003229E File Offset: 0x0003049E
 		public virtual bool ShouldReset(AActor ActorToReset)
 		{
 			return AGameModeBase.__ShouldReset_Internal(base.NativePtr, (ActorToReset != null) ? ActorToReset.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x060097D1 RID: 38865 RVA: 0x000D85AB File Offset: 0x000D67AB
+		// Token: 0x06002240 RID: 8768 RVA: 0x000322BB File Offset: 0x000304BB
 		protected virtual bool ShouldReset_Implementation(AActor ActorToReset)
 		{
 			return AGameModeBase.__ShouldReset_Implementation_Internal(base.NativePtr, (ActorToReset != null) ? ActorToReset.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x060097D2 RID: 38866 RVA: 0x000D85C8 File Offset: 0x000D67C8
+		// Token: 0x06002241 RID: 8769 RVA: 0x000322D8 File Offset: 0x000304D8
 		public void ReturnToMainMenuHost()
 		{
 			AGameModeBase.__ReturnToMainMenuHost_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060097D3 RID: 38867 RVA: 0x000D85D8 File Offset: 0x000D67D8
+		// Token: 0x06002242 RID: 8770 RVA: 0x000322E8 File Offset: 0x000304E8
 		public unsafe void RestartPlayerAtTransform(AController NewPlayer, in FTransform SpawnTransform)
 		{
 			ref FTransform ptr = (UIntPtr)((ulong)stackalloc byte[(UIntPtr)63] + 15UL & 18446744073709551600UL);
@@ -493,73 +268,73 @@ namespace UnrealEngine
 			AGameModeBase.__RestartPlayerAtTransform_Internal(base.NativePtr, (NewPlayer != null) ? NewPlayer.NativePtr : IntPtr.Zero, ptr);
 		}
 
-		// Token: 0x060097D4 RID: 38868 RVA: 0x000D861D File Offset: 0x000D681D
+		// Token: 0x06002243 RID: 8771 RVA: 0x0003232D File Offset: 0x0003052D
 		public void RestartPlayerAtPlayerStart(AController NewPlayer, AActor StartSpot)
 		{
 			AGameModeBase.__RestartPlayerAtPlayerStart_Internal(base.NativePtr, (NewPlayer != null) ? NewPlayer.NativePtr : IntPtr.Zero, (StartSpot != null) ? StartSpot.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x060097D5 RID: 38869 RVA: 0x000D864A File Offset: 0x000D684A
+		// Token: 0x06002244 RID: 8772 RVA: 0x0003235A File Offset: 0x0003055A
 		public void RestartPlayer(AController NewPlayer)
 		{
 			AGameModeBase.__RestartPlayer_Internal(base.NativePtr, (NewPlayer != null) ? NewPlayer.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x060097D6 RID: 38870 RVA: 0x000D8667 File Offset: 0x000D6867
+		// Token: 0x06002245 RID: 8773 RVA: 0x00032377 File Offset: 0x00030577
 		public void ResetLevel()
 		{
 			AGameModeBase.__ResetLevel_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060097D7 RID: 38871 RVA: 0x000D8674 File Offset: 0x000D6874
+		// Token: 0x06002246 RID: 8774 RVA: 0x00032384 File Offset: 0x00030584
 		public virtual bool PlayerCanRestart(APlayerController Player)
 		{
 			return AGameModeBase.__PlayerCanRestart_Internal(base.NativePtr, (Player != null) ? Player.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x060097D8 RID: 38872 RVA: 0x000D8691 File Offset: 0x000D6891
+		// Token: 0x06002247 RID: 8775 RVA: 0x000323A1 File Offset: 0x000305A1
 		protected virtual bool PlayerCanRestart_Implementation(APlayerController Player)
 		{
 			return AGameModeBase.__PlayerCanRestart_Implementation_Internal(base.NativePtr, (Player != null) ? Player.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x060097D9 RID: 38873 RVA: 0x000D86AE File Offset: 0x000D68AE
+		// Token: 0x06002248 RID: 8776 RVA: 0x000323BE File Offset: 0x000305BE
 		public virtual bool MustSpectate(APlayerController NewPlayerController)
 		{
 			return AGameModeBase.__MustSpectate_Internal(base.NativePtr, (NewPlayerController != null) ? NewPlayerController.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x060097DA RID: 38874 RVA: 0x000D86CB File Offset: 0x000D68CB
+		// Token: 0x06002249 RID: 8777 RVA: 0x000323DB File Offset: 0x000305DB
 		protected virtual bool MustSpectate_Implementation(APlayerController NewPlayerController)
 		{
 			return AGameModeBase.__MustSpectate_Implementation_Internal(base.NativePtr, (NewPlayerController != null) ? NewPlayerController.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x060097DB RID: 38875 RVA: 0x000D86E8 File Offset: 0x000D68E8
+		// Token: 0x0600224A RID: 8778 RVA: 0x000323F8 File Offset: 0x000305F8
 		public virtual void K2_PostLogin(APlayerController NewPlayer)
 		{
 			AGameModeBase.__K2_PostLogin_Internal(base.NativePtr, (NewPlayer != null) ? NewPlayer.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x060097DC RID: 38876 RVA: 0x000D8705 File Offset: 0x000D6905
+		// Token: 0x0600224B RID: 8779 RVA: 0x00032415 File Offset: 0x00030615
 		public virtual void K2_OnSwapPlayerControllers(APlayerController OldPC, APlayerController NewPC)
 		{
 			AGameModeBase.__K2_OnSwapPlayerControllers_Internal(base.NativePtr, (OldPC != null) ? OldPC.NativePtr : IntPtr.Zero, (NewPC != null) ? NewPC.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x060097DD RID: 38877 RVA: 0x000D8732 File Offset: 0x000D6932
+		// Token: 0x0600224C RID: 8780 RVA: 0x00032442 File Offset: 0x00030642
 		public virtual void K2_OnRestartPlayer(AController NewPlayer)
 		{
 			AGameModeBase.__K2_OnRestartPlayer_Internal(base.NativePtr, (NewPlayer != null) ? NewPlayer.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x060097DE RID: 38878 RVA: 0x000D874F File Offset: 0x000D694F
+		// Token: 0x0600224D RID: 8781 RVA: 0x0003245F File Offset: 0x0003065F
 		public virtual void K2_OnLogout(AController ExitingController)
 		{
 			AGameModeBase.__K2_OnLogout_Internal(base.NativePtr, (ExitingController != null) ? ExitingController.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x060097DF RID: 38879 RVA: 0x000D876C File Offset: 0x000D696C
+		// Token: 0x0600224E RID: 8782 RVA: 0x0003247C File Offset: 0x0003067C
 		[NullableContext(1)]
 		public unsafe virtual void K2_OnChangeName([Nullable(2)] AController Other, string NewName, bool bNameChange)
 		{
@@ -568,7 +343,7 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x060097E0 RID: 38880 RVA: 0x000D87A8 File Offset: 0x000D69A8
+		// Token: 0x0600224F RID: 8783 RVA: 0x000324B8 File Offset: 0x000306B8
 		public unsafe AActor K2_FindPlayerStart(AController Player, [Nullable(1)] string IncomingName = "")
 		{
 			FString fstring = FString.AllocTemp(IncomingName);
@@ -577,79 +352,79 @@ namespace UnrealEngine
 			return orCreateUObjectByNativePointer;
 		}
 
-		// Token: 0x060097E1 RID: 38881 RVA: 0x000D87E7 File Offset: 0x000D69E7
+		// Token: 0x06002250 RID: 8784 RVA: 0x000324F7 File Offset: 0x000306F7
 		public virtual void InitStartSpot(AActor StartSpot, AController NewPlayer)
 		{
 			AGameModeBase.__InitStartSpot_Internal(base.NativePtr, (StartSpot != null) ? StartSpot.NativePtr : IntPtr.Zero, (NewPlayer != null) ? NewPlayer.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x060097E2 RID: 38882 RVA: 0x000D8814 File Offset: 0x000D6A14
+		// Token: 0x06002251 RID: 8785 RVA: 0x00032524 File Offset: 0x00030724
 		protected virtual void InitStartSpot_Implementation(AActor StartSpot, AController NewPlayer)
 		{
 			AGameModeBase.__InitStartSpot_Implementation_Internal(base.NativePtr, (StartSpot != null) ? StartSpot.NativePtr : IntPtr.Zero, (NewPlayer != null) ? NewPlayer.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x060097E3 RID: 38883 RVA: 0x000D8841 File Offset: 0x000D6A41
+		// Token: 0x06002252 RID: 8786 RVA: 0x00032551 File Offset: 0x00030751
 		public virtual void InitializeHUDForPlayer(APlayerController NewPlayer)
 		{
 			AGameModeBase.__InitializeHUDForPlayer_Internal(base.NativePtr, (NewPlayer != null) ? NewPlayer.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x060097E4 RID: 38884 RVA: 0x000D885E File Offset: 0x000D6A5E
+		// Token: 0x06002253 RID: 8787 RVA: 0x0003256E File Offset: 0x0003076E
 		protected virtual void InitializeHUDForPlayer_Implementation(APlayerController NewPlayer)
 		{
 			AGameModeBase.__InitializeHUDForPlayer_Implementation_Internal(base.NativePtr, (NewPlayer != null) ? NewPlayer.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x060097E5 RID: 38885 RVA: 0x000D887B File Offset: 0x000D6A7B
+		// Token: 0x06002254 RID: 8788 RVA: 0x0003258B File Offset: 0x0003078B
 		public bool HasMatchStarted()
 		{
 			return AGameModeBase.__HasMatchStarted_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060097E6 RID: 38886 RVA: 0x000D8888 File Offset: 0x000D6A88
+		// Token: 0x06002255 RID: 8789 RVA: 0x00032598 File Offset: 0x00030798
 		public bool HasMatchEnded()
 		{
 			return AGameModeBase.__HasMatchEnded_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060097E7 RID: 38887 RVA: 0x000D8895 File Offset: 0x000D6A95
+		// Token: 0x06002256 RID: 8790 RVA: 0x000325A5 File Offset: 0x000307A5
 		public virtual void HandleStartingNewPlayer(APlayerController NewPlayer)
 		{
 			AGameModeBase.__HandleStartingNewPlayer_Internal(base.NativePtr, (NewPlayer != null) ? NewPlayer.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x060097E8 RID: 38888 RVA: 0x000D88B2 File Offset: 0x000D6AB2
+		// Token: 0x06002257 RID: 8791 RVA: 0x000325C2 File Offset: 0x000307C2
 		protected virtual void HandleStartingNewPlayer_Implementation(APlayerController NewPlayer)
 		{
 			AGameModeBase.__HandleStartingNewPlayer_Implementation_Internal(base.NativePtr, (NewPlayer != null) ? NewPlayer.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x060097E9 RID: 38889 RVA: 0x000D88CF File Offset: 0x000D6ACF
+		// Token: 0x06002258 RID: 8792 RVA: 0x000325DF File Offset: 0x000307DF
 		public int GetNumSpectators()
 		{
 			return AGameModeBase.__GetNumSpectators_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060097EA RID: 38890 RVA: 0x000D88DC File Offset: 0x000D6ADC
+		// Token: 0x06002259 RID: 8793 RVA: 0x000325EC File Offset: 0x000307EC
 		public int GetNumPlayers()
 		{
 			return AGameModeBase.__GetNumPlayers_Internal(base.NativePtr);
 		}
 
-		// Token: 0x060097EB RID: 38891 RVA: 0x000D88E9 File Offset: 0x000D6AE9
+		// Token: 0x0600225A RID: 8794 RVA: 0x000325F9 File Offset: 0x000307F9
 		public virtual UClassStackOnlyPtr GetDefaultPawnClassForController(AController InController)
 		{
 			return AGameModeBase.__GetDefaultPawnClassForController_Internal(base.NativePtr, (InController != null) ? InController.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x060097EC RID: 38892 RVA: 0x000D890B File Offset: 0x000D6B0B
+		// Token: 0x0600225B RID: 8795 RVA: 0x0003261B File Offset: 0x0003081B
 		protected virtual UClassStackOnlyPtr GetDefaultPawnClassForController_Implementation(AController InController)
 		{
 			return AGameModeBase.__GetDefaultPawnClassForController_Implementation_Internal(base.NativePtr, (InController != null) ? InController.NativePtr : IntPtr.Zero);
 		}
 
-		// Token: 0x060097ED RID: 38893 RVA: 0x000D8930 File Offset: 0x000D6B30
+		// Token: 0x0600225C RID: 8796 RVA: 0x00032640 File Offset: 0x00030840
 		public unsafe virtual AActor FindPlayerStart(AController Player, [Nullable(1)] string IncomingName)
 		{
 			FString fstring = FString.AllocTemp(IncomingName);
@@ -658,7 +433,7 @@ namespace UnrealEngine
 			return orCreateUObjectByNativePointer;
 		}
 
-		// Token: 0x060097EE RID: 38894 RVA: 0x000D8970 File Offset: 0x000D6B70
+		// Token: 0x0600225D RID: 8797 RVA: 0x00032680 File Offset: 0x00030880
 		protected unsafe virtual AActor FindPlayerStart_Implementation(AController Player, [Nullable(1)] string IncomingName)
 		{
 			FString fstring = FString.AllocTemp(IncomingName);
@@ -667,19 +442,19 @@ namespace UnrealEngine
 			return orCreateUObjectByNativePointer;
 		}
 
-		// Token: 0x060097EF RID: 38895 RVA: 0x000D89AF File Offset: 0x000D6BAF
+		// Token: 0x0600225E RID: 8798 RVA: 0x000326BF File Offset: 0x000308BF
 		public virtual AActor ChoosePlayerStart(AController Player)
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<AActor>(AGameModeBase.__ChoosePlayerStart_Internal(base.NativePtr, (Player != null) ? Player.NativePtr : IntPtr.Zero));
 		}
 
-		// Token: 0x060097F0 RID: 38896 RVA: 0x000D89D1 File Offset: 0x000D6BD1
+		// Token: 0x0600225F RID: 8799 RVA: 0x000326E1 File Offset: 0x000308E1
 		protected virtual AActor ChoosePlayerStart_Implementation(AController Player)
 		{
 			return BuiltinUtils.GetOrCreateUObjectByNativePointer<AActor>(AGameModeBase.__ChoosePlayerStart_Implementation_Internal(base.NativePtr, (Player != null) ? Player.NativePtr : IntPtr.Zero));
 		}
 
-		// Token: 0x060097F1 RID: 38897 RVA: 0x000D89F3 File Offset: 0x000D6BF3
+		// Token: 0x06002260 RID: 8800 RVA: 0x00032703 File Offset: 0x00030903
 		public void ChangePlayerController([Nullable(new byte[]
 		{
 			0,
@@ -689,7 +464,7 @@ namespace UnrealEngine
 			AGameModeBase.__ChangePlayerController_Internal(base.NativePtr, NewPlayerControllerClass._NativePtr);
 		}
 
-		// Token: 0x060097F2 RID: 38898 RVA: 0x000D8A08 File Offset: 0x000D6C08
+		// Token: 0x06002261 RID: 8801 RVA: 0x00032718 File Offset: 0x00030918
 		[NullableContext(1)]
 		public unsafe void ChangeName([Nullable(2)] AController Controller, string NewName, bool bNameChange)
 		{
@@ -698,523 +473,457 @@ namespace UnrealEngine
 			FString.NativeDestruct(&fstring, 1);
 		}
 
-		// Token: 0x060097F3 RID: 38899 RVA: 0x000D8A43 File Offset: 0x000D6C43
-		public virtual bool CanSpectate(APlayerController Viewer, APlayerState ViewTarget)
-		{
-			return AGameModeBase.__CanSpectate_Internal(base.NativePtr, (Viewer != null) ? Viewer.NativePtr : IntPtr.Zero, (ViewTarget != null) ? ViewTarget.NativePtr : IntPtr.Zero);
-		}
-
-		// Token: 0x060097F4 RID: 38900 RVA: 0x000D8A70 File Offset: 0x000D6C70
-		protected virtual bool CanSpectate_Implementation(APlayerController Viewer, APlayerState ViewTarget)
-		{
-			return AGameModeBase.__CanSpectate_Implementation_Internal(base.NativePtr, (Viewer != null) ? Viewer.NativePtr : IntPtr.Zero, (ViewTarget != null) ? ViewTarget.NativePtr : IntPtr.Zero);
-		}
-
-		// Token: 0x060097F5 RID: 38901
+		// Token: 0x06002262 RID: 8802
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __StartPlay_Internal(IntPtr @this);
 
-		// Token: 0x060097F6 RID: 38902
+		// Token: 0x06002263 RID: 8803
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __SpawnDefaultPawnFor_Internal(IntPtr @this, IntPtr NewPlayer, IntPtr StartSpot);
 
-		// Token: 0x060097F7 RID: 38903
+		// Token: 0x06002264 RID: 8804
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __SpawnDefaultPawnFor_Implementation_Internal(IntPtr @this, IntPtr NewPlayer, IntPtr StartSpot);
 
-		// Token: 0x060097F8 RID: 38904
+		// Token: 0x06002265 RID: 8805
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __SpawnDefaultPawnAtTransform_Internal(IntPtr @this, IntPtr NewPlayer, in FTransform SpawnTransform);
 
-		// Token: 0x060097F9 RID: 38905
+		// Token: 0x06002266 RID: 8806
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __SpawnDefaultPawnAtTransform_Implementation_Internal(IntPtr @this, IntPtr NewPlayer, in FTransform SpawnTransform);
 
-		// Token: 0x060097FA RID: 38906
+		// Token: 0x06002267 RID: 8807
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __ShouldReset_Internal(IntPtr @this, IntPtr ActorToReset);
 
-		// Token: 0x060097FB RID: 38907
+		// Token: 0x06002268 RID: 8808
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __ShouldReset_Implementation_Internal(IntPtr @this, IntPtr ActorToReset);
 
-		// Token: 0x060097FC RID: 38908
+		// Token: 0x06002269 RID: 8809
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ReturnToMainMenuHost_Internal(IntPtr @this);
 
-		// Token: 0x060097FD RID: 38909
+		// Token: 0x0600226A RID: 8810
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RestartPlayerAtTransform_Internal(IntPtr @this, IntPtr NewPlayer, in FTransform SpawnTransform);
 
-		// Token: 0x060097FE RID: 38910
+		// Token: 0x0600226B RID: 8811
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RestartPlayerAtPlayerStart_Internal(IntPtr @this, IntPtr NewPlayer, IntPtr StartSpot);
 
-		// Token: 0x060097FF RID: 38911
+		// Token: 0x0600226C RID: 8812
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __RestartPlayer_Internal(IntPtr @this, IntPtr NewPlayer);
 
-		// Token: 0x06009800 RID: 38912
+		// Token: 0x0600226D RID: 8813
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ResetLevel_Internal(IntPtr @this);
 
-		// Token: 0x06009801 RID: 38913
+		// Token: 0x0600226E RID: 8814
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __PlayerCanRestart_Internal(IntPtr @this, IntPtr Player);
 
-		// Token: 0x06009802 RID: 38914
+		// Token: 0x0600226F RID: 8815
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __PlayerCanRestart_Implementation_Internal(IntPtr @this, IntPtr Player);
 
-		// Token: 0x06009803 RID: 38915
+		// Token: 0x06002270 RID: 8816
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __MustSpectate_Internal(IntPtr @this, IntPtr NewPlayerController);
 
-		// Token: 0x06009804 RID: 38916
+		// Token: 0x06002271 RID: 8817
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __MustSpectate_Implementation_Internal(IntPtr @this, IntPtr NewPlayerController);
 
-		// Token: 0x06009805 RID: 38917
+		// Token: 0x06002272 RID: 8818
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __K2_PostLogin_Internal(IntPtr @this, IntPtr NewPlayer);
 
-		// Token: 0x06009806 RID: 38918
+		// Token: 0x06002273 RID: 8819
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __K2_OnSwapPlayerControllers_Internal(IntPtr @this, IntPtr OldPC, IntPtr NewPC);
 
-		// Token: 0x06009807 RID: 38919
+		// Token: 0x06002274 RID: 8820
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __K2_OnRestartPlayer_Internal(IntPtr @this, IntPtr NewPlayer);
 
-		// Token: 0x06009808 RID: 38920
+		// Token: 0x06002275 RID: 8821
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __K2_OnLogout_Internal(IntPtr @this, IntPtr ExitingController);
 
-		// Token: 0x06009809 RID: 38921
+		// Token: 0x06002276 RID: 8822
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __K2_OnChangeName_Internal(IntPtr @this, IntPtr Other, in FString NewName, bool bNameChange);
 
-		// Token: 0x0600980A RID: 38922
+		// Token: 0x06002277 RID: 8823
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __K2_FindPlayerStart_Internal(IntPtr @this, IntPtr Player, in FString IncomingName);
 
-		// Token: 0x0600980B RID: 38923
+		// Token: 0x06002278 RID: 8824
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __InitStartSpot_Internal(IntPtr @this, IntPtr StartSpot, IntPtr NewPlayer);
 
-		// Token: 0x0600980C RID: 38924
+		// Token: 0x06002279 RID: 8825
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __InitStartSpot_Implementation_Internal(IntPtr @this, IntPtr StartSpot, IntPtr NewPlayer);
 
-		// Token: 0x0600980D RID: 38925
+		// Token: 0x0600227A RID: 8826
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __InitializeHUDForPlayer_Internal(IntPtr @this, IntPtr NewPlayer);
 
-		// Token: 0x0600980E RID: 38926
+		// Token: 0x0600227B RID: 8827
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __InitializeHUDForPlayer_Implementation_Internal(IntPtr @this, IntPtr NewPlayer);
 
-		// Token: 0x0600980F RID: 38927
+		// Token: 0x0600227C RID: 8828
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __HasMatchStarted_Internal(IntPtr @this);
 
-		// Token: 0x06009810 RID: 38928
+		// Token: 0x0600227D RID: 8829
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern bool __HasMatchEnded_Internal(IntPtr @this);
 
-		// Token: 0x06009811 RID: 38929
+		// Token: 0x0600227E RID: 8830
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __HandleStartingNewPlayer_Internal(IntPtr @this, IntPtr NewPlayer);
 
-		// Token: 0x06009812 RID: 38930
+		// Token: 0x0600227F RID: 8831
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __HandleStartingNewPlayer_Implementation_Internal(IntPtr @this, IntPtr NewPlayer);
 
-		// Token: 0x06009813 RID: 38931
+		// Token: 0x06002280 RID: 8832
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetNumSpectators_Internal(IntPtr @this);
 
-		// Token: 0x06009814 RID: 38932
+		// Token: 0x06002281 RID: 8833
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern int __GetNumPlayers_Internal(IntPtr @this);
 
-		// Token: 0x06009815 RID: 38933
+		// Token: 0x06002282 RID: 8834
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetDefaultPawnClassForController_Internal(IntPtr @this, IntPtr InController);
 
-		// Token: 0x06009816 RID: 38934
+		// Token: 0x06002283 RID: 8835
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __GetDefaultPawnClassForController_Implementation_Internal(IntPtr @this, IntPtr InController);
 
-		// Token: 0x06009817 RID: 38935
+		// Token: 0x06002284 RID: 8836
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __FindPlayerStart_Internal(IntPtr @this, IntPtr Player, in FString IncomingName);
 
-		// Token: 0x06009818 RID: 38936
+		// Token: 0x06002285 RID: 8837
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __FindPlayerStart_Implementation_Internal(IntPtr @this, IntPtr Player, in FString IncomingName);
 
-		// Token: 0x06009819 RID: 38937
+		// Token: 0x06002286 RID: 8838
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __ChoosePlayerStart_Internal(IntPtr @this, IntPtr Player);
 
-		// Token: 0x0600981A RID: 38938
+		// Token: 0x06002287 RID: 8839
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern IntPtr __ChoosePlayerStart_Implementation_Internal(IntPtr @this, IntPtr Player);
 
-		// Token: 0x0600981B RID: 38939
+		// Token: 0x06002288 RID: 8840
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ChangePlayerController_Internal(IntPtr @this, IntPtr NewPlayerControllerClass);
 
-		// Token: 0x0600981C RID: 38940
+		// Token: 0x06002289 RID: 8841
 		[MethodImpl(MethodImplOptions.InternalCall)]
 		private static extern void __ChangeName_Internal(IntPtr @this, IntPtr Controller, in FString NewName, bool bNameChange);
 
-		// Token: 0x0600981D RID: 38941
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern bool __CanSpectate_Internal(IntPtr @this, IntPtr Viewer, IntPtr ViewTarget);
-
-		// Token: 0x0600981E RID: 38942
-		[MethodImpl(MethodImplOptions.InternalCall)]
-		private static extern bool __CanSpectate_Implementation_Internal(IntPtr @this, IntPtr Viewer, IntPtr ViewTarget);
-
-		// Token: 0x0600981F RID: 38943 RVA: 0x000D8A9D File Offset: 0x000D6C9D
+		// Token: 0x0600228A RID: 8842 RVA: 0x00032753 File Offset: 0x00030953
 		static AGameModeBase()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/Engine.GameModeBase");
 		}
 
-		// Token: 0x06009820 RID: 38944 RVA: 0x000D8AAB File Offset: 0x000D6CAB
+		// Token: 0x0600228B RID: 8843 RVA: 0x00032761 File Offset: 0x00030961
 		protected AGameModeBase(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x040054E8 RID: 21736
+		// Token: 0x04000D5E RID: 3422
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/Engine.GameModeBase";
 
-		// Token: 0x040054E9 RID: 21737
+		// Token: 0x04000D5F RID: 3423
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x040054EA RID: 21738
+		// Token: 0x04000D60 RID: 3424
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x040054EB RID: 21739
+		// Token: 0x04000D61 RID: 3425
 		internal static int __PropertyOffset_OptionsString;
 
-		// Token: 0x040054EC RID: 21740
-		internal static int __PropertyOffset_GameSessionClass;
-
-		// Token: 0x040054ED RID: 21741
-		internal static int __PropertyOffset_GameStateClass;
-
-		// Token: 0x040054EE RID: 21742
+		// Token: 0x04000D62 RID: 3426
 		internal static int __PropertyOffset_PlayerControllerClass;
 
-		// Token: 0x040054EF RID: 21743
-		internal static int __PropertyOffset_PlayerStateClass;
-
-		// Token: 0x040054F0 RID: 21744
-		internal static int __PropertyOffset_HUDClass;
-
-		// Token: 0x040054F1 RID: 21745
+		// Token: 0x04000D63 RID: 3427
 		internal static int __PropertyOffset_DefaultPawnClass;
 
-		// Token: 0x040054F2 RID: 21746
-		internal static int __PropertyOffset_SpectatorClass;
-
-		// Token: 0x040054F3 RID: 21747
+		// Token: 0x04000D64 RID: 3428
 		internal static int __PropertyOffset_ReplaySpectatorPlayerControllerClass;
 
-		// Token: 0x040054F4 RID: 21748
-		internal static int __PropertyOffset_ServerStatReplicatorClass;
-
-		// Token: 0x040054F5 RID: 21749
-		internal static int __PropertyOffset_GameSession;
-
-		// Token: 0x040054F6 RID: 21750
-		internal static int __PropertyOffset_GameState;
-
-		// Token: 0x040054F7 RID: 21751
-		internal static int __PropertyOffset_ServerStatReplicator;
-
-		// Token: 0x040054F8 RID: 21752
+		// Token: 0x04000D65 RID: 3429
 		internal static int __PropertyOffset_DefaultPlayerName;
 
-		// Token: 0x040054F9 RID: 21753
+		// Token: 0x04000D66 RID: 3430
 		private FText _DefaultPlayerName;
 
-		// Token: 0x040054FA RID: 21754
+		// Token: 0x04000D67 RID: 3431
 		internal static int __PropertyOffset_bUseSeamlessTravel;
 
-		// Token: 0x040054FB RID: 21755
+		// Token: 0x04000D68 RID: 3432
 		internal static byte __PropertyMask_bUseSeamlessTravel;
 
-		// Token: 0x040054FC RID: 21756
+		// Token: 0x04000D69 RID: 3433
 		internal static int __PropertyOffset_bStartPlayersAsSpectators;
 
-		// Token: 0x040054FD RID: 21757
+		// Token: 0x04000D6A RID: 3434
 		internal static byte __PropertyMask_bStartPlayersAsSpectators;
 
-		// Token: 0x040054FE RID: 21758
+		// Token: 0x04000D6B RID: 3435
 		internal static int __PropertyOffset_bPauseable;
 
-		// Token: 0x040054FF RID: 21759
+		// Token: 0x04000D6C RID: 3436
 		internal static byte __PropertyMask_bPauseable;
 
-		// Token: 0x02002D01 RID: 11521
+		// Token: 0x020009A0 RID: 2464
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 24)]
 		protected ref struct __SpawnDefaultPawnFor_FunctionParams
 		{
-			// Token: 0x040166BB RID: 91835
+			// Token: 0x0400590A RID: 22794
 			[FieldOffset(0)]
 			public IntPtr NewPlayer;
 
-			// Token: 0x040166BC RID: 91836
+			// Token: 0x0400590B RID: 22795
 			[FieldOffset(8)]
 			public IntPtr StartSpot;
 
-			// Token: 0x040166BD RID: 91837
+			// Token: 0x0400590C RID: 22796
 			[FieldOffset(16)]
 			public IntPtr __Result;
 		}
 
-		// Token: 0x02002D02 RID: 11522
+		// Token: 0x020009A1 RID: 2465
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 80)]
 		protected ref struct __SpawnDefaultPawnAtTransform_FunctionParams
 		{
-			// Token: 0x040166BE RID: 91838
+			// Token: 0x0400590D RID: 22797
 			[FieldOffset(0)]
 			public IntPtr NewPlayer;
 
-			// Token: 0x040166BF RID: 91839
+			// Token: 0x0400590E RID: 22798
 			[FieldOffset(16)]
 			public FTransform SpawnTransform;
 
-			// Token: 0x040166C0 RID: 91840
+			// Token: 0x0400590F RID: 22799
 			[FieldOffset(64)]
 			public IntPtr __Result;
 		}
 
-		// Token: 0x02002D03 RID: 11523
+		// Token: 0x020009A2 RID: 2466
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __ShouldReset_FunctionParams
 		{
-			// Token: 0x040166C1 RID: 91841
+			// Token: 0x04005910 RID: 22800
 			[FieldOffset(0)]
 			public IntPtr ActorToReset;
 
-			// Token: 0x040166C2 RID: 91842
+			// Token: 0x04005911 RID: 22801
 			[FieldOffset(8)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002D04 RID: 11524
+		// Token: 0x020009A3 RID: 2467
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __PlayerCanRestart_FunctionParams
 		{
-			// Token: 0x040166C3 RID: 91843
+			// Token: 0x04005912 RID: 22802
 			[FieldOffset(0)]
 			public IntPtr Player;
 
-			// Token: 0x040166C4 RID: 91844
+			// Token: 0x04005913 RID: 22803
 			[FieldOffset(8)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002D05 RID: 11525
+		// Token: 0x020009A4 RID: 2468
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __MustSpectate_FunctionParams
 		{
-			// Token: 0x040166C5 RID: 91845
+			// Token: 0x04005914 RID: 22804
 			[FieldOffset(0)]
 			public IntPtr NewPlayerController;
 
-			// Token: 0x040166C6 RID: 91846
+			// Token: 0x04005915 RID: 22805
 			[FieldOffset(8)]
 			public bool __Result;
 		}
 
-		// Token: 0x02002D06 RID: 11526
+		// Token: 0x020009A5 RID: 2469
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __K2_PostLogin_FunctionParams
 		{
-			// Token: 0x040166C7 RID: 91847
+			// Token: 0x04005916 RID: 22806
 			[FieldOffset(0)]
 			public IntPtr NewPlayer;
 		}
 
-		// Token: 0x02002D07 RID: 11527
+		// Token: 0x020009A6 RID: 2470
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __K2_OnSwapPlayerControllers_FunctionParams
 		{
-			// Token: 0x040166C8 RID: 91848
+			// Token: 0x04005917 RID: 22807
 			[FieldOffset(0)]
 			public IntPtr OldPC;
 
-			// Token: 0x040166C9 RID: 91849
+			// Token: 0x04005918 RID: 22808
 			[FieldOffset(8)]
 			public IntPtr NewPC;
 		}
 
-		// Token: 0x02002D08 RID: 11528
+		// Token: 0x020009A7 RID: 2471
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __K2_OnRestartPlayer_FunctionParams
 		{
-			// Token: 0x040166CA RID: 91850
+			// Token: 0x04005919 RID: 22809
 			[FieldOffset(0)]
 			public IntPtr NewPlayer;
 		}
 
-		// Token: 0x02002D09 RID: 11529
+		// Token: 0x020009A8 RID: 2472
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __K2_OnLogout_FunctionParams
 		{
-			// Token: 0x040166CB RID: 91851
+			// Token: 0x0400591A RID: 22810
 			[FieldOffset(0)]
 			public IntPtr ExitingController;
 		}
 
-		// Token: 0x02002D0A RID: 11530
+		// Token: 0x020009A9 RID: 2473
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
 		protected ref struct __K2_OnChangeName_FunctionParams
 		{
-			// Token: 0x040166CC RID: 91852
+			// Token: 0x0400591B RID: 22811
 			[FieldOffset(0)]
 			public IntPtr Other;
 
-			// Token: 0x040166CD RID: 91853
+			// Token: 0x0400591C RID: 22812
 			[FieldOffset(8)]
 			public FString NewName;
 
-			// Token: 0x040166CE RID: 91854
+			// Token: 0x0400591D RID: 22813
 			[FieldOffset(24)]
 			public bool bNameChange;
 		}
 
-		// Token: 0x02002D0B RID: 11531
+		// Token: 0x020009AA RID: 2474
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __InitStartSpot_FunctionParams
 		{
-			// Token: 0x040166CF RID: 91855
+			// Token: 0x0400591E RID: 22814
 			[FieldOffset(0)]
 			public IntPtr StartSpot;
 
-			// Token: 0x040166D0 RID: 91856
+			// Token: 0x0400591F RID: 22815
 			[FieldOffset(8)]
 			public IntPtr NewPlayer;
 		}
 
-		// Token: 0x02002D0C RID: 11532
+		// Token: 0x020009AB RID: 2475
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __InitializeHUDForPlayer_FunctionParams
 		{
-			// Token: 0x040166D1 RID: 91857
+			// Token: 0x04005920 RID: 22816
 			[FieldOffset(0)]
 			public IntPtr NewPlayer;
 		}
 
-		// Token: 0x02002D0D RID: 11533
+		// Token: 0x020009AC RID: 2476
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __HandleStartingNewPlayer_FunctionParams
 		{
-			// Token: 0x040166D2 RID: 91858
+			// Token: 0x04005921 RID: 22817
 			[FieldOffset(0)]
 			public IntPtr NewPlayer;
 		}
 
-		// Token: 0x02002D0E RID: 11534
+		// Token: 0x020009AD RID: 2477
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __GetDefaultPawnClassForController_FunctionParams
 		{
-			// Token: 0x040166D3 RID: 91859
+			// Token: 0x04005922 RID: 22818
 			[FieldOffset(0)]
 			public IntPtr InController;
 
-			// Token: 0x040166D4 RID: 91860
+			// Token: 0x04005923 RID: 22819
 			[FieldOffset(8)]
 			public UClassStackOnlyPtr __Result;
 		}
 
-		// Token: 0x02002D0F RID: 11535
+		// Token: 0x020009AE RID: 2478
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 32)]
 		protected ref struct __FindPlayerStart_FunctionParams
 		{
-			// Token: 0x040166D5 RID: 91861
+			// Token: 0x04005924 RID: 22820
 			[FieldOffset(0)]
 			public IntPtr Player;
 
-			// Token: 0x040166D6 RID: 91862
+			// Token: 0x04005925 RID: 22821
 			[FieldOffset(8)]
 			public FString IncomingName;
 
-			// Token: 0x040166D7 RID: 91863
+			// Token: 0x04005926 RID: 22822
 			[FieldOffset(24)]
 			public IntPtr __Result;
 		}
 
-		// Token: 0x02002D10 RID: 11536
+		// Token: 0x020009AF RID: 2479
 		[NullableContext(0)]
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 16)]
 		protected ref struct __ChoosePlayerStart_FunctionParams
 		{
-			// Token: 0x040166D8 RID: 91864
+			// Token: 0x04005927 RID: 22823
 			[FieldOffset(0)]
 			public IntPtr Player;
 
-			// Token: 0x040166D9 RID: 91865
+			// Token: 0x04005928 RID: 22824
 			[FieldOffset(8)]
 			public IntPtr __Result;
-		}
-
-		// Token: 0x02002D11 RID: 11537
-		[NullableContext(0)]
-		[CompilerFeatureRequired("RefStructs")]
-		[StructLayout(LayoutKind.Explicit, Size = 24)]
-		protected ref struct __CanSpectate_FunctionParams
-		{
-			// Token: 0x040166DA RID: 91866
-			[FieldOffset(0)]
-			public IntPtr Viewer;
-
-			// Token: 0x040166DB RID: 91867
-			[FieldOffset(8)]
-			public IntPtr ViewTarget;
-
-			// Token: 0x040166DC RID: 91868
-			[FieldOffset(16)]
-			public bool __Result;
 		}
 	}
 }

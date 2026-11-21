@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002989 RID: 10633
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002C6F RID: 11375
 	public class IAudioState
 	{
-		// Token: 0x0600EB7C RID: 60284 RVA: 0x00227188 File Offset: 0x00225388
+		// Token: 0x0600F9F7 RID: 63991 RVA: 0x002448E0 File Offset: 0x00242AE0
 		public static IAudioState Create(IAudioState? instance)
 		{
 			if (instance == null)
@@ -22,8 +19,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004A2C RID: 18988
-		// (get) Token: 0x0600EB7D RID: 60285 RVA: 0x002271A7 File Offset: 0x002253A7
+		// Token: 0x17004DC7 RID: 19911
+		// (get) Token: 0x0600F9F8 RID: 63992 RVA: 0x002448FF File Offset: 0x00242AFF
 		public virtual string Group
 		{
 			get
@@ -32,8 +29,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004A2D RID: 18989
-		// (get) Token: 0x0600EB7E RID: 60286 RVA: 0x002271B4 File Offset: 0x002253B4
+		// Token: 0x17004DC8 RID: 19912
+		// (get) Token: 0x0600F9F9 RID: 63993 RVA: 0x0024490C File Offset: 0x00242B0C
 		public virtual string State
 		{
 			get
@@ -42,7 +39,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x040081B1 RID: 33201
+		// Token: 0x04008895 RID: 34965
 		private IAudioState Instance;
 	}
 }

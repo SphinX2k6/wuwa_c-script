@@ -23,13 +23,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Audio
 {
-	// Token: 0x02005E8E RID: 24206
+	// Token: 0x02004E73 RID: 20083
 	[NullableContext(1)]
 	[Nullable(0)]
 	[TickController(0)]
 	public class GameAudioController : ControllerBase
 	{
-		// Token: 0x0603D903 RID: 252163 RVA: 0x00EDB724 File Offset: 0x00ED9924
+		// Token: 0x06032893 RID: 206995 RVA: 0x00E2CCB0 File Offset: 0x00E2AEB0
 		public void UpdatePlayerLocation(global::Vector location)
 		{
 			this.PlayerLocation = location;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D904 RID: 252164 RVA: 0x00EDB7A8 File Offset: 0x00ED99A8
+		// Token: 0x06032894 RID: 206996 RVA: 0x00E2CD34 File Offset: 0x00E2AF34
 		protected override bool OnInit()
 		{
 			AreaModel instance = AreaModel.Instance;
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.Audio
 			return true;
 		}
 
-		// Token: 0x0603D905 RID: 252165 RVA: 0x00EDBA10 File Offset: 0x00ED9C10
+		// Token: 0x06032895 RID: 206997 RVA: 0x00E2CF9C File Offset: 0x00E2B19C
 		protected override void OnTick(float delta)
 		{
 			this.DeltaTime += delta;
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.Audio
 			this.RoleAudioVolumeInfo.Update();
 		}
 
-		// Token: 0x0603D906 RID: 252166 RVA: 0x00EDBA60 File Offset: 0x00ED9C60
+		// Token: 0x06032896 RID: 206998 RVA: 0x00E2CFEC File Offset: 0x00E2B1EC
 		protected override bool OnClear()
 		{
 			EventSystem.Instance.Remove(EEventName.PauseGame, new Action<int>(this.OnPauseGame));
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.Audio
 			return true;
 		}
 
-		// Token: 0x0603D907 RID: 252167 RVA: 0x00EDBC68 File Offset: 0x00ED9E68
+		// Token: 0x06032897 RID: 206999 RVA: 0x00E2D1F4 File Offset: 0x00E2B3F4
 		private void OnAfterLoadMap()
 		{
 			UKuroAudioEnvironmentSubsystem audioEnvironmentSubsystem = UKuroAudioStatics.GetAudioEnvironmentSubsystem(Info.Instance.World);
@@ -138,14 +138,14 @@ namespace CSharpScript.Game.Module.Audio
 			});
 		}
 
-		// Token: 0x0603D908 RID: 252168 RVA: 0x00EDBCCA File Offset: 0x00ED9ECA
+		// Token: 0x06032898 RID: 207000 RVA: 0x00E2D256 File Offset: 0x00E2B456
 		private void OnWorldDone()
 		{
 			this.UpdateWeatherType();
 			AudioSystem.Instance.PostEvent("on_world_done");
 		}
 
-		// Token: 0x0603D909 RID: 252169 RVA: 0x00EDBCE4 File Offset: 0x00ED9EE4
+		// Token: 0x06032899 RID: 207001 RVA: 0x00E2D270 File Offset: 0x00E2B470
 		private void OnWorldDoneAndCloseLoading()
 		{
 			int mapId = GameModeModel.Instance.MapConfig.MapId;
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D90A RID: 252170 RVA: 0x00EDBE18 File Offset: 0x00EDA018
+		// Token: 0x0603289A RID: 207002 RVA: 0x00E2D3A4 File Offset: 0x00E2B5A4
 		private void OnClearWorld()
 		{
 			if (!string.IsNullOrEmpty((this.MapConfig != null) ? this.MapConfig.GetValueOrDefault().Event : null))
@@ -200,14 +200,14 @@ namespace CSharpScript.Game.Module.Audio
 			AudioSystem.Instance.PostEvent("on_world_cleanup");
 		}
 
-		// Token: 0x0603D90B RID: 252171 RVA: 0x00EDBF4B File Offset: 0x00EDA14B
+		// Token: 0x0603289B RID: 207003 RVA: 0x00E2D4D7 File Offset: 0x00E2B6D7
 		[NullableContext(2)]
 		private void OnTeleportComplete(TeleportContext context)
 		{
 			this.UpdateWeatherType();
 		}
 
-		// Token: 0x0603D90C RID: 252172 RVA: 0x00EDBF54 File Offset: 0x00EDA154
+		// Token: 0x0603289C RID: 207004 RVA: 0x00E2D4E0 File Offset: 0x00E2B6E0
 		[NullableContext(2)]
 		private void OnUpdateAudioStateNotify(IMessage msg, Net.CallbackStatus status)
 		{
@@ -215,7 +215,7 @@ namespace CSharpScript.Game.Module.Audio
 			this.UpdateAudioState(audioStateUpdateNotify.AudioStates);
 		}
 
-		// Token: 0x0603D90D RID: 252173 RVA: 0x00EDBF74 File Offset: 0x00EDA174
+		// Token: 0x0603289D RID: 207005 RVA: 0x00E2D500 File Offset: 0x00E2B700
 		private void OnPauseGame(int flag)
 		{
 			if (flag == 1)
@@ -229,19 +229,19 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D90E RID: 252174 RVA: 0x00EDBF9E File Offset: 0x00EDA19E
+		// Token: 0x0603289E RID: 207006 RVA: 0x00E2D52A File Offset: 0x00E2B72A
 		private void OnWeatherChange()
 		{
 			this.UpdateWeatherType();
 		}
 
-		// Token: 0x0603D90F RID: 252175 RVA: 0x00EDBFA6 File Offset: 0x00EDA1A6
+		// Token: 0x0603289F RID: 207007 RVA: 0x00E2D532 File Offset: 0x00E2B732
 		private void OnChangeAreaEvent(int? preAreaId, int curAreaId)
 		{
 			this.OnChangeArea(preAreaId, new int?(curAreaId));
 		}
 
-		// Token: 0x0603D910 RID: 252176 RVA: 0x00EDBFB8 File Offset: 0x00EDA1B8
+		// Token: 0x060328A0 RID: 207008 RVA: 0x00E2D544 File Offset: 0x00E2B744
 		private void OnChangeArea(int? preAreaId, int? curAreaId)
 		{
 			AreaModel instance = AreaModel.Instance;
@@ -275,7 +275,7 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D911 RID: 252177 RVA: 0x00EDC12C File Offset: 0x00EDA32C
+		// Token: 0x060328A1 RID: 207009 RVA: 0x00E2D6B8 File Offset: 0x00E2B8B8
 		private unsafe bool CheckIsInJinZhou()
 		{
 			Aki.Config.Area value = AreaModel.Instance.AreaInfo.Value;
@@ -325,13 +325,13 @@ namespace CSharpScript.Game.Module.Audio
 			return false;
 		}
 
-		// Token: 0x0603D912 RID: 252178 RVA: 0x00EDC2A9 File Offset: 0x00EDA4A9
+		// Token: 0x060328A2 RID: 207010 RVA: 0x00E2D835 File Offset: 0x00E2BA35
 		protected void OnTeleportStart(bool b)
 		{
 			this.UpdateLevelPlayState(false);
 		}
 
-		// Token: 0x0603D913 RID: 252179 RVA: 0x00EDC2B4 File Offset: 0x00EDA4B4
+		// Token: 0x060328A3 RID: 207011 RVA: 0x00E2D840 File Offset: 0x00E2BA40
 		private void UpdateWeatherType()
 		{
 			switch (WeatherModel.Instance.GetCurrentWeatherType())
@@ -357,7 +357,7 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D914 RID: 252180 RVA: 0x00EDC350 File Offset: 0x00EDA550
+		// Token: 0x060328A4 RID: 207012 RVA: 0x00E2D8DC File Offset: 0x00E2BADC
 		private void UpdateEnvironment(in FVectorDouble location)
 		{
 			UKuroAudioEnvironmentSubsystem audioEnvironmentSubsystem = UKuroAudioStatics.GetAudioEnvironmentSubsystem(Info.Instance.World);
@@ -388,7 +388,7 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D915 RID: 252181 RVA: 0x00EDC46C File Offset: 0x00EDA66C
+		// Token: 0x060328A5 RID: 207013 RVA: 0x00E2D9F8 File Offset: 0x00E2BBF8
 		private void UpdateEnvironment_MusicCompatible(in FVectorDouble location)
 		{
 			UKuroAudioEnvironmentSubsystem audioEnvironmentSubsystem = UKuroAudioStatics.GetAudioEnvironmentSubsystem(Info.Instance.World);
@@ -419,7 +419,7 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D916 RID: 252182 RVA: 0x00EDC588 File Offset: 0x00EDA788
+		// Token: 0x060328A6 RID: 207014 RVA: 0x00E2DB14 File Offset: 0x00E2BD14
 		private unsafe void UpdateEnvironmentStates(in FVectorDouble location)
 		{
 			UKuroAudioEnvironmentSubsystem audioEnvironmentSubsystem = UKuroAudioStatics.GetAudioEnvironmentSubsystem(Info.Instance.World);
@@ -491,7 +491,7 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D917 RID: 252183 RVA: 0x00EDC830 File Offset: 0x00EDAA30
+		// Token: 0x060328A7 RID: 207015 RVA: 0x00E2DDC0 File Offset: 0x00E2BFC0
 		public void UpdateAudioState(IReadOnlyList<AudioStatePb> states)
 		{
 			foreach (AudioStatePb audioStatePb in states)
@@ -507,7 +507,7 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D918 RID: 252184 RVA: 0x00EDC8A4 File Offset: 0x00EDAAA4
+		// Token: 0x060328A8 RID: 207016 RVA: 0x00E2DE34 File Offset: 0x00E2C034
 		public void UpdateAudioStatebyClient(IAudioState state)
 		{
 			if (!string.IsNullOrEmpty(state.Group))
@@ -516,7 +516,7 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D919 RID: 252185 RVA: 0x00EDC8C4 File Offset: 0x00EDAAC4
+		// Token: 0x060328A9 RID: 207017 RVA: 0x00E2DE54 File Offset: 0x00E2C054
 		public void UpdateLoadingType(ELoadingPerform? type)
 		{
 			ELoadingPerform? loadingType = this.LoadingType;
@@ -554,7 +554,7 @@ namespace CSharpScript.Game.Module.Audio
 			AudioSystem.Instance.SetState("loading", "none", true);
 		}
 
-		// Token: 0x0603D91A RID: 252186 RVA: 0x00EDC9D0 File Offset: 0x00EDABD0
+		// Token: 0x060328AA RID: 207018 RVA: 0x00E2DF60 File Offset: 0x00E2C160
 		[NullableContext(2)]
 		public void UpdateLoadingTypeFromTransitionOption(TransitionOptionPb optionType)
 		{
@@ -584,7 +584,7 @@ namespace CSharpScript.Game.Module.Audio
 			this.UpdateLoadingType(new ELoadingPerform?(value));
 		}
 
-		// Token: 0x0603D91B RID: 252187 RVA: 0x00EDCA2C File Offset: 0x00EDAC2C
+		// Token: 0x060328AB RID: 207019 RVA: 0x00E2DFBC File Offset: 0x00E2C1BC
 		[return: Nullable(2)]
 		public unsafe UAkComponent GetAkComponent(AActor owner, FName? socket = null)
 		{
@@ -642,7 +642,7 @@ namespace CSharpScript.Game.Module.Audio
 			return null;
 		}
 
-		// Token: 0x0603D91C RID: 252188 RVA: 0x00EDCB5C File Offset: 0x00EDAD5C
+		// Token: 0x060328AC RID: 207020 RVA: 0x00E2E0EC File Offset: 0x00E2C2EC
 		public void SetRolePriority(ERoleAudioPriorityType type, AActor actor)
 		{
 			float value = 0f;
@@ -669,7 +669,7 @@ namespace CSharpScript.Game.Module.Audio
 			}));
 		}
 
-		// Token: 0x0603D91D RID: 252189 RVA: 0x00EDCBE8 File Offset: 0x00EDADE8
+		// Token: 0x060328AD RID: 207021 RVA: 0x00E2E178 File Offset: 0x00E2C378
 		public void AddRolePrioritySummon(int summoner, int id, AActor actor)
 		{
 			if (!this.SummonsRolePriorityRecords.ContainsKey(summoner))
@@ -683,7 +683,7 @@ namespace CSharpScript.Game.Module.Audio
 			this.SummonsRolePriorityActors[id] = actor;
 		}
 
-		// Token: 0x0603D91E RID: 252190 RVA: 0x00EDCC48 File Offset: 0x00EDAE48
+		// Token: 0x060328AE RID: 207022 RVA: 0x00E2E1D8 File Offset: 0x00E2C3D8
 		public void RemoveRolePrioritySummon(int summoner, int id)
 		{
 			if (this.SummonsRolePriorityRecords.ContainsKey(summoner))
@@ -697,7 +697,7 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D91F RID: 252191 RVA: 0x00EDCCA4 File Offset: 0x00EDAEA4
+		// Token: 0x060328AF RID: 207023 RVA: 0x00E2E234 File Offset: 0x00E2C434
 		public void RoleChangeController(int id, bool possessed)
 		{
 			if (this.SummonsRolePriorityRecords.ContainsKey(id))
@@ -713,13 +713,13 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D920 RID: 252192 RVA: 0x00EDCD34 File Offset: 0x00EDAF34
+		// Token: 0x060328B0 RID: 207024 RVA: 0x00E2E2C4 File Offset: 0x00E2C4C4
 		public void AddPostAkEventHandle(int handle)
 		{
 			this.PostAkEventHandleList.Add(handle);
 		}
 
-		// Token: 0x0603D921 RID: 252193 RVA: 0x00EDCD43 File Offset: 0x00EDAF43
+		// Token: 0x060328B1 RID: 207025 RVA: 0x00E2E2D3 File Offset: 0x00E2C4D3
 		public void RemovePostAkEventHandle(int handle)
 		{
 			if (this.PostAkEventHandleList.Contains(handle))
@@ -728,19 +728,19 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D922 RID: 252194 RVA: 0x00EDCD60 File Offset: 0x00EDAF60
+		// Token: 0x060328B2 RID: 207026 RVA: 0x00E2E2F0 File Offset: 0x00E2C4F0
 		public void AddPostAkEventFadeOutTime(int handle, long flowIncId, int time)
 		{
 			this.PostAkEventFadeOutTimeList[handle] = new ValueTuple<long, int>(flowIncId, time);
 		}
 
-		// Token: 0x0603D923 RID: 252195 RVA: 0x00EDCD75 File Offset: 0x00EDAF75
+		// Token: 0x060328B3 RID: 207027 RVA: 0x00E2E305 File Offset: 0x00E2C505
 		public void RemovePostAkEventFadeOutTime(int handle)
 		{
 			this.PostAkEventFadeOutTimeList.Remove(handle);
 		}
 
-		// Token: 0x0603D924 RID: 252196 RVA: 0x00EDCD84 File Offset: 0x00EDAF84
+		// Token: 0x060328B4 RID: 207028 RVA: 0x00E2E314 File Offset: 0x00E2C514
 		private void OnPlotNetworkEnd(PlotResultInfo plotInfo)
 		{
 			this.CheckIgnoreByPlotKeep();
@@ -762,7 +762,7 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D925 RID: 252197 RVA: 0x00EDCE4C File Offset: 0x00EDB04C
+		// Token: 0x060328B5 RID: 207029 RVA: 0x00E2E3DC File Offset: 0x00E2C5DC
 		private void OnInstanceChange(int oldInstanceId, int newInstanceId)
 		{
 			if (oldInstanceId == newInstanceId && this.PostAkEventHandleList.Count == 0)
@@ -779,7 +779,7 @@ namespace CSharpScript.Game.Module.Audio
 			this.PostAkEventHandleList.Clear();
 		}
 
-		// Token: 0x0603D926 RID: 252198 RVA: 0x00EDCEE4 File Offset: 0x00EDB0E4
+		// Token: 0x060328B6 RID: 207030 RVA: 0x00E2E474 File Offset: 0x00E2C674
 		private void InitMorphAudioConfig()
 		{
 			IReadOnlyList<RoleMorphAudioRules> configList = ConfigRoleMorphAudioRulesAll.GetConfigList(true);
@@ -816,13 +816,13 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D927 RID: 252199 RVA: 0x00EDD048 File Offset: 0x00EDB248
+		// Token: 0x060328B7 RID: 207031 RVA: 0x00E2E5D8 File Offset: 0x00E2C7D8
 		public bool HasMorphAudioConfig(int id)
 		{
 			return this.MorphConfigMap.ContainsKey(id);
 		}
 
-		// Token: 0x0603D928 RID: 252200 RVA: 0x00EDD058 File Offset: 0x00EDB258
+		// Token: 0x060328B8 RID: 207032 RVA: 0x00E2E5E8 File Offset: 0x00E2C7E8
 		public bool CheckMorphAudioPlay(int id, object eventParam)
 		{
 			if (!this.MorphConfigMap.ContainsKey(id))
@@ -843,7 +843,7 @@ namespace CSharpScript.Game.Module.Audio
 			return !flag;
 		}
 
-		// Token: 0x0603D929 RID: 252201 RVA: 0x00EDD0D4 File Offset: 0x00EDB2D4
+		// Token: 0x060328B9 RID: 207033 RVA: 0x00E2E664 File Offset: 0x00E2C864
 		private void OnCharacterMorphTypeChanged(Entity entity, EMorphType morphType, EMorphType oldMorphType)
 		{
 			CharacterMorphComponent component = entity.GetComponent<CharacterMorphComponent>();
@@ -877,19 +877,19 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D92A RID: 252202 RVA: 0x00EDD256 File Offset: 0x00EDB456
+		// Token: 0x060328BA RID: 207034 RVA: 0x00E2E7E6 File Offset: 0x00E2C9E6
 		public int PostEvent(AActor owner, string eventName, FName? socket = null)
 		{
 			return this.RoleAudioVolumeInfo.PostEvent(owner, eventName, socket);
 		}
 
-		// Token: 0x0603D92B RID: 252203 RVA: 0x00EDD266 File Offset: 0x00EDB466
+		// Token: 0x060328BB RID: 207035 RVA: 0x00E2E7F6 File Offset: 0x00E2C9F6
 		public void RemoveEvent(AActor owner, int handle)
 		{
 			this.RoleAudioVolumeInfo.RemoveEvent(owner, handle);
 		}
 
-		// Token: 0x0603D92C RID: 252204 RVA: 0x00EDD278 File Offset: 0x00EDB478
+		// Token: 0x060328BC RID: 207036 RVA: 0x00E2E808 File Offset: 0x00E2CA08
 		private void OnAggroListAdd(IReadOnlyList<int> entityIds)
 		{
 			foreach (int entityId in entityIds)
@@ -898,7 +898,7 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D92D RID: 252205 RVA: 0x00EDD2C0 File Offset: 0x00EDB4C0
+		// Token: 0x060328BD RID: 207037 RVA: 0x00E2E850 File Offset: 0x00E2CA50
 		private void OnAggroListRemove(IReadOnlyList<int> entityIds)
 		{
 			foreach (int entityId in entityIds)
@@ -907,7 +907,7 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D92E RID: 252206 RVA: 0x00EDD308 File Offset: 0x00EDB508
+		// Token: 0x060328BE RID: 207038 RVA: 0x00E2E898 File Offset: 0x00E2CA98
 		private void OnCharDead(int entityId)
 		{
 			if (this.AggroSet.Contains(entityId))
@@ -916,7 +916,7 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D92F RID: 252207 RVA: 0x00EDD320 File Offset: 0x00EDB520
+		// Token: 0x060328BF RID: 207039 RVA: 0x00E2E8B0 File Offset: 0x00E2CAB0
 		private void OnAggroAdd(int entityId)
 		{
 			Entity entity = EntitySystem.Instance.Get(entityId);
@@ -941,7 +941,7 @@ namespace CSharpScript.Game.Module.Audio
 			this.UpdateLevelPlayState(true);
 		}
 
-		// Token: 0x0603D930 RID: 252208 RVA: 0x00EDD387 File Offset: 0x00EDB587
+		// Token: 0x060328C0 RID: 207040 RVA: 0x00E2E917 File Offset: 0x00E2CB17
 		private void OnAggroRemoved(int entityId)
 		{
 			if (!this.AggroSet.Contains(entityId))
@@ -956,9 +956,9 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x17008E8E RID: 36494
-		// (get) Token: 0x0603D931 RID: 252209 RVA: 0x00EDD3BE File Offset: 0x00EDB5BE
-		// (set) Token: 0x0603D932 RID: 252210 RVA: 0x00EDD3C6 File Offset: 0x00EDB5C6
+		// Token: 0x17006260 RID: 25184
+		// (get) Token: 0x060328C1 RID: 207041 RVA: 0x00E2E94E File Offset: 0x00E2CB4E
+		// (set) Token: 0x060328C2 RID: 207042 RVA: 0x00E2E956 File Offset: 0x00E2CB56
 		private string MonsterFightMusicEvent
 		{
 			get
@@ -975,7 +975,7 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D933 RID: 252211 RVA: 0x00EDD3E0 File Offset: 0x00EDB5E0
+		// Token: 0x060328C3 RID: 207043 RVA: 0x00E2E970 File Offset: 0x00E2CB70
 		private void UpdateEntityLevelAndMusic()
 		{
 			string text = "";
@@ -1015,7 +1015,7 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D934 RID: 252212 RVA: 0x00EDD528 File Offset: 0x00EDB728
+		// Token: 0x060328C4 RID: 207044 RVA: 0x00E2EAB8 File Offset: 0x00E2CCB8
 		private unsafe void RefreshEnemyMaxLevel(CharacterActorComponent actorComp)
 		{
 			CreatureDataComponent creatureDataComponent = (actorComp != null) ? actorComp.CreatureData : null;
@@ -1052,7 +1052,7 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D935 RID: 252213 RVA: 0x00EDD638 File Offset: 0x00EDB838
+		// Token: 0x060328C5 RID: 207045 RVA: 0x00E2EBC8 File Offset: 0x00E2CDC8
 		private string CheckFightMusicConfig(CharacterActorComponent actorComp)
 		{
 			AttributeComponent attributeComponent = actorComp.CreatureData.GetAttributeComponent();
@@ -1107,7 +1107,7 @@ namespace CSharpScript.Game.Module.Audio
 			return result;
 		}
 
-		// Token: 0x0603D936 RID: 252214 RVA: 0x00EDD7D0 File Offset: 0x00EDB9D0
+		// Token: 0x060328C6 RID: 207046 RVA: 0x00E2ED60 File Offset: 0x00E2CF60
 		private unsafe void UpdateFightMusic(int tagId, bool tagExist)
 		{
 			if (this.FightMusicPriorityList == null)
@@ -1135,7 +1135,7 @@ namespace CSharpScript.Game.Module.Audio
 			this.UpdateFightMusicEvent(this.DefaultFightMusic);
 		}
 
-		// Token: 0x0603D937 RID: 252215 RVA: 0x00EDD8C4 File Offset: 0x00EDBAC4
+		// Token: 0x060328C7 RID: 207047 RVA: 0x00E2EE54 File Offset: 0x00E2D054
 		private void UpdateFightMusicEvent(string name)
 		{
 			if (this.MonsterFightMusicEvent != name)
@@ -1145,7 +1145,7 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D938 RID: 252216 RVA: 0x00EDD8E4 File Offset: 0x00EDBAE4
+		// Token: 0x060328C8 RID: 207048 RVA: 0x00E2EE74 File Offset: 0x00E2D074
 		public string GetMonsterTypeState()
 		{
 			if (!this.PlayBattleMusic || this.CurMonsterMatchType == null)
@@ -1165,7 +1165,7 @@ namespace CSharpScript.Game.Module.Audio
 			return MonsterMatchTypeStateData.States[this.CurMonsterMatchType.Value];
 		}
 
-		// Token: 0x0603D939 RID: 252217 RVA: 0x00EDD964 File Offset: 0x00EDBB64
+		// Token: 0x060328C9 RID: 207049 RVA: 0x00E2EEF4 File Offset: 0x00E2D0F4
 		private void ClearFightMusicPriorityList()
 		{
 			if (this.FightMusicPriorityList != null)
@@ -1180,7 +1180,7 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D93A RID: 252218 RVA: 0x00EDD9E0 File Offset: 0x00EDBBE0
+		// Token: 0x060328CA RID: 207050 RVA: 0x00E2EF70 File Offset: 0x00E2D170
 		private void ClearTempleteData()
 		{
 			this.CurMonsterMatchType = null;
@@ -1190,8 +1190,8 @@ namespace CSharpScript.Game.Module.Audio
 			this.FightMusicPriorityList = null;
 		}
 
-		// Token: 0x17008E8F RID: 36495
-		// (get) Token: 0x0603D93B RID: 252219 RVA: 0x00EDDA11 File Offset: 0x00EDBC11
+		// Token: 0x17006261 RID: 25185
+		// (get) Token: 0x060328CB RID: 207051 RVA: 0x00E2EFA1 File Offset: 0x00E2D1A1
 		public bool IsPlayingBattleMusic
 		{
 			get
@@ -1200,7 +1200,7 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D93C RID: 252220 RVA: 0x00EDDA19 File Offset: 0x00EDBC19
+		// Token: 0x060328CC RID: 207052 RVA: 0x00E2EFA9 File Offset: 0x00E2D1A9
 		public void TrySetPlayerHurtEnemy()
 		{
 			if (!this.IsPlayerHurtEnemy)
@@ -1213,7 +1213,7 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D93D RID: 252221 RVA: 0x00EDDA3C File Offset: 0x00EDBC3C
+		// Token: 0x060328CD RID: 207053 RVA: 0x00E2EFCC File Offset: 0x00E2D1CC
 		public void SetPlayerWwiseState(bool inBattle, bool hurtEnemy = false)
 		{
 			if (inBattle)
@@ -1241,7 +1241,7 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D93E RID: 252222 RVA: 0x00EDDB2C File Offset: 0x00EDBD2C
+		// Token: 0x060328CE RID: 207054 RVA: 0x00E2F0BC File Offset: 0x00E2D2BC
 		private void SetBattleWwiseState(bool inBattle)
 		{
 			if (inBattle)
@@ -1254,7 +1254,7 @@ namespace CSharpScript.Game.Module.Audio
 			global::Log.Instance.Info(ELogModule.Audio, ELogAuthor.CWZ, "[BGM] 切换战斗音乐状态:非战斗", default(ReadOnlySpan<ValueTuple<string, object>>));
 		}
 
-		// Token: 0x0603D93F RID: 252223 RVA: 0x00EDDBA0 File Offset: 0x00EDBDA0
+		// Token: 0x060328CF RID: 207055 RVA: 0x00E2F130 File Offset: 0x00E2D330
 		private unsafe void SetEnemyWwiseState()
 		{
 			string monsterTypeState = this.GetMonsterTypeState();
@@ -1269,7 +1269,7 @@ namespace CSharpScript.Game.Module.Audio
 			instance.Info(module, author, message, <PrivateImplementationDetails>.InlineArrayAsReadOnlySpan<<>y__InlineArray2<ValueTuple<string, object>>, ValueTuple<string, object>>(<>y__InlineArray, 2));
 		}
 
-		// Token: 0x0603D940 RID: 252224 RVA: 0x00EDDC1C File Offset: 0x00EDBE1C
+		// Token: 0x060328D0 RID: 207056 RVA: 0x00E2F1AC File Offset: 0x00E2D3AC
 		public void OnEnterBattleState()
 		{
 			if (this.PlayBattleMusic)
@@ -1282,7 +1282,7 @@ namespace CSharpScript.Game.Module.Audio
 			this.SetBattleWwiseState(true);
 		}
 
-		// Token: 0x0603D941 RID: 252225 RVA: 0x00EDDC44 File Offset: 0x00EDBE44
+		// Token: 0x060328D1 RID: 207057 RVA: 0x00E2F1D4 File Offset: 0x00E2D3D4
 		public void OnExitBattleState()
 		{
 			if (!this.PlayBattleMusic)
@@ -1311,7 +1311,7 @@ namespace CSharpScript.Game.Module.Audio
 			this.SetEnemyWwiseState();
 		}
 
-		// Token: 0x0603D942 RID: 252226 RVA: 0x00EDDCDC File Offset: 0x00EDBEDC
+		// Token: 0x060328D2 RID: 207058 RVA: 0x00E2F26C File Offset: 0x00E2D46C
 		public void TryUpdateBattleState()
 		{
 			bool flag = this.AggroSet.Count != 0;
@@ -1356,7 +1356,7 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D943 RID: 252227 RVA: 0x00EDDDA0 File Offset: 0x00EDBFA0
+		// Token: 0x060328D3 RID: 207059 RVA: 0x00E2F330 File Offset: 0x00E2D530
 		public bool CheckIgnoreByPlotKeep()
 		{
 			if (PlotModel.Instance.KeepBgAudio)
@@ -1375,7 +1375,7 @@ namespace CSharpScript.Game.Module.Audio
 			return false;
 		}
 
-		// Token: 0x0603D944 RID: 252228 RVA: 0x00EDDE14 File Offset: 0x00EDC014
+		// Token: 0x060328D4 RID: 207060 RVA: 0x00E2F3A4 File Offset: 0x00E2D5A4
 		private bool CheckCurrentLevelPlay()
 		{
 			foreach (KeyValuePair<int, bool> keyValuePair in this.CurrentRunningLevelPlay)
@@ -1388,7 +1388,7 @@ namespace CSharpScript.Game.Module.Audio
 			return false;
 		}
 
-		// Token: 0x0603D945 RID: 252229 RVA: 0x00EDDE70 File Offset: 0x00EDC070
+		// Token: 0x060328D5 RID: 207061 RVA: 0x00E2F400 File Offset: 0x00E2D600
 		private void UpdateLevelPlayState(bool state)
 		{
 			foreach (int key in new List<int>(this.CurrentRunningLevelPlay.Keys))
@@ -1400,7 +1400,7 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D946 RID: 252230 RVA: 0x00EDDEE4 File Offset: 0x00EDC0E4
+		// Token: 0x060328D6 RID: 207062 RVA: 0x00E2F474 File Offset: 0x00E2D674
 		private void OnLevelPlayStateNotify(int id, int state)
 		{
 			global::LevelPlayInfo processingLevelPlayInfo = LevelPlayModel.Instance.GetProcessingLevelPlayInfo(id);
@@ -1420,7 +1420,7 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D947 RID: 252231 RVA: 0x00EDDF68 File Offset: 0x00EDC168
+		// Token: 0x060328D7 RID: 207063 RVA: 0x00E2F4F8 File Offset: 0x00E2D6F8
 		private void OnEnterLevelPlayNotify(int id)
 		{
 			global::LevelPlayInfo processingLevelPlayInfo = LevelPlayModel.Instance.GetProcessingLevelPlayInfo(id);
@@ -1433,7 +1433,7 @@ namespace CSharpScript.Game.Module.Audio
 			this.CurrentRunningLevelPlay.TryAdd(id, false);
 		}
 
-		// Token: 0x0603D948 RID: 252232 RVA: 0x00EDDFC9 File Offset: 0x00EDC1C9
+		// Token: 0x060328D8 RID: 207064 RVA: 0x00E2F559 File Offset: 0x00E2D759
 		private void OnLeaveLevelPlayNotify(int id)
 		{
 			if (this.CurrentRunningLevelPlay.ContainsKey(id))
@@ -1446,8 +1446,8 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x17008E90 RID: 36496
-		// (get) Token: 0x0603D949 RID: 252233 RVA: 0x00EDDFF4 File Offset: 0x00EDC1F4
+		// Token: 0x17006262 RID: 25186
+		// (get) Token: 0x060328D9 RID: 207065 RVA: 0x00E2F584 File Offset: 0x00E2D784
 		public static GameAudioController Instance
 		{
 			get
@@ -1456,7 +1456,7 @@ namespace CSharpScript.Game.Module.Audio
 			}
 		}
 
-		// Token: 0x0603D94A RID: 252234 RVA: 0x00EDDFFB File Offset: 0x00EDC1FB
+		// Token: 0x060328DA RID: 207066 RVA: 0x00E2F58B File Offset: 0x00E2D78B
 		public static GameAudioController GetOrCreateInstance()
 		{
 			if (GameAudioController._Instance == null)
@@ -1466,7 +1466,7 @@ namespace CSharpScript.Game.Module.Audio
 			return GameAudioController._Instance;
 		}
 
-		// Token: 0x0603D94B RID: 252235 RVA: 0x00EDE00F File Offset: 0x00EDC20F
+		// Token: 0x060328DB RID: 207067 RVA: 0x00E2F59F File Offset: 0x00E2D79F
 		public static bool CreateInstance()
 		{
 			if (GameAudioController._Instance != null)
@@ -1477,82 +1477,82 @@ namespace CSharpScript.Game.Module.Audio
 			return true;
 		}
 
-		// Token: 0x0603D94C RID: 252236 RVA: 0x00EDE025 File Offset: 0x00EDC225
+		// Token: 0x060328DC RID: 207068 RVA: 0x00E2F5B5 File Offset: 0x00E2D7B5
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x0603D94D RID: 252237 RVA: 0x00EDE027 File Offset: 0x00EDC227
+		// Token: 0x060328DD RID: 207069 RVA: 0x00E2F5B7 File Offset: 0x00E2D7B7
 		public static void ResetStaticDefaultValue()
 		{
 			GameAudioController._Instance = null;
 		}
 
-		// Token: 0x0603D94E RID: 252238 RVA: 0x00EDE02F File Offset: 0x00EDC22F
+		// Token: 0x060328DE RID: 207070 RVA: 0x00E2F5BF File Offset: 0x00E2D7BF
 		static GameAudioController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(GameAudioController.CreateStaticDefaultValue), new Action(GameAudioController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04020216 RID: 131606
+		// Token: 0x0401ACDD RID: 109789
 		public const int CHECK_TIME_OUT_COOLDOWN_RECORD = 20000;
 
-		// Token: 0x04020217 RID: 131607
+		// Token: 0x0401ACDE RID: 109790
 		public const int LEAVE_BATTLE_DELAY_MS = 1000;
 
-		// Token: 0x04020218 RID: 131608
+		// Token: 0x0401ACDF RID: 109791
 		private const int SPECIAL_JINXI_OPEN_BOX_COUNTRY_ID = 1;
 
-		// Token: 0x04020219 RID: 131609
+		// Token: 0x0401ACE0 RID: 109792
 		private const int JINZHOU_AREA_LEVEL = 2;
 
-		// Token: 0x0402021A RID: 131610
+		// Token: 0x0401ACE1 RID: 109793
 		private const int MAX_CHECK_AREA_FATHER_DEPTH = 10;
 
-		// Token: 0x0402021B RID: 131611
+		// Token: 0x0401ACE2 RID: 109794
 		private MapAudio? MapConfig;
 
-		// Token: 0x0402021C RID: 131612
+		// Token: 0x0401ACE3 RID: 109795
 		[Nullable(2)]
 		private global::Vector PlayerLocation;
 
-		// Token: 0x0402021D RID: 131613
+		// Token: 0x0401ACE4 RID: 109796
 		private float LastLocationZ;
 
-		// Token: 0x0402021E RID: 131614
+		// Token: 0x0401ACE5 RID: 109797
 		private ELoadingPerform? LoadingType;
 
-		// Token: 0x0402021F RID: 131615
+		// Token: 0x0401ACE6 RID: 109798
 		private readonly EnvironmentCache EnvironmentCache = new EnvironmentCache();
 
-		// Token: 0x04020220 RID: 131616
+		// Token: 0x0401ACE7 RID: 109799
 		private readonly Dictionary<string, string> EnvironmentStates = new Dictionary<string, string>();
 
-		// Token: 0x04020221 RID: 131617
+		// Token: 0x0401ACE8 RID: 109800
 		private readonly RoleAudioVolumeInfo RoleAudioVolumeInfo = new RoleAudioVolumeInfo();
 
-		// Token: 0x04020222 RID: 131618
+		// Token: 0x0401ACE9 RID: 109801
 		private readonly StateRef WeatherType = new StateRef("weather_type", "none");
 
-		// Token: 0x04020223 RID: 131619
+		// Token: 0x0401ACEA RID: 109802
 		private readonly StateRef CountryType = new StateRef("country", "none");
 
-		// Token: 0x04020224 RID: 131620
+		// Token: 0x0401ACEB RID: 109803
 		private readonly StateRef JinXiAreaState = new StateRef("patch_jinxi_openbox_state", "none");
 
-		// Token: 0x04020225 RID: 131621
+		// Token: 0x0401ACEC RID: 109804
 		private float DeltaTime;
 
-		// Token: 0x04020226 RID: 131622
+		// Token: 0x0401ACED RID: 109805
 		private readonly Dictionary<int, HashSet<int>> SummonsRolePriorityRecords = new Dictionary<int, HashSet<int>>();
 
-		// Token: 0x04020227 RID: 131623
+		// Token: 0x0401ACEE RID: 109806
 		private readonly Dictionary<int, AActor> SummonsRolePriorityActors = new Dictionary<int, AActor>();
 
-		// Token: 0x04020228 RID: 131624
+		// Token: 0x0401ACEF RID: 109807
 		private readonly HashSet<int> PostAkEventHandleList = new HashSet<int>();
 
-		// Token: 0x04020229 RID: 131625
+		// Token: 0x0401ACF0 RID: 109808
 		[Nullable(new byte[]
 		{
 			1,
@@ -1560,22 +1560,22 @@ namespace CSharpScript.Game.Module.Audio
 		})]
 		private readonly Dictionary<int, ValueTuple<long, int>> PostAkEventFadeOutTimeList = new Dictionary<int, ValueTuple<long, int>>();
 
-		// Token: 0x0402022A RID: 131626
+		// Token: 0x0401ACF1 RID: 109809
 		private readonly Dictionary<int, GameAudioController.MorphConfigRecord> MorphConfigMap = new Dictionary<int, GameAudioController.MorphConfigRecord>();
 
-		// Token: 0x0402022B RID: 131627
+		// Token: 0x0401ACF2 RID: 109810
 		private readonly HashSet<int> AggroSet = new HashSet<int>();
 
-		// Token: 0x0402022C RID: 131628
+		// Token: 0x0401ACF3 RID: 109811
 		private string DefaultFightMusic = "";
 
-		// Token: 0x0402022D RID: 131629
+		// Token: 0x0401ACF4 RID: 109812
 		private string FightMusicEvent = "";
 
-		// Token: 0x0402022E RID: 131630
+		// Token: 0x0401ACF5 RID: 109813
 		private EMonsterMatchType? CurMonsterMatchType;
 
-		// Token: 0x0402022F RID: 131631
+		// Token: 0x0401ACF6 RID: 109814
 		[Nullable(new byte[]
 		{
 			2,
@@ -1583,69 +1583,69 @@ namespace CSharpScript.Game.Module.Audio
 		})]
 		private List<GameAudioController.FightMusicPriorityItem> FightMusicPriorityList;
 
-		// Token: 0x04020230 RID: 131632
+		// Token: 0x0401ACF7 RID: 109815
 		private bool PlayBattleMusic;
 
-		// Token: 0x04020231 RID: 131633
+		// Token: 0x0401ACF8 RID: 109816
 		private bool IsPlayerHurtEnemy;
 
-		// Token: 0x04020232 RID: 131634
+		// Token: 0x0401ACF9 RID: 109817
 		private string CurPlayerState = "none";
 
-		// Token: 0x04020233 RID: 131635
+		// Token: 0x0401ACFA RID: 109818
 		[Nullable(2)]
 		private TimerHandle ExitBattleHandle;
 
-		// Token: 0x04020234 RID: 131636
+		// Token: 0x0401ACFB RID: 109819
 		private bool IsIgnoredByKeepBgAudio;
 
-		// Token: 0x04020235 RID: 131637
+		// Token: 0x0401ACFC RID: 109820
 		private readonly Dictionary<int, bool> CurrentRunningLevelPlay = new Dictionary<int, bool>();
 
-		// Token: 0x04020236 RID: 131638
+		// Token: 0x0401ACFD RID: 109821
 		[Nullable(2)]
 		private static GameAudioController _Instance;
 
-		// Token: 0x0200C205 RID: 49669
+		// Token: 0x0200AC14 RID: 44052
 		[Nullable(0)]
 		public class MorphConfigRecord
 		{
-			// Token: 0x0403AA23 RID: 240163
+			// Token: 0x04035415 RID: 218133
 			public string ExitEvent;
 
-			// Token: 0x0403AA24 RID: 240164
+			// Token: 0x04035416 RID: 218134
 			public List<int> IgnoredType;
 
-			// Token: 0x0403AA25 RID: 240165
+			// Token: 0x04035417 RID: 218135
 			public List<string> IgnoredEvent;
 
-			// Token: 0x0403AA26 RID: 240166
+			// Token: 0x04035418 RID: 218136
 			public GameAudioController.SwitchNameRecord SwitchName;
 		}
 
-		// Token: 0x0200C206 RID: 49670
+		// Token: 0x0200AC15 RID: 44053
 		[Nullable(0)]
 		public class SwitchNameRecord
 		{
-			// Token: 0x0403AA27 RID: 240167
+			// Token: 0x04035419 RID: 218137
 			public string Key;
 
-			// Token: 0x0403AA28 RID: 240168
+			// Token: 0x0403541A RID: 218138
 			public string Value;
 		}
 
-		// Token: 0x0200C207 RID: 49671
+		// Token: 0x0200AC16 RID: 44054
 		[NullableContext(0)]
 		public class FightMusicPriorityItem
 		{
-			// Token: 0x0403AA29 RID: 240169
+			// Token: 0x0403541B RID: 218139
 			public int TagId;
 
-			// Token: 0x0403AA2A RID: 240170
+			// Token: 0x0403541C RID: 218140
 			[Nullable(1)]
 			public string Music;
 
-			// Token: 0x0403AA2B RID: 240171
+			// Token: 0x0403541D RID: 218141
 			[Nullable(2)]
 			public BaseTagComponent TagComp;
 		}

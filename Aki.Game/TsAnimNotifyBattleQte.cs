@@ -6,14 +6,14 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02000195 RID: 405
+// Token: 0x02000199 RID: 409
 [UClass("/Game/Aki/TypeScript/Game/AnimNotify/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/AnimNotify/TsAnimNotifyBattleQte.TsAnimNotifyBattleQte_C")]
 public class TsAnimNotifyBattleQte : TsAnimNotifyBase, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x17000430 RID: 1072
-	// (get) Token: 0x060019CB RID: 6603 RVA: 0x00087FEB File Offset: 0x000861EB
-	// (set) Token: 0x060019CC RID: 6604 RVA: 0x00087FFB File Offset: 0x000861FB
+	// Token: 0x17000452 RID: 1106
+	// (get) Token: 0x06001A68 RID: 6760 RVA: 0x0008E44F File Offset: 0x0008C64F
+	// (set) Token: 0x06001A69 RID: 6761 RVA: 0x0008E45F File Offset: 0x0008C65F
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe int BattleQteId
 	{
@@ -27,9 +27,9 @@ public class TsAnimNotifyBattleQte : TsAnimNotifyBase, IUnrealUObject, IUnrealOb
 		}
 	}
 
-	// Token: 0x17000431 RID: 1073
-	// (get) Token: 0x060019CD RID: 6605 RVA: 0x0008800C File Offset: 0x0008620C
-	// (set) Token: 0x060019CE RID: 6606 RVA: 0x0008801C File Offset: 0x0008621C
+	// Token: 0x17000453 RID: 1107
+	// (get) Token: 0x06001A6A RID: 6762 RVA: 0x0008E470 File Offset: 0x0008C670
+	// (set) Token: 0x06001A6B RID: 6763 RVA: 0x0008E480 File Offset: 0x0008C680
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe bool 当前实体为玩家控制时才触发
 	{
@@ -43,9 +43,9 @@ public class TsAnimNotifyBattleQte : TsAnimNotifyBase, IUnrealUObject, IUnrealOb
 		}
 	}
 
-	// Token: 0x17000432 RID: 1074
-	// (get) Token: 0x060019CF RID: 6607 RVA: 0x0008802D File Offset: 0x0008622D
-	// (set) Token: 0x060019D0 RID: 6608 RVA: 0x00088041 File Offset: 0x00086241
+	// Token: 0x17000454 RID: 1108
+	// (get) Token: 0x06001A6C RID: 6764 RVA: 0x0008E491 File Offset: 0x0008C691
+	// (set) Token: 0x06001A6D RID: 6765 RVA: 0x0008E4A5 File Offset: 0x0008C6A5
 	[UProperty(EPropertyFlags.CPF_None)]
 	public unsafe FGameplayTag 存在Tag时才触发
 	{
@@ -59,32 +59,28 @@ public class TsAnimNotifyBattleQte : TsAnimNotifyBase, IUnrealUObject, IUnrealOb
 		}
 	}
 
-	// Token: 0x060019D1 RID: 6609 RVA: 0x00088058 File Offset: 0x00086258
+	// Token: 0x06001A6E RID: 6766 RVA: 0x0008E4BC File Offset: 0x0008C6BC
 	[NullableContext(2)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override bool K2_Notify(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("K2_Notify"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UKuroAnimNotify.__K2_Notify_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyBattleQte) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("K2_Notify"), TsAnimNotifyBattleQte.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UKuroAnimNotify.__K2_Notify_FunctionParams*)ptr + 15L / (long)sizeof(UKuroAnimNotify.__K2_Notify_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-			*(&ptr2->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
-			*(&ptr2->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+			return this.K2_Notify_Implementation(meshComp, animation);
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		bool _Result = ptr2->__Result;
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UKuroAnimNotify.__K2_Notify_FunctionParams* ptr = stackalloc UKuroAnimNotify.__K2_Notify_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UKuroAnimNotify.__K2_Notify_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		*(&ptr->MeshComp) = ((meshComp != null) ? meshComp.NativePtr : ((IntPtr)0));
+		*(&ptr->Animation) = ((animation != null) ? animation.NativePtr : ((IntPtr)0));
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		bool _Result = ptr->__Result;
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return _Result;
 	}
 
-	// Token: 0x060019D2 RID: 6610 RVA: 0x000880F8 File Offset: 0x000862F8
+	// Token: 0x06001A6F RID: 6767 RVA: 0x0008E574 File Offset: 0x0008C774
 	[NullableContext(2)]
 	protected virtual bool K2_Notify_Implementation(USkeletalMeshComponent meshComp, UAnimSequenceBase animation)
 	{
@@ -144,37 +140,33 @@ public class TsAnimNotifyBattleQte : TsAnimNotifyBase, IUnrealUObject, IUnrealOb
 		return true;
 	}
 
-	// Token: 0x060019D3 RID: 6611 RVA: 0x00088228 File Offset: 0x00086428
+	// Token: 0x06001A70 RID: 6768 RVA: 0x0008E6A4 File Offset: 0x0008C8A4
 	[NullableContext(1)]
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
 	public unsafe override string GetNotifyName()
 	{
+		IntPtr intPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("GetNotifyName"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		UAnimNotify.__GetNotifyName_FunctionParams* ptr2 = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsAnimNotifyBattleQte) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("GetNotifyName"), TsAnimNotifyBattleQte.StaticClass(), out intPtr, out num))
 		{
-			ptr2 = ((UAnimNotify.__GetNotifyName_FunctionParams*)ptr + 15L / (long)sizeof(UAnimNotify.__GetNotifyName_FunctionParams) & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
+			return this.GetNotifyName_Implementation();
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, (void*)ptr2);
-		string result = FString.ToString((void*)(&ptr2->__Result));
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)ptr2, 1);
-		}
+		UAnimNotify.__GetNotifyName_FunctionParams* ptr = stackalloc UAnimNotify.__GetNotifyName_FunctionParams[(UIntPtr)(num + 15)] + 15L / (long)sizeof(UAnimNotify.__GetNotifyName_FunctionParams) & -16L;
+		UnrealReflectionUtils.InitializeStruct(intPtr, (void*)ptr, 1);
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, intPtr, (void*)ptr);
+		string result = FString.ToString((void*)(&ptr->__Result));
+		UnrealReflectionUtils.DestroyStruct(intPtr, (void*)ptr, 1);
 		return result;
 	}
 
-	// Token: 0x060019D4 RID: 6612 RVA: 0x000882A3 File Offset: 0x000864A3
+	// Token: 0x06001A71 RID: 6769 RVA: 0x0008E734 File Offset: 0x0008C934
 	[NullableContext(1)]
 	protected override string GetNotifyName_Implementation()
 	{
 		return "战斗QTE";
 	}
 
-	// Token: 0x060019D5 RID: 6613 RVA: 0x000882AA File Offset: 0x000864AA
+	// Token: 0x06001A72 RID: 6770 RVA: 0x0008E73B File Offset: 0x0008C93B
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsAnimNotifyBattleQte._ClassPtr == IntPtr.Zero)
@@ -184,23 +176,23 @@ public class TsAnimNotifyBattleQte : TsAnimNotifyBase, IUnrealUObject, IUnrealOb
 		return TsAnimNotifyBattleQte._ClassPtr;
 	}
 
-	// Token: 0x060019D6 RID: 6614 RVA: 0x000882D0 File Offset: 0x000864D0
+	// Token: 0x06001A73 RID: 6771 RVA: 0x0008E760 File Offset: 0x0008C960
 	public TsAnimNotifyBattleQte() : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyBattleQte.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x060019D7 RID: 6615 RVA: 0x000882F8 File Offset: 0x000864F8
+	// Token: 0x06001A74 RID: 6772 RVA: 0x0008E788 File Offset: 0x0008C988
 	[NullableContext(1)]
 	public TsAnimNotifyBattleQte(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsAnimNotifyBattleQte.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x060019D8 RID: 6616 RVA: 0x0008832B File Offset: 0x0008652B
+	// Token: 0x06001A75 RID: 6773 RVA: 0x0008E7BB File Offset: 0x0008C9BB
 	protected TsAnimNotifyBattleQte(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x060019D9 RID: 6617 RVA: 0x00088334 File Offset: 0x00086534
+	// Token: 0x06001A76 RID: 6774 RVA: 0x0008E7C4 File Offset: 0x0008C9C4
 	protected unsafe virtual void __CPPCALL_K2_Notify_Implementation(UKuroAnimNotify.__K2_Notify_FunctionParams* __Params)
 	{
 		USkeletalMeshComponent orCreateUObjectByNativePointer = BuiltinUtils.GetOrCreateUObjectByNativePointer<USkeletalMeshComponent>(__Params->MeshComp);
@@ -208,28 +200,28 @@ public class TsAnimNotifyBattleQte : TsAnimNotifyBase, IUnrealUObject, IUnrealOb
 		__Params->__Result = this.K2_Notify_Implementation(orCreateUObjectByNativePointer, orCreateUObjectByNativePointer2);
 	}
 
-	// Token: 0x060019DA RID: 6618 RVA: 0x00088367 File Offset: 0x00086567
+	// Token: 0x06001A77 RID: 6775 RVA: 0x0008E7F7 File Offset: 0x0008C9F7
 	protected unsafe virtual void __CPPCALL_GetNotifyName_Implementation(UAnimNotify.__GetNotifyName_FunctionParams* __Params)
 	{
 		FString.CopyFrom((void*)(&__Params->__Result), this.GetNotifyName_Implementation());
 	}
 
-	// Token: 0x040010E6 RID: 4326
+	// Token: 0x04001129 RID: 4393
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/AnimNotify/TsAnimNotifyBattleQte.TsAnimNotifyBattleQte_C";
 
-	// Token: 0x040010E7 RID: 4327
+	// Token: 0x0400112A RID: 4394
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x040010E8 RID: 4328
+	// Token: 0x0400112B RID: 4395
 	private static IntPtr _ClassDefaultObjectPtr;
 
-	// Token: 0x040010E9 RID: 4329
+	// Token: 0x0400112C RID: 4396
 	private static int __PropertyOffset_BattleQteId;
 
-	// Token: 0x040010EA RID: 4330
+	// Token: 0x0400112D RID: 4397
 	private static int __PropertyOffset_当前实体为玩家控制时才触发;
 
-	// Token: 0x040010EB RID: 4331
+	// Token: 0x0400112E RID: 4398
 	private static int __PropertyOffset_存在Tag时才触发;
 }

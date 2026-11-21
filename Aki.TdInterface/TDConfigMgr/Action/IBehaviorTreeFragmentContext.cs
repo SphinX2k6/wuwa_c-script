@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001808 RID: 6152
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001993 RID: 6547
 	public class IBehaviorTreeFragmentContext : IVarContext
 	{
-		// Token: 0x06008411 RID: 33809 RVA: 0x0013AE1C File Offset: 0x0013901C
+		// Token: 0x06008B35 RID: 35637 RVA: 0x0014A5C0 File Offset: 0x001487C0
 		private IBehaviorTreeFragmentContext_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008412 RID: 33810 RVA: 0x0013AE54 File Offset: 0x00139054
+		// Token: 0x06008B36 RID: 35638 RVA: 0x0014A5F8 File Offset: 0x001487F8
 		public static IBehaviorTreeFragmentContext Create([Nullable(2)] IBehaviorTreeFragmentContext instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008413 RID: 33811 RVA: 0x0013AE67 File Offset: 0x00139067
+		// Token: 0x06008B37 RID: 35639 RVA: 0x0014A60B File Offset: 0x0014880B
 		public static IBehaviorTreeFragmentContext CreateFromSetValue([Nullable(2)] IBehaviorTreeFragmentContext_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008414 RID: 33812 RVA: 0x0013AE7A File Offset: 0x0013907A
+		// Token: 0x06008B38 RID: 35640 RVA: 0x0014A61E File Offset: 0x0014881E
 		public new IBehaviorTreeFragmentContext_SetValue ToSetValue()
 		{
 			return new IBehaviorTreeFragmentContext_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002B51 RID: 11089
-		// (get) Token: 0x06008415 RID: 33813 RVA: 0x0013AE99 File Offset: 0x00139099
-		// (set) Token: 0x06008416 RID: 33814 RVA: 0x0013AEC4 File Offset: 0x001390C4
+		// Token: 0x17002D4A RID: 11594
+		// (get) Token: 0x06008B39 RID: 35641 RVA: 0x0014A63D File Offset: 0x0014883D
+		// (set) Token: 0x06008B3A RID: 35642 RVA: 0x0014A668 File Offset: 0x00148868
 		public override EVarContext Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002B52 RID: 11090
-		// (get) Token: 0x06008417 RID: 33815 RVA: 0x0013AED2 File Offset: 0x001390D2
-		// (set) Token: 0x06008418 RID: 33816 RVA: 0x0013AEFD File Offset: 0x001390FD
+		// Token: 0x17002D4B RID: 11595
+		// (get) Token: 0x06008B3B RID: 35643 RVA: 0x0014A676 File Offset: 0x00148876
+		// (set) Token: 0x06008B3C RID: 35644 RVA: 0x0014A6A1 File Offset: 0x001488A1
 		public virtual int Id
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040053A8 RID: 21416
+		// Token: 0x040057F3 RID: 22515
 		[Nullable(2)]
 		protected new IBehaviorTreeFragmentContext FbInstance;
 
-		// Token: 0x040053A9 RID: 21417
+		// Token: 0x040057F4 RID: 22516
 		[Nullable(2)]
 		protected new IBehaviorTreeFragmentContext_SetValue PocoInterface;
 	}

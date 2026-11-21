@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009D2 RID: 2514
+	// Token: 0x02000A97 RID: 2711
 	public static class EPilotThrowAutoThrowTypeExtensions
 	{
-		// Token: 0x060037E2 RID: 14306 RVA: 0x00091198 File Offset: 0x0008F398
+		// Token: 0x06003BBA RID: 15290 RVA: 0x00099A58 File Offset: 0x00097C58
 		public static string ToEnumString(this EPilotThrowAutoThrowType value)
 		{
 			string result;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060037E3 RID: 14307 RVA: 0x000911D0 File Offset: 0x0008F3D0
+		// Token: 0x06003BBB RID: 15291 RVA: 0x00099A90 File Offset: 0x00097C90
 		public static EPilotThrowAutoThrowType FromString(string name)
 		{
 			EPilotThrowAutoThrowType result;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060037E4 RID: 14308 RVA: 0x000911F9 File Offset: 0x0008F3F9
+		// Token: 0x06003BBC RID: 15292 RVA: 0x00099AB9 File Offset: 0x00097CB9
 		public static bool TryFromString(string name, out EPilotThrowAutoThrowType value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -60,7 +60,7 @@ namespace Aki.TDConfigMgr.Component
 			return true;
 		}
 
-		// Token: 0x060037E5 RID: 14309 RVA: 0x00091232 File Offset: 0x0008F432
+		// Token: 0x06003BBD RID: 15293 RVA: 0x00099AF2 File Offset: 0x00097CF2
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -70,7 +70,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060037E6 RID: 14310 RVA: 0x0009124A File Offset: 0x0008F44A
+		// Token: 0x06003BBE RID: 15294 RVA: 0x00099B0A File Offset: 0x00097D0A
 		public static EPilotThrowAutoThrowType[] GetValues()
 		{
 			return new EPilotThrowAutoThrowType[]
@@ -80,7 +80,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060037E7 RID: 14311 RVA: 0x00091256 File Offset: 0x0008F456
+		// Token: 0x06003BBF RID: 15295 RVA: 0x00099B16 File Offset: 0x00097D16
 		public static string[] GetNames()
 		{
 			return new string[]

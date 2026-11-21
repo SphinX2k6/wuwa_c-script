@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020050C7 RID: 20679
+	// Token: 0x0200562C RID: 22060
 	public class IDurabilityStateT
 	{
-		// Token: 0x1700967C RID: 38524
-		// (get) Token: 0x06021437 RID: 136247 RVA: 0x0049EE57 File Offset: 0x0049D057
-		// (set) Token: 0x06021438 RID: 136248 RVA: 0x0049EE5F File Offset: 0x0049D05F
+		// Token: 0x17009E69 RID: 40553
+		// (get) Token: 0x0602338B RID: 144267 RVA: 0x004D8DE3 File Offset: 0x004D6FE3
+		// (set) Token: 0x0602338C RID: 144268 RVA: 0x004D8DEB File Offset: 0x004D6FEB
 		public int Durability { get; set; }
 
-		// Token: 0x1700967D RID: 38525
-		// (get) Token: 0x06021439 RID: 136249 RVA: 0x0049EE68 File Offset: 0x0049D068
-		// (set) Token: 0x0602143A RID: 136250 RVA: 0x0049EE70 File Offset: 0x0049D070
+		// Token: 0x17009E6A RID: 40554
+		// (get) Token: 0x0602338D RID: 144269 RVA: 0x004D8DF4 File Offset: 0x004D6FF4
+		// (set) Token: 0x0602338E RID: 144270 RVA: 0x004D8DFC File Offset: 0x004D6FFC
 		public string State { get; set; }
 
-		// Token: 0x0602143B RID: 136251 RVA: 0x0049EE79 File Offset: 0x0049D079
+		// Token: 0x0602338F RID: 144271 RVA: 0x004D8E05 File Offset: 0x004D7005
 		public IDurabilityStateT()
 		{
 			this.Durability = 0;

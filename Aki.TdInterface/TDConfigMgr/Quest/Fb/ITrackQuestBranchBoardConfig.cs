@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Quest;
 
 namespace Aki.TDConfigMgr.Quest.Fb
 {
-	// Token: 0x02001417 RID: 5143
+	// Token: 0x0200156E RID: 5486
 	public class ITrackQuestBranchBoardConfig
 	{
-		// Token: 0x060074E4 RID: 29924 RVA: 0x00117621 File Offset: 0x00115821
-		[NullableContext(1)]
+		// Token: 0x06007BA5 RID: 31653 RVA: 0x00126005 File Offset: 0x00124205
 		public static ITrackQuestBranchBoardConfig Create(ITrackQuestBranchBoardConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			};
 		}
 
-		// Token: 0x17002689 RID: 9865
-		// (get) Token: 0x060074E5 RID: 29925 RVA: 0x00117640 File Offset: 0x00115840
+		// Token: 0x1700286B RID: 10347
+		// (get) Token: 0x06007BA6 RID: 31654 RVA: 0x00126024 File Offset: 0x00124224
 		public virtual int Id
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x1700268A RID: 9866
-		// (get) Token: 0x060074E6 RID: 29926 RVA: 0x00117650 File Offset: 0x00115850
+		// Token: 0x1700286C RID: 10348
+		// (get) Token: 0x06007BA7 RID: 31655 RVA: 0x00126034 File Offset: 0x00124234
 		public virtual bool? EnableAnimation
 		{
 			get
@@ -45,7 +43,7 @@ namespace Aki.TDConfigMgr.Quest.Fb
 			}
 		}
 
-		// Token: 0x040043AF RID: 17327
+		// Token: 0x04004740 RID: 18240
 		private ITrackQuestBranchBoardConfig Instance;
 	}
 }

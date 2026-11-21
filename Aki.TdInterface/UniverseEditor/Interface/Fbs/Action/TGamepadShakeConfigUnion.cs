@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020076DB RID: 30427
+	// Token: 0x02007EEC RID: 32492
 	public class TGamepadShakeConfigUnion
 	{
-		// Token: 0x1700E62B RID: 58923
-		// (get) Token: 0x06037538 RID: 226616 RVA: 0x0077EB96 File Offset: 0x0077CD96
-		// (set) Token: 0x06037539 RID: 226617 RVA: 0x0077EB9E File Offset: 0x0077CD9E
+		// Token: 0x1700F26B RID: 62059
+		// (get) Token: 0x0603A9F9 RID: 240121 RVA: 0x007E2FA6 File Offset: 0x007E11A6
+		// (set) Token: 0x0603A9FA RID: 240122 RVA: 0x007E2FAE File Offset: 0x007E11AE
 		public TGamepadShakeConfig Type { get; set; }
 
-		// Token: 0x1700E62C RID: 58924
-		// (get) Token: 0x0603753A RID: 226618 RVA: 0x0077EBA7 File Offset: 0x0077CDA7
-		// (set) Token: 0x0603753B RID: 226619 RVA: 0x0077EBAF File Offset: 0x0077CDAF
+		// Token: 0x1700F26C RID: 62060
+		// (get) Token: 0x0603A9FB RID: 240123 RVA: 0x007E2FB7 File Offset: 0x007E11B7
+		// (set) Token: 0x0603A9FC RID: 240124 RVA: 0x007E2FBF File Offset: 0x007E11BF
 		public object Value { get; set; }
 
-		// Token: 0x0603753C RID: 226620 RVA: 0x0077EBB8 File Offset: 0x0077CDB8
+		// Token: 0x0603A9FD RID: 240125 RVA: 0x007E2FC8 File Offset: 0x007E11C8
 		public TGamepadShakeConfigUnion()
 		{
 			this.Type = TGamepadShakeConfig.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0603753D RID: 226621 RVA: 0x0077EBCE File Offset: 0x0077CDCE
+		// Token: 0x0603A9FE RID: 240126 RVA: 0x007E2FDE File Offset: 0x007E11DE
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0603753E RID: 226622 RVA: 0x0077EBE0 File Offset: 0x0077CDE0
+		// Token: 0x0603A9FF RID: 240127 RVA: 0x007E2FF0 File Offset: 0x007E11F0
 		public IAttenuatedGamepadShakeT AsIAttenuatedGamepadShake()
 		{
 			return this.As<IAttenuatedGamepadShakeT>();
 		}
 
-		// Token: 0x0603753F RID: 226623 RVA: 0x0077EBE8 File Offset: 0x0077CDE8
+		// Token: 0x0603AA00 RID: 240128 RVA: 0x007E2FF8 File Offset: 0x007E11F8
 		public static TGamepadShakeConfigUnion FromIAttenuatedGamepadShake(IAttenuatedGamepadShakeT _iattenuatedgamepadshake)
 		{
 			return new TGamepadShakeConfigUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037540 RID: 226624 RVA: 0x0077EBFD File Offset: 0x0077CDFD
+		// Token: 0x0603AA01 RID: 240129 RVA: 0x007E300D File Offset: 0x007E120D
 		public IContinualGamepadShakeT AsIContinualGamepadShake()
 		{
 			return this.As<IContinualGamepadShakeT>();
 		}
 
-		// Token: 0x06037541 RID: 226625 RVA: 0x0077EC05 File Offset: 0x0077CE05
+		// Token: 0x0603AA02 RID: 240130 RVA: 0x007E3015 File Offset: 0x007E1215
 		public static TGamepadShakeConfigUnion FromIContinualGamepadShake(IContinualGamepadShakeT _icontinualgamepadshake)
 		{
 			return new TGamepadShakeConfigUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037542 RID: 226626 RVA: 0x0077EC1A File Offset: 0x0077CE1A
+		// Token: 0x0603AA03 RID: 240131 RVA: 0x007E302A File Offset: 0x007E122A
 		public IMp4GamepadShakeT AsIMp4GamepadShake()
 		{
 			return this.As<IMp4GamepadShakeT>();
 		}
 
-		// Token: 0x06037543 RID: 226627 RVA: 0x0077EC22 File Offset: 0x0077CE22
+		// Token: 0x0603AA04 RID: 240132 RVA: 0x007E3032 File Offset: 0x007E1232
 		public static TGamepadShakeConfigUnion FromIMp4GamepadShake(IMp4GamepadShakeT _imp4gamepadshake)
 		{
 			return new TGamepadShakeConfigUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037544 RID: 226628 RVA: 0x0077EC37 File Offset: 0x0077CE37
+		// Token: 0x0603AA05 RID: 240133 RVA: 0x007E3047 File Offset: 0x007E1247
 		public IOnetimeGamepadShakeT AsIOnetimeGamepadShake()
 		{
 			return this.As<IOnetimeGamepadShakeT>();
 		}
 
-		// Token: 0x06037545 RID: 226629 RVA: 0x0077EC3F File Offset: 0x0077CE3F
+		// Token: 0x0603AA06 RID: 240134 RVA: 0x007E304F File Offset: 0x007E124F
 		public static TGamepadShakeConfigUnion FromIOnetimeGamepadShake(IOnetimeGamepadShakeT _ionetimegamepadshake)
 		{
 			return new TGamepadShakeConfigUnion
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			};
 		}
 
-		// Token: 0x06037546 RID: 226630 RVA: 0x0077EC54 File Offset: 0x0077CE54
+		// Token: 0x0603AA07 RID: 240135 RVA: 0x007E3064 File Offset: 0x007E1264
 		public static int Pack(FlatBufferBuilder builder, TGamepadShakeConfigUnion _o)
 		{
 			switch (_o.Type)

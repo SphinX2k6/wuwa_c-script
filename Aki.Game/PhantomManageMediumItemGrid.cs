@@ -7,7 +7,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001FDC RID: 8156
+// Token: 0x020014AF RID: 5295
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,18 +16,18 @@ using UnrealEngine;
 })]
 public class PhantomManageMediumItemGrid : LoopScrollMediumItemGrid<PhantomItemData>, IStaticVariableResetter
 {
-	// Token: 0x0600FFA4 RID: 65444 RVA: 0x003E434C File Offset: 0x003E254C
+	// Token: 0x0600D40C RID: 54284 RVA: 0x003F094C File Offset: 0x003EEB4C
 	static PhantomManageMediumItemGrid()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(PhantomManageMediumItemGrid.CreateStaticDefaultValue), new Action(PhantomManageMediumItemGrid.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0600FFA5 RID: 65445 RVA: 0x003E436B File Offset: 0x003E256B
+	// Token: 0x0600D40D RID: 54285 RVA: 0x003F096B File Offset: 0x003EEB6B
 	public override void CreateThenShowByActor(AActor actor)
 	{
 	}
 
-	// Token: 0x0600FFA6 RID: 65446 RVA: 0x003E4370 File Offset: 0x003E2570
+	// Token: 0x0600D40E RID: 54286 RVA: 0x003F0970 File Offset: 0x003EEB70
 	public override UniTask CreateThenShowByActorAsync(AActor actor)
 	{
 		PhantomManageMediumItemGrid.<CreateThenShowByActorAsync>d__2 <CreateThenShowByActorAsync>d__;
@@ -37,7 +37,7 @@ public class PhantomManageMediumItemGrid : LoopScrollMediumItemGrid<PhantomItemD
 		return <CreateThenShowByActorAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600FFA7 RID: 65447 RVA: 0x003E43AC File Offset: 0x003E25AC
+	// Token: 0x0600D40F RID: 54287 RVA: 0x003F09AC File Offset: 0x003EEBAC
 	public override UniTask CreateByActorAsync(AActor actor)
 	{
 		PhantomManageMediumItemGrid.<CreateByActorAsync>d__3 <CreateByActorAsync>d__;
@@ -47,7 +47,7 @@ public class PhantomManageMediumItemGrid : LoopScrollMediumItemGrid<PhantomItemD
 		return <CreateByActorAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600FFA8 RID: 65448 RVA: 0x003E43E7 File Offset: 0x003E25E7
+	// Token: 0x0600D410 RID: 54288 RVA: 0x003F09E7 File Offset: 0x003EEBE7
 	public static void CreateStaticDefaultValue()
 	{
 		PhantomManageMediumItemGrid.CallbackCheckSelect = null;
@@ -55,7 +55,7 @@ public class PhantomManageMediumItemGrid : LoopScrollMediumItemGrid<PhantomItemD
 		PhantomManageMediumItemGrid.CallbackListenerFocus = null;
 	}
 
-	// Token: 0x0600FFA9 RID: 65449 RVA: 0x003E43FB File Offset: 0x003E25FB
+	// Token: 0x0600D411 RID: 54289 RVA: 0x003F09FB File Offset: 0x003EEBFB
 	public static void ResetStaticDefaultValue()
 	{
 		PhantomManageMediumItemGrid.CallbackCheckSelect = null;
@@ -63,14 +63,14 @@ public class PhantomManageMediumItemGrid : LoopScrollMediumItemGrid<PhantomItemD
 		PhantomManageMediumItemGrid.CallbackListenerFocus = null;
 	}
 
-	// Token: 0x0600FFAA RID: 65450 RVA: 0x003E440F File Offset: 0x003E260F
+	// Token: 0x0600D412 RID: 54290 RVA: 0x003F0A0F File Offset: 0x003EEC0F
 	protected override void OnStart()
 	{
 		base.OnStart();
 		this.GetItemGridExtendToggle().FocusListenerDelegate.Bind(new Action(this.OnListenerFocus));
 	}
 
-	// Token: 0x0600FFAB RID: 65451 RVA: 0x003E4433 File Offset: 0x003E2633
+	// Token: 0x0600D413 RID: 54291 RVA: 0x003F0A33 File Offset: 0x003EEC33
 	private void OnListenerFocus()
 	{
 		if (this.Data != null && PhantomManageMediumItemGrid.CallbackListenerFocus != null)
@@ -79,21 +79,21 @@ public class PhantomManageMediumItemGrid : LoopScrollMediumItemGrid<PhantomItemD
 		}
 	}
 
-	// Token: 0x0600FFAC RID: 65452 RVA: 0x003E4459 File Offset: 0x003E2659
+	// Token: 0x0600D414 RID: 54292 RVA: 0x003F0A59 File Offset: 0x003EEC59
 	protected override void OnBeforeDestroy()
 	{
 		base.OnBeforeDestroy();
 		this.GetItemGridExtendToggle().FocusListenerDelegate.Unbind();
 	}
 
-	// Token: 0x0600FFAD RID: 65453 RVA: 0x003E4471 File Offset: 0x003E2671
+	// Token: 0x0600D415 RID: 54293 RVA: 0x003F0A71 File Offset: 0x003EEC71
 	protected override void OnRefresh(PhantomItemData data, bool isSelected, int gridIndex)
 	{
 		this.Data = data;
 		this.RefreshPrivate(data);
 	}
 
-	// Token: 0x0600FFAE RID: 65454 RVA: 0x003E4484 File Offset: 0x003E2684
+	// Token: 0x0600D416 RID: 54294 RVA: 0x003F0A84 File Offset: 0x003EEC84
 	private void RefreshPrivate(PhantomItemData data)
 	{
 		PhantomItem value = data.GetConfig().As<PhantomItem>().Value;
@@ -206,31 +206,31 @@ public class PhantomManageMediumItemGrid : LoopScrollMediumItemGrid<PhantomItemD
 		this.SetSelected(tipsState, true);
 	}
 
-	// Token: 0x0600FFAF RID: 65455 RVA: 0x003E47BE File Offset: 0x003E29BE
+	// Token: 0x0600D417 RID: 54295 RVA: 0x003F0DBE File Offset: 0x003EEFBE
 	public void RefreshByView(PhantomItemData data)
 	{
 		this.RefreshPrivate(data);
 	}
 
-	// Token: 0x0600FFB0 RID: 65456 RVA: 0x003E47C7 File Offset: 0x003E29C7
+	// Token: 0x0600D418 RID: 54296 RVA: 0x003F0DC7 File Offset: 0x003EEFC7
 	private bool GetTipsState(PhantomItemData data)
 	{
 		return PhantomManageMediumItemGrid.CallbackCheckTips != null && PhantomManageMediumItemGrid.CallbackCheckTips(data);
 	}
 
-	// Token: 0x0600FFB1 RID: 65457 RVA: 0x003E47DD File Offset: 0x003E29DD
+	// Token: 0x0600D419 RID: 54297 RVA: 0x003F0DDD File Offset: 0x003EEFDD
 	private bool GetSelectState(PhantomItemData data)
 	{
 		return PhantomManageMediumItemGrid.CallbackCheckSelect != null && PhantomManageMediumItemGrid.CallbackCheckSelect(data);
 	}
 
-	// Token: 0x0600FFB2 RID: 65458 RVA: 0x003E47F3 File Offset: 0x003E29F3
+	// Token: 0x0600D41A RID: 54298 RVA: 0x003F0DF3 File Offset: 0x003EEFF3
 	public override object GetKey(PhantomItemData data, int gridIndex)
 	{
 		return data.GetUniqueId();
 	}
 
-	// Token: 0x04007648 RID: 30280
+	// Token: 0x04007731 RID: 30513
 	[Nullable(new byte[]
 	{
 		2,
@@ -238,7 +238,7 @@ public class PhantomManageMediumItemGrid : LoopScrollMediumItemGrid<PhantomItemD
 	})]
 	public static Func<PhantomItemData, bool> CallbackCheckSelect;
 
-	// Token: 0x04007649 RID: 30281
+	// Token: 0x04007732 RID: 30514
 	[Nullable(new byte[]
 	{
 		2,
@@ -246,7 +246,7 @@ public class PhantomManageMediumItemGrid : LoopScrollMediumItemGrid<PhantomItemD
 	})]
 	public static Func<PhantomItemData, bool> CallbackCheckTips;
 
-	// Token: 0x0400764A RID: 30282
+	// Token: 0x04007733 RID: 30515
 	[Nullable(new byte[]
 	{
 		2,
@@ -254,12 +254,12 @@ public class PhantomManageMediumItemGrid : LoopScrollMediumItemGrid<PhantomItemD
 	})]
 	public static Action<PhantomItemData> CallbackListenerFocus;
 
-	// Token: 0x0400764B RID: 30283
+	// Token: 0x04007734 RID: 30516
 	private const string RED_TICK_HEX = "bf5c5c";
 
-	// Token: 0x0400764C RID: 30284
+	// Token: 0x04007735 RID: 30517
 	private const string TICK_COLOR_HEX = "663738";
 
-	// Token: 0x0400764D RID: 30285
+	// Token: 0x04007736 RID: 30518
 	private const float RED_TICK_ALPHA = 0.9f;
 }

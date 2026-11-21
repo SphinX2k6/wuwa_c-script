@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 {
-	// Token: 0x02005F09 RID: 24329
+	// Token: 0x02004EF0 RID: 20208
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ActivityEntranceSelectItemData
 	{
-		// Token: 0x0603DD16 RID: 253206 RVA: 0x00EF13C2 File Offset: 0x00EEF5C2
+		// Token: 0x06032CB1 RID: 208049 RVA: 0x00E430CA File Offset: 0x00E412CA
 		public static ActivityEntranceSelectItemData Create(List<ActivityEntranceSelectItemBaseData> mainDataList)
 		{
 			ActivityEntranceSelectItemData activityEntranceSelectItemData = new ActivityEntranceSelectItemData();
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			return activityEntranceSelectItemData;
 		}
 
-		// Token: 0x0603DD17 RID: 253207 RVA: 0x00EF13D8 File Offset: 0x00EEF5D8
+		// Token: 0x06032CB2 RID: 208050 RVA: 0x00E430E0 File Offset: 0x00E412E0
 		public ActivityEntranceItemData GetCurrentSelectData()
 		{
 			ActivityEntranceItemData activityEntranceItemData = null;
@@ -43,7 +43,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			return activityEntranceItemData;
 		}
 
-		// Token: 0x0603DD18 RID: 253208 RVA: 0x00EF1468 File Offset: 0x00EEF668
+		// Token: 0x06032CB3 RID: 208051 RVA: 0x00E43170 File Offset: 0x00E41370
 		private void InitEntranceData()
 		{
 			this.CurrentEntranceData = new List<ActivityEntranceItemData>(this.MainDataList.Count * 2);
@@ -65,7 +65,7 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			}
 		}
 
-		// Token: 0x0603DD19 RID: 253209 RVA: 0x00EF1508 File Offset: 0x00EEF708
+		// Token: 0x06032CB4 RID: 208052 RVA: 0x00E43210 File Offset: 0x00E41410
 		public IReadOnlyList<ActivityEntranceItemData> GetShowDataBySelectElement(int selectMainLogicIndex, int selectSubLogicIndex)
 		{
 			this.CurrentEntranceData = new List<ActivityEntranceItemData>(this.MainDataList.Count * 2);
@@ -95,10 +95,10 @@ namespace CSharpScript.Game.Module.Activity.View.InstanceEntrance
 			return this.CurrentEntranceData;
 		}
 
-		// Token: 0x040204A7 RID: 132263
+		// Token: 0x0401AF79 RID: 110457
 		private List<ActivityEntranceSelectItemBaseData> MainDataList;
 
-		// Token: 0x040204A8 RID: 132264
+		// Token: 0x0401AF7A RID: 110458
 		private List<ActivityEntranceItemData> CurrentEntranceData;
 	}
 }

@@ -6,16 +6,16 @@ using CSharpScript.Game.Module.Util;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002270 RID: 8816
+// Token: 0x02001754 RID: 5972
 public class MotorcycleTechTreeDetailView : UiViewBase
 {
-	// Token: 0x0601136E RID: 70510 RVA: 0x004326CF File Offset: 0x004308CF
+	// Token: 0x0600E804 RID: 59396 RVA: 0x0043F2DB File Offset: 0x0043D4DB
 	[NullableContext(1)]
 	public MotorcycleTechTreeDetailView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x0601136F RID: 70511 RVA: 0x004326D8 File Offset: 0x004308D8
+	// Token: 0x0600E805 RID: 59397 RVA: 0x0043F2E4 File Offset: 0x0043D4E4
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -27,7 +27,7 @@ public class MotorcycleTechTreeDetailView : UiViewBase
 		};
 	}
 
-	// Token: 0x06011370 RID: 70512 RVA: 0x00432748 File Offset: 0x00430948
+	// Token: 0x0600E806 RID: 59398 RVA: 0x0043F354 File Offset: 0x0043D554
 	protected override void OnStart()
 	{
 		this.CaptionItem = new PopupCaptionItem(base.GetItem(0));
@@ -68,24 +68,24 @@ public class MotorcycleTechTreeDetailView : UiViewBase
 		this.Layout.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x06011371 RID: 70513 RVA: 0x004328F0 File Offset: 0x00430AF0
+	// Token: 0x0600E807 RID: 59399 RVA: 0x0043F4FC File Offset: 0x0043D6FC
 	[NullableContext(1)]
 	private MotorcycleTechTreeListScrollItem InitListItem()
 	{
 		return new MotorcycleTechTreeListScrollItem();
 	}
 
-	// Token: 0x06011372 RID: 70514 RVA: 0x004328F7 File Offset: 0x00430AF7
+	// Token: 0x0600E808 RID: 59400 RVA: 0x0043F503 File Offset: 0x0043D703
 	private void OnCloseBtnClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x040082FE RID: 33534
+	// Token: 0x0400843C RID: 33852
 	[Nullable(2)]
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x040082FF RID: 33535
+	// Token: 0x0400843D RID: 33853
 	[Nullable(new byte[]
 	{
 		2,
@@ -94,19 +94,19 @@ public class MotorcycleTechTreeDetailView : UiViewBase
 	})]
 	private GenericLayout<MotorcycleTechTreeListScrollItem, IMotorTechOverviewData> Layout;
 
-	// Token: 0x020087A4 RID: 34724
+	// Token: 0x0200792D RID: 31021
 	private class EMotorTechTreeDetailComponent
 	{
-		// Token: 0x0402C14E RID: 180558
+		// Token: 0x04027466 RID: 160870
 		public const int CaptionItem = 0;
 
-		// Token: 0x0402C14F RID: 180559
+		// Token: 0x04027467 RID: 160871
 		public const int TexIcon = 1;
 
-		// Token: 0x0402C150 RID: 180560
+		// Token: 0x04027468 RID: 160872
 		public const int TxtAttr = 2;
 
-		// Token: 0x0402C151 RID: 180561
+		// Token: 0x04027469 RID: 160873
 		public const int Layout = 3;
 	}
 }

@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005B59 RID: 23385
+	// Token: 0x0200616F RID: 24943
 	public struct IWaySplineCommonPoint : IFlatbufferObject
 	{
-		// Token: 0x1700B0AD RID: 45229
-		// (get) Token: 0x06028031 RID: 163889 RVA: 0x0058059E File Offset: 0x0057E79E
+		// Token: 0x1700B9F5 RID: 47605
+		// (get) Token: 0x0602A5F5 RID: 173557 RVA: 0x005C802E File Offset: 0x005C622E
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06028032 RID: 163890 RVA: 0x005805AB File Offset: 0x0057E7AB
+		// Token: 0x0602A5F6 RID: 173558 RVA: 0x005C803B File Offset: 0x005C623B
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06028033 RID: 163891 RVA: 0x005805B4 File Offset: 0x0057E7B4
+		// Token: 0x0602A5F7 RID: 173559 RVA: 0x005C8044 File Offset: 0x005C6244
 		public static IWaySplineCommonPoint GetRootAsIWaySplineCommonPoint(ByteBuffer _bb)
 		{
 			return IWaySplineCommonPoint.GetRootAsIWaySplineCommonPoint(_bb, default(IWaySplineCommonPoint));
 		}
 
-		// Token: 0x06028034 RID: 163892 RVA: 0x005805D0 File Offset: 0x0057E7D0
+		// Token: 0x0602A5F8 RID: 173560 RVA: 0x005C8060 File Offset: 0x005C6260
 		public static IWaySplineCommonPoint GetRootAsIWaySplineCommonPoint(ByteBuffer _bb, IWaySplineCommonPoint obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06028035 RID: 163893 RVA: 0x005805ED File Offset: 0x0057E7ED
+		// Token: 0x0602A5F9 RID: 173561 RVA: 0x005C807D File Offset: 0x005C627D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06028036 RID: 163894 RVA: 0x005805FC File Offset: 0x0057E7FC
+		// Token: 0x0602A5FA RID: 173562 RVA: 0x005C808C File Offset: 0x005C628C
 		public IWaySplineCommonPoint __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700B0AE RID: 45230
-		// (get) Token: 0x06028037 RID: 163895 RVA: 0x0058060C File Offset: 0x0057E80C
+		// Token: 0x1700B9F6 RID: 47606
+		// (get) Token: 0x0602A5FB RID: 173563 RVA: 0x005C809C File Offset: 0x005C629C
 		public EWaySplinePointType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06028038 RID: 163896 RVA: 0x00580648 File Offset: 0x0057E848
+		// Token: 0x0602A5FC RID: 173564 RVA: 0x005C80D8 File Offset: 0x005C62D8
 		public static Offset<IWaySplineCommonPoint> CreateIWaySplineCommonPoint(FlatBufferBuilder builder, EWaySplinePointType Type = EWaySplinePointType.Common)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IWaySplineCommonPoint.EndIWaySplineCommonPoint(builder);
 		}
 
-		// Token: 0x06028039 RID: 163897 RVA: 0x0058065E File Offset: 0x0057E85E
+		// Token: 0x0602A5FD RID: 173565 RVA: 0x005C80EE File Offset: 0x005C62EE
 		public static void StartIWaySplineCommonPoint(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0602803A RID: 163898 RVA: 0x00580667 File Offset: 0x0057E867
+		// Token: 0x0602A5FE RID: 173566 RVA: 0x005C80F7 File Offset: 0x005C62F7
 		public static void AddType(FlatBufferBuilder builder, EWaySplinePointType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0602803B RID: 163899 RVA: 0x00580672 File Offset: 0x0057E872
+		// Token: 0x0602A5FF RID: 173567 RVA: 0x005C8102 File Offset: 0x005C6302
 		public static Offset<IWaySplineCommonPoint> EndIWaySplineCommonPoint(FlatBufferBuilder builder)
 		{
 			return new Offset<IWaySplineCommonPoint>(builder.EndTable());
 		}
 
-		// Token: 0x0602803C RID: 163900 RVA: 0x00580680 File Offset: 0x0057E880
+		// Token: 0x0602A600 RID: 173568 RVA: 0x005C8110 File Offset: 0x005C6310
 		public IWaySplineCommonPointT UnPack()
 		{
 			IWaySplineCommonPointT waySplineCommonPointT = new IWaySplineCommonPointT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return waySplineCommonPointT;
 		}
 
-		// Token: 0x0602803D RID: 163901 RVA: 0x0058069B File Offset: 0x0057E89B
+		// Token: 0x0602A601 RID: 173569 RVA: 0x005C812B File Offset: 0x005C632B
 		public void UnPackTo(IWaySplineCommonPointT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0602803E RID: 163902 RVA: 0x005806AC File Offset: 0x0057E8AC
+		// Token: 0x0602A602 RID: 173570 RVA: 0x005C813C File Offset: 0x005C633C
 		public static Offset<IWaySplineCommonPoint> Pack(FlatBufferBuilder builder, IWaySplineCommonPointT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IWaySplineCommonPoint.CreateIWaySplineCommonPoint(builder, _o.Type);
 		}
 
-		// Token: 0x0400F2A1 RID: 62113
+		// Token: 0x0400FFA7 RID: 65447
 		private Table __p;
 	}
 }

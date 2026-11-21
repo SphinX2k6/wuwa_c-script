@@ -8,7 +8,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x02001AC3 RID: 6851
+// Token: 0x02000F82 RID: 3970
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -17,7 +17,7 @@ using UnrealEngine;
 })]
 public class MapAreaShowItem : GridProxyAbstract<ExploreAreaData>
 {
-	// Token: 0x0600CB1D RID: 51997 RVA: 0x002E4D48 File Offset: 0x002E2F48
+	// Token: 0x06009F2E RID: 40750 RVA: 0x002EFECC File Offset: 0x002EE0CC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 5;
@@ -44,7 +44,7 @@ public class MapAreaShowItem : GridProxyAbstract<ExploreAreaData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x0600CB1E RID: 51998 RVA: 0x002E4E54 File Offset: 0x002E3054
+	// Token: 0x06009F2F RID: 40751 RVA: 0x002EFFD8 File Offset: 0x002EE1D8
 	protected override UniTask OnBeforeStartAsync()
 	{
 		MapAreaShowItem.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -55,12 +55,12 @@ public class MapAreaShowItem : GridProxyAbstract<ExploreAreaData>
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600CB1F RID: 51999 RVA: 0x002E4E97 File Offset: 0x002E3097
+	// Token: 0x06009F30 RID: 40752 RVA: 0x002F001B File Offset: 0x002EE21B
 	protected override void OnStart()
 	{
 	}
 
-	// Token: 0x0600CB20 RID: 52000 RVA: 0x002E4E9C File Offset: 0x002E309C
+	// Token: 0x06009F31 RID: 40753 RVA: 0x002F0020 File Offset: 0x002EE220
 	public override void Refresh(ExploreAreaData data, bool isSelected, int gridIndex)
 	{
 		UUIText text = base.GetText(2);
@@ -84,7 +84,7 @@ public class MapAreaShowItem : GridProxyAbstract<ExploreAreaData>
 		data.SaveLocalIconPercentAreaShow();
 	}
 
-	// Token: 0x0600CB21 RID: 52001 RVA: 0x002E4F40 File Offset: 0x002E3140
+	// Token: 0x06009F32 RID: 40754 RVA: 0x002F00C4 File Offset: 0x002EE2C4
 	private void UpdateRedDot()
 	{
 		bool uiactive = this.AreaData.HasCanTakeStageReward();
@@ -96,36 +96,36 @@ public class MapAreaShowItem : GridProxyAbstract<ExploreAreaData>
 		item.SetUIActive(uiactive);
 	}
 
-	// Token: 0x0600CB22 RID: 52002 RVA: 0x002E4F6B File Offset: 0x002E316B
+	// Token: 0x06009F33 RID: 40755 RVA: 0x002F00EF File Offset: 0x002EE2EF
 	protected override void OnBeforeDestroy()
 	{
 	}
 
-	// Token: 0x0600CB23 RID: 52003 RVA: 0x002E4F6D File Offset: 0x002E316D
+	// Token: 0x06009F34 RID: 40756 RVA: 0x002F00F1 File Offset: 0x002EE2F1
 	private void OnClickBtnRoot()
 	{
 		EventSystem.Instance.Emit<int>(EEventName.MapAreaShowClickArea, this.AreaData.AreaId);
 	}
 
-	// Token: 0x04005D80 RID: 23936
+	// Token: 0x04005E4F RID: 24143
 	private ExploreAreaData AreaData;
 
-	// Token: 0x04005D81 RID: 23937
+	// Token: 0x04005E50 RID: 24144
 	private MapAreaOnlyShowItem ShowItem;
 
-	// Token: 0x02008018 RID: 32792
+	// Token: 0x020071A7 RID: 29095
 	[NullableContext(0)]
 	private enum EChildType
 	{
-		// Token: 0x04029D1C RID: 171292
+		// Token: 0x04025055 RID: 151637
 		BtnRoot,
-		// Token: 0x04029D1D RID: 171293
+		// Token: 0x04025056 RID: 151638
 		ItemShow,
-		// Token: 0x04029D1E RID: 171294
+		// Token: 0x04025057 RID: 151639
 		UnlockPercent,
-		// Token: 0x04029D1F RID: 171295
+		// Token: 0x04025058 RID: 151640
 		TitleText,
-		// Token: 0x04029D20 RID: 171296
+		// Token: 0x04025059 RID: 151641
 		ItemRedDot
 	}
 }

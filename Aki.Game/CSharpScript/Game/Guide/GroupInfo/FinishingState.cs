@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Guide.GroupInfo
 {
-	// Token: 0x02004613 RID: 17939
+	// Token: 0x0200353C RID: 13628
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -12,7 +12,7 @@ namespace CSharpScript.Game.Guide.GroupInfo
 	})]
 	public class FinishingState : StateBase<GuideGroupInfo, EGuideGroupState>
 	{
-		// Token: 0x0602E3B7 RID: 189367 RVA: 0x00AB0D54 File Offset: 0x00AAEF54
+		// Token: 0x06022AAC RID: 141996 RVA: 0x009DD448 File Offset: 0x009DB648
 		public FinishingState(GuideGroupInfo owner, EGuideGroupState state, [Nullable(new byte[]
 		{
 			2,
@@ -21,7 +21,7 @@ namespace CSharpScript.Game.Guide.GroupInfo
 		{
 		}
 
-		// Token: 0x0602E3B8 RID: 189368 RVA: 0x00AB0D60 File Offset: 0x00AAEF60
+		// Token: 0x06022AAD RID: 141997 RVA: 0x009DD454 File Offset: 0x009DB654
 		protected override void OnEnter(EGuideGroupState? lastState)
 		{
 			bool isFake = this.Owner.IsFake;

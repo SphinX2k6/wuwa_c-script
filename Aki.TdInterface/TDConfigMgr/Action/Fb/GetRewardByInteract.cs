@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x020024D7 RID: 9431
+	// Token: 0x0200277C RID: 10108
 	public class GetRewardByInteract : ActionParams
 	{
-		// Token: 0x0600D2A0 RID: 53920 RVA: 0x001F3F22 File Offset: 0x001F2122
-		[NullableContext(1)]
+		// Token: 0x0600DFF5 RID: 57333 RVA: 0x0020F77E File Offset: 0x0020D97E
 		public static GetRewardByInteract Create(IGetRewardByInteract? instance)
 		{
 			if (instance == null)
@@ -21,7 +19,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x04007385 RID: 29573
+		// Token: 0x040079D2 RID: 31186
 		private IGetRewardByInteract Instance;
 	}
 }

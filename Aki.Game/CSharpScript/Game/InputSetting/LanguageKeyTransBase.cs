@@ -5,12 +5,12 @@ using Aki.Config;
 
 namespace CSharpScript.Game.InputSetting
 {
-	// Token: 0x02007005 RID: 28677
+	// Token: 0x02006186 RID: 24966
 	[NullableContext(1)]
 	[Nullable(0)]
 	public abstract class LanguageKeyTransBase
 	{
-		// Token: 0x06045C7F RID: 285823 RVA: 0x0115A63C File Offset: 0x0115883C
+		// Token: 0x0603BE35 RID: 245301 RVA: 0x01104A48 File Offset: 0x01102C48
 		public void InitPcKeysByConfig(PcKey config)
 		{
 			string otherPcKey = this.GetOtherPcKey(config);
@@ -21,22 +21,22 @@ namespace CSharpScript.Game.InputSetting
 			}
 		}
 
-		// Token: 0x06045C80 RID: 285824
+		// Token: 0x0603BE36 RID: 245302
 		protected abstract string GetOtherPcKey(PcKey config);
 
-		// Token: 0x06045C81 RID: 285825
+		// Token: 0x0603BE37 RID: 245303
 		public abstract string[] GetActionPcKeys(ActionMapping actionMappingConfig);
 
-		// Token: 0x06045C82 RID: 285826
+		// Token: 0x0603BE38 RID: 245304
 		public abstract Dictionary<string, float> GetAxisPcKeys(AxisMapping axisMappingConfig);
 
-		// Token: 0x06045C83 RID: 285827
+		// Token: 0x0603BE39 RID: 245305
 		public abstract Dictionary<string, string> GetCombinationActionPcKeys(CombinationAction combinationActionMappingConfig);
 
-		// Token: 0x06045C84 RID: 285828
+		// Token: 0x0603BE3A RID: 245306
 		public abstract string GetPcKeyIconPath(PcKey config);
 
-		// Token: 0x06045C85 RID: 285829 RVA: 0x0115A680 File Offset: 0x01158880
+		// Token: 0x0603BE3B RID: 245307 RVA: 0x01104A8C File Offset: 0x01102C8C
 		public string GetNormalToOtherPcKeysMap(string keyName)
 		{
 			string result;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.InputSetting
 			return keyName;
 		}
 
-		// Token: 0x06045C86 RID: 285830 RVA: 0x0115A6A0 File Offset: 0x011588A0
+		// Token: 0x0603BE3C RID: 245308 RVA: 0x01104AAC File Offset: 0x01102CAC
 		public string GetOtherToNormalPcKeysMap(string keyName)
 		{
 			string result;
@@ -58,10 +58,10 @@ namespace CSharpScript.Game.InputSetting
 			return keyName;
 		}
 
-		// Token: 0x040247F5 RID: 149493
+		// Token: 0x0401FAAB RID: 129707
 		private readonly Dictionary<string, string> NormalToOtherPcKeysMap = new Dictionary<string, string>();
 
-		// Token: 0x040247F6 RID: 149494
+		// Token: 0x0401FAAC RID: 129708
 		private readonly Dictionary<string, string> OtherToNormalPcKeysMap = new Dictionary<string, string>();
 	}
 }

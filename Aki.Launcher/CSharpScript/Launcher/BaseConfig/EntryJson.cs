@@ -4,17 +4,17 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Launcher.BaseConfig
 {
-	// Token: 0x02000259 RID: 601
+	// Token: 0x0200025E RID: 606
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class EntryJson
 	{
-		// Token: 0x06000F1E RID: 3870 RVA: 0x000588B8 File Offset: 0x00056AB8
+		// Token: 0x06000F65 RID: 3941 RVA: 0x0005B6E4 File Offset: 0x000598E4
 		public EntryJson()
 		{
 		}
 
-		// Token: 0x06000F1F RID: 3871 RVA: 0x000588C0 File Offset: 0x00056AC0
+		// Token: 0x06000F66 RID: 3942 RVA: 0x0005B6EC File Offset: 0x000598EC
 		[NullableContext(1)]
 		public EntryJson(EntryJson defaultObject, [Nullable(2)] EntryJson overrideObj)
 		{
@@ -30,6 +30,7 @@ namespace CSharpScript.Launcher.BaseConfig
 			this.NewHttpTimer = ((overrideObj != null && overrideObj.NewHttpTimer != null) ? overrideObj.NewHttpTimer : new bool?(((defaultObject != null) ? defaultObject.NewHttpTimer : null).GetValueOrDefault(true)));
 			this.NewHttpApi = ((overrideObj != null && overrideObj.NewHttpApi != null) ? overrideObj.NewHttpApi : new bool?(((defaultObject != null) ? defaultObject.NewHttpApi : null).GetValueOrDefault(true)));
 			this.GARUrl = ((overrideObj != null && overrideObj.GARUrl != null) ? overrideObj.GARUrl : (((defaultObject != null) ? defaultObject.GARUrl : null) ?? ""));
+			this.GARUrls = ((overrideObj != null && overrideObj.GARUrls != null) ? overrideObj.GARUrls : (((defaultObject != null) ? defaultObject.GARUrls : null) ?? Array.Empty<string>()));
 			this.TDCfg = ((overrideObj != null && overrideObj.TDCfg != null) ? overrideObj.TDCfg : ((defaultObject != null) ? defaultObject.TDCfg : null));
 			this.KDCfg = ((overrideObj != null && overrideObj.KDCfg != null) ? overrideObj.KDCfg : ((defaultObject != null) ? defaultObject.KDCfg : null));
 			this.ServerTimeUrl = ((overrideObj != null && overrideObj.ServerTimeUrl != null) ? overrideObj.ServerTimeUrl : (((defaultObject != null) ? defaultObject.ServerTimeUrl : null) ?? Array.Empty<string>()));
@@ -42,13 +43,14 @@ namespace CSharpScript.Launcher.BaseConfig
 			this.PackageUpdateDescUrl = ((overrideObj != null && overrideObj.PackageUpdateDescUrl != null) ? overrideObj.PackageUpdateDescUrl : ((defaultObject != null) ? defaultObject.PackageUpdateDescUrl : null));
 			this.ParallelPackageDescUrl = ((overrideObj != null && overrideObj.ParallelPackageDescUrl != null) ? overrideObj.ParallelPackageDescUrl : ((defaultObject != null) ? defaultObject.ParallelPackageDescUrl : null));
 			this.GrayBox = ((overrideObj != null && overrideObj.GrayBox != null) ? overrideObj.GrayBox : ((defaultObject != null) ? defaultObject.GrayBox : null));
+			this.VulkanSettings = ((overrideObj != null && overrideObj.VulkanSettings != null) ? overrideObj.VulkanSettings : ((defaultObject != null) ? defaultObject.VulkanSettings : null));
 			this.SDKEnvironment = ((overrideObj != null && overrideObj.SDKEnvironment != null) ? overrideObj.SDKEnvironment : ((defaultObject != null) ? defaultObject.SDKEnvironment : null));
 			this.UdpDelay = ((overrideObj != null && overrideObj.UdpDelay != null) ? overrideObj.UdpDelay : ((defaultObject != null) ? defaultObject.UdpDelay : null));
 			this.CdnEvalCfg = ((overrideObj != null && overrideObj.CdnEvalCfg != null) ? overrideObj.CdnEvalCfg : ((defaultObject != null) ? defaultObject.CdnEvalCfg : null));
 			this.CdnScoreCfg = ((overrideObj != null && overrideObj.CdnScoreCfg != null) ? overrideObj.CdnScoreCfg : ((defaultObject != null) ? defaultObject.CdnScoreCfg : null));
 		}
 
-		// Token: 0x040009B2 RID: 2482
+		// Token: 0x040009FC RID: 2556
 		[Nullable(new byte[]
 		{
 			2,
@@ -56,16 +58,16 @@ namespace CSharpScript.Launcher.BaseConfig
 		})]
 		public List<ICdnUrlData> CdnUrl;
 
-		// Token: 0x040009B3 RID: 2483
+		// Token: 0x040009FD RID: 2557
 		public float? SpeedRatio;
 
-		// Token: 0x040009B4 RID: 2484
+		// Token: 0x040009FE RID: 2558
 		public float? PriceRatio;
 
-		// Token: 0x040009B5 RID: 2485
+		// Token: 0x040009FF RID: 2559
 		public string NoticeUrl;
 
-		// Token: 0x040009B6 RID: 2486
+		// Token: 0x04000A00 RID: 2560
 		[Nullable(new byte[]
 		{
 			2,
@@ -73,65 +75,82 @@ namespace CSharpScript.Launcher.BaseConfig
 		})]
 		public List<ILoginServersData> LoginServers;
 
-		// Token: 0x040009B7 RID: 2487
+		// Token: 0x04000A01 RID: 2561
 		public IPrivateServersData PrivateServers;
 
-		// Token: 0x040009B8 RID: 2488
+		// Token: 0x04000A02 RID: 2562
 		public bool? GmOpen;
 
-		// Token: 0x040009B9 RID: 2489
+		// Token: 0x04000A03 RID: 2563
 		public bool? RptOpen;
 
-		// Token: 0x040009BA RID: 2490
+		// Token: 0x04000A04 RID: 2564
 		public bool? AsyncCheck;
 
-		// Token: 0x040009BB RID: 2491
+		// Token: 0x04000A05 RID: 2565
 		public bool? NewHttpTimer;
 
-		// Token: 0x040009BC RID: 2492
+		// Token: 0x04000A06 RID: 2566
 		public bool? NewHttpApi;
 
-		// Token: 0x040009BD RID: 2493
+		// Token: 0x04000A07 RID: 2567
 		public string GARUrl;
 
-		// Token: 0x040009BE RID: 2494
+		// Token: 0x04000A08 RID: 2568
+		[Nullable(new byte[]
+		{
+			2,
+			1
+		})]
+		public string[] GARUrls;
+
+		// Token: 0x04000A09 RID: 2569
 		public ITDConfig TDCfg;
 
-		// Token: 0x040009BF RID: 2495
+		// Token: 0x04000A0A RID: 2570
 		public ITDConfig KDCfg;
 
-		// Token: 0x040009C0 RID: 2496
+		// Token: 0x04000A0B RID: 2571
 		[Nullable(1)]
 		public string[] ServerTimeUrl;
 
-		// Token: 0x040009C1 RID: 2497
+		// Token: 0x04000A0C RID: 2572
 		public ILogReport LogReport;
 
-		// Token: 0x040009C2 RID: 2498
+		// Token: 0x04000A0D RID: 2573
 		public IUpdateUrl PackageUpdateUrl;
 
-		// Token: 0x040009C3 RID: 2499
+		// Token: 0x04000A0E RID: 2574
 		public IUpdateUrl PackageUpdateDescUrl;
 
-		// Token: 0x040009C4 RID: 2500
+		// Token: 0x04000A0F RID: 2575
 		public IUpdateUrl ParallelPackageDescUrl;
 
-		// Token: 0x040009C5 RID: 2501
+		// Token: 0x04000A10 RID: 2576
 		public bool? IosAuditFirstDownloadTip;
 
-		// Token: 0x040009C6 RID: 2502
+		// Token: 0x04000A11 RID: 2577
 		public string MixUri;
 
-		// Token: 0x040009C7 RID: 2503
+		// Token: 0x04000A12 RID: 2578
 		public string ResUri;
 
-		// Token: 0x040009C8 RID: 2504
+		// Token: 0x04000A13 RID: 2579
 		public IGachaUrl GachaUrl;
 
-		// Token: 0x040009C9 RID: 2505
+		// Token: 0x04000A14 RID: 2580
 		public IGrayBoxConfig GrayBox;
 
-		// Token: 0x040009CA RID: 2506
+		// Token: 0x04000A15 RID: 2581
+		[Nullable(new byte[]
+		{
+			2,
+			1,
+			1
+		})]
+		public Dictionary<string, VulkanSettingConfig> VulkanSettings;
+
+		// Token: 0x04000A16 RID: 2582
 		[Nullable(new byte[]
 		{
 			2,
@@ -140,13 +159,13 @@ namespace CSharpScript.Launcher.BaseConfig
 		})]
 		public Dictionary<string, IUdpRegion> UdpDelay;
 
-		// Token: 0x040009CB RID: 2507
+		// Token: 0x04000A17 RID: 2583
 		public IEvalConfig CdnEvalCfg;
 
-		// Token: 0x040009CC RID: 2508
+		// Token: 0x04000A18 RID: 2584
 		public ICdnScoreCfg CdnScoreCfg;
 
-		// Token: 0x040009CD RID: 2509
+		// Token: 0x04000A19 RID: 2585
 		[Nullable(new byte[]
 		{
 			2,

@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x020075F0 RID: 30192
+	// Token: 0x02007DFE RID: 32254
 	public class IVisualNovelTransitionPerformanceSolarSchoolT
 	{
-		// Token: 0x1700E557 RID: 58711
-		// (get) Token: 0x06036FEE RID: 225262 RVA: 0x0077654B File Offset: 0x0077474B
-		// (set) Token: 0x06036FEF RID: 225263 RVA: 0x00776553 File Offset: 0x00774753
+		// Token: 0x1700F195 RID: 61845
+		// (get) Token: 0x0603A493 RID: 238739 RVA: 0x007DA647 File Offset: 0x007D8847
+		// (set) Token: 0x0603A494 RID: 238740 RVA: 0x007DA64F File Offset: 0x007D884F
 		public EVisualNovelSubType Type { get; set; }
 
-		// Token: 0x1700E558 RID: 58712
-		// (get) Token: 0x06036FF0 RID: 225264 RVA: 0x0077655C File Offset: 0x0077475C
-		// (set) Token: 0x06036FF1 RID: 225265 RVA: 0x00776564 File Offset: 0x00774764
+		// Token: 0x1700F196 RID: 61846
+		// (get) Token: 0x0603A495 RID: 238741 RVA: 0x007DA658 File Offset: 0x007D8858
+		// (set) Token: 0x0603A496 RID: 238742 RVA: 0x007DA660 File Offset: 0x007D8860
 		public TVisualNovelTransitionConfigUnion TransitionConfig { get; set; }
 
-		// Token: 0x06036FF2 RID: 225266 RVA: 0x0077656D File Offset: 0x0077476D
+		// Token: 0x0603A497 RID: 238743 RVA: 0x007DA669 File Offset: 0x007D8869
 		public IVisualNovelTransitionPerformanceSolarSchoolT()
 		{
 			this.Type = EVisualNovelSubType.SolarSchool;

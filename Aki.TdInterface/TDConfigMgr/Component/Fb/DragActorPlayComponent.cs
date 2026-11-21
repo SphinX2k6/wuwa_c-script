@@ -6,12 +6,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000E17 RID: 3607
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000F13 RID: 3859
 	public class DragActorPlayComponent : IComponentBase
 	{
-		// Token: 0x060051A3 RID: 20899 RVA: 0x000C9583 File Offset: 0x000C7783
+		// Token: 0x060056CA RID: 22218 RVA: 0x000D4E4B File Offset: 0x000D304B
 		public static DragActorPlayComponent Create(IDragActorPlayComponent? instance)
 		{
 			if (instance == null)
@@ -24,8 +22,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001B32 RID: 6962
-		// (get) Token: 0x060051A4 RID: 20900 RVA: 0x000C95A4 File Offset: 0x000C77A4
+		// Token: 0x17001C9F RID: 7327
+		// (get) Token: 0x060056CB RID: 22219 RVA: 0x000D4E6C File Offset: 0x000D306C
 		public override bool? Disabled
 		{
 			get
@@ -38,8 +36,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B33 RID: 6963
-		// (get) Token: 0x060051A5 RID: 20901 RVA: 0x000C95DC File Offset: 0x000C77DC
+		// Token: 0x17001CA0 RID: 7328
+		// (get) Token: 0x060056CC RID: 22220 RVA: 0x000D4EA4 File Offset: 0x000D30A4
 		public override bool? EdIsLocked
 		{
 			get
@@ -48,8 +46,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B34 RID: 6964
-		// (get) Token: 0x060051A6 RID: 20902 RVA: 0x000C95F4 File Offset: 0x000C77F4
+		// Token: 0x17001CA1 RID: 7329
+		// (get) Token: 0x060056CD RID: 22221 RVA: 0x000D4EBC File Offset: 0x000D30BC
 		public virtual List<IDragActorPlayConfig> Configs
 		{
 			get
@@ -69,8 +67,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B35 RID: 6965
-		// (get) Token: 0x060051A7 RID: 20903 RVA: 0x000C965D File Offset: 0x000C785D
+		// Token: 0x17001CA2 RID: 7330
+		// (get) Token: 0x060056CE RID: 22222 RVA: 0x000D4F25 File Offset: 0x000D3125
 		[Nullable(2)]
 		public virtual string ExitSendSelfEvent
 		{
@@ -81,19 +79,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001B36 RID: 6966
-		// (get) Token: 0x060051A8 RID: 20904 RVA: 0x000C966A File Offset: 0x000C786A
+		// Token: 0x17001CA3 RID: 7331
+		// (get) Token: 0x060056CF RID: 22223 RVA: 0x000D4F32 File Offset: 0x000D3132
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public virtual List<IActorRef> EdSequenceActorRefs
 		{
 			[return: Nullable(new byte[]
 			{
 				2,
-				1
+				0
 			})]
 			get
 			{
@@ -101,13 +99,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002F08 RID: 12040
+		// Token: 0x040031D0 RID: 12752
 		private IDragActorPlayComponent Instance;
 
-		// Token: 0x04002F09 RID: 12041
+		// Token: 0x040031D1 RID: 12753
 		private List<IDragActorPlayConfig> _ConfigsCache;
 
-		// Token: 0x04002F0A RID: 12042
+		// Token: 0x040031D2 RID: 12754
 		private bool _ConfigsInited;
 	}
 }

@@ -6,13 +6,13 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using Google.Protobuf;
 
-// Token: 0x02001705 RID: 5893
+// Token: 0x02000BBD RID: 3005
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class BirthdayController : UiControllerBase
 {
-	// Token: 0x0600A8FB RID: 43259 RVA: 0x00260608 File Offset: 0x0025E808
+	// Token: 0x06007CDB RID: 31963 RVA: 0x0026AA24 File Offset: 0x00268C24
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add(EEventName.WorldDone, new Action(this.OnWorldDone));
@@ -20,7 +20,7 @@ public class BirthdayController : UiControllerBase
 		EventSystem.Instance.Add<bool>(EEventName.TsSyncBirthdayResetState, new Action<bool>(this.TsSyncBirthdayResetState));
 	}
 
-	// Token: 0x0600A8FC RID: 43260 RVA: 0x0026066C File Offset: 0x0025E86C
+	// Token: 0x06007CDC RID: 31964 RVA: 0x0026AA88 File Offset: 0x00268C88
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove(EEventName.WorldDone, new Action(this.OnWorldDone));
@@ -28,7 +28,7 @@ public class BirthdayController : UiControllerBase
 		EventSystem.Instance.Remove(EEventName.TsSyncBirthdayResetState, new Action<bool>(this.TsSyncBirthdayResetState));
 	}
 
-	// Token: 0x0600A8FD RID: 43261 RVA: 0x002606CD File Offset: 0x0025E8CD
+	// Token: 0x06007CDD RID: 31965 RVA: 0x0026AAE9 File Offset: 0x00268CE9
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.BirthDayInfoNotify, delegate(IMessage msg, Net.CallbackStatus _)
@@ -38,13 +38,13 @@ public class BirthdayController : UiControllerBase
 		});
 	}
 
-	// Token: 0x0600A8FE RID: 43262 RVA: 0x002606FE File Offset: 0x0025E8FE
+	// Token: 0x06007CDE RID: 31966 RVA: 0x0026AB1A File Offset: 0x00268D1A
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.BirthDayInfoNotify);
 	}
 
-	// Token: 0x0600A8FF RID: 43263 RVA: 0x00260710 File Offset: 0x0025E910
+	// Token: 0x06007CDF RID: 31967 RVA: 0x0026AB2C File Offset: 0x00268D2C
 	public static void TrySelectBirthDayCardRoleRequest(int roleId, int year)
 	{
 		int? selectedRoleId = BirthdayModel.Instance.GetSelectedRoleId(year);
@@ -64,14 +64,14 @@ public class BirthdayController : UiControllerBase
 			}
 			if (birthDayCardRoleResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(birthDayCardRoleResponse.ErrorCode, 16190, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(birthDayCardRoleResponse.ErrorCode, 22249, null, true, true);
 				return;
 			}
 			BirthdayModel.Instance.SetSelectedRole(roleId, year);
 		}, 0);
 	}
 
-	// Token: 0x0600A900 RID: 43264 RVA: 0x00260790 File Offset: 0x0025E990
+	// Token: 0x06007CE0 RID: 31968 RVA: 0x0026ABAC File Offset: 0x00268DAC
 	public static bool TryBirthDayRewardRequest(int year)
 	{
 		if (BirthdayModel.Instance.GetSelectedRoleId(year) != null)
@@ -89,7 +89,7 @@ public class BirthdayController : UiControllerBase
 			}
 			if (birthDayRewardResponse.ErrorCode != Aki.Protocol.ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(birthDayRewardResponse.ErrorCode, 21898, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(birthDayRewardResponse.ErrorCode, 22398, null, true, true);
 				return;
 			}
 			BirthdayModel.Instance.SetIsReceiveBirthdayReward(true);
@@ -97,7 +97,7 @@ public class BirthdayController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0600A901 RID: 43265 RVA: 0x002607F4 File Offset: 0x0025E9F4
+	// Token: 0x06007CE1 RID: 31969 RVA: 0x0026AC10 File Offset: 0x00268E10
 	public void TryOpenBirthdayView(bool isInstantly = false)
 	{
 		if (!BirthdayModel.Instance.GetBirthdayIsReset())
@@ -116,7 +116,7 @@ public class BirthdayController : UiControllerBase
 		SplashScreenController.Instance.PushSplashScreenTask(splashScreenTask, isInstantly);
 	}
 
-	// Token: 0x0600A902 RID: 43266 RVA: 0x00260854 File Offset: 0x0025EA54
+	// Token: 0x06007CE2 RID: 31970 RVA: 0x0026AC70 File Offset: 0x00268E70
 	public void UseBirthdayItem(int itemId)
 	{
 		int limitYear = ConfigBirthDayByItemId.GetConfig(itemId, true).Value.LimitYear;
@@ -134,7 +134,7 @@ public class BirthdayController : UiControllerBase
 		UiManager.Instance.OpenView(EUiViewName.BirthdayRoleSelectView, new BirthdayInfo(BirthdayDefine.ETriggerType.Item, limitYear, null), null);
 	}
 
-	// Token: 0x0600A903 RID: 43267 RVA: 0x00260920 File Offset: 0x0025EB20
+	// Token: 0x06007CE3 RID: 31971 RVA: 0x0026AD3C File Offset: 0x00268F3C
 	public void OnWorldDone()
 	{
 		bool flag = BirthdayModel.Instance.IsDuringBirthday();
@@ -144,7 +144,7 @@ public class BirthdayController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600A904 RID: 43268 RVA: 0x00260950 File Offset: 0x0025EB50
+	// Token: 0x06007CE4 RID: 31972 RVA: 0x0026AD6C File Offset: 0x00268F6C
 	public void OnCrossDayZone()
 	{
 		bool flag = BirthdayModel.Instance.IsDuringBirthday();
@@ -154,14 +154,14 @@ public class BirthdayController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600A905 RID: 43269 RVA: 0x00260980 File Offset: 0x0025EB80
+	// Token: 0x06007CE5 RID: 31973 RVA: 0x0026AD9C File Offset: 0x00268F9C
 	public void TsSyncBirthdayResetState(bool isReset)
 	{
 		BirthdayModel.Instance.SyncTsResetState(isReset);
 	}
 
-	// Token: 0x17000DFE RID: 3582
-	// (get) Token: 0x0600A906 RID: 43270 RVA: 0x0026098D File Offset: 0x0025EB8D
+	// Token: 0x17000E1F RID: 3615
+	// (get) Token: 0x06007CE6 RID: 31974 RVA: 0x0026ADA9 File Offset: 0x00268FA9
 	public static BirthdayController Instance
 	{
 		get
@@ -170,7 +170,7 @@ public class BirthdayController : UiControllerBase
 		}
 	}
 
-	// Token: 0x0600A907 RID: 43271 RVA: 0x00260994 File Offset: 0x0025EB94
+	// Token: 0x06007CE7 RID: 31975 RVA: 0x0026ADB0 File Offset: 0x00268FB0
 	public static BirthdayController GetOrCreateInstance()
 	{
 		if (BirthdayController._Instance == null)
@@ -180,7 +180,7 @@ public class BirthdayController : UiControllerBase
 		return BirthdayController._Instance;
 	}
 
-	// Token: 0x0600A908 RID: 43272 RVA: 0x002609A8 File Offset: 0x0025EBA8
+	// Token: 0x06007CE8 RID: 31976 RVA: 0x0026ADC4 File Offset: 0x00268FC4
 	public static bool CreateInstance()
 	{
 		if (BirthdayController._Instance != null)
@@ -191,24 +191,24 @@ public class BirthdayController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x0600A909 RID: 43273 RVA: 0x002609BE File Offset: 0x0025EBBE
+	// Token: 0x06007CE9 RID: 31977 RVA: 0x0026ADDA File Offset: 0x00268FDA
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600A90A RID: 43274 RVA: 0x002609C0 File Offset: 0x0025EBC0
+	// Token: 0x06007CEA RID: 31978 RVA: 0x0026ADDC File Offset: 0x00268FDC
 	public static void ResetStaticDefaultValue()
 	{
 		BirthdayController._Instance = null;
 	}
 
-	// Token: 0x0600A90B RID: 43275 RVA: 0x002609C8 File Offset: 0x0025EBC8
+	// Token: 0x06007CEB RID: 31979 RVA: 0x0026ADE4 File Offset: 0x00268FE4
 	static BirthdayController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(BirthdayController.CreateStaticDefaultValue), new Action(BirthdayController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x04004D16 RID: 19734
+	// Token: 0x04004DBD RID: 19901
 	[Nullable(2)]
 	private static BirthdayController _Instance;
 }

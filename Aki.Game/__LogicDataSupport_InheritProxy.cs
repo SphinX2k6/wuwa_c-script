@@ -3,16 +3,16 @@ using System.Runtime.CompilerServices;
 using UnrealEngine;
 using UnrealEngine.Utils;
 
-// Token: 0x02003918 RID: 14616
+// Token: 0x02002E93 RID: 11923
 public class __LogicDataSupport_InheritProxy : LogicDataSupport
 {
-	// Token: 0x0601EBA8 RID: 125864 RVA: 0x00898898 File Offset: 0x00896A98
+	// Token: 0x0601C864 RID: 116836 RVA: 0x008BCDB4 File Offset: 0x008BAFB4
 	[NullableContext(1)]
 	public __LogicDataSupport_InheritProxy(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(LogicDataSupport.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x0601EBA9 RID: 125865 RVA: 0x008988CB File Offset: 0x00896ACB
+	// Token: 0x0601C865 RID: 116837 RVA: 0x008BCDE7 File Offset: 0x008BAFE7
 	protected __LogicDataSupport_InheritProxy(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}

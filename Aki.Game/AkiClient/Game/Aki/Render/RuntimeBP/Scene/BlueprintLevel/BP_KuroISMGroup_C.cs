@@ -8,12 +8,12 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.BlueprintLevel
 {
-	// Token: 0x02003BA3 RID: 15267
+	// Token: 0x020030D2 RID: 12498
 	[UnrealObjectPath("/Game/Aki/Render/RuntimeBP/Scene/BlueprintLevel/BP_KuroISMGroup.BP_KuroISMGroup_C")]
 	[UnrealStructLayout(1112, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 1112)]
 	public class BP_KuroISMGroup_C : AActor, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06021FD1 RID: 139217 RVA: 0x008FB963 File Offset: 0x008F9B63
+		// Token: 0x0601E15F RID: 123231 RVA: 0x0090A9C9 File Offset: 0x00908BC9
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_KuroISMGroup_C._ClassPtr == IntPtr.Zero)
@@ -23,188 +23,187 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.BlueprintLevel
 			return BP_KuroISMGroup_C._ClassPtr;
 		}
 
-		// Token: 0x06021FD2 RID: 139218 RVA: 0x008FB988 File Offset: 0x008F9B88
+		// Token: 0x0601E160 RID: 123232 RVA: 0x0090A9F0 File Offset: 0x00908BF0
 		public BP_KuroISMGroup_C() : this(BuiltinUtils.AllocNativeUObject(BP_KuroISMGroup_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x06021FD3 RID: 139219 RVA: 0x008FB9B0 File Offset: 0x008F9BB0
+		// Token: 0x0601E161 RID: 123233 RVA: 0x0090AA18 File Offset: 0x00908C18
 		[NullableContext(1)]
 		public BP_KuroISMGroup_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_KuroISMGroup_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17003941 RID: 14657
-		// (get) Token: 0x06021FD4 RID: 139220 RVA: 0x008FB9E3 File Offset: 0x008F9BE3
-		// (set) Token: 0x06021FD5 RID: 139221 RVA: 0x008FB9F7 File Offset: 0x008F9BF7
+		// Token: 0x170031E3 RID: 12771
+		// (get) Token: 0x0601E162 RID: 123234 RVA: 0x0090AA4B File Offset: 0x00908C4B
+		// (set) Token: 0x0601E163 RID: 123235 RVA: 0x0090AA5F File Offset: 0x00908C5F
 		[Nullable(2)]
 		public unsafe USceneComponent DefaultSceneRoot
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroISMGroup_C.__PropertyOffset_1);
+				return BuiltinUtils.ObjectPropertyGetter<USceneComponent>(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroISMGroup_C.__PropertyOffset_DefaultSceneRoot);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroISMGroup_C.__PropertyOffset_1, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_KuroISMGroup_C.__PropertyOffset_DefaultSceneRoot, value);
 			}
 		}
 
-		// Token: 0x17003942 RID: 14658
-		// (get) Token: 0x06021FD6 RID: 139222 RVA: 0x008FBA0C File Offset: 0x008F9C0C
-		// (set) Token: 0x06021FD7 RID: 139223 RVA: 0x008FBA1C File Offset: 0x008F9C1C
+		// Token: 0x170031E4 RID: 12772
+		// (get) Token: 0x0601E164 RID: 123236 RVA: 0x0090AA74 File Offset: 0x00908C74
+		// (set) Token: 0x0601E165 RID: 123237 RVA: 0x0090AA84 File Offset: 0x00908C84
 		public unsafe bool HideLogicallyOnBeginPlay
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_KuroISMGroup_C.__PropertyOffset_2) != 0;
+				return *(base.NativePtr + (IntPtr)BP_KuroISMGroup_C.__PropertyOffset_HideLogicallyOnBeginPlay) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_KuroISMGroup_C.__PropertyOffset_2) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_KuroISMGroup_C.__PropertyOffset_HideLogicallyOnBeginPlay) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17003943 RID: 14659
-		// (get) Token: 0x06021FD8 RID: 139224 RVA: 0x008FBA2D File Offset: 0x008F9C2D
-		// (set) Token: 0x06021FD9 RID: 139225 RVA: 0x008FBA3D File Offset: 0x008F9C3D
+		// Token: 0x170031E5 RID: 12773
+		// (get) Token: 0x0601E166 RID: 123238 RVA: 0x0090AA95 File Offset: 0x00908C95
+		// (set) Token: 0x0601E167 RID: 123239 RVA: 0x0090AAA5 File Offset: 0x00908CA5
 		public unsafe float DitherProgress
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_KuroISMGroup_C.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)BP_KuroISMGroup_C.__PropertyOffset_DitherProgress);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_KuroISMGroup_C.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)BP_KuroISMGroup_C.__PropertyOffset_DitherProgress) = value;
 			}
 		}
 
-		// Token: 0x17003944 RID: 14660
-		// (get) Token: 0x06021FDA RID: 139226 RVA: 0x008FBA4E File Offset: 0x008F9C4E
-		// (set) Token: 0x06021FDB RID: 139227 RVA: 0x008FBA5E File Offset: 0x008F9C5E
+		// Token: 0x170031E6 RID: 12774
+		// (get) Token: 0x0601E168 RID: 123240 RVA: 0x0090AAB6 File Offset: 0x00908CB6
+		// (set) Token: 0x0601E169 RID: 123241 RVA: 0x0090AAC6 File Offset: 0x00908CC6
 		public unsafe float Duration
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_KuroISMGroup_C.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)BP_KuroISMGroup_C.__PropertyOffset_Duration);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_KuroISMGroup_C.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)BP_KuroISMGroup_C.__PropertyOffset_Duration) = value;
 			}
 		}
 
-		// Token: 0x17003945 RID: 14661
-		// (get) Token: 0x06021FDC RID: 139228 RVA: 0x008FBA6F File Offset: 0x008F9C6F
-		// (set) Token: 0x06021FDD RID: 139229 RVA: 0x008FBA7F File Offset: 0x008F9C7F
+		// Token: 0x170031E7 RID: 12775
+		// (get) Token: 0x0601E16A RID: 123242 RVA: 0x0090AAD7 File Offset: 0x00908CD7
+		// (set) Token: 0x0601E16B RID: 123243 RVA: 0x0090AAE7 File Offset: 0x00908CE7
 		public unsafe bool IsTick
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_KuroISMGroup_C.__PropertyOffset_5) != 0;
+				return *(base.NativePtr + (IntPtr)BP_KuroISMGroup_C.__PropertyOffset_IsTick) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_KuroISMGroup_C.__PropertyOffset_5) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_KuroISMGroup_C.__PropertyOffset_IsTick) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17003946 RID: 14662
-		// (get) Token: 0x06021FDE RID: 139230 RVA: 0x008FBA90 File Offset: 0x008F9C90
-		// (set) Token: 0x06021FDF RID: 139231 RVA: 0x008FBAA0 File Offset: 0x008F9CA0
+		// Token: 0x170031E8 RID: 12776
+		// (get) Token: 0x0601E16C RID: 123244 RVA: 0x0090AAF8 File Offset: 0x00908CF8
+		// (set) Token: 0x0601E16D RID: 123245 RVA: 0x0090AB08 File Offset: 0x00908D08
 		public unsafe float DeltaSeconds
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_KuroISMGroup_C.__PropertyOffset_6);
+				return *(base.NativePtr + (IntPtr)BP_KuroISMGroup_C.__PropertyOffset_DeltaSeconds);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_KuroISMGroup_C.__PropertyOffset_6) = value;
+				*(base.NativePtr + (IntPtr)BP_KuroISMGroup_C.__PropertyOffset_DeltaSeconds) = value;
 			}
 		}
 
-		// Token: 0x17003947 RID: 14663
-		// (get) Token: 0x06021FE0 RID: 139232 RVA: 0x008FBAB1 File Offset: 0x008F9CB1
-		// (set) Token: 0x06021FE1 RID: 139233 RVA: 0x008FBAC1 File Offset: 0x008F9CC1
+		// Token: 0x170031E9 RID: 12777
+		// (get) Token: 0x0601E16E RID: 123246 RVA: 0x0090AB19 File Offset: 0x00908D19
+		// (set) Token: 0x0601E16F RID: 123247 RVA: 0x0090AB29 File Offset: 0x00908D29
 		public unsafe float Time
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_KuroISMGroup_C.__PropertyOffset_7);
+				return *(base.NativePtr + (IntPtr)BP_KuroISMGroup_C.__PropertyOffset_Time);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_KuroISMGroup_C.__PropertyOffset_7) = value;
+				*(base.NativePtr + (IntPtr)BP_KuroISMGroup_C.__PropertyOffset_Time) = value;
 			}
 		}
 
-		// Token: 0x17003948 RID: 14664
-		// (get) Token: 0x06021FE2 RID: 139234 RVA: 0x008FBAD2 File Offset: 0x008F9CD2
-		// (set) Token: 0x06021FE3 RID: 139235 RVA: 0x008FBAE2 File Offset: 0x008F9CE2
+		// Token: 0x170031EA RID: 12778
+		// (get) Token: 0x0601E170 RID: 123248 RVA: 0x0090AB3A File Offset: 0x00908D3A
+		// (set) Token: 0x0601E171 RID: 123249 RVA: 0x0090AB4A File Offset: 0x00908D4A
 		public unsafe bool IsShow
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_KuroISMGroup_C.__PropertyOffset_8) != 0;
+				return *(base.NativePtr + (IntPtr)BP_KuroISMGroup_C.__PropertyOffset_IsShow) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_KuroISMGroup_C.__PropertyOffset_8) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)BP_KuroISMGroup_C.__PropertyOffset_IsShow) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x17003949 RID: 14665
-		// (get) Token: 0x06021FE4 RID: 139236 RVA: 0x008FBAF3 File Offset: 0x008F9CF3
-		// (set) Token: 0x06021FE5 RID: 139237 RVA: 0x008FBB07 File Offset: 0x008F9D07
+		// Token: 0x170031EB RID: 12779
+		// (get) Token: 0x0601E172 RID: 123250 RVA: 0x0090AB5B File Offset: 0x00908D5B
+		// (set) Token: 0x0601E173 RID: 123251 RVA: 0x0090AB6F File Offset: 0x00908D6F
 		public unsafe FName ParameterName
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_KuroISMGroup_C.__PropertyOffset_9);
+				return *(base.NativePtr + (IntPtr)BP_KuroISMGroup_C.__PropertyOffset_ParameterName);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_KuroISMGroup_C.__PropertyOffset_9) = value;
+				*(base.NativePtr + (IntPtr)BP_KuroISMGroup_C.__PropertyOffset_ParameterName) = value;
 			}
 		}
 
-		// Token: 0x1700394A RID: 14666
-		// (get) Token: 0x06021FE6 RID: 139238 RVA: 0x008FBB1C File Offset: 0x008F9D1C
-		// (set) Token: 0x06021FE7 RID: 139239 RVA: 0x008FBB2C File Offset: 0x008F9D2C
+		// Token: 0x170031EC RID: 12780
+		// (get) Token: 0x0601E174 RID: 123252 RVA: 0x0090AB84 File Offset: 0x00908D84
+		// (set) Token: 0x0601E175 RID: 123253 RVA: 0x0090AB94 File Offset: 0x00908D94
 		public unsafe float FloatPar_Start
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_KuroISMGroup_C.__PropertyOffset_10);
+				return *(base.NativePtr + (IntPtr)BP_KuroISMGroup_C.__PropertyOffset_FloatPar_Start);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_KuroISMGroup_C.__PropertyOffset_10) = value;
+				*(base.NativePtr + (IntPtr)BP_KuroISMGroup_C.__PropertyOffset_FloatPar_Start) = value;
 			}
 		}
 
-		// Token: 0x1700394B RID: 14667
-		// (get) Token: 0x06021FE8 RID: 139240 RVA: 0x008FBB3D File Offset: 0x008F9D3D
-		// (set) Token: 0x06021FE9 RID: 139241 RVA: 0x008FBB4D File Offset: 0x008F9D4D
+		// Token: 0x170031ED RID: 12781
+		// (get) Token: 0x0601E176 RID: 123254 RVA: 0x0090ABA5 File Offset: 0x00908DA5
+		// (set) Token: 0x0601E177 RID: 123255 RVA: 0x0090ABB5 File Offset: 0x00908DB5
 		public unsafe float FloatPar_End
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_KuroISMGroup_C.__PropertyOffset_11);
+				return *(base.NativePtr + (IntPtr)BP_KuroISMGroup_C.__PropertyOffset_FloatPar_End);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_KuroISMGroup_C.__PropertyOffset_11) = value;
+				*(base.NativePtr + (IntPtr)BP_KuroISMGroup_C.__PropertyOffset_FloatPar_End) = value;
 			}
 		}
 
-		// Token: 0x06021FEA RID: 139242 RVA: 0x008FBB60 File Offset: 0x008F9D60
+		// Token: 0x0601E178 RID: 123256 RVA: 0x0090ABC8 File Offset: 0x00908DC8
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void Timer(ref float ElapsedTime)
 		{
 			BP_KuroISMGroup_C.__Timer_FunctionParams* ptr = stackalloc BP_KuroISMGroup_C.__Timer_FunctionParams[(UIntPtr)23] + 15L / (long)sizeof(BP_KuroISMGroup_C.__Timer_FunctionParams) & -16L;
@@ -214,9 +213,8 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.BlueprintLevel
 			ElapsedTime = ptr->ElapsedTime;
 		}
 
-		// Token: 0x06021FEB RID: 139243 RVA: 0x008FBBB0 File Offset: 0x008F9DB0
+		// Token: 0x0601E179 RID: 123257 RVA: 0x0090AC18 File Offset: 0x00908E18
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void MaterialParameterGradient(float DeltalTime)
 		{
 			BP_KuroISMGroup_C.__MaterialParameterGradient_FunctionParams* ptr = stackalloc BP_KuroISMGroup_C.__MaterialParameterGradient_FunctionParams[(UIntPtr)295] + 15L / (long)sizeof(BP_KuroISMGroup_C.__MaterialParameterGradient_FunctionParams) & -16L;
@@ -225,33 +223,29 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.BlueprintLevel
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KuroISMGroup_C.__MaterialParameterGradient_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06021FEC RID: 139244 RVA: 0x008FBBF9 File Offset: 0x008F9DF9
+		// Token: 0x0601E17A RID: 123258 RVA: 0x0090AC61 File Offset: 0x00908E61
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void SeyLogicallyShowForAllChildren()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KuroISMGroup_C.__SeyLogicallyShowForAllChildren_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06021FED RID: 139245 RVA: 0x008FBC0D File Offset: 0x008F9E0D
+		// Token: 0x0601E17B RID: 123259 RVA: 0x0090AC75 File Offset: 0x00908E75
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void SeyLogicallyHiddenForAllChildren()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KuroISMGroup_C.__SeyLogicallyHiddenForAllChildren_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06021FEE RID: 139246 RVA: 0x008FBC21 File Offset: 0x008F9E21
+		// Token: 0x0601E17C RID: 123260 RVA: 0x0090AC89 File Offset: 0x00908E89
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public virtual void EditorValidCheck()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KuroISMGroup_C.__EditorValidCheck_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06021FEF RID: 139247 RVA: 0x008FBC38 File Offset: 0x008F9E38
+		// Token: 0x0601E17D RID: 123261 RVA: 0x0090ACA0 File Offset: 0x00908EA0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe virtual void IsEditor(ref bool IsEditor)
 		{
 			BP_KuroISMGroup_C.__IsEditor_FunctionParams* ptr = stackalloc BP_KuroISMGroup_C.__IsEditor_FunctionParams[(UIntPtr)20] + 15L / (long)sizeof(BP_KuroISMGroup_C.__IsEditor_FunctionParams) & -16L;
@@ -261,41 +255,36 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.BlueprintLevel
 			IsEditor = ptr->IsEditor;
 		}
 
-		// Token: 0x06021FF0 RID: 139248 RVA: 0x008FBC87 File Offset: 0x008F9E87
+		// Token: 0x0601E17E RID: 123262 RVA: 0x0090ACEF File Offset: 0x00908EEF
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void UserConstructionScript()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KuroISMGroup_C.__UserConstructionScript_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06021FF1 RID: 139249 RVA: 0x008FBC9B File Offset: 0x008F9E9B
+		// Token: 0x0601E17F RID: 123263 RVA: 0x0090AD03 File Offset: 0x00908F03
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void UserConstructionScript_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_KuroISMGroup_C.__UserConstructionScript_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_KuroISMGroup_C.__UserConstructionScript_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06021FF2 RID: 139250 RVA: 0x008FBCB0 File Offset: 0x008F9EB0
+		// Token: 0x0601E180 RID: 123264 RVA: 0x0090AD17 File Offset: 0x00908F17
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public override void ReceiveBeginPlay()
 		{
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KuroISMGroup_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06021FF3 RID: 139251 RVA: 0x008FBCC4 File Offset: 0x008F9EC4
+		// Token: 0x0601E181 RID: 123265 RVA: 0x0090AD2B File Offset: 0x00908F2B
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected virtual void ReceiveBeginPlay_Implementation()
 		{
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_KuroISMGroup_C.__ReceiveBeginPlay_NativeFunctionPtr, null, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_KuroISMGroup_C.__ReceiveBeginPlay_NativeFunctionPtr, null);
 		}
 
-		// Token: 0x06021FF4 RID: 139252 RVA: 0x008FBCDC File Offset: 0x008F9EDC
+		// Token: 0x0601E182 RID: 123266 RVA: 0x0090AD40 File Offset: 0x00908F40
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public unsafe override void ReceiveTick(float DeltaSeconds)
 		{
 			BP_KuroISMGroup_C.__ReceiveTick_FunctionParams* ptr = stackalloc BP_KuroISMGroup_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_KuroISMGroup_C.__ReceiveTick_FunctionParams) & -16L;
@@ -304,128 +293,127 @@ namespace AkiClient.Game.Aki.Render.RuntimeBP.Scene.BlueprintLevel
 			UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, BP_KuroISMGroup_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06021FF5 RID: 139253 RVA: 0x008FBD24 File Offset: 0x008F9F24
+		// Token: 0x0601E183 RID: 123267 RVA: 0x0090AD88 File Offset: 0x00908F88
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		protected unsafe virtual void ReceiveTick_Implementation(float DeltaSeconds)
 		{
 			BP_KuroISMGroup_C.__ReceiveTick_FunctionParams* ptr = stackalloc BP_KuroISMGroup_C.__ReceiveTick_FunctionParams[(UIntPtr)19] + 15L / (long)sizeof(BP_KuroISMGroup_C.__ReceiveTick_FunctionParams) & -16L;
 			UnrealReflectionUtils.InitializeStruct(BP_KuroISMGroup_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 1);
 			ptr->DeltaSeconds = DeltaSeconds;
-			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_KuroISMGroup_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr, 0);
+			UnrealReflectionUtils.CallUFunction(base.NativePtr, BP_KuroISMGroup_C.__ReceiveTick_NativeFunctionPtr, (void*)ptr);
 		}
 
-		// Token: 0x06021FF6 RID: 139254 RVA: 0x008FBD6B File Offset: 0x008F9F6B
+		// Token: 0x0601E184 RID: 123268 RVA: 0x0090ADCE File Offset: 0x00908FCE
 		protected BP_KuroISMGroup_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x04010A02 RID: 68098
+		// Token: 0x0400FE81 RID: 65153
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Game/Aki/Render/RuntimeBP/Scene/BlueprintLevel/BP_KuroISMGroup.BP_KuroISMGroup_C";
 
-		// Token: 0x04010A03 RID: 68099
+		// Token: 0x0400FE82 RID: 65154
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x04010A04 RID: 68100
+		// Token: 0x0400FE83 RID: 65155
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x04010A05 RID: 68101
-		internal static int __PropertyOffset_1;
+		// Token: 0x0400FE84 RID: 65156
+		internal static int __PropertyOffset_DefaultSceneRoot;
 
-		// Token: 0x04010A06 RID: 68102
-		internal static int __PropertyOffset_2;
+		// Token: 0x0400FE85 RID: 65157
+		internal static int __PropertyOffset_HideLogicallyOnBeginPlay;
 
-		// Token: 0x04010A07 RID: 68103
-		internal static int __PropertyOffset_3;
+		// Token: 0x0400FE86 RID: 65158
+		internal static int __PropertyOffset_DitherProgress;
 
-		// Token: 0x04010A08 RID: 68104
-		internal static int __PropertyOffset_4;
+		// Token: 0x0400FE87 RID: 65159
+		internal static int __PropertyOffset_Duration;
 
-		// Token: 0x04010A09 RID: 68105
-		internal static int __PropertyOffset_5;
+		// Token: 0x0400FE88 RID: 65160
+		internal static int __PropertyOffset_IsTick;
 
-		// Token: 0x04010A0A RID: 68106
-		internal static int __PropertyOffset_6;
+		// Token: 0x0400FE89 RID: 65161
+		internal static int __PropertyOffset_DeltaSeconds;
 
-		// Token: 0x04010A0B RID: 68107
-		internal static int __PropertyOffset_7;
+		// Token: 0x0400FE8A RID: 65162
+		internal static int __PropertyOffset_Time;
 
-		// Token: 0x04010A0C RID: 68108
-		internal static int __PropertyOffset_8;
+		// Token: 0x0400FE8B RID: 65163
+		internal static int __PropertyOffset_IsShow;
 
-		// Token: 0x04010A0D RID: 68109
-		internal static int __PropertyOffset_9;
+		// Token: 0x0400FE8C RID: 65164
+		internal static int __PropertyOffset_ParameterName;
 
-		// Token: 0x04010A0E RID: 68110
-		internal static int __PropertyOffset_10;
+		// Token: 0x0400FE8D RID: 65165
+		internal static int __PropertyOffset_FloatPar_Start;
 
-		// Token: 0x04010A0F RID: 68111
-		internal static int __PropertyOffset_11;
+		// Token: 0x0400FE8E RID: 65166
+		internal static int __PropertyOffset_FloatPar_End;
 
-		// Token: 0x04010A10 RID: 68112
+		// Token: 0x0400FE8F RID: 65167
 		private static IntPtr __Timer_NativeFunctionPtr;
 
-		// Token: 0x04010A11 RID: 68113
+		// Token: 0x0400FE90 RID: 65168
 		private static IntPtr __MaterialParameterGradient_NativeFunctionPtr;
 
-		// Token: 0x04010A12 RID: 68114
+		// Token: 0x0400FE91 RID: 65169
 		private static IntPtr __SeyLogicallyShowForAllChildren_NativeFunctionPtr;
 
-		// Token: 0x04010A13 RID: 68115
+		// Token: 0x0400FE92 RID: 65170
 		private static IntPtr __SeyLogicallyHiddenForAllChildren_NativeFunctionPtr;
 
-		// Token: 0x04010A14 RID: 68116
+		// Token: 0x0400FE93 RID: 65171
 		private static IntPtr __EditorValidCheck_NativeFunctionPtr;
 
-		// Token: 0x04010A15 RID: 68117
+		// Token: 0x0400FE94 RID: 65172
 		private static IntPtr __IsEditor_NativeFunctionPtr;
 
-		// Token: 0x04010A16 RID: 68118
+		// Token: 0x0400FE95 RID: 65173
 		private static IntPtr __UserConstructionScript_NativeFunctionPtr;
 
-		// Token: 0x04010A17 RID: 68119
+		// Token: 0x0400FE96 RID: 65174
 		private static IntPtr __ReceiveBeginPlay_NativeFunctionPtr;
 
-		// Token: 0x04010A18 RID: 68120
+		// Token: 0x0400FE97 RID: 65175
 		private static IntPtr __ReceiveTick_NativeFunctionPtr;
 
-		// Token: 0x02009D00 RID: 40192
+		// Token: 0x02008E19 RID: 36377
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 8)]
 		protected ref struct __Timer_FunctionParams
 		{
-			// Token: 0x04031413 RID: 201747
+			// Token: 0x0402CA58 RID: 182872
 			[FieldOffset(0)]
 			public float ElapsedTime;
 		}
 
-		// Token: 0x02009D01 RID: 40193
+		// Token: 0x02008E1A RID: 36378
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 280)]
 		protected ref struct __MaterialParameterGradient_FunctionParams
 		{
-			// Token: 0x04031414 RID: 201748
+			// Token: 0x0402CA59 RID: 182873
 			[FieldOffset(0)]
 			public float DeltalTime;
 		}
 
-		// Token: 0x02009D02 RID: 40194
+		// Token: 0x02008E1B RID: 36379
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 5)]
 		protected ref struct __IsEditor_FunctionParams
 		{
-			// Token: 0x04031415 RID: 201749
+			// Token: 0x0402CA5A RID: 182874
 			[FieldOffset(0)]
 			public bool IsEditor;
 		}
 
-		// Token: 0x02009D03 RID: 40195
+		// Token: 0x02008E1C RID: 36380
 		[CompilerFeatureRequired("RefStructs")]
 		[StructLayout(LayoutKind.Explicit, Size = 4)]
 		protected new ref struct __ReceiveTick_FunctionParams
 		{
-			// Token: 0x04031416 RID: 201750
+			// Token: 0x0402CA5B RID: 182875
 			[FieldOffset(0)]
 			public float DeltaSeconds;
 		}

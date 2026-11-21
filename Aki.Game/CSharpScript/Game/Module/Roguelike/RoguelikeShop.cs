@@ -12,18 +12,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004E27 RID: 20007
+	// Token: 0x02003DF0 RID: 15856
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class RoguelikeShop : UiViewBase
 	{
-		// Token: 0x06033980 RID: 211328 RVA: 0x00C11BF7 File Offset: 0x00C0FDF7
+		// Token: 0x060287EB RID: 165867 RVA: 0x00B5B12B File Offset: 0x00B5932B
 		[NullableContext(1)]
 		public RoguelikeShop(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06033981 RID: 211329 RVA: 0x00C11C00 File Offset: 0x00C0FE00
+		// Token: 0x060287EC RID: 165868 RVA: 0x00B5B134 File Offset: 0x00B59334
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 10;
@@ -62,14 +62,14 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06033982 RID: 211330 RVA: 0x00C11DD4 File Offset: 0x00C0FFD4
+		// Token: 0x060287ED RID: 165869 RVA: 0x00B5B308 File Offset: 0x00B59508
 		protected override void OnAfterShow()
 		{
 			this.LevelSequencePlayer.PlayLevelSequenceByName("Show", false, null, false);
 			this.UpdateData(this.ShopIndex);
 		}
 
-		// Token: 0x06033983 RID: 211331 RVA: 0x00C11E08 File Offset: 0x00C10008
+		// Token: 0x060287EE RID: 165870 RVA: 0x00B5B33C File Offset: 0x00B5953C
 		private void OnBtnRefresh()
 		{
 			IReadOnlyList<NumItem> costCurrency = this.Data.CostCurrency;
@@ -85,13 +85,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			RoguelikeController.Instance.RoguelikeRefreshGainRequest(-1);
 		}
 
-		// Token: 0x06033984 RID: 211332 RVA: 0x00C11E70 File Offset: 0x00C10070
+		// Token: 0x060287EF RID: 165871 RVA: 0x00B5B3A4 File Offset: 0x00B595A4
 		private void OnBtnInfo()
 		{
 			RoguelikeController.Instance.OpenRogueInfoView(null, true, true, ERogueInfoViewPage.Overview);
 		}
 
-		// Token: 0x06033985 RID: 211333 RVA: 0x00C11E80 File Offset: 0x00C10080
+		// Token: 0x060287F0 RID: 165872 RVA: 0x00B5B3B4 File Offset: 0x00B595B4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			RoguelikeShop.<OnBeforeStartAsync>d__13 <OnBeforeStartAsync>d__;
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06033986 RID: 211334 RVA: 0x00C11EC4 File Offset: 0x00C100C4
+		// Token: 0x060287F1 RID: 165873 RVA: 0x00B5B3F8 File Offset: 0x00B595F8
 		protected override void OnStart()
 		{
 			this.ElementPanel.Refresh(null);
@@ -114,7 +114,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.UpdateRefreshButton();
 		}
 
-		// Token: 0x06033987 RID: 211335 RVA: 0x00C11F4C File Offset: 0x00C1014C
+		// Token: 0x060287F2 RID: 165874 RVA: 0x00B5B480 File Offset: 0x00B59680
 		public void UpdateItemList()
 		{
 			List<RogueGainEntry> rogueGainEntryList = this.Data.RogueGainEntryList;
@@ -168,7 +168,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x06033988 RID: 211336 RVA: 0x00C12034 File Offset: 0x00C10234
+		// Token: 0x060287F3 RID: 165875 RVA: 0x00B5B568 File Offset: 0x00B59768
 		private void UpdateRefreshButton()
 		{
 			int value = this.Data.UseTime.Value;
@@ -202,7 +202,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			}
 		}
 
-		// Token: 0x06033989 RID: 211337 RVA: 0x00C121A0 File Offset: 0x00C103A0
+		// Token: 0x060287F4 RID: 165876 RVA: 0x00B5B6D4 File Offset: 0x00B598D4
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add<RogueGainEntry, int>(EEventName.RoguelikeInfoSelectedToken, new Action<RogueGainEntry, int>(this.OnSelectedToken));
@@ -210,7 +210,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			EventSystem.Instance.Add<RogueGainEntry, RogueGainEntry, bool, int, RoguelikeChooseDataResultResponse>(EEventName.RoguelikeChooseDataResult, new Action<RogueGainEntry, RogueGainEntry, bool, int, RoguelikeChooseDataResultResponse>(this.OnChooseData));
 		}
 
-		// Token: 0x0603398A RID: 211338 RVA: 0x00C12204 File Offset: 0x00C10404
+		// Token: 0x060287F5 RID: 165877 RVA: 0x00B5B738 File Offset: 0x00B59938
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.RoguelikeInfoSelectedToken, new Action<RogueGainEntry, int>(this.OnSelectedToken));
@@ -218,7 +218,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			EventSystem.Instance.Remove(EEventName.RoguelikeChooseDataResult, new Action<RogueGainEntry, RogueGainEntry, bool, int, RoguelikeChooseDataResultResponse>(this.OnChooseData));
 		}
 
-		// Token: 0x0603398B RID: 211339 RVA: 0x00C12268 File Offset: 0x00C10468
+		// Token: 0x060287F6 RID: 165878 RVA: 0x00B5B79C File Offset: 0x00B5999C
 		[NullableContext(1)]
 		private void OnChooseData(RogueGainEntry buyToken, RogueGainEntry oldData, bool isSuccess, int index, RoguelikeChooseDataResultResponse response)
 		{
@@ -234,7 +234,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			UiManager.Instance.OpenView(EUiViewName.CommonSelectResultView, new RogueSelectResult(RoguelikeModel.Instance.RogueInfo.PhantomEntry, oldData, buyToken, true), null);
 		}
 
-		// Token: 0x0603398C RID: 211340 RVA: 0x00C122C8 File Offset: 0x00C104C8
+		// Token: 0x060287F7 RID: 165879 RVA: 0x00B5B7FC File Offset: 0x00B599FC
 		[NullableContext(1)]
 		private void OnSelectedToken(RogueGainEntry token, int index)
 		{
@@ -250,13 +250,13 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ElementPanel.Refresh(null);
 		}
 
-		// Token: 0x0603398D RID: 211341 RVA: 0x00C12348 File Offset: 0x00C10548
+		// Token: 0x060287F8 RID: 165880 RVA: 0x00B5B87C File Offset: 0x00B59A7C
 		protected override void OnBeforeHide()
 		{
 			this.LevelSequencePlayer.PlayLevelSequenceByName("Hide", false, null, false);
 		}
 
-		// Token: 0x0603398E RID: 211342 RVA: 0x00C12370 File Offset: 0x00C10570
+		// Token: 0x060287F9 RID: 165881 RVA: 0x00B5B8A4 File Offset: 0x00B59AA4
 		private void UpdateData(int index)
 		{
 			this.ShopIndex = index;
@@ -265,14 +265,14 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.UpdateRefreshButton();
 		}
 
-		// Token: 0x0603398F RID: 211343 RVA: 0x00C12396 File Offset: 0x00C10596
+		// Token: 0x060287FA RID: 165882 RVA: 0x00B5B8CA File Offset: 0x00B59ACA
 		[NullableContext(1)]
 		private RogueInfoViewTokenDetailGrid OnCreateGrid()
 		{
 			return new RogueInfoViewTokenDetailGrid();
 		}
 
-		// Token: 0x0401B5E1 RID: 112097
+		// Token: 0x04015FB4 RID: 90036
 		[Nullable(new byte[]
 		{
 			2,
@@ -281,56 +281,56 @@ namespace CSharpScript.Game.Module.Roguelike
 		})]
 		public LoopScrollView<RogueInfoViewTokenDetailGrid, RogueGainEntry> LoopScrollView;
 
-		// Token: 0x0401B5E2 RID: 112098
+		// Token: 0x04015FB5 RID: 90037
 		public ElementPanel ElementPanel;
 
-		// Token: 0x0401B5E3 RID: 112099
+		// Token: 0x04015FB6 RID: 90038
 		public RoguelikeShopDetail ShopDetailPanel;
 
-		// Token: 0x0401B5E4 RID: 112100
+		// Token: 0x04015FB7 RID: 90039
 		public RoguelikeChooseData Data;
 
-		// Token: 0x0401B5E5 RID: 112101
+		// Token: 0x04015FB8 RID: 90040
 		public int ShopIndex;
 
-		// Token: 0x0401B5E6 RID: 112102
+		// Token: 0x04015FB9 RID: 90041
 		public LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401B5E7 RID: 112103
+		// Token: 0x04015FBA RID: 90042
 		public PopupCaptionItem CaptionItem;
 
-		// Token: 0x0200AFD0 RID: 45008
+		// Token: 0x02009A02 RID: 39426
 		[NullableContext(0)]
 		public class ERoguelikeShopDefine
 		{
-			// Token: 0x040355FB RID: 218619
+			// Token: 0x0403002B RID: 196651
 			public const int CaptionItem = 0;
 
-			// Token: 0x040355FC RID: 218620
+			// Token: 0x0403002C RID: 196652
 			public const int PanelInfo = 1;
 
-			// Token: 0x040355FD RID: 218621
+			// Token: 0x0403002D RID: 196653
 			public const int ElementPanel = 2;
 
-			// Token: 0x040355FE RID: 218622
+			// Token: 0x0403002E RID: 196654
 			public const int BtnRefresh = 3;
 
-			// Token: 0x040355FF RID: 218623
+			// Token: 0x0403002F RID: 196655
 			public const int TxtRefresh = 4;
 
-			// Token: 0x04035600 RID: 218624
+			// Token: 0x04030030 RID: 196656
 			public const int LoopView = 5;
 
-			// Token: 0x04035601 RID: 218625
+			// Token: 0x04030031 RID: 196657
 			public const int LoopViewItem = 6;
 
-			// Token: 0x04035602 RID: 218626
+			// Token: 0x04030032 RID: 196658
 			public const int RefreshItemIcon = 7;
 
-			// Token: 0x04035603 RID: 218627
+			// Token: 0x04030033 RID: 196659
 			public const int RefreshText = 8;
 
-			// Token: 0x04035604 RID: 218628
+			// Token: 0x04030034 RID: 196660
 			public const int BtnInfo = 9;
 		}
 	}

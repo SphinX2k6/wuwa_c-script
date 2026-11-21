@@ -10,18 +10,18 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200162E RID: 5678
+// Token: 0x02000AE6 RID: 2790
 [NullableContext(2)]
 [Nullable(0)]
 public class WheelTowerRecordView : UiViewBase
 {
-	// Token: 0x06009FB8 RID: 40888 RVA: 0x002317AB File Offset: 0x0022F9AB
+	// Token: 0x06007396 RID: 29590 RVA: 0x0023B5F7 File Offset: 0x002397F7
 	[NullableContext(1)]
 	public WheelTowerRecordView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06009FB9 RID: 40889 RVA: 0x002317B4 File Offset: 0x0022F9B4
+	// Token: 0x06007397 RID: 29591 RVA: 0x0023B600 File Offset: 0x00239800
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 10;
@@ -58,7 +58,7 @@ public class WheelTowerRecordView : UiViewBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06009FBA RID: 40890 RVA: 0x00231968 File Offset: 0x0022FB68
+	// Token: 0x06007398 RID: 29592 RVA: 0x0023B7B4 File Offset: 0x002399B4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		WheelTowerRecordView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -69,7 +69,7 @@ public class WheelTowerRecordView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06009FBB RID: 40891 RVA: 0x002319AB File Offset: 0x0022FBAB
+	// Token: 0x06007399 RID: 29593 RVA: 0x0023B7F7 File Offset: 0x002399F7
 	public void RefreshView()
 	{
 		WheelTowerRecordScoreInfoPanel scoreInfoPanel = this.ScoreInfoPanel;
@@ -85,7 +85,7 @@ public class WheelTowerRecordView : UiViewBase
 		this.RefreshBossList();
 	}
 
-	// Token: 0x06009FBC RID: 40892 RVA: 0x002319D8 File Offset: 0x0022FBD8
+	// Token: 0x0600739A RID: 29594 RVA: 0x0023B824 File Offset: 0x00239A24
 	public void RefreshBossList()
 	{
 		int selectedRound = WheelTowerModel.Instance.SelectedRound;
@@ -107,7 +107,7 @@ public class WheelTowerRecordView : UiViewBase
 		bossLayout.RefreshByData(list, null, false);
 	}
 
-	// Token: 0x06009FBD RID: 40893 RVA: 0x00231A7C File Offset: 0x0022FC7C
+	// Token: 0x0600739B RID: 29595 RVA: 0x0023B8C8 File Offset: 0x00239AC8
 	private void OnTeamItemClick(int index)
 	{
 		GenericScrollViewNew<WheelTowerRecordTeamItem, int> teamScrollView = this.TeamScrollView;
@@ -120,7 +120,7 @@ public class WheelTowerRecordView : UiViewBase
 		this.RefreshView();
 	}
 
-	// Token: 0x06009FBE RID: 40894 RVA: 0x00231AC3 File Offset: 0x0022FCC3
+	// Token: 0x0600739C RID: 29596 RVA: 0x0023B90F File Offset: 0x00239B0F
 	[NullableContext(1)]
 	private WheelTowerRecordTeamItem CreateTeamItem()
 	{
@@ -130,14 +130,14 @@ public class WheelTowerRecordView : UiViewBase
 		};
 	}
 
-	// Token: 0x06009FBF RID: 40895 RVA: 0x00231ADC File Offset: 0x0022FCDC
+	// Token: 0x0600739D RID: 29597 RVA: 0x0023B928 File Offset: 0x00239B28
 	private void OnCloseBtnClick()
 	{
 		WheelTowerModel.Instance.UpdateSelectRound(this.FirstSelectedIndex, false);
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06009FC0 RID: 40896 RVA: 0x00231AF8 File Offset: 0x0022FCF8
+	// Token: 0x0600739E RID: 29598 RVA: 0x0023B944 File Offset: 0x00239B44
 	private void OnResetBtnClick()
 	{
 		if (!WheelTowerModel.Instance.HasChallengeAnyRound(null))
@@ -153,13 +153,13 @@ public class WheelTowerRecordView : UiViewBase
 		ConfirmBoxController.Instance.ShowConfirmBoxNew(confirmBoxDataNew);
 	}
 
-	// Token: 0x04004869 RID: 18537
+	// Token: 0x0400490F RID: 18703
 	private int FirstSelectedIndex;
 
-	// Token: 0x0400486A RID: 18538
+	// Token: 0x04004910 RID: 18704
 	private PopupCaptionItem CaptionItem;
 
-	// Token: 0x0400486B RID: 18539
+	// Token: 0x04004911 RID: 18705
 	[Nullable(new byte[]
 	{
 		2,
@@ -167,7 +167,7 @@ public class WheelTowerRecordView : UiViewBase
 	})]
 	private GenericScrollViewNew<WheelTowerRecordTeamItem, int> TeamScrollView;
 
-	// Token: 0x0400486C RID: 18540
+	// Token: 0x04004912 RID: 18706
 	[Nullable(new byte[]
 	{
 		2,
@@ -176,9 +176,9 @@ public class WheelTowerRecordView : UiViewBase
 	})]
 	private GenericLayout<WheelTowerRecordBossItem, IBossItemData> BossLayout;
 
-	// Token: 0x0400486D RID: 18541
+	// Token: 0x04004913 RID: 18707
 	private WheelTowerRecordScoreInfoPanel ScoreInfoPanel;
 
-	// Token: 0x0400486E RID: 18542
+	// Token: 0x04004914 RID: 18708
 	private WheelTowerRecordTeamInfoPanel TeamInfoPanel;
 }

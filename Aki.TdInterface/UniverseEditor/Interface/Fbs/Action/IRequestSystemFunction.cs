@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006E79 RID: 28281
+	// Token: 0x020075FD RID: 30205
 	public struct IRequestSystemFunction : IFlatbufferObject
 	{
-		// Token: 0x1700D2A6 RID: 53926
-		// (get) Token: 0x06031FC1 RID: 204737 RVA: 0x006C304D File Offset: 0x006C124D
+		// Token: 0x1700DDFD RID: 56829
+		// (get) Token: 0x06035001 RID: 217089 RVA: 0x0071ED81 File Offset: 0x0071CF81
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031FC2 RID: 204738 RVA: 0x006C305A File Offset: 0x006C125A
+		// Token: 0x06035002 RID: 217090 RVA: 0x0071ED8E File Offset: 0x0071CF8E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06031FC3 RID: 204739 RVA: 0x006C3064 File Offset: 0x006C1264
+		// Token: 0x06035003 RID: 217091 RVA: 0x0071ED98 File Offset: 0x0071CF98
 		public static IRequestSystemFunction GetRootAsIRequestSystemFunction(ByteBuffer _bb)
 		{
 			return IRequestSystemFunction.GetRootAsIRequestSystemFunction(_bb, default(IRequestSystemFunction));
 		}
 
-		// Token: 0x06031FC4 RID: 204740 RVA: 0x006C3080 File Offset: 0x006C1280
+		// Token: 0x06035004 RID: 217092 RVA: 0x0071EDB4 File Offset: 0x0071CFB4
 		public static IRequestSystemFunction GetRootAsIRequestSystemFunction(ByteBuffer _bb, IRequestSystemFunction obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06031FC5 RID: 204741 RVA: 0x006C309D File Offset: 0x006C129D
+		// Token: 0x06035005 RID: 217093 RVA: 0x0071EDD1 File Offset: 0x0071CFD1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06031FC6 RID: 204742 RVA: 0x006C30AC File Offset: 0x006C12AC
+		// Token: 0x06035006 RID: 217094 RVA: 0x0071EDE0 File Offset: 0x0071CFE0
 		public IRequestSystemFunction __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700D2A7 RID: 53927
-		// (get) Token: 0x06031FC7 RID: 204743 RVA: 0x006C30BC File Offset: 0x006C12BC
+		// Token: 0x1700DDFE RID: 56830
+		// (get) Token: 0x06035007 RID: 217095 RVA: 0x0071EDF0 File Offset: 0x0071CFF0
 		public IBuyGoods? SystemFunction
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x06031FC8 RID: 204744 RVA: 0x006C3119 File Offset: 0x006C1319
+		// Token: 0x06035008 RID: 217096 RVA: 0x0071EE4D File Offset: 0x0071D04D
 		public static Offset<IRequestSystemFunction> CreateIRequestSystemFunction(FlatBufferBuilder builder, Offset<IBuyGoods> SystemFunctionOffset = default(Offset<IBuyGoods>))
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IRequestSystemFunction.EndIRequestSystemFunction(builder);
 		}
 
-		// Token: 0x06031FC9 RID: 204745 RVA: 0x006C312F File Offset: 0x006C132F
+		// Token: 0x06035009 RID: 217097 RVA: 0x0071EE63 File Offset: 0x0071D063
 		public static void StartIRequestSystemFunction(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x06031FCA RID: 204746 RVA: 0x006C3138 File Offset: 0x006C1338
+		// Token: 0x0603500A RID: 217098 RVA: 0x0071EE6C File Offset: 0x0071D06C
 		public static void AddSystemFunction(FlatBufferBuilder builder, Offset<IBuyGoods> systemFunctionOffset)
 		{
 			builder.AddOffset(0, systemFunctionOffset.Value, 0);
 		}
 
-		// Token: 0x06031FCB RID: 204747 RVA: 0x006C3148 File Offset: 0x006C1348
+		// Token: 0x0603500B RID: 217099 RVA: 0x0071EE7C File Offset: 0x0071D07C
 		public static Offset<IRequestSystemFunction> EndIRequestSystemFunction(FlatBufferBuilder builder)
 		{
 			return new Offset<IRequestSystemFunction>(builder.EndTable());
 		}
 
-		// Token: 0x06031FCC RID: 204748 RVA: 0x006C3158 File Offset: 0x006C1358
+		// Token: 0x0603500C RID: 217100 RVA: 0x0071EE8C File Offset: 0x0071D08C
 		public IRequestSystemFunctionT UnPack()
 		{
 			IRequestSystemFunctionT requestSystemFunctionT = new IRequestSystemFunctionT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return requestSystemFunctionT;
 		}
 
-		// Token: 0x06031FCD RID: 204749 RVA: 0x006C3174 File Offset: 0x006C1374
+		// Token: 0x0603500D RID: 217101 RVA: 0x0071EEA8 File Offset: 0x0071D0A8
 		public void UnPackTo(IRequestSystemFunctionT _o)
 		{
 			_o.SystemFunction = ((this.SystemFunction != null) ? this.SystemFunction.Value.UnPack() : null);
 		}
 
-		// Token: 0x06031FCE RID: 204750 RVA: 0x006C31B0 File Offset: 0x006C13B0
+		// Token: 0x0603500E RID: 217102 RVA: 0x0071EEE4 File Offset: 0x0071D0E4
 		public static Offset<IRequestSystemFunction> Pack(FlatBufferBuilder builder, IRequestSystemFunctionT _o)
 		{
 			if (_o == null)
@@ -113,7 +113,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IRequestSystemFunction.CreateIRequestSystemFunction(builder, systemFunctionOffset);
 		}
 
-		// Token: 0x04011866 RID: 71782
+		// Token: 0x040127EB RID: 75755
 		private Table __p;
 	}
 }

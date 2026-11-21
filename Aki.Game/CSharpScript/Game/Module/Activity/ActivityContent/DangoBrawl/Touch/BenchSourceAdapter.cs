@@ -10,13 +10,13 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 {
-	// Token: 0x02006852 RID: 26706
+	// Token: 0x020057A2 RID: 22434
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class BenchSourceAdapter : IDragSourceAdapter
 	{
-		// Token: 0x17009762 RID: 38754
-		// (get) Token: 0x06042ACE RID: 273102 RVA: 0x01037F24 File Offset: 0x01036124
+		// Token: 0x17006AA3 RID: 27299
+		// (get) Token: 0x06037623 RID: 226851 RVA: 0x00F79470 File Offset: 0x00F77670
 		public EDragSourceKind Kind
 		{
 			get
@@ -25,8 +25,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			}
 		}
 
-		// Token: 0x17009763 RID: 38755
-		// (get) Token: 0x06042ACF RID: 273103 RVA: 0x01037F27 File Offset: 0x01036127
+		// Token: 0x17006AA4 RID: 27300
+		// (get) Token: 0x06037624 RID: 226852 RVA: 0x00F79473 File Offset: 0x00F77673
 		private static DangoBrawlRollbackController RollbackCtrl
 		{
 			get
@@ -35,8 +35,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			}
 		}
 
-		// Token: 0x17009764 RID: 38756
-		// (get) Token: 0x06042AD0 RID: 273104 RVA: 0x01037F33 File Offset: 0x01036133
+		// Token: 0x17006AA5 RID: 27301
+		// (get) Token: 0x06037625 RID: 226853 RVA: 0x00F7947F File Offset: 0x00F7767F
 		[Nullable(2)]
 		private static DangoBrawlItemViewRegistry Registry
 		{
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			}
 		}
 
-		// Token: 0x06042AD1 RID: 273105 RVA: 0x01037F3F File Offset: 0x0103613F
+		// Token: 0x06037626 RID: 226854 RVA: 0x00F7948B File Offset: 0x00F7768B
 		public BenchSourceAdapter(ActivityDangoBrawlData data, DragContext context, DangoBrawlPlatformState platformState)
 		{
 			this.Data = data;
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			this.PlatformState = platformState;
 		}
 
-		// Token: 0x06042AD2 RID: 273106 RVA: 0x01037F5C File Offset: 0x0103615C
+		// Token: 0x06037627 RID: 226855 RVA: 0x00F794A8 File Offset: 0x00F776A8
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			}, null));
 		}
 
-		// Token: 0x06042AD3 RID: 273107 RVA: 0x01038034 File Offset: 0x01036234
+		// Token: 0x06037628 RID: 226856 RVA: 0x00F79580 File Offset: 0x00F77780
 		public void Cancel(IDragVisual visual, [Nullable(2)] ItemSucAnchor anchor)
 		{
 			visual.DraggableItem.SetDraggableActive(true);
@@ -108,7 +108,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			EventSystem.Instance.Emit<EBagOpKind, int>(EEventName.OnDangoBrawlBagOperated, EBagOpKind.BenchToBench, visual.SourceUid);
 		}
 
-		// Token: 0x06042AD4 RID: 273108 RVA: 0x010380E0 File Offset: 0x010362E0
+		// Token: 0x06037629 RID: 226857 RVA: 0x00F7962C File Offset: 0x00F7782C
 		[return: Nullable(0)]
 		public UniTask<bool> Commit(IDragVisual visual, DragTarget target, [Nullable(2)] ItemSucAnchor anchor, [Nullable(new byte[]
 		{
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			return <Commit>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042AD5 RID: 273109 RVA: 0x0103813C File Offset: 0x0103633C
+		// Token: 0x0603762A RID: 226858 RVA: 0x00F79688 File Offset: 0x00F77888
 		private bool CommitBenchToBench(IDragVisual visual, DragTarget target)
 		{
 			if (target.Bench == null)
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			return true;
 		}
 
-		// Token: 0x06042AD6 RID: 273110 RVA: 0x010381B0 File Offset: 0x010363B0
+		// Token: 0x0603762B RID: 226859 RVA: 0x00F796FC File Offset: 0x00F778FC
 		[return: Nullable(0)]
 		private UniTask<bool> CommitBenchToBag(ActivityDangoBrawlController controller, IDragVisual visual, DragTarget target, DangoBrawlBenchItemData benchItem, [Nullable(new byte[]
 		{
@@ -160,7 +160,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			return <CommitBenchToBag>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042AD7 RID: 273111 RVA: 0x01038220 File Offset: 0x01036420
+		// Token: 0x0603762C RID: 226860 RVA: 0x00F7976C File Offset: 0x00F7796C
 		[return: Nullable(0)]
 		private static UniTask<bool> CommitBenchToShop(ActivityDangoBrawlController controller, IDragVisual visual)
 		{
@@ -173,7 +173,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			return <CommitBenchToShop>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042AD8 RID: 273112 RVA: 0x0103826C File Offset: 0x0103646C
+		// Token: 0x0603762D RID: 226861 RVA: 0x00F797B8 File Offset: 0x00F779B8
 		[return: Nullable(2)]
 		public OpSnapshot ApplyLocal(IDragVisual visual, DragTarget target, [Nullable(2)] ItemSucAnchor anchor)
 		{
@@ -200,7 +200,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			return null;
 		}
 
-		// Token: 0x06042AD9 RID: 273113 RVA: 0x010382CC File Offset: 0x010364CC
+		// Token: 0x0603762E RID: 226862 RVA: 0x00F79818 File Offset: 0x00F77A18
 		public DangoBrawlBagOpInfo[] BuildServerOpInfo(IDragVisual visual, DragTarget target)
 		{
 			if (target.Kind != EDragTargetKind.Bag || target.Bag == null)
@@ -221,7 +221,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			};
 		}
 
-		// Token: 0x06042ADA RID: 273114 RVA: 0x01038374 File Offset: 0x01036574
+		// Token: 0x0603762F RID: 226863 RVA: 0x00F798C0 File Offset: 0x00F77AC0
 		[return: Nullable(2)]
 		private OpSnapshot ApplyLocalBenchToBench(IDragVisual visual, DragTarget target)
 		{
@@ -234,7 +234,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			return BenchSourceAdapter.RollbackCtrl.TakeSnapshot(Array.Empty<OpSnapshotItem>());
 		}
 
-		// Token: 0x06042ADB RID: 273115 RVA: 0x010383F4 File Offset: 0x010365F4
+		// Token: 0x06037630 RID: 226864 RVA: 0x00F79940 File Offset: 0x00F77B40
 		[return: Nullable(2)]
 		private OpSnapshot ApplyLocalBenchToBag(IDragVisual visual, DragTarget target, DangoBrawlBenchItemData benchItem)
 		{
@@ -264,13 +264,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			});
 		}
 
-		// Token: 0x04022B73 RID: 142195
+		// Token: 0x0401D3D0 RID: 119760
 		private readonly ActivityDangoBrawlData Data;
 
-		// Token: 0x04022B74 RID: 142196
+		// Token: 0x0401D3D1 RID: 119761
 		private readonly DragContext Context;
 
-		// Token: 0x04022B75 RID: 142197
+		// Token: 0x0401D3D2 RID: 119762
 		private readonly DangoBrawlPlatformState PlatformState;
 	}
 }

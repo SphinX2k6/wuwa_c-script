@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Var
 {
-	// Token: 0x02003AB4 RID: 15028
+	// Token: 0x02003EB6 RID: 16054
 	public struct IPosAndRot : IFlatbufferObject
 	{
-		// Token: 0x1700670F RID: 26383
-		// (get) Token: 0x060146CE RID: 83662 RVA: 0x002FA304 File Offset: 0x002F8504
+		// Token: 0x17006CAA RID: 27818
+		// (get) Token: 0x06015B78 RID: 88952 RVA: 0x00320594 File Offset: 0x0031E794
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x060146CF RID: 83663 RVA: 0x002FA311 File Offset: 0x002F8511
+		// Token: 0x06015B79 RID: 88953 RVA: 0x003205A1 File Offset: 0x0031E7A1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060146D0 RID: 83664 RVA: 0x002FA318 File Offset: 0x002F8518
+		// Token: 0x06015B7A RID: 88954 RVA: 0x003205A8 File Offset: 0x0031E7A8
 		public static IPosAndRot GetRootAsIPosAndRot(ByteBuffer _bb)
 		{
 			return IPosAndRot.GetRootAsIPosAndRot(_bb, default(IPosAndRot));
 		}
 
-		// Token: 0x060146D1 RID: 83665 RVA: 0x002FA334 File Offset: 0x002F8534
+		// Token: 0x06015B7B RID: 88955 RVA: 0x003205C4 File Offset: 0x0031E7C4
 		public static IPosAndRot GetRootAsIPosAndRot(ByteBuffer _bb, IPosAndRot obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060146D2 RID: 83666 RVA: 0x002FA351 File Offset: 0x002F8551
+		// Token: 0x06015B7C RID: 88956 RVA: 0x003205E1 File Offset: 0x0031E7E1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060146D3 RID: 83667 RVA: 0x002FA360 File Offset: 0x002F8560
+		// Token: 0x06015B7D RID: 88957 RVA: 0x003205F0 File Offset: 0x0031E7F0
 		public IPosAndRot __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17006710 RID: 26384
-		// (get) Token: 0x060146D4 RID: 83668 RVA: 0x002FA370 File Offset: 0x002F8570
+		// Token: 0x17006CAB RID: 27819
+		// (get) Token: 0x06015B7E RID: 88958 RVA: 0x00320600 File Offset: 0x0031E800
 		public float X
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x17006711 RID: 26385
-		// (get) Token: 0x060146D5 RID: 83669 RVA: 0x002FA3B0 File Offset: 0x002F85B0
+		// Token: 0x17006CAC RID: 27820
+		// (get) Token: 0x06015B7F RID: 88959 RVA: 0x00320640 File Offset: 0x0031E840
 		public float Y
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x17006712 RID: 26386
-		// (get) Token: 0x060146D6 RID: 83670 RVA: 0x002FA3F0 File Offset: 0x002F85F0
+		// Token: 0x17006CAD RID: 27821
+		// (get) Token: 0x06015B80 RID: 88960 RVA: 0x00320680 File Offset: 0x0031E880
 		public float Z
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x17006713 RID: 26387
-		// (get) Token: 0x060146D7 RID: 83671 RVA: 0x002FA430 File Offset: 0x002F8630
+		// Token: 0x17006CAE RID: 27822
+		// (get) Token: 0x06015B81 RID: 88961 RVA: 0x003206C0 File Offset: 0x0031E8C0
 		public float A
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x17006714 RID: 26388
-		// (get) Token: 0x060146D8 RID: 83672 RVA: 0x002FA474 File Offset: 0x002F8674
+		// Token: 0x17006CAF RID: 27823
+		// (get) Token: 0x06015B82 RID: 88962 RVA: 0x00320704 File Offset: 0x0031E904
 		public float Roll
 		{
 			get
@@ -122,8 +122,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x17006715 RID: 26389
-		// (get) Token: 0x060146D9 RID: 83673 RVA: 0x002FA4B8 File Offset: 0x002F86B8
+		// Token: 0x17006CB0 RID: 27824
+		// (get) Token: 0x06015B83 RID: 88963 RVA: 0x00320748 File Offset: 0x0031E948
 		public float Pitch
 		{
 			get
@@ -137,8 +137,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x17006716 RID: 26390
-		// (get) Token: 0x060146DA RID: 83674 RVA: 0x002FA4FC File Offset: 0x002F86FC
+		// Token: 0x17006CB1 RID: 27825
+		// (get) Token: 0x06015B84 RID: 88964 RVA: 0x0032078C File Offset: 0x0031E98C
 		public byte NullMask
 		{
 			get
@@ -152,7 +152,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			}
 		}
 
-		// Token: 0x060146DB RID: 83675 RVA: 0x002FA53C File Offset: 0x002F873C
+		// Token: 0x06015B85 RID: 88965 RVA: 0x003207CC File Offset: 0x0031E9CC
 		public static Offset<IPosAndRot> CreateIPosAndRot(FlatBufferBuilder builder, float X = 0f, float Y = 0f, float Z = 0f, float A = 0f, float Roll = 0f, float Pitch = 0f, byte NullMask = 0)
 		{
 			builder.StartTable(7);
@@ -166,61 +166,61 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return IPosAndRot.EndIPosAndRot(builder);
 		}
 
-		// Token: 0x060146DC RID: 83676 RVA: 0x002FA58B File Offset: 0x002F878B
+		// Token: 0x06015B86 RID: 88966 RVA: 0x0032081B File Offset: 0x0031EA1B
 		public static void StartIPosAndRot(FlatBufferBuilder builder)
 		{
 			builder.StartTable(7);
 		}
 
-		// Token: 0x060146DD RID: 83677 RVA: 0x002FA594 File Offset: 0x002F8794
+		// Token: 0x06015B87 RID: 88967 RVA: 0x00320824 File Offset: 0x0031EA24
 		public static void AddX(FlatBufferBuilder builder, float x)
 		{
 			builder.AddFloat(0, x, 0.0);
 		}
 
-		// Token: 0x060146DE RID: 83678 RVA: 0x002FA5A7 File Offset: 0x002F87A7
+		// Token: 0x06015B88 RID: 88968 RVA: 0x00320837 File Offset: 0x0031EA37
 		public static void AddY(FlatBufferBuilder builder, float y)
 		{
 			builder.AddFloat(1, y, 0.0);
 		}
 
-		// Token: 0x060146DF RID: 83679 RVA: 0x002FA5BA File Offset: 0x002F87BA
+		// Token: 0x06015B89 RID: 88969 RVA: 0x0032084A File Offset: 0x0031EA4A
 		public static void AddZ(FlatBufferBuilder builder, float z)
 		{
 			builder.AddFloat(2, z, 0.0);
 		}
 
-		// Token: 0x060146E0 RID: 83680 RVA: 0x002FA5CD File Offset: 0x002F87CD
+		// Token: 0x06015B8A RID: 88970 RVA: 0x0032085D File Offset: 0x0031EA5D
 		public static void AddA(FlatBufferBuilder builder, float a)
 		{
 			builder.AddFloat(3, a, 0.0);
 		}
 
-		// Token: 0x060146E1 RID: 83681 RVA: 0x002FA5E0 File Offset: 0x002F87E0
+		// Token: 0x06015B8B RID: 88971 RVA: 0x00320870 File Offset: 0x0031EA70
 		public static void AddRoll(FlatBufferBuilder builder, float roll)
 		{
 			builder.AddFloat(4, roll, 0.0);
 		}
 
-		// Token: 0x060146E2 RID: 83682 RVA: 0x002FA5F3 File Offset: 0x002F87F3
+		// Token: 0x06015B8C RID: 88972 RVA: 0x00320883 File Offset: 0x0031EA83
 		public static void AddPitch(FlatBufferBuilder builder, float pitch)
 		{
 			builder.AddFloat(5, pitch, 0.0);
 		}
 
-		// Token: 0x060146E3 RID: 83683 RVA: 0x002FA606 File Offset: 0x002F8806
+		// Token: 0x06015B8D RID: 88973 RVA: 0x00320896 File Offset: 0x0031EA96
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(6, nullMask, 0);
 		}
 
-		// Token: 0x060146E4 RID: 83684 RVA: 0x002FA611 File Offset: 0x002F8811
+		// Token: 0x06015B8E RID: 88974 RVA: 0x003208A1 File Offset: 0x0031EAA1
 		public static Offset<IPosAndRot> EndIPosAndRot(FlatBufferBuilder builder)
 		{
 			return new Offset<IPosAndRot>(builder.EndTable());
 		}
 
-		// Token: 0x060146E5 RID: 83685 RVA: 0x002FA620 File Offset: 0x002F8820
+		// Token: 0x06015B8F RID: 88975 RVA: 0x003208B0 File Offset: 0x0031EAB0
 		public IPosAndRotT UnPack()
 		{
 			IPosAndRotT posAndRotT = new IPosAndRotT();
@@ -228,7 +228,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return posAndRotT;
 		}
 
-		// Token: 0x060146E6 RID: 83686 RVA: 0x002FA63C File Offset: 0x002F883C
+		// Token: 0x06015B90 RID: 88976 RVA: 0x003208CC File Offset: 0x0031EACC
 		public void UnPackTo(IPosAndRotT _o)
 		{
 			_o.X = this.X;
@@ -240,7 +240,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x060146E7 RID: 83687 RVA: 0x002FA6A0 File Offset: 0x002F88A0
+		// Token: 0x06015B91 RID: 88977 RVA: 0x00320930 File Offset: 0x0031EB30
 		public static Offset<IPosAndRot> Pack(FlatBufferBuilder builder, IPosAndRotT _o)
 		{
 			if (_o == null)
@@ -250,7 +250,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Var
 			return IPosAndRot.CreateIPosAndRot(builder, _o.X, _o.Y, _o.Z, _o.A, _o.Roll, _o.Pitch, _o.NullMask);
 		}
 
-		// Token: 0x0400AF4D RID: 44877
+		// Token: 0x0400B8BA RID: 47290
 		private Table __p;
 	}
 }

@@ -1,30 +1,30 @@
 ﻿using System;
 
-// Token: 0x0200153B RID: 5435
+// Token: 0x020009F3 RID: 2547
 public interface ITurntableReward
 {
-	// Token: 0x17000D54 RID: 3412
-	// (get) Token: 0x06009B6C RID: 39788
-	// (set) Token: 0x06009B6D RID: 39789
+	// Token: 0x17000D75 RID: 3445
+	// (get) Token: 0x06006F4A RID: 28490
+	// (set) Token: 0x06006F4B RID: 28491
 	int Id { get; set; }
 
-	// Token: 0x17000D55 RID: 3413
-	// (get) Token: 0x06009B6E RID: 39790
-	// (set) Token: 0x06009B6F RID: 39791
+	// Token: 0x17000D76 RID: 3446
+	// (get) Token: 0x06006F4C RID: 28492
+	// (set) Token: 0x06006F4D RID: 28493
 	int RoundId { get; set; }
 
-	// Token: 0x17000D56 RID: 3414
-	// (get) Token: 0x06009B70 RID: 39792
-	// (set) Token: 0x06009B71 RID: 39793
+	// Token: 0x17000D77 RID: 3447
+	// (get) Token: 0x06006F4E RID: 28494
+	// (set) Token: 0x06006F4F RID: 28495
 	bool IsClaimed { get; set; }
 
-	// Token: 0x17000D57 RID: 3415
-	// (get) Token: 0x06009B72 RID: 39794
-	// (set) Token: 0x06009B73 RID: 39795
+	// Token: 0x17000D78 RID: 3448
+	// (get) Token: 0x06006F50 RID: 28496
+	// (set) Token: 0x06006F51 RID: 28497
 	TItem RewardItem { get; set; }
 
-	// Token: 0x17000D58 RID: 3416
-	// (get) Token: 0x06009B74 RID: 39796
-	// (set) Token: 0x06009B75 RID: 39797
+	// Token: 0x17000D79 RID: 3449
+	// (get) Token: 0x06006F52 RID: 28498
+	// (set) Token: 0x06006F53 RID: 28499
 	bool IsSpecial { get; set; }
 }

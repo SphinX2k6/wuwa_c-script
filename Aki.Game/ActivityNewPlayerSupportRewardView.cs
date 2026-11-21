@@ -9,21 +9,21 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020013C1 RID: 5057
+// Token: 0x02000875 RID: 2165
 public class ActivityNewPlayerSupportRewardView : UiViewBase
 {
-	// Token: 0x06008E9B RID: 36507 RVA: 0x001EC4CE File Offset: 0x001EA6CE
+	// Token: 0x06006230 RID: 25136 RVA: 0x001F4FEE File Offset: 0x001F31EE
 	[NullableContext(1)]
 	public ActivityNewPlayerSupportRewardView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06008E9C RID: 36508 RVA: 0x001EC4D7 File Offset: 0x001EA6D7
+	// Token: 0x06006231 RID: 25137 RVA: 0x001F4FF7 File Offset: 0x001F31F7
 	public ActivityNewPlayerSupportRewardView() : base(null)
 	{
 	}
 
-	// Token: 0x06008E9D RID: 36509 RVA: 0x001EC4E0 File Offset: 0x001EA6E0
+	// Token: 0x06006232 RID: 25138 RVA: 0x001F5000 File Offset: 0x001F3200
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -41,7 +41,7 @@ public class ActivityNewPlayerSupportRewardView : UiViewBase
 		};
 	}
 
-	// Token: 0x06008E9E RID: 36510 RVA: 0x001EC5A4 File Offset: 0x001EA7A4
+	// Token: 0x06006233 RID: 25139 RVA: 0x001F50C4 File Offset: 0x001F32C4
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivityNewPlayerSupportRewardView.<OnBeforeStartAsync>d__6 <OnBeforeStartAsync>d__;
@@ -52,26 +52,26 @@ public class ActivityNewPlayerSupportRewardView : UiViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06008E9F RID: 36511 RVA: 0x001EC5E7 File Offset: 0x001EA7E7
+	// Token: 0x06006234 RID: 25140 RVA: 0x001F5107 File Offset: 0x001F3307
 	protected override void OnStart()
 	{
 		this.RoleLayout = new GenericLayout<ActivityNewPlayerSupportRewardRoleItem, int>(base.GetHorizontalLayout(1), new Func<ActivityNewPlayerSupportRewardRoleItem>(this.CreateLayoutItem), null, false, true);
 		this.RefreshRewardView();
 	}
 
-	// Token: 0x06008EA0 RID: 36512 RVA: 0x001EC610 File Offset: 0x001EA810
+	// Token: 0x06006235 RID: 25141 RVA: 0x001F5130 File Offset: 0x001F3330
 	protected override void OnBeforeDestroy()
 	{
 		ItemRewardModel.Instance.ClearCurrentRewardData();
 	}
 
-	// Token: 0x06008EA1 RID: 36513 RVA: 0x001EC61C File Offset: 0x001EA81C
+	// Token: 0x06006236 RID: 25142 RVA: 0x001F513C File Offset: 0x001F333C
 	protected override void OnBeforePlayCloseSequence()
 	{
 		this.UiViewSequence.StopSequenceByKey("Switch", true, true);
 	}
 
-	// Token: 0x06008EA2 RID: 36514 RVA: 0x001EC630 File Offset: 0x001EA830
+	// Token: 0x06006237 RID: 25143 RVA: 0x001F5150 File Offset: 0x001F3350
 	private void RefreshRewardView()
 	{
 		ActivityNewPlayerSupportRewardViewParam activityNewPlayerSupportRewardViewParam = this.OpenParam as ActivityNewPlayerSupportRewardViewParam;
@@ -84,20 +84,20 @@ public class ActivityNewPlayerSupportRewardView : UiViewBase
 		this.UiViewSequence.StartSequenceName = "Start01";
 	}
 
-	// Token: 0x06008EA3 RID: 36515 RVA: 0x001EC68D File Offset: 0x001EA88D
+	// Token: 0x06006238 RID: 25144 RVA: 0x001F51AD File Offset: 0x001F33AD
 	[NullableContext(1)]
 	private ActivityNewPlayerSupportRewardRoleItem CreateLayoutItem()
 	{
 		return new ActivityNewPlayerSupportRewardRoleItem();
 	}
 
-	// Token: 0x06008EA4 RID: 36516 RVA: 0x001EC694 File Offset: 0x001EA894
+	// Token: 0x06006239 RID: 25145 RVA: 0x001F51B4 File Offset: 0x001F33B4
 	private void OnConfirmBtnClick()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06008EA5 RID: 36517 RVA: 0x001EC6A0 File Offset: 0x001EA8A0
+	// Token: 0x0600623A RID: 25146 RVA: 0x001F51C0 File Offset: 0x001F33C0
 	private void OnGotoBtnClick()
 	{
 		List<int> trialRoleList = (this.OpenParam as ActivityNewPlayerSupportRewardViewParam).TrialRoleList;
@@ -111,7 +111,7 @@ public class ActivityNewPlayerSupportRewardView : UiViewBase
 		instance.OpenTrialRoleView(trialRoleGroupId);
 	}
 
-	// Token: 0x04003F19 RID: 16153
+	// Token: 0x04003FB1 RID: 16305
 	[Nullable(new byte[]
 	{
 		2,
@@ -119,26 +119,26 @@ public class ActivityNewPlayerSupportRewardView : UiViewBase
 	})]
 	private GenericLayout<ActivityNewPlayerSupportRewardRoleItem, int> RoleLayout;
 
-	// Token: 0x04003F1A RID: 16154
+	// Token: 0x04003FB2 RID: 16306
 	[Nullable(2)]
 	private RewardItemList RewardItemList;
 
-	// Token: 0x02007A34 RID: 31284
+	// Token: 0x02006BBA RID: 27578
 	private static class EComponentType
 	{
-		// Token: 0x0402839D RID: 164765
+		// Token: 0x040236BA RID: 145082
 		public const int RewardItemListItem = 0;
 
-		// Token: 0x0402839E RID: 164766
+		// Token: 0x040236BB RID: 145083
 		public const int RoleLayout = 1;
 
-		// Token: 0x0402839F RID: 164767
+		// Token: 0x040236BC RID: 145084
 		public const int RoleItem = 2;
 
-		// Token: 0x040283A0 RID: 164768
+		// Token: 0x040236BD RID: 145085
 		public const int ConfirmBtn = 3;
 
-		// Token: 0x040283A1 RID: 164769
+		// Token: 0x040236BE RID: 145086
 		public const int GotoBtn = 4;
 	}
 }

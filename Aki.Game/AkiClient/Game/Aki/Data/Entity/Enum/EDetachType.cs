@@ -4,18 +4,18 @@ using UnrealEngine.Service.Flags;
 
 namespace AkiClient.Game.Aki.Data.Entity.Enum
 {
-	// Token: 0x02003F93 RID: 16275
+	// Token: 0x02003227 RID: 12839
 	[UEnum(EEnumFlags.None)]
 	[UnrealObjectPath("/Game/Aki/Data/Entity/Enum/EDetachType.EDetachType")]
 	public enum EDetachType : byte
 	{
-		// Token: 0x04015536 RID: 87350
+		// Token: 0x040113AC RID: 70572
 		ManualDestroy,
-		// Token: 0x04015537 RID: 87351
+		// Token: 0x040113AD RID: 70573
 		EntityDestroy,
-		// Token: 0x04015538 RID: 87352
+		// Token: 0x040113AE RID: 70574
 		DestroyExternal,
-		// Token: 0x04015539 RID: 87353
+		// Token: 0x040113AF RID: 70575
 		EDetachType_MAX
 	}
 }

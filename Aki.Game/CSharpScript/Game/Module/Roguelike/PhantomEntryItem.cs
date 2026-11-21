@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Roguelike
 {
-	// Token: 0x02004DEA RID: 19946
+	// Token: 0x02003DB3 RID: 15795
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.Roguelike
 	})]
 	public class PhantomEntryItem : GridProxyAbstract<AffixEntry>
 	{
-		// Token: 0x06033793 RID: 210835 RVA: 0x00C06D24 File Offset: 0x00C04F24
+		// Token: 0x060285FE RID: 165374 RVA: 0x00B50234 File Offset: 0x00B4E434
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -38,20 +38,20 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06033794 RID: 210836 RVA: 0x00C06DF0 File Offset: 0x00C04FF0
+		// Token: 0x060285FF RID: 165375 RVA: 0x00B50300 File Offset: 0x00B4E500
 		protected override void OnStart()
 		{
 			this.PhantomElementItemLayout = new GenericLayout<PhantomElementItem, ElementInfo>(base.GetVerticalLayout(0), new Func<PhantomElementItem>(this.CreateElementItem), null, false, true);
 			this.LevelSequencePlayer = new LevelSequencePlayer(base.GetRootItem());
 		}
 
-		// Token: 0x06033795 RID: 210837 RVA: 0x00C06E24 File Offset: 0x00C05024
+		// Token: 0x06028600 RID: 165376 RVA: 0x00B50334 File Offset: 0x00B4E534
 		private PhantomElementItem CreateElementItem()
 		{
 			return new PhantomElementItem();
 		}
 
-		// Token: 0x06033796 RID: 210838 RVA: 0x00C06E2C File Offset: 0x00C0502C
+		// Token: 0x06028601 RID: 165377 RVA: 0x00B5033C File Offset: 0x00B4E53C
 		public override void Refresh(AffixEntry data, bool isSelected, int gridIndex)
 		{
 			this.AffixEntry = data;
@@ -75,7 +75,7 @@ namespace CSharpScript.Game.Module.Roguelike
 			this.PhantomElementItemLayout.RefreshByData(sortElementInfoArrayByCount, null, false);
 		}
 
-		// Token: 0x06033797 RID: 210839 RVA: 0x00C06F00 File Offset: 0x00C05100
+		// Token: 0x06028602 RID: 165378 RVA: 0x00B50410 File Offset: 0x00B4E610
 		[NullableContext(2)]
 		public void RefreshPreview(Dictionary<int, int> elementDict = null)
 		{
@@ -135,41 +135,41 @@ namespace CSharpScript.Game.Module.Roguelike
 			uuiitem.SetChangeColor(bUseChangeColor, fcolor);
 		}
 
-		// Token: 0x06033798 RID: 210840 RVA: 0x00C07088 File Offset: 0x00C05288
+		// Token: 0x06028603 RID: 165379 RVA: 0x00B50598 File Offset: 0x00B4E798
 		private void PlayComplete()
 		{
 			this.LevelSequencePlayer.PlayLevelSequenceByName("Complete", false, null, false);
 		}
 
-		// Token: 0x0401B523 RID: 111907
+		// Token: 0x04015EF6 RID: 89846
 		private AffixEntry AffixEntry;
 
-		// Token: 0x0401B524 RID: 111908
+		// Token: 0x04015EF7 RID: 89847
 		private GenericLayout<PhantomElementItem, ElementInfo> PhantomElementItemLayout;
 
-		// Token: 0x0401B525 RID: 111909
+		// Token: 0x04015EF8 RID: 89848
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401B526 RID: 111910
+		// Token: 0x04015EF9 RID: 89849
 		private bool IsUnlockState;
 
-		// Token: 0x0200AF70 RID: 44912
+		// Token: 0x020099A5 RID: 39333
 		[NullableContext(0)]
 		private class EPhantomEntryItemCom
 		{
-			// Token: 0x04035451 RID: 218193
+			// Token: 0x0402FE84 RID: 196228
 			public const int PhantomElementItemLayout = 0;
 
-			// Token: 0x04035452 RID: 218194
+			// Token: 0x0402FE85 RID: 196229
 			public const int PhantomElementItem = 1;
 
-			// Token: 0x04035453 RID: 218195
+			// Token: 0x0402FE86 RID: 196230
 			public const int DescPanel = 2;
 
-			// Token: 0x04035454 RID: 218196
+			// Token: 0x0402FE87 RID: 196231
 			public const int DescText = 3;
 
-			// Token: 0x04035455 RID: 218197
+			// Token: 0x0402FE88 RID: 196232
 			public const int IndexText = 4;
 		}
 	}

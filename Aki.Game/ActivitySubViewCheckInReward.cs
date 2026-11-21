@@ -8,10 +8,10 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020011C7 RID: 4551
+// Token: 0x0200067B RID: 1659
 public class ActivitySubViewCheckInReward : ActivitySubViewBase
 {
-	// Token: 0x06007937 RID: 31031 RVA: 0x00198DC8 File Offset: 0x00196FC8
+	// Token: 0x06004CCE RID: 19662 RVA: 0x001A1A78 File Offset: 0x0019FC78
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -37,13 +37,13 @@ public class ActivitySubViewCheckInReward : ActivitySubViewBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06007938 RID: 31032 RVA: 0x00198EF7 File Offset: 0x001970F7
+	// Token: 0x06004CCF RID: 19663 RVA: 0x001A1BA7 File Offset: 0x0019FDA7
 	protected override void OnSetData()
 	{
 		this.ActivityTimePointRewardData = (this.ActivityBaseData as ActivityTimePointRewardData);
 	}
 
-	// Token: 0x06007939 RID: 31033 RVA: 0x00198F0C File Offset: 0x0019710C
+	// Token: 0x06004CD0 RID: 19664 RVA: 0x001A1BBC File Offset: 0x0019FDBC
 	protected override UniTask OnBeforeStartAsync()
 	{
 		ActivitySubViewCheckInReward.<OnBeforeStartAsync>d__7 <OnBeforeStartAsync>d__;
@@ -54,32 +54,32 @@ public class ActivitySubViewCheckInReward : ActivitySubViewBase
 		return <OnBeforeStartAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600793A RID: 31034 RVA: 0x00198F4F File Offset: 0x0019714F
+	// Token: 0x06004CD1 RID: 19665 RVA: 0x001A1BFF File Offset: 0x0019FDFF
 	protected override void OnStart()
 	{
 		this.SetStaticText();
 		this.RefreshTimerText();
 	}
 
-	// Token: 0x0600793B RID: 31035 RVA: 0x00198F5D File Offset: 0x0019715D
+	// Token: 0x06004CD2 RID: 19666 RVA: 0x001A1C0D File Offset: 0x0019FE0D
 	protected override void OnTimer(float gap)
 	{
 		this.RefreshTimerText();
 	}
 
-	// Token: 0x0600793C RID: 31036 RVA: 0x00198F65 File Offset: 0x00197165
+	// Token: 0x06004CD3 RID: 19667 RVA: 0x001A1C15 File Offset: 0x0019FE15
 	protected override void OnAddEventListener()
 	{
 		EventSystem.Instance.Add<int>(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 	}
 
-	// Token: 0x0600793D RID: 31037 RVA: 0x00198F83 File Offset: 0x00197183
+	// Token: 0x06004CD4 RID: 19668 RVA: 0x001A1C33 File Offset: 0x0019FE33
 	protected override void OnRemoveEventListener()
 	{
 		EventSystem.Instance.Remove(EEventName.RefreshCommonActivityRedDot, new Action<int>(this.OnRefreshCommonActivityRedDot));
 	}
 
-	// Token: 0x0600793E RID: 31038 RVA: 0x00198FA4 File Offset: 0x001971A4
+	// Token: 0x06004CD5 RID: 19669 RVA: 0x001A1C54 File Offset: 0x0019FE54
 	protected override UniTask OnBeforeShowSelfAsync()
 	{
 		ActivitySubViewCheckInReward.<OnBeforeShowSelfAsync>d__12 <OnBeforeShowSelfAsync>d__;
@@ -90,7 +90,7 @@ public class ActivitySubViewCheckInReward : ActivitySubViewBase
 		return <OnBeforeShowSelfAsync>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0600793F RID: 31039 RVA: 0x00198FE8 File Offset: 0x001971E8
+	// Token: 0x06004CD6 RID: 19670 RVA: 0x001A1C98 File Offset: 0x0019FE98
 	private UniTask RefreshRewardLayout()
 	{
 		ActivitySubViewCheckInReward.<RefreshRewardLayout>d__13 <RefreshRewardLayout>d__;
@@ -101,7 +101,7 @@ public class ActivitySubViewCheckInReward : ActivitySubViewBase
 		return <RefreshRewardLayout>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06007940 RID: 31040 RVA: 0x0019902B File Offset: 0x0019722B
+	// Token: 0x06004CD7 RID: 19671 RVA: 0x001A1CDB File Offset: 0x0019FEDB
 	private void OnRefreshCommonActivityRedDot(int id)
 	{
 		if (this.ActivityBaseData.Id != id)
@@ -111,7 +111,7 @@ public class ActivitySubViewCheckInReward : ActivitySubViewBase
 		this.RefreshRewardLayout();
 	}
 
-	// Token: 0x06007941 RID: 31041 RVA: 0x00199044 File Offset: 0x00197244
+	// Token: 0x06004CD8 RID: 19672 RVA: 0x001A1CF4 File Offset: 0x0019FEF4
 	private void SetStaticText()
 	{
 		string title = ActivityConfig.Instance.GetActivityConfig(102000009).Value.Title;
@@ -120,7 +120,7 @@ public class ActivitySubViewCheckInReward : ActivitySubViewBase
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(5), desc, Array.Empty<object>());
 	}
 
-	// Token: 0x06007942 RID: 31042 RVA: 0x001990C0 File Offset: 0x001972C0
+	// Token: 0x06004CD9 RID: 19673 RVA: 0x001A1D70 File Offset: 0x0019FF70
 	private void RefreshTimerText()
 	{
 		ValueTuple<bool, string, long> timeVisibleAndRemainTime = this.GetTimeVisibleAndRemainTime();
@@ -133,7 +133,7 @@ public class ActivitySubViewCheckInReward : ActivitySubViewBase
 		}
 	}
 
-	// Token: 0x06007943 RID: 31043 RVA: 0x00199104 File Offset: 0x00197304
+	// Token: 0x06004CDA RID: 19674 RVA: 0x001A1DB4 File Offset: 0x0019FFB4
 	private void OnClickedButton()
 	{
 		List<int> list = new List<int>();
@@ -152,7 +152,7 @@ public class ActivitySubViewCheckInReward : ActivitySubViewBase
 		ActivityTimePointRewardController.Instance.GetBatchRewardById(102000009, list);
 	}
 
-	// Token: 0x040037B3 RID: 14259
+	// Token: 0x0400384C RID: 14412
 	[Nullable(1)]
 	private readonly int[] CardComponentIds = new int[]
 	{
@@ -160,11 +160,11 @@ public class ActivitySubViewCheckInReward : ActivitySubViewBase
 		3
 	};
 
-	// Token: 0x040037B4 RID: 14260
+	// Token: 0x0400384D RID: 14413
 	[Nullable(2)]
 	protected ActivityTimePointRewardData ActivityTimePointRewardData;
 
-	// Token: 0x040037B5 RID: 14261
+	// Token: 0x0400384E RID: 14414
 	[Nullable(new byte[]
 	{
 		2,
@@ -172,28 +172,28 @@ public class ActivitySubViewCheckInReward : ActivitySubViewBase
 	})]
 	private CheckInRewardCard[] CheckInRewardCards;
 
-	// Token: 0x040037B6 RID: 14262
+	// Token: 0x0400384F RID: 14415
 	[Nullable(2)]
 	private UiPanelBase BgItem;
 
-	// Token: 0x020077B5 RID: 30645
+	// Token: 0x02006940 RID: 26944
 	private enum EComponents
 	{
-		// Token: 0x04027785 RID: 161669
+		// Token: 0x04022AB7 RID: 142007
 		PnlTime,
-		// Token: 0x04027786 RID: 161670
+		// Token: 0x04022AB8 RID: 142008
 		TxtTime,
-		// Token: 0x04027787 RID: 161671
+		// Token: 0x04022AB9 RID: 142009
 		BtnWelfare37Card1,
-		// Token: 0x04027788 RID: 161672
+		// Token: 0x04022ABA RID: 142010
 		BtnWelfare37Card2,
-		// Token: 0x04027789 RID: 161673
+		// Token: 0x04022ABB RID: 142011
 		TxtTitle,
-		// Token: 0x0402778A RID: 161674
+		// Token: 0x04022ABC RID: 142012
 		TxtTip,
-		// Token: 0x0402778B RID: 161675
+		// Token: 0x04022ABD RID: 142013
 		TextActivityIcon,
-		// Token: 0x0402778C RID: 161676
+		// Token: 0x04022ABE RID: 142014
 		TexBg
 	}
 }

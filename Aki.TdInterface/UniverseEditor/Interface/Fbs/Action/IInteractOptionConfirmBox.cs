@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006996 RID: 27030
+	// Token: 0x02007049 RID: 28745
 	public struct IInteractOptionConfirmBox : IFlatbufferObject
 	{
-		// Token: 0x1700C888 RID: 51336
-		// (get) Token: 0x0602F38C RID: 193420 RVA: 0x0066EB9F File Offset: 0x0066CD9F
+		// Token: 0x1700D28D RID: 53901
+		// (get) Token: 0x06031D68 RID: 204136 RVA: 0x006BF2A1 File Offset: 0x006BD4A1
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F38D RID: 193421 RVA: 0x0066EBAC File Offset: 0x0066CDAC
+		// Token: 0x06031D69 RID: 204137 RVA: 0x006BF2AE File Offset: 0x006BD4AE
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0602F38E RID: 193422 RVA: 0x0066EBB4 File Offset: 0x0066CDB4
+		// Token: 0x06031D6A RID: 204138 RVA: 0x006BF2B8 File Offset: 0x006BD4B8
 		public static IInteractOptionConfirmBox GetRootAsIInteractOptionConfirmBox(ByteBuffer _bb)
 		{
 			return IInteractOptionConfirmBox.GetRootAsIInteractOptionConfirmBox(_bb, default(IInteractOptionConfirmBox));
 		}
 
-		// Token: 0x0602F38F RID: 193423 RVA: 0x0066EBD0 File Offset: 0x0066CDD0
+		// Token: 0x06031D6B RID: 204139 RVA: 0x006BF2D4 File Offset: 0x006BD4D4
 		public static IInteractOptionConfirmBox GetRootAsIInteractOptionConfirmBox(ByteBuffer _bb, IInteractOptionConfirmBox obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0602F390 RID: 193424 RVA: 0x0066EBED File Offset: 0x0066CDED
+		// Token: 0x06031D6C RID: 204140 RVA: 0x006BF2F1 File Offset: 0x006BD4F1
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0602F391 RID: 193425 RVA: 0x0066EBFC File Offset: 0x0066CDFC
+		// Token: 0x06031D6D RID: 204141 RVA: 0x006BF300 File Offset: 0x006BD500
 		public IInteractOptionConfirmBox __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700C889 RID: 51337
-		// (get) Token: 0x0602F392 RID: 193426 RVA: 0x0066EC0C File Offset: 0x0066CE0C
+		// Token: 0x1700D28E RID: 53902
+		// (get) Token: 0x06031D6E RID: 204142 RVA: 0x006BF310 File Offset: 0x006BD510
 		public TInteractOptionConfirmBoxOption TypeType
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F393 RID: 193427 RVA: 0x0066EC48 File Offset: 0x0066CE48
+		// Token: 0x06031D6F RID: 204143 RVA: 0x006BF34C File Offset: 0x006BD54C
 		public TTable? Type<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(6);
@@ -73,25 +73,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x0602F394 RID: 193428 RVA: 0x0066EC8C File Offset: 0x0066CE8C
+		// Token: 0x06031D70 RID: 204144 RVA: 0x006BF390 File Offset: 0x006BD590
 		public ICommonConfirmBox TypeAsICommonConfirmBox()
 		{
 			return this.Type<ICommonConfirmBox>().Value;
 		}
 
-		// Token: 0x0602F395 RID: 193429 RVA: 0x0066ECA8 File Offset: 0x0066CEA8
+		// Token: 0x06031D71 RID: 204145 RVA: 0x006BF3AC File Offset: 0x006BD5AC
 		public IHonamiStoryCorruptedChestConfirmBox TypeAsIHonamiStoryCorruptedChestConfirmBox()
 		{
 			return this.Type<IHonamiStoryCorruptedChestConfirmBox>().Value;
 		}
 
-		// Token: 0x0602F396 RID: 193430 RVA: 0x0066ECC4 File Offset: 0x0066CEC4
+		// Token: 0x06031D72 RID: 204146 RVA: 0x006BF3C8 File Offset: 0x006BD5C8
 		public IHonamiStoryEvacuateConfirmBox TypeAsIHonamiStoryEvacuateConfirmBox()
 		{
 			return this.Type<IHonamiStoryEvacuateConfirmBox>().Value;
 		}
 
-		// Token: 0x0602F397 RID: 193431 RVA: 0x0066ECDF File Offset: 0x0066CEDF
+		// Token: 0x06031D73 RID: 204147 RVA: 0x006BF3E3 File Offset: 0x006BD5E3
 		public static Offset<IInteractOptionConfirmBox> CreateIInteractOptionConfirmBox(FlatBufferBuilder builder, TInteractOptionConfirmBoxOption Type_type = TInteractOptionConfirmBoxOption.NONE, int TypeOffset = 0)
 		{
 			builder.StartTable(2);
@@ -100,31 +100,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IInteractOptionConfirmBox.EndIInteractOptionConfirmBox(builder);
 		}
 
-		// Token: 0x0602F398 RID: 193432 RVA: 0x0066ECFC File Offset: 0x0066CEFC
+		// Token: 0x06031D74 RID: 204148 RVA: 0x006BF400 File Offset: 0x006BD600
 		public static void StartIInteractOptionConfirmBox(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x0602F399 RID: 193433 RVA: 0x0066ED05 File Offset: 0x0066CF05
+		// Token: 0x06031D75 RID: 204149 RVA: 0x006BF409 File Offset: 0x006BD609
 		public static void AddTypeType(FlatBufferBuilder builder, TInteractOptionConfirmBoxOption typeType)
 		{
 			builder.AddByte(0, (byte)typeType, 0);
 		}
 
-		// Token: 0x0602F39A RID: 193434 RVA: 0x0066ED10 File Offset: 0x0066CF10
+		// Token: 0x06031D76 RID: 204150 RVA: 0x006BF414 File Offset: 0x006BD614
 		public static void AddType(FlatBufferBuilder builder, int typeOffset)
 		{
 			builder.AddOffset(1, typeOffset, 0);
 		}
 
-		// Token: 0x0602F39B RID: 193435 RVA: 0x0066ED1B File Offset: 0x0066CF1B
+		// Token: 0x06031D77 RID: 204151 RVA: 0x006BF41F File Offset: 0x006BD61F
 		public static Offset<IInteractOptionConfirmBox> EndIInteractOptionConfirmBox(FlatBufferBuilder builder)
 		{
 			return new Offset<IInteractOptionConfirmBox>(builder.EndTable());
 		}
 
-		// Token: 0x0602F39C RID: 193436 RVA: 0x0066ED28 File Offset: 0x0066CF28
+		// Token: 0x06031D78 RID: 204152 RVA: 0x006BF42C File Offset: 0x006BD62C
 		public IInteractOptionConfirmBoxT UnPack()
 		{
 			IInteractOptionConfirmBoxT interactOptionConfirmBoxT = new IInteractOptionConfirmBoxT();
@@ -132,7 +132,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return interactOptionConfirmBoxT;
 		}
 
-		// Token: 0x0602F39D RID: 193437 RVA: 0x0066ED44 File Offset: 0x0066CF44
+		// Token: 0x06031D79 RID: 204153 RVA: 0x006BF448 File Offset: 0x006BD648
 		public void UnPackTo(IInteractOptionConfirmBoxT _o)
 		{
 			_o.Type = new TInteractOptionConfirmBoxOptionUnion();
@@ -153,7 +153,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x0602F39E RID: 193438 RVA: 0x0066EE2C File Offset: 0x0066D02C
+		// Token: 0x06031D7A RID: 204154 RVA: 0x006BF530 File Offset: 0x006BD730
 		public static Offset<IInteractOptionConfirmBox> Pack(FlatBufferBuilder builder, IInteractOptionConfirmBoxT _o)
 		{
 			if (_o == null)
@@ -165,7 +165,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IInteractOptionConfirmBox.CreateIInteractOptionConfirmBox(builder, type_type, typeOffset);
 		}
 
-		// Token: 0x04011136 RID: 69942
+		// Token: 0x04011FA3 RID: 73635
 		private Table __p;
 	}
 }

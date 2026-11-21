@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x02000402 RID: 1026
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200045B RID: 1115
 	public class IGroupFinishSilence : IGroupFinishConfig
 	{
-		// Token: 0x060014B1 RID: 5297 RVA: 0x00041D28 File Offset: 0x0003FF28
+		// Token: 0x0600164B RID: 5707 RVA: 0x00045A70 File Offset: 0x00043C70
 		private IGroupFinishSilence_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x060014B2 RID: 5298 RVA: 0x00041D60 File Offset: 0x0003FF60
+		// Token: 0x0600164C RID: 5708 RVA: 0x00045AA8 File Offset: 0x00043CA8
 		public static IGroupFinishSilence Create([Nullable(2)] IGroupFinishSilence instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060014B3 RID: 5299 RVA: 0x00041D73 File Offset: 0x0003FF73
+		// Token: 0x0600164D RID: 5709 RVA: 0x00045ABB File Offset: 0x00043CBB
 		public static IGroupFinishSilence CreateFromSetValue([Nullable(2)] IGroupFinishSilence_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x060014B4 RID: 5300 RVA: 0x00041D86 File Offset: 0x0003FF86
+		// Token: 0x0600164E RID: 5710 RVA: 0x00045ACE File Offset: 0x00043CCE
 		public new IGroupFinishSilence_SetValue ToSetValue()
 		{
 			return new IGroupFinishSilence_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170005B3 RID: 1459
-		// (get) Token: 0x060014B5 RID: 5301 RVA: 0x00041DA5 File Offset: 0x0003FFA5
-		// (set) Token: 0x060014B6 RID: 5302 RVA: 0x00041DD0 File Offset: 0x0003FFD0
+		// Token: 0x1700061A RID: 1562
+		// (get) Token: 0x0600164F RID: 5711 RVA: 0x00045AED File Offset: 0x00043CED
+		// (set) Token: 0x06001650 RID: 5712 RVA: 0x00045B18 File Offset: 0x00043D18
 		public override EGroupFinishConfig Type
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170005B4 RID: 1460
-		// (get) Token: 0x060014B7 RID: 5303 RVA: 0x00041DE0 File Offset: 0x0003FFE0
-		// (set) Token: 0x060014B8 RID: 5304 RVA: 0x00041E41 File Offset: 0x00040041
+		// Token: 0x1700061B RID: 1563
+		// (get) Token: 0x06001651 RID: 5713 RVA: 0x00045B28 File Offset: 0x00043D28
+		// (set) Token: 0x06001652 RID: 5714 RVA: 0x00045B89 File Offset: 0x00043D89
 		[Nullable(2)]
 		public virtual IEntityState SwitchSpecifiedStatus
 		{
@@ -116,18 +114,18 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001036 RID: 4150
+		// Token: 0x04001158 RID: 4440
 		[Nullable(2)]
 		protected new IGroupFinishSilence FbInstance;
 
-		// Token: 0x04001037 RID: 4151
+		// Token: 0x04001159 RID: 4441
 		[Nullable(2)]
 		protected new IGroupFinishSilence_SetValue PocoInterface;
 
-		// Token: 0x04001038 RID: 4152
+		// Token: 0x0400115A RID: 4442
 		private IEntityState _SwitchSpecifiedStatusCache;
 
-		// Token: 0x04001039 RID: 4153
+		// Token: 0x0400115B RID: 4443
 		private bool _SwitchSpecifiedStatusInited;
 	}
 }

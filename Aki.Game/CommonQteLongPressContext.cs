@@ -2,18 +2,18 @@
 using System.Runtime.CompilerServices;
 using AkiClient.Game.Aki.Data.Qte;
 
-// Token: 0x02002608 RID: 9736
+// Token: 0x02001AF3 RID: 6899
 [NullableContext(2)]
 [Nullable(0)]
 public class CommonQteLongPressContext : CommonQteContextBase
 {
-	// Token: 0x06013D7C RID: 81276 RVA: 0x004FA6F8 File Offset: 0x004F88F8
+	// Token: 0x0601125E RID: 70238 RVA: 0x00509504 File Offset: 0x00507704
 	public CommonQteLongPressContext()
 	{
 		this.Type = new ECommonQteContextType?(ECommonQteContextType.SingleButtonLongPress);
 	}
 
-	// Token: 0x06013D7D RID: 81277 RVA: 0x004FA70C File Offset: 0x004F890C
+	// Token: 0x0601125F RID: 70239 RVA: 0x00509518 File Offset: 0x00507718
 	[NullableContext(1)]
 	protected override void OnSetConfig(SCommonQte config)
 	{
@@ -27,7 +27,7 @@ public class CommonQteLongPressContext : CommonQteContextBase
 		this.CurrentProgress = this.InitProgress;
 	}
 
-	// Token: 0x06013D7E RID: 81278 RVA: 0x004FA794 File Offset: 0x004F8994
+	// Token: 0x06011260 RID: 70240 RVA: 0x005095A0 File Offset: 0x005077A0
 	protected override void OnResponse()
 	{
 		if (this.Config == null)
@@ -47,7 +47,7 @@ public class CommonQteLongPressContext : CommonQteContextBase
 		this.CheckQteConditionAndDoSuccess();
 	}
 
-	// Token: 0x06013D7F RID: 81279 RVA: 0x004FA810 File Offset: 0x004F8A10
+	// Token: 0x06011261 RID: 70241 RVA: 0x0050961C File Offset: 0x0050781C
 	protected override void OnResponseEnd()
 	{
 		this.IsPressing = false;
@@ -65,7 +65,7 @@ public class CommonQteLongPressContext : CommonQteContextBase
 		}
 	}
 
-	// Token: 0x06013D80 RID: 81280 RVA: 0x004FA87C File Offset: 0x004F8A7C
+	// Token: 0x06011262 RID: 70242 RVA: 0x00509688 File Offset: 0x00507888
 	protected override void OnUpdateTime(float delta)
 	{
 		if (this.Config == null)
@@ -134,19 +134,19 @@ public class CommonQteLongPressContext : CommonQteContextBase
 		}
 	}
 
-	// Token: 0x06013D81 RID: 81281 RVA: 0x004FAB2C File Offset: 0x004F8D2C
+	// Token: 0x06011263 RID: 70243 RVA: 0x0050992B File Offset: 0x00507B2B
 	protected override void OnQteFail()
 	{
 		this.StopQteAudio();
 	}
 
-	// Token: 0x06013D82 RID: 81282 RVA: 0x004FAB34 File Offset: 0x004F8D34
+	// Token: 0x06011264 RID: 70244 RVA: 0x00509933 File Offset: 0x00507B33
 	protected override void OnQteSuccess()
 	{
 		this.StopQteAudio();
 	}
 
-	// Token: 0x06013D83 RID: 81283 RVA: 0x004FAB3C File Offset: 0x004F8D3C
+	// Token: 0x06011265 RID: 70245 RVA: 0x0050993C File Offset: 0x00507B3C
 	protected void StopQteAudio()
 	{
 		if (this.ProgressAudioHandle != 0)
@@ -161,7 +161,7 @@ public class CommonQteLongPressContext : CommonQteContextBase
 		}
 	}
 
-	// Token: 0x06013D84 RID: 81284 RVA: 0x004FABB4 File Offset: 0x004F8DB4
+	// Token: 0x06011266 RID: 70246 RVA: 0x005099B4 File Offset: 0x00507BB4
 	protected override string OnGetAction(int? index = null)
 	{
 		if (this.Config == null)
@@ -172,7 +172,7 @@ public class CommonQteLongPressContext : CommonQteContextBase
 		return CommonQteContextBase.GetQteActionNameByActionId((uiconfig.ActionId > 0) ? uiconfig.ActionId : ((int)uiconfig.Action), new int?(this.QteId));
 	}
 
-	// Token: 0x06013D85 RID: 81285 RVA: 0x004FAC13 File Offset: 0x004F8E13
+	// Token: 0x06011267 RID: 70247 RVA: 0x00509A13 File Offset: 0x00507C13
 	[PreserveBaseOverrides]
 	protected new virtual SCommonQte_LongPress OnGetUiConfig()
 	{
@@ -183,7 +183,7 @@ public class CommonQteLongPressContext : CommonQteContextBase
 		return this.Config.BaseConfig.LongPressConfig;
 	}
 
-	// Token: 0x06013D86 RID: 81286 RVA: 0x004FAC35 File Offset: 0x004F8E35
+	// Token: 0x06011268 RID: 70248 RVA: 0x00509A35 File Offset: 0x00507C35
 	protected override SCommonQteButton GetUiButtonConfig()
 	{
 		if (this.Config == null)
@@ -193,7 +193,7 @@ public class CommonQteLongPressContext : CommonQteContextBase
 		return this.Config.BaseConfig.LongPressConfig.UIConfig;
 	}
 
-	// Token: 0x06013D87 RID: 81287 RVA: 0x004FAC5C File Offset: 0x004F8E5C
+	// Token: 0x06011269 RID: 70249 RVA: 0x00509A5C File Offset: 0x00507C5C
 	public override bool CheckQteConditionMatch()
 	{
 		if (this.CheckInResponseEnd)
@@ -203,26 +203,26 @@ public class CommonQteLongPressContext : CommonQteContextBase
 		return this.CheckProgressCondition();
 	}
 
-	// Token: 0x06013D88 RID: 81288 RVA: 0x004FAC7D File Offset: 0x004F8E7D
+	// Token: 0x0601126A RID: 70250 RVA: 0x00509A7D File Offset: 0x00507C7D
 	private bool CheckProgressCondition()
 	{
 		return this.CurrentProgress >= this.TargetProgress;
 	}
 
-	// Token: 0x06013D89 RID: 81289 RVA: 0x004FAC90 File Offset: 0x004F8E90
+	// Token: 0x0601126B RID: 70251 RVA: 0x00509A90 File Offset: 0x00507C90
 	public override float GetProgress()
 	{
 		return this.CurrentProgress * 0.01f;
 	}
 
-	// Token: 0x06013D8A RID: 81290 RVA: 0x004FAC9E File Offset: 0x004F8E9E
+	// Token: 0x0601126C RID: 70252 RVA: 0x00509A9E File Offset: 0x00507C9E
 	public override bool IsAttachToActor()
 	{
 		SCommonQte config = this.Config;
 		return config != null && config.BaseConfig.LongPressConfig.IsAttachToActor;
 	}
 
-	// Token: 0x06013D8B RID: 81291 RVA: 0x004FACBC File Offset: 0x004F8EBC
+	// Token: 0x0601126D RID: 70253 RVA: 0x00509ABC File Offset: 0x00507CBC
 	public override SCommonQte_Attach? GetAttachConfig()
 	{
 		SCommonQte config = this.Config;
@@ -233,36 +233,36 @@ public class CommonQteLongPressContext : CommonQteContextBase
 		return new SCommonQte_Attach?(config.BaseConfig.LongPressConfig.AttachConfig);
 	}
 
-	// Token: 0x0400957E RID: 38270
+	// Token: 0x040096D5 RID: 38613
 	public float InitProgress;
 
-	// Token: 0x0400957F RID: 38271
+	// Token: 0x040096D6 RID: 38614
 	public float MaxProgress;
 
-	// Token: 0x04009580 RID: 38272
+	// Token: 0x040096D7 RID: 38615
 	public float TargetProgress;
 
-	// Token: 0x04009581 RID: 38273
+	// Token: 0x040096D8 RID: 38616
 	public float IncreaseSpeed;
 
-	// Token: 0x04009582 RID: 38274
+	// Token: 0x040096D9 RID: 38617
 	public float DecreaseSpeed;
 
-	// Token: 0x04009583 RID: 38275
+	// Token: 0x040096DA RID: 38618
 	public float CurrentProgress;
 
-	// Token: 0x04009584 RID: 38276
+	// Token: 0x040096DB RID: 38619
 	public int ProgressAudioHandle;
 
-	// Token: 0x04009585 RID: 38277
+	// Token: 0x040096DC RID: 38620
 	public int RegressAudioHandle;
 
-	// Token: 0x04009586 RID: 38278
+	// Token: 0x040096DD RID: 38621
 	private bool IsPressing;
 
-	// Token: 0x04009587 RID: 38279
+	// Token: 0x040096DE RID: 38622
 	private bool CheckInResponseEnd;
 
-	// Token: 0x04009588 RID: 38280
+	// Token: 0x040096DF RID: 38623
 	private bool IsInResponseEnd;
 }

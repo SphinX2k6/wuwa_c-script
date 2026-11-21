@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x0200240D RID: 9229
+// Token: 0x020018F2 RID: 6386
 public enum EPropType
 {
-	// Token: 0x04008B85 RID: 35717
+	// Token: 0x04008CCC RID: 36044
 	Main,
-	// Token: 0x04008B86 RID: 35718
+	// Token: 0x04008CCD RID: 36045
 	Sub,
-	// Token: 0x04008B87 RID: 35719
+	// Token: 0x04008CCE RID: 36046
 	Breach
 }

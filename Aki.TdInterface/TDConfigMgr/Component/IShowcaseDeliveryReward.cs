@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006CA RID: 1738
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200076B RID: 1899
 	public class IShowcaseDeliveryReward
 	{
-		// Token: 0x06002558 RID: 9560 RVA: 0x000649F4 File Offset: 0x00062BF4
+		// Token: 0x06002878 RID: 10360 RVA: 0x0006BA64 File Offset: 0x00069C64
 		private IShowcaseDeliveryReward_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06002559 RID: 9561 RVA: 0x00064A2C File Offset: 0x00062C2C
+		// Token: 0x06002879 RID: 10361 RVA: 0x0006BA9C File Offset: 0x00069C9C
 		public static IShowcaseDeliveryReward Create([Nullable(2)] IShowcaseDeliveryReward instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600255A RID: 9562 RVA: 0x00064A3F File Offset: 0x00062C3F
+		// Token: 0x0600287A RID: 10362 RVA: 0x0006BAAF File Offset: 0x00069CAF
 		public static IShowcaseDeliveryReward CreateFromSetValue([Nullable(2)] IShowcaseDeliveryReward_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600255B RID: 9563 RVA: 0x00064A52 File Offset: 0x00062C52
+		// Token: 0x0600287B RID: 10363 RVA: 0x0006BAC2 File Offset: 0x00069CC2
 		public IShowcaseDeliveryReward_SetValue ToSetValue()
 		{
 			return new IShowcaseDeliveryReward_SetValue
@@ -60,9 +58,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170009DC RID: 2524
-		// (get) Token: 0x0600255C RID: 9564 RVA: 0x00064A71 File Offset: 0x00062C71
-		// (set) Token: 0x0600255D RID: 9565 RVA: 0x00064A9C File Offset: 0x00062C9C
+		// Token: 0x17000A9A RID: 2714
+		// (get) Token: 0x0600287C RID: 10364 RVA: 0x0006BAE1 File Offset: 0x00069CE1
+		// (set) Token: 0x0600287D RID: 10365 RVA: 0x0006BB0C File Offset: 0x00069D0C
 		public virtual int AchievedDollCount
 		{
 			get
@@ -83,9 +81,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170009DD RID: 2525
-		// (get) Token: 0x0600255E RID: 9566 RVA: 0x00064AAA File Offset: 0x00062CAA
-		// (set) Token: 0x0600255F RID: 9567 RVA: 0x00064AD5 File Offset: 0x00062CD5
+		// Token: 0x17000A9B RID: 2715
+		// (get) Token: 0x0600287E RID: 10366 RVA: 0x0006BB1A File Offset: 0x00069D1A
+		// (set) Token: 0x0600287F RID: 10367 RVA: 0x0006BB45 File Offset: 0x00069D45
 		public virtual int DropId
 		{
 			get
@@ -106,11 +104,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001982 RID: 6530
+		// Token: 0x04001B81 RID: 7041
 		[Nullable(2)]
 		protected IShowcaseDeliveryReward FbInstance;
 
-		// Token: 0x04001983 RID: 6531
+		// Token: 0x04001B82 RID: 7042
 		[Nullable(2)]
 		protected IShowcaseDeliveryReward_SetValue PocoInterface;
 	}

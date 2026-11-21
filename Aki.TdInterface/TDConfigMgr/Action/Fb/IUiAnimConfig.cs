@@ -4,13 +4,13 @@ using Aki.UniverseEditor.Interface.Fbs.Action;
 
 namespace Aki.TDConfigMgr.Action.Fb
 {
-	// Token: 0x02002658 RID: 9816
+	// Token: 0x0200291C RID: 10524
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class IUiAnimConfig
 	{
-		// Token: 0x0600DC10 RID: 56336 RVA: 0x0020BFFA File Offset: 0x0020A1FA
-		[NullableContext(1)]
+		// Token: 0x0600E9EC RID: 59884 RVA: 0x002288D2 File Offset: 0x00226AD2
+		[NullableContext(0)]
 		public static IUiAnimConfig Create(IUiAnimConfig? instance)
 		{
 			if (instance == null)
@@ -23,8 +23,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			};
 		}
 
-		// Token: 0x17004122 RID: 16674
-		// (get) Token: 0x0600DC11 RID: 56337 RVA: 0x0020C019 File Offset: 0x0020A219
+		// Token: 0x17004462 RID: 17506
+		// (get) Token: 0x0600E9ED RID: 59885 RVA: 0x002288F1 File Offset: 0x00226AF1
 		public virtual string UiStartAnimName
 		{
 			get
@@ -33,8 +33,8 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x17004123 RID: 16675
-		// (get) Token: 0x0600DC12 RID: 56338 RVA: 0x0020C026 File Offset: 0x0020A226
+		// Token: 0x17004463 RID: 17507
+		// (get) Token: 0x0600E9EE RID: 59886 RVA: 0x002288FE File Offset: 0x00226AFE
 		public virtual string UiEndAnimName
 		{
 			get
@@ -43,7 +43,7 @@ namespace Aki.TDConfigMgr.Action.Fb
 			}
 		}
 
-		// Token: 0x04007A54 RID: 31316
+		// Token: 0x040080F6 RID: 33014
 		private IUiAnimConfig Instance;
 	}
 }

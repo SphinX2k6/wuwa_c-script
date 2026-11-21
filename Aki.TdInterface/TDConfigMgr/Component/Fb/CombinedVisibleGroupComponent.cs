@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BFF RID: 3071
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000CCF RID: 3279
 	public class CombinedVisibleGroupComponent : IComponentBase
 	{
-		// Token: 0x06004689 RID: 18057 RVA: 0x000B223B File Offset: 0x000B043B
+		// Token: 0x06004AEC RID: 19180 RVA: 0x000BC407 File Offset: 0x000BA607
 		public static CombinedVisibleGroupComponent Create(ICombinedVisibleGroupComponent? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x17001448 RID: 5192
-		// (get) Token: 0x0600468A RID: 18058 RVA: 0x000B225C File Offset: 0x000B045C
+		// Token: 0x17001549 RID: 5449
+		// (get) Token: 0x06004AED RID: 19181 RVA: 0x000BC428 File Offset: 0x000BA628
 		public override bool? Disabled
 		{
 			get
@@ -37,8 +34,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001449 RID: 5193
-		// (get) Token: 0x0600468B RID: 18059 RVA: 0x000B2294 File Offset: 0x000B0494
+		// Token: 0x1700154A RID: 5450
+		// (get) Token: 0x06004AEE RID: 19182 RVA: 0x000BC460 File Offset: 0x000BA660
 		public override bool? EdIsLocked
 		{
 			get
@@ -47,8 +44,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700144A RID: 5194
-		// (get) Token: 0x0600468C RID: 18060 RVA: 0x000B22AC File Offset: 0x000B04AC
+		// Token: 0x1700154B RID: 5451
+		// (get) Token: 0x06004AEF RID: 19183 RVA: 0x000BC478 File Offset: 0x000BA678
 		public virtual List<int> AreaIds
 		{
 			get
@@ -68,8 +65,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700144B RID: 5195
-		// (get) Token: 0x0600468D RID: 18061 RVA: 0x000B2310 File Offset: 0x000B0510
+		// Token: 0x1700154C RID: 5452
+		// (get) Token: 0x06004AF0 RID: 19184 RVA: 0x000BC4DC File Offset: 0x000BA6DC
 		public virtual bool IncludeSubArea
 		{
 			get
@@ -78,8 +75,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700144C RID: 5196
-		// (get) Token: 0x0600468E RID: 18062 RVA: 0x000B2320 File Offset: 0x000B0520
+		// Token: 0x1700154D RID: 5453
+		// (get) Token: 0x06004AF1 RID: 19185 RVA: 0x000BC4EC File Offset: 0x000BA6EC
 		public virtual List<int> EntityIds
 		{
 			get
@@ -99,19 +96,19 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002820 RID: 10272
+		// Token: 0x04002A6C RID: 10860
 		private ICombinedVisibleGroupComponent Instance;
 
-		// Token: 0x04002821 RID: 10273
+		// Token: 0x04002A6D RID: 10861
 		private List<int> _AreaIdsCache;
 
-		// Token: 0x04002822 RID: 10274
+		// Token: 0x04002A6E RID: 10862
 		private bool _AreaIdsInited;
 
-		// Token: 0x04002823 RID: 10275
+		// Token: 0x04002A6F RID: 10863
 		private List<int> _EntityIdsCache;
 
-		// Token: 0x04002824 RID: 10276
+		// Token: 0x04002A70 RID: 10864
 		private bool _EntityIdsInited;
 	}
 }

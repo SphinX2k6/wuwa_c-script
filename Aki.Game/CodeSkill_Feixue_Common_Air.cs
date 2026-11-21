@@ -2,17 +2,17 @@
 using System.Runtime.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200317E RID: 12670
+// Token: 0x020026EB RID: 9963
 [NullableContext(1)]
 [Nullable(0)]
 public class CodeSkill_Feixue_Common_Air : CodeSkillBase
 {
-	// Token: 0x0601B401 RID: 111617 RVA: 0x0076EE3B File Offset: 0x0076D03B
+	// Token: 0x06018F06 RID: 102150 RVA: 0x0079679F File Offset: 0x0079499F
 	public CodeSkill_Feixue_Common_Air(SpecialSkillBase specialSkill) : base(specialSkill)
 	{
 	}
 
-	// Token: 0x0601B402 RID: 111618 RVA: 0x0076EE44 File Offset: 0x0076D044
+	// Token: 0x06018F07 RID: 102151 RVA: 0x007967A8 File Offset: 0x007949A8
 	public override void OnBegin(Skill skill)
 	{
 		this.CanLand = false;
@@ -31,7 +31,7 @@ public class CodeSkill_Feixue_Common_Air : CodeSkillBase
 		this.RegisterCanLandEventListener();
 	}
 
-	// Token: 0x0601B403 RID: 111619 RVA: 0x0076EEB8 File Offset: 0x0076D0B8
+	// Token: 0x06018F08 RID: 102152 RVA: 0x0079681C File Offset: 0x00794A1C
 	public override void OnTick(float delta, Skill skill)
 	{
 		if (!this.CanLand || this.LandCheckDone)
@@ -61,13 +61,13 @@ public class CodeSkill_Feixue_Common_Air : CodeSkillBase
 		}
 	}
 
-	// Token: 0x0601B404 RID: 111620 RVA: 0x0076EF47 File Offset: 0x0076D147
+	// Token: 0x06018F09 RID: 102153 RVA: 0x007968AB File Offset: 0x00794AAB
 	public override void OnEnd(Skill skill)
 	{
 		this.RemoveCanLandEventListener();
 	}
 
-	// Token: 0x0601B405 RID: 111621 RVA: 0x0076EF50 File Offset: 0x0076D150
+	// Token: 0x06018F0A RID: 102154 RVA: 0x007968B4 File Offset: 0x00794AB4
 	private void RegisterCanLandEventListener()
 	{
 		BaseAbilityComponent component = base.Entity.GetComponent<BaseAbilityComponent>();
@@ -79,7 +79,7 @@ public class CodeSkill_Feixue_Common_Air : CodeSkillBase
 		this.ListenerActive = true;
 	}
 
-	// Token: 0x0601B406 RID: 111622 RVA: 0x0076EF98 File Offset: 0x0076D198
+	// Token: 0x06018F0B RID: 102155 RVA: 0x007968FC File Offset: 0x00794AFC
 	private void RemoveCanLandEventListener()
 	{
 		if (!this.ListenerActive)
@@ -95,22 +95,22 @@ public class CodeSkill_Feixue_Common_Air : CodeSkillBase
 		component.RemoveGameplayEventListener(GameplayTagDefine.EGameplayTagId["角色.R2T1TaidaonvMd10011.事件相关.可接地"], new TGameplayEventCallback(this.OnCanLandEvent));
 	}
 
-	// Token: 0x0601B407 RID: 111623 RVA: 0x0076EFE5 File Offset: 0x0076D1E5
+	// Token: 0x06018F0C RID: 102156 RVA: 0x00796949 File Offset: 0x00794B49
 	private void OnCanLandEvent(int tagId, FGameplayEventData payload)
 	{
 		this.CanLand = true;
 		this.RemoveCanLandEventListener();
 	}
 
-	// Token: 0x0400D4AA RID: 54442
+	// Token: 0x0400D90D RID: 55565
 	private const int COMMON_AIR_MONTAGE_INDEX = 0;
 
-	// Token: 0x0400D4AB RID: 54443
+	// Token: 0x0400D90E RID: 55566
 	private bool CanLand;
 
-	// Token: 0x0400D4AC RID: 54444
+	// Token: 0x0400D90F RID: 55567
 	private bool LandCheckDone;
 
-	// Token: 0x0400D4AD RID: 54445
+	// Token: 0x0400D910 RID: 55568
 	private bool ListenerActive;
 }

@@ -14,12 +14,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 {
-	// Token: 0x0200525C RID: 21084
+	// Token: 0x0200422C RID: 16940
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaOwnRolePanel : UiPanelBase
 	{
-		// Token: 0x06035E34 RID: 220724 RVA: 0x00CC08B0 File Offset: 0x00CBEAB0
+		// Token: 0x0602AD2F RID: 175407 RVA: 0x00C0DF40 File Offset: 0x00C0C140
 		protected override void OnRegisterComponent()
 		{
 			this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			};
 		}
 
-		// Token: 0x06035E35 RID: 220725 RVA: 0x00CC0920 File Offset: 0x00CBEB20
+		// Token: 0x0602AD30 RID: 175408 RVA: 0x00C0DFB0 File Offset: 0x00C0C1B0
 		protected UniTask InitGamepadFieldItem()
 		{
 			PhantomArenaOwnRolePanel.<InitGamepadFieldItem>d__8 <InitGamepadFieldItem>d__;
@@ -42,13 +42,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			return <InitGamepadFieldItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035E36 RID: 220726 RVA: 0x00CC0963 File Offset: 0x00CBEB63
+		// Token: 0x0602AD31 RID: 175409 RVA: 0x00C0DFF3 File Offset: 0x00C0C1F3
 		private void FieldPointerEnter(PhantomArenaFieldData fieldData, UUIItem attachItem)
 		{
 			this.ParentArea.ViewProxy.FieldPointerEnter(fieldData, attachItem, true);
 		}
 
-		// Token: 0x06035E37 RID: 220727 RVA: 0x00CC0978 File Offset: 0x00CBEB78
+		// Token: 0x0602AD32 RID: 175410 RVA: 0x00C0E008 File Offset: 0x00C0C208
 		protected UniTask InitRoleHpTween()
 		{
 			PhantomArenaOwnRolePanel.<InitRoleHpTween>d__10 <InitRoleHpTween>d__;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			return <InitRoleHpTween>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035E38 RID: 220728 RVA: 0x00CC09BC File Offset: 0x00CBEBBC
+		// Token: 0x0602AD33 RID: 175411 RVA: 0x00C0E04C File Offset: 0x00C0C24C
 		protected UniTask InitRoleItem()
 		{
 			PhantomArenaOwnRolePanel.<InitRoleItem>d__11 <InitRoleItem>d__;
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			return <InitRoleItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035E39 RID: 220729 RVA: 0x00CC0A00 File Offset: 0x00CBEC00
+		// Token: 0x0602AD34 RID: 175412 RVA: 0x00C0E090 File Offset: 0x00C0C290
 		protected UniTask InitSkillItem(UUIItem uiItem, bool needShow)
 		{
 			PhantomArenaOwnRolePanel.<InitSkillItem>d__12 <InitSkillItem>d__;
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			return <InitSkillItem>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035E3A RID: 220730 RVA: 0x00CC0A54 File Offset: 0x00CBEC54
+		// Token: 0x0602AD35 RID: 175413 RVA: 0x00C0E0E4 File Offset: 0x00C0C2E4
 		protected UniTask InitSkillList()
 		{
 			PhantomArenaOwnRolePanel.<InitSkillList>d__13 <InitSkillList>d__;
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			return <InitSkillList>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035E3B RID: 220731 RVA: 0x00CC0A98 File Offset: 0x00CBEC98
+		// Token: 0x0602AD36 RID: 175414 RVA: 0x00C0E128 File Offset: 0x00C0C328
 		protected override UniTask OnBeforeStartAsync()
 		{
 			PhantomArenaOwnRolePanel.<OnBeforeStartAsync>d__14 <OnBeforeStartAsync>d__;
@@ -105,7 +105,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035E3C RID: 220732 RVA: 0x00CC0ADB File Offset: 0x00CBECDB
+		// Token: 0x0602AD37 RID: 175415 RVA: 0x00C0E16B File Offset: 0x00C0C36B
 		protected override void OnStart()
 		{
 			this.RoleHpTween.SetRoleItem(this.RoleItem);
@@ -113,13 +113,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			this.InitAll();
 		}
 
-		// Token: 0x06035E3D RID: 220733 RVA: 0x00CC0B00 File Offset: 0x00CBED00
+		// Token: 0x0602AD38 RID: 175416 RVA: 0x00C0E190 File Offset: 0x00C0C390
 		protected override void OnBeforeDestroy()
 		{
 			this.RoleHpTween.Clear();
 		}
 
-		// Token: 0x06035E3E RID: 220734 RVA: 0x00CC0B0D File Offset: 0x00CBED0D
+		// Token: 0x0602AD39 RID: 175417 RVA: 0x00C0E19D File Offset: 0x00C0C39D
 		private void InitAll()
 		{
 			this.InitLifeNum();
@@ -127,7 +127,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			this.RefreshSkillEffect();
 		}
 
-		// Token: 0x06035E3F RID: 220735 RVA: 0x00CC0B24 File Offset: 0x00CBED24
+		// Token: 0x0602AD3A RID: 175418 RVA: 0x00C0E1B4 File Offset: 0x00C0C3B4
 		private void InitLifeNum()
 		{
 			int battleStatusValue = PhantomArenaBattleModel.Instance.OwnData.GetBattleStatusValue(PhantomBattleRoleStatus.PhantomBattleLife);
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			this.RoleItem.RefreshLifeNum(battleStatusValue, battleStatusValue2);
 		}
 
-		// Token: 0x06035E40 RID: 220736 RVA: 0x00CC0B70 File Offset: 0x00CBED70
+		// Token: 0x0602AD3B RID: 175419 RVA: 0x00C0E200 File Offset: 0x00C0C400
 		public void RefreshAll(bool isFromWorldDone)
 		{
 			if (isFromWorldDone)
@@ -152,7 +152,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			this.RefreshSkillEffect();
 		}
 
-		// Token: 0x06035E41 RID: 220737 RVA: 0x00CC0B98 File Offset: 0x00CBED98
+		// Token: 0x0602AD3C RID: 175420 RVA: 0x00C0E228 File Offset: 0x00C0C428
 		public void RefreshLifeNumWithEffect()
 		{
 			int battleStatusValue = PhantomArenaBattleModel.Instance.OwnData.GetBattleStatusValue(PhantomBattleRoleStatus.PhantomBattleLife);
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			this.RoleItem.RefreshLifeNum(battleStatusValue, battleStatusValue2);
 		}
 
-		// Token: 0x06035E42 RID: 220738 RVA: 0x00CC0BE0 File Offset: 0x00CBEDE0
+		// Token: 0x0602AD3D RID: 175421 RVA: 0x00C0E270 File Offset: 0x00C0C470
 		public void TryDoLifeChangeShow()
 		{
 			int oldLife = PhantomArenaBattleModel.Instance.OwnData.PrevShowLife;
@@ -182,7 +182,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			}, 300f, null, null, true, 1f);
 		}
 
-		// Token: 0x06035E43 RID: 220739 RVA: 0x00CC0C84 File Offset: 0x00CBEE84
+		// Token: 0x0602AD3E RID: 175422 RVA: 0x00C0E314 File Offset: 0x00C0C514
 		public void PlayHpTween()
 		{
 			int prevShowLife = PhantomArenaBattleModel.Instance.OwnData.PrevShowLife;
@@ -196,14 +196,14 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			this.RoleHpTween.PlayHpTween(prevShowLife, battleStatusValue, battleStatusValue2);
 		}
 
-		// Token: 0x06035E44 RID: 220740 RVA: 0x00CC0CE8 File Offset: 0x00CBEEE8
+		// Token: 0x0602AD3F RID: 175423 RVA: 0x00C0E378 File Offset: 0x00C0C578
 		public void RefreshShieldNum()
 		{
 			int battleBattleAttr = PhantomArenaBattleModel.Instance.OwnData.GetBattleBattleAttr(PhantomBattleCardAttr.Defence);
 			this.RoleItem.RefreshShieldNum(battleBattleAttr);
 		}
 
-		// Token: 0x06035E45 RID: 220741 RVA: 0x00CC0D14 File Offset: 0x00CBEF14
+		// Token: 0x0602AD40 RID: 175424 RVA: 0x00C0E3A4 File Offset: 0x00C0C5A4
 		public void RefreshTask()
 		{
 			PhantomArenaCardTaskData taskData = PhantomArenaBattleModel.Instance.OwnData.TaskData;
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			this.RoleItem.RefreshMonsterIcon(phantomBattleCardConfig.TaskBg);
 		}
 
-		// Token: 0x06035E46 RID: 220742 RVA: 0x00CC0D80 File Offset: 0x00CBEF80
+		// Token: 0x0602AD41 RID: 175425 RVA: 0x00C0E410 File Offset: 0x00C0C610
 		public UniTask PlayBeHitEffect(int damage)
 		{
 			PhantomArenaOwnRolePanel.<PlayBeHitEffect>d__25 <PlayBeHitEffect>d__;
@@ -229,14 +229,14 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			return <PlayBeHitEffect>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06035E47 RID: 220743 RVA: 0x00CC0DCB File Offset: 0x00CBEFCB
+		// Token: 0x0602AD42 RID: 175426 RVA: 0x00C0E45B File Offset: 0x00C0C65B
 		public void ActiveIsFourCostShowInFirstTime()
 		{
 			this.IsFourCostShowInFirstTime = true;
 			this.RoleItem.ShowPhantomBtn();
 		}
 
-		// Token: 0x06035E48 RID: 220744 RVA: 0x00CC0DE0 File Offset: 0x00CBEFE0
+		// Token: 0x0602AD43 RID: 175427 RVA: 0x00C0E470 File Offset: 0x00C0C670
 		public void RefreshSkillEffect()
 		{
 			foreach (PhantomArenaSkill phantomArenaSkill in this.SkillList)
@@ -245,13 +245,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			}
 		}
 
-		// Token: 0x06035E49 RID: 220745 RVA: 0x00CC0E30 File Offset: 0x00CBF030
+		// Token: 0x0602AD44 RID: 175428 RVA: 0x00C0E4C0 File Offset: 0x00C0C6C0
 		public void RegisterBattleArea(PhantomArenaOwnArea area)
 		{
 			this.ParentArea = area;
 		}
 
-		// Token: 0x06035E4A RID: 220746 RVA: 0x00CC0E39 File Offset: 0x00CBF039
+		// Token: 0x0602AD45 RID: 175429 RVA: 0x00C0E4C9 File Offset: 0x00C0C6C9
 		public void SwitchFieldState(bool active)
 		{
 			PhantomArenaFieldItem gamepadFieldItem = this.GamepadFieldItem;
@@ -262,7 +262,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			gamepadFieldItem.SetFieldItemActive(active);
 		}
 
-		// Token: 0x06035E4B RID: 220747 RVA: 0x00CC0E4C File Offset: 0x00CBF04C
+		// Token: 0x0602AD46 RID: 175430 RVA: 0x00C0E4DC File Offset: 0x00C0C6DC
 		public void RefreshField()
 		{
 			PhantomArenaFieldItem gamepadFieldItem = this.GamepadFieldItem;
@@ -273,13 +273,13 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			gamepadFieldItem.Refresh(PhantomArenaBattleModel.Instance.OwnData.FieldData).Forget();
 		}
 
-		// Token: 0x06035E4C RID: 220748 RVA: 0x00CC0E72 File Offset: 0x00CBF072
+		// Token: 0x0602AD47 RID: 175431 RVA: 0x00C0E502 File Offset: 0x00C0C702
 		public UUIItem GetRoleRootItem()
 		{
 			return this.RoleItem.GetRootItem();
 		}
 
-		// Token: 0x06035E4D RID: 220749 RVA: 0x00CC0E7F File Offset: 0x00CBF07F
+		// Token: 0x0602AD48 RID: 175432 RVA: 0x00C0E50F File Offset: 0x00C0C70F
 		public override UUIItem[] GetGuideUiItemAndUiItemForShowEx(string[] configParams)
 		{
 			if (configParams == null || configParams.Length == 0)
@@ -298,38 +298,38 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.View.Panel
 			return roleItem.GetGuideUiItemAndUiItemForShowEx(configParams);
 		}
 
-		// Token: 0x0401C8DD RID: 116957
+		// Token: 0x04017312 RID: 94994
 		protected PhantomArenaOwnArea ParentArea;
 
-		// Token: 0x0401C8DE RID: 116958
+		// Token: 0x04017313 RID: 94995
 		protected PhantomArenaRoleItem RoleItem;
 
-		// Token: 0x0401C8DF RID: 116959
+		// Token: 0x04017314 RID: 94996
 		protected bool IsFourCostShowInFirstTime;
 
-		// Token: 0x0401C8E0 RID: 116960
+		// Token: 0x04017315 RID: 94997
 		protected PhantomArenaRoleHpTween RoleHpTween;
 
-		// Token: 0x0401C8E1 RID: 116961
+		// Token: 0x04017316 RID: 94998
 		protected List<PhantomArenaSkill> SkillList = new List<PhantomArenaSkill>();
 
-		// Token: 0x0401C8E2 RID: 116962
+		// Token: 0x04017317 RID: 94999
 		protected PhantomArenaFieldItem GamepadFieldItem;
 
-		// Token: 0x0200B429 RID: 46121
+		// Token: 0x02009E61 RID: 40545
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x04036962 RID: 223586
+			// Token: 0x040313B5 RID: 201653
 			public const int RoleItem = 0;
 
-			// Token: 0x04036963 RID: 223587
+			// Token: 0x040313B6 RID: 201654
 			public const int SkillItemTwo = 1;
 
-			// Token: 0x04036964 RID: 223588
+			// Token: 0x040313B7 RID: 201655
 			public const int SkillItemOne = 2;
 
-			// Token: 0x04036965 RID: 223589
+			// Token: 0x040313B8 RID: 201656
 			public const int GamepadFieldItem = 3;
 		}
 	}

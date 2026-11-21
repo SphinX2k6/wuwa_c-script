@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200224B RID: 8779
+	// Token: 0x020024B8 RID: 9400
 	public class ToggleScanSplineEffect_SetValue
 	{
-		// Token: 0x040072D3 RID: 29395
+		// Token: 0x04007920 RID: 31008
 		public ETraceSplineOptionType Type;
 	}
 }

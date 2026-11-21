@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200231C RID: 8988
+	// Token: 0x0200258B RID: 9611
 	public class EEnableFunctionTypeJsonConverter : JsonConverter<EEnableFunctionType>
 	{
-		// Token: 0x0600C47E RID: 50302 RVA: 0x001CAEB0 File Offset: 0x001C90B0
+		// Token: 0x0600D04D RID: 53325 RVA: 0x001E2D78 File Offset: 0x001E0F78
 		public override EEnableFunctionType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EEnableFunctionTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C47F RID: 50303 RVA: 0x001CAED4 File Offset: 0x001C90D4
+		// Token: 0x0600D04E RID: 53326 RVA: 0x001E2D9C File Offset: 0x001E0F9C
 		public override void Write(Utf8JsonWriter writer, EEnableFunctionType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

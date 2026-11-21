@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020007C5 RID: 1989
+	// Token: 0x020007E1 RID: 2017
 	public class ConfigRefResourceQuestListAll : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002EB0 RID: 11952 RVA: 0x001613A3 File Offset: 0x0015F5A3
+		// Token: 0x06002F58 RID: 12120 RVA: 0x0016868B File Offset: 0x0016688B
 		static ConfigRefResourceQuestListAll()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRefResourceQuestListAll.CreateStaticDefaultValue), new Action(ConfigRefResourceQuestListAll.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002EB1 RID: 11953 RVA: 0x001613C4 File Offset: 0x0015F5C4
+		// Token: 0x06002F59 RID: 12121 RVA: 0x001686AC File Offset: 0x001668AC
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRefResourceQuestListAll.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002EB2 RID: 11954 RVA: 0x00161443 File Offset: 0x0015F643
+		// Token: 0x06002F5A RID: 12122 RVA: 0x0016872B File Offset: 0x0016692B
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRefResourceQuestListAll.LogPair = null;
 			ConfigRefResourceQuestListAll.HandleId = 0;
 		}
 
-		// Token: 0x06002EB3 RID: 11955 RVA: 0x00161451 File Offset: 0x0015F651
+		// Token: 0x06002F5B RID: 12123 RVA: 0x00168739 File Offset: 0x00166939
 		public static void Init()
 		{
 			ConfigRefResourceQuestListAll.HandleId = ConfigCommon.InitDataStatement(ConfigRefResourceQuestListAll.HandleId, "db_refresourcequestlist.db", "select BinData from `RefResourceQuestList`");
 		}
 
-		// Token: 0x06002EB4 RID: 11956 RVA: 0x0016146C File Offset: 0x0015F66C
+		// Token: 0x06002F5C RID: 12124 RVA: 0x00168754 File Offset: 0x00166954
 		[NullableContext(2)]
 		public static IReadOnlyList<RefResourceQuestList> GetConfigList(bool useCache = true)
 		{
@@ -79,22 +79,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04003649 RID: 13897
+		// Token: 0x0400370D RID: 14093
 		private const string DB = "db_refresourcequestlist.db";
 
-		// Token: 0x0400364A RID: 13898
+		// Token: 0x0400370E RID: 14094
 		private const string FILE = "UniverseEditor/QuestRefMapBlockConfig/RefResourceQuestList.csv";
 
-		// Token: 0x0400364B RID: 13899
+		// Token: 0x0400370F RID: 14095
 		private const string TABLE = "RefResourceQuestList";
 
-		// Token: 0x0400364C RID: 13900
+		// Token: 0x04003710 RID: 14096
 		private const string COMMAND = "select BinData from `RefResourceQuestList`";
 
-		// Token: 0x0400364D RID: 13901
+		// Token: 0x04003711 RID: 14097
 		private const string KEY_PREFIX = "RefResourceQuestListAll";
 
-		// Token: 0x0400364E RID: 13902
+		// Token: 0x04003712 RID: 14098
 		[Nullable(new byte[]
 		{
 			2,
@@ -104,7 +104,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400364F RID: 13903
+		// Token: 0x04003713 RID: 14099
 		private static int HandleId;
 	}
 }

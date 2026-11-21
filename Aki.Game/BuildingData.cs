@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 
-// Token: 0x020012F8 RID: 4856
+// Token: 0x020007AC RID: 1964
 [NullableContext(1)]
 [Nullable(0)]
 public class BuildingData
 {
-	// Token: 0x17000B82 RID: 2946
-	// (get) Token: 0x06008646 RID: 34374 RVA: 0x001CA2DE File Offset: 0x001C84DE
+	// Token: 0x17000BA2 RID: 2978
+	// (get) Token: 0x060059E1 RID: 23009 RVA: 0x001D314A File Offset: 0x001D134A
 	public bool IsBuild
 	{
 		get
@@ -18,19 +18,19 @@ public class BuildingData
 		}
 	}
 
-	// Token: 0x06008647 RID: 34375 RVA: 0x001CA2E9 File Offset: 0x001C84E9
+	// Token: 0x060059E2 RID: 23010 RVA: 0x001D3155 File Offset: 0x001D1355
 	public BuildingData(int id)
 	{
 		this.Id = id;
 	}
 
-	// Token: 0x06008648 RID: 34376 RVA: 0x001CA2F8 File Offset: 0x001C84F8
+	// Token: 0x060059E3 RID: 23011 RVA: 0x001D3164 File Offset: 0x001D1364
 	public string GetBuildingName()
 	{
 		return ConfigMultiTextLang.GetLocalTextNew(BuildingConfig.Instance.GetBuildingById(this.Id).Name, null) ?? "";
 	}
 
-	// Token: 0x06008649 RID: 34377 RVA: 0x001CA32C File Offset: 0x001C852C
+	// Token: 0x060059E4 RID: 23012 RVA: 0x001D3198 File Offset: 0x001D1398
 	public int GetConsumeCount()
 	{
 		Building buildingById = BuildingConfig.Instance.GetBuildingById(this.Id);
@@ -41,13 +41,13 @@ public class BuildingData
 		return BuildingConfig.Instance.GetBuildingUpGradeCurveByGroupIdAndLevel(buildingById.UpGradeCurve, this.Level).UpGradePrice;
 	}
 
-	// Token: 0x0600864A RID: 34378 RVA: 0x001CA379 File Offset: 0x001C8579
+	// Token: 0x060059E5 RID: 23013 RVA: 0x001D31E5 File Offset: 0x001D13E5
 	private IAdditionData CreateAdditionData(string textId, string valueText)
 	{
 		return new AdditionData(textId, valueText);
 	}
 
-	// Token: 0x0600864B RID: 34379 RVA: 0x001CA384 File Offset: 0x001C8584
+	// Token: 0x060059E6 RID: 23014 RVA: 0x001D31F0 File Offset: 0x001D13F0
 	public List<IAdditionData> GetAdditionDataList(int level)
 	{
 		int level2 = MathUtils.Instance.Clamp(level, 1, this.LevelMax);
@@ -89,7 +89,7 @@ public class BuildingData
 		return list;
 	}
 
-	// Token: 0x0600864C RID: 34380 RVA: 0x001CA53C File Offset: 0x001C873C
+	// Token: 0x060059E7 RID: 23015 RVA: 0x001D33A8 File Offset: 0x001D15A8
 	public string GetLevelUpIncreaseDesc()
 	{
 		List<IAdditionData> additionDataList = this.GetAdditionDataList(this.Level);
@@ -101,14 +101,14 @@ public class BuildingData
 		return ConfigMultiTextLang.GetLocalTextNew(additionData.TextId, null) + " " + additionData.ValueText;
 	}
 
-	// Token: 0x0600864D RID: 34381 RVA: 0x001CA58C File Offset: 0x001C878C
+	// Token: 0x060059E8 RID: 23016 RVA: 0x001D33F8 File Offset: 0x001D15F8
 	public int GetAssociateRoleId()
 	{
 		return BuildingConfig.Instance.GetBuildingById(this.Id).AssociateRole;
 	}
 
-	// Token: 0x17000B83 RID: 2947
-	// (get) Token: 0x0600864E RID: 34382 RVA: 0x001CA5B4 File Offset: 0x001C87B4
+	// Token: 0x17000BA3 RID: 2979
+	// (get) Token: 0x060059E9 RID: 23017 RVA: 0x001D3420 File Offset: 0x001D1620
 	public bool IsCanLevelUp
 	{
 		get
@@ -119,8 +119,8 @@ public class BuildingData
 		}
 	}
 
-	// Token: 0x17000B84 RID: 2948
-	// (get) Token: 0x0600864F RID: 34383 RVA: 0x001CA5E8 File Offset: 0x001C87E8
+	// Token: 0x17000BA4 RID: 2980
+	// (get) Token: 0x060059EA RID: 23018 RVA: 0x001D3454 File Offset: 0x001D1654
 	public int LevelMax
 	{
 		get
@@ -131,8 +131,8 @@ public class BuildingData
 		}
 	}
 
-	// Token: 0x17000B85 RID: 2949
-	// (get) Token: 0x06008650 RID: 34384 RVA: 0x001CA62C File Offset: 0x001C882C
+	// Token: 0x17000BA5 RID: 2981
+	// (get) Token: 0x060059EB RID: 23019 RVA: 0x001D3498 File Offset: 0x001D1698
 	public bool IsMax
 	{
 		get
@@ -141,8 +141,8 @@ public class BuildingData
 		}
 	}
 
-	// Token: 0x17000B86 RID: 2950
-	// (get) Token: 0x06008651 RID: 34385 RVA: 0x001CA63F File Offset: 0x001C883F
+	// Token: 0x17000BA6 RID: 2982
+	// (get) Token: 0x060059EC RID: 23020 RVA: 0x001D34AB File Offset: 0x001D16AB
 	public bool IsAvailableLevelUp
 	{
 		get
@@ -151,12 +151,12 @@ public class BuildingData
 		}
 	}
 
-	// Token: 0x04003C26 RID: 15398
+	// Token: 0x04003CBE RID: 15550
 	public int Level;
 
-	// Token: 0x04003C27 RID: 15399
+	// Token: 0x04003CBF RID: 15551
 	public bool IsUnlock;
 
-	// Token: 0x04003C28 RID: 15400
+	// Token: 0x04003CC0 RID: 15552
 	public readonly int Id;
 }

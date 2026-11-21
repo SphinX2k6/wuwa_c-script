@@ -1,9 +1,9 @@
 ﻿using System;
 
-// Token: 0x020010C1 RID: 4289
+// Token: 0x02000575 RID: 1397
 public class ActivityLinkageTabData
 {
-	// Token: 0x06006FB1 RID: 28593 RVA: 0x0016BE80 File Offset: 0x0016A080
+	// Token: 0x06004347 RID: 17223 RVA: 0x0017483C File Offset: 0x00172A3C
 	public bool IsInShowTimeChange()
 	{
 		bool flag = false;
@@ -17,18 +17,18 @@ public class ActivityLinkageTabData
 		return result;
 	}
 
-	// Token: 0x040033E1 RID: 13281
+	// Token: 0x0400347A RID: 13434
 	public int TabId;
 
-	// Token: 0x040033E2 RID: 13282
+	// Token: 0x0400347B RID: 13435
 	public long StartTimeStamp;
 
-	// Token: 0x040033E3 RID: 13283
+	// Token: 0x0400347C RID: 13436
 	public long EndTimeStamp;
 
-	// Token: 0x040033E4 RID: 13284
+	// Token: 0x0400347D RID: 13437
 	public bool IsReceive;
 
-	// Token: 0x040033E5 RID: 13285
+	// Token: 0x0400347E RID: 13438
 	public bool IsInShowTime;
 }

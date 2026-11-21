@@ -7,7 +7,7 @@ using CSharpScript.Game.Module.SkipInterface;
 using CSharpScript.Game.Module.Util;
 using UnrealEngine;
 
-// Token: 0x02001285 RID: 4741
+// Token: 0x02000739 RID: 1849
 [NullableContext(1)]
 [Nullable(new byte[]
 {
@@ -16,7 +16,7 @@ using UnrealEngine;
 })]
 public class FishingRewardTaskItem : GridProxyAbstract<FishingTaskData>
 {
-	// Token: 0x06008174 RID: 33140 RVA: 0x001B7620 File Offset: 0x001B5820
+	// Token: 0x0600550B RID: 21771 RVA: 0x001C02F0 File Offset: 0x001BE4F0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 8;
@@ -51,25 +51,25 @@ public class FishingRewardTaskItem : GridProxyAbstract<FishingTaskData>
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06008175 RID: 33141 RVA: 0x001B77AF File Offset: 0x001B59AF
+	// Token: 0x0600550C RID: 21772 RVA: 0x001C047F File Offset: 0x001BE67F
 	protected override void OnStart()
 	{
 		this.RewardScrollView = new GenericScrollViewNew<ActivitySmallItemGrid, IItemGridData>(base.GetScrollViewWithScrollbar(6), new Func<ActivitySmallItemGrid>(this.CreatePropItem), null, false, null);
 	}
 
-	// Token: 0x06008176 RID: 33142 RVA: 0x001B77D2 File Offset: 0x001B59D2
+	// Token: 0x0600550D RID: 21773 RVA: 0x001C04A2 File Offset: 0x001BE6A2
 	private ActivitySmallItemGrid CreatePropItem()
 	{
 		return new ActivitySmallItemGrid();
 	}
 
-	// Token: 0x06008177 RID: 33143 RVA: 0x001B77D9 File Offset: 0x001B59D9
+	// Token: 0x0600550E RID: 21774 RVA: 0x001C04A9 File Offset: 0x001BE6A9
 	private void OnClickJump()
 	{
 		SkipTaskManager.RunByConfigId(this.TaskData.JumpId, null);
 	}
 
-	// Token: 0x06008178 RID: 33144 RVA: 0x001B77EC File Offset: 0x001B59EC
+	// Token: 0x0600550F RID: 21775 RVA: 0x001C04BC File Offset: 0x001BE6BC
 	private void OnClickGetButton()
 	{
 		Action<int> receiveDelegate = this.TaskData.ReceiveDelegate;
@@ -80,7 +80,7 @@ public class FishingRewardTaskItem : GridProxyAbstract<FishingTaskData>
 		receiveDelegate(this.TaskData.TaskId);
 	}
 
-	// Token: 0x06008179 RID: 33145 RVA: 0x001B7810 File Offset: 0x001B5A10
+	// Token: 0x06005510 RID: 21776 RVA: 0x001C04E0 File Offset: 0x001BE6E0
 	public override void Refresh(FishingTaskData data, bool isSelected, int gridIndex)
 	{
 		this.TaskData = data;
@@ -117,16 +117,16 @@ public class FishingRewardTaskItem : GridProxyAbstract<FishingTaskData>
 		text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 	}
 
-	// Token: 0x04003AA6 RID: 15014
+	// Token: 0x04003B3E RID: 15166
 	private const float FINISHED_ITEM_ALPHA = 0.6f;
 
-	// Token: 0x04003AA7 RID: 15015
+	// Token: 0x04003B3F RID: 15167
 	private const float NORMAL_ITEM_ALPHA = 1f;
 
-	// Token: 0x04003AA8 RID: 15016
+	// Token: 0x04003B40 RID: 15168
 	private FishingTaskData TaskData;
 
-	// Token: 0x04003AA9 RID: 15017
+	// Token: 0x04003B41 RID: 15169
 	[Nullable(new byte[]
 	{
 		2,
@@ -135,32 +135,32 @@ public class FishingRewardTaskItem : GridProxyAbstract<FishingTaskData>
 	})]
 	private GenericScrollViewNew<ActivitySmallItemGrid, IItemGridData> RewardScrollView;
 
-	// Token: 0x0200789D RID: 30877
+	// Token: 0x02006A28 RID: 27176
 	[NullableContext(0)]
 	private class EComponents
 	{
-		// Token: 0x04027BD7 RID: 162775
+		// Token: 0x04022F08 RID: 143112
 		public const int GetBtn = 0;
 
-		// Token: 0x04027BD8 RID: 162776
+		// Token: 0x04022F09 RID: 143113
 		public const int JumpBtn = 1;
 
-		// Token: 0x04027BD9 RID: 162777
+		// Token: 0x04022F0A RID: 143114
 		public const int DoingText = 2;
 
-		// Token: 0x04027BDA RID: 162778
+		// Token: 0x04022F0B RID: 143115
 		public const int FinishItem = 3;
 
-		// Token: 0x04027BDB RID: 162779
+		// Token: 0x04022F0C RID: 143116
 		public const int TxtName = 4;
 
-		// Token: 0x04027BDC RID: 162780
+		// Token: 0x04022F0D RID: 143117
 		public const int ProgressText = 5;
 
-		// Token: 0x04027BDD RID: 162781
+		// Token: 0x04022F0E RID: 143118
 		public const int RewardScroll = 6;
 
-		// Token: 0x04027BDE RID: 162782
+		// Token: 0x04022F0F RID: 143119
 		public const int Item = 7;
 	}
 }

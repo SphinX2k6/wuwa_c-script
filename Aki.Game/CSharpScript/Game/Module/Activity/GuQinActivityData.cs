@@ -9,12 +9,12 @@ using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.Module.Activity
 {
-	// Token: 0x02005EF1 RID: 24305
+	// Token: 0x02004ED8 RID: 20184
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GuQinActivityData : ActivityBaseData
 	{
-		// Token: 0x0603DC34 RID: 252980 RVA: 0x00EEDDBC File Offset: 0x00EEBFBC
+		// Token: 0x06032BCF RID: 207823 RVA: 0x00E3FA80 File Offset: 0x00E3DC80
 		protected override void PhraseEx(ActivityData data)
 		{
 			QingXiaoActivityInfo qingXiaoActivityInfo = data.QingXiaoActivityInfo;
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.Activity
 			}
 		}
 
-		// Token: 0x0603DC35 RID: 252981 RVA: 0x00EEDE48 File Offset: 0x00EEC048
+		// Token: 0x06032BD0 RID: 207824 RVA: 0x00E3FB0C File Offset: 0x00E3DD0C
 		private GuQinActivityTaskData GetOrAddTaskData(int taskId, GuQinActivityTask config)
 		{
 			GuQinActivityTaskData guQinActivityTaskData;
@@ -49,7 +49,7 @@ namespace CSharpScript.Game.Module.Activity
 			return guQinActivityTaskData;
 		}
 
-		// Token: 0x0603DC36 RID: 252982 RVA: 0x00EEDEA8 File Offset: 0x00EEC0A8
+		// Token: 0x06032BD1 RID: 207825 RVA: 0x00E3FB6C File Offset: 0x00E3DD6C
 		private GuQinActivityTabData GetOrAddTabData(int tabIndex)
 		{
 			GuQinActivityTabData guQinActivityTabData;
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.Activity
 			return guQinActivityTabData;
 		}
 
-		// Token: 0x0603DC37 RID: 252983 RVA: 0x00EEDED9 File Offset: 0x00EEC0D9
+		// Token: 0x06032BD2 RID: 207826 RVA: 0x00E3FB9D File Offset: 0x00E3DD9D
 		public override bool GetExDataRedPointShowState()
 		{
 			if (!base.IsUnLock())
@@ -71,19 +71,19 @@ namespace CSharpScript.Game.Module.Activity
 			return this.HasRedDot();
 		}
 
-		// Token: 0x0603DC38 RID: 252984 RVA: 0x00EEDEF0 File Offset: 0x00EEC0F0
+		// Token: 0x06032BD3 RID: 207827 RVA: 0x00E3FBB4 File Offset: 0x00E3DDB4
 		public bool GetButtonRedPointShowState()
 		{
 			return !base.IsUnLock() && this.GetPreOpenFirstCheckRedDotState();
 		}
 
-		// Token: 0x0603DC39 RID: 252985 RVA: 0x00EEDF02 File Offset: 0x00EEC102
+		// Token: 0x06032BD4 RID: 207828 RVA: 0x00E3FBC6 File Offset: 0x00E3DDC6
 		public void RefreshActivityRedDotState()
 		{
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 		}
 
-		// Token: 0x0603DC3A RID: 252986 RVA: 0x00EEDF1C File Offset: 0x00EEC11C
+		// Token: 0x06032BD5 RID: 207829 RVA: 0x00E3FBE0 File Offset: 0x00E3DDE0
 		public bool HasRedDot()
 		{
 			foreach (GuQinActivityTabData guQinActivityTabData in this.TabDataMap.Values)
@@ -102,7 +102,7 @@ namespace CSharpScript.Game.Module.Activity
 			return false;
 		}
 
-		// Token: 0x0603DC3B RID: 252987 RVA: 0x00EEDFB4 File Offset: 0x00EEC1B4
+		// Token: 0x06032BD6 RID: 207830 RVA: 0x00E3FC78 File Offset: 0x00E3DE78
 		public bool GetPreOpenFirstCheckRedDotState()
 		{
 			bool flag = base.CanPreOpen();
@@ -110,7 +110,7 @@ namespace CSharpScript.Game.Module.Activity
 			return flag && flag2 && ActivityModel.Instance.GetActivityCacheData(base.Id, 0, 0, 0, 0) == 0;
 		}
 
-		// Token: 0x0603DC3C RID: 252988 RVA: 0x00EEDFEC File Offset: 0x00EEC1EC
+		// Token: 0x06032BD7 RID: 207831 RVA: 0x00E3FCB0 File Offset: 0x00E3DEB0
 		public bool SaveFirstCheckRedDotState(EGuQinActivityCheckSaveFlag saveFlag, int id = 0)
 		{
 			if (ActivityModel.Instance.GetActivityCacheData(base.Id, 0, (int)saveFlag, id, 0) == 1)
@@ -122,7 +122,7 @@ namespace CSharpScript.Game.Module.Activity
 			return false;
 		}
 
-		// Token: 0x0603DC3D RID: 252989 RVA: 0x00EEE024 File Offset: 0x00EEC224
+		// Token: 0x06032BD8 RID: 207832 RVA: 0x00E3FCE8 File Offset: 0x00E3DEE8
 		public bool HasNewQuestRedDot()
 		{
 			foreach (GuQinActivityTabData guQinActivityTabData in this.TabDataMap.Values)
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.Activity
 			return false;
 		}
 
-		// Token: 0x0603DC3E RID: 252990 RVA: 0x00EEE0BC File Offset: 0x00EEC2BC
+		// Token: 0x06032BD9 RID: 207833 RVA: 0x00E3FD80 File Offset: 0x00E3DF80
 		public void RemoveNewQuestRedDot(int taskDataId)
 		{
 			ActivityModel instance = ActivityModel.Instance;
@@ -156,7 +156,7 @@ namespace CSharpScript.Game.Module.Activity
 			}
 		}
 
-		// Token: 0x0603DC3F RID: 252991 RVA: 0x00EEE12C File Offset: 0x00EEC32C
+		// Token: 0x06032BDA RID: 207834 RVA: 0x00E3FDF0 File Offset: 0x00E3DFF0
 		protected override bool GetExDataFinishShowState()
 		{
 			if (!base.IsUnLock())
@@ -183,13 +183,13 @@ namespace CSharpScript.Game.Module.Activity
 			return true;
 		}
 
-		// Token: 0x0603DC40 RID: 252992 RVA: 0x00EEE1D8 File Offset: 0x00EEC3D8
+		// Token: 0x06032BDB RID: 207835 RVA: 0x00E3FE9C File Offset: 0x00E3E09C
 		public GuQinActivityParam GetGuQinActivityParamConfig()
 		{
 			return GuQinActivityConfig.Instance.GetGuQinActivityParamById(base.Id);
 		}
 
-		// Token: 0x0603DC41 RID: 252993 RVA: 0x00EEE1EC File Offset: 0x00EEC3EC
+		// Token: 0x06032BDC RID: 207836 RVA: 0x00E3FEB0 File Offset: 0x00E3E0B0
 		public int? GetRecommendQuestLinkId()
 		{
 			GuQinActivityParam guQinActivityParamConfig = this.GetGuQinActivityParamConfig();
@@ -214,14 +214,14 @@ namespace CSharpScript.Game.Module.Activity
 			return null;
 		}
 
-		// Token: 0x0603DC42 RID: 252994 RVA: 0x00EEE298 File Offset: 0x00EEC498
+		// Token: 0x06032BDD RID: 207837 RVA: 0x00E3FF5C File Offset: 0x00E3E15C
 		public bool IsRecommendQuestFinished()
 		{
 			int recommendQuestId = this.GetGuQinActivityParamConfig().RecommendQuestId;
 			return recommendQuestId == 0 || QuestNewModel.Instance.CheckQuestFinished(recommendQuestId);
 		}
 
-		// Token: 0x0603DC43 RID: 252995 RVA: 0x00EEE2C4 File Offset: 0x00EEC4C4
+		// Token: 0x06032BDE RID: 207838 RVA: 0x00E3FF88 File Offset: 0x00E3E188
 		[NullableContext(0)]
 		[return: TupleElementNames(new string[]
 		{
@@ -249,16 +249,16 @@ namespace CSharpScript.Game.Module.Activity
 			return new ValueTuple<int, int>(num, num2);
 		}
 
-		// Token: 0x0603DC44 RID: 252996 RVA: 0x00EEE368 File Offset: 0x00EEC568
+		// Token: 0x06032BDF RID: 207839 RVA: 0x00E4002C File Offset: 0x00E3E22C
 		public Dictionary<int, GuQinActivityTabData> GetTabDataMap()
 		{
 			return this.TabDataMap;
 		}
 
-		// Token: 0x04020458 RID: 132184
+		// Token: 0x0401AF2A RID: 110378
 		private readonly Dictionary<int, GuQinActivityTabData> TabDataMap = new Dictionary<int, GuQinActivityTabData>();
 
-		// Token: 0x04020459 RID: 132185
+		// Token: 0x0401AF2B RID: 110379
 		private readonly Dictionary<int, GuQinActivityTaskData> TaskDataMap = new Dictionary<int, GuQinActivityTaskData>();
 	}
 }

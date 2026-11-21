@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000BE6 RID: 3046
+	// Token: 0x02000CB5 RID: 3253
 	public class ICreateBulletConfig
 	{
-		// Token: 0x060045F3 RID: 17907 RVA: 0x000B0D5E File Offset: 0x000AEF5E
-		[NullableContext(1)]
+		// Token: 0x06004A51 RID: 19025 RVA: 0x000BAEDA File Offset: 0x000B90DA
 		public static ICreateBulletConfig Create(ICreateBulletConfig? instance)
 		{
 			if (instance == null)
@@ -21,8 +19,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170013E4 RID: 5092
-		// (get) Token: 0x060045F4 RID: 17908 RVA: 0x000B0D7D File Offset: 0x000AEF7D
+		// Token: 0x170014E2 RID: 5346
+		// (get) Token: 0x06004A52 RID: 19026 RVA: 0x000BAEF9 File Offset: 0x000B90F9
 		public virtual long BulletId
 		{
 			get
@@ -31,8 +29,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170013E5 RID: 5093
-		// (get) Token: 0x060045F5 RID: 17909 RVA: 0x000B0D8A File Offset: 0x000AEF8A
+		// Token: 0x170014E3 RID: 5347
+		// (get) Token: 0x06004A53 RID: 19027 RVA: 0x000BAF06 File Offset: 0x000B9106
 		public virtual float Delay
 		{
 			get
@@ -41,7 +39,7 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040027D1 RID: 10193
+		// Token: 0x04002A1C RID: 10780
 		private ICreateBulletConfig Instance;
 	}
 }

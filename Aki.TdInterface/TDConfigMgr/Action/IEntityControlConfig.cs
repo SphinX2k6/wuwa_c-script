@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A0A RID: 6666
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001B9D RID: 7069
 	public class IEntityControlConfig
 	{
-		// Token: 0x06008ECB RID: 36555 RVA: 0x0014DC30 File Offset: 0x0014BE30
+		// Token: 0x0600962D RID: 38445 RVA: 0x0015DAA0 File Offset: 0x0015BCA0
 		private IEntityControlConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06008ECC RID: 36556 RVA: 0x0014DC68 File Offset: 0x0014BE68
+		// Token: 0x0600962E RID: 38446 RVA: 0x0015DAD8 File Offset: 0x0015BCD8
 		public static IEntityControlConfig Create([Nullable(2)] IEntityControlConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008ECD RID: 36557 RVA: 0x0014DC7B File Offset: 0x0014BE7B
+		// Token: 0x0600962F RID: 38447 RVA: 0x0015DAEB File Offset: 0x0015BCEB
 		public static IEntityControlConfig CreateFromSetValue([Nullable(2)] IEntityControlConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06008ECE RID: 36558 RVA: 0x0014DC8E File Offset: 0x0014BE8E
+		// Token: 0x06009630 RID: 38448 RVA: 0x0015DAFE File Offset: 0x0015BCFE
 		public IEntityControlConfig_SetValue ToSetValue()
 		{
 			return new IEntityControlConfig_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17002DAB RID: 11691
-		// (get) Token: 0x06008ECF RID: 36559 RVA: 0x0014DCBC File Offset: 0x0014BEBC
-		// (set) Token: 0x06008ED0 RID: 36560 RVA: 0x0014DCF6 File Offset: 0x0014BEF6
+		// Token: 0x17002FB7 RID: 12215
+		// (get) Token: 0x06009631 RID: 38449 RVA: 0x0015DB2C File Offset: 0x0015BD2C
+		// (set) Token: 0x06009632 RID: 38450 RVA: 0x0015DB66 File Offset: 0x0015BD66
 		public virtual bool? IsControlPlayer
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002DAC RID: 11692
-		// (get) Token: 0x06008ED1 RID: 36561 RVA: 0x0014DD04 File Offset: 0x0014BF04
-		// (set) Token: 0x06008ED2 RID: 36562 RVA: 0x0014DD3E File Offset: 0x0014BF3E
+		// Token: 0x17002FB8 RID: 12216
+		// (get) Token: 0x06009633 RID: 38451 RVA: 0x0015DB74 File Offset: 0x0015BD74
+		// (set) Token: 0x06009634 RID: 38452 RVA: 0x0015DBAE File Offset: 0x0015BDAE
 		public virtual bool? HideSkipButton
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x17002DAD RID: 11693
-		// (get) Token: 0x06008ED3 RID: 36563 RVA: 0x0014DD4C File Offset: 0x0014BF4C
-		// (set) Token: 0x06008ED4 RID: 36564 RVA: 0x0014DD86 File Offset: 0x0014BF86
+		// Token: 0x17002FB9 RID: 12217
+		// (get) Token: 0x06009635 RID: 38453 RVA: 0x0015DBBC File Offset: 0x0015BDBC
+		// (set) Token: 0x06009636 RID: 38454 RVA: 0x0015DBF6 File Offset: 0x0015BDF6
 		public virtual EEntityControlCameraMode? CameraMode
 		{
 			get
@@ -133,11 +131,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005870 RID: 22640
+		// Token: 0x04005CD2 RID: 23762
 		[Nullable(2)]
 		protected IEntityControlConfig FbInstance;
 
-		// Token: 0x04005871 RID: 22641
+		// Token: 0x04005CD3 RID: 23763
 		[Nullable(2)]
 		protected IEntityControlConfig_SetValue PocoInterface;
 	}

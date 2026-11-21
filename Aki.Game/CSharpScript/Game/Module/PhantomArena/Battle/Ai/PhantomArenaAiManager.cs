@@ -7,23 +7,23 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.PhantomArena.Battle.Ai
 {
-	// Token: 0x020052E2 RID: 21218
+	// Token: 0x020042B2 RID: 17074
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class PhantomArenaAiManager
 	{
-		// Token: 0x17008305 RID: 33541
-		// (get) Token: 0x06036488 RID: 222344 RVA: 0x00CD7463 File Offset: 0x00CD5663
-		// (set) Token: 0x06036489 RID: 222345 RVA: 0x00CD746B File Offset: 0x00CD566B
+		// Token: 0x170056C5 RID: 22213
+		// (get) Token: 0x0602B383 RID: 177027 RVA: 0x00C24B86 File Offset: 0x00C22D86
+		// (set) Token: 0x0602B384 RID: 177028 RVA: 0x00C24B8E File Offset: 0x00C22D8E
 		private protected PhantomArenaBattleProxy BattleProxy { protected get; private set; }
 
-		// Token: 0x0603648A RID: 222346 RVA: 0x00CD7474 File Offset: 0x00CD5674
+		// Token: 0x0602B385 RID: 177029 RVA: 0x00C24B97 File Offset: 0x00C22D97
 		public PhantomArenaAiManager(PhantomArenaBattleProxy battleProxy)
 		{
 			this.BattleProxy = battleProxy;
 		}
 
-		// Token: 0x0603648B RID: 222347 RVA: 0x00CD7490 File Offset: 0x00CD5690
+		// Token: 0x0602B386 RID: 177030 RVA: 0x00C24BB4 File Offset: 0x00C22DB4
 		public void SetOperationList(List<NpcAiOperation> operationList)
 		{
 			foreach (NpcAiOperation element in operationList)
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Ai
 			this.ExecCount = 0;
 		}
 
-		// Token: 0x0603648C RID: 222348 RVA: 0x00CD74EC File Offset: 0x00CD56EC
+		// Token: 0x0602B387 RID: 177031 RVA: 0x00C24C10 File Offset: 0x00C22E10
 		public UniTask ExecuteAllOperation()
 		{
 			PhantomArenaAiManager.<ExecuteAllOperation>d__9 <ExecuteAllOperation>d__;
@@ -44,26 +44,26 @@ namespace CSharpScript.Game.Module.PhantomArena.Battle.Ai
 			return <ExecuteAllOperation>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603648D RID: 222349 RVA: 0x00CD752F File Offset: 0x00CD572F
+		// Token: 0x0602B388 RID: 177032 RVA: 0x00C24C53 File Offset: 0x00C22E53
 		public void ClearAllOperation()
 		{
 			this.OperationQueue.Clear();
 		}
 
-		// Token: 0x0603648E RID: 222350 RVA: 0x00CD753C File Offset: 0x00CD573C
+		// Token: 0x0602B389 RID: 177033 RVA: 0x00C24C60 File Offset: 0x00C22E60
 		public void Clear()
 		{
 			this.OperationQueue.Clear();
 			this.IsClear = true;
 		}
 
-		// Token: 0x0401CB0B RID: 117515
+		// Token: 0x04017540 RID: 95552
 		private readonly Queue<NpcAiOperation> OperationQueue = new Queue<NpcAiOperation>(4);
 
-		// Token: 0x0401CB0C RID: 117516
+		// Token: 0x04017541 RID: 95553
 		public bool IsClear;
 
-		// Token: 0x0401CB0E RID: 117518
+		// Token: 0x04017543 RID: 95555
 		public int ExecCount;
 	}
 }

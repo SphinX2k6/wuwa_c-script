@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E82 RID: 7810
+	// Token: 0x020020B7 RID: 8375
 	public class ISlashAndTowerTip_SetValue
 	{
-		// Token: 0x040063BD RID: 25533
+		// Token: 0x040069A1 RID: 27041
 		public ECommonTipType Type;
 
-		// Token: 0x040063BE RID: 25534
-		[Nullable(1)]
+		// Token: 0x040069A2 RID: 27042
 		public string WarningText;
 	}
 }

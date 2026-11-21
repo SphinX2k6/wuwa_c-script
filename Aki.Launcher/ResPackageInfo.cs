@@ -1898,20 +1898,16 @@ public class ResPackageInfo : IStaticVariableResetter
 							}
 						}
 						long num2 = 0L;
+						PatchParams patchParams = null;
 						if (!this.IsPreDownload)
 						{
-							foreach (string text3 in patchInfo.DelFiles)
-							{
-								string filePath2 = resFileDir2 + text3;
-								this.ToDelOldFile(text3, filePath2);
-							}
 							foreach (IdenticalPair identicalPair in patchInfo.SameFiles)
 							{
 								LocalFileInfo fileInfoFromNewPakPairs3 = this.GetFileInfoFromNewPakPairs(bIsBase ? "Base" : latestVersion, identicalPair.DestFile);
 								if (fileInfoFromNewPakPairs3 != null)
 								{
-									string text4 = resFileDir2 + identicalPair.SrcFile;
-									LocalFileInfo localFileInfo2 = new LocalFileInfo(identicalPair.SrcFile, text4, fileInfoFromNewPakPairs3.ExpectSize);
+									string text3 = resFileDir2 + identicalPair.SrcFile;
+									LocalFileInfo localFileInfo2 = new LocalFileInfo(identicalPair.SrcFile, text3, fileInfoFromNewPakPairs3.ExpectSize);
 									if (fileInfoFromNewPakPairs3.IsCompleteFile())
 									{
 										localFileInfo2.DeleteAll();
@@ -1919,7 +1915,7 @@ public class ResPackageInfo : IStaticVariableResetter
 									else if (localFileInfo2.IsCompleteFile())
 									{
 										this.MoveOpParams.Add(new MoveParams(localFileInfo2, fileInfoFromNewPakPairs3));
-										if (ChunkTool.IsRestartRequiredAfterHotPatchChunk(text4))
+										if (ChunkTool.IsRestartRequiredAfterHotPatchChunk(text3))
 										{
 											num2 += fileInfoFromNewPakPairs3.ExpectSize;
 										}
@@ -1956,7 +1952,7 @@ public class ResPackageInfo : IStaticVariableResetter
 								}
 								if (this.IsPreDownload)
 								{
-									continue;
+									goto IL_925;
 								}
 								using (List<LocalFileInfo>.Enumerator enumerator5 = list2.GetEnumerator())
 								{
@@ -1968,16 +1964,33 @@ public class ResPackageInfo : IStaticVariableResetter
 											UKuroLauncherLibrary.DeleteFile(localFileInfo4.FilePath);
 										}
 									}
-									continue;
+									goto IL_925;
 								}
 							}
-							this.PatchOpParams.Add(new PatchParams(destFileInfo, resFileDir2, resFileDir, list2, dictionary, num2, patchInfo.NewRefSize));
+							patchParams = new PatchParams(destFileInfo, resFileDir2, resFileDir, list2, dictionary, num2, patchInfo.NewRefSize);
+							this.PatchOpParams.Add(patchParams);
 						}
 						else
 						{
 							foreach (LocalFileInfo item2 in dictionary.Values)
 							{
 								this.DownloadList.Add(item2);
+							}
+						}
+						IL_925:
+						if (!this.IsPreDownload)
+						{
+							foreach (string text4 in patchInfo.DelFiles)
+							{
+								string text5 = resFileDir2 + text4;
+								if (patchParams == null)
+								{
+									this.ToDelOldFile(text4, text5);
+								}
+								else if (!ChunkTool.IsRestartRequiredAfterHotPatchChunk(text5) && (text5.EndsWith(EResFile.PAK.ToEnumString()) || text5.EndsWith(EResFile.SIG.ToEnumString())))
+								{
+									patchParams.OldDelete[text4] = new LocalFileInfo(text4, text5, 0L);
+								}
 							}
 						}
 					}
@@ -2009,7 +2022,7 @@ public class ResPackageInfo : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x06000053 RID: 83 RVA: 0x00005F2C File Offset: 0x0000412C
+	// Token: 0x06000053 RID: 83 RVA: 0x00005F84 File Offset: 0x00004184
 	private void ResetCache()
 	{
 		this.LatestVersion = this.VersionInfo.LatestVersion;

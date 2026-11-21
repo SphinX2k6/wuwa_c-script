@@ -7,12 +7,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005CD8 RID: 23768
+	// Token: 0x02004CBA RID: 19642
 	[NullableContext(2)]
 	[Nullable(0)]
 	public class BattleOnlineButton : BattleEntranceButton
 	{
-		// Token: 0x0603C24A RID: 246346 RVA: 0x00E65D28 File Offset: 0x00E63F28
+		// Token: 0x060311A0 RID: 201120 RVA: 0x00DB62DC File Offset: 0x00DB44DC
 		protected override void OnRegisterComponent()
 		{
 			base.OnRegisterComponent();
@@ -20,7 +20,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos.Add(new ValueTuple<int, Type>(3, typeof(UUISprite)));
 		}
 
-		// Token: 0x0603C24B RID: 246347 RVA: 0x00E65D66 File Offset: 0x00E63F66
+		// Token: 0x060311A1 RID: 201121 RVA: 0x00DB631A File Offset: 0x00DB451A
 		public override void Initialize(object param = null)
 		{
 			base.Initialize(param);
@@ -33,7 +33,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.LevelSequencePlayer = new LevelSequencePlayer(this.RootItem.GetParentAsUIItem());
 		}
 
-		// Token: 0x0603C24C RID: 246348 RVA: 0x00E65D9C File Offset: 0x00E63F9C
+		// Token: 0x060311A2 RID: 201122 RVA: 0x00DB6350 File Offset: 0x00DB4550
 		protected override void OnShowBattleChildView()
 		{
 			base.OnShowBattleChildView();
@@ -61,7 +61,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshButtonState();
 		}
 
-		// Token: 0x0603C24D RID: 246349 RVA: 0x00E65E35 File Offset: 0x00E64035
+		// Token: 0x060311A3 RID: 201123 RVA: 0x00DB63E9 File Offset: 0x00DB45E9
 		public override void Reset()
 		{
 			LevelSequencePlayer levelSequencePlayer = this.LevelSequencePlayer;
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.Reset();
 		}
 
-		// Token: 0x0603C24E RID: 246350 RVA: 0x00E65E5C File Offset: 0x00E6405C
+		// Token: 0x060311A4 RID: 201124 RVA: 0x00DB6410 File Offset: 0x00DB4610
 		protected void AddEvents()
 		{
 			EventSystem.Instance.Add(EEventName.OnMatchingChange, new Action(this.OnMatchingChange));
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Add(EEventName.OnlineDisableStateChange, new Action(this.OnlineDisableStateChange));
 		}
 
-		// Token: 0x0603C24F RID: 246351 RVA: 0x00E65EF8 File Offset: 0x00E640F8
+		// Token: 0x060311A5 RID: 201125 RVA: 0x00DB64AC File Offset: 0x00DB46AC
 		protected void RemoveEvents()
 		{
 			EventSystem.Instance.Remove(EEventName.OnMatchingChange, new Action(this.OnMatchingChange));
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			EventSystem.Instance.Remove(EEventName.OnlineDisableStateChange, new Action(this.OnlineDisableStateChange));
 		}
 
-		// Token: 0x0603C250 RID: 246352 RVA: 0x00E65F91 File Offset: 0x00E64191
+		// Token: 0x060311A6 RID: 201126 RVA: 0x00DB6545 File Offset: 0x00DB4745
 		private void OnMatchingChange()
 		{
 			if (InstanceDungeonEntranceModel.Instance.GetMatchingState() == EInstanceMatchState.Default)
@@ -109,7 +109,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C251 RID: 246353 RVA: 0x00E65FC0 File Offset: 0x00E641C0
+		// Token: 0x060311A7 RID: 201127 RVA: 0x00DB6574 File Offset: 0x00DB4774
 		private void OnMatchingBegin()
 		{
 			base.GetItem(2).SetUIActive(true);
@@ -126,7 +126,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			levelSequencePlayer2.PlayLevelSequenceByName("AutoLoop", false, null, false);
 		}
 
-		// Token: 0x0603C252 RID: 246354 RVA: 0x00E6600D File Offset: 0x00E6420D
+		// Token: 0x060311A8 RID: 201128 RVA: 0x00DB65C1 File Offset: 0x00DB47C1
 		private void OnFormationInfoChanged()
 		{
 			if (GameModeModel.Instance.IsMulti)
@@ -135,19 +135,19 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C253 RID: 246355 RVA: 0x00E66021 File Offset: 0x00E64221
+		// Token: 0x060311A9 RID: 201129 RVA: 0x00DB65D5 File Offset: 0x00DB47D5
 		private void OnChangeModeFinish()
 		{
 			this.RefreshButtonState();
 		}
 
-		// Token: 0x0603C254 RID: 246356 RVA: 0x00E66029 File Offset: 0x00E64229
+		// Token: 0x060311AA RID: 201130 RVA: 0x00DB65DD File Offset: 0x00DB47DD
 		private void OnlineDisableStateChange()
 		{
 			this.RefreshButtonState();
 		}
 
-		// Token: 0x0603C255 RID: 246357 RVA: 0x00E66031 File Offset: 0x00E64231
+		// Token: 0x060311AB RID: 201131 RVA: 0x00DB65E5 File Offset: 0x00DB47E5
 		public override void SetGamepadHide(bool isGamepad)
 		{
 			if (GameModeModel.Instance.IsMulti)
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			base.SetGamepadHide(isGamepad);
 		}
 
-		// Token: 0x0603C256 RID: 246358 RVA: 0x00E66050 File Offset: 0x00E64250
+		// Token: 0x060311AC RID: 201132 RVA: 0x00DB6604 File Offset: 0x00DB4804
 		private void RefreshOnlineIcon()
 		{
 			string text;
@@ -188,7 +188,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603C257 RID: 246359 RVA: 0x00E660F4 File Offset: 0x00E642F4
+		// Token: 0x060311AD RID: 201133 RVA: 0x00DB66A8 File Offset: 0x00DB48A8
 		public void RefreshButtonState()
 		{
 			if (this.OnlineIconComponent == null)
@@ -210,7 +210,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.RefreshOnlineIcon();
 		}
 
-		// Token: 0x0401F5B8 RID: 128440
+		// Token: 0x0401A071 RID: 106609
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		private static readonly string[] OnlinePlayerIconList = new string[]
@@ -220,27 +220,27 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			"Online3PIcon"
 		};
 
-		// Token: 0x0401F5B9 RID: 128441
+		// Token: 0x0401A072 RID: 106610
 		private LevelSequencePlayer LevelSequencePlayer;
 
-		// Token: 0x0401F5BA RID: 128442
+		// Token: 0x0401A073 RID: 106611
 		private UUISprite OnlineIconComponent;
 
-		// Token: 0x0401F5BB RID: 128443
+		// Token: 0x0401A074 RID: 106612
 		[Nullable(1)]
 		private string LastIconPathKey = string.Empty;
 
-		// Token: 0x0200BF30 RID: 48944
+		// Token: 0x0200A936 RID: 43318
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x04039AB4 RID: 236212
+			// Token: 0x04034476 RID: 214134
 			Button,
-			// Token: 0x04039AB5 RID: 236213
+			// Token: 0x04034477 RID: 214135
 			RedDotItem,
-			// Token: 0x04039AB6 RID: 236214
+			// Token: 0x04034478 RID: 214136
 			AniItem,
-			// Token: 0x04039AB7 RID: 236215
+			// Token: 0x04034479 RID: 214137
 			Icon
 		}
 	}

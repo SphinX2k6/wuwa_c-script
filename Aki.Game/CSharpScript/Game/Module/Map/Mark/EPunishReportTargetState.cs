@@ -2,12 +2,12 @@
 
 namespace CSharpScript.Game.Module.Map.Mark
 {
-	// Token: 0x020054B4 RID: 21684
+	// Token: 0x02004497 RID: 17559
 	public enum EPunishReportTargetState
 	{
-		// Token: 0x0401D2E3 RID: 119523
+		// Token: 0x04017D7F RID: 97663
 		UnAchieve,
-		// Token: 0x0401D2E4 RID: 119524
+		// Token: 0x04017D80 RID: 97664
 		Achieve
 	}
 }

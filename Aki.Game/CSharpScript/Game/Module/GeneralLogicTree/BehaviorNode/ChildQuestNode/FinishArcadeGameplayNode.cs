@@ -5,15 +5,15 @@ using CSharpScript.Game.Common.Event;
 
 namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 {
-	// Token: 0x020059D2 RID: 22994
+	// Token: 0x020049AB RID: 18859
 	public class FinishArcadeGameplayNode : ChildQuestNodeBase
 	{
-		// Token: 0x0603A4A0 RID: 238752 RVA: 0x00DDC85F File Offset: 0x00DDAA5F
+		// Token: 0x0602F3C7 RID: 193479 RVA: 0x00D2C03F File Offset: 0x00D2A23F
 		public FinishArcadeGameplayNode(int nodeId) : base(nodeId)
 		{
 		}
 
-		// Token: 0x0603A4A1 RID: 238753 RVA: 0x00DDC868 File Offset: 0x00DDAA68
+		// Token: 0x0602F3C8 RID: 193480 RVA: 0x00D2C048 File Offset: 0x00D2A248
 		[NullableContext(1)]
 		protected override bool OnCreate(IBtNode nodeConfig)
 		{
@@ -55,7 +55,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			return true;
 		}
 
-		// Token: 0x0603A4A2 RID: 238754 RVA: 0x00DDC8F3 File Offset: 0x00DDAAF3
+		// Token: 0x0602F3C9 RID: 193481 RVA: 0x00D2C0D3 File Offset: 0x00D2A2D3
 		protected override void OnDestroy()
 		{
 			base.OnDestroy();
@@ -63,21 +63,21 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			this.LevelId = 0;
 		}
 
-		// Token: 0x0603A4A3 RID: 238755 RVA: 0x00DDC90E File Offset: 0x00DDAB0E
+		// Token: 0x0602F3CA RID: 193482 RVA: 0x00D2C0EE File Offset: 0x00D2A2EE
 		protected override void AddEventsOnChildQuestStart()
 		{
 			base.AddEventsOnChildQuestStart();
 			EventSystem.Instance.Add<EArcadeGameplayType, int>(EEventName.OnArcadeGameplayFinish, new Action<EArcadeGameplayType, int>(this.OnGameplayFinish));
 		}
 
-		// Token: 0x0603A4A4 RID: 238756 RVA: 0x00DDC932 File Offset: 0x00DDAB32
+		// Token: 0x0602F3CB RID: 193483 RVA: 0x00D2C112 File Offset: 0x00D2A312
 		protected override void RemoveEventsOnChildQuestEnd()
 		{
 			EventSystem.Instance.Remove<EArcadeGameplayType, int>(EEventName.OnArcadeGameplayFinish, new Action<EArcadeGameplayType, int>(this.OnGameplayFinish));
 			base.RemoveEventsOnChildQuestEnd();
 		}
 
-		// Token: 0x0603A4A5 RID: 238757 RVA: 0x00DDC958 File Offset: 0x00DDAB58
+		// Token: 0x0602F3CC RID: 193484 RVA: 0x00D2C138 File Offset: 0x00D2A338
 		private void OnGameplayFinish(EArcadeGameplayType type, int levelId)
 		{
 			if (this.GameplayType == null)
@@ -95,7 +95,7 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x0603A4A6 RID: 238758 RVA: 0x00DDC9A9 File Offset: 0x00DDABA9
+		// Token: 0x0602F3CD RID: 193485 RVA: 0x00D2C189 File Offset: 0x00D2A389
 		protected override void OnAfterSubmit(bool submitSuccess)
 		{
 			base.OnAfterSubmit(submitSuccess);
@@ -106,10 +106,10 @@ namespace CSharpScript.Game.Module.GeneralLogicTree.BehaviorNode.ChildQuestNode
 			}
 		}
 
-		// Token: 0x0401E639 RID: 124473
+		// Token: 0x040190D8 RID: 102616
 		private EArcadeGameplayType? GameplayType;
 
-		// Token: 0x0401E63A RID: 124474
+		// Token: 0x040190D9 RID: 102617
 		private int LevelId;
 	}
 }

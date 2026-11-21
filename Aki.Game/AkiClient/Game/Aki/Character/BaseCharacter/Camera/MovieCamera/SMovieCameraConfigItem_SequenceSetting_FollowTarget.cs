@@ -6,159 +6,149 @@ using UnrealEngine.Service;
 
 namespace AkiClient.Game.Aki.Character.BaseCharacter.Camera.MovieCamera
 {
-	// Token: 0x020043E0 RID: 17376
+	// Token: 0x020033F5 RID: 13301
 	[HasGetTypeHash]
 	[UnrealObjectPath("/Game/Aki/Character/BaseCharacter/Camera/MovieCamera/SMovieCameraConfigItem_SequenceSetting_FollowTarget.SMovieCameraConfigItem_SequenceSetting_FollowTarget")]
 	[UnrealStructLayout(16, 4, UnrealReflectionPropertyTypeCode.UnrealScriptStructProxy, PropertiesSize = 16)]
 	public class SMovieCameraConfigItem_SequenceSetting_FollowTarget : UnrealUserDefinedStructProxy, IUnrealScriptStructProxy, IUnrealScriptStruct, IUnrealObject
 	{
-		// Token: 0x0602D03C RID: 184380 RVA: 0x00A2E6AC File Offset: 0x00A2C8AC
+		// Token: 0x06021BE6 RID: 138214 RVA: 0x00968148 File Offset: 0x00966348
 		public static UScriptStructStackOnlyPtr StaticStruct()
 		{
 			return (SMovieCameraConfigItem_SequenceSetting_FollowTarget._ScriptStructPtr != 0) ? SMovieCameraConfigItem_SequenceSetting_FollowTarget._ScriptStructPtr : UObjectGlobals.StaticLoadScriptStruct("/Game/Aki/Character/BaseCharacter/Camera/MovieCamera/SMovieCameraConfigItem_SequenceSetting_FollowTarget.SMovieCameraConfigItem_SequenceSetting_FollowTarget", ref SMovieCameraConfigItem_SequenceSetting_FollowTarget._ScriptStructPtr);
 		}
 
-		// Token: 0x1700720D RID: 29197
-		// (get) Token: 0x0602D03D RID: 184381 RVA: 0x00A2E6D0 File Offset: 0x00A2C8D0
-		// (set) Token: 0x0602D03E RID: 184382 RVA: 0x00A2E6E0 File Offset: 0x00A2C8E0
+		// Token: 0x170045FA RID: 17914
+		// (get) Token: 0x06021BE7 RID: 138215 RVA: 0x0096816C File Offset: 0x0096636C
+		// (set) Token: 0x06021BE8 RID: 138216 RVA: 0x0096817C File Offset: 0x0096637C
 		public unsafe bool IsFollowTarget
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SMovieCameraConfigItem_SequenceSetting_FollowTarget.__PropertyOffset_0) != 0;
+				return *(base.NativePtr + (IntPtr)SMovieCameraConfigItem_SequenceSetting_FollowTarget.__PropertyOffset_IsFollowTarget) != 0;
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SMovieCameraConfigItem_SequenceSetting_FollowTarget.__PropertyOffset_0) = (value ? 1 : 0);
+				*(base.NativePtr + (IntPtr)SMovieCameraConfigItem_SequenceSetting_FollowTarget.__PropertyOffset_IsFollowTarget) = (value ? 1 : 0);
 			}
 		}
 
-		// Token: 0x1700720E RID: 29198
-		// (get) Token: 0x0602D03F RID: 184383 RVA: 0x00A2E6F1 File Offset: 0x00A2C8F1
-		// (set) Token: 0x0602D040 RID: 184384 RVA: 0x00A2E705 File Offset: 0x00A2C905
+		// Token: 0x170045FB RID: 17915
+		// (get) Token: 0x06021BE9 RID: 138217 RVA: 0x0096818D File Offset: 0x0096638D
+		// (set) Token: 0x06021BEA RID: 138218 RVA: 0x009681A1 File Offset: 0x009663A1
 		public unsafe TEnumAsByte<EMovieCameraSequenceSettingFollowTargetType> FollowType
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SMovieCameraConfigItem_SequenceSetting_FollowTarget.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)SMovieCameraConfigItem_SequenceSetting_FollowTarget.__PropertyOffset_FollowType);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SMovieCameraConfigItem_SequenceSetting_FollowTarget.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)SMovieCameraConfigItem_SequenceSetting_FollowTarget.__PropertyOffset_FollowType) = value;
 			}
 		}
 
-		// Token: 0x1700720F RID: 29199
-		// (get) Token: 0x0602D041 RID: 184385 RVA: 0x00A2E71A File Offset: 0x00A2C91A
-		// (set) Token: 0x0602D042 RID: 184386 RVA: 0x00A2E72A File Offset: 0x00A2C92A
+		// Token: 0x170045FC RID: 17916
+		// (get) Token: 0x06021BEB RID: 138219 RVA: 0x009681B6 File Offset: 0x009663B6
+		// (set) Token: 0x06021BEC RID: 138220 RVA: 0x009681C6 File Offset: 0x009663C6
 		public unsafe float FollowSpeed
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SMovieCameraConfigItem_SequenceSetting_FollowTarget.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)SMovieCameraConfigItem_SequenceSetting_FollowTarget.__PropertyOffset_FollowSpeed);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SMovieCameraConfigItem_SequenceSetting_FollowTarget.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)SMovieCameraConfigItem_SequenceSetting_FollowTarget.__PropertyOffset_FollowSpeed) = value;
 			}
 		}
 
-		// Token: 0x17007210 RID: 29200
-		// (get) Token: 0x0602D043 RID: 184387 RVA: 0x00A2E73B File Offset: 0x00A2C93B
-		// (set) Token: 0x0602D044 RID: 184388 RVA: 0x00A2E74B File Offset: 0x00A2C94B
+		// Token: 0x170045FD RID: 17917
+		// (get) Token: 0x06021BED RID: 138221 RVA: 0x009681D7 File Offset: 0x009663D7
+		// (set) Token: 0x06021BEE RID: 138222 RVA: 0x009681E7 File Offset: 0x009663E7
 		public unsafe float PitchFollowSpeed
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SMovieCameraConfigItem_SequenceSetting_FollowTarget.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)SMovieCameraConfigItem_SequenceSetting_FollowTarget.__PropertyOffset_PitchFollowSpeed);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SMovieCameraConfigItem_SequenceSetting_FollowTarget.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)SMovieCameraConfigItem_SequenceSetting_FollowTarget.__PropertyOffset_PitchFollowSpeed) = value;
 			}
 		}
 
-		// Token: 0x17007211 RID: 29201
-		// (get) Token: 0x0602D045 RID: 184389 RVA: 0x00A2E75C File Offset: 0x00A2C95C
-		// (set) Token: 0x0602D046 RID: 184390 RVA: 0x00A2E76C File Offset: 0x00A2C96C
+		// Token: 0x170045FE RID: 17918
+		// (get) Token: 0x06021BEF RID: 138223 RVA: 0x009681F8 File Offset: 0x009663F8
+		// (set) Token: 0x06021BF0 RID: 138224 RVA: 0x00968208 File Offset: 0x00966408
 		public unsafe float AngleFollowSpeed
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)SMovieCameraConfigItem_SequenceSetting_FollowTarget.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)SMovieCameraConfigItem_SequenceSetting_FollowTarget.__PropertyOffset_AngleFollowSpeed);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)SMovieCameraConfigItem_SequenceSetting_FollowTarget.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)SMovieCameraConfigItem_SequenceSetting_FollowTarget.__PropertyOffset_AngleFollowSpeed) = value;
 			}
 		}
 
-		// Token: 0x0602D047 RID: 184391 RVA: 0x00A2E77D File Offset: 0x00A2C97D
+		// Token: 0x06021BF1 RID: 138225 RVA: 0x00968219 File Offset: 0x00966419
 		public SMovieCameraConfigItem_SequenceSetting_FollowTarget()
 		{
 		}
 
-		// Token: 0x0602D048 RID: 184392 RVA: 0x00A2E785 File Offset: 0x00A2C985
-		public SMovieCameraConfigItem_SequenceSetting_FollowTarget(bool IsFollowTarget, TEnumAsByte<EMovieCameraSequenceSettingFollowTargetType> FollowType, float FollowSpeed, float PitchFollowSpeed, float AngleFollowSpeed)
-		{
-			this.IsFollowTarget = IsFollowTarget;
-			this.FollowType = FollowType;
-			this.FollowSpeed = FollowSpeed;
-			this.PitchFollowSpeed = PitchFollowSpeed;
-			this.AngleFollowSpeed = AngleFollowSpeed;
-		}
-
-		// Token: 0x0602D049 RID: 184393 RVA: 0x00A2E7B2 File Offset: 0x00A2C9B2
+		// Token: 0x06021BF2 RID: 138226 RVA: 0x00968221 File Offset: 0x00966421
 		protected override IntPtr GetUStructPtr()
 		{
 			return SMovieCameraConfigItem_SequenceSetting_FollowTarget.StaticStruct();
 		}
 
-		// Token: 0x0602D04A RID: 184394 RVA: 0x00A2E7BE File Offset: 0x00A2C9BE
+		// Token: 0x06021BF3 RID: 138227 RVA: 0x0096822D File Offset: 0x0096642D
 		[NullableContext(2)]
 		public SMovieCameraConfigItem_SequenceSetting_FollowTarget(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0602D04B RID: 184395 RVA: 0x00A2E7C8 File Offset: 0x00A2C9C8
+		// Token: 0x06021BF4 RID: 138228 RVA: 0x00968237 File Offset: 0x00966437
 		public SMovieCameraConfigItem_SequenceSetting_FollowTarget(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0602D04C RID: 184396 RVA: 0x00A2E7D3 File Offset: 0x00A2C9D3
+		// Token: 0x06021BF5 RID: 138229 RVA: 0x00968242 File Offset: 0x00966442
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateFromPointer(IntPtr Pointer)
 		{
 			return new SMovieCameraConfigItem_SequenceSetting_FollowTarget(Pointer, false, true);
 		}
 
-		// Token: 0x0602D04D RID: 184397 RVA: 0x00A2E7DD File Offset: 0x00A2C9DD
+		// Token: 0x06021BF6 RID: 138230 RVA: 0x0096824C File Offset: 0x0096644C
 		[NullableContext(1)]
 		public static IUnrealScriptStructProxy CreateReferenceFromPointer(IntPtr Pointer, UnrealObject MemoryOwner)
 		{
 			return new SMovieCameraConfigItem_SequenceSetting_FollowTarget(Pointer, MemoryOwner);
 		}
 
-		// Token: 0x04017E34 RID: 97844
+		// Token: 0x0401296D RID: 76141
 		[Nullable(1)]
 		public const string __ObjectPath = "/Game/Aki/Character/BaseCharacter/Camera/MovieCamera/SMovieCameraConfigItem_SequenceSetting_FollowTarget.SMovieCameraConfigItem_SequenceSetting_FollowTarget";
 
-		// Token: 0x04017E35 RID: 97845
+		// Token: 0x0401296E RID: 76142
 		private static IntPtr _ScriptStructPtr;
 
-		// Token: 0x04017E36 RID: 97846
-		internal static int __PropertyOffset_0;
+		// Token: 0x0401296F RID: 76143
+		internal static int __PropertyOffset_IsFollowTarget;
 
-		// Token: 0x04017E37 RID: 97847
-		internal static int __PropertyOffset_1;
+		// Token: 0x04012970 RID: 76144
+		internal static int __PropertyOffset_FollowType;
 
-		// Token: 0x04017E38 RID: 97848
-		internal static int __PropertyOffset_2;
+		// Token: 0x04012971 RID: 76145
+		internal static int __PropertyOffset_FollowSpeed;
 
-		// Token: 0x04017E39 RID: 97849
-		internal static int __PropertyOffset_3;
+		// Token: 0x04012972 RID: 76146
+		internal static int __PropertyOffset_PitchFollowSpeed;
 
-		// Token: 0x04017E3A RID: 97850
-		internal static int __PropertyOffset_4;
+		// Token: 0x04012973 RID: 76147
+		internal static int __PropertyOffset_AngleFollowSpeed;
 	}
 }

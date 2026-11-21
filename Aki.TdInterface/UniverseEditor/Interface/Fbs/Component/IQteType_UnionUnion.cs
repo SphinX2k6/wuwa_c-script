@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020057C4 RID: 22468
+	// Token: 0x02005DCB RID: 24011
 	public class IQteType_UnionUnion
 	{
-		// Token: 0x1700A7AF RID: 42927
-		// (get) Token: 0x06025B56 RID: 154454 RVA: 0x0053352A File Offset: 0x0053172A
-		// (set) Token: 0x06025B57 RID: 154455 RVA: 0x00533532 File Offset: 0x00531732
+		// Token: 0x1700B0D3 RID: 45267
+		// (get) Token: 0x06028076 RID: 163958 RVA: 0x005796B6 File Offset: 0x005778B6
+		// (set) Token: 0x06028077 RID: 163959 RVA: 0x005796BE File Offset: 0x005778BE
 		public IQteType_Union Type { get; set; }
 
-		// Token: 0x1700A7B0 RID: 42928
-		// (get) Token: 0x06025B58 RID: 154456 RVA: 0x0053353B File Offset: 0x0053173B
-		// (set) Token: 0x06025B59 RID: 154457 RVA: 0x00533543 File Offset: 0x00531743
+		// Token: 0x1700B0D4 RID: 45268
+		// (get) Token: 0x06028078 RID: 163960 RVA: 0x005796C7 File Offset: 0x005778C7
+		// (set) Token: 0x06028079 RID: 163961 RVA: 0x005796CF File Offset: 0x005778CF
 		public object Value { get; set; }
 
-		// Token: 0x06025B5A RID: 154458 RVA: 0x0053354C File Offset: 0x0053174C
+		// Token: 0x0602807A RID: 163962 RVA: 0x005796D8 File Offset: 0x005778D8
 		public IQteType_UnionUnion()
 		{
 			this.Type = IQteType_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x06025B5B RID: 154459 RVA: 0x00533562 File Offset: 0x00531762
+		// Token: 0x0602807B RID: 163963 RVA: 0x005796EE File Offset: 0x005778EE
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x06025B5C RID: 154460 RVA: 0x00533574 File Offset: 0x00531774
+		// Token: 0x0602807C RID: 163964 RVA: 0x00579700 File Offset: 0x00577900
 		public IQteTypeT AsIQteType()
 		{
 			return this.As<IQteTypeT>();
 		}
 
-		// Token: 0x06025B5D RID: 154461 RVA: 0x0053357C File Offset: 0x0053177C
+		// Token: 0x0602807D RID: 163965 RVA: 0x00579708 File Offset: 0x00577908
 		public static IQteType_UnionUnion FromIQteType(IQteTypeT _iqtetype)
 		{
 			return new IQteType_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06025B5E RID: 154462 RVA: 0x00533591 File Offset: 0x00531791
+		// Token: 0x0602807E RID: 163966 RVA: 0x0057971D File Offset: 0x0057791D
 		public ISingleBtnQteT AsISingleBtnQte()
 		{
 			return this.As<ISingleBtnQteT>();
 		}
 
-		// Token: 0x06025B5F RID: 154463 RVA: 0x00533599 File Offset: 0x00531799
+		// Token: 0x0602807F RID: 163967 RVA: 0x00579725 File Offset: 0x00577925
 		public static IQteType_UnionUnion FromISingleBtnQte(ISingleBtnQteT _isinglebtnqte)
 		{
 			return new IQteType_UnionUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x06025B60 RID: 154464 RVA: 0x005335B0 File Offset: 0x005317B0
+		// Token: 0x06028080 RID: 163968 RVA: 0x0057973C File Offset: 0x0057793C
 		public static int Pack(FlatBufferBuilder builder, IQteType_UnionUnion _o)
 		{
 			IQteType_Union type = _o.Type;

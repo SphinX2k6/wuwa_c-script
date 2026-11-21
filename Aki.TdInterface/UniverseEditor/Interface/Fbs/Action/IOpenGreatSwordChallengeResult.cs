@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006C06 RID: 27654
+	// Token: 0x0200736A RID: 29546
 	public struct IOpenGreatSwordChallengeResult : IFlatbufferObject
 	{
-		// Token: 0x1700CDA8 RID: 52648
-		// (get) Token: 0x060309E4 RID: 199140 RVA: 0x00699724 File Offset: 0x00697924
+		// Token: 0x1700D8B6 RID: 55478
+		// (get) Token: 0x06033904 RID: 211204 RVA: 0x006F30B8 File Offset: 0x006F12B8
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060309E5 RID: 199141 RVA: 0x00699731 File Offset: 0x00697931
+		// Token: 0x06033905 RID: 211205 RVA: 0x006F30C5 File Offset: 0x006F12C5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060309E6 RID: 199142 RVA: 0x00699738 File Offset: 0x00697938
+		// Token: 0x06033906 RID: 211206 RVA: 0x006F30CC File Offset: 0x006F12CC
 		public static IOpenGreatSwordChallengeResult GetRootAsIOpenGreatSwordChallengeResult(ByteBuffer _bb)
 		{
 			return IOpenGreatSwordChallengeResult.GetRootAsIOpenGreatSwordChallengeResult(_bb, default(IOpenGreatSwordChallengeResult));
 		}
 
-		// Token: 0x060309E7 RID: 199143 RVA: 0x00699754 File Offset: 0x00697954
+		// Token: 0x06033907 RID: 211207 RVA: 0x006F30E8 File Offset: 0x006F12E8
 		public static IOpenGreatSwordChallengeResult GetRootAsIOpenGreatSwordChallengeResult(ByteBuffer _bb, IOpenGreatSwordChallengeResult obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060309E8 RID: 199144 RVA: 0x00699771 File Offset: 0x00697971
+		// Token: 0x06033908 RID: 211208 RVA: 0x006F3105 File Offset: 0x006F1305
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060309E9 RID: 199145 RVA: 0x00699780 File Offset: 0x00697980
+		// Token: 0x06033909 RID: 211209 RVA: 0x006F3114 File Offset: 0x006F1314
 		public IOpenGreatSwordChallengeResult __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700CDA9 RID: 52649
-		// (get) Token: 0x060309EA RID: 199146 RVA: 0x00699790 File Offset: 0x00697990
+		// Token: 0x1700D8B7 RID: 55479
+		// (get) Token: 0x0603390A RID: 211210 RVA: 0x006F3124 File Offset: 0x006F1324
 		public ESystemType Type
 		{
 			get
@@ -63,8 +63,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CDAA RID: 52650
-		// (get) Token: 0x060309EB RID: 199147 RVA: 0x006997CC File Offset: 0x006979CC
+		// Token: 0x1700D8B8 RID: 55480
+		// (get) Token: 0x0603390B RID: 211211 RVA: 0x006F3160 File Offset: 0x006F1360
 		public int Id
 		{
 			get
@@ -78,8 +78,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x1700CDAB RID: 52651
-		// (get) Token: 0x060309EC RID: 199148 RVA: 0x00699808 File Offset: 0x00697A08
+		// Token: 0x1700D8B9 RID: 55481
+		// (get) Token: 0x0603390C RID: 211212 RVA: 0x006F319C File Offset: 0x006F139C
 		public TVarRef ReturnVarType
 		{
 			get
@@ -93,7 +93,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060309ED RID: 199149 RVA: 0x00699844 File Offset: 0x00697A44
+		// Token: 0x0603390D RID: 211213 RVA: 0x006F31D8 File Offset: 0x006F13D8
 		public TTable? ReturnVar<TTable>() where TTable : struct, IFlatbufferObject
 		{
 			int num = this.__p.__offset(10);
@@ -104,37 +104,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return new TTable?(this.__p.__union<TTable>(num + this.__p.bb_pos));
 		}
 
-		// Token: 0x060309EE RID: 199150 RVA: 0x0069988C File Offset: 0x00697A8C
+		// Token: 0x0603390E RID: 211214 RVA: 0x006F3220 File Offset: 0x006F1420
 		public IConstVarRef ReturnVarAsIConstVarRef()
 		{
 			return this.ReturnVar<IConstVarRef>().Value;
 		}
 
-		// Token: 0x060309EF RID: 199151 RVA: 0x006998A8 File Offset: 0x00697AA8
+		// Token: 0x0603390F RID: 211215 RVA: 0x006F323C File Offset: 0x006F143C
 		public IGlobalVarRef ReturnVarAsIGlobalVarRef()
 		{
 			return this.ReturnVar<IGlobalVarRef>().Value;
 		}
 
-		// Token: 0x060309F0 RID: 199152 RVA: 0x006998C4 File Offset: 0x00697AC4
+		// Token: 0x06033910 RID: 211216 RVA: 0x006F3258 File Offset: 0x006F1458
 		public IOtherVarRef ReturnVarAsIOtherVarRef()
 		{
 			return this.ReturnVar<IOtherVarRef>().Value;
 		}
 
-		// Token: 0x060309F1 RID: 199153 RVA: 0x006998E0 File Offset: 0x00697AE0
+		// Token: 0x06033911 RID: 211217 RVA: 0x006F3274 File Offset: 0x006F1474
 		public ISelfVarRef ReturnVarAsISelfVarRef()
 		{
 			return this.ReturnVar<ISelfVarRef>().Value;
 		}
 
-		// Token: 0x060309F2 RID: 199154 RVA: 0x006998FC File Offset: 0x00697AFC
+		// Token: 0x06033912 RID: 211218 RVA: 0x006F3290 File Offset: 0x006F1490
 		public ISystemVarRef ReturnVarAsISystemVarRef()
 		{
 			return this.ReturnVar<ISystemVarRef>().Value;
 		}
 
-		// Token: 0x060309F3 RID: 199155 RVA: 0x00699917 File Offset: 0x00697B17
+		// Token: 0x06033913 RID: 211219 RVA: 0x006F32AB File Offset: 0x006F14AB
 		public static Offset<IOpenGreatSwordChallengeResult> CreateIOpenGreatSwordChallengeResult(FlatBufferBuilder builder, ESystemType Type = ESystemType.Shop, int Id = 0, TVarRef ReturnVar_type = TVarRef.NONE, int ReturnVarOffset = 0)
 		{
 			builder.StartTable(4);
@@ -145,43 +145,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IOpenGreatSwordChallengeResult.EndIOpenGreatSwordChallengeResult(builder);
 		}
 
-		// Token: 0x060309F4 RID: 199156 RVA: 0x00699943 File Offset: 0x00697B43
+		// Token: 0x06033914 RID: 211220 RVA: 0x006F32D7 File Offset: 0x006F14D7
 		public static void StartIOpenGreatSwordChallengeResult(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x060309F5 RID: 199157 RVA: 0x0069994C File Offset: 0x00697B4C
+		// Token: 0x06033915 RID: 211221 RVA: 0x006F32E0 File Offset: 0x006F14E0
 		public static void AddType(FlatBufferBuilder builder, ESystemType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x060309F6 RID: 199158 RVA: 0x00699957 File Offset: 0x00697B57
+		// Token: 0x06033916 RID: 211222 RVA: 0x006F32EB File Offset: 0x006F14EB
 		public static void AddId(FlatBufferBuilder builder, int id)
 		{
 			builder.AddInt(1, id, 0);
 		}
 
-		// Token: 0x060309F7 RID: 199159 RVA: 0x00699962 File Offset: 0x00697B62
+		// Token: 0x06033917 RID: 211223 RVA: 0x006F32F6 File Offset: 0x006F14F6
 		public static void AddReturnVarType(FlatBufferBuilder builder, TVarRef returnVarType)
 		{
 			builder.AddByte(2, (byte)returnVarType, 0);
 		}
 
-		// Token: 0x060309F8 RID: 199160 RVA: 0x0069996D File Offset: 0x00697B6D
+		// Token: 0x06033918 RID: 211224 RVA: 0x006F3301 File Offset: 0x006F1501
 		public static void AddReturnVar(FlatBufferBuilder builder, int returnVarOffset)
 		{
 			builder.AddOffset(3, returnVarOffset, 0);
 		}
 
-		// Token: 0x060309F9 RID: 199161 RVA: 0x00699978 File Offset: 0x00697B78
+		// Token: 0x06033919 RID: 211225 RVA: 0x006F330C File Offset: 0x006F150C
 		public static Offset<IOpenGreatSwordChallengeResult> EndIOpenGreatSwordChallengeResult(FlatBufferBuilder builder)
 		{
 			return new Offset<IOpenGreatSwordChallengeResult>(builder.EndTable());
 		}
 
-		// Token: 0x060309FA RID: 199162 RVA: 0x00699988 File Offset: 0x00697B88
+		// Token: 0x0603391A RID: 211226 RVA: 0x006F331C File Offset: 0x006F151C
 		public IOpenGreatSwordChallengeResultT UnPack()
 		{
 			IOpenGreatSwordChallengeResultT openGreatSwordChallengeResultT = new IOpenGreatSwordChallengeResultT();
@@ -189,7 +189,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return openGreatSwordChallengeResultT;
 		}
 
-		// Token: 0x060309FB RID: 199163 RVA: 0x006999A4 File Offset: 0x00697BA4
+		// Token: 0x0603391B RID: 211227 RVA: 0x006F3338 File Offset: 0x006F1538
 		public void UnPackTo(IOpenGreatSwordChallengeResultT _o)
 		{
 			_o.Type = this.Type;
@@ -218,7 +218,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			}
 		}
 
-		// Token: 0x060309FC RID: 199164 RVA: 0x00699B1C File Offset: 0x00697D1C
+		// Token: 0x0603391C RID: 211228 RVA: 0x006F34B0 File Offset: 0x006F16B0
 		public static Offset<IOpenGreatSwordChallengeResult> Pack(FlatBufferBuilder builder, IOpenGreatSwordChallengeResultT _o)
 		{
 			if (_o == null)
@@ -230,7 +230,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Action
 			return IOpenGreatSwordChallengeResult.CreateIOpenGreatSwordChallengeResult(builder, _o.Type, _o.Id, returnVar_type, returnVarOffset);
 		}
 
-		// Token: 0x04011505 RID: 70917
+		// Token: 0x04012455 RID: 74837
 		private Table __p;
 	}
 }

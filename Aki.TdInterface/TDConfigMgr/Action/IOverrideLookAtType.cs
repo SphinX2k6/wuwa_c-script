@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001CBC RID: 7356
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001EC3 RID: 7875
 	public class IOverrideLookAtType
 	{
-		// Token: 0x06009DF1 RID: 40433 RVA: 0x001697C8 File Offset: 0x001679C8
+		// Token: 0x0600A79F RID: 42911 RVA: 0x0017D428 File Offset: 0x0017B628
 		private IOverrideLookAtType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009DF2 RID: 40434 RVA: 0x00169800 File Offset: 0x00167A00
+		// Token: 0x0600A7A0 RID: 42912 RVA: 0x0017D460 File Offset: 0x0017B660
 		public static IOverrideLookAtType Create([Nullable(2)] IOverrideLookAtType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009DF3 RID: 40435 RVA: 0x00169813 File Offset: 0x00167A13
+		// Token: 0x0600A7A1 RID: 42913 RVA: 0x0017D473 File Offset: 0x0017B673
 		public static IOverrideLookAtType CreateFromSetValue([Nullable(2)] IOverrideLookAtType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009DF4 RID: 40436 RVA: 0x00169826 File Offset: 0x00167A26
+		// Token: 0x0600A7A2 RID: 42914 RVA: 0x0017D486 File Offset: 0x0017B686
 		public IOverrideLookAtType_SetValue ToSetValue()
 		{
 			return new IOverrideLookAtType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003135 RID: 12597
-		// (get) Token: 0x06009DF5 RID: 40437 RVA: 0x00169839 File Offset: 0x00167A39
-		// (set) Token: 0x06009DF6 RID: 40438 RVA: 0x00169864 File Offset: 0x00167A64
+		// Token: 0x170033B9 RID: 13241
+		// (get) Token: 0x0600A7A3 RID: 42915 RVA: 0x0017D499 File Offset: 0x0017B699
+		// (set) Token: 0x0600A7A4 RID: 42916 RVA: 0x0017D4C4 File Offset: 0x0017B6C4
 		public virtual EOverrideLookAtType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005F8A RID: 24458
+		// Token: 0x040064E6 RID: 25830
 		[Nullable(2)]
 		protected IOverrideLookAtType FbInstance;
 
-		// Token: 0x04005F8B RID: 24459
+		// Token: 0x040064E7 RID: 25831
 		[Nullable(2)]
 		protected IOverrideLookAtType_SetValue PocoInterface;
 	}

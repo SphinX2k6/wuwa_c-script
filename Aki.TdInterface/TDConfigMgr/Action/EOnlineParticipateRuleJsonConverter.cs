@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020023B6 RID: 9142
+	// Token: 0x02002647 RID: 9799
 	public class EOnlineParticipateRuleJsonConverter : JsonConverter<EOnlineParticipateRule>
 	{
-		// Token: 0x0600C733 RID: 50995 RVA: 0x001D2A60 File Offset: 0x001D0C60
+		// Token: 0x0600D39B RID: 54171 RVA: 0x001EBE94 File Offset: 0x001EA094
 		public override EOnlineParticipateRule Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Action
 			return EOnlineParticipateRuleExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600C734 RID: 50996 RVA: 0x001D2A84 File Offset: 0x001D0C84
+		// Token: 0x0600D39C RID: 54172 RVA: 0x001EBEB8 File Offset: 0x001EA0B8
 		public override void Write(Utf8JsonWriter writer, EOnlineParticipateRule value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

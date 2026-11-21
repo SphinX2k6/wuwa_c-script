@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Entity
 {
-	// Token: 0x020047BD RID: 18365
+	// Token: 0x02004C25 RID: 19493
 	public struct IEntityOwnerInfo : IFlatbufferObject
 	{
-		// Token: 0x170083ED RID: 33773
-		// (get) Token: 0x0601C5B5 RID: 116149 RVA: 0x004036FC File Offset: 0x004018FC
+		// Token: 0x17008A2E RID: 35374
+		// (get) Token: 0x0601DD8A RID: 122250 RVA: 0x0042F998 File Offset: 0x0042DB98
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Entity
 			}
 		}
 
-		// Token: 0x0601C5B6 RID: 116150 RVA: 0x00403709 File Offset: 0x00401909
+		// Token: 0x0601DD8B RID: 122251 RVA: 0x0042F9A5 File Offset: 0x0042DBA5
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601C5B7 RID: 116151 RVA: 0x00403710 File Offset: 0x00401910
+		// Token: 0x0601DD8C RID: 122252 RVA: 0x0042F9AC File Offset: 0x0042DBAC
 		public static IEntityOwnerInfo GetRootAsIEntityOwnerInfo(ByteBuffer _bb)
 		{
 			return IEntityOwnerInfo.GetRootAsIEntityOwnerInfo(_bb, default(IEntityOwnerInfo));
 		}
 
-		// Token: 0x0601C5B8 RID: 116152 RVA: 0x0040372C File Offset: 0x0040192C
+		// Token: 0x0601DD8D RID: 122253 RVA: 0x0042F9C8 File Offset: 0x0042DBC8
 		public static IEntityOwnerInfo GetRootAsIEntityOwnerInfo(ByteBuffer _bb, IEntityOwnerInfo obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601C5B9 RID: 116153 RVA: 0x00403749 File Offset: 0x00401949
+		// Token: 0x0601DD8E RID: 122254 RVA: 0x0042F9E5 File Offset: 0x0042DBE5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601C5BA RID: 116154 RVA: 0x00403758 File Offset: 0x00401958
+		// Token: 0x0601DD8F RID: 122255 RVA: 0x0042F9F4 File Offset: 0x0042DBF4
 		public IEntityOwnerInfo __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x170083EE RID: 33774
-		// (get) Token: 0x0601C5BB RID: 116155 RVA: 0x00403768 File Offset: 0x00401968
+		// Token: 0x17008A2F RID: 35375
+		// (get) Token: 0x0601DD90 RID: 122256 RVA: 0x0042FA04 File Offset: 0x0042DC04
 		public EEntityOwnerType Type
 		{
 			get
@@ -62,7 +62,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Entity
 			}
 		}
 
-		// Token: 0x0601C5BC RID: 116156 RVA: 0x004037A4 File Offset: 0x004019A4
+		// Token: 0x0601DD91 RID: 122257 RVA: 0x0042FA40 File Offset: 0x0042DC40
 		public static Offset<IEntityOwnerInfo> CreateIEntityOwnerInfo(FlatBufferBuilder builder, EEntityOwnerType Type = EEntityOwnerType.Quest)
 		{
 			builder.StartTable(1);
@@ -70,25 +70,25 @@ namespace Aki.UniverseEditor.Interface.Fbs.Entity
 			return IEntityOwnerInfo.EndIEntityOwnerInfo(builder);
 		}
 
-		// Token: 0x0601C5BD RID: 116157 RVA: 0x004037BA File Offset: 0x004019BA
+		// Token: 0x0601DD92 RID: 122258 RVA: 0x0042FA56 File Offset: 0x0042DC56
 		public static void StartIEntityOwnerInfo(FlatBufferBuilder builder)
 		{
 			builder.StartTable(1);
 		}
 
-		// Token: 0x0601C5BE RID: 116158 RVA: 0x004037C3 File Offset: 0x004019C3
+		// Token: 0x0601DD93 RID: 122259 RVA: 0x0042FA5F File Offset: 0x0042DC5F
 		public static void AddType(FlatBufferBuilder builder, EEntityOwnerType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601C5BF RID: 116159 RVA: 0x004037CE File Offset: 0x004019CE
+		// Token: 0x0601DD94 RID: 122260 RVA: 0x0042FA6A File Offset: 0x0042DC6A
 		public static Offset<IEntityOwnerInfo> EndIEntityOwnerInfo(FlatBufferBuilder builder)
 		{
 			return new Offset<IEntityOwnerInfo>(builder.EndTable());
 		}
 
-		// Token: 0x0601C5C0 RID: 116160 RVA: 0x004037DC File Offset: 0x004019DC
+		// Token: 0x0601DD95 RID: 122261 RVA: 0x0042FA78 File Offset: 0x0042DC78
 		public IEntityOwnerInfoT UnPack()
 		{
 			IEntityOwnerInfoT entityOwnerInfoT = new IEntityOwnerInfoT();
@@ -96,13 +96,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Entity
 			return entityOwnerInfoT;
 		}
 
-		// Token: 0x0601C5C1 RID: 116161 RVA: 0x004037F7 File Offset: 0x004019F7
+		// Token: 0x0601DD96 RID: 122262 RVA: 0x0042FA93 File Offset: 0x0042DC93
 		public void UnPackTo(IEntityOwnerInfoT _o)
 		{
 			_o.Type = this.Type;
 		}
 
-		// Token: 0x0601C5C2 RID: 116162 RVA: 0x00403808 File Offset: 0x00401A08
+		// Token: 0x0601DD97 RID: 122263 RVA: 0x0042FAA4 File Offset: 0x0042DCA4
 		public static Offset<IEntityOwnerInfo> Pack(FlatBufferBuilder builder, IEntityOwnerInfoT _o)
 		{
 			if (_o == null)
@@ -112,7 +112,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Entity
 			return IEntityOwnerInfo.CreateIEntityOwnerInfo(builder, _o.Type);
 		}
 
-		// Token: 0x0400CC42 RID: 52290
+		// Token: 0x0400D678 RID: 54904
 		private Table __p;
 	}
 }

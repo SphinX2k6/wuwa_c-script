@@ -9,10 +9,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 {
-	// Token: 0x02006467 RID: 25703
+	// Token: 0x020053E5 RID: 21477
 	internal class MoonSignInIllustrated : UiPanelBase
 	{
-		// Token: 0x06040980 RID: 264576 RVA: 0x00FA29E0 File Offset: 0x00FA0BE0
+		// Token: 0x06035641 RID: 218689 RVA: 0x00EE995C File Offset: 0x00EE7B5C
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 14;
@@ -59,7 +59,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x06040981 RID: 264577 RVA: 0x00FA2C40 File Offset: 0x00FA0E40
+		// Token: 0x06035642 RID: 218690 RVA: 0x00EE9BBC File Offset: 0x00EE7DBC
 		protected override UniTask OnBeforeStartAsync()
 		{
 			MoonSignInIllustrated.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -70,7 +70,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06040982 RID: 264578 RVA: 0x00FA2C84 File Offset: 0x00FA0E84
+		// Token: 0x06035643 RID: 218691 RVA: 0x00EE9C00 File Offset: 0x00EE7E00
 		public void RefreshPhaseView()
 		{
 			for (int i = 1; i <= 10; i++)
@@ -90,7 +90,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			base.GetItem(13).SetUIActive(data.GetCanGetMoonGrandReward());
 		}
 
-		// Token: 0x06040983 RID: 264579 RVA: 0x00FA2CEB File Offset: 0x00FA0EEB
+		// Token: 0x06035644 RID: 218692 RVA: 0x00EE9C67 File Offset: 0x00EE7E67
 		private void OnClickSwitchToWishBtn()
 		{
 			Action onClickSwitchWishBtnCallBack = this.OnClickSwitchWishBtnCallBack;
@@ -101,63 +101,63 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.MoonSignIn
 			onClickSwitchWishBtnCallBack();
 		}
 
-		// Token: 0x06040984 RID: 264580 RVA: 0x00FA2CFD File Offset: 0x00FA0EFD
+		// Token: 0x06035645 RID: 218693 RVA: 0x00EE9C79 File Offset: 0x00EE7E79
 		private void OnClickRewardBtn()
 		{
 			UiManager.Instance.OpenView(EUiViewName.MoonSignInRewardView, null, null);
 		}
 
-		// Token: 0x04021955 RID: 137557
+		// Token: 0x0401C284 RID: 115332
 		[Nullable(2)]
 		public Action OnClickSwitchWishBtnCallBack;
 
-		// Token: 0x04021956 RID: 137558
+		// Token: 0x0401C285 RID: 115333
 		[Nullable(1)]
 		private readonly Dictionary<int, MoonSignInPhase> PhaseItemMap = new Dictionary<int, MoonSignInPhase>();
 
-		// Token: 0x0200C692 RID: 50834
+		// Token: 0x0200B078 RID: 45176
 		private class EMoonSignInIllustratedDefine
 		{
-			// Token: 0x0403BF26 RID: 245542
+			// Token: 0x04036881 RID: 223361
 			public const int MoonPhaseItem1 = 0;
 
-			// Token: 0x0403BF27 RID: 245543
+			// Token: 0x04036882 RID: 223362
 			public const int MoonPhaseItem2 = 1;
 
-			// Token: 0x0403BF28 RID: 245544
+			// Token: 0x04036883 RID: 223363
 			public const int MoonPhaseItem3 = 2;
 
-			// Token: 0x0403BF29 RID: 245545
+			// Token: 0x04036884 RID: 223364
 			public const int MoonPhaseItem4 = 3;
 
-			// Token: 0x0403BF2A RID: 245546
+			// Token: 0x04036885 RID: 223365
 			public const int MoonPhaseItem5 = 4;
 
-			// Token: 0x0403BF2B RID: 245547
+			// Token: 0x04036886 RID: 223366
 			public const int MoonPhaseItem6 = 5;
 
-			// Token: 0x0403BF2C RID: 245548
+			// Token: 0x04036887 RID: 223367
 			public const int MoonPhaseItem7 = 6;
 
-			// Token: 0x0403BF2D RID: 245549
+			// Token: 0x04036888 RID: 223368
 			public const int MoonPhaseItem8 = 7;
 
-			// Token: 0x0403BF2E RID: 245550
+			// Token: 0x04036889 RID: 223369
 			public const int MoonPhaseItem9 = 8;
 
-			// Token: 0x0403BF2F RID: 245551
+			// Token: 0x0403688A RID: 223370
 			public const int MoonPhaseItem10 = 9;
 
-			// Token: 0x0403BF30 RID: 245552
+			// Token: 0x0403688B RID: 223371
 			public const int RewardBtn = 10;
 
-			// Token: 0x0403BF31 RID: 245553
+			// Token: 0x0403688C RID: 223372
 			public const int ProgressText = 11;
 
-			// Token: 0x0403BF32 RID: 245554
+			// Token: 0x0403688D RID: 223373
 			public const int SwitchToWishBtn = 12;
 
-			// Token: 0x0403BF33 RID: 245555
+			// Token: 0x0403688E RID: 223374
 			public const int RewardBtnRedDotItem = 13;
 		}
 	}

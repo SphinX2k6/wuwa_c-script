@@ -1,12 +1,12 @@
 ﻿using System;
 
-// Token: 0x020023B7 RID: 9143
+// Token: 0x0200189C RID: 6300
 public enum EPersonalEditDefine
 {
-	// Token: 0x04008A09 RID: 35337
+	// Token: 0x04008B50 RID: 35664
 	HeadPhoto,
-	// Token: 0x04008A0A RID: 35338
+	// Token: 0x04008B51 RID: 35665
 	Card,
-	// Token: 0x04008A0B RID: 35339
+	// Token: 0x04008B52 RID: 35666
 	PlayerTitle
 }

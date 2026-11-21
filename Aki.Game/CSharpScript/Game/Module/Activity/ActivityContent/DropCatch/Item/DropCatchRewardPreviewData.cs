@@ -2,22 +2,22 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch.Item
 {
-	// Token: 0x020066E0 RID: 26336
+	// Token: 0x02005630 RID: 22064
 	public class DropCatchRewardPreviewData : IDropCatchRewardPreviewData
 	{
-		// Token: 0x1700964E RID: 38478
-		// (get) Token: 0x06041D3E RID: 269630 RVA: 0x00FF6E0D File Offset: 0x00FF500D
-		// (set) Token: 0x06041D3F RID: 269631 RVA: 0x00FF6E15 File Offset: 0x00FF5015
+		// Token: 0x1700698D RID: 27021
+		// (get) Token: 0x0603688A RID: 223370 RVA: 0x00F38211 File Offset: 0x00F36411
+		// (set) Token: 0x0603688B RID: 223371 RVA: 0x00F38219 File Offset: 0x00F36419
 		public int CfgId { get; set; }
 
-		// Token: 0x1700964F RID: 38479
-		// (get) Token: 0x06041D40 RID: 269632 RVA: 0x00FF6E1E File Offset: 0x00FF501E
-		// (set) Token: 0x06041D41 RID: 269633 RVA: 0x00FF6E26 File Offset: 0x00FF5026
+		// Token: 0x1700698E RID: 27022
+		// (get) Token: 0x0603688C RID: 223372 RVA: 0x00F38222 File Offset: 0x00F36422
+		// (set) Token: 0x0603688D RID: 223373 RVA: 0x00F3822A File Offset: 0x00F3642A
 		public EDropCatchLevelState? State { get; set; }
 
-		// Token: 0x17009650 RID: 38480
-		// (get) Token: 0x06041D42 RID: 269634 RVA: 0x00FF6E2F File Offset: 0x00FF502F
-		// (set) Token: 0x06041D43 RID: 269635 RVA: 0x00FF6E37 File Offset: 0x00FF5037
+		// Token: 0x1700698F RID: 27023
+		// (get) Token: 0x0603688E RID: 223374 RVA: 0x00F38233 File Offset: 0x00F36433
+		// (set) Token: 0x0603688F RID: 223375 RVA: 0x00F3823B File Offset: 0x00F3643B
 		public bool IsLast { get; set; }
 	}
 }

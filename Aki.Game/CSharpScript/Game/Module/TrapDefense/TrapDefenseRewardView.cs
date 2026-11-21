@@ -11,17 +11,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004ACA RID: 19146
+	// Token: 0x02003A72 RID: 14962
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TrapDefenseRewardView : UiTickViewBase
 	{
-		// Token: 0x06031995 RID: 203157 RVA: 0x00B8099B File Offset: 0x00B7EB9B
+		// Token: 0x06026725 RID: 157477 RVA: 0x00AC494F File Offset: 0x00AC2B4F
 		public TrapDefenseRewardView(UiViewInfo info) : base(info)
 		{
 		}
 
-		// Token: 0x06031996 RID: 203158 RVA: 0x00B809A4 File Offset: 0x00B7EBA4
+		// Token: 0x06026726 RID: 157478 RVA: 0x00AC4958 File Offset: 0x00AC2B58
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 7;
@@ -45,7 +45,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06031997 RID: 203159 RVA: 0x00B80AB4 File Offset: 0x00B7ECB4
+		// Token: 0x06026727 RID: 157479 RVA: 0x00AC4A68 File Offset: 0x00AC2C68
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TrapDefenseRewardView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -56,7 +56,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031998 RID: 203160 RVA: 0x00B80AF8 File Offset: 0x00B7ECF8
+		// Token: 0x06026728 RID: 157480 RVA: 0x00AC4AAC File Offset: 0x00AC2CAC
 		protected override void OnStart()
 		{
 			TrapDefenseModel.Instance.ViewModelReward.RegisterOnSelectRewardTypeChange(new Action<ETrapDefenseRewardType>(this.OnSelectedTypeChange));
@@ -75,33 +75,33 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.HasStartAnimPlayed = true;
 		}
 
-		// Token: 0x06031999 RID: 203161 RVA: 0x00B80BA1 File Offset: 0x00B7EDA1
+		// Token: 0x06026729 RID: 157481 RVA: 0x00AC4B55 File Offset: 0x00AC2D55
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.TrapDefenseRewardUpdate, new Action(this.OnRewardUpdate));
 		}
 
-		// Token: 0x0603199A RID: 203162 RVA: 0x00B80BBF File Offset: 0x00B7EDBF
+		// Token: 0x0602672A RID: 157482 RVA: 0x00AC4B73 File Offset: 0x00AC2D73
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.TrapDefenseRewardUpdate, new Action(this.OnRewardUpdate));
 		}
 
-		// Token: 0x0603199B RID: 203163 RVA: 0x00B80BE0 File Offset: 0x00B7EDE0
+		// Token: 0x0602672B RID: 157483 RVA: 0x00AC4B94 File Offset: 0x00AC2D94
 		protected override void OnTick(float deltaTime)
 		{
 			string limitRewardRemainTimeStr = TrapDefenseModel.Instance.RewardData.GetLimitRewardRemainTimeStr();
 			base.GetText(3).SetText(limitRewardRemainTimeStr, true);
 		}
 
-		// Token: 0x0603199C RID: 203164 RVA: 0x00B80C0B File Offset: 0x00B7EE0B
+		// Token: 0x0602672C RID: 157484 RVA: 0x00AC4BBF File Offset: 0x00AC2DBF
 		protected override void OnBeforeDestroy()
 		{
 			TrapDefenseModel.Instance.ViewModelReward.UnregisterOnSelectRewardTypeChange(new Action<ETrapDefenseRewardType>(this.OnSelectedTypeChange));
 			TrapDefenseModel.Instance.ViewModelReward.Clear();
 		}
 
-		// Token: 0x0603199D RID: 203165 RVA: 0x00B80C38 File Offset: 0x00B7EE38
+		// Token: 0x0602672D RID: 157485 RVA: 0x00AC4BEC File Offset: 0x00AC2DEC
 		private void OnSelectedTypeChange(ETrapDefenseRewardType type)
 		{
 			if (this.HasStartAnimPlayed)
@@ -111,7 +111,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.LayoutRewards.RefreshByData(TrapDefenseModel.Instance.RewardData.GetRewardListByType(type), null, true);
 		}
 
-		// Token: 0x0603199E RID: 203166 RVA: 0x00B80C84 File Offset: 0x00B7EE84
+		// Token: 0x0602672E RID: 157486 RVA: 0x00AC4C38 File Offset: 0x00AC2E38
 		private void OnRewardUpdate()
 		{
 			ETrapDefenseRewardType curSelectRewardType = TrapDefenseModel.Instance.ViewModelReward.CurSelectRewardType;
@@ -121,50 +121,50 @@ namespace CSharpScript.Game.Module.TrapDefense
 			this.SpecialRewardItem.Refresh(TrapDefenseModel.Instance.RewardData.SpecialRewardData);
 		}
 
-		// Token: 0x0603199F RID: 203167 RVA: 0x00B80CF6 File Offset: 0x00B7EEF6
+		// Token: 0x0602672F RID: 157487 RVA: 0x00AC4CAA File Offset: 0x00AC2EAA
 		private void OnClaimReward(TrapDefenseRewardItemData data)
 		{
 			TrapDefenseModel.Instance.RewardData.RequestClaimRewardByType(data.Type);
 		}
 
-		// Token: 0x0401A7FF RID: 108543
+		// Token: 0x04015151 RID: 86353
 		private GenericLayout<TrapDefenseRewardTabItem, TrapDefenseRewardTabData> LayoutTabs;
 
-		// Token: 0x0401A800 RID: 108544
+		// Token: 0x04015152 RID: 86354
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x0401A801 RID: 108545
+		// Token: 0x04015153 RID: 86355
 		private GenericScrollViewNew<TrapDefenseRewardItem, TrapDefenseRewardItemData> LayoutRewards;
 
-		// Token: 0x0401A802 RID: 108546
+		// Token: 0x04015154 RID: 86356
 		private TrapDefenseSpecialRewardItem SpecialRewardItem;
 
-		// Token: 0x0401A803 RID: 108547
+		// Token: 0x04015155 RID: 86357
 		private bool HasStartAnimPlayed;
 
-		// Token: 0x0200AC3A RID: 44090
+		// Token: 0x0200965A RID: 38490
 		[NullableContext(0)]
 		private class EComponentDefine
 		{
-			// Token: 0x0403454A RID: 214346
+			// Token: 0x0402EEFB RID: 192251
 			public const int ItemCaption = 0;
 
-			// Token: 0x0403454B RID: 214347
+			// Token: 0x0402EEFC RID: 192252
 			public const int LayoutTabs = 1;
 
-			// Token: 0x0403454C RID: 214348
+			// Token: 0x0402EEFD RID: 192253
 			public const int ItemTab = 2;
 
-			// Token: 0x0403454D RID: 214349
+			// Token: 0x0402EEFE RID: 192254
 			public const int TextTime = 3;
 
-			// Token: 0x0403454E RID: 214350
+			// Token: 0x0402EEFF RID: 192255
 			public const int LayoutRewards = 4;
 
-			// Token: 0x0403454F RID: 214351
+			// Token: 0x0402EF00 RID: 192256
 			public const int ItemReward = 5;
 
-			// Token: 0x04034550 RID: 214352
+			// Token: 0x0402EF01 RID: 192257
 			public const int ItemSpecialReward = 6;
 		}
 	}

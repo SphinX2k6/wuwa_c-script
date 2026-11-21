@@ -2,7 +2,7 @@
 
 namespace CSharpScript.Game.Ui
 {
-	// Token: 0x02004671 RID: 18033
+	// Token: 0x020035A2 RID: 13730
 	public class TPartialViewData : UiViewData
 	{
 	}

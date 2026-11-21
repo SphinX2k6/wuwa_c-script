@@ -5,21 +5,21 @@ using AkiClient.Game.Aki.Character.BaseCharacter;
 
 namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 {
-	// Token: 0x02006B7F RID: 27519
+	// Token: 0x02005CF7 RID: 23799
 	public class LevelEventSetTimeScale : LevelEventBase, IStaticVariableResetter
 	{
-		// Token: 0x06044264 RID: 279140 RVA: 0x010CA4DC File Offset: 0x010C86DC
+		// Token: 0x0603A3B6 RID: 238518 RVA: 0x01074150 File Offset: 0x01072350
 		public LevelEventSetTimeScale(int Id) : base(Id)
 		{
 		}
 
-		// Token: 0x06044265 RID: 279141 RVA: 0x010CA4E5 File Offset: 0x010C86E5
+		// Token: 0x0603A3B7 RID: 238519 RVA: 0x01074159 File Offset: 0x01072359
 		static LevelEventSetTimeScale()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(LevelEventSetTimeScale.CreateStaticDefaultValue), new Action(LevelEventSetTimeScale.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06044266 RID: 279142 RVA: 0x010CA504 File Offset: 0x010C8704
+		// Token: 0x0603A3B8 RID: 238520 RVA: 0x01074178 File Offset: 0x01072378
 		[NullableContext(1)]
 		public override void ExecuteNew(ActionParams inParams, GeneralContext context, int? actionId = null)
 		{
@@ -96,19 +96,19 @@ namespace CSharpScript.Game.LevelGamePlay.LevelEvents
 			}
 		}
 
-		// Token: 0x06044267 RID: 279143 RVA: 0x010CA6EE File Offset: 0x010C88EE
+		// Token: 0x0603A3B9 RID: 238521 RVA: 0x01074362 File Offset: 0x01072562
 		public static void CreateStaticDefaultValue()
 		{
 			LevelEventSetTimeScale.ResumeTimerHandle = null;
 		}
 
-		// Token: 0x06044268 RID: 279144 RVA: 0x010CA6F6 File Offset: 0x010C88F6
+		// Token: 0x0603A3BA RID: 238522 RVA: 0x0107436A File Offset: 0x0107256A
 		public static void ResetStaticDefaultValue()
 		{
 			LevelEventSetTimeScale.ResumeTimerHandle = null;
 		}
 
-		// Token: 0x04023956 RID: 145750
+		// Token: 0x0401EBF8 RID: 125944
 		[Nullable(2)]
 		private static TimerHandle ResumeTimerHandle;
 	}

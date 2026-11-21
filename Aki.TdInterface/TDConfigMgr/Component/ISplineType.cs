@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020006FE RID: 1790
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200079F RID: 1951
 	public class ISplineType
 	{
-		// Token: 0x0600268C RID: 9868 RVA: 0x00067080 File Offset: 0x00065280
+		// Token: 0x060029AC RID: 10668 RVA: 0x0006E0F0 File Offset: 0x0006C2F0
 		private ISplineType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x0600268D RID: 9869 RVA: 0x000670B8 File Offset: 0x000652B8
+		// Token: 0x060029AD RID: 10669 RVA: 0x0006E128 File Offset: 0x0006C328
 		public static ISplineType Create([Nullable(2)] ISplineType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600268E RID: 9870 RVA: 0x000670CB File Offset: 0x000652CB
+		// Token: 0x060029AE RID: 10670 RVA: 0x0006E13B File Offset: 0x0006C33B
 		public static ISplineType CreateFromSetValue([Nullable(2)] ISplineType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x0600268F RID: 9871 RVA: 0x000670DE File Offset: 0x000652DE
+		// Token: 0x060029AF RID: 10671 RVA: 0x0006E14E File Offset: 0x0006C34E
 		public ISplineType_SetValue ToSetValue()
 		{
 			return new ISplineType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x17000A28 RID: 2600
-		// (get) Token: 0x06002690 RID: 9872 RVA: 0x000670F1 File Offset: 0x000652F1
-		// (set) Token: 0x06002691 RID: 9873 RVA: 0x0006711C File Offset: 0x0006531C
+		// Token: 0x17000AE6 RID: 2790
+		// (get) Token: 0x060029B0 RID: 10672 RVA: 0x0006E161 File Offset: 0x0006C361
+		// (set) Token: 0x060029B1 RID: 10673 RVA: 0x0006E18C File Offset: 0x0006C38C
 		public virtual ESplineType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04001A22 RID: 6690
+		// Token: 0x04001C21 RID: 7201
 		[Nullable(2)]
 		protected ISplineType FbInstance;
 
-		// Token: 0x04001A23 RID: 6691
+		// Token: 0x04001C22 RID: 7202
 		[Nullable(2)]
 		protected ISplineType_SetValue PocoInterface;
 	}

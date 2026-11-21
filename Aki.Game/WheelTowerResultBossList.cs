@@ -9,12 +9,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x020015AC RID: 5548
+// Token: 0x02000A64 RID: 2660
 [NullableContext(1)]
 [Nullable(0)]
 public class WheelTowerResultBossList : UiPanelBase
 {
-	// Token: 0x06009DAB RID: 40363 RVA: 0x00223DF0 File Offset: 0x00221FF0
+	// Token: 0x06007189 RID: 29065 RVA: 0x0022DBA0 File Offset: 0x0022BDA0
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 3;
@@ -30,7 +30,7 @@ public class WheelTowerResultBossList : UiPanelBase
 		this.ComponentRegisterInfos = list;
 	}
 
-	// Token: 0x06009DAC RID: 40364 RVA: 0x00223E7C File Offset: 0x0022207C
+	// Token: 0x0600718A RID: 29066 RVA: 0x0022DC2C File Offset: 0x0022BE2C
 	protected override void OnStart()
 	{
 		UUIGridLayout gridLayout = base.GetGridLayout(1);
@@ -41,7 +41,7 @@ public class WheelTowerResultBossList : UiPanelBase
 		this.Player = new LevelSequencePlayer(this.RootItem);
 	}
 
-	// Token: 0x06009DAD RID: 40365 RVA: 0x00223EC0 File Offset: 0x002220C0
+	// Token: 0x0600718B RID: 29067 RVA: 0x0022DC70 File Offset: 0x0022BE70
 	protected override void OnBeforeDestroy()
 	{
 		LevelSequencePlayer player = this.Player;
@@ -52,13 +52,13 @@ public class WheelTowerResultBossList : UiPanelBase
 		player.Clear();
 	}
 
-	// Token: 0x06009DAE RID: 40366 RVA: 0x00223ED2 File Offset: 0x002220D2
+	// Token: 0x0600718C RID: 29068 RVA: 0x0022DC82 File Offset: 0x0022BE82
 	private WheelTowerResultBossList.BossSmallItem CreateBossSmallItem()
 	{
 		return new WheelTowerResultBossList.BossSmallItem();
 	}
 
-	// Token: 0x06009DAF RID: 40367 RVA: 0x00223EDC File Offset: 0x002220DC
+	// Token: 0x0600718D RID: 29069 RVA: 0x0022DC8C File Offset: 0x0022BE8C
 	public void Refresh(List<IBossItemData> bossList)
 	{
 		base.SetUiActive(true);
@@ -75,7 +75,7 @@ public class WheelTowerResultBossList : UiPanelBase
 		player.PlaySequencePurely("Start", false, false, null, null, false);
 	}
 
-	// Token: 0x0400459D RID: 17821
+	// Token: 0x04004643 RID: 17987
 	[Nullable(new byte[]
 	{
 		2,
@@ -84,11 +84,11 @@ public class WheelTowerResultBossList : UiPanelBase
 	})]
 	private GenericLayout<WheelTowerResultBossList.BossSmallItem, IBossItemData> GridLayout;
 
-	// Token: 0x0400459E RID: 17822
+	// Token: 0x04004644 RID: 17988
 	[Nullable(2)]
 	private LevelSequencePlayer Player;
 
-	// Token: 0x02007BB9 RID: 31673
+	// Token: 0x02006D44 RID: 27972
 	[Nullable(new byte[]
 	{
 		0,
@@ -96,7 +96,7 @@ public class WheelTowerResultBossList : UiPanelBase
 	})]
 	private class BossSmallItem : GridProxyAbstract<IBossItemData>
 	{
-		// Token: 0x0604975E RID: 300894 RVA: 0x013024D4 File Offset: 0x013006D4
+		// Token: 0x0603FB85 RID: 260997 RVA: 0x012A57EC File Offset: 0x012A39EC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -112,7 +112,7 @@ public class WheelTowerResultBossList : UiPanelBase
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0604975F RID: 300895 RVA: 0x01302560 File Offset: 0x01300760
+		// Token: 0x0603FB86 RID: 260998 RVA: 0x012A5878 File Offset: 0x012A3A78
 		protected override UniTask OnBeforeStartAsync()
 		{
 			WheelTowerResultBossList.BossSmallItem.<OnBeforeStartAsync>d__2 <OnBeforeStartAsync>d__;
@@ -123,7 +123,7 @@ public class WheelTowerResultBossList : UiPanelBase
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06049760 RID: 300896 RVA: 0x013025A3 File Offset: 0x013007A3
+		// Token: 0x0603FB87 RID: 260999 RVA: 0x012A58BB File Offset: 0x012A3ABB
 		public override void Refresh(IBossItemData data, bool isSelected, int gridIndex)
 		{
 			WheelTowerBossItem bossItem = this.BossItem;
@@ -139,7 +139,7 @@ public class WheelTowerResultBossList : UiPanelBase
 			bossItem2.SetTagVisible(false);
 		}
 
-		// Token: 0x04028AB1 RID: 166577
+		// Token: 0x04023DEC RID: 146924
 		[Nullable(2)]
 		private WheelTowerBossItem BossItem;
 	}

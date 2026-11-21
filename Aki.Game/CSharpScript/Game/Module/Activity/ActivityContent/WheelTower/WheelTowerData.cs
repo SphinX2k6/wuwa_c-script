@@ -1,54 +1,54 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using Aki.Config;
 using Aki.Protocol;
 using CSharpScript.Game.Common.Event;
+using Google.Protobuf.Collections;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 {
-	// Token: 0x02005F1D RID: 24349
+	// Token: 0x02004F04 RID: 20228
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WheelTowerData : ActivityBaseData
 	{
-		// Token: 0x17008EF9 RID: 36601
-		// (get) Token: 0x0603DDC4 RID: 253380 RVA: 0x00EF3A40 File Offset: 0x00EF1C40
-		// (set) Token: 0x0603DDC5 RID: 253381 RVA: 0x00EF3A48 File Offset: 0x00EF1C48
+		// Token: 0x170062CB RID: 25291
+		// (get) Token: 0x06032D5F RID: 208223 RVA: 0x00E45748 File Offset: 0x00E43948
+		// (set) Token: 0x06032D60 RID: 208224 RVA: 0x00E45750 File Offset: 0x00E43950
 		public int CycleId { get; private set; } = -1;
 
-		// Token: 0x17008EFA RID: 36602
-		// (get) Token: 0x0603DDC6 RID: 253382 RVA: 0x00EF3A51 File Offset: 0x00EF1C51
-		// (set) Token: 0x0603DDC7 RID: 253383 RVA: 0x00EF3A59 File Offset: 0x00EF1C59
+		// Token: 0x170062CC RID: 25292
+		// (get) Token: 0x06032D61 RID: 208225 RVA: 0x00E45759 File Offset: 0x00E43959
+		// (set) Token: 0x06032D62 RID: 208226 RVA: 0x00E45761 File Offset: 0x00E43961
 		public double CycleBeginTime { get; private set; } = -1.0;
 
-		// Token: 0x17008EFB RID: 36603
-		// (get) Token: 0x0603DDC8 RID: 253384 RVA: 0x00EF3A62 File Offset: 0x00EF1C62
-		// (set) Token: 0x0603DDC9 RID: 253385 RVA: 0x00EF3A6A File Offset: 0x00EF1C6A
+		// Token: 0x170062CD RID: 25293
+		// (get) Token: 0x06032D63 RID: 208227 RVA: 0x00E4576A File Offset: 0x00E4396A
+		// (set) Token: 0x06032D64 RID: 208228 RVA: 0x00E45772 File Offset: 0x00E43972
 		public double CycleEndTime { get; private set; } = -1.0;
 
-		// Token: 0x17008EFC RID: 36604
-		// (get) Token: 0x0603DDCA RID: 253386 RVA: 0x00EF3A73 File Offset: 0x00EF1C73
-		// (set) Token: 0x0603DDCB RID: 253387 RVA: 0x00EF3A7B File Offset: 0x00EF1C7B
+		// Token: 0x170062CE RID: 25294
+		// (get) Token: 0x06032D65 RID: 208229 RVA: 0x00E4577B File Offset: 0x00E4397B
+		// (set) Token: 0x06032D66 RID: 208230 RVA: 0x00E45783 File Offset: 0x00E43983
 		public bool IsRequestedRecommendLineUp { get; private set; }
 
-		// Token: 0x17008EFD RID: 36605
-		// (get) Token: 0x0603DDCC RID: 253388 RVA: 0x00EF3A84 File Offset: 0x00EF1C84
-		// (set) Token: 0x0603DDCD RID: 253389 RVA: 0x00EF3A8C File Offset: 0x00EF1C8C
+		// Token: 0x170062CF RID: 25295
+		// (get) Token: 0x06032D67 RID: 208231 RVA: 0x00E4578C File Offset: 0x00E4398C
+		// (set) Token: 0x06032D68 RID: 208232 RVA: 0x00E45794 File Offset: 0x00E43994
 		public int SeasonId { get; private set; } = 1;
 
-		// Token: 0x17008EFE RID: 36606
-		// (get) Token: 0x0603DDCE RID: 253390 RVA: 0x00EF3A95 File Offset: 0x00EF1C95
-		// (set) Token: 0x0603DDCF RID: 253391 RVA: 0x00EF3A9D File Offset: 0x00EF1C9D
+		// Token: 0x170062D0 RID: 25296
+		// (get) Token: 0x06032D69 RID: 208233 RVA: 0x00E4579D File Offset: 0x00E4399D
+		// (set) Token: 0x06032D6A RID: 208234 RVA: 0x00E457A5 File Offset: 0x00E439A5
 		public double SeasonBeginTime { get; private set; }
 
-		// Token: 0x17008EFF RID: 36607
-		// (get) Token: 0x0603DDD0 RID: 253392 RVA: 0x00EF3AA6 File Offset: 0x00EF1CA6
-		// (set) Token: 0x0603DDD1 RID: 253393 RVA: 0x00EF3AAE File Offset: 0x00EF1CAE
+		// Token: 0x170062D1 RID: 25297
+		// (get) Token: 0x06032D6B RID: 208235 RVA: 0x00E457AE File Offset: 0x00E439AE
+		// (set) Token: 0x06032D6C RID: 208236 RVA: 0x00E457B6 File Offset: 0x00E439B6
 		public double SeasonEndTime { get; private set; }
 
-		// Token: 0x0603DDD2 RID: 253394 RVA: 0x00EF3AB8 File Offset: 0x00EF1CB8
+		// Token: 0x06032D6D RID: 208237 RVA: 0x00E457C0 File Offset: 0x00E439C0
 		protected override void PhraseEx(ActivityData data)
 		{
 			WheelTowerModel.Instance.SetActivityId(base.Id);
@@ -58,13 +58,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 				return;
 			}
 			this.ParseCycleInfo(newTowerClimbingActivityData);
-			this.ParseLevelRecord(newTowerClimbingActivityData.Records.ToList<NewTowerClimbingLevelRecord>());
-			this.ParseEnergyInfo(newTowerClimbingActivityData.Records.ToList<NewTowerClimbingLevelRecord>());
+			this.ParseLevelRecord(newTowerClimbingActivityData.Records);
+			this.ParseEnergyInfo(newTowerClimbingActivityData.Records);
 			this.ParseTaskInfo(newTowerClimbingActivityData);
 			this.ParseSeasonInfo(newTowerClimbingActivityData);
 		}
 
-		// Token: 0x0603DDD3 RID: 253395 RVA: 0x00EF3B18 File Offset: 0x00EF1D18
+		// Token: 0x06032D6E RID: 208238 RVA: 0x00E45818 File Offset: 0x00E43A18
 		private void ParseCycleInfo(NewTowerClimbingActivityData activityData)
 		{
 			if (this.CycleId != -1 && this.CycleId != activityData.CycleId)
@@ -76,8 +76,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 			this.CycleEndTime = (double)MathUtils.Instance.LongToNumber(activityData.CycleCloseTime);
 		}
 
-		// Token: 0x0603DDD4 RID: 253396 RVA: 0x00EF3B88 File Offset: 0x00EF1D88
-		private void ParseLevelRecord(List<NewTowerClimbingLevelRecord> levelRecords)
+		// Token: 0x06032D6F RID: 208239 RVA: 0x00E45888 File Offset: 0x00E43A88
+		private void ParseLevelRecord(IEnumerable<NewTowerClimbingLevelRecord> levelRecords)
 		{
 			this.LevelRecordMap.Clear();
 			foreach (NewTowerClimbingLevelRecord newTowerClimbingLevelRecord in levelRecords)
@@ -92,7 +92,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 			this.UpdateLevelRecordRoleId();
 		}
 
-		// Token: 0x0603DDD5 RID: 253397 RVA: 0x00EF3C1C File Offset: 0x00EF1E1C
+		// Token: 0x06032D70 RID: 208240 RVA: 0x00E45918 File Offset: 0x00E43B18
 		private void UpdateLevelRecordRoleId()
 		{
 			foreach (NewTowerClimbingLevelRecord newTowerClimbingLevelRecord in this.LevelRecordMap.Values)
@@ -107,8 +107,8 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 			}
 		}
 
-		// Token: 0x0603DDD6 RID: 253398 RVA: 0x00EF3CE8 File Offset: 0x00EF1EE8
-		private void ParseEnergyInfo(List<NewTowerClimbingLevelRecord> levelRecords)
+		// Token: 0x06032D71 RID: 208241 RVA: 0x00E459E4 File Offset: 0x00E43BE4
+		private void ParseEnergyInfo(IEnumerable<NewTowerClimbingLevelRecord> levelRecords)
 		{
 			this.EnergyInfoMap.Clear();
 			foreach (NewTowerClimbingLevelRecord newTowerClimbingLevelRecord in levelRecords)
@@ -122,16 +122,16 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 					{
 						dictionary[this.CheckMainCharacterCorrect(keyValuePair.Key)] = keyValuePair.Value;
 					}
-					this.EnergyInfoMap[key] = this.CreateEnergyInfo(dictionary, newTowerClimbingLevelRecord.TeamChallengeInfos.ToList<TeamChallengeInfo>());
+					this.EnergyInfoMap[key] = this.CreateEnergyInfo(dictionary, newTowerClimbingLevelRecord.TeamChallengeInfos);
 				}
 			}
 		}
 
-		// Token: 0x0603DDD7 RID: 253399 RVA: 0x00EF3DF0 File Offset: 0x00EF1FF0
+		// Token: 0x06032D72 RID: 208242 RVA: 0x00E45ADC File Offset: 0x00E43CDC
 		public EnergyInfo GetRoundEnergyInfo(bool endless, int round)
 		{
 			NewTowerClimbingLevelRecord levelRecord = this.GetLevelRecord(endless);
-			Dictionary<int, int> dictionary = this.EnergyInfoMap[endless].RoleEnergyMap.ToDictionary((KeyValuePair<int, int> kv) => kv.Key, (KeyValuePair<int, int> kv) => kv.Value);
+			Dictionary<int, int> dictionary = new Dictionary<int, int>(this.EnergyInfoMap[endless].RoleEnergyMap);
 			for (int i = round; i < levelRecord.TeamChallengeInfos.Count; i++)
 			{
 				foreach (RoleSaveInfo roleSaveInfo in levelRecord.TeamChallengeInfos[i].RoleSaveInfos)
@@ -142,11 +142,18 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 					dictionary[num] = num2 + roleCost;
 				}
 			}
-			return this.CreateEnergyInfo(dictionary, levelRecord.TeamChallengeInfos.Take(round).ToList<TeamChallengeInfo>());
+			List<TeamChallengeInfo> list = new List<TeamChallengeInfo>();
+			int num3 = 0;
+			while (num3 < round && num3 < levelRecord.TeamChallengeInfos.Count)
+			{
+				list.Add(levelRecord.TeamChallengeInfos[num3]);
+				num3++;
+			}
+			return this.CreateEnergyInfo(dictionary, list);
 		}
 
-		// Token: 0x0603DDD8 RID: 253400 RVA: 0x00EF3F08 File Offset: 0x00EF2108
-		private EnergyInfo CreateEnergyInfo(Dictionary<int, int> roleEnergyDict, List<TeamChallengeInfo> teamChallengeInfos)
+		// Token: 0x06032D73 RID: 208243 RVA: 0x00E45BE4 File Offset: 0x00E43DE4
+		private EnergyInfo CreateEnergyInfo(Dictionary<int, int> roleEnergyDict, IEnumerable<TeamChallengeInfo> teamChallengeInfos)
 		{
 			EnergyInfo energyInfo = new EnergyInfo();
 			foreach (KeyValuePair<int, int> keyValuePair in roleEnergyDict)
@@ -175,7 +182,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 			return energyInfo;
 		}
 
-		// Token: 0x0603DDD9 RID: 253401 RVA: 0x00EF4080 File Offset: 0x00EF2280
+		// Token: 0x06032D74 RID: 208244 RVA: 0x00E45D54 File Offset: 0x00E43F54
 		public int CheckMainCharacterCorrect(int roleId)
 		{
 			int roleId2 = WheelTowerModel.Instance.TryGetRealRoleId(roleId);
@@ -191,7 +198,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 			return valueOrDefault;
 		}
 
-		// Token: 0x0603DDDA RID: 253402 RVA: 0x00EF40D8 File Offset: 0x00EF22D8
+		// Token: 0x06032D75 RID: 208245 RVA: 0x00E45DAC File Offset: 0x00E43FAC
 		private void ParseTaskInfo(NewTowerClimbingActivityData activityData)
 		{
 			Dictionary<int, int> dictionary = new Dictionary<int, int>();
@@ -225,7 +232,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 			}
 		}
 
-		// Token: 0x0603DDDB RID: 253403 RVA: 0x00EF4238 File Offset: 0x00EF2438
+		// Token: 0x06032D76 RID: 208246 RVA: 0x00E45F0C File Offset: 0x00E4410C
 		public void ParseSeasonInfo(NewTowerClimbingActivityData activityData)
 		{
 			this.SeasonId = activityData.SeasonId;
@@ -234,10 +241,10 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 			this.ReceivedSeasonScoreRewards.Clear();
 			this.ReceivedSeasonScoreRewards.AddRange(activityData.ScoreTasks);
 			this.SeasonTaskDataMap.Clear();
-			this.UpdateSeasonTaskList(activityData.SeasonTasks.ToList<ActivityTask>());
+			this.UpdateSeasonTaskList(activityData.SeasonTasks);
 		}
 
-		// Token: 0x0603DDDC RID: 253404 RVA: 0x00EF42B8 File Offset: 0x00EF24B8
+		// Token: 0x06032D77 RID: 208247 RVA: 0x00E45F88 File Offset: 0x00E44188
 		public void UpdateSeasonTaskList(IList<ActivityTask> taskList)
 		{
 			foreach (ActivityTask task in taskList)
@@ -246,7 +253,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 			}
 		}
 
-		// Token: 0x0603DDDD RID: 253405 RVA: 0x00EF4300 File Offset: 0x00EF2500
+		// Token: 0x06032D78 RID: 208248 RVA: 0x00E45FD0 File Offset: 0x00E441D0
 		public void RemoveSeasonTaskList(IList<int> taskIds)
 		{
 			foreach (int key in taskIds)
@@ -255,7 +262,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 			}
 		}
 
-		// Token: 0x0603DDDE RID: 253406 RVA: 0x00EF4350 File Offset: 0x00EF2550
+		// Token: 0x06032D79 RID: 208249 RVA: 0x00E46020 File Offset: 0x00E44220
 		private void UpdateSeasonTask(ActivityTask task)
 		{
 			global::ActivityTaskData activityTaskData;
@@ -267,26 +274,26 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 			this.SeasonTaskDataMap[task.Id] = activityTaskData;
 		}
 
-		// Token: 0x0603DDDF RID: 253407 RVA: 0x00EF4392 File Offset: 0x00EF2592
+		// Token: 0x06032D7A RID: 208250 RVA: 0x00E46062 File Offset: 0x00E44262
 		public bool IsInCycle()
 		{
 			return this.CycleId > 0;
 		}
 
-		// Token: 0x0603DDE0 RID: 253408 RVA: 0x00EF43A0 File Offset: 0x00EF25A0
+		// Token: 0x06032D7B RID: 208251 RVA: 0x00E46070 File Offset: 0x00E44270
 		public bool IsInCycleTime()
 		{
 			double serverTime = TimeUtil.Instance.GetServerTime();
 			return serverTime >= this.CycleBeginTime && serverTime <= this.CycleEndTime;
 		}
 
-		// Token: 0x0603DDE1 RID: 253409 RVA: 0x00EF43CF File Offset: 0x00EF25CF
+		// Token: 0x06032D7C RID: 208252 RVA: 0x00E4609F File Offset: 0x00E4429F
 		public double GetCycleRemainTime()
 		{
 			return (double)base.EndShowTime - Time.Instance.ServerTimeStamp / 1000.0;
 		}
 
-		// Token: 0x0603DDE2 RID: 253410 RVA: 0x00EF43F0 File Offset: 0x00EF25F0
+		// Token: 0x06032D7D RID: 208253 RVA: 0x00E460C0 File Offset: 0x00E442C0
 		public CommonDefine.ICountDown GetCycleCountDownData()
 		{
 			double num = this.GetCycleRemainTime();
@@ -299,39 +306,54 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 			return TimeUtil.Instance.GetCountDownDataFormat2(num, new CommonDefine.ETimeType?(value), new CommonDefine.ETimeType?(value2));
 		}
 
-		// Token: 0x0603DDE3 RID: 253411 RVA: 0x00EF4471 File Offset: 0x00EF2671
+		// Token: 0x06032D7E RID: 208254 RVA: 0x00E46144 File Offset: 0x00E44344
 		public bool IsTowerUnlocked()
 		{
 			if (!base.IsUnLock())
 			{
 				return false;
 			}
-			return this.LevelRecordMap.Values.Any((NewTowerClimbingLevelRecord levelRecord) => levelRecord.IsUnlock);
+			using (Dictionary<bool, NewTowerClimbingLevelRecord>.ValueCollection.Enumerator enumerator = this.LevelRecordMap.Values.GetEnumerator())
+			{
+				while (enumerator.MoveNext())
+				{
+					if (enumerator.Current.IsUnlock)
+					{
+						return true;
+					}
+				}
+			}
+			return false;
 		}
 
-		// Token: 0x0603DDE4 RID: 253412 RVA: 0x00EF44AC File Offset: 0x00EF26AC
+		// Token: 0x06032D7F RID: 208255 RVA: 0x00E461AC File Offset: 0x00E443AC
 		public NewTowerClimbingLevelRecord GetLevelRecord(bool isEndless)
 		{
 			return this.LevelRecordMap[isEndless];
 		}
 
-		// Token: 0x0603DDE5 RID: 253413 RVA: 0x00EF44BC File Offset: 0x00EF26BC
+		// Token: 0x06032D80 RID: 208256 RVA: 0x00E461BC File Offset: 0x00E443BC
 		public bool IsLevelUnlocked(bool endless)
 		{
 			NewTowerClimbingLevelRecord newTowerClimbingLevelRecord;
 			return this.LevelRecordMap.TryGetValue(endless, out newTowerClimbingLevelRecord) && newTowerClimbingLevelRecord.IsUnlock;
 		}
 
-		// Token: 0x0603DDE6 RID: 253414 RVA: 0x00EF44E1 File Offset: 0x00EF26E1
+		// Token: 0x06032D81 RID: 208257 RVA: 0x00E461E1 File Offset: 0x00E443E1
 		public int GetHistoryBestScore(bool isEndless)
 		{
 			return this.GetLevelRecord(isEndless).HistoryScore;
 		}
 
-		// Token: 0x0603DDE7 RID: 253415 RVA: 0x00EF44EF File Offset: 0x00EF26EF
+		// Token: 0x06032D82 RID: 208258 RVA: 0x00E461F0 File Offset: 0x00E443F0
 		public int GetRoundScore(bool isEndless, int round)
 		{
-			TeamChallengeInfo teamChallengeInfo = this.GetLevelRecord(isEndless).TeamChallengeInfos.ElementAtOrDefault(round);
+			RepeatedField<TeamChallengeInfo> teamChallengeInfos = this.GetLevelRecord(isEndless).TeamChallengeInfos;
+			if (round < 0 || round >= teamChallengeInfos.Count)
+			{
+				return 0;
+			}
+			TeamChallengeInfo teamChallengeInfo = teamChallengeInfos[round];
 			if (teamChallengeInfo == null)
 			{
 				return 0;
@@ -339,7 +361,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 			return teamChallengeInfo.TeamScore;
 		}
 
-		// Token: 0x0603DDE8 RID: 253416 RVA: 0x00EF4510 File Offset: 0x00EF2710
+		// Token: 0x06032D83 RID: 208259 RVA: 0x00E4622C File Offset: 0x00E4442C
 		public int GetRoundTotalScore(bool isEndless, int round)
 		{
 			int num = 0;
@@ -350,7 +372,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 			return num;
 		}
 
-		// Token: 0x0603DDE9 RID: 253417 RVA: 0x00EF4537 File Offset: 0x00EF2737
+		// Token: 0x06032D84 RID: 208260 RVA: 0x00E46253 File Offset: 0x00E44453
 		public int GetTotalScore(bool isEndless)
 		{
 			if (this.GetLevelRecord(isEndless).TeamChallengeInfos.Count > 0)
@@ -360,86 +382,91 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 			return 0;
 		}
 
-		// Token: 0x0603DDEA RID: 253418 RVA: 0x00EF456C File Offset: 0x00EF276C
+		// Token: 0x06032D85 RID: 208261 RVA: 0x00E46288 File Offset: 0x00E44488
 		public bool IsRewardCanReceive(int rewardId)
 		{
 			global::ActivityTaskData activityTaskData;
 			return this.TaskMap.TryGetValue(rewardId, out activityTaskData) && activityTaskData.Status == EActivityTaskState.FinishedAndUnclaimed;
 		}
 
-		// Token: 0x0603DDEB RID: 253419 RVA: 0x00EF4594 File Offset: 0x00EF2794
+		// Token: 0x06032D86 RID: 208262 RVA: 0x00E462B0 File Offset: 0x00E444B0
 		public bool IsRewardCompleted(int rewardId)
 		{
 			global::ActivityTaskData activityTaskData;
 			return this.TaskMap.TryGetValue(rewardId, out activityTaskData) && activityTaskData.Status == EActivityTaskState.FinishedAndClaimed;
 		}
 
-		// Token: 0x0603DDEC RID: 253420 RVA: 0x00EF45BC File Offset: 0x00EF27BC
+		// Token: 0x06032D87 RID: 208263 RVA: 0x00E462D8 File Offset: 0x00E444D8
 		public bool HasAnyRewardCanReceive(EFilterMode filterMode = EFilterMode.All)
 		{
 			return this.GetCanReceiveRewardId(filterMode).Count > 0;
 		}
 
-		// Token: 0x0603DDED RID: 253421 RVA: 0x00EF45CD File Offset: 0x00EF27CD
+		// Token: 0x06032D88 RID: 208264 RVA: 0x00E462E9 File Offset: 0x00E444E9
 		public EActivityTaskState GetTaskState(int taskId)
 		{
 			return this.TaskMap[taskId].Status;
 		}
 
-		// Token: 0x0603DDEE RID: 253422 RVA: 0x00EF45E0 File Offset: 0x00EF27E0
+		// Token: 0x06032D89 RID: 208265 RVA: 0x00E462FC File Offset: 0x00E444FC
 		public global::ActivityTaskData GetTask(int taskId)
 		{
 			return this.TaskMap[taskId];
 		}
 
-		// Token: 0x0603DDEF RID: 253423 RVA: 0x00EF45F0 File Offset: 0x00EF27F0
+		// Token: 0x06032D8A RID: 208266 RVA: 0x00E4630C File Offset: 0x00E4450C
 		public List<global::ActivityTaskData> GetFilterTaskList(EFilterMode filterMode = EFilterMode.All)
 		{
-			List<global::ActivityTaskData> list = this.TaskMap.Values.ToList<global::ActivityTaskData>();
-			List<global::ActivityTaskData> result;
-			if (filterMode != EFilterMode.Normal)
+			List<global::ActivityTaskData> list = new List<global::ActivityTaskData>(this.TaskMap.Values);
+			List<global::ActivityTaskData> list2 = new List<global::ActivityTaskData>();
+			foreach (global::ActivityTaskData activityTaskData in list)
 			{
-				if (filterMode != EFilterMode.Endless)
+				if ((filterMode != EFilterMode.Normal || activityTaskData.TypeId == 0) && (filterMode != EFilterMode.Endless || activityTaskData.TypeId != 0))
 				{
-					result = list;
-				}
-				else
-				{
-					result = (from task in list
-					where task.TypeId != 0
-					select task).ToList<global::ActivityTaskData>();
+					list2.Add(activityTaskData);
 				}
 			}
-			else
-			{
-				result = (from task in list
-				where task.TypeId == 0
-				select task).ToList<global::ActivityTaskData>();
-			}
-			return result;
+			return list2;
 		}
 
-		// Token: 0x0603DDF0 RID: 253424 RVA: 0x00EF4678 File Offset: 0x00EF2878
+		// Token: 0x06032D8B RID: 208267 RVA: 0x00E46388 File Offset: 0x00E44588
 		public List<int> GetCanReceiveRewardId(EFilterMode filterMode = EFilterMode.All)
 		{
-			return (from task in this.GetFilterTaskList(filterMode)
-			where task.Status == EActivityTaskState.FinishedAndUnclaimed
-			select task.Id).ToList<int>();
+			List<int> list = new List<int>();
+			foreach (global::ActivityTaskData activityTaskData in this.GetFilterTaskList(filterMode))
+			{
+				if (activityTaskData.Status == EActivityTaskState.FinishedAndUnclaimed)
+				{
+					list.Add(activityTaskData.Id);
+				}
+			}
+			return list;
 		}
 
-		// Token: 0x0603DDF1 RID: 253425 RVA: 0x00EF46D9 File Offset: 0x00EF28D9
+		// Token: 0x06032D8C RID: 208268 RVA: 0x00E463F0 File Offset: 0x00E445F0
 		public int GetCurrentRewardProgress(EFilterMode filterMode = EFilterMode.All)
 		{
-			return this.GetFilterTaskList(filterMode).Count((global::ActivityTaskData task) => task.Status == EActivityTaskState.FinishedAndClaimed);
+			int num = 0;
+			using (List<global::ActivityTaskData>.Enumerator enumerator = this.GetFilterTaskList(filterMode).GetEnumerator())
+			{
+				while (enumerator.MoveNext())
+				{
+					if (enumerator.Current.Status == EActivityTaskState.FinishedAndClaimed)
+					{
+						num++;
+					}
+				}
+			}
+			return num;
 		}
 
-		// Token: 0x0603DDF2 RID: 253426 RVA: 0x00EF4706 File Offset: 0x00EF2906
+		// Token: 0x06032D8D RID: 208269 RVA: 0x00E4644C File Offset: 0x00E4464C
 		public int GetTotalRewardProgress(EFilterMode filterMode = EFilterMode.All)
 		{
 			return this.GetFilterTaskList(filterMode).Count;
 		}
 
-		// Token: 0x0603DDF3 RID: 253427 RVA: 0x00EF4714 File Offset: 0x00EF2914
+		// Token: 0x06032D8E RID: 208270 RVA: 0x00E4645C File Offset: 0x00E4465C
 		public void OnSeasonTaskClaim(IList<int> taskIdList)
 		{
 			foreach (int key in taskIdList)
@@ -453,7 +480,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 		}
 
-		// Token: 0x0603DDF4 RID: 253428 RVA: 0x00EF4784 File Offset: 0x00EF2984
+		// Token: 0x06032D8F RID: 208271 RVA: 0x00E464CC File Offset: 0x00E446CC
 		public void OnSeasonScoreClaim(IList<int> scoreIdList)
 		{
 			foreach (int item in scoreIdList)
@@ -466,29 +493,41 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 		}
 
-		// Token: 0x0603DDF5 RID: 253429 RVA: 0x00EF47F8 File Offset: 0x00EF29F8
+		// Token: 0x06032D90 RID: 208272 RVA: 0x00E46540 File Offset: 0x00E44740
 		public List<global::ActivityTaskData> GetSeasonTaskList()
 		{
-			return this.SeasonTaskDataMap.Values.ToList<global::ActivityTaskData>();
+			return new List<global::ActivityTaskData>(this.SeasonTaskDataMap.Values);
 		}
 
-		// Token: 0x0603DDF6 RID: 253430 RVA: 0x00EF480C File Offset: 0x00EF2A0C
+		// Token: 0x06032D91 RID: 208273 RVA: 0x00E46554 File Offset: 0x00E44754
 		public List<int> GetCanReceiveSeasonRewardIds()
 		{
-			return (from task in this.SeasonTaskDataMap.Values
-			where task.Status == EActivityTaskState.FinishedAndUnclaimed
-			select task.Id).ToList<int>();
+			List<int> list = new List<int>();
+			foreach (global::ActivityTaskData activityTaskData in this.SeasonTaskDataMap.Values)
+			{
+				if (activityTaskData.Status == EActivityTaskState.FinishedAndUnclaimed)
+				{
+					list.Add(activityTaskData.Id);
+				}
+			}
+			return list;
 		}
 
-		// Token: 0x0603DDF7 RID: 253431 RVA: 0x00EF4874 File Offset: 0x00EF2A74
+		// Token: 0x06032D92 RID: 208274 RVA: 0x00E465C0 File Offset: 0x00E447C0
 		public List<int> GetReceivedSeasonRewardIds()
 		{
-			return (from task in this.SeasonTaskDataMap.Values
-			where task.Status == EActivityTaskState.FinishedAndClaimed
-			select task.Id).ToList<int>();
+			List<int> list = new List<int>();
+			foreach (global::ActivityTaskData activityTaskData in this.SeasonTaskDataMap.Values)
+			{
+				if (activityTaskData.Status == EActivityTaskState.FinishedAndClaimed)
+				{
+					list.Add(activityTaskData.Id);
+				}
+			}
+			return list;
 		}
 
-		// Token: 0x0603DDF8 RID: 253432 RVA: 0x00EF48DC File Offset: 0x00EF2ADC
+		// Token: 0x06032D93 RID: 208275 RVA: 0x00E46630 File Offset: 0x00E44830
 		public List<int> GetCanReceiveSeasonScoreRewardIds()
 		{
 			IReadOnlyList<NewTowerSeasonSAward> seasonScoreRewardConfigList = WheelTowerConfig.Instance.GetSeasonScoreRewardConfigList(this.SeasonId);
@@ -497,19 +536,25 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 				return new List<int>();
 			}
 			int seasonScoreItemId = WheelTowerConfig.Instance.GetSeasonScoreItemId(this.SeasonId);
-			int curScoreNum = InventoryModel.Instance.GetItemCountByConfigId(seasonScoreItemId, 0);
-			return (from config in seasonScoreRewardConfigList
-			where !this.ReceivedSeasonScoreRewards.Contains(config.Id) && curScoreNum >= config.Score
-			select config.Id).ToList<int>();
+			int itemCountByConfigId = InventoryModel.Instance.GetItemCountByConfigId(seasonScoreItemId, 0);
+			List<int> list = new List<int>();
+			foreach (NewTowerSeasonSAward newTowerSeasonSAward in seasonScoreRewardConfigList)
+			{
+				if (this.ReceivedSeasonScoreRewards.IndexOf(newTowerSeasonSAward.Id) < 0 && itemCountByConfigId >= newTowerSeasonSAward.Score)
+				{
+					list.Add(newTowerSeasonSAward.Id);
+				}
+			}
+			return list;
 		}
 
-		// Token: 0x0603DDF9 RID: 253433 RVA: 0x00EF496E File Offset: 0x00EF2B6E
+		// Token: 0x06032D94 RID: 208276 RVA: 0x00E466E4 File Offset: 0x00E448E4
 		public bool IsSeasonScoreRewardReceived(int rewardId)
 		{
 			return this.ReceivedSeasonScoreRewards.Contains(rewardId);
 		}
 
-		// Token: 0x0603DDFA RID: 253434 RVA: 0x00EF497C File Offset: 0x00EF2B7C
+		// Token: 0x06032D95 RID: 208277 RVA: 0x00E466F4 File Offset: 0x00E448F4
 		public void OnAddNewRecord(NewTowerResultNotify notify)
 		{
 			int levelId = notify.LevelId;
@@ -547,7 +592,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 			}
 		}
 
-		// Token: 0x0603DDFB RID: 253435 RVA: 0x00EF4B10 File Offset: 0x00EF2D10
+		// Token: 0x06032D96 RID: 208278 RVA: 0x00E46888 File Offset: 0x00E44A88
 		public void OnLevelRecordUpdateNotify(NewTowerClimbingLevelRecord levelRecord)
 		{
 			this.ParseLevelRecord(new List<NewTowerClimbingLevelRecord>
@@ -560,7 +605,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 			});
 		}
 
-		// Token: 0x0603DDFC RID: 253436 RVA: 0x00EF4B38 File Offset: 0x00EF2D38
+		// Token: 0x06032D97 RID: 208279 RVA: 0x00E468B0 File Offset: 0x00E44AB0
 		public void OnRoleEnergyUpdateNotify(IList<RecordRoleEnergy> roleEnergyRecordList)
 		{
 			this.UpdateLevelRecordRoleId();
@@ -570,13 +615,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 				if (levelConfigById != null)
 				{
 					bool key = levelConfigById.Value.Diff != 0;
-					Dictionary<int, int> roleEnergyDict = recordRoleEnergy.RoleEnergyDict.ToDictionary((KeyValuePair<int, int> kv) => kv.Key, (KeyValuePair<int, int> kv) => kv.Value);
-					this.EnergyInfoMap[key] = this.CreateEnergyInfo(roleEnergyDict, this.LevelRecordMap[key].TeamChallengeInfos.ToList<TeamChallengeInfo>());
+					Dictionary<int, int> roleEnergyDict = new Dictionary<int, int>(recordRoleEnergy.RoleEnergyDict);
+					this.EnergyInfoMap[key] = this.CreateEnergyInfo(roleEnergyDict, this.LevelRecordMap[key].TeamChallengeInfos);
 				}
 			}
 		}
 
-		// Token: 0x0603DDFD RID: 253437 RVA: 0x00EF4C2C File Offset: 0x00EF2E2C
+		// Token: 0x06032D98 RID: 208280 RVA: 0x00E46958 File Offset: 0x00E44B58
 		public void OnTaskClaim(IList<int> taskIdList)
 		{
 			foreach (int key in taskIdList)
@@ -590,7 +635,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 		}
 
-		// Token: 0x0603DDFE RID: 253438 RVA: 0x00EF4C9C File Offset: 0x00EF2E9C
+		// Token: 0x06032D99 RID: 208281 RVA: 0x00E469C8 File Offset: 0x00E44BC8
 		public void OnTaskUpdateNotify(IList<ActivityTask> activityTaskList)
 		{
 			foreach (ActivityTask activityTask in activityTaskList)
@@ -604,13 +649,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 		}
 
-		// Token: 0x0603DDFF RID: 253439 RVA: 0x00EF4D10 File Offset: 0x00EF2F10
+		// Token: 0x06032D9A RID: 208282 RVA: 0x00E46A3C File Offset: 0x00E44C3C
 		public bool CheckFirstOpenPage()
 		{
 			return !this.GetExDataFinishShowState() && ActivityModel.Instance.GetActivityCacheData(base.Id, 0, 0, this.CycleId, 0) == 0;
 		}
 
-		// Token: 0x0603DE00 RID: 253440 RVA: 0x00EF4D38 File Offset: 0x00EF2F38
+		// Token: 0x06032D9B RID: 208283 RVA: 0x00E46A64 File Offset: 0x00E44C64
 		public void ReadRedDot()
 		{
 			ActivityModel.Instance.SaveActivityData(base.Id, 0, this.CycleId, 0, 1);
@@ -618,64 +663,64 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 		}
 
-		// Token: 0x0603DE01 RID: 253441 RVA: 0x00EF4D84 File Offset: 0x00EF2F84
+		// Token: 0x06032D9C RID: 208284 RVA: 0x00E46AB0 File Offset: 0x00E44CB0
 		public bool ShouldShowSeasonRewardRedDot()
 		{
 			return this.CheckFirstReadSeasonReward() || this.HasAnySeasonRewardCanReceive();
 		}
 
-		// Token: 0x0603DE02 RID: 253442 RVA: 0x00EF4D96 File Offset: 0x00EF2F96
+		// Token: 0x06032D9D RID: 208285 RVA: 0x00E46AC2 File Offset: 0x00E44CC2
 		private bool CheckFirstReadSeasonReward()
 		{
 			return ActivityModel.Instance.GetActivityCacheData(base.Id, 0, 2, this.SeasonId, 0) == 0;
 		}
 
-		// Token: 0x0603DE03 RID: 253443 RVA: 0x00EF4DB4 File Offset: 0x00EF2FB4
+		// Token: 0x06032D9E RID: 208286 RVA: 0x00E46AE0 File Offset: 0x00E44CE0
 		public void RecordReadSeasonReward()
 		{
 			ActivityModel.Instance.SaveActivityData(base.Id, 2, this.SeasonId, 0, 1);
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 		}
 
-		// Token: 0x0603DE04 RID: 253444 RVA: 0x00EF4DE5 File Offset: 0x00EF2FE5
+		// Token: 0x06032D9F RID: 208287 RVA: 0x00E46B11 File Offset: 0x00E44D11
 		public bool ShouldShowRewardRedDot()
 		{
 			return this.CheckFirstReadReward() || this.HasAnyRewardCanReceive(EFilterMode.All);
 		}
 
-		// Token: 0x0603DE05 RID: 253445 RVA: 0x00EF4DF8 File Offset: 0x00EF2FF8
+		// Token: 0x06032DA0 RID: 208288 RVA: 0x00E46B24 File Offset: 0x00E44D24
 		private bool CheckFirstReadReward()
 		{
 			return ActivityModel.Instance.GetActivityCacheData(base.Id, 0, 3, this.CycleId, 0) == 0;
 		}
 
-		// Token: 0x0603DE06 RID: 253446 RVA: 0x00EF4E16 File Offset: 0x00EF3016
+		// Token: 0x06032DA1 RID: 208289 RVA: 0x00E46B42 File Offset: 0x00E44D42
 		public void RecordReadReward()
 		{
 			ActivityModel.Instance.SaveActivityData(base.Id, 3, this.CycleId, 0, 1);
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 		}
 
-		// Token: 0x0603DE07 RID: 253447 RVA: 0x00EF4E47 File Offset: 0x00EF3047
+		// Token: 0x06032DA2 RID: 208290 RVA: 0x00E46B73 File Offset: 0x00E44D73
 		public bool HasAnyLevelRedDot()
 		{
 			return this.HasLevelRedDot(false) || this.HasLevelRedDot(true);
 		}
 
-		// Token: 0x0603DE08 RID: 253448 RVA: 0x00EF4E5C File Offset: 0x00EF305C
+		// Token: 0x06032DA3 RID: 208291 RVA: 0x00E46B88 File Offset: 0x00E44D88
 		public bool HasLevelRedDot(bool endless)
 		{
 			NewTowerClimbingLevelRecord newTowerClimbingLevelRecord;
 			return this.LevelRecordMap.TryGetValue(endless, out newTowerClimbingLevelRecord) && newTowerClimbingLevelRecord.IsUnlock && this.CheckFirstEnterLevel(newTowerClimbingLevelRecord.LevelId);
 		}
 
-		// Token: 0x0603DE09 RID: 253449 RVA: 0x00EF4E8F File Offset: 0x00EF308F
+		// Token: 0x06032DA4 RID: 208292 RVA: 0x00E46BBB File Offset: 0x00E44DBB
 		private bool CheckFirstEnterLevel(int levelId)
 		{
 			return ActivityModel.Instance.GetActivityCacheData(base.Id, 0, 1, this.CycleId, levelId) == 0;
 		}
 
-		// Token: 0x0603DE0A RID: 253450 RVA: 0x00EF4EB0 File Offset: 0x00EF30B0
+		// Token: 0x06032DA5 RID: 208293 RVA: 0x00E46BDC File Offset: 0x00E44DDC
 		public void RecordEnterLevel(bool endless)
 		{
 			NewTowerClimbingLevelRecord newTowerClimbingLevelRecord;
@@ -684,38 +729,38 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 		}
 
-		// Token: 0x0603DE0B RID: 253451 RVA: 0x00EF4F06 File Offset: 0x00EF3106
+		// Token: 0x06032DA6 RID: 208294 RVA: 0x00E46C32 File Offset: 0x00E44E32
 		public bool HasBossHandBookRedDot()
 		{
 			return this.CheckFirstOpenBossHandBook();
 		}
 
-		// Token: 0x0603DE0C RID: 253452 RVA: 0x00EF4F0E File Offset: 0x00EF310E
+		// Token: 0x06032DA7 RID: 208295 RVA: 0x00E46C3A File Offset: 0x00E44E3A
 		private bool CheckFirstOpenBossHandBook()
 		{
 			return ActivityModel.Instance.GetActivityCacheData(base.Id, 0, 4, this.CycleId, 0) == 0;
 		}
 
-		// Token: 0x0603DE0D RID: 253453 RVA: 0x00EF4F2C File Offset: 0x00EF312C
+		// Token: 0x06032DA8 RID: 208296 RVA: 0x00E46C58 File Offset: 0x00E44E58
 		public void RecordOpenBossHandBook()
 		{
 			ActivityModel.Instance.SaveActivityData(base.Id, 4, this.CycleId, 0, 1);
 			EventSystem.Instance.Emit<int>(EEventName.RefreshCommonActivityRedDot, base.Id);
 		}
 
-		// Token: 0x0603DE0E RID: 253454 RVA: 0x00EF4F5D File Offset: 0x00EF315D
+		// Token: 0x06032DA9 RID: 208297 RVA: 0x00E46C89 File Offset: 0x00E44E89
 		public bool HasAnySeasonRewardCanReceive()
 		{
 			return this.GetCanReceiveSeasonRewardIds().Count > 0 || this.GetCanReceiveSeasonScoreRewardIds().Count > 0;
 		}
 
-		// Token: 0x0603DE0F RID: 253455 RVA: 0x00EF4F7D File Offset: 0x00EF317D
+		// Token: 0x06032DAA RID: 208298 RVA: 0x00E46CA9 File Offset: 0x00E44EA9
 		public override bool GetExDataRedPointShowState()
 		{
 			return this.IsInCycle() && (this.CheckFirstOpenPage() || this.ShouldShowSeasonRewardRedDot() || this.ShouldShowRewardRedDot() || WheelTowerModel.Instance.HasUnreadSeasonMedalRedDot(this.SeasonId));
 		}
 
-		// Token: 0x0603DE10 RID: 253456 RVA: 0x00EF4FB4 File Offset: 0x00EF31B4
+		// Token: 0x06032DAB RID: 208299 RVA: 0x00E46CE0 File Offset: 0x00E44EE0
 		protected override bool GetExDataFinishShowState()
 		{
 			if (!this.IsInCycle())
@@ -727,13 +772,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 			return flag && flag2;
 		}
 
-		// Token: 0x0603DE11 RID: 253457 RVA: 0x00EF4FFC File Offset: 0x00EF31FC
+		// Token: 0x06032DAC RID: 208300 RVA: 0x00E46D28 File Offset: 0x00E44F28
 		public bool GetExDataFinishShowStateExternal()
 		{
 			return this.GetExDataFinishShowState();
 		}
 
-		// Token: 0x0603DE12 RID: 253458 RVA: 0x00EF5004 File Offset: 0x00EF3204
+		// Token: 0x06032DAD RID: 208301 RVA: 0x00E46D30 File Offset: 0x00E44F30
 		public void UpdateRecommendLineUp(IList<NewTowerRecommendLevel> list)
 		{
 			foreach (NewTowerRecommendLevel newTowerRecommendLevel in list)
@@ -747,7 +792,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 			this.IsRequestedRecommendLineUp = true;
 		}
 
-		// Token: 0x0603DE13 RID: 253459 RVA: 0x00EF5098 File Offset: 0x00EF3298
+		// Token: 0x06032DAE RID: 208302 RVA: 0x00E46DC4 File Offset: 0x00E44FC4
 		public IList<NewTowerRecommendTeam> GetLevelRecommendTeam(int levelId, int recommendId)
 		{
 			Dictionary<int, IList<NewTowerRecommendTeam>> dictionary;
@@ -759,7 +804,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 			return new List<NewTowerRecommendTeam>();
 		}
 
-		// Token: 0x0603DE14 RID: 253460 RVA: 0x00EF50C8 File Offset: 0x00EF32C8
+		// Token: 0x06032DAF RID: 208303 RVA: 0x00E46DF4 File Offset: 0x00E44FF4
 		private List<NewTowerMedal> GetSortedMedalConfigsByGroupId(int groupId)
 		{
 			List<NewTowerMedal> result;
@@ -772,14 +817,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 			{
 				return new List<NewTowerMedal>();
 			}
-			List<NewTowerMedal> list = (from c in medalConfigListByGroupId
-			orderby c.Target
-			select c).ToList<NewTowerMedal>();
+			List<NewTowerMedal> list = new List<NewTowerMedal>(medalConfigListByGroupId);
+			NoLinq.SortStable<NewTowerMedal>(list, (NewTowerMedal left, NewTowerMedal right) => left.Target.CompareTo(right.Target));
 			this.SortedMedalConfigCache[groupId] = list;
 			return list;
 		}
 
-		// Token: 0x0603DE15 RID: 253461 RVA: 0x00EF5140 File Offset: 0x00EF3340
+		// Token: 0x06032DB0 RID: 208304 RVA: 0x00E46E6C File Offset: 0x00E4506C
 		private IWheelTowerMedalGroupData ResolveMedalGroupData(int groupId, int seasonId, int cycleId, int progress, long completeTime)
 		{
 			List<NewTowerMedal> sortedMedalConfigsByGroupId = this.GetSortedMedalConfigsByGroupId(groupId);
@@ -822,7 +866,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 			};
 		}
 
-		// Token: 0x0603DE16 RID: 253462 RVA: 0x00EF5238 File Offset: 0x00EF3438
+		// Token: 0x06032DB1 RID: 208305 RVA: 0x00E46F64 File Offset: 0x00E45164
 		public void ParseMedalInfos([Nullable(new byte[]
 		{
 			2,
@@ -856,7 +900,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 			}
 		}
 
-		// Token: 0x0603DE17 RID: 253463 RVA: 0x00EF5360 File Offset: 0x00EF3560
+		// Token: 0x06032DB2 RID: 208306 RVA: 0x00E4708C File Offset: 0x00E4528C
 		[NullableContext(2)]
 		public IWheelTowerMedalGroupData GetMedalGroupData(int groupId)
 		{
@@ -874,34 +918,34 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower
 			return this.ResolveMedalGroupData(groupId, newTowerMedal.SeasonId, newTowerMedal.CycleId, 0, 0L);
 		}
 
-		// Token: 0x0603DE18 RID: 253464 RVA: 0x00EF53B1 File Offset: 0x00EF35B1
+		// Token: 0x06032DB3 RID: 208307 RVA: 0x00E470DD File Offset: 0x00E452DD
 		public List<IWheelTowerMedalGroupData> GetAllMedalGroupData()
 		{
-			return this.MedalGroupDataMap.Values.ToList<IWheelTowerMedalGroupData>();
+			return new List<IWheelTowerMedalGroupData>(this.MedalGroupDataMap.Values);
 		}
 
-		// Token: 0x040204EF RID: 132335
+		// Token: 0x0401AFC1 RID: 110529
 		private readonly Dictionary<bool, NewTowerClimbingLevelRecord> LevelRecordMap = new Dictionary<bool, NewTowerClimbingLevelRecord>();
 
-		// Token: 0x040204F0 RID: 132336
+		// Token: 0x0401AFC2 RID: 110530
 		private readonly Dictionary<bool, EnergyInfo> EnergyInfoMap = new Dictionary<bool, EnergyInfo>();
 
-		// Token: 0x040204F1 RID: 132337
+		// Token: 0x0401AFC3 RID: 110531
 		private readonly Dictionary<int, global::ActivityTaskData> TaskMap = new Dictionary<int, global::ActivityTaskData>();
 
-		// Token: 0x040204F2 RID: 132338
+		// Token: 0x0401AFC4 RID: 110532
 		private readonly Dictionary<int, global::ActivityTaskData> SeasonTaskDataMap = new Dictionary<int, global::ActivityTaskData>();
 
-		// Token: 0x040204F3 RID: 132339
+		// Token: 0x0401AFC5 RID: 110533
 		private readonly Dictionary<int, Dictionary<int, IList<NewTowerRecommendTeam>>> RecommendLineUpMap = new Dictionary<int, Dictionary<int, IList<NewTowerRecommendTeam>>>();
 
-		// Token: 0x040204F4 RID: 132340
+		// Token: 0x0401AFC6 RID: 110534
 		private readonly List<int> ReceivedSeasonScoreRewards = new List<int>();
 
-		// Token: 0x040204F9 RID: 132345
+		// Token: 0x0401AFCB RID: 110539
 		private readonly Dictionary<int, IWheelTowerMedalGroupData> MedalGroupDataMap = new Dictionary<int, IWheelTowerMedalGroupData>();
 
-		// Token: 0x040204FA RID: 132346
+		// Token: 0x0401AFCC RID: 110540
 		private readonly Dictionary<int, List<NewTowerMedal>> SortedMedalConfigCache = new Dictionary<int, List<NewTowerMedal>>();
 	}
 }

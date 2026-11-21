@@ -2,27 +2,27 @@
 
 namespace CSharpScript.Game.Module.BossPiling
 {
-	// Token: 0x02005C09 RID: 23561
+	// Token: 0x02004BE9 RID: 19433
 	public interface IBossPilingNewBuffInfo
 	{
-		// Token: 0x17008DA1 RID: 36257
-		// (get) Token: 0x0603B8A5 RID: 243877
-		// (set) Token: 0x0603B8A6 RID: 243878
+		// Token: 0x17006173 RID: 24947
+		// (get) Token: 0x060307F0 RID: 198640
+		// (set) Token: 0x060307F1 RID: 198641
 		int BuffId { get; set; }
 
-		// Token: 0x17008DA2 RID: 36258
-		// (get) Token: 0x0603B8A7 RID: 243879
-		// (set) Token: 0x0603B8A8 RID: 243880
+		// Token: 0x17006174 RID: 24948
+		// (get) Token: 0x060307F2 RID: 198642
+		// (set) Token: 0x060307F3 RID: 198643
 		int OldValue { get; set; }
 
-		// Token: 0x17008DA3 RID: 36259
-		// (get) Token: 0x0603B8A9 RID: 243881
-		// (set) Token: 0x0603B8AA RID: 243882
+		// Token: 0x17006175 RID: 24949
+		// (get) Token: 0x060307F4 RID: 198644
+		// (set) Token: 0x060307F5 RID: 198645
 		int NewValue { get; set; }
 
-		// Token: 0x17008DA4 RID: 36260
-		// (get) Token: 0x0603B8AB RID: 243883
-		// (set) Token: 0x0603B8AC RID: 243884
+		// Token: 0x17006176 RID: 24950
+		// (get) Token: 0x060307F6 RID: 198646
+		// (set) Token: 0x060307F7 RID: 198647
 		bool NeedAccelerate { get; set; }
 	}
 }

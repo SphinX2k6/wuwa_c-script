@@ -2,45 +2,45 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.LevelPlay
 {
-	// Token: 0x0200445C RID: 17500
+	// Token: 0x020048C4 RID: 18628
 	public class IDangoBrawlItemT
 	{
-		// Token: 0x17007B6B RID: 31595
-		// (get) Token: 0x0601A102 RID: 106754 RVA: 0x003B9699 File Offset: 0x003B7899
-		// (set) Token: 0x0601A103 RID: 106755 RVA: 0x003B96A1 File Offset: 0x003B78A1
+		// Token: 0x170081AA RID: 33194
+		// (get) Token: 0x0601B8D3 RID: 112851 RVA: 0x003E58A5 File Offset: 0x003E3AA5
+		// (set) Token: 0x0601B8D4 RID: 112852 RVA: 0x003E58AD File Offset: 0x003E3AAD
 		public int Id { get; set; }
 
-		// Token: 0x17007B6C RID: 31596
-		// (get) Token: 0x0601A104 RID: 106756 RVA: 0x003B96AA File Offset: 0x003B78AA
-		// (set) Token: 0x0601A105 RID: 106757 RVA: 0x003B96B2 File Offset: 0x003B78B2
+		// Token: 0x170081AB RID: 33195
+		// (get) Token: 0x0601B8D5 RID: 112853 RVA: 0x003E58B6 File Offset: 0x003E3AB6
+		// (set) Token: 0x0601B8D6 RID: 112854 RVA: 0x003E58BE File Offset: 0x003E3ABE
 		public ETwoDimensionLevelType Type { get; set; }
 
-		// Token: 0x17007B6D RID: 31597
-		// (get) Token: 0x0601A106 RID: 106758 RVA: 0x003B96BB File Offset: 0x003B78BB
-		// (set) Token: 0x0601A107 RID: 106759 RVA: 0x003B96C3 File Offset: 0x003B78C3
+		// Token: 0x170081AC RID: 33196
+		// (get) Token: 0x0601B8D7 RID: 112855 RVA: 0x003E58C7 File Offset: 0x003E3AC7
+		// (set) Token: 0x0601B8D8 RID: 112856 RVA: 0x003E58CF File Offset: 0x003E3ACF
 		public ITwoDimensionTransformT Transform { get; set; }
 
-		// Token: 0x17007B6E RID: 31598
-		// (get) Token: 0x0601A108 RID: 106760 RVA: 0x003B96CC File Offset: 0x003B78CC
-		// (set) Token: 0x0601A109 RID: 106761 RVA: 0x003B96D4 File Offset: 0x003B78D4
+		// Token: 0x170081AD RID: 33197
+		// (get) Token: 0x0601B8D9 RID: 112857 RVA: 0x003E58D8 File Offset: 0x003E3AD8
+		// (set) Token: 0x0601B8DA RID: 112858 RVA: 0x003E58E0 File Offset: 0x003E3AE0
 		public int DataId { get; set; }
 
-		// Token: 0x17007B6F RID: 31599
-		// (get) Token: 0x0601A10A RID: 106762 RVA: 0x003B96DD File Offset: 0x003B78DD
-		// (set) Token: 0x0601A10B RID: 106763 RVA: 0x003B96E5 File Offset: 0x003B78E5
+		// Token: 0x170081AE RID: 33198
+		// (get) Token: 0x0601B8DB RID: 112859 RVA: 0x003E58E9 File Offset: 0x003E3AE9
+		// (set) Token: 0x0601B8DC RID: 112860 RVA: 0x003E58F1 File Offset: 0x003E3AF1
 		public EDangoBrawlDirection Direction { get; set; }
 
-		// Token: 0x17007B70 RID: 31600
-		// (get) Token: 0x0601A10C RID: 106764 RVA: 0x003B96EE File Offset: 0x003B78EE
-		// (set) Token: 0x0601A10D RID: 106765 RVA: 0x003B96F6 File Offset: 0x003B78F6
+		// Token: 0x170081AF RID: 33199
+		// (get) Token: 0x0601B8DD RID: 112861 RVA: 0x003E58FA File Offset: 0x003E3AFA
+		// (set) Token: 0x0601B8DE RID: 112862 RVA: 0x003E5902 File Offset: 0x003E3B02
 		public int TemplateId { get; set; }
 
-		// Token: 0x17007B71 RID: 31601
-		// (get) Token: 0x0601A10E RID: 106766 RVA: 0x003B96FF File Offset: 0x003B78FF
-		// (set) Token: 0x0601A10F RID: 106767 RVA: 0x003B9707 File Offset: 0x003B7907
+		// Token: 0x170081B0 RID: 33200
+		// (get) Token: 0x0601B8DF RID: 112863 RVA: 0x003E590B File Offset: 0x003E3B0B
+		// (set) Token: 0x0601B8E0 RID: 112864 RVA: 0x003E5913 File Offset: 0x003E3B13
 		public EDangoBrawlObjectType SubType { get; set; }
 
-		// Token: 0x0601A110 RID: 106768 RVA: 0x003B9710 File Offset: 0x003B7910
+		// Token: 0x0601B8E1 RID: 112865 RVA: 0x003E591C File Offset: 0x003E3B1C
 		public IDangoBrawlItemT()
 		{
 			this.Id = 0;

@@ -1,28 +1,28 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x020027C3 RID: 10179
+// Token: 0x02001D3E RID: 7486
 [NullableContext(1)]
 [Nullable(0)]
 public class RoleAttributeDataImpl : IRoleAttributeData
 {
-	// Token: 0x17001B35 RID: 6965
-	// (get) Token: 0x06014EF9 RID: 85753 RVA: 0x00550AFE File Offset: 0x0054ECFE
-	// (set) Token: 0x06014EFA RID: 85754 RVA: 0x00550B06 File Offset: 0x0054ED06
+	// Token: 0x17001B8D RID: 7053
+	// (get) Token: 0x060128F9 RID: 76025 RVA: 0x0057B870 File Offset: 0x00579A70
+	// (set) Token: 0x060128FA RID: 76026 RVA: 0x0057B878 File Offset: 0x00579A78
 	public string Name { get; set; }
 
-	// Token: 0x17001B36 RID: 6966
-	// (get) Token: 0x06014EFB RID: 85755 RVA: 0x00550B0F File Offset: 0x0054ED0F
-	// (set) Token: 0x06014EFC RID: 85756 RVA: 0x00550B17 File Offset: 0x0054ED17
+	// Token: 0x17001B8E RID: 7054
+	// (get) Token: 0x060128FB RID: 76027 RVA: 0x0057B881 File Offset: 0x00579A81
+	// (set) Token: 0x060128FC RID: 76028 RVA: 0x0057B889 File Offset: 0x00579A89
 	public int Level { get; set; }
 
-	// Token: 0x17001B37 RID: 6967
-	// (get) Token: 0x06014EFD RID: 85757 RVA: 0x00550B20 File Offset: 0x0054ED20
-	// (set) Token: 0x06014EFE RID: 85758 RVA: 0x00550B28 File Offset: 0x0054ED28
+	// Token: 0x17001B8F RID: 7055
+	// (get) Token: 0x060128FD RID: 76029 RVA: 0x0057B892 File Offset: 0x00579A92
+	// (set) Token: 0x060128FE RID: 76030 RVA: 0x0057B89A File Offset: 0x00579A9A
 	public int BreakLevel { get; set; }
 
-	// Token: 0x17001B38 RID: 6968
-	// (get) Token: 0x06014EFF RID: 85759 RVA: 0x00550B31 File Offset: 0x0054ED31
-	// (set) Token: 0x06014F00 RID: 85760 RVA: 0x00550B39 File Offset: 0x0054ED39
+	// Token: 0x17001B90 RID: 7056
+	// (get) Token: 0x060128FF RID: 76031 RVA: 0x0057B8A3 File Offset: 0x00579AA3
+	// (set) Token: 0x06012900 RID: 76032 RVA: 0x0057B8AB File Offset: 0x00579AAB
 	public int Exp { get; set; }
 }

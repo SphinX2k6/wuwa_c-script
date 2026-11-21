@@ -4,16 +4,16 @@ using System.Runtime.CompilerServices;
 using Aki.Protocol;
 using Aki.Protocol.Summon;
 
-// Token: 0x020031A7 RID: 12711
+// Token: 0x02002716 RID: 10006
 public class GameplayAbilityVisionBossRush : GameplayAbilityVisionMorph
 {
-	// Token: 0x0601B651 RID: 112209 RVA: 0x0077D262 File Offset: 0x0077B462
+	// Token: 0x0601917F RID: 102783 RVA: 0x007A5540 File Offset: 0x007A3740
 	[NullableContext(1)]
 	public GameplayAbilityVisionBossRush(CharacterVisionComponent visionComponent) : base(visionComponent)
 	{
 	}
 
-	// Token: 0x0601B652 RID: 112210 RVA: 0x0077D26C File Offset: 0x0077B46C
+	// Token: 0x06019180 RID: 102784 RVA: 0x007A554C File Offset: 0x007A374C
 	protected override void PreInit()
 	{
 		int playerId = base.CreatureDataComponent.GetPlayerId();
@@ -53,7 +53,7 @@ public class GameplayAbilityVisionBossRush : GameplayAbilityVisionMorph
 		}
 	}
 
-	// Token: 0x0601B653 RID: 112211 RVA: 0x0077D33C File Offset: 0x0077B53C
+	// Token: 0x06019181 RID: 102785 RVA: 0x007A561C File Offset: 0x007A381C
 	[NullableContext(2)]
 	protected override void SetVisionEnable(bool enable, EntityHandle visionEntity = null)
 	{

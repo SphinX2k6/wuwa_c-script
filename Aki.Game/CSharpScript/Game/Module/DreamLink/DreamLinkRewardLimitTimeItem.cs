@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.DreamLink
 {
-	// Token: 0x02005ABD RID: 23229
+	// Token: 0x02004A99 RID: 19097
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,7 +18,7 @@ namespace CSharpScript.Game.Module.DreamLink
 	})]
 	public class DreamLinkRewardLimitTimeItem : GridProxyAbstract<DreamLinkRewardData>
 	{
-		// Token: 0x0603AD5C RID: 240988 RVA: 0x00E05224 File Offset: 0x00E03424
+		// Token: 0x0602FCA8 RID: 195752 RVA: 0x00D557EC File Offset: 0x00D539EC
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 9;
@@ -53,7 +53,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.BtnBindInfo = list2;
 		}
 
-		// Token: 0x0603AD5D RID: 240989 RVA: 0x00E053B4 File Offset: 0x00E035B4
+		// Token: 0x0602FCA9 RID: 195753 RVA: 0x00D5597C File Offset: 0x00D53B7C
 		protected override void OnStart()
 		{
 			this.RewardScrollView = new GenericScrollViewNew<ActivitySmallItemGrid, IItemGridData>(base.GetScrollViewWithScrollbar(6), new Func<ActivitySmallItemGrid>(this.InitGridItem), null, false, null);
@@ -61,13 +61,13 @@ namespace CSharpScript.Game.Module.DreamLink
 			base.GetItem(4).SetUIActive(false);
 		}
 
-		// Token: 0x0603AD5E RID: 240990 RVA: 0x00E05409 File Offset: 0x00E03609
+		// Token: 0x0602FCAA RID: 195754 RVA: 0x00D559D1 File Offset: 0x00D53BD1
 		private ActivitySmallItemGrid InitGridItem()
 		{
 			return new ActivitySmallItemGrid();
 		}
 
-		// Token: 0x0603AD5F RID: 240991 RVA: 0x00E05410 File Offset: 0x00E03610
+		// Token: 0x0602FCAB RID: 195755 RVA: 0x00D559D8 File Offset: 0x00D53BD8
 		public override void Refresh(DreamLinkRewardData data, bool isSelected, int gridIndex)
 		{
 			this.Data = data;
@@ -94,7 +94,7 @@ namespace CSharpScript.Game.Module.DreamLink
 			text.SetText(defaultInterpolatedStringHandler.ToStringAndClear(), true);
 		}
 
-		// Token: 0x0603AD60 RID: 240992 RVA: 0x00E05524 File Offset: 0x00E03724
+		// Token: 0x0602FCAC RID: 195756 RVA: 0x00D55AEC File Offset: 0x00D53CEC
 		private void RefreshReward(int dropId, bool hasClaimed)
 		{
 			List<TItem> dropPackagePreviewItemList = CSharpScript.Game.Module.Reward.RewardConfig.Instance.GetDropPackagePreviewItemList(dropId);
@@ -111,17 +111,17 @@ namespace CSharpScript.Game.Module.DreamLink
 			this.RewardScrollView.RefreshByData(list, null, false);
 		}
 
-		// Token: 0x0603AD61 RID: 240993 RVA: 0x00E055A4 File Offset: 0x00E037A4
+		// Token: 0x0602FCAD RID: 195757 RVA: 0x00D55B6C File Offset: 0x00D53D6C
 		private void OnClickGetButton()
 		{
 			DreamLinkController.Instance.LimitTimeRewardRequest(this.Data.Id);
 		}
 
-		// Token: 0x0401EB39 RID: 125753
+		// Token: 0x040195E0 RID: 103904
 		[Nullable(2)]
 		protected DreamLinkRewardData Data;
 
-		// Token: 0x0401EB3A RID: 125754
+		// Token: 0x040195E1 RID: 103905
 		[Nullable(new byte[]
 		{
 			2,
@@ -130,35 +130,35 @@ namespace CSharpScript.Game.Module.DreamLink
 		})]
 		protected GenericScrollViewNew<ActivitySmallItemGrid, IItemGridData> RewardScrollView;
 
-		// Token: 0x0200BD10 RID: 48400
+		// Token: 0x0200A718 RID: 42776
 		[NullableContext(0)]
 		private class EComponents
 		{
-			// Token: 0x04039051 RID: 233553
+			// Token: 0x04033A1B RID: 211483
 			public const int Button = 0;
 
-			// Token: 0x04039052 RID: 233554
+			// Token: 0x04033A1C RID: 211484
 			public const int RewardButton = 1;
 
-			// Token: 0x04039053 RID: 233555
+			// Token: 0x04033A1D RID: 211485
 			public const int PanelDone = 2;
 
-			// Token: 0x04039054 RID: 233556
+			// Token: 0x04033A1E RID: 211486
 			public const int Text = 3;
 
-			// Token: 0x04039055 RID: 233557
+			// Token: 0x04033A1F RID: 211487
 			public const int PanelLock = 4;
 
-			// Token: 0x04039056 RID: 233558
+			// Token: 0x04033A20 RID: 211488
 			public const int TextLock = 5;
 
-			// Token: 0x04039057 RID: 233559
+			// Token: 0x04033A21 RID: 211489
 			public const int RewardLayout = 6;
 
-			// Token: 0x04039058 RID: 233560
+			// Token: 0x04033A22 RID: 211490
 			public const int TextGoing = 7;
 
-			// Token: 0x04039059 RID: 233561
+			// Token: 0x04033A23 RID: 211491
 			public const int TextProgress = 8;
 		}
 	}

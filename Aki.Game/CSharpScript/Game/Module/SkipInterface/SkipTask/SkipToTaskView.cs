@@ -4,10 +4,10 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.SkipInterface.SkipTask
 {
-	// Token: 0x02004BDA RID: 19418
+	// Token: 0x02003B84 RID: 15236
 	public class SkipToTaskView : SkipToMoonChasingBase
 	{
-		// Token: 0x06032345 RID: 205637 RVA: 0x00BAA944 File Offset: 0x00BA8B44
+		// Token: 0x060270D6 RID: 159958 RVA: 0x00AEEBFC File Offset: 0x00AECDFC
 		protected override void OnRun([Nullable(new byte[]
 		{
 			1,

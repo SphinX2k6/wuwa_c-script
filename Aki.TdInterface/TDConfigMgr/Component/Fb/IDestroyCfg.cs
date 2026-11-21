@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000B44 RID: 2884
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000C12 RID: 3090
 	public class IDestroyCfg
 	{
-		// Token: 0x06004277 RID: 17015 RVA: 0x000A9F49 File Offset: 0x000A8149
+		// Token: 0x060046D0 RID: 18128 RVA: 0x000B400D File Offset: 0x000B220D
 		public static IDestroyCfg Create(IDestroyCfg? instance)
 		{
 			if (instance == null)
@@ -23,8 +20,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x170011AC RID: 4524
-		// (get) Token: 0x06004278 RID: 17016 RVA: 0x000A9F68 File Offset: 0x000A8168
+		// Token: 0x170012A7 RID: 4775
+		// (get) Token: 0x060046D1 RID: 18129 RVA: 0x000B402C File Offset: 0x000B222C
 		public virtual List<ITeleControlDestroyCondition> Conditions
 		{
 			get
@@ -39,8 +36,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x170011AD RID: 4525
-		// (get) Token: 0x06004279 RID: 17017 RVA: 0x000A9F98 File Offset: 0x000A8198
+		// Token: 0x170012A8 RID: 4776
+		// (get) Token: 0x060046D2 RID: 18130 RVA: 0x000B405C File Offset: 0x000B225C
 		public virtual bool? StopPhysicAfterDestroyed
 		{
 			get
@@ -53,13 +50,13 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x04002571 RID: 9585
+		// Token: 0x040027B9 RID: 10169
 		private IDestroyCfg Instance;
 
-		// Token: 0x04002572 RID: 9586
+		// Token: 0x040027BA RID: 10170
 		private List<ITeleControlDestroyCondition> _ConditionsCache;
 
-		// Token: 0x04002573 RID: 9587
+		// Token: 0x040027BB RID: 10171
 		private bool _ConditionsInited;
 	}
 }

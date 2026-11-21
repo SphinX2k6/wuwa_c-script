@@ -5,69 +5,69 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.NewWorld.SceneItem.PathDrivenActorSpawner
 {
-	// Token: 0x020071CB RID: 29131
+	// Token: 0x02006280 RID: 25216
 	[NullableContext(1)]
 	public interface IPathDrivenActorRuntimeData
 	{
-		// Token: 0x17009DCB RID: 40395
-		// (get) Token: 0x060474A2 RID: 292002
-		// (set) Token: 0x060474A3 RID: 292003
+		// Token: 0x17007322 RID: 29474
+		// (get) Token: 0x0603CDA4 RID: 249252
+		// (set) Token: 0x0603CDA5 RID: 249253
 		Entity OwnerEntity { get; set; }
 
-		// Token: 0x17009DCC RID: 40396
-		// (get) Token: 0x060474A4 RID: 292004
-		// (set) Token: 0x060474A5 RID: 292005
+		// Token: 0x17007323 RID: 29475
+		// (get) Token: 0x0603CDA6 RID: 249254
+		// (set) Token: 0x0603CDA7 RID: 249255
 		AActor Actor { get; set; }
 
-		// Token: 0x17009DCD RID: 40397
-		// (get) Token: 0x060474A6 RID: 292006
-		// (set) Token: 0x060474A7 RID: 292007
+		// Token: 0x17007324 RID: 29476
+		// (get) Token: 0x0603CDA8 RID: 249256
+		// (set) Token: 0x0603CDA9 RID: 249257
 		UKuroSceneItemMoveComponent MoveComponent { get; set; }
 
-		// Token: 0x17009DCE RID: 40398
-		// (get) Token: 0x060474A8 RID: 292008
-		// (set) Token: 0x060474A9 RID: 292009
+		// Token: 0x17007325 RID: 29477
+		// (get) Token: 0x0603CDAA RID: 249258
+		// (set) Token: 0x0603CDAB RID: 249259
 		[Nullable(2)]
 		IPathDrivenActorBehavior Behavior { [NullableContext(2)] get; [NullableContext(2)] set; }
 
-		// Token: 0x17009DCF RID: 40399
-		// (get) Token: 0x060474AA RID: 292010
-		// (set) Token: 0x060474AB RID: 292011
+		// Token: 0x17007326 RID: 29478
+		// (get) Token: 0x0603CDAC RID: 249260
+		// (set) Token: 0x0603CDAD RID: 249261
 		bool Finished { get; set; }
 
-		// Token: 0x17009DD0 RID: 40400
-		// (get) Token: 0x060474AC RID: 292012
-		// (set) Token: 0x060474AD RID: 292013
+		// Token: 0x17007327 RID: 29479
+		// (get) Token: 0x0603CDAE RID: 249262
+		// (set) Token: 0x0603CDAF RID: 249263
 		bool PendingRecycle { get; set; }
 
-		// Token: 0x17009DD1 RID: 40401
-		// (get) Token: 0x060474AE RID: 292014
-		// (set) Token: 0x060474AF RID: 292015
+		// Token: 0x17007328 RID: 29480
+		// (get) Token: 0x0603CDB0 RID: 249264
+		// (set) Token: 0x0603CDB1 RID: 249265
 		int CurrentTrackIndex { get; set; }
 
-		// Token: 0x17009DD2 RID: 40402
-		// (get) Token: 0x060474B0 RID: 292016
-		// (set) Token: 0x060474B1 RID: 292017
+		// Token: 0x17007329 RID: 29481
+		// (get) Token: 0x0603CDB2 RID: 249266
+		// (set) Token: 0x0603CDB3 RID: 249267
 		bool? PendingTrackSwitch { get; set; }
 
-		// Token: 0x17009DD3 RID: 40403
-		// (get) Token: 0x060474B2 RID: 292018
-		// (set) Token: 0x060474B3 RID: 292019
+		// Token: 0x1700732A RID: 29482
+		// (get) Token: 0x0603CDB4 RID: 249268
+		// (set) Token: 0x0603CDB5 RID: 249269
 		Action<EPathDrivenActorFinishReason> RequestFinish { get; set; }
 
-		// Token: 0x17009DD4 RID: 40404
-		// (get) Token: 0x060474B4 RID: 292020
-		// (set) Token: 0x060474B5 RID: 292021
+		// Token: 0x1700732B RID: 29483
+		// (get) Token: 0x0603CDB6 RID: 249270
+		// (set) Token: 0x0603CDB7 RID: 249271
 		Action OnMoveStoppedHandler { get; set; }
 
-		// Token: 0x17009DD5 RID: 40405
-		// (get) Token: 0x060474B6 RID: 292022
-		// (set) Token: 0x060474B7 RID: 292023
+		// Token: 0x1700732C RID: 29484
+		// (get) Token: 0x0603CDB8 RID: 249272
+		// (set) Token: 0x0603CDB9 RID: 249273
 		bool? HasStartedMove { get; set; }
 
-		// Token: 0x17009DD6 RID: 40406
-		// (get) Token: 0x060474B8 RID: 292024
-		// (set) Token: 0x060474B9 RID: 292025
+		// Token: 0x1700732D RID: 29485
+		// (get) Token: 0x0603CDBA RID: 249274
+		// (set) Token: 0x0603CDBB RID: 249275
 		[Nullable(2)]
 		SceneItemMoveComponent.SceneItemSplineMoveAtConstantTimeParam LaunchMoveParam { [NullableContext(2)] get; [NullableContext(2)] set; }
 	}

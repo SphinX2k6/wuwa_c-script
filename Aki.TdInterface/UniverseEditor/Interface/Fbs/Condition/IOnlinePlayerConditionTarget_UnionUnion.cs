@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004C68 RID: 19560
+	// Token: 0x02005161 RID: 20833
 	public class IOnlinePlayerConditionTarget_UnionUnion
 	{
-		// Token: 0x17008E10 RID: 36368
-		// (get) Token: 0x0601F02F RID: 127023 RVA: 0x00456092 File Offset: 0x00454292
-		// (set) Token: 0x0601F030 RID: 127024 RVA: 0x0045609A File Offset: 0x0045429A
+		// Token: 0x1700953E RID: 38206
+		// (get) Token: 0x06020C51 RID: 134225 RVA: 0x00489BE2 File Offset: 0x00487DE2
+		// (set) Token: 0x06020C52 RID: 134226 RVA: 0x00489BEA File Offset: 0x00487DEA
 		public IOnlinePlayerConditionTarget_Union Type { get; set; }
 
-		// Token: 0x17008E11 RID: 36369
-		// (get) Token: 0x0601F031 RID: 127025 RVA: 0x004560A3 File Offset: 0x004542A3
-		// (set) Token: 0x0601F032 RID: 127026 RVA: 0x004560AB File Offset: 0x004542AB
+		// Token: 0x1700953F RID: 38207
+		// (get) Token: 0x06020C53 RID: 134227 RVA: 0x00489BF3 File Offset: 0x00487DF3
+		// (set) Token: 0x06020C54 RID: 134228 RVA: 0x00489BFB File Offset: 0x00487DFB
 		public object Value { get; set; }
 
-		// Token: 0x0601F033 RID: 127027 RVA: 0x004560B4 File Offset: 0x004542B4
+		// Token: 0x06020C55 RID: 134229 RVA: 0x00489C04 File Offset: 0x00487E04
 		public IOnlinePlayerConditionTarget_UnionUnion()
 		{
 			this.Type = IOnlinePlayerConditionTarget_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601F034 RID: 127028 RVA: 0x004560CA File Offset: 0x004542CA
+		// Token: 0x06020C56 RID: 134230 RVA: 0x00489C1A File Offset: 0x00487E1A
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601F035 RID: 127029 RVA: 0x004560DC File Offset: 0x004542DC
+		// Token: 0x06020C57 RID: 134231 RVA: 0x00489C2C File Offset: 0x00487E2C
 		public IOnlinePlayerConditionTargetT AsIOnlinePlayerConditionTarget()
 		{
 			return this.As<IOnlinePlayerConditionTargetT>();
 		}
 
-		// Token: 0x0601F036 RID: 127030 RVA: 0x004560E4 File Offset: 0x004542E4
+		// Token: 0x06020C58 RID: 134232 RVA: 0x00489C34 File Offset: 0x00487E34
 		public static IOnlinePlayerConditionTarget_UnionUnion FromIOnlinePlayerConditionTarget(IOnlinePlayerConditionTargetT _ionlineplayerconditiontarget)
 		{
 			return new IOnlinePlayerConditionTarget_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F037 RID: 127031 RVA: 0x004560F9 File Offset: 0x004542F9
+		// Token: 0x06020C59 RID: 134233 RVA: 0x00489C49 File Offset: 0x00487E49
 		public IOnlinePlayerConditionTargetHostT AsIOnlinePlayerConditionTargetHost()
 		{
 			return this.As<IOnlinePlayerConditionTargetHostT>();
 		}
 
-		// Token: 0x0601F038 RID: 127032 RVA: 0x00456101 File Offset: 0x00454301
+		// Token: 0x06020C5A RID: 134234 RVA: 0x00489C51 File Offset: 0x00487E51
 		public static IOnlinePlayerConditionTarget_UnionUnion FromIOnlinePlayerConditionTargetHost(IOnlinePlayerConditionTargetHostT _ionlineplayerconditiontargethost)
 		{
 			return new IOnlinePlayerConditionTarget_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F039 RID: 127033 RVA: 0x00456116 File Offset: 0x00454316
+		// Token: 0x06020C5B RID: 134235 RVA: 0x00489C66 File Offset: 0x00487E66
 		public IOnlinePlayerConditionTargetParticipatorT AsIOnlinePlayerConditionTargetParticipator()
 		{
 			return this.As<IOnlinePlayerConditionTargetParticipatorT>();
 		}
 
-		// Token: 0x0601F03A RID: 127034 RVA: 0x0045611E File Offset: 0x0045431E
+		// Token: 0x06020C5C RID: 134236 RVA: 0x00489C6E File Offset: 0x00487E6E
 		public static IOnlinePlayerConditionTarget_UnionUnion FromIOnlinePlayerConditionTargetParticipator(IOnlinePlayerConditionTargetParticipatorT _ionlineplayerconditiontargetparticipator)
 		{
 			return new IOnlinePlayerConditionTarget_UnionUnion
@@ -77,7 +77,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F03B RID: 127035 RVA: 0x00456134 File Offset: 0x00454334
+		// Token: 0x06020C5D RID: 134237 RVA: 0x00489C84 File Offset: 0x00487E84
 		public static int Pack(FlatBufferBuilder builder, IOnlinePlayerConditionTarget_UnionUnion _o)
 		{
 			switch (_o.Type)

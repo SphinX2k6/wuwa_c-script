@@ -2,74 +2,74 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02004D7F RID: 19839
+	// Token: 0x02005280 RID: 21120
 	public enum ECollisionChannelType : byte
 	{
-		// Token: 0x0400D833 RID: 55347
+		// Token: 0x0400E375 RID: 58229
 		WorldStatic,
-		// Token: 0x0400D834 RID: 55348
+		// Token: 0x0400E376 RID: 58230
 		WorldDynamic,
-		// Token: 0x0400D835 RID: 55349
+		// Token: 0x0400E377 RID: 58231
 		Pawn,
-		// Token: 0x0400D836 RID: 55350
+		// Token: 0x0400E378 RID: 58232
 		Visibility,
-		// Token: 0x0400D837 RID: 55351
+		// Token: 0x0400E379 RID: 58233
 		Camera,
-		// Token: 0x0400D838 RID: 55352
+		// Token: 0x0400E37A RID: 58234
 		PhysicsBody,
-		// Token: 0x0400D839 RID: 55353
+		// Token: 0x0400E37B RID: 58235
 		Vehicle,
-		// Token: 0x0400D83A RID: 55354
+		// Token: 0x0400E37C RID: 58236
 		Destructible,
-		// Token: 0x0400D83B RID: 55355
+		// Token: 0x0400E37D RID: 58237
 		EngineTraceChannel1,
-		// Token: 0x0400D83C RID: 55356
+		// Token: 0x0400E37E RID: 58238
 		EngineTraceChannel2,
-		// Token: 0x0400D83D RID: 55357
+		// Token: 0x0400E37F RID: 58239
 		EngineTraceChannel3,
-		// Token: 0x0400D83E RID: 55358
+		// Token: 0x0400E380 RID: 58240
 		EngineTraceChannel4,
-		// Token: 0x0400D83F RID: 55359
+		// Token: 0x0400E381 RID: 58241
 		EngineTraceChannel5,
-		// Token: 0x0400D840 RID: 55360
+		// Token: 0x0400E382 RID: 58242
 		EngineTraceChannel6,
-		// Token: 0x0400D841 RID: 55361
+		// Token: 0x0400E383 RID: 58243
 		GameTraceChannel1,
-		// Token: 0x0400D842 RID: 55362
+		// Token: 0x0400E384 RID: 58244
 		GameTraceChannel2,
-		// Token: 0x0400D843 RID: 55363
+		// Token: 0x0400E385 RID: 58245
 		GameTraceChannel3,
-		// Token: 0x0400D844 RID: 55364
+		// Token: 0x0400E386 RID: 58246
 		GameTraceChannel4,
-		// Token: 0x0400D845 RID: 55365
+		// Token: 0x0400E387 RID: 58247
 		GameTraceChannel5,
-		// Token: 0x0400D846 RID: 55366
+		// Token: 0x0400E388 RID: 58248
 		GameTraceChannel6,
-		// Token: 0x0400D847 RID: 55367
+		// Token: 0x0400E389 RID: 58249
 		GameTraceChannel7,
-		// Token: 0x0400D848 RID: 55368
+		// Token: 0x0400E38A RID: 58250
 		GameTraceChannel8,
-		// Token: 0x0400D849 RID: 55369
+		// Token: 0x0400E38B RID: 58251
 		GameTraceChannel9,
-		// Token: 0x0400D84A RID: 55370
+		// Token: 0x0400E38C RID: 58252
 		GameTraceChannel10,
-		// Token: 0x0400D84B RID: 55371
+		// Token: 0x0400E38D RID: 58253
 		GameTraceChannel11,
-		// Token: 0x0400D84C RID: 55372
+		// Token: 0x0400E38E RID: 58254
 		GameTraceChannel12,
-		// Token: 0x0400D84D RID: 55373
+		// Token: 0x0400E38F RID: 58255
 		GameTraceChannel13,
-		// Token: 0x0400D84E RID: 55374
+		// Token: 0x0400E390 RID: 58256
 		GameTraceChannel14,
-		// Token: 0x0400D84F RID: 55375
+		// Token: 0x0400E391 RID: 58257
 		GameTraceChannel15,
-		// Token: 0x0400D850 RID: 55376
+		// Token: 0x0400E392 RID: 58258
 		GameTraceChannel16,
-		// Token: 0x0400D851 RID: 55377
+		// Token: 0x0400E393 RID: 58259
 		GameTraceChannel17,
-		// Token: 0x0400D852 RID: 55378
+		// Token: 0x0400E394 RID: 58260
 		GameTraceChannel18,
-		// Token: 0x0400D853 RID: 55379
+		// Token: 0x0400E395 RID: 58261
 		OverlapAllDeprecated
 	}
 }

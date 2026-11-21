@@ -1,20 +1,17 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014C3 RID: 5315
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200161C RID: 5660
 	public class CaptureElementalBox_SetValue
 	{
-		// Token: 0x0400464F RID: 17999
+		// Token: 0x040049EA RID: 18922
 		public IControlElementalBoxTypeBase CtrlConfig;
 
-		// Token: 0x04004650 RID: 18000
+		// Token: 0x040049EB RID: 18923
 		public IElementalBoxTargetPosTypeBase TargetPosConfig;
 
-		// Token: 0x04004651 RID: 18001
+		// Token: 0x040049EC RID: 18924
 		public float MoveSpeed;
 	}
 }

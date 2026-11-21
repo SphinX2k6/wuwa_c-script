@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020050C3 RID: 20675
+	// Token: 0x02005628 RID: 22056
 	public struct IDungeonEntryComponent : IFlatbufferObject
 	{
-		// Token: 0x17009674 RID: 38516
-		// (get) Token: 0x0602140F RID: 136207 RVA: 0x0049EA86 File Offset: 0x0049CC86
+		// Token: 0x17009E61 RID: 40545
+		// (get) Token: 0x06023363 RID: 144227 RVA: 0x004D8A12 File Offset: 0x004D6C12
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021410 RID: 136208 RVA: 0x0049EA93 File Offset: 0x0049CC93
+		// Token: 0x06023364 RID: 144228 RVA: 0x004D8A1F File Offset: 0x004D6C1F
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06021411 RID: 136209 RVA: 0x0049EA9C File Offset: 0x0049CC9C
+		// Token: 0x06023365 RID: 144229 RVA: 0x004D8A28 File Offset: 0x004D6C28
 		public static IDungeonEntryComponent GetRootAsIDungeonEntryComponent(ByteBuffer _bb)
 		{
 			return IDungeonEntryComponent.GetRootAsIDungeonEntryComponent(_bb, default(IDungeonEntryComponent));
 		}
 
-		// Token: 0x06021412 RID: 136210 RVA: 0x0049EAB8 File Offset: 0x0049CCB8
+		// Token: 0x06023366 RID: 144230 RVA: 0x004D8A44 File Offset: 0x004D6C44
 		public static IDungeonEntryComponent GetRootAsIDungeonEntryComponent(ByteBuffer _bb, IDungeonEntryComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06021413 RID: 136211 RVA: 0x0049EAD5 File Offset: 0x0049CCD5
+		// Token: 0x06023367 RID: 144231 RVA: 0x004D8A61 File Offset: 0x004D6C61
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06021414 RID: 136212 RVA: 0x0049EAE4 File Offset: 0x0049CCE4
+		// Token: 0x06023368 RID: 144232 RVA: 0x004D8A70 File Offset: 0x004D6C70
 		public IDungeonEntryComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17009675 RID: 38517
-		// (get) Token: 0x06021415 RID: 136213 RVA: 0x0049EAF4 File Offset: 0x0049CCF4
+		// Token: 0x17009E62 RID: 40546
+		// (get) Token: 0x06023369 RID: 144233 RVA: 0x004D8A80 File Offset: 0x004D6C80
 		public bool Disabled
 		{
 			get
@@ -58,8 +58,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009676 RID: 38518
-		// (get) Token: 0x06021416 RID: 136214 RVA: 0x0049EB34 File Offset: 0x0049CD34
+		// Token: 0x17009E63 RID: 40547
+		// (get) Token: 0x0602336A RID: 144234 RVA: 0x004D8AC0 File Offset: 0x004D6CC0
 		public byte NullMask
 		{
 			get
@@ -73,7 +73,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021417 RID: 136215 RVA: 0x0049EB70 File Offset: 0x0049CD70
+		// Token: 0x0602336B RID: 144235 RVA: 0x004D8AFC File Offset: 0x004D6CFC
 		public static Offset<IDungeonEntryComponent> CreateIDungeonEntryComponent(FlatBufferBuilder builder, bool Disabled = false, byte NullMask = 0)
 		{
 			builder.StartTable(2);
@@ -82,31 +82,31 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IDungeonEntryComponent.EndIDungeonEntryComponent(builder);
 		}
 
-		// Token: 0x06021418 RID: 136216 RVA: 0x0049EB8D File Offset: 0x0049CD8D
+		// Token: 0x0602336C RID: 144236 RVA: 0x004D8B19 File Offset: 0x004D6D19
 		public static void StartIDungeonEntryComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(2);
 		}
 
-		// Token: 0x06021419 RID: 136217 RVA: 0x0049EB96 File Offset: 0x0049CD96
+		// Token: 0x0602336D RID: 144237 RVA: 0x004D8B22 File Offset: 0x004D6D22
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x0602141A RID: 136218 RVA: 0x0049EBA1 File Offset: 0x0049CDA1
+		// Token: 0x0602336E RID: 144238 RVA: 0x004D8B2D File Offset: 0x004D6D2D
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(1, nullMask, 0);
 		}
 
-		// Token: 0x0602141B RID: 136219 RVA: 0x0049EBAC File Offset: 0x0049CDAC
+		// Token: 0x0602336F RID: 144239 RVA: 0x004D8B38 File Offset: 0x004D6D38
 		public static Offset<IDungeonEntryComponent> EndIDungeonEntryComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<IDungeonEntryComponent>(builder.EndTable());
 		}
 
-		// Token: 0x0602141C RID: 136220 RVA: 0x0049EBBC File Offset: 0x0049CDBC
+		// Token: 0x06023370 RID: 144240 RVA: 0x004D8B48 File Offset: 0x004D6D48
 		public IDungeonEntryComponentT UnPack()
 		{
 			IDungeonEntryComponentT dungeonEntryComponentT = new IDungeonEntryComponentT();
@@ -114,14 +114,14 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return dungeonEntryComponentT;
 		}
 
-		// Token: 0x0602141D RID: 136221 RVA: 0x0049EBD7 File Offset: 0x0049CDD7
+		// Token: 0x06023371 RID: 144241 RVA: 0x004D8B63 File Offset: 0x004D6D63
 		public void UnPackTo(IDungeonEntryComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602141E RID: 136222 RVA: 0x0049EBF4 File Offset: 0x0049CDF4
+		// Token: 0x06023372 RID: 144242 RVA: 0x004D8B80 File Offset: 0x004D6D80
 		public static Offset<IDungeonEntryComponent> Pack(FlatBufferBuilder builder, IDungeonEntryComponentT _o)
 		{
 			if (_o == null)
@@ -131,7 +131,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IDungeonEntryComponent.CreateIDungeonEntryComponent(builder, _o.Disabled, _o.NullMask);
 		}
 
-		// Token: 0x0400E107 RID: 57607
+		// Token: 0x0400ED04 RID: 60676
 		private Table __p;
 	}
 }

@@ -5,12 +5,10 @@ using Aki.UniverseEditor.Interface.Fbs.Component;
 
 namespace Aki.TDConfigMgr.Component.Fb
 {
-	// Token: 0x02000C40 RID: 3136
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02000D13 RID: 3347
 	public class IButterflySplinePoint : IBaseSplinePointType
 	{
-		// Token: 0x060047CF RID: 18383 RVA: 0x000B4B9D File Offset: 0x000B2D9D
+		// Token: 0x06004C3F RID: 19519 RVA: 0x000BEF4D File Offset: 0x000BD14D
 		public static IButterflySplinePoint Create(IButterflySplinePoint? instance)
 		{
 			if (instance == null)
@@ -23,8 +21,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			};
 		}
 
-		// Token: 0x1700150C RID: 5388
-		// (get) Token: 0x060047D0 RID: 18384 RVA: 0x000B4BBC File Offset: 0x000B2DBC
+		// Token: 0x17001614 RID: 5652
+		// (get) Token: 0x06004C40 RID: 19520 RVA: 0x000BEF6C File Offset: 0x000BD16C
 		public override VectorInfo Position
 		{
 			get
@@ -39,8 +37,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700150D RID: 5389
-		// (get) Token: 0x060047D1 RID: 18385 RVA: 0x000B4BF0 File Offset: 0x000B2DF0
+		// Token: 0x17001615 RID: 5653
+		// (get) Token: 0x06004C41 RID: 19521 RVA: 0x000BEFA0 File Offset: 0x000BD1A0
 		public override VectorInfo ArriveTangent
 		{
 			get
@@ -55,8 +53,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700150E RID: 5390
-		// (get) Token: 0x060047D2 RID: 18386 RVA: 0x000B4C24 File Offset: 0x000B2E24
+		// Token: 0x17001616 RID: 5654
+		// (get) Token: 0x06004C42 RID: 19522 RVA: 0x000BEFD4 File Offset: 0x000BD1D4
 		public override VectorInfo LeaveTangent
 		{
 			get
@@ -71,8 +69,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x1700150F RID: 5391
-		// (get) Token: 0x060047D3 RID: 18387 RVA: 0x000B4C58 File Offset: 0x000B2E58
+		// Token: 0x17001617 RID: 5655
+		// (get) Token: 0x06004C43 RID: 19523 RVA: 0x000BF008 File Offset: 0x000BD208
 		public override ESplineLine LineType
 		{
 			get
@@ -81,8 +79,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001510 RID: 5392
-		// (get) Token: 0x060047D4 RID: 18388 RVA: 0x000B4C65 File Offset: 0x000B2E65
+		// Token: 0x17001618 RID: 5656
+		// (get) Token: 0x06004C44 RID: 19524 RVA: 0x000BF015 File Offset: 0x000BD215
 		[Nullable(2)]
 		public override VectorInfo Rotation
 		{
@@ -99,8 +97,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001511 RID: 5393
-		// (get) Token: 0x060047D5 RID: 18389 RVA: 0x000B4C99 File Offset: 0x000B2E99
+		// Token: 0x17001619 RID: 5657
+		// (get) Token: 0x06004C45 RID: 19525 RVA: 0x000BF049 File Offset: 0x000BD249
 		public virtual int MoveSpeed
 		{
 			get
@@ -109,8 +107,8 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x17001512 RID: 5394
-		// (get) Token: 0x060047D6 RID: 18390 RVA: 0x000B4CA6 File Offset: 0x000B2EA6
+		// Token: 0x1700161A RID: 5658
+		// (get) Token: 0x06004C46 RID: 19526 RVA: 0x000BF056 File Offset: 0x000BD256
 		public virtual bool IgnorePoint
 		{
 			get
@@ -119,35 +117,35 @@ namespace Aki.TDConfigMgr.Component.Fb
 			}
 		}
 
-		// Token: 0x040028DB RID: 10459
+		// Token: 0x04002B30 RID: 11056
 		private IButterflySplinePoint Instance;
 
-		// Token: 0x040028DC RID: 10460
+		// Token: 0x04002B31 RID: 11057
 		[Nullable(2)]
 		private VectorInfo _PositionCache;
 
-		// Token: 0x040028DD RID: 10461
+		// Token: 0x04002B32 RID: 11058
 		private bool _PositionInited;
 
-		// Token: 0x040028DE RID: 10462
+		// Token: 0x04002B33 RID: 11059
 		[Nullable(2)]
 		private VectorInfo _ArriveTangentCache;
 
-		// Token: 0x040028DF RID: 10463
+		// Token: 0x04002B34 RID: 11060
 		private bool _ArriveTangentInited;
 
-		// Token: 0x040028E0 RID: 10464
+		// Token: 0x04002B35 RID: 11061
 		[Nullable(2)]
 		private VectorInfo _LeaveTangentCache;
 
-		// Token: 0x040028E1 RID: 10465
+		// Token: 0x04002B36 RID: 11062
 		private bool _LeaveTangentInited;
 
-		// Token: 0x040028E2 RID: 10466
+		// Token: 0x04002B37 RID: 11063
 		[Nullable(2)]
 		private VectorInfo _RotationCache;
 
-		// Token: 0x040028E3 RID: 10467
+		// Token: 0x04002B38 RID: 11064
 		private bool _RotationInited;
 	}
 }

@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001DEF RID: 7663
+	// Token: 0x02002022 RID: 8226
 	public class ISeasonLoopConfig_SetValue
 	{
-		// Token: 0x04006241 RID: 25153
+		// Token: 0x04006818 RID: 26648
 		public float HoldTime;
 
-		// Token: 0x04006242 RID: 25154
+		// Token: 0x04006819 RID: 26649
 		public float SwitchTime;
 	}
 }

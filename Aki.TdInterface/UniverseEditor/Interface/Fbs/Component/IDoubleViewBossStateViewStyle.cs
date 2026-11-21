@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x020050B1 RID: 20657
+	// Token: 0x02005616 RID: 22038
 	public struct IDoubleViewBossStateViewStyle : IFlatbufferObject
 	{
-		// Token: 0x1700961E RID: 38430
-		// (get) Token: 0x060212F9 RID: 135929 RVA: 0x0049C50A File Offset: 0x0049A70A
+		// Token: 0x17009E0B RID: 40459
+		// (get) Token: 0x0602324D RID: 143949 RVA: 0x004D6496 File Offset: 0x004D4696
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x060212FA RID: 135930 RVA: 0x0049C517 File Offset: 0x0049A717
+		// Token: 0x0602324E RID: 143950 RVA: 0x004D64A3 File Offset: 0x004D46A3
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x060212FB RID: 135931 RVA: 0x0049C520 File Offset: 0x0049A720
+		// Token: 0x0602324F RID: 143951 RVA: 0x004D64AC File Offset: 0x004D46AC
 		public static IDoubleViewBossStateViewStyle GetRootAsIDoubleViewBossStateViewStyle(ByteBuffer _bb)
 		{
 			return IDoubleViewBossStateViewStyle.GetRootAsIDoubleViewBossStateViewStyle(_bb, default(IDoubleViewBossStateViewStyle));
 		}
 
-		// Token: 0x060212FC RID: 135932 RVA: 0x0049C53C File Offset: 0x0049A73C
+		// Token: 0x06023250 RID: 143952 RVA: 0x004D64C8 File Offset: 0x004D46C8
 		public static IDoubleViewBossStateViewStyle GetRootAsIDoubleViewBossStateViewStyle(ByteBuffer _bb, IDoubleViewBossStateViewStyle obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x060212FD RID: 135933 RVA: 0x0049C559 File Offset: 0x0049A759
+		// Token: 0x06023251 RID: 143953 RVA: 0x004D64E5 File Offset: 0x004D46E5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x060212FE RID: 135934 RVA: 0x0049C568 File Offset: 0x0049A768
+		// Token: 0x06023252 RID: 143954 RVA: 0x004D64F4 File Offset: 0x004D46F4
 		public IDoubleViewBossStateViewStyle __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700961F RID: 38431
-		// (get) Token: 0x060212FF RID: 135935 RVA: 0x0049C578 File Offset: 0x0049A778
+		// Token: 0x17009E0C RID: 40460
+		// (get) Token: 0x06023253 RID: 143955 RVA: 0x004D6504 File Offset: 0x004D4704
 		public EBossStateViewStyle Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009620 RID: 38432
-		// (get) Token: 0x06021300 RID: 135936 RVA: 0x0049C5B4 File Offset: 0x0049A7B4
+		// Token: 0x17009E0D RID: 40461
+		// (get) Token: 0x06023254 RID: 143956 RVA: 0x004D6540 File Offset: 0x004D4740
 		public EDoubleViewSlot Slot
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009621 RID: 38433
-		// (get) Token: 0x06021301 RID: 135937 RVA: 0x0049C5F0 File Offset: 0x0049A7F0
+		// Token: 0x17009E0E RID: 40462
+		// (get) Token: 0x06023255 RID: 143957 RVA: 0x004D657C File Offset: 0x004D477C
 		public IMarkMainStateTextTarget? MainStateTextTarget
 		{
 			get
@@ -92,8 +92,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009622 RID: 38434
-		// (get) Token: 0x06021302 RID: 135938 RVA: 0x0049C650 File Offset: 0x0049A850
+		// Token: 0x17009E0F RID: 40463
+		// (get) Token: 0x06023256 RID: 143958 RVA: 0x004D65DC File Offset: 0x004D47DC
 		public int BindMonsterEntityId
 		{
 			get
@@ -107,8 +107,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x17009623 RID: 38435
-		// (get) Token: 0x06021303 RID: 135939 RVA: 0x0049C690 File Offset: 0x0049A890
+		// Token: 0x17009E10 RID: 40464
+		// (get) Token: 0x06023257 RID: 143959 RVA: 0x004D661C File Offset: 0x004D481C
 		public byte NullMask
 		{
 			get
@@ -122,7 +122,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06021304 RID: 135940 RVA: 0x0049C6CD File Offset: 0x0049A8CD
+		// Token: 0x06023258 RID: 143960 RVA: 0x004D6659 File Offset: 0x004D4859
 		public static Offset<IDoubleViewBossStateViewStyle> CreateIDoubleViewBossStateViewStyle(FlatBufferBuilder builder, EBossStateViewStyle Type = EBossStateViewStyle.DoubleView, EDoubleViewSlot Slot = EDoubleViewSlot.Left, Offset<IMarkMainStateTextTarget> MainStateTextTargetOffset = default(Offset<IMarkMainStateTextTarget>), int BindMonsterEntityId = 0, byte NullMask = 0)
 		{
 			builder.StartTable(5);
@@ -134,49 +134,49 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IDoubleViewBossStateViewStyle.EndIDoubleViewBossStateViewStyle(builder);
 		}
 
-		// Token: 0x06021305 RID: 135941 RVA: 0x0049C701 File Offset: 0x0049A901
+		// Token: 0x06023259 RID: 143961 RVA: 0x004D668D File Offset: 0x004D488D
 		public static void StartIDoubleViewBossStateViewStyle(FlatBufferBuilder builder)
 		{
 			builder.StartTable(5);
 		}
 
-		// Token: 0x06021306 RID: 135942 RVA: 0x0049C70A File Offset: 0x0049A90A
+		// Token: 0x0602325A RID: 143962 RVA: 0x004D6696 File Offset: 0x004D4896
 		public static void AddType(FlatBufferBuilder builder, EBossStateViewStyle type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x06021307 RID: 135943 RVA: 0x0049C715 File Offset: 0x0049A915
+		// Token: 0x0602325B RID: 143963 RVA: 0x004D66A1 File Offset: 0x004D48A1
 		public static void AddSlot(FlatBufferBuilder builder, EDoubleViewSlot slot)
 		{
 			builder.AddByte(1, (byte)slot, 0);
 		}
 
-		// Token: 0x06021308 RID: 135944 RVA: 0x0049C720 File Offset: 0x0049A920
+		// Token: 0x0602325C RID: 143964 RVA: 0x004D66AC File Offset: 0x004D48AC
 		public static void AddMainStateTextTarget(FlatBufferBuilder builder, Offset<IMarkMainStateTextTarget> mainStateTextTargetOffset)
 		{
 			builder.AddOffset(2, mainStateTextTargetOffset.Value, 0);
 		}
 
-		// Token: 0x06021309 RID: 135945 RVA: 0x0049C730 File Offset: 0x0049A930
+		// Token: 0x0602325D RID: 143965 RVA: 0x004D66BC File Offset: 0x004D48BC
 		public static void AddBindMonsterEntityId(FlatBufferBuilder builder, int bindMonsterEntityId)
 		{
 			builder.AddInt(3, bindMonsterEntityId, 0);
 		}
 
-		// Token: 0x0602130A RID: 135946 RVA: 0x0049C73B File Offset: 0x0049A93B
+		// Token: 0x0602325E RID: 143966 RVA: 0x004D66C7 File Offset: 0x004D48C7
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(4, nullMask, 0);
 		}
 
-		// Token: 0x0602130B RID: 135947 RVA: 0x0049C746 File Offset: 0x0049A946
+		// Token: 0x0602325F RID: 143967 RVA: 0x004D66D2 File Offset: 0x004D48D2
 		public static Offset<IDoubleViewBossStateViewStyle> EndIDoubleViewBossStateViewStyle(FlatBufferBuilder builder)
 		{
 			return new Offset<IDoubleViewBossStateViewStyle>(builder.EndTable());
 		}
 
-		// Token: 0x0602130C RID: 135948 RVA: 0x0049C754 File Offset: 0x0049A954
+		// Token: 0x06023260 RID: 143968 RVA: 0x004D66E0 File Offset: 0x004D48E0
 		public IDoubleViewBossStateViewStyleT UnPack()
 		{
 			IDoubleViewBossStateViewStyleT doubleViewBossStateViewStyleT = new IDoubleViewBossStateViewStyleT();
@@ -184,7 +184,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return doubleViewBossStateViewStyleT;
 		}
 
-		// Token: 0x0602130D RID: 135949 RVA: 0x0049C770 File Offset: 0x0049A970
+		// Token: 0x06023261 RID: 143969 RVA: 0x004D66FC File Offset: 0x004D48FC
 		public void UnPackTo(IDoubleViewBossStateViewStyleT _o)
 		{
 			_o.Type = this.Type;
@@ -194,7 +194,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x0602130E RID: 135950 RVA: 0x0049C7DC File Offset: 0x0049A9DC
+		// Token: 0x06023262 RID: 143970 RVA: 0x004D6768 File Offset: 0x004D4968
 		public static Offset<IDoubleViewBossStateViewStyle> Pack(FlatBufferBuilder builder, IDoubleViewBossStateViewStyleT _o)
 		{
 			if (_o == null)
@@ -205,7 +205,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return IDoubleViewBossStateViewStyle.CreateIDoubleViewBossStateViewStyle(builder, _o.Type, _o.Slot, mainStateTextTargetOffset, _o.BindMonsterEntityId, _o.NullMask);
 		}
 
-		// Token: 0x0400E0D9 RID: 57561
+		// Token: 0x0400ECD6 RID: 60630
 		private Table __p;
 	}
 }

@@ -4,10 +4,10 @@ using System.Text.Json.Serialization;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x020009A5 RID: 2469
+	// Token: 0x02000A5A RID: 2650
 	public class EMotorInteractConstraintTypeJsonConverter : JsonConverter<EMotorInteractConstraintType>
 	{
-		// Token: 0x06003719 RID: 14105 RVA: 0x0008F420 File Offset: 0x0008D620
+		// Token: 0x06003AA9 RID: 15017 RVA: 0x000974E4 File Offset: 0x000956E4
 		public override EMotorInteractConstraintType Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
 		{
 			string @string = reader.GetString();
@@ -18,7 +18,7 @@ namespace Aki.TDConfigMgr.Component
 			return EMotorInteractConstraintTypeExtensions.FromString(@string);
 		}
 
-		// Token: 0x0600371A RID: 14106 RVA: 0x0008F444 File Offset: 0x0008D644
+		// Token: 0x06003AAA RID: 15018 RVA: 0x00097508 File Offset: 0x00095708
 		public override void Write(Utf8JsonWriter writer, EMotorInteractConstraintType value, JsonSerializerOptions options)
 		{
 			writer.WriteStringValue(value.ToEnumString());

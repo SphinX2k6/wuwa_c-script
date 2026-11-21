@@ -1,22 +1,22 @@
 ﻿using System;
 using UnrealEngine;
 
-// Token: 0x02002FC3 RID: 12227
+// Token: 0x02002517 RID: 9495
 public class GameplayCueHideMesh : GameplayCueBase
 {
-	// Token: 0x06019EC0 RID: 106176 RVA: 0x006C7E98 File Offset: 0x006C6098
+	// Token: 0x060177D2 RID: 96210 RVA: 0x006EE764 File Offset: 0x006EC964
 	protected override void OnCreate()
 	{
 		this.HideMesh(true);
 	}
 
-	// Token: 0x06019EC1 RID: 106177 RVA: 0x006C7EA1 File Offset: 0x006C60A1
+	// Token: 0x060177D3 RID: 96211 RVA: 0x006EE76D File Offset: 0x006EC96D
 	protected override void OnDestroy()
 	{
 		this.HideMesh(false);
 	}
 
-	// Token: 0x06019EC2 RID: 106178 RVA: 0x006C7EAC File Offset: 0x006C60AC
+	// Token: 0x060177D4 RID: 96212 RVA: 0x006EE778 File Offset: 0x006EC978
 	private void HideMesh(bool bStart)
 	{
 		if (this.CueConfig.ParametersLength == 0)

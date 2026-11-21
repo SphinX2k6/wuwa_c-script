@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Match
 {
-	// Token: 0x020043E8 RID: 17384
+	// Token: 0x0200484D RID: 18509
 	public enum EInhaledItemType : byte
 	{
-		// Token: 0x0400C2BB RID: 49851
+		// Token: 0x0400CCDF RID: 52447
 		LonelyDollPollutant,
-		// Token: 0x0400C2BC RID: 49852
+		// Token: 0x0400CCE0 RID: 52448
 		LonelyDollPinkPollutant,
-		// Token: 0x0400C2BD RID: 49853
+		// Token: 0x0400CCE1 RID: 52449
 		LonelyDollRedPollutant
 	}
 }

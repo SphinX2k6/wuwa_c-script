@@ -8,13 +8,13 @@ using Cysharp.Threading.Tasks.CompilerServices;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 {
-	// Token: 0x02006854 RID: 26708
+	// Token: 0x020057A4 RID: 22436
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class ShopSourceAdapter : IDragSourceAdapter
 	{
-		// Token: 0x17009765 RID: 38757
-		// (get) Token: 0x06042ADE RID: 273118 RVA: 0x0103855C File Offset: 0x0103675C
+		// Token: 0x17006AA6 RID: 27302
+		// (get) Token: 0x06037633 RID: 226867 RVA: 0x00F79AA8 File Offset: 0x00F77CA8
 		public EDragSourceKind Kind
 		{
 			get
@@ -23,7 +23,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			}
 		}
 
-		// Token: 0x06042ADF RID: 273119 RVA: 0x0103855F File Offset: 0x0103675F
+		// Token: 0x06037634 RID: 226868 RVA: 0x00F79AAB File Offset: 0x00F77CAB
 		public ShopSourceAdapter(ActivityDangoBrawlData data, DragContext context, DangoBrawlPlatformState platformState)
 		{
 			this.Data = data;
@@ -31,7 +31,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			this.PlatformState = platformState;
 		}
 
-		// Token: 0x06042AE0 RID: 273120 RVA: 0x0103857C File Offset: 0x0103677C
+		// Token: 0x06037635 RID: 226869 RVA: 0x00F79AC8 File Offset: 0x00F77CC8
 		[return: Nullable(new byte[]
 		{
 			0,
@@ -48,13 +48,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			return <Build>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042AE1 RID: 273121 RVA: 0x010385C7 File Offset: 0x010367C7
+		// Token: 0x06037636 RID: 226870 RVA: 0x00F79B13 File Offset: 0x00F77D13
 		public void Cancel(IDragVisual visual, [Nullable(2)] ItemSucAnchor anchor)
 		{
 			visual.Destroy();
 		}
 
-		// Token: 0x06042AE2 RID: 273122 RVA: 0x010385D0 File Offset: 0x010367D0
+		// Token: 0x06037637 RID: 226871 RVA: 0x00F79B1C File Offset: 0x00F77D1C
 		[return: Nullable(0)]
 		public UniTask<bool> Commit(IDragVisual visual, DragTarget target, [Nullable(2)] ItemSucAnchor anchor, [Nullable(new byte[]
 		{
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			return <Commit>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06042AE3 RID: 273123 RVA: 0x0103862C File Offset: 0x0103682C
+		// Token: 0x06037638 RID: 226872 RVA: 0x00F79B78 File Offset: 0x00F77D78
 		[return: Nullable(2)]
 		public OpSnapshot ApplyLocal(IDragVisual visual, DragTarget target, [Nullable(2)] ItemSucAnchor anchor)
 		{
@@ -81,13 +81,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			return null;
 		}
 
-		// Token: 0x06042AE4 RID: 273124 RVA: 0x01038659 File Offset: 0x01036859
+		// Token: 0x06037639 RID: 226873 RVA: 0x00F79BA5 File Offset: 0x00F77DA5
 		public DangoBrawlBagOpInfo[] BuildServerOpInfo(IDragVisual visual, DragTarget target)
 		{
 			return Array.Empty<DangoBrawlBagOpInfo>();
 		}
 
-		// Token: 0x06042AE5 RID: 273125 RVA: 0x01038660 File Offset: 0x01036860
+		// Token: 0x0603763A RID: 226874 RVA: 0x00F79BAC File Offset: 0x00F77DAC
 		[return: Nullable(2)]
 		public DeferredShopBuyParams SetupLocalDeferred(IDragVisual visual, DragTarget target)
 		{
@@ -145,13 +145,13 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl.Touch
 			};
 		}
 
-		// Token: 0x04022B77 RID: 142199
+		// Token: 0x0401D3D4 RID: 119764
 		private readonly ActivityDangoBrawlData Data;
 
-		// Token: 0x04022B78 RID: 142200
+		// Token: 0x0401D3D5 RID: 119765
 		private readonly DragContext Context;
 
-		// Token: 0x04022B79 RID: 142201
+		// Token: 0x0401D3D6 RID: 119766
 		private readonly DangoBrawlPlatformState PlatformState;
 	}
 }

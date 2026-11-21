@@ -2,30 +2,30 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004C32 RID: 19506
+	// Token: 0x02005125 RID: 20773
 	public class IHasBuffT
 	{
-		// Token: 0x17008DB4 RID: 36276
-		// (get) Token: 0x0601EE9D RID: 126621 RVA: 0x0045365B File Offset: 0x0045185B
-		// (set) Token: 0x0601EE9E RID: 126622 RVA: 0x00453663 File Offset: 0x00451863
+		// Token: 0x170094DD RID: 38109
+		// (get) Token: 0x06020AA1 RID: 133793 RVA: 0x00486F37 File Offset: 0x00485137
+		// (set) Token: 0x06020AA2 RID: 133794 RVA: 0x00486F3F File Offset: 0x0048513F
 		public ECondition Type { get; set; }
 
-		// Token: 0x17008DB5 RID: 36277
-		// (get) Token: 0x0601EE9F RID: 126623 RVA: 0x0045366C File Offset: 0x0045186C
-		// (set) Token: 0x0601EEA0 RID: 126624 RVA: 0x00453674 File Offset: 0x00451874
+		// Token: 0x170094DE RID: 38110
+		// (get) Token: 0x06020AA3 RID: 133795 RVA: 0x00486F48 File Offset: 0x00485148
+		// (set) Token: 0x06020AA4 RID: 133796 RVA: 0x00486F50 File Offset: 0x00485150
 		public long BuffId { get; set; }
 
-		// Token: 0x17008DB6 RID: 36278
-		// (get) Token: 0x0601EEA1 RID: 126625 RVA: 0x0045367D File Offset: 0x0045187D
-		// (set) Token: 0x0601EEA2 RID: 126626 RVA: 0x00453685 File Offset: 0x00451885
+		// Token: 0x170094DF RID: 38111
+		// (get) Token: 0x06020AA5 RID: 133797 RVA: 0x00486F59 File Offset: 0x00485159
+		// (set) Token: 0x06020AA6 RID: 133798 RVA: 0x00486F61 File Offset: 0x00485161
 		public ECompare Compare { get; set; }
 
-		// Token: 0x17008DB7 RID: 36279
-		// (get) Token: 0x0601EEA3 RID: 126627 RVA: 0x0045368E File Offset: 0x0045188E
-		// (set) Token: 0x0601EEA4 RID: 126628 RVA: 0x00453696 File Offset: 0x00451896
+		// Token: 0x170094E0 RID: 38112
+		// (get) Token: 0x06020AA7 RID: 133799 RVA: 0x00486F6A File Offset: 0x0048516A
+		// (set) Token: 0x06020AA8 RID: 133800 RVA: 0x00486F72 File Offset: 0x00485172
 		public TOnlinePlayerConditionTargetUnion OnlinePlayerConditionTargetOption { get; set; }
 
-		// Token: 0x0601EEA5 RID: 126629 RVA: 0x0045369F File Offset: 0x0045189F
+		// Token: 0x06020AA9 RID: 133801 RVA: 0x00486F7B File Offset: 0x0048517B
 		public IHasBuffT()
 		{
 			this.Type = ECondition.CompareVar;

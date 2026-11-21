@@ -7,13 +7,13 @@ using CSharpScript.Game.LevelGamePlay.Guarantee.GuaranteeActions;
 
 namespace CSharpScript.Game.LevelGamePlay.Guarantee
 {
-	// Token: 0x02006E00 RID: 28160
+	// Token: 0x02005F7F RID: 24447
 	[NullableContext(1)]
 	[Nullable(0)]
 	[Controller(0)]
 	public class GuaranteeController : ControllerBase
 	{
-		// Token: 0x06044B2B RID: 281387 RVA: 0x010F4D34 File Offset: 0x010F2F34
+		// Token: 0x0603AC90 RID: 240784 RVA: 0x0109F0F8 File Offset: 0x0109D2F8
 		protected override bool OnInit()
 		{
 			EventSystem.Instance.Add<string, GeneralContext, GuaranteeActionInfo, bool?>(EEventName.AddGuaranteeAction, new Action<string, GeneralContext, GuaranteeActionInfo, bool?>(this.AddGuaranteeAction));
@@ -22,7 +22,7 @@ namespace CSharpScript.Game.LevelGamePlay.Guarantee
 			return true;
 		}
 
-		// Token: 0x06044B2C RID: 281388 RVA: 0x010F4D98 File Offset: 0x010F2F98
+		// Token: 0x0603AC91 RID: 240785 RVA: 0x0109F15C File Offset: 0x0109D35C
 		protected override bool OnClear()
 		{
 			EventSystem.Instance.Remove(EEventName.AddGuaranteeAction, new <>f__AnonymousDelegate1<string, GeneralContext, GuaranteeActionInfo, bool?>(this.AddGuaranteeAction));
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.LevelGamePlay.Guarantee
 			return true;
 		}
 
-		// Token: 0x06044B2D RID: 281389 RVA: 0x010F4EA8 File Offset: 0x010F30A8
+		// Token: 0x0603AC92 RID: 240786 RVA: 0x0109F26C File Offset: 0x0109D46C
 		public void ExecSceneGuaranteeActions()
 		{
 			LevelGeneralModel instance = LevelGeneralModel.Instance;
@@ -67,7 +67,7 @@ namespace CSharpScript.Game.LevelGamePlay.Guarantee
 			}
 		}
 
-		// Token: 0x06044B2E RID: 281390 RVA: 0x010F4F18 File Offset: 0x010F3118
+		// Token: 0x0603AC93 RID: 240787 RVA: 0x0109F2DC File Offset: 0x0109D4DC
 		public void ExecEntityGuaranteeActions(ERemoveEntityType removeType, EntityHandle handle)
 		{
 			LevelGeneralModel instance = LevelGeneralModel.Instance;
@@ -84,19 +84,19 @@ namespace CSharpScript.Game.LevelGamePlay.Guarantee
 			}
 		}
 
-		// Token: 0x06044B2F RID: 281391 RVA: 0x010F4FA8 File Offset: 0x010F31A8
+		// Token: 0x0603AC94 RID: 240788 RVA: 0x0109F36C File Offset: 0x0109D56C
 		private void AddGuaranteeAction(string instigatorName, [Nullable(2)] GeneralContext instigatorContext, GuaranteeActionInfo guaranteeActionInfo, bool? bNeedGuaranteeInQuest = false)
 		{
 			this.UpdateGuaranteeActions(instigatorName, instigatorContext, true, guaranteeActionInfo, bNeedGuaranteeInQuest.GetValueOrDefault());
 		}
 
-		// Token: 0x06044B30 RID: 281392 RVA: 0x010F4FBB File Offset: 0x010F31BB
+		// Token: 0x0603AC95 RID: 240789 RVA: 0x0109F37F File Offset: 0x0109D57F
 		private void RemGuaranteeAction(string instigatorName, [Nullable(2)] GeneralContext instigatorContext, GuaranteeActionInfo guaranteeActionInfo, bool? bNeedGuaranteeInQuest = false)
 		{
 			this.UpdateGuaranteeActions(instigatorName, instigatorContext, false, guaranteeActionInfo, bNeedGuaranteeInQuest.GetValueOrDefault());
 		}
 
-		// Token: 0x06044B31 RID: 281393 RVA: 0x010F4FD0 File Offset: 0x010F31D0
+		// Token: 0x0603AC96 RID: 240790 RVA: 0x0109F394 File Offset: 0x0109D594
 		private unsafe void UpdateGuaranteeActions(string instigatorName, [Nullable(2)] GeneralContext instigatorContext, bool isAdd, GuaranteeActionInfo guaranteeActionInfo, bool bNeedGuaranteeInQuest)
 		{
 			if (instigatorContext == null || instigatorContext.Type.GetValueOrDefault() == EGeneralContextType.Guarantee)
@@ -108,7 +108,8 @@ namespace CSharpScript.Game.LevelGamePlay.Guarantee
 				return;
 			}
 			EGuaranteeAction name = guaranteeActionInfo.Name;
-			if (instigatorContext.Type.GetValueOrDefault() != EGeneralContextType.Entity)
+			EntityContext entityContext = GeneralContext.ExtractContext<EntityContext>(instigatorContext, EGeneralContextType.Entity);
+			if (entityContext == null)
 			{
 				EActionFilterMode actionFilterMode = GuaranteeActionCenter.Instance.GetActionFilterMode(guaranteeActionInfo.Name);
 				LevelGeneralModel instance = LevelGeneralModel.Instance;
@@ -148,8 +149,7 @@ namespace CSharpScript.Game.LevelGamePlay.Guarantee
 				}
 				return;
 			}
-			EntityContext entityContext = instigatorContext as EntityContext;
-			if (entityContext == null || entityContext.EntityId == null)
+			if (entityContext.EntityId == null)
 			{
 				return;
 			}
@@ -170,16 +170,16 @@ namespace CSharpScript.Game.LevelGamePlay.Guarantee
 			}
 			else
 			{
+				instance4.PopEntityGuaranteeActionInfo(entityContext.EntityId, guaranteeActionInfo);
 				EntityHandle handle2 = CharacterModel.Instance.GetHandle(entityContext.EntityId.GetValueOrDefault());
-				if (handle2 != null && handle2.Valid && EventSystem.Instance.HasWithTarget(handle2, EEventName.RemoveEntity, new Action<ERemoveEntityType, EntityHandle>(this.ExecEntityGuaranteeActions)))
+				if (handle2 != null && handle2.Valid && !instance4.GetEntityGuaranteeActionInfos().ContainsKey(handle2) && EventSystem.Instance.HasWithTarget(handle2, EEventName.RemoveEntity, new Action<ERemoveEntityType, EntityHandle>(this.ExecEntityGuaranteeActions)))
 				{
 					EventSystem.Instance.RemoveWithTarget(handle2, EEventName.RemoveEntity, new Action<ERemoveEntityType, EntityHandle>(this.ExecEntityGuaranteeActions));
 				}
-				instance4.PopEntityGuaranteeActionInfo(entityContext.EntityId, guaranteeActionInfo);
 			}
 		}
 
-		// Token: 0x06044B32 RID: 281394 RVA: 0x010F5284 File Offset: 0x010F3484
+		// Token: 0x0603AC97 RID: 240791 RVA: 0x0109F644 File Offset: 0x0109D844
 		public unsafe void ExecuteActions(List<GuaranteeActionInfo> actionInfos, GuaranteeContext context)
 		{
 			if (context == null)
@@ -205,8 +205,8 @@ namespace CSharpScript.Game.LevelGamePlay.Guarantee
 			}
 		}
 
-		// Token: 0x170099EB RID: 39403
-		// (get) Token: 0x06044B33 RID: 281395 RVA: 0x010F5350 File Offset: 0x010F3550
+		// Token: 0x17006EEE RID: 28398
+		// (get) Token: 0x0603AC98 RID: 240792 RVA: 0x0109F710 File Offset: 0x0109D910
 		public static GuaranteeController Instance
 		{
 			get
@@ -215,7 +215,7 @@ namespace CSharpScript.Game.LevelGamePlay.Guarantee
 			}
 		}
 
-		// Token: 0x06044B34 RID: 281396 RVA: 0x010F5357 File Offset: 0x010F3557
+		// Token: 0x0603AC99 RID: 240793 RVA: 0x0109F717 File Offset: 0x0109D917
 		public static GuaranteeController GetOrCreateInstance()
 		{
 			if (GuaranteeController._Instance == null)
@@ -225,7 +225,7 @@ namespace CSharpScript.Game.LevelGamePlay.Guarantee
 			return GuaranteeController._Instance;
 		}
 
-		// Token: 0x06044B35 RID: 281397 RVA: 0x010F536B File Offset: 0x010F356B
+		// Token: 0x0603AC9A RID: 240794 RVA: 0x0109F72B File Offset: 0x0109D92B
 		public static bool CreateInstance()
 		{
 			if (GuaranteeController._Instance != null)
@@ -236,24 +236,24 @@ namespace CSharpScript.Game.LevelGamePlay.Guarantee
 			return true;
 		}
 
-		// Token: 0x06044B36 RID: 281398 RVA: 0x010F5381 File Offset: 0x010F3581
+		// Token: 0x0603AC9B RID: 240795 RVA: 0x0109F741 File Offset: 0x0109D941
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06044B37 RID: 281399 RVA: 0x010F5383 File Offset: 0x010F3583
+		// Token: 0x0603AC9C RID: 240796 RVA: 0x0109F743 File Offset: 0x0109D943
 		public static void ResetStaticDefaultValue()
 		{
 			GuaranteeController._Instance = null;
 		}
 
-		// Token: 0x06044B38 RID: 281400 RVA: 0x010F538B File Offset: 0x010F358B
+		// Token: 0x0603AC9D RID: 240797 RVA: 0x0109F74B File Offset: 0x0109D94B
 		static GuaranteeController()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(GuaranteeController.CreateStaticDefaultValue), new Action(GuaranteeController.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x04023BCC RID: 146380
+		// Token: 0x0401EE6F RID: 126575
 		[Nullable(2)]
 		private static GuaranteeController _Instance;
 	}

@@ -7,39 +7,65 @@ using UnrealEngine.Service;
 using UnrealEngine.Service.Flags;
 using UnrealEngine.Utils;
 
-// Token: 0x02002CC8 RID: 11464
+// Token: 0x02002221 RID: 8737
 [UClass("/Game/Aki/TypeScript/Game/Module/UiNavigation/New/", EClassFlags.CLASS_None)]
 [UnrealObjectPath("/Game/Aki/TypeScript/Game/Module/UiNavigation/New/TsUiNavigationPlatformChangeListener.TsUiNavigationPlatformChangeListener_C")]
 public class TsUiNavigationPlatformChangeListener : ULGUIBehaviour, IUnrealUObject, IUnrealObject
 {
-	// Token: 0x06018039 RID: 98361 RVA: 0x0061AA90 File Offset: 0x00618C90
-	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe override void AwakeBP()
+	// Token: 0x170020BD RID: 8381
+	// (get) Token: 0x060158B2 RID: 88242 RVA: 0x0064069D File Offset: 0x0063E89D
+	// (set) Token: 0x060158B3 RID: 88243 RVA: 0x006406AD File Offset: 0x0063E8AD
+	[UProperty(EPropertyFlags.CPF_None)]
+	public unsafe bool HideInKeyBoard
 	{
-		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("AwakeBP"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		get
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			return *(base.NativePtr + (IntPtr)TsUiNavigationPlatformChangeListener.__PropertyOffset_HideInKeyBoard) != 0;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
+		set
 		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			*(base.NativePtr + (IntPtr)TsUiNavigationPlatformChangeListener.__PropertyOffset_HideInKeyBoard) = (value ? 1 : 0);
 		}
 	}
 
-	// Token: 0x0601803A RID: 98362 RVA: 0x0061AB00 File Offset: 0x00618D00
+	// Token: 0x170020BE RID: 8382
+	// (get) Token: 0x060158B4 RID: 88244 RVA: 0x006406BE File Offset: 0x0063E8BE
+	// (set) Token: 0x060158B5 RID: 88245 RVA: 0x006406CE File Offset: 0x0063E8CE
+	[UProperty(EPropertyFlags.CPF_None)]
+	public unsafe bool UseActive
+	{
+		get
+		{
+			return *(base.NativePtr + (IntPtr)TsUiNavigationPlatformChangeListener.__PropertyOffset_UseActive) != 0;
+		}
+		set
+		{
+			*(base.NativePtr + (IntPtr)TsUiNavigationPlatformChangeListener.__PropertyOffset_UseActive) = (value ? 1 : 0);
+		}
+	}
+
+	// Token: 0x060158B6 RID: 88246 RVA: 0x006406E0 File Offset: 0x0063E8E0
+	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
+	public override void AwakeBP()
+	{
+		IntPtr nativeUFunctionPtr;
+		int num;
+		if (base.GetType() == typeof(TsUiNavigationPlatformChangeListener) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("AwakeBP"), TsUiNavigationPlatformChangeListener.StaticClass(), out nativeUFunctionPtr, out num))
+		{
+			this.AwakeBP_Implementation();
+			return;
+		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
+	}
+
+	// Token: 0x060158B7 RID: 88247 RVA: 0x00640739 File Offset: 0x0063E939
 	protected virtual void AwakeBP_Implementation()
 	{
 		if (GlobalData.GameInstance == null)
 		{
 			return;
 		}
-		this.ChangeAlpha();
+		this.ChangeState();
 		UiNavigationModel instance = UiNavigationModel.Instance;
 		if (instance == null)
 		{
@@ -48,27 +74,21 @@ public class TsUiNavigationPlatformChangeListener : ULGUIBehaviour, IUnrealUObje
 		instance.AddPlatformListener(this);
 	}
 
-	// Token: 0x0601803B RID: 98363 RVA: 0x0061AB20 File Offset: 0x00618D20
+	// Token: 0x060158B8 RID: 88248 RVA: 0x0064075C File Offset: 0x0063E95C
 	[UFunction(EFunctionFlags.FUNC_BlueprintNativeEvent)]
-	public unsafe override void OnPreDestroyBP()
+	public override void OnPreDestroyBP()
 	{
+		IntPtr nativeUFunctionPtr;
 		int num;
-		IntPtr ufunctionPtrAndSizeChecked = UnrealReflectionUtils.GetUFunctionPtrAndSizeChecked(base.NativePtr, new FName("OnPreDestroyBP"), out num);
-		byte* ptr = stackalloc byte[(UIntPtr)((num != 0) ? (num + 15) : 0)];
-		byte* dest = null;
-		if (num != 0)
+		if (base.GetType() == typeof(TsUiNavigationPlatformChangeListener) || !UnrealReflectionUtils.GetUFunctionPtrAndSizeAndNeedVirtualChecked(base.NativePtr, new FName("OnPreDestroyBP"), TsUiNavigationPlatformChangeListener.StaticClass(), out nativeUFunctionPtr, out num))
 		{
-			dest = (ptr + 15L & -16L);
-			UnrealReflectionUtils.InitializeStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
+			this.OnPreDestroyBP_Implementation();
+			return;
 		}
-		UnrealReflectionUtils.CallVirtualUFunction(base.NativePtr, ufunctionPtrAndSizeChecked, null);
-		if (num != 0)
-		{
-			UnrealReflectionUtils.DestroyStruct(ufunctionPtrAndSizeChecked, (void*)dest, 1);
-		}
+		UnrealReflectionUtils.CallUFunction(base.NativePtr, nativeUFunctionPtr, null);
 	}
 
-	// Token: 0x0601803C RID: 98364 RVA: 0x0061AB90 File Offset: 0x00618D90
+	// Token: 0x060158B9 RID: 88249 RVA: 0x006407B5 File Offset: 0x0063E9B5
 	protected virtual void OnPreDestroyBP_Implementation()
 	{
 		if (GlobalData.GameInstance == null)
@@ -78,38 +98,26 @@ public class TsUiNavigationPlatformChangeListener : ULGUIBehaviour, IUnrealUObje
 		UiNavigationModel.Instance.RemovePlatformListener(this);
 	}
 
-	// Token: 0x0601803D RID: 98365 RVA: 0x0061ABA8 File Offset: 0x00618DA8
-	public void ChangeAlpha()
+	// Token: 0x060158BA RID: 88250 RVA: 0x006407CC File Offset: 0x0063E9CC
+	public void ChangeState()
 	{
-		if (Info.Instance.IsInGamepad())
+		UUIItem rootComponent = base.GetRootComponent();
+		bool flag = Info.Instance.IsInGamepad() == this.HideInKeyBoard;
+		if (this.UseActive)
 		{
-			this.IsChangeAlpha = true;
-			UUIItem rootComponent = base.GetRootComponent();
-			if (rootComponent == null)
+			if (rootComponent != null)
 			{
+				rootComponent.SetUIActive(flag);
 				return;
 			}
-			rootComponent.SetAlpha(0f);
-			return;
 		}
-		else
+		else if (rootComponent != null)
 		{
-			if (!this.IsChangeAlpha)
-			{
-				return;
-			}
-			this.IsChangeAlpha = false;
-			UUIItem rootComponent2 = base.GetRootComponent();
-			if (rootComponent2 == null)
-			{
-				return;
-			}
-			rootComponent2.SetAlpha(1f);
-			return;
+			rootComponent.SetAlpha(flag > false);
 		}
 	}
 
-	// Token: 0x0601803E RID: 98366 RVA: 0x0061AC03 File Offset: 0x00618E03
+	// Token: 0x060158BB RID: 88251 RVA: 0x00640814 File Offset: 0x0063EA14
 	public new static UClassStackOnlyPtr StaticClass()
 	{
 		if (TsUiNavigationPlatformChangeListener._ClassPtr == IntPtr.Zero)
@@ -119,44 +127,47 @@ public class TsUiNavigationPlatformChangeListener : ULGUIBehaviour, IUnrealUObje
 		return TsUiNavigationPlatformChangeListener._ClassPtr;
 	}
 
-	// Token: 0x0601803F RID: 98367 RVA: 0x0061AC28 File Offset: 0x00618E28
+	// Token: 0x060158BC RID: 88252 RVA: 0x00640838 File Offset: 0x0063EA38
 	public TsUiNavigationPlatformChangeListener() : this(BuiltinUtils.AllocNativeUObject(TsUiNavigationPlatformChangeListener.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 	{
 	}
 
-	// Token: 0x06018040 RID: 98368 RVA: 0x0061AC50 File Offset: 0x00618E50
+	// Token: 0x060158BD RID: 88253 RVA: 0x00640860 File Offset: 0x0063EA60
 	[NullableContext(1)]
 	public TsUiNavigationPlatformChangeListener(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(TsUiNavigationPlatformChangeListener.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 	{
 	}
 
-	// Token: 0x06018041 RID: 98369 RVA: 0x0061AC83 File Offset: 0x00618E83
+	// Token: 0x060158BE RID: 88254 RVA: 0x00640893 File Offset: 0x0063EA93
 	protected TsUiNavigationPlatformChangeListener(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 	{
 	}
 
-	// Token: 0x06018042 RID: 98370 RVA: 0x0061AC8C File Offset: 0x00618E8C
+	// Token: 0x060158BF RID: 88255 RVA: 0x0064089C File Offset: 0x0063EA9C
 	protected virtual void __CPPCALL_AwakeBP_Implementation()
 	{
 		this.AwakeBP_Implementation();
 	}
 
-	// Token: 0x06018043 RID: 98371 RVA: 0x0061AC94 File Offset: 0x00618E94
+	// Token: 0x060158C0 RID: 88256 RVA: 0x006408A4 File Offset: 0x0063EAA4
 	protected virtual void __CPPCALL_OnPreDestroyBP_Implementation()
 	{
 		this.OnPreDestroyBP_Implementation();
 	}
 
-	// Token: 0x0400B2DC RID: 45788
-	private bool IsChangeAlpha;
-
-	// Token: 0x0400B2DD RID: 45789
+	// Token: 0x0400B647 RID: 46663
 	[Nullable(1)]
 	public new const string __ObjectPath = "/Game/Aki/TypeScript/Game/Module/UiNavigation/New/TsUiNavigationPlatformChangeListener.TsUiNavigationPlatformChangeListener_C";
 
-	// Token: 0x0400B2DE RID: 45790
+	// Token: 0x0400B648 RID: 46664
 	private static IntPtr _ClassPtr;
 
-	// Token: 0x0400B2DF RID: 45791
+	// Token: 0x0400B649 RID: 46665
 	private static IntPtr _ClassDefaultObjectPtr;
+
+	// Token: 0x0400B64A RID: 46666
+	private static int __PropertyOffset_HideInKeyBoard;
+
+	// Token: 0x0400B64B RID: 46667
+	private static int __PropertyOffset_UseActive;
 }

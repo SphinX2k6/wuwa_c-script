@@ -2,7 +2,7 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200652C RID: 25900
+	// Token: 0x02006B9A RID: 27546
 	public class IDangoAbyssCreateRewardTreasureBoxT
 	{
 	}

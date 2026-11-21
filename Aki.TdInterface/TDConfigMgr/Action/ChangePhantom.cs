@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x020014E0 RID: 5344
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001639 RID: 5689
 	public class ChangePhantom : ActionParams
 	{
-		// Token: 0x060079A4 RID: 31140 RVA: 0x00123030 File Offset: 0x00121230
+		// Token: 0x06008071 RID: 32881 RVA: 0x00131C7C File Offset: 0x0012FE7C
 		private ChangePhantom_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x060079A5 RID: 31141 RVA: 0x00123068 File Offset: 0x00121268
+		// Token: 0x06008072 RID: 32882 RVA: 0x00131CB4 File Offset: 0x0012FEB4
 		public static ChangePhantom Create([Nullable(2)] ChangePhantom instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060079A6 RID: 31142 RVA: 0x0012307B File Offset: 0x0012127B
+		// Token: 0x06008073 RID: 32883 RVA: 0x00131CC7 File Offset: 0x0012FEC7
 		public static ChangePhantom CreateFromSetValue([Nullable(2)] ChangePhantom_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x060079A7 RID: 31143 RVA: 0x0012308E File Offset: 0x0012128E
+		// Token: 0x06008074 RID: 32884 RVA: 0x00131CDA File Offset: 0x0012FEDA
 		public ChangePhantom_SetValue ToSetValue()
 		{
 			return new ChangePhantom_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170028B8 RID: 10424
-		// (get) Token: 0x060079A8 RID: 31144 RVA: 0x001230A1 File Offset: 0x001212A1
-		// (set) Token: 0x060079A9 RID: 31145 RVA: 0x001230CC File Offset: 0x001212CC
+		// Token: 0x17002AA2 RID: 10914
+		// (get) Token: 0x06008075 RID: 32885 RVA: 0x00131CED File Offset: 0x0012FEED
+		// (set) Token: 0x06008076 RID: 32886 RVA: 0x00131D18 File Offset: 0x0012FF18
 		public virtual int Id
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04004691 RID: 18065
+		// Token: 0x04004A2C RID: 18988
 		[Nullable(2)]
 		protected new ChangePhantom FbInstance;
 
-		// Token: 0x04004692 RID: 18066
+		// Token: 0x04004A2D RID: 18989
 		[Nullable(2)]
 		protected ChangePhantom_SetValue PocoInterface;
 	}

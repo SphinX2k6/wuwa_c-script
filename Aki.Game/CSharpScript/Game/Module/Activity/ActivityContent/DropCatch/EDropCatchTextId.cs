@@ -3,11 +3,11 @@ using CSharpScript.Core.Common;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DropCatch
 {
-	// Token: 0x02006682 RID: 26242
+	// Token: 0x020055D2 RID: 21970
 	[EnumExtensions]
 	public enum EDropCatchTextId
 	{
-		// Token: 0x04022375 RID: 140149
+		// Token: 0x0401CBCE RID: 117710
 		[EnumStringMember("DropCatch_ScoreLevel")]
 		TextScoreLevel
 	}

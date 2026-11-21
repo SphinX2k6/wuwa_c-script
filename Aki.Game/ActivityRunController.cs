@@ -6,76 +6,76 @@ using CSharpScript.Game.Common.Event;
 using CSharpScript.Game.Ui;
 using Google.Protobuf;
 
-// Token: 0x020014D2 RID: 5330
+// Token: 0x0200098A RID: 2442
 [NullableContext(1)]
 [Nullable(0)]
 [Controller(0)]
 public class ActivityRunController : ActivityControllerBase
 {
-	// Token: 0x0600976A RID: 38762 RVA: 0x0020B74E File Offset: 0x0020994E
+	// Token: 0x06006B44 RID: 27460 RVA: 0x0021548E File Offset: 0x0021368E
 	protected override bool OnGetIsOpeningActivityRelativeView()
 	{
 		return UiManager.Instance.IsViewOpen(EUiViewName.ActivityRunView);
 	}
 
-	// Token: 0x0600976B RID: 38763 RVA: 0x0020B75F File Offset: 0x0020995F
+	// Token: 0x06006B45 RID: 27461 RVA: 0x0021549F File Offset: 0x0021369F
 	protected override void OnOpenView(ActivityBaseData data)
 	{
 		UiManager.Instance.OpenView(EUiViewName.ActivityRunView, data, null);
 	}
 
-	// Token: 0x0600976C RID: 38764 RVA: 0x0020B772 File Offset: 0x00209972
+	// Token: 0x06006B46 RID: 27462 RVA: 0x002154B2 File Offset: 0x002136B2
 	protected override string OnGetActivityResource(ActivityBaseData data)
 	{
 		return "UiItem_Running";
 	}
 
-	// Token: 0x0600976D RID: 38765 RVA: 0x0020B779 File Offset: 0x00209979
+	// Token: 0x06006B47 RID: 27463 RVA: 0x002154B9 File Offset: 0x002136B9
 	protected override ActivitySubViewBase OnCreateSubPageComponent(ActivityBaseData data)
 	{
 		return new ActivitySubViewRun();
 	}
 
-	// Token: 0x0600976E RID: 38766 RVA: 0x0020B780 File Offset: 0x00209980
+	// Token: 0x06006B48 RID: 27464 RVA: 0x002154C0 File Offset: 0x002136C0
 	protected override ActivityBaseData OnCreateActivityData(ActivityData data)
 	{
 		return new ActivityRun();
 	}
 
-	// Token: 0x0600976F RID: 38767 RVA: 0x0020B787 File Offset: 0x00209987
+	// Token: 0x06006B49 RID: 27465 RVA: 0x002154C7 File Offset: 0x002136C7
 	protected override void OnAddEvents()
 	{
 		EventSystem.Instance.Add<int, IReadOnlyList<int>>(EEventName.OnReceiveActivityData, new Action<int, IReadOnlyList<int>>(this.OnReceiveActivityData));
 	}
 
-	// Token: 0x06009770 RID: 38768 RVA: 0x0020B7A5 File Offset: 0x002099A5
+	// Token: 0x06006B4A RID: 27466 RVA: 0x002154E5 File Offset: 0x002136E5
 	protected override void OnRemoveEvents()
 	{
 		EventSystem.Instance.Remove<int, IReadOnlyList<int>>(EEventName.OnReceiveActivityData, new Action<int, IReadOnlyList<int>>(this.OnReceiveActivityData));
 	}
 
-	// Token: 0x06009771 RID: 38769 RVA: 0x0020B7C3 File Offset: 0x002099C3
+	// Token: 0x06006B4B RID: 27467 RVA: 0x00215503 File Offset: 0x00213703
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.ParkourChallengeOpenNotify, new Action<IMessage, Net.CallbackStatus>(this.OnParkourChallengeOpenNotify));
 		Net.Instance.Register(ENotifyMessageId.ParkourChallengeEndNotify, new Action<IMessage, Net.CallbackStatus>(this.OnParkourChallengeEndNotify));
 	}
 
-	// Token: 0x06009772 RID: 38770 RVA: 0x0020B7FD File Offset: 0x002099FD
+	// Token: 0x06006B4C RID: 27468 RVA: 0x0021553D File Offset: 0x0021373D
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.ParkourChallengeOpenNotify);
 		Net.Instance.UnRegister(ENotifyMessageId.ParkourChallengeEndNotify);
 	}
 
-	// Token: 0x06009773 RID: 38771 RVA: 0x0020B820 File Offset: 0x00209A20
+	// Token: 0x06006B4D RID: 27469 RVA: 0x00215560 File Offset: 0x00213760
 	public void SelectDefaultChallengeId(ActivityBaseData baseData)
 	{
 		int defaultOpenUiChallengeIndex = ActivityRunModel.Instance.GetDefaultOpenUiChallengeIndex(baseData);
 		ActivityRunModel.Instance.SetStartViewSelectIndex(defaultOpenUiChallengeIndex);
 	}
 
-	// Token: 0x06009774 RID: 38772 RVA: 0x0020B844 File Offset: 0x00209A44
+	// Token: 0x06006B4E RID: 27470 RVA: 0x00215584 File Offset: 0x00213784
 	private void RequestChallengeInfo()
 	{
 		ParkourChallengeRequest message = ParkourChallengeRequest.Create();
@@ -86,7 +86,7 @@ public class ActivityRunController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06009775 RID: 38773 RVA: 0x0020B888 File Offset: 0x00209A88
+	// Token: 0x06006B4F RID: 27471 RVA: 0x002155C8 File Offset: 0x002137C8
 	public void RequestTakeChallengeReward(int challengeId, int scoreIndex)
 	{
 		ParkourChallengeTakeRequest parkourChallengeTakeRequest = ParkourChallengeTakeRequest.Create();
@@ -97,14 +97,14 @@ public class ActivityRunController : ActivityControllerBase
 			ParkourChallengeTakeResponse parkourChallengeTakeResponse = (ParkourChallengeTakeResponse)msg;
 			if (parkourChallengeTakeResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(parkourChallengeTakeResponse.ErrorCode, 23450, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(parkourChallengeTakeResponse.ErrorCode, 21667, null, true, true);
 				return;
 			}
 			ActivityRunModel.Instance.OnGetChallengeReward(challengeId, scoreIndex);
 		}, 0);
 	}
 
-	// Token: 0x06009776 RID: 38774 RVA: 0x0020B8E4 File Offset: 0x00209AE4
+	// Token: 0x06006B50 RID: 27472 RVA: 0x00215624 File Offset: 0x00213824
 	[NullableContext(2)]
 	private void OnParkourChallengeOpenNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -112,7 +112,7 @@ public class ActivityRunController : ActivityControllerBase
 		ActivityRunModel.Instance.OnReceiveChallengeOpenNotify(message);
 	}
 
-	// Token: 0x06009777 RID: 38775 RVA: 0x0020B904 File Offset: 0x00209B04
+	// Token: 0x06006B51 RID: 27473 RVA: 0x00215644 File Offset: 0x00213844
 	[NullableContext(2)]
 	private void OnParkourChallengeEndNotify(IMessage msg, Net.CallbackStatus _)
 	{
@@ -145,7 +145,7 @@ public class ActivityRunController : ActivityControllerBase
 		UiManager.Instance.OpenView(EUiViewName.ActivityRunSuccessView, runEndData2, null);
 	}
 
-	// Token: 0x06009778 RID: 38776 RVA: 0x0020B9BC File Offset: 0x00209BBC
+	// Token: 0x06006B52 RID: 27474 RVA: 0x002156FC File Offset: 0x002138FC
 	public void RequestTransToParkourChallenge(int challengeId)
 	{
 		ParkourChallengeTransRequest parkourChallengeTransRequest = ParkourChallengeTransRequest.Create();
@@ -155,7 +155,7 @@ public class ActivityRunController : ActivityControllerBase
 			ParkourChallengeTransResponse parkourChallengeTransResponse = (ParkourChallengeTransResponse)msg;
 			if (parkourChallengeTransResponse.ErrorCode != ErrorCode.Success)
 			{
-				ErrorCodeController.Instance.OpenErrorCodeTipView(parkourChallengeTransResponse.ErrorCode, 23607, null, true, true);
+				ErrorCodeController.Instance.OpenErrorCodeTipView(parkourChallengeTransResponse.ErrorCode, 16542, null, true, true);
 				return;
 			}
 			UiManager.Instance.CloseView(EUiViewName.ActivityRunSuccessView, null);
@@ -163,7 +163,7 @@ public class ActivityRunController : ActivityControllerBase
 		}, 0);
 	}
 
-	// Token: 0x06009779 RID: 38777 RVA: 0x0020BA06 File Offset: 0x00209C06
+	// Token: 0x06006B53 RID: 27475 RVA: 0x00215746 File Offset: 0x00213946
 	private void OnReceiveActivityData(int type, IReadOnlyList<int> activityIds)
 	{
 		if (type == 0)
@@ -172,8 +172,8 @@ public class ActivityRunController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x17000D11 RID: 3345
-	// (get) Token: 0x0600977A RID: 38778 RVA: 0x0020BA11 File Offset: 0x00209C11
+	// Token: 0x17000D32 RID: 3378
+	// (get) Token: 0x06006B54 RID: 27476 RVA: 0x00215751 File Offset: 0x00213951
 	public static ActivityRunController Instance
 	{
 		get
@@ -182,7 +182,7 @@ public class ActivityRunController : ActivityControllerBase
 		}
 	}
 
-	// Token: 0x0600977B RID: 38779 RVA: 0x0020BA18 File Offset: 0x00209C18
+	// Token: 0x06006B55 RID: 27477 RVA: 0x00215758 File Offset: 0x00213958
 	public static ActivityRunController GetOrCreateInstance()
 	{
 		if (ActivityRunController._Instance == null)
@@ -192,7 +192,7 @@ public class ActivityRunController : ActivityControllerBase
 		return ActivityRunController._Instance;
 	}
 
-	// Token: 0x0600977C RID: 38780 RVA: 0x0020BA2C File Offset: 0x00209C2C
+	// Token: 0x06006B56 RID: 27478 RVA: 0x0021576C File Offset: 0x0021396C
 	public static bool CreateInstance()
 	{
 		if (ActivityRunController._Instance != null)
@@ -203,24 +203,24 @@ public class ActivityRunController : ActivityControllerBase
 		return true;
 	}
 
-	// Token: 0x0600977D RID: 38781 RVA: 0x0020BA42 File Offset: 0x00209C42
+	// Token: 0x06006B57 RID: 27479 RVA: 0x00215782 File Offset: 0x00213982
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x0600977E RID: 38782 RVA: 0x0020BA44 File Offset: 0x00209C44
+	// Token: 0x06006B58 RID: 27480 RVA: 0x00215784 File Offset: 0x00213984
 	public static void ResetStaticDefaultValue()
 	{
 		ActivityRunController._Instance = null;
 	}
 
-	// Token: 0x0600977F RID: 38783 RVA: 0x0020BA4C File Offset: 0x00209C4C
+	// Token: 0x06006B59 RID: 27481 RVA: 0x0021578C File Offset: 0x0021398C
 	static ActivityRunController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(ActivityRunController.CreateStaticDefaultValue), new Action(ActivityRunController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x040042AC RID: 17068
+	// Token: 0x04004351 RID: 17233
 	[Nullable(2)]
 	private static ActivityRunController _Instance;
 }

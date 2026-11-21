@@ -3,10 +3,10 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.ShowTimeline
 {
-	// Token: 0x02003BA6 RID: 15270
+	// Token: 0x02003FAE RID: 16302
 	public static class IShowTimelineActionOptionBase_UnionVerify
 	{
-		// Token: 0x06014EE8 RID: 85736 RVA: 0x003093D0 File Offset: 0x003075D0
+		// Token: 0x060163B2 RID: 91058 RVA: 0x0032F968 File Offset: 0x0032DB68
 		public static bool Verify(Verifier verifier, byte typeId, uint tablePos)
 		{
 			bool result;

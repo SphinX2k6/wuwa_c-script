@@ -6,47 +6,47 @@ using UnrealEngine.Utils;
 
 namespace UnrealEngine
 {
-	// Token: 0x020016BD RID: 5821
+	// Token: 0x02000322 RID: 802
 	[UnrealObjectPath("/Script/KuroBulletCore.ActionFlatGroundCollision")]
 	[UnrealStructLayout(56, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 56)]
 	public class UActionFlatGroundCollision : UBulletActionBase, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x06015189 RID: 86409 RVA: 0x001F0452 File Offset: 0x001EE652
+		// Token: 0x06005452 RID: 21586 RVA: 0x0007620B File Offset: 0x0007440B
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			return UActionFlatGroundCollision._ClassPtr;
 		}
 
-		// Token: 0x0601518A RID: 86410 RVA: 0x001F0460 File Offset: 0x001EE660
+		// Token: 0x06005453 RID: 21587 RVA: 0x00076218 File Offset: 0x00074418
 		public UActionFlatGroundCollision() : this(BuiltinUtils.AllocNativeUObject(UActionFlatGroundCollision.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x0601518B RID: 86411 RVA: 0x001F0488 File Offset: 0x001EE688
+		// Token: 0x06005454 RID: 21588 RVA: 0x00076240 File Offset: 0x00074440
 		[NullableContext(1)]
 		public UActionFlatGroundCollision(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(UActionFlatGroundCollision.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x0601518C RID: 86412 RVA: 0x001F04BB File Offset: 0x001EE6BB
+		// Token: 0x06005455 RID: 21589 RVA: 0x00076273 File Offset: 0x00074473
 		static UActionFlatGroundCollision()
 		{
 			UObjectGlobals.StaticLoadClass(null, "/Script/KuroBulletCore.ActionFlatGroundCollision");
 		}
 
-		// Token: 0x0601518D RID: 86413 RVA: 0x001F04C9 File Offset: 0x001EE6C9
+		// Token: 0x06005456 RID: 21590 RVA: 0x00076281 File Offset: 0x00074481
 		protected UActionFlatGroundCollision(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0400B7B1 RID: 47025
+		// Token: 0x04002274 RID: 8820
 		[Nullable(1)]
 		public new const string __ObjectPath = "/Script/KuroBulletCore.ActionFlatGroundCollision";
 
-		// Token: 0x0400B7B2 RID: 47026
+		// Token: 0x04002275 RID: 8821
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0400B7B3 RID: 47027
+		// Token: 0x04002276 RID: 8822
 		private static IntPtr _ClassDefaultObjectPtr;
 	}
 }

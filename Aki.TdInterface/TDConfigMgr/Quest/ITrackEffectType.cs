@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x020011B6 RID: 4534
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020012F0 RID: 4848
 	public class ITrackEffectType
 	{
-		// Token: 0x06006702 RID: 26370 RVA: 0x000F6C38 File Offset: 0x000F4E38
+		// Token: 0x06006D3B RID: 27963 RVA: 0x00104488 File Offset: 0x00102688
 		private ITrackEffectType_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06006703 RID: 26371 RVA: 0x000F6C70 File Offset: 0x000F4E70
+		// Token: 0x06006D3C RID: 27964 RVA: 0x001044C0 File Offset: 0x001026C0
 		public static ITrackEffectType Create([Nullable(2)] ITrackEffectType instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006704 RID: 26372 RVA: 0x000F6C83 File Offset: 0x000F4E83
+		// Token: 0x06006D3D RID: 27965 RVA: 0x001044D3 File Offset: 0x001026D3
 		public static ITrackEffectType CreateFromSetValue([Nullable(2)] ITrackEffectType_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06006705 RID: 26373 RVA: 0x000F6C96 File Offset: 0x000F4E96
+		// Token: 0x06006D3E RID: 27966 RVA: 0x001044E6 File Offset: 0x001026E6
 		public ITrackEffectType_SetValue ToSetValue()
 		{
 			return new ITrackEffectType_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17002175 RID: 8565
-		// (get) Token: 0x06006706 RID: 26374 RVA: 0x000F6CA9 File Offset: 0x000F4EA9
-		// (set) Token: 0x06006707 RID: 26375 RVA: 0x000F6CD4 File Offset: 0x000F4ED4
+		// Token: 0x17002335 RID: 9013
+		// (get) Token: 0x06006D3F RID: 27967 RVA: 0x001044F9 File Offset: 0x001026F9
+		// (set) Token: 0x06006D40 RID: 27968 RVA: 0x00104524 File Offset: 0x00102724
 		public virtual ETrackEffectType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x04003DDA RID: 15834
+		// Token: 0x04004145 RID: 16709
 		[Nullable(2)]
 		protected ITrackEffectType FbInstance;
 
-		// Token: 0x04003DDB RID: 15835
+		// Token: 0x04004146 RID: 16710
 		[Nullable(2)]
 		protected ITrackEffectType_SetValue PocoInterface;
 	}

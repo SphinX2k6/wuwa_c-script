@@ -2,10 +2,10 @@
 using System.Runtime.CompilerServices;
 using CSharpScript.Game.Module.Item;
 
-// Token: 0x020018E1 RID: 6369
+// Token: 0x02000D9A RID: 3482
 public class TipsAbyssDangoData : ItemTipsData
 {
-	// Token: 0x0600BAB6 RID: 47798 RVA: 0x002A4BEC File Offset: 0x002A2DEC
+	// Token: 0x06008E9F RID: 36511 RVA: 0x002AF368 File Offset: 0x002AD568
 	[NullableContext(1)]
 	public TipsAbyssDangoData(ItemTipsParam data) : base(data)
 	{
@@ -20,9 +20,9 @@ public class TipsAbyssDangoData : ItemTipsData
 		}
 	}
 
-	// Token: 0x040054CC RID: 21708
+	// Token: 0x04005577 RID: 21879
 	public int DangoId = -1;
 
-	// Token: 0x040054CD RID: 21709
+	// Token: 0x04005578 RID: 21880
 	public int SlotIndex = -1;
 }

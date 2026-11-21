@@ -4,11 +4,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005509 RID: 21769
+	// Token: 0x02005A8F RID: 23183
 	public struct ILocationSafetyComponent : IFlatbufferObject
 	{
-		// Token: 0x1700A0B7 RID: 41143
-		// (get) Token: 0x06023F3D RID: 147261 RVA: 0x004F84FD File Offset: 0x004F66FD
+		// Token: 0x1700A8F1 RID: 43249
+		// (get) Token: 0x06025FF7 RID: 155639 RVA: 0x00535621 File Offset: 0x00533821
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -17,39 +17,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023F3E RID: 147262 RVA: 0x004F850A File Offset: 0x004F670A
+		// Token: 0x06025FF8 RID: 155640 RVA: 0x0053562E File Offset: 0x0053382E
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06023F3F RID: 147263 RVA: 0x004F8514 File Offset: 0x004F6714
+		// Token: 0x06025FF9 RID: 155641 RVA: 0x00535638 File Offset: 0x00533838
 		public static ILocationSafetyComponent GetRootAsILocationSafetyComponent(ByteBuffer _bb)
 		{
 			return ILocationSafetyComponent.GetRootAsILocationSafetyComponent(_bb, default(ILocationSafetyComponent));
 		}
 
-		// Token: 0x06023F40 RID: 147264 RVA: 0x004F8530 File Offset: 0x004F6730
+		// Token: 0x06025FFA RID: 155642 RVA: 0x00535654 File Offset: 0x00533854
 		public static ILocationSafetyComponent GetRootAsILocationSafetyComponent(ByteBuffer _bb, ILocationSafetyComponent obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06023F41 RID: 147265 RVA: 0x004F854D File Offset: 0x004F674D
+		// Token: 0x06025FFB RID: 155643 RVA: 0x00535671 File Offset: 0x00533871
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06023F42 RID: 147266 RVA: 0x004F855C File Offset: 0x004F675C
+		// Token: 0x06025FFC RID: 155644 RVA: 0x00535680 File Offset: 0x00533880
 		public ILocationSafetyComponent __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x1700A0B8 RID: 41144
-		// (get) Token: 0x06023F43 RID: 147267 RVA: 0x004F856C File Offset: 0x004F676C
+		// Token: 0x1700A8F2 RID: 43250
+		// (get) Token: 0x06025FFD RID: 155645 RVA: 0x00535690 File Offset: 0x00533890
 		public bool Disabled
 		{
 			get
@@ -59,8 +59,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A0B9 RID: 41145
-		// (get) Token: 0x06023F44 RID: 147268 RVA: 0x004F85AC File Offset: 0x004F67AC
+		// Token: 0x1700A8F3 RID: 43251
+		// (get) Token: 0x06025FFE RID: 155646 RVA: 0x005356D0 File Offset: 0x005338D0
 		public EDetectionFrequency DetectionFrequency
 		{
 			get
@@ -74,8 +74,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A0BA RID: 41146
-		// (get) Token: 0x06023F45 RID: 147269 RVA: 0x004F85E8 File Offset: 0x004F67E8
+		// Token: 0x1700A8F4 RID: 43252
+		// (get) Token: 0x06025FFF RID: 155647 RVA: 0x0053570C File Offset: 0x0053390C
 		public IVectorInfo? SafeLocation
 		{
 			get
@@ -89,8 +89,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x1700A0BB RID: 41147
-		// (get) Token: 0x06023F46 RID: 147270 RVA: 0x004F8648 File Offset: 0x004F6848
+		// Token: 0x1700A8F5 RID: 43253
+		// (get) Token: 0x06026000 RID: 155648 RVA: 0x0053576C File Offset: 0x0053396C
 		public byte NullMask
 		{
 			get
@@ -104,7 +104,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			}
 		}
 
-		// Token: 0x06023F47 RID: 147271 RVA: 0x004F8685 File Offset: 0x004F6885
+		// Token: 0x06026001 RID: 155649 RVA: 0x005357A9 File Offset: 0x005339A9
 		public static Offset<ILocationSafetyComponent> CreateILocationSafetyComponent(FlatBufferBuilder builder, bool Disabled = false, EDetectionFrequency DetectionFrequency = EDetectionFrequency.Low, Offset<IVectorInfo> SafeLocationOffset = default(Offset<IVectorInfo>), byte NullMask = 0)
 		{
 			builder.StartTable(4);
@@ -115,43 +115,43 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ILocationSafetyComponent.EndILocationSafetyComponent(builder);
 		}
 
-		// Token: 0x06023F48 RID: 147272 RVA: 0x004F86B1 File Offset: 0x004F68B1
+		// Token: 0x06026002 RID: 155650 RVA: 0x005357D5 File Offset: 0x005339D5
 		public static void StartILocationSafetyComponent(FlatBufferBuilder builder)
 		{
 			builder.StartTable(4);
 		}
 
-		// Token: 0x06023F49 RID: 147273 RVA: 0x004F86BA File Offset: 0x004F68BA
+		// Token: 0x06026003 RID: 155651 RVA: 0x005357DE File Offset: 0x005339DE
 		public static void AddDisabled(FlatBufferBuilder builder, bool disabled)
 		{
 			builder.AddBool(0, disabled, false);
 		}
 
-		// Token: 0x06023F4A RID: 147274 RVA: 0x004F86C5 File Offset: 0x004F68C5
+		// Token: 0x06026004 RID: 155652 RVA: 0x005357E9 File Offset: 0x005339E9
 		public static void AddDetectionFrequency(FlatBufferBuilder builder, EDetectionFrequency detectionFrequency)
 		{
 			builder.AddByte(1, (byte)detectionFrequency, 0);
 		}
 
-		// Token: 0x06023F4B RID: 147275 RVA: 0x004F86D0 File Offset: 0x004F68D0
+		// Token: 0x06026005 RID: 155653 RVA: 0x005357F4 File Offset: 0x005339F4
 		public static void AddSafeLocation(FlatBufferBuilder builder, Offset<IVectorInfo> safeLocationOffset)
 		{
 			builder.AddOffset(2, safeLocationOffset.Value, 0);
 		}
 
-		// Token: 0x06023F4C RID: 147276 RVA: 0x004F86E0 File Offset: 0x004F68E0
+		// Token: 0x06026006 RID: 155654 RVA: 0x00535804 File Offset: 0x00533A04
 		public static void AddNullMask(FlatBufferBuilder builder, byte nullMask)
 		{
 			builder.AddByte(3, nullMask, 0);
 		}
 
-		// Token: 0x06023F4D RID: 147277 RVA: 0x004F86EB File Offset: 0x004F68EB
+		// Token: 0x06026007 RID: 155655 RVA: 0x0053580F File Offset: 0x00533A0F
 		public static Offset<ILocationSafetyComponent> EndILocationSafetyComponent(FlatBufferBuilder builder)
 		{
 			return new Offset<ILocationSafetyComponent>(builder.EndTable());
 		}
 
-		// Token: 0x06023F4E RID: 147278 RVA: 0x004F86F8 File Offset: 0x004F68F8
+		// Token: 0x06026008 RID: 155656 RVA: 0x0053581C File Offset: 0x00533A1C
 		public ILocationSafetyComponentT UnPack()
 		{
 			ILocationSafetyComponentT locationSafetyComponentT = new ILocationSafetyComponentT();
@@ -159,7 +159,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return locationSafetyComponentT;
 		}
 
-		// Token: 0x06023F4F RID: 147279 RVA: 0x004F8714 File Offset: 0x004F6914
+		// Token: 0x06026009 RID: 155657 RVA: 0x00535838 File Offset: 0x00533A38
 		public void UnPackTo(ILocationSafetyComponentT _o)
 		{
 			_o.Disabled = this.Disabled;
@@ -168,7 +168,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			_o.NullMask = this.NullMask;
 		}
 
-		// Token: 0x06023F50 RID: 147280 RVA: 0x004F8774 File Offset: 0x004F6974
+		// Token: 0x0602600A RID: 155658 RVA: 0x00535898 File Offset: 0x00533A98
 		public static Offset<ILocationSafetyComponent> Pack(FlatBufferBuilder builder, ILocationSafetyComponentT _o)
 		{
 			if (_o == null)
@@ -179,7 +179,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			return ILocationSafetyComponent.CreateILocationSafetyComponent(builder, _o.Disabled, _o.DetectionFrequency, safeLocationOffset, _o.NullMask);
 		}
 
-		// Token: 0x0400E7F8 RID: 59384
+		// Token: 0x0400F429 RID: 62505
 		private Table __p;
 	}
 }

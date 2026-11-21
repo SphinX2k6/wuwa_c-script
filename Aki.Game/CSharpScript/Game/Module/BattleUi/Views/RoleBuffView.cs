@@ -8,10 +8,10 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005DAF RID: 23983
+	// Token: 0x02004D93 RID: 19859
 	public class RoleBuffView : BattleVisibleChildView
 	{
-		// Token: 0x0603CE90 RID: 249488 RVA: 0x00EA1BA0 File Offset: 0x00E9FDA0
+		// Token: 0x06031E07 RID: 204295 RVA: 0x00DF2A74 File Offset: 0x00DF0C74
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -25,7 +25,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603CE91 RID: 249489 RVA: 0x00EA1C0C File Offset: 0x00E9FE0C
+		// Token: 0x06031E08 RID: 204296 RVA: 0x00DF2AE0 File Offset: 0x00DF0CE0
 		protected override void OnStart()
 		{
 			base.OnStart();
@@ -35,7 +35,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BuffItemContainer.Init(base.GetItem(1), value, false, true, false, this.ExceedTipItem.GetRootItem());
 		}
 
-		// Token: 0x0603CE92 RID: 249490 RVA: 0x00EA1C61 File Offset: 0x00E9FE61
+		// Token: 0x06031E09 RID: 204297 RVA: 0x00DF2B35 File Offset: 0x00DF0D35
 		protected override void OnBeforeDestroy()
 		{
 			this.Refresh(null);
@@ -43,14 +43,14 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.DestroyExceedTipItem();
 		}
 
-		// Token: 0x0603CE93 RID: 249491 RVA: 0x00EA1C76 File Offset: 0x00E9FE76
+		// Token: 0x06031E0A RID: 204298 RVA: 0x00DF2B4A File Offset: 0x00DF0D4A
 		private void InitExceedTipItem()
 		{
 			this.ExceedTipItem = new BuffItem(base.GetItem(1));
 			this.ExceedTipItem.ActivateExceedTip();
 		}
 
-		// Token: 0x0603CE94 RID: 249492 RVA: 0x00EA1C95 File Offset: 0x00E9FE95
+		// Token: 0x06031E0B RID: 204299 RVA: 0x00DF2B69 File Offset: 0x00DF0D69
 		private void DestroyExceedTipItem()
 		{
 			if (this.ExceedTipItem != null)
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CE95 RID: 249493 RVA: 0x00EA1CB4 File Offset: 0x00E9FEB4
+		// Token: 0x06031E0C RID: 204300 RVA: 0x00DF2B88 File Offset: 0x00DF0D88
 		[NullableContext(2)]
 		public void Refresh(BattleUiRoleData roleData)
 		{
@@ -75,32 +75,32 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.BuffItemContainer.RefreshBuff(roleData.EntityHandle);
 		}
 
-		// Token: 0x0603CE96 RID: 249494 RVA: 0x00EA1D12 File Offset: 0x00E9FF12
+		// Token: 0x06031E0D RID: 204301 RVA: 0x00DF2BE6 File Offset: 0x00DF0DE6
 		public int? GetEntityId()
 		{
 			return this.EntityId;
 		}
 
-		// Token: 0x0603CE97 RID: 249495 RVA: 0x00EA1D1A File Offset: 0x00E9FF1A
+		// Token: 0x06031E0E RID: 204302 RVA: 0x00DF2BEE File Offset: 0x00DF0DEE
 		public void Tick(float delta)
 		{
 			this.BuffItemContainer.Tick(delta);
 			this.UpdateEnvironmentProperty();
 		}
 
-		// Token: 0x0603CE98 RID: 249496 RVA: 0x00EA1D2E File Offset: 0x00E9FF2E
+		// Token: 0x06031E0F RID: 204303 RVA: 0x00DF2C02 File Offset: 0x00DF0E02
 		public void AddBuff(GameplayCue buffCueConfig, int handleId)
 		{
 			this.BuffItemContainer.AddBuffByCue(buffCueConfig, handleId, true);
 		}
 
-		// Token: 0x0603CE99 RID: 249497 RVA: 0x00EA1D3E File Offset: 0x00E9FF3E
+		// Token: 0x06031E10 RID: 204304 RVA: 0x00DF2C12 File Offset: 0x00DF0E12
 		public void RemoveBuff(GameplayCue buffCueConfig, int handleId)
 		{
 			this.BuffItemContainer.RemoveBuffByCue(buffCueConfig, handleId, true);
 		}
 
-		// Token: 0x0603CE9A RID: 249498 RVA: 0x00EA1D50 File Offset: 0x00E9FF50
+		// Token: 0x06031E11 RID: 204305 RVA: 0x00DF2C24 File Offset: 0x00DF0E24
 		private void UpdateEnvironmentProperty()
 		{
 			float num = 0f;
@@ -134,7 +134,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			}
 		}
 
-		// Token: 0x0603CE9B RID: 249499 RVA: 0x00EA1E58 File Offset: 0x00EA0058
+		// Token: 0x06031E12 RID: 204306 RVA: 0x00DF2D2C File Offset: 0x00DF0F2C
 		private void ClearAllEnvironmentItem()
 		{
 			foreach (EnvironmentItem environmentItem in this.EnvironmentItemMap.Values)
@@ -145,27 +145,27 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.EnvironmentItemMap.Clear();
 		}
 
-		// Token: 0x0401FB87 RID: 129927
+		// Token: 0x0401A644 RID: 108100
 		private int? EntityId;
 
-		// Token: 0x0401FB88 RID: 129928
+		// Token: 0x0401A645 RID: 108101
 		[Nullable(1)]
 		private readonly Dictionary<int, EnvironmentItem> EnvironmentItemMap = new Dictionary<int, EnvironmentItem>();
 
-		// Token: 0x0401FB89 RID: 129929
+		// Token: 0x0401A646 RID: 108102
 		[Nullable(1)]
 		private readonly BuffItemContainer BuffItemContainer = new BuffItemContainer();
 
-		// Token: 0x0401FB8A RID: 129930
+		// Token: 0x0401A647 RID: 108103
 		[Nullable(2)]
 		private BuffItem ExceedTipItem;
 
-		// Token: 0x0200C08F RID: 49295
+		// Token: 0x0200AA98 RID: 43672
 		private enum EChildComponentType
 		{
-			// Token: 0x0403A1B6 RID: 238006
+			// Token: 0x04034B88 RID: 215944
 			EnvironmentHorizontalItem,
-			// Token: 0x0403A1B7 RID: 238007
+			// Token: 0x04034B89 RID: 215945
 			BuffHorizontalItem
 		}
 	}

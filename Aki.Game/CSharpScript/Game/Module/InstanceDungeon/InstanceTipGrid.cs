@@ -9,7 +9,7 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.InstanceDungeon
 {
-	// Token: 0x02005884 RID: 22660
+	// Token: 0x0200485C RID: 18524
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -18,13 +18,13 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 	})]
 	public class InstanceTipGrid : GridProxyAbstract<IInstanceTipGridData>
 	{
-		// Token: 0x06039AB7 RID: 236215 RVA: 0x00DB4D0A File Offset: 0x00DB2F0A
+		// Token: 0x0602E9DA RID: 190938 RVA: 0x00D03C22 File Offset: 0x00D01E22
 		public void Initialize(UUIItem uiItem)
 		{
 			this.CreateThenShowByActor(uiItem.GetOwner());
 		}
 
-		// Token: 0x06039AB8 RID: 236216 RVA: 0x00DB4D18 File Offset: 0x00DB2F18
+		// Token: 0x0602E9DB RID: 190939 RVA: 0x00D03C30 File Offset: 0x00D01E30
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -44,7 +44,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06039AB9 RID: 236217 RVA: 0x00DB4DE4 File Offset: 0x00DB2FE4
+		// Token: 0x0602E9DC RID: 190940 RVA: 0x00D03CFC File Offset: 0x00D01EFC
 		protected override void OnBeforeDestroy()
 		{
 			foreach (CommonItemSmallItemGrid commonItemSmallItemGrid in this.ItemGridList)
@@ -54,7 +54,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.ItemGridList.Clear();
 		}
 
-		// Token: 0x06039ABA RID: 236218 RVA: 0x00DB4E40 File Offset: 0x00DB3040
+		// Token: 0x0602E9DD RID: 190941 RVA: 0x00D03D58 File Offset: 0x00D01F58
 		public override void Refresh(IInstanceTipGridData gridData, bool isSelected, int gridIndex)
 		{
 			this.InstanceId = gridData.InstanceId;
@@ -64,7 +64,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.UpdateRewardText();
 		}
 
-		// Token: 0x06039ABB RID: 236219 RVA: 0x00DB4E6C File Offset: 0x00DB306C
+		// Token: 0x0602E9DE RID: 190942 RVA: 0x00D03D84 File Offset: 0x00D01F84
 		public void ClearGrid()
 		{
 			foreach (CommonItemSmallItemGrid commonItemSmallItemGrid in this.ItemGridList)
@@ -74,7 +74,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			this.ItemGridList.Clear();
 		}
 
-		// Token: 0x06039ABC RID: 236220 RVA: 0x00DB4EC8 File Offset: 0x00DB30C8
+		// Token: 0x0602E9DF RID: 190943 RVA: 0x00D03DE0 File Offset: 0x00D01FE0
 		private void UpdateRewardPreview()
 		{
 			InstanceDungeonConfig instance = InstanceDungeonConfig.Instance;
@@ -148,7 +148,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			item4.SetUIActive(false);
 		}
 
-		// Token: 0x06039ABD RID: 236221 RVA: 0x00DB50FC File Offset: 0x00DB32FC
+		// Token: 0x0602E9E0 RID: 190944 RVA: 0x00D04014 File Offset: 0x00D02214
 		private void UpdateButtonState()
 		{
 			UUIItem rootItem = this.RootItem;
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			rootItem.SetUIActive(this.IsShowReward && this.IsShowDetail);
 		}
 
-		// Token: 0x06039ABE RID: 236222 RVA: 0x00DB5120 File Offset: 0x00DB3320
+		// Token: 0x0602E9E1 RID: 190945 RVA: 0x00D04038 File Offset: 0x00D02238
 		private void UpdateRewardText()
 		{
 			InstanceDungeon? config = InstanceDungeonConfig.Instance.GetConfig(this.InstanceId);
@@ -175,42 +175,42 @@ namespace CSharpScript.Game.Module.InstanceDungeon
 			LguiUtil.Instance.SetLocalTextNew(base.GetText(0), "Text_ProbReward_Text", Array.Empty<object>());
 		}
 
-		// Token: 0x0401E225 RID: 123429
+		// Token: 0x04018CC2 RID: 101570
 		private int InstanceId;
 
-		// Token: 0x0401E226 RID: 123430
+		// Token: 0x04018CC3 RID: 101571
 		private bool IsDouble;
 
-		// Token: 0x0401E227 RID: 123431
+		// Token: 0x04018CC4 RID: 101572
 		[Nullable(2)]
 		private List<TItem> RewardItemList;
 
-		// Token: 0x0401E228 RID: 123432
+		// Token: 0x04018CC5 RID: 101573
 		private readonly bool IsShowDetail = true;
 
-		// Token: 0x0401E229 RID: 123433
+		// Token: 0x04018CC6 RID: 101574
 		private bool IsShowReward;
 
-		// Token: 0x0401E22A RID: 123434
+		// Token: 0x04018CC7 RID: 101575
 		private readonly List<CommonItemSmallItemGrid> ItemGridList = new List<CommonItemSmallItemGrid>();
 
-		// Token: 0x0200BADF RID: 47839
+		// Token: 0x0200A4F8 RID: 42232
 		[NullableContext(0)]
 		public static class EChildCom
 		{
-			// Token: 0x0403877F RID: 231295
+			// Token: 0x04033180 RID: 209280
 			public const int UiTextInstanceTitle = 0;
 
-			// Token: 0x04038780 RID: 231296
+			// Token: 0x04033181 RID: 209281
 			public const int UiItemContainer = 1;
 
-			// Token: 0x04038781 RID: 231297
+			// Token: 0x04033182 RID: 209282
 			public const int UiItemItem = 2;
 
-			// Token: 0x04038782 RID: 231298
+			// Token: 0x04033183 RID: 209283
 			public const int BtnPreView = 3;
 
-			// Token: 0x04038783 RID: 231299
+			// Token: 0x04033184 RID: 209284
 			public const int DoubleLabel = 4;
 		}
 	}

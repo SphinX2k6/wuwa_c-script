@@ -1,17 +1,17 @@
 ﻿using System;
 
-// Token: 0x020030A8 RID: 12456
+// Token: 0x020025FF RID: 9727
 public class FlowRangeInfo
 {
-	// Token: 0x0400CDF6 RID: 52726
+	// Token: 0x0400D1DA RID: 53722
 	public float MinRadius;
 
-	// Token: 0x0400CDF7 RID: 52727
+	// Token: 0x0400D1DB RID: 53723
 	public float MaxRadius;
 
-	// Token: 0x0400CDF8 RID: 52728
+	// Token: 0x0400D1DC RID: 53724
 	public float MinHeight;
 
-	// Token: 0x0400CDF9 RID: 52729
+	// Token: 0x0400D1DD RID: 53725
 	public float MaxHeight;
 }

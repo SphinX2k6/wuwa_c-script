@@ -2,26 +2,26 @@
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.DangoBrawl
 {
-	// Token: 0x02006760 RID: 26464
+	// Token: 0x020056B0 RID: 22192
 	public enum EDangoBrawlDamageSource
 	{
-		// Token: 0x040226AE RID: 140974
+		// Token: 0x0401CF0B RID: 118539
 		Weapon,
-		// Token: 0x040226AF RID: 140975
+		// Token: 0x0401CF0C RID: 118540
 		BuffTick,
-		// Token: 0x040226B0 RID: 140976
+		// Token: 0x0401CF0D RID: 118541
 		Fatigue,
-		// Token: 0x040226B1 RID: 140977
+		// Token: 0x0401CF0E RID: 118542
 		Reflect,
-		// Token: 0x040226B2 RID: 140978
+		// Token: 0x0401CF0F RID: 118543
 		Heal,
-		// Token: 0x040226B3 RID: 140979
+		// Token: 0x0401CF10 RID: 118544
 		Shield,
-		// Token: 0x040226B4 RID: 140980
+		// Token: 0x0401CF11 RID: 118545
 		BuffGain,
-		// Token: 0x040226B5 RID: 140981
+		// Token: 0x0401CF12 RID: 118546
 		Lifesteal,
-		// Token: 0x040226B6 RID: 140982
+		// Token: 0x0401CF13 RID: 118547
 		BuffWeaponDamage
 	}
 }

@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004D34 RID: 19764
+	// Token: 0x02005230 RID: 21040
 	public class TCheckHoldingHandsCharacterUnion
 	{
-		// Token: 0x17008F3D RID: 36669
-		// (get) Token: 0x0601F5EA RID: 128490 RVA: 0x0045F68C File Offset: 0x0045D88C
-		// (set) Token: 0x0601F5EB RID: 128491 RVA: 0x0045F694 File Offset: 0x0045D894
+		// Token: 0x17009676 RID: 38518
+		// (get) Token: 0x06021231 RID: 135729 RVA: 0x0049361C File Offset: 0x0049181C
+		// (set) Token: 0x06021232 RID: 135730 RVA: 0x00493624 File Offset: 0x00491824
 		public TCheckHoldingHandsCharacter Type { get; set; }
 
-		// Token: 0x17008F3E RID: 36670
-		// (get) Token: 0x0601F5EC RID: 128492 RVA: 0x0045F69D File Offset: 0x0045D89D
-		// (set) Token: 0x0601F5ED RID: 128493 RVA: 0x0045F6A5 File Offset: 0x0045D8A5
+		// Token: 0x17009677 RID: 38519
+		// (get) Token: 0x06021233 RID: 135731 RVA: 0x0049362D File Offset: 0x0049182D
+		// (set) Token: 0x06021234 RID: 135732 RVA: 0x00493635 File Offset: 0x00491835
 		public object Value { get; set; }
 
-		// Token: 0x0601F5EE RID: 128494 RVA: 0x0045F6AE File Offset: 0x0045D8AE
+		// Token: 0x06021235 RID: 135733 RVA: 0x0049363E File Offset: 0x0049183E
 		public TCheckHoldingHandsCharacterUnion()
 		{
 			this.Type = TCheckHoldingHandsCharacter.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x0601F5EF RID: 128495 RVA: 0x0045F6C4 File Offset: 0x0045D8C4
+		// Token: 0x06021236 RID: 135734 RVA: 0x00493654 File Offset: 0x00491854
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x0601F5F0 RID: 128496 RVA: 0x0045F6D6 File Offset: 0x0045D8D6
+		// Token: 0x06021237 RID: 135735 RVA: 0x00493666 File Offset: 0x00491866
 		public ICheckIsEntityHoldingHandsT AsICheckIsEntityHoldingHands()
 		{
 			return this.As<ICheckIsEntityHoldingHandsT>();
 		}
 
-		// Token: 0x0601F5F1 RID: 128497 RVA: 0x0045F6DE File Offset: 0x0045D8DE
+		// Token: 0x06021238 RID: 135736 RVA: 0x0049366E File Offset: 0x0049186E
 		public static TCheckHoldingHandsCharacterUnion FromICheckIsEntityHoldingHands(ICheckIsEntityHoldingHandsT _icheckisentityholdinghands)
 		{
 			return new TCheckHoldingHandsCharacterUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F5F2 RID: 128498 RVA: 0x0045F6F3 File Offset: 0x0045D8F3
+		// Token: 0x06021239 RID: 135737 RVA: 0x00493683 File Offset: 0x00491883
 		public ICheckIsPlayerHoldingHandsT AsICheckIsPlayerHoldingHands()
 		{
 			return this.As<ICheckIsPlayerHoldingHandsT>();
 		}
 
-		// Token: 0x0601F5F3 RID: 128499 RVA: 0x0045F6FB File Offset: 0x0045D8FB
+		// Token: 0x0602123A RID: 135738 RVA: 0x0049368B File Offset: 0x0049188B
 		public static TCheckHoldingHandsCharacterUnion FromICheckIsPlayerHoldingHands(ICheckIsPlayerHoldingHandsT _icheckisplayerholdinghands)
 		{
 			return new TCheckHoldingHandsCharacterUnion
@@ -61,7 +61,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			};
 		}
 
-		// Token: 0x0601F5F4 RID: 128500 RVA: 0x0045F710 File Offset: 0x0045D910
+		// Token: 0x0602123B RID: 135739 RVA: 0x004936A0 File Offset: 0x004918A0
 		public static int Pack(FlatBufferBuilder builder, TCheckHoldingHandsCharacterUnion _o)
 		{
 			TCheckHoldingHandsCharacter type = _o.Type;

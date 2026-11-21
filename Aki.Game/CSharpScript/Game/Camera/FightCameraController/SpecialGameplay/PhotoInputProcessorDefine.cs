@@ -5,10 +5,10 @@ using AkiClient.Game.Aki.Data.Camera.PhotoCamera;
 
 namespace CSharpScript.Game.Camera.FightCameraController.SpecialGameplay
 {
-	// Token: 0x020072F4 RID: 29428
+	// Token: 0x02006477 RID: 25719
 	public class PhotoInputProcessorDefine
 	{
-		// Token: 0x04026256 RID: 156246
+		// Token: 0x04021541 RID: 136513
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		public static readonly IReadOnlyDictionary<PhotoCameraType, Func<PhotoInputProcessorBase>> PhotoInputProcessorMap = new Dictionary<PhotoCameraType, Func<PhotoInputProcessorBase>>

@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x0200225B RID: 8795
+// Token: 0x0200173F RID: 5951
 public class MotorTechTaskReward
 {
-	// Token: 0x170015DA RID: 5594
-	// (get) Token: 0x0601126E RID: 70254 RVA: 0x0042E360 File Offset: 0x0042C560
-	// (set) Token: 0x0601126F RID: 70255 RVA: 0x0042E368 File Offset: 0x0042C568
+	// Token: 0x17001611 RID: 5649
+	// (get) Token: 0x0600E704 RID: 59140 RVA: 0x0043AF00 File Offset: 0x00439100
+	// (set) Token: 0x0600E705 RID: 59141 RVA: 0x0043AF08 File Offset: 0x00439108
 	public int RewardedCount { get; set; }
 
-	// Token: 0x170015DB RID: 5595
-	// (get) Token: 0x06011270 RID: 70256 RVA: 0x0042E371 File Offset: 0x0042C571
-	// (set) Token: 0x06011271 RID: 70257 RVA: 0x0042E379 File Offset: 0x0042C579
+	// Token: 0x17001612 RID: 5650
+	// (get) Token: 0x0600E706 RID: 59142 RVA: 0x0043AF11 File Offset: 0x00439111
+	// (set) Token: 0x0600E707 RID: 59143 RVA: 0x0043AF19 File Offset: 0x00439119
 	public int WaitRewardCount { get; set; }
 
-	// Token: 0x170015DC RID: 5596
-	// (get) Token: 0x06011272 RID: 70258 RVA: 0x0042E382 File Offset: 0x0042C582
-	// (set) Token: 0x06011273 RID: 70259 RVA: 0x0042E38A File Offset: 0x0042C58A
+	// Token: 0x17001613 RID: 5651
+	// (get) Token: 0x0600E708 RID: 59144 RVA: 0x0043AF22 File Offset: 0x00439122
+	// (set) Token: 0x0600E709 RID: 59145 RVA: 0x0043AF2A File Offset: 0x0043912A
 	public int MaxRewardCount { get; set; }
 }

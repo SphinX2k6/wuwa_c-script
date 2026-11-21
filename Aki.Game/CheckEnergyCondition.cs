@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
-using CSharpScript.Game;
 
-// Token: 0x020017CE RID: 6094
+// Token: 0x02000C87 RID: 3207
 [NullableContext(1)]
 [Nullable(0)]
 public class CheckEnergyCondition : BaseCheckCondition
 {
-	// Token: 0x0600B22C RID: 45612 RVA: 0x00284548 File Offset: 0x00282748
+	// Token: 0x06008615 RID: 34325 RVA: 0x0028EC58 File Offset: 0x0028CE58
 	public CheckEnergyCondition(string paramsString, bool isSuccessNode) : base(paramsString, isSuccessNode)
 	{
 		this.Type = EComboTeachingCheckType.Update;
@@ -16,22 +15,22 @@ public class CheckEnergyCondition : BaseCheckCondition
 		this.FailType = EComboTeachingFailCondition.EnergyCheck;
 	}
 
-	// Token: 0x17000EF2 RID: 3826
-	// (get) Token: 0x0600B22D RID: 45613 RVA: 0x0028457C File Offset: 0x0028277C
-	// (set) Token: 0x0600B22E RID: 45614 RVA: 0x00284584 File Offset: 0x00282784
+	// Token: 0x17000F15 RID: 3861
+	// (get) Token: 0x06008616 RID: 34326 RVA: 0x0028EC8C File Offset: 0x0028CE8C
+	// (set) Token: 0x06008617 RID: 34327 RVA: 0x0028EC94 File Offset: 0x0028CE94
 	public override EComboTeachingCheckType Type { get; set; } = EComboTeachingCheckType.Update;
 
-	// Token: 0x17000EF3 RID: 3827
-	// (get) Token: 0x0600B22F RID: 45615 RVA: 0x0028458D File Offset: 0x0028278D
-	// (set) Token: 0x0600B230 RID: 45616 RVA: 0x00284595 File Offset: 0x00282795
+	// Token: 0x17000F16 RID: 3862
+	// (get) Token: 0x06008618 RID: 34328 RVA: 0x0028EC9D File Offset: 0x0028CE9D
+	// (set) Token: 0x06008619 RID: 34329 RVA: 0x0028ECA5 File Offset: 0x0028CEA5
 	protected override EComboTeachingSuccessCondition SuccessType { get; set; } = EComboTeachingSuccessCondition.EnergyCheck;
 
-	// Token: 0x17000EF4 RID: 3828
-	// (get) Token: 0x0600B231 RID: 45617 RVA: 0x0028459E File Offset: 0x0028279E
-	// (set) Token: 0x0600B232 RID: 45618 RVA: 0x002845A6 File Offset: 0x002827A6
+	// Token: 0x17000F17 RID: 3863
+	// (get) Token: 0x0600861A RID: 34330 RVA: 0x0028ECAE File Offset: 0x0028CEAE
+	// (set) Token: 0x0600861B RID: 34331 RVA: 0x0028ECB6 File Offset: 0x0028CEB6
 	protected override EComboTeachingFailCondition FailType { get; set; } = EComboTeachingFailCondition.EnergyCheck;
 
-	// Token: 0x0600B233 RID: 45619 RVA: 0x002845B0 File Offset: 0x002827B0
+	// Token: 0x0600861C RID: 34332 RVA: 0x0028ECC0 File Offset: 0x0028CEC0
 	protected override bool CheckSuccess(IComboTeachingInfo data, [Nullable(2)] IBaseCheckConditionInfo param = null)
 	{
 		if (this.SuccessParamsArray == null)
@@ -39,20 +38,28 @@ public class CheckEnergyCondition : BaseCheckCondition
 			return false;
 		}
 		List<string> list = this.SuccessParamsArray[0];
-		int entityIdNoBlueprint = Global.BaseCharacter.GetEntityIdNoBlueprint();
-		float currentValue = EntitySystem.Instance.Get(entityIdNoBlueprint).GetComponent<BaseAttributeComponent>().GetCurrentValue(CharacterAttributeTypes.energyAttrIds[int.Parse(list[0])]);
+		BaseAttributeComponent playerComponent = BaseCheckCondition.GetPlayerComponent<BaseAttributeComponent>();
+		if (playerComponent == null)
+		{
+			return false;
+		}
+		float currentValue = playerComponent.GetCurrentValue(CharacterAttributeTypes.energyAttrIds[int.Parse(list[0])]);
 		return currentValue >= float.Parse(list[1]) && currentValue <= float.Parse(list[2]);
 	}
 
-	// Token: 0x0600B234 RID: 45620 RVA: 0x0028462C File Offset: 0x0028282C
+	// Token: 0x0600861D RID: 34333 RVA: 0x0028ED2C File Offset: 0x0028CF2C
 	protected override bool CheckFail(IComboTeachingInfo data, [Nullable(2)] IBaseCheckConditionInfo param = null)
 	{
 		if (this.ParamsArray == null)
 		{
 			return false;
 		}
-		int entityIdNoBlueprint = Global.BaseCharacter.GetEntityIdNoBlueprint();
-		float currentValue = EntitySystem.Instance.Get(entityIdNoBlueprint).GetComponent<BaseAttributeComponent>().GetCurrentValue(CharacterAttributeTypes.energyAttrIds[int.Parse(this.ParamsArray[0])]);
+		BaseAttributeComponent playerComponent = BaseCheckCondition.GetPlayerComponent<BaseAttributeComponent>();
+		if (playerComponent == null)
+		{
+			return false;
+		}
+		float currentValue = playerComponent.GetCurrentValue(CharacterAttributeTypes.energyAttrIds[int.Parse(this.ParamsArray[0])]);
 		return currentValue >= float.Parse(this.ParamsArray[1]) && currentValue <= float.Parse(this.ParamsArray[2]);
 	}
 }

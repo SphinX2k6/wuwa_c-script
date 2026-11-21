@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005067 RID: 20583
+	// Token: 0x020055C9 RID: 21961
 	public class ICycleModeTypeT
 	{
-		// Token: 0x17009554 RID: 38228
-		// (get) Token: 0x06020FD7 RID: 135127 RVA: 0x0049585A File Offset: 0x00493A5A
-		// (set) Token: 0x06020FD8 RID: 135128 RVA: 0x00495862 File Offset: 0x00493A62
+		// Token: 0x17009D3A RID: 40250
+		// (get) Token: 0x06022F11 RID: 143121 RVA: 0x004CF50E File Offset: 0x004CD70E
+		// (set) Token: 0x06022F12 RID: 143122 RVA: 0x004CF516 File Offset: 0x004CD716
 		public EPatrolCycleMode Type { get; set; }
 
-		// Token: 0x06020FD9 RID: 135129 RVA: 0x0049586B File Offset: 0x00493A6B
+		// Token: 0x06022F13 RID: 143123 RVA: 0x004CF51F File Offset: 0x004CD71F
 		public ICycleModeTypeT()
 		{
 			this.Type = EPatrolCycleMode.Loop;

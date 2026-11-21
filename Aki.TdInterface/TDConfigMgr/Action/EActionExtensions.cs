@@ -2,10 +2,10 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02002285 RID: 8837
+	// Token: 0x020024F2 RID: 9458
 	public static class EActionExtensions
 	{
-		// Token: 0x0600C1D5 RID: 49621 RVA: 0x001BCC08 File Offset: 0x001BAE08
+		// Token: 0x0600CD9B RID: 52635 RVA: 0x001D438C File Offset: 0x001D258C
 		public static string ToEnumString(this EAction value)
 		{
 			string result;
@@ -269,6 +269,9 @@ namespace Aki.TDConfigMgr.Action
 			case EAction.ShowTalk:
 				result = "ShowTalk";
 				break;
+			case EAction.ModifySceneUiSubtitle:
+				result = "ModifySceneUiSubtitle";
+				break;
 			case EAction.SimpleMove:
 				result = "SimpleMove";
 				break;
@@ -283,6 +286,9 @@ namespace Aki.TDConfigMgr.Action
 				break;
 			case EAction.Wait:
 				result = "Wait";
+				break;
+			case EAction.ModifyEntityDecoration:
+				result = "ModifyEntityDecoration";
 				break;
 			case EAction.AddBuffToEntity:
 				result = "AddBuffToEntity";
@@ -344,6 +350,9 @@ namespace Aki.TDConfigMgr.Action
 			case EAction.FireBulletEffect:
 				result = "FireBulletEffect";
 				break;
+			case EAction.SetAssistCharacterPos:
+				result = "SetAssistCharacterPos";
+				break;
 			case EAction.SetPlayerPos:
 				result = "SetPlayerPos";
 				break;
@@ -376,6 +385,9 @@ namespace Aki.TDConfigMgr.Action
 				break;
 			case EAction.WaitBattleCondition:
 				result = "WaitBattleCondition";
+				break;
+			case EAction.SendBattleTag:
+				result = "SendBattleTag";
 				break;
 			case EAction.UnlockSystemItem:
 				result = "UnlockSystemItem";
@@ -581,6 +593,9 @@ namespace Aki.TDConfigMgr.Action
 			case EAction.EnableFollowShooterAbility:
 				result = "EnableFollowShooterAbility";
 				break;
+			case EAction.FollowShooterLeisureInteract:
+				result = "FollowShooterLeisureInteract";
+				break;
 			case EAction.ClientFollowShooterLeisureInteract:
 				result = "ClientFollowShooterLeisureInteract";
 				break;
@@ -629,8 +644,8 @@ namespace Aki.TDConfigMgr.Action
 			case EAction.OpenSimpleGameplay:
 				result = "OpenSimpleGameplay";
 				break;
-			case EAction.CloseSimpleGameplay:
-				result = "CloseSimpleGameplay";
+			case EAction.ToggleRideFlyingCarUiGameplay:
+				result = "ToggleRideFlyingCarUiGameplay";
 				break;
 			case EAction.ChangeActorTalker:
 				result = "ChangeActorTalker";
@@ -1202,6 +1217,15 @@ namespace Aki.TDConfigMgr.Action
 			case EAction.ClientSetSeasonState:
 				result = "ClientSetSeasonState";
 				break;
+			case EAction.SeasonWeatherSetRotationLock:
+				result = "SeasonWeatherSetRotationLock";
+				break;
+			case EAction.SeasonWeatherChangeTo:
+				result = "SeasonWeatherChangeTo";
+				break;
+			case EAction.SeasonWeatherUnlockSpecial:
+				result = "SeasonWeatherUnlockSpecial";
+				break;
 			case EAction.ToggleDragActorPlay:
 				result = "ToggleDragActorPlay";
 				break;
@@ -1220,8 +1244,29 @@ namespace Aki.TDConfigMgr.Action
 			case EAction.SetElementalBoxToTarget:
 				result = "SetElementalBoxToTarget";
 				break;
+			case EAction.DarkTideSetMapMarkState:
+				result = "DarkTideSetMapMarkState";
+				break;
 			case EAction.OverrideAbpAnimScheme:
 				result = "OverrideAbpAnimScheme";
+				break;
+			case EAction.HandBookModifySystemProgress:
+				result = "HandBookModifySystemProgress";
+				break;
+			case EAction.ClientExecEntityPrefabAction:
+				result = "ClientExecEntityPrefabAction";
+				break;
+			case EAction.LiveSetUi:
+				result = "LiveSetUi";
+				break;
+			case EAction.LiveSetDanmaku:
+				result = "LiveSetDanmaku";
+				break;
+			case EAction.LiveSetParam:
+				result = "LiveSetParam";
+				break;
+			case EAction.LiveSetSc:
+				result = "LiveSetSc";
 				break;
 			default:
 				result = value.ToString();
@@ -1230,7 +1275,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C1D6 RID: 49622 RVA: 0x001BE3B0 File Offset: 0x001BC5B0
+		// Token: 0x0600CD9C RID: 52636 RVA: 0x001D5C14 File Offset: 0x001D3E14
 		public static EAction FromString(string name)
 		{
 			EAction result;
@@ -1241,7 +1286,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600C1D7 RID: 49623 RVA: 0x001BE3DC File Offset: 0x001BC5DC
+		// Token: 0x0600CD9D RID: 52637 RVA: 0x001D5C40 File Offset: 0x001D3E40
 		public static bool TryFromString(string name, out EAction value)
 		{
 			if (string.IsNullOrEmpty(name))
@@ -1250,9 +1295,9 @@ namespace Aki.TDConfigMgr.Action
 				return false;
 			}
 			uint num = <PrivateImplementationDetails>.ComputeStringHash(name);
-			if (num <= 2134091447U)
+			if (num <= 2114198897U)
 			{
-				if (num <= 926594151U)
+				if (num <= 923782487U)
 				{
 					if (num <= 457807016U)
 					{
@@ -1260,7 +1305,7 @@ namespace Aki.TDConfigMgr.Action
 						{
 							if (num <= 136874514U)
 							{
-								if (num <= 56887563U)
+								if (num <= 49855688U)
 								{
 									if (num <= 41132262U)
 									{
@@ -1293,11 +1338,11 @@ namespace Aki.TDConfigMgr.Action
 									{
 										if (num != 45938099U)
 										{
-											if (num == 56887563U)
+											if (num == 49855688U)
 											{
-												if (name == "ClientModifyTargetTag")
+												if (name == "ToggleRideFlyingCarUiGameplay")
 												{
-													value = EAction.ClientModifyTargetTag;
+													value = EAction.ToggleRideFlyingCarUiGameplay;
 													return true;
 												}
 											}
@@ -1314,55 +1359,66 @@ namespace Aki.TDConfigMgr.Action
 										return true;
 									}
 								}
-								else if (num <= 78952540U)
+								else if (num <= 69267889U)
 								{
-									if (num != 57702761U)
+									if (num != 56887563U)
 									{
-										if (num != 69267889U)
+										if (num != 57702761U)
 										{
-											if (num == 78952540U)
+											if (num == 69267889U)
 											{
-												if (name == "TeleportDungeon")
+												if (name == "TriggerDeadeyeMode")
 												{
-													value = EAction.TeleportDungeon;
+													value = EAction.TriggerDeadeyeMode;
 													return true;
 												}
 											}
 										}
-										else if (name == "TriggerDeadeyeMode")
+										else if (name == "SetCameraAnim")
 										{
-											value = EAction.TriggerDeadeyeMode;
+											value = EAction.SetCameraAnim;
 											return true;
 										}
 									}
-									else if (name == "SetCameraAnim")
+									else if (name == "ClientModifyTargetTag")
 									{
-										value = EAction.SetCameraAnim;
+										value = EAction.ClientModifyTargetTag;
 										return true;
 									}
 								}
-								else if (num != 79142899U)
+								else if (num <= 79142899U)
 								{
-									if (num != 106482998U)
+									if (num != 78952540U)
 									{
-										if (num == 136874514U)
+										if (num == 79142899U)
 										{
-											if (name == "RoverRogueActivate")
+											if (name == "SendAiEvent")
 											{
-												value = EAction.RoverRogueActivate;
+												value = EAction.SendAiEvent;
 												return true;
 											}
 										}
 									}
-									else if (name == "VehicleSetSpeedImmediately")
+									else if (name == "TeleportDungeon")
 									{
-										value = EAction.VehicleSetSpeedImmediately;
+										value = EAction.TeleportDungeon;
 										return true;
 									}
 								}
-								else if (name == "SendAiEvent")
+								else if (num != 106482998U)
 								{
-									value = EAction.SendAiEvent;
+									if (num == 136874514U)
+									{
+										if (name == "RoverRogueActivate")
+										{
+											value = EAction.RoverRogueActivate;
+											return true;
+										}
+									}
+								}
+								else if (name == "VehicleSetSpeedImmediately")
+								{
+									value = EAction.VehicleSetSpeedImmediately;
 									return true;
 								}
 							}
@@ -1483,7 +1539,7 @@ namespace Aki.TDConfigMgr.Action
 								return true;
 							}
 						}
-						else if (num <= 356172353U)
+						else if (num <= 363387785U)
 						{
 							if (num <= 315424526U)
 							{
@@ -1566,90 +1622,101 @@ namespace Aki.TDConfigMgr.Action
 									return true;
 								}
 							}
-							else if (num != 333012204U)
+							else if (num <= 345639526U)
 							{
-								if (num != 345639526U)
+								if (num != 333012204U)
 								{
-									if (num == 356172353U)
+									if (num == 345639526U)
 									{
-										if (name == "RunActions")
+										if (name == "HonamiStoryInteractPickUp")
 										{
-											value = EAction.RunActions;
+											value = EAction.HonamiStoryInteractPickUp;
 											return true;
 										}
 									}
 								}
-								else if (name == "HonamiStoryInteractPickUp")
+								else if (name == "RemoveEffect")
 								{
-									value = EAction.HonamiStoryInteractPickUp;
+									value = EAction.RemoveEffect;
 									return true;
 								}
 							}
-							else if (name == "RemoveEffect")
+							else if (num != 356172353U)
 							{
-								value = EAction.RemoveEffect;
+								if (num == 363387785U)
+								{
+									if (name == "NewMoveWithSpline")
+									{
+										value = EAction.NewMoveWithSpline;
+										return true;
+									}
+								}
+							}
+							else if (name == "RunActions")
+							{
+								value = EAction.RunActions;
 								return true;
 							}
 						}
-						else if (num <= 409824003U)
+						else if (num <= 413087700U)
 						{
-							if (num <= 375091148U)
+							if (num <= 375883995U)
 							{
-								if (num != 363387785U)
+								if (num != 363425241U)
 								{
-									if (num != 363425241U)
+									if (num != 375091148U)
 									{
-										if (num == 375091148U)
+										if (num == 375883995U)
 										{
-											if (name == "ToggleHighlightExploreUi")
+											if (name == "FixGetItem")
 											{
-												value = EAction.ToggleHighlightExploreUi;
+												value = EAction.FixGetItem;
 												return true;
 											}
 										}
 									}
-									else if (name == "StopMotorCruise")
+									else if (name == "ToggleHighlightExploreUi")
 									{
-										value = EAction.StopMotorCruise;
+										value = EAction.ToggleHighlightExploreUi;
 										return true;
 									}
 								}
-								else if (name == "NewMoveWithSpline")
+								else if (name == "StopMotorCruise")
 								{
-									value = EAction.NewMoveWithSpline;
+									value = EAction.StopMotorCruise;
 									return true;
 								}
 							}
-							else if (num != 375883995U)
+							else if (num != 383202675U)
 							{
-								if (num != 383202675U)
+								if (num != 409824003U)
 								{
-									if (num == 409824003U)
+									if (num == 413087700U)
 									{
-										if (name == "SetJigsawItem")
+										if (name == "EnterPatrolState")
 										{
-											value = EAction.SetJigsawItem;
+											value = EAction.EnterPatrolState;
 											return true;
 										}
 									}
 								}
-								else if (name == "ChangeFlowTemplate")
+								else if (name == "SetJigsawItem")
 								{
-									value = EAction.ChangeFlowTemplate;
+									value = EAction.SetJigsawItem;
 									return true;
 								}
 							}
-							else if (name == "FixGetItem")
+							else if (name == "ChangeFlowTemplate")
 							{
-								value = EAction.FixGetItem;
+								value = EAction.ChangeFlowTemplate;
 								return true;
 							}
 						}
 						else if (num <= 427538078U)
 						{
-							if (num != 413087700U)
+							if (num != 413582567U)
 							{
-								if (num != 413582567U)
+								if (num != 422152251U)
 								{
 									if (num == 427538078U)
 									{
@@ -1660,15 +1727,15 @@ namespace Aki.TDConfigMgr.Action
 										}
 									}
 								}
-								else if (name == "PlayWalkingOverlayMontage")
+								else if (name == "SendBattleTag")
 								{
-									value = EAction.PlayWalkingOverlayMontage;
+									value = EAction.SendBattleTag;
 									return true;
 								}
 							}
-							else if (name == "EnterPatrolState")
+							else if (name == "PlayWalkingOverlayMontage")
 							{
-								value = EAction.EnterPatrolState;
+								value = EAction.PlayWalkingOverlayMontage;
 								return true;
 							}
 						}
@@ -1708,9 +1775,9 @@ namespace Aki.TDConfigMgr.Action
 							return true;
 						}
 					}
-					else if (num <= 626645766U)
+					else if (num <= 630176407U)
 					{
-						if (num <= 552822251U)
+						if (num <= 557107383U)
 						{
 							if (num <= 496820238U)
 							{
@@ -1793,264 +1860,275 @@ namespace Aki.TDConfigMgr.Action
 									return true;
 								}
 							}
-							else if (num != 540111968U)
+							else if (num <= 546368171U)
 							{
-								if (num != 546368171U)
+								if (num != 540111968U)
 								{
-									if (num == 552822251U)
+									if (num == 546368171U)
 									{
-										if (name == "SetInteractionLockState")
+										if (name == "SwitchDataLayers")
 										{
-											value = EAction.SetInteractionLockState;
+											value = EAction.SwitchDataLayers;
 											return true;
 										}
 									}
 								}
-								else if (name == "SwitchDataLayers")
+								else if (name == "SetPlayerMoveControl")
 								{
-									value = EAction.SwitchDataLayers;
+									value = EAction.SetPlayerMoveControl;
 									return true;
 								}
 							}
-							else if (name == "SetPlayerMoveControl")
+							else if (num != 552822251U)
 							{
-								value = EAction.SetPlayerMoveControl;
+								if (num == 557107383U)
+								{
+									if (name == "EnableActor")
+									{
+										value = EAction.EnableActor;
+										return true;
+									}
+								}
+							}
+							else if (name == "SetInteractionLockState")
+							{
+								value = EAction.SetInteractionLockState;
 								return true;
 							}
 						}
-						else if (num <= 581010442U)
+						else if (num <= 581883625U)
 						{
-							if (num <= 563668963U)
+							if (num <= 572681128U)
 							{
-								if (num != 557107383U)
+								if (num != 562138037U)
 								{
-									if (num != 562138037U)
+									if (num != 563668963U)
 									{
-										if (num == 563668963U)
+										if (num == 572681128U)
 										{
-											if (name == "ChangeEntityCamp")
+											if (name == "CameraLookAt")
 											{
-												value = EAction.ChangeEntityCamp;
+												value = EAction.CameraLookAt;
 												return true;
 											}
 										}
 									}
-									else if (name == "ExecBpActorFunc")
+									else if (name == "ChangeEntityCamp")
 									{
-										value = EAction.ExecBpActorFunc;
+										value = EAction.ChangeEntityCamp;
 										return true;
 									}
 								}
-								else if (name == "EnableActor")
+								else if (name == "ExecBpActorFunc")
 								{
-									value = EAction.EnableActor;
+									value = EAction.ExecBpActorFunc;
 									return true;
 								}
 							}
-							else if (num != 572681128U)
+							else if (num != 579006769U)
 							{
-								if (num != 579006769U)
+								if (num != 581010442U)
 								{
-									if (num == 581010442U)
+									if (num == 581883625U)
 									{
-										if (name == "RollBlockGetReward")
+										if (name == "FocusOnMapMark")
 										{
-											value = EAction.RollBlockGetReward;
+											value = EAction.FocusOnMapMark;
 											return true;
 										}
 									}
 								}
-								else if (name == "SetElementalBoxToTarget")
+								else if (name == "RollBlockGetReward")
 								{
-									value = EAction.SetElementalBoxToTarget;
+									value = EAction.RollBlockGetReward;
 									return true;
 								}
 							}
-							else if (name == "CameraLookAt")
+							else if (name == "SetElementalBoxToTarget")
 							{
-								value = EAction.CameraLookAt;
+								value = EAction.SetElementalBoxToTarget;
 								return true;
 							}
 						}
-						else if (num <= 593774867U)
+						else if (num <= 614558183U)
 						{
-							if (num != 581883625U)
+							if (num != 592965117U)
 							{
-								if (num != 592965117U)
+								if (num != 593774867U)
 								{
-									if (num == 593774867U)
+									if (num == 614558183U)
 									{
-										if (name == "AddBuffToFollowShooter")
+										if (name == "SetCameraMode")
 										{
-											value = EAction.AddBuffToFollowShooter;
+											value = EAction.SetCameraMode;
 											return true;
 										}
 									}
 								}
-								else if (name == "RestorePhantomFormation")
+								else if (name == "AddBuffToFollowShooter")
 								{
-									value = EAction.RestorePhantomFormation;
+									value = EAction.AddBuffToFollowShooter;
 									return true;
 								}
 							}
-							else if (name == "FocusOnMapMark")
+							else if (name == "RestorePhantomFormation")
 							{
-								value = EAction.FocusOnMapMark;
+								value = EAction.RestorePhantomFormation;
 								return true;
 							}
 						}
-						else if (num <= 616548336U)
+						else if (num <= 625823495U)
 						{
-							if (num != 614558183U)
+							if (num != 616548336U)
 							{
-								if (num == 616548336U)
+								if (num == 625823495U)
 								{
-									if (name == "SetTimeScale")
+									if (name == "ChangeTeamPosition")
 									{
-										value = EAction.SetTimeScale;
+										value = EAction.ChangeTeamPosition;
 										return true;
 									}
 								}
 							}
-							else if (name == "SetCameraMode")
+							else if (name == "SetTimeScale")
 							{
-								value = EAction.SetCameraMode;
+								value = EAction.SetTimeScale;
 								return true;
 							}
 						}
-						else if (num != 625823495U)
+						else if (num != 626645766U)
 						{
-							if (num == 626645766U)
+							if (num == 630176407U)
 							{
-								if (name == "BvbSendSystemEvent")
-								{
-									value = EAction.BvbSendSystemEvent;
-									return true;
-								}
-							}
-						}
-						else if (name == "ChangeTeamPosition")
-						{
-							value = EAction.ChangeTeamPosition;
-							return true;
-						}
-					}
-					else if (num <= 778990795U)
-					{
-						if (num <= 665155329U)
-						{
-							if (num <= 638325852U)
-							{
-								if (num != 630176407U)
-								{
-									if (num != 636718758U)
-									{
-										if (num == 638325852U)
-										{
-											if (name == "OverrideAbpAnimScheme")
-											{
-												value = EAction.OverrideAbpAnimScheme;
-												return true;
-											}
-										}
-									}
-									else if (name == "Preload")
-									{
-										value = EAction.Preload;
-										return true;
-									}
-								}
-								else if (name == "TraceSpline")
+								if (name == "TraceSpline")
 								{
 									value = EAction.TraceSpline;
 									return true;
 								}
 							}
-							else if (num != 641162771U)
+						}
+						else if (name == "BvbSendSystemEvent")
+						{
+							value = EAction.BvbSendSystemEvent;
+							return true;
+						}
+					}
+					else if (num <= 787509863U)
+					{
+						if (num <= 670376986U)
+						{
+							if (num <= 641162771U)
 							{
-								if (num != 657612618U)
+								if (num != 636718758U)
 								{
-									if (num == 665155329U)
+									if (num != 638325852U)
 									{
-										if (name == "DangoAbyssCreateRewardTreasureBox")
+										if (num == 641162771U)
 										{
-											value = EAction.DangoAbyssCreateRewardTreasureBox;
+											if (name == "SheriffChangeCriminalIdentity")
+											{
+												value = EAction.SheriffChangeCriminalIdentity;
+												return true;
+											}
+										}
+									}
+									else if (name == "OverrideAbpAnimScheme")
+									{
+										value = EAction.OverrideAbpAnimScheme;
+										return true;
+									}
+								}
+								else if (name == "Preload")
+								{
+									value = EAction.Preload;
+									return true;
+								}
+							}
+							else if (num != 657612618U)
+							{
+								if (num != 665155329U)
+								{
+									if (num == 670376986U)
+									{
+										if (name == "SetTime")
+										{
+											value = EAction.SetTime;
 											return true;
 										}
 									}
 								}
-								else if (name == "ChangePhantom")
+								else if (name == "DangoAbyssCreateRewardTreasureBox")
 								{
-									value = EAction.ChangePhantom;
+									value = EAction.DangoAbyssCreateRewardTreasureBox;
 									return true;
 								}
 							}
-							else if (name == "SheriffChangeCriminalIdentity")
+							else if (name == "ChangePhantom")
 							{
-								value = EAction.SheriffChangeCriminalIdentity;
+								value = EAction.ChangePhantom;
 								return true;
 							}
 						}
-						else if (num <= 719391451U)
+						else if (num <= 720460859U)
 						{
-							if (num != 670376986U)
+							if (num != 694523368U)
 							{
-								if (num != 694523368U)
+								if (num != 719391451U)
 								{
-									if (num == 719391451U)
+									if (num == 720460859U)
 									{
-										if (name == "PerformerAiMoveTo")
+										if (name == "PlayDynamicSettlement")
 										{
-											value = EAction.PerformerAiMoveTo;
+											value = EAction.PlayDynamicSettlement;
 											return true;
 										}
 									}
 								}
-								else if (name == "StopCameraLookAt")
+								else if (name == "PerformerAiMoveTo")
 								{
-									value = EAction.StopCameraLookAt;
+									value = EAction.PerformerAiMoveTo;
 									return true;
 								}
 							}
-							else if (name == "SetTime")
+							else if (name == "StopCameraLookAt")
 							{
-								value = EAction.SetTime;
+								value = EAction.StopCameraLookAt;
 								return true;
 							}
 						}
-						else if (num <= 748767383U)
+						else if (num <= 750678627U)
 						{
-							if (num != 720460859U)
+							if (num != 748767383U)
 							{
-								if (num == 748767383U)
+								if (num == 750678627U)
 								{
-									if (name == "TraceCurrentQuest")
+									if (name == "BvbPlayDialog")
 									{
-										value = EAction.TraceCurrentQuest;
+										value = EAction.BvbPlayDialog;
 										return true;
 									}
 								}
 							}
-							else if (name == "PlayDynamicSettlement")
+							else if (name == "TraceCurrentQuest")
 							{
-								value = EAction.PlayDynamicSettlement;
+								value = EAction.TraceCurrentQuest;
 								return true;
 							}
 						}
-						else if (num != 750678627U)
+						else if (num != 778990795U)
 						{
-							if (num == 778990795U)
+							if (num == 787509863U)
 							{
-								if (name == "HonamiStoryReceiveCorruptedChestReward")
+								if (name == "ChangeEntityState")
 								{
-									value = EAction.HonamiStoryReceiveCorruptedChestReward;
+									value = EAction.ChangeEntityState;
 									return true;
 								}
 							}
 						}
-						else if (name == "BvbPlayDialog")
+						else if (name == "HonamiStoryReceiveCorruptedChestReward")
 						{
-							value = EAction.BvbPlayDialog;
+							value = EAction.HonamiStoryReceiveCorruptedChestReward;
 							return true;
 						}
 					}
@@ -2058,7 +2136,7 @@ namespace Aki.TDConfigMgr.Action
 					{
 						if (num <= 806176668U)
 						{
-							if (num != 787509863U)
+							if (num != 788833003U)
 							{
 								if (num != 803938123U)
 								{
@@ -2077,9 +2155,9 @@ namespace Aki.TDConfigMgr.Action
 									return true;
 								}
 							}
-							else if (name == "ChangeEntityState")
+							else if (name == "LiveSetUi")
 							{
-								value = EAction.ChangeEntityState;
+								value = EAction.LiveSetUi;
 								return true;
 							}
 						}
@@ -2108,24 +2186,24 @@ namespace Aki.TDConfigMgr.Action
 							return true;
 						}
 					}
-					else if (num <= 905557690U)
+					else if (num <= 896044502U)
 					{
 						if (num != 817361934U)
 						{
-							if (num != 896044502U)
+							if (num != 884437644U)
 							{
-								if (num == 905557690U)
+								if (num == 896044502U)
 								{
-									if (name == "LeisureInteract")
+									if (name == "SimpleMove")
 									{
-										value = EAction.LeisureInteract;
+										value = EAction.SimpleMove;
 										return true;
 									}
 								}
 							}
-							else if (name == "SimpleMove")
+							else if (name == "ClientExecEntityPrefabAction")
 							{
-								value = EAction.SimpleMove;
+								value = EAction.ClientExecEntityPrefabAction;
 								return true;
 							}
 						}
@@ -2135,155 +2213,166 @@ namespace Aki.TDConfigMgr.Action
 							return true;
 						}
 					}
-					else if (num <= 912806078U)
+					else if (num <= 911382396U)
 					{
-						if (num != 911382396U)
+						if (num != 905557690U)
 						{
-							if (num == 912806078U)
+							if (num == 911382396U)
 							{
-								if (name == "DestroyQuestItem")
+								if (name == "PlayEffect2")
 								{
-									value = EAction.DestroyQuestItem;
+									value = EAction.PlayEffect2;
 									return true;
 								}
 							}
 						}
-						else if (name == "PlayEffect2")
+						else if (name == "LeisureInteract")
 						{
-							value = EAction.PlayEffect2;
+							value = EAction.LeisureInteract;
 							return true;
 						}
 					}
-					else if (num != 923782487U)
+					else if (num != 912806078U)
 					{
-						if (num == 926594151U)
+						if (num == 923782487U)
 						{
-							if (name == "ReignsTriggerGuide")
+							if (name == "FinishCondition")
 							{
-								value = EAction.ReignsTriggerGuide;
+								value = EAction.FinishCondition;
 								return true;
 							}
 						}
 					}
-					else if (name == "FinishCondition")
+					else if (name == "DestroyQuestItem")
 					{
-						value = EAction.FinishCondition;
+						value = EAction.DestroyQuestItem;
 						return true;
 					}
 				}
-				else if (num <= 1558151163U)
+				else if (num <= 1527033163U)
 				{
-					if (num <= 1245317943U)
+					if (num <= 1226036835U)
 					{
 						if (num <= 1060750734U)
 						{
-							if (num <= 995435581U)
+							if (num <= 975055186U)
 							{
-								if (num <= 966114452U)
+								if (num <= 950193672U)
 								{
-									if (num != 937653570U)
+									if (num != 926594151U)
 									{
-										if (num != 950193672U)
+										if (num != 937653570U)
 										{
-											if (num == 966114452U)
+											if (num == 950193672U)
 											{
-												if (name == "EntityLookAt")
+												if (name == "ActiveAntiGravitySafePoint")
 												{
-													value = EAction.EntityLookAt;
+													value = EAction.ActiveAntiGravitySafePoint;
 													return true;
 												}
 											}
 										}
-										else if (name == "ActiveAntiGravitySafePoint")
+										else if (name == "PlaySequenceData")
 										{
-											value = EAction.ActiveAntiGravitySafePoint;
+											value = EAction.PlaySequenceData;
 											return true;
 										}
 									}
-									else if (name == "PlaySequenceData")
+									else if (name == "ReignsTriggerGuide")
 									{
-										value = EAction.PlaySequenceData;
+										value = EAction.ReignsTriggerGuide;
 										return true;
 									}
 								}
-								else if (num != 971936426U)
+								else if (num != 966114452U)
 								{
-									if (num != 975055186U)
+									if (num != 971936426U)
 									{
-										if (num == 995435581U)
+										if (num == 975055186U)
 										{
-											if (name == "DestroyQuest")
+											if (name == "ClaimLevelPlayReward")
 											{
-												value = EAction.DestroyQuest;
+												value = EAction.ClaimLevelPlayReward;
 												return true;
 											}
 										}
 									}
-									else if (name == "ClaimLevelPlayReward")
+									else if (name == "RecordDungeonEvent")
 									{
-										value = EAction.ClaimLevelPlayReward;
+										value = EAction.RecordDungeonEvent;
 										return true;
 									}
 								}
-								else if (name == "RecordDungeonEvent")
+								else if (name == "EntityLookAt")
 								{
-									value = EAction.RecordDungeonEvent;
+									value = EAction.EntityLookAt;
 									return true;
 								}
 							}
-							else if (num <= 1018175070U)
+							else if (num <= 999227792U)
 							{
-								if (num != 995934562U)
+								if (num != 995435581U)
 								{
-									if (num != 999227792U)
+									if (num != 995934562U)
 									{
-										if (num == 1018175070U)
+										if (num == 999227792U)
 										{
-											if (name == "SheriffChangeCriminalState")
+											if (name == "Activate")
 											{
-												value = EAction.SheriffChangeCriminalState;
+												value = EAction.Activate;
 												return true;
 											}
 										}
 									}
-									else if (name == "Activate")
+									else if (name == "EnableFunction")
 									{
-										value = EAction.Activate;
+										value = EAction.EnableFunction;
 										return true;
 									}
 								}
-								else if (name == "EnableFunction")
+								else if (name == "DestroyQuest")
 								{
-									value = EAction.EnableFunction;
+									value = EAction.DestroyQuest;
 									return true;
 								}
 							}
-							else if (num != 1044914394U)
+							else if (num <= 1044914394U)
 							{
-								if (num != 1056744540U)
+								if (num != 1018175070U)
 								{
-									if (num == 1060750734U)
+									if (num == 1044914394U)
 									{
-										if (name == "RoleTowerGotoNextFloor")
+										if (name == "RemoveGuestCharacter")
 										{
-											value = EAction.RoleTowerGotoNextFloor;
+											value = EAction.RemoveGuestCharacter;
 											return true;
 										}
 									}
 								}
-								else if (name == "ExecBattleAction")
+								else if (name == "SheriffChangeCriminalState")
 								{
-									value = EAction.ExecBattleAction;
+									value = EAction.SheriffChangeCriminalState;
 									return true;
 								}
 							}
-							else if (name == "RemoveGuestCharacter")
+							else if (num != 1056744540U)
 							{
-								value = EAction.RemoveGuestCharacter;
+								if (num == 1060750734U)
+								{
+									if (name == "RoleTowerGotoNextFloor")
+									{
+										value = EAction.RoleTowerGotoNextFloor;
+										return true;
+									}
+								}
+							}
+							else if (name == "ExecBattleAction")
+							{
+								value = EAction.ExecBattleAction;
 								return true;
 							}
 						}
-						else if (num <= 1137524418U)
+						else if (num <= 1135890389U)
 						{
 							if (num <= 1084554529U)
 							{
@@ -2312,194 +2401,205 @@ namespace Aki.TDConfigMgr.Action
 									return true;
 								}
 							}
-							else if (num != 1127961565U)
+							else if (num != 1090976061U)
 							{
-								if (num != 1135890389U)
+								if (num != 1127961565U)
 								{
-									if (num == 1137524418U)
+									if (num == 1135890389U)
 									{
-										if (name == "ClearPlayBubble")
+										if (name == "RogueReceiveReward")
 										{
-											value = EAction.ClearPlayBubble;
+											value = EAction.RogueReceiveReward;
 											return true;
 										}
 									}
 								}
-								else if (name == "RogueReceiveReward")
+								else if (name == "RestoreAiBehaviorTree")
 								{
-									value = EAction.RogueReceiveReward;
+									value = EAction.RestoreAiBehaviorTree;
 									return true;
 								}
 							}
-							else if (name == "RestoreAiBehaviorTree")
+							else if (name == "FollowShooterLeisureInteract")
 							{
-								value = EAction.RestoreAiBehaviorTree;
+								value = EAction.FollowShooterLeisureInteract;
 								return true;
 							}
 						}
-						else if (num <= 1171735492U)
+						else if (num <= 1157991935U)
 						{
-							if (num != 1149397343U)
+							if (num != 1137524418U)
 							{
-								if (num != 1157991935U)
+								if (num != 1149397343U)
 								{
-									if (num == 1171735492U)
+									if (num == 1157991935U)
 									{
-										if (name == "SetDataLayerTransitions")
+										if (name == "SetEntityClientVisible")
 										{
-											value = EAction.SetDataLayerTransitions;
+											value = EAction.SetEntityClientVisible;
 											return true;
 										}
 									}
 								}
-								else if (name == "SetEntityClientVisible")
+								else if (name == "RoverRogueCreateRoomReward")
 								{
-									value = EAction.SetEntityClientVisible;
+									value = EAction.RoverRogueCreateRoomReward;
 									return true;
 								}
 							}
-							else if (name == "RoverRogueCreateRoomReward")
+							else if (name == "ClearPlayBubble")
 							{
-								value = EAction.RoverRogueCreateRoomReward;
+								value = EAction.ClearPlayBubble;
 								return true;
 							}
 						}
-						else if (num <= 1194153127U)
+						else if (num <= 1190281430U)
 						{
-							if (num != 1190281430U)
+							if (num != 1171735492U)
 							{
-								if (num == 1194153127U)
+								if (num == 1190281430U)
 								{
-									if (name == "TeleportToLatestResetPoint")
+									if (name == "SetHeadIconVisible")
 									{
-										value = EAction.TeleportToLatestResetPoint;
+										value = EAction.SetHeadIconVisible;
 										return true;
 									}
 								}
 							}
-							else if (name == "SetHeadIconVisible")
+							else if (name == "SetDataLayerTransitions")
 							{
-								value = EAction.SetHeadIconVisible;
+								value = EAction.SetDataLayerTransitions;
 								return true;
 							}
 						}
-						else if (num != 1227316783U)
+						else if (num != 1194153127U)
 						{
-							if (num == 1245317943U)
+							if (num == 1226036835U)
 							{
-								if (name == "AddTrialCharacter")
+								if (name == "LiveSetSc")
 								{
-									value = EAction.AddTrialCharacter;
+									value = EAction.LiveSetSc;
 									return true;
 								}
 							}
 						}
-						else if (name == "SetNumberVar")
+						else if (name == "TeleportToLatestResetPoint")
 						{
-							value = EAction.SetNumberVar;
+							value = EAction.TeleportToLatestResetPoint;
 							return true;
 						}
 					}
-					else if (num <= 1362942746U)
+					else if (num <= 1354359410U)
 					{
-						if (num <= 1310578199U)
+						if (num <= 1294946218U)
 						{
-							if (num <= 1265563172U)
+							if (num <= 1249931647U)
 							{
-								if (num != 1249931647U)
+								if (num != 1227316783U)
 								{
-									if (num != 1255013970U)
+									if (num != 1245317943U)
 									{
-										if (num == 1265563172U)
+										if (num == 1249931647U)
 										{
-											if (name == "FadeInScreen")
+											if (name == "ChangeRandomState")
 											{
-												value = EAction.FadeInScreen;
+												value = EAction.ChangeRandomState;
 												return true;
 											}
 										}
 									}
-									else if (name == "ShowTargetRange")
+									else if (name == "AddTrialCharacter")
 									{
-										value = EAction.ShowTargetRange;
+										value = EAction.AddTrialCharacter;
 										return true;
 									}
 								}
-								else if (name == "ChangeRandomState")
+								else if (name == "SetNumberVar")
 								{
-									value = EAction.ChangeRandomState;
+									value = EAction.SetNumberVar;
 									return true;
 								}
 							}
-							else if (num != 1294946218U)
+							else if (num != 1255013970U)
 							{
-								if (num != 1299621093U)
+								if (num != 1265563172U)
 								{
-									if (num == 1310578199U)
+									if (num == 1294946218U)
 									{
-										if (name == "FinishState")
+										if (name == "SlideRailStart")
 										{
-											value = EAction.FinishState;
+											value = EAction.SlideRailStart;
 											return true;
 										}
 									}
 								}
-								else if (name == "Destroy")
+								else if (name == "FadeInScreen")
 								{
-									value = EAction.Destroy;
+									value = EAction.FadeInScreen;
 									return true;
 								}
 							}
-							else if (name == "SlideRailStart")
+							else if (name == "ShowTargetRange")
 							{
-								value = EAction.SlideRailStart;
+								value = EAction.ShowTargetRange;
+								return true;
+							}
+						}
+						else if (num <= 1318392726U)
+						{
+							if (num != 1299621093U)
+							{
+								if (num != 1310578199U)
+								{
+									if (num == 1318392726U)
+									{
+										if (name == "SeqEventAddTagToSelf")
+										{
+											value = EAction.SeqEventAddTagToSelf;
+											return true;
+										}
+									}
+								}
+								else if (name == "FinishState")
+								{
+									value = EAction.FinishState;
+									return true;
+								}
+							}
+							else if (name == "Destroy")
+							{
+								value = EAction.Destroy;
 								return true;
 							}
 						}
 						else if (num <= 1321155294U)
 						{
-							if (num != 1318392726U)
+							if (num != 1319033021U)
 							{
-								if (num != 1319033021U)
+								if (num == 1321155294U)
 								{
-									if (num == 1321155294U)
+									if (name == "ClientFollowShooterLeisureInteract")
 									{
-										if (name == "ClientFollowShooterLeisureInteract")
-										{
-											value = EAction.ClientFollowShooterLeisureInteract;
-											return true;
-										}
+										value = EAction.ClientFollowShooterLeisureInteract;
+										return true;
 									}
 								}
-								else if (name == "FixFoundationRelation")
-								{
-									value = EAction.FixFoundationRelation;
-									return true;
-								}
 							}
-							else if (name == "SeqEventAddTagToSelf")
+							else if (name == "FixFoundationRelation")
 							{
-								value = EAction.SeqEventAddTagToSelf;
+								value = EAction.FixFoundationRelation;
 								return true;
 							}
 						}
 						else if (num != 1330736562U)
 						{
-							if (num != 1354359410U)
+							if (num == 1354359410U)
 							{
-								if (num == 1362942746U)
+								if (name == "PlayerMoveToPoint")
 								{
-									if (name == "TetrisTriggerDelayFall")
-									{
-										value = EAction.TetrisTriggerDelayFall;
-										return true;
-									}
+									value = EAction.PlayerMoveToPoint;
+									return true;
 								}
-							}
-							else if (name == "PlayerMoveToPoint")
-							{
-								value = EAction.PlayerMoveToPoint;
-								return true;
 							}
 						}
 						else if (name == "ChangeNpcAbpState")
@@ -2508,225 +2608,236 @@ namespace Aki.TDConfigMgr.Action
 							return true;
 						}
 					}
-					else if (num <= 1458566294U)
+					else if (num <= 1423243649U)
 					{
-						if (num <= 1384486459U)
+						if (num <= 1377183171U)
 						{
-							if (num != 1376721271U)
+							if (num != 1362942746U)
 							{
-								if (num != 1377183171U)
+								if (num != 1376721271U)
 								{
-									if (num == 1384486459U)
+									if (num == 1377183171U)
 									{
-										if (name == "ShowAllHidedGroupInFlow")
+										if (name == "SetExploreState")
 										{
-											value = EAction.ShowAllHidedGroupInFlow;
+											value = EAction.SetExploreState;
 											return true;
 										}
 									}
 								}
-								else if (name == "SetExploreState")
+								else if (name == "DestroySelf")
 								{
-									value = EAction.SetExploreState;
+									value = EAction.DestroySelf;
 									return true;
 								}
 							}
-							else if (name == "DestroySelf")
+							else if (name == "TetrisTriggerDelayFall")
 							{
-								value = EAction.DestroySelf;
+								value = EAction.TetrisTriggerDelayFall;
 								return true;
 							}
 						}
-						else if (num != 1410883977U)
+						else if (num != 1384486459U)
 						{
-							if (num != 1423243649U)
+							if (num != 1410883977U)
 							{
-								if (num == 1458566294U)
+								if (num == 1423243649U)
 								{
-									if (name == "MotorSoarInWindField")
+									if (name == "AvgFocusRole")
 									{
-										value = EAction.MotorSoarInWindField;
+										value = EAction.AvgFocusRole;
 										return true;
 									}
 								}
 							}
-							else if (name == "AvgFocusRole")
+							else if (name == "RotatorEntity")
 							{
-								value = EAction.AvgFocusRole;
+								value = EAction.RotatorEntity;
 								return true;
 							}
 						}
-						else if (name == "RotatorEntity")
+						else if (name == "ShowAllHidedGroupInFlow")
 						{
-							value = EAction.RotatorEntity;
+							value = EAction.ShowAllHidedGroupInFlow;
+							return true;
+						}
+					}
+					else if (num <= 1486090641U)
+					{
+						if (num != 1458566294U)
+						{
+							if (num != 1462646247U)
+							{
+								if (num == 1486090641U)
+								{
+									if (name == "DangoAbyssActivatePortal")
+									{
+										value = EAction.DangoAbyssActivatePortal;
+										return true;
+									}
+								}
+							}
+							else if (name == "DarkTideSetMapMarkState")
+							{
+								value = EAction.DarkTideSetMapMarkState;
+								return true;
+							}
+						}
+						else if (name == "MotorSoarInWindField")
+						{
+							value = EAction.MotorSoarInWindField;
 							return true;
 						}
 					}
 					else if (num <= 1487204504U)
 					{
-						if (num != 1486090641U)
+						if (num != 1486267177U)
 						{
-							if (num != 1486267177U)
+							if (num == 1487204504U)
 							{
-								if (num == 1487204504U)
+								if (name == "SetAudioEnable")
 								{
-									if (name == "SetAudioEnable")
-									{
-										value = EAction.SetAudioEnable;
-										return true;
-									}
-								}
-							}
-							else if (name == "FlowDefineNpcGroupPerform")
-							{
-								value = EAction.FlowDefineNpcGroupPerform;
-								return true;
-							}
-						}
-						else if (name == "DangoAbyssActivatePortal")
-						{
-							value = EAction.DangoAbyssActivatePortal;
-							return true;
-						}
-					}
-					else if (num <= 1527033163U)
-					{
-						if (num != 1498111488U)
-						{
-							if (num == 1527033163U)
-							{
-								if (name == "SheriffUnlockProgress")
-								{
-									value = EAction.SheriffUnlockProgress;
+									value = EAction.SetAudioEnable;
 									return true;
 								}
 							}
 						}
-						else if (name == "DangoAbyssReceiveReward")
+						else if (name == "FlowDefineNpcGroupPerform")
 						{
-							value = EAction.DangoAbyssReceiveReward;
+							value = EAction.FlowDefineNpcGroupPerform;
 							return true;
 						}
 					}
-					else if (num != 1531121395U)
+					else if (num != 1498111488U)
 					{
-						if (num == 1558151163U)
+						if (num == 1527033163U)
 						{
-							if (name == "TrapDefensePlayerOperationConstraint")
+							if (name == "SheriffUnlockProgress")
 							{
-								value = EAction.TrapDefensePlayerOperationConstraint;
+								value = EAction.SheriffUnlockProgress;
 								return true;
 							}
 						}
 					}
-					else if (name == "EnableHostility")
+					else if (name == "DangoAbyssReceiveReward")
 					{
-						value = EAction.EnableHostility;
+						value = EAction.DangoAbyssReceiveReward;
 						return true;
 					}
 				}
-				else if (num <= 1790748551U)
+				else if (num <= 1784876271U)
 				{
-					if (num <= 1674924584U)
+					if (num <= 1654342680U)
 					{
-						if (num <= 1612682396U)
+						if (num <= 1586638671U)
 						{
-							if (num <= 1578757803U)
+							if (num <= 1566200485U)
 							{
-								if (num != 1566200485U)
+								if (num != 1531121395U)
 								{
-									if (num != 1578730927U)
+									if (num != 1558151163U)
 									{
-										if (num == 1578757803U)
+										if (num == 1566200485U)
 										{
-											if (name == "DestroyFishingBoat")
+											if (name == "PerformSunSpiritGearRoundTrip")
 											{
-												value = EAction.DestroyFishingBoat;
+												value = EAction.PerformSunSpiritGearRoundTrip;
 												return true;
 											}
 										}
 									}
-									else if (name == "ClientSetPlayerPos")
+									else if (name == "TrapDefensePlayerOperationConstraint")
 									{
-										value = EAction.ClientSetPlayerPos;
+										value = EAction.TrapDefensePlayerOperationConstraint;
 										return true;
 									}
 								}
-								else if (name == "PerformSunSpiritGearRoundTrip")
+								else if (name == "EnableHostility")
 								{
-									value = EAction.PerformSunSpiritGearRoundTrip;
+									value = EAction.EnableHostility;
 									return true;
 								}
 							}
-							else if (num != 1586638671U)
+							else if (num != 1578730927U)
 							{
-								if (num != 1611758780U)
+								if (num != 1578757803U)
 								{
-									if (num == 1612682396U)
+									if (num == 1586638671U)
 									{
-										if (name == "SetSpineAnimation")
+										if (name == "RogueGotoNextFloor")
 										{
-											value = EAction.SetSpineAnimation;
+											value = EAction.RogueGotoNextFloor;
 											return true;
 										}
 									}
 								}
-								else if (name == "RecoverDurability")
+								else if (name == "DestroyFishingBoat")
 								{
-									value = EAction.RecoverDurability;
+									value = EAction.DestroyFishingBoat;
 									return true;
 								}
 							}
-							else if (name == "RogueGotoNextFloor")
+							else if (name == "ClientSetPlayerPos")
 							{
-								value = EAction.RogueGotoNextFloor;
+								value = EAction.ClientSetPlayerPos;
+								return true;
+							}
+						}
+						else if (num <= 1622590617U)
+						{
+							if (num != 1611758780U)
+							{
+								if (num != 1612682396U)
+								{
+									if (num == 1622590617U)
+									{
+										if (name == "ChangeInteractOptionText")
+										{
+											value = EAction.ChangeInteractOptionText;
+											return true;
+										}
+									}
+								}
+								else if (name == "SetSpineAnimation")
+								{
+									value = EAction.SetSpineAnimation;
+									return true;
+								}
+							}
+							else if (name == "RecoverDurability")
+							{
+								value = EAction.RecoverDurability;
 								return true;
 							}
 						}
 						else if (num <= 1634348624U)
 						{
-							if (num != 1622590617U)
+							if (num != 1627185505U)
 							{
-								if (num != 1627185505U)
+								if (num == 1634348624U)
 								{
-									if (num == 1634348624U)
+									if (name == "EnterMovieMode")
 									{
-										if (name == "EnterMovieMode")
-										{
-											value = EAction.EnterMovieMode;
-											return true;
-										}
+										value = EAction.EnterMovieMode;
+										return true;
 									}
 								}
-								else if (name == "AddBuffToPlayer")
-								{
-									value = EAction.AddBuffToPlayer;
-									return true;
-								}
 							}
-							else if (name == "ChangeInteractOptionText")
+							else if (name == "AddBuffToPlayer")
 							{
-								value = EAction.ChangeInteractOptionText;
+								value = EAction.AddBuffToPlayer;
 								return true;
 							}
 						}
 						else if (num != 1638996739U)
 						{
-							if (num != 1654342680U)
+							if (num == 1654342680U)
 							{
-								if (num == 1674924584U)
+								if (name == "ResetLevelPlay")
 								{
-									if (name == "VehicleTeleport")
-									{
-										value = EAction.VehicleTeleport;
-										return true;
-									}
+									value = EAction.ResetLevelPlay;
+									return true;
 								}
-							}
-							else if (name == "ResetLevelPlay")
-							{
-								value = EAction.ResetLevelPlay;
-								return true;
 							}
 						}
 						else if (name == "SpawnEntity")
@@ -2735,288 +2846,299 @@ namespace Aki.TDConfigMgr.Action
 							return true;
 						}
 					}
-					else if (num <= 1751214299U)
+					else if (num <= 1731746019U)
 					{
-						if (num <= 1709720177U)
+						if (num <= 1708422118U)
 						{
-							if (num != 1694670892U)
+							if (num != 1674924584U)
 							{
-								if (num != 1708422118U)
+								if (num != 1694670892U)
 								{
-									if (num == 1709720177U)
+									if (num == 1708422118U)
 									{
-										if (name == "SendSceneActorsEvent")
+										if (name == "RestorePhantom")
 										{
-											value = EAction.SendSceneActorsEvent;
+											value = EAction.RestorePhantom;
 											return true;
 										}
 									}
 								}
-								else if (name == "RestorePhantom")
+								else if (name == "BeginFlowTemplate")
 								{
-									value = EAction.RestorePhantom;
+									value = EAction.BeginFlowTemplate;
 									return true;
 								}
 							}
-							else if (name == "BeginFlowTemplate")
+							else if (name == "VehicleTeleport")
 							{
-								value = EAction.BeginFlowTemplate;
+								value = EAction.VehicleTeleport;
 								return true;
 							}
 						}
-						else if (num != 1715832146U)
+						else if (num != 1709720177U)
 						{
-							if (num != 1731746019U)
+							if (num != 1715832146U)
 							{
-								if (num == 1751214299U)
+								if (num == 1731746019U)
 								{
-									if (name == "ExecClientBattleAction")
+									if (name == "Undefined")
 									{
-										value = EAction.ExecClientBattleAction;
+										value = EAction.Undefined;
 										return true;
 									}
 								}
 							}
-							else if (name == "Undefined")
+							else if (name == "CompleteGuide")
 							{
-								value = EAction.Undefined;
+								value = EAction.CompleteGuide;
 								return true;
 							}
 						}
-						else if (name == "CompleteGuide")
+						else if (name == "SendSceneActorsEvent")
 						{
-							value = EAction.CompleteGuide;
+							value = EAction.SendSceneActorsEvent;
+							return true;
+						}
+					}
+					else if (num <= 1757804247U)
+					{
+						if (num != 1747163490U)
+						{
+							if (num != 1751214299U)
+							{
+								if (num == 1757804247U)
+								{
+									if (name == "AddTrialFollowShooter")
+									{
+										value = EAction.AddTrialFollowShooter;
+										return true;
+									}
+								}
+							}
+							else if (name == "ExecClientBattleAction")
+							{
+								value = EAction.ExecClientBattleAction;
+								return true;
+							}
+						}
+						else if (name == "LiveSetParam")
+						{
+							value = EAction.LiveSetParam;
 							return true;
 						}
 					}
 					else if (num <= 1770589238U)
 					{
-						if (num != 1757804247U)
+						if (num != 1770271980U)
 						{
-							if (num != 1770271980U)
+							if (num == 1770589238U)
 							{
-								if (num == 1770589238U)
+								if (name == "EnableLevelPlay")
 								{
-									if (name == "EnableLevelPlay")
-									{
-										value = EAction.EnableLevelPlay;
-										return true;
-									}
-								}
-							}
-							else if (name == "VehicleWaterfallClimbing")
-							{
-								value = EAction.VehicleWaterfallClimbing;
-								return true;
-							}
-						}
-						else if (name == "AddTrialFollowShooter")
-						{
-							value = EAction.AddTrialFollowShooter;
-							return true;
-						}
-					}
-					else if (num <= 1784876271U)
-					{
-						if (num != 1780123448U)
-						{
-							if (num == 1784876271U)
-							{
-								if (name == "WaitBattleCondition")
-								{
-									value = EAction.WaitBattleCondition;
+									value = EAction.EnableLevelPlay;
 									return true;
 								}
 							}
 						}
-						else if (name == "EndFlowTemplate")
+						else if (name == "VehicleWaterfallClimbing")
 						{
-							value = EAction.EndFlowTemplate;
+							value = EAction.VehicleWaterfallClimbing;
 							return true;
 						}
 					}
-					else if (num != 1789777407U)
+					else if (num != 1780123448U)
 					{
-						if (num == 1790748551U)
+						if (num == 1784876271U)
 						{
-							if (name == "ActivateResetPoint")
+							if (name == "WaitBattleCondition")
 							{
-								value = EAction.ActivateResetPoint;
+								value = EAction.WaitBattleCondition;
 								return true;
 							}
 						}
 					}
-					else if (name == "SlideRailEnd")
+					else if (name == "EndFlowTemplate")
 					{
-						value = EAction.SlideRailEnd;
+						value = EAction.EndFlowTemplate;
 						return true;
 					}
 				}
-				else if (num <= 1982999440U)
+				else if (num <= 1962318722U)
 				{
-					if (num <= 1880295570U)
+					if (num <= 1841093436U)
 					{
-						if (num <= 1814328475U)
+						if (num <= 1797781587U)
 						{
-							if (num != 1797781587U)
+							if (num != 1789777407U)
 							{
-								if (num != 1808748440U)
+								if (num != 1790748551U)
 								{
-									if (num == 1814328475U)
+									if (num == 1797781587U)
 									{
-										if (name == "RequestSystemFunction")
+										if (name == "AddGuestCharacter")
 										{
-											value = EAction.RequestSystemFunction;
+											value = EAction.AddGuestCharacter;
 											return true;
 										}
 									}
 								}
-								else if (name == "SettlementDungeon")
+								else if (name == "ActivateResetPoint")
 								{
-									value = EAction.SettlementDungeon;
+									value = EAction.ActivateResetPoint;
 									return true;
 								}
 							}
-							else if (name == "AddGuestCharacter")
+							else if (name == "SlideRailEnd")
 							{
-								value = EAction.AddGuestCharacter;
+								value = EAction.SlideRailEnd;
 								return true;
 							}
 						}
-						else if (num != 1841093436U)
+						else if (num != 1808748440U)
 						{
-							if (num != 1850727938U)
+							if (num != 1814328475U)
 							{
-								if (num == 1880295570U)
+								if (num == 1841093436U)
 								{
-									if (name == "DestroyAllChild")
+									if (name == "EndCommonTip")
 									{
-										value = EAction.DestroyAllChild;
+										value = EAction.EndCommonTip;
 										return true;
 									}
 								}
 							}
-							else if (name == "RemoveFlowInteractOption")
+							else if (name == "RequestSystemFunction")
 							{
-								value = EAction.RemoveFlowInteractOption;
+								value = EAction.RequestSystemFunction;
 								return true;
 							}
 						}
-						else if (name == "EndCommonTip")
+						else if (name == "SettlementDungeon")
 						{
-							value = EAction.EndCommonTip;
+							value = EAction.SettlementDungeon;
+							return true;
+						}
+					}
+					else if (num <= 1890840053U)
+					{
+						if (num != 1850727938U)
+						{
+							if (num != 1880295570U)
+							{
+								if (num == 1890840053U)
+								{
+									if (name == "GuideTrigger")
+									{
+										value = EAction.GuideTrigger;
+										return true;
+									}
+								}
+							}
+							else if (name == "DestroyAllChild")
+							{
+								value = EAction.DestroyAllChild;
+								return true;
+							}
+						}
+						else if (name == "RemoveFlowInteractOption")
+						{
+							value = EAction.RemoveFlowInteractOption;
 							return true;
 						}
 					}
 					else if (num <= 1954944637U)
 					{
-						if (num != 1890840053U)
+						if (num != 1949067738U)
 						{
-							if (num != 1949067738U)
+							if (num == 1954944637U)
 							{
-								if (num == 1954944637U)
+								if (name == "AvgShakeUi")
 								{
-									if (name == "AvgShakeUi")
-									{
-										value = EAction.AvgShakeUi;
-										return true;
-									}
-								}
-							}
-							else if (name == "UsePhantomSkill")
-							{
-								value = EAction.UsePhantomSkill;
-								return true;
-							}
-						}
-						else if (name == "GuideTrigger")
-						{
-							value = EAction.GuideTrigger;
-							return true;
-						}
-					}
-					else if (num <= 1962318722U)
-					{
-						if (num != 1959754401U)
-						{
-							if (num == 1962318722U)
-							{
-								if (name == "TriggerSystemRandomPlot")
-								{
-									value = EAction.TriggerSystemRandomPlot;
+									value = EAction.AvgShakeUi;
 									return true;
 								}
 							}
 						}
-						else if (name == "ResetPlayerPosWithPresentation")
+						else if (name == "UsePhantomSkill")
 						{
-							value = EAction.ResetPlayerPosWithPresentation;
+							value = EAction.UsePhantomSkill;
 							return true;
 						}
 					}
-					else if (num != 1978792736U)
+					else if (num != 1959754401U)
 					{
-						if (num == 1982999440U)
+						if (num == 1962318722U)
 						{
-							if (name == "GetItem")
+							if (name == "TriggerSystemRandomPlot")
+							{
+								value = EAction.TriggerSystemRandomPlot;
+								return true;
+							}
+						}
+					}
+					else if (name == "ResetPlayerPosWithPresentation")
+					{
+						value = EAction.ResetPlayerPosWithPresentation;
+						return true;
+					}
+				}
+				else if (num <= 2030919416U)
+				{
+					if (num <= 2007859523U)
+					{
+						if (num != 1978792736U)
+						{
+							if (num != 1982999440U)
+							{
+								if (num == 2007859523U)
+								{
+									if (name == "TriggerSpecificScanEffect")
+									{
+										value = EAction.TriggerSpecificScanEffect;
+										return true;
+									}
+								}
+							}
+							else if (name == "GetItem")
 							{
 								value = EAction.GetItem;
 								return true;
 							}
 						}
-					}
-					else if (name == "SetWayOccupancyState")
-					{
-						value = EAction.SetWayOccupancyState;
-						return true;
-					}
-				}
-				else if (num <= 2035606522U)
-				{
-					if (num <= 2018018397U)
-					{
-						if (num != 2007859523U)
+						else if (name == "SetWayOccupancyState")
 						{
-							if (num != 2015593190U)
+							value = EAction.SetWayOccupancyState;
+							return true;
+						}
+					}
+					else if (num <= 2018018397U)
+					{
+						if (num != 2015593190U)
+						{
+							if (num == 2018018397U)
 							{
-								if (num == 2018018397U)
+								if (name == "DollGrabItemDelivery")
 								{
-									if (name == "DollGrabItemDelivery")
-									{
-										value = EAction.DollGrabItemDelivery;
-										return true;
-									}
+									value = EAction.DollGrabItemDelivery;
+									return true;
 								}
 							}
-							else if (name == "SetEntityPos")
-							{
-								value = EAction.SetEntityPos;
-								return true;
-							}
 						}
-						else if (name == "TriggerSpecificScanEffect")
+						else if (name == "SetEntityPos")
 						{
-							value = EAction.TriggerSpecificScanEffect;
+							value = EAction.SetEntityPos;
 							return true;
 						}
 					}
 					else if (num != 2029983312U)
 					{
-						if (num != 2030919416U)
+						if (num == 2030919416U)
 						{
-							if (num == 2035606522U)
+							if (name == "OpenQuickHackSystem")
 							{
-								if (name == "ClientSetPlayerOperationRestriction")
-								{
-									value = EAction.ClientSetPlayerOperationRestriction;
-									return true;
-								}
+								value = EAction.OpenQuickHackSystem;
+								return true;
 							}
-						}
-						else if (name == "OpenQuickHackSystem")
-						{
-							value = EAction.OpenQuickHackSystem;
-							return true;
 						}
 					}
 					else if (name == "InterludeActions")
@@ -3025,175 +3147,186 @@ namespace Aki.TDConfigMgr.Action
 						return true;
 					}
 				}
-				else if (num <= 2071689728U)
+				else if (num <= 2066132067U)
 				{
-					if (num != 2050816061U)
+					if (num != 2035606522U)
 					{
-						if (num != 2066132067U)
+						if (num != 2050816061U)
 						{
-							if (num == 2071689728U)
+							if (num == 2066132067U)
 							{
-								if (name == "FinishDungeon")
+								if (name == "SheriffUnlockEnding")
 								{
-									value = EAction.FinishDungeon;
+									value = EAction.SheriffUnlockEnding;
 									return true;
 								}
 							}
 						}
-						else if (name == "SheriffUnlockEnding")
+						else if (name == "CloseFlowTemplate")
 						{
-							value = EAction.SheriffUnlockEnding;
+							value = EAction.CloseFlowTemplate;
 							return true;
 						}
 					}
-					else if (name == "CloseFlowTemplate")
+					else if (name == "ClientSetPlayerOperationRestriction")
 					{
-						value = EAction.CloseFlowTemplate;
+						value = EAction.ClientSetPlayerOperationRestriction;
 						return true;
 					}
 				}
-				else if (num <= 2108270406U)
+				else if (num <= 2094544238U)
 				{
-					if (num != 2094544238U)
+					if (num != 2071689728U)
 					{
-						if (num == 2108270406U)
+						if (num == 2094544238U)
 						{
-							if (name == "CharacterLookAt")
+							if (name == "HideByRangeInFlow")
 							{
-								value = EAction.CharacterLookAt;
+								value = EAction.HideByRangeInFlow;
 								return true;
 							}
 						}
 					}
-					else if (name == "HideByRangeInFlow")
+					else if (name == "FinishDungeon")
 					{
-						value = EAction.HideByRangeInFlow;
+						value = EAction.FinishDungeon;
 						return true;
 					}
 				}
-				else if (num != 2114198897U)
+				else if (num != 2108270406U)
 				{
-					if (num == 2134091447U)
+					if (num == 2114198897U)
 					{
-						if (name == "HonamiStoryGetItem")
+						if (name == "NpcLeisureInteract")
 						{
-							value = EAction.HonamiStoryGetItem;
+							value = EAction.NpcLeisureInteract;
 							return true;
 						}
 					}
 				}
-				else if (name == "NpcLeisureInteract")
+				else if (name == "CharacterLookAt")
 				{
-					value = EAction.NpcLeisureInteract;
+					value = EAction.CharacterLookAt;
 					return true;
 				}
 			}
-			else if (num <= 3327054839U)
+			else if (num <= 3301731264U)
 			{
-				if (num <= 2715646961U)
+				if (num <= 2715189307U)
 				{
-					if (num <= 2330377671U)
+					if (num <= 2328992418U)
 					{
-						if (num <= 2224418774U)
+						if (num <= 2212951527U)
 						{
-							if (num <= 2174274579U)
+							if (num <= 2155720729U)
 							{
-								if (num <= 2152026077U)
+								if (num <= 2143987045U)
 								{
-									if (num != 2135923639U)
+									if (num != 2134091447U)
 									{
-										if (num != 2143987045U)
+										if (num != 2135923639U)
 										{
-											if (num == 2152026077U)
+											if (num == 2143987045U)
 											{
-												if (name == "SlidePerformStart")
+												if (name == "EnableTakePhotoClip")
 												{
-													value = EAction.SlidePerformStart;
+													value = EAction.EnableTakePhotoClip;
 													return true;
 												}
 											}
 										}
-										else if (name == "EnableTakePhotoClip")
+										else if (name == "JumpTalk")
 										{
-											value = EAction.EnableTakePhotoClip;
+											value = EAction.JumpTalk;
 											return true;
 										}
 									}
-									else if (name == "JumpTalk")
+									else if (name == "HonamiStoryGetItem")
 									{
-										value = EAction.JumpTalk;
+										value = EAction.HonamiStoryGetItem;
 										return true;
 									}
 								}
-								else if (num != 2153363071U)
+								else if (num != 2152026077U)
 								{
-									if (num != 2155720729U)
+									if (num != 2153363071U)
 									{
-										if (num == 2174274579U)
+										if (num == 2155720729U)
 										{
-											if (name == "SetAreaState")
+											if (name == "SetActorVar")
 											{
-												value = EAction.SetAreaState;
+												value = EAction.SetActorVar;
 												return true;
 											}
 										}
 									}
-									else if (name == "SetActorVar")
+									else if (name == "PlayFlow")
 									{
-										value = EAction.SetActorVar;
+										value = EAction.PlayFlow;
 										return true;
 									}
 								}
-								else if (name == "PlayFlow")
+								else if (name == "SlidePerformStart")
 								{
-									value = EAction.PlayFlow;
+									value = EAction.SlidePerformStart;
+									return true;
+								}
+							}
+							else if (num <= 2194601547U)
+							{
+								if (num != 2174274579U)
+								{
+									if (num != 2187993097U)
+									{
+										if (num == 2194601547U)
+										{
+											if (name == "SeasonWeatherUnlockSpecial")
+											{
+												value = EAction.SeasonWeatherUnlockSpecial;
+												return true;
+											}
+										}
+									}
+									else if (name == "SummonEntity")
+									{
+										value = EAction.SummonEntity;
+										return true;
+									}
+								}
+								else if (name == "SetAreaState")
+								{
+									value = EAction.SetAreaState;
 									return true;
 								}
 							}
 							else if (num <= 2198839411U)
 							{
-								if (num != 2187993097U)
+								if (num != 2197676485U)
 								{
-									if (num != 2197676485U)
+									if (num == 2198839411U)
 									{
-										if (num == 2198839411U)
+										if (name == "SetMotorSpeed")
 										{
-											if (name == "SetMotorSpeed")
-											{
-												value = EAction.SetMotorSpeed;
-												return true;
-											}
+											value = EAction.SetMotorSpeed;
+											return true;
 										}
 									}
-									else if (name == "ExecRiskHarvestEffect")
-									{
-										value = EAction.ExecRiskHarvestEffect;
-										return true;
-									}
 								}
-								else if (name == "SummonEntity")
+								else if (name == "ExecRiskHarvestEffect")
 								{
-									value = EAction.SummonEntity;
+									value = EAction.ExecRiskHarvestEffect;
 									return true;
 								}
 							}
 							else if (num != 2212120706U)
 							{
-								if (num != 2212951527U)
+								if (num == 2212951527U)
 								{
-									if (num == 2224418774U)
+									if (name == "AddFlowInteractOption")
 									{
-										if (name == "RemovePreloadResource")
-										{
-											value = EAction.RemovePreloadResource;
-											return true;
-										}
+										value = EAction.AddFlowInteractOption;
+										return true;
 									}
-								}
-								else if (name == "AddFlowInteractOption")
-								{
-									value = EAction.AddFlowInteractOption;
-									return true;
 								}
 							}
 							else if (name == "AccpetCurrentQuest")
@@ -3202,223 +3335,234 @@ namespace Aki.TDConfigMgr.Action
 								return true;
 							}
 						}
-						else if (num <= 2267712036U)
+						else if (num <= 2260470078U)
 						{
-							if (num <= 2248410712U)
+							if (num <= 2246169256U)
 							{
-								if (num != 2232943762U)
+								if (num != 2224418774U)
 								{
-									if (num != 2246169256U)
+									if (num != 2232943762U)
 									{
-										if (num == 2248410712U)
+										if (num == 2246169256U)
 										{
-											if (name == "CustomJson")
+											if (name == "AdjustPlayerCamera")
 											{
-												value = EAction.CustomJson;
+												value = EAction.AdjustPlayerCamera;
 												return true;
 											}
 										}
 									}
-									else if (name == "AdjustPlayerCamera")
+									else if (name == "AvgMoveRole")
 									{
-										value = EAction.AdjustPlayerCamera;
+										value = EAction.AvgMoveRole;
 										return true;
 									}
 								}
-								else if (name == "AvgMoveRole")
+								else if (name == "RemovePreloadResource")
 								{
-									value = EAction.AvgMoveRole;
+									value = EAction.RemovePreloadResource;
 									return true;
 								}
 							}
-							else if (num != 2258951819U)
+							else if (num != 2248410712U)
 							{
-								if (num != 2260470078U)
+								if (num != 2258951819U)
 								{
-									if (num == 2267712036U)
+									if (num == 2260470078U)
 									{
-										if (name == "SyncVarToActorState")
+										if (name == "ChangeOtherState")
 										{
-											value = EAction.SyncVarToActorState;
+											value = EAction.ChangeOtherState;
 											return true;
 										}
 									}
 								}
-								else if (name == "ChangeOtherState")
+								else if (name == "ShowHidedGroup")
 								{
-									value = EAction.ChangeOtherState;
+									value = EAction.ShowHidedGroup;
 									return true;
 								}
 							}
-							else if (name == "ShowHidedGroup")
+							else if (name == "CustomJson")
 							{
-								value = EAction.ShowHidedGroup;
+								value = EAction.CustomJson;
 								return true;
 							}
 						}
-						else if (num <= 2320243247U)
+						else if (num <= 2318633348U)
 						{
-							if (num != 2316127520U)
+							if (num != 2267712036U)
 							{
-								if (num != 2318633348U)
+								if (num != 2316127520U)
 								{
-									if (num == 2320243247U)
+									if (num == 2318633348U)
 									{
-										if (name == "ClientUnlockAchievementSystemItem")
+										if (name == "FireBulletEffect")
 										{
-											value = EAction.ClientUnlockAchievementSystemItem;
+											value = EAction.FireBulletEffect;
 											return true;
 										}
 									}
 								}
-								else if (name == "FireBulletEffect")
+								else if (name == "ToggleScanSplineEffect")
 								{
-									value = EAction.FireBulletEffect;
+									value = EAction.ToggleScanSplineEffect;
 									return true;
 								}
 							}
-							else if (name == "ToggleScanSplineEffect")
+							else if (name == "SyncVarToActorState")
 							{
-								value = EAction.ToggleScanSplineEffect;
+								value = EAction.SyncVarToActorState;
 								return true;
 							}
 						}
-						else if (num <= 2326540071U)
+						else if (num <= 2323761386U)
 						{
-							if (num != 2323761386U)
+							if (num != 2320243247U)
 							{
-								if (num == 2326540071U)
+								if (num == 2323761386U)
 								{
-									if (name == "GetRewardByInteract")
+									if (name == "VehicleEnterNpc")
 									{
-										value = EAction.GetRewardByInteract;
+										value = EAction.VehicleEnterNpc;
 										return true;
 									}
 								}
 							}
-							else if (name == "VehicleEnterNpc")
+							else if (name == "ClientUnlockAchievementSystemItem")
 							{
-								value = EAction.VehicleEnterNpc;
+								value = EAction.ClientUnlockAchievementSystemItem;
 								return true;
 							}
 						}
-						else if (num != 2328992418U)
+						else if (num != 2326540071U)
 						{
-							if (num == 2330377671U)
+							if (num == 2328992418U)
 							{
-								if (name == "AwakeEntity")
+								if (name == "ReportTrackingEvent")
+								{
+									value = EAction.ReportTrackingEvent;
+									return true;
+								}
+							}
+						}
+						else if (name == "GetRewardByInteract")
+						{
+							value = EAction.GetRewardByInteract;
+							return true;
+						}
+					}
+					else if (num <= 2444391545U)
+					{
+						if (num <= 2373372887U)
+						{
+							if (num <= 2349217778U)
+							{
+								if (num != 2330377671U)
+								{
+									if (num != 2341628087U)
+									{
+										if (num == 2349217778U)
+										{
+											if (name == "ServerForceEnableLevelPlay")
+											{
+												value = EAction.ServerForceEnableLevelPlay;
+												return true;
+											}
+										}
+									}
+									else if (name == "SetAssistCharacterPos")
+									{
+										value = EAction.SetAssistCharacterPos;
+										return true;
+									}
+								}
+								else if (name == "AwakeEntity")
 								{
 									value = EAction.AwakeEntity;
 									return true;
 								}
 							}
-						}
-						else if (name == "ReportTrackingEvent")
-						{
-							value = EAction.ReportTrackingEvent;
-							return true;
-						}
-					}
-					else if (num <= 2445092153U)
-					{
-						if (num <= 2381593610U)
-						{
-							if (num <= 2373038302U)
+							else if (num != 2352449708U)
 							{
-								if (num != 2349217778U)
+								if (num != 2373038302U)
 								{
-									if (num != 2352449708U)
+									if (num == 2373372887U)
 									{
-										if (num == 2373038302U)
+										if (name == "BvbSendAiEvent")
 										{
-											if (name == "ChangeState")
-											{
-												value = EAction.ChangeState;
-												return true;
-											}
-										}
-									}
-									else if (name == "RemoveNpcGroupPerform")
-									{
-										value = EAction.RemoveNpcGroupPerform;
-										return true;
-									}
-								}
-								else if (name == "ServerForceEnableLevelPlay")
-								{
-									value = EAction.ServerForceEnableLevelPlay;
-									return true;
-								}
-							}
-							else if (num != 2373372887U)
-							{
-								if (num != 2374337302U)
-								{
-									if (num == 2381593610U)
-									{
-										if (name == "SetEntityClientVisibleSave")
-										{
-											value = EAction.SetEntityClientVisibleSave;
+											value = EAction.BvbSendAiEvent;
 											return true;
 										}
 									}
 								}
-								else if (name == "SetReviveRegion")
+								else if (name == "ChangeState")
 								{
-									value = EAction.SetReviveRegion;
+									value = EAction.ChangeState;
 									return true;
 								}
 							}
-							else if (name == "BvbSendAiEvent")
+							else if (name == "RemoveNpcGroupPerform")
 							{
-								value = EAction.BvbSendAiEvent;
+								value = EAction.RemoveNpcGroupPerform;
+								return true;
+							}
+						}
+						else if (num <= 2382187439U)
+						{
+							if (num != 2374337302U)
+							{
+								if (num != 2381593610U)
+								{
+									if (num == 2382187439U)
+									{
+										if (name == "WaitUntilLevelSequenceReachMark")
+										{
+											value = EAction.WaitUntilLevelSequenceReachMark;
+											return true;
+										}
+									}
+								}
+								else if (name == "SetEntityClientVisibleSave")
+								{
+									value = EAction.SetEntityClientVisibleSave;
+									return true;
+								}
+							}
+							else if (name == "SetReviveRegion")
+							{
+								value = EAction.SetReviveRegion;
 								return true;
 							}
 						}
 						else if (num <= 2400896417U)
 						{
-							if (num != 2382187439U)
+							if (num != 2387942897U)
 							{
-								if (num != 2387942897U)
+								if (num == 2400896417U)
 								{
-									if (num == 2400896417U)
+									if (name == "StopSceneItemMove")
 									{
-										if (name == "StopSceneItemMove")
-										{
-											value = EAction.StopSceneItemMove;
-											return true;
-										}
+										value = EAction.StopSceneItemMove;
+										return true;
 									}
 								}
-								else if (name == "EnableClientFunction")
-								{
-									value = EAction.EnableClientFunction;
-									return true;
-								}
 							}
-							else if (name == "WaitUntilLevelSequenceReachMark")
+							else if (name == "EnableClientFunction")
 							{
-								value = EAction.WaitUntilLevelSequenceReachMark;
+								value = EAction.EnableClientFunction;
 								return true;
 							}
 						}
 						else if (num != 2438087062U)
 						{
-							if (num != 2444391545U)
+							if (num == 2444391545U)
 							{
-								if (num == 2445092153U)
+								if (name == "RemoveBuffToTriggeredEntity")
 								{
-									if (name == "TrapDefenseChangeMiniMap")
-									{
-										value = EAction.TrapDefenseChangeMiniMap;
-										return true;
-									}
+									value = EAction.RemoveBuffToTriggeredEntity;
+									return true;
 								}
-							}
-							else if (name == "RemoveBuffToTriggeredEntity")
-							{
-								value = EAction.RemoveBuffToTriggeredEntity;
-								return true;
 							}
 						}
 						else if (name == "UnlockTeleportTrigger")
@@ -3427,253 +3571,264 @@ namespace Aki.TDConfigMgr.Action
 							return true;
 						}
 					}
-					else if (num <= 2568443947U)
+					else if (num <= 2536991015U)
 					{
-						if (num <= 2470629275U)
+						if (num <= 2457348077U)
 						{
-							if (num != 2449275519U)
+							if (num != 2445092153U)
 							{
-								if (num != 2457348077U)
+								if (num != 2449275519U)
 								{
-									if (num == 2470629275U)
+									if (num == 2457348077U)
 									{
-										if (name == "EnableEntityLookAt")
+										if (name == "SetJigsawFoundation")
 										{
-											value = EAction.EnableEntityLookAt;
+											value = EAction.SetJigsawFoundation;
 											return true;
 										}
 									}
 								}
-								else if (name == "SetJigsawFoundation")
+								else if (name == "TakePlotPhoto")
 								{
-									value = EAction.SetJigsawFoundation;
+									value = EAction.TakePlotPhoto;
 									return true;
 								}
 							}
-							else if (name == "TakePlotPhoto")
+							else if (name == "TrapDefenseChangeMiniMap")
 							{
-								value = EAction.TakePlotPhoto;
+								value = EAction.TrapDefenseChangeMiniMap;
 								return true;
 							}
 						}
-						else if (num != 2520896635U)
+						else if (num != 2470629275U)
 						{
-							if (num != 2536991015U)
+							if (num != 2520896635U)
 							{
-								if (num == 2568443947U)
+								if (num == 2536991015U)
 								{
-									if (name == "ExecResurrection")
+									if (name == "CloseWalkingOverlayMontage")
 									{
-										value = EAction.ExecResurrection;
+										value = EAction.CloseWalkingOverlayMontage;
 										return true;
 									}
 								}
 							}
-							else if (name == "CloseWalkingOverlayMontage")
+							else if (name == "VehicleEnter")
 							{
-								value = EAction.CloseWalkingOverlayMontage;
+								value = EAction.VehicleEnter;
 								return true;
 							}
 						}
-						else if (name == "VehicleEnter")
+						else if (name == "EnableEntityLookAt")
 						{
-							value = EAction.VehicleEnter;
+							value = EAction.EnableEntityLookAt;
 							return true;
 						}
 					}
-					else if (num <= 2667639771U)
+					else if (num <= 2592962310U)
 					{
-						if (num != 2577916440U)
+						if (num != 2568443947U)
 						{
-							if (num != 2592962310U)
+							if (num != 2577916440U)
 							{
-								if (num == 2667639771U)
+								if (num == 2592962310U)
 								{
-									if (name == "CaptureElementalBox")
+									if (name == "TeleportDungeonPos")
 									{
-										value = EAction.CaptureElementalBox;
+										value = EAction.TeleportDungeonPos;
 										return true;
 									}
 								}
 							}
-							else if (name == "TeleportDungeonPos")
+							else if (name == "DrinksRollRoleRequirement")
 							{
-								value = EAction.TeleportDungeonPos;
+								value = EAction.DrinksRollRoleRequirement;
 								return true;
 							}
 						}
-						else if (name == "DrinksRollRoleRequirement")
+						else if (name == "ExecResurrection")
 						{
-							value = EAction.DrinksRollRoleRequirement;
+							value = EAction.ExecResurrection;
 							return true;
 						}
 					}
-					else if (num <= 2707415479U)
+					else if (num <= 2690828473U)
 					{
-						if (num != 2690828473U)
+						if (num != 2667639771U)
 						{
-							if (num == 2707415479U)
+							if (num == 2690828473U)
 							{
-								if (name == "AddBuffToEntity")
+								if (name == "ToggleMapMarkState")
 								{
-									value = EAction.AddBuffToEntity;
+									value = EAction.ToggleMapMarkState;
 									return true;
 								}
 							}
 						}
-						else if (name == "ToggleMapMarkState")
+						else if (name == "CaptureElementalBox")
 						{
-							value = EAction.ToggleMapMarkState;
+							value = EAction.CaptureElementalBox;
 							return true;
 						}
 					}
-					else if (num != 2715189307U)
+					else if (num != 2707415479U)
 					{
-						if (num == 2715646961U)
+						if (num == 2715189307U)
 						{
-							if (name == "Log")
+							if (name == "VehicleMoveWithPathLine")
 							{
-								value = EAction.Log;
+								value = EAction.VehicleMoveWithPathLine;
 								return true;
 							}
 						}
 					}
-					else if (name == "VehicleMoveWithPathLine")
+					else if (name == "AddBuffToEntity")
 					{
-						value = EAction.VehicleMoveWithPathLine;
+						value = EAction.AddBuffToEntity;
 						return true;
 					}
 				}
-				else if (num <= 3009412261U)
+				else if (num <= 2988799482U)
 				{
 					if (num <= 2852212440U)
 					{
-						if (num <= 2815753282U)
+						if (num <= 2778094472U)
 						{
-							if (num <= 2746321178U)
+							if (num <= 2737113081U)
 							{
-								if (num != 2732640163U)
+								if (num != 2715646961U)
 								{
-									if (num != 2737113081U)
+									if (num != 2732640163U)
 									{
-										if (num == 2746321178U)
+										if (num == 2737113081U)
 										{
-											if (name == "DriveMotorInSpecConfig")
+											if (name == "PlayerLookTowards")
 											{
-												value = EAction.DriveMotorInSpecConfig;
+												value = EAction.PlayerLookTowards;
 												return true;
 											}
 										}
 									}
-									else if (name == "PlayerLookTowards")
+									else if (name == "GiantToggleModel")
 									{
-										value = EAction.PlayerLookTowards;
+										value = EAction.GiantToggleModel;
 										return true;
 									}
 								}
-								else if (name == "GiantToggleModel")
+								else if (name == "Log")
 								{
-									value = EAction.GiantToggleModel;
+									value = EAction.Log;
 									return true;
 								}
 							}
-							else if (num != 2768556192U)
+							else if (num != 2746321178U)
 							{
-								if (num != 2778094472U)
+								if (num != 2768556192U)
 								{
-									if (num == 2815753282U)
+									if (num == 2778094472U)
 									{
-										if (name == "ReignsSetPropertyVisible")
+										if (name == "SetPlayerPos")
 										{
-											value = EAction.ReignsSetPropertyVisible;
+											value = EAction.SetPlayerPos;
 											return true;
 										}
 									}
 								}
-								else if (name == "SetPlayerPos")
+								else if (name == "ExitMovieCamera")
 								{
-									value = EAction.SetPlayerPos;
+									value = EAction.ExitMovieCamera;
 									return true;
 								}
 							}
-							else if (name == "ExitMovieCamera")
+							else if (name == "DriveMotorInSpecConfig")
 							{
-								value = EAction.ExitMovieCamera;
+								value = EAction.DriveMotorInSpecConfig;
 								return true;
 							}
 						}
-						else if (num <= 2830865376U)
+						else if (num <= 2823922039U)
 						{
-							if (num != 2822551120U)
+							if (num != 2815753282U)
 							{
-								if (num != 2823922039U)
+								if (num != 2822551120U)
 								{
-									if (num == 2830865376U)
+									if (num == 2823922039U)
 									{
-										if (name == "DestroySummonedEntities")
+										if (name == "ShowSpecificEntities")
 										{
-											value = EAction.DestroySummonedEntities;
+											value = EAction.ShowSpecificEntities;
 											return true;
 										}
 									}
 								}
-								else if (name == "ShowSpecificEntities")
+								else if (name == "PhoneSystemInteract")
 								{
-									value = EAction.ShowSpecificEntities;
+									value = EAction.PhoneSystemInteract;
 									return true;
 								}
 							}
-							else if (name == "PhoneSystemInteract")
+							else if (name == "ReignsSetPropertyVisible")
 							{
-								value = EAction.PhoneSystemInteract;
+								value = EAction.ReignsSetPropertyVisible;
 								return true;
 							}
 						}
-						else if (num != 2841354295U)
+						else if (num <= 2841354295U)
 						{
-							if (num != 2844058088U)
+							if (num != 2830865376U)
 							{
-								if (num == 2852212440U)
+								if (num == 2841354295U)
 								{
-									if (name == "PlayRegisteredMontage")
+									if (name == "GuestOperateUiAnimation")
 									{
-										value = EAction.PlayRegisteredMontage;
+										value = EAction.GuestOperateUiAnimation;
 										return true;
 									}
 								}
 							}
-							else if (name == "SeqEventFireBullet")
+							else if (name == "DestroySummonedEntities")
 							{
-								value = EAction.SeqEventFireBullet;
+								value = EAction.DestroySummonedEntities;
 								return true;
 							}
 						}
-						else if (name == "GuestOperateUiAnimation")
+						else if (num != 2844058088U)
 						{
-							value = EAction.GuestOperateUiAnimation;
+							if (num == 2852212440U)
+							{
+								if (name == "PlayRegisteredMontage")
+								{
+									value = EAction.PlayRegisteredMontage;
+									return true;
+								}
+							}
+						}
+						else if (name == "SeqEventFireBullet")
+						{
+							value = EAction.SeqEventFireBullet;
 							return true;
 						}
 					}
-					else if (num <= 2934721385U)
+					else if (num <= 2904291958U)
 					{
-						if (num <= 2880149982U)
+						if (num <= 2869198533U)
 						{
 							if (num != 2861543789U)
 							{
-								if (num != 2869198533U)
+								if (num != 2867885874U)
 								{
-									if (num == 2880149982U)
+									if (num == 2869198533U)
 									{
-										if (name == "SwitchSubLevels")
+										if (name == "SetWeather")
 										{
-											value = EAction.SwitchSubLevels;
+											value = EAction.SetWeather;
 											return true;
 										}
 									}
 								}
-								else if (name == "SetWeather")
+								else if (name == "LiveSetDanmaku")
 								{
-									value = EAction.SetWeather;
+									value = EAction.LiveSetDanmaku;
 									return true;
 								}
 							}
@@ -3683,259 +3838,270 @@ namespace Aki.TDConfigMgr.Action
 								return true;
 							}
 						}
-						else if (num != 2900982667U)
+						else if (num != 2880149982U)
 						{
-							if (num != 2904291958U)
+							if (num != 2900982667U)
 							{
-								if (num == 2934721385U)
+								if (num == 2904291958U)
 								{
-									if (name == "EnterOrbitalCamera")
+									if (name == "ChangeNpcPerformState")
 									{
-										value = EAction.EnterOrbitalCamera;
+										value = EAction.ChangeNpcPerformState;
 										return true;
 									}
 								}
 							}
-							else if (name == "ChangeNpcPerformState")
+							else if (name == "SetPlayerOperationRestriction")
 							{
-								value = EAction.ChangeNpcPerformState;
+								value = EAction.SetPlayerOperationRestriction;
 								return true;
 							}
 						}
-						else if (name == "SetPlayerOperationRestriction")
+						else if (name == "SwitchSubLevels")
 						{
-							value = EAction.SetPlayerOperationRestriction;
+							value = EAction.SwitchSubLevels;
 							return true;
 						}
 					}
-					else if (num <= 2981265070U)
+					else if (num <= 2967668457U)
 					{
-						if (num != 2959652001U)
+						if (num != 2934721385U)
 						{
-							if (num != 2967668457U)
+							if (num != 2959652001U)
 							{
-								if (num == 2981265070U)
+								if (num == 2967668457U)
 								{
-									if (name == "VehicleExitNpc")
+									if (name == "CommonTip2")
 									{
-										value = EAction.VehicleExitNpc;
+										value = EAction.CommonTip2;
 										return true;
 									}
 								}
 							}
-							else if (name == "CommonTip2")
+							else if (name == "BossPilingRandomBuff")
 							{
-								value = EAction.CommonTip2;
+								value = EAction.BossPilingRandomBuff;
 								return true;
 							}
 						}
-						else if (name == "BossPilingRandomBuff")
+						else if (name == "EnterOrbitalCamera")
 						{
-							value = EAction.BossPilingRandomBuff;
+							value = EAction.EnterOrbitalCamera;
 							return true;
 						}
 					}
-					else if (num <= 2982955510U)
+					else if (num <= 2981943712U)
 					{
-						if (num != 2981943712U)
+						if (num != 2981265070U)
 						{
-							if (num == 2982955510U)
+							if (num == 2981943712U)
 							{
-								if (name == "AdjustPlayerCameraGravity")
+								if (name == "SetAudioState")
 								{
-									value = EAction.AdjustPlayerCameraGravity;
+									value = EAction.SetAudioState;
 									return true;
 								}
 							}
 						}
-						else if (name == "SetAudioState")
+						else if (name == "VehicleExitNpc")
 						{
-							value = EAction.SetAudioState;
+							value = EAction.VehicleExitNpc;
 							return true;
 						}
 					}
-					else if (num != 2988799482U)
+					else if (num != 2982955510U)
 					{
-						if (num == 3009412261U)
+						if (num == 2988799482U)
 						{
-							if (name == "ManualOccupations")
+							if (name == "RogueSelectRoom")
+							{
+								value = EAction.RogueSelectRoom;
+								return true;
+							}
+						}
+					}
+					else if (name == "AdjustPlayerCameraGravity")
+					{
+						value = EAction.AdjustPlayerCameraGravity;
+						return true;
+					}
+				}
+				else if (num <= 3179814327U)
+				{
+					if (num <= 3069360931U)
+					{
+						if (num <= 3030685129U)
+						{
+							if (num != 3009412261U)
+							{
+								if (num != 3019068301U)
+								{
+									if (num == 3030685129U)
+									{
+										if (name == "StopNewMoveWithSpline")
+										{
+											value = EAction.StopNewMoveWithSpline;
+											return true;
+										}
+									}
+								}
+								else if (name == "SendNpcMail")
+								{
+									value = EAction.SendNpcMail;
+									return true;
+								}
+							}
+							else if (name == "ManualOccupations")
 							{
 								value = EAction.ManualOccupations;
 								return true;
 							}
 						}
-					}
-					else if (name == "RogueSelectRoom")
-					{
-						value = EAction.RogueSelectRoom;
-						return true;
-					}
-				}
-				else if (num <= 3204616500U)
-				{
-					if (num <= 3082839618U)
-					{
-						if (num <= 3031392035U)
+						else if (num != 3031392035U)
 						{
-							if (num != 3019068301U)
+							if (num != 3048196267U)
 							{
-								if (num != 3030685129U)
+								if (num == 3069360931U)
 								{
-									if (num == 3031392035U)
+									if (name == "HonamiStorySetFormation")
 									{
-										if (name == "ToggleEntityElementalAbility")
-										{
-											value = EAction.ToggleEntityElementalAbility;
-											return true;
-										}
-									}
-								}
-								else if (name == "StopNewMoveWithSpline")
-								{
-									value = EAction.StopNewMoveWithSpline;
-									return true;
-								}
-							}
-							else if (name == "SendNpcMail")
-							{
-								value = EAction.SendNpcMail;
-								return true;
-							}
-						}
-						else if (num != 3048196267U)
-						{
-							if (num != 3069360931U)
-							{
-								if (num == 3082839618U)
-								{
-									if (name == "StopUiScreenEffect")
-									{
-										value = EAction.StopUiScreenEffect;
+										value = EAction.HonamiStorySetFormation;
 										return true;
 									}
 								}
 							}
-							else if (name == "HonamiStorySetFormation")
+							else if (name == "SetBlendAnim")
 							{
-								value = EAction.HonamiStorySetFormation;
+								value = EAction.SetBlendAnim;
 								return true;
 							}
 						}
-						else if (name == "SetBlendAnim")
+						else if (name == "ToggleEntityElementalAbility")
 						{
-							value = EAction.SetBlendAnim;
+							value = EAction.ToggleEntityElementalAbility;
+							return true;
+						}
+					}
+					else if (num <= 3126661164U)
+					{
+						if (num != 3082839618U)
+						{
+							if (num != 3122695989U)
+							{
+								if (num == 3126661164U)
+								{
+									if (name == "ModifyActorMedia")
+									{
+										value = EAction.ModifyActorMedia;
+										return true;
+									}
+								}
+							}
+							else if (name == "SeasonWeatherSetRotationLock")
+							{
+								value = EAction.SeasonWeatherSetRotationLock;
+								return true;
+							}
+						}
+						else if (name == "StopUiScreenEffect")
+						{
+							value = EAction.StopUiScreenEffect;
 							return true;
 						}
 					}
 					else if (num <= 3169022647U)
 					{
-						if (num != 3126661164U)
+						if (num != 3129613678U)
 						{
-							if (num != 3129613678U)
+							if (num == 3169022647U)
 							{
-								if (num == 3169022647U)
+								if (name == "ChangeActorState")
 								{
-									if (name == "ChangeActorState")
-									{
-										value = EAction.ChangeActorState;
-										return true;
-									}
-								}
-							}
-							else if (name == "RemoveTrialFollowShooter")
-							{
-								value = EAction.RemoveTrialFollowShooter;
-								return true;
-							}
-						}
-						else if (name == "ModifyActorMedia")
-						{
-							value = EAction.ModifyActorMedia;
-							return true;
-						}
-					}
-					else if (num <= 3179814327U)
-					{
-						if (num != 3169957883U)
-						{
-							if (num == 3179814327U)
-							{
-								if (name == "AvgPlayRoleAction")
-								{
-									value = EAction.AvgPlayRoleAction;
+									value = EAction.ChangeActorState;
 									return true;
 								}
 							}
 						}
-						else if (name == "ResetEntity")
+						else if (name == "RemoveTrialFollowShooter")
 						{
-							value = EAction.ResetEntity;
+							value = EAction.RemoveTrialFollowShooter;
 							return true;
 						}
 					}
-					else if (num != 3192190318U)
+					else if (num != 3169957883U)
 					{
-						if (num == 3204616500U)
+						if (num == 3179814327U)
 						{
-							if (name == "SetSubScreenMode")
+							if (name == "AvgPlayRoleAction")
+							{
+								value = EAction.AvgPlayRoleAction;
+								return true;
+							}
+						}
+					}
+					else if (name == "ResetEntity")
+					{
+						value = EAction.ResetEntity;
+						return true;
+					}
+				}
+				else if (num <= 3256547682U)
+				{
+					if (num <= 3205021753U)
+					{
+						if (num != 3192190318U)
+						{
+							if (num != 3204616500U)
+							{
+								if (num == 3205021753U)
+								{
+									if (name == "GiantTriggerResponse")
+									{
+										value = EAction.GiantTriggerResponse;
+										return true;
+									}
+								}
+							}
+							else if (name == "SetSubScreenMode")
 							{
 								value = EAction.SetSubScreenMode;
 								return true;
 							}
 						}
-					}
-					else if (name == "TeleportToAndEnterVehicle")
-					{
-						value = EAction.TeleportToAndEnterVehicle;
-						return true;
-					}
-				}
-				else if (num <= 3278064627U)
-				{
-					if (num <= 3246695545U)
-					{
-						if (num != 3205021753U)
+						else if (name == "TeleportToAndEnterVehicle")
 						{
-							if (num != 3212573930U)
+							value = EAction.TeleportToAndEnterVehicle;
+							return true;
+						}
+					}
+					else if (num <= 3246695545U)
+					{
+						if (num != 3212573930U)
+						{
+							if (num == 3246695545U)
 							{
-								if (num == 3246695545U)
+								if (name == "ReignsChangePlayerName")
 								{
-									if (name == "ReignsChangePlayerName")
-									{
-										value = EAction.ReignsChangePlayerName;
-										return true;
-									}
+									value = EAction.ReignsChangePlayerName;
+									return true;
 								}
 							}
-							else if (name == "ChangeTimer")
-							{
-								value = EAction.ChangeTimer;
-								return true;
-							}
 						}
-						else if (name == "GiantTriggerResponse")
+						else if (name == "ChangeTimer")
 						{
-							value = EAction.GiantTriggerResponse;
+							value = EAction.ChangeTimer;
 							return true;
 						}
 					}
 					else if (num != 3249911065U)
 					{
-						if (num != 3256547682U)
+						if (num == 3256547682U)
 						{
-							if (num == 3278064627U)
+							if (name == "ResetPlayerCameraFocus")
 							{
-								if (name == "SpecialOpModifyActorMaterialParamBySplineProgress")
-								{
-									value = EAction.SpecialOpModifyActorMaterialParamBySplineProgress;
-									return true;
-								}
+								value = EAction.ResetPlayerCameraFocus;
+								return true;
 							}
-						}
-						else if (name == "ResetPlayerCameraFocus")
-						{
-							value = EAction.ResetPlayerCameraFocus;
-							return true;
 						}
 					}
 					else if (name == "SetRegionConfig")
@@ -3944,173 +4110,184 @@ namespace Aki.TDConfigMgr.Action
 						return true;
 					}
 				}
-				else if (num <= 3289892727U)
+				else if (num <= 3284905592U)
 				{
-					if (num != 3284905592U)
+					if (num != 3259780563U)
 					{
-						if (num != 3286563727U)
+						if (num != 3278064627U)
 						{
-							if (num == 3289892727U)
+							if (num == 3284905592U)
 							{
-								if (name == "RemoveBuffFromEntity")
+								if (name == "AddPlayBubble")
 								{
-									value = EAction.RemoveBuffFromEntity;
+									value = EAction.AddPlayBubble;
 									return true;
 								}
 							}
 						}
-						else if (name == "RandomVar")
+						else if (name == "SpecialOpModifyActorMaterialParamBySplineProgress")
 						{
-							value = EAction.RandomVar;
+							value = EAction.SpecialOpModifyActorMaterialParamBySplineProgress;
 							return true;
 						}
 					}
-					else if (name == "AddPlayBubble")
+					else if (name == "ModifySceneUiSubtitle")
 					{
-						value = EAction.AddPlayBubble;
+						value = EAction.ModifySceneUiSubtitle;
 						return true;
 					}
 				}
-				else if (num <= 3301731264U)
+				else if (num <= 3289892727U)
 				{
-					if (num != 3292704244U)
+					if (num != 3286563727U)
 					{
-						if (num == 3301731264U)
+						if (num == 3289892727U)
 						{
-							if (name == "ChangeBehaviorState")
+							if (name == "RemoveBuffFromEntity")
 							{
-								value = EAction.ChangeBehaviorState;
+								value = EAction.RemoveBuffFromEntity;
 								return true;
 							}
 						}
 					}
-					else if (name == "CalculateVar")
+					else if (name == "RandomVar")
 					{
-						value = EAction.CalculateVar;
+						value = EAction.RandomVar;
 						return true;
 					}
 				}
-				else if (num != 3318518093U)
+				else if (num != 3292704244U)
 				{
-					if (num == 3327054839U)
+					if (num == 3301731264U)
 					{
-						if (name == "BvbSkipChallenge")
+						if (name == "ChangeBehaviorState")
 						{
-							value = EAction.BvbSkipChallenge;
+							value = EAction.ChangeBehaviorState;
 							return true;
 						}
 					}
 				}
-				else if (name == "UnLimitPlayerOperation")
+				else if (name == "CalculateVar")
 				{
-					value = EAction.UnLimitPlayerOperation;
+					value = EAction.CalculateVar;
 					return true;
 				}
 			}
 			else if (num <= 3831918259U)
 			{
-				if (num <= 3593847481U)
+				if (num <= 3586111684U)
 				{
-					if (num <= 3467388784U)
+					if (num <= 3439577802U)
 					{
-						if (num <= 3394738369U)
+						if (num <= 3367456968U)
 						{
-							if (num <= 3362604838U)
+							if (num <= 3331441882U)
 							{
-								if (num != 3331441882U)
+								if (num != 3318518093U)
 								{
-									if (num != 3347600789U)
+									if (num != 3327054839U)
 									{
-										if (num == 3362604838U)
+										if (num == 3331441882U)
 										{
-											if (name == "OpenSystemBoardWithReturn")
+											if (name == "DestroyEntity")
 											{
-												value = EAction.OpenSystemBoardWithReturn;
+												value = EAction.DestroyEntity;
 												return true;
 											}
 										}
 									}
-									else if (name == "MowingTowerGotoNextFloor")
+									else if (name == "BvbSkipChallenge")
 									{
-										value = EAction.MowingTowerGotoNextFloor;
+										value = EAction.BvbSkipChallenge;
 										return true;
 									}
 								}
-								else if (name == "DestroyEntity")
+								else if (name == "UnLimitPlayerOperation")
 								{
-									value = EAction.DestroyEntity;
+									value = EAction.UnLimitPlayerOperation;
 									return true;
 								}
 							}
-							else if (num != 3367456968U)
+							else if (num != 3347600789U)
 							{
-								if (num != 3390755569U)
+								if (num != 3362604838U)
 								{
-									if (num == 3394738369U)
+									if (num == 3367456968U)
 									{
-										if (name == "LockEntity")
+										if (name == "OpenSystemBoard")
 										{
-											value = EAction.LockEntity;
+											value = EAction.OpenSystemBoard;
 											return true;
 										}
 									}
 								}
-								else if (name == "ExecAlertSystemAction")
+								else if (name == "OpenSystemBoardWithReturn")
 								{
-									value = EAction.ExecAlertSystemAction;
+									value = EAction.OpenSystemBoardWithReturn;
 									return true;
 								}
 							}
-							else if (name == "OpenSystemBoard")
+							else if (name == "MowingTowerGotoNextFloor")
 							{
-								value = EAction.OpenSystemBoard;
+								value = EAction.MowingTowerGotoNextFloor;
+								return true;
+							}
+						}
+						else if (num <= 3407511829U)
+						{
+							if (num != 3390755569U)
+							{
+								if (num != 3394738369U)
+								{
+									if (num == 3407511829U)
+									{
+										if (name == "MoveWithSpline")
+										{
+											value = EAction.MoveWithSpline;
+											return true;
+										}
+									}
+								}
+								else if (name == "LockEntity")
+								{
+									value = EAction.LockEntity;
+									return true;
+								}
+							}
+							else if (name == "ExecAlertSystemAction")
+							{
+								value = EAction.ExecAlertSystemAction;
 								return true;
 							}
 						}
 						else if (num <= 3432617768U)
 						{
-							if (num != 3407511829U)
+							if (num != 3417157860U)
 							{
-								if (num != 3417157860U)
+								if (num == 3432617768U)
 								{
-									if (num == 3432617768U)
+									if (name == "SetVar")
 									{
-										if (name == "SetVar")
-										{
-											value = EAction.SetVar;
-											return true;
-										}
+										value = EAction.SetVar;
+										return true;
 									}
 								}
-								else if (name == "EnableAoiNotify")
-								{
-									value = EAction.EnableAoiNotify;
-									return true;
-								}
 							}
-							else if (name == "MoveWithSpline")
+							else if (name == "EnableAoiNotify")
 							{
-								value = EAction.MoveWithSpline;
+								value = EAction.EnableAoiNotify;
 								return true;
 							}
 						}
 						else if (num != 3438999407U)
 						{
-							if (num != 3446830477U)
+							if (num == 3439577802U)
 							{
-								if (num == 3467388784U)
+								if (name == "ModifyEntityDecoration")
 								{
-									if (name == "OpenSystemFunction")
-									{
-										value = EAction.OpenSystemFunction;
-										return true;
-									}
+									value = EAction.ModifyEntityDecoration;
+									return true;
 								}
-							}
-							else if (name == "ExitDungeon")
-							{
-								value = EAction.ExitDungeon;
-								return true;
 							}
 						}
 						else if (name == "SetTargetElementalAbility")
@@ -4119,228 +4296,239 @@ namespace Aki.TDConfigMgr.Action
 							return true;
 						}
 					}
-					else if (num <= 3533879663U)
+					else if (num <= 3495172681U)
 					{
-						if (num <= 3488734135U)
+						if (num <= 3485200219U)
 						{
-							if (num != 3485200219U)
+							if (num != 3446830477U)
 							{
-								if (num != 3486427174U)
+								if (num != 3467388784U)
 								{
-									if (num == 3488734135U)
+									if (num == 3485200219U)
 									{
-										if (name == "UpdateTrialCharacter")
+										if (name == "Prompt")
 										{
-											value = EAction.UpdateTrialCharacter;
+											value = EAction.Prompt;
 											return true;
 										}
 									}
 								}
-								else if (name == "PlayEffect")
+								else if (name == "OpenSystemFunction")
 								{
-									value = EAction.PlayEffect;
+									value = EAction.OpenSystemFunction;
 									return true;
 								}
 							}
-							else if (name == "Prompt")
+							else if (name == "ExitDungeon")
 							{
-								value = EAction.Prompt;
+								value = EAction.ExitDungeon;
 								return true;
 							}
 						}
-						else if (num != 3495172681U)
+						else if (num != 3486427174U)
 						{
-							if (num != 3512932389U)
+							if (num != 3488734135U)
 							{
-								if (num == 3533879663U)
+								if (num == 3495172681U)
 								{
-									if (name == "StartMotorCruise")
+									if (name == "OverrideAiBehaviorTree")
 									{
-										value = EAction.StartMotorCruise;
+										value = EAction.OverrideAiBehaviorTree;
 										return true;
 									}
 								}
 							}
-							else if (name == "EnableFollowShooterAbility")
+							else if (name == "UpdateTrialCharacter")
 							{
-								value = EAction.EnableFollowShooterAbility;
+								value = EAction.UpdateTrialCharacter;
 								return true;
 							}
 						}
-						else if (name == "OverrideAiBehaviorTree")
+						else if (name == "PlayEffect")
 						{
-							value = EAction.OverrideAiBehaviorTree;
+							value = EAction.PlayEffect;
+							return true;
+						}
+					}
+					else if (num <= 3538192079U)
+					{
+						if (num != 3512932389U)
+						{
+							if (num != 3533879663U)
+							{
+								if (num == 3538192079U)
+								{
+									if (name == "SetPlotMode")
+									{
+										value = EAction.SetPlotMode;
+										return true;
+									}
+								}
+							}
+							else if (name == "StartMotorCruise")
+							{
+								value = EAction.StartMotorCruise;
+								return true;
+							}
+						}
+						else if (name == "EnableFollowShooterAbility")
+						{
+							value = EAction.EnableFollowShooterAbility;
 							return true;
 						}
 					}
 					else if (num <= 3566577693U)
 					{
-						if (num != 3538192079U)
+						if (num != 3541406324U)
 						{
-							if (num != 3541406324U)
+							if (num == 3566577693U)
 							{
-								if (num == 3566577693U)
+								if (name == "ChangeLiftTarget")
 								{
-									if (name == "ChangeLiftTarget")
-									{
-										value = EAction.ChangeLiftTarget;
-										return true;
-									}
-								}
-							}
-							else if (name == "ItemFoundationMatch")
-							{
-								value = EAction.ItemFoundationMatch;
-								return true;
-							}
-						}
-						else if (name == "SetPlotMode")
-						{
-							value = EAction.SetPlotMode;
-							return true;
-						}
-					}
-					else if (num <= 3586111684U)
-					{
-						if (num != 3572941018U)
-						{
-							if (num == 3586111684U)
-							{
-								if (name == "ClientSetSeasonState")
-								{
-									value = EAction.ClientSetSeasonState;
+									value = EAction.ChangeLiftTarget;
 									return true;
 								}
 							}
 						}
-						else if (name == "ToggleDragActorPlay")
+						else if (name == "ItemFoundationMatch")
 						{
-							value = EAction.ToggleDragActorPlay;
+							value = EAction.ItemFoundationMatch;
 							return true;
 						}
 					}
-					else if (num != 3590975241U)
+					else if (num != 3572941018U)
 					{
-						if (num == 3593847481U)
+						if (num == 3586111684U)
 						{
-							if (name == "SheriffUnlockClue")
+							if (name == "ClientSetSeasonState")
 							{
-								value = EAction.SheriffUnlockClue;
+								value = EAction.ClientSetSeasonState;
 								return true;
 							}
 						}
 					}
-					else if (name == "ChangePhantomFormation")
+					else if (name == "ToggleDragActorPlay")
 					{
-						value = EAction.ChangePhantomFormation;
+						value = EAction.ToggleDragActorPlay;
 						return true;
 					}
 				}
 				else if (num <= 3728081691U)
 				{
-					if (num <= 3662091041U)
+					if (num <= 3660425845U)
 					{
-						if (num <= 3650441453U)
+						if (num <= 3618734640U)
 						{
-							if (num != 3618734640U)
+							if (num != 3590975241U)
 							{
-								if (num != 3619002385U)
+								if (num != 3593847481U)
 								{
-									if (num == 3650441453U)
+									if (num == 3618734640U)
 									{
-										if (name == "SetSportsState")
+										if (name == "TriggerGamepadShake")
 										{
-											value = EAction.SetSportsState;
+											value = EAction.TriggerGamepadShake;
 											return true;
 										}
 									}
 								}
-								else if (name == "CloseSimpleGameplay")
+								else if (name == "SheriffUnlockClue")
 								{
-									value = EAction.CloseSimpleGameplay;
+									value = EAction.SheriffUnlockClue;
 									return true;
 								}
 							}
-							else if (name == "TriggerGamepadShake")
+							else if (name == "ChangePhantomFormation")
 							{
-								value = EAction.TriggerGamepadShake;
+								value = EAction.ChangePhantomFormation;
 								return true;
 							}
 						}
-						else if (num != 3652011744U)
+						else if (num != 3650441453U)
 						{
-							if (num != 3660425845U)
+							if (num != 3652011744U)
 							{
-								if (num == 3662091041U)
+								if (num == 3660425845U)
 								{
-									if (name == "CommonTip")
+									if (name == "FireBullet")
 									{
-										value = EAction.CommonTip;
+										value = EAction.FireBullet;
 										return true;
 									}
 								}
 							}
-							else if (name == "FireBullet")
+							else if (name == "ChangeElementalBoxState")
 							{
-								value = EAction.FireBullet;
+								value = EAction.ChangeElementalBoxState;
 								return true;
 							}
 						}
-						else if (name == "ChangeElementalBoxState")
+						else if (name == "SetSportsState")
 						{
-							value = EAction.ChangeElementalBoxState;
+							value = EAction.SetSportsState;
 							return true;
 						}
 					}
-					else if (num <= 3686042588U)
+					else if (num <= 3674890103U)
 					{
-						if (num != 3662402425U)
+						if (num != 3662091041U)
 						{
-							if (num != 3674890103U)
+							if (num != 3662402425U)
 							{
-								if (num == 3686042588U)
+								if (num == 3674890103U)
 								{
-									if (name == "EnableAI")
+									if (name == "HonamiStoryActivateSafeEvacuation")
 									{
-										value = EAction.EnableAI;
+										value = EAction.HonamiStoryActivateSafeEvacuation;
 										return true;
 									}
 								}
 							}
-							else if (name == "HonamiStoryActivateSafeEvacuation")
+							else if (name == "ToggleTimerPauseState")
 							{
-								value = EAction.HonamiStoryActivateSafeEvacuation;
+								value = EAction.ToggleTimerPauseState;
 								return true;
 							}
 						}
-						else if (name == "ToggleTimerPauseState")
+						else if (name == "CommonTip")
 						{
-							value = EAction.ToggleTimerPauseState;
+							value = EAction.CommonTip;
 							return true;
 						}
 					}
-					else if (num != 3694430216U)
+					else if (num <= 3694430216U)
 					{
-						if (num != 3703133089U)
+						if (num != 3686042588U)
 						{
-							if (num == 3728081691U)
+							if (num == 3694430216U)
 							{
-								if (name == "ShowMessage")
+								if (name == "CollectSunSpirit")
 								{
-									value = EAction.ShowMessage;
+									value = EAction.CollectSunSpirit;
 									return true;
 								}
 							}
 						}
-						else if (name == "SetupMoraleSystem")
+						else if (name == "EnableAI")
 						{
-							value = EAction.SetupMoraleSystem;
+							value = EAction.EnableAI;
 							return true;
 						}
 					}
-					else if (name == "CollectSunSpirit")
+					else if (num != 3703133089U)
 					{
-						value = EAction.CollectSunSpirit;
+						if (num == 3728081691U)
+						{
+							if (name == "ShowMessage")
+							{
+								value = EAction.ShowMessage;
+								return true;
+							}
+						}
+					}
+					else if (name == "SetupMoraleSystem")
+					{
+						value = EAction.SetupMoraleSystem;
 						return true;
 					}
 				}
@@ -4465,7 +4653,7 @@ namespace Aki.TDConfigMgr.Action
 			{
 				if (num <= 3944804961U)
 				{
-					if (num <= 3879457942U)
+					if (num <= 3878595949U)
 					{
 						if (num <= 3852819814U)
 						{
@@ -4498,11 +4686,11 @@ namespace Aki.TDConfigMgr.Action
 						{
 							if (num != 3873269114U)
 							{
-								if (num == 3879457942U)
+								if (num == 3878595949U)
 								{
-									if (name == "AddBuffToTriggeredEntity")
+									if (name == "SeasonWeatherChangeTo")
 									{
-										value = EAction.AddBuffToTriggeredEntity;
+										value = EAction.SeasonWeatherChangeTo;
 										return true;
 									}
 								}
@@ -4519,55 +4707,66 @@ namespace Aki.TDConfigMgr.Action
 							return true;
 						}
 					}
-					else if (num <= 3923670299U)
+					else if (num <= 3919109462U)
 					{
-						if (num != 3896336121U)
+						if (num != 3879457942U)
 						{
-							if (num != 3919109462U)
+							if (num != 3896336121U)
 							{
-								if (num == 3923670299U)
+								if (num == 3919109462U)
 								{
-									if (name == "UnlockDungeonEntry")
+									if (name == "PlayerLookAt")
 									{
-										value = EAction.UnlockDungeonEntry;
+										value = EAction.PlayerLookAt;
 										return true;
 									}
 								}
 							}
-							else if (name == "PlayerLookAt")
+							else if (name == "FaceToPos")
 							{
-								value = EAction.PlayerLookAt;
+								value = EAction.FaceToPos;
 								return true;
 							}
 						}
-						else if (name == "FaceToPos")
+						else if (name == "AddBuffToTriggeredEntity")
 						{
-							value = EAction.FaceToPos;
+							value = EAction.AddBuffToTriggeredEntity;
 							return true;
 						}
 					}
-					else if (num != 3929830330U)
+					else if (num <= 3929830330U)
 					{
-						if (num != 3935555117U)
+						if (num != 3923670299U)
 						{
-							if (num == 3944804961U)
+							if (num == 3929830330U)
 							{
-								if (name == "MoveToPos")
+								if (name == "InfrActivityUpgradeInfrastructure")
 								{
-									value = EAction.MoveToPos;
+									value = EAction.InfrActivityUpgradeInfrastructure;
 									return true;
 								}
 							}
 						}
-						else if (name == "ChangeSelfEntityState")
+						else if (name == "UnlockDungeonEntry")
 						{
-							value = EAction.ChangeSelfEntityState;
+							value = EAction.UnlockDungeonEntry;
 							return true;
 						}
 					}
-					else if (name == "InfrActivityUpgradeInfrastructure")
+					else if (num != 3935555117U)
 					{
-						value = EAction.InfrActivityUpgradeInfrastructure;
+						if (num == 3944804961U)
+						{
+							if (name == "MoveToPos")
+							{
+								value = EAction.MoveToPos;
+								return true;
+							}
+						}
+					}
+					else if (name == "ChangeSelfEntityState")
+					{
+						value = EAction.ChangeSelfEntityState;
 						return true;
 					}
 				}
@@ -4688,7 +4887,7 @@ namespace Aki.TDConfigMgr.Action
 					return true;
 				}
 			}
-			else if (num <= 4208641742U)
+			else if (num <= 4202742786U)
 			{
 				if (num <= 4147837934U)
 				{
@@ -4744,24 +4943,24 @@ namespace Aki.TDConfigMgr.Action
 						return true;
 					}
 				}
-				else if (num <= 4190790351U)
+				else if (num <= 4183518713U)
 				{
 					if (num != 4157997569U)
 					{
-						if (num != 4183518713U)
+						if (num != 4160845973U)
 						{
-							if (num == 4190790351U)
+							if (num == 4183518713U)
 							{
-								if (name == "OpenSimpleGameplay")
+								if (name == "ClientPreEnableSubLevels")
 								{
-									value = EAction.OpenSimpleGameplay;
+									value = EAction.ClientPreEnableSubLevels;
 									return true;
 								}
 							}
 						}
-						else if (name == "ClientPreEnableSubLevels")
+						else if (name == "HandBookModifySystemProgress")
 						{
-							value = EAction.ClientPreEnableSubLevels;
+							value = EAction.HandBookModifySystemProgress;
 							return true;
 						}
 					}
@@ -4771,93 +4970,104 @@ namespace Aki.TDConfigMgr.Action
 						return true;
 					}
 				}
-				else if (num <= 4202393914U)
+				else if (num <= 4193798219U)
 				{
-					if (num != 4193798219U)
+					if (num != 4190790351U)
 					{
-						if (num == 4202393914U)
+						if (num == 4193798219U)
 						{
-							if (name == "BossPilingEnterNextInst")
+							if (name == "StartRoadNetworkNavigation")
 							{
-								value = EAction.BossPilingEnterNextInst;
+								value = EAction.StartRoadNetworkNavigation;
 								return true;
 							}
 						}
 					}
-					else if (name == "StartRoadNetworkNavigation")
+					else if (name == "OpenSimpleGameplay")
 					{
-						value = EAction.StartRoadNetworkNavigation;
+						value = EAction.OpenSimpleGameplay;
 						return true;
 					}
 				}
-				else if (num != 4202742786U)
+				else if (num != 4202393914U)
 				{
-					if (num == 4208641742U)
+					if (num == 4202742786U)
 					{
-						if (name == "ShowCenterText")
+						if (name == "SetNpcGroupPerform")
 						{
-							value = EAction.ShowCenterText;
+							value = EAction.SetNpcGroupPerform;
 							return true;
 						}
 					}
 				}
-				else if (name == "SetNpcGroupPerform")
+				else if (name == "BossPilingEnterNextInst")
 				{
-					value = EAction.SetNpcGroupPerform;
+					value = EAction.BossPilingEnterNextInst;
 					return true;
 				}
 			}
 			else if (num <= 4263359784U)
 			{
-				if (num <= 4245701740U)
+				if (num <= 4219829037U)
 				{
-					if (num != 4213006399U)
+					if (num != 4208641742U)
 					{
-						if (num != 4219829037U)
+						if (num != 4213006399U)
 						{
-							if (num == 4245701740U)
+							if (num == 4219829037U)
 							{
-								if (name == "ClaimDungeonReward")
+								if (name == "Invoke")
 								{
-									value = EAction.ClaimDungeonReward;
+									value = EAction.Invoke;
 									return true;
 								}
 							}
 						}
-						else if (name == "Invoke")
+						else if (name == "RoverRogueRoomFinish")
 						{
-							value = EAction.Invoke;
+							value = EAction.RoverRogueRoomFinish;
 							return true;
 						}
 					}
-					else if (name == "RoverRogueRoomFinish")
+					else if (name == "ShowCenterText")
 					{
-						value = EAction.RoverRogueRoomFinish;
+						value = EAction.ShowCenterText;
 						return true;
 					}
 				}
-				else if (num != 4252355697U)
+				else if (num <= 4252355697U)
 				{
-					if (num != 4260903634U)
+					if (num != 4245701740U)
 					{
-						if (num == 4263359784U)
+						if (num == 4252355697U)
 						{
-							if (name == "ExitMovieMode")
+							if (name == "ReignsCallCard")
 							{
-								value = EAction.ExitMovieMode;
+								value = EAction.ReignsCallCard;
 								return true;
 							}
 						}
 					}
-					else if (name == "DetectTrigger")
+					else if (name == "ClaimDungeonReward")
 					{
-						value = EAction.DetectTrigger;
+						value = EAction.ClaimDungeonReward;
 						return true;
 					}
 				}
-				else if (name == "ReignsCallCard")
+				else if (num != 4260903634U)
 				{
-					value = EAction.ReignsCallCard;
+					if (num == 4263359784U)
+					{
+						if (name == "ExitMovieMode")
+						{
+							value = EAction.ExitMovieMode;
+							return true;
+						}
+					}
+				}
+				else if (name == "DetectTrigger")
+				{
+					value = EAction.DetectTrigger;
 					return true;
 				}
 			}
@@ -4927,7 +5137,7 @@ namespace Aki.TDConfigMgr.Action
 			return false;
 		}
 
-		// Token: 0x0600C1D8 RID: 49624 RVA: 0x001C2B08 File Offset: 0x001C0D08
+		// Token: 0x0600CD9E RID: 52638 RVA: 0x001DA694 File Offset: 0x001D8894
 		public static string[] GetStringValues()
 		{
 			return new string[]
@@ -5018,11 +5228,13 @@ namespace Aki.TDConfigMgr.Action
 				"ShowCenterText",
 				"ShowMessage",
 				"ShowTalk",
+				"ModifySceneUiSubtitle",
 				"SimpleMove",
 				"SpawnChild",
 				"SpawnEntity",
 				"SyncVarToActorState",
 				"Wait",
+				"ModifyEntityDecoration",
 				"AddBuffToEntity",
 				"AddBuffToPlayer",
 				"AddBuffToFollowShooter",
@@ -5043,6 +5255,7 @@ namespace Aki.TDConfigMgr.Action
 				"PromptQuestChapterUI",
 				"FireBullet",
 				"FireBulletEffect",
+				"SetAssistCharacterPos",
 				"SetPlayerPos",
 				"ClientSetPlayerPos",
 				"ClientPreEnableSubLevels",
@@ -5054,6 +5267,7 @@ namespace Aki.TDConfigMgr.Action
 				"ItemFoundationMatch",
 				"SetBattleState",
 				"WaitBattleCondition",
+				"SendBattleTag",
 				"UnlockSystemItem",
 				"ClientUnlockAchievementSystemItem",
 				"RunActions",
@@ -5122,6 +5336,7 @@ namespace Aki.TDConfigMgr.Action
 				"AddTrialFollowShooter",
 				"RemoveTrialFollowShooter",
 				"EnableFollowShooterAbility",
+				"FollowShooterLeisureInteract",
 				"ClientFollowShooterLeisureInteract",
 				"DestroyQuest",
 				"SetCameraAnim",
@@ -5138,7 +5353,7 @@ namespace Aki.TDConfigMgr.Action
 				"HideByRangeInFlow",
 				"ShowAllHidedGroupInFlow",
 				"OpenSimpleGameplay",
-				"CloseSimpleGameplay",
+				"ToggleRideFlyingCarUiGameplay",
 				"ChangeActorTalker",
 				"SwitchSubLevels",
 				"SwitchDataLayers",
@@ -5329,17 +5544,27 @@ namespace Aki.TDConfigMgr.Action
 				"SheriffUnlockEnding",
 				"SetSubScreenMode",
 				"ClientSetSeasonState",
+				"SeasonWeatherSetRotationLock",
+				"SeasonWeatherChangeTo",
+				"SeasonWeatherUnlockSpecial",
 				"ToggleDragActorPlay",
 				"SetTargetElementalAbility",
 				"ToggleEntityElementalAbility",
 				"CaptureElementalBox",
 				"ChangeElementalBoxState",
 				"SetElementalBoxToTarget",
-				"OverrideAbpAnimScheme"
+				"DarkTideSetMapMarkState",
+				"OverrideAbpAnimScheme",
+				"HandBookModifySystemProgress",
+				"ClientExecEntityPrefabAction",
+				"LiveSetUi",
+				"LiveSetDanmaku",
+				"LiveSetParam",
+				"LiveSetSc"
 			};
 		}
 
-		// Token: 0x0600C1D9 RID: 49625 RVA: 0x001C3C86 File Offset: 0x001C1E86
+		// Token: 0x0600CD9F RID: 52639 RVA: 0x001DB8C6 File Offset: 0x001D9AC6
 		public static EAction[] GetValues()
 		{
 			return new EAction[]
@@ -5430,11 +5655,13 @@ namespace Aki.TDConfigMgr.Action
 				EAction.ShowCenterText,
 				EAction.ShowMessage,
 				EAction.ShowTalk,
+				EAction.ModifySceneUiSubtitle,
 				EAction.SimpleMove,
 				EAction.SpawnChild,
 				EAction.SpawnEntity,
 				EAction.SyncVarToActorState,
 				EAction.Wait,
+				EAction.ModifyEntityDecoration,
 				EAction.AddBuffToEntity,
 				EAction.AddBuffToPlayer,
 				EAction.AddBuffToFollowShooter,
@@ -5455,6 +5682,7 @@ namespace Aki.TDConfigMgr.Action
 				EAction.PromptQuestChapterUI,
 				EAction.FireBullet,
 				EAction.FireBulletEffect,
+				EAction.SetAssistCharacterPos,
 				EAction.SetPlayerPos,
 				EAction.ClientSetPlayerPos,
 				EAction.ClientPreEnableSubLevels,
@@ -5466,6 +5694,7 @@ namespace Aki.TDConfigMgr.Action
 				EAction.ItemFoundationMatch,
 				EAction.SetBattleState,
 				EAction.WaitBattleCondition,
+				EAction.SendBattleTag,
 				EAction.UnlockSystemItem,
 				EAction.ClientUnlockAchievementSystemItem,
 				EAction.RunActions,
@@ -5534,6 +5763,7 @@ namespace Aki.TDConfigMgr.Action
 				EAction.AddTrialFollowShooter,
 				EAction.RemoveTrialFollowShooter,
 				EAction.EnableFollowShooterAbility,
+				EAction.FollowShooterLeisureInteract,
 				EAction.ClientFollowShooterLeisureInteract,
 				EAction.DestroyQuest,
 				EAction.SetCameraAnim,
@@ -5550,7 +5780,7 @@ namespace Aki.TDConfigMgr.Action
 				EAction.HideByRangeInFlow,
 				EAction.ShowAllHidedGroupInFlow,
 				EAction.OpenSimpleGameplay,
-				EAction.CloseSimpleGameplay,
+				EAction.ToggleRideFlyingCarUiGameplay,
 				EAction.ChangeActorTalker,
 				EAction.SwitchSubLevels,
 				EAction.SwitchDataLayers,
@@ -5741,17 +5971,27 @@ namespace Aki.TDConfigMgr.Action
 				EAction.SheriffUnlockEnding,
 				EAction.SetSubScreenMode,
 				EAction.ClientSetSeasonState,
+				EAction.SeasonWeatherSetRotationLock,
+				EAction.SeasonWeatherChangeTo,
+				EAction.SeasonWeatherUnlockSpecial,
 				EAction.ToggleDragActorPlay,
 				EAction.SetTargetElementalAbility,
 				EAction.ToggleEntityElementalAbility,
 				EAction.CaptureElementalBox,
 				EAction.ChangeElementalBoxState,
 				EAction.SetElementalBoxToTarget,
-				EAction.OverrideAbpAnimScheme
+				EAction.DarkTideSetMapMarkState,
+				EAction.OverrideAbpAnimScheme,
+				EAction.HandBookModifySystemProgress,
+				EAction.ClientExecEntityPrefabAction,
+				EAction.LiveSetUi,
+				EAction.LiveSetDanmaku,
+				EAction.LiveSetParam,
+				EAction.LiveSetSc
 			};
 		}
 
-		// Token: 0x0600C1DA RID: 49626 RVA: 0x001C3CA0 File Offset: 0x001C1EA0
+		// Token: 0x0600CDA0 RID: 52640 RVA: 0x001DB8E0 File Offset: 0x001D9AE0
 		public static string[] GetNames()
 		{
 			return new string[]
@@ -5842,11 +6082,13 @@ namespace Aki.TDConfigMgr.Action
 				"ShowCenterText",
 				"ShowMessage",
 				"ShowTalk",
+				"ModifySceneUiSubtitle",
 				"SimpleMove",
 				"SpawnChild",
 				"SpawnEntity",
 				"SyncVarToActorState",
 				"Wait",
+				"ModifyEntityDecoration",
 				"AddBuffToEntity",
 				"AddBuffToPlayer",
 				"AddBuffToFollowShooter",
@@ -5867,6 +6109,7 @@ namespace Aki.TDConfigMgr.Action
 				"PromptQuestChapterUI",
 				"FireBullet",
 				"FireBulletEffect",
+				"SetAssistCharacterPos",
 				"SetPlayerPos",
 				"ClientSetPlayerPos",
 				"ClientPreEnableSubLevels",
@@ -5878,6 +6121,7 @@ namespace Aki.TDConfigMgr.Action
 				"ItemFoundationMatch",
 				"SetBattleState",
 				"WaitBattleCondition",
+				"SendBattleTag",
 				"UnlockSystemItem",
 				"ClientUnlockAchievementSystemItem",
 				"RunActions",
@@ -5946,6 +6190,7 @@ namespace Aki.TDConfigMgr.Action
 				"AddTrialFollowShooter",
 				"RemoveTrialFollowShooter",
 				"EnableFollowShooterAbility",
+				"FollowShooterLeisureInteract",
 				"ClientFollowShooterLeisureInteract",
 				"DestroyQuest",
 				"SetCameraAnim",
@@ -5962,7 +6207,7 @@ namespace Aki.TDConfigMgr.Action
 				"HideByRangeInFlow",
 				"ShowAllHidedGroupInFlow",
 				"OpenSimpleGameplay",
-				"CloseSimpleGameplay",
+				"ToggleRideFlyingCarUiGameplay",
 				"ChangeActorTalker",
 				"SwitchSubLevels",
 				"SwitchDataLayers",
@@ -6153,13 +6398,23 @@ namespace Aki.TDConfigMgr.Action
 				"SheriffUnlockEnding",
 				"SetSubScreenMode",
 				"ClientSetSeasonState",
+				"SeasonWeatherSetRotationLock",
+				"SeasonWeatherChangeTo",
+				"SeasonWeatherUnlockSpecial",
 				"ToggleDragActorPlay",
 				"SetTargetElementalAbility",
 				"ToggleEntityElementalAbility",
 				"CaptureElementalBox",
 				"ChangeElementalBoxState",
 				"SetElementalBoxToTarget",
-				"OverrideAbpAnimScheme"
+				"DarkTideSetMapMarkState",
+				"OverrideAbpAnimScheme",
+				"HandBookModifySystemProgress",
+				"ClientExecEntityPrefabAction",
+				"LiveSetUi",
+				"LiveSetDanmaku",
+				"LiveSetParam",
+				"LiveSetSc"
 			};
 		}
 	}

@@ -6,17 +6,17 @@ using UnrealEngine.Service;
 
 namespace UnrealEngine
 {
-	// Token: 0x02001C66 RID: 7270
+	// Token: 0x0200050C RID: 1292
 	[UnrealStructLayout(16, 8, UnrealReflectionPropertyTypeCode.MulticastDelegate)]
 	public sealed class FOnHoldNoteInputReleased : FMulticastScriptDelegate, IUnrealDelegateProxy, IUnrealObject
 	{
-		// Token: 0x0601C326 RID: 115494 RVA: 0x0029904C File Offset: 0x0029724C
+		// Token: 0x06007922 RID: 31010 RVA: 0x000B1A24 File Offset: 0x000AFC24
 		public static UFunctionStackOnlyPtr StaticFunction()
 		{
 			return FOnHoldNoteInputReleased.StaticFunctionPtr();
 		}
 
-		// Token: 0x0601C327 RID: 115495 RVA: 0x00299058 File Offset: 0x00297258
+		// Token: 0x06007923 RID: 31011 RVA: 0x000B1A30 File Offset: 0x000AFC30
 		private static IntPtr StaticFunctionPtr()
 		{
 			if (FOnHoldNoteInputReleased._FunctionPtr == IntPtr.Zero)
@@ -26,32 +26,31 @@ namespace UnrealEngine
 			return FOnHoldNoteInputReleased._FunctionPtr;
 		}
 
-		// Token: 0x0601C328 RID: 115496 RVA: 0x0029907B File Offset: 0x0029727B
+		// Token: 0x06007924 RID: 31012 RVA: 0x000B1A53 File Offset: 0x000AFC53
 		public FOnHoldNoteInputReleased()
 		{
 		}
 
-		// Token: 0x0601C329 RID: 115497 RVA: 0x00299083 File Offset: 0x00297283
+		// Token: 0x06007925 RID: 31013 RVA: 0x000B1A5B File Offset: 0x000AFC5B
 		[NullableContext(2)]
 		public FOnHoldNoteInputReleased(IntPtr NativePtr, UnrealObject MemoryOwner) : base(NativePtr, MemoryOwner)
 		{
 		}
 
-		// Token: 0x0601C32A RID: 115498 RVA: 0x0029908D File Offset: 0x0029728D
+		// Token: 0x06007926 RID: 31014 RVA: 0x000B1A65 File Offset: 0x000AFC65
 		public FOnHoldNoteInputReleased(IntPtr NativePtr, bool bWithMoveAssign, bool bWithCopyAssignIfCannotMove) : base(NativePtr, bWithMoveAssign, bWithCopyAssignIfCannotMove)
 		{
 		}
 
-		// Token: 0x0601C32B RID: 115499 RVA: 0x00299098 File Offset: 0x00297298
+		// Token: 0x06007927 RID: 31015 RVA: 0x000B1A70 File Offset: 0x000AFC70
 		[NullableContext(1)]
 		public override void DynamicBind(Delegate Callback)
 		{
 			this.Add((Callback as Action) ?? ((Action)Delegate.CreateDelegate(typeof(Action), Callback.Target, Callback.Method)));
 		}
 
-		// Token: 0x0601C32C RID: 115500 RVA: 0x002990CA File Offset: 0x002972CA
+		// Token: 0x06007928 RID: 31016 RVA: 0x000B1AA2 File Offset: 0x000AFCA2
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Add(Action Callback)
 		{
 			if (FOnHoldNoteInputReleased.RegisterId == 0)
@@ -66,26 +65,23 @@ namespace UnrealEngine
 			base.Add(Callback, FOnHoldNoteInputReleased.RegisterId);
 		}
 
-		// Token: 0x0601C32D RID: 115501 RVA: 0x00299104 File Offset: 0x00297304
+		// Token: 0x06007929 RID: 31017 RVA: 0x000B1ADC File Offset: 0x000AFCDC
 		[NullableContext(1)]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Remove(Action Callback)
 		{
 			base.Remove(Callback);
 		}
 
-		// Token: 0x0601C32E RID: 115502 RVA: 0x0029910D File Offset: 0x0029730D
+		// Token: 0x0600792A RID: 31018 RVA: 0x000B1AE5 File Offset: 0x000AFCE5
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
 		public void Broadcast()
 		{
 			base.BroadcastInternal(null);
 		}
 
-		// Token: 0x0601C32F RID: 115503 RVA: 0x00299118 File Offset: 0x00297318
+		// Token: 0x0600792B RID: 31019 RVA: 0x000B1AF0 File Offset: 0x000AFCF0
 		[SkipLocalsInit]
-		[MethodImpl(MethodImplOptions.AggressiveOptimization)]
-		protected unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
+		private unsafe static void OnScriptCallback(IntPtr __Handle, byte* __Parameters)
 		{
 			object target = GCHandle.FromIntPtr(__Handle).Target;
 			Action action = target as Action;
@@ -96,21 +92,21 @@ namespace UnrealEngine
 			action();
 		}
 
-		// Token: 0x0400F2B6 RID: 62134
+		// Token: 0x04003381 RID: 13185
 		internal static IntPtr _FunctionPtr;
 
-		// Token: 0x0400F2B7 RID: 62135
+		// Token: 0x04003382 RID: 13186
 		[Nullable(1)]
 		public const string __ObjectPath = "/Script/KuroRhythmGame.OnHoldNoteInputReleased__DelegateSignature";
 
-		// Token: 0x0400F2B8 RID: 62136
+		// Token: 0x04003383 RID: 13187
 		private static int RegisterId;
 
-		// Token: 0x020031FC RID: 12796
+		// Token: 0x02000C71 RID: 3185
 		[CompilerGenerated]
 		private static class <>O
 		{
-			// Token: 0x04017058 RID: 94296
+			// Token: 0x04005ECC RID: 24268
 			public static UnrealScriptDelegate.CallbackType <0>__OnScriptCallback;
 		}
 	}

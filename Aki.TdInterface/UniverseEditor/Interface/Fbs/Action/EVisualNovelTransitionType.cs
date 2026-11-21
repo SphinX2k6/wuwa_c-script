@@ -2,12 +2,12 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006061 RID: 24673
+	// Token: 0x020066C4 RID: 26308
 	public enum EVisualNovelTransitionType : byte
 	{
-		// Token: 0x04010218 RID: 66072
+		// Token: 0x04011011 RID: 69649
 		Location,
-		// Token: 0x04010219 RID: 66073
+		// Token: 0x04011012 RID: 69650
 		Time
 	}
 }

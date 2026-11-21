@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x0200706B RID: 28779
+	// Token: 0x02007837 RID: 30775
 	public class ISetReviveRegionT
 	{
-		// Token: 0x1700D5E9 RID: 54761
-		// (get) Token: 0x06032F54 RID: 208724 RVA: 0x006DFCF4 File Offset: 0x006DDEF4
-		// (set) Token: 0x06032F55 RID: 208725 RVA: 0x006DFCFC File Offset: 0x006DDEFC
+		// Token: 0x1700E1CC RID: 57804
+		// (get) Token: 0x060361F5 RID: 221685 RVA: 0x007402A8 File Offset: 0x0073E4A8
+		// (set) Token: 0x060361F6 RID: 221686 RVA: 0x007402B0 File Offset: 0x0073E4B0
 		public ESetReviveType SetReviveType { get; set; }
 
-		// Token: 0x1700D5EA RID: 54762
-		// (get) Token: 0x06032F56 RID: 208726 RVA: 0x006DFD05 File Offset: 0x006DDF05
-		// (set) Token: 0x06032F57 RID: 208727 RVA: 0x006DFD0D File Offset: 0x006DDF0D
+		// Token: 0x1700E1CD RID: 57805
+		// (get) Token: 0x060361F7 RID: 221687 RVA: 0x007402B9 File Offset: 0x0073E4B9
+		// (set) Token: 0x060361F8 RID: 221688 RVA: 0x007402C1 File Offset: 0x0073E4C1
 		public int ReviveId { get; set; }
 
-		// Token: 0x06032F58 RID: 208728 RVA: 0x006DFD16 File Offset: 0x006DDF16
+		// Token: 0x060361F9 RID: 221689 RVA: 0x007402CA File Offset: 0x0073E4CA
 		public ISetReviveRegionT()
 		{
 			this.SetReviveType = ESetReviveType.Add;

@@ -6,7 +6,7 @@ using Google.FlatBuffers;
 
 namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Config
 {
-	// Token: 0x020000BE RID: 190
+	// Token: 0x020000C1 RID: 193
 	[NullableContext(1)]
 	[Nullable(new byte[]
 	{
@@ -15,25 +15,25 @@ namespace CSharpScript.Launcher.Update.ResourceDiffUpdate.Config
 	})]
 	public class RecommendPackTable : TableReader<RecommendPackRow>
 	{
-		// Token: 0x06000642 RID: 1602 RVA: 0x00036FE5 File Offset: 0x000351E5
+		// Token: 0x0600065D RID: 1629 RVA: 0x00038AE5 File Offset: 0x00036CE5
 		protected override string GetTableName()
 		{
 			return "RecommendPack";
 		}
 
-		// Token: 0x06000643 RID: 1603 RVA: 0x00036FEC File Offset: 0x000351EC
+		// Token: 0x0600065E RID: 1630 RVA: 0x00038AEC File Offset: 0x00036CEC
 		protected override string GetDbFile()
 		{
 			return "db_download.db";
 		}
 
-		// Token: 0x06000644 RID: 1604 RVA: 0x00036FF3 File Offset: 0x000351F3
+		// Token: 0x0600065F RID: 1631 RVA: 0x00038AF3 File Offset: 0x00036CF3
 		protected override string GetIdString()
 		{
 			return "Id";
 		}
 
-		// Token: 0x06000645 RID: 1605 RVA: 0x00036FFC File Offset: 0x000351FC
+		// Token: 0x06000660 RID: 1632 RVA: 0x00038AFC File Offset: 0x00036CFC
 		public override RecommendPackRow Parse(ByteBuffer byteBuffer)
 		{
 			RecommendPackRow recommendPackRow = new RecommendPackRow();

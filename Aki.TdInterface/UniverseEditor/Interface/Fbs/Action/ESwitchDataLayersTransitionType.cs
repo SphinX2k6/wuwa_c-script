@@ -2,10 +2,10 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006019 RID: 24601
+	// Token: 0x02006678 RID: 26232
 	public enum ESwitchDataLayersTransitionType : byte
 	{
-		// Token: 0x04010064 RID: 65636
+		// Token: 0x04010E49 RID: 69193
 		Sequence
 	}
 }

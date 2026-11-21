@@ -4,51 +4,51 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C03 RID: 7171
+	// Token: 0x02001DF2 RID: 7666
 	public class IMontageData_SetValue
 	{
-		// Token: 0x04005D78 RID: 23928
+		// Token: 0x0400629F RID: 25247
 		public int ActorIndex;
 
-		// Token: 0x04005D79 RID: 23929
+		// Token: 0x040062A0 RID: 25248
 		public int? MontageId;
 
-		// Token: 0x04005D7A RID: 23930
+		// Token: 0x040062A1 RID: 25249
 		public bool? IsAbpMontage;
 
-		// Token: 0x04005D7B RID: 23931
+		// Token: 0x040062A2 RID: 25250
 		public bool? IsLoop;
 
-		// Token: 0x04005D7C RID: 23932
+		// Token: 0x040062A3 RID: 25251
 		public bool? KeepPose;
 
-		// Token: 0x04005D7D RID: 23933
+		// Token: 0x040062A4 RID: 25252
 		public float? DelayTime;
 
-		// Token: 0x04005D7E RID: 23934
+		// Token: 0x040062A5 RID: 25253
 		public bool? EndLoopingMontage;
 
-		// Token: 0x04005D7F RID: 23935
+		// Token: 0x040062A6 RID: 25254
 		public bool? EndMontageDirectly;
 
-		// Token: 0x04005D80 RID: 23936
+		// Token: 0x040062A7 RID: 25255
 		public bool? StartFromLoop;
 
-		// Token: 0x04005D81 RID: 23937
+		// Token: 0x040062A8 RID: 25256
 		[Nullable(2)]
 		public IMontageParam OverlayMontage;
 
-		// Token: 0x04005D82 RID: 23938
+		// Token: 0x040062A9 RID: 25257
 		public int? FaceExpressionId;
 
-		// Token: 0x04005D83 RID: 23939
+		// Token: 0x040062AA RID: 25258
 		public bool? KeepFaceExpression;
 
-		// Token: 0x04005D84 RID: 23940
+		// Token: 0x040062AB RID: 25259
 		[Nullable(new byte[]
 		{
 			2,
-			1
+			0
 		})]
 		public List<IActorFxEmotePlay> FxEmote;
 	}

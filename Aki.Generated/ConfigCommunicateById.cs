@@ -5,16 +5,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x0200018C RID: 396
+	// Token: 0x0200019E RID: 414
 	public class ConfigCommunicateById : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x0600094A RID: 2378 RVA: 0x0008E06C File Offset: 0x0008C26C
+		// Token: 0x060009B6 RID: 2486 RVA: 0x00093FA4 File Offset: 0x000921A4
 		static ConfigCommunicateById()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigCommunicateById.CreateStaticDefaultValue), new Action(ConfigCommunicateById.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0600094B RID: 2379 RVA: 0x0008E08C File Offset: 0x0008C28C
+		// Token: 0x060009B7 RID: 2487 RVA: 0x00093FC4 File Offset: 0x000921C4
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigCommunicateById.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -27,20 +27,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x0600094C RID: 2380 RVA: 0x0008E10B File Offset: 0x0008C30B
+		// Token: 0x060009B8 RID: 2488 RVA: 0x00094043 File Offset: 0x00092243
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigCommunicateById.LogPair = null;
 			ConfigCommunicateById.HandleId = 0;
 		}
 
-		// Token: 0x0600094D RID: 2381 RVA: 0x0008E119 File Offset: 0x0008C319
+		// Token: 0x060009B9 RID: 2489 RVA: 0x00094051 File Offset: 0x00092251
 		public static void Init()
 		{
 			ConfigCommunicateById.HandleId = ConfigCommon.InitDataStatement(ConfigCommunicateById.HandleId, "db_communicate.db", "select BinData from `Communicate` where Id=?");
 		}
 
-		// Token: 0x0600094E RID: 2382 RVA: 0x0008E134 File Offset: 0x0008C334
+		// Token: 0x060009BA RID: 2490 RVA: 0x0009406C File Offset: 0x0009226C
 		public static Communicate? GetConfig(int p0Id, bool useCache = true)
 		{
 			if (!ConfigCommon.CheckStatement(ConfigCommunicateById.HandleId, ConfigCommunicateById.LogPair))
@@ -88,22 +88,22 @@ namespace Aki.Config
 			return new Communicate?(rootAsCommunicate);
 		}
 
-		// Token: 0x04000AB8 RID: 2744
+		// Token: 0x04000B36 RID: 2870
 		private const string DB = "db_communicate.db";
 
-		// Token: 0x04000AB9 RID: 2745
+		// Token: 0x04000B37 RID: 2871
 		private const string FILE = "k.可视化编辑/c.Csv/t.通讯/*.csv*";
 
-		// Token: 0x04000ABA RID: 2746
+		// Token: 0x04000B38 RID: 2872
 		private const string TABLE = "Communicate";
 
-		// Token: 0x04000ABB RID: 2747
+		// Token: 0x04000B39 RID: 2873
 		private const string COMMAND = "select BinData from `Communicate` where Id=?";
 
-		// Token: 0x04000ABC RID: 2748
+		// Token: 0x04000B3A RID: 2874
 		private const string KEY_PREFIX = "CommunicateById";
 
-		// Token: 0x04000ABD RID: 2749
+		// Token: 0x04000B3B RID: 2875
 		[Nullable(new byte[]
 		{
 			2,
@@ -113,7 +113,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x04000ABE RID: 2750
+		// Token: 0x04000B3C RID: 2876
 		private static int HandleId;
 	}
 }

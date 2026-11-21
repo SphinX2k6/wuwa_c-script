@@ -5,11 +5,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000BF3 RID: 3059
+	// Token: 0x02000CD5 RID: 3285
 	public struct DirectTrainMain : IFlatbufferObject
 	{
-		// Token: 0x17000CC3 RID: 3267
-		// (get) Token: 0x06006283 RID: 25219 RVA: 0x00214061 File Offset: 0x00212261
+		// Token: 0x17000D0E RID: 3342
+		// (get) Token: 0x06006861 RID: 26721 RVA: 0x00233755 File Offset: 0x00231955
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -18,39 +18,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06006284 RID: 25220 RVA: 0x0021406E File Offset: 0x0021226E
+		// Token: 0x06006862 RID: 26722 RVA: 0x00233762 File Offset: 0x00231962
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x06006285 RID: 25221 RVA: 0x00214078 File Offset: 0x00212278
+		// Token: 0x06006863 RID: 26723 RVA: 0x0023376C File Offset: 0x0023196C
 		public static DirectTrainMain GetRootAsDirectTrainMain(ByteBuffer _bb)
 		{
 			return DirectTrainMain.GetRootAsDirectTrainMain(_bb, default(DirectTrainMain));
 		}
 
-		// Token: 0x06006286 RID: 25222 RVA: 0x00214094 File Offset: 0x00212294
+		// Token: 0x06006864 RID: 26724 RVA: 0x00233788 File Offset: 0x00231988
 		public static DirectTrainMain GetRootAsDirectTrainMain(ByteBuffer _bb, DirectTrainMain obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x06006287 RID: 25223 RVA: 0x002140B1 File Offset: 0x002122B1
+		// Token: 0x06006865 RID: 26725 RVA: 0x002337A5 File Offset: 0x002319A5
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x06006288 RID: 25224 RVA: 0x002140C0 File Offset: 0x002122C0
+		// Token: 0x06006866 RID: 26726 RVA: 0x002337B4 File Offset: 0x002319B4
 		public DirectTrainMain __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17000CC4 RID: 3268
-		// (get) Token: 0x06006289 RID: 25225 RVA: 0x002140D0 File Offset: 0x002122D0
+		// Token: 0x17000D0F RID: 3343
+		// (get) Token: 0x06006867 RID: 26727 RVA: 0x002337C4 File Offset: 0x002319C4
 		public int ActivityId
 		{
 			get
@@ -64,7 +64,7 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600628A RID: 25226 RVA: 0x0021410C File Offset: 0x0021230C
+		// Token: 0x06006868 RID: 26728 RVA: 0x00233800 File Offset: 0x00231A00
 		public int SubActivityIds(int j)
 		{
 			int num = this.__p.__offset(6);
@@ -75,8 +75,8 @@ namespace Aki.Config
 			return this.__p.bb.GetInt(this.__p.__vector(num) + j * 4);
 		}
 
-		// Token: 0x17000CC5 RID: 3269
-		// (get) Token: 0x0600628B RID: 25227 RVA: 0x0021414C File Offset: 0x0021234C
+		// Token: 0x17000D10 RID: 3344
+		// (get) Token: 0x06006869 RID: 26729 RVA: 0x00233840 File Offset: 0x00231A40
 		public int SubActivityIdsLength
 		{
 			get
@@ -90,20 +90,20 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600628C RID: 25228 RVA: 0x00214177 File Offset: 0x00212377
+		// Token: 0x0600686A RID: 26730 RVA: 0x0023386B File Offset: 0x00231A6B
 		public Span<int> GetSubActivityIdsBytes()
 		{
 			return this.__p.__vector_as_span<int>(6, 4);
 		}
 
-		// Token: 0x0600628D RID: 25229 RVA: 0x00214186 File Offset: 0x00212386
+		// Token: 0x0600686B RID: 26731 RVA: 0x0023387A File Offset: 0x00231A7A
 		public int[] GetSubActivityIdsArray()
 		{
 			return this.__p.__vector_as_array<int>(6) ?? Array.Empty<int>();
 		}
 
-		// Token: 0x17000CC6 RID: 3270
-		// (get) Token: 0x0600628E RID: 25230 RVA: 0x002141A0 File Offset: 0x002123A0
+		// Token: 0x17000D11 RID: 3345
+		// (get) Token: 0x0600686C RID: 26732 RVA: 0x00233894 File Offset: 0x00231A94
 		public string BottomTipText
 		{
 			get
@@ -117,37 +117,35 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600628F RID: 25231 RVA: 0x002141D7 File Offset: 0x002123D7
+		// Token: 0x0600686D RID: 26733 RVA: 0x002338CB File Offset: 0x00231ACB
 		public Span<byte> GetBottomTipTextBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x06006290 RID: 25232 RVA: 0x002141E6 File Offset: 0x002123E6
+		// Token: 0x0600686E RID: 26734 RVA: 0x002338DA File Offset: 0x00231ADA
 		public byte[] GetBottomTipTextArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x06006291 RID: 25233 RVA: 0x00214200 File Offset: 0x00212400
+		// Token: 0x0600686F RID: 26735 RVA: 0x002338F1 File Offset: 0x00231AF1
 		[NullableContext(1)]
-		[Obsolete("本方法用于缓存,遍历请使用SubActivityIdsIter()或GetSubActivityIdsBytes()版本", UrlFormat = "https://kurogame.feishu.cn/wiki/QnadwbnC4i3zsmktEDgcBWuOnJb")]
-		public readonly int[] SubActivityIds()
+		public int[] SubActivityIds()
 		{
-			DirectTrainMain directTrainMain = this;
-			return directTrainMain.GetSubActivityIdsArray() ?? Array.Empty<int>();
+			return this.GetSubActivityIdsArray();
 		}
 
-		// Token: 0x06006292 RID: 25234 RVA: 0x00214224 File Offset: 0x00212424
+		// Token: 0x06006870 RID: 26736 RVA: 0x002338F9 File Offset: 0x00231AF9
 		[NullableContext(1)]
-		public readonly IEnumerable<int> SubActivityIdsIter()
+		public IEnumerable<int> SubActivityIdsIter()
 		{
 			DirectTrainMain.<SubActivityIdsIter>d__20 <SubActivityIdsIter>d__ = new DirectTrainMain.<SubActivityIdsIter>d__20(-2);
 			<SubActivityIdsIter>d__.<>3__<>4__this = this;
 			return <SubActivityIdsIter>d__;
 		}
 
-		// Token: 0x04004C20 RID: 19488
+		// Token: 0x04005202 RID: 20994
 		private Table __p;
 	}
 }

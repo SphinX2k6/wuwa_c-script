@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x02002562 RID: 9570
+// Token: 0x02001A4D RID: 6733
 public class PhotoEnvStrengthItem : UiPanelBase
 {
-	// Token: 0x060134FB RID: 79099 RVA: 0x004CE010 File Offset: 0x004CC210
+	// Token: 0x060109DD RID: 68061 RVA: 0x004DCC48 File Offset: 0x004DAE48
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -29,7 +29,7 @@ public class PhotoEnvStrengthItem : UiPanelBase
 		};
 	}
 
-	// Token: 0x060134FC RID: 79100 RVA: 0x004CE128 File Offset: 0x004CC328
+	// Token: 0x060109DE RID: 68062 RVA: 0x004DCD60 File Offset: 0x004DAF60
 	protected override void OnStart()
 	{
 		UUISliderComponent slider = base.GetSlider(1);
@@ -48,7 +48,7 @@ public class PhotoEnvStrengthItem : UiPanelBase
 		slider.OnValueChangeCb.Bind(new Action<float>(this.OnValueChanged));
 	}
 
-	// Token: 0x060134FD RID: 79101 RVA: 0x004CE17D File Offset: 0x004CC37D
+	// Token: 0x060109DF RID: 68063 RVA: 0x004DCDB5 File Offset: 0x004DAFB5
 	protected override void OnBeforeDestroy()
 	{
 		UUISliderComponent slider = base.GetSlider(1);
@@ -59,7 +59,7 @@ public class PhotoEnvStrengthItem : UiPanelBase
 		slider.OnValueChangeCb.Unbind();
 	}
 
-	// Token: 0x060134FE RID: 79102 RVA: 0x004CE195 File Offset: 0x004CC395
+	// Token: 0x060109E0 RID: 68064 RVA: 0x004DCDCD File Offset: 0x004DAFCD
 	public void SetStrength(float strength, float resetValue)
 	{
 		this.ResetValue = resetValue;
@@ -71,7 +71,7 @@ public class PhotoEnvStrengthItem : UiPanelBase
 		this.SetNumText(strength);
 	}
 
-	// Token: 0x060134FF RID: 79103 RVA: 0x004CE1BC File Offset: 0x004CC3BC
+	// Token: 0x060109E1 RID: 68065 RVA: 0x004DCDF4 File Offset: 0x004DAFF4
 	private void SetNumText(float value)
 	{
 		UUIText text = base.GetText(0);
@@ -82,14 +82,14 @@ public class PhotoEnvStrengthItem : UiPanelBase
 		text.SetText(((int)value).ToString(), true);
 	}
 
-	// Token: 0x06013500 RID: 79104 RVA: 0x004CE1E5 File Offset: 0x004CC3E5
+	// Token: 0x060109E2 RID: 68066 RVA: 0x004DCE1D File Offset: 0x004DB01D
 	private void OnValueChanged(float value)
 	{
 		this.SetNumText(value);
 		this.OnStrengthChanged(value);
 	}
 
-	// Token: 0x06013501 RID: 79105 RVA: 0x004CE1FA File Offset: 0x004CC3FA
+	// Token: 0x060109E3 RID: 68067 RVA: 0x004DCE32 File Offset: 0x004DB032
 	private void OnResetClick()
 	{
 		UUISliderComponent slider = base.GetSlider(1);
@@ -100,37 +100,37 @@ public class PhotoEnvStrengthItem : UiPanelBase
 		slider.SetValue(this.ResetValue, true);
 	}
 
-	// Token: 0x040091AC RID: 37292
+	// Token: 0x04009305 RID: 37637
 	private float ResetValue;
 
-	// Token: 0x040091AD RID: 37293
+	// Token: 0x04009306 RID: 37638
 	[Nullable(1)]
 	public Action<float> OnStrengthChanged = delegate(float value)
 	{
 	};
 
-	// Token: 0x02008B3D RID: 35645
+	// Token: 0x02007CC3 RID: 31939
 	private enum EComponents
 	{
-		// Token: 0x0402D34A RID: 185162
+		// Token: 0x04028657 RID: 165463
 		TextValue,
-		// Token: 0x0402D34B RID: 185163
+		// Token: 0x04028658 RID: 165464
 		Slider,
-		// Token: 0x0402D34C RID: 185164
+		// Token: 0x04028659 RID: 165465
 		SpriteHandle,
-		// Token: 0x0402D34D RID: 185165
+		// Token: 0x0402865A RID: 165466
 		SpriteSldBg,
-		// Token: 0x0402D34E RID: 185166
+		// Token: 0x0402865B RID: 165467
 		SpriteSldBgTemperature,
-		// Token: 0x0402D34F RID: 185167
+		// Token: 0x0402865C RID: 165468
 		ItemFillArea,
-		// Token: 0x0402D350 RID: 185168
+		// Token: 0x0402865D RID: 165469
 		ToggleItem,
-		// Token: 0x0402D351 RID: 185169
+		// Token: 0x0402865E RID: 165470
 		TextTitle,
-		// Token: 0x0402D352 RID: 185170
+		// Token: 0x0402865F RID: 165471
 		BtnReset,
-		// Token: 0x0402D353 RID: 185171
+		// Token: 0x04028660 RID: 165472
 		ItemLock
 	}
 }

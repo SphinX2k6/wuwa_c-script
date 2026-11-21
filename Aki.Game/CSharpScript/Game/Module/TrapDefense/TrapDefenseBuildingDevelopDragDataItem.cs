@@ -4,7 +4,7 @@ using CSharpScript.Game.Ui;
 
 namespace CSharpScript.Game.Module.TrapDefense
 {
-	// Token: 0x02004A9A RID: 19098
+	// Token: 0x02003A42 RID: 14914
 	[Nullable(new byte[]
 	{
 		0,
@@ -12,31 +12,31 @@ namespace CSharpScript.Game.Module.TrapDefense
 	})]
 	public class TrapDefenseBuildingDevelopDragDataItem : CommonDragLogicDataItem<TrapDefenseBuildingDevelopItemData>
 	{
-		// Token: 0x060317FF RID: 202751 RVA: 0x00B798BD File Offset: 0x00B77ABD
+		// Token: 0x0602658F RID: 157071 RVA: 0x00ABD871 File Offset: 0x00ABBA71
 		public override bool CheckIfCanDrag()
 		{
 			return TrapDefenseModel.Instance.ViewModelBuildingDevelop.CheckIfCanDrag();
 		}
 
-		// Token: 0x06031800 RID: 202752 RVA: 0x00B798CE File Offset: 0x00B77ACE
+		// Token: 0x06026590 RID: 157072 RVA: 0x00ABD882 File Offset: 0x00ABBA82
 		public override bool CheckIfCurrentDragIndex(int index)
 		{
 			return TrapDefenseModel.Instance.ViewModelBuildingDevelop.CheckIfCurrentDragIndex(index);
 		}
 
-		// Token: 0x06031801 RID: 202753 RVA: 0x00B798E0 File Offset: 0x00B77AE0
+		// Token: 0x06026591 RID: 157073 RVA: 0x00ABD894 File Offset: 0x00ABBA94
 		public override void SetCurrentDragIndex(int index)
 		{
 			TrapDefenseModel.Instance.ViewModelBuildingDevelop.SetCurrentDragIndex(index);
 		}
 
-		// Token: 0x06031802 RID: 202754 RVA: 0x00B798F2 File Offset: 0x00B77AF2
+		// Token: 0x06026592 RID: 157074 RVA: 0x00ABD8A6 File Offset: 0x00ABBAA6
 		public override void ClearCurrentDragIndex()
 		{
 			TrapDefenseModel.Instance.ViewModelBuildingDevelop.ClearCurrentDragIndex();
 		}
 
-		// Token: 0x06031803 RID: 202755 RVA: 0x00B79903 File Offset: 0x00B77B03
+		// Token: 0x06026593 RID: 157075 RVA: 0x00ABD8B7 File Offset: 0x00ABBAB7
 		public override float GetClickTime()
 		{
 			if (this.ClickTime == -1f)
@@ -46,7 +46,7 @@ namespace CSharpScript.Game.Module.TrapDefense
 			return this.ClickTime;
 		}
 
-		// Token: 0x0401A766 RID: 108390
+		// Token: 0x040150B8 RID: 86200
 		private float ClickTime = -1f;
 	}
 }

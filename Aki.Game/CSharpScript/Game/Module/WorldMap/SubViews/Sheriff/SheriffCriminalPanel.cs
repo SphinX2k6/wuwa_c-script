@@ -15,25 +15,25 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WorldMap.SubViews.Sheriff
 {
-	// Token: 0x020047EE RID: 18414
+	// Token: 0x0200371F RID: 14111
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class SheriffCriminalPanel : WorldMapSecondaryUi
 	{
-		// Token: 0x060303A6 RID: 197542 RVA: 0x00B2DBF5 File Offset: 0x00B2BDF5
+		// Token: 0x06024B76 RID: 150390 RVA: 0x00A5DB39 File Offset: 0x00A5BD39
 		public override string GetResourceId()
 		{
 			return "UiItem_SkyEyeMapNpcPopup";
 		}
 
-		// Token: 0x060303A7 RID: 197543 RVA: 0x00B2DBFC File Offset: 0x00B2BDFC
+		// Token: 0x06024B77 RID: 150391 RVA: 0x00A5DB40 File Offset: 0x00A5BD40
 		[PreserveBaseOverrides]
 		protected new virtual SheriffPopupRightItem GetPopupRightItem()
 		{
 			return new SheriffPopupRightItem();
 		}
 
-		// Token: 0x060303A8 RID: 197544 RVA: 0x00B2DC04 File Offset: 0x00B2BE04
+		// Token: 0x06024B78 RID: 150392 RVA: 0x00A5DB48 File Offset: 0x00A5BD48
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 2;
@@ -47,7 +47,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Sheriff
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x060303A9 RID: 197545 RVA: 0x00B2DC70 File Offset: 0x00B2BE70
+		// Token: 0x06024B79 RID: 150393 RVA: 0x00A5DBB4 File Offset: 0x00A5BDB4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			SheriffCriminalPanel.<OnBeforeStartAsync>d__5 <OnBeforeStartAsync>d__;
@@ -58,13 +58,13 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Sheriff
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x060303AA RID: 197546 RVA: 0x00B2DCB3 File Offset: 0x00B2BEB3
+		// Token: 0x06024B7A RID: 150394 RVA: 0x00A5DBF7 File Offset: 0x00A5BDF7
 		private void InitScroll()
 		{
 			this.LoopScroll = new LoopScrollView<SheriffCriminalListItem, SheriffCriminalInfo>(base.GetLoopScrollViewComponent(0), (AUIBaseActor)base.GetItem(1).GetOwner(), new Func<SheriffCriminalListItem>(this.CreateGrid), false);
 		}
 
-		// Token: 0x060303AB RID: 197547 RVA: 0x00B2DCE5 File Offset: 0x00B2BEE5
+		// Token: 0x06024B7B RID: 150395 RVA: 0x00A5DC29 File Offset: 0x00A5BE29
 		private SheriffCriminalListItem CreateGrid()
 		{
 			return new SheriffCriminalListItem
@@ -73,7 +73,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Sheriff
 			};
 		}
 
-		// Token: 0x060303AC RID: 197548 RVA: 0x00B2DD00 File Offset: 0x00B2BF00
+		// Token: 0x06024B7C RID: 150396 RVA: 0x00A5DC44 File Offset: 0x00A5BE44
 		private void OnClickCriminal(SheriffCriminalInfo data)
 		{
 			SheriffAnomalyInfo anomalyInfo = SheriffModel.Instance.GetAnomalyInfo(data.AnomalyId);
@@ -97,7 +97,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Sheriff
 			}, true);
 		}
 
-		// Token: 0x060303AD RID: 197549 RVA: 0x00B2DD64 File Offset: 0x00B2BF64
+		// Token: 0x06024B7D RID: 150397 RVA: 0x00A5DCA8 File Offset: 0x00A5BEA8
 		protected override void OnShowWorldMapSecondaryUi(params object[] param)
 		{
 			if (param.Length == 0)
@@ -115,7 +115,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Sheriff
 			loopScroll.RefreshByData(criminalList, false, null, false);
 		}
 
-		// Token: 0x060303AE RID: 197550 RVA: 0x00B2DDB4 File Offset: 0x00B2BFB4
+		// Token: 0x06024B7E RID: 150398 RVA: 0x00A5DCF8 File Offset: 0x00A5BEF8
 		private int CompareCriminal(SheriffCriminalInfo a, SheriffCriminalInfo b)
 		{
 			SheriffAnomalyInfo anomalyInfo = SheriffModel.Instance.GetAnomalyInfo(a.AnomalyId);
@@ -136,7 +136,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Sheriff
 			return ((criminalConfigById != null) ? criminalConfigById.GetValueOrDefault().Priority : 0) - num;
 		}
 
-		// Token: 0x060303AF RID: 197551 RVA: 0x00B2DEB4 File Offset: 0x00B2C0B4
+		// Token: 0x06024B7F RID: 150399 RVA: 0x00A5DDF8 File Offset: 0x00A5BFF8
 		private int GetSortGroup(ESheriffAnomalyState? state)
 		{
 			if (state != null)
@@ -158,7 +158,7 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Sheriff
 			return 4;
 		}
 
-		// Token: 0x04019F6C RID: 106348
+		// Token: 0x04014620 RID: 83488
 		[Nullable(new byte[]
 		{
 			2,
@@ -167,14 +167,14 @@ namespace CSharpScript.Game.Module.WorldMap.SubViews.Sheriff
 		})]
 		private LoopScrollView<SheriffCriminalListItem, SheriffCriminalInfo> LoopScroll;
 
-		// Token: 0x0200AAB1 RID: 43697
+		// Token: 0x02009463 RID: 37987
 		[NullableContext(0)]
 		private static class EComponent
 		{
-			// Token: 0x04033ECD RID: 212685
+			// Token: 0x0402E653 RID: 190035
 			public const int Loop = 0;
 
-			// Token: 0x04033ECE RID: 212686
+			// Token: 0x0402E654 RID: 190036
 			public const int LoopItem = 1;
 		}
 	}

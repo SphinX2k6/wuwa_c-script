@@ -1,14 +1,14 @@
 ﻿using System;
 
-// Token: 0x02001F77 RID: 8055
+// Token: 0x02001439 RID: 5177
 public enum EInfluenceRelation
 {
-	// Token: 0x0400747A RID: 29818
+	// Token: 0x0400755B RID: 30043
 	None,
-	// Token: 0x0400747B RID: 29819
+	// Token: 0x0400755C RID: 30044
 	Belong,
-	// Token: 0x0400747C RID: 29820
+	// Token: 0x0400755D RID: 30045
 	Neutral,
-	// Token: 0x0400747D RID: 29821
+	// Token: 0x0400755E RID: 30046
 	Hostility
 }

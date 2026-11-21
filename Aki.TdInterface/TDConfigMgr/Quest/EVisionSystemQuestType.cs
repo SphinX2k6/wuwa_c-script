@@ -3,15 +3,15 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02000EB0 RID: 3760
+	// Token: 0x02000FC6 RID: 4038
 	[EnumExtensions]
 	public enum EVisionSystemQuestType
 	{
-		// Token: 0x0400322E RID: 12846
+		// Token: 0x0400353B RID: 13627
 		HasVisionGetTargetLevel,
-		// Token: 0x0400322F RID: 12847
+		// Token: 0x0400353C RID: 13628
 		VisionSetActivated,
-		// Token: 0x04003230 RID: 12848
+		// Token: 0x0400353D RID: 13629
 		DoVisionIdentify
 	}
 }

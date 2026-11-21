@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001EF1 RID: 7921
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x0200212A RID: 8490
 	public class ISunPalaceInteract : ILeisureInteractType
 	{
-		// Token: 0x0600A96A RID: 43370 RVA: 0x0017DFFC File Offset: 0x0017C1FC
+		// Token: 0x0600B43C RID: 46140 RVA: 0x00193FF4 File Offset: 0x001921F4
 		private ISunPalaceInteract_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x0600A96B RID: 43371 RVA: 0x0017E034 File Offset: 0x0017C234
+		// Token: 0x0600B43D RID: 46141 RVA: 0x0019402C File Offset: 0x0019222C
 		public static ISunPalaceInteract Create([Nullable(2)] ISunPalaceInteract instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A96C RID: 43372 RVA: 0x0017E047 File Offset: 0x0017C247
+		// Token: 0x0600B43E RID: 46142 RVA: 0x0019403F File Offset: 0x0019223F
 		public static ISunPalaceInteract CreateFromSetValue([Nullable(2)] ISunPalaceInteract_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x0600A96D RID: 43373 RVA: 0x0017E05A File Offset: 0x0017C25A
+		// Token: 0x0600B43F RID: 46143 RVA: 0x00194052 File Offset: 0x00192252
 		public new ISunPalaceInteract_SetValue ToSetValue()
 		{
 			return new ISunPalaceInteract_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x170033A3 RID: 13219
-		// (get) Token: 0x0600A96E RID: 43374 RVA: 0x0017E06D File Offset: 0x0017C26D
-		// (set) Token: 0x0600A96F RID: 43375 RVA: 0x0017E098 File Offset: 0x0017C298
+		// Token: 0x1700366E RID: 13934
+		// (get) Token: 0x0600B440 RID: 46144 RVA: 0x00194065 File Offset: 0x00192265
+		// (set) Token: 0x0600B441 RID: 46145 RVA: 0x00194090 File Offset: 0x00192290
 		public override ELeisureInteract Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x040064CA RID: 25802
+		// Token: 0x04006AB9 RID: 27321
 		[Nullable(2)]
 		protected new ISunPalaceInteract FbInstance;
 
-		// Token: 0x040064CB RID: 25803
+		// Token: 0x04006ABA RID: 27322
 		[Nullable(2)]
 		protected new ISunPalaceInteract_SetValue PocoInterface;
 	}

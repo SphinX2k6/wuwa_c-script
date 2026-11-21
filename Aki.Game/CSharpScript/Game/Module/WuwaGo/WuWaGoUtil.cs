@@ -11,18 +11,18 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.WuwaGo
 {
-	// Token: 0x0200471C RID: 18204
+	// Token: 0x0200364C RID: 13900
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class WuWaGoUtil : IStaticVariableResetter
 	{
-		// Token: 0x0602F921 RID: 194849 RVA: 0x00B047B8 File Offset: 0x00B029B8
+		// Token: 0x060240E7 RID: 147687 RVA: 0x00A34488 File Offset: 0x00A32688
 		static WuWaGoUtil()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(WuWaGoUtil.CreateStaticDefaultValue), new Action(WuWaGoUtil.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x0602F922 RID: 194850 RVA: 0x00B047D8 File Offset: 0x00B029D8
+		// Token: 0x060240E8 RID: 147688 RVA: 0x00A344A8 File Offset: 0x00A326A8
 		public static string GetCoordinateKey(double x, double y, double z)
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(2, 3);
@@ -34,7 +34,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x0602F923 RID: 194851 RVA: 0x00B04828 File Offset: 0x00B02A28
+		// Token: 0x060240E9 RID: 147689 RVA: 0x00A344F8 File Offset: 0x00A326F8
 		public static string GetCoordinateKeyByVector(Vector coordinate)
 		{
 			DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(2, 3);
@@ -46,13 +46,13 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return defaultInterpolatedStringHandler.ToStringAndClear();
 		}
 
-		// Token: 0x0602F924 RID: 194852 RVA: 0x00B04884 File Offset: 0x00B02A84
+		// Token: 0x060240EA RID: 147690 RVA: 0x00A34554 File Offset: 0x00A32754
 		public static double SnapToHalf(double value)
 		{
 			return Math.Floor(value * 2.0 + 0.5) / 2.0;
 		}
 
-		// Token: 0x0602F925 RID: 194853 RVA: 0x00B048AC File Offset: 0x00B02AAC
+		// Token: 0x060240EB RID: 147691 RVA: 0x00A3457C File Offset: 0x00A3277C
 		public static bool SnapVectorToHalf(Vector vec)
 		{
 			double num = WuWaGoUtil.SnapToHalf(vec.X);
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return flag;
 		}
 
-		// Token: 0x0602F926 RID: 194854 RVA: 0x00B04918 File Offset: 0x00B02B18
+		// Token: 0x060240EC RID: 147692 RVA: 0x00A345E8 File Offset: 0x00A327E8
 		public static Vector GetWorldPositionByCoordinate(Transform originTransform, Vector coordinate, [Nullable(2)] Vector @out = null)
 		{
 			int singleGridSize = WuWaGoGlobal.Setting.SingleGridSize;
@@ -76,7 +76,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return vector;
 		}
 
-		// Token: 0x0602F927 RID: 194855 RVA: 0x00B04968 File Offset: 0x00B02B68
+		// Token: 0x060240ED RID: 147693 RVA: 0x00A34638 File Offset: 0x00A32838
 		public static Rotator GetWorldRotator(Transform originTransform, Rotator localRotator, [Nullable(2)] Rotator @out = null)
 		{
 			Rotator rotator = @out ?? Rotator.Create();
@@ -84,7 +84,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return rotator;
 		}
 
-		// Token: 0x0602F928 RID: 194856 RVA: 0x00B0498C File Offset: 0x00B02B8C
+		// Token: 0x060240EE RID: 147694 RVA: 0x00A3465C File Offset: 0x00A3285C
 		public static Vector ConvertLocalPositionToCoordinate(IVector localPosition, [Nullable(2)] Vector @out = null)
 		{
 			int singleGridSize = WuWaGoGlobal.Setting.SingleGridSize;
@@ -93,7 +93,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return vector;
 		}
 
-		// Token: 0x0602F929 RID: 194857 RVA: 0x00B049CF File Offset: 0x00B02BCF
+		// Token: 0x060240EF RID: 147695 RVA: 0x00A3469F File Offset: 0x00A3289F
 		public static bool AlignCoordinateByGridShape(Vector coordinate, EGridShape gridShape)
 		{
 			if (gridShape != EGridShape.Vertical)
@@ -103,7 +103,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return WuWaGoUtil.SnapVectorToHalf(coordinate);
 		}
 
-		// Token: 0x0602F92A RID: 194858 RVA: 0x00B049E4 File Offset: 0x00B02BE4
+		// Token: 0x060240F0 RID: 147696 RVA: 0x00A346B4 File Offset: 0x00A328B4
 		public static EGridShape? ConvertLocalPositionToGridCoordinate(IVector localPosition, [Nullable(2)] Vector @out = null)
 		{
 			Vector coordinate = WuWaGoUtil.ConvertLocalPositionToCoordinate(localPosition, @out);
@@ -115,21 +115,21 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return result;
 		}
 
-		// Token: 0x0602F92B RID: 194859 RVA: 0x00B04A18 File Offset: 0x00B02C18
+		// Token: 0x060240F1 RID: 147697 RVA: 0x00A346E8 File Offset: 0x00A328E8
 		public static Vector ConvertWorldPositionToCoordinate(Transform originTransform, Vector worldPosition, [Nullable(2)] Vector @out = null)
 		{
 			originTransform.InverseTransformPosition(worldPosition, WuWaGoUtil._convertWorldPositionTempLocal);
 			return WuWaGoUtil.ConvertLocalPositionToCoordinate(WuWaGoUtil._convertWorldPositionTempLocal, @out);
 		}
 
-		// Token: 0x0602F92C RID: 194860 RVA: 0x00B04A31 File Offset: 0x00B02C31
+		// Token: 0x060240F2 RID: 147698 RVA: 0x00A34701 File Offset: 0x00A32901
 		public static EGridShape? ConvertWorldPositionToGridCoordinate(Transform originTransform, Vector worldPosition, [Nullable(2)] Vector @out = null)
 		{
 			originTransform.InverseTransformPosition(worldPosition, WuWaGoUtil._convertWorldPositionTempLocal);
 			return WuWaGoUtil.ConvertLocalPositionToGridCoordinate(WuWaGoUtil._convertWorldPositionTempLocal, @out);
 		}
 
-		// Token: 0x0602F92D RID: 194861 RVA: 0x00B04A4C File Offset: 0x00B02C4C
+		// Token: 0x060240F3 RID: 147699 RVA: 0x00A3471C File Offset: 0x00A3291C
 		public static double RoundIfNotInteger(double value)
 		{
 			if (!Math.Floor(value).Equals(value))
@@ -139,7 +139,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return value;
 		}
 
-		// Token: 0x0602F92E RID: 194862 RVA: 0x00B04A7C File Offset: 0x00B02C7C
+		// Token: 0x060240F4 RID: 147700 RVA: 0x00A3474C File Offset: 0x00A3294C
 		public static bool RoundIfNotInteger(IVector value)
 		{
 			bool result = false;
@@ -161,7 +161,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return result;
 		}
 
-		// Token: 0x0602F92F RID: 194863 RVA: 0x00B04B34 File Offset: 0x00B02D34
+		// Token: 0x060240F5 RID: 147701 RVA: 0x00A34804 File Offset: 0x00A32A04
 		public static bool RoundIfNotInteger(VectorInfo value)
 		{
 			bool result = false;
@@ -183,7 +183,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return result;
 		}
 
-		// Token: 0x0602F930 RID: 194864 RVA: 0x00B04C80 File Offset: 0x00B02E80
+		// Token: 0x060240F6 RID: 147702 RVA: 0x00A34950 File Offset: 0x00A32B50
 		public static bool RoundIfNotInteger(Rotator value)
 		{
 			float inPitch = Math.Floor((double)value.Pitch).Equals((double)value.Pitch) ? value.Pitch : ((float)Math.Floor((double)value.Pitch + 0.5));
@@ -197,7 +197,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return flag;
 		}
 
-		// Token: 0x0602F931 RID: 194865 RVA: 0x00B04D84 File Offset: 0x00B02F84
+		// Token: 0x060240F7 RID: 147703 RVA: 0x00A34A54 File Offset: 0x00A32C54
 		public static EGridShape? InferGridShapeFromCoordinate(IVector coordinate)
 		{
 			double num = Math.Abs(coordinate.X - Math.Floor(coordinate.X + 0.5));
@@ -217,7 +217,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return null;
 		}
 
-		// Token: 0x0602F932 RID: 194866 RVA: 0x00B04E78 File Offset: 0x00B03078
+		// Token: 0x060240F8 RID: 147704 RVA: 0x00A34B48 File Offset: 0x00A32D48
 		public static Rotator ConvertRotatorConfigToLocal(Transform originTransform, [Nullable(2)] VectorInfo worldRotation = null, [Nullable(2)] Rotator @out = null)
 		{
 			Rotator rotator = @out ?? Rotator.Create();
@@ -232,7 +232,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return rotator;
 		}
 
-		// Token: 0x0602F933 RID: 194867 RVA: 0x00B04F0C File Offset: 0x00B0310C
+		// Token: 0x060240F9 RID: 147705 RVA: 0x00A34BDC File Offset: 0x00A32DDC
 		[return: Nullable(0)]
 		public static UniTask<int> PlayEffectAtCoordinate(string path, Transform originTransform, Vector coordinate, Rotator rotator, UObject sourceObj, float worldHeightOffset = 0f)
 		{
@@ -249,7 +249,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return <PlayEffectAtCoordinate>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602F934 RID: 194868 RVA: 0x00B04F7C File Offset: 0x00B0317C
+		// Token: 0x060240FA RID: 147706 RVA: 0x00A34C4C File Offset: 0x00A32E4C
 		[return: Nullable(2)]
 		public static UAnimMontage PickRandomMontage(List<UAnimMontage> montages)
 		{
@@ -265,7 +265,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return montages[index];
 		}
 
-		// Token: 0x0602F935 RID: 194869 RVA: 0x00B04FC4 File Offset: 0x00B031C4
+		// Token: 0x060240FB RID: 147707 RVA: 0x00A34C94 File Offset: 0x00A32E94
 		public static float GetMontagePlayRate()
 		{
 			BP_WuWaGo_C setting = WuWaGoGlobal.Setting;
@@ -277,7 +277,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return 1f;
 		}
 
-		// Token: 0x0602F936 RID: 194870 RVA: 0x00B05014 File Offset: 0x00B03214
+		// Token: 0x060240FC RID: 147708 RVA: 0x00A34CE4 File Offset: 0x00A32EE4
 		public static UniTask PlayMontageOnActor([Nullable(2)] WuWaGoRole role, UAnimMontage montage)
 		{
 			WuWaGoUtil.<PlayMontageOnActor>d__24 <PlayMontageOnActor>d__;
@@ -289,7 +289,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return <PlayMontageOnActor>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602F937 RID: 194871 RVA: 0x00B05060 File Offset: 0x00B03260
+		// Token: 0x060240FD RID: 147709 RVA: 0x00A34D30 File Offset: 0x00A32F30
 		public static UniTask PlayMontageOnActorUntilEnded([Nullable(2)] WuWaGoRole role, UAnimMontage montage)
 		{
 			WuWaGoUtil.<PlayMontageOnActorUntilEnded>d__25 <PlayMontageOnActorUntilEnded>d__;
@@ -301,7 +301,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return <PlayMontageOnActorUntilEnded>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602F938 RID: 194872 RVA: 0x00B050AC File Offset: 0x00B032AC
+		// Token: 0x060240FE RID: 147710 RVA: 0x00A34D7C File Offset: 0x00A32F7C
 		public static UniTask PlayMontageWithRootMotion([Nullable(2)] WuWaGoRole role, UAnimMontage montage, EWuWaGoMontageWaitMode waitMode = EWuWaGoMontageWaitMode.BlendingOut)
 		{
 			WuWaGoUtil.<PlayMontageWithRootMotion>d__26 <PlayMontageWithRootMotion>d__;
@@ -314,7 +314,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return <PlayMontageWithRootMotion>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0602F939 RID: 194873 RVA: 0x00B05100 File Offset: 0x00B03300
+		// Token: 0x060240FF RID: 147711 RVA: 0x00A34DD0 File Offset: 0x00A32FD0
 		public static void ResetRoleRootMotionState([Nullable(2)] WuWaGoRole role, string callerName)
 		{
 			if (role == null)
@@ -345,7 +345,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			}
 		}
 
-		// Token: 0x0602F93A RID: 194874 RVA: 0x00B051B0 File Offset: 0x00B033B0
+		// Token: 0x06024100 RID: 147712 RVA: 0x00A34E80 File Offset: 0x00A33080
 		public static void ComputeFaceTowardsRotations(WuWaGoRole role, Vector targetWorldPosition, Transform originTransform, Rotator worldRotationOut, Rotator roleLocalRotationOut)
 		{
 			FVectorDouble? worldLocation = role.GetWorldLocation();
@@ -367,7 +367,7 @@ namespace CSharpScript.Game.Module.WuwaGo
 			WuWaGoUtil.RoundIfNotInteger(roleLocalRotationOut);
 		}
 
-		// Token: 0x0602F93B RID: 194875 RVA: 0x00B0526C File Offset: 0x00B0346C
+		// Token: 0x06024101 RID: 147713 RVA: 0x00A34F3C File Offset: 0x00A3313C
 		[NullableContext(2)]
 		public static UAnimInstance GetActorAnimInstance(WuWaGoRole role, [Nullable(1)] string callerName)
 		{
@@ -390,28 +390,28 @@ namespace CSharpScript.Game.Module.WuwaGo
 			return animInstance;
 		}
 
-		// Token: 0x0602F93C RID: 194876 RVA: 0x00B052E5 File Offset: 0x00B034E5
+		// Token: 0x06024102 RID: 147714 RVA: 0x00A34FB5 File Offset: 0x00A331B5
 		public static void CreateStaticDefaultValue()
 		{
 			WuWaGoUtil._faceActorTempTarget = Vector.Create();
 			WuWaGoUtil._convertWorldPositionTempLocal = Vector.Create();
 		}
 
-		// Token: 0x0602F93D RID: 194877 RVA: 0x00B052FB File Offset: 0x00B034FB
+		// Token: 0x06024103 RID: 147715 RVA: 0x00A34FCB File Offset: 0x00A331CB
 		public static void ResetStaticDefaultValue()
 		{
 			WuWaGoUtil._faceActorTempTarget = null;
 			WuWaGoUtil._convertWorldPositionTempLocal = null;
 		}
 
-		// Token: 0x04019B16 RID: 105238
+		// Token: 0x040141C5 RID: 82373
 		internal const int OneShotTimeoutBufferMs = 10000;
 
-		// Token: 0x04019B17 RID: 105239
+		// Token: 0x040141C6 RID: 82374
 		[Nullable(2)]
 		private static Vector _faceActorTempTarget;
 
-		// Token: 0x04019B18 RID: 105240
+		// Token: 0x040141C7 RID: 82375
 		[Nullable(2)]
 		private static Vector _convertWorldPositionTempLocal;
 	}

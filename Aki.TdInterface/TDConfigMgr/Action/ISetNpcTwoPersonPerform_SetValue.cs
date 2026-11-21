@@ -1,29 +1,26 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001E3B RID: 7739
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02002070 RID: 8304
 	public class ISetNpcTwoPersonPerform_SetValue
 	{
-		// Token: 0x04006300 RID: 25344
+		// Token: 0x040068E4 RID: 26852
 		public ENpcGroupPerformType Type;
 
-		// Token: 0x04006301 RID: 25345
+		// Token: 0x040068E5 RID: 26853
 		public IPlayerInitiator Initiator;
 
-		// Token: 0x04006302 RID: 25346
+		// Token: 0x040068E6 RID: 26854
 		public int Target;
 
-		// Token: 0x04006303 RID: 25347
+		// Token: 0x040068E7 RID: 26855
 		public string GroupPerformMark;
 
-		// Token: 0x04006304 RID: 25348
+		// Token: 0x040068E8 RID: 26856
 		public ENpcGroupPerformNpcType NpcType;
 
-		// Token: 0x04006305 RID: 25349
+		// Token: 0x040068E9 RID: 26857
 		public EWaitInteractNpcMontageWaitType? WaitInteractNpcType;
 	}
 }

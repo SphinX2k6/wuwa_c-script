@@ -3,39 +3,39 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005A74 RID: 23156
+	// Token: 0x02006081 RID: 24705
 	public class IThrowMotion_UnionUnion
 	{
-		// Token: 0x1700AE4F RID: 44623
-		// (get) Token: 0x060276A5 RID: 161445 RVA: 0x0056C79F File Offset: 0x0056A99F
-		// (set) Token: 0x060276A6 RID: 161446 RVA: 0x0056C7A7 File Offset: 0x0056A9A7
+		// Token: 0x1700B787 RID: 46983
+		// (get) Token: 0x06029C1D RID: 171037 RVA: 0x005B37AB File Offset: 0x005B19AB
+		// (set) Token: 0x06029C1E RID: 171038 RVA: 0x005B37B3 File Offset: 0x005B19B3
 		public IThrowMotion_Union Type { get; set; }
 
-		// Token: 0x1700AE50 RID: 44624
-		// (get) Token: 0x060276A7 RID: 161447 RVA: 0x0056C7B0 File Offset: 0x0056A9B0
-		// (set) Token: 0x060276A8 RID: 161448 RVA: 0x0056C7B8 File Offset: 0x0056A9B8
+		// Token: 0x1700B788 RID: 46984
+		// (get) Token: 0x06029C1F RID: 171039 RVA: 0x005B37BC File Offset: 0x005B19BC
+		// (set) Token: 0x06029C20 RID: 171040 RVA: 0x005B37C4 File Offset: 0x005B19C4
 		public object Value { get; set; }
 
-		// Token: 0x060276A9 RID: 161449 RVA: 0x0056C7C1 File Offset: 0x0056A9C1
+		// Token: 0x06029C21 RID: 171041 RVA: 0x005B37CD File Offset: 0x005B19CD
 		public IThrowMotion_UnionUnion()
 		{
 			this.Type = IThrowMotion_Union.NONE;
 			this.Value = null;
 		}
 
-		// Token: 0x060276AA RID: 161450 RVA: 0x0056C7D7 File Offset: 0x0056A9D7
+		// Token: 0x06029C22 RID: 171042 RVA: 0x005B37E3 File Offset: 0x005B19E3
 		public T As<T>() where T : class
 		{
 			return this.Value as T;
 		}
 
-		// Token: 0x060276AB RID: 161451 RVA: 0x0056C7E9 File Offset: 0x0056A9E9
+		// Token: 0x06029C23 RID: 171043 RVA: 0x005B37F5 File Offset: 0x005B19F5
 		public IThrowMotionT AsIThrowMotion()
 		{
 			return this.As<IThrowMotionT>();
 		}
 
-		// Token: 0x060276AC RID: 161452 RVA: 0x0056C7F1 File Offset: 0x0056A9F1
+		// Token: 0x06029C24 RID: 171044 RVA: 0x005B37FD File Offset: 0x005B19FD
 		public static IThrowMotion_UnionUnion FromIThrowMotion(IThrowMotionT _ithrowmotion)
 		{
 			return new IThrowMotion_UnionUnion
@@ -45,13 +45,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060276AD RID: 161453 RVA: 0x0056C806 File Offset: 0x0056AA06
+		// Token: 0x06029C25 RID: 171045 RVA: 0x005B3812 File Offset: 0x005B1A12
 		public IProjectileMotionT AsIProjectileMotion()
 		{
 			return this.As<IProjectileMotionT>();
 		}
 
-		// Token: 0x060276AE RID: 161454 RVA: 0x0056C80E File Offset: 0x0056AA0E
+		// Token: 0x06029C26 RID: 171046 RVA: 0x005B381A File Offset: 0x005B1A1A
 		public static IThrowMotion_UnionUnion FromIProjectileMotion(IProjectileMotionT _iprojectilemotion)
 		{
 			return new IThrowMotion_UnionUnion
@@ -61,13 +61,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060276AF RID: 161455 RVA: 0x0056C823 File Offset: 0x0056AA23
+		// Token: 0x06029C27 RID: 171047 RVA: 0x005B382F File Offset: 0x005B1A2F
 		public ICircumnutationT AsICircumnutation()
 		{
 			return this.As<ICircumnutationT>();
 		}
 
-		// Token: 0x060276B0 RID: 161456 RVA: 0x0056C82B File Offset: 0x0056AA2B
+		// Token: 0x06029C28 RID: 171048 RVA: 0x005B3837 File Offset: 0x005B1A37
 		public static IThrowMotion_UnionUnion FromICircumnutation(ICircumnutationT _icircumnutation)
 		{
 			return new IThrowMotion_UnionUnion
@@ -77,13 +77,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060276B1 RID: 161457 RVA: 0x0056C840 File Offset: 0x0056AA40
+		// Token: 0x06029C29 RID: 171049 RVA: 0x005B384C File Offset: 0x005B1A4C
 		public IThrowMotionTrackTargetT AsIThrowMotionTrackTarget()
 		{
 			return this.As<IThrowMotionTrackTargetT>();
 		}
 
-		// Token: 0x060276B2 RID: 161458 RVA: 0x0056C848 File Offset: 0x0056AA48
+		// Token: 0x06029C2A RID: 171050 RVA: 0x005B3854 File Offset: 0x005B1A54
 		public static IThrowMotion_UnionUnion FromIThrowMotionTrackTarget(IThrowMotionTrackTargetT _ithrowmotiontracktarget)
 		{
 			return new IThrowMotion_UnionUnion
@@ -93,13 +93,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060276B3 RID: 161459 RVA: 0x0056C85D File Offset: 0x0056AA5D
+		// Token: 0x06029C2B RID: 171051 RVA: 0x005B3869 File Offset: 0x005B1A69
 		public IThrowMotionLevitateT AsIThrowMotionLevitate()
 		{
 			return this.As<IThrowMotionLevitateT>();
 		}
 
-		// Token: 0x060276B4 RID: 161460 RVA: 0x0056C865 File Offset: 0x0056AA65
+		// Token: 0x06029C2C RID: 171052 RVA: 0x005B3871 File Offset: 0x005B1A71
 		public static IThrowMotion_UnionUnion FromIThrowMotionLevitate(IThrowMotionLevitateT _ithrowmotionlevitate)
 		{
 			return new IThrowMotion_UnionUnion
@@ -109,13 +109,13 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060276B5 RID: 161461 RVA: 0x0056C87A File Offset: 0x0056AA7A
+		// Token: 0x06029C2D RID: 171053 RVA: 0x005B3886 File Offset: 0x005B1A86
 		public IThrowMotionFreeFallT AsIThrowMotionFreeFall()
 		{
 			return this.As<IThrowMotionFreeFallT>();
 		}
 
-		// Token: 0x060276B6 RID: 161462 RVA: 0x0056C882 File Offset: 0x0056AA82
+		// Token: 0x06029C2E RID: 171054 RVA: 0x005B388E File Offset: 0x005B1A8E
 		public static IThrowMotion_UnionUnion FromIThrowMotionFreeFall(IThrowMotionFreeFallT _ithrowmotionfreefall)
 		{
 			return new IThrowMotion_UnionUnion
@@ -125,7 +125,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Component
 			};
 		}
 
-		// Token: 0x060276B7 RID: 161463 RVA: 0x0056C898 File Offset: 0x0056AA98
+		// Token: 0x06029C2F RID: 171055 RVA: 0x005B38A4 File Offset: 0x005B1AA4
 		public static int Pack(FlatBufferBuilder builder, IThrowMotion_UnionUnion _o)
 		{
 			switch (_o.Type)

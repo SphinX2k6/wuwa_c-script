@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200220A RID: 8714
+	// Token: 0x02002475 RID: 9333
 	public class ShowTargetRange_SetValue
 	{
-		// Token: 0x04007214 RID: 29204
-		[Nullable(1)]
+		// Token: 0x0400785D RID: 30813
 		public List<int> RangeEntities;
 
-		// Token: 0x04007215 RID: 29205
+		// Token: 0x0400785E RID: 30814
 		public bool DelayShow;
 	}
 }

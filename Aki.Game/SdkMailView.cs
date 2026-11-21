@@ -8,17 +8,17 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnrealEngine;
 
-// Token: 0x0200296E RID: 10606
+// Token: 0x02001EE9 RID: 7913
 [NullableContext(1)]
 [Nullable(0)]
 public class SdkMailView : UiTickViewBase
 {
-	// Token: 0x06015E9A RID: 89754 RVA: 0x00586F3B File Offset: 0x0058513B
+	// Token: 0x0601389E RID: 80030 RVA: 0x005B1F3F File Offset: 0x005B013F
 	public SdkMailView(UiViewInfo viewInfo) : base(viewInfo)
 	{
 	}
 
-	// Token: 0x06015E9B RID: 89755 RVA: 0x00586F5C File Offset: 0x0058515C
+	// Token: 0x0601389F RID: 80031 RVA: 0x005B1F60 File Offset: 0x005B0160
 	protected override void OnRegisterComponent()
 	{
 		this.ComponentRegisterInfos = new List<ValueTuple<int, Type>>
@@ -50,7 +50,7 @@ public class SdkMailView : UiTickViewBase
 		};
 	}
 
-	// Token: 0x06015E9C RID: 89756 RVA: 0x00587164 File Offset: 0x00585364
+	// Token: 0x060138A0 RID: 80032 RVA: 0x005B2168 File Offset: 0x005B0368
 	protected override void OnStart()
 	{
 		this.ViewData = (this.OpenParam as SdkMailViewData);
@@ -88,19 +88,19 @@ public class SdkMailView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06015E9D RID: 89757 RVA: 0x00587277 File Offset: 0x00585477
+	// Token: 0x060138A1 RID: 80033 RVA: 0x005B227B File Offset: 0x005B047B
 	private void OnToggleStateChange(EToggleState state)
 	{
 		this.RefreshConfirmButtonState();
 	}
 
-	// Token: 0x06015E9E RID: 89758 RVA: 0x0058727F File Offset: 0x0058547F
+	// Token: 0x060138A2 RID: 80034 RVA: 0x005B2283 File Offset: 0x005B0483
 	private void OnInputTextChange(string _)
 	{
 		this.RefreshConfirmButtonState();
 	}
 
-	// Token: 0x06015E9F RID: 89759 RVA: 0x00587288 File Offset: 0x00585488
+	// Token: 0x060138A3 RID: 80035 RVA: 0x005B228C File Offset: 0x005B048C
 	private void OnToggleClick(EToggleState _)
 	{
 		UUIExtendToggle extendToggle = base.GetExtendToggle(7);
@@ -115,7 +115,7 @@ public class SdkMailView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06015EA0 RID: 89760 RVA: 0x005872C0 File Offset: 0x005854C0
+	// Token: 0x060138A4 RID: 80036 RVA: 0x005B22C4 File Offset: 0x005B04C4
 	private void OnClickSendCodeButton()
 	{
 		if (TimeUtil.Instance.GetServerTime() - this.SendCodeTime < 60.0)
@@ -136,7 +136,7 @@ public class SdkMailView : UiTickViewBase
 		this.SendCodeToSdkServer(text);
 	}
 
-	// Token: 0x06015EA1 RID: 89761 RVA: 0x0058732C File Offset: 0x0058552C
+	// Token: 0x060138A5 RID: 80037 RVA: 0x005B2330 File Offset: 0x005B0530
 	private void RefreshConfirmButtonState()
 	{
 		UUITextInputComponent inputText = base.GetInputText(1);
@@ -171,7 +171,7 @@ public class SdkMailView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06015EA2 RID: 89762 RVA: 0x005873B0 File Offset: 0x005855B0
+	// Token: 0x060138A6 RID: 80038 RVA: 0x005B23B4 File Offset: 0x005B05B4
 	private UniTask SendCodeToSdkServer(string mailAddress)
 	{
 		SdkMailView.<SendCodeToSdkServer>d__13 <SendCodeToSdkServer>d__;
@@ -183,7 +183,7 @@ public class SdkMailView : UiTickViewBase
 		return <SendCodeToSdkServer>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x06015EA3 RID: 89763 RVA: 0x005873FC File Offset: 0x005855FC
+	// Token: 0x060138A7 RID: 80039 RVA: 0x005B2400 File Offset: 0x005B0600
 	private void RefreshProtocolItems()
 	{
 		for (int i = 0; i < this.ProtocolButtonArray.Count; i++)
@@ -222,13 +222,13 @@ public class SdkMailView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06015EA4 RID: 89764 RVA: 0x00587528 File Offset: 0x00585728
+	// Token: 0x060138A8 RID: 80040 RVA: 0x005B252C File Offset: 0x005B072C
 	private void OnClickCancelButton()
 	{
 		base.CloseMe(null);
 	}
 
-	// Token: 0x06015EA5 RID: 89765 RVA: 0x00587534 File Offset: 0x00585734
+	// Token: 0x060138A9 RID: 80041 RVA: 0x005B2538 File Offset: 0x005B0738
 	private void OnClickConfirmButton()
 	{
 		UUITextInputComponent inputText = base.GetInputText(1);
@@ -280,7 +280,7 @@ public class SdkMailView : UiTickViewBase
 		});
 	}
 
-	// Token: 0x06015EA6 RID: 89766 RVA: 0x005875F0 File Offset: 0x005857F0
+	// Token: 0x060138AA RID: 80042 RVA: 0x005B25F4 File Offset: 0x005B07F4
 	private void OnClickProtocolButton1()
 	{
 		if (this.ViewData != null && this.ViewData.ProtocolData.Count > 0)
@@ -289,7 +289,7 @@ public class SdkMailView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06015EA7 RID: 89767 RVA: 0x00587640 File Offset: 0x00585840
+	// Token: 0x060138AB RID: 80043 RVA: 0x005B2644 File Offset: 0x005B0844
 	private void OnClickProtocolButton2()
 	{
 		if (this.ViewData != null && this.ViewData.ProtocolData.Count > 1)
@@ -298,7 +298,7 @@ public class SdkMailView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06015EA8 RID: 89768 RVA: 0x00587690 File Offset: 0x00585890
+	// Token: 0x060138AC RID: 80044 RVA: 0x005B2694 File Offset: 0x005B0894
 	private void OnClickProtocolButton3()
 	{
 		if (this.ViewData != null && this.ViewData.ProtocolData.Count > 2)
@@ -307,7 +307,7 @@ public class SdkMailView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06015EA9 RID: 89769 RVA: 0x005876E0 File Offset: 0x005858E0
+	// Token: 0x060138AD RID: 80045 RVA: 0x005B26E4 File Offset: 0x005B08E4
 	private void RefreshSendCodeButton()
 	{
 		double serverTime = TimeUtil.Instance.GetServerTime();
@@ -339,7 +339,7 @@ public class SdkMailView : UiTickViewBase
 		}
 	}
 
-	// Token: 0x06015EAA RID: 89770 RVA: 0x0058774C File Offset: 0x0058594C
+	// Token: 0x060138AE RID: 80046 RVA: 0x005B2750 File Offset: 0x005B0950
 	private void RefreshCountDownText()
 	{
 		double serverTime = TimeUtil.Instance.GetServerTime();
@@ -357,57 +357,57 @@ public class SdkMailView : UiTickViewBase
 		LguiUtil.Instance.SetLocalTextNew(text, "Send_MailCode_Cd", new <>z__ReadOnlySingleElementList<object>(num.ToString()));
 	}
 
-	// Token: 0x06015EAB RID: 89771 RVA: 0x005877B1 File Offset: 0x005859B1
+	// Token: 0x060138AF RID: 80047 RVA: 0x005B27B5 File Offset: 0x005B09B5
 	protected override void OnTick(float delta)
 	{
 		this.RefreshSendCodeButton();
 		this.RefreshCountDownText();
 	}
 
-	// Token: 0x0400A31D RID: 41757
+	// Token: 0x0400A707 RID: 42759
 	private double SendCodeTime;
 
-	// Token: 0x0400A31E RID: 41758
+	// Token: 0x0400A708 RID: 42760
 	private List<UUIButtonComponent> ProtocolButtonArray = new List<UUIButtonComponent>();
 
-	// Token: 0x0400A31F RID: 41759
+	// Token: 0x0400A709 RID: 42761
 	private List<UUIText> ProtocolTextArray = new List<UUIText>();
 
-	// Token: 0x0400A320 RID: 41760
+	// Token: 0x0400A70A RID: 42762
 	[Nullable(2)]
 	private SdkMailViewData ViewData;
 
-	// Token: 0x02008F2F RID: 36655
+	// Token: 0x02008177 RID: 33143
 	[NullableContext(0)]
 	private enum EComponent
 	{
-		// Token: 0x0402E696 RID: 190102
+		// Token: 0x04029D93 RID: 171411
 		BackButton,
-		// Token: 0x0402E697 RID: 190103
+		// Token: 0x04029D94 RID: 171412
 		AccountInput,
-		// Token: 0x0402E698 RID: 190104
+		// Token: 0x04029D95 RID: 171413
 		CodeInput,
-		// Token: 0x0402E699 RID: 190105
+		// Token: 0x04029D96 RID: 171414
 		ProtocolButton1,
-		// Token: 0x0402E69A RID: 190106
+		// Token: 0x04029D97 RID: 171415
 		ProtocolButton2,
-		// Token: 0x0402E69B RID: 190107
+		// Token: 0x04029D98 RID: 171416
 		ProtocolButton3,
-		// Token: 0x0402E69C RID: 190108
+		// Token: 0x04029D99 RID: 171417
 		ExtendToggleParent,
-		// Token: 0x0402E69D RID: 190109
+		// Token: 0x04029D9A RID: 171418
 		AgreeToggle,
-		// Token: 0x0402E69E RID: 190110
+		// Token: 0x04029D9B RID: 171419
 		SendCodeButton,
-		// Token: 0x0402E69F RID: 190111
+		// Token: 0x04029D9C RID: 171420
 		ConfirmButton,
-		// Token: 0x0402E6A0 RID: 190112
+		// Token: 0x04029D9D RID: 171421
 		ProtocolText1,
-		// Token: 0x0402E6A1 RID: 190113
+		// Token: 0x04029D9E RID: 171422
 		ProtocolText2,
-		// Token: 0x0402E6A2 RID: 190114
+		// Token: 0x04029D9F RID: 171423
 		ProtocolText3,
-		// Token: 0x0402E6A3 RID: 190115
+		// Token: 0x04029DA0 RID: 171424
 		ConfirmBoxText
 	}
 }

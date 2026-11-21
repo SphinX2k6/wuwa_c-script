@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Quest.Fb;
 
 namespace Aki.TDConfigMgr.Quest
 {
-	// Token: 0x02001097 RID: 4247
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020011C5 RID: 4549
 	public class IQuestRewardConfig
 	{
-		// Token: 0x06005FC4 RID: 24516 RVA: 0x000E7D10 File Offset: 0x000E5F10
+		// Token: 0x060065BD RID: 26045 RVA: 0x000F4E30 File Offset: 0x000F3030
 		private IQuestRewardConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Quest
 			return result;
 		}
 
-		// Token: 0x06005FC5 RID: 24517 RVA: 0x000E7D48 File Offset: 0x000E5F48
+		// Token: 0x060065BE RID: 26046 RVA: 0x000F4E68 File Offset: 0x000F3068
 		public static IQuestRewardConfig Create([Nullable(2)] IQuestRewardConfig instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005FC6 RID: 24518 RVA: 0x000E7D5B File Offset: 0x000E5F5B
+		// Token: 0x060065BF RID: 26047 RVA: 0x000F4E7B File Offset: 0x000F307B
 		public static IQuestRewardConfig CreateFromSetValue([Nullable(2)] IQuestRewardConfig_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x06005FC7 RID: 24519 RVA: 0x000E7D6E File Offset: 0x000E5F6E
+		// Token: 0x060065C0 RID: 26048 RVA: 0x000F4E8E File Offset: 0x000F308E
 		public IQuestRewardConfig_SetValue ToSetValue()
 		{
 			return new IQuestRewardConfig_SetValue
@@ -62,9 +60,9 @@ namespace Aki.TDConfigMgr.Quest
 			};
 		}
 
-		// Token: 0x17001F83 RID: 8067
-		// (get) Token: 0x06005FC8 RID: 24520 RVA: 0x000E7D99 File Offset: 0x000E5F99
-		// (set) Token: 0x06005FC9 RID: 24521 RVA: 0x000E7DC4 File Offset: 0x000E5FC4
+		// Token: 0x17002135 RID: 8501
+		// (get) Token: 0x060065C1 RID: 26049 RVA: 0x000F4EB9 File Offset: 0x000F30B9
+		// (set) Token: 0x060065C2 RID: 26050 RVA: 0x000F4EE4 File Offset: 0x000F30E4
 		public virtual int RewardId
 		{
 			get
@@ -85,9 +83,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001F84 RID: 8068
-		// (get) Token: 0x06005FCA RID: 24522 RVA: 0x000E7DD4 File Offset: 0x000E5FD4
-		// (set) Token: 0x06005FCB RID: 24523 RVA: 0x000E7E0E File Offset: 0x000E600E
+		// Token: 0x17002136 RID: 8502
+		// (get) Token: 0x060065C3 RID: 26051 RVA: 0x000F4EF4 File Offset: 0x000F30F4
+		// (set) Token: 0x060065C4 RID: 26052 RVA: 0x000F4F2E File Offset: 0x000F312E
 		public virtual EItemGetUiType? RewardGetUiType
 		{
 			get
@@ -109,9 +107,9 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x17001F85 RID: 8069
-		// (get) Token: 0x06005FCC RID: 24524 RVA: 0x000E7E1C File Offset: 0x000E601C
-		// (set) Token: 0x06005FCD RID: 24525 RVA: 0x000E7E7D File Offset: 0x000E607D
+		// Token: 0x17002137 RID: 8503
+		// (get) Token: 0x060065C5 RID: 26053 RVA: 0x000F4F3C File Offset: 0x000F313C
+		// (set) Token: 0x060065C6 RID: 26054 RVA: 0x000F4F9D File Offset: 0x000F319D
 		[Nullable(2)]
 		public virtual IItemGetUiConfigSpecialQuest UiConfig
 		{
@@ -142,18 +140,18 @@ namespace Aki.TDConfigMgr.Quest
 			}
 		}
 
-		// Token: 0x040039C0 RID: 14784
+		// Token: 0x04003D0D RID: 15629
 		[Nullable(2)]
 		protected IQuestRewardConfig FbInstance;
 
-		// Token: 0x040039C1 RID: 14785
+		// Token: 0x04003D0E RID: 15630
 		[Nullable(2)]
 		protected IQuestRewardConfig_SetValue PocoInterface;
 
-		// Token: 0x040039C2 RID: 14786
+		// Token: 0x04003D0F RID: 15631
 		private IItemGetUiConfigSpecialQuest _UiConfigCache;
 
-		// Token: 0x040039C3 RID: 14787
+		// Token: 0x04003D10 RID: 15632
 		private bool _UiConfigInited;
 	}
 }

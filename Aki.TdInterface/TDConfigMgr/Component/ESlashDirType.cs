@@ -3,21 +3,21 @@ using CSharpScript.Core.Common;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200013A RID: 314
+	// Token: 0x0200014D RID: 333
 	[EnumExtensions]
 	public enum ESlashDirType
 	{
-		// Token: 0x0400061F RID: 1567
+		// Token: 0x04000663 RID: 1635
 		Horizontal,
-		// Token: 0x04000620 RID: 1568
+		// Token: 0x04000664 RID: 1636
 		Vertical,
-		// Token: 0x04000621 RID: 1569
+		// Token: 0x04000665 RID: 1637
 		Positive45,
-		// Token: 0x04000622 RID: 1570
+		// Token: 0x04000666 RID: 1638
 		Negative45,
-		// Token: 0x04000623 RID: 1571
+		// Token: 0x04000667 RID: 1639
 		Positive30,
-		// Token: 0x04000624 RID: 1572
+		// Token: 0x04000668 RID: 1640
 		Negative30
 	}
 }

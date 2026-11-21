@@ -1,38 +1,38 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200224F RID: 8783
+// Token: 0x02001733 RID: 5939
 [NullableContext(1)]
 [Nullable(0)]
 public class MotorLevelConditionData : IMotorLevelConditionData
 {
-	// Token: 0x170015BE RID: 5566
-	// (get) Token: 0x06011230 RID: 70192 RVA: 0x0042E138 File Offset: 0x0042C338
-	// (set) Token: 0x06011231 RID: 70193 RVA: 0x0042E140 File Offset: 0x0042C340
+	// Token: 0x170015F5 RID: 5621
+	// (get) Token: 0x0600E6C6 RID: 59078 RVA: 0x0043ACD8 File Offset: 0x00438ED8
+	// (set) Token: 0x0600E6C7 RID: 59079 RVA: 0x0043ACE0 File Offset: 0x00438EE0
 	public int ConditionId { get; set; }
 
-	// Token: 0x170015BF RID: 5567
-	// (get) Token: 0x06011232 RID: 70194 RVA: 0x0042E149 File Offset: 0x0042C349
-	// (set) Token: 0x06011233 RID: 70195 RVA: 0x0042E151 File Offset: 0x0042C351
+	// Token: 0x170015F6 RID: 5622
+	// (get) Token: 0x0600E6C8 RID: 59080 RVA: 0x0043ACE9 File Offset: 0x00438EE9
+	// (set) Token: 0x0600E6C9 RID: 59081 RVA: 0x0043ACF1 File Offset: 0x00438EF1
 	public string ConditionTextId { get; set; }
 
-	// Token: 0x170015C0 RID: 5568
-	// (get) Token: 0x06011234 RID: 70196 RVA: 0x0042E15A File Offset: 0x0042C35A
-	// (set) Token: 0x06011235 RID: 70197 RVA: 0x0042E162 File Offset: 0x0042C362
+	// Token: 0x170015F7 RID: 5623
+	// (get) Token: 0x0600E6CA RID: 59082 RVA: 0x0043ACFA File Offset: 0x00438EFA
+	// (set) Token: 0x0600E6CB RID: 59083 RVA: 0x0043AD02 File Offset: 0x00438F02
 	public bool IsFinished { get; set; }
 
-	// Token: 0x170015C1 RID: 5569
-	// (get) Token: 0x06011236 RID: 70198 RVA: 0x0042E16B File Offset: 0x0042C36B
-	// (set) Token: 0x06011237 RID: 70199 RVA: 0x0042E173 File Offset: 0x0042C373
+	// Token: 0x170015F8 RID: 5624
+	// (get) Token: 0x0600E6CC RID: 59084 RVA: 0x0043AD0B File Offset: 0x00438F0B
+	// (set) Token: 0x0600E6CD RID: 59085 RVA: 0x0043AD13 File Offset: 0x00438F13
 	public int AccessId { get; set; }
 
-	// Token: 0x170015C2 RID: 5570
-	// (get) Token: 0x06011238 RID: 70200 RVA: 0x0042E17C File Offset: 0x0042C37C
-	// (set) Token: 0x06011239 RID: 70201 RVA: 0x0042E184 File Offset: 0x0042C384
+	// Token: 0x170015F9 RID: 5625
+	// (get) Token: 0x0600E6CE RID: 59086 RVA: 0x0043AD1C File Offset: 0x00438F1C
+	// (set) Token: 0x0600E6CF RID: 59087 RVA: 0x0043AD24 File Offset: 0x00438F24
 	public int AccessType { get; set; }
 
-	// Token: 0x170015C3 RID: 5571
-	// (get) Token: 0x0601123A RID: 70202 RVA: 0x0042E18D File Offset: 0x0042C38D
-	// (set) Token: 0x0601123B RID: 70203 RVA: 0x0042E195 File Offset: 0x0042C395
+	// Token: 0x170015FA RID: 5626
+	// (get) Token: 0x0600E6D0 RID: 59088 RVA: 0x0043AD2D File Offset: 0x00438F2D
+	// (set) Token: 0x0600E6D1 RID: 59089 RVA: 0x0043AD35 File Offset: 0x00438F35
 	public int RecommendQuestId { get; set; }
 }

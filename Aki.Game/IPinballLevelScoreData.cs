@@ -1,20 +1,20 @@
 ﻿using System;
 
-// Token: 0x020013F3 RID: 5107
+// Token: 0x020008A7 RID: 2215
 public interface IPinballLevelScoreData
 {
-	// Token: 0x17000C1B RID: 3099
-	// (get) Token: 0x06009053 RID: 36947
-	// (set) Token: 0x06009054 RID: 36948
+	// Token: 0x17000C3B RID: 3131
+	// (get) Token: 0x060063E8 RID: 25576
+	// (set) Token: 0x060063E9 RID: 25577
 	int CurScore { get; set; }
 
-	// Token: 0x17000C1C RID: 3100
-	// (get) Token: 0x06009055 RID: 36949
-	// (set) Token: 0x06009056 RID: 36950
+	// Token: 0x17000C3C RID: 3132
+	// (get) Token: 0x060063EA RID: 25578
+	// (set) Token: 0x060063EB RID: 25579
 	int ConfigScore { get; set; }
 
-	// Token: 0x17000C1D RID: 3101
-	// (get) Token: 0x06009057 RID: 36951
-	// (set) Token: 0x06009058 RID: 36952
+	// Token: 0x17000C3D RID: 3133
+	// (get) Token: 0x060063EC RID: 25580
+	// (set) Token: 0x060063ED RID: 25581
 	int ConfigDropId { get; set; }
 }

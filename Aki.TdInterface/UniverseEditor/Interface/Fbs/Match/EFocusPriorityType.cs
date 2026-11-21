@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Match
 {
-	// Token: 0x020043E3 RID: 17379
+	// Token: 0x02004848 RID: 18504
 	public enum EFocusPriorityType : byte
 	{
-		// Token: 0x0400C298 RID: 49816
+		// Token: 0x0400CCBC RID: 52412
 		None,
-		// Token: 0x0400C299 RID: 49817
+		// Token: 0x0400CCBD RID: 52413
 		Npc,
-		// Token: 0x0400C29A RID: 49818
+		// Token: 0x0400CCBE RID: 52414
 		Drop,
-		// Token: 0x0400C29B RID: 49819
+		// Token: 0x0400CCBF RID: 52415
 		Treasure = 6,
-		// Token: 0x0400C29C RID: 49820
+		// Token: 0x0400CCC0 RID: 52416
 		MonsterNormal,
-		// Token: 0x0400C29D RID: 49821
+		// Token: 0x0400CCC1 RID: 52417
 		MonsterBoss = 11
 	}
 }

@@ -2,20 +2,20 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Action
 {
-	// Token: 0x02006F19 RID: 28441
+	// Token: 0x020076A0 RID: 30368
 	public class IScaleMapDataT
 	{
-		// Token: 0x1700D372 RID: 54130
-		// (get) Token: 0x06032405 RID: 205829 RVA: 0x006C9DC7 File Offset: 0x006C7FC7
-		// (set) Token: 0x06032406 RID: 205830 RVA: 0x006C9DCF File Offset: 0x006C7FCF
+		// Token: 0x1700DECE RID: 57038
+		// (get) Token: 0x0603545D RID: 218205 RVA: 0x00725D2F File Offset: 0x00723F2F
+		// (set) Token: 0x0603545E RID: 218206 RVA: 0x00725D37 File Offset: 0x00723F37
 		public string Key { get; set; }
 
-		// Token: 0x1700D373 RID: 54131
-		// (get) Token: 0x06032407 RID: 205831 RVA: 0x006C9DD8 File Offset: 0x006C7FD8
-		// (set) Token: 0x06032408 RID: 205832 RVA: 0x006C9DE0 File Offset: 0x006C7FE0
+		// Token: 0x1700DECF RID: 57039
+		// (get) Token: 0x0603545F RID: 218207 RVA: 0x00725D40 File Offset: 0x00723F40
+		// (set) Token: 0x06035460 RID: 218208 RVA: 0x00725D48 File Offset: 0x00723F48
 		public float Scale { get; set; }
 
-		// Token: 0x06032409 RID: 205833 RVA: 0x006C9DE9 File Offset: 0x006C7FE9
+		// Token: 0x06035461 RID: 218209 RVA: 0x00725D51 File Offset: 0x00723F51
 		public IScaleMapDataT()
 		{
 			this.Key = null;

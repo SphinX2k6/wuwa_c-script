@@ -6,16 +6,16 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x020007A5 RID: 1957
+	// Token: 0x020007BF RID: 1983
 	public class ConfigRacingBetsMatchBySeasonId : IConfigQuery, IStaticVariableResetter
 	{
-		// Token: 0x06002DF0 RID: 11760 RVA: 0x0015CE74 File Offset: 0x0015B074
+		// Token: 0x06002E8C RID: 11916 RVA: 0x00163D80 File Offset: 0x00161F80
 		static ConfigRacingBetsMatchBySeasonId()
 		{
 			global::StaticVariableRegister.RegisterAndExecute(new Action(ConfigRacingBetsMatchBySeasonId.CreateStaticDefaultValue), new Action(ConfigRacingBetsMatchBySeasonId.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x06002DF1 RID: 11761 RVA: 0x0015CE94 File Offset: 0x0015B094
+		// Token: 0x06002E8D RID: 11917 RVA: 0x00163DA0 File Offset: 0x00161FA0
 		public static void CreateStaticDefaultValue()
 		{
 			ConfigRacingBetsMatchBySeasonId.LogPair = new ConfigLogList<ValueTuple<string, object>>();
@@ -28,20 +28,20 @@ namespace Aki.Config
 			});
 		}
 
-		// Token: 0x06002DF2 RID: 11762 RVA: 0x0015CF13 File Offset: 0x0015B113
+		// Token: 0x06002E8E RID: 11918 RVA: 0x00163E1F File Offset: 0x0016201F
 		public static void ResetStaticDefaultValue()
 		{
 			ConfigRacingBetsMatchBySeasonId.LogPair = null;
 			ConfigRacingBetsMatchBySeasonId.HandleId = 0;
 		}
 
-		// Token: 0x06002DF3 RID: 11763 RVA: 0x0015CF21 File Offset: 0x0015B121
+		// Token: 0x06002E8F RID: 11919 RVA: 0x00163E2D File Offset: 0x0016202D
 		public static void Init()
 		{
 			ConfigRacingBetsMatchBySeasonId.HandleId = ConfigCommon.InitDataStatement(ConfigRacingBetsMatchBySeasonId.HandleId, "db_racingbets.db", "select BinData from `RacingBetsMatch` where SeasonId=?");
 		}
 
-		// Token: 0x06002DF4 RID: 11764 RVA: 0x0015CF3C File Offset: 0x0015B13C
+		// Token: 0x06002E90 RID: 11920 RVA: 0x00163E48 File Offset: 0x00162048
 		[NullableContext(2)]
 		public static IReadOnlyList<RacingBetsMatch> GetConfigList(int p0SeasonId, bool useCache = true)
 		{
@@ -94,22 +94,22 @@ namespace Aki.Config
 			return list;
 		}
 
-		// Token: 0x04003569 RID: 13673
+		// Token: 0x0400361F RID: 13855
 		private const string DB = "db_racingbets.db";
 
-		// Token: 0x0400356A RID: 13674
+		// Token: 0x04003620 RID: 13856
 		private const string FILE = "q.全服赌马.xlsx";
 
-		// Token: 0x0400356B RID: 13675
+		// Token: 0x04003621 RID: 13857
 		private const string TABLE = "RacingBetsMatch";
 
-		// Token: 0x0400356C RID: 13676
+		// Token: 0x04003622 RID: 13858
 		private const string COMMAND = "select BinData from `RacingBetsMatch` where SeasonId=?";
 
-		// Token: 0x0400356D RID: 13677
+		// Token: 0x04003623 RID: 13859
 		private const string KEY_PREFIX = "RacingBetsMatchBySeasonId";
 
-		// Token: 0x0400356E RID: 13678
+		// Token: 0x04003624 RID: 13860
 		[Nullable(new byte[]
 		{
 			2,
@@ -119,7 +119,7 @@ namespace Aki.Config
 		})]
 		private static ConfigLogList<ValueTuple<string, object>> LogPair;
 
-		// Token: 0x0400356F RID: 13679
+		// Token: 0x04003625 RID: 13861
 		private static int HandleId;
 	}
 }

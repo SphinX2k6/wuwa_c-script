@@ -5,12 +5,10 @@ using Aki.TDConfigMgr.Component.Fb;
 
 namespace Aki.TDConfigMgr.Component
 {
-	// Token: 0x0200036C RID: 876
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x020003B5 RID: 949
 	public class IFailureConditionHitTargetEntity : ITargetGearGroupFailureCondition
 	{
-		// Token: 0x06001165 RID: 4453 RVA: 0x0003AE10 File Offset: 0x00039010
+		// Token: 0x060012A9 RID: 4777 RVA: 0x0003E0F4 File Offset: 0x0003C2F4
 		private IFailureConditionHitTargetEntity_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -25,7 +23,7 @@ namespace Aki.TDConfigMgr.Component
 			return result;
 		}
 
-		// Token: 0x06001166 RID: 4454 RVA: 0x0003AE48 File Offset: 0x00039048
+		// Token: 0x060012AA RID: 4778 RVA: 0x0003E12C File Offset: 0x0003C32C
 		public static IFailureConditionHitTargetEntity Create([Nullable(2)] IFailureConditionHitTargetEntity instance)
 		{
 			if (instance == null)
@@ -38,7 +36,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001167 RID: 4455 RVA: 0x0003AE5B File Offset: 0x0003905B
+		// Token: 0x060012AB RID: 4779 RVA: 0x0003E13F File Offset: 0x0003C33F
 		public static IFailureConditionHitTargetEntity CreateFromSetValue([Nullable(2)] IFailureConditionHitTargetEntity_SetValue value)
 		{
 			if (value == null)
@@ -51,7 +49,7 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x06001168 RID: 4456 RVA: 0x0003AE6E File Offset: 0x0003906E
+		// Token: 0x060012AC RID: 4780 RVA: 0x0003E152 File Offset: 0x0003C352
 		public new IFailureConditionHitTargetEntity_SetValue ToSetValue()
 		{
 			return new IFailureConditionHitTargetEntity_SetValue
@@ -61,9 +59,9 @@ namespace Aki.TDConfigMgr.Component
 			};
 		}
 
-		// Token: 0x170004EE RID: 1262
-		// (get) Token: 0x06001169 RID: 4457 RVA: 0x0003AE8D File Offset: 0x0003908D
-		// (set) Token: 0x0600116A RID: 4458 RVA: 0x0003AEB8 File Offset: 0x000390B8
+		// Token: 0x17000542 RID: 1346
+		// (get) Token: 0x060012AD RID: 4781 RVA: 0x0003E171 File Offset: 0x0003C371
+		// (set) Token: 0x060012AE RID: 4782 RVA: 0x0003E19C File Offset: 0x0003C39C
 		public override ETargetGearGroupFailureCondition Type
 		{
 			get
@@ -84,9 +82,9 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x170004EF RID: 1263
-		// (get) Token: 0x0600116B RID: 4459 RVA: 0x0003AEC6 File Offset: 0x000390C6
-		// (set) Token: 0x0600116C RID: 4460 RVA: 0x0003AEED File Offset: 0x000390ED
+		// Token: 0x17000543 RID: 1347
+		// (get) Token: 0x060012AF RID: 4783 RVA: 0x0003E1AA File Offset: 0x0003C3AA
+		// (set) Token: 0x060012B0 RID: 4784 RVA: 0x0003E1D1 File Offset: 0x0003C3D1
 		public virtual List<int> EntityIds
 		{
 			get
@@ -108,11 +106,11 @@ namespace Aki.TDConfigMgr.Component
 			}
 		}
 
-		// Token: 0x04000E51 RID: 3665
+		// Token: 0x04000F48 RID: 3912
 		[Nullable(2)]
 		protected new IFailureConditionHitTargetEntity FbInstance;
 
-		// Token: 0x04000E52 RID: 3666
+		// Token: 0x04000F49 RID: 3913
 		[Nullable(2)]
 		protected new IFailureConditionHitTargetEntity_SetValue PocoInterface;
 	}

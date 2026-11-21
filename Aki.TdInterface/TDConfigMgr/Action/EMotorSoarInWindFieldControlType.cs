@@ -2,12 +2,12 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001621 RID: 5665
+	// Token: 0x0200178E RID: 6030
 	public enum EMotorSoarInWindFieldControlType
 	{
-		// Token: 0x04004C0C RID: 19468
+		// Token: 0x04005000 RID: 20480
 		EnterWindField,
-		// Token: 0x04004C0D RID: 19469
+		// Token: 0x04005001 RID: 20481
 		ExitWindField
 	}
 }

@@ -1,26 +1,28 @@
 ﻿using System;
 
-// Token: 0x020017C6 RID: 6086
+// Token: 0x02000C7F RID: 3199
 public enum EComboTeachingFailCondition
 {
-	// Token: 0x040050A2 RID: 20642
+	// Token: 0x0400514C RID: 20812
 	Base = -1,
-	// Token: 0x040050A3 RID: 20643
+	// Token: 0x0400514D RID: 20813
 	SkillIdChecker,
-	// Token: 0x040050A4 RID: 20644
+	// Token: 0x0400514E RID: 20814
 	NextAttrEnd,
-	// Token: 0x040050A5 RID: 20645
+	// Token: 0x0400514F RID: 20815
 	InSkillChecker,
-	// Token: 0x040050A6 RID: 20646
+	// Token: 0x04005150 RID: 20816
 	EnergyCheck,
-	// Token: 0x040050A7 RID: 20647
+	// Token: 0x04005151 RID: 20817
 	NotHaveBuff,
-	// Token: 0x040050A8 RID: 20648
+	// Token: 0x04005152 RID: 20818
 	NotHaveTag,
-	// Token: 0x040050A9 RID: 20649
+	// Token: 0x04005153 RID: 20819
 	NotInJump,
-	// Token: 0x040050AA RID: 20650
+	// Token: 0x04005154 RID: 20820
 	PressKey,
-	// Token: 0x040050AB RID: 20651
-	HoldKey
+	// Token: 0x04005155 RID: 20821
+	HoldKey,
+	// Token: 0x04005156 RID: 20822
+	HoldSkillIdChecker
 }

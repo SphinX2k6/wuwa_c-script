@@ -8,13 +8,13 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Google.Protobuf;
 
-// Token: 0x020031BC RID: 12732
+// Token: 0x0200272B RID: 10027
 [NullableContext(1)]
 [Nullable(0)]
 public class FightDebugUtil : IStaticVariableResetter
 {
-	// Token: 0x170025FC RID: 9724
-	// (get) Token: 0x0601B724 RID: 112420 RVA: 0x007827C6 File Offset: 0x007809C6
+	// Token: 0x170027FA RID: 10234
+	// (get) Token: 0x06019258 RID: 103000 RVA: 0x007AA9D2 File Offset: 0x007A8BD2
 	public static ECharacterLoadType DtSkillTypeForDebug
 	{
 		get
@@ -23,8 +23,8 @@ public class FightDebugUtil : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x170025FD RID: 9725
-	// (get) Token: 0x0601B725 RID: 112421 RVA: 0x007827CD File Offset: 0x007809CD
+	// Token: 0x170027FB RID: 10235
+	// (get) Token: 0x06019259 RID: 103001 RVA: 0x007AA9D9 File Offset: 0x007A8BD9
 	private static HashSet<int> LoadingEntityIdsForDebug
 	{
 		get
@@ -33,8 +33,8 @@ public class FightDebugUtil : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x170025FE RID: 9726
-	// (get) Token: 0x0601B726 RID: 112422 RVA: 0x007827D4 File Offset: 0x007809D4
+	// Token: 0x170027FC RID: 10236
+	// (get) Token: 0x0601925A RID: 103002 RVA: 0x007AA9E0 File Offset: 0x007A8BE0
 	private static HashSet<int> LoadingSkillEntityIdsForDebug
 	{
 		get
@@ -43,8 +43,8 @@ public class FightDebugUtil : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x170025FF RID: 9727
-	// (get) Token: 0x0601B727 RID: 112423 RVA: 0x007827DB File Offset: 0x007809DB
+	// Token: 0x170027FD RID: 10237
+	// (get) Token: 0x0601925B RID: 103003 RVA: 0x007AA9E7 File Offset: 0x007A8BE7
 	private static HashSet<int> LoadedEntityIdsForDebug
 	{
 		get
@@ -53,7 +53,7 @@ public class FightDebugUtil : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601B728 RID: 112424 RVA: 0x007827E4 File Offset: 0x007809E4
+	// Token: 0x0601925C RID: 103004 RVA: 0x007AA9F0 File Offset: 0x007A8BF0
 	public static void LoadSkillFightDtDebug(ECharacterLoadType loadType, int entityId = 0)
 	{
 		FightDebugUtil.<>c__DisplayClass12_0 CS$<>8__locals1 = new FightDebugUtil.<>c__DisplayClass12_0();
@@ -104,7 +104,7 @@ public class FightDebugUtil : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601B729 RID: 112425 RVA: 0x0078290C File Offset: 0x00780B0C
+	// Token: 0x0601925D RID: 103005 RVA: 0x007AAB18 File Offset: 0x007A8D18
 	public static UniTask LoadSkillFightDtNewPreload(Entity entity, ECharacterLoadType loadType)
 	{
 		FightDebugUtil.<LoadSkillFightDtNewPreload>d__13 <LoadSkillFightDtNewPreload>d__;
@@ -116,7 +116,7 @@ public class FightDebugUtil : IStaticVariableResetter
 		return <LoadSkillFightDtNewPreload>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601B72A RID: 112426 RVA: 0x00782958 File Offset: 0x00780B58
+	// Token: 0x0601925E RID: 103006 RVA: 0x007AAB64 File Offset: 0x007A8D64
 	public static void LoadFightDtDebug(int entityId = 0)
 	{
 		List<Entity> list = new List<Entity>();
@@ -164,7 +164,7 @@ public class FightDebugUtil : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601B72B RID: 112427 RVA: 0x00782A68 File Offset: 0x00780C68
+	// Token: 0x0601925F RID: 103007 RVA: 0x007AAC74 File Offset: 0x007A8E74
 	public static UniTask LoadCharacterFightDtNewPreload(Entity entity)
 	{
 		FightDebugUtil.<LoadCharacterFightDtNewPreload>d__15 <LoadCharacterFightDtNewPreload>d__;
@@ -175,7 +175,7 @@ public class FightDebugUtil : IStaticVariableResetter
 		return <LoadCharacterFightDtNewPreload>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601B72C RID: 112428 RVA: 0x00782AAC File Offset: 0x00780CAC
+	// Token: 0x06019260 RID: 103008 RVA: 0x007AACB8 File Offset: 0x007A8EB8
 	public static UniTask LoadFightDtNewPreload(Entity entity)
 	{
 		FightDebugUtil.<LoadFightDtNewPreload>d__16 <LoadFightDtNewPreload>d__;
@@ -186,7 +186,7 @@ public class FightDebugUtil : IStaticVariableResetter
 		return <LoadFightDtNewPreload>d__.<>t__builder.Task;
 	}
 
-	// Token: 0x0601B72D RID: 112429 RVA: 0x00782AF0 File Offset: 0x00780CF0
+	// Token: 0x06019261 RID: 103009 RVA: 0x007AACFC File Offset: 0x007A8EFC
 	public static void SetFightDtTypeForDebug(ECharacterLoadType dtType = ECharacterLoadType.通用)
 	{
 		if (dtType != FightDebugUtil.DtSkillTypeForDebug)
@@ -206,13 +206,13 @@ public class FightDebugUtil : IStaticVariableResetter
 		}
 	}
 
-	// Token: 0x0601B72E RID: 112430 RVA: 0x00782B83 File Offset: 0x00780D83
+	// Token: 0x06019262 RID: 103010 RVA: 0x007AAD8F File Offset: 0x007A8F8F
 	static FightDebugUtil()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(FightDebugUtil.CreateStaticDefaultValue), new Action(FightDebugUtil.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0601B72F RID: 112431 RVA: 0x00782BA2 File Offset: 0x00780DA2
+	// Token: 0x06019263 RID: 103011 RVA: 0x007AADAE File Offset: 0x007A8FAE
 	public static void CreateStaticDefaultValue()
 	{
 		FightDebugUtil._dtSkillTypeForDebug = ECharacterLoadType.通用;
@@ -221,7 +221,7 @@ public class FightDebugUtil : IStaticVariableResetter
 		FightDebugUtil._loadedEntityIdsForDebug = new HashSet<int>();
 	}
 
-	// Token: 0x0601B730 RID: 112432 RVA: 0x00782BC8 File Offset: 0x00780DC8
+	// Token: 0x06019264 RID: 103012 RVA: 0x007AADD4 File Offset: 0x007A8FD4
 	public static void ResetStaticDefaultValue()
 	{
 		FightDebugUtil._dtSkillTypeForDebug = ECharacterLoadType.通用;
@@ -230,18 +230,18 @@ public class FightDebugUtil : IStaticVariableResetter
 		FightDebugUtil._loadedEntityIdsForDebug = null;
 	}
 
-	// Token: 0x0400D73C RID: 55100
+	// Token: 0x0400DBC3 RID: 56259
 	private static ECharacterLoadType _dtSkillTypeForDebug;
 
-	// Token: 0x0400D73D RID: 55101
+	// Token: 0x0400DBC4 RID: 56260
 	[Nullable(2)]
 	private static HashSet<int> _loadingEntityIdsForDebug;
 
-	// Token: 0x0400D73E RID: 55102
+	// Token: 0x0400DBC5 RID: 56261
 	[Nullable(2)]
 	private static HashSet<int> _loadingSkillEntityIdsForDebug;
 
-	// Token: 0x0400D73F RID: 55103
+	// Token: 0x0400DBC6 RID: 56262
 	[Nullable(2)]
 	private static HashSet<int> _loadedEntityIdsForDebug;
 }

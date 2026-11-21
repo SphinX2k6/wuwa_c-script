@@ -7,14 +7,14 @@ using UnrealEngine.Utils;
 
 namespace AkiClient.Game.Aki.GamePlay.FindSunSpirit
 {
-	// Token: 0x02003E65 RID: 15973
+	// Token: 0x02003154 RID: 12628
 	[NullableContext(1)]
 	[Nullable(0)]
 	[UnrealObjectPath("/Game/Aki/GamePlay/FindSunSpirit/BP_FindSunSpiritGlobalConfig.BP_FindSunSpiritGlobalConfig_C")]
 	[UnrealStructLayout(488, 8, UnrealReflectionPropertyTypeCode.UnrealObject, PropertiesSize = 488)]
 	public class BP_FindSunSpiritGlobalConfig_C : UPrimaryDataAsset, IUnrealUObject, IUnrealObject
 	{
-		// Token: 0x060282A3 RID: 164515 RVA: 0x009A5AD8 File Offset: 0x009A3CD8
+		// Token: 0x0601F0E9 RID: 127209 RVA: 0x00925654 File Offset: 0x00923854
 		public new static UClassStackOnlyPtr StaticClass()
 		{
 			if (BP_FindSunSpiritGlobalConfig_C._ClassPtr == IntPtr.Zero)
@@ -24,256 +24,256 @@ namespace AkiClient.Game.Aki.GamePlay.FindSunSpirit
 			return BP_FindSunSpiritGlobalConfig_C._ClassPtr;
 		}
 
-		// Token: 0x060282A4 RID: 164516 RVA: 0x009A5AFC File Offset: 0x009A3CFC
+		// Token: 0x0601F0EA RID: 127210 RVA: 0x00925678 File Offset: 0x00923878
 		public BP_FindSunSpiritGlobalConfig_C() : this(BuiltinUtils.AllocNativeUObject(BP_FindSunSpiritGlobalConfig_C.StaticClass(), null, default(FName), EObjectFlags.RF_NoFlags))
 		{
 		}
 
-		// Token: 0x060282A5 RID: 164517 RVA: 0x009A5B24 File Offset: 0x009A3D24
+		// Token: 0x0601F0EB RID: 127211 RVA: 0x009256A0 File Offset: 0x009238A0
 		public BP_FindSunSpiritGlobalConfig_C(UnrealUObject Outer, [Nullable(2)] string Name = null, EObjectFlags ObjectFlags = EObjectFlags.RF_NoFlags) : this(BuiltinUtils.AllocNativeUObject(BP_FindSunSpiritGlobalConfig_C.StaticClass(), Outer, (Name != null) ? new FName(Name) : default(FName), ObjectFlags))
 		{
 		}
 
-		// Token: 0x17005C0C RID: 23564
-		// (get) Token: 0x060282A6 RID: 164518 RVA: 0x009A5B57 File Offset: 0x009A3D57
-		// (set) Token: 0x060282A7 RID: 164519 RVA: 0x009A5B6B File Offset: 0x009A3D6B
+		// Token: 0x17003713 RID: 14099
+		// (get) Token: 0x0601F0EC RID: 127212 RVA: 0x009256D3 File Offset: 0x009238D3
+		// (set) Token: 0x0601F0ED RID: 127213 RVA: 0x009256E7 File Offset: 0x009238E7
 		[Nullable(2)]
 		public unsafe UAnimMontage 跳跃蒙太奇
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UAnimMontage>(base.NativePtr / (IntPtr)sizeof(void*) + BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_0);
+				return BuiltinUtils.ObjectPropertyGetter<UAnimMontage>(base.NativePtr / (IntPtr)sizeof(void*) + BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_跳跃蒙太奇);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_0, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_跳跃蒙太奇, value);
 			}
 		}
 
-		// Token: 0x17005C0D RID: 23565
-		// (get) Token: 0x060282A8 RID: 164520 RVA: 0x009A5B80 File Offset: 0x009A3D80
-		// (set) Token: 0x060282A9 RID: 164521 RVA: 0x009A5B90 File Offset: 0x009A3D90
+		// Token: 0x17003714 RID: 14100
+		// (get) Token: 0x0601F0EE RID: 127214 RVA: 0x009256FC File Offset: 0x009238FC
+		// (set) Token: 0x0601F0EF RID: 127215 RVA: 0x0092570C File Offset: 0x0092390C
 		public unsafe int 跳跃旋转速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_1);
+				return *(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_跳跃旋转速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_1) = value;
+				*(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_跳跃旋转速度) = value;
 			}
 		}
 
-		// Token: 0x17005C0E RID: 23566
-		// (get) Token: 0x060282AA RID: 164522 RVA: 0x009A5BA1 File Offset: 0x009A3DA1
-		// (set) Token: 0x060282AB RID: 164523 RVA: 0x009A5BB1 File Offset: 0x009A3DB1
+		// Token: 0x17003715 RID: 14101
+		// (get) Token: 0x0601F0F0 RID: 127216 RVA: 0x0092571D File Offset: 0x0092391D
+		// (set) Token: 0x0601F0F1 RID: 127217 RVA: 0x0092572D File Offset: 0x0092392D
 		public unsafe int 跳跃高度偏移基准
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_2);
+				return *(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_跳跃高度偏移基准);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_2) = value;
+				*(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_跳跃高度偏移基准) = value;
 			}
 		}
 
-		// Token: 0x17005C0F RID: 23567
-		// (get) Token: 0x060282AC RID: 164524 RVA: 0x009A5BC2 File Offset: 0x009A3DC2
-		// (set) Token: 0x060282AD RID: 164525 RVA: 0x009A5BD2 File Offset: 0x009A3DD2
+		// Token: 0x17003716 RID: 14102
+		// (get) Token: 0x0601F0F2 RID: 127218 RVA: 0x0092573E File Offset: 0x0092393E
+		// (set) Token: 0x0601F0F3 RID: 127219 RVA: 0x0092574E File Offset: 0x0092394E
 		public unsafe int 跳跃时间
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_3);
+				return *(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_跳跃时间);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_3) = value;
+				*(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_跳跃时间) = value;
 			}
 		}
 
-		// Token: 0x17005C10 RID: 23568
-		// (get) Token: 0x060282AE RID: 164526 RVA: 0x009A5BE3 File Offset: 0x009A3DE3
-		// (set) Token: 0x060282AF RID: 164527 RVA: 0x009A5BF3 File Offset: 0x009A3DF3
+		// Token: 0x17003717 RID: 14103
+		// (get) Token: 0x0601F0F4 RID: 127220 RVA: 0x0092575F File Offset: 0x0092395F
+		// (set) Token: 0x0601F0F5 RID: 127221 RVA: 0x0092576F File Offset: 0x0092396F
 		public unsafe int 跳跃上升偏移曲线高度范围
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_4);
+				return *(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_跳跃上升偏移曲线高度范围);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_4) = value;
+				*(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_跳跃上升偏移曲线高度范围) = value;
 			}
 		}
 
-		// Token: 0x17005C11 RID: 23569
-		// (get) Token: 0x060282B0 RID: 164528 RVA: 0x009A5C04 File Offset: 0x009A3E04
-		// (set) Token: 0x060282B1 RID: 164529 RVA: 0x009A5C14 File Offset: 0x009A3E14
+		// Token: 0x17003718 RID: 14104
+		// (get) Token: 0x0601F0F6 RID: 127222 RVA: 0x00925780 File Offset: 0x00923980
+		// (set) Token: 0x0601F0F7 RID: 127223 RVA: 0x00925790 File Offset: 0x00923990
 		public unsafe int 跳跃下降偏移曲线高度范围
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_5);
+				return *(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_跳跃下降偏移曲线高度范围);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_5) = value;
+				*(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_跳跃下降偏移曲线高度范围) = value;
 			}
 		}
 
-		// Token: 0x17005C12 RID: 23570
-		// (get) Token: 0x060282B2 RID: 164530 RVA: 0x009A5C25 File Offset: 0x009A3E25
-		// (set) Token: 0x060282B3 RID: 164531 RVA: 0x009A5C39 File Offset: 0x009A3E39
+		// Token: 0x17003719 RID: 14105
+		// (get) Token: 0x0601F0F8 RID: 127224 RVA: 0x009257A1 File Offset: 0x009239A1
+		// (set) Token: 0x0601F0F9 RID: 127225 RVA: 0x009257B5 File Offset: 0x009239B5
 		[Nullable(2)]
 		public unsafe UCurveFloat 跳跃上升偏移曲线
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UCurveFloat>(base.NativePtr / (IntPtr)sizeof(void*) + BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_6);
+				return BuiltinUtils.ObjectPropertyGetter<UCurveFloat>(base.NativePtr / (IntPtr)sizeof(void*) + BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_跳跃上升偏移曲线);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_6, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_跳跃上升偏移曲线, value);
 			}
 		}
 
-		// Token: 0x17005C13 RID: 23571
-		// (get) Token: 0x060282B4 RID: 164532 RVA: 0x009A5C4E File Offset: 0x009A3E4E
-		// (set) Token: 0x060282B5 RID: 164533 RVA: 0x009A5C62 File Offset: 0x009A3E62
+		// Token: 0x1700371A RID: 14106
+		// (get) Token: 0x0601F0FA RID: 127226 RVA: 0x009257CA File Offset: 0x009239CA
+		// (set) Token: 0x0601F0FB RID: 127227 RVA: 0x009257DE File Offset: 0x009239DE
 		[Nullable(2)]
 		public unsafe UCurveFloat 跳跃下降偏移曲线
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UCurveFloat>(base.NativePtr / (IntPtr)sizeof(void*) + BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_7);
+				return BuiltinUtils.ObjectPropertyGetter<UCurveFloat>(base.NativePtr / (IntPtr)sizeof(void*) + BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_跳跃下降偏移曲线);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_7, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_跳跃下降偏移曲线, value);
 			}
 		}
 
-		// Token: 0x17005C14 RID: 23572
-		// (get) Token: 0x060282B6 RID: 164534 RVA: 0x009A5C77 File Offset: 0x009A3E77
-		// (set) Token: 0x060282B7 RID: 164535 RVA: 0x009A5C8B File Offset: 0x009A3E8B
+		// Token: 0x1700371B RID: 14107
+		// (get) Token: 0x0601F0FC RID: 127228 RVA: 0x009257F3 File Offset: 0x009239F3
+		// (set) Token: 0x0601F0FD RID: 127229 RVA: 0x00925807 File Offset: 0x00923A07
 		[Nullable(2)]
 		public unsafe UAnimMontage 奔跑蒙太奇
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UAnimMontage>(base.NativePtr / (IntPtr)sizeof(void*) + BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_8);
+				return BuiltinUtils.ObjectPropertyGetter<UAnimMontage>(base.NativePtr / (IntPtr)sizeof(void*) + BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_奔跑蒙太奇);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_8, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_奔跑蒙太奇, value);
 			}
 		}
 
-		// Token: 0x17005C15 RID: 23573
-		// (get) Token: 0x060282B8 RID: 164536 RVA: 0x009A5CA0 File Offset: 0x009A3EA0
-		// (set) Token: 0x060282B9 RID: 164537 RVA: 0x009A5CB0 File Offset: 0x009A3EB0
+		// Token: 0x1700371C RID: 14108
+		// (get) Token: 0x0601F0FE RID: 127230 RVA: 0x0092581C File Offset: 0x00923A1C
+		// (set) Token: 0x0601F0FF RID: 127231 RVA: 0x0092582C File Offset: 0x00923A2C
 		public unsafe int 奔跑移动速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_9);
+				return *(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_奔跑移动速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_9) = value;
+				*(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_奔跑移动速度) = value;
 			}
 		}
 
-		// Token: 0x17005C16 RID: 23574
-		// (get) Token: 0x060282BA RID: 164538 RVA: 0x009A5CC1 File Offset: 0x009A3EC1
-		// (set) Token: 0x060282BB RID: 164539 RVA: 0x009A5CD1 File Offset: 0x009A3ED1
+		// Token: 0x1700371D RID: 14109
+		// (get) Token: 0x0601F100 RID: 127232 RVA: 0x0092583D File Offset: 0x00923A3D
+		// (set) Token: 0x0601F101 RID: 127233 RVA: 0x0092584D File Offset: 0x00923A4D
 		public unsafe int 奔跑旋转速度
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_10);
+				return *(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_奔跑旋转速度);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_10) = value;
+				*(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_奔跑旋转速度) = value;
 			}
 		}
 
-		// Token: 0x17005C17 RID: 23575
-		// (get) Token: 0x060282BC RID: 164540 RVA: 0x009A5CE2 File Offset: 0x009A3EE2
-		// (set) Token: 0x060282BD RID: 164541 RVA: 0x009A5CF2 File Offset: 0x009A3EF2
+		// Token: 0x1700371E RID: 14110
+		// (get) Token: 0x0601F102 RID: 127234 RVA: 0x0092585E File Offset: 0x00923A5E
+		// (set) Token: 0x0601F103 RID: 127235 RVA: 0x0092586E File Offset: 0x00923A6E
 		public unsafe int 奔跑结束停顿时间
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_11);
+				return *(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_奔跑结束停顿时间);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_11) = value;
+				*(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_奔跑结束停顿时间) = value;
 			}
 		}
 
-		// Token: 0x17005C18 RID: 23576
-		// (get) Token: 0x060282BE RID: 164542 RVA: 0x009A5D03 File Offset: 0x009A3F03
-		// (set) Token: 0x060282BF RID: 164543 RVA: 0x009A5D13 File Offset: 0x009A3F13
+		// Token: 0x1700371F RID: 14111
+		// (get) Token: 0x0601F104 RID: 127236 RVA: 0x0092587F File Offset: 0x00923A7F
+		// (set) Token: 0x0601F105 RID: 127237 RVA: 0x0092588F File Offset: 0x00923A8F
 		public unsafe int 导航线持续时间
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_12);
+				return *(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_导航线持续时间);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_12) = value;
+				*(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_导航线持续时间) = value;
 			}
 		}
 
-		// Token: 0x17005C19 RID: 23577
-		// (get) Token: 0x060282C0 RID: 164544 RVA: 0x009A5D24 File Offset: 0x009A3F24
-		// (set) Token: 0x060282C1 RID: 164545 RVA: 0x009A5D39 File Offset: 0x009A3F39
+		// Token: 0x17003720 RID: 14112
+		// (get) Token: 0x0601F106 RID: 127238 RVA: 0x009258A0 File Offset: 0x00923AA0
+		// (set) Token: 0x0601F107 RID: 127239 RVA: 0x009258B5 File Offset: 0x00923AB5
 		public TSoftObjectPtr<UEffectModelGroup> 成功导航线特效
 		{
 			get
 			{
-				return new TSoftObjectPtr<UEffectModelGroup>(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_13, this);
+				return new TSoftObjectPtr<UEffectModelGroup>(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_成功导航线特效, this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_13, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_成功导航线特效, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x17005C1A RID: 23578
-		// (get) Token: 0x060282C2 RID: 164546 RVA: 0x009A5D5E File Offset: 0x009A3F5E
-		// (set) Token: 0x060282C3 RID: 164547 RVA: 0x009A5D73 File Offset: 0x009A3F73
+		// Token: 0x17003721 RID: 14113
+		// (get) Token: 0x0601F108 RID: 127240 RVA: 0x009258DA File Offset: 0x00923ADA
+		// (set) Token: 0x0601F109 RID: 127241 RVA: 0x009258EF File Offset: 0x00923AEF
 		public TSoftObjectPtr<UEffectModelGroup> 失败导航线特效
 		{
 			get
 			{
-				return new TSoftObjectPtr<UEffectModelGroup>(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_14, this);
+				return new TSoftObjectPtr<UEffectModelGroup>(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_失败导航线特效, this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_14, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_失败导航线特效, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x17005C1B RID: 23579
-		// (get) Token: 0x060282C4 RID: 164548 RVA: 0x009A5D98 File Offset: 0x009A3F98
-		// (set) Token: 0x060282C5 RID: 164549 RVA: 0x009A5DD1 File Offset: 0x009A3FD1
+		// Token: 0x17003722 RID: 14114
+		// (get) Token: 0x0601F10A RID: 127242 RVA: 0x00925914 File Offset: 0x00923B14
+		// (set) Token: 0x0601F10B RID: 127243 RVA: 0x0092594D File Offset: 0x00923B4D
 		public FSoftObjectPath 扩散装置路径
 		{
 			get
@@ -282,34 +282,34 @@ namespace AkiClient.Game.Aki.GamePlay.FindSunSpirit
 				FSoftObjectPath result;
 				if ((result = this._扩散装置路径) == null)
 				{
-					result = (this._扩散装置路径 = new FSoftObjectPath(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_15, this));
+					result = (this._扩散装置路径 = new FSoftObjectPath(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_扩散装置路径, this));
 				}
 				return result;
 			}
 			set
 			{
-				UnrealReflectionUtils.CopyNativeStruct(FSoftObjectPath.StaticStruct(), base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_15, value.NativePtr, 1, false);
+				UnrealReflectionUtils.CopyNativeStruct(FSoftObjectPath.StaticStruct(), base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_扩散装置路径, value.NativePtr, 1, false);
 			}
 		}
 
-		// Token: 0x17005C1C RID: 23580
-		// (get) Token: 0x060282C6 RID: 164550 RVA: 0x009A5DF2 File Offset: 0x009A3FF2
-		// (set) Token: 0x060282C7 RID: 164551 RVA: 0x009A5E02 File Offset: 0x009A4002
+		// Token: 0x17003723 RID: 14115
+		// (get) Token: 0x0601F10C RID: 127244 RVA: 0x0092596E File Offset: 0x00923B6E
+		// (set) Token: 0x0601F10D RID: 127245 RVA: 0x0092597E File Offset: 0x00923B7E
 		public unsafe int 扩散触发持续时间
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_16);
+				return *(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_扩散触发持续时间);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_16) = value;
+				*(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_扩散触发持续时间) = value;
 			}
 		}
 
-		// Token: 0x17005C1D RID: 23581
-		// (get) Token: 0x060282C8 RID: 164552 RVA: 0x009A5E14 File Offset: 0x009A4014
-		// (set) Token: 0x060282C9 RID: 164553 RVA: 0x009A5E4D File Offset: 0x009A404D
+		// Token: 0x17003724 RID: 14116
+		// (get) Token: 0x0601F10E RID: 127246 RVA: 0x00925990 File Offset: 0x00923B90
+		// (set) Token: 0x0601F10F RID: 127247 RVA: 0x009259C9 File Offset: 0x00923BC9
 		public TArray<FIntPoint> 扩散影响范围
 		{
 			get
@@ -318,7 +318,7 @@ namespace AkiClient.Game.Aki.GamePlay.FindSunSpirit
 				TArray<FIntPoint> result;
 				if ((result = this._扩散影响范围) == null)
 				{
-					result = (this._扩散影响范围 = new TArray<FIntPoint>(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_17, this));
+					result = (this._扩散影响范围 = new TArray<FIntPoint>(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_扩散影响范围, this));
 				}
 				return result;
 			}
@@ -328,251 +328,251 @@ namespace AkiClient.Game.Aki.GamePlay.FindSunSpirit
 			}
 		}
 
-		// Token: 0x17005C1E RID: 23582
-		// (get) Token: 0x060282CA RID: 164554 RVA: 0x009A5E5B File Offset: 0x009A405B
-		// (set) Token: 0x060282CB RID: 164555 RVA: 0x009A5E70 File Offset: 0x009A4070
+		// Token: 0x17003725 RID: 14117
+		// (get) Token: 0x0601F110 RID: 127248 RVA: 0x009259D7 File Offset: 0x00923BD7
+		// (set) Token: 0x0601F111 RID: 127249 RVA: 0x009259EC File Offset: 0x00923BEC
 		public TSoftObjectPtr<UNiagaraSystem> 关卡地板Niagara
 		{
 			get
 			{
-				return new TSoftObjectPtr<UNiagaraSystem>(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_18, this);
+				return new TSoftObjectPtr<UNiagaraSystem>(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_关卡地板Niagara, this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_18, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_关卡地板Niagara, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x17005C1F RID: 23583
-		// (get) Token: 0x060282CC RID: 164556 RVA: 0x009A5E95 File Offset: 0x009A4095
-		// (set) Token: 0x060282CD RID: 164557 RVA: 0x009A5EA5 File Offset: 0x009A40A5
+		// Token: 0x17003726 RID: 14118
+		// (get) Token: 0x0601F112 RID: 127250 RVA: 0x00925A11 File Offset: 0x00923C11
+		// (set) Token: 0x0601F113 RID: 127251 RVA: 0x00925A21 File Offset: 0x00923C21
 		public unsafe int 关卡地板单位大小
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_19);
+				return *(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_关卡地板单位大小);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_19) = value;
+				*(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_关卡地板单位大小) = value;
 			}
 		}
 
-		// Token: 0x17005C20 RID: 23584
-		// (get) Token: 0x060282CE RID: 164558 RVA: 0x009A5EB6 File Offset: 0x009A40B6
-		// (set) Token: 0x060282CF RID: 164559 RVA: 0x009A5ECA File Offset: 0x009A40CA
+		// Token: 0x17003727 RID: 14119
+		// (get) Token: 0x0601F114 RID: 127252 RVA: 0x00925A32 File Offset: 0x00923C32
+		// (set) Token: 0x0601F115 RID: 127253 RVA: 0x00925A46 File Offset: 0x00923C46
 		[Nullable(2)]
 		public unsafe UAnimMontage 寻路失败蒙太奇
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UAnimMontage>(base.NativePtr / (IntPtr)sizeof(void*) + BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_20);
+				return BuiltinUtils.ObjectPropertyGetter<UAnimMontage>(base.NativePtr / (IntPtr)sizeof(void*) + BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_寻路失败蒙太奇);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_20, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_寻路失败蒙太奇, value);
 			}
 		}
 
-		// Token: 0x17005C21 RID: 23585
-		// (get) Token: 0x060282D0 RID: 164560 RVA: 0x009A5EDF File Offset: 0x009A40DF
-		// (set) Token: 0x060282D1 RID: 164561 RVA: 0x009A5EF3 File Offset: 0x009A40F3
+		// Token: 0x17003728 RID: 14120
+		// (get) Token: 0x0601F116 RID: 127254 RVA: 0x00925A5B File Offset: 0x00923C5B
+		// (set) Token: 0x0601F117 RID: 127255 RVA: 0x00925A6F File Offset: 0x00923C6F
 		[Nullable(2)]
 		public unsafe UAnimMontage 到达终点蒙太奇
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UAnimMontage>(base.NativePtr / (IntPtr)sizeof(void*) + BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_21);
+				return BuiltinUtils.ObjectPropertyGetter<UAnimMontage>(base.NativePtr / (IntPtr)sizeof(void*) + BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_到达终点蒙太奇);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_21, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_到达终点蒙太奇, value);
 			}
 		}
 
-		// Token: 0x17005C22 RID: 23586
-		// (get) Token: 0x060282D2 RID: 164562 RVA: 0x009A5F08 File Offset: 0x009A4108
-		// (set) Token: 0x060282D3 RID: 164563 RVA: 0x009A5F1C File Offset: 0x009A411C
+		// Token: 0x17003729 RID: 14121
+		// (get) Token: 0x0601F118 RID: 127256 RVA: 0x00925A84 File Offset: 0x00923C84
+		// (set) Token: 0x0601F119 RID: 127257 RVA: 0x00925A98 File Offset: 0x00923C98
 		[Nullable(2)]
 		public unsafe UAnimMontage 终点待机蒙太奇
 		{
 			[NullableContext(2)]
 			get
 			{
-				return BuiltinUtils.ObjectPropertyGetter<UAnimMontage>(base.NativePtr / (IntPtr)sizeof(void*) + BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_22);
+				return BuiltinUtils.ObjectPropertyGetter<UAnimMontage>(base.NativePtr / (IntPtr)sizeof(void*) + BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_终点待机蒙太奇);
 			}
 			[NullableContext(2)]
 			set
 			{
-				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_22, value);
+				BuiltinUtils.ObjectPropertySetter(base.NativePtr / (IntPtr)sizeof(void*) + BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_终点待机蒙太奇, value);
 			}
 		}
 
-		// Token: 0x17005C23 RID: 23587
-		// (get) Token: 0x060282D4 RID: 164564 RVA: 0x009A5F31 File Offset: 0x009A4131
-		// (set) Token: 0x060282D5 RID: 164565 RVA: 0x009A5F46 File Offset: 0x009A4146
+		// Token: 0x1700372A RID: 14122
+		// (get) Token: 0x0601F11A RID: 127258 RVA: 0x00925AAD File Offset: 0x00923CAD
+		// (set) Token: 0x0601F11B RID: 127259 RVA: 0x00925AC2 File Offset: 0x00923CC2
 		public TSoftObjectPtr<UEffectModelGroup> 射击轨迹特效
 		{
 			get
 			{
-				return new TSoftObjectPtr<UEffectModelGroup>(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_23, this);
+				return new TSoftObjectPtr<UEffectModelGroup>(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_射击轨迹特效, this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_23, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_射击轨迹特效, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x17005C24 RID: 23588
-		// (get) Token: 0x060282D6 RID: 164566 RVA: 0x009A5F6B File Offset: 0x009A416B
-		// (set) Token: 0x060282D7 RID: 164567 RVA: 0x009A5F80 File Offset: 0x009A4180
+		// Token: 0x1700372B RID: 14123
+		// (get) Token: 0x0601F11C RID: 127260 RVA: 0x00925AE7 File Offset: 0x00923CE7
+		// (set) Token: 0x0601F11D RID: 127261 RVA: 0x00925AFC File Offset: 0x00923CFC
 		public TSoftObjectPtr<UEffectModelGroup> 射击终点特效
 		{
 			get
 			{
-				return new TSoftObjectPtr<UEffectModelGroup>(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_24, this);
+				return new TSoftObjectPtr<UEffectModelGroup>(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_射击终点特效, this);
 			}
 			set
 			{
-				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_24, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
+				FSoftObjectPtr.NativeCopy(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_射击终点特效, (value != null) ? value.NativePtr : IntPtr.Zero, 1);
 			}
 		}
 
-		// Token: 0x17005C25 RID: 23589
-		// (get) Token: 0x060282D8 RID: 164568 RVA: 0x009A5FA5 File Offset: 0x009A41A5
-		// (set) Token: 0x060282D9 RID: 164569 RVA: 0x009A5FB5 File Offset: 0x009A41B5
+		// Token: 0x1700372C RID: 14124
+		// (get) Token: 0x0601F11E RID: 127262 RVA: 0x00925B21 File Offset: 0x00923D21
+		// (set) Token: 0x0601F11F RID: 127263 RVA: 0x00925B31 File Offset: 0x00923D31
 		public unsafe int 射击冷却时间
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_25);
+				return *(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_射击冷却时间);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_25) = value;
+				*(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_射击冷却时间) = value;
 			}
 		}
 
-		// Token: 0x17005C26 RID: 23590
-		// (get) Token: 0x060282DA RID: 164570 RVA: 0x009A5FC6 File Offset: 0x009A41C6
-		// (set) Token: 0x060282DB RID: 164571 RVA: 0x009A5FD6 File Offset: 0x009A41D6
+		// Token: 0x1700372D RID: 14125
+		// (get) Token: 0x0601F120 RID: 127264 RVA: 0x00925B42 File Offset: 0x00923D42
+		// (set) Token: 0x0601F121 RID: 127265 RVA: 0x00925B52 File Offset: 0x00923D52
 		public unsafe int 失败重置延迟时间
 		{
 			get
 			{
-				return *(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_26);
+				return *(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_失败重置延迟时间);
 			}
 			set
 			{
-				*(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_26) = value;
+				*(base.NativePtr + (IntPtr)BP_FindSunSpiritGlobalConfig_C.__PropertyOffset_失败重置延迟时间) = value;
 			}
 		}
 
-		// Token: 0x060282DC RID: 164572 RVA: 0x009A5FE7 File Offset: 0x009A41E7
+		// Token: 0x0601F122 RID: 127266 RVA: 0x00925B63 File Offset: 0x00923D63
 		protected BP_FindSunSpiritGlobalConfig_C(IntPtr NativeObjectPtr) : base(NativeObjectPtr)
 		{
 		}
 
-		// Token: 0x0401471C RID: 83740
+		// Token: 0x0401097D RID: 67965
 		public new const string __ObjectPath = "/Game/Aki/GamePlay/FindSunSpirit/BP_FindSunSpiritGlobalConfig.BP_FindSunSpiritGlobalConfig_C";
 
-		// Token: 0x0401471D RID: 83741
+		// Token: 0x0401097E RID: 67966
 		private static IntPtr _ClassPtr;
 
-		// Token: 0x0401471E RID: 83742
+		// Token: 0x0401097F RID: 67967
 		private static IntPtr _ClassDefaultObjectPtr;
 
-		// Token: 0x0401471F RID: 83743
-		internal static int __PropertyOffset_0;
+		// Token: 0x04010980 RID: 67968
+		internal static int __PropertyOffset_跳跃蒙太奇;
 
-		// Token: 0x04014720 RID: 83744
-		internal static int __PropertyOffset_1;
+		// Token: 0x04010981 RID: 67969
+		internal static int __PropertyOffset_跳跃旋转速度;
 
-		// Token: 0x04014721 RID: 83745
-		internal static int __PropertyOffset_2;
+		// Token: 0x04010982 RID: 67970
+		internal static int __PropertyOffset_跳跃高度偏移基准;
 
-		// Token: 0x04014722 RID: 83746
-		internal static int __PropertyOffset_3;
+		// Token: 0x04010983 RID: 67971
+		internal static int __PropertyOffset_跳跃时间;
 
-		// Token: 0x04014723 RID: 83747
-		internal static int __PropertyOffset_4;
+		// Token: 0x04010984 RID: 67972
+		internal static int __PropertyOffset_跳跃上升偏移曲线高度范围;
 
-		// Token: 0x04014724 RID: 83748
-		internal static int __PropertyOffset_5;
+		// Token: 0x04010985 RID: 67973
+		internal static int __PropertyOffset_跳跃下降偏移曲线高度范围;
 
-		// Token: 0x04014725 RID: 83749
-		internal static int __PropertyOffset_6;
+		// Token: 0x04010986 RID: 67974
+		internal static int __PropertyOffset_跳跃上升偏移曲线;
 
-		// Token: 0x04014726 RID: 83750
-		internal static int __PropertyOffset_7;
+		// Token: 0x04010987 RID: 67975
+		internal static int __PropertyOffset_跳跃下降偏移曲线;
 
-		// Token: 0x04014727 RID: 83751
-		internal static int __PropertyOffset_8;
+		// Token: 0x04010988 RID: 67976
+		internal static int __PropertyOffset_奔跑蒙太奇;
 
-		// Token: 0x04014728 RID: 83752
-		internal static int __PropertyOffset_9;
+		// Token: 0x04010989 RID: 67977
+		internal static int __PropertyOffset_奔跑移动速度;
 
-		// Token: 0x04014729 RID: 83753
-		internal static int __PropertyOffset_10;
+		// Token: 0x0401098A RID: 67978
+		internal static int __PropertyOffset_奔跑旋转速度;
 
-		// Token: 0x0401472A RID: 83754
-		internal static int __PropertyOffset_11;
+		// Token: 0x0401098B RID: 67979
+		internal static int __PropertyOffset_奔跑结束停顿时间;
 
-		// Token: 0x0401472B RID: 83755
-		internal static int __PropertyOffset_12;
+		// Token: 0x0401098C RID: 67980
+		internal static int __PropertyOffset_导航线持续时间;
 
-		// Token: 0x0401472C RID: 83756
-		internal static int __PropertyOffset_13;
+		// Token: 0x0401098D RID: 67981
+		internal static int __PropertyOffset_成功导航线特效;
 
-		// Token: 0x0401472D RID: 83757
-		internal static int __PropertyOffset_14;
+		// Token: 0x0401098E RID: 67982
+		internal static int __PropertyOffset_失败导航线特效;
 
-		// Token: 0x0401472E RID: 83758
-		internal static int __PropertyOffset_15;
+		// Token: 0x0401098F RID: 67983
+		internal static int __PropertyOffset_扩散装置路径;
 
-		// Token: 0x0401472F RID: 83759
+		// Token: 0x04010990 RID: 67984
 		[Nullable(2)]
 		private FSoftObjectPath _扩散装置路径;
 
-		// Token: 0x04014730 RID: 83760
-		internal static int __PropertyOffset_16;
+		// Token: 0x04010991 RID: 67985
+		internal static int __PropertyOffset_扩散触发持续时间;
 
-		// Token: 0x04014731 RID: 83761
-		internal static int __PropertyOffset_17;
+		// Token: 0x04010992 RID: 67986
+		internal static int __PropertyOffset_扩散影响范围;
 
-		// Token: 0x04014732 RID: 83762
+		// Token: 0x04010993 RID: 67987
 		[Nullable(2)]
 		private TArray<FIntPoint> _扩散影响范围;
 
-		// Token: 0x04014733 RID: 83763
-		internal static int __PropertyOffset_18;
+		// Token: 0x04010994 RID: 67988
+		internal static int __PropertyOffset_关卡地板Niagara;
 
-		// Token: 0x04014734 RID: 83764
-		internal static int __PropertyOffset_19;
+		// Token: 0x04010995 RID: 67989
+		internal static int __PropertyOffset_关卡地板单位大小;
 
-		// Token: 0x04014735 RID: 83765
-		internal static int __PropertyOffset_20;
+		// Token: 0x04010996 RID: 67990
+		internal static int __PropertyOffset_寻路失败蒙太奇;
 
-		// Token: 0x04014736 RID: 83766
-		internal static int __PropertyOffset_21;
+		// Token: 0x04010997 RID: 67991
+		internal static int __PropertyOffset_到达终点蒙太奇;
 
-		// Token: 0x04014737 RID: 83767
-		internal static int __PropertyOffset_22;
+		// Token: 0x04010998 RID: 67992
+		internal static int __PropertyOffset_终点待机蒙太奇;
 
-		// Token: 0x04014738 RID: 83768
-		internal static int __PropertyOffset_23;
+		// Token: 0x04010999 RID: 67993
+		internal static int __PropertyOffset_射击轨迹特效;
 
-		// Token: 0x04014739 RID: 83769
-		internal static int __PropertyOffset_24;
+		// Token: 0x0401099A RID: 67994
+		internal static int __PropertyOffset_射击终点特效;
 
-		// Token: 0x0401473A RID: 83770
-		internal static int __PropertyOffset_25;
+		// Token: 0x0401099B RID: 67995
+		internal static int __PropertyOffset_射击冷却时间;
 
-		// Token: 0x0401473B RID: 83771
-		internal static int __PropertyOffset_26;
+		// Token: 0x0401099C RID: 67996
+		internal static int __PropertyOffset_失败重置延迟时间;
 	}
 }

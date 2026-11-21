@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001A8E RID: 6798
+	// Token: 0x02001C23 RID: 7203
 	public class IFlowDefineNpcSupportedWalkingPerform_SetValue
 	{
-		// Token: 0x040059BE RID: 22974
+		// Token: 0x04005E23 RID: 24099
 		public ENpcGroupPerformType Type;
 
-		// Token: 0x040059BF RID: 22975
-		[Nullable(1)]
+		// Token: 0x04005E24 RID: 24100
 		public string Key;
 	}
 }

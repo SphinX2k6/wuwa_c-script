@@ -4,12 +4,10 @@ using Aki.TDConfigMgr.Action.Fb;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C00 RID: 7168
-	[NullableContext(1)]
-	[Nullable(0)]
+	// Token: 0x02001DEF RID: 7663
 	public class IMontageConfig
 	{
-		// Token: 0x0600997F RID: 39295 RVA: 0x001612CC File Offset: 0x0015F4CC
+		// Token: 0x0600A2AF RID: 41647 RVA: 0x00174218 File Offset: 0x00172418
 		private IMontageConfig_SetValue GetOrCreatePoco()
 		{
 			if (this.FbInstance != null)
@@ -24,7 +22,7 @@ namespace Aki.TDConfigMgr.Action
 			return result;
 		}
 
-		// Token: 0x06009980 RID: 39296 RVA: 0x00161304 File Offset: 0x0015F504
+		// Token: 0x0600A2B0 RID: 41648 RVA: 0x00174250 File Offset: 0x00172450
 		public static IMontageConfig Create([Nullable(2)] IMontageConfig instance)
 		{
 			if (instance == null)
@@ -37,7 +35,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009981 RID: 39297 RVA: 0x00161317 File Offset: 0x0015F517
+		// Token: 0x0600A2B1 RID: 41649 RVA: 0x00174263 File Offset: 0x00172463
 		public static IMontageConfig CreateFromSetValue([Nullable(2)] IMontageConfig_SetValue value)
 		{
 			if (value == null)
@@ -50,7 +48,7 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x06009982 RID: 39298 RVA: 0x0016132A File Offset: 0x0015F52A
+		// Token: 0x0600A2B2 RID: 41650 RVA: 0x00174276 File Offset: 0x00172476
 		public IMontageConfig_SetValue ToSetValue()
 		{
 			return new IMontageConfig_SetValue
@@ -59,9 +57,9 @@ namespace Aki.TDConfigMgr.Action
 			};
 		}
 
-		// Token: 0x17003016 RID: 12310
-		// (get) Token: 0x06009983 RID: 39299 RVA: 0x0016133D File Offset: 0x0015F53D
-		// (set) Token: 0x06009984 RID: 39300 RVA: 0x00161368 File Offset: 0x0015F568
+		// Token: 0x1700327F RID: 12927
+		// (get) Token: 0x0600A2B3 RID: 41651 RVA: 0x00174289 File Offset: 0x00172489
+		// (set) Token: 0x0600A2B4 RID: 41652 RVA: 0x001742B4 File Offset: 0x001724B4
 		public virtual EMontageConfigType Type
 		{
 			get
@@ -82,11 +80,11 @@ namespace Aki.TDConfigMgr.Action
 			}
 		}
 
-		// Token: 0x04005D6F RID: 23919
+		// Token: 0x04006296 RID: 25238
 		[Nullable(2)]
 		protected IMontageConfig FbInstance;
 
-		// Token: 0x04005D70 RID: 23920
+		// Token: 0x04006297 RID: 25239
 		[Nullable(2)]
 		protected IMontageConfig_SetValue PocoInterface;
 	}

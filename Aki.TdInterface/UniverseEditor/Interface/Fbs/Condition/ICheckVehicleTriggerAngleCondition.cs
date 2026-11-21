@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.UniverseEditor.Interface.Fbs.Condition
 {
-	// Token: 0x02004B6E RID: 19310
+	// Token: 0x02005055 RID: 20565
 	public struct ICheckVehicleTriggerAngleCondition : IFlatbufferObject
 	{
-		// Token: 0x17008C21 RID: 35873
-		// (get) Token: 0x0601E6D1 RID: 124625 RVA: 0x00442F04 File Offset: 0x00441104
+		// Token: 0x17009331 RID: 37681
+		// (get) Token: 0x0602025F RID: 131679 RVA: 0x00475750 File Offset: 0x00473950
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E6D2 RID: 124626 RVA: 0x00442F11 File Offset: 0x00441111
+		// Token: 0x06020260 RID: 131680 RVA: 0x0047575D File Offset: 0x0047395D
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0601E6D3 RID: 124627 RVA: 0x00442F18 File Offset: 0x00441118
+		// Token: 0x06020261 RID: 131681 RVA: 0x00475764 File Offset: 0x00473964
 		public static ICheckVehicleTriggerAngleCondition GetRootAsICheckVehicleTriggerAngleCondition(ByteBuffer _bb)
 		{
 			return ICheckVehicleTriggerAngleCondition.GetRootAsICheckVehicleTriggerAngleCondition(_bb, default(ICheckVehicleTriggerAngleCondition));
 		}
 
-		// Token: 0x0601E6D4 RID: 124628 RVA: 0x00442F34 File Offset: 0x00441134
+		// Token: 0x06020262 RID: 131682 RVA: 0x00475780 File Offset: 0x00473980
 		public static ICheckVehicleTriggerAngleCondition GetRootAsICheckVehicleTriggerAngleCondition(ByteBuffer _bb, ICheckVehicleTriggerAngleCondition obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0601E6D5 RID: 124629 RVA: 0x00442F51 File Offset: 0x00441151
+		// Token: 0x06020263 RID: 131683 RVA: 0x0047579D File Offset: 0x0047399D
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0601E6D6 RID: 124630 RVA: 0x00442F60 File Offset: 0x00441160
+		// Token: 0x06020264 RID: 131684 RVA: 0x004757AC File Offset: 0x004739AC
 		public ICheckVehicleTriggerAngleCondition __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17008C22 RID: 35874
-		// (get) Token: 0x0601E6D7 RID: 124631 RVA: 0x00442F70 File Offset: 0x00441170
+		// Token: 0x17009332 RID: 37682
+		// (get) Token: 0x06020265 RID: 131685 RVA: 0x004757BC File Offset: 0x004739BC
 		public EVehicleConditionType Type
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008C23 RID: 35875
-		// (get) Token: 0x0601E6D8 RID: 124632 RVA: 0x00442FAC File Offset: 0x004411AC
+		// Token: 0x17009333 RID: 37683
+		// (get) Token: 0x06020266 RID: 131686 RVA: 0x004757F8 File Offset: 0x004739F8
 		public float HorizontalAngle
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x17008C24 RID: 35876
-		// (get) Token: 0x0601E6D9 RID: 124633 RVA: 0x00442FEC File Offset: 0x004411EC
+		// Token: 0x17009334 RID: 37684
+		// (get) Token: 0x06020267 RID: 131687 RVA: 0x00475838 File Offset: 0x00473A38
 		public float VerticalAngle
 		{
 			get
@@ -92,7 +92,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			}
 		}
 
-		// Token: 0x0601E6DA RID: 124634 RVA: 0x0044302C File Offset: 0x0044122C
+		// Token: 0x06020268 RID: 131688 RVA: 0x00475878 File Offset: 0x00473A78
 		public static Offset<ICheckVehicleTriggerAngleCondition> CreateICheckVehicleTriggerAngleCondition(FlatBufferBuilder builder, EVehicleConditionType Type = EVehicleConditionType.UsingVehicle, float HorizontalAngle = 0f, float VerticalAngle = 0f)
 		{
 			builder.StartTable(3);
@@ -102,37 +102,37 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckVehicleTriggerAngleCondition.EndICheckVehicleTriggerAngleCondition(builder);
 		}
 
-		// Token: 0x0601E6DB RID: 124635 RVA: 0x00443050 File Offset: 0x00441250
+		// Token: 0x06020269 RID: 131689 RVA: 0x0047589C File Offset: 0x00473A9C
 		public static void StartICheckVehicleTriggerAngleCondition(FlatBufferBuilder builder)
 		{
 			builder.StartTable(3);
 		}
 
-		// Token: 0x0601E6DC RID: 124636 RVA: 0x00443059 File Offset: 0x00441259
+		// Token: 0x0602026A RID: 131690 RVA: 0x004758A5 File Offset: 0x00473AA5
 		public static void AddType(FlatBufferBuilder builder, EVehicleConditionType type)
 		{
 			builder.AddByte(0, (byte)type, 0);
 		}
 
-		// Token: 0x0601E6DD RID: 124637 RVA: 0x00443064 File Offset: 0x00441264
+		// Token: 0x0602026B RID: 131691 RVA: 0x004758B0 File Offset: 0x00473AB0
 		public static void AddHorizontalAngle(FlatBufferBuilder builder, float horizontalAngle)
 		{
 			builder.AddFloat(1, horizontalAngle, 0.0);
 		}
 
-		// Token: 0x0601E6DE RID: 124638 RVA: 0x00443077 File Offset: 0x00441277
+		// Token: 0x0602026C RID: 131692 RVA: 0x004758C3 File Offset: 0x00473AC3
 		public static void AddVerticalAngle(FlatBufferBuilder builder, float verticalAngle)
 		{
 			builder.AddFloat(2, verticalAngle, 0.0);
 		}
 
-		// Token: 0x0601E6DF RID: 124639 RVA: 0x0044308A File Offset: 0x0044128A
+		// Token: 0x0602026D RID: 131693 RVA: 0x004758D6 File Offset: 0x00473AD6
 		public static Offset<ICheckVehicleTriggerAngleCondition> EndICheckVehicleTriggerAngleCondition(FlatBufferBuilder builder)
 		{
 			return new Offset<ICheckVehicleTriggerAngleCondition>(builder.EndTable());
 		}
 
-		// Token: 0x0601E6E0 RID: 124640 RVA: 0x00443098 File Offset: 0x00441298
+		// Token: 0x0602026E RID: 131694 RVA: 0x004758E4 File Offset: 0x00473AE4
 		public ICheckVehicleTriggerAngleConditionT UnPack()
 		{
 			ICheckVehicleTriggerAngleConditionT checkVehicleTriggerAngleConditionT = new ICheckVehicleTriggerAngleConditionT();
@@ -140,7 +140,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return checkVehicleTriggerAngleConditionT;
 		}
 
-		// Token: 0x0601E6E1 RID: 124641 RVA: 0x004430B3 File Offset: 0x004412B3
+		// Token: 0x0602026F RID: 131695 RVA: 0x004758FF File Offset: 0x00473AFF
 		public void UnPackTo(ICheckVehicleTriggerAngleConditionT _o)
 		{
 			_o.Type = this.Type;
@@ -148,7 +148,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			_o.VerticalAngle = this.VerticalAngle;
 		}
 
-		// Token: 0x0601E6E2 RID: 124642 RVA: 0x004430DC File Offset: 0x004412DC
+		// Token: 0x06020270 RID: 131696 RVA: 0x00475928 File Offset: 0x00473B28
 		public static Offset<ICheckVehicleTriggerAngleCondition> Pack(FlatBufferBuilder builder, ICheckVehicleTriggerAngleConditionT _o)
 		{
 			if (_o == null)
@@ -158,7 +158,7 @@ namespace Aki.UniverseEditor.Interface.Fbs.Condition
 			return ICheckVehicleTriggerAngleCondition.CreateICheckVehicleTriggerAngleCondition(builder, _o.Type, _o.HorizontalAngle, _o.VerticalAngle);
 		}
 
-		// Token: 0x0400D438 RID: 54328
+		// Token: 0x0400DF38 RID: 57144
 		private Table __p;
 	}
 }

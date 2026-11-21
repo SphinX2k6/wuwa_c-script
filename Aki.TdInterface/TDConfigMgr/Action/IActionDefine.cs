@@ -4,19 +4,19 @@ using System.Runtime.CompilerServices;
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200147D RID: 5245
+	// Token: 0x020015D6 RID: 5590
 	[NullableContext(1)]
 	[Nullable(0)]
 	public static class IActionDefine
 	{
-		// Token: 0x06007764 RID: 30564 RVA: 0x0011D468 File Offset: 0x0011B668
+		// Token: 0x06007E31 RID: 32305 RVA: 0x0012C074 File Offset: 0x0012A274
 		public static bool IsStateTypeContainsState(string type, string state)
 		{
 			string entityStateKeyByTag = IActionDefine.GetEntityStateKeyByTag(type, state);
 			return !string.IsNullOrEmpty(entityStateKeyByTag) && IActionDefine.GetStatesByType(type).Contains(entityStateKeyByTag);
 		}
 
-		// Token: 0x06007765 RID: 30565 RVA: 0x0011D494 File Offset: 0x0011B694
+		// Token: 0x06007E32 RID: 32306 RVA: 0x0012C0A0 File Offset: 0x0012A2A0
 		public static ICollection<string> GetStatesByType(string type)
 		{
 			Dictionary<string, string> dictionary;
@@ -27,7 +27,7 @@ namespace Aki.TDConfigMgr.Action
 			return new List<string>();
 		}
 
-		// Token: 0x06007766 RID: 30566 RVA: 0x0011D4C0 File Offset: 0x0011B6C0
+		// Token: 0x06007E33 RID: 32307 RVA: 0x0012C0CC File Offset: 0x0012A2CC
 		public static string GetEntityStateTag(string type, string state)
 		{
 			Dictionary<string, string> dictionary;
@@ -38,7 +38,7 @@ namespace Aki.TDConfigMgr.Action
 			return dictionary.GetValueOrDefault(state) ?? string.Empty;
 		}
 
-		// Token: 0x06007767 RID: 30567 RVA: 0x0011D508 File Offset: 0x0011B708
+		// Token: 0x06007E34 RID: 32308 RVA: 0x0012C114 File Offset: 0x0012A314
 		[return: Nullable(2)]
 		public static string GetEntityStateKeyByTag(string entityStateType, string gamePlayTag)
 		{
@@ -50,7 +50,7 @@ namespace Aki.TDConfigMgr.Action
 			return null;
 		}
 
-		// Token: 0x06007768 RID: 30568 RVA: 0x0011D530 File Offset: 0x0011B730
+		// Token: 0x06007E35 RID: 32309 RVA: 0x0012C13C File Offset: 0x0012A33C
 		// Note: this type is marked as 'beforefieldinit'.
 		static IActionDefine()
 		{
@@ -492,69 +492,75 @@ namespace Aki.TDConfigMgr.Action
 			dictionary57["空气墙关"] = "关卡.Common.表现.变狐狸门空气墙.关";
 			dictionary57["空气墙开"] = "关卡.Common.表现.变狐狸门空气墙.开";
 			dictionary50[key46] = dictionary57;
-			IActionDefine.entityPrefabPerformanceConfig = dictionary50;
+			string key47 = "残像鱼";
 			Dictionary<string, string> dictionary58 = new Dictionary<string, string>();
-			dictionary58["[EExploreSkillType.Hook]"] = "自由钩锁";
-			dictionary58["[EExploreSkillType.Throw]"] = "投掷控物";
-			dictionary58["[EExploreSkillType.Control]"] = "拉起控物";
-			dictionary58["[EExploreSkillType.Scan]"] = "扫描";
-			dictionary58["[EExploreSkillType.ShowVision]"] = "幻象展示";
-			dictionary58["[EExploreSkillType.ShowVision2]"] = "声骸显像列表";
-			dictionary58["[EExploreSkillType.Photo]"] = "拍照";
-			dictionary58["[EExploreSkillType.PlaceTemporaryTeleport]"] = "放置临时传送点";
-			dictionary58["[EExploreSkillType.DetectSoundBox]"] = "声匣探测";
-			dictionary58["[EExploreSkillType.DetectTreasure]"] = "物资探测";
-			dictionary58["[EExploreSkillType.FollowShooterEnter]"] = "辅助机进入";
-			dictionary58["[EExploreSkillType.FollowShooterExit]"] = "辅助机退出";
-			dictionary58["[EExploreSkillType.Soaring]"] = "翱翔";
-			dictionary58["[EExploreSkillType.SummonMotorcycle]"] = "摩托召唤";
-			dictionary58["[EExploreSkillType.SummonMotorcyclePark]"] = "摩托召唤-停靠（未实现）";
-			dictionary58["[EExploreSkillType.MotorcycleCruise]"] = "摩托巡航";
-			dictionary58["[EExploreSkillType.MotorcycleHook]"] = "摩托钩锁-定点无人机";
-			dictionary58["[EExploreSkillType.MotorcycleCollect]"] = "摩托钩锁-采集";
-			IActionDefine.exploreSkillTypeMapper = dictionary58;
-			Dictionary<EInstrumentType, string> dictionary59 = new Dictionary<EInstrumentType, string>();
-			dictionary59[EInstrumentType.ChineseZither] = "古琴";
-			IActionDefine.InstrumentTypeCnMap = dictionary59;
+			dictionary58["待机"] = "关卡.Common.表现.鱼群.待机";
+			dictionary58["跟随玩家"] = "关卡.Common.表现.鱼群.跟随玩家";
+			dictionary58["样条巡逻"] = "关卡.Common.表现.鱼群.样条巡逻";
+			dictionary50[key47] = dictionary58;
+			IActionDefine.entityPrefabPerformanceConfig = dictionary50;
+			Dictionary<string, string> dictionary59 = new Dictionary<string, string>();
+			dictionary59["[EExploreSkillType.Hook]"] = "自由钩锁";
+			dictionary59["[EExploreSkillType.Throw]"] = "投掷控物";
+			dictionary59["[EExploreSkillType.Control]"] = "拉起控物";
+			dictionary59["[EExploreSkillType.Scan]"] = "扫描";
+			dictionary59["[EExploreSkillType.ShowVision]"] = "幻象展示";
+			dictionary59["[EExploreSkillType.ShowVision2]"] = "声骸显像列表";
+			dictionary59["[EExploreSkillType.Photo]"] = "拍照";
+			dictionary59["[EExploreSkillType.PlaceTemporaryTeleport]"] = "放置临时传送点";
+			dictionary59["[EExploreSkillType.DetectSoundBox]"] = "声匣探测";
+			dictionary59["[EExploreSkillType.DetectTreasure]"] = "物资探测";
+			dictionary59["[EExploreSkillType.FollowShooterEnter]"] = "辅助机进入";
+			dictionary59["[EExploreSkillType.FollowShooterExit]"] = "辅助机退出";
+			dictionary59["[EExploreSkillType.Soaring]"] = "翱翔";
+			dictionary59["[EExploreSkillType.SummonMotorcycle]"] = "摩托召唤";
+			dictionary59["[EExploreSkillType.SummonMotorcyclePark]"] = "摩托召唤-停靠";
+			dictionary59["[EExploreSkillType.MotorcycleCruise]"] = "摩托巡航";
+			dictionary59["[EExploreSkillType.MotorcycleHook]"] = "摩托钩锁-定点无人机";
+			dictionary59["[EExploreSkillType.MotorcycleCollect]"] = "摩托钩锁-采集";
+			IActionDefine.exploreSkillTypeMapper = dictionary59;
+			Dictionary<EInstrumentType, string> dictionary60 = new Dictionary<EInstrumentType, string>();
+			dictionary60[EInstrumentType.ChineseZither] = "古琴";
+			IActionDefine.InstrumentTypeCnMap = dictionary60;
 		}
 
-		// Token: 0x04004565 RID: 17765
+		// Token: 0x04004900 RID: 18688
 		public static readonly IReadOnlyDictionary<string, string> logLevelConfig;
 
-		// Token: 0x04004566 RID: 17766
+		// Token: 0x04004901 RID: 18689
 		public static readonly IReadOnlyDictionary<string, string> actorStateConfig;
 
-		// Token: 0x04004567 RID: 17767
+		// Token: 0x04004902 RID: 18690
 		public static readonly IReadOnlyDictionary<string, string> cameraModeConfig;
 
-		// Token: 0x04004568 RID: 17768
+		// Token: 0x04004903 RID: 18691
 		public static readonly IReadOnlyDictionary<string, string> plotModeConfig;
 
-		// Token: 0x04004569 RID: 17769
+		// Token: 0x04004904 RID: 18692
 		public static readonly IReadOnlyDictionary<string, string> cameraBindModeConfig;
 
-		// Token: 0x0400456A RID: 17770
+		// Token: 0x04004905 RID: 18693
 		public static readonly IReadOnlyDictionary<string, string> cameraTypeConfig;
 
-		// Token: 0x0400456B RID: 17771
+		// Token: 0x04004906 RID: 18694
 		public static readonly IReadOnlyDictionary<string, string> calOpTypeConfig;
 
-		// Token: 0x0400456C RID: 17772
+		// Token: 0x04004907 RID: 18695
 		public static readonly IReadOnlyDictionary<string, string> compareTypeConfig;
 
-		// Token: 0x0400456D RID: 17773
+		// Token: 0x04004908 RID: 18696
 		public static readonly IReadOnlyDictionary<string, string> logicOpTypeConfig;
 
-		// Token: 0x0400456E RID: 17774
+		// Token: 0x04004909 RID: 18697
 		public static readonly IReadOnlyDictionary<string, Dictionary<string, string>> entityStateConfig;
 
-		// Token: 0x0400456F RID: 17775
+		// Token: 0x0400490A RID: 18698
 		public static readonly IReadOnlyDictionary<string, Dictionary<string, string>> entityPrefabPerformanceConfig;
 
-		// Token: 0x04004570 RID: 17776
+		// Token: 0x0400490B RID: 18699
 		public static readonly IReadOnlyDictionary<string, string> exploreSkillTypeMapper;
 
-		// Token: 0x04004571 RID: 17777
+		// Token: 0x0400490C RID: 18700
 		public static readonly IReadOnlyDictionary<EInstrumentType, string> InstrumentTypeCnMap;
 	}
 }

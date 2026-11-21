@@ -2,15 +2,15 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Component
 {
-	// Token: 0x02005BB3 RID: 23475
+	// Token: 0x020061C9 RID: 25033
 	public class IWuWaGoHintStepBaseT
 	{
-		// Token: 0x1700B165 RID: 45413
-		// (get) Token: 0x06028345 RID: 164677 RVA: 0x005864CA File Offset: 0x005846CA
-		// (set) Token: 0x06028346 RID: 164678 RVA: 0x005864D2 File Offset: 0x005846D2
+		// Token: 0x1700BAAD RID: 47789
+		// (get) Token: 0x0602A909 RID: 174345 RVA: 0x005CDF5A File Offset: 0x005CC15A
+		// (set) Token: 0x0602A90A RID: 174346 RVA: 0x005CDF62 File Offset: 0x005CC162
 		public EWuWaGoHintStepType Type { get; set; }
 
-		// Token: 0x06028347 RID: 164679 RVA: 0x005864DB File Offset: 0x005846DB
+		// Token: 0x0602A90B RID: 174347 RVA: 0x005CDF6B File Offset: 0x005CC16B
 		public IWuWaGoHintStepBaseT()
 		{
 			this.Type = EWuWaGoHintStepType.Move;

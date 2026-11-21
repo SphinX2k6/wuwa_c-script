@@ -7,22 +7,22 @@ using CSharpScript.Game.Ui;
 using Google.Protobuf;
 using Google.Protobuf.Collections;
 
-// Token: 0x02002A46 RID: 10822
+// Token: 0x02001FC1 RID: 8129
 [NullableContext(2)]
 [Nullable(0)]
 public class FlySkinController : UiControllerBase
 {
-	// Token: 0x060168C4 RID: 92356 RVA: 0x005B73E8 File Offset: 0x005B55E8
+	// Token: 0x060142E5 RID: 82661 RVA: 0x005E352C File Offset: 0x005E172C
 	protected override void OnAddEvents()
 	{
 	}
 
-	// Token: 0x060168C5 RID: 92357 RVA: 0x005B73EA File Offset: 0x005B55EA
+	// Token: 0x060142E6 RID: 82662 RVA: 0x005E352E File Offset: 0x005E172E
 	protected override void OnRemoveEvents()
 	{
 	}
 
-	// Token: 0x060168C6 RID: 92358 RVA: 0x005B73EC File Offset: 0x005B55EC
+	// Token: 0x060142E7 RID: 82663 RVA: 0x005E3530 File Offset: 0x005E1730
 	protected override void OnRegisterNetEvent()
 	{
 		Net.Instance.Register(ENotifyMessageId.RoleFlyEquipNotify, new Action<IMessage, Net.CallbackStatus>(this.OnRoleFlyEquipNotify));
@@ -30,7 +30,7 @@ public class FlySkinController : UiControllerBase
 		Net.Instance.Register(ENotifyMessageId.FlyEquipAddNotify, new Action<IMessage, Net.CallbackStatus>(this.OnFlyEquipAddNotifyNotify));
 	}
 
-	// Token: 0x060168C7 RID: 92359 RVA: 0x005B744D File Offset: 0x005B564D
+	// Token: 0x060142E8 RID: 82664 RVA: 0x005E3591 File Offset: 0x005E1791
 	protected override void OnUnRegisterNetEvent()
 	{
 		Net.Instance.UnRegister(ENotifyMessageId.RoleFlyEquipNotify);
@@ -38,7 +38,7 @@ public class FlySkinController : UiControllerBase
 		Net.Instance.UnRegister(ENotifyMessageId.FlyEquipAddNotify);
 	}
 
-	// Token: 0x060168C8 RID: 92360 RVA: 0x005B7480 File Offset: 0x005B5680
+	// Token: 0x060142E9 RID: 82665 RVA: 0x005E35C4 File Offset: 0x005E17C4
 	private void OnRoleFlyEquipNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		RoleFlyEquipNotify roleFlyEquipNotify = (RoleFlyEquipNotify)msg;
@@ -53,7 +53,7 @@ public class FlySkinController : UiControllerBase
 		EventSystem.Instance.Emit<EFlySkinType>(EEventName.RefreshFlySkinChildTabRed, EFlySkinType.SoarWing);
 	}
 
-	// Token: 0x060168C9 RID: 92361 RVA: 0x005B74EC File Offset: 0x005B56EC
+	// Token: 0x060142EA RID: 82666 RVA: 0x005E3630 File Offset: 0x005E1830
 	private void OnRoleFlyEquipChangeNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		RoleFlyEquipChangeNotify roleFlyEquipChangeNotify = (RoleFlyEquipChangeNotify)msg;
@@ -69,7 +69,7 @@ public class FlySkinController : UiControllerBase
 		EventSystem.Instance.Emit<IReadOnlyList<RoleFlySkinChange>>(EEventName.OnRoleFlyEquipChangeNotify, skinChanges);
 	}
 
-	// Token: 0x060168CA RID: 92362 RVA: 0x005B7568 File Offset: 0x005B5768
+	// Token: 0x060142EB RID: 82667 RVA: 0x005E36AC File Offset: 0x005E18AC
 	private void OnFlyEquipAddNotifyNotify(IMessage msg, Net.CallbackStatus status)
 	{
 		FlyEquipAddNotify flyEquipAddNotify = (FlyEquipAddNotify)msg;
@@ -88,7 +88,7 @@ public class FlySkinController : UiControllerBase
 		EventSystem.Instance.Emit<IReadOnlyList<int>>(EEventName.OnFlyEquipAddNotify, flySkins);
 	}
 
-	// Token: 0x060168CB RID: 92363 RVA: 0x005B7600 File Offset: 0x005B5800
+	// Token: 0x060142EC RID: 82668 RVA: 0x005E3744 File Offset: 0x005E1944
 	public void FlySkinWearRequest(int roleDataId, int skinId)
 	{
 		if (!SkinController.Instance.CheckCanWearSkinAndShowTip())
@@ -112,11 +112,11 @@ public class FlySkinController : UiControllerBase
 				ScrollingTipsController.Instance.ShowTipsByTextId("FlySkinReplaceTip", Array.Empty<object>());
 				return;
 			}
-			ErrorCodeController.Instance.OpenErrorCodeTipView(flySkinWearResponse.ErrorCode, 17717, null, true, true);
+			ErrorCodeController.Instance.OpenErrorCodeTipView(flySkinWearResponse.ErrorCode, 25179, null, true, true);
 		}, 0);
 	}
 
-	// Token: 0x060168CC RID: 92364 RVA: 0x005B766C File Offset: 0x005B586C
+	// Token: 0x060142ED RID: 82669 RVA: 0x005E37B0 File Offset: 0x005E19B0
 	public void FlySkinWearAllRoleRequest(int skinId)
 	{
 		if (!SkinController.Instance.CheckCanWearSkinAndShowTip())
@@ -142,11 +142,11 @@ public class FlySkinController : UiControllerBase
 				EventSystem.Instance.Emit<IReadOnlyList<RoleFlySkinChange>>(EEventName.OnFlySkinEquipToAllRoleResponse, skinChanges);
 				return;
 			}
-			ErrorCodeController.Instance.OpenErrorCodeTipView(flySkinWearAllRoleResponse.ErrorCode, 25354, null, true, true);
+			ErrorCodeController.Instance.OpenErrorCodeTipView(flySkinWearAllRoleResponse.ErrorCode, 15632, null, true, true);
 		}, 0);
 	}
 
-	// Token: 0x060168CD RID: 92365 RVA: 0x005B76C4 File Offset: 0x005B58C4
+	// Token: 0x060142EE RID: 82670 RVA: 0x005E3808 File Offset: 0x005E1A08
 	public void FlySkinUnLoadRequest(int roleDataId, int skinId)
 	{
 		if (!SkinController.Instance.CheckCanWearSkinAndShowTip())
@@ -169,11 +169,11 @@ public class FlySkinController : UiControllerBase
 				EventSystem.Instance.Emit<int, int>(EEventName.OnFlySkinUnLoadResponse, roleDataId, skinId);
 				return;
 			}
-			ErrorCodeController.Instance.OpenErrorCodeTipView(flySkinUnLoadResponse.ErrorCode, 23595, null, true, true);
+			ErrorCodeController.Instance.OpenErrorCodeTipView(flySkinUnLoadResponse.ErrorCode, 29892, null, true, true);
 		}, 0);
 	}
 
-	// Token: 0x060168CE RID: 92366 RVA: 0x005B7730 File Offset: 0x005B5930
+	// Token: 0x060142EF RID: 82671 RVA: 0x005E3874 File Offset: 0x005E1A74
 	public void FlySkinAllUnLoadRequest(EFlySkinType skinType)
 	{
 		if (!SkinController.Instance.CheckCanWearSkinAndShowTip())
@@ -198,11 +198,11 @@ public class FlySkinController : UiControllerBase
 				EventSystem.Instance.Emit<EFlySkinType>(EEventName.OnFlySkinAllUnLoadResponse, skinType);
 				return;
 			}
-			ErrorCodeController.Instance.OpenErrorCodeTipView(flySkinAllUnLoadResponse.ErrorCode, 23595, null, true, true);
+			ErrorCodeController.Instance.OpenErrorCodeTipView(flySkinAllUnLoadResponse.ErrorCode, 29892, null, true, true);
 		}, 0);
 	}
 
-	// Token: 0x060168CF RID: 92367 RVA: 0x005B7786 File Offset: 0x005B5986
+	// Token: 0x060142F0 RID: 82672 RVA: 0x005E38CA File Offset: 0x005E1ACA
 	public void UpdateAllRoleSkinRedDot()
 	{
 		RedDotBase redDot = RedDotModel.Instance.GetRedDot(ERedDotName.RoleSkin);
@@ -213,8 +213,8 @@ public class FlySkinController : UiControllerBase
 		redDot.UpdateAllRedDotData();
 	}
 
-	// Token: 0x17001DE5 RID: 7653
-	// (get) Token: 0x060168D0 RID: 92368 RVA: 0x005B779E File Offset: 0x005B599E
+	// Token: 0x17001E3D RID: 7741
+	// (get) Token: 0x060142F1 RID: 82673 RVA: 0x005E38E2 File Offset: 0x005E1AE2
 	[Nullable(1)]
 	public static FlySkinController Instance
 	{
@@ -225,7 +225,7 @@ public class FlySkinController : UiControllerBase
 		}
 	}
 
-	// Token: 0x060168D1 RID: 92369 RVA: 0x005B77A5 File Offset: 0x005B59A5
+	// Token: 0x060142F2 RID: 82674 RVA: 0x005E38E9 File Offset: 0x005E1AE9
 	[NullableContext(1)]
 	public static FlySkinController GetOrCreateInstance()
 	{
@@ -236,7 +236,7 @@ public class FlySkinController : UiControllerBase
 		return FlySkinController._Instance;
 	}
 
-	// Token: 0x060168D2 RID: 92370 RVA: 0x005B77B9 File Offset: 0x005B59B9
+	// Token: 0x060142F3 RID: 82675 RVA: 0x005E38FD File Offset: 0x005E1AFD
 	public static bool CreateInstance()
 	{
 		if (FlySkinController._Instance != null)
@@ -247,23 +247,23 @@ public class FlySkinController : UiControllerBase
 		return true;
 	}
 
-	// Token: 0x060168D3 RID: 92371 RVA: 0x005B77CF File Offset: 0x005B59CF
+	// Token: 0x060142F4 RID: 82676 RVA: 0x005E3913 File Offset: 0x005E1B13
 	public static void CreateStaticDefaultValue()
 	{
 	}
 
-	// Token: 0x060168D4 RID: 92372 RVA: 0x005B77D1 File Offset: 0x005B59D1
+	// Token: 0x060142F5 RID: 82677 RVA: 0x005E3915 File Offset: 0x005E1B15
 	public static void ResetStaticDefaultValue()
 	{
 		FlySkinController._Instance = null;
 	}
 
-	// Token: 0x060168D5 RID: 92373 RVA: 0x005B77D9 File Offset: 0x005B59D9
+	// Token: 0x060142F6 RID: 82678 RVA: 0x005E391D File Offset: 0x005E1B1D
 	static FlySkinController()
 	{
 		StaticVariableRegister.RegisterAndExecute(new Action(FlySkinController.CreateStaticDefaultValue), new Action(FlySkinController.ResetStaticDefaultValue));
 	}
 
-	// Token: 0x0400A75F RID: 42847
+	// Token: 0x0400AB63 RID: 43875
 	private static FlySkinController _Instance;
 }

@@ -9,12 +9,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.BattleUi.Views
 {
-	// Token: 0x02005E39 RID: 24121
+	// Token: 0x02004E1E RID: 19998
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class GroundSwordStackItem : GridProxyAbstract<ESwordStackState>
 	{
-		// Token: 0x0603D545 RID: 251205 RVA: 0x00EC8DAC File Offset: 0x00EC6FAC
+		// Token: 0x060324D5 RID: 206037 RVA: 0x00E1A318 File Offset: 0x00E18518
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 3;
@@ -30,13 +30,13 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603D546 RID: 251206 RVA: 0x00EC8E36 File Offset: 0x00EC7036
+		// Token: 0x060324D6 RID: 206038 RVA: 0x00E1A3A2 File Offset: 0x00E185A2
 		protected override void OnStart()
 		{
 			this.SequencePlayer = new LevelSequencePlayer(base.GetRootItem());
 		}
 
-		// Token: 0x0603D547 RID: 251207 RVA: 0x00EC8E49 File Offset: 0x00EC7049
+		// Token: 0x060324D7 RID: 206039 RVA: 0x00E1A3B5 File Offset: 0x00E185B5
 		protected override void OnBeforeDestroy()
 		{
 			this.TransitionToken++;
@@ -48,7 +48,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.SequencePlayer = null;
 		}
 
-		// Token: 0x0603D548 RID: 251208 RVA: 0x00EC8E74 File Offset: 0x00EC7074
+		// Token: 0x060324D8 RID: 206040 RVA: 0x00E1A3E0 File Offset: 0x00E185E0
 		public override void Refresh(ESwordStackState data, bool isSelected, int gridIndex)
 		{
 			if (this.State == data)
@@ -60,7 +60,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.PlayTransition(state, data);
 		}
 
-		// Token: 0x0603D549 RID: 251209 RVA: 0x00EC8EA4 File Offset: 0x00EC70A4
+		// Token: 0x060324D9 RID: 206041 RVA: 0x00E1A410 File Offset: 0x00E18610
 		private void PlayTransition(ESwordStackState oldState, ESwordStackState newState)
 		{
 			int num = this.TransitionToken + 1;
@@ -69,7 +69,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			this.PlayTransitionAsync(oldState, newState, token).Forget();
 		}
 
-		// Token: 0x0603D54A RID: 251210 RVA: 0x00EC8ED4 File Offset: 0x00EC70D4
+		// Token: 0x060324DA RID: 206042 RVA: 0x00E1A440 File Offset: 0x00E18640
 		private UniTask PlayTransitionAsync(ESwordStackState oldState, ESwordStackState newState, int token)
 		{
 			GroundSwordStackItem.<PlayTransitionAsync>d__13 <PlayTransitionAsync>d__;
@@ -83,7 +83,7 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <PlayTransitionAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603D54B RID: 251211 RVA: 0x00EC8F30 File Offset: 0x00EC7130
+		// Token: 0x060324DB RID: 206043 RVA: 0x00E1A49C File Offset: 0x00E1869C
 		[NullableContext(0)]
 		private UniTask<bool> PlaySequenceAsync([Nullable(1)] string sequenceName, int token)
 		{
@@ -97,37 +97,37 @@ namespace CSharpScript.Game.Module.BattleUi.Views
 			return <PlaySequenceAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0401FFDB RID: 131035
+		// Token: 0x0401AAA2 RID: 109218
 		private const string SequenceFull = "Full";
 
-		// Token: 0x0401FFDC RID: 131036
+		// Token: 0x0401AAA3 RID: 109219
 		private const string SequencePreUse = "PreUse";
 
-		// Token: 0x0401FFDD RID: 131037
+		// Token: 0x0401AAA4 RID: 109220
 		private const string SequenceUse = "Use";
 
-		// Token: 0x0401FFDE RID: 131038
+		// Token: 0x0401AAA5 RID: 109221
 		private const string SequenceUnlock = "Unlock";
 
-		// Token: 0x0401FFDF RID: 131039
+		// Token: 0x0401AAA6 RID: 109222
 		[Nullable(2)]
 		private LevelSequencePlayer SequencePlayer;
 
-		// Token: 0x0401FFE0 RID: 131040
+		// Token: 0x0401AAA7 RID: 109223
 		private ESwordStackState State = ESwordStackState.Lock;
 
-		// Token: 0x0401FFE1 RID: 131041
+		// Token: 0x0401AAA8 RID: 109224
 		private int TransitionToken;
 
-		// Token: 0x0200C1B5 RID: 49589
+		// Token: 0x0200ABC4 RID: 43972
 		[NullableContext(0)]
 		private enum EChildType
 		{
-			// Token: 0x0403A892 RID: 239762
+			// Token: 0x04035284 RID: 217732
 			SprIconNor,
-			// Token: 0x0403A893 RID: 239763
+			// Token: 0x04035285 RID: 217733
 			PnlLight,
-			// Token: 0x0403A894 RID: 239764
+			// Token: 0x04035286 RID: 217734
 			SprIconLock
 		}
 	}

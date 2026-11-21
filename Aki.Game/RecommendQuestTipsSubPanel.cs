@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 using CSharpScript.Game.Ui;
 using UnrealEngine;
 
-// Token: 0x0200125C RID: 4700
+// Token: 0x02000710 RID: 1808
 [NullableContext(1)]
 [Nullable(0)]
 public class RecommendQuestTipsSubPanel : UiPanelBase
 {
-	// Token: 0x06007FB6 RID: 32694 RVA: 0x001B074C File Offset: 0x001AE94C
+	// Token: 0x0600534D RID: 21325 RVA: 0x001B93FC File Offset: 0x001B75FC
 	protected unsafe override void OnRegisterComponent()
 	{
 		int num = 2;
@@ -31,25 +31,25 @@ public class RecommendQuestTipsSubPanel : UiPanelBase
 		this.BtnBindInfo = list2;
 	}
 
-	// Token: 0x06007FB7 RID: 32695 RVA: 0x001B07F2 File Offset: 0x001AE9F2
+	// Token: 0x0600534E RID: 21326 RVA: 0x001B94A2 File Offset: 0x001B76A2
 	public void SetTipsTxtByTextId(string textId, params string[] args)
 	{
 		LguiUtil.Instance.SetLocalTextNew(base.GetText(0), textId, args);
 	}
 
-	// Token: 0x06007FB8 RID: 32696 RVA: 0x001B0807 File Offset: 0x001AEA07
+	// Token: 0x0600534F RID: 21327 RVA: 0x001B94B7 File Offset: 0x001B76B7
 	public void SetTipsTxt(string text)
 	{
 		base.GetText(0).SetText(text, true);
 	}
 
-	// Token: 0x06007FB9 RID: 32697 RVA: 0x001B0817 File Offset: 0x001AEA17
+	// Token: 0x06005350 RID: 21328 RVA: 0x001B94C7 File Offset: 0x001B76C7
 	public void BindClickBtnTipsCallBack(TRecommendQuestTipsBtnCallBack callBack)
 	{
 		this.QuestTipsBtnCallBack = callBack;
 	}
 
-	// Token: 0x06007FBA RID: 32698 RVA: 0x001B0820 File Offset: 0x001AEA20
+	// Token: 0x06005351 RID: 21329 RVA: 0x001B94D0 File Offset: 0x001B76D0
 	private void OnClickTipsBtn()
 	{
 		TRecommendQuestTipsBtnCallBack questTipsBtnCallBack = this.QuestTipsBtnCallBack;
@@ -60,7 +60,7 @@ public class RecommendQuestTipsSubPanel : UiPanelBase
 		questTipsBtnCallBack();
 	}
 
-	// Token: 0x06007FBB RID: 32699 RVA: 0x001B0834 File Offset: 0x001AEA34
+	// Token: 0x06005352 RID: 21330 RVA: 0x001B94E4 File Offset: 0x001B76E4
 	public void SetBtnActive(bool active)
 	{
 		UUIButtonComponent button = base.GetButton(1);
@@ -76,17 +76,17 @@ public class RecommendQuestTipsSubPanel : UiPanelBase
 		uuiitem.SetUIActive(active);
 	}
 
-	// Token: 0x04003A1A RID: 14874
+	// Token: 0x04003AB2 RID: 15026
 	[Nullable(2)]
 	private TRecommendQuestTipsBtnCallBack QuestTipsBtnCallBack;
 
-	// Token: 0x02007871 RID: 30833
+	// Token: 0x020069FC RID: 27132
 	[NullableContext(0)]
 	private enum EComponents
 	{
-		// Token: 0x04027AFA RID: 162554
+		// Token: 0x04022E2B RID: 142891
 		TxtTips,
-		// Token: 0x04027AFB RID: 162555
+		// Token: 0x04022E2C RID: 142892
 		BtnTips
 	}
 }

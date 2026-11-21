@@ -5,12 +5,12 @@ using UnrealEngine;
 
 namespace CSharpScript.Core.Model
 {
-	// Token: 0x02000131 RID: 305
+	// Token: 0x02000132 RID: 306
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class JsModelManager : Singleton
 	{
-		// Token: 0x06000AE9 RID: 2793 RVA: 0x00034C58 File Offset: 0x00032E58
+		// Token: 0x06000B40 RID: 2880 RVA: 0x000356CC File Offset: 0x000338CC
 		public void InitializeEnvironment()
 		{
 			UWorld world = Info.Instance.World;
@@ -23,14 +23,14 @@ namespace CSharpScript.Core.Model
 			this.HasInitialized = true;
 		}
 
-		// Token: 0x06000AEA RID: 2794 RVA: 0x00034C9C File Offset: 0x00032E9C
+		// Token: 0x06000B41 RID: 2881 RVA: 0x00035710 File Offset: 0x00033910
 		public void DestroyEnvironment()
 		{
 			this.HasInitialized = false;
 			UKuroJsModelFunctionLibrary.DestroyEnvironment();
 		}
 
-		// Token: 0x06000AEB RID: 2795 RVA: 0x00034CAA File Offset: 0x00032EAA
+		// Token: 0x06000B42 RID: 2882 RVA: 0x0003571E File Offset: 0x0003391E
 		public void AddEntity(int entityId)
 		{
 			if (!this.HasInitialized)
@@ -40,7 +40,7 @@ namespace CSharpScript.Core.Model
 			UKuroJsModelFunctionLibrary.AddEntity(entityId);
 		}
 
-		// Token: 0x06000AEC RID: 2796 RVA: 0x00034CBB File Offset: 0x00032EBB
+		// Token: 0x06000B43 RID: 2883 RVA: 0x0003572F File Offset: 0x0003392F
 		[NullableContext(2)]
 		public void UpdateEntityActor(int entityId, AActor actor)
 		{
@@ -51,7 +51,7 @@ namespace CSharpScript.Core.Model
 			UKuroJsModelFunctionLibrary.UpdateEntityActor(entityId, actor);
 		}
 
-		// Token: 0x06000AED RID: 2797 RVA: 0x00034CCD File Offset: 0x00032ECD
+		// Token: 0x06000B44 RID: 2884 RVA: 0x00035741 File Offset: 0x00033941
 		public void RemoveEntity(int entityId)
 		{
 			if (!this.HasInitialized)
@@ -61,8 +61,8 @@ namespace CSharpScript.Core.Model
 			UKuroJsModelFunctionLibrary.RemoveEntity(entityId);
 		}
 
-		// Token: 0x17000106 RID: 262
-		// (get) Token: 0x06000AEE RID: 2798 RVA: 0x00034CDE File Offset: 0x00032EDE
+		// Token: 0x17000119 RID: 281
+		// (get) Token: 0x06000B45 RID: 2885 RVA: 0x00035752 File Offset: 0x00033952
 		public static JsModelManager Instance
 		{
 			get
@@ -76,12 +76,12 @@ namespace CSharpScript.Core.Model
 			}
 		}
 
-		// Token: 0x06000AEF RID: 2799 RVA: 0x00034D01 File Offset: 0x00032F01
+		// Token: 0x06000B46 RID: 2886 RVA: 0x00035775 File Offset: 0x00033975
 		public static void CreateStaticDefaultValue()
 		{
 		}
 
-		// Token: 0x06000AF0 RID: 2800 RVA: 0x00034D03 File Offset: 0x00032F03
+		// Token: 0x06000B47 RID: 2887 RVA: 0x00035777 File Offset: 0x00033977
 		public static void ResetStaticDefaultValue()
 		{
 			JsModelManager instance = JsModelManager._instance;
@@ -92,16 +92,16 @@ namespace CSharpScript.Core.Model
 			JsModelManager._instance = null;
 		}
 
-		// Token: 0x06000AF1 RID: 2801 RVA: 0x00034D1C File Offset: 0x00032F1C
+		// Token: 0x06000B48 RID: 2888 RVA: 0x00035790 File Offset: 0x00033990
 		static JsModelManager()
 		{
 			StaticVariableRegister.RegisterAndExecute(new Action(JsModelManager.CreateStaticDefaultValue), new Action(JsModelManager.ResetStaticDefaultValue));
 		}
 
-		// Token: 0x040006C3 RID: 1731
+		// Token: 0x040006D1 RID: 1745
 		public bool HasInitialized;
 
-		// Token: 0x040006C4 RID: 1732
+		// Token: 0x040006D2 RID: 1746
 		[Nullable(2)]
 		private static JsModelManager _instance;
 	}

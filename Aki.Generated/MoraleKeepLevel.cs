@@ -3,11 +3,11 @@ using Google.FlatBuffers;
 
 namespace Aki.Config
 {
-	// Token: 0x02000E25 RID: 3621
+	// Token: 0x02000F0A RID: 3850
 	public struct MoraleKeepLevel : IFlatbufferObject
 	{
-		// Token: 0x17001FD2 RID: 8146
-		// (get) Token: 0x0600961A RID: 38426 RVA: 0x00289B80 File Offset: 0x00287D80
+		// Token: 0x17002037 RID: 8247
+		// (get) Token: 0x06009C3A RID: 39994 RVA: 0x002A78B4 File Offset: 0x002A5AB4
 		public ByteBuffer ByteBuffer
 		{
 			get
@@ -16,39 +16,39 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x0600961B RID: 38427 RVA: 0x00289B8D File Offset: 0x00287D8D
+		// Token: 0x06009C3B RID: 39995 RVA: 0x002A78C1 File Offset: 0x002A5AC1
 		public static void ValidateVersion()
 		{
 			FlatBufferConstants.FLATBUFFERS_25_2_10();
 		}
 
-		// Token: 0x0600961C RID: 38428 RVA: 0x00289B94 File Offset: 0x00287D94
+		// Token: 0x06009C3C RID: 39996 RVA: 0x002A78C8 File Offset: 0x002A5AC8
 		public static MoraleKeepLevel GetRootAsMoraleKeepLevel(ByteBuffer _bb)
 		{
 			return MoraleKeepLevel.GetRootAsMoraleKeepLevel(_bb, default(MoraleKeepLevel));
 		}
 
-		// Token: 0x0600961D RID: 38429 RVA: 0x00289BB0 File Offset: 0x00287DB0
+		// Token: 0x06009C3D RID: 39997 RVA: 0x002A78E4 File Offset: 0x002A5AE4
 		public static MoraleKeepLevel GetRootAsMoraleKeepLevel(ByteBuffer _bb, MoraleKeepLevel obj)
 		{
 			return obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb);
 		}
 
-		// Token: 0x0600961E RID: 38430 RVA: 0x00289BCD File Offset: 0x00287DCD
+		// Token: 0x06009C3E RID: 39998 RVA: 0x002A7901 File Offset: 0x002A5B01
 		public void __init(int _i, ByteBuffer _bb)
 		{
 			this.__p = new Table(_i, _bb);
 		}
 
-		// Token: 0x0600961F RID: 38431 RVA: 0x00289BDC File Offset: 0x00287DDC
+		// Token: 0x06009C3F RID: 39999 RVA: 0x002A7910 File Offset: 0x002A5B10
 		public MoraleKeepLevel __assign(int _i, ByteBuffer _bb)
 		{
 			this.__init(_i, _bb);
 			return this;
 		}
 
-		// Token: 0x17001FD3 RID: 8147
-		// (get) Token: 0x06009620 RID: 38432 RVA: 0x00289BEC File Offset: 0x00287DEC
+		// Token: 0x17002038 RID: 8248
+		// (get) Token: 0x06009C40 RID: 40000 RVA: 0x002A7920 File Offset: 0x002A5B20
 		public int Level
 		{
 			get
@@ -62,8 +62,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001FD4 RID: 8148
-		// (get) Token: 0x06009621 RID: 38433 RVA: 0x00289C28 File Offset: 0x00287E28
+		// Token: 0x17002039 RID: 8249
+		// (get) Token: 0x06009C41 RID: 40001 RVA: 0x002A795C File Offset: 0x002A5B5C
 		public int Experience
 		{
 			get
@@ -77,8 +77,8 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x17001FD5 RID: 8149
-		// (get) Token: 0x06009622 RID: 38434 RVA: 0x00289C64 File Offset: 0x00287E64
+		// Token: 0x1700203A RID: 8250
+		// (get) Token: 0x06009C42 RID: 40002 RVA: 0x002A7998 File Offset: 0x002A5B98
 		public string LvAddDesc
 		{
 			get
@@ -92,19 +92,19 @@ namespace Aki.Config
 			}
 		}
 
-		// Token: 0x06009623 RID: 38435 RVA: 0x00289C9B File Offset: 0x00287E9B
+		// Token: 0x06009C43 RID: 40003 RVA: 0x002A79CF File Offset: 0x002A5BCF
 		public Span<byte> GetLvAddDescBytes()
 		{
 			return this.__p.__vector_as_span<byte>(8, 1);
 		}
 
-		// Token: 0x06009624 RID: 38436 RVA: 0x00289CAA File Offset: 0x00287EAA
+		// Token: 0x06009C44 RID: 40004 RVA: 0x002A79DE File Offset: 0x002A5BDE
 		public byte[] GetLvAddDescArray()
 		{
 			return this.__p.__vector_as_array<byte>(8) ?? Array.Empty<byte>();
 		}
 
-		// Token: 0x04004ECA RID: 20170
+		// Token: 0x040054AF RID: 21679
 		private Table __p;
 	}
 }

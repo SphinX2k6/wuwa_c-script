@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x0200205E RID: 8286
+	// Token: 0x020022A7 RID: 8871
 	public class IVisualNovelBackgroundLoad_SetValue
 	{
-		// Token: 0x04006D6C RID: 28012
+		// Token: 0x04007375 RID: 29557
 		public EVisualNovelBackgroundType Type;
 
-		// Token: 0x04006D6D RID: 28013
+		// Token: 0x04007376 RID: 29558
 		public int BackgroundId;
 	}
 }

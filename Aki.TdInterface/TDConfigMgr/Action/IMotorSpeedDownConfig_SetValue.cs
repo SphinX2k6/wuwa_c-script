@@ -2,13 +2,13 @@
 
 namespace Aki.TDConfigMgr.Action
 {
-	// Token: 0x02001C2D RID: 7213
+	// Token: 0x02001E24 RID: 7716
 	public class IMotorSpeedDownConfig_SetValue
 	{
-		// Token: 0x04005E16 RID: 24086
+		// Token: 0x0400634D RID: 25421
 		public EMotorParamsChangeType Type;
 
-		// Token: 0x04005E17 RID: 24087
+		// Token: 0x0400634E RID: 25422
 		public EMotorSpeedDownConfig SpeedDownTagId;
 	}
 }

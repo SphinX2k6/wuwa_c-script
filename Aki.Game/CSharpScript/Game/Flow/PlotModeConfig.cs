@@ -4,10 +4,10 @@ using System.Runtime.CompilerServices;
 
 namespace CSharpScript.Game.Flow
 {
-	// Token: 0x02007259 RID: 29273
+	// Token: 0x020063D8 RID: 25560
 	public class PlotModeConfig
 	{
-		// Token: 0x04025B89 RID: 154505
+		// Token: 0x04020E47 RID: 134727
 		[Nullable(1)]
 		[StaticVariableRuleIgnore]
 		public static readonly Dictionary<string, string> Config = new Dictionary<string, string>

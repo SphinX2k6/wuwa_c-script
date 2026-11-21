@@ -2,14 +2,14 @@
 
 namespace Aki.UniverseEditor.Interface.Fbs.Editor
 {
-	// Token: 0x020048F0 RID: 18672
+	// Token: 0x02004D55 RID: 19797
 	public enum TSyncBlockContext : byte
 	{
-		// Token: 0x0400CF47 RID: 53063
+		// Token: 0x0400D980 RID: 55680
 		NONE,
-		// Token: 0x0400CF48 RID: 53064
+		// Token: 0x0400D981 RID: 55681
 		ILevelPlaySyncBlockContext,
-		// Token: 0x0400CF49 RID: 53065
+		// Token: 0x0400D982 RID: 55682
 		IQuestSyncBlockContext
 	}
 }

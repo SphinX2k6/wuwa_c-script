@@ -13,17 +13,17 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.TowerDefence
 {
-	// Token: 0x02004B64 RID: 19300
+	// Token: 0x02003B0C RID: 15116
 	[NullableContext(1)]
 	[Nullable(0)]
 	public class TowerDefenseSettleView : UiViewBase
 	{
-		// Token: 0x06031F7E RID: 204670 RVA: 0x00B98D76 File Offset: 0x00B96F76
+		// Token: 0x06026D0D RID: 158989 RVA: 0x00ADCFB2 File Offset: 0x00ADB1B2
 		public TowerDefenseSettleView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x06031F7F RID: 204671 RVA: 0x00B98D8C File Offset: 0x00B96F8C
+		// Token: 0x06026D0E RID: 158990 RVA: 0x00ADCFC8 File Offset: 0x00ADB1C8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 5;
@@ -43,19 +43,19 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x06031F80 RID: 204672 RVA: 0x00B98E59 File Offset: 0x00B97059
+		// Token: 0x06026D0F RID: 158991 RVA: 0x00ADD095 File Offset: 0x00ADB295
 		protected override void OnAddEventListener()
 		{
 			EventSystem.Instance.Add(EEventName.FriendApplyReceived, new Action(this.OnRefreshFriendApply));
 		}
 
-		// Token: 0x06031F81 RID: 204673 RVA: 0x00B98E77 File Offset: 0x00B97077
+		// Token: 0x06026D10 RID: 158992 RVA: 0x00ADD0B3 File Offset: 0x00ADB2B3
 		protected override void OnRemoveEventListener()
 		{
 			EventSystem.Instance.Remove(EEventName.FriendApplyReceived, new Action(this.OnRefreshFriendApply));
 		}
 
-		// Token: 0x06031F82 RID: 204674 RVA: 0x00B98E98 File Offset: 0x00B97098
+		// Token: 0x06026D11 RID: 158993 RVA: 0x00ADD0D4 File Offset: 0x00ADB2D4
 		protected override UniTask OnBeforeStartAsync()
 		{
 			TowerDefenseSettleView.<OnBeforeStartAsync>d__8 <OnBeforeStartAsync>d__;
@@ -66,7 +66,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031F83 RID: 204675 RVA: 0x00B98EDB File Offset: 0x00B970DB
+		// Token: 0x06026D12 RID: 158994 RVA: 0x00ADD117 File Offset: 0x00ADB317
 		protected override void OnBeforeShow()
 		{
 			UiBehaviorLevelSequence uiViewSequence = this.UiViewSequence;
@@ -74,13 +74,13 @@ namespace CSharpScript.Game.Module.TowerDefence
 			uiViewSequence.StartSequenceName = ((notify != null && notify.Success) ? "Success" : "Fail");
 		}
 
-		// Token: 0x06031F84 RID: 204676 RVA: 0x00B98F08 File Offset: 0x00B97108
+		// Token: 0x06026D13 RID: 158995 RVA: 0x00ADD144 File Offset: 0x00ADB344
 		protected override void OnAfterShow()
 		{
 			this.OnRefreshFriendApply();
 		}
 
-		// Token: 0x06031F85 RID: 204677 RVA: 0x00B98F10 File Offset: 0x00B97110
+		// Token: 0x06026D14 RID: 158996 RVA: 0x00ADD14C File Offset: 0x00ADB34C
 		protected override void OnBeforeDestroy()
 		{
 			if (UiManager.Instance.IsViewOpen(EUiViewName.FriendApplyView))
@@ -89,7 +89,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031F86 RID: 204678 RVA: 0x00B98F34 File Offset: 0x00B97134
+		// Token: 0x06026D15 RID: 158997 RVA: 0x00ADD170 File Offset: 0x00ADB370
 		private void OnRefreshFriendApply()
 		{
 			List<int> list = ItemRewardController.Instance.BuildExploreFriendIdList();
@@ -99,14 +99,14 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031F87 RID: 204679 RVA: 0x00B98F80 File Offset: 0x00B97180
+		// Token: 0x06026D16 RID: 158998 RVA: 0x00ADD1BC File Offset: 0x00ADB3BC
 		[NullableContext(2)]
 		private TowerDefenceEndNotify GetNotify()
 		{
 			return this.OpenParam as TowerDefenceEndNotify;
 		}
 
-		// Token: 0x06031F88 RID: 204680 RVA: 0x00B98F90 File Offset: 0x00B97190
+		// Token: 0x06026D17 RID: 158999 RVA: 0x00ADD1CC File Offset: 0x00ADB3CC
 		private UniTask InitButtonsAsync()
 		{
 			TowerDefenseSettleView.<InitButtonsAsync>d__14 <InitButtonsAsync>d__;
@@ -117,7 +117,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return <InitButtonsAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031F89 RID: 204681 RVA: 0x00B98FD4 File Offset: 0x00B971D4
+		// Token: 0x06026D18 RID: 159000 RVA: 0x00ADD210 File Offset: 0x00ADB410
 		private UniTask CreateButtonAsync(int index, Action onClick)
 		{
 			TowerDefenseSettleView.<CreateButtonAsync>d__15 <CreateButtonAsync>d__;
@@ -130,7 +130,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return <CreateButtonAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031F8A RID: 204682 RVA: 0x00B99028 File Offset: 0x00B97228
+		// Token: 0x06026D19 RID: 159001 RVA: 0x00ADD264 File Offset: 0x00ADB464
 		private UniTask InitRecordPanelAsync()
 		{
 			TowerDefenseSettleView.<InitRecordPanelAsync>d__16 <InitRecordPanelAsync>d__;
@@ -141,7 +141,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			return <InitRecordPanelAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x06031F8B RID: 204683 RVA: 0x00B9906C File Offset: 0x00B9726C
+		// Token: 0x06026D1A RID: 159002 RVA: 0x00ADD2A8 File Offset: 0x00ADB4A8
 		private void RefreshTitle()
 		{
 			TowerDefenceEndNotify notify = this.GetNotify();
@@ -159,7 +159,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			}
 		}
 
-		// Token: 0x06031F8C RID: 204684 RVA: 0x00B990D0 File Offset: 0x00B972D0
+		// Token: 0x06026D1B RID: 159003 RVA: 0x00ADD30C File Offset: 0x00ADB50C
 		private void ApplySuccessTitleStyle(UUIText titleText)
 		{
 			UUIEffectOutline uuieffectOutline = titleText.GetOwner().GetComponentByClass(UUIEffectOutline.StaticClass()) as UUIEffectOutline;
@@ -172,7 +172,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			titleText.SetColor(FColor.FromHex("f2efd5"));
 		}
 
-		// Token: 0x06031F8D RID: 204685 RVA: 0x00B99144 File Offset: 0x00B97344
+		// Token: 0x06026D1C RID: 159004 RVA: 0x00ADD380 File Offset: 0x00ADB580
 		private void RefreshRecordPanel()
 		{
 			TowerDefenceEndNotify notify = this.GetNotify();
@@ -203,7 +203,7 @@ namespace CSharpScript.Game.Module.TowerDefence
 			this.RecordPanel.SetRecordRolling(notify.Score, false);
 		}
 
-		// Token: 0x06031F8E RID: 204686 RVA: 0x00B99258 File Offset: 0x00B97458
+		// Token: 0x06026D1D RID: 159005 RVA: 0x00ADD494 File Offset: 0x00ADB694
 		private void RefreshHighestScore()
 		{
 			TowerDefenceEndNotify notify = this.GetNotify();
@@ -227,59 +227,59 @@ namespace CSharpScript.Game.Module.TowerDefence
 			});
 		}
 
-		// Token: 0x06031F8F RID: 204687 RVA: 0x00B992F3 File Offset: 0x00B974F3
+		// Token: 0x06026D1E RID: 159006 RVA: 0x00ADD52F File Offset: 0x00ADB72F
 		private void OnExitBtnClick()
 		{
 			TowerDefenseController.Instance.RequestChallengeQuit();
 		}
 
-		// Token: 0x06031F90 RID: 204688 RVA: 0x00B992FF File Offset: 0x00B974FF
+		// Token: 0x06026D1F RID: 159007 RVA: 0x00ADD53B File Offset: 0x00ADB73B
 		private void OnRestartBtnClick()
 		{
 			TowerDefenseController.Instance.HandleSettleViewRestart(0);
 		}
 
-		// Token: 0x0401AA40 RID: 109120
+		// Token: 0x04015392 RID: 86930
 		private const string SUCCESS_OUTLINE_COLOR = "C48B29FF";
 
-		// Token: 0x0401AA41 RID: 109121
+		// Token: 0x04015393 RID: 86931
 		private const string SUCCESS_TEXT_COLOR = "f2efd5";
 
-		// Token: 0x0401AA42 RID: 109122
+		// Token: 0x04015394 RID: 86932
 		private readonly Dictionary<int, TowerDefenseSettleButton> ButtonMap = new Dictionary<int, TowerDefenseSettleButton>();
 
-		// Token: 0x0401AA43 RID: 109123
+		// Token: 0x04015395 RID: 86933
 		[Nullable(2)]
 		private TowerDefenseSettleRecordPanel RecordPanel;
 
-		// Token: 0x0200ACF5 RID: 44277
+		// Token: 0x02009714 RID: 38676
 		[NullableContext(0)]
 		private class EComponent
 		{
-			// Token: 0x040348D9 RID: 215257
+			// Token: 0x0402F282 RID: 193154
 			public const int TitleText = 1;
 
-			// Token: 0x040348DA RID: 215258
+			// Token: 0x0402F283 RID: 193155
 			public const int TitleTexture = 2;
 
-			// Token: 0x040348DB RID: 215259
+			// Token: 0x0402F284 RID: 193156
 			public const int ButtonHorizontalItem = 4;
 
-			// Token: 0x040348DC RID: 215260
+			// Token: 0x0402F285 RID: 193157
 			public const int ButtonItem = 5;
 
-			// Token: 0x040348DD RID: 215261
+			// Token: 0x0402F286 RID: 193158
 			public const int ContentItem = 20;
 		}
 
-		// Token: 0x0200ACF6 RID: 44278
+		// Token: 0x02009715 RID: 38677
 		[NullableContext(0)]
 		private class EButton
 		{
-			// Token: 0x040348DE RID: 215262
+			// Token: 0x0402F287 RID: 193159
 			public const int Exit = 0;
 
-			// Token: 0x040348DF RID: 215263
+			// Token: 0x0402F288 RID: 193160
 			public const int Restart = 1;
 		}
 	}

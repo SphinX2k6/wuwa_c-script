@@ -10,16 +10,16 @@ using UnrealEngine;
 
 namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Season
 {
-	// Token: 0x02005F5A RID: 24410
+	// Token: 0x02004F41 RID: 20289
 	public class WheelTowerMedalRuleView : UiViewBase
 	{
-		// Token: 0x0603DFF9 RID: 253945 RVA: 0x00EF6B90 File Offset: 0x00EF4D90
+		// Token: 0x06032F94 RID: 208788 RVA: 0x00E488BC File Offset: 0x00E46ABC
 		[NullableContext(1)]
 		public WheelTowerMedalRuleView(UiViewInfo viewInfo) : base(viewInfo)
 		{
 		}
 
-		// Token: 0x0603DFFA RID: 253946 RVA: 0x00EF6B9C File Offset: 0x00EF4D9C
+		// Token: 0x06032F95 RID: 208789 RVA: 0x00E488C8 File Offset: 0x00E46AC8
 		protected unsafe override void OnRegisterComponent()
 		{
 			int num = 4;
@@ -37,7 +37,7 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Seas
 			this.ComponentRegisterInfos = list;
 		}
 
-		// Token: 0x0603DFFB RID: 253947 RVA: 0x00EF6C48 File Offset: 0x00EF4E48
+		// Token: 0x06032F96 RID: 208790 RVA: 0x00E48974 File Offset: 0x00E46B74
 		protected override UniTask OnBeforeStartAsync()
 		{
 			WheelTowerMedalRuleView.<OnBeforeStartAsync>d__4 <OnBeforeStartAsync>d__;
@@ -48,17 +48,17 @@ namespace CSharpScript.Game.Module.Activity.ActivityContent.WheelTower.View.Seas
 			return <OnBeforeStartAsync>d__.<>t__builder.Task;
 		}
 
-		// Token: 0x0603DFFC RID: 253948 RVA: 0x00EF6C8B File Offset: 0x00EF4E8B
+		// Token: 0x06032F97 RID: 208791 RVA: 0x00E489B7 File Offset: 0x00E46BB7
 		private void OnCloseBtnClick()
 		{
 			base.CloseMe(null);
 		}
 
-		// Token: 0x040205B6 RID: 132534
+		// Token: 0x0401B088 RID: 110728
 		[Nullable(2)]
 		private PopupCaptionItem CaptionItem;
 
-		// Token: 0x040205B7 RID: 132535
+		// Token: 0x0401B089 RID: 110729
 		[Nullable(new byte[]
 		{
 			2,
